@@ -530,7 +530,7 @@ public:
 	DllExport bool checkLateEra() const;
 
 	// Absinthe: start
-//	int getProvince();
+	int getProvince();
 	// Absinthe: end
 
 	// 3MiroCAR: Sanguo Mod Performance, start, added by poyuzhe 08.13.09

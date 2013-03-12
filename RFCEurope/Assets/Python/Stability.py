@@ -32,7 +32,7 @@ iCathegoryExpansion = con.iCathegoryExpansion
 
 tCapitals = con.tCapitals
 
-tStabilityPenalty = ( -3, -1, -1, 0, 0, 0 )
+tStabilityPenalty = ( -4, -1, 0, 0, 0 )
 
 class Stability:
 

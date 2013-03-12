@@ -726,12 +726,11 @@ class RFCEBalance:
 		#	if the third parameter is -1: cannot Vassalize, 0: has to satisfy a condition (default), 1 can Vassalize without conditions
 		#	the condition is that either one of the players needs to have a city in a province that the other players considers >= the last parameter
 		#	the default for the last parameter is 0, we should call this at least once to set the parameter (it is the same for all players)
-		gc.setVassalagaeCondition( iCordoba, iArabia, 1, con.iProvinceDesired )
-		gc.setVassalagaeCondition( iArabia, iCordoba, 1, con.iProvinceDesired )
+		gc.setVassalagaeCondition( iCordoba, iArabia, 1, con.iProvinceOuter )
+		gc.setVassalagaeCondition( iArabia, iCordoba, 1, con.iProvinceOuter )
 
 		# How much culture should we get into a province of this type, ignore the war and settler values (0,0)
 		gc.setProvinceTypeParams( con.iProvinceNone, 0, 0, 1, 3 ) # 1/3 culture
-		gc.setProvinceTypeParams( con.iProvinceDesired, 0, 0, 1, 2 ) # 1/2, but this province type is not used currently
 		gc.setProvinceTypeParams( con.iProvinceOuter, 0, 0, 1, 1 ) # no change to culture
 		gc.setProvinceTypeParams( con.iProvincePotential, 0, 0, 1, 1 ) # same as outer culture
 		gc.setProvinceTypeParams( con.iProvinceNatural, 0, 0, 2, 1 ) # double-culture

@@ -7,7 +7,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_TILE_HELP</Tag>
-		<English>Province: </English>
+		<English>Province:[SPACE]</English>
 		<French>Province: </French>
 		<German>Provinz: </German>
 		<Italian>Provincia: </Italian>
@@ -16,7 +16,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_STABILITY_HELP</Tag>
-		<English>Stability: </English>
+		<English>Stability:[SPACE]</English>
 		<French>Stabilit&#233;: </French>
 		<German>Stabilit&#228;t: </German>
 		<Italian>Stabilit&#224;: </Italian>
@@ -25,7 +25,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_TYPE_0</Tag>
-		<English>Unstable</English>
+		<English>[COLOR_HIGHLIGHT_FOREIGN]Foreign / Unstable area[COLOR_REVERT]</English>
 		<French>Instable</French>
 		<German>Instabil</German>
 		<Italian>Instabile</Italian>
@@ -34,7 +34,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_TYPE_1</Tag>
-		<English>OK</English>
+		<English>[COLOR_HIGHLIGHT_BORDER]Border / Outer / Contested area[COLOR_REVERT]</English>
 		<French>OK</French>
 		<German>OK</German>
 		<Italian>OK</Italian>
@@ -43,16 +43,16 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_TYPE_2</Tag>
-		<English>OK</English>
-		<French>OK</French>
-		<German>OK</German>
-		<Italian>OK</Italian>
-		<Spanish>OK</Spanish>
-		<Portuguese>OK</Portuguese>
+		<English>[COLOR_HIGHLIGHT_POTENTIAL]Potentially stable area[COLOR_REVERT]</English>
+		<French>Solide</French>
+		<German>Solide</German>
+		<Italian>Solido</Italian>
+		<Spanish>S&#243;lida</Spanish>
+		<Portuguese>Sólida</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_TYPE_3</Tag>
-		<English>Solid</English>
+		<English>[COLOR_HIGHLIGHT_NATURAL]Natural / Historically stable area[COLOR_REVERT]</English>
 		<French>Solide</French>
 		<German>Solide</German>
 		<Italian>Solido</Italian>
@@ -61,16 +61,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_TYPE_4</Tag>
-		<English>Solid</English>
-		<French>Solide</French>
-		<German>Solide</German>
-		<Italian>Solido</Italian>
-		<Spanish>S&#243;lida</Spanish>
-		<Portuguese>Sólida</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROVINCE_TYPE_5</Tag>
-		<English>Solid</English>
+		<English>[COLOR_HIGHLIGHT_CORE]Core area[COLOR_REVERT]</English>
 		<French>Solide</French>
 		<German>Solide</German>
 		<Italian>Solido</Italian>

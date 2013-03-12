@@ -59,6 +59,24 @@
 		<Spanish>Muy s&#243;lida</Spanish>
 		<Portuguese>Muito Sólido</Portuguese>
 	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_STABILITY_OVERLAY_WIDGET</Tag>
+		<English>Toggle Stability Display</English>
+		<French>Toggle Stability Display</French>
+		<German>Toggle Stability Display</German>
+		<Italian>Toggle Stability Display</Italian>
+		<Spanish>Toggle Stability Display</Spanish>
+		<Portuguese>Toggle Stability Display</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_OVERLAY_HELP</Tag>
+		<English>Province Stability Overlay[NEWLINE]Color code:[NEWLINE][COLOR_HIGHLIGHT_CORE]Core area:[COLOR_REVERT] Very stable, but huge stability penalty if you don't own it[NEWLINE][COLOR_HIGHLIGHT_NATURAL]Natural / Historically stable area:[COLOR_REVERT] Stable territory, but small penalty if it's not yours[NEWLINE][COLOR_HIGHLIGHT_POTENTIAL]Potentially stable area:[COLOR_REVERT] Becomes a Natural province when settled or conquered[NEWLINE][COLOR_HIGHLIGHT_BORDER]Border / Outer / Contested area:[COLOR_REVERT] Small initial stability penalty for expanding there[NEWLINE][COLOR_HIGHLIGHT_FOREIGN]Foreign / Unstable area:[COLOR_REVERT] Large stability penalty and revolt risk for having cities there</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_CIVILWAR_HUMAN</Tag>
 		<English>Your empire is descending into civil war!</English>
@@ -79,7 +97,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_SECESSION</Tag>
-		<English>has declared its independence!</English>
+		<English>has declared it's independence!</English>
 		<French>a d&#233;clar&#233; son ind&#233;pendance !</French>
 		<German>hat seine Unabh&#228;ngigkeit erkl&#228;rt!</German>
 		<Italian>ha dichiarato la propria indipendenza!</Italian>

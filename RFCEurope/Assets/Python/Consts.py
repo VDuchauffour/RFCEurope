@@ -1142,12 +1142,11 @@ iProvinceLost = 2     # you have no cities and others have cities in it
 
 # ProvinceTypes
 iProvinceNone      = 0 # this is the default, use it for everything too far away to be considered
-iProvinceDesired   = 1 # for AI purposes, same as outer, just lower aggession flag
-iProvinceOuter     = 2 # small stability hit on owning
-iProvincePotential = 3 # changes to Core or Natural as soon as conquered
-iProvinceNatural   = 4 # stable, small penalty for not conquering it
-iProvinceCore      = 5 # stable, large penalty for not conquering it
-iNumProvinceTypes  = 6
+iProvinceOuter     = 1 # small stability hit on owning
+iProvincePotential = 2 # changes to Core or Natural as soon as conquered - only to Natural currently
+iProvinceNatural   = 3 # stable, small penalty for not conquering it
+iProvinceCore      = 4 # stable, large penalty for not conquering it
+iNumProvinceTypes  = 5
 
 # special parameters 10 per player (picklefree)
 iIsHasStephansdom = 0 # Stability parameter in Python

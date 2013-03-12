@@ -261,7 +261,7 @@ public:
 	void setScriptData(std::string szNewValue);
 
 	// Absinthe: start
-//	int getProvince();
+	int getProvince();
 	// Absinthe: end
 
 private:

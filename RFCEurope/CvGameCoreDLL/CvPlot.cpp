@@ -7127,8 +7127,7 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 				if ( (eIndex >-1) && (eIndex<NUM_ALL_PLAYERS_B) ){
 					int iProvinceType = GET_PLAYER(eIndex).getProvinceType( iProvince );
 					//GC.getGameINLINE().logMsg("  Change for %d %d ProvinceType: %d ",getX_INLINE(),getY_INLINE(),iProvinceType);
-					//if ( iNewValue != 0 ){
-					if ( (iProvinceType > -1)&& (iProvinceType<iNumProvinceTypes) ){
+					if ( (iProvinceType > -1) && (iProvinceType<iNumProvinceTypes) ){
 						iChange = ( iChange * iModCultureTop[iProvinceType] ) / iModCultureBottom[iProvinceType];
 						iNewValue = getCulture(eIndex) + iChange;
 					};
@@ -11026,7 +11025,7 @@ bool CvPlot::hasDefender(bool bCheckCanAttack, PlayerTypes eOwner, PlayerTypes e
 
 // Absinthe: start
 // returns province as int
-//int CvCity::getProvince(){
-//	return provinceMap[ getY_INLINE() * EARTH_X + getX_INLINE() ];
-//};
+int CvPlot::getProvince(){
+	return provinceMap[ getY_INLINE() * EARTH_X + getX_INLINE() ];
+};
 // Absinthe: end

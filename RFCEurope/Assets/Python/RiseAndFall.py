@@ -837,9 +837,7 @@ class RiseAndFall:
                         self.collapseGeneric(iGameTurn)
                 if (iGameTurn >= 34 and iGameTurn % 11 == 7): #used to be 8 in vanilla, because we must give some time for vassal states to form
                         self.collapseMotherland(iGameTurn)
-                if (iGameTurn > 20 and iGameTurn % 5 == 3):
-                #if (iGameTurn > 20 and iGameTurn % 2 == 0):
-                        #print(" 3Miro: scession ")
+                if (iGameTurn > 20 and iGameTurn % 3 == 1):
                         self.secession(iGameTurn)
                 #debug
                 #self.collapseMotherland()
@@ -1025,8 +1023,6 @@ class RiseAndFall:
                         #print(" 3Miro: player ",iPlayer)
                         pPlayer = gc.getPlayer(iPlayer)
                         if (pPlayer.isAlive() and iGameTurn >= con.tBirth[iPlayer] + 30):
-                                #if (utils.getStability(iPlayer) >= -40 and utils.getStability(iPlayer) < -20): #secession
-                                #if (utils.getStability(iPlayer) < -5): #secession, 3Miro: do regarless of how low stability is
                                 iStability = pPlayer.getStability()
                                 if (pPlayer.getStability() < -15 and (not utils.collapseImmune(iPlayer)) and (pPlayer.getNumCities() > 10) ): #civil war
                                         self.revoltCity( iPlayer, False )
@@ -1074,25 +1070,21 @@ class RiseAndFall:
                                                 utils.killAndFragmentCiv(iCiv, False, False)
 
 
-
-        def secession(self, iGameTurn): # 3Miro secession - check every 5 turns
+        def secession(self, iGameTurn): # checked every 3 turns
 
                 iRndnum = gc.getGame().getSorenRandNum(iNumPlayers, 'starting count')
                 for j in range(iRndnum, iRndnum + iNumPlayers):
                         iPlayer = j % iNumPlayers
-                        #print(" 3Miro: player ",iPlayer)
                         pPlayer = gc.getPlayer(iPlayer)
                         if (pPlayer.isAlive() and iGameTurn >= con.tBirth[iPlayer] + 30):
-                                #if (utils.getStability(iPlayer) >= -40 and utils.getStability(iPlayer) < -20): #secession
-                                #if (utils.getStability(iPlayer) < -5): #secession, 3Miro: do regarless of how low stability is
                                 iStability = pPlayer.getStability()
-                                if ( ( iStability < -5) or (gc.getGame().getSorenRandNum(20, 'do the check for city secession') < -iStability) ): #secession, 3Miro: do regarless of how low stability is
+                                if ( gc.getGame().getSorenRandNum(12, 'do the check for city secession') < -iStability ):
                                         self.revoltCity( iPlayer, False )
-                                        return #just 1 secession per turn
+                                        return # max 1 secession per turn
+
 
         def revoltCity( self, iPlayer, bForce ):
                 # if bForce is true, then any city can revolt
-                #print("3Miro: unstable")
                 pPlayer = gc.getPlayer(iPlayer)
                 iStability = pPlayer.getStability()
 
@@ -1102,9 +1094,8 @@ class RiseAndFall:
                         city = pCity.GetCy()
                         pCurrent = gc.getMap().plot(city.getX(), city.getY())
 
-                        if ((not city.isWeLoveTheKingDay()) and (not city.isCapital()) and (not (city.getX() == tCapitals[iPlayer][0] and city.getY() == tCapitals[iPlayer][1])) and (not utils.collapseImmuneCity(iPlayer,city.getX(),city.getY()))):
-                                # 3MiroUP: Emperor
-                                if (pPlayer.getNumCities() > 0): #this check is needed, otherwise game crashes
+                        if ((not city.isWeLoveTheKingDay()) and (not city.isCapital()) and (not (city.getX() == tCapitals[iPlayer][0] and city.getY() == tCapitals[iPlayer][1])) and (not utils.collapseImmuneCity(iPlayer,city.getX(),city.getY()))): # 3MiroUP: Emperor
+                                if (pPlayer.getNumCities() > 0): # this check is needed, otherwise game crashes
                                         capital = gc.getPlayer(iPlayer).getCapitalCity()
                                         iDistance = utils.calculateDistance(city.getX(), city.getY(), capital.getX(), capital.getY())
                                         if (iDistance > 3):
@@ -1116,7 +1107,7 @@ class RiseAndFall:
                                                     city.getLargestCityHappiness() < 0 or \
                                                     city.getHurryAngerModifier() > 0 or \
                                                     city.getNoMilitaryPercentAnger() > 0 ):
-                                                        if ( gc.getGame().getSorenRandNum(100, 'city secession') > 100 - 10 * pPlayer.getStability() ):
+                                                        if ( gc.getGame().getSorenRandNum(100, 'city secession') < 20 - 5 * pPlayer.getStability() ): # 100% if stability is less than -15
                                                                 cityList.append(city)
                                                                 # 3MiroProvinces: outer and none provices have much higher probability of flipping
                                                                 if ( iProvType == con.iProvinceNone ):
@@ -1126,7 +1117,8 @@ class RiseAndFall:
                                                                         cityList.append(city)
                                                                         cityList.append(city)
                                                                         cityList.append(city)
-                                                                if ( iProvType == con.iProvinceNatural ):
+                                                                        cityList.append(city)
+                                                                if ( iProvType == con.iProvinceOuter ):
                                                                         cityList.append(city)
                                                                         cityList.append(city)
                                                                         cityList.append(city)
@@ -1148,8 +1140,7 @@ class RiseAndFall:
 
                         splittingCity = cityList[gc.getGame().getSorenRandNum(len(cityList), 'random city')]
                         if (iPlayer == utils.getHumanID()):
-                                CyInterface().addMessage(iPlayer, True, con.iDuration, splittingCity.getName() + " " + \
-                                                                   CyTranslator().getText("TXT_KEY_STABILITY_SECESSION", ()), "", 0, "", ColorTypes(con.iOrange), -1, -1, True, True)
+                                CyInterface().addMessage(iPlayer, True, con.iDuration, splittingCity.getName() + " " + CyTranslator().getText("TXT_KEY_STABILITY_SECESSION", ()), "", 0, "", ColorTypes(con.iOrange), -1, -1, True, True)
                         utils.cultureManager((splittingCity.getX(),splittingCity.getY()), 50, iNewCiv, iPlayer, False, True, True)
                         utils.flipUnitsInCityBefore((splittingCity.getX(),splittingCity.getY()), iNewCiv, iPlayer)
                         self.setTempFlippingCity((splittingCity.getX(),splittingCity.getY()))
@@ -1159,7 +1150,7 @@ class RiseAndFall:
                         #Sedna17: Now loosing a city to secession gives a positive boost to stability. Should help Byzantium be less frustrating.
                         #utils.setParameter(iPlayer, con.iParExpansionE, True, 5) #to counterbalance the stability hit on city acquired event, leading to a chain reaction
                         #utils.setStability(iPlayer, utils.getStability(iPlayer) + 5) #to counterbalance the stability hit on city acquired event, leading to a chain reaction
-                        pPlayer.changeStabilityBase( con.iCathegoryExpansion, 2 )
+                        pPlayer.changeStabilityBase( con.iCathegoryExpansion, 3 )
 
 
 
@@ -2323,7 +2314,7 @@ class RiseAndFall:
         def create4000BCstartingUnits( self ):
                 # 3Miro: units on start (note Spearman might be an up to date upgraded defender, tech dependent)
 
-                utils.makeUnit(iSettler, iFrankia, tCapitals[iFrankia], 2)
+                utils.makeUnit(xml.iSettler, iFrankia, tCapitals[iFrankia], 3)
                 utils.makeUnit(xml.iArcher, iFrankia, tCapitals[iFrankia], 3)
                 utils.makeUnit(xml.iAxeman, iFrankia, tCapitals[iFrankia], 4)
                 utils.makeUnit(xml.iWorker, iFrankia, tCapitals[iFrankia], 2)

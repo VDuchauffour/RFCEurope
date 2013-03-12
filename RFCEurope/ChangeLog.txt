@@ -1,4 +1,3 @@
-
 Welcome to Rhye's and Fall of Europe, a mod based on the incredibly popular original Rhye's and Fall of Civilizations (RFC).
 If you've played RFC before, all the familiar elements are here: stability, plagues, dynamic rises, barbarian uprisings, Unique Powers, Unique Historical Victories,
 and uniquely customized parameters designed to simulate history while allowing you the freedom to change it.
@@ -15,6 +14,38 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 
 Changes for RFCE 1.2:
 (to-be-released: 2012.12.20.)
+
+	Stability improvements:
+		- Province stability levels:
+			- Core: Your core area; very stable, but huge stability penalty if someone else has a city there
+			- Natural: Your historically stable area; stability bonus for cities there, but also small penalty if it's not yours
+			- Potential: Your potentially stable area; becomes a Natural province when you settle or conquer a city there, but no penalties until this happens
+			- Border: Outer or contested area; small initial stability penalty for expanding there
+			- Foreign: Unstable area; large stability penalty and revolt risk for having cities there
+			- Removed Desired province type alltogether
+		- Stability Overlay:
+			- Color code for the provinces: Cyan for Core, Green for Natural, Yellow for Potential, Orange for Border, Red for Foreign
+			- The overlay may be toggled with it's button above the minimap, or with the Ctrl+K key combination
+			- It shows all province tiles color-coded on the map, including mainland water tiles (fresh and salt water lakes)
+			- When the overlay is up, there is a civ choosing table above the overlay button, so you can check province stability level for all civs, not just for yourself!!
+			- The overlay dynamically refreshes when a province's stability is changed for any of the civs
+			- Province border functions (ctrl + hover on the map) moved to python from the dll, easier to costumize this way
+			- Province borders got the same color code as they have in the stability overlay (but obviously it always shows the stability level of the civ you play with)
+			- Provinces are only colored and showed inside your visible area (both in the overlay and with ctrl + hovering) intentionally, so they may show up partly
+		- Tweaked the existing secession mechanics:
+			- Instead of total collapses, there is way more chance for a single city to declare independence
+			- Only one city can revolt in a turn, if it happens, there is no chance for collapse for the given civ
+			- May happen even with -1 stability, the chance for it starts very low, but exponentially increasing with lower stability
+			- Chance that one of your cities will declare independence is around 2% with -1 stability, around 25% with -6 stability, around 80% with -12 stability
+			- If a city does declare it's independence, one of your cities will be randomly chosen (any city can be chosen if it's not close to your capital)
+			- Cities in Border provinces have 4x chance, cities in Foreign provinces have 8x chance to be chosen, than your cities in more stable areas
+		- Increased stability penalty for having cities in Foreign provinces
+		- Revised all civs' initial province stabilty levels, and all the dynamic province stability level changes. Some highlights:
+			- Expanded and/or increased almost all civs' province stability to some extent, especially for Byzantium, the Ottomans and Kiev
+			- Byzantium keeps many of their previously important provinces as Border provinces (including southern Italy and the African coastline), for the human player
+			- Both the Mediterranean and the Atlantic Islands (Azores, Madeira, Canaries, Balears, Corsica, Sardinia, Sicily, Malta, Crete, Rhodes, Cyprus) are better for many civs
+			- A couple more dynamic stability level changes, especially around the new provinces, in Central Europe and the Balkans, and for Byzantium
+			- France and Burgundy almost totally complete each other with their potential provinces
 
 	General changes:
 		- Spawn of Arabia moved back one turn, to 632AD
@@ -79,6 +110,7 @@ Changes for RFCE 1.2:
 		- Changed the order of the Polish, Burgundian, Kievan and Hungarian UHVs
 		- Minor fixes in the Dawn of Civilization texts
 		- Civ-specific and UHV updates in the reference texts
+		- Texts connected to Province stability also got the new province color-code
 
 	Art and sound updates:
 		- Added theme files for the mod
@@ -87,7 +119,7 @@ Changes for RFCE 1.2:
 		- Lithuania has polish unit sounds instead of russian (until we manage to get proper lithuanian sounds)
 		- New Scottish voice set by Annomander
 		- Irish Brigade got Celtic sounds, Highlander and Highlander Infantry got Scottish sounds
-		- New art Westminster Abbey by hrochland
+		- New art for Westminster Abbey by hrochland
 
 	Balance:
 		- Moved spawn area of Germanic Barbarians west, now some of them will actually attack France instead of wandering in Germany
@@ -99,7 +131,7 @@ Changes for RFCE 1.2:
 		- Lowered preset diplomacy modifiers, overkill to have 10+ relations there
 		- Now that free wins are removed, early barbs for Byzantium are somewhat reduced for the human player
 		- Plague of Constantinople will hit Byzantium earlier than before (late 6th century), thus it won't hit on the very same turns as the Arab spawn
-		- The French got some additional starting units (1 archer and 2 axemen)
+		- The French got some additional starting units (1 settler, 1 archer and 2 axemen)
 		- Burdigala and Tolosa (Bordeaux and Toulouse) start with less archers
 		- All naval units got one extra move (3: Work Boat, 5: Galley, Cog, War Galley, Gun Galley, Galleas, 7: Holk, Carrack, Caravel, 9: Galleon, 11: Frigate, Privateer, Corsair)
 		- Unit balance changes: Knights of St. John (+15% city attack, free march and medic_1 promotion), Paladin (no first strike, -15% vs heavy cavalry, +15% vs light cavalry),
@@ -109,7 +141,8 @@ Changes for RFCE 1.2:
 			Condottiero (free tactics promotion), Varangian Guard (+25% city attack, -25% city defence, free amphibious promotion), Almogavar (free march and amphibious promotion),
 			Tagmata (free drill_1 promotion), Don Cossack (+10% withdrawal chance, +20% vs gunpowder, -10% vs heavy cavalry, -25% vs light cavalry, free combat_1 promotion),
 			Doppelsoldner (+25% city attack, +1 combat strength), Irish Brigade (+10% withdrawal chance), Stradiot (changed to be a light cavalry unit type, -1 combat strength),
-			Naffatun (+1 combat strength, -25% city defence), Nubian Longbow (-1 first strike chance, free drill_1 and drill_2 promotion), Zanji (+1 move, ignores terrain cost)
+			Naffatun (+1 combat strength, -25% city defence), Nubian Longbow (-1 first strike chance, free drill_1 and drill_2 promotion), Zanji (+1 move, ignores terrain cost),
+			Zaporozhian Cossack (+1 combat strength, +1 move)
 		- Building balance changes: Moscow Kremlin (+1 happiness), Spanish Citadel (+10% trade route yield, -2XP for siege units), Cordoban Noira (+1 health, -1 production),
 			Ottoman Hammam (available with Arabic Knowledge), Norse Trading Post (+1 merchant slot), Venetian Arsenal (available with Optics, -25% naval unit build rate),
 			Austrian Opera House (+1 great artist point), Burgundian Winery (-3 culture, +10% culture, +5% commerce, +1 merchant slot), German Rathaus (-10% city maintenace cost),
@@ -118,15 +151,6 @@ Changes for RFCE 1.2:
 			St. Basil's Cathedral (available with Chemistry, -10% GP modifier, -1 free specialist, +1 spy slot, +2 espionage points from state religion buildings), St. Sophia (-1 priest slot),
 			Cluny Abbey (+1 free priest), Palais des Papes (+2 happiness), San Marco Basilica (+2 trade routes, -30% trade route yield, -1 free merchant), Alhambra (cost increased by 50),
 			St. Peter's Basilica (no unhappiness in the city), Torre de Belem (-2 gold for water tiles, -1 free merchant)
-		- Crete and Cyprus provinces are now stable for Venice, Banat, Wallachia, Cyrenaica and Tripolitania are now OK for the Ottomans
-		- Province Banat is OK for Bulgaria, changes to unstable after the Hungarian spawn
-		- Dalmatia, Bosnia and Banat provinces are reduced to OK for Hungary after the Ottoman spawn
-		- Holstein is OK for the Norse, stable for Germany (but not a core, so won't hurt their stability if another civ holds it)
-		- Liguria is core for Genoa, while Lombardy and Tuscany are also stable, but not core
-		- Liguria is OK for the Franks, but changes to unstable after Germany spawns
-		- Byzantium got some of the Italian provinces as OK, all of them change to unstable after the Venetian and Genoan spawn
-		- For Byzantium Cyrenaica, Egypt and Arabia changes to unstable after the Arabian spawn, while Syria, Lebanon and Jerusalem changes to OK
-		- The province Prussia is unstable for everyone, at least for now
 		- The German first and third UHV requires Holstein too, the Ottoman first UHV requires Banat, and the Hungarian anti-Ottoman UHV requires Banat and Slavonia
 		- Holstein and Prussia also count in the Swedish third UHV, Prussia also counts in the Polish first UHV
 		- Minor changes in the defensive crusades, also updated them with the new provinces
@@ -152,6 +176,8 @@ Changes for RFCE 1.2:
 		- Fixed mistake where you couldn't build protestant missionaries without Seminaries under the Religious Law civic
 		- Fixed issue where some of the python scripts couldn't handle Latin-1 characters
 		- Fixed "display bug" with the initial Byzantine stability
+		- Fixed serious bug in the secession mechanics (lose a single city if stability is too low), which basically prevented it from happening
+		- Fixed bug in secession provinces, where outer (ok) provinces had very low chance, while some of the historical (stable) provinces had decent chance
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -502,8 +528,8 @@ Changes for Beta 14 (Release Candidate):
 		- Fixed a bug where Abo did not spawn (so Sweden didn't get a city in Finland)
 		- Updated special respawns in the RiseAndFall.py, now they work properly
 		- Bugfix in the Bulgarian 3rd UHV (could switch back to failed, even after you successfully completed it)
-		- Fixed a bug in the new Janissary UP and Prosecutions, as per Morhlot suggestion, the game will no longer crash at that point
-		- Fixed an inconsistency in the Merc screen, now all Mercs have the format Unity Type (Merc Name), Axeman (Serbian)
+		- Fixed a bug in the new Janissary UP and Prosecutions, based on Morholt's suggestion, the game will no longer crash at that point
+		- Fixed an inconsistency in the Merc screen, now all mercenaries have the format Unit Type (Merc Name) - for example: Axeman (Serbian)
 		- Fixed a bug in stability calculation on city razing
 		- Fixed a bug with the dates for founding religions, now things properly save/load
 		- Fixed a founding bug allowing non-Catholics to found Protestantism
