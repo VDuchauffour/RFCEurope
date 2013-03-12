@@ -211,7 +211,7 @@ int timelineTechBuffCap = 0;
 int *provinceMap = NULL;
 int *provinceSizeList = NULL;
 int **provinceTileList = NULL;
-int provinceToColor = -1;
+//int provinceToColor = -1; // Absinthe: moved to python
 int numRegions = 1; // for map areas, give the number of regions
 int *provinceRegionMap = NULL; // give the region for each province (province -1 is default reigion 0)
 

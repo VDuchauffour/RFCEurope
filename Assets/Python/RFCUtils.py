@@ -2,6 +2,8 @@
 
 from CvPythonExtensions import *
 import CvUtil
+import CvScreenEnums #Absinhe
+import RFCEMaps #Absinthe
 import PyHelpers
 import Popup #Absinthe
 import Consts as con
@@ -32,6 +34,11 @@ tCol = (
 '128,128,128')
 
 class RFCUtils:
+
+	#Absinthe: stability overlay
+	bStabilityOverlay = False
+	iScreenIsUp = 0
+	iSelectedCivID = -1
 
         #Rise and fall, stability
         def getLastTurnAlive( self, iCiv ):
@@ -1334,4 +1341,211 @@ class RFCUtils:
 	def zeroStability(self,iPlayer): # called by RiseAndFall Resurrection
 		for iCount in range(con.iNumStabilityParameters):
 			self.setParameter(iPlayer, iCount, False, 0)
+
+
+	#Absinthe: stability overlay
+	def toggleStabilityOverlay(self):
+
+		engine = CyEngine()
+		map = CyMap()
+
+		# clear the highlight
+		engine.clearColoredPlots(PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_WORLD_BUILDER)
+
+		global iScreenIsUp
+		if self.bStabilityOverlay: # if it's already on
+			self.bStabilityOverlay = False
+			iScreenIsUp = 0
+			CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE).setState("StabilityOverlay", False)
+			# remove the selectable civs and the selection box
+			screen = CyGInterfaceScreen( "MainInterface", CvScreenEnums.MAIN_INTERFACE )
+			for i in range( con.iNumMajorPlayers - 1 ):
+				szName = "StabilityOverlayCiv" + str(i)
+				screen.hide( szName )
+			screen.hide( "ScoreBackground" )
+			return
+
+		self.bStabilityOverlay = True
+		iScreenIsUp = 1
+		CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE).setState("StabilityOverlay", True)
+
+		# set up colors
+		colors = []
+		colors.append("COLOR_HIGHLIGHT_FOREIGN")
+		colors.append("COLOR_HIGHLIGHT_BORDER")
+		colors.append("COLOR_HIGHLIGHT_POTENTIAL")
+		colors.append("COLOR_HIGHLIGHT_NATURAL")
+		colors.append("COLOR_HIGHLIGHT_CORE")
+
+		# reset to human player, whenever the overlay is triggered
+		iHuman = self.getHumanID()
+		iHumanTeam = gc.getPlayer(iHuman).getTeam()
+		iSelectedCivID = iHuman
+
+		# Globe View type civ choice
+		# when one of the civs is clicked on, it will run the StabilityOverlayCiv function with the chosen civ (check handleInput in CvMainInterface.py)
+		screen = CyGInterfaceScreen( "MainInterface", CvScreenEnums.MAIN_INTERFACE )
+		xResolution = screen.getXResolution()
+		yResolution = screen.getYResolution()
+		iGlobeLayerOptionsY_Regular  = 170 # distance from bottom edge
+		iGlobeLayerOptionsY_Minimal  = 38 # distance from bottom edge
+		iGlobeLayerOptionsWidth = 400
+		iGlobeLayerOptionHeight = 20
+		iY = yResolution - iGlobeLayerOptionsY_Regular
+		iCurY = iY
+		iMaxTextWidth = -1
+		for iCiv in range( con.iNumMajorPlayers - 1 ): # all major civs except the Papal States
+			szDropdownName = str("StabilityOverlayCiv") + str(iCiv)
+			szCaption = gc.getPlayer(iCiv).getCivilizationShortDescription(0)
+			if(iCiv == self.getHumanID()):
+				szBuffer = "  <color=0,255,0>%s</color>  " % (szCaption)
+			else:
+				szBuffer = "  %s  " % (szCaption)
+			iTextWidth = CyInterface().determineWidth( szBuffer )
+
+			screen.setText( szDropdownName, "Background", szBuffer, CvUtil.FONT_LEFT_JUSTIFY, xResolution - 9 - iTextWidth, iCurY-iGlobeLayerOptionHeight-10, -0.3, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, iCiv, (400 + iCiv) )
+			screen.show( szDropdownName )
+
+			iCurY -= iGlobeLayerOptionHeight
+
+			if iTextWidth > iMaxTextWidth:
+				iMaxTextWidth = iTextWidth
+
+		# panel for the Globe View type civ choice:
+		iCurY -= iGlobeLayerOptionHeight;
+		iPanelWidth = iMaxTextWidth + 16
+		iPanelHeight = iY - iCurY
+		iPanelX = xResolution - 14 - iPanelWidth
+		iPanelY = iCurY
+		screen.setPanelSize( "ScoreBackground", iPanelX, iPanelY, iPanelWidth, iPanelHeight )
+		screen.show( "ScoreBackground" )
+
+		# apply the highlight for the default civ (the human civ)
+		for i in range(map.numPlots()):
+			plot = map.plotByIndex(i)
+			if gc.getGame().isDebugMode() or plot.isRevealed(iHumanTeam, False):
+				if RFCEMaps.tProinceMap[plot.getY()][plot.getX()] == -1: # ocean and non-province tiles
+					szColor = "COLOR_GREY"
+				else:
+					szColor = colors[self.getProvinceStabilityLevel(iHuman, plot.getProvince())]
+				engine.addColoredPlotAlt(plot.getX(), plot.getY(), int(PlotStyles.PLOT_STYLE_BOX_FILL), int(PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_WORLD_BUILDER), szColor, .2)
+
+
+	def refreshStabilityOverlay(self):
+
+		engine = CyEngine()
+		map = CyMap()
+		
+		colors = []
+		colors.append("COLOR_HIGHLIGHT_FOREIGN")
+		colors.append("COLOR_HIGHLIGHT_BORDER")
+		colors.append("COLOR_HIGHLIGHT_POTENTIAL")
+		colors.append("COLOR_HIGHLIGHT_NATURAL")
+		colors.append("COLOR_HIGHLIGHT_CORE")
+		iHuman = self.getHumanID()
+		iHumanTeam = gc.getPlayer(iHuman).getTeam()
+
+		# if it's on, refresh the overlay, with showing the stability for the last selected civ
+		global iScreenIsUp
+		iScreenIsUp = self.iScreenIsUp
+		if (iScreenIsUp == 1):
+			# clear the highlight
+			engine.clearColoredPlots(PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_WORLD_BUILDER)
+			
+			# if no civ was selected before
+			global iSelectedCivID
+			iSelectedCivID = self.iSelectedCivID
+			if (iSelectedCivID == -1):
+				iSelectedCivID = iHuman
+			
+			# apply the highlight
+			for i in range(map.numPlots()):
+				plot = map.plotByIndex(i)
+				if gc.getGame().isDebugMode() or plot.isRevealed(iHumanTeam, False):
+					if RFCEMaps.tProinceMap[plot.getY()][plot.getX()] == -1: # ocean and non-province tiles
+						szColor = "COLOR_GREY"
+					else:
+						szColor = colors[self.getProvinceStabilityLevel(iSelectedCivID, plot.getProvince())]
+					engine.addColoredPlotAlt(plot.getX(), plot.getY(), int(PlotStyles.PLOT_STYLE_BOX_FILL), int(PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_WORLD_BUILDER), szColor, .2)
+
+
+	def StabilityOverlayCiv(self, iChoice):
+		
+		engine = CyEngine()
+		map = CyMap()
+
+		# clear the highlight
+		engine.clearColoredPlots(PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_WORLD_BUILDER)
+
+		# set up colors
+		colors = []
+		colors.append("COLOR_HIGHLIGHT_FOREIGN")
+		colors.append("COLOR_HIGHLIGHT_BORDER")
+		colors.append("COLOR_HIGHLIGHT_POTENTIAL")
+		colors.append("COLOR_HIGHLIGHT_NATURAL")
+		colors.append("COLOR_HIGHLIGHT_CORE")
+
+		iHuman = self.getHumanID()
+		iHumanTeam = gc.getPlayer(iHuman).getTeam()
+
+		# save the last selected civ in a global variable
+		global iSelectedCivID
+		iSelectedCivID = iChoice
+
+		# refreshing and coloring Globe View type civ choice
+		screen = CyGInterfaceScreen( "MainInterface", CvScreenEnums.MAIN_INTERFACE )
+		xResolution = screen.getXResolution()
+		yResolution = screen.getYResolution()
+		iGlobeLayerOptionsY_Regular  = 170 # distance from bottom edge
+		iGlobeLayerOptionsY_Minimal  = 38 # distance from bottom edge
+		iGlobeLayerOptionsWidth = 400
+		iGlobeLayerOptionHeight = 20
+		iY = yResolution - iGlobeLayerOptionsY_Regular
+		iCurY = iY
+		iMaxTextWidth = -1
+		for iCiv in range( con.iNumMajorPlayers - 1 ): # all major civs except the Papal States
+			szDropdownName = str("StabilityOverlayCiv") + str(iCiv)
+			szCaption = gc.getPlayer(iCiv).getCivilizationShortDescription(0)
+			if(iCiv == iSelectedCivID):
+				szBuffer = "  <color=0,255,255>%s</color>  " % (szCaption)
+			elif(iCiv == self.getHumanID()):
+				szBuffer = "  <color=0,255,0>%s</color>  " % (szCaption)
+			else:
+				szBuffer = "  %s  " % (szCaption)
+			iTextWidth = CyInterface().determineWidth( szBuffer )
+
+			screen.setText( szDropdownName, "Background", szBuffer, CvUtil.FONT_LEFT_JUSTIFY, xResolution - 9 - iTextWidth, iCurY-iGlobeLayerOptionHeight-10, -0.3, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, iCiv, (400 + iCiv) )
+			screen.show( szDropdownName )
+
+			iCurY -= iGlobeLayerOptionHeight
+
+			if iTextWidth > iMaxTextWidth:
+				iMaxTextWidth = iTextWidth
+
+		# apply the highlight
+		for i in range(map.numPlots()):
+			plot = map.plotByIndex(i)
+			if gc.getGame().isDebugMode() or plot.isRevealed(iHumanTeam, False):
+				if RFCEMaps.tProinceMap[plot.getY()][plot.getX()] == -1: # ocean and non-province tiles
+					szColor = "COLOR_GREY"
+				else:
+					szColor = colors[self.getProvinceStabilityLevel(iChoice, plot.getProvince())]
+				engine.addColoredPlotAlt(plot.getX(), plot.getY(), int(PlotStyles.PLOT_STYLE_BOX_FILL), int(PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_WORLD_BUILDER), szColor, .2)
+
+
+	def getProvinceStabilityLevel(self, iCiv, iProvince):
+		"""Returns the stability level of the province for the given civ."""
+		
+		pPlayer = gc.getPlayer( iCiv )
+		if pPlayer.getProvinceType( iProvince ) == con.iProvinceCore:
+			return 4 # core
+		elif pPlayer.getProvinceType( iProvince ) == con.iProvinceNatural:
+			return 3 # natural/historical
+		elif pPlayer.getProvinceType( iProvince ) == con.iProvincePotential:
+			return 2 # potential
+		elif pPlayer.getProvinceType( iProvince ) == con.iProvinceOuter:
+			return 1 # border/contested
+		else:
+			return 0 # unstable
+	#Absinthe: end
 

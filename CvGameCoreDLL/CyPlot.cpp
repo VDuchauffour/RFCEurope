@@ -1045,7 +1045,7 @@ void CyPlot::setScriptData(std::string szNewValue)
 }
 
 // Absinthe: start
-//int CyCity::getProvince(){
-//	return m_pCity ->getProvince();
-//};
+int CyPlot::getProvince(){
+	return m_pPlot ->getProvince();
+};
 // Absinthe: end

@@ -72,9 +72,12 @@ def resetStabilityParameters(argsList):
         utils.setLastRecordedStabilityStuff(3, 0)
         utils.setLastRecordedStabilityStuff(4, 0)
         utils.setLastRecordedStabilityStuff(5, 0)
-
 #Rhye - end
 
+# Absinthe: stability overlay
+def toggleStabilityOverlay():
+	utils.toggleStabilityOverlay()
+# Absinthe: end
 
 def toggleSetNoScreens():
 	global g_bIsScreenActive

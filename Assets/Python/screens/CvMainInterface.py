@@ -77,7 +77,7 @@ iGlobeToggleHeight = 48
 # GLOBE LAYER OPTION POSITIONING
 ######################
 iGlobeLayerOptionsX  = 235
-iGlobeLayerOptionsY_Regular  = 170# distance from bottom edge
+iGlobeLayerOptionsY_Regular  = 170 # distance from bottom edge
 iGlobeLayerOptionsY_Minimal  = 38 # distance from bottom edge
 iGlobeLayerOptionsWidth = 400
 iGlobeLayerOptionHeight = 24
@@ -3456,7 +3456,7 @@ class CvMainInterface:
 				szButtonID = "GlobeLayer" + str(i)
 				screen.setState( szButtonID, iCurrentLayerID == i )
 
-			# Set up options pane
+			# Set up options panel
 			if bHasOptions:
 				kLayer = kGLM.getLayer(iCurrentLayerID)
 
@@ -3526,7 +3526,7 @@ class CvMainInterface:
 		if ( CyInterface().isCityScreenUp() ):
 			bVisible = False
 
-		kMainButtons = ["UnitIcons", "Grid", "BareMap", "Yields", "ScoresVisible", "ResourceIcons"]
+		kMainButtons = ["UnitIcons", "Grid", "BareMap", "Yields", "ScoresVisible", "ResourceIcons", "StabilityOverlay"] #Absinthe: stability overlay
 		kGlobeButtons = []
 		for i in range(kGLM.getNumLayers()):
 			szButtonID = "GlobeLayer" + str(i)
@@ -3556,10 +3556,10 @@ class CvMainInterface:
 			iY = yResolution - iMinimapButtonsY_Regular
 			iGlobeY = yResolution - iGlobeButtonY_Regular
 
-		iBtnX = xResolution - 39
+		iBtnX = xResolution - 37 #Absinthe: stability overlay
 		screen.moveItem("GlobeToggle", iBtnX, iGlobeY, 0.0)
 
-		iBtnAdvance = 28
+		iBtnAdvance = 24 #Absinthe: stability overlay
 		iBtnX = iBtnX - len(kShow)*iBtnAdvance - 10
 		if len(kShow) > 0:
 			i = 0
@@ -3630,6 +3630,12 @@ class CvMainInterface:
 		screen.setState( "ResourceIcons", False )
 		screen.hide( "ResourceIcons" )
 
+		#Absinthe: stability overlay
+		screen.addCheckBoxGFC( "StabilityOverlay", "", "", 0, 0, 28, 28, WidgetTypes.WIDGET_ACTION, gc.getControlInfo(ControlTypes.CONTROL_STABILITY_OVERLAY).getActionInfoIndex(), -1, ButtonStyles.BUTTON_STYLE_LABEL )
+		screen.setStyle( "StabilityOverlay", "Button_HUDGlobeStrategy_Style" )
+		screen.setState( "StabilityOverlay", False )
+		screen.hide( "StabilityOverlay" )
+
 		screen.addCheckBoxGFC( "GlobeToggle", "", "", -1, -1, 36, 36, WidgetTypes.WIDGET_ACTION, gc.getControlInfo(ControlTypes.CONTROL_GLOBELAYER).getActionInfoIndex(), -1, ButtonStyles.BUTTON_STYLE_LABEL )
 		screen.setStyle( "GlobeToggle", "Button_HUDZoom_Style" )
 		screen.setState( "GlobeToggle", False )
@@ -3642,6 +3648,11 @@ class CvMainInterface:
 		if(inputClass.getFunctionName() == "MercenaryManagerButton"):
 			mercenaryManager.interfaceScreen()
 		# < Mercenaries End >
+
+		# Absinthe: stability overlay
+		for i in range ( con.iNumMajorPlayers - 1):
+			if inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED and inputClass.getData2() == (400+i):
+				utils.StabilityOverlayCiv(inputClass.getData1())
 
 		# 3Miro religious prosecutions
 		# Inquisitor button

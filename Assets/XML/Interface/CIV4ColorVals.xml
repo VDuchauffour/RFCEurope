@@ -295,7 +295,6 @@
 		</ColorVal>
 		<ColorVal>
 			<Type>COLOR_BROWN_TEXT</Type>
-			<!-- Rhye -->
 			<fRed>0.37</fRed>
 			<fGreen>0.22</fGreen>
 			<fBlue>0.11</fBlue>
@@ -373,7 +372,6 @@
 		</ColorVal>
 		<ColorVal>
 			<Type>COLOR_PLAYER_BLACK_TEXT</Type>
-			<!-- Rhye -->
 			<fRed>0.4</fRed>
 			<fGreen>0.4</fGreen>
 			<fBlue>0.4</fBlue>
@@ -381,7 +379,6 @@
 		</ColorVal>
 		<ColorVal>
 			<Type>COLOR_PLAYER_BLUE</Type>
-			<!-- Rhye -->
 			<fRed>0.19</fRed>
 			<fGreen>0.36</fGreen>
 			<fBlue>1.00</fBlue>
@@ -389,7 +386,6 @@
 		</ColorVal>
 		<ColorVal>
 			<Type>COLOR_PLAYER_LIGHT_BLUE_TEXT</Type>
-			<!-- Rhye -->
 			<fRed>0.60</fRed>
 			<fGreen>0.75</fGreen>
 			<fBlue>1.00</fBlue>
@@ -404,7 +400,6 @@
 		</ColorVal>
 		<ColorVal>
 			<Type>COLOR_PLAYER_BROWN_TEXT</Type>
-			<!-- Rhye -->
 			<fRed>0.78</fRed>
 			<fGreen>0.53</fGreen>
 			<fBlue>0.23</fBlue>
@@ -433,13 +428,11 @@
 		</ColorVal>
 		<ColorVal>
 			<Type>COLOR_PLAYER_DARK_BLUE_TEXT</Type>
-			<!-- Rhye -->
 			<fRed>0.50</fRed>
 			<fGreen>0.52</fGreen>
 			<fBlue>0.90</fBlue>
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
-		<!-- Rhye - start -->
 		<ColorVal>
 			<Type>COLOR_PLAYER_VERYDARK_BLUE</Type>
 			<fRed>0.08</fRed>
@@ -454,7 +447,6 @@
 			<fBlue>0.75</fBlue>
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
-		<!-- Rhye - end -->
 		<ColorVal>
 			<Type>COLOR_PLAYER_DARK_CYAN</Type>
 			<fRed>0.00</fRed>
@@ -465,7 +457,6 @@
 		<ColorVal>
 			<Type>COLOR_PLAYER_DARK_CYAN_TEXT</Type>
 			<fRed>0</fRed>
-			<!-- Rhye -->
 			<fGreen>.823</fGreen>
 			<fBlue>.780</fBlue>
 			<fAlpha>1.00</fAlpha>
@@ -480,18 +471,15 @@
 		<ColorVal>
 			<Type>COLOR_PLAYER_DARK_DARK_GREEN</Type>
 			<fRed>0.00</fRed>
-			<!-- Rhye -->
 			<fGreen>0.18</fGreen>
 			<fBlue>0.00</fBlue>
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
 		<ColorVal>
 			<Type>COLOR_PLAYER_DARK_GREEN_TEXT</Type>
-			<!-- Rhye - start -->
 			<fRed>0.40</fRed>
 			<fGreen>0.80</fGreen>
 			<fBlue>0.40</fBlue>
-			<!-- Rhye - end -->
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
 		<ColorVal>
@@ -531,13 +519,11 @@
 		</ColorVal>
 		<ColorVal>
 			<Type>COLOR_PLAYER_DARK_RED_TEXT</Type>
-			<!-- Rhye -->
 			<fRed>0.90</fRed>
 			<fGreen>0.25</fGreen>
 			<fBlue>0.25</fBlue>
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
-		<!-- Rhye - start -->
 		<ColorVal>
 			<Type>COLOR_PLAYER_VERYDARK_RED</Type>
 			<fRed>0.31</fRed>
@@ -552,7 +538,6 @@
 			<fBlue>0.10</fBlue>
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
-		<!-- Rhye - end -->
 		<ColorVal>
 			<Type>COLOR_PLAYER_DARK_YELLOW</Type>
 			<fRed>0.97</fRed>
@@ -577,12 +562,10 @@
 		<ColorVal>
 			<Type>COLOR_PLAYER_GRAY_TEXT</Type>
 			<fRed>0.8</fRed>
-			<!-- Rhye -->
 			<fGreen>0.808</fGreen>
 			<fBlue>0.851</fBlue>
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
-		<!-- Rhye - start -->
 		<ColorVal>
 			<Type>COLOR_PLAYER_DARK_GRAY1</Type>
 			<fRed>0.30</fRed>
@@ -618,10 +601,8 @@
 			<fBlue>0.6</fBlue>
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
-		<!-- Rhye - end -->
 		<ColorVal>
 			<Type>COLOR_PLAYER_GREEN</Type>
-			<!-- Rhye -->
 			<fRed>0.42</fRed>
 			<fGreen>0.83</fGreen>
 			<fBlue>0.00</fBlue>
@@ -636,7 +617,6 @@
 		</ColorVal>
 		<ColorVal>
 			<Type>COLOR_PLAYER_ORANGE</Type>
-			<!-- Rhye -->
 			<fRed>1.00</fRed>
 			<fGreen>0.38</fGreen>
 			<fBlue>0.0</fBlue>
@@ -644,7 +624,6 @@
 		</ColorVal>
 		<ColorVal>
 			<Type>COLOR_PLAYER_ORANGE_TEXT</Type>
-			<!-- Rhye -->
 			<fRed>1.0</fRed>
 			<fGreen>0.48</fGreen>
 			<fBlue>0.0</fBlue>
@@ -751,14 +730,12 @@
 		<ColorVal>
 			<Type>COLOR_PLAYER_LIGHT_BLUE</Type>
 			<fRed>0.50</fRed>
-			<!-- Rhye -->
 			<fGreen>0.55</fGreen>
 			<fBlue>1.00</fBlue>
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
 		<ColorVal>
 			<Type>COLOR_PLAYER_BLUE_TEXT</Type>
-			<!-- Rhye -->
 			<fRed>0.44</fRed>
 			<fGreen>0.63</fGreen>
 			<fBlue>0.98</fBlue>
@@ -920,7 +897,6 @@
 		</ColorVal>
 		<ColorVal>
 			<Type>COLOR_PLAYER_DARK_ORANGE</Type>
-			<!-- Rhye -->
 			<fRed>0.74</fRed>
 			<fGreen>0.26</fGreen>
 			<fBlue>0.000</fBlue>
@@ -928,7 +904,6 @@
 		</ColorVal>
 		<ColorVal>
 			<Type>COLOR_PLAYER_DARK_ORANGE_TEXT</Type>
-			<!-- Rhye -->
 			<fRed>0.8</fRed>
 			<fGreen>0.3</fGreen>
 			<fBlue>0.071</fBlue>
@@ -936,7 +911,6 @@
 		</ColorVal>
 		<ColorVal>
 			<Type>COLOR_PLAYER_DARK_DARK_GREEN_TEXT</Type>
-			<!-- Rhye -->
 			<fRed>0.3</fRed>
 			<fGreen>0.6</fGreen>
 			<fBlue>0.3</fBlue>
@@ -944,7 +918,6 @@
 		</ColorVal>
 		<ColorVal>
 			<Type>COLOR_PLAYER_PALE_RED</Type>
-			<!-- Rhye -->
 			<fRed>0.900</fRed>
 			<fGreen>0.282</fGreen>
 			<fBlue>0.239</fBlue>
@@ -985,7 +958,6 @@
 			<fBlue>0.392</fBlue>
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
-		<!-- Rhye - start -->
 		<ColorVal>
 			<Type>COLOR_PLAYER_LIME</Type>
 			<fRed>0.72</fRed>
@@ -1035,8 +1007,6 @@
 			<fBlue>0.25</fBlue>
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
-		<!-- Rhye - end -->
-		<!-- Senda - start -->
 		<ColorVal>
 			<Type>COLOR_PLAYER_BURGUNDY</Type>
 			<fRed>0.5</fRed>
@@ -1147,6 +1117,48 @@
 			<fRed>.93</fRed>
 			<fGreen>.11</fGreen>
 			<fBlue>.14</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
+		<ColorVal>
+			<Type>COLOR_HIGHLIGHT_CORE</Type>
+			<fRed>0.00</fRed>
+			<fGreen>0.90</fGreen>
+			<fBlue>0.90</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
+		<ColorVal>
+			<Type>COLOR_HIGHLIGHT_NATURAL</Type>
+			<fRed>0.10</fRed>
+			<fGreen>0.90</fGreen>
+			<fBlue>0.00</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
+		<ColorVal>
+			<Type>COLOR_HIGHLIGHT_POTENTIAL</Type>
+			<fRed>0.90</fRed>
+			<fGreen>0.90</fGreen>
+			<fBlue>0.00</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
+		<ColorVal>
+			<Type>COLOR_HIGHLIGHT_BORDER</Type>
+			<fRed>0.90</fRed>
+			<fGreen>0.50</fGreen>
+			<fBlue>0.00</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
+		<ColorVal>
+			<Type>COLOR_HIGHLIGHT_FOREIGN</Type>
+			<fRed>0.85</fRed>
+			<fGreen>0.05</fGreen>
+			<fBlue>0.00</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
+		<ColorVal>
+			<Type>COLOR_HIGHLIGHT_WATER</Type>
+			<fRed>0.08</fRed>
+			<fGreen>0.12</fGreen>
+			<fBlue>0.32</fBlue>
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
 	</ColorVals>

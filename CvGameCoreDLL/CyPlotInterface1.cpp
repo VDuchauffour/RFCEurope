@@ -256,7 +256,7 @@ void CyPlotPythonInterface1(python::class_<CyPlot>& x)
 		.def("setScriptData", &CyPlot::setScriptData, "void (str) - Set stored custom data")
 
 		// Absinthe: start
-	//	.def("getProvince", &CyCity::getProvince, "int ()")
+		.def("getProvince", &CyPlot::getProvince, "int ()")
 		// Absinthe: end
 	;
 }

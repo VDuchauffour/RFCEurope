@@ -127,14 +127,15 @@ g_bAIThinkPeriod = 6 #Rhye (5 in Warlords, 4 in vanilla)
 ###################################################
 class CvRFCEventHandler:
 
+	mercenaryManager = None #Mercenaries
 
+	def __init__(self, eventManager):
 
-        mercenaryManager = None #Mercenaries
-
-
-        def __init__(self, eventManager):
-
-                self.EventKeyDown=6 #Mercenaries
+		self.lastProvinceID = -1
+		self.bStabilityOverlay = False
+		self.EventKeyDown = 6
+		self.EventKeyUp = 7
+		self.eventManager = eventManager
 
                 # initialize base class
                 eventManager.addEventHandler("GameStart", self.onGameStart) #Stability
@@ -150,7 +151,7 @@ class CvRFCEventHandler:
                 eventManager.addEventHandler("BeginPlayerTurn", self.onBeginPlayerTurn) #Mercenaries
                 #eventManager.addEventHandler("EndPlayerTurn", self.onEndPlayerTurn)
                 eventManager.addEventHandler("EndGameTurn", self.onEndGameTurn) #Stability
-                eventManager.addEventHandler("kbdEvent",self.onKbdEvent) #Mercenaries
+                eventManager.addEventHandler("kbdEvent",self.onKbdEvent) #Mercenaries and Stability overlay
                 eventManager.addEventHandler("unitLost",self.onUnitLost) #Mercenaries
                 eventManager.addEventHandler("unitKilled",self.onUnitKilled) #Mercenaries
                 eventManager.addEventHandler("OnLoad",self.onLoadGame) #Mercenaries
@@ -740,8 +741,9 @@ class CvRFCEventHandler:
         def onKbdEvent(self, argsList):
                 'keypress handler - return 1 if the event was consumed'
 
+                iHuman = utils.getHumanID()
                 #if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(con.iNationalism)) and gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]): #Rhye
-                if (gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
+                if (gc.getGame().getGameTurn() >= con.tBirth[iHuman]):
 
                         # TO DO: REMOVE THE FOLLOWING LINE BEFORE RELEASE.
                         #gc.getPlayer(0).setGold(20000)
@@ -760,8 +762,6 @@ class CvRFCEventHandler:
 
                 if ( eventType == self.EventKeyDown and theKey == int(InputTypes.KB_B) and self.eventManager.bAlt):
 
-
-                        iHuman = utils.getHumanID()
                         iGameTurn = gc.getGame().getGameTurn()
                         pass
 
@@ -787,8 +787,61 @@ class CvRFCEventHandler:
 
                 #Rhye - end debug
 
-        #Mercenaries - end
+		# Absinthe: province highlight - based on SoI
+		if eventType == self.EventKeyDown and px >= 0 and py >= 0 and int(key) == 45 and self.eventManager.bCtrl and not self.eventManager.bAlt:
 
+			plot = gc.getMap().plot(px,py)
+			iActivePlayer = gc.getGame().getActivePlayer()
+			iActiveTeam = gc.getPlayer(iActivePlayer).getTeam()
+			iProvinceID = rfcemaps.tProinceMap[plot.getY()][plot.getX()]
+
+			# do not show provinces of unrevealed tiles
+			if not plot.isRevealed(iActiveTeam, False) and not gc.getGame().isDebugMode():
+				return
+
+			# do not redraw if already drawn
+			if self.lastProvinceID == iProvinceID:
+				return
+
+			map = CyMap()
+			engine = CyEngine()
+
+			# clear the highlight
+			engine.clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_HIGHLIGHT_PLOT)
+			#engine.clearColoredPlots(PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS)
+
+			# cache the plot's coords
+			self.lastProvinceID = rfcemaps.tProinceMap[plot.getY()][plot.getX()]
+
+			# select an appriopriate color
+			if rfcemaps.tProinceMap[plot.getY()][plot.getX()] == -1: # ocean and non-province tiles
+				return
+			else:
+				iLevel = utils.getProvinceStabilityLevel(iHuman, iProvinceID)
+				if iLevel == 4:
+					color = gc.getColorInfo(gc.getInfoTypeForString("COLOR_HIGHLIGHT_CORE")).getColor()
+				elif iLevel == 3:
+					color = gc.getColorInfo(gc.getInfoTypeForString("COLOR_HIGHLIGHT_NATURAL")).getColor()
+				elif iLevel == 2:
+					color = gc.getColorInfo(gc.getInfoTypeForString("COLOR_HIGHLIGHT_POTENTIAL")).getColor()
+				elif iLevel == 1:
+					color = gc.getColorInfo(gc.getInfoTypeForString("COLOR_HIGHLIGHT_BORDER")).getColor()
+				else:
+					color = gc.getColorInfo(gc.getInfoTypeForString("COLOR_HIGHLIGHT_FOREIGN")).getColor()
+
+			# apply the highlight
+			for i in range(map.numPlots()):
+				plot = map.plotByIndex(i)
+				if rfcemaps.tProinceMap[plot.getY()][plot.getX()] == iProvinceID and (gc.getGame().isDebugMode() or plot.isRevealed(iActiveTeam, False)):
+					engine.fillAreaBorderPlot(plot.getX(), plot.getY(), color, AreaBorderLayers.AREA_BORDER_LAYER_HIGHLIGHT_PLOT)
+
+			return
+
+		# clear all highlights
+		if (eventType == self.EventKeyUp and self.eventManager.bCtrl) or (eventType == self.EventKeyDown):
+			CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_HIGHLIGHT_PLOT)
+			self.lastProvinceID = -1
+		# Absinthe: end
 
 	def printDebug(self, iGameTurn):
 		pass
