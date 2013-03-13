@@ -311,7 +311,7 @@
 		</MiscArtInfo>
 		<MiscArtInfo>
 			<Type>SPACE_SHIP_BUTTON</Type>
-			<Path>,Art/Interface/Buttons/Buildings/ApolloProgram.dds,Art/Interface/Buttons/Buildings_Atlas.dds,3,1</Path>
+			<Path>,-,Art/Interface/Buttons/Buildings_Atlas.dds,3,1</Path>
 			<fScale>1.0</fScale>
 			<NIF/>
 			<KFM/>
