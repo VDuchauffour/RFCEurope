@@ -119,7 +119,7 @@ Changes for RFCE 1.2:
 		- Lithuania has polish unit sounds instead of russian (until we manage to get proper lithuanian sounds)
 		- New Scottish voice set by Annomander
 		- Irish Brigade got Celtic sounds, Highlander and Highlander Infantry got Scottish sounds
-		- New art for Westminster Abbey by hrochland
+		- New art for Westminster Abbey and Krak des Chevaliers by hrochland
 		- New type of Dense Forest art
 
 	Balance:
