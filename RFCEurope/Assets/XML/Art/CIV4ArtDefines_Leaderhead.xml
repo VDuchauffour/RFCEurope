@@ -216,11 +216,11 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_STEPHEN</Type>
-			<Button>Art/Leaderheads/Istvan/btn_LH_magyar_Istvan.dds</Button>
-			<NIF>Art/Leaderheads/Istvan/Cyrus.nif</NIF>
-			<KFM>Art/Leaderheads/Istvan/Cyrus.kfm</KFM>
-			<NoShaderNIF>Art/Leaderheads/Istvan/Cyrus_nonshader.nif</NoShaderNIF>
-			<BackgroundKFM>Art/Leaderheads/Istvan/Willem van Oranje_BG.kfm</BackgroundKFM>
+			<Button>Art/Leaderheads/StephenI/btn_lh_hungary_stephen.dds</Button>
+			<NIF>Art/Leaderheads/StephenI/Justinian.nif</NIF>
+			<KFM>Art/Leaderheads/StephenI/Justinian.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/StephenI/Justinian.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/StephenI/Justinian_Background.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_YAROSLAV</Type>
