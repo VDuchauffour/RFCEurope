@@ -51,7 +51,7 @@ class Resources:
 			self.removeResource( 2, 69)  #Remove the NAA from Iceland
 		if (iGameTurn == xml.i1452AD):   #Coffee spawns instead of being preplaced
 			self.createResource(93, 0, xml.iCoffee)  #near Sinai
-			self.createResource(99, 13, xml.iCoffee) #near Damascus
+			self.createResource(99, 10, xml.iCoffee) #near Damascus
 		if (iGameTurn == xml.i1580AD):
 			self.createResource(32, 59, xml.iPotato) #Potatoes in Ireland
 			self.createResource(29, 57, xml.iPotato)
