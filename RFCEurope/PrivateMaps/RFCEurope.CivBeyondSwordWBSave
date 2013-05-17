@@ -39098,8 +39098,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=2
-	BonusType=BONUS_SHEEP
-	TerrainType=TERRAIN_PLAINS
+	FeatureType=FEATURE_OASIS, FeatureVariety=0
+	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
 BeginPlot
@@ -39593,6 +39593,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=95,y=2
+	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -41441,7 +41442,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=99,y=11
-	ImprovementType=IMPROVEMENT_CITY_RUINS
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
