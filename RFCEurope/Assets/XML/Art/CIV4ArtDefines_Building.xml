@@ -399,7 +399,7 @@
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,6,3</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PALACIO_DA_PENA</Type>
+			<Type>ART_DEF_BUILDING_RIBEIRA</Type>
 			<LSystem>LSYSTEM_4x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.72</fScale>
