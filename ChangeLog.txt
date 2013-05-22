@@ -1,5 +1,3 @@
-TEST
-
 Welcome to Rhye's and Fall of Europe, a mod based on the incredibly popular original Rhye's and Fall of Civilizations (RFC).
 If you've played RFC before, all the familiar elements are here: stability, plagues, dynamic rises, barbarian uprisings, Unique Powers, Unique Historical Victories,
 and uniquely customized parameters designed to simulate history while allowing you the freedom to change it.
