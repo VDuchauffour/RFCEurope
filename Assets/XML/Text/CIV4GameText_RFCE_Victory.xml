@@ -540,11 +540,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GEN3</Tag>
-		<English>[COLOR_YELLOW]Trade above everything else:[COLOR_REVERT] Have the largest total amount of Exports and Imports in 1640AD.</English>
-		<French>[COLOR_YELLOW]Trade above everything else:[COLOR_REVERT] Have the largest total amount of Exports and Imports in 1640AD.</French>
+		<English>[COLOR_YELLOW]Trade above everything else:[COLOR_REVERT] Have the largest total amount of commerce from foreign Trade Route Exports and Imports in 1640AD.</English>
+		<French>[COLOR_YELLOW]Trade above everything else:[COLOR_REVERT] Have the largest total amount of commerce from foreign Trade Route Exports and Imports in 1640AD.</French>
 		<German>[COLOR_YELLOW]Handeln geht über alles:[COLOR_REVERT] Erzielt bis 1640 n.Chr. den größten Anteil an Exporten und Importen.</German>
 		<Italian>[COLOR_YELLOW]Il Commercio prima di tutto:[COLOR_REVERT] Devi avere il più grande numero totale di Importazioni ed Esportazioni nel 1640AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Trade above everything else:[COLOR_REVERT] Have the largest total amount of Exports and Imports in 1640AD.</Spanish>
+		<Spanish>[COLOR_YELLOW]Trade above everything else:[COLOR_REVERT] Have the largest total amount of commerce from foreign Trade Route Exports and Imports in 1640AD.</Spanish>
 		<Portuguese>[COLOR_YELLOW]Comércio Acima de Tudo:[COLOR_REVERT] Tenha o maior valor total de Exportações e Importações em 1640DC.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -685,7 +685,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_DUT1</Tag>
 		<English>[COLOR_YELLOW]The Financial Center:[COLOR_REVERT] Settle 5 Great Merchants in Amsterdam by 1750AD.</English>
-		<French>Avoir 5 Marchants Illustre &#224; Amsterdam en 1750 ap.JC.</French>
+		<French>Avoir 5 Marchants Illustres &#224; Amsterdam avant 1750 ap.J.C.</French>
 		<German>[COLOR_YELLOW]Das Finanzzentrum:[COLOR_REVERT] Siedelt bis 1750 n.Chr. 5 Große Händler in Amsterdam an.</German>
 		<Italian>[COLOR_YELLOW]Il Centro Finanziario:[COLOR_REVERT] Insedia 5 Grandi Mercanti ad Amsterdam entro il 1750AD.</Italian>
 		<Spanish>[COLOR_YELLOW]The Financial Center:[COLOR_REVERT] Settle 5 Great Merchants in Amsterdam by 1750AD.</Spanish>
