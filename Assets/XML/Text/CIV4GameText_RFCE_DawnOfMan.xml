@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Game Text - RFCE Dawn of Man -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_RHYES_DAWN_OF_MAN_TEXT</Tag>
+		<English>The sun rises on the year %s1_year. The %s2_civ people are ready to settle down and found your first city.[NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
+		<French>Le soleil se l&#232;ve sur l'an %s1_year. Les %s2_civ sont pr&#234;ts &#224; s'installer et &#224; fonder votre premi&#232;re ville.[NEWLINE][NEWLINE]%s3_leader, votre peuple vous a confi&#233; le pouvoir absolu et s'en remet &#224; vous pour b&#226;tir une civilisation qui r&#233;sistera &#224; l'&#233;preuve du temps !</French>
+		<German>Die Sonne erhellt das Jahr %s1_year. Das %s2:3_civ Volk ist bereit, sich niederzulassen und Eure erste Stadt zu gr&#252;nden.[NEWLINE][NEWLINE]%s3_leader, Euer Volk hat Euch absolute Macht verliehen und vertraut darauf, dass Ihr eine Zivilisation errichtet, welche die Zeit &#252;berdauern wird!</German>
+		<Italian>Il sole sorge nell'anno %s1_year. La popolazione %s2:2_civ &#232; infine pronta a stabilirsi e a fondare la tua prima citt&#224;.[NEWLINE][NEWLINE]%s3_leader, il tuo popolo ti ha conferito potere assoluto, credendo che tu possa sviluppare una civilt&#224; in grado di resistere alle prove del tempo!</Italian>
+		<Spanish>El sol se alza en el a&#241;o %s1_year. Las gentes del %s2_civ est&#225;n listas para asentarse y fundar vuestra primera ciudad.[NEWLINE][NEWLINE]%s3_leader, vuestro pueblo os ha conferido poder absoluto, confiando en que pod&#225;is desarrollar una civilizaci&#243;n que supere los retos del tiempo.</Spanish>
+		<Portuguese>O sol nasce no ano de %s1_year. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DAWN_OF_MAN_SCREEN_TITLE</Tag>
+		<English>RHYE'S AND FALL OF CIVILIZATIONS: EUROPE</English>
+		<French>RHYE'S AND FALL OF CIVILIZATIONS: EUROPE</French>
+		<German>RHYE'S AND FALL OF CIVILIZATIONS: EUROPE</German>
+		<Italian>RHYE'S AND FALL OF CIVILIZATIONS: EUROPE</Italian>
+		<Spanish>RHYE'S AND FALL OF CIVILIZATIONS: EUROPE</Spanish>
+		<Portuguese>RHYE'S AND FALL OF CIVILIZATIONS: EUROPA</Portuguese>
+	</TEXT>
+		<!-- Civ Specific Dawn of Man -->
+		<!-- DAWN_OF_MAN_TEXT_0 numbers are the iCivs.Consts.py -->
+		<!-- 0 is Byzantium, 1 is France, 2 is Arabia, etc -->
+	<TEXT> <!-- Byzantium -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_0</Tag>
+		<English>After many glorious centuries under Rome, the great Constantine saw fit to split the mighty empire into two parts.[NEWLINE]It is the year 500 AD, the Western Roman Empire has fallen. While Rome will always have a place in your people's hearts, Constantinople is now the heart of the most glorious nation on Earth![NEWLINE][NEWLINE]Justinian, you are now the sole ruler, THE Roman Emperor. Your nation is rich and strong, but be aware: huge riches attract many enemies, and some of the barbarians may be even stronger.[NEWLINE]Your people have faith that you can lead their mighty nation through the coming storm. Will you prevail, and lead the Byzantine Empire through another 1,000 years of glory?</English>
+		<French>.</French>
+		<German>Nach vielen glorreichen Jahrhunderten unter Rom trennte Konstantin der Große das mächtige Reich in zwei Teile.[NEWLINE]Es ist das Jahr 500 n.Chr., das Weströmische Reich war gefallen. Rom wird immer einen Platz im Herzen des Volkes haben, aber Konstantinopel ist jetzt das Herz der glorreichsten Nation auf Erden![NEWLINE][NEWLINE]Justinian, ihr seid nun der alleinige Herrscher, DER Römische Kaiser. Eure Nation ist reich und stark, aber nehmt euch in acht: Großer Reichtum zieht viele Feinde an und einige der Barbaren mögen noch stärker sein.[NEWLINE]Euer Volk hat das Vertrauen dass ihr diese mächtige Nation durch den kommenden Sturm geleiten könnt. Werdet ihr erfolgreich sein und dem Byzantinischen Reich zu weiteren 1000 Jahren Ruhm verhelfen?</German>
+		<Italian>E' l'anno 500 D.c. Dopo molti secoli sotto il dominio di Roma, Costantino ha deciso di dividere l'impero in due parit.[NEWLINE][NEWLINE]Mentre Roma avrà sempre un posto nei cuori dei tuoi sudditi, ora Costantinopoli è la città più potente del mondo![NEWLINE][NEWLINE]Ora tu, Giustiniano, governi come Imperatore Romano. La tua nazione è forte, ma i barbari potrebbero esserlo di più. La tua gente crede che puoi condurre l'impero fuori dalla tempesta in arrivo. Vincerai e riuscirai a dare all'Impero Bizantino altri 1000 anni di gloria?</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT> <!-- France -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_1</Tag>
+		<English>It is the year 500 AD. As king of the Frankish people, you have lead their way in becoming the first barbarian tribe to set aside arianism and embrace catholicism, which will be the guiding principle in building a glorious civilization.[NEWLINE][NEWLINE]Your lands are vast and fertile, but the Burgundians in the Rhône valley will not always stay subdued, and the coasts may provide access to dangerous raiders from the north.</English>
+		<French>.</French>
+		<German>Es ist das Jahr 500 n.Chr., als ihr König habt ihr die Franken aus dem Arianismus hin zum katholischen Glauben geführt, dieser soll nun das Leitprinzip zum Aufbau einer glorreichen Zivilisation sein.[NEWLINE][NEWLINE]Eure Ländereien sind rießig und fruchtbar, nur die Burgunder im Rhonetal werden nicht ewig zurückhaltend sein und die Küste kann gefährlichen Räubern aus dem Norden Zugang gewähren.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT> <!-- Arabia -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_2</Tag>
+		<English>It is the year 632 AD. The prophet Muhammed, peace be upon him, accomplished what no one thought was possible - uniting the tribes of Arabia. You, Abu Bakr, has been chosen to succeed him as Caliph and expand the House of Islam.[NEWLINE][NEWLINE]After a devastating war with Sassanid Persia and raging religious controversies between Chalcedonians and Monophysities, the land of the Byzantine Empire is ripe for conquest. You know you cannot miss this opportunity, and there will be many centuries to build up your forces before the western crusaders cast their gaze towards al-Quds.</English>
+		<French>.</French>
+		<German>Es ist das Jahr 632 n.Chr., der Prophet Mohammed, Friede sei mit ihm, hat erreicht was keiner für möglich gehalten hatte - die arabischen Stämme zu vereinen. Ihr, Abu Bakr, sollt ihm als Kalif nachfolgen und das islamische Haus vergrößern.[NEWLINE][NEWLINE]Nach einem verheerenden Krieg mit den Sassaniden und wütenden religiösen Auseinandersetzungen zwischen den Chalceoniern und Monphysiten ist das Gebiet des Byzantinischen Reiches reif für Eroberungen. Ihr wisst dass ihr diese Gelegenheit nicht verpassen dürft und dass ihr einige Jahrhunderte Zeit habt Truppen aufzustellen bevor die westlichen Kreuzfahrer ihren Blick auf al-Quds richten.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT> <!-- Bulgaria -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_3</Tag>
+		<English>After many years of civil war, your father had finally united your people in Great Bulgar, north of the Black Sea. Following his death, however, pushed by the Khazar hordes, you and your brothers had to divide the Bulgarians yet again and leave your old home in different directions.[NEWLINE][NEWLINE]It is the year 680 AD. After years of travel through snow and heat, mountains and swamps, your followers and you finally reached the northern borders of the Eastern Roman Empire. Tired of traveling with no home, you gather your people for one last push, to cross the Danube river and to challenge the mighty Empire itself; to claim this lustful land as yours forever.</English>
+		<French>.</French>
+		<German>Nach vielen Jahren Bürgerkrieg ist es eurem Vater zu guter letzt gelungen euer Volk als Großbulgarien nördlich des Schwarzen Meeres zu vereinen. Nach seinem gewaltsamen Tod durch die Charsaren, müsst ihr und eure Brüder Bulgarien erneut aufteilen und eure Heimat in verschiedene Richtungen verlassen.[NEWLINE][NEWLINE]Es ist das Jahr 680 n.Chr.. Nach Jahren des Umherziehens durch Schnee und Hitze, Berge und Sümpfe, erreicht ihr mit euren Anhänger zu guter letzt die nördliche Grenze des Oströmischen Reiches. Ermüdet durch das heimatlose Umherirren versammelt ihr euer Volk zum alles entscheidenden Vorstoß - die Donau zu überqueren und das mächtige Reich selbst herauszufordern; dieses geile Land selbst zu beanspruchen und zwar für alle Ewigkeit.</German>
+		<Italian>Dopo molti anni di guerra civile, tuo padre ha infine riunito il tuo popolo nella Grande Bulgaria, a nord del Mar Nero. Dopo la sua morte, ovviamente, mandato via dalle orde dei Cazari, tu e i tuoi fratelli dovete dividere nuovamente i Bulgari e lasciare la vostra vecchia casa per andare in varie direzioni.[NEWLINE][NEWLINE]E' l'anno 680AD. Dopo anni di vagabondaggi attraverso neve, montagne e paludi, tu e i tuoi compagni siete riusciti a raggiungere i confini settentrionali dell'Impero Romano d'Oriente. Stanchi di viaggiare senza fissa dimora, hai raccolto il tuo popolo per un ultima incursione, per attraversare il Danubio e sfidare il potente Impero; reclami le sue ricchissime terre come tue, per sempre.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT> <!-- Cordoba -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_4</Tag>
+		<English>It is the year 711 AD. After the long struggle, the seemingly endless fleeing from the Sunni Muslims in the east, many thought your Umayyad line to be extinct.[NEWLINE]Not so! You, Abd-ar-Rahman III, led your people to a new place which you call "Al-Andalus", where you and your people may finally find a new home[NEWLINE][NEWLINE]These new lands may easily be the richest you have ever seen, so with Allah's will you might be able to build a rich and happy Caliphate - full of poetry, art and religious toleration - which can even rival that of the prophet Muhammed![NEWLINE]You only have to worry about those fanatic Christians to the north...</English>
+		<French>.</French>
+		<German>Es ist das Jahr 711 n.Chr., nach dem endlosen Bemühen, der anscheinend nicht enden wollenden Flucht vor den Sunniten im Osten, dachten viele dass eure Umayyaden-Linie ausgestorben sei.[NEWLINE]Dem ist nicht so! Ihr, Abd ar-Rahman III, führt euer Volk zu einem neuen Ort den ihr "Al-Andalus" nennt und wo ihr und euer Volk eine neue Heimat findet.[NEWLINE][NEWLINE]Dieses neue Land kann sehr leicht das Reichste sein das ihr jemals gesehen habt, sollte es Allahs Wille sein dass ihr in der Lage seid ein reiches und glückliches Kalifat aufzubauen - gefüllt mit Poesie, Kunst und religiöser Toleranz - das sogar jenem vom Propheten Mohammed Konkurrenz machen kann![NEWLINE]Ihr müsst euch nur vor diesen fanatischen Christen im Norden in acht nehmen...</German>
+		<Italian>E' l'anno 711AD. Puoi difficilmente credere alla tua fortuna. Gli stupidi seguaci del re Visigoto deposto Womba hanno appena invitato te e i tuoi compagni musulmani oltre lo stretto di Gibilterra. Dopo aver sconfitto il re Visigoto in carica, Rod, con un tradimento, è stato facile prendere il potere con l'aiuto degli Ebrei. Ora puoi costruire un ricco e felice Califfato, pieno di poesia, arte e tolleranza religiosa!</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT> <!-- Norse -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_5</Tag>
+		<English>It is the year 780 AD. The winters in Scandinavia are harsh, but have bred a sturdy people and your longships are the envy of any sailor. Harald Hardrada, your loyal vikings are eager to show their strength to the whole world![NEWLINE][NEWLINE]Far away Vinland, the coast of Normandy and the rich monastery of Lindisfarne beckons. Which path will you follow? Explore? Conquer? Trade? Maybe all three combined? The choice is yours, only one thing is certain: Be bold, be swift, be strong, and the halls of Valhalla will await you!</English>
+		<French>.</French>
+		<German>Es ist das Jahr 780 n.Chr., die Winter in Skandinavien sind streng, haben aber ein robustes Volk hervorgebracht um deren Langboote jeder Seemann sie beneidet. Harald Hardrada, eure loyalen Wikinger brennen voller Ungeduld darauf der ganzen Welt ihre wahre Stärke zu zeigen.[NEWLINE][NEWLINE]Das ferne Vinland, die Küste der Normandie und das reiche Kloster Lindisfarne winken!		Welchem Pfad wollt ihr folgen? Entdecken? Erobern? Handeln? Oder alles zusammen? Ihr habt die Wahl, nur eines ist sicher: Seid mutig, seid flink, seid stark und die Hallen der Walhalla warten auf euch!</German>
+		<Italian>E' l'anno 780 AD. Gli inverni in Scandinavia sono rigidi, ma hai addestrato un popolo robusto e le tue drakkar suscitano l'invidia di qualunque marinaio. Ora, la lontanissima Terranova, la costa della Normandia e il ricco monastero di Lindisfarne chiamano. Sii audace, sii veloce, sii forte, i portali del Vahlalla ti aspettano!</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT> <!-- Venice -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_6</Tag>
+		<English>It is the year 810 AD. Fleeing the onslaught of the barbarian Lombards, your people and the remnants of the Byzantine Exarchate of Ravenna have settled on the inaccessible islands in the lagoon. The recent agreement between Charlemagne of the Franks and emperor Nicephorus in Constantinople means that you will be left alone for the time being. There has never been a better opportunity to build a rich trading empire that will dominate the seas!</English>
+		<French>.</French>
+		<German>Es ist das Jahr 810 n.Chr., die Flucht vor den anstürmenden lombardischen Barbaren veranlasst euer Volk zusammen mit den Überlebenden des byzantinischen Exarchats Ravenna die unzugänglichen Inseln der Lagune zu besiedeln. Das kürzliche Abkommen zwischen Karl dem Großen der Franken und Kaiser Nikephoros in Konstantinopel bedeutet, dass ihr dort geduldet werdet. Es gab nie eine bessere Gelegenheit ein die Meere berherrschendes und reiches Handelsimperium aufzubauen!</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT> <!-- Burgundy -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_7</Tag>
+		<English>It is the year 843 AD. After your defeat at the hands of your brothers, you have signed the treaty of Verdun, accepting that the inheritance of the great empire that Charlemange built will be split into three, with you taking the middle part. Your exposed position - wedged between the powerful Frankish and German kingdoms - will require great diplomatic skills, but your knights should be the envy of all of Europe!</English>
+		<French>.</French>
+		<German>Es ist das Jahr 843 n.Chr., nach den Erbstreitigkeiten mit euren Brüdern habt den Vertrag von Verdun unterzeichnet, in dem ihr anerkennt, dass das Reich Karls des Großen in drei Teile aufgespalten wird - ihr erhaltet das Mittelreich. Eure entblößte Lage - eingebettet zwischen den mächtigen fränkischen und deutschen Königreichen - wird euch großes diplomatisches Geschick abverlangen, einzig um eure Ritter sollt ihr in ganz Europa beneidet werden!</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT> <!-- Germany -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_8</Tag>
+		<English>It is the year 858 AD. The great Frankish inheritance have irrevocably been split into three, with the eastern part going to you. As the Byzantine Empress Irene rejected Charlemange's marriage proposal, you should instead build a Holy Roman Empire for yourself!</English>
+		<French>.</French>
+		<German>Es ist das Jahr 858 n.Chr., das große Erbe der Franken wurde unwiderruflich in drei Teile aufgeteilt, wobei ihr das Ostfrankenreich erhalten habt. Nachdem die byzantinische Kaiserin Irene von Athen das Heiratsgesuch von Karl dem Großen ablehnte, solltet ihr stattdessen selbst ein Heiliges Römisches Reich gründen.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT> <!-- Kiev -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_9</Tag>
+		<English>It is the year 880 AD. After the mighty walls of Constantinople hampered your attack in 866, you decided to settle down with some of your fellow Varangians. The land you just set yout foot on seems perfect for this.[NEWLINE][NEWLINE]The slavic people living here accept you as their leader, while your Swedish Vikings establish themselves as the local elite. Life is good, the land is fertile, you and your descendants will surely lead your new nation, the Kievan Rus into glory.[NEWLINE]If only you weren't having those dreams about reckless hordes raising in the east...</English>
+		<French>.</French>
+		<German>Es ist das Jahr 880 n.Chr., nachdem die mächtigen Mauern von Konstantinopel euren Angriff von 866 verhinderten, habt ihr entschieden euch mit einigen eurer Warägergefolgsleuten niederzulassen. Das Land auf dem ihr gerade mit euren Füßen steht, scheint dafür perfekt zu sein.[NEWLINE][NEWLINE]Die hier lebenden slawischen Völker erkennen euch als Führer an und eure schwedischen Wikinger setzen sich als örtliche Elite durch. Das Leben ist schön, das Land fruchtbar, ihr und eure Nachkommen werdet gewiss eure neue Nation, die Kiewer Rus, zu Ruhm und Ehre führen.[NEWLINE]Wenn da nur nicht dieser Traum wäre: Rastlose Horden die sich im Osten erheben...</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT> <!-- Hungary -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_10</Tag>
+		<English>It's the year 895 AD. While your glorious armies warred with the Byzantines and Bulgarians, the traitorous Pechenegs attacked your families and the remaining tribes in the homeland, Etelköz. Without defences they had to flee, and you know you cannot lead them back to their previous home.[NEWLINE][NEWLINE]After taking your nation further to the west you finally reach the Carpathian-basin, which is everything your people ever needed: wealthy, fertile - and most importantly, easily defendable. Immediately falling in love with it, you claim these lands as yours forever.[NEWLINE][NEWLINE]One thing has to be clear to you though: all the previous civilizations holding these lands before faded away throughout the centuries. You have to accept some of the more developed Western-European ways if you want to establish a long-living and successful nation in the middle of Europe.</English>
+		<French>.</French>
+		<German>Es ist das Jahr 895 n.Chr., während eure glorreichen Armeen mit den Byzantinern und Bulgaren kämpften überfielen die treulosen Petschenegen in der Heimat eure Familien und die übrigen Stämme. Ohne jegliche Verteidigung mussten sie fliehen, und ihr wusstet ihr könnt sie nicht mehr nach Hause zurückbringen.[NEWLINE][NEWLINE]Ihr führt eure Nation weiter in den Westen und erreicht die Pannonische Tiefebene, die alles ist was euer Volk braucht: reich, fruchtbar - und am wichtigsten - leicht zu verteidigen. Augenblicklich verliebt ihr euch in das Land und beansprucht es jetzt und für alle Zeiten.[NEWLINE][NEWLINE]Eines muss euch nur klar sein: alle Zivilisationen die früher dieses Land innehatten sind über die Jahrhunderte verschwunden. Ihr müsst einige der weiterentwickelten westeuropäischen Lebensweisen annehmen falls ihr eine lange überlebende und erfolgreiche Nation in Mitteleuropa etablieren wollt.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT> <!-- Spain -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_11</Tag>
+		<English>It is the year 909 AD. While the Moors never really held sway over your northern parts of Spain, the Caliphate of Cordoba under Abd-ar-Rahman III is stronger than ever. Christians are tolerated there, but lower taxes drive them towards conversion and eternal damnation. You must launch the Reconquista and liberate them before it is too late!</English>
+		<French>.</French>
+		<German>Es ist das Jahr 909 n.Chr., obwohl die Mohren nie wirklich die Herrschaft über eure nördlichen Teile Spaniens hatten ist das Kalifat von Cordoba unter Abd ar-Rahman III stärker denn je. Christen sind dort toleriert, aber niedrigere Steuern treibt sie zur Konversion und damit zur ewigen Verdammnis. Ihr müsst die Reconquista starten und sie befreien bevor alles zu spät ist!</German>
+		<Italian>E' l'anno 909AD. Sebbene i mori non domineranno mai davvero le zone settentrionali della Spagna, il Califfato di Cordoba governato da Abd-ar-Rahman III è più forte che mai. I Cristiani sono tollerati, ma la possibilità di pagare imposte più basse li spinge verso la conversione e l'eterna dannazione. Devi dare il via alla Reconquista e salvarli prima che sia troppo tardi!</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT> <!-- Poland -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_12</Tag>
+		<English>It is the year 966 AD. Worried by the threat of a unified German Empire, you have accepted Christianity to protect your land against foreign aggression. With knowing your people are safe - at least for now - you can start to strengthen your position in Central Europe.[NEWLINE][NEWLINE]If all your plans goes well, your nation will be a shining example of liberty and toleration for the rest of Europe - no inquisition will be needed, and the Szlactha will curb any autocratic tendencies!</English>
+		<French>.</French>
+		<German>Es ist das Jahr 966 n.Chr., besorgt wegen der Bedrohung eines vereinten Deutschen Reiches habt ihr das Christentum angenommen um euer Land vor fremden Angriffen zu schützen. Im Wissen dass euer Volk sicher ist - wenigstens im Moment - könnt ihr beginnen eure Lage in Zentraleuropa zu stärken.[NEWLINE][NEWLINE]Wenn all eure Pläne aufgehen, wird eure Nation ein leuchtendes Beispiel von Freiheit und Toleranz für den Rest von Europa sein - es wird keine Inquisition benötigen und der Szlachta wird autokratische Bestrebungen im Zaum halten.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT> <!-- Genoa -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_13</Tag>
+		<English>It is the year 1016 AD, together with the Pisans you have just defeated the muslim pirates. The need for security forces the republic you serve to assert an ever greater responsibility: the protection of the whole Italian peninsula.[NEWLINE]This is your chance to build a magnificent merchant republic! With enough resources, even the fabled cities of the eastern Mediterranean may lay at your hands.</English>
+		<French>.</French>
+		<German>Es ist das Jahr 1016 n.Chr., zusammen mit den Pisanern habt ihr gerade die muslimischen Piraten besiegt. Das Verlangen nach Sicherheit treibt die Republik, der ihr dient, dazu eine noch größere Verantwortung zu übernehmen: Der Schutz der gesamten italienischen Halbinsel.[NEWLINE]Das ist eure Gelegenheit eine prächtige Handelsrepublik aufzubauen! Mit genügend Rohstoffen werden selbst die Märchenstädte des östlichen Mittelmeeres in euren Händen liegen.</German>
+		<Italian>E' il 1016AD. Insieme con i Pisani, hai appena sconfitto i pirati musulmani, ma la necessità di maggiore sicurezzaobbliga la repubblica che servi a prendere sulle proprie spalle la responsabilità enorme di proteggere la Penisola Italiana. E' la tua occasione per costruire una splendida repubblica mercantile! Con una certa quantità di risorse, anche le favolose città del Mediterraneo orientale cadranno nelle tue mani.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT> <!-- England -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_14</Tag>
+		<English>It is the year 1066 AD. The battlefield of Hastings lays quiet. Harold Godwinson is dead, but not before he took care of the Norwegians for you. Even though Scotland may be the source of trouble sometimes, the rich estates of England will fund the defense of your important possessions in France. No longer William the Bastard, henceforth you will be known as William the Conqueror!</English>
+		<French>.</French>
+		<German>Es ist das Jahr 1066 n.Chr., das Schlachtfeld bei Hastings schweigt. Harold Godwinson ist tot, aber zuvor hatte er sich noch um die Normannen für euch gekümmert. Auch wenn irgendwann Schottland die Quelle von Schwierigkeiten sein kann, werden die reichen Anwesen die Verteidigung der wichtigen Besitztümer in Frankreich finanzieren. Nicht länger "Wilhelm der Bastard" sondern fortan bekannt als "Wilhelm der Eroberer"!</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT> <!-- Portugal -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_15</Tag>
+		<English>Your small county of Portugal just decided to break the family ties with Leon and declared it's independence, creating the Kingdom of Portugal. It's 1139 AD, and you, Afonso Henriques, are the king of the newly formed country.[NEWLINE][NEWLINE]It is time to strengthen your position by proceeding with the reconquista to the south, but you should also prepare for your ultimate goal: to expand beyond the Iberian Peninsula. Your position makes it ideal to claim the riches of North Africa and the Atlantic islands - and who knows, maybe even much further lands than those.</English>
+		<French>.</French>
+		<German>Eure kleine Grafschaft Portugal hat gerade beschlossen die Familienbande mit Leon zu brechen, seine Unabhängigkeit zu erklären und das Königreich Portugal zu erschaffen. Es ist 1139 n.Chr., und ihr, Alfons I, seid der König dieses neu gebildeten Landes.[NEWLINE][NEWLINE]Es ist an der Zeit eure Lage durch die Reconquista im Süden zu stärken. Aber ihr solltet euch außerdem auf euer endgültiges Ziel vorbereiten: Expansion über die iberische Halbinsel hinaus. Eure Lage ist ideal um die Reichtümer Nordafrikas und der Atlantikinseln zu beanspruchen - und wer weiß, vielleicht auch noch weit entfernterer Länder.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT> <!-- Lithuania -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_16</Tag>
+		<English>It is the year 1236 AD. Strange invaders - calling themselves Teutonic Knights and worshipping a man on a cross - have disturbed the tranquility of the land. However, they are not invincible. You, Mindaugas, showed that they bleed and die, just like other men.[NEWLINE]It is high time to drive them out, as the religion of your ancestors is surely also the best for you. Make them proud!</English>
+		<French>.</French>
+		<German>Es ist das Jahr 1236 n.Chr., seltsame Eindringlinge - nennen sich selbst Deutscher Orden und beten einen Mann an einem Kreuz an - haben den Seelenfrieden des Landes gestört. Wie auch immer, sie sind nicht unbesiegbar. Ihr, Mindaugas, habt gezeigt, dass sie bluten und sterben, so wie andere Menschen auch.[NEWLINE]Es ist an der Zeit sie hinauszujagen, da die Religion unserer Vorfahren auch für euch das Beste ist. Macht sie stolz!</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT> <!-- Austria -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_17</Tag>
+		<English>It is the year 1282. In the last few decades your Habsburg dynasty was quickly gaining strength through the estates of the Holy Roman Empire. With recently acquiring the rich lands of Austria, you are much more powerful than you ever dreamt of. Still, your ambitions are forcing you to climb much higher, and who knows where will be the end?[NEWLINE][NEWLINE]Navigate carefully through the intricate diplomacy of central Europe, and your dynasty will still stand proudly many hundreds of years from now!</English>
+		<French>.</French>
+		<German>Es ist das Jahr 1282 n.Chr., in den letzten Jahrzehnten gewann eure Habsburger Dynastie durch die Besitztümer des Heiligen Römischen Reiches schnell an Stärke. Durch die kürzlich erworbenen reichen Ländereien in Österreich seid ihr mächtiger als ihr euch jemals erträumt habt. Euer Ehrgeiz treibt euch dazu nach noch Höherem zu streben, und wer weiß wo das Ende ist?[NEWLINE][NEWLINE]Navigiert vorsichtig durch die verzwickte Diplomatie Zentraleuropas und eure Dynastie wird auch in vielen hundert Jahren noch stolz da stehen.</German>
+		<Italian>E' il 1282AD. Il Sacro Romano Impero ne ha avuto abbastanza degli eccessi degli Hohenstaufen. Federico II, detto Stupor Mundi, ha fatto venire molta voglia di stabilità e moderazione al popolo. La tua dinastia Asburgica gliele può dare. Naviga con attenzione attraverso l'intricata diplomazia dell'Europa Centrale, e la tua dinastia resisterà con orgoglio per centinaia di anni!</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT> <!-- Ottomans -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_18</Tag>
+		<English>It is the year 1359. Allah has truly shown his favour towards you. Firstly, the Black Death affected the Byzantines in the cities, but largely spared the countryside of the Turks. Secondly, the earthquake in Gallipoli 1354 levelled all the walls. The way to Europe is open, you need only to reach out and grasp it![NEWLINE]If you play your cards right, your Ottoman Empire will surely be unstoppable!</English>
+		<French>.</French>
+		<German>Es ist das Jahr 1359 n.Chr., Allah hat euch wahrlich seine Gunst geschenkt. Zuerst überkam der Schwarze Tod die städtischen Byzantiner, verschonte aber die Landbevölkerung der Türken. Dann schliff ein Erdbeben in Gallipoli 1354 alle Mauern. Der Weg nach Europa ist offen, ihr müsst nur danach greifen und zupacken![NEWLINE]Wenn ihr eure Karten richtig ausspielt wird euer Osmanisches Reich ganz bestimmt unaufhaltsam sein!</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT> <!-- Moscow -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_19</Tag>
+		<English>It is the year 1380. The shadow of the Mongol Golden Horde has loomed over the land for more than a hundred years. With the people chafing under their oppression, fear has prevented effective resistance. All has changed now on the fields of Kulikovo, where you led your coalition to victory. The road ahead is long and arduous, but in the end, Mother Russia will prevail!</English>
+		<French>.</French>
+		<German>Es ist das Jahr 1380 n.Chr., der Schatten der mongolischen Goldenen Horde zeichnete sich mehr als ein Jahrhundert auf dem Land ab. Im durch Unterdrückung wundgescheuerten Volk verhinderte Furcht wirkungsvollen Widerstand. All das veränderte sich auf den Feldern Kulikowo Pole, wo ihr eure Koalition zum Sieg führtet. Der Weg vor euch ist lang und mühselig, doch am Ende wird Mutter Russland erfolgreich sein.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT> <!-- Sweden -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_20</Tag>
+		<English>It is 1523 AD, a couple years after the outrages of the Stockholm Bloodbath, commited by the Danish king Kristian the Tyrant. You, Gustav Vasa, have lead a rebellion since to restore independence, succesfully uniting Sweden under a hereditary monarchy.[NEWLINE][NEWLINE]Now it's time to claim your rightful place as ruler over the Baltic sea. Contested in this by mighty rivals, success can only be achieved by superior military and tactics. One way is to break the ties with Rome and build a great nation based on the true Lutheran faith!</English>
+		<French>.</French>
+		<German>Es ist das Jahr 1523 n.Chr., einige Jahre sind nach der Freveltat des Stockholmer Blutbades, vom Dänischen König Christian dem Tyrannen verübt, vergangen. Ihr, Gustaf Wasa, habt seitdem eine Rebellion zur Wiedererlangung der Unabhängigkeit angeführt, und Schweden in einer Erbmonarchie vereint.[NEWLINE][NEWLINE]Jetzt ist es an der Zeit euren rechtmäßigen Platz als Herrscher über die Baltische See zu beanspruchen. Angefochten durch mächtige Rivalen kann der Erfolg nur durch Überlegenheit in Militär und Taktik erreicht werden. Ein Weg ist es die Bande mit Rom zu brechen und eine große Nation auf dem wahren lutheranischen Glauben aufzubauen.</German>
+		<Italian>E' il 1523 AD, un paio di anni dopo gli oltraggi del Bagno di sangue di Stoccolma, commessi dal re Danese Cristiano II il Tiranno. Tu, Gustavo Vasa, hai guidato una rivolta per ottenere l'indipendenza, e hai unito con successo la Svezia sotto una monarchia ereditaria.[NEWLINE][NEWLINE]Ora è il momento di reclamare il posto che ti spetta di diritto come dominatore del Mar Baltico. Essendo in contrasto con potenti rivali, il successo può essere ottenuto solo con la superiorità militare e tattica. Una strada da seguire può essere quella di spezzare i legami con Roma e costruire una grande nazione basata sul vero credo Luterano!</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT> <!-- Dutch -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_21</Tag>
+		<English>It is the year 1581 AD. The Low Countries have been under control by the Spanish Empire for a long time. On July 26th this year, the Plakaat van Verlatinghe (Act of Abjuration) was signed by Philip II, making the Dutch officially independent. This could be the start of an empire that will become one of the wealthiest civilizations in the world!</English>
+		<French>.</French>
+		<German>Es ist das Jahr 1581 n.Chr., die Niederlande waren lange Zeit unter der Kontrolle des Spanischen Reiches. Am 26. Juli dieses Jahres wurde das Plakaat van Verlatinghe (Unabhängigkeitserklärung) von Philip II unterzeichnet, wodurch Holland offiziell unabhängig wurde. Dies könnte die Geburt eines Reiches sein, das einmal eines der reichsten Zivilisationen der Welt wird!</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+		<!-- Civ Specific Dawn of Man -->
+</Civ4GameText>
