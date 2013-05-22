@@ -673,7 +673,7 @@ class RFCEBalance:
 		gc.setBuildingPref( iEngland, xml.iWestminster, 10 )
 
 		gc.setBuildingPref( iPortugal, xml.iBelemTower, 20 )
-		gc.setBuildingPref( iPortugal, xml.iRibeira, 20 )
+		gc.setBuildingPref( iPortugal, xml.iPalacioDaPena, 20 )
 		gc.setBuildingPref( iPortugal, xml.iCastle, 5 )
 
 		gc.setBuildingPref( iAustria, xml.iStephansdom, 20 )

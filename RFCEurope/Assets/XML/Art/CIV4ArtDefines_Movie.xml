@@ -74,6 +74,10 @@
  			<Path>Art/Movies/Wonders/Ribeira.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_PALACIO_DA_PENA</Type>
+			<Path>Art/Movies/Wonders/PalacioDaPena.bik</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_IMPERIAL_DIET</Type>
 			<Path>Art/Movies/Wonders/Diet.dds</Path>
 		</MovieArtInfo>

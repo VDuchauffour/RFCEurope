@@ -293,7 +293,7 @@ Changes for RFCE 1.1:
 		- Changes in mercenary naming
 		- Updated strategy tooltips for the civics
 		- German grammatical cases for units by HolyHandGrenade
-		- Palacio del Escorial renamed to El Escorial, Tower of London renamed to Royal Dungeon
+		- Palacio del Escorial renamed to El Escorial, Paco da Ribeira renamed to Palacio da Pena, Tower of London renamed to Royal Dungeon
 		- New text for Palacio da Pena, Atlantic Access, Protestant Church School
 		- New feat messages when you build each unittype's first unit (for the RFCE specific unit tpyes like Light and Heavy Cavalry, Polearm)
 		- Revised feat messages from population tresholds (reach 100.000, 200.000, 500.000, 1.000.000, etc. urban population)
