@@ -38,6 +38,7 @@ Changes for RFCE 1.2:
 			- May happen even with -1 stability, the chance for it starts very low, but exponentially increasing with lower stability
 			- Chance that one of your cities will declare independence is around 2% with -1 stability, around 25% with -6 stability, around 80% with -12 stability
 			- If a city does declare it's independence, one of your cities will be randomly chosen (any city can be chosen if it's not close to your capital)
+			- Cities in Natural or Core provinces may only be chosen if happiness or health is too low, or with some specific anger modifiers (religion, no military presence, etc)
 			- Cities in Border provinces have 4x chance, cities in Foreign provinces have 8x chance to be chosen, than your cities in more stable areas
 		- Increased stability penalty for having cities in Foreign provinces
 		- Revised all civs' initial province stabilty levels, and all the dynamic province stability level changes. Some highlights:
@@ -111,6 +112,7 @@ Changes for RFCE 1.2:
 		- Minor fixes in the Dawn of Civilization texts
 		- Civ-specific and UHV updates in the reference texts
 		- Texts connected to Province stability also got the new province color-code
+		- Changed the Genoan trade UHV text to be more clear
 
 	Art and sound updates:
 		- Added theme files for the mod
@@ -120,8 +122,8 @@ Changes for RFCE 1.2:
 		- New Scottish voice set by Annomander
 		- Irish Brigade got Celtic sounds, Highlander and Highlander Infantry got Scottish sounds
 		- New art for Westminster Abbey and Krak des Chevaliers by hrochland
-		- New type of Dense Forest art
-		- New LH art for Istvan
+		- Added a second art type for Dense Forests
+		- New LH art for Istvan, Yaroslav
 
 	Balance:
 		- Moved spawn area of Germanic Barbarians west, now some of them will actually attack France instead of wandering in Germany
@@ -2180,3 +2182,18 @@ Changes for Test Version 2009.02.03.:
 		England now gains armored lancers if anyone declares war on-spawn
 		Barb warriors in Wales and barb axe/spear spawn in Scotland so unification is harder.
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The first initial test version of RFCE (basically unplayable) appeared at 2008.08.15.
+Based on 3Miro's words:
+Following a week long struggle with the code on all levels, I came up with a test version which we can actually run.
+One can now start the damn thing, select the Byzantines and play. There are no other main RFCE civs present and one cannot even build a settler.
+
+There were a lot of early test version in the first half year, adding the initial civs and all the necessary things.
+A base for a couple of the most basic and most important RFCE specific stuff appeared as well.
+I couldn't find any log about these early changes, but it's probably not that relevant.
+By the end of 2008 (or early 2009), everything started to get into shape, and we have a complete changelog since 2009 February.
+Obviously, more or less everything evolved/improved/revised/changed since, see the very long list of changes above...
+
+Countless hours of development were put into the mod, by various modders/helpers.
+I (and I'm sure everyone else who ever contributed as well) hope you will have fun with it!
+Cheers: Absinthe

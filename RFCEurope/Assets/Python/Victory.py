@@ -303,7 +303,7 @@ class Victory:
                                 if ( iCathCath >= 3 and iOrthCath >= 2 and iProtCath >= 2 and iJewishQu >= 2 ):
                                         pPoland.setUHV( 2, 1 )
 
-        def onCityRazed(self, iPlayer,city):
+        def onCityRazed(self, iPlayer, city):
                 #if (iPlayer == iNorse): # Sedna17: Norse goal of razing 10? cities
                 #        if ( pNorse.isAlive() and pNorse.getUHV( 2 ) == -1):
                 #                if ( city.getOwner() < iNumPlayers ):

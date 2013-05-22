@@ -3650,9 +3650,8 @@ class CvMainInterface:
 		# < Mercenaries End >
 
 		# Absinthe: stability overlay
-		for i in range ( con.iNumMajorPlayers - 1):
-			if inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED and inputClass.getData2() == (400+i):
-				utils.StabilityOverlayCiv(inputClass.getData1())
+		if inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED and inputClass.getData2() == 1234:
+			utils.StabilityOverlayCiv(inputClass.getData1())
 
 		# 3Miro religious prosecutions
 		# Inquisitor button
