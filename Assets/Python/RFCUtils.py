@@ -33,12 +33,14 @@ tCol = (
 '150,150,150',
 '128,128,128')
 
+iScreenIsUp = 0
+iSelectedCivID = -1
+
 class RFCUtils:
 
 	#Absinthe: stability overlay
 	bStabilityOverlay = False
-	iScreenIsUp = 0
-	iSelectedCivID = -1
+
 
         #Rise and fall, stability
         def getLastTurnAlive( self, iCiv ):
@@ -1403,7 +1405,7 @@ class RFCUtils:
 				szBuffer = "  %s  " % (szCaption)
 			iTextWidth = CyInterface().determineWidth( szBuffer )
 
-			screen.setText( szDropdownName, "Background", szBuffer, CvUtil.FONT_LEFT_JUSTIFY, xResolution - 9 - iTextWidth, iCurY-iGlobeLayerOptionHeight-10, -0.3, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, iCiv, (400 + iCiv) )
+			screen.setText( szDropdownName, "Background", szBuffer, CvUtil.FONT_LEFT_JUSTIFY, xResolution - 9 - iTextWidth, iCurY-iGlobeLayerOptionHeight-10, -0.3, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, iCiv, 1234 )
 			screen.show( szDropdownName )
 
 			iCurY -= iGlobeLayerOptionHeight
@@ -1447,14 +1449,12 @@ class RFCUtils:
 
 		# if it's on, refresh the overlay, with showing the stability for the last selected civ
 		global iScreenIsUp
-		iScreenIsUp = self.iScreenIsUp
 		if (iScreenIsUp == 1):
 			# clear the highlight
 			engine.clearColoredPlots(PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_WORLD_BUILDER)
 			
 			# if no civ was selected before
 			global iSelectedCivID
-			iSelectedCivID = self.iSelectedCivID
 			if (iSelectedCivID == -1):
 				iSelectedCivID = iHuman
 			
@@ -1514,7 +1514,7 @@ class RFCUtils:
 				szBuffer = "  %s  " % (szCaption)
 			iTextWidth = CyInterface().determineWidth( szBuffer )
 
-			screen.setText( szDropdownName, "Background", szBuffer, CvUtil.FONT_LEFT_JUSTIFY, xResolution - 9 - iTextWidth, iCurY-iGlobeLayerOptionHeight-10, -0.3, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, iCiv, (400 + iCiv) )
+			screen.setText( szDropdownName, "Background", szBuffer, CvUtil.FONT_LEFT_JUSTIFY, xResolution - 9 - iTextWidth, iCurY-iGlobeLayerOptionHeight-10, -0.3, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, iCiv, 1234 )
 			screen.show( szDropdownName )
 
 			iCurY -= iGlobeLayerOptionHeight
