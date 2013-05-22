@@ -21361,16 +21361,16 @@
 			<iPaganCulturePerCity>0</iPaganCulturePerCity>
 			<iInterestPerTurn>0</iInterestPerTurn>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Ribeira Palace -->
-			<BuildingClass>BUILDINGCLASS_RIBEIRA</BuildingClass>
-			<Type>BUILDING_RIBEIRA</Type>
+		<BuildingInfo> <!-- Pena National Palace -->
+			<BuildingClass>BUILDINGCLASS_PALACIO_DA_PENA</BuildingClass>
+			<Type>BUILDING_PALACIO_DA_PENA</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_RIBEIRA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_RIBEIRA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_RIBEIRA_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_PALACIO_DA_PENA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PALACIO_DA_PENA_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_PALACIO_DA_PENA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_RIBEIRA</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_RIBEIRA</MovieDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PALACIO_DA_PENA</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_PALACIO_DA_PENA</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>NONE</ReligionType>
 			<StateReligion>NONE</StateReligion>
