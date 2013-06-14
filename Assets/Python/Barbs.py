@@ -337,10 +337,10 @@ class Barbs:
 			if (iGameTurn>=xml.i700AD and iGameTurn <= xml.i1300AD ):
 				if (not gc.getTeam(gc.getPlayer(con.iArabia).getTeam()).isHasTech(xml.iFarriers)):
 					self.spawnUnits( iBarbarian, (94,0),(99,3), xml.iHorseArcher, 1 + iHandicap, iGameTurn,8,3,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()))
-					self.spawnUnits( iBarbarian, (92,1),(98,4), xml.iHorseArcher, 2 + iHandicap, iGameTurn,5,3,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()))
+					self.spawnUnits( iBarbarian, (92,1),(98,4), xml.iHorseArcher, 1 + iHandicap, iGameTurn,5,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()))
 				else:
 					self.spawnUnits( iBarbarian, (94,0),(99,3), xml.iArabiaGhazi, 1 + iHandicap, iGameTurn,9,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()))
-					self.spawnUnits( iBarbarian, (95,1),(98,5), xml.iArabiaGhazi, 2 + iHandicap, iGameTurn,7,3,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()))
+					self.spawnUnits( iBarbarian, (95,1),(98,5), xml.iArabiaGhazi, 1 + iHandicap, iGameTurn,7,3,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()))
 
 		#Pre Mongols to keep Kiev busy
 		if (iGameTurn >= xml.i900AD and iGameTurn < xml.i1236AD):
@@ -377,7 +377,7 @@ class Barbs:
 				self.spawnUnits( iBarbarian, (92,20),(99,25), xml.iGuisarme, 1 + iHandicap, iGameTurn,3,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()))
 		if (gc.getPlayer(con.iArabia).isHuman()): #extra barbs for human Arabia
 			if (iGameTurn >= xml.i1064AD and iGameTurn < xml.i1094AD):
-				self.spawnUnits( iBarbarian, (95,8),(99,12), xml.iSeljuk, 3 + iHandicap*2, iGameTurn,4,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()))
+				self.spawnUnits( iBarbarian, (95,8),(99,12), xml.iSeljuk, 2 + iHandicap*2, iGameTurn,4,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()))
 				self.spawnUnits( iBarbarian, (95,8),(99,12), xml.iCrossbowman, 1 + iHandicap, iGameTurn,4,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()))
 
 		#Mongols 1236

@@ -724,8 +724,8 @@ class RiseAndFall:
 						city.setHasReligion(xml.iIslam,1,1,0)
 
 
-        def onCityRazed(self, iOwner, playerType, city):
-                self.pm.onCityRazed(iOwner, playerType, city)
+	def onCityRazed(self, iOwner, playerType, city):
+		self.pm.onCityRazed(iOwner, playerType, city) # Province Manager
 
 
         def clear600ADChina(self):
@@ -1101,11 +1101,9 @@ class RiseAndFall:
                                         if (iDistance > 3):
                                                 iProvType = pPlayer.getProvinceType( city.getProvince() )
                                                 if ( bForce or iProvType < con.iProvinceNatural or \
-                                                    city.angryPopulation(0) > 0 or \
-                                                    city.healthRate(False, 0) < 0 or \
-                                                    city.getReligionBadHappiness() > 0 or \
-                                                    city.getLargestCityHappiness() < 0 or \
-                                                    city.getHurryAngerModifier() > 0 or \
+                                                    city.angryPopulation(0) > 1 or \
+                                                    city.healthRate(False, 0) < -2 or \
+                                                    city.getReligionBadHappiness() > 1 or \
                                                     city.getNoMilitaryPercentAnger() > 0 ):
                                                         if ( gc.getGame().getSorenRandNum(100, 'city secession') < 20 - 5 * pPlayer.getStability() ): # 100% if stability is less than -15
                                                                 cityList.append(city)
@@ -2144,9 +2142,10 @@ class RiseAndFall:
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 6)
                 if (iCiv == iBulgaria):
-                        utils.makeUnit(xml.iArcher, iCiv, tPlot, 3)
+                        utils.makeUnit(xml.iArcher, iCiv, tPlot, 4)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iBulgarianKonnik, iCiv, tPlot, 5)
+                        utils.makeUnit(xml.iOrthodoxMissionary, iCiv, tPlot, 1)
                 if (iCiv == iCordoba):
                         utils.makeUnit(xml.iArcher, iCiv, tPlot, 4)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
@@ -2485,7 +2484,7 @@ class RiseAndFall:
                         teamSpain.setHasTech( xml.iMachinery, True, iCiv, False, False )
                         teamSpain.setHasTech( xml.iFeudalism, True, iCiv, False, False )
                         teamSpain.setHasTech( xml.iChainMail, True, iCiv, False, False )
-                        teamSpain.setHasTech( xml.iAristocracy, True, iCiv, False, False )
+                        teamSpain.setHasTech( xml.iBlastFurnace, True, iCiv, False, False )
 
                 if ( iCiv == iNorse ):
                         for iTech in range( xml.iStirrup ):
