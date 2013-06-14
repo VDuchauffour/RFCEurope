@@ -168,6 +168,9 @@ Changes for RFCE 1.2:
 		- Updates in the crusading units, bigger chance for more unique units in both "normal" and defensive crusades
 		- Caravels start with free Sentry promotion, while Privateers also have military maintenance cost
 		- Flanders and Netherlands provinces change to Border/Contested for Austria and Spain upon the Austrian spawn (Habsburgs), changes to Foreign after the Dutch spawn
+		- Spain starts with Blast Furnace instead of Aristocracy. Better for early offense, so for starting the Reconquista
+		- Somewhat reduced barb pressure for Arabia (both Beduins and Seljuks)
+		- Bulgaria starts with an Orthodox Missionary, and an additional Archer
 
 	Bugfixes:
 		- A couple fixes how the mercenary screen is called from the main screen mercenary manager button
@@ -186,6 +189,7 @@ Changes for RFCE 1.2:
 		- Fixed serious bug in the secession mechanics (lose a single city if stability is too low), which basically prevented it from happening
 		- Fixed bug in secession provinces, where outer (ok) provinces had very low chance, while some of the historical (stable) provinces had decent chance
 		- Fixed bug where Hanseatic Executives couldn't pass straits, or enter into foreign territory without open borders
+		- Fixed victory screen for Burgundy, the way their victory conditions show up
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

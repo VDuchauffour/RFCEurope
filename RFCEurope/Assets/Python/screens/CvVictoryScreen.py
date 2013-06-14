@@ -931,9 +931,6 @@ class CvVictoryScreen:
                 elif ( self.iActivePlayer == con.iVenecia ):
                         bListProvs = True
                         tProvsToCheck = vic.tVenetianControl
-                elif ( self.iActivePlayer == con.iBurgundy ):
-                        bListProvs = True
-                        tProvsToCheck = vic.tBurgundyControl
                 elif ( self.iActivePlayer == con.iGermany ):
                         bListProvs = True
                         tProvsToCheck = vic.tGermanyControl
@@ -1004,6 +1001,9 @@ class CvVictoryScreen:
                 elif ( self.iActivePlayer == con.iKiev ):
                         bListProvs = True
                         tProvsToCheck = vic.tKievControl
+                elif ( self.iActivePlayer == con.iBurgundy ):
+                        bListProvs = True
+                        tProvsToCheck = vic.tBurgundyControl
                 #elif ( self.iActivePlayer == con.iLithuania ):
                 #        bListProvs = True
                 #        tProvsToCheck = vic.tLithuaniaControl
