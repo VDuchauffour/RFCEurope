@@ -151,7 +151,7 @@ tHungaryPot2Norm = [xml.iP_Moravia,xml.iP_Austria,xml.iP_Carinthia]
 
 tSpainCore = [xml.iP_Leon,xml.iP_GaliciaSpain,xml.iP_Castile]
 tSpainNorm = [xml.iP_Catalonia,xml.iP_Aragon,xml.iP_Navarre]
-tSpainOuter = [xml.iP_Lusitania,xml.iP_Aquitania,xml.iP_Provence,xml.iP_Tetouan,xml.iP_Fez,xml.iP_Oran,xml.iP_Algiers,xml.iP_Sardinia,xml.iP_Corsica,xml.iP_Netherlands,xml.iP_Azores,xml.iP_Sicily,xml.iP_Calabria,xml.iP_Apulia]
+tSpainOuter = [xml.iP_Lusitania,xml.iP_Aquitania,xml.iP_Provence,xml.iP_Tetouan,xml.iP_Fez,xml.iP_Oran,xml.iP_Algiers,xml.iP_Sardinia,xml.iP_Corsica,xml.iP_Azores,xml.iP_Sicily,xml.iP_Calabria,xml.iP_Apulia]
 tSpainPot2Core = []
 tSpainPot2Norm = [xml.iP_Andalusia,xml.iP_Valencia,xml.iP_LaMancha,xml.iP_Balears,xml.iP_Canaries,xml.iP_Madeira]
 
@@ -187,7 +187,7 @@ tLithuaniaPot2Norm = [xml.iP_Prussia,xml.iP_Estonia,xml.iP_Brest,xml.iP_Podolia,
 
 tAustriaCore = [xml.iP_Austria,xml.iP_Carinthia]
 tAustriaNorm = [xml.iP_Bohemia,xml.iP_Moravia]
-tAustriaOuter = [xml.iP_Verona,xml.iP_Hungary,xml.iP_Transylvania,xml.iP_Slavonia,xml.iP_Dalmatia,xml.iP_LesserPoland,xml.iP_GaliciaPoland]
+tAustriaOuter = [xml.iP_Verona,xml.iP_Hungary,xml.iP_Transylvania,xml.iP_Slavonia,xml.iP_Dalmatia,xml.iP_LesserPoland,xml.iP_GaliciaPoland,xml.iP_Netherlands,xml.iP_Flanders]
 tAustriaPot2Core = []
 tAustriaPot2Norm = [xml.iP_Bavaria,xml.iP_Silesia,xml.iP_Pannonia,xml.iP_UpperHungary]
 
@@ -507,6 +507,8 @@ class ProvinceManager:
 			pHungary.setProvinceType( xml.iP_Bavaria, iProvinceNone )
 			pGermany.setProvinceType( xml.iP_Bavaria, iProvinceOuter )
 			pGermany.setProvinceType( xml.iP_Bohemia, iProvinceOuter )
+			pSpain.setProvinceType( xml.iP_Netherlands, iProvinceOuter )
+			pSpain.setProvinceType( xml.iP_Flanders, iProvinceOuter )
 			utils.refreshStabilityOverlay() # refresh the stability overlay
 		elif ( iPlayer == iTurkey ):
 			pByzantium.setProvinceType( xml.iP_Antiochia, iProvinceOuter )
@@ -529,4 +531,10 @@ class ProvinceManager:
 			pNorse.setProvinceType( xml.iP_Jamtland, iProvinceOuter )
 			pNorse.setProvinceType( xml.iP_Gotaland, iProvinceOuter )
 			pNorse.setProvinceType( xml.iP_Gotland, iProvinceOuter )
+			utils.refreshStabilityOverlay() # refresh the stability overlay
+		elif ( iPlayer == iDutch ):
+			pSpain.setProvinceType( xml.iP_Netherlands, iProvinceNone )
+			pSpain.setProvinceType( xml.iP_Flanders, iProvinceNone )
+			pAustria.setProvinceType( xml.iP_Netherlands, iProvinceNone )
+			pAustria.setProvinceType( xml.iP_Flanders, iProvinceNone )
 			utils.refreshStabilityOverlay() # refresh the stability overlay

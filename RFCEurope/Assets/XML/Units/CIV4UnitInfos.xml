@@ -1009,7 +1009,7 @@
 			<bOnlyDefensive>0</bOnlyDefensive>
 			<bNoCapture>0</bNoCapture>
 			<bQuickCombat>0</bQuickCombat>
-			<bRivalTerritory>0</bRivalTerritory>
+			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitaryHappiness>0</bMilitaryHappiness>
 			<bMilitarySupport>0</bMilitarySupport>
 			<bMilitaryProduction>0</bMilitaryProduction>
@@ -1027,7 +1027,7 @@
 			<bNoDefensiveBonus>0</bNoDefensiveBonus>
 			<bIgnoreBuildingDefense>0</bIgnoreBuildingDefense>
 			<bCanMoveImpassable>0</bCanMoveImpassable>
-			<bCanMoveAllTerrain>0</bCanMoveAllTerrain>
+			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bFlatMovementCost>0</bFlatMovementCost>
 			<bIgnoreTerrainCost>0</bIgnoreTerrainCost>
 			<bNukeImmune>0</bNukeImmune>
@@ -15254,7 +15254,12 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<FreePromotions/>
+			<FreePromotions>
+				<FreePromotion>
+					<PromotionType>PROMOTION_SENTRY</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+			</FreePromotions>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
 			<bSpreadBySword>0</bSpreadBySword>
@@ -15283,7 +15288,7 @@
 			<bQuickCombat>0</bQuickCombat>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitaryHappiness>0</bMilitaryHappiness>
-			<bMilitarySupport>0</bMilitarySupport>
+			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<bSpy>0</bSpy>
