@@ -21,16 +21,6 @@ import re #for string manipulations
 #
 ################################################################################################################################################
 
-#	Edit this part:
-#	iOutputType: 1 - WB labels with city names, 2 - WB labels with settler map, 3 - WB labels with war map, 4 - WB labels with province IDs
-iOutputType = 1
-iPlayer = iHungary
-
-iMapMaxX = 100
-iMapMaxY = 73
-
-################################################################################################################################################
-
 iByzantium = 0
 iFrankia = 1
 iArabia = 2
@@ -64,6 +54,18 @@ iIndependent4 = 26
 iNumTotalPlayers = 27
 iBarbarian = 27
 iNumTotalPlayersB = 28
+
+################################################################################################################################################
+
+#	Edit this part:
+#	iOutputType: 1 - WB labels with city names, 2 - WB labels with settler map, 3 - WB labels with war map, 4 - WB labels with province IDs
+iOutputType = 1
+iPlayer = iHungary
+
+iMapMaxX = 100
+iMapMaxY = 73
+
+################################################################################################################################################
 
 def writeCityNames( tMap ):
 	iNumSigns = 0

@@ -56,7 +56,7 @@ Changes for RFCE 1.2:
 		- Judaism got an additional random spread mechanics, with bigger chance for spreading in central european cities
 		- Dead civs won't show up on the scoreboard anymore
 		- Autoraze changes: if the city has 1 population, 60% chance to autoraze if culture is less than 10, 30% chance to autoraze if culture is at least 10 but less than 50
-		- All naval units can cross cultural borders during peace, except work boats
+		- All naval units can cross cultural borders during peace (without open borders), except work boats (to avoid exploration with work boats)
 		- Diagonal water tiles are passable for all naval units. The most important straits are represented this way on the map
 		- Removed 3Miro's AI regions, seriously hurt AI civs on the border of 2 regions, also every AI civ's units with somewhat automated functions (barbs, workers, missionaries, GPs, etc.)
 		- Ottomans spawn in Gallipoli (Dardanelles), so they have a connection between Europe/Anatolia. No second spawn stack needed, and Adrianople/Edirne doesn't flip to them
@@ -113,6 +113,7 @@ Changes for RFCE 1.2:
 		- Civ-specific and UHV updates in the reference texts
 		- Texts connected to Province stability also got the new province color-code
 		- Changed the Genoan trade UHV text to be more clear
+		- Byzantine city name map updated by DC123456789
 
 	Art and sound updates:
 		- Added theme files for the mod
@@ -165,6 +166,8 @@ Changes for RFCE 1.2:
 		- Bonus modifier for military units from the Triumphal Arch is reduced to 20% (until we find a better bonus)
 		- Cordoba and Arabia are less likely to build christian wonders
 		- Updates in the crusading units, bigger chance for more unique units in both "normal" and defensive crusades
+		- Caravels start with free Sentry promotion, while Privateers also have military maintenance cost
+		- Flanders and Netherlands provinces change to Border/Contested for Austria and Spain upon the Austrian spawn (Habsburgs), changes to Foreign after the Dutch spawn
 
 	Bugfixes:
 		- A couple fixes how the mercenary screen is called from the main screen mercenary manager button
@@ -182,6 +185,7 @@ Changes for RFCE 1.2:
 		- Fixed "display bug" with the initial Byzantine stability
 		- Fixed serious bug in the secession mechanics (lose a single city if stability is too low), which basically prevented it from happening
 		- Fixed bug in secession provinces, where outer (ok) provinces had very low chance, while some of the historical (stable) provinces had decent chance
+		- Fixed bug where Hanseatic Executives couldn't pass straits, or enter into foreign territory without open borders
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
