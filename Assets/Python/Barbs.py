@@ -132,45 +132,45 @@ lMinorNations = [ [ xml.iP_Serbia, [], [], [xml.i852AD,xml.i1346AD], [20,20], [x
 
 class Barbs:
 
-        def getRevolDates( self ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['lNextMinorRevolt']
+	def getRevolDates( self ):
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		return scriptDict['lNextMinorRevolt']
 
-        def setRevolDates( self, lNextMinorRevolt ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['lNextMinorRevolt'] = lNextMinorRevolt
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+	def setRevolDates( self, lNextMinorRevolt ):
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		scriptDict['lNextMinorRevolt'] = lNextMinorRevolt
+		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-        def getTempFlippingCity( self ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['tempFlippingCity']
+	def getTempFlippingCity( self ):
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		return scriptDict['tempFlippingCity']
 
-        def setTempFlippingCity( self, tNewValue ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['tempFlippingCity'] = tNewValue
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+	def setTempFlippingCity( self, tNewValue ):
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		scriptDict['tempFlippingCity'] = tNewValue
+		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-        def getNationRevoltIndex( self ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['lRevoltinNationRevoltIndex']
+	def getNationRevoltIndex( self ):
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		return scriptDict['lRevoltinNationRevoltIndex']
 
-        def setNationRevoltIndex( self, iNationIndex, iRevoltIndex ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['lRevoltinNationRevoltIndex'] = [iNationIndex,iRevoltIndex]
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+	def setNationRevoltIndex( self, iNationIndex, iRevoltIndex ):
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		scriptDict['lRevoltinNationRevoltIndex'] = [iNationIndex,iRevoltIndex]
+		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-        def makeUnit(self, iUnit, iPlayer, tCoords, iNum, iForceAttack, szName ):
-                'Makes iNum units for player iPlayer of the type iUnit at tCoords.'
-                for i in range(iNum):
-                        player = gc.getPlayer(iPlayer)
-                        if (iForceAttack == 0):
-                                pUnit = player.initUnit(iUnit, tCoords[0], tCoords[1], UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-                        elif (iForceAttack == 1):
-                                pUnit = player.initUnit(iUnit, tCoords[0], tCoords[1], UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
-                        elif (iForceAttack == 2):
-                                pUnit = player.initUnit(iUnit, tCoords[0], tCoords[1], UnitAITypes.UNITAI_ATTACK_SEA, DirectionTypes.DIRECTION_SOUTH)
-                        if ( szName != "" ):
-                                pUnit.setName( szName )
+	def makeUnit(self, iUnit, iPlayer, tCoords, iNum, iForceAttack, szName ):
+		'Makes iNum units for player iPlayer of the type iUnit at tCoords.'
+		for i in range(iNum):
+			player = gc.getPlayer(iPlayer)
+			if (iForceAttack == 0):
+				pUnit = player.initUnit(iUnit, tCoords[0], tCoords[1], UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+			elif (iForceAttack == 1):
+				pUnit = player.initUnit(iUnit, tCoords[0], tCoords[1], UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
+			elif (iForceAttack == 2):
+				pUnit = player.initUnit(iUnit, tCoords[0], tCoords[1], UnitAITypes.UNITAI_ATTACK_SEA, DirectionTypes.DIRECTION_SOUTH)
+			if ( szName != "" ):
+				pUnit.setName( szName )
 
 	def checkTurn(self, iGameTurn):
 		#handicap level modifier
@@ -446,123 +446,121 @@ class Barbs:
 		# Key: self.foundCity(owner, self.lCity, actual name, iGameTurn, population size, unit type, number of units, religion, workers)
 		# Walls (and other buildings) can be added with the onCityBuilt function, in RiseAndFall.py
 
-                if ( iGameTurn < xml.i700AD ):
-                        #500AD
-                        self.foundCity(iIndependent2, lTangier, "Tangier", iGameTurn, 1, xml.iCordobanBerber, 2, -1, 0 )
-                        self.foundCity(iBarbarian, lBurdigala, "Burdigala", iGameTurn, 2, xml.iArcher, 0, -1, 0 )
-                        self.foundCity(iIndependent3, lAlger, "Alger", iGameTurn, 1, xml.iArcher, 1, -1, 1 )
-                        self.foundCity(iIndependent2, lBarcino, "Barcino", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
-                        self.foundCity(iBarbarian, lToulouse, "Tolosa", iGameTurn, 1, xml.iArcher, 0, -1, 0 )
-                        self.foundCity(iIndependent, lMarseilles, "Massilia", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 0 )
-                        self.foundCity(iIndependent3, lLyon, "Lyon", iGameTurn, 1, xml.iArcher, 2, xml.iCatholicism, 1 ) # Lyon flips to Burgundy
-                        self.foundCity(iIndependent4, lTunis, "Tunis", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
-                        self.foundCity(iIndependent, lMediolanum, "Mediolanum", iGameTurn, 3, xml.iArcher, 1, xml.iCatholicism, 0 )
-                        self.foundCity(iIndependent2, lFlorentia, "Florentia", iGameTurn, 3, xml.iArcher, 1, xml.iCatholicism, 0 )
-                        self.foundCity(iBarbarian, lTripoli, "Tripoli", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
-                        self.foundCity(iIndependent3, lAugsburg, "Augsburg", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
-                        self.foundCity(iIndependent, lNapoli, "Neapolis", iGameTurn, 3, xml.iArcher, 1, -1, 0 )
-                        self.foundCity(iIndependent2, lRagusa, "Ragusa", iGameTurn, 1, xml.iArcher, 2, xml.iCatholicism, 0 )
-                        self.foundCity(iIndependent4, lSeville, "Hispalis", iGameTurn, 1, xml.iArcher, 2, -1, 0 ) # Seville flips to Cordoba
-                        # 508AD
-                        self.foundCity(iIndependent3, lPalermo, "Palermo", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
-                        # 600AD
-                        self.foundCity(iIndependent2, lRhodes, "Rhodes", iGameTurn, 1, xml.iArcher, 1, xml.iOrthodoxy, 0 )
-                        # 680AD
-                        self.foundCity(iBarbarian, lToledo, "Toledo", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
-                if ( iGameTurn > xml.i680AD and iGameTurn < xml.i900AD ):
-                        # 700AD
-                        self.foundCity(iIndependent, lValencia, "Valencia", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
-                        self.foundCity(iIndependent4, lPamplona, "Pamplona", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
-                        self.foundCity(iIndependent4, lYork, "Eboracum", iGameTurn, 1, xml.iArcher, 2, -1, 1 )
-                        self.foundCity(iBarbarian, lDublin, "Dubh Linn", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
-                        self.foundCity(iIndependent2, lLubeck, "Liubice", iGameTurn, 1, xml.iArcher, 2, -1, 1 )
-                        self.foundCity(iIndependent3, lPorto, "Portucale", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
-                        # 760AD
-                        self.foundCity(iIndependent3, lTonsberg, "Tonsberg", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
-                        # 768AD
-                        self.foundCity(iIndependent2, lRaska, "Ras", iGameTurn, 1, xml.iArcher, 2, -1, 1 )
-                        # 780AD
-                        self.foundCity(iIndependent4, lFez, "Fes", iGameTurn, 1, xml.iCrossbowman, 2, xml.iIslam, 1)
-                        # 800AD
-                        self.foundCity(iIndependent, lMilan, "Milano", iGameTurn, 5, xml.iArcher, 2, xml.iCatholicism, 0 )
-                        self.foundCity(iIndependent2, lFirenze, "Firenze", iGameTurn, 5, xml.iArcher, 2, xml.iCatholicism, 0 )
-                        self.foundCity(iIndependent, lPrague, "Praha", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 1 )
-                        self.foundCity(iIndependent4, lKursk, "Kursk", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
-                        self.foundCity(iIndependent3, lCalais, "Calais", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
-                        self.foundCity(iBarbarian, lNidaros, "Nidaros", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
-                        #self.foundCity(iIndependent3, lLadoga, "Ladoga", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0)
-                        self.foundCity(iIndependent4, lBeloozero, "Beloozero", iGameTurn, 1, xml.iCrossbowman, 1, -1, 1)
-                        # 848AD
-                        self.foundCity(iIndependent2, lNovgorod, "Novgorod", iGameTurn, 1, xml.iCrossbowman, 2, -1, 1 )
-                        # 860AD
-                        self.foundCity(iBarbarian, lEdinburgh, "Eidyn Dun", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
-                        # 880AD
-                        self.foundCity(iIndependent, lAlbaIulia, "Belograd", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
-                if ( iGameTurn > xml.i880AD and iGameTurn < xml.i1259AD ):
-                        # 900AD
-                        self.foundCity(iIndependent4, lTvanksta, "Tvanksta", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
-                        self.foundCity(iIndependent3, lKrakow, "Krakow", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
-                        self.foundCity(iIndependent, lRiga, "Riga", iGameTurn, 2, xml.iCrossbowman, 2, -1, 1 )
-                        # 960AD
-                        self.foundCity(iIndependent3, lMinsk, "Minsk", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
-                        self.foundCity(iIndependent4, lSmolensk, "Smolensk", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 )
-                        # 1010AD
-                        self.foundCity(iIndependent3, lYaroslavl, "Yaroslavl", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 )
-                        # 1050AD
-                        self.foundCity(iIndependent2, lGroningen, "Groningen", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
-                        self.foundCity(iIndependent2, lKalmar, "Kalmar", iGameTurn, 3, xml.iCrossbowman, 1, xml.iCatholicism, 1)
-                        # 1060AD
-                        self.foundCity(iBarbarian, lMus, "Mus", iGameTurn, 1, xml.iLongbowman, 2, -1, 0 )
-                        # 1071AD
-                        self.foundCity(iBarbarian, lMarrakesh, "Marrakesh", iGameTurn, 3, xml.iCrossbowman, 2, xml.iIslam, 1 )
-                        # 1110AD
-                        self.foundCity(iIndependent3, lGraz, "Graz", iGameTurn, 3, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
-                        # 1200AD
-                        self.foundCity(iBarbarian, lSaraiBatu, "Sarai Batu", iGameTurn, 1, xml.iLongbowman, 2, -1, 0 )
-                        # 1227 AD
-                        self.foundCity(iBarbarian, lTarabulus, "Tarabulus", iGameTurn, 4, xml.iArbalest, 2, xml.iIslam, 1 )
-                        # 1250 AD
-                        self.foundCity(iIndependent4, lAbo, "Abo", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 ) # Abo flips to Sweden
-                if ( iGameTurn > xml.i1300AD and iGameTurn < xml.i1540AD ):
-                        # 1320AD
-                        self.foundCity(iIndependent, lNizhnyNovgorod, "Nizhny Novgorod", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 )
-                        #self.foundCity(iIndependent2, lVologda, "Vologda", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
-                        # 1392AD
-                        self.foundCity(iBarbarian, lTanais, "Tana", iGameTurn, 1, xml.iLongbowman, 2, xml.iIslam, 0)
-                        # 1410AD
-                        self.foundCity(iIndependent, lReykjavik, "Reykjavik", iGameTurn, 1, xml.iVikingBeserker, 2, -1, 1 )
-                        # 1530AD
-                        self.foundCity(iIndependent4, lValletta, "Valletta", iGameTurn, 1, xml.iKnightofStJohns, 3, xml.iCatholicism, 0 )
+		if ( iGameTurn < xml.i700AD ):
+			#500AD
+			self.foundCity(iIndependent2, lTangier, "Tangier", iGameTurn, 1, xml.iCordobanBerber, 2, -1, 0 )
+			self.foundCity(iBarbarian, lBurdigala, "Burdigala", iGameTurn, 2, xml.iArcher, 0, -1, 0 )
+			self.foundCity(iIndependent3, lAlger, "Alger", iGameTurn, 1, xml.iArcher, 1, -1, 1 )
+			self.foundCity(iIndependent2, lBarcino, "Barcino", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
+			self.foundCity(iBarbarian, lToulouse, "Tolosa", iGameTurn, 1, xml.iArcher, 0, -1, 0 )
+			self.foundCity(iIndependent, lMarseilles, "Massilia", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 0 )
+			self.foundCity(iIndependent3, lLyon, "Lyon", iGameTurn, 1, xml.iArcher, 2, xml.iCatholicism, 1 ) # Lyon flips to Burgundy
+			self.foundCity(iIndependent4, lTunis, "Tunis", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
+			self.foundCity(iIndependent, lMediolanum, "Mediolanum", iGameTurn, 3, xml.iArcher, 1, xml.iCatholicism, 0 )
+			self.foundCity(iIndependent2, lFlorentia, "Florentia", iGameTurn, 3, xml.iArcher, 1, xml.iCatholicism, 0 )
+			self.foundCity(iBarbarian, lTripoli, "Tripoli", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
+			self.foundCity(iIndependent3, lAugsburg, "Augsburg", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
+			self.foundCity(iIndependent, lNapoli, "Neapolis", iGameTurn, 3, xml.iArcher, 1, -1, 0 )
+			self.foundCity(iIndependent2, lRagusa, "Ragusa", iGameTurn, 1, xml.iArcher, 2, xml.iCatholicism, 0 )
+			self.foundCity(iIndependent4, lSeville, "Hispalis", iGameTurn, 1, xml.iArcher, 2, -1, 0 ) # Seville flips to Cordoba
+			# 508AD
+			self.foundCity(iIndependent3, lPalermo, "Palermo", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
+			# 600AD
+			self.foundCity(iIndependent2, lRhodes, "Rhodes", iGameTurn, 1, xml.iArcher, 1, xml.iOrthodoxy, 0 )
+			# 680AD
+			self.foundCity(iBarbarian, lToledo, "Toledo", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
+		if ( iGameTurn > xml.i680AD and iGameTurn < xml.i900AD ):
+			# 700AD
+			self.foundCity(iIndependent, lValencia, "Valencia", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
+			self.foundCity(iIndependent4, lPamplona, "Pamplona", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
+			self.foundCity(iIndependent4, lYork, "Eboracum", iGameTurn, 1, xml.iArcher, 2, -1, 1 )
+			self.foundCity(iBarbarian, lDublin, "Dubh Linn", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
+			self.foundCity(iIndependent2, lLubeck, "Liubice", iGameTurn, 1, xml.iArcher, 2, -1, 1 )
+			self.foundCity(iIndependent3, lPorto, "Portucale", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
+			# 760AD
+			self.foundCity(iIndependent3, lTonsberg, "Tonsberg", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
+			# 768AD
+			self.foundCity(iIndependent2, lRaska, "Ras", iGameTurn, 1, xml.iArcher, 2, -1, 1 )
+			# 780AD
+			self.foundCity(iIndependent4, lFez, "Fes", iGameTurn, 1, xml.iCrossbowman, 2, xml.iIslam, 1)
+			# 800AD
+			self.foundCity(iIndependent, lMilan, "Milano", iGameTurn, 5, xml.iArcher, 2, xml.iCatholicism, 0 )
+			self.foundCity(iIndependent2, lFirenze, "Firenze", iGameTurn, 5, xml.iArcher, 2, xml.iCatholicism, 0 )
+			self.foundCity(iIndependent, lPrague, "Praha", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 1 )
+			self.foundCity(iIndependent4, lKursk, "Kursk", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
+			self.foundCity(iIndependent3, lCalais, "Calais", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
+			self.foundCity(iBarbarian, lNidaros, "Nidaros", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
+			self.foundCity(iIndependent4, lBeloozero, "Beloozero", iGameTurn, 1, xml.iCrossbowman, 1, -1, 1)
+			# 848AD
+			self.foundCity(iIndependent2, lNovgorod, "Novgorod", iGameTurn, 1, xml.iCrossbowman, 2, -1, 1 )
+			# 860AD
+			self.foundCity(iBarbarian, lEdinburgh, "Eidyn Dun", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
+			# 880AD
+			self.foundCity(iIndependent, lAlbaIulia, "Belograd", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
+		if ( iGameTurn > xml.i880AD and iGameTurn < xml.i1259AD ):
+			# 900AD
+			self.foundCity(iIndependent4, lTvanksta, "Tvanksta", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
+			self.foundCity(iIndependent3, lKrakow, "Krakow", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
+			self.foundCity(iIndependent, lRiga, "Riga", iGameTurn, 2, xml.iCrossbowman, 2, -1, 1 )
+			# 960AD
+			self.foundCity(iIndependent3, lMinsk, "Minsk", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
+			self.foundCity(iIndependent4, lSmolensk, "Smolensk", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 )
+			# 1010AD
+			self.foundCity(iIndependent3, lYaroslavl, "Yaroslavl", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 )
+			# 1050AD
+			self.foundCity(iIndependent2, lGroningen, "Groningen", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
+			self.foundCity(iIndependent2, lKalmar, "Kalmar", iGameTurn, 3, xml.iCrossbowman, 1, xml.iCatholicism, 1)
+			# 1060AD
+			self.foundCity(iBarbarian, lMus, "Mus", iGameTurn, 1, xml.iLongbowman, 2, -1, 0 )
+			# 1071AD
+			self.foundCity(iBarbarian, lMarrakesh, "Marrakesh", iGameTurn, 3, xml.iCrossbowman, 2, xml.iIslam, 1 )
+			# 1110AD
+			self.foundCity(iIndependent3, lGraz, "Graz", iGameTurn, 3, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
+			# 1200AD
+			self.foundCity(iBarbarian, lSaraiBatu, "Sarai Batu", iGameTurn, 1, xml.iLongbowman, 2, -1, 0 )
+			# 1227 AD
+			self.foundCity(iBarbarian, lTarabulus, "Tarabulus", iGameTurn, 4, xml.iArbalest, 2, xml.iIslam, 1 )
+			# 1250 AD
+			self.foundCity(iIndependent4, lAbo, "Abo", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 ) # Abo flips to Sweden
+		if ( iGameTurn > xml.i1300AD and iGameTurn < xml.i1540AD ):
+			# 1320AD
+			self.foundCity(iIndependent, lNizhnyNovgorod, "Nizhny Novgorod", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 )
+			# 1392AD
+			self.foundCity(iBarbarian, lTanais, "Tana", iGameTurn, 1, xml.iLongbowman, 2, xml.iIslam, 0)
+			# 1410AD
+			self.foundCity(iIndependent, lReykjavik, "Reykjavik", iGameTurn, 1, xml.iVikingBeserker, 2, -1, 1 )
+			# 1530AD
+			self.foundCity(iIndependent4, lValletta, "Valletta", iGameTurn, 1, xml.iKnightofStJohns, 3, xml.iCatholicism, 0 )
 
-                if ( iGameTurn == 1 ):
-                        self.setupMinorNation()
+		if ( iGameTurn == 1 ):
+			self.setupMinorNation()
 
-                self.doMinorNations(iGameTurn)
+		self.doMinorNations(iGameTurn)
 
 
-        def getCity(self, tCoords): #by LOQ
-                'Returns a city at coordinates tCoords.'
-                return CyGlobalContext().getMap().plot(tCoords[0], tCoords[1]).getPlotCity()
+	def getCity(self, tCoords): #by LOQ
+		'Returns a city at coordinates tCoords.'
+		return CyGlobalContext().getMap().plot(tCoords[0], tCoords[1]).getPlotCity()
 
-        def foundCity(self, iCiv, lCity, name, iTurn, iPopulation, iUnitType, iNumUnits, iReligion, iWorkers):
-                if ((iTurn == lCity[2] + lCity[3]) and (lCity[3]<10)):
-                        #print self.checkRegion(tUr)
-                        bResult, lCity[3] = self.checkRegion(lCity)
-                        if (bResult == True):
-                                pCiv = gc.getPlayer(iCiv)
-                                pCiv.found(lCity[0], lCity[1])
-                                self.getCity((lCity[0], lCity[1])).setName(name, False)
-                                if (iPopulation != 1):
-                                        self.getCity((lCity[0], lCity[1])).setPopulation(iPopulation)
-                                if (iNumUnits > 0):
-                                        self.makeUnit(iUnitType, iCiv, (lCity[0], lCity[1]), iNumUnits, 0, "")
-                                if (iWorkers > 0):
-                                        self.makeUnit(xml.iWorker, iCiv, (lCity[0], lCity[1]), iWorkers, 0, "")
-                                if ( iReligion > -1 ):
-                                        self.getCity((lCity[0], lCity[1])).setHasReligion(iReligion, True, True, False)
-                                return True
-                        if (bResult == False) and (lCity[3] == -1):
-                                return False
+	def foundCity(self, iCiv, lCity, name, iTurn, iPopulation, iUnitType, iNumUnits, iReligion, iWorkers):
+		if ((iTurn == lCity[2] + lCity[3]) and (lCity[3]<10)):
+			#print self.checkRegion(tUr)
+			bResult, lCity[3] = self.checkRegion(lCity)
+			if (bResult == True):
+				pCiv = gc.getPlayer(iCiv)
+				pCiv.found(lCity[0], lCity[1])
+				self.getCity((lCity[0], lCity[1])).setName(name, False)
+				if (iPopulation != 1):
+					self.getCity((lCity[0], lCity[1])).setPopulation(iPopulation)
+				if (iNumUnits > 0):
+					self.makeUnit(iUnitType, iCiv, (lCity[0], lCity[1]), iNumUnits, 0, "")
+				if (iWorkers > 0):
+					self.makeUnit(xml.iWorker, iCiv, (lCity[0], lCity[1]), iWorkers, 0, "")
+				if ( iReligion > -1 ):
+					self.getCity((lCity[0], lCity[1])).setHasReligion(iReligion, True, True, False)
+				return True
+			if (bResult == False) and (lCity[3] == -1):
+				return False
 
         def checkRegion(self, tCity):
                 cityPlot = gc.getMap().plot(tCity[0], tCity[1])
@@ -906,8 +904,8 @@ class Barbs:
                                   ))
 
 
-        def getGarrasonSize( self, pCity ):
-                pPlot = gc.getMap().plot( pCity.getX(), pCity.getY() )
+	def getGarrasonSize( self, pCity ):
+		pPlot = gc.getMap().plot( pCity.getX(), pCity.getY() )
 		iOwner = pPlot.getOwner()
 		if ( iOwner < 0 ):
 			return 0
@@ -918,43 +916,43 @@ class Barbs:
 				iDefenders += 1
 		return iDefenders
 
-        def makeRebels( self, pCity, iUnit, iCount, szName ):
-                lAvailableFreeTiles = []
-                lAvailableTiles = []
-                iTX = pCity.getX()
-                iTY = pCity.getY()
-                for y in range( 3 ):
-                        for x in range( 3 ):
-                                iX = iTX + x - 1 # try to spawn not across the river
-                                iY = iTY + y - 1
-                                if ( (iX>=0) and (iX<con.iMapMaxX) and (iY>=0) and (iY<con.iMapMaxY) ):
-                                        pPlot = gc.getMap().plot( iX, iY )
-                                        if ( pPlot.isHills() or pPlot.isFlatlands() ):
-                                                if ( pPlot.getNumUnits() == 0 and (not pPlot.isCity()) ):
-                                                        lAvailableFreeTiles.append( (iX, iY) )
-                                                elif ( not pPlot.isCity() ):
-                                                        lAvailableTiles.append( (iX, iY) )
+	def makeRebels( self, pCity, iUnit, iCount, szName ):
+		lAvailableFreeTiles = []
+		lAvailableTiles = []
+		iTX = pCity.getX()
+		iTY = pCity.getY()
+		for y in range( 3 ):
+			for x in range( 3 ):
+				iX = iTX + x - 1 # try to spawn not across the river
+				iY = iTY + y - 1
+				if ( (iX>=0) and (iX<con.iMapMaxX) and (iY>=0) and (iY<con.iMapMaxY) ):
+					pPlot = gc.getMap().plot( iX, iY )
+					if ( pPlot.isHills() or pPlot.isFlatlands() ):
+						if ( pPlot.getNumUnits() == 0 and (not pPlot.isCity()) ):
+							lAvailableFreeTiles.append( (iX, iY) )
+						elif ( not pPlot.isCity() ):
+							lAvailableTiles.append( (iX, iY) )
 
-                if ( len( lAvailableFreeTiles ) > 0 ):
-                        iI = gc.getGame().getSorenRandNum(len(lAvailableFreeTiles),'select a free tile for the rebels')
-                        iTX = lAvailableFreeTiles[iI][0]
-                        iTY = lAvailableFreeTiles[iI][1]
-                elif ( len( lAvailableTiles ) > 0 ):
-                        # if all tiles are taken, select one tile at random and kill all units there
-                        iI = gc.getGame().getSorenRandNum(len(lAvailableTiles),'select a taken tile for the rebels')
-                        iTX = lAvailableTiles[iI][0]
-                        iTY = lAvailableTiles[iI][1]
-                        pPlot = gc.getMap().plot( iX, iY )
-                        iN = pPlot.getNumUnits()
-                        for i in range( iN ):
-                                pPlot.getUnit( i ).kill( False, con.iBarbarian )
-                else:
-                        iTX = -1
-                        iTY = -1
+		if ( len( lAvailableFreeTiles ) > 0 ):
+			iI = gc.getGame().getSorenRandNum(len(lAvailableFreeTiles),'select a free tile for the rebels')
+			iTX = lAvailableFreeTiles[iI][0]
+			iTY = lAvailableFreeTiles[iI][1]
+		elif ( len( lAvailableTiles ) > 0 ):
+			# if all tiles are taken, select one tile at random and kill all units there
+			iI = gc.getGame().getSorenRandNum(len(lAvailableTiles),'select a taken tile for the rebels')
+			iTX = lAvailableTiles[iI][0]
+			iTY = lAvailableTiles[iI][1]
+			pPlot = gc.getMap().plot( iX, iY )
+			iN = pPlot.getNumUnits()
+			for i in range( iN ):
+				pPlot.getUnit( i ).kill( False, con.iBarbarian )
+		else:
+			iTX = -1
+			iTY = -1
 
-                if ( iTX != -1 and iTY != -1 ):
-                        pBarb = gc.getPlayer( con.iBarbarian )
-                        for iI in range( iCount ):
-                                pUnit = pBarb.initUnit(iUnit, iTX, iTY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
-                                pUnit.setName( localText.getText(szName, ()) )
+		if ( iTX != -1 and iTY != -1 ):
+			pBarb = gc.getPlayer( con.iBarbarian )
+			for iI in range( iCount ):
+				pUnit = pBarb.initUnit(iUnit, iTX, iTY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
+				pUnit.setName( localText.getText(szName, ()) )
 

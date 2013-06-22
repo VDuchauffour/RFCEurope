@@ -247,6 +247,8 @@ class Stability:
                 if ( iOwner == playerType ):
                         gc.getPlayer( iOwner ).changeStabilityBase( iCathegoryExpansion, -1 )
                 self.recalcEpansion( gc.getPlayer( playerType ) )
+				
+				#if city.getPopulation()
 
 
         def onImprovementDestroyed(self, owner):

@@ -6,20 +6,16 @@ import PyHelpers
 import Popup
 import Consts as con
 import XMLConsts as xml
-
 import RFCEMaps as rfcemaps
 
 # globals
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer
 
+
 ### Constants ###
 
-
-
-
 # initialise player variables to player IDs from WBS
-
 iNumPlayers = con.iNumPlayers
 iNumMajorPlayers = con.iNumMajorPlayers
 iNumActivePlayers = con.iNumActivePlayers
@@ -27,13 +23,9 @@ iIndependent = con.iIndependent
 iIndependent2 = con.iIndependent2
 iBarbarian = con.iBarbarian
 iNumTotalPlayers = con.iNumTotalPlayers
-      
 
 # city coordinates
-
-
 tCityMap = rfcemaps.tCityMap
-    
 
 
 class CityNameManager:
