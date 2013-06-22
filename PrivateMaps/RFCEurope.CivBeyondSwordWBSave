@@ -33318,7 +33318,7 @@ BeginPlot
 	EndUnit
 	BeginCity
 		CityOwner=0
-		CityName=Constantinopolis
+		CityName=Konstantinoupolis
 		CityPopulation=5
 		BuildingType=BUILDING_PALACE
 		BuildingType=BUILDING_WALLS
@@ -34135,7 +34135,7 @@ BeginPlot
 	EndUnit
 	BeginCity
 		CityOwner=0
-		CityName=Alexandria
+		CityName=Alexandreia
 		CityPopulation=4
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_LIGHTHOUSE
@@ -38280,7 +38280,7 @@ BeginPlot
 	EndUnit
 	BeginCity
 		CityOwner=0
-		CityName=Caesaraea
+		CityName=Caesarea
 		CityPopulation=1
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
@@ -38655,7 +38655,7 @@ BeginPlot
 	EndUnit
 	BeginCity
 		CityOwner=0
-		CityName=Jerusalem
+		CityName=Hierosolyma
 		CityPopulation=3
 		BuildingType=BUILDING_WALLS
 		BuildingType=BUILDING_GRANARY
@@ -38707,7 +38707,7 @@ BeginPlot
 	EndUnit
 	BeginCity
 		CityOwner=0
-		CityName=Tyre
+		CityName=Tyros
 		CityPopulation=2
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_LIGHTHOUSE
@@ -39088,8 +39088,9 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=0
-	TerrainType=TERRAIN_DESERT
-	PlotType=0
+	BonusType=BONUS_SHEEP
+	TerrainType=TERRAIN_PLAINS
+	PlotType=1
 EndPlot
 BeginPlot
 	x=94,y=1
@@ -39098,9 +39099,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=2
-	FeatureType=FEATURE_OASIS, FeatureVariety=0
-	TerrainType=TERRAIN_DESERT
-	PlotType=1
+	TerrainType=TERRAIN_PLAINS
+	PlotType=2
 EndPlot
 BeginPlot
 	x=94,y=3
@@ -39212,7 +39212,7 @@ BeginPlot
 	EndUnit
 	BeginCity
 		CityOwner=0
-		CityName=Antioch
+		CityName=Antiocheia
 		CityPopulation=3
 		BuildingType=BUILDING_WALLS
 		BuildingType=BUILDING_GRANARY
@@ -39593,7 +39593,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=95,y=2
-	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -41442,6 +41441,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=99,y=11
+	ImprovementType=IMPROVEMENT_CITY_RUINS
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
