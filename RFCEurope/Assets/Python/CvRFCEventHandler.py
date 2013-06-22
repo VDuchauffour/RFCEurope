@@ -290,7 +290,6 @@ class CvRFCEventHandler:
                 #                        city.setHasRealBuilding((iNationalWonder), False)
 
                 self.pla.onCityAcquired(owner,playerType,city) #Plague
-
                 self.vic.onCityAcquired(owner, playerType, city, bConquest) #Victory
 
                 return 0
@@ -299,12 +298,10 @@ class CvRFCEventHandler:
                 #'City Razed'
                 city, iPlayer = argsList
 
-                self.rnf.onCityRazed(city.getOwner(),iPlayer,city)
-
-                self.sta.onCityRazed(city.getOwner(),iPlayer,city)
-                self.vic.onCityRazed(iPlayer,city)
-
-                self.pla.onCityRazed(city,iPlayer) #Plague
+                self.rnf.onCityRazed(city.getOwner(),iPlayer,city) # Rise and Fall
+                self.sta.onCityRazed(city.getOwner(),iPlayer,city) # Stability
+                self.vic.onCityRazed(iPlayer,city) # Victory
+                self.pla.onCityRazed(city,iPlayer) # Plague
 
 
         def onCityBuilt(self, argsList):
@@ -440,22 +437,18 @@ class CvRFCEventHandler:
 
 		print(" 3Miro onBegTurn: ",iGameTurn)
 		self.barb.checkTurn(iGameTurn)
-                self.rnf.checkTurn(iGameTurn)
-                self.rel.checkTurn(iGameTurn)
-                self.res.checkTurn(iGameTurn)
-                self.up.checkTurn(iGameTurn)
-                self.aiw.checkTurn(iGameTurn)
-                #self.cong.checkTurn(iGameTurn) # 3Miro: no congress
-                self.pla.checkTurn(iGameTurn)
-                self.vic.checkTurn(iGameTurn)
-                self.sta.checkTurn(iGameTurn)
-                #self.com.checkTurn(iGameTurn) # 3Miro: no communication problem
-                self.crusade.checkTurn(iGameTurn)
-		#print("********* Polish Test *********")
-		#print(gc.getPlayer(iPoland).getAgricultureHistory(iGameTurn))
-		#iAgriculture = gc.getPlayer(iPoland).calculateTotalYield(YieldTypes.YIELD_FOOD)
-		#print(iAgriculture)
-		#print("*******************************")
+		self.rnf.checkTurn(iGameTurn)
+		self.rel.checkTurn(iGameTurn)
+		self.res.checkTurn(iGameTurn)
+		self.up.checkTurn(iGameTurn)
+		self.aiw.checkTurn(iGameTurn)
+		#self.cong.checkTurn(iGameTurn) # 3Miro: no congress
+		self.pla.checkTurn(iGameTurn)
+		self.vic.checkTurn(iGameTurn)
+		self.sta.checkTurn(iGameTurn)
+		#self.com.checkTurn(iGameTurn) # 3Miro: no communication problem
+		self.crusade.checkTurn(iGameTurn)
+
                 #Mercenaries - start
 
                 #if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(con.iNationalism)) and gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
@@ -499,32 +492,32 @@ class CvRFCEventHandler:
 
 
 
-        def onBeginPlayerTurn(self, argsList):
-        	#print( " in Begin Player Turn ")
-                iGameTurn, iPlayer = argsList
+	def onBeginPlayerTurn(self, argsList):
+		#print( " in Begin Player Turn ")
+		iGameTurn, iPlayer = argsList
 
-                print ("onBeginPlayerTurn PLAYER", iPlayer)
+		print ("onBeginPlayerTurn PLAYER", iPlayer)
 
-                if (self.rnf.getDeleteMode(0) != -1):
-                        self.rnf.deleteMode(iPlayer)
+		if (self.rnf.getDeleteMode(0) != -1):
+			self.rnf.deleteMode(iPlayer)
 
-                self.pla.checkPlayerTurn(iGameTurn, iPlayer)
+		self.pla.checkPlayerTurn(iGameTurn, iPlayer)
 
-                if (gc.getPlayer(iPlayer).isAlive()):
-                        self.vic.checkPlayerTurn(iGameTurn, iPlayer)
+		if (gc.getPlayer(iPlayer).isAlive()):
+			self.vic.checkPlayerTurn(iGameTurn, iPlayer)
 
 
-                if (gc.getPlayer(iPlayer).isAlive() and iPlayer < con.iNumPlayers and gc.getPlayer(iPlayer).getNumCities() > 0):
-                        self.sta.updateBaseStability(iGameTurn, iPlayer)
+		if (gc.getPlayer(iPlayer).isAlive() and iPlayer < con.iNumPlayers and gc.getPlayer(iPlayer).getNumCities() > 0):
+			self.sta.updateBaseStability(iGameTurn, iPlayer)
 
-                if (gc.getPlayer(iPlayer).isAlive() and iPlayer < con.iNumPlayers and not gc.getPlayer(iPlayer).isHuman()):
-                        self.rnf.checkPlayerTurn(iGameTurn, iPlayer) #for leaders switch
+		if (gc.getPlayer(iPlayer).isAlive() and iPlayer < con.iNumPlayers and not gc.getPlayer(iPlayer).isHuman()):
+			self.rnf.checkPlayerTurn(iGameTurn, iPlayer) #for leaders switch
 
-                if ( gc.getPlayer(iPlayer).isAlive() and iPlayer < con.iNumPlayers ):
-                	utils.setLastTurnAlive( iPlayer, iGameTurn )
+		if ( gc.getPlayer(iPlayer).isAlive() and iPlayer < con.iNumPlayers ):
+			utils.setLastTurnAlive( iPlayer, iGameTurn )
 
-                if ( gc.hasUP( iPlayer, con.iUP_Janissary ) ):
-                        self.up.janissary( iPlayer )
+		if ( gc.hasUP( iPlayer, con.iUP_Janissary ) ):
+			self.up.janissary( iPlayer )
 
                 #Mercenaries - start
 

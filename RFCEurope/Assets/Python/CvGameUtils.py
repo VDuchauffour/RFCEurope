@@ -303,46 +303,46 @@ class CvGameUtils:
 		bFinal = argsList[1]
 		bVictory = argsList[2]
 
-                if ( not bFinal ):
-                        iPopulationScore = CvUtil.getScoreComponent(gc.getPlayer(ePlayer).getPopScore(), gc.getGame().getInitPopulation(), gc.getGame().getMaxPopulation(), gc.getDefineINT("SCORE_POPULATION_FACTOR"), True, bFinal, bVictory)
-                        iLandScore = CvUtil.getScoreComponent(gc.getPlayer(ePlayer).getLandScore(), gc.getGame().getInitLand(), gc.getGame().getMaxLand(), gc.getDefineINT("SCORE_LAND_FACTOR"), True, bFinal, bVictory)
-                        iTechScore = CvUtil.getScoreComponent(gc.getPlayer(ePlayer).getTechScore(), gc.getGame().getInitTech(), gc.getGame().getMaxTech(), gc.getDefineINT("SCORE_TECH_FACTOR"), True, bFinal, bVictory)
-                        iWondersScore = CvUtil.getScoreComponent(gc.getPlayer(ePlayer).getWondersScore(), gc.getGame().getInitWonders(), gc.getGame().getMaxWonders(), gc.getDefineINT("SCORE_WONDER_FACTOR"), False, bFinal, bVictory)
-                        return int(iPopulationScore + iLandScore + iWondersScore + iTechScore)
-                else:
-                        #3Miro: we compute the final scores different now
-                        iPopulationScore = self.getScoreComponentRFCE(gc.getPlayer(ePlayer).getPopScore(), gc.getGame().getInitPopulation(), gc.getGame().getMaxPopulation(), gc.getDefineINT("SCORE_POPULATION_FACTOR"), True, bFinal, bVictory)
-                        iLandScore = self.getScoreComponentRFCE(gc.getPlayer(ePlayer).getLandScore(), gc.getGame().getInitLand(), gc.getGame().getMaxLand(), gc.getDefineINT("SCORE_LAND_FACTOR"), True, bFinal, bVictory)
-                        iTechScore = self.getScoreComponentRFCE(gc.getPlayer(ePlayer).getTechScore(), gc.getGame().getInitTech(), gc.getGame().getMaxTech(), gc.getDefineINT("SCORE_TECH_FACTOR"), True, bFinal, bVictory)
-                        iWondersScore = self.getScoreComponentRFCE(gc.getPlayer(ePlayer).getWondersScore(), gc.getGame().getInitWonders(), gc.getGame().getMaxWonders(), gc.getDefineINT("SCORE_WONDER_FACTOR"), False, bFinal, bVictory)
-                        iUHVDone = 0
-                        for iUHV in range( 3 ):
-                                if ( gc.getPlayer(ePlayer).getUHV( iUHV ) == 1 ):
-                                        iUHVDone += 1
-                        iUHVScore = iUHVDone * 3000
-                        if ( iUHVDone == 3 ): # if finished all 3 UHV conditions
-                                iUHVScore += 6000
-                        return int(iPopulationScore + iLandScore + iWondersScore + iTechScore + iUHVScore)
+		if ( not bFinal ):
+			iPopulationScore = CvUtil.getScoreComponent(gc.getPlayer(ePlayer).getPopScore(), gc.getGame().getInitPopulation(), gc.getGame().getMaxPopulation(), gc.getDefineINT("SCORE_POPULATION_FACTOR"), True, bFinal, bVictory)
+			iLandScore = CvUtil.getScoreComponent(gc.getPlayer(ePlayer).getLandScore(), gc.getGame().getInitLand(), gc.getGame().getMaxLand(), gc.getDefineINT("SCORE_LAND_FACTOR"), True, bFinal, bVictory)
+			iTechScore = CvUtil.getScoreComponent(gc.getPlayer(ePlayer).getTechScore(), gc.getGame().getInitTech(), gc.getGame().getMaxTech(), gc.getDefineINT("SCORE_TECH_FACTOR"), True, bFinal, bVictory)
+			iWondersScore = CvUtil.getScoreComponent(gc.getPlayer(ePlayer).getWondersScore(), gc.getGame().getInitWonders(), gc.getGame().getMaxWonders(), gc.getDefineINT("SCORE_WONDER_FACTOR"), False, bFinal, bVictory)
+			return int(iPopulationScore + iLandScore + iWondersScore + iTechScore)
+		else:
+			#3Miro: we compute the final scores different now
+			iPopulationScore = self.getScoreComponentRFCE(gc.getPlayer(ePlayer).getPopScore(), gc.getGame().getInitPopulation(), gc.getGame().getMaxPopulation(), gc.getDefineINT("SCORE_POPULATION_FACTOR"), True, bFinal, bVictory)
+			iLandScore = self.getScoreComponentRFCE(gc.getPlayer(ePlayer).getLandScore(), gc.getGame().getInitLand(), gc.getGame().getMaxLand(), gc.getDefineINT("SCORE_LAND_FACTOR"), True, bFinal, bVictory)
+			iTechScore = self.getScoreComponentRFCE(gc.getPlayer(ePlayer).getTechScore(), gc.getGame().getInitTech(), gc.getGame().getMaxTech(), gc.getDefineINT("SCORE_TECH_FACTOR"), True, bFinal, bVictory)
+			iWondersScore = self.getScoreComponentRFCE(gc.getPlayer(ePlayer).getWondersScore(), gc.getGame().getInitWonders(), gc.getGame().getMaxWonders(), gc.getDefineINT("SCORE_WONDER_FACTOR"), False, bFinal, bVictory)
+			iUHVDone = 0
+			for iUHV in range( 3 ):
+				if ( gc.getPlayer(ePlayer).getUHV( iUHV ) == 1 ):
+					iUHVDone += 1
+			iUHVScore = iUHVDone * 3000
+			if ( iUHVDone == 3 ): # if finished all 3 UHV conditions
+				iUHVScore += 6000
+			return int(iPopulationScore + iLandScore + iWondersScore + iTechScore + iUHVScore)
 
-        def getScoreComponentRFCE(self,iRawScore, iInitial, iMax, iFactor, bExponential, bFinal, bVictory):
-        # 3Miro: to compensate for the late starts, we remove the time dependence for the final score
-                if bFinal and bVictory:
-                        fTurnRatio = 1
-                        if bExponential and (iInitial != 0):
-                                fRatio = iMax / iInitial
-                                iMax = iInitial * pow(fRatio, fTurnRatio)
-                        else:
-                                iMax = iInitial + fTurnRatio * (iMax - iInitial)
-                iFree = (gc.getDefineINT("SCORE_FREE_PERCENT") * iMax) / 100
-                if (iFree + iMax) != 0:
-                        iScore = (iFactor * (iRawScore + iFree)) / (iFree + iMax)
-                else:
-                        iScore = iFactor
-                if bVictory:
-                        iScore = ((100 + gc.getDefineINT("SCORE_VICTORY_PERCENT")) * iScore) / 100
-                if bFinal:
-                        iScore = ((100 + gc.getDefineINT("SCORE_HANDICAP_PERCENT_OFFSET") + (gc.getGame().getHandicapType() * gc.getDefineINT("SCORE_HANDICAP_PERCENT_PER"))) * iScore) / 100
-                return int(iScore)
+	def getScoreComponentRFCE(self,iRawScore, iInitial, iMax, iFactor, bExponential, bFinal, bVictory):
+	# 3Miro: to compensate for the late starts, we remove the time dependence for the final score
+		if bFinal and bVictory:
+			fTurnRatio = 1
+			if bExponential and (iInitial != 0):
+				fRatio = iMax / iInitial
+				iMax = iInitial * pow(fRatio, fTurnRatio)
+			else:
+				iMax = iInitial + fTurnRatio * (iMax - iInitial)
+		iFree = (gc.getDefineINT("SCORE_FREE_PERCENT") * iMax) / 100
+		if (iFree + iMax) != 0:
+			iScore = (iFactor * (iRawScore + iFree)) / (iFree + iMax)
+		else:
+			iScore = iFactor
+		if bVictory:
+			iScore = ((100 + gc.getDefineINT("SCORE_VICTORY_PERCENT")) * iScore) / 100
+		if bFinal:
+			iScore = ((100 + gc.getDefineINT("SCORE_HANDICAP_PERCENT_OFFSET") + (gc.getGame().getHandicapType() * gc.getDefineINT("SCORE_HANDICAP_PERCENT_PER"))) * iScore) / 100
+		return int(iScore)
 
 	def doHolyCity(self):
 		return False
@@ -501,9 +501,8 @@ class CvGameUtils:
 	def getUpgradePriceOverride(self, argsList):
 		iPlayer, iUnitID, iUnitTypeUpgrade = argsList
 
-
 		return -1	# Any value 0 or above will be used
-#
+
 	def getExperienceNeeded(self, argsList):
 		# use this function to set how much experience a unit needs
 		iLevel, iOwner = argsList

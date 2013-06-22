@@ -2,9 +2,9 @@
 
 from CvPythonExtensions import *
 import CvUtil
-import PyHelpers        # LOQ
+import PyHelpers		# LOQ
 import Popup
-import cPickle as pickle        	# LOQ 2005-10-12
+import cPickle as pickle		# LOQ 2005-10-12
 import Consts as con
 import XMLConsts as xml
 import RFCUtils
@@ -12,7 +12,7 @@ import RFCEMaps as rfcemaps
 
 # globals
 gc = CyGlobalContext()
-PyPlayer = PyHelpers.PyPlayer	# LOQ
+PyPlayer = PyHelpers.PyPlayer		# LOQ
 utils = RFCUtils.RFCUtils()
 
 ### Constants ###

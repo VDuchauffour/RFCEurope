@@ -1,13 +1,11 @@
 # Rhye's and Fall of Civilization - (a part of) Unique Powers
 
-
-#Emperor is in RiseAndFall in the collapse and scession functions, RFCUtils.collapseImmune and stability
-#Khan is in c++ CvPlayer.cpp::acquireCity()
-
+#Emperor UP is in RiseAndFall in the collapse and secession functions, RFCUtils.collapseImmune and stability
+#Khan UP is in c++ CvPlayer.cpp::acquireCity()
 
 from CvPythonExtensions import *
 import CvUtil
-import PyHelpers   
+import PyHelpers
 import Popup
 import cPickle as pickle
 import Consts as con
@@ -22,10 +20,10 @@ PyPlayer = PyHelpers.PyPlayer
 iJanissaryPoints = con.iJanissaryPoints
 
 class UniquePowers:
-       	
+
         def checkTurn(self, iGameTurn):
                 pass
-                
+
 #------------------U.P. FAITH-------------------
         def faithUP(self, iPlayer, city):
                 pFaithful = gc.getPlayer(iPlayer)
@@ -47,13 +45,13 @@ class UniquePowers:
                         if (not city.hasBuilding(iTemple)):
                                 city.setHasRealBuilding(iTemple, True)
                                 pFaithful.changeFaith( 1 )
-                        
-                        
+
+
 #------------------U.P. Janissary-------------------
         def janissary(self, iPlayer ):
                 pPlayer = gc.getPlayer( iPlayer )
                 iStateReligion = pPlayer.getStateReligion()
-                
+
                 apCityList = PyPlayer(iPlayer).getCityList()
                 iNewPoints = 0
                 for apCity in apCityList:
@@ -62,14 +60,14 @@ class UniquePowers:
                                 if ( iReligion != iStateReligion and pCity.isHasReligion( iReligion ) ):
                                         iNewPoints += pCity.getPopulation()
                                         break
-                
+
                 iOldPoints = pPlayer.getPicklefreeParameter( iJanissaryPoints )
-                
+
                 iNextJanissary = 250
                 if ( pPlayer.isHuman() ):
                         iNextJanissary = 400
-                
-                
+
+
                 if ( iOldPoints + iNewPoints > iNextJanissary ):
                         #iNewPoints = 0
                         apCityList = PyPlayer(iPlayer).getCityList()
@@ -80,8 +78,6 @@ class UniquePowers:
                         #print(" 3Miro making a Janissary in ",pCity.getName() )
                 else:
                      pPlayer.setPicklefreeParameter( iJanissaryPoints, iOldPoints + iNewPoints )
-                     
+
                 #print(" 3Miro Janissaries for player: ",iPlayer,pPlayer.getPicklefreeParameter( iJanissaryPoints ) )
                 #print(" 3Miro Janissaries this turn addes: ", iNewPoints)
-                
-

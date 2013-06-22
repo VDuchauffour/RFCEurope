@@ -122,45 +122,45 @@ class Religions:
 ### Secure storage & retrieval of script data ###
 ################################################
 
-        def getSeed( self ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['iSeed']
+	def getSeed( self ):
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		return scriptDict['iSeed']
 
-        def setSeed( self ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['iSeed'] = gc.getGame().getSorenRandNum(100, 'Seed for random delay')
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+	def setSeed( self ):
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		scriptDict['iSeed'] = gc.getGame().getSorenRandNum(100, 'Seed for random delay')
+		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-        def getReformationActive( self ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['bReformationActive']
+	def getReformationActive( self ):
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		return scriptDict['bReformationActive']
 
-        def setReformationActive( self, bNewValue ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['bReformationActive'] = bNewValue
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+	def setReformationActive( self, bNewValue ):
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		scriptDict['bReformationActive'] = bNewValue
+		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-        def getReformationHitMatrix( self, iCiv ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['lReformationHitMatrix'][iCiv]
+	def getReformationHitMatrix( self, iCiv ):
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		return scriptDict['lReformationHitMatrix'][iCiv]
 
-        def setReformationHitMatrix( self, iCiv, bNewValue ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['lReformationHitMatrix'][iCiv] = bNewValue
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+	def setReformationHitMatrix( self, iCiv, bNewValue ):
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		scriptDict['lReformationHitMatrix'][iCiv] = bNewValue
+		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-        def getReformationHitMatrixAll( self ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['lReformationHitMatrix']
+	def getReformationHitMatrixAll( self ):
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		return scriptDict['lReformationHitMatrix']
 
-        def getCounterReformationActive( self ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                return scriptDict['bCounterReformationActive']
+	def getCounterReformationActive( self ):
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		return scriptDict['bCounterReformationActive']
 
-        def setCounterReformationActive( self, bNewValue ):
-                scriptDict = pickle.loads( gc.getGame().getScriptData() )
-                scriptDict['bCounterReformationActive'] = bNewValue
-                gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+	def setCounterReformationActive( self, bNewValue ):
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		scriptDict['bCounterReformationActive'] = bNewValue
+		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
 
 #######################################
