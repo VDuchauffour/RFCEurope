@@ -678,28 +678,28 @@ class RiseAndFall:
                 #        #print (unit)
 
 
-        ### 3Miro Province Related Functions ###
-        def onCityBuilt(self, iPlayer, pCity):
-                self.pm.onCityBuilt (iPlayer, pCity.getX(), pCity.getY())
-                # "prebuilt" walls
-                if ( (pCity.getX()==56) and (pCity.getY()==35) ): #Early defense boost to Venice, the rivers alone are not enough
-                        pCity.setHasRealBuilding( xml.iWalls, True )
-                if ( (pCity.getX()==55) and (pCity.getY()==41) ): #Augsburg
-                        pCity.setHasRealBuilding( xml.iWalls, True )
-                if ( (pCity.getX()==23) and (pCity.getY()==31) ): #Porto
-                        pCity.setHasRealBuilding( xml.iWalls, True )
-                if ( (pCity.getX()==60) and (pCity.getY()==44) ): #Prague
-                        pCity.setHasRealBuilding( xml.iWalls, True )
-                if ( (pCity.getX()==80) and (pCity.getY()==62) ): #Novgorod
-                        pCity.setHasRealBuilding( xml.iWalls, True )
-                if ( (pCity.getX()==74) and (pCity.getY()==58) ): #Riga
-                        pCity.setHasRealBuilding( xml.iWalls, True )
+	### 3Miro Province Related Functions ###
+	def onCityBuilt(self, iPlayer, pCity):
+		self.pm.onCityBuilt (iPlayer, pCity.getX(), pCity.getY())
+		# "prebuilt" walls
+		if ( (pCity.getX()==56) and (pCity.getY()==35) ): #Early defense boost to Venice, the rivers alone are not enough
+			pCity.setHasRealBuilding( xml.iWalls, True )
+		if ( (pCity.getX()==55) and (pCity.getY()==41) ): #Augsburg
+			pCity.setHasRealBuilding( xml.iWalls, True )
+		if ( (pCity.getX()==23) and (pCity.getY()==31) ): #Porto
+			pCity.setHasRealBuilding( xml.iWalls, True )
+		if ( (pCity.getX()==60) and (pCity.getY()==44) ): #Prague
+			pCity.setHasRealBuilding( xml.iWalls, True )
+		if ( (pCity.getX()==80) and (pCity.getY()==62) ): #Novgorod
+			pCity.setHasRealBuilding( xml.iWalls, True )
+		if ( (pCity.getX()==74) and (pCity.getY()==58) ): #Riga
+			pCity.setHasRealBuilding( xml.iWalls, True )
 
 
 	def onCityAcquired(self, owner, playerType, city, bConquest, bTrade):
 		self.pm.onCityAcquired(owner, playerType, city, bConquest, bTrade)
 		if ( playerType == iTurkey ):
-			if ( city.getX() == tCapitals[iByzantium][0] and city.getY() == tCapitals[iByzantium][1] ):
+			if ( city.getX() == tCapitals[iByzantium][0] and city.getY() == tCapitals[iByzantium][1] ): # Constantinople (81,24)
 				apCityList = PyPlayer(playerType).getCityList()
 				for pCity in apCityList:
 					loopCity = pCity.GetCy()
@@ -710,17 +710,21 @@ class RiseAndFall:
 					city.setHasReligion(xml.iIslam,1,1,0)
 
 			# Absinthe: Edirne becomes capital if conquered before Constantinople
-			if ( tCapitals[iTurkey][0] == 81 and tCapitals[iTurkey][1] == 24 ): # Constantinople (81,24)
-				pass
 			else:
-				if ( city.getX() == 76 and city.getY() == 25 ): #Adrianople/Edirne (76,25)
+				if ( city.getX() == 76 and city.getY() == 25 ): # Adrianople/Edirne (76,25)
 					apCityList = PyPlayer(playerType).getCityList()
-					for pCity in apCityList:
+					bHasIstanbul = False
+					for pCity in apCityList: # checks if Constantinople is currently an Ottoman city
 						loopCity = pCity.GetCy()
-						if (loopCity != city):
-							loopCity.setHasRealBuilding((xml.iPalace), False)
-					city.setHasRealBuilding((xml.iPalace), True)
-					if ( pTurkey.getStateReligion() == xml.iIslam ):
+						if ( loopCity.getX() == tCapitals[iByzantium][0] and loopCity.getY() == tCapitals[iByzantium][1] ):
+							bHasIstanbul = True
+					if ( bHasIstanbul == False ): # if it's not, then sets all cities without palace, apart from the newly conquered Adrianople/Edirne
+						for pCity in apCityList:
+							loopCity = pCity.GetCy()
+							if (loopCity != city):
+								loopCity.setHasRealBuilding((xml.iPalace), False)
+						city.setHasRealBuilding((xml.iPalace), True)
+					if ( pTurkey.getStateReligion() == xml.iIslam ): # you get Islam anyway, as a bonus
 						city.setHasReligion(xml.iIslam,1,1,0)
 
 

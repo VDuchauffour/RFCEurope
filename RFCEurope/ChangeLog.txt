@@ -116,6 +116,7 @@ Changes for RFCE 1.2:
 		- Byzantine city name map updated by DC123456789
 		- Minor updates to the Dutch and Hungarian city name maps
 		- Renamed preset Byzantine cities to their Greek names (Konstantinoupolis, Alexandreia, Hierosolyma, Antiocheia, Tyros, etc.)
+		- French entries for Harald Hardrada, Maximilian, Abu Bakr, Yaqub al-Mansur
 
 	Art and sound updates:
 		- Added theme files for the mod
@@ -192,6 +193,7 @@ Changes for RFCE 1.2:
 		- Fixed bug in secession provinces, where outer (ok) provinces had very low chance, while some of the historical (stable) provinces had decent chance
 		- Fixed bug where Hanseatic Executives couldn't pass straits, or enter into foreign territory without open borders
 		- Fixed victory screen for Burgundy, the way their victory conditions show up
+		- Fixed bug with automatic capital changes for the Ottomans (only changes to Edirne if you don't have Istanbul)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
