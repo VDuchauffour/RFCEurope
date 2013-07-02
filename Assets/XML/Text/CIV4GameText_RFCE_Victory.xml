@@ -118,7 +118,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BYZ1</Tag>
 		<English>[COLOR_YELLOW]The Second Rome:[COLOR_REVERT] Make Constantinople the largest and most cultured city in 1025AD.</English>
-		<French>Faire de Constantinople la ville la plus peupl&#233;e et cultiv&#233;e en 1025 ap.JC.</French>
+		<French>[COLOR_YELLOW]The Second Rome:[COLOR_REVERT] Faire de Constantinople la ville la plus peupl&#233;e et cultiv&#233;e en 1025 ap.JC.</French>
 		<German>[COLOR_YELLOW]Das Zweite Rom:[COLOR_REVERT] Macht 1025 n.Chr. Konstantinopel zur kulturell bedeutendsten und größten Stadt.</German>
 		<Italian>[COLOR_YELLOW]La Seconda Roma:[COLOR_REVERT] Rendi Costantinopoli la città più grande e con più cultura nel 1025AD.</Italian>
 		<Spanish>[COLOR_YELLOW]The Second Rome:[COLOR_REVERT] Make Constantinople the largest and most cultured city in 1025AD.</Spanish>
@@ -136,7 +136,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BYZ3</Tag>
 		<English>[COLOR_YELLOW]Crossroads of the World:[COLOR_REVERT] Be the richest empire in the world in 1453AD.</English>
-		<French>Etre l'Empire le plus riche du monde en 1453 ap.JC.</French>
+		<French>[COLOR_YELLOW]Crossroads of the World:[COLOR_REVERT] Etre l'Empire le plus riche du monde en 1453 ap.JC.</French>
 		<German>[COLOR_YELLOW]Wegkreuzung der Welt:[COLOR_REVERT] Seid bis 1453 n.Chr. das wohlhabendste Reich.</German>
 		<Italian>[COLOR_YELLOW]Crocevia del Mondo:[COLOR_REVERT] Devi essere la civiltà più ricca nel 1453AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Crossroads of the World:[COLOR_REVERT] Crossroads of the World: Be the richest empire in the world in 1453AD.</Spanish>
@@ -163,7 +163,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUL3</Tag>
 		<English>[COLOR_YELLOW]Not Even the Birds Can Fly Through:[COLOR_REVERT] Do not lose a city to barbarians (Mongols), Byzantines, or Ottomans before 1393AD.</English>
-		<French>Ne perdre aucune ville par les Mongoles, les Byzantins ou les Ottomans avant 1393 ap.JC.</French>
+		<French>[COLOR_YELLOW]Not Even the Birds Can Fly Through:[COLOR_REVERT] Ne perdre aucune ville par les Mongoles, les Byzantins ou les Ottomans avant 1393 ap.JC.</French>
 		<German>[COLOR_YELLOW]Nicht Einmal Vögel Können es Durchqueren:[COLOR_REVERT] Verliert vor 1393 n.Chr. keine Stadt an die Barbaren (Mongolen), die Byzantiner oder Osmanen.</German>
 		<Italian>[COLOR_YELLOW]Neanche gli uccelli possono attraversare le nostre mura:[COLOR_REVERT] Non farti conquistare nessuna città da Mongoli (Barbari), Bizantini o Ottomani prima del 1393AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Not Even the Birds Can Fly Through:[COLOR_REVERT] Do not lose a city to barbarians (Mongols), Byzantines, or Ottomans before 1393AD.</Spanish>
@@ -244,7 +244,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ARA3</Tag>
 		<English>[COLOR_YELLOW]The World of Islam:[COLOR_REVERT] Islam to spread to 35% of all people.</English>
-		<French>R&#233;pandre l'Islam &#224; 35% dans le monde.</French>
+		<French>[COLOR_YELLOW]The World of Islam:[COLOR_REVERT] R&#233;pandre l'Islam &#224; 35% dans le monde.</French>
 		<German>[COLOR_YELLOW]Die Welt des Islam:[COLOR_REVERT] Sorgt für eine 35%-ige Verbreitung des Islam.</German>
 		<Italian>[COLOR_YELLOW]La Spada dell'Islam:[COLOR_REVERT] Diffondi l'Islam nel 35% delle città europee.</Italian>
 		<Spanish>[COLOR_YELLOW]The World of Islam:[COLOR_REVERT] Islam to spread to 35% of all people.</Spanish>
@@ -253,7 +253,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_COR1</Tag>
 		<English>[COLOR_YELLOW]Jewel of the World:[COLOR_REVERT] Make Cordoba the largest city in the world in 961AD.</English>
-		<French>Faire de Courdoue la ville la plus peupl&#233;e du monde en 961 ap.JC.</French>
+		<French>[COLOR_YELLOW]Jewel of the World:[COLOR_REVERT] Faire de Courdoue la ville la plus peupl&#233;e du monde en 961 ap.JC.</French>
 		<German>[COLOR_YELLOW]Juwel der Welt:[COLOR_REVERT] Macht Cordoba 961 n.Chr. zur größten Stadt.</German>
 		<Italian>[COLOR_YELLOW]Gioiello del Mondo:[COLOR_REVERT] Cordoba deve essere la città più grande del mondo nel 961AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Jewel of the World:[COLOR_REVERT] Make Cordoba the largest city in the world in 961AD.</Spanish>
@@ -262,7 +262,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_COR2</Tag>
 		<English>[COLOR_YELLOW]The Superior Moorish Architecture:[COLOR_REVERT] Build the Alhambra, the Gardens of Al-Andalus, and La Mezquita by 1309AD.</English>
-		<French>Construire l'Alhambra, les Jardins d'Al-Andalus et La Mezquita en 1309 ap.JC.</French>
+		<French>[COLOR_YELLOW]The Superior Moorish Architecture:[COLOR_REVERT] Construire l'Alhambra, les Jardins d'Al-Andalus et La Mezquita en 1309 ap.JC.</French>
 		<German>[COLOR_YELLOW]Die Überragende Architektur der Mauren:[COLOR_REVERT] Errichtet bis 1309 n.Chr. die Wunder Alhambra, die Gärten von Al-Andalus und Mezquita-Catedral.</German>
 		<Italian>[COLOR_YELLOW]La Superiorità dell'Architettura Moresca:[COLOR_REVERT] Costruisci l'Alhambra, i Giardini di Al-Andalus e La Mezquita entro il 1309AD.</Italian>
 		<Spanish>[COLOR_YELLOW]The Superior Moorish Architecture:[COLOR_REVERT] Build the Alhambra, the Gardens of Al-Andalus, and La Mezquita by 1309AD.</Spanish>
@@ -361,7 +361,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_KIE1</Tag>
 		<English>[COLOR_YELLOW]Lavra:[COLOR_REVERT] Build 2 Orthodox cathedrals and 8 Orthodox monasteries by 1250AD.</English>
-		<French>Construire 2 Cath&#233;drales et 8 Monast&#232;res Orthodoxe en 1250 ap.JC.</French>
+		<French>[COLOR_YELLOW]Lavra:[COLOR_REVERT] Construire 2 Cath&#233;drales et 8 Monast&#232;res Orthodoxe en 1250 ap.JC.</French>
 		<German>[COLOR_YELLOW]Lavra:[COLOR_REVERT] Baut bis 1250 n.Chr. 2 orthodoxe Kathedralen und 8 orthodoxe Klöster.</German>
 		<Italian>[COLOR_YELLOW]Lavra:[COLOR_REVERT] Costruisci 2 Cattedrali Ortodosse e 8 Monasteri Ortodossi entro il 1250AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Lavra:[COLOR_REVERT] Build 2 Orthodox cathedrals and 8 Orthodox monasteries by 1250AD.</Spanish>
@@ -424,7 +424,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_HUN2</Tag>
 		<English>[COLOR_YELLOW]Black Army:[COLOR_REVERT] Control the most territory in Europe in 1490AD.</English>
-		<French>Avoir le plus gand territoire d'Europe en 1490 ap.JC.</French>
+		<French>[COLOR_YELLOW]Black Army:[COLOR_REVERT] Avoir le plus gand territoire d'Europe en 1490 ap.JC.</French>
 		<German>[COLOR_YELLOW]Die Schwarze Armee:[COLOR_REVERT] Kontrolliert 1490 n.Chr. das größte Gebiet Europas.</German>
 		<Italian>[COLOR_YELLOW]Esercito Nero:[COLOR_REVERT] Devi essere la nazione più grande d'Europa nel 1490AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Black Army:[COLOR_REVERT] Control the most territory in Europe in 1490AD.</Spanish>
@@ -433,7 +433,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_HUN3</Tag>
 		<English>[COLOR_YELLOW]Edict of Torda:[COLOR_REVERT] Be the first to adopt Free Religion.</English>
-		<French>Etre le premier &#224; adopter la Libert&#233; de Culte.</French>
+		<French>[COLOR_YELLOW]Edict of Torda:[COLOR_REVERT] Etre le premier &#224; adopter la Libert&#233; de Culte.</French>
 		<German>[COLOR_YELLOW]Edikt von Turda:[COLOR_REVERT] Führt als erste Zivilisation die Staatsform Religionsfreiheit ein.</German>
 		<Italian>[COLOR_YELLOW]Editto di Torda:[COLOR_REVERT] Devi essere il primo ad adottare la Libertà Religiosa</Italian>
 		<Spanish>[COLOR_YELLOW]Edict of Torda:[COLOR_REVERT] Be the first to adopt Free Religion.</Spanish>
@@ -477,12 +477,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POL2</Tag>
-		<English>[COLOR_YELLOW]The Commonwealth:[COLOR_REVERT] Control 12 cities in Bohemia, Moravia, Upper Hungary, Prussia, Lithuania, Livonia, Polotsk, Minsk, Volhynia, Podolia, Moldova and Kiev in 1600AD.</English>
-		<French>[COLOR_YELLOW]The Commonwealth:[COLOR_REVERT] Control 12 cities in Bohemia, Moravia, Upper Hungary, Prussia, Lithuania, Livonia, Polotsk, Minsk, Volhynia, Podolia, Moldova and Kiev in 1600AD.</French>
+		<English>[COLOR_YELLOW]The Commonwealth:[COLOR_REVERT] Own at least 12 cities in Bohemia, Moravia, Upper Hungary, Prussia, Lithuania, Livonia, Polotsk, Minsk, Volhynia, Podolia, Moldova and Kiev provinces in 1600AD.</English>
+		<French>[COLOR_YELLOW]The Commonwealth:[COLOR_REVERT] Own at least 12 cities in Bohemia, Moravia, Upper Hungary, Prussia, Lithuania, Livonia, Polotsk, Minsk, Volhynia, Podolia, Moldova and Kiev provinces in 1600AD.</French>
 		<German>[COLOR_YELLOW]Die Realunion:[COLOR_REVERT] Kontrolliert 1600 n.Chr. 12 Städte in Böhmen, Mähren, Oberungarn, Prussia, Litauen, Livland, Polotsk, Minsk, Wolhynien, Podolia, Moldawien und Kiev.</German>
 		<Italian>[COLOR_YELLOW]Il Commonwealth:[COLOR_REVERT] Controlla 12 città nelle province di Boemia, Moravia, Alta Ungheria, Prussia, Lituania, Livonia, Polack, Minsk, Volinia, Podolia, Moldavia e Kiev nel 1600AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The Commonwealth:[COLOR_REVERT] Control 12 cities in Bohemia, Moravia, Upper Hungary, Prussia, Lithuania, Livonia, Polotsk, Minsk, Volhynia, Podolia, Moldova and Kiev in 1600AD.</Spanish>
-		<Portuguese>[COLOR_YELLOW]A Commonwealth:[COLOR_REVERT]Controle 12 cidades em Boêmia, Morávia, Alta Hungria, Prussia, Lituânia, Livônia, Polotsk, Minsk, Volínia, Podólia, Moldávia e Kiev em 1600DC.</Portuguese>
+		<Spanish>[COLOR_YELLOW]The Commonwealth:[COLOR_REVERT] Own at least 12 cities in Bohemia, Moravia, Upper Hungary, Prussia, Lithuania, Livonia, Polotsk, Minsk, Volhynia, Podolia, Moldova and Kiev provinces in 1600AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]A Commonwealth:[COLOR_REVERT] Controle 12 cidades em Boêmia, Morávia, Alta Hungria, Prussia, Lituânia, Livônia, Polotsk, Minsk, Volínia, Podólia, Moldávia e Kiev em 1600DC.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POL3</Tag>
@@ -514,7 +514,7 @@
  	<TEXT>
  		<Tag>TXT_KEY_UHV_MOS3</Tag>
  		<English>[COLOR_YELLOW]The Warm Seas:[COLOR_REVERT] Conquer Constantinople or control one Atlantic Access resource.</English>
- 		<French>Avoir un acc&#232;s aux eaux chaudes. (Conqu&#233;rir Constantinople or Avoir une ressource 'Acc&#232;s Atlantique')</French>
+ 		<French>[COLOR_YELLOW]Acc&#232;s aux eaux chaudes:[COLOR_REVERT] Conqu&#233;rir Constantinople or Avoir une ressource 'Acc&#232;s Atlantique'</French>
  		<German>[COLOR_YELLOW]Die Warmen Meere:[COLOR_REVERT] Erobert Konstantinopel oder kontrolliert eine Atlantik-Zugangs-Ressource.</German>
  		<Italian>[COLOR_YELLOW]I Mari Caldi:[COLOR_REVERT] Conquista Costantinopoli o procurati una risorsa Accesso all'Atlantico.</Italian>
  		<Spanish>[COLOR_YELLOW]The Warm Seas:[COLOR_REVERT] Conquer Constantinople or control one Atlantic Access resource.</Spanish>
@@ -523,7 +523,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GEN1</Tag>
 		<English>[COLOR_YELLOW]Respublica Superiorem Non Recognoscens:[COLOR_REVERT] Control Corsica, Sardinia, Crete, Rhodes and Crimea in 1566AD.</English>
-		<French>Contr&#244;ler la Sardaigne, Milan, Chypre et la Cr&#232;te en 1540 ap.JC.</French>
+		<French>[COLOR_YELLOW]Respublica Superiorem Non Recognoscens:[COLOR_REVERT] Contr&#244;ler la Sardaigne, Milan, Chypre et la Cr&#232;te en 1540 ap.JC.</French>
 		<German>[COLOR_YELLOW]Respublica Superiorem Non Recognoscens:[COLOR_REVERT] Kontrolliert 1540 n.Chr. Sardinien, Mailand, Kreta und Zypern.</German>
 		<Italian>[COLOR_YELLOW]Respublica Superiorem Non Recognoscens:[COLOR_REVERT] Controlla le province di Corsica, Sardegna, Creta, Rodi e Crimea nel 1566AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Respublica Superiorem Non Recognoscens:[COLOR_REVERT] Control Corsica, Sardinia, Crete, Rhodes and Crimea in 1566AD.</Spanish>
@@ -532,7 +532,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GEN2</Tag>
 		<English>[COLOR_YELLOW]The Bank of Europe:[COLOR_REVERT] Found 2 Corporations and build 8 Banks</English>
-		<French>Fonder 2 Soci&#233;t&#233;s Commerciale et construire 8 Banques.</French>
+		<French>[COLOR_YELLOW]The Bank of Europe:[COLOR_REVERT] Fonder 2 Soci&#233;t&#233;s Commerciale et construire 8 Banques.</French>
 		<German>[COLOR_YELLOW]Die Bank von Europa:[COLOR_REVERT] Gründet 2 Gesellschaften und baut 8 Banken.</German>
 		<Italian>[COLOR_YELLOW]La Banca d'Europa:[COLOR_REVERT] Fonda 2 Corporazioni e costruisci 8 Banche.</Italian>
 		<Spanish>[COLOR_YELLOW]The Bank of Europe:[COLOR_REVERT] Found 2 Corporations and build 8 Banks</Spanish>
@@ -559,7 +559,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ENG2</Tag>
 		<English>[COLOR_YELLOW]Jewel of the Crown:[COLOR_REVERT] Build 8 Colonial Projects.</English>
-		<French>Construire 8 Projets Coloniaux.</French>
+		<French>[COLOR_YELLOW]Jewel of the Crown:[COLOR_REVERT] Construire 8 Projets Coloniaux.</French>
 		<German>[COLOR_YELLOW]Juwel der Krone:[COLOR_REVERT] Errichtet 8 Kolonien.</German>
 		<Italian>[COLOR_YELLOW]Gioiello della Corona:[COLOR_REVERT] Costruisci 8 Progetti Coloniali.</Italian>
 		<Spanish>[COLOR_YELLOW]Jewel of the Crown:[COLOR_REVERT] Build 8 Colonial Projects.</Spanish>
@@ -568,7 +568,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ENG3</Tag>
 		<English>[COLOR_YELLOW]Inventors of the Crown:[COLOR_REVERT] Be the first to enter the Industrial age.</English>
-		<French>Etre la premiere civilisation &#224; entrer dans l'Age Industrielle.</French>
+		<French>[COLOR_YELLOW]Inventors of the Crown:[COLOR_REVERT] Etre la premiere civilisation &#224; entrer dans l'Age Industrielle.</French>
 		<German>[COLOR_YELLOW]Erfinder der Krone:[COLOR_REVERT] Erreicht als erste Zivilisation das Industriezeitalter.</German>
 		<Italian>[COLOR_YELLOW]Inventori della Corona:[COLOR_REVERT] Devi essere il primo ad entrare nell'era Industriale.</Italian>
 		<Spanish>[COLOR_YELLOW]Inventors of the Crown:[COLOR_REVERT] Be the first to enter the Industrial age.</Spanish>
@@ -586,7 +586,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POR2</Tag>
 		<English>[COLOR_YELLOW]Defense leads to glory:[COLOR_REVERT] Do not lose a city before 1640AD.</English>
-		<French>Ne perdre aucune ville avant 1640 ap.JC.</French>
+		<French>[COLOR_YELLOW]Defense leads to glory:[COLOR_REVERT] Ne perdre aucune ville avant 1640 ap.JC.</French>
 		<German>[COLOR_YELLOW]Verteidigung führt zu Ruhm:[COLOR_REVERT] Verliert bis 1640 n.Chr. keine einzige Stadt.</German>
 		<Italian>[COLOR_YELLOW]La Difesa porta alla gloria:[COLOR_REVERT] Non perdere nessuna città prima del 1640AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Defense leads to glory:[COLOR_REVERT] Do not lose a city before 1640AD.</Spanish>
@@ -595,7 +595,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POR3</Tag>
 		<English>[COLOR_YELLOW]Feitorias all over the world:[COLOR_REVERT] Build 6 Colonial Projects.</English>
-		<French>Construire 6 Projets Coloniaux.</French>
+		<French>[COLOR_YELLOW]Feitorias all over the world:[COLOR_REVERT] Construire 6 Projets Coloniaux.</French>
 		<German>[COLOR_YELLOW]Faktoreien auf der ganzen Welt:[COLOR_REVERT] Erstellt 6 Kolonien.</German>
 		<Italian>[COLOR_YELLOW]Feitorie in tutto il mondo:[COLOR_REVERT] Costruisci 6 Progetti Coloniali.</Italian>
 		<Spanish>[COLOR_YELLOW]Feitorias all over the world:[COLOR_REVERT] Build 6 Colonial Projects.</Spanish>
@@ -613,7 +613,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_AUS2</Tag>
 		<English>[COLOR_YELLOW]Habsburg Alliances:[COLOR_REVERT] Have 3 vassals in 1700AD.</English>
-		<French>Avoir 3 vassals en 1700 ap.JC.</French>
+		<French>[COLOR_YELLOW]Habsburg Alliances:[COLOR_REVERT] Avoir 3 vassals en 1700 ap.JC.</French>
 		<German>[COLOR_YELLOW]Habsburger Allianzen:[COLOR_REVERT] Unterwerft bis 1700 n.Chr. mindestens 3 Vasallen.</German>
 		<Italian>[COLOR_YELLOW]Alleanze Asburgiche:[COLOR_REVERT] Devi avere almeno 3 Stati Vassalli nel 1700AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Habsburg Alliances:[COLOR_REVERT] Have 3 vassals in 1700AD.</Spanish>
@@ -667,7 +667,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SWE2</Tag>
 		<English>[COLOR_YELLOW]Karolins:[COLOR_REVERT] Don't lose any cities to Poland, Lithuania or Russia before 1700AD.</English>
-		<French>Ne pas perdre de ville par la Pologne, la Lithuanie ou la Russie avant 1700 ap.JC.</French>
+		<French>[COLOR_YELLOW]Karolins:[COLOR_REVERT] Ne pas perdre de ville par la Pologne, la Lithuanie ou la Russie avant 1700 ap.JC.</French>
 		<German>[COLOR_YELLOW]Karoliner:[COLOR_REVERT] Verliert vor 1700 n.Chr. keine Stadt an Polen, Litauen oder Russland.</German>
 		<Italian>[COLOR_YELLOW]Karolins:[COLOR_REVERT] Non farti conquistare nessuna città da Russia, Polonia o Lituania prima del 1700AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Karolins:[COLOR_REVERT] Don't lose any cities to Poland, Lithuania or Russia before 1700AD.</Spanish>
@@ -685,7 +685,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_DUT1</Tag>
 		<English>[COLOR_YELLOW]The Financial Center:[COLOR_REVERT] Settle 5 Great Merchants in Amsterdam by 1750AD.</English>
-		<French>Avoir 5 Marchants Illustres &#224; Amsterdam avant 1750 ap.J.C.</French>
+		<French>[COLOR_YELLOW]The Financial Center:[COLOR_REVERT] Avoir 5 Marchants Illustres &#224; Amsterdam avant 1750 ap.J.C.</French>
 		<German>[COLOR_YELLOW]Das Finanzzentrum:[COLOR_REVERT] Siedelt bis 1750 n.Chr. 5 Große Händler in Amsterdam an.</German>
 		<Italian>[COLOR_YELLOW]Il Centro Finanziario:[COLOR_REVERT] Insedia 5 Grandi Mercanti ad Amsterdam entro il 1750AD.</Italian>
 		<Spanish>[COLOR_YELLOW]The Financial Center:[COLOR_REVERT] Settle 5 Great Merchants in Amsterdam by 1750AD.</Spanish>
@@ -694,7 +694,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_DUT2</Tag>
 		<English>[COLOR_YELLOW]The India Companies:[COLOR_REVERT] Build 5 Colonial Projects.</English>
-		<French>Construire 5 Projets Coloniaux.</French>
+		<French>[COLOR_YELLOW]The India Companies:[COLOR_REVERT] Construire 5 Projets Coloniaux.</French>
 		<German>[COLOR_YELLOW]Die Indien Kompanien:[COLOR_REVERT] Errichtet 5 Kolonien.</German>
 		<Italian>[COLOR_YELLOW]Le Compagnie delle Indie:[COLOR_REVERT] Costruisci 5 Progetti Coloniali.</Italian>
 		<Spanish>[COLOR_YELLOW]The India Companies:[COLOR_REVERT] Build 5 Colonial Projects.</Spanish>
@@ -828,11 +828,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BIGGEST_TRADER</Tag>
-		<English>The biggest Trader is: </English>
-		<French>The biggest Trader is: </French>
-		<German>Der größte Händler ist: </German>
+		<English>The Biggest Trader is: </English>
+		<French>The Biggest Trader is: </French>
+		<German>Der Größte Händler ist: </German>
 		<Italian>Il Commerciante maggiore è: </Italian>
-		<Spanish>The biggest Trader is: </Spanish>
+		<Spanish>The Biggest Trader is: </Spanish>
 		<Portuguese>O maior Comerciante é: </Portuguese>
 	</TEXT>
 	<TEXT>
