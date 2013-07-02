@@ -897,8 +897,8 @@ class CvVictoryScreen:
 	def update(self, fDelta):
 		return
 
-        def drawCleanerVictoryConditions(self):
-                screen = self.getScreen()
+	def drawCleanerVictoryConditions(self):
+		screen = self.getScreen()
 		pPlayer = gc.getPlayer(self.iActivePlayer)
 
                 # 3Miro: I don't undestand how strings in C++ and Python work. For some reason, I managed to get C++ to return a unicode strin
@@ -961,21 +961,6 @@ class CvVictoryScreen:
                                         sStringConq = sStringConq + "  " + u"<color=0,255,0>%s</color>" %(sProvName)
                         sString = sString + "\n\n" + sStringConq + "\n" + sStringMiss
 
-                # The Polish UHV 1: count the cities
-                if ( self.iActivePlayer == con.iPoland ):
-                        pPoland = gc.getPlayer( con.iPoland )
-                        tProvsToCheck = vic.tPolishControl
-                        iNumCities = 0
-                        for iProv in tProvsToCheck:
-                                iNumCities += pPoland.getProvinceCityCount( iProv )
-
-                        if ( iNumCities < 10 ):
-                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_CITIES_CONTROLLED",()) + u" <color=208,0,0>%i</color>" %(iNumCities)
-                        elif ( iNumCities < 12 ):
-                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_CITIES_CONTROLLED",()) + u" <color=255,250,0>%i</color>" %(iNumCities)
-                        else:
-                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_CITIES_CONTROLLED",()) + u" <color=0,255,0>%i</color>" %(iNumCities)
-
                 screen.addMultilineText("Child" + self.UHV1_ID, sString, self.X_UHV1+7, self.Y_UHV1+15, self.W_UHV1-10, self.H_UHV1-10, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 
                 # UHV 2
@@ -1032,6 +1017,21 @@ class CvVictoryScreen:
                                 sString = sString + "\n\n" + "%i"%iConq + " " + sStringConq + "\n" + sStringMiss
                         else:
                                 sString = sString + "\n\n" + sStringConq + "\n" + sStringMiss
+
+                # The Polish UHV 2: count the cities
+                if ( self.iActivePlayer == con.iPoland ):
+                        pPoland = gc.getPlayer( con.iPoland )
+                        tProvsToCheck = vic.tPolishControl
+                        iNumCities = 0
+                        for iProv in tProvsToCheck:
+                                iNumCities += pPoland.getProvinceCityCount( iProv )
+
+                        if ( iNumCities < 10 ):
+                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_CITIES_CONTROLLED",()) + u" <color=208,0,0>%i</color>" %(iNumCities)
+                        elif ( iNumCities < 12 ):
+                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_CITIES_CONTROLLED",()) + u" <color=255,250,0>%i</color>" %(iNumCities)
+                        else:
+                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_CITIES_CONTROLLED",()) + u" <color=0,255,0>%i</color>" %(iNumCities)
 
                 screen.addMultilineText("Child" + self.UHV2_ID, sString, self.X_UHV2+7, self.Y_UHV2+15, self.W_UHV2-10, self.H_UHV2-10, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 

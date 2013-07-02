@@ -36058,7 +36058,7 @@ BeginPlot
 	EndUnit
 	BeginCity
 		CityOwner=0
-		CityName=Iconium
+		CityName=Ikonion
 		CityPopulation=2
 		BuildingType=BUILDING_GRANARY
 		ReligionType=RELIGION_ORTHODOXY
