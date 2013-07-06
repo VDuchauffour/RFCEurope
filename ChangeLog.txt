@@ -68,6 +68,8 @@ Changes for RFCE 1.2:
 		- Introduction of a new, generic city name map, which will be the base for all the other ones
 		- Adjusted visibility map for Poland, Hungary, England, Germany, Burgundy, Genoa and Spain
 		- Lowered the happiness modifiers (base happiness in your cities) for all difficulty levels: 4 for Viceroy, 3 for Monarch, 2 for Emperor
+		- Various small tweaks in many balance aspects of the different difficulty levels (mostly for Viceroy and Emperor). Research, inflation, AI costs, etc.
+		- Switched bonus of Westminster Abbey (now enables all Religion Civics) and Golden Bull (now enables all Labor Civics)
 
 	Map and province changes:
 		- Huge changes in the SE region: Egypt, Levant and Anatolia totally revised
@@ -143,7 +145,7 @@ Changes for RFCE 1.2:
 		- Plague of Constantinople will hit Byzantium earlier than before (late 6th century), thus it won't hit on the very same turns as the Arab spawn
 		- The French got some additional starting units (1 settler, 1 archer and 2 axemen)
 		- Burdigala and Tolosa (Bordeaux and Toulouse) start with less archers
-		- All naval units got one extra move (3: Work Boat, 5: Galley, Cog, War Galley, Gun Galley, Galleas, 7: Holk, Carrack, Caravel, 9: Galleon, 11: Frigate, Privateer, Corsair)
+		- All naval units got one extra move (3: Work Boat; 5: Galley, War Galley, Cog, Hansa, Gun Galley, Galleas; 7: Holk, Carrack, Caravel; 9: Galleon; 11: Frigate, Privateer, Corsair)
 		- Unit balance changes: Knights of St. John (+15% city attack, free march and medic_1 promotion), Paladin (no first strike, -15% vs heavy cavalry, +15% vs light cavalry),
 			Berber Cavalry and Ghazi (no city attack penalty), Boyar (no first strike, but has defensive bonuses), Musketeer (-1 first strike, +10% city attack, -5% city defence),
 			Templar Kinght (+1 first strike), Janissary (-2 first strike, +50% vs heavy cavalry, free march and cover promotion), Black Guard (can twarth spies, +25% city attack),

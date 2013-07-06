@@ -476,6 +476,8 @@ class ProvinceManager:
 			pByzantium.setProvinceType( xml.iP_Lombardy, iProvinceNone )
 			pByzantium.setProvinceType( xml.iP_Liguria, iProvinceNone )
 			pByzantium.setProvinceType( xml.iP_Corsica, iProvinceNone )
+			pByzantium.setProvinceType( xml.iP_Sardinia, iProvinceNone )
+			pByzantium.setProvinceType( xml.iP_Latium, iProvinceNone )
 			utils.refreshStabilityOverlay() # refresh the stability overlay
 		elif ( iPlayer == iBurgundy ):
 			pFrankia.setProvinceType( xml.iP_Provence, iProvincePotential ) # these areas flip to Burgundy, so resetting them to Potential will work perfectly
