@@ -151,8 +151,8 @@ class Stability:
 
                         pPlayer.setStabilitySwing( pPlayer.getStabilitySwing() - 8  )
 
-                if ( pPlayer.getWarPeaceChange() == -1 ): # we have been involved in a war since last turn
-                        gc.getPlayer( iPlayer ).changeStabilityBase( iCathegoryCities, -1 )
+                if ( pPlayer.getWarPeaceChange() == -1 ): # Whenever your nation switches from peace to the state of war (with a major nation)
+                        gc.getPlayer( iPlayer ).changeStabilityBase( iCathegoryCities, -1 ) # 1 permanent stability loss, since your people won't appreciate leaving the state of peace
                         pPlayer.setStabilitySwing( pPlayer.getStabilitySwing() - 3  )
 
                 if ( (iGameTurn + iPlayer) % 3 == 0 ): # Economy Check every 3 turns

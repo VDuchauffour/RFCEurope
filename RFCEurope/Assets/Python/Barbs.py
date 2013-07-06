@@ -774,7 +774,7 @@ class Barbs:
         def eventApply7627( self, popupReturn ):
                 iDecision = popupReturn.getButtonClicked()
                 iNationIndex, iRevoltIndex = self.getNationRevoltIndex()
-                #print("Event Apply",iNationIndex, iRevoltIndex,iDecision )
+                #print("Event Apply",iNationIndex, iRevoltIndex, iDecision )
                 lNation = lMinorNations[iNationIndex]
                 iPlayer = utils.getHumanID()
 
