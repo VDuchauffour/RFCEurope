@@ -69,6 +69,7 @@ Changes for RFCE 1.2:
 		- Adjusted visibility map for Poland, Hungary, England, Germany, Burgundy, Genoa and Spain
 		- Lowered the happiness modifiers (base happiness in your cities) for all difficulty levels: 4 for Viceroy, 3 for Monarch, 2 for Emperor
 		- Various small tweaks in many balance aspects of the different difficulty levels (mostly for Viceroy and Emperor). Research, inflation, AI costs, etc.
+		- Greatly reduced the barbarian number difference between Monarch and Emperor, and between Monarch and Viceroy
 		- Switched bonus of Westminster Abbey (now enables all Religion Civics) and Golden Bull (now enables all Labor Civics)
 
 	Map and province changes:
@@ -178,6 +179,7 @@ Changes for RFCE 1.2:
 		- Spain starts with Blast Furnace instead of Aristocracy. Better for early offense, so for starting the Reconquista
 		- Somewhat reduced barb pressure for Arabia (both Beduins and Seljuks)
 		- Bulgaria starts with an Orthodox Missionary, and an additional Archer
+		- Minor changes in the barbarian spawns for Bulgaria and Kiev
 
 	Bugfixes:
 		- A couple fixes how the mercenary screen is called from the main screen mercenary manager button
