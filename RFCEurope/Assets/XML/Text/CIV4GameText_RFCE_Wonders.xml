@@ -1040,7 +1040,7 @@
 		<!-- Misc -->
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BROTHERS_AT_WAR</Tag>
-		<English>[ICON_BULLET]No unhappiness from fighting against brothers in faith, diplomatic penalty agains nations with the same religion.</English>
+		<English>[ICON_BULLET]No unhappiness from fighting against brothers in faith, but small diplomatic penalty with nations who share your state religion.</English>
 		<French>[ICON_BULLET]Pas de m&#233;contement pour les guerres contre les fr&#232;res de foi.</French>
 		<German>[ICON_BULLET]Keine [ICON_UNHAPPY] beim Kampf gegen Glaubensbrüder [ICON_RELIGION]; Diplomatiemalus gegen Nationen der gleichen Religion.</German>
 		<Italian>[ICON_BULLET]Nessuna infelicità per la guerra contro i fratelli di fede. Penalità diplomatica verso le nazioni con la stessa religione.</Italian>
