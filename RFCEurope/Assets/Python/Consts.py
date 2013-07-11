@@ -193,7 +193,7 @@ xml.i1066AD,#1066AD England
 xml.i1139AD,#1139AD Portugal
 xml.i1236AD,#1236AD Lithuania
 xml.i1282AD,#1282AD Austria
-xml.i1359AD,#1359AD Turkey - turn 233 is normal time (Conquest of Adrianopolis)
+xml.i1359AD,#1359AD Turkey - turn 233 is normal time	#Conquest of Adrianopolis: somewhere between 1361-1367AD	#1354AD - The Earthquake of Gallipoli
 xml.i1380AD,#1380AD Moscow
 xml.i1523AD,#1523AD Sweden
 xml.i1581AD,#1581AD Dutch - turn 340 is normal time

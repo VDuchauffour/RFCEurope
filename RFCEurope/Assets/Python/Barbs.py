@@ -191,13 +191,18 @@ class Barbs:
 			self.spawnPirate( iBarbarian, (9,15), (55,33), xml.iGalleon, 1, xml.iMusketman, 2, iGameTurn, 10, 5, utils.outerSeaSpawn, 1, "")
 
 		#Germanic Barbarians throughout Western Europe (France, Germany)
-		if (iGameTurn < xml.i800AD):
-			self.spawnUnits( iBarbarian, (45,45),(60,55), xml.iAxeman, 1 + iHandicap, iGameTurn,14,0,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()))
+		if (iGameTurn < xml.i600AD):
+			self.spawnUnits( iBarbarian, (43,42),(50,50), xml.iAxeman, 1, iGameTurn,11,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()))
+		if (iGameTurn >= xml.i600AD and iGameTurn < xml.i800AD):
 			self.spawnUnits( iBarbarian, (43,42),(50,50), xml.iAxeman, 1, iGameTurn,9,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()))
+			self.spawnUnits( iBarbarian, (42,40),(56,48), xml.iAxeman, 1 + iHandicap, iGameTurn,11,4,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()))
 		if (gc.getPlayer(con.iFrankia).isHuman()): #extra barbs for human France
-			if (iGameTurn < xml.i800AD):
+			if (iGameTurn < xml.i600AD):
+				self.spawnUnits( iBarbarian, (42,40),(56,48), xml.iAxeman, 1 + iHandicap, iGameTurn,9,3,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()))
+				self.spawnUnits( iBarbarian, (45,45),(60,55), xml.iSpearman, 1, iGameTurn,18,7,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()))
+			if (iGameTurn >= xml.i600AD and iGameTurn < xml.i800AD):
 				self.spawnUnits( iBarbarian, (43,42),(50,50), xml.iAxeman, 1 + iHandicap, iGameTurn,9,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()))
-				self.spawnUnits( iBarbarian, (42,40),(56,48), xml.iSpearman, 1, iGameTurn,11,4,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()))
+				self.spawnUnits( iBarbarian, (45,45),(60,55), xml.iSpearman, 1, iGameTurn,11,4,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()))
 				self.spawnUnits( iBarbarian, (46,48),(62,55), xml.iAxeman, 1, iGameTurn,18,7,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()))
 
 		#Longobards in Italy
