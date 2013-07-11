@@ -118,7 +118,7 @@ Changes for RFCE 1.2:
 		- Civ-specific and UHV updates in the reference texts
 		- Texts connected to Province stability also got the new province color-code
 		- Changed the Genoan trade UHV text to be more clear
-		- Byzantine, Arabian, Ottoman, French/Burgundian city name maps updated by DC123456789
+		- Byzantine, Arabian/Cordoban, Ottoman, French/Burgundian city name maps updated by DC123456789
 		- Minor updates to the Dutch, Hungarian and Bulgarian city name maps
 		- Renamed preset Byzantine cities to their Greek names (Konstantinoupolis, Alexandreia, Hierosolyma, Antiocheia, Tyros, Thessaloniki, Ikonion, etc.)
 		- French entries for Harald Hardrada, Maximilian, Abu Bakr, Yaqub al-Mansur, Muscovy
