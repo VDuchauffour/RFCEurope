@@ -27,17 +27,17 @@ iMapMaxY = 73
 # Norse       i780AD
 # Venice      i810AD
 # Burgundy    i843AD
-# Germany     i858AD
+# Germany     i856AD
 # Kiev        i880AD
 # Hungary     i895AD
-# Spain       i909AD
+# Spain       i910AD
 # Poland      i966AD
 # Genoa       i1016AD
 # England     i1066AD
 # Portugal    i1139AD
 # Lithuania   i1236AD
 # Austria     i1282AD
-# Turkey      i1359AD
+# Turkey      i1356AD
 # Moscow      i1380AD
 # Sweden      i1523AD
 # Dutch       i1581AD
@@ -175,28 +175,29 @@ lOlderNeighbours = [
 
 # civ birth dates
 tBirth = (
-xml.i500AD, #500AD Byzantium
-xml.i500AD, #500AD Frankia
-xml.i632AD, #632AD Arabia
-xml.i680AD, #680AD Bulgaria
-xml.i711AD, #711AD Cordoba
-xml.i780AD, #780AD Norse
-xml.i810AD, #810AD Venice
-xml.i843AD, #843AD Burgundy
-xml.i858AD, #858AD Germany
-xml.i880AD, #880AD Kiev # There is an Autorun Bug, usually Kiev and Hungary play one extra turn (but not always)
-xml.i895AD, #895AD Hungary # There is an Autorun Bug, usually Kiev and Hungary play one extra turn (but not always)
-xml.i910AD, #909AD Spain
-xml.i966AD, #966AD Poland
-xml.i1016AD,#1016AD Genoa
-xml.i1066AD,#1066AD England
-xml.i1139AD,#1139AD Portugal
-xml.i1236AD,#1236AD Lithuania
-xml.i1282AD,#1282AD Austria
-xml.i1359AD,#1359AD Turkey - turn 233 is normal time	#Conquest of Adrianopolis: somewhere between 1361-1367AD	#1354AD - The Earthquake of Gallipoli
-xml.i1380AD,#1380AD Moscow
-xml.i1523AD,#1523AD Sweden
-xml.i1581AD,#1581AD Dutch - turn 340 is normal time
+#Historic date		#Civ			#Actual spawn ingame		#Historic reference
+xml.i500AD,			#Byzantium		turn 0, so 500AD
+xml.i500AD,			#Frankia		turn 0, so 500AD
+xml.i632AD,			#Arabia			turn 33, so 632AD
+xml.i680AD,			#Bulgaria		turn 45, so 680AD
+xml.i711AD,			#Cordoba		turn 53, so 712AD
+xml.i780AD,			#Norse			turn 70, so 780AD
+xml.i810AD,			#Venice			turn 78, so 812AD			#De Facto independence: Pax Nicephori (803)		#810: the "modern" city of Venice (on the sea) was born
+xml.i843AD,			#Burgundy		turn 86, so 844AD			#Treaty of Verdun in 843 AD, splitting the Frankish Empire into West, Middle and East Francia
+xml.i856AD,			#Germany		turn 89, so 856AD
+xml.i880AD,			#Kiev			turn 95, so 880AD
+xml.i895AD,			#Hungary		turn 99, so 896AD			#Hungarian invasion of the Carpathian basin (Honfoglalás) in 895-896 AD
+xml.i910AD,			#Spain			turn 103, so 909AD			#The Kingdom of Leon was founded in 910 AD
+xml.i966AD,			#Poland			turn 122, so 966AD
+xml.i1016AD,		#Genoa			turn 139, so 1017AD			#Genoan and Pisan forces defeat the Muslim invaders of Sardinia in 1016 AD		#By 1015, the Republic of Genoa rised to control the entirety of Liguria
+xml.i1066AD,		#England		turn 155, so 1065AD			#Battle of Hastings in 1066 AD
+xml.i1139AD,		#Portugal		turn 180, so 1140AD
+xml.i1236AD,		#Lithuania		turn 212, so 1236AD
+xml.i1282AD,		#Austria		turn 227, so 1281AD			#The Habsburgs gained the rulership of the Duchy of Austria in 1282 AD
+xml.i1356AD,		#Ottomans		turn 252, so 1356AD			#The Earthquake of Gallipoli: 1354 AD		#Conquest of Adrianopolis: somewhere between 1361-1367 AD
+xml.i1380AD,		#Moscow			turn 260, so 1380AD
+xml.i1523AD,		#Sweden			turn 311, so 1522AD
+xml.i1581AD,		#Dutch			turn 340, so 1580AD
 0, #Pope
 0,
 0,
@@ -236,13 +237,13 @@ xml.i1569AD, #Lithuania - Lithuania UHV 3
 tYear = ( #For the Dawn of Man starting screen
 ("500", "TXT_KEY_AD"),
 ("500", "TXT_KEY_AD"),
-("635", "TXT_KEY_AD"),
+("632", "TXT_KEY_AD"),
 ("680", "TXT_KEY_AD"),
 ("711", "TXT_KEY_AD"),
 ("780", "TXT_KEY_AD"),
 ("810", "TXT_KEY_AD"),
 ("843", "TXT_KEY_AD"),
-("858", "TXT_KEY_AD"),
+("856", "TXT_KEY_AD"),
 ("880", "TXT_KEY_AD"),
 ("895", "TXT_KEY_AD"),
 ("910", "TXT_KEY_AD"),
@@ -252,7 +253,7 @@ tYear = ( #For the Dawn of Man starting screen
 ("1139", "TXT_KEY_AD"),
 ("1236", "TXT_KEY_AD"),
 ("1282", "TXT_KEY_AD"),
-("1359", "TXT_KEY_AD"),
+("1356", "TXT_KEY_AD"),
 ("1380", "TXT_KEY_AD"),
 ("1523", "TXT_KEY_AD"),
 ("1581", "TXT_KEY_AD"),

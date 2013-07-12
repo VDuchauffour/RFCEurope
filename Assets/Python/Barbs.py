@@ -126,7 +126,7 @@ lMinorNations = [ [ xml.iP_Serbia, [], [], [xml.i852AD,xml.i1346AD], [20,20], [x
                   [ xml.iP_Oran, [], [], [xml.i1236AD,xml.i1346AD,xml.i1359AD,xml.i1542AD], [40,10,10,20], [xml.iKnight,xml.iHeavyLancer,xml.iHeavyLancer,xml.iMusketman], [2,2,2,2], ["TXT_KEY_THE_ZIYYANIDS","TXT_KEY_ZIYYANID"] ],
                   [ xml.iP_Fez, [con.iCordoba, con.iSpain, con.iPortugal], [], [xml.i1473AD], [30], [xml.iArquebusier], [4], ["TXT_KEY_THE_WATTASIDS","TXT_KEY_WATTASID"] ],
                 ]
-# 3Miro: Jerusalem is Syria were added here, so the Crusaders will not be able to control it for too long
+# 3Miro: Jerusalem and Syria were added here, so the Crusaders will not be able to control it for too long
 
 
 
@@ -427,7 +427,7 @@ class Barbs:
 			self.spawnUnits( iBarbarian, (92,21),(97,25), xml.iMongolKeshik, 2, iGameTurn,6,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
 
 		#Mongols, the return! (aka Tamerlane)
-		if (iGameTurn >=xml.i1359AD and iGameTurn <=xml.i1431AD):
+		if (iGameTurn >=xml.i1380AD and iGameTurn <=xml.i1431AD): #Timur started his first western campaigns in 1380AD
 			#Eastern Europe
 			self.spawnUnits( iBarbarian, (85,47),(99,57), xml.iMongolKeshik, 2, iGameTurn,7,0,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_TIMURIDS", ()))
 			#Anatolia

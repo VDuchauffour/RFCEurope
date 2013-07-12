@@ -764,7 +764,7 @@ class Victory:
                                 pHungary.setUHV( 0, 0 )
 
                 # UHV2: Biggest country in Europe
-                if ( iGameTurn == xml.i1491AD and pHungary.getUHV( 1 ) == -1 ):
+                if ( iGameTurn == xml.i1490AD and pHungary.getUHV( 1 ) == -1 ):
                         if ( gc.controlMostTeritory( iHungary, tOLDHungarianControl[0], tOLDHungarianControl[1], tOLDHungarianControl[2], tOLDHungarianControl[3] ) ):
                                 pHungary.setUHV( 1, 1 )
                         else:

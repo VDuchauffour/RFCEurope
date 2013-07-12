@@ -49,7 +49,9 @@ Changes for RFCE 1.2:
 			- France and Burgundy almost totally complete each other with their potential provinces
 
 	General changes:
-		- Spawn of Arabia moved back one turn, to 632AD
+		- Spawn of Arabia moved back one turn (632AD), Ottoman spawn one turn earlier (1356AD)
+		- Venetian and Genoan spawn moved one turn later (it's better for their historical spawn dates of 810AD and 1016AD)
+		- Fixed starting date for Spain - 910AD, Germany - 856AD (though both start in the same turn as before)
 		- Interface message when a resource appears/disappears within your cultural borders
 		- Interface message when wonders are destroyed/captured by you, by a known civilization, or from a known civilization
 		- Interface message for the preset religion spreads (same way as it is when religions spread "normally")
@@ -180,6 +182,7 @@ Changes for RFCE 1.2:
 		- Bulgaria starts with an Orthodox Missionary, and an additional Archer
 		- Somewhat reduced barb pressure for Arabia (both Beduins and Seljuks)
 		- Minor changes in the barbarian spawns for Bulgaria, Kiev and France (reducing barb pressure in the first few turns)
+		- Moved back the spawn interval of the second Mongol invasion (Timurids), so it won't be happen right at the Ottoman spawn
 
 	Bugfixes:
 		- A couple fixes how the mercenary screen is called from the main screen mercenary manager button
