@@ -206,7 +206,7 @@ class Religions:
 			# Spread Judaism to a couple towns in Poland
 			tCity = self.selectRandomCityArea(tPoland)
 			self.spreadReligion(tCity,xml.iJudaism)
-		if (iGameTurn > xml.i1299AD and iGameTurn < xml.i1359AD and iGameTurn % 3 == 0):
+		if (iGameTurn > xml.i1299AD and iGameTurn < xml.i1350AD and iGameTurn % 3 == 0):
 			# Spread Islam to a couple cities in Anatolia before the Ottoman spawn
 			tCity = self.selectRandomCityArea(tBalkansAndAnatolia)
 			self.spreadReligion(tCity,xml.iIslam)

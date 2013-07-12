@@ -451,6 +451,7 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Rhye - start -->
+				<City>Dimashq</City>
 				<City>Anjar</City>
 				<City>Al-Mansura</City>
 				<City>Al-Fustat</City>
@@ -4889,7 +4890,7 @@
 			<Adjective>TXT_KEY_CIV_GERMANY_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_GERMANY_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
-			<StartingYear>858AD</StartingYear>
+			<StartingYear>856AD</StartingYear>
 			<LoadingTime>10</LoadingTime>
 			<UP1>TXT_KEY_UP_GER</UP1>
 			<UP2>TXT_KEY_UP_GER2</UP2>
@@ -8066,7 +8067,7 @@
 			<Adjective>TXT_KEY_CIV_SPAIN_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_SPAIN_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
-			<StartingYear>909AD</StartingYear>
+			<StartingYear>910AD</StartingYear>
 			<LoadingTime>10</LoadingTime>
 			<UP1>TXT_KEY_UP_SPN</UP1>
 			<UP2>TXT_KEY_UP_SPN2</UP2>
@@ -8909,7 +8910,7 @@
 			<Adjective>TXT_KEY_CIV_OTTOMAN_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_OTTOMAN_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
-			<StartingYear>1359AD</StartingYear>
+			<StartingYear>1356AD</StartingYear>
 			<LoadingTime>40</LoadingTime>
 			<UP1>TXT_KEY_UP_TUR</UP1>
 			<UP2>TXT_KEY_UP_TUR2</UP2>
