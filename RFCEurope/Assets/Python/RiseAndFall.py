@@ -1082,7 +1082,7 @@ class RiseAndFall:
                         pPlayer = gc.getPlayer(iPlayer)
                         if (pPlayer.isAlive() and iGameTurn >= con.tBirth[iPlayer] + 30):
                                 iStability = pPlayer.getStability()
-                                if ( gc.getGame().getSorenRandNum(12, 'do the check for city secession') < -iStability ):
+                                if ( gc.getGame().getSorenRandNum(12, 'do the check for city secession') < -iStability ): # x/12 chance with -x stability
                                         self.revoltCity( iPlayer, False )
                                         return # max 1 secession per turn
 
@@ -1111,8 +1111,9 @@ class RiseAndFall:
                                                     city.getNoMilitaryPercentAnger() > 0 ):
                                                         if ( gc.getGame().getSorenRandNum(100, 'city secession') < 20 - 5 * pPlayer.getStability() ): # 100% if stability is less than -15
                                                                 cityList.append(city)
-                                                                # 3MiroProvinces: outer and none provices have much higher probability of flipping
+                                                                # Absinthe: cities in outer provinces have 4*chance to be chosen, cities in none provinces have 9*chance
                                                                 if ( iProvType == con.iProvinceNone ):
+                                                                        cityList.append(city)
                                                                         cityList.append(city)
                                                                         cityList.append(city)
                                                                         cityList.append(city)
