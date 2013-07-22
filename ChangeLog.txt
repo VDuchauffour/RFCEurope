@@ -39,7 +39,7 @@ Changes for RFCE 1.2:
 			- Chance that one of your cities will declare independence is around 2% with -1 stability, around 25% with -6 stability, around 80% with -12 stability
 			- If a city does declare it's independence, one of your cities will be randomly chosen (any city can be chosen if it's not close to your capital)
 			- Cities in Natural or Core provinces may only be chosen if happiness or health is too low, or with some specific anger modifiers (religion, no military presence, etc)
-			- Cities in Border provinces have 4x chance, cities in Foreign provinces have 8x chance to be chosen, than your cities in more stable areas
+			- Cities in Border provinces have 4x chance, cities in Foreign provinces have 9x chance to be chosen, than your cities in more stable areas
 		- Increased stability penalty for having cities in Foreign provinces
 		- Revised all civs' initial province stabilty levels, and all the dynamic province stability level changes. Some highlights:
 			- Expanded and/or increased almost all civs' province stability to some extent, especially for Byzantium, the Ottomans and Kiev
@@ -120,7 +120,7 @@ Changes for RFCE 1.2:
 		- Civ-specific and UHV updates in the reference texts
 		- Texts connected to Province stability also got the new province color-code
 		- Changed the Genoan trade UHV text to be more clear
-		- Byzantine, Arabian/Cordoban, Ottoman, French/Burgundian city name maps updated by DC123456789
+		- Byzantine, Arabian/Cordoban, Ottoman, French/Burgundian, Venetian, Norse city name maps updated by DC123456789
 		- Minor updates to the Dutch, Hungarian and Bulgarian city name maps
 		- Renamed preset Byzantine cities to their Greek names (Konstantinoupolis, Alexandreia, Hierosolyma, Antiocheia, Tyros, Thessaloniki, Ikonion, etc.)
 		- French entries for Harald Hardrada, Maximilian, Abu Bakr, Yaqub al-Mansur, Muscovy
@@ -182,7 +182,7 @@ Changes for RFCE 1.2:
 		- Bulgaria starts with an Orthodox Missionary, and an additional Archer
 		- Somewhat reduced barb pressure for Arabia (both Beduins and Seljuks)
 		- Minor changes in the barbarian spawns for Bulgaria, Kiev and France (reducing barb pressure in the first few turns)
-		- Moved back the spawn interval of the second Mongol invasion (Timurids), so it won't be happen right at the Ottoman spawn
+		- Moved back the spawn interval of the second Mongol invasion (Timurids), so it won't happen right at the Ottoman spawn
 
 	Bugfixes:
 		- A couple fixes how the mercenary screen is called from the main screen mercenary manager button

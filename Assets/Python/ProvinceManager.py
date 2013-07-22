@@ -67,7 +67,7 @@ pSweden = gc.getPlayer(iSweden)
 pDutch = gc.getPlayer(iDutch)
 pPope = gc.getPlayer(iPope)
 
-# Province States
+# Province Status
 iProvinceNone = con.iProvinceNone
 iProvinceOwn = con.iProvinceOwn
 iProvinceConquer = con.iProvinceConquer
