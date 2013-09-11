@@ -185,6 +185,7 @@ Changes for RFCE 1.2:
 		- Moved back the spawn interval of the second Mongol invasion (Timurids), so it won't happen right at the Ottoman spawn
 
 	Bugfixes:
+		- Restored Pinch promotion
 		- A couple fixes how the mercenary screen is called from the main screen mercenary manager button
 		- Fixed sound issues for Venice and Genoa
 		- Fixed bug where Judaism didn't spread to a second city in Poland
