@@ -6333,7 +6333,7 @@
 			<ActionSound>AS3D_VIKING_ORDER</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_ALMOGAVAR</Type>
+			<Type>ART_DEF_UNIT_ARAGON_ALMOGAVAR</Type>
 			<Button>,-,Art/Units/Mercs/Buttons/Merc_Atlas.dds,1,1</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -6359,7 +6359,7 @@
 			<ActionSound>AS3D_SPAIN_ORDER</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_BLACK_GUARD</Type>
+			<Type>ART_DEF_UNIT_MOROCCO_BLACK_GUARD</Type>
 			<Button>,-,Art/Units/Mercs/Buttons/Merc_Atlas.dds,2,1</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -6381,8 +6381,8 @@
 				<AudioRunTypeLoop/>
 				<AudioRunTypeEnd/>
 			</AudioRunSounds>
-			<SelectionSound>AS3D_ARABIA_SELECT</SelectionSound>
-			<ActionSound>AS3D_ARABIA_ORDER</ActionSound>
+			<SelectionSound>AS3D_BLACK_AFRICAN_SELECT</SelectionSound>
+			<ActionSound>AS3D_BLACK_AFRICAN_ORDER</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_HACKAPELL</Type>
@@ -6827,7 +6827,7 @@
 			<ActionSound>AS3D_ARABIA_ORDER</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_HUSCARL</Type>
+			<Type>ART_DEF_UNIT_DENMARK_HUSKARL</Type>
 			<Button>,-,Art/Units/Mercs/Buttons/Merc_Atlas.dds,5,3</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -6853,6 +6853,82 @@
 			<ActionSound>AS3D_VIKING_ORDER</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_SCOTLAND_SHELTRON</Type>
+			<Button>Art/Interface/Buttons/Units/Scotland_Sheltron.dds</Button>
+			<fScale>0.42</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Scotland Sheltron/pikeman.nif</NIF>
+			<KFM>Art/Units/Pikeman/Pikeman.kfm</KFM>
+			<SHADERNIF>Art/Units/Scotland Sheltron/pikeman.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>0</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIQUE_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
+			</AudioRunSounds>
+			<SelectionSound>AS3D_SCOTTISH_SELECT</SelectionSound>
+			<ActionSound>AS3D_SCOTTISH_ORDER</ActionSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_NOVGOROD_USHKUINIK</Type>
+			<Button>Art/Interface/Buttons/Units/Novgorod_Ushkuinik.dds</Button>
+			<fScale>0.44</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Novgorod Heavy Maceman/NovgorodHeavyFootmanMaceman.nif</NIF>
+			<KFM>Art/Units/Charlemagne_HeavySwordsman/HeavySwordsman.kfm</KFM>
+			<SHADERNIF>Art/Units/Novgorod Heavy Maceman/NovgorodHeavyFootmanMaceman.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>0</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIQUE_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
+			</AudioRunSounds>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_PRUSSIA_DEATHS_HEAD_HUSSAR</Type>
+			<Button>Art/Interface/Buttons/Units/Prussia_DHHussar.dds</Button>
+			<fScale>0.44</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Prussia DHHussar/hussar.nif</NIF>
+			<KFM>Art/Units/Unique/Russia/Cossack/RussianCossack.kfm</KFM>
+			<SHADERNIF>Art/Units/Prussia DHHussar/hussar.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/HorseShadow.nif</ShadowNIF>
+				<ShadowAttachNode>HorseBip Spine1</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>0</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIQUE_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
+			</AudioRunSounds>
+			<SelectionSound>AS3D_HOLY_ROMAN_SELECT</SelectionSound>
+			<ActionSound>AS3D_HOLY_ROMAN_ORDER</ActionSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_LONGBOWMAN_NUBIAN</Type>
 			<Button>,-,Art/Units/Mercs/Buttons/Merc_Atlas.dds,1,3</Button>
 			<fScale>0.44</fScale>
@@ -6875,8 +6951,8 @@
 				<AudioRunTypeLoop/>
 				<AudioRunTypeEnd/>
 			</AudioRunSounds>
-			<SelectionSound>AS3D_MALI_SELECT</SelectionSound>
-			<ActionSound>AS3D_MALI_ORDER</ActionSound>
+			<SelectionSound>AS3D_BLACK_AFRICAN_SELECT</SelectionSound>
+			<ActionSound>AS3D_BLACK_AFRICAN_ORDER</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_SWISS_GUN</Type>

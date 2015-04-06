@@ -69,7 +69,7 @@ lTonsberg = [57,65,65,0] #760 AD
 lRaska = [68,28,67,0] #768 AD
 lFez = [29,12,70,0] # 780 AD
 #lCorunna = [24,35,75,0] #800 AD
-lMilan = [52,37,75,0] #800 AD, Respawn of Mediolanum, so that it still exists if razed
+lMilan = [52,37,75,0] #800 AD, Respawn of Mediolanum, in case it was razed
 lFirenze = [54,32,75,0] #800 AD, Respawn of Florentia
 #lLeipzig = [58,48,75,0] #800 AD
 lPrague = [60,44,75,0] #800 AD
@@ -287,7 +287,7 @@ class Barbs:
 				self.spawnUnits( iBarbarian, (77,31),(79,33), xml.iHorseArcher, 1 + iHandicap, iGameTurn,5,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_PECHENEGS", ()))
 
 		#Vikings on ships
-		if (gc.getPlayer(con.iNorse).isHuman()): #Humans can properly go viking without help
+		if (gc.getPlayer(con.iNorway).isHuman()): #Humans can properly go viking without help
 			pass
 		elif (iGameTurn >= xml.i800AD and iGameTurn < xml.i1000AD):
 			self.spawnVikings( iBarbarian, (35,48),(50,55), xml.iVikingBeserker, 2, iGameTurn,8,0,utils.outerSeaSpawn,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_VIKINGS", ()))
@@ -706,7 +706,7 @@ class Barbs:
                                         iRevoltIndex = lRevolts.index( iRevoltDate )
                                         break
                         # loop over all the province tiles to find the cities revolting
-                        lPlayersOwning = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+                        lPlayersOwning = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
                         iProvince = lNation[0]
                         for iI in range( gc.getNumProvinceTiles( iProvince ) ):
                                 iX = gc.getProvinceX( iProvince, iI )

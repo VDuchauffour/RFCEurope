@@ -2637,7 +2637,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 			/*
 		    if (iDistance > 5)
 		    {
-		    	iValue -= (iDistance - 5) * 500;		    	
+		    	iValue -= (iDistance - 5) * 500;
 		    }
 		    else if (iDistance < 4)
 		    {
@@ -3022,7 +3022,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 	}
 
 	iValue /= (std::max(0, (iBadTile - (NUM_CITY_PLOTS / 4))) + 3);
-	/// 3Miro no clue, but there is no Siberia
+	// 3Miro no clue, but there is no Siberia
 	/*if (!(iX >= 67 && iX <= 70 && iY >= 43 && iY <= 46) && !(iX >= 79 && iX <= 18 && iY >= 110 && iY <= 10)) { //Rhye (exclude Turkey and Siberia)
 	if (bStartingLoc)
 	{
@@ -3270,7 +3270,7 @@ int CvPlayerAI::AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreA
 		{
 			case SPAIN:
 			case FRANCE:
-			case ENGLAND:	
+			case ENGLAND:
 			case NETHERLANDS:
 			case PORTUGAL:
 				iValue *= 4;

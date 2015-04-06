@@ -5399,7 +5399,7 @@ void CvCity::changePopulation(int iChange)
 long CvCity::getRealPopulation() const
 {
 	//return (((long)(pow((float)getPopulation(), 2.8f))) * 1000);
-	// 3Miro: purely aesthatic choice of population sizes
+	// 3Miro: purely aesthetic choice of population sizes
 	float fPop = (float) getPopulation();
 	//return (long)(  (pow( fPop, 1.7f) +  3* fPop)  * 1000);
 	return (long) ( ( fPop * fPop / 2.0 + 2.5 * fPop ) * 1000 );

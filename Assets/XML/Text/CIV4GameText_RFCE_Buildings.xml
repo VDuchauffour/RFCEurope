@@ -276,6 +276,114 @@
 		<Spanish>[TAB]"Kremlin" es una palabra rusa con la que se indica un complejo fortificado de edificios en el centro de una ciudad. Se suele usar casi siempre para referirse al Kremlin de la ciudad de Mosc&#250;, un destacable conjunto de edificios que alberga a gran parte del gobierno ruso. El Kremlin se yergue sobre una colina que domina las vistas del r&#237;o Moscova. En una u otra forma, las estructuras fortificadas han estado presentes en esta ciudad durante mil a&#241;os. El sitio fue bautizado como "Kremlin" en el s. XIV. [PARAGRAPH:2]Se encuentra en un &#225;rea triangular amurallada de unas veintiocho hect&#225;reas de extensi&#243;n. Los muros son de ladrillo rojo, con sus peculiares torres en las esquinas y las entradas. Muchos de sus edificios est&#225;n pintados de blanco con un ribete amarillo y tienen tejados verdes que dan un aspecto muy alegre desde lejos. La Catedral de la Asunci&#243;n, construida en 1476, es el edificio m&#225;s antiguo del complejo. Dos catedrales m&#225;s se encuentran tras sus muros, al igual que un sorprendente n&#250;mero de palacios, siendo el Palacio del Kremlin el mayor de ellos.[PARAGRAPH:2]El Kremlin ha visto el auge y la ca&#237;da de muchos personajes importantes tras sus muros. Iv&#225;n el Terrible construy&#243; all&#237; la C&#225;mara de las Facetas. En la Gran Guerra Patri&#243;tica (la Segunda Guerra Mundial), I&#243;siv Stalin expuls&#243; a los invasores alemanes de las puertas de Mosc&#250;, uno de los mayores servicios que nunca hiciera un dirigente ruso por su pa&#237;s (aunque tambi&#233;n fue aqu&#237; donde el propio Stalin plane&#243; el exterminio sistem&#225;tico de millones de miembros de su propio pueblo). Y tambi&#233;n en este mismo lugar Mija&#237;l Gorbachov supervis&#243; la disoluci&#243;n de la Uni&#243;n Sovi&#233;tica. Hoy en d&#237;a, el Kremlin alberga el gobierno de la Federaci&#243;n Rusa.[PARAGRAPH:2]Con independencia del uso que se le d&#233; en el futuro, siempre ser&#225; un monumento imponente del pasado de Rusia, pues ha visto lo mejor y lo peor de esta gran naci&#243;n.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DENMARK_RESEARCH_INSTITUTE</Tag>
+		<English>Research Institute</English>
+		<French>Research Institute</French>
+		<German>Research Institute</German>
+		<Italian>Research Institute</Italian>
+		<Spanish>Research Institute</Spanish>
+		<Portuguese>Research Institute</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DENMARK_RESEARCH_INSTITUTE_PEDIA</Tag>
+		<English>Research Institute</English>
+		<French>.</French>
+		<German></German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MOROCCO_KASBAH</Tag>
+		<English>Kasbah</English>
+		<French>Kasbah</French>
+		<German>Kasbah</German>
+		<Italian>Kasbah</Italian>
+		<Spanish>Kasbah</Spanish>
+		<Portuguese>Kasbah</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MOROCCO_KASBAH_PEDIA</Tag>
+		<English>Kasbah</English>
+		<French>.</French>
+		<German></German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ARAGON_SEAPORT</Tag>
+		<English>Seaport</English>
+		<French>Seaport</French>
+		<German>Seaport</German>
+		<Italian>Seaport</Italian>
+		<Spanish>Seaport</Spanish>
+		<Portuguese>Seaport</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ARAGON_SEAPORT_PEDIA</Tag>
+		<English>Seaport</English>
+		<French>.</French>
+		<German></German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PRUSSIA_PUBLIC_SCHOOL</Tag>
+		<English>Public School</English>
+		<French>Public School</French>
+		<German>Public School</German>
+		<Italian>Public School</Italian>
+		<Spanish>Public School</Spanish>
+		<Portuguese>Public School</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PRUSSIA_PUBLIC_SCHOOL_PEDIA</Tag>
+		<English>Public School</English>
+		<French>.</French>
+		<German></German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SCOTTISH_SHIELING</Tag>
+		<English>Shieling</English>
+		<French>Shieling</French>
+		<German>Shieling</German>
+		<Italian>Shieling</Italian>
+		<Spanish>Shieling</Spanish>
+		<Portuguese>Shieling</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SCOTTISH_SHIELING_PEDIA</Tag>
+		<English>Shieling</English>
+		<French>.</French>
+		<German></German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NOVGOROD_KONETS</Tag>
+		<English>Konets</English>
+		<French>Konets</French>
+		<German>Konets</German>
+		<Italian>Konets</Italian>
+		<Spanish>Konets</Spanish>
+		<Portuguese>Konets</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NOVGOROD_KONETS_PEDIA</Tag>
+		<English>Konets</English>
+		<French>.</French>
+		<German></German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
 		<!-- Unique Buildings -->
 		<!-- General Buildings -->
 	<TEXT>

@@ -336,7 +336,7 @@
 				</FeatureArtPieces>
 				<FeatureDummyNodes/>
 				<bGenerateRotations>0</bGenerateRotations>
-				<VarietyButton>Art/Denseforest.dds</VarietyButton>
+				<VarietyButton>Art/Interface/Buttons/TerrainFeatures/Denseforest.dds</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>

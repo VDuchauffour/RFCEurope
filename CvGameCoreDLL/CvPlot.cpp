@@ -6978,7 +6978,7 @@ int CvPlot::getCulture(PlayerTypes eIndex) const
 		return 0;
 	}
 
-	// 3MiroPope: the pope does not have culture beyond Rome's FC
+	// 3MiroPope: the pope does not have culture beyond Rome's BFC
 	//GC.getGameINLINE().logMsg( "  Culture: %d %d %d %d ",eIndex,PAPAL_PLAYER,getX(),getY() );
 	/*if ( eIndex == PAPAL_PLAYER ){
 		CvCity *pCity = GET_PLAYER(eIndex).getCapitalCity();
@@ -7158,7 +7158,7 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 		}else{
 			//GC.getGameINLINE().logMsg("   Not in Papal %d %d ",getX_INLINE(),getY_INLINE()); //Rhye and 3Miro
 			// 3Miro: Nasty bug expelling units from territory on flip,
-			//			now if a plot is in somone's core, nobody gets culture there for 3 turns after spawn
+			//			now if a plot is in someone's core, nobody gets culture there for 3 turns after spawn
 			/*if ( withinSpawnDate ){
 				if ( (eIndex >= NUM_MAJOR_PLAYERS) || ( !MiroBelongToCore(eIndex,getX_INLINE(),getX_INLINE()) ) ){
 					int iI;

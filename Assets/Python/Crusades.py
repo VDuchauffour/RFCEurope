@@ -33,22 +33,28 @@ tDefensiveCrusadeMap = [
 [], #tArabia
 [], #tBulgaria
 [xml.iP_Leon, xml.iP_GaliciaSpain, xml.iP_Lusitania, xml.iP_Aragon, xml.iP_Catalonia, xml.iP_Navarre, xml.iP_Castile, xml.iP_Andalusia, xml.iP_LaMancha, xml.iP_Valencia], #tCordoba (for consistency)
-[], #tNorse
 [xml.iP_Verona, xml.iP_Tuscany, xml.iP_Arberia, xml.iP_Dalmatia], #tVenecia
 [xml.iP_Flanders, xml.iP_Provence, xml.iP_Burgundy, xml.iP_Champagne, xml.iP_Lorraine,xml.iP_Picardy], #tBurgundy
 [xml.iP_Lorraine, xml.iP_Swabia, xml.iP_Bavaria, xml.iP_Saxony, xml.iP_Franconia, xml.iP_Flanders, xml.iP_Brandenburg, xml.iP_Holstein, xml.iP_Bohemia], #tGermany
+[], #tNovgorod
+[], #tNorway
 [], #tKiev
 [xml.iP_Hungary, xml.iP_Transylvania, xml.iP_UpperHungary, xml.iP_Wallachia, xml.iP_Slavonia, xml.iP_Pannonia, xml.iP_Austria, xml.iP_Carinthia, xml.iP_Serbia, xml.iP_Moesia, xml.iP_Banat, xml.iP_Bosnia, xml.iP_Dalmatia], #tHungary
 [xml.iP_Leon, xml.iP_GaliciaSpain, xml.iP_Lusitania, xml.iP_Aragon, xml.iP_Catalonia, xml.iP_Navarre, xml.iP_Castile, xml.iP_Andalusia, xml.iP_LaMancha, xml.iP_Valencia], #tSpain
+[xml.iP_Estonia], #Denmark
+[], #Scotland
 [xml.iP_GreaterPoland, xml.iP_LesserPoland, xml.iP_Silesia, xml.iP_Pomerania, xml.iP_Masovia, xml.iP_GaliciaPoland, xml.iP_Brest], #tPoland
 [xml.iP_Liguria, xml.iP_Lombardy, xml.iP_Corsica, xml.iP_Sardinia, xml.iP_Tuscany], #tGenoa
+[], #Morocco
 [], #tEngland
 [xml.iP_Leon, xml.iP_GaliciaSpain, xml.iP_Lusitania, xml.iP_Aragon, xml.iP_Catalonia, xml.iP_Navarre, xml.iP_Castile, xml.iP_Andalusia, xml.iP_LaMancha, xml.iP_Valencia], #tPortugal
+[xml.iP_Valencia,xml.iP_Balears,xml.iP_Sicily,xml.iP_Apulia,xml.iP_Calabria], #Aragon
+[xml.iP_Osterland], #tSweden
+[xml.iP_Livonia,xml.iP_Estonia,xml.iP_Lithuania,xml.iP_Prussia], #tPrussia
 [], #tLithuania
 [xml.iP_Austria, xml.iP_Carinthia, xml.iP_Bavaria, xml.iP_Bohemia, xml.iP_Moravia, xml.iP_Silesia], #tAustria
 [], #tTurkey
 [], #tMoscow
-[], #tSweden
 [], #tDutch
 [] #tRome
 ];
@@ -1176,7 +1182,9 @@ class Crusades:
 			return xml.iMaceman
 		if ( teamPlayer.isHasTech( xml.iBlastFurnace ) ):
 			return xml.iLongSwordsman
-		return xml.iSwordsman
+		if ( teamPlayer.isHasTech( xml.iChainMail ) ):
+			return xml.iSwordsman
+		return xml.iAxeman
 
 	def getDCBestCavalry( self, iPlayer ):
 		teamPlayer = gc.getTeam( gc.getPlayer( iPlayer ).getTeam() )
@@ -1189,4 +1197,6 @@ class Crusades:
 				return xml.iKnight
 		if ( teamPlayer.isHasTech( xml.iFarriers ) and teamPlayer.isHasTech( xml.iFeudalism ) ):
 			return xml.iHeavyLancer
-		return xml.iLancer
+		if ( teamPlayer.isHasTech( xml.iManorialism ) and teamPlayer.isHasTech( xml.iStirrup ) ):
+			return xml.iLancer
+		return xml.iScout

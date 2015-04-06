@@ -313,12 +313,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ENG2</Tag>
-		<English>Workshops give +2[ICON_PRODUCTION]</English>
-		<French>Atelier ont +2[ICON_PRODUCTION]</French>
-		<German>Werkstätten ergeben +2[ICON_PRODUCTION]</German>
-		<Italian>Le Botteghe danno +2[ICON_PRODUCTION]</Italian>
-		<Spanish>Workshops give +2[ICON_PRODUCTION]</Spanish>
-		<Portuguese>Oficinas dão +2[ICON_PRODUCTION]</Portuguese>
+		<English>Workshops give +1[ICON_PRODUCTION] and +1[ICON_COMMERCE]</English>
+		<French>Atelier ont +1[ICON_PRODUCTION] and +1[ICON_COMMERCE]</French>
+		<German>Werkstätten ergeben +1[ICON_PRODUCTION] and +1[ICON_COMMERCE]</German>
+		<Italian>Le Botteghe danno +1[ICON_PRODUCTION] and +1[ICON_COMMERCE]</Italian>
+		<Spanish>Workshops give +1[ICON_PRODUCTION] and +1[ICON_COMMERCE]</Spanish>
+		<Portuguese>Oficinas dão +1[ICON_PRODUCTION] and +1[ICON_COMMERCE]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_POR</Tag>
@@ -411,6 +411,114 @@
 		<Portuguese>+2 Rotas Comerciais em cada cidade</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UP_DEN</Tag>
+		<English>The Power of Sound Dues:</English>
+		<French>The Power of Sound Dues:</French>
+		<German>The Power of Sound Dues:</German>
+		<Italian>The Power of Sound Dues:</Italian>
+		<Spanish>The Power of Sound Dues:</Spanish>
+		<Portuguese>The Power of Sound Dues:</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_DEN2</Tag>
+		<English>You get 2 gold per turn for every foreign coastal city in the Baltic.</English>
+		<French>You get 2 gold per turn for every foreign coastal city in the Baltic.</French>
+		<German>You get 2 gold per turn for every foreign coastal city in the Baltic.</German>
+		<Italian>You get 2 gold per turn for every foreign coastal city in the Baltic.</Italian>
+		<Spanish>You get 2 gold per turn for every foreign coastal city in the Baltic.</Spanish>
+		<Portuguese>You get 2 gold per turn for every foreign coastal city in the Baltic.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_PRU</Tag>
+		<English>The Power of Cameralism:</English>
+		<French>The Power of Cameralism:</French>
+		<German>The Power of Cameralism:</German>
+		<Italian>The Power of Cameralism:</Italian>
+		<Spanish>The Power of Cameralism:</Spanish>
+		<Portuguese>The Power of Cameralism:</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_PRU2</Tag>
+		<English>Start with Theocracy and no stability penalties from anarchy.</English>
+		<French>Start with Theocracy and no stability penalties from anarchy.</French>
+		<German>Start with Theocracy and no stability penalties from anarchy.</German>
+		<Italian>Start with Theocracy and no stability penalties from anarchy.</Italian>
+		<Spanish>Start with Theocracy and no stability penalties from anarchy.</Spanish>
+		<Portuguese>Start with Theocracy and no stability penalties from anarchy.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_NOV</Tag>
+		<English>The Power of the Lord City:</English>
+		<French>The Power of the Lord City:</French>
+		<German>The Power of the Lord City:</German>
+		<Italian>Il potere del faraone:</Italian>
+		<Spanish>El poder del fara&#243;n:</Spanish>
+		<Portuguese>The Power of the Lord City:</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_NOV2</Tag>
+		<English>Starts with Bureaucracy.</English>
+		<French>Starts with Bureaucracy.</French>
+		<German>Starts with Bureaucracy.</German>
+		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
+		<Spanish>Gobierno hereditario y Esclavitud est&#225;n activados al principio</Spanish>
+		<Portuguese>Starts with Bureaucracy.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_SCO</Tag>
+		<English>The Power of Defiance:</English>
+		<French>The Power of Defiance:</French>
+		<German>The Power of Defiance:</German>
+		<Italian>The Power of Defiance:</Italian>
+		<Spanish>The Power of Defiance:</Spanish>
+		<Portuguese>The Power of Defiance:</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_SCO2</Tag>
+		<English>When one of your cities is conquered all your other cities get free defenders. Lower stability hit from losing a city.</English>
+		<French>When one of your cities is conquered all your other cities get free defenders. Lower stability hit from losing a city.</French>
+		<German>When one of your cities is conquered all your other cities get free defenders. Lower stability hit from losing a city.</German>
+		<Italian>When one of your cities is conquered all your other cities get free defenders. Lower stability hit from losing a city.</Italian>
+		<Spanish>When one of your cities is conquered all your other cities get free defenders. Lower stability hit from losing a city.</Spanish>
+		<Portuguese>When one of your cities is conquered all your other cities get free defenders. Lower stability hit from losing a city.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_ARG</Tag>
+		<English>The Power of Confederation:</English>
+		<French>The Power of Confederation:</French>
+		<German>The Power of Confederation:</German>
+		<Italian>The Power of Confederation:</Italian>
+		<Spanish>The Power of Confederation:</Spanish>
+		<Portuguese>The Power of Confederation:</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_ARG2</Tag>
+		<English>Extra commerce in your capital for every province you have a city in.</English>
+		<French>Extra commerce in your capital for every province you have a city in.</French>
+		<German>Extra commerce in your capital for every province you have a city in.</German>
+		<Italian>Extra commerce in your capital for every province you have a city in.</Italian>
+		<Spanish>Extra commerce in your capital for every province you have a city in.</Spanish>
+		<Portuguese>Extra commerce in your capital for every province you have a city in.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_MOR</Tag>
+		<English>The Power of Saharan Trade:</English>
+		<French>The Power of Saharan Trade:</French>
+		<German>The Power of Saharan Trade:</German>
+		<Italian>The Power of Saharan Trade:</Italian>
+		<Spanish>The Power of Saharan Trade:</Spanish>
+		<Portuguese>The Power of Saharan Trade:</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_MOR2</Tag>
+		<English>Deserts and particularily oases have improved yield.</English>
+		<French>Deserts and particularily oases have improved yield.</French>
+		<German>Deserts and particularily oases have improved yield.</German>
+		<Italian>Deserts and particularily oases have improved yield.</Italian>
+		<Spanish>Deserts and particularily oases have improved yield.</Spanish>
+		<Portuguese>Deserts and particularily oases have improved yield.</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UP_POP</Tag>
 		<English>The Power of Infallibility</English>
 		<French>The Power of Infallibility</French>
@@ -445,5 +553,14 @@
 		<Italian>temono di subire lo stesso fato dei vicini e si arrendono!</Italian>
 		<Spanish>temen sufrir el mismo destino que sus vecinos y se rinden.</Spanish>
 		<Portuguese>temem o mesmo destino dos habitantes da vizinhança e se rendem!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_SOUND_TOLL</Tag>
+		<English>You get %d1_Gold gold from the Sound Toll.</English>
+		<French>You get %d1_Gold gold from the Sound Toll.</French>
+		<German>You get %d1_Gold gold from the Sound Toll.</German>
+		<Italian>You get %d1_Gold gold from the Sound Toll.</Italian>
+		<Spanish>You get %d1_Gold gold from the Sound Toll.</Spanish>
+		<Portuguese>You get %d1_Gold gold from the Sound Toll.</Portuguese>
 	</TEXT>
 </Civ4GameText>

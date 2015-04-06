@@ -12,8 +12,143 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Changes for RFCE 1.3:
+
+	Civilization changes:
+		- Norse civ split into Denmark and Norway
+		- Sweden reworked to an earlier start
+		- New civilizations: Novgorod, Prussia, Scotland, Aragon, Morocco
+		- Many things connected to the new civs are based on (or inspired by) RFCE++ changes, at least for now
+
+	Denmark:
+		Start Date: 936
+		Leaders: Harald Bluetooth (935-986), Margaret I (1353-1412), Christian IV (1577-1648)
+		UP: The Power of Sound Dues: You get 2 gold per turn for every foreign coastal city in the Baltic
+		UHV1: North Sea Empire: Control Denmark, Skaneland, Svealand, Vestfold and Mercia in 1050
+		UHV2: Kalmar Union: Control Denmark, Norway, Vestfold, Skaneland, Götaland, Svealand, Norrland, Gotland, Österland, Estonia and Iceland in 1523
+		UHV3: Ostindisk Kompagni: Get 3 Colonies
+		UU: Huskarl (Swordsman)
+		UB: Research Institute (Observatory)
+		CNM: Scandinavian base CNM, with small differences
+
+	Norway:
+		Start Date: 872
+		Leaders: Harald Hardrada (1015-1066), Haakon IV Haakonson (1204-1263)
+		UP: The Power of the Sea: All naval units can enter ocean tiles
+		UHV1: Vikings: Gain 50 Viking points by 1066
+		UHV2: Conquerors: Conquer The Isles, Ireland, Mercia, Normandy, Iceland and build Vinland by 1263
+		UHV3: Statesmen: Have higher score than Sweden, Denmark, Scotland, England, Germany and France in 1320
+		UU: Berserker (Axeman)
+		UB: Trading Post (Lighthouse)
+		CNM: Scandinavian base CNM, with small differences
+
+	Sweden:
+		Start Date: 1210
+		Leaders: Magnus Ladulas (1240-1290), Gustav Vasa (1496-1560), Gustav Adolph (1594-1632), Karl XII (1682-1718)
+		UP: The Power of Military Formation: All units start with Formation promotion
+		UHV1: The Eastern Lands: Have six cities in Norrland, Finland and Karelia in 1323
+		UHV2: Lion of the North: Raze 5 Catholic cities while being Protestant by 1660
+		UHV3: Dominium Maris Baltici: Control every coastal city on the Baltic in 1750
+		UU: Karolin (Musketman)
+		UB: Soldattorp (Night Watch)
+		CNM: Scandinavian base CNM, with small differences
+
+	Novgorod:
+		Start Date: 864
+		Leaders: Rurik (830-879), Alexander Nevsky (1220-1263), Marfa Posadnitsa (1420-1478)
+		UP: The Power of the Lord City: Starts with Bureaucracy
+		UHV1: Defender of Rus': Control Novgorod, Karelia, Estonia and Livonia in 1250
+		UHV2: The Fur Trade: Control twelve sources of fur by 1397
+		UHV3: The Great Hinterlands: Have seven cities in Karelia and Vologda in 1478
+		UU: Ushkuinik (Maceman)
+		UB: Konets (Guild Hall)
+		CNM: same as the CNM for the Kievan Rus
+
+	Prussia:
+		Start Date: 1224
+		Leaders: Hermann von Salza (1165-1239), Frederick I (1712-1786)
+		UP: The Power of Cameralism: Start with Theocracy and no stability penalties from anarchy
+		UHV1: The Northern Crusades: Control Prussia, Courland, Lithuania, Livonia, Estonia, and Pomerania in 1410
+		UHV2: Seven Years' War: Conquer two cities from each of Austria, Muscovy, Germany, Sweden, France and Spain between 1650 and 1763
+		UHV3: Enlightened Despotism: Settle a total of 15 Great People in any combination, including Great Generals, in your capital
+		UU: Death's Head Hussar (Hussar)
+		UB: Public School (Observatory)
+		CNM: same as the CNM for Germany and Austria
+
+	Scotland:
+		Start Date: 960
+		Leaders: Robert the Bruce (1274-1329)
+		UP: The Power of Defiance: When one of your cities is conquered all your other cities get free defenders; lower stability hit from losing a city
+		UHV1: Fortification: Have 10 Forts and 4 Castles in 1296
+		UHV2: The Auld Alliance: Have 1000 Attitude points with France by 1560
+		UHV3: The Celtic Union: Control Scotland, the Isles, Ireland, Wales and Bretagne in 1700
+		UU: Sheltron (Guisarmier)
+		UB: Shieling (Smokehouse)
+		CNM: same as the CNM for England
+
+	Aragon:
+		Start Date: 1164
+		Leaders: James I (1208-1276)
+		UP: The Power of Confederation: Extra commerce in your capital for every province you have a city in
+		UHV1: The Sicilian Vespers: Control Catalonia, Valencia, Baleares and Sicily in 1282
+		UHV2: Thalassocracy: Have 12 Seaports in 1444
+		UHV3: Realms of the Crown: Control Catalonia, Valencia, Aragon, Baleares, Corsica, Sardinia, Sicily, Apulia, Provence and Thessaly in 1474
+		UU: Almogavar (Guisarmier)
+		UB: Seaport (Lighthouse)
+		CNM: same as the CNM for Spain (Castile)
+
+	Morocco:
+		Start Date: 1040
+		Leaders: Yaqub al-Mansur (1160-1199), Ismail Ibn Sharif (1645-1727)
+		UP: The Power of Saharan Trade: Deserts and particularily oases have improved yield
+		UHV1: The Almohads: Control Morocco, Marrakesh, Fez, Tetouan, Oran, Algiers, Ifriqiya, Tripolitania, Andalusia, and Valencia in 1227
+		UHV2: The Marinids: Have 5000 culture in each of three cities in 1465
+		UHV3: The Saadis: Collapse or vassalize Portugal, Spain, and Aragon by 1578
+		UU: Black Guard (Musketman)
+		UB: Kasbah (Walls)
+		CNM: same as the CNM for Cordoba and Arabia
+
+	General changes:
+		- Leaders moved: Norse leaders to Denmark and Norway, Yaqub al-Mansur (Cordoba -> Morocco), Frederick I (Germany -> Prussia)
+		- Support for leader switching with 4 leaders per civ
+		- New leaders for existing civs: Bela III (Hungary), Mieszko (Poland), Philip August II (France), Harun al-Rashid (Arabia)
+		- New leaders for existing civs: Gustav Adolph (Sweden), Margaret I (Norse), Mstislav (Kiev), Bohdan Khmelnytsky (Kiev)
+		- New leaders for existing civs: Basil II (Byzantium), Michael VIII Palaiologos (Byzantium), Mohammed I ibn Nasr (Cordoba)
+		- New leaders for existing civs: Magnus Ladulas (Sweden), Harald Bluetooth (Denmark), Otto I (Germany), Karl VII (Germany)
+		- New leaders for existing civs: Otto-William (Burgundy), Beatrice II (Burgundy), Fernando III (Spain), Guglielmo Embriaco (Genoa)
+		- Redesigned Andrea Dandolo into Andrea Gritti (Venice) - more important doge, we already have a Dandolo, and better for the timeline
+		- Redesigned Maria II into Maria I (Portugal) - Maria I is better for the RFCE timeline, also she is the Portuguese leader in Civ V
+		- Removed outdated xml_light files
+		- Reenabled and readded some entries in the civilopedia
+		- Cannons also buildable with iron + sulphur
+		- Small diplo penalty with all leaders after a player accomplished 2 UHVs
+		- New promotion: Cargo Capacity (+1 cargo space in ships)
+		- Fixed/improved most Dynamic Civ Names connected to Scandinavia, Bulgaria
+		- Fixed UHV condition display on the Victory Screen for more complex UHVs
+		- Boost for Workshops and Lumbermills - were total worthless before, now they are somewhat on pair with Windmills and Watermills
+			Apprenticeship civic gives +1 production for Lumbermills too
+			Steam Engine tech gives +1 production for Lumbermills too
+			Workshops have +1 base production (so now -1 food, +2 production)
+			English UP changed to +1 production and +1 commerce for Workshops (was +2 production before)
+		- Mercantilism civic gives +1 commerce for Villages too
+		- Updated Great Person lists
+
+	Art updates:
+		- New art for Isabella (Spain), Casimir III (Poland), Ivan IV (Muscovy), Simeon I (Bulgaria), Ivan Asen (Bulgaria)
+		- New art for Abu Bakr (Arabia), Abd-ar-Rahman III (Cordoba), Philip the Bold (Burgundy), Yaqub al-Mansur (Cordoba)
+		- Added missing button for Mieszko, Michael VIII Palaiologos, Abu Bakr, Abd-ar-Rahman III, Margaret I
+		- Added missing button for Philip the Bold, Guglielmo Embriaco, Alexander Nevsky, Hermann von Salza
+
+	Bugfixes:
+		- Fixed bug where all mercs got free medic3 promotion (missing change in one of the files when Pinch was reintroduced)
+		- Fixed bug where the Cordoban units got wrong starting promotion
+		- The Swedih UB (Night Watch replacement) didn't give any stability on completion
+		- Fixed sound inconsistencies with some of the mercenaries
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Changes for RFCE 1.2:
-(to-be-released: 2012.12.20.)
+(SVN release only)
 
 	Stability improvements:
 		- Province stability levels:
@@ -73,6 +208,7 @@ Changes for RFCE 1.2:
 		- Various small tweaks in many balance aspects of the different difficulty levels (mostly for Viceroy and Emperor). Research, inflation, AI costs, etc.
 		- Greatly reduced the barbarian number difference between Monarch and Emperor, and between Monarch and Viceroy
 		- Switched bonus of Westminster Abbey (now enables all Religion Civics) and Golden Bull (now enables all Labor Civics)
+		- Restored Pinch promotion
 
 	Map and province changes:
 		- Huge changes in the SE region: Egypt, Levant and Anatolia totally revised
@@ -112,7 +248,7 @@ Changes for RFCE 1.2:
 		- Improvements in the crusade texts
 		- German text fixes by Simplicissimus
 		- New city name map for England and Muscovy by iOnlySignIn
-		- German/Austrian city name map updates by 2phunkey4u
+		- German/Austrian city name map updates by 2phunkey4u and DC123456789
 		- Portuguese city name map accents by Spirictum
 		- Updates in some crusading civs' city name maps in the Levant/Egypt/Anatolia
 		- Changed the order of the Polish, Burgundian, Kievan and Hungarian UHVs
@@ -120,7 +256,7 @@ Changes for RFCE 1.2:
 		- Civ-specific and UHV updates in the reference texts
 		- Texts connected to Province stability also got the new province color-code
 		- Changed the Genoan trade UHV text to be more clear
-		- Byzantine, Arabian/Cordoban, Ottoman, French/Burgundian, Venetian, Norse city name maps updated by DC123456789
+		- Byzantine, Arabian/Cordoban, Ottoman, French/Burgundian, Venetian, Norse, Hungarian, Spanish city name maps updated by DC123456789
 		- Minor updates to the Dutch, Hungarian and Bulgarian city name maps
 		- Renamed preset Byzantine cities to their Greek names (Konstantinoupolis, Alexandreia, Hierosolyma, Antiocheia, Tyros, Thessaloniki, Ikonion, etc.)
 		- French entries for Harald Hardrada, Maximilian, Abu Bakr, Yaqub al-Mansur, Muscovy
@@ -185,7 +321,6 @@ Changes for RFCE 1.2:
 		- Moved back the spawn interval of the second Mongol invasion (Timurids), so it won't happen right at the Ottoman spawn
 
 	Bugfixes:
-		- Restored Pinch promotion
 		- A couple fixes how the mercenary screen is called from the main screen mercenary manager button
 		- Fixed sound issues for Venice and Genoa
 		- Fixed bug where Judaism didn't spread to a second city in Poland
@@ -202,7 +337,7 @@ Changes for RFCE 1.2:
 		- Fixed serious bug in the secession mechanics (lose a single city if stability is too low), which basically prevented it from happening
 		- Fixed bug in secession provinces, where outer (ok) provinces had very low chance, while some of the historical (stable) provinces had decent chance
 		- Fixed bug where Hanseatic Executives couldn't pass straits, or enter into foreign territory without open borders
-		- Fixed victory screen for Burgundy and Poland, the way their victory conditions show up
+		- Fixed victory screen for Burgundy and Poland, improved the way their victory conditions show up
 		- Fixed bug with automatic capital changes for the Ottomans (only changes to Edirne if you don't have Istanbul)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1268,7 +1403,7 @@ Changes for Beta 5:
 Changes for Beta 4:
 (released: 2010.12.29.)
 
-	Synced Units (fixed Polish Paladin bug), Projects (fixed Portugal UP bug)
+	Synchronized Units (fixed Polish Paladin bug), Projects (fixed Portugal UP bug)
 	Fixed Reformation bug, now checking for the correct buildings (CatholicScriptorium is no more)
 	Changed Bulgarian UHV to conquer Constantinople by 1000AD (it is doable and more challenging then 1200AD)
 	Changed Norce UHV to not count Independent cities
@@ -1398,7 +1533,7 @@ Changes for Alpha 12:
 		New LHs have first meeting quotes
 		Stronger (possibly to the extent of overkill) Frankia start
 		Gave every leader a favorite Religion.
-		Some city name syncro in Transylvania,
+		Some city name synchronization in Transylvania,
 		Removed Alsace-Lorraine off Burgundy spawn zone
 		Removed Barbarian in Syracuse (now that AI is using islands again).
 		Removed a bunch of villages from WBSave that messed up capital city placement, and added iron to Arab start.
@@ -1652,7 +1787,7 @@ Changes for Alpha 8:
 	Fixed the Orthodox Arabia bug, the AI is now aware of the future cash income from the Faith UP + Holy City synergy
 	Buildings can spread irrigation ability (used for Gardens of Al-Andalus)
 	Fixed the always re-apperaring burgundy settler map bug, germany spreads out better
-	Some synchro in maps at French/Germany
+	Some map synchronizations in France/Germany
 	Stronger Cordoba
 	Added Tamerlane's invasion
 	Weakened Arabia at start

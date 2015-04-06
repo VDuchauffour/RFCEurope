@@ -21,7 +21,7 @@ import CvGameInterface
 #objMercenaryUtils = MercenaryUtils.MercenaryUtils()
 gameUtils = CvGameInterface.gameUtils()
 
-# < Mercenaries End   >
+# < Mercenaries End >
 
 # globals
 utils = RFCUtils.RFCUtils() #Rhye
@@ -2085,7 +2085,6 @@ class CvMainInterface:
                                                 screen.hide( "UHVButton" )
                                                 screen.hide( "UHVText" )
 
-                                #HHG: Lithuania culture goal added
                                 elif ( ePlayer == con.iLithuania ):
                                         #iLithuaniaCulture = utils.getLithuaniaCulture()
                                         iLithuaniaCulture = pPlayer.getUHVCounter( 0 )
@@ -2118,13 +2117,13 @@ class CvMainInterface:
                                                 screen.hide( "UHVButton" )
                                                 screen.hide( "UHVText" )
 
-                                elif ( ePlayer == con.iNorse ):
+                                elif ( ePlayer == con.iNorway ):
                                         #iNorseRaized = utils.getNorseRazed()
-                                        iNorseRaized = pPlayer.getUHVCounter( 2 )
+                                        iNorwayRaized = pPlayer.getUHVCounter( 2 )
                                         #Absinthe: only display UHV counter until the UHV date
                                         if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (xml.i1066AD + 2) ):
                                                 szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
-                                                szUHVText = ": " + localText.getText("TXT_KEY_UHV_VIKING",()) + (" (%i) " %iNorseRaized )
+                                                szUHVText = ": " + localText.getText("TXT_KEY_UHV_VIKING",()) + (" (%i) " %iNorwayRaized )
                                                 screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
                                                 screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
                                                 screen.show("UHVButton")
@@ -2163,6 +2162,82 @@ class CvMainInterface:
                                         if ( not CyInterface().isCityScreenUp() and iColonies > -1 ):
                                                 szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
                                                 szUHVText = ": " + localText.getText("TXT_KEY_UHV_COLONIES",()) + (" (%i) " %iColonies )
+                                                screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+                                                screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+                                                screen.show("UHVButton")
+                                                screen.show("UHVText")
+                                                iCount += 1
+                                        else:
+                                                screen.hide( "UHVButton" )
+                                                screen.hide( "UHVText" )
+
+                                elif ( ePlayer == con.iNovgorod ):
+                                        iNovgorodFurs = pPlayer.countOwnedBonuses(xml.iFur)
+                                        if ( not CyInterface().isCityScreenUp() ):
+                                                szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
+                                                szUHVText = ": " + localText.getText("TXT_KEY_UHV_FURS",()) + (" (%i) " %iNovgorodFurs )
+                                                screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+                                                screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+                                                screen.show("UHVButton")
+                                                screen.show("UHVText")
+                                                iCount += 1
+                                        else:
+                                                screen.hide( "UHVButton" )
+                                                screen.hide( "UHVText" )
+
+                                elif ( ePlayer == con.iScotland ):
+                                        iScotlandFrench = pPlayer.getUHVCounter( 1 )
+                                        if ( not CyInterface().isCityScreenUp() ):
+                                                szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
+                                                szUHVText = ": " + localText.getText("TXT_KEY_UHV_FRENCH",()) + (" (%i) " %iScotlandFrench )
+                                                screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+                                                screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+                                                screen.show("UHVButton")
+                                                screen.show("UHVText")
+                                                iCount += 1
+                                        else:
+                                                screen.hide( "UHVButton" )
+                                                screen.hide( "UHVText" )
+
+                                #Absinthe: different UHV used currently
+                                #elif ( ePlayer == con.iAragon ):
+                                #        iAragonShips = pPlayer.getNumShips()
+                                 #       if ( not CyInterface().isCityScreenUp() ):
+                                 #               szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
+                                 #               szUHVText = ": " + localText.getText("TXT_KEY_UHV_SHIPS",()) + (" (%i) " %iAragonShips )
+                                 #               screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+                                 #               screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+                                 #               screen.show("UHVButton")
+                                 #               screen.show("UHVText")
+                                 #               iCount += 1
+                                 #       else:
+                                 #               screen.hide( "UHVButton" )
+                                 #               screen.hide( "UHVText" )
+
+                                elif ( ePlayer == con.iSweden ):
+                                        iSwedenRazed = pPlayer.getUHVCounter(1)
+                                        if ( not CyInterface().isCityScreenUp() ):
+                                                szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
+                                                szUHVText = ": " + localText.getText("TXT_KEY_UHV_RAZED",()) + (" (%i) " %iSwedenRazed )
+                                                screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+                                                screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+                                                screen.show("UHVButton")
+                                                screen.show("UHVText")
+                                                iCount += 1
+                                        else:
+                                                screen.hide( "UHVButton" )
+                                                screen.hide( "UHVText" )
+
+                                elif ( ePlayer == con.iPrussia ):
+                                        pCapital = pPlayer.getCapitalCity()
+                                        iGPStart = CvUtil.findInfoTypeNum(gc.getSpecialistInfo, gc.getNumSpecialistInfos(), "SPECIALIST_GREAT_PRIEST")
+                                        iGPEnd = CvUtil.findInfoTypeNum(gc.getSpecialistInfo, gc.getNumSpecialistInfos(), "SPECIALIST_GREAT_SPY")
+                                        iPrussiaGP = 0
+                                        for iType in range(iGPStart, iGPEnd+1):
+                                                iPrussiaGP += pCapital.getFreeSpecialistCount(iType)
+                                        if ( pPlayer.getUHV(1) == -1 and not CyInterface().isCityScreenUp() ):
+                                                szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
+                                                szUHVText = ": " + localText.getText("TXT_KEY_UHV_GREAT_PEOPLE",()) + (" (%i) " %iPrussiaGP )
                                                 screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
                                                 screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
                                                 screen.show("UHVButton")
@@ -3206,9 +3281,9 @@ class CvMainInterface:
 						while (j > -1):
 							ePlayer = gc.getGame().getRankPlayer(j)
 
-							if (not CyInterface().isScoresMinimized() or gc.getGame().getActivePlayer() == ePlayer): # Next two lines for dead civs on the scoreboard - showing up or not
-								if (gc.getPlayer(ePlayer).isAlive() and not gc.getPlayer(ePlayer).isMinorCiv()):
-								#if (gc.getPlayer(ePlayer).isEverAlive() and not gc.getPlayer(ePlayer).isMinorCiv()):
+							if (not CyInterface().isScoresMinimized() or gc.getGame().getActivePlayer() == ePlayer):
+								if (gc.getPlayer(ePlayer).isAlive() and not gc.getPlayer(ePlayer).isMinorCiv()):		# No dead civs on the scoreboard
+								#if (gc.getPlayer(ePlayer).isEverAlive() and not gc.getPlayer(ePlayer).isMinorCiv()):	# Dead civs also show up on the scoreboard
 
                                                                         if (gc.getPlayer(ePlayer).getTeam() == eTeam):
                                                                                 szBuffer = u"<font=2>"

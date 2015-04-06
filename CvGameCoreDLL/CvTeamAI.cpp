@@ -2862,7 +2862,7 @@ DenialTypes CvTeamAI::AI_defensivePactTrade(TeamTypes eTeam) const
 	bool bContinue = true;
 	int targetFlag = 1;
 	while (bContinue) {
-		bContinue = false;		
+		bContinue = false;
 		for (iI = 0; iI < NUM_MAJOR_PLAYERS; iI++)
 		{
 			if (civsArray[iI] == targetFlag)
@@ -2873,7 +2873,7 @@ DenialTypes CvTeamAI::AI_defensivePactTrade(TeamTypes eTeam) const
 					{
 						if (iI != iJ && GET_PLAYER((PlayerTypes)iJ).isAlive())
 						{
-							if (GET_TEAM((TeamTypes)iI).isDefensivePact((TeamTypes)iJ) && civsArray[iJ] == 0) 
+							if (GET_TEAM((TeamTypes)iI).isDefensivePact((TeamTypes)iJ) && civsArray[iJ] == 0)
 							{
 								civsArray[iJ] = targetFlag + 1;
 								bContinue = true;
@@ -2901,7 +2901,7 @@ DenialTypes CvTeamAI::AI_defensivePactTrade(TeamTypes eTeam) const
 			sprintf(buf2, "True: player %d: %d", iK, civsArray[iK]);
 			GC.getGameINLINE().logMsg(buf2);*/
 			int numVassalsPlayer = 0;
-			for (int iL = 0; iL < NUM_MAJOR_PLAYERS; iL++) {				
+			for (int iL = 0; iL < NUM_MAJOR_PLAYERS; iL++) {
 				if (GET_TEAM((TeamTypes)iL).isVassal((TeamTypes)iK)) {
 					numVassalsCoalition++;
 					numVassalsPlayer++;

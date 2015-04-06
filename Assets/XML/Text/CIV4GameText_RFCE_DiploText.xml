@@ -55,7 +55,7 @@
 		<!-- Generic first contact DiploTexts -->
 		<!-- Leader specific first contact DiploTexts -->
 	<TEXT>
-		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ABUYUSUFYAQUB_1</Tag>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_YAQUB_AL_MANSUR_1</Tag>
 		<English>Welcome to the desert. I am Abu Yusuf Yagub. We can be friends or enemies.</English>
 		<French>Welcome to the desert. I am Abu Yusuf Yagub. We can be friends or enemies.</French>
 		<German>Willkommen in der Wüste. Ich bin Abu Yusuf Yagub. Wir können Freund oder Feind sein.</German>
@@ -118,7 +118,7 @@
 		<Portuguese>Ah, fantastic, a new enemy to crush! Perhaps you have heard of me, Philip the Bold? No... well, you shall.</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ABDARRAHMAN_1</Tag>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ABD_AR_RAHMAN_1</Tag>
 		<English>I have now reigned above fifty years in victory or peace; beloved by my subjects, dreaded by my enemies, and respected by my allies. O man! place not thy confidence in this present world!</English>
 		<French>I have now reigned above fifty years in victory or peace; beloved by my subjects, dreaded by my enemies, and respected by my allies. O man! place not thy confidence in this present world!</French>
 		<German>Ich habe nun über 50 Jahre in Sieg oder Frieden regiert; geliebt von meinem Volk, gefürchtet von meinen Feinden und von meinen Verbündeten respektiert. Oh Mann, setzt nicht euer Vertrauen auf diese Welt.</German>
@@ -127,7 +127,7 @@
 		<Portuguese>I have now reigned above fifty years in victory or peace; beloved by my subjects, dreaded by my enemies, and respected by my allies. O man! place not thy confidence in this present world!</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SIMONE_1</Tag>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_BOCCANEGRA_1</Tag>
 		<English>I am Simone Boccanegra, first Doge of Genoa. You don't sing by any chance, do you?</English>
 		<French>I am Simone Boccanegra, first Doge of Genoa. You don't sing by any chance, do you?</French>
 		<German>Ich bin Simone Boccanegra, erster Doge von Genua. Ihr könnt nicht zufällig singen?</German>
@@ -136,13 +136,22 @@
 		<Portuguese>I am Simone Boccanegra, first Doge of Genoa. You don't sing by any chance, do you?</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_DANDOLO_1</Tag>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ENRICO_DANDOLO_1</Tag>
 		<English>I can see what you're up to, you know.</English>
 		<French>I can see what you're up to, you know.</French>
 		<German>Wisst ihr, ich weiß worauf ihr hinaus wollt.</German>
 		<Italian>I can see what you're up to, you know.</Italian>
 		<Spanish>I can see what you're up to, you know.</Spanish>
 		<Portuguese>I can see what you're up to, you know.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_BOHDAN_1</Tag>
+		<English>Greetings, pan! I, [OUR_NAME], Ataman of the Zaporozhian army! What are you looking for on the green steppes of Ukraine?</English>
+		<French>Greetings, pan! I, [OUR_NAME], Ataman of the Zaporozhian army! What are you looking for on the green steppes of Ukraine?</French>
+		<German>Greetings, pan! I, [OUR_NAME], Ataman of the Zaporozhian army! What are you looking for on the green steppes of Ukraine?</German>
+		<Italian>Greetings, pan! I, [OUR_NAME], Ataman of the Zaporozhian army! What are you looking for on the green steppes of Ukraine?</Italian>
+		<Spanish>Greetings, pan! I, [OUR_NAME], Ataman of the Zaporozhian army! What are you looking for on the green steppes of Ukraine?</Spanish>
+		<Portuguese>Greetings, pan! I, [OUR_NAME], Ataman of the Zaporozhian army! What are you looking for on the green steppes of Ukraine?</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_THE_POPE_1</Tag>
@@ -183,7 +192,7 @@
 		<Spanish>El pueblo [OUR_CIV_ADJ:1] os da la bienvenida. Espero que haya una paz duradera entre ambos. &#191;Y vos?</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-		<!-- Actually this is a quote from Philip II, macedon king, father of Alexander. I can leave it if you like it though, it's a good quote :) (AbsintheRed) -->
+		<!-- Actually this is a quote from Philip II, macedon king, father of Alexander. Currently unused, but I leave it here for now, it's a good quote :) (AbsintheRed) -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_PHILIP_II_4</Tag>
 		<English>O how small a portion of earth will hold us when we are dead, who ambitiously seek after the whole world while we are living.</English>
@@ -193,7 +202,7 @@
 		<Spanish>O how small a portion of earth will hold us when we are dead, who ambitiously seek after the whole world while we are living.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-		<!-- Actually this is a quote from Philip II, macedon king, father of Alexander. I can leave it if you like it though, it's a good quote :) (AbsintheRed) -->
+		<!-- Actually this is a quote from Philip II, macedon king, father of Alexander. Currently unused, but I leave it here for now, it's a good quote :) (AbsintheRed) -->
 	<TEXT>
 		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_PHILIP_II_1</Tag>
 		<English>Speak of the devil and the devil appears... begone, [CT_NAME]!</English>
@@ -736,9 +745,9 @@
 		<Portuguese>.</Portuguese>
 	</TEXT>
 		<!-- Moscow 1st leader - Ivan IV -->
-		<!-- Swedish 1st leader - Gustav Vasa (it should be diplotext for Gustav Adolph) -->
+		<!-- Swedish 2nd leader - Gustav II Adolf -->
 	<TEXT>
-		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_GUSTAVUS_1</Tag>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_GUSTAV_ADOLF_1</Tag>
 		<English>Greetings from the great king of [OUR_CIV_SHORT], [OUR_NAME]! Are you looking for peace and an alliance with us or demand war?</English>
 		<French>Greetings from the great king of [OUR_CIV_SHORT], [OUR_NAME]! Are you looking for peace and an alliance with us or demand war?</French>
 		<German>Grüße vom großen König von [OUR_CIV_SHORT], [OUR_NAME]! Sucht ihr Frieden und wollt euch mit uns verbünden oder fordert ihr Krieg?</German>
@@ -747,7 +756,7 @@
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_GUSTAVUS_2</Tag>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_GUSTAV_ADOLF_2</Tag>
 		<English>The Lord God is my armor!</English>
 		<French>The Lord God is my armor!</French>
 		<German>Gott ist mein Schild!</German>
@@ -756,7 +765,7 @@
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_GUSTAVUS_1</Tag>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_GUSTAV_ADOLF_1</Tag>
 		<English>I don't speak to traitors!</English>
 		<French>I don't speak to traitors!</French>
 		<German>Ich rede nicht mit Verrätern!</German>
@@ -765,7 +774,7 @@
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_NO_PEACE_LEADER_GUSTAVUS_1</Tag>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_GUSTAV_ADOLF_1</Tag>
 		<English>Peace, [CT_NAME]?! I'm not done with you yet!</English>
 		<French>Peace, [CT_NAME]?! I'm not done with you yet!</French>
 		<German>Friede, [CT_NAME]?! Ich bin mit euch noch nicht fertig!</German>
@@ -774,7 +783,7 @@
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_GUSTAVUS_1</Tag>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_GUSTAV_ADOLF_1</Tag>
 		<English>Welcome again! I will show you how the restoration of my castle is going.</English>
 		<French>Welcome again! I will show you how the restoration of my castle is going.</French>
 		<German>Nochmals willkommen! Ich zeige euch Fortschritt des Wiederaufbaus meiner Burg.</German>
@@ -783,7 +792,7 @@
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_GUSTAVUS_1</Tag>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_GUSTAV_ADOLF_1</Tag>
 		<English>Well, if it isn't [CT_NAME]... What is that you want from the great [OUR_NAME]?</English>
 		<French>Well, if it isn't [CT_NAME]... What is that you want from the great [OUR_NAME]?</French>
 		<German>Nun falls es das nicht ist [CT_NAME]... Was möchtet ihr vom großen [OUR_NAME]?</German>
@@ -792,7 +801,7 @@
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_GUSTAVUS_1</Tag>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_GUSTAV_ADOLF_1</Tag>
 		<English>Help [OUR_CIV_SHORT], [CT_NAME], and we will be grateful!</English>
 		<French>Help [OUR_CIV_SHORT], [CT_NAME], and we will be grateful!</French>
 		<German>Helft [OUR_CIV_SHORT], [CT_NAME], und wir werden dankbar sein!</German>
@@ -801,7 +810,7 @@
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_GUSTAVUS_1</Tag>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_GUSTAV_ADOLF_1</Tag>
 		<English>So, any chance you will share the following with your allies, the [OUR_CIV_ADJ:1]?</English>
 		<French>So, any chance you will share the following with your allies, the [OUR_CIV_ADJ:1]?</French>
 		<German>Gibt es eine Möglichkeit dass ihr folgendes mit eurem Verbündeten, den [OUR_CIV_ADJ:1], teilt?</German>
@@ -810,7 +819,7 @@
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_GUSTAVUS_1</Tag>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_GUSTAV_ADOLF_1</Tag>
 		<English>[OUR_NAME] demands this! Do not test his patience!</English>
 		<French>[OUR_NAME] demands this! Do not test his patience!</French>
 		<German>[OUR_NAME] fordert dies! Stellt seine Geduld nicht auf die Probe!</German>
@@ -818,8 +827,8 @@
 		<Spanish>[OUR_NAME] demands this! Do not test his patience!</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-		<!-- Swedish 1st leader - Gustav Vasa (it should be diplotext for Gustav Adolph) -->
-		<!-- Hungarian 1st leader - Istvan I -->
+		<!-- Swedish 2nd leader - Gustav II Adolf -->
+		<!-- Hungarian 1st leader - István I -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_STEPHEN_1</Tag>
 		<English>I am [OUR_NAME] of [OUR_CIV_SHORT]! Welcome to my kingdom, [CT_NAME]. It is through divine will that I am here before you; to what do YOU owe your presence before me?</English>
@@ -946,8 +955,8 @@
 		<Spanish>Begad, give us what we want or you will know the wrath of God!</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-		<!-- Hungarian 1st leader - Istvan I -->
-		<!-- Hungarian 2nd leader - Matyas -->
+		<!-- Hungarian 1st leader - István I -->
+		<!-- Hungarian 3rd leader - Mátyás -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MATTHIAS_1</Tag>
 		<English>Welcome to this beautiful land, [CT_NAME]. I hope that you bring peace with you, for he who greets with a stick, will be answered with a club.</English>
@@ -1110,7 +1119,7 @@
 		<Spanish>If you won't give me this I'll use my army to get it, so what do you prefer?</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-		<!-- Hungarian 2nd leader - Matyas -->
+		<!-- Hungarian 3rd leader - Mátyás -->
 		<!-- German 1st leader - Barbarossa -->
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_BARBAROSSA_1</Tag>

@@ -6757,6 +6757,20 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
+			<SoundID>SND_BLACK_AFRICAN_SELECT</SoundID>
+			<Filename>Sounds/Units/MaliSelect</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SND_BLACK_AFRICAN_ORDER</SoundID>
+			<Filename>Sounds/Units/MaliOrder</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
 			<SoundID>SND_POLAND_SELECT</SoundID>
 			<Filename>Sounds/Units/PolandSelect</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
@@ -8291,7 +8305,7 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>DIPLO_IVAN_ASEN_II</SoundID>
-			<Filename>Sounds/Diplomacy/Bulgaria_IvanAsenII</Filename>
+			<Filename>Sounds/Diplomacy/Bulgaria_Ivan_Asen_II</Filename>
 			<LoadType>STREAMED</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
@@ -8419,6 +8433,90 @@
 			<SoundID>DIPLO_SULEIMAN_LATE</SoundID>
 			<Filename>Sounds/Diplomacy/Suleiman_Late</Filename>
 			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>DIPLO_RURIK</SoundID>
+			<Filename>Sounds/Diplomacy/Novgorod_Rurik</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>DIPLO_ALEXANDER_NEVSKY</SoundID>
+			<Filename>Sounds/Diplomacy/Novgorod_Nevsky</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>DIPLO_MARFA</SoundID>
+			<Filename>Sounds/Diplomacy/Novgorod_Marfa</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>DIPLO_HERMANN_VON_SALZA</SoundID>
+			<Filename>Sounds/Diplomacy/Prussia_Hermann_von_Salza</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>DIPLO_JAMES_I</SoundID>
+			<Filename>Sounds/Diplomacy/Aragon_James</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>DIPLO_YAQUB_AL_MANSUR</SoundID>
+			<Filename>Sounds/Diplomacy/Morocco_Yaqub</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>DIPLO_ISMAIL_IBN_SHARIF</SoundID>
+			<Filename>Sounds/Diplomacy/Morocco_Ismail</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>DIPLO_GUSTAV_ADOLF</SoundID>
+			<Filename>Sounds/Diplomacy/Sweden_Gustav_Adolf</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>DIPLO_ROBERT_THE_BRUCE</SoundID>
+			<Filename>Sounds/Diplomacy/Scotland_Robert_the_Bruce</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>DIPLO_HARALD_BLUETOOTH</SoundID>
+			<Filename>Sounds/Diplomacy/Denmark_Harald_Bluetooth</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>DIPLO_MAGNUS_LADULAS</SoundID>
+			<Filename>Sounds/Diplomacy/Sweden_Magnus_Ladulas</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>DIPLO_KARL_XII</SoundID>
+			<Filename>Sounds/Diplomacy/Sweden_Carolus_XII</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>

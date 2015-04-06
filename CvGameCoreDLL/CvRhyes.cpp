@@ -271,9 +271,8 @@ bool MiroBelongToNormal( int iCiv, int x, int y ){
 	return false;
 };
 
-//int getSettlersMaps( int iCiv, int y, int x ){
 int getSettlersMaps( int iCiv, int y, int x, char * w ){
-	if ( settlersMaps == NULL || iCiv >= NUM_MAJOR_PLAYERS ){
+	if ( settlersMaps == NULL || iCiv >= NUM_MAJOR_PLAYERS ){ //fixed value for the Pope and the Independents
 		return 20;
 	}else{
 		if ( (x>=0)&&(x<EARTH_X)&&(y>=0)&&(y<EARTH_Y) ){
@@ -288,7 +287,7 @@ int getSettlersMaps( int iCiv, int y, int x, char * w ){
 	};
 };
 int getWarsMaps( int iCiv, int y, int x, char *w ){
-	if ( settlersMaps == NULL || iCiv >= NUM_MAJOR_PLAYERS ){
+	if ( settlersMaps == NULL || iCiv >= NUM_MAJOR_PLAYERS ){ //fixed value for the Pope and the Independents
 		return 0;
 	}else{
 		if ( (x>=0)&&(x<EARTH_X)&&(y>=0)&&(y<EARTH_Y) ){

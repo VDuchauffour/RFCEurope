@@ -5,18 +5,18 @@ import CvUtil
 import ScreenInput
 import PyHelpers
 import time
-import Consts as con #Rhye
-import XMLConsts as xml
-#import cPickle as pickle #Rhye
-import RFCUtils #Rhye
-import Victory as vic
 import Consts as con
+import XMLConsts as xml
+import RFCUtils
+import Victory as vic
+import UniquePowers
 
 PyPlayer = PyHelpers.PyPlayer
 
 # globals
 
-utils = RFCUtils.RFCUtils() #Rhye
+up = UniquePowers.UniquePowers()
+utils = RFCUtils.RFCUtils()
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
 localText = CyTranslator()
@@ -44,9 +44,10 @@ class CvVictoryScreen:
 		self.UN_RESOLUTION_TAB_ID = "VotingTabWidget"
 		self.UN_MEMBERS_TAB_ID = "MembersTabWidget"
 		self.SPACESHIP_SCREEN_BUTTON = 1234
-                self.UHV1_ID = "UHVCondition1" # 3Miro: UHV condition 1
-                self.UHV2_ID = "UHVCondition2"
-                self.UHV3_ID = "UHVCondition3"
+		# 3Miro: UHV conditions on the Victory Conditions Screen
+		self.UHV1_ID = "UHVCondition1"
+		self.UHV2_ID = "UHVCondition2"
+		self.UHV3_ID = "UHVCondition3"
 
 		self.Z_BACKGROUND = -6.1
 		self.Z_CONTROLS = self.Z_BACKGROUND - 0.2
@@ -66,7 +67,7 @@ class CvVictoryScreen:
 		self.W_AREA = 1010
 		self.H_AREA = 270
 
-		# 3Miro: resize the table to fit the long strings of UHVs (same idea as RFC 1.186
+		# 3Miro: resize the table to fit the long strings of UHVs (same idea as RFC 1.186)
 		#self.TABLE_WIDTH_0 = 350
 		#self.TABLE_WIDTH_1 = 80
 		#self.TABLE_WIDTH_2 = 180
@@ -578,8 +579,7 @@ class CvVictoryScreen:
 
 					bEntriesFound = True
 
-				#if (victory.isConquest()): #Rhye
-                                if (victory.isConquest() and iLoopVC != 7): #Rhye
+				if (victory.isConquest() and iLoopVC != 7): #Rhye
 					iRow = screen.appendTableRow(szTable)
 					screen.setTableText(szTable, 0, iRow, localText.getText("TXT_KEY_VICTORY_SCREEN_ELIMINATE_ALL", ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 					screen.setTableText(szTable, 2, iRow, localText.getText("TXT_KEY_VICTORY_SCREEN_RIVALS_LEFT", ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
@@ -901,7 +901,7 @@ class CvVictoryScreen:
 		screen = self.getScreen()
 		pPlayer = gc.getPlayer(self.iActivePlayer)
 
-                # 3Miro: I don't undestand how strings in C++ and Python work. For some reason, I managed to get C++ to return a unicode strin
+                # 3Miro: I don't undestand how strings in C++ and Python work. For some reason, I managed to get C++ to return a unicode string
                 #        just as it would on another alphabet. I had to "Typecast" the string to ASCII to get it to register in the text manager
 
                 # UHV 1
@@ -917,8 +917,11 @@ class CvVictoryScreen:
                 szUHV1Area = self.UHV1_ID
                 screen.addPanel(self.UHV1_ID, "", "", True, True, self.X_UHV1, self.Y_UHV1, self.W_UHV1, self.H_UHV1, PanelStyles.PANEL_STYLE_MAIN)
 
-                # 3Miro: Add verbose information about the UHV Conditions: Condition 0
+                # 3Miro: Add verbose information about the UHV Conditions:
                 bListProvs = False
+                bDisplayCounter = False
+                bCustomString = False
+
                 if ( self.iActivePlayer == con.iFrankia ):
                         bListProvs = True
                         tProvsToCheck = vic.tFrankControl
@@ -946,6 +949,26 @@ class CvVictoryScreen:
                 elif ( self.iActivePlayer == con.iTurkey ):
                         bListProvs = True
                         tProvsToCheck = vic.tOttomanControlI
+                elif ( self.iActivePlayer == con.iMorocco ):
+                        bListProvs = True
+                        tProvsToCheck = vic.tMoroccoControl
+                elif ( self.iActivePlayer == con.iNovgorod ):
+                        bListProvs = True
+                        tProvsToCheck = vic.tNovgorodControl
+                elif ( self.iActivePlayer == con.iPrussia ):
+                        bListProvs = True
+                        tProvsToCheck = vic.tPrussiaControlI
+                elif ( self.iActivePlayer == con.iAragon ):
+                        bListProvs = True
+                        tProvsToCheck = vic.tAragonControlI
+                elif ( self.iActivePlayer == con.iDenmark ):
+                        bListProvs = True
+                        tProvsToCheck = vic.tDenmarkControlI
+                elif ( self.iActivePlayer == con.iSweden ):
+                        bDisplayCounter = True
+                        iCounter = 0
+                        for iProv in vic.tSwedenControl:
+                                iCounter += gc.getPlayer(con.iSweden).getProvinceCityCount(iProv)
 
                 if ( bListProvs ):
                         sStringConq = localText.getText("TXT_KEY_UHV_CONQUERED",()) + ":"
@@ -960,8 +983,59 @@ class CvVictoryScreen:
                                 else:
                                         sStringConq = sStringConq + "  " + u"<color=0,255,0>%s</color>" %(sProvName)
                         sString = sString + "\n\n" + sStringConq + "\n" + sStringMiss
+                elif ( bDisplayCounter ):
+                        sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_CURRENTLY",()) + ": %d" %(iCounter)
+                if ( bCustomString ):
+                        sString = sString + szCustom
 
-                screen.addMultilineText("Child" + self.UHV1_ID, sString, self.X_UHV1+7, self.Y_UHV1+15, self.W_UHV1-10, self.H_UHV1-10, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		# not on the victory screen yet
+		## Scotland UHV 1: count the forts and castles
+		#if ( self.iActivePlayer == con.iScotland ):
+		#	iCounter = pPlayer.getUHVCounter( 0 )
+		#	iScotlandFort = ( iCounter / 1000 ) % 10
+		#	iScotlandCastle = iCounter % 100
+		#	sScotlandFort = localText.getText("TXT_KEY_IMPROVEMENT_FORT",()) + ": "
+		#	sScotlandCastle = localText.getText("TXT_KEY_BUILDING_CASTLE",()) + ": "
+		#	if ( iScotlandFort >= 12 ):
+		#		sScotlandFort = sScotlandFort + u" <color=0,255,0>%i</color>" %(iScotlandFort)
+		#	elif ( iScotlandFort > 0 ):
+		#		sScotlandFort = sScotlandFort + u" <color=255,250,0>%i</color>" %(iScotlandFort)
+		#	else:
+		#		sScotlandFort = sScotlandFort + u" <color=208,0,0>%i</color>" %(iScotlandFort)
+		#	if ( iScotlandCastle >= 3 ):
+		#		sScotlandCastle = sScotlandCastle + u" <color=0,255,0>%i</color>" %(iScotlandCastle)
+		#	elif ( iScotlandCastle > 0 ):
+		#		sScotlandCastle = sScotlandCastle + u" <color=255,250,0>%i</color>" %(iScotlandCastle)
+		#	else:
+		#		sScotlandCastle = sScotlandCastle + u" <color=208,0,0>%i</color>" %(iScotlandCastle)
+		#	sString = sString + "\n\n" + sScotlandFort + "   " + sScotlandCastle
+
+		# Scotland UHV 1: count the forts and castles
+		if ( self.iActivePlayer == con.iScotland ):
+			iScotlandFort = gc.getPlayer(con.iScotland).getImprovementCount( xml.iImprovementFort )
+			iScotlandCastle = 0
+			apCityList = PyPlayer(con.iScotland).getCityList()
+			for pLoopCity in apCityList:
+				pCity = pLoopCity.GetCy()
+				if(pCity.hasBuilding(xml.iCastle)):
+					iScotlandCastle += 1;
+			sScotlandFort = localText.getText("TXT_KEY_IMPROVEMENT_FORT",()) + ": "
+			sScotlandCastle = localText.getText("TXT_KEY_BUILDING_CASTLE",()) + ": "
+			if ( iScotlandFort >= 12 ):
+				sScotlandFort = sScotlandFort + u" <color=0,255,0>%i</color>" %(iScotlandFort)
+			elif ( iScotlandFort > 0 ):
+				sScotlandFort = sScotlandFort + u" <color=255,250,0>%i</color>" %(iScotlandFort)
+			else:
+				sScotlandFort = sScotlandFort + u" <color=208,0,0>%i</color>" %(iScotlandFort)
+			if ( iScotlandCastle >= 4 ):
+				sScotlandCastle = sScotlandCastle + u" <color=0,255,0>%i</color>" %(iScotlandCastle)
+			elif ( iScotlandCastle > 0 ):
+				sScotlandCastle = sScotlandCastle + u" <color=255,250,0>%i</color>" %(iScotlandCastle)
+			else:
+				sScotlandCastle = sScotlandCastle + u" <color=208,0,0>%i</color>" %(iScotlandCastle)
+			sString = sString + "\n\n" + sScotlandFort + "   " + sScotlandCastle
+
+                screen.addMultilineText("Child" + self.UHV1_ID, sString, self.X_UHV1+6, self.Y_UHV1+14, self.W_UHV1-12, self.H_UHV1-26, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 
                 # UHV 2
                 iGoal = pPlayer.getUHV( 1 )
@@ -977,6 +1051,9 @@ class CvVictoryScreen:
                 screen.addPanel(self.UHV2_ID, "", "", True, True, self.X_UHV2, self.Y_UHV2, self.W_UHV2, self.H_UHV2, PanelStyles.PANEL_STYLE_MAIN)
 
                 bListProvs = False
+                bDisplayCounter = False
+                bCustomString = False
+
                 if ( self.iActivePlayer == con.iByzantium ):
                         bListProvs = True
                         tProvsToCheck = vic.tByzantumControl
@@ -986,18 +1063,48 @@ class CvVictoryScreen:
                 elif ( self.iActivePlayer == con.iKiev ):
                         bListProvs = True
                         tProvsToCheck = vic.tKievControl
+                elif ( self.iActivePlayer == con.iNorway ):
+                        bListProvs = True
+                        tProvsToCheck = vic.tNorwayControl
+                        bCustomString = True
+                        szCustom = "\n"
+                        if (gc.getPlayer(con.iNorway).getNumColonies() >= 1):
+                                szCustom = szCustom + localText.getText("TXT_KEY_PROJECT_VINLAND",()) + ":  " + u"<color=0,255,0>%s</color>" %localText.getText("TXT_KEY_UHV_EXPLORED",())
+                        else:
+                                szCustom = szCustom + localText.getText("TXT_KEY_PROJECT_VINLAND",()) + ":  " + u"<color=208,0,0>%s</color>" %localText.getText("TXT_KEY_UHV_NOT_EXPLORED",())
                 elif ( self.iActivePlayer == con.iBurgundy ):
                         bListProvs = True
                         tProvsToCheck = vic.tBurgundyControl
-                #elif ( self.iActivePlayer == con.iLithuania ):
-                #        bListProvs = True
-                #        tProvsToCheck = vic.tLithuaniaControl
-                elif ( self.iActivePlayer == con.iNorse ):
+                elif ( self.iActivePlayer == con.iNorway ):
                         bListProvs = True
-                        tProvsToCheck = vic.tNorseControl
+                        tProvsToCheck = vic.tNorwayControl
                 elif ( self.iActivePlayer == con.iTurkey ):
                         bListProvs = True
                         tProvsToCheck = vic.tOttomanControlII
+                elif ( self.iActivePlayer == con.iNovgorod ):
+                        bDisplayCounter = True
+                        iCounter = gc.getPlayer(con.iNovgorod).countOwnedBonuses(xml.iFur)
+                elif ( self.iActivePlayer == con.iSweden ):
+                        bDisplayCounter = True
+                        iCounter = gc.getPlayer(con.iSweden).getUHVCounter(1)
+                elif ( self.iActivePlayer == con.iDenmark ):
+                        bListProvs = True
+                        tProvsToCheck = vic.tDenmarkControlIII
+		elif ( self.iActivePlayer == con.iPrussia ):
+			bCustomString = True
+			szCustom = "\n\n"
+			iConqRaw = gc.getPlayer(con.iPrussia).getUHVCounter(1)
+			for iI in range(len(vic.tPrussiaDefeat)):
+				iNumConq = (iConqRaw / pow(10,iI)) % 10
+				pVictim = gc.getPlayer(vic.tPrussiaDefeat[iI])
+				if(iNumConq < 9):
+					szNumConq = " %d" % iNumConq
+				else:
+					szNumConq = ">8"
+				if(iNumConq < 2 and pVictim.isAlive()):
+					szCustom = szCustom + "  " + u"<color=208,0,0>%s:%s</color>" %(pVictim.getCivilizationShortDescription(0), szNumConq)
+				else:
+					szCustom = szCustom + "  " + u"<color=0,255,0>%s:%s</color>" %(pVictim.getCivilizationShortDescription(0), szNumConq)
 
                 if ( bListProvs ):
                         sStringConq = localText.getText("TXT_KEY_UHV_CONQUERED",()) + ":"
@@ -1017,6 +1124,39 @@ class CvVictoryScreen:
                                 sString = sString + "\n\n" + "%i"%iConq + " " + sStringConq + "\n" + sStringMiss
                         else:
                                 sString = sString + "\n\n" + sStringConq + "\n" + sStringMiss
+                elif ( bDisplayCounter ):
+                        sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_CURRENTLY",()) + ": %d" %(iCounter)
+                if ( bCustomString ):
+                        sString = sString + szCustom
+
+		## Aragon UHV 2: count the seaports
+		#if ( self.iActivePlayer == con.iAragon ):
+		#	iSeaports = gc.getPlayer(con.iAragon).getUHVCounter(1)
+		#	sSeaport = localText.getText("TXT_KEY_BUILDING_ARAGON_SEAPORT",()) + ": "
+		#	if ( iSeaports >= 12 ):
+		#		sSeaport = sSeaport + u" <color=0,255,0>%i</color>" %(iSeaports)
+		#	elif ( iSeaports > 5 ):
+		#		sSeaport = sSeaport + u" <color=255,250,0>%i</color>" %(iSeaports)
+		#	else:
+		#		sSeaport = sSeaport + u" <color=208,0,0>%i</color>" %(iSeaports)
+		#	sString = sString + "\n\n" + sSeaport
+
+		# Aragon UHV 2: count the seaports
+		if ( self.iActivePlayer == con.iAragon ):
+			iSeaport = 0
+			apCityList = PyPlayer(con.iAragon).getCityList()
+			for pLoopCity in apCityList:
+				pCity = pLoopCity.GetCy()
+				if(pCity.hasBuilding(xml.iAragonSeaport)):
+					iSeaport += 1;
+			sSeaport = localText.getText("TXT_KEY_BUILDING_ARAGON_SEAPORT",()) + ": "
+			if ( iSeaport >= 12 ):
+				sSeaport = sSeaport + u" <color=0,255,0>%i</color>" %(iSeaport)
+			elif ( iSeaport > 5 ):
+				sSeaport = sSeaport + u" <color=255,250,0>%i</color>" %(iSeaport)
+			else:
+				sSeaport = sSeaport + u" <color=208,0,0>%i</color>" %(iSeaport)
+			sString = sString + "\n\n" + sSeaport
 
                 # The Polish UHV 2: count the cities
                 if ( self.iActivePlayer == con.iPoland ):
@@ -1033,7 +1173,7 @@ class CvVictoryScreen:
                         else:
                                 sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_CITIES_CONTROLLED",()) + u" <color=0,255,0>%i</color>" %(iNumCities)
 
-                screen.addMultilineText("Child" + self.UHV2_ID, sString, self.X_UHV2+7, self.Y_UHV2+15, self.W_UHV2-10, self.H_UHV2-10, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+                screen.addMultilineText("Child" + self.UHV2_ID, sString, self.X_UHV2+6, self.Y_UHV2+14, self.W_UHV2-12, self.H_UHV2-26, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 
                 # UHV 3
                 iGoal = pPlayer.getUHV( 2 )
@@ -1049,13 +1189,34 @@ class CvVictoryScreen:
                 screen.addPanel(self.UHV3_ID, "", "", True, True, self.X_UHV3, self.Y_UHV3, self.W_UHV3, self.H_UHV3, PanelStyles.PANEL_STYLE_MAIN)
 
                 bListProvs = False
+                bDisplayCounter = False
+                bCustomString = False
+
                 if ( self.iActivePlayer == con.iGermany ):
                         bListProvs = True
                         tProvsToCheck = vic.tGermanyControlII
                 elif ( self.iActivePlayer == con.iTurkey ):
                         bListProvs = True
                         tProvsToCheck = vic.tOttomanControlIII
-
+                elif ( self.iActivePlayer == con.iScotland ):
+                        bListProvs = True
+                        tProvsToCheck = vic.tScotlandControl
+                elif ( self.iActivePlayer == con.iAragon ):
+                        bListProvs = True
+                        tProvsToCheck = vic.tAragonControlII
+                elif (self.iActivePlayer == con.iPrussia):
+                        bDisplayCounter = True
+                        pCapital = gc.getPlayer(con.iPrussia).getCapitalCity()
+                        iGPStart = CvUtil.findInfoTypeNum(gc.getSpecialistInfo, gc.getNumSpecialistInfos(), "SPECIALIST_GREAT_PRIEST")
+                        iGPEnd = CvUtil.findInfoTypeNum(gc.getSpecialistInfo, gc.getNumSpecialistInfos(), "SPECIALIST_GREAT_SPY")
+                        iCounter = 0
+                        for iType in range(iGPStart, iGPEnd+1):
+                                iCounter += pCapital.getFreeSpecialistCount(iType)
+                elif (self.iActivePlayer == con.iSweden):
+                        bDisplayCounter = True
+                        iCounter = up.getNumForeignCitiesOnBaltic(con.iSweden)
+                        bCustomString = True
+                        szCustom = " " + localText.getText("TXT_KEY_UHV_BALTIC_CITIES",())
 
                 if ( bListProvs ):
                         sStringConq = localText.getText("TXT_KEY_UHV_CONQUERED",()) + ":"
@@ -1070,8 +1231,12 @@ class CvVictoryScreen:
                                 else:
                                         sStringConq = sStringConq + "  " + u"<color=0,255,0>%s</color>" %(sProvName)
                         sString = sString + "\n\n" + sStringConq + "\n" + sStringMiss
+                elif ( bDisplayCounter ):
+                        sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_CURRENTLY",()) + ": %d" %(iCounter)
+                if ( bCustomString ):
+                        sString = sString + szCustom
 
-                # The Polish UHV 3: count cathedrals and quarters
+                # Polish UHV 3: count cathedrals and quarters
                 if ( self.iActivePlayer == con.iPoland ):
                         iCounter = pPlayer.getUHVCounter( 2 )
                         iCathCath = ( iCounter / 10000 ) % 10
@@ -1185,5 +1350,5 @@ class CvVictoryScreen:
                         else:
                                 sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_RICHEST_NATION",()) + u" <color=208,0,0>%s</color>" %(pPlayer.getName()) + " (%d)" %pPlayer.getGold()
 
-                screen.addMultilineText("Child" + self.UHV3_ID, sString, self.X_UHV3+7, self.Y_UHV3+15, self.W_UHV3-10, self.H_UHV3-10, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+                screen.addMultilineText("Child" + self.UHV3_ID, sString, self.X_UHV3+6, self.Y_UHV3+14, self.W_UHV3-12, self.H_UHV3-26, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 

@@ -40,16 +40,22 @@ iArabia = con.iArabia
 iBulgaria = con.iBulgaria
 iCordoba = con.iCordoba
 iSpain = con.iSpain
-iNorse = con.iNorse
+iNorway = con.iNorway
+iDenmark = con.iDenmark
 iVenecia = con.iVenecia
+iNovgorod = con.iNovgorod
 iKiev = con.iKiev
 iHungary = con.iHungary
 iGermany = con.iGermany
+iScotland = con.iScotland
 iPoland = con.iPoland
 iMoscow = con.iMoscow
 iGenoa = con.iGenoa
+iMorocco = con.iMorocco
 iEngland = con.iEngland
 iPortugal = con.iPortugal
+iAragon = con.iAragon
+iPrussia = con.iPrussia
 iLithuania = con.iLithuania
 iAustria = con.iAustria
 iTurkey = con.iTurkey
@@ -73,22 +79,28 @@ pArabia = gc.getPlayer(iArabia)
 pBulgaria = gc.getPlayer(iBulgaria)
 pCordoba = gc.getPlayer(iCordoba)
 pSpain = gc.getPlayer(iSpain)
-pNorse = gc.getPlayer(iNorse)
+pNorway = gc.getPlayer(iNorway)
+pDenmark = gc.getPlayer(iDenmark)
 pVenecia = gc.getPlayer(iVenecia)
+pNovgorod = gc.getPlayer(iNovgorod)
 pKiev = gc.getPlayer(iKiev)
 pHungary = gc.getPlayer(iHungary)
 pGermany = gc.getPlayer(iGermany)
+pScotland = gc.getPlayer(iScotland)
 pPoland = gc.getPlayer(iPoland)
 pMoscow = gc.getPlayer(iMoscow)
 pGenoa = gc.getPlayer(iGenoa)
+pMorocco = gc.getPlayer(iMorocco)
 pEngland = gc.getPlayer(iEngland)
 pPortugal = gc.getPlayer(iPortugal)
+pAragon = gc.getPlayer(iAragon)
+pPrussia = gc.getPlayer(iPrussia)
 pLithuania = gc.getPlayer(iLithuania)
 pAustria = gc.getPlayer(iAustria)
 pTurkey = gc.getPlayer(iTurkey)
 pSweden = gc.getPlayer(iSweden)
 pDutch = gc.getPlayer(iDutch)
-pPope = gc.getPlayer( iPope )
+pPope = gc.getPlayer(iPope)
 pIndependent = gc.getPlayer(iIndependent)
 pIndependent2 = gc.getPlayer(iIndependent2)
 pIndependent3 = gc.getPlayer(iIndependent3)
@@ -102,16 +114,22 @@ teamArabia = gc.getTeam(pArabia.getTeam())
 teamBulgaria = gc.getTeam(pBulgaria.getTeam())
 teamCordoba = gc.getTeam(pCordoba.getTeam())
 teamSpain = gc.getTeam(pSpain.getTeam())
-teamNorse = gc.getTeam(pNorse.getTeam())
+teamNorway = gc.getTeam(pNorway.getTeam())
+teamDenmark = gc.getTeam(pDenmark.getTeam())
 teamVenecia = gc.getTeam(pVenecia.getTeam())
+teamNovgorod = gc.getTeam(pNovgorod.getTeam())
 teamKiev = gc.getTeam(pKiev.getTeam())
 teamHungary = gc.getTeam(pHungary.getTeam())
 teamGermany = gc.getTeam(pGermany.getTeam())
+teamScotland = gc.getTeam(pScotland.getTeam())
 teamPoland = gc.getTeam(pPoland.getTeam())
 teamMoscow = gc.getTeam(pMoscow.getTeam())
 teamGenoa = gc.getTeam(pGenoa.getTeam())
+teamMorocco = gc.getTeam(pMorocco.getTeam())
 teamEngland = gc.getTeam(pEngland.getTeam())
 teamPortugal = gc.getTeam(pPortugal.getTeam())
+teamAragon = gc.getTeam(pAragon.getTeam())
+teamPrussia = gc.getTeam(pPrussia.getTeam())
 teamLithuania = gc.getTeam(pLithuania.getTeam())
 teamAustria = gc.getTeam(pAustria.getTeam())
 teamTurkey = gc.getTeam(pTurkey.getTeam())
@@ -125,6 +143,7 @@ teamIndependent4 = gc.getTeam(pIndependent4.getTeam())
 teamBarbarian = gc.getTeam(pBarbarian.getTeam())
 
 
+#This is now obsolete
 #for not allowing new civ popup if too close
 #Sedna17, moving around the order in which civs rise without changing their WBS requires you to do funny things here to prevent "Change Civ?" popups
 #Spain and Moscow have really long delays for this reason
@@ -639,20 +658,26 @@ class RiseAndFall:
                 pBulgaria.changeGold(100)
                 pCordoba.changeGold(200)
                 pSpain.changeGold(500)
-                pNorse.changeGold(200)
+                pNorway.changeGold( 250 )
+                pDenmark.changeGold( 300 )
                 pVenecia.changeGold(300)
+                pNovgorod.changeGold(400)
                 pKiev.changeGold(250)
                 pHungary.changeGold(300)
                 pGermany.changeGold(300)
+                pScotland.changeGold(300)
                 pPoland.changeGold(300)
+                pPrussia.changeGold(300)
                 pLithuania.changeGold(400)
                 pMoscow.changeGold(400)
                 pGenoa.changeGold(400)
+                pMorocco.changeGold(400)
                 pEngland.changeGold(400)
                 pPortugal.changeGold(450)
+                pAragon.changeGold(450)
                 pAustria.changeGold(1000)
                 pTurkey.changeGold(1000)
-                pSweden.changeGold(1000)
+                pSweden.changeGold(400)
                 pDutch.changeGold(1500)
                 pIndependent.changeGold(50)
                 pIndependent2.changeGold(50)
@@ -681,7 +706,7 @@ class RiseAndFall:
 	### 3Miro Province Related Functions ###
 	def onCityBuilt(self, iPlayer, pCity):
 		self.pm.onCityBuilt (iPlayer, pCity.getX(), pCity.getY())
-		# "prebuilt" walls
+		# Absinthe: "prebuilt" walls
 		if ( (pCity.getX()==56) and (pCity.getY()==35) ): #Early defense boost to Venice, the rivers alone are not enough
 			pCity.setHasRealBuilding( xml.iWalls, True )
 		if ( (pCity.getX()==55) and (pCity.getY()==41) ): #Augsburg
@@ -850,8 +875,9 @@ class RiseAndFall:
                 # 3Miro: this should not be called with high iNumDeadCivs*
                 # Sedna: This is one place to control the frequency of resurrection.
                 # Generally we want to allow Kiev, Bulgaria, Cordoba, Burgundy, Byzantium at least to be dead in late game without respawning.
-                iNumDeadCivs1 = 12 #5 in vanilla, 8 in warlords (that includes native and celt)
-                iNumDeadCivs2 = 8 #3 in vanilla, 6 in Warlords: here we must count natives and celts as dead too
+                # Absinthe: 12 and 8 seems a little much, even with the new civs
+                iNumDeadCivs1 = 10 #5 in vanilla RFC, 8 in warlords RFC (that includes native and celt)
+                iNumDeadCivs2 = 7 #3 in vanilla RFC, 6 in Warlords RFC (where we must count natives and celts as dead too)
 
 
                 iCiv = self.getSpecialRespawn( iGameTurn )
@@ -886,15 +912,23 @@ class RiseAndFall:
                 #                                gc.getPlayer(iPlayer).setLeader(tLateLeaders[iPlayer][0])
                 #                                print ("leader late switch:", tLateLeaders[iPlayer][0], "in civ", iPlayer)
 
-                if (len(tLeaders[iPlayer]) > 1):
-                        if (len(tLateLeaders[iPlayer]) > 5):
-                                if (iGameTurn >= tLateLeaders[iPlayer][5]):
-                                        self.switchLateLeaders(iPlayer, 4)
-                                elif (iGameTurn >= tLateLeaders[iPlayer][1]):
-                                        self.switchLateLeaders(iPlayer, 0)
-                        else:
-                                if (iGameTurn >= tLateLeaders[iPlayer][1]):
-                                        self.switchLateLeaders(iPlayer, 0)
+		if (len(tLeaders[iPlayer]) > 1):
+			if (len(tLateLeaders[iPlayer]) > 5):
+				if (len(tLateLeaders[iPlayer]) > 9):
+					if (iGameTurn >= tLateLeaders[iPlayer][9]):
+						self.switchLateLeaders(iPlayer, 8)
+					elif (iGameTurn >= tLateLeaders[iPlayer][5]):
+						self.switchLateLeaders(iPlayer, 4)
+					elif (iGameTurn >= tLateLeaders[iPlayer][1]):
+						self.switchLateLeaders(iPlayer, 0)
+				else:
+					if (iGameTurn >= tLateLeaders[iPlayer][5]):
+						self.switchLateLeaders(iPlayer, 4)
+					elif (iGameTurn >= tLateLeaders[iPlayer][1]):
+						self.switchLateLeaders(iPlayer, 0)
+			else:
+				if (iGameTurn >= tLateLeaders[iPlayer][1]):
+					self.switchLateLeaders(iPlayer, 0)
 
                 # 3Miro: English cheat, the AI is utterly incompetent when it has to launch an invasion on an island
                 #        if in 1300AD Dublin is still Barbarian, it will flip to England
@@ -1249,7 +1283,7 @@ class RiseAndFall:
         def suppressResurection( self, iDeadCiv ):
                 lSuppressList = self.getRebelSuppress()
                 lCityList = self.getRebelCities()
-                lCityCount = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+                lCityCount = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
 
                 for iCity in range( len( lCityList ) ):
                         iOwner = gc.getMap().plot( lCityList[iCity][0], lCityList[iCity][1] ).getPlotCity().getOwner()
@@ -1995,18 +2029,14 @@ class RiseAndFall:
                         # special respawn as the Hafsid dynasty in North Africa
                         if ( iGameTurn > xml.i1229AD and iGameTurn < xml.i1540AD and iGameTurn % 5 == 3 ):
                                 return iCordoba
-                if ( (not pNorse.isAlive()) and (not pNorse.getRespawned()) and iGameTurn > con.tBirth[iNorse] + 25 and iGameTurn > utils.getLastTurnAlive(iNorse) + 20 ):
-                        # respawn as the Kalmar Union
-                        if ( iGameTurn > xml.i1393AD and iGameTurn < xml.i1500AD and iGameTurn % 5 == 2 ):
-                                return iNorse
                 if ( (not pBurgundy.isAlive()) and (not pBurgundy.getRespawned()) and iGameTurn > con.tBirth[iBurgundy] + 25 and iGameTurn > utils.getLastTurnAlive(iBurgundy) + 20 ):
                         # Burgundy in the 100 years war
                         if ( iGameTurn > xml.i1336AD and iGameTurn < xml.i1453AD and iGameTurn % 8 == 1 ):
                                 return iBurgundy
-                if ( (not pGermany.isAlive()) and (not pGermany.getRespawned()) and iGameTurn > con.tBirth[iGermany] + 25 and iGameTurn > utils.getLastTurnAlive(iGermany) + 10 ):
-                        # respawn as Prussia
-                        if ( iGameTurn > xml.i1700AD and iGameTurn % 3 == 1 ):
-                                return iGermany
+                if ( (not pPrussia.isAlive()) and (not pPrussia.getRespawned()) and iGameTurn > con.tBirth[iPrussia] + 25 and iGameTurn > utils.getLastTurnAlive(iPrussia) + 10 ):
+                        # respawn as the unified Prussia
+                        if ( iGameTurn > xml.i1618AD and iGameTurn % 3 == 1 ):
+                                return iPrussia
                 if ( (not pHungary.isAlive()) and (not pHungary.getRespawned()) and iGameTurn > con.tBirth[iHungary] + 25 and iGameTurn > utils.getLastTurnAlive(iHungary) + 10 ):
                         # reconquest of Buda from the Ottomans
                         if ( iGameTurn > xml.i1680AD and iGameTurn % 6 == 2 ):
@@ -2019,6 +2049,9 @@ class RiseAndFall:
                         # restoration of monarchy
                         if ( iGameTurn > xml.i1660AD and iGameTurn % 6 == 2 ):
                                 return iEngland
+                if ( (not pScotland.isAlive()) and (not pScotland.getRespawned()) and iGameTurn > con.tBirth[iScotland] + 25 and iGameTurn > utils.getLastTurnAlive(iScotland) + 30 ):
+                        if ( iGameTurn <= xml.i1600AD and iGameTurn % 6 == 3 ):
+                                return iScotland
                 if ( (not pPortugal.isAlive()) and (not pPortugal.getRespawned()) and iGameTurn > con.tBirth[iPortugal] + 25 and iGameTurn > utils.getLastTurnAlive(iPortugal) + 10 ):
                         # respawn to be around for colonies
                         if ( iGameTurn > xml.i1431AD and iGameTurn < xml.i1580AD and iGameTurn % 5 == 3 ):
@@ -2027,6 +2060,24 @@ class RiseAndFall:
                         # increasing Habsburg influence in Hungary
                         if ( iGameTurn > xml.i1526AD and iGameTurn < xml.i1690AD and iGameTurn % 8 == 3 ):
                                 return iAustria
+                if ( (not pKiev.isAlive()) and (not pKiev.getRespawned()) and iGameTurn > con.tBirth[iKiev] + 25 and iGameTurn > utils.getLastTurnAlive(iKiev) + 10 ):
+                        # Cossack Hetmanate
+                        if ( iGameTurn >= xml.i1620AD and iGameTurn < xml.i1750AD and iGameTurn % 5 == 3 ):
+                                return iKiev
+                if ( (not pMorocco.isAlive()) and (not pMorocco.getRespawned()) and iGameTurn > con.tBirth[iMorocco] + 25 and iGameTurn > utils.getLastTurnAlive(iMorocco) + 10 ):
+                        # Alaouite Dynasty
+                        if ( iGameTurn > xml.i1631AD and iGameTurn % 8 == 7 ):
+                                return iMorocco
+                if ( (not pAragon.isAlive()) and (not pAragon.getRespawned()) and iGameTurn > con.tBirth[iAragon] + 25 and iGameTurn > utils.getLastTurnAlive(iAragon) + 10 ):
+                        # Kingdom of Sicily
+                        if ( iGameTurn > xml.i1700AD and iGameTurn % 8 == 7 ):
+                                return iAragon
+                if ( (not pVenecia.isAlive()) and (not pVenecia.getRespawned()) and iGameTurn > con.tBirth[iVenecia] + 25 and iGameTurn > utils.getLastTurnAlive(iVenecia) + 10 ):
+                        if ( iGameTurn > xml.i1401AD and iGameTurn < xml.i1571AD and iGameTurn % 8 == 7 ):
+                                return iVenecia
+                if ( (not pPoland.isAlive()) and (not pPoland.getRespawned()) and iGameTurn > con.tBirth[iPoland] + 25 and iGameTurn > utils.getLastTurnAlive(iPoland) + 10 ):
+                        if ( iGameTurn > xml.i1410AD and iGameTurn < xml.i1570AD and iGameTurn % 8 == 7 ):
+                                return iPoland
                 if ( (not pTurkey.isAlive()) and (not pTurkey.getRespawned()) and iGameTurn > con.tBirth[iTurkey] + 25 and iGameTurn > utils.getLastTurnAlive(iTurkey) + 10 ):
                         # Mehmed II's conquests
                         if ( iGameTurn > xml.i1453AD and iGameTurn < xml.i1514AD and iGameTurn % 6 == 3 ):
@@ -2101,34 +2152,46 @@ class RiseAndFall:
                         utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
                 if ( iCiv == iSpain ):
                         utils.makeUnit(xml.iLancer, iCiv, tPlot, 2)
-                if ( iCiv == iNorse ):
-                        utils.makeUnit(xml.iVikingBeserker, iCiv, tPlot, 2)
+                if ( iCiv == iNorway ):
+                        utils.makeUnit(xml.iVikingBeserker, iCiv, tPlot, 4)
+                if ( iCiv == iDenmark ):
+                        utils.makeUnit(xml.iHuscarl, iCiv, tPlot, 3)
                 if ( iCiv == iVenecia ):
                         utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
+                if ( iCiv == iNovgorod ):
+                        utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
                 if ( iCiv == iKiev ):
                         utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 3)
                 if ( iCiv == iHungary ):
-                        utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 3)
+                        utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 4)
                 if ( iCiv == iGermany ):
                         utils.makeUnit(xml.iLancer, iCiv, tPlot, 2)
+                if ( iCiv == iScotland ):
+                        utils.makeUnit(xml.iAxeman, iCiv, tPlot, 3)
                 if ( iCiv == iPoland ):
                         utils.makeUnit(xml.iLancer, iCiv, tPlot, 3)
                 if ( iCiv == iMoscow ):
                         utils.makeUnit(xml.iMoscowBoyar, iCiv, tPlot, 2)
                 if ( iCiv == iGenoa ):
                         utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 2)
+                if ( iCiv == iMorocco ):
+                        utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 3)
                 if ( iCiv == iEngland ):
                         utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 3)
                 if ( iCiv == iPortugal ):
                         utils.makeUnit(xml.iPortugalFootKnight, iCiv, tPlot, 3)
+                if ( iCiv == iAragon ):
+                        utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 4)
+                if ( iCiv == iPrussia ):
+                        utils.makeUnit(xml.iTeutonic, iCiv, tPlot, 3)
                 if ( iCiv == iLithuania ):
                         utils.makeUnit(xml.iLithuanianBajoras, iCiv, tPlot, 2)
                 if ( iCiv == iAustria ):
                         utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 3)
                 if ( iCiv == iTurkey ):
-                        utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 3)
                 if ( iCiv == iSweden ):
-                        utils.makeUnit(xml.iSwedishKarolin, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 3)
                 if ( iCiv == iDutch ):
                         utils.makeUnit(xml.iNetherlandsGrenadier, iCiv, tPlot, 2)
 
@@ -2163,18 +2226,31 @@ class RiseAndFall:
                         utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 3)
                         utils.makeUnit(xml.iLancer, iCiv, tPlot, 3)
                         utils.makeUnit(xml.iCatapult, iCiv, tPlot, 1)
-                if (iCiv == iNorse):
+                if (iCiv == iNorway):
                         utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
-                        utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
-                        utils.makeUnit(xml.iVikingBeserker, iCiv, tPlot, 3)
+                        utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iVikingBeserker, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 1)
                         tSeaPlot = self.findSeaPlots(tPlot, 2)
                         if ( tSeaPlot ):
-                                pNorse.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
-                                pNorse.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ESCORT_SEA, DirectionTypes.DIRECTION_SOUTH)
-                                pNorse.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ESCORT_SEA, DirectionTypes.DIRECTION_SOUTH)
+                                pNorway.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
+                                pNorway.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ESCORT_SEA, DirectionTypes.DIRECTION_SOUTH)
+                                pNorway.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ESCORT_SEA, DirectionTypes.DIRECTION_SOUTH)
                                 utils.makeUnit(xml.iSettler, iCiv, tSeaPlot, 1 )
                                 utils.makeUnit(xml.iArcher, iCiv, tSeaPlot, 1 )
+                if (iCiv == iDenmark):
+                        utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
+                        utils.makeUnit(xml.iHuscarl, iCiv, tPlot, 3)
+                        tSeaPlot = self.findSeaPlots((61,55), 2)
+                        if ( tSeaPlot ):
+                                pDenmark.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
+                                pDenmark.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ESCORT_SEA, DirectionTypes.DIRECTION_SOUTH)
+                                pDenmark.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ESCORT_SEA, DirectionTypes.DIRECTION_SOUTH)
+                                utils.makeUnit(xml.iSettler, iCiv, tSeaPlot, 1 )
+                                utils.makeUnit(xml.iCrossbowman, iCiv, tSeaPlot, 1 )
+                                utils.makeUnit(xml.iSettler, iCiv, tSeaPlot, 1 )
+                                utils.makeUnit(xml.iCrossbowman, iCiv, tSeaPlot, 1 )
                 if (iCiv == iVenecia):
                         utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
@@ -2185,11 +2261,15 @@ class RiseAndFall:
                                 pVenecia.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
                                 pVenecia.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ESCORT_SEA, DirectionTypes.DIRECTION_SOUTH)
                                 utils.makeUnit(xml.iSettler,iCiv,tSeaPlot,1)
-                                # 3Miro: Added one more settler for Venice, to see if this helps them
                                 utils.makeUnit(xml.iArcher,iCiv,tSeaPlot,1)
                                 pVenecia.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ESCORT_SEA, DirectionTypes.DIRECTION_SOUTH)
                                 utils.makeUnit(xml.iSettler,iCiv,tSeaPlot,1)
                                 utils.makeUnit(xml.iCrossbowman,iCiv,tSeaPlot,1)
+                if (iCiv == iNovgorod):
+                        utils.makeUnit(xml.iArcher, iCiv, tPlot, 3)
+                        utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iAxeman, iCiv, tPlot, 1)
+                        utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 1)
                 if (iCiv == iKiev):
                         utils.makeUnit(xml.iArcher, iCiv, tPlot, 4)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
@@ -2205,6 +2285,11 @@ class RiseAndFall:
                         utils.makeUnit(xml.iAxeman, iCiv, tPlot, 3)
                         utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 3)
                         utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
+                if (iCiv == iScotland):
+                        utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
+                        utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
                 if (iCiv == iPoland):
                         utils.makeUnit(xml.iArcher, iCiv, tPlot, 4)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
@@ -2229,6 +2314,12 @@ class RiseAndFall:
                                 utils.makeUnit(xml.iSettler,iCiv,tSeaPlot,1)
                                 utils.makeUnit(xml.iCrossbowman,iCiv,tSeaPlot,1)
                                 utils.makeUnit(xml.iWorkboat, iCiv, tSeaPlot, 1 )
+                if (iCiv == iMorocco):
+                        utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iMaceman, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 4)
+                        utils.makeUnit(xml.iIslamicMissionary, iCiv, tPlot, 1)
                 if (iCiv == iEngland):
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iLongSwordsman, iCiv, tPlot, 2)
@@ -2245,6 +2336,26 @@ class RiseAndFall:
                         utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iGuisarme, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 1)
+                if (iCiv == iAragon):
+                        utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iAlmogavar, iCiv, tPlot, 5)
+                        utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
+                        # Look for a sea plot by the coast (not by the starting point)
+                        tSeaPlot = self.findSeaPlots((38,29), 2)
+                        if ( tSeaPlot ):
+                                pAragon.initUnit(xml.iWarGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ESCORT_SEA, DirectionTypes.DIRECTION_SOUTH)
+                                pAragon.initUnit(xml.iCogge, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
+                                utils.makeUnit(xml.iSettler,iCiv,tSeaPlot,1)
+                                utils.makeUnit(xml.iCrossbowman,iCiv,tSeaPlot,1)
+                                utils.makeUnit(xml.iWorkboat, iCiv, tSeaPlot, 1 )
+                if (iCiv == iPrussia):
+                        utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iTeutonic, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iTrebuchet, iCiv, tPlot, 1)
+                        utils.makeUnit(xml.iExecutive3, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 3)
                 if (iCiv == iLithuania):
                         utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 4)
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
@@ -2268,15 +2379,19 @@ class RiseAndFall:
                         utils.makeUnit(xml.iTurkeyGreatBombard, iCiv, tPlot, 2)
                         utils.makeUnit(xml.iIslamicMissionary, iCiv, tPlot, 4)
                 if (iCiv == iSweden):
-                        utils.makeUnit(xml.iSwedishKarolin, iCiv, tPlot, 5)
-                        utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
-                        utils.makeUnit(xml.iKnight, iCiv, tPlot, 2)
-                        utils.makeUnit(xml.iLongbowman, iCiv, tPlot, 4)
-                        tSeaPlot = self.findSeaPlots(tPlot, 2)
+                        utils.makeUnit(xml.iLongSwordsman, iCiv, tPlot, 3)
+                        utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 2)
+                        utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
+                        utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 4)
+                        utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
+                        tSeaPlot = self.findSeaPlots((71,64), 2)
                         if ( tSeaPlot ):
                                 utils.makeUnit(xml.iWorkboat, iCiv, tSeaPlot, 1 )
-                                utils.makeUnit(xml.iCarrack, iCiv, tSeaPlot, 1 )
-                                utils.makeUnit(xml.iGalleon, iCiv, tSeaPlot, 1 )
+                                pSweden.initUnit(xml.iWarGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ESCORT_SEA, DirectionTypes.DIRECTION_SOUTH)
+                                pSweden.initUnit(xml.iCogge, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
+                                pSweden.initUnit(xml.iCogge, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
+                                utils.makeUnit(xml.iSettler,iCiv,tSeaPlot,1)
+                                utils.makeUnit(xml.iCrossbowman,iCiv,tSeaPlot,1)
                 if (iCiv == iDutch):
                         #print(" 3Miro: make Dutch Units in Plot ",tPlot )
                         utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
@@ -2357,13 +2472,21 @@ class RiseAndFall:
                         utils.makeUnit(iSettler, iSpain, tCapitals[iSpain], 1)
                         utils.makeUnit(iSpearman, iSpain, tCapitals[iSpain], 1)
 
-                if ( pNorse.isHuman() and tBirth[iNorse] > 0 ):
-                        utils.makeUnit(iSettler, iNorse, tCapitals[iNorse], 1)
-                        utils.makeUnit(iSpearman, iNorse, tCapitals[iNorse], 1)
+                if ( pNorway.isHuman() and tBirth[iNorway] > 0 ):
+                        utils.makeUnit(iSettler, iNorway, tCapitals[iNorway], 1)
+                        utils.makeUnit(iSpearman, iNorway, tCapitals[iNorway], 1)
+
+                if ( pDenmark.isHuman() and tBirth[iDenmark] > 0 ):
+                        utils.makeUnit(iSettler, iDenmark, tCapitals[iDenmark], 1)
+                        utils.makeUnit(iSpearman, iDenmark, tCapitals[iDenmark], 1)
 
                 if ( pVenecia.isHuman() and tBirth[iVenecia] > 0 ):
                         utils.makeUnit(iSettler, iVenecia, tCapitals[iVenecia], 1)
                         utils.makeUnit(iSpearman, iVenecia, tCapitals[iVenecia], 1)
+
+                if ( pNovgorod.isHuman() and tBirth[iNovgorod] > 0 ):
+                        utils.makeUnit(iSettler, iNovgorod, tCapitals[iNovgorod], 1)
+                        utils.makeUnit(iSpearman, iNovgorod, tCapitals[iNovgorod], 1)
 
                 if ( pKiev.isHuman() and tBirth[iKiev] > 0 ):
                         utils.makeUnit(iSettler, iKiev, tCapitals[iKiev], 1)
@@ -2377,6 +2500,10 @@ class RiseAndFall:
                         utils.makeUnit(iSettler, iGermany, tCapitals[iGermany], 1)
                         utils.makeUnit(iSpearman, iGermany, tCapitals[iGermany], 1)
 
+                if ( pScotland.isHuman() and tBirth[iScotland] > 0 ):
+                        utils.makeUnit(iSettler, iScotland, tCapitals[iScotland], 1)
+                        utils.makeUnit(iSpearman, iScotland, tCapitals[iScotland], 1)
+
                 if ( pPoland.isHuman() and tBirth[iPoland] > 0 ):
                         utils.makeUnit(iSettler, iPoland, tCapitals[iPoland], 1)
                         utils.makeUnit(iSpearman, iPoland, tCapitals[iPoland], 1)
@@ -2389,6 +2516,10 @@ class RiseAndFall:
                         utils.makeUnit(iSettler, iGenoa, tCapitals[iGenoa], 1)
                         utils.makeUnit(iSpearman, iGenoa, tCapitals[iGenoa], 1)
 
+                if ( pMorocco.isHuman() and tBirth[iMorocco] > 0 ):
+                        utils.makeUnit(iSettler, iMorocco, tCapitals[iMorocco], 1)
+                        utils.makeUnit(iSpearman, iMorocco, tCapitals[iMorocco], 1)
+
                 if ( pEngland.isHuman() and tBirth[iEngland] > 0 ):
                         utils.makeUnit(iSettler, iEngland, tCapitals[iEngland], 1)
                         utils.makeUnit(xml.iSwordsman, iEngland, tCapitals[iEngland], 1)
@@ -2396,6 +2527,14 @@ class RiseAndFall:
                 if ( pPortugal.isHuman() and tBirth[iPortugal] > 0 ):
                         utils.makeUnit(iSettler, iPortugal, tCapitals[iPortugal], 1)
                         utils.makeUnit(xml.iSwordsman, iPortugal, tCapitals[iPortugal], 1)
+
+                if ( pAragon.isHuman() and tBirth[iAragon] > 0 ):
+                        utils.makeUnit(iSettler, iAragon, tCapitals[iAragon], 1)
+                        utils.makeUnit(xml.iSwordsman, iAragon, tCapitals[iAragon], 1)
+
+                if ( pPrussia.isHuman() and tBirth[iPrussia] > 0 ):
+                        utils.makeUnit(iSettler, iPrussia, tCapitals[iPrussia], 1)
+                        utils.makeUnit(xml.iSwordsman, iPrussia, tCapitals[iPrussia], 1)
 
                 if ( pLithuania.isHuman() and tBirth[iLithuania] > 0 ):
                         utils.makeUnit(iSettler, iLithuania, tCapitals[iLithuania], 1)
@@ -2412,7 +2551,7 @@ class RiseAndFall:
 
                 if ( pSweden.isHuman() and tBirth[iSweden] > 0 ):
                         utils.makeUnit(iSettler, iSweden, tCapitals[iSweden], 1)
-                        utils.makeUnit(xml.iMaceman, iSweden, tCapitals[iSweden], 1)
+                        utils.makeUnit(xml.iSwordsman, iSweden, tCapitals[iSweden], 1)
 
                 if ( pDutch.isHuman() and tBirth[iDutch] > 0 ):
                         utils.makeUnit(iSettler, iDutch, tCapitals[iDutch], 1)
@@ -2489,14 +2628,44 @@ class RiseAndFall:
                         teamSpain.setHasTech( xml.iMachinery, True, iCiv, False, False )
                         teamSpain.setHasTech( xml.iFeudalism, True, iCiv, False, False )
                         teamSpain.setHasTech( xml.iChainMail, True, iCiv, False, False )
-                        teamSpain.setHasTech( xml.iBlastFurnace, True, iCiv, False, False )
 
-                if ( iCiv == iNorse ):
-                        for iTech in range( xml.iStirrup ):
-                                teamNorse.setHasTech( iTech, True, iCiv, False, False )
-                        teamNorse.setHasTech( xml.iVassalage, True, iCiv, False, False )
-                        teamNorse.setHasTech( xml.iTheology, False, iCiv, False, False )
-                        teamNorse.setHasTech( xml.iAstrolabe, True, iCiv, False, False )
+                if ( iCiv == iScotland ):
+                        for iTech in range( xml.iStirrup + 1 ):
+                                teamScotland.setHasTech( iTech, True, iCiv, False, False )
+                        teamScotland.setHasTech( xml.iLateenSails, True, iCiv, False, False )
+                        teamScotland.setHasTech( xml.iAstrolabe, True, iCiv, False, False )
+                        teamScotland.setHasTech( xml.iMonasticism, True, iCiv, False, False )
+                        teamScotland.setHasTech( xml.iMusic, True, iCiv, False, False )
+                        teamScotland.setHasTech( xml.iHerbalMedicine, True, iCiv, False, False )
+                        teamScotland.setHasTech( xml.iVassalage, True, iCiv, False, False )
+                        teamScotland.setHasTech( xml.iEngineering, True, iCiv, False, False )
+                        teamScotland.setHasTech( xml.iMachinery, True, iCiv, False, False )
+                        teamScotland.setHasTech( xml.iFeudalism, True, iCiv, False, False )
+                        teamScotland.setHasTech( xml.iChainMail, True, iCiv, False, False )
+                        teamScotland.setHasTech( xml.iAristocracy, True, iCiv, False, False )
+
+                if ( iCiv == iNorway ):
+                        for iTech in range( xml.iStirrup + 1):
+                                teamNorway.setHasTech( iTech, True, iCiv, False, False )
+                        teamNorway.setHasTech( xml.iMonasticism, True, iCiv, False, False )
+                        teamNorway.setHasTech( xml.iVassalage, True, iCiv, False, False )
+                        teamNorway.setHasTech( xml.iAstrolabe, True, iCiv, False, False )
+                        teamNorway.setHasTech( xml.iFarriers, True, iCiv, False, False )
+                        teamNorway.setHasTech( xml.iChainMail, True, iCiv, False, False )
+                        teamNorway.setHasTech( xml.iHerbalMedicine, True, iCiv, False, False )
+
+                if ( iCiv == iDenmark ):
+                        for iTech in range( xml.iStirrup + 1):
+                                teamDenmark.setHasTech( iTech, True, iCiv, False, False )
+                        teamDenmark.setHasTech( xml.iMonasticism, True, iCiv, False, False )
+                        teamDenmark.setHasTech( xml.iVassalage, True, iCiv, False, False )
+                        teamDenmark.setHasTech( xml.iFeudalism, True, iCiv, False, False )
+                        teamDenmark.setHasTech( xml.iAristocracy, True, iCiv, False, False )
+                        teamDenmark.setHasTech( xml.iCodeOfLaws, True, iCiv, False, False )
+                        teamDenmark.setHasTech( xml.iAstrolabe, True, iCiv, False, False )
+                        teamDenmark.setHasTech( xml.iFarriers, True, iCiv, False, False )
+                        teamDenmark.setHasTech( xml.iChainMail, True, iCiv, False, False )
+                        teamDenmark.setHasTech( xml.iHerbalMedicine, True, iCiv, False, False )
 
                 if ( iCiv == iVenecia ):
                         for iTech in range( xml.iStirrup + 1 ):
@@ -2510,6 +2679,15 @@ class RiseAndFall:
                         teamVenecia.setHasTech( xml.iCodeOfLaws, True, iCiv, False, False )
                         teamVenecia.setHasTech( xml.iChainMail, True, iCiv, False, False )
 
+                if ( iCiv == iNovgorod ):
+                        for iTech in range( xml.iStirrup + 1 ):
+                                teamNovgorod.setHasTech( iTech, True, iCiv, False, False )
+                        teamNovgorod.setHasTech( xml.iMonasticism, True, iCiv, False, False )
+                        teamNovgorod.setHasTech( xml.iVassalage, True, iCiv, False, False )
+                        teamNovgorod.setHasTech( xml.iFeudalism, True, iCiv, False, False )
+                        teamNovgorod.setHasTech( xml.iFarriers, True, iCiv, False, False )
+                        teamNovgorod.setHasTech( xml.iChainMail, True, iCiv, False, False )
+                
                 if ( iCiv == iKiev ):
                         for iTech in range( xml.iStirrup + 1 ):
                                 teamKiev.setHasTech( iTech, True, iCiv, False, False )
@@ -2600,6 +2778,15 @@ class RiseAndFall:
                         teamEngland.setHasTech( xml.iCodeOfLaws, True, iCiv, False, False )
                         teamEngland.setHasTech( xml.iAristocracy, True, iCiv, False, False )
 
+                if ( iCiv == iMorocco ):
+                        for iTech in range( xml.iFarriers + 1 ):
+                                teamMorocco.setHasTech( iTech, True, iCiv, False, False )
+                        teamMorocco.setHasTech( xml.iBlastFurnace, True, iCiv, False, False )
+                        teamMorocco.setHasTech( xml.iCodeOfLaws, True, iCiv, False, False )
+                        teamMorocco.setHasTech( xml.iLateenSails, True, iCiv, False, False )
+                        teamMorocco.setHasTech( xml.iMapMaking, True, iCiv, False, False )
+                        teamMorocco.setHasTech( xml.iArabicKnowledge, True, iCiv, False, False )
+
                 if ( iCiv == iPortugal ):
                         for iTech in range( xml.iFarriers + 1 ):
                                 teamPortugal.setHasTech( iTech, True, iCiv, False, False )
@@ -2609,6 +2796,55 @@ class RiseAndFall:
                         teamPortugal.setHasTech( xml.iLateenSails, True, iCiv, False, False )
                         teamPortugal.setHasTech( xml.iMapMaking, True, iCiv, False, False )
                         teamPortugal.setHasTech( xml.iAristocracy, True, iCiv, False, False )
+
+                if ( iCiv == iAragon ):
+                        for iTech in range( xml.iFarriers + 1 ):
+                                teamAragon.setHasTech( iTech, True, iCiv, False, False )
+                        teamAragon.setHasTech( xml.iBlastFurnace, True, iCiv, False, False )
+                        teamAragon.setHasTech( xml.iCodeOfLaws, True, iCiv, False, False )
+                        teamAragon.setHasTech( xml.iLiterature, True, iCiv, False, False )
+                        teamAragon.setHasTech( xml.iLateenSails, True, iCiv, False, False )
+                        teamAragon.setHasTech( xml.iMapMaking, True, iCiv, False, False )
+                        teamAragon.setHasTech( xml.iAristocracy, True, iCiv, False, False )
+                        teamAragon.setHasTech( xml.iPlateArmor, True, iCiv, False, False )
+                        teamAragon.setHasTech( xml.iGothicArchitecture, True, iCiv, False, False )
+                        teamAragon.setHasTech( xml.iSiegeEngines, True, iCiv, False, False )
+
+                if ( iCiv == iSweden ):
+                        for iTech in range( xml.iFarriers + 1 ):
+                                teamSweden.setHasTech( iTech, True, iCiv, False, False )
+                        teamSweden.setHasTech( xml.iBlastFurnace, True, iCiv, False, False )
+                        teamSweden.setHasTech( xml.iCodeOfLaws, True, iCiv, False, False )
+                        teamSweden.setHasTech( xml.iGothicArchitecture, True, iCiv, False, False )
+                        teamSweden.setHasTech( xml.iChivalry, True, iCiv, False, False )
+                        teamSweden.setHasTech( xml.iAristocracy, True, iCiv, False, False )
+                        teamSweden.setHasTech( xml.iPlateArmor, True, iCiv, False, False )
+                        teamSweden.setHasTech( xml.iSiegeEngines, True, iCiv, False, False )
+                        teamSweden.setHasTech( xml.iLateenSails, True, iCiv, False, False )
+                        teamSweden.setHasTech( xml.iLiterature, True, iCiv, False, False )
+                        teamSweden.setHasTech( xml.iClassicalKnowledge, True, iCiv, False, False )
+                        teamSweden.setHasTech( xml.iMonumentBuilding, True, iCiv, False, False )
+                        teamSweden.setHasTech( xml.iPhilosophy, True, iCiv, False, False )
+                        teamSweden.setHasTech( xml.iMapMaking, True, iCiv, False, False )
+
+                if ( iCiv == iPrussia ):
+                        for iTech in range( xml.iFarriers + 1 ):
+                                teamPrussia.setHasTech( iTech, True, iCiv, False, False )
+                        teamPrussia.setHasTech( xml.iBlastFurnace, True, iCiv, False, False )
+                        teamPrussia.setHasTech( xml.iCodeOfLaws, True, iCiv, False, False )
+                        teamPrussia.setHasTech( xml.iGothicArchitecture, True, iCiv, False, False )
+                        teamPrussia.setHasTech( xml.iChivalry, True, iCiv, False, False )
+                        teamPrussia.setHasTech( xml.iAristocracy, True, iCiv, False, False )
+                        teamPrussia.setHasTech( xml.iPlateArmor, True, iCiv, False, False )
+                        teamPrussia.setHasTech( xml.iSiegeEngines, True, iCiv, False, False )
+                        teamPrussia.setHasTech( xml.iAlchemy, True, iCiv, False, False )
+                        teamPrussia.setHasTech( xml.iCivilService, True, iCiv, False, False )
+                        teamPrussia.setHasTech( xml.iLateenSails, True, iCiv, False, False )
+                        teamPrussia.setHasTech( xml.iGuilds, True, iCiv, False, False )
+                        teamPrussia.setHasTech( xml.iLiterature, True, iCiv, False, False )
+                        teamPrussia.setHasTech( xml.iClassicalKnowledge, True, iCiv, False, False )
+                        teamPrussia.setHasTech( xml.iMonumentBuilding, True, iCiv, False, False )
+                        teamPrussia.setHasTech( xml.iPhilosophy, True, iCiv, False, False )
 
                 if ( iCiv == iLithuania ):
                         for iTech in range( xml.iFarriers + 1 ):
@@ -2653,11 +2889,6 @@ class RiseAndFall:
                         teamTurkey.setHasTech( xml.iGunpowder, True, iCiv, False, False )
                         teamTurkey.setHasTech( xml.iMilitaryTradition, True, iCiv, False, False )
                         teamTurkey.setHasTech( xml.iArabicKnowledge, True, iCiv, False, False )
-
-                if ( iCiv == iSweden ):
-                        for iTech in range( xml.iProfessionalArmy + 1 ):
-                                teamSweden.setHasTech( iTech, True, iCiv, False, False )
-                        teamSweden.setHasTech(xml.iMatchlock, True, iCiv, False, False)
 
                 if ( iCiv == iDutch ):
                         for iTech in range( xml.iAstronomy + 1 ):
@@ -2710,11 +2941,18 @@ class RiseAndFall:
                 elif ( iCiv == iVenecia ):
                         if ( pByzantium.isAlive() and ( not teamVenecia.isHasMet( pByzantium.getTeam() ) ) ):
                                 teamVenecia.meet( pByzantium.getTeam(), True )
+                elif ( iCiv == iNovgorod ):
+                        if ( pBulgaria.isAlive() and ( not teamNovgorod.isHasMet( pBulgaria.getTeam() ) ) ):
+                                teamNovgorod.meet( pBulgaria.getTeam(), True )
+                        if ( pByzantium.isAlive() and ( not teamNovgorod.isHasMet( pByzantium.getTeam() ) ) ):
+                                teamNovgorod.meet( pByzantium.getTeam(), True )
                 elif ( iCiv == iKiev ):
                         if ( pBulgaria.isAlive() and ( not teamKiev.isHasMet( pBulgaria.getTeam() ) ) ):
                                 teamKiev.meet( pBulgaria.getTeam(), True )
                         if ( pByzantium.isAlive() and ( not teamKiev.isHasMet( pByzantium.getTeam() ) ) ):
                                 teamKiev.meet( pByzantium.getTeam(), True )
+                        if ( pNovgorod.isAlive() and ( not teamKiev.isHasMet( pNovgorod.getTeam() ) ) ):
+                                teamKiev.meet( pNovgorod.getTeam(), True )
                 elif ( iCiv == iHungary ):
                         if ( pBulgaria.isAlive() and ( not teamHungary.isHasMet( pBulgaria.getTeam() ) ) ):
                                 teamHungary.meet( pBulgaria.getTeam(), True )
@@ -2727,16 +2965,30 @@ class RiseAndFall:
                                 teamGermany.meet( pFrankia.getTeam(), True )
                         if ( pHungary.isAlive() and ( not teamGermany.isHasMet( pHungary.getTeam() ) ) ):
                                 teamGermany.meet( pHungary.getTeam(), True )
+                elif ( iCiv == iScotland ):
+                        if ( pFrankia.isAlive() and ( not teamScotland.isHasMet( pFrankia.getTeam() ) ) ):
+                                teamScotland.meet( pFrankia.getTeam(), True )
+                        if ( pNorway.isAlive() and ( not teamScotland.isHasMet( pNorway.getTeam() ) ) ):
+                                teamScotland.meet( pNorway.getTeam(), True )
                 elif ( iCiv == iPoland ):
                         if ( pGermany.isAlive() and ( not teamPoland.isHasMet( pGermany.getTeam() ) ) ):
                                 teamPoland.meet( pGermany.getTeam(), True )
                         if ( pHungary.isAlive() and ( not teamPoland.isHasMet( pHungary.getTeam() ) ) ):
                                 teamPoland.meet( pHungary.getTeam(), True )
+                elif ( iCiv == iPrussia):
+                        if ( pPoland.isAlive() and ( not teamPrussia.isHasMet( pPoland.getTeam() ) ) ):
+                                teamPrussia.meet( pPoland.getTeam(), True )
+                        if ( pNovgorod.isAlive() and ( not teamPrussia.isHasMet( pNovgorod.getTeam() ) ) ):
+                                teamPrussia.meet( pNovgorod.getTeam(), True )
+                        if ( pGermany.isAlive() and ( not teamPrussia.isHasMet( pGermany.getTeam() ) ) ):
+                                teamPrussia.meet( pGermany.getTeam(), True )
                 elif ( iCiv == iLithuania):
                         if ( pPoland.isAlive() and ( not teamLithuania.isHasMet( pPoland.getTeam() ) ) ):
                                 teamLithuania.meet( pPoland.getTeam(), True )
                         if ( pKiev.isAlive() and ( not teamLithuania.isHasMet( pKiev.getTeam() ) ) ):
                                 teamLithuania.meet( pKiev.getTeam(), True )
+                        if ( pPrussia.isAlive() and ( not teamLithuania.isHasMet( pPrussia.getTeam() ) ) ):
+                                teamLithuania.meet( pPrussia.getTeam(), True )
                 elif ( iCiv == iMoscow ):
                         if ( pByzantium.isAlive() and ( not teamMoscow.isHasMet( pByzantium.getTeam() ) ) ):
                                 teamMoscow.meet( pByzantium.getTeam(), True )
@@ -2744,6 +2996,10 @@ class RiseAndFall:
                                 teamMoscow.meet( pBulgaria.getTeam(), True )
                         if ( pKiev.isAlive() and ( not teamMoscow.isHasMet( pKiev.getTeam() ) ) ):
                                 teamMoscow.meet( pKiev.getTeam(), True )
+                        if ( pNovgorod.isAlive() and ( not teamMoscow.isHasMet( pNovgorod.getTeam() ) ) ):
+                                teamMoscow.meet( pNovgorod.getTeam(), True )
+                        if ( pSweden.isAlive() and ( not teamMoscow.isHasMet( pSweden.getTeam() ) ) ):
+                                teamMoscow.meet( pSweden.getTeam(), True )
                         if ( pLithuania.isAlive() and ( not teamMoscow.isHasMet( pLithuania.getTeam() ) ) ):
                                 teamMoscow.meet( pLithuania.getTeam(), True )
                 elif ( iCiv == iGenoa ):
@@ -2753,15 +3009,20 @@ class RiseAndFall:
                                 teamGenoa.meet( pByzantium.getTeam(), True )
                         if ( pVenecia.isAlive() and ( not teamGenoa.isHasMet( pVenecia.getTeam() ) ) ):
                                 teamGenoa.meet( pVenecia.getTeam(), True )
+                elif ( iCiv == iMorocco ):
+                        if ( pArabia.isAlive() and ( not teamMorocco.isHasMet( pArabia.getTeam() ) ) ):
+                                teamMorocco.meet( pArabia.getTeam(), True )
+                        if ( pSpain.isAlive() and ( not teamMorocco.isHasMet( pSpain.getTeam() ) ) ):
+                                teamMorocco.meet( pSpain.getTeam(), True )
+                        if ( pCordoba.isAlive() and ( not teamMorocco.isHasMet( pCordoba.getTeam() ) ) ):
+                                teamMorocco.meet( pCordoba.getTeam(), True )
                 elif ( iCiv == iSweden ):
-                        if ( pMoscow.isAlive() and ( not teamSweden.isHasMet( pMoscow.getTeam() ) ) ):
-                                teamSweden.meet( pMoscow.getTeam(), True )
                         if ( pPoland.isAlive() and ( not teamSweden.isHasMet( pPoland.getTeam() ) ) ):
                                 teamSweden.meet( pPoland.getTeam(), True )
                         if ( pGermany.isAlive() and ( not teamSweden.isHasMet( pGermany.getTeam() ) ) ):
                                 teamSweden.meet( pGermany.getTeam(), True )
-                        if ( pLithuania.isAlive() and ( not teamSweden.isHasMet( pLithuania.getTeam() ) ) ):
-                                teamSweden.meet( pLithuania.getTeam(), True )
+                        if ( pNovgorod.isAlive() and ( not teamSweden.isHasMet( pNovgorod.getTeam() ) ) ):
+                                teamSweden.meet( pNovgorod.getTeam(), True )
                 elif ( iCiv == iDutch ):
                         if ( pEngland.isAlive() and ( not teamDutch.isHasMet( pEngland.getTeam() ) ) ):
                                 teamDutch.meet( pEngland.getTeam(), True )
@@ -2771,7 +3032,9 @@ class RiseAndFall:
                                 teamDutch.meet( pFrankia.getTeam(), True )
                         if ( pGermany.isAlive() and ( not teamDutch.isHasMet( pGermany.getTeam() ) ) ):
                                 teamDutch.meet( pGermany.getTeam(), True )
-                        if ( pNorse.isAlive() and ( not teamDutch.isHasMet( pNorse.getTeam() ) ) ):
-                                teamDutch.meet( pNorse.getTeam(), True )
+                        if ( pDenmark.isAlive() and ( not teamDutch.isHasMet( pDenmark.getTeam() ) ) ):
+                                teamDutch.meet( pDenmark.getTeam(), True )
+                        if ( pNorway.isAlive() and ( not teamDutch.isHasMet( pNorway.getTeam() ) ) ):
+                                teamDutch.meet( pNorway.getTeam(), True )
                         if ( pSweden.isAlive() and ( not teamDutch.isHasMet( pSweden.getTeam() ) ) ):
                                 teamDutch.meet( pSweden.getTeam(), True )

@@ -60,13 +60,13 @@ class CvPediaLeader:
                 
 	# Screen construction function
 	def interfaceScreen(self, iLeader):
-			
+
 		self.iLeader = iLeader
-	
-		self.top.deleteAllWidgets()						
-							
+
+		self.top.deleteAllWidgets()
+
 		screen = self.top.getScreen()
-		
+
 		bNotActive = (not screen.isActive())
 		if bNotActive:
 			self.top.setPediaCommonWidgets()
@@ -87,16 +87,16 @@ class CvPediaLeader:
 		# Leaderhead
 		leaderPanelWidget = self.top.getNextWidgetName()
 		screen.addPanel( leaderPanelWidget, "", "", true, true,
-                    self.X_LEADERHEAD_PANE, self.Y_LEADERHEAD_PANE, self.W_LEADERHEAD_PANE, self.H_LEADERHEAD_PANE, PanelStyles.PANEL_STYLE_BLUE50 )
+			self.X_LEADERHEAD_PANE, self.Y_LEADERHEAD_PANE, self.W_LEADERHEAD_PANE, self.H_LEADERHEAD_PANE, PanelStyles.PANEL_STYLE_BLUE50 )
 		self.leaderWidget = self.top.getNextWidgetName()
 		screen.addLeaderheadGFC(self.leaderWidget, self.iLeader, AttitudeTypes.ATTITUDE_PLEASED,
-                    self.X_LEADERHEAD, self.Y_LEADERHEAD, self.W_LEADERHEAD, self.H_LEADERHEAD, WidgetTypes.WIDGET_GENERAL, -1, -1)
-		
+			self.X_LEADERHEAD, self.Y_LEADERHEAD, self.W_LEADERHEAD, self.H_LEADERHEAD, WidgetTypes.WIDGET_GENERAL, -1, -1)
+
 		self.placeHistory()
 		#self.placeCivic() #Rhye
 		self.placeCiv()
 		#self.placeTraits() #Rhye
-													
+
 	def placeCiv(self):
 		screen = self.top.getScreen()
 

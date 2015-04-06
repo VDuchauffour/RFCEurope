@@ -735,6 +735,13 @@
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
 		<ColorVal>
+			<Type>COLOR_PLAYER_LIGHTER_BLUE</Type>
+			<fRed>0.66</fRed>
+			<fGreen>0.81</fGreen>
+			<fBlue>1.00</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
+		<ColorVal>
 			<Type>COLOR_PLAYER_BLUE_TEXT</Type>
 			<fRed>0.44</fRed>
 			<fGreen>0.63</fGreen>
@@ -1113,10 +1120,24 @@
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
 		<ColorVal>
+			<Type>COLOR_DARKER_YELLOW</Type>
+			<fRed>.878</fRed>
+			<fGreen>.678</fGreen>
+			<fBlue>.000</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
+		<ColorVal>
 			<Type>COLOR_LITHUANIAN_RED</Type>
 			<fRed>.93</fRed>
 			<fGreen>.11</fGreen>
 			<fBlue>.14</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
+		<ColorVal>
+			<Type>COLOR_MOROCCAN_RED</Type>
+			<fRed>.627</fRed>
+			<fGreen>.176</fGreen>
+			<fBlue>.000</fBlue>
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
 		<ColorVal>

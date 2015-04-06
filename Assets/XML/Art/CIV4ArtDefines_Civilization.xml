@@ -96,12 +96,13 @@
 			<Path>Art/Interface/TeamColor/FlagDECAL_Moscow.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
-		<CivilizationArtInfo>
+		<!-- currently unused -->
+		<!-- <CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_NORSE</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,6,3</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Norse_Raven.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
-		</CivilizationArtInfo>
+		</CivilizationArtInfo> -->
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_POLAND</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,7,2</Button>
@@ -136,6 +137,48 @@
 			<Type>ART_DEF_CIVILIZATION_VENEZIA</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,5,3</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Venice.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_MOROCCO</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Morocco.dds</Button>
+			<Path>Art/Interface/TeamColor/flagDECAL_Morocco.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_SCOTLAND</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Scotland.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Scotland.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_PRUSSIA</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Prussia.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Prussia.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_NOVGOROD</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Novgorod.dds</Button>
+			<Path>Art/Interface/TeamColor/flagDECAL_Novgorod.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_NORWAY</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Norway.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Norway.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_DENMARK</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Denmark.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_StGeorgeCross.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_ARAGON</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Aragon.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Aragon.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>

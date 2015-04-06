@@ -15,11 +15,11 @@
 			<BackgroundKFM>art/LeaderHeads/Sid/sid_BG.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
-			<Type>ART_DEF_LEADER_ABUYUSUFYAQUB</Type>
-			<Button>Art/Leaderheads/Yaqub_al_Mansur/Btn_Yaqub_al_Mansur.dds</Button>
+			<Type>ART_DEF_LEADER_YAQUB_AL_MANSUR</Type>
+			<Button>Art/Leaderheads/Yaqub_al_Mansur/btn_lh_morocco_yaqub_al_mansur.dds</Button>
 			<NIF>Art/Leaderheads/Yaqub_al_Mansur/zara yaqob.nif</NIF>
 			<KFM>Art/Leaderheads/Yaqub_al_Mansur/zara yaqob.kfm</KFM>
-			<NoShaderNIF>Art/Leaderheads/Yaqub_al_Mansur/zara yaqob_nonshader.nif</NoShaderNIF>
+			<NoShaderNIF>Art/Leaderheads/Yaqub_al_Mansur/zara yaqob.nif</NoShaderNIF>
 			<BackgroundKFM>Art/Leaderheads/Yaqub_al_Mansur/zara yaqob_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
@@ -31,12 +31,12 @@
 			<BackgroundKFM>Art/Leaderheads/Maria_Theresa/victoria_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
-			<Type>ART_DEF_LEADER_ABUBAKR</Type>
-			<Button>Art/Leaderheads/Abu_Bakr/btn_abu_bakr.dds</Button>
-			<NIF>Art/Leaderheads/Abu_Bakr/suleiman.nif</NIF>
-			<KFM>Art/Leaderheads/Abu_Bakr/suleiman.kfm</KFM>
-			<NoShaderNIF>Art/Leaderheads/Abu_Bakr/suleiman_nonshader.nif</NoShaderNIF>
-			<BackgroundKFM>Art/Leaderheads/Abu_Bakr/suleiman_BG.kfm</BackgroundKFM>
+			<Type>ART_DEF_LEADER_ABU_BAKR</Type>
+			<Button>Art/Leaderheads/Abu_Bakr/btn_lh_arabia_abu_bakr.dds</Button>
+			<NIF>Art/Leaderheads/Abu_Bakr/abubakr.nif</NIF>
+			<KFM>Art/Leaderheads/Abu_Bakr/frederick_the_great.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Abu_Bakr/abubakr.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Abu_Bakr/frederick_the_great_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_JOAN</Type>
@@ -144,19 +144,19 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_SIMEON</Type>
-			<Button>Art/Leaderheads/Simeon/btn_simeon.dds</Button>
-			<NIF>Art/Leaderheads/Simeon/Basil.nif</NIF>
-			<KFM>Art/Leaderheads/Simeon/josef_stalin.kfm</KFM>
-			<NoShaderNIF>Art/Leaderheads/Simeon/Basil.nif</NoShaderNIF>
-			<BackgroundKFM>Art/Leaderheads/Simeon/josef_stalin_BG.kfm</BackgroundKFM>
+			<Button>Art/Leaderheads/Simeon_I/btn_lh_bulgaria_simeon.dds</Button>
+			<NIF>Art/Leaderheads/Simeon_I/putin.nif</NIF>
+			<KFM>Art/Leaderheads/Simeon_I/putin.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Simeon_I/putin.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Simeon_I/putin_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_PHILIP_THE_BOLD</Type>
-			<Button>Art/Leaderheads/Philip_the_Bold/btn_philip_the_bold.dds</Button>
-			<NIF>Art/Leaderheads/Philip_the_Bold/charles de gaulle.nif</NIF>
-			<KFM>Art/Leaderheads/Philip_the_Bold/charles de gaulle.kfm</KFM>
-			<NoShaderNIF>Art/Leaderheads/Philip_the_Bold/charles de gaulle.nif</NoShaderNIF>
-			<BackgroundKFM>Art/Leaderheads/Philip_the_Bold/charles de gaulle_bg.kfm</BackgroundKFM>
+			<Button>Art/Leaderheads/Philip_the_Bold/btn_lh_burgundy_philip_the_bold.dds</Button>
+			<NIF>Art/Leaderheads/Philip_the_Bold/Justinian.nif</NIF>
+			<KFM>Art/Leaderheads/Philip_the_Bold/Justinian.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Philip_the_Bold/Justinian.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Philip_the_Bold/Justinian_Background.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_JUSTINIAN</Type>
@@ -167,12 +167,12 @@
 			<BackgroundKFM>art/LeaderHeads/Justinian/Justinian_Background.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
-			<Type>ART_DEF_LEADER_ABDARRAHMAN</Type>
-			<Button>Art/Leaderheads/Abd_ar_Rahman/btn_abd_ar_rahman.dds</Button>
-			<NIF>Art/LeaderHeads/Abd_ar_Rahman/zara yaqob2.nif</NIF>
-			<KFM>Art/LeaderHeads/Abd_ar_Rahman/zara yaqob.kfm</KFM>
-			<NoShaderNIF>Art/LeaderHeads/Abd_ar_Rahman/zara yaqob_nonshader.nif</NoShaderNIF>
-			<BackgroundKFM>Art/LeaderHeads/Abd_ar_Rahman/zara yaqob_BG.kfm</BackgroundKFM>
+			<Type>ART_DEF_LEADER_ABD_AR_RAHMAN</Type>
+			<Button>Art/Leaderheads/Abd_ar_Rahman_III/btn_lh_abd_al_rahman.dds</Button>
+			<NIF>Art/LeaderHeads/Abd_ar_Rahman_III/suleiman.nif</NIF>
+			<KFM>Art/LeaderHeads/Abd_ar_Rahman_III/suleiman.kfm</KFM>
+			<NoShaderNIF>Art/LeaderHeads/Abd_ar_Rahman_III/suleiman.nif</NoShaderNIF>
+			<BackgroundKFM>Art/LeaderHeads/Abd_ar_Rahman_III/suleiman_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_WILLEM_VAN_ORANJE</Type>
@@ -199,7 +199,7 @@
 			<BackgroundKFM>art/LeaderHeads/Louis_XIV/louis_xiv_BG.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
-			<Type>ART_DEF_LEADER_SIMONE</Type>
+			<Type>ART_DEF_LEADER_BOCCANEGRA</Type>
 			<Button>Art/Leaderheads/Simone_Boccanegra/btn_lh_genoa_boccanegra.dds</Button>
 			<NIF>Art/Leaderheads/Simone_Boccanegra/Charlemagne.nif</NIF>
 			<KFM>Art/Leaderheads/Simone_Boccanegra/Charlemagne.kfm</KFM>
@@ -216,11 +216,11 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_STEPHEN</Type>
-			<Button>Art/Leaderheads/StephenI/Btn_LH_Hungary_Istvan.dds</Button>
-			<NIF>Art/Leaderheads/StephenI/Justinian.nif</NIF>
-			<KFM>Art/Leaderheads/StephenI/Justinian.kfm</KFM>
-			<NoShaderNIF>Art/Leaderheads/StephenI/Justinian.nif</NoShaderNIF>
-			<BackgroundKFM>Art/Leaderheads/StephenI/Justinian_Background.kfm</BackgroundKFM>
+			<Button>Art/Leaderheads/Stephen_I/Btn_LH_Hungary_Istvan.dds</Button>
+			<NIF>Art/Leaderheads/Stephen_I/Justinian.nif</NIF>
+			<KFM>Art/Leaderheads/Stephen_I/Justinian.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Stephen_I/Justinian.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Stephen_I/Justinian_Background.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_YAROSLAV</Type>
@@ -241,10 +241,10 @@
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_CASIMIR</Type>
 			<Button>Art/Leaderheads/Casimir_III/Btn_LH_Poland_Casimir.dds</Button>
-			<NIF>Art/Leaderheads/Casimir_III/casimir.nif</NIF>
-			<KFM>Art/Leaderheads/Casimir_III/casimir.kfm</KFM>
-			<NoShaderNIF>Art/Leaderheads/Casimir_III/casimir.nif</NoShaderNIF>
-			<BackgroundKFM>Art/Leaderheads/Casimir_III/casimir_BG.kfm</BackgroundKFM>
+			<NIF>Art/Leaderheads/Casimir_III/brennus.nif</NIF>
+			<KFM>Art/Leaderheads/Casimir_III/brennus.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Casimir_III/brennus.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Casimir_III/brennus_BG.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_JOAO</Type>
@@ -256,14 +256,14 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_ISABELLA</Type>
-			<Button>Art/LeaderHeads/isabella/Btn_LH_Spain_Isabella.dds</Button>
+			<Button>Art/LeaderHeads/isabella/btn_lh_spain_isabella.dds</Button>
 			<NIF>Art/LeaderHeads/isabella/isabella.nif</NIF>
 			<KFM>Art/LeaderHeads/isabella/isabella.kfm</KFM>
 			<NoShaderNIF>Art/Leaderheads/isabella/isabella.nif</NoShaderNIF>
 			<BackgroundKFM>Art/LeaderHeads/isabella/isabella_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
-			<Type>ART_DEF_LEADER_GUSTAVUS</Type>
+			<Type>ART_DEF_LEADER_GUSTAV_VASA</Type>
 			<Button>Art/Leaderheads/Gustav_Vasa/btn_gustav_vasa.dds</Button>
 			<NIF>Art/Leaderheads/Gustav_Vasa/SimonBolivar.nif</NIF>
 			<KFM>Art/Leaderheads/Gustav_Vasa/SimonBolivar.kfm</KFM>
@@ -279,7 +279,7 @@
 			<BackgroundKFM>art/LeaderHeads/Suleiman/Suleiman_BG.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
-			<Type>ART_DEF_LEADER_DANDOLO</Type>
+			<Type>ART_DEF_LEADER_ENRICO_DANDOLO</Type>
 			<Button>Art/Leaderheads/Enrico_Dandolo/btn_dandolo.dds</Button>
 			<NIF>Art/Leaderheads/Enrico_Dandolo/Brotherhood.nif</NIF>
 			<KFM>Art/Leaderheads/Enrico_Dandolo/ramassesii.kfm</KFM>
@@ -304,8 +304,8 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_IVAN_IV</Type>
-			<Button>Art/Leaderheads/Ivan_IV/Btn_Ivan_IV.dds</Button>
-			<NIF>Art/Leaderheads/Ivan_IV/Grozniy.nif</NIF>
+			<Button>Art/Leaderheads/Ivan_IV/btn_lh_moscow_ivan_iv.dds</Button>
+			<NIF>Art/Leaderheads/Ivan_IV/grozny.nif</NIF>
 			<KFM>Art/Leaderheads/Ivan_IV/Alexander.kfm</KFM>
 			<NoShaderNIF>Art/Leaderheads/Ivan_IV/Grozniy.nif</NoShaderNIF>
 			<BackgroundKFM>Art/Leaderheads/Ivan_IV/Alexander_bg.kfm</BackgroundKFM>
@@ -319,20 +319,20 @@
 			<BackgroundKFM>Art/Leaderheads/George_III/peter_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
-			<Type>ART_DEF_LEADER_MARIA_II</Type>
-			<Button>Art/Leaderheads/Maria_II/Btn_Maria_II.dds</Button>
-			<NIF>Art/Leaderheads/Maria_II/elizabeth.nif</NIF>
+			<Type>ART_DEF_LEADER_MARIA_I</Type>
+			<Button>Art/Leaderheads/Maria_I/Btn_Maria_I.dds</Button>
+			<NIF>Art/Leaderheads/Maria_I/elizabeth.nif</NIF>
 			<KFM>Art/LeaderHeads/elizabeth/elizabeth.kfm</KFM>
-			<NoShaderNIF>Art/Leaderheads/Maria_II/elizabeth_noshader.nif</NoShaderNIF>
-			<BackgroundKFM>Art/Leaderheads/Maria_II/elizabeth_bg.kfm</BackgroundKFM>
+			<NoShaderNIF>Art/Leaderheads/Maria_I/elizabeth_noshader.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Maria_I/elizabeth_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
-			<Type>ART_DEF_LEADER_ANDREA_DANDOLO</Type>
-			<Button>Art/Leaderheads/Andrea_Dandolo/Btn_Andrea_Dandolo.dds</Button>
-			<NIF>Art/Leaderheads/Andrea_Dandolo/Willem van Oranje.nif</NIF>
-			<KFM>Art/LeaderHeads/Andrea_Dandolo/Willem van Oranje.kfm</KFM>
-			<NoShaderNIF>Art/Leaderheads/Andrea_Dandolo/Willem van Oranje.nif</NoShaderNIF>
-			<BackgroundKFM>Art/Leaderheads/Andrea_Dandolo/Willem van Oranje_BG.kfm</BackgroundKFM>
+			<Type>ART_DEF_LEADER_ANDREA_GRITTI</Type>
+			<Button>Art/Leaderheads/Andrea_Gritti/btn_andrea_gritti.dds</Button>
+			<NIF>Art/Leaderheads/Andrea_Gritti/Willem van Oranje.nif</NIF>
+			<KFM>Art/LeaderHeads/Andrea_Gritti/Willem van Oranje.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Andrea_Gritti/Willem van Oranje.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Andrea_Gritti/Willem van Oranje_BG.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_HAAKON_IV</Type>
@@ -368,11 +368,211 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_IVAN_ASEN</Type>
-			<Button>Art/Leaderheads/Ivan_Asen/Btn_Ivan_Asen.dds</Button>
-			<NIF>Art/Leaderheads/Ivan_Asen/putin.nif</NIF>
-			<KFM>Art/Leaderheads/Ivan_Asen/putin.kfm</KFM>
-			<NoShaderNIF>Art/Leaderheads/Ivan_Asen/putin.nif</NoShaderNIF>
-			<BackgroundKFM>Art/Leaderheads/Ivan_Asen/putin_bg.kfm</BackgroundKFM>
+			<Button>Art/Leaderheads/Ivan_Asen_II/btn_lh_bulgaria_ivan_asen.dds</Button>
+			<NIF>Art/Leaderheads/Ivan_Asen_II/saladin.nif</NIF>
+			<KFM>Art/Leaderheads/Ivan_Asen_II/saladin.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Ivan_Asen_II/saladin.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Ivan_Asen_II/saladin_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_HARUN_AL_RASHID</Type>
+			<Button>Art/Leaderheads/Harun_al-Rashid/btn_lh_arabia_harun.dds</Button>
+			<NIF>Art/Leaderheads/Harun_al-Rashid/julius_caesar.nif</NIF>
+			<KFM>Art/Leaderheads/Harun_al-Rashid/julius_caesar.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Harun_al-Rashid/julius_caesar.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Harun_al-Rashid/julius_caesar_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_BELA_III</Type>
+			<Button>Art/Leaderheads/Bela_III/btn_lh_magyar_bela_iii.dds</Button>
+			<NIF>Art/Leaderheads/Bela_III/ragnar_lodbrok.nif</NIF>
+			<KFM>Art/Leaderheads/Bela_III/ragnar_lodbrok.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Bela_III/ragnar_lodbrok.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Bela_III/Ragnar_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_GUSTAV_ADOLF</Type>
+			<Button>Art/Leaderheads/Gustav_II_Adolf/btn_lh_sweden_gustav_adolf.dds</Button>
+			<NIF>Art/Leaderheads/Gustav_II_Adolf/napoleon.nif</NIF>
+			<KFM>Art/Leaderheads/Gustav_II_Adolf/napoleon.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Gustav_II_Adolf/napoleon.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Gustav_II_Adolf/napoleon_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_BASIL</Type>
+			<Button>Art/Leaderheads/Basil_II/btn_lh_byzantium_basil.dds</Button>
+			<NIF>Art/Leaderheads/Basil_II/basil.nif</NIF>
+			<KFM>Art/Leaderheads/Basil_II/josef_stalin.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Basil_II/basil.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Basil_II/josef_stalin_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_PALAIOLOGOS</Type>
+			<Button>Art/Leaderheads/Michael_VIII_Palaiologos/btn_lh_byzantium_palaiologos.dds</Button>
+			<NIF>Art/Leaderheads/Michael_VIII_Palaiologos/basil.nif</NIF>
+			<KFM>Art/Leaderheads/Michael_VIII_Palaiologos/huayna_capac.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Michael_VIII_Palaiologos/basil.nif</NoShaderNIF>
+			<BackgroundKFM>Art/LeaderHeads/Justinian/Justinian_Background.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_MARGARET_I</Type>
+			<Button>Art/Leaderheads/Margaret_I/btn_lh_denmark_margaret.dds</Button>
+			<NIF>Art/Leaderheads/Margaret_I/isabella.nif</NIF>
+			<KFM>Art/LeaderHeads/Margaret_I/isabella.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Margaret_I/isabella.nif</NoShaderNIF>
+			<BackgroundKFM>Art/LeaderHeads/Margaret_I/leader_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_MIESZKO</Type>
+			<Button>Art/Leaderheads/Mieszko_I/btn_lh_poland_mieszko.dds</Button>
+			<NIF>Art/Leaderheads/Mieszko_I/Charlemagne.nif</NIF>
+			<KFM>Art/LeaderHeads/Mieszko_I/Charlemagne.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Mieszko_I/Charlemagne.nif</NoShaderNIF>
+			<BackgroundKFM>Art/LeaderHeads/Mieszko_I/Charlemagne_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_PHILIP_AUGUSTUS</Type>
+			<Button>Art/Leaderheads/Philip_Augustus/btn_lh_france_philip_augustus.dds</Button>
+			<NIF>Art/Leaderheads/Philip_Augustus/Charlemagne.nif</NIF>
+			<KFM>Art/LeaderHeads/Philip_Augustus/Charlemagne.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Philip_Augustus/Charlemagne.nif</NoShaderNIF>
+			<BackgroundKFM>Art/LeaderHeads/Philip_Augustus/Charlemagne_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_MSTISLAV</Type>
+			<Button>Art/Leaderheads/Mstislav_I/btn_lh_kiev_mstislav.dds</Button>
+			<NIF>Art/Leaderheads/Mstislav_I/alexander.nif</NIF>
+			<KFM>Art/LeaderHeads/Mstislav_I/alexander.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Mstislav_I/alexander.nif</NoShaderNIF>
+			<BackgroundKFM>Art/LeaderHeads/Mstislav_I/alexander_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_FERDINAND_III</Type>
+			<Button>Art/Leaderheads/Ferdinand_III/btn_lh_spain_ferdinand.dds</Button>
+			<NIF>Art/Leaderheads/Ferdinand_III/tokugawa.nif</NIF>
+			<KFM>Art/LeaderHeads/Ferdinand_III/tokugawa.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Ferdinand_III/tokugawa.nif</NoShaderNIF>
+			<BackgroundKFM>Art/LeaderHeads/Ferdinand_III/tokugawa_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_BOHDAN</Type>
+			<Button>Art/Leaderheads/Bohdan_Khmelnytsky/btn_lh_kiev_bohdan.dds</Button>
+			<NIF>Art/Leaderheads/Bohdan_Khmelnytsky/bismarck.nif</NIF>
+			<KFM>Art/LeaderHeads/Bismarck/bismarck.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Bohdan_Khmelnytsky/bismarck.nif</NoShaderNIF>
+			<BackgroundKFM>Art/LeaderHeads/Bohdan_Khmelnytsky/bismarck_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_MOHAMMED_IBN_NASR</Type>
+			<Button>Art/Leaderheads/Mohammed_I_ibn_Nasr/btn_lh_cordoba_ibn_nasr.dds</Button>
+			<NIF>Art/Leaderheads/Mohammed_I_ibn_Nasr/suleiman.nif</NIF>
+			<KFM>Art/LeaderHeads/Mohammed_I_ibn_Nasr/suleiman.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Mohammed_I_ibn_Nasr/suleiman.nif</NoShaderNIF>
+			<BackgroundKFM>Art/LeaderHeads/Mohammed_I_ibn_Nasr/suleiman_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_OTTO</Type>
+			<Button>Art/Leaderheads/Otto_I/btn_lh_germany_otto.dds</Button>
+			<NIF>Art/Leaderheads/Otto_I/Charlemagne.nif</NIF>
+			<KFM>Art/LeaderHeads/Otto_I/Charlemagne.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Otto_I/Charlemagne.nif</NoShaderNIF>
+			<BackgroundKFM>Art/LeaderHeads/Otto_I/Charlemagne_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_OTTO_WILLIAM</Type>
+			<Button>Art/Leaderheads/Otto-William/btn_lh_burgundy_otto_william.dds</Button>
+			<NIF>Art/Leaderheads/Otto-William/charles de gaulle.nif</NIF>
+			<KFM>Art/LeaderHeads/Otto-William/charles de gaulle.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Otto-William/charles de gaulle.nif</NoShaderNIF>
+			<BackgroundKFM>Art/LeaderHeads/Otto-William/charles de gaulle_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_BEATRICE</Type>
+			<Button>Art/Leaderheads/Beatrice_II/btn_lh_burgundy_beatrice.dds</Button>
+			<NIF>Art/Leaderheads/Beatrice_II/theophanu.nif</NIF>
+			<KFM>Art/LeaderHeads/elizabeth/elizabeth.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Beatrice_II/theophanu.nif</NoShaderNIF>
+			<BackgroundKFM>Art/LeaderHeads/Beatrice_II/elizabeth_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_EMBRIACO</Type>
+			<Button>Art/Leaderheads/Guglielmo_Embriaco/btn_lh_genoa_embriaco.dds</Button>
+			<NIF>Art/Leaderheads/Guglielmo_Embriaco/charlemagne.nif</NIF>
+			<KFM>Art/LeaderHeads/Guglielmo_Embriaco/charlemagne.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Guglielmo_Embriaco/charlemagne.nif</NoShaderNIF>
+			<BackgroundKFM>Art/LeaderHeads/Guglielmo_Embriaco/charlemagne_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_ROBERT_THE_BRUCE</Type>
+			<Button>Art/Leaderheads/Robert_the_Bruce/btn_lh_scotland_robert_the_bruce.dds</Button>
+			<NIF>Art/Leaderheads/Robert_the_Bruce/napoleon.nif</NIF>
+			<KFM>Art/LeaderHeads/Robert_the_Bruce/napoleon.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Robert_the_Bruce/napoleon.nif</NoShaderNIF>
+			<BackgroundKFM>Art/LeaderHeads/Robert_the_Bruce/napoleon_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_RURIK</Type>
+			<Button>Art/Leaderheads/Rurik/btn_lh_novgorod_rurik.dds</Button>
+			<NIF>Art/Leaderheads/Rurik/beowulf.nif</NIF>
+			<KFM>Art/LeaderHeads/Rurik/hannibal.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Rurik/beowulf.nif</NoShaderNIF>
+			<BackgroundKFM>Art/LeaderHeads/Rurik/Ragnar_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_ALEXANDER_NEVSKY</Type>
+			<Button>Art/Leaderheads/Alexander_Nevsky/btn_lh_novgorod_nevsky.dds</Button>
+			<NIF>Art/Leaderheads/Alexander_Nevsky/hannibal.nif</NIF>
+			<KFM>Art/LeaderHeads/Alexander_Nevsky/hannibal.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Alexander_Nevsky/hannibal.nif</NoShaderNIF>
+			<BackgroundKFM>Art/LeaderHeads/Alexander_Nevsky/Ragnar_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_MARFA</Type>
+			<Button>Art/Leaderheads/Marfa_Posadnitsa/btn_lh_novgorod_marfa.dds</Button>
+			<NIF>Art/Leaderheads/Marfa_Posadnitsa/Maria.nif</NIF>
+			<KFM>Art/LeaderHeads/Marfa_Posadnitsa/catherine.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Marfa_Posadnitsa/Maria.nif</NoShaderNIF>
+			<BackgroundKFM>Art/LeaderHeads/Marfa_Posadnitsa/catherine_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_ISMAIL_IBN_SHARIF</Type>
+			<Button>Art/Leaderheads/Ismail_ibn_Sharif/btn_lh_morocco_ismail.dds</Button>
+			<NIF>Art/Leaderheads/Ismail_ibn_Sharif/zara yaqob.nif</NIF>
+			<KFM>Art/LeaderHeads/Ismail_ibn_Sharif/zara yaqob.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Ismail_ibn_Sharif/zara yaqob.nif</NoShaderNIF>
+			<BackgroundKFM>Art/LeaderHeads/Ismail_ibn_Sharif/zara yaqob_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_HERMANN_VON_SALZA</Type>
+			<Button>Art/Leaderheads/Hermann_von_Salza/btn_lh_prussia_hermann_von_salza.dds</Button>
+			<NIF>Art/Leaderheads/Hermann_von_Salza/Pericles.nif</NIF>
+			<KFM>Art/LeaderHeads/Pericles/Pericles.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Hermann_von_Salza/Pericles.nif</NoShaderNIF>
+			<BackgroundKFM>Art/LeaderHeads/Hermann_von_Salza/isabella_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_JAMES_I</Type>
+			<Button>Art/Leaderheads/James_I/btn_lh_aragon_james.dds</Button>
+			<NIF>Art/Leaderheads/James_I/elcid.nif</NIF>
+			<KFM>Art/LeaderHeads/James_I/alexander.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/James_I/elcid.nif</NoShaderNIF>
+			<BackgroundKFM>Art/LeaderHeads/James_I/alexander_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_HARALD_BLUETOOTH</Type>
+			<Button>,Art/interface/LeaderHeads/Btn_LH_America_Washington.dds,Art/Interface/Buttons/Warlords_Atlas_2.dds,7,7</Button>
+			<NIF>art/LeaderHeads/RagnarLodbrok/ragnar_lodbrok.nif</NIF>
+			<KFM>art/LeaderHeads/RagnarLodbrok/ragnar_lodbrok.kfm</KFM>
+			<NoShaderNIF>art/LeaderHeads/RagnarLodbrok/ragnar_lodbrok_noshader.nif</NoShaderNIF>
+			<BackgroundKFM>art/LeaderHeads/RagnarLodbrok/Ragnar_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_MAGNUS_LADULAS</Type>
+			<Button>Art/Leaderheads/Magnus_Ladulas/btn_lh_sweden_magnus.dds</Button>
+			<NIF>Art/Leaderheads/Magnus_Ladulas/Eric_IX.nif</NIF>
+			<KFM>Art/LeaderHeads/Magnus_Ladulas/Charlemagne.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Magnus_Ladulas/Eric_IX.nif</NoShaderNIF>
+			<BackgroundKFM>Art/LeaderHeads/Magnus_Ladulas/Charlemagne_BG.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 	</LeaderheadArtInfos>
 </Civ4ArtDefines>

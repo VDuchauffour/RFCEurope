@@ -6,7 +6,6 @@
 <!-- Basic Infos -->
 <Civ4BasicInfos xmlns="x-schema:CIV4BasicInfoSchema.xml">
 	<ConceptInfos>
-		<!-- Rhye - start -->
 		<ConceptInfo>
 			<Type>CONCEPT_RFCINTRO</Type>
 			<Description>TXT_KEY_CONCEPT_RFCINTRO</Description>
@@ -47,13 +46,11 @@
 			<Description>TXT_KEY_CONCEPT_PLAGUE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_PLAGUE_PEDIA</Civilopedia>
 		</ConceptInfo>
-		<!-- Mercenaries Start -->
 		<ConceptInfo>
 			<Type>CONCEPT_MERCENARIES</Type>
 			<Description>TXT_KEY_CONCEPT_MERCENARIES</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_MERCENARIES_PEDIA</Civilopedia>
 		</ConceptInfo>
-		<!-- Mercenaries End -->
 		<ConceptInfo>
 			<Type>CONCEPT_RFCE_COLONIES</Type>
 			<Description>TXT_KEY_CONCEPT_COLONIES</Description>
@@ -69,6 +66,5 @@
 			<Description>TXT_KEY_CONCEPT_ODDS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ODDS_PEDIA</Civilopedia>
 		</ConceptInfo>
-		<!-- Rhye - end -->
 	</ConceptInfos>
 </Civ4BasicInfos>

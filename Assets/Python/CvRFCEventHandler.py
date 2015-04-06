@@ -5,9 +5,7 @@ import sys #Mercenaries
 import PyHelpers
 import CvMainInterface #Mercenaries
 import CvMercenaryManager #Mercenaries
-#import MercenaryUtils #Mercenaries
 import CvScreenEnums  #Mercenaries
-#import CvConfigParser #Mercenaries #Rhye
 import Popup as PyPopup
 
 import StoredData
@@ -18,16 +16,14 @@ import Resources
 import CityNameManager
 import UniquePowers
 import AIWars
-#import Congresses
 import Consts as con
 import XMLConsts as xml
 import RFCUtils
 utils = RFCUtils.RFCUtils()
-import CvScreenEnums #Mercenaries, Rhye
+import CvScreenEnums #Mercenaries
 import Victory
 import Stability
 import Plague
-#import Communications
 import Crusades
 import Mercenaries
 import RFCEMaps as rfcemaps
@@ -36,28 +32,35 @@ gc = CyGlobalContext()
 #iBetrayalCheaters = 15
 
 #Civ constants
-iBurgundy = con.iBurgundy
 iByzantium = con.iByzantium
 iFrankia = con.iFrankia
 iArabia = con.iArabia
 iBulgaria = con.iBulgaria
 iCordoba = con.iCordoba
-iSpain = con.iSpain
-iNorse = con.iNorse
 iVenecia = con.iVenecia
+iBurgundy = con.iBurgundy
+iGermany = con.iGermany
+iNovgorod = con.iNovgorod
+iNorway = con.iNorway
 iKiev = con.iKiev
 iHungary = con.iHungary
-iGermany = con.iGermany
+iSpain = con.iSpain
+iDenmark = con.iDenmark
+iScotland = con.iScotland
 iPoland = con.iPoland
-iMoscow = con.iMoscow
 iGenoa = con.iGenoa
+iMorocco = con.iMorocco
 iEngland = con.iEngland
 iPortugal = con.iPortugal
+iAragon = con.iAragon
+iSweden = con.iSweden
+iPrussia = con.iPrussia
 iLithuania = con.iLithuania
 iAustria = con.iAustria
 iTurkey = con.iTurkey
-iSweden = con.iSweden
+iMoscow = con.iMoscow
 iDutch = con.iDutch
+iPope = con.iPope
 iNumPlayers = con.iNumPlayers
 iNumMajorPlayers = con.iNumMajorPlayers
 iNumActivePlayers = con.iNumActivePlayers
@@ -68,7 +71,6 @@ iNumTotalPlayers = con.iNumTotalPlayers
 
 
 #Mercenaries - start
-#objMercenaryUtils = MercenaryUtils.MercenaryUtils()
 
 PyPlayer = PyHelpers.PyPlayer
 PyGame = PyHelpers.PyGame()
@@ -247,6 +249,10 @@ class CvRFCEventHandler:
 		# 3Miro: Arab UP
 		if ( gc.hasUP( playerType, con.iUP_Faith ) ):
 			self.up.faithUP( playerType, city )
+
+		# Absinthe: Scottish UP
+		if ( owner == con.iScotland and playerType < iNumPlayers):
+			self.up.defianceUP( owner )
 
 		# Absinthe: Spread some culture of the conqueror civ to the occupied city
 		if (playerType < iNumMajorPlayers):
@@ -500,6 +506,14 @@ class CvRFCEventHandler:
 
 		if (self.rnf.getDeleteMode(0) != -1):
 			self.rnf.deleteMode(iPlayer)
+
+		# Denmark UP
+		if(iPlayer == con.iDenmark):
+			self.up.soundUP(iPlayer)
+
+		# Aragon UP
+		if(iPlayer == con.iAragon):
+			self.up.confederationUP(iPlayer)
 
 		self.pla.checkPlayerTurn(iGameTurn, iPlayer)
 

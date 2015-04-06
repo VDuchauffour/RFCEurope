@@ -63,7 +63,7 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 
 		#
 		#-----------------------------------------------------------------
-	
+
 		self.PEDIA_MAIN_SCREEN_NAME = "PediaMainScreen"
 		self.INTERFACE_ART_INFO = "SCREEN_BG_OPAQUE"
 
@@ -85,29 +85,29 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 		self.H_SCREEN = 768
 		self.Y_TITLE = 8
 		self.DY_TEXT = 45
-		
+
 		self.X_EXIT = 915 #Rhye 925
 		self.Y_EXIT = 730
-						
+
 		self.X_BACK = 50 #Rhye #700
 		self.Y_BACK = 730 #Rhye #10
 
 		self.X_FORWARD = 200 #Rhye #790
 		self.Y_FORWARD = 730 #Rhye #10
-		
+
 		self.X_MENU = 450
 		self.Y_MENU = 1730	# CHEATING!  Should disable this, but...easier to hide it.
 
 		self.BUTTON_SIZE = 64
 		self.BUTTON_COLUMNS = 9
-	
+
 
 		# RESIZE AND ADD ANOTHER PANEL TO THESE BLOCKS...
 
 		self.ITEMS_MARGIN = 18
 		self.ITEMS_SEPARATION = 2
 
-		self.X_LINKS = 0 
+		self.X_LINKS = 0
 		self.Y_LINKS = 51
 		self.H_LINKS = 665
 		self.W_LINKS = 175
@@ -121,9 +121,9 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 		self.Y_PEDIA_PAGE = self.Y_LINKS
 		self.W_PEDIA_PAGE = 1024 - self.X_PEDIA_PAGE
 		self.H_PEDIA_PAGE = self.H_LINKS
-		
+
 		self.nWidgetCount = 0
-		
+
 		# screen instances
 		self.pediaTechScreen = CvPediaTech.CvPediaTech(self)
 		self.pediaUnitScreen = CvPediaUnit.CvPediaUnit(self)
@@ -142,25 +142,25 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 		self.pediaReligion = CvPediaReligion.CvPediaReligion(self)
 		self.pediaCorporation = CvPediaCorporation.CvPediaCorporation(self)
 		self.pediaHistorical = CvPediaHistory.CvPediaHistory(self)
-				
+
 		# used for navigating "forward" and "back" in civilopedia
 		self.pediaHistory = []
 		self.pediaFuture = []
-		
+
 		self.listCategories = []
 
 		self.iCategory = -1
 		self.iLastScreen = -1
 		self.iActivePlayer = -1
-								
-		self.mapCategories = { 
-			CivilopediaPageTypes.CIVILOPEDIA_PAGE_TECH	: self.placeTechs, 
-			CivilopediaPageTypes.CIVILOPEDIA_PAGE_UNIT	: self.placeUnits, 
-			CivilopediaPageTypes.CIVILOPEDIA_PAGE_BUILDING	: self.placeBuildings, 
+
+		self.mapCategories = {
+			CivilopediaPageTypes.CIVILOPEDIA_PAGE_TECH	: self.placeTechs,
+			CivilopediaPageTypes.CIVILOPEDIA_PAGE_UNIT	: self.placeUnits,
+			CivilopediaPageTypes.CIVILOPEDIA_PAGE_BUILDING	: self.placeBuildings,
 			CivilopediaPageTypes.CIVILOPEDIA_PAGE_WONDER	: self.placeWonders,
 			CivilopediaPageTypes.CIVILOPEDIA_PAGE_TERRAIN	: self.placeTerrains,
 			CivilopediaPageTypes.CIVILOPEDIA_PAGE_FEATURE	: self.placeFeatures,
-			CivilopediaPageTypes.CIVILOPEDIA_PAGE_BONUS	: self.placeBoni, 
+			CivilopediaPageTypes.CIVILOPEDIA_PAGE_BONUS	: self.placeBoni,
 			CivilopediaPageTypes.CIVILOPEDIA_PAGE_IMPROVEMENT	: self.placeImprovements,
 			CivilopediaPageTypes.CIVILOPEDIA_PAGE_SPECIALIST	: self.placeSpecialists,
 			CivilopediaPageTypes.CIVILOPEDIA_PAGE_PROMOTION	: self.placePromotions,
@@ -172,7 +172,7 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 			CivilopediaPageTypes.CIVILOPEDIA_PAGE_CIVIC	: self.placeCivics,
 			CivilopediaPageTypes.CIVILOPEDIA_PAGE_PROJECT	: self.placeProjects,
 			CivilopediaPageTypes.CIVILOPEDIA_PAGE_CONCEPT	: self.placeConcepts,
- 			CivilopediaPageTypes.CIVILOPEDIA_PAGE_HINTS	: self.placeHints, 
+ 			CivilopediaPageTypes.CIVILOPEDIA_PAGE_HINTS	: self.placeHints,
 
 			#---------------------- [MOD] UnitUpgrades -----------------------------
 #			CivilopediaPageTypes.CIVILOPEDIA_PAGE_HINTS + 1 : self.placeUpgrades, #Rhye
@@ -188,12 +188,12 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 		# Create a hash (well, a list of lists)
 		# Items are: Original List Order (& therefore Pedia Page Index), New page order, graphic
 		# Painful, but I see no other way.
-		self.linkList = [	[0,0,"TECH"],				
+		self.linkList = [	[0,0,"TECH"],
 					[1,1,"UNITS"],
 					[2,9,"UNITS"],
                                         #Rhye - start
 ##					[3,18,"UNITS"],
-##					[4,10,"UNITS"],	
+##					[4,10,"UNITS"],
 ##					[5,2,"BUILDINGS"],
 ##					[6,3,"BUILDINGS"],
 ##					[7,15,"BUILDINGS"],
@@ -204,11 +204,11 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 ##					[12,11,"CIVS"],
 ##					[13,12,"CIVS"],
 ##					[14,13,"CIVS"],
-##					[15,14,"CIVS"],	
+##					[15,14,"CIVS"],
 ##					[16,8,"SPECIALISTS"],
-##					[17,16,"HINTS"], 
-##					[18,17,"HINTS"],				
-					[3,10,"UNITS"],	
+##					[17,16,"HINTS"],
+##					[18,17,"HINTS"],
+					[3,10,"UNITS"],
 					[4,2,"BUILDINGS"],
 					[5,3,"BUILDINGS"],
 					[6,16,"PROJECTS"],
@@ -219,14 +219,14 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 					[11,11,"CIVS"],
 					[12,12,"CIVS"],
 					[13,13,"RELIGIONS"],
-					[14,14,"CORPS"],	
+					[14,14,"CORPS"],
 					[15,8,"SPECIALISTS"],
-					[16,15,"HINTS"], 
+					[16,15,"HINTS"],
 					[17,17,"HINTS"],
                                         #Rhye - end
 					]
-	
-		self.linkListGraphics = { 
+
+		self.linkListGraphics = {
 				"TECH"	: u"%c  " %(gc.getCommerceInfo(CommerceTypes.COMMERCE_RESEARCH).getChar()),
 				"UNITS"	: u"%c  " %(CyGame().getSymbolID(FontSymbols.STRENGTH_CHAR)),
 				"BUILDINGS" : u"%c  " %(gc.getYieldInfo(YieldTypes.YIELD_PRODUCTION).getChar()),
@@ -241,30 +241,30 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 
 	def getScreen(self):
 		return CyGInterfaceScreen(self.PEDIA_MAIN_SCREEN_NAME, CvScreenEnums.PEDIA_MAIN)
-		
+
 	def setPediaCommonWidgets(self):
 		self.EXIT_TEXT = u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + "</font>"
 		self.BACK_TEXT = u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_BACK", ()).upper() + "</font>"
 		self.FORWARD_TEXT = u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_FORWARD", ()).upper() + "</font>"
 		self.MENU_TEXT = u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_TOP", ()).upper() + "</font>"
-		
-		self.szCategoryTech = localText.getText("TXT_KEY_PEDIA_CATEGORY_TECH", ())		
-		self.szCategoryUnit = localText.getText("TXT_KEY_PEDIA_CATEGORY_UNIT", ())		
+
+		self.szCategoryTech = localText.getText("TXT_KEY_PEDIA_CATEGORY_TECH", ())
+		self.szCategoryUnit = localText.getText("TXT_KEY_PEDIA_CATEGORY_UNIT", ())
 		self.szCategoryBuilding = localText.getText("TXT_KEY_PEDIA_CATEGORY_BUILDING", ())
-		self.szCategoryWonder = localText.getText("TXT_KEY_CONCEPT_WONDERS", ())			
-		self.szCategoryBonus = localText.getText("TXT_KEY_PEDIA_CATEGORY_BONUS", ())		
-		self.szCategoryTerrain = localText.getText("TXT_KEY_PEDIA_CATEGORY_TERRAIN", ())		
-		self.szCategoryFeature = localText.getText("TXT_KEY_PEDIA_CATEGORY_FEATURE", ())		
-		self.szCategoryImprovement = localText.getText("TXT_KEY_PEDIA_CATEGORY_IMPROVEMENT", ())		
-		self.szCategorySpecialist = localText.getText("TXT_KEY_PEDIA_CATEGORY_SPECIALIST", ())		
-		self.szCategoryPromotion = localText.getText("TXT_KEY_PEDIA_CATEGORY_PROMOTION", ())		
-		self.szCategoryUnitCombat = localText.getText("TXT_KEY_PEDIA_CATEGORY_UNIT_COMBAT", ())		
-		self.szCategoryCiv = localText.getText("TXT_KEY_PEDIA_CATEGORY_CIV", ())		
-		self.szCategoryLeader = localText.getText("TXT_KEY_PEDIA_CATEGORY_LEADER", ())		
-		self.szCategoryReligion = localText.getText("TXT_KEY_PEDIA_CATEGORY_RELIGION", ())		
-		self.szCategoryCorporation = localText.getText("TXT_KEY_CONCEPT_CORPORATIONS", ())		
-		self.szCategoryCivic = localText.getText("TXT_KEY_PEDIA_CATEGORY_CIVIC", ())		
-		self.szCategoryProject = localText.getText("TXT_KEY_PEDIA_CATEGORY_PROJECT", ())		
+		self.szCategoryWonder = localText.getText("TXT_KEY_CONCEPT_WONDERS", ())
+		self.szCategoryBonus = localText.getText("TXT_KEY_PEDIA_CATEGORY_BONUS", ())
+		self.szCategoryTerrain = localText.getText("TXT_KEY_PEDIA_CATEGORY_TERRAIN", ())
+		self.szCategoryFeature = localText.getText("TXT_KEY_PEDIA_CATEGORY_FEATURE", ())
+		self.szCategoryImprovement = localText.getText("TXT_KEY_PEDIA_CATEGORY_IMPROVEMENT", ())
+		self.szCategorySpecialist = localText.getText("TXT_KEY_PEDIA_CATEGORY_SPECIALIST", ())
+		self.szCategoryPromotion = localText.getText("TXT_KEY_PEDIA_CATEGORY_PROMOTION", ())
+		self.szCategoryUnitCombat = localText.getText("TXT_KEY_PEDIA_CATEGORY_UNIT_COMBAT", ())
+		self.szCategoryCiv = localText.getText("TXT_KEY_PEDIA_CATEGORY_CIV", ())
+		self.szCategoryLeader = localText.getText("TXT_KEY_PEDIA_CATEGORY_LEADER", ())
+		self.szCategoryReligion = localText.getText("TXT_KEY_PEDIA_CATEGORY_RELIGION", ())
+		self.szCategoryCorporation = localText.getText("TXT_KEY_CONCEPT_CORPORATIONS", ())
+		self.szCategoryCivic = localText.getText("TXT_KEY_PEDIA_CATEGORY_CIVIC", ())
+		self.szCategoryProject = localText.getText("TXT_KEY_PEDIA_CATEGORY_PROJECT", ())
 		self.szCategoryConcept = localText.getText("TXT_KEY_PEDIA_CATEGORY_CONCEPT", ())
 		self.szCategoryHints = localText.getText("TXT_KEY_PEDIA_CATEGORY_HINTS", ())
 
@@ -272,46 +272,46 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 #		self.szCategoryUpgrades = localText.getText("TXT_KEY_PEDIA_CATEGORY_UPGRADES", ()) #Rhye
 		#----------------------END [MOD] UnitUpgrades -------------------------------------
 
-		self.listCategories = [ self.szCategoryTech, 
+		self.listCategories = [ self.szCategoryTech,
 					self.szCategoryUnit,
 					self.szCategoryBuilding,
 					self.szCategoryWonder,
-					self.szCategoryTerrain, 
-					self.szCategoryFeature, 
-					self.szCategoryBonus, 
-					self.szCategoryImprovement, 
-					self.szCategorySpecialist, 
-					self.szCategoryPromotion, 
+					self.szCategoryTerrain,
+					self.szCategoryFeature,
+					self.szCategoryBonus,
+					self.szCategoryImprovement,
+					self.szCategorySpecialist,
+					self.szCategoryPromotion,
 					self.szCategoryUnitCombat,
-					self.szCategoryCiv, 
+					self.szCategoryCiv,
 					self.szCategoryLeader,
-					self.szCategoryReligion, 
-				        self.szCategoryCorporation, 
-					self.szCategoryCivic, 
+					self.szCategoryReligion,
+					self.szCategoryCorporation,
+					self.szCategoryCivic,
 					self.szCategoryProject,
 					self.szCategoryConcept,
 					self.szCategoryHints, #Rhye
 #					self.szCategoryUpgrades,   	# [MOD] UnitUpgrades
 					]
-								
+
 		# Create a new screen
 		screen = self.getScreen()
 		screen.setRenderInterfaceOnly(True);
 		screen.setScreenGroup(1)
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
-		
+
 		# Set background
 		screen.addDDSGFC(self.BACKGROUND_ID, ArtFileMgr.getInterfaceArtInfo("SCREEN_BG_OPAQUE").getPath(), 0, 0, self.W_SCREEN, self.H_SCREEN, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 		screen.addPanel(self.TOP_PANEL_ID, u"", u"", True, False, 0, 0, self.W_SCREEN, 55, PanelStyles.PANEL_STYLE_TOPBAR )
 		screen.addPanel(self.BOTTOM_PANEL_ID, u"", u"", True, False, 0, 713, self.W_SCREEN, 55, PanelStyles.PANEL_STYLE_BOTTOMBAR )
 		screen.setDimensions(screen.centerX(0), screen.centerY(0), self.W_SCREEN, self.H_SCREEN)
-		
+
 		# Exit button
 		screen.setText(self.EXIT_ID, "Background", self.EXIT_TEXT, CvUtil.FONT_LEFT_JUSTIFY, self.X_EXIT, self.Y_EXIT, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
 
 		# Back
 		screen.setText(self.BACK_ID, "Background", self.BACK_TEXT, CvUtil.FONT_LEFT_JUSTIFY, self.X_BACK, self.Y_BACK, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_PEDIA_BACK, 1, -1)
-			
+
 		# Forward
 		screen.setText(self.NEXT_ID, "Background", self.FORWARD_TEXT, CvUtil.FONT_LEFT_JUSTIFY, self.X_FORWARD, self.Y_FORWARD, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_PEDIA_FORWARD, 1, -1)
 
@@ -322,16 +322,16 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 
 		self.createDictionaries()
 
-		
+
 	# Screen construction function
 	# Only called on click to FAR LEFT column (LIST_ID)
 	def showScreen(self, iCategory):
 		self.iCategory = iCategory
 
-		self.deleteAllWidgets()						
-							
+		self.deleteAllWidgets()
+
 		screen = self.getScreen()
-		
+
 		bNotActive = (not screen.isActive())
 		if bNotActive:
 			self.setPediaCommonWidgets()
@@ -348,41 +348,41 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 		screen.addPanel(self.panelName, "", "", true, true,
 			self.X_PEDIA_PAGE, self.Y_PEDIA_PAGE, 0, self.H_PEDIA_PAGE, PanelStyles.PANEL_STYLE_MAIN)
 
-		
+
 		if self.iLastScreen	!= CvScreenEnums.PEDIA_MAIN or bNotActive:
 			self.iLastScreen = CvScreenEnums.PEDIA_MAIN
 
 		self.placeLinks()
-		
-		# Note to self: this is a deceptively important function here.  It actually calls the 
+
+		# Note to self: this is a deceptively important function here.  It actually calls the
 		# subroutines placeUnits, placeTech, etc based on the hash self.mapCategories.
 		# The hash returns the function name, which is subsequently called by the command itself.
 		# Tricky, but cool.
 
 		if (self.mapCategories.has_key(iCategory)):
 			self.mapCategories.get(iCategory)()
-			
+
 # BEGIN MAIN RE-WRITE for SEVOPEDIA
 # (NOTE: There have been changes throughout the code!)
-	
+
 	def placeTechs(self):
 
 		tList = self.getSortedList( gc.getNumTechInfos(), gc.getTechInfo )
-		self.displayTopics(tList, WidgetTypes.WIDGET_PEDIA_JUMP_TO_TECH, gc.getTechInfo)	
-	
-	
+		self.displayTopics(tList, WidgetTypes.WIDGET_PEDIA_JUMP_TO_TECH, gc.getTechInfo)
+
+
 	def placeUnits(self):
 
 		tList = self.getSortedList( gc.getNumUnitInfos(), gc.getUnitInfo )
-		self.displayTopics(tList, WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT, gc.getUnitInfo)	
+		self.displayTopics(tList, WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT, gc.getUnitInfo)
 
-	
+
 	def placeBuildings(self):
 
 		tList = self.pediaBuildingScreen.getBuildingSortedList(false)
-	
+
 		#tList = self.getSortedList( gc.getNumBuildingInfos(), gc.getBuildingInfo )
-		self.displayTopics(tList, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, gc.getBuildingInfo)	
+		self.displayTopics(tList, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, gc.getBuildingInfo)
 
 
 	def placeWonders(self):
@@ -390,32 +390,32 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 		tList = self.pediaBuildingScreen.getBuildingSortedList(true)
 
 		#tList = self.getSortedList( gc.getNumBuildingInfos(), gc.getBuildingInfo )
-		self.displayTopics(tList, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, gc.getBuildingInfo)	
+		self.displayTopics(tList, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, gc.getBuildingInfo)
 
-	
+
 	def placeBoni(self):
 
 		tList = self.getSortedList( gc.getNumBonusInfos(), gc.getBonusInfo )
-		self.displayTopics(tList, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BONUS, gc.getBonusInfo)	
+		self.displayTopics(tList, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BONUS, gc.getBonusInfo)
 
-	
+
 	def placeImprovements(self):
 
 		tList = self.getSortedList( gc.getNumImprovementInfos(), gc.getImprovementInfo )
 		self.displayTopics(tList, WidgetTypes.WIDGET_PEDIA_JUMP_TO_IMPROVEMENT, gc.getImprovementInfo)
-			
+
 
 	def placePromotions(self):
 
 		tList = self.getSortedList( gc.getNumPromotionInfos(), gc.getPromotionInfo )
 		self.displayTopics(tList, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION, gc.getPromotionInfo)
-												
+
 
 	def placeUnitGroups(self):
 
 		tList = self.getSortedList( gc.getNumUnitCombatInfos(), gc.getUnitCombatInfo )
 		self.displayTopics(tList, WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT_COMBAT, gc.getUnitCombatInfo)
-									
+
 
 	def placeCivs(self):
 
@@ -424,12 +424,12 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 
 
 	def placeLeaders(self):
-	
+
 		tList = self.getSortedList( gc.getNumLeaderHeadInfos(), gc.getLeaderHeadInfo )
 		tList.pop(xml.iLeaderBarbarian)
 		self.displayTopics(tList, WidgetTypes.WIDGET_PEDIA_JUMP_TO_LEADER, gc.getLeaderHeadInfo)
 
-			
+
 	def placeReligions(self):
 
 		tList = self.getSortedList( gc.getNumReligionInfos(), gc.getReligionInfo )
@@ -439,13 +439,13 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 		tList = self.getSortedList( gc.getNumCorporationInfos(), gc.getCorporationInfo )
 		self.displayTopics(tList, WidgetTypes.WIDGET_PEDIA_JUMP_TO_CORPORATION, gc.getCorporationInfo)
 
-							
+
 	def placeCivics(self):
 
 		tList = self.getSortedList( gc.getNumCivicInfos(), gc.getCivicInfo )
 		self.displayTopics(tList, WidgetTypes.WIDGET_PEDIA_JUMP_TO_CIVIC, gc.getCivicInfo)
 
-		
+
 	def placeProjects(self):
 
 		tList = self.getSortedList( gc.getNumProjectInfos(), gc.getProjectInfo )
@@ -462,7 +462,7 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 		tList = self.getSortedList( gc.getNumFeatureInfos(), gc.getFeatureInfo )
 		self.displayTopics(tList, WidgetTypes.WIDGET_PEDIA_JUMP_TO_FEATURE, gc.getFeatureInfo)
 
-							
+
 	def placeSpecialists(self):
 
 		tList = self.getSortedList( gc.getNumSpecialistInfos(), gc.getSpecialistInfo )
@@ -480,37 +480,34 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 
 		for i in range(nColumns):
 			screen.setTableColumnHeader(self.SUBLIST_ID, i, "", self.W_ITEMS_PANE/nColumns)
-		
+
 		iCounter = 0
 		iNumRows = 0
-		
-		# 3Miro: merijnv1 removed the Indy and Pope form the Civ list, maybe the Pope should be there
+
+		# Absinthe: Civilopedia restrictions: removed the Indy civs and the Pope form the Civ list
 		if (widgeyType == WidgetTypes.WIDGET_PEDIA_JUMP_TO_CIV):
-			tList.pop(26) #independent4
-			tList.pop(25) #independent3                  
-			tList.pop(24) #independent2
-			tList.pop(23) #independent1
-			#tList.pop(21) #papal
+			tList.pop(32) #independent4
+			tList.pop(31) #independent3
+			tList.pop(30) #independent2
+			tList.pop(29) #independent1
+			#tList.pop(28) #Papal States
 
-		# 3Miro: merijnv1 removed the Corsair, Seljuk, Tagmata, WeshLongbowman, Highlander, Keshik
-		# Absinthe: Corsair, Tagmata, Welsh Longbowman and Highlander readded as Unique Mercenaries
-		if (widgeyType == WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT):
-			tList.pop(89) #Seljuk
-			tList.pop(88) #MongolKeshik
+		# Absinthe: Civilopedia restrictions: currently all units visible, as most of them were readded as Unique Mercenaries
+		#if (widgeyType == WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT):
+			#tList.pop(89) #Seljuk
+			#tList.pop(88) #MongolKeshik
 
-		# 3Miro: merijnv1 removed the worked Access?
+		# Absinthe: Civilopedia restrictions: water worked and land worked improvements look strange in the civilopedia
 		if (widgeyType == WidgetTypes.WIDGET_PEDIA_JUMP_TO_IMPROVEMENT):
 			tList.pop(1) #water worked
 			tList.pop(0) #land worked
-			
+
 		tList.sort()
 
-
-		
 		for item in tList:
 
 			# This line disables the popup text on 'pedia scroll over...hopefully it works
-			
+
 			iColumn = iCounter % nColumns
 			iRow = iCounter // nColumns
 			#Rhye - start
@@ -519,8 +516,8 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 ##				screen.appendTableRow(self.SUBLIST_ID)
 ##			screen.setTableText(self.SUBLIST_ID, iColumn, iRow, u"<font=3>" + item[0] + u"</font>", buttonType(item[1]).getButton(), widgeyType, item[1], 1, CvUtil.FONT_LEFT_JUSTIFY)
 ##			iCounter += 1
-			
-                        if (widgeyType == WidgetTypes.WIDGET_PEDIA_JUMP_TO_CIV):                            
+
+                        if (widgeyType == WidgetTypes.WIDGET_PEDIA_JUMP_TO_CIV):
                                 if (gc.getCivilizationInfo(item[1]).isPlayable()):
                                         if iRow >= iNumRows:
                                                 iNumRows += 1
@@ -535,24 +532,24 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
                                 iCounter += 1
                         #Rhye - end
 
-                                    
-	
+
+
 	def placeConcepts(self):
 
 		tList = self.getSortedList( gc.getNumConceptInfos(), gc.getConceptInfo )
-				
+
 		screen = self.getScreen()
 		screen.clearListBoxGFC(self.SUBLIST_ID)
 
-		screen.addListBoxGFC( self.SUBLIST_ID, "", self.X_ITEMS_PANE, self.Y_ITEMS_PANE, self.W_ITEMS_PANE, self.H_ITEMS_PANE, TableStyles.TABLE_STYLE_STANDARD ) 
+		screen.addListBoxGFC( self.SUBLIST_ID, "", self.X_ITEMS_PANE, self.Y_ITEMS_PANE, self.W_ITEMS_PANE, self.H_ITEMS_PANE, TableStyles.TABLE_STYLE_STANDARD )
 		screen.enableSelect(self.SUBLIST_ID, True)
 		screen.setStyle(self.SUBLIST_ID, "Table_StandardCiv_Style")
-		
+
 		for topic in tList:
 			# Not sure why, but when using _NO_HELP, the topic[1] and PageType have to be flipped. Painful...
 			screen.appendListBoxString(self.SUBLIST_ID, topic[0], WidgetTypes.WIDGET_PEDIA_DESCRIPTION_NO_HELP, CivilopediaPageTypes.CIVILOPEDIA_PAGE_CONCEPT, topic[1], CvUtil.FONT_LEFT_JUSTIFY)
 
-						
+
 	def placeHints(self):
 		screen = self.getScreen()
 
@@ -566,7 +563,7 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 		self.szHints = self.getNextWidgetName()
 		screen.addListBoxGFC( self.szHints, "",
                                       self.X_ITEMS_PANE+20, self.Y_ITEMS_PANE, self.W_ITEMS_PANE + self.W_PEDIA_PAGE-40, self.H_ITEMS_PANE, TableStyles.TABLE_STYLE_STANDARD )
-		
+
 		szHintsText = CyGameTextMgr().buildHintsList()
 		hintText = string.split( szHintsText, "\n" )
 		for hint in hintText:
@@ -582,7 +579,7 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 ##
 ##		if self.iLastScreen != CvScreenEnums.PEDIA_UPGRADES:
 ##			self.iLastScreen = CvScreenEnums.PEDIA_UPGRADES
-##		
+##
 ##		# Strangely, this command works:
 ##		self.getScreen().deleteWidget("PediaSubList")
 ##
@@ -590,7 +587,7 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 ##
 ##		screen.addScrollPanel( self.UPGRADES_LIST, u"", self.X_ITEMS_PANE, self.Y_PEDIA_PAGE, self.W_PEDIA_PAGE + self.W_ITEMS_PANE, self.H_PEDIA_PAGE-50, PanelStyles.PANEL_STYLE_STANDARD )
 ##		screen.setActivation( self.UPGRADES_LIST, ActivationTypes.ACTIVATE_NORMAL )
-##		
+##
 ##		upgradesGraph = UnitUpgradesGraph.UnitUpgradesGraph(self)
 ##		graphs = upgradesGraph.getGraph()
 ##		offset = 0
@@ -611,36 +608,36 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 
 
 
-										
+
 	def placeLinks(self):
-		
+
 		link = 0
 		screen = self.getScreen()
-		
+
 		screen.clearListBoxGFC(self.LIST_ID)
-	
+
 		for item in self.linkList:
 			# Note: This was originally intended to place spacers between subjects...
 			# I'm not using it, but I'll leave the code for now just in case I change my mind.
 			if item[0] == -1:
 				screen.appendListBoxString(self.LIST_ID, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
 			else:
-				lChar = self.linkListGraphics[item[2]]		
+				lChar = self.linkListGraphics[item[2]]
 				screen.appendListBoxString(self.LIST_ID, lChar + self.listCategories[item[1]], WidgetTypes.WIDGET_PEDIA_MAIN, item[1], 0, CvUtil.FONT_LEFT_JUSTIFY )
 				if item[1] == self.iCategory:
 					link = item[0]
 
 		screen.setSelectedListBoxStringGFC(self.LIST_ID, link)
 
-					
+
 	# returns a unique ID for a widget in this screen
 	def getNextWidgetName(self):
 		szName = self.WIDGET_ID + str(self.nWidgetCount)
 		self.nWidgetCount += 1
 		return szName
-		
+
 	def pediaJump(self, iScreen, iEntry, bRemoveFwdList):
-	
+
 		if (iEntry < 0):
 			return
 
@@ -657,35 +654,35 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 		elif (iScreen == CvScreenEnums.PEDIA_UNIT):
 			self.pediaUnitScreen.interfaceScreen(iEntry)
 		elif (iScreen == CvScreenEnums.PEDIA_BUILDING):
-			self.pediaBuildingScreen.interfaceScreen(iEntry)	
+			self.pediaBuildingScreen.interfaceScreen(iEntry)
 		elif (iScreen == CvScreenEnums.PEDIA_PROMOTION):
-			self.pediaPromotionScreen.interfaceScreen(iEntry)	
+			self.pediaPromotionScreen.interfaceScreen(iEntry)
 		elif (iScreen == CvScreenEnums.PEDIA_UNIT_CHART):
-			self.pediaUnitChart.interfaceScreen(iEntry)	
+			self.pediaUnitChart.interfaceScreen(iEntry)
 		elif (iScreen == CvScreenEnums.PEDIA_BONUS):
-			self.pediaBonus.interfaceScreen(iEntry)	
+			self.pediaBonus.interfaceScreen(iEntry)
 		elif (iScreen == CvScreenEnums.PEDIA_TERRAIN):
-			self.pediaTerrain.interfaceScreen(iEntry)	
+			self.pediaTerrain.interfaceScreen(iEntry)
 		elif (iScreen == CvScreenEnums.PEDIA_FEATURE):
-			self.pediaFeature.interfaceScreen(iEntry)	
+			self.pediaFeature.interfaceScreen(iEntry)
 		elif (iScreen == CvScreenEnums.PEDIA_IMPROVEMENT):
-			self.pediaImprovement.interfaceScreen(iEntry)	
+			self.pediaImprovement.interfaceScreen(iEntry)
 		elif (iScreen == CvScreenEnums.PEDIA_CIVIC):
-			self.pediaCivic.interfaceScreen(iEntry)	
+			self.pediaCivic.interfaceScreen(iEntry)
 		elif (iScreen == CvScreenEnums.PEDIA_CIVILIZATION):
-			self.pediaCivilization.interfaceScreen(iEntry)	
+			self.pediaCivilization.interfaceScreen(iEntry)
 		elif (iScreen == CvScreenEnums.PEDIA_LEADER):
-			self.pediaLeader.interfaceScreen(iEntry)	
+			self.pediaLeader.interfaceScreen(iEntry)
 		elif (iScreen == CvScreenEnums.PEDIA_SPECIALIST):
-			self.pediaSpecialist.interfaceScreen(iEntry)	
+			self.pediaSpecialist.interfaceScreen(iEntry)
 		elif (iScreen == CvScreenEnums.PEDIA_PROJECT):
-			self.pediaProjectScreen.interfaceScreen(iEntry)	
+			self.pediaProjectScreen.interfaceScreen(iEntry)
 		elif (iScreen == CvScreenEnums.PEDIA_RELIGION):
-			self.pediaReligion.interfaceScreen(iEntry)	
+			self.pediaReligion.interfaceScreen(iEntry)
 		elif (iScreen == CvScreenEnums.PEDIA_CORPORATION):
-			self.pediaCorporation.interfaceScreen(iEntry)	
+			self.pediaCorporation.interfaceScreen(iEntry)
 		elif (iScreen == CvScreenEnums.PEDIA_HISTORY):
-			self.pediaHistorical.interfaceScreen(iEntry)	
+			self.pediaHistorical.interfaceScreen(iEntry)
 
 	def back(self):
 		print "pedia back"
@@ -694,64 +691,64 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 			current = self.pediaHistory.pop()
 			self.pediaJump(current[0], current[1], False)
 		return 1
-		
+
 	def forward(self):
 		print "pedia fwd"
 		if (self.pediaFuture):
 			current = self.pediaFuture.pop()
 			self.pediaJump(current[0], current[1], False)
 		return 1
-		
+
 	def pediaShow(self):
 		if (not self.pediaHistory):
 			self.pediaHistory.append((CvScreenEnums.PEDIA_MAIN, 0))
-			
+
 		current = self.pediaHistory.pop()
-		
+
 		# erase history so it doesn't grow too large during the game
 		self.pediaFuture = []
 		self.pediaHistory = []
-		
+
 		# jump to the last screen that was up
 		self.pediaJump(current[0], current[1], False)
-		
+
 	def link(self, szLink):
 		if (szLink == "PEDIA_MAIN_TECH"):
-			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_TECH), True)			
+			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_TECH), True)
 		if (szLink == "PEDIA_MAIN_UNIT"):
-			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_UNIT), True)			
+			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_UNIT), True)
 		if (szLink == "PEDIA_MAIN_BUILDING"):
-			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_BUILDING), True)			
+			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_BUILDING), True)
 		if (szLink == "PEDIA_MAIN_TERRAIN"):
-			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_TERRAIN), True)			
+			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_TERRAIN), True)
 		if (szLink == "PEDIA_MAIN_FEATURE"):
-			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_FEATURE), True)			
+			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_FEATURE), True)
 		if (szLink == "PEDIA_MAIN_BONUS"):
-			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_BONUS), True)			
+			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_BONUS), True)
 		if (szLink == "PEDIA_MAIN_IMPROVEMENT"):
-			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_IMPROVEMENT), True)			
+			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_IMPROVEMENT), True)
 		if (szLink == "PEDIA_MAIN_SPECIALIST"):
-			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_SPECIALIST), True)			
+			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_SPECIALIST), True)
 		if (szLink == "PEDIA_MAIN_PROMOTION"):
-			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_PROMOTION), True)			
+			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_PROMOTION), True)
 		if (szLink == "PEDIA_MAIN_UNIT_GROUP"):
-			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_UNIT_GROUP), True)			
+			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_UNIT_GROUP), True)
 		if (szLink == "PEDIA_MAIN_CIV"):
-			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_CIV), True)			
+			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_CIV), True)
 		if (szLink == "PEDIA_MAIN_LEADER"):
-			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_LEADER), True)			
+			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_LEADER), True)
 		if (szLink == "PEDIA_MAIN_RELIGION"):
-			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_RELIGION), True)			
+			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_RELIGION), True)
 		if (szLink == "PEDIA_MAIN_CORPORATION"):
-			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_CORPORATION), True)			
+			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_CORPORATION), True)
 		if (szLink == "PEDIA_MAIN_CIVIC"):
-			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_CIVIC), True)			
+			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_CIVIC), True)
 		if (szLink == "PEDIA_MAIN_PROJECT"):
-			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_PROJECT), True)			
+			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_PROJECT), True)
 		if (szLink == "PEDIA_MAIN_CONCEPT"):
-			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_CONCEPT), True)			
+			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_CONCEPT), True)
 		if (szLink == "PEDIA_MAIN_HINTS"):
-			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_HINTS), True)			
+			return self.pediaJump(CvScreenEnums.PEDIA_MAIN, int(CivilopediaPageTypes.CIVILOPEDIA_PAGE_HINTS), True)
 
 		for i in range(gc.getNumConceptInfos()):
 			if (gc.getConceptInfo(i).isMatchForLink(szLink, False)):
@@ -774,16 +771,16 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 				return self.pediaJump(CvScreenEnums.PEDIA_PROMOTION, i, True)
 		for i in range(gc.getNumUnitCombatInfos()):
 			if (gc.getUnitCombatInfo(i).isMatchForLink(szLink, False)):
-				return self.pediaJump(CvScreenEnums.PEDIA_UNIT_CHART, i, True)				
+				return self.pediaJump(CvScreenEnums.PEDIA_UNIT_CHART, i, True)
 		for i in range(gc.getNumBonusInfos()):
 			if (gc.getBonusInfo(i).isMatchForLink(szLink, False)):
-				return self.pediaJump(CvScreenEnums.PEDIA_BONUS, i, True)				
+				return self.pediaJump(CvScreenEnums.PEDIA_BONUS, i, True)
 		for i in range(gc.getNumTerrainInfos()):
 			if (gc.getTerrainInfo(i).isMatchForLink(szLink, False)):
 				return self.pediaJump(CvScreenEnums.PEDIA_TERRAIN, i, True)
 		for i in range(gc.getNumFeatureInfos()):
 			if (gc.getFeatureInfo(i).isMatchForLink(szLink, False)):
-				return self.pediaJump(CvScreenEnums.PEDIA_FEATURE, i, True)				
+				return self.pediaJump(CvScreenEnums.PEDIA_FEATURE, i, True)
 		for i in range(gc.getNumImprovementInfos()):
 			if (gc.getImprovementInfo(i).isMatchForLink(szLink, False)):
 				return self.pediaJump(CvScreenEnums.PEDIA_IMPROVEMENT, i, True)
@@ -805,7 +802,7 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 		for i in range(gc.getNumReligionInfos()):
 			if (gc.getReligionInfo(i).isMatchForLink(szLink, False)):
 				return self.pediaJump(CvScreenEnums.PEDIA_RELIGION, i, True)
-																
+
 	def deleteAllWidgets(self):
 		screen = self.getScreen()
 		iNumWidgets = self.nWidgetCount
@@ -813,9 +810,9 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 		for i in range(iNumWidgets):
 			screen.deleteWidget(self.getNextWidgetName())
 		self.nWidgetCount = 0
-		
-		
-			
+
+
+
 	# Will handle the input for this screen...
 	def handleInput (self, inputClass):
 		# redirect to proper screen if necessary
@@ -853,6 +850,6 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 			return self.pediaCorporation.handleInput(inputClass)
 		if (inputClass.getPythonFile() == CvScreenEnums.PEDIA_HISTORY):
 			return self.pediaHistorical.handleInput(inputClass)
-						
+
 		return 0
 

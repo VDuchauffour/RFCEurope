@@ -42,13 +42,13 @@
 #define DUTCH					(20)
 #define POPE					(21)*/
 //#define NUM_MAJOR_PLAYERS		(21)
-//#define INDEPENDENT				(22)
+//#define INDEPENDENT			(22)
 //#define INDEPENDENT2			(23)
 //#define INDEPENDENT3			(24)
 //#define INDEPENDENT4			(25)
-//#define NUM_ALL_PLAYERS			(23)
+//#define NUM_ALL_PLAYERS		(25)
 //#define BARBARIAN				(26)
-//#define NUM_ALL_PLAYERS_B		(24)
+//#define NUM_ALL_PLAYERS_B		(26)
 
 #define UP_HAPPINESS			(0)
 #define UP_PER_CITY_COMMERCE	(1)
@@ -97,8 +97,9 @@
 //#define MAX_NUM_TECHS			(100)
 
 //#define IMPROVEMENT_WORKSHOP	(8)
-//#define PROMOTION_MEDIC			(12)
-//#define PROMOTION_FORMATION		(7)
+
+//#define PROMOTION_MEDIC		(12)
+//#define PROMOTION_FORMATION	(7)
 
 #define ENEMY_DAMAGE			(16)
 #define BARB_DAMAGE				(32)
