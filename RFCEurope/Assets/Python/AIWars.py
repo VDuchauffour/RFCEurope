@@ -122,7 +122,7 @@ class AIWars:
 			#print ("AIWars iTargetCiv missing", iCiv)
 			iCiv, iTargetCiv = self.pickCivs()
 			if (iTargetCiv >= 0 and iTargetCiv <= iNumTotalPlayers):
-				if (iTargetCiv != con.iPope and iCiv != con.iPope ):
+				if (iTargetCiv != con.iPope and iCiv != con.iPope and iCiv != iTargetCiv):
 					self.initWar(iCiv, iTargetCiv, iGameTurn, iMaxInterval, iMinInterval)
 					return
 			else:

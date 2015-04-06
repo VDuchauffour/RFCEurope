@@ -59,7 +59,8 @@
 		<Spanish>Thomas Magister</Spanish>
 		<Portuguese>Thomas Magister</Portuguese>
 	</TEXT>
-	<TEXT>
+	<!-- currently a leader -->
+	<!--<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JEANNE_D'ARC</Tag>
 		<English>Jeanne d'Arc</English>
 		<French>Jeanne d'Arc</French>
@@ -67,7 +68,7 @@
 		<Italian>Jeanne d'Arc</Italian>
 		<Spanish>Jeanne d'Arc</Spanish>
 		<Portuguese>Jeanne d'Arc</Portuguese>
-	</TEXT>
+	</TEXT>-->
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ABD_ALLAH_IBN_SENA</Tag>
 		<English>Abd Allah Ibn Sena</English>
@@ -167,7 +168,8 @@
 		<Spanish>John Cantius</Spanish>
 		<Portuguese>John Cantius</Portuguese>
 	</TEXT>
-	<TEXT>
+	<!-- currently a leader -->
+	<!--<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ALEXANDER_NEVSKY</Tag>
 		<English>Alexander Nevsky</English>
 		<French>Alexander Nevsky</French>
@@ -175,7 +177,7 @@
 		<Italian>Alexander Nevsky</Italian>
 		<Spanish>Alexander Nevsky</Spanish>
 		<Portuguese>Alexander Nevsky</Portuguese>
-	</TEXT>
+	</TEXT>-->
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ST_THOMAS_BECKETT</Tag>
 		<English>St. Thomas Beckett</English>
@@ -824,7 +826,8 @@
 		<Spanish>Blasco De Garay</Spanish>
 		<Portuguese>Blasco De Garay</Portuguese>
 	</TEXT>
-	<TEXT>
+	<!-- currently a leader -->
+	<!--<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_GUSTAV_VASA</Tag>
 		<English>Gustav Vasa</English>
 		<French>Gustav Vasa</French>
@@ -832,7 +835,7 @@
 		<Italian>Gustav Vasa</Italian>
 		<Spanish>Gustav Vasa</Spanish>
 		<Portuguese>Gustav Vasa</Portuguese>
-	</TEXT>
+	</TEXT>-->
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_FILIPPO_BRUNNELLESCHI</Tag>
 		<English>Filippo Brunnelleschi</English>
@@ -923,7 +926,8 @@
 		<Spanish>Christopher Polhem</Spanish>
 		<Portuguese>Christopher Polhem</Portuguese>
 	</TEXT>
-	<TEXT>
+	<!-- currently a leader -->
+	<!--<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JOHAN_DE_WITT</Tag>
 		<English>Johan De Witt</English>
 		<French>Johan De Witt</French>
@@ -931,7 +935,7 @@
 		<Italian>Johan De Witt</Italian>
 		<Spanish>Johan De Witt</Spanish>
 		<Portuguese>Johan De Witt</Portuguese>
-	</TEXT>
+	</TEXT>-->
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_SERGEI_STROGANOFF</Tag>
 		<English>Sergei Stroganoff</English>
@@ -1517,7 +1521,8 @@
 		<Spanish>Belisarius</Spanish>
 		<Portuguese>Belisarius</Portuguese>
 	</TEXT>
-	<TEXT>
+	<!-- currently a leader -->
+	<!--<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_BASIL_II</Tag>
 		<English>Basil II</English>
 		<French>Basil II</French>
@@ -1525,7 +1530,7 @@
 		<Italian>Basil II</Italian>
 		<Spanish>Basil II</Spanish>
 		<Portuguese>Basil II</Portuguese>
-	</TEXT>
+	</TEXT>-->
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_BALDWIN_OF_JERUSALEM</Tag>
 		<English>Baldwin of Jerusalem</English>
@@ -1598,7 +1603,8 @@
 		<Spanish>Eric Bloodaxe</Spanish>
 		<Portuguese>Eric Bloodaxe</Portuguese>
 	</TEXT>
-	<TEXT>
+	<!-- currently a leader -->
+	<!--<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ANDREA_GRITTI</Tag>
 		<English>Andrea Gritti</English>
 		<French>Andrea Gritti</French>
@@ -1606,7 +1612,7 @@
 		<Italian>Andrea Gritti</Italian>
 		<Spanish>Andrea Gritti</Spanish>
 		<Portuguese>Andrea Gritti</Portuguese>
-	</TEXT>
+	</TEXT>-->
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_SVIATOSLAV_I</Tag>
 		<English>Sviatoslav I</English>
@@ -1723,6 +1729,15 @@
 		<Italian>Charles the Bald</Italian>
 		<Spanish>Charles the Bald</Spanish>
 		<Portuguese>Charles the Bald</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_CHARLES_THE_BOLD</Tag>
+		<English>Charles the Bold</English>
+		<French>Charles the Bold</French>
+		<German>Charles the Bold</German>
+		<Italian>Charles the Bold</Italian>
+		<Spanish>Charles the Bold</Spanish>
+		<Portuguese>Charles the Bold</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_HERACLIUS</Tag>
@@ -2175,13 +2190,22 @@
 		<Portuguese>Ivan Sushanin</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_ZRINYA_MIKLOS</Tag>
-		<English>Zrinya Miklos</English>
-		<French>Zrinya Miklos</French>
-		<German>Zrinya Miklos</German>
-		<Italian>Zrinya Miklos</Italian>
-		<Spanish>Zrinya Miklos</Spanish>
-		<Portuguese>Zrinya Miklos</Portuguese>
+		<Tag>TXT_KEY_GREAT_PERSON_ZRINYI_PETER</Tag>
+		<English>Zrinyi Peter</English>
+		<French>Zrinyi Peter</French>
+		<German>Zrinyi Peter</German>
+		<Italian>Zrinyi Peter</Italian>
+		<Spanish>Zrinyi Peter</Spanish>
+		<Portuguese>Zrinyi Peter</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_BUVAR_KUND</Tag>
+		<English>Buvar Kund</English>
+		<French>Buvar Kund</French>
+		<German>Buvar Kund</German>
+		<Italian>Buvar Kund</Italian>
+		<Spanish>Buvar Kund</Spanish>
+		<Portuguese>Buvar Kund</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_KONRAD_OF_MASOVIA</Tag>
@@ -2327,7 +2351,8 @@
 		<Spanish>Anrei Rublev</Spanish>
 		<Portuguese>Anrei Rublev</Portuguese>
 	</TEXT>
-	<TEXT>
+	<!-- currently a leader -->
+	<!--<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_AFONSO_HENRIQUES</Tag>
 		<English>Afonso Henriques</English>
 		<French>Afonso Henriques</French>
@@ -2335,5 +2360,5 @@
 		<Italian>Afonso Henriques</Italian>
 		<Spanish>Afonso Henriques</Spanish>
 		<Portuguese>Afonso Henriques</Portuguese>
-	</TEXT>
+	</TEXT>-->
 </Civ4GameText>

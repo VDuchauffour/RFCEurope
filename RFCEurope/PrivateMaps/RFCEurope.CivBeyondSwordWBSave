@@ -101,9 +101,6 @@ BeginTeam
 EndTeam
 BeginTeam
 	TeamID=22
-	Tech=TECH_CALENDAR
-	Tech=TECH_THEOLOGY
-	Tech=TECH_ASTROLABE
 EndTeam
 BeginTeam
 	TeamID=23
@@ -116,6 +113,27 @@ BeginTeam
 EndTeam
 BeginTeam
 	TeamID=26
+EndTeam
+BeginTeam
+	TeamID=27
+EndTeam
+BeginTeam
+	TeamID=28
+	Tech=TECH_CALENDAR
+	Tech=TECH_THEOLOGY
+	Tech=TECH_ASTROLABE
+EndTeam
+BeginTeam
+	TeamID=29
+EndTeam
+BeginTeam
+	TeamID=30
+EndTeam
+BeginTeam
+	TeamID=31
+EndTeam
+BeginTeam
+	TeamID=32
 EndTeam
 BeginPlayer
 	Team=0
@@ -135,7 +153,7 @@ BeginPlayer
 EndPlayer
 BeginPlayer
 	Team=2
-	LeaderType=LEADER_ABUBAKR
+	LeaderType=LEADER_ABU_BAKR
 	CivType=CIVILIZATION_ARABIA
 	PlayableCiv=1
 	StateReligion=RELIGION_ISLAM
@@ -150,7 +168,7 @@ BeginPlayer
 EndPlayer
 BeginPlayer
 	Team=4
-	LeaderType=LEADER_ABDARRAHMAN
+	LeaderType=LEADER_ABD_AR_RAHMAN
 	CivType=CIVILIZATION_CORDOBA
 	PlayableCiv=1
 	StateReligion=RELIGION_ISLAM
@@ -158,98 +176,150 @@ BeginPlayer
 EndPlayer
 BeginPlayer
 	Team=5
-	LeaderType=LEADER_HARALD_HARDRADA
-	CivType=CIVILIZATION_NORSE
-	PlayableCiv=1
-	Handicap=HANDICAP_PRINCE
-EndPlayer
-BeginPlayer
-	Team=6
-	LeaderType=LEADER_DANDOLO
+	LeaderType=LEADER_ENRICO_DANDOLO
 	CivType=CIVILIZATION_VENEZIA
 	PlayableCiv=1
 	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_MERCHANT_REPUBLIC
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
-	Team=7
-	LeaderType=LEADER_PHILIP_THE_BOLD
+	Team=6
+	LeaderType=LEADER_OTTO_WILLIAM
 	CivType=CIVILIZATION_BURGUNDY
 	PlayableCiv=1
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
-	Team=8
-	LeaderType=LEADER_BARBAROSSA
+	Team=7
+	LeaderType=LEADER_OTTO
 	CivType=CIVILIZATION_GERMANY
 	PlayableCiv=1
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
+	Team=8
+	LeaderType=LEADER_RURIK
+	CivType=CIVILIZATION_NOVGOROD
+	PlayableCiv=1
+	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_BUREAUCRACY
+	Handicap=HANDICAP_PRINCE
+EndPlayer
+BeginPlayer
 	Team=9
+	LeaderType=LEADER_HARALD_HARDRADA
+	CivType=CIVILIZATION_NORWAY
+	PlayableCiv=1
+	Handicap=HANDICAP_PRINCE
+EndPlayer
+BeginPlayer
+	Team=10
 	LeaderType=LEADER_YAROSLAV
 	CivType=CIVILIZATION_KIEV
 	PlayableCiv=1
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
-	Team=10
+	Team=11
 	LeaderType=LEADER_STEPHEN
 	CivType=CIVILIZATION_HUNGARY
 	PlayableCiv=1
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
-	Team=11
-	LeaderType=LEADER_ISABELLA
+	Team=12
+	LeaderType=LEADER_FERDINAND_III
 	CivType=CIVILIZATION_SPAIN
 	PlayableCiv=1
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
-	Team=12
-	LeaderType=LEADER_CASIMIR
-	CivType=CIVILIZATION_POLAND
-	PlayableCiv=1
-	Handicap=HANDICAP_PRINCE
-EndPlayer
-BeginPlayer
 	Team=13
-	LeaderType=LEADER_SIMONE
-	CivType=CIVILIZATION_GENOA
+	LeaderType=LEADER_HARALD_BLUETOOTH
+	CivType=CIVILIZATION_DENMARK
 	PlayableCiv=1
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
 	Team=14
+	LeaderType=LEADER_ROBERT_THE_BRUCE
+	CivType=CIVILIZATION_SCOTLAND
+	PlayableCiv=1
+	Handicap=HANDICAP_PRINCE
+EndPlayer
+BeginPlayer
+	Team=15
+	LeaderType=LEADER_MIESZKO
+	CivType=CIVILIZATION_POLAND
+	PlayableCiv=1
+	Handicap=HANDICAP_PRINCE
+EndPlayer
+BeginPlayer
+	Team=16
+	LeaderType=LEADER_EMBRIACO
+	CivType=CIVILIZATION_GENOA
+	PlayableCiv=1
+	Handicap=HANDICAP_PRINCE
+EndPlayer
+BeginPlayer
+	Team=17
+	LeaderType=LEADER_YAQUB_AL_MANSUR
+	CivType=CIVILIZATION_MOROCCO
+	PlayableCiv=1
+	Handicap=HANDICAP_PRINCE
+EndPlayer
+BeginPlayer
+	Team=18
 	LeaderType=LEADER_WILLIAM
 	CivType=CIVILIZATION_ENGLAND
 	PlayableCiv=1
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
-	Team=15
+	Team=19
 	LeaderType=LEADER_AFONSO
 	CivType=CIVILIZATION_PORTUGAL
 	PlayableCiv=1
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
-	Team=16
+	Team=20
+	LeaderType=LEADER_JAMES_I
+	CivType=CIVILIZATION_ARAGON
+	PlayableCiv=1
+	Handicap=HANDICAP_PRINCE
+EndPlayer
+BeginPlayer
+	Team=21
+	LeaderType=LEADER_MAGNUS_LADULAS
+	CivType=CIVILIZATION_SWEDEN
+	PlayableCiv=1
+	Handicap=HANDICAP_PRINCE
+EndPlayer
+BeginPlayer
+	Team=22
+	LeaderType=LEADER_HERMANN_VON_SALZA
+	CivType=CIVILIZATION_PRUSSIA
+	PlayableCiv=1
+	StateReligion=RELIGION_CATHOLICISM
+	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_THEOCRACY
+	Handicap=HANDICAP_PRINCE
+EndPlayer
+BeginPlayer
+	Team=23
 	LeaderType=LEADER_MINDAUGAS
 	CivType=CIVILIZATION_LITHUANIA
 	PlayableCiv=1
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
-	Team=17
+	Team=24
 	LeaderType=LEADER_MAXIMILIAN
 	CivType=CIVILIZATION_AUSTRIA
 	PlayableCiv=1
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
-	Team=18
+	Team=25
 	LeaderType=LEADER_MEHMED
 	CivType=CIVILIZATION_OTTOMAN
 	PlayableCiv=1
@@ -257,21 +327,14 @@ BeginPlayer
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
-	Team=19
+	Team=26
 	LeaderType=LEADER_IVAN_IV
 	CivType=CIVILIZATION_MOSCOW
 	PlayableCiv=1
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
-	Team=20
-	LeaderType=LEADER_GUSTAVUS
-	CivType=CIVILIZATION_SWEDEN
-	PlayableCiv=1
-	Handicap=HANDICAP_PRINCE
-EndPlayer
-BeginPlayer
-	Team=21
+	Team=27
 	LeaderType=LEADER_WILLEM_VAN_ORANJE
 	CivType=CIVILIZATION_DUTCH
 	PlayableCiv=1
@@ -279,7 +342,7 @@ BeginPlayer
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
-	Team=22
+	Team=28
 	LeaderType=LEADER_THE_POPE
 	CivType=CIVILIZATION_PAPAL
 	PlayableCiv=0
@@ -287,7 +350,7 @@ BeginPlayer
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
-	Team=23
+	Team=29
 	LeaderName=TXT_KEY_LEADER_INDEPENDENT
 	LeaderType=LEADER_PETER
 	CivType=CIVILIZATION_INDEPENDENT
@@ -296,7 +359,7 @@ BeginPlayer
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
-	Team=24
+	Team=30
 	LeaderName=TXT_KEY_LEADER_INDEPENDENT
 	LeaderType=LEADER_PETER
 	CivType=CIVILIZATION_INDEPENDENT2
@@ -305,7 +368,7 @@ BeginPlayer
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
-	Team=25
+	Team=31
 	LeaderName=TXT_KEY_LEADER_INDEPENDENT
 	LeaderType=LEADER_PETER
 	CivType=CIVILIZATION_INDEPENDENT3
@@ -314,7 +377,7 @@ BeginPlayer
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
-	Team=26
+	Team=32
 	LeaderName=TXT_KEY_LEADER_INDEPENDENT
 	LeaderType=LEADER_PETER
 	CivType=CIVILIZATION_INDEPENDENT4
@@ -22362,28 +22425,28 @@ BeginPlot
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 	BeginUnit
-		UnitType=UNIT_GUISARME, UnitOwner=22
+		UnitType=UNIT_GUISARME, UnitOwner=28
 		Damage=0
 		Level=1, Experience=5
 		FacingDirection=4
 		UnitAIType=UNITAI_COUNTER
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN, UnitOwner=22
+		UnitType=UNIT_CROSSBOWMAN, UnitOwner=28
 		Damage=0
 		Level=1, Experience=5
 		FacingDirection=4
 		UnitAIType=UNITAI_COUNTER
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN, UnitOwner=22
+		UnitType=UNIT_CROSSBOWMAN, UnitOwner=28
 		Damage=0
 		Level=1, Experience=5
 		FacingDirection=4
 		UnitAIType=UNITAI_COUNTER
 	EndUnit
 	BeginCity
-		CityOwner=22
+		CityOwner=28
 		CityName=Roma
 		CityPopulation=5
 		BuildingType=BUILDING_PALACE
@@ -22397,7 +22460,7 @@ BeginPlot
 		BuildingType=BUILDING_CATHOLIC_SHRINE
 		ReligionType=RELIGION_CATHOLICISM
 		HolyCityReligionType=RELIGION_CATHOLICISM
-		Player22Culture=2000
+		Player28Culture=2000
 	EndCity
 EndPlot
 BeginPlot

@@ -7596,7 +7596,7 @@ int CvUnit::workRate(bool bMax) const
 	}
 
 	//Rhye - start switch
-	// 3Miro: work rate modificatins
+	// 3Miro: work rate modifications
 	//  workerModifier[getID()]
 	iRate *= ( GET_PLAYER(getOwnerINLINE()).isHuman() ) ? workerModifierHu[getOwner()] : workerModifierAI[getOwner()];
 	iRate /= 100;

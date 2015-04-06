@@ -49,7 +49,7 @@
 #define RANDPLOT_NOT_CITY											(0x00000040)
 
 #ifdef _USRDLL
-#define MAX_CIV_PLAYERS												(27) //Rhye // 3Miro 27 counts Lithuania
+#define MAX_CIV_PLAYERS												(33) // Absinthe:  33, with Prussia, Novgorod, Norway, Scotland, Aragon, Morocco
 #else
 #define MAX_CIV_PLAYERS												(CvGlobals::getInstance().getMaxCivPlayers())
 #endif

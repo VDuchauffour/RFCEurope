@@ -52,22 +52,28 @@ lReformationMatrix = [
 10, #Arabia
 30, #Bulgaria
 10, #Cordoba
-80, #Norse
 30, #Venecia
 50, #Burgundy
 90, #Germany
+20, #Novgorod
+80, #Norway
 20, #Kiev
 50, #Hungary
 10, #Spain
+80, #Denmark
+80, #Scotland
 30, #Poland
 30, #Genoa
+10, #Morocco
 80, #England
 30, #Portugal
+30, #Aragon
+90, #Sweden
+90, #Prussia
 30, #Lithuania
 50, #Austria
 10, #Turkey
 10, #Moscow
-90, #Sweden
 90, #Dutch
 0,  #Rome
 0,  #Indies and Barbs
@@ -79,28 +85,34 @@ lReformationMatrix = [
 
 #Reformation neighbours spread reformation choice to each other
 lReformationNeighbours = [
-[con.iArabia,con.iBulgaria,con.iTurkey],		#Byzantium
-[con.iBurgundy,con.iSpain,con.iGermany,con.iGenoa,con.iEngland,con.iDutch],			#Frankia
+[con.iArabia,con.iBulgaria,con.iTurkey], #Byzantium
+[con.iBurgundy,con.iSpain,con.iGermany,con.iGenoa,con.iEngland,con.iDutch,con.iScotland], #Frankia
 [con.iByzantium,con.iCordoba,con.iTurkey],			#Arabia
 [con.iByzantium,con.iKiev,con.iHungary,con.iTurkey],		#Bulgaria
-[con.iArabia,con.iSpain,con.iPortugal],			#Cordoba
-[con.iGermany,con.iSweden],			#Norse
+[con.iArabia,con.iSpain,con.iPortugal,con.iAragon,con.iMorocco],			#Cordoba
 [con.iGenoa,con.iGermany,con.iAustria,con.iHungary,con.iPope],			#Venecia
 [con.iFrankia,con.iGermany,con.iGenoa,con.iDutch],			#Burgundy
-[con.iBurgundy,con.iFrankia,con.iNorse,con.iVenecia,con.iHungary,con.iPoland,con.iGenoa,con.iAustria,con.iDutch],		#Germany
-[con.iBulgaria,con.iHungary,con.iPoland,con.iMoscow,con.iLithuania],		#Kiev
+[con.iBurgundy,con.iFrankia,con.iDenmark,con.iVenecia,con.iHungary,con.iPoland,con.iGenoa,con.iAustria,con.iDutch],		#Germany
+[con.iSweden,con.iHungary,con.iPoland,con.iMoscow,con.iLithuania,con.iKiev],		#Novgorod
+[con.iDenmark,con.iSweden],		#Norway
+[con.iBulgaria,con.iHungary,con.iPoland,con.iMoscow,con.iLithuania,con.iNovgorod],		#Kiev
 [con.iBulgaria,con.iVenecia,con.iKiev,con.iGermany,con.iPoland,con.iAustria,con.iTurkey],		#Hungary
-[con.iFrankia,con.iCordoba,con.iPortugal],			#Spain
+[con.iFrankia,con.iCordoba,con.iPortugal,con.iAragon],			#Spain
+[con.iNorway,con.iSweden,con.iGermany],		#Denmark
+[con.iFrankia,con.iDutch,con.iEngland],			#Scotland
 [con.iKiev,con.iHungary,con.iGermany,con.iMoscow,con.iAustria,con.iLithuania],			#Poland
-[con.iBurgundy,con.iFrankia,con.iVenecia,con.iGermany,con.iPope],		#Genoa
-[con.iFrankia,con.iDutch],			#England
-[con.iSpain,con.iCordoba],			#Portugal
-[con.iKiev,con.iMoscow,con.iAustria,con.iPoland],		#Lithuania
+[con.iBurgundy,con.iFrankia,con.iVenecia,con.iGermany,con.iPope,con.iAragon],		#Genoa
+[con.iArabia,con.iSpain,con.iPortugal,con.iAragon,con.iCordoba],	#Morocco
+[con.iFrankia,con.iDutch,con.iScotland],			#England
+[con.iSpain,con.iCordoba,con.iAragon],			#Portugal
+[con.iSpain,con.iCordoba,con.iPortugal,con.iFrankia,con.iGenoa],		#Aragon
+[con.iNorway,con.iDenmark,con.iMoscow,con.iNovgorod],		#Sweden
+[con.iGermany,con.iLithuania,con.iMoscow,con.iAustria,con.iPoland],		#Prussia
+[con.iKiev,con.iMoscow,con.iPrussia,con.iNovgorod,con.iPoland],		#Lithuania
 [con.iVenecia,con.iHungary,con.iGermany,con.iPoland],		#Austria
 [con.iByzantium,con.iArabia,con.iBulgaria,con.iHungary],		#Turkey
-[con.iKiev,con.iPoland,con.iSweden,con.iLithuania],			#Moscow
-[con.iNorse,con.iMoscow],			#Sweden
-[con.iBurgundy,con.iFrankia,con.iGermany,con.iEngland],			#Dutch
+[con.iKiev,con.iPoland,con.iSweden,con.iLithuania,con.iNovgorod],			#Moscow
+[con.iBurgundy,con.iFrankia,con.iGermany,con.iEngland,con.iScotland],			#Dutch
 [con.iVenecia,con.iGenoa]			#Pope
 ]
 ### Reformation End ###

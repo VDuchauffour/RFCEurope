@@ -482,6 +482,15 @@
 		<Portuguese>Finta</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_CARGO</Tag>
+		<English>Cargo Capacity</English>
+		<French>Cargo Capacity</French>
+		<German>Cargo Capacity</German>
+		<Italian>Cargo Capacity</Italian>
+		<Spanish>Cargo Capacity</Spanish>
+		<Russian>Cargo Capacity</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_FEAT_ACCOMPLISHED_OK</Tag>
 		<English>Very well, carry on then...</English>
 		<French>Tr&#232;s bien, continuez...</French>
@@ -948,5 +957,50 @@
 		<Italian>Rimuovi la religione non-ufficiale</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>Remove religião estrangeira</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCIAL_ADVISOR_MERCENARY_MAINTENANCE</Tag>
+		<English>Mercenary Maintenance</English>
+		<French>Co&#251;t d'entretien des mercenaires</French>
+		<German>S&#246;ldner-Unterhaltskosten</German>
+		<Italian>Costo mantenimento Mercenari</Italian>
+		<Spanish>Coste de mantenimiento de mercenarios</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCIAL_ADVISOR_COLONY_UPKEEP</Tag>
+		<English>Colony Upkeep</English>
+		<French>Colony Upkeep</French>
+		<German>Colony Upkeep</German>
+		<Italian>Colony Upkeep</Italian>
+		<Spanish>Colony Upkeep</Spanish>
+		<Portuguese>Colony Upkeep</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ECON_AMOUNT_COLONY_UPKEEP</Tag>
+		<English>The Amount of Money Spent on Colony Maintenance</English>
+		<French>Colony Upkeep</French>
+		<German>Colony Upkeep</German>
+		<Italian>Colony Upkeep</Italian>
+		<Spanish>Colony Upkeep</Spanish>
+		<Portuguese>Colony Upkeep</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCE_ADVISOR_COLONY_UPKEEP_COST</Tag>
+		<English>%s1[NEWLINE]------------------------[NEWLINE]TOTAL COLONY UPKEEP: %d2[ICON_GOLD]</English>
+		<French>%s1[NEWLINE]------------------------[NEWLINE]TOTAL COLONY UPKEEP: %d2 [ICON_GOLD]</French>
+		<German>%s1[NEWLINE]------------------------[NEWLINE]TOTAL COLONY UPKEEP: %d2[ICON_GOLD]</German>
+		<Italian>%s1[NEWLINE]------------------------[NEWLINE]TOTAL COLONY UPKEEP: %d2[ICON_GOLD]</Italian>
+		<Spanish>%s1[NEWLINE]------------------------[NEWLINE]TOTAL COLONY UPKEEP: %d2 [ICON_GOLD]</Spanish>
+		<Portuguese>%s1[NEWLINE]------------------------[NEWLINE]TOTAL COLONY UPKEEP: %d2 [ICON_GOLD]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCE_ADVISOR_CITY_MAINT_COST</Tag>
+		<English>[NEWLINE]%d1[ICON_GOLD]: Distance Maintenance[NEWLINE]%d2[ICON_GOLD]: Number of Cities Maintenance[NEWLINE]%d3[ICON_GOLD]: Extra Expenses from Oversea Cities[NEWLINE]%d4[ICON_GOLD]: Company Payments[NEWLINE]------------------------[NEWLINE]------------------------[NEWLINE]TOTAL CITY MAINTENANCE COST: %d5[ICON_GOLD]</English>
+		<French>[NEWLINE]%d1[ICON_GOLD] : entretien li&#233; &#224; la distance[NEWLINE]%d2[ICON_GOLD] : entretien li&#233; au nombre de villes[NEWLINE]%d3[ICON_GOLD] : d&#233;penses des colonies[NEWLINE]%d4[ICON_GOLD] : paiements des soci&#233;t&#233;s commerciales[NEWLINE]------------------------[NEWLINE]------------------------[NEWLINE]CO&#219;T D'ENTRETIEN TOTAL DES VILLES : %d5[ICON_GOLD]</French>
+		<German>[NEWLINE]%d1[ICON_GOLD]: Unterhalt f&#252;r entfernte St&#228;dte[NEWLINE]%d2[ICON_GOLD]: Anzahl der unterhaltspflichtigen St&#228;dte[NEWLINE]%d3[ICON_GOLD]: Kolonialausgaben[NEWLINE]%d4[ICON_GOLD]: Zahlungen f&#252;r Kapitalgesellschaften[NEWLINE]------------------------[NEWLINE]------------------------[NEWLINE]STADTUNTERHALTSKOSTEN GESAMT: %d5[ICON_GOLD]</German>
+		<Italian>[NEWLINE]%d1[ICON_GOLD]: Distanza Mantenimento[NEWLINE]%d2[ICON_GOLD]: Numero di citt&#224; Mantenimento[NEWLINE]%d3[ICON_GOLD]: Spese per le colonie[NEWLINE]%d4[ICON_GOLD]: Pagamenti corporativi[NEWLINE]------------------------[NEWLINE]------------------------[NEWLINE]COSTO TOTALE MANTENIMENTO CITT&#192;: %d5[ICON_GOLD]</Italian>
+		<Spanish>[NEWLINE]%d1 [ICON_GOLD]: mantenimiento por lejan&#237;a[NEWLINE]%d2 [ICON_GOLD]: mantenimiento por cantidad de ciudades[NEWLINE]%d3[ICON_GOLD]: gastos de la colonia[NEWLINE]%d4 [ICON_GOLD]: pagos a la corporaci&#243;n[NEWLINE]------------------------[NEWLINE]------------------------[NEWLINE]COSTE TOTAL MANTENIMIENTO CIUDAD: %d5 [ICON_GOLD]</Spanish>
+		<Portuguese></Portuguese>
 	</TEXT>
 </Civ4GameText>

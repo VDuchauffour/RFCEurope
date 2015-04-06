@@ -78,7 +78,7 @@ class Resources:
 				#gc.getMap().plot(34, 50).setBonusType(xml.iAccess)
 			#if ( iPlayer == con.iFrankia ):
 				#gc.getMap().plot(37, 42).setBonusType(xml.iAccess)
-			#if ( iPlayer == con.iNorse and ( not gc.getPlayer(con.iEngland).isAlive() ) ):
+			#if ( iPlayer == con.iNorway and ( not gc.getPlayer(con.iEngland).isAlive() ) ):
 				#if ( gc.getMap().plot(36, 54).getBonusType(-1) != -1 ):
 					#gc.getMap().plot(36, 54).setBonusType(xml.iAccess)
 

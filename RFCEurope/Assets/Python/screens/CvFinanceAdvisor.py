@@ -7,10 +7,10 @@ import ScreenInput
 import CvScreenEnums
 import Consts as con
 
-# < Mercenaries Start >
+# Mercenary Upkeep
 #import MercenaryUtils
 iMercCostPerTurn = con.iMercCostPerTurn
-# < Mercenaries End   >
+#objMercenaryUtils = MercenaryUtils.MercenaryUtils()
 
 import RFCUtils #Rhye
 utils = RFCUtils.RFCUtils() #Rhye
@@ -19,10 +19,6 @@ utils = RFCUtils.RFCUtils() #Rhye
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
 localText = CyTranslator()
-
-# < Mercenaries Start >
-#objMercenaryUtils = MercenaryUtils.MercenaryUtils()
-# < Mercenaries End >
 
 iCathegoryCities = con.iCathegoryCities
 iCathegoryCivics = con.iCathegoryCivics
@@ -154,11 +150,12 @@ class CvFinanceAdvisor:
 		gold = player.getGold()
 		goldFromCivs = player.getGoldPerTurn()
 
-		# < Mercenaries Start >
+		# Colony Upkeep
+		iColonyUpkeep = int((0.5*player.getNumColonies()*player.getNumColonies()+0.5*player.getNumColonies())*6)
+
+		# Mercenary Upkeep
 		#totalMercenaryMaintenanceCost = objMercenaryUtils.getPlayerMercenaryMaintenanceCost(self.iActiveLeader)
-                totalMercenaryMaintenanceCost = (player.getPicklefreeParameter( iMercCostPerTurn )+99)/100
-		#totalMercenaryContractIncome = objMercenaryUtils.getPlayerMercenaryContractIncome(self.iActiveLeader)
-		# < Mercenaries End   >
+		totalMercenaryMaintenanceCost = (player.getPicklefreeParameter( iMercCostPerTurn )+99)/100
 
 		szTreasuryPanel = self.getNextWidgetName()
 		screen.addPanel(szTreasuryPanel, u"", "", True, True, self.X_SLIDERS, self.Y_TREASURY, self.X_EXPENSES + self.PANE_WIDTH - self.X_SLIDERS, self.H_TREASURY, PanelStyles.PANEL_STYLE_MAIN )
@@ -240,7 +237,7 @@ class CvFinanceAdvisor:
                         self.printStars(ePlayer, self.getNextWidgetName(), 1, self.X_PARAMETERS4 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
                 elif (iParameter4 <= -3):
                         self.printStars(ePlayer, self.getNextWidgetName(), 2, self.X_PARAMETERS4 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter4 < 0 ):
+                elif (iParameter4 < 3 ):
                         self.printStars(ePlayer, self.getNextWidgetName(), 3, self.X_PARAMETERS4 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
                 elif (iParameter4 < 10):
                         self.printStars(ePlayer, self.getNextWidgetName(), 4, self.X_PARAMETERS4 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
@@ -257,7 +254,7 @@ class CvFinanceAdvisor:
                         self.printStars(ePlayer, self.getNextWidgetName(), 1, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
                 elif (iParameter5 <= -3):
                         self.printStars(ePlayer, self.getNextWidgetName(), 2, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter5 < 0):
+                elif (iParameter5 < 3):
                         self.printStars(ePlayer, self.getNextWidgetName(), 3, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
                 elif (iParameter5 < 10):
                         self.printStars(ePlayer, self.getNextWidgetName(), 4, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
@@ -303,13 +300,6 @@ class CvFinanceAdvisor:
 		screen.setLabel(self.getNextWidgetName(), "Background", u"<font=3>" + unicode(goldCommerce) + "</font>", CvUtil.FONT_RIGHT_JUSTIFY, self.X_INCOME + self.PANE_WIDTH - self.TEXT_MARGIN, yLocation + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_HELP_FINANCE_GROSS_INCOME, -1, -1 )
 		iIncome += goldCommerce
 
-		# < Mercenaries Start >
-		#yLocation += 1.5 * self.Y_SPACING
-		#screen.setLabel(self.getNextWidgetName(), "Background", u"<font=3>" + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_MERCENARY_CONTRACT_INCOME", ()) + "</font>", CvUtil.FONT_LEFT_JUSTIFY, self.X_INCOME + self.TEXT_MARGIN, yLocation + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-		#screen.setLabel(self.getNextWidgetName(), "Background", u"<font=3>" + unicode(totalMercenaryContractIncome) + "</font>", CvUtil.FONT_RIGHT_JUSTIFY, self.X_INCOME + self.PANE_WIDTH - self.TEXT_MARGIN, yLocation + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-		#iIncome += totalMercenaryContractIncome
-		# < Mercenaries End   >
-
 		if (goldFromCivs > 0):
 			yLocation += self.Y_SPACING
 			szText = unicode(goldFromCivs) + " : " + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_PER_TURN", ())
@@ -337,17 +327,22 @@ class CvFinanceAdvisor:
 		screen.setLabel(self.getNextWidgetName(), "Background", u"<font=3>" + unicode(totalUnitSupply) + "</font>", CvUtil.FONT_RIGHT_JUSTIFY, self.X_EXPENSES + self.PANE_WIDTH - self.TEXT_MARGIN, yLocation + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_HELP_FINANCE_AWAY_SUPPLY, self.iActiveLeader, 1)
 		iExpenses += totalUnitSupply
 
-		# < Mercenaries Start >
+		# Mercenary Upkeep
 		yLocation += self.Y_SPACING
-		screen.setLabel(self.getNextWidgetName(), "Background", u"<font=3>" + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_MERCENARY_MAINTENANCE_COST", ()) + "</font>", CvUtil.FONT_LEFT_JUSTIFY, self.X_EXPENSES + self.TEXT_MARGIN, yLocation + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, self.iActiveLeader, 1)
+		screen.setLabel(self.getNextWidgetName(), "Background", u"<font=3>" + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_MERCENARY_MAINTENANCE", ()) + "</font>", CvUtil.FONT_LEFT_JUSTIFY, self.X_EXPENSES + self.TEXT_MARGIN, yLocation + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, self.iActiveLeader, 1)
 		screen.setLabel(self.getNextWidgetName(), "Background", u"<font=3>" + unicode(totalMercenaryMaintenanceCost) + "</font>", CvUtil.FONT_RIGHT_JUSTIFY, self.X_EXPENSES + self.PANE_WIDTH - self.TEXT_MARGIN, yLocation + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, self.iActiveLeader, 1)
 		iExpenses += totalMercenaryMaintenanceCost
-		# < Mercenaries End   >
 
 		yLocation += self.Y_SPACING
 		screen.setLabel(self.getNextWidgetName(), "Background", u"<font=3>" + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_MAINTENANCE", ()) + "</font>", CvUtil.FONT_LEFT_JUSTIFY, self.X_EXPENSES + self.TEXT_MARGIN, yLocation + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_HELP_FINANCE_CITY_MAINT, self.iActiveLeader, 1)
 		screen.setLabel(self.getNextWidgetName(), "Background", u"<font=3>" + unicode(totalMaintenance) + "</font>", CvUtil.FONT_RIGHT_JUSTIFY, self.X_EXPENSES + self.PANE_WIDTH - self.TEXT_MARGIN, yLocation + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_HELP_FINANCE_CITY_MAINT, self.iActiveLeader, 1)
 		iExpenses += totalMaintenance
+
+		# Colony Upkeep
+		yLocation += self.Y_SPACING
+		screen.setLabel(self.getNextWidgetName(), "Background", u"<font=3>" + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_COLONY_UPKEEP", ()) + "</font>", CvUtil.FONT_LEFT_JUSTIFY, self.X_EXPENSES + self.TEXT_MARGIN, yLocation + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, self.iActiveLeader, 1)
+		screen.setLabel(self.getNextWidgetName(), "Background", u"<font=3>" + unicode(iColonyUpkeep) + "</font>", CvUtil.FONT_RIGHT_JUSTIFY, self.X_EXPENSES + self.PANE_WIDTH - self.TEXT_MARGIN, yLocation + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, self.iActiveLeader, 1)
+		iExpenses += iColonyUpkeep
 
 		yLocation += self.Y_SPACING
 		screen.setLabel(self.getNextWidgetName(), "Background", u"<font=3>" + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_CIVICS", ()) + "</font>", CvUtil.FONT_LEFT_JUSTIFY, self.X_EXPENSES + self.TEXT_MARGIN, yLocation + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_HELP_FINANCE_CIVIC_UPKEEP, self.iActiveLeader, 1)

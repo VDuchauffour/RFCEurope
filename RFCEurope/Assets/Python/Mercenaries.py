@@ -384,16 +384,16 @@ lMercList = [   [xml.iAxeman, "TXT_KEY_MERC_SERBIAN", 60, 108, xml.lRegionBalkan
                 ]
 
 ### A few Parameters for Mercs only:
-# Promotions and their odds, higher promotions have very low probability, leaders and navigation don't appear
-# combat 1 - 5, cover (vs archer), shock (vs heavy infantry), formation (vs heavy horse), charge (vs siege), ambush (vs light cav), feint (vs polearm), amphibious, march (movement heal), medic 1-2,
-# gurilla (hill defense) 1-3, woodsman 1-3, city raider 1-3, garrison 1-3, drill 1-4, barrage (collateral) 1-3, accuracy (more bombard), flanking (vs siege) 1-2, sentry (vision), mobility (movement),
-# navigation 1-2, leader, leadership (more XP), tactic (withdraw), commando (enemy roads), combat 6, morale (movement), medic 3, merc
-lPromotionOdds = [ 100, 80, 40, 10,  5, 50, 50, 60, 40, 20, 50, 20, 10, 40, 20, 80, 50, 30, 80, 50, 30, 80, 40, 10, 60, 30, 10, 60, 40, 10,  5, 60, 40, 10, 60, 50, 30, 20, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+# Promotions and their odds, higher promotions have very low probability, leader-tied promotions, commando and navigation don't appear
+# combat 1 - 5, cover (vs archer), shock (vs heavy infantry), pinch, formation (vs heavy horse), charge (vs siege), ambush (vs light cav), feint (vs polearm), amphibious, march (movement heal), medic 1-2,
+# guerilla (hill defense) 1-3, woodsman 1-3, city raider 1-3, garrison 1-3, drill 1-4, barrage (collateral) 1-3, accuracy (more bombard), flanking (vs siege) 1-2, sentry (vision), mobility (movement),
+# navigation 1-2, cargo, leader, leadership (more XP), tactic (withdraw), commando (enemy roads), combat 6, morale (movement), medic 3, merc
+lPromotionOdds = [ 100, 80, 40, 10,  5, 50, 50, 40, 60, 40, 20, 50, 20, 10, 40, 20, 80, 50, 30, 80, 50, 30, 80, 40, 10, 60, 30, 10, 60, 40, 10,  5, 60, 40, 10, 60, 50, 30, 20, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
 # The way promotions would affect the cost of the mercenary (percentage wise)
-lPromotionCost = [  10, 15, 30, 30, 40, 20, 20, 20, 20, 20, 20, 30, 40, 20, 30, 15, 20, 30, 15, 20, 30, 20, 30, 50, 20, 30, 50, 10, 20, 40, 50, 10, 10, 10, 20, 10, 10, 10, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
-iNumTotalPromotions = 39 # without navigation and leaders
-iNumPromotionsSoftCap = 3 # canget more promotions if you get a high promotion (i.e. combat 5), but overall it should be unlikely
-iNumPromorionIterations = 3 # how many attemps shall we make to add promotion (the bigger the number, the more likely it is for a unit to have at least iNumPromotionsSoftCap promotions)
+lPromotionCost = [  10, 15, 30, 30, 40, 20, 20, 20, 20, 20, 20, 20, 30, 40, 20, 30, 15, 20, 30, 15, 20, 30, 20, 30, 50, 20, 30, 50, 10, 20, 40, 50, 10, 10, 10, 20, 10, 10, 10, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+iNumTotalPromotions = 40 # without navigation 1-2, cargo, commando and leader-tied promotions - those are unnecessary here (unavailable for all mercs anyway)
+iNumPromotionsSoftCap = 3 # can get more promotions if you get a high promotion (i.e. combat 5), but overall it should be unlikely
+iNumPromorionIterations = 4 # how many attemps shall we make to add promotion (the bigger the number, the more likely it is for a unit to have at least iNumPromotionsSoftCap promotions)
 
 # 3MiroUP: set the merc cost modifiers here
 lMercCostModifier = (
@@ -402,22 +402,28 @@ lMercCostModifier = (
 100, # Arabia
 100, # Bulgaria
 100, # Cordoba
-100, # Norse
 100, # Venecia
 100, # Burgundy
 110, # Germany
+100, # Novgorod
+100, # Norway
 100, # Kiev
 100, # Hungary
 100, # Spain
+100, # Denmark
+100, # Scotland
 100, # Poland
 50, # Genoa
+100, # Morocco
 100, # England
 100, # Portugal
+100, # Aragon
+100, # Sweden
+100, # Prussia
 100, # Lithuania
 100, # Austria
 100, # Turkey
 100, # Moscow
-100, # Sweden
 100, # Dutch
 0, #Pope
 0,
@@ -456,7 +462,7 @@ class MercenaryManager:
                                 #if ( ( not ( lMerc[4] in lHumanProvinces ) ) and ( iNewProv in lHumanProvinces ) ):
                                         #CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
                                 #lMerc[4] = iNewProv
-                                if ( gc.getGame().getSorenRandNum( 100, 'mercs leaving the global pool') < lMercList[lMerc[0]][6]/2 ):
+                                if ( gc.getGame().getSorenRandNum( 100, 'mercs leaving the global pool') < lMercList[lMerc[0]][6]/2 ): #tied to the appear odds, which currently only functions as delay, maybe something else would be better here
                                         self.lGlobalPool.remove( lMerc )
                                         if ( lMerc[4] in lHumanProvinces ):
                                                 CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_MOVING",()), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
@@ -718,7 +724,7 @@ class MercenaryManager:
                 iUpkeep = pPlayer.getPicklefreeParameter( iMercCostPerTurn )
 
                 if ( 100*iGold < iUpkeep ):
-                        # can't affort mercs, fire someone
+                        # can't afford mercs, fire someone
                         bFire = True
                 elif ( iWarValue < 4 and 50*iGold < iUpkeep ):
                         # mercs cost > 1/2 of our gold

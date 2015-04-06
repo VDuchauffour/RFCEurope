@@ -76,14 +76,14 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_ABUYUSUFYAQUB</LeaderType>
+							<LeaderType>LEADER_YAQUB_AL_MANSUR</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
 					<Attitudes/>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_ABUYUSUFYAQUB_1</Text>
+						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_YAQUB_AL_MANSUR_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -104,7 +104,7 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_ABUBAKR</LeaderType>
+							<LeaderType>LEADER_ABU_BAKR</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
@@ -176,7 +176,6 @@
 						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_PHILIP_II_1</Text>
 						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_PHILIP_II_2</Text>
 						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_PHILIP_II_3</Text>
-						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_PHILIP_II_4</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -285,28 +284,28 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_ABDARRAHMAN</LeaderType>
+							<LeaderType>LEADER_ABD_AR_RAHMAN</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
 					<Attitudes/>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_ABDARRAHMAN_1</Text>
+						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_ABD_AR_RAHMAN_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_SIMONE</LeaderType>
+							<LeaderType>LEADER_BOCCANEGRA</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
 					<Attitudes/>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_SIMONE_1</Text>
+						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_BOCCANEGRA_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -359,29 +358,43 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_GUSTAVUS</LeaderType>
+							<LeaderType>LEADER_GUSTAV_ADOLF</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
 					<Attitudes/>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_GUSTAVUS_1</Text>
-						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_GUSTAVUS_2</Text>
+						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_GUSTAV_ADOLF_1</Text>
+						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_GUSTAV_ADOLF_2</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_DANDOLO</LeaderType>
+							<LeaderType>LEADER_ENRICO_DANDOLO</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
 					<Attitudes/>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_DANDOLO_1</Text>
+						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_ENRICO_DANDOLO_1</Text>
+					</DiplomacyText>
+				</Response>
+				<Response>
+					<Civilizations/>
+					<Leaders>
+						<Leader>
+							<LeaderType>LEADER_BOHDAN</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+					</Leaders>
+					<Attitudes/>
+					<DiplomacyPowers/>
+					<DiplomacyText>
+						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_BOHDAN_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -635,7 +648,7 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_ABUBAKR</LeaderType>
+							<LeaderType>LEADER_ABU_BAKR</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
@@ -751,14 +764,14 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_GUSTAVUS</LeaderType>
+							<LeaderType>LEADER_GUSTAV_ADOLF</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
 					<Attitudes/>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_REFUSE_TO_TALK_LEADER_GUSTAVUS_1</Text>
+						<Text>AI_DIPLO_REFUSE_TO_TALK_LEADER_GUSTAV_ADOLF_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -1056,7 +1069,7 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_ABUBAKR</LeaderType>
+							<LeaderType>LEADER_ABU_BAKR</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
@@ -1171,14 +1184,14 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_GUSTAVUS</LeaderType>
+							<LeaderType>LEADER_GUSTAV_ADOLF</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
 					<Attitudes/>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_NO_PEACE_LEADER_GUSTAVUS_1</Text>
+						<Text>AI_DIPLO_NO_PEACE_LEADER_GUSTAV_ADOLF_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -1466,7 +1479,7 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_ABUBAKR</LeaderType>
+							<LeaderType>LEADER_ABU_BAKR</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
@@ -1685,7 +1698,7 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_GUSTAVUS</LeaderType>
+							<LeaderType>LEADER_GUSTAV_ADOLF</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
@@ -1705,7 +1718,7 @@
 					</Attitudes>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_GREETINGS_ATT_FR_LEADER_GUSTAVUS_1</Text>
+						<Text>AI_DIPLO_GREETINGS_ATT_FR_LEADER_GUSTAV_ADOLF_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -2205,7 +2218,7 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_ABUBAKR</LeaderType>
+							<LeaderType>LEADER_ABU_BAKR</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
@@ -2391,7 +2404,7 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_GUSTAVUS</LeaderType>
+							<LeaderType>LEADER_GUSTAV_ADOLF</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
@@ -2407,7 +2420,7 @@
 					</Attitudes>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_GUSTAVUS_1</Text>
+						<Text>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_GUSTAV_ADOLF_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -3624,7 +3637,7 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_ABUBAKR</LeaderType>
+							<LeaderType>LEADER_ABU_BAKR</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
@@ -3779,7 +3792,7 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_GUSTAVUS</LeaderType>
+							<LeaderType>LEADER_GUSTAV_ADOLF</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
@@ -3791,7 +3804,7 @@
 						</DiplomacyPower>
 					</DiplomacyPowers>
 					<DiplomacyText>
-						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_GUSTAVUS_1</Text>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_GUSTAV_ADOLF_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -4085,7 +4098,7 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_ABUBAKR</LeaderType>
+							<LeaderType>LEADER_ABU_BAKR</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
@@ -4240,7 +4253,7 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_GUSTAVUS</LeaderType>
+							<LeaderType>LEADER_GUSTAV_ADOLF</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
@@ -4252,7 +4265,7 @@
 						</DiplomacyPower>
 					</DiplomacyPowers>
 					<DiplomacyText>
-						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_GUSTAVUS_1</Text>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_GUSTAV_ADOLF_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -4566,7 +4579,7 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_ABUBAKR</LeaderType>
+							<LeaderType>LEADER_ABU_BAKR</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
@@ -4720,7 +4733,7 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_GUSTAVUS</LeaderType>
+							<LeaderType>LEADER_GUSTAV_ADOLF</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
@@ -4732,7 +4745,7 @@
 						</DiplomacyPower>
 					</DiplomacyPowers>
 					<DiplomacyText>
-						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_GUSTAVUS_1</Text>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_GUSTAV_ADOLF_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>

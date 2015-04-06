@@ -713,7 +713,7 @@
 	</TEXT>
 		<!-- Civilization Spain -->
 		<!-- Civilization Norse -->
-	<TEXT>
+	<!--<TEXT>
 		<Tag>TXT_KEY_CIV_NORSE_DESC</Tag>
 		<English>The Norse</English>
 		<French>
@@ -812,8 +812,92 @@
 		<Italian>[TAB]Pi&#249; propriamente noti come scandinavi o nordici, i Vichinghi furono un popolo dell'Europa settentrionale divenuto famoso per le serie di incursioni condotte pi&#249; o meno tra l'800 e il 1050 d.C., periodo talvolta detto &quot;era dei Vichinghi&quot; e in cui il caos e la devastazione dominarono in vaste aree del continente. I Vichinghi si possono dividere in tre gruppi: i Danesi, che attaccarono principalmente l'Inghilterra; i Norvegesi, che invasero la Scozia, l'Irlanda e altri territori pi&#249; a ovest; e gli Svedesi, che invasero il bacino dell'odierna Russia. Anche se i Vichinghi spesso adottavano la strategia del mordi e fuggi, molti di loro finirono per insediarsi nelle aree colpite e per mescolarsi con le popolazioni locali. E anche se oggi i Vichinghi hanno fama d'essere stati pirati assetati di sangue, le loro attivit&#224; avevano probabilmente una natura pi&#249; commerciale che militare.[PARAGRAPH:2:1]Gli storici ancora discutono sulle cause dell'improvviso sorgere in Scandinavia alla fine del VII secolo d.C. della civilt&#224; dei Vichinghi e delle loro incursioni predatorie in Europa. Alcuni credono che i Vichinghi fossero afflitti da sovrappopolazione (a causa dei migliori strumenti agricoli adottati negli ultimi tempi); altri che l'unificazione della Norvegia avesse portato a un soprannumero di guerrieri inattivi; o che quella dei Vichinghi sia stata una reazione al tentativo dei Franchi di estrometterli dal commercio con l'oriente; o ancora che le incursioni fossero il risultato di semplice noia da parte degli uomini. Una teoria degna di nota &#232; che nel Medioevo il clima dell'Europa settentrionale fosse pi&#249; mite e che ciò abbia determinato prima un problema di sovrappopolazione in Scandinavia e poi la colonizzazione dell'Islanda e della Groenlandia.[PARAGRAPH:2:1]Quale che fosse la causa dell'espansionismo dei Vichinghi, la loro avventura iniziò col saccheggio del monastero di Lindisfarne, su un'isola al largo delle coste britanniche, nel 793 d.C. Nel decennio successivo l'Inghilterra fu regolarmente vittima di incursioni da parte dei Danesi, finch&#233; nell'865 nella regione dell'East Anglia non sbarcò una vera e propria invasione guidata da diversi re vichinghi senza una propria terra. Gli scontri successivi videro la sconfitta della maggior parte degli stati inglesi, salvo quello di Wessex, guidato da Alfredo il Grande, che riuscì a respingere gli invasori. I Vichinghi si insediarono nella regione di Northumbria, che venne ribattezzata &quot;Danela&quot; poich&#233; gran parte di questi vichinghi era danese.[PARAGRAPH:2:1]Nel 947 seguì un'altra invasione sotto il comando di Erik Ascia-di-sangue, che riuscì a conquistare anche la citt&#224; di York. I Vichinghi mantennero il controllo dell'Inghilterra fino all'invasione dei normanni (discendenti francesi dei Vichinghi stessi) del 1066. Nello stesso periodo, Scozia e Irlanda sperimentarono una massiccia presenza di Norvegesi, ai quali si deve la fondazione di molte importanti citt&#224;, tra cui Dublino. I Norvegesi finirono per insediarsi e mescolarsi con la nativa popolazione degli Irlandesi.[PARAGRAPH:2:1]L'obiettivo principale dell'assalto vichingo fu però la Francia. Per tutto il IX secolo i Vichinghi spadroneggiarono impuniti lungo la Senna, saccheggiando senza incontrare ostacoli citt&#224; e monasteri, finch&#233; il re dei Francesi Carlo il Semplice non si accordò col capo vichingo Hrolf Ganger nel 911, cedendogli il controllo della Francia settentrionale. In cambio, Hrolf e i suoi uomini accettarono di convertirsi al cristianesimo e di diventare vassalli del re di Francia. Il nome Hrolf si mutò in Rollo ed egli divenne il duca di Normandia (che prende il nome dagli occupanti norvegesi). Nonostante la conversione al cristianesimo, i normanni non mutarono la propria predisposizione agli scontri bellici e difatti furono protagonisti di molte importanti conquiste in Inghilterra, nel Mediterraneo e nel corso delle crociate.[PARAGRAPH:2:1]Le imprese dei marinai vichinghi furono tali da assumere dimensioni leggendarie: furono essi a trovare le rotte per l'lslanda, la Groenlandia e per l'isola di Terranova in Nord America (luoghi tutti in cui fondarono delle colonie). Le navi vichinghe erano sia veloci sia resistenti e la relativa piattezza della loro parte inferiore permetteva anche la navigazione sui fiumi europei. I Vichinghi potevano attaccare via mare e salpare via prima ancora che lo stato colpito organizzasse una risposta armata. A est, gli Svedesi navigarono lungo i fiumi della odierna Russia o fondarono lo stato di Kievan Rus', che si arricchì grazie al traffico tra i territori del Mar Baltico e l'Impero bizantino. Alcuni di questi Vichinghi trovarono anche impiego come mercenari a difesa dei confini bizantini; i pi&#249; valorosi tra loro fecero parte del corpo d'elite delle guardie bizantine, i varangi. L'era dei vichinghi si concluse intorno al 1050 d.C., quando i vichinghi si possono considerare ormai in tutto e per tutto integrati nell'Europa cristiana e dediti alle meno eccitanti ma pi&#249; stabili occupazioni dell'agricoltura e della pesca, ma nonostante ciò la loro reputazione di feroci invasori dal mare &#232; rimasta viva fino a oggi.</Italian>
 		<Spanish>[TAB]Conocidos tambi&#233;n como normandos, los vikingos eran una serie de pueblos procedentes del norte de Europa que se hicieron famosos por los ataques llevados a cabo por todo el continente en el período comprendido aproximadamente entre el 800 y 1050 d. C. Este período, conocido a veces como &quot;era vikinga&quot;, se caracterizó en muchas partes de Europa por el caos y el desorden. Los vikingos se dividían en tres grandes grupos: los daneses centraron sus ataques principalmente en Inglaterra; los noruegos visitaron Escocia, Irlanda y algunas regiones situadas al oeste; y los suecos invadieron el sistema fluvial de lo que en nuestros días es Rusia. Aunque normalmente utilizaban t&#225;cticas de ataque fugaces, muchos de ellos establecieron comunidades nuevas en las &#225;reas sojuzgadas y acabaron por mezclarse con las poblaciones locales. Y, aunque hoy en día se tiene de ellos la imagen de saqueadores sanguinarios, lo m&#225;s probable es que en general actuasen m&#225;s como mercaderes que como guerreros.[PARAGRAPH:2:1]Los historiadores debaten las razones que los llevaron a salir de Escandinavia a finales del siglo VIII d. C. y a empezar sus ataques a otras regiones de Europa. Hay diversas teorías: que Escandinavia sufría una superpoblación provocada por el desarrollo del instrumental agrícola; que la unificación de Noruega había provocado la existencia de un exceso de guerreros sin nada que hacer; que se trataba de una reacción de los intentos de los francos por impedirles acceder al comercio de las regiones orientales; o que los hombres se dedicaban al pillaje y al saqueo por puro aburrimiento. Una teoría especialmente interesante es la que asegura que el clima de Europa era m&#225;s c&#225;lido durante la Edad Media, lo que produjo un exceso de población en Escandinavia y la consiguiente colonización de regiones como Islandia y Groenlandia.[PARAGRAPH:2:1]Pero al margen de la razón última de su expansión, lo que sabemos con certeza es que la expansión vikinga se inició con el saqueo del importante monasterio de Lindisfarne, situado en una isla de la costa de Inglaterra, en el 793 d. C. En la siguiente d&#233;cada, Inglaterra sufrió los constantes saqueos de los daneses y, en el año 865, una invasión en toda regla desembarcó en Anglia oriental. Este ej&#233;rcito estaba dirigido por varios reyes sin tierra; en las batallas que se produjeron a continuación, la mayoría de los reinos ingleses fueron derrotados, pero el estado de Wessex, bajo el mando de Alfredo el Grande, logró contener a los invasores. Los vikingos se instalaron en Nortumbria, territorio que pasó a conocerse como &quot;Danela&quot; (pues la mayoría de los invasores eran daneses).[PARAGRAPH:2:1]Otra oleada de vikingos, bajo el mando de Erik Hacha Sangrienta, desembarcó en la isla en el año 947 y logró capturar la ciudad de York. Los vikingos mantendrían bajo su control la mayor parte de Inglaterra hasta la invasión normanda de 1066, y hay que recordar que estos normandos eran a su vez los descendientes de los vikingos asentados en Francia. A estas alturas, Escocia e Irlanda habían soportado tambi&#233;n una importante presencia de vikingos noruegos. Muchas ciudades importantes, Dublín incluida, fueron fundadas por ellos. Con el paso del tiempo, los vikingos acabaron por mezclarse con los irlandeses nativos.[PARAGRAPH:2:1]Sin embargo, el objetivo principal de los ataques vikingos fue Francia. A lo largo de todo el siglo IX, los vikingos navegaron con impunidad por el río Sena y saquearon a su antojo los pueblos y monasterios de la región. Finalmente, en el año 911, el rey franco Carlos el Simple llegó a un acuerdo con el líder vikingo Hrolf Ganger en el que le concedía el control del norte de Francia. A cambio, Hrolf y sus hombres se comprometían a convertirse al cristianismo y a jurar fidelidad al rey franco como vasallos. Hrolf se cambió el nombre por el de Rollo y adoptó el título de duque de Normandía (bautizada así por los normandos que se asentaron en ella). Los normandos no abandonaron su cultura guerrera a pesar de su conversión al cristianismo, y continuaron realizando importantes conquistas en Inglaterra, el Mediterr&#225;neo y el Levante (durante las Cruzadas).[PARAGRAPH:2:1]Las hazañas de los marinos vikingos son legendarias. Parece ser que llegaron hasta Islandia, Groenlandia e incluso el Labrador, en Norteam&#233;rica, y fundaron colonias en todas estas regiones. Sus barcos, adem&#225;s de ser r&#225;pidos y muy marineros, poseían un escaso calado que les permitía adentrarse profundamente en los sistemas fluviales de Europa. Los vikingos podían atacar desde el mar y retirarse antes de que las fuerzas armadas de un reino pudieran reunirse para ofrecer resistencia. Al este, los suecos viajaron por los ríos de la moderna Rusia y fundaron el estado de Kievan Rus, que se hizo rico gracias al comercio entre el B&#225;ltico y el Imperio Bizantino. Adem&#225;s, estos vikingos se emplearon como mercenarios en las tierras de los bizantinos y sus formidables guerreros formaron la guardia varega de los emperadores de Bizancio. La era vikinga llegó a su fin alrededor del 1050, cuando los vikingos terminaron de incorporarse a la Europa cristiana y empezaron a dedicarse a las tareas, menos excitantes pero m&#225;s estables, de la agricultura y la pesca. Sin embargo, su reputación de feroces invasores ha perdurado hasta nuestros días.</Spanish>
 		<Portuguese>.</Portuguese>
-	</TEXT>
+	</TEXT>-->
 		<!-- Civilization Norse -->
+		<!-- Civilization Norway -->
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NORWAY_DESC</Tag>
+		<English>The Norwegians</English>
+		<French>The Norwegians</French>
+		<German>The Norwegians</German>
+		<Italian>The Norwegians</Italian>
+		<Spanish>The Norwegians</Spanish>
+		<Portuguese>The Norwegians</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NORWAY_SHORT_DESC</Tag>
+		<English>Norway</English>
+		<French>Norway</French>
+		<German>Norway</German>
+		<Italian>Norway</Italian>
+		<Spanish>Norway</Spanish>
+		<Portuguese>Norway</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NORWAY_ADJECTIVE</Tag>
+		<English>
+			<Text>Norwegian:Norwegians</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</English>
+		<French>Norwegian</French>
+		<German>Norwegian</German>
+		<Italian>Norwegian</Italian>
+		<Spanish>Norwegian</Spanish>
+		<Portuguese>Norwegian</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NORWAY_PEDIA</Tag>
+		<English>Norway</English>
+		<French>Norway</French>
+		<German>Norway</German>
+		<Italian>Norway</Italian>
+		<Spanish>Norway</Spanish>
+		<Portuguese>Norway</Portuguese>
+	</TEXT>
+		<!-- Civilization Norway -->
+		<!-- Civilization Denmark -->
+	<TEXT>
+		<Tag>TXT_KEY_CIV_DENMARK_DESC</Tag>
+		<English>The Danish</English>
+		<French>The Danish</French>
+		<German>The Danish</German>
+		<Italian>The Danish</Italian>
+		<Spanish>The Danish</Spanish>
+		<Portuguese>The Danish</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_DENMARK_SHORT_DESC</Tag>
+		<English>Denmark</English>
+		<French>Denmark</French>
+		<German>Denmark</German>
+		<Italian>Denmark</Italian>
+		<Spanish>Denmark</Spanish>
+		<Portuguese>Denmark</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_DENMARK_ADJECTIVE</Tag>
+		<English>
+			<Text>Danish:Danish</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</English>
+		<French>Danish</French>
+		<German>Danish</German>
+		<Italian>Danish</Italian>
+		<Spanish>Danish</Spanish>
+		<Portuguese>Danish</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_DENMARK_PEDIA</Tag>
+		<English>Denmark</English>
+		<French>Denmark</French>
+		<German>Denmark</German>
+		<Italian>Denmark</Italian>
+		<Spanish>Denmark</Spanish>
+		<Portuguese>Denmark</Portuguese>
+	</TEXT>
+		<!-- Civilization Denmark -->
 		<!-- Civilization Venezia -->
 	<TEXT>
 		<Tag>TXT_KEY_CIV_VENEZIA_DESC</Tag>
@@ -2194,10 +2278,212 @@
 		<Portuguese>.</Portuguese>
 	</TEXT>
 		<!-- Civilization Lithuania -->
+		<!-- Civilization Scotland -->
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SCOTLAND_DESC</Tag>
+		<English>The Scottish</English>
+		<French>The Scottish</French>
+		<German>The Scottish</German>
+		<Italian>The Scottish</Italian>
+		<Spanish>The Scottish</Spanish>
+		<Portuguese>The Scottish</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SCOTLAND_SHORT_DESC</Tag>
+		<English>Scotland</English>
+		<French>Scotland</French>
+		<German>Scotland</German>
+		<Italian>Scotland</Italian>
+		<Spanish>Scotland</Spanish>
+		<Portuguese>Scotland</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SCOTLAND_ADJECTIVE</Tag>
+		<English>Scottish</English>
+		<French>Scottish</French>
+		<German>Scottish</German>
+		<Italian>Scottish</Italian>
+		<Spanish>Scottish</Spanish>
+		<Portuguese>Scottish</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SCOTLAND_PEDIA</Tag>
+		<English>Scotland</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+		<!-- Civilization Scotland -->
+		<!-- Civilization Novgorod -->
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NOVGOROD_DESC</Tag>
+		<English>The Novgorodians</English>
+		<French>The Novgorodians</French>
+		<German>The Novgorodians</German>
+		<Italian>The Novgorodians</Italian>
+		<Spanish>The Novgorodians</Spanish>
+		<Portuguese>The Novgorodians</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NOVGOROD_SHORT_DESC</Tag>
+		<English>Novgorod</English>
+		<French>Novgorod</French>
+		<German>Novgorod</German>
+		<Italian>Novgorod</Italian>
+		<Spanish>Novgorod</Spanish>
+		<Portuguese>Novgorod</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NOVGOROD_ADJECTIVE</Tag>
+		<English>
+			<Text>Novgorodian:Novgorodians</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</English>
+		<French>Novgorodian</French>
+		<German>Novgorodian</German>
+		<Italian>Novgorodian</Italian>
+		<Spanish>Novgorodian</Spanish>
+		<Portuguese>Novgorodian</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NOVGOROD_PEDIA</Tag>
+		<English>Novgorod</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+		<!-- Civilization Novgorod -->
+		<!-- Civilization Prussia -->
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PRUSSIA_DESC</Tag>
+		<English>The Prussians</English>
+		<French>The Prussians</French>
+		<German>The Prussians</German>
+		<Italian>The Prussians</Italian>
+		<Spanish>The Prussians</Spanish>
+		<Portuguese>The Prussians</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PRUSSIA_SHORT_DESC</Tag>
+		<English>Prussia</English>
+		<French>Prussia</French>
+		<German>Prussia</German>
+		<Italian>Prussia</Italian>
+		<Spanish>Prussia</Spanish>
+		<Portuguese>Prussia</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PRUSSIA_ADJECTIVE</Tag>
+		<English>
+			<Text>Prussian:Prussians</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</English>
+		<French>Prussian</French>
+		<German>Prussian</German>
+		<Italian>Prussian</Italian>
+		<Spanish>Prussian</Spanish>
+		<Portuguese>Prussian</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PRUSSIA_PEDIA</Tag>
+		<English>Prussia</English>
+		<French>Prussia</French>
+		<German>Prussia</German>
+		<Italian>Prussia</Italian>
+		<Spanish>Prussia</Spanish>
+		<Portuguese>Prussia</Portuguese>
+	</TEXT>
+		<!-- Civilization Prussia -->
+		<!-- Civilization Aragon -->
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARAGON_DESC</Tag>
+		<English>The Aragonese</English>
+		<French>The Aragonese</French>
+		<German>The Aragonese</German>
+		<Italian>The Aragonese</Italian>
+		<Spanish>The Aragonese</Spanish>
+		<Portuguese>The Aragonese</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARAGON_SHORT_DESC</Tag>
+		<English>Aragon</English>
+		<French>Aragon</French>
+		<German>Aragon</German>
+		<Italian>Aragon</Italian>
+		<Spanish>Aragon</Spanish>
+		<Portuguese>Aragon</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARAGON_ADJECTIVE</Tag>
+		<English>Aragonese</English>
+		<French>Aragonese</French>
+		<German>Aragonese</German>
+		<Italian>Aragonese</Italian>
+		<Spanish>Aragonese</Spanish>
+		<Portuguese>Aragonese</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARAGON_PEDIA</Tag>
+		<English>Aragon</English>
+		<French>Aragon</French>
+		<German>Aragon</German>
+		<Italian>Aragon</Italian>
+		<Spanish>Aragon</Spanish>
+		<Portuguese>Aragon</Portuguese>
+	</TEXT>
+		<!-- Civilization Aragon -->
+		<!-- Civilization Morocco -->
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MOROCCO_DESC</Tag>
+		<English>The Moroccans</English>
+		<French>The Moroccans</French>
+		<German>The Moroccans</German>
+		<Italian>The Moroccans</Italian>
+		<Spanish>The Moroccans</Spanish>
+		<Portuguese>The Moroccans</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MOROCCO_SHORT_DESC</Tag>
+		<English>Morocco</English>
+		<French>Morocco</French>
+		<German>Morocco</German>
+		<Italian>Morocco</Italian>
+		<Spanish>Morocco</Spanish>
+		<Portuguese>Morocco</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MOROCCO_ADJECTIVE</Tag>
+		<English>
+			<Text>Moroccan:Moroccans</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</English>
+		<French>Moroccan</French>
+		<German>Moroccan</German>
+		<Italian>Moroccan</Italian>
+		<Spanish>Moroccan</Spanish>
+		<Portuguese>Moroccan</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MOROCCO_PEDIA</Tag>
+		<English>Morocco</English>
+		<French>Morocco</French>
+		<German>Morocco</German>
+		<Italian>Morocco</Italian>
+		<Spanish>Morocco</Spanish>
+		<Portuguese>Morocco</Portuguese>
+	</TEXT>
+		<!-- Civilization Morocco -->
 		<!-- Civilization Papal States -->
 	<TEXT>
 		<Tag>TXT_KEY_CIV_PAPAL_DESC</Tag>
-		<English>The Pope</English>
+		<English>The Papal States</English>
 		<French>
 			<Text>Le Pape</Text>
 			<Gender>Male</Gender>
