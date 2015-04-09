@@ -126,7 +126,7 @@ teamIndependent2 = gc.getTeam(pIndependent2.getTeam())
 teamBarbarian = gc.getTeam(pBarbarian.getTeam())
 
 # ------------------- NEW UHV CONDITIONS
-tByzantumControl = [ xml.iP_Colonea, xml.iP_Antiochia, xml.iP_Charsianon, xml.iP_Cilicia, xml.iP_Armeniakon, xml.iP_Anatolikon, xml.iP_Paphlagonia, xml.iP_Thrakesion, xml.iP_Opsikion, xml.iP_Constantinople ]
+tByzantumControl = [ xml.iP_Colonea, xml.iP_Antiochia, xml.iP_Charsianon, xml.iP_Cilicia, xml.iP_Armeniakon, xml.iP_Anatolikon, xml.iP_Paphlagonia, xml.iP_Thrakesion, xml.iP_Opsikion, xml.iP_Constantinople, xml.iP_Thrace, xml.iP_Thessaloniki, xml.iP_Moesia, xml.iP_Macedonia, xml.iP_Serbia, xml.iP_Arberia, xml.iP_Epirus, xml.iP_Thessaly, xml.iP_Morea ]
 tFrankControl = [ xml.iP_Swabia, xml.iP_Saxony, xml.iP_Lorraine, xml.iP_IleDeFrance, xml.iP_Picardy, xml.iP_Aquitania, xml.iP_Provence, xml.iP_Burgundy, xml.iP_Orleans, xml.iP_Champagne, xml.iP_Catalonia, xml.iP_Lombardy, xml.iP_Tuscany ]
 tArabiaControlI = [ xml.iP_Egypt, xml.iP_Antiochia, xml.iP_Syria, xml.iP_Lebanon, xml.iP_Arabia, xml.iP_Jerusalem ]
 tArabiaControlII = [ xml.iP_Oran, xml.iP_Algiers, xml.iP_Ifriqiya, xml.iP_Cyrenaica, xml.iP_Tripolitania, xml.iP_Egypt, xml.iP_Antiochia, xml.iP_Syria, xml.iP_Lebanon, xml.iP_Arabia, xml.iP_Jerusalem]
@@ -167,7 +167,7 @@ tAragonControlII = [ xml.iP_Catalonia, xml.iP_Valencia, xml.iP_Aragon, xml.iP_Ba
 tPrussiaControlI = [ xml.iP_Lithuania, xml.iP_Livonia, xml.iP_Estonia, xml.iP_Pomerania, xml.iP_Prussia]
 tPrussiaDefeat = [ iAustria, iMoscow, iGermany, iSweden, iFrankia, iSpain ]
 tScotlandControl = [ xml.iP_Scotland, xml.iP_TheIsles, xml.iP_Ireland, xml.iP_Wales, xml.iP_Bretagne ]
-tDenmarkControlI = [ xml.iP_Denmark, xml.iP_Skaneland, xml.iP_Svealand, xml.iP_Vestfold, xml.iP_Mercia ]
+tDenmarkControlI = [ xml.iP_Denmark, xml.iP_Skaneland, xml.iP_Svealand, xml.iP_Vestfold, xml.iP_Mercia, xml.iP_London, xml.iP_EastAnglia, xml.iP_Northumbria ]
 #tDenmarkControlII = [ xml.iP_Brandenburg, xml.iP_Pomerania, xml.iP_Estonia ]
 tDenmarkControlIII = [ xml.iP_Denmark, xml.iP_Norway, xml.iP_Vestfold, xml.iP_Skaneland, xml.iP_Gotaland, xml.iP_Svealand, xml.iP_Norrland, xml.iP_Gotland, xml.iP_Osterland, xml.iP_Estonia, xml.iP_Iceland ]
 
@@ -564,7 +564,7 @@ class Victory:
                         else:
                                 pByzantium.setUHV( 0, 0 )
 
-                # UHV2: Control Asia Minor and Greece in 1282AD
+                # UHV2: Keep or reconquer Constantinople, Thrace, Thessaloniki, Moesia, Macedonia, Serbia, Arberia, Epirus, Thessaly, Morea, Colonea, Antiochia, Charsianon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282AD
                 if ( iGameTurn == xml.i1282AD and pByzantium.getUHV( 1 ) == -1 ):
                         bOwn = True
                         for iProv in tByzantumControl:
@@ -725,7 +725,7 @@ class Victory:
                                 pNorway.setUHV( 2, 0 )
 
         def checkDenmark(self,iGameTurn):
-                # UHV1: Control Denmark, Skaneland, Svealand, Vestfold and Mercia in 1050.
+                # UHV1: Control Denmark, Skaneland, Svealand, Vestfold, Mercia, London, Northumbria and East Anglia in 1050.
                 if ( iGameTurn == xml.i1050AD and pDenmark.getUHV( 0 ) == -1 ):
                         bConq = True
                         for iProv in tDenmarkControlI:

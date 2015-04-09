@@ -875,9 +875,9 @@ class RiseAndFall:
                 # 3Miro: this should not be called with high iNumDeadCivs*
                 # Sedna: This is one place to control the frequency of resurrection.
                 # Generally we want to allow Kiev, Bulgaria, Cordoba, Burgundy, Byzantium at least to be dead in late game without respawning.
-                # Absinthe: 12 and 8 seems a little much, even with the new civs
-                iNumDeadCivs1 = 10 #5 in vanilla RFC, 8 in warlords RFC (that includes native and celt)
-                iNumDeadCivs2 = 7 #3 in vanilla RFC, 6 in Warlords RFC (where we must count natives and celts as dead too)
+                # Absinthe: 12 and 8 for now, even with the new civs
+                iNumDeadCivs1 = 12 #5 in vanilla RFC, 8 in warlords RFC (that includes native and celt)
+                iNumDeadCivs2 = 8 #3 in vanilla RFC, 6 in Warlords RFC (where we must count natives and celts as dead too)
 
 
                 iCiv = self.getSpecialRespawn( iGameTurn )
