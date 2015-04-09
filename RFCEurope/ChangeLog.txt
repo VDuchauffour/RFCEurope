@@ -132,6 +132,25 @@ Changes for RFCE 1.3:
 			English UP changed to +1 production and +1 commerce for Workshops (was +2 production before)
 		- Mercantilism civic gives +1 commerce for Villages too
 		- Updated Great Person lists
+		- Province setup changes:
+			Novgorod: Polotsk border
+			Sweden: Jamtland potential
+			Norway: Jamtland potential, Mercia foreign, Svealand border on start, but switches to foreign after the Swedish spawn
+			Denmark: East Anglia and London border/contested on start, but switches to foreign after the English spawn
+			Scotland: Ireland, Wales border. East Anglia border on start, but switches to foreign after the English spawn
+			England: Scotland, The Isles, Ireland border/contested
+			Poland: Prussia and Livonia foreign/unstable, Pomerania potential
+			Lithuania: Prussia, Pomerania foreign/unstable. Livonia and Estonia border/contested
+			Cordoba: Tetouan border after the Moroccan spawn. Valencia historical, Aragon, Catalonia and Balears border on Aragonese spawn.
+			Spain: Aragon, Catalonia, Balears border, Navarre potential
+			Byzantium: Apulia, Calabria, Sicily, Malta border/contested on the Aragonese spawn
+			Moscow: Novgorod potential, Karelia border/contested
+			Aragon: Andalusia, La Mancha potential, Castile border
+		- Revised war map for Aragon, Novgorod, Sweden, Norway, Denmark, Scotland, Prussia, Morocco
+		- New independent city: Londinium. Starts in 500 AD, size 2, 2 archers, catholic religion.
+		- Danish 1st UHV also needs London, East England and Northumbria provinces.
+		- Byzantine 2nd UHV also needs Thrace, Thessaloniki, Moesia, Macedonia, Serbia, Arberia, Epirus, Thessaly and Morea provinces
+		- Catalonia province won't revolt against Aragon, Scotland province won't revolt against Scotland
 
 	Art updates:
 		- New art for Isabella (Spain), Casimir III (Poland), Ivan IV (Muscovy), Simeon I (Bulgaria), Ivan Asen (Bulgaria)

@@ -43,6 +43,7 @@ lMarseilles = [46,32,0,0] #500 AD
 lLyon = [46,37,0,0] #500 AD
 lTunis = [49,17,0,0] #500 AD
 #lPisae = [53,32,0,0] #500 AD
+lLondinium = [41,52,0,0] #500 AD, London
 lMediolanum = [52,37,0,0] #500 AD, Milan
 lFlorentia = [54,32,0,0] #500 AD, Firenze
 lTripoli = [54,8,0,0] #500 AD
@@ -119,8 +120,8 @@ lValletta = [57,14,315,0] #1530 AD
 # Note: lists 3, 4, 5, 6 should have the same size
 # Note: you should increase the size of 'lNextMinorRevolt' in StoredData to be at least the number of minor nations
 lMinorNations = [ [ xml.iP_Serbia, [], [], [xml.i852AD,xml.i1346AD], [20,20], [xml.iAxeman,xml.iLongSwordsman], [1,2], ["TXT_KEY_THE_SERBS","TXT_KEY_SERBIAN"] ],
-                  [ xml.iP_Scotland, [], [], [xml.i1297AD,xml.i1569AD,xml.i1715AD], [20,10,20], [xml.iHighlander,xml.iMusketman,xml.iGrenadier], [2,2,2], ["TXT_KEY_THE_SCOTS","TXT_KEY_SCOTISH"] ],
-                  [ xml.iP_Catalonia, [], [], [xml.i1164AD,xml.i1640AD], [20,10], [xml.iLongSwordsman,xml.iMusketman], [2,2], ["TXT_KEY_THE_CATALANS","TXT_KEY_CATALAN"] ],
+                  [ xml.iP_Scotland, [con.iScotland], [], [xml.i1297AD,xml.i1569AD,xml.i1715AD], [20,10,20], [xml.iHighlander,xml.iMusketman,xml.iGrenadier], [2,2,2], ["TXT_KEY_THE_SCOTS","TXT_KEY_SCOTISH"] ],
+                  [ xml.iP_Catalonia, [con.iAragon], [], [xml.i1164AD,xml.i1640AD], [20,10], [xml.iLongSwordsman,xml.iMusketman], [2,2], ["TXT_KEY_THE_CATALANS","TXT_KEY_CATALAN"] ],
                   [ xml.iP_Jerusalem, [con.iArabia,con.iTurkey,con.iByzantium], [xml.iIslam,], [xml.i1099AD+8,xml.i1099AD+16,xml.i1099AD+25,xml.i1099AD+33,xml.i1099AD+40,xml.i1099AD+47,xml.i1099AD+55,xml.i1099AD+65], [30,30,40,40,30,30,30,30], [xml.iMaceman,xml.iMaceman,xml.iMaceman,xml.iKnight,xml.iKnight,xml.iKnight,xml.iKnight,xml.iKnight], [3,3,4,3,3,3,3,3], ["TXT_KEY_THE_MUSLIMS","TXT_KEY_MUSLIM"] ],
                   [ xml.iP_Syria, [con.iArabia,con.iTurkey,con.iByzantium], [xml.iIslam,], [xml.i1099AD+8,xml.i1099AD+16,xml.i1099AD+25,xml.i1099AD+33,xml.i1099AD+40,xml.i1099AD+47,xml.i1099AD+55,xml.i1099AD+65], [30,30,40,40,30,30,30,30], [xml.iMaceman,xml.iMaceman,xml.iMaceman,xml.iKnight,xml.iKnight,xml.iKnight,xml.iKnight,xml.iKnight], [3,3,4,3,3,3,3,3], ["TXT_KEY_THE_MUSLIMS","TXT_KEY_MUSLIM"] ],
                   [ xml.iP_Oran, [], [], [xml.i1236AD,xml.i1346AD,xml.i1359AD,xml.i1542AD], [40,10,10,20], [xml.iKnight,xml.iHeavyLancer,xml.iHeavyLancer,xml.iMusketman], [2,2,2,2], ["TXT_KEY_THE_ZIYYANIDS","TXT_KEY_ZIYYANID"] ],
@@ -474,6 +475,7 @@ class Barbs:
 			self.foundCity(iIndependent, lMarseilles, "Massilia", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 0 )
 			self.foundCity(iIndependent3, lLyon, "Lyon", iGameTurn, 1, xml.iArcher, 2, xml.iCatholicism, 1 ) # Lyon flips to Burgundy
 			self.foundCity(iIndependent4, lTunis, "Tunis", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
+			self.foundCity(iIndependent, lLondinium, "Londinium", iGameTurn, 3, xml.iArcher, 2, xml.iCatholicism, 0 )
 			self.foundCity(iIndependent, lMediolanum, "Mediolanum", iGameTurn, 3, xml.iArcher, 1, xml.iCatholicism, 0 )
 			self.foundCity(iIndependent2, lFlorentia, "Florentia", iGameTurn, 3, xml.iArcher, 1, xml.iCatholicism, 0 )
 			self.foundCity(iBarbarian, lTripoli, "Tripoli", iGameTurn, 1, xml.iArcher, 1, -1, 0 )

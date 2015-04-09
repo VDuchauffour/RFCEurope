@@ -126,12 +126,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BYZ2</Tag>
-		<English>[COLOR_YELLOW]Reliving the Roman Glory:[COLOR_REVERT] Keep or reconquer Constantinople, Colonea, Antiochia, Charsianon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282AD.</English>
-		<French>[COLOR_YELLOW]Reliving the Roman Glory:[COLOR_REVERT] Keep or reconquer Constantinople, Colonea, Antiochia, Charsianon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282AD.</French>
-		<German>[COLOR_YELLOW]Wiederbelebung des Römischen Glanzes:[COLOR_REVERT] Behaltet oder erobert bis 1282 n.Chr. Konstantinopel, Colonea, Antiochia, Charsianon, Kilikien, Armeniakon, Anatolikon, Paphlagonia, Thrakesion und Opsikion.</German>
-		<Italian>[COLOR_YELLOW]Rivivere la Gloria di Roma:[COLOR_REVERT] Mantieni o riconquista le province di Costantinopoli, Colonea, Antiochia, Charsianon, Cilicia, Armeniakon, Paflagonia, Thrakesion e Opsikion nel 1282AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Reliving the Roman Glory:[COLOR_REVERT] Keep or reconquer Constantinople, Colonea, Antiochia, Charsianon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282AD.</Spanish>
-		<Portuguese>[COLOR_YELLOW]Revivendo a Glória Romana:[COLOR_REVERT] Mantenha ou reconquiste Constantinopla, Colonea, Antioquia, Charsianon, Cilícia, Armeniakon, Anatólico, Paflagônia, Thrakesion and Opsikion em 1282DC.</Portuguese>
+		<English>[COLOR_YELLOW]Reliving the Roman Glory:[COLOR_REVERT] Keep or reconquer Constantinople, Thrace, Thessaloniki, Moesia, Macedonia, Serbia, Arberia, Epirus, Thessaly, Morea, Colonea, Antiochia, Charsianon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282AD.</English>
+		<French>[COLOR_YELLOW]Reliving the Roman Glory:[COLOR_REVERT] Keep or reconquer Constantinople, Thrace, Thessaloniki, Moesia, Macedonia, Serbia, Arberia, Epirus, Thessaly, Morea, Colonea, Antiochia, Charsianon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282AD.</French>
+		<German>[COLOR_YELLOW]Wiederbelebung des Römischen Glanzes:[COLOR_REVERT] Behaltet oder erobert bis 1282 n.Chr. Konstantinopel, Thrace, Thessaloniki, Moesia, Macedonia, Serbia, Arberia, Epirus, Thessaly, Morea, Colonea, Antiochia, Charsianon, Kilikien, Armeniakon, Anatolikon, Paphlagonia, Thrakesion und Opsikion.</German>
+		<Italian>[COLOR_YELLOW]Rivivere la Gloria di Roma:[COLOR_REVERT] Mantieni o riconquista le province di Costantinopoli, Thrace, Thessaloniki, Moesia, Macedonia, Serbia, Arberia, Epirus, Thessaly, Morea, Colonea, Antiochia, Charsianon, Cilicia, Armeniakon, Paflagonia, Thrakesion e Opsikion nel 1282AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Reliving the Roman Glory:[COLOR_REVERT] Keep or reconquer Constantinople, Thrace, Thessaloniki, Moesia, Macedonia, Serbia, Arberia, Epirus, Thessaly, Morea, Colonea, Antiochia, Charsianon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]Revivendo a Glória Romana:[COLOR_REVERT] Mantenha ou reconquiste Constantinopla, Thrace, Thessaloniki, Moesia, Macedonia, Serbia, Arberia, Epirus, Thessaly, Morea, Colonea, Antioquia, Charsianon, Cilícia, Armeniakon, Anatólico, Paflagônia, Thrakesion and Opsikion em 1282DC.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BYZ3</Tag>
@@ -767,12 +767,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_DEN1</Tag>
-		<English>[COLOR_YELLOW]North Sea Empire:[COLOR_REVERT] Control Denmark, Skaneland, Svealand, Vestfold and Mercia in 1050.</English>
-		<French>[COLOR_YELLOW]North Sea Empire:[COLOR_REVERT] Control Denmark, Skaneland, Svealand, Vestfold and Mercia in 1050.</French>
-		<German>[COLOR_YELLOW]North Sea Empire:[COLOR_REVERT] Control Denmark, Skaneland, Svealand, Vestfold and Mercia in 1050.</German>
-		<Italian>[COLOR_YELLOW]North Sea Empire:[COLOR_REVERT] Control Denmark, Skaneland, Svealand, Vestfold and Mercia in 1050.</Italian>
-		<Spanish>[COLOR_YELLOW]North Sea Empire:[COLOR_REVERT] Control Denmark, Skaneland, Svealand, Vestfold and Mercia in 1050.</Spanish>
-		<Portuguese>[COLOR_YELLOW]North Sea Empire:[COLOR_REVERT] Control Denmark, Skaneland, Svealand, Vestfold and Mercia in 1050.</Portuguese>
+		<English>[COLOR_YELLOW]North Sea Empire:[COLOR_REVERT] Control Denmark, Skaneland, Svealand, Vestfold, Mercia, London, Northumbria and East Anglia in 1050.</English>
+		<French>[COLOR_YELLOW]North Sea Empire:[COLOR_REVERT] Control Denmark, Skaneland, Svealand, Vestfold, Mercia, London, Northumbria and East Anglia in 1050.</French>
+		<German>[COLOR_YELLOW]North Sea Empire:[COLOR_REVERT] Control Denmark, Skaneland, Svealand, Vestfold, Mercia, London, Northumbria and East Anglia in 1050.</German>
+		<Italian>[COLOR_YELLOW]North Sea Empire:[COLOR_REVERT] Control Denmark, Skaneland, Svealand, Vestfold, Mercia, London, Northumbria and East Anglia in 1050.</Italian>
+		<Spanish>[COLOR_YELLOW]North Sea Empire:[COLOR_REVERT] Control Denmark, Skaneland, Svealand, Vestfold, Mercia, London, Northumbria and East Anglia in 1050.</Spanish>
+		<Portuguese>[COLOR_YELLOW]North Sea Empire:[COLOR_REVERT] Control Denmark, Skaneland, Svealand, Vestfold, Mercia, London, Northumbria and East Anglia in 1050.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_DEN2</Tag>
