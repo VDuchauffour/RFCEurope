@@ -106,22 +106,29 @@ class UniquePowers:
 
 		CyInterface().addMessage(iPlayer, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_UP_SOUND_TOLL", ( iGold, )), "", 0, "", ColorTypes(con.iGreen), -1, -1, True, True)
 
-	def getNumForeignCitiesOnBaltic(self, iPlayer):
-		lBalticRects = [(56,52,70,57),(63,58,74,62),(65,63,79,66),(66,67,71,72)]
+	def getNumForeignCitiesOnBaltic(self, iPlayer, bVassal = False):
+		lBalticRects = [((56, 52), (70, 57)), ((62, 58), (74, 62)), ((64, 63), (79, 66)), ((64, 67), (71, 72))]
 
 		#Count foreign coastal cities
 		iCities = 0
 		for tRect in lBalticRects:
-			for iX in range(tRect[0], tRect[2]+1):
-				for iY in range(tRect[1], tRect[3]+1):
+			for iX in range(tRect[0][0], tRect[1][0]+1):
+				for iY in range(tRect[0][1], tRect[1][1]+1):
 					#print(iX,iY)
 					pPlot = gc.getMap().plot(iX,iY)
 					if(pPlot.isCity()):
 						pCity = pPlot.getPlotCity()
 						#print(pCity.getName() + " is a city.")
-						if(pCity.getOwner() != iPlayer and pCity.isCoastal(5)):
-							#print(pCity.getName() + " is a foreign coastal city on the Baltic.")
-							iCities += 1
+						if pCity.isCoastal(5):
+							if not bVassal:
+								if (pCity.getOwner() != iPlayer):
+									#print(pCity.getName() + " is a foreign coastal city on the Baltic.")
+									iCities += 1
+							else:
+								bCount = False
+								iOwner = pCity.getOwner()
+								if (iOwner != iPlayer and iOwner != utils.getMaster(iOwner) != iPlayer):
+									iCities += 1
 		return iCities
 
 # Absinthe: Aragon UP

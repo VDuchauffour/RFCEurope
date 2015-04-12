@@ -923,6 +923,14 @@ class RFCUtils:
                         if (gc.getTeam(gc.getPlayer(iCiv).getTeam()).isVassal(iMaster)):
                                 return True
                 return False
+		
+		# UP, UHV
+        def getMaster(self, iCiv):
+		team = gc.getTeam(gc.getPlayer(iCiv).getTeam())
+		for iMaster in range(iNumTotalPlayers):
+			if team.isVassal(iMaster):
+				return iMaster
+		return -1
 
         #Barbs, RiseAndFall
         def squareSearch( self, tTopLeft, tBottomRight, function, argsList ): #by LOQ
