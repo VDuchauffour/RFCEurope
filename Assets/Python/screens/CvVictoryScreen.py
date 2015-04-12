@@ -1214,7 +1214,7 @@ class CvVictoryScreen:
                                 iCounter += pCapital.getFreeSpecialistCount(iType)
                 elif (self.iActivePlayer == con.iSweden):
                         bDisplayCounter = True
-                        iCounter = up.getNumForeignCitiesOnBaltic(con.iSweden)
+                        iCounter = up.getNumForeignCitiesOnBaltic(con.iSweden, True)
                         bCustomString = True
                         szCustom = " " + localText.getText("TXT_KEY_UHV_BALTIC_CITIES",())
 

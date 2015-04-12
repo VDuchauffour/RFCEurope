@@ -1387,7 +1387,7 @@ class Victory:
 
                 # UHV 3: Control every coastal city on the Baltic in 1750.
                 if (iGameTurn == xml.i1750AD):
-                        if(up.getNumForeignCitiesOnBaltic(iSweden) > 0):
+                        if(up.getNumForeignCitiesOnBaltic(iSweden, True) > 0):
                                 pSweden.setUHV(2,0)
                         else:
                                 pSweden.setUHV(2,1)
