@@ -578,7 +578,7 @@ class RFCEBalance:
 
 		gc.setUP( iBulgaria, iUP_NoResistance, 0 )
 
-		gc.setUP( iCordoba, iUP_PromotionI, xml.iPromotionMedicI )
+		gc.setUP( iCordoba, iUP_PromotionI, xml.iPromotionMedic1 )
 
 		gc.setUP( iSpain, iUP_Inquisition, 1 )
 		gc.setUP( iSpain, iUP_PerCityCommerce, 2 )

@@ -192,225 +192,53 @@ i1800AD =500 # Industrial Era
 
 #Religions: initialize religion variables to religion indices from XML
 
-iProtestantism = 0
-iIslam = 1
-iCatholicism = 2
-iOrthodoxy = 3
-iJudaism = 4
 iNumReligions = 5
+(iProtestantism, iIslam, iCatholicism, iOrthodoxy, iJudaism) = range(iNumReligions)
 
 
 #Techs: initialize tech variables to unit indices from XML
 
-#Early
-iCalendar=0
-iArchitecture=1
-iBronzeCasting=2
-iTheology=3
-iManorialism=4
-iStirrup=5
-iEngineering=6 # teir 2
-iChainMail=7
-iArt=8
-iMonasticism=9
-iVassalage=10
-iAstrolabe=11 # teir 3
-iMachinery=12
-iVaultedArches=13
-iMusic=14
-iHerbalMedicine=15
-iFeudalism=16
-iFarriers=17
-#High
-iMapMaking=18 # teir 4
-iBlastFurnace=19
-iSiegeEngines=20
-iGothicArchitecture=21
-iLiterature=22
-iCodeOfLaws=23
-iAristocracy=24
-iLateenSails=25 # teir 5
-iPlateArmor=26
-iMonumentBuilding=27
-iClassicalKnowledge=28
-iAlchemy=29
-iCivilService=30
-iClockmaking=31 # teir 6
-iPhilosophy=32
-iEducation=33
-iGuilds=34
-iChivalry=35
-#Late
-iOptics=36 # teir 7
-iReplaceableParts=37
-iPatronage=38
-iGunpowder=39
-iBanking=40
-iMilitaryTradition=41
-iShipbuilding=42  # teir 8
-iDrama=43
-iDivineRight=44
-iChemistry=45
-iPaper=46
-iProfessionalArmy=47
-iPrintingPress=48 # teir 9 turn 304
-iPublicWorks=49
-iMatchlock=50
-iArabicKnowledge=51
-#Renaissance
-iAstronomy=52 # teir 10
-iSteamEngines=53
-iConstitution=54
-iPolygonalFort=55
-iArabicMedicine=56
-iRenaissanceArt=57 # teir 11
-iNationalism=58
-iLiberalism=59
-iScientificMethod=60
-iMilitaryTactics=61
-iNavalArchitecture=62 # teir 12
-iCivilEngineering=63
-iRightOfMan=64
-iEconomics=65
-iPhysics=66
-iBiology=67
-iCombinedArms=68
-iTradingCompanies=69 # teir 13 TradingCompanies turn 325
-iMachineTools=70
-iFreeMarket=71
-iExplosives=72
-iMedicine=73
-iIndustrialTech=74 # last tech, turn 500
-
 iNumTechs = 75
-iFutureTech = 74
+#Early
+(iCalendar, iArchitecture, iBronzeCasting, iTheology, iManorialism, iStirrup, iEngineering, # teir 2
+iChainMail, iArt, iMonasticism, iVassalage, iAstrolabe, # teir 3
+iMachinery, iVaultedArches, iMusic, iHerbalMedicine, iFeudalism, iFarriers, 
+#High
+iMapMaking, # teir 4
+iBlastFurnace, iSiegeEngines, iGothicArchitecture, iLiterature, iCodeOfLaws, iAristocracy, iLateenSails, # teir 5
+iPlateArmor, iMonumentBuilding, iClassicalKnowledge, iAlchemy, iCivilService, iClockmaking, iPhilosophy, iEducation, iGuilds, iChivalry, 
+#Late
+iOptics, # teir 7
+iReplaceableParts, iPatronage, iGunpowder, iBanking, iMilitaryTradition, iShipbuilding,  # teir 8
+iDrama, iDivineRight, iChemistry, iPaper, iProfessionalArmy, iPrintingPress, # teir 9 turn 304
+iPublicWorks, iMatchlock, iArabicKnowledge,
+#Renaissance
+iAstronomy, # teir 10
+iSteamEngines, iConstitution, iPolygonalFort, iArabicMedicine, iRenaissanceArt, # teir 11
+iNationalism, iLiberalism, iScientificMethod, iMilitaryTactics, iNavalArchitecture, # teir 12
+iCivilEngineering, iRightOfMan, iEconomics, iPhysics, iBiology, iCombinedArms, iTradingCompanies, # teir 13 TradingCompanies turn 325
+iMachineTools, iFreeMarket, iExplosives, iMedicine, iIndustrialTech # last tech, turn 500
+) = range(iNumTechs)
+iFutureTech = iIndustrialTech
 
 iNumTechsFuture = 1
 
 
 #Units: initialize unit variables to unit indices from XML
-
-iSettler= 0
-iWorker= 1
-iExecutive1= 2
-iExecutive2= 3
-iExecutive3= 4
-iExecutive4= 5
-iExecutive5= 6
-iExecutive6= 7
-iExecutive7= 8
-iCatholicMissionary= 9
-iOrthodoxMissionary= 10
-iProtestantMissionary= 11
-iIslamicMissionary= 12
-iArcher= 13
-iCrossbowman= 14
-iArbalest= 15
-iGenoaBalestrieri= 16
-iLongbowman= 17
-iEnglishLongbowman= 18
-iSpearman= 19
-iGuisarme= 20
-iPikeman= 21
-iHolyRomanLandsknecht= 22
-iAxeman= 23
-iVikingBeserker= 24
-iSwordsman= 25
-iLongSwordsman= 26
-iKnightofStJohns= 27
-iMaceman= 28
-iPortugalFootKnight= 29
-iLithuanianBajoras = 30
-iGrenadier= 31
-iNetherlandsGrenadier= 32
-iArquebusier= 33
-iMusketman= 34
-iSwedishKarolin= 35
-iSpanishTercio= 36
-iFrenchMusketeer= 37
-iLineInfantry= 38
-iDragoon= 39
-iScout= 40
-iMountedInfantry= 41
-iHorseArcher= 42
-iPistolier= 43
-iHussar= 44
-iLancer= 45
-iBulgarianKonnik= 46
-iCordobanBerber= 47
-iHeavyLancer= 48
-iHungarianHuszar= 49
-iArabiaGhazi= 50
-iByzantineCataphract= 51
-iKievDruzhina= 52
-iKnight= 53
-iMoscowBoyar= 54
-iBurgundianPaladin= 55
-iTemplar= 56
-iTeutonic= 57
-iCuirassier= 58
-iAustrianKurassier= 59
-iPolishWingedHussar= 60
-iCatapult= 61
-iTrebuchet= 62
-iBombard= 63
-iTurkeyGreatBombard= 64
-iCannon= 65
-iFieldArtillery= 66
-iWorkboat= 67
-iGalley= 68
-iCogge= 69
-iHolk= 70
-iGalleon= 71
-iWarGalley= 72
-iGunGalley= 73
-iVeniceGalleas= 74
-iCarrack= 75
-iFrigate= 76
-iCaravel= 77
-iPrivateer= 78
-iSpy= 79
-iProsecutor= 80
-iProphet= 81
-iArtist= 82
-iScientist= 83
-iMerchant= 84
-iEngineer= 85
-iGreatGeneral= 86
-iGreatSpy= 87
-iMongolKeshik= 88
-iSeljuk= 89
-iJanissary= 90
-iTagmata= 91
-iCorsair= 92
-iHighlander= 93
-iWelshLongbowman= 94
-iCondottieri= 95
-iSwissPikeman= 96
-iVarangianGuard= 97
-iHuscarl= 98
-iAlmogavar= 99
-iBlackGuard= 100
-iHackapell= 101
-iReiter= 102
-iZaporozhianCossack= 103
-iDonCossack= 104
-iDoppelsoldner= 105
-iIrishBrigade= 106
-iStradiot= 107
-iWaardgelder= 108
-iNaffatun= 109
-iTurkopoles= 110
-iWalloonGuard= 111
-iSwissGun= 112
-iLipkaTatar= 113
-iHighlanderGun= 114
-iZanji= 115
-iTouareg= 116
-iNubianLongbowman= 117
-iNovgorodUshkuinik=118
-iPrussiaDeathsHeadHussar=119
-iScotlandSheltron= 120
+iNumUnits = 121
+(iSettler, iWorker, iExecutive1, iExecutive2, iExecutive3, iExecutive4, iExecutive5, iExecutive6, iExecutive7, iCatholicMissionary,
+iOrthodoxMissionary, iProtestantMissionary, iIslamicMissionary, iArcher, iCrossbowman, iArbalest, iGenoaBalestrieri, iLongbowman, iEnglishLongbowman, iSpearman,
+iGuisarme, iPikeman, iHolyRomanLandsknecht, iAxeman, iVikingBeserker, iSwordsman, iLongSwordsman, iKnightofStJohns, iMaceman, iPortugalFootKnight,
+iLithuanianBajoras , iGrenadier, iNetherlandsGrenadier, iArquebusier, iMusketman, iSwedishKarolin, iSpanishTercio, iFrenchMusketeer, iLineInfantry, iDragoon,
+iScout, iMountedInfantry, iHorseArcher, iPistolier, iHussar, iLancer, iBulgarianKonnik, iCordobanBerber, iHeavyLancer, iHungarianHuszar,
+iArabiaGhazi, iByzantineCataphract, iKievDruzhina, iKnight, iMoscowBoyar, iBurgundianPaladin, iTemplar, iTeutonic, iCuirassier, iAustrianKurassier,
+iPolishWingedHussar, iCatapult, iTrebuchet, iBombard, iTurkeyGreatBombard, iCannon, iFieldArtillery, iWorkboat, iGalley, iCogge,
+iHolk, iGalleon, iWarGalley, iGunGalley, iVeniceGalleas, iCarrack, iFrigate, iCaravel, iPrivateer, iSpy,
+iProsecutor, iProphet, iArtist, iScientist, iMerchant, iEngineer, iGreatGeneral, iGreatSpy, iMongolKeshik, iSeljuk, 
+iJanissary, iTagmata, iCorsair, iHighlander, iWelshLongbowman, iCondottieri, iSwissPikeman, iVarangianGuard, iHuscarl, iAlmogavar, 
+iBlackGuard, iHackapell, iReiter, iZaporozhianCossack, iDonCossack, iDoppelsoldner, iIrishBrigade, iStradiot, iWaardgelder, iNaffatun, 
+iTurkopoles, iWalloonGuard, iSwissGun, iLipkaTatar, iHighlanderGun, iZanji, iTouareg, iNubianLongbowman, iNovgorodUshkuinik, iPrussiaDeathsHeadHussar,
+iScotlandSheltron) = range(iNumUnits)
 
 #From the CIV4UnitClassInfos.xml
 iProsecutorClass = 58
@@ -418,214 +246,36 @@ iProsecutorClass = 58
 
 #Bonuses: initialize bonus variables to bonus IDs from WBSinulAi
 
-iRelic = 0
-iCoal = 1
-iCopper = 2
-iHorse = 3
-iIron = 4
-iMarble = 5
-iStone = 6
-iBanana = 7
-iClam = 8
-iCorn = 9
-iCow = 10
-iCrab = 11
-iDeer = 12
-iFish = 13
-iPig = 14
-iRice = 15
-iSheep = 16
-iWheat = 17
-iDye = 18
-iFur = 19
-iGems = 20
-iGold = 21
-iIncense = 22
-iIvory = 23
-iSilk = 24
-iSilver = 25
-iSpices = 26
-iSugar = 27
-iWine = 28
-iWhale = 29
-iCotton = 30
-iApple = 31
-iBarley = 32
-iHoney = 33
-iPotato = 34
-iSalt = 35
-iSulphur = 36
-iTimber = 37
-iCoffee = 38
-iSlaves = 39
-iTea = 40
-iTobacco = 41
-iOlives = 42
-iAccess = 43
-iNorthAccess = 44
-iSouthAccess = 45
-iAsiaAccess = 46
-iAmber = 47
+iNumBonus = 48
+(iRelic , iCoal , iCopper , iHorse , iIron , iMarble , iStone , iBanana , iClam , iCorn, 
+iCow , iCrab , iDeer , iFish , iPig , iRice , iSheep , iWheat , iDye , iFur, 
+iGems , iGold , iIncense , iIvory , iSilk , iSilver , iSpices , iSugar , iWine , iWhale, 
+iCotton , iApple , iBarley , iHoney , iPotato , iSalt , iSulphur , iTimber , iCoffee , iSlaves, 
+iTea , iTobacco , iOlives , iAccess , iNorthAccess , iSouthAccess , iAsiaAccess , iAmber) = range(iNumBonus)
 
 
 #Buildings
 
-iPalace=0
-iGreatPalace=1
-iSummerPalace=1
-iRoyalAcademy=2
-iVersailles=3
-iWalls=4
-iStarFort=5
-iCastle=6
-iMoscowKremlin=7
-iHungarianStronghold=8
-iSpanishCitadel=9
-iBarracks=10
-iArcheryRange=11
-iStable=12
-iBulgarianStan=13
-iGranary=14
-iCordobanNoria=15
-iPolishFolwark=16
-iAqueduct=17
-iOttomanHammam=18
-iLighthouse=19
-iVikingTradingPost=20
-iWharf=21
-iHarbor=22
-iPortugalFeitoria=23
-iCustomHouse=24
-iDrydock=25
-iVeniceArsenal=26
-iForge=27
-iGuildHall=28
-iTextileMill=29
-iRoyalDungeon=30
-iUniversity=31
-iObservatory=32
-iHospital=33
-iTheatre=34
-iByzantineHippodrome=35
-iAustrianOperaHouse=36
-iMarket=37
-iArabicCaravan=38
-iBrewery=39
-iBurgundianWinery=40
-iJeweler=41
-iWeaver=42
-iSmokehouse=43
-iTannery=44
-iLuxuryStore=45
-iWarehouse=46
-iApothecary=47
-iBank=48
-iGenoaBank=49
-iEnglishRoyalExchange=50
-iCourthouse=51
-iKievVeche=52
-iHolyRomanRathaus=53
-iLithuanianVoivodeship = 54
-iDungeon=55
-iNightWatch=56
-iSwedishTennant=57
-iLevee=58
-iNetherlandsDike=59
-iInn=60
-iCoffeeHouse=61
-iManorHouse=62
-iFrenchChateau=63
-iInfirmary=64
-iPaganShrine=65
-iJewishQuarter=66
-iJewishShrine=67
-iProtestantTemple=68
-iProtestantSchool=69
-iProtestantCathedral=70
-iProtestantChapel=71
-iProtestantSeminary=72
-iProtestantShrine=73
-iIslamicTemple=74
-iIslamicChapel=75
-iIslamicCathedral=76
-iIslamicSchool=77
-iIslamicMadrassa=78
-iIslamicShrine=79
-iCatholicTemple=80
-iCatholicCathedral=81
-iCatholicChapel=82
-iCatholicReliquary=83
-iCatholicMonastery=84
-iCatholicSeminary=85
-iCatholicShrine=86
-iOrthodoxTemple=87
-iOrthodoxCathedral=88
-iOrthodoxChapel=89
-iOrthodoxReliquary=90
-iOrthodoxMonastery=91
-iOrthodoxSeminary=92
-iOrthodoxShrine=93
-iSistineChapel=94
-iNotreDame=95
-iLeaningTower=96
-iTheodosianWalls=97
-iTopkapiPalace=98
-iShrineOfUppsala=99
-iNationalTheatre=100
-iNationalGallery=101
-iNationalUniversity=102
-iHeroicEpic=103
-iAlhambra=104
-iKrakDesChevaliers=105
-iSanMarco=106
-iLaMezquita=107
-iStBasil=108
-iMagnaCarta=109
-iSophiaKiev=110
-iDomeRock=111
-iBrandenburgGate=112
-iPalacioDaPena=113
-iMonasteryOfCluny=114
-iRoundChurch=115
-iCorporation1=116
-iCorporation2=117
-iCorporation3=118
-iCorporation4=119
-iCorporation5=120
-iCorporation6=121
-iCorporation7=122
-iLeonardosWorkshop=123
-iGardensAlAndalus=124
-iMagellansVoyage=125
-iMarcoPolo=126
-iEscorial=127
-iKazimierz=128
-iBelemTower=129
-iGoldenBull=130
-iKalmarCastle=131
-iPalaisPapes=132
-iTombKhal=133
-iStephansdom=134
-iBibliothecaCorviniana=135
-iFontainebleau=136
-iImperialDiet=137
-iBeurs=138
-iCopernicus=139
-iSanGiorgio=140
-iWestminster=141
-iPressburg=142
-iLanterna=143
-iPrussiaPublicSchool=144
-iAragonSeaport=145
-iMorocccoKasbah=146
-iScotlandShieling=147
-iDenmarkResearchInstitute=148
-iNovgorodKonets=149
-iNationalEpic=150
-iTriumphalArch = 151
-iNumBuildings = 152 # Should equal iPlague
-iPlague = 152
-iNumBuildingsPlague = 153
+iNumBuildings = 153 # Should equal iPlague
+(iPalace, iGreatPalace, iSummerPalace, iRoyalAcademy, iVersailles, iWalls, iStarFort, iCastle, iMoscowKremlin, iHungarianStronghold,
+iSpanishCitadel, iBarracks, iArcheryRange, iStable, iBulgarianStan, iGranary, iCordobanNoria, iPolishFolwark, iAqueduct, iOttomanHammam,
+iLighthouse, iVikingTradingPost, iWharf, iHarbor, iPortugalFeitoria, iCustomHouse, iDrydock, iVeniceArsenal, iForge, iGuildHall,
+iTextileMill, iRoyalDungeon, iUniversity, iObservatory, iHospital, iTheatre, iByzantineHippodrome, iAustrianOperaHouse, iMarket, iArabicCaravan, 
+iBrewery, iBurgundianWinery, iJeweler, iWeaver, iSmokehouse, iTannery, iLuxuryStore, iWarehouse, iApothecary, iBank, 
+iGenoaBank, iEnglishRoyalExchange, iCourthouse, iKievVeche, iHolyRomanRathaus, iLithuanianVoivodeship, iDungeon, iNightWatch, iSwedishTennant, iLevee, 
+iNetherlandsDike, iInn, iCoffeeHouse, iManorHouse, iFrenchChateau, iInfirmary, iPaganShrine, iJewishQuarter, iJewishShrine, iProtestantTemple, 
+iProtestantSchool, iProtestantCathedral, iProtestantChapel, iProtestantSeminary, iProtestantShrine, iIslamicTemple, iIslamicChapel, iIslamicCathedral, iIslamicSchool, iIslamicMadrassa, 
+iIslamicShrine, iCatholicTemple, iCatholicCathedral, iCatholicChapel, iCatholicReliquary, iCatholicMonastery, iCatholicSeminary, iCatholicShrine, iOrthodoxTemple, iOrthodoxCathedral, 
+iOrthodoxChapel, iOrthodoxReliquary, iOrthodoxMonastery, iOrthodoxSeminary, iOrthodoxShrine, iSistineChapel, iNotreDame, iLeaningTower, iTheodosianWalls, iTopkapiPalace, 
+iShrineOfUppsala, iNationalTheatre, iNationalGallery, iNationalUniversity, iHeroicEpic, iAlhambra, iKrakDesChevaliers, iSanMarco, iLaMezquita, iStBasil, 
+iMagnaCarta, iSophiaKiev, iDomeRock, iBrandenburgGate, iPalacioDaPena, iMonasteryOfCluny, iRoundChurch, iCorporation1, iCorporation2, iCorporation3, 
+iCorporation4, iCorporation5, iCorporation6, iCorporation7, iLeonardosWorkshop, iGardensAlAndalus, iMagellansVoyage, iMarcoPolo, iEscorial, iKazimierz, 
+iBelemTower, iGoldenBull, iKalmarCastle, iPalaisPapes, iTombKhal, iStephansdom, iBibliothecaCorviniana, iFontainebleau, iImperialDiet, iBeurs, 
+iCopernicus, iSanGiorgio, iWestminster, iPressburg, iLanterna, iPrussiaPublicSchool, iAragonSeaport, iMorocccoKasbah, iScotlandShieling, iDenmarkResearchInstitute, 
+iNovgorodKonets, iNationalEpic, iTriumphalArch) = range(iNumBuildings)
+
+iPlague = 153
+iNumBuildingsPlague = 154
 iNumCorporations = 7 # to mark Genoa's UHV as false
 
 
@@ -640,338 +290,114 @@ iNumTotalColonies = 25
 
 #Eras
 
-iAncient = 0
-iClassical = 1
-iMedieval = 2
-iRenaissance = 3
+iNumEras = 4
+(iAncient, iClassical, iMedieval, iRenaissance) = range(iNumEras)
 
 
 #Improvements
-
-iImprovementWorkshop = 8
-iImprovementCottage = 18
-iImprovementHamlet = 19
-iImprovementVillage = 20
-iImprovementTown = 21
-iImprovementFort = 22
+iNumImprovements = 25
+(iImprovementLandWorked, iImprovementWaterWorked, iImprovementCityRuins, iImprovementGoodyHut, iImprovementFarm, iImprovementFishingBoats, iImprovementWhalingBoats, iImprovementMine, iImprovementWorkshop, iImprovementLumbermill,
+iImprovementWindmill, iImprovementWatermill, iImprovementPlantation, iImprovementQuarry, iImprovementPasture, iImprovementCamp, iImprovementColonialTrade, iImprovementWinery, iImprovementCottage, iImprovementHamlet, 
+iImprovementVillage, iImprovementTown, iImprovementFort, iImprovementForestPreserve, iImprovementApiary) = range(iNumImprovements)
 
 
 #Civics
-
-iCivicDespotism = 0
-iCivicFeudalMonarchy = 1
-iCivicDivineMonarchy = 2
-iCivicLimitedMonarchy = 3
-iCivicMerchantRepublic = 4
-iCivicTibalLaw = 5
-iCivicFeudalLaw = 6
-iCivicBureaucracy = 7
-iCivicReligiousLaw = 8
-iCivicCommonLaw = 9
-iCivicTribalism = 10
-iCivicSerfdom = 11
-iCivicFreePeasantry = 12
-iCivicApprenticeship = 13
-iCivicFreeLabor = 14
-iCivicDecentralization = 15
-iCivicManorialism = 16
-iCivicTradeEconomy = 17
-iCivicGuilds = 18
-iCivicMercantilism = 19
-iCivicPaganism = 20
-iCivicStateReligion = 21
-iCivicTheocracy = 22
-iCivicOrganizedReligion = 23
-iCivicFreeReligion = 24
-iCivicSubjugation = 25
-iCivicVassalage = 26
-iCivicImperialism = 27
-iCivicOccupation = 28
-iCivicColonialism = 29
-
-
-#Terrain & promotion
-
-iTerrainOcean = 8
-
-iPromotionFormation = 8
-iPromotionMedicI = 14
-iPromotionMerc = 50
-iPromotionLeader = 43
-
+iNumCivics = 30
+(iCivicDespotism, iCivicFeudalMonarchy, iCivicDivineMonarchy, iCivicLimitedMonarchy, iCivicMerchantRepublic, iCivicTibalLaw, iCivicFeudalLaw, iCivicBureaucracy, iCivicReligiousLaw, iCivicCommonLawm, 
+iCivicTribalism, iCivicSerfdom, iCivicFreePeasantry, iCivicApprenticeship, iCivicFreeLabor, iCivicDecentralization, iCivicManorialism, iCivicTradeEconomy, iCivicGuilds, iCivicMercantilism, 
+iCivicPaganism, iCivicStateReligion, iCivicTheocracy, iCivicOrganizedReligion, iCivicFreeReligion, iCivicSubjugation, iCivicVassalage, iCivicImperialism, iCivicOccupation, iCivicColonialism) = range(iNumCivics)
 
 #Feature & terrain
+iNumFeatures = 9
+(iIce, iJungle, iDenseForest, iOasis, iFloodPlains, iWoodland, iFallout, iMarsh, iPalmForest) = range(iNumFeatures)
 
-iIce = 0
-iJungle = 1
-iDenseForest = 2
-iOasis = 3
-iFloodPlains = 4
-iWoodland = 5
-iFallout = 6
-iMarsh = 7
-iPalmForest = 8
+iNumTerrain = 11
+(iTerrainMoorland, iTerrainGrass, iTerrainPlains, iTerrainDesert, iTerrainWetland, iTerrainTundra, iTerrainSnow, iTerrainCoast, iTerrainOcean, iTerrainPeak, iTerrainHill) = range(iNumTerrain)
 
-iDesert = 3
-iTundra = 4
-iCoast = 7
-iWetland = 9
+#Promotions
+iNumPromotions = 51
+(iPromotionCombat1, iPromotionCombat2, iPromotionCombat3, iPromotionCombat4, iPromotionCombat5, iPromotionCover, iPromotionShock, iPromotionPinch, iPromotionFormation, iPromotionCharge, 
+iPromotionAmbush, iPromotionFeint, iPromotionAmphibious, iPromotionMarch, iPromotionMedic1, iPromotionMedic2, iPromotionGuerilla1, iPromotionGuerilla2, iPromotionGuerilla3, iPromotionWoodsman1, 
+iPromotionWoodsman2, iPromotionWoodsman3, iPromotionCityRaider1, iPromotionCityRaider2, iPromotionCityRaider3, iPromotionCityGarrison1, iPromotionCityGarrison2, iPromotionCityGarrison3, iPromotionDrill1, iPromotionDrill2, 
+iPromotionDrill3, iPromotionDrill4, iPromotionBarrage1, iPromotionBarrage2, iPromotionBarrage2, iPromotionAccuracy, iPromotionFlanking1, iPromotionFlanking2, iPromotionSentry, iPromotionMobility, 
+iPromotionNavigation, iPromotionNavigation2, iPromotionCargo, iPromotionLeader, iPromotionLeadership, iPromotionTactics, iPromotionCommando, iPromotionCombat6, iPromotionMorale, iPromotionMedic3, 
+iPromotionMerc) = range(iNumPromotions)
+
 
 
 #Leaders
-
-iLeaderBarbarian = 0	#Do NOT name this iBarbarian.	#AbsintheRed: Renamed to iLeaderBarbarian - this is the way vanilla RFC uses it
-iYaqub_al_Mansur = 1
-iMaria_Theresa = 2
-iAbu_Bakr = 3
-iJoan = 4
-iMatthias = 5
-iBarbarossa = 6
-iCatherine = 7
-iCharlemagne = 8
-iPhilip_Ii = 9
-iSobieski = 10
-iChristian_Iv = 11
-iWilliam = 12
-iAfonso = 13
-iMehmed = 14
-iSaladin = 15
-iMaximilian = 16
-iSimeon = 17
-iPhilip_the_Bold = 18
-iJustinian = 19
-iAbd_ar_Rahman = 20
-iWillem_Van_Oranje = 21
-iElizabeth = 22
-iLouis_Xiv = 23
-iBoccanegra = 24
-iFrederick = 25
-iStephen = 26
-iYaroslav = 27
-iPeter = 28
-iCasimir = 29
-iJoao = 30
-iIsabella = 31
-iGustav_Vasa = 32
-iSuleiman = 33
-iEnrico_Dandolo = 34
-iThe_Pope = 35
-iHarald_Hardrada = 36
-iIvan_Iv = 37
-iGeorge_Iii = 38
-iMaria_I = 39
-iAndrea_Gritti = 40
-iHaakon_Iv = 41
-iMindaugas = 42
-iVytautas = 43
-iKarl_Xii = 44
-iIvan_Asen = 45
-iHarun_al_Rashid = 46
-iBela_III = 47
-iGustav_Adolf = 48
-iBasil_II = 49
-iPalaiologos = 50
-iMargaret_I = 51
-iMieszko = 52
-iPhilip_Augustus = 53
-iMstislav = 54
-iFerdinand_III = 55
-iBohdan_Khmelnytsky = 56
-iMohammed_ibn_Nasr = 57
-iOtto_I = 58
-iOtto_William = 59
-iBeatrice = 60
-iEmbriaco = 61
-iRobert_the_Bruce = 62
-iRurik = 63
-iAlexander_Nevsky = 64
-iMarfa = 65
-iIsmail_ibn_Sharif = 66
-iHermann_von_Salza = 67
-iJames_I = 68
-iHarald_Bluetooth = 69
-iMagnus_Ladulas = 70
+iNumLeaders = 71
+(iLeaderBarbarian,	#Do NOT name this iBarbarian.	#AbsintheRed: Renamed to iLeaderBarbarian - this is the way vanilla RFC uses it
+iYaqub_al_Mansur, iMaria_Theresa, iAbu_Bakr, iJoan, iMatthias, iBarbarossa, iCatherine, iCharlemagne, iPhilip_Ii, 
+iSobieski, iChristian_Iv, iWilliam, iAfonso, iMehmed, iSaladin, iMaximilian, iSimeon, iPhilip_the_Bold, iJustinian, 
+iAbd_ar_Rahman, iWillem_Van_Oranje, iElizabeth, iLouis_Xiv, iBoccanegra, iFrederick, iStephen, iYaroslav, iPeter, iCasimir, 
+iJoao, iIsabella, iGustav_Vasa, iSuleiman, iEnrico_Dandolo, iThe_Pope, iHarald_Hardrada, iIvan_Iv, iGeorge_Iii, iMaria_I,
+iAndrea_Gritti, iHaakon_Iv, iMindaugas, iVytautas, iKarl_Xii, iIvan_Asen, iHarun_al_Rashid, iBela_III, iGustav_Adolf, iBasil_II, 
+iPalaiologos, iMargaret_I, iMieszko, iPhilip_Augustus, iMstislav, iFerdinand_III, iBohdan_Khmelnytsky, iMohammed_ibn_Nasr, iOtto_I, iOtto_William, 
+iBeatrice, iEmbriaco, iRobert_the_Bruce, iRurik, iAlexander_Nevsky, iMarfa, iIsmail_ibn_Sharif, iHermann_von_Salza, iJames_I, iHarald_Bluetooth, 
+iMagnus_Ladulas) = range(iNumLeaders)
 
 
 ################################ PROVINCES ################################
-#Iberia 0+
-iP_GaliciaSpain = 0
-iP_Castile = 1
-iP_Navarre = 2
-iP_Leon = 3
-iP_Lusitania = 4 #Portugal
-iP_LaMancha = 5
-iP_Catalonia = 6
-iP_Aragon = 7
-iP_Valencia = 8
-iP_Andalusia = 9
+iP_MaxNumberOfProvinces = 150
+(#Iberia 0+
+iP_GaliciaSpain, iP_Castile, iP_Navarre, iP_Leon, 
+iP_Lusitania, #Portugal
+iP_LaMancha, iP_Catalonia, iP_Aragon, iP_Valencia, iP_Andalusia, 
 
 # France 10+ # + 1 in the end
-iP_Bretagne = 10
-iP_Normandy = 11
-iP_Aquitania = 12
-iP_IleDeFrance = 13 #Paris
-iP_Provence = 14
-iP_Burgundy = 15
-iP_Orleans = 16
-iP_Champagne = 17
-iP_Flanders = 18
-iP_Netherlands = 19
+iP_Bretagne, iP_Normandy, iP_Aquitania, 
+iP_IleDeFrance, #Paris
+iP_Provence, iP_Burgundy, iP_Orleans, iP_Champagne, iP_Flanders, iP_Netherlands, 
 
 # Britania 20+ inc Ireland
-iP_London = 20
-iP_Wessex = 21
-iP_Wales = 22
-iP_Scotland = 23
-iP_Ireland = 24
-iP_Mercia = 25
-iP_EastAnglia = 26
-iP_Northumbria = 27
-iP_TheIsles = 28
-iP_Iceland = 29
+iP_London, iP_Wessex, iP_Wales, iP_Scotland, iP_Ireland, iP_Mercia, iP_EastAnglia, iP_Northumbria, iP_TheIsles, iP_Iceland, 
 
 # Scandinavia 30+ inc Denmark
-iP_Denmark = 30
-iP_Osterland = 31
-iP_Norway = 32
-iP_Vestfold = 33
-iP_Gotaland = 34
-iP_Svealand = 35
-iP_Norrland = 36
-iP_Jamtland = 37
-iP_Skaneland = 38
-iP_Gotland = 39
+iP_Denmark, iP_Osterland, iP_Norway, iP_Vestfold, iP_Gotaland, iP_Svealand, iP_Norrland, iP_Jamtland, iP_Skaneland, iP_Gotland, 
 
-# Germany 40+
-iP_Swabia = 40
-iP_Bavaria = 41
-iP_Bohemia = 42
-iP_Saxony = 43
-iP_Lorraine = 44
-iP_Franconia = 45
-iP_Brandenburg = 46
-iP_Holstein = 47
-iP_Prussia = 48
+# Germany 40+, +1 dummy
+iP_Swabia, iP_Bavaria, iP_Bohemia, iP_Saxony, iP_Lorraine, iP_Franconia, iP_Brandenburg, iP_Holstein, iP_Prussia, 
+iP_Dummy1,
+ 
+# Poland 50+, +1 dummy
+iP_Pomerania, iP_GaliciaPoland, iP_GreaterPoland, iP_Masovia, iP_LesserPoland, iP_Suvalkija, iP_Lithuania, iP_Livonia, iP_Estonia, 
+iP_Dummy2, 
 
-# Poland 50+
-iP_Pomerania = 50
-iP_GaliciaPoland = 51
-iP_GreaterPoland = 52
-iP_Masovia = 53
-iP_LesserPoland = 54
-iP_Suvalkija = 55
-iP_Lithuania = 56
-iP_Livonia = 57
-iP_Estonia = 58
-
-# Austria and Hungary
-iP_Carinthia = 60
-iP_Austria = 61
-iP_Slavonia = 62
+# Austria and Hungary, +1 dummy
+iP_Carinthia, iP_Austria, iP_Slavonia,
 #iP_Tyrol = 63 # merged with Bavaria
 #iP_Salzburg = 63 # merged with Bavaria
-iP_Transylvania = 64
-iP_Hungary = 65
-iP_Moravia = 66
-iP_Silesia = 67
-iP_Pannonia = 68
-iP_UpperHungary = 69
+iP_Dummy3,
+iP_Transylvania, iP_Hungary, iP_Moravia, iP_Silesia, iP_Pannonia, iP_UpperHungary, 
 
 # Italy
-iP_Lombardy = 70
-iP_Verona = 71
-iP_Tuscany = 72
-iP_Latium = 73
-iP_Calabria = 74
-iP_Apulia = 75
-iP_Liguria = 76
+iP_Lombardy, iP_Verona, iP_Tuscany, iP_Latium, iP_Calabria, iP_Apulia, iP_Liguria, 
 
 # Balkans
-iP_Arberia = 77
-iP_Dalmatia = 78
-iP_Banat = 79
-iP_Moesia = 80
-iP_Constantinople = 81
-iP_Thrace = 82
-iP_Thessaly = 83
-iP_Macedonia = 84
-iP_Serbia = 85
-iP_Bosnia = 86
+iP_Arberia, iP_Dalmatia, iP_Banat, iP_Moesia, iP_Constantinople, iP_Thrace, iP_Thessaly, iP_Macedonia, iP_Serbia, iP_Bosnia, 
 #iP_Croatia = 86 # merged with Slavonia
-iP_Epirus = 87
-iP_Morea = 88
-iP_Wallachia = 89
-
+iP_Epirus, iP_Morea, iP_Wallachia,
+ 
 # Middle East 90+ inc Asia Minor
-iP_Jerusalem = 90
-iP_Paphlagonia = 91
-iP_Opsikion = 92
-iP_Thrakesion = 93
-iP_Cilicia = 94
-iP_Anatolikon = 95
-iP_Armeniakon = 96
-iP_Charsianon = 97
-iP_Colonea = 98
-iP_Antiochia = 99
+iP_Jerusalem, iP_Paphlagonia, iP_Opsikion, iP_Thrakesion, iP_Cilicia, iP_Anatolikon, iP_Armeniakon, iP_Charsianon, iP_Colonea, iP_Antiochia, 
 
 # North Africa 100+
-iP_Syria = 100
-iP_Lebanon = 101
-iP_Arabia = 102
-iP_Egypt = 103
-iP_Cyrenaica = 104
-iP_Tripolitania = 105
-iP_Ifriqiya = 106
-iP_Algiers = 107
-iP_Tetouan = 108
-iP_Oran = 109
+iP_Syria, iP_Lebanon, iP_Arabia, iP_Egypt, iP_Cyrenaica, iP_Tripolitania, iP_Ifriqiya, iP_Algiers, iP_Tetouan, iP_Oran, 
 
 # Islands 110+ inc Sicily
-iP_Sicily = 110
-iP_Crete = 111
-iP_Cyprus = 112
-iP_Rhodes = 113
-iP_Corsica = 114
-iP_Sardinia = 115
-iP_Balears = 116
-iP_Canaries = 117
-iP_Azores = 118
-iP_Morocco = 119
+iP_Sicily, iP_Crete, iP_Cyprus, iP_Rhodes, iP_Corsica, iP_Sardinia, iP_Balears, iP_Canaries, iP_Azores, iP_Morocco, 
 
 # Russia 120+
-iP_Moldova = 120
-iP_Crimea = 121
-iP_Novgorod = 122
-iP_Kuban = 123
-iP_Zaporizhia = 124
-iP_Rostov = 125
-iP_Moscow = 126
-iP_Vologda = 127
-iP_Smolensk = 128
-iP_Polotsk = 129
-iP_Murom = 130
-iP_Chernigov = 131
-iP_Pereyaslavl = 132
-iP_Sloboda = 133
-iP_Donets = 134
-iP_Kiev = 135
-iP_Podolia = 136
-iP_Minsk = 137
-iP_Brest = 138
-iP_Simbirsk = 139
-iP_NizhnyNovgorod = 140
-iP_Karelia = 141
-iP_Volhynia = 142
+iP_Moldova, iP_Crimea, iP_Novgorod, iP_Kuban, iP_Zaporizhia, iP_Rostov, iP_Moscow, iP_Vologda, iP_Smolensk, iP_Polotsk, 
+iP_Murom, iP_Chernigov, iP_Pereyaslavl, iP_Sloboda, iP_Donets, iP_Kiev, iP_Podolia, iP_Minsk, iP_Brest, iP_Simbirsk, 
+iP_NizhnyNovgorod, iP_Karelia, iP_Volhynia, 
+
+iP_Dummy4,
 
 # Rest
-iP_Thessaloniki = 144
-iP_Marrakesh = 145
-iP_Madeira = 146
-iP_Malta = 147
-iP_Fez = 148
-iP_Picardy = 149
+iP_Thessaloniki, iP_Marrakesh, iP_Madeira, iP_Malta, iP_Fez, iP_Picardy) = range(iP_MaxNumberOfProvinces)
 
-iP_MaxNumberOfProvinces = 150
 
 # these regions are for easier access for UHV and Mercs
 lRegionIberia		= [ iP_GaliciaSpain, iP_Castile, iP_Leon, iP_Lusitania, iP_Catalonia, iP_Aragon, iP_Valencia, iP_Andalusia, iP_Navarre, iP_LaMancha ]
