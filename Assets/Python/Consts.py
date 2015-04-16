@@ -7,12 +7,11 @@
 
 import XMLConsts as xml
 
-l0Array =       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] # 3Miro for stability, counts the cities for each player
-l0ArrayActive = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-l0ArrayTotal =  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] # this is just a dummy array
-
+l0Array =       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] # currently unused
+l0ArrayActive = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] # currently unused
+l0ArrayTotal =  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] # counts the cities for each player, used in RiseAndFall.py
 lm1Array =      [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
-# Size of the above are final size
+# Size of the above are: number of civs+independents. Currently 29+4
 
 # 3Miro: map size entered here
 iMapMaxX = 100
@@ -428,7 +427,7 @@ tNewCapitals = (  #for RiseAndFall
 ((21, 25),(21, 25)), #Portugal: Lisboa
 ((59, 24),(59, 24)), #Aragon --> Naples
 ((66, 64),(66, 64)), #Sweden: Stockholm
-((61, 49),(60, 48),(61,48),(62,48)), #Prussia --> Berlin
+((60, 48),(61, 48),(61, 49),(62, 48)), #Prussia --> Berlin
 ((75, 53),(75, 53)), #Lithuania: Vilnius
 ((62, 40),(62, 40)), #Austria: Wien
 ((78, 22),(78, 22)), #Turkey, Gallipoli
@@ -437,14 +436,13 @@ tNewCapitals = (  #for RiseAndFall
 ((56, 27),(56, 27))  #Pope: Rome
 )
 
-#core areas (for RiseAndFall and Victory)
 
-# 3Miro: tCoreArea and tNormalArea are misleading, TL is not TopLeft and BR is not BottomRight (unless the grid starts from 0,0 at TL and counts down as positive y direction)
+# 3Miro: tCoreArea, tNormalArea and tBroaderArea are misleading, TL is not TopLeft and BR is not BottomRight (unless the grid starts from 0,0 at TL and counts down as positive y direction)
 #	TL is actually BottomLeft and BR is TopRight
-#	Many functions reference those and there are search algorithm that I do not whant to change, so leave this with the comment on how to be used
-#	Also Broader Area
+#	Many functions reference those and there are search algorithms that I do not want to change, so leave this with the comment on how to be used
 
-tCoreAreasTL = ( #Core Area is initial spawn location, no longer relevant for stability
+#CoreAreas: Core Area is initial spawn location, no longer relevant for stability.
+tCoreAreasTL = (
 (66,14),   #Byzantium
 (42,43),   #Franks
 (92,0),    #Arabs
@@ -468,12 +466,12 @@ tCoreAreasTL = ( #Core Area is initial spawn location, no longer relevant for st
 (35,26),   #Aragon
 (61,60),   #Sweden
 (68,51),   #Prussia
-(70,50),   #Lithuania
+(72,51),   #Lithuania
 (59,37),   #Austria
 (76,16),   #Ottomans
-(83,54),   #Moscow
+(84,53),   #Moscow
 (46,50),   #Netherlands
-(54,25)	   #Pope
+(54,25)    #Pope
 )
 
 tCoreAreasBR = (
@@ -500,16 +498,15 @@ tCoreAreasBR = (
 (42,31),   #Aragon
 (66,70),   #Sweden
 (71,59),   #Prussia
-(77,59),   #Lithuania
+(80,56),   #Lithuania
 (62,44),   #Austria
 (84,22),   #Ottomans
-(97,66),   #Moscow
+(97,62),   #Moscow
 (52,55),   #Netherlands
-(58,29)	   #Pope
+(58,29)    #Pope
 )
 
-
-tExceptions = (  #for RiseAndFall. These are (badly named) extra squares used in spawn.
+tExceptions = ( #Unfortunate name. These are extra plots used in spawn.
 (), #Byzantium
 (), #Frankia
 (), #Arabia
@@ -533,17 +530,16 @@ tExceptions = (  #for RiseAndFall. These are (badly named) extra squares used in
 ((40,23),(42,23),(42,24),(44,24)), #Aragon
 ((60,61),(60,62),(60,63),(64,71),(65,71),(64,72),(65,72),(66,72),(68,65),(70,67),(70,68),(71,66),(71,67),(72,66),(72,67)), #Sweden
 ((72,58),(73,58),(74,58),(75,58),(76,58),(74,59),(75,59),(76,59),(74,60),(75,60),(76,60),(73,61),(74,61),(75,61),(76,61)), #Prussia
-(), #Lithuania
+((76,57),(77,57),(78,57),(79,57),(80,57)), #Lithuania
 ((60,36),(61,36)), #Austria
 ((76,23),(77,23),(78,23),(79,23)), #Ottomans
-(), #Moscow
+((83,53),(83,54),(83,55),(83,56),(83,57),(83,58),(83,59),(88,63),(89,63),(90,63),(91,63),(92,63),(93,63),(94,63),(95,63),(96,63),(97,63)), #Moscow
 ((46,49),(47,49),(48,49),(49,49),(50,49)), #Dutch
 ()  #Pope
 )
 
-#normal areas
-
-tNormalAreasTL = ( #These areas are typically used for resurrection.
+#NormalAreas: Normal Area is typically used for resurrection.
+tNormalAreasTL = (
 (66,13),   #Byzantium
 (33,32),   #Franks
 (53,0),    #Arabs
@@ -572,7 +568,7 @@ tNormalAreasTL = ( #These areas are typically used for resurrection.
 (76,14),   #Turks
 (83,51),   #Moscow
 (47,50),   #Netherlands
-(54,25)	   #Pope
+(54,25)    #Pope
 )
 
 tNormalAreasBR = (
@@ -604,11 +600,10 @@ tNormalAreasBR = (
 (98,27),   #Turks
 (98,71),   #Moscow
 (52,54),   #Netherlands
-(58,29)	   #Pope
+(58,29)    #Pope
 )
 
-
-tNormalAreasSubtract = (  #These are squares subtracted from normal areas
+tNormalAreasSubtract = ( #These plots are subtracted from the tNormalAreasTL+tNormalAreasBR rectangles.
 (), #Byzantium
 ((33,32),(33,33),(33,34),(33,35),(33,36),(34,32),(34,33),(34,34),(34,35),(35,32),(35,33),(35,34),(36,32),(36,33),(37,32),(38,32)), #Frankia
 ((73,10),(74,10),(75,10),(76,10),(87,10),(87,11),(88,10),(88,11),(89,11)), #Arabia
@@ -640,10 +635,7 @@ tNormalAreasSubtract = (  #These are squares subtracted from normal areas
 ()
 )
 
-
-# broader areas coordinates (top left and bottom right) (for RiseAndFall)
-# 3Miro: see core area comment
-# Sedna17: Currently unused?
+#BroaderAreas: Broader Area is currently unused?
 tBroaderAreasTL = (
 (68, 14), #Byzantium
 (39, 41), #France
@@ -708,36 +700,36 @@ tBroaderAreasBR = (
 (58, 29)  #Pope
 )
 
-# visible areas:
+#Visible Area: One or more rectangles.
 tVisible = (
-( (64,0,99,34),(49,1,63,38),(24,17,48,36), ), # Byzantium
+( (64, 0,99,34),(49, 1,63,38),(24,13,48,36), ), # Byzantium
 ( (35,31,52,51),(49,26,59,38), ), # France
-( (79,0,89,6),(90,0,99,22), ), # Arabia
-( (69,24,81,31),(79,31,99,41), ), # Bulgaria
-( (14,17,39,33),(40,0,59,20),(60,0,95,7), ), # Cordoba
+( (79, 0,89, 6),(90, 0,99,22), ), # Arabia
+( (69,23,81,32),(78,31,99,41), ), # Bulgaria
+( (18,13,39,33),(40, 0,59,20),(60, 0,95, 7), ), # Cordoba
 ( (47,14,59,38),(60,18,63,35),(64,18,68,29), ), # Venice
-( (42,31,52,52), ), # Burgundy
+( (43,31,53,53), ), # Burgundy
 ( (44,31,46,52),(47,27,61,55),(62,50,70,55), ), # Germany
-( (72,57,90,72), ), # Novgorod
+( (72,55,90,72),(79,41,88,54), ), # Novgorod
 ( (49,52,71,72),(30,56,48,72), ), # Norway
-( (77,24,82,40),(83,31,89,46),(79,41,92,49), ), # Kiev
+( (77,24,82,40),(83,33,88,46),(77,39,91,56), ), # Kiev
 ( (59,30,82,42),(83,36,92,42), ), # Hungary
 ( (22,25,35,38),(36,25,43,40), ), # Spain
 ( (34,46,49,72),(50,50,71,72),(72,57,78,64), ), # Denmark
-( (30,51,46,68),(35,46,46,50), ), # Scotland
+( (30,51,46,72),(35,46,46,50), ), # Scotland
 ( (60,40,74,55),(75,40,79,48), ), # Poland
 ( (39,20,60,38),(47,14,63,32),(64,16,67,29), ), # Genoa
-( (10, 2,42,31),(43,10,53,20),), # Morocco
+( (12, 2,42,31),(43,10,53,20), ), # Morocco
 ( (31,49,45,64),(37,46,45,48), ), # England
-( (18,23,36,42), ), # Portugal
-( (19,22,56,40), (25,19,45,21), (46,14,63,28),),# Aragon
-( (42,52,82,66), (36,64,71,72), ), # Sweden
-( (51,43,73,56), (66,57,82,62),(69,63,79,66),), # Prussia
-( (57,36,76,55),(77,40,99,46),(70,33,99,58), ), # Lithuania
-( (35,33,48,51),(49,27,63,55), ), # Austria
-( (77,14,99,27),(93,5,99,13), ), # Turkey
-( (70,33,99,58),(74,59,99,69), ), # Moscow
-( (42,42,65,66), ), # Dutch
+( (18,22,34,39), ), # Portugal
+( (19,23,56,40),(25,21,45,22),(46,14,63,28), ),# Aragon
+( (39,52,82,66),(34,61,71,72), ), # Sweden
+( (51,43,73,56),(66,57,82,62),(69,63,79,66), ), # Prussia
+( (67,46,76,55),(73,44,81,58), ), # Lithuania
+( (49,27,61,55),(62,34,67,46), ), # Austria
+( (75,13,99,27),(92, 4,99,12), ), # Turkey
+( (77,42,99,51),(74,52,99,67), ), # Moscow
+( (40,45,65,57),(49,58,67,66),(46,39,63,44), ), # Dutch
 ( (39,12,73,44), ), # Pope
 )
 

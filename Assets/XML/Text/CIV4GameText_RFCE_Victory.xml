@@ -830,12 +830,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_PRU2</Tag>
-		<English>[COLOR_YELLOW]Seven Years' War:[COLOR_REVERT] Collapse or conquer two cities from each of Austria, Muscovy, Germany, Sweden, France and Spain between 1650AD and 1763AD.</English>
-		<French>[COLOR_YELLOW]Seven Years' War:[COLOR_REVERT] Collapse or conquer two cities from each of Austria, Muscovy, Germany, Sweden, France and Spain between 1650AD and 1763AD.</French>
-		<German>[COLOR_YELLOW]Seven Years' War:[COLOR_REVERT] Collapse or conquer two cities from each of Austria, Muscovy, Germany, Sweden, France and Spain between 1650AD and 1763AD.</German>
-		<Italian>[COLOR_YELLOW]Seven Years' War:[COLOR_REVERT] Collapse or conquer two cities from each of Austria, Muscovy, Germany, Sweden, France and Spain between 1650AD and 1763AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Seven Years' War:[COLOR_REVERT] Collapse or conquer two cities from each of Austria, Muscovy, Germany, Sweden, France and Spain between 1650AD and 1763AD.</Spanish>
-		<Portuguese>[COLOR_YELLOW]Seven Years' War:[COLOR_REVERT] Collapse or conquer two cities from each of Austria, Muscovy, Germany, Sweden, France and Spain between 1650AD and 1763AD.</Portuguese>
+		<English>[COLOR_YELLOW]Seven Years' War:[COLOR_REVERT] Conquer two cities from each of Austria, Muscowy, Germany, Sweden, France and Spain between 1650AD and 1763AD, if they are still alive.</English>
+		<French>[COLOR_YELLOW]Seven Years' War:[COLOR_REVERT] Conquer two cities from each of Austria, Muscowy, Germany, Sweden, France and Spain between 1650AD and 1763AD, if they are still alive.</French>
+		<German>[COLOR_YELLOW]Seven Years' War:[COLOR_REVERT] Conquer two cities from each of Austria, Muscowy, Germany, Sweden, France and Spain between 1650AD and 1763AD, if they are still alive.</German>
+		<Italian>[COLOR_YELLOW]Seven Years' War:[COLOR_REVERT] Conquer two cities from each of Austria, Muscowy, Germany, Sweden, France and Spain between 1650AD and 1763AD, if they are still alive.</Italian>
+		<Spanish>[COLOR_YELLOW]Seven Years' War:[COLOR_REVERT] Conquer two cities from each of Austria, Muscowy, Germany, Sweden, France and Spain between 1650AD and 1763AD, if they are still alive.</Spanish>
+		<Portuguese>[COLOR_YELLOW]Seven Years' War:[COLOR_REVERT] Conquer two cities from each of Austria, Muscowy, Germany, Sweden, France and Spain between 1650AD and 1763AD, if they are still alive.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_PRU3</Tag>
