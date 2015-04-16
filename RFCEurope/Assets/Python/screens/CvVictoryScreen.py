@@ -1021,7 +1021,7 @@ class CvVictoryScreen:
 					iScotlandCastle += 1;
 			sScotlandFort = localText.getText("TXT_KEY_IMPROVEMENT_FORT",()) + ": "
 			sScotlandCastle = localText.getText("TXT_KEY_BUILDING_CASTLE",()) + ": "
-			if ( iScotlandFort >= 12 ):
+			if ( iScotlandFort >= 10 ):
 				sScotlandFort = sScotlandFort + u" <color=0,255,0>%i</color>" %(iScotlandFort)
 			elif ( iScotlandFort > 0 ):
 				sScotlandFort = sScotlandFort + u" <color=255,250,0>%i</color>" %(iScotlandFort)

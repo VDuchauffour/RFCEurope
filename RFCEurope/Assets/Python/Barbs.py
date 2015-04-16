@@ -35,7 +35,6 @@ lBurdigala = [37,38,0,0] #500 AD, Bordeaux
 #lNantes = [36,43,0,0] #500 AD
 lAlger = [40,16,0,0] #500 AD
 lBarcino = [40,28,0,0] #500 AD
-#lCaen = [40,47,0,0] #500 AD
 lToulouse = [41,34,0,0] #500 AD
 #lTours = [40,43,0,0] #500 AD
 #lOrleans = [42,44,0,0] #500 AD
@@ -80,13 +79,14 @@ lCalais = [44,50,75,0] #800 AD
 lNidaros = [57,71,75,0] #800 AD, Trondheim
 #lLadoga = [81,65,75,0] #800 AD
 lBeloozero = [87,65,75,0] #800 AD
-lNovgorod = [80,62,87,0] #848 AD
+#lNovgorod = [80,62,87,0] #848 AD
 lEdinburgh = [37,63,90,0] #860 AD
 lAlbaIulia = [73,35,95,0] #880 AD
 lTvanksta = [69,53,100,0] #900 AD, Konigsberg
 #lBreslau = [64,46,100,0] #900 AD
 lKrakow = [68,44,100,0] #900 AD
 lRiga = [74,58,100,0] #900 AD
+lCaen = [40,47,104,0] #912 AD
 lMinsk = [79,52,120,0] #960 AD
 lSmolensk = [84,55,120,0] #960 AD
 lYaroslavl = [92,61,137,0] #1010 AD
@@ -94,7 +94,7 @@ lGroningen = [52,54,150,0] #1050 AD
 lKalmar = [64,60,150,0] #1050 AD
 #lMunster = [52,50,150,0] #1050 AD
 lMus = [99,21,153,0] #1060 AD
-lMarrakesh = [24,7,157,0] #1071 AD
+#lMarrakesh = [24,7,157,0] #1071 AD
 lGraz = [61,37,170,0] #1110 AD
 lSaraiBatu = [99,40,200,0] #1200 AD
 lTarabulus = [54,8,209,0] #1227 AD, Respawn of Tripoli
@@ -511,8 +511,6 @@ class Barbs:
 			self.foundCity(iIndependent3, lCalais, "Calais", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
 			self.foundCity(iBarbarian, lNidaros, "Nidaros", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
 			self.foundCity(iIndependent4, lBeloozero, "Beloozero", iGameTurn, 1, xml.iCrossbowman, 1, -1, 1)
-			# 848AD
-			self.foundCity(iIndependent2, lNovgorod, "Novgorod", iGameTurn, 1, xml.iCrossbowman, 2, -1, 1 )
 			# 860AD
 			self.foundCity(iBarbarian, lEdinburgh, "Eidyn Dun", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
 			# 880AD
@@ -521,7 +519,9 @@ class Barbs:
 			# 900AD
 			self.foundCity(iIndependent4, lTvanksta, "Tvanksta", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
 			self.foundCity(iIndependent3, lKrakow, "Krakow", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
-			self.foundCity(iIndependent, lRiga, "Riga", iGameTurn, 2, xml.iCrossbowman, 2, -1, 1 )
+			self.foundCity(iIndependent, lRiga, "Riga", iGameTurn, 3, xml.iCrossbowman, 2, -1, 1 )
+			# 912AD
+			self.foundCity(iIndependent2, lCaen, "Caen", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
 			# 960AD
 			self.foundCity(iIndependent3, lMinsk, "Minsk", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
 			self.foundCity(iIndependent4, lSmolensk, "Smolensk", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 )
@@ -532,8 +532,6 @@ class Barbs:
 			self.foundCity(iIndependent2, lKalmar, "Kalmar", iGameTurn, 3, xml.iCrossbowman, 1, xml.iCatholicism, 1)
 			# 1060AD
 			self.foundCity(iBarbarian, lMus, "Mus", iGameTurn, 1, xml.iLongbowman, 2, -1, 0 )
-			# 1071AD
-			self.foundCity(iBarbarian, lMarrakesh, "Marrakesh", iGameTurn, 3, xml.iCrossbowman, 2, xml.iIslam, 1 )
 			# 1110AD
 			self.foundCity(iIndependent3, lGraz, "Graz", iGameTurn, 3, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
 			# 1200AD
@@ -541,7 +539,7 @@ class Barbs:
 			# 1227 AD
 			self.foundCity(iBarbarian, lTarabulus, "Tarabulus", iGameTurn, 4, xml.iArbalest, 2, xml.iIslam, 1 )
 			# 1250 AD
-			self.foundCity(iIndependent4, lAbo, "Abo", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 ) # Abo flips to Sweden
+			self.foundCity(iIndependent4, lAbo, "Abo", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 )
 		if ( iGameTurn > xml.i1300AD and iGameTurn < xml.i1540AD ):
 			# 1320AD
 			self.foundCity(iIndependent, lNizhnyNovgorod, "Nizhny Novgorod", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 )

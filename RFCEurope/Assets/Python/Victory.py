@@ -343,8 +343,8 @@ class Victory:
                                 if ( iCathCath >= 3 and iOrthCath >= 2 and iProtCath >= 2 and iJewishQu >= 2 ):
                                         pPoland.setUHV( 2, 1 )
 
+		# Prussia UHV2: Conquer two cities from each of Austria, Muscowy, Germany, Sweden, France and Spain between 1650AD and 1763AD, if they are still alive.
 		elif(playerType == iPrussia and owner in tPrussiaDefeat and iGameTurn >= xml.i1650AD and iGameTurn <= xml.i1763AD):
-			# Collapse or conquer two cities from each of Austria, Muscowy, Germany, Sweden, France and Spain between 1650AD and 1763AD.
 			lNumConq = []
 			iConqRaw = pPrussia.getUHVCounter(1)
 			bConq = True
@@ -1236,7 +1236,8 @@ class Victory:
 			else:
 				pPrussia.setUHV( 0, 0 )
 
-		# UHV 2: Collapse or conquer two cities from each of Austria, Muscowy, Germany, Sweden, France and Spain between 1650AD and 1763AD. Controlled in the onCityAcquired function
+		# UHV 2: Conquer two cities from each of Austria, Muscowy, Germany, Sweden, France and Spain between 1650AD and 1763AD, if they are still alive
+		# Controlled in the onCityAcquired function
 		if(iGameTurn > xml.i1763AD and pPrussia.getUHV(1) == -1):
 			pPrussia.setUHV(1,0)
 
