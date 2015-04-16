@@ -2,16 +2,10 @@
 
 # globals
 
-#from CvPythonExtensions import *
-#gc = CyGlobalContext()
+from CvPythonExtensions import *
+gc = CyGlobalContext()
 
 import XMLConsts as xml
-
-l0Array =       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] # currently unused
-l0ArrayActive = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] # currently unused
-l0ArrayTotal =  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] # counts the cities for each player, used in RiseAndFall.py
-lm1Array =      [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
-# Size of the above are: number of civs+independents. Currently 29+4
 
 # 3Miro: map size entered here
 iMapMaxX = 100
@@ -49,48 +43,42 @@ iMapMaxY = 73
 # Pope - keep him last
 
 # initialize player variables to player IDs from WBS (this is the only part of the XML that will stay here)
-iByzantium = 0
-iFrankia = 1
-iArabia = 2
-iBulgaria = 3
-iCordoba = 4
-iVenecia = 5
-iBurgundy = 6
-iGermany = 7
-iNovgorod = 8
-iNorway = 9
-iKiev = 10
-iHungary = 11
-iSpain = 12
-iDenmark = 13
-iScotland = 14
-iPoland = 15
-iGenoa = 16
-iMorocco = 17
-iEngland = 18
-iPortugal = 19
-iAragon = 20
-iSweden = 21
-iPrussia = 22
-iLithuania = 23
-iAustria = 24
-iTurkey = 25
-iMoscow = 26
-iDutch = 27
-iPope = 28
+
 iNumPlayers = 29
-iNumMajorPlayers = 29
-iNumActivePlayers = 29
-iIndependent = 29
-iIndependent2 = 30
-iIndependent3 = 31
-iIndependent4 = 32
-iNumTotalPlayers = 33
-iBarbarian = 33
-iNumTotalPlayersB = 34
+(iByzantium, iFrankia, iArabia, iBulgaria, iCordoba, iVenecia, iBurgundy, iGermany, iNovgorod, iNorway, 
+iKiev, iHungary, iSpain, iDenmark, iScotland, iPoland, iGenoa, iMorocco, iEngland, iPortugal, 
+iAragon, iSweden, iPrussia, iLithuania, iAustria, iTurkey, iMoscow, iDutch, iPope) = range(iNumPlayers)
+
+iNumMajorPlayers = iNumPlayers
+iNumActivePlayers = iNumPlayers
+
+iIndependent = iNumPlayers
+iIndependent2 = iNumPlayers+1
+iIndependent3 = iNumPlayers+2
+iIndependent4 = iNumPlayers+3
+iNumTotalPlayers = iNumPlayers+4
+iBarbarian = iNumPlayers+4
+iNumTotalPlayersB = iBarbarian+1
+
+(pByzantium, pFrankia, pArabia, pBulgaria, pCordoba, pVenecia, pBurgundy, pGermany, pNovgorod, pNorway, 
+pKiev, pHungary, pSpain, pDenmark, pScotland, pPoland, pGenoa, pMorocco, pEngland, pPortugal, 
+pAragon, pSweden, pPrussia, pLithuania, pAustria, pTurkey, pMoscow, pDutch, pPope) = [gc.getPlayer(i) for i in range(iNumPlayers)]
+
+(teamByzantium, teamFrankia, teamArabia, teamBulgaria, teamCordoba, teamVenecia, teamBurgundy, teamGermany, teamNovgorod, teamNorway, 
+teamKiev, teamHungary, teamSpain, teamDenmark, teamScotland, teamPoland, teamGenoa, teamMorocco, teamEngland, teamPortugal, 
+teamAragon, teamSweden, teamPrussia, teamLithuania, teamAustria, teamTurkey, teamMoscow, teamDutch, teamPope) = [gc.getTeam(i) for i in range(iNumPlayers)]
 
 iIndepStart = iIndependent # creates a block of independent civs
 iIndepEnd = iIndependent4
+
+iVenice = iVenecia
+
+l0Array =       [0 for i in range(iNumTotalPlayers)] # currently unused
+l0ArrayActive = [0 for i in range(iNumTotalPlayers)] # currently unused
+l0ArrayTotal =  [0 for i in range(iNumTotalPlayers)] # counts the cities for each player, used in RiseAndFall.py
+
+lm1Array =      [-1 for i in range(iNumTotalPlayers)]
+# Size of the above are final size
 
 #for Congresses and Victory
 lCivGroups = [[iByzantium,iBulgaria,iNovgorod,iKiev,iLithuania,iMoscow],		#Eastern
