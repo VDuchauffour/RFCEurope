@@ -274,8 +274,8 @@ iBelemTower, iGoldenBull, iKalmarCastle, iPalaisPapes, iTombKhal, iStephansdom, 
 iCopernicus, iSanGiorgio, iWestminster, iPressburg, iLanterna, iPrussiaPublicSchool, iAragonSeaport, iMorocccoKasbah, iScotlandShieling, iDenmarkResearchInstitute, 
 iNovgorodKonets, iNationalEpic, iTriumphalArch) = range(iNumBuildings)
 
-iPlague = 153
-iNumBuildingsPlague = 154
+iPlague = iNumBuildings-1
+iNumBuildingsPlague = iNumBuildings+1
 iNumCorporations = 7 # to mark Genoa's UHV as false
 
 
@@ -303,7 +303,7 @@ iImprovementVillage, iImprovementTown, iImprovementFort, iImprovementForestPrese
 
 #Civics
 iNumCivics = 30
-(iCivicDespotism, iCivicFeudalMonarchy, iCivicDivineMonarchy, iCivicLimitedMonarchy, iCivicMerchantRepublic, iCivicTibalLaw, iCivicFeudalLaw, iCivicBureaucracy, iCivicReligiousLaw, iCivicCommonLawm, 
+(iCivicDespotism, iCivicFeudalMonarchy, iCivicDivineMonarchy, iCivicLimitedMonarchy, iCivicMerchantRepublic, iCivicTibalLaw, iCivicFeudalLaw, iCivicBureaucracy, iCivicReligiousLaw, iCivicCommonLaw, 
 iCivicTribalism, iCivicSerfdom, iCivicFreePeasantry, iCivicApprenticeship, iCivicFreeLabor, iCivicDecentralization, iCivicManorialism, iCivicTradeEconomy, iCivicGuilds, iCivicMercantilism, 
 iCivicPaganism, iCivicStateReligion, iCivicTheocracy, iCivicOrganizedReligion, iCivicFreeReligion, iCivicSubjugation, iCivicVassalage, iCivicImperialism, iCivicOccupation, iCivicColonialism) = range(iNumCivics)
 
