@@ -59,7 +59,6 @@ class Resources:
 			self.createResource(66, 46, xml.iPotato)
 			self.createResource(60, 48, xml.iPotato) #Northern Germany
 			self.createResource(55, 52, xml.iPotato)
-		if (iGameTurn == xml.i1680AD):
 			self.createResource(59, 61, xml.iAccess) #Atlantic Access in Scandinavia
 
 

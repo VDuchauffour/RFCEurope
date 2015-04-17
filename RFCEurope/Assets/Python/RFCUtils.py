@@ -923,9 +923,9 @@ class RFCUtils:
                         if (gc.getTeam(gc.getPlayer(iCiv).getTeam()).isVassal(iMaster)):
                                 return True
                 return False
-		
-		# UP, UHV, by Leoreth
-        def getMaster(self, iCiv):
+
+	# UP, UHV, by Leoreth
+	def getMaster(self, iCiv):
 		team = gc.getTeam(gc.getPlayer(iCiv).getTeam())
 		for iMaster in range(iNumTotalPlayers):
 			if team.isVassal(iMaster):

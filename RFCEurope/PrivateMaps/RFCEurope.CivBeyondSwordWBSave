@@ -28578,8 +28578,9 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=51
+	BonusType=BONUS_SULPHUR
 	TerrainType=TERRAIN_GRASS
-	PlotType=2
+	PlotType=1
 EndPlot
 BeginPlot
 	x=70,y=52
@@ -29011,8 +29012,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=51
-	BonusType=BONUS_DEER
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -29494,6 +29494,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=51
+	BonusType=BONUS_DEER
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2

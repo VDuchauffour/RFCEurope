@@ -747,9 +747,9 @@ class Victory:
                                 pDenmark.setUHV( 1, 1 )
                         else:
                                 pDenmark.setUHV( 1, 0 )
-                # UHV3: Get 3 Colonies.
-                if ( pDenmark.getNumColonies() >= 3 ):
-                        pDenmark.setUHV(2,1)
+                # UHV3: Get 3 Colonies and complete both Trading Companies.
+                if ( pDenmark.getNumColonies() >= 5 ):
+                        pDenmark.setUHV( 2, 1 )
 
         def checkVenecia( self, iGameTurn ):
                 # UHV1: Control the Adriatic and some Mediterranean islands in 1004 AD

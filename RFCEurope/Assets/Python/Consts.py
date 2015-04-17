@@ -68,7 +68,7 @@ pAragon, pSweden, pPrussia, pLithuania, pAustria, pTurkey, pMoscow, pDutch, pPop
 teamKiev, teamHungary, teamSpain, teamDenmark, teamScotland, teamPoland, teamGenoa, teamMorocco, teamEngland, teamPortugal, 
 teamAragon, teamSweden, teamPrussia, teamLithuania, teamAustria, teamTurkey, teamMoscow, teamDutch, teamPope) = [gc.getTeam(i) for i in range(iNumPlayers)]
 
-iIndepStart = iIndependent # creates a block of independent civs
+iIndepStart = iIndependent # creates the block of independent civs
 iIndepEnd = iIndependent4
 
 iVenice = iVenecia
@@ -76,9 +76,7 @@ iVenice = iVenecia
 l0Array =       [0 for i in range(iNumTotalPlayers)] # currently unused
 l0ArrayActive = [0 for i in range(iNumTotalPlayers)] # currently unused
 l0ArrayTotal =  [0 for i in range(iNumTotalPlayers)] # counts the cities for each player, used in RiseAndFall.py
-
 lm1Array =      [-1 for i in range(iNumTotalPlayers)]
-# Size of the above are final size
 
 #for Congresses and Victory
 lCivGroups = [[iByzantium,iBulgaria,iNovgorod,iKiev,iLithuania,iMoscow],		#Eastern
@@ -313,7 +311,7 @@ tCapitals = (
 (21, 25), #Lisboa, Portugal
 (36, 29), #Aragon
 (66, 64), #Stockholm, Sweden
-(69, 53), #Prussia
+(69, 53), #Königsberg, Prussia
 (75, 53), #Vilnius, Lithuania
 (62, 40), #Wien, Austria
 (78, 22), #Gallipoli, Ottomans
