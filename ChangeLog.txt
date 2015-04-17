@@ -26,7 +26,7 @@ Changes for RFCE 1.3:
 		UP: The Power of Sound Dues: You get 2 gold per turn for every foreign coastal city in the Baltic
 		UHV1: North Sea Empire: Control Denmark, Skaneland, Svealand, Vestfold, Mercia, London, Northumbria and East Anglia in 1050
 		UHV2: Kalmar Union: Control Denmark, Norway, Vestfold, Skaneland, Götaland, Svealand, Norrland, Gotland, Österland, Estonia and Iceland in 1523
-		UHV3: Ostindisk Kompagni: Get 3 Colonies
+		UHV3: Ostindisk Kompagni: Get 3 Colonies and complete both Trading Companies
 		UU: Huskarl (Swordsman)
 		UB: Research Institute (Observatory)
 		CNM: Scandinavian base CNM, with small differences
@@ -200,6 +200,9 @@ Changes for RFCE 1.3:
 		- Revised settler map for Byzantium, Cordoba, Venice, Burgundy, Germany, Spain, Poland, England, Portugal, Lithuania, Muscovy
 		- Muscovy spawn zone reduced in the north, so Novgorod gets a chance to be an early rival for Muscovy
 		- Lithuanian spawn zone reduced around Riga and the Prussian core territory, but enlarged on the east, so Minsk flips to them
+		- Prussia got a hill with sulphur 2S1E from their capital - they cannot build their UU otherwise, also Königsberg needed a production boost
+		- Changed Atlantic Access to appear earlier near Scandinavia, in 1580 - needed for the Danish UHV
+		- Plague icon on the main interface when plague spreads to a new city
 
 	Art updates:
 		- New art for Isabella (Spain), Casimir III (Poland), Ivan IV (Muscovy), Simeon I (Bulgaria), Ivan Asen (Bulgaria)

@@ -200,31 +200,30 @@ iNumReligions = 5
 
 iNumTechs = 75
 #Early
-(iCalendar, iArchitecture, iBronzeCasting, iTheology, iManorialism, iStirrup, iEngineering, # teir 2
-iChainMail, iArt, iMonasticism, iVassalage, iAstrolabe, # teir 3
-iMachinery, iVaultedArches, iMusic, iHerbalMedicine, iFeudalism, iFarriers, 
+(iCalendar, iArchitecture, iBronzeCasting, iTheology, iManorialism, iStirrup, # teir 1
+iEngineering, iChainMail, iArt, iMonasticism, iVassalage, # teir 2
+iAstrolabe, iMachinery, iVaultedArches, iMusic, iHerbalMedicine, iFeudalism, iFarriers, #tier 3
 #High
-iMapMaking, # teir 4
-iBlastFurnace, iSiegeEngines, iGothicArchitecture, iLiterature, iCodeOfLaws, iAristocracy, iLateenSails, # teir 5
-iPlateArmor, iMonumentBuilding, iClassicalKnowledge, iAlchemy, iCivilService, iClockmaking, iPhilosophy, iEducation, iGuilds, iChivalry, 
+iMapMaking, iBlastFurnace, iSiegeEngines, iGothicArchitecture, iLiterature, iCodeOfLaws, iAristocracy, # teir 4
+iLateenSails, iPlateArmor, iMonumentBuilding, iClassicalKnowledge, iAlchemy, iCivilService, # teir 5
+iClockmaking, iPhilosophy, iEducation, iGuilds, iChivalry, # tier 6
 #Late
-iOptics, # teir 7
-iReplaceableParts, iPatronage, iGunpowder, iBanking, iMilitaryTradition, iShipbuilding,  # teir 8
-iDrama, iDivineRight, iChemistry, iPaper, iProfessionalArmy, iPrintingPress, # teir 9 turn 304
-iPublicWorks, iMatchlock, iArabicKnowledge,
+iOptics, iReplaceableParts, iPatronage, iGunpowder, iBanking, iMilitaryTradition, # teir 7
+iShipbuilding, iDrama, iDivineRight, iChemistry, iPaper, iProfessionalArmy, # teir 8
+iPrintingPress, iPublicWorks, iMatchlock, iArabicKnowledge, # teir 9, around turn 304
 #Renaissance
-iAstronomy, # teir 10
-iSteamEngines, iConstitution, iPolygonalFort, iArabicMedicine, iRenaissanceArt, # teir 11
-iNationalism, iLiberalism, iScientificMethod, iMilitaryTactics, iNavalArchitecture, # teir 12
-iCivilEngineering, iRightOfMan, iEconomics, iPhysics, iBiology, iCombinedArms, iTradingCompanies, # teir 13 TradingCompanies turn 325
-iMachineTools, iFreeMarket, iExplosives, iMedicine, iIndustrialTech # last tech, turn 500
+iAstronomy, iSteamEngines, iConstitution, iPolygonalFort, iArabicMedicine, # teir 10
+iRenaissanceArt, iNationalism, iLiberalism, iScientificMethod, iMilitaryTactics, # teir 11
+iNavalArchitecture, iCivilEngineering, iRightOfMan, iEconomics, iPhysics, iBiology, iCombinedArms, # teir 12
+iTradingCompanies, iMachineTools, iFreeMarket, iExplosives, iMedicine, # teir 13, TradingCompanies around turn 325
+iIndustrialTech # last tech, turn 500
 ) = range(iNumTechs)
 iFutureTech = iIndustrialTech
-
 iNumTechsFuture = 1
 
 
 #Units: initialize unit variables to unit indices from XML
+
 iNumUnits = 121
 (iSettler, iWorker, iExecutive1, iExecutive2, iExecutive3, iExecutive4, iExecutive5, iExecutive6, iExecutive7, iCatholicMissionary,
 iOrthodoxMissionary, iProtestantMissionary, iIslamicMissionary, iArcher, iCrossbowman, iArbalest, iGenoaBalestrieri, iLongbowman, iEnglishLongbowman, iSpearman,
@@ -256,8 +255,8 @@ iTea , iTobacco , iOlives , iAccess , iNorthAccess , iSouthAccess , iAsiaAccess 
 
 #Buildings
 
-iNumBuildings = 153 # Should equal iPlague
-(iPalace, iGreatPalace, iSummerPalace, iRoyalAcademy, iVersailles, iWalls, iStarFort, iCastle, iMoscowKremlin, iHungarianStronghold,
+iNumBuildings = 152 # Should equal iPlague
+(iPalace, iSummerPalace, iRoyalAcademy, iVersailles, iWalls, iStarFort, iCastle, iMoscowKremlin, iHungarianStronghold,
 iSpanishCitadel, iBarracks, iArcheryRange, iStable, iBulgarianStan, iGranary, iCordobanNoria, iPolishFolwark, iAqueduct, iOttomanHammam,
 iLighthouse, iVikingTradingPost, iWharf, iHarbor, iPortugalFeitoria, iCustomHouse, iDrydock, iVeniceArsenal, iForge, iGuildHall,
 iTextileMill, iRoyalDungeon, iUniversity, iObservatory, iHospital, iTheatre, iByzantineHippodrome, iAustrianOperaHouse, iMarket, iArabicCaravan, 
@@ -274,7 +273,8 @@ iBelemTower, iGoldenBull, iKalmarCastle, iPalaisPapes, iTombKhal, iStephansdom, 
 iCopernicus, iSanGiorgio, iWestminster, iPressburg, iLanterna, iPrussiaPublicSchool, iAragonSeaport, iMorocccoKasbah, iScotlandShieling, iDenmarkResearchInstitute, 
 iNovgorodKonets, iNationalEpic, iTriumphalArch) = range(iNumBuildings)
 
-iPlague = iNumBuildings-1
+iGreatPalace = iSummerPalace
+iPlague = iNumBuildings
 iNumBuildingsPlague = iNumBuildings+1
 iNumCorporations = 7 # to mark Genoa's UHV as false
 

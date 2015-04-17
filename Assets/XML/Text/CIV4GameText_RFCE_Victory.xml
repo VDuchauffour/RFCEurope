@@ -785,12 +785,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_DEN3</Tag>
-		<English>[COLOR_YELLOW]Ostindisk Kompagni:[COLOR_REVERT] Get 3 Colonies.</English>
-		<French>[COLOR_YELLOW]Ostindisk Kompagni:[COLOR_REVERT] Get 3 Colonies.</French>
-		<German>[COLOR_YELLOW]Ostindisk Kompagni:[COLOR_REVERT] Get 3 Colonies.</German>
-		<Italian>[COLOR_YELLOW]Ostindisk Kompagni:[COLOR_REVERT] Get 3 Colonies.</Italian>
-		<Spanish>[COLOR_YELLOW]Ostindisk Kompagni:[COLOR_REVERT] Get 3 Colonies.</Spanish>
-		<Portuguese>[COLOR_YELLOW]Ostindisk Kompagni:[COLOR_REVERT] Get 3 Colonies.</Portuguese>
+		<English>[COLOR_YELLOW]Ostindisk Kompagni:[COLOR_REVERT] Get 3 Colonies and complete both Trading Companies.</English>
+		<French>[COLOR_YELLOW]Ostindisk Kompagni:[COLOR_REVERT] Get 3 Colonies and complete both Trading Companies.</French>
+		<German>[COLOR_YELLOW]Ostindisk Kompagni:[COLOR_REVERT] Get 3 Colonies and complete both Trading Companies.</German>
+		<Italian>[COLOR_YELLOW]Ostindisk Kompagni:[COLOR_REVERT] Get 3 Colonies and complete both Trading Companies.</Italian>
+		<Spanish>[COLOR_YELLOW]Ostindisk Kompagni:[COLOR_REVERT] Get 3 Colonies and complete both Trading Companies.</Spanish>
+		<Portuguese>[COLOR_YELLOW]Ostindisk Kompagni:[COLOR_REVERT] Get 3 Colonies and complete both Trading Companies.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOV1</Tag>
