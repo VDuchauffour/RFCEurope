@@ -857,7 +857,7 @@ class RiseAndFall:
                 # Secession: if stability is negative there is a chance (bigger chance with worse stability) for a random city to it's declare independence
                 if (iGameTurn >= 64 and iGameTurn % 4 == 0): #mainly for seljuks, mongols, timurids
                         self.collapseByBarbs(iGameTurn)
-                if (iGameTurn >= 34 and iGameTurn % 12 == 0): #used to be 15 in vanilla
+                if (iGameTurn >= 34 and iGameTurn % 16 == 0): #used to be 15 in vanilla
                         self.collapseGeneric(iGameTurn)
                 if (iGameTurn >= 34 and iGameTurn % 9 == 7): #used to be 8 in vanilla
                         self.collapseMotherland(iGameTurn)

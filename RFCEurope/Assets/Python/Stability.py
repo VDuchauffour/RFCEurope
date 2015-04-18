@@ -209,23 +209,34 @@ class Stability:
                 iProvOwnerType = pOwner.getProvinceType( iProv )
                 iProvConqType = pConq.getProvinceType( iProv )
                 if ( iProvOwnerType >= con.iProvinceNatural ):
-                        pOwner.changeStabilityBase( iCathegoryExpansion, -2 )
-                        pOwner.setStabilitySwing( pOwner.getStabilitySwing() -5 )
+                        if( owner == con.iScotland ): #Scotland UP part 2
+                                pOwner.changeStabilityBase( iCathegoryExpansion, -2 )
+                                pOwner.setStabilitySwing( pOwner.getStabilitySwing() - 2 )
+                        else:
+                                pOwner.changeStabilityBase( iCathegoryExpansion, -3 )
+                                pOwner.setStabilitySwing( pOwner.getStabilitySwing() - 4 )
                 if ( iProvOwnerType < con.iProvinceNatural ):
-                        pOwner.setStabilitySwing( pOwner.getStabilitySwing() -2 )
+                        if( owner == con.iScotland ): #Scotland UP part 2
+                                pOwner.setStabilitySwing( pOwner.getStabilitySwing() - 1 )
+                        else:
+                                pOwner.setStabilitySwing( pOwner.getStabilitySwing() - 2 )
                 if ( iProvConqType >= con.iProvinceNatural ):
                         pConq.changeStabilityBase( iCathegoryExpansion, 1 )
-                        pConq.setStabilitySwing( pConq.getStabilitySwing() +3 )
+                        pConq.setStabilitySwing( pConq.getStabilitySwing() + 3 )
                 if ( pConq.getCivics(5) == 28 ):
                         pConq.changeStabilityBase( iCathegoryExpansion, 1 )
-
+                if (owner < iNumPlayers and city.getX() == tCapitals[owner][0] and city.getY() == tCapitals[owner][1]):
+                        if( owner == con.iScotland ): #Scotland UP part 2
+                                pOwner.changeStabilityBase( iCathegoryExpansion, -5 )
+                                pOwner.setStabilitySwing( pOwner.getStabilitySwing() - 5 )
+                        else:
+                                pOwner.changeStabilityBase( iCathegoryExpansion, -10 )
+                                pOwner.setStabilitySwing( pOwner.getStabilitySwing() - 10 )
+                                if ( gc.hasUP(owner,con.iUP_Emperor) ): # If Byzantium loses Constantinople, they should collapse
+                                        pOwner.changeStabilityBase( iCathegoryExpansion, -10 )
+                                        pOwner.setStabilitySwing( pOwner.getStabilitySwing() - 10 )
                 self.recalcEpansion( pOwner )
                 self.recalcEpansion( pConq )
-                if (owner < iNumPlayers and city.getX() == tCapitals[owner][0] and city.getY() == tCapitals[owner][1]):
-                        pOwner.changeStabilityBase( iCathegoryExpansion, -10 )
-                        pOwner.setStabilitySwing( pOwner.getStabilitySwing() -10  )
-                        if ( gc.hasUP(owner,con.iUP_Emperor) ):
-                                pOwner.changeStabilityBase( iCathegoryExpansion, -20 ) # If Byzantium loses Constantinople, they should collapse
 
 
         def onCityRazed(self, iOwner, playerType, city):

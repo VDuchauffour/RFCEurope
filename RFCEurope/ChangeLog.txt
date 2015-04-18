@@ -30,7 +30,7 @@ Changes for RFCE 1.3:
 		UU: Huskarl (Swordsman)
 		UB: Research Institute (Observatory)
 		CNM: Scandinavian base CNM, with small differences
-		Provinces:
+		Province setup:
 			Core: Denmark, Skaneland
 			Potential: Gotland, Holstein, Estonia
 			Border/contested: Gotaland, Northumbria, Mercia, East Anglia, London, Brandenburg, Norway, Vestfold, Normandy
@@ -46,7 +46,7 @@ Changes for RFCE 1.3:
 		UU: Berserker (Axeman)
 		UB: Trading Post (Lighthouse)
 		CNM: Scandinavian base CNM, with small differences
-		Provinces:
+		Province setup:
 			Core: Norway, Vestfold
 			Historical: Iceland
 			Potential: Jamtland, The Isles
@@ -63,7 +63,7 @@ Changes for RFCE 1.3:
 		UU: Karolin (Musketman)
 		UB: Soldattorp (Night Watch)
 		CNM: Scandinavian base CNM, with small differences
-		Provinces:
+		Province setup:
 			Core: Svealand, Norrland
 			Historical: Gotaland, Gotland
 			Potential: Jamtland, Osterland, Karelia, Estonia
@@ -79,7 +79,7 @@ Changes for RFCE 1.3:
 		UU: Ushkuinik (Maceman)
 		UB: Konets (Guild Hall)
 		CNM: same as the CNM for the Kievan Rus
-		Provinces:
+		Province setup:
 			Core: Novgorod, Karelia
 			Historical: Rostov, Vologda
 			Potential: Estonia
@@ -96,7 +96,7 @@ Changes for RFCE 1.3:
 		UU: Death's Head Hussar (Hussar)
 		UB: Public School (Observatory)
 		CNM: same as the CNM for Germany and Austria
-		Provinces:
+		Province setup:
 			Core: Prussia
 			Potential: Pomerania, Livonia
 			Border/contested: Brandenburg, Estonia, Gotland
@@ -112,7 +112,7 @@ Changes for RFCE 1.3:
 		UU: Sheltron (Guisarmier)
 		UB: Shieling (Smokehouse)
 		CNM: Scottish CNM by DC123456789
-		Provinces:
+		Province setup:
 			Core: Scotland
 			Natural: The Isles
 			Potential: Northumbria
@@ -129,7 +129,7 @@ Changes for RFCE 1.3:
 		UU: Almogavar (Guisarmier)
 		UB: Seaport (Lighthouse)
 		CNM: same as the CNM for Spain (Castile)
-		Provinces:
+		Province setup:
 			Core: Aragon, Catalonia, Balears, Valencia
 			Potential: Navarre, Andalusia, La Mancha, Sardinia, Sicily, Apulia, Calabria, Malta
 			Border/contested: Castile, Provence, Corsica, Thessaly
@@ -137,14 +137,14 @@ Changes for RFCE 1.3:
 	Morocco:
 		Start Date: 1040
 		Leaders: Yaqub al-Mansur (1160-1199), Ismail Ibn Sharif (1645-1727)
-		UP: The Power of Saharan Trade: Deserts and particularily oases have improved yield
+		UP: The Power of Saharan Trade: Deserts and particularly oases have improved yield
 		UHV1: The Almohads: Control Morocco, Marrakesh, Fez, Tetouan, Oran, Algiers, Ifriqiya, Tripolitania, Andalusia, and Valencia in 1227
 		UHV2: The Marinids: Have 5000 culture in each of three cities in 1465
 		UHV3: The Saadis: Collapse or vassalize Portugal, Spain, and Aragon by 1578
 		UU: Black Guard (Musketman)
 		UB: Kasbah (Walls)
 		CNM: same as the CNM for Cordoba and Arabia
-		Provinces:
+		Province setup:
 			Core: Marrakesh, Morocco, Fez
 			Historical: Tetouan
 			Potential: Oran, Algiers
@@ -196,7 +196,8 @@ Changes for RFCE 1.3:
 		- Revised the setup of initial contacts between all civs
 		- Minor changes in the collapse mechanics - should be somewhat more common for the AI to collapse, if they lose a significant part of their territory
 		- City secession has much bigger chance to occur for all civs
-		- Losing your capital results in a much bigger stability hit (20 for Byzantium, 10 for everyone else)
+		- Losing your capital results in a much bigger stability hit (20 for Byzantium, 5 for Scotland, 10 for everyone else)
+		- Losing a city in your core or historical territory also means a bigger stability hit
 		- Revised settler map for Byzantium, Cordoba, Venice, Burgundy, Germany, Spain, Poland, England, Portugal, Lithuania, Muscovy
 		- Muscovy spawn zone reduced in the north, so Novgorod gets a chance to be an early rival for Muscovy
 		- Lithuanian spawn zone reduced around Riga and the Prussian core territory, but enlarged on the east, so Minsk flips to them

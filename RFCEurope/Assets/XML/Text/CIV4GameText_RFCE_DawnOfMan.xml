@@ -225,12 +225,22 @@
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-	<TEXT> <!-- Sweden -->
-		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_21</Tag>
+	<!-- Sweden old -->
+	<!--<TEXT>
+		<Tag>TXT_KEY_DAWN_OF_MAN_SWEDEN</Tag>
 		<English>It is 1523 AD, a couple years after the outrages of the Stockholm Bloodbath, commited by the Danish king Kristian the Tyrant. You, Gustav Vasa, have lead a rebellion since to restore independence, succesfully uniting Sweden under a hereditary monarchy.[NEWLINE][NEWLINE]Now it's time to claim your rightful place as ruler over the Baltic sea. Contested in this by mighty rivals, success can only be achieved by superior military and tactics. One way is to break the ties with Rome and build a great nation based on the true Lutheran faith!</English>
 		<French>.</French>
 		<German>Es ist das Jahr 1523 n.Chr., einige Jahre sind nach der Freveltat des Stockholmer Blutbades, vom Dänischen König Christian dem Tyrannen verübt, vergangen. Ihr, Gustaf Wasa, habt seitdem eine Rebellion zur Wiedererlangung der Unabhängigkeit angeführt, und Schweden in einer Erbmonarchie vereint.[NEWLINE][NEWLINE]Jetzt ist es an der Zeit euren rechtmäßigen Platz als Herrscher über die Baltische See zu beanspruchen. Angefochten durch mächtige Rivalen kann der Erfolg nur durch Überlegenheit in Militär und Taktik erreicht werden. Ein Weg ist es die Bande mit Rom zu brechen und eine große Nation auf dem wahren lutheranischen Glauben aufzubauen.</German>
 		<Italian>E' il 1523 AD, un paio di anni dopo gli oltraggi del Bagno di sangue di Stoccolma, commessi dal re Danese Cristiano II il Tiranno. Tu, Gustavo Vasa, hai guidato una rivolta per ottenere l'indipendenza, e hai unito con successo la Svezia sotto una monarchia ereditaria.[NEWLINE][NEWLINE]Ora è il momento di reclamare il posto che ti spetta di diritto come dominatore del Mar Baltico. Essendo in contrasto con potenti rivali, il successo può essere ottenuto solo con la superiorità militare e tattica. Una strada da seguire può essere quella di spezzare i legami con Roma e costruire una grande nazione basata sul vero credo Luterano!</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>-->
+	<TEXT> <!-- Sweden -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_21</Tag>
+		<English>For the last few hundred years, Sweden has in some ways been the least developed of the Scandinavian nations. Though several rulers at Uppsala have claimed kingship over Sweden few have had any power outside Uppland. Christianisation has been slow as well, pagan beliefs are still important in much of the country and southern Sweden was the target of a crusade less than a hundred years ago.[NEWLINE][NEWLINE]This year things are to change. Eric the Survivor has managed to destroy his rivals in a bloody civil war and become the first ever Swedish King to be crowned by the Church. The separatists are rapidly losing power and the people of Uppland are about to lose their ancient privileges. The stage is set for the consolidation of Sweden.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>

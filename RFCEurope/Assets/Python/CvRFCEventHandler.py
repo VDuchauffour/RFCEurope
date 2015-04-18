@@ -176,15 +176,11 @@ class CvRFCEventHandler:
                 self.cnm = CityNameManager.CityNameManager()
                 self.up = UniquePowers.UniquePowers()
                 self.aiw = AIWars.AIWars()
-                #self.cong = Congresses.Congresses()
                 self.vic = Victory.Victory()
                 self.sta = Stability.Stability()
                 self.pla = Plague.Plague()
-                #self.com = Communications.Communications()
                 self.crusade = Crusades.Crusades()
-
-                # 3MiroMercs
-                self.mercs = Mercenaries.MercenaryManager()
+                self.mercs = Mercenaries.MercenaryManager() # 3MiroMercs
 
 
                 #Mercenaries - start
@@ -233,7 +229,7 @@ class CvRFCEventHandler:
                 #Mercenaries - start
                 #global objMercenaryUtils
                 #objMercenaryUtils = MercenaryUtils.MercenaryUtils()
-		#Mercenaries - end
+                #Mercenaries - end
 
                 return 0
 
@@ -251,7 +247,7 @@ class CvRFCEventHandler:
 			self.up.faithUP( playerType, city )
 
 		# Absinthe: Scottish UP
-		if ( owner == con.iScotland and playerType < iNumPlayers):
+		if ( owner == iScotland and playerType < iNumPlayers):
 			self.up.defianceUP( owner )
 
 		# Absinthe: Spread some culture of the conqueror civ to the occupied city
@@ -519,7 +515,6 @@ class CvRFCEventHandler:
 
 		if (gc.getPlayer(iPlayer).isAlive()):
 			self.vic.checkPlayerTurn(iGameTurn, iPlayer)
-
 
 		if (gc.getPlayer(iPlayer).isAlive() and iPlayer < con.iNumPlayers and gc.getPlayer(iPlayer).getNumCities() > 0):
 			self.sta.updateBaseStability(iGameTurn, iPlayer)
