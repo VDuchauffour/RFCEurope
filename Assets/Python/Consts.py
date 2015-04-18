@@ -1293,9 +1293,9 @@ iUP_StabilitySettler = 27			# don't lose stability from founding cities in Outer
 iUP_StabilityPlaceholder1 = 28		# does nothing
 iUP_StabilityPlaceholder2 = 29		# does nothing
 iUP_Janissary = 30					# free units for foreign religions (Python only)
-iUP_NoAnarchyInstability = 31		# no anarchy on civic or religion change
-iUP_ProvinceCommerce = 32			# extra commerce in capital for each controlled province
-iUP_Defiance = 33					# extra units in all cities when a city is lost
+#iUP_NoAnarchyInstability = 31		# no anarchy instability on civic or religion change
+#iUP_ProvinceCommerce = 32			# extra commerce in capital for each controlled province
+#iUP_Defiance = 33					# extra units in all cities when a city is lost
 
 
 iFP_Stability = 0		# stability bonus

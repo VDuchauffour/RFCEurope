@@ -75,9 +75,9 @@ iUP_PaganHappy = con.iUP_PaganHappy
 iUP_StabilityConquestBoost = con.iUP_StabilityConquestBoost
 iUP_StabilitySettler = con.iUP_StabilitySettler
 iUP_Janissary = con.iUP_Janissary
-iUP_NoAnarchyInstability = con.iUP_NoAnarchyInstability
-iUP_ProvinceCommerce = con.iUP_ProvinceCommerce
-iUP_Defiance = con.iUP_Defiance
+#iUP_NoAnarchyInstability = con.iUP_NoAnarchyInstability
+#iUP_ProvinceCommerce = con.iUP_ProvinceCommerce
+#iUP_Defiance = con.iUP_Defiance
 
 iFP_Stability = con.iFP_Stability
 iFP_Civic = con.iFP_Civic
@@ -627,7 +627,7 @@ class RFCEBalance:
 		gc.setUP( iNovgorod, iUP_EnableCivic, xml.iCivicBureaucracy )
 
 		gc.setUP( iPrussia, iUP_EnableCivic, xml.iCivicTheocracy )
-		# Absinthe: NoAnarchyInstability not fully coded in the .dll yet
+		# Absinthe: handled in python currently
 		#gc.setUP( iPrussia, iUP_NoAnarchyInstability, 1 )
 
 		# Absinthe: handled in python currently
