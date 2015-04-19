@@ -749,8 +749,8 @@ class Victory:
 				pDenmark.setUHV( 1, 0 )
 		# UHV3: Get 3 Colonies and complete both Trading Companies.
 		iDenmarkColonies = self.getNumRealColonies(iDenmark)
-		iWestCompany = pDenmark.getProjectCount(xml.iWestIndiaCompany)
-		iEastCompany = pDenmark.getProjectCount(xml.iEastIndiaCompany)
+		iWestCompany = teamDenmark.getProjectCount(xml.iWestIndiaCompany)
+		iEastCompany = teamDenmark.getProjectCount(xml.iEastIndiaCompany)
 		if ( iDenmarkColonies >= 3 and iWestCompany == 1 and iEastCompany == 1):
 			pDenmark.setUHV( 2, 1 )
 
@@ -1439,10 +1439,10 @@ class Victory:
 				 pDutch.setUHV( 2, 1 )
 
 	def getNumRealColonies(self, iPlayer):
-		pPlayer = gc.getPlayer(iPlayer)
+		tPlayer = gc.getTeam(iPlayer)
 		iCount = 0
 		for iProject in range(xml.iNumProjects):
-			if iProject in [xml.iEncyclopedie, iEastIndiaCompany, iWestIndiaCompany]: continue
-			if pPlayer.getProjectCount(iProject) > 0:
+			if iProject in [xml.iEncyclopedie, xml.iEastIndiaCompany, xml.iWestIndiaCompany]: continue
+			if tPlayer.getProjectCount(iProject) > 0:
 							iCount += 1
 		return iCount

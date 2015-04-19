@@ -988,32 +988,15 @@ class CvVictoryScreen:
 			iScotlandCastle = gc.getPlayer(con.iScotland).countNumBuildings(xml.iCastle)
 			sScotlandFort = localText.getText("TXT_KEY_IMPROVEMENT_FORT",()) + ": "
 			sScotlandCastle = localText.getText("TXT_KEY_BUILDING_CASTLE",()) + ": "
-			if ( iScotlandFort >= 10 ):
-				sScotlandFort = sScotlandFort + u" <color=0,255,0>%i</color>" %(iScotlandFort)
-			elif ( iScotlandFort > 0 ):
-				sScotlandFort = sScotlandFort + u" <color=255,250,0>%i</color>" %(iScotlandFort)
-			else:
-				sScotlandFort = sScotlandFort + u" <color=208,0,0>%i</color>" %(iScotlandFort)
-			if ( iScotlandCastle >= 4 ):
-				sScotlandCastle = sScotlandCastle + u" <color=0,255,0>%i</color>" %(iScotlandCastle)
-			elif ( iScotlandCastle > 0 ):
-				sScotlandCastle = sScotlandCastle + u" <color=255,250,0>%i</color>" %(iScotlandCastle)
-			else:
-				sScotlandCastle = sScotlandCastle + u" <color=208,0,0>%i</color>" %(iScotlandCastle)
-			sString = sString + "\n\n" + sScotlandFort + "   " + sScotlandCastle
+			sString += "\n\n" + sScotlandFort + self.determineColor(iScotlandFort >= 10, str(iScotlandFort))
+			sString += "\n" + sScotlandCastle + self.determineColor(iScotlandCastle >= 4, str(iScotlandCastle))
 			
 		if self.iActivePlayer == con.iByzantium:
 			tConstantinople = con.tCapitals[con.iByzantium]
 			pConstantinople = gc.getMap().plot( tConstantinople[0], tConstantinople[1] ).getPlotCity()
 			bOwn = pConstantinople.getOwner() == con.iByzantium
-			if (gc.isLargestCity( tConstantinople[0], tConstantinople[1])):
-				sString += "\n\n" + u" <color=0,255,0>%s%s</color>" %(pConstantinople.getName(), localText.getText("TEXT_KEY_UHV_IS_LARGEST",()) )
-			else:
-				sString += "\n\n" + u" <color=208,0,0>%s%s</color>" %(pConstantinople.getName(), localText.getText("TEXT_KEY_UHV_ISNT_LARGEST",())	)	
-			if gc.isTopCultureCity( tConstantinople[0], tConstantinople[1] ):
-				sString += "\n" + u" <color=0,255,0>%s%s</color>" %(pConstantinople.getName(), localText.getText("TEXT_KEY_UHV_IS_CULTURAL",()))
-			else:
-				sString += "\n" + u" <color=208,0,0>%s%s</color>" %(pConstantinople.getName(), localText.getText("TEXT_KEY_UHV_ISNT_CULTURAL",()))
+			sString += "\n\n" + self.determineColor(gc.isLargestCity(tConstantinople[0], tConstantinople[1]), pConstantinople.getName()+localText.getText("TEXT_KEY_UHV_IS_LARGEST",()))
+			sString += "\n" + self.determineColor(gc.isTopCultureCity(tConstantinople[0], tConstantinople[1]), pConstantinople.getName()+localText.getText("TEXT_KEY_UHV_IS_CULTURAL",()))
 			if not bOwn:
 				sString += "\n" + u" <color=208,0,0>%s%s</color>" %(localText.getText("TXT_KEY_UHV_CITY_NOT_OWNED",()), pConstantinople.getName())
 
@@ -1322,10 +1305,6 @@ class CvVictoryScreen:
 		if (self.iActivePlayer == con.iArabia):
 			iPerc = gc.getGame().calculateReligionPercent( xml.iIslam )
 			sString += "\n\n" + localText.getText("TXT_KEY_UHV_ISLAM",()) + ": " + self.determineColor(iPerc > 35, str(iPerc)) + " %"
-			#if iPerc >= 35:
-			#	sString += "\n\n" + localText.getText("TXT_KEY_UHV_ISLAM",()) + ": " + u" <color=0,255,0>%i</color>" %(iPerc) + " %"
-			#else:
-			#	sString += "\n\n" + localText.getText("TXT_KEY_UHV_ISLAM",()) + ": " + u" <color=208,0,0>%i</color>" %(iPerc) + " %"
 			
 			
 		screen.addMultilineText("Child" + self.UHV3_ID, sString, self.X_UHV3+6, self.Y_UHV3+14, self.W_UHV3-12, self.H_UHV3-26, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
@@ -1349,7 +1328,7 @@ class CvVictoryScreen:
 		return sString
 		
 	def getNumColoniesString(self, iPlayer, iRequired):
-		iCount = vic.getNumRealColonies(iPlayer)
+		iCount = vic.Victory().getNumRealColonies(iPlayer)
 		if iCount < iRequired:
 			sString = "\n\n" + localText.getText("TXT_KEY_UHV_COLONIES",()) + ": " + u"<color=208,0,0>%i</color>" %(iCount)
 		else:

@@ -1207,15 +1207,6 @@
 		<Portuguese> is the largest city</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TEXT_KEY_UHV_ISNT_LARGEST</Tag>
-		<English> is not the largest city</English>
-		<French> is not the largest city</French>
-		<German> is not the largest city</German>
-		<Italian> is not the largest city</Italian>
-		<Spanish> is not the largest city</Spanish>
-		<Portuguese> is not the largest city</Portuguese>
-	</TEXT>
-	<TEXT>
 		<Tag>TEXT_KEY_UHV_IS_CULTURAL</Tag>
 		<English> is the most cultural city</English>
 		<French> is the most cultural city</French>
@@ -1223,15 +1214,6 @@
 		<Italian> is the most cultural city</Italian>
 		<Spanish> is the most cultural city</Spanish>
 		<Portuguese> is the most cultural city</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TEXT_KEY_UHV_ISNT_CULTURAL</Tag>
-		<English> is not the most cultural city</English>
-		<French> is not the most cultural city</French>
-		<German> is not the most cultural city</German>
-		<Italian> is not the most cultural city</Italian>
-		<Spanish> is not the most cultural city</Spanish>
-		<Portuguese> is not the most cultural city</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DQ_LEADER_NAME_1</Tag>
