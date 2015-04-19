@@ -918,72 +918,44 @@ class CvVictoryScreen:
                 screen.addPanel(self.UHV1_ID, "", "", True, True, self.X_UHV1, self.Y_UHV1, self.W_UHV1, self.H_UHV1, PanelStyles.PANEL_STYLE_MAIN)
 
                 # 3Miro: Add verbose information about the UHV Conditions:
-                bListProvs = False
                 bDisplayCounter = False
                 bCustomString = False
 
                 if ( self.iActivePlayer == con.iFrankia ):
-                        bListProvs = True
-                        tProvsToCheck = vic.tFrankControl
+                        sString += self.getProvinceString(vic.tFrankControl)
                 elif ( self.iActivePlayer == con.iArabia ):
-                        bListProvs = True
-                        tProvsToCheck = vic.tArabiaControlI
+                        sString += self.getProvinceString(vic.tArabiaControlI)
                 elif ( self.iActivePlayer == con.iBulgaria ):
-                        bListProvs = True
-                        tProvsToCheck = vic.tBulgariaControl
+                        sString += self.getProvinceString(vic.tBulgariaControl)
                 elif ( self.iActivePlayer == con.iVenecia ):
-                        bListProvs = True
-                        tProvsToCheck = vic.tVenetianControl
+                        sString += self.getProvinceString(vic.tVenetianControl)
                 elif ( self.iActivePlayer == con.iGermany ):
-                        bListProvs = True
-                        tProvsToCheck = vic.tGermanyControl
+                        sString += self.getProvinceString(vic.tGermanyControl)
                 elif ( self.iActivePlayer == con.iEngland ):
-                        bListProvs = True
-                        tProvsToCheck = vic.tEnglandControl
+                        sString += self.getProvinceString(vic.tEnglandControl)
                 elif ( self.iActivePlayer == con.iGenoa ):
-                        bListProvs = True
-                        tProvsToCheck = vic.tGenoaControl
+                        sString += self.getProvinceString(vic.tGenoaControl)
                 elif ( self.iActivePlayer == con.iAustria ):
-                        bListProvs = True
-                        tProvsToCheck = vic.tAustriaControl
+                        sString += self.getProvinceString(vic.tAustriaControl)
                 elif ( self.iActivePlayer == con.iTurkey ):
-                        bListProvs = True
-                        tProvsToCheck = vic.tOttomanControlI
+                        sString += self.getProvinceString(vic.tOttomanControlI)
                 elif ( self.iActivePlayer == con.iMorocco ):
-                        bListProvs = True
-                        tProvsToCheck = vic.tMoroccoControl
+                        sString += self.getProvinceString(vic.tMoroccoControl)
                 elif ( self.iActivePlayer == con.iNovgorod ):
-                        bListProvs = True
-                        tProvsToCheck = vic.tNovgorodControl
+                        sString += self.getProvinceString(vic.tNovgorodControl)
                 elif ( self.iActivePlayer == con.iPrussia ):
-                        bListProvs = True
-                        tProvsToCheck = vic.tPrussiaControlI
+                        sString += self.getProvinceString(vic.tPrussiaControlI)
                 elif ( self.iActivePlayer == con.iAragon ):
-                        bListProvs = True
-                        tProvsToCheck = vic.tAragonControlI
+                        sString += self.getProvinceString(vic.tAragonControlI)
                 elif ( self.iActivePlayer == con.iDenmark ):
-                        bListProvs = True
-                        tProvsToCheck = vic.tDenmarkControlI
+                        sString += self.getProvinceString(vic.tDenmarkControlI)
                 elif ( self.iActivePlayer == con.iSweden ):
                         bDisplayCounter = True
                         iCounter = 0
                         for iProv in vic.tSwedenControl:
                                 iCounter += gc.getPlayer(con.iSweden).getProvinceCityCount(iProv)
-
-                if ( bListProvs ):
-                        sStringConq = localText.getText("TXT_KEY_UHV_CONQUERED",()) + ":"
-                        sStringMiss = localText.getText("TXT_KEY_UHV_NOT_YET",()) + ":"
-                        for iProv in tProvsToCheck:
-                                sProvName = "TXT_KEY_PROVINCE_NAME_%i" %iProv
-                                sProvName = localText.getText(sProvName,())
-                                #localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),())
-                                iHave = pPlayer.getProvinceCurrentState( iProv )
-                                if ( iHave < con.iProvinceConquer ):
-                                        sStringMiss = sStringMiss + "  " + u"<color=208,0,0>%s</color>" %(sProvName)
-                                else:
-                                        sStringConq = sStringConq + "  " + u"<color=0,255,0>%s</color>" %(sProvName)
-                        sString = sString + "\n\n" + sStringConq + "\n" + sStringMiss
-                elif ( bDisplayCounter ):
+								
+                if ( bDisplayCounter ):
                         sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_CURRENTLY",()) + ": %d" %(iCounter)
                 if ( bCustomString ):
                         sString = sString + szCustom
@@ -1013,12 +985,7 @@ class CvVictoryScreen:
 		# Scotland UHV 1: count the forts and castles
 		if ( self.iActivePlayer == con.iScotland ):
 			iScotlandFort = gc.getPlayer(con.iScotland).getImprovementCount( xml.iImprovementFort )
-			iScotlandCastle = 0
-			apCityList = PyPlayer(con.iScotland).getCityList()
-			for pLoopCity in apCityList:
-				pCity = pLoopCity.GetCy()
-				if(pCity.hasBuilding(xml.iCastle)):
-					iScotlandCastle += 1;
+			iScotlandCastle = gc.getPlayer(con.iScotland).countNumBuildings(xml.iCastle)
 			sScotlandFort = localText.getText("TXT_KEY_IMPROVEMENT_FORT",()) + ": "
 			sScotlandCastle = localText.getText("TXT_KEY_BUILDING_CASTLE",()) + ": "
 			if ( iScotlandFort >= 10 ):
@@ -1034,6 +1001,21 @@ class CvVictoryScreen:
 			else:
 				sScotlandCastle = sScotlandCastle + u" <color=208,0,0>%i</color>" %(iScotlandCastle)
 			sString = sString + "\n\n" + sScotlandFort + "   " + sScotlandCastle
+			
+		if self.iActivePlayer == con.iByzantium:
+			tConstantinople = con.tCapitals[con.iByzantium]
+			pConstantinople = gc.getMap().plot( tConstantinople[0], tConstantinople[1] ).getPlotCity()
+			bOwn = pConstantinople.getOwner() == con.iByzantium
+			if (gc.isLargestCity( tConstantinople[0], tConstantinople[1])):
+				sString += "\n\n" + u" <color=0,255,0>%s%s</color>" %(pConstantinople.getName(), localText.getText("TEXT_KEY_UHV_IS_LARGEST",()) )
+			else:
+				sString += "\n\n" + u" <color=208,0,0>%s%s</color>" %(pConstantinople.getName(), localText.getText("TEXT_KEY_UHV_ISNT_LARGEST",())	)	
+			if gc.isTopCultureCity( tConstantinople[0], tConstantinople[1] ):
+				sString += "\n" + u" <color=0,255,0>%s%s</color>" %(pConstantinople.getName(), localText.getText("TEXT_KEY_UHV_IS_CULTURAL",()))
+			else:
+				sString += "\n" + u" <color=208,0,0>%s%s</color>" %(pConstantinople.getName(), localText.getText("TEXT_KEY_UHV_ISNT_CULTURAL",()))
+			if not bOwn:
+				sString += "\n" + u" <color=208,0,0>%s%s</color>" %(localText.getText("TXT_KEY_UHV_CITY_NOT_OWNED",()), pConstantinople.getName())
 
                 screen.addMultilineText("Child" + self.UHV1_ID, sString, self.X_UHV1+6, self.Y_UHV1+14, self.W_UHV1-12, self.H_UHV1-26, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 
@@ -1050,22 +1032,17 @@ class CvVictoryScreen:
                 szUHV2Area = self.UHV2_ID
                 screen.addPanel(self.UHV2_ID, "", "", True, True, self.X_UHV2, self.Y_UHV2, self.W_UHV2, self.H_UHV2, PanelStyles.PANEL_STYLE_MAIN)
 
-                bListProvs = False
                 bDisplayCounter = False
                 bCustomString = False
 
                 if ( self.iActivePlayer == con.iByzantium ):
-                        bListProvs = True
-                        tProvsToCheck = vic.tByzantumControl
+                        sString += self.getProvinceString(vic.tByzantumControl)
                 elif ( self.iActivePlayer == con.iArabia ):
-                        bListProvs = True
-                        tProvsToCheck = vic.tArabiaControlII
+                        sString += self.getProvinceString(vic.tArabiaControlII)
                 elif ( self.iActivePlayer == con.iKiev ):
-                        bListProvs = True
-                        tProvsToCheck = vic.tKievControl
+                        sString += self.getProvinceString(vic.tKievControl)
                 elif ( self.iActivePlayer == con.iNorway ):
-                        bListProvs = True
-                        tProvsToCheck = vic.tNorwayControl
+                        sString += self.getProvinceString(vic.tNorwayControl)
                         bCustomString = True
                         szCustom = "\n"
                         if (gc.getPlayer(con.iNorway).getNumColonies() >= 1):
@@ -1073,14 +1050,11 @@ class CvVictoryScreen:
                         else:
                                 szCustom = szCustom + localText.getText("TXT_KEY_PROJECT_VINLAND",()) + ":  " + u"<color=208,0,0>%s</color>" %localText.getText("TXT_KEY_UHV_NOT_EXPLORED",())
                 elif ( self.iActivePlayer == con.iBurgundy ):
-                        bListProvs = True
-                        tProvsToCheck = vic.tBurgundyControl
-                elif ( self.iActivePlayer == con.iNorway ):
-                        bListProvs = True
-                        tProvsToCheck = vic.tNorwayControl
+                        sString += self.getProvinceString(vic.tBurgundyControl)
+                #elif ( self.iActivePlayer == con.iNorway ):
+               #         sString += self.getProvinceString(vic.tNorwayControl)
                 elif ( self.iActivePlayer == con.iTurkey ):
-                        bListProvs = True
-                        tProvsToCheck = vic.tOttomanControlII
+                        sString += self.getProvinceString(vic.tOttomanControlII)
                 elif ( self.iActivePlayer == con.iNovgorod ):
                         bDisplayCounter = True
                         iCounter = gc.getPlayer(con.iNovgorod).countOwnedBonuses(xml.iFur)
@@ -1088,8 +1062,7 @@ class CvVictoryScreen:
                         bDisplayCounter = True
                         iCounter = gc.getPlayer(con.iSweden).getUHVCounter(1)
                 elif ( self.iActivePlayer == con.iDenmark ):
-                        bListProvs = True
-                        tProvsToCheck = vic.tDenmarkControlIII
+                        sString += self.getProvinceString(vic.tDenmarkControlIII)
 		elif ( self.iActivePlayer == con.iPrussia ):
 			bCustomString = True
 			szCustom = "\n\n"
@@ -1106,28 +1079,15 @@ class CvVictoryScreen:
 				else:
 					szCustom = szCustom + "  " + u"<color=0,255,0>%s:%s</color>" %(pVictim.getCivilizationShortDescription(0), szNumConq)
 
-                if ( bListProvs ):
-                        sStringConq = localText.getText("TXT_KEY_UHV_CONQUERED",()) + ":"
-                        sStringMiss = localText.getText("TXT_KEY_UHV_NOT_YET",()) + ":"
-                        iConq = 0
-                        for iProv in tProvsToCheck:
-                                sProvName = "TXT_KEY_PROVINCE_NAME_%i" %iProv
-                                sProvName = localText.getText(sProvName,())
-                                #localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),())
-                                iHave = pPlayer.getProvinceCurrentState( iProv )
-                                if ( iHave < con.iProvinceConquer ):
-                                        sStringMiss = sStringMiss + "  " + u"<color=208,0,0>%s</color>" %(sProvName)
-                                else:
-                                        sStringConq = sStringConq + "  " + u"<color=0,255,0>%s</color>" %(sProvName)
-                                        iConq += 1
-                        if ( self.iActivePlayer == con.iKiev ):
-                                sString = sString + "\n\n" + "%i"%iConq + " " + sStringConq + "\n" + sStringMiss
-                        else:
-                                sString = sString + "\n\n" + sStringConq + "\n" + sStringMiss
-                elif ( bDisplayCounter ):
+                if ( bDisplayCounter ):
                         sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_CURRENTLY",()) + ": %d" %(iCounter)
                 if ( bCustomString ):
                         sString = sString + szCustom
+
+                if self.iActivePlayer == con.iEngland:
+                        sString += self.getNumColoniesString(self.iActivePlayer, 8)
+                elif self.iActivePlayer == con.iDutch:
+                        sString += self.getNumColoniesString(self.iActivePlayer, 5)
 
 		## Aragon UHV 2: count the seaports
 		#if ( self.iActivePlayer == con.iAragon ):
@@ -1143,12 +1103,7 @@ class CvVictoryScreen:
 
 		# Aragon UHV 2: count the seaports
 		if ( self.iActivePlayer == con.iAragon ):
-			iSeaport = 0
-			apCityList = PyPlayer(con.iAragon).getCityList()
-			for pLoopCity in apCityList:
-				pCity = pLoopCity.GetCy()
-				if(pCity.hasBuilding(xml.iAragonSeaport)):
-					iSeaport += 1;
+			iSeaport = PyPlayer(iAragon).countNumBuildings(xml.iAragonSeaport)
 			sSeaport = localText.getText("TXT_KEY_BUILDING_ARAGON_SEAPORT",()) + ": "
 			if ( iSeaport >= 12 ):
 				sSeaport = sSeaport + u" <color=0,255,0>%i</color>" %(iSeaport)
@@ -1157,6 +1112,18 @@ class CvVictoryScreen:
 			else:
 				sSeaport = sSeaport + u" <color=208,0,0>%i</color>" %(iSeaport)
 			sString = sString + "\n\n" + sSeaport
+
+                if (self.iActivePlayer == con.iFrankia):
+                        pJPlot = gc.getMap().plot( con.iJerusalem[0], con.iJerusalem[1] )
+                        if ( pJPlot.isCity()):
+                                iOwner = pJPlot.getPlotCity().getOwner()
+                                pOwner = gc.getPlayer(iOwner)
+                                if iOwner == con.iFrankia:
+                                        sString += "\n\n" + localText.getText("TXT_KEY_UHV_FRA2_HELP",()) + u" <color=0,255,0>%s</color>" % ( pOwner.getName() )
+                                else:
+                                        sString += "\n\n" + localText.getText("TXT_KEY_UHV_FRA2_HELP",()) + u" <color=208,0,0>%s</color>" % ( pOwner.getName() )
+                        else:
+                                sString += "\n\n" + u" <color=208,0,0>%s</color>" % ( localText.getText("TXT_KEY_UHV_CITY_NOT_EXIT",(localText.getText("TXT_KEY_UHV_JERUSALEM"),()) ))
 
                 # The Polish UHV 2: count the cities
                 if ( self.iActivePlayer == con.iPoland ):
@@ -1174,6 +1141,19 @@ class CvVictoryScreen:
                                 sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_CITIES_CONTROLLED",()) + u" <color=0,255,0>%i</color>" %(iNumCities)
 
                 screen.addMultilineText("Child" + self.UHV2_ID, sString, self.X_UHV2+6, self.Y_UHV2+14, self.W_UHV2-12, self.H_UHV2-26, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+				
+		if ( self.iActivePlayer == con.iMorocco ):
+			victory = gc.getVictoryInfo(4) #Cultural victory
+			ourBestCities = self.getListCultureCities(self.iActivePlayer)[0:victory.getNumCultureCities()]
+			sString = sString + "\n\n" + localText.getText("TXT_KEY_MOR_HELP", ())
+			for i in range(3):
+				if (len(ourBestCities) > i):
+					if ourBestCities[i][0] < 5000:
+						sString += "\n" + ourBestCities[i][1].getName() + ": " + u"<color=208,0,0>%i</color>" %(ourBestCities[i][0])
+					else:
+						sString += "\n" + ourBestCities[i][1].getName() + ": " + u"<color=0,255,0>%i</color>" %(ourBestCities[i][0])
+			screen.addMultilineText("Child" + self.UHV2_ID, sString, self.X_UHV2+6, self.Y_UHV2+14, self.W_UHV2-12, self.H_UHV2-26, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+			
 
                 # UHV 3
                 iGoal = pPlayer.getUHV( 2 )
@@ -1188,22 +1168,17 @@ class CvVictoryScreen:
                 szUHV3Area = self.UHV3_ID
                 screen.addPanel(self.UHV3_ID, "", "", True, True, self.X_UHV3, self.Y_UHV3, self.W_UHV3, self.H_UHV3, PanelStyles.PANEL_STYLE_MAIN)
 
-                bListProvs = False
                 bDisplayCounter = False
                 bCustomString = False
 
                 if ( self.iActivePlayer == con.iGermany ):
-                        bListProvs = True
-                        tProvsToCheck = vic.tGermanyControlII
+                        sString += self.getProvinceString(vic.tGermanyControlII)
                 elif ( self.iActivePlayer == con.iTurkey ):
-                        bListProvs = True
-                        tProvsToCheck = vic.tOttomanControlIII
+                        sString += self.getProvinceString(vic.tOttomanControlIII)
                 elif ( self.iActivePlayer == con.iScotland ):
-                        bListProvs = True
-                        tProvsToCheck = vic.tScotlandControl
+                        sString += self.getProvinceString(vic.tScotlandControl)
                 elif ( self.iActivePlayer == con.iAragon ):
-                        bListProvs = True
-                        tProvsToCheck = vic.tAragonControlII
+                        sString += self.getProvinceString(vic.tAragonControlII)
                 elif (self.iActivePlayer == con.iPrussia):
                         bDisplayCounter = True
                         pCapital = gc.getPlayer(con.iPrussia).getCapitalCity()
@@ -1218,23 +1193,17 @@ class CvVictoryScreen:
                         bCustomString = True
                         szCustom = " " + localText.getText("TXT_KEY_UHV_BALTIC_CITIES",())
 
-                if ( bListProvs ):
-                        sStringConq = localText.getText("TXT_KEY_UHV_CONQUERED",()) + ":"
-                        sStringMiss = localText.getText("TXT_KEY_UHV_NOT_YET",()) + ":"
-                        for iProv in tProvsToCheck:
-                                sProvName = "TXT_KEY_PROVINCE_NAME_%i" %iProv
-                                sProvName = localText.getText(sProvName,())
-                                #localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),())
-                                iHave = pPlayer.getProvinceCurrentState( iProv )
-                                if ( iHave < con.iProvinceConquer ):
-                                        sStringMiss = sStringMiss + "  " + u"<color=208,0,0>%s</color>" %(sProvName)
-                                else:
-                                        sStringConq = sStringConq + "  " + u"<color=0,255,0>%s</color>" %(sProvName)
-                        sString = sString + "\n\n" + sStringConq + "\n" + sStringMiss
-                elif ( bDisplayCounter ):
+                if ( bDisplayCounter ):
                         sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_CURRENTLY",()) + ": %d" %(iCounter)
                 if ( bCustomString ):
                         sString = sString + szCustom
+						
+                if self.iActivePlayer == con.iFrankia:
+                        sString += self.getNumColoniesString(self.iActivePlayer, 6)
+                elif self.iActivePlayer == con.iDenmark:
+                        sString += self.getNumColoniesString(self.iActivePlayer, 5)
+                elif self.iActivePlayer == con.iPortugal:
+                        sString += self.getNumColoniesString(self.iActivePlayer, 6)
 
                 # Polish UHV 3: count cathedrals and quarters
                 if ( self.iActivePlayer == con.iPoland ):
@@ -1349,6 +1318,47 @@ class CvVictoryScreen:
                                 sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_RICHEST_NATION",()) + u" <color=0,255,0>%s</color>" %(pPlayer.getName())
                         else:
                                 sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_RICHEST_NATION",()) + u" <color=208,0,0>%s</color>" %(pPlayer.getName()) + " (%d)" %pPlayer.getGold()
-
+								
+                if (self.iActivePlayer == con.iArabia):
+                        iPerc = gc.getGame().calculateReligionPercent( xml.iIslam )
+                        sString += "\n\n" + localText.getText("TXT_KEY_UHV_ISLAM",()) + ": " + self.determineColor(iPerc > 35, str(iPerc)) + " %"
+                        #if iPerc >= 35:
+                        #        sString += "\n\n" + localText.getText("TXT_KEY_UHV_ISLAM",()) + ": " + u" <color=0,255,0>%i</color>" %(iPerc) + " %"
+                        #else:
+                        #        sString += "\n\n" + localText.getText("TXT_KEY_UHV_ISLAM",()) + ": " + u" <color=208,0,0>%i</color>" %(iPerc) + " %"
+			
+			
                 screen.addMultilineText("Child" + self.UHV3_ID, sString, self.X_UHV3+6, self.Y_UHV3+14, self.W_UHV3-12, self.H_UHV3-26, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+ 
+					
+				
+	def getProvinceString(self, tProvsToCheck):
+		sStringConq = localText.getText("TXT_KEY_UHV_CONQUERED",()) + ":"
+		sStringMiss = localText.getText("TXT_KEY_UHV_NOT_YET",()) + ":"
+		for iProv in tProvsToCheck:
+			sProvName = "TXT_KEY_PROVINCE_NAME_%i" %iProv
+			sProvName = localText.getText(sProvName,())
+			#localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),())
+			pPlayer = gc.getPlayer(self.iActivePlayer)
+			iHave = pPlayer.getProvinceCurrentState( iProv )
+			if ( iHave < con.iProvinceConquer ):
+				sStringMiss = sStringMiss + "  " + u"<color=208,0,0>%s</color>" %(sProvName)
+			else:
+				sStringConq = sStringConq + "  " + u"<color=0,255,0>%s</color>" %(sProvName)
+		sString = "\n\n" + sStringConq + "\n" + sStringMiss
+		return sString
+		
+	def getNumColoniesString(self, iPlayer, iRequired):
+		iCount = vic.getNumRealColonies(iPlayer)
+		if iCount < iRequired:
+			sString = "\n\n" + localText.getText("TXT_KEY_UHV_COLONIES",()) + ": " + u"<color=208,0,0>%i</color>" %(iCount)
+		else:
+			sString = "\n\n" + localText.getText("TXT_KEY_UHV_COLONIES",()) + ": " + u"<color=0,255,0>%i</color>" %(iCount)
+		return sString
 
+	def determineColor(self, bVal, sText):
+		if bVal:
+			sString = u"<color=0,255,0>%s</color>" %(sText)
+		else:
+			sString = u"<color=208,0,0>%s</color>" %(sText)
+		return sString

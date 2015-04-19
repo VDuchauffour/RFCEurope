@@ -612,7 +612,7 @@ class Victory:
                                 pFrankia.setUHV( 1, 0 )
 
                 if ( pFrankia.getUHV( 2 ) == -1 ):
-                        if ( pFrankia.getUHVCounter( 2 ) > 5 ):
+                        if ( self.getNumRealColonies(iFrankia) ) >= 6 ):
                                 pFrankia.setUHV( 2, 1 )
 
         def checkArabia( self, iGameTurn ):
@@ -748,7 +748,10 @@ class Victory:
                         else:
                                 pDenmark.setUHV( 1, 0 )
                 # UHV3: Get 3 Colonies and complete both Trading Companies.
-                if ( pDenmark.getNumColonies() >= 5 ):
+                iDenmarkColonies = self.getNumRealColonies(iDenmark)
+                iWestCompany = pDenmark.getProjectCount(xml.iWestIndiaCompany)
+                iEastCompany = pDenmark.getProjectCount(xml.iEastIndiaCompany)
+                if ( iDenmarkColonies >= 3 and iWestCompany == 1 and iEastCompany == 1):
                         pDenmark.setUHV( 2, 1 )
 
         def checkVenecia( self, iGameTurn ):
@@ -938,11 +941,11 @@ class Victory:
                 # UHV2: many colonies
                 if ( iGameTurn == xml.i1588AD and pSpain.getUHV( 1 ) == -1 ):
                         bMost = True
-                        iSpainColonies = pSpain.getNumColonies()
+                        iSpainColonies = self.getNumRealColonies(iSpain)
                         for iPlayer in range( iNumPlayers ):
                                 if ( iPlayer != iSpain ):
                                         pPlayer = gc.getPlayer( iPlayer )
-                                        if ( pPlayer.isAlive() and pPlayer.getNumColonies() >= iSpainColonies ):
+                                        if ( pPlayer.isAlive() and self.getNumRealColonies(iPlayer) >= iSpainColonies ):
                                                 bMost = False
                         if ( bMost ):
                                 pSpain.setUHV( 1, 1 )
@@ -983,12 +986,7 @@ class Victory:
 		# UHV1: Have 10 Forts and 4 Castles in 1296.
 		if ( iGameTurn == xml.i1296AD ):
 			iForts = pScotland.getImprovementCount( xml.iImprovementFort )
-			iCastles = 0
-			apCityList = PyPlayer(iScotland).getCityList()
-			for pLoopCity in apCityList:
-				pCity = pLoopCity.GetCy()
-				if(pCity.hasBuilding(xml.iCastle)):
-					iCastles += 1;
+			iCastles = pScotland.countNumBuildings(iCastle)
 			print("Forts:",iForts,"Castles:",iCastles)
 			if( iForts >= 10 and iCastles >= 4 ):
 				pScotland.setUHV( 0, 1 )
@@ -1171,7 +1169,7 @@ class Victory:
                                 pEngland.setUHV( 0, 0 )
                 # Colonies
                 if ( pEngland.getUHV( 1 ) == -1 ):
-                        if ( pEngland.getUHVCounter( 1 ) >= 8 ):
+                        if ( self.getNumRealColonies(iEngland) >= 8 ):
                                 pEngland.setUHV( 1, 1 )
                 # Industrial revolution
                 pass
@@ -1181,7 +1179,7 @@ class Victory:
                         pPortugal.setUHV( 1, 1 )
 
                 if ( pPortugal.getUHV( 2 ) == -1 ):
-                        if ( pPortugal.getUHVCounter( 2 ) >= 6 ):
+                        if ( self.getNumRealColonies(iPortugal) >= 6 ):
                                 pPortugal.setUHV( 2, 1 )
 
 	def checkAragon( self, iGameTurn ):
@@ -1199,12 +1197,7 @@ class Victory:
 
 		# UHV 2: Have 12 seaports in 1444AD.
 		if ( iGameTurn == xml.i1444AD ):
-			iPorts = 0
-			apCityList = PyPlayer(iAragon).getCityList()
-			for pLoopCity in apCityList:
-				pCity = pLoopCity.GetCy()
-				if(pCity.hasBuilding(xml.iAragonSeaport)):
-					iPorts += 1;
+			iPorts = pAragon.countNumBuildings(xml.iAragonSeaport)
 			print("Ports:",iPorts)
 			if( iPorts >= 12  ):
 				pAragon.setUHV( 1, 1 )
@@ -1432,7 +1425,7 @@ class Victory:
                                 pDutch.setUHV( 0, 0 )
 
                 if ( pDutch.getUHV( 1 ) == -1 ):
-                        if ( pDutch.getUHVCounter( 1 ) > 4 ):
+                        if ( self.getNumRealColonies(iDutch) >= 5 ):
                                 pDutch.setUHV( 1, 1 )
 
                 if ( pDutch.getUHV( 2 ) == -1 ):
@@ -1445,3 +1438,11 @@ class Victory:
                         if ( bMost ):
                                  pDutch.setUHV( 2, 1 )
 
+        def getNumRealColonies(self, iPlayer):
+                pPlayer = gc.getPlayer(iPlayer)
+                iCount = 0
+                for iProject in range(xml.iNumProjects):
+                        if iProject in [xml.iEncyclopedie, iEastIndiaCompany, iWestIndiaCompany]: continue
+                        if pPlayer.getProjectCount(iProject) > 0:
+						        iCount += 1
+                return iCount

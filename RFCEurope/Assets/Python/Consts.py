@@ -52,6 +52,9 @@ iAragon, iSweden, iPrussia, iLithuania, iAustria, iTurkey, iMoscow, iDutch, iPop
 iNumMajorPlayers = iNumPlayers
 iNumActivePlayers = iNumPlayers
 
+iVenice = iVenecia
+iFrance = iFrankia
+
 iIndependent = iNumPlayers
 iIndependent2 = iNumPlayers+1
 iIndependent3 = iNumPlayers+2
@@ -71,7 +74,6 @@ teamAragon, teamSweden, teamPrussia, teamLithuania, teamAustria, teamTurkey, tea
 iIndepStart = iIndependent # creates the block of independent civs
 iIndepEnd = iIndependent4
 
-iVenice = iVenecia
 
 l0Array =       [0 for i in range(iNumTotalPlayers)] # currently unused
 l0ArrayActive = [0 for i in range(iNumTotalPlayers)] # currently unused
