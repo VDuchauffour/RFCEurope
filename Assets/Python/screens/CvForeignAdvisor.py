@@ -255,7 +255,7 @@ class CvForeignAdvisor:
 				szPlayerName += u" : " + localText.getText("TXT_KEY_MISC_GOLD", (playerActive.getGold(), ))
 		screen.attachPanel(mainPanelName, activePlayerPanelName, szPlayerName, "", False, True, PanelStyles.PANEL_STYLE_EMPTY )
 					
-		screen.attachLabel(activePlayerPanelName, "", "                    ")
+		screen.attachLabel(activePlayerPanelName, "", "		    ")
 		screen.attachMultiListControlGFC(activePlayerPanelName, "Child" + activePlayerPanelName, "", 1, self.BUTTON_SIZE, self.BUTTON_SIZE, TableStyles.TABLE_STYLE_STANDARD)
 
 		if (self.iScreen == FOREIGN_BONUS_SCREEN):
@@ -326,7 +326,7 @@ class CvForeignAdvisor:
 					szPlayerName += u" : " + localText.getText("TXT_KEY_FOREIGN_ADVISOR_NO_TECH_TRADING", ())
 				screen.attachPanel(mainPanelName, currentPlayerPanelName, szPlayerName, "", False, True, PanelStyles.PANEL_STYLE_EMPTY )				
 
-				screen.attachLabel(currentPlayerPanelName, "", "                    ")
+				screen.attachLabel(currentPlayerPanelName, "", "		    ")
 
 				if (self.iScreen == FOREIGN_BONUS_SCREEN):
 					if (not playerActive.canTradeNetworkWith(iLoopPlayer) and not gc.getGame().isDebugMode()):
@@ -556,7 +556,7 @@ class CvForeignAdvisor:
 			else:
 				szText = u"<font=3>" + player.getCivilizationDescription(0) + u"</font>"
 				iDist = 5
-                        #screen.setLabel(szName, "", szText, CvUtil.FONT_CENTER_JUSTIFY, fX + iLeaderWidth/2, fY + iLeaderHeight + 5, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+			#screen.setLabel(szName, "", szText, CvUtil.FONT_CENTER_JUSTIFY, fX + iLeaderWidth/2, fY + iLeaderHeight + 5, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 			screen.setLabel(szName, "", szText, CvUtil.FONT_CENTER_JUSTIFY, fX + iLeaderWidth/2 + iOffsetX, fY + iLeaderHeight + iDist, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 			#Rhye - end
 

@@ -22,7 +22,7 @@ iMapMaxY = 73
 # Germany     i856AD
 # Novgorod    i864AD
 # Norway      i872AD
-# Kiev        i880AD
+# Kiev	i880AD
 # Hungary     i895AD
 # Spain       i910AD
 # Denmark     i936AD

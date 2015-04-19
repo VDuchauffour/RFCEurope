@@ -111,9 +111,9 @@ class CvDanQuayle:
 		screen.addLeaderheadGFC(self.LEADERHEAD_ID, replayInfo.getLeader(replayInfo.getActivePlayer()), AttitudeTypes.ATTITUDE_PLEASED, self.X_LEADERHEAD, self.Y_LEADERHEAD, self.W_LEADERHEAD, self.H_LEADERHEAD, WidgetTypes.WIDGET_GENERAL, -1, -1)
 	
 		iScore = replayInfo.getNormalizedScore()
-                # 3Miro: 4000 is added to the max score to account for the UHV conditions, now we get 3000 per UHV won and bonus of 6000 for all 3
+		# 3Miro: 4000 is added to the max score to account for the UHV conditions, now we get 3000 per UHV won and bonus of 6000 for all 3
 		iMaxScore = ((100 + gc.getDefineINT("SCORE_VICTORY_PERCENT")) * (4000 + gc.getDefineINT("SCORE_POPULATION_FACTOR") + gc.getDefineINT("SCORE_LAND_FACTOR") + gc.getDefineINT("SCORE_WONDER_FACTOR") + gc.getDefineINT("SCORE_TECH_FACTOR"))) / 100
-                #print(" 3Miro: ",iScore,iMaxScore)
+		#print(" 3Miro: ",iScore,iMaxScore)
 		if iMaxScore > 0:
 			iNormalScore = iScore/float(iMaxScore)
 		else:

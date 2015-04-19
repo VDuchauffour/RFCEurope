@@ -118,22 +118,22 @@ class CvFinanceAdvisor:
 		ePlayer = self.iActiveLeader #Rhye
 		#Rhye - start
 		iStability = player.getStability()
-                if (iStability < -15):
-                        szTempBuffer = localText.getText("TXT_KEY_STABILITY_COLLAPSING", ())
-                elif (iStability >= -15 and iStability < -5):
-                        szTempBuffer = localText.getText("TXT_KEY_STABILITY_UNSTABLE", ())
-                elif (iStability >= -5 and iStability < 0):
-                        szTempBuffer = localText.getText("TXT_KEY_STABILITY_SHAKY", ())
-                elif (iStability >= 0 and iStability < 8):
-                        szTempBuffer = localText.getText("TXT_KEY_STABILITY_STABLE", ())
-                elif (iStability >= 8 and iStability < 15):
-                        szTempBuffer = localText.getText("TXT_KEY_STABILITY_SOLID", ())
-                elif (iStability >= 15):
-                        szTempBuffer = localText.getText("TXT_KEY_STABILITY_VERYSOLID", ())
+		if (iStability < -15):
+			szTempBuffer = localText.getText("TXT_KEY_STABILITY_COLLAPSING", ())
+		elif (iStability >= -15 and iStability < -5):
+			szTempBuffer = localText.getText("TXT_KEY_STABILITY_UNSTABLE", ())
+		elif (iStability >= -5 and iStability < 0):
+			szTempBuffer = localText.getText("TXT_KEY_STABILITY_SHAKY", ())
+		elif (iStability >= 0 and iStability < 8):
+			szTempBuffer = localText.getText("TXT_KEY_STABILITY_STABLE", ())
+		elif (iStability >= 8 and iStability < 15):
+			szTempBuffer = localText.getText("TXT_KEY_STABILITY_SOLID", ())
+		elif (iStability >= 15):
+			szTempBuffer = localText.getText("TXT_KEY_STABILITY_VERYSOLID", ())
 
-                if (gc.getPlayer(ePlayer).isHuman()):
-                        #szTempBuffer = szTempBuffer + "  " + unichr(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 8 + utils.getArrow(0))
-                        szTempBuffer = "%s  %i" % (szTempBuffer, iStability)
+		if (gc.getPlayer(ePlayer).isHuman()):
+			#szTempBuffer = szTempBuffer + "  " + unichr(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 8 + utils.getArrow(0))
+			szTempBuffer = "%s  %i" % (szTempBuffer, iStability)
 		#Rhye - end
 
 		numCities = player.getNumCities()
@@ -182,86 +182,86 @@ class CvFinanceAdvisor:
 		screen.addPanel(szParametersPanel1, u"", "", True, True, self.X_PARAMETERS1, self.Y_PARAMETERS, self.PARAMETERS_WIDTH, self.H_PARAMETERS, PanelStyles.PANEL_STYLE_MAIN )
 		screen.setLabel(self.getNextWidgetName(), "Background",  u"<font=3>" + localText.getText("TXT_KEY_STABILITY_PARAMETER_CITIES", ()).upper() + u"</font>", CvUtil.FONT_CENTER_JUSTIFY, self.X_PARAMETERS1 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 		iParameter1 = player.getStabilityVary( iCathegoryCities ) + player.getStabilityBase( iCathegoryCities )
-                if (iParameter1 <= -6):
-                        self.printStars(ePlayer, self.getNextWidgetName(), 1, self.X_PARAMETERS1 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter1 <= -2):
-                        self.printStars(ePlayer, self.getNextWidgetName(), 2, self.X_PARAMETERS1 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter1 < 3):
-                        self.printStars(ePlayer, self.getNextWidgetName(), 3, self.X_PARAMETERS1 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter1 < 6):
-                        self.printStars(ePlayer, self.getNextWidgetName(), 4, self.X_PARAMETERS1 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                else:
-                        self.printStars(ePlayer, self.getNextWidgetName(), 5, self.X_PARAMETERS1 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                #self.printArrow(ePlayer, self.getNextWidgetName(), 1, self.X_PARAMETERS1 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 90, self.Z_CONTROLS + self.DZ)
-                self.printText( ePlayer, 0, self.getNextWidgetName(), self.X_PARAMETERS1 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 90, self.Z_CONTROLS + self.DZ)
+		if (iParameter1 <= -6):
+			self.printStars(ePlayer, self.getNextWidgetName(), 1, self.X_PARAMETERS1 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
+		elif (iParameter1 <= -2):
+			self.printStars(ePlayer, self.getNextWidgetName(), 2, self.X_PARAMETERS1 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
+		elif (iParameter1 < 3):
+			self.printStars(ePlayer, self.getNextWidgetName(), 3, self.X_PARAMETERS1 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
+		elif (iParameter1 < 6):
+			self.printStars(ePlayer, self.getNextWidgetName(), 4, self.X_PARAMETERS1 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
+		else:
+			self.printStars(ePlayer, self.getNextWidgetName(), 5, self.X_PARAMETERS1 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
+		#self.printArrow(ePlayer, self.getNextWidgetName(), 1, self.X_PARAMETERS1 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 90, self.Z_CONTROLS + self.DZ)
+		self.printText( ePlayer, 0, self.getNextWidgetName(), self.X_PARAMETERS1 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 90, self.Z_CONTROLS + self.DZ)
 
 		szParametersPanel2 = self.getNextWidgetName()
 		screen.addPanel(szParametersPanel2, u"", "", True, True, self.X_PARAMETERS2, self.Y_PARAMETERS, self.PARAMETERS_WIDTH, self.H_PARAMETERS, PanelStyles.PANEL_STYLE_MAIN )
 		screen.setLabel(self.getNextWidgetName(), "Background",  u"<font=3>" + localText.getText("TXT_KEY_STABILITY_PARAMETER_CIVICS", ()).upper() + u"</font>", CvUtil.FONT_CENTER_JUSTIFY, self.X_PARAMETERS2 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 		iParameter2 = player.getStabilityVary( iCathegoryCivics ) + player.getStabilityBase( iCathegoryCivics )
-                if (iParameter2 <= -6):
-                        self.printStars(ePlayer, self.getNextWidgetName(), 1, self.X_PARAMETERS2 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter2 <= -2):
-                        self.printStars(ePlayer, self.getNextWidgetName(), 2, self.X_PARAMETERS2 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter2 <= 3):
-                        self.printStars(ePlayer, self.getNextWidgetName(), 3, self.X_PARAMETERS2 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter2 <= 5):
-                        self.printStars(ePlayer, self.getNextWidgetName(), 4, self.X_PARAMETERS2 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                else:
-                        self.printStars(ePlayer, self.getNextWidgetName(), 5, self.X_PARAMETERS2 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                #self.printArrow(ePlayer, self.getNextWidgetName(), 2, self.X_PARAMETERS2 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 90, self.Z_CONTROLS + self.DZ)
+		if (iParameter2 <= -6):
+			self.printStars(ePlayer, self.getNextWidgetName(), 1, self.X_PARAMETERS2 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
+		elif (iParameter2 <= -2):
+			self.printStars(ePlayer, self.getNextWidgetName(), 2, self.X_PARAMETERS2 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
+		elif (iParameter2 <= 3):
+			self.printStars(ePlayer, self.getNextWidgetName(), 3, self.X_PARAMETERS2 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
+		elif (iParameter2 <= 5):
+			self.printStars(ePlayer, self.getNextWidgetName(), 4, self.X_PARAMETERS2 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
+		else:
+			self.printStars(ePlayer, self.getNextWidgetName(), 5, self.X_PARAMETERS2 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
+		#self.printArrow(ePlayer, self.getNextWidgetName(), 2, self.X_PARAMETERS2 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 90, self.Z_CONTROLS + self.DZ)
 		self.printText( ePlayer, 1, self.getNextWidgetName(), self.X_PARAMETERS2 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 90, self.Z_CONTROLS + self.DZ)
 
 		szParametersPanel3 = self.getNextWidgetName()
 		screen.addPanel(szParametersPanel3, u"", "", True, True, self.X_PARAMETERS3, self.Y_PARAMETERS, self.PARAMETERS_WIDTH, self.H_PARAMETERS, PanelStyles.PANEL_STYLE_MAIN )
 		screen.setLabel(self.getNextWidgetName(), "Background",  u"<font=3>" + localText.getText("TXT_KEY_STABILITY_PARAMETER_ECONOMY", ()).upper() + u"</font>", CvUtil.FONT_CENTER_JUSTIFY, self.X_PARAMETERS3 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 		iParameter3 = player.getStabilityVary( iCathegoryEconomy ) + player.getStabilityBase( iCathegoryEconomy )
-                if (iParameter3 <= -7):
-                        self.printStars(ePlayer, self.getNextWidgetName(), 1, self.X_PARAMETERS3 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter3 <= -3):
-                        self.printStars(ePlayer, self.getNextWidgetName(), 2, self.X_PARAMETERS3 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter3 < 3):
-                        self.printStars(ePlayer, self.getNextWidgetName(), 3, self.X_PARAMETERS3 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter3 < 6):
-                        self.printStars(ePlayer, self.getNextWidgetName(), 4, self.X_PARAMETERS3 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                else:
-                        self.printStars(ePlayer, self.getNextWidgetName(), 5, self.X_PARAMETERS3 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                #self.printArrow(ePlayer, self.getNextWidgetName(), 3, self.X_PARAMETERS3 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 90, self.Z_CONTROLS + self.DZ)
-                self.printText( ePlayer, 2, self.getNextWidgetName(), self.X_PARAMETERS3 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 90, self.Z_CONTROLS + self.DZ)
+		if (iParameter3 <= -7):
+			self.printStars(ePlayer, self.getNextWidgetName(), 1, self.X_PARAMETERS3 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
+		elif (iParameter3 <= -3):
+			self.printStars(ePlayer, self.getNextWidgetName(), 2, self.X_PARAMETERS3 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
+		elif (iParameter3 < 3):
+			self.printStars(ePlayer, self.getNextWidgetName(), 3, self.X_PARAMETERS3 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
+		elif (iParameter3 < 6):
+			self.printStars(ePlayer, self.getNextWidgetName(), 4, self.X_PARAMETERS3 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
+		else:
+			self.printStars(ePlayer, self.getNextWidgetName(), 5, self.X_PARAMETERS3 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
+		#self.printArrow(ePlayer, self.getNextWidgetName(), 3, self.X_PARAMETERS3 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 90, self.Z_CONTROLS + self.DZ)
+		self.printText( ePlayer, 2, self.getNextWidgetName(), self.X_PARAMETERS3 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 90, self.Z_CONTROLS + self.DZ)
 
 		szParametersPanel4 = self.getNextWidgetName()
 		screen.addPanel(szParametersPanel4, u"", "", True, True, self.X_PARAMETERS4, self.Y_PARAMETERS, self.PARAMETERS_WIDTH, self.H_PARAMETERS, PanelStyles.PANEL_STYLE_MAIN )
 		screen.setLabel(self.getNextWidgetName(), "Background",  u"<font=3>" + localText.getText("TXT_KEY_STABILITY_PARAMETER_EXPANSION", ()).upper() + u"</font>", CvUtil.FONT_CENTER_JUSTIFY, self.X_PARAMETERS4 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 		iParameter4 = player.getStabilityVary( iCathegoryExpansion ) + player.getStabilityBase( iCathegoryExpansion )
-                if (iParameter4 <= -8):
-                        self.printStars(ePlayer, self.getNextWidgetName(), 1, self.X_PARAMETERS4 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter4 <= -3):
-                        self.printStars(ePlayer, self.getNextWidgetName(), 2, self.X_PARAMETERS4 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter4 < 3 ):
-                        self.printStars(ePlayer, self.getNextWidgetName(), 3, self.X_PARAMETERS4 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter4 < 10):
-                        self.printStars(ePlayer, self.getNextWidgetName(), 4, self.X_PARAMETERS4 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                else:
-                        self.printStars(ePlayer, self.getNextWidgetName(), 5, self.X_PARAMETERS4 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                #self.printArrow(ePlayer, self.getNextWidgetName(), 4, self.X_PARAMETERS4 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 90, self.Z_CONTROLS + self.DZ)
-                self.printText( ePlayer, 3, self.getNextWidgetName(), self.X_PARAMETERS4 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 90, self.Z_CONTROLS + self.DZ)
+		if (iParameter4 <= -8):
+			self.printStars(ePlayer, self.getNextWidgetName(), 1, self.X_PARAMETERS4 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
+		elif (iParameter4 <= -3):
+			self.printStars(ePlayer, self.getNextWidgetName(), 2, self.X_PARAMETERS4 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
+		elif (iParameter4 < 3 ):
+			self.printStars(ePlayer, self.getNextWidgetName(), 3, self.X_PARAMETERS4 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
+		elif (iParameter4 < 10):
+			self.printStars(ePlayer, self.getNextWidgetName(), 4, self.X_PARAMETERS4 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
+		else:
+			self.printStars(ePlayer, self.getNextWidgetName(), 5, self.X_PARAMETERS4 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
+		#self.printArrow(ePlayer, self.getNextWidgetName(), 4, self.X_PARAMETERS4 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 90, self.Z_CONTROLS + self.DZ)
+		self.printText( ePlayer, 3, self.getNextWidgetName(), self.X_PARAMETERS4 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 90, self.Z_CONTROLS + self.DZ)
 
 		szParametersPanel5 = self.getNextWidgetName()
 		screen.addPanel(szParametersPanel5, u"", "", True, True, self.X_PARAMETERS5, self.Y_PARAMETERS, self.PARAMETERS_WIDTH, self.H_PARAMETERS, PanelStyles.PANEL_STYLE_MAIN )
 		screen.setLabel(self.getNextWidgetName(), "Background",  u"<font=3>" + localText.getText("TXT_KEY_STABILITY_PARAMETER_SWING", ()).upper() + u"</font>", CvUtil.FONT_CENTER_JUSTIFY, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-                iParameter5 = 0
-                if (iParameter5 <= -8):
-                        self.printStars(ePlayer, self.getNextWidgetName(), 1, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter5 <= -3):
-                        self.printStars(ePlayer, self.getNextWidgetName(), 2, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter5 < 3):
-                        self.printStars(ePlayer, self.getNextWidgetName(), 3, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                elif (iParameter5 < 10):
-                        self.printStars(ePlayer, self.getNextWidgetName(), 4, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                else:
-                        self.printStars(ePlayer, self.getNextWidgetName(), 5, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
-                #self.printArrow(ePlayer, self.getNextWidgetName(), 5, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 90, self.Z_CONTROLS + self.DZ)
-                self.printText( ePlayer, 4, self.getNextWidgetName(), self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 90, self.Z_CONTROLS + self.DZ)
+		iParameter5 = 0
+		if (iParameter5 <= -8):
+			self.printStars(ePlayer, self.getNextWidgetName(), 1, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
+		elif (iParameter5 <= -3):
+			self.printStars(ePlayer, self.getNextWidgetName(), 2, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
+		elif (iParameter5 < 3):
+			self.printStars(ePlayer, self.getNextWidgetName(), 3, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
+		elif (iParameter5 < 10):
+			self.printStars(ePlayer, self.getNextWidgetName(), 4, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
+		else:
+			self.printStars(ePlayer, self.getNextWidgetName(), 5, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 50, self.Z_CONTROLS + self.DZ)
+		#self.printArrow(ePlayer, self.getNextWidgetName(), 5, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 90, self.Z_CONTROLS + self.DZ)
+		self.printText( ePlayer, 4, self.getNextWidgetName(), self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 90, self.Z_CONTROLS + self.DZ)
 
 
 		#Rhye - end
@@ -400,33 +400,33 @@ class CvFinanceAdvisor:
 		return
 
 	#Rhye - start
-        def printStars(self, ePlayer, panel, n, x, y, z):
-                totStars = ""
-                for i in range(n):
-                    totStars = totStars + unichr(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
-                if (gc.getPlayer(ePlayer).isHuman()):
-                        self.getScreen().setLabel(panel, "Background",  totStars, CvUtil.FONT_CENTER_JUSTIFY, x, y, z, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+	def printStars(self, ePlayer, panel, n, x, y, z):
+		totStars = ""
+		for i in range(n):
+		    totStars = totStars + unichr(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
+		if (gc.getPlayer(ePlayer).isHuman()):
+			self.getScreen().setLabel(panel, "Background",  totStars, CvUtil.FONT_CENTER_JUSTIFY, x, y, z, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
 	def printArrow(self, ePlayer, panel, iParameter, x, y, z):
-                if (gc.getPlayer(ePlayer).isHuman()):
-                        self.getScreen().setLabel(panel, "Background",  unichr(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 8 + utils.getArrow(iParameter)), CvUtil.FONT_CENTER_JUSTIFY, x, y, z, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+		if (gc.getPlayer(ePlayer).isHuman()):
+			self.getScreen().setLabel(panel, "Background",  unichr(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 8 + utils.getArrow(iParameter)), CvUtil.FONT_CENTER_JUSTIFY, x, y, z, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
-        def printText(self, ePlayer, iCathegory, panel, x, y, z ):
-        	#3Miro: print stuff
-                pPlayer = gc.getPlayer(ePlayer)
-        	if (pPlayer.isHuman()):
-        		#sString = utils.getParString( ePlayer, iCathegory )
-                        if ( iCathegory == iCathegoryCities ):
-                                sString = "%i | %i" %( pPlayer.getStabilityBase( iCathegoryCities ), pPlayer.getStabilityVary( iCathegoryCities ) )
-                        elif ( iCathegory == iCathegoryCivics ):
-                                sString = "%i | %i" %( pPlayer.getStabilityBase( iCathegoryCivics ), pPlayer.getStabilityVary( iCathegoryCivics ) )
-                        elif ( iCathegory == iCathegoryEconomy ):
-                                sString = "%i | %i" %( pPlayer.getStabilityBase( iCathegoryEconomy ), pPlayer.getStabilityVary( iCathegoryEconomy ) )
-                        elif ( iCathegory == iCathegoryExpansion ):
-                                sString = "%i | %i" %( pPlayer.getStabilityBase( iCathegoryExpansion ), pPlayer.getStabilityVary( iCathegoryExpansion ) )
-                        else:
-                                sString = "%i" %( pPlayer.getStabilitySwing() )
-                        #sString = ""
-        		#print( " 3Miro: sString ",sString )
-        		self.getScreen().setLabel(panel,"Background", sString, CvUtil.FONT_CENTER_JUSTIFY, x, y, z, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+	def printText(self, ePlayer, iCathegory, panel, x, y, z ):
+		#3Miro: print stuff
+		pPlayer = gc.getPlayer(ePlayer)
+		if (pPlayer.isHuman()):
+			#sString = utils.getParString( ePlayer, iCathegory )
+			if ( iCathegory == iCathegoryCities ):
+				sString = "%i | %i" %( pPlayer.getStabilityBase( iCathegoryCities ), pPlayer.getStabilityVary( iCathegoryCities ) )
+			elif ( iCathegory == iCathegoryCivics ):
+				sString = "%i | %i" %( pPlayer.getStabilityBase( iCathegoryCivics ), pPlayer.getStabilityVary( iCathegoryCivics ) )
+			elif ( iCathegory == iCathegoryEconomy ):
+				sString = "%i | %i" %( pPlayer.getStabilityBase( iCathegoryEconomy ), pPlayer.getStabilityVary( iCathegoryEconomy ) )
+			elif ( iCathegory == iCathegoryExpansion ):
+				sString = "%i | %i" %( pPlayer.getStabilityBase( iCathegoryExpansion ), pPlayer.getStabilityVary( iCathegoryExpansion ) )
+			else:
+				sString = "%i" %( pPlayer.getStabilitySwing() )
+			#sString = ""
+			#print( " 3Miro: sString ",sString )
+			self.getScreen().setLabel(panel,"Background", sString, CvUtil.FONT_CENTER_JUSTIFY, x, y, z, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 	#Rhye - end

@@ -216,16 +216,16 @@ class CvTechChooser:
 				eLoopBuilding = gc.getCivilizationInfo(gc.getGame().getActiveCivilizationType()).getCivilizationBuildings(j)
 
 				if (eLoopBuilding != -1):
-                                        #Rhye - start
+					#Rhye - start
 					#if (gc.getBuildingInfo(eLoopBuilding).getPrereqAndTech() == i):
 					#	szBuildingButton = "Building" + str(j)
 					#	screen.addDDSGFCAt( szBuildingButton, szTechRecord, gc.getBuildingInfo(eLoopBuilding).getButton(), iX + fX, iY + Y_ROW, TEXTURE_SIZE, TEXTURE_SIZE, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, eLoopBuilding, 1, True )
 					#	fX += X_INCREMENT 
-                                        if (eLoopBuilding < xml.iNumBuildingsPlague or eLoopBuilding == xml.iNumBuildingsPlague + self.iCivSelected):
-                                                if (gc.getBuildingInfo(eLoopBuilding).getPrereqAndTech() == i):
-                                                        szBuildingButton = "Building" + str(j)
-                                                        screen.addDDSGFCAt( szBuildingButton, szTechRecord, gc.getBuildingInfo(eLoopBuilding).getButton(), iX + fX, iY + Y_ROW, TEXTURE_SIZE, TEXTURE_SIZE, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, eLoopBuilding, 1, True )
-                                                        fX += X_INCREMENT
+					if (eLoopBuilding < xml.iNumBuildingsPlague or eLoopBuilding == xml.iNumBuildingsPlague + self.iCivSelected):
+						if (gc.getBuildingInfo(eLoopBuilding).getPrereqAndTech() == i):
+							szBuildingButton = "Building" + str(j)
+							screen.addDDSGFCAt( szBuildingButton, szTechRecord, gc.getBuildingInfo(eLoopBuilding).getButton(), iX + fX, iY + Y_ROW, TEXTURE_SIZE, TEXTURE_SIZE, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, eLoopBuilding, 1, True )
+							fX += X_INCREMENT
 					#Rhye - end
 
 			j = 0
@@ -382,7 +382,7 @@ class CvTechChooser:
 				szMapRevealButton = "MapReveal" + str(i)
 				screen.addDDSGFCAt( szMapRevealButton, szTechRecord, ArtFileMgr.getInterfaceArtInfo("INTERFACE_TECH_MAPREVEAL").getPath(), iX + fX, iY + Y_ROW, TEXTURE_SIZE, TEXTURE_SIZE, WidgetTypes.WIDGET_HELP_MAP_REVEAL, i, -1, False )
 				fX += X_INCREMENT
-	            
+		    
 			j = 0
 			k = 0
 

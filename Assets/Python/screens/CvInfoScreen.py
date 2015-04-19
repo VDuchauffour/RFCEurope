@@ -579,7 +579,7 @@ class CvInfoScreen:
 							self.pActivePlayer.canDoEspionageMission(iDemographicsMission, iLoopPlayer, None, -1) or
 							iEndGame != 0 or
 							iLoopPlayerTeam == CyGame().getActiveTeam()
-                                                        or CyGame().isDebugMode()): #Rhye
+							or CyGame().isDebugMode()): #Rhye
 						self.aiPlayersMet.append(iLoopPlayer)
 						self.iNumPlayersMet += 1
 
@@ -764,11 +764,11 @@ class CvInfoScreen:
 	    # Get the player with the highest ID
 	    maxPlayer = 0
 	    for p in self.aiPlayersMet:
-                
-                if (not gc.getPlayer(p).isMinorCiv()): #Rhye
-                    
-                    if (maxPlayer < p):
-                        maxPlayer = p
+		
+		if (not gc.getPlayer(p).isMinorCiv()): #Rhye
+		    
+		    if (maxPlayer < p):
+			maxPlayer = p
 
 	    # Compute the scores
 	    self.scoreCache[scoreType] = []
@@ -878,15 +878,15 @@ class CvInfoScreen:
 	    max = 1
 	    min = 0
 	    for p in self.aiPlayersMet:
-                
-                if (not gc.getPlayer(p).isMinorCiv()): #Rhye
-                
-                    for turn in range(firstTurn,lastTurn + 1):
-                        score = self.getHistory(self.iGraphTabID, p, turn - startTurn)
-                        if (max < score):
-                            max = score
-                        if (min > score):
-                            min = score
+		
+		if (not gc.getPlayer(p).isMinorCiv()): #Rhye
+		
+		    for turn in range(firstTurn,lastTurn + 1):
+			score = self.getHistory(self.iGraphTabID, p, turn - startTurn)
+			if (max < score):
+			    max = score
+			if (min > score):
+			    min = score
 
 	    yFactor = (1.0 * self.H_GRAPH / (1.0 * (max - min)))
 	    xFactor = (1.0 * self.W_GRAPH / (1.0 * (lastTurn - firstTurn)))
@@ -903,28 +903,28 @@ class CvInfoScreen:
 	    # Draw the lines
 	    for p in self.aiPlayersMet:
 
-                if (not gc.getPlayer(p).isMinorCiv()): #Rhye
+		if (not gc.getPlayer(p).isMinorCiv()): #Rhye
 
-                    color = gc.getPlayerColorInfo(gc.getPlayer(p).getPlayerColor()).getColorTypePrimary()
-                    oldX = -1
-                    oldY = self.H_GRAPH
-                    turn = lastTurn
-                    while (turn >= firstTurn):
+		    color = gc.getPlayerColorInfo(gc.getPlayer(p).getPlayerColor()).getColorTypePrimary()
+		    oldX = -1
+		    oldY = self.H_GRAPH
+		    turn = lastTurn
+		    while (turn >= firstTurn):
 
-                        score = self.getHistory(self.iGraphTabID, p, turn - startTurn)
-                        y = self.H_GRAPH - int(yFactor * (score - min))
-                        x = int(xFactor * (turn - firstTurn))
+			score = self.getHistory(self.iGraphTabID, p, turn - startTurn)
+			y = self.H_GRAPH - int(yFactor * (score - min))
+			x = int(xFactor * (turn - firstTurn))
 
-                        if (x < oldX):
-                            if (y != self.H_GRAPH or oldY != self.H_GRAPH): # don't draw if score is constant zero
-                                self.drawLine(screen, self.GRAPH_CANVAS_ID, oldX, oldY, x, y, color)
-                            oldX = x
-                            oldY = y
-                        elif (oldX == -1):
-                            oldX = x
-                            oldY = y
+			if (x < oldX):
+			    if (y != self.H_GRAPH or oldY != self.H_GRAPH): # don't draw if score is constant zero
+				self.drawLine(screen, self.GRAPH_CANVAS_ID, oldX, oldY, x, y, color)
+			    oldX = x
+			    oldY = y
+			elif (oldX == -1):
+			    oldX = x
+			    oldY = y
 
-                        turn -= 1
+			turn -= 1
 
 	    return
 
@@ -936,30 +936,30 @@ class CvInfoScreen:
 
 	    for p in self.aiPlayersMet:
 
-                if (not gc.getPlayer(p).isMinorCiv()): #Rhye
+		if (not gc.getPlayer(p).isMinorCiv()): #Rhye
 
-                        lineColor = gc.getPlayerColorInfo(gc.getPlayer(p).getPlayerColor()).getColorTypePrimary()
-                        textColorR = gc.getPlayer(p).getPlayerTextColorR()
-                        textColorG = gc.getPlayer(p).getPlayerTextColorG()
-                        textColorB = gc.getPlayer(p).getPlayerTextColorB()
-                        textColorA = gc.getPlayer(p).getPlayerTextColorA()
-                        #Rhye - start
-                        #name = gc.getPlayer(p).getName()
-                        name = gc.getPlayer(p).getCivilizationShortDescription(0)
-                        #Rhye - end
+			lineColor = gc.getPlayerColorInfo(gc.getPlayer(p).getPlayerColor()).getColorTypePrimary()
+			textColorR = gc.getPlayer(p).getPlayerTextColorR()
+			textColorG = gc.getPlayer(p).getPlayerTextColorG()
+			textColorB = gc.getPlayer(p).getPlayerTextColorB()
+			textColorA = gc.getPlayer(p).getPlayerTextColorA()
+			#Rhye - start
+			#name = gc.getPlayer(p).getName()
+			name = gc.getPlayer(p).getCivilizationShortDescription(0)
+			#Rhye - end
 
-                        str = u"<color=%d,%d,%d,%d>%s</color>" %(textColorR,textColorG,textColorB,textColorA,name)
+			str = u"<color=%d,%d,%d,%d>%s</color>" %(textColorR,textColorG,textColorB,textColorA,name)
 
-                        self.drawLine(screen, self.LEGEND_CANVAS_ID, self.X_LEGEND_LINE, yLine, self.X_LEGEND_LINE + self.W_LEGEND_LINE, yLine, lineColor)
-                        screen.setLabel( self.getNextWidgetName(), ""
-                                       , u"<font=2>" + str + u"</font>"
-                                       , CvUtil.FONT_LEFT_JUSTIFY
-                                       , self.X_LEGEND + self.X_LEGEND_TEXT, yText
-                                       , 0, FontTypes.TITLE_FONT
-                                       , WidgetTypes.WIDGET_GENERAL, -1, -1
-                                       )
-                        yLine += self.H_LEGEND_TEXT
-                        yText += self.H_LEGEND_TEXT
+			self.drawLine(screen, self.LEGEND_CANVAS_ID, self.X_LEGEND_LINE, yLine, self.X_LEGEND_LINE + self.W_LEGEND_LINE, yLine, lineColor)
+			screen.setLabel( self.getNextWidgetName(), ""
+				       , u"<font=2>" + str + u"</font>"
+				       , CvUtil.FONT_LEFT_JUSTIFY
+				       , self.X_LEGEND + self.X_LEGEND_TEXT, yText
+				       , 0, FontTypes.TITLE_FONT
+				       , WidgetTypes.WIDGET_GENERAL, -1, -1
+				       )
+			yLine += self.H_LEGEND_TEXT
+			yText += self.H_LEGEND_TEXT
 
 #############################################################################################################
 ################################################# DEMOGRAPHICS ##############################################
@@ -1587,35 +1587,35 @@ class CvInfoScreen:
 				iTurnYear = CyGame().getTurnYear(pCity.getGameTurnFounded())
 
 
-                                #Rhye - start
+				#Rhye - start
 ##				if (iTurnYear < 0):
 ##					szTurnFounded = localText.getText("TXT_KEY_TIME_BC", (-iTurnYear,))#"%d %s" %(-iTurnYear, self.TEXT_BC)
 ##				else:
 ##					szTurnFounded = localText.getText("TXT_KEY_TIME_AD", (iTurnYear,))#"%d %s" %(iTurnYear, self.TEXT_AD)
 
-                                iActivePlayer = CyGame().getActivePlayer()
-                                pActivePlayer = gc.getPlayer(iActivePlayer)
-                                tActivePlayer = gc.getTeam(pActivePlayer.getTeam())
-                                #iBronzeWorking = 61
-                                #iIronWorking = 63
-                                #iCalendar = 33
-                                
-                                if (tActivePlayer.isHasTech(xml.iCalendar)):
-                                        if (iTurnYear < 0):
-                                            szTurnFounded = localText.getText("TXT_KEY_TIME_BC", (-iTurnYear,))
-                                        else:
-                                            szTurnFounded = localText.getText("TXT_KEY_TIME_AD", (iTurnYear,))
-                                elif (iTurnYear >= 1500):
-                                        szTurnFounded = localText.getText("TXT_KEY_AGE_RENAISSANCE", ())
-                                elif (iTurnYear >= 450):
-                                        szTurnFounded = localText.getText("TXT_KEY_AGE_MEDIEVAL", ())
-                                elif (iTurnYear >= -800):
-                                        szTurnFounded = localText.getText("TXT_KEY_AGE_IRON", ())
-                                elif (iTurnYear >= -2000):
-                                        szTurnFounded = localText.getText("TXT_KEY_AGE_BRONZE", ())
-                                else:
-                                        szTurnFounded = localText.getText("TXT_KEY_AGE_STONE", ())
-                                #Rhye - end
+				iActivePlayer = CyGame().getActivePlayer()
+				pActivePlayer = gc.getPlayer(iActivePlayer)
+				tActivePlayer = gc.getTeam(pActivePlayer.getTeam())
+				#iBronzeWorking = 61
+				#iIronWorking = 63
+				#iCalendar = 33
+				
+				if (tActivePlayer.isHasTech(xml.iCalendar)):
+					if (iTurnYear < 0):
+					    szTurnFounded = localText.getText("TXT_KEY_TIME_BC", (-iTurnYear,))
+					else:
+					    szTurnFounded = localText.getText("TXT_KEY_TIME_AD", (iTurnYear,))
+				elif (iTurnYear >= 1500):
+					szTurnFounded = localText.getText("TXT_KEY_AGE_RENAISSANCE", ())
+				elif (iTurnYear >= 450):
+					szTurnFounded = localText.getText("TXT_KEY_AGE_MEDIEVAL", ())
+				elif (iTurnYear >= -800):
+					szTurnFounded = localText.getText("TXT_KEY_AGE_IRON", ())
+				elif (iTurnYear >= -2000):
+					szTurnFounded = localText.getText("TXT_KEY_AGE_BRONZE", ())
+				else:
+					szTurnFounded = localText.getText("TXT_KEY_AGE_STONE", ())
+				#Rhye - end
   
 
 				if (pCity.isRevealed(gc.getGame().getActiveTeam()) or gc.getTeam(pPlayer.getTeam()).isHasMet(gc.getGame().getActiveTeam())):
@@ -1887,7 +1887,7 @@ class CvInfoScreen:
 				szDateBuilt = ""
 
 				if (iTurnYear != -9999):	# -9999 used for wonders in progress
-                                        #Rhye - start
+					#Rhye - start
 
 ##					if (iTurnYear < 0):
 ##						szTurnFounded = localText.getText("TXT_KEY_TIME_BC", (-iTurnYear,))
@@ -1896,30 +1896,30 @@ class CvInfoScreen:
 ##
 ##					szDateBuilt = (", %s" %(szTurnFounded))
 					
-                                        iActivePlayer = CyGame().getActivePlayer()
-                                        pActivePlayer = gc.getPlayer(iActivePlayer)
-                                        tActivePlayer = gc.getTeam(pActivePlayer.getTeam())
-                                        #iCalendar = 33
-                                        
-                                        if (tActivePlayer.isHasTech(xml.iCalendar)):
-                                                if (iTurnYear < 0):
-                                                    szTurnFounded = localText.getText("TXT_KEY_TIME_BC", (-iTurnYear,))
-                                                else:
-                                                    szTurnFounded = localText.getText("TXT_KEY_TIME_AD", (iTurnYear,))
-                                                
-                                        elif (iTurnYear >= 1500):
-                                                szTurnFounded = localText.getText("TXT_KEY_AGE_RENAISSANCE", ())
-                                        elif (iTurnYear >= 450):
-                                                szTurnFounded = localText.getText("TXT_KEY_AGE_MEDIEVAL", ())
-                                        elif (iTurnYear >= -800):
-                                                szTurnFounded = localText.getText("TXT_KEY_AGE_IRON", ())
-                                        elif (iTurnYear >= -2000):
-                                                szTurnFounded = localText.getText("TXT_KEY_AGE_BRONZE", ())
-                                        else:
-                                                szTurnFounded = localText.getText("TXT_KEY_AGE_STONE", ())
+					iActivePlayer = CyGame().getActivePlayer()
+					pActivePlayer = gc.getPlayer(iActivePlayer)
+					tActivePlayer = gc.getTeam(pActivePlayer.getTeam())
+					#iCalendar = 33
+					
+					if (tActivePlayer.isHasTech(xml.iCalendar)):
+						if (iTurnYear < 0):
+						    szTurnFounded = localText.getText("TXT_KEY_TIME_BC", (-iTurnYear,))
+						else:
+						    szTurnFounded = localText.getText("TXT_KEY_TIME_AD", (iTurnYear,))
+						
+					elif (iTurnYear >= 1500):
+						szTurnFounded = localText.getText("TXT_KEY_AGE_RENAISSANCE", ())
+					elif (iTurnYear >= 450):
+						szTurnFounded = localText.getText("TXT_KEY_AGE_MEDIEVAL", ())
+					elif (iTurnYear >= -800):
+						szTurnFounded = localText.getText("TXT_KEY_AGE_IRON", ())
+					elif (iTurnYear >= -2000):
+						szTurnFounded = localText.getText("TXT_KEY_AGE_BRONZE", ())
+					else:
+						szTurnFounded = localText.getText("TXT_KEY_AGE_STONE", ())
 
-                                        szDateBuilt = (", %s" %(szTurnFounded))
-                                        #Rhye - end
+					szDateBuilt = (", %s" %(szTurnFounded))
+					#Rhye - end
 
 
 
@@ -2423,37 +2423,37 @@ class CvInfoScreen:
 	def getTurnDate(self,turn):
 
 
-                year = CyGame().getTurnYear(turn)
+		year = CyGame().getTurnYear(turn)
 
-                #Rhye - start
-##                if (year < 0):
-##                    return localText.getText("TXT_KEY_TIME_BC", (-year,))
-##                else:
-##                    return localText.getText("TXT_KEY_TIME_AD", (year,))
-                    
-                iPlayer = CyGame().getActivePlayer()
-                pPlayer = gc.getPlayer(iPlayer)
-                tPlayer = gc.getTeam(pPlayer.getTeam())
-                #iBronzeWorking = 61
-                #iIronWorking = 63
-                #iCalendar = 33
-                
-                if (tPlayer.isHasTech(xml.iCalendar)):  
-                        if (year < 0):
-                            return localText.getText("TXT_KEY_TIME_BC", (-year,))
-                        else:
-                            return localText.getText("TXT_KEY_TIME_AD", (year,))
-                elif (year >= 1500):
-                        return localText.getText("TXT_KEY_AGE_RENAISSANCE", ())
-                elif (year >= 450):
-                        return localText.getText("TXT_KEY_AGE_MEDIEVAL", ())
-                elif (year >= -800):
-                        return localText.getText("TXT_KEY_AGE_IRON", ())
-                elif (year >= -2000):
-                        return localText.getText("TXT_KEY_AGE_BRONZE", ())
-                else:
-                        return localText.getText("TXT_KEY_AGE_STONE", ())
-                #Rhye - end
+		#Rhye - start
+##		if (year < 0):
+##		    return localText.getText("TXT_KEY_TIME_BC", (-year,))
+##		else:
+##		    return localText.getText("TXT_KEY_TIME_AD", (year,))
+		    
+		iPlayer = CyGame().getActivePlayer()
+		pPlayer = gc.getPlayer(iPlayer)
+		tPlayer = gc.getTeam(pPlayer.getTeam())
+		#iBronzeWorking = 61
+		#iIronWorking = 63
+		#iCalendar = 33
+		
+		if (tPlayer.isHasTech(xml.iCalendar)):  
+			if (year < 0):
+			    return localText.getText("TXT_KEY_TIME_BC", (-year,))
+			else:
+			    return localText.getText("TXT_KEY_TIME_AD", (year,))
+		elif (year >= 1500):
+			return localText.getText("TXT_KEY_AGE_RENAISSANCE", ())
+		elif (year >= 450):
+			return localText.getText("TXT_KEY_AGE_MEDIEVAL", ())
+		elif (year >= -800):
+			return localText.getText("TXT_KEY_AGE_IRON", ())
+		elif (year >= -2000):
+			return localText.getText("TXT_KEY_AGE_BRONZE", ())
+		else:
+			return localText.getText("TXT_KEY_AGE_STONE", ())
+		#Rhye - end
 
 
 	def lineName(self,i):
