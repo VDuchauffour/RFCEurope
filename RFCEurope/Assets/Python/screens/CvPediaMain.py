@@ -38,7 +38,7 @@ import CvPediaProject
 import CvPediaReligion
 import CvPediaCorporation
 
-#import UnitUpgradesGraph          #[MOD] UnitUpgrades  #Rhye
+#import UnitUpgradesGraph	  #[MOD] UnitUpgrades  #Rhye
 
 # globals
 gc = CyGlobalContext()
@@ -191,7 +191,7 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 		self.linkList = [	[0,0,"TECH"],
 					[1,1,"UNITS"],
 					[2,9,"UNITS"],
-                                        #Rhye - start
+					#Rhye - start
 ##					[3,18,"UNITS"],
 ##					[4,10,"UNITS"],
 ##					[5,2,"BUILDINGS"],
@@ -223,7 +223,7 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 					[15,8,"SPECIALISTS"],
 					[16,15,"HINTS"],
 					[17,17,"HINTS"],
-                                        #Rhye - end
+					#Rhye - end
 					]
 
 		self.linkListGraphics = {
@@ -517,20 +517,20 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 ##			screen.setTableText(self.SUBLIST_ID, iColumn, iRow, u"<font=3>" + item[0] + u"</font>", buttonType(item[1]).getButton(), widgeyType, item[1], 1, CvUtil.FONT_LEFT_JUSTIFY)
 ##			iCounter += 1
 
-                        if (widgeyType == WidgetTypes.WIDGET_PEDIA_JUMP_TO_CIV):
-                                if (gc.getCivilizationInfo(item[1]).isPlayable()):
-                                        if iRow >= iNumRows:
-                                                iNumRows += 1
-                                                screen.appendTableRow(self.SUBLIST_ID)
-                                        screen.setTableText(self.SUBLIST_ID, iColumn, iRow, u"<font=3>" + item[0] + u"</font>", gc.getCivilizationInfo(item[1]).getButton(), WidgetTypes.WIDGET_PEDIA_JUMP_TO_CIV, item[1], 1, CvUtil.FONT_LEFT_JUSTIFY)
-                                        iCounter += 1
-                        else:
-                                if iRow >= iNumRows:
-                                        iNumRows += 1
-                                        screen.appendTableRow(self.SUBLIST_ID)
-                                screen.setTableText(self.SUBLIST_ID, iColumn, iRow, u"<font=3>" + item[0] + u"</font>", buttonType(item[1]).getButton(), widgeyType, item[1], 1, CvUtil.FONT_LEFT_JUSTIFY)
-                                iCounter += 1
-                        #Rhye - end
+			if (widgeyType == WidgetTypes.WIDGET_PEDIA_JUMP_TO_CIV):
+				if (gc.getCivilizationInfo(item[1]).isPlayable()):
+					if iRow >= iNumRows:
+						iNumRows += 1
+						screen.appendTableRow(self.SUBLIST_ID)
+					screen.setTableText(self.SUBLIST_ID, iColumn, iRow, u"<font=3>" + item[0] + u"</font>", gc.getCivilizationInfo(item[1]).getButton(), WidgetTypes.WIDGET_PEDIA_JUMP_TO_CIV, item[1], 1, CvUtil.FONT_LEFT_JUSTIFY)
+					iCounter += 1
+			else:
+				if iRow >= iNumRows:
+					iNumRows += 1
+					screen.appendTableRow(self.SUBLIST_ID)
+				screen.setTableText(self.SUBLIST_ID, iColumn, iRow, u"<font=3>" + item[0] + u"</font>", buttonType(item[1]).getButton(), widgeyType, item[1], 1, CvUtil.FONT_LEFT_JUSTIFY)
+				iCounter += 1
+			#Rhye - end
 
 
 
@@ -562,7 +562,7 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 
 		self.szHints = self.getNextWidgetName()
 		screen.addListBoxGFC( self.szHints, "",
-                                      self.X_ITEMS_PANE+20, self.Y_ITEMS_PANE, self.W_ITEMS_PANE + self.W_PEDIA_PAGE-40, self.H_ITEMS_PANE, TableStyles.TABLE_STYLE_STANDARD )
+				      self.X_ITEMS_PANE+20, self.Y_ITEMS_PANE, self.W_ITEMS_PANE + self.W_PEDIA_PAGE-40, self.H_ITEMS_PANE, TableStyles.TABLE_STYLE_STANDARD )
 
 		szHintsText = CyGameTextMgr().buildHintsList()
 		hintText = string.split( szHintsText, "\n" )
@@ -603,7 +603,7 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 ##						screen.setImageButtonAt("", self.UPGRADES_LIST, gc.getUnitInfo(unit).getButton(), position[0], position[1], self.BUTTON_SIZE, self.BUTTON_SIZE, WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT, unit, 1)
 ##			upgradesGraph.drawGraphArrows(self, graph, layers)
 ##			offset += upgradesGraph.calculateLayerHeight(upgradesGraph.maximumLayerSize(layers), unitHeight, vm) + vm
-                #Rhye - end comment
+		#Rhye - end comment
 	##################### END [MOD: VOVAN] UnitUpgrades #####################
 
 

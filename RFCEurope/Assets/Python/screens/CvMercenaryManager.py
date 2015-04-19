@@ -4,7 +4,7 @@
 # CvMercenaryManager
 # 
 # 3Miro: we take the merc screen as it looks well. However, the rest of the mechanics have been changed mostly to
-#        remove unnecessary features that slow down things
+#	remove unnecessary features that slow down things
 
 from CvPythonExtensions import *
 import CvUtil
@@ -128,161 +128,161 @@ class CvMercenaryManager:
 			self.drawMercenaryScreenContent(screen)
 		
 
-        # Populates the panel that shows all of the available mercenaries in the
-        # global mercenary pool.
-        def populateAvailableMercenariesPanel(self, screen):
-                ## 3Miro: draw the available merc info
-                # read in the available mercs
-                lAvailableMercs = GMU.getMercGlobalPool()
-                print(lAvailableMercs)
-                
-                # Get the ID for the current active player
-                iPlayer = gc.getGame().getActivePlayer()
-                # Get the actual current player object
-                pPlayer = gc.getPlayer(iPlayer)
-                # Get the player's current gold amount
-                iGold = pPlayer.getGold()
-                
-                # get a list of the provinces controlled by the player
-                #lProvList = [] # all available cities that the Merc can appear in
-                #apCityList = PyPlayer(iPlayer).getCityList()
-                #for pCity in apCityList:
-                        #city = pCity.GetCy()
-                        #iProvince = city.getProvince()
-                        #if ( (not (iProvince in lProvList)) and (city.getCultureLevel() >= 2) ):
-                                #lProvList.append( iProvince )
-                lProvList = GMU.getOwnedProvinces( pPlayer )
-                #lProvList = Set( lProvList ) # set as in set-theory
-                
-                mercenaryCount = 0
-                
-                iStateReligion = pPlayer.getStateReligion()
-                
-                #print lAvailableMercs
-                
-                for lMerc in lAvailableMercs:
-                        # get the name and note that names are no longer Unique
-                        iMerc = lMerc[0]
-                        mercenaryName = CyTranslator().getText( lMercList[iMerc][1] , ())
-                        
-                        #if ( (not len( lProvList & Set( lMercList[iMerc][4] ) ) > 0) or iStateReligion in lMercList[iMerc][5] ): # we have no matching provinces, skip
-                        if ( ( not (lMerc[4] in lProvList) ) or iStateReligion in lMercList[iMerc][5] ): # we have no matching provinces, skip
-                                continue
-                                
-                        # screen needs unique internal names
-                        #szUniqueInternalName = "MercID%d" %iMerc
-                        szUniqueInternalName = "HiredMercID" + self.numToStr(iMerc)
-                        
-                        pUnitInfo = gc.getUnitInfo(lMercList[iMerc][0])
-                        screen.attachPanel(AVAILABLE_MERCENARIES_INNER_PANEL_ID, szUniqueInternalName, "", "", False, False, PanelStyles.PANEL_STYLE_DAWN)
-                        screen.attachImageButton( szUniqueInternalName, szUniqueInternalName+"_AInfoButton", pUnitInfo.getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
-                        screen.attachPanel(szUniqueInternalName, szUniqueInternalName+"Text",pUnitInfo.getDescription() +" ("+mercenaryName+")", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
-                        
-                        # TODO: The UP here:
-                        iHireCost = GMU.getModifiedCostPerPlayer( lMerc[2], iPlayer )
-                        iUpkeepCost = GMU.getModifiedCostPerPlayer( lMerc[3], iPlayer )
-                        
-                        strHCost = u"%d%c" %(iHireCost, gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
-                        strMCost = u"%1.2f%c" %(0.01*iUpkeepCost, gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
-                        
-                        # Absinthe: Add the province name
-                        sProvName = "TXT_KEY_PROVINCE_NAME_%i" %lMerc[4]
-                        sProvName = localText.getText(sProvName,())
-                        
-                        screen.attachLabel( szUniqueInternalName+"Text", szUniqueInternalName  + "text3", "     Level: " + str(len(lMerc[1]) ))
-                        screen.attachLabel( szUniqueInternalName+"Text", szUniqueInternalName  + "text4", "     Hire Cost: " + strHCost + "  Maint. Cost: " + strMCost)
-                        screen.attachLabel( szUniqueInternalName+"Text", szUniqueInternalName  + "text5", "     Province: " + sProvName)
-                        
-                        if ( iGold - iHireCost >= 0 ):
-                                screen.attachPanel(szUniqueInternalName, szUniqueInternalName+"hireButtonPanel", "", "", False, True, PanelStyles.PANEL_STYLE_EMPTY)
-                                screen.attachImageButton( szUniqueInternalName, szUniqueInternalName+"_HireButton", "Art/Interface/Buttons/Actions/Join.dds", GenericButtonSizes.BUTTON_SIZE_32, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
-                        
-                        mercenaryCount = mercenaryCount + 1
+	# Populates the panel that shows all of the available mercenaries in the
+	# global mercenary pool.
+	def populateAvailableMercenariesPanel(self, screen):
+		## 3Miro: draw the available merc info
+		# read in the available mercs
+		lAvailableMercs = GMU.getMercGlobalPool()
+		print(lAvailableMercs)
+		
+		# Get the ID for the current active player
+		iPlayer = gc.getGame().getActivePlayer()
+		# Get the actual current player object
+		pPlayer = gc.getPlayer(iPlayer)
+		# Get the player's current gold amount
+		iGold = pPlayer.getGold()
+		
+		# get a list of the provinces controlled by the player
+		#lProvList = [] # all available cities that the Merc can appear in
+		#apCityList = PyPlayer(iPlayer).getCityList()
+		#for pCity in apCityList:
+			#city = pCity.GetCy()
+			#iProvince = city.getProvince()
+			#if ( (not (iProvince in lProvList)) and (city.getCultureLevel() >= 2) ):
+				#lProvList.append( iProvince )
+		lProvList = GMU.getOwnedProvinces( pPlayer )
+		#lProvList = Set( lProvList ) # set as in set-theory
+		
+		mercenaryCount = 0
+		
+		iStateReligion = pPlayer.getStateReligion()
+		
+		#print lAvailableMercs
+		
+		for lMerc in lAvailableMercs:
+			# get the name and note that names are no longer Unique
+			iMerc = lMerc[0]
+			mercenaryName = CyTranslator().getText( lMercList[iMerc][1] , ())
+			
+			#if ( (not len( lProvList & Set( lMercList[iMerc][4] ) ) > 0) or iStateReligion in lMercList[iMerc][5] ): # we have no matching provinces, skip
+			if ( ( not (lMerc[4] in lProvList) ) or iStateReligion in lMercList[iMerc][5] ): # we have no matching provinces, skip
+				continue
+				
+			# screen needs unique internal names
+			#szUniqueInternalName = "MercID%d" %iMerc
+			szUniqueInternalName = "HiredMercID" + self.numToStr(iMerc)
+			
+			pUnitInfo = gc.getUnitInfo(lMercList[iMerc][0])
+			screen.attachPanel(AVAILABLE_MERCENARIES_INNER_PANEL_ID, szUniqueInternalName, "", "", False, False, PanelStyles.PANEL_STYLE_DAWN)
+			screen.attachImageButton( szUniqueInternalName, szUniqueInternalName+"_AInfoButton", pUnitInfo.getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
+			screen.attachPanel(szUniqueInternalName, szUniqueInternalName+"Text",pUnitInfo.getDescription() +" ("+mercenaryName+")", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
+			
+			# TODO: The UP here:
+			iHireCost = GMU.getModifiedCostPerPlayer( lMerc[2], iPlayer )
+			iUpkeepCost = GMU.getModifiedCostPerPlayer( lMerc[3], iPlayer )
+			
+			strHCost = u"%d%c" %(iHireCost, gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
+			strMCost = u"%1.2f%c" %(0.01*iUpkeepCost, gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
+			
+			# Absinthe: Add the province name
+			sProvName = "TXT_KEY_PROVINCE_NAME_%i" %lMerc[4]
+			sProvName = localText.getText(sProvName,())
+			
+			screen.attachLabel( szUniqueInternalName+"Text", szUniqueInternalName  + "text3", "     Level: " + str(len(lMerc[1]) ))
+			screen.attachLabel( szUniqueInternalName+"Text", szUniqueInternalName  + "text4", "     Hire Cost: " + strHCost + "  Maint. Cost: " + strMCost)
+			screen.attachLabel( szUniqueInternalName+"Text", szUniqueInternalName  + "text5", "     Province: " + sProvName)
+			
+			if ( iGold - iHireCost >= 0 ):
+				screen.attachPanel(szUniqueInternalName, szUniqueInternalName+"hireButtonPanel", "", "", False, True, PanelStyles.PANEL_STYLE_EMPTY)
+				screen.attachImageButton( szUniqueInternalName, szUniqueInternalName+"_HireButton", "Art/Interface/Buttons/Actions/Join.dds", GenericButtonSizes.BUTTON_SIZE_32, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
+			
+			mercenaryCount = mercenaryCount + 1
 
-                # Add the padding to the available mercenaries panel to improve the look of the screen
-                if((4-mercenaryCount)>0):
+		# Add the padding to the available mercenaries panel to improve the look of the screen
+		if((4-mercenaryCount)>0):
 
-                        for i in range(4-mercenaryCount):
-                                screen.attachPanel(AVAILABLE_MERCENARIES_INNER_PANEL_ID, "dummyPanelHire"+str(i), "", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
-                                screen.attachLabel( "dummyPanelHire"+str(i), "", "     ")
-                                screen.attachLabel( "dummyPanelHire"+str(i), "", "     ")
-                                screen.attachLabel( "dummyPanelHire"+str(i), "", "     ")
-                                
-        def clearAvailableMercs( self, screen ):
-                
-                lGlobalMercPool = GMU.getMercGlobalPool()
-                
-                for iI in range( len( lGlobalMercPool ) ):
-                        screen.deleteWidget("HiredMercID" + self.numToStr(lGlobalMercPool[iI][0])) # it is OK to delete non-existent widgets
-                
-                for iI in range( 4 ):
-                        screen.deleteWidget( "dummyPanelHire"+str(iI) )
+			for i in range(4-mercenaryCount):
+				screen.attachPanel(AVAILABLE_MERCENARIES_INNER_PANEL_ID, "dummyPanelHire"+str(i), "", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
+				screen.attachLabel( "dummyPanelHire"+str(i), "", "     ")
+				screen.attachLabel( "dummyPanelHire"+str(i), "", "     ")
+				screen.attachLabel( "dummyPanelHire"+str(i), "", "     ")
+				
+	def clearAvailableMercs( self, screen ):
+		
+		lGlobalMercPool = GMU.getMercGlobalPool()
+		
+		for iI in range( len( lGlobalMercPool ) ):
+			screen.deleteWidget("HiredMercID" + self.numToStr(lGlobalMercPool[iI][0])) # it is OK to delete non-existent widgets
+		
+		for iI in range( 4 ):
+			screen.deleteWidget( "dummyPanelHire"+str(iI) )
 
 
-        # Populates the panel that shows all of the players hired mercenaries
-        def populateHiredMercenariesPanel(self, screen):
-                ## 3Miro: draw the hired merc info
+	# Populates the panel that shows all of the players hired mercenaries
+	def populateHiredMercenariesPanel(self, screen):
+		## 3Miro: draw the hired merc info
 
-                iPlayer = gc.getGame().getActivePlayer()
-                unitList = PyPlayer( iPlayer ).getUnitList()
-                
-                mercenaryCount = 0
-                
-                for pUnit in unitList:
-                        iMerc = pUnit.getMercID()
-                        if ( iMerc > -1 ):
-                                # if this is a Merc
-                                mercenaryName = pUnit.getNameNoDesc()
-                                #szUniqueInternalName = "HiredMercID%d" %iMerc
-                                szUniqueInternalName = "HiredMercID" + self.numToStr(iMerc)
-                                #mtest = szUniqueInternalName+"_FindButton"
-                                
-                                pUnitInfo = gc.getUnitInfo(pUnit.getUnitType())
-                                
-                                screen.attachPanel(HIRED_MERCENARIES_INNER_PANEL_ID, szUniqueInternalName, "", "", False, False, PanelStyles.PANEL_STYLE_DAWN)
-                                screen.attachImageButton( szUniqueInternalName, szUniqueInternalName+"_HInfoButton", pUnitInfo.getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
-                                if ( lMercList[iMerc][1] == "TXT_KEY_MERC_GENERIC" ):
-                                        screen.attachPanel(szUniqueInternalName, szUniqueInternalName+"Text", pUnitInfo.getDescription(), "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
-                                else:
-                                        screen.attachPanel(szUniqueInternalName, szUniqueInternalName+"Text", pUnitInfo.getDescription() +" ("+mercenaryName+")", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
-                                
-                                iUpkeep = pUnit.getMercUpkeep()
-                                strCost = u"%1.2f%c" %((0.01*iUpkeep), gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
-                                
-                                strXP = u"%d/%d" %(pUnit.getExperience(), pUnit.experienceNeeded())
-                                
-                                screen.attachLabel( szUniqueInternalName+"Text", szUniqueInternalName  + "text3", "     Level: " + str(pUnit.getLevel()) + "      XP: " + strXP)
-                                screen.attachLabel( szUniqueInternalName+"Text", szUniqueInternalName  + "text4", "     Maint. Cost: " + strCost)
-                                
-                                screen.attachPanel(szUniqueInternalName, szUniqueInternalName+"hireButtonPanel", "", "", False, True, PanelStyles.PANEL_STYLE_EMPTY)
-                                
-                                screen.attachImageButton( szUniqueInternalName, szUniqueInternalName+"_FindButton", "Art/Interface/Buttons/Actions/Wake.dds", GenericButtonSizes.BUTTON_SIZE_32, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1, False )
+		iPlayer = gc.getGame().getActivePlayer()
+		unitList = PyPlayer( iPlayer ).getUnitList()
+		
+		mercenaryCount = 0
+		
+		for pUnit in unitList:
+			iMerc = pUnit.getMercID()
+			if ( iMerc > -1 ):
+				# if this is a Merc
+				mercenaryName = pUnit.getNameNoDesc()
+				#szUniqueInternalName = "HiredMercID%d" %iMerc
+				szUniqueInternalName = "HiredMercID" + self.numToStr(iMerc)
+				#mtest = szUniqueInternalName+"_FindButton"
+				
+				pUnitInfo = gc.getUnitInfo(pUnit.getUnitType())
+				
+				screen.attachPanel(HIRED_MERCENARIES_INNER_PANEL_ID, szUniqueInternalName, "", "", False, False, PanelStyles.PANEL_STYLE_DAWN)
+				screen.attachImageButton( szUniqueInternalName, szUniqueInternalName+"_HInfoButton", pUnitInfo.getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
+				if ( lMercList[iMerc][1] == "TXT_KEY_MERC_GENERIC" ):
+					screen.attachPanel(szUniqueInternalName, szUniqueInternalName+"Text", pUnitInfo.getDescription(), "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
+				else:
+					screen.attachPanel(szUniqueInternalName, szUniqueInternalName+"Text", pUnitInfo.getDescription() +" ("+mercenaryName+")", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
+				
+				iUpkeep = pUnit.getMercUpkeep()
+				strCost = u"%1.2f%c" %((0.01*iUpkeep), gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
+				
+				strXP = u"%d/%d" %(pUnit.getExperience(), pUnit.experienceNeeded())
+				
+				screen.attachLabel( szUniqueInternalName+"Text", szUniqueInternalName  + "text3", "     Level: " + str(pUnit.getLevel()) + "      XP: " + strXP)
+				screen.attachLabel( szUniqueInternalName+"Text", szUniqueInternalName  + "text4", "     Maint. Cost: " + strCost)
+				
+				screen.attachPanel(szUniqueInternalName, szUniqueInternalName+"hireButtonPanel", "", "", False, True, PanelStyles.PANEL_STYLE_EMPTY)
+				
+				screen.attachImageButton( szUniqueInternalName, szUniqueInternalName+"_FindButton", "Art/Interface/Buttons/Actions/Wake.dds", GenericButtonSizes.BUTTON_SIZE_32, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1, False )
 
-                                screen.attachImageButton( szUniqueInternalName, szUniqueInternalName+"_FireButton", "Art/Interface/Buttons/Actions/Cancel.dds", GenericButtonSizes.BUTTON_SIZE_32, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
-                                
-                                mercenaryCount = mercenaryCount + 1
+				screen.attachImageButton( szUniqueInternalName, szUniqueInternalName+"_FireButton", "Art/Interface/Buttons/Actions/Cancel.dds", GenericButtonSizes.BUTTON_SIZE_32, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
+				
+				mercenaryCount = mercenaryCount + 1
 
-                # Add the padding to the hired mercenaries panel to improve the look of the screen
-                if((4-mercenaryCount)>0):
-                        for i in range(4-mercenaryCount):
-                                screen.attachPanel(HIRED_MERCENARIES_INNER_PANEL_ID, "dummyPanelFire"+str(i), "", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
-                                screen.attachLabel( "dummyPanelFire"+str(i), "", "     ")
-                                screen.attachLabel( "dummyPanelFire"+str(i), "", "     ")
-                                screen.attachLabel( "dummyPanelFire"+str(i), "", "     ")
-                                
-        def clearHiredMercs( self, screen ):
-                iPlayer = gc.getGame().getActivePlayer()
-                unitList = PyPlayer( iPlayer ).getUnitList()
-                
-                mercenaryCount = 0
-                
-                for pUnit in unitList:
-                        iMerc = pUnit.getMercID()
-                        if ( iMerc > -1 ):
-                              screen.deleteWidget("HiredMercID" + self.numToStr(iMerc) ) # it is OK to delete non-existent widgets
-                 
-                for iI in range( 4 ):
-                        screen.deleteWidget( "dummyPanelFire"+str(iI) )
+		# Add the padding to the hired mercenaries panel to improve the look of the screen
+		if((4-mercenaryCount)>0):
+			for i in range(4-mercenaryCount):
+				screen.attachPanel(HIRED_MERCENARIES_INNER_PANEL_ID, "dummyPanelFire"+str(i), "", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
+				screen.attachLabel( "dummyPanelFire"+str(i), "", "     ")
+				screen.attachLabel( "dummyPanelFire"+str(i), "", "     ")
+				screen.attachLabel( "dummyPanelFire"+str(i), "", "     ")
+				
+	def clearHiredMercs( self, screen ):
+		iPlayer = gc.getGame().getActivePlayer()
+		unitList = PyPlayer( iPlayer ).getUnitList()
+		
+		mercenaryCount = 0
+		
+		for pUnit in unitList:
+			iMerc = pUnit.getMercID()
+			if ( iMerc > -1 ):
+			      screen.deleteWidget("HiredMercID" + self.numToStr(iMerc) ) # it is OK to delete non-existent widgets
+		 
+		for iI in range( 4 ):
+			screen.deleteWidget( "dummyPanelFire"+str(iI) )
 
 
 	# Clears out the unit information panel contents
@@ -298,14 +298,14 @@ class CvMercenaryManager:
 		screen.deleteWidget(MERCENARY_INFORMATION_INNER_PROMOTION_PANEL_ID)
 		screen.deleteWidget(MERCENARY_INFORMATION_DETAILS_PANEL_ID)
 		screen.deleteWidget(MERCENARIES_UNIT_GRAPHIC)
-                screen.deleteWidget(MERCENARY_INFORMATION_DETAILS_LIST_ID + "PROVTEXT")
+		screen.deleteWidget(MERCENARY_INFORMATION_DETAILS_LIST_ID + "PROVTEXT")
 		
 			
 	# Populates the mercenary information panel with the unit information details		
 	def populateMercenaryInformation(self, screen, lMerc ):
-                
-                #lMerc = [ iMerc, lPromotions, 0, iUpkeepCost ]
-                iMerc = lMerc[0]
+		
+		#lMerc = [ iMerc, lPromotions, 0, iUpkeepCost ]
+		iMerc = lMerc[0]
 
 		screen.addPanel(MERCENARY_INFORMATION_PROMOTION_PANEL_ID, "", "", True, True, self.screenWidgetData[MERCENARY_INFORMATION_PROMOTION_PANEL_X], self.screenWidgetData[MERCENARY_INFORMATION_PROMOTION_PANEL_Y], self.screenWidgetData[MERCENARY_INFORMATION_PROMOTION_PANEL_WIDTH], self.screenWidgetData[MERCENARY_INFORMATION_PROMOTION_PANEL_HEIGHT], PanelStyles.PANEL_STYLE_MAIN)
 		screen.addPanel(MERCENARY_INFORMATION_INNER_PROMOTION_PANEL_ID, "Promotions", "", True, True, self.screenWidgetData[MERCENARY_INFORMATION_INNER_PROMOTION_PANEL_X], self.screenWidgetData[MERCENARY_INFORMATION_INNER_PROMOTION_PANEL_Y], self.screenWidgetData[MERCENARY_INFORMATION_INNER_PROMOTION_PANEL_WIDTH], self.screenWidgetData[MERCENARY_INFORMATION_INNER_PROMOTION_PANEL_HEIGHT], PanelStyles.PANEL_STYLE_EMPTY)
@@ -313,61 +313,61 @@ class CvMercenaryManager:
 		screen.attachListBoxGFC( MERCENARY_INFORMATION_DETAILS_PANEL_ID, MERCENARY_INFORMATION_DETAILS_LIST_ID, "", TableStyles.TABLE_STYLE_EMPTY )
 		screen.enableSelect(MERCENARY_INFORMATION_DETAILS_LIST_ID, False)
 
-                #Rhye - start Carthaginian UP
-                # 3MiroUP: same as above
+		#Rhye - start Carthaginian UP
+		# 3MiroUP: same as above
 		# Build the mercenary hire cost string
 		#strHCost = u"%d%c" %(mercenary.getHireCost(), gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
 		strHCost = u"%d%c" %(lMerc[2], gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
 		#Rhye - end UP
 
-                #Rhye - start Carthaginian UP
-                # 3MiroUP: same as above
+		#Rhye - start Carthaginian UP
+		# 3MiroUP: same as above
 		# Build the mercenary maintenance cost string
 		#strMCost = u"%d%c" %(mercenary.getMercenaryMaintenanceCost(), gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
-                strMCost = u"%1.2f%c" %(0.01*lMerc[3], gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
-                #Rhye - end UP
+		strMCost = u"%1.2f%c" %(0.01*lMerc[3], gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
+		#Rhye - end UP
 		
 		# Build the mercenary XP string
 		#strXP = u"%d/%d" %(mercenary.getExperienceLevel(), mercenary.getNextExperienceLevel())
-                strXP = "0/0"
+		strXP = "0/0"
 
 		# Build the unit stats string
-                pUnitInfo = gc.getUnitInfo(lMercList[lMerc[0]][0])
+		pUnitInfo = gc.getUnitInfo(lMercList[lMerc[0]][0])
 		strStats = u"%d%c    %d%c" %(pUnitInfo.getCombat(), CyGame().getSymbolID(FontSymbols.STRENGTH_CHAR),pUnitInfo.getMoves(),CyGame().getSymbolID(FontSymbols.MOVES_CHAR))
 
-                
+		
 		#screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, mercenary.getName(), WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY ) # 3Miro
-                #screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, CyTranslator().getText( lMercList[iMerc][1] , ()), WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
-                screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID,  pUnitInfo.getDescription() +" ("+CyTranslator().getText( lMercList[iMerc][1], ())+")", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
+		#screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, CyTranslator().getText( lMercList[iMerc][1] , ()), WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
+		screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID,  pUnitInfo.getDescription() +" ("+CyTranslator().getText( lMercList[iMerc][1], ())+")", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
 		#screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, "  Unit Type: " + mercenary.getUnitInfo().getDescription(), WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY ) #Rhye
 		screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, "  Level: " + str(len(lMerc[1])-1 ) + "     XP: " + strXP, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
 		screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, "  " + strStats, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
 		screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, "  ", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
 		screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, "  Hire Cost: " + strHCost, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
 
-                
-                screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, "  Maint. Cost: " + strMCost, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
+		
+		screen.appendListBoxString( MERCENARY_INFORMATION_DETAILS_LIST_ID, "  Maint. Cost: " + strMCost, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
 
-                screen.attachMultiListControlGFC(MERCENARY_INFORMATION_INNER_PROMOTION_PANEL_ID, MERCENARY_INFORMATION_PROMOTION_LIST_CONTROL_ID, "", 1, 64, 64, TableStyles.TABLE_STYLE_STANDARD)
+		screen.attachMultiListControlGFC(MERCENARY_INFORMATION_INNER_PROMOTION_PANEL_ID, MERCENARY_INFORMATION_PROMOTION_LIST_CONTROL_ID, "", 1, 64, 64, TableStyles.TABLE_STYLE_STANDARD)
 
-                # Add all of the promotions the mercenary has.
-                for iPromotion in lMerc[1]:
-                        pPromotionInfo = gc.getPromotionInfo(iPromotion)
-                        screen.appendMultiListButton( MERCENARY_INFORMATION_PROMOTION_LIST_CONTROL_ID, pPromotionInfo.getButton(), 0, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION, gc.getInfoTypeForString(pPromotionInfo.getType()), -1, false )
+		# Add all of the promotions the mercenary has.
+		for iPromotion in lMerc[1]:
+			pPromotionInfo = gc.getPromotionInfo(iPromotion)
+			screen.appendMultiListButton( MERCENARY_INFORMATION_PROMOTION_LIST_CONTROL_ID, pPromotionInfo.getButton(), 0, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION, gc.getInfoTypeForString(pPromotionInfo.getType()), -1, false )
 
-                screen.addUnitGraphicGFC(MERCENARIES_UNIT_GRAPHIC, lMercList[lMerc[0]][0], self.screenWidgetData[MERCENARY_ANIMATION_X], self.screenWidgetData[MERCENARY_ANIMATION_Y], self.screenWidgetData[MERCENARY_ANIMATION_WIDTH], self.screenWidgetData[MERCENARY_ANIMATION_HEIGHT], WidgetTypes.WIDGET_GENERAL, -1, -1, self.screenWidgetData[MERCENARY_ANIMATION_ROTATION_X], self.screenWidgetData[MERCENARY_ANIMATION_ROTATION_Z], self.screenWidgetData[MERCENARY_ANIMATION_SCALE], True)
-                
-                # 3Miro: Add the provinces
-                pPlayer = gc.getPlayer( gc.getGame().getActivePlayer() )
-                szProvinces = localText.getText("TXT_KEY_MERC_AVAILABLE_IN_PROVINCES",())
-                if ( lMerc[4] > -1 ):
-                        sProvName = "TXT_KEY_PROVINCE_NAME_%i" %lMerc[4]
-                        sProvName = localText.getText(sProvName,())
-                        szProvinces = szProvinces + " " + u"<color=0,255,0>%s</color>" %(sProvName)
-                else:
-                        szProvinces = ""
-                        
-                screen.addMultilineText(MERCENARY_INFORMATION_DETAILS_LIST_ID + "PROVTEXT", szProvinces, (self.screenWidgetData[MERCENARY_INFORMATION_PANEL_X] + 20), 500, 500, 200, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.addUnitGraphicGFC(MERCENARIES_UNIT_GRAPHIC, lMercList[lMerc[0]][0], self.screenWidgetData[MERCENARY_ANIMATION_X], self.screenWidgetData[MERCENARY_ANIMATION_Y], self.screenWidgetData[MERCENARY_ANIMATION_WIDTH], self.screenWidgetData[MERCENARY_ANIMATION_HEIGHT], WidgetTypes.WIDGET_GENERAL, -1, -1, self.screenWidgetData[MERCENARY_ANIMATION_ROTATION_X], self.screenWidgetData[MERCENARY_ANIMATION_ROTATION_Z], self.screenWidgetData[MERCENARY_ANIMATION_SCALE], True)
+		
+		# 3Miro: Add the provinces
+		pPlayer = gc.getPlayer( gc.getGame().getActivePlayer() )
+		szProvinces = localText.getText("TXT_KEY_MERC_AVAILABLE_IN_PROVINCES",())
+		if ( lMerc[4] > -1 ):
+			sProvName = "TXT_KEY_PROVINCE_NAME_%i" %lMerc[4]
+			sProvName = localText.getText(sProvName,())
+			szProvinces = szProvinces + " " + u"<color=0,255,0>%s</color>" %(sProvName)
+		else:
+			szProvinces = ""
+			
+		screen.addMultilineText(MERCENARY_INFORMATION_DETAILS_LIST_ID + "PROVTEXT", szProvinces, (self.screenWidgetData[MERCENARY_INFORMATION_PANEL_X] + 20), 500, 500, 200, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 
 	
 	# Draws the gold information in the "Mercenary Manager" screens
@@ -376,8 +376,8 @@ class CvMercenaryManager:
 		iCost = 0
 		strCost = ""
 		
-                #iCost = objMercenaryUtils.getPlayerMercenaryMaintenanceCost(gc.getGame().getActivePlayer())
-                pPlayer = gc.getPlayer( gc.getGame().getActivePlayer() )
+		#iCost = objMercenaryUtils.getPlayerMercenaryMaintenanceCost(gc.getGame().getActivePlayer())
+		pPlayer = gc.getPlayer( gc.getGame().getActivePlayer() )
 		strCost = u"%s %c: %1.2f" %("Mercenary Maintenance", gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar(), 0.01*pPlayer.getPicklefreeParameter( iMercCostPerTurn ) )
 
 		# Get the players current gold text		
@@ -494,82 +494,82 @@ class CvMercenaryManager:
 		strDelta = ""
 		
 		# Set the color for the gold/turn.
-		if(iDelta > 0):                
+		if(iDelta > 0):		
 			strDelta = u"%s" %(localText.changeTextColor(" (+"+str(iDelta)+"/Turn)",gc.getInfoTypeForString("COLOR_GREEN")))
 		elif(iDelta < 0):
 			strDelta = u"%s" %(localText.changeTextColor(" ("+str(iDelta)+"/Turn)",gc.getInfoTypeForString("COLOR_RED")))
 		
 		return strGoldText + strDelta
 
-        # Hires a mercenary for a player
-        def hireMercenary(self, screen, iMerc):
+	# Hires a mercenary for a player
+	def hireMercenary(self, screen, iMerc):
 
-                # Get the active player ID
-                iPlayer = gc.getGame().getActivePlayer()
+		# Get the active player ID
+		iPlayer = gc.getGame().getActivePlayer()
 
-                # Delete the UI representation of the unit from the available mercenaries
-                # panel
-                # 3Miro: get the Unique internal name
-                szUniqueInternalName = "HiredMercID" + self.numToStr(iMerc)
-                #screen.deleteWidget(szUniqueInternalName)
-                
-                lGlobalMercPool = GMU.getMercGlobalPool()
-                
-                for iI in range( len( lGlobalMercPool ) ):
-                        if ( lGlobalMercPool[iI][0] == iMerc ):
-                                lMerc = lGlobalMercPool[iI]
-                                
-                GMU.hireMerc( lMerc, iPlayer )
+		# Delete the UI representation of the unit from the available mercenaries
+		# panel
+		# 3Miro: get the Unique internal name
+		szUniqueInternalName = "HiredMercID" + self.numToStr(iMerc)
+		#screen.deleteWidget(szUniqueInternalName)
+		
+		lGlobalMercPool = GMU.getMercGlobalPool()
+		
+		for iI in range( len( lGlobalMercPool ) ):
+			if ( lGlobalMercPool[iI][0] == iMerc ):
+				lMerc = lGlobalMercPool[iI]
+				
+		GMU.hireMerc( lMerc, iPlayer )
 
-                # Draw the gold information for the screen
-                self.drawGoldInformation(screen)
-                
-                #3Miro: update hired mercs
-                self.clearAvailableMercs(screen)
-                self.clearHiredMercs(screen)
-                
-                self.populateAvailableMercenariesPanel(screen)
-                self.populateHiredMercenariesPanel(screen)
+		# Draw the gold information for the screen
+		self.drawGoldInformation(screen)
+		
+		#3Miro: update hired mercs
+		self.clearAvailableMercs(screen)
+		self.clearHiredMercs(screen)
+		
+		self.populateAvailableMercenariesPanel(screen)
+		self.populateHiredMercenariesPanel(screen)
 
-                # Clear the information in the mercenary information panel
-                self.clearMercenaryInformation(screen)
+		# Clear the information in the mercenary information panel
+		self.clearMercenaryInformation(screen)
 
-        # Fire the mercenary from the player
-        def fireMercenary(self, screen, iMerc):
-                
-                iPlayer = gc.getGame().getActivePlayer()
-                unitList = PyPlayer( iPlayer ).getUnitList()
-                
-                for pUnit in unitList:
-                        if ( pUnit.getMercID() == iMerc ):
-                                #print(" 3Miro: firing: ",iMerc)
-                                GMU.fireMerc( pUnit )
-                                screen.deleteWidget("HiredMercID" + self.numToStr(iMerc) ) # it is OK to delete non-existent widgets
-                                break
+	# Fire the mercenary from the player
+	def fireMercenary(self, screen, iMerc):
+		
+		iPlayer = gc.getGame().getActivePlayer()
+		unitList = PyPlayer( iPlayer ).getUnitList()
+		
+		for pUnit in unitList:
+			if ( pUnit.getMercID() == iMerc ):
+				#print(" 3Miro: firing: ",iMerc)
+				GMU.fireMerc( pUnit )
+				screen.deleteWidget("HiredMercID" + self.numToStr(iMerc) ) # it is OK to delete non-existent widgets
+				break
 
-                # Draw the gold information for the screen
-                self.drawGoldInformation(screen)
-                
-                #3Miro: redraw merc information
-                self.clearAvailableMercs(screen)
-                self.clearHiredMercs(screen)
-                
-                self.populateAvailableMercenariesPanel(screen)
-                self.populateHiredMercenariesPanel(screen)
+		# Draw the gold information for the screen
+		self.drawGoldInformation(screen)
+		
+		#3Miro: redraw merc information
+		self.clearAvailableMercs(screen)
+		self.clearHiredMercs(screen)
+		
+		self.populateAvailableMercenariesPanel(screen)
+		self.populateHiredMercenariesPanel(screen)
 
-                # Clear the information in the mercenary information panel
-                self.clearMercenaryInformation(screen)
+		# Clear the information in the mercenary information panel
+		self.clearMercenaryInformation(screen)
 
 
-        # Handles the input to the mercenary manager screens
-        def handleInput (self, inputClass):
+	# Handles the input to the mercenary manager screens
+	def handleInput (self, inputClass):
 
-                # Get the instance of the screen
-                screen = self.getScreen()
+		# Get the instance of the screen
+		screen = self.getScreen()
 
-                # Debug code - start
-                if(g_bDebug):
-                        screen.setText( "TopPanelDebugMsg", "TopPanel", inputClass.getFunctionName()
+		# Debug code - start
+		if(g_bDebug):
+			screen.setText( "TopPanelDebugMsg", "TopPanel", inputClass.getFunctionName()
 						, CvUtil.FONT_RIGHT_JUSTIFY, 1010, 20, -10, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 		# Debug code - end
 		
@@ -599,15 +599,15 @@ class CvMercenaryManager:
 			# Split up the function name into the mercenary name and the actual
 			# action that was performed
 			szUniqueInternalName, function = inputClass.getFunctionName().split("_")
-                        
+			
 			self.screenFunction = function
 			self.mercenaryName = None
 
 			# If the function was find, then close the screen and find the unit
 			if(function == "FindButton"):
 				dummy, iMerc  = szUniqueInternalName.split("MercID")
-                                #iMerc = int( iMerc )
-                                iMerc = self.strToNum( iMerc )
+				#iMerc = int( iMerc )
+				iMerc = self.strToNum( iMerc )
 
 				# Convert the unit ID string back into a number
 				#unitID = self.alphaToNumber(unitID)
@@ -620,11 +620,11 @@ class CvMercenaryManager:
 
 				# Get the actual unit in the game
 				#pUnit = player.getUnit(unitID)
-                                unitList = PyPlayer( iPlayer ).getUnitList()
-                                for pUnit in unitList:
-                                        if ( pUnit.getMercID() == iMerc ):
-                                                pMercUnit = pUnit
-                                                break
+				unitList = PyPlayer( iPlayer ).getUnitList()
+				for pUnit in unitList:
+					if ( pUnit.getMercID() == iMerc ):
+						pMercUnit = pUnit
+						break
 
 				# If the unit is not set to None then look at them and select
 				# them.
@@ -639,65 +639,65 @@ class CvMercenaryManager:
 				
 			# If the function was hire, then hire the mercenary
 			if(function == "HireButton"):
-                                dummy, iMerc  = szUniqueInternalName.split("MercID")
-                                iMerc = self.strToNum( iMerc )
+				dummy, iMerc  = szUniqueInternalName.split("MercID")
+				iMerc = self.strToNum( iMerc )
 				self.hireMercenary(screen, iMerc ) 
 
 			# If the function was fire, then fire the mercenary
 			if(function == "FireButton"):
-                                dummy, iMerc  = szUniqueInternalName.split("MercID")
-                                iMerc = self.strToNum( iMerc )
+				dummy, iMerc  = szUniqueInternalName.split("MercID")
+				iMerc = self.strToNum( iMerc )
 				self.fireMercenary(screen, iMerc )
 										
 			# If the function was to show the mercenary information then 
 			# populate the mercenary information panel.
 			if(function == "AInfoButton"):
-                                
-                                dummy, iMerc  = szUniqueInternalName.split("MercID")
-                                iMerc = self.strToNum( iMerc )
-                                iPlayer = gc.getGame().getActivePlayer()
-                                
-                                lGlobalMercPool = GMU.getMercGlobalPool()
-                                
-                                for iI in range( len( lGlobalMercPool ) ):
-                                        if ( lGlobalMercPool[iI][0] == iMerc ):
-                                                lMerc =lGlobalMercPool[iI]
-                                
-                                lMerc[1].append( Mercenaries.iMercPromotion )
-                                
-                                self.calculateScreenWidgetData(screen)
-                                
-                                lMerc[2] = GMU.getModifiedCostPerPlayer( lMerc[2], iPlayer )
-                                lMerc[3] = GMU.getModifiedCostPerPlayer( lMerc[3], iPlayer )
-                                
-                                self.populateMercenaryInformation(screen, lMerc )
-                                
-                        if(function == "HInfoButton"):
-                                
-                                dummy, iMerc  = szUniqueInternalName.split("MercID")
-                                iMerc = self.strToNum( iMerc )
-                                
-                                iPlayer = gc.getGame().getActivePlayer()
-                                unitList = PyPlayer( iPlayer ).getUnitList()
-                
-                                for pUnit in unitList:
-                                        if ( pUnit.getMercID() == iMerc ):
-                                                pMerc = pUnit
-                                                break
-                                                
-                                iUpkeepCost = pMerc.getMercUpkeep()
-                                
-                                lPromotionList = []
-                                for iPromotion in range( Mercenaries.iNumTotalPromotions ):
-                                        if ( pMerc.isHasPromotion( iPromotion ) ):
-                                                lPromotionList.append( iPromotion )
-                                                
-                                lPromotionList.append( Mercenaries.iMercPromotion )
-                                
-                                lMerc = [ iMerc, lPromotionList, 0, iUpkeepCost, -1 ]                
-                                
-                                self.calculateScreenWidgetData(screen)
-                                self.populateMercenaryInformation(screen, lMerc )
+				
+				dummy, iMerc  = szUniqueInternalName.split("MercID")
+				iMerc = self.strToNum( iMerc )
+				iPlayer = gc.getGame().getActivePlayer()
+				
+				lGlobalMercPool = GMU.getMercGlobalPool()
+				
+				for iI in range( len( lGlobalMercPool ) ):
+					if ( lGlobalMercPool[iI][0] == iMerc ):
+						lMerc =lGlobalMercPool[iI]
+				
+				lMerc[1].append( Mercenaries.iMercPromotion )
+				
+				self.calculateScreenWidgetData(screen)
+				
+				lMerc[2] = GMU.getModifiedCostPerPlayer( lMerc[2], iPlayer )
+				lMerc[3] = GMU.getModifiedCostPerPlayer( lMerc[3], iPlayer )
+				
+				self.populateMercenaryInformation(screen, lMerc )
+				
+			if(function == "HInfoButton"):
+				
+				dummy, iMerc  = szUniqueInternalName.split("MercID")
+				iMerc = self.strToNum( iMerc )
+				
+				iPlayer = gc.getGame().getActivePlayer()
+				unitList = PyPlayer( iPlayer ).getUnitList()
+		
+				for pUnit in unitList:
+					if ( pUnit.getMercID() == iMerc ):
+						pMerc = pUnit
+						break
+						
+				iUpkeepCost = pMerc.getMercUpkeep()
+				
+				lPromotionList = []
+				for iPromotion in range( Mercenaries.iNumTotalPromotions ):
+					if ( pMerc.isHasPromotion( iPromotion ) ):
+						lPromotionList.append( iPromotion )
+						
+				lPromotionList.append( Mercenaries.iMercPromotion )
+				
+				lMerc = [ iMerc, lPromotionList, 0, iUpkeepCost, -1 ]		
+				
+				self.calculateScreenWidgetData(screen)
+				self.populateMercenaryInformation(screen, lMerc )
 			
 				#self.mercenaryName = mercenaryName
 			
@@ -1006,7 +1006,7 @@ class CvMercenaryManager:
 	# for all of the different panels in the mercenary manager screen. The
 	# unit ID number 382343 is converted to: CHBCDC.
 	def numberToAlpha(self, iNum):
-		#             1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26
+		#	     1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26
 		alphaList = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
 		strNum = str(iNum)
 		strAlpha = ""
@@ -1023,7 +1023,7 @@ class CvMercenaryManager:
 	# for all of the different panels in the mercenary manager screen. The
 	# string "CHBCDC" is converted to: 382343.
 	def alphaToNumber(self, strAlpha):
-		#             1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26
+		#	     1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26
 		alphaList = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
 		
 		strNum = ""
@@ -1033,25 +1033,25 @@ class CvMercenaryManager:
 			strNum = strNum + str(alphaList.index(strAlpha[i]))
 		
 		return int(strNum)
-                
-        # 3Miro: a bit more efficient version of the above two functions
-        # the different panels don't work with numbers, replace the numbers 0 - 9 with A - J
-        def strToNum( self, szStr ):
-                
-                CharacterMap = { 'A' : "0", 'B' : "1", 'C' : "2", 'D' : "3", 'E' : "4", 'F' : "5", 'G' : "6", 'H' : "7", 'I' : "8", 'J' : "9"}
-                
-                szNum = ""
-                for iI in range( len(szStr) ):
-                        szNum = szNum + CharacterMap[szStr[iI]]
-                        
-                return int( szNum )
-                
-        def numToStr( self, iNum ):
-                szNum = "%d" %iNum
-                CharacterMap = { '0' : "A", '1' : "B", '2' : "C", '3' : "D", '4' : "E", '5' : "F", '6' : "G", '7' : "H", '8' : "I", '9' : "J"}
-                
-                szResult = ""
-                for iI in range( len(szNum) ):
-                        szResult = szResult + CharacterMap[szNum[iI]]
-                        
-                return szResult
+		
+	# 3Miro: a bit more efficient version of the above two functions
+	# the different panels don't work with numbers, replace the numbers 0 - 9 with A - J
+	def strToNum( self, szStr ):
+		
+		CharacterMap = { 'A' : "0", 'B' : "1", 'C' : "2", 'D' : "3", 'E' : "4", 'F' : "5", 'G' : "6", 'H' : "7", 'I' : "8", 'J' : "9"}
+		
+		szNum = ""
+		for iI in range( len(szStr) ):
+			szNum = szNum + CharacterMap[szStr[iI]]
+			
+		return int( szNum )
+		
+	def numToStr( self, iNum ):
+		szNum = "%d" %iNum
+		CharacterMap = { '0' : "A", '1' : "B", '2' : "C", '3' : "D", '4' : "E", '5' : "F", '6' : "G", '7' : "H", '8' : "I", '9' : "J"}
+		
+		szResult = ""
+		for iI in range( len(szNum) ):
+			szResult = szResult + CharacterMap[szNum[iI]]
+			
+		return szResult

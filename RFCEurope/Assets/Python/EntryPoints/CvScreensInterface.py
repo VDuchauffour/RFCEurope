@@ -59,19 +59,19 @@ import Consts as con
 import RFCUtils
 utils = RFCUtils.RFCUtils()
 def getStability(argsList):
-        return utils.getStability(argsList[0])
-        #return gc.getPlayer( argsList[0] ).getStability()
+	return utils.getStability(argsList[0])
+	#return gc.getPlayer( argsList[0] ).getStability()
 def countAchievedGoals(argsList):
-        return utils.countAchievedGoals(argsList[0])
+	return utils.countAchievedGoals(argsList[0])
 def resetStabilityParameters(argsList):
-        for i in range(con.iNumStabilityParameters):
-                utils.setStabilityParameters(i, 0)
-        utils.setLastRecordedStabilityStuff(0, 0)
-        utils.setLastRecordedStabilityStuff(1, 0)
-        utils.setLastRecordedStabilityStuff(2, 0)
-        utils.setLastRecordedStabilityStuff(3, 0)
-        utils.setLastRecordedStabilityStuff(4, 0)
-        utils.setLastRecordedStabilityStuff(5, 0)
+	for i in range(con.iNumStabilityParameters):
+		utils.setStabilityParameters(i, 0)
+	utils.setLastRecordedStabilityStuff(0, 0)
+	utils.setLastRecordedStabilityStuff(1, 0)
+	utils.setLastRecordedStabilityStuff(2, 0)
+	utils.setLastRecordedStabilityStuff(3, 0)
+	utils.setLastRecordedStabilityStuff(4, 0)
+	utils.setLastRecordedStabilityStuff(5, 0)
 #Rhye - end
 
 # Absinthe: stability overlay

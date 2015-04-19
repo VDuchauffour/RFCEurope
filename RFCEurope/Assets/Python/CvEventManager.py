@@ -142,7 +142,7 @@ class CvEventManager:
 			'unitSpreadReligionAttempt'	: self.onUnitSpreadReligionAttempt,
 			'unitGifted'				: self.onUnitGifted,
 			'unitBuildImprovement'				: self.onUnitBuildImprovement,
-			'goodyReceived'        	: self.onGoodyReceived,
+			'goodyReceived'		: self.onGoodyReceived,
 			'greatPersonBorn'      	: self.onGreatPersonBorn,
 			'buildingBuilt' 		: self.onBuildingBuilt,
 			'projectBuilt' 			: self.onProjectBuilt,
@@ -197,8 +197,8 @@ class CvEventManager:
 		bDummy = false
 		self.bDbg, bDummy, self.bAlt, self.bCtrl, self.bShift, self.bAllowCheats = argsList[idx:]
 		ret = 0
-                #print("Event with tag: ",tag)
-                gc.getGame().logMsg("Something")
+		#print("Event with tag: ",tag)
+		gc.getGame().logMsg("Something")
 		if self.EventHandlerMap.has_key(tag):
 			fxn = self.EventHandlerMap[tag]
 			ret = fxn(argsList[1:idx])
@@ -1095,7 +1095,7 @@ class CvEventManager:
 		'sample generic event, called on each game turn slice'
 		genericArgs = argsList[0][0]	# tuple of tuple of my args
 		turnSlice = genericArgs[0]
-                #print(" 3Miro: onGameUpdate")
+		#print(" 3Miro: onGameUpdate")
 
 	def onMouseEvent(self, argsList):
 		'mouse handler - returns 1 if the event was consumed'
@@ -1125,9 +1125,9 @@ class CvEventManager:
 		# Rhye - start
 		# Switch Civic
 #		elif (pEspionageMissionInfo.getPlayerAnarchyCounter() > 0):
-#                        utils.setStability(iTargetPlayer, utils.getStability(iTargetPlayer) + 3) #anti-Whitefire
-#                        print ("anti-Whitefire")
-                #Rhye - end
+#			utils.setStability(iTargetPlayer, utils.getStability(iTargetPlayer) + 3) #anti-Whitefire
+#			print ("anti-Whitefire")
+		#Rhye - end
 
 	def __eventEditCityNameBegin(self, city, bRename):
 		popup = PyPopup.PyPopup(CvUtil.EventEditCityName, EventContextTypes.EVENTCONTEXT_ALL)

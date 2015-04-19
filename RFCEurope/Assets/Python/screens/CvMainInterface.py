@@ -976,14 +976,14 @@ class CvMainInterface:
 			# Show the mercenary manager button if the player has at least one city and they are in the
 			# correct era.
 			#if(gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
-                        if(gc.getActivePlayer().getNumCities() > 0 ):
-                                #Rhye - start
-                                #screen.show( "MercenaryManagerButton" )
-                                # 3Miro
-                                #teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
-                                #if (not teamPlayer.isHasTech(con.iNationalism)):
-                                screen.show( "MercenaryManagerButton" )
-                                #Rhye - end
+			if(gc.getActivePlayer().getNumCities() > 0 ):
+				#Rhye - start
+				#screen.show( "MercenaryManagerButton" )
+				# 3Miro
+				#teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
+				#if (not teamPlayer.isHasTech(con.iNationalism)):
+				screen.show( "MercenaryManagerButton" )
+				#Rhye - end
 			# < Mercenaries End >
 			screen.show( "EspionageAdvisorButton" )
 			screen.show( "DomesticAdvisorButton" )
@@ -1001,13 +1001,13 @@ class CvMainInterface:
 			# move the mercenary manager button to the front if the player has at least one city and they are in the
 			# correct era.
 			#if(gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
-                        if(gc.getActivePlayer().getNumCities() > 0 ):
-                                #Rhye - start
-                                #screen.moveToFront( "MercenaryManagerButton" )
-                                #teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
-                                #if (not teamPlayer.isHasTech(con.iNationalism)):
-                                screen.moveToFront( "MercenaryManagerButton" )
-                                #Rhye - end
+			if(gc.getActivePlayer().getNumCities() > 0 ):
+				#Rhye - start
+				#screen.moveToFront( "MercenaryManagerButton" )
+				#teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
+				#if (not teamPlayer.isHasTech(con.iNationalism)):
+				screen.moveToFront( "MercenaryManagerButton" )
+				#Rhye - end
 			# < Mercenaries End >
 			screen.moveToFront( "EspionageAdvisorButton" )
 			screen.moveToFront( "DomesticAdvisorButton" )
@@ -1061,12 +1061,12 @@ class CvMainInterface:
 			# correct era.
 			#if(gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
 			if(gc.getActivePlayer().getNumCities() > 0 ):
-                                #Rhye - start
-                                #screen.show( "MercenaryManagerButton" )
-                                #teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
-                                #if (not teamPlayer.isHasTech(con.iNationalism)):
-                                screen.show( "MercenaryManagerButton" )
-                                #Rhye - end
+				#Rhye - start
+				#screen.show( "MercenaryManagerButton" )
+				#teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
+				#if (not teamPlayer.isHasTech(con.iNationalism)):
+				screen.show( "MercenaryManagerButton" )
+				#Rhye - end
 			# < Mercenaries End >
 			screen.show( "EspionageAdvisorButton" )
 			screen.show( "DomesticAdvisorButton" )
@@ -1085,12 +1085,12 @@ class CvMainInterface:
 			# correct era.
 			#if(gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
 			if(gc.getActivePlayer().getNumCities() > 0 ):
-                                #Rhye - start
-                                #screen.moveToFront( "MercenaryManagerButton" )
-                                #teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
-                                #if (not teamPlayer.isHasTech(con.iNationalism)):
-                                screen.moveToFront( "MercenaryManagerButton" )
-                                #Rhye - end
+				#Rhye - start
+				#screen.moveToFront( "MercenaryManagerButton" )
+				#teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
+				#if (not teamPlayer.isHasTech(con.iNationalism)):
+				screen.moveToFront( "MercenaryManagerButton" )
+				#Rhye - end
 			# < Mercenaries End >
 			screen.moveToFront( "EspionageAdvisorButton" )
 			screen.moveToFront( "DomesticAdvisorButton" )
@@ -1119,12 +1119,12 @@ class CvMainInterface:
 			# correct era.
 			#if(gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
 			if(gc.getActivePlayer().getNumCities() > 0 ):
-                                #Rhye - start
-                                #screen.show( "MercenaryManagerButton" )
-                                #teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
-                                #if (not teamPlayer.isHasTech(con.iNationalism)):
-                                screen.show( "MercenaryManagerButton" )
-                                #Rhye - end
+				#Rhye - start
+				#screen.show( "MercenaryManagerButton" )
+				#teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
+				#if (not teamPlayer.isHasTech(con.iNationalism)):
+				screen.show( "MercenaryManagerButton" )
+				#Rhye - end
 			# < Mercenaries End >
 			screen.show( "EspionageAdvisorButton" )
 			screen.show( "DomesticAdvisorButton" )
@@ -1143,12 +1143,12 @@ class CvMainInterface:
 			# correct era.
 			#if(gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
 			if(gc.getActivePlayer().getNumCities() > 0 ):
-                                #Rhye - start
-                                #screen.moveToFront( "MercenaryManagerButton" )
-                                #teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
-                                #if (not teamPlayer.isHasTech(con.iNationalism)):
-                                screen.moveToFront( "MercenaryManagerButton" )
-                                #Rhye - end
+				#Rhye - start
+				#screen.moveToFront( "MercenaryManagerButton" )
+				#teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
+				#if (not teamPlayer.isHasTech(con.iNationalism)):
+				screen.moveToFront( "MercenaryManagerButton" )
+				#Rhye - end
 			# < Mercenaries End >
 			screen.moveToFront( "EspionageAdvisorButton" )
 			screen.moveToFront( "DomesticAdvisorButton" )
@@ -1635,16 +1635,16 @@ class CvMainInterface:
 					iCount = 0
 
 					actions = CyInterface().getActionsToShow()
-                                        #pUnit = g_pSelectedUnit # 3Miro: disable disband for mercs
+					#pUnit = g_pSelectedUnit # 3Miro: disable disband for mercs
 					for i in actions:
-                                                #if ( i == 0 and pUnit.getMercID() > -1 ): # 3Miro: disable disband for mercs
-                                                #        continue
+						#if ( i == 0 and pUnit.getMercID() > -1 ): # 3Miro: disable disband for mercs
+						#	continue
 
 						screen.appendMultiListButton( "BottomButtonContainer", gc.getActionInfo(i).getButton(), 0, WidgetTypes.WIDGET_ACTION, i, -1, False )
 						screen.show( "BottomButtonContainer" )
 
-                                                #print(" 3Miro Actions: ",i)
-                                                #print(" 3Miro Actions: ",i," ",gc.getActionInfo(i).getHotKey())
+						#print(" 3Miro Actions: ",i)
+						#print(" 3Miro Actions: ",i," ",gc.getActionInfo(i).getHotKey())
 
 						if ( not CyInterface().canHandleAction(i, False) ):
 							screen.disableMultiListButton( "BottomButtonContainer", 0, iCount, gc.getActionInfo(i).getButton() )
@@ -1937,7 +1937,7 @@ class CvMainInterface:
 
 		if ( CyInterface().getShowInterface() != InterfaceVisibility.INTERFACE_HIDE_ALL and CyInterface().getShowInterface() != InterfaceVisibility.INTERFACE_MINIMAP_ONLY  and CyInterface().getShowInterface() != InterfaceVisibility.INTERFACE_ADVANCED_START):
 
-                        pPlayer = gc.getPlayer(ePlayer)
+			pPlayer = gc.getPlayer(ePlayer)
 			# Percent of commerce
 			if (pPlayer.isAlive()):
 				iCount = 0
@@ -1976,276 +1976,276 @@ class CvMainInterface:
 				screen.setLabel( "GoldText", "Background", szText, CvUtil.FONT_LEFT_JUSTIFY, 12, 6, -0.3, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 				screen.show( "GoldText" )
 
-                                # 3Miro: Show stability string from edead: start stability icon
-                                iCount += 1
-                                if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() >= con.tBirth[ePlayer] ):
-                                        #iStability = utils.getStability(ePlayer)
-                                        iStability = pPlayer.getStability()
-                                        szStabilityButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 10)
-                                        if (iStability < -15):
-                                                szTempBuffer = localText.getText("TXT_KEY_STABILITY_COLLAPSING", ())
-                                        elif (iStability >= -15 and iStability < -5):
-                                                szTempBuffer = localText.getText("TXT_KEY_STABILITY_UNSTABLE", ())
-                                        elif (iStability >= -5 and iStability < 0):
-                                                szTempBuffer = localText.getText("TXT_KEY_STABILITY_SHAKY", ())
-                                        elif (iStability >= 0 and iStability < 8):
-                                                szTempBuffer = localText.getText("TXT_KEY_STABILITY_STABLE", ())
-                                        elif (iStability >= 8 and iStability < 15):
-                                                szTempBuffer = localText.getText("TXT_KEY_STABILITY_SOLID", ())
-                                        elif (iStability >= 15):
-                                                szTempBuffer = localText.getText("TXT_KEY_STABILITY_VERYSOLID", ())
-                                        if iStability > 0:
-                                                szStabilityNum = "+%d" %(iStability)
-                                        else:
-                                                szStabilityNum = "%d" %(iStability)
-                                        szStabilityText = ": %s (%s)" %(szTempBuffer, szStabilityNum)
-                                        screen.setLabel("StabilityButton", "Background", szStabilityButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-                                        screen.setLabel("StabilityText", "Background", szStabilityText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-                                        screen.show("StabilityButton")
-                                        screen.show("StabilityText")
-                                        iCount += 1
-                                else:
-                                        screen.hide("StabilityButton")
-                                        screen.hide("StabilityText")
+				# 3Miro: Show stability string from edead: start stability icon
+				iCount += 1
+				if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() >= con.tBirth[ePlayer] ):
+					#iStability = utils.getStability(ePlayer)
+					iStability = pPlayer.getStability()
+					szStabilityButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 10)
+					if (iStability < -15):
+						szTempBuffer = localText.getText("TXT_KEY_STABILITY_COLLAPSING", ())
+					elif (iStability >= -15 and iStability < -5):
+						szTempBuffer = localText.getText("TXT_KEY_STABILITY_UNSTABLE", ())
+					elif (iStability >= -5 and iStability < 0):
+						szTempBuffer = localText.getText("TXT_KEY_STABILITY_SHAKY", ())
+					elif (iStability >= 0 and iStability < 8):
+						szTempBuffer = localText.getText("TXT_KEY_STABILITY_STABLE", ())
+					elif (iStability >= 8 and iStability < 15):
+						szTempBuffer = localText.getText("TXT_KEY_STABILITY_SOLID", ())
+					elif (iStability >= 15):
+						szTempBuffer = localText.getText("TXT_KEY_STABILITY_VERYSOLID", ())
+					if iStability > 0:
+						szStabilityNum = "+%d" %(iStability)
+					else:
+						szStabilityNum = "%d" %(iStability)
+					szStabilityText = ": %s (%s)" %(szTempBuffer, szStabilityNum)
+					screen.setLabel("StabilityButton", "Background", szStabilityButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+					screen.setLabel("StabilityText", "Background", szStabilityText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+					screen.show("StabilityButton")
+					screen.show("StabilityText")
+					iCount += 1
+				else:
+					screen.hide("StabilityButton")
+					screen.hide("StabilityText")
 
-                                # edead: Piety/Faith Points
-                                iFaithPoints = pPlayer.getFaith()
-                                if iFaithPoints >= 0 and gc.getPlayer(ePlayer).getStateReligion() >= 0 and not CyInterface().isCityScreenUp():
-                                        szFaithButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.RELIGION_CHAR))
-                                        #szPietyText = ": %s (%d)" %(utils.getFavorLevelText(ePlayer), iPiety)
-                                        szFaithText = ": " + localText.getText("TXT_KEY_FAITH_POINTS",()) + (" (%i) " %iFaithPoints )
-                                        #screen.setLabel("PietyButton", "Background", szPietyButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_PIETY_LEVEL, utils.getFavorLevel(ePlayer), iFaithPoints)
-                                        #screen.setLabel("PietyText", "Background", szFaithText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_PIETY_LEVEL, utils.getFavorLevel(ePlayer), iFaithPoints)
-                                        screen.setLabel("FaithButton", "Background", szFaithButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-                                        screen.setLabel("FaithText", "Background", szFaithText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-                                        screen.show("FaithButton")
-                                        screen.show("FaithText")
-                                        iCount += 1
-                                else:
-                                        screen.hide("FaithButton")
-                                        screen.hide("FaithText")
+				# edead: Piety/Faith Points
+				iFaithPoints = pPlayer.getFaith()
+				if iFaithPoints >= 0 and gc.getPlayer(ePlayer).getStateReligion() >= 0 and not CyInterface().isCityScreenUp():
+					szFaithButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.RELIGION_CHAR))
+					#szPietyText = ": %s (%d)" %(utils.getFavorLevelText(ePlayer), iPiety)
+					szFaithText = ": " + localText.getText("TXT_KEY_FAITH_POINTS",()) + (" (%i) " %iFaithPoints )
+					#screen.setLabel("PietyButton", "Background", szPietyButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_PIETY_LEVEL, utils.getFavorLevel(ePlayer), iFaithPoints)
+					#screen.setLabel("PietyText", "Background", szFaithText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_PIETY_LEVEL, utils.getFavorLevel(ePlayer), iFaithPoints)
+					screen.setLabel("FaithButton", "Background", szFaithButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+					screen.setLabel("FaithText", "Background", szFaithText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+					screen.show("FaithButton")
+					screen.show("FaithText")
+					iCount += 1
+				else:
+					screen.hide("FaithButton")
+					screen.hide("FaithText")
 
-                                # edead: start GP info text by NeverMind 2/2
-                                pGreatPersonCity, iGPTurns = self.getnextGPCity()
-                                if not CyInterface().isCityScreenUp() and iGPTurns < 10000000 and pGreatPersonCity:
-                                        eGPInfoButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.GREAT_PEOPLE_CHAR))
-                                        eGPInfoText = ": " + pGreatPersonCity.getName() + " (%d)" %(iGPTurns)
-                                        screen.setLabel( "GPInfoButton", "Background", eGPInfoButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-                                        screen.setLabel( "GPInfoText", "Background", eGPInfoText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-                                        screen.setHitTest( "GPInfoButton", HitTestTypes.HITTEST_NOHIT )
-                                        screen.show( "GPInfoButton" )
-                                        screen.show( "GPInfoText" )
-                                        iCount += 1
-                                else:
-                                        screen.hide( "GPInfoButton" )
-                                        screen.hide( "GPInfoText" )
+				# edead: start GP info text by NeverMind 2/2
+				pGreatPersonCity, iGPTurns = self.getnextGPCity()
+				if not CyInterface().isCityScreenUp() and iGPTurns < 10000000 and pGreatPersonCity:
+					eGPInfoButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.GREAT_PEOPLE_CHAR))
+					eGPInfoText = ": " + pGreatPersonCity.getName() + " (%d)" %(iGPTurns)
+					screen.setLabel( "GPInfoButton", "Background", eGPInfoButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+					screen.setLabel( "GPInfoText", "Background", eGPInfoText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+					screen.setHitTest( "GPInfoButton", HitTestTypes.HITTEST_NOHIT )
+					screen.show( "GPInfoButton" )
+					screen.show( "GPInfoText" )
+					iCount += 1
+				else:
+					screen.hide( "GPInfoButton" )
+					screen.hide( "GPInfoText" )
 
-                                # edead: Great General Points
-                                if not CyInterface().isCityScreenUp() and gc.getPlayer(ePlayer).getCombatExperience() > 0:
-                                        eCombatXPButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 11)
-                                        eCombatXPText = ": " + unicode(gc.getPlayer(ePlayer).getCombatExperience()) + "/" + unicode(gc.getPlayer(ePlayer).greatPeopleThreshold(true))
-                                        screen.setLabel( "CombatXPButton", "Background", eCombatXPButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-                                        screen.setLabel( "CombatXPText", "Background", eCombatXPText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-                                        screen.setHitTest( "CombatXPButton", HitTestTypes.HITTEST_NOHIT )
-                                        screen.show( "CombatXPButton" )
-                                        screen.show( "CombatXPText" )
-                                        iCount += 1
-                                else:
-                                        screen.hide( "CombatXPButton" )
-                                        screen.hide( "CombatXPText" )
+				# edead: Great General Points
+				if not CyInterface().isCityScreenUp() and gc.getPlayer(ePlayer).getCombatExperience() > 0:
+					eCombatXPButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 11)
+					eCombatXPText = ": " + unicode(gc.getPlayer(ePlayer).getCombatExperience()) + "/" + unicode(gc.getPlayer(ePlayer).greatPeopleThreshold(true))
+					screen.setLabel( "CombatXPButton", "Background", eCombatXPButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+					screen.setLabel( "CombatXPText", "Background", eCombatXPText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+					screen.setHitTest( "CombatXPButton", HitTestTypes.HITTEST_NOHIT )
+					screen.show( "CombatXPButton" )
+					screen.show( "CombatXPText" )
+					iCount += 1
+				else:
+					screen.hide( "CombatXPButton" )
+					screen.hide( "CombatXPText" )
 
-                                # 3Miro: Janissary Points
-                                if not CyInterface().isCityScreenUp() and ePlayer == con.iTurkey:
-                                        eJanissaryXPButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.STRENGTH_CHAR))
-                                        eJanissaryXPText = ": " + unicode(gc.getPlayer(ePlayer).getPicklefreeParameter( con.iJanissaryPoints ) ) + "/400"
-                                        screen.setLabel( "JanissaryXPButton", "Background", eJanissaryXPButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-                                        screen.setLabel( "JanissaryXPText", "Background", eJanissaryXPText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-                                        screen.setHitTest( "JanissaryXPButton", HitTestTypes.HITTEST_NOHIT )
-                                        screen.show( "JanissaryXPButton" )
-                                        screen.show( "JanissaryXPText" )
-                                        iCount += 1
-                                else:
-                                        screen.hide( "JanissaryXPButton" )
-                                        screen.hide( "JanissaryXPText" )
+				# 3Miro: Janissary Points
+				if not CyInterface().isCityScreenUp() and ePlayer == con.iTurkey:
+					eJanissaryXPButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.STRENGTH_CHAR))
+					eJanissaryXPText = ": " + unicode(gc.getPlayer(ePlayer).getPicklefreeParameter( con.iJanissaryPoints ) ) + "/400"
+					screen.setLabel( "JanissaryXPButton", "Background", eJanissaryXPButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+					screen.setLabel( "JanissaryXPText", "Background", eJanissaryXPText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+					screen.setHitTest( "JanissaryXPButton", HitTestTypes.HITTEST_NOHIT )
+					screen.show( "JanissaryXPButton" )
+					screen.show( "JanissaryXPText" )
+					iCount += 1
+				else:
+					screen.hide( "JanissaryXPButton" )
+					screen.hide( "JanissaryXPText" )
 
-                                # 3Miro: Show UHV info on the screen
-                                if ( ePlayer == con.iBurgundy ):
-                                        #iBurgundyCulture = utils.getBurgundyCulture()
-                                        iBurgundyCulture = pPlayer.getUHVCounter( 0 )
-                                        #Absinthe: only display UHV counter until the UHV date
-                                        if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (xml.i1336AD + 2) ):
-                                                szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
-                                                szUHVText = ": " + localText.getText("TXT_KEY_UHV_CULTURE",()) + (" (%i) " %iBurgundyCulture )
-                                                screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-                                                screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-                                                screen.show("UHVButton")
-                                                screen.show("UHVText")
-                                                iCount += 1
-                                        else:
-                                                screen.hide( "UHVButton" )
-                                                screen.hide( "UHVText" )
+				# 3Miro: Show UHV info on the screen
+				if ( ePlayer == con.iBurgundy ):
+					#iBurgundyCulture = utils.getBurgundyCulture()
+					iBurgundyCulture = pPlayer.getUHVCounter( 0 )
+					#Absinthe: only display UHV counter until the UHV date
+					if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (xml.i1336AD + 2) ):
+						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
+						szUHVText = ": " + localText.getText("TXT_KEY_UHV_CULTURE",()) + (" (%i) " %iBurgundyCulture )
+						screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+						screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+						screen.show("UHVButton")
+						screen.show("UHVText")
+						iCount += 1
+					else:
+						screen.hide( "UHVButton" )
+						screen.hide( "UHVText" )
 
-                                elif ( ePlayer == con.iLithuania ):
-                                        #iLithuaniaCulture = utils.getLithuaniaCulture()
-                                        iLithuaniaCulture = pPlayer.getUHVCounter( 0 )
-                                        #Absinthe: only display UHV counter until the UHV date
-                                        if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (xml.i1386AD + 2) ):
-                                                szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
-                                                szUHVText = ": " + localText.getText("TXT_KEY_UHV_CULTURE",()) + (" (%i) " %iLithuaniaCulture )
-                                                screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-                                                screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-                                                screen.show("UHVButton")
-                                                screen.show("UHVText")
-                                                iCount += 1
-                                        else:
-                                                screen.hide( "UHVButton" )
-                                                screen.hide( "UHVText" )
+				elif ( ePlayer == con.iLithuania ):
+					#iLithuaniaCulture = utils.getLithuaniaCulture()
+					iLithuaniaCulture = pPlayer.getUHVCounter( 0 )
+					#Absinthe: only display UHV counter until the UHV date
+					if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (xml.i1386AD + 2) ):
+						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
+						szUHVText = ": " + localText.getText("TXT_KEY_UHV_CULTURE",()) + (" (%i) " %iLithuaniaCulture )
+						screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+						screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+						screen.show("UHVButton")
+						screen.show("UHVText")
+						iCount += 1
+					else:
+						screen.hide( "UHVButton" )
+						screen.hide( "UHVText" )
 
-                                elif ( ePlayer == con.iArabia ):
-                                        #iIslamInfluence = utils.getArabianInfluence()
-                                        iIslamInfluence = gc.getGame().calculateReligionPercent( xml.iIslam )
-                                        #HHG: only display UHV counter as long as the UHV is undefined
-                                        if ( not CyInterface().isCityScreenUp() and pPlayer.getUHV( 2 ) == -1 ):
-                                                szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
-                                                szUHVText = ": " + localText.getText("TXT_KEY_UHV_ISLAM",()) + (" (%i) " %iIslamInfluence )
-                                                screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-                                                screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-                                                screen.show("UHVButton")
-                                                screen.show("UHVText")
-                                                iCount += 1
-                                        else:
-                                                screen.hide( "UHVButton" )
-                                                screen.hide( "UHVText" )
+				elif ( ePlayer == con.iArabia ):
+					#iIslamInfluence = utils.getArabianInfluence()
+					iIslamInfluence = gc.getGame().calculateReligionPercent( xml.iIslam )
+					#HHG: only display UHV counter as long as the UHV is undefined
+					if ( not CyInterface().isCityScreenUp() and pPlayer.getUHV( 2 ) == -1 ):
+						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
+						szUHVText = ": " + localText.getText("TXT_KEY_UHV_ISLAM",()) + (" (%i) " %iIslamInfluence )
+						screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+						screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+						screen.show("UHVButton")
+						screen.show("UHVText")
+						iCount += 1
+					else:
+						screen.hide( "UHVButton" )
+						screen.hide( "UHVText" )
 
-                                elif ( ePlayer == con.iNorway ):
-                                        #iNorseRaized = utils.getNorseRazed()
-                                        iNorwayRaized = pPlayer.getUHVCounter( 2 )
-                                        #Absinthe: only display UHV counter until the UHV date
-                                        if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (xml.i1066AD + 2) ):
-                                                szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
-                                                szUHVText = ": " + localText.getText("TXT_KEY_UHV_VIKING",()) + (" (%i) " %iNorwayRaized )
-                                                screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-                                                screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-                                                screen.show("UHVButton")
-                                                screen.show("UHVText")
-                                                iCount += 1
-                                        else:
-                                                screen.hide( "UHVButton" )
-                                                screen.hide( "UHVText" )
+				elif ( ePlayer == con.iNorway ):
+					#iNorseRaized = utils.getNorseRazed()
+					iNorwayRaized = pPlayer.getUHVCounter( 2 )
+					#Absinthe: only display UHV counter until the UHV date
+					if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (xml.i1066AD + 2) ):
+						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
+						szUHVText = ": " + localText.getText("TXT_KEY_UHV_VIKING",()) + (" (%i) " %iNorwayRaized )
+						screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+						screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+						screen.show("UHVButton")
+						screen.show("UHVText")
+						iCount += 1
+					else:
+						screen.hide( "UHVButton" )
+						screen.hide( "UHVText" )
 
-                                elif ( ePlayer == con.iKiev ):
-                                        #iKievFood = utils.getKievFood()
-                                        iKievFood = pPlayer.getUHVCounter( 2 )
-                                        #Absinthe: only display UHV counter until the UHV date
-                                        if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (xml.i1300AD + 2) ):
-                                                szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
-                                                szUHVText = ": " + localText.getText("TXT_KEY_UHV_FOOD",()) + (" (%i) " %iKievFood )
-                                                screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-                                                screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-                                                screen.show("UHVButton")
-                                                screen.show("UHVText")
-                                                iCount += 1
-                                        else:
-                                                screen.hide( "UHVButton" )
-                                                screen.hide( "UHVText" )
+				elif ( ePlayer == con.iKiev ):
+					#iKievFood = utils.getKievFood()
+					iKievFood = pPlayer.getUHVCounter( 2 )
+					#Absinthe: only display UHV counter until the UHV date
+					if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (xml.i1300AD + 2) ):
+						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
+						szUHVText = ": " + localText.getText("TXT_KEY_UHV_FOOD",()) + (" (%i) " %iKievFood )
+						screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+						screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+						screen.show("UHVButton")
+						screen.show("UHVText")
+						iCount += 1
+					else:
+						screen.hide( "UHVButton" )
+						screen.hide( "UHVText" )
 
-                                elif ( ePlayer == con.iFrankia or ePlayer == con.iSpain or ePlayer == con.iPortugal or ePlayer == con.iEngland or ePlayer == con.iDutch ):
-                                        if ( gc.getTeam( pPlayer.getTeam() ).isHasTech( xml.iAstronomy ) ):
-                                                if ( ePlayer == con.iFrankia or ePlayer == con.iPortugal ):
-                                                        iColonies = pPlayer.getUHVCounter( 2 )
-                                                elif ( ePlayer == con.iSpain ):
-                                                        iColonies = pPlayer.getNumColonies()
-                                                elif ( ePlayer == con.iEngland or ePlayer == con.iDutch ):
-                                                        iColonies = pPlayer.getUHVCounter( 1 )
-                                        else:
-                                                iColonies = -1
-                                        if ( not CyInterface().isCityScreenUp() and iColonies > -1 ):
-                                                szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
-                                                szUHVText = ": " + localText.getText("TXT_KEY_UHV_COLONIES",()) + (" (%i) " %iColonies )
-                                                screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-                                                screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-                                                screen.show("UHVButton")
-                                                screen.show("UHVText")
-                                                iCount += 1
-                                        else:
-                                                screen.hide( "UHVButton" )
-                                                screen.hide( "UHVText" )
+				elif ( ePlayer == con.iFrankia or ePlayer == con.iSpain or ePlayer == con.iPortugal or ePlayer == con.iEngland or ePlayer == con.iDutch ):
+					if ( gc.getTeam( pPlayer.getTeam() ).isHasTech( xml.iAstronomy ) ):
+						if ( ePlayer == con.iFrankia or ePlayer == con.iPortugal ):
+							iColonies = pPlayer.getUHVCounter( 2 )
+						elif ( ePlayer == con.iSpain ):
+							iColonies = pPlayer.getNumColonies()
+						elif ( ePlayer == con.iEngland or ePlayer == con.iDutch ):
+							iColonies = pPlayer.getUHVCounter( 1 )
+					else:
+						iColonies = -1
+					if ( not CyInterface().isCityScreenUp() and iColonies > -1 ):
+						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
+						szUHVText = ": " + localText.getText("TXT_KEY_UHV_COLONIES",()) + (" (%i) " %iColonies )
+						screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+						screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+						screen.show("UHVButton")
+						screen.show("UHVText")
+						iCount += 1
+					else:
+						screen.hide( "UHVButton" )
+						screen.hide( "UHVText" )
 
-                                elif ( ePlayer == con.iNovgorod ):
-                                        iNovgorodFurs = pPlayer.countOwnedBonuses(xml.iFur)
-                                        if ( not CyInterface().isCityScreenUp() ):
-                                                szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
-                                                szUHVText = ": " + localText.getText("TXT_KEY_UHV_FURS",()) + (" (%i) " %iNovgorodFurs )
-                                                screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-                                                screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-                                                screen.show("UHVButton")
-                                                screen.show("UHVText")
-                                                iCount += 1
-                                        else:
-                                                screen.hide( "UHVButton" )
-                                                screen.hide( "UHVText" )
+				elif ( ePlayer == con.iNovgorod ):
+					iNovgorodFurs = pPlayer.countOwnedBonuses(xml.iFur)
+					if ( not CyInterface().isCityScreenUp() ):
+						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
+						szUHVText = ": " + localText.getText("TXT_KEY_UHV_FURS",()) + (" (%i) " %iNovgorodFurs )
+						screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+						screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+						screen.show("UHVButton")
+						screen.show("UHVText")
+						iCount += 1
+					else:
+						screen.hide( "UHVButton" )
+						screen.hide( "UHVText" )
 
-                                elif ( ePlayer == con.iScotland ):
-                                        iScotlandFrench = pPlayer.getUHVCounter( 1 )
-                                        if ( not CyInterface().isCityScreenUp() ):
-                                                szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
-                                                szUHVText = ": " + localText.getText("TXT_KEY_UHV_FRENCH",()) + (" (%i) " %iScotlandFrench )
-                                                screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-                                                screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-                                                screen.show("UHVButton")
-                                                screen.show("UHVText")
-                                                iCount += 1
-                                        else:
-                                                screen.hide( "UHVButton" )
-                                                screen.hide( "UHVText" )
+				elif ( ePlayer == con.iScotland ):
+					iScotlandFrench = pPlayer.getUHVCounter( 1 )
+					if ( not CyInterface().isCityScreenUp() ):
+						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
+						szUHVText = ": " + localText.getText("TXT_KEY_UHV_FRENCH",()) + (" (%i) " %iScotlandFrench )
+						screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+						screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+						screen.show("UHVButton")
+						screen.show("UHVText")
+						iCount += 1
+					else:
+						screen.hide( "UHVButton" )
+						screen.hide( "UHVText" )
 
-                                #Absinthe: different UHV used currently
-                                #elif ( ePlayer == con.iAragon ):
-                                #        iAragonShips = pPlayer.getNumShips()
-                                 #       if ( not CyInterface().isCityScreenUp() ):
-                                 #               szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
-                                 #               szUHVText = ": " + localText.getText("TXT_KEY_UHV_SHIPS",()) + (" (%i) " %iAragonShips )
-                                 #               screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-                                 #               screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-                                 #               screen.show("UHVButton")
-                                 #               screen.show("UHVText")
-                                 #               iCount += 1
-                                 #       else:
-                                 #               screen.hide( "UHVButton" )
-                                 #               screen.hide( "UHVText" )
+				#Absinthe: different UHV used currently
+				#elif ( ePlayer == con.iAragon ):
+				#	iAragonShips = pPlayer.getNumShips()
+				 #       if ( not CyInterface().isCityScreenUp() ):
+				 #	       szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
+				 #	       szUHVText = ": " + localText.getText("TXT_KEY_UHV_SHIPS",()) + (" (%i) " %iAragonShips )
+				 #	       screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+				 #	       screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+				 #	       screen.show("UHVButton")
+				 #	       screen.show("UHVText")
+				 #	       iCount += 1
+				 #       else:
+				 #	       screen.hide( "UHVButton" )
+				 #	       screen.hide( "UHVText" )
 
-                                elif ( ePlayer == con.iSweden ):
-                                        iSwedenRazed = pPlayer.getUHVCounter(1)
-                                        if ( not CyInterface().isCityScreenUp() ):
-                                                szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
-                                                szUHVText = ": " + localText.getText("TXT_KEY_UHV_RAZED",()) + (" (%i) " %iSwedenRazed )
-                                                screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-                                                screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-                                                screen.show("UHVButton")
-                                                screen.show("UHVText")
-                                                iCount += 1
-                                        else:
-                                                screen.hide( "UHVButton" )
-                                                screen.hide( "UHVText" )
+				elif ( ePlayer == con.iSweden ):
+					iSwedenRazed = pPlayer.getUHVCounter(1)
+					if ( not CyInterface().isCityScreenUp() ):
+						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
+						szUHVText = ": " + localText.getText("TXT_KEY_UHV_RAZED",()) + (" (%i) " %iSwedenRazed )
+						screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+						screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+						screen.show("UHVButton")
+						screen.show("UHVText")
+						iCount += 1
+					else:
+						screen.hide( "UHVButton" )
+						screen.hide( "UHVText" )
 
-                                elif ( ePlayer == con.iPrussia ):
-                                        pCapital = pPlayer.getCapitalCity()
-                                        iGPStart = CvUtil.findInfoTypeNum(gc.getSpecialistInfo, gc.getNumSpecialistInfos(), "SPECIALIST_GREAT_PRIEST")
-                                        iGPEnd = CvUtil.findInfoTypeNum(gc.getSpecialistInfo, gc.getNumSpecialistInfos(), "SPECIALIST_GREAT_SPY")
-                                        iPrussiaGP = 0
-                                        for iType in range(iGPStart, iGPEnd+1):
-                                                iPrussiaGP += pCapital.getFreeSpecialistCount(iType)
-                                        if ( pPlayer.getUHV(1) == -1 and not CyInterface().isCityScreenUp() ):
-                                                szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
-                                                szUHVText = ": " + localText.getText("TXT_KEY_UHV_GREAT_PEOPLE",()) + (" (%i) " %iPrussiaGP )
-                                                screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-                                                screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-                                                screen.show("UHVButton")
-                                                screen.show("UHVText")
-                                                iCount += 1
-                                        else:
-                                                screen.hide( "UHVButton" )
-                                                screen.hide( "UHVText" )
+				elif ( ePlayer == con.iPrussia ):
+					pCapital = pPlayer.getCapitalCity()
+					iGPStart = CvUtil.findInfoTypeNum(gc.getSpecialistInfo, gc.getNumSpecialistInfos(), "SPECIALIST_GREAT_PRIEST")
+					iGPEnd = CvUtil.findInfoTypeNum(gc.getSpecialistInfo, gc.getNumSpecialistInfos(), "SPECIALIST_GREAT_SPY")
+					iPrussiaGP = 0
+					for iType in range(iGPStart, iGPEnd+1):
+						iPrussiaGP += pCapital.getFreeSpecialistCount(iType)
+					if ( pPlayer.getUHV(1) == -1 and not CyInterface().isCityScreenUp() ):
+						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
+						szUHVText = ": " + localText.getText("TXT_KEY_UHV_GREAT_PEOPLE",()) + (" (%i) " %iPrussiaGP )
+						screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+						screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+						screen.show("UHVButton")
+						screen.show("UHVText")
+						iCount += 1
+					else:
+						screen.hide( "UHVButton" )
+						screen.hide( "UHVText" )
 
 				if (((gc.getPlayer(ePlayer).calculateGoldRate() != 0) and not (gc.getPlayer(ePlayer).isAnarchy())) or (gc.getPlayer(ePlayer).getGold() != 0)):
 					screen.show( "GoldText" )
@@ -3285,35 +3285,35 @@ class CvMainInterface:
 								if (gc.getPlayer(ePlayer).isAlive() and not gc.getPlayer(ePlayer).isMinorCiv()):		# No dead civs on the scoreboard
 								#if (gc.getPlayer(ePlayer).isEverAlive() and not gc.getPlayer(ePlayer).isMinorCiv()):	# Dead civs also show up on the scoreboard
 
-                                                                        if (gc.getPlayer(ePlayer).getTeam() == eTeam):
-                                                                                szBuffer = u"<font=2>"
+									if (gc.getPlayer(ePlayer).getTeam() == eTeam):
+										szBuffer = u"<font=2>"
 
-                                                                                if (gc.getGame().isGameMultiPlayer()):
-                                                                                        if (not (gc.getPlayer(ePlayer).isTurnActive())):
-                                                                                                szBuffer = szBuffer + "*"
+										if (gc.getGame().isGameMultiPlayer()):
+											if (not (gc.getPlayer(ePlayer).isTurnActive())):
+												szBuffer = szBuffer + "*"
 
-                                                                                if (not CyInterface().isFlashingPlayer(ePlayer) or CyInterface().shouldFlash(ePlayer)):
-                                                                                        if (ePlayer == gc.getGame().getActivePlayer()):
-                                                                                                #Rhye - start
-                                                                                                #szTempBuffer = u"%d: [<color=%d,%d,%d,%d>%s</color>]" %(gc.getGame().getPlayerScore(ePlayer), gc.getPlayer(ePlayer).getPlayerTextColorR(), gc.getPlayer(ePlayer).getPlayerTextColorG(), gc.getPlayer(ePlayer).getPlayerTextColorB(), gc.getPlayer(ePlayer).getPlayerTextColorA(), gc.getPlayer(ePlayer).getName())
-                                                                                                szTempBuffer = u"[<color=%d,%d,%d,%d>%s</color>]: " %(gc.getPlayer(ePlayer).getPlayerTextColorR(), gc.getPlayer(ePlayer).getPlayerTextColorG(), gc.getPlayer(ePlayer).getPlayerTextColorB(), gc.getPlayer(ePlayer).getPlayerTextColorA(), gc.getPlayer(ePlayer).getCivilizationDescription(0))
-                                                                                        else:
-                                                                                                #szTempBuffer = u"%d: <color=%d,%d,%d,%d>%s</color>" %(gc.getGame().getPlayerScore(ePlayer), gc.getPlayer(ePlayer).getPlayerTextColorR(), gc.getPlayer(ePlayer).getPlayerTextColorG(), gc.getPlayer(ePlayer).getPlayerTextColorB(), gc.getPlayer(ePlayer).getPlayerTextColorA(), gc.getPlayer(ePlayer).getName())
-                                                                                                szTempBuffer = u"<color=%d,%d,%d,%d>%s</color>: " %(gc.getPlayer(ePlayer).getPlayerTextColorR(), gc.getPlayer(ePlayer).getPlayerTextColorG(), gc.getPlayer(ePlayer).getPlayerTextColorB(), gc.getPlayer(ePlayer).getPlayerTextColorA(), gc.getPlayer(ePlayer).getCivilizationDescription(0))
-                                                                                                #Rhye - end
-                                                                                else:
-                                                                                        szTempBuffer = u"%d: %s" %(gc.getGame().getPlayerScore(ePlayer), gc.getPlayer(ePlayer).getName())
-                                                                                szBuffer = szBuffer + szTempBuffer
+										if (not CyInterface().isFlashingPlayer(ePlayer) or CyInterface().shouldFlash(ePlayer)):
+											if (ePlayer == gc.getGame().getActivePlayer()):
+												#Rhye - start
+												#szTempBuffer = u"%d: [<color=%d,%d,%d,%d>%s</color>]" %(gc.getGame().getPlayerScore(ePlayer), gc.getPlayer(ePlayer).getPlayerTextColorR(), gc.getPlayer(ePlayer).getPlayerTextColorG(), gc.getPlayer(ePlayer).getPlayerTextColorB(), gc.getPlayer(ePlayer).getPlayerTextColorA(), gc.getPlayer(ePlayer).getName())
+												szTempBuffer = u"[<color=%d,%d,%d,%d>%s</color>]: " %(gc.getPlayer(ePlayer).getPlayerTextColorR(), gc.getPlayer(ePlayer).getPlayerTextColorG(), gc.getPlayer(ePlayer).getPlayerTextColorB(), gc.getPlayer(ePlayer).getPlayerTextColorA(), gc.getPlayer(ePlayer).getCivilizationDescription(0))
+											else:
+												#szTempBuffer = u"%d: <color=%d,%d,%d,%d>%s</color>" %(gc.getGame().getPlayerScore(ePlayer), gc.getPlayer(ePlayer).getPlayerTextColorR(), gc.getPlayer(ePlayer).getPlayerTextColorG(), gc.getPlayer(ePlayer).getPlayerTextColorB(), gc.getPlayer(ePlayer).getPlayerTextColorA(), gc.getPlayer(ePlayer).getName())
+												szTempBuffer = u"<color=%d,%d,%d,%d>%s</color>: " %(gc.getPlayer(ePlayer).getPlayerTextColorR(), gc.getPlayer(ePlayer).getPlayerTextColorG(), gc.getPlayer(ePlayer).getPlayerTextColorB(), gc.getPlayer(ePlayer).getPlayerTextColorA(), gc.getPlayer(ePlayer).getCivilizationDescription(0))
+												#Rhye - end
+										else:
+											szTempBuffer = u"%d: %s" %(gc.getGame().getPlayerScore(ePlayer), gc.getPlayer(ePlayer).getName())
+										szBuffer = szBuffer + szTempBuffer
 
-                                                                                #Rhye - ? and WAR moved here
-                                                                                if (gc.getTeam(eTeam).isAlive()):
-                                                                                        if (not (gc.getTeam(gc.getGame().getActiveTeam()).isHasMet(eTeam)) ):
-                                                                                                szBuffer = szBuffer + ("(?) ")
-                                                                                        if (gc.getTeam(eTeam).isAtWar(gc.getGame().getActiveTeam())):
-                                                                                                szBuffer = szBuffer + "("  + localText.getColorText("TXT_KEY_CONCEPT_WAR", (), gc.getInfoTypeForString("COLOR_RED")).upper() + ") "
+										#Rhye - ? and WAR moved here
+										if (gc.getTeam(eTeam).isAlive()):
+											if (not (gc.getTeam(gc.getGame().getActiveTeam()).isHasMet(eTeam)) ):
+												szBuffer = szBuffer + ("(?) ")
+											if (gc.getTeam(eTeam).isAtWar(gc.getGame().getActiveTeam())):
+												szBuffer = szBuffer + "("  + localText.getColorText("TXT_KEY_CONCEPT_WAR", (), gc.getInfoTypeForString("COLOR_RED")).upper() + ") "
 
 
-                                                                                #Rhye - techs moved here
+										#Rhye - techs moved here
 										bEspionageCanSeeResearch = false
 										for iMissionLoop in range(gc.getNumEspionageMissionInfos()):
 											if (gc.getEspionageMissionInfo(iMissionLoop).isSeeResearch()):
@@ -3324,32 +3324,32 @@ class CvMainInterface:
 												szTempBuffer = u"%s (%d) - " %(gc.getTechInfo(gc.getPlayer(ePlayer).getCurrentResearch()).getDescription(), gc.getPlayer(ePlayer).getResearchTurnsLeft(gc.getPlayer(ePlayer).getCurrentResearch(), True))
 												szBuffer = szBuffer + szTempBuffer
 										#szTempBuffer = u" "
-                                                                                #szBuffer = szBuffer + szTempBuffer
+										#szBuffer = szBuffer + szTempBuffer
 										#Rhye - end
 
-                                                                                if (gc.getTeam(eTeam).isAlive()):
+										if (gc.getTeam(eTeam).isAlive()):
 
-                                                                                        if (gc.getPlayer(ePlayer).canTradeNetworkWith(gc.getGame().getActivePlayer()) and (ePlayer != gc.getGame().getActivePlayer())):
-                                                                                                szTempBuffer = u"%c" %(CyGame().getSymbolID(FontSymbols.TRADE_CHAR))
-                                                                                                szBuffer = szBuffer + szTempBuffer
-                                                                                        if (gc.getTeam(eTeam).isOpenBorders(gc.getGame().getActiveTeam())):
-                                                                                                szTempBuffer = u"%c" %(CyGame().getSymbolID(FontSymbols.OPEN_BORDERS_CHAR))
-                                                                                                szBuffer = szBuffer + szTempBuffer
-                                                                                        if (gc.getTeam(eTeam).isDefensivePact(gc.getGame().getActiveTeam())):
-                                                                                                szTempBuffer = u"%c" %(CyGame().getSymbolID(FontSymbols.DEFENSIVE_PACT_CHAR))
-                                                                                                szBuffer = szBuffer + szTempBuffer
-                                                                                        if (gc.getPlayer(ePlayer).getStateReligion() != -1):
-                                                                                                if (gc.getPlayer(ePlayer).hasHolyCity(gc.getPlayer(ePlayer).getStateReligion())):
-                                                                                                        szTempBuffer = u"%c" %(gc.getReligionInfo(gc.getPlayer(ePlayer).getStateReligion()).getHolyCityChar())
-                                                                                                        szBuffer = szBuffer + szTempBuffer
-                                                                                                else:
-                                                                                                        szTempBuffer = u"%c" %(gc.getReligionInfo(gc.getPlayer(ePlayer).getStateReligion()).getChar())
-                                                                                                        szBuffer = szBuffer + szTempBuffer
-                                                                                        #Rhye - start plague
-                                                                                        if (utils.getPlagueCountdown(ePlayer) > 0):
-                                                                                                szTempBuffer = unichr(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 6)
-                                                                                                szBuffer = szBuffer + szTempBuffer
-                                                                                        #Rhye - end
+											if (gc.getPlayer(ePlayer).canTradeNetworkWith(gc.getGame().getActivePlayer()) and (ePlayer != gc.getGame().getActivePlayer())):
+												szTempBuffer = u"%c" %(CyGame().getSymbolID(FontSymbols.TRADE_CHAR))
+												szBuffer = szBuffer + szTempBuffer
+											if (gc.getTeam(eTeam).isOpenBorders(gc.getGame().getActiveTeam())):
+												szTempBuffer = u"%c" %(CyGame().getSymbolID(FontSymbols.OPEN_BORDERS_CHAR))
+												szBuffer = szBuffer + szTempBuffer
+											if (gc.getTeam(eTeam).isDefensivePact(gc.getGame().getActiveTeam())):
+												szTempBuffer = u"%c" %(CyGame().getSymbolID(FontSymbols.DEFENSIVE_PACT_CHAR))
+												szBuffer = szBuffer + szTempBuffer
+											if (gc.getPlayer(ePlayer).getStateReligion() != -1):
+												if (gc.getPlayer(ePlayer).hasHolyCity(gc.getPlayer(ePlayer).getStateReligion())):
+													szTempBuffer = u"%c" %(gc.getReligionInfo(gc.getPlayer(ePlayer).getStateReligion()).getHolyCityChar())
+													szBuffer = szBuffer + szTempBuffer
+												else:
+													szTempBuffer = u"%c" %(gc.getReligionInfo(gc.getPlayer(ePlayer).getStateReligion()).getChar())
+													szBuffer = szBuffer + szTempBuffer
+											#Rhye - start plague
+											if (utils.getPlagueCountdown(ePlayer) > 0):
+												szTempBuffer = unichr(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 6)
+												szBuffer = szBuffer + szTempBuffer
+											#Rhye - end
 
 
 										if (CyGame().isNetworkMultiPlayer()):
@@ -3359,61 +3359,61 @@ class CvMainInterface:
 											szTempBuffer = u" <color=255,0,0>* %s *</color>" %(CyGameTextMgr().getOOSSeeds(ePlayer))
 											szBuffer = szBuffer + szTempBuffer
 
-                                                                                #Rhye - start
-                                                                                if (not gc.getTeam(eTeam).isAlive() and gc.getGame().getGameTurn() >= con.tBirth[eTeam]):
-                                                                                        szBuffer = szBuffer + " -"
-                                                                                else:
-                                                                                        szBuffer = szBuffer + u" %d" %(gc.getGame().getPlayerScore(ePlayer))
-                                                                                #Rhye - end
+										#Rhye - start
+										if (not gc.getTeam(eTeam).isAlive() and gc.getGame().getGameTurn() >= con.tBirth[eTeam]):
+											szBuffer = szBuffer + " -"
+										else:
+											szBuffer = szBuffer + u" %d" %(gc.getGame().getPlayerScore(ePlayer))
+										#Rhye - end
 
-                                                                                #Rhye - start victory
-                                                                                #szTempBuffer = u"%d" %(utils.countAchievedGoals(ePlayer)) #white
-                                                                                #szBuffer = szBuffer + " (" + szTempBuffer + "/3)" #white
-                                                                                if (gc.getPlayer(ePlayer).isAlive()):
-                                                                                        if (ePlayer < con.iNumMajorPlayers): #in case byzantium is major
-                                                                                                szTempBuffer = u"<color=%s>%d/3</color>" %(utils.getGoalsColor(ePlayer), utils.countAchievedGoals(ePlayer))
-                                                                                                szBuffer = szBuffer + " - " + szTempBuffer
-                                                                                #Rhye - end victory
+										#Rhye - start victory
+										#szTempBuffer = u"%d" %(utils.countAchievedGoals(ePlayer)) #white
+										#szBuffer = szBuffer + " (" + szTempBuffer + "/3)" #white
+										if (gc.getPlayer(ePlayer).isAlive()):
+											if (ePlayer < con.iNumMajorPlayers): #in case byzantium is major
+												szTempBuffer = u"<color=%s>%d/3</color>" %(utils.getGoalsColor(ePlayer), utils.countAchievedGoals(ePlayer))
+												szBuffer = szBuffer + " - " + szTempBuffer
+										#Rhye - end victory
 
-                                                                                #Rhye - start stability
-                                                                                if (gc.getPlayer(ePlayer).isAlive()):
-                                                                                        if (ePlayer < con.iNumMajorPlayers): #in case byzantium is major
-                                                                                                #iStability = utils.getStability(ePlayer)
-                                                                                                iStability = gc.getPlayer(ePlayer).getStability()
-                                                                                                if (iStability < -15):
-                                                                                                        #szTempBuffer = localText.getText("TXT_KEY_STABILITY_COLLAPSING", ())
-                                                                                                        szTempBuffer = unichr(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 3)
-                                                                                                        #if (gc.getPlayer(ePlayer).isHuman()):
-                                                                                                        #        szTempBuffer = szTempBuffer + " (" + localText.getText("TXT_KEY_STABILITY_COLLAPSING", ()) + ")"
-                                                                                                elif (iStability >= -15 and iStability < -8):
-                                                                                                        #szTempBuffer = localText.getText("TXT_KEY_STABILITY_UNSTABLE", ())
-                                                                                                        szTempBuffer = unichr(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 3)
-                                                                                                        #if (gc.getPlayer(ePlayer).isHuman()):
-                                                                                                        #        szTempBuffer = szTempBuffer + " (" + localText.getText("TXT_KEY_STABILITY_UNSTABLE", ()) + ")"
-                                                                                                elif (iStability >= -8 and iStability < 0):
-                                                                                                        #szTempBuffer = localText.getText("TXT_KEY_STABILITY_SHAKY", ())
-                                                                                                        szTempBuffer = unichr(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 4)
-                                                                                                        #if (gc.getPlayer(ePlayer).isHuman()):
-                                                                                                        #        szTempBuffer = szTempBuffer + " (" + localText.getText("TXT_KEY_STABILITY_SHAKY", ()) + ")"
-                                                                                                elif (iStability >= 0 and iStability < 8):
-                                                                                                        #szTempBuffer = localText.getText("TXT_KEY_STABILITY_STABLE", ())
-                                                                                                        szTempBuffer = unichr(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 4)
-                                                                                                        #if (gc.getPlayer(ePlayer).isHuman()):
-                                                                                                        #        szTempBuffer = szTempBuffer + " (" + localText.getText("TXT_KEY_STABILITY_STABLE", ()) + ")"
-                                                                                                elif (iStability >= 8 and iStability < 15):
-                                                                                                        #szTempBuffer = localText.getText("TXT_KEY_STABILITY_SOLID", ())
-                                                                                                        szTempBuffer = unichr(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 5)
-                                                                                                        #if (gc.getPlayer(ePlayer).isHuman()):
-                                                                                                        #        szTempBuffer = szTempBuffer + " (" + localText.getText("TXT_KEY_STABILITY_SOLID", ()) + ")"
-                                                                                                elif (iStability >= 15):
-                                                                                                        #szTempBuffer = localText.getText("TXT_KEY_STABILITY_VERYSOLID", ())
-                                                                                                        szTempBuffer = unichr(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 5)
-                                                                                                        #if (gc.getPlayer(ePlayer).isHuman()):
-                                                                                                        #        szTempBuffer = szTempBuffer + " (" + localText.getText("TXT_KEY_STABILITY_VERYSOLID", ()) + ")"
-                                                                                                szBuffer = szBuffer + " - " + szTempBuffer
-                                                                                #Rhye - end stability
+										#Rhye - start stability
+										if (gc.getPlayer(ePlayer).isAlive()):
+											if (ePlayer < con.iNumMajorPlayers): #in case byzantium is major
+												#iStability = utils.getStability(ePlayer)
+												iStability = gc.getPlayer(ePlayer).getStability()
+												if (iStability < -15):
+													#szTempBuffer = localText.getText("TXT_KEY_STABILITY_COLLAPSING", ())
+													szTempBuffer = unichr(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 3)
+													#if (gc.getPlayer(ePlayer).isHuman()):
+													#	szTempBuffer = szTempBuffer + " (" + localText.getText("TXT_KEY_STABILITY_COLLAPSING", ()) + ")"
+												elif (iStability >= -15 and iStability < -8):
+													#szTempBuffer = localText.getText("TXT_KEY_STABILITY_UNSTABLE", ())
+													szTempBuffer = unichr(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 3)
+													#if (gc.getPlayer(ePlayer).isHuman()):
+													#	szTempBuffer = szTempBuffer + " (" + localText.getText("TXT_KEY_STABILITY_UNSTABLE", ()) + ")"
+												elif (iStability >= -8 and iStability < 0):
+													#szTempBuffer = localText.getText("TXT_KEY_STABILITY_SHAKY", ())
+													szTempBuffer = unichr(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 4)
+													#if (gc.getPlayer(ePlayer).isHuman()):
+													#	szTempBuffer = szTempBuffer + " (" + localText.getText("TXT_KEY_STABILITY_SHAKY", ()) + ")"
+												elif (iStability >= 0 and iStability < 8):
+													#szTempBuffer = localText.getText("TXT_KEY_STABILITY_STABLE", ())
+													szTempBuffer = unichr(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 4)
+													#if (gc.getPlayer(ePlayer).isHuman()):
+													#	szTempBuffer = szTempBuffer + " (" + localText.getText("TXT_KEY_STABILITY_STABLE", ()) + ")"
+												elif (iStability >= 8 and iStability < 15):
+													#szTempBuffer = localText.getText("TXT_KEY_STABILITY_SOLID", ())
+													szTempBuffer = unichr(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 5)
+													#if (gc.getPlayer(ePlayer).isHuman()):
+													#	szTempBuffer = szTempBuffer + " (" + localText.getText("TXT_KEY_STABILITY_SOLID", ()) + ")"
+												elif (iStability >= 15):
+													#szTempBuffer = localText.getText("TXT_KEY_STABILITY_VERYSOLID", ())
+													szTempBuffer = unichr(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 5)
+													#if (gc.getPlayer(ePlayer).isHuman()):
+													#	szTempBuffer = szTempBuffer + " (" + localText.getText("TXT_KEY_STABILITY_VERYSOLID", ()) + ")"
+												szBuffer = szBuffer + " - " + szTempBuffer
+										#Rhye - end stability
 
-                                                                                szBuffer = szBuffer + "</font>"
+										szBuffer = szBuffer + "</font>"
 
 										if ( CyInterface().determineWidth( szBuffer ) > iWidth ):
 											iWidth = CyInterface().determineWidth( szBuffer )
@@ -3780,25 +3780,25 @@ class CvMainInterface:
 	def update(self, fDelta):
 		return
 
-        # 3Miro: Show GP string from edead: start code from Main Interface Mod (Impaler)
-        def getnextGPCity( self ):
+	# 3Miro: Show GP string from edead: start code from Main Interface Mod (Impaler)
+	def getnextGPCity( self ):
 
-                iFastestPerson = 10000000
-                iGPTurns = 0
-                pPlayer = gc.getPlayer(gc.getGame().getActivePlayer())
-                iGPNext = pPlayer.greatPeopleThreshold(false)
-                pFastestCity = CyInterface().getHeadSelectedCity()
+		iFastestPerson = 10000000
+		iGPTurns = 0
+		pPlayer = gc.getPlayer(gc.getGame().getActivePlayer())
+		iGPNext = pPlayer.greatPeopleThreshold(false)
+		pFastestCity = CyInterface().getHeadSelectedCity()
 
-                for icity in range(pPlayer.getNumCities()):
-                        pCity = pPlayer.getCity(icity)
-                        if (pCity):
-                                iGPRate = pCity.getGreatPeopleRate()
-                                if (iGPRate > 0):
-                                        iGPNow = pCity.getGreatPeopleProgress()
-                                        iGPTurns = (iGPNext - iGPNow + iGPRate - 1) / iGPRate
-                                        if (iGPTurns < iFastestPerson):
-                                                iFastestPerson = iGPTurns
-                                                pFastestCity = pCity
+		for icity in range(pPlayer.getNumCities()):
+			pCity = pPlayer.getCity(icity)
+			if (pCity):
+				iGPRate = pCity.getGreatPeopleRate()
+				if (iGPRate > 0):
+					iGPNow = pCity.getGreatPeopleProgress()
+					iGPTurns = (iGPNext - iGPNow + iGPRate - 1) / iGPRate
+					if (iGPTurns < iFastestPerson):
+						iFastestPerson = iGPTurns
+						pFastestCity = pCity
 
-                return (pFastestCity, iFastestPerson)
-        # edead: end
+		return (pFastestCity, iFastestPerson)
+	# edead: end

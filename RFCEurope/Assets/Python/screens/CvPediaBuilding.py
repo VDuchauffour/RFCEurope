@@ -227,7 +227,7 @@ class CvPediaBuilding:
 
 		panelName = self.top.getNextWidgetName()
 		screen.addPanel( panelName, localText.getText("TXT_KEY_PEDIA_REQUIRES", ()), "", false, true,
-                                 self.X_PREREQ_PANE, self.Y_PREREQ_PANE, self.W_PREREQ_PANE, self.H_PREREQ_PANE, PanelStyles.PANEL_STYLE_BLUE50 )
+				 self.X_PREREQ_PANE, self.Y_PREREQ_PANE, self.W_PREREQ_PANE, self.H_PREREQ_PANE, PanelStyles.PANEL_STYLE_BLUE50 )
 
 		screen.attachLabel(panelName, "", "  ")
 
@@ -270,7 +270,7 @@ class CvPediaBuilding:
 
 		panelName = self.top.getNextWidgetName()
 		screen.addPanel( panelName, localText.getText("TXT_KEY_PEDIA_SPECIAL_ABILITIES", ()), "", true, false,
-                                 self.X_SPECIAL_PANE, self.Y_SPECIAL_PANE, self.W_SPECIAL_PANE, self.H_SPECIAL_PANE, PanelStyles.PANEL_STYLE_BLUE50 )
+				 self.X_SPECIAL_PANE, self.Y_SPECIAL_PANE, self.W_SPECIAL_PANE, self.H_SPECIAL_PANE, PanelStyles.PANEL_STYLE_BLUE50 )
 
 		listName = self.top.getNextWidgetName()
 
@@ -279,9 +279,9 @@ class CvPediaBuilding:
 		#Rhye - start
 		# 3Miro: embassies
 		#if (self.iBuilding >= con.iNumBuildingsPlague):
-                #        szSpecialText = localText.getText("TXT_KEY_BUILDING_EMBASSY_EP", ())
-                #        szSpecialText += "\n"
-                #        szSpecialText += localText.getText("TXT_KEY_BUILDING_EMBASSY_ABILITY", ())
+		#	szSpecialText = localText.getText("TXT_KEY_BUILDING_EMBASSY_EP", ())
+		#	szSpecialText += "\n"
+		#	szSpecialText += localText.getText("TXT_KEY_BUILDING_EMBASSY_ABILITY", ())
 		#Rhye - end
 		screen.addMultilineText(listName, szSpecialText, self.X_SPECIAL_PANE+5, self.Y_SPECIAL_PANE+30, self.W_SPECIAL_PANE-10, self.H_SPECIAL_PANE-35, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 
@@ -351,15 +351,15 @@ class CvPediaBuilding:
 		#Rhye - start
 		# 3Miro: remove buildings that are in BtS, but not in RFC
 		#if (not bWonder):
-                #        #listSorted.pop(67) #ziggurat
-                #        listSorted.pop(66) #rathaus
-                #        listSorted.pop(54) #garden
-                #        listSorted.pop(49) #hippodrome
-                #        listSorted.pop(42) #seowon
-                #        listSorted.pop(36) #totem
-                #        listSorted.pop(5) #ikhanda
-                #        listSorted.pop(1) #dun
-                #Rhye - end
+		#	#listSorted.pop(67) #ziggurat
+		#	listSorted.pop(66) #rathaus
+		#	listSorted.pop(54) #garden
+		#	listSorted.pop(49) #hippodrome
+		#	listSorted.pop(42) #seowon
+		#	listSorted.pop(36) #totem
+		#	listSorted.pop(5) #ikhanda
+		#	listSorted.pop(1) #dun
+		#Rhye - end
 		#listSorted.sort() #Rhye
 		return listSorted
 

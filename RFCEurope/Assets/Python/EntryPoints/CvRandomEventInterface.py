@@ -692,7 +692,7 @@ def canApplyTsunami1(argsList):
 	player = gc.getPlayer(kTriggeredData.ePlayer)
 	city = player.getCity(kTriggeredData.iCityId)
 
-        #Rhye
+	#Rhye
 	return (city.getPopulation() < 2)
 	#return (city.getPopulation() < 6)
 
@@ -720,7 +720,7 @@ def applyTsunami2(argsList):
 	for iBuilding in range(gc.getNumBuildingInfos()):
 		if (city.getNumRealBuilding(iBuilding) > 0 and gc.getBuildingInfo(iBuilding).getProductionCost() > 0  and not isLimitedWonderClass(gc.getBuildingInfo(iBuilding).getBuildingClassType())):
 			listBuildings.append(iBuilding)
-        #Rhye
+	#Rhye
 	for i in range(2):
 	#for i in range(5):
 		if len(listBuildings) > 0:
@@ -737,9 +737,9 @@ def getHelpTsunami2(argsList):
 	player = gc.getPlayer(kTriggeredData.ePlayer)
 	city = player.getCity(kTriggeredData.iCityId)
 
-        #Rhye
+	#Rhye
 	szHelp = localText.getText("TXT_KEY_EVENT_TSUNAMI_2_HELP", (2, city.getNameKey()))
-        #szHelp = localText.getText("TXT_KEY_EVENT_TSUNAMI_2_HELP", (5, city.getNameKey()))
+	#szHelp = localText.getText("TXT_KEY_EVENT_TSUNAMI_2_HELP", (5, city.getNameKey()))
 
 	return szHelp
 

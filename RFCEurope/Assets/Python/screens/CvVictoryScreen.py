@@ -102,20 +102,20 @@ class CvVictoryScreen:
 
 		self.iScreen = VICTORY_CONDITION_SCREEN
 
-                self.X_UHV1 = 10
-                self.Y_UHV1 = 350
-                self.W_UHV1 = 1010
-                self.H_UHV1 = 120
+		self.X_UHV1 = 10
+		self.Y_UHV1 = 350
+		self.W_UHV1 = 1010
+		self.H_UHV1 = 120
 
-                self.X_UHV2 = 10
-                self.Y_UHV2 = 470
-                self.W_UHV2 = 1010
-                self.H_UHV2 = 120
+		self.X_UHV2 = 10
+		self.Y_UHV2 = 470
+		self.W_UHV2 = 1010
+		self.H_UHV2 = 120
 
-                self.X_UHV3 = 10
-                self.Y_UHV3 = 590
-                self.W_UHV3 = 1010
-                self.H_UHV3 = 120
+		self.X_UHV3 = 10
+		self.Y_UHV3 = 590
+		self.W_UHV3 = 1010
+		self.H_UHV3 = 120
 
 	def getScreen(self):
 		return CyGInterfaceScreen(self.SCREEN_NAME, self.screenId)
@@ -529,12 +529,12 @@ class CvVictoryScreen:
 
 				iNumRows = screen.getTableNumRows(szTable)
 
-                                szVictoryType = u"<font=4b>" + victory.getDescription().upper() + u"</font>"
-                                if (victory.isEndScore() and (gc.getGame().getMaxTurns() > gc.getGame().getElapsedGameTurns())):
-                                        szVictoryType += "    (" + localText.getText("TXT_KEY_MISC_TURNS_LEFT", (gc.getGame().getMaxTurns() - gc.getGame().getElapsedGameTurns(), )) + ")"
+				szVictoryType = u"<font=4b>" + victory.getDescription().upper() + u"</font>"
+				if (victory.isEndScore() and (gc.getGame().getMaxTurns() > gc.getGame().getElapsedGameTurns())):
+					szVictoryType += "    (" + localText.getText("TXT_KEY_MISC_TURNS_LEFT", (gc.getGame().getMaxTurns() - gc.getGame().getElapsedGameTurns(), )) + ")"
 
-                                iVictoryTitleRow = iNumRows - 1
-                                screen.setTableText(szTable, 0, iVictoryTitleRow, szVictoryType, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+				iVictoryTitleRow = iNumRows - 1
+				screen.setTableText(szTable, 0, iVictoryTitleRow, szVictoryType, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 
 				bSpaceshipFound = False
 				bEntriesFound = False
@@ -795,26 +795,26 @@ class CvVictoryScreen:
 							iRow = screen.appendTableRow(szTable)
 					bEntriesFound = True
 
-                                #Rhye - start # 3Miro: this should never get called
-                                #if (iLoopVC == 7):
-                                        #for i in range(3):
-                                                #iRow = screen.appendTableRow(szTable)
-                                                #screen.setTableText(szTable, 0, iRow, localText.getText(con.tGoals[self.iActivePlayer][i], ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-                                                #screen.setTableText(szTable, 2, iRow, localText.getText("TXT_KEY_VICTORY_SCREEN_ACCOMPLISHED", ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-                                                #if (utils.getGoal(self.iActivePlayer, i) == 1):
-                                                        #screen.setTableText(szTable, 3, iRow, localText.getText("TXT_KEY_VICTORY_SCREEN_YES", ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-                                                #elif (utils.getGoal(self.iActivePlayer, i) == 0):
-                                                        #screen.setTableText(szTable, 3, iRow, localText.getText("TXT_KEY_VICTORY_SCREEN_NO", ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-                                                #else:
-                                                        #screen.setTableText(szTable, 3, iRow, localText.getText("TXT_KEY_VICTORY_SCREEN_NOTYET", ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-                                        #bEntriesFound = True
-                                #Rhye - end
+				#Rhye - start # 3Miro: this should never get called
+				#if (iLoopVC == 7):
+					#for i in range(3):
+						#iRow = screen.appendTableRow(szTable)
+						#screen.setTableText(szTable, 0, iRow, localText.getText(con.tGoals[self.iActivePlayer][i], ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+						#screen.setTableText(szTable, 2, iRow, localText.getText("TXT_KEY_VICTORY_SCREEN_ACCOMPLISHED", ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+						#if (utils.getGoal(self.iActivePlayer, i) == 1):
+							#screen.setTableText(szTable, 3, iRow, localText.getText("TXT_KEY_VICTORY_SCREEN_YES", ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+						#elif (utils.getGoal(self.iActivePlayer, i) == 0):
+							#screen.setTableText(szTable, 3, iRow, localText.getText("TXT_KEY_VICTORY_SCREEN_NO", ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+						#else:
+							#screen.setTableText(szTable, 3, iRow, localText.getText("TXT_KEY_VICTORY_SCREEN_NOTYET", ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+					#bEntriesFound = True
+				#Rhye - end
 
 				if (bEntriesFound and (iLoopVC < 4)): # 3Miro: last one appends 2 rows
 					screen.appendTableRow(szTable)
 					screen.appendTableRow(szTable)
 
-                self.drawCleanerVictoryConditions()
+		self.drawCleanerVictoryConditions()
 
 		# civ picker dropdown
 		if (CyGame().isDebugMode()):
@@ -901,64 +901,64 @@ class CvVictoryScreen:
 		screen = self.getScreen()
 		pPlayer = gc.getPlayer(self.iActivePlayer)
 
-                # 3Miro: I don't undestand how strings in C++ and Python work. For some reason, I managed to get C++ to return a unicode string
-                #        just as it would on another alphabet. I had to "Typecast" the string to ASCII to get it to register in the text manager
+		# 3Miro: I don't undestand how strings in C++ and Python work. For some reason, I managed to get C++ to return a unicode string
+		#	just as it would on another alphabet. I had to "Typecast" the string to ASCII to get it to register in the text manager
 
-                # UHV 1
-                iGoal = pPlayer.getUHV( 0 )
-                if ( iGoal == -1 ):
-                        sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))) + localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),())
-                elif ( iGoal == 0 ):
-                        sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.UNHAPPY_CHAR))) + u"<color=208,0,0>%s</color>" %(localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),()))
-                else:
-                        #sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.STAR_CHAR)))
-                        sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.HAPPY_CHAR))) + u"<color=0,255,0>%s</color>" %(localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),()))
+		# UHV 1
+		iGoal = pPlayer.getUHV( 0 )
+		if ( iGoal == -1 ):
+			sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))) + localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),())
+		elif ( iGoal == 0 ):
+			sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.UNHAPPY_CHAR))) + u"<color=208,0,0>%s</color>" %(localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),()))
+		else:
+			#sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.STAR_CHAR)))
+			sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.HAPPY_CHAR))) + u"<color=0,255,0>%s</color>" %(localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),()))
 
-                szUHV1Area = self.UHV1_ID
-                screen.addPanel(self.UHV1_ID, "", "", True, True, self.X_UHV1, self.Y_UHV1, self.W_UHV1, self.H_UHV1, PanelStyles.PANEL_STYLE_MAIN)
+		szUHV1Area = self.UHV1_ID
+		screen.addPanel(self.UHV1_ID, "", "", True, True, self.X_UHV1, self.Y_UHV1, self.W_UHV1, self.H_UHV1, PanelStyles.PANEL_STYLE_MAIN)
 
-                # 3Miro: Add verbose information about the UHV Conditions:
-                bDisplayCounter = False
-                bCustomString = False
+		# 3Miro: Add verbose information about the UHV Conditions:
+		bDisplayCounter = False
+		bCustomString = False
 
-                if ( self.iActivePlayer == con.iFrankia ):
-                        sString += self.getProvinceString(vic.tFrankControl)
-                elif ( self.iActivePlayer == con.iArabia ):
-                        sString += self.getProvinceString(vic.tArabiaControlI)
-                elif ( self.iActivePlayer == con.iBulgaria ):
-                        sString += self.getProvinceString(vic.tBulgariaControl)
-                elif ( self.iActivePlayer == con.iVenecia ):
-                        sString += self.getProvinceString(vic.tVenetianControl)
-                elif ( self.iActivePlayer == con.iGermany ):
-                        sString += self.getProvinceString(vic.tGermanyControl)
-                elif ( self.iActivePlayer == con.iEngland ):
-                        sString += self.getProvinceString(vic.tEnglandControl)
-                elif ( self.iActivePlayer == con.iGenoa ):
-                        sString += self.getProvinceString(vic.tGenoaControl)
-                elif ( self.iActivePlayer == con.iAustria ):
-                        sString += self.getProvinceString(vic.tAustriaControl)
-                elif ( self.iActivePlayer == con.iTurkey ):
-                        sString += self.getProvinceString(vic.tOttomanControlI)
-                elif ( self.iActivePlayer == con.iMorocco ):
-                        sString += self.getProvinceString(vic.tMoroccoControl)
-                elif ( self.iActivePlayer == con.iNovgorod ):
-                        sString += self.getProvinceString(vic.tNovgorodControl)
-                elif ( self.iActivePlayer == con.iPrussia ):
-                        sString += self.getProvinceString(vic.tPrussiaControlI)
-                elif ( self.iActivePlayer == con.iAragon ):
-                        sString += self.getProvinceString(vic.tAragonControlI)
-                elif ( self.iActivePlayer == con.iDenmark ):
-                        sString += self.getProvinceString(vic.tDenmarkControlI)
-                elif ( self.iActivePlayer == con.iSweden ):
-                        bDisplayCounter = True
-                        iCounter = 0
-                        for iProv in vic.tSwedenControl:
-                                iCounter += gc.getPlayer(con.iSweden).getProvinceCityCount(iProv)
+		if ( self.iActivePlayer == con.iFrankia ):
+			sString += self.getProvinceString(vic.tFrankControl)
+		elif ( self.iActivePlayer == con.iArabia ):
+			sString += self.getProvinceString(vic.tArabiaControlI)
+		elif ( self.iActivePlayer == con.iBulgaria ):
+			sString += self.getProvinceString(vic.tBulgariaControl)
+		elif ( self.iActivePlayer == con.iVenecia ):
+			sString += self.getProvinceString(vic.tVenetianControl)
+		elif ( self.iActivePlayer == con.iGermany ):
+			sString += self.getProvinceString(vic.tGermanyControl)
+		elif ( self.iActivePlayer == con.iEngland ):
+			sString += self.getProvinceString(vic.tEnglandControl)
+		elif ( self.iActivePlayer == con.iGenoa ):
+			sString += self.getProvinceString(vic.tGenoaControl)
+		elif ( self.iActivePlayer == con.iAustria ):
+			sString += self.getProvinceString(vic.tAustriaControl)
+		elif ( self.iActivePlayer == con.iTurkey ):
+			sString += self.getProvinceString(vic.tOttomanControlI)
+		elif ( self.iActivePlayer == con.iMorocco ):
+			sString += self.getProvinceString(vic.tMoroccoControl)
+		elif ( self.iActivePlayer == con.iNovgorod ):
+			sString += self.getProvinceString(vic.tNovgorodControl)
+		elif ( self.iActivePlayer == con.iPrussia ):
+			sString += self.getProvinceString(vic.tPrussiaControlI)
+		elif ( self.iActivePlayer == con.iAragon ):
+			sString += self.getProvinceString(vic.tAragonControlI)
+		elif ( self.iActivePlayer == con.iDenmark ):
+			sString += self.getProvinceString(vic.tDenmarkControlI)
+		elif ( self.iActivePlayer == con.iSweden ):
+			bDisplayCounter = True
+			iCounter = 0
+			for iProv in vic.tSwedenControl:
+				iCounter += gc.getPlayer(con.iSweden).getProvinceCityCount(iProv)
 								
-                if ( bDisplayCounter ):
-                        sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_CURRENTLY",()) + ": %d" %(iCounter)
-                if ( bCustomString ):
-                        sString = sString + szCustom
+		if ( bDisplayCounter ):
+			sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_CURRENTLY",()) + ": %d" %(iCounter)
+		if ( bCustomString ):
+			sString = sString + szCustom
 
 		# not on the victory screen yet
 		## Scotland UHV 1: count the forts and castles
@@ -1017,52 +1017,52 @@ class CvVictoryScreen:
 			if not bOwn:
 				sString += "\n" + u" <color=208,0,0>%s%s</color>" %(localText.getText("TXT_KEY_UHV_CITY_NOT_OWNED",()), pConstantinople.getName())
 
-                screen.addMultilineText("Child" + self.UHV1_ID, sString, self.X_UHV1+6, self.Y_UHV1+14, self.W_UHV1-12, self.H_UHV1-26, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.addMultilineText("Child" + self.UHV1_ID, sString, self.X_UHV1+6, self.Y_UHV1+14, self.W_UHV1-12, self.H_UHV1-26, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 
-                # UHV 2
-                iGoal = pPlayer.getUHV( 1 )
-                if ( iGoal == -1 ):
-                        sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))) + localText.getText(pPlayer.getUHVDescription(1).encode('ascii', 'replace'),())
-                elif ( iGoal == 0 ):
-                        sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.UNHAPPY_CHAR))) + u"<color=208,0,0>%s</color>" %(localText.getText(pPlayer.getUHVDescription(1).encode('ascii', 'replace'),()))
-                else:
-                        #sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.STAR_CHAR)))
-                        sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.HAPPY_CHAR))) + u"<color=0,255,0>%s</color>" %(localText.getText(pPlayer.getUHVDescription(1).encode('ascii', 'replace'),()))
+		# UHV 2
+		iGoal = pPlayer.getUHV( 1 )
+		if ( iGoal == -1 ):
+			sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))) + localText.getText(pPlayer.getUHVDescription(1).encode('ascii', 'replace'),())
+		elif ( iGoal == 0 ):
+			sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.UNHAPPY_CHAR))) + u"<color=208,0,0>%s</color>" %(localText.getText(pPlayer.getUHVDescription(1).encode('ascii', 'replace'),()))
+		else:
+			#sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.STAR_CHAR)))
+			sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.HAPPY_CHAR))) + u"<color=0,255,0>%s</color>" %(localText.getText(pPlayer.getUHVDescription(1).encode('ascii', 'replace'),()))
 
-                szUHV2Area = self.UHV2_ID
-                screen.addPanel(self.UHV2_ID, "", "", True, True, self.X_UHV2, self.Y_UHV2, self.W_UHV2, self.H_UHV2, PanelStyles.PANEL_STYLE_MAIN)
+		szUHV2Area = self.UHV2_ID
+		screen.addPanel(self.UHV2_ID, "", "", True, True, self.X_UHV2, self.Y_UHV2, self.W_UHV2, self.H_UHV2, PanelStyles.PANEL_STYLE_MAIN)
 
-                bDisplayCounter = False
-                bCustomString = False
+		bDisplayCounter = False
+		bCustomString = False
 
-                if ( self.iActivePlayer == con.iByzantium ):
-                        sString += self.getProvinceString(vic.tByzantumControl)
-                elif ( self.iActivePlayer == con.iArabia ):
-                        sString += self.getProvinceString(vic.tArabiaControlII)
-                elif ( self.iActivePlayer == con.iKiev ):
-                        sString += self.getProvinceString(vic.tKievControl)
-                elif ( self.iActivePlayer == con.iNorway ):
-                        sString += self.getProvinceString(vic.tNorwayControl)
-                        bCustomString = True
-                        szCustom = "\n"
-                        if (gc.getPlayer(con.iNorway).getNumColonies() >= 1):
-                                szCustom = szCustom + localText.getText("TXT_KEY_PROJECT_VINLAND",()) + ":  " + u"<color=0,255,0>%s</color>" %localText.getText("TXT_KEY_UHV_EXPLORED",())
-                        else:
-                                szCustom = szCustom + localText.getText("TXT_KEY_PROJECT_VINLAND",()) + ":  " + u"<color=208,0,0>%s</color>" %localText.getText("TXT_KEY_UHV_NOT_EXPLORED",())
-                elif ( self.iActivePlayer == con.iBurgundy ):
-                        sString += self.getProvinceString(vic.tBurgundyControl)
-                #elif ( self.iActivePlayer == con.iNorway ):
-               #         sString += self.getProvinceString(vic.tNorwayControl)
-                elif ( self.iActivePlayer == con.iTurkey ):
-                        sString += self.getProvinceString(vic.tOttomanControlII)
-                elif ( self.iActivePlayer == con.iNovgorod ):
-                        bDisplayCounter = True
-                        iCounter = gc.getPlayer(con.iNovgorod).countOwnedBonuses(xml.iFur)
-                elif ( self.iActivePlayer == con.iSweden ):
-                        bDisplayCounter = True
-                        iCounter = gc.getPlayer(con.iSweden).getUHVCounter(1)
-                elif ( self.iActivePlayer == con.iDenmark ):
-                        sString += self.getProvinceString(vic.tDenmarkControlIII)
+		if ( self.iActivePlayer == con.iByzantium ):
+			sString += self.getProvinceString(vic.tByzantumControl)
+		elif ( self.iActivePlayer == con.iArabia ):
+			sString += self.getProvinceString(vic.tArabiaControlII)
+		elif ( self.iActivePlayer == con.iKiev ):
+			sString += self.getProvinceString(vic.tKievControl)
+		elif ( self.iActivePlayer == con.iNorway ):
+			sString += self.getProvinceString(vic.tNorwayControl)
+			bCustomString = True
+			szCustom = "\n"
+			if (gc.getPlayer(con.iNorway).getNumColonies() >= 1):
+				szCustom = szCustom + localText.getText("TXT_KEY_PROJECT_VINLAND",()) + ":  " + u"<color=0,255,0>%s</color>" %localText.getText("TXT_KEY_UHV_EXPLORED",())
+			else:
+				szCustom = szCustom + localText.getText("TXT_KEY_PROJECT_VINLAND",()) + ":  " + u"<color=208,0,0>%s</color>" %localText.getText("TXT_KEY_UHV_NOT_EXPLORED",())
+		elif ( self.iActivePlayer == con.iBurgundy ):
+			sString += self.getProvinceString(vic.tBurgundyControl)
+		#elif ( self.iActivePlayer == con.iNorway ):
+	       #	 sString += self.getProvinceString(vic.tNorwayControl)
+		elif ( self.iActivePlayer == con.iTurkey ):
+			sString += self.getProvinceString(vic.tOttomanControlII)
+		elif ( self.iActivePlayer == con.iNovgorod ):
+			bDisplayCounter = True
+			iCounter = gc.getPlayer(con.iNovgorod).countOwnedBonuses(xml.iFur)
+		elif ( self.iActivePlayer == con.iSweden ):
+			bDisplayCounter = True
+			iCounter = gc.getPlayer(con.iSweden).getUHVCounter(1)
+		elif ( self.iActivePlayer == con.iDenmark ):
+			sString += self.getProvinceString(vic.tDenmarkControlIII)
 		elif ( self.iActivePlayer == con.iPrussia ):
 			bCustomString = True
 			szCustom = "\n\n"
@@ -1079,15 +1079,15 @@ class CvVictoryScreen:
 				else:
 					szCustom = szCustom + "  " + u"<color=0,255,0>%s:%s</color>" %(pVictim.getCivilizationShortDescription(0), szNumConq)
 
-                if ( bDisplayCounter ):
-                        sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_CURRENTLY",()) + ": %d" %(iCounter)
-                if ( bCustomString ):
-                        sString = sString + szCustom
+		if ( bDisplayCounter ):
+			sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_CURRENTLY",()) + ": %d" %(iCounter)
+		if ( bCustomString ):
+			sString = sString + szCustom
 
-                if self.iActivePlayer == con.iEngland:
-                        sString += self.getNumColoniesString(self.iActivePlayer, 8)
-                elif self.iActivePlayer == con.iDutch:
-                        sString += self.getNumColoniesString(self.iActivePlayer, 5)
+		if self.iActivePlayer == con.iEngland:
+			sString += self.getNumColoniesString(self.iActivePlayer, 8)
+		elif self.iActivePlayer == con.iDutch:
+			sString += self.getNumColoniesString(self.iActivePlayer, 5)
 
 		## Aragon UHV 2: count the seaports
 		#if ( self.iActivePlayer == con.iAragon ):
@@ -1113,34 +1113,34 @@ class CvVictoryScreen:
 				sSeaport = sSeaport + u" <color=208,0,0>%i</color>" %(iSeaport)
 			sString = sString + "\n\n" + sSeaport
 
-                if (self.iActivePlayer == con.iFrankia):
-                        pJPlot = gc.getMap().plot( con.iJerusalem[0], con.iJerusalem[1] )
-                        if ( pJPlot.isCity()):
-                                iOwner = pJPlot.getPlotCity().getOwner()
-                                pOwner = gc.getPlayer(iOwner)
-                                if iOwner == con.iFrankia:
-                                        sString += "\n\n" + localText.getText("TXT_KEY_UHV_FRA2_HELP",()) + u" <color=0,255,0>%s</color>" % ( pOwner.getName() )
-                                else:
-                                        sString += "\n\n" + localText.getText("TXT_KEY_UHV_FRA2_HELP",()) + u" <color=208,0,0>%s</color>" % ( pOwner.getName() )
-                        else:
-                                sString += "\n\n" + u" <color=208,0,0>%s</color>" % ( localText.getText("TXT_KEY_UHV_CITY_NOT_EXIT",(localText.getText("TXT_KEY_UHV_JERUSALEM"),()) ))
+		if (self.iActivePlayer == con.iFrankia):
+			pJPlot = gc.getMap().plot( con.iJerusalem[0], con.iJerusalem[1] )
+			if ( pJPlot.isCity()):
+				iOwner = pJPlot.getPlotCity().getOwner()
+				pOwner = gc.getPlayer(iOwner)
+				if iOwner == con.iFrankia:
+					sString += "\n\n" + localText.getText("TXT_KEY_UHV_FRA2_HELP",()) + u" <color=0,255,0>%s</color>" % ( pOwner.getName() )
+				else:
+					sString += "\n\n" + localText.getText("TXT_KEY_UHV_FRA2_HELP",()) + u" <color=208,0,0>%s</color>" % ( pOwner.getName() )
+			else:
+				sString += "\n\n" + u" <color=208,0,0>%s</color>" % ( localText.getText("TXT_KEY_UHV_CITY_NOT_EXIT",(localText.getText("TXT_KEY_UHV_JERUSALEM"),()) ))
 
-                # The Polish UHV 2: count the cities
-                if ( self.iActivePlayer == con.iPoland ):
-                        pPoland = gc.getPlayer( con.iPoland )
-                        tProvsToCheck = vic.tPolishControl
-                        iNumCities = 0
-                        for iProv in tProvsToCheck:
-                                iNumCities += pPoland.getProvinceCityCount( iProv )
+		# The Polish UHV 2: count the cities
+		if ( self.iActivePlayer == con.iPoland ):
+			pPoland = gc.getPlayer( con.iPoland )
+			tProvsToCheck = vic.tPolishControl
+			iNumCities = 0
+			for iProv in tProvsToCheck:
+				iNumCities += pPoland.getProvinceCityCount( iProv )
 
-                        if ( iNumCities < 10 ):
-                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_CITIES_CONTROLLED",()) + u" <color=208,0,0>%i</color>" %(iNumCities)
-                        elif ( iNumCities < 12 ):
-                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_CITIES_CONTROLLED",()) + u" <color=255,250,0>%i</color>" %(iNumCities)
-                        else:
-                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_CITIES_CONTROLLED",()) + u" <color=0,255,0>%i</color>" %(iNumCities)
+			if ( iNumCities < 10 ):
+				sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_CITIES_CONTROLLED",()) + u" <color=208,0,0>%i</color>" %(iNumCities)
+			elif ( iNumCities < 12 ):
+				sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_CITIES_CONTROLLED",()) + u" <color=255,250,0>%i</color>" %(iNumCities)
+			else:
+				sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_CITIES_CONTROLLED",()) + u" <color=0,255,0>%i</color>" %(iNumCities)
 
-                screen.addMultilineText("Child" + self.UHV2_ID, sString, self.X_UHV2+6, self.Y_UHV2+14, self.W_UHV2-12, self.H_UHV2-26, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.addMultilineText("Child" + self.UHV2_ID, sString, self.X_UHV2+6, self.Y_UHV2+14, self.W_UHV2-12, self.H_UHV2-26, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 				
 		if ( self.iActivePlayer == con.iMorocco ):
 			victory = gc.getVictoryInfo(4) #Cultural victory
@@ -1155,180 +1155,180 @@ class CvVictoryScreen:
 			screen.addMultilineText("Child" + self.UHV2_ID, sString, self.X_UHV2+6, self.Y_UHV2+14, self.W_UHV2-12, self.H_UHV2-26, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 			
 
-                # UHV 3
-                iGoal = pPlayer.getUHV( 2 )
-                if ( iGoal == -1 ):
-                        sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))) + localText.getText(pPlayer.getUHVDescription(2).encode('ascii', 'replace'),())
-                elif ( iGoal == 0 ):
-                        sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.UNHAPPY_CHAR))) + u"<color=208,0,0>%s</color>" %(localText.getText(pPlayer.getUHVDescription(2).encode('ascii', 'replace'),()))
-                else:
-                        #sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.STAR_CHAR)))
-                        sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.HAPPY_CHAR))) + u"<color=0,255,0>%s</color>" %(localText.getText(pPlayer.getUHVDescription(2).encode('ascii', 'replace'),()))
+		# UHV 3
+		iGoal = pPlayer.getUHV( 2 )
+		if ( iGoal == -1 ):
+			sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))) + localText.getText(pPlayer.getUHVDescription(2).encode('ascii', 'replace'),())
+		elif ( iGoal == 0 ):
+			sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.UNHAPPY_CHAR))) + u"<color=208,0,0>%s</color>" %(localText.getText(pPlayer.getUHVDescription(2).encode('ascii', 'replace'),()))
+		else:
+			#sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.STAR_CHAR)))
+			sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.HAPPY_CHAR))) + u"<color=0,255,0>%s</color>" %(localText.getText(pPlayer.getUHVDescription(2).encode('ascii', 'replace'),()))
 
-                szUHV3Area = self.UHV3_ID
-                screen.addPanel(self.UHV3_ID, "", "", True, True, self.X_UHV3, self.Y_UHV3, self.W_UHV3, self.H_UHV3, PanelStyles.PANEL_STYLE_MAIN)
+		szUHV3Area = self.UHV3_ID
+		screen.addPanel(self.UHV3_ID, "", "", True, True, self.X_UHV3, self.Y_UHV3, self.W_UHV3, self.H_UHV3, PanelStyles.PANEL_STYLE_MAIN)
 
-                bDisplayCounter = False
-                bCustomString = False
+		bDisplayCounter = False
+		bCustomString = False
 
-                if ( self.iActivePlayer == con.iGermany ):
-                        sString += self.getProvinceString(vic.tGermanyControlII)
-                elif ( self.iActivePlayer == con.iTurkey ):
-                        sString += self.getProvinceString(vic.tOttomanControlIII)
-                elif ( self.iActivePlayer == con.iScotland ):
-                        sString += self.getProvinceString(vic.tScotlandControl)
-                elif ( self.iActivePlayer == con.iAragon ):
-                        sString += self.getProvinceString(vic.tAragonControlII)
-                elif (self.iActivePlayer == con.iPrussia):
-                        bDisplayCounter = True
-                        pCapital = gc.getPlayer(con.iPrussia).getCapitalCity()
-                        iGPStart = CvUtil.findInfoTypeNum(gc.getSpecialistInfo, gc.getNumSpecialistInfos(), "SPECIALIST_GREAT_PRIEST")
-                        iGPEnd = CvUtil.findInfoTypeNum(gc.getSpecialistInfo, gc.getNumSpecialistInfos(), "SPECIALIST_GREAT_SPY")
-                        iCounter = 0
-                        for iType in range(iGPStart, iGPEnd+1):
-                                iCounter += pCapital.getFreeSpecialistCount(iType)
-                elif (self.iActivePlayer == con.iSweden):
-                        bDisplayCounter = True
-                        iCounter = up.getNumForeignCitiesOnBaltic(con.iSweden, True)
-                        bCustomString = True
-                        szCustom = " " + localText.getText("TXT_KEY_UHV_BALTIC_CITIES",())
+		if ( self.iActivePlayer == con.iGermany ):
+			sString += self.getProvinceString(vic.tGermanyControlII)
+		elif ( self.iActivePlayer == con.iTurkey ):
+			sString += self.getProvinceString(vic.tOttomanControlIII)
+		elif ( self.iActivePlayer == con.iScotland ):
+			sString += self.getProvinceString(vic.tScotlandControl)
+		elif ( self.iActivePlayer == con.iAragon ):
+			sString += self.getProvinceString(vic.tAragonControlII)
+		elif (self.iActivePlayer == con.iPrussia):
+			bDisplayCounter = True
+			pCapital = gc.getPlayer(con.iPrussia).getCapitalCity()
+			iGPStart = CvUtil.findInfoTypeNum(gc.getSpecialistInfo, gc.getNumSpecialistInfos(), "SPECIALIST_GREAT_PRIEST")
+			iGPEnd = CvUtil.findInfoTypeNum(gc.getSpecialistInfo, gc.getNumSpecialistInfos(), "SPECIALIST_GREAT_SPY")
+			iCounter = 0
+			for iType in range(iGPStart, iGPEnd+1):
+				iCounter += pCapital.getFreeSpecialistCount(iType)
+		elif (self.iActivePlayer == con.iSweden):
+			bDisplayCounter = True
+			iCounter = up.getNumForeignCitiesOnBaltic(con.iSweden, True)
+			bCustomString = True
+			szCustom = " " + localText.getText("TXT_KEY_UHV_BALTIC_CITIES",())
 
-                if ( bDisplayCounter ):
-                        sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_CURRENTLY",()) + ": %d" %(iCounter)
-                if ( bCustomString ):
-                        sString = sString + szCustom
+		if ( bDisplayCounter ):
+			sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_CURRENTLY",()) + ": %d" %(iCounter)
+		if ( bCustomString ):
+			sString = sString + szCustom
 						
-                if self.iActivePlayer == con.iFrankia:
-                        sString += self.getNumColoniesString(self.iActivePlayer, 6)
-                elif self.iActivePlayer == con.iDenmark:
-                        sString += self.getNumColoniesString(self.iActivePlayer, 5)
-                elif self.iActivePlayer == con.iPortugal:
-                        sString += self.getNumColoniesString(self.iActivePlayer, 6)
+		if self.iActivePlayer == con.iFrankia:
+			sString += self.getNumColoniesString(self.iActivePlayer, 6)
+		elif self.iActivePlayer == con.iDenmark:
+			sString += self.getNumColoniesString(self.iActivePlayer, 5)
+		elif self.iActivePlayer == con.iPortugal:
+			sString += self.getNumColoniesString(self.iActivePlayer, 6)
 
-                # Polish UHV 3: count cathedrals and quarters
-                if ( self.iActivePlayer == con.iPoland ):
-                        iCounter = pPlayer.getUHVCounter( 2 )
-                        iCathCath = ( iCounter / 10000 ) % 10
-                        iOrthCath = ( iCounter / 1000 ) % 10
-                        iProtCath = ( iCounter / 100 ) % 10
-                        iJewishQu = iCounter % 100
-                        sCathCath = localText.getText("TXT_KEY_BUILDING_CATHOLIC_CATHEDRAL",()) + ": "
-                        sOrthCath = localText.getText("TXT_KEY_BUILDING_ORTHODOX_CATHEDRAL",()) + ": "
-                        sProtCath = localText.getText("TXT_KEY_BUILDING_PROTESTANT_CATHEDRAL",()) + ": "
-                        sJewishQu = localText.getText("TXT_KEY_BUILDING_JEWISH_QUARTER",()) + ": "
-                        if ( iCathCath >= 3 ):
-                                sCathCath = sCathCath + u" <color=0,255,0>%i</color>" %(iCathCath)
-                        elif ( iCathCath > 0 ):
-                                sCathCath = sCathCath + u" <color=255,250,0>%i</color>" %(iCathCath)
-                        else:
-                                sCathCath = sCathCath + u" <color=208,0,0>%i</color>" %(iCathCath)
-                        if ( iOrthCath >= 3 ):
-                                sOrthCath = sOrthCath + u" <color=0,255,0>%i</color>" %(iOrthCath)
-                        elif ( iOrthCath > 0 ):
-                                sOrthCath = sOrthCath + u" <color=255,250,0>%i</color>" %(iOrthCath)
-                        else:
-                                sOrthCath = sOrthCath + u" <color=208,0,0>%i</color>" %(iOrthCath)
-                        if ( iProtCath >= 2 ):
-                                sProtCath = sProtCath + u" <color=0,255,0>%i</color>" %(iProtCath)
-                        elif ( iProtCath > 0 ):
-                                sProtCath = sProtCath + u" <color=255,250,0>%i</color>" %(iProtCath)
-                        else:
-                                sProtCath = sProtCath + u" <color=208,0,0>%i</color>" %(iProtCath)
-                        if ( iJewishQu == 99 ):
-                                sKazimierzWonder = localText.getText("TXT_KEY_BUILDING_KAZIMIERZ",())
-                                sJewishQu = sJewishQu + u" <color=0,255,0>%s</color>" %(sKazimierzWonder)
-                        elif ( iJewishQu >= 2 ):
-                                sJewishQu = sJewishQu + u" <color=0,255,0>%i</color>" %(iJewishQu)
-                        elif ( iJewishQu > 0 ):
-                                sJewishQu = sJewishQu + u" <color=255,250,0>%i</color>" %(iJewishQu)
-                        else:
-                                sJewishQu = sJewishQu + u" <color=208,0,0>%i</color>" %(iJewishQu)
-                        sString = sString + "\n\n" + sCathCath + "   " + sOrthCath + "   " + sProtCath + "   " + sJewishQu
+		# Polish UHV 3: count cathedrals and quarters
+		if ( self.iActivePlayer == con.iPoland ):
+			iCounter = pPlayer.getUHVCounter( 2 )
+			iCathCath = ( iCounter / 10000 ) % 10
+			iOrthCath = ( iCounter / 1000 ) % 10
+			iProtCath = ( iCounter / 100 ) % 10
+			iJewishQu = iCounter % 100
+			sCathCath = localText.getText("TXT_KEY_BUILDING_CATHOLIC_CATHEDRAL",()) + ": "
+			sOrthCath = localText.getText("TXT_KEY_BUILDING_ORTHODOX_CATHEDRAL",()) + ": "
+			sProtCath = localText.getText("TXT_KEY_BUILDING_PROTESTANT_CATHEDRAL",()) + ": "
+			sJewishQu = localText.getText("TXT_KEY_BUILDING_JEWISH_QUARTER",()) + ": "
+			if ( iCathCath >= 3 ):
+				sCathCath = sCathCath + u" <color=0,255,0>%i</color>" %(iCathCath)
+			elif ( iCathCath > 0 ):
+				sCathCath = sCathCath + u" <color=255,250,0>%i</color>" %(iCathCath)
+			else:
+				sCathCath = sCathCath + u" <color=208,0,0>%i</color>" %(iCathCath)
+			if ( iOrthCath >= 3 ):
+				sOrthCath = sOrthCath + u" <color=0,255,0>%i</color>" %(iOrthCath)
+			elif ( iOrthCath > 0 ):
+				sOrthCath = sOrthCath + u" <color=255,250,0>%i</color>" %(iOrthCath)
+			else:
+				sOrthCath = sOrthCath + u" <color=208,0,0>%i</color>" %(iOrthCath)
+			if ( iProtCath >= 2 ):
+				sProtCath = sProtCath + u" <color=0,255,0>%i</color>" %(iProtCath)
+			elif ( iProtCath > 0 ):
+				sProtCath = sProtCath + u" <color=255,250,0>%i</color>" %(iProtCath)
+			else:
+				sProtCath = sProtCath + u" <color=208,0,0>%i</color>" %(iProtCath)
+			if ( iJewishQu == 99 ):
+				sKazimierzWonder = localText.getText("TXT_KEY_BUILDING_KAZIMIERZ",())
+				sJewishQu = sJewishQu + u" <color=0,255,0>%s</color>" %(sKazimierzWonder)
+			elif ( iJewishQu >= 2 ):
+				sJewishQu = sJewishQu + u" <color=0,255,0>%i</color>" %(iJewishQu)
+			elif ( iJewishQu > 0 ):
+				sJewishQu = sJewishQu + u" <color=255,250,0>%i</color>" %(iJewishQu)
+			else:
+				sJewishQu = sJewishQu + u" <color=208,0,0>%i</color>" %(iJewishQu)
+			sString = sString + "\n\n" + sCathCath + "   " + sOrthCath + "   " + sProtCath + "   " + sJewishQu
 
-                ### Add New Spanish UHV
-                if ( self.iActivePlayer == con.iSpain ):
-                        lLand = [ 0, 0, 0, 0, 0, 0 ] # Prot, Islam, Cath, Orth, Jew, Pagan
-                        lPop  = [ 0, 0, 0, 0, 0, 0 ]
-                        for iPlayer in range( con.iNumPlayers ):
-                                pPlayer = gc.getPlayer( iPlayer )
-                                iStateReligion = pPlayer.getStateReligion()
-                                if ( iStateReligion > -1 ):
-                                        lLand[ iStateReligion ] += pPlayer.getTotalLand()
-                                        lPop[ iStateReligion ] += pPlayer.getTotalPopulation()
-                                else:
-                                        lLand[ 5 ] += pPlayer.getTotalLand()
-                                        lPop[ 5 ] += pPlayer.getTotalPopulation()
+		### Add New Spanish UHV
+		if ( self.iActivePlayer == con.iSpain ):
+			lLand = [ 0, 0, 0, 0, 0, 0 ] # Prot, Islam, Cath, Orth, Jew, Pagan
+			lPop  = [ 0, 0, 0, 0, 0, 0 ]
+			for iPlayer in range( con.iNumPlayers ):
+				pPlayer = gc.getPlayer( iPlayer )
+				iStateReligion = pPlayer.getStateReligion()
+				if ( iStateReligion > -1 ):
+					lLand[ iStateReligion ] += pPlayer.getTotalLand()
+					lPop[ iStateReligion ] += pPlayer.getTotalPopulation()
+				else:
+					lLand[ 5 ] += pPlayer.getTotalLand()
+					lPop[ 5 ] += pPlayer.getTotalPopulation()
 
-                        iBestLand = xml.iCatholicism
-                        iBestPop = xml.iCatholicism
+			iBestLand = xml.iCatholicism
+			iBestPop = xml.iCatholicism
 
-                        for iReligion in range( xml.iNumReligions + 1 ):
-                                if ( iReligion != xml.iCatholicism ):
-                                        if ( lLand[ iReligion ] > lLand[ iBestLand ] ):
-                                                iBestLand = iReligion
-                                        if ( lPop[ iReligion ] > lPop[ iBestPop ] ):
-                                                iBestPop = iReligion
+			for iReligion in range( xml.iNumReligions + 1 ):
+				if ( iReligion != xml.iCatholicism ):
+					if ( lLand[ iReligion ] > lLand[ iBestLand ] ):
+						iBestLand = iReligion
+					if ( lPop[ iReligion ] > lPop[ iBestPop ] ):
+						iBestPop = iReligion
 
-                        if ( iBestLand == 5 ):
-                                sBestR = localText.getText("TXT_KEY_UHV_PAGAN",())
-                        else:
-                                sBestR = localText.getText( gc.getReligionInfo(iBestLand).getAdjectiveKey().encode('ascii', 'replace'), () )
-                        if ( iBestLand == xml.iCatholicism ):
-                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_MOST_LAND",()) + u" <color=0,255,0>%s</color>" %(sBestR)
-                        else:
-                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_MOST_LAND",()) + u" <color=208,0,0>%s</color>" %(sBestR)
+			if ( iBestLand == 5 ):
+				sBestR = localText.getText("TXT_KEY_UHV_PAGAN",())
+			else:
+				sBestR = localText.getText( gc.getReligionInfo(iBestLand).getAdjectiveKey().encode('ascii', 'replace'), () )
+			if ( iBestLand == xml.iCatholicism ):
+				sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_MOST_LAND",()) + u" <color=0,255,0>%s</color>" %(sBestR)
+			else:
+				sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_MOST_LAND",()) + u" <color=208,0,0>%s</color>" %(sBestR)
 
-                        if ( iBestPop == 5 ):
-                                sBestR = localText.getText("TXT_KEY_UHV_PAGAN",())
-                        else:
-                                sBestR = localText.getText( gc.getReligionInfo(iBestPop).getAdjectiveKey().encode('ascii', 'replace'), () )
-                        if ( iBestPop == xml.iCatholicism ):
-                                sString = sString + "\n" + localText.getText("TXT_KEY_UHV_MOST_POPULATION",()) + u" <color=0,255,0>%s</color>" %(sBestR)
-                        else:
-                                sString = sString + "\n" + localText.getText("TXT_KEY_UHV_MOST_POPULATION",()) + u" <color=208,0,0>%s</color>" %(sBestR)
+			if ( iBestPop == 5 ):
+				sBestR = localText.getText("TXT_KEY_UHV_PAGAN",())
+			else:
+				sBestR = localText.getText( gc.getReligionInfo(iBestPop).getAdjectiveKey().encode('ascii', 'replace'), () )
+			if ( iBestPop == xml.iCatholicism ):
+				sString = sString + "\n" + localText.getText("TXT_KEY_UHV_MOST_POPULATION",()) + u" <color=0,255,0>%s</color>" %(sBestR)
+			else:
+				sString = sString + "\n" + localText.getText("TXT_KEY_UHV_MOST_POPULATION",()) + u" <color=208,0,0>%s</color>" %(sBestR)
 
-                ### Add New Genoa UHV
-                if ( self.iActivePlayer == con.iGenoa ):
-                        iMostTrade = 0
-                        iBiggestTrader = -1
-                        for iPlayer in range( con.iNumPlayers ):
-                                pPlayer = gc.getPlayer( iPlayer )
-                                iTrade = pPlayer.calculateTotalImports(YieldTypes.YIELD_COMMERCE) + pPlayer.calculateTotalExports(YieldTypes.YIELD_COMMERCE)
-                                if ( iTrade > iMostTrade ):
-                                       iMostTrade = iTrade
-                                       iBiggestTrader = iPlayer
+		### Add New Genoa UHV
+		if ( self.iActivePlayer == con.iGenoa ):
+			iMostTrade = 0
+			iBiggestTrader = -1
+			for iPlayer in range( con.iNumPlayers ):
+				pPlayer = gc.getPlayer( iPlayer )
+				iTrade = pPlayer.calculateTotalImports(YieldTypes.YIELD_COMMERCE) + pPlayer.calculateTotalExports(YieldTypes.YIELD_COMMERCE)
+				if ( iTrade > iMostTrade ):
+				       iMostTrade = iTrade
+				       iBiggestTrader = iPlayer
 
-                        pBestTrader = gc.getPlayer( iBiggestTrader )
-                        if ( iBiggestTrader == con.iGenoa ):
-                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_BIGGEST_TRADER",()) + u" <color=0,255,0>%s</color>" %(pBestTrader.getName())
-                        else:
-                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_BIGGEST_TRADER",()) + u" <color=208,0,0>%s</color>" %(pBestTrader.getName())
+			pBestTrader = gc.getPlayer( iBiggestTrader )
+			if ( iBiggestTrader == con.iGenoa ):
+				sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_BIGGEST_TRADER",()) + u" <color=0,255,0>%s</color>" %(pBestTrader.getName())
+			else:
+				sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_BIGGEST_TRADER",()) + u" <color=208,0,0>%s</color>" %(pBestTrader.getName())
 
-                ### Add Dutch and Byzantium UHV
-                if ( self.iActivePlayer == con.iDutch or self.iActivePlayer == con.iByzantium ):
-                        iGold = 0
-                        iPlayer = -1
-                        for iCiv in range( con.iNumPlayers ):
-                                if ( gc.getPlayer( iCiv ).isAlive() ):
-                                        if (gc.getPlayer(iCiv).getGold() > iGold):
-                                                iGold = gc.getPlayer(iCiv).getGold()
-                                                iPlayer = iCiv
-                        pPlayer = gc.getPlayer( iPlayer )
-                        if ( iPlayer == self.iActivePlayer ):
-                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_RICHEST_NATION",()) + u" <color=0,255,0>%s</color>" %(pPlayer.getName())
-                        else:
-                                sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_RICHEST_NATION",()) + u" <color=208,0,0>%s</color>" %(pPlayer.getName()) + " (%d)" %pPlayer.getGold()
+		### Add Dutch and Byzantium UHV
+		if ( self.iActivePlayer == con.iDutch or self.iActivePlayer == con.iByzantium ):
+			iGold = 0
+			iPlayer = -1
+			for iCiv in range( con.iNumPlayers ):
+				if ( gc.getPlayer( iCiv ).isAlive() ):
+					if (gc.getPlayer(iCiv).getGold() > iGold):
+						iGold = gc.getPlayer(iCiv).getGold()
+						iPlayer = iCiv
+			pPlayer = gc.getPlayer( iPlayer )
+			if ( iPlayer == self.iActivePlayer ):
+				sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_RICHEST_NATION",()) + u" <color=0,255,0>%s</color>" %(pPlayer.getName())
+			else:
+				sString = sString + "\n\n" + localText.getText("TXT_KEY_UHV_RICHEST_NATION",()) + u" <color=208,0,0>%s</color>" %(pPlayer.getName()) + " (%d)" %pPlayer.getGold()
 								
-                if (self.iActivePlayer == con.iArabia):
-                        iPerc = gc.getGame().calculateReligionPercent( xml.iIslam )
-                        sString += "\n\n" + localText.getText("TXT_KEY_UHV_ISLAM",()) + ": " + self.determineColor(iPerc > 35, str(iPerc)) + " %"
-                        #if iPerc >= 35:
-                        #        sString += "\n\n" + localText.getText("TXT_KEY_UHV_ISLAM",()) + ": " + u" <color=0,255,0>%i</color>" %(iPerc) + " %"
-                        #else:
-                        #        sString += "\n\n" + localText.getText("TXT_KEY_UHV_ISLAM",()) + ": " + u" <color=208,0,0>%i</color>" %(iPerc) + " %"
+		if (self.iActivePlayer == con.iArabia):
+			iPerc = gc.getGame().calculateReligionPercent( xml.iIslam )
+			sString += "\n\n" + localText.getText("TXT_KEY_UHV_ISLAM",()) + ": " + self.determineColor(iPerc > 35, str(iPerc)) + " %"
+			#if iPerc >= 35:
+			#	sString += "\n\n" + localText.getText("TXT_KEY_UHV_ISLAM",()) + ": " + u" <color=0,255,0>%i</color>" %(iPerc) + " %"
+			#else:
+			#	sString += "\n\n" + localText.getText("TXT_KEY_UHV_ISLAM",()) + ": " + u" <color=208,0,0>%i</color>" %(iPerc) + " %"
 			
 			
-                screen.addMultilineText("Child" + self.UHV3_ID, sString, self.X_UHV3+6, self.Y_UHV3+14, self.W_UHV3-12, self.H_UHV3-26, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		screen.addMultilineText("Child" + self.UHV3_ID, sString, self.X_UHV3+6, self.Y_UHV3+14, self.W_UHV3-12, self.H_UHV3-26, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
  
 					
 				

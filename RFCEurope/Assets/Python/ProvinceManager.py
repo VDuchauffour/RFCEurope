@@ -496,44 +496,44 @@ class ProvinceManager:
 	def onCityRazed(self, iOwner, playerType, city):
 		pass
 
-        def onRespawn(self, iPlayer ):
-                # reset the provinces
-                pPlayer = self.tpPlayerList[iPlayer]
-                for iProv in self.tCoreProvinces[iPlayer]:
-                        pPlayer.setProvinceType( iProv, iProvinceCore )
-                for iProv in self.tNormProvinces[iPlayer]:
-                        pPlayer.setProvinceType( iProv, iProvinceNatural)
-                for iProv in self.tOuterProvinces[iPlayer]:
-                        pPlayer.setProvinceType( iProv, iProvinceOuter )
-                for iProv in self.tPot2CoreProvinces[iPlayer]:
-                        pPlayer.setProvinceType( iProv, iProvincePotential )
-                for iProv in self.tPot2NormProvinces[iPlayer]:
-                        pPlayer.setProvinceType( iProv, iProvincePotential )
+	def onRespawn(self, iPlayer ):
+		# reset the provinces
+		pPlayer = self.tpPlayerList[iPlayer]
+		for iProv in self.tCoreProvinces[iPlayer]:
+			pPlayer.setProvinceType( iProv, iProvinceCore )
+		for iProv in self.tNormProvinces[iPlayer]:
+			pPlayer.setProvinceType( iProv, iProvinceNatural)
+		for iProv in self.tOuterProvinces[iPlayer]:
+			pPlayer.setProvinceType( iProv, iProvinceOuter )
+		for iProv in self.tPot2CoreProvinces[iPlayer]:
+			pPlayer.setProvinceType( iProv, iProvincePotential )
+		for iProv in self.tPot2NormProvinces[iPlayer]:
+			pPlayer.setProvinceType( iProv, iProvincePotential )
 
-                #### -------- Special Respawn Conditions ---------- ####
-                if ( iPlayer == iArabia ):
-                        for iProv in range( xml.iP_MaxNumberOfProvinces ):
-                                pArabia.setProvinceType( iProv, iProvinceNone )
-                        for iProv in self.tCoreProvinces[iPlayer]:
-                                pArabia.setProvinceType( iProv, iProvinceCore )
-                        for iProv in self.tNormProvinces[iPlayer]:
-                                pArabia.setProvinceType( iProv, iProvinceNatural)
-                        for iProv in self.tOuterProvinces[iPlayer]:
-                                pArabia.setProvinceType( iProv, iProvinceOuter )
-                        for iProv in self.tPot2CoreProvinces[iPlayer]:
-                                pArabia.setProvinceType( iProv, iProvincePotential )
-                        for iProv in self.tPot2NormProvinces[iPlayer]:
-                                pArabia.setProvinceType( iProv, iProvincePotential )
-                elif ( iPlayer == iCordoba ):
-                        for iProv in range( xml.iP_MaxNumberOfProvinces ):
-                                pCordoba.setProvinceType( iProv, iProvinceNone )
-                        pCordoba.setProvinceType( xml.iP_Ifriqiya, iProvinceCore )
-                        pCordoba.setProvinceType( xml.iP_Algiers, iProvinceNatural )
-                        pCordoba.setProvinceType( xml.iP_Oran, iProvinceOuter )
-                        pCordoba.setProvinceType( xml.iP_Tripolitania, iProvinceOuter )
-                        pCordoba.setProvinceType( xml.iP_Tetouan, iProvinceOuter )
-                        pCordoba.setProvinceType( xml.iP_Morocco, iProvinceOuter )
-                        pCordoba.setProvinceType( xml.iP_Fez, iProvinceOuter )
+		#### -------- Special Respawn Conditions ---------- ####
+		if ( iPlayer == iArabia ):
+			for iProv in range( xml.iP_MaxNumberOfProvinces ):
+				pArabia.setProvinceType( iProv, iProvinceNone )
+			for iProv in self.tCoreProvinces[iPlayer]:
+				pArabia.setProvinceType( iProv, iProvinceCore )
+			for iProv in self.tNormProvinces[iPlayer]:
+				pArabia.setProvinceType( iProv, iProvinceNatural)
+			for iProv in self.tOuterProvinces[iPlayer]:
+				pArabia.setProvinceType( iProv, iProvinceOuter )
+			for iProv in self.tPot2CoreProvinces[iPlayer]:
+				pArabia.setProvinceType( iProv, iProvincePotential )
+			for iProv in self.tPot2NormProvinces[iPlayer]:
+				pArabia.setProvinceType( iProv, iProvincePotential )
+		elif ( iPlayer == iCordoba ):
+			for iProv in range( xml.iP_MaxNumberOfProvinces ):
+				pCordoba.setProvinceType( iProv, iProvinceNone )
+			pCordoba.setProvinceType( xml.iP_Ifriqiya, iProvinceCore )
+			pCordoba.setProvinceType( xml.iP_Algiers, iProvinceNatural )
+			pCordoba.setProvinceType( xml.iP_Oran, iProvinceOuter )
+			pCordoba.setProvinceType( xml.iP_Tripolitania, iProvinceOuter )
+			pCordoba.setProvinceType( xml.iP_Tetouan, iProvinceOuter )
+			pCordoba.setProvinceType( xml.iP_Morocco, iProvinceOuter )
+			pCordoba.setProvinceType( xml.iP_Fez, iProvinceOuter )
 
 	def onSpawn( self, iPlayer ):
 		# when a new nations spawns, old nations in the region should lose some of their provinces

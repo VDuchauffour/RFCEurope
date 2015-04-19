@@ -205,34 +205,34 @@ class CvReligionScreen:
 			if (gc.getGame().getReligionGameTurnFounded(i) < 0):
 				szFounded = localText.getText("TXT_KEY_RELIGION_SCREEN_NOT_FOUNDED", ())
 			else:
-                                #Rhye - start
-                            
-                                #szFounded = CyGameTextMgr().getTimeStr(gc.getGame().getReligionGameTurnFounded(i), false)
-                                    
-                                iPlayer = CyGame().getActivePlayer()
-                                pPlayer = gc.getPlayer(iPlayer)
-                                tPlayer = gc.getTeam(pPlayer.getTeam())
-                                iCalendar = 33
+				#Rhye - start
+			    
+				#szFounded = CyGameTextMgr().getTimeStr(gc.getGame().getReligionGameTurnFounded(i), false)
+				    
+				iPlayer = CyGame().getActivePlayer()
+				pPlayer = gc.getPlayer(iPlayer)
+				tPlayer = gc.getTeam(pPlayer.getTeam())
+				iCalendar = 33
 
-                                year = CyGame().getTurnYear(gc.getGame().getReligionGameTurnFounded(i))
+				year = CyGame().getTurnYear(gc.getGame().getReligionGameTurnFounded(i))
 
-                                if (not gc.getPlayer(0).isPlayable() and i != 2):  #late start condition (2 == Islam)
-                                        szFounded = localText.getText("TXT_KEY_AGE_BRONZE", ())
-                                else:
-                                
-                                        if (tPlayer.isHasTech(iCalendar)):  
-                                                szFounded = CyGameTextMgr().getTimeStr(gc.getGame().getReligionGameTurnFounded(i), false)        
-                                        elif (year >= 1500):
-                                                szFounded = localText.getText("TXT_KEY_AGE_RENAISSANCE", ())  
-                                        elif (year >= 450):
-                                                szFounded = localText.getText("TXT_KEY_AGE_MEDIEVAL", ())    
-                                        elif (year >= -800):
-                                                szFounded = localText.getText("TXT_KEY_AGE_IRON", ())    
-                                        elif (year >= -2000):
-                                                szFounded = localText.getText("TXT_KEY_AGE_BRONZE", ())    
-                                        else:
-                                                szFounded = localText.getText("TXT_KEY_AGE_STONE", ())    
-                                #Rhye - end
+				if (not gc.getPlayer(0).isPlayable() and i != 2):  #late start condition (2 == Islam)
+					szFounded = localText.getText("TXT_KEY_AGE_BRONZE", ())
+				else:
+				
+					if (tPlayer.isHasTech(iCalendar)):  
+						szFounded = CyGameTextMgr().getTimeStr(gc.getGame().getReligionGameTurnFounded(i), false)	
+					elif (year >= 1500):
+						szFounded = localText.getText("TXT_KEY_AGE_RENAISSANCE", ())  
+					elif (year >= 450):
+						szFounded = localText.getText("TXT_KEY_AGE_MEDIEVAL", ())    
+					elif (year >= -800):
+						szFounded = localText.getText("TXT_KEY_AGE_IRON", ())    
+					elif (year >= -2000):
+						szFounded = localText.getText("TXT_KEY_AGE_BRONZE", ())    
+					else:
+						szFounded = localText.getText("TXT_KEY_AGE_STONE", ())    
+				#Rhye - end
 
 			screen.setLabelAt("", szArea, szFounded, CvUtil.FONT_CENTER_JUSTIFY, xLoop, self.Y_FOUNDED, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 			xLoop += self.DX_RELIGION

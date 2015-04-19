@@ -358,9 +358,9 @@ class CvMilitaryAdvisor:
 							szDescription = '*' + szDescription
 							
 						if (self.isSelectedUnit(loopUnit.getOwner(), loopUnit.getID(), False)):
-							szDescription = u"         <u>" + szDescription + u"</u>"
+							szDescription = u"	 <u>" + szDescription + u"</u>"
 						else:
-							szDescription = u"         " + szDescription
+							szDescription = u"	 " + szDescription
 
 						if (self.isSelectedUnit(loopUnit.getOwner(), loopUnit.getID(), True)):
 							szDescription = localText.changeTextColor(szDescription, gc.getInfoTypeForString("COLOR_YELLOW"))

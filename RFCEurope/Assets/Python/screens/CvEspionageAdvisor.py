@@ -131,7 +131,7 @@ class CvEspionageAdvisor:
 		for iLoop in range(gc.getMAX_PLAYERS()):
 			pPlayer = gc.getPlayer(iLoop)
 			#if (pPlayer.getTeam() != pActivePlayer.getTeam() and not pPlayer.isBarbarian()): #Rhye
-                        if (pPlayer.getTeam() != pActivePlayer.getTeam() and iLoop < con.iNumActivePlayers): #Rhye
+			if (pPlayer.getTeam() != pActivePlayer.getTeam() and iLoop < con.iNumActivePlayers): #Rhye
 				if (pPlayer.isAlive()):
 					if (pActiveTeam.isHasMet(pPlayer.getTeam())):
 						

@@ -114,8 +114,8 @@ class RFCEBalance:
 		gc.setGrowthModifiersHu(iBulgaria,     125, 100, 100, 100, 100, 1 )
 		gc.setGrowthModifiersAI(iCordoba,      150, 100, 100, 100, 100, 1 )
 		gc.setGrowthModifiersHu(iCordoba,      150, 100, 100, 100, 100, 1 )
-		gc.setGrowthModifiersAI(iSpain,        125, 100, 100, 100, 100, 2 )
-		gc.setGrowthModifiersHu(iSpain,        125, 100, 100, 100, 100, 2 )
+		gc.setGrowthModifiersAI(iSpain,	125, 100, 100, 100, 100, 2 )
+		gc.setGrowthModifiersHu(iSpain,	125, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiersAI(iNorway,       100, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiersHu(iNorway,       100, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiersAI(iDenmark,      100, 100, 100, 100, 100, 2 )
@@ -124,8 +124,8 @@ class RFCEBalance:
 		gc.setGrowthModifiersHu(iVenecia,      125, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiersAI(iNovgorod,     100, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiersHu(iNovgorod,     100, 100, 100, 100, 100, 2 )
-		gc.setGrowthModifiersAI(iKiev,         150, 100, 100, 100, 100, 2 )
-		gc.setGrowthModifiersHu(iKiev,         150, 100, 100, 100, 100, 2 )
+		gc.setGrowthModifiersAI(iKiev,	 150, 100, 100, 100, 100, 2 )
+		gc.setGrowthModifiersHu(iKiev,	 150, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiersAI(iHungary,      125, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiersHu(iHungary,      125, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiersAI(iGermany,      125, 100, 100, 100, 100, 2 )
@@ -136,8 +136,8 @@ class RFCEBalance:
 		gc.setGrowthModifiersHu(iPoland,       125, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiersAI(iMoscow,       100, 100, 100, 100, 100, 3 )
 		gc.setGrowthModifiersHu(iMoscow,       100, 100, 100, 100, 100, 3 )
-		gc.setGrowthModifiersAI(iGenoa,        100, 100, 100, 100, 100, 3 )
-		gc.setGrowthModifiersHu(iGenoa,        100, 100, 100, 100, 100, 3 )
+		gc.setGrowthModifiersAI(iGenoa,	100, 100, 100, 100, 100, 3 )
+		gc.setGrowthModifiersHu(iGenoa,	100, 100, 100, 100, 100, 3 )
 		gc.setGrowthModifiersAI(iMorocco,      100, 100, 100, 100, 100, 3 )
 		gc.setGrowthModifiersHu(iMorocco,      100, 100, 100, 100, 100, 3 )
 		gc.setGrowthModifiersAI(iEngland,      100, 100, 100, 100, 100, 3 )
@@ -156,9 +156,9 @@ class RFCEBalance:
 		gc.setGrowthModifiersHu(iTurkey,       100, 150, 100, 100, 100, 3 )
 		gc.setGrowthModifiersAI(iSweden,       100, 100, 100, 100, 100, 3 )
 		gc.setGrowthModifiersHu(iSweden,       100, 100, 100, 100, 100, 3 )
-		gc.setGrowthModifiersAI(iDutch,        100, 200,  50, 100,  50, 4 )
-		gc.setGrowthModifiersHu(iDutch,        100, 200,  60, 100,  50, 4 )
-		gc.setGrowthModifiersAI(iPope,         150, 100, 100,  50, 100, 1 )
+		gc.setGrowthModifiersAI(iDutch,	100, 200,  50, 100,  50, 4 )
+		gc.setGrowthModifiersHu(iDutch,	100, 200,  60, 100,  50, 4 )
+		gc.setGrowthModifiersAI(iPope,	 150, 100, 100,  50, 100, 1 )
 		gc.setGrowthModifiersAI(iIndependent,  100, 100, 100,  50, 100, 1 )
 		gc.setGrowthModifiersAI(iIndependent2, 100, 100, 100,  50, 100, 1 )
 		gc.setGrowthModifiersAI(iIndependent3, 100, 100, 100,  50, 100, 1 )
@@ -240,57 +240,57 @@ class RFCEBalance:
 		gc.setSupportModifiersHu(iByzantium,     50, 150,  10,  10, 120 )
 		gc.setSupportModifiersAI(iFrankia,       30, 120,  80,  35, 100 )
 		gc.setSupportModifiersHu(iFrankia,       30, 120,  80,  35, 100 )
-		gc.setSupportModifiersAI(iArabia,        30, 150,  70,  15, 120 )
-		gc.setSupportModifiersHu(iArabia,        30, 150,  70,  15, 120 )
+		gc.setSupportModifiersAI(iArabia,	30, 150,  70,  15, 120 )
+		gc.setSupportModifiersHu(iArabia,	30, 150,  70,  15, 120 )
 		gc.setSupportModifiersAI(iBulgaria,      40, 150,  80,  50, 120 )
 		gc.setSupportModifiersHu(iBulgaria,      40, 150,  70,  40, 120 )
 		gc.setSupportModifiersAI(iCordoba,       50, 150,  70,  50, 120 )
 		gc.setSupportModifiersHu(iCordoba,       50, 150,  70,  50, 120 )
-		gc.setSupportModifiersAI(iSpain,         10, 100,  50,  25, 100 )
-		gc.setSupportModifiersHu(iSpain,         10, 100,  50,  25, 100 )
-		gc.setSupportModifiersAI(iNorway,        10, 100,  50,  25, 100 )
-		gc.setSupportModifiersHu(iNorway,        10, 100,  50,  25, 100 )
+		gc.setSupportModifiersAI(iSpain,	 10, 100,  50,  25, 100 )
+		gc.setSupportModifiersHu(iSpain,	 10, 100,  50,  25, 100 )
+		gc.setSupportModifiersAI(iNorway,	10, 100,  50,  25, 100 )
+		gc.setSupportModifiersHu(iNorway,	10, 100,  50,  25, 100 )
 		gc.setSupportModifiersAI(iDenmark,       10, 100,  50,  25, 100 )
 		gc.setSupportModifiersHu(iDenmark,       10, 100,  50,  25, 100 )
 		gc.setSupportModifiersAI(iVenecia,       10, 100,  50,  25, 100 )
 		gc.setSupportModifiersHu(iVenecia,       10, 100,  50,  25, 100 )
 		gc.setSupportModifiersAI(iNovgorod,      10, 150,  50,  25, 100 )
 		gc.setSupportModifiersHu(iNovgorod,      10, 150,  50,  25, 100 )
-		gc.setSupportModifiersAI(iKiev,          10, 100,  50,  25, 100 )
-		gc.setSupportModifiersHu(iKiev,          10, 100,  50,  25, 100 )
+		gc.setSupportModifiersAI(iKiev,	  10, 100,  50,  25, 100 )
+		gc.setSupportModifiersHu(iKiev,	  10, 100,  50,  25, 100 )
 		gc.setSupportModifiersAI(iHungary,       20, 100,  60,  25, 100 )
 		gc.setSupportModifiersHu(iHungary,       20, 100,  60,  25, 100 )
 		gc.setSupportModifiersAI(iGermany,       10, 100,  60,  25, 100 )
 		gc.setSupportModifiersHu(iGermany,       10, 100,  60,  25, 100 )
 		gc.setSupportModifiersAI(iScotland,      10, 100,  75,  40, 100 )
 		gc.setSupportModifiersHu(iScotland,      10, 100,  75,  40, 100 )
-		gc.setSupportModifiersAI(iPoland,        10, 100,  70,  25, 100 )
-		gc.setSupportModifiersHu(iPoland,        10, 100,  70,  25, 100 )
-		gc.setSupportModifiersAI(iMoscow,        10, 100,  50,  25, 100 ) # sync with UP
-		gc.setSupportModifiersHu(iMoscow,        10, 100,  50,  25, 100 ) # sync with UP
-		gc.setSupportModifiersAI(iGenoa,         10, 100,  50,  25, 100 )
-		gc.setSupportModifiersHu(iGenoa,         10, 100,  50,  25, 100 )
+		gc.setSupportModifiersAI(iPoland,	10, 100,  70,  25, 100 )
+		gc.setSupportModifiersHu(iPoland,	10, 100,  70,  25, 100 )
+		gc.setSupportModifiersAI(iMoscow,	10, 100,  50,  25, 100 ) # sync with UP
+		gc.setSupportModifiersHu(iMoscow,	10, 100,  50,  25, 100 ) # sync with UP
+		gc.setSupportModifiersAI(iGenoa,	 10, 100,  50,  25, 100 )
+		gc.setSupportModifiersHu(iGenoa,	 10, 100,  50,  25, 100 )
 		gc.setSupportModifiersAI(iMorocco,       10, 100,  50,  25, 100 )
 		gc.setSupportModifiersHu(iMorocco,       10, 100,  50,  25, 100 )
 		gc.setSupportModifiersAI(iEngland,       10, 100,  50,  25, 100 )
 		gc.setSupportModifiersHu(iEngland,       10, 100,  50,  25, 100 )
 		gc.setSupportModifiersAI(iPortugal,      10, 100,  50,  25, 100 )
 		gc.setSupportModifiersHu(iPortugal,      10, 100,  50,  25, 100 )
-		gc.setSupportModifiersAI(iAragon,        10, 100,  50,  25, 100 )
-		gc.setSupportModifiersHu(iAragon,        10, 100,  50,  25, 100 )
+		gc.setSupportModifiersAI(iAragon,	10, 100,  50,  25, 100 )
+		gc.setSupportModifiersHu(iAragon,	10, 100,  50,  25, 100 )
 		gc.setSupportModifiersAI(iPrussia,       10,  85,  50,  40, 100 )
 		gc.setSupportModifiersHu(iPrussia,       10,  85,  50,  40, 100 )
 		gc.setSupportModifiersAI(iLithuania,     10,  85,  50,  25, 100 )
 		gc.setSupportModifiersHu(iLithuania,     10,  85,  50,  25, 100 )
 		gc.setSupportModifiersAI(iAustria,       10,  65,  50,  25,  80 )
 		gc.setSupportModifiersHu(iAustria,       10,  65,  50,  25,  80 )
-		gc.setSupportModifiersAI(iTurkey,        30,  50,  10,  10, 100 )
-		gc.setSupportModifiersHu(iTurkey,        30,  50,  10,  10, 100 )
-		gc.setSupportModifiersAI(iSweden,        10,  75,  50,  25, 100 )
-		gc.setSupportModifiersHu(iSweden,        10,  75,  50,  25, 100 )
-		gc.setSupportModifiersAI(iDutch,         10,  50,  50,  50, 100 )
-		gc.setSupportModifiersHu(iDutch,         10,  50,  50,  50, 100 )
-		gc.setSupportModifiersAI(iPope,          10, 200,  50,  25, 100 )
+		gc.setSupportModifiersAI(iTurkey,	30,  50,  10,  10, 100 )
+		gc.setSupportModifiersHu(iTurkey,	30,  50,  10,  10, 100 )
+		gc.setSupportModifiersAI(iSweden,	10,  75,  50,  25, 100 )
+		gc.setSupportModifiersHu(iSweden,	10,  75,  50,  25, 100 )
+		gc.setSupportModifiersAI(iDutch,	 10,  50,  50,  50, 100 )
+		gc.setSupportModifiersHu(iDutch,	 10,  50,  50,  50, 100 )
+		gc.setSupportModifiersAI(iPope,	  10, 200,  50,  25, 100 )
 		gc.setSupportModifiersAI(iIndependent,   10, 100,  10,  20, 100 )
 		gc.setSupportModifiersAI(iIndependent2,  10, 100,  10,  20, 100 )
 		gc.setSupportModifiersAI(iIndependent3,  10, 100,  10,  20, 100 )
@@ -855,87 +855,87 @@ class RFCEBalance:
 
 		self.postAreas()
 
-        def setTechTimeline( self ):
-                gc.setTimelineTechModifiers( 9, 25, -50, 1, 100, 50 ) # go between 10 times slower and 4 times faster
-                # formula is: iAhistoric = iCurrentTurn - iHistoricTurn, capped at ( iTPCap, iTBCap )
-                # iCost *= 100 + topPenalty * iHistoric * iAhistoric / BotPenalty, iCost /= 100
-                # iCost *= 100 - topBuff * iHistoric * iAhistoric / BotBuff, iCost /= 100
-                # gc.setTimelineTechDateForTech( iTech, iTurn )
-                gc.setTimelineTechDateForTech( xml.iCalendar, 0 )
-                gc.setTimelineTechDateForTech( xml.iArchitecture, 30 )
-                gc.setTimelineTechDateForTech( xml.iBronzeCasting, 15 )
-                gc.setTimelineTechDateForTech( xml.iTheology, 10 )
-                gc.setTimelineTechDateForTech( xml.iManorialism, 5 )
-                gc.setTimelineTechDateForTech( xml.iStirrup, xml.i600AD )
-                gc.setTimelineTechDateForTech( xml.iEngineering, 55 ) #teir 2
-                gc.setTimelineTechDateForTech( xml.iChainMail, 43 )
-                gc.setTimelineTechDateForTech( xml.iArt, 38 )
-                gc.setTimelineTechDateForTech( xml.iMonasticism, 50 )
-                gc.setTimelineTechDateForTech( xml.iVassalage, 60 )
-                gc.setTimelineTechDateForTech( xml.iAstrolabe, 76 ) # teir 3
-                gc.setTimelineTechDateForTech( xml.iMachinery, 76 )
-                gc.setTimelineTechDateForTech( xml.iVaultedArches, 90 ) #
-                gc.setTimelineTechDateForTech( xml.iMusic, 80 )
-                gc.setTimelineTechDateForTech( xml.iHerbalMedicine, 95 )
-                gc.setTimelineTechDateForTech( xml.iFeudalism, xml.i778AD ) # Feudalism
-                gc.setTimelineTechDateForTech( xml.iFarriers, 100 )
-                gc.setTimelineTechDateForTech( xml.iMapMaking, 145 )  # this is tier 5
-                gc.setTimelineTechDateForTech( xml.iBlastFurnace, 120 )# teir 4
-                gc.setTimelineTechDateForTech( xml.iSiegeEngines, xml.i1097AD ) #trebuchets
-                gc.setTimelineTechDateForTech( xml.iGothicArchitecture, 130 ) # 12th century
-                gc.setTimelineTechDateForTech( xml.iLiterature, 145 )
-                gc.setTimelineTechDateForTech( xml.iCodeOfLaws, 120 )
-                gc.setTimelineTechDateForTech( xml.iAristocracy, 135 )
-                gc.setTimelineTechDateForTech( xml.iLateenSails, 125 ) # actually this is tier 4
-                gc.setTimelineTechDateForTech( xml.iPlateArmor, 152 ) # teir 5: Late 1200s, By the 14th century, plate armour was commonly used to supplement mail.
-                gc.setTimelineTechDateForTech( xml.iMonumentBuilding, 180 )
-                gc.setTimelineTechDateForTech( xml.iClassicalKnowledge, 175 )
-                gc.setTimelineTechDateForTech( xml.iAlchemy, xml.i1003AD )
-                gc.setTimelineTechDateForTech( xml.iCivilService, 190 ) # teir 6
-                gc.setTimelineTechDateForTech( xml.iClockmaking, 200 )
-                gc.setTimelineTechDateForTech( xml.iPhilosophy, 215 )
-                gc.setTimelineTechDateForTech( xml.iEducation, 220 )
-                gc.setTimelineTechDateForTech( xml.iGuilds, 200 )
-                gc.setTimelineTechDateForTech( xml.iChivalry, 210 )
-                gc.setTimelineTechDateForTech( xml.iOptics, 228 ) # teir 7
-                gc.setTimelineTechDateForTech( xml.iReplaceableParts, 250 )
-                gc.setTimelineTechDateForTech( xml.iPatronage, 230 )
-                gc.setTimelineTechDateForTech( xml.iGunpowder, xml.i1300AD )
-                gc.setTimelineTechDateForTech( xml.iBanking, 240 )
-                gc.setTimelineTechDateForTech( xml.iMilitaryTradition, 260 )
-                gc.setTimelineTechDateForTech( xml.iShipbuilding, 275 ) # teir 8
-                gc.setTimelineTechDateForTech( xml.iDrama, 270 )
-                gc.setTimelineTechDateForTech( xml.iDivineRight, 266 )
-                gc.setTimelineTechDateForTech( xml.iChemistry, 280 )
-                gc.setTimelineTechDateForTech( xml.iPaper, 290 )
-                gc.setTimelineTechDateForTech( xml.iProfessionalArmy, 295 )
-                gc.setTimelineTechDateForTech( xml.iPrintingPress, xml.i1517AD ) # teir 9 turn 304
-                gc.setTimelineTechDateForTech( xml.iPublicWorks, 310 )
-                gc.setTimelineTechDateForTech( xml.iMatchlock, xml.i1500AD )
-                gc.setTimelineTechDateForTech( xml.iArabicKnowledge, xml.i1491AD ) # fall of Granada
-                gc.setTimelineTechDateForTech( xml.iAstronomy, xml.i1514AD ) # teir 10 Copernicus
-                gc.setTimelineTechDateForTech( xml.iSteamEngines, xml.i1690AD ) # first steam engine
-                gc.setTimelineTechDateForTech( xml.iConstitution, 375 )
-                gc.setTimelineTechDateForTech( xml.iPolygonalFort, 370 )
-                gc.setTimelineTechDateForTech( xml.iArabicMedicine, 342 )
-                gc.setTimelineTechDateForTech( xml.iRenaissanceArt, xml.i1540AD ) # teir 11, 1541
-                gc.setTimelineTechDateForTech( xml.iNationalism, 380 )
-                gc.setTimelineTechDateForTech( xml.iLiberalism, 400 )
-                gc.setTimelineTechDateForTech( xml.iScientificMethod, xml.i1623AD ) # Galileo
-                gc.setTimelineTechDateForTech( xml.iMilitaryTactics, 410 )
-                gc.setTimelineTechDateForTech( xml.iNavalArchitecture, 385 ) # teir 12
-                gc.setTimelineTechDateForTech( xml.iCivilEngineering, 395 )
-                gc.setTimelineTechDateForTech( xml.iRightOfMan, 460 )
-                gc.setTimelineTechDateForTech( xml.iEconomics, 435 )
-                gc.setTimelineTechDateForTech( xml.iPhysics, xml.i1687AD )
-                gc.setTimelineTechDateForTech( xml.iBiology, 440 )
-                gc.setTimelineTechDateForTech( xml.iCombinedArms, 430 )
-                gc.setTimelineTechDateForTech( xml.iTradingCompanies, xml.i1600AD ) # teir 13 TradingCompanies turn 325
-                gc.setTimelineTechDateForTech( xml.iMachineTools, 450 )
-                gc.setTimelineTechDateForTech( xml.iFreeMarket, 450 )
-                gc.setTimelineTechDateForTech( xml.iExplosives, 460 )
-                gc.setTimelineTechDateForTech( xml.iMedicine, 458 )
-                gc.setTimelineTechDateForTech( xml.iIndustrialTech, xml.i1800AD )
+	def setTechTimeline( self ):
+		gc.setTimelineTechModifiers( 9, 25, -50, 1, 100, 50 ) # go between 10 times slower and 4 times faster
+		# formula is: iAhistoric = iCurrentTurn - iHistoricTurn, capped at ( iTPCap, iTBCap )
+		# iCost *= 100 + topPenalty * iHistoric * iAhistoric / BotPenalty, iCost /= 100
+		# iCost *= 100 - topBuff * iHistoric * iAhistoric / BotBuff, iCost /= 100
+		# gc.setTimelineTechDateForTech( iTech, iTurn )
+		gc.setTimelineTechDateForTech( xml.iCalendar, 0 )
+		gc.setTimelineTechDateForTech( xml.iArchitecture, 30 )
+		gc.setTimelineTechDateForTech( xml.iBronzeCasting, 15 )
+		gc.setTimelineTechDateForTech( xml.iTheology, 10 )
+		gc.setTimelineTechDateForTech( xml.iManorialism, 5 )
+		gc.setTimelineTechDateForTech( xml.iStirrup, xml.i600AD )
+		gc.setTimelineTechDateForTech( xml.iEngineering, 55 ) #teir 2
+		gc.setTimelineTechDateForTech( xml.iChainMail, 43 )
+		gc.setTimelineTechDateForTech( xml.iArt, 38 )
+		gc.setTimelineTechDateForTech( xml.iMonasticism, 50 )
+		gc.setTimelineTechDateForTech( xml.iVassalage, 60 )
+		gc.setTimelineTechDateForTech( xml.iAstrolabe, 76 ) # teir 3
+		gc.setTimelineTechDateForTech( xml.iMachinery, 76 )
+		gc.setTimelineTechDateForTech( xml.iVaultedArches, 90 ) #
+		gc.setTimelineTechDateForTech( xml.iMusic, 80 )
+		gc.setTimelineTechDateForTech( xml.iHerbalMedicine, 95 )
+		gc.setTimelineTechDateForTech( xml.iFeudalism, xml.i778AD ) # Feudalism
+		gc.setTimelineTechDateForTech( xml.iFarriers, 100 )
+		gc.setTimelineTechDateForTech( xml.iMapMaking, 145 )  # this is tier 5
+		gc.setTimelineTechDateForTech( xml.iBlastFurnace, 120 )# teir 4
+		gc.setTimelineTechDateForTech( xml.iSiegeEngines, xml.i1097AD ) #trebuchets
+		gc.setTimelineTechDateForTech( xml.iGothicArchitecture, 130 ) # 12th century
+		gc.setTimelineTechDateForTech( xml.iLiterature, 145 )
+		gc.setTimelineTechDateForTech( xml.iCodeOfLaws, 120 )
+		gc.setTimelineTechDateForTech( xml.iAristocracy, 135 )
+		gc.setTimelineTechDateForTech( xml.iLateenSails, 125 ) # actually this is tier 4
+		gc.setTimelineTechDateForTech( xml.iPlateArmor, 152 ) # teir 5: Late 1200s, By the 14th century, plate armour was commonly used to supplement mail.
+		gc.setTimelineTechDateForTech( xml.iMonumentBuilding, 180 )
+		gc.setTimelineTechDateForTech( xml.iClassicalKnowledge, 175 )
+		gc.setTimelineTechDateForTech( xml.iAlchemy, xml.i1003AD )
+		gc.setTimelineTechDateForTech( xml.iCivilService, 190 ) # teir 6
+		gc.setTimelineTechDateForTech( xml.iClockmaking, 200 )
+		gc.setTimelineTechDateForTech( xml.iPhilosophy, 215 )
+		gc.setTimelineTechDateForTech( xml.iEducation, 220 )
+		gc.setTimelineTechDateForTech( xml.iGuilds, 200 )
+		gc.setTimelineTechDateForTech( xml.iChivalry, 210 )
+		gc.setTimelineTechDateForTech( xml.iOptics, 228 ) # teir 7
+		gc.setTimelineTechDateForTech( xml.iReplaceableParts, 250 )
+		gc.setTimelineTechDateForTech( xml.iPatronage, 230 )
+		gc.setTimelineTechDateForTech( xml.iGunpowder, xml.i1300AD )
+		gc.setTimelineTechDateForTech( xml.iBanking, 240 )
+		gc.setTimelineTechDateForTech( xml.iMilitaryTradition, 260 )
+		gc.setTimelineTechDateForTech( xml.iShipbuilding, 275 ) # teir 8
+		gc.setTimelineTechDateForTech( xml.iDrama, 270 )
+		gc.setTimelineTechDateForTech( xml.iDivineRight, 266 )
+		gc.setTimelineTechDateForTech( xml.iChemistry, 280 )
+		gc.setTimelineTechDateForTech( xml.iPaper, 290 )
+		gc.setTimelineTechDateForTech( xml.iProfessionalArmy, 295 )
+		gc.setTimelineTechDateForTech( xml.iPrintingPress, xml.i1517AD ) # teir 9 turn 304
+		gc.setTimelineTechDateForTech( xml.iPublicWorks, 310 )
+		gc.setTimelineTechDateForTech( xml.iMatchlock, xml.i1500AD )
+		gc.setTimelineTechDateForTech( xml.iArabicKnowledge, xml.i1491AD ) # fall of Granada
+		gc.setTimelineTechDateForTech( xml.iAstronomy, xml.i1514AD ) # teir 10 Copernicus
+		gc.setTimelineTechDateForTech( xml.iSteamEngines, xml.i1690AD ) # first steam engine
+		gc.setTimelineTechDateForTech( xml.iConstitution, 375 )
+		gc.setTimelineTechDateForTech( xml.iPolygonalFort, 370 )
+		gc.setTimelineTechDateForTech( xml.iArabicMedicine, 342 )
+		gc.setTimelineTechDateForTech( xml.iRenaissanceArt, xml.i1540AD ) # teir 11, 1541
+		gc.setTimelineTechDateForTech( xml.iNationalism, 380 )
+		gc.setTimelineTechDateForTech( xml.iLiberalism, 400 )
+		gc.setTimelineTechDateForTech( xml.iScientificMethod, xml.i1623AD ) # Galileo
+		gc.setTimelineTechDateForTech( xml.iMilitaryTactics, 410 )
+		gc.setTimelineTechDateForTech( xml.iNavalArchitecture, 385 ) # teir 12
+		gc.setTimelineTechDateForTech( xml.iCivilEngineering, 395 )
+		gc.setTimelineTechDateForTech( xml.iRightOfMan, 460 )
+		gc.setTimelineTechDateForTech( xml.iEconomics, 435 )
+		gc.setTimelineTechDateForTech( xml.iPhysics, xml.i1687AD )
+		gc.setTimelineTechDateForTech( xml.iBiology, 440 )
+		gc.setTimelineTechDateForTech( xml.iCombinedArms, 430 )
+		gc.setTimelineTechDateForTech( xml.iTradingCompanies, xml.i1600AD ) # teir 13 TradingCompanies turn 325
+		gc.setTimelineTechDateForTech( xml.iMachineTools, 450 )
+		gc.setTimelineTechDateForTech( xml.iFreeMarket, 450 )
+		gc.setTimelineTechDateForTech( xml.iExplosives, 460 )
+		gc.setTimelineTechDateForTech( xml.iMedicine, 458 )
+		gc.setTimelineTechDateForTech( xml.iIndustrialTech, xml.i1800AD )
 
 	def preMapsNSizes( self ):
 		# settlersMaps, DO NOT CHANGE THIS CODE

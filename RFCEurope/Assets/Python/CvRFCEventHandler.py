@@ -139,60 +139,60 @@ class CvRFCEventHandler:
 		self.EventKeyUp = 7
 		self.eventManager = eventManager
 
-                # initialize base class
-                eventManager.addEventHandler("GameStart", self.onGameStart) #Stability
-                eventManager.addEventHandler("BeginGameTurn", self.onBeginGameTurn) #Stability
-                eventManager.addEventHandler("cityAcquired", self.onCityAcquired) #Stability
-                eventManager.addEventHandler("cityRazed", self.onCityRazed) #Stability
-                eventManager.addEventHandler("cityBuilt", self.onCityBuilt) #Stability
-                eventManager.addEventHandler("combatResult", self.onCombatResult) #Stability
-                #eventManager.addEventHandler("changeWar", self.onChangeWar)
-                eventManager.addEventHandler("religionFounded",self.onReligionFounded) #Victory
-                eventManager.addEventHandler("buildingBuilt",self.onBuildingBuilt) #Victory
-                eventManager.addEventHandler("projectBuilt",self.onProjectBuilt) #Victory
-                eventManager.addEventHandler("BeginPlayerTurn", self.onBeginPlayerTurn) #Mercenaries
-                #eventManager.addEventHandler("EndPlayerTurn", self.onEndPlayerTurn)
-                eventManager.addEventHandler("EndGameTurn", self.onEndGameTurn) #Stability
-                eventManager.addEventHandler("kbdEvent",self.onKbdEvent) #Mercenaries and Stability overlay
-                eventManager.addEventHandler("unitLost",self.onUnitLost) #Mercenaries
-                eventManager.addEventHandler("unitKilled",self.onUnitKilled) #Mercenaries
-                eventManager.addEventHandler("OnLoad",self.onLoadGame) #Mercenaries
-                eventManager.addEventHandler("unitPromoted",self.onUnitPromoted) #Mercenaries
-                eventManager.addEventHandler("techAcquired",self.onTechAcquired) #Mercenaries, Rhye #Stability
-                #eventManager.addEventHandler("improvementDestroyed",self.onImprovementDestroyed) #Stability
-                eventManager.addEventHandler("unitPillage",self.onUnitPillage) #Stability
-                eventManager.addEventHandler("religionSpread",self.onReligionSpread) #Stability
-                eventManager.addEventHandler("firstContact",self.onFirstContact)
-                eventManager.addEventHandler("corporationFounded",self.onCorporationFounded) #Stability
+		# initialize base class
+		eventManager.addEventHandler("GameStart", self.onGameStart) #Stability
+		eventManager.addEventHandler("BeginGameTurn", self.onBeginGameTurn) #Stability
+		eventManager.addEventHandler("cityAcquired", self.onCityAcquired) #Stability
+		eventManager.addEventHandler("cityRazed", self.onCityRazed) #Stability
+		eventManager.addEventHandler("cityBuilt", self.onCityBuilt) #Stability
+		eventManager.addEventHandler("combatResult", self.onCombatResult) #Stability
+		#eventManager.addEventHandler("changeWar", self.onChangeWar)
+		eventManager.addEventHandler("religionFounded",self.onReligionFounded) #Victory
+		eventManager.addEventHandler("buildingBuilt",self.onBuildingBuilt) #Victory
+		eventManager.addEventHandler("projectBuilt",self.onProjectBuilt) #Victory
+		eventManager.addEventHandler("BeginPlayerTurn", self.onBeginPlayerTurn) #Mercenaries
+		#eventManager.addEventHandler("EndPlayerTurn", self.onEndPlayerTurn)
+		eventManager.addEventHandler("EndGameTurn", self.onEndGameTurn) #Stability
+		eventManager.addEventHandler("kbdEvent",self.onKbdEvent) #Mercenaries and Stability overlay
+		eventManager.addEventHandler("unitLost",self.onUnitLost) #Mercenaries
+		eventManager.addEventHandler("unitKilled",self.onUnitKilled) #Mercenaries
+		eventManager.addEventHandler("OnLoad",self.onLoadGame) #Mercenaries
+		eventManager.addEventHandler("unitPromoted",self.onUnitPromoted) #Mercenaries
+		eventManager.addEventHandler("techAcquired",self.onTechAcquired) #Mercenaries, Rhye #Stability
+		#eventManager.addEventHandler("improvementDestroyed",self.onImprovementDestroyed) #Stability
+		eventManager.addEventHandler("unitPillage",self.onUnitPillage) #Stability
+		eventManager.addEventHandler("religionSpread",self.onReligionSpread) #Stability
+		eventManager.addEventHandler("firstContact",self.onFirstContact)
+		eventManager.addEventHandler("corporationFounded",self.onCorporationFounded) #Stability
 
-                self.eventManager = eventManager
-
-
-                self.data = StoredData.StoredData()
-                self.rnf = RiseAndFall.RiseAndFall()
-                self.barb = Barbs.Barbs()
-                self.rel = Religions.Religions()
-                self.res = Resources.Resources()
-                self.cnm = CityNameManager.CityNameManager()
-                self.up = UniquePowers.UniquePowers()
-                self.aiw = AIWars.AIWars()
-                self.vic = Victory.Victory()
-                self.sta = Stability.Stability()
-                self.pla = Plague.Plague()
-                self.crusade = Crusades.Crusades()
-                self.mercs = Mercenaries.MercenaryManager() # 3MiroMercs
+		self.eventManager = eventManager
 
 
-                #Mercenaries - start
+		self.data = StoredData.StoredData()
+		self.rnf = RiseAndFall.RiseAndFall()
+		self.barb = Barbs.Barbs()
+		self.rel = Religions.Religions()
+		self.res = Resources.Resources()
+		self.cnm = CityNameManager.CityNameManager()
+		self.up = UniquePowers.UniquePowers()
+		self.aiw = AIWars.AIWars()
+		self.vic = Victory.Victory()
+		self.sta = Stability.Stability()
+		self.pla = Plague.Plague()
+		self.crusade = Crusades.Crusades()
+		self.mercs = Mercenaries.MercenaryManager() # 3MiroMercs
 
-                self.mercenaryManager = CvMercenaryManager.CvMercenaryManager(CvScreenEnums.MERCENARY_MANAGER)
 
-                global g_bGameTurnMercenaryCreation
-                global g_bDisplayMercenaryManagerOnBeginPlayerTurn
-                global g_iStartingEra
-                global g_bWanderlustMercenaries
-                global g_iWanderlustMercenariesMaximum
-                global g_bDisplayMercenaryMessages
+		#Mercenaries - start
+
+		self.mercenaryManager = CvMercenaryManager.CvMercenaryManager(CvScreenEnums.MERCENARY_MANAGER)
+
+		global g_bGameTurnMercenaryCreation
+		global g_bDisplayMercenaryManagerOnBeginPlayerTurn
+		global g_iStartingEra
+		global g_bWanderlustMercenaries
+		global g_iWanderlustMercenariesMaximum
+		global g_bDisplayMercenaryMessages
 
 		#Rhye - start comment
 ##		# Load the Mercenaries Mod Config INI file containing all of the configuration information
@@ -209,29 +209,29 @@ class CvRFCEventHandler:
 ##			g_bDisplayMercenaryMessages = config.getboolean("Mercenaries Mod", "Display Mercenary Messages", true)
 		#Rhye - end comment
 
-                #objMercenaryUtils = MercenaryUtils.MercenaryUtils()
-                #Mercenaries - end
+		#objMercenaryUtils = MercenaryUtils.MercenaryUtils()
+		#Mercenaries - end
 
 
-        def onGameStart(self, argsList):
-                'Called at the start of the game'
-                #self.pm.setup()
-                self.data.setupScriptData()
-                self.rnf.setup()
-                self.rel.setup()
-                self.pla.setup()
-                self.sta.setup()
-                self.aiw.setup()
+	def onGameStart(self, argsList):
+		'Called at the start of the game'
+		#self.pm.setup()
+		self.data.setupScriptData()
+		self.rnf.setup()
+		self.rel.setup()
+		self.pla.setup()
+		self.sta.setup()
+		self.aiw.setup()
 
-                # 3Miro: WarOnSpawn
-                self.rnf.setWarOnSpawn()
+		# 3Miro: WarOnSpawn
+		self.rnf.setWarOnSpawn()
 
-                #Mercenaries - start
-                #global objMercenaryUtils
-                #objMercenaryUtils = MercenaryUtils.MercenaryUtils()
-                #Mercenaries - end
+		#Mercenaries - start
+		#global objMercenaryUtils
+		#objMercenaryUtils = MercenaryUtils.MercenaryUtils()
+		#Mercenaries - end
 
-                return 0
+		return 0
 
 
 	def onCityAcquired(self, argsList):
@@ -284,67 +284,67 @@ class CvRFCEventHandler:
 				city.setHasRealBuilding(xml.iCastle, True)
 		# Sedna17, end
 
-                # 3Miro: National wonders and city acquire by trade
-                #if (bTrade):
-                #        for i in range (con.iScotlandYard +1 - con.iHeroicEpic):
-                #                iNationalWonder = i + con.iHeroicEpic
-                #                if (city.hasBuilding(iNationalWonder)):
-                #                        city.setHasRealBuilding((iNationalWonder), False)
+		# 3Miro: National wonders and city acquire by trade
+		#if (bTrade):
+		#	for i in range (con.iScotlandYard +1 - con.iHeroicEpic):
+		#		iNationalWonder = i + con.iHeroicEpic
+		#		if (city.hasBuilding(iNationalWonder)):
+		#			city.setHasRealBuilding((iNationalWonder), False)
 
-                self.pla.onCityAcquired(owner,playerType,city) #Plague
-                self.vic.onCityAcquired(owner, playerType, city, bConquest) #Victory
+		self.pla.onCityAcquired(owner,playerType,city) #Plague
+		self.vic.onCityAcquired(owner, playerType, city, bConquest) #Victory
 
-                return 0
+		return 0
 
-        def onCityRazed(self, argsList):
-                #'City Razed'
-                city, iPlayer = argsList
+	def onCityRazed(self, argsList):
+		#'City Razed'
+		city, iPlayer = argsList
 
-                self.rnf.onCityRazed(city.getOwner(),iPlayer,city) # Rise and Fall
-                self.sta.onCityRazed(city.getOwner(),iPlayer,city) # Stability
-                self.vic.onCityRazed(iPlayer,city) # Victory
-                self.pla.onCityRazed(city,iPlayer) # Plague
-
-
-        def onCityBuilt(self, argsList):
-                'City Built'
-                city = argsList[0]
-
-                iOwner = city.getOwner()
-
-                self.rnf.onCityBuilt(iOwner, city )
-
-                if (iOwner < con.iNumActivePlayers):
-                        self.cnm.assignName(city)
+		self.rnf.onCityRazed(city.getOwner(),iPlayer,city) # Rise and Fall
+		self.sta.onCityRazed(city.getOwner(),iPlayer,city) # Stability
+		self.vic.onCityRazed(iPlayer,city) # Victory
+		self.pla.onCityRazed(city,iPlayer) # Plague
 
 
-                # Rhye - delete culture of barbs and minor civs to prevent weird unhappiness
-                pCurrent = gc.getMap().plot( city.getX(), city.getY() )
-                for i in range(con.iNumTotalPlayers - con.iNumActivePlayers):
-                        iMinorCiv = i + con.iNumActivePlayers
-                        pCurrent.setCulture(iMinorCiv, 0, True)
-                pCurrent.setCulture(con.iBarbarian, 0, True)
+	def onCityBuilt(self, argsList):
+		'City Built'
+		city = argsList[0]
 
-                if (iOwner < iNumMajorPlayers):
-                        utils.spreadMajorCulture(iOwner, city.getX(), city.getY())
+		iOwner = city.getOwner()
 
-                if ( iOwner == iPortugal and gc.getTeam( gc.getPlayer( iPortugal ).getTeam() ).isHasTech( xml.iAstronomy ) ):
-                        city.setHasRealBuilding( xml.iPortugalFeitoria, True )
+		self.rnf.onCityBuilt(iOwner, city )
 
-                if ( iOwner == con.iPortugal ):
-                	self.vic.onCityBuilt(city, iOwner) #Victory
+		if (iOwner < con.iNumActivePlayers):
+			self.cnm.assignName(city)
+
+
+		# Rhye - delete culture of barbs and minor civs to prevent weird unhappiness
+		pCurrent = gc.getMap().plot( city.getX(), city.getY() )
+		for i in range(con.iNumTotalPlayers - con.iNumActivePlayers):
+			iMinorCiv = i + con.iNumActivePlayers
+			pCurrent.setCulture(iMinorCiv, 0, True)
+		pCurrent.setCulture(con.iBarbarian, 0, True)
+
+		if (iOwner < iNumMajorPlayers):
+			utils.spreadMajorCulture(iOwner, city.getX(), city.getY())
+
+		if ( iOwner == iPortugal and gc.getTeam( gc.getPlayer( iPortugal ).getTeam() ).isHasTech( xml.iAstronomy ) ):
+			city.setHasRealBuilding( xml.iPortugalFeitoria, True )
+
+		if ( iOwner == con.iPortugal ):
+			self.vic.onCityBuilt(city, iOwner) #Victory
 
 		# 3MiroUP: faith on city found
 		if ( gc.hasUP( iOwner, con.iUP_Faith ) ):
 			self.up.faithUP( iOwner, city )
 
-                if (iOwner < con.iNumPlayers):
-                        self.sta.onCityBuilt(iOwner, city.getX(), city.getY() )
+		if (iOwner < con.iNumPlayers):
+			self.sta.onCityBuilt(iOwner, city.getX(), city.getY() )
 
-        def onCombatResult(self, argsList):
-                #self.up.aztecUP(argsList)
-                self.vic.onCombatResult(argsList)
-                self.sta.onCombatResult(argsList)
+	def onCombatResult(self, argsList):
+		#self.up.aztecUP(argsList)
+		self.vic.onCombatResult(argsList)
+		self.sta.onCombatResult(argsList)
 
 
 	def onReligionFounded(self, argsList):
@@ -451,46 +451,46 @@ class CvRFCEventHandler:
 		#self.com.checkTurn(iGameTurn) # 3Miro: no communication problem
 		self.crusade.checkTurn(iGameTurn)
 
-                #Mercenaries - start
+		#Mercenaries - start
 
-                #if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(con.iNationalism)) and gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
-                #if (gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
+		#if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(con.iNationalism)) and gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
+		#if (gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
 
-                        ## Get the list of active players in the game
-                        #playerList = PyGame.getCivPlayerList()
+			## Get the list of active players in the game
+			#playerList = PyGame.getCivPlayerList()
 
-                        ## Go through each of the players and deduct their mercenary maintenance amount from their gold
-                        #for i in range(len(playerList)):
-                                #playerList[i].setGold(playerList[i].getGold()-objMercenaryUtils.getPlayerMercenaryMaintenanceCost(playerList[i].getID()))
-                                #playerList[i].setGold(playerList[i].getGold()+objMercenaryUtils.getPlayerMercenaryContractIncome(playerList[i].getID()))
+			## Go through each of the players and deduct their mercenary maintenance amount from their gold
+			#for i in range(len(playerList)):
+				#playerList[i].setGold(playerList[i].getGold()-objMercenaryUtils.getPlayerMercenaryMaintenanceCost(playerList[i].getID()))
+				#playerList[i].setGold(playerList[i].getGold()+objMercenaryUtils.getPlayerMercenaryContractIncome(playerList[i].getID()))
 
-                        ## Have some mercenaries wander away from the global mercenary pool if
-                        ## g_bWanderlustMercenaries is set to true.
-                        #if(g_bWanderlustMercenaries):
+			## Have some mercenaries wander away from the global mercenary pool if
+			## g_bWanderlustMercenaries is set to true.
+			#if(g_bWanderlustMercenaries):
 
-                                ##Rhye - start (less frequent updates)
-                                ##wanderingMercenaryCount = gc.getGame().getMapRand().get(g_iWanderlustMercenariesMaximum, "Random Num")
-                                ##objMercenaryUtils.removeMercenariesFromPool(wanderingMercenaryCount)
-                                #teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
-                                ##if (not teamPlayer.isHasTech(con.iNationalism)):
-                                #if (iGameTurn % g_bUpdatePeriod == (g_bUpdatePeriod-1)):
-                                	#wanderingMercenaryCount = gc.getGame().getMapRand().get(g_iWanderlustMercenariesMaximum, "Random Num") + g_iWanderlustMercenariesMinimum
-                                	#objMercenaryUtils.removeMercenariesFromPool(wanderingMercenaryCount)
-                                ##Rhye - end
+				##Rhye - start (less frequent updates)
+				##wanderingMercenaryCount = gc.getGame().getMapRand().get(g_iWanderlustMercenariesMaximum, "Random Num")
+				##objMercenaryUtils.removeMercenariesFromPool(wanderingMercenaryCount)
+				#teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
+				##if (not teamPlayer.isHasTech(con.iNationalism)):
+				#if (iGameTurn % g_bUpdatePeriod == (g_bUpdatePeriod-1)):
+					#wanderingMercenaryCount = gc.getGame().getMapRand().get(g_iWanderlustMercenariesMaximum, "Random Num") + g_iWanderlustMercenariesMinimum
+					#objMercenaryUtils.removeMercenariesFromPool(wanderingMercenaryCount)
+				##Rhye - end
 
 
-                        ## Add the mercenaries to the global mercenary pool if the g_bGameTurnMercenaryCreation
-                        ## is set to true
-                        #if(g_bGameTurnMercenaryCreation):
+			## Add the mercenaries to the global mercenary pool if the g_bGameTurnMercenaryCreation
+			## is set to true
+			#if(g_bGameTurnMercenaryCreation):
 
-                                ##Rhye - start (less frequent updates)
-                                ##objMercenaryUtils.addMercenariesToPool()
-                                #if (iGameTurn % g_bUpdatePeriod == (g_bUpdatePeriod-1)):
-                                        #objMercenaryUtils.addMercenariesToPool()
-                                ##Rhye - end
-                #print(" 3Miro onBegTurn out: ",iGameTurn)
+				##Rhye - start (less frequent updates)
+				##objMercenaryUtils.addMercenariesToPool()
+				#if (iGameTurn % g_bUpdatePeriod == (g_bUpdatePeriod-1)):
+					#objMercenaryUtils.addMercenariesToPool()
+				##Rhye - end
+		#print(" 3Miro onBegTurn out: ",iGameTurn)
 
-                return 0
+		return 0
 
 
 
@@ -528,46 +528,46 @@ class CvRFCEventHandler:
 		if ( gc.hasUP( iPlayer, con.iUP_Janissary ) ):
 			self.up.janissary( iPlayer )
 
-                #Mercenaries - start
+		#Mercenaries - start
 
-                # This method will add mercenaries to the global mercenary pool, display the mercenary manager screen
-                # and provide the logic to make the computer players think.
-                #player = gc.getPlayer(iPlayer)
+		# This method will add mercenaries to the global mercenary pool, display the mercenary manager screen
+		# and provide the logic to make the computer players think.
+		#player = gc.getPlayer(iPlayer)
 
-                ##if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(con.iNationalism)) and gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]): #Rhye
-                #if (gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
+		##if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(con.iNationalism)) and gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]): #Rhye
+		#if (gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
 
-                        ## Debug code - start
-                        #if(g_bDebug):
-                                #CvUtil.pyPrint(player.getName() + " Gold: " + str(player.getGold()) + " is human: " + str(player.isHuman()))
-                        ## Debug code - end
+			## Debug code - start
+			#if(g_bDebug):
+				#CvUtil.pyPrint(player.getName() + " Gold: " + str(player.getGold()) + " is human: " + str(player.isHuman()))
+			## Debug code - end
 
-                        ## Add the mercenaries to the global mercenary pool if the
-                        ## g_bGameTurnMercenaryCreation is set to false
-                        #if(not g_bGameTurnMercenaryCreation):
-                                #objMercenaryUtils.addMercenariesToPool()
+			## Add the mercenaries to the global mercenary pool if the
+			## g_bGameTurnMercenaryCreation is set to false
+			#if(not g_bGameTurnMercenaryCreation):
+				#objMercenaryUtils.addMercenariesToPool()
 
-                        ## if g_bDisplayMercenaryManagerOnBeginPlayerTurn is true the the player is human
-                        ## then display the mercenary manager screen
-                        #if(g_bDisplayMercenaryManagerOnBeginPlayerTurn and player.isHuman()):
-                                #self.mercenaryManager.interfaceScreen()
+			## if g_bDisplayMercenaryManagerOnBeginPlayerTurn is true the the player is human
+			## then display the mercenary manager screen
+			#if(g_bDisplayMercenaryManagerOnBeginPlayerTurn and player.isHuman()):
+				#self.mercenaryManager.interfaceScreen()
 
-                        ## if the player is not human then run the think method
-                        #if(not player.isHuman()):
+			## if the player is not human then run the think method
+			#if(not player.isHuman()):
 
-                                ##Rhye - start
-                                ##objMercenaryUtils.computerPlayerThink(iPlayer)
-                                #if (player.isAlive()):
-                                        ##if (iPlayer % (g_bAIThinkPeriod) == iGameTurn % (g_bAIThinkPeriod) and not gc.getTeam(player.getTeam()).isHasTech(con.iNationalism)):
-                                        #if (iPlayer % (g_bAIThinkPeriod) == iGameTurn % (g_bAIThinkPeriod)):
-                                                #print ("AI thinking (Mercenaries)", iPlayer) #Rhye
-                                                #objMercenaryUtils.computerPlayerThink(iPlayer)
-                                ##Rhye - end
+				##Rhye - start
+				##objMercenaryUtils.computerPlayerThink(iPlayer)
+				#if (player.isAlive()):
+					##if (iPlayer % (g_bAIThinkPeriod) == iGameTurn % (g_bAIThinkPeriod) and not gc.getTeam(player.getTeam()).isHasTech(con.iNationalism)):
+					#if (iPlayer % (g_bAIThinkPeriod) == iGameTurn % (g_bAIThinkPeriod)):
+						#print ("AI thinking (Mercenaries)", iPlayer) #Rhye
+						#objMercenaryUtils.computerPlayerThink(iPlayer)
+				##Rhye - end
 
-                        ## Place any mercenaries that might be ready to be placed.
-                        #objMercenaryUtils.placeMercenaries(iPlayer)
-                ##print ("PLAYER FINE", iPlayer)
-                ##print( " out Begin Player Turn ",iGameTurn, iPlayer )
+			## Place any mercenaries that might be ready to be placed.
+			#objMercenaryUtils.placeMercenaries(iPlayer)
+		##print ("PLAYER FINE", iPlayer)
+		##print( " out Begin Player Turn ",iGameTurn, iPlayer )
 
 
 	def onEndPlayerTurn(self, argsList):
@@ -647,147 +647,147 @@ class CvRFCEventHandler:
 		#		CyInterface().setDirty(InterfaceDirtyBits.GameData_DIRTY_BIT, True)
 
 
-        # This method will remove a mercenary unit from the game if it is killed
-        def onUnitKilled(self, argsList):
-                'Unit Killed'
+	# This method will remove a mercenary unit from the game if it is killed
+	def onUnitKilled(self, argsList):
+		'Unit Killed'
 
-                self.mercs.onUnitKilled( argsList )
+		self.mercs.onUnitKilled( argsList )
 
-                #if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(con.iNationalism)) and gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]): #Rhye
-                #if (gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
+		#if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(con.iNationalism)) and gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]): #Rhye
+		#if (gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
 
-                        #unit, iAttacker = argsList
+			#unit, iAttacker = argsList
 
-                        #mercenary = objMercenaryUtils.getMercenary(unit.getNameNoDesc())
+			#mercenary = objMercenaryUtils.getMercenary(unit.getNameNoDesc())
 
-                        #if(mercenary != None and g_bDisplayMercenaryMessages and mercenary.getBuilder() != -1 and unit.isDead()):
-                                #strMessage = mercenary.getName() + " has died under " + gc.getPlayer(mercenary.getOwner()).getName() + "'s service."
-                                ## Inform the player that the mercenary has died.
-                                #CyInterface().addMessage(mercenary.getBuilder(), True, 20, strMessage, "", 0, "", ColorTypes(0), -1, -1, True, True)
+			#if(mercenary != None and g_bDisplayMercenaryMessages and mercenary.getBuilder() != -1 and unit.isDead()):
+				#strMessage = mercenary.getName() + " has died under " + gc.getPlayer(mercenary.getOwner()).getName() + "'s service."
+				## Inform the player that the mercenary has died.
+				#CyInterface().addMessage(mercenary.getBuilder(), True, 20, strMessage, "", 0, "", ColorTypes(0), -1, -1, True, True)
 
-                        #objMercenaryUtils.removePlayerMercenary(unit)
-
-
-        # This method will remove a mercenary unit from the game if it is lost
-        def onUnitLost(self, argsList):
-                'Unit Lost'
-
-                #print(" 3Miro: onUnitLost ")
-                self.mercs.onUnitLost( argsList )
-
-                #if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(con.iNationalism)) and gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]): #Rhye
-                #if (gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
-
-                        #unit = argsList[0]
-
-                        ## Debug code - start
-                        #if(g_bDebug):
-                                #CvUtil.pyPrint("lost: " + unit.getName())
-                        ## Debug code - end
-
-                        ## If the unit being lost is a mercenary, check to see if they have been
-                        ## replaced by an upgraded version of themselves. If they are then save
-                        ## the new upgraded version of themselves and return immediately.
-                        #if(objMercenaryUtils.isMercenary(unit)):
-
-                                ## Debug code - start
-                                #if(g_bDebug):
-                                        #CvUtil.pyPrint("mercenary unit lost: " + unit.getName())
-                                ## Debug code - end
-
-                                ## Get the active player ID
-                                #iPlayer = gc.getGame().getActivePlayer()
-
-                                ## Get the reference of the actual player
-                                #pyPlayer = PyPlayer(iPlayer)
-
-                                ## Get the list of units for the player
-                                #unitList = pyPlayer.getUnitList()
-
-                                ## Go through the list of units to see if an upgraded version of
-                                ## the unit has been added. If it exists then save it and return
-                                ## immediately.
-                                #for unit in unitList:
-
-                                        #if(unit.getUnitType() != argsList[0].getUnitType() and unit.getNameNoDesc() == argsList[0].getNameNoDesc()):
-
-                                                ## Debug code - start
-                                                #if(g_bDebug):
-                                                        #CvUtil.pyPrint("mercenary unit upgraded: " + unit.getName())
-                                                ## Debug code - end
-
-                                                #tmpMerc = objMercenaryUtils.createBlankMercenary()
-                                                #tmpMerc.loadUnitData(unit)
-                                                #tmpMerc.iBuilder = -1
-                                                #objMercenaryUtils.saveMercenary(tmpMerc)
-                                                #return
-
-                        #mercenary = objMercenaryUtils.getMercenary(unit.getNameNoDesc())
-
-                        #if(mercenary != None and g_bDisplayMercenaryMessages and mercenary.getBuilder() != -1 and unit.isDead()):
-                                #strMessage = mercenary.getName() + " was lost under " + gc.getPlayer(mercenary.getOwner()).getName() + "'s service."
-                                ## Inform the player that the mercenary has died.
-                                #CyInterface().addMessage(mercenary.getBuilder(), True, 20, strMessage, "", 0, "", ColorTypes(0), -1, -1, True, True)
-                        #unit = argsList[0]
-
-                        ## Debug code - start
-                        #if(g_bDebug):
-                                #CvUtil.pyPrint("lost??: " + unit.getNameNoDesc())
-                        ## Debug code - end
-
-                        #objMercenaryUtils.removePlayerMercenary(unit)
+			#objMercenaryUtils.removePlayerMercenary(unit)
 
 
-        # This method handles the key input and will bring up the mercenary manager screen if the
-        # player has at least one city and presses the 'M' key.
-        def onKbdEvent(self, argsList):
-                'keypress handler - return 1 if the event was consumed'
+	# This method will remove a mercenary unit from the game if it is lost
+	def onUnitLost(self, argsList):
+		'Unit Lost'
 
-                iHuman = utils.getHumanID()
-                #if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(con.iNationalism)) and gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]): #Rhye
-                if (gc.getGame().getGameTurn() >= con.tBirth[iHuman]):
+		#print(" 3Miro: onUnitLost ")
+		self.mercs.onUnitLost( argsList )
 
-                        # TO DO: REMOVE THE FOLLOWING LINE BEFORE RELEASE.
-                        #gc.getPlayer(0).setGold(20000)
-                        eventType,key,mx,my,px,py = argsList
+		#if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(con.iNationalism)) and gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]): #Rhye
+		#if (gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):
 
-                        theKey=int(key)
+			#unit = argsList[0]
 
-                        if ( eventType == self.EventKeyDown and theKey == int(InputTypes.KB_M) and self.eventManager.bAlt and gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
+			## Debug code - start
+			#if(g_bDebug):
+				#CvUtil.pyPrint("lost: " + unit.getName())
+			## Debug code - end
 
-                                self.mercenaryManager.interfaceScreen()
+			## If the unit being lost is a mercenary, check to see if they have been
+			## replaced by an upgraded version of themselves. If they are then save
+			## the new upgraded version of themselves and return immediately.
+			#if(objMercenaryUtils.isMercenary(unit)):
 
-                #Rhye - start debug
-                eventType,key,mx,my,px,py = argsList
+				## Debug code - start
+				#if(g_bDebug):
+					#CvUtil.pyPrint("mercenary unit lost: " + unit.getName())
+				## Debug code - end
 
-                theKey=int(key)
+				## Get the active player ID
+				#iPlayer = gc.getGame().getActivePlayer()
 
-                if ( eventType == self.EventKeyDown and theKey == int(InputTypes.KB_B) and self.eventManager.bAlt):
+				## Get the reference of the actual player
+				#pyPlayer = PyPlayer(iPlayer)
 
-                        iGameTurn = gc.getGame().getGameTurn()
-                        pass
+				## Get the list of units for the player
+				#unitList = pyPlayer.getUnitList()
+
+				## Go through the list of units to see if an upgraded version of
+				## the unit has been added. If it exists then save it and return
+				## immediately.
+				#for unit in unitList:
+
+					#if(unit.getUnitType() != argsList[0].getUnitType() and unit.getNameNoDesc() == argsList[0].getNameNoDesc()):
+
+						## Debug code - start
+						#if(g_bDebug):
+							#CvUtil.pyPrint("mercenary unit upgraded: " + unit.getName())
+						## Debug code - end
+
+						#tmpMerc = objMercenaryUtils.createBlankMercenary()
+						#tmpMerc.loadUnitData(unit)
+						#tmpMerc.iBuilder = -1
+						#objMercenaryUtils.saveMercenary(tmpMerc)
+						#return
+
+			#mercenary = objMercenaryUtils.getMercenary(unit.getNameNoDesc())
+
+			#if(mercenary != None and g_bDisplayMercenaryMessages and mercenary.getBuilder() != -1 and unit.isDead()):
+				#strMessage = mercenary.getName() + " was lost under " + gc.getPlayer(mercenary.getOwner()).getName() + "'s service."
+				## Inform the player that the mercenary has died.
+				#CyInterface().addMessage(mercenary.getBuilder(), True, 20, strMessage, "", 0, "", ColorTypes(0), -1, -1, True, True)
+			#unit = argsList[0]
+
+			## Debug code - start
+			#if(g_bDebug):
+				#CvUtil.pyPrint("lost??: " + unit.getNameNoDesc())
+			## Debug code - end
+
+			#objMercenaryUtils.removePlayerMercenary(unit)
 
 
-                if ( eventType == self.EventKeyDown and theKey == int(InputTypes.KB_N) and self.eventManager.bAlt):
+	# This method handles the key input and will bring up the mercenary manager screen if the
+	# player has at least one city and presses the 'M' key.
+	def onKbdEvent(self, argsList):
+		'keypress handler - return 1 if the event was consumed'
 
-                        print("ALT-N")
+		iHuman = utils.getHumanID()
+		#if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(con.iNationalism)) and gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]): #Rhye
+		if (gc.getGame().getGameTurn() >= con.tBirth[iHuman]):
 
-                        #self.printEmbassyDebug()
-                        self.printPlotsDebug()
-                        #self.printStabilityDebug()
+			# TO DO: REMOVE THE FOLLOWING LINE BEFORE RELEASE.
+			#gc.getPlayer(0).setGold(20000)
+			eventType,key,mx,my,px,py = argsList
+
+			theKey=int(key)
+
+			if ( eventType == self.EventKeyDown and theKey == int(InputTypes.KB_M) and self.eventManager.bAlt and gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
+
+				self.mercenaryManager.interfaceScreen()
+
+		#Rhye - start debug
+		eventType,key,mx,my,px,py = argsList
+
+		theKey=int(key)
+
+		if ( eventType == self.EventKeyDown and theKey == int(InputTypes.KB_B) and self.eventManager.bAlt):
+
+			iGameTurn = gc.getGame().getGameTurn()
+			pass
 
 
-                if ( eventType == self.EventKeyDown and theKey == int(InputTypes.KB_E) and self.eventManager.bAlt and self.eventManager.bShift):
-                        print("SHIFT-ALT-E") #picks a dead civ so that autoplay can be started with game.AIplay xx
-                        iDebugDeadCiv = iCarthage #default iEthiopia: always dead in 600AD
-                        # 3Miro: not sure
-                        #gc.getTeam(gc.getPlayer(iDebugDeadCiv).getTeam()).setHasTech(con.iCalendar, True, iDebugDeadCiv, False, False)
-                        utils.makeUnit(con.iAxeman, iDebugDeadCiv, (0,0), 1)
-                        gc.getGame().setActivePlayer(iDebugDeadCiv, False)
-                        gc.getPlayer(iDebugDeadCiv).setPlayable(True)
+		if ( eventType == self.EventKeyDown and theKey == int(InputTypes.KB_N) and self.eventManager.bAlt):
+
+			print("ALT-N")
+
+			#self.printEmbassyDebug()
+			self.printPlotsDebug()
+			#self.printStabilityDebug()
 
 
-                #Rhye - end debug
+		if ( eventType == self.EventKeyDown and theKey == int(InputTypes.KB_E) and self.eventManager.bAlt and self.eventManager.bShift):
+			print("SHIFT-ALT-E") #picks a dead civ so that autoplay can be started with game.AIplay xx
+			iDebugDeadCiv = iCarthage #default iEthiopia: always dead in 600AD
+			# 3Miro: not sure
+			#gc.getTeam(gc.getPlayer(iDebugDeadCiv).getTeam()).setHasTech(con.iCalendar, True, iDebugDeadCiv, False, False)
+			utils.makeUnit(con.iAxeman, iDebugDeadCiv, (0,0), 1)
+			gc.getGame().setActivePlayer(iDebugDeadCiv, False)
+			gc.getPlayer(iDebugDeadCiv).setPlayable(True)
+
+
+		#Rhye - end debug
 
 		# Absinthe: province highlight - based on SoI
 		if eventType == self.EventKeyDown and px >= 0 and py >= 0 and int(key) == 45 and self.eventManager.bCtrl and not self.eventManager.bAlt:
