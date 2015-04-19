@@ -279,13 +279,14 @@ iNumBuildingsPlague = iNumBuildings+1
 iNumCorporations = 7 # to mark Genoa's UHV as false
 
 
-#Projects
-
-iEncyclopedie = 0
-iEastIndiaCompany = 1
-iWestIndiaCompany = 2
+#Projects . Colonies
+iNumProjects = 25
+(iEncyclopedie, iEastIndiaCompany, iWestIndiaCompany,
+iColVinland, iColGoldCoast, iColIvoryCoast, iColCuba, iColBrazil, iColHudson, iColVirginia, iColFarEast, iColIndia, iColEastIndies,
+iColMalaysia, iColCapeTown, iColEastAfrica, iColAztec, iColIna, iColHispaniola, iColQuebec, iColNewEngland, iColJamaica, iColPanama,
+iColLouisiana, iColPhillippines) = range(iNumProjects)
 iNumNotColonies = 3
-iNumTotalColonies = 25
+iNumTotalColonies = iNumProjects
 
 
 #Eras

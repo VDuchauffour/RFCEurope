@@ -1153,6 +1153,87 @@
 		<Portuguese>Cidades sob controle: </Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UHV_MOR2_HELP</Tag>
+		<English>Cities with the highest culture:</English>
+		<French>Cities with the highest culture:</French>
+		<German>Cities with the highest culture:</German>
+		<Italian>Cities with the highest culture:</Italian>
+		<Spanish>Cities with the highest culture:</Spanish>
+		<Portuguese>Cities with the highest culture:</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_FRA2_HELP</Tag>
+		<English>Controller of Jeruzalem: </English>
+		<French>Controller of Jeruzalem: </French>
+		<German>Controller of Jeruzalem: </German>
+		<Italian>Controller of Jeruzalem: </Italian>
+		<Spanish>Controller of Jeruzalem: </Spanish>
+		<Portuguese>Controller of Jeruzalem: </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_CITY_NOT_EXIT</Tag>
+		<English>%s1 doesn't exist</English>
+		<French>%s1 doesn't exist</French>
+		<German>%s1 doesn't exist</German>
+		<Italian>%s1 doesn't exist</Italian>
+		<Spanish>%s1 doesn't exist</Spanish>
+		<Portuguese>%s1 doesn't exist</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_JERUSALEM</Tag>
+		<English>Jerusalem</English>
+		<French>Jerusalem</French>
+		<German>Jerusalem</German>
+		<Italian>Jerusalem</Italian>
+		<Spanish>Jerusalem</Spanish>
+		<Portuguese>Jerusalem</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_CITY_NOT_OWNED</Tag>
+		<English>You do not own </English>
+		<French>You do not own </French>
+		<German>You do not own </German>
+		<Italian>You do not own </Italian>
+		<Spanish>You do not own </Spanish>
+		<Portuguese>You do not own </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TEXT_KEY_UHV_IS_LARGEST</Tag>
+		<English> is the largest city</English>
+		<French> is the largest city</French>
+		<German> is the largest city</German>
+		<Italian> is the largest city</Italian>
+		<Spanish> is the largest city</Spanish>
+		<Portuguese> is the largest city</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TEXT_KEY_UHV_ISNT_LARGEST</Tag>
+		<English> is not the largest city</English>
+		<French> is not the largest city</French>
+		<German> is not the largest city</German>
+		<Italian> is not the largest city</Italian>
+		<Spanish> is not the largest city</Spanish>
+		<Portuguese> is not the largest city</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TEXT_KEY_UHV_IS_CULTURAL</Tag>
+		<English> is the most cultural city</English>
+		<French> is the most cultural city</French>
+		<German> is the most cultural city</German>
+		<Italian> is the most cultural city</Italian>
+		<Spanish> is the most cultural city</Spanish>
+		<Portuguese> is the most cultural city</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TEXT_KEY_UHV_ISNT_CULTURAL</Tag>
+		<English> is not the most cultural city</English>
+		<French> is not the most cultural city</French>
+		<German> is not the most cultural city</German>
+		<Italian> is not the most cultural city</Italian>
+		<Spanish> is not the most cultural city</Spanish>
+		<Portuguese> is not the most cultural city</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_DQ_LEADER_NAME_1</Tag>
 		<English>Emperor</English>
 		<French>Emperor</French>
