@@ -263,7 +263,6 @@ class CvFinanceAdvisor:
 		#self.printArrow(ePlayer, self.getNextWidgetName(), 5, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 90, self.Z_CONTROLS + self.DZ)
 		self.printText( ePlayer, 4, self.getNextWidgetName(), self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 90, self.Z_CONTROLS + self.DZ)
 
-
 		#Rhye - end
 
 
@@ -403,7 +402,7 @@ class CvFinanceAdvisor:
 	def printStars(self, ePlayer, panel, n, x, y, z):
 		totStars = ""
 		for i in range(n):
-		    totStars = totStars + unichr(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
+			totStars = totStars + unichr(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
 		if (gc.getPlayer(ePlayer).isHuman()):
 			self.getScreen().setLabel(panel, "Background",  totStars, CvUtil.FONT_CENTER_JUSTIFY, x, y, z, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 

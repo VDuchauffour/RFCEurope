@@ -31,7 +31,7 @@ class CvPediaLeader:
 		self.Y_LEADERHEAD_PANE = 55
 		self.W_LEADERHEAD_PANE = 325
 		self.H_LEADERHEAD_PANE = 390
-		
+
 		self.W_LEADERHEAD = 320
 		self.H_LEADERHEAD = 380
 		self.X_LEADERHEAD = self.X_LEADERHEAD_PANE + ((self.W_LEADERHEAD_PANE - self.W_LEADERHEAD) / 2)
@@ -57,14 +57,12 @@ class CvPediaLeader:
 		self.W_TRAITS = 1000 - self.X_TRAITS
 		self.H_TRAITS = self.Y_HISTORY - self.Y_TRAITS
 		#Rhye - end
-		
+
 	# Screen construction function
 	def interfaceScreen(self, iLeader):
 
 		self.iLeader = iLeader
-
 		self.top.deleteAllWidgets()
-
 		screen = self.top.getScreen()
 
 		bNotActive = (not screen.isActive())
@@ -75,15 +73,15 @@ class CvPediaLeader:
 		szHeader = u"<font=4b>" + gc.getLeaderHeadInfo(self.iLeader).getDescription().upper() + u"</font>"
 		szHeaderId = self.top.getNextWidgetName()
 		screen.setLabel(szHeaderId, "Background", szHeader, CvUtil.FONT_CENTER_JUSTIFY, self.top.X_SCREEN, self.top.Y_TITLE, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-		
+
 		# Top
 		screen.setText(self.top.getNextWidgetName(), "Background", self.top.MENU_TEXT, CvUtil.FONT_LEFT_JUSTIFY, self.top.X_MENU, self.top.Y_MENU, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_PEDIA_MAIN, CivilopediaPageTypes.CIVILOPEDIA_PAGE_LEADER, -1)
 
-		if self.top.iLastScreen	!= CvScreenEnums.PEDIA_LEADER or bNotActive:	
+		if self.top.iLastScreen	!= CvScreenEnums.PEDIA_LEADER or bNotActive:
 			if self.top.iLastScreen != CvScreenEnums.PEDIA_MAIN:
-				self.placeLinks()		
+				self.placeLinks()
 			self.top.iLastScreen = CvScreenEnums.PEDIA_LEADER
-		
+
 		# Leaderhead
 		leaderPanelWidget = self.top.getNextWidgetName()
 		screen.addPanel( leaderPanelWidget, "", "", true, true,
@@ -104,26 +102,26 @@ class CvPediaLeader:
 			civ = gc.getCivilizationInfo(iCiv)
 			if civ.isLeaders(self.iLeader):
 				screen.setImageButton(self.top.getNextWidgetName(), civ.getButton(), self.X_CIV, self.Y_CIV, self.W_CIV, self.H_CIV, WidgetTypes.WIDGET_PEDIA_JUMP_TO_CIV, iCiv, 1)
-													
+
 	def placeTraits(self):
 		screen = self.top.getScreen()
-		
+
 		panelName = self.top.getNextWidgetName()
 		screen.addPanel( panelName, localText.getText("TXT_KEY_PEDIA_TRAITS", ()), "", true, false,
-				 self.X_TRAITS, self.Y_TRAITS, self.W_TRAITS, self.H_TRAITS, PanelStyles.PANEL_STYLE_BLUE50 )
-				
+			self.X_TRAITS, self.Y_TRAITS, self.W_TRAITS, self.H_TRAITS, PanelStyles.PANEL_STYLE_BLUE50 )
+
 		listName = self.top.getNextWidgetName()
-		
+
 		szSpecialText = CyGameTextMgr().parseLeaderTraits(self.iLeader, -1, False, True)
-		screen.addMultilineText(listName, szSpecialText, self.X_TRAITS+5, self.Y_TRAITS+5, self.W_TRAITS-10, self.H_TRAITS-10, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)	
-		
-	def placeCivic(self):		
+		screen.addMultilineText(listName, szSpecialText, self.X_TRAITS+5, self.Y_TRAITS+5, self.W_TRAITS-10, self.H_TRAITS-10, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+
+	def placeCivic(self):
 		screen = self.top.getScreen()
-		
+
 		panelName = self.top.getNextWidgetName()
 		screen.addPanel( panelName, localText.getText("TXT_KEY_PEDIA_FAV_CIVIC", ()), "", true, true,
-				 self.X_CIVIC, self.Y_CIVIC, self.W_CIVIC, self.H_CIVIC, PanelStyles.PANEL_STYLE_BLUE50 )
-		
+			self.X_CIVIC, self.Y_CIVIC, self.W_CIVIC, self.H_CIVIC, PanelStyles.PANEL_STYLE_BLUE50 )
+
 		listName = self.top.getNextWidgetName()
 		screen.attachListBoxGFC( panelName, listName, "", TableStyles.TABLE_STYLE_EMPTY )
 		screen.enableSelect(listName, False)
@@ -139,20 +137,17 @@ class CvPediaLeader:
 		panelName = self.top.getNextWidgetName()
 		screen.addPanel( panelName, "", "", true, true,
 			self.X_HISTORY, self.Y_HISTORY, self.W_HISTORY, self.H_HISTORY, PanelStyles.PANEL_STYLE_BLUE50 )
-		
+
 		historyTextName = self.top.getNextWidgetName()
 		CivilopediaText = gc.getLeaderHeadInfo(self.iLeader).getCivilopedia()
 		CivilopediaText = u"<font=2>" + CivilopediaText + u"</font>"
 		screen.attachMultilineText( panelName, historyTextName, CivilopediaText,
-			WidgetTypes.WIDGET_GENERAL,-1,-1, CvUtil.FONT_LEFT_JUSTIFY ) 
+			WidgetTypes.WIDGET_GENERAL,-1,-1, CvUtil.FONT_LEFT_JUSTIFY )
 
-			
 	def placeLinks(self):
-	
+
 		self.top.placeLinks()
 		self.top.placeLeaders()
-
-
 
 	# Will handle the input for this screen...
 	def handleInput (self, inputClass):
@@ -164,5 +159,4 @@ class CvPediaLeader:
 				if (inputClass.getFlags() & MouseFlags.MOUSE_LBUTTONUP):
 					self.top.getScreen().performLeaderheadAction(self.LEADER_WIDGET, 0)
 		return 0
-
 

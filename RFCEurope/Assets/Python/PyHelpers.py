@@ -1034,7 +1034,6 @@ class PyInfo:
 			if lenTech > 0:
 				return lTech[0]
 
-
 		def getRevealTechDesc(self):
 			"str - Tech the bonus is revealed"
 			techReveal = self.info.getTechReveal()
@@ -1839,7 +1838,7 @@ class PyInfo:
 			if lBonusID:
 				for i in range(len(lBonusID)):
 					loopID = lBonusID[i]
-					if loopID in lBonusTrack: #dont need multiple infos for the same bonus
+					if loopID in lBonusTrack: #don't need multiple infos for the same bonus
 						continue
 					lBonus.append(BonusInfo(loopID))
 					lBonusTrack.append(loopID)
@@ -2090,7 +2089,6 @@ class PyInfo:
 
 		def getHillsCommerceYieldChange(self):
 			return self.info.getHillsCommerceYieldChange(YieldTypes.YIELD_COMMERCE)
-
 
 
 	class TerrainInfo:

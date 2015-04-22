@@ -279,7 +279,7 @@ iNumBuildingsPlague = iNumBuildings+1
 iNumCorporations = 7 # to mark Genoa's UHV as false
 
 
-#Projects . Colonies
+#Projects, Colonies
 iNumProjects = 25
 (iEncyclopedie, iEastIndiaCompany, iWestIndiaCompany,
 iColVinland, iColGoldCoast, iColIvoryCoast, iColCuba, iColBrazil, iColHudson, iColVirginia, iColFarEast, iColIndia, iColEastIndies,
@@ -308,12 +308,14 @@ iNumCivics = 30
 iCivicTribalism, iCivicSerfdom, iCivicFreePeasantry, iCivicApprenticeship, iCivicFreeLabor, iCivicDecentralization, iCivicManorialism, iCivicTradeEconomy, iCivicGuilds, iCivicMercantilism, 
 iCivicPaganism, iCivicStateReligion, iCivicTheocracy, iCivicOrganizedReligion, iCivicFreeReligion, iCivicSubjugation, iCivicVassalage, iCivicImperialism, iCivicOccupation, iCivicColonialism) = range(iNumCivics)
 
+
 #Feature & terrain
 iNumFeatures = 9
 (iIce, iJungle, iDenseForest, iOasis, iFloodPlains, iWoodland, iFallout, iMarsh, iPalmForest) = range(iNumFeatures)
 
 iNumTerrain = 11
 (iTerrainMoorland, iTerrainGrass, iTerrainPlains, iTerrainDesert, iTerrainWetland, iTerrainTundra, iTerrainSnow, iTerrainCoast, iTerrainOcean, iTerrainPeak, iTerrainHill) = range(iNumTerrain)
+
 
 #Promotions
 iNumPromotions = 51
@@ -323,7 +325,6 @@ iPromotionWoodsman2, iPromotionWoodsman3, iPromotionCityRaider1, iPromotionCityR
 iPromotionDrill3, iPromotionDrill4, iPromotionBarrage1, iPromotionBarrage2, iPromotionBarrage2, iPromotionAccuracy, iPromotionFlanking1, iPromotionFlanking2, iPromotionSentry, iPromotionMobility, 
 iPromotionNavigation, iPromotionNavigation2, iPromotionCargo, iPromotionLeader, iPromotionLeadership, iPromotionTactics, iPromotionCommando, iPromotionCombat6, iPromotionMorale, iPromotionMedic3, 
 iPromotionMerc) = range(iNumPromotions)
-
 
 
 #Leaders
@@ -432,5 +433,4 @@ lRegionSwiss		= [ iP_Bavaria, iP_Austria, iP_Swabia, iP_Burgundy, iP_Lorraine, i
 #[ iP_Cyrenaica, iP_Tripolitania, iP_Ifriqiya, iP_Algiers, iP_Tetouan, iP_Oran, iP_Marrakesh, iP_Morocco, iP_Fez ], # North Africa
 #]
 #iNumMapRegions = 8
-
 

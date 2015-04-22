@@ -348,19 +348,6 @@ class CvPediaBuilding:
 		for iBuilding in listBuildings:
 			listSorted[iI] = (gc.getBuildingInfo(iBuilding).getDescription(), iBuilding)
 			iI += 1
-		#Rhye - start
-		# 3Miro: remove buildings that are in BtS, but not in RFC
-		#if (not bWonder):
-		#	#listSorted.pop(67) #ziggurat
-		#	listSorted.pop(66) #rathaus
-		#	listSorted.pop(54) #garden
-		#	listSorted.pop(49) #hippodrome
-		#	listSorted.pop(42) #seowon
-		#	listSorted.pop(36) #totem
-		#	listSorted.pop(5) #ikhanda
-		#	listSorted.pop(1) #dun
-		#Rhye - end
-		#listSorted.sort() #Rhye
 		return listSorted
 
 

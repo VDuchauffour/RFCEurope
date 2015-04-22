@@ -12,16 +12,12 @@ import RFCEMaps as rfcemaps
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer
 
-
 ### Constants ###
 
 # initialise player variables to player IDs from WBS
 iNumPlayers = con.iNumPlayers
 iNumMajorPlayers = con.iNumMajorPlayers
 iNumActivePlayers = con.iNumActivePlayers
-iIndependent = con.iIndependent
-iIndependent2 = con.iIndependent2
-iBarbarian = con.iBarbarian
 iNumTotalPlayers = con.iNumTotalPlayers
 
 # city coordinates
@@ -44,18 +40,17 @@ class CityNameManager:
 		"""Renames a city depending on its owner"""
 
 		#sName = city.getName()
-		if ( iNewOwner < con.iNumMajorPlayers ):
+		if ( iNewOwner < iNumMajorPlayers ):
 			cityName = tCityMap[iNewOwner][con.iMapMaxY-1-city.getY()][city.getX()]
 			if ( cityName != "-1" ):
 				city.setName(unicode(cityName, 'latin-1'), False)
 
 	def lookupName(self,city,iPlayer):
 		"""Looks up a city name in another player's map"""
-		if (iPlayer < con.iNumMajorPlayers):
+		if (iPlayer < iNumMajorPlayers):
 			cityName = tCityMap[iPlayer][con.iMapMaxY-1-city.getY()][city.getX()]
 			if (cityName == "-1"):
 				return "Unknown"
 			else:
 				return cityName
-
 

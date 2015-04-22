@@ -45,28 +45,27 @@ class CvForeignAdvisor:
 		self.X_LINK = 50
 		self.DX_LINK = 220
 		self.Y_LINK = 726
-		
+
 		self.X_LEGEND = 20
 		self.Y_LEGEND = 530
 		self.H_LEGEND = 180
 		self.W_LEGEND = 160
 		self.MARGIN_LEGEND = 10
-		
+
 		self.X_LEADER_CIRCLE_TOP = self.X_SCREEN + 10
 		self.Y_LEADER_CIRCLE_TOP = 87
-		
+
 		self.RADIUS_LEADER_ARC = 480
 		self.LINE_WIDTH = 6
 		self.BUTTON_SIZE = 64
-		
-		
+
 		self.iSelectedLeader = -1
 		self.iActiveLeader = -1
 		self.listSelectedLeaders = []
 		self.iShiftKeyDown = 0
-				
+
 		self.iDefaultScreen = FOREIGN_RELATIONS_SCREEN
-						
+
 	def killScreen(self):
 		if (self.iScreen >= 0):
 			screen = self.getScreen()
@@ -78,26 +77,26 @@ class CvForeignAdvisor:
 		return CyGInterfaceScreen(self.SCREEN_NAME + str(self.iScreen), CvScreenEnums.FOREIGN_ADVISOR)
 
 	def interfaceScreen (self, iScreen):
-	
+
 		if (iScreen < 0):
 			if (self.iScreen < 0):
 				iScreen = self.iDefaultScreen
 			else:
 				iScreen = self.iScreen
-		
+
 		self.EXIT_TEXT = u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + u"</font>"
 		self.SCREEN_TITLE = u"<font=4b>" + localText.getText("TXT_KEY_FOREIGN_ADVISOR_TITLE", ()).upper() + u"</font>"
 
-		if (self.iScreen != iScreen):	
+		if (self.iScreen != iScreen):
 			self.killScreen()
 			self.iScreen = iScreen
-		
+
 		screen = self.getScreen()
 		if screen.isActive():
 			return
 		screen.setRenderInterfaceOnly(True);
 		screen.showScreen( PopupStates.POPUPSTATE_IMMEDIATE, False)
-	
+
 		self.iActiveLeader = CyGame().getActivePlayer()
 		self.iSelectedLeader = self.iActiveLeader
 		self.listSelectedLeaders = []
@@ -113,7 +112,7 @@ class CvForeignAdvisor:
 
 		self.nWidgetCount = 0
 		self.nLineCount = 0
-		
+
 		if (CyGame().isDebugMode()):
 			self.szDropdownName = self.getWidgetName(self.DEBUG_DROPDOWN_ID)
 			screen.addDropDownBoxGFC(self.szDropdownName, 22, 12, 300, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
@@ -121,56 +120,56 @@ class CvForeignAdvisor:
 				if (gc.getPlayer(j).isAlive()):
 					#screen.addPullDownString(self.szDropdownName, gc.getPlayer(j).getName(), j, j, False ) #Rhye
 					screen.addPullDownString(self.szDropdownName, gc.getPlayer(j).getCivilizationShortDescription(0), j, j, False ) #Rhye
-					
+
 		CyInterface().setDirty(InterfaceDirtyBits.Foreign_Screen_DIRTY_BIT, False)
-		
+
 		# Draw leader heads
 		self.drawContents(True)
-				
+
 	# Drawing Leaderheads
 	def drawContents(self, bInitial):
-	
+
 		if (self.iScreen < 0):
 			return
-						
+
 		self.deleteAllWidgets()
-		
+
 		screen = self.getScreen()
 
 		# Header...
 		screen.setLabel(self.getNextWidgetName(), "", self.SCREEN_TITLE, CvUtil.FONT_CENTER_JUSTIFY, self.X_SCREEN, self.Y_TITLE, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-	
+
 		if (self.iScreen == FOREIGN_RELATIONS_SCREEN):
 			self.drawRelations(bInitial)
 		elif (self.iScreen == FOREIGN_ACTIVE_TRADE_SCREEN):
 			self.drawActive()
 		else:
 			self.drawPossibleDeals()
-			
+
 		# Link to other Foreign advisor screens
 		xLink = self.X_LINK
-		
+
 		szRelationsId = self.getNextWidgetName()
 		if (self.iScreen != FOREIGN_RELATIONS_SCREEN):
 			screen.setText(szRelationsId, "", u"<font=4>" + localText.getText("TXT_KEY_FOREIGN_ADVISOR_RELATIONS", ()).upper() + u"</font>", CvUtil.FONT_LEFT_JUSTIFY, xLink, self.Y_LINK, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_FOREIGN_ADVISOR, FOREIGN_RELATIONS_SCREEN, -1)
 		else:
 			screen.setText(szRelationsId, "", u"<font=4>" + localText.getColorText("TXT_KEY_FOREIGN_ADVISOR_RELATIONS", (), gc.getInfoTypeForString("COLOR_YELLOW")).upper() + u"</font>", CvUtil.FONT_LEFT_JUSTIFY, xLink, self.Y_LINK, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_FOREIGN_ADVISOR, -1, -1)
 		xLink += self.DX_LINK
-		
+
 		szBonusId = self.getNextWidgetName()
 		if (self.iScreen != FOREIGN_BONUS_SCREEN):
 			screen.setText(szBonusId, "", u"<font=4>" + localText.getText("TXT_KEY_FOREIGN_ADVISOR_RESOURCES", ()).upper() + u"</font>", CvUtil.FONT_LEFT_JUSTIFY, xLink, self.Y_LINK, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_FOREIGN_ADVISOR, FOREIGN_BONUS_SCREEN, -1)
 		else:
 			screen.setText(szBonusId, "", u"<font=4>" + localText.getColorText("TXT_KEY_FOREIGN_ADVISOR_RESOURCES", (), gc.getInfoTypeForString("COLOR_YELLOW")).upper() + u"</font>", CvUtil.FONT_LEFT_JUSTIFY, xLink, self.Y_LINK, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_FOREIGN_ADVISOR, -1, -1)
 		xLink += self.DX_LINK
-			
+
 		szTechId = self.getNextWidgetName()
 		if (self.iScreen != FOREIGN_TECH_SCREEN):
 			screen.setText(szTechId, "", u"<font=4>" + localText.getText("TXT_KEY_FOREIGN_ADVISOR_TECHS", ()).upper() + u"</font>", CvUtil.FONT_LEFT_JUSTIFY, xLink, self.Y_LINK, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_FOREIGN_ADVISOR, FOREIGN_TECH_SCREEN, -1)
 		else:
 			screen.setText(szTechId, "", u"<font=4>" + localText.getColorText("TXT_KEY_FOREIGN_ADVISOR_TECHS", (), gc.getInfoTypeForString("COLOR_YELLOW")).upper() + u"</font>", CvUtil.FONT_LEFT_JUSTIFY, xLink, self.Y_LINK, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_FOREIGN_ADVISOR, -1, -1)
 		xLink += self.DX_LINK
-	
+
 		szActiveId = self.getNextWidgetName()
 		if (self.iScreen != FOREIGN_ACTIVE_TRADE_SCREEN):
 			screen.setText(szActiveId, "", u"<font=4>" + localText.getText("TXT_KEY_FOREIGN_ADVISOR_ACTIVE", ()).upper() + u"</font>", CvUtil.FONT_LEFT_JUSTIFY, xLink, self.Y_LINK, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_FOREIGN_ADVISOR, FOREIGN_ACTIVE_TRADE_SCREEN, -1)
@@ -183,7 +182,7 @@ class CvForeignAdvisor:
 
 		# Get the Players
 		playerActive = gc.getPlayer(self.iActiveLeader)
-					
+
 		# Put everything inside a main panel, so we get vertical scrolling
 		mainPanelName = self.getNextWidgetName()
 		screen.addPanel(mainPanelName, "", "", True, True, 50, 100, self.W_SCREEN - 100, self.H_SCREEN - 200, PanelStyles.PANEL_STYLE_EMPTY)
@@ -194,7 +193,7 @@ class CvForeignAdvisor:
 		for iLoopPlayer in range(gc.getMAX_PLAYERS()):
 			if (gc.getPlayer(iLoopPlayer).isAlive() and iLoopPlayer != self.iActiveLeader and not gc.getPlayer(iLoopPlayer).isBarbarian() and  not gc.getPlayer(iLoopPlayer).isMinorCiv()):
 				if (gc.getTeam(gc.getPlayer(iLoopPlayer).getTeam()).isHasMet(gc.getPlayer(self.iActiveLeader).getTeam()) or gc.getGame().isDebugMode()):
-					nDeals = 0				
+					nDeals = 0
 					for i in range(gc.getGame().getIndexAfterLastDeal()):
 						deal = gc.getGame().getDeal(i)
 						if ((deal.getFirstPlayer() == iLoopPlayer and deal.getSecondPlayer() == self.iActiveLeader) or (deal.getSecondPlayer() == iLoopPlayer and deal.getFirstPlayer() == self.iActiveLeader)):
@@ -215,12 +214,12 @@ class CvForeignAdvisor:
 			screen.attachLabel(playerPanelName, "", "   ")
 
 			screen.attachImageButton(playerPanelName, "", gc.getLeaderHeadInfo(gc.getPlayer(iLoopPlayer).getLeaderType()).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_LEADERHEAD, iLoopPlayer, -1, False)
-						
+
 			innerPanelName = self.getNextWidgetName()
 			screen.attachPanel(playerPanelName, innerPanelName, "", "", False, False, PanelStyles.PANEL_STYLE_EMPTY)
 
 			dealPanelName = self.getNextWidgetName()
-			screen.attachListBoxGFC(innerPanelName, dealPanelName, "", TableStyles.TABLE_STYLE_EMPTY)	
+			screen.attachListBoxGFC(innerPanelName, dealPanelName, "", TableStyles.TABLE_STYLE_EMPTY)
 			screen.enableSelect(dealPanelName, False)
 
 			iRow = 0
@@ -230,16 +229,16 @@ class CvForeignAdvisor:
 				if (deal.getFirstPlayer() == iLoopPlayer and deal.getSecondPlayer() == self.iActiveLeader and not deal.isNone()) or (deal.getSecondPlayer() == iLoopPlayer and deal.getFirstPlayer() == self.iActiveLeader):
 					screen.appendListBoxString(dealPanelName, CyGameTextMgr().getDealString(deal, iLoopPlayer), WidgetTypes.WIDGET_DEAL_KILL, deal.getID(), -1, CvUtil.FONT_LEFT_JUSTIFY)
 					iRow += 1
-																
+
 
 	def drawPossibleDeals(self):
-	
+
 		screen = self.getScreen()
 
 		# Get the Players
 		playerActive = gc.getPlayer(self.iActiveLeader)
 		playerSelected = gc.getPlayer(self.iSelectedLeader)
-					
+
 		# Put everything inside a main panel, so we get vertical scrolling
 		mainPanelName = self.getNextWidgetName()
 		screen.addPanel( mainPanelName, "", "", True, True, 50, 100, self.W_SCREEN - 100, self.H_SCREEN - 200, PanelStyles.PANEL_STYLE_MAIN )
@@ -247,14 +246,14 @@ class CvForeignAdvisor:
 		# Active player panel
 		activePlayerPanelName = self.getNextWidgetName()
 		szPlayerName = playerActive.getName()
-		
+
 		if (gc.getTeam(playerActive.getTeam()).isGoldTrading() or gc.getTeam(playerSelected.getTeam()).isGoldTrading()):
 			if (self.iScreen == FOREIGN_BONUS_SCREEN):
 				szPlayerName += u" : " + localText.getText("TXT_KEY_MISC_GOLD_PER_TURN", (playerActive.calculateGoldRate(), ))
 			elif (self.iScreen == FOREIGN_TECH_SCREEN):
 				szPlayerName += u" : " + localText.getText("TXT_KEY_MISC_GOLD", (playerActive.getGold(), ))
 		screen.attachPanel(mainPanelName, activePlayerPanelName, szPlayerName, "", False, True, PanelStyles.PANEL_STYLE_EMPTY )
-					
+
 		screen.attachLabel(activePlayerPanelName, "", "		    ")
 		screen.attachMultiListControlGFC(activePlayerPanelName, "Child" + activePlayerPanelName, "", 1, self.BUTTON_SIZE, self.BUTTON_SIZE, TableStyles.TABLE_STYLE_STANDARD)
 
@@ -292,24 +291,24 @@ class CvForeignAdvisor:
 							if (iLoopPlayer != self.iActiveLeader and gc.getPlayer(self.iActiveLeader).canTradeItem(iLoopPlayer, tradeData, False)):
 								bTradeable = True
 								iLoopPlayer = gc.getMAX_PLAYERS() # exit for loop
-								
+
 				else:
 					# display techs that you can trade to the selected leader
 					bTradeable = gc.getPlayer(self.iActiveLeader).canTradeItem(self.iSelectedLeader, tradeData, False)
-					
+
 				if bTradeable:
 					screen.appendMultiListButton("Child" + activePlayerPanelName, gc.getTechInfo(iLoopTech).getButton(), 0, WidgetTypes.WIDGET_PEDIA_JUMP_TO_TECH, iLoopTech, -1, False)
 
 		# Add active player leaderhead
 		screen.attachLabel(activePlayerPanelName, "", "   ")
-		szName = self.getNextWidgetName()			
+		szName = self.getNextWidgetName()
 		screen.addCheckBoxGFCAt(activePlayerPanelName, szName, gc.getLeaderHeadInfo(gc.getPlayer(self.iActiveLeader).getLeaderType()).getButton(), ArtFileMgr.getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(), 10, 0, self.W_LEADER, self.H_LEADER, WidgetTypes.WIDGET_LEADERHEAD, self.iActiveLeader, -1, ButtonStyles.BUTTON_STYLE_LABEL, False)
 		if (self.iSelectedLeader == self.iActiveLeader):
 			screen.setState(szName, True)
 		else:
 			screen.setState(szName, False)
 
-		# Their leaderheads		
+		# Their leaderheads
 		for iLoopPlayer in range(gc.getMAX_PLAYERS()):
 			if (gc.getPlayer(iLoopPlayer).isAlive() and iLoopPlayer != self.iActiveLeader and (gc.getTeam(gc.getPlayer(iLoopPlayer).getTeam()).isHasMet(gc.getPlayer(self.iActiveLeader).getTeam()) or gc.getGame().isDebugMode()) and not gc.getPlayer(iLoopPlayer).isBarbarian() and not gc.getPlayer(iLoopPlayer).isMinorCiv()):
 
@@ -324,7 +323,7 @@ class CvForeignAdvisor:
 					szPlayerName += u" : " + localText.getText("TXT_KEY_FOREIGN_ADVISOR_NOT_CONNECTED", ())
 				elif (not gc.getTeam(playerActive.getTeam()).isTechTrading() and not gc.getTeam(gc.getPlayer(iLoopPlayer).getTeam()).isTechTrading()):
 					szPlayerName += u" : " + localText.getText("TXT_KEY_FOREIGN_ADVISOR_NO_TECH_TRADING", ())
-				screen.attachPanel(mainPanelName, currentPlayerPanelName, szPlayerName, "", False, True, PanelStyles.PANEL_STYLE_EMPTY )				
+				screen.attachPanel(mainPanelName, currentPlayerPanelName, szPlayerName, "", False, True, PanelStyles.PANEL_STYLE_EMPTY )
 
 				screen.attachLabel(currentPlayerPanelName, "", "		    ")
 
@@ -344,17 +343,17 @@ class CvForeignAdvisor:
 									listTradeable.append(iLoopBonus)
 								else:
 									listUntradeable.append(iLoopBonus)
-									
+
 						if len(listTradeable) > 0:
 							screen.attachLabel(currentPlayerPanelName, "", u"<font=4>" + localText.getText("TXT_KEY_FOREIGN_ADVISOR_FOR_TRADE", ()) + u"</font>")
-										
+
 						screen.attachMultiListControlGFC(currentPlayerPanelName, "ChildTrade" + currentPlayerPanelName, "", 1, self.BUTTON_SIZE, self.BUTTON_SIZE, TableStyles.TABLE_STYLE_STANDARD)
 						for iLoopBonus in listTradeable:
 							screen.appendMultiListButton("ChildTrade" + currentPlayerPanelName, gc.getBonusInfo(iLoopBonus).getButton(), 0, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BONUS, iLoopBonus, -1, False)
-									
+
 						if len(listUntradeable) > 0:
 							screen.attachLabel(currentPlayerPanelName, "", u"<font=4>" + localText.getText("TXT_KEY_FOREIGN_ADVISOR_NOT_FOR_TRADE", ()) + u"</font>")
-										
+
 						screen.attachMultiListControlGFC(currentPlayerPanelName, "ChildNoTrade" + currentPlayerPanelName, "", 1, self.BUTTON_SIZE, self.BUTTON_SIZE, TableStyles.TABLE_STYLE_STANDARD)
 						for iLoopBonus in listUntradeable:
 							screen.appendMultiListButton("ChildNoTrade" + currentPlayerPanelName, gc.getBonusInfo(iLoopBonus).getButton(), 0, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BONUS, iLoopBonus, -1, False)
@@ -366,7 +365,7 @@ class CvForeignAdvisor:
 					else:
 						listTradeable = []
 						listUntradeable = []
-						listTradeNotAllowed = []						
+						listTradeNotAllowed = []
 						tradeData = TradeData()
 						tradeData.ItemType = TradeableItems.TRADE_TECHNOLOGIES
 						for iLoopTech in range(gc.getNumTechInfos()):
@@ -378,24 +377,24 @@ class CvForeignAdvisor:
 									listUntradeable.append(iLoopTech)
 							elif (gc.getTeam(gc.getPlayer(iLoopPlayer).getTeam()).isHasTech(iLoopTech) and playerActive.canResearch(iLoopTech, False)):
 								listTradeNotAllowed.append(iLoopTech)
-										
+
 						if len(listTradeable) > 0:
 							screen.attachLabel(currentPlayerPanelName, "", u"<font=4>" + localText.getText("TXT_KEY_FOREIGN_ADVISOR_FOR_TRADE", ()) + u"</font>")
-										
+
 						screen.attachMultiListControlGFC(currentPlayerPanelName, "ChildTrade" + currentPlayerPanelName, "", 1, self.BUTTON_SIZE, self.BUTTON_SIZE, TableStyles.TABLE_STYLE_STANDARD)
 						for iLoopTech in listTradeable:
 							screen.appendMultiListButton("ChildTrade" + currentPlayerPanelName, gc.getTechInfo(iLoopTech).getButton(), 0, WidgetTypes.WIDGET_PEDIA_JUMP_TO_TECH, iLoopTech, -1, False)
 
 						if len(listUntradeable) > 0:
 							screen.attachLabel(currentPlayerPanelName, "", u"<font=4>" + localText.getText("TXT_KEY_FOREIGN_ADVISOR_NOT_FOR_TRADE", ()) + u"</font>")
-										
+
 						screen.attachMultiListControlGFC(currentPlayerPanelName, "ChildNoTrade" + currentPlayerPanelName, "", 1, self.BUTTON_SIZE, self.BUTTON_SIZE, TableStyles.TABLE_STYLE_STANDARD)
 						for iLoopTech in listUntradeable:
 							screen.appendMultiListButton("ChildNoTrade" + currentPlayerPanelName, gc.getTechInfo(iLoopTech).getButton(), 0, WidgetTypes.WIDGET_PEDIA_JUMP_TO_TECH, iLoopTech, -1, False)
 
 						if len(listTradeNotAllowed) > 0:
 							screen.attachLabel(currentPlayerPanelName, "", u"<font=4>" + localText.getText("TXT_KEY_FOREIGN_ADVISOR_NOT_ALLOWED_TRADE", ()) + u"</font>")
-										
+
 						screen.attachMultiListControlGFC(currentPlayerPanelName, "ChildCantTrade" + currentPlayerPanelName, "", 1, self.BUTTON_SIZE, self.BUTTON_SIZE, TableStyles.TABLE_STYLE_STANDARD)
 						for iLoopTech in listTradeNotAllowed:
 							screen.appendMultiListButton("ChildCantTrade" + currentPlayerPanelName, gc.getTechInfo(iLoopTech).getButton(), 0, WidgetTypes.WIDGET_PEDIA_JUMP_TO_TECH, iLoopTech, -1, False)
@@ -407,9 +406,9 @@ class CvForeignAdvisor:
 					screen.setState(szName, True)
 				else:
 					screen.setState(szName, False)
-					
+
 	def drawRelations(self, bInitial):
-	
+
 		if self.iShiftKeyDown == 1:
 			if (self.iSelectedLeader in self.listSelectedLeaders):
 				self.listSelectedLeaders.remove(self.iSelectedLeader)
@@ -418,16 +417,16 @@ class CvForeignAdvisor:
 		else:
 			self.listSelectedLeaders = []
 			if (not bInitial):
-				self.listSelectedLeaders.append(self.iSelectedLeader)	
-		
+				self.listSelectedLeaders.append(self.iSelectedLeader)
+
 		bNoLeadersSelected = (len(self.listSelectedLeaders) == 0)
 		bSingleLeaderSelected = (len(self.listSelectedLeaders) == 1)
 		if bSingleLeaderSelected:
 			self.iSelectedLeader = self.listSelectedLeaders[0]
-		
+
 		# Get the Players
 		playerActive = gc.getPlayer(self.iActiveLeader)
-		
+
 		# count the leaders
 		iCount = 0
 		leaderMap = { }
@@ -440,14 +439,13 @@ class CvForeignAdvisor:
 		fLeaderTop = self.Y_LEADER_CIRCLE_TOP
 		fRadius = self.RADIUS_LEADER_ARC - self.H_LEADER
 		fLeaderArcTop = fLeaderTop + self.H_LEADER + 10
-		
+
 		if iCount < 8:
 			iLeaderHeight = int((3 * self.H_LEADER) / 2)
 			iLeaderWidth = int((3 * self.W_LEADER) / 2)
 		else:
 			iLeaderHeight = self.H_LEADER
 			iLeaderWidth = self.W_LEADER
-			
 
 		screen = self.getScreen()
 
@@ -482,7 +480,7 @@ class CvForeignAdvisor:
 		screen.setLabel(self.getNextWidgetName(), "", u"<font=2>" + localText.getText("TXT_KEY_MISC_VASSAL_SHORT", ()) + u"</font>", CvUtil.FONT_LEFT_JUSTIFY, x, y-10, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 		y += self.MARGIN_LEGEND
 		screen.addLineGFC(self.BACKGROUND_ID, self.getNextLineName(), x, y, x + self.W_LEGEND - 2*self.MARGIN_LEGEND, y, gc.getInfoTypeForString("COLOR_CYAN"))
-	
+
 		# Our leader head
 		szLeaderHead = self.getNextWidgetName()
 		#screen.addCheckBoxGFC(szLeaderHead, gc.getLeaderHeadInfo(gc.getPlayer(self.iActiveLeader).getLeaderType()).getButton(), ArtFileMgr.getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(), self.X_LEADER_CIRCLE_TOP - iLeaderWidth/2, int(fLeaderTop), iLeaderWidth, iLeaderHeight, WidgetTypes.WIDGET_LEADERHEAD, self.iActiveLeader, -1, ButtonStyles.BUTTON_STYLE_LABEL) #Rhye
@@ -507,8 +505,8 @@ class CvForeignAdvisor:
 		#screen.setLabel(szName, "", szLeaderName, CvUtil.FONT_CENTER_JUSTIFY, self.X_LEADER_CIRCLE_TOP, fLeaderTop + iLeaderHeight + 5, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 		screen.setLabel(szName, "", szLeaderName, CvUtil.FONT_CENTER_JUSTIFY, self.X_LEADER_CIRCLE_TOP, fLeaderTop + iLeaderHeight + iDist, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 		#Rhye - end
-		
-				
+
+
 		# angle increment in radians (180 degree range)
 		if (iCount < 2):
 			deltaTheta = 0
@@ -529,7 +527,7 @@ class CvForeignAdvisor:
 				iBaseLeader = self.iActiveLeader
 			playerBase = gc.getPlayer(iBaseLeader)
 
-			fX = int(self.X_LEADER_CIRCLE_TOP - fRadius * math.cos(deltaTheta * leaderMap[iPlayer]) - iLeaderWidth/2) 
+			fX = int(self.X_LEADER_CIRCLE_TOP - fRadius * math.cos(deltaTheta * leaderMap[iPlayer]) - iLeaderWidth/2)
 			fY = int(fLeaderArcTop + fRadius * math.sin(deltaTheta * leaderMap[iPlayer]) - iLeaderHeight/2)
 
 			szLeaderHead = self.getNextWidgetName()
@@ -539,7 +537,7 @@ class CvForeignAdvisor:
 				screen.setState(szLeaderHead, True)
 			else:
 				screen.setState(szLeaderHead, False)
-				
+
 			szName = self.getNextWidgetName()
 			#Rhye - start
 			iOffsetX = 0
@@ -562,7 +560,7 @@ class CvForeignAdvisor:
 
 			# Leader attitude towards active player
 			szName = self.getNextWidgetName()
-			if (gc.getTeam(player.getTeam()).isHasMet(playerBase.getTeam()) and iBaseLeader != iPlayer):		
+			if (gc.getTeam(player.getTeam()).isHasMet(playerBase.getTeam()) and iBaseLeader != iPlayer):
 				#Rhye - start
 				#szText = " (" + gc.getAttitudeInfo(gc.getPlayer(iPlayer).AI_getAttitude(iBaseLeader)).getDescription()
 				#if (iBaseLeader != iPlayer):
@@ -599,7 +597,7 @@ class CvForeignAdvisor:
 			#screen.setLabel(szName, "", szText, CvUtil.FONT_CENTER_JUSTIFY, fX + iLeaderWidth/2, fY + iLeaderHeight + 25, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 			screen.setLabel(szName, "", szText, CvUtil.FONT_CENTER_JUSTIFY, fX + iLeaderWidth/2 + iOffsetX, fY + iLeaderHeight + 25 + iOffsetY, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 			#Rhye - end
-			
+
 		# draw lines
 		for iSelectedLeader in range(gc.getMAX_PLAYERS()):
 			bDisplayed = (not gc.getPlayer(iSelectedLeader).isBarbarian() and not gc.getPlayer(iSelectedLeader).isMinorCiv() and gc.getPlayer(iSelectedLeader).isAlive() and (gc.getGame().isDebugMode() or gc.getTeam(playerActive.getTeam()).isHasMet(gc.getPlayer(iSelectedLeader).getTeam())))
@@ -612,21 +610,21 @@ class CvForeignAdvisor:
 				else:
 					fXSelected = self.X_LEADER_CIRCLE_TOP
 					fYSelected = fLeaderTop + iLeaderHeight/2
-				
+
 				for iPlayer in leaderMap.keys():
 					player = gc.getPlayer(iPlayer)
 
 					fX = self.X_LEADER_CIRCLE_TOP - fRadius * math.cos(deltaTheta * leaderMap[iPlayer])
 					fY = fLeaderArcTop + fRadius * math.sin(deltaTheta * leaderMap[iPlayer])
-					
+
 					# draw lines
 					if (iSelectedLeader != iPlayer):
 						if (player.getTeam() == gc.getPlayer(iSelectedLeader).getTeam()):
 							szName = self.getNextLineName()
-							screen.addLineGFC(self.BACKGROUND_ID, szName, int(fXSelected), int(fYSelected), int(fX), int(fY), gc.getInfoTypeForString("COLOR_YELLOW") )						
+							screen.addLineGFC(self.BACKGROUND_ID, szName, int(fXSelected), int(fYSelected), int(fX), int(fY), gc.getInfoTypeForString("COLOR_YELLOW") )
 						elif (gc.getTeam(player.getTeam()).isVassal(gc.getPlayer(iSelectedLeader).getTeam()) or gc.getTeam(gc.getPlayer(iSelectedLeader).getTeam()).isVassal(player.getTeam())):
 							szName = self.getNextLineName()
-							screen.addLineGFC(self.BACKGROUND_ID, szName, int(fXSelected), int(fYSelected), int(fX), int(fY), gc.getInfoTypeForString("COLOR_CYAN") )						
+							screen.addLineGFC(self.BACKGROUND_ID, szName, int(fXSelected), int(fYSelected), int(fX), int(fY), gc.getInfoTypeForString("COLOR_CYAN") )
 						elif (gc.getTeam(player.getTeam()).isHasMet(gc.getPlayer(iSelectedLeader).getTeam())):
 							if (gc.getTeam(player.getTeam()).isAtWar(gc.getPlayer(iSelectedLeader).getTeam())):
 								szName = self.getNextLineName()
@@ -653,7 +651,7 @@ class CvForeignAdvisor:
 								if (bJustPeace):
 									szName = self.getNextLineName()
 									screen.addLineGFC(self.BACKGROUND_ID, szName, int(fXSelected), int(fYSelected), int(fX), int(fY), gc.getInfoTypeForString("COLOR_WHITE") )
-		
+
 				player = gc.getPlayer(self.iActiveLeader)
 				if (player.getTeam() == gc.getPlayer(iSelectedLeader).getTeam()):
 					szName = self.getNextLineName()
@@ -688,31 +686,31 @@ class CvForeignAdvisor:
 							szName = self.getNextLineName()
 							screen.addLineGFC(self.BACKGROUND_ID, szName, int(fXSelected), int(fYSelected), int(self.X_LEADER_CIRCLE_TOP), int(fLeaderTop + iLeaderHeight/2), gc.getInfoTypeForString("COLOR_WHITE") )
 
-															
+
 	# returns a unique ID for a widget in this screen
 	def getNextWidgetName(self):
 		szName = self.WIDGET_ID + str(self.nWidgetCount * NUM_FOREIGN_SCREENS + self.iScreen)
 		self.nWidgetCount += 1
 		return szName
-											
+
 	def getNextLineName(self):
 		szName = self.LINE_ID + str(self.nLineCount * NUM_FOREIGN_SCREENS + self.iScreen)
 		self.nLineCount += 1
 		return szName
-											
+
 	def getWidgetName(self, szBaseName):
 		szName = szBaseName + str(self.iScreen)
 		return szName
-		
+
 	def clearAllLines(self):
 		screen = self.getScreen()
 		nLines = self.nLineCount
 		self.nLineCount = 0
 		for i in range(nLines):
 			screen.removeLineGFC(self.BACKGROUND_ID, self.getNextLineName())
-		self.nLineCount = 0	
+		self.nLineCount = 0
 
-		
+
 	def deleteAllWidgets(self):
 		screen = self.getScreen()
 		i = self.nWidgetCount - 1
@@ -722,8 +720,8 @@ class CvForeignAdvisor:
 			i -= 1
 
 		self.nWidgetCount = 0
-		self.clearAllLines()			
-			
+		self.clearAllLines()
+
 	# Handles the input for this screen...
 	def handleInput (self, inputClass):
 		if (inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED):
@@ -734,7 +732,7 @@ class CvForeignAdvisor:
 				elif (inputClass.getFlags() & MouseFlags.MOUSE_RBUTTONUP):
 					if (self.iActiveLeader != inputClass.getData1()):
 						self.getScreen().hideScreen()
-			 
+
 		elif (inputClass.getNotifyCode() == NotifyCode.NOTIFY_LISTBOX_ITEM_SELECTED):
 			if (inputClass.getFunctionName() + str(inputClass.getID()) == self.getWidgetName(self.DEBUG_DROPDOWN_ID)):
 				szName = self.getWidgetName(self.DEBUG_DROPDOWN_ID)
@@ -743,7 +741,7 @@ class CvForeignAdvisor:
 				self.drawContents(False)
 		elif (inputClass.getNotifyCode() == NotifyCode.NOTIFY_CHARACTER):
 			if (inputClass.getData() == int(InputTypes.KB_LSHIFT) or inputClass.getData() == int(InputTypes.KB_RSHIFT)):
-				self.iShiftKeyDown = inputClass.getID() 
+				self.iShiftKeyDown = inputClass.getID()
 
 		return 0
 

@@ -242,9 +242,9 @@ class Stability:
 	def onCityRazed(self, iOwner, playerType, city):
 		#Sedna17: Not sure what difference between iOwner and playerType is here
 		#3Miro: iOwner owns the city (victim) and I think playerType is the one razing the city
-		#       On second thought, if iOwner (the previous owner) doesn't have enough culture, then iOwner == playerType
+		#		On second thought, if iOwner (the previous owner) doesn't have enough culture, then iOwner == playerType
 		#AbsintheRed: The question of razing is after the conquest of the city. This means iOwner is the conqueror.
-		#	     Thus, if 3Miro is right, and playerType is the one razing the city, then: iOwner == playerType in all cases
+		#			Thus, if 3Miro is right, and playerType is the one razing the city, then: iOwner == playerType in all cases
 		if (city.hasBuilding(xml.iEscorial)):
 			gc.getPlayer( playerType ).setPicklefreeParameter( con.iIsHasEscorial, 0 )
 			gc.getPlayer( iOwner ).setPicklefreeParameter( con.iIsHasEscorial, 0 )
@@ -259,7 +259,7 @@ class Stability:
 		if ( iOwner == playerType ):
 			gc.getPlayer( iOwner ).changeStabilityBase( iCathegoryExpansion, -1 )
 		self.recalcEpansion( gc.getPlayer( playerType ) )
-				
+
 				#if city.getPopulation()
 
 
@@ -351,8 +351,7 @@ class Stability:
 						print ("COLLAPSE: CIVIL WAR", gc.getPlayer(iPlayer).getCivilizationAdjective(0))
 						if (iPlayer != utils.getHumanID()):
 							if (gc.getPlayer(utils.getHumanID()).canContact(iPlayer)):
-								CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, gc.getPlayer(iPlayer).getCivilizationDescription(0) + " " + \
-												    CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
+								CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, gc.getPlayer(iPlayer).getCivilizationDescription(0) + " " + CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
 							#if (iGameTurn < xml.i1000AD):
 							# 3Miro: fragments to indeps and barbs, after some year just indeps
 							#utils.killAndFragmentCiv(iPlayer, iIndependent, iIndependent2, -1, False)
@@ -372,12 +371,12 @@ class Stability:
 		pPlayer = gc.getPlayer( iPlayer )
 		print(" Turn: ",iGameTurn)
 		print " ---------------- New Stability For " + cyPlayer.getCivilizationShortDescription()
-		print("		  Stability : ",pPlayer.getStability() )
-		print("		  Cities    : ",pPlayer.getStabilityBase( iCathegoryCities ) + pPlayer.getStabilityVary( iCathegoryCities ))
-		print("		  Civics    : ",pPlayer.getStabilityBase( iCathegoryCivics ) + pPlayer.getStabilityVary( iCathegoryCivics ))
-		print("		  Economy   : ",pPlayer.getStabilityBase( iCathegoryEconomy ) + pPlayer.getStabilityVary( iCathegoryEconomy ) )
-		print("		  Expansion : ",pPlayer.getStabilityBase( iCathegoryExpansion ) + pPlayer.getStabilityVary( iCathegoryExpansion ) )
-		print("		  Swing     : ",pPlayer.getStabilitySwing() )
+		print("                  Stability : ",pPlayer.getStability() )
+		print("                  Cities    : ",pPlayer.getStabilityBase( iCathegoryCities ) + pPlayer.getStabilityVary( iCathegoryCities ))
+		print("                  Civics    : ",pPlayer.getStabilityBase( iCathegoryCivics ) + pPlayer.getStabilityVary( iCathegoryCivics ))
+		print("                  Economy   : ",pPlayer.getStabilityBase( iCathegoryEconomy ) + pPlayer.getStabilityVary( iCathegoryEconomy ) )
+		print("                  Expansion : ",pPlayer.getStabilityBase( iCathegoryExpansion ) + pPlayer.getStabilityVary( iCathegoryExpansion ) )
+		print("                  Swing     : ",pPlayer.getStabilitySwing() )
 
 
 	def zeroStability(self,iPlayer): #Called by RiseAndFall Resurrection
@@ -624,3 +623,4 @@ class Stability:
 			if ( not pPlayer.isHuman() ):
 				iExpStability += 4
 		pPlayer.setStabilityVary( iCathegoryExpansion, iExpStability )
+

@@ -1005,3 +1005,4 @@ def cityAdvise(pCity, iPlayer):
 							popupInfo.addPythonButton(localText.getText("TXT_KEY_POPUP_DEMAND_EXAMINE", ()), "")
 							popupInfo.addPopup(iPlayer)
 							g_iAdvisorNags += 1
+

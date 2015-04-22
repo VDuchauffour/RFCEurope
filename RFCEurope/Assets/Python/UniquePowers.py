@@ -24,6 +24,7 @@ class UniquePowers:
 	def checkTurn(self, iGameTurn):
 		pass
 
+
 #------------------U.P. FAITH-------------------
 	def faithUP(self, iPlayer, city):
 		pFaithful = gc.getPlayer(iPlayer)
@@ -82,6 +83,7 @@ class UniquePowers:
 		#print(" 3Miro Janissaries for player: ",iPlayer,pPlayer.getPicklefreeParameter( iJanissaryPoints ) )
 		#print(" 3Miro Janissaries this turn addes: ", iNewPoints)
 
+
 # Absinthe: Danish UP
 	def soundUP(self, iPlayer):
 		print("Sound dues")
@@ -131,6 +133,7 @@ class UniquePowers:
 									iCities += 1
 		return iCities
 
+
 # Absinthe: Aragon UP
 	def confederationUP(self, iPlayer):
 		pPlayer = gc.getPlayer(iPlayer)
@@ -165,6 +168,7 @@ class UniquePowers:
 		gc.getGame().setPlotExtraYield( iCapitalX, iCapitalY, 2, iProvinceCommerceNextBonus)
 		#print("Capital commerce increased by", iProvinceCommerceNextBonus)
 		pPlayer.setUHVCounter(0, iProvinceCommerceNextBonus )
+
 
 # Absinthe: Scottish UP
 	def defianceUP(self, iPlayer):
@@ -205,3 +209,4 @@ class UniquePowers:
 			else:
 				utils.makeUnit(PolearmClass, iPlayer, tPlot, 1)
 			print(tPlot)
+

@@ -317,7 +317,6 @@ class CvRFCEventHandler:
 		if (iOwner < con.iNumActivePlayers):
 			self.cnm.assignName(city)
 
-
 		# Rhye - delete culture of barbs and minor civs to prevent weird unhappiness
 		pCurrent = gc.getMap().plot( city.getX(), city.getY() )
 		for i in range(con.iNumTotalPlayers - con.iNumActivePlayers):
@@ -493,7 +492,6 @@ class CvRFCEventHandler:
 		return 0
 
 
-
 	def onBeginPlayerTurn(self, argsList):
 		#print( " in Begin Player Turn ")
 		iGameTurn, iPlayer = argsList
@@ -600,7 +598,6 @@ class CvRFCEventHandler:
 		self.rnf.onFirstContact(iTeamX, iHasMetTeamY)
 
 
-	#Rhye - start
 	def onTechAcquired(self, argsList):
 
 		#print ("onTechAcquired", argsList)
@@ -616,7 +613,6 @@ class CvRFCEventHandler:
 
 		if (gc.getPlayer(iPlayer).isAlive() and gc.getGame().getGameTurn() > con.tBirth[iPlayer] and iPlayer < con.iNumPlayers):
 			self.sta.onTechAcquired(argsList[0], argsList[2])
-	#Rhye - end
 
 
 	# This method creates a new instance of the MercenaryUtils class to be used later
@@ -785,9 +781,8 @@ class CvRFCEventHandler:
 			utils.makeUnit(con.iAxeman, iDebugDeadCiv, (0,0), 1)
 			gc.getGame().setActivePlayer(iDebugDeadCiv, False)
 			gc.getPlayer(iDebugDeadCiv).setPlayable(True)
-
-
 		#Rhye - end debug
+
 
 		# Absinthe: province highlight - based on SoI
 		if eventType == self.EventKeyDown and px >= 0 and py >= 0 and int(key) == 45 and self.eventManager.bCtrl and not self.eventManager.bAlt:
@@ -815,7 +810,7 @@ class CvRFCEventHandler:
 			# cache the plot's coords
 			self.lastProvinceID = rfcemaps.tProinceMap[plot.getY()][plot.getX()]
 
-			# select an appriopriate color
+			# select an appropriate color
 			if rfcemaps.tProinceMap[plot.getY()][plot.getX()] == -1: # ocean and non-province tiles
 				return
 			else:

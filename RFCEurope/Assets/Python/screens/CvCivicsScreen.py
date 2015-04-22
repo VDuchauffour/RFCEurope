@@ -285,7 +285,6 @@ class CvCivicsScreen:
 	def updateAnarchy(self):
 
 		screen = self.getScreen()
-
 		activePlayer = gc.getPlayer(self.iActivePlayer)
 
 		bChange = False
@@ -367,7 +366,4 @@ class CvCivicsScreen:
 
 	def update(self, fDelta):
 		return
-
-
-
 
