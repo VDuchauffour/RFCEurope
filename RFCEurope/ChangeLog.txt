@@ -214,6 +214,7 @@ Changes for RFCE 1.3:
 			England: Jewel of the Crown: Build 7 Colonies
 			Portugal: Feitorias all over the world: Build 5 Colonies
 			Dutch: The India Companies: Build 3 Colonies and complete both Trading Companies
+		- Free walls in the city if it is built on a fort
 
 	Art updates:
 		- New art for Isabella (Spain), Casimir III (Poland), Ivan IV (Muscovy), Simeon I (Bulgaria), Ivan Asen (Bulgaria)
