@@ -411,7 +411,7 @@ def canTriggerSpicy(argsList):
 	return true
 
 def doSpicy2(argsList):
-#	need this because plantations are notmally not allowed unless there are already spices
+#	need this because plantations are normally not allowed unless there are already spices
 	iEvent = argsList[0]
 	kTriggeredData = argsList[1]
 
@@ -666,6 +666,7 @@ def canTriggerCycloneCity(argsList):
 		return false
 
 	return true
+
 
 ######## TSUNAMI ###########
 
@@ -1691,10 +1692,10 @@ def canTriggerGreatMediator(argsList):
 		return false
 
 	#Rhye - start
-	if (player.getID() == con.iIndependent or player.getID() == con.iIndependent2):
+	if (player.getID() == con.iIndependent or player.getID() == con.iIndependent2 or player.getID() == con.iIndependent3 or player.getID() == con.iIndependent4):
 		return false
 
-	if (destPlayer.getID() == con.iIndependent or destPlayer.getID() == con.iIndependent2):
+	if (destPlayer.getID() == con.iIndependent or destPlayer.getID() == con.iIndependent2 or destPlayer.getID() == con.iIndependent3 or destPlayer.getID() == con.iIndependent4):
 		return false
 	#Rhye - end
 

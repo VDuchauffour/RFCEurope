@@ -110,8 +110,8 @@ class CvEventManager:
 			'EndPlayerTurn'			: self.onEndPlayerTurn,
 			'endTurnReady'			: self.onEndTurnReady,
 			'combatResult' 			: self.onCombatResult,
-		  'combatLogCalc'	 		: self.onCombatLogCalc,
-		  'combatLogHit'				: self.onCombatLogHit,
+			'combatLogCalc'	 		: self.onCombatLogCalc,
+			'combatLogHit'				: self.onCombatLogHit,
 			'improvementBuilt' 		: self.onImprovementBuilt,
 			'improvementDestroyed' 		: self.onImprovementDestroyed,
 			'routeBuilt' 		: self.onRouteBuilt,
@@ -165,7 +165,7 @@ class CvEventManager:
 			'playerGoldTrade'		: self.onPlayerGoldTrade,
 			'windowActivation'		: self.onWindowActivation,
 			'gameUpdate'			: self.onGameUpdate,		# sample generic event
-		}
+			}
 
 		################## Events List ###############################
 		#
@@ -186,7 +186,7 @@ class CvEventManager:
 			CvUtil.EventWBScriptPopup : ('WBScriptPopup', self.__eventWBScriptPopupApply, self.__eventWBScriptPopupBegin),
 			CvUtil.EventWBStartYearPopup : ('WBStartYearPopup', self.__eventWBStartYearPopupApply, self.__eventWBStartYearPopupBegin),
 			CvUtil.EventShowWonder: ('ShowWonder', self.__eventShowWonderApply, self.__eventShowWonderBegin),
-		}
+			}
 #################### EVENT STARTERS ######################
 	def handleEvent(self, argsList):
 		'EventMgr entry point'
@@ -637,7 +637,6 @@ class CvEventManager:
 		player = PyPlayer(city.getOwner())
 
 		## Topkapi Palace Start ##
-
 		pCity = argsList[0]
 		pUnit = argsList[1]
 		pPlayer = gc.getPlayer(pUnit.getOwner())
@@ -664,7 +663,6 @@ class CvEventManager:
 				iY = pUnit.getY()
 				pNewUnit = pPlayer.initUnit( l_vassalUB[chance], iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION )
 				pNewUnit.convert(pUnit)
-
 		## Topkapi Palace End ##
 
 		CvAdvisorUtils.unitBuiltFeats(city, unit)

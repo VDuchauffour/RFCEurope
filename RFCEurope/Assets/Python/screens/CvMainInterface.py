@@ -76,9 +76,9 @@ iGlobeToggleHeight = 48
 
 # GLOBE LAYER OPTION POSITIONING
 ######################
-iGlobeLayerOptionsX  = 235
-iGlobeLayerOptionsY_Regular  = 170 # distance from bottom edge
-iGlobeLayerOptionsY_Minimal  = 38 # distance from bottom edge
+iGlobeLayerOptionsX = 235
+iGlobeLayerOptionsY_Regular = 170 # distance from bottom edge
+iGlobeLayerOptionsY_Minimal = 38 # distance from bottom edge
 iGlobeLayerOptionsWidth = 400
 iGlobeLayerOptionHeight = 24
 
@@ -243,7 +243,6 @@ class CvMainInterface:
 
 		# SF CHANGE
 		screen.addPanel( "CityScreenTopWidget", u"", u"", True, False, 0, -2, xResolution, 41, PanelStyles.PANEL_STYLE_STANDARD )
-
 		screen.setStyle( "CityScreenTopWidget", "Panel_TopBar_Style" )
 		screen.hide( "CityScreenTopWidget" )
 
@@ -1676,19 +1675,6 @@ class CvMainInterface:
 					# Using an Inquisitor
 					if (iUnitInquisitor == pUnit.getUnitType()):
 
-					##	3Miro: based on Charlemagne code
-					#	pPlot = CyMap().plot(pUnit.getX(), pUnit.getY())
-					#
-					#	# Plot is a city
-					#	if (pPlot.isCity()):
-					#
-					#		pCity = pPlot.getPlotCity()
-					#
-					#		pPlayer = gc.getPlayer(pUnit.getOwner())
-					#
-					#		if ( pCity.canPurgeReligion() and ( pCity.getOwner() == pUnit.getOwner() or pUnit.getOwner() == con.iPope ) ):
-					#			screen.appendMultiListButton( "BottomButtonContainer", ArtFileMgr.getInterfaceArtInfo("INTERFACE_PERSECUTION").getPath(), 0, WidgetTypes.WIDGET_GENERAL, 666, 666, False )
-
 						# Absinthe: Updated code. This doesn't need the canPurgeReligion function from the dll
 						pPlot = CyMap().plot(pUnit.getX(), pUnit.getY())
 						# Plot is a city
@@ -2149,13 +2135,11 @@ class CvMainInterface:
 						screen.hide( "UHVButton" )
 						screen.hide( "UHVText" )
 
-				elif ( ePlayer == con.iFrankia or ePlayer == con.iSpain or ePlayer == con.iPortugal or ePlayer == con.iEngland or ePlayer == con.iDutch ):
+				elif ( ePlayer == con.iFrankia or ePlayer == con.iSpain or ePlayer == con.iPortugal or ePlayer == con.iEngland or ePlayer == con.iDutch or ePlayer == con.iDenmark ):
 					if ( gc.getTeam( pPlayer.getTeam() ).isHasTech( xml.iAstronomy ) ):
-						if ( ePlayer == con.iFrankia or ePlayer == con.iPortugal ):
+						if ( ePlayer == con.iFrankia or ePlayer == con.iPortugal or ePlayer == con.iDenmark ):
 							iColonies = pPlayer.getUHVCounter( 2 )
-						elif ( ePlayer == con.iSpain ):
-							iColonies = pPlayer.getNumColonies()
-						elif ( ePlayer == con.iEngland or ePlayer == con.iDutch ):
+						elif ( ePlayer == con.iEngland or ePlayer == con.iSpain or ePlayer == con.iDutch ):
 							iColonies = pPlayer.getUHVCounter( 1 )
 					else:
 						iColonies = -1
@@ -2202,17 +2186,17 @@ class CvMainInterface:
 				#Absinthe: different UHV used currently
 				#elif ( ePlayer == con.iAragon ):
 				#	iAragonShips = pPlayer.getNumShips()
-				 #       if ( not CyInterface().isCityScreenUp() ):
-				 #	       szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
-				 #	       szUHVText = ": " + localText.getText("TXT_KEY_UHV_SHIPS",()) + (" (%i) " %iAragonShips )
-				 #	       screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-				 #	       screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-				 #	       screen.show("UHVButton")
-				 #	       screen.show("UHVText")
-				 #	       iCount += 1
-				 #       else:
-				 #	       screen.hide( "UHVButton" )
-				 #	       screen.hide( "UHVText" )
+				#	if ( not CyInterface().isCityScreenUp() ):
+				#		szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
+				#		szUHVText = ": " + localText.getText("TXT_KEY_UHV_SHIPS",()) + (" (%i) " %iAragonShips )
+				#		screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+				#		screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+				#		screen.show("UHVButton")
+				#		screen.show("UHVText")
+				#		iCount += 1
+				#	else:
+				#		screen.hide( "UHVButton" )
+				#		screen.hide( "UHVText" )
 
 				elif ( ePlayer == con.iSweden ):
 					iSwedenRazed = pPlayer.getUHVCounter(1)
@@ -3311,7 +3295,6 @@ class CvMainInterface:
 												szBuffer = szBuffer + ("(?) ")
 											if (gc.getTeam(eTeam).isAtWar(gc.getGame().getActiveTeam())):
 												szBuffer = szBuffer + "("  + localText.getColorText("TXT_KEY_CONCEPT_WAR", (), gc.getInfoTypeForString("COLOR_RED")).upper() + ") "
-
 
 										#Rhye - techs moved here
 										bEspionageCanSeeResearch = false

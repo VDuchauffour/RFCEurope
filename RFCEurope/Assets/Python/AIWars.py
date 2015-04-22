@@ -46,26 +46,29 @@ class AIWars:
 		scriptDict = pickle.loads( gc.getGame().getScriptData() )
 		return scriptDict['lAttackingCivsArray'][iCiv]
 
+
 	def setAttackingCivsArray( self, iCiv, iNewValue ):
 		scriptDict = pickle.loads( gc.getGame().getScriptData() )
 		scriptDict['lAttackingCivsArray'][iCiv] = iNewValue
 		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
+
 	def getNextTurnAIWar( self ):
 		scriptDict = pickle.loads( gc.getGame().getScriptData() )
 		return scriptDict['iNextTurnAIWar']
+
 
 	def setNextTurnAIWar( self, iNewValue ):
 		scriptDict = pickle.loads( gc.getGame().getScriptData() )
 		scriptDict['iNextTurnAIWar'] = iNewValue
 		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
+
 	def setup(self):
 		iTurn = iStartTurn
 		#if (not gc.getPlayer(0).isPlayable()):  #late start condition
 		#	iTurn = con.i900AD
 		self.setNextTurnAIWar(iTurn + gc.getGame().getSorenRandNum(iMaxIntervalEarly-iMinIntervalEarly, 'random turn'))
-
 
 
 	def checkTurn(self, iGameTurn):
@@ -97,7 +100,6 @@ class AIWars:
 		if (iGameTurn % 60 == 47 and iGameTurn > 50): #1 turn after restorePeace()
 			utils.minorWars(con.iIndependent4)
 
-
 		### 3Miro: AI Hacking - Venice has hard time dealing with Indy Ragusa
 		if ( (iGameTurn % 7 == 3) and (not pVenice.isHuman()) ):
 			pRagusa = gc.getMap().plot( 64, 28 )
@@ -106,7 +108,6 @@ class AIWars:
 				if ( utils.isIndep( pRagusa.getOwner() ) ):
 					teamVenice.setAtWar( gc.getPlayer( pRagusa.getOwner() ).getTeam(), True )
 		### 3Miro: End of AI Hacking
-
 
 		if (iGameTurn == self.getNextTurnAIWar()):
 
@@ -144,10 +145,12 @@ class AIWars:
 			print ("AIWars iCiv missing", iCiv)
 			return (-1, -1)
 
+
 	def initWar(self, iCiv, iTargetCiv, iGameTurn, iMaxInterval, iMinInterval):
 		gc.getTeam(gc.getPlayer(iCiv).getTeam()).declareWar(iTargetCiv, True, -1) ##False?
 		self.setNextTurnAIWar(iGameTurn + iMinInterval + gc.getGame().getSorenRandNum(iMaxInterval-iMinInterval, 'random turn'))
 		print("Setting AIWar", iCiv, "attacking", iTargetCiv)
+
 
 ##	def initArray(self):
 ##		for k in range( iNumPlayers ):
@@ -159,7 +162,6 @@ class AIWars:
 ##				grid.append( line )
 ##			self.lSettlersMap.append( grid )
 ##		print self.lSettlersMap
-
 
 
 	def chooseAttackingPlayer(self):
@@ -187,15 +189,15 @@ class AIWars:
 						iAlreadyAttacked = self.getAttackingCivsArray(iLoopCiv)
 						if (utils.isAVassal(iLoopCiv)):
 							iAlreadyAttacked += 1 #less likely to attack
-						#check if a world war is already in place
+						#check if a world war is already in place:
 						iNumAlreadyWar = 0
 						tLoopCiv = gc.getTeam(gc.getPlayer(iLoopCiv).getTeam())
 						for kLoopCiv in range( iNumPlayers ):
 							if (tLoopCiv.isAtWar(kLoopCiv)):
 								iNumAlreadyWar += 1
-						if (iNumAlreadyWar >= 5):
+						if (iNumAlreadyWar >= 4):
 							iAlreadyAttacked += 2 #much less likely to attack
-						elif (iNumAlreadyWar >= 3):
+						elif (iNumAlreadyWar >= 2):
 							iAlreadyAttacked += 1 #less likely to attack
 
 						if (iAlreadyAttacked < iMin):
@@ -208,7 +210,6 @@ class AIWars:
 			else:
 				return -1
 		return -1
-
 
 
 	def checkGrid(self, iCiv):
@@ -320,7 +321,6 @@ class AIWars:
 ##			for jLoopCiv in range( iNumTotalPlayers ):
 ##				if (tCiv.isDefensivePact(jLoopCiv) and gc.getTeam(gc.getPlayer(iLoopCiv).getTeam()).isDefensivePact(jLoopCiv)):
 ##					lTargetCivs[iLoopCiv] /= 2
-
 
 		#print(lTargetCivs)
 
