@@ -631,7 +631,6 @@ class Crusades:
 			return 4
 		return 5
 
-
 	def voteForCandidatesAI( self ):
 		iHuman = utils.getHumanID()
 		if ( self.getPowerful() == -1 ):
@@ -689,7 +688,6 @@ class Crusades:
 		#pJPlot = gc.getMap().plot( iJerusalem[0], iJerusalem[1] )
 		#gc.getTeam( gc.getPlayer( self.getLeader() ) ).declareWar( pJPlot.getPlotCity().getOwner(), True, -1 )
 
-
 	def decideTheRichestCatholic( self, iActiveCrusade ):
 		iRichest = -1
 		iMoney = 0
@@ -712,10 +710,8 @@ class Crusades:
 		if ( iActiveCrusade == 0 ):
 			self.setRichestCatholic( -1 )
 
-
 	def decideDeviateHuman( self ):
 		self.deviateHumanPopup()
-
 
 	def decideDeviateAI( self ):
 		iRichest = self.getRichestCatholic()
@@ -735,7 +731,6 @@ class Crusades:
 
 		self.startCrusade()
 
-
 	def crusadeStolenAI( self, iNewLeader, iNewTarget ):
 		self.setLeader( iNewLeader )
 		pLeader = gc.getPlayer( iNewLeader )
@@ -746,7 +741,6 @@ class Crusades:
 		pTarget = gc.getPlayer( iNewTarget ).getCapitalCity()
 		self.setTarget( pTarget.getX(), pTarget.getY() )
 		self.setCrusadePower( self.getCrusadePower() / 2 )
-
 
 	def startCrusade( self ):
 		iHuman = utils.getHumanID()
@@ -769,11 +763,9 @@ class Crusades:
 
 		gc.getTeam( gc.getPlayer( iLeader ).getTeam() ).declareWar( gc.getPlayer( pTargetCity.getOwner() ).getTeam(), True, -1 )
 
-
 	def returnCrusaders( self ):
 		for i in range( con.iNumPlayers ):
 			gc.getPlayer( i ).setIsCrusader( False )
-
 
 	def crusadeArrival( self ):
 		iTX = self.getTargetX()
@@ -852,7 +844,6 @@ class Crusades:
 			pUnit = pPlayer.initUnit(iUnit, tCoords[0], tCoords[1], UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 			pUnit.setMercID( -5 ) # 3Miro: this is a hack to distinguish Crusades without making a separate variable
 
-
 	def crusadeMakeUnits( self, tPlot ):
 		iLeader = self.getLeader()
 
@@ -918,7 +909,7 @@ class Crusades:
 
 		#if ( self.getCrusadePower() > 50 ):
 		#	self.makeUnit( xml.iLancer, iLeader, tPlot, 1 )
-		#
+
 		#if ( self.getCrusadePower() > 60 ):
 		#	#self.makeUnit( xml.iLancer, iLeader, tPlot, 1 )
 		#	self.makeUnit( xml.iTrebuchet, iLeader, tPlot, 1 )
@@ -981,6 +972,7 @@ class Crusades:
 			utils.convertPlotCulture(pCurrent, iPlayer, 100, False)
 			pCurrent = gc.getMap().plot( iJerusalem[0], iJerusalem[1]-1 )
 			utils.convertPlotCulture(pCurrent, iPlayer, 100, False)
+
 
 	def doDC( self, iGameTurn ):
 		#print(" DC Check 1",iGameTurn,self.getDCLast())
@@ -1107,10 +1099,12 @@ class Crusades:
 								return True
 		return False
 
+
 	def callDCHuman( self ):
 		iHuman = utils.getHumanID()
 		self.showPopup( 7625, CyTranslator().getText("TXT_KEY_CRUSADE_DEFENSIVE_PROPOSAL_POPUP", ()), CyTranslator().getText("TXT_KEY_CRUSADE_DEFENSIVE_PROPOSAL", ()), \
 			( CyTranslator().getText("TXT_KEY_CRUSADE_DEFENSIVE_PROPOSAL_YES", ()), CyTranslator().getText("TXT_KEY_CRUSADE_DEFENSIVE_PROPOSAL_NO", ()) ) )
+
 
 	def callDCAI( self, iPlayer ):
 		iHuman = utils.getHumanID()
@@ -1122,6 +1116,7 @@ class Crusades:
 		self.makeDCUnits( iPlayer )
 		pPlayer.changeFaith( - min( 2, pPlayer.getFaith() ) )
 
+
 	def eventApply7625( self, popupReturn ):
 		iDecision = popupReturn.getButtonClicked()
 		iHuman = utils.getHumanID()
@@ -1132,6 +1127,7 @@ class Crusades:
 		else:
 			#pHuman.changeFaith( - min( 1, pHuman.getFaith() ) )
 			pass
+
 
 	def makeDCUnits( self, iPlayer ):
 		pPlayer = gc.getPlayer( iPlayer )
@@ -1174,6 +1170,7 @@ class Crusades:
 			pPlayer.initUnit(iBestCavalry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 			pPlayer.initUnit(iBestInfantry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 
+
 	def getDCBestInfantry( self, iPlayer ):
 		teamPlayer = gc.getTeam( gc.getPlayer( iPlayer ).getTeam() )
 		if ( teamPlayer.isHasTech( xml.iNationalism ) and teamPlayer.isHasTech( xml.iChemistry ) ):
@@ -1185,6 +1182,7 @@ class Crusades:
 		if ( teamPlayer.isHasTech( xml.iChainMail ) ):
 			return xml.iSwordsman
 		return xml.iAxeman
+
 
 	def getDCBestCavalry( self, iPlayer ):
 		teamPlayer = gc.getTeam( gc.getPlayer( iPlayer ).getTeam() )
@@ -1200,3 +1198,4 @@ class Crusades:
 		if ( teamPlayer.isHasTech( xml.iManorialism ) and teamPlayer.isHasTech( xml.iStirrup ) ):
 			return xml.iLancer
 		return xml.iScout
+

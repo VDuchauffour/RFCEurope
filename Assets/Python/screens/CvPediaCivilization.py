@@ -23,7 +23,7 @@ class CvPediaCivilization:
 	def __init__(self, main):
 		self.iCivilization = -1
 		self.top = main
-		
+
 		self.X_MAIN_PANE = self.top.X_PEDIA_PAGE + 20
 		self.Y_MAIN_PANE = self.top.Y_PEDIA_PAGE + 10
 		self.W_MAIN_PANE = 160 #200 #Rhye
@@ -43,7 +43,7 @@ class CvPediaCivilization:
 		self.W_UNIT = 200
 		self.H_UNIT = 110
 
-		self.X_LEADER = self.X_TECH 
+		self.X_LEADER = self.X_TECH
 		self.Y_LEADER = self.Y_UNIT + self.H_UNIT
 		self.W_LEADER = 1000 - self.X_LEADER
 		self.H_LEADER = 250 #110 #Rhye
@@ -55,16 +55,16 @@ class CvPediaCivilization:
 
 		self.H_MAIN_PANE = (self.Y_LEADER + self.H_LEADER) - self.Y_MAIN_PANE
 		self.Y_ICON = self.Y_MAIN_PANE + (self.H_MAIN_PANE - self.H_ICON)/2
-		
+
 	# Screen construction function
-	def interfaceScreen(self, iCivilization):	
-			
+	def interfaceScreen(self, iCivilization):
+
 		self.iCivilization = iCivilization
-	
-		self.top.deleteAllWidgets()						
-							
+
+		self.top.deleteAllWidgets()
+
 		screen = self.top.getScreen()
-		
+
 		bNotActive = (not screen.isActive())
 		if bNotActive:
 			self.top.setPediaCommonWidgets()
@@ -73,22 +73,22 @@ class CvPediaCivilization:
 		szHeader = u"<font=4b>" + gc.getCivilizationInfo(self.iCivilization).getDescription().upper() + u"</font>"
 		szHeaderId = self.top.getNextWidgetName()
 		screen.setLabel(szHeaderId, "Background", szHeader, CvUtil.FONT_CENTER_JUSTIFY, self.top.X_SCREEN, self.top.Y_TITLE, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-		
+
 		# Top
 		screen.setText(self.top.getNextWidgetName(), "Background", self.top.MENU_TEXT, CvUtil.FONT_LEFT_JUSTIFY, self.top.X_MENU, self.top.Y_MENU, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_PEDIA_MAIN, CivilopediaPageTypes.CIVILOPEDIA_PAGE_CIV, -1)
 
-		if self.top.iLastScreen	!= CvScreenEnums.PEDIA_CIVILIZATION or bNotActive:	
+		if self.top.iLastScreen	!= CvScreenEnums.PEDIA_CIVILIZATION or bNotActive:
 			if self.top.iLastScreen != CvScreenEnums.PEDIA_MAIN:
-				self.placeLinks()	
+				self.placeLinks()
 			self.top.iLastScreen = CvScreenEnums.PEDIA_CIVILIZATION
-			
+
 		# Icon
 		screen.addPanel( self.top.getNextWidgetName(), "", "", False, False,
-		    self.X_MAIN_PANE, self.Y_MAIN_PANE, self.W_MAIN_PANE, self.H_MAIN_PANE, PanelStyles.PANEL_STYLE_BLUE50)
+			self.X_MAIN_PANE, self.Y_MAIN_PANE, self.W_MAIN_PANE, self.H_MAIN_PANE, PanelStyles.PANEL_STYLE_BLUE50)
 		screen.addPanel(self.top.getNextWidgetName(), "", "", false, false,
-		    self.X_ICON, self.Y_ICON, self.W_ICON, self.H_ICON, PanelStyles.PANEL_STYLE_MAIN)
+			self.X_ICON, self.Y_ICON, self.W_ICON, self.H_ICON, PanelStyles.PANEL_STYLE_MAIN)
 		screen.addDDSGFC(self.top.getNextWidgetName(), ArtFileMgr.getCivilizationArtInfo(gc.getCivilizationInfo(self.iCivilization).getArtDefineTag()).getButton(),
-		    self.X_ICON + self.W_ICON/2 - self.ICON_SIZE/2, self.Y_ICON + self.H_ICON/2 - self.ICON_SIZE/2, self.ICON_SIZE, self.ICON_SIZE, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+			self.X_ICON + self.W_ICON/2 - self.ICON_SIZE/2, self.Y_ICON + self.H_ICON/2 - self.ICON_SIZE/2, self.ICON_SIZE, self.ICON_SIZE, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
 		self.placeTech()
 		self.placeUnit()
@@ -98,9 +98,9 @@ class CvPediaCivilization:
 		return
 
 	def placeTech(self):
-		
+
 		screen = self.top.getScreen()
-		
+
 		#Rhye - comment
 ##		panelName = self.top.getNextWidgetName()
 ##		screen.addPanel( panelName, localText.getText("TXT_KEY_FREE_TECHS", ()), "", false, true,
@@ -112,31 +112,30 @@ class CvPediaCivilization:
 
 		#Rhye - start
 		panelName = self.top.getNextWidgetName()
-		screen.addPanel( panelName, "", "", true, true,
-				 self.X_TECH, self.Y_TECH - 4, self.W_LEADER, self.Y_TEXT - self.Y_TECH + 4, PanelStyles.PANEL_STYLE_BLUE50 ) 
+		screen.addPanel( panelName, "", "", true, true, self.X_TECH, self.Y_TECH - 4, self.W_LEADER, self.Y_TEXT - self.Y_TECH + 4, PanelStyles.PANEL_STYLE_BLUE50 )
 		szText = CyGameTextMgr().parseCivInfos(self.iCivilization, True)
 		screen.attachMultilineText( panelName, "", szText, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		#Rhye - end
 
 
-			
+
 	def placeUnit(self):
-		
+
 		screen = self.top.getScreen()
 		#Rhye - comment
 ##		panelName = self.top.getNextWidgetName()
 ##		screen.addPanel( panelName, localText.getText("TXT_KEY_FREE_UNITS", ()), "", false, true,
 ##				 self.X_UNIT, self.Y_UNIT, self.W_UNIT, self.H_UNIT, PanelStyles.PANEL_STYLE_BLUE50 )
 ##		screen.attachLabel(panelName, "", "  ")
-##					
+##
 ##		for iUnit in range(gc.getNumUnitClassInfos()):
 ##			iUniqueUnit = gc.getCivilizationInfo(self.iCivilization).getCivilizationUnits(iUnit);
 ##			iDefaultUnit = gc.getUnitClassInfo(iUnit).getDefaultUnitIndex();
 ##			if (iDefaultUnit > -1 and iUniqueUnit > -1 and iDefaultUnit != iUniqueUnit):
 ##				screen.attachImageButton( panelName, "", gc.getUnitInfo(iUniqueUnit).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT, iUniqueUnit, 1, False )
-##		
+##
 	def placeLeader(self):
-		
+
 		screen = self.top.getScreen()
 		#Rhye - comment
 ##		panelName = self.top.getNextWidgetName()
@@ -148,23 +147,22 @@ class CvPediaCivilization:
 ##			civ = gc.getCivilizationInfo(self.iCivilization)
 ##			if civ.isLeaders(iLeader):
 ##				screen.attachImageButton( panelName, "", gc.getLeaderHeadInfo(iLeader).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_LEADER, iLeader, 1, False )
-##		
+##
 	def placeText(self):
-		
+
 		screen = self.top.getScreen()
-		
+
 		panelName = self.top.getNextWidgetName()
-		screen.addPanel( panelName, "", "", true, true,
-				 self.X_TEXT, self.Y_TEXT, self.W_TEXT, self.H_TEXT, PanelStyles.PANEL_STYLE_BLUE50 )
- 
+		screen.addPanel( panelName, "", "", true, true, self.X_TEXT, self.Y_TEXT, self.W_TEXT, self.H_TEXT, PanelStyles.PANEL_STYLE_BLUE50 )
+
 		szText = gc.getCivilizationInfo(self.iCivilization).getCivilopedia()
 		screen.attachMultilineText( panelName, "Text", szText, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-													
+
 	def placeLinks(self):
 
 		self.top.placeLinks()
 		self.top.placeCivs()
-			
+
 
 	# Will handle the input for this screen...
 	def handleInput (self, inputClass):

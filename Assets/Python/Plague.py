@@ -404,7 +404,6 @@ class Plague:
 					CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_PLAGUE_SPREAD_CITY", ()) + " " + city.getName() + " (" + gc.getPlayer(iPlayer).getCivilizationAdjective(0) + ")", "AS2D_PLAGUE", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
 
 
-
 	def preStopPlague(self, iPlayer):
 		cityList = []
 		apCityList = PyPlayer(iPlayer).getCityList()

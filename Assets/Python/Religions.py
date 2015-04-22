@@ -260,7 +260,7 @@ class Religions:
 			if ( pPlayer.getProsecutionCount() > 0 ):
 				pPlayer.changeProsecutionCount( -1 )
 
-		# Resettle Jewish refugies
+		# Resettle Jewish refuges
 		iRefugies = gc.getMinorReligionRefugies()
 		for i in range(iRefugies):
 			self.resettleRefugies()
@@ -508,7 +508,7 @@ class Religions:
 		popup.setHeaderString(title)
 		popup.setBodyString(message)
 		for i in labels:
-		    popup.addButton( i )
+			popup.addButton( i )
 		popup.launch(False)
 
 	def reformationPopup(self):
@@ -571,7 +571,6 @@ class Religions:
 		for city in cityList:
 			if(city.city.isHasReligion(xml.iCatholicism)):
 				iDummy = self.reformationReformCity( city.city, 11, False )
-
 
 
 	def reformationchoice(self, iCiv):
@@ -789,5 +788,4 @@ class Religions:
 		if ( len( lCityList ) > 0 ):
 			city = lCityList[gc.getGame().getSorenRandNum(len(lCityList), 'random city to migrate')]
 			city.setHasReligion(xml.iJudaism, True, True, False)
-
 

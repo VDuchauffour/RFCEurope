@@ -11,7 +11,7 @@ import CvScreen
 
 class CvPediaScreen( CvScreen.CvScreen ):
 	"Civilopedia Base Screen"
-	
+
 	def getSortedList( self, numInfos, getInfo ):
 		' returned a list of infos sorted alphabetically '
 		infoList = [(0,0)] * numInfos
@@ -19,4 +19,4 @@ class CvPediaScreen( CvScreen.CvScreen ):
 			infoList[i] = (getInfo(i).getDescription(), i)
 		#infoList.sort() #Rhye
 		return infoList
-	
+

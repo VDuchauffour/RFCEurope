@@ -1171,10 +1171,9 @@ class CvPlotDesc:
 		x = plot.getX()
 		y = plot.getY()
 
-		# #Rotate
+		##Rotate
 		# x = c*x + s*y
 		# y = -s+x + c*y
-
 
 		#Transpose
 		x = x + iShiftX
@@ -1193,7 +1192,6 @@ class CvPlotDesc:
 		elif y >= iMapHeight:
 			y=y - iMapHeight
 			bOverflow = true
-
 
 
 		f.write("\tx=%d,y=%d\n" %(x, y))
@@ -1880,3 +1878,4 @@ class CvWBDesc:
 	def writeRFCEMaps(self, sFileName):
 		sFileName = sFileName + "RFCEMaps.py"
 		RFCEMapUtil.MapExporter.saveTo(sFileName)
+

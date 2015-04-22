@@ -663,3 +663,4 @@ def getNewEventID():
 	g_nextEventID += 1
 
 	return id
+

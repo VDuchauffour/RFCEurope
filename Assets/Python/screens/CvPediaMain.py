@@ -96,7 +96,7 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 		self.Y_FORWARD = 730 #Rhye #10
 
 		self.X_MENU = 450
-		self.Y_MENU = 1730	# CHEATING!  Should disable this, but...easier to hide it.
+		self.Y_MENU = 1730		# CHEATING!  Should disable this, but... easier to hide it.
 
 		self.BUTTON_SIZE = 64
 		self.BUTTON_COLUMNS = 9
@@ -291,7 +291,7 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 					self.szCategoryProject,
 					self.szCategoryConcept,
 					self.szCategoryHints, #Rhye
-#					self.szCategoryUpgrades,   	# [MOD] UnitUpgrades
+#					self.szCategoryUpgrades,		# [MOD] UnitUpgrades
 					]
 
 		# Create a new screen
@@ -484,7 +484,7 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 		iCounter = 0
 		iNumRows = 0
 
-		# Absinthe: Civilopedia restrictions: removed the Indy civs and the Pope form the Civ list
+		# Absinthe: Civilopedia restrictions: removed the Indy civs form the Civ list. The Pope is there currently
 		if (widgeyType == WidgetTypes.WIDGET_PEDIA_JUMP_TO_CIV):
 			tList.pop(32) #independent4
 			tList.pop(31) #independent3
@@ -506,7 +506,7 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 
 		for item in tList:
 
-			# This line disables the popup text on 'pedia scroll over...hopefully it works
+			# This line disables the popup text on 'pedia scroll over... hopefully it works
 
 			iColumn = iCounter % nColumns
 			iRow = iCounter // nColumns
@@ -561,8 +561,7 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 		#	self.X_ITEMS_PANE, self.Y_ITEMS_PANE, self.W_ITEMS_PANE + self.W_PEDIA_PAGE-4, self.H_PEDIA_PAGE, PanelStyles.PANEL_STYLE_MAIN)
 
 		self.szHints = self.getNextWidgetName()
-		screen.addListBoxGFC( self.szHints, "",
-				      self.X_ITEMS_PANE+20, self.Y_ITEMS_PANE, self.W_ITEMS_PANE + self.W_PEDIA_PAGE-40, self.H_ITEMS_PANE, TableStyles.TABLE_STYLE_STANDARD )
+		screen.addListBoxGFC( self.szHints, "", self.X_ITEMS_PANE+20, self.Y_ITEMS_PANE, self.W_ITEMS_PANE + self.W_PEDIA_PAGE-40, self.H_ITEMS_PANE, TableStyles.TABLE_STYLE_STANDARD )
 
 		szHintsText = CyGameTextMgr().buildHintsList()
 		hintText = string.split( szHintsText, "\n" )
@@ -605,8 +604,6 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 ##			offset += upgradesGraph.calculateLayerHeight(upgradesGraph.maximumLayerSize(layers), unitHeight, vm) + vm
 		#Rhye - end comment
 	##################### END [MOD: VOVAN] UnitUpgrades #####################
-
-
 
 
 	def placeLinks(self):

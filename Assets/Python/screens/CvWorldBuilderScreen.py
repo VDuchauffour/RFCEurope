@@ -3465,4 +3465,3 @@ class LandmarkMode(Mode):
 		self.restoreLandmarks()
 		return
 
-

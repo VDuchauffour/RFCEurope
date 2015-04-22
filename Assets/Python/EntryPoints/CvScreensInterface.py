@@ -218,7 +218,7 @@ def showVictoryScreen():
 mercenaryManager = CvMercenaryManager.CvMercenaryManager(MERCENARY_MANAGER)
 def showMercenaryManager():
 	mercenaryManager.interfaceScreen()
-# < Mercenaries Mod End   >
+# < Mercenaries Mod End >
 
 #################################################
 ## Civilopedia
@@ -785,8 +785,8 @@ def refreshMilitaryAdvisor (argsList):
 		militaryAdvisor.refreshSelectedUnit(-argsList[0], argsList[1])
 
 def updateMusicPath (argsList):
-    szPathName = argsList[0]
-    optionsScreen.updateMusicPath(szPathName)
+	szPathName = argsList[0]
+	optionsScreen.updateMusicPath(szPathName)
 
 def refreshOptionsScreen():
 	optionsScreen.refreshScreen()
@@ -892,16 +892,16 @@ def featAccomplishedOnFocusCallback(argsList):
 #######################################################################################
 ## Handle Close Map
 #######################################################################################
-HandleCloseMap = {  DAWN_OF_MAN : dawnOfMan,
+HandleCloseMap = {	DAWN_OF_MAN : dawnOfMan,
 					SPACE_SHIP_SCREEN : spaceShip,
 					TECH_CHOOSER : techChooser,
-				# add new screens here
-				}
+					# add new screens here
+					}
 
 #######################################################################################
 ## Handle Input Map
 #######################################################################################
-HandleInputMap = {  MAIN_INTERFACE : mainInterface,
+HandleInputMap = {	MAIN_INTERFACE : mainInterface,
 					DOMESTIC_ADVISOR : domesticAdvisor,
 					RELIGION_SCREEN : religionScreen,
 					CORPORATION_SCREEN : corporationScreen,
@@ -948,11 +948,11 @@ HandleInputMap = {  MAIN_INTERFACE : mainInterface,
 
 					DEBUG_INFO_SCREEN : debugInfoScreen,
 
-				# add new screens here
+					# add new screens here
 					# < Mercenaries Mod Start >
 					MERCENARY_MANAGER: mercenaryManager,
 					# < Mercenaries Mod End   >
-				}
+					}
 
 #######################################################################################
 ## Handle Navigation Map
@@ -976,5 +976,6 @@ HandleNavigationMap = {
 					PEDIA_RELIGION : pediaMainScreen,
 					PEDIA_CORPORATION : pediaMainScreen
 
-				# add new screens here
-				}
+					# add new screens here
+					}
+

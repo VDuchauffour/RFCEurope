@@ -654,3 +654,4 @@ class ProvinceManager:
 			pNovgorod.setProvinceType( xml.iP_Rostov, iProvinceOuter )
 			pNovgorod.setProvinceType( xml.iP_Smolensk, iProvinceNone )
 			utils.refreshStabilityOverlay() # refresh the stability overlay
+

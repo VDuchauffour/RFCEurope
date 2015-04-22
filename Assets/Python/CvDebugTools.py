@@ -237,6 +237,7 @@ class CvDebugTools:
 			else:
 				for j in range(len(player)):
 					player[j].setHasTech( id )
+
 	def RotateUnit(self, Direction, px, py ):
 		if ( px != -1 and py != -1 ):
 			unit = CyMap().plot(px, py).getUnit(0)
