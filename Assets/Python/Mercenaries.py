@@ -24,7 +24,8 @@ iMercCostPerTurn = con.iMercCostPerTurn
 # list of all available mercs, unit type, text key name, start turn, end turn, provinces, blocked by religions, odds
 # note that the province list is treated as a set (only iProvince in list or Set(list) are ever called)
 # the odds show the odds of the merc to appear every turn, this is nothing more than a delay on when the merc would appear (90-100 means right at the date, 10-30 should be good for most mercs)
-lMercList = [   [xml.iAxeman, "TXT_KEY_MERC_SERBIAN", 60, 108, xml.lRegionBalkans, [], 20 ],
+lMercList = [
+		[xml.iAxeman, "TXT_KEY_MERC_SERBIAN", 60, 108, xml.lRegionBalkans, [], 20 ],
 		[xml.iArcher, "TXT_KEY_MERC_SERBIAN", 60, 108, xml.lRegionBalkans, [], 20 ],
 		[xml.iHorseArcher, "TXT_KEY_MERC_KHAZAR", 25, 90, xml.lRegionBalkans + [xml.iP_Constantinople], [], 20 ],
 		[xml.iHorseArcher, "TXT_KEY_MERC_KHAZAR", 25, 108, xml.lRegionBalkans + [xml.iP_Constantinople], [], 20 ],
@@ -619,7 +620,6 @@ class MercenaryManager:
 				bLoop = False
 
 
-
 	def onUnitPromoted( self, argsList ):
 		pUnit, iNewPromotion = argsList
 		iMerc = pUnit.getMercID()
@@ -709,9 +709,9 @@ class MercenaryManager:
 		teamPlayer = gc.getTeam(pPlayer.getTeam())
 		for iOponent in range( con.iNumTotalPlayers ):
 			if ( teamPlayer.isAtWar( gc.getPlayer( iOponent ).getTeam() ) ):
-			       iWarValue += 1
-			       if ( iOponent <= con.iPope ):
-				       iWarValue += 3
+				iWarValue += 1
+				if ( iOponent <= con.iPope ):
+					iWarValue += 3
 
 		# decide to hire or fire mercs
 		# if we are at peace or have only a small war, then we can keep the merc if the expense is trivial
@@ -818,7 +818,7 @@ class MercenaryManager:
 			#sMercProvinces = Set( lMercList[lMerc[0]][4] )
 			#if ( iGold > iMercTotalCost and (not iStateReligion in lMercList[lMerc[0]][5]) and len( sPlayerProvinces & sMercProvinces ) > 0 ):
 			if ( iGold > iMercTotalCost and (not iStateReligion in lMercList[lMerc[0]][5]) and (lMerc[4] in lPlayerProvinces) ):
-			      lCanHireMercs.append( lMerc )
+				lCanHireMercs.append( lMerc )
 
 		if ( len( lCanHireMercs ) > 0 ):
 			iRandomMerc = gc.getGame().getSorenRandNum(len( lCanHireMercs ), 'random merc to hire')
@@ -868,7 +868,7 @@ class GlobalMercenaryUtils:
 			city = pCity.GetCy()
 			iProvince = city.getProvince()
 			if ( (not (iProvince in lProvList)) and (city.getCultureLevel() >= 2) ):
-			      lProvList.append( iProvince )
+				lProvList.append( iProvince )
 		return lProvList
 
 	def playerMakeUpkeepSane( self, iPlayer ):
@@ -911,9 +911,9 @@ class GlobalMercenaryUtils:
 
 	def getModifiedCostPerPlayer( self, iCost, iPlayer ):
 		# 3MiroUP: this function gets called:
-		#  - every time a merc is hired (pPlayer.initUnit) to set the upkeep and
-		#  - every time a merc cost is considered
-		#  - every time a merc cost is to be displaded (in the merc screen)
+		#	- every time a merc is hired (pPlayer.initUnit) to set the upkeep and
+		#	- every time a merc cost is considered
+		#	- every time a merc cost is to be displaded (in the merc screen)
 		return ( iCost * lMercCostModifier[iPlayer] ) / 100
 
 
@@ -938,7 +938,7 @@ class GlobalMercenaryUtils:
 			city = pCity.GetCy()
 			#if ( city.getProvince() in lMercList[ lMerc[0] ][4] ):
 			if ( city.getProvince() == lMerc[4] ):
-			      lCityList.append( city )
+				lCityList.append( city )
 
 		if ( len( lCityList ) == 0 ):
 			return
@@ -997,5 +997,4 @@ class GlobalMercenaryUtils:
 		pPlayer.setPicklefreeParameter( iMercCostPerTurn, max( 0, pPlayer.getPicklefreeParameter( iMercCostPerTurn ) - iUpkeep ) )
 
 		pMerc.kill( 0, -1 )
-
 

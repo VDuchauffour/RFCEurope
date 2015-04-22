@@ -110,23 +110,22 @@ lValletta = [57,14,315,0] #1530 AD
 
 
 # Minor Nations sructure: [ int Province: all cities in this province will revolt
-#			    list nations: a city controlled by those players will not revolt (i.e. Greece wouldn't revolt against the Byz)
-#			    list religions: a city owned by someone with one of those state religions will not revolt (i.e. Jerusalem doesn't revolt against Muslims)
-#			    list revolt dates: the dates for the revolt,
-#			    list revolt strength: this is substracted from the odds to suppress the revolt (i.e. high number more likely to succeed in the revolt)
-#			    list units: corresponding to the revolt, if we crack down on the rebels, what barbarian units should spawn
-#			    list number: corresponding to the revolt, if we crack down on the rebels, how many units should spawn (note if we don't bribe the Lords, then double the number of Units will spawn)
-#			    list text keys: text keys for "The Nation" and "Nation Adjective"
+#			list nations: a city controlled by those players will not revolt (i.e. Greece wouldn't revolt against the Byz)
+#			list religions: a city owned by someone with one of those state religions will not revolt (i.e. Jerusalem doesn't revolt against Muslims)
+#			list revolt dates: the dates for the revolt,
+#			list revolt strength: this is substracted from the odds to suppress the revolt (i.e. high number more likely to succeed in the revolt)
+#			list units: corresponding to the revolt, if we crack down on the rebels, what barbarian units should spawn
+#			list number: corresponding to the revolt, if we crack down on the rebels, how many units should spawn (note if we don't bribe the Lords, then double the number of Units will spawn)
+#			list text keys: text keys for "The Nation" and "Nation Adjective"
 # Note: lists 3, 4, 5, 6 should have the same size
 # Note: you should increase the size of 'lNextMinorRevolt' in StoredData to be at least the number of minor nations
 lMinorNations = [ [ xml.iP_Serbia, [], [], [xml.i852AD,xml.i1346AD], [20,20], [xml.iAxeman,xml.iLongSwordsman], [1,2], ["TXT_KEY_THE_SERBS","TXT_KEY_SERBIAN"] ],
-		  [ xml.iP_Scotland, [con.iScotland], [], [xml.i1297AD,xml.i1569AD,xml.i1715AD], [20,10,20], [xml.iHighlander,xml.iMusketman,xml.iGrenadier], [2,2,2], ["TXT_KEY_THE_SCOTS","TXT_KEY_SCOTISH"] ],
-		  [ xml.iP_Catalonia, [con.iAragon], [], [xml.i1164AD,xml.i1640AD], [20,10], [xml.iLongSwordsman,xml.iMusketman], [2,2], ["TXT_KEY_THE_CATALANS","TXT_KEY_CATALAN"] ],
-		  [ xml.iP_Jerusalem, [con.iArabia,con.iTurkey,con.iByzantium], [xml.iIslam,], [xml.i1099AD+8,xml.i1099AD+16,xml.i1099AD+25,xml.i1099AD+33,xml.i1099AD+40,xml.i1099AD+47,xml.i1099AD+55,xml.i1099AD+65], [30,30,40,40,30,30,30,30], [xml.iMaceman,xml.iMaceman,xml.iMaceman,xml.iKnight,xml.iKnight,xml.iKnight,xml.iKnight,xml.iKnight], [3,3,4,3,3,3,3,3], ["TXT_KEY_THE_MUSLIMS","TXT_KEY_MUSLIM"] ],
-		  [ xml.iP_Syria, [con.iArabia,con.iTurkey,con.iByzantium], [xml.iIslam,], [xml.i1099AD+8,xml.i1099AD+16,xml.i1099AD+25,xml.i1099AD+33,xml.i1099AD+40,xml.i1099AD+47,xml.i1099AD+55,xml.i1099AD+65], [30,30,40,40,30,30,30,30], [xml.iMaceman,xml.iMaceman,xml.iMaceman,xml.iKnight,xml.iKnight,xml.iKnight,xml.iKnight,xml.iKnight], [3,3,4,3,3,3,3,3], ["TXT_KEY_THE_MUSLIMS","TXT_KEY_MUSLIM"] ],
-		  [ xml.iP_Oran, [], [], [xml.i1236AD,xml.i1346AD,xml.i1359AD,xml.i1542AD], [40,10,10,20], [xml.iKnight,xml.iHeavyLancer,xml.iHeavyLancer,xml.iMusketman], [2,2,2,2], ["TXT_KEY_THE_ZIYYANIDS","TXT_KEY_ZIYYANID"] ],
-		  [ xml.iP_Fez, [con.iCordoba, con.iSpain, con.iPortugal], [], [xml.i1473AD], [30], [xml.iArquebusier], [4], ["TXT_KEY_THE_WATTASIDS","TXT_KEY_WATTASID"] ],
-		]
+		[ xml.iP_Scotland, [con.iScotland], [], [xml.i1297AD,xml.i1569AD,xml.i1715AD], [20,10,20], [xml.iHighlander,xml.iMusketman,xml.iGrenadier], [2,2,2], ["TXT_KEY_THE_SCOTS","TXT_KEY_SCOTISH"] ],
+		[ xml.iP_Catalonia, [con.iAragon], [], [xml.i1164AD,xml.i1640AD], [20,10], [xml.iLongSwordsman,xml.iMusketman], [2,2], ["TXT_KEY_THE_CATALANS","TXT_KEY_CATALAN"] ],
+		[ xml.iP_Jerusalem, [con.iArabia,con.iTurkey,con.iByzantium], [xml.iIslam,], [xml.i1099AD+8,xml.i1099AD+16,xml.i1099AD+25,xml.i1099AD+33,xml.i1099AD+40,xml.i1099AD+47,xml.i1099AD+55,xml.i1099AD+65], [30,30,40,40,30,30,30,30], [xml.iMaceman,xml.iMaceman,xml.iMaceman,xml.iKnight,xml.iKnight,xml.iKnight,xml.iKnight,xml.iKnight], [3,3,4,3,3,3,3,3], ["TXT_KEY_THE_MUSLIMS","TXT_KEY_MUSLIM"] ],
+		[ xml.iP_Syria, [con.iArabia,con.iTurkey,con.iByzantium], [xml.iIslam,], [xml.i1099AD+8,xml.i1099AD+16,xml.i1099AD+25,xml.i1099AD+33,xml.i1099AD+40,xml.i1099AD+47,xml.i1099AD+55,xml.i1099AD+65], [30,30,40,40,30,30,30,30], [xml.iMaceman,xml.iMaceman,xml.iMaceman,xml.iKnight,xml.iKnight,xml.iKnight,xml.iKnight,xml.iKnight], [3,3,4,3,3,3,3,3], ["TXT_KEY_THE_MUSLIMS","TXT_KEY_MUSLIM"] ],
+		[ xml.iP_Oran, [], [], [xml.i1236AD,xml.i1346AD,xml.i1359AD,xml.i1542AD], [40,10,10,20], [xml.iKnight,xml.iHeavyLancer,xml.iHeavyLancer,xml.iMusketman], [2,2,2,2], ["TXT_KEY_THE_ZIYYANIDS","TXT_KEY_ZIYYANID"] ],
+		[ xml.iP_Fez, [con.iCordoba, con.iSpain, con.iPortugal], [], [xml.i1473AD], [30], [xml.iArquebusier], [4], ["TXT_KEY_THE_WATTASIDS","TXT_KEY_WATTASID"] ], ]
 # 3Miro: Jerusalem and Syria were added here, so the Crusaders will not be able to control it for too long
 
 
@@ -614,7 +613,7 @@ class Barbs:
 				#		pOwner = gc.getPlayer(iOwner)
 				#		if (pOwner.isHuman()):
 				#			pass
-				#		       #return (False, tCity[3]+1)
+				#		#return (False, tCity[3]+1)
 		return (True, tCity[3])
 
 	def spawnUnits(self, iCiv, tTopLeft, tBottomRight, iUnitType, iNumUnits, iTurn, iPeriod, iRest, function, iForceAttack, szName):
@@ -734,8 +733,8 @@ class Barbs:
 
 
 	# revolution choice effects: suppress with force, revolt +1 turn, unhappy +1 for 10 turns, suppression chance 20% + 5% per unit stationed (cap at 33%)
-	#			    bribe the lords, 10 gold per population, suppression depends on the government Divine Monarchy (33%), Feudal or Limited (25%), Merchant (20%), Decentral (15%)
-	#			    passive stability: >0 add 20%, additional +2% for every point above 5 (cap at 34% for +12 Stability)
+	#		bribe the lords, 10 gold per population, suppression depends on the government Divine Monarchy (33%), Feudal or Limited (25%), Merchant (20%), Decentral (15%)
+	#		passive stability: >0 add 20%, additional +2% for every point above 5 (cap at 34% for +12 Stability)
 	def doRevoltAI( self, iPlayer, iGameTurn, lNation, iRevoltIndex ):
 		cityList = []
 		for iI in range( gc.getNumProvinceTiles( lNation[0] ) ):
@@ -784,7 +783,7 @@ class Barbs:
 		popup.setHeaderString(title)
 		popup.setBodyString(message)
 		for i in labels:
-		    popup.addButton( i )
+			popup.addButton( i )
 		popup.launch(False)
 
 
@@ -890,7 +889,7 @@ class Barbs:
 			iNumGarrason += self.getGarrasonSize( cityList[iI] )
 			iBribeGold += 10 * cityList[iI].getPopulation()
 		iCrackOdds += min( (5 * iNumGarrason) / len( cityList ), 13 )
-		# bibery odds
+		# bribery odds
 		#bribe the lords, 10 gold per population, suppression depends on the government Divine Monarchy (33%), Feudal or Limited (25%), Merchant (20%), Decentral (15%)
 		iGovernment = pPlayer.getCivics(0)
 		if ( iGovernment == xml.iCivicDespotism ):
@@ -916,8 +915,7 @@ class Barbs:
 				(localText.getText("TXT_KEY_MINOR_REBELLION_DO_NOTHING", ( iRawOdds, )), \
 				 localText.getText("TXT_KEY_MINOR_REBELLION_CRACK", ( iRawOdds + iCrackOdds, )), \
 				 localText.getText("TXT_KEY_MINOR_REBELLION_BRIBE", ( min( iGold, iBribeGold ), iRawOdds + iBribeOdds, )), \
-				 localText.getText("TXT_KEY_MINOR_REBELLION_ALL", ( iRawOdds + iBribeOdds + iCrackOdds, )), \
-				  ))
+				 localText.getText("TXT_KEY_MINOR_REBELLION_ALL", ( iRawOdds + iBribeOdds + iCrackOdds, )), ))
 
 
 	def getGarrasonSize( self, pCity ):

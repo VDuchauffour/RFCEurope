@@ -22,7 +22,7 @@ iMapMaxY = 73
 # Germany     i856AD
 # Novgorod    i864AD
 # Norway      i872AD
-# Kiev	i880AD
+# Kiev        i880AD
 # Hungary     i895AD
 # Spain       i910AD
 # Denmark     i936AD
@@ -42,8 +42,7 @@ iMapMaxY = 73
 # Dutch       i1581AD
 # Pope - keep him last
 
-# initialize player variables to player IDs from WBS (this is the only part of the XML that will stay here)
-
+# initialize player variables to player IDs from WBS (this is the only part of the XML that will stay here):
 iNumPlayers = 29
 (iByzantium, iFrankia, iArabia, iBulgaria, iCordoba, iVenecia, iBurgundy, iGermany, iNovgorod, iNorway, 
 iKiev, iHungary, iSpain, iDenmark, iScotland, iPoland, iGenoa, iMorocco, iEngland, iPortugal, 
@@ -305,19 +304,18 @@ tCapitals = (
 (66, 37), #Buda, Hungary
 (27, 32), #Leon, Spain
 (59, 57), #Roskilde, Denmark
-(37, 63), #Scotland
+(37, 63), #Edinburgh, Scotland
 (65, 49), #Poznan, Poland
 (50, 34), #Genoa, Genoa
-(24, 7 ), #Morocco
+(24, 7 ), #Marrakesh, Morocco
 (41, 52), #London, England
 (21, 25), #Lisboa, Portugal
-(36, 29), #Aragon
+(36, 29), #Zaragoza, Aragon
 (66, 64), #Stockholm, Sweden
 (69, 53), #Königsberg, Prussia
 (75, 53), #Vilnius, Lithuania
 (62, 40), #Wien, Austria
-(78, 22), #Gallipoli, Ottomans
-#(81, 22), #Bursa, Ottomans		#Bursa is too close to Constantinople
+(78, 22), #Gallipoli, Ottomans		was Bursa originally (81, 22), but it's too close to Constantinople
 (91, 56), #Moscow, Moscow
 (49, 52), #Amsterdam, Dutch
 (56, 27)  #Rome, Pope
@@ -433,7 +431,7 @@ tNewCapitals = (  #for RiseAndFall
 tCoreAreasTL = (
 (66,14),   #Byzantium
 (42,43),   #Franks
-(92,0),    #Arabs
+(92, 0),   #Arabs
 (74,27),   #Bulgaria
 (24,19),   #Cordoba
 (55,33),   #Venice
@@ -530,9 +528,9 @@ tExceptions = ( #Unfortunate name. These are extra plots used in spawn.
 tNormalAreasTL = (
 (66,13),   #Byzantium
 (33,32),   #Franks
-(53,0),    #Arabs
+(53, 0),   #Arabs
 (72,27),   #Bulgaria
-(43,8),    #Cordoba
+(43, 8),   #Cordoba
 (54,32),   #Venice
 (45,32),   #Burgundy
 (51,43),   #Germany
@@ -642,7 +640,7 @@ tBroaderAreasTL = (
 (31, 57), #Scotland
 (64, 42), #Poland
 (45, 29), #Genoa
-(11, 2 ), #Morocco
+(11,  2), #Morocco
 (38, 49), #England
 (17, 27), #Portugal
 (33, 25), #Aragon
@@ -792,7 +790,7 @@ tHire = (
 50, #Indep2
 50, #Indep3
 50, #Indep4
-50  #Barb (probably not needed)
+50  #Barb
 )
 
 
@@ -865,7 +863,7 @@ tAIStopBirthThreshold = (
 0, #Indep2
 0, #Indep3
 0, #Indep4
-0  #Barb (probably do not need indies and barbs here.)
+0  #Barb
 )
 
 
@@ -903,12 +901,12 @@ tResurrectionProb = (
 )
 
 #Sedna17 Respawn: These dates are the most likely times for each civ to have its special opportunity to respawn
+#Absinthe: These are saved in the StoredData, but the values are not used. RiseAndFall.py / getSpecialRespawn is used instead.
 tRespawnTime = (
 999, #Byzantium -- no special respawn
 350, #Frankia 1600 -- France united to modern borders + start of Bourbon royal line
 190, #Arabia 1170 -- Ayyubid dynasty from Egypt to cause problems for Crusaders
 195, #Bulgaria 1185 -- Second Bulgarian empire
-#174, #Cordoba 1122 -- Almohads, better timing than Almoravids
 215, #Cordoba 1229 (give or take, it is semi-random anyway) 3Miro: we use Cordoba player to respawn as Hafsid in Tunisia
 999, #Venezia -- no special respawn
 245, #Burgundy 1335 -- so they can participate in 100 years war and act as Valois Duchy of Burgundy
@@ -995,7 +993,7 @@ tReligionSpreadFactor = ( # PROT, ISL, CATH, ORTH, JUD
 (150,  80, 250,  20,  10), #Aragon
 (450,  20, 200,  50,  10), #Sweden
 (450,  20, 250,  20,  10), #Prussia
-(80,   80,  80,  80,  80), #Lithuania
+( 80,  80,  80,  80,  80), #Lithuania
 (200,  20, 250,  20,  10), #Austria
 ( 20, 350,  80,  80,  10), #Turkey
 (100,  20, 100, 250,  10), #Moscow
@@ -1129,7 +1127,7 @@ colony_positions_xy=[
 (870,320), #Malaysia
 (560,510), #CapeTown
 (610,390), #EastAfrica
-(60,260),  #Aztecs
+( 60,260), #Aztecs
 (170,420), #Inca
 (185,280), #Hispaniola
 (245,120), #Quebec
@@ -1261,7 +1259,7 @@ tLateLeaders = (		#The switch is triggered after a few years (starting date, per
 #iUP_Conscription = 18
 #iUP_Formation = 19
 #iUP_Commerce = 20
-# alliances and Endless land could be fixed in diplo relations and maintenance
+# Alliances and Endless land could be fixed in diplo relations and maintenance
 
 
 iUP_Happiness = 0			# happiness bonus

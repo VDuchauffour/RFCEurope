@@ -189,12 +189,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_FRA3</Tag>
-		<English>[COLOR_YELLOW]Empire of the World:[COLOR_REVERT] Build 6 Colonial Projects.</English>
-		<French>[COLOR_YELLOW]Empire of the World:[COLOR_REVERT] Construire 6 Projets Coloniaux.</French>
-		<German>[COLOR_YELLOW]Imperium der Welt:[COLOR_REVERT] Errichtet 6 Kolonien.</German>
-		<Italian>[COLOR_YELLOW]Impero del Mondo:[COLOR_REVERT] Costruisci 6 Progetti Coloniali.</Italian>
-		<Spanish>[COLOR_YELLOW]Empire of the World:[COLOR_REVERT] Conseguir una cultura superior a 5.000 en el 450 d. C. (turno 143)</Spanish>
-		<Portuguese>[COLOR_YELLOW]Império do Mundo:[COLOR_REVERT] Construa 6 Projetos Coloniais.</Portuguese>
+		<English>[COLOR_YELLOW]Empire of the World:[COLOR_REVERT] Build 5 Colonies.</English>
+		<French>[COLOR_YELLOW]Empire of the World:[COLOR_REVERT] Construire 5 Projets Coloniaux.</French>
+		<German>[COLOR_YELLOW]Imperium der Welt:[COLOR_REVERT] Errichtet 5 Kolonien.</German>
+		<Italian>[COLOR_YELLOW]Impero del Mondo:[COLOR_REVERT] Costruisci 5 Progetti Coloniali.</Italian>
+		<Spanish>[COLOR_YELLOW]Empire of the World:[COLOR_REVERT] Build 5 Colonies.</Spanish>
+		<Portuguese>[COLOR_YELLOW]Império do Mundo:[COLOR_REVERT] Construa 5 Projetos Coloniais.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUR1</Tag>
@@ -288,11 +288,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SPN2</Tag>
-		<English>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Have most Colonies in 1588AD.</English>
-		<French>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Have most Colonies in 1588AD.</French>
+		<English>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Have more Colonies than any other nation in 1588AD (while having at least 3).</English>
+		<French>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Have most Colonies in 1588AD (while having at least 3).</French>
 		<German>[COLOR_YELLOW]Die Spanische Armada:[COLOR_REVERT] Besitzt 1588 n.Chr. die meisten Kolonien.</German>
 		<Italian>[COLOR_YELLOW]L'Invincibile Armada:[COLOR_REVERT] Devi avere più colonie di tutti nel 1588AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Have most Colonies in 1588AD.</Spanish>
+		<Spanish>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Have most Colonies in 1588AD (while having at least 3).</Spanish>
 		<Portuguese>[COLOR_YELLOW]A Armada Espanhola:[COLOR_REVERT] Tenha mais colônias que qualquer outro em 1588DC.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -352,11 +352,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_VEN3</Tag>
-		<English>[COLOR_YELLOW]Domination of the World Ocean:[COLOR_REVERT] Be the first to build a Colonial Project.</English>
-		<French>[COLOR_YELLOW]Domination of the World Ocean:[COLOR_REVERT] Be the first to build a Colonial Project.</French>
+		<English>[COLOR_YELLOW]Domination of the World Ocean:[COLOR_REVERT] Be the first to build a modern Colony (so Vinland doesn't count).</English>
+		<French>[COLOR_YELLOW]Domination of the World Ocean:[COLOR_REVERT] Be the first to build a modern Colony (so Vinland doesn't count).</French>
 		<German>[COLOR_YELLOW]Dominanz der Weltmeere:[COLOR_REVERT] Errichtet als erste Zivilisation eine Kolonie.</German>
 		<Italian>[COLOR_YELLOW]Dominio sugli Oceani:[COLOR_REVERT] Devi essere il primo a costruire un Progetto Coloniale.</Italian>
-		<Spanish>[COLOR_YELLOW]Domination of the World Ocean:[COLOR_REVERT] Be the first to build a Colonial Project.</Spanish>
+		<Spanish>[COLOR_YELLOW]Domination of the World Ocean:[COLOR_REVERT] Be the first to build a modern Colony (so Vinland doesn't count).</Spanish>
 		<Portuguese>[COLOR_YELLOW]Dominação do Oceano Mundial:[COLOR_REVERT] Seja o primeiro a construir um Projeto Colonial.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -514,11 +514,11 @@
 	</TEXT>
  	<TEXT>
  		<Tag>TXT_KEY_UHV_MOS3</Tag>
- 		<English>[COLOR_YELLOW]The Warm Seas:[COLOR_REVERT] Conquer Constantinople or control one Atlantic Access resource.</English>
+ 		<English>[COLOR_YELLOW]The Warm Seas:[COLOR_REVERT] Conquer Constantinople or control an Atlantic Access resource.</English>
  		<French>[COLOR_YELLOW]Acc&#232;s aux eaux chaudes:[COLOR_REVERT] Conqu&#233;rir Constantinople or Avoir une ressource 'Acc&#232;s Atlantique'</French>
  		<German>[COLOR_YELLOW]Die Warmen Meere:[COLOR_REVERT] Erobert Konstantinopel oder kontrolliert eine Atlantik-Zugangs-Ressource.</German>
  		<Italian>[COLOR_YELLOW]I Mari Caldi:[COLOR_REVERT] Conquista Costantinopoli o procurati una risorsa Accesso all'Atlantico.</Italian>
- 		<Spanish>[COLOR_YELLOW]The Warm Seas:[COLOR_REVERT] Conquer Constantinople or control one Atlantic Access resource.</Spanish>
+ 		<Spanish>[COLOR_YELLOW]The Warm Seas:[COLOR_REVERT] Conquer Constantinople or control an Atlantic Access resource.</Spanish>
  		<Portuguese>[COLOR_YELLOW]As Águas Mornas:[COLOR_REVERT] Conquiste Constantinopla ou controle um recurso de Acesso Atlântico.</Portuguese>
  	</TEXT>
 	<TEXT>
@@ -559,12 +559,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ENG2</Tag>
-		<English>[COLOR_YELLOW]Jewel of the Crown:[COLOR_REVERT] Build 8 Colonial Projects.</English>
-		<French>[COLOR_YELLOW]Jewel of the Crown:[COLOR_REVERT] Construire 8 Projets Coloniaux.</French>
-		<German>[COLOR_YELLOW]Juwel der Krone:[COLOR_REVERT] Errichtet 8 Kolonien.</German>
-		<Italian>[COLOR_YELLOW]Gioiello della Corona:[COLOR_REVERT] Costruisci 8 Progetti Coloniali.</Italian>
-		<Spanish>[COLOR_YELLOW]Jewel of the Crown:[COLOR_REVERT] Build 8 Colonial Projects.</Spanish>
-		<Portuguese>[COLOR_YELLOW]A Jóia da Coroa:[COLOR_REVERT] Construa 8 Projetos Coloniais.</Portuguese>
+		<English>[COLOR_YELLOW]Jewel of the Crown:[COLOR_REVERT] Build 7 Colonies.</English>
+		<French>[COLOR_YELLOW]Jewel of the Crown:[COLOR_REVERT] Construire 7 Projets Coloniaux.</French>
+		<German>[COLOR_YELLOW]Juwel der Krone:[COLOR_REVERT] Errichtet 7 Kolonien.</German>
+		<Italian>[COLOR_YELLOW]Gioiello della Corona:[COLOR_REVERT] Costruisci 7 Progetti Coloniali.</Italian>
+		<Spanish>[COLOR_YELLOW]Jewel of the Crown:[COLOR_REVERT] Build 7 Colonies.</Spanish>
+		<Portuguese>[COLOR_YELLOW]A Jóia da Coroa:[COLOR_REVERT] Construa 7 Projetos Coloniais.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ENG3</Tag>
@@ -595,12 +595,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POR3</Tag>
-		<English>[COLOR_YELLOW]Feitorias all over the world:[COLOR_REVERT] Build 6 Colonial Projects.</English>
-		<French>[COLOR_YELLOW]Feitorias all over the world:[COLOR_REVERT] Construire 6 Projets Coloniaux.</French>
-		<German>[COLOR_YELLOW]Faktoreien auf der ganzen Welt:[COLOR_REVERT] Erstellt 6 Kolonien.</German>
-		<Italian>[COLOR_YELLOW]Feitorie in tutto il mondo:[COLOR_REVERT] Costruisci 6 Progetti Coloniali.</Italian>
-		<Spanish>[COLOR_YELLOW]Feitorias all over the world:[COLOR_REVERT] Build 6 Colonial Projects.</Spanish>
-		<Portuguese>[COLOR_YELLOW]Feitorias por todo o Mundo:[COLOR_REVERT] Construa 6 Projetos Coloniais.</Portuguese>
+		<English>[COLOR_YELLOW]Feitorias all over the world:[COLOR_REVERT] Build 5 Colonies.</English>
+		<French>[COLOR_YELLOW]Feitorias all over the world:[COLOR_REVERT] Construire 5 Projets Coloniaux.</French>
+		<German>[COLOR_YELLOW]Faktoreien auf der ganzen Welt:[COLOR_REVERT] Erstellt 5 Kolonien.</German>
+		<Italian>[COLOR_YELLOW]Feitorie in tutto il mondo:[COLOR_REVERT] Costruisci 5 Progetti Coloniali.</Italian>
+		<Spanish>[COLOR_YELLOW]Feitorias all over the world:[COLOR_REVERT] Build 5 Colonies.</Spanish>
+		<Portuguese>[COLOR_YELLOW]Feitorias por todo o Mundo:[COLOR_REVERT] Construa 5 Projetos Coloniais.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_AUS1</Tag>
@@ -667,12 +667,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_DUT2</Tag>
-		<English>[COLOR_YELLOW]The India Companies:[COLOR_REVERT] Build 5 Colonial Projects.</English>
-		<French>[COLOR_YELLOW]The India Companies:[COLOR_REVERT] Construire 5 Projets Coloniaux.</French>
-		<German>[COLOR_YELLOW]Die Indien Kompanien:[COLOR_REVERT] Errichtet 5 Kolonien.</German>
-		<Italian>[COLOR_YELLOW]Le Compagnie delle Indie:[COLOR_REVERT] Costruisci 5 Progetti Coloniali.</Italian>
-		<Spanish>[COLOR_YELLOW]The India Companies:[COLOR_REVERT] Build 5 Colonial Projects.</Spanish>
-		<Portuguese>[COLOR_YELLOW]As Companhias das Índias:[COLOR_REVERT] Construa 5 Projetos Coloniais.</Portuguese>
+		<English>[COLOR_YELLOW]The India Companies:[COLOR_REVERT] Build 3 Colonies and complete both Trading Companies.</English>
+		<French>[COLOR_YELLOW]The India Companies:[COLOR_REVERT] Construire 3 Projets Coloniaux.</French>
+		<German>[COLOR_YELLOW]Die Indien Kompanien:[COLOR_REVERT] Errichtet 3 Kolonien.</German>
+		<Italian>[COLOR_YELLOW]Le Compagnie delle Indie:[COLOR_REVERT] Costruisci 3 Progetti Coloniali.</Italian>
+		<Spanish>[COLOR_YELLOW]The India Companies:[COLOR_REVERT] Build 3 Colonies and complete both Trading Companies.</Spanish>
+		<Portuguese>[COLOR_YELLOW]As Companhias das Índias:[COLOR_REVERT] Construa 3 Projetos Coloniais.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_DUT3</Tag>
@@ -742,10 +742,10 @@
 		<Tag>TXT_KEY_UHV_NOR1</Tag>
 		<English>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 50 Viking points by 1066AD. You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+2pt).</English>
 		<French>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 50 Viking points by 1066AD. You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+2pt).</French>
-		<German>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 50 Viking points by 1066AD. You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+2pt).</German>
-		<Italian>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 50 Viking points by 1066AD. You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+2pt).</Italian>
+		<German>[COLOR_YELLOW]Wikinger:[COLOR_REVERT] Erzielt bis 1066 n.Chr. 50 Wikingerpunkte. Punkte erhaltet ihr durch Stadteroberungen (+1pt pro Bevölkerung), Plündern von Verbesserungen (+1pt) und Versenken von Schiffen (+2pt).</German>
+		<Italian>[COLOR_YELLOW]Vichinghi:[COLOR_REVERT] Ottieni 50 punti Vichinghi entro il 1066AD. Guadagni punti conquistando città (+1pt per abitante), distruggendo miglioramenti (+1pt) e affondando navi (+2pt).</Italian>
 		<Spanish>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 50 Viking points by 1066AD. You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+2pt).</Spanish>
-		<Portuguese>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 50 Viking points by 1066AD. You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+2pt).</Portuguese>
+		<Portuguese>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Ganhe 50 pontos Vikings até 1066DC. Você ganha pontos por conquistar cidades (+1pt por população), pilhagem de melhorias (+1pt) e afundando navios (+2pt).</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOR2</Tag>
@@ -785,12 +785,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_DEN3</Tag>
-		<English>[COLOR_YELLOW]Ostindisk Kompagni:[COLOR_REVERT] Get 3 Colonies and complete both Trading Companies.</English>
-		<French>[COLOR_YELLOW]Ostindisk Kompagni:[COLOR_REVERT] Get 3 Colonies and complete both Trading Companies.</French>
-		<German>[COLOR_YELLOW]Ostindisk Kompagni:[COLOR_REVERT] Get 3 Colonies and complete both Trading Companies.</German>
-		<Italian>[COLOR_YELLOW]Ostindisk Kompagni:[COLOR_REVERT] Get 3 Colonies and complete both Trading Companies.</Italian>
-		<Spanish>[COLOR_YELLOW]Ostindisk Kompagni:[COLOR_REVERT] Get 3 Colonies and complete both Trading Companies.</Spanish>
-		<Portuguese>[COLOR_YELLOW]Ostindisk Kompagni:[COLOR_REVERT] Get 3 Colonies and complete both Trading Companies.</Portuguese>
+		<English>[COLOR_YELLOW]Ostindisk Kompagni:[COLOR_REVERT] Build 3 Colonies and complete both Trading Companies.</English>
+		<French>[COLOR_YELLOW]Ostindisk Kompagni:[COLOR_REVERT] Build 3 Colonies and complete both Trading Companies.</French>
+		<German>[COLOR_YELLOW]Ostindisk Kompagni:[COLOR_REVERT] Build 3 Colonies and complete both Trading Companies.</German>
+		<Italian>[COLOR_YELLOW]Ostindisk Kompagni:[COLOR_REVERT] Build 3 Colonies and complete both Trading Companies.</Italian>
+		<Spanish>[COLOR_YELLOW]Ostindisk Kompagni:[COLOR_REVERT] Build 3 Colonies and complete both Trading Companies.</Spanish>
+		<Portuguese>[COLOR_YELLOW]Ostindisk Kompagni:[COLOR_REVERT] Build 3 Colonies and complete both Trading Companies.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOV1</Tag>

@@ -41,8 +41,7 @@ class RFCUtils:
 	#Absinthe: stability overlay
 	bStabilityOverlay = False
 
-
-	#Rise and fall, stability
+	#RiseAndFall, Stability
 	def getLastTurnAlive( self, iCiv ):
 		scriptDict = pickle.loads( gc.getGame().getScriptData() )
 		return scriptDict['lLastTurnAlive'][iCiv]
@@ -137,7 +136,6 @@ class RFCUtils:
 		scriptDict['lPlagueCountdown'][iCiv] = iNewValue
 		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-	#Communications
 	def getSeed( self ):
 		scriptDict = pickle.loads( gc.getGame().getScriptData() )
 		return scriptDict['iSeed']
@@ -220,23 +218,23 @@ class RFCUtils:
 				#return -1
 			#else:
 				#return 0
-	    #else:
-		    #if (iParameter == 1):
-			    #iNewValue = self.getParCities()
-		    #elif (iParameter == 2):
-			    #iNewValue = self.getParCivics()
-		    #elif (iParameter == 3):
-			    #iNewValue = self.getParEconomy()
-		    #elif (iParameter == 4):
-			    #iNewValue = self.getParExpansion()
-		    #elif (iParameter == 5):
-			    #iNewValue = self.getParDiplomacy()
-		    #if (iNewValue >= self.getLastRecordedStabilityStuff(iParameter) + 4):
-			    #return 1
-		    #elif (iNewValue <= self.getLastRecordedStabilityStuff(iParameter) - 4):
-			    #return -1
-		    #else:
-			    #return 0
+		#else:
+			#if (iParameter == 1):
+				#iNewValue = self.getParCities()
+			#elif (iParameter == 2):
+				#iNewValue = self.getParCivics()
+			#elif (iParameter == 3):
+				#iNewValue = self.getParEconomy()
+			#elif (iParameter == 4):
+				#iNewValue = self.getParExpansion()
+			#elif (iParameter == 5):
+				#iNewValue = self.getParDiplomacy()
+			#if (iNewValue >= self.getLastRecordedStabilityStuff(iParameter) + 4):
+				#return 1
+			#elif (iNewValue <= self.getLastRecordedStabilityStuff(iParameter) - 4):
+				#return -1
+			#else:
+				#return 0
 
 	#Victory
 	def countAchievedGoals(self, iPlayer):
@@ -291,7 +289,6 @@ class RFCUtils:
 		#	return scriptDict['iKievFood']
 		#else:
 		#	return -1
-
 	# 3Miro: END Utilities
 
 
@@ -397,7 +394,7 @@ class RFCUtils:
 			if (gc.getTeam(gc.getPlayer(iMajorCiv).getTeam()).isHasTech(t)):
 				    gc.getTeam(gc.getPlayer(iMinorCiv).getTeam()).setHasTech(t, True, iMinorCiv, False, False)
 
-	#RiseAndFall, Religions, Congresses, UniquePowers
+	#RiseAndFall, Religions, UniquePowers
 	def makeUnit(self, iUnit, iPlayer, tCoords, iNum): #by LOQ
 		'Makes iNum units for player iPlayer of the type iUnit at tCoords.'
 		#if ( tCoords[0] < 0 or tCoords[0] >= con.iMapMaxX or tCoords[1] < 0 or tCoords[1] >= con.iMapMaxY ):
@@ -409,7 +406,7 @@ class RFCUtils:
 			#	print(" 3Miro: Error: ",iPlayer)
 			pPlayer.initUnit(iUnit, tCoords[0], tCoords[1], UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 
-	#RiseAndFall, Religions, Congresses
+	#RiseAndFall, Religions
 	def getHumanID(self):
 ##		for iCiv in range(iNumPlayers):
 ##			if (gc.getPlayer(iCiv).isHuman()):
@@ -554,7 +551,7 @@ class RFCUtils:
 								gc.getMap().plot(1, 71).setRevealed(iCiv, False, True, -1);
 
 
-	#Congresses, RiseAndFall
+	#RiseAndFall
 	def flipCity(self, tCityPlot, bFlipType, bKillUnits, iNewOwner, iOldOwners):
 		"""Changes owner of city specified by tCityPlot.
 		bFlipType specifies if it's conquered or traded.
@@ -585,7 +582,7 @@ class RFCUtils:
 		return False
 
 
-	#Congresses, RiseAndFall
+	#RiseAndFall
 	def cultureManager(self, tCityPlot, iCulturePercent, iNewOwner, iOldOwner, bBarbarian2x2Decay, bBarbarian2x2Conversion, bAlwaysOwnPlots):
 		"""Converts the culture of the city and of the surrounding plots to the new owner of a city.
 		iCulturePercent determine the percentage that goes to the new owner.
@@ -717,7 +714,7 @@ class RFCUtils:
 			pCurrent.setOwner(iCiv)
 
 
-	#Congresses, RiseAndFall
+	#RiseAndFall
 	def pushOutGarrisons(self, tCityPlot, iOldOwner):
 		tDestination = (-1, -1)
 		for x in range(tCityPlot[0]-2, tCityPlot[0]+3):
@@ -739,7 +736,7 @@ class RFCUtils:
 				else:
 					j = j + 1
 
-	#Congresses, RiseAndFall
+	#RiseAndFall
 	def relocateSeaGarrisons(self, tCityPlot, iOldOwner):
 		tDestination = (-1, -1)
 		cityList = PyPlayer(iOldOwner).getCityList()
@@ -766,7 +763,7 @@ class RFCUtils:
 				else:
 					j = j + 1
 
-	#Congresses, RiseAndFall
+	#RiseAndFall
 	def createGarrisons(self, tCityPlot, iNewOwner, iNumUnits):
 		plotCity = gc.getMap().plot(tCityPlot[0], tCityPlot[1])
 		city = plotCity.getPlotCity()
@@ -909,7 +906,7 @@ class RFCUtils:
 				pyCity.GetCy().setHasRealBuilding(xml.iPlague, False)
 
 
-	#AIWars, by CyberChrist
+	#AIWars
 	def isNoVassal(self, iCiv):
 		iMaster = 0
 		for iMaster in range (iNumTotalPlayers):
@@ -1445,7 +1442,7 @@ class RFCUtils:
 
 		engine = CyEngine()
 		map = CyMap()
-		
+
 		colors = []
 		colors.append("COLOR_HIGHLIGHT_FOREIGN")
 		colors.append("COLOR_HIGHLIGHT_BORDER")
@@ -1460,12 +1457,12 @@ class RFCUtils:
 		if (iScreenIsUp == 1):
 			# clear the highlight
 			engine.clearColoredPlots(PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_WORLD_BUILDER)
-			
+
 			# if no civ was selected before
 			global iSelectedCivID
 			if (iSelectedCivID == -1):
 				iSelectedCivID = iHuman
-			
+
 			# apply the highlight
 			for i in range(map.numPlots()):
 				plot = map.plotByIndex(i)
@@ -1478,7 +1475,7 @@ class RFCUtils:
 
 
 	def StabilityOverlayCiv(self, iChoice):
-		
+
 		engine = CyEngine()
 		map = CyMap()
 
@@ -1543,7 +1540,7 @@ class RFCUtils:
 
 	def getProvinceStabilityLevel(self, iCiv, iProvince):
 		"""Returns the stability level of the province for the given civ."""
-		
+
 		pPlayer = gc.getPlayer( iCiv )
 		if pPlayer.getProvinceType( iProvince ) == con.iProvinceCore:
 			return 4 # core
