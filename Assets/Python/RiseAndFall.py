@@ -690,7 +690,7 @@ class RiseAndFall:
 		# 3Miro: only the very first civ in the WB file
 		# Sedna17: Not wanted when Burgundy spawns late?
 		# 3Miro: I don't know what the point of this is, I think it has to do with the first nation spawning with no units
-		#       coded in the WB, lets remove it to see what breaks
+		#		coded in the WB, lets remove it to see what breaks
 		#if (pBurgundy.isHuman()):
 		#	plotBurgundy = gc.getMap().plot(tCapitals[iBurgundy][0], tCapitals[iBurgundy][1])
 		#	unit = plotBurgundy.getUnit(0)
