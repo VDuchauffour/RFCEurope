@@ -333,11 +333,15 @@ class CvRFCEventHandler:
 		if ( iOwner == con.iPortugal ):
 			self.vic.onCityBuilt(city, iOwner) #Victory
 
+		# Absinthe: free walls if city is built on a fort
+		if ( pCurrent.getImprovementType() == xml.iImprovementFort ):
+			city.setHasRealBuilding( xml.iWalls, True )
+
 		# 3MiroUP: faith on city found
 		if ( gc.hasUP( iOwner, con.iUP_Faith ) ):
 			self.up.faithUP( iOwner, city )
 
-		if (iOwner < con.iNumPlayers):
+		if ( iOwner < con.iNumPlayers ):
 			self.sta.onCityBuilt(iOwner, city.getX(), city.getY() )
 
 	def onCombatResult(self, argsList):

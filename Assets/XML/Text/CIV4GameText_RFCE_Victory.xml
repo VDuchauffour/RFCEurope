@@ -243,7 +243,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ARA3</Tag>
-		<English>[COLOR_YELLOW]The World of Islam:[COLOR_REVERT] Islam to spread to 35% of all people.</English>
+		<English>[COLOR_YELLOW]The World of Islam:[COLOR_REVERT] Spread Islam to at least 35% of the population of Europe.</English>
 		<French>[COLOR_YELLOW]The World of Islam:[COLOR_REVERT] R&#233;pandre l'Islam &#224; 35% dans le monde.</French>
 		<German>[COLOR_YELLOW]Die Welt des Islam:[COLOR_REVERT] Sorgt für eine 35%-ige Verbreitung des Islam.</German>
 		<Italian>[COLOR_YELLOW]La Spada dell'Islam:[COLOR_REVERT] Diffondi l'Islam nel 35% delle città europee.</Italian>
@@ -604,11 +604,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_AUS1</Tag>
-		<English>[COLOR_YELLOW]Habsburg Empire:[COLOR_REVERT] Conquer Hungary, Upper Hungary, Austria, Bavaria, Carinthia, Transylvania, Pannonia, Moravia, Silezia and Bohemia in 1617AD.</English>
-		<French>[COLOR_YELLOW]Habsburg Empire:[COLOR_REVERT] Conquer Hungary, Upper Hungary, Austria, Bavaria, Carinthia, Transylvania, Pannonia, Moravia, Silezia and Bohemia in 1617AD.</French>
+		<English>[COLOR_YELLOW]Habsburg Empire:[COLOR_REVERT] Conquer Hungary, Upper Hungary, Austria, Bavaria, Carinthia, Transylvania, Pannonia, Moravia, Silesia and Bohemia in 1617AD.</English>
+		<French>[COLOR_YELLOW]Habsburg Empire:[COLOR_REVERT] Conquer Hungary, Upper Hungary, Austria, Bavaria, Carinthia, Transylvania, Pannonia, Moravia, Silesia and Bohemia in 1617AD.</French>
 		<German>[COLOR_YELLOW]Habsburger Kaiserreich:[COLOR_REVERT] Erobert bis 1617 n.Chr. Ungarn, Oberungarn, Österreich, Bayern, Kärnten, Siebenbürgen, Pannonien, Mähren, Schlesien und Böhmen.</German>
 		<Italian>[COLOR_YELLOW]Impero Asburgico:[COLOR_REVERT] Conquista le provincie di Ungheria, Alta Ungheria, Austria, Baviera, Carinzia, Transilvania, Pannonia, Moravia, Silezia e Boemia entro il 1617AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Habsburg Empire:[COLOR_REVERT] Conquer Hungary, Upper Hungary, Austria, Bavaria, Carinthia, Transylvania, Pannonia, Moravia, Silezia and Bohemia in 1617AD.</Spanish>
+		<Spanish>[COLOR_YELLOW]Habsburg Empire:[COLOR_REVERT] Conquer Hungary, Upper Hungary, Austria, Bavaria, Carinthia, Transylvania, Pannonia, Moravia, Silesia and Bohemia in 1617AD.</Spanish>
 		<Portuguese>[COLOR_YELLOW]Império Habsburgo:[COLOR_REVERT] Conquiste Hungria, Alta Hungria, Áustria, Baviera, Caríntia, Transilvânia, Panônia, Morávia, Silésia e Boêmia em 1617DC.</Portuguese>
 	</TEXT>
 	<TEXT>
