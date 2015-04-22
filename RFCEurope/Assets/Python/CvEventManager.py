@@ -480,6 +480,12 @@ class CvEventManager:
 			return
 		CvUtil.pyPrint('Improvement %s was Destroyed at %d, %d'
 			%(PyInfo.ImprovementInfo(iImprovement).getDescription(), iX, iY))
+		# Absinthe: Free walls if city is built on a fort
+		#			This is a hack for it, checking what was the improvement before the city was built
+		#			Saving the improvement type and coordinates here as a global variable, and accessing later in the onCityBuilt function
+		global iImpBeforeCity
+		iImpBeforeCity = 10000*iImprovement + 100*iX + 1*iY
+		#print ("hatha most jo lesz: ", iImprovement, iX, iY, iImpBeforeCity)
 
 	def onRouteBuilt(self, argsList):
 		'Route Built'

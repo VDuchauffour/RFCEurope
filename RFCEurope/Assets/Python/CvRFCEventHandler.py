@@ -312,7 +312,7 @@ class CvRFCEventHandler:
 
 		iOwner = city.getOwner()
 
-		self.rnf.onCityBuilt(iOwner, city )
+		self.rnf.onCityBuilt( iOwner, city )
 
 		if (iOwner < con.iNumActivePlayers):
 			self.cnm.assignName(city)
@@ -330,11 +330,18 @@ class CvRFCEventHandler:
 		if ( iOwner == iPortugal and gc.getTeam( gc.getPlayer( iPortugal ).getTeam() ).isHasTech( xml.iAstronomy ) ):
 			city.setHasRealBuilding( xml.iPortugalFeitoria, True )
 
-		if ( iOwner == con.iPortugal ):
-			self.vic.onCityBuilt(city, iOwner) #Victory
+		if ( iOwner == iPortugal ):
+			self.vic.onCityBuilt(city, iOwner) # needed in Victory.py
 
-		# Absinthe: free walls if city is built on a fort
-		if ( pCurrent.getImprovementType() == xml.iImprovementFort ):
+		# Absinthe: Free walls if city is built on a fort
+		#			The problem is that the improvement is destroyed separately, and before the city is founded, thus a workaround is needed
+		#			Solution: getting the coordinates of the last destroyed improvement from a different file in a global variable
+		#			If the last destroyed improvement in the game is a fort, and it was in the same place as the city, then it's good enough for me
+		iImpBeforeCityType = (CvEventManager.iImpBeforeCity / 10000) % 100
+		iImpBeforeCityX = (CvEventManager.iImpBeforeCity / 100) % 100
+		iImpBeforeCityY = CvEventManager.iImpBeforeCity % 100
+		#print ("na talan most: ", CvEventManager.iImpBeforeCity, iImpBeforeCityType, iImpBeforeCityX, iImpBeforeCityY)
+		if ( iImpBeforeCityType == xml.iImprovementFort and iImpBeforeCityX == city.getX() and iImpBeforeCityY == city.getY() ):
 			city.setHasRealBuilding( xml.iWalls, True )
 
 		# 3MiroUP: faith on city found
@@ -419,7 +426,7 @@ class CvRFCEventHandler:
 		iPlotY = pUnit.getY()
 		pPlot = CyMap().plot(iPlotX, iPlotY)
 		if (pPlot.countTotalCulture() == 0 ):
-			print("No culture, so bard/indy satisfied")
+			print("No culture, so barb/indy satisfied")
 			if (iImprovement >= xml.iImprovementCottage and iImprovement <= xml.iImprovementTown):
 				print ("Improve Type Satisfied")
 				self.barb.onImprovementDestroyed(iPlotX,iPlotY)

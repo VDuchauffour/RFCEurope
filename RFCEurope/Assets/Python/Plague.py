@@ -207,8 +207,8 @@ class Plague:
 		city.setHasRealBuilding(iPlague, True)
 		if (gc.getPlayer(city.getOwner()).isHuman()):
 			CyInterface().addMessage(city.getOwner(), True, con.iDuration/2, CyTranslator().getText("TXT_KEY_PLAGUE_SPREAD_CITY", ()) + " " + city.getName() + "!", "AS2D_PLAGUE", 0, gc.getBuildingInfo(iPlague).getButton(), ColorTypes(con.iLime), city.getX(), city.getY(), True, True)
-		for x in range(city.getX()-2, city.getX()+3):
-			for y in range(city.getY()-2, city.getY()+3):
+		for x in range(city.getX()-2, city.getX()+2):
+			for y in range(city.getY()-2, city.getY()+2):
 				if ( x>=0 and x<con.iMapMaxX and y>=0 and y<con.iMapMaxY ):
 					pCurrent = gc.getMap().plot( x, y )
 					iImprovement = pCurrent.getImprovementType()
