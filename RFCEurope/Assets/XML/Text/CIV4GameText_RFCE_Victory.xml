@@ -1414,6 +1414,24 @@
 		<Portuguese>Civilization with the highest score</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UHV_TOO_EALRY</Tag>
+		<English>The current year is before the start of the UHV</English>
+		<French>The current year is before the start of the UHV</French>
+		<German>The current year is before the start of the UHV</German>
+		<Italian>The current year is before the start of the UHV</Italian>
+		<Spanish>The current year is before the start of the UHV</Spanish>
+		<Portuguese>The current year is before the start of the UHV</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_FOOD_PRODUCTION</Tag>
+		<English>Current food production</English>
+		<French>Current food production</French>
+		<German>Current food production</German>
+		<Italian>Current food production</Italian>
+		<Spanish>Current food production</Spanish>
+		<Portuguese>Current food production</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_DQ_LEADER_NAME_1</Tag>
 		<English>Emperor</English>
 		<French>Emperor</French>
