@@ -207,6 +207,7 @@ Changes for RFCE 1.3:
 		- Plague icon on the main interface when plague spreads to a new city
 		- Revised AI war initialization for all players
 		- All UHV colony checks are handled on project built (instead of every turn), should make checks much faster (except for the Spanish UHV, which is only checked on a given turn)
+		- Trading companies don't count as colonies for the UHV anymore
 		- Revised Colony UHVs:
 			France: Empire of the World: Build 5 Colonies
 			Spain: The Spanish Armada: Have more Colonies than any other nation in 1588AD (while having at least 3)
@@ -215,6 +216,11 @@ Changes for RFCE 1.3:
 			Portugal: Feitorias all over the world: Build 5 Colonies
 			Dutch: The India Companies: Build 3 Colonies and complete both Trading Companies
 		- Free walls in the city if it is built on a fort
+		- Imported more efficient consts and xmlconsts handling from DoC (credit to Leoreth)
+		- Cities on the Baltic owned by vassals do count controlled for the 3rd Swedish UHV
+		- Some UHV are coded more efficiently
+		- Progress info for every UHV
+
 
 	Art updates:
 		- New art for Isabella (Spain), Casimir III (Poland), Ivan IV (Muscovy), Simeon I (Bulgaria), Ivan Asen (Bulgaria)

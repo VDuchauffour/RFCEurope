@@ -2219,6 +2219,8 @@ class CvMainInterface:
 					iPrussiaGP = 0
 					for iType in range(iGPStart, iGPEnd+1):
 						iPrussiaGP += pCapital.getFreeSpecialistCount(iType)
+					if iPrussiaGP < 0:
+						iPrussiaGP = 0
 					if ( pPlayer.getUHV(1) == -1 and not CyInterface().isCityScreenUp() ):
 						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
 						szUHVText = ": " + localText.getText("TXT_KEY_UHV_GREAT_PEOPLE",()) + (" (%i) " %iPrussiaGP )

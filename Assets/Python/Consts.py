@@ -73,6 +73,10 @@ teamAragon, teamSweden, teamPrussia, teamLithuania, teamAustria, teamTurkey, tea
 iIndepStart = iIndependent # creates the block of independent civs
 iIndepEnd = iIndependent4
 
+iNumCivs = 29
+(iCivArabia, iCivAustria, iCivBulgaria, iCivBurgundy, iCivByzantium, iCivCordoba, iCivMorocco, iCivDutch, iCivEngland, iCivScotland,
+iCivFrance, iCivGenoa, iCivGermany, iCivPrussia, iCivHungary, iCivNovgorod, iCivKiev, iCivMoscow, iCivNorway, iCivDenmark,
+iCivPoland, iCivPortugal, iCivSpain, iCivSweden, iCivTurkey, iCivVenice, iCivLithuania, iCivAragon, iCivPope) = range(iNumCivs)
 
 l0Array =       [0 for i in range(iNumTotalPlayers)] # currently unused
 l0ArrayActive = [0 for i in range(iNumTotalPlayers)] # currently unused

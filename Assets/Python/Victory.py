@@ -293,10 +293,11 @@ class Victory:
 
 	def onReligionFounded(self, iReligion, iFounder):
 		# Germany UHV 2:
-		if ( iFounder == iGermany and pGermany.getUHV( 1 ) == -1 ):
-			pGermany.setUHV( 1, 1 )
-		elif ( iReligion == xml.iProtestantism and pGermany.getUHV( 1 ) == -1 ):
-			pGermany.setUHV( 1, 0 )
+		if (iReligion == xml.iProtestantism):
+			if iFounder == iGermany:
+				pGermany.setUHV( 1, 1 )
+			else:
+				pGermany.setUHV( 1, 0 )
 
 
 	def onCityAcquired(self, owner, playerType, city, bConquest):
@@ -750,7 +751,7 @@ class Victory:
 				if(pNorway.getProvinceCurrentState( iProv ) < con.iProvinceConquer):
 					bConq = False
 					break
-			if(bConq and pNorway.getNumColonies() >= 1):
+			if(bConq and teamNorway.getProjectCount(xml.iColVinland) >= 1):
 				pNorway.setUHV( 1, 1 )
 			elif(iGameTurn == xml.i1263AD):
 				pNorway.setUHV( 1, 0 )
@@ -1121,6 +1122,7 @@ class Victory:
 			for iPlayer in range( iNumMajorPlayers ):
 				if ( gc.getPlayer( iPlayer ).calculateTotalYield(YieldTypes.YIELD_FOOD ) > iAgriculturePolish ):
 					bFood = False
+					break
 			if (bFood):
 				pPoland.setUHV( 0, 1 )
 			elif ( iGameTurn == xml.i1520AD ):
