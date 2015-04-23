@@ -1009,6 +1009,15 @@
 		<Portuguese>Conquistado</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UHV_BUILD</Tag>
+		<English>Build</English>
+		<French>Build</French>
+		<German>Build</German>
+		<Italian>Build</Italian>
+		<Spanish>Build</Spanish>
+		<Portuguese>Build</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UHV_NOT_YET</Tag>
 		<English>Not Yet</English>
 		<French>Not Yet</French>
@@ -1162,22 +1171,22 @@
 		<Portuguese>Cities with the highest culture:</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UHV_FRA2_HELP</Tag>
-		<English>Controller of Jeruzalem: </English>
-		<French>Controller of Jeruzalem: </French>
-		<German>Controller of Jeruzalem: </German>
-		<Italian>Controller of Jeruzalem: </Italian>
-		<Spanish>Controller of Jeruzalem: </Spanish>
-		<Portuguese>Controller of Jeruzalem: </Portuguese>
+		<Tag>TXT_KEY_UHV_CONTROLLER_OF</Tag>
+		<English>Controller of</English>
+		<French>Controller of</French>
+		<German>Controller of</German>
+		<Italian>Controller of</Italian>
+		<Spanish>Controller of</Spanish>
+		<Portuguese>Controller of</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UHV_CITY_NOT_EXIT</Tag>
-		<English>%s1 doesn't exist</English>
-		<French>%s1 doesn't exist</French>
-		<German>%s1 doesn't exist</German>
-		<Italian>%s1 doesn't exist</Italian>
-		<Spanish>%s1 doesn't exist</Spanish>
-		<Portuguese>%s1 doesn't exist</Portuguese>
+		<Tag>TXT_KEY_UHV_CITY_NOT_EXIST</Tag>
+		<English> does not exist</English>
+		<French> does not exist</French>
+		<German> does not exist</German>
+		<Italian> does not exist</Italian>
+		<Spanish> does not exist</Spanish>
+		<Portuguese> does not exist</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_JERUSALEM</Tag>
@@ -1198,7 +1207,7 @@
 		<Portuguese>You do not own </Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TEXT_KEY_UHV_IS_LARGEST</Tag>
+		<Tag>TXT_KEY_UHV_IS_LARGEST</Tag>
 		<English> is the largest city</English>
 		<French> is the largest city</French>
 		<German> is the largest city</German>
@@ -1207,13 +1216,193 @@
 		<Portuguese> is the largest city</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TEXT_KEY_UHV_IS_CULTURAL</Tag>
+		<Tag>TXT_KEY_UHV_IS_NOT_LARGEST</Tag>
+		<English> is not the largest city</English>
+		<French> is not the largest city</French>
+		<German> is not the largest city</German>
+		<Italian> is not the largest city</Italian>
+		<Spanish> is not the largest city</Spanish>
+		<Portuguese> is not the largest city</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_IS_CULTURAL</Tag>
 		<English> is the most cultural city</English>
 		<French> is the most cultural city</French>
 		<German> is the most cultural city</German>
 		<Italian> is the most cultural city</Italian>
 		<Spanish> is the most cultural city</Spanish>
 		<Portuguese> is the most cultural city</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_IS_NOT_CULTURAL</Tag>
+		<English> is not the most cultural city</English>
+		<French> is not the most cultural city</French>
+		<German> is not the most cultural city</German>
+		<Italian> is not the most cultural city</Italian>
+		<Spanish> is not the most cultural city</Spanish>
+		<Portuguese> is not the most cultural city</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_FAITH_POINTS</Tag>
+		<English>Current faith points: </English>
+		<French>Current faith points: </French>
+		<German>Current faith points: </German>
+		<Italian>Current faith points: </Italian>
+		<Spanish>Current faith points: </Spanish>
+		<Portuguese>Current faith points: </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_NO_CITIES_LOST</Tag>
+		<English>No cities lost</English>
+		<French>No cities lost</French>
+		<German>No cities lost</German>
+		<Italian>No cities lost</Italian>
+		<Spanish>No cities lost</Spanish>
+		<Portuguese>No cities lost</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_NO_COLONIES_YET</Tag>
+		<English>No colonies build yet</English>
+		<French>No colonies build yet</French>
+		<German>No colonies build yet</German>
+		<Italian>No colonies build yet</Italian>
+		<Spanish>No colonies build yet</Spanish>
+		<Portuguese>No colonies build yet</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_LOWER_SCORE</Tag>
+		<English>Civs with a lower score</English>
+		<French>Civs with a lower score</French>
+		<German>Civs with a lower score</German>
+		<Italian>Civs with a lower score</Italian>
+		<Spanish>Civs with a lower score</Spanish>
+		<Portuguese>Civs with a lower score</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_HIGHER_SCORE</Tag>
+		<English>Civs with a higher score</English>
+		<French>Civs with a higher score</French>
+		<German>Civs with a higher score</German>
+		<Italian>Civs with a higher score</Italian>
+		<Spanish>Civs with a higher score</Spanish>
+		<Portuguese>Civs with a higher score</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_NOT_FOUND_YET</Tag>
+		<English>is not found yet</English>
+		<French>is not found yet</French>
+		<German>is not found yet</German>
+		<Italian>is not found yet</Italian>
+		<Spanish>is not found yet</Spanish>
+		<Portuguese>is not found yet</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_PRESENT</Tag>
+		<English>is present in</English>
+		<French>is present in</French>
+		<German>is present in</German>
+		<Italian>is present in</Italian>
+		<Spanish>is present in</Spanish>
+		<Portuguese>is present in</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_NOT_PRESENT</Tag>
+		<English>is not present in</English>
+		<French>is not present in</French>
+		<German>is not present in</German>
+		<Italian>is not present in</Italian>
+		<Spanish>is not present in</Spanish>
+		<Portuguese>is not present in</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_CONTROL_MOST</Tag>
+		<English>You do control most territory</English>
+		<French>You do control most territory</French>
+		<German>You do control most territory</German>
+		<Italian>You do control most territory</Italian>
+		<Spanish>You do control most territory</Spanish>
+		<Portuguese>You do control most territory</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_NOT_CONTROL_MOST</Tag>
+		<English>You do not control most territory</English>
+		<French>You do not control most territory</French>
+		<German>You do not control most territory</German>
+		<Italian>You do not control most territory</Italian>
+		<Spanish>You do not control most territory</Spanish>
+		<Portuguese>You do not control most territory</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_NO_ADOPTION_YET</Tag>
+		<English>Free religion is not adopted yet</English>
+		<French>Free religion is not adopted yet</French>
+		<German>Free religion is not adopted yet</German>
+		<Italian>Free religion is not adopted yet</Italian>
+		<Spanish>Free religion is not adopted yet</Spanish>
+		<Portuguese>Free religion is not adopted yet</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_MOST_COLONIES</Tag>
+		<English>You control the most colonies</English>
+		<French>You control the most colonies</French>
+		<German>You control the most colonies</German>
+		<Italian>You control the most colonies</Italian>
+		<Spanish>You control the most colonies</Spanish>
+		<Portuguese>You control the most colonies</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_NOT_MOST_COLONIES</Tag>
+		<English>You do not control the most colonies</English>
+		<French>You do not control the most colonies</French>
+		<German>You do not control the most colonies</German>
+		<Italian>You do not control the most colonies</Italian>
+		<Spanish>You do not control the most colonies</Spanish>
+		<Portuguese>You do not control the most colonies</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_COLLAPSED_OR_VASSAL</Tag>
+		<English>Collapsed or vassalized</English>
+		<French>Collapsed or vassalized</French>
+		<German>Collapsed or vassalized</German>
+		<Italian>Collapsed or vassalized</Italian>
+		<Spanish>Collapsed or vassalized</Spanish>
+		<Portuguese>Collapsed or vassalized</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_NO_INDUSTRIAL</Tag>
+		<English>No one has entered the Industrial Era yet</English>
+		<French>No one has entered the Industrial Era yet</French>
+		<German>No one has entered the Industrial Era yet</German>
+		<Italian>No one has entered the Industrial Era yet</Italian>
+		<Spanish>No one has entered the Industrial Era yet</Spanish>
+		<Portuguese>No one has entered the Industrial Era yet</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_CITIES_IN_ISLANDS</Tag>
+		<English>Cities on the Azores, Canaries and Madeira</English>
+		<French>Cities on the Azores, Canaries and Madeira</French>
+		<German>Cities on the Azores, Canaries and Madeira</German>
+		<Italian>Cities on the Azores, Canaries and Madeira</Italian>
+		<Spanish>Cities on the Azores, Canaries and Madeira</Spanish>
+		<Portuguese>Cities on the Azores, Canaries and Madeira</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_CITIES_IN_AFRICA</Tag>
+		<English>Cities in Morocco, Tetouan and Oran</English>
+		<French>Cities in Morocco, Tetouan and Oran</French>
+		<German>Cities in Morocco, Tetouan and Oran</German>
+		<Italian>Cities in Morocco, Tetouan and Oran</Italian>
+		<Spanish>Cities in Morocco, Tetouan and Oran</Spanish>
+		<Portuguese>Cities in Morocco, Tetouan and Oran</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_HIGHEST_SCORE</Tag>
+		<English>Civilization with the highest score</English>
+		<French>Civilization with the highest score</French>
+		<German>Civilization with the highest score</German>
+		<Italian>Civilization with the highest score</Italian>
+		<Spanish>Civilization with the highest score</Spanish>
+		<Portuguese>Civilization with the highest score</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DQ_LEADER_NAME_1</Tag>

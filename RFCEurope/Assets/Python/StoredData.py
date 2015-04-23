@@ -4,6 +4,7 @@ from CvPythonExtensions import *
 import CvUtil
 import PyHelpers
 import cPickle as pickle		# LOQ 2005-10-12
+import Consts as con
 
 # globals
 gc = CyGlobalContext()
@@ -24,27 +25,27 @@ class StoredData:
 				'tTempBottomRight': -1,
 				'iSpawnWar': 0, #if 1, add units and declare war. If >=2, do nothing
 				'bAlreadySwitched': False,
-				'lColonistsAlreadyGiven': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], #major players only, currently unused
-				'lNumCities': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], #total players (major + indy)
-				'lLastTurnAlive': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], #total players (major + indy)
-				'lSpawnDelay': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], #major players only
-				'lFlipsDelay': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], #major players only
+				'lColonistsAlreadyGiven': [0 for i in range(con.iNumPlayers)], #major players only, currently unused
+				'lNumCities': [0 for i in range(con.iNumTotalPlayers)], #total players (major + indy)
+				'lLastTurnAlive': [0 for i in range(con.iNumTotalPlayers)], #total players (major + indy)
+				'lSpawnDelay': [0 for i in range(con.iNumPlayers)], #major players only
+				'lFlipsDelay': [0 for i in range(con.iNumPlayers)], #major players only
 				'iBetrayalTurns': 0,
-				'lLatestRebellionTurn': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], #major players only
+				'lLatestRebellionTurn': [0 for i in range(con.iNumPlayers)], #major players only
 				'iRebelCiv': 0,
 				'lRebelCities': [], # 3Miro: store the rebelling cities
-				'lRebelSuppress': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], #major players only
+				'lRebelSuppress': [0 for i in range(con.iNumPlayers)], #major players only
 				'lExileData': [-1, -1, -1, -1, -1],
 				'tTempFlippingCity': -1,
 				'lCheatersCheck': [0, -1],
-				'lBirthTurnModifier': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], #major players only, currently unused
+				'lBirthTurnModifier': [0 for i in range(con.iNumPlayers)], #major players only, currently unused
 				'lDeleteMode': [-1, -1, -1], #first is a bool, the other values are capital coordinates
 				'bCorpsFounded': 0,
 
 				# Religions
 				'iSeed': -1,
 				'bReformationActive': False,
-				'lReformationHitMatrix': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], #major players only
+				'lReformationHitMatrix': [0 for i in range(con.iNumPlayers)], #major players only
 				'bCounterReformationActive': False,
 
 				# AIWars
@@ -52,7 +53,7 @@ class StoredData:
 				'iNextTurnAIWar': -1,
 
 				# Plague
-				'lPlagueCountdown': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], #total players B (major + indy + barbarian)
+				'lPlagueCountdown': [0 for i in range(con.iNumTotalPlayersB)], #total players B (major + indy + barbarian)
 				'lGenericPlagueDates': [-1, -1, -1, -1, -1],
 				'bBadPlague':False,
 				'lReligionFounded': [-1, -1, -1, -1, -1],
@@ -60,13 +61,13 @@ class StoredData:
 				# Crusades
 				'lCrusadeInit': [-2, -2, -2, -2, -2],
 				'bParticipate': False,
-				'lVotingPower': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], #major players only
+				'lVotingPower': [0 for i in range(con.iNumPlayers)], #major players only
 				'iFavorite': 0,
 				'iPowerful': 0,
 				'iLeader': 0,
 				'lVotesGathered': [0, 0],
 				'iRichestCatholic': 0,
-				'lDeviateTargets': [ False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False], #major players only
+				'lDeviateTargets': [False for i in range(con.iNumPlayers)], #major players only
 				'iTarget': [0, 0],
 				'iCrusadePower': 0,
 				'iCrusadeSucceeded': 0,
@@ -76,7 +77,7 @@ class StoredData:
 				'iDCLast': 0,
 
 				# Sedna17: Respawns
-				'lRespawnTurns': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], #major players only
+				'lRespawnTurns': [0 for i in range(con.iNumPlayers)], #major players only
 
 				# 3Miro: Minor Nations
 				'lNextMinorRevolt': [-1, -1, -1, -1, -1, -1, -1],
