@@ -54,12 +54,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_ACCOMPLISHED</Tag>
-		<English>Accomplished:</English>
-		<French>Accompli:</French>
-		<German>Erf&#252;llt:</German>
-		<Italian>Raggiunti:</Italian>
-		<Spanish>Cumplidos:</Spanish>
-		<Portuguese>Cumpridos:</Portuguese>
+		<English>Goal accomplished!</English>
+		<French>Goal accomplished!</French>
+		<German>Goal accomplished!</German>
+		<Italian>Goal accomplished!</Italian>
+		<Spanish>Goal accomplished!</Spanish>
+		<Portuguese>Goal accomplished!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_SCREEN_FAILED</Tag>
+		<English>Goal Failed!</English>
+		<French>Goal Failed!</French>
+		<German>Goal Failed!</German>
+		<Italian>Goal Failed!</Italian>
+		<Spanish>Goal Failed!</Spanish>
+		<Portuguese>Goal Failed!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_YES</Tag>
