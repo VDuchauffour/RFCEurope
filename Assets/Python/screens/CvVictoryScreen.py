@@ -1238,6 +1238,17 @@ class CvVictoryScreen:
 		sText2 = ""
 		sText3 = ""
 		#UHV1
+		sText1 += "\n\n"
+		if gc.getGame().getGameTurn()  >= xml.i1500AD:
+			iAgriculturePolish = pPlayer.calculateTotalYield(YieldTypes.YIELD_FOOD)
+			bFood = True
+			for iLoopPlayer in range( con.iNumMajorPlayers ):
+				if ( gc.getPlayer( iLoopPlayer ).calculateTotalYield(YieldTypes.YIELD_FOOD ) > iAgriculturePolish ):
+					bFood = False
+					break
+			sText1 += localText.getText("TXT_KEY_UHV_FOOD_PRODUCTION",()) + " " + self.determineColor(bFood, str(iAgriculturePolish))
+		else:
+			sText1 += localText.getText("TXT_KEY_UHV_TOO_EALRY",())
 		#UHV2
 		tProvsToCheck = vic.tPolishControl
 		iNumCities = 0
@@ -1398,15 +1409,18 @@ class CvVictoryScreen:
 		sText1 += self.getProvinceString(vic.tPrussiaControlI)
 		#UHV2
 		sText2  += "\n\n"
-		iConqRaw = gc.getPlayer(con.iPrussia).getUHVCounter(1)
-		for iI in range(len(vic.tPrussiaDefeat)):
-			iNumConq = (iConqRaw / pow(10,iI)) % 10
-			pVictim = gc.getPlayer(vic.tPrussiaDefeat[iI])
-			if(iNumConq < 9):
-				szNumConq = " %d" % iNumConq
-			else:
-				szNumConq = ">8"
-			sText2 +=  "  " + self.determineColor(not (iNumConq < 2 and pVictim.isAlive()), localText.getText(str(pVictim.getCivilizationShortDescriptionKey()), ()) + ":" + szNumConq)
+		if gc.getGame().getGameTurn()  >= xml.i1650AD:
+			iConqRaw = gc.getPlayer(con.iPrussia).getUHVCounter(1)
+			for iI in range(len(vic.tPrussiaDefeat)):
+				iNumConq = (iConqRaw / pow(10,iI)) % 10
+				pVictim = gc.getPlayer(vic.tPrussiaDefeat[iI])
+				if(iNumConq < 9):
+					szNumConq = " %d" % iNumConq
+				else:
+					szNumConq = ">8"
+				sText2 +=  "  " + self.determineColor(not (iNumConq < 2 and pVictim.isAlive()), localText.getText(str(pVictim.getCivilizationShortDescriptionKey()), ()) + ":" + szNumConq)
+		else:
+			sText2 += localText.getText("TXT_KEY_UHV_TOO_EALRY",())
 		#UHV3
 		pCapital = gc.getPlayer(iPlayer).getCapitalCity()
 		iGPStart = CvUtil.findInfoTypeNum(gc.getSpecialistInfo, gc.getNumSpecialistInfos(), "SPECIALIST_GREAT_PRIEST")
@@ -1546,7 +1560,6 @@ class CvVictoryScreen:
 			sString += self.getCivHelpsTexts()[iUHV-1]
 		return sString
 		
-
 		
 	def drawCleanerVictoryConditions(self):
 		screen = self.getScreen()
