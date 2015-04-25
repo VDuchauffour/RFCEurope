@@ -334,17 +334,22 @@ class CvRFCEventHandler:
 			self.vic.onCityBuilt(city, iOwner) # needed in Victory.py
 
 		# Absinthe: Free walls if city is built on a fort
-		#			The problem is that the improvement is destroyed separately, and before the city is founded, thus a workaround is needed
+		#			The problem is that the improvement is auto-destroyed before the city is founded, and totally separately from this function, thus a workaround is needed
 		#			Solution: getting the coordinates of the last destroyed improvement from a different file in a global variable
 		#			If the last destroyed improvement in the game is a fort, and it was in the same place as the city, then it's good enough for me
+		#			(only problem might be if currently there is no improvement on the city-founding tile, but the last destroyed improvement in the game
+		#				was a fort on the exact same plot some turns ago - but IMO that's not much of a stress of reality, there was a fort there after all)
+		# Another issue: CvEventManager.iImpBeforeCity needs to have some initial value if a city is founded before the first destroyed improvement
+		# Workaround: adding an improvement in the scenario map to one of the preplaced Byzantine cities, so the improvement will be autorazed on the beginning of the 1st players turn
 		iImpBeforeCityType = (CvEventManager.iImpBeforeCity / 10000) % 100
 		iImpBeforeCityX = (CvEventManager.iImpBeforeCity / 100) % 100
 		iImpBeforeCityY = CvEventManager.iImpBeforeCity % 100
-		#print ("na talan most: ", CvEventManager.iImpBeforeCity, iImpBeforeCityType, iImpBeforeCityX, iImpBeforeCityY)
+		print ("coordinates: ", city.getX(), city.getY())
+		#print ("ez van a globalban: ", CvEventManager.iImpBeforeCity, iImpBeforeCityType, iImpBeforeCityX, iImpBeforeCityY)
 		if ( iImpBeforeCityType == xml.iImprovementFort and iImpBeforeCityX == city.getX() and iImpBeforeCityY == city.getY() ):
 			city.setHasRealBuilding( xml.iWalls, True )
 
-		# 3MiroUP: faith on city found
+		# 3MiroUP: faith on city foundation
 		if ( gc.hasUP( iOwner, con.iUP_Faith ) ):
 			self.up.faithUP( iOwner, city )
 

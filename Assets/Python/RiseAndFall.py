@@ -706,19 +706,20 @@ class RiseAndFall:
 	### 3Miro Province Related Functions ###
 	def onCityBuilt(self, iPlayer, pCity):
 		self.pm.onCityBuilt (iPlayer, pCity.getX(), pCity.getY())
-		# Absinthe: "prebuilt" walls
-		if ( (pCity.getX()==56) and (pCity.getY()==35) ): #Early defense boost to Venice, the rivers alone are not enough
+		# Absinthe: We can add free buildings for new cities here
+		#			It will add the building every time a city is founded on the plot, not just on the first time
+		if ( (pCity.getX()==56) and (pCity.getY()==35) ): #Venice - early defense boost, the rivers alone are not enough
 			pCity.setHasRealBuilding( xml.iWalls, True )
 		if ( (pCity.getX()==55) and (pCity.getY()==41) ): #Augsburg
 			pCity.setHasRealBuilding( xml.iWalls, True )
-		if ( (pCity.getX()==41) and (pCity.getY()==52) ): #London
-			pCity.setHasRealBuilding( xml.iWalls, True )
+		#if ( (pCity.getX()==41) and (pCity.getY()==52) ): #London
+		#	pCity.setHasRealBuilding( xml.iWalls, True )
 		if ( (pCity.getX()==23) and (pCity.getY()==31) ): #Porto
 			pCity.setHasRealBuilding( xml.iWalls, True )
 		if ( (pCity.getX()==60) and (pCity.getY()==44) ): #Prague
 			pCity.setHasRealBuilding( xml.iWalls, True )
-		if ( (pCity.getX()==80) and (pCity.getY()==62) ): #Novgorod
-			pCity.setHasRealBuilding( xml.iWalls, True )
+		#if ( (pCity.getX()==80) and (pCity.getY()==62) ): #Novgorod
+		#	pCity.setHasRealBuilding( xml.iWalls, True )
 		if ( (pCity.getX()==74) and (pCity.getY()==58) ): #Riga
 			pCity.setHasRealBuilding( xml.iWalls, True )
 
@@ -888,6 +889,27 @@ class RiseAndFall:
 		#	print("Special Respawn For Player: ",iCiv)
 		#	if iCiv < iNumMajorPlayers and iCiv > 0:
 		#		self.resurrection(iGameTurn,iCiv)
+
+		# Absinthe: Reduce cities to towns, in order to make room for new civs
+		if(iGameTurn == con.tBirth[con.iEngland] -1):
+			# Reduce Norwich and Nottingham, so more freedom in where to found cities in England
+			self.reduceCity((43,55))
+			self.reduceCity((39,56))
+		elif(iGameTurn == con.tBirth[con.iSweden] -1):
+			# Reduce Uppsala
+			self.reduceCity((65,66))
+
+
+	def reduceCity(self, tPlot):
+		pPlot = gc.getMap().plot(tPlot[0],tPlot[1])
+		if(pPlot.isCity()):
+			# Apologize from the player:
+			msgString = CyTranslator().getText("TXT_KEY_REDUCE_CITY_1", ()) + " " + pPlot.getPlotCity().getName() + " " + CyTranslator().getText("TXT_KEY_REDUCE_CITY_2", ())
+			CyInterface().addMessage(pPlot.getPlotCity().getOwner(), True, con.iDuration, msgString, "", 0, "", ColorTypes(con.iLightRed), tPlot[0], tPlot[1], True, True)
+
+			pPlot.eraseAIDevelopment()
+			pPlot.setImprovementType(21) # Improvement Town instead of the city
+			pPlot.setRouteType(0) # Also adding a road there
 
 
 	def checkPlayerTurn(self, iGameTurn, iPlayer):
@@ -2236,7 +2258,7 @@ class RiseAndFall:
 		if (iCiv == iDenmark):
 			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
-			utils.makeUnit(xml.iHuscarl, iCiv, tPlot, 3)
+			utils.makeUnit(xml.iHuscarl, iCiv, tPlot, 4)
 			tSeaPlot = self.findSeaPlots((61,55), 2)
 			if ( tSeaPlot ):
 				pDenmark.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)

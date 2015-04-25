@@ -246,7 +246,7 @@ tNorwayPot2Norm = [xml.iP_TheIsles,xml.iP_Jamtland]
 
 tDenmarkCore = [xml.iP_Denmark,xml.iP_Skaneland]
 tDenmarkNorm = []
-tDenmarkOuter = [xml.iP_Gotaland,xml.iP_Northumbria,xml.iP_Mercia,xml.iP_EastAnglia,xml.iP_London,xml.iP_Brandenburg,xml.iP_Norway,xml.iP_Vestfold,xml.iP_Normandy]
+tDenmarkOuter = [xml.iP_Gotaland,xml.iP_Svealand,xml.iP_Northumbria,xml.iP_Mercia,xml.iP_EastAnglia,xml.iP_London,xml.iP_Brandenburg,xml.iP_Norway,xml.iP_Vestfold,xml.iP_Normandy]
 tDenmarkPot2Core = []
 tDenmarkPot2Norm = [xml.iP_Estonia,xml.iP_Gotland,xml.iP_Holstein]
 
@@ -642,6 +642,7 @@ class ProvinceManager:
 		elif ( iPlayer == iSweden ):
 			pNorway.setProvinceType( xml.iP_Svealand, iProvinceNone )
 			pDenmark.setProvinceType(xml.iP_Gotaland, iProvinceNone )
+			pDenmark.setProvinceType(xml.iP_Svealand, iProvinceNone )
 			pNovgorod.setProvinceType( xml.iP_Osterland, iProvinceNone )
 			utils.refreshStabilityOverlay() # refresh the stability overlay
 		elif ( iPlayer == iDutch ):

@@ -1553,38 +1553,3 @@ class RFCUtils:
 		else:
 			return 0 # unstable
 	#Absinthe: end
-	
-	def PlayerToCiv(self, iPlayer):
-		dCivs = {
-		con.iByzantium : con.iCivByzantium,
-		con.iFrankia : con.iCivFrance,
-		con.iArabia : con.iCivArabia,
-		con.iBulgaria : con.iCivBulgaria,
-		con.iCordoba : con.iCivCordoba,
-		con.iVenecia : con.iCivVenice,
-		con.iBurgundy : con.iCivBurgundy,
-		con.iGermany : con.iCivGermany,
-		con.iNovgorod : con.iCivNovgorod,
-		con.iNorway : con.iCivNorway,
-		con.iKiev : con.iCivKiev,
-		con.iHungary : con.iCivHungary,
-		con.iSpain : con.iCivSpain,
-		con.iDenmark : con.iCivDenmark,
-		con.iScotland : con.iCivScotland,
-		con.iPoland : con.iCivPoland,
-		con.iGenoa : con.iCivGenoa,
-		con.iMorocco : con.iCivMorocco,
-		con.iEngland : con.iCivEngland,
-		con.iPortugal : con.iCivPortugal,
-		con.iAragon : con.iCivAragon,
-		con.iSweden : con.iCivSweden,
-		con.iPrussia : con.iCivPrussia,
-		con.iLithuania : con.iCivLithuania,
-		con.iAustria : con.iCivAustria,
-		con.iTurkey : con.iCivTurkey,
-		con.iMoscow : con.iCivMoscow,
-		con.iDutch : con.iCivDutch,
-		con.iPope : con.iCivPope,
-		}
-		return dCivs[iPlayer]
-

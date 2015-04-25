@@ -1284,6 +1284,42 @@
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_TURCOMAN_HORSE_ARCHER</Tag>
+		<English>Turcoman Horse Archer</English>
+		<French>Turcoman Horse Archer</French>
+		<German>Turcoman Horse Archer</German>
+		<Italian>Turcoman Horse Archer</Italian>
+		<Spanish>Turcoman Horse Archer</Spanish>
+		<Portuguese>Turcoman Horse Archer</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TURCOMAN_HORSE_ARCHER_PEDIA</Tag>
+		<English>Turcoman Horse Archer</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BEDOUIN</Tag>
+		<English>Bedouin</English>
+		<French>Bedouin</French>
+		<German>Bedouin</German>
+		<Italian>Bedouin</Italian>
+		<Spanish>Bedouin</Spanish>
+		<Portuguese>Bedouin</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BEDOUIN_PEDIA</Tag>
+		<English>Bedouin</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_OTTOMAN_JANISSARY</Tag>
 		<English>Janissary</English>
 		<French>Janissaire</French>

@@ -87,7 +87,7 @@
 		<Portuguese>The Scots</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SCOTISH</Tag>
+		<Tag>TXT_KEY_SCOTTISH</Tag>
 		<English>Scottish</English>
 		<French>Scottish</French>
 		<German>Schottische</German>
@@ -364,5 +364,68 @@
 		<Italian>Calmucchi</Italian>
 		<Spanish>Kalmyks</Spanish>
 		<Portuguese>Kalmyks</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_SERBS</Tag>
+		<English>Serbs</English>
+		<French>Serbs</French>
+		<German>Serbs</German>
+		<Italian>Serbs</Italian>
+		<Spanish>Serbs</Spanish>
+		<Portuguese>Serbs</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_BALTICS</Tag>
+		<English>Baltic Heathens</English>
+		<French>Baltic Heathens</French>
+		<German>Baltic Heathens</German>
+		<Italian>Baltic Heathens</Italian>
+		<Spanish>Baltic Heathens</Spanish>
+		<Portuguese>Baltic Heathens</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_SWORD_BRETHEN</Tag>
+		<English>Sword Brethren</English>
+		<French>Sword Brethren</French>
+		<German>Sword Brethren</German>
+		<Italian>Sword Brethren</Italian>
+		<Spanish>Sword Brethren</Spanish>
+		<Portuguese>Sword Brethren</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_ANGLO_SAXONS</Tag>
+		<English>Anglo-Saxons</English>
+		<French>Anglo-Saxons</French>
+		<German>Anglo-Saxons</German>
+		<Italian>Anglo-Saxons</Italian>
+		<Spanish>Anglo-Saxons</Spanish>
+		<Portuguese>Anglo-Saxons</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_BANU_HILAL</Tag>
+		<English>Banu Hilal</English>
+		<French>Banu Hilal</French>
+		<German>Banu Hilal</German>
+		<Italian>Banu Hilal</Italian>
+		<Spanish>Banu Hilal</Spanish>
+		<Portuguese>Banu Hilal</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_BANI_HASSAN</Tag>
+		<English>Bani Hassan</English>
+		<French>Bani Hassan</French>
+		<German>Bani Hassan</German>
+		<Italian>Bani Hassan</Italian>
+		<Spanish>Bani Hassan</Spanish>
+		<Portuguese>Bani Hassan</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_DANISHMENDS</Tag>
+		<English>Danishmends</English>
+		<French>Danishmends</French>
+		<German>Danishmends</German>
+		<Italian>Danishmends</Italian>
+		<Spanish>Danishmends</Spanish>
+		<Portuguese>Danishmends</Portuguese>
 	</TEXT>
 </Civ4GameText>
