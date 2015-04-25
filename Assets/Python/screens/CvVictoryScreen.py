@@ -947,8 +947,6 @@ class CvVictoryScreen:
 		#UHV3
 		sText3 += self.RichestString()
 		lHelpTexts = [sText1, sText2, sText3]
-		print(lHelpTexts)
-		print(lHelpTexts[0])
 		return lHelpTexts
 
 	def getFrankiaText(self):
@@ -1297,12 +1295,16 @@ class CvVictoryScreen:
 		iBiggestTrader = -1
 		for iLoopPlayer in range( con.iNumPlayers ):
 			pLoopPlayer = gc.getPlayer( iLoopPlayer )
+			if not pLoopPlayer.isAlive(): continue
 			iTrade = pLoopPlayer.calculateTotalImports(YieldTypes.YIELD_COMMERCE) + pLoopPlayer.calculateTotalExports(YieldTypes.YIELD_COMMERCE)
 			if ( iTrade > iMostTrade ):
 				iMostTrade = iTrade
 				iBiggestTrader = iLoopPlayer
-		pBestTrader = gc.getPlayer( iBiggestTrader )
-		sText3 += "\n\n" + localText.getText("TXT_KEY_UHV_BIGGEST_TRADER",()) + " " + self.determineColor(iBiggestTrader == iPlayer, pBestTrader.getName())
+		if iBiggestTrader != -1:
+			pBestTrader = gc.getPlayer( iBiggestTrader )
+			sText3 += "\n\n" + localText.getText("TXT_KEY_UHV_BIGGEST_TRADER",()) + " " + self.determineColor(iBiggestTrader == iPlayer, pBestTrader.getName())
+		else:
+			sText3 += "\n\n" + localText.getText("TXT_KEY_UHV_NO_INTERNATIONAL_TRADE",())
 		lHelpTexts = [sText1, sText2, sText3]
 		return lHelpTexts
 

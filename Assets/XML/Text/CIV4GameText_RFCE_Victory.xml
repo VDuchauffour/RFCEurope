@@ -1432,6 +1432,15 @@
 		<Portuguese>Current food production</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UHV_NO_INTERNATIONAL_TRADE</Tag>
+		<English>No international trade has been conducted yet</English>
+		<French>No international trade has been conducted yet</French>
+		<German>No international trade has been conducted yet</German>
+		<Italian>No international trade has been conducted yet</Italian>
+		<Spanish>No international trade has been conducted yet</Spanish>
+		<Portuguese>No international trade has been conducted yet</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_DQ_LEADER_NAME_1</Tag>
 		<English>Emperor</English>
 		<French>Emperor</French>

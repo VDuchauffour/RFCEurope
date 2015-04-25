@@ -560,7 +560,7 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_HARALD_BLUETOOTH</Type>
-			<Button>,Art/interface/LeaderHeads/Btn_LH_America_Washington.dds,Art/Interface/Buttons/Warlords_Atlas_2.dds,7,7</Button>
+			<Button>,-,Art/Interface/Buttons/Warlords_Atlas_2.dds,7,7</Button>
 			<NIF>art/LeaderHeads/RagnarLodbrok/ragnar_lodbrok.nif</NIF>
 			<KFM>art/LeaderHeads/RagnarLodbrok/ragnar_lodbrok.kfm</KFM>
 			<NoShaderNIF>art/LeaderHeads/RagnarLodbrok/ragnar_lodbrok_noshader.nif</NoShaderNIF>
