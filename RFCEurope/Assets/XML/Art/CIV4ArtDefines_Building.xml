@@ -1510,11 +1510,11 @@
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_NOVGOROD_KONETS</Type>
-			<LSystem>LSYSTEM_3x2</LSystem>
+			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
-			<fScale>0.7</fScale>
-			<fInterfaceScale>0.5</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Guild_Hall/guild06.nif</NIF>
+			<fScale>1.02</fScale>
+			<fInterfaceScale>0.58</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Guild_Hall/hall.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/novgorod_konets.dds</Button>
 		</BuildingArtInfo>
