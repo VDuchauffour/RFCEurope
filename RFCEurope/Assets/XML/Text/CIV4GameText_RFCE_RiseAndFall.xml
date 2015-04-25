@@ -311,4 +311,22 @@
 		<Spanish>. &#161;D&#233;mosles una lecci&#243;n a nuestros enemigos!</Spanish>
 		<Portuguese>. Agora vamos ensinar nossos inimigos uma lição!</Portuguese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REDUCE_CITY_1</Tag>
+		<English>Due to the growth of other cities,</English>
+		<French>Due to the growth of other cities,</French>
+		<German>Due to the growth of other cities,</German>
+		<Italian>Due to the growth of other cities,</Italian>
+		<Spanish>Due to the growth of other cities,</Spanish>
+		<Portuguese>Due to the growth of other cities,</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REDUCE_CITY_2</Tag>
+		<English>has lost most of its significance.</English>
+		<French>has lost most of its significance.</French>
+		<German>has lost most of its significance.</German>
+		<Italian>has lost most of its significance.</Italian>
+		<Spanish>has lost most of its significance.</Spanish>
+		<Portuguese>has lost most of its significance.</Portuguese>
+	</TEXT>
 </Civ4GameText>

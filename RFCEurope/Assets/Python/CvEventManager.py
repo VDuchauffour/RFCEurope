@@ -48,7 +48,6 @@ class CvEventManager:
 
 		balance.setBalanceParameters()
 
-
 		self.bCtrl = False
 		self.bShift = False
 		self.bAlt = False
@@ -485,7 +484,7 @@ class CvEventManager:
 		#			Saving the improvement type and coordinates here as a global variable, and accessing later in the onCityBuilt function
 		global iImpBeforeCity
 		iImpBeforeCity = 10000*iImprovement + 100*iX + 1*iY
-		#print ("hatha most jo lesz: ", iImprovement, iX, iY, iImpBeforeCity)
+		#print ("utolso megsemmisitett: ", iImprovement, iX, iY, iImpBeforeCity)
 
 	def onRouteBuilt(self, argsList):
 		'Route Built'

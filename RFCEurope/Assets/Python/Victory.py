@@ -167,7 +167,7 @@ tAragonControlII = [ xml.iP_Catalonia, xml.iP_Valencia, xml.iP_Aragon, xml.iP_Ba
 tPrussiaControlI = [ xml.iP_Lithuania, xml.iP_Livonia, xml.iP_Estonia, xml.iP_Pomerania, xml.iP_Prussia]
 tPrussiaDefeat = [ iAustria, iMoscow, iGermany, iSweden, iFrankia, iSpain ]
 tScotlandControl = [ xml.iP_Scotland, xml.iP_TheIsles, xml.iP_Ireland, xml.iP_Wales, xml.iP_Bretagne ]
-tDenmarkControlI = [ xml.iP_Denmark, xml.iP_Skaneland, xml.iP_Svealand, xml.iP_Vestfold, xml.iP_Mercia, xml.iP_London, xml.iP_EastAnglia, xml.iP_Northumbria ]
+tDenmarkControlI = [ xml.iP_Denmark, xml.iP_Skaneland, xml.iP_Gotaland, xml.iP_Svealand, xml.iP_Vestfold, xml.iP_Mercia, xml.iP_London, xml.iP_EastAnglia, xml.iP_Northumbria ]
 #tDenmarkControlII = [ xml.iP_Brandenburg, xml.iP_Pomerania, xml.iP_Estonia ]
 tDenmarkControlIII = [ xml.iP_Denmark, xml.iP_Norway, xml.iP_Vestfold, xml.iP_Skaneland, xml.iP_Gotaland, xml.iP_Svealand, xml.iP_Norrland, xml.iP_Gotland, xml.iP_Osterland, xml.iP_Estonia, xml.iP_Iceland ]
 
@@ -772,7 +772,7 @@ class Victory:
 
 	def checkDenmark(self,iGameTurn):
 
-		# UHV 1: Control Denmark, Skaneland, Svealand, Vestfold, Mercia, London, Northumbria and East Anglia in 1050
+		# UHV 1: Control Denmark, Skaneland, Götaland, Svealand, Vestfold, Mercia, London, Northumbria and East Anglia in 1050
 		if ( iGameTurn == xml.i1050AD and pDenmark.getUHV( 0 ) == -1 ):
 			bConq = True
 			for iProv in tDenmarkControlI:

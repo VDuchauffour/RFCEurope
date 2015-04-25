@@ -6333,58 +6333,6 @@
 			<ActionSound>AS3D_VIKING_ORDER</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_ARAGON_ALMOGAVAR</Type>
-			<Button>,-,Art/Units/Mercs/Buttons/Merc_Atlas.dds,1,1</Button>
-			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<bActAsLand>0</bActAsLand>
-			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/Mercs/Almogavar/javelineer.nif</NIF>
-			<KFM>Art/Units/Mercs/Almogavar/javelineer_1.kfm</KFM>
-			<SHADERNIF>Art/Units/Mercs/Almogavar/javelineer_fx.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
-				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<bActAsRanged>1</bActAsRanged>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-			<AudioRunSounds>
-				<AudioRunTypeLoop/>
-				<AudioRunTypeEnd/>
-			</AudioRunSounds>
-			<SelectionSound>AS3D_SPAIN_SELECT</SelectionSound>
-			<ActionSound>AS3D_SPAIN_ORDER</ActionSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_MOROCCO_BLACK_GUARD</Type>
-			<Button>,-,Art/Units/Mercs/Buttons/Merc_Atlas.dds,2,1</Button>
-			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<bActAsLand>0</bActAsLand>
-			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/Mercs/BlackGuard/BlackGuard.nif</NIF>
-			<KFM>Art/Units/Unique/England/Redcoat/RedCoat.kfm</KFM>
-			<SHADERNIF/>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
-				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.05</fRangedDeathTime>
-			<bActAsRanged>1</bActAsRanged>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-			<AudioRunSounds>
-				<AudioRunTypeLoop/>
-				<AudioRunTypeEnd/>
-			</AudioRunSounds>
-			<SelectionSound>AS3D_BLACK_AFRICAN_SELECT</SelectionSound>
-			<ActionSound>AS3D_BLACK_AFRICAN_ORDER</ActionSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_HACKAPELL</Type>
 			<Button>,-,Art/Units/Mercs/Buttons/Merc_Atlas.dds,6,1</Button>
 			<fScale>0.42</fScale>
@@ -6827,15 +6775,119 @@
 			<ActionSound>AS3D_ARABIA_ORDER</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_DENMARK_HUSKARL</Type>
-			<Button>,-,Art/Units/Mercs/Buttons/Merc_Atlas.dds,5,3</Button>
+			<Type>ART_DEF_UNIT_LONGBOWMAN_NUBIAN</Type>
+			<Button>,-,Art/Units/Mercs/Buttons/Merc_Atlas.dds,1,3</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/Mercs/huscarl/huscarl.nif</NIF>
-			<KFM>Art/Units/Mercs/huscarl/huscarl.kfm</KFM>
-			<SHADERNIF>Art/Units/Mercs/huscarl/huscarl_FX.nif</SHADERNIF>
+			<NIF>Art/Units/Mercs/Nubian Longbowman/MakuriaArcher.nif</NIF>
+			<KFM>Art/Units/Mercs/Nubian Longbowman/Longbowman_2.kfm</KFM>
+			<SHADERNIF>Art/Units/Mercs/Nubian Longbowman/MakuriaArcher.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>1</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
+			</AudioRunSounds>
+			<SelectionSound>AS3D_BLACK_AFRICAN_SELECT</SelectionSound>
+			<ActionSound>AS3D_BLACK_AFRICAN_ORDER</ActionSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_SWISS_GUN</Type>
+			<Button>,-,Art/Units/Mercs/Buttons/Merc_Atlas.dds,7,3</Button>
+			<fScale>0.44</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Mercs/Swiss Gun/ausmu.nif</NIF>
+			<KFM>Art/Units/Unique/England/Redcoat/RedCoat.kfm</KFM>
+			<SHADERNIF>Art/Units/Mercs/Swiss Gun/ausmu.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.05</fRangedDeathTime>
+			<bActAsRanged>1</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
+			</AudioRunSounds>
+			<SelectionSound>AS3D_HOLY_ROMAN_SELECT</SelectionSound>
+			<ActionSound>AS3D_HOLY_ROMAN_ORDER</ActionSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_ARAGON_ALMOGAVAR</Type>
+			<Button>,-,Art/Units/Mercs/Buttons/Merc_Atlas.dds,1,1</Button>
+			<fScale>0.44</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Mercs/Almogavar/javelineer.nif</NIF>
+			<KFM>Art/Units/Mercs/Almogavar/javelineer_1.kfm</KFM>
+			<SHADERNIF>Art/Units/Mercs/Almogavar/javelineer_fx.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>1</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIQUE_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
+			</AudioRunSounds>
+			<SelectionSound>AS3D_SPAIN_SELECT</SelectionSound>
+			<ActionSound>AS3D_SPAIN_ORDER</ActionSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_MOROCCO_BLACK_GUARD</Type>
+			<Button>,-,Art/Units/Mercs/Buttons/Merc_Atlas.dds,2,1</Button>
+			<fScale>0.44</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Mercs/BlackGuard/BlackGuard.nif</NIF>
+			<KFM>Art/Units/Unique/England/Redcoat/RedCoat.kfm</KFM>
+			<SHADERNIF/>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.05</fRangedDeathTime>
+			<bActAsRanged>1</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIQUE_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
+			</AudioRunSounds>
+			<SelectionSound>AS3D_BLACK_AFRICAN_SELECT</SelectionSound>
+			<ActionSound>AS3D_BLACK_AFRICAN_ORDER</ActionSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_DENMARK_HUSKARL</Type>
+			<Button>,-,Art/Units/Mercs/Buttons/Merc_Atlas.dds,5,3</Button>
+			<fScale>0.48</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Denmark_Huskarl/axe.nif</NIF>
+			<KFM>Art/Units/Axeman/Axeman.kfm</KFM>
+			<SHADERNIF>Art/Units/Denmark_Huskarl/axe.nif</SHADERNIF>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
 				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
@@ -6844,7 +6896,7 @@
 			<fBattleDistance>0.35</fBattleDistance>
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<bActAsRanged>0</bActAsRanged>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+			<TrainSound>AS2D_UNIT_BUILD_UNIQUE_UNIT</TrainSound>
 			<AudioRunSounds>
 				<AudioRunTypeLoop/>
 				<AudioRunTypeEnd/>
@@ -6929,17 +6981,17 @@
 			<ActionSound>AS3D_HOLY_ROMAN_ORDER</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_LONGBOWMAN_NUBIAN</Type>
-			<Button>,-,Art/Units/Mercs/Buttons/Merc_Atlas.dds,1,3</Button>
-			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<Type>ART_DEF_UNIT_BEDOUIN</Type>
+			<Button>,Art/Interface/Buttons/Units/CamelArcher.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,5,8</Button>
+			<fScale>0.39</fScale>
+			<fInterfaceScale>0.8</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/Mercs/Nubian Longbowman/MakuriaArcher.nif</NIF>
-			<KFM>Art/Units/Mercs/Nubian Longbowman/Longbowman_2.kfm</KFM>
-			<SHADERNIF>Art/Units/Mercs/Nubian Longbowman/MakuriaArcher.nif</SHADERNIF>
+			<NIF>Art/Units/Unique/Arabia/CamelArcher/ArabiaCamelArcher.nif</NIF>
+			<KFM>Art/Units/Unique/Arabia/CamelArcher/ArabiaCamelArcher.kfm</KFM>
+			<SHADERNIF>Art/Units/Unique/Arabia/CamelArcher/ArabiaCamelArcher_FX.nif</SHADERNIF>
 			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowNIF>Art/Units/01_UnitShadows/HorseShadow.nif</ShadowNIF>
 				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
 				<fShadowScale>1.0</fShadowScale>
 			</ShadowDef>
@@ -6951,34 +7003,30 @@
 				<AudioRunTypeLoop/>
 				<AudioRunTypeEnd/>
 			</AudioRunSounds>
-			<SelectionSound>AS3D_BLACK_AFRICAN_SELECT</SelectionSound>
-			<ActionSound>AS3D_BLACK_AFRICAN_ORDER</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_SWISS_GUN</Type>
-			<Button>,-,Art/Units/Mercs/Buttons/Merc_Atlas.dds,7,3</Button>
-			<fScale>0.44</fScale>
+			<Type>ART_DEF_UNIT_TURCOMAN_HORSE_ARCHER</Type>
+			<Button>Art/Interface/Buttons/Units/Turcoman_Horse_Archer.dds</Button>
+			<fScale>0.42</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/Mercs/Swiss Gun/ausmu.nif</NIF>
-			<KFM>Art/Units/Unique/England/Redcoat/RedCoat.kfm</KFM>
-			<SHADERNIF>Art/Units/Mercs/Swiss Gun/ausmu.nif</SHADERNIF>
+			<NIF>Art/Units/Seljuk_Horsearcher/SeljukHorsearcherFancyDress.nif</NIF>
+			<KFM>Art/Units/HorseArcher/HorseArcher.kfm</KFM>
+			<SHADERNIF>Art/Units/Seljuk_Horsearcher/SeljukHorsearcherFancyDress.nif</SHADERNIF>
 			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowNIF>Art/Units/01_UnitShadows/HorseShadow.nif</ShadowNIF>
 				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
 				<fShadowScale>1.0</fShadowScale>
 			</ShadowDef>
 			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.05</fRangedDeathTime>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<bActAsRanged>1</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
 				<AudioRunTypeLoop/>
 				<AudioRunTypeEnd/>
 			</AudioRunSounds>
-			<SelectionSound>AS3D_HOLY_ROMAN_SELECT</SelectionSound>
-			<ActionSound>AS3D_HOLY_ROMAN_ORDER</ActionSound>
 		</UnitArtInfo>
 	</UnitArtInfos>
 </Civ4ArtDefines>

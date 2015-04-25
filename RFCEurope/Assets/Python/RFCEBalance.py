@@ -476,7 +476,6 @@ class RFCEBalance:
 		gc.setTechPreferenceAI(iGermany,xml.iPrintingPress,200)
 		gc.setTechPreferenceAI(iEngland,xml.iPrintingPress,150)
 		gc.setTechPreferenceAI(iPope,xml.iPrintingPress,10) # Pope shouldn't want this
-
 		gc.setTechPreferenceAI(iSpain,xml.iAstronomy,200)
 		gc.setTechPreferenceAI(iPortugal,xml.iAstronomy,200)
 

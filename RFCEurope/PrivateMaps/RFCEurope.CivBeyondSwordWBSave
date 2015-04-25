@@ -16439,6 +16439,7 @@ BeginPlot
 	x=41,y=52
 	isNOfRiver
 	RiverWEDirection=1
+	ImprovementType=IMPROVEMENT_FORT
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -17249,7 +17250,6 @@ EndPlot
 BeginPlot
 	x=43,y=55
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -17597,6 +17597,7 @@ BeginPlot
 	x=44,y=46
 	isNOfRiver
 	RiverWEDirection=3
+	ImprovementType=IMPROVEMENT_VILLAGE
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -26766,6 +26767,7 @@ BeginPlot
 	x=66,y=37
 	RiverNSDirection=2
 	isWOfRiver
+	ImprovementType=IMPROVEMENT_FORT
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -26775,7 +26777,6 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	BonusType=BONUS_SILVER
-	ImprovementType=IMPROVEMENT_FORT
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -31946,6 +31947,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=18
+	ImprovementType=IMPROVEMENT_VILLAGE
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2

@@ -44,8 +44,8 @@ iMapMaxY = 73
 
 # initialize player variables to player IDs from WBS (this is the only part of the XML that will stay here):
 iNumPlayers = 29
-(iByzantium, iFrankia, iArabia, iBulgaria, iCordoba, iVenecia, iBurgundy, iGermany, iNovgorod, iNorway, 
-iKiev, iHungary, iSpain, iDenmark, iScotland, iPoland, iGenoa, iMorocco, iEngland, iPortugal, 
+(iByzantium, iFrankia, iArabia, iBulgaria, iCordoba, iVenecia, iBurgundy, iGermany, iNovgorod, iNorway,
+iKiev, iHungary, iSpain, iDenmark, iScotland, iPoland, iGenoa, iMorocco, iEngland, iPortugal,
 iAragon, iSweden, iPrussia, iLithuania, iAustria, iTurkey, iMoscow, iDutch, iPope) = range(iNumPlayers)
 
 iNumMajorPlayers = iNumPlayers
@@ -62,41 +62,36 @@ iNumTotalPlayers = iNumPlayers+4
 iBarbarian = iNumPlayers+4
 iNumTotalPlayersB = iBarbarian+1
 
-(pByzantium, pFrankia, pArabia, pBulgaria, pCordoba, pVenecia, pBurgundy, pGermany, pNovgorod, pNorway, 
-pKiev, pHungary, pSpain, pDenmark, pScotland, pPoland, pGenoa, pMorocco, pEngland, pPortugal, 
+(pByzantium, pFrankia, pArabia, pBulgaria, pCordoba, pVenecia, pBurgundy, pGermany, pNovgorod, pNorway,
+pKiev, pHungary, pSpain, pDenmark, pScotland, pPoland, pGenoa, pMorocco, pEngland, pPortugal,
 pAragon, pSweden, pPrussia, pLithuania, pAustria, pTurkey, pMoscow, pDutch, pPope) = [gc.getPlayer(i) for i in range(iNumPlayers)]
 
-(teamByzantium, teamFrankia, teamArabia, teamBulgaria, teamCordoba, teamVenecia, teamBurgundy, teamGermany, teamNovgorod, teamNorway, 
-teamKiev, teamHungary, teamSpain, teamDenmark, teamScotland, teamPoland, teamGenoa, teamMorocco, teamEngland, teamPortugal, 
+(teamByzantium, teamFrankia, teamArabia, teamBulgaria, teamCordoba, teamVenecia, teamBurgundy, teamGermany, teamNovgorod, teamNorway,
+teamKiev, teamHungary, teamSpain, teamDenmark, teamScotland, teamPoland, teamGenoa, teamMorocco, teamEngland, teamPortugal,
 teamAragon, teamSweden, teamPrussia, teamLithuania, teamAustria, teamTurkey, teamMoscow, teamDutch, teamPope) = [gc.getTeam(i) for i in range(iNumPlayers)]
 
 iIndepStart = iIndependent # creates the block of independent civs
 iIndepEnd = iIndependent4
 
-iNumCivs = 29
-(iCivArabia, iCivAustria, iCivBulgaria, iCivBurgundy, iCivByzantium, iCivCordoba, iCivMorocco, iCivDutch, iCivEngland, iCivScotland,
-iCivFrance, iCivGenoa, iCivGermany, iCivPrussia, iCivHungary, iCivNovgorod, iCivKiev, iCivMoscow, iCivNorway, iCivDenmark,
-iCivPoland, iCivPortugal, iCivSpain, iCivSweden, iCivTurkey, iCivVenice, iCivLithuania, iCivAragon, iCivPope) = range(iNumCivs)
-
-l0Array =       [0 for i in range(iNumTotalPlayers)] # currently unused
-l0ArrayActive = [0 for i in range(iNumTotalPlayers)] # currently unused
-l0ArrayTotal =  [0 for i in range(iNumTotalPlayers)] # counts the cities for each player, used in RiseAndFall.py
+l0Array =       [0 for i in range(iNumTotalPlayers)]	# currently unused
+l0ArrayActive = [0 for i in range(iNumTotalPlayers)]	# currently unused
+l0ArrayTotal =  [0 for i in range(iNumTotalPlayers)]	# counts the cities for each player, used in RiseAndFall.py
 lm1Array =      [-1 for i in range(iNumTotalPlayers)]
 
 #for Congresses and Victory
 lCivGroups = [[iByzantium,iBulgaria,iNovgorod,iKiev,iLithuania,iMoscow],		#Eastern
-		[iBurgundy,iHungary,iGermany,iPoland,iPrussia,iAustria],			#Central
-		[iFrankia,iSpain,iEngland,iPortugal,iDutch,iAragon,iScotland],		#Atlantic
-		[iArabia,iCordoba,iMorocco,iTurkey],			#Islamic
-		[iGenoa,iVenecia,iPope],				#Italian
-		[iNorway,iDenmark,iSweden]] 			#Scandinavian
+		[iBurgundy,iHungary,iGermany,iPoland,iPrussia,iAustria],				#Central
+		[iFrankia,iSpain,iEngland,iPortugal,iDutch,iAragon,iScotland],			#Atlantic
+		[iArabia,iCordoba,iMorocco,iTurkey],									#Islamic
+		[iGenoa,iVenecia,iPope],												#Italian
+		[iNorway,iDenmark,iSweden]] 											#Scandinavian
 
 lCivStabilityGroups = [[iByzantium,iBulgaria,iNovgorod,iKiev,iLithuania,iMoscow],		#Eastern
-			[iBurgundy,iHungary,iGermany,iPoland,iPrussia,iAustria],			#Central
-			[iFrankia,iSpain,iEngland,iPortugal,iDutch,iAragon,iScotland],		#Atlantic
-			[iArabia,iCordoba,iMorocco,iTurkey],			#Islamic
-			[iGenoa,iVenecia,iPope],				#Italian
-			[iNorway,iDenmark,iSweden]] 			#Scandinavian
+			[iBurgundy,iHungary,iGermany,iPoland,iPrussia,iAustria],					#Central
+			[iFrankia,iSpain,iEngland,iPortugal,iDutch,iAragon,iScotland],				#Atlantic
+			[iArabia,iCordoba,iMorocco,iTurkey],										#Islamic
+			[iGenoa,iVenecia,iPope],													#Italian
+			[iNorway,iDenmark,iSweden]] 												#Scandinavian
 
 lCivBioOldWorld = [iByzantium, iBulgaria, iBurgundy, iArabia, iFrankia, iScotland, iSpain, iCordoba, iNorway, iDenmark, iVenecia, iNovgorod, iKiev, iHungary, \
 			iGermany, iPoland, iMoscow, iGenoa, iMorocco, iEngland, iPortugal, iAragon, iPrussia, iLithuania, iAustria, iTurkey, iSweden, iDutch, iPope, \
@@ -198,32 +193,32 @@ xml.i711AD,			#Cordoba		turn 53, so 712AD
 xml.i810AD,			#Venice			turn 78, so 812AD			#De Facto independence: Pax Nicephori (803)		#810: the "modern" city of Venice (on the sea) was born
 xml.i843AD,			#Burgundy		turn 86, so 844AD			#Treaty of Verdun in 843 AD, splitting the Frankish Empire into West, Middle and East Francia
 xml.i856AD,			#Germany		turn 89, so 856AD
-xml.i864AD,			#Novgorod
-xml.i872AD,			#Norway
+xml.i864AD,			#Novgorod		turn 91, so 864AD
+xml.i872AD,			#Norway			turn 93, so 872AD
 xml.i880AD,			#Kiev			turn 95, so 880AD
 xml.i895AD,			#Hungary		turn 99, so 896AD			#Hungarian invasion of the Carpathian basin (Honfoglalás) in 895-896 AD
 xml.i910AD,			#Spain			turn 103, so 909AD			#The Kingdom of Leon was founded in 910 AD
-xml.i936AD,			#Denmark
-xml.i960AD,			#Scotland
+xml.i936AD,			#Denmark		turn 112, so 936AD
+xml.i960AD,			#Scotland		turn 120, so 960AD
 xml.i966AD,			#Poland			turn 122, so 966AD
 xml.i1016AD,		#Genoa			turn 139, so 1017AD			#Genoan and Pisan forces defeat the Muslim invaders of Sardinia in 1016 AD		#By 1015, the Republic of Genoa rised to control the entirety of Liguria
-xml.i1040AD,		#Morocco
+xml.i1040AD,		#Morocco		turn 147, so 1041AD
 xml.i1066AD,		#England		turn 155, so 1065AD			#Battle of Hastings in 1066 AD
 xml.i1139AD,		#Portugal		turn 180, so 1140AD
-xml.i1164AD,		#Aragon
-xml.i1210AD,		#Sweden
-xml.i1224AD,		#Prussia
+xml.i1164AD,		#Aragon			turn 188, so 1164AD
+xml.i1210AD,		#Sweden			turn 203, so 1209AD
+xml.i1224AD,		#Prussia		turn 208, so 1224AD
 xml.i1236AD,		#Lithuania		turn 212, so 1236AD
 xml.i1282AD,		#Austria		turn 227, so 1281AD			#The Habsburgs gained the rulership of the Duchy of Austria in 1282 AD
 xml.i1356AD,		#Ottomans		turn 252, so 1356AD			#The Earthquake of Gallipoli: 1354 AD		#Conquest of Adrianopolis: somewhere between 1361-1367 AD
 xml.i1380AD,		#Moscow			turn 260, so 1380AD
 xml.i1581AD,		#Dutch			turn 340, so 1580AD
-0, #Pope
-0,
-0,
-0,
-0,
-0
+0,	#Papal States
+0,	#Indy1
+0,	#Indy2
+0,	#Indy3
+0,	#Indy4
+0	#Barb
 ) # 3Miro: tBirth should finish with zeros for all minor civs (the 4 independents and the barbs)
 
 # "Collapse dates", gives a stability penalty to AI civs past this date. The idea is to speed up late game a bit - from RFCE++

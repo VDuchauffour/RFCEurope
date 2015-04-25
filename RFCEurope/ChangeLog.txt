@@ -24,7 +24,7 @@ Changes for RFCE 1.3:
 		Start Date: 936
 		Leaders: Harald Bluetooth (935-986), Margaret I (1353-1412), Christian IV (1577-1648)
 		UP: The Power of Sound Dues: You get 2 gold per turn for every foreign coastal city in the Baltic
-		UHV1: North Sea Empire: Control Denmark, Skaneland, Svealand, Vestfold, Mercia, London, Northumbria and East Anglia in 1050
+		UHV1: North Sea Empire: Control Denmark, Skaneland, Götaland, Svealand, Vestfold, Mercia, London, Northumbria and East Anglia in 1050
 		UHV2: Kalmar Union: Control Denmark, Norway, Vestfold, Skaneland, Götaland, Svealand, Norrland, Gotland, Österland, Estonia and Iceland in 1523
 		UHV3: Ostindisk Kompagni: Build 3 Colonies and complete both Trading Companies
 		UU: Huskarl (Swordsman)
@@ -33,8 +33,8 @@ Changes for RFCE 1.3:
 		Province setup:
 			Core: Denmark, Skaneland
 			Potential: Gotland, Holstein, Estonia
-			Border/contested: Gotaland, Northumbria, Mercia, East Anglia, London, Brandenburg, Norway, Vestfold, Normandy
-			Changes: Northumbria, Mercia, East Anglia, London, Normandy switches to foreign on the English spawn, Gotaland to foreign on the Swedish spawn
+			Border/contested: Gotaland, Svealand, Northumbria, Mercia, East Anglia, London, Brandenburg, Norway, Vestfold, Normandy
+			Changes: Northumbria, Mercia, East Anglia, London, Normandy switches to foreign on the English spawn, Gotaland, Svealand to foreign on the Swedish spawn
 
 	Norway:
 		Start Date: 872
@@ -216,17 +216,37 @@ Changes for RFCE 1.3:
 			Portugal: Feitorias all over the world: Build 5 Colonies
 			Dutch: The India Companies: Build 3 Colonies and complete both Trading Companies
 		- Free walls in the city if it is built on a fort
-		- Imported more efficient consts and xmlconsts handling from DoC (credit to Leoreth)
-		- Cities on the Baltic owned by vassals do count controlled for the 3rd Swedish UHV
-		- Some UHV are coded more efficiently
+		- Imported more efficient constant handling (in Consts.py and XMLConsts.py) from DoC - credit to Leoreth
+		- Some of the UHVs are coded more efficiently
 		- Progress info for every UHV
-
+		- New UHV help for the 1st Polish UHV
+		- Updated the RFCE Timeline
+		- Added reduce city mechanics (to towns for example) on a given turn or event - could be useful for many UHVs
+		- Revised barbs:
+			Further separated barbs for the human and the AI
+			AI civs won't get extra barbarians on harder levels. Also somewhat less extra barbs for the human player on harder levels
+			Slightly tuned down general number of barbs for Byzantium, France, Cordoba
+			2 new unit types, only as barbs: Bedouin, Turcoman Horse Archer
+			Livonian Order as barbs (Sword Brethen) in the area before the Prussian spawn
+			Pre-Lithanian barbs (Baltic Heathens) for human Prussia a couple turns before the Lithuanian spawn
+			Banu Hilal and Bani Hassan barbs in Morocco and Tunesia
+			Danishmend barbarians for Byzantium after the Seljuks
+			Barbarian Serbs in the Balkans before the Byzantine 2nd UHV, especially for the human player
+			Barbarian Anglo Saxons spawning in Wessex and Mercia to represent the resistance to Danish rule
+			Barbarian Scottish Highlanders only spawn when Scotland is dead
+			Barbarian Vikings in the 9-10th century, in small numbers for the AI (and only if the player is not Norway), but a bigger threat to human France
+		- Indy city in Svealand province: Uppsala, spawns in 800AD
+		- Indy city in East Anglia province: Norwich, spawns in 640AD
+		- Indy city in Mercia province: Nottingham, spawns in 867AD
+		- York (Eboracum) starts in 500AD
+		- Uppsala reduced to town on the Swedish spawn, Norwich and Nottingham on the English spawn
 
 	Art updates:
 		- New art for Isabella (Spain), Casimir III (Poland), Ivan IV (Muscovy), Simeon I (Bulgaria), Ivan Asen (Bulgaria)
 		- New art for Abu Bakr (Arabia), Abd-ar-Rahman III (Cordoba), Philip the Bold (Burgundy), Yaqub al-Mansur (Cordoba)
 		- Added missing button for Mieszko, Michael VIII Palaiologos, Abu Bakr, Abd-ar-Rahman III, Margaret I
 		- Added missing button for Philip the Bold, Guglielmo Embriaco, Alexander Nevsky, Hermann von Salza
+		- New unit art: Huskarl, Bedouin, Turcoman Horse Archer
 
 	Bugfixes:
 		- Fixed bug where all mercs got free medic3 promotion (missing change in one of the files when Pinch was reintroduced)
