@@ -59,6 +59,7 @@ lRhodes = [80,13,25,0] # 600 AD
 lNorwich = [43,55,35,0] # 640 AD, reduced to town on spawn of England
 #lZaragoza = [36,29,45,0] #680 AD
 lToledo = [30,27,45,0] #680 AD
+lLeicester = [39,56,45,0] #680 AD, reduced to town on spawn of England
 #lBulgar = [97,60,45,0] #680 AD
 #lLeon = [27,32,50,0] # 700 AD
 #lBurgos = [30,32,50,0] #700 AD
@@ -85,7 +86,7 @@ lBeloozero = [87,65,75,0] #800 AD
 #lVelehrad = [64,42,82,0] #833 AD
 #lNovgorod = [80,62,87,0] #848 AD
 lEdinburgh = [37,63,90,0] #860 AD
-lNottingham = [39,56,92,0] #867 AD, reduced to town on spawn of England
+#lNottingham = [39,56,92,0] #867 AD, reduced to town on spawn of England
 lAlbaIulia = [73,35,95,0] #880 AD
 lTvanksta = [69,53,100,0] #900 AD, Konigsberg
 #lBreslau = [64,46,100,0] #900 AD
@@ -557,6 +558,7 @@ class Barbs:
 		if ( iGameTurn > xml.i660AD and iGameTurn < xml.i892AD ):
 			# 680AD
 			self.foundCity(iBarbarian, lToledo, "Toledo", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
+			self.foundCity(iIndependent, lLeicester, "Ligeraceaster", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
 			# 700AD
 			self.foundCity(iIndependent, lValencia, "Valencia", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
 			self.foundCity(iIndependent4, lPamplona, "Pamplona", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
@@ -580,8 +582,6 @@ class Barbs:
 			self.foundCity(iIndependent4, lBeloozero, "Beloozero", iGameTurn, 1, xml.iCrossbowman, 1, -1, 1)
 			# 860AD
 			self.foundCity(iBarbarian, lEdinburgh, "Eidyn Dun", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
-			# 867AD
-			self.foundCity(iIndependent, lNottingham, "Nottingham", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
 			# 880AD
 			self.foundCity(iIndependent, lAlbaIulia, "Belograd", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
 		if ( iGameTurn > xml.i895AD and iGameTurn < xml.i1259AD ):

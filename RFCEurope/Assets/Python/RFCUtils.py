@@ -963,7 +963,7 @@ class RFCUtils:
 
 	def forcedInvasion( self, tCoords, result, argsList ):
 		"""Checks validity of the plot at the current tCoords, returns plot if valid (which stops the search).
-		Plot is valid if it's hill or flatlands, it isn't marsh or jungle, it isn't occupied by a unit or city and if it isn't a civ's territory"""
+		Plot is valid if it's hill or flatlands, it isn't marsh or jungle, and it isn't occupied by a unit or city"""
 		bPaint = True
 		bContinue = True
 		pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
