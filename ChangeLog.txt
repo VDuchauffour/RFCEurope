@@ -248,6 +248,8 @@ Changes for RFCE 1.3:
 		- Added missing button for Philip the Bold, Guglielmo Embriaco, Alexander Nevsky, Hermann von Salza
 		- New unit art: Huskarl, Bedouin, Turcoman Horse Archer
 		- New background for Robert the Bruce, Simeon, Isabella, Yaqub al-Mansur, Mohammad ibn Nasr
+		- New background for Margaret, Alexander Nevsky, Gustav Vasa, George III, Rurik, Otto I
+		- Optimizations in various BG files, removed some unnecessary art files
 
 	Bugfixes:
 		- Fixed bug where all mercs got free medic3 promotion (missing change in one of the files when Pinch was reintroduced)
