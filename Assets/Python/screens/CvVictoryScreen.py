@@ -937,11 +937,16 @@ class CvVictoryScreen:
 		#UHV1
 		tConstantinople = con.tCapitals[iPlayer]
 		pConstantinople = gc.getMap().plot( tConstantinople[0], tConstantinople[1] ).getPlotCity()
-		if self.checkCity(tConstantinople, iPlayer, localText.getText("TXT_KEY_CITY_NAME_CONSTANTINOPLE",())) == -1:
-			sText1 += "\n\n" + self.determineColor(gc.isLargestCity(tConstantinople[0], tConstantinople[1]), localText.getText("TXT_KEY_CITY_NAME_CONSTANTINOPLE",()) +" "+ localText.getText("TXT_KEY_UHV_IS_LARGEST",()), localText.getText("TXT_KEY_CITY_NAME_CONSTANTINOPLE",()) +" "+ localText.getText("TXT_KEY_UHV_IS_NOT_LARGEST",()))
-			sText1 += "\n" + self.determineColor(gc.isTopCultureCity(tConstantinople[0], tConstantinople[1]), localText.getText("TXT_KEY_CITY_NAME_CONSTANTINOPLE",()) +" "+ localText.getText("TXT_KEY_UHV_IS_CULTURAL",()), localText.getText("TXT_KEY_CITY_NAME_CONSTANTINOPLE",()) +" "+ localText.getText("TXT_KEY_UHV_IS_NOT_CULTURAL",()))
+		sConstantinopleName = localText.getText("TXT_KEY_CITY_NAME_CONSTANTINOPLE",())
+		if self.checkCity(tConstantinople, iPlayer, sConstantinopleName) == -1:
+			sLargest = sConstantinopleName +" "+ localText.getText("TXT_KEY_UHV_IS_LARGEST",())
+			sNotLargest = sConstantinopleName +" "+ localText.getText("TXT_KEY_UHV_IS_NOT_LARGEST",())
+			sCultural = sConstantinopleName +" "+ localText.getText("TXT_KEY_UHV_IS_CULTURAL",())
+			sNotCultural = sConstantinopleName +" "+ localText.getText("TXT_KEY_UHV_IS_NOT_CULTURAL",())
+			sText1 += "\n\n" + self.determineColor(gc.isLargestCity(tConstantinople[0], tConstantinople[1]), sLargest, sNotLargest)
+			sText1 += "\n" + self.determineColor(gc.isTopCultureCity(tConstantinople[0], tConstantinople[1]), sCultural, sNotCultural)
 		else:
-			sText1 += "\n\n" + self.checkCity(tConstantinople, iPlayer, localText.getText("TXT_KEY_CITY_NAME_CONSTANTINOPLE",()))
+			sText1 += "\n\n" + self.checkCity(tConstantinople, iPlayer, sConstantinopleName)
 		#UHV2
 		sText2 += self.getProvinceString(vic.tByzantumControl)
 		#UHV3
@@ -1007,10 +1012,13 @@ class CvVictoryScreen:
 		#UHV1
 		tCordoba = con.tCapitals[iPlayer]
 		pCordoba = gc.getMap().plot( tCordoba[0], tCordoba[1] ).getPlotCity()
-		if self.checkCity(tCordoba, iPlayer, localText.getText("TXT_KEY_CITY_NAME_CORDOBA",())) == -1:
-			sText1 += "\n\n" + self.determineColor(gc.isLargestCity(tCordoba[0], tCordoba[1]), localText.getText("TXT_KEY_CITY_NAME_CORDOBA",()) +" "+ localText.getText("TXT_KEY_UHV_IS_LARGEST",()), localText.getText("TXT_KEY_CITY_NAME_CORDOBA",()) +" "+ localText.getText("TXT_KEY_UHV_IS_NOT_LARGEST",()))
+		sCordobaName = localText.getText("TXT_KEY_CITY_NAME_CORDOBA",())
+		if self.checkCity(tCordoba, iPlayer, sCordobaName) == -1:
+			sLargest = sCordobaName +" "+ localText.getText("TXT_KEY_UHV_IS_LARGEST",())
+			sNotLargest = sCordobaName +" "+ localText.getText("TXT_KEY_UHV_IS_NOT_LARGEST",())
+			sText1 += "\n\n" + self.determineColor(gc.isLargestCity(tCordoba[0], tCordoba[1]), sLargest, sNotLargest)
 		else:
-			sText1 += "\n\n" + self.checkCity(tCordoba, iPlayer, localText.getText("TXT_KEY_CITY_NAME_CORDOBA",()))
+			sText1 += "\n\n" + self.checkCity(tCordoba, iPlayer, sCordobaName)
 		#UHV2
 		sText2 += self.getWonderString(vic.tCordobaWonders)
 		#UHV3
@@ -1061,7 +1069,8 @@ class CvVictoryScreen:
 		sText1 += self.getProvinceString(vic.tGermanyControl)
 		#UHV2
 		iGoal = pPlayer.getUHV( 1 )
-		sText2 += "\n\n" + self.determineColor(iGoal != 0, gc.getReligionInfo(xml.iProtestantism).getDescription() + " " + localText.getText("TXT_KEY_UHV_NOT_FOUND_YET", ()))
+		sTextGood = localText.getText("TXT_KEY_UHV_NOT_FOUND_YET", ())
+		sText2 += "\n\n" + self.determineColor(iGoal != 0, gc.getReligionInfo(xml.iProtestantism).getDescription() + " " + sTextGood)
 		#UHV3
 		sText3 += self.getProvinceString(vic.tGermanyControlII)
 		lHelpTexts = [sText1, sText2, sText3]
@@ -1150,15 +1159,18 @@ class CvVictoryScreen:
 		sText1 += self.getReligionProvinceString(vic.tSpainConvert, xml.iCatholicism, 2)
 		#UHV2
 		iSpainColonies = vic.Victory().getNumRealColonies(iPlayer)
-		bMost = True
-		for iLoopPlayer in range( con.iNumPlayers ):
-			if ( iPlayer != iPlayer ):
-				pLoopPlayer = gc.getPlayer( iLoopPlayer )
-				if ( pLoopPlayer.isAlive() and vic.Victory().getNumRealColonies(iLoopPlayer) >= iSpainColonies ):
-					bMost = False
-					break
-		sText2 += self.getNumColoniesString(3)
-		sText2 += "\n" + self.determineColor(bMost, localText.getText("TXT_KEY_UHV_MOST_COLONIES",()), localText.getText("TXT_KEY_UHV_NOT_MOST_COLONIES",()))
+		iOtherColonies = 0
+		iColonyPlayer = -1
+		for iCiv in range( con.iNumPlayers ):
+			if iCiv == iPlayer: continue
+			if ( gc.getPlayer( iCiv ).isAlive() ):
+				iTempNumColonies = vic.Victory().getNumRealColonies(iCiv)
+				if (iTempNumColonies > iOtherColonies):
+					iOtherColonies = iTempNumColonies
+					iColonyPlayer = iCiv
+		sText = localText.getText("TXT_KEY_UHV_COLONIES",())
+		sUnit = ""
+		sText2 += "\n\n" + self.getCompetition(iSpainColonies, iOtherColonies, iColonyPlayer, sText, sUnit, 3)	
 		#UHV3
 		lLand = [ 0, 0, 0, 0, 0, 0 ] # Prot, Islam, Cath, Orth, Jew, Pagan
 		lPop  = [ 0, 0, 0, 0, 0, 0 ]
@@ -1237,16 +1249,22 @@ class CvVictoryScreen:
 		sText3 = ""
 		#UHV1
 		sText1 += "\n\n"
-		if gc.getGame().getGameTurn()  >= xml.i1500AD:
-			iAgriculturePolish = pPlayer.calculateTotalYield(YieldTypes.YIELD_FOOD)
-			bFood = True
-			for iLoopPlayer in range( con.iNumMajorPlayers ):
-				if ( gc.getPlayer( iLoopPlayer ).calculateTotalYield(YieldTypes.YIELD_FOOD ) > iAgriculturePolish ):
-					bFood = False
-					break
-			sText1 += localText.getText("TXT_KEY_UHV_FOOD_PRODUCTION",()) + " " + self.determineColor(bFood, str(iAgriculturePolish))
-		else:
-			sText1 += localText.getText("TXT_KEY_UHV_TOO_EALRY",())
+		if gc.getGame().getGameTurn()  < xml.i1500AD:
+			sText1 += localText.getText("TXT_KEY_UHV_TOO_EALRY",()) + "\n"
+		iPolandFood = pPlayer.calculateTotalYield(YieldTypes.YIELD_FOOD)
+		iOtherFood = 0
+		iFoodPlayer = -1
+		for iLoopPlayer in range( con.iNumMajorPlayers ):
+			if iLoopPlayer == iPlayer: continue
+			pLoopPlayer = gc.getPlayer(iLoopPlayer)
+			if pLoopPlayer.isAlive():
+				iTempFood = pLoopPlayer.calculateTotalYield(YieldTypes.YIELD_FOOD)
+				if iTempFood > iOtherFood:
+					iOtherFood = iTempFood
+					iFoodPlayer = iLoopPlayer
+		sText = localText.getText("TXT_KEY_UHV_FOOD_PRODUCTION",())
+		sUnit = "%s" %( u"<font=5>%c</font>" %( gc.getYieldInfo(YieldTypes.YIELD_FOOD).getChar()) )
+		sText1 += "\n\n" + self.getCompetition(iPolandFood, iOtherFood, iFoodPlayer, sText, sUnit)
 		#UHV2
 		tProvsToCheck = vic.tPolishControl
 		iNumCities = 0
@@ -1291,20 +1309,20 @@ class CvVictoryScreen:
 		sText2 += "\n\n" + localText.getText("TXT_KEY_CONCEPT_CORPORATIONS",()) + ": " + self.determineColor(iCorpCount >= 2, str(iCorpCount))
 		sText2 += "\n" + localText.getText("TXT_KEY_BUILDING_GENOA_BANK",()) + ": " + self.determineColor(iBankCount >= 8, str(iBankCount))
 		#UHV3
-		iMostTrade = 0
+		iGenoaTrade = pPlayer.calculateTotalImports(YieldTypes.YIELD_COMMERCE) + pPlayer.calculateTotalExports(YieldTypes.YIELD_COMMERCE)
+		iOtherTrade = 0
 		iBiggestTrader = -1
 		for iLoopPlayer in range( con.iNumPlayers ):
+			if iLoopPlayer == iPlayer: continue
 			pLoopPlayer = gc.getPlayer( iLoopPlayer )
 			if not pLoopPlayer.isAlive(): continue
 			iTrade = pLoopPlayer.calculateTotalImports(YieldTypes.YIELD_COMMERCE) + pLoopPlayer.calculateTotalExports(YieldTypes.YIELD_COMMERCE)
-			if ( iTrade > iMostTrade ):
-				iMostTrade = iTrade
+			if ( iTrade > iOtherTrade ):
+				iOtherTrade = iTrade
 				iBiggestTrader = iLoopPlayer
-		if iBiggestTrader != -1:
-			pBestTrader = gc.getPlayer( iBiggestTrader )
-			sText3 += "\n\n" + localText.getText("TXT_KEY_UHV_BIGGEST_TRADER",()) + " " + self.determineColor(iBiggestTrader == iPlayer, pBestTrader.getName())
-		else:
-			sText3 += "\n\n" + localText.getText("TXT_KEY_UHV_NO_INTERNATIONAL_TRADE",())
+		sText = localText.getText("TXT_KEY_UHV_IMPORT_EXPORT",())
+		sUnit = "%s" %( u"<font=5>%c</font>" %( gc.getYieldInfo(YieldTypes.YIELD_COMMERCE).getChar()) )
+		sText3 += "\n\n" + self.getCompetition(iGenoaTrade, iOtherTrade, iBiggestTrader, sText, sUnit)
 		lHelpTexts = [sText1, sText2, sText3]
 		return lHelpTexts
 
@@ -1734,15 +1752,28 @@ class CvVictoryScreen:
 		return sString
 
 	def RichestString(self):
+		pPlayer = gc.getPlayer(self.iActivePlayer)
+		iPlayerGold = pPlayer.getGold()
 		iGold = 0
 		iRichestPlayer = -1
 		for iCiv in range( con.iNumPlayers ):
+			if iCiv == self.iActivePlayer: continue
 			if ( gc.getPlayer( iCiv ).isAlive() ):
 				if (gc.getPlayer(iCiv).getGold() > iGold):
 					iGold = gc.getPlayer(iCiv).getGold()
 					iRichestPlayer = iCiv
-		pRichestPlayer = gc.getPlayer( iRichestPlayer )
-		sString = "\n\n" + localText.getText("TXT_KEY_UHV_RICHEST_NATION",()) + " " + self.determineColor(iRichestPlayer == self.iActivePlayer, pRichestPlayer.getName())
-		if not iRichestPlayer == self.iActivePlayer:
-			sString += "  (%d %s)" %(pRichestPlayer.getGold(), u"<font=5>%c</font>" %(gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar()))
+		sText = localText.getText("TXT_KEY_UHV_GOLD",())
+		sUnit = "%s" %( u"<font=5>%c</font>" %(gc.getCommerceInfo( CommerceTypes.COMMERCE_GOLD).getChar()) )
+		sString = "\n\n" + self.getCompetition(iPlayerGold, iGold, iRichestPlayer, sText, sUnit)
+		return sString
+		
+	def getCompetition(self, iNum, iNumEnemy, iEnemy, sText, sUnit, iNumMin = 0):
+		sString = ""
+		sString += sText + ": " + self.determineColor(iNum > iNumEnemy, str(iNum)) + " " + sUnit
+		sString += "   " + localText.getText("TXT_KEY_UHV_BEST",()) + ": " + self.determineColor(iNum > iNumEnemy and iNum >= iNumMin, localText.getText("TXT_KEY_POPUP_YES",()), localText.getText("TXT_KEY_POPUP_NO",()))
+		sString += "\n" + localText.getText("TXT_KEY_UHV_BEST_COMPETITOR",()) + ": " + self.determineColor(iNum > iNumEnemy, str(iNumEnemy))
+		if iEnemy != -1:
+			pEnemyPlayer = gc.getPlayer(iEnemy)
+			sString += " " + sUnit + ", " + pEnemyPlayer.getName()
+
 		return sString
