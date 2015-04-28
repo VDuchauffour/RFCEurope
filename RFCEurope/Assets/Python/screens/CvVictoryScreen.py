@@ -1775,5 +1775,4 @@ class CvVictoryScreen:
 		if iEnemy != -1:
 			pEnemyPlayer = gc.getPlayer(iEnemy)
 			sString += " " + sUnit + ", " + pEnemyPlayer.getName()
-
 		return sString

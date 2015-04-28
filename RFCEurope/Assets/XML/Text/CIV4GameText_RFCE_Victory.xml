@@ -1153,13 +1153,13 @@
 		<Portuguese>O maior Comerciante é: </Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UHV_RICHEST_NATION</Tag>
-		<English>The Richest Leader is: </English>
-		<French>The Richest Leader is: </French>
-		<German>Das Reichste Oberhaupt ist: </German>
-		<Italian>Il leader più Ricco è: </Italian>
-		<Spanish>The Richest Leader is: </Spanish>
-		<Portuguese>O Líder mais rico é: </Portuguese>
+		<Tag>TXT_KEY_UHV_GOLD</Tag>
+		<English>Amount of gold in treasury</English>
+		<French>Amount of gold in treasury</French>
+		<German>Amount of gold in treasury</German>
+		<Italian>Amount of gold in treasury</Italian>
+		<Spanish>Amount of gold in treasury</Spanish>
+		<Portuguese>Amount of gold in treasury</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_CITIES_CONTROLLED</Tag>
