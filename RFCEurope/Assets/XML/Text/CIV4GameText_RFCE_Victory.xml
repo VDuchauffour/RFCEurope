@@ -1432,13 +1432,40 @@
 		<Portuguese>Current food production</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UHV_NO_INTERNATIONAL_TRADE</Tag>
-		<English>No international trade has been conducted yet</English>
-		<French>No international trade has been conducted yet</French>
-		<German>No international trade has been conducted yet</German>
-		<Italian>No international trade has been conducted yet</Italian>
-		<Spanish>No international trade has been conducted yet</Spanish>
-		<Portuguese>No international trade has been conducted yet</Portuguese>
+		<Tag>TXT_KEY_UHV_IMPORT_EXPORT</Tag>
+		<English>Current import and export</English>
+		<French>Current import and export</French>
+		<German>Current import and export</German>
+		<Italian>Current import and export</Italian>
+		<Spanish>Current import and export</Spanish>
+		<Portuguese>Current import and export</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_BEST</Tag>
+		<English>Best</English>
+		<French>Best</French>
+		<German>Best</German>
+		<Italian>Best</Italian>
+		<Spanish>Best</Spanish>
+		<Portuguese>Best</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_BEST_COMPETITOR</Tag>
+		<English>Best competitor</English>
+		<French>Best competitor</French>
+		<German>Best competitor</German>
+		<Italian>Best competitor</Italian>
+		<Spanish>Best competitor</Spanish>
+		<Portuguese>Best competitor</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_COMPETITOR</Tag>
+		<English>Main competitor</English>
+		<French>Main competitor</French>
+		<German>Main competitor</German>
+		<Italian>Main competitor</Italian>
+		<Spanish>Main competitor</Spanish>
+		<Portuguese>Main competitor</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DQ_LEADER_NAME_1</Tag>
