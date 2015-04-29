@@ -1170,7 +1170,7 @@ class CvVictoryScreen:
 					iColonyPlayer = iCiv
 		sText = localText.getText("TXT_KEY_UHV_COLONIES",())
 		sUnit = ""
-		sText2 += "\n\n" + self.getCompetition(iSpainColonies, iOtherColonies, iColonyPlayer, sText, sUnit, 3)	
+		sText2 += "\n\n" + self.getCompetition(iSpainColonies, iOtherColonies, iColonyPlayer, sText, sUnit, 3)
 		#UHV3
 		lLand = [ 0, 0, 0, 0, 0, 0 ] # Prot, Islam, Cath, Orth, Jew, Pagan
 		lPop  = [ 0, 0, 0, 0, 0, 0 ]
@@ -1250,7 +1250,7 @@ class CvVictoryScreen:
 		#UHV1
 		sText1 += "\n\n"
 		if gc.getGame().getGameTurn()  < xml.i1500AD:
-			sText1 += localText.getText("TXT_KEY_UHV_TOO_EALRY",()) + "\n"
+			sText1 += localText.getText("TXT_KEY_UHV_TOO_EARLY",()) + "\n"
 		iPolandFood = pPlayer.calculateTotalYield(YieldTypes.YIELD_FOOD)
 		iOtherFood = 0
 		iFoodPlayer = -1
@@ -1440,7 +1440,7 @@ class CvVictoryScreen:
 					szNumConq = ">8"
 				sText2 +=  "  " + self.determineColor(not (iNumConq < 2 and pVictim.isAlive()), localText.getText(str(pVictim.getCivilizationShortDescriptionKey()), ()) + ":" + szNumConq)
 		else:
-			sText2 += localText.getText("TXT_KEY_UHV_TOO_EALRY",())
+			sText2 += localText.getText("TXT_KEY_UHV_TOO_EARLY",())
 		#UHV3
 		pCapital = gc.getPlayer(iPlayer).getCapitalCity()
 		iGPStart = CvUtil.findInfoTypeNum(gc.getSpecialistInfo, gc.getNumSpecialistInfos(), "SPECIALIST_GREAT_PRIEST")
@@ -1766,7 +1766,7 @@ class CvVictoryScreen:
 		sUnit = "%s" %( u"<font=5>%c</font>" %(gc.getCommerceInfo( CommerceTypes.COMMERCE_GOLD).getChar()) )
 		sString = "\n\n" + self.getCompetition(iPlayerGold, iGold, iRichestPlayer, sText, sUnit)
 		return sString
-		
+
 	def getCompetition(self, iNum, iNumEnemy, iEnemy, sText, sUnit, iNumMin = 0):
 		sString = ""
 		sString += sText + ": " + self.determineColor(iNum > iNumEnemy, str(iNum)) + " " + sUnit

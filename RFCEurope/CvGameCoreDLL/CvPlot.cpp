@@ -383,6 +383,20 @@ void CvPlot::eraseAIDevelopment()
 }
 //Rhye - end
 
+//Absinthe - start
+void CvPlot::eraseCityDevelopment()
+{
+	//kill city
+	CvCity* pCity;
+	pCity = getPlotCity();
+	if (pCity != NULL)
+	{
+		pCity->kill(false);
+	}
+	//erase all improvement
+	setImprovementType(NO_IMPROVEMENT);
+}
+//Absinthe - end
 
 float CvPlot::getPointX() const
 {

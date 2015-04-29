@@ -167,7 +167,7 @@ tAragonControlII = [ xml.iP_Catalonia, xml.iP_Valencia, xml.iP_Aragon, xml.iP_Ba
 tPrussiaControlI = [ xml.iP_Lithuania, xml.iP_Livonia, xml.iP_Estonia, xml.iP_Pomerania, xml.iP_Prussia]
 tPrussiaDefeat = [ iAustria, iMoscow, iGermany, iSweden, iFrankia, iSpain ]
 tScotlandControl = [ xml.iP_Scotland, xml.iP_TheIsles, xml.iP_Ireland, xml.iP_Wales, xml.iP_Bretagne ]
-tDenmarkControlI = [ xml.iP_Denmark, xml.iP_Skaneland, xml.iP_Gotaland, xml.iP_Svealand, xml.iP_Vestfold, xml.iP_Mercia, xml.iP_London, xml.iP_EastAnglia, xml.iP_Northumbria ]
+tDenmarkControlI = [ xml.iP_Denmark, xml.iP_Skaneland, xml.iP_Gotaland, xml.iP_Svealand, xml.iP_Mercia, xml.iP_London, xml.iP_EastAnglia, xml.iP_Northumbria ]
 #tDenmarkControlII = [ xml.iP_Brandenburg, xml.iP_Pomerania, xml.iP_Estonia ]
 tDenmarkControlIII = [ xml.iP_Denmark, xml.iP_Norway, xml.iP_Vestfold, xml.iP_Skaneland, xml.iP_Gotaland, xml.iP_Svealand, xml.iP_Norrland, xml.iP_Gotland, xml.iP_Osterland, xml.iP_Estonia, xml.iP_Iceland ]
 
@@ -472,28 +472,40 @@ class Victory:
 
 	def onProjectBuilt(self, iPlayer, iProject):
 		if ( self.isProjectAColony( iProject )):
+
+			# Venice UHV 3:
 			if ( pVenecia.getUHV( 2 ) == -1 and iProject != xml.iColVinland ):
 				if ( iPlayer == iVenecia ):
 					pVenecia.setUHV( 2, 1 )
 				else:
 					pVenecia.setUHV( 2, 0 )
+
+			# France UHV 3:
 			if ( iPlayer == iFrankia ):
 				pFrankia.setUHVCounter( 2, pFrankia.getUHVCounter( 2 ) + 1 )
 				if ( pFrankia.getUHV( 2 ) == -1 ):
 					if ( self.getNumRealColonies(iFrankia) >= 5 ):
 						pFrankia.setUHV( 2, 1 )
+
+			# England UHV 2:
 			elif ( iPlayer == iEngland ):
 				pEngland.setUHVCounter( 1, pEngland.getUHVCounter( 1 ) + 1 )
 				if ( pEngland.getUHV( 1 ) == -1 ):
 					if ( self.getNumRealColonies(iEngland) >= 7 ):
 						pEngland.setUHV( 1, 1 )
+
+			# Spain UHV 2: this is only for the Victory Screen
 			elif ( iPlayer == iSpain ):
 				pSpain.setUHVCounter( 1, pSpain.getUHVCounter( 1 ) + 1 )
+
+			# Portugal UHV 3:
 			elif ( iPlayer == iPortugal ):
 				pPortugal.setUHVCounter( 2, pPortugal.getUHVCounter( 2 ) + 1 )
 				if ( pPortugal.getUHV( 2 ) == -1 ):
 					if ( self.getNumRealColonies(iPortugal) >= 5 ):
 						pPortugal.setUHV( 2, 1 )
+
+			# Dutch UHV 2:
 			elif ( iPlayer == iDutch ):
 				pDutch.setUHVCounter( 1, pDutch.getUHVCounter( 1 ) + 1 )
 				if ( pDutch.getUHV( 1 ) == -1 ):
@@ -501,6 +513,8 @@ class Victory:
 					iEastCompany = teamDutch.getProjectCount(xml.iEastIndiaCompany)
 					if ( self.getNumRealColonies(iDutch) >= 3 and iWestCompany == 1 and iEastCompany == 1):
 						pDutch.setUHV( 1, 1 )
+
+			# Denmark UHV 3:
 			elif ( iPlayer == iDenmark ):
 				pDenmark.setUHVCounter( 2, pDenmark.getUHVCounter( 2 ) + 1 )
 				if ( pDenmark.getUHV( 2 ) == -1 ):
@@ -772,7 +786,7 @@ class Victory:
 
 	def checkDenmark(self,iGameTurn):
 
-		# UHV 1: Control Denmark, Skaneland, Götaland, Svealand, Vestfold, Mercia, London, Northumbria and East Anglia in 1050
+		# UHV 1: Control Denmark, Skaneland, Götaland, Svealand, Mercia, London, Northumbria and East Anglia in 1050
 		if ( iGameTurn == xml.i1050AD and pDenmark.getUHV( 0 ) == -1 ):
 			bConq = True
 			for iProv in tDenmarkControlI:

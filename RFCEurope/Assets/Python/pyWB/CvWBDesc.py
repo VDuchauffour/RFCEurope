@@ -31,7 +31,7 @@ def getPlayer(idx):
 class CvWBParser:
 	"parser functions for WB desc"
 	def getTokens(self, line):
-		"return a list of (comma separated) tokens from the line.  Strip whitespace on each token"
+		"return a list of (comma separated) tokens from the line. Strip whitespace on each token"
 		if line==None:
 			return list()
 		toks=line.split(",")
@@ -1776,8 +1776,8 @@ class CvWBDesc:
 
 						for iPlotX in range(CyMap().getGridWidth()):
 							for iPlotY in range(CyMap().getGridHeight()):
-							    pPlot = CyMap().plot(iPlotX,iPlotY)
-							    pPlot.setRevealed(pTeam.getID(), True, False, TeamTypes.NO_TEAM)
+								pPlot = CyMap().plot(iPlotX,iPlotY)
+								pPlot.setRevealed(pTeam.getID(), True, False, TeamTypes.NO_TEAM)
 
 					# Vassal
 					if (pWBTeam.iVassalPower != 0):
@@ -1825,7 +1825,7 @@ class CvWBDesc:
 		parser = CvWBParser()
 		version = int(parser.findNextTokenValue(f, "Version"))
 		if (version != self.getVersion()):
-			CvUtil.pyPrint("Error: wrong WorldBuilder save version.  Expected %d, got %d" %(self.getVersion(), version))
+			CvUtil.pyPrint("Error: wrong WorldBuilder save version. Expected %d, got %d" %(self.getVersion(), version))
 			return -1	# failed
 
 		print "Reading game desc"

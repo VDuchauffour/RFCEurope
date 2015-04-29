@@ -40,9 +40,10 @@ public:
 	void updateGraphicEra();
 
 	DllExport void erase();																																								// Exposed to Python
-	//Rhye - start
+	//Rhye:
 	DllExport void eraseAIDevelopment();	// Exposed to Python
-	//Rhye - end
+	//Absinthe:
+	DllExport void eraseCityDevelopment();	// Exposed to Python
 
 	DllExport float getPointX() const;
 	DllExport float getPointY() const;

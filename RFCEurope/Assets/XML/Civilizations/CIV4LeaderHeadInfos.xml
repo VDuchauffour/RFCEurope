@@ -235,7 +235,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_FRIENDLY</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>50</iVassalPowerModifier><!--(-20 easy to capitulate; 50 extremely hard to capitulate) -->
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -794,7 +794,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_ANNOYED</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -1909,7 +1909,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_FURIOUS</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -3053,7 +3053,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_FURIOUS</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -3629,7 +3629,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_ANNOYED</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_FURIOUS</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_FURIOUS</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>10</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -4192,7 +4192,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_FURIOUS</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>10</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -4755,7 +4755,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -5332,7 +5332,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_ANNOYED</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_FURIOUS</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -5904,7 +5904,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_ANNOYED</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_FURIOUS</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_FURIOUS</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -6488,7 +6488,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_FURIOUS</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>-20</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -7068,7 +7068,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_ANNOYED</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>-20</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -7648,7 +7648,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_PLEASED</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_FURIOUS</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -8220,7 +8220,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_PLEASED</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_FURIOUS</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -9356,7 +9356,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_ANNOYED</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_FURIOUS</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -9924,7 +9924,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_FURIOUS</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -10496,7 +10496,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_ANNOYED</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>20</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -11059,7 +11059,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_FURIOUS</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>50</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -11631,7 +11631,7 @@
 			<!-- Rhye - start -->
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_FURIOUS</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -12215,7 +12215,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_ANNOYED</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_FURIOUS</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -12803,7 +12803,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -13958,7 +13958,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_ANNOYED</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -14531,7 +14531,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_FURIOUS</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -15111,7 +15111,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_FURIOUS</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>10</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -15678,7 +15678,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>10</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -16254,7 +16254,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -16826,7 +16826,7 @@
 			<!-- Rhye - start -->
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_FURIOUS</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -17411,7 +17411,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -18550,7 +18550,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_PLEASED</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -19117,7 +19117,7 @@
 			<OpenBordersRefuseAttitudeThreshold>NONE</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_PLEASED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
 			<FavoriteCivic>CIVIC_MERCHANT_REPUBLIC</FavoriteCivic>
@@ -19687,7 +19687,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_ANNOYED</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>20</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -20246,7 +20246,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_ANNOYED</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -20830,7 +20830,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>20</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -21406,7 +21406,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_ANNOYED</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_FURIOUS</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -21990,7 +21990,7 @@
 			<!-- Rhye - start -->
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_FURIOUS</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -22573,7 +22573,7 @@
 			<OpenBordersRefuseAttitudeThreshold>NONE</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_PLEASED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
 			<FavoriteCivic>CIVIC_MERCHANT_REPUBLIC</FavoriteCivic>
@@ -23134,7 +23134,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_ANNOYED</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -23722,7 +23722,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_ANNOYED</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -24290,7 +24290,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_ANNOYED</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -25422,7 +25422,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_ANNOYED</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_FURIOUS</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -26546,7 +26546,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_FURIOUS</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -27689,7 +27689,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_ANNOYED</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>20</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -28252,7 +28252,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_ANNOYED</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>20</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -28815,7 +28815,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_ANNOYED</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_FURIOUS</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_FURIOUS</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -29399,7 +29399,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -29971,7 +29971,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_FURIOUS</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>10</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -30534,7 +30534,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_FURIOUS</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>10</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -31102,7 +31102,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -31678,7 +31678,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_FURIOUS</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>10</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -32245,7 +32245,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_FURIOUS</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>50</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -32817,7 +32817,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_FURIOUS</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -33393,7 +33393,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_FURIOUS</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -33965,7 +33965,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_FURIOUS</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -35125,7 +35125,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_FURIOUS</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>-20</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -35705,7 +35705,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_FURIOUS</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>10</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -36272,7 +36272,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_FURIOUS</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>10</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -36839,7 +36839,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_FURIOUS</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>10</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -37966,7 +37966,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_ANNOYED</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -38539,7 +38539,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_ANNOYED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -39111,7 +39111,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_ANNOYED</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_FURIOUS</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_FURIOUS</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
@@ -39695,7 +39695,7 @@
 			<OpenBordersRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</OpenBordersRefuseAttitudeThreshold>
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_ANNOYED</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
-			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
+			<VassalRefuseAttitudeThreshold>ATTITUDE_CAUTIOUS</VassalRefuseAttitudeThreshold>
 			<!-- Rhye - end -->
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>

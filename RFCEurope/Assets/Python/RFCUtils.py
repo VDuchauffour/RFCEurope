@@ -392,7 +392,7 @@ class RFCUtils:
 	def updateMinorTechs( self, iMinorCiv, iMajorCiv):
 		for t in range(xml.iNumTechs):
 			if (gc.getTeam(gc.getPlayer(iMajorCiv).getTeam()).isHasTech(t)):
-				    gc.getTeam(gc.getPlayer(iMinorCiv).getTeam()).setHasTech(t, True, iMinorCiv, False, False)
+					gc.getTeam(gc.getPlayer(iMinorCiv).getTeam()).setHasTech(t, True, iMinorCiv, False, False)
 
 	#RiseAndFall, Religions, UniquePowers
 	def makeUnit(self, iUnit, iPlayer, tCoords, iNum): #by LOQ
@@ -426,7 +426,6 @@ class RFCUtils:
 			if (unit.getOwner() == iOldOwner):
 				unit.kill(False, con.iBarbarian)
 				if (iNewOwner < con.iNumActivePlayers or unitType > xml.iSettler):
-					# 3Miro: 0, 72 change, see below
 					self.makeUnit(unitType, iNewOwner, [0, 72], 1)
 			else:
 				j += 1
@@ -443,23 +442,7 @@ class RFCUtils:
 				unit = tempPlot.getUnit(0)
 				#print("  3Miro Unit Type and Owner ",unit.getUnitType(),"  ",unit.getOwner() )
 				unit.setXYOld(tCityPlot[0],tCityPlot[1])
-		#cover plots revealed
-		#gc.getMap().plot(0, 67).setRevealed(iCiv, False, True, -1);
-		#gc.getMap().plot(0, 66).setRevealed(iCiv, False, True, -1);
-		#gc.getMap().plot(1, 66).setRevealed(iCiv, False, True, -1);
-		#gc.getMap().plot(1, 67).setRevealed(iCiv, False, True, -1);
-		#gc.getMap().plot(123, 67).setRevealed(iCiv, False, True, -1);
-		#gc.getMap().plot(123, 66).setRevealed(iCiv, False, True, -1);
-		#gc.getMap().plot(2, 67).setRevealed(iCiv, False, True, -1);
-		#gc.getMap().plot(2, 66).setRevealed(iCiv, False, True, -1);
-		#gc.getMap().plot(2, 65).setRevealed(iCiv, False, True, -1);
-		#gc.getMap().plot(1, 65).setRevealed(iCiv, False, True, -1);
-		#gc.getMap().plot(0, 65).setRevealed(iCiv, False, True, -1);
-		#gc.getMap().plot(122, 67).setRevealed(iCiv, False, True, -1);
-		#gc.getMap().plot(122, 66).setRevealed(iCiv, False, True, -1);
-		#gc.getMap().plot(122, 65).setRevealed(iCiv, False, True, -1);
-		#gc.getMap().plot(123, 65).setRevealed(iCiv, False, True, -1);
-		# 3Miro: wierd unit creation, see below
+		#cover revealed plots
 		gc.getMap().plot(0, 72).setRevealed(iCiv, False, True, -1);
 		gc.getMap().plot(0, 71).setRevealed(iCiv, False, True, -1);
 		gc.getMap().plot(1, 72).setRevealed(iCiv, False, True, -1);
@@ -530,21 +513,6 @@ class RFCUtils:
 								unit.setXYOld(x,y)
 							iCiv = iNewOwner
 							if (bRevealedZero == False):
-								#gc.getMap().plot(0, 67).setRevealed(iCiv, False, True, -1);
-								#gc.getMap().plot(0, 66).setRevealed(iCiv, False, True, -1);
-								#gc.getMap().plot(1, 66).setRevealed(iCiv, False, True, -1);
-								#gc.getMap().plot(1, 67).setRevealed(iCiv, False, True, -1);
-								#gc.getMap().plot(123, 67).setRevealed(iCiv, False, True, -1);
-								#gc.getMap().plot(123, 66).setRevealed(iCiv, False, True, -1);
-								#gc.getMap().plot(2, 67).setRevealed(iCiv, False, True, -1);
-								#gc.getMap().plot(2, 66).setRevealed(iCiv, False, True, -1);
-								#gc.getMap().plot(2, 65).setRevealed(iCiv, False, True, -1);
-								#gc.getMap().plot(1, 65).setRevealed(iCiv, False, True, -1);
-								#gc.getMap().plot(0, 65).setRevealed(iCiv, False, True, -1);
-								#gc.getMap().plot(122, 67).setRevealed(iCiv, False, True, -1);
-								#gc.getMap().plot(122, 66).setRevealed(iCiv, False, True, -1);
-								#gc.getMap().plot(122, 65).setRevealed(iCiv, False, True, -1);
-								#gc.getMap().plot(123, 65).setRevealed(iCiv, False, True, -1);
 								gc.getMap().plot(0, 72).setRevealed(iCiv, False, True, -1);
 								gc.getMap().plot(0, 71).setRevealed(iCiv, False, True, -1);
 								gc.getMap().plot(1, 72).setRevealed(iCiv, False, True, -1);
@@ -796,7 +764,7 @@ class RFCUtils:
 			tCoords = (pyCity.GetCy().getX(), pyCity.GetCy().getY())
 			self.cultureManager(tCoords, 50, iNewCiv, iCiv, False, False, False)
 			self.flipCity(tCoords, 0, 0, iNewCiv, [iCiv]) #by trade because by conquest may raze the city
-			#pyCity.GetCy().setHasRealBuilding(con.iPlague, False)  #buggy
+			#pyCity.GetCy().setHasRealBuilding(con.iPlague, False) #buggy
 		self.flipUnitsInArea([0,0], [con.iMapMaxX,con.iMapMaxY], iNewCiv, iCiv, False, True)
 		#self.flipUnitsInArea([0,0], [123,67], iNewCiv, iCiv, False, True)
 		#self.killUnitsInArea([0,0], [123,67], iNewCiv, iCiv) ?
@@ -831,7 +799,7 @@ class RFCUtils:
 							self.flipUnitsInCityBefore((tCoords[0],tCoords[1]), iLoopCiv, iCiv)
 							self.setTempFlippingCity((tCoords[0],tCoords[1]))
 							self.flipCity(tCoords, 0, 0, iLoopCiv, [iCiv])
-							#pyCity.GetCy().setHasRealBuilding(con.iPlague, False)  #buggy
+							#pyCity.GetCy().setHasRealBuilding(con.iPlague, False) #buggy
 							#Sedna17: Possibly buggy, used to flip units in 2x2 radius, which could take us outside the map.
 							self.flipUnitsInArea([tCoords[0]-1,tCoords[1]-1], [tCoords[0]+1,tCoords[1]-1], iLoopCiv, iCiv, False, True)
 							self.flipUnitsInCityAfter(self.getTempFlippingCity(), iLoopCiv)
@@ -850,7 +818,7 @@ class RFCUtils:
 				self.setTempFlippingCity((tCoords[0],tCoords[1]))
 				self.cultureManager(tCoords, 50, iNewCiv, iCiv, False, False, False)
 				self.flipCity(tCoords, 0, 0, iNewCiv, [iCiv])
-				#pyCity.GetCy().setHasRealBuilding(con.iPlague, False)  #buggy
+				#pyCity.GetCy().setHasRealBuilding(con.iPlague, False) #buggy
 				self.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
 				iCounter += 1
 				self.flipUnitsInArea([tCoords[0]-1,tCoords[1]-1], [tCoords[0]+1,tCoords[1]+1], iNewCiv, iCiv, False, True)
@@ -1050,8 +1018,8 @@ class RFCUtils:
 		if ( pCurrent.isHills() or pCurrent.isFlatlands() ):
 			if (pCurrent.getFeatureType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
 				if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
-					    # this is a good plot, so paint it and continue search
-					    return (None, bPaint, bContinue)
+						# this is a good plot, so paint it and continue search
+						return (None, bPaint, bContinue)
 		# not a good plot, so don't paint it but continue search
 		return (None, not bPaint, bContinue)
 
@@ -1129,9 +1097,9 @@ class RFCUtils:
 		if ( pCurrent.isHills() or pCurrent.isFlatlands() ):
 			if (pCurrent.getFeatureType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
 				if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
-					    if (pCurrent.getOwner() == argsList ):
-						    # this is a good plot, so paint it and continue search
-						    return (None, bPaint, bContinue)
+						if (pCurrent.getOwner() == argsList ):
+							# this is a good plot, so paint it and continue search
+							return (None, bPaint, bContinue)
 		# not a good plot, so don't paint it but continue search
 		return (None, not bPaint, bContinue)
 
@@ -1394,8 +1362,8 @@ class RFCUtils:
 		screen = CyGInterfaceScreen( "MainInterface", CvScreenEnums.MAIN_INTERFACE )
 		xResolution = screen.getXResolution()
 		yResolution = screen.getYResolution()
-		iGlobeLayerOptionsY_Regular  = 170 # distance from bottom edge
-		iGlobeLayerOptionsY_Minimal  = 38 # distance from bottom edge
+		iGlobeLayerOptionsY_Regular = 170 # distance from bottom edge
+		iGlobeLayerOptionsY_Minimal = 38 # distance from bottom edge
 		iGlobeLayerOptionsWidth = 400
 		iGlobeLayerOptionHeight = 20
 		iY = yResolution - iGlobeLayerOptionsY_Regular
@@ -1501,8 +1469,8 @@ class RFCUtils:
 		screen = CyGInterfaceScreen( "MainInterface", CvScreenEnums.MAIN_INTERFACE )
 		xResolution = screen.getXResolution()
 		yResolution = screen.getYResolution()
-		iGlobeLayerOptionsY_Regular  = 170 # distance from bottom edge
-		iGlobeLayerOptionsY_Minimal  = 38 # distance from bottom edge
+		iGlobeLayerOptionsY_Regular = 170 # distance from bottom edge
+		iGlobeLayerOptionsY_Minimal = 38 # distance from bottom edge
 		iGlobeLayerOptionsWidth = 400
 		iGlobeLayerOptionHeight = 20
 		iY = yResolution - iGlobeLayerOptionsY_Regular

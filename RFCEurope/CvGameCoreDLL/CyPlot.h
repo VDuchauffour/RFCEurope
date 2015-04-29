@@ -22,6 +22,7 @@ public:
 	bool isNone() { return (m_pPlot==NULL); }
 	void erase();
 	void eraseAIDevelopment(); //Rhye
+	void eraseCityDevelopment(); //Absinthe
 	DllExport NiPoint3 getPoint();
 	int getTeam();
 

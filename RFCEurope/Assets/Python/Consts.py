@@ -620,7 +620,7 @@ tNormalAreasSubtract = ( #These plots are subtracted from the tNormalAreasTL+tNo
 ()
 )
 
-#BroaderAreas: Broader Area is currently unused?
+#BroaderAreas: Used in civ birth only
 tBroaderAreasTL = (
 (68, 14), #Byzantium
 (39, 41), #France
