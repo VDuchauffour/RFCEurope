@@ -349,12 +349,18 @@ class CvRFCEventHandler:
 		if ( iImpBeforeCityType == xml.iImprovementFort and iImpBeforeCityX == city.getX() and iImpBeforeCityY == city.getY() ):
 			city.setHasRealBuilding( xml.iWalls, True )
 
+		# Absinthe: Some initial food for all cities on foundation
+		#			So Leon and Roskilde for example don't lose a population in the first couple turns
+		#			Neither the indy cities on spawn (they start with zero-sized culture, so they shrink without some food reserves)
+		#			Currently 1/5 of the treshold of the next population growth
+		city.setFood( city.growthThreshold() / 5 )
+
 		# 3MiroUP: faith on city foundation
 		if ( gc.hasUP( iOwner, con.iUP_Faith ) ):
 			self.up.faithUP( iOwner, city )
 
 		if ( iOwner < con.iNumPlayers ):
-			self.sta.onCityBuilt(iOwner, city.getX(), city.getY() )
+			self.sta.onCityBuilt( iOwner, city.getX(), city.getY() )
 
 	def onCombatResult(self, argsList):
 		#self.up.aztecUP(argsList)

@@ -71,6 +71,7 @@ iIndependent3 = con.iIndependent3
 iIndependent4 = con.iIndependent4
 iBarbarian = con.iBarbarian
 iNumTotalPlayers = con.iNumTotalPlayers
+iNumTotalPlayersB = con.iNumTotalPlayersB
 
 pBurgundy = gc.getPlayer(iBurgundy)
 pByzantium = gc.getPlayer(iByzantium)
@@ -414,7 +415,7 @@ class RiseAndFall:
 		popup.setHeaderString(title)
 		popup.setBodyString(message)
 		for i in labels:
-		    popup.addButton( i )
+			popup.addButton( i )
 		popup.launch(False)
 
 
@@ -891,11 +892,11 @@ class RiseAndFall:
 		#		self.resurrection(iGameTurn,iCiv)
 
 		# Absinthe: Reduce cities to towns, in order to make room for new civs
-		if(iGameTurn == con.tBirth[con.iEngland] -1):
+		if(iGameTurn == con.tBirth[con.iEngland] -3):
 			# Reduce Norwich and Nottingham, so more freedom in where to found cities in England
 			self.reduceCity((43,55))
 			self.reduceCity((39,56))
-		elif(iGameTurn == con.tBirth[con.iSweden] -1):
+		elif(iGameTurn == con.tBirth[con.iSweden] -2):
 			# Reduce Uppsala
 			self.reduceCity((65,66))
 
@@ -907,7 +908,7 @@ class RiseAndFall:
 			msgString = CyTranslator().getText("TXT_KEY_REDUCE_CITY_1", ()) + " " + pPlot.getPlotCity().getName() + " " + CyTranslator().getText("TXT_KEY_REDUCE_CITY_2", ())
 			CyInterface().addMessage(pPlot.getPlotCity().getOwner(), True, con.iDuration, msgString, "", 0, "", ColorTypes(con.iLightRed), tPlot[0], tPlot[1], True, True)
 
-			pPlot.eraseAIDevelopment()
+			pPlot.eraseCityDevelopment()
 			pPlot.setImprovementType(21) # Improvement Town instead of the city
 			pPlot.setRouteType(0) # Also adding a road there
 
@@ -955,7 +956,7 @@ class RiseAndFall:
 					utils.cultureManager((pDublin.getX(),pDublin.getY()), 50, iEngland, iBarbarian, False, True, True)
 					utils.flipUnitsInCityBefore((pDublin.getX(),pDublin.getY()), iEngland, iBarbarian)
 					self.setTempFlippingCity((pDublin.getX(),pDublin.getY()))
-					utils.flipCity((pDublin.getX(),pDublin.getY()), 0, 0, iEngland, [iBarbarian])   #by trade because by conquest may raze the city
+					utils.flipCity((pDublin.getX(),pDublin.getY()), 0, 0, iEngland, [iBarbarian]) #by trade because by conquest may raze the city
 					utils.flipUnitsInCityAfter(self.getTempFlippingCity(), iEngland)
 			#print( " 3Miro: Called for - ",iPlayer," on turn ",iGameTurn )
 			#utils.setLastTurnAlive( iPlayer, iGameTurn )
@@ -1023,7 +1024,7 @@ class RiseAndFall:
 								utils.cultureManager((city.getX(),city.getY()), 50, iSmall, iBig, False, True, True)
 								utils.flipUnitsInCityBefore((city.getX(),city.getY()), iSmall, iBig)
 								self.setTempFlippingCity((city.getX(),city.getY()))
-								utils.flipCity((city.getX(),city.getY()), 0, 0, iSmall, [iBig])   #by trade because by conquest may raze the city
+								utils.flipCity((city.getX(),city.getY()), 0, 0, iSmall, [iBig]) #by trade because by conquest may raze the city
 								utils.flipUnitsInCityAfter(self.getTempFlippingCity(), iSmall)
 								iCounter += 1
 							if ( iCounter == 3 ):
@@ -1061,7 +1062,7 @@ class RiseAndFall:
 										utils.cultureManager((city.getX(),city.getY()), 50, iNewCiv, iBarbarian, False, True, True)
 										utils.flipUnitsInCityBefore((city.getX(),city.getY()), iNewCiv, iBarbarian)
 										self.setTempFlippingCity((city.getX(),city.getY()))
-										utils.flipCity((city.getX(),city.getY()), 0, 0, iNewCiv, [iBarbarian])   #by trade because by conquest may raze the city
+										utils.flipCity((city.getX(),city.getY()), 0, 0, iNewCiv, [iBarbarian]) #by trade because by conquest may raze the city
 										utils.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
 										iDivideCounter += 1
 					return
@@ -1192,7 +1193,7 @@ class RiseAndFall:
 								continue
 
 						# Absinthe: also add the city to the list if it has foreign culture - currently unused
-						#for iLoop in range(iNumTotalPlayers+1):
+						#for iLoop in range(iNumTotalPlayersB):
 						#	if (iLoop != iPlayer):
 						#		if (pCurrent.getCulture(iLoop) > 0):
 						#			cityList.append(city)
@@ -1212,7 +1213,7 @@ class RiseAndFall:
 			utils.cultureManager((splittingCity.getX(),splittingCity.getY()), 50, iNewCiv, iPlayer, False, True, True)
 			utils.flipUnitsInCityBefore((splittingCity.getX(),splittingCity.getY()), iNewCiv, iPlayer)
 			self.setTempFlippingCity((splittingCity.getX(),splittingCity.getY()))
-			utils.flipCity((splittingCity.getX(),splittingCity.getY()), 0, 0, iNewCiv, [iPlayer])   #by trade because by conquest may raze the city
+			utils.flipCity((splittingCity.getX(),splittingCity.getY()), 0, 0, iNewCiv, [iPlayer]) #by trade because by conquest may raze the city
 			utils.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
 			#print ("SECESSION", gc.getPlayer(iPlayer).getCivilizationAdjective(0), splittingCity.getName()) #causes c++ exception??
 			#Sedna17: Now loosing a city to secession gives a positive boost to stability. Should help Byzantium be less frustrating.
@@ -1303,7 +1304,7 @@ class RiseAndFall:
 				if (len(cityList) >= iMinNumCities ):
 					if bSpecialRespawn or (gc.getGame().getSorenRandNum(100, 'roll') < con.tResurrectionProb[iDeadCiv]): #If special, always happens
 						lCityList = []
-						for iCity in range( len(cityList)  ):
+						for iCity in range( len(cityList) ):
 							lCityList.append( (cityList[iCity].getX(), cityList[iCity].getY()) )
 						self.setRebelCities( lCityList )
 						self.setRebelCiv(iDeadCiv) #for popup and CollapseCapitals()
@@ -1412,7 +1413,7 @@ class RiseAndFall:
 			bOwnerHumanVassal = teamOwner.isVassal(iHuman)
 
 			#if (iOwner == iBarbarian or iOwner == iIndependent or iOwner == iIndependent2 ):
-			if (iOwner == iBarbarian or utils.isIndep( iOwner )  ):
+			if (iOwner == iBarbarian or utils.isIndep( iOwner ) ):
 				utils.cultureManager((pCity.getX(),pCity.getY()), 100, iDeadCiv, iOwner, False, True, True)
 				utils.flipUnitsInCityBefore((pCity.getX(),pCity.getY()), iDeadCiv, iOwner)
 				self.setTempFlippingCity((pCity.getX(),pCity.getY()))
@@ -1426,7 +1427,7 @@ class RiseAndFall:
 					utils.pushOutGarrisons((pCity.getX(),pCity.getY()), iOwner)
 					utils.relocateSeaGarrisons((pCity.getX(),pCity.getY()), iOwner)
 					self.setTempFlippingCity((pCity.getX(),pCity.getY()))
-					utils.flipCity((pCity.getX(),pCity.getY()), 0, 0, iDeadCiv, [iOwner])   #by trade because by conquest may raze the city
+					utils.flipCity((pCity.getX(),pCity.getY()), 0, 0, iDeadCiv, [iOwner]) #by trade because by conquest may raze the city
 					utils.createGarrisons(self.getTempFlippingCity(), iDeadCiv, iNewUnits)
 
 			#cityList[k].setHasRealBuilding(con.iPlague, False)
@@ -1442,7 +1443,7 @@ class RiseAndFall:
 						teamOwner.makePeace(iDeadCiv)
 						if (bAlreadyVassal == False and bHuman == False and bOwnerVassal == False and bAtWar == False): #bHuman == False cos otherwise human player can be deceived to declare war without knowing the new master
 							if (iOwner < iNumActivePlayers):
-								gc.getTeam(gc.getPlayer(iDeadCiv).getTeam()).setVassal(iOwner, True, False)  #remove in vanilla
+								gc.getTeam(gc.getPlayer(iDeadCiv).getTeam()).setVassal(iOwner, True, False) #remove in vanilla
 								bAlreadyVassal = True
 					else:
 						teamOwner.makePeace(iDeadCiv)
@@ -1460,7 +1461,7 @@ class RiseAndFall:
 		#add former colonies that are still free
 		# 3Miro: no need, we don't have "colonies", this causes trouble with Cordoba's special respawn, getting cities back from Iberia
 		colonyList = []
-		#for iIndCiv in range(iNumTotalPlayers+1): #barbarians too
+		#for iIndCiv in range(iNumTotalPlayersB): #barbarians too
 		#	if (iIndCiv >= iNumActivePlayers):
 		#		if (gc.getPlayer(iIndCiv).isAlive()):
 		#			apCityList = PyPlayer(iIndCiv).getCityList()
@@ -1569,7 +1570,7 @@ class RiseAndFall:
 							pCityArea = gc.getMap().plot( ix, iy )
 							iCivCulture = pCityArea.getCulture(iCiv)
 							iLoopCivCulture = 0
-							for iLoopCiv in range(con.iNumTotalPlayers+1): #barbarians too
+							for iLoopCiv in range(iNumTotalPlayersB): #barbarians too
 								if (iLoopCiv >= iNumPlayers):
 									iLoopCivCulture += pCityArea.getCulture(iLoopCiv)
 									pCityArea.setCulture(iLoopCiv, 0, True)
@@ -1578,7 +1579,7 @@ class RiseAndFall:
 					city = pCurrent.getPlotCity()
 					iCivCulture = city.getCulture(iCiv)
 					iLoopCivCulture = 0
-					for iLoopCiv in range(con.iNumTotalPlayers+1): #barbarians too
+					for iLoopCiv in range(iNumTotalPlayersB): #barbarians too
 						if (iLoopCiv >= iNumPlayers):
 							iLoopCivCulture += city.getCulture(iLoopCiv)
 							city.setCulture(iLoopCiv, 0, True)
@@ -1601,8 +1602,8 @@ class RiseAndFall:
 						print ("bDeleteEverything 1")
 					else:
 						bDeleteEverything = True
-						for x in range(tCapital[0] - 1, tCapital[0] + 2):	# from x-1 to x+1
-							for y in range(tCapital[1] - 1, tCapital[1] + 2):	# from y-1 to y+1
+						for x in range(tCapital[0] - 1, tCapital[0] + 2):	# from x-1 to x+1, range in python works this way
+							for y in range(tCapital[1] - 1, tCapital[1] + 2):	# from y-1 to y+1, range in python works this way
 								pCurrent=gc.getMap().plot(x, y)
 								if (pCurrent.isCity() and pCurrent.getPlotCity().getOwner() == iHuman):
 									bDeleteEverything = False
@@ -1621,19 +1622,19 @@ class RiseAndFall:
 							#print ("deleting", x, y)
 							pCurrent=gc.getMap().plot(x, y)
 							#self.moveOutUnits(x, y, tCapital[0], tCapital[1])
-							for iLoopCiv in range(iNumTotalPlayers+1): #Barbarians as well
+							for iLoopCiv in range(iNumTotalPlayersB): #Barbarians as well
 								if (iCiv != iLoopCiv):
 									utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iLoopCiv, True, False)
 							if (pCurrent.isCity()):
-								pCurrent.eraseAIDevelopment() #new function, similar to erase but won't delete rivers, resources and features()
-							for iLoopCiv in range(iNumTotalPlayers+1): #Barbarians as well
+								pCurrent.eraseAIDevelopment() #new function, similar to erase but won't delete rivers, resources and features
+							for iLoopCiv in range(iNumTotalPlayersB): #Barbarians as well
 								if (iCiv != iLoopCiv):
 									pCurrent.setCulture(iLoopCiv, 0, True)
 							#pCurrent.setCulture(iCiv,10,True)
 							pCurrent.setOwner(-1)
 					self.birthInFreeRegion(iCiv, tCapital, tTopLeft, tBottomRight)
 				else:
-					self.birthInForeignBorders(iCiv, tTopLeft, tBottomRight, tBroaderTopLeft, tBroaderBottomRight)
+					self.birthInForeignBorders(iCiv, tTopLeft, tBottomRight, tBroaderTopLeft, tBroaderBottomRight, tCapital)
 			else:
 				print ( "setBirthType again: flips" )
 				self.birthInFreeRegion(iCiv, tCapital, tTopLeft, tBottomRight)
@@ -1698,7 +1699,7 @@ class RiseAndFall:
 				pCurrent=gc.getMap().plot(x, y)
 				if (pCurrent.isOwned()):
 					bNotOwned = False
-					for iLoopCiv in range(iNumTotalPlayers+1): #Barbarians as well
+					for iLoopCiv in range(iNumTotalPlayersB): #Barbarians as well
 						if(iLoopCiv != iCiv):
 							pCurrent.setCulture(iLoopCiv, 0, True)
 						#else:
@@ -1707,7 +1708,7 @@ class RiseAndFall:
 					#pCurrent.setOwner(-1)
 					pCurrent.setOwner(iCiv)
 
-		for x in range(tCapital[0] - 11, tCapital[0] + 12):	# must include the distance from Sogut to the Caspius
+		for x in range(tCapital[0] - 11, tCapital[0] + 12): # must include the distance from Sogut to the Caspius
 			for y in range(tCapital[1] - 11, tCapital[1] + 12):
 				#print ("units", x, y, gc.getMap().plot(x, y).getNumUnits(), tCapital[0], tCapital[1])
 				if (x != tCapital[0] or y != tCapital[1]):
@@ -1741,7 +1742,7 @@ class RiseAndFall:
 ##						unit.kill(False, iCiv)
 ##					iFlipsDelay = self.getFlipsDelay(iCiv) + 2
 ##					#utils.debugTextPopup( 'birthInFreeRegion in starting location' )
-##				else:   #search another place
+##				else: #search another place
 ##					dummy, plotList = utils.squareSearch( tTopLeft, tBottomRight, utils.goodPlots, [] )
 ##					rndNum = gc.getGame().getSorenRandNum(len(plotList), 'searching another free plot')
 ##					if (len(plotList)):
@@ -1753,7 +1754,7 @@ class RiseAndFall:
 ##							#utils.debugTextPopup( 'birthInFreeRegion in another location' )
 ##							iFlipsDelay = self.getFlipsDelay(iCiv) + 1 #add delay before flipping other cities
 ##					else:
-##						if (self.getSpawnDelay(iCiv) < 10):  #wait
+##						if (self.getSpawnDelay(iCiv) < 10): #wait
 ##							iSpawnDelay = self.getSpawnDelay(iCiv) + 1
 ##							self.setSpawnDelay(iCiv, iSpawnDelay)
 ##			else:
@@ -1781,8 +1782,6 @@ class RiseAndFall:
 				utils.flipUnitsInArea((tCapital[0]-4, tCapital[1]-4), (tCapital[0]+4, tCapital[1]+4), iCiv, iBarbarian, True, True) #This is for AI only. During Human player spawn, that area is already cleaned
 				for i in range( con.iIndepStart, con.iIndepEnd + 1 ):
 					utils.flipUnitsInArea((tCapital[0]-2, tCapital[1]-2), (tCapital[0]+2, tCapital[1]+2), iCiv, i, True, False) #This is for AI only. During Human player spawn, that area is already cleaned
-				#utils.flipUnitsInArea((tCapital[0]-2, tCapital[1]-2), (tCapital[0]+2, tCapital[1]+2), iCiv, iIndependent, True, False) #This is for AI only. During Human player spawn, that area is already cleaned
-				#utils.flipUnitsInArea((tCapital[0]-2, tCapital[1]-2), (tCapital[0]+2, tCapital[1]+2), iCiv, iIndependent2, True, False) #This is for AI only. During Human player spawn, that area is already cleaned
 				self.assignTechs(iCiv)
 				utils.setPlagueCountdown(iCiv, -con.iImmunity)
 				utils.clearPlague(iCiv)
@@ -1797,29 +1796,12 @@ class RiseAndFall:
 			utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iBarbarian, False, True) #remaining barbs in the region now belong to the new civ
 			for i in range( con.iIndepStart, con.iIndepEnd + 1 ):
 				utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, i, False, False) #remaining independents in the region now belong to the new civ
-			#utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iIndependent, False, False) #remaining independents in the region now belong to the new civ
-			#utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iIndependent2, False, False) #remaining independents in the region now belong to the new civ
 			print ("utils.flipUnitsInArea()")
-			#cover plots revealed by the lion
+			#cover plots revealed by the lion (catapult in RFC)
 			plotZero = gc.getMap().plot( 32, 0 )
 			if (plotZero.getNumUnits()):
 				catapult = plotZero.getUnit(0)
 				catapult.kill(False, iCiv)
-			#gc.getMap().plot(0, 0).setRevealed(iCiv, False, True, -1);
-			#gc.getMap().plot(0, 1).setRevealed(iCiv, False, True, -1);
-			#gc.getMap().plot(1, 1).setRevealed(iCiv, False, True, -1);
-			#gc.getMap().plot(1, 0).setRevealed(iCiv, False, True, -1);
-			#gc.getMap().plot(123, 0).setRevealed(iCiv, False, True, -1);
-			#gc.getMap().plot(123, 1).setRevealed(iCiv, False, True, -1);
-			#gc.getMap().plot(2, 0).setRevealed(iCiv, False, True, -1);
-			#gc.getMap().plot(2, 1).setRevealed(iCiv, False, True, -1);
-			#gc.getMap().plot(2, 2).setRevealed(iCiv, False, True, -1);
-			#gc.getMap().plot(1, 2).setRevealed(iCiv, False, True, -1);
-			#gc.getMap().plot(0, 2).setRevealed(iCiv, False, True, -1);
-			#gc.getMap().plot(122, 0).setRevealed(iCiv, False, True, -1);
-			#gc.getMap().plot(122, 1).setRevealed(iCiv, False, True, -1);
-			#gc.getMap().plot(122, 2).setRevealed(iCiv, False, True, -1);
-			#gc.getMap().plot(123, 2).setRevealed(iCiv, False, True, -1);
 			gc.getMap().plot(31, 0).setRevealed(iCiv, False, True, -1);
 			gc.getMap().plot(32, 0).setRevealed(iCiv, False, True, -1);
 			gc.getMap().plot(33, 0).setRevealed(iCiv, False, True, -1);
@@ -1836,9 +1818,9 @@ class RiseAndFall:
 				self.flipPopup(iCiv, tTopLeft, tBottomRight)
 
 
-	def birthInForeignBorders(self, iCiv, tTopLeft, tBottomRight, tBroaderTopLeft, tBroaderBottomRight):
+	def birthInForeignBorders(self, iCiv, tTopLeft, tBottomRight, tBroaderTopLeft, tBroaderBottomRight, tCapital):
 
-		print( " 3Miro: Birth in Foreign Land: ",iCiv,tTopLeft, tBottomRight, tBroaderTopLeft, tBroaderBottomRight)
+		print( " 3Miro: Birth in Foreign Land: ",iCiv,tTopLeft, tBottomRight, tBroaderTopLeft, tBroaderBottomRight, tCapital)
 		iNumAICitiesConverted, iNumHumanCitiesToConvert = self.convertSurroundingCities(iCiv, tTopLeft, tBottomRight)
 		self.convertSurroundingPlotCulture(iCiv, tTopLeft, tBottomRight)
 
@@ -1860,10 +1842,8 @@ class RiseAndFall:
 			utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iBarbarian, False, True) #remaining barbs in the region now belong to the new civ
 			for i in range( con.iIndepStart, con.iIndepEnd + 1 ):
 				utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, i, False, False) #remaining barbs in the region now belong to the new civ
-			#utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iIndependent, False, False) #remaining barbs in the region now belong to the new civ
-			#utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iIndependent2, False, False) #remaining barbs in the region now belong to the new civ
 
-		else:   #search another place
+		else: #search another place
 			dummy, plotList = utils.squareSearch( tTopLeft, tBottomRight, utils.goodPlots, [] )
 			rndNum = gc.getGame().getSorenRandNum(len(plotList), 'searching another free plot')
 			if (len(plotList)):
@@ -1889,8 +1869,6 @@ class RiseAndFall:
 			utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iBarbarian, True, True) #remaining barbs in the region now belong to the new civ
 			for i in range( con.iIndepStart, con.iIndepEnd + 1 ):
 				utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, i, True, False) #remaining barbs in the region now belong to the new civ
-			#utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iIndependent, True, False) #remaining barbs in the region now belong to the new civ
-			#utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iIndependent2, True, False) #remaining barbs in the region now belong to the new civ
 
 		if (iNumHumanCitiesToConvert> 0):
 			self.flipPopup(iCiv, tTopLeft, tBottomRight)
@@ -1942,11 +1920,10 @@ class RiseAndFall:
 				elif (iOwner == iHuman and not loopCity.isCapital()):
 					if (iNumHumanCities == 0):
 						iNumHumanCities += 1
-						#iConvertedCitiesCount += 1
 						#self.flipPopup(iCiv, tTopLeft, tBottomRight)
 				#case 3: other
 				elif (not loopCity.isCapital()): # 3Miro: this keeps crashing in the C++, makes no sense
-				#elif ( True ):   #utils.debugTextPopup( 'OTHER' )
+				#elif ( True ): #utils.debugTextPopup( 'OTHER' )
 					if (iConvertedCitiesCount < 6): #there won't be more than 5 flips in the area
 						#utils.debugTextPopup( 'iConvertedCities OK' )
 						iCultureChange = 50
@@ -2017,7 +1994,7 @@ class RiseAndFall:
 			rndNum = gc.getGame().getSorenRandNum(len(seaPlotList), 'sea plot')
 			result = seaPlotList[rndNum]
 			if (result):
-				    return ((result.getX(), result.getY()))
+				return ((result.getX(), result.getY()))
 		return (None)
 
 
@@ -2172,7 +2149,7 @@ class RiseAndFall:
 		if ( iCiv == iNorway ):
 			utils.makeUnit(xml.iVikingBeserker, iCiv, tPlot, 4)
 		if ( iCiv == iDenmark ):
-			utils.makeUnit(xml.iHuscarl, iCiv, tPlot, 3)
+			utils.makeUnit(xml.iHuskarl, iCiv, tPlot, 3)
 		if ( iCiv == iVenecia ):
 			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
 		if ( iCiv == iNovgorod ):
@@ -2258,7 +2235,7 @@ class RiseAndFall:
 		if (iCiv == iDenmark):
 			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
-			utils.makeUnit(xml.iHuscarl, iCiv, tPlot, 4)
+			utils.makeUnit(xml.iHuskarl, iCiv, tPlot, 4)
 			tSeaPlot = self.findSeaPlots((61,56), 2)
 			if ( tSeaPlot ):
 				pDenmark.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
@@ -2937,10 +2914,10 @@ class RiseAndFall:
 
 
 	def showArea(self,iCiv):
-		#print("  Visible for: ",iCiv )
+		#print(" Visible for: ",iCiv )
 		for iI in range( len( tVisible[iCiv] ) ):
 			self.showRect( iCiv, tVisible[iCiv][iI][0], tVisible[iCiv][iI][1], tVisible[iCiv][iI][2], tVisible[iCiv][iI][3] )
-		#print("  Visible for: ",iCiv )
+		#print(" Visible for: ",iCiv )
 		#pass
 
 

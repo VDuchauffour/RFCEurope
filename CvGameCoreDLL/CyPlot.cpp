@@ -25,13 +25,19 @@ void CyPlot::erase()
 		m_pPlot->erase();
 }
 
-//Rhye - start
+//Rhye:
 void CyPlot::eraseAIDevelopment()
 {
 	if (m_pPlot)
 		m_pPlot->eraseAIDevelopment();
 }
-//Rhye - end
+
+//Absinthe:
+void CyPlot::eraseCityDevelopment()
+{
+	if (m_pPlot)
+		m_pPlot->eraseCityDevelopment();
+}
 
 NiPoint3 CyPlot::getPoint()
 {

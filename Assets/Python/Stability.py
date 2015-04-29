@@ -44,11 +44,13 @@ class Stability:
 			gc.getPlayer( con.iFrankia ).changeStabilityBase( iCathegoryExpansion, 5 ) # so that they don't collapse from the cities they lose to everyone
 		#if ( not gc.getPlayer( con.iVenecia ).isHuman() ):
 			#gc.getPlayer( con.iVenecia ).changeStabilityBase( iCathegoryExpansion, 4 ) # they collapse too often
-		if ( gc.getPlayer( con.iDenmark ).isHuman() ):
-			gc.getPlayer( con.iDenmark ).changeStabilityBase( iCathegoryExpansion, 2 )
+		#if ( gc.getPlayer( con.iDenmark ).isHuman() ):
+			#gc.getPlayer( con.iDenmark ).changeStabilityBase( iCathegoryExpansion, 2 ) # too many border provinces to conquer in short time
 		iHandicap = gc.getGame().getHandicapType()
 		if (iHandicap == 0):
-			gc.getPlayer( utils.getHumanID() ).changeStabilityBase( iCathegoryExpansion, 8 )
+			gc.getPlayer( utils.getHumanID() ).changeStabilityBase( iCathegoryExpansion, 6 )
+		elif (iHandicap == 0):
+			gc.getPlayer( utils.getHumanID() ).changeStabilityBase( iCathegoryExpansion, 2 )
 
 		# Absinthe: Stability is accounted properly for stuff placed in WB - from RFCE++
 		for iPlayer in range(iNumMajorPlayers):

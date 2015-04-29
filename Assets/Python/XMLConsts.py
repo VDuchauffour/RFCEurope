@@ -237,7 +237,7 @@ iArabiaGhazi, iByzantineCataphract, iKievDruzhina, iKnight, iMoscowBoyar, iBurgu
 iPolishWingedHussar, iCatapult, iTrebuchet, iBombard, iTurkeyGreatBombard, iCannon, iFieldArtillery, iWorkboat, iGalley, iCogge,
 iHolk, iGalleon, iWarGalley, iGunGalley, iVeniceGalleas, iCarrack, iFrigate, iCaravel, iPrivateer, iSpy,
 iProsecutor, iProphet, iArtist, iScientist, iMerchant, iEngineer, iGreatGeneral, iGreatSpy, iMongolKeshik, iSeljuk,
-iJanissary, iTagmata, iCorsair, iHighlander, iWelshLongbowman, iCondottieri, iSwissPikeman, iVarangianGuard, iHuscarl, iAlmogavar,
+iJanissary, iTagmata, iCorsair, iHighlander, iWelshLongbowman, iCondottieri, iSwissPikeman, iVarangianGuard, iHuskarl, iAlmogavar,
 iBlackGuard, iHackapell, iReiter, iZaporozhianCossack, iDonCossack, iDoppelsoldner, iIrishBrigade, iStradiot, iWaardgelder, iNaffatun,
 iTurkopoles, iWalloonGuard, iSwissGun, iLipkaTatar, iHighlanderGun, iZanji, iTouareg, iNubianLongbowman, iNovgorodUshkuinik, iPrussiaDeathsHeadHussar,
 iScotlandSheltron, iBedouin, iTurcomanHorseArcher) = range(iNumUnits)
