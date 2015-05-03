@@ -1264,7 +1264,7 @@ class CvVictoryScreen:
 					iFoodPlayer = iLoopPlayer
 		sText = localText.getText("TXT_KEY_UHV_FOOD_PRODUCTION",())
 		sUnit = "%s" %( u"<font=5>%c</font>" %( gc.getYieldInfo(YieldTypes.YIELD_FOOD).getChar()) )
-		sText1 += "\n\n" + self.getCompetition(iPolandFood, iOtherFood, iFoodPlayer, sText, sUnit)
+		sText1 += self.getCompetition(iPolandFood, iOtherFood, iFoodPlayer, sText, sUnit)
 		#UHV2
 		tProvsToCheck = vic.tPolishControl
 		iNumCities = 0
@@ -1632,7 +1632,7 @@ class CvVictoryScreen:
 		for iProv in tProvsToCheck:
 			sProvName = "TXT_KEY_PROVINCE_NAME_%i" %iProv
 			sProvName = localText.getText(sProvName,())
-			if ( pEnemy.isAlive() and pEnemy.getProvinceCurrentState( iProv ) > 0 ):
+			if ( pEnemy.isAlive() and pEnemy.getProvinceCityCount( iProv ) > 0 ):
 				sStringMiss += "  " + u"<color=208,0,0>%s</color>" %(sProvName)
 			else:
 				sStringConq += "  " + u"<color=0,255,0>%s</color>" %(sProvName)

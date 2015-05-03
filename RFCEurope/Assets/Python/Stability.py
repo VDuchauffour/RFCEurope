@@ -474,19 +474,19 @@ class Stability:
 		if (iCivic0 == xml.iCivicDivineMonarchy): #Divine Monarchy should have an appropriate religious civic
 			if (iCivic4 == xml.iCivicPaganism): #Paganism
 				iCivicCombo -=4
-			if (iCivic4 == xml.iCivicTheocracy): #Theocracy
+			elif (iCivic4 == xml.iCivicTheocracy): #Theocracy
 				iCivicCombo +=3
-			if (iCivic4 == xml.iCivicStateReligion): #State Religion
+			elif (iCivic4 == xml.iCivicStateReligion): #State Religion
 				iCivicCombo +=2
-			if (iCivic4 == xml.iCivicOrganizedReligion): #State Religion
+			elif (iCivic4 == xml.iCivicOrganizedReligion): #State Religion
 				iCivicCombo +=2
-			if (iCivic4 == xml.iCivicFreeReligion): #Free Religion
+			elif (iCivic4 == xml.iCivicFreeReligion): #Free Religion
 				iCivicCombo -=5
 			if (iCivic1 == xml.iCivicReligiousLaw): #Religious Law
 				iCivicCombo +=2
 		if ( pPlayer.getPicklefreeParameter( con.iIsHasStephansdom ) == 1 ):
 			#if (self.getHasStephansdom(iPlayer) == 1):
-			if(iCivic0 == xml.iCivicFeudalMonarchy or iCivic0 == xml.iCivicDivineMonarchy or iCivic0 == xml.iCivicLimitedMonarchy):
+			if (iCivic0 in ( xml.iCivicFeudalMonarchy, xml.iCivicDivineMonarchy, xml.iCivicLimitedMonarchy) ):
 					iCivicCombo +=2
 		if (iCivic0 == xml.iCivicLimitedMonarchy or iCivic0 == xml.iCivicMerchantRepublic): #Limited Monarchy and Republics both like enlightened civics
 			if (iCivic1 == xml.iCivicCommonLaw): #Common Law
@@ -496,18 +496,18 @@ class Stability:
 		if (iCivic1 == xml.iCivicFeudalLaw): #Feudal law works well with...
 			if (iCivic2 == xml.iCivicSerfdom): # Serfdom
 				iCivicCombo +=1
+			elif (iCivic2 == xml.iCivicFreePeasantry): #but poorly with uppity free peasants
+				iCivicCombo -=4
 			if (iCivic3 == xml.iCivicManorialism): #Manorialism
 				iCivicCombo +=1
 			if (iCivic0 == xml.iCivicFeudalMonarchy ):
 				iCivicCombo +=1
-			if (iCivic2 == xml.iCivicFreePeasantry): #but poorly with uppity free peasants
-				iCivicCombo -=4
 		if (iCivic2 == xml.iCivicSerfdom and iCivic3 == xml.iCivicManorialism): #Serfdom and Manorialism go together
 			iCivicCombo +=2
 		if (iCivic1 == xml.iCivicReligiousLaw): #Religious Law
 			if (iCivic4 == xml.iCivicPaganism or iCivic4 == xml.iCivicFreeReligion): #Dislikes Paganism or Free Religion
 				iCivicCombo -=5
-			if (iCivic4 == xml.iCivicTheocracy): #Favors theocracy
+			elif (iCivic4 == xml.iCivicTheocracy): #Favors theocracy
 				iCivicCombo +=3
 		if (iCivic1 == xml.iCivicCommonLaw): #Common Law
 			if (iCivic2 == xml.iCivicFreeLabor): #likes Free labor
