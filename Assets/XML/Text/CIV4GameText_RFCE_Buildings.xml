@@ -764,15 +764,6 @@
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_INFIRMARY_HELP</Tag>
-		<English>[ICON_BULLET]Requires [LINK=CORPORATION_1]Knights Hospitallers[\LINK] present in the city</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Benötigt den [LINK=CORPORATION_1]Johanniterorden[\LINK] in dieser Stadt</German>
-		<Italian>[ICON_BULLET]Richiede [LINK=CORPORATION_1]Cavalieri Ospedalieri[\LINK]nella città</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Requer [LINK=CORPORATION_1]Knights Hospitallers[\LINK] presente na cidade</Portuguese>
-	</TEXT>
 		<!-- General Buildings -->
 		<!-- Religious Buildings -->
 	<TEXT>

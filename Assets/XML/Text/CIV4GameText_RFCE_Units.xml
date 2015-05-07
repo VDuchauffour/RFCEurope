@@ -1187,15 +1187,6 @@
 		<Portuguese>Cavaleiro de São João</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_KNIGHT_OF_ST_JOHNS_HELP</Tag>
-		<English>[ICON_BULLET]Requires [LINK=CORPORATION_1]Knights Hospitallers[\LINK] present in the city</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Benötigt [LINK=CORPORATION_1]Johanniterorden[\LINK] in der Stadt</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Requer [LINK=CORPORATION_1]Cavaleiros Hospitalários[\LINK] presente na cidade</Portuguese>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_TEMPLAR_KNIGHT</Tag>
 		<English>Templar Knight</English>
 		<French>Chevalier Templier</French>
@@ -1209,15 +1200,6 @@
 		<Portuguese>Cavaleiro Templário</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TEMPLAR_KNIGHT_HELP</Tag>
-		<English>[ICON_BULLET]Requires [LINK=CORPORATION_2]Knights Templar[\LINK] present in the city</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Benötigt [LINK=CORPORATION_2]Templerorden[\LINK] in der Stadt</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Requer [LINK=CORPORATION_2]Cavaleiros Templários[\LINK] presente na cidade</Portuguese>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_TEUTONIC_KNIGHT</Tag>
 		<English>Teutonic Knight</English>
 		<French>Chevalier Teutonique</French>
@@ -1229,15 +1211,6 @@
 		<Italian>Cavaliere Teutonico</Italian>
 		<Spanish>Caballero Teut&#243;nico</Spanish>
 		<Portuguese>Cavaleiro Teutônico</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TEUTONIC_KNIGHT_HELP</Tag>
-		<English>[ICON_BULLET]Requires [LINK=CORPORATION_3]Teutonic Knights[\LINK] present in the city</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Benötigt [LINK=CORPORATION_3]Deutscher Orden[\LINK] in der Stadt</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Requer [LINK=CORPORATION_3]Cavaleiros Teutônicos[\LINK] presente na cidade</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MONGOL_KESHIK</Tag>
