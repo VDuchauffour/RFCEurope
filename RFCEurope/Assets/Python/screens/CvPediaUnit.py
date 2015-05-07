@@ -235,6 +235,11 @@ class CvPediaUnit:
 		if (iPrereq >= 0):
 			screen.attachImageButton( panelName, "", gc.getBuildingInfo(iPrereq).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, iPrereq, -1, False )
 
+		# add company buttons
+		iPrereq = gc.getUnitInfo(self.iUnit).getPrereqCorporation()
+		if iPrereq >= 0:
+			screen.attachImageButton( panelName, "", gc.getCorporationInfo(iPrereq).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_CORPORATION, iPrereq, -1, False )
+
 	# Place upgrades
 	def placeUpgradesTo(self):
 

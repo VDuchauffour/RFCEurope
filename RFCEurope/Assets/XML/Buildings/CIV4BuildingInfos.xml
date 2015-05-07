@@ -12073,7 +12073,6 @@
 			<Description>TXT_KEY_BUILDING_INFIRMARY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INFIRMARY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_INFIRMARY_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_INFIRMARY_HELP</Help>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INFIRMARY</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>

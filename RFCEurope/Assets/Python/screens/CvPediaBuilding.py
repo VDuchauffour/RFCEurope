@@ -263,6 +263,11 @@ class CvPediaBuilding:
 		if (iPrereq >= 0):
 			screen.attachImageButton( panelName, "", gc.getReligionInfo(iPrereq).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_RELIGION, iPrereq, -1, False )
 
+		# add company buttons
+		iPrereq = gc.getBuildingInfo(self.iBuilding).getPrereqCorporation()
+		if iPrereq >= 0:
+			screen.attachImageButton( panelName, "", gc.getCorporationInfo(iPrereq).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_CORPORATION, iPrereq, -1, False )
+
 	# Place Special abilities
 	def placeSpecial(self):
 

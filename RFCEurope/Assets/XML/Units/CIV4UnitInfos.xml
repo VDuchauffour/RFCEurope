@@ -5214,7 +5214,6 @@
 			<Description>TXT_KEY_UNIT_KNIGHT_OF_ST_JOHNS</Description>
 			<Civilopedia>TXT_KEY_KNIGHTS_HOSPITALLER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_KNIGHT_OF_ST_JOHNS_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_KNIGHT_OF_ST_JOHNS_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -11025,7 +11024,6 @@
 			<Description>TXT_KEY_UNIT_TEMPLAR_KNIGHT</Description>
 			<Civilopedia>TXT_KEY_KNIGHTS_TEMPLAR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_TEMPLAR_KNIGHT_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_TEMPLAR_KNIGHT_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -11226,7 +11224,6 @@
 			<Description>TXT_KEY_UNIT_TEUTONIC_KNIGHT</Description>
 			<Civilopedia>TXT_KEY_TEUTONIC_KNIGHTS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_TEUTONIC_KNIGHT_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_TEUTONIC_KNIGHT_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
