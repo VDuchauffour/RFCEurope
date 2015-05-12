@@ -240,6 +240,15 @@
 		<Portuguese>Após a captura bem sucedida da Cidade Santa, Cruzados estão retornando a casa: </Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_CRUSADERS_RETURNING_HOME</Tag>
+		<English>After years of fighting to accomplish their mission, some of our Crusaders are returning home: </English>
+		<French>After years of fighting to accomplish their mission, some of our Crusaders are returning home: </French>
+		<German>After years of fighting to accomplish their mission, some of our Crusaders are returning home: </German>
+		<Italian>After years of fighting to accomplish their mission, some of our Crusaders are returning home: </Italian>
+		<Spanish>After years of fighting to accomplish their mission, some of our Crusaders are returning home: </Spanish>
+		<Portuguese>After years of fighting to accomplish their mission, some of our Crusaders are returning home: </Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CRUSADE_DEFENSIVE_PROPOSAL_POPUP</Tag>
 		<English>Defensive Crusade</English>
 		<French>Croisade D&#233;fensive</French>
@@ -276,12 +285,21 @@
 		<Portuguese>NÃO, nós podemos esmagar essa escória nós mesmos!</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CRUSADE_DEFENSIVE_MESSAGE</Tag>
+		<Tag>TXT_KEY_CRUSADE_DEFENSIVE_AI_MESSAGE</Tag>
 		<English>The Pope has called for a Crusade to aid </English>
 		<French>Le Pape a appel&#233; pour la Croisade en aide &#224; </French>
 		<German>Der Papst ruft einen Kreuzzug aus zur Hilfe von</German>
 		<Italian>Il Papa ha richiesto una Crociata per aiutare</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>The Pope has called for a Crusade to aid </Spanish>
 		<Portuguese>O Papa organizou uma Cruzada para ajudar </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_DEFENSIVE_HUMAN_MESSAGE</Tag>
+		<English>The Crusaders already arrived in your capital, eager to protect your realm!</English>
+		<French>The Crusaders already arrived in your capital, eager to protect your realm!</French>
+		<German>The Crusaders already arrived in your capital, eager to protect your realm!</German>
+		<Italian>The Crusaders already arrived in your capital, eager to protect your realm!</Italian>
+		<Spanish>The Crusaders already arrived in your capital, eager to protect your realm!</Spanish>
+		<Portuguese>The Crusaders already arrived in your capital, eager to protect your realm!</Portuguese>
 	</TEXT>
 </Civ4GameText>

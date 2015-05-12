@@ -48,9 +48,9 @@ class Resources:
 		if (iGameTurn == xml.i1500AD):
 			self.createResource(55, 35, xml.iRice) #Rice in Italy
 		if (iGameTurn == xml.i1250AD):
-			self.removeResource( 2, 69)  #Remove the NAA from Iceland
-		if (iGameTurn == xml.i1452AD):   #Coffee spawns instead of being preplaced
-			self.createResource(93, 0, xml.iCoffee)  #near Sinai
+			self.removeResource( 2, 69) #Remove the NAA from Iceland
+		if (iGameTurn == xml.i1452AD): #Coffee spawns instead of being preplaced
+			self.createResource(93, 0, xml.iCoffee) #near Sinai
 			self.createResource(99, 13, xml.iCoffee) #between Damascus and Edessa
 		if (iGameTurn == xml.i1580AD):
 			self.createResource(32, 59, xml.iPotato) #Potatoes in Ireland

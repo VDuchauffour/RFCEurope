@@ -277,11 +277,11 @@ class Barbs:
 		#Serbs in the Southern Balkans
 		if (iGameTurn >= xml.i1025AD and iGameTurn < xml.i1282AD):
 			if (gc.getPlayer(con.iByzantium).isHuman()): #more barbs for human Byzantium
-				self.spawnUnits( iBarbarian, (64,23),(73,27), xml.iAxeman, 1, iGameTurn,9,3,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_SERBS", ()))
-				self.spawnUnits( iBarbarian, (64,23),(73,27), xml.iLancer, 1 + iHandicap, iGameTurn,11,7,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_SERBS", ()))
-				self.spawnUnits( iBarbarian, (66,25),(71,28), xml.iSwordsman, 1, iGameTurn,7,4,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_SERBS", ()))
+				self.spawnUnits( iBarbarian, (67,24),(73,28), xml.iAxeman, 1, iGameTurn,9,3,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_SERBS", ()))
+				self.spawnUnits( iBarbarian, (67,24),(73,28), xml.iLancer, 1 + iHandicap, iGameTurn,11,7,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_SERBS", ()))
+				self.spawnUnits( iBarbarian, (69,25),(71,29), xml.iSwordsman, 1, iGameTurn,7,4,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_SERBS", ()))
 			else: #less for the AI
-				self.spawnUnits( iBarbarian, (64,23),(73,27), xml.iAxeman, 1, iGameTurn,9,3,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_SERBS", ()))
+				self.spawnUnits( iBarbarian, (67,24),(73,28), xml.iAxeman, 1, iGameTurn,9,3,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_SERBS", ()))
 
 		#Misc Asiatic tribes to keep Ukraine empty
 		if (iGameTurn >= xml.i632AD and iGameTurn < xml.i800AD):
@@ -488,10 +488,10 @@ class Barbs:
 			else:
 				self.spawnUnits( iBarbarian, (78,32),(83,34), xml.iMongolKeshik, 2, iGameTurn,4,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
 			#Moscow area
-			self.spawnUnits( iBarbarian, (89,46),(99,56), xml.iMongolKeshik, 2 + iHandicap, iGameTurn,4,0,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
-			self.spawnUnits( iBarbarian, (91,48),(97,54), xml.iMongolKeshik, 2, iGameTurn,6,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
+			self.spawnUnits( iBarbarian, (89,46),(95,54), xml.iMongolKeshik, 2, iGameTurn,4,0,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
+			self.spawnUnits( iBarbarian, (91,48),(97,53), xml.iMongolKeshik, 2, iGameTurn,6,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
 			#Middle East
-			self.spawnUnits( iBarbarian, (94,20),(99,26), xml.iMongolKeshik, 2 + iHandicap, iGameTurn,3,2,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
+			self.spawnUnits( iBarbarian, (94,20),(99,26), xml.iMongolKeshik, 2, iGameTurn,3,2,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
 			self.spawnUnits( iBarbarian, (92,21),(97,25), xml.iMongolKeshik, 2, iGameTurn,6,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
 
 		#Timurids, Tamerlane's conquests (aka Mongols, the return!)

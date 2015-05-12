@@ -107,6 +107,15 @@
 		<Portuguese>Nós cumprimos 2 dos 3 Objetivos Históricos. Um Arco do Triunfo foi erguido em nossa capital</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_RIVAL_CIVS</Tag>
+		<English>Some of our rivals envy our accomplishments, and they are ganging up on us!</English>
+		<French>Some of our rivals envy our accomplishments, and they are ganging up on us!</French>
+		<German>Some of our rivals envy our accomplishments, and they are ganging up on us!</German>
+		<Italian>Some of our rivals envy our accomplishments, and they are ganging up on us!</Italian>
+		<Spanish>Some of our rivals envy our accomplishments, and they are ganging up on us!</Spanish>
+		<Portuguese>Some of our rivals envy our accomplishments, and they are ganging up on us!</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_ACCOMPLISHED</Tag>
 		<English>Historical goals accomplished:</English>
 		<French>Objectifs historiques accomplis:</French>

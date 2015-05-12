@@ -197,12 +197,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Common Law, Free Peasantry, Free Labor, Trade Economy, Less than 5 cities[COLOR_REVERT], Unstable with [COLOR_RED]Feudal Law, More than 4 cities[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Common Law, Free Peasantry, Free Labor, Trade Economy, Less than 5 cities[COLOR_REVERT], Unstable with [COLOR_RED]Feudal Law, More than 5 cities[COLOR_REVERT]</English>
 		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Gewohnheitsrecht, Bauernbefreiung, Gewerbefreiheit, Marktwirtschaft, Weniger als 5 Städten[COLOR_REVERT], Instabil mit [COLOR_RED]Lehnswesen, Mehr als 4 Städten[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Comune, Contadini Liberi,Libertà Lavorativa, Economia di Mercato, Meno di 5 città[COLOR_REVERT], Instabile con [COLOR_RED]Legge Feudale, più di 4 città[COLOR_REVERT]</Italian>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Gewohnheitsrecht, Bauernbefreiung, Gewerbefreiheit, Marktwirtschaft, Weniger als 5 Städten[COLOR_REVERT], Instabil mit [COLOR_RED]Lehnswesen, Mehr als 5 Städten[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Comune, Contadini Liberi,Libertà Lavorativa, Economia di Mercato, Meno di 5 città[COLOR_REVERT], Instabile con [COLOR_RED]Legge Feudale, più di 5 città[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Direito Comum, Campesinato Livre, Labor Livre, Economia de Mercado, Menos de 5 cidades[COLOR_REVERT], Instável com [COLOR_RED]Lei Feudal, Mais de 4 cidades[COLOR_REVERT]</Portuguese>
+		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Direito Comum, Campesinato Livre, Labor Livre, Economia de Mercado, Menos de 5 cidades[COLOR_REVERT], Instável com [COLOR_RED]Lei Feudal, Mais de 5 cidades[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<!-- Civic Category Government -->
 	<!-- Civic Category Legal -->
@@ -307,12 +307,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUREAUCRACY_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Less than 6 cities[COLOR_REVERT], Unstable with [COLOR_RED]More than 5 cities[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Less than 6 cities[COLOR_REVERT], Unstable with [COLOR_RED]More than 6 cities[COLOR_REVERT]</English>
 		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Weniger als 6 Städten[COLOR_REVERT], Instabil mit [COLOR_RED]Mehr als 5 Städten[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]meno di 6 città[COLOR_REVERT], instabile con [COLOR_RED]più di 5 città[COLOR_REVERT]</Italian>
+		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Weniger als 6 Städten[COLOR_REVERT], Instabil mit [COLOR_RED]Mehr als 6 Städten[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]meno di 6 città[COLOR_REVERT], instabile con [COLOR_RED]più di 6 città[COLOR_REVERT]</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Menos de 6 cidades[COLOR_REVERT], Instável com [COLOR_RED]Mais de 5 cidades[COLOR_REVERT]</Portuguese>
+		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Menos de 6 cidades[COLOR_REVERT], Instável com [COLOR_RED]Mais de 6 cidades[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW</Tag>

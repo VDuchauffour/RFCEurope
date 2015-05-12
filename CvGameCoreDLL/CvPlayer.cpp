@@ -3273,11 +3273,11 @@ bool CvPlayer::hasBusyUnit() const
 	{
 		if (pLoopSelectionGroup->isBusy())
 		{
-		    if (pLoopSelectionGroup->getNumUnits() == 0)
-		    {
-		        pLoopSelectionGroup->kill();
-		        return false;
-		    }
+			if (pLoopSelectionGroup->getNumUnits() == 0)
+			{
+				pLoopSelectionGroup->kill();
+				return false;
+			}
 
 			//GC.getGameINLINE().logMsg(" hasBusyUnit group at: %d %d   NumUnits: %d ",pLoopSelectionGroup->getX(),pLoopSelectionGroup->getY(),pLoopSelectionGroup->getNumUnits() );
 

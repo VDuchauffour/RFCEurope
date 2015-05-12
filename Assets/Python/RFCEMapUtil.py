@@ -221,7 +221,7 @@ class RFCEMapManager:
 				outsidePlots.append(xy)
 
 		for xy in outsidePlots:
-			self.removeNormalAreaAdditionalPlot(iPlayer,xy)
+			self.removeNormalAreaSubtractedPlot(iPlayer,xy)
 
 	def getNormalAreaBL(self, iPlayer):
 		return self.normalAreasBL[iPlayer]

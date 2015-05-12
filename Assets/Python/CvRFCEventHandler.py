@@ -291,7 +291,7 @@ class CvRFCEventHandler:
 		#		if (city.hasBuilding(iNationalWonder)):
 		#			city.setHasRealBuilding((iNationalWonder), False)
 
-		self.pla.onCityAcquired(owner,playerType,city) #Plague
+		self.pla.onCityAcquired(owner, playerType, city) #Plague
 		self.vic.onCityAcquired(owner, playerType, city, bConquest) #Victory
 
 		return 0
@@ -339,8 +339,9 @@ class CvRFCEventHandler:
 		#			If the last destroyed improvement in the game is a fort, and it was in the same place as the city, then it's good enough for me
 		#			(only problem might be if currently there is no improvement on the city-founding tile, but the last destroyed improvement in the game
 		#				was a fort on the exact same plot some turns ago - but IMO that's not much of a stress of reality, there was a fort there after all)
-		# Another issue: CvEventManager.iImpBeforeCity needs to have some initial value if a city is founded before the first destroyed improvement
-		# Workaround: adding an improvement in the scenario map to one of the preplaced Byzantine cities, so the improvement will be autorazed on the beginning of the 1st players turn
+		#			Note that CvEventManager.iImpBeforeCity needs to have some initial value if a city is founded before the first destroyed improvement
+		#				adding an improvement in the scenario map to one of the preplaced Byzantine cities won't work perfectly:
+		#				while the improvement will be autorazed on the beginning of the 1st players turn when starting in 500AD, does nothing if you load a saved game
 		iImpBeforeCityType = (CvEventManager.iImpBeforeCity / 10000) % 100
 		iImpBeforeCityX = (CvEventManager.iImpBeforeCity / 100) % 100
 		iImpBeforeCityY = CvEventManager.iImpBeforeCity % 100
@@ -351,7 +352,7 @@ class CvRFCEventHandler:
 
 		# Absinthe: Some initial food for all cities on foundation
 		#			So Leon and Roskilde for example don't lose a population in the first couple turns
-		#			Neither the indy cities on spawn (they start with zero-sized culture, so they shrink without some food reserves)
+		#			Nor the indy cities on spawn (they start with zero-sized culture, so they shrink without some food reserves)
 		#			Currently 1/5 of the treshold of the next population growth
 		city.setFood( city.growthThreshold() / 5 )
 
@@ -465,11 +466,9 @@ class CvRFCEventHandler:
 		self.res.checkTurn(iGameTurn)
 		self.up.checkTurn(iGameTurn)
 		self.aiw.checkTurn(iGameTurn)
-		#self.cong.checkTurn(iGameTurn) # 3Miro: no congress
 		self.pla.checkTurn(iGameTurn)
 		self.vic.checkTurn(iGameTurn)
 		self.sta.checkTurn(iGameTurn)
-		#self.com.checkTurn(iGameTurn) # 3Miro: no communication problem
 		self.crusade.checkTurn(iGameTurn)
 
 		#Mercenaries - start

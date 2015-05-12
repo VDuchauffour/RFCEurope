@@ -144,9 +144,9 @@ tGermanyPot2Norm = [xml.iP_Bohemia,xml.iP_Holstein,xml.iP_Pomerania,xml.iP_Nethe
 
 tNovgorodCore = [xml.iP_Novgorod, xml.iP_Karelia]
 tNovgorodNorm = [xml.iP_Rostov, xml.iP_Vologda]
-tNovgorodOuter = [xml.iP_Smolensk, xml.iP_Polotsk, xml.iP_Livonia, xml.iP_Osterland]
+tNovgorodOuter = [xml.iP_Smolensk, xml.iP_Polotsk, xml.iP_Livonia]
 tNovgorodPot2Core = []
-tNovgorodPot2Norm = [xml.iP_Estonia]
+tNovgorodPot2Norm = [xml.iP_Estonia, xml.iP_Osterland]
 
 tKievCore = [xml.iP_Kiev,xml.iP_Sloboda,xml.iP_Pereyaslavl,xml.iP_Chernigov]
 tKievNorm = [xml.iP_Podolia,xml.iP_Volhynia]
@@ -643,7 +643,7 @@ class ProvinceManager:
 			pNorway.setProvinceType( xml.iP_Svealand, iProvinceNone )
 			pDenmark.setProvinceType(xml.iP_Gotaland, iProvinceNone )
 			pDenmark.setProvinceType(xml.iP_Svealand, iProvinceNone )
-			pNovgorod.setProvinceType( xml.iP_Osterland, iProvinceNone )
+			pNovgorod.setProvinceType( xml.iP_Osterland, iProvinceOuter )
 			utils.refreshStabilityOverlay() # refresh the stability overlay
 		elif ( iPlayer == iDutch ):
 			pSpain.setProvinceType( xml.iP_Netherlands, iProvinceNone )

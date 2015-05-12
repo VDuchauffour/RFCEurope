@@ -65,44 +65,47 @@ i1080AD =160
 i1085AD =162
 i1089AD =163
 i1094AD =165
+i1096AD =165	# First Crusade 1096-1099
 i1097AD =166
-i1099AD =166	# First Crusade to arrive
+i1099AD =166	# Conquest of Jerusalem
 i1101AD =167
+i1107AD =169	# Norwegian Crusade (1107-1110)
 i1120AD =173
 i1139AD =180											# Spawn of Portugal
-i1147AD =183	# Second Crusade to arrive
-i1150AD =184	# First Swedish Crusade
+i1147AD =183	# Second Crusade 1147-1149
+i1150AD =184	# First Swedish "Crusade"
 i1160AD =187
 i1164AD =188											# Spawn of Aragon
 i1167AD =189	# Barbarossa wins against Rome										# Germany UHV 1
 i1171AD =191
 i1180AD =193
-i1187AD =195	# Third Crusade to arrive
-i1198AD =199
+i1187AD =195	# Third Crusade 1187-1192
+i1198AD =199	# German Crusade (1195–1198)
 i1200AD =200
-i1202AD =201	# Fourth Crusade to arrive
+i1202AD =201	# Fourth Crusade 1202-1204
 i1204AD =201																		# Venice UHV 2
 i1210AD =203											# Spawn of Sweden
 i1212AD =204
+i1217AD =206	# Fifth Crusade 1217-1221
 i1219AD =206
 i1224AD =208											# Spawn of Prussia
 i1227AD =209																		# Morocco UHV 1
-i1229AD =210	# Fifth Crusade to arrive
+i1229AD =210	# Sixth Crusade 1228-1229
 i1230AD =210
 i1236AD =212	# Mongol invasions						# Spawn of Lithuania
-i1240AD =213	# Second Swedish Crusade
+i1240AD =213	# Second Swedish "Crusade"
 i1242AD =214	# Battle on the Ice
-i1248AD =216
+i1248AD =216	# Seventh Crusade 1248-1254
 i1250AD =217																		# Kiev UHV 1, Novgorod UHV 1
 i1259AD =220																		# Bulgaria UHV 2
 i1263AD =221																		# Norway UHV 2
-i1271AD =224
+i1271AD =224	# Eighth and Ninth Crusade 1270-1272
 i1281AD =227
 i1282AD =227	# Rise of the Habsburgs					# Spawn of Austria			# Byzantium UHV 2, Aragon UHV 1
-i1284AD =228
+i1284AD =228	# Aragonese Crusade (1284-1285)
 i1288AD =230	# End of the fist wave of Mongols									# Kiev UHV 2
 i1291AD =230																		# Arab UHV 2, France UHV 2
-i1293AD =231	# Third Swedish Crusade
+i1293AD =231	# Third Swedish "Crusade"
 i1296AD =232																		# Scotland UHV 1
 i1297AD =232
 i1299AD =233
@@ -230,17 +233,17 @@ iNumTechsFuture = 1
 iNumUnits = 123
 (iSettler, iWorker, iExecutive1, iExecutive2, iExecutive3, iExecutive4, iExecutive5, iExecutive6, iExecutive7, iCatholicMissionary,
 iOrthodoxMissionary, iProtestantMissionary, iIslamicMissionary, iArcher, iCrossbowman, iArbalest, iGenoaBalestrieri, iLongbowman, iEnglishLongbowman, iSpearman,
-iGuisarme, iPikeman, iHolyRomanLandsknecht, iAxeman, iVikingBeserker, iSwordsman, iLongSwordsman, iKnightofStJohns, iMaceman, iPortugalFootKnight,
-iLithuanianBajoras , iGrenadier, iNetherlandsGrenadier, iArquebusier, iMusketman, iSwedishKarolin, iSpanishTercio, iFrenchMusketeer, iLineInfantry, iDragoon,
-iScout, iMountedInfantry, iHorseArcher, iPistolier, iHussar, iLancer, iBulgarianKonnik, iCordobanBerber, iHeavyLancer, iHungarianHuszar,
-iArabiaGhazi, iByzantineCataphract, iKievDruzhina, iKnight, iMoscowBoyar, iBurgundianPaladin, iTemplar, iTeutonic, iCuirassier, iAustrianKurassier,
-iPolishWingedHussar, iCatapult, iTrebuchet, iBombard, iTurkeyGreatBombard, iCannon, iFieldArtillery, iWorkboat, iGalley, iCogge,
-iHolk, iGalleon, iWarGalley, iGunGalley, iVeniceGalleas, iCarrack, iFrigate, iCaravel, iPrivateer, iSpy,
-iProsecutor, iProphet, iArtist, iScientist, iMerchant, iEngineer, iGreatGeneral, iGreatSpy, iMongolKeshik, iSeljuk,
-iJanissary, iTagmata, iCorsair, iHighlander, iWelshLongbowman, iCondottieri, iSwissPikeman, iVarangianGuard, iHuskarl, iAlmogavar,
-iBlackGuard, iHackapell, iReiter, iZaporozhianCossack, iDonCossack, iDoppelsoldner, iIrishBrigade, iStradiot, iWaardgelder, iNaffatun,
-iTurkopoles, iWalloonGuard, iSwissGun, iLipkaTatar, iHighlanderGun, iZanji, iTouareg, iNubianLongbowman, iNovgorodUshkuinik, iPrussiaDeathsHeadHussar,
-iScotlandSheltron, iBedouin, iTurcomanHorseArcher) = range(iNumUnits)
+iGuisarme, iAragonAlmogavar, iScotlandSheltron, iPikeman, iHolyRomanLandsknecht, iAxeman, iVikingBeserker, iSwordsman, iDenmarkHuskarl, iLongSwordsman,
+iKnightofStJohns, iMaceman, iPortugalFootKnight, iLithuanianBajoras, iNovgorodUshkuinik, iGrenadier, iNetherlandsGrenadier, iArquebusier, iMusketman, iSwedishKarolin,
+iSpanishTercio, iFrenchMusketeer, iMoroccoBlackGuard, iLineInfantry, iDragoon, iScout, iMountedInfantry, iHorseArcher, iPistolier, iHussar,
+iPrussiaDeathsHeadHussar, iLancer, iBulgarianKonnik, iCordobanBerber, iHeavyLancer, iHungarianHuszar, iArabiaGhazi, iByzantineCataphract, iKievDruzhina, iKnight,
+iMoscowBoyar, iBurgundianPaladin, iTemplar, iTeutonic, iCuirassier, iAustrianKurassier, iPolishWingedHussar, iCatapult, iTrebuchet, iBombard,
+iTurkeyGreatBombard, iCannon, iFieldArtillery, iWorkboat, iGalley, iCogge, iHolk, iGalleon, iWarGalley, iGunGalley,
+iVeniceGalleas, iCarrack, iFrigate, iCaravel, iPrivateer, iSpy, iProsecutor, iProphet, iArtist, iScientist,
+iMerchant, iEngineer, iGreatGeneral, iGreatSpy, iMongolKeshik, iSeljuk, iJanissary, iTagmata, iCorsair, iHighlander,
+iWelshLongbowman, iCondottieri, iSwissPikeman, iVarangianGuard, iHackapell, iReiter, iZaporozhianCossack, iDonCossack, iDoppelsoldner, iIrishBrigade,
+iStradiot, iWaardgelder, iNaffatun, iTurkopoles, iWalloonGuard, iSwissGun, iLipkaTatar, iHighlanderGun, iZanji, iTouareg,
+iNubianLongbowman, iBedouin, iTurcomanHorseArcher) = range(iNumUnits)
 
 #From the CIV4UnitClassInfos.xml
 iProsecutorClass = 58

@@ -329,4 +329,13 @@
 		<Spanish>has lost most of its significance.</Spanish>
 		<Portuguese>has lost most of its significance.</Portuguese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SWITCH</Tag>
+		<English>%s1 rised as a new leader of the %s2!</English>
+		<French>%s1 rised as a new leader of the %s2!</French>
+		<German>%s1 rised as a new leader of the %s2!</German>
+		<Italian>%s1 rised as a new leader of the %s2!</Italian>
+		<Spanish>%s1 rised as a new leader of the %s2!</Spanish>
+		<Portuguese>%s1 rised as a new leader of the %s2!</Portuguese>
+	</TEXT>
 </Civ4GameText>
