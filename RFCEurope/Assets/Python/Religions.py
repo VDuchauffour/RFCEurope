@@ -290,7 +290,7 @@ class Religions:
 					iRandomNum = gc.getGame().getSorenRandNum(iCatholicFaith, 'random Pope gold gift')
 					for i in range( iNumPlayers - 1 ):
 						pPlayer = gc.getPlayer( i )
-						if ( pPlayer.getStateReligion() == xml.iCatholicism  and teamPope.isOpenBorders( pPlayer.getTeam() ) ):
+						if ( pPlayer.getStateReligion() == xml.iCatholicism and teamPope.isOpenBorders( pPlayer.getTeam() ) ):
 							iRandomNum -= pPlayer.getFaith()
 							if ( iRandomNum <= 0 ):
 								#print(" The Pope gifts 50 gold to ",i )
@@ -490,7 +490,7 @@ class Religions:
 		#print(" Building ",iBuilding," for ",iPlayer )
 		cityList = []
 		for pyCity in PyPlayer(iPlayer).getCityList():
-			if ( (not pyCity.GetCy().hasBuilding(iBuilding)) and pyCity.GetCy().isHasReligion( iReligion )  ):
+			if ( (not pyCity.GetCy().hasBuilding(iBuilding)) and pyCity.GetCy().isHasReligion( iReligion ) ):
 				cityList.append(pyCity.GetCy())
 		if ( len(cityList) > 0 ):
 			iRandCity = gc.getGame().getSorenRandNum(len(cityList), 'random city')
@@ -683,7 +683,7 @@ class Religions:
 		popup.setHeaderString(title)
 		popup.setBodyString(message)
 		for i in labels:
-		    popup.addButton( i )
+			popup.addButton( i )
 		popup.launch(False)
 
 	def eventApply7626(self, popupReturn):
@@ -783,7 +783,7 @@ class Religions:
 			city = pCity.GetCy()
 			#if ( city.getProvince() in lMercList[ lMerc[0] ][4] ):
 			if ( not city.isHasReligion( xml.iJudaism ) ):
-			      lCityList.append( city )
+				lCityList.append( city )
 
 		if ( len( lCityList ) > 0 ):
 			city = lCityList[gc.getGame().getSorenRandNum(len(lCityList), 'random city to migrate')]
@@ -799,4 +799,3 @@ class Religions:
 		# Spread Judaism to a city in France/Germany
 		tCity = self.selectRandomCityArea(tGermany)
 		self.spreadReligion(tCity,xml.iJudaism)
-		

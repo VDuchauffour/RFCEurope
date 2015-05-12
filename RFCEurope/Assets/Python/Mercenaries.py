@@ -569,7 +569,7 @@ class MercenaryManager:
 		for iPlayer in range( iNumPlayers - 1 ): # minus the Pope
 			pPlayer = gc.getPlayer( iPlayer )
 			if ( pPlayer.isAlive() ):
-				if ( (pPlayer.getCommercePercent(CommerceTypes.COMMERCE_GOLD) == 100) and (pPlayer.getGold() < (pPlayer.getPicklefreeParameter( iMercCostPerTurn )+99)/100)  ):
+				if ( (pPlayer.getCommercePercent(CommerceTypes.COMMERCE_GOLD) == 100) and (pPlayer.getGold() < (pPlayer.getPicklefreeParameter( iMercCostPerTurn )+99)/100) ):
 					# not enough gold to pay the mercs, they will randomly desert you
 					self.desertMercs( iPlayer )
 
@@ -640,7 +640,7 @@ class MercenaryManager:
 			pUnit.setMercUpkeep( iNewUpkeep )
 
 			pPlayer = gc.getPlayer( iOwner )
-			pPlayer.setPicklefreeParameter( iMercCostPerTurn, max( 0, pPlayer.getPicklefreeParameter( iMercCostPerTurn ) - iOldUpkeep + iNewUpkeep  ) )
+			pPlayer.setPicklefreeParameter( iMercCostPerTurn, max( 0, pPlayer.getPicklefreeParameter( iMercCostPerTurn ) - iOldUpkeep + iNewUpkeep ) )
 			#self.GMU.playerMakeUpkeepSane( iOwner )
 
 
@@ -741,7 +741,7 @@ class MercenaryManager:
 			return
 
 		if ( iWarValue > 0 ):
-			#we ave to be at war to hire
+			#we have to be at war to hire
 			iOdds = con.tHire[pPlayer.getID()]
 			if ( iWarValue < 2 ):
 				iOdds *= 2 # small wars are hardly worth the trouble
@@ -883,7 +883,7 @@ class GlobalMercenaryUtils:
 		iSavedUpkeep = pPlayer.getPicklefreeParameter( iMercCostPerTurn )
 		if ( iSavedUpkeep != iTotoalUpkeep ):
 			#print(" ERROR IN MERCS: saved upkeep: ",iSavedUpkeep," actual: ",iTotoalUpkeep )
-			#print("  ------- Making sane ------- ")
+			#print(" ------- Making sane ------- ")
 			pPlayer.setPicklefreeParameter( iMercCostPerTurn, iTotoalUpkeep )
 			return False
 		return True

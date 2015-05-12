@@ -5,7 +5,7 @@ import sys #Mercenaries
 import PyHelpers
 import CvMainInterface #Mercenaries
 import CvMercenaryManager #Mercenaries
-import CvScreenEnums  #Mercenaries
+import CvScreenEnums #Mercenaries
 import Popup as PyPopup
 
 import StoredData
@@ -633,8 +633,6 @@ class CvRFCEventHandler:
 
 		if (gc.getPlayer(iPlayer).isAlive() and gc.getGame().getGameTurn() > con.tBirth[iPlayer] and iPlayer < con.iNumPlayers):
 			self.rel.onTechAcquired(argsList[0], argsList[2])
-
-		#if (gc.getPlayer(iPlayer).isAlive() and gc.getGame().getGameTurn() > con.tBirth[iPlayer] and iPlayer < con.iNumPlayers):
 			self.sta.onTechAcquired(argsList[0], argsList[2])
 
 

@@ -45,13 +45,13 @@ class Resources:
 		if (iGameTurn == xml.i1000AD):
 			self.createResource(36, 24, xml.iRice) #Rice in Iberia
 			self.createResource(86,  2, xml.iRice) #Rice in the Middle East
-		elif (iGameTurn == xml.i1500AD):
-			self.createResource(55, 35, xml.iRice) #Rice in Italy
 		elif (iGameTurn == xml.i1250AD):
 			self.removeResource( 2, 69) #Remove the NAA from Iceland
 		elif (iGameTurn == xml.i1452AD): #Coffee spawns instead of being preplaced
-			self.createResource(93, 0, xml.iCoffee) #near Sinai
+			self.createResource(93,  0, xml.iCoffee) #near Sinai
 			self.createResource(99, 13, xml.iCoffee) #between Damascus and Edessa
+		elif (iGameTurn == xml.i1500AD):
+			self.createResource(55, 35, xml.iRice) #Rice in Italy - represents trade of the merchant republics
 		elif (iGameTurn == xml.i1580AD):
 			self.createResource(32, 59, xml.iPotato) #Potatoes in Ireland
 			self.createResource(29, 57, xml.iPotato)

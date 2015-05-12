@@ -1,6 +1,6 @@
 ## This file is part of Rhye's and Fall of Civilization.
 ## This file was originally taken from CivPath mod.
-##  modified by eN
+## modified by eN
 import CvEventManager
 import CvRFCEventHandler
 import RiseAndFall

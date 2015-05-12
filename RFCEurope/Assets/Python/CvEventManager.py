@@ -173,7 +173,7 @@ class CvEventManager:
 		################## Events List ###############################
 		#
 		# Dictionary of Events, indexed by EventID (also used at popup context id)
-		#   entries have name, beginFunction, applyFunction [, randomization weight...]
+		# entries have name, beginFunction, applyFunction [, randomization weight...]
 		#
 		# Normal events first, random events after
 		#
@@ -224,7 +224,7 @@ class CvEventManager:
 
 		if ( context not in CvUtil.SilentEvents ):
 			self.reportEvent(entry, context, (playerID, netUserData, popupReturn) )
-		return entry[1]( playerID, netUserData, popupReturn )   # the apply function
+		return entry[1]( playerID, netUserData, popupReturn ) # the apply function
 
 	def reportEvent(self, entry, context, argsList):
 		'Report an Event to Events.log '
@@ -1057,7 +1057,7 @@ class CvEventManager:
 		iTeam, iVictory = argsList
 		if (iVictory >= 0 and iVictory < gc.getNumVictoryInfos()):
 			victoryInfo = gc.getVictoryInfo(int(iVictory))
-			CvUtil.pyPrint("Victory!  Team %d achieves a %s victory"
+			CvUtil.pyPrint("Victory! Team %d achieves a %s victory"
 				%(iTeam, victoryInfo.getDescription()))
 
 	def onVassalState(self, argsList):
