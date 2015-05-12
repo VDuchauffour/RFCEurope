@@ -854,7 +854,7 @@ class Barbs:
 				utils.cultureManager((pCity.getX(),pCity.getY()), 50, iNewCiv, iPlayer, False, True, True)
 				utils.flipUnitsInCityBefore((pCity.getX(),pCity.getY()), iNewCiv, iPlayer)
 				self.setTempFlippingCity((pCity.getX(),pCity.getY()))
-				utils.flipCity((pCity.getX(),pCity.getY()), 0, 0, iNewCiv, [iPlayer])   #by trade because by conquest may raze the city
+				utils.flipCity((pCity.getX(),pCity.getY()), 0, 0, iNewCiv, [iPlayer]) #by trade because by conquest may raze the city
 				utils.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
 
 
@@ -937,7 +937,7 @@ class Barbs:
 				utils.cultureManager((pCity.getX(),pCity.getY()), 50, iNewCiv, iPlayer, False, True, True)
 				utils.flipUnitsInCityBefore((pCity.getX(),pCity.getY()), iNewCiv, iPlayer)
 				self.setTempFlippingCity((pCity.getX(),pCity.getY()))
-				utils.flipCity((pCity.getX(),pCity.getY()), 0, 0, iNewCiv, [iPlayer])   #by trade because by conquest may raze the city
+				utils.flipCity((pCity.getX(),pCity.getY()), 0, 0, iNewCiv, [iPlayer]) #by trade because by conquest may raze the city
 				utils.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
 
 

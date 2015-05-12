@@ -189,7 +189,7 @@ class Plague:
 			if (self.getPlagueCountdown(iPlayer) == 0): #vulnerable
 				if ( iHealth == -100 ):
 					iHealth = self.calcHealth( iPlayer )
-					#print(" iPlayer:  iHealth: ",iPlayer, iHealth )
+					#print(" iPlayer: iHealth: ",iPlayer, iHealth )
 					if (iHealth < 14): #no spread for iHealth >= 74 years
 						return True
 				else:
@@ -212,7 +212,7 @@ class Plague:
 				if ( x>=0 and x<con.iMapMaxX and y>=0 and y<con.iMapMaxY ):
 					pCurrent = gc.getMap().plot( x, y )
 					iImprovement = pCurrent.getImprovementType()
-					if iImprovement in [xml.iImprovementHamlet, xml.iImprovementVillage, iImprovementTown]:
+					if iImprovement in [xml.iImprovementHamlet, xml.iImprovementVillage, xml.iImprovementTown]:
 						pCurrent.setImprovementType(iImprovement - 1) # Reduce cottages etc.
 
 		self.killUnitsByPlague(city, gc.getMap().plot( city.getX(), city.getY() ) , 0, 120, 0)
@@ -241,19 +241,19 @@ class Plague:
 					if ( unit.getOwner() == iHuman and iPreserveHumanDefenders > 0 ):
 						iPreserveHumanDefenders -= 1
 						if ( iUnitDamage < 50 ):
-							#print( "  raw damage ", iUnitDamage + iDamage - unit.getExperience()/10 - 2*unit.baseCombatStr() / 7 )
+							#print( " raw damage ", iUnitDamage + iDamage - unit.getExperience()/10 - 2*unit.baseCombatStr() / 7 )
 							unit.setDamage( max( iUnitDamage, min( 50, iUnitDamage + iDamage - unit.getExperience()/10 - 2*unit.baseCombatStr() ) ), iBarbarian )
 							#print( " Damage Human Defender: ", unit.getDamage() )
 					elif ( unit.getOwner() == iCityOwner and iPreserveDefenders > 0 ):
 						iPreserveDefenders -= 1
 						if ( iUnitDamage < 30 ):
-							#print( "  raw damage ", iUnitDamage + iDamage - unit.getExperience()/10 - 2*unit.baseCombatStr() / 7 )
+							#print( " raw damage ", iUnitDamage + iDamage - unit.getExperience()/10 - 2*unit.baseCombatStr() / 7 )
 							unit.setDamage( max( iUnitDamage, min( 30, iUnitDamage + iDamage - unit.getExperience()/10 - 2*unit.baseCombatStr() ) ), iBarbarian )
 							#print( " Damage AI Defender: ", unit.getDamage() )
 					else:
-						#print( "  raw damage ", iUnitDamage + iDamage - unit.getExperience()/10 - 2*unit.baseCombatStr() )
+						#print( " raw damage ", iUnitDamage + iDamage - unit.getExperience()/10 - 2*unit.baseCombatStr() )
 						iUnitDamage = max( iUnitDamage, unit.getDamage() + iDamage - unit.getExperience()/10 - 2*unit.baseCombatStr() / 7 )
-						#print( "   iUnitDamage ",iUnitDamage )
+						#print( " iUnitDamage ",iUnitDamage )
 						if ( iUnitDamage >= 100 ):
 							unit.kill( False, iBarbarian )
 							#print( " Kill Unit: ", unit.getDamage() )
