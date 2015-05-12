@@ -102,7 +102,7 @@ class Plague:
 					#print ("plague countdown", i, self.getPlagueCountdown(i))
 					if (self.getPlagueCountdown(i) == 2):
 						self.preStopPlague(i)
-					if (self.getPlagueCountdown(i) == 0):
+					elif (self.getPlagueCountdown(i) == 0):
 						self.stopPlague(i)
 				elif (self.getPlagueCountdown(i) < 0):
 					self.setPlagueCountdown(i, self.getPlagueCountdown(i)+1)
@@ -148,8 +148,8 @@ class Plague:
 		#3Miro: Plague of Constantinople (that started at Alexandria)
 		if ( iPlagueCount == iConstantinople ):
 			iWorstCiv = con.iByzantium
-		if (iPlagueCount == iBlackDeath):
-					self.setBadPlague(True)
+		elif (iPlagueCount == iBlackDeath):
+			self.setBadPlague(True)
 
 		#print( " startPlague: worst civ: ",iWorstCiv )
 		if ( iWorstCiv == -1 ):
@@ -212,12 +212,8 @@ class Plague:
 				if ( x>=0 and x<con.iMapMaxX and y>=0 and y<con.iMapMaxY ):
 					pCurrent = gc.getMap().plot( x, y )
 					iImprovement = pCurrent.getImprovementType()
-					if (iImprovement == xml.iImprovementHamlet):
-						pCurrent.setImprovementType(xml.iImprovementCottage)
-					if (iImprovement == xml.iImprovementVillage):
-						pCurrent.setImprovementType(xml.iImprovementHamlet)
-					if (iImprovement == xml.iImprovementTown):
-						pCurrent.setImprovementType(xml.iImprovementVillage)
+					if iImprovement in [xml.iImprovementHamlet, xml.iImprovementVillage, iImprovementTown]:
+						pCurrent.setImprovementType(iImprovement - 1) # Reduce cottages etc.
 
 		self.killUnitsByPlague(city, gc.getMap().plot( city.getX(), city.getY() ) , 0, 120, 0)
 

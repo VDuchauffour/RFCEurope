@@ -434,15 +434,15 @@ class Victory:
 					iOrthCath = ( iCounter / 1000 ) % 10
 					iProtCath = ( iCounter / 100 ) % 10
 					iJewishQu = iCounter % 100
-					if ( iCathCath < 9 and iBuilding == xml.iCatholicCathedral ):
+					if ( iBuilding == xml.iCatholicCathedral and iCathCath < 9 ):
 						iCathCath += 1
-					elif ( iOrthCath < 9 and iBuilding == xml.iOrthodoxCathedral ):
+					elif ( iBuilding == xml.iOrthodoxCathedral and iOrthCath < 9 ):
 						iOrthCath += 1
-					elif ( iProtCath < 9 and iBuilding == xml.iProtestantCathedral ):
+					elif ( iBuilding == xml.iProtestantCathedral and iProtCath < 9 ):
 						iProtCath += 1
 					elif ( iBuilding == xml.iKazimierz ):
 						iJewishQu = 99
-					elif ( iJewishQu < 99 and iBuilding == xml.iJewishQuarter ):
+					elif ( iBuilding == xml.iJewishQuarter and iJewishQu < 99 ):
 						iJewishQu += 1
 					if ( iCathCath >= 3 and iOrthCath >= 3 and iProtCath >= 2 and iJewishQu >= 2 ):
 						pPoland.setUHV( 2, 1 )

@@ -752,8 +752,6 @@ tWarAtSpawn = (
 ( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Dut
 )
 
-iMercPromotion = 48
-
 #Mercenaries. Higher number = less likely to hire
 tHire = (
 10, #Byzantium

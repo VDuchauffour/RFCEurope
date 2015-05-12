@@ -274,6 +274,8 @@ Changes for RFCE 1.3:
 		- Imperialism civic and the French UP works without a hard cap on number of cities
 		- Fixed inconsistencies in the city stability calculations - way more deadly for the human player if the cities are managed poorly
 		- Updated the stability guide. Civilopedia/Concepts/Stability Guide
+		- Speed improvements by replacing various if-statements with elif-statements and added some break statements
+		- Improved coding of Krak des Chevaliers, Leaning Tower, Topkapi Palace
 
 	Art updates:
 		- New art for Isabella (Spain), Casimir III (Poland), Ivan IV (Muscovy), Simeon I (Bulgaria), Ivan Asen (Bulgaria)

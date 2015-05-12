@@ -556,7 +556,7 @@ class Barbs:
 			self.foundCity(iIndependent2, lRhodes, "Rhodes", iGameTurn, 1, xml.iArcher, 1, xml.iOrthodoxy, 0 )
 			# 640AD
 			self.foundCity(iIndependent3, lNorwich, "Norwich", iGameTurn, 1, xml.iArcher, 1, -1, 1 )
-		if ( iGameTurn > xml.i660AD and iGameTurn < xml.i892AD ):
+		elif ( iGameTurn > xml.i660AD and iGameTurn < xml.i892AD ):
 			# 680AD
 			self.foundCity(iBarbarian, lToledo, "Toledo", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
 			self.foundCity(iIndependent, lLeicester, "Ligeraceaster", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
@@ -585,7 +585,7 @@ class Barbs:
 			self.foundCity(iBarbarian, lEdinburgh, "Eidyn Dun", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
 			# 880AD
 			self.foundCity(iIndependent, lAlbaIulia, "Belograd", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
-		if ( iGameTurn > xml.i895AD and iGameTurn < xml.i1259AD ):
+		elif ( iGameTurn > xml.i895AD and iGameTurn < xml.i1259AD ):
 			# 900AD
 			self.foundCity(iIndependent4, lTvanksta, "Tvanksta", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
 			self.foundCity(iIndependent3, lKrakow, "Krakow", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
@@ -611,7 +611,7 @@ class Barbs:
 			self.foundCity(iBarbarian, lTarabulus, "Tarabulus", iGameTurn, 3, xml.iArbalest, 2, xml.iIslam, 1 )
 			# 1250 AD
 			self.foundCity(iIndependent4, lAbo, "Abo", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 )
-		if ( iGameTurn > xml.i1300AD and iGameTurn < xml.i1540AD ):
+		elif ( iGameTurn > xml.i1300AD and iGameTurn < xml.i1540AD ):
 			# 1320AD
 			self.foundCity(iIndependent, lNizhnyNovgorod, "Nizhny Novgorod", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 )
 			# 1392AD

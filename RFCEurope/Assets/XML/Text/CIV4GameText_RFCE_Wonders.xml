@@ -1057,67 +1057,13 @@
 		<Portuguese>[ICON_BULLET]Treina uma Unidade ⁄nica de um Vassalo</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_LEANING_TOWER_PROPHET</Tag>
-		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Theologian[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
-		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Theologian[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
-		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen [COLOR_UNIT_TEXT]Groﬂen Propheten[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
-		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Profeta[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_BUILDING_TEXT]A Torre de Pisa[COLOR_SELECTED_TEXT] inspirou um [COLOR_UNIT_TEXT]Grande TeÛlogo[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
-		<Portuguese>[COLOR_BUILDING_TEXT]A Torre de Pisa[COLOR_SELECTED_TEXT] inspirou um [COLOR_UNIT_TEXT]Grande TeÛlogo[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LEANING_TOWER_ARTIST</Tag>
-		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Artist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
-		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Artist[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
-		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen [COLOR_UNIT_TEXT]Groﬂen K¸nstler[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
-		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Artista[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] inspirou um [COLOR_UNIT_TEXT]Grande Artista[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
-		<Portuguese>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] inspirou um [COLOR_UNIT_TEXT]Grande Artista[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LEANING_TOWER_SCIENTIST</Tag>
-		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Scholar[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
-		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Scholar[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
-		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen [COLOR_UNIT_TEXT]Groﬂen Wissenschaftler[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
-		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Scienziato[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] inspirou um [COLOR_UNIT_TEXT]Grande Intelectual[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
-		<Portuguese>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] inspirou um [COLOR_UNIT_TEXT]Grande Intelectual[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LEANING_TOWER_MERCHANT</Tag>
-		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Merchant[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
-		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Merchant[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
-		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen [COLOR_UNIT_TEXT]Groﬂen H‰ndler[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
-		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Mercante[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] inspirou um [COLOR_UNIT_TEXT]Grande Mercador[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
-		<Portuguese>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] inspirou um [COLOR_UNIT_TEXT]Grande Mercador[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LEANING_TOWER_ENGINEER</Tag>
-		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Engineer[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
-		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Engineer[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
-		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen [COLOR_UNIT_TEXT]Groﬂen Ingenieur[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
-		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Ingegnere[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] inspirou um [COLOR_UNIT_TEXT]Grande Engenheiro[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
-		<Portuguese>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] inspirou um [COLOR_UNIT_TEXT]Grande Engenheiro[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LEANING_TOWER_GENERAL</Tag>
-		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great General[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
-		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great General[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
-		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen [COLOR_UNIT_TEXT]Groﬂen Feldherrn[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
-		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un [COLOR_UNIT_TEXT]Grande Generale[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] inspirou um [COLOR_UNIT_TEXT]Grande General[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
-		<Portuguese>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] inspirou um [COLOR_UNIT_TEXT]Grande General[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LEANING_TOWER_SPY</Tag>
-		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Spy[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
-		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a [COLOR_UNIT_TEXT]Great Spy[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
-		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen [COLOR_UNIT_TEXT]Groﬂen Agenten[COLOR_SELECTED_TEXT]![COLOR_REVERT]</German>
-		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato una [COLOR_UNIT_TEXT]Grande Spia[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] inspirou um [COLOR_UNIT_TEXT]Grande Espi„o[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Spanish>
-		<Portuguese>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] inspirou um [COLOR_UNIT_TEXT]Grande Espi„o[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Portuguese>
+		<Tag>TXT_KEY_LEANING_TOWER</Tag>
+		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a</English>
+		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a</French>
+		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen</German>
+		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un</Italian>
+		<Spanish>[COLOR_BUILDING_TEXT]A Torre de Pisa[COLOR_SELECTED_TEXT] inspirou um</Spanish>
+		<Portuguese>[COLOR_BUILDING_TEXT]A Torre de Pisa[COLOR_SELECTED_TEXT] inspirou um</Portuguese>
 	</TEXT>
 		<!-- Misc -->
 </Civ4GameText>

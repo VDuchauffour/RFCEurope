@@ -745,7 +745,7 @@ class MercenaryManager:
 			iOdds = con.tHire[pPlayer.getID()]
 			if ( iWarValue < 2 ):
 				iOdds *= 2 # small wars are hardly worth the trouble
-			if ( iWarValue > 4 ): # large war
+			elif ( iWarValue > 4 ): # large war
 				iOdds /= 2
 
 			if ( gc.getGame().getSorenRandNum(100, 'shall we hire a merc') > iOdds ):
