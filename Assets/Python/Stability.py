@@ -215,7 +215,7 @@ class Stability:
 			else:
 				pOwner.changeStabilityBase( iCathegoryExpansion, -3 )
 				pOwner.setStabilitySwing( pOwner.getStabilitySwing() - 4 )
-		if ( iProvOwnerType < con.iProvinceNatural ):
+		elif ( iProvOwnerType < con.iProvinceNatural ):
 			if( owner == con.iScotland ): #Scotland UP part 2
 				pOwner.setStabilitySwing( pOwner.getStabilitySwing() - 1 )
 			else:

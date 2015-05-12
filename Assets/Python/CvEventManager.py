@@ -533,41 +533,13 @@ class CvEventManager:
 # The Leaning Tower Start - Absinthe
 		if ( iBuildingType == xml.iLeaningTower):
 			pPlayer = gc.getPlayer(pCity.plot().getOwner())
-			iPID = pPlayer.getID()
-			iTID = pPlayer.getTeam()
 			iX = pCity.getX()
 			iY = pCity.getY()
-			b_school = xml.iLeaningTower
-			self.iGreatPeopleNumberOne = self.getRandomNumber(7)
-			for i in range(1):
-				if self.iGreatPeopleNumberOne == 0:
-					pNewUnit = pPlayer.initUnit(xml.iProphet, iX, iY, UnitAITypes.UNITAI_PROPHET, DirectionTypes.NO_DIRECTION)
-					szTitle = localText.getText("TXT_KEY_LEANING_TOWER_PROPHET", ())
-					CyInterface().addImmediateMessage(szTitle , None)
-				if self.iGreatPeopleNumberOne == 1:
-					pNewUnit = pPlayer.initUnit(xml.iArtist, iX, iY, UnitAITypes.UNITAI_ARTIST, DirectionTypes.NO_DIRECTION)
-					szTitle = localText.getText("TXT_KEY_LEANING_TOWER_ARTIST", ())
-					CyInterface().addImmediateMessage(szTitle , None)
-				if self.iGreatPeopleNumberOne == 2:
-					pNewUnit = pPlayer.initUnit(xml.iScientist, iX, iY, UnitAITypes.UNITAI_SCIENTIST, DirectionTypes.NO_DIRECTION)
-					szTitle = localText.getText("TXT_KEY_LEANING_TOWER_SCIENTIST", ())
-					CyInterface().addImmediateMessage(szTitle , None)
-				if self.iGreatPeopleNumberOne == 3:
-					pNewUnit = pPlayer.initUnit(xml.iMerchant, iX, iY, UnitAITypes.UNITAI_MERCHANT, DirectionTypes.NO_DIRECTION)
-					szTitle = localText.getText("TXT_KEY_LEANING_TOWER_MERCHANT", ())
-					CyInterface().addImmediateMessage(szTitle , None)
-				if self.iGreatPeopleNumberOne == 4:
-					pNewUnit = pPlayer.initUnit(xml.iEngineer, iX, iY, UnitAITypes.UNITAI_ENGINEER, DirectionTypes.NO_DIRECTION)
-					szTitle = localText.getText("TXT_KEY_LEANING_TOWER_ENGINEER", ())
-					CyInterface().addImmediateMessage(szTitle , None)
-				if self.iGreatPeopleNumberOne == 5:
-					pNewUnit = pPlayer.initUnit(xml.iGreatGeneral, iX, iY, UnitAITypes.UNITAI_GENERAL, DirectionTypes.NO_DIRECTION)
-					szTitle = localText.getText("TXT_KEY_LEANING_TOWER_GENERAL", ())
-					CyInterface().addImmediateMessage(szTitle , None)
-				if self.iGreatPeopleNumberOne == 6:
-					pNewUnit = pPlayer.initUnit(xml.iGreatSpy, iX, iY, UnitAITypes.UNITAI_MERCHANT, DirectionTypes.NO_DIRECTION)
-					szTitle = localText.getText("TXT_KEY_LEANING_TOWER_SPY", ())
-					CyInterface().addImmediateMessage(szTitle , None)
+			iGP = gc.getGame().getSorenRandNum(7, "Leaning Tower")
+			iUnit = xml.iProphet + iGP
+			pNewUnit = pPlayer.initUnit(iUnit, iX, iY, UnitAITypes(gc.getUnitInfo(iUnit).getDefaultUnitAIType()), DirectionTypes.NO_DIRECTION)
+			szText = localText.getText("TXT_KEY_LEANING_TOWER", ()) + " " + gc.getUnitInfo(iUnit).getDescription()
+			CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, szText, "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, "", ColorTypes(con.iLightBlue), -1, -1, True, True)
 # The Leaning Tower End
 
 		if ((not gc.getGame().isNetworkMultiPlayer()) and (pCity.getOwner() == gc.getGame().getActivePlayer()) and isWorldWonderClass(gc.getBuildingInfo(iBuildingType).getBuildingClassType())):
@@ -655,9 +627,9 @@ class CvEventManager:
 
 		if ( pTeam.isTrainVassalUU() ):
 			l_vassalUB = []
-			for iPlayer in range(gc.getMAX_PLAYERS()):
+			for iPlayer in range(con.iNumPlayers):
 				ppPlayer = gc.getPlayer(iPlayer)
-				if ( (ppPlayer.isAlive()) and (not ppPlayer.isBarbarian()) ):
+				if ( ppPlayer.isAlive() ):
 					if ( gc.getTeam(ppPlayer.getTeam()).isVassal(iTeam) ):
 						civ_type = gc.getPlayer(iPlayer).getCivilizationType()
 						for iUnit in range(gc.getNumUnitClassInfos()):
@@ -666,6 +638,7 @@ class CvEventManager:
 							if (iDefaultUnit > -1 and iUniqueUnit > -1 and iDefaultUnit != iUniqueUnit):
 								if ( iUnitType == iDefaultUnit ):
 									l_vassalUB.append(iUniqueUnit)
+								break #Assuming every civ has only 1 UU
 			if ( len(l_vassalUB) >= 1 ):
 				chance = CyGame().getSorenRandNum(len(l_vassalUB), "Random for UU")
 				iX = pUnit.getX()
@@ -1255,8 +1228,3 @@ class CvEventManager:
 		iStartYear = popupReturn.getSpinnerWidgetValue(int(0))
 		CvScreensInterface.getWorldBuilderScreen().setStartYearCB(iStartYear)
 		return
-
-# The Leaning Tower Start - Absinthe
-	def getRandomNumber(self, int):
-		return CyGame().getSorenRandNum(int, "Gods")
-# The Leaning Tower End

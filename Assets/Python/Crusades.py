@@ -300,15 +300,15 @@ class Crusades:
 		# Absinthe: crusade date - 5 means the exact time for the arrival
 		if ( iGameTurn == (xml.i1096AD - 5) ): #First Crusade arrives in 1096AD
 			self.setCrusadeInit( 0, -1 ) # turn 160
-		if ( iGameTurn >= (xml.i1147AD - 7) and self.getCrusadeInit( 0 ) > 0 and self.getCrusadeInit(1) == -2 ): # Crusade of 1147AD, little earlier (need to be more than 9 turns between crusades)
+		elif ( iGameTurn >= (xml.i1147AD - 7) and self.getCrusadeInit( 0 ) > 0 and self.getCrusadeInit(1) == -2 ): # Crusade of 1147AD, little earlier (need to be more than 9 turns between crusades)
 			self.setCrusadeInit( 1, -1 ) # turn 176
-		if ( iGameTurn >= (xml.i1187AD - 8) and self.getCrusadeInit( 1 ) > 0 and self.getCrusadeInit(2) == -2 ): # Crusade of 1187AD, little earlier (need to be more than 9 turns between crusades)
+		elif ( iGameTurn >= (xml.i1187AD - 8) and self.getCrusadeInit( 1 ) > 0 and self.getCrusadeInit(2) == -2 ): # Crusade of 1187AD, little earlier (need to be more than 9 turns between crusades)
 			self.setCrusadeInit( 2, -1 ) # turn 187
-		if ( iGameTurn >= (xml.i1202AD - 4) and self.getCrusadeInit( 2 ) > 0 and self.getCrusadeInit(3) == -2 ): # Crusade of 1202AD, little later (need to be more than 9 turns between crusades)
+		elif ( iGameTurn >= (xml.i1202AD - 4) and self.getCrusadeInit( 2 ) > 0 and self.getCrusadeInit(3) == -2 ): # Crusade of 1202AD, little later (need to be more than 9 turns between crusades)
 			self.setCrusadeInit( 3, -1 ) # turn 197
-		if ( iGameTurn >= (xml.i1229AD - 3) and self.getCrusadeInit( 3 ) > 0 and self.getCrusadeInit(4) == -2 ): # Crusade of 1229AD, little later (need to be more than 9 turns between crusades)
+		elif ( iGameTurn >= (xml.i1229AD - 3) and self.getCrusadeInit( 3 ) > 0 and self.getCrusadeInit(4) == -2 ): # Crusade of 1229AD, little later (need to be more than 9 turns between crusades)
 			self.setCrusadeInit( 4, -1 ) # turn 207
-	#	if ( iGameTurn >= (xml.i1271AD - 5) and self.getCrusadeInit( 4 ) > 0 and self.getCrusadeInit(5) == -2 ): # Crusade of 1270AD
+	#	elif ( iGameTurn >= (xml.i1271AD - 5) and self.getCrusadeInit( 4 ) > 0 and self.getCrusadeInit(5) == -2 ): # Crusade of 1270AD
 	#		self.setCrusadeInit( 5, -1 ) # turn 219
 
 		if ( iGameTurn == xml.i1000AD ): # indulgances for the Reconquista given by the Catholic Church 1000AD
@@ -325,7 +325,7 @@ class Crusades:
 			if ( iStartDate == iGameTurn ):
 				self.doParticipation( iGameTurn )
 
-			if ( iStartDate + 1 == iGameTurn ):
+			elif ( iStartDate + 1 == iGameTurn ):
 				self.computeVotingPower( iGameTurn )
 				self.setCrusaders()
 				for i in range( 6 ):
@@ -340,7 +340,7 @@ class Crusades:
 				self.voteForCandidatesHuman()
 				#print("  Votes are: ",self.getVotesGatheredFavorite(), self.getVotesGatheredPowerful() )
 
-			if ( iStartDate + 2 == iGameTurn ):
+			elif ( iStartDate + 2 == iGameTurn ):
 				if ( not self.anyParticipate() ):
 					return
 				self.selectVoteWinner()
@@ -350,13 +350,13 @@ class Crusades:
 				else:
 					self.decideDeviateAI()
 
-			if ( iStartDate + 5 == iGameTurn ):
+			elif ( iStartDate + 5 == iGameTurn ):
 				if ( not self.anyParticipate() ):
 					return
 				print( " Arrival " )
 				self.crusadeArrival()
 
-			if ( iStartDate + 8 == iGameTurn ):
+			elif ( iStartDate + 8 == iGameTurn ):
 				iLeader = self.getLeader()
 				self.setCrusadeToReturn( iLeader )
 				self.setLeader(-1)
@@ -556,7 +556,7 @@ class Crusades:
 			for i in range( iNumUnits ):
 				pUnit = pPlayer.getUnit( i )
 				# Absinthe: mercenaries and leaders (units with attached Great Generals) won't go
-				if ( (not pUnit.isHasPromotion( con.iMercPromotion )) and (not pUnit.isHasPromotion( xml.iPromotionLeader )) ):
+				if ( (not pUnit.isHasPromotion( xml.iPromotionMerc )) and (not pUnit.isHasPromotion( xml.iPromotionLeader )) ):
 					iCrusadeCategory = self.unitCrusadeCategory( pUnit.getUnitType() )
 					if ( iCrusadeCategory < 3 ):
 						pPlot = gc.getMap().plot( pUnit.getX(), pUnit.getY() )
@@ -586,7 +586,7 @@ class Crusades:
 				pUnit = pPlayer.getUnit( iRandUnit )
 				pPlot = gc.getMap().plot( pUnit.getX(), pUnit.getY() )
 				# Absinthe: mercenaries and leaders (units with attached Great Generals) won't go
-				if ( (not pUnit.isHasPromotion( con.iMercPromotion )) and (not pUnit.isHasPromotion( xml.iPromotionLeader )) ):
+				if ( (not pUnit.isHasPromotion( xml.iPromotionMerc )) and (not pUnit.isHasPromotion( xml.iPromotionLeader )) ):
 					if ( pPlot.isCity() ):
 						#if ( pPlot.getNumUnits() > 2 ):
 						if ( self.getNumDefendersAtPlot( pPlot ) > 3 ):
@@ -621,11 +621,11 @@ class Crusades:
 		pUnit.kill( 0, -1 )
 
 	def unitProbability( self, iUnitType ):
-		if ( iUnitType == xml.iArcher or iUnitType == xml.iCrossbowman or iUnitType == xml.iArbalest or iUnitType == xml.iGenoaBalestrieri or iUnitType == xml.iLongbowman or iUnitType == xml.iEnglishLongbowman or iUnitType == xml.iPortugalFootKnight ):
+		if iUnitType in [xml.iArcher, xml.iCrossbowman, xml.iArbalest, xml.iGenoaBalestrieri, xml.iLongbowman, xml.iEnglishLongbowman, xml.iPortugalFootKnight]:
 			return 33
-		if ( iUnitType == xml.iLancer or iUnitType == xml.iCordobanBerber or iUnitType == xml.iHeavyLancer or iUnitType == xml.iHungarianHuszar or iUnitType == xml.iArabiaGhazi or iUnitType == xml.iByzantineCataphract or iUnitType == xml.iKnight or iUnitType == xml.iMoscowBoyar or iUnitType == xml.iBurgundianPaladin ):
+		if iUnitType in [xml.iLancer, xml.iCordobanBerber, xml.iHeavyLancer, xml.iHungarianHuszar, xml.iArabiaGhazi, xml.iByzantineCataphract, xml.iKnight, xml.iMoscowBoyar, xml.iBurgundianPaladin]:
 			return 66
-		if ( iUnitType == xml.iTemplar or iUnitType == xml.iTeutonic ):
+		if iUnitType in [xml.iTemplar, xml.iTeutonic]:
 			return 90
 		if ( iUnitType < xml.iArcher or iUnitType > xml.iFieldArtillery ): # Workers, Executives, Missionaries, Sea Units and Mercenaries do not go
 			return -1
@@ -636,11 +636,11 @@ class Crusades:
 			return 0
 		if ( iUnitType == xml.iTeutonic ):
 			return 1
-		if ( iUnitType == xml.iKnight or iUnitType == xml.iMoscowBoyar or iUnitType == xml.iBurgundianPaladin ):
+		if iUnitType in [xml.iKnight, xml.iMoscowBoyar, xml.iBurgundianPaladin]:
 			return 2
-		if ( iUnitType == xml.iHeavyLancer or iUnitType == xml.iHungarianHuszar or iUnitType == xml.iArabiaGhazi or iUnitType == xml.iByzantineCataphract or iUnitType == xml.iKievDruzhina ):
+		if iUnitType in [xml.iHeavyLancer, xml.iHungarianHuszar, xml.iArabiaGhazi, xml.iByzantineCataphract, xml.iKievDruzhina]:
 			return 3
-		if ( iUnitType == xml.iCatapult or iUnitType == xml.iTrebuchet ):
+		if iUnitType in [xml.iCatapult, xml.iTrebuchet]:
 			return 4
 		return 5
 

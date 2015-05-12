@@ -263,17 +263,18 @@ class CvRFCEventHandler:
 				self.crusade.success( playerType )
 
 		# Sedna17: code for Krak des Chevaliers
-		bKrak = false
+		bKrak = False
 		if (bConquest):
 			iNewOwner = city.getOwner()
-			lCities = PyPlayer( iNewOwner).getCityList( )
-			for iCity in range(len(lCities)):
-				pCity = gc.getPlayer( iNewOwner ).getCity( lCities[ iCity ].getID( ) )
-				if(pCity.isHasRealBuilding(xml.iKrakDesChevaliers)):
-					bKrak = true
+			pNewOwner = gc.getPlayer(iNewOwner)
+			if pNewOwner.countNumBuildings(xml.iKrakDesChevaliers) > 0:
+				bKrak = True
 
 		if bKrak:
-			city.setHasRealBuilding(xml.iWalls, True)
+			if iNewOwner == con.iMorocco:
+				city.setHasRealBuilding(xml.iMorocccoKasbah, True)
+			else:
+				city.setHasRealBuilding(xml.iWalls, True)
 			if iNewOwner == con.iSpain:
 				city.setHasRealBuilding(xml.iSpanishCitadel, True)
 			elif iNewOwner == con.iMoscow:
@@ -376,23 +377,24 @@ class CvRFCEventHandler:
 		lCities = PyPlayer( iFounder ).getCityList( )
 		for iCity in range( len( lCities ) ):
 			pCity = gc.getPlayer( iFounder ).getCity( lCities[ iCity ].getID( ) )
-			if ( pCity.isHolyCityByType( iReligion ) and iReligion <> xml.iJudaism): # Sedna: Protestant Shrine is now starting point for consistency with Religion.xml, Judaism is special
-				if (iReligion == 0):
+			if ( pCity.isHolyCityByType( iReligion ) and iReligion != xml.iJudaism): # Sedna: Protestant Shrine is now starting point for consistency with Religion.xml, Judaism is special
+				if (iReligion == xml.iProtestantism):
 					iTemple = xml.iProtestantTemple
 					iShrine = xml.iProtestantShrine
-				if (iReligion == 1):
+				elif (iReligion == xml.iIslam):
 					iTemple = xml.iIslamicTemple
 					iShrine = xml.iIslamicShrine
-				if (iReligion == 2):
+				elif (iReligion == xml.iCatholicism):
 					iTemple = xml.iCatholicTemple
 					iShrine = xml.iCatholicShrine
-				if (iReligion == 3):
+				elif (iReligion == xml.iOrthodoxy):
 					iTemple = xml.iOrthodoxTemple
 					iShrine = xml.iOrthodoxShrine
 				if ( not pCity.isHasRealBuilding(iShrine) ):
 					pCity.setHasRealBuilding(iShrine, True )
 				if ( not pCity.isHasRealBuilding(iTemple) ):
 					pCity.setHasRealBuilding(iTemple, True )
+				break
 
 		self.vic.onReligionFounded(iReligion, iFounder)
 
@@ -527,7 +529,7 @@ class CvRFCEventHandler:
 			self.up.soundUP(iPlayer)
 
 		# Aragon UP
-		if(iPlayer == con.iAragon):
+		elif(iPlayer == con.iAragon):
 			self.up.confederationUP(iPlayer)
 
 		self.pla.checkPlayerTurn(iGameTurn, iPlayer)
@@ -632,7 +634,7 @@ class CvRFCEventHandler:
 		if (gc.getPlayer(iPlayer).isAlive() and gc.getGame().getGameTurn() > con.tBirth[iPlayer] and iPlayer < con.iNumPlayers):
 			self.rel.onTechAcquired(argsList[0], argsList[2])
 
-		if (gc.getPlayer(iPlayer).isAlive() and gc.getGame().getGameTurn() > con.tBirth[iPlayer] and iPlayer < con.iNumPlayers):
+		#if (gc.getPlayer(iPlayer).isAlive() and gc.getGame().getGameTurn() > con.tBirth[iPlayer] and iPlayer < con.iNumPlayers):
 			self.sta.onTechAcquired(argsList[0], argsList[2])
 
 

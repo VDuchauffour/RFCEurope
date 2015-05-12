@@ -294,6 +294,10 @@ iColLouisiana, iColPhillippines) = range(iNumProjects)
 iNumNotColonies = 3
 iNumTotalColonies = iNumProjects
 
+#Specialists
+iNumSpecialists = 14
+(iCitizen, iSpecialistPriest, iSpecialistArtist, iSpecialistScientist, iSpecialistMerchant, iSpecialistEngineer, iSpecialistSpy,
+iGreatProphet, iGreatArtist, iGreatScientist, iGreatMerchant, iGreatEngineer, iGreatGeneral, iSpecialistGreatSpy) = range(iNumSpecialists)
 
 #Eras
 
