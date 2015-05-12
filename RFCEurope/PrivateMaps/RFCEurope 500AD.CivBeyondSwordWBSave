@@ -31949,7 +31949,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=18
-	ImprovementType=IMPROVEMENT_VILLAGE
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -32206,7 +32205,6 @@ BeginPlot
 	x=78,y=56
 	RiverNSDirection=0
 	isWOfRiver
-	BonusType=BONUS_HONEY
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -32214,6 +32212,7 @@ BeginPlot
 	x=78,y=57
 	isNOfRiver
 	RiverWEDirection=3
+	BonusType=BONUS_HONEY
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -34097,6 +34096,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=82,y=62
+	BonusType=BONUS_COPPER
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot

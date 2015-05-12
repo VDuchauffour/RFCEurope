@@ -40,6 +40,10 @@ balance = RFCEBalance.RFCEBalance()
 # globals
 ###################################################
 class CvEventManager:
+
+	global iImpBeforeCity
+	iImpBeforeCity = 0
+
 	def __init__(self):
 		#################### ON EVENT MAP ######################
 		#print "EVENTMANAGER INIT"

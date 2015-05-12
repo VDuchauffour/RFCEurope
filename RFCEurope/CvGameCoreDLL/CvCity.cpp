@@ -950,9 +950,9 @@ void CvCity::doTurn()
 	// 3Miro: this turns off Barbarian culture, however it also messes the Barb AI trying to build culture
 	//doCulture();
 	//if (!isBarbarian())
-    //{
-        doCulture();
-    //}
+	//{
+	doCulture();
+	//}
 	//GC.getGameINLINE().logMsg("   city doTurn bisect, culture out "); //Rhye and 3Miro
 
 	doPlotCulture(false, getOwnerINLINE(), getCommerceRate(COMMERCE_CULTURE));
@@ -9241,58 +9241,27 @@ int CvCity::getRevoltTestProbability() const
 	}
 	iBestModifier = range(iBestModifier, 0, 100);
 
-	//Rhye - start switch
-
-	//return ((GC.getDefineINT("REVOLT_TEST_PROB") * (100 - iBestModifier)) / 100);
+	// Absinthe: new revolt settings
 	int result = (GC.getDefineINT("REVOLT_TEST_PROB") * (100 - iBestModifier)) / 100;
-	/*switch (getOwnerINLINE())
+
+	if (isIndep(getOwnerINLINE())) // indy cities are harder to flip
 	{
-		case TURKEY:
-			result /= 2;
-			break;
-		case NATIVE:
-			result *= 3;
-			result /= 2;
-		case CELTIA:
-			result *= 3;
-			result /= 2;
-		case INDEPENDENT:
-		case INDEPENDENT2:
-		case BARBARIAN:
-			result *= 3;
-			result = std::min(std::max(result, 3), 12);
-		default:
-			break;
-	}*/
-	// 3Miro: modifies the revolt probability
-	if ( isIndep( getOwnerINLINE() ) || getOwnerINLINE() == BARBARIAN ){
 		result *= 3;
 		result = std::min(std::max(result, 3), 12);
 	};
 
-
-	/*if (!GET_PLAYER((PlayerTypes)EGYPT).isPlayable()) { //late start condition
-		if (getX_INLINE() == 59 && getY_INLINE() == 47) //Mediolanum
-			result /= 8;
-		else if (getX_INLINE() == 60 && getY_INLINE() == 47) //Venice
-			result /= 8;
-		else if (getX_INLINE() == 60 && getY_INLINE() == 44) //Rome
-			result /= 8;
-		else if (getOwnerINLINE() == CELTIA) //Byzantium
-			result *= 2;
-		else if (getX_INLINE() == 68 && getY_INLINE() == 45) //Constantinopolis
-			result /= 16;
-	}*/
-
-	/*if (getX_INLINE() == 59 && getY_INLINE() == 53) //Hamburg
-			result /= 8;*/
+	if (isBarbarian())
+	{
+		result /= 2; // otherwise cities captured by barb invaders get flipped back too often
+	}
 
 	if (isCapital() && getOwnerINLINE() < NUM_MAJOR_PLAYERS)
+	{
 		result /= 4;
+	}
 
 	return (result);
-
-	//Rhye - end
+	// Absinthe: new revolt settings
 }
 
 bool CvCity::isEverOwned(PlayerTypes eIndex) const
@@ -11507,7 +11476,7 @@ void CvCity::popOrder(int iNum, bool bFinish, bool bChoose)
 				if(needsArtType)
 				{
 					//GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder Order Create 10"); //Rhye and 3Miro
-                    int defaultArtType = GET_TEAM(getTeam()).getProjectDefaultArtType(eCreateProject);
+					int defaultArtType = GET_TEAM(getTeam()).getProjectDefaultArtType(eCreateProject);
 					int projectCount = GET_TEAM(getTeam()).getProjectCount(eCreateProject);
 					//GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder Order Create 11"); //Rhye and 3Miro
 					GET_TEAM(getTeam()).setProjectArtType(eCreateProject, projectCount - 1, defaultArtType);

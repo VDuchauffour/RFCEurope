@@ -758,6 +758,7 @@ class RFCUtils:
 
 
 	#RiseAndFall, Stability
+	# Absinthe: currently unused
 	def killCiv(self, iCiv, iNewCiv):
 		self.clearPlague(iCiv)
 		for pyCity in PyPlayer(iCiv).getCityList():
@@ -768,10 +769,9 @@ class RFCUtils:
 		self.flipUnitsInArea([0,0], [con.iMapMaxX,con.iMapMaxY], iNewCiv, iCiv, False, True)
 		#self.flipUnitsInArea([0,0], [123,67], iNewCiv, iCiv, False, True)
 		#self.killUnitsInArea([0,0], [123,67], iNewCiv, iCiv) ?
-		#if (iCiv < iNumMajorPlayers):
-		#	self.clearEmbassies(iCiv)
 		self.setLastTurnAlive(iCiv, gc.getGame().getGameTurn())
 		self.resetUHV(iCiv)
+
 
 	def killAndFragmentCiv(self, iCiv, bBarbs, bAssignOneCity):
 		self.clearPlague(iCiv)
@@ -845,8 +845,6 @@ class RFCUtils:
 			#self.flipUnitsInArea([0,0], [123,67], iNewCiv1, iCiv, False, True) #causes a bug: if a unit was inside another city's civ, when it becomes independent or barbarian, may raze it
 			self.killUnitsInArea([0,0], [con.iMapMaxX,con.iMapMaxY], iCiv)
 			self.resetUHV(iCiv)
-		if (iCiv < iNumMajorPlayers):
-			self.clearEmbassies(iCiv)
 		self.setLastTurnAlive(iCiv, gc.getGame().getGameTurn())
 
 
@@ -860,13 +858,6 @@ class RFCUtils:
 			if ( pPlayer.getUHV( 2 ) == -1 ):
 				pPlayer.setUHV( 2, 0 )
 
-	def clearEmbassies(self, iDeadCiv):
-		#for i in range (iNumTotalPlayers):
-		#	for pyCity in PyPlayer(i).getCityList():
-		#		if (pyCity.GetCy().hasBuilding(iNumBuildingsPlague + iDeadCiv)):
-		#			pyCity.GetCy().setHasRealBuilding(iNumBuildingsPlague + iDeadCiv, False)
-		#			continue
-		pass
 
 	def clearPlague(self, iCiv):
 		for pyCity in PyPlayer(iCiv).getCityList():
@@ -882,12 +873,14 @@ class RFCUtils:
 				return False
 		return True
 
+
 	def isAVassal(self, iCiv):
 		iMaster = 0
 		for iMaster in range (iNumTotalPlayers):
 			if (gc.getTeam(gc.getPlayer(iCiv).getTeam()).isVassal(iMaster)):
 				return True
 		return False
+
 
 	# UP, UHV, by Leoreth
 	def getMaster(self, iCiv):
@@ -896,6 +889,7 @@ class RFCUtils:
 			if team.isVassal(iMaster):
 				return iMaster
 		return -1
+
 
 	#Barbs, RiseAndFall
 	def squareSearch( self, tTopLeft, tBottomRight, function, argsList ): #by LOQ
@@ -1281,12 +1275,14 @@ class RFCUtils:
 		return True
 	#Absinthe: end
 
+
 	def saint( self, iOwner, iUnitID ):
 		# 3Miro: kill the Saint :), just make it so he cannot be used for other purposes
 		pPlayer = gc.getPlayer( iOwner )
 		pPlayer.changeFaith( con.iSaintBenefit )
 		pUnit = pPlayer.getUnit(iUnitID)
 		pUnit.kill(0, -1)
+
 
 	def selectRandomCity(self):
 		cityList = []
@@ -1298,6 +1294,7 @@ class RFCUtils:
 		city = cityList[iCity]
 		return (city.getX(), city.getY())
 
+
 	def spreadJews(self,tPlot,iReligion):
 		if (tPlot != False):
 			plot = gc.getMap().plot( tPlot[0], tPlot[1] )
@@ -1308,11 +1305,14 @@ class RFCUtils:
 				return False
 		return False
 
+
 	def isIndep( self, iCiv ):
 		if ( iCiv >= con.iIndepStart and iCiv <= con.iIndepEnd ):
 			return True
 		return False
 
+
+	#Absinthe: old stability system, not used anymore
 	def zeroStability(self,iPlayer): # called by RiseAndFall Resurrection
 		for iCount in range(con.iNumStabilityParameters):
 			self.setParameter(iPlayer, iCount, False, 0)

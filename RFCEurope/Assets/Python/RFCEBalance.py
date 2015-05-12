@@ -569,7 +569,6 @@ class RFCEBalance:
 		gc.setUP( iByzantium, iUP_Emperor, 1 )
 
 		gc.setUP( iFrankia, iUP_LandStability, 1 )
-		gc.setUP( iFrankia, iUP_CulturalTolerance, 0 )
 
 		gc.setUP( iArabia, iUP_Faith, 1 )
 
@@ -679,7 +678,7 @@ class RFCEBalance:
 		#iFP_Displomacy: iAttitude += iParameter * num_FaithPoints / 100
 		#		i.e. 1 Faith Point = iParameter percent of an attitude point
 
-		gc.setReligionBenefit( xml.iOrthodoxy, con.iFP_Stability, 8, 100 )
+		gc.setReligionBenefit( xml.iOrthodoxy, con.iFP_Stability, 10, 100 )
 		gc.setReligionBenefit( xml.iOrthodoxy, con.iFP_Civic, 50, 100 )
 
 		gc.setReligionBenefit( xml.iIslam, con.iFP_Growth, 50, 100 )

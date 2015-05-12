@@ -53,20 +53,13 @@ class CvRFCEventManager(CvEventManager.CvEventManager, object):
 		self.CustomEvents = {
 			7614 : ('RiseAndFallPopupEvent', self.rnfEventApply7614, self.rnfEventBegin7614),
 			7615 : ('FlipPopupEvent', self.rnfEventApply7615, self.rnfEventBegin7615),
-			#7616 : ('VotePopupEvent', self.congEventApply7616, self.congEventBegin7616),
 			7616 : ('CrusadeInitVoteEvent', self.crusadeApply7616, self.crusadeBegin7616),
-			#7617 : ('AskCityPopupEvent', self.congEventApply7617, self.congEventBegin7617),
 			7617 : ('InformForLeaderPopup', self.crusadeApply7617, self.crusadeBegin7617),
-			#7618 : ('DecisionPopupEvent', self.congEventApply7618, self.congEventBegin7618),
 			7618 : ('HumanVotePopup', self.crusadeApply7618, self.crusadeBegin7618),
-			#7619 : ('InvitationPopupEvent', self.congEventApply7619, self.congEventBegin7619),
 			7619 : ('HumanDeviate', self.crusadeApply7619, self.crusadeBegin7619),
-			#7620 : ('BribePopupEvent', self.congEventApply7620, self.congEventBegin7620),
 			7620 : ('ChoseNewCrusadeTarget', self.crusadeApply7620, self.crusadeBegin7620),
-			#7621 : ('GoldPopupEvent', self.congEventApply7621, self.congEventBegin7621),
 			7621 : ('Under Attack', self.crusadeApply7621, self.crusadeBegin7621),
 			7622 : ('ResurrectionEvent', self.rnfEventApply7622, self.rnfEventBegin7622),
-			7623 : ('AskNoCityPopupEvent', self.congEventApply7623, self.congEventBegin7623),
 			7624 : ('ReformationEvent', self.relEventApply7624, self.relEventBegin7624), ### Reformation Begin ###
 			7625 : ('DefensiveCrusadeEvent',self.crusadeApply7625, self.crusadeBegin7625),
 			7626 : ('CounterReformationEvent',self.relEventApply7626, self.relEventBegin7626),
@@ -217,133 +210,89 @@ class CvRFCEventManager(CvEventManager.CvEventManager, object):
 
 	# popup events
 	def rnfEventBegin7614(self):
-			pass
+		pass
 
 	def rnfEventApply7614(self, playerID, netUserData, popupReturn):
-			self.rnf.eventApply7614(popupReturn)
+		self.rnf.eventApply7614(popupReturn)
 
 	def rnfEventBegin7615(self):
-			pass
+		pass
 
 	def rnfEventApply7615(self, playerID, netUserData, popupReturn): # 3Miro: flip
-			self.rnf.eventApply7615(popupReturn)
+		self.rnf.eventApply7615(popupReturn)
 
-	def congEventBegin7616(self):
-			pass
-
-	def congEventApply7616(self, playerID, netUserData, popupReturn):
-			pass
-
-	def congEventBegin7617(self):
-			pass
-
-	def congEventApply7617(self, playerID, netUserData, popupReturn):
-			pass
-
-	def congEventBegin7618(self):
-			pass
-
-	def congEventApply7618(self, playerID, netUserData, popupReturn):
-			pass
-
-	def congEventBegin7619(self):
-			pass
-
-	def congEventApply7619(self, playerID, netUserData, popupReturn):
-			pass
-
-	def congEventBegin7620(self):
-			pass
-
-	def congEventApply7620(self, playerID, netUserData, popupReturn):
-			pass
-
-	def congEventBegin7621(self):
-			pass
-
-	def congEventApply7621(self, playerID, netUserData, popupReturn):
-			pass
-
-	def rnfEventBegin7622(self):
-			pass
-
-	def rnfEventApply7622(self, playerID, netUserData, popupReturn): # 3Miro: rebel
-			self.rnf.eventApply7622(popupReturn)
-
-	def congEventBegin7623(self):
-			pass
-	### Begin Reformation ###
-	def relEventBegin7624(self):
-			pass
-
-	def relEventApply7624(self, playerID, netUserData, popupReturn):
-			self.rel.eventApply7624(popupReturn)
-
-	def relEventBegin7626(self):
-			pass
-
-	def relEventApply7626(self, playerID, netUserData, popupReturn):
-			self.rel.eventApply7626(popupReturn)
-	### End Reformation ###
-
-	def congEventApply7623(self, playerID, netUserData, popupReturn):
-			pass
-
-	def congEventApply7623(self, playerID, netUserData, popupReturn):
-			pass
+	def crusadeBegin7616( self ):
+		pass
 
 	def crusadeApply7616( self, playerID, netUserData, popupReturn ):
 		self.crus.eventApply7616( popupReturn )
 
-	def crusadeBegin7616( self ):
+	def crusadeBegin7617( self ):
 		pass
 
 	def crusadeApply7617( self, playerID, netUserData, popupReturn ):
 		pass
 
-	def crusadeBegin7617( self ):
+	def crusadeBegin7618( self ):
 		pass
 
 	def crusadeApply7618( self, playerID, netUserData, popupReturn ):
 		self.crus.eventApply7618( popupReturn )
 
-	def crusadeBegin7618( self ):
+	def crusadeBegin7619( self ):
 		pass
 
 	def crusadeApply7619( self, playerID, netUserData, popupReturn ):
 		self.crus.eventApply7619( popupReturn )
 
-	def crusadeBegin7619( self ):
+	def crusadeBegin7620( self ):
 		pass
 
 	def crusadeApply7620( self, playerID, netUserData, popupReturn ):
 		self.crus.eventApply7620( popupReturn )
 
-	def crusadeBegin7620( self ):
+	def crusadeBegin7621( self ):
 		pass
 
 	def crusadeApply7621( self, playerID, netUserData, popupReturn ):
 		pass
 
-	def crusadeBegin7621( self ):
+	def rnfEventBegin7622(self):
+		pass
+
+	def rnfEventApply7622(self, playerID, netUserData, popupReturn): # 3Miro: rebel
+		self.rnf.eventApply7622(popupReturn)
+
+	### Begin Reformation ###
+	def relEventBegin7624(self):
+		pass
+
+	def relEventApply7624(self, playerID, netUserData, popupReturn):
+		self.rel.eventApply7624(popupReturn)
+
+	def relEventBegin7626(self):
+		pass
+
+	def relEventApply7626(self, playerID, netUserData, popupReturn):
+		self.rel.eventApply7626(popupReturn)
+	### End Reformation ###
+
+	def crusadeBegin7625( self ):
 		pass
 
 	def crusadeApply7625( self, playerID, netUserData, popupReturn ):
-			self.crus.eventApply7625( popupReturn )
-
-	def crusadeBegin7625( self ):
-			pass
-
-	def barbEventApply7627( self, playerID, netUserData, popupReturn ):
-			self.barb.eventApply7627( popupReturn )
+		self.crus.eventApply7625( popupReturn )
 
 	def barbEventBegin7627( self ):
-			pass
+		pass
+
+	def barbEventApply7627( self, playerID, netUserData, popupReturn ):
+		self.barb.eventApply7627( popupReturn )
 
 	#Absinthe: persecution popup
 	def relEventBegin7628(self):
-			pass
+		pass
 
 	def relEventApply7628(self, playerID, netUserData, popupReturn):
-			self.rel.eventApply7628(popupReturn)
+		self.rel.eventApply7628(popupReturn)
 	#Absinthe: end

@@ -229,12 +229,11 @@
 		<English>[H1]Odds and Ends[\H1]
 [PARAGRAPH:2]
 - There are many new terrain types, check the terrain section.
-- A new resources, check the resource section.
+- Many new resources, check the resource section.
 - Shrines are capped at +20
 - Corporations will consume a maximum of 12 resources.
 - Tech costs increase as you grow
-- There is only one speed due to scripted events
-- Your first few Barbarian battles are guaranteed wins. Don't waste them on Animals!</English>
+- There is only one speed due to scripted events</English>
 		<French>[H1]Pr&#233;cisions[\H1]
 [PARAGRAPH:2]
 - La plupart des unit&#233;s ne peuvent ni traverser les jungles ni les d&#233;fricher avant la d&#233;couverte de la biologie.
@@ -244,8 +243,7 @@
 - Les soci&#233;t&#233;s commerciales consomment 12 ressources au maximum.
 - Le co&#251;t des technologies augmente &#224; mesure que vous vous d&#233;veloppez.
 - Les bombes atomiques font bien plus de d&#233;g&#226;ts. Ce sont maintenant des armes mortelles.
-- Il n'y a qu'une seule vitesse de jeu en raison des &#233;v&#233;nements script&#233;s.
-- Vous &#234;tes assur&#233; de gagner vos premi&#232;res batailles contre des barbares. Ne les gaspillez pas contre des animaux !</French>
+- Il n'y a qu'une seule vitesse de jeu en raison des &#233;v&#233;nements script&#233;s.</French>
 		<German>[H1]Sonstiges[\H1]
 [PARAGRAPH:2]
 - Dschungel-Gel&#228;ndefelder sind f&#252;r die meisten Einheiten unpassierbar und k&#246;nnen bis zur Entdeckung der "Biologie" nicht gerodet werden.
@@ -255,8 +253,7 @@
 - Kapitalgesellschaften verwerten maximal 12 Ressourcen.
 - Technologiekosten steigen mit dem Zivilisationswachstum an.
 - Atomraketen verursachen mehr Schaden und stellen jetzt t&#246;dliche Waffen dar.
-- Aufgrund der vorbestimmten Ereignisse steht nur eine Geschwindigkeitseinstellung zur Verf&#252;gung.
-- Bei Ihren ersten Barbarenk&#228;mpfen ist Ihnen der Sieg sicher. Verschwenden Sie diesen Vorteil nicht auf K&#228;mpfchen gegen Tiere!</German>
+- Aufgrund der vorbestimmten Ereignisse steht nur eine Geschwindigkeitseinstellung zur Verf&#252;gung.</German>
 		<Italian>[H1]Varie ed eventuali[\H1]
 [PARAGRAPH:2]
 - Le giungle sono insuperabili dalla maggior parte delle unit&#224; e non possono essere abbattute fino alla scoperta della biologia.
@@ -266,8 +263,7 @@
 - Le corporazioni consumeranno un massimo di 12 risorse.
 - A mano a mano che cresci le tecnologie costano di pi&#249;.
 - Le bombe nucleari fanno molti pi&#249; danni e sono un'arma mortale.
-- C'&#232; una sola velocit&#224;, per via degli eventi programmati.
-- Le tue prime battaglie coi barbari saranno sicuramente delle vittorie. Non sprecarle con gli animali!</Italian>
+- C'&#232; una sola velocit&#224;, per via degli eventi programmati.</Italian>
 		<Spanish>[H1]Dem&#225;s aspectos[\H1]
 [PARAGRAPH:2]
 - La mayor&#237;a de las unidades no pueden atravesar junglas, y estas &#250;ltimas solo se pueden talar con Biolog&#237;a.
@@ -277,8 +273,7 @@
 - Las corporaciones consumir&#225;n un m&#225;ximo de 12 recursos.
 - Los costes de tecnolog&#237;a aumentan con el crecimiento.
 - Las armas nucleares hacen mucho m&#225;s da&#241;o y son verdaderamente mortales.
-- Como consecuencia de los sucesos programados, solo existe una velocidad.
-- Tus primeros combates contra b&#225;rbaros ser&#225;n victorias seguras. &#161;No los desperdicies con animales!</Spanish>
+- Como consecuencia de los sucesos programados, solo existe una velocidad.</Spanish>
 		<Portuguese>[H1]Demais Aspectos[\H1]
 [PARAGRAPH:2]
 - Há alguns novos tipos de terreno, consulte a secção de terrenos.
@@ -286,8 +281,7 @@
 - Santuários são limitados a 20 gold/turno.
 - Corporations consumirão um máximo de 12 recursos.
 - Custo de tecnologia aumenta quando você cresce seu número de cidades.
-- Só há uma velocidade devido a eventos pré-determinados.
-- Suas primeiras batalhas contra bárbaros são vitórias garantidas. Use-as sabiamente!</Portuguese>
+- Só há uma velocidade devido a eventos pré-determinados.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_COLONIES</Tag>
@@ -487,166 +481,159 @@ Há dois tipos de Cruzadas: Para a Terra Santa cujo foco é capturar Jerusalém e a
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_STABILITY_GUIDE_PEDIA</Tag>
-		<English>[H1]List of event based modifiers / permanent stability:[\H1]
+		<English>[H1]RFCE stability guide:[\H1]
+
+[BOLD]The F2 Screen[\BOLD]
+On the F2-screen you can see the four main stability categories: cities, civics, economy, expansion and a special fifth category called swing. 
+The main categories have two values: the one on the left side is the sum of all permanent modifiers and the one on the right side is a value that is calculated every turn.
+The swing category has only one value and represents effects that last only a few turns. Most of the time this value should be zero.
+
+All values are summed up and give the total stability or simply the stability (The value that can be seen on the main screen). This is the only value that matters in the end.
+
+[BOLD]The two ways how stability is calculated[\BOLD]
+There are two ways in which stability is calculated: event based and state based.
+You can say the state based modifiers look at what you have (eg. total number of cities) and the event based look on how you got there (eg. if you found a city yourself or if you conquer one).
+
+[BOLD]State based modifiers[\BOLD]
+The state based modifiers have to be updated once in a while. This is usually done every turn or every three turns or when it is obvious that the state has changed (eg. founding a city will change the total number of cities and therefore triggers a recalculation). Because they only look at the current state they can be recalculated from scratch every time. Previous values don't have to be remembered. That means if an error occures, this error can not accumulate over several calculations and the total effect of one modifier can easily be limited.
+The effects of state-based modifiers are hard to track because all effects are calculated at once.
+
+[BOLD]Event based modifiers[\BOLD]
+The event based modifiers on the other hand can not be calculated from the scratch every time and therefore have to be remembered. This is done by storing a single number for each category. It holds the sum of all modifiers that have been triggered so far. That means those modifiers are permanent and cumulative. And that means also that errors can accumulate. And because only a single number is stored it is impossible to say how often a certain event has occured and therefore it is impossible to limit the total effect of a single modifier.
+The effect of event-based modifiers can easily be seen. Just found, conquer or raze a city and look on the F2-screen how the corresponding value has changed. Sometimes more then one event is triggered at once (eg. razing a city triggers also conquering a city)
+
+[BOLD]Useful tips[\BOLD]
+The swing category has only event based modifiers, sometimes with rather big values.
+On the other hand it's value gets halved every turn, so it rapidly converges to zero.
+
+Note that one of the big permanent changes in stability happens when some of your provinces change to worse status.
+In most cases this happens when a new civ is born in or near your territory (the first example is the Arab spawn for Byzantium).
+
+[H1]List of event based modifiers / permanent stability:[\H1]
+
+[BOLD]Base stability[\BOLD]
+[TAB]Viceroy: 6
+[TAB]Monarch: 2
+[TAB]Emperor: 0
 
 [BOLD]Cities[\BOLD]
-entering a war -1
-building a courthouse +1
-
+[TAB]Entering a war: -1
+[TAB]Building a courthouse: +1
+[TAB]After AI collapse date: -1 stability every 4 turns up to a total of -15 stability
 
 [BOLD]Civics[\BOLD]
-building a nightwatch +1
-being in anarchy max(-3, -numCities/3) (this applies for each turn in anarchy)
-
+[TAB]Building a nightwatch: +1
+[TAB]Being in anarchy: -1 or -2 for each turn, based on city number (0 for Prussia)
 
 [BOLD]Expansion[\BOLD]
-building a castle +1
-founding a city
-- in a solid province +1
-- in a unstable or OK province -2 (0 for Portugal and Norse)
-- while the number of your cities is less than 5 +1
-conquering a city in a solid province +1
-conquering a city while running Militarism +1
-razing a city -2 (-1 for Norse)
-loosing a city in a solid province -4
-loosing the capitol city -10 (-20 for Byzantium)
-moving the palace -3
-building a colony while running colonialism +1
-
+[TAB]Building a castle: +1
+[TAB]Founding a city
+[TAB][TAB]in a core or historic province: +1
+[TAB][TAB]in a border or foreign province: -2 (0 for Portugal)
+[TAB][TAB]while the number of your cities is less than 5: +1
+[TAB]Conquering a city in a core or historic province: +1
+[TAB]Conquering a city while running Militarism: +1
+[TAB]Razing a city: -2 (-1 for Norway)
+[TAB]Losing a city in a core or historic province: -3 (-2 for Scotland)
+[TAB]Losing the capitol city: -10 (-20 for Byzantium, -5 for Scotland)
+[TAB]Moving the palace: -2
+[TAB]Building a colony: -2 (-1 with Colonialism)
 
 [BOLD]Economy[\BOLD]
-building a manor house +1
-founding a corporation -2
-researching certain techs -1
-(Feudalism, Guilds, Gunpowder, ProfessionalArmy, Nationalism, CivilService, Economics, Machinery, Aristocracy)
-
+[TAB]Building a manor house: +1
+[TAB]Founding a corporation: -2
+[TAB]Researching certain techs: -1
+[TAB][TAB](Feudalism, Guilds, Machinery, Aristocracy, Nationalism,
+[TAB][TAB]Civil Service, Gunpowder, Professional Army, Economics)
 
 [BOLD]Swing[\BOLD]
-being in anarchy -8
-entering a war -3
-own improvement destroyed -2
-moving palace -5
-conquering a city in a solid province +3
-loosing a city in a solid province -3
-loosing the capitol city -10
-(note: those values are high, but their effect gets halfed every turn)
-
+(these values are high, but their effect gets halved every turn)
+[TAB]Being in anarchy: -8 (0 for Prussia)
+[TAB]Entering a war: -3
+[TAB]Own improvement got destroyed: -2
+[TAB]Moving the palace: -5
+[TAB]Conquering a city in a core or historic province: +3
+[TAB]Losing a city in a core or historic province: -4 (-2 for Scotland)
+[TAB]Losing a city in a border of foreign province: -2 (-1 for Scotland)
+[TAB]Losing the capitol city: -10 (-20 for Byzantium, -5 for Scotland)
 
 [H1]List of state based modifiers / Base stability[\H1]
 
 [BOLD]Cities[\BOLD]
-for an average city happiness of at least
-3 +1
-5 +2
-7 +3
-etc.
-
-for a prosecution countdown of at least
-1 -2
-11 -4
-21 -6
-etc.
-
-add for each city that
-- is healthy +1
-- is unhappy (angry population) -2
-- has at least one foreign religion -2 (-1 if running paganism, 0 for Poland or if running free religion)
-- has unhappy population because of hurrying -1
-- has unhappy population because of no military -1
-- has unhappy population because of war weariness -1
-- has unhappy population because of religion -1
-- has less than 40% own culture -1 (0 for Hungary and France)
-the sum of war weariness and no military penalties for all cities together will never exceed -2
-the sum of all values so far is bound between -6 and 8
-add the stability bonus for orthodox civs (+0.08 per faithpoint)
-add +8 while in a golden age
-
+[TAB]For an average city happiness of at least 2k+1: +k
+[TAB]For each city with prosecution countdown of at least 10k+1: -2(k+1)
+[TAB]For each city that
+[TAB][TAB]is healthy: +1
+[TAB][TAB]is unhappy (has at least one angry population): -2
+[TAB][TAB]has at least one foreign religion: -2 (-1 with Paganism, 0 for Poland)
+[TAB][TAB]has unhappy population because of hurrying: -1
+[TAB][TAB]has unhappy population because of no military: -1
+[TAB][TAB]has unhappy population because of war weariness: -1
+[TAB][TAB]has unhappy population because of religion: -1
+[TAB][TAB]has less than 40% own culture: -1 (0 for Hungary)
+[TAB]Stability bonus for Orthodox faith points: +1 for 10 faith
+[TAB]While in a golden age: +8
 
 [BOLD]Civics[\BOLD]
-The following civic combos give bonuses/penalties
-Feudal Monarchy with
-- Wonder Stephansdom +2
-- FeudalLaw +1
-
-Divine Monarchy with
-- Paganism -4
-- StateReligion +2
-- Theocracy +3
-- OrganizedReligion +2
-- FreeReligion -5
-- ReligiousLaw +2
-- Wonder Stephansdom +2
-
-Limited Monarchy with
-- Wonder Stephansdom +2
-- CommonLaw +3
-- FreePeasantry +2
-- FreeLabor +2
-
-Merchant Republic with
-- FeudalLaw -4
-- TradeEconomy +3
-- CommonLaw +3
-- FreePeasantry +2
-- FreeLabor +2
-- Number of cities max( -3, 4 - NumCities )
-
-Feudal Law with
-- Serfdom +1
-- Manorialism +1
-- FreePeasantry -4
-
-Bureaucracy with
-- Number of cities max( -4, 5 - NumCities )
-
-Religious Law with
-- Paganism -5
-- Theocracy +3
-- FreeReligion -5
-
-Common Law with
-- FreeLabor +3
-- Theocracy -4
-
-Serfdom with
-- Manorialism +2
-
-Apprenticeship with
-- Guilds +3
-
+[TAB]Feudal Monarchy with
+[TAB][TAB]the Stephansdom wonder: +2
+[TAB][TAB]Feudal Law: +1
+[TAB]Divine Monarchy with
+[TAB][TAB]Paganism: -4
+[TAB][TAB]State Religion: +2
+[TAB][TAB]Theocracy: +3
+[TAB][TAB]Organized Religion: +2
+[TAB][TAB]Free Religion: -5
+[TAB][TAB]Religious Law: +2
+[TAB][TAB]the Stephansdom wonder: +2
+[TAB]Limited Monarchy with
+[TAB][TAB]the Stephansdom wonder: +2
+[TAB][TAB]Common Law: +3
+[TAB][TAB]Free Peasantry: +2
+[TAB][TAB]Free Labor: +2
+[TAB]Merchant Republic with
+[TAB][TAB]Feudal Law: -4
+[TAB][TAB]Trade Economy: +3
+[TAB][TAB]Common Law: +3
+[TAB][TAB]Free Peasantry: +2
+[TAB][TAB]Free Labor: +2
+[TAB]Merchant Republic with k cities: 5-k (0 with 5 cities)
+[TAB]Feudal Law with
+[TAB][TAB]Serfdom: +1
+[TAB][TAB]Manorialism: +1
+[TAB][TAB]Free Peasantry: -4
+[TAB]Bureaucracy with k cities: 6-k (0 with 6 cities)
+[TAB]Religious Law with
+[TAB][TAB]Paganism: -5
+[TAB][TAB]Theocracy: +3
+[TAB][TAB]Free Religion: -5
+[TAB]Common Law with
+[TAB][TAB]Free Labor: +3
+[TAB][TAB]Theocracy: -4
+[TAB]Serfdom with Manorialism: +2
+[TAB]Apprenticeship with Guilds: +3
 
 [BOLD]Expansion[\BOLD]
-for each own city in
-- an unstable province -3
-- an OK province -1
-
-with Imperialism +1 for each city in a non solid province (up to a maximum of +6) 
-(as France +2 per city with a maximum of +12)
-
-for each foreign city in 
-- a core province -3
-- a normal province -1
-(note that core and normal provinces are in game both labeld solid)
-(these penalties do not apply if the civ is running Militarism or hasn't owned a city in that province at least once)
-
-for each vassal +1 (+3 with Vassalage)
-
-for being a vassal of someone else +8
-
-for total number of cities being at least
-7 -1
-9 -2
-11 -3
-12 -4
-15 -5
-for each city beyond 16 add -1
-for each city beyond 31 add -2
-(the exact formula is -(numCities*numCities)/40)
-(Turkey and Moscow get five cities for free, that means -1 at 12 cities, -2 at 14 cities, etc.)
-
+[TAB]For each own city
+[TAB][TAB]in a foreign province: -5 (-4 with Imperialism)
+[TAB][TAB]in a border province: -2 (-1 with Imperialism)
+[TAB][TAB]French UP: additional +1 for each city in a border or foreign province
+[TAB]For each foreign city
+[TAB][TAB]in a core province: -3 (0 with Militarism)
+[TAB][TAB]in a normal province: -1 (0 with Militarism)
+[TAB]For each vassal: +1 (+3 with Vassalage)
+[TAB]For being a vassal of someone else: +8
+[TAB]Stability penalty for number of cities (with k cities): -(k*k)/40
+[TAB][TAB]So 0 for less than 7 cities, -1 with 7 and 8 cities, -2 with 9 and 10 cities
+[TAB][TAB]-3 with 11 and 12 cities, -4 with 13 and 14 cities, -5 with 15 city
+[TAB][TAB]-1 for each city after the 15th, -2 for each city after the 31th
+[TAB][TAB]The Ottomans and Muscovy get five cities for free
 
 [BOLD]Economy[\BOLD]
-The total value is bound between -7 and 7</English>
+[TAB]Industrial Stability in your empire: between -3 and +3
+[TAB][TAB]Based on agriculture, production and industrial development
+[TAB]Financial Stability in your empire: between -4 and +4
+[TAB][TAB]Based on finances, inflation, trade and economic development</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>

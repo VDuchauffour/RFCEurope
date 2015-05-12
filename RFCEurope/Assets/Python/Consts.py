@@ -73,8 +73,8 @@ teamAragon, teamSweden, teamPrussia, teamLithuania, teamAustria, teamTurkey, tea
 iIndepStart = iIndependent # creates the block of independent civs
 iIndepEnd = iIndependent4
 
-l0Array =       [0 for i in range(iNumTotalPlayers)]	# currently unused
-l0ArrayActive = [0 for i in range(iNumTotalPlayers)]	# currently unused
+l0Array =       [0 for i in range(iNumPlayers)]			# currently unused
+l0ArrayActive = [0 for i in range(iNumPlayers)]			# currently unused
 l0ArrayTotal =  [0 for i in range(iNumTotalPlayers)]	# counts the cities for each player, used in RiseAndFall.py
 lm1Array =      [-1 for i in range(iNumTotalPlayers)]
 
@@ -450,7 +450,7 @@ tCoreAreasTL = (
 (21,24),   #Portugal
 (35,26),   #Aragon
 (61,60),   #Sweden
-(68,51),   #Prussia
+(70,52),   #Prussia
 (72,51),   #Lithuania
 (59,37),   #Austria
 (76,16),   #Ottomans
@@ -481,8 +481,8 @@ tCoreAreasBR = (
 (43,60),   #England
 (24,32),   #Portugal
 (42,31),   #Aragon
-(66,70),   #Sweden
-(71,59),   #Prussia
+(65,70),   #Sweden
+(71,58),   #Prussia
 (80,56),   #Lithuania
 (62,44),   #Austria
 (84,22),   #Ottomans
@@ -513,8 +513,8 @@ tExceptions = ( #Unfortunate name. These are extra plots used in spawn.
 ((37,46),(37,47),(38,46),(38,47),(39,46),(39,47),(40,46),(40,47),(41,46),(41,47),(42,47)), #England		3Miro: Calais shouldn't flip to them on spawn
 ((25,27),(25,28),(25,29),(25,30),(25,31)), #Portugal
 ((40,23),(42,23),(42,24),(44,24)), #Aragon
-((60,61),(60,62),(60,63),(64,71),(65,71),(64,72),(65,72),(66,72),(68,65),(70,67),(70,68),(71,66),(71,67),(72,66),(72,67)), #Sweden
-((72,58),(73,58),(74,58),(75,58),(76,58),(74,59),(75,59),(76,59),(74,60),(75,60),(76,60),(73,61),(74,61),(75,61),(76,61)), #Prussia
+((60,61),(60,62),(60,63),(61,71),(62,71),(62,72),(63,71),(63,72),(64,71),(64,72),(65,71),(65,72),(66,64),(66,65),(66,66),(66,72),(68,65),(70,67),(70,68),(71,66),(71,67),(71,68),(72,65),(72,66),(72,67)), #Sweden
+((68,51),(68,52),(68,53),(69,51),(69,52),(69,53),(70,51),(71,59),(72,57),(72,58),(73,57),(73,58),(74,57),(74,58),(74,59),(74,60),(75,57),(75,58),(75,59),(75,60),(76,58),(76,59),(76,60)), #Prussia
 ((76,57),(77,57),(78,57),(79,57),(80,57)), #Lithuania
 ((60,36),(61,36)), #Austria
 ((76,23),(77,23),(78,23),(79,23)), #Ottomans
@@ -546,9 +546,9 @@ tNormalAreasTL = (
 (32,50),   #England
 (21,21),   #Portugal
 (54,16),   #Aragon
-(60,58),   #Sweden
-(60,50),   #Prussia
-(69,51),   #Lithuania
+(60,59),   #Sweden
+(59,48),   #Prussia
+(70,51),   #Lithuania
 (57,36),   #Austria
 (76,14),   #Turks
 (83,51),   #Moscow
@@ -578,9 +578,9 @@ tNormalAreasBR = (
 (43,71),   #England
 (25,32),   #Portugal
 (64,26),   #Aragon
-(77,72),   #Sweden
+(75,72),   #Sweden
 (71,55),   #Prussia
-(82,60),   #Lithuania
+(77,63),   #Lithuania
 (63,42),   #Austria
 (98,27),   #Turks
 (98,71),   #Moscow
@@ -610,9 +610,9 @@ tNormalAreasSubtract = ( #These plots are subtracted from the tNormalAreasTL+tNo
 ((32,55),(32,56),(32,57),(32,58),(32,59),(32,60),(32,61),(32,62),(32,63),(32,64),(33,56),(33,57),(33,58),(33,59),(33,60),(33,61),(33,62),(33,63)), #England
 ((25,21),(25,22),(25,23),(25,24),(25,25),(25,26),(25,32)), #Portugal
 (), #Aragon
-(), #Sweden
-((64,50),(65,50),(66,50),(67,50),(68,50),(69,50),(70,50),(71,50)), #Prussia
-((69,51),(69,52),(69,53),(69,54),(70,51),(70,52),(70,53),(71,51),(71,52),(72,51)), #Lithuania
+((60,59),(60,60),(60,61),(60,70),(60,71),(60,72),(61,59),(61,60),(61,72),(70,59),(70,60),(70,61),(71,59),(71,60),(71,61),(72,59),(72,60),(72,61),(73,59),(73,60),(73,61),(74,59),(74,60),(74,61),(75,59),(75,60),(75,61)), #Sweden
+((59,55),(60,55),(61,55),(63,48),(63,49),(63,50),(64,48),(64,49),(64,50),(65,48),(65,49),(65,50),(66,48),(66,49),(66,50),(67,48),(67,49),(67,50),(68,48),(68,49),(68,50),(69,48),(69,49),(69,50),(70,48),(70,49),(70,50),(71,48),(71,49),(71,50)), #Prussia
+((70,51),(70,52),(70,53),(70,54),(70,55),(70,59),(70,60),(70,61),(70,62),(70,63),(71,51),(71,52),(71,53),(71,54),(71,60),(71,61),(71,62),(71,63),(72,51),(72,60),(72,61),(72,62),(72,63),(73,63),(77,59),(77,60),(77,61),(77,62),(77,63)), #Lithuania
 ((57,36),(57,37),(58,36),(58,37),(59,36),(63,36),(63,37),(63,38)), #Austria
 ((76,27),(77,27),(78,27),(79,27),(80,27)), #Turkey
 (), #Moscow
@@ -978,11 +978,11 @@ tReligionSpreadFactor = ( # PROT, ISL, CATH, ORTH, JUD
 (150,  20, 150,  70,  10), #Burgundy
 (450,  20, 250,  20,  10), #Germany
 ( 60,  60,  60, 400,  10), #Novgorod
-(250,  50, 150, 100,  10), #Norway
+(250,  50, 150,  80,  10), #Norway
 ( 90,  90,  90, 250,  10), #Kiev
-(250,  80, 150, 100,  10), #Hungary
+(250,  80, 200,  80,  10), #Hungary
 (100,  20, 200,  20,  10), #Spain
-(250,  50, 150, 100,  10), #Denmark
+(250,  50, 180,  80,  10), #Denmark
 (450,  20, 100,  20,  10), #Scotland
 (200, 100, 400, 200,  10), #Poland
 (190,  50, 250,  30,  10), #Genoa
@@ -992,7 +992,7 @@ tReligionSpreadFactor = ( # PROT, ISL, CATH, ORTH, JUD
 (150,  80, 250,  20,  10), #Aragon
 (450,  20, 200,  50,  10), #Sweden
 (450,  20, 250,  20,  10), #Prussia
-( 80,  80,  80,  80,  80), #Lithuania
+( 80,  80,  80,  80,  10), #Lithuania
 (200,  20, 250,  20,  10), #Austria
 ( 20, 350,  80,  80,  10), #Turkey
 (100,  20, 100, 250,  10), #Moscow
@@ -1055,6 +1055,7 @@ tReligiousTolerance = (
 )
 
 
+#Absinthe: old stability system, not used currently
 #Stability Parameters
 iParCities3 = 0
 iParCitiesE = 1
@@ -1333,7 +1334,7 @@ iIsHasEscorial    = 1 # Stability parameter in Python
 iMercCostPerTurn  = 2 # Mercenaries
 iJanissaryPoints  = 3 # Janissary points
 
-# Stability Cathegories
+# Stability categories
 iCathegoryCities = 0
 iCathegoryCivics = 1
 iCathegoryEconomy = 2

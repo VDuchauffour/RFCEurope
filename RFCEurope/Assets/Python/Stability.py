@@ -7,11 +7,13 @@ import Popup
 #import cPickle as pickle
 import Consts as con
 import XMLConsts as xml
-#import RFCEStability
 import RFCUtils
 import RFCEMaps as rfcemaps
+import RiseAndFall
 
 utils = RFCUtils.RFCUtils()
+rnf = RiseAndFall.RiseAndFall()
+
 # globals
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer
@@ -29,7 +31,7 @@ iCathegoryEconomy = con.iCathegoryEconomy
 iCathegoryExpansion = con.iCathegoryExpansion
 tCapitals = con.tCapitals
 
-tStabilityPenalty = ( -4, -1, 0, 0, 0 )
+tStabilityPenalty = ( -5, -2, 0, 0, 0 )
 
 class Stability:
 
@@ -40,19 +42,19 @@ class Stability:
 				pPlayer.changeStabilityBase( iCath, - pPlayer.getStabilityBase( iCath ) )
 				pPlayer.setStabilityVary( iCath, 0 )
 			pPlayer.setStabilitySwing( 0 )
-		if ( not gc.getPlayer( con.iFrankia ).isHuman() ):
-			gc.getPlayer( con.iFrankia ).changeStabilityBase( iCathegoryExpansion, 5 ) # so that they don't collapse from the cities they lose to everyone
+		#if ( not gc.getPlayer( con.iFrankia ).isHuman() ):
+		#	gc.getPlayer( con.iFrankia ).changeStabilityBase( iCathegoryExpansion, 5 ) # so that they don't collapse from the cities they lose to everyone
 		#if ( not gc.getPlayer( con.iVenecia ).isHuman() ):
-			#gc.getPlayer( con.iVenecia ).changeStabilityBase( iCathegoryExpansion, 4 ) # they collapse too often
+		#	gc.getPlayer( con.iVenecia ).changeStabilityBase( iCathegoryExpansion, 4 ) # they collapse too often
 		#if ( gc.getPlayer( con.iDenmark ).isHuman() ):
-			#gc.getPlayer( con.iDenmark ).changeStabilityBase( iCathegoryExpansion, 2 ) # too many border provinces to conquer in short time
+		#	gc.getPlayer( con.iDenmark ).changeStabilityBase( iCathegoryExpansion, 2 ) # too many border provinces to conquer in short time
 		iHandicap = gc.getGame().getHandicapType()
 		if (iHandicap == 0):
 			gc.getPlayer( utils.getHumanID() ).changeStabilityBase( iCathegoryExpansion, 6 )
 		elif (iHandicap == 0):
 			gc.getPlayer( utils.getHumanID() ).changeStabilityBase( iCathegoryExpansion, 2 )
 
-		# Absinthe: Stability is accounted properly for stuff placed in WB - from RFCE++
+		# Absinthe: Stability is accounted properly for stuff preplaced in the scenario file - from RFCE++
 		for iPlayer in range(iNumMajorPlayers):
 			pPlayer = gc.getPlayer(iPlayer)
 			apCityList = PyPlayer(iPlayer).getCityList()
@@ -68,7 +70,7 @@ class Stability:
 					pPlayer.changeStabilityBase( iCathegoryExpansion, 1 )
 				elif ( not gc.hasUP( iPlayer, con.iUP_StabilitySettler ) ):
 					pPlayer.changeStabilityBase( iCathegoryExpansion, -2 )
-				if ( iCounter < 5 ): # early boost to small Empires
+				if ( iCounter < 5 ): # early boost to small civs
 					pPlayer.changeStabilityBase( iCathegoryExpansion, 1 )
 
 				# Building stability
@@ -87,14 +89,6 @@ class Stability:
 				print(pCity.getName() + " contributes " + str(pPlayer.getStability() - iOldStab) + " stability.")
 
 			print("Player "+str(iPlayer)+" initial stability: "+str(pPlayer.getStability()))
-
-
-	def zeroStability(self,iPlayer): #Called by RiseAndFall Resurrection
-		pPlayer = gc.getPlayer( iPlayer )
-		for iCath in range( 4 ):
-			pPlayer.changeStabilityBase( iCath, - pPlayer.getStabilityBase( iCath ) )
-			pPlayer.setStabilityVary( iCath, 0 )
-		pPlayer.setStabilitySwing( 0 )
 
 
 	def checkTurn(self, iGameTurn):
@@ -166,7 +160,7 @@ class Stability:
 
 		# Collapse dates for AI nations - from RFCE++
 		if(iGameTurn > con.tCollapse[iPlayer] and iPlayer != utils.getHumanID() and pPlayer.isAlive()):
-			# -1 stability every 4 turns up to a total of -15 stability
+			# Absinthe: -1 stability every 4 turns up to a total of -15 stability
 			if(iGameTurn % 4 == 0 and iGameTurn <= con.tCollapse[iPlayer]+4*15):
 				pPlayer.changeStabilityBase(iCathegoryCities, -1)
 
@@ -190,6 +184,8 @@ class Stability:
 		pPlayer = gc.getPlayer( iPlayer )
 		if ( pPlayer.getProvinceType( iProv ) >= con.iProvinceNatural ):
 			pPlayer.changeStabilityBase( iCathegoryExpansion, 1 )
+		elif ( pPlayer.getProvinceType( iProv ) == con.iProvincePotential ):
+			pPlayer.changeStabilityBase( iCathegoryExpansion, 0 )
 		elif ( not gc.hasUP( iPlayer, con.iUP_StabilitySettler ) ):
 			pPlayer.changeStabilityBase( iCathegoryExpansion, -2 )
 		if ( pPlayer.getNumCities() < 5 ): # early boost to small Empires
@@ -236,7 +232,7 @@ class Stability:
 			else:
 				pOwner.changeStabilityBase( iCathegoryExpansion, -10 )
 				pOwner.setStabilitySwing( pOwner.getStabilitySwing() - 10 )
-				if ( gc.hasUP(owner,con.iUP_Emperor) ): # If Byzantium loses Constantinople, they should collapse
+				if ( gc.hasUP(owner,con.iUP_Emperor) ): # If Byzantium loses Constantinople, they should lose all non-core cities
 					pOwner.changeStabilityBase( iCathegoryExpansion, -10 )
 					pOwner.setStabilitySwing( pOwner.getStabilitySwing() - 10 )
 		self.recalcEpansion( pOwner )
@@ -303,7 +299,7 @@ class Stability:
 		elif (iBuilding == xml.iPalace):
 			#print(" Capital Changed",iPlayer)
 			pPlayer= gc.getPlayer( iPlayer )
-			pPlayer.changeStabilityBase( iCathegoryExpansion, -3 )
+			pPlayer.changeStabilityBase( iCathegoryExpansion, -2 )
 			pPlayer.setStabilitySwing( pPlayer.getStabilitySwing() -5  )
 
 
@@ -346,28 +342,61 @@ class Stability:
 
 
 	def checkImplosion(self, iGameTurn):
-		if (iGameTurn > 10 and iGameTurn % 8 == 5):
+		if (iGameTurn > 10 and iGameTurn % 6 == 3):
 			for iPlayer in range(iNumPlayers):
 				pPlayer = gc.getPlayer(iPlayer)
-				if (pPlayer.isAlive() and iGameTurn >= con.tBirth[iPlayer] + 25):
-					# 3MiroUP: Emperor
-					if (pPlayer.getStability() < -15 and pPlayer.getNumCities() > 9 and (not utils.collapseImmune(iPlayer))): #civil war
-						print ("COLLAPSE: CIVIL WAR", gc.getPlayer(iPlayer).getCivilizationAdjective(0))
-						if (iPlayer != utils.getHumanID()):
-							if (gc.getPlayer(utils.getHumanID()).canContact(iPlayer)):
-								CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, gc.getPlayer(iPlayer).getCivilizationDescription(0) + " " + CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
-							#if (iGameTurn < xml.i1000AD):
-							# 3Miro: fragments to indeps and barbs, after some year just indeps
-							#utils.killAndFragmentCiv(iPlayer, iIndependent, iIndependent2, -1, False)
-							utils.killAndFragmentCiv(iPlayer, False, False)
-						else:
-							if (pPlayer.getNumCities() > 1):
-								CyInterface().addMessage(iPlayer, True, con.iDuration, CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_HUMAN", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
-								#utils.killAndFragmentCiv(iPlayer, iIndependent, iIndependent2, -1, True)
-								utils.killAndFragmentCiv(iPlayer, False, True)
-								#self.setStability(iPlayer, -15)
-								self.zeroStability( iPlayer )
-								pPlayer.changeStabilityBase( iCathegoryExpansion, -3 )
+				if (pPlayer.isAlive() and iGameTurn >= con.tBirth[iPlayer] + 10):
+					# Absinthe: if stability is less than -3, there is a chance that the secession/revolt or collapse mechanics start
+					#			if more than 8 cities: high chance for secession mechanics, low chance for collapse
+					#			elif more than 4 cities: medium chance for collapse mechanics, medium chance for secession
+					#			otherwise big chance for collapse mechanics
+					#			the actual chance for both secession/revolt and total collapse is increasing with lower stability
+					iStability = pPlayer.getStability()
+					if (iStability < -3):
+						if (pPlayer.getNumCities() > 8):
+							if (gc.getGame().getSorenRandNum(10, 'city secession') < 8): #80 chance for secession start
+								if (gc.getGame().getSorenRandNum(10, 'city secession') < -3 - iStability): #10% at -4, increasing by 10% with each point (100% with -13 or less)
+									rnf.revoltCity( iPlayer, False )
+							elif (gc.getGame().getSorenRandNum(10, 'civ collapse') < 1): #10 chance for collapse start
+								if (gc.getGame().getSorenRandNum(10, 'civ collapse') < -1.5 - (iStability/2)): #10% at -4, increasing by 10% with 2 points (100% with -22 or less)
+									print ("COLLAPSE: CIVIL WAR", gc.getPlayer(iPlayer).getCivilizationAdjective(0))
+									if (iPlayer != utils.getHumanID()):
+										if (gc.getPlayer(utils.getHumanID()).canContact(iPlayer)):
+											CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, gc.getPlayer(iPlayer).getCivilizationDescription(0) + " " + CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
+										utils.killAndFragmentCiv(iPlayer, False, False)
+									elif (pPlayer.getNumCities() > 1):
+										CyInterface().addMessage(iPlayer, True, con.iDuration, CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_HUMAN", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
+										utils.killAndFragmentCiv(iPlayer, False, True)
+										self.zeroStability( iPlayer )
+										pPlayer.changeStabilityBase( iCathegoryExpansion, -3 )
+						elif (pPlayer.getNumCities() > 4):
+							if (gc.getGame().getSorenRandNum(10, 'city secession') < 4): #40 chance for secession start
+								if (gc.getGame().getSorenRandNum(10, 'city secession') < -3 - iStability): #10% at -4, increasing by 10% with each point (100% with -13 or less)
+									rnf.revoltCity( iPlayer, False )
+							elif (gc.getGame().getSorenRandNum(10, 'civ collapse') < 4): #40 chance for collapse start
+								if (gc.getGame().getSorenRandNum(10, 'civ collapse') < -1.5 - (iStability/2)): #10% at -4, increasing by 10% with 2 points (100% with -22 or less)
+									print ("COLLAPSE: CIVIL WAR", gc.getPlayer(iPlayer).getCivilizationAdjective(0))
+									if (iPlayer != utils.getHumanID()):
+										if (gc.getPlayer(utils.getHumanID()).canContact(iPlayer)):
+											CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, gc.getPlayer(iPlayer).getCivilizationDescription(0) + " " + CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
+										utils.killAndFragmentCiv(iPlayer, False, False)
+									elif (pPlayer.getNumCities() > 1):
+										CyInterface().addMessage(iPlayer, True, con.iDuration, CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_HUMAN", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
+										utils.killAndFragmentCiv(iPlayer, False, True)
+										self.zeroStability( iPlayer )
+										pPlayer.changeStabilityBase( iCathegoryExpansion, -3 )
+						elif (gc.getGame().getSorenRandNum(10, 'civ collapse') < 7): #70 chance for collapse start
+							if (gc.getGame().getSorenRandNum(10, 'civ collapse') < -1.5 - (iStability/2)): #10% at -4, increasing by 10% with 2 points (100% with -22 or less)
+								print ("COLLAPSE: CIVIL WAR", gc.getPlayer(iPlayer).getCivilizationAdjective(0))
+								if (iPlayer != utils.getHumanID()):
+									if (gc.getPlayer(utils.getHumanID()).canContact(iPlayer)):
+										CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, gc.getPlayer(iPlayer).getCivilizationDescription(0) + " " + CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
+									utils.killAndFragmentCiv(iPlayer, False, False)
+								elif (pPlayer.getNumCities() > 1):
+									CyInterface().addMessage(iPlayer, True, con.iDuration, CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_HUMAN", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
+									utils.killAndFragmentCiv(iPlayer, False, True)
+									self.zeroStability( iPlayer )
+									pPlayer.changeStabilityBase( iCathegoryExpansion, -3 )
 
 
 	def printStability(self, iGameTurn, iPlayer ):
@@ -383,7 +412,7 @@ class Stability:
 		print("                  Swing     : ",pPlayer.getStabilitySwing() )
 
 
-	def zeroStability(self,iPlayer): #Called by RiseAndFall Resurrection
+	def zeroStability(self,iPlayer): #Called by Stability.CheckImplosion
 		pPlayer = gc.getPlayer(iPlayer)
 		pPlayer.changeStabilityBase( iCathegoryCities, -pPlayer.getStabilityBase( iCathegoryCities ) )
 		pPlayer.changeStabilityBase( iCathegoryCivics, -pPlayer.getStabilityBase( iCathegoryCivics ) )
@@ -402,7 +431,7 @@ class Stability:
 		iTotalHappy = pPlayer.calculateTotalCityHappiness() - pPlayer.calculateTotalCityUnhappiness()
 		iCityStability = 0
 		### For Debug Purposes, count individual contributions
-		iHappyStability = max( (iTotalHappy / pPlayer.getNumCities() - 1)/2, 0 ) # more than +2 happy per city, negative effects are handled below
+		iHappyStability = max( (iTotalHappy / pPlayer.getNumCities() - 1)/2, 0 ) # +k stability for an average city happiness of at least 2k+1
 		iHealthStability = 0
 		iHurryStability = 0
 		iMilitaryStability = 0
@@ -438,17 +467,18 @@ class Stability:
 		iProsecutionCount = pPlayer.getProsecutionCount()
 		if ( iProsecutionCount > 0 ):
 			iReligionStability -= 2* ( (iProsecutionCount+9) / 10 )
-		# Humans are far more competent then the AI, so give the AI a small boost
+		# Humans are far more competent then the AI, so the AI won't get all the penalties
 		if ( pPlayer.isHuman() ):
-			iCityStability += iHappyStability + iHealthStability + iReligionStability + iHurryStability + iCultureStability
-			iCityStability += max( iMilitaryStability + iWarWStability, -2 )
-			iCityStability = min( max( iCityStability, -6 ), 8 )
+			iCityStability += iHappyStability + iHealthStability + iReligionStability + iHurryStability + iCultureStability + iMilitaryStability
+			iCityStability += max( iWarWStability, -10 ) # max 10 instability from war weariness
+			iCityStability = min( iCityStability, 8 ) # max 8 extra stability from cities - don't want to add too many bonuses for runaway civs
 		else:
-			iCityStability += max( iHappyStability, -2 ) + iHealthStability # AI keeps very unhappy cities
-			iCityStability += max( iReligionStability + iHurryStability, -3 ) + max( iCultureStability, -3 )
-			iCityStability = min( max( iCityStability, -5 ), 5 )
+			iCityStability += max( iHappyStability, -3 ) + iHealthStability # AI keeps very unhappy cities
+			iCityStability += max( iReligionStability + iHurryStability, -7 ) + max( iCultureStability, -3 )
+			iCityStability += max( iMilitaryStability + iWarWStability, -3 )
+			iCityStability = min( max( iCityStability, -10 ), 8 )
 		iCityStability += pPlayer.getFaithBenefit( con.iFP_Stability )
-		#print(" City Stability for: ",iPlayer," Caths: ",iHappyStability,iHealthStability,iHurryStability,iMilitaryStability,iWarWStability,iReligionStability,iCultureStability)
+		#print(" City Stability for: ",iPlayer," Categories: ",iHappyStability,iHealthStability,iHurryStability,iMilitaryStability,iWarWStability,iReligionStability,iCultureStability)
 		if ( pPlayer.getGoldenAgeTurns() > 0 ):
 			iCityStability += 8
 
@@ -491,9 +521,9 @@ class Stability:
 		if (iCivic0 == xml.iCivicLimitedMonarchy or iCivic0 == xml.iCivicMerchantRepublic): #Limited Monarchy and Republics both like enlightened civics
 			if (iCivic1 == xml.iCivicCommonLaw): #Common Law
 				iCivicCombo +=3
-			if (iCivic2 == xml.iCivicFreePeasantry or iCivic2 == xml.iCivicFreeLabor): #Free Peasantry or free labor
+			if (iCivic2 == xml.iCivicFreePeasantry or iCivic2 == xml.iCivicFreeLabor): #Free Peasantry or Free Labor
 				iCivicCombo +=3
-		if (iCivic1 == xml.iCivicFeudalLaw): #Feudal law works well with...
+		if (iCivic1 == xml.iCivicFeudalLaw): #Feudal Law works well with...
 			if (iCivic2 == xml.iCivicSerfdom): # Serfdom
 				iCivicCombo +=1
 			elif (iCivic2 == xml.iCivicFreePeasantry): #but poorly with uppity free peasants
@@ -518,14 +548,14 @@ class Stability:
 			iCivicCombo +=3
 		if (iCivic1 == xml.iCivicBureaucracy): #Bureaucracy
 			if ( pPlayer.isHuman() ):
-				iCivicCombo += max( -4, 5 - pPlayer.getNumCities() )
+				iCivicCombo += ( 6 - pPlayer.getNumCities() )
 			else:
-				iCivicCombo += max( -2, 5 - pPlayer.getNumCities() )
+				iCivicCombo += max( -3, 6 - pPlayer.getNumCities() )
 		if (iCivic0 == xml.iCivicMerchantRepublic): #Merchant Republic city cap (like Republic from RFC)
 			if ( pPlayer.isHuman() ):
-				iCivicCombo += max( -3, 4 - pPlayer.getNumCities() )
+				iCivicCombo += ( 5 - pPlayer.getNumCities() )
 			else:
-				iCivicCombo += max( -1, 4 - pPlayer.getNumCities() )
+				iCivicCombo += max( -3, 5 - pPlayer.getNumCities() )
 		# TODO: boost for stability depending on the current stability
 		#if (iCivic0 == 2): #Divine Monarchy
 		#	if (self.getStability(iPlayer) > 30):
@@ -568,7 +598,7 @@ class Stability:
 					iProductionPenalty -= 1
 			elif ( pCity.isProductionBuilding() ):
 				iBuilding = pCity.getProductionBuilding()
-				if (iBuilding >= xml.iSistineChapel and iBuilding <= xml.iPressburg): #+2 per wonder
+				if (iBuilding >= xml.iSistineChapel and iBuilding <= xml.iLanterna): #+2 per wonder
 					iProductionPenalty -= 2
 			else:
 				iProductionPenalty -= 2
@@ -604,8 +634,8 @@ class Stability:
 					iCivicBonus += 1
 				if ( bIsUPLandStability ): # French UP
 					iUPBonus += 1
-		iExpStability += min( 12, iCivicBonus ) # Imperialism
-		iExpStability += min( 6, iUPBonus ) # French UP
+		iExpStability += iCivicBonus # Imperialism
+		iExpStability += iUPBonus # French UP
 		if ( not (pPlayer.getCivics(5) == xml.iCivicOccupation) ):
 			iExpStability -= 3 * pPlayer.getForeignCitiesInMyProvinceType( con.iProvinceCore ) # -3 stability for each foreign/enemy city in your core provinces, without the Militarism civic
 			iExpStability -= 1 * pPlayer.getForeignCitiesInMyProvinceType( con.iProvinceNatural ) # -1 stability for each foreign/enemy city in your natural provinces, without the Militarism civic
@@ -620,11 +650,11 @@ class Stability:
 		if ( iPlayer == con.iTurkey or iPlayer == con.iMoscow ): # five free cities for those two
 			iNumCities = max( 0, iNumCities - 5 )
 		iExpStability -= iNumCities*iNumCities / 40
-		if ( pPlayer.getID() == con.iTurkey and pPlayer.getStability() < 1 and gc.getGame().getGameTurn() < xml.i1570AD ): # boost Turkey before the battle of Lepanto
-			if ( not pPlayer.isHuman() ):
-				iExpStability += min( 3 - pPlayer.getStability(), 6 )
-		if ( pPlayer.getID() == con.iVenecia and pPlayer.getStability() < 1 and gc.getGame().getGameTurn() < xml.i1204AD ): # Venice has trouble early on due to its civics
-			if ( not pPlayer.isHuman() ):
-				iExpStability += 4
+	#	if ( pPlayer.getID() == con.iTurkey and pPlayer.getStability() < 1 and gc.getGame().getGameTurn() < xml.i1570AD ): # boost Turkey before the battle of Lepanto
+	#		if ( not pPlayer.isHuman() ):
+	#			iExpStability += min( 3 - pPlayer.getStability(), 6 )
+	#	if ( pPlayer.getID() == con.iVenecia and pPlayer.getStability() < 1 and gc.getGame().getGameTurn() < xml.i1204AD ): # Venice has trouble early on due to its civics
+	#		if ( not pPlayer.isHuman() ):
+	#			iExpStability += 4
 		pPlayer.setStabilityVary( iCathegoryExpansion, iExpStability )
 

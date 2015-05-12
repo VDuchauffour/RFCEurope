@@ -713,16 +713,19 @@ class RiseAndFall:
 			pCity.setHasRealBuilding( xml.iWalls, True )
 		if ( (pCity.getX()==55) and (pCity.getY()==41) ): #Augsburg
 			pCity.setHasRealBuilding( xml.iWalls, True )
-		#if ( (pCity.getX()==41) and (pCity.getY()==52) ): #London
+		#if ( (pCity.getX()==41) and (pCity.getY()==52) ): #London			preplaced fort on the map instead of preplaced walls
 		#	pCity.setHasRealBuilding( xml.iWalls, True )
 		if ( (pCity.getX()==23) and (pCity.getY()==31) ): #Porto
 			pCity.setHasRealBuilding( xml.iWalls, True )
 		if ( (pCity.getX()==60) and (pCity.getY()==44) ): #Prague
 			pCity.setHasRealBuilding( xml.iWalls, True )
-		#if ( (pCity.getX()==80) and (pCity.getY()==62) ): #Novgorod
+		#if ( (pCity.getX()==80) and (pCity.getY()==62) ): #Novgorod		preplaced fort on the map instead of preplaced walls
 		#	pCity.setHasRealBuilding( xml.iWalls, True )
 		if ( (pCity.getX()==74) and (pCity.getY()==58) ): #Riga
 			pCity.setHasRealBuilding( xml.iWalls, True )
+		if (not gc.getPlayer(iLithuania).isHuman()):
+			if ( (pCity.getX()==75) and (pCity.getY()==53) ): #Vilnius - important for AI Lithuania against Prussia
+				pCity.setHasRealBuilding( xml.iWalls, True )
 
 
 	def onCityAcquired(self, owner, playerType, city, bConquest, bTrade):
@@ -836,11 +839,9 @@ class RiseAndFall:
 			#if (pIndependent2.isAlive()):
 			#	utils.updateMinorTechs(iIndependent2, iBarbarian)
 
-		# 3Miro this should be Arabia
-		#iFirstSpawn = iArabia
-		#for iLoopCiv in range(iFirstSpawn, iNumMajorPlayers):
+		# Absinthe: checking the spawn dates
 		for iLoopCiv in range( iNumMajorPlayers ):
-			if ( (not (tBirth[iLoopCiv] == 0) ) and iGameTurn >= con.tBirth[iLoopCiv] - 3 and iGameTurn <= con.tBirth[iLoopCiv] + 6):
+			if ( (not (tBirth[iLoopCiv] == 0) ) and iGameTurn >= con.tBirth[iLoopCiv] - 2 and iGameTurn <= con.tBirth[iLoopCiv] + 4):
 				self.initBirth(iGameTurn, con.tBirth[iLoopCiv], iLoopCiv)
 
 
@@ -857,7 +858,7 @@ class RiseAndFall:
 		# Generic collapse: if 1/2 of the empire is lost in only a few turns (18 I think) = collapse
 		# Motherland collapse: if no city is in the core area and the number of cities in the normal area is less than the other's cities and have no vassal = collapse
 		# Secession: if stability is negative there is a chance (bigger chance with worse stability) for a random city to it's declare independence
-		if (iGameTurn >= 64 and iGameTurn % 4 == 0): #mainly for seljuks, mongols, timurids
+		if (iGameTurn >= 64 and iGameTurn % 5 == 0): #mainly for seljuks, mongols, timurids
 			self.collapseByBarbs(iGameTurn)
 		if (iGameTurn >= 34 and iGameTurn % 16 == 0): #used to be 15 in vanilla
 			self.collapseGeneric(iGameTurn)
@@ -901,6 +902,7 @@ class RiseAndFall:
 			self.reduceCity((65,66))
 
 
+	# Absinthe: disappearing cities (reducing them to an improvement)
 	def reduceCity(self, tPlot):
 		pPlot = gc.getMap().plot(tPlot[0],tPlot[1])
 		if(pPlot.isCity()):
@@ -929,8 +931,8 @@ class RiseAndFall:
 
 		# Absinthe: leader switching for up to 4 leaders
 		if (len(tLeaders[iPlayer]) > 1):
-			if (len(tLateLeaders[iPlayer]) > 5):
-				if (len(tLateLeaders[iPlayer]) > 9):
+			if (len(tLeaders[iPlayer]) > 2):
+				if (len(tLeaders[iPlayer]) > 3):
 					if (iGameTurn >= tLateLeaders[iPlayer][9]):
 						self.switchLateLeaders(iPlayer, 8)
 					elif (iGameTurn >= tLateLeaders[iPlayer][5]):
@@ -993,7 +995,14 @@ class RiseAndFall:
 				iThreshold *= 2
 			if (gc.getPlayer(iPlayer).getAnarchyTurns() != 0 or utils.getPlagueCountdown(iPlayer) > 0 or utils.getStability(iPlayer) <= -10 or gc.getGame().getSorenRandNum(100, 'die roll') < iThreshold):
 				gc.getPlayer(iPlayer).setLeader(tLateLeaders[iPlayer][iLeaderIndex])
-				print ("leader late switch:", tLateLeaders[iPlayer][iLeaderIndex], "in civ", iPlayer)
+				#print ("leader late switch:", tLateLeaders[iPlayer][iLeaderIndex], "in civ", iPlayer)
+
+				# Absinthe: message about the leader switch for the human player
+				iHuman = utils.getHumanID()
+				HumanTeam = gc.getTeam(gc.getPlayer(iHuman).getTeam())
+				PlayerTeam = gc.getPlayer(iPlayer).getTeam()
+				if (HumanTeam.isHasMet(PlayerTeam)): # only if it's a known civ
+					CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_LEADER_SWITCH", (gc.getPlayer(iPlayer).getName(), gc.getPlayer(iPlayer).getCivilizationDescriptionKey())), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, "", ColorTypes(con.iPurple), -1, -1, True, True)
 
 
 	def fragmentIndependents(self):
@@ -1083,7 +1092,7 @@ class RiseAndFall:
 ##								if (city.getOwner() == iBarbarian):
 ##									if (city.getOriginalOwner() == iCiv):
 ##										iLostCities = iLostCities + 1
-					if (iLostCities*2 > iNumCities+2 and iNumCities > 0): #if a little more than one third is captured, the civ collapses
+					if (iLostCities*2 > iNumCities+1 and iNumCities > 0): #if a little more than one third is captured, the civ collapses
 						print ("COLLAPSE BY BARBS", gc.getPlayer(iCiv).getCivilizationAdjective(0))
 						#utils.killAndFragmentCiv(iCiv, iIndependent, iIndependent2, -1, False)
 						utils.killAndFragmentCiv(iCiv, False, False)
@@ -1093,7 +1102,7 @@ class RiseAndFall:
 			iPlayer = j % iNumPlayers
 			#print(" 3Miro: player ",iPlayer)
 			pPlayer = gc.getPlayer(iPlayer)
-			if (pPlayer.isAlive() and iGameTurn >= con.tBirth[iPlayer] + 30):
+			if (pPlayer.isAlive() and iGameTurn >= con.tBirth[iPlayer] + 25):
 				iStability = pPlayer.getStability()
 				if (pPlayer.getStability() < -15 and (not utils.collapseImmune(iPlayer)) and (pPlayer.getNumCities() > 10) ): #civil war
 					self.revoltCity( iPlayer, False )
@@ -1147,7 +1156,7 @@ class RiseAndFall:
 		for j in range(iRndnum, iRndnum + iNumPlayers):
 			iPlayer = j % iNumPlayers
 			pPlayer = gc.getPlayer(iPlayer)
-			if (pPlayer.isAlive() and iGameTurn >= con.tBirth[iPlayer] + 20):
+			if (pPlayer.isAlive() and iGameTurn >= con.tBirth[iPlayer] + 15):
 				iStability = pPlayer.getStability()
 				if ( gc.getGame().getSorenRandNum(10, 'do the check for city secession') < -iStability ): # x/10 chance with -x stability
 					self.revoltCity( iPlayer, False )
@@ -1155,7 +1164,7 @@ class RiseAndFall:
 
 
 	def revoltCity( self, iPlayer, bForce ):
-		# if bForce is true, then any city can revolt
+		# Absinthe: if bForce is true, then any city can revolt
 		pPlayer = gc.getPlayer(iPlayer)
 		iStability = pPlayer.getStability()
 
@@ -1165,32 +1174,53 @@ class RiseAndFall:
 			city = pCity.GetCy()
 			pCurrent = gc.getMap().plot(city.getX(), city.getY())
 
-			if ((not city.isWeLoveTheKingDay()) and (not city.isCapital()) and (not (city.getX() == tCapitals[iPlayer][0] and city.getY() == tCapitals[iPlayer][1])) and (not utils.collapseImmuneCity(iPlayer,city.getX(),city.getY()))): # 3MiroUP: Emperor
+			# Absinthe: cities with We Love The King Day, your current and original capitals, and cities very close to your current capital won't revolt
+			if ((not city.isWeLoveTheKingDay()) and (not city.isCapital()) and (not (city.getX() == tCapitals[iPlayer][0] and city.getY() == tCapitals[iPlayer][1]))):
 				if (pPlayer.getNumCities() > 0): # this check is needed, otherwise game crashes
 					capital = gc.getPlayer(iPlayer).getCapitalCity()
 					iDistance = utils.calculateDistance(city.getX(), city.getY(), capital.getX(), capital.getY())
 					if (iDistance > 3):
 						iProvType = pPlayer.getProvinceType( city.getProvince() )
-						# Absinthe: any city can get into the revolt if it has angry population, bad health, untolerated religion, no military garrison
-						if ( bForce or iProvType < con.iProvinceNatural or city.angryPopulation(0) > 1 or city.healthRate(False, 0) < -2 or city.getReligionBadHappiness() > 1 or city.getNoMilitaryPercentAnger() > 0 ):
-							# Absinthe: the following random chance is not necessary, there is already one in the secession function
-							#if ( gc.getGame().getSorenRandNum(100, 'city secession') < 20 - 5 * pPlayer.getStability() ): # 100% if stability is less than -15
+						# Absinthe: if forced revolt, all cities go into the list by default
+						#			angry population, bad health, untolerated religion, no military garrison adds the city to the list once more (per type)
+						#			if the city is in an border/contested province, the city is added 3 more times, if in foreign, 8 more times
+						if (bForce):
+							cityList.append(city)
+						# Absinthe: Byzantine UP: cities in normal and core provinces won't go on the list
+						if (city.angryPopulation(0) > 1):
+							if (not utils.collapseImmuneCity(iPlayer,city.getX(),city.getY())):
 								cityList.append(city)
-								# Absinthe: cities in border/contested provinces have 4*chance to be chosen, cities in foreign provinces have 9*chance
-								if ( iProvType == con.iProvinceNone ):
-									cityList.append(city)
-									cityList.append(city)
-									cityList.append(city)
-									cityList.append(city)
-									cityList.append(city)
-									cityList.append(city)
-									cityList.append(city)
-									cityList.append(city)
-								if ( iProvType == con.iProvinceOuter ):
-									cityList.append(city)
-									cityList.append(city)
-									cityList.append(city)
-								continue
+							elif (iProvType < con.iProvinceNatural):
+								cityList.append(city)
+						if (city.healthRate(False, 0) < -2):
+							if (not utils.collapseImmuneCity(iPlayer,city.getX(),city.getY())):
+								cityList.append(city)
+							elif (iProvType < con.iProvinceNatural):
+								cityList.append(city)
+						if (city.getReligionBadHappiness() > 1):
+							if (not utils.collapseImmuneCity(iPlayer,city.getX(),city.getY())):
+								cityList.append(city)
+							elif (iProvType < con.iProvinceNatural):
+								cityList.append(city)
+						if (city.getNoMilitaryPercentAnger() > 0):
+							if (not utils.collapseImmuneCity(iPlayer,city.getX(),city.getY())):
+								cityList.append(city)
+							elif (iProvType < con.iProvinceNatural):
+								cityList.append(city)
+						if ( iProvType == con.iProvinceOuter ):
+							cityList.append(city)
+							cityList.append(city)
+							cityList.append(city)
+						if ( iProvType == con.iProvinceNone ):
+							cityList.append(city)
+							cityList.append(city)
+							cityList.append(city)
+							cityList.append(city)
+							cityList.append(city)
+							cityList.append(city)
+							cityList.append(city)
+							cityList.append(city)
+						continue
 
 						# Absinthe: also add the city to the list if it has foreign culture - currently unused
 						#for iLoop in range(iNumTotalPlayersB):
@@ -1200,13 +1230,11 @@ class RiseAndFall:
 						#			break
 
 		if (len(cityList)):
-			#iNewCiv = iIndependent
-			#iRndNum = gc.getGame().getSorenRandNum(2, 'random independent')
-			#if (iRndNum % 2 == 0):
-			#	iNewCiv = iIndependent2
+			# Absinthe: city goes to random independent
 			iRndNum = gc.getGame().getSorenRandNum( con.iIndepEnd - con.iIndepStart + 1, 'random independent')
 			iNewCiv = con.iIndepStart + iRndNum
 
+			# Absinthe: choosing one city from the list (where each city can appear multiple times)
 			splittingCity = cityList[gc.getGame().getSorenRandNum(len(cityList), 'random city')]
 			if (iPlayer == utils.getHumanID()):
 				CyInterface().addMessage(iPlayer, True, con.iDuration, splittingCity.getName() + " " + CyTranslator().getText("TXT_KEY_STABILITY_SECESSION", ()), "", 0, "", ColorTypes(con.iOrange), -1, -1, True, True)
@@ -1216,9 +1244,7 @@ class RiseAndFall:
 			utils.flipCity((splittingCity.getX(),splittingCity.getY()), 0, 0, iNewCiv, [iPlayer]) #by trade because by conquest may raze the city
 			utils.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
 			#print ("SECESSION", gc.getPlayer(iPlayer).getCivilizationAdjective(0), splittingCity.getName()) #causes c++ exception??
-			#Sedna17: Now loosing a city to secession gives a positive boost to stability. Should help Byzantium be less frustrating.
-			#utils.setParameter(iPlayer, con.iParExpansionE, True, 5) #to counterbalance the stability hit on city acquired event, leading to a chain reaction
-			#utils.setStability(iPlayer, utils.getStability(iPlayer) + 5) #to counterbalance the stability hit on city acquired event, leading to a chain reaction
+			#Absinthe: loosing a city to secession/revolt gives a small boost to stability, to avoid a city-revolting chain reaction
 			pPlayer.changeStabilityBase( con.iCathegoryExpansion, 3 )
 
 
@@ -1487,22 +1513,19 @@ class RiseAndFall:
 		#		utils.flipUnitsInCityAfter(tCoords, iOwner)
 		#		utils.flipUnitsInArea((tCoords[0]-2, tCoords[1]-2), (tCoords[0]+2, tCoords[1]+2), iDeadCiv, iOwner, True, False)
 
-		CyInterface().addMessage(iHuman, True, con.iDuration, \
-					(CyTranslator().getText("TXT_KEY_INDEPENDENCE_TEXT", (pDeadCiv.getCivilizationAdjectiveKey(),))), "", 0, "", ColorTypes(con.iGreen), -1, -1, True, True)
+		CyInterface().addMessage(iHuman, True, con.iDuration, (CyTranslator().getText("TXT_KEY_INDEPENDENCE_TEXT", (pDeadCiv.getCivilizationAdjectiveKey(),))), "", 0, "", ColorTypes(con.iGreen), -1, -1, True, True)
 		#if (bHuman == True):
 		#	self.rebellionPopup(iDeadCiv)
 		if ( lSuppressList[iHuman] == 2 or lSuppressList[iHuman] == 3 or lSuppressList[iHuman] == 4 ):
 			gc.getTeam(gc.getPlayer(iHuman).getTeam()).declareWar(iDeadCiv, False, -1)
 		else:
 			gc.getTeam(gc.getPlayer(iHuman).getTeam()).makePeace(iDeadCiv)
-		#utils.setBaseStabilityLastTurn(iDeadCiv, 0)
-		#utils.zeroStability(iDeadCiv)
-		##tils.setParameter(iDeadCiv,con.iParExpansionE,False,10)
-		#utils.setStability(iDeadCiv, 15) ##the new civs start as slightly stable
+		# Absinthe: the new civs start as slightly stable
 		pDeadCiv.changeStabilityBase( con.iCathegoryCities, -pDeadCiv.getStabilityBase( con.iCathegoryCities ) )
 		pDeadCiv.changeStabilityBase( con.iCathegoryCivics, -pDeadCiv.getStabilityBase( con.iCathegoryCivics ) )
 		pDeadCiv.changeStabilityBase( con.iCathegoryEconomy, -pDeadCiv.getStabilityBase( con.iCathegoryEconomy ) )
-		pDeadCiv.changeStabilityBase( con.iCathegoryExpansion, 3-pDeadCiv.getStabilityBase( con.iCathegoryExpansion ) )
+		pDeadCiv.changeStabilityBase( con.iCathegoryExpansion, -pDeadCiv.getStabilityBase( con.iCathegoryExpansion ) )
+		pDeadCiv.changeStabilityBase( con.iCathegoryExpansion, 3 )
 		utils.setPlagueCountdown(iDeadCiv, -10)
 		utils.clearPlague(iDeadCiv)
 		self.convertBackCulture(iDeadCiv)
@@ -1553,7 +1576,7 @@ class RiseAndFall:
 
 
 	def convertBackCulture(self, iCiv):
-		#3Miro: same as Normal Ares in Resurection
+		#3Miro: same as Normal Areas in Resurrection
 		#Sedna17: restored to be normal areas, not core
 		#tTopLeft = tCoreAreasTL[iCiv]
 		#tBottomRight = tCoreAreasBR[iCiv]
@@ -1588,6 +1611,8 @@ class RiseAndFall:
 
 	def initBirth(self, iCurrentTurn, iBirthYear, iCiv):
 		iHuman = utils.getHumanID()
+		#print("iBirthYear:%d, iCurrentTurn:%d" %(iBirthYear, iCurrentTurn))
+		#print("getSpawnDelay:%d, getFlipsDelay:%d" %(self.getSpawnDelay(iCiv), self.getFlipsDelay(iCiv)))
 		if (iCurrentTurn == iBirthYear-1 + self.getSpawnDelay(iCiv) + self.getFlipsDelay(iCiv)):
 			tCapital = tCapitals[iCiv]
 			tTopLeft = tCoreAreasTL[iCiv]
@@ -1595,6 +1620,17 @@ class RiseAndFall:
 			tBroaderTopLeft = tBroaderAreasTL[iCiv]
 			tBroaderBottomRight = tBroaderAreasBR[iCiv]
 			if (self.getFlipsDelay(iCiv) == 0): #city hasn't already been founded)
+
+			# Absinthe: this probably fixes a couple instances of the -1 turn autoplay bug - code adapted from SoI
+				if (iCiv == iHuman): 
+					killPlot = gc.getMap().plot(tCapital[0], tCapital[1])
+					iNumUnitsInAPlot = killPlot.getNumUnits()
+					if (iNumUnitsInAPlot):
+						for i in range(iNumUnitsInAPlot):
+							unit = killPlot.getUnit(i)
+							if (unit.getOwner() != iCiv):
+								unit.kill(False, iBarbarian)
+
 				bDeleteEverything = False
 				if (gc.getMap().plot(tCapital[0], tCapital[1]).isOwned()):
 					if (iCiv == iHuman or not gc.getPlayer(iHuman).isAlive()):
@@ -2149,7 +2185,7 @@ class RiseAndFall:
 		if ( iCiv == iNorway ):
 			utils.makeUnit(xml.iVikingBeserker, iCiv, tPlot, 4)
 		if ( iCiv == iDenmark ):
-			utils.makeUnit(xml.iHuskarl, iCiv, tPlot, 3)
+			utils.makeUnit(xml.iDenmarkHuskarl, iCiv, tPlot, 3)
 		if ( iCiv == iVenecia ):
 			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
 		if ( iCiv == iNovgorod ):
@@ -2235,7 +2271,7 @@ class RiseAndFall:
 		if (iCiv == iDenmark):
 			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
-			utils.makeUnit(xml.iHuskarl, iCiv, tPlot, 4)
+			utils.makeUnit(xml.iDenmarkHuskarl, iCiv, tPlot, 4)
 			tSeaPlot = self.findSeaPlots((61,56), 2)
 			if ( tSeaPlot ):
 				pDenmark.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
@@ -2324,6 +2360,9 @@ class RiseAndFall:
 			tSeaPlot = self.findSeaPlots(tPlot, 3)		# HHG: Calais-culture mostly prevents spawn of the galley. Range changed from 2 to 3.
 			if ( tSeaPlot ):
 				pEngland.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
+			if (not gc.getPlayer(iEngland).isHuman()):
+				utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
+				utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 1)
 		if (iCiv == iPortugal):
 			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
@@ -2334,7 +2373,7 @@ class RiseAndFall:
 		if (iCiv == iAragon):
 			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
-			utils.makeUnit(xml.iAlmogavar, iCiv, tPlot, 5)
+			utils.makeUnit(xml.iAragonAlmogavar, iCiv, tPlot, 5)
 			utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
 			# Look for a sea plot by the coast (not by the starting point)
 			tSeaPlot = self.findSeaPlots((38,29), 2)
@@ -2347,7 +2386,7 @@ class RiseAndFall:
 		if (iCiv == iPrussia):
 			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
-			utils.makeUnit(xml.iTeutonic, iCiv, tPlot, 2)
+			utils.makeUnit(xml.iTeutonic, iCiv, tPlot, 3) # one will probably leave for Crusade
 			utils.makeUnit(xml.iTrebuchet, iCiv, tPlot, 1)
 			utils.makeUnit(xml.iExecutive3, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 3)

@@ -199,7 +199,7 @@ class CvVictoryScreen:
 			for j in range(gc.getNumVoteSourceInfos()):
 				if (gc.getBuildingInfo(i).getVoteSourceType() == j):
 					iUNTeam = -1
-					bUnknown = true
+					bUnknown = True
 					for iLoopTeam in range(gc.getMAX_CIV_TEAMS()):
 						if (gc.getTeam(iLoopTeam).isAlive() and not gc.getTeam(iLoopTeam).isMinorCiv() and not gc.getTeam(iLoopTeam).isBarbarian()):
 							if (gc.getTeam(iLoopTeam).getBuildingClassCount(gc.getBuildingInfo(i).getBuildingClassType()) > 0):
@@ -495,7 +495,7 @@ class CvVictoryScreen:
 			for j in range(gc.getNumVoteSourceInfos()):
 				if (gc.getBuildingInfo(i).getVoteSourceType() == j):
 					iUNTeam = -1
-					bUnknown = true
+					bUnknown = True
 					for iLoopTeam in range(gc.getMAX_CIV_TEAMS()):
 						if (gc.getTeam(iLoopTeam).isAlive() and not gc.getTeam(iLoopTeam).isMinorCiv() and not gc.getTeam(iLoopTeam).isBarbarian()):
 							if (gc.getTeam(iLoopTeam).getBuildingClassCount(gc.getBuildingInfo(i).getBuildingClassType()) > 0):

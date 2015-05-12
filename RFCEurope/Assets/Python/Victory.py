@@ -235,7 +235,6 @@ class Victory:
 			self.switchConditionsPerCiv[iPlayer](iGameTurn)
 
 		# Generic checks:
-		#pPlayer = gc.getPlayer(iPlayer)
 		if (pPlayer.isAlive() and iPlayer < iNumMajorPlayers):
 			if ( not pPlayer.getUHV2of3() ):
 				if (utils.countAchievedGoals(iPlayer) == 2):
@@ -255,18 +254,21 @@ class Victory:
 										if (iAttitude != 0):
 											pCiv.AI_setAttitudeExtra(iPlayer, iAttitude-1) #da controllare
 
+							# Absinthe: maximum 3 of your rivals declare war on you
 							iWarCounter = 0
 							iRndnum = gc.getGame().getSorenRandNum(iNumPlayers, 'civs')
+							CyInterface().addMessage(iPlayer, False, con.iDuration, CyTranslator().getText("TXT_KEY_VICTORY_RIVAL_CIVS", ()), "", 0, "", ColorTypes(con.iPurple), -1, -1, True, True)
 							for i in range( iRndnum, iNumPlayers + iRndnum ):
 								iCiv = i % iNumPlayers
 								pCiv = gc.getPlayer(iCiv)
-								if ((iCiv != con.iPope) and pCiv.isAlive() and pCiv.canContact(iPlayer)):
+								teamCiv = gc.getTeam(pCiv.getTeam())
+								teamOwn = gc.getTeam(pPlayer.getTeam())
+								if ((iCiv != con.iPope) and pCiv.isAlive() and pCiv.canContact(iPlayer) and (teamCiv != teamOwn)):
 									if (pCiv.AI_getAttitude(iPlayer) < 2):
-										teamCiv = gc.getTeam(pCiv.getTeam())
 										if (not teamCiv.isAtWar(iPlayer)):
 											teamCiv.declareWar(iPlayer, True, -1)
 											iWarCounter += 1
-											if (iWarCounter == 2):
+											if (iWarCounter == 3):
 												break
 
 		if (gc.getGame().getWinner() == -1):
@@ -471,57 +473,72 @@ class Victory:
 
 
 	def onProjectBuilt(self, iPlayer, iProject):
-		if ( self.isProjectAColony( iProject )):
+		bColony = self.isProjectAColony( iProject )
+		# Absinthe: note that getProjectCount (thus getNumRealColonies too) won't count the latest project/colony (which is currently buing built) if called from this function
+		#			way more straightforward, and also faster to use the UHVCounters for the UHV checks
 
-			# Venice UHV 3:
-			if ( pVenecia.getUHV( 2 ) == -1 and iProject != xml.iColVinland ):
+		# Venice UHV 3:
+		if ( pVenecia.getUHV( 2 ) == -1 and iProject != xml.iColVinland ):
+			if bColony:
 				if ( iPlayer == iVenecia ):
 					pVenecia.setUHV( 2, 1 )
 				else:
 					pVenecia.setUHV( 2, 0 )
 
-			# France UHV 3:
-			if ( iPlayer == iFrankia ):
+		# France UHV 3:
+		if ( iPlayer == iFrankia ):
+			if bColony:
 				pFrankia.setUHVCounter( 2, pFrankia.getUHVCounter( 2 ) + 1 )
 				if ( pFrankia.getUHV( 2 ) == -1 ):
-					if ( self.getNumRealColonies(iFrankia) >= 5 ):
+					if ( pFrankia.getUHVCounter( 2 ) >= 5 ):
 						pFrankia.setUHV( 2, 1 )
 
-			# England UHV 2:
-			elif ( iPlayer == iEngland ):
+		# England UHV 2:
+		elif ( iPlayer == iEngland ):
+			if bColony:
 				pEngland.setUHVCounter( 1, pEngland.getUHVCounter( 1 ) + 1 )
 				if ( pEngland.getUHV( 1 ) == -1 ):
-					if ( self.getNumRealColonies(iEngland) >= 7 ):
+					if ( pEngland.getUHVCounter( 1 ) >= 7 ):
 						pEngland.setUHV( 1, 1 )
 
-			# Spain UHV 2: this is only for the Victory Screen
-			elif ( iPlayer == iSpain ):
+		# Spain UHV 2: this is only for the Main Screen counter
+		elif ( iPlayer == iSpain ):
+			if bColony:
 				pSpain.setUHVCounter( 1, pSpain.getUHVCounter( 1 ) + 1 )
 
-			# Portugal UHV 3:
-			elif ( iPlayer == iPortugal ):
+		# Portugal UHV 3:
+		elif ( iPlayer == iPortugal ):
+			if bColony:
 				pPortugal.setUHVCounter( 2, pPortugal.getUHVCounter( 2 ) + 1 )
 				if ( pPortugal.getUHV( 2 ) == -1 ):
-					if ( self.getNumRealColonies(iPortugal) >= 5 ):
+					if ( pPortugal.getUHVCounter( 2 ) >= 5 ):
 						pPortugal.setUHV( 2, 1 )
 
-			# Dutch UHV 2:
-			elif ( iPlayer == iDutch ):
+		# Dutch UHV 2:
+		elif ( iPlayer == iDutch ):
+			if bColony:
 				pDutch.setUHVCounter( 1, pDutch.getUHVCounter( 1 ) + 1 )
-				if ( pDutch.getUHV( 1 ) == -1 ):
+			if ( pDutch.getUHV( 1 ) == -1 ):
+				if ( pDutch.getUHVCounter( 1 ) >= 3 ):
 					iWestCompany = teamDutch.getProjectCount(xml.iWestIndiaCompany)
 					iEastCompany = teamDutch.getProjectCount(xml.iEastIndiaCompany)
-					if ( self.getNumRealColonies(iDutch) >= 3 and iWestCompany == 1 and iEastCompany == 1):
-						pDutch.setUHV( 1, 1 )
+					# if the companies are already built previously, or currently being built (one of them is the current project)
+					if ( iProject == xml.iWestIndiaCompany or iWestCompany == 1 ):
+						if ( iProject == xml.iEastIndiaCompany or iEastCompany == 1):
+							pDutch.setUHV( 1, 1 )
 
-			# Denmark UHV 3:
-			elif ( iPlayer == iDenmark ):
+		# Denmark UHV 3:
+		elif ( iPlayer == iDenmark ):
+			if bColony:
 				pDenmark.setUHVCounter( 2, pDenmark.getUHVCounter( 2 ) + 1 )
-				if ( pDenmark.getUHV( 2 ) == -1 ):
+			if ( pDenmark.getUHV( 2 ) == -1 ):
+				if ( pDenmark.getUHVCounter( 2 ) >= 3 ):
 					iWestCompany = teamDenmark.getProjectCount(xml.iWestIndiaCompany)
 					iEastCompany = teamDenmark.getProjectCount(xml.iEastIndiaCompany)
-					if ( self.getNumRealColonies(iDenmark) >= 3 and iWestCompany == 1 and iEastCompany == 1):
-						pDenmark.setUHV( 2, 1 )
+					# if the companies are already built previously, or currently being built (one of them is the current project)
+					if ( iProject == xml.iWestIndiaCompany or iWestCompany == 1 ):
+						if ( iProject == xml.iEastIndiaCompany or iEastCompany == 1):
+							pDenmark.setUHV( 2, 1 )
 
 
 	def onCorporationFounded(self, iPlayer ):
@@ -580,10 +597,10 @@ class Victory:
 
 
 	def getNumRealColonies(self, iPlayer):
-		tPlayer = gc.getTeam(iPlayer)
+		pPlayer = gc.getPlayer(iPlayer)
+		tPlayer = gc.getTeam(pPlayer.getTeam())
 		iCount = 0
-		for iProject in range(xml.iNumProjects):
-			if iProject in [xml.iEncyclopedie, xml.iEastIndiaCompany, xml.iWestIndiaCompany]: continue
+		for iProject in range( xml.iNumNotColonies, xml.iNumProjects ):
 			if tPlayer.getProjectCount(iProject) > 0:
 				iCount += 1
 		return iCount

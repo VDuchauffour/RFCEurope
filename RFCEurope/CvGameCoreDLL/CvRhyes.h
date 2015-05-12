@@ -96,8 +96,10 @@
 
 //#define MAX_NUM_TECHS			(100)
 
+// Absinthe: English UP is handled differently now
 //#define IMPROVEMENT_WORKSHOP	(8)
 
+// Absinthe: Cordoban and Swedish UP is handled differently now
 //#define PROMOTION_MEDIC		(12)
 //#define PROMOTION_FORMATION	(7)
 
