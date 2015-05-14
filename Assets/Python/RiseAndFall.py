@@ -652,6 +652,7 @@ class RiseAndFall:
 		#	self.create600ADstartingUnits()
 		#self.assign4000BCtechs()
 		self.setEarlyLeaders()
+		iHuman = utils.getHumanID()
 		if iHuman != iByzantium:
 			vic.setAllUHVFailed(iByzantium)
 		if iHuman != iFrankia:
