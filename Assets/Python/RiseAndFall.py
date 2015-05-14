@@ -1692,7 +1692,8 @@ class RiseAndFall:
 			if (gc.getPlayer(iCiv).isAlive()) and (self.getAlreadySwitched() == False) and (iCurrentTurn > tBirth[iHuman]+40) and ( not gc.getPlayer( iHuman ).getIsCrusader() ):
 				self.newCivPopup(iCiv)
 			else:
-				vic.setAllUHVFailed(iCiv)
+				if iCiv != iHuman:
+					vic.setAllUHVFailed(iCiv)
 
 
 ##	def moveOutUnits(self, x, y, tCapitalX, tCapitalY) #not used
