@@ -1333,22 +1333,13 @@
 		<Portuguese>is not present in</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UHV_CONTROL_MOST</Tag>
-		<English>You do control most territory</English>
-		<French>You do control most territory</French>
-		<German>You do control most territory</German>
-		<Italian>You do control most territory</Italian>
-		<Spanish>You do control most territory</Spanish>
-		<Portuguese>You do control most territory</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UHV_NOT_CONTROL_MOST</Tag>
-		<English>You do not control most territory</English>
-		<French>You do not control most territory</French>
-		<German>You do not control most territory</German>
-		<Italian>You do not control most territory</Italian>
-		<Spanish>You do not control most territory</Spanish>
-		<Portuguese>You do not control most territory</Portuguese>
+		<Tag>TXT_KEY_UHV_CONTROL_TERRITORY</Tag>
+		<English>Controlled territory</English>
+		<French>Controlled territory</French>
+		<German>Controlled territory</German>
+		<Italian>Controlled territory</Italian>
+		<Spanish>Controlled territory</Spanish>
+		<Portuguese>Controlled territory</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NO_ADOPTION_YET</Tag>

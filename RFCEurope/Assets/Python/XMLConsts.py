@@ -431,6 +431,8 @@ lRegionKiev			= [ iP_Moldova, iP_Kiev, iP_Crimea, iP_Zaporizhia, iP_Sloboda, iP_
 lRegionItaly		= [ iP_Lombardy, iP_Liguria, iP_Verona, iP_Tuscany, iP_Latium, iP_Calabria, iP_Apulia, iP_Arberia, iP_Malta, iP_Dalmatia ]
 lRegionSwiss		= [ iP_Bavaria, iP_Austria, iP_Swabia, iP_Burgundy, iP_Lorraine, iP_Champagne, iP_Provence, iP_Lombardy, iP_Liguria, iP_Verona, iP_Franconia, iP_Bohemia ]
 
+lNotEurope			= [ iP_Oran, iP_Algiers, iP_Ifriqiya, iP_Cyrenaica, iP_Tripolitania, iP_Tetouan, iP_Morocco, iP_Marrakesh, iP_Fez, iP_Egypt, iP_Antiochia, iP_Syria, iP_Lebanon, iP_Arabia, iP_Jerusalem, iP_Colonea, iP_Charsianon, iP_Cilicia, iP_Armeniakon, iP_Anatolikon, iP_Paphlagonia, iP_Thrakesion, iP_Opsikion ]
+
 ## Absinthe: was only needed for the AI regions
 ## these regions are for the map and AI
 #tRegionMap = [ [], # default region is empty

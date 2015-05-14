@@ -292,7 +292,7 @@ Changes for RFCE 1.3:
 	Bugfixes:
 		- Fixed bug where all mercs got free medic3 promotion (missing change in one of the files when Pinch was reintroduced)
 		- Fixed bug where the Cordoban units got wrong starting promotion
-		- The Swedih UB (Night Watch replacement) didn't give any stability on completion
+		- The Swedish UB (Night Watch replacement) didn't give any stability on completion
 		- Fixed sound inconsistencies with some of the mercenaries
 		- Fixed bug connected to the city secession for the Byzantine
 		- Fixed bug with some obscure values on the Lithuanian war map
@@ -308,6 +308,7 @@ Changes for RFCE 1.3:
 		- Fixed bug connected to the preset crusade dates
 		- Fixed bug when settling cities in Potential provinces would result in a stability loss
 		- Fixed stability bug connected to the order of some Wonders
+		- Fixed Hungarian territory UHV
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
