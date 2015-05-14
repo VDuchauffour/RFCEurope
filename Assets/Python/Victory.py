@@ -1543,3 +1543,7 @@ class Victory:
 			if ( bMost ):
 				 pDutch.setUHV( 2, 1 )
 
+	def setAllUHVFailed( self, iCiv ):
+		pPlayer = gc.getPlayer(iCiv)
+		for i in range(3):
+			pPlayer.setUHV( i, 0 )

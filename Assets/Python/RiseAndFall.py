@@ -10,6 +10,7 @@ import RFCUtils
 import ProvinceManager # manage provinces here to link to spawn/rebirth
 import Consts as con
 import XMLConsts as xml
+import Victory
 
 
 ################
@@ -19,6 +20,7 @@ import XMLConsts as xml
 gc = CyGlobalContext()	# LOQ
 PyPlayer = PyHelpers.PyPlayer	# LOQ
 utils = RFCUtils.RFCUtils()
+vic = Victory.Victory()
 
 iCheatersPeriod = 12
 iBetrayalPeriod = 8
@@ -426,6 +428,7 @@ class RiseAndFall:
 	def eventApply7614(self, popupReturn):
 		if( popupReturn.getButtonClicked() == 0 ): # 1st button
 			iOldHandicap = gc.getActivePlayer().getHandicapType()
+			vic.setAllUHVFailed(gc.getGame().getActivePlayer())
 			gc.getActivePlayer().setHandicapType(gc.getPlayer(self.getNewCiv()).getHandicapType())
 			gc.getGame().setActivePlayer(self.getNewCiv(), False)
 			gc.getPlayer(self.getNewCiv()).setHandicapType(iOldHandicap)
@@ -445,6 +448,8 @@ class RiseAndFall:
 			#CyInterface().addImmediateMessage("first button", "")
 		#elif( popupReturn.getButtonClicked() == 1 ): # 2nd button
 			#CyInterface().addImmediateMessage("second button", "")
+		else:
+			vic.setAllUHVFailed(self.getNewCiv())
 
 
 	def flipPopup(self, iNewCiv, tTopLeft, tBottomRight):
@@ -647,6 +652,11 @@ class RiseAndFall:
 		#	self.create600ADstartingUnits()
 		#self.assign4000BCtechs()
 		self.setEarlyLeaders()
+		if iHuman != iByzantium:
+			vic.setAllUHVFailed(iByzantium)
+		if iHuman != iFrankia:
+			vic.setAllUHVFailed(iFrankia)
+		vic.setAllUHVFailed(iPope)
 
 		#Sedna17 Respawn setup special respawn turns
 		self.setupRespawnTurns()
@@ -1677,8 +1687,11 @@ class RiseAndFall:
 
 		# 3MiroCrusader modification. Crusaders cannot change nations.
 		# Sedna17: Straight-up no switching within 40 turns of your birth
-		if (iCurrentTurn == iBirthYear + self.getSpawnDelay(iCiv)) and (gc.getPlayer(iCiv).isAlive()) and (self.getAlreadySwitched() == False) and (iCurrentTurn > tBirth[iHuman]+40) and ( not gc.getPlayer( iHuman ).getIsCrusader() ):
-			self.newCivPopup(iCiv)
+		if (iCurrentTurn == iBirthYear + self.getSpawnDelay(iCiv)):
+			if (gc.getPlayer(iCiv).isAlive()) and (self.getAlreadySwitched() == False) and (iCurrentTurn > tBirth[iHuman]+40) and ( not gc.getPlayer( iHuman ).getIsCrusader() ):
+				self.newCivPopup(iCiv)
+			else:
+				vic.setAllUHVFailed(iCiv)
 
 
 ##	def moveOutUnits(self, x, y, tCapitalX, tCapitalY) #not used
