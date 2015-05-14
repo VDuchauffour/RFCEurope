@@ -534,7 +534,7 @@ class CvRFCEventHandler:
 
 		self.pla.checkPlayerTurn(iGameTurn, iPlayer)
 
-		if (gc.getPlayer(iPlayer).isAlive()):
+		if (gc.getPlayer(iPlayer).isHuman()):
 			self.vic.checkPlayerTurn(iGameTurn, iPlayer)
 
 		if (gc.getPlayer(iPlayer).isAlive() and iPlayer < con.iNumPlayers and gc.getPlayer(iPlayer).getNumCities() > 0):

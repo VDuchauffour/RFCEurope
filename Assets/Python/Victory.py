@@ -231,8 +231,8 @@ class Victory:
 	def checkPlayerTurn(self, iGameTurn, iPlayer):
 		# We use Python version of Switch statement, it is supposed to be better, now all condition checks are in separate functions
 		pPlayer = gc.getPlayer(iPlayer)
-		if ( iPlayer < iPope and pPlayer.isAlive() ): # don't count the Pope
-			self.switchConditionsPerCiv[iPlayer](iGameTurn)
+		#if ( iPlayer < iPope and pPlayer.isAlive() ): # don't count the Pope
+		self.switchConditionsPerCiv[iPlayer](iGameTurn)
 
 		# Generic checks:
 		if (pPlayer.isAlive() and iPlayer < iNumMajorPlayers):
