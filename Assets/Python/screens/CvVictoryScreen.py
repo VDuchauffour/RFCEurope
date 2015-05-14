@@ -1142,7 +1142,30 @@ class CvVictoryScreen:
 		#UHV1
 		sText1 += self.getNotCivProvinceString(con.iTurkey, vic.tHungarynControl)
 		#UHV2
-		sText2 += "\n\n" + self.determineColor(gc.controlMostTeritory( iPlayer, vic.tHugeHungaryControl[0], vic.tHugeHungaryControl[1], vic.tHugeHungaryControl[2], vic.tHugeHungaryControl[3] ), localText.getText("TXT_KEY_UHV_CONTROL_MOST", ()), localText.getText("TXT_KEY_UHV_NOT_CONTROL_MOST", ()))
+		iCount, iTotal = vic.Victory().getTerritoryPercentEurope(iPlayer, True)
+		iOtherCount = 0
+		iMostPlayer = -1
+		for iLoopPlayer in range( con.iNumMajorPlayers ):
+			if iLoopPlayer == iPlayer: continue
+			pLoopPlayer = gc.getPlayer(iLoopPlayer)
+			if pLoopPlayer.isAlive():
+				iTempCount = vic.Victory().getTerritoryPercentEurope(iLoopPlayer)
+				if iTempCount > iOtherCount:
+					iOtherCount = iTempCount
+					iMostPlayer = iLoopPlayer
+		if (iCount > 0):
+			landPercent = (iCount * 100.0) / iTotal
+			landPercent = "%.2f" % landPercent
+		else:
+			landPercent = 0.0
+		if (iOtherCount > 0):
+			otherlandPercent = (iOtherCount * 100.0) / iTotal
+			otherlandPercent = "%.2f" % otherlandPercent
+		else:
+			otherlandPercent = 0.0
+		sText = localText.getText("TXT_KEY_UHV_CONTROL_TERRITORY",())
+		sUnit = "%"
+		sText2 += "\n\n" + self.getCompetition(landPercent, otherlandPercent, iMostPlayer, sText, sUnit)
 		#UHV3
 		iGoal = pPlayer.getUHV( 2 )
 		sText3 += "\n\n" + self.determineColor(iGoal != 0, localText.getText("TXT_KEY_UHV_NO_ADOPTION_YET", ()))

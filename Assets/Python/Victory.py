@@ -11,6 +11,7 @@ import XMLConsts as xml
 import RFCUtils
 import Crusades as cru
 import UniquePowers
+import RFCEMaps as rfcemaps
 
 utils = RFCUtils.RFCUtils()
 up = UniquePowers.UniquePowers()
@@ -171,7 +172,7 @@ tDenmarkControlI = [ xml.iP_Denmark, xml.iP_Skaneland, xml.iP_Gotaland, xml.iP_S
 #tDenmarkControlII = [ xml.iP_Brandenburg, xml.iP_Pomerania, xml.iP_Estonia ]
 tDenmarkControlIII = [ xml.iP_Denmark, xml.iP_Norway, xml.iP_Vestfold, xml.iP_Skaneland, xml.iP_Gotaland, xml.iP_Svealand, xml.iP_Norrland, xml.iP_Gotland, xml.iP_Osterland, xml.iP_Estonia, xml.iP_Iceland ]
 
-tHugeHungaryControl = ( 0, 23, 99, 72 )
+#tHugeHungaryControl = ( 0, 23, 99, 72 )
 totalLand = gc.getMap().getLandPlots()
 
 class Victory:
@@ -605,6 +606,21 @@ class Victory:
 				iCount += 1
 		return iCount
 
+	def getTerritoryPercentEurope(self, iPlayer, bReturnTotal = False):
+		iTotal = 0
+		iCount = 0
+		for x in range(con.iMapMaxX):
+			for y in range(con.iMapMaxY):
+				plot = gc.getMap().plot(x,y)
+				if plot.isWater(): continue
+				iProvinceID = rfcemaps.tProinceMap[plot.getY()][plot.getX()]
+				if iProvinceID in xml.lNotEurope: continue
+				iTotal += 1
+				if plot.getOwner() == iPlayer:
+					iCount += 1
+		if bReturnTotal:
+			return iCount, iTotal
+		return iCount
 
 	def checkByzantium( self, iGameTurn ):
 
@@ -1005,7 +1021,14 @@ class Victory:
 
 		# UHV 2: Control the most territory in Europe in 1490
 		if ( iGameTurn == xml.i1490AD and pHungary.getUHV( 1 ) == -1 ):
-			if ( gc.controlMostTeritory( iHungary, tHugeHungaryControl[0], tHugeHungaryControl[1], tHugeHungaryControl[2], tHugeHungaryControl[3] ) ):
+			bMost = True
+			iCount = self.getTerritoryPercentEurope(iHungary)
+			for iOtherPlayer in range(con.iNumPlayers):
+				iOtherCount = self.getTerritoryPercentEurope(iOtherPlayer)
+				if iOtherCount >= iCount:
+					bMost = False
+					break
+			if bMost:
 				pHungary.setUHV( 1, 1 )
 			else:
 				pHungary.setUHV( 1, 0 )
