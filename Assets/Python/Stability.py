@@ -308,7 +308,7 @@ class Stability:
 		iCivic5 = pPlayer.getCivics(5)
 		if (iProject >= xml.iNumNotColonies):
 			pPlayer.changeStabilityBase( iCathegoryExpansion, -2 ) # -2 stability for each colony
-			if (iCivic5 == 29):
+			if (iCivic5 == xml.iCivicColonialism):
 				pPlayer.changeStabilityBase( iCathegoryExpansion, 1 ) # one less stability penalty if civ is in Colonialism
 		self.recalcEpansion( pPlayer )
 

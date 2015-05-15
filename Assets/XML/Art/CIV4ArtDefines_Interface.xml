@@ -1318,103 +1318,135 @@
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>MAINMENU_COLONIES</Type>
-			<Path>Art/Interface/BlankColonies.dds</Path>
+			<Path>Art/Interface/Colonies/BlankColonies.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>MASK_BLANK</Type>
-			<Path>Art/Interface/MASK_BLANK.dds</Path>
+			<Path>Art/Interface/Colonies/MASK_BLANK.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>MASK_OTHER</Type>
-			<Path>Art/Interface/MASK_OTHER.dds</Path>
+			<Path>Art/Interface/Colonies/MASK_OTHER.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>MASK_0</Type>
-			<Path>Art/Interface/MASK_0.dds</Path>
+			<Path>Art/Interface/Colonies/MASK_0.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>MASK_1</Type>
-			<Path>Art/Interface/MASK_1.dds</Path>
+			<Path>Art/Interface/Colonies/MASK_1.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>MASK_2</Type>
-			<Path>Art/Interface/MASK_2.dds</Path>
+			<Path>Art/Interface/Colonies/MASK_2.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>MASK_3</Type>
-			<Path>Art/Interface/MASK_3.dds</Path>
+			<Path>Art/Interface/Colonies/MASK_3.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>MASK_4</Type>
-			<Path>Art/Interface/MASK_4.dds</Path>
+			<Path>Art/Interface/Colonies/MASK_4.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>MASK_5</Type>
-			<Path>Art/Interface/MASK_5.dds</Path>
+			<Path>Art/Interface/Colonies/MASK_5.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>MASK_6</Type>
-			<Path>Art/Interface/MASK_6.dds</Path>
+			<Path>Art/Interface/Colonies/MASK_6.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>MASK_7</Type>
-			<Path>Art/Interface/MASK_7.dds</Path>
+			<Path>Art/Interface/Colonies/MASK_7.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>MASK_8</Type>
-			<Path>Art/Interface/MASK_8.dds</Path>
+			<Path>Art/Interface/Colonies/MASK_8.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>MASK_9</Type>
-			<Path>Art/Interface/MASK_9.dds</Path>
+			<Path>Art/Interface/Colonies/MASK_9.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>MASK_10</Type>
-			<Path>Art/Interface/MASK_10.dds</Path>
+			<Path>Art/Interface/Colonies/MASK_10.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>MASK_11</Type>
-			<Path>Art/Interface/MASK_11.dds</Path>
+			<Path>Art/Interface/Colonies/MASK_11.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>MASK_12</Type>
-			<Path>Art/Interface/MASK_12.dds</Path>
+			<Path>Art/Interface/Colonies/MASK_12.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>MASK_13</Type>
-			<Path>Art/Interface/MASK_13.dds</Path>
+			<Path>Art/Interface/Colonies/MASK_13.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>MASK_14</Type>
-			<Path>Art/Interface/MASK_14.dds</Path>
+			<Path>Art/Interface/Colonies/MASK_14.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>MASK_15</Type>
-			<Path>Art/Interface/MASK_15.dds</Path>
+			<Path>Art/Interface/Colonies/MASK_15.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>MASK_16</Type>
-			<Path>Art/Interface/MASK_16.dds</Path>
+			<Path>Art/Interface/Colonies/MASK_16.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>MASK_17</Type>
-			<Path>Art/Interface/MASK_17.dds</Path>
+			<Path>Art/Interface/Colonies/MASK_17.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>MASK_18</Type>
-			<Path>Art/Interface/MASK_18.dds</Path>
+			<Path>Art/Interface/Colonies/MASK_18.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>MASK_19</Type>
-			<Path>Art/Interface/MASK_19.dds</Path>
+			<Path>Art/Interface/Colonies/MASK_19.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>MASK_20</Type>
-			<Path>Art/Interface/MASK_20.dds</Path>
+			<Path>Art/Interface/Colonies/MASK_20.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>MASK_21</Type>
-			<Path>Art/Interface/MASK_21.dds</Path>
+			<Path>Art/Interface/Colonies/MASK_21.dds</Path>
+		</InterfaceArtInfo>
+		<InterfaceArtInfo>
+			<Type>MASK_22</Type>
+			<Path>Art/Interface/Colonies/MASK_22.dds</Path>
+		</InterfaceArtInfo>
+		<InterfaceArtInfo>
+			<Type>MASK_23</Type>
+			<Path>Art/Interface/Colonies/MASK_23.dds</Path>
+		</InterfaceArtInfo>
+		<InterfaceArtInfo>
+			<Type>MASK_24</Type>
+			<Path>Art/Interface/Colonies/MASK_24.dds</Path>
+		</InterfaceArtInfo>
+		<InterfaceArtInfo>
+			<Type>MASK_25</Type>
+			<Path>Art/Interface/Colonies/MASK_25.dds</Path>
+		</InterfaceArtInfo>
+		<InterfaceArtInfo>
+			<Type>MASK_26</Type>
+			<Path>Art/Interface/Colonies/MASK_26.dds</Path>
+		</InterfaceArtInfo>
+		<InterfaceArtInfo>
+			<Type>MASK_27</Type>
+			<Path>Art/Interface/Colonies/MASK_27.dds</Path>
+		</InterfaceArtInfo>
+		<InterfaceArtInfo>
+			<Type>MASK_28</Type>
+			<Path>Art/Interface/Colonies/MASK_28.dds</Path>
+		</InterfaceArtInfo>
+		<InterfaceArtInfo>
+			<Type>MASK_29</Type>
+			<Path>Art/Interface/Colonies/MASK_29.dds</Path>
 		</InterfaceArtInfo>
 	</InterfaceArtInfos>
 </Civ4ArtDefines>

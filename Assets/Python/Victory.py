@@ -1024,6 +1024,7 @@ class Victory:
 			bMost = True
 			iCount = self.getTerritoryPercentEurope(iHungary)
 			for iOtherPlayer in range(con.iNumPlayers):
+				if not gc.getPlayer(iOtherPlayer).isAlive(): continue
 				iOtherCount = self.getTerritoryPercentEurope(iOtherPlayer)
 				if iOtherCount >= iCount:
 					bMost = False
@@ -1545,8 +1546,7 @@ class Victory:
 		if ( iGameTurn <= xml.i1750AD and pDutch.getUHV( 0 ) == -1 ):
 			pPlot = gc.getMap().plot( con.tCapitals[iDutch][0], con.tCapitals[iDutch][1])
 			if ( pPlot.isCity() ):
-				iGMerchant = CvUtil.findInfoTypeNum(gc.getSpecialistInfo, gc.getNumSpecialistInfos(), "SPECIALIST_GREAT_MERCHANT")
-				if ( pPlot.getPlotCity().getFreeSpecialistCount(iGMerchant) >= 5 ):
+				if ( pPlot.getPlotCity().getFreeSpecialistCount(xml.iGreatMerchant) >= 5 ):
 					pDutch.setUHV( 0, 1 )
 		else:
 			if ( pDutch.getUHV( 0 ) == -1 ):

@@ -1574,8 +1574,7 @@ class CvVictoryScreen:
 		tAmsterdam = con.tCapitals[iPlayer]
 		pPlot = gc.getMap().plot( tAmsterdam[0], tAmsterdam[1])
 		if self.checkCity(tAmsterdam, iPlayer, localText.getText("TXT_KEY_CITY_NAME_AMSTERDAM",())) == -1:
-			iGMerchant = CvUtil.findInfoTypeNum(gc.getSpecialistInfo, gc.getNumSpecialistInfos(), "SPECIALIST_GREAT_MERCHANT")
-			iNumMerchants = pPlot.getPlotCity().getFreeSpecialistCount(iGMerchant)
+			iNumMerchants = pPlot.getPlotCity().getFreeSpecialistCount(xml.iGreatMerchant)
 			sText1 += self.getCounterString(iNumMerchants, 5)
 		else:
 			sText1 += "\n\n" + self.checkCity(tAmsterdam, iPlayer, localText.getText("TXT_KEY_CITY_NAME_AMSTERDAM",()))
