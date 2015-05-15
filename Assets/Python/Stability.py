@@ -161,7 +161,7 @@ class Stability:
 		# Collapse dates for AI nations - from RFCE++
 		if(iGameTurn > con.tCollapse[iPlayer] and iPlayer != utils.getHumanID() and pPlayer.isAlive()):
 			# Absinthe: -1 stability every 4 turns up to a total of -15 stability
-			if(iGameTurn % 4 == 0 and iGameTurn <= con.tCollapse[iPlayer]+4*15):
+			if(iGameTurn % 4 == 0 and iGameTurn <= con.tCollapse[iPlayer] + 60):
 				pPlayer.changeStabilityBase(iCathegoryCities, -1)
 
 		#if ( iGameTurn % 6 == 1 ):
@@ -463,10 +463,11 @@ class Stability:
 			iTotalCulture = pCity.countTotalCultureTimes100()
 			if ( (iTotalCulture > 0) and ( (pCity.getCulture(iPlayer) * 10000) / iTotalCulture < 40 ) and ( not gc.hasUP( iPlayer, con.iUP_CulturalTolerance )) ):
 				iCultureStability -= 1
-		# 3Miro: prosecution count is decremented in Religions.py
+		# Absinthe: persecution counter - cooldown is handled in Religions.checkTurn
+		#			1-5 means 1 instability, 6-10 means 2 instability, 11-15 means 3 instability, etc...
 		iProsecutionCount = pPlayer.getProsecutionCount()
 		if ( iProsecutionCount > 0 ):
-			iReligionStability -= 2* ( (iProsecutionCount+9) / 10 )
+			iReligionStability -= (iProsecutionCount + 4) / 5
 		# Humans are far more competent then the AI, so the AI won't get all the penalties
 		if ( pPlayer.isHuman() ):
 			iCityStability += iHappyStability + iHealthStability + iReligionStability + iHurryStability + iCultureStability + iMilitaryStability
@@ -546,16 +547,29 @@ class Stability:
 				iCivicCombo -=4
 		if (iCivic2 == xml.iCivicApprenticeship and iCivic3 == xml.iCivicGuilds): #Apprenticeship and Guilds
 			iCivicCombo +=3
-		if (iCivic1 == xml.iCivicBureaucracy): #Bureaucracy
+		if (iCivic1 == xml.iCivicBureaucracy): #Bureaucracy city cap
 			if ( pPlayer.isHuman() ):
-				iCivicCombo += ( 6 - pPlayer.getNumCities() )
+				if ( iPlayer == con.iNovgorod and pPlayer.getNumCities() > 6): #the penalties are halved for Novgorod
+					iCivicCombo += (( 6 - pPlayer.getNumCities() ) / 2 )
+				else:
+					iCivicCombo += ( 6 - pPlayer.getNumCities() )
 			else:
-				iCivicCombo += max( -3, 6 - pPlayer.getNumCities() )
-		if (iCivic0 == xml.iCivicMerchantRepublic): #Merchant Republic city cap (like Republic from RFC)
+				if ( iPlayer == con.iNovgorod and pPlayer.getNumCities() > 6): #the penalties are halved for Novgorod
+					iCivicCombo += max( -5, (( 6 - pPlayer.getNumCities() ) / 2 ) )
+				else:
+					iCivicCombo += max( -5, 6 - pPlayer.getNumCities() ) #max -5 penalty for the AI
+		if (iCivic0 == xml.iCivicMerchantRepublic): #Merchant Republic city cap
 			if ( pPlayer.isHuman() ):
-				iCivicCombo += ( 5 - pPlayer.getNumCities() )
+				if ( iPlayer == con.iVenecia and pPlayer.getNumCities() > 5): #the penalties are halved for Venice
+					iCivicCombo += (( 5 - pPlayer.getNumCities() ) / 2 )
+				else:
+					iCivicCombo += ( 5 - pPlayer.getNumCities() )
 			else:
-				iCivicCombo += max( -3, 5 - pPlayer.getNumCities() )
+				if ( iPlayer == con.iVenecia and pPlayer.getNumCities() > 5): #the penalties are halved for Venice
+					iCivicCombo += max( -5, (( 5 - pPlayer.getNumCities() ) / 2 ) )
+				else:
+					iCivicCombo += max( -5, 5 - pPlayer.getNumCities() ) #max -5 penalty for the AI
+
 		# TODO: boost for stability depending on the current stability
 		#if (iCivic0 == 2): #Divine Monarchy
 		#	if (self.getStability(iPlayer) > 30):

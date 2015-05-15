@@ -549,6 +549,7 @@ In most cases this happens when a new civ is born in or near your territory (the
 [BOLD]Swing[\BOLD]
 (these values are high, but their effect gets halved every turn)
 [TAB]Being in anarchy: -8 (0 for Prussia)
+[TAB]Successful religious purge: -3 (0 for Spain)
 [TAB]Entering a war: -3
 [TAB]Own improvement got destroyed: -2
 [TAB]Moving the palace: -5
@@ -561,7 +562,10 @@ In most cases this happens when a new civ is born in or near your territory (the
 
 [BOLD]Cities[\BOLD]
 [TAB]For an average city happiness of at least 2k+1: +k
-[TAB]For each city with prosecution countdown of at least 10k+1: -2(k+1)
+[TAB]For a persecution count (nationwide) of at least 5k+1: -k-1
+[TAB][TAB]a successful purge adds 8 points to the persecution counter (4 for Spain)
+[TAB][TAB]an unsuccessful purge adds 4 points to the persecution counter (2 for Spain)
+[TAB][TAB]the persecution counter goes down with 1 point in each turn
 [TAB]For each city that
 [TAB][TAB]is healthy: +1
 [TAB][TAB]is unhappy (has at least one angry population): -2
@@ -598,11 +602,13 @@ In most cases this happens when a new civ is born in or near your territory (the
 [TAB][TAB]Free Peasantry: +2
 [TAB][TAB]Free Labor: +2
 [TAB]Merchant Republic with k cities: 5-k (0 with 5 cities)
+[TAB][TAB]the penalties are halved for Venice ((5-k)/2, if k>5)
 [TAB]Feudal Law with
 [TAB][TAB]Serfdom: +1
 [TAB][TAB]Manorialism: +1
 [TAB][TAB]Free Peasantry: -4
 [TAB]Bureaucracy with k cities: 6-k (0 with 6 cities)
+[TAB][TAB]the penalties are halved for Novgorod ((6-k)/2, if k>6)
 [TAB]Religious Law with
 [TAB][TAB]Paganism: -5
 [TAB][TAB]Theocracy: +3

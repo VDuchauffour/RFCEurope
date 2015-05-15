@@ -25,7 +25,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_BYZ2</Tag>
-		<English>The core of the Empire cannot collapse due to instability</English>
+		<English>The core of the Empire cannot collapse due to instability.</English>
 		<French>Le coeur de l'Empire ne peut pas s'effondrer &#224; cause de l'instabilit&#233;</French>
 		<German>Der Kern des Reiches kann nicht wegen Instabilit&#228;t kollabieren</German>
 		<Italian>Il fulcro dell'Impero non può collassare per instabilità</Italian>
@@ -43,7 +43,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_BUL2</Tag>
-		<English>No resistance in conquered cities</English>
+		<English>No resistance in conquered cities.</English>
 		<French>Pas de r&#233;sistance dans les villes conquites</French>
 		<German>Keine Anarchy durch Widerstand in eroberten Städten</German>
 		<Italian>Nessuna resistenza nelle città conquistate</Italian>
@@ -61,7 +61,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_FRA2</Tag>
-		<English>Reduced penalty for expanding into foreign land</English>
+		<English>Reduced penalty for expanding into foreign land.</English>
 		<French>P&#233;nalit&#233; r&#233;duite pour l'expension lointaine</French>
 		<German>Reduzierter Expansionsmalus für Städte in fremden Ländern</German>
 		<Italian>Penalità ridotta per l'espansione nelle terre straniere</Italian>
@@ -79,7 +79,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_BUR2</Tag>
-		<English>+2[ICON_CULTURE] and +1[ICON_HAPPY] in every city</English>
+		<English>+2[ICON_CULTURE] and +1[ICON_HAPPY] in every city.</English>
 		<French>+2[ICON_CULTURE] et +1[ICON_HAPPY] dans chaque ville</French>
 		<German>+2[ICON_CULTURE] und +1[ICON_HAPPY] in jeder Stadt</German>
 		<Italian>+2[ICON_CULTURE] e +1[ICON_HAPPY] in ogni città</Italian>
@@ -97,7 +97,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ARA2</Tag>
-		<English>State Religion spreads to every newly acquired (founded, conquered, flipped) city, and a free Temple is built in it</English>
+		<English>State Religion spreads to every newly acquired (founded, conquered, flipped) city, and a free Temple is built in it.</English>
 		<French>La religion d'Etat se r&#233;pand dans chaque ville avec un temple</French>
 		<German>Verbreitung der Staatsreligion und Errichtung eines Tempels in jeder gegründeten, eroberten oder übergelaufenen Stadt</German>
 		<Italian>La Religione Ufficiale si diffonde in ogni città aquisita, ed un tempio viene costruito automaticamente</Italian>
@@ -115,7 +115,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_COR2</Tag>
-		<English>All units start with Medic I promotion</English>
+		<English>All units start with Medic I promotion.</English>
 		<French>Chaque unit&#233; commence avec la promotion Infirmier I</French>
 		<German>Alle Einheiten starten mit der Beförderung Sanit&#228;ter I</German>
 		<Italian>Tutte le unità iniziano con la promozione Medico I</Italian>
@@ -124,7 +124,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_SPN</Tag>
-		<English>The Power of The Inquisition:</English>
+		<English>The Power of the Inquisition:</English>
 		<French>Le Pouvoir de l'Inquisition:</French>
 		<German>Die Macht der Inquisition:</German>
 		<Italian>Il potere dell'Inquisizione:</Italian>
@@ -133,7 +133,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_SPN2</Tag>
-		<English>No stability penalty from Religious Prosecution and +2 Espionage Points per city</English>
+		<English>No stability penalty from Religious Persecution and +2 Espionage Points per city.</English>
 		<French>Pas de p&#233;nalit&#233;s pour les Pers&#233;cuteur et +2XP par ville</French>
 		<German>Kein Stabilitätsmalus durch Inquisition und +2[ICON_ESPIONAGE] pro Stadt</German>
 		<Italian>Nessuna penalità in punti stabilità per le Persecuzioni Religiose e +2XP in ogni città</Italian>
@@ -142,7 +142,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_NOR</Tag>
-		<English>The Power of the Sea:</English>
+		<English>The Power of the Vikings:</English>
 		<French>Le Pouvoir de la Mer:</French>
 		<German>Die Macht der Seefahrt:</German>
 		<Italian>Il Potere del Mare:</Italian>
@@ -151,7 +151,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_NOR2</Tag>
-		<English>All naval units can enter ocean tiles</English>
+		<English>All naval units can enter ocean tiles, less stability penalty for razing cities.</English>
 		<French>Toutes les unit&#233;s navales peuvent entrer dans l'oc&#233;an</French>
 		<German>Alle Marineeinheiten k&#246;nnen den Ozean befahren</German>
 		<Italian>Tutte le unità navali possono passare sulle caselle oceaniche</Italian>
@@ -169,7 +169,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_VEN2</Tag>
-		<English>Starts with Merchant Republic</English>
+		<English>Starts with Merchant Republic, less stability penalty for having too many cities in a Merchant Republic.</English>
 		<French>Commence avec la Republique Marchande</French>
 		<German>Beginnt mit Handelsrepublik</German>
 		<Italian>All'avvio è abilitata Repubblica Mercantile</Italian>
@@ -187,7 +187,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_KIE2</Tag>
-		<English>Your cities yield 2 extra [ICON_FOOD]</English>
+		<English>Your cities yield 2 extra [ICON_FOOD].</English>
 		<French>+2 [ICON_FOOD] par ville</French>
 		<German>+2 [ICON_FOOD] in jeder Stadt</German>
 		<Italian>+2 [ICON_FOOD] Extra per città</Italian>
@@ -205,7 +205,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_LIT2</Tag>
-		<English>+2[ICON_CULTURE] and +1[ICON_HAPPY] in cities without state religion</English>
+		<English>+2[ICON_CULTURE] and +1[ICON_HAPPY] in cities without state religion.</English>
 		<French>+2[ICON_CULTURE] and +1[ICON_HAPPY] in cities without state religion</French>
 		<German>+2[ICON_CULTURE] und +1[ICON_HAPPY] in jeder Stadt ohne Staatsreligion</German>
 		<Italian>+2[ICON_CULTURE] e +1[ICON_HAPPY] per ogni città senza Religione Ufficiale</Italian>
@@ -223,7 +223,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_HUN2</Tag>
-		<English>No unhappiness or instability from foreign culture, and +1[ICON_HAPPY] in all cities</English>
+		<English>No unhappiness or instability from foreign culture, and +1[ICON_HAPPY] in all cities.</English>
 		<French>Pas de m&#233;contentement ou d'instabilit&#233; pour une cuture &#233;trang&#232;re. +1[ICON_HAPPY] dans les villes</French>
 		<German>Keine Unzufriedenheit oder Instabilität durch fremde Kultur und +1[ICON_HAPPY] in allen Städten</German>
 		<Italian>Nessuna infelicità o instabilità dalla cultura straniera, e +1[ICON_HAPPY] in ogni città</Italian>
@@ -241,7 +241,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_GER2</Tag>
-		<English>25% faster unit production after the discovery of Gunpowder</English>
+		<English>25% faster unit production after the discovery of Gunpowder.</English>
 		<French>Production d'unit&#233;s 25%% plus rapide apr&#232;s la d&#233;couverte de la Poudre &#224; Canon</French>
 		<German>Steigert die Produktion von Einheiten um 25% nach der Erfindung des Schie&#223;pulvers</German>
 		<Italian>L'addestramento di unità è il 25% più veloce dopo la scoperta della Polvere da Sparo</Italian>
@@ -259,7 +259,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_POL2</Tag>
-		<English>No unhappiness or instability from non-state religions</English>
+		<English>No unhappiness or instability from non-state religions.</English>
 		<French>No unhappiness or instability from non-state religions</French>
 		<German>Keine Unzufriedenheit oder Instabilität durch nicht-Staatsreligionen</German>
 		<Italian>Nessuna infelicità o instabilità dalle religioni non-ufficiali</Italian>
@@ -277,7 +277,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_MOS2</Tag>
-		<English>50% decrease in all maintenance cost associated with the number of the cities</English>
+		<English>50% decrease in all maintenance cost associated with the number of the cities.</English>
 		<French>-50% de coût de maintenance pour le nombre de villes</French>
 		<German>50% reduzierte Unterhaltskosten für die Anzahl an Städten</German>
 		<Italian>-50% costo di mantenimento per il numero delle città</Italian>
@@ -295,7 +295,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_GEN2</Tag>
-		<English>All Mercenary costs are halved</English>
+		<English>All Mercenary costs are halved.</English>
 		<French>Coût des Mercenaires divis&#233; par 2</French>
 		<German>Halbierte Söldernkosten</German>
 		<Italian>Dimezza il costo dei Mercenari</Italian>
@@ -313,7 +313,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ENG2</Tag>
-		<English>Workshops give +1[ICON_PRODUCTION] and +1[ICON_COMMERCE]</English>
+		<English>Workshops give +1[ICON_PRODUCTION] and +1[ICON_COMMERCE].</English>
 		<French>Atelier ont +1[ICON_PRODUCTION] and +1[ICON_COMMERCE]</French>
 		<German>Werkstätten ergeben +1[ICON_PRODUCTION] and +1[ICON_COMMERCE]</German>
 		<Italian>Le Botteghe danno +1[ICON_PRODUCTION] and +1[ICON_COMMERCE]</Italian>
@@ -331,7 +331,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_POR2</Tag>
-		<English>Colonial Projects are 40% cheaper to build</English>
+		<English>Colonial Projects are 40% cheaper to build.</English>
 		<French>Les projets coloniaux coûte 40%% moins cher &#224; produire</French>
 		<German>40% reduzierte Kosten für Kolonien</German>
 		<Italian>I Progetti Coloniali vengono costruiti il 40% più velocemente</Italian>
@@ -349,7 +349,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_AUS2</Tag>
-		<English>Foreign nations are generally friendlier</English>
+		<English>Foreign nations are generally friendlier.</English>
 		<French>Les nations lointaines sont plus amicale</French>
 		<German>Andere Zivilisationen sind im allgmeinen wohlgesinnter</German>
 		<Italian>Le nazioni straniere sono generalmente amichevoli</Italian>
@@ -367,7 +367,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_TUR2</Tag>
-		<English>Every turn you generate Janissary points for foreign religion in your cities, this gives you free units every few turns</English>
+		<English>Every turn you generate Janissary points for foreign religion in your cities, this gives you free units every few turns.</English>
 		<French>Every turn you generate Janissary points for foreign religion in your cities, this gives you free units every few turns</French>
 		<German>Fremde Religionen erzeugen in jeder Runde Janitscharen-Punkte in euren Städten, dadurch erhaltet ihr alle paar Runden freie Einheiten</German>
 		<Italian>Ogni turno generi punti Giannizzeri per le religioni straniere nelle tue città, che ti forniscono dei Giannizzeri ogni tanto</Italian>
@@ -385,7 +385,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_SWE2</Tag>
-		<English>All units start with Formation promotion</English>
+		<English>All units start with Formation promotion.</English>
 		<French>Toute les unit&#233;s commence avec la promotion Formation</French>
 		<German>Alle Einheiten starten mit der Beförderung Formation</German>
 		<Italian>Tutte le unità cominciano con la promozione Formazione</Italian>
@@ -403,7 +403,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_DUT2</Tag>
-		<English>+2 Trade Routes in your cities</English>
+		<English>+2 Trade Routes in your cities.</English>
 		<French>+2 Routes Commerciale par ville</French>
 		<German>+2 Handelsverbindungen in jeder Stadt</German>
 		<Italian>+2 Rotte Commerciali per città</Italian>
@@ -457,12 +457,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_NOV2</Tag>
-		<English>Starts with Bureaucracy.</English>
-		<French>Starts with Bureaucracy.</French>
-		<German>Starts with Bureaucracy.</German>
+		<English>Starts with Bureaucracy, less stability penalty for having too many cities in a bureaucratic government.</English>
+		<French>Starts with Bureaucracy, less stability penalty for having too many cities in a bureaucratic government.</French>
+		<German>Starts with Bureaucracy, less stability penalty for having too many cities in a bureaucratic government.</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
 		<Spanish>Gobierno hereditario y Esclavitud est&#225;n activados al principio</Spanish>
-		<Portuguese>Starts with Bureaucracy.</Portuguese>
+		<Portuguese>Starts with Bureaucracy, less stability penalty for having too many cities in a bureaucratic government.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_SCO</Tag>

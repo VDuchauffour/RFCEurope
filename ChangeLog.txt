@@ -19,6 +19,7 @@ Changes for RFCE 1.3:
 		- Sweden reworked to an earlier start
 		- New civilizations: Novgorod, Prussia, Scotland, Aragon, Morocco
 		- Many things connected to the new civs are based on (or inspired by) RFCE++ changes, at least for now
+		- All 8 new civs have a completely revised settler, war, visibility, spawn and respawn map
 
 	Denmark:
 		Start Date: 936
@@ -39,7 +40,7 @@ Changes for RFCE 1.3:
 	Norway:
 		Start Date: 872
 		Leaders: Harald Hardrada (1015-1066), Haakon IV Haakonson (1204-1263)
-		UP: The Power of the Sea: All naval units can enter ocean tiles
+		UP: The Power of the Vikings: All naval units can enter ocean tiles, less stability penalty for razing cities
 		UHV1: Vikings: Gain 50 Viking points by 1066
 		UHV2: Conquerors: Conquer The Isles, Ireland, Mercia, Normandy, Iceland and build Vinland by 1263
 		UHV3: Statesmen: Have higher score than Sweden, Denmark, Scotland, England, Germany and France in 1320
@@ -72,7 +73,7 @@ Changes for RFCE 1.3:
 	Novgorod:
 		Start Date: 864
 		Leaders: Rurik (830-879), Alexander Nevsky (1220-1263), Marfa Posadnitsa (1420-1478)
-		UP: The Power of the Lord City: Starts with Bureaucracy
+		UP: The Power of the Lord City: Starts with Bureaucracy, less stability penalty for having too many cities in a bureaucratic government
 		UHV1: Defender of Rus': Control Novgorod, Karelia, Estonia and Livonia in 1250
 		UHV2: The Fur Trade: Control twelve sources of fur by 1397
 		UHV3: The Great Hinterlands: Have seven cities in Karelia and Vologda in 1478
@@ -90,7 +91,7 @@ Changes for RFCE 1.3:
 		Start Date: 1224
 		Leaders: Hermann von Salza (1165-1239), Frederick I (1712-1786)
 		UP: The Power of Cameralism: Starts with Theocracy and no stability penalties from anarchy
-		UHV1: The Northern Crusades: Control Prussia, Courland, Lithuania, Livonia, Estonia, and Pomerania in 1410
+		UHV1: The Northern Crusades: Control Prussia, Lithuania, Livonia, Estonia, and Pomerania in 1410
 		UHV2: Seven Years' War: Conquer two cities from each of Austria, Muscovy, Germany, Sweden, France and Spain between 1650 and 1763, if they are still alive
 		UHV3: Enlightened Despotism: Settle a total of 15 Great People in any combination, including Great Generals, in your capital
 		UU: Death's Head Hussar / Totenkopfhusar (Hussar)
@@ -150,7 +151,7 @@ Changes for RFCE 1.3:
 			Potential: Oran, Algiers
 			Border/contested: Andalusia, Valencia, Ifriqiya, Tripolitania
 
-	General changes:
+	Leaders:
 		- Support for leader switching with 4 leaders per civ
 		- Message for the player when a known civ switches leaders, with the currently used DCN of the given civ
 		- Leaders moved: Norse leaders to Denmark and Norway, Yaqub al-Mansur (Cordoba -> Morocco), Frederick I (Germany -> Prussia)
@@ -161,20 +162,8 @@ Changes for RFCE 1.3:
 		- New leaders for existing civs: Otto-William (Burgundy), Beatrice II (Burgundy), Fernando III (Spain), Guglielmo Embriaco (Genoa)
 		- Redesigned Andrea Dandolo into Andrea Gritti (Venice) - more important doge, we already have a Dandolo, and better for the timeline
 		- Redesigned Maria II into Maria I (Portugal) - Maria I is better for the RFCE timeline, also she is the Portuguese leader in Civ V
-		- Removed outdated xml_light files
-		- Reenabled and readded some entries in the civilopedia
-		- Cannons also buildable with iron + sulphur
-		- Small diplo penalty with all leaders after a player accomplished 2 UHVs
-		- New promotion: Cargo Capacity (+1 cargo space in ships)
-		- Fixed/improved most Dynamic Civ Names connected to Scandinavia, Bulgaria
-		- Fixed UHV condition display on the Victory Screen for more complex UHVs
-		- Boost for Workshops and Lumbermills - were total worthless before, now they are somewhat on pair with Windmills and Watermills
-			Apprenticeship civic gives +1 production for Lumbermills too
-			Steam Engine tech gives +1 production for Lumbermills too
-			Workshops have +1 base production (so now -1 food, +2 production)
-			English UP changed to +1 production and +1 commerce for Workshops (was +2 production before)
-		- Mercantilism civic gives +1 commerce for Villages too
-		- Updated Great Person lists
+
+	Setup:
 		- Province setup changes:
 			England: Scotland, The Isles, Ireland border/contested
 			Poland: Prussia border/contested, Livonia foreign/unstable, Pomerania potential
@@ -183,29 +172,28 @@ Changes for RFCE 1.3:
 			Spain: Aragon, Catalonia, Balears border, Navarre potential
 			Byzantium: Apulia, Calabria, Sicily, Malta border/contested on the Aragonese spawn
 			Moscow: Novgorod, Vologda potential, Karelia border/contested
-		- Prussian direction change: Estonia switches to foreign, Livonia, Greater Poland to border, Silesia to potential, Brandenburg to historical in 1618
 		- English AI gets some defenders and defensive buildings in Normandy a couple turns after their spawn
-		- Revised war map for Germany, Spain, Poland, England, Lithuania, Muscovy, especially in territories of the new civs
-		- New independent city: Londinium. Starts in 500 AD, size 2, 2 archers, catholic religion, prebuilt walls
-		- New independent city: Caen. Starts in 912 AD (establishment of the Duchy of Normandy), size 1, 2 crossbowman, catholic religion
-		- Byzantine 2nd UHV also needs Thrace, Thessaloniki, Moesia, Macedonia, Serbia, Arberia, Epirus, Thessaly and Morea provinces
-		- Catalonia province won't revolt against Aragon, Scotland province won't revolt against Scotland
-		- The city of Novgorod no longer spawn a couple turns before the Novgorodian start, no preplaced Marrakesh either
-		- Improvements in the Crusader city names for England, Denmark, Poland, Genoa, Venice, Portugal, Sweden, Lithuania, and the Dutch by DC123456789
-		- Improved the German, Austrian, Prussian city name map around Bohemia, Silesia, Austria and in east Germany
-		- Small improvements on the Polish, Muscovian, Portuguese city name maps in Anatolia
-		- Revised visibility map for Byzantium, Bulgaria, Cordoba, Burgundy, Novgorod, Kiev, Scotland, Morocco, Portugal, Aragon, Sweden, Lithuania, Austria, Ottomans, Moscow, Dutch
-		- Revised the setup of initial contacts between all civs
-		- Minor changes in the collapse mechanics - should be somewhat more common for the AI to collapse, if they lose a significant part of their territory
-		- City secession has much bigger chance to occur for all civs
-		- Losing your capital results in a much bigger stability hit (20 for Byzantium, 5 for Scotland, 10 for everyone else)
-		- Losing a city in your core or historical territory also means a bigger stability hit
-		- Revised settler map for Byzantium, Cordoba, Venice, Burgundy, Germany, Spain, Poland, England, Portugal, Lithuania, Muscovy
+		- 1 extra Settler and 1 Crossbow for AI England
+		- Lowered almost all leaders willingness to vassalize voluntarily
+		- Increased Cordoban leaders' religion flavor, they will spread out Islam better in their cities
+		- Lowered Orthodoxy spread values for Scandinavian civs
 		- Muscovy spawn zone reduced in the north, so Novgorod gets a chance to be an early rival for Muscovy
 		- Lithuanian spawn zone reduced around Riga and the Prussian core territory, but enlarged on the east, so Minsk flips to them
 		- Updated Lithuanian and Swedish respawn zones
-		- Plague icon on the main interface when plague spreads to a new city
+		- Revised visibility map for Byzantium, Bulgaria, Cordoba, Burgundy, Novgorod, Kiev, Scotland, Morocco, Portugal, Aragon, Sweden, Lithuania, Austria, Ottomans, Moscow, Dutch
+		- Revised the setup of initial contacts between all civs
 		- Revised AI war initialization for all players
+		- Revised settler map for Byzantium, Cordoba, Venice, Burgundy, Germany, Spain, Poland, England, Portugal, Lithuania, Muscovy
+		- Revised war map for Germany, Spain, Poland, England, Lithuania, Muscovy, especially in territories of the new civs
+
+	UHV updates:
+		- Small diplo penalty with all leaders after a player accomplished 2 UHVs
+		- Enhancements in the events when you accomplish 2 of your UHV goals: maximum 3 of your rivals declare war, new event messages for the player
+		- Fixed UHV condition display on the Victory Screen for more complex UHVs
+		- Byzantine 2nd UHV also needs Thrace, Thessaloniki, Moesia, Macedonia, Serbia, Arberia, Epirus, Thessaly and Morea provinces
+		- Some of the UHVs are coded more efficiently
+		- Detailed info for UHV progress for all civs, in the Victory Screen (F8)
+		- New UHV help for the 1st Polish UHV
 		- All UHV colony checks are handled on project built (instead of every turn), should make checks much faster (except for the Spanish UHV, which is only checked on a given turn)
 		- Trading companies don't count as colonies for the UHV anymore
 		- Revised Colony UHVs:
@@ -216,13 +204,18 @@ Changes for RFCE 1.3:
 			Portugal: Feitorias all over the world: Build 5 Colonies
 			Dutch: The India Companies: Build 3 Colonies and complete both Trading Companies
 			Every UHV should trigger right on the completion of the last project/colony
-		- Free walls in the city if it is built on a fort
-		- Imported more efficient constant handling (in Consts.py and XMLConsts.py) from DoC - credit to Leoreth
-		- Some of the UHVs are coded more efficiently
-		- Progress info for every UHV
-		- New UHV help for the 1st Polish UHV
-		- Updated the RFCE Timeline
+		- Changed Atlantic Access to appear earlier near Scandinavia, in 1580 - needed for the Danish UHV
+		- North Atlantic Access near Vinland disappears in the exact date of Norway's second UHV
+		- Disabled UHV checks for the AI (faster turn times)
+		- Updated Hungarian territory UHV check, now it's province based and totally accurate
+
+	Indies and barbs:
 		- Added reduce city mechanics (to towns for example) on a given turn or event - could be useful for many UHVs
+		- Indy city in Svealand province: Uppsala, spawns in 800AD
+		- Indy city in East Anglia province: Norwich, spawns in 640AD
+		- Indy city in Mercia province: Nottingham, spawns in 867AD
+		- York (Eboracum) starts in 500AD
+		- Uppsala reduced to town on the Swedish spawn, Norwich and Nottingham on the English spawn
 		- Revised barbs:
 			Further separated barbs for the human and the AI
 			AI civs won't get extra barbarians on harder levels. Also somewhat less extra barbs for the human player on harder levels
@@ -237,32 +230,19 @@ Changes for RFCE 1.3:
 			Barbarian Scottish Highlanders only spawn when Scotland is dead
 			Barbarian Vikings in the 9-10th century, in small numbers for the AI (and only if the player is not Norway), but a bigger threat to human France
 			Revised some areas of the Mongol spawn zone, for example no Keshiks directly for Novgorod
-		- Indy city in Svealand province: Uppsala, spawns in 800AD
-		- Indy city in East Anglia province: Norwich, spawns in 640AD
-		- Indy city in Mercia province: Nottingham, spawns in 867AD
-		- York (Eboracum) starts in 500AD
-		- Uppsala reduced to town on the Swedish spawn, Norwich and Nottingham on the English spawn
-		- Changed Atlantic Access to appear earlier near Scandinavia, in 1580 - needed for the Danish UHV
-		- Resource rearrengement near Prussia, Lithuania, Poland, Novgorod (mainly iron and horse)
-		- Sulphur for Prussia is now in Brandenburg - UU is tied to Kingdom of Prussia, not to Teutonic Order
-		- Made Cornwall a little less fertile on the map
-		- Revised initial stability for the different difficulty levels
-		- Lowered almost all leaders willingness to vassalize voluntarily
-		- Added a small initial food reserve on city foundation, currently 1/5 of the next growth threshold
+		- New independent city: Londinium. Starts in 500 AD, size 2, 2 archers, catholic religion, prebuilt walls
+		- New independent city: Caen. Starts in 912 AD (establishment of the Duchy of Normandy), size 1, 2 crossbowman, catholic religion
+		- Catalonia province won't revolt against Aragon, Scotland province won't revolt against Scotland
+		- The city of Novgorod no longer spawn a couple turns before the Novgorodian start, no preplaced Marrakesh either
 		- Reduced chance of cultural flips for barbarian cities - especially important in Anatolia for the former Byzantine cities
 		- Reduced raze city probability for the AI, bigger reduction for the barbarians, small for the rest
-		- Enhancements in the events when you accomplish 2 of your UHV goals: maximum 3 of your rivals declare war, new event messages for the player
-		- Removed National Wonder limit (per city), doesn't make that much sense in RFC-type mods
-		- Increased number of units leaving the civs for a crusade, but it's low on the first 10-20 turns after a civ is born
-		- Also, more crusader units will go home (leave your army)
-		- Some of the units will return from all Crusades after a couple turns, not only if Jerusalem is conquered
-		- No more free Templars/Teutons/Paladins/Knights for the base crusader army if the crusading civ doesn't know Chivalry yet (Lancers and Heavy Lancers instead)
-		- Slightly reduced number of units for Defensive Crusades
-		- Separated unit randomizing method for Defensive Crusades (so no more all Paladin DCs), also reduced chance for Paladins
-		- Interface message for the player about their own DCs
-		- 1 extra Settler and 1 Crossbow for AI England
-		- Increased Cordoban leaders' religion flavor, they will spread out Islam better in their cities
-		- Lowered Orthodoxy spread values for Scandinavian civs
+
+	Stability:
+		- Minor changes in the collapse mechanics - should be somewhat more common for the AI to collapse, if they lose a significant part of their territory
+		- City secession has much bigger chance to occur for all civs
+		- Losing your capital results in a much bigger stability hit (20 for Byzantium, 5 for Scotland, 10 for everyone else)
+		- Losing a city in your core or historical territory also means a bigger stability hit
+		- Revised initial stability for the different difficulty levels
 		- Rewrote most triggers for stability collapses and revolts:
 			In huge empires, if stability is bad, there is 80% for the secession/city revolt mechanics to start, and only 10% for the collapse mechanics
 			In medium empires, 40% for for the secession/city revolt mechanics, 40% for the collapse mechanics
@@ -274,20 +254,70 @@ Changes for RFCE 1.3:
 		- Imperialism civic and the French UP works without a hard cap on number of cities
 		- Fixed inconsistencies in the city stability calculations - way more deadly for the human player if the cities are managed poorly
 		- Updated the stability guide. Civilopedia/Concepts/Stability Guide
+		- Revised stability changes and connected mechanics on religious persecution
+
+	Persecution updates:
+		Loot is significantly increased when you successfully purge a religion
+		-3 swing instability on successful persecution (0 for Spain)
+		Unhappiness because of persecution ("We cannot forget your cruel oppression") only appears in the city on successful persecution
+		Persecution counter/timer reintroduced, with a new approach:
+			Nationwide variable, goes down by 1 each turn
+			New counter for it on the main screen (Persecution, only shown if >0, right below the faith point counter)
+			+8 to the counter on successful persecution (4 for Spain), 4 on unsuccessful (2 for Spain)
+			Causes religious instability, 1 with 1-5, 2 with 6-10, 3 with 11-15, etc.
+			The timer (Persecution Instability Cooldown), and the caused instability (Persecution Instability) are also shown in the Religion Screen (F7)
+
+	Crusades:
+		- Increased number of units leaving the civs for a crusade, but it's low on the first 10-20 turns after a civ is born
+		- Also, more crusader units will go home (leave your army)
+		- Some of the units will return from all Crusades after a couple turns, not only if Jerusalem is conquered
+		- No more free Templars/Teutons/Paladins/Knights for the base crusader army if the crusading civ doesn't know Chivalry yet (Lancers and Heavy Lancers instead)
+		- No longer possible for your GG units to leave you for a crusade (as normal units)
+		- Slightly reduced number of units for Defensive Crusades
+		- Separated unit randomizing method for Defensive Crusades (so no more all Paladin DCs), also reduced chance for Paladins
+		- Interface message for the player about their own DCs
+
+	General changes:
+		- Added a small initial food reserve on city foundation, currently 1/5 of the next growth threshold
+		- Free walls in the city if it is built on a fort
+		- Removed National Wonder limit (per city), doesn't make that much sense in RFC-type mods
+		- Improvements in the Crusader city names for England, Denmark, Poland, Genoa, Venice, Portugal, Sweden, Lithuania, and the Dutch by DC123456789
+		- Improved the German, Austrian, Prussian city name map around Bohemia, Silesia, Austria and in east Germany
+		- Small improvements on the Polish, Muscovian, Portuguese city name maps in Anatolia
+		- Fixed/improved most Dynamic Civ Names connected to Scandinavia, Bulgaria
+		- Plague icon on the main interface when plague spreads to a new city
+		- Removed outdated xml_light files
+		- Reenabled and readded some entries in the civilopedia
+		- Cannons also buildable with iron + sulphur
+		- New promotion: Cargo Capacity (+1 cargo space in ships)
+		- Boost for Workshops and Lumbermills - were total worthless before, now they are somewhat on pair with Windmills and Watermills
+			Apprenticeship civic gives +1 production for Lumbermills too
+			Steam Engine tech gives +1 production for Lumbermills too
+			Workshops have +1 base production (so now -1 food, +2 production)
+			English UP changed to +1 production and +1 commerce for Workshops (was +2 production before)
+		- Mercantilism civic gives +1 commerce for Villages too
+		- Updated Great Person lists
+		- Updated the RFCE Timeline
+		- Resource rearrengement near Prussia, Lithuania, Poland, Novgorod (mainly iron and horse)
+		- Sulphur for Prussia is now in Brandenburg - UU is tied to Kingdom of Prussia, not to Teutonic Order
+		- Made Cornwall a little less fertile on the map
+		- Imported more efficient constant handling (in Consts.py and XMLConsts.py) from DoC - credit to Leoreth
 		- Speed improvements by replacing various if-statements with elif-statements and added some break statements
 		- Improved coding of Krak des Chevaliers, Leaning Tower, Topkapi Palace
-		- Disabled UHV for the AI (faster turn times)
 
 	Art updates:
 		- New art for Isabella (Spain), Casimir III (Poland), Ivan IV (Muscovy), Simeon I (Bulgaria), Ivan Asen (Bulgaria)
 		- New art for Abu Bakr (Arabia), Abd-ar-Rahman III (Cordoba), Philip the Bold (Burgundy), Yaqub al-Mansur (Cordoba)
 		- Added missing button for Mieszko, Michael VIII Palaiologos, Abu Bakr, Abd-ar-Rahman III, Margaret I
 		- Added missing button for Philip the Bold, Guglielmo Embriaco, Alexander Nevsky, Hermann von Salza
+		- Updated button for Bela III, Ferdinand III, Harald Hardrada, James I, Magnus Ladulas, Mstislav I, Otto I
+		- Updated button for Robert the Bruce, Marfa Posadnitsa, Bohdan Khmelnytsky, Philip Augustus, Beatrice II
 		- New unit art: Huskarl, Bedouin, Turcoman Horse Archer
 		- New background for Robert the Bruce, Simeon, Isabella, Yaqub al-Mansur, Mohammad ibn Nasr
 		- New background for Margaret, Alexander Nevsky, Gustav Vasa, George III, Rurik, Otto I
 		- Optimizations in various BG files, removed some unnecessary art files
-		- Units and buildings that require now have a button instead of some text
+		- Units and buildings that require corporations now have a button instead of some text in the corresponding section in the civilopedia
+		- All civs have the correct coloured dot on the colonial world map in the Colony Screen
 
 	Bugfixes:
 		- Fixed bug where all mercs got free medic3 promotion (missing change in one of the files when Pinch was reintroduced)
@@ -303,12 +333,10 @@ Changes for RFCE 1.3:
 		- Fixed potential bug where your vassal might declare war on you
 		- Fixed bug connected to the WB respawn area functions
 		- Fixed bug where a civ would send more units to a crusade in their first 20 turns, than they would otherwise
-		- No longer possible for your GG units to leave you for a crusade (as normal units)
 		- Fixed bug where some of the UUs couldn't leave for Crusade
 		- Fixed bug connected to the preset crusade dates
 		- Fixed bug when settling cities in Potential provinces would result in a stability loss
 		- Fixed stability bug connected to the order of some Wonders
-		- Fixed Hungarian territory UHV
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

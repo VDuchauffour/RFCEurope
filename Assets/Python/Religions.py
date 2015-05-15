@@ -248,13 +248,13 @@ class Religions:
 			if ( gc.getGame().getSorenRandNum(100, 'Spread Jews') < 5 ):
 				tCity = self.selectRandomCityAll()
 				self.spreadReligion(tCity,xml.iJudaism)
-		# additional 9% chance to spread Jews to a random central european city in every third turn
+		# additional 9% chance to spread Jews to a random Central European city in every third turn
 		if (iGameTurn > xml.i1000AD and iGameTurn < xml.i1500AD and iGameTurn % 3 == 1):
 			if ( gc.getGame().getSorenRandNum(100, 'Spread Jews') < 9 ):
 				tCity = self.selectRandomCityArea(tCentralEurope)
 				self.spreadReligion(tCity,xml.iJudaism)
 
-		# Persecution
+		# Persecution cooldown
 		for i in range( con.iNumPlayers ):
 			pPlayer = gc.getPlayer( i )
 			if ( pPlayer.getProsecutionCount() > 0 ):
