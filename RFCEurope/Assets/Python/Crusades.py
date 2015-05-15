@@ -542,15 +542,15 @@ class Crusades:
 		#iHuman = utils.getHumanID()
 		pPlayer = gc.getPlayer( iPlayer )
 		iNumUnits = pPlayer.getNumUnits()
-		if ( con.tBirth[iPlayer] + 10 > gc.getGame().getGameTurn() ):
+		if ( con.tBirth[iPlayer] + 10 > gc.getGame().getGameTurn() ): # in the first 10 turns
 			if (iNumUnits < 10):
 				iMaxToSend = 0
 			else:
 				iMaxToSend = 1
-		elif ( con.tBirth[iPlayer] + 20 > gc.getGame().getGameTurn() ):
+		elif ( con.tBirth[iPlayer] + 20 > gc.getGame().getGameTurn() ): # between turn 10-20
 			iMaxToSend = min( 10, max( 1, (5*iNumUnits) / 50 ) )
 		else:
-			iMaxToSend = min( 10, max( 1, (5*iNumUnits) / 30 ) )
+			iMaxToSend = min( 10, max( 1, (5*iNumUnits) / 30 ) ) # after turn 20
 		iCrusadersSend = 0
 		if (iMaxToSend > 0):
 			for i in range( iNumUnits ):
@@ -761,7 +761,7 @@ class Crusades:
 		pTargetCity = gc.getMap().plot( self.getTargetX(), self.getTargetY() ).getPlotCity()
 		iTargetPlayer = pTargetCity.getOwner()
 		# Jerusalem can change ownership during the voting
-		if ( gc.getPlayer( iTargetPlayer ).getStateReligion() == xml.iCatholicism ):
+		if ( gc.getPlayer( iTargetPlayer ).getStateReligion() == iCatholicism ):
 			self.setLeader( -1 )
 			self.returnCrusaders()
 			return
@@ -806,7 +806,7 @@ class Crusades:
 		pPlot = gc.getMap().plot( iTX, iTY )
 		if ( pPlot.isCity() ):
 			iVictim = pPlot.getPlotCity().getOwner()
-			if ( iVictim != iLeader and gc.getPlayer(iVictim).getStateReligion() != xml.iCatholicism ):
+			if ( iVictim != iLeader and gc.getPlayer(iVictim).getStateReligion() != iCatholicism ):
 				teamLeader = gc.getTeam( gc.getPlayer(iLeader).getTeam() )
 				iTeamVictim = gc.getTeam( gc.getPlayer(iVictim).getTeam() ).getID()
 				if ( not teamLeader.isAtWar( iTeamVictim ) ):

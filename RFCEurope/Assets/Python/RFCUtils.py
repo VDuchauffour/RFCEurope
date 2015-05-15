@@ -1206,8 +1206,8 @@ class RFCUtils:
 		# on successful persecution:
 
 			# remove a single non-state religion and its buildings from the city, count the loot
-			iLootModifier = 2 * city.getPopulation() / city.getReligionCount() + 1
-			iLoot = 2 + iLootModifier
+			iLootModifier = 3 * city.getPopulation() / city.getReligionCount()
+			iLoot = 5 + iLootModifier
 			city.setHasReligion(iReligion, 0, 0, 0)
 			for i in range(len(lReligionBuilding)):
 				city.setNumRealBuilding(lReligionBuilding[i], 0)
@@ -1226,7 +1226,7 @@ class RFCUtils:
 				city.changePopulation(-1)
 
 			# distribute the loot
-			iLoot = iLoot/2 + gc.getGame().getSorenRandNum(iLoot/2, 'random loot')
+			iLoot = iLoot + gc.getGame().getSorenRandNum(iLoot, 'random loot')
 			pPlayer.changeGold(iLoot)
 
 			# add faith for the persecution itself (there is an indirect increase too, the negative modifier from having a non-state religion is gone)
@@ -1239,15 +1239,10 @@ class RFCUtils:
 					if pLoopPlayer.getStateReligion() == iReligion:
 						pLoopPlayer.AI_changeAttitudeExtra(iOwner, -1)
 
-		## count minor religion persecutions??
-	#		if ( i == minorReligion ){ // 3Miro: count the minor religion prosecutions
-	#		minorReligionRefugies++;
-	#		gc.setMinorReligionRefugies( 0 )
-
-		## Spanish UP?
-	#		if ( not gc.hasUP(iOwner,con.iUP_Inquisition) ):
-	#			#self.setProsecutionCount( iOwner, self.getProsecutionCount( iOwner ) + 10 )
-	#			pPlayer.changeProsecutionCount( 10 )
+			# count minor religion persecutions - resettling jewish people on persecution is handled another way
+			#if ( i == minorReligion ){ // 3Miro: count the minor religion prosecutions
+			#minorReligionRefugies++;
+			#gc.setMinorReligionRefugies( 0 )
 
 			# interface message for the player
 			CyInterface().addMessage(iOwner, False, con.iDuration, localText.getText("TXT_KEY_MESSAGE_INQUISITION", (city.getName(), gc.getReligionInfo(iReligion).getDescription(), iLoot)), "AS2D_PLAGUE", InterfaceMessageTypes.MESSAGE_TYPE_INFO, pUnit.getButton(), ColorTypes(con.iGreen), iPlotX, iPlotY, True, True)
@@ -1259,8 +1254,28 @@ class RFCUtils:
 					self.spreadJews(tCity,xml.iJudaism)
 					CyInterface().addMessage(iOwner, False, con.iDuration, localText.getText("TXT_KEY_MESSAGE_JEWISH_MOVE", (city.getName(), )), "AS2D_PLAGUE", InterfaceMessageTypes.MESSAGE_TYPE_INFO, pUnit.getButton(), ColorTypes(con.iGreen), iPlotX, iPlotY, True, True)
 
-		else: # message on failed persecution:
+			# persecution countdown for the civ (causes indirect instability - stability.recalcCity)
+			if ( gc.hasUP(iOwner,con.iUP_Inquisition) ): # Spanish UP
+				pPlayer.changeProsecutionCount( 4 )
+			else:
+				#self.setProsecutionCount( iOwner, self.getProsecutionCount( iOwner ) + 10 )
+				pPlayer.changeProsecutionCount( 8 )
+
+			# also some swing instability:
+			if ( not gc.hasUP(iOwner,con.iUP_Inquisition) ): # Spanish UP
+				pPlayer.setStabilitySwing( pPlayer.getStabilitySwing() - 3  )
+
+			# "We cannot forget your cruel oppression" unhappiness from persecution
+			city.changeHurryAngerTimer(city.flatHurryAngerLength())
+
+		else: # on failed persecution:
 			CyInterface().addMessage(iOwner, False, con.iDuration, localText.getText("TXT_KEY_MESSAGE_INQUISITION_FAIL", (city.getName(), )), "AS2D_SABOTAGE", InterfaceMessageTypes.MESSAGE_TYPE_INFO, pUnit.getButton(), ColorTypes(con.iRed), iPlotX, iPlotY, True, True)
+
+			# persecution countdown for the civ (causes indirect instability - stability.recalcCity)
+			if ( gc.hasUP(iOwner,con.iUP_Inquisition) ): # Spanish UP
+				pPlayer.changeProsecutionCount( 2 )
+			else:
+				pPlayer.changeProsecutionCount( 4 )
 
 		# start a small revolt
 		city.changeCultureUpdateTimer(1);
@@ -1268,9 +1283,6 @@ class RFCUtils:
 
 		# consume the inquisitor
 		pUnit.kill(0, -1)
-
-		# unhappiness from persecution
-		city.changeHurryAngerTimer(city.flatHurryAngerLength())
 
 		return True
 	#Absinthe: end

@@ -404,7 +404,6 @@ class CvReligionScreen:
 
 		screen.setLabelAt( "", szFaithArea, sString, CvUtil.FONT_LEFT_JUSTIFY, 20, 50, 100, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
-
 		szFaithEffectArea = self.FAITH_EFFECT_AREA_ID
 		screen.addPanel(self.FAITH_EFFECT_AREA_ID, "", "", True, True, self.X_FAITH_EFFECT_AREA, self.Y_FAITH_EFFECT_AREA, self.W_FAITH_EFFECT_AREA, self.H_FAITH_EFFECT_AREA, PanelStyles.PANEL_STYLE_MAIN)
 
@@ -431,10 +430,9 @@ class CvReligionScreen:
 			sString = localText.getText("TXT_KEY_FAITH_DIPLOMACY",()) + (" +%i " %pPlayer.getFaithBenefit(con.iFP_Displomacy) )
 			szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
 		if ( iProsecutionCount > 0 ):
-			iProsecutionInstability = 2* ( (iProsecutionCount+9) / 10 )
+			iProsecutionInstability = (iProsecutionCount + 4) / 5
 			sString = localText.getText("TXT_KEY_FAITH_PROSECUTION_INSTABILITY",()) + (" -%i " %iProsecutionInstability )
 			szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
-
 
 		screen.addMultilineText("Child" + self.FAITH_EFFECT_AREA_ID, szFaithBenefits, self.X_FAITH_EFFECT_AREA+7, self.Y_FAITH_EFFECT_AREA+10, self.W_FAITH_EFFECT_AREA-10, self.H_FAITH_EFFECT_AREA-10, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 

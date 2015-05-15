@@ -273,17 +273,26 @@
 		<Portuguese>Faith Points</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_FAITH_PERSECUTION</Tag>
+		<English>Persecution</English>
+		<French>Persecution</French>
+		<German>Persecution</German>
+		<Italian>Persecution</Italian>
+		<Spanish>Persecution</Spanish>
+		<Portuguese>Persecution</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_FAITH_PROSECUTION_COUNT</Tag>
-		<English>Prosecution Instability Countdown</English>
+		<English>Persecution Instability Cooldown</English>
 		<French>Compte &#224; rebours de la poursuite de l'Instabilit&#233;</French>
-		<German>Instabilitäts-Countdown durch Inquisition</German>
-		<Italian>Countdown per Instabilità da Inquisizione</Italian>
-		<Spanish>Prosecution Instability Countdown</Spanish>
-		<Portuguese>Prosecution Instability Countdown</Portuguese>
+		<German>Instabilitäts-Cooldown durch Inquisition</German>
+		<Italian>Cooldown per Instabilità da Inquisizione</Italian>
+		<Spanish>Prosecution Instability Cooldown</Spanish>
+		<Portuguese>Prosecution Instability Cooldown</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_PROSECUTION_INSTABILITY</Tag>
-		<English>Prosecution Instability:</English>
+		<English>Persecution Instability:</English>
 		<French>Poursuite de l'Instabilit&#233;:</French>
 		<German>Instabilität durch Inquisition:</German>
 		<Italian>Instabilità da Inquisizione:</Italian>

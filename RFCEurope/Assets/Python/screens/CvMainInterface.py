@@ -1921,7 +1921,7 @@ class CvMainInterface:
 			szString = "RateText" + str(iI)
 			screen.hide(szString)
 
-		if ( CyInterface().getShowInterface() != InterfaceVisibility.INTERFACE_HIDE_ALL and CyInterface().getShowInterface() != InterfaceVisibility.INTERFACE_MINIMAP_ONLY  and CyInterface().getShowInterface() != InterfaceVisibility.INTERFACE_ADVANCED_START):
+		if ( CyInterface().getShowInterface() != InterfaceVisibility.INTERFACE_HIDE_ALL and CyInterface().getShowInterface() != InterfaceVisibility.INTERFACE_MINIMAP_ONLY and CyInterface().getShowInterface() != InterfaceVisibility.INTERFACE_ADVANCED_START):
 
 			pPlayer = gc.getPlayer(ePlayer)
 			# Percent of commerce
@@ -2010,6 +2010,20 @@ class CvMainInterface:
 				else:
 					screen.hide("FaithButton")
 					screen.hide("FaithText")
+
+				# Absinthe: Persecution cooldown
+				iPersecutionPoints = pPlayer.getProsecutionCount()
+				if iPersecutionPoints > 0 and not CyInterface().isCityScreenUp():
+					szPersecutionButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.RELIGION_CHAR))
+					szPersecutionText = ": " + localText.getText("TXT_KEY_FAITH_PERSECUTION",()) + (" (%i) " %iPersecutionPoints )
+					screen.setLabel("PersecutionButton", "Background", szPersecutionButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+					screen.setLabel("PersecutionText", "Background", szPersecutionText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+					screen.show("PersecutionButton")
+					screen.show("PersecutionText")
+					iCount += 1
+				else:
+					screen.hide("PersecutionButton")
+					screen.hide("PersecutionText")
 
 				# edead: start GP info text by NeverMind 2/2
 				pGreatPersonCity, iGPTurns = self.getnextGPCity()

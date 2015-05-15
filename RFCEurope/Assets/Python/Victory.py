@@ -165,7 +165,7 @@ tNovgorodControlII = [ xml.iP_Karelia, xml.iP_Vologda ]
 tMoroccoControl = [ xml.iP_Morocco, xml.iP_Marrakesh, xml.iP_Fez, xml.iP_Tetouan, xml.iP_Oran, xml.iP_Algiers, xml.iP_Ifriqiya, xml.iP_Tripolitania, xml.iP_Andalusia, xml.iP_Valencia ]
 tAragonControlI = [ xml.iP_Catalonia, xml.iP_Valencia, xml.iP_Balears, xml.iP_Sicily ]
 tAragonControlII = [ xml.iP_Catalonia, xml.iP_Valencia, xml.iP_Aragon, xml.iP_Balears, xml.iP_Corsica, xml.iP_Sardinia, xml.iP_Sicily, xml.iP_Apulia, xml.iP_Provence, xml.iP_Thessaly ]
-tPrussiaControlI = [ xml.iP_Lithuania, xml.iP_Livonia, xml.iP_Estonia, xml.iP_Pomerania, xml.iP_Prussia]
+tPrussiaControlI = [ xml.iP_Lithuania, xml.iP_Suvalkija, xml.iP_Livonia, xml.iP_Estonia, xml.iP_Pomerania, xml.iP_Prussia]
 tPrussiaDefeat = [ iAustria, iMoscow, iGermany, iSweden, iFrankia, iSpain ]
 tScotlandControl = [ xml.iP_Scotland, xml.iP_TheIsles, xml.iP_Ireland, xml.iP_Wales, xml.iP_Bretagne ]
 tDenmarkControlI = [ xml.iP_Denmark, xml.iP_Skaneland, xml.iP_Gotaland, xml.iP_Svealand, xml.iP_Mercia, xml.iP_London, xml.iP_EastAnglia, xml.iP_Northumbria ]
@@ -1347,7 +1347,7 @@ class Victory:
 
 	def checkPrussia( self, iGameTurn ):
 
-		# UHV 1: Control Lithuania, Livonia, Estonia, and Pomerania in 1410
+		# UHV 1: Control Prussia, Suvalkija, Lithuania, Livonia, Estonia, and Pomerania in 1410
 		if ( iGameTurn == xml.i1410AD and pPrussia.getUHV( 0 ) == -1 ):
 			bOwn = True
 			for iProv in tPrussiaControlI:
