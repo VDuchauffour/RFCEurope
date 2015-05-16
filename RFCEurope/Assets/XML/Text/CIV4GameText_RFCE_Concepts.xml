@@ -523,7 +523,7 @@ In most cases this happens when a new civ is born in or near your territory (the
 
 [BOLD]Civics[\BOLD]
 [TAB]Building a nightwatch: +1
-[TAB]Being in anarchy: -1 or -2 for each turn, based on city number (0 for Prussia)
+[TAB]Being in anarchy: 0, -1 or -2 for each turn, based on city number (0 for Prussia)
 
 [BOLD]Expansion[\BOLD]
 [TAB]Building a castle: +1
@@ -533,7 +533,11 @@ In most cases this happens when a new civ is born in or near your territory (the
 [TAB][TAB]while the number of your cities is less than 5: +1
 [TAB]Conquering a city in a core or historic province: +1
 [TAB]Conquering a city while running Militarism: +1
-[TAB]Razing a city: -2 (-1 for Norway)
+[TAB]Razing a city
+[TAB][TAB]with a population of 3-5: -1
+[TAB][TAB]with a population of 6-9: -2
+[TAB][TAB]with a population of 10+: -3
+[TAB][TAB]Norwegian UP: one less instability for each raze
 [TAB]Losing a city in a core or historic province: -3 (-2 for Scotland)
 [TAB]Losing the capitol city: -10 (-20 for Byzantium, -5 for Scotland)
 [TAB]Moving the palace: -2
@@ -551,6 +555,7 @@ In most cases this happens when a new civ is born in or near your territory (the
 [TAB]Being in anarchy: -8 (0 for Prussia)
 [TAB]Successful religious purge: -3 (0 for Spain)
 [TAB]Entering a war: -3
+[TAB]Razing a city: -3 (0 for Norway)
 [TAB]Own improvement got destroyed: -2
 [TAB]Moving the palace: -5
 [TAB]Conquering a city in a core or historic province: +3

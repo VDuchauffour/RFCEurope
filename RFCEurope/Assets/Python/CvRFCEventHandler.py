@@ -301,8 +301,12 @@ class CvRFCEventHandler:
 		#'City Razed'
 		city, iPlayer = argsList
 
-		self.rnf.onCityRazed(city.getOwner(),iPlayer,city) # Rise and Fall
-		self.sta.onCityRazed(city.getOwner(),iPlayer,city) # Stability
+		iPreviousOwner = city.getOwner()
+		if iPreviousOwner == iPlayer and city.getPreviousOwner() != -1:
+			iPreviousOwner = city.getPreviousOwner()
+
+		self.rnf.onCityRazed(iPreviousOwner,iPlayer,city) # Rise and Fall
+		self.sta.onCityRazed(iPreviousOwner,iPlayer,city) # Stability
 		self.vic.onCityRazed(iPlayer,city) # Victory
 		self.pla.onCityRazed(city,iPlayer) # Plague
 

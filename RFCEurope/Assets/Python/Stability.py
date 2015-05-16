@@ -140,13 +140,13 @@ class Stability:
 			self.recalcCivicCombos(iPlayer)
 			self.recalcEpansion(pPlayer)
 			iNumCities = pPlayer.getNumCities()
-			if ( iPlayer != con.iPrussia ):
+			if ( iPlayer != con.iPrussia ): # Absinthe: Prussian UP
 				if ( pPlayer.isHuman() ):
-					pPlayer.changeStabilityBase( iCathegoryCivics, max( -2, -iNumCities / 4 ) ) # 0 with 1-2 cities, -1 with 3-6 cities, -2 with at least 7 cities
+					pPlayer.changeStabilityBase( iCathegoryCivics, min( 0, max( -2, (-iNumCities+3) / 6 ) ) ) # 0 with 1-3 cities, -1 with 4-9 cities, -2 with at least 10 cities
 				else:
-					pPlayer.changeStabilityBase( iCathegoryCivics, max( -1, -iNumCities / 4 ) ) # the AI is largely unaware of Stability issues
+					pPlayer.changeStabilityBase( iCathegoryCivics, min( 0, max( -1, (-iNumCities+3) / 6 ) ) ) # the AI is largely unaware of Stability issues
 
-			if ( iPlayer != con.iPrussia ):
+			if ( iPlayer != con.iPrussia ): # Absinthe: Prussian UP
 				pPlayer.setStabilitySwing( pPlayer.getStabilitySwing() - 8  )
 
 		if ( pPlayer.getWarPeaceChange() == -1 ): # Whenever your nation switches from peace to the state of war (with a major nation)
@@ -158,7 +158,7 @@ class Stability:
 
 		self.recalcCity( iPlayer ) # update city stability
 
-		# Collapse dates for AI nations - from RFCE++
+		# # Absinthe: Collapse dates for AI nations
 		if(iGameTurn > con.tCollapse[iPlayer] and iPlayer != utils.getHumanID() and pPlayer.isAlive()):
 			# Absinthe: -1 stability every 4 turns up to a total of -15 stability
 			if(iGameTurn % 4 == 0 and iGameTurn <= con.tCollapse[iPlayer] + 60):
@@ -195,17 +195,17 @@ class Stability:
 
 
 	def onCityAcquired(self, owner, playerType, city, bConquest, bTrade):
+		pOwner = gc.getPlayer( owner )
+		pConq = gc.getPlayer( playerType )
 		if (city.hasBuilding(xml.iEscorial)):
-			gc.getPlayer( playerType ).setPicklefreeParameter( con.iIsHasEscorial, 1 )
-			gc.getPlayer( owner ).setPicklefreeParameter( con.iIsHasEscorial, 0 )
+			pConq.setPicklefreeParameter( con.iIsHasEscorial, 1 )
+			pOwner.setPicklefreeParameter( con.iIsHasEscorial, 0 )
 		if (city.hasBuilding(xml.iStephansdom)):
-			gc.getPlayer( playerType ).setPicklefreeParameter( con.iIsHasStephansdom, 1 )
-			gc.getPlayer( owner ).setPicklefreeParameter( con.iIsHasStephansdom, 0 )
+			pConq.setPicklefreeParameter( con.iIsHasStephansdom, 1 )
+			pOwner.setPicklefreeParameter( con.iIsHasStephansdom, 0 )
 		self.recalcCivicCombos(playerType)
 		self.recalcCivicCombos(owner)
 		iProv = city.getProvince()
-		pOwner = gc.getPlayer( owner )
-		pConq = gc.getPlayer( playerType )
 		iProvOwnerType = pOwner.getProvinceType( iProv )
 		iProvConqType = pConq.getProvinceType( iProv )
 		if ( iProvOwnerType >= con.iProvinceNatural ):
@@ -243,24 +243,36 @@ class Stability:
 		#Sedna17: Not sure what difference between iOwner and playerType is here
 		#3Miro: iOwner owns the city (victim) and I think playerType is the one razing the city
 		#		On second thought, if iOwner (the previous owner) doesn't have enough culture, then iOwner == playerType
-		#AbsintheRed: The question of razing is after the conquest of the city. This means iOwner is the conqueror.
-		#			Thus, if 3Miro is right, and playerType is the one razing the city, then: iOwner == playerType in all cases
+		#AbsintheRed: playerType is the one razing city, iOwner is the previous owner of the city (apart from playerType)
+		pPlayer = gc.getPlayer( playerType )
+		pOwner = gc.getPlayer( iOwner )
 		if (city.hasBuilding(xml.iEscorial)):
-			gc.getPlayer( playerType ).setPicklefreeParameter( con.iIsHasEscorial, 0 )
-			gc.getPlayer( iOwner ).setPicklefreeParameter( con.iIsHasEscorial, 0 )
+			pPlayer.setPicklefreeParameter( con.iIsHasEscorial, 1 )
+			pOwner.setPicklefreeParameter( con.iIsHasEscorial, 0 )
 		if (city.hasBuilding(xml.iStephansdom)):
-			gc.getPlayer( playerType ).setPicklefreeParameter( con.iIsHasStephansdom, 0 )
-			gc.getPlayer( iOwner ).setPicklefreeParameter( con.iIsHasStephansdom, 0 )
+			pPlayer.setPicklefreeParameter( con.iIsHasStephansdom, 1 )
+			pOwner.setPicklefreeParameter( con.iIsHasStephansdom, 0 )
 		self.recalcCivicCombos(playerType)
+		self.recalcCivicCombos(iOwner)
 
-		#AbsintheRed: -1 for everyone, additional -1 if not Norway:
+		# Absinthe: new city razing penalties
+		# permanent, based on city population
+		iRazeStab = 0
+		if (city.getPopulation() > 9):
+			iRazeStab = 3
+		elif (city.getPopulation() > 5):
+			iRazeStab = 2
+		elif (city.getPopulation() > 2):
+			iRazeStab = 1
+		# Absinthe: Norwegian UP - one less stability penalty
+		if ( playerType == con.iNorway ):
+			iRazeStab -= 1
+		if (iRazeStab > 0):
+			pPlayer.changeStabilityBase( iCathegoryExpansion, -iRazeStab )
+		# temporary, 3 for everyone but Norway
 		if ( playerType != con.iNorway ):
-			gc.getPlayer( playerType ).changeStabilityBase( iCathegoryExpansion, -1 )
-		if ( iOwner == playerType ):
-			gc.getPlayer( iOwner ).changeStabilityBase( iCathegoryExpansion, -1 )
-		self.recalcEpansion( gc.getPlayer( playerType ) )
-
-				#if city.getPopulation()
+			pPlayer.setStabilitySwing( pPlayer.getStabilitySwing() - 3 )
+		self.recalcEpansion( pPlayer )
 
 
 	def onImprovementDestroyed(self, owner):
@@ -284,23 +296,27 @@ class Stability:
 
 	def onBuildingBuilt(self, iPlayer, iBuilding, city):
 		# 3Miro: some buildings give and others take stability
+		pPlayer = gc.getPlayer( iPlayer )
 		if ( iBuilding == xml.iManorHouse or iBuilding == xml.iFrenchChateau):
-			gc.getPlayer( iPlayer ).changeStabilityBase( iCathegoryEconomy, 1 )
+			pPlayer.changeStabilityBase( iCathegoryEconomy, 1 )
+			self.recalcEconomy( pPlayer )
 		elif ( iBuilding == xml.iCastle or iBuilding == xml.iMoscowKremlin or iBuilding == xml.iHungarianStronghold or iBuilding == xml.iSpanishCitadel):
-			gc.getPlayer( iPlayer ).changeStabilityBase( iCathegoryExpansion, 1 )
+			pPlayer.changeStabilityBase( iCathegoryExpansion, 1 )
+			self.recalcEpansion( pPlayer )
 		elif ( iBuilding == xml.iNightWatch or iBuilding == xml.iSwedishTennant):
-			gc.getPlayer( iPlayer ).changeStabilityBase( iCathegoryCivics, 1 )
+			pPlayer.changeStabilityBase( iCathegoryCivics, 1 )
+			self.recalcCivicCombos( iPlayer )
 		elif ( iBuilding == xml.iCourthouse or iBuilding == xml.iHolyRomanRathaus or iBuilding == xml.iKievVeche or iBuilding == xml.iLithuanianVoivodeship ):
-			gc.getPlayer( iPlayer ).changeStabilityBase( iCathegoryCities, 1 )
+			pPlayer.changeStabilityBase( iCathegoryCities, 1 )
+			self.recalcCity( iPlayer )
 		elif (iBuilding == xml.iEscorial):
-			gc.getPlayer( iPlayer ).setPicklefreeParameter( con.iIsHasEscorial, 1 )
+			pPlayer.setPicklefreeParameter( con.iIsHasEscorial, 1 )
 		elif (iBuilding == xml.iStephansdom):
-			gc.getPlayer( iPlayer ).setPicklefreeParameter( con.iIsHasStephansdom, 1 )
+			pPlayer.setPicklefreeParameter( con.iIsHasStephansdom, 1 )
 		elif (iBuilding == xml.iPalace):
-			#print(" Capital Changed",iPlayer)
-			pPlayer= gc.getPlayer( iPlayer )
 			pPlayer.changeStabilityBase( iCathegoryExpansion, -2 )
 			pPlayer.setStabilitySwing( pPlayer.getStabilitySwing() -5  )
+			self.recalcEpansion( pPlayer )
 
 
 	def onProjectBuilt(self, iPlayer, iProject):
@@ -487,7 +503,7 @@ class Stability:
 
 
 	def recalcCivicCombos(self, iPlayer):
-		# Note from 3Miro: this is the only place Civics are referenced, yet refering them by number makes this hard to read
+		# Note from 3Miro: this is the only place Civics are referenced, yet referring them by number makes this hard to read
 		pPlayer = gc.getPlayer(iPlayer)
 		iCivic0 = pPlayer.getCivics(0)
 		iCivic1 = pPlayer.getCivics(1)
