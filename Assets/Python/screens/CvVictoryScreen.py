@@ -1758,15 +1758,16 @@ class CvVictoryScreen:
 		sString = "\n\n" + sStringLower + "\n" + sStringHigher
 		return sString
 
-	def ConquerOrVassal(self, tEnemies):
+	def ConquerOrVassal(self, lEnemies):
 		sStringConq = localText.getText("TXT_KEY_UHV_COLLAPSED_OR_VASSAL",()) + ":"
 		sStringMiss = localText.getText("TXT_KEY_UHV_NOT_YET",()) + ":"
-		for iEnemy in tEnemies:
+		for iEnemy in lEnemies:
 			teamOwn = gc.getTeam(self.iActivePlayer)
 			pEnemy = gc.getPlayer(iEnemy)
 			teamCiv = gc.getTeam(iEnemy)
+			iGameTurn = gc.getGame().getGameTurn()
 			sCivShortName = str(pEnemy.getCivilizationShortDescriptionKey())
-			if pEnemy.isAlive() and not teamCiv.isVassal( teamOwn.getID() ):
+			if ( pEnemy.isAlive() and not teamCiv.isVassal( teamOwn.getID() ) ) or iGameTurn <= con.tBirth[iEnemy]:
 				sStringMiss += "  " + u"<color=208,0,0>%s</color>" %( localText.getText(sCivShortName,()) )
 			else:
 				sStringConq += "  " + u"<color=0,255,0>%s</color>" %( localText.getText(sCivShortName,()) )
