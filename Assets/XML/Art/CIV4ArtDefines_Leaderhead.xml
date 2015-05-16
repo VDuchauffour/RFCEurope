@@ -576,7 +576,7 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_JAMES_IV</Type>
-			<Button>Art/Leaderheads/James_IV/btn_lh_sweden_magnus.dds</Button>
+			<Button>Art/Leaderheads/James_IV/btn_lh_james_iv.dds</Button>
 			<NIF>Art/Leaderheads/James_IV/alexander.nif</NIF>
 			<KFM>art/LeaderHeads/Alexander_the _Great/alexander.kfm</KFM>
 			<NoShaderNIF>Art/Leaderheads/James_IV/alexander.nif</NoShaderNIF>
