@@ -1152,7 +1152,7 @@ tLeaders = (		#First has to be the primary leader (the one that appears on the c
 (xml.iStephen, xml.iBela_III, xml.iMatthias),
 (xml.iFerdinand_III, xml.iIsabella, xml.iPhilip_Ii),
 (xml.iHarald_Bluetooth, xml.iMargaret_I, xml.iChristian_Iv),
-(xml.iRobert_the_Bruce,),
+(xml.iRobert_the_Bruce, xml.iJames_IV),
 (xml.iMieszko, xml.iCasimir, xml.iSobieski),
 (xml.iEmbriaco, xml.iBoccanegra),
 (xml.iYaqub_al_Mansur, xml.iIsmail_ibn_Sharif),
@@ -1165,7 +1165,7 @@ tLeaders = (		#First has to be the primary leader (the one that appears on the c
 (xml.iMaximilian, xml.iMaria_Theresa),
 (xml.iMehmed, xml.iSuleiman),
 (xml.iIvan_Iv, xml.iPeter, xml.iCatherine),
-(xml.iWillem_Van_Oranje,),
+(xml.iWillem_Van_Oranje, xml.iJohan_de_Witt),
 (xml.iThe_Pope,)
 )
 
@@ -1218,7 +1218,7 @@ tLateLeaders = (		#The switch is triggered after a few years (starting date, per
 (xml.iBela_III, xml.i1167AD, 15, 2, xml.iMatthias, xml.i1444AD, 5, 3),
 (xml.iIsabella, xml.i1250AD, 10, 2, xml.iPhilip_Ii, xml.i1520AD, 10, 3),
 (xml.iMargaret_I, xml.i1320AD, 10, 2, xml.iChristian_Iv, xml.i1520AD, 5, 3),
-(xml.iRobert_the_Bruce,),
+(xml.iJames_IV, xml.i1296AD, 10, 2),
 (xml.iCasimir, xml.i1320AD, 20, 2, xml.iSobieski, xml.i1570AD, 10, 3),
 (xml.iBoccanegra, xml.i1101AD, 10, 2),
 (xml.iIsmail_ibn_Sharif, xml.i1419AD, 5, 3),
@@ -1231,7 +1231,7 @@ tLateLeaders = (		#The switch is triggered after a few years (starting date, per
 (xml.iMaria_Theresa, xml.i1700AD, 25, 3),
 (xml.iSuleiman, xml.i1520AD, 15, 3),
 (xml.iPeter, xml.i1570AD, 10, 3, xml.iCatherine, xml.i1700AD, 25, 3),
-(xml.iWillem_Van_Oranje,),
+(xml.iJohan_de_Witt, xml.i1650AD, 30, 3),
 (xml.iThe_Pope,)
 )
 

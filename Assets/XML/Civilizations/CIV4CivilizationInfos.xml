@@ -7544,6 +7544,10 @@
 					<LeaderName>LEADER_ROBERT_THE_BRUCE</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_JAMES_IV</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<DerivativeCiv>NONE</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_SCOTTISH_SELECT</CivilizationSelectionSound>
@@ -13626,6 +13630,10 @@
 			<Leaders>
 				<Leader>
 					<LeaderName>LEADER_WILLEM_VAN_ORANJE</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_JOHAN_DE_WITT</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>

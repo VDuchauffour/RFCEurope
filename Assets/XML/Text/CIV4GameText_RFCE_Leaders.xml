@@ -1523,6 +1523,42 @@
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LEADER_JAMES_IV</Tag>
+		<English>James IV</English>
+		<French>James IV</French>
+		<German>James IV</German>
+		<Italian>James IV</Italian>
+		<Spanish>James IV</Spanish>
+		<Portuguese>James IV</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_JAMES_IV_PEDIA</Tag>
+		<English>James IV</English>
+		<French>.</French>
+		<German></German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_JOHAN_DE_WITT</Tag>
+		<English>Johan de Witt</English>
+		<French>Johan de Witt</French>
+		<German>Johan de Witt</German>
+		<Italian>Johan de Witt</Italian>
+		<Spanish>Johan de Witt</Spanish>
+		<Portuguese>Johan de Witt</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_JOHAN_DE_WITT_PEDIA</Tag>
+		<English>Johan de Witt</English>
+		<French>.</French>
+		<German></German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_INDEPENDENT</Tag>
 		<English>Independent Leader</English>
 		<French>
