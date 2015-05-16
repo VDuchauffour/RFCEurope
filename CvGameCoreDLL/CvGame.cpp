@@ -2146,19 +2146,14 @@ void CvGame::update()
 
 		if (getTurnSlice() == 0)
 		{
-			gDLL->getEngineIFace()->AutoSave(true);
+			// Absinthe: disable autosave during autoplay
+			if ((getGameTurn() > 0) && !(getGameTurn() < startingTurn[getActivePlayer()]))
+			{
+				gDLL->getEngineIFace()->AutoSave(true);
+			}
+			// Absinthe: end
 		}
 
-		// 3MiroDebug: should remove this later
-		/*if ( isPbem() ){
-			logMsg(" PBEM ");
-		};
-		if ( getPbemTurnSent() ){
-			logMsg(" PBEM TURN SENT ");
-		};
-		logMsg("  getNumGameTurnActive %d  ",getNumGameTurnActive() );*/
-		// 3MiroDebug: end
-		//logMsg("  update() - getNumGameTurnActive %d --- gameTurn() %d ",getNumGameTurnActive(),getGameTurn() );
 		if (getNumGameTurnActive() == 0)
 		{
 			if (!isPbem() || !getPbemTurnSent())
@@ -2167,19 +2162,19 @@ void CvGame::update()
 			}
 		}
 
-		updateScore();  //logMsg("Update in Here 1"); //3Miro
+		updateScore();
 
-		updateWar(); //logMsg("Update in Here 1.1"); //3Miro
+		updateWar();
 
-		updateMoves(); //logMsg("Update in Here 1.2"); //3Miro
+		updateMoves();
 
-		updateTimers(); //logMsg("Update in Here 2"); //3Miro
+		updateTimers();
 
 		updateTurnTimer();
 
 		AI_updateAssignWork();
 
-		testAlive(); //logMsg("Update in Here 3"); //3Miro
+		testAlive();
 
 		if ((getAIAutoPlay() == 0) && !(gDLL->GetAutorun()) && GAMESTATE_EXTENDED != getGameState())
 		{
@@ -2189,13 +2184,14 @@ void CvGame::update()
 			}
 		}
 
-		changeTurnSlice(1); //logMsg("Update in Here 4"); //3Miro
+		changeTurnSlice(1);
 
 		if (NO_PLAYER != getActivePlayer() && GET_PLAYER(getActivePlayer()).getAdvancedStartPoints() >= 0 && !gDLL->getInterfaceIFace()->isInAdvancedStart())
 		{
 			gDLL->getInterfaceIFace()->setInAdvancedStart(true);
 			gDLL->getInterfaceIFace()->setWorldBuilder(true);
 		}
+		/* Absinthe: disabling old code start
 		//Rhye - start switch - Version B (late human starts)
 		//logMsg("Update in Here 4.1"); //3Miro
 		int iHuman = MAX_PLAYERS;
@@ -2222,91 +2218,18 @@ void CvGame::update()
 				};
 			};
 		};
-		/*for( int i=0; i<20; i++ ){
-			GC.getGameINLINE().logMsg(" Starting turn: turn: %d, i= %d starting turn= %d ",getGameTurn(),i,startingTurn[i]);
-		};*/
-		//GC.getGameINLINE().logMsg(" Starting turn: %d ",startingTurn[4]);
-		//GC.getGameINLINE().logMsg(" Autoplay doTurn out");
-		/*switch (iHuman)
+		*/ //Absinthe: disabling old code end
+		// Absinthe: start Rhye's AIAutoPlay
+		int iHuman = getActivePlayer();
+		if ( startingTurn[iHuman] > 0 )
 		{
-			case BURGUNDY:
-			case BYZANTIUM:
-			case FRANKIA:
-				break;
-			default:
-				if ( getGameTurn() == 0 ){
-					setAIAutoPlay(1);
-				}else if ( getGameTurn() <= startingTurn[iHuman] ){
-					setAIAutoPlayCatapult(1);
-				};
-		};*/
-		//an If here causes a CRASH
-		/*switch (iHuman)
-		{
-		case BYZANTIUM:
-			if (getGameTurn() == 0 ) //late start condition
-			{
+			if (getGameTurn() == 0)
 				setAIAutoPlay(1);
-			}
 			else if (getGameTurn() <= startingTurn[iHuman])
-			{
 				setAIAutoPlayCatapult(1);
-			}
-			break;
-		};*/
-		// 3Miro: Autoplay
-		/*switch (iHuman)
-		{
-		case EGYPT:
-			break;
-		case INDIA:
-			break;
-		case CHINA:
-			break;
-		case BABYLONIA:
-			break;
-		case JAPAN:
-			if (!GET_PLAYER((PlayerTypes)EGYPT).isPlayable()) //late start condition
-				break;
-		case VIKING:
-			if (!GET_PLAYER((PlayerTypes)EGYPT).isPlayable()) //late start condition
-				break;
-		case ARABIA:
-			if (!GET_PLAYER((PlayerTypes)EGYPT).isPlayable()) //late start condition
-				break;
-		case GREECE:
-		case PERSIA:
-		case CARTHAGE:
-		case ROME:
-		case ETHIOPIA:
-		case MAYA:
-		case KHMER:
-		case SPAIN:
-		case FRANCE:
-		case ENGLAND:
-		case GERMANY:
-		case RUSSIA:
-		case NETHERLANDS:
-		case MALI:
-		case TURKEY:
-		case PORTUGAL:
-		case INCA:
-		case MONGOLIA:
-		case AZTEC:
-		case AMERICA:
-			if (getGameTurn() == 0 || (getGameTurn() == 151 && !GET_PLAYER((PlayerTypes)EGYPT).isPlayable())) //late start condition
-			{
-				setAIAutoPlay(1);
-			}
-			else if (getGameTurn() <= startingTurn[iHuman])
-			{
-				setAIAutoPlayCatapult(1);
-			}
-			break;
-		}*/
-		//Rhye - end
+		}
+		// Absinthe: end
 	}
-	//logMsg("Update out");
 }
 
 
@@ -6152,7 +6075,12 @@ void CvGame::doTurn()
 	stopProfilingDLL();
 	//logMsg("doTurn Here 4");
 
-	gDLL->getEngineIFace()->AutoSave();
+	// Absinthe: disable autosave during autoplay
+	if ((getGameTurn() > 0) && !(getGameTurn() < startingTurn[getActivePlayer()]))
+	{
+		gDLL->getEngineIFace()->AutoSave();
+	}
+	// Absinthe: end
 	//logMsg("doTurn Here 5");
 }
 
