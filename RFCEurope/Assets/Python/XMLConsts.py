@@ -338,7 +338,7 @@ iPromotionMerc) = range(iNumPromotions)
 
 
 #Leaders
-iNumLeaders = 71
+iNumLeaders = 73
 (iLeaderBarbarian,	#Do NOT name this iBarbarian.	#AbsintheRed: Renamed to iLeaderBarbarian - this is the way vanilla RFC uses it
 iYaqub_al_Mansur, iMaria_Theresa, iAbu_Bakr, iJoan, iMatthias, iBarbarossa, iCatherine, iCharlemagne, iPhilip_Ii,
 iSobieski, iChristian_Iv, iWilliam, iAfonso, iMehmed, iSaladin, iMaximilian, iSimeon, iPhilip_the_Bold, iJustinian,
@@ -347,7 +347,7 @@ iJoao, iIsabella, iGustav_Vasa, iSuleiman, iEnrico_Dandolo, iThe_Pope, iHarald_H
 iAndrea_Gritti, iHaakon_Iv, iMindaugas, iVytautas, iKarl_Xii, iIvan_Asen, iHarun_al_Rashid, iBela_III, iGustav_Adolf, iBasil_II,
 iPalaiologos, iMargaret_I, iMieszko, iPhilip_Augustus, iMstislav, iFerdinand_III, iBohdan_Khmelnytsky, iMohammed_ibn_Nasr, iOtto_I, iOtto_William,
 iBeatrice, iEmbriaco, iRobert_the_Bruce, iRurik, iAlexander_Nevsky, iMarfa, iIsmail_ibn_Sharif, iHermann_von_Salza, iJames_I, iHarald_Bluetooth,
-iMagnus_Ladulas) = range(iNumLeaders)
+iMagnus_Ladulas, iJames_IV, iJohan_de_Witt) = range(iNumLeaders)
 
 
 ################################ PROVINCES ################################
