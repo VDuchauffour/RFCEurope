@@ -373,7 +373,7 @@ class Stability:
 							if (gc.getGame().getSorenRandNum(10, 'city secession') < 8): #80 chance for secession start
 								if (gc.getGame().getSorenRandNum(10, 'city secession') < -3 - iStability): #10% at -4, increasing by 10% with each point (100% with -13 or less)
 									rnf.revoltCity( iPlayer, False )
-							elif (gc.getGame().getSorenRandNum(10, 'civ collapse') < 1): #10 chance for collapse start
+							elif (gc.getGame().getSorenRandNum(10, 'civ collapse') < 1 and iGameTurn >= con.tBirth[iPlayer] + 20): #10 chance for collapse start
 								if (gc.getGame().getSorenRandNum(10, 'civ collapse') < -1.5 - (iStability/2)): #10% at -4, increasing by 10% with 2 points (100% with -22 or less)
 									print ("COLLAPSE: CIVIL WAR", gc.getPlayer(iPlayer).getCivilizationAdjective(0))
 									if (iPlayer != utils.getHumanID()):
@@ -389,7 +389,7 @@ class Stability:
 							if (gc.getGame().getSorenRandNum(10, 'city secession') < 4): #40 chance for secession start
 								if (gc.getGame().getSorenRandNum(10, 'city secession') < -3 - iStability): #10% at -4, increasing by 10% with each point (100% with -13 or less)
 									rnf.revoltCity( iPlayer, False )
-							elif (gc.getGame().getSorenRandNum(10, 'civ collapse') < 4): #40 chance for collapse start
+							elif (gc.getGame().getSorenRandNum(10, 'civ collapse') < 4 and iGameTurn >= con.tBirth[iPlayer] + 20): #40 chance for collapse start
 								if (gc.getGame().getSorenRandNum(10, 'civ collapse') < -1.5 - (iStability/2)): #10% at -4, increasing by 10% with 2 points (100% with -22 or less)
 									print ("COLLAPSE: CIVIL WAR", gc.getPlayer(iPlayer).getCivilizationAdjective(0))
 									if (iPlayer != utils.getHumanID()):
@@ -401,7 +401,7 @@ class Stability:
 										utils.killAndFragmentCiv(iPlayer, False, True)
 										self.zeroStability( iPlayer )
 										pPlayer.changeStabilityBase( iCathegoryExpansion, -3 )
-						elif (gc.getGame().getSorenRandNum(10, 'civ collapse') < 7): #70 chance for collapse start
+						elif (gc.getGame().getSorenRandNum(10, 'civ collapse') < 7  and iGameTurn >= con.tBirth[iPlayer] + 20): #70 chance for collapse start
 							if (gc.getGame().getSorenRandNum(10, 'civ collapse') < -1.5 - (iStability/2)): #10% at -4, increasing by 10% with 2 points (100% with -22 or less)
 								print ("COLLAPSE: CIVIL WAR", gc.getPlayer(iPlayer).getCivilizationAdjective(0))
 								if (iPlayer != utils.getHumanID()):

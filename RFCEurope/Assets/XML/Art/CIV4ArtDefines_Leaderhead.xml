@@ -553,10 +553,10 @@
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_JAMES_I</Type>
 			<Button>Art/Leaderheads/James_I/btn_lh_aragon_james.dds</Button>
-			<NIF>Art/Leaderheads/James_I/elcid.nif</NIF>
-			<KFM>Art/LeaderHeads/James_I/alexander.kfm</KFM>
-			<NoShaderNIF>Art/Leaderheads/James_I/elcid.nif</NoShaderNIF>
-			<BackgroundKFM>Art/LeaderHeads/James_I/alexander_bg.kfm</BackgroundKFM>
+			<NIF>Art/Leaderheads/James_I/cyrus2.nif</NIF>
+			<KFM>Art/LeaderHeads/James_I/cyrus.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/James_I/cyrus2.nif</NoShaderNIF>
+			<BackgroundKFM>Art/LeaderHeads/James_I/cyrus_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_HARALD_BLUETOOTH</Type>
@@ -576,7 +576,7 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_JAMES_IV</Type>
-			<Button>Art/Leaderheads/James_IV/btn_lh_james_iv.dds</Button>
+			<Button>Art/Leaderheads/James_IV/btn_lh_scotland_james_iv.dds</Button>
 			<NIF>Art/Leaderheads/James_IV/alexander.nif</NIF>
 			<KFM>art/LeaderHeads/Alexander_the _Great/alexander.kfm</KFM>
 			<NoShaderNIF>Art/Leaderheads/James_IV/alexander.nif</NoShaderNIF>
@@ -589,6 +589,14 @@
 			<KFM>Art/Leaderheads/Johan_de_Witt/Samuel_de_Champlain.kfm</KFM>
 			<NoShaderNIF>Art/Leaderheads/Johan_de_Witt/Samuel_de_Champlain.nif</NoShaderNIF>
 			<BackgroundKFM>Art/LeaderHeads/Johan_de_Witt/Samuel_de_Champlain_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_JOHN_II</Type>
+			<Button>Art/Leaderheads/John_II/btn_lh_aragon_john.dds</Button>
+			<NIF>Art/Leaderheads/John_II/King_Spanish.nif</NIF>
+			<KFM>Art/Leaderheads/John_II/King_Spanish.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/John_II/King_Spanish.nif</NoShaderNIF>
+			<BackgroundKFM>Art/LeaderHeads/John_II/King_Spanish_Background.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 	</LeaderheadArtInfos>
 </Civ4ArtDefines>
