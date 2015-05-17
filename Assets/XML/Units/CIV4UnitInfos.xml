@@ -19258,7 +19258,6 @@
 			<Description>TXT_KEY_UNIT_TAGMATA</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAGMATA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_TAGMATA_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -19468,7 +19467,6 @@
 			<Description>TXT_KEY_UNIT_CORSAIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_CORSAIR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_CORSAIR_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -19666,7 +19664,6 @@
 			<Description>TXT_KEY_UNIT_HIGHLANDER</Description>
 			<Civilopedia>TXT_KEY_UNIT_HIGHLANDER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_HIGHLANDER_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -19864,7 +19861,6 @@
 			<Description>TXT_KEY_UNIT_WELSH_LONGBOWMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_WELSH_LONGBOWMAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_WELSH_LONGBOWMAN_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -20063,7 +20059,6 @@
 			<Description>TXT_KEY_UNIT_CONDOTTIERI</Description>
 			<Civilopedia>TXT_KEY_UNIT_CONDOTTIERI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_CONDOTTIERI_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -20264,7 +20259,6 @@
 			<Description>TXT_KEY_UNIT_SWISS_PIKEMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_SWISS_PIKEMAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_SWISS_PIKEMAN_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -20473,7 +20467,6 @@
 			<Description>TXT_KEY_UNIT_VARANGIAN_GUARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_VARANGIAN_GUARD_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_VARANGIAN_GUARD_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -20671,7 +20664,6 @@
 			<Description>TXT_KEY_UNIT_HACKAPELL</Description>
 			<Civilopedia>TXT_KEY_UNIT_HACKAPELL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_HACKAPELL_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -20875,7 +20867,6 @@
 			<Description>TXT_KEY_UNIT_REITER</Description>
 			<Civilopedia>TXT_KEY_UNIT_REITER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_REITER_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -21075,7 +21066,6 @@
 			<Description>TXT_KEY_UNIT_ZAPOROZHIAN_COSSACK</Description>
 			<Civilopedia>TXT_KEY_UNIT_ZAPOROZHIAN_COSSACK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ZAPOROZHIAN_COSSACK_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -21267,7 +21257,6 @@
 			<Description>TXT_KEY_UNIT_DON_COSSACK</Description>
 			<Civilopedia>TXT_KEY_UNIT_DON_COSSACK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_DON_COSSACK_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -21480,7 +21469,6 @@
 			<Description>TXT_KEY_UNIT_DOPPELSOLDNER</Description>
 			<Civilopedia>TXT_KEY_UNIT_DOPPELSOLDNER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_DOPPELSOLDNER_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -21685,7 +21673,6 @@
 			<Description>TXT_KEY_UNIT_IRISH_BRIGADE</Description>
 			<Civilopedia>TXT_KEY_UNIT_IRISH_BRIGADE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_IRISH_BRIGADE_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -21877,7 +21864,6 @@
 			<Description>TXT_KEY_UNIT_STRADIOT</Description>
 			<Civilopedia>TXT_KEY_UNIT_STRADIOT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_STRADIOT_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -22078,7 +22064,6 @@
 			<Description>TXT_KEY_UNIT_WAARDGELDER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WAARDGELDER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_WAARDGELDER_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -22267,7 +22252,6 @@
 			<Description>TXT_KEY_UNIT_NAFFATUN</Description>
 			<Civilopedia>TXT_KEY_UNIT_NAFFATUN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_NAFFATUN_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -22464,7 +22448,6 @@
 			<Description>TXT_KEY_UNIT_TURKOPOLES</Description>
 			<Civilopedia>TXT_KEY_UNIT_TURKOPOLES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_TURKOPOLES_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -22665,7 +22648,6 @@
 			<Description>TXT_KEY_UNIT_WALLOON_GUARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_WALLOON_GUARD_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_WALLOON_GUARD_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -22857,7 +22839,6 @@
 			<Description>TXT_KEY_UNIT_SWISS_GUN</Description>
 			<Civilopedia>TXT_KEY_UNIT_SWISS_GUN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_SWISS_GUN_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -23049,7 +23030,6 @@
 			<Description>TXT_KEY_UNIT_LIPKA_TATAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_LIPKA_TATAR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_LIPKA_TATAR_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -23245,7 +23225,6 @@
 			<Description>TXT_KEY_UNIT_HIGHLANDER_GUN</Description>
 			<Civilopedia>TXT_KEY_UNIT_HIGHLANDER_GUN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_HIGHLANDER_GUN_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -23446,7 +23425,6 @@
 			<Description>TXT_KEY_UNIT_ZANJI</Description>
 			<Civilopedia>TXT_KEY_UNIT_ZANJI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ZANJI_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -23646,7 +23624,6 @@
 			<Description>TXT_KEY_UNIT_TOUAREG</Description>
 			<Civilopedia>TXT_KEY_UNIT_TOUAREG_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_TOUAREG_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -23840,7 +23817,6 @@
 			<Description>TXT_KEY_UNIT_NUBIAN_LONGBOWMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_NUBIAN_LONGBOWMAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_NUBIAN_LONGBOWMAN_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -24446,7 +24422,6 @@
 			<Description>TXT_KEY_UNIT_MAMLUK_CAVALRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_MAMLUK_CAVALRY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_MAMLUK_CAVALRY_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -24656,7 +24631,6 @@
 			<Description>TXT_KEY_UNIT_SOUTH_SLAV_VLASTELA</Description>
 			<Civilopedia>TXT_KEY_UNIT_SOUTH_SLAV_VLASTELA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_SOUTH_SLAV_VLASTELA_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -24852,7 +24826,6 @@
 			<Description>TXT_KEY_UNIT_BOHEMIAN_WAR_WAGON</Description>
 			<Civilopedia>TXT_KEY_UNIT_BOHEMIAN_WAR_WAGON_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_BOHEMIAN_WAR_WAGON_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -25045,7 +25018,6 @@
 			<Description>TXT_KEY_UNIT_LOMBARD_HEAVY_FOOTMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_LOMBARD_HEAVY_FOOTMAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_LOMBARD_HEAVY_FOOTMAN_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -25464,7 +25436,6 @@
 			<Description>TXT_KEY_UNIT_CRIMEAN_TATAR_RIDER</Description>
 			<Civilopedia>TXT_KEY_UNIT_CRIMEAN_TATAR_RIDER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_CRIMEAN_TATAR_RIDER_STRATEGY</Strategy>
-			<Help>TXT_KEY_MERCENARY_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
