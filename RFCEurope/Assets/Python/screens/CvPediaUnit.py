@@ -12,6 +12,8 @@ import CvUtil
 import ScreenInput
 import CvScreenEnums
 import string
+import Consts as con
+import XMLConsts as xml
 
 # globals
 gc = CyGlobalContext()
@@ -239,6 +241,14 @@ class CvPediaUnit:
 		iPrereq = gc.getUnitInfo(self.iUnit).getPrereqCorporation()
 		if iPrereq >= 0:
 			screen.attachImageButton( panelName, "", gc.getCorporationInfo(iPrereq).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_CORPORATION, iPrereq, -1, False )
+
+		# add merc button
+		if self.iUnit in xml.lMercsOnly:
+			screen.attachImageButton( panelName, "", gc.getPromotionInfo(xml.iPromotionMerc).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_GENERAL, 1919, -1, False )
+		
+		# add barb button
+		if self.iUnit in xml.lBarbsOnly:
+			screen.attachImageButton( panelName, "", gc.getCivilizationInfo(con.iBarbarian).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_GENERAL, 1920, -1, False )
 
 	# Place upgrades
 	def placeUpgradesTo(self):

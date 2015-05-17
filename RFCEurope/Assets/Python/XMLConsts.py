@@ -248,6 +248,11 @@ iNubianLongbowman, iBedouin, iTurcomanHorseArcher, iMamlukHeavyCavalry, iSouthSl
 #From the CIV4UnitClassInfos.xml
 iProsecutorClass = 58
 
+lMercsOnly = [iCondottieri, iReiter, iBohemianWarWagon, iCorsair, iCrimeanTatarRider, iDonCossack, iDoppelsoldner, iHackapell, iHighlander, iHighlanderGun,
+iIrishBrigade, iLipkaTatar, iLombardHeavyFootman, iMamlukHeavyCavalry, iNubianLongbowman, iNaffatun, iSouthSlavVlastela, iStradiot, iSwissPikeman, iSwissGun,
+iTagmata, iTouareg, iTurkopoles, iVarangianGuard, iWaardgelder, iWalloonGuard, iWelshLongbowman, iZanji, iZaporozhianCossack]
+
+lBarbsOnly = [iBedouin, iCorsair, iHighlander, iMongolKeshik, iSeljuk, iSteppeHorseArcher, iTouareg, iTurcomanHorseArcher, iWelshLongbowman]
 
 #Bonuses: initialize bonus variables to bonus IDs from WBSinulAi
 
