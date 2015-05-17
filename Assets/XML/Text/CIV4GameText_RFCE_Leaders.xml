@@ -1559,6 +1559,24 @@
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LEADER_JOHN_II</Tag>
+		<English>John II</English>
+		<French>John II</French>
+		<German>John II</German>
+		<Italian>John II</Italian>
+		<Spanish>John II</Spanish>
+		<Portuguese>John II</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_JOHN_II_PEDIA</Tag>
+		<English>John II</English>
+		<French>.</French>
+		<German></German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_INDEPENDENT</Tag>
 		<English>Independent Leader</English>
 		<French>

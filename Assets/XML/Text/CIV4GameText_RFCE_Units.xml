@@ -1173,6 +1173,7 @@
 		<Portuguese>.</Portuguese>
 	</TEXT>
 		<!-- Unique Units -->
+		<!-- Company Units -->
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KNIGHT_OF_ST_JOHNS</Tag>
 		<English>Knight of St. John's</English>
@@ -1212,6 +1213,8 @@
 		<Spanish>Caballero Teut&#243;nico</Spanish>
 		<Portuguese>Cavaleiro Teutônico</Portuguese>
 	</TEXT>
+	<!-- Company Units -->
+	<!-- Barbarian Units -->
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MONGOL_KESHIK</Tag>
 		<English>Keshik</English>
@@ -1275,6 +1278,24 @@
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_STEPPE_HORSE_ARCHER</Tag>
+		<English>Steppe Horse Archer</English>
+		<French>Steppe Horse Archer</French>
+		<German>Steppe Horse Archer</German>
+		<Italian>Steppe Horse Archer</Italian>
+		<Spanish>Steppe Horse Archer</Spanish>
+		<Portuguese>Steppe Horse Archer</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_STEPPE_HORSE_ARCHER_PEDIA</Tag>
+		<English>Steppe Horse Archer</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEDOUIN</Tag>
 		<English>Bedouin</English>
 		<French>Bedouin</French>
@@ -1292,6 +1313,7 @@
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
+	<!-- Barbarian Units -->
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OTTOMAN_JANISSARY</Tag>
 		<English>Janissary</English>

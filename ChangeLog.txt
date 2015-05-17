@@ -105,7 +105,7 @@ Changes for RFCE 1.3:
 
 	Scotland:
 		Start Date: 960
-		Leaders: Robert the Bruce (1274-1329)
+		Leaders: Robert the Bruce (1274-1329), James IV (1473-1513)
 		UP: The Power of Defiance: When one of your cities is conquered all your other cities get free defenders; lower stability hit from losing a city
 		UHV1: Fortification: Have 10 Forts and 4 Castles in 1296
 		UHV2: The Auld Alliance: Have 1000 Attitude points with France by 1560
@@ -122,7 +122,7 @@ Changes for RFCE 1.3:
 
 	Aragon:
 		Start Date: 1164
-		Leaders: James I (1208-1276)
+		Leaders: James I (1208-1276), John II (1398-1479)
 		UP: The Power of Confederation: Extra commerce in your capital for every province you have a city in
 		UHV1: The Sicilian Vespers: Control Catalonia, Valencia, Baleares and Sicily in 1282
 		UHV2: Thalassocracy: Have 12 Seaports in 1444
@@ -158,7 +158,7 @@ Changes for RFCE 1.3:
 		- New leaders for existing civs: Bela III (Hungary), Mieszko (Poland), Philip August II (France), Harun al-Rashid (Arabia)
 		- New leaders for existing civs: Gustav Adolph (Sweden), Margaret I (Norse), Mstislav (Kiev), Bohdan Khmelnytsky (Kiev)
 		- New leaders for existing civs: Basil II (Byzantium), Michael VIII Palaiologos (Byzantium), Mohammed I ibn Nasr (Cordoba)
-		- New leaders for existing civs: Magnus Ladulas (Sweden), Harald Bluetooth (Denmark), Otto I (Germany), Karl VII (Germany)
+		- New leaders for existing civs: Magnus Ladulas (Sweden), Harald Bluetooth (Denmark), Otto I (Germany), Johan de Witt (Dutch)
 		- New leaders for existing civs: Otto-William (Burgundy), Beatrice II (Burgundy), Fernando III (Spain), Guglielmo Embriaco (Genoa)
 		- Redesigned Andrea Dandolo into Andrea Gritti (Venice) - more important doge, we already have a Dandolo, and better for the timeline
 		- Redesigned Maria II into Maria I (Portugal) - Maria I is better for the RFCE timeline, also she is the Portuguese leader in Civ V
@@ -225,6 +225,7 @@ Changes for RFCE 1.3:
 			Pre-Lithanian barbs (Baltic Heathens) for human Prussia a couple turns before the Lithuanian spawn
 			Banu Hilal and Bani Hassan barbs in Morocco and Tunesia
 			Danishmend barbarians for Byzantium after the Seljuks
+			Barbarian Kipchaks, along with the Cumans (greater Cumania ==  Cuman-Kipchak confederation)
 			Barbarian Serbs in the Balkans before the Byzantine 2nd UHV, especially for the human player
 			Barbarian Anglo Saxons spawning in Wessex and Mercia to represent the resistance to Danish rule
 			Barbarian Scottish Highlanders only spawn when Scotland is dead
@@ -310,15 +311,18 @@ Changes for RFCE 1.3:
 		- Speed improvements by replacing various if-statements with elif-statements and added some break statements
 		- Improved coding of Krak des Chevaliers, Leaning Tower, Topkapi Palace
 		- Disabled autosaves during autoplay - should speed up the initial loading time of the civs
+		- New barb-only units: Turcoman Horse Archer (Danishmends and some of the Seljuks in Anatolia), Steppe Horse Archer (Cumans, Kipchaks)
+		- New merc-only units: South Slav Vlastela (Serbia, Banat, Slavonia, Bosnia, Dalmatia), Lombard Heavy Footman (Lombardy, Liguria, Tuscany, Verona)
+		- New merc-only units: Bohemian War Wagon (Bohemia, Moravia), Mamluk Heavy Cavalry (Egypt), Crimean Tatar Rider (Crimea)
 
 	Art updates:
 		- New art for Isabella (Spain), Casimir III (Poland), Ivan IV (Muscovy), Simeon I (Bulgaria), Ivan Asen (Bulgaria)
 		- New art for Abu Bakr (Arabia), Abd-ar-Rahman III (Cordoba), Philip the Bold (Burgundy), Yaqub al-Mansur (Cordoba)
-		- Added missing button for Mieszko, Michael VIII Palaiologos, Abu Bakr, Abd-ar-Rahman III, Margaret I
-		- Added missing button for Philip the Bold, Guglielmo Embriaco, Alexander Nevsky, Hermann von Salza
+		- Added missing button for Mieszko, Michael VIII Palaiologos, Abu Bakr, Abd-ar-Rahman III, Margaret I, James IV
+		- Added missing button for Philip the Bold, Guglielmo Embriaco, Alexander Nevsky, Hermann von Salza, John II
 		- Updated button for Bela III, Ferdinand III, Harald Hardrada, James I, Magnus Ladulas, Mstislav I, Otto I
 		- Updated button for Robert the Bruce, Marfa Posadnitsa, Bohdan Khmelnytsky, Philip Augustus, Beatrice II
-		- New unit art: Huskarl, Bedouin, Turcoman Horse Archer
+		- New unit art: Huskarl, Bedouin
 		- New background for Robert the Bruce, Simeon, Isabella, Yaqub al-Mansur, Mohammad ibn Nasr
 		- New background for Margaret, Alexander Nevsky, Gustav Vasa, George III, Rurik, Otto I
 		- Optimizations in various BG files, removed some unnecessary art files

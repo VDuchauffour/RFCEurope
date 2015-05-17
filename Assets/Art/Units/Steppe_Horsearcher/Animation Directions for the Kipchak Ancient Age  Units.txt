@@ -1,0 +1,8 @@
+The Kipchak Archer uses the Eurasian Archer animations,
+The Axeman uses the Native America Dog Soldier animations,
+The Chariot uses the Celtic Chariot animations,
+The Horseman uses the Mounted Infantry animations from the Charlemagne Scenario,
+The Horsearcher uses the horsearcher animations,
+The Swordsman uses the Sumerian Vulture animations,
+The Spearman uses the Maya Holkan animations.
+

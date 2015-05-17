@@ -248,7 +248,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_VARANGIAN</Tag>
-		<English>Varangian Mercenary</English>
+		<English>Norse Mercenary</English>
 		<French>Varangian</French>
 		<German>Warägisch</German>
 		<Italian>Variago</Italian>
@@ -409,13 +409,31 @@
 		<Portuguese>Egyptian Mercenary</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MERC_TAGMATA</Tag>
-		<English>Tagmata</English>
-		<French>Tagmata</French>
-		<German>Tagmata</German>
-		<Italian>Tagmata</Italian>
-		<Spanish>Tagmata</Spanish>
-		<Portuguese>Tagmata</Portuguese>
+		<Tag>TXT_KEY_MERC_BOHEMIAN</Tag>
+		<English>Bohemian Mercenary</English>
+		<French>Bohemian Mercenary</French>
+		<German>Bohemian Mercenary</German>
+		<Italian>Bohemian Mercenary</Italian>
+		<Spanish>Bohemian Mercenary</Spanish>
+		<Portuguese>Bohemian Mercenary</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MERC_CRIMEAN</Tag>
+		<English>Crimean Mercenary</English>
+		<French>Crimean Mercenary</French>
+		<German>Crimean Mercenary</German>
+		<Italian>Crimean Mercenary</Italian>
+		<Spanish>Crimean Mercenary</Spanish>
+		<Portuguese>Crimean Mercenary</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MERC_GREEK</Tag>
+		<English>Greek Mercenary</English>
+		<French>Greek Mercenary</French>
+		<German>Greek Mercenary</German>
+		<Italian>Greek Mercenary</Italian>
+		<Spanish>Greek Mercenary</Spanish>
+		<Portuguese>Greek Mercenary</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_CORSAIR</Tag>
@@ -656,7 +674,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DON_COSSACK_PEDIA</Tag>
-		<English>[TAB] The Don Cossack Host, (Russian: Vsevelikoye Voysko Donskoye) was a frontier military organization from the end of the sixteenth until the early twentieth century.[NEWLINE][TAB]Don Cossacks were masters of horse riding and had superb military training, due to their long conflict with the Crimean Khanate and the Ottoman Empire. They were selling their military services to different powers in Eastern Europe. Together with the Polish King, they raided Moscow during The Time of Troubles and under Russian authority carried out raids and expeditions against Turkey and Persia.[NEWLINE][TAB]Don Cossacks are credited with playing a significant part in repelling Napoleon's Invasion of Russia. Under the command of Count Matvey Ivanovich Platov, the Don Cossacks successfully fought in the number of battles with Grande Armee. In the Battle of Borodino Don Cossacks were making raids to the rear of the French Army. Ataman Platov commanded all Cossack troops and had successfully covered the retreat of the Russian Army to Moscow. The Don Cossacks distinguished themselves in all the campaigns to come and took part in the capture of Paris. Napoleon is credited with declaring, "Cossacks are the best light troops among all that exist. If I had them in my army, I would go through all the world with them."</English>
+		<English>[TAB]The Don Cossack Host, (Russian: Vsevelikoye Voysko Donskoye) was a frontier military organization from the end of the sixteenth until the early twentieth century.[NEWLINE][TAB]Don Cossacks were masters of horse riding and had superb military training, due to their long conflict with the Crimean Khanate and the Ottoman Empire. They were selling their military services to different powers in Eastern Europe. Together with the Polish King, they raided Moscow during The Time of Troubles and under Russian authority carried out raids and expeditions against Turkey and Persia.[NEWLINE][TAB]Don Cossacks are credited with playing a significant part in repelling Napoleon's Invasion of Russia. Under the command of Count Matvey Ivanovich Platov, the Don Cossacks successfully fought in the number of battles with Grande Armee. In the Battle of Borodino Don Cossacks were making raids to the rear of the French Army. Ataman Platov commanded all Cossack troops and had successfully covered the retreat of the Russian Army to Moscow. The Don Cossacks distinguished themselves in all the campaigns to come and took part in the capture of Paris. Napoleon is credited with declaring, "Cossacks are the best light troops among all that exist. If I had them in my army, I would go through all the world with them."</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -674,7 +692,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DOPPELSOLDNER_PEDIA</Tag>
-		<English>[TAB] Doppelsöldner (Double mercenary) were Landsknechts in 16th-century Germany who were prepared to fight in the front line, taking an extra risk, in exchange for double payment. The stated ratio was that one Landsknecht in four would be a Doppelsöldner. A small number of the Doppelsöldner of each company were usually issued with firearms.[NEWLINE][TAB]Likewise, Landsknechts schooled in the use of the Zweihänder (two-hander), a massive two-handed sword, were entitled to double pay and thus qualified as Doppelsöldner. The fencing guild of the Brotherhood of St. Mark had the monopoly on the use of the Zweihänder after Frederick III, Holy Roman Emperor granted it to them in 1487.[NEWLINE][TAB]The Zweihänder was allegedly used by the Doppelsöldner to break through formations of pikemen, especially Swiss pikemen, by either being swung to break the ends of the pikes themselves or to knock them aside and attack the pikemen directly. The factuality of this tradition is disputed, but at least as a legend, it appears to date to at least the 17th century.</English>
+		<English>[TAB]Doppelsöldner (Double mercenary) were Landsknechts in 16th-century Germany who were prepared to fight in the front line, taking an extra risk, in exchange for double payment. The stated ratio was that one Landsknecht in four would be a Doppelsöldner. A small number of the Doppelsöldner of each company were usually issued with firearms.[NEWLINE][TAB]Likewise, Landsknechts schooled in the use of the Zweihänder (two-hander), a massive two-handed sword, were entitled to double pay and thus qualified as Doppelsöldner. The fencing guild of the Brotherhood of St. Mark had the monopoly on the use of the Zweihänder after Frederick III, Holy Roman Emperor granted it to them in 1487.[NEWLINE][TAB]The Zweihänder was allegedly used by the Doppelsöldner to break through formations of pikemen, especially Swiss pikemen, by either being swung to break the ends of the pikes themselves or to knock them aside and attack the pikemen directly. The factuality of this tradition is disputed, but at least as a legend, it appears to date to at least the 17th century.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -893,6 +911,96 @@
 		<English>[TAB]The Arabs had taken Egypt in 641, and the jihad soon turned south. Makuria was one of the few states in the world to effectively resist Muslim conquest. Makurians defeated an Arab army at the First Battle of Dongola in in 642. They repeated this feat again in 652 at the Second Battle of Dongola. In both battles, Arab writers noted the Makurians skill with the bow.</English>
 		<French>.</French>
 		<German>[TAB]Unter dem Namen Medjau (auch Medjai oder Medja) wurden im Alten Ägypten vom Ende des Alten bis zum Neuen Reich Menschen bezeichnet, die in der Nubischen Wüste, im Roten-Meer-Gebirge und westlich davon in Atbai lebten. Sie dienten den Ägyptern als Karawanenführer, Polizisten und Berufssoldaten. Die Medjau waren aber auch gefährliche Feinde. Historische Aufzeichnungen berichten von häufigen Auseinandersetzungen mit den Ägyptern.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MAMLUK_CAVALRY</Tag>
+		<English>Mamluk Cavalry</English>
+		<French>Mamluk Cavalry</French>
+		<German>Mamluk Cavalry</German>
+		<Italian>Mamluk Cavalry</Italian>
+		<Spanish>Mamluk Cavalry</Spanish>
+		<Portuguese>Mamluk Cavalry</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MAMLUK_CAVALRY_PEDIA</Tag>
+		<English>...</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SOUTH_SLAV_VLASTELA</Tag>
+		<English>South Slav Vlastela</English>
+		<French>South Slav Vlastela</French>
+		<German>South Slav Vlastela</German>
+		<Italian>South Slav Vlastela</Italian>
+		<Spanish>South Slav Vlastela</Spanish>
+		<Portuguese>South Slav Vlastela</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SOUTH_SLAV_VLASTELA_PEDIA</Tag>
+		<English>...</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BOHEMIAN_WAR_WAGON</Tag>
+		<English>Bohemian War Wagon</English>
+		<French>Bohemian War Wagon</French>
+		<German>Bohemian War Wagon</German>
+		<Italian>Bohemian War Wagon</Italian>
+		<Spanish>Bohemian War Wagon</Spanish>
+		<Portuguese>Bohemian War Wagon</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BOHEMIAN_WAR_WAGON_PEDIA</Tag>
+		<English>...</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LOMBARD_HEAVY_FOOTMAN</Tag>
+		<English>Lombard Heavy Footman</English>
+		<French>Lombard Heavy Footman</French>
+		<German>Lombard Heavy Footman</German>
+		<Italian>Lombard Heavy Footman</Italian>
+		<Spanish>Lombard Heavy Footman</Spanish>
+		<Portuguese>Lombard Heavy Footman</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LOMBARD_HEAVY_FOOTMAN_PEDIA</Tag>
+		<English>...</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CRIMEAN_TATAR_RIDER</Tag>
+		<English>Crimean Tatar Rider</English>
+		<French>Crimean Tatar Rider</French>
+		<German>Crimean Tatar Rider</German>
+		<Italian>Crimean Tatar Rider</Italian>
+		<Spanish>Crimean Tatar Rider</Spanish>
+		<Portuguese>Crimean Tatar Rider</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CRIMEAN_TATAR_RIDER_PEDIA</Tag>
+		<English>...</English>
+		<French>.</French>
+		<German>.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
