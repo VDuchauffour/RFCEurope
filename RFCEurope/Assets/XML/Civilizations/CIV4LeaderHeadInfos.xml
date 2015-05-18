@@ -4117,7 +4117,7 @@
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>
 		</LeaderHeadInfo>
-		<!-- Charlemange - France 1st -->
+		<!-- Charlemagne - France 1st -->
 		<LeaderHeadInfo>
 			<Type>LEADER_CHARLEMAGNE</Type>
 			<Description>TXT_KEY_LEADER_CHARLEMAGNE</Description>

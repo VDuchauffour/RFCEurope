@@ -314,6 +314,9 @@ Changes for RFCE 1.3:
 		- New barb-only units: Turcoman Horse Archer (Danishmends and some of the Seljuks in Anatolia), Steppe Horse Archer (Cumans, Kipchaks)
 		- New merc-only units: South Slav Vlastela (Serbia, Banat, Slavonia, Bosnia, Dalmatia), Lombard Heavy Footman (Lombardy, Liguria, Tuscany, Verona)
 		- New merc-only units: Bohemian War Wagon (Bohemia, Moravia), Mamluk Heavy Cavalry (Egypt), Crimean Tatar Rider (Crimea)
+		- Updated Dutch Dawn of Man text
+		- New DoM text for Scotland (by gilgames)
+		- Switched to CE instead of AD for non-christian civs
 
 	Art updates:
 		- New art for Isabella (Spain), Casimir III (Poland), Ivan IV (Muscovy), Simeon I (Bulgaria), Ivan Asen (Bulgaria)
@@ -335,7 +338,7 @@ Changes for RFCE 1.3:
 		- Fixed bug where the Cordoban units got wrong starting promotion
 		- The Swedish UB (Night Watch replacement) didn't give any stability on completion
 		- Fixed sound inconsistencies with some of the mercenaries
-		- Fixed bug connected to the city secession for the Byzantine
+		- Fixed bug connected to the city secession for Byzantium
 		- Fixed bug with some obscure values on the Lithuanian war map
 		- Fixed some instances of the very old bug where autoplay gets one extra turn sometimes, thus the given civ starts a turn later
 		- Fixed major bug where cities with more than 9 cities couldn't collapse because of bad stability
