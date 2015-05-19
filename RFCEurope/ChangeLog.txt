@@ -13,6 +13,7 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for RFCE 1.3:
+(released: 2015.05.19.)
 
 	Civilization changes:
 		- Norse civ split into Denmark and Norway
@@ -165,15 +166,15 @@ Changes for RFCE 1.3:
 
 	Setup:
 		- Province setup changes:
-			England: Scotland, The Isles, Ireland border/contested
-			Poland: Prussia border/contested, Livonia foreign/unstable, Pomerania potential
-			Lithuania: Prussia, Pomerania foreign/unstable. Livonia and Estonia border/contested
-			Cordoba: Tetouan border after the Moroccan spawn. Valencia historical, Aragon, Catalonia and Balears border on Aragonese spawn.
-			Spain: Aragon, Catalonia, Balears border, Navarre potential
-			Byzantium: Apulia, Calabria, Sicily, Malta border/contested on the Aragonese spawn
-			Moscow: Novgorod, Vologda potential, Karelia border/contested
+			- England: Scotland, The Isles, Ireland border/contested
+			- Poland: Prussia border/contested, Livonia foreign/unstable, Pomerania potential
+			- Lithuania: Prussia, Pomerania foreign/unstable. Livonia and Estonia border/contested
+			- Cordoba: Tetouan border after the Moroccan spawn. Valencia historical, Aragon, Catalonia and Balears border on Aragonese spawn.
+			- Spain: Aragon, Catalonia, Balears border, Navarre potential
+			- Byzantium: Apulia, Calabria, Sicily, Malta border/contested on the Aragonese spawn
+			- Moscow: Novgorod, Vologda potential, Karelia border/contested
 		- English AI gets some defenders and defensive buildings in Normandy a couple turns after their spawn
-		- 1 extra Settler and 1 Crossbow for AI England
+		- 1 extra Settler and 1 Crossbowman for AI England
 		- Lowered almost all leaders willingness to vassalize voluntarily
 		- Increased Cordoban leaders' religion flavor, they will spread out Islam better in their cities
 		- Lowered Orthodoxy spread values for Scandinavian civs
@@ -197,13 +198,13 @@ Changes for RFCE 1.3:
 		- All UHV colony checks are handled on project built (instead of every turn), should make checks much faster (except for the Spanish UHV, which is only checked on a given turn)
 		- Trading companies don't count as colonies for the UHV anymore
 		- Revised Colony UHVs:
-			France: Empire of the World: Build 5 Colonies
-			Spain: The Spanish Armada: Have more Colonies than any other nation in 1588AD (while having at least 3)
-			Venice: Domination of the World Ocean: Be the first to build a modern Colony (so Vinland doesn't count)
-			England: Jewel of the Crown: Build 7 Colonies
-			Portugal: Feitorias all over the world: Build 5 Colonies
-			Dutch: The India Companies: Build 3 Colonies and complete both Trading Companies
-			Every UHV should trigger right on the completion of the last project/colony
+			- France: Empire of the World: Build 5 Colonies
+			- Spain: The Spanish Armada: Have more Colonies than any other nation in 1588AD (while having at least 3)
+			- Venice: Domination of the World Ocean: Be the first to build a modern Colony (so Vinland doesn't count)
+			- England: Jewel of the Crown: Build 7 Colonies
+			- Portugal: Feitorias all over the world: Build 5 Colonies
+			- Dutch: The India Companies: Build 3 Colonies and complete both Trading Companies
+			- Every UHV should trigger right on the completion of the last project/colony
 		- Changed Atlantic Access to appear earlier near Scandinavia, in 1580 - needed for the Danish UHV
 		- North Atlantic Access near Vinland disappears in the exact date of Norway's second UHV
 		- Disabled UHV checks for the AI (faster turn times)
@@ -216,21 +217,26 @@ Changes for RFCE 1.3:
 		- Indy city in Mercia province: Nottingham, spawns in 867AD
 		- York (Eboracum) starts in 500AD
 		- Uppsala reduced to town on the Swedish spawn, Norwich and Nottingham on the English spawn
-		- Revised barbs:
-			Further separated barbs for the human and the AI
-			AI civs won't get extra barbarians on harder levels. Also somewhat less extra barbs for the human player on harder levels
-			Slightly tuned down general number of barbs for Byzantium, France, Cordoba
-			2 new unit types, only as barbs: Bedouin, Turcoman Horse Archer
-			Livonian Order as barbs (Sword Brethen) in the area before the Prussian spawn
-			Pre-Lithanian barbs (Baltic Heathens) for human Prussia a couple turns before the Lithuanian spawn
-			Banu Hilal and Bani Hassan barbs in Morocco and Tunesia
-			Danishmend barbarians for Byzantium after the Seljuks
-			Barbarian Kipchaks, along with the Cumans (greater Cumania ==  Cuman-Kipchak confederation)
-			Barbarian Serbs in the Balkans before the Byzantine 2nd UHV, especially for the human player
-			Barbarian Anglo Saxons spawning in Wessex and Mercia to represent the resistance to Danish rule
-			Barbarian Scottish Highlanders only spawn when Scotland is dead
-			Barbarian Vikings in the 9-10th century, in small numbers for the AI (and only if the player is not Norway), but a bigger threat to human France
-			Revised some areas of the Mongol spawn zone, for example no Keshiks directly for Novgorod
+		- Revised barb spawns:
+			- Further separated barbs for the human and the AI
+			- AI civs won't get extra barbarians on harder levels. Also somewhat less extra barbs for the human player on harder levels
+			- Slightly tuned down general number of barbs for Byzantium, France, Cordoba
+			- 3 new unit types: Bedouin, Turcoman Horse Archer, Steppe Horse Archer
+			- More variety in the Seljuk units (4 new units, all unique to the Seljuks, most are somewhat more powerful than their regular counterparts)
+			- Lowered Seljuk Lancer's (RFCE's "original" Seljuks) strength from 13 to 11, but Seljuks are still harder to counter because of the new unit types
+			- Livonian Order as barbs (Sword Brethen) in the area before the Prussian spawn
+			- Pre-Lithanian barbs (Baltic Heathens) for human Prussia a couple turns before the Lithuanian spawn
+			- Banu Hilal and Bani Hassan barbs in Morocco and Tunesia (Bedouins)
+			- Danishmend barbarians for Byzantium after the Seljuks (Turcoman Horse Archers)
+			- Barbarian Kipchaks, along with the Cumans (greater Cumania == Cuman-Kipchak confederation)
+			- Separated Pechenegs and Cumans some more
+			- Both Pechenegs and Cumans+Kipchaks are represented with Steppe Horse Archer units
+			- Revised Khazars too, more infantry units instead of light cavalry
+			- Barbarian Serbs in the Balkans before the Byzantine 2nd UHV, especially for the human player
+			- Barbarian Anglo Saxons spawning in Wessex and Mercia to represent the resistance to Danish rule
+			- Barbarian Scottish Highlanders only spawn when Scotland is dead
+			- Barbarian Vikings in the 9-10th century, in small numbers for the AI (and only if the player is not Norway), but a bigger threat to human France
+			- Revised some areas of the Mongol spawn zone, for example no Keshiks directly for Novgorod
 		- New independent city: Londinium. Starts in 500 AD, size 2, 2 archers, catholic religion, prebuilt walls
 		- New independent city: Caen. Starts in 912 AD (establishment of the Duchy of Normandy), size 1, 2 crossbowman, catholic religion
 		- Catalonia province won't revolt against Aragon, Scotland province won't revolt against Scotland
@@ -245,33 +251,34 @@ Changes for RFCE 1.3:
 		- Losing a city in your core or historical territory also means a bigger stability hit
 		- Revised initial stability for the different difficulty levels
 		- Rewrote most triggers for stability collapses and revolts:
-			In huge empires, if stability is bad, there is 80% for the secession/city revolt mechanics to start, and only 10% for the collapse mechanics
-			In medium empires, 40% for for the secession/city revolt mechanics, 40% for the collapse mechanics
-			In small empires, 70% chance for collapse mechanics, no chance for secession/city revolt mechanics
-			Actual chance for triggering a revolt or collapse inside those mechanics is scaling with stability
-			Note that bad stability is not the only way to trigger collapses or revolts
+			- In huge empires, if stability is bad, there is 80% for the secession/city revolt mechanics to start, and only 10% for the collapse mechanics
+			- In medium empires, 40% for for the secession/city revolt mechanics, 40% for the collapse mechanics
+			- In small empires, 70% chance for collapse mechanics, no chance for secession/city revolt mechanics
+			- Actual chance for triggering a revolt or collapse inside those mechanics is scaling with stability
+			- Note that bad stability is not the only way to trigger collapses or revolts
 		- Having a city in a foreign province means -5 stability, in a border/contested province -2 stability
 		- Small boost to Merchant Republic and Bureaucracy stability, but both can be way more unstable than before with too many cities
 		- Imperialism civic and the French UP works without a hard cap on number of cities
 		- Fixed inconsistencies in the city stability calculations - way more deadly for the human player if the cities are managed poorly
 		- Updated the stability guide. Civilopedia/Concepts/Stability Guide
 		- Revised stability changes and connected mechanics on religious persecution
+		- New aspect for the Venetian UP: halves instability for having too many cities in Merchant Republic
 		- City razing:
-			Permanent instability: 0 for very small cities, 1 for 3-5 population, 2 for 6-9, 3 for 10+
-			Temporary instability: 3
-			Norwegian UP: -1 permanent stability loss and no temporary instability for razing cities
+			- Permanent instability: 0 for very small cities, 1 for 3-5 population, 2 for 6-9, 3 for 10+
+			- Temporary instability: 3
+			- Norwegian UP: -1 permanent stability loss and no temporary instability for razing cities
 		- Reduced permanent stability loss from anarchies
 
 	Persecution updates:
-		Loot is significantly increased when you successfully purge a religion
-		-3 swing instability on successful persecution (0 for Spain)
-		Unhappiness because of persecution ("We cannot forget your cruel oppression") only appears in the city on successful persecution
-		Persecution counter/timer reintroduced, with a new approach:
-			Nationwide variable, goes down by 1 each turn
-			New counter for it on the main screen (Persecution, only shown if >0, right below the faith point counter)
-			+8 to the counter on successful persecution (4 for Spain), 4 on unsuccessful (2 for Spain)
-			Causes religious instability, 1 with 1-5, 2 with 6-10, 3 with 11-15, etc.
-			The timer (Persecution Instability Cooldown), and the caused instability (Persecution Instability) are also shown in the Religion Screen (F7)
+		- Loot is significantly increased when you successfully purge a religion
+		- -3 swing instability on successful persecution (0 for Spain)
+		- Unhappiness because of persecution ("We cannot forget your cruel oppression") only appears in the city on successful persecution
+		- Persecution counter/timer reintroduced, with a new approach:
+			- Nationwide variable, goes down by 1 each turn
+			- New counter for it on the main screen (Persecution, only shown if >0, right below the faith point counter)
+			- +8 to the counter on successful persecution (4 for Spain), 4 on unsuccessful (2 for Spain)
+			- Causes religious instability, 1 with 1-5, 2 with 6-10, 3 with 11-15, etc.
+			- The timer (Persecution Instability Cooldown), and the caused instability (Persecution Instability) are also shown in the Religion Screen (F7)
 
 	Crusades:
 		- Increased number of units leaving the civs for a crusade, but it's low on the first 10-20 turns after a civ is born
@@ -297,10 +304,10 @@ Changes for RFCE 1.3:
 		- Cannons also buildable with iron + sulphur
 		- New promotion: Cargo Capacity (+1 cargo space in ships)
 		- Boost for Workshops and Lumbermills - were total worthless before, now they are somewhat on pair with Windmills and Watermills
-			Apprenticeship civic gives +1 production for Lumbermills too
-			Steam Engine tech gives +1 production for Lumbermills too
-			Workshops have +1 base production (so now -1 food, +2 production)
-			English UP changed to +1 production and +1 commerce for Workshops (was +2 production before)
+			- Apprenticeship civic gives +1 production for Lumbermills too
+			- Steam Engine tech gives +1 production for Lumbermills too
+			- Workshops have +1 base production (so now -1 food, +2 production)
+			- English UP changed to +1 production and +1 commerce for Workshops (was +2 production before)
 		- Mercantilism civic gives +1 commerce for Villages too
 		- Updated Great Person lists
 		- Updated the RFCE Timeline
@@ -311,7 +318,8 @@ Changes for RFCE 1.3:
 		- Speed improvements by replacing various if-statements with elif-statements and added some break statements
 		- Improved coding of Krak des Chevaliers, Leaning Tower, Topkapi Palace
 		- Disabled autosaves during autoplay - should speed up the initial loading time of the civs
-		- New barb-only units: Turcoman Horse Archer (Danishmends and some of the Seljuks in Anatolia), Steppe Horse Archer (Cumans, Kipchaks)
+		- New barb-only units: Bedouin, Turcoman Horse Archer (Danishmends and Seljuks in Anatolia), Steppe Horse Archer (Cumans, Kipchaks)
+		- New barb-only units: Seljuk Swordsman, Seljuk Heavy Footman, Seljuk Crossbowman, Seljuk Guisarme (all for the Seljuks in Anatolia, surprisingly)
 		- New merc-only units: South Slav Vlastela (Serbia, Banat, Slavonia, Bosnia, Dalmatia), Lombard Heavy Footman (Lombardy, Liguria, Tuscany, Verona)
 		- New merc-only units: Bohemian War Wagon (Bohemia, Moravia), Mamluk Heavy Cavalry (Egypt), Crimean Tatar Rider (Crimea)
 		- Updated Dutch Dawn of Man text
@@ -325,7 +333,8 @@ Changes for RFCE 1.3:
 		- Added missing button for Philip the Bold, Guglielmo Embriaco, Alexander Nevsky, Hermann von Salza, John II
 		- Updated button for Bela III, Ferdinand III, Harald Hardrada, James I, Magnus Ladulas, Mstislav I, Otto I
 		- Updated button for Robert the Bruce, Marfa Posadnitsa, Bohdan Khmelnytsky, Philip Augustus, Beatrice II
-		- New unit art: Huskarl, Bedouin
+		- New unit art: Huskarl, Bedouin, Turcoman Horse Archer, Crimean Tatar Rider, Seljuk Lancer
+		- All new Seljuk units have wonderful and perfectly accurate art (made by Bakuel)
 		- New background for Robert the Bruce, Simeon, Isabella, Yaqub al-Mansur, Mohammad ibn Nasr
 		- New background for Margaret, Alexander Nevsky, Gustav Vasa, George III, Rurik, Otto I
 		- Optimizations in various BG files, removed some unnecessary art files
