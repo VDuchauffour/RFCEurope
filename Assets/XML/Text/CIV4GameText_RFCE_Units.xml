@@ -1238,8 +1238,8 @@
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SELJUK</Tag>
-		<English>Seljuk</English>
+		<Tag>TXT_KEY_UNIT_SELJUK_LANCER</Tag>
+		<English>Seljuk Lancer</English>
 		<French>Deldjouk</French>
 		<German>
 			<Text>Seldschuke:Seldschuken:Seldschuken:Seldschuken:Seldschuken:Seldschuken:Seldschuken:Seldschuken</Text>
@@ -1249,6 +1249,42 @@
 		<Italian>Seljuk</Italian>
 		<Spanish>Selyuq</Spanish>
 		<Portuguese>Seljúcida</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SELJUK_CROSSBOWMAN</Tag>
+		<English>Seljuk Crossbowman</English>
+		<French>Seljuk Crossbowman</French>
+		<German>Seljuk Crossbowman</German>
+		<Italian>Seljuk Crossbowman</Italian>
+		<Spanish>Seljuk Crossbowman</Spanish>
+		<Portuguese>Seljuk Crossbowman</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SELJUK_SWORDSMAN</Tag>
+		<English>Seljuk Swordsman</English>
+		<French>Seljuk Swordsman</French>
+		<German>Seljuk Swordsman</German>
+		<Italian>Seljuk Swordsman</Italian>
+		<Spanish>Seljuk Swordsman</Spanish>
+		<Portuguese>Seljuk Swordsman</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SELJUK_HEAVY_FOOTMAN</Tag>
+		<English>Seljuk Heavy Footman</English>
+		<French>Seljuk Heavy Footman</French>
+		<German>Seljuk Heavy Footman</German>
+		<Italian>Seljuk Heavy Footman</Italian>
+		<Spanish>Seljuk Heavy Footman</Spanish>
+		<Portuguese>Seljuk Heavy Footman</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SELJUK_GUISARME</Tag>
+		<English>Seljuk Heavy Spearman</English>
+		<French>Seljuk Heavy Spearman</French>
+		<German>Seljuk Heavy Spearman</German>
+		<Italian>Seljuk Heavy Spearman</Italian>
+		<Spanish>Seljuk Heavy Spearman</Spanish>
+		<Portuguese>Seljuk Heavy Spearman</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SELJUK_PEDIA</Tag>

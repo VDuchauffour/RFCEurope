@@ -36,6 +36,7 @@ i900AD = 100
 i910AD = 103	# Kingdom of Leon						# Spawn of Spain
 i911AD = 104	# Establishment of the Duchy of Normandy
 i917AD = 106																		# Bulgaria UHV 1
+i920AD = 107	# Kievan Rus - Pecheneg Wars
 i936AD = 112											# Spawn of Denmark
 i940AD = 113
 i955AD = 118	# Basil defeats the Arabs											# Arab UHV 1
@@ -230,7 +231,7 @@ iNumTechsFuture = 1
 
 #Units: initialize unit variables to unit indices from XML
 
-iNumUnits = 129
+iNumUnits = 133
 (iSettler, iWorker, iExecutive1, iExecutive2, iExecutive3, iExecutive4, iExecutive5, iExecutive6, iExecutive7, iCatholicMissionary,
 iOrthodoxMissionary, iProtestantMissionary, iIslamicMissionary, iArcher, iCrossbowman, iArbalest, iGenoaBalestrieri, iLongbowman, iEnglishLongbowman, iSpearman,
 iGuisarme, iAragonAlmogavar, iScotlandSheltron, iPikeman, iHolyRomanLandsknecht, iAxeman, iVikingBeserker, iSwordsman, iDenmarkHuskarl, iLongSwordsman,
@@ -240,10 +241,11 @@ iPrussiaDeathsHeadHussar, iLancer, iBulgarianKonnik, iCordobanBerber, iHeavyLanc
 iMoscowBoyar, iBurgundianPaladin, iTemplar, iTeutonic, iCuirassier, iAustrianKurassier, iPolishWingedHussar, iCatapult, iTrebuchet, iBombard,
 iTurkeyGreatBombard, iCannon, iFieldArtillery, iWorkboat, iGalley, iCogge, iHolk, iGalleon, iWarGalley, iGunGalley,
 iVeniceGalleas, iCarrack, iFrigate, iCaravel, iPrivateer, iSpy, iProsecutor, iProphet, iArtist, iScientist,
-iMerchant, iEngineer, iGreatGeneral, iGreatSpy, iMongolKeshik, iSeljuk, iJanissary, iTagmata, iCorsair, iHighlander,
+iMerchant, iEngineer, iGreatGeneral, iGreatSpy, iMongolKeshik, iSeljukLancer, iJanissary, iTagmata, iCorsair, iHighlander,
 iWelshLongbowman, iCondottieri, iSwissPikeman, iVarangianGuard, iHackapell, iReiter, iZaporozhianCossack, iDonCossack, iDoppelsoldner, iIrishBrigade,
 iStradiot, iWaardgelder, iNaffatun, iTurkopoles, iWalloonGuard, iSwissGun, iLipkaTatar, iHighlanderGun, iZanji, iTouareg,
-iNubianLongbowman, iBedouin, iTurcomanHorseArcher, iMamlukHeavyCavalry, iSouthSlavVlastela, iBohemianWarWagon, iLombardHeavyFootman, iSteppeHorseArcher, iCrimeanTatarRider) = range(iNumUnits)
+iNubianLongbowman, iBedouin, iTurcomanHorseArcher, iMamlukHeavyCavalry, iSouthSlavVlastela, iBohemianWarWagon, iLombardHeavyFootman, iSteppeHorseArcher, iCrimeanTatarRider, iSeljukCrossbow,
+iSeljukSwordsman, iSeljukFootman, iSeljukGuisarme) = range(iNumUnits)
 
 #From the CIV4UnitClassInfos.xml
 iProsecutorClass = 58
@@ -252,7 +254,8 @@ lMercsOnly = [iCondottieri, iReiter, iBohemianWarWagon, iCorsair, iCrimeanTatarR
 iIrishBrigade, iLipkaTatar, iLombardHeavyFootman, iMamlukHeavyCavalry, iNubianLongbowman, iNaffatun, iSouthSlavVlastela, iStradiot, iSwissPikeman, iSwissGun,
 iTagmata, iTouareg, iTurkopoles, iVarangianGuard, iWaardgelder, iWalloonGuard, iWelshLongbowman, iZanji, iZaporozhianCossack]
 
-lBarbsOnly = [iBedouin, iCorsair, iHighlander, iMongolKeshik, iSeljuk, iSteppeHorseArcher, iTouareg, iTurcomanHorseArcher, iWelshLongbowman]
+lBarbsOnly = [iBedouin, iCorsair, iHighlander, iMongolKeshik, iSeljukCrossbow, iSeljukFootman, iSeljukGuisarme, iSeljukLancer, iSeljukSwordsman, iSteppeHorseArcher,
+iTouareg, iTurcomanHorseArcher, iWelshLongbowman]
 
 #Bonuses: initialize bonus variables to bonus IDs from WBSinulAi
 
