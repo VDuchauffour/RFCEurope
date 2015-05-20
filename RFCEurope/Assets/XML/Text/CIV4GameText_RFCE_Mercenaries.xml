@@ -185,12 +185,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_NEW_MERC_MOVING</Tag>
-		<English>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</English>
-		<French>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</French>
+		<English>Mercenaries got tired of waiting for a contract and have left to seek their fortune elsewhere.</English>
+		<French>Mercenaries got tired of waiting for a contract and have left to seek their fortune elsewhere.</French>
 		<German>Vertragslose Söldner brechen auf, um ihr Glück woanders zu suchen.</German>
 		<Italian>I Mercenari si sono stancati di aspettare il contratto e sono partiti per cercare fortuna altrove.</Italian>
-		<Spanish>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</Spanish>
-		<Portuguese>Mercs got tired of waiting for contract and have left to seek fortune elsewhere.</Portuguese>
+		<Spanish>Mercenaries got tired of waiting for a contract and have left to seek their fortune elsewhere.</Spanish>
+		<Portuguese>Mercenaries got tired of waiting for a contract and have left to seek their fortune elsewhere.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_NEW_MERC_DESERTERS</Tag>

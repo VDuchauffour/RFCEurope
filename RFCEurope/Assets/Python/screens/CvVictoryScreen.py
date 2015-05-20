@@ -1103,7 +1103,7 @@ class CvVictoryScreen:
 		sText3 = ""
 		#UHV1
 		iCount = pPlayer.getUHVCounter( 2 )
-		sText1 += self.getCounterString(iCount, 50)
+		sText1 += self.getCounterString(iCount, 80)
 		#UHV2
 		sText2 += self.getProvinceString(vic.tNorwayControl)
 		sText2 += "\n" + localText.getText("TXT_KEY_PROJECT_VINLAND",()) + ": " + self.determineColor(gc.getTeam(iPlayer).getProjectCount(xml.iColVinland) >= 1, localText.getText("TXT_KEY_UHV_EXPLORED",()), localText.getText("TXT_KEY_UHV_NOT_EXPLORED",()))
@@ -1129,7 +1129,7 @@ class CvVictoryScreen:
 		sText2 += self.getProvinceString(vic.tKievControl, (True, 10))
 		#UHV3
 		iFood = pPlayer.getUHVCounter( 2 )
-		sText3 += self.getCounterString(iFood, 20000)
+		sText3 += self.getCounterString(iFood, 25000)
 		lHelpTexts = [sText1, sText2, sText3]
 		return lHelpTexts
 
