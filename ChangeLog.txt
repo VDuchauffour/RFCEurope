@@ -209,6 +209,7 @@ Changes for RFCE 1.3:
 		- North Atlantic Access near Vinland disappears in the exact date of Norway's second UHV
 		- Disabled UHV checks for the AI (faster turn times)
 		- Updated Hungarian territory UHV check, now it's province based and totally accurate
+		- Kiev needs 25000 food for the 3rd UHV, but their 2nd UHV also has Moscow province
 
 	Indies and barbs:
 		- Added reduce city mechanics (to towns for example) on a given turn or event - could be useful for many UHVs

@@ -977,8 +977,8 @@ tReligionSpreadFactor = ( # PROT, ISL, CATH, ORTH, JUD
 (450,  20, 250,  20,  10), #Germany
 ( 60,  60,  60, 400,  10), #Novgorod
 (250,  50, 150,  80,  10), #Norway
-( 90,  90,  90, 250,  10), #Kiev
-(250,  80, 200,  80,  10), #Hungary
+( 90,  60,  90, 250,  10), #Kiev
+(250,  60, 200,  80,  10), #Hungary
 (100,  20, 200,  20,  10), #Spain
 (250,  50, 180,  80,  10), #Denmark
 (450,  20, 100,  20,  10), #Scotland

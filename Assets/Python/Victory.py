@@ -143,7 +143,7 @@ tBurgundyControl = [ xml.iP_Flanders, xml.iP_Picardy, xml.iP_Provence, xml.iP_Bu
 tBurgundyOutrank = [ iFrankia, iEngland, iGermany ]
 tGermanyControl = [ xml.iP_Tuscany, xml.iP_Lombardy, xml.iP_Lorraine, xml.iP_Swabia, xml.iP_Saxony, xml.iP_Bavaria, xml.iP_Franconia, xml.iP_Brandenburg, xml.iP_Holstein ]
 tGermanyControlII = [ xml.iP_Austria, xml.iP_Flanders, xml.iP_Pomerania, xml.iP_Silesia, xml.iP_Bohemia, xml.iP_Moravia, xml.iP_Swabia, xml.iP_Saxony, xml.iP_Bavaria, xml.iP_Franconia, xml.iP_Brandenburg, xml.iP_Holstein ]
-tKievControl = [ xml.iP_Kiev, xml.iP_Podolia, xml.iP_Pereyaslavl, xml.iP_Sloboda, xml.iP_Chernigov, xml.iP_Volhynia, xml.iP_Minsk, xml.iP_Polotsk, xml.iP_Smolensk, xml.iP_Murom, xml.iP_Rostov, xml.iP_Novgorod, xml.iP_Vologda ]
+tKievControl = [ xml.iP_Kiev, xml.iP_Podolia, xml.iP_Pereyaslavl, xml.iP_Sloboda, xml.iP_Chernigov, xml.iP_Volhynia, xml.iP_Minsk, xml.iP_Polotsk, xml.iP_Smolensk, xml.iP_Moscow, xml.iP_Murom, xml.iP_Rostov, xml.iP_Novgorod, xml.iP_Vologda ]
 tHungarynControl = [ xml.iP_Thrace, xml.iP_Moesia, xml.iP_Macedonia, xml.iP_Thessaloniki, xml.iP_Wallachia, xml.iP_Thessaly, xml.iP_Morea, xml.iP_Epirus, xml.iP_Arberia, xml.iP_Serbia, xml.iP_Banat, xml.iP_Bosnia, xml.iP_Dalmatia, xml.iP_Slavonia ]
 tSpainConvert = [ xml.iP_GaliciaSpain, xml.iP_Castile, xml.iP_Leon, xml.iP_Lusitania, xml.iP_Catalonia, xml.iP_Aragon, xml.iP_Navarre, xml.iP_Valencia, xml.iP_LaMancha, xml.iP_Andalusia ]
 tPolishControl = [ xml.iP_Bohemia, xml.iP_Moravia, xml.iP_UpperHungary, xml.iP_Prussia, xml.iP_Lithuania, xml.iP_Livonia, xml.iP_Polotsk, xml.iP_Minsk, xml.iP_Volhynia, xml.iP_Podolia, xml.iP_Moldova, xml.iP_Kiev ]
@@ -783,10 +783,10 @@ class Victory:
 		#	else:
 		#		pNorway.setUHV( 0, 0 )
 
-		# UHV 1: Gain 50 Viking points by 1066
+		# UHV 1: Gain 80 Viking points by 1066
 		# Counted in the onCityAcquired, onPillageImprovement and onCombatResult functions
 		if ( iGameTurn <= xml.i1066AD and pNorway.getUHV( 0 ) == -1 ):
-			if ( pNorway.getUHVCounter( 2 ) >= 50 ): # It's still counter 2, for the sake of convenience and confusion
+			if ( pNorway.getUHVCounter( 2 ) >= 80 ): # It's still counter 2, for the sake of convenience and confusion
 				pNorway.setUHV( 0, 1 )
 			elif ( iGameTurn == xml.i1066AD ):
 				pNorway.setUHV( 0, 0 )
@@ -994,11 +994,11 @@ class Victory:
 			else:
 				pKiev.setUHV( 1, 0 )
 
-		# UHV 3: Produce 20000 food by 1300
+		# UHV 3: Produce 25000 food by 1300
 		iFood = pKiev.getUHVCounter( 2 ) + pKiev.calculateTotalYield(YieldTypes.YIELD_FOOD)
 		pKiev.setUHVCounter( 2, iFood )
 		if ( iGameTurn <= xml.i1300AD and pKiev.getUHV( 2 ) == -1 ):
-			if ( iFood > 20000 ):
+			if ( iFood > 25000 ):
 				pKiev.setUHV( 2, 1 )
 			elif ( iGameTurn == xml.i1300AD ):
 				pKiev.setUHV( 2, 0 )
