@@ -412,7 +412,7 @@
 			<NIF>Art/Leaderheads/Michael_VIII_Palaiologos/basil.nif</NIF>
 			<KFM>Art/Leaderheads/Michael_VIII_Palaiologos/huayna_capac.kfm</KFM>
 			<NoShaderNIF>Art/Leaderheads/Michael_VIII_Palaiologos/basil.nif</NoShaderNIF>
-			<BackgroundKFM>Art/LeaderHeads/Justinian/Justinian_Background.kfm</BackgroundKFM>
+			<BackgroundKFM>Art/LeaderHeads/Michael_VIII_Palaiologos/Justinian_Background.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_MARGARET_I</Type>
