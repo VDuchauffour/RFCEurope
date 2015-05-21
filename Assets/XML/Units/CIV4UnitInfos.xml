@@ -24465,12 +24465,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_CUIRASSIER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
 			<UnitClassDefenders/>
@@ -24674,12 +24669,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_CUIRASSIER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
 			<UnitClassDefenders/>
@@ -24869,12 +24859,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_MUSKETMAN</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
 			<UnitClassDefenders/>
@@ -25061,16 +25046,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_PIKEMAN</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_GRENADIER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
 			<UnitClassDefenders/>
@@ -25479,12 +25455,7 @@
 			<bSuicide>0</bSuicide>
 			<bHiddenNationality>0</bHiddenNationality>
 			<bAlwaysHostile>0</bAlwaysHostile>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_HUSSAR</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitClassUpgrades/>
 			<UnitClassTargets/>
 			<UnitCombatTargets/>
 			<UnitClassDefenders/>
