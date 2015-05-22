@@ -8039,11 +8039,11 @@
 					<iRangedWaveSize>1</iRangedWaveSize>
 					<UnitMeshGroup>
 						<iRequired>1</iRequired>
-						<EarlyArtDefineTag>ART_DEF_UNIT_SPANISH_TERCIO</EarlyArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_SPANISH_TERCIO_PIKE</EarlyArtDefineTag>
 					</UnitMeshGroup>
 					<UnitMeshGroup>
 						<iRequired>2</iRequired>
-						<EarlyArtDefineTag>ART_DEF_UNIT_TERCIO_GUN</EarlyArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_SPANISH_TERCIO_GUN</EarlyArtDefineTag>
 					</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
@@ -10835,7 +10835,7 @@
 		</UnitInfo>
 		<UnitInfo> <!--Hungarian Huszar-->
 			<Class>UNITCLASS_HEAVY_LANCER</Class>
-			<Type>UNIT_HUNGARIAN_LANCER</Type>
+			<Type>UNIT_HUNGARIAN_HUSZAR</Type>
 			<UniqueNames/>
 			<Special>NONE</Special>
 			<Capture>NONE</Capture>
@@ -10844,9 +10844,9 @@
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Invisible>NONE</Invisible>
 			<SeeInvisible>NONE</SeeInvisible>
-			<Description>TXT_KEY_UNIT_HUNGARIAN_LANCER</Description>
-			<Civilopedia>TXT_KEY_UNIT_HUNGARIAN_LANCER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HUNGARIAN_LANCER_STRATEGY</Strategy>
+			<Description>TXT_KEY_UNIT_HUNGARIAN_HUSZAR</Description>
+			<Civilopedia>TXT_KEY_UNIT_HUNGARIAN_HUSZAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_HUNGARIAN_HUSZAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bAnimal>0</bAnimal>
 			<bFood>0</bFood>
@@ -11020,7 +11020,7 @@
 				<iRangedWaveSize>3</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>3</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_HUNGARIAN_LANCER</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_HUNGARIAN_HUSZAR</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>

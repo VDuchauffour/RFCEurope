@@ -188,14 +188,6 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_HUNGARIAN_LANCER</UnitType>
-					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_HUNGARIAN_LANCER</EarlyArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_HUNGARIAN_LANCER</MiddleArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_HUNGARIAN_LANCER</LateArtDefineTag>
-					</UnitMeshGroup>
-				</StyleUnit>
-				<StyleUnit>
 					<UnitType>UNIT_KNIGHT</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_KNIGHT_HUNGARIAN</EarlyArtDefineTag>
