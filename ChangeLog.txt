@@ -334,12 +334,15 @@ Changes for RFCE 1.3:
 		- Added missing button for Philip the Bold, Guglielmo Embriaco, Alexander Nevsky, Hermann von Salza, John II
 		- Updated button for Bela III, Ferdinand III, Harald Hardrada, James I, Magnus Ladulas, Mstislav I, Otto I
 		- Updated button for Robert the Bruce, Marfa Posadnitsa, Bohdan Khmelnytsky, Philip Augustus, Beatrice II
-		- New unit art: Huskarl, Bedouin, Turcoman Horse Archer, Crimean Tatar Rider, Seljuk Lancer
+		- New unit art: Teutonic Knight, Kievan Druzhina, Danish Huskarl, Seljuk Lancer
 		- All new Seljuk units have wonderful and perfectly accurate art (made by Bakuel)
 		- New background for Robert the Bruce, Simeon, Isabella, Yaqub al-Mansur, Mohammad ibn Nasr
 		- New background for Margaret, Alexander Nevsky, Gustav Vasa, George III, Rurik, Otto I
 		- New background for Basil II, Michael VIII Palaiologos, Philip Augustus, Ismail ibn Sharif
 		- Optimizations in various BG files, removed some unnecessary art files
+		- Optimizations in the unit art files, removed some no longer used units 
+		- More than 15 megabyte less art data from the BG and unit optimizations
+		- Revised all unit artstyles, rearranged the unit art file system
 		- Units and buildings that require corporations now have a button instead of some text in the corresponding section in the civilopedia
 		- Units which are only available as mercenary/barb have a button indicating that instead of a text
 		- All civs have the correct coloured dot on the colonial world map in the Colony Screen

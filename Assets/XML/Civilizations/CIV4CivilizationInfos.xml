@@ -6005,7 +6005,7 @@
 			<Units>
 				<Unit>
 					<UnitClassType>UNITCLASS_HEAVY_LANCER</UnitClassType>
-					<UnitType>UNIT_HUNGARIAN_LANCER</UnitType>
+					<UnitType>UNIT_HUNGARIAN_HUSZAR</UnitType>
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_MOUNTED_INFANTRY</UnitClassType>
