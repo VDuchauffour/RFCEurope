@@ -140,11 +140,11 @@
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WESTMINSTER</Type>
-			<LSystem>LSYSTEM_2x2</LSystem>
+			<LSystem>LSYSTEM_2x4</LSystem>
 			<bAnimated>0</bAnimated>
-			<fScale>1.6</fScale>
+			<fScale>1.24</fScale>
 			<fInterfaceScale>0.56</fInterfaceScale>
-			<NIF>Art/Structures/Wonders/Westminster/westminster07.nif</NIF>
+			<NIF>Art/Structures/Wonders/westminster_abbey/westminster07.nif</NIF>
 			<KFM/>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,1,1</Button>
 		</BuildingArtInfo>
@@ -373,8 +373,8 @@
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.72</fScale>
-			<fInterfaceScale>0.46</fInterfaceScale>
-			<NIF>Art/Structures/Wonders/Krak/krak16.nif</NIF>
+			<fInterfaceScale>0.56</fInterfaceScale>
+			<NIF>Art/Structures/Wonders/krak_chevaliers/krak16.nif</NIF>
 			<KFM/>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,4,3</Button>
 		</BuildingArtInfo>
@@ -637,7 +637,7 @@
 			<bAnimated>0</bAnimated>
 			<fScale>1.2</fScale>
 			<fInterfaceScale>0.48</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Wharf/harbor.nif</NIF>
+			<NIF>Art/Structures/Buildings/harbor/harbor.nif</NIF>
 			<KFM/>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,6,5</Button>
 		</BuildingArtInfo>
@@ -647,7 +647,7 @@
 			<bAnimated>0</bAnimated>
 			<fScale>0.6</fScale>
 			<fInterfaceScale>2.0</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Harbor/med_harbor.nif</NIF>
+			<NIF>Art/Structures/Buildings/harbor/harbor.nif</NIF>
 			<KFM/>
 			<Button>,-,Art/Interface/Buttons/Buildings_Atlas.dds,3,11</Button>
 		</BuildingArtInfo>
@@ -979,7 +979,7 @@
 			<bAnimated>0</bAnimated>
 			<fScale>0.6</fScale>
 			<fInterfaceScale>2.0</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Venetian_Arsenal/Harbor.nif</NIF>
+			<NIF>Art/Structures/Buildings/Venetian_Arsenal/med_harbor.nif</NIF>
 			<KFM/>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,6,1</Button>
 		</BuildingArtInfo>
@@ -1199,7 +1199,7 @@
 			<Type>ART_DEF_BUILDING_PROTESTANT_CATHEDRAL</Type>
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>0</bAnimated>
-			<fScale>1.94</fScale>
+			<fScale>2.04</fScale>
 			<fInterfaceScale>0.38</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Protestant_Cathedral/cathedral.nif</NIF>
 			<KFM/>
@@ -1289,7 +1289,7 @@
 			<Type>ART_DEF_BUILDING_CATHOLIC_CATHEDRAL</Type>
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>0</bAnimated>
-			<fScale>1.94</fScale>
+			<fScale>2.04</fScale>
 			<fInterfaceScale>0.38</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Catholic_Cathedral/cathedral.nif</NIF>
 			<KFM/>
@@ -1492,59 +1492,59 @@
 			<Type>ART_DEF_BUILDING_SCOTTISH_SHIELING</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
-			<fScale>0.7</fScale>
-			<fInterfaceScale>1.25</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Smokehouse/smokehouse.nif</NIF>
+			<fScale>0.72</fScale>
+			<fInterfaceScale>0.69</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/scottish_shieling/NA_admiralty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/scotland_shieling.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_DENMARK_RESEARCH_INSTITUTE</Type>
-			<LSystem>LSYSTEM_1x1</LSystem>
+			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
-			<fScale>1.1</fScale>
-			<fInterfaceScale>0.93</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Observatory/Observatory.nif</NIF>
+			<fScale>0.34</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/danish_research_institute/indepen09.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/denmark_research_institute.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_NOVGOROD_KONETS</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
-			<bAnimated>0</bAnimated>
-			<fScale>1.02</fScale>
-			<fInterfaceScale>0.58</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Guild_Hall/hall.nif</NIF>
+			<bAnimated>1</bAnimated>
+			<fScale>19.2</fScale>
+			<fInterfaceScale>0.66</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/novgorod_konets/HumanWoodExport.NIF</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/novgorod_konets.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ARAGON_SEAPORT</Type>
-			<LSystem>LSYSTEM_COAST</LSystem>
+			<LSystem>LSYSTEM_HARBOR</LSystem>
 			<bAnimated>0</bAnimated>
-			<fScale>2.38</fScale>
-			<fInterfaceScale>0.48</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Norse_Trading_Post/Viking_Post.nif</NIF>
+			<fScale>0.6</fScale>
+			<fInterfaceScale>2.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Venetian_Arsenal/med_harbor.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/aragon_seaport.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MOROCCO_KASBAH</Type>
-			<LSystem>LSYSTEM_CELTIC_DUN</LSystem>
+			<LSystem>LSYSTEM_KASBAH</LSystem>
 			<bAnimated>0</bAnimated>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>0.4</fInterfaceScale>
+			<fScale>0.86</fScale>
+			<fInterfaceScale>0.58</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Celtic_Dun/Celtic_Dun_Civilopedia.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/morocco_kasbah.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PRUSSIA_PUBLIC_SCHOOL</Type>
-			<LSystem>LSYSTEM_1x1</LSystem>
+			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
-			<fScale>1.1</fScale>
-			<fInterfaceScale>0.93</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Observatory/Observatory.nif</NIF>
+			<fScale>0.64</fScale>
+			<fInterfaceScale>0.55</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/prussian_public_school/west_admiralty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/prussia_public_school.dds</Button>
 		</BuildingArtInfo>
