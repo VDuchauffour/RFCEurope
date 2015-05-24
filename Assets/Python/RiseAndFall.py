@@ -2287,7 +2287,7 @@ class RiseAndFall:
 			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iDenmarkHuskarl, iCiv, tPlot, 4)
-			tSeaPlot = self.findSeaPlots((61,56), 2)
+			tSeaPlot = self.findSeaPlots((60,57), 2)
 			if ( tSeaPlot ):
 				pDenmark.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
 				pDenmark.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ESCORT_SEA, DirectionTypes.DIRECTION_SOUTH)
