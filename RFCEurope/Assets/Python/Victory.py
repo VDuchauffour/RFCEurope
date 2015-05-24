@@ -1492,7 +1492,7 @@ class Victory:
 			else:
 				pMoscow.setUHV( 0, 0 )
 
-		# UHV 2: Get 20% land
+		# UHV 2: Control at least 20% of Europe
 		if ( pMoscow.getUHV( 1 ) == -1 ):
 			totalLand = gc.getMap().getLandPlots()
 			RussianLand = pMoscow.getTotalLand()
