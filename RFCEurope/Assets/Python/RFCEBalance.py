@@ -994,7 +994,6 @@ class RFCEBalance:
 		#3MiroMercs: set the merc promotion
 		gc.setMercPromotion( xml.iPromotionMerc )
 
-
 		for iCiv in range( iNumPlayers ):
 			#print( "  sw: ",iCiv )
 			gc.setStartingWorkers( iCiv, con.tStartingWorkers[iCiv] )
