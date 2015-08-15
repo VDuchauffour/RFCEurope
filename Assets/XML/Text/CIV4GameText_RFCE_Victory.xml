@@ -1459,13 +1459,13 @@
 		<Portuguese>Best competitor</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UHV_COMPETITOR</Tag>
-		<English>Main competitor</English>
-		<French>Main competitor</French>
-		<German>Main competitor</German>
-		<Italian>Main competitor</Italian>
-		<Spanish>Main competitor</Spanish>
-		<Portuguese>Main competitor</Portuguese>
+		<Tag>TXT_KEY_UHV_PART</Tag>
+		<English>Subvictory</English>
+		<French>Subvictory</French>
+		<German>Subvictory</German>
+		<Italian>Subvictory</Italian>
+		<Spanish>Subvictory</Spanish>
+		<Portuguese>Subvictory</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DQ_LEADER_NAME_1</Tag>
