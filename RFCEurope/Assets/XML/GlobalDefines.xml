@@ -1431,7 +1431,7 @@
 	</Define>
 	<Define> <!-- Merijn: This causes the annoying CTD -->
 		<DefineName>MIN_CITY_ATTACK_MODIFIER_FOR_SIEGE_TOWER</DefineName>
-		<iDefineIntVal>999</iDefineIntVal>
+		<iDefineIntVal>10</iDefineIntVal>
 	</Define>
 	<!-- Each 'whatever' modifies cost of espionage Missions by this % -->
 	<Define>
