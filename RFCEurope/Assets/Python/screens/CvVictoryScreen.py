@@ -107,15 +107,15 @@ class CvVictoryScreen:
 		self.W_UHV1 = 1010
 		self.H_UHV1 = 120
 
-		self.X_UHV2 = 10
-		self.Y_UHV2 = 470
-		self.W_UHV2 = 1010
-		self.H_UHV2 = 120
+		self.X_UHV2 = self.X_UHV1
+		self.Y_UHV2 = self.Y_UHV1 + 120
+		self.W_UHV2 = self.W_UHV1
+		self.H_UHV2 = self.H_UHV1
 
-		self.X_UHV3 = 10
-		self.Y_UHV3 = 590
-		self.W_UHV3 = 1010
-		self.H_UHV3 = 120
+		self.X_UHV3 = self.X_UHV1
+		self.Y_UHV3 = self.Y_UHV2 + 120
+		self.W_UHV3 = self.W_UHV1
+		self.H_UHV3 = self.H_UHV1
 
 	def getScreen(self):
 		return CyGInterfaceScreen(self.SCREEN_NAME, self.screenId)
@@ -978,6 +978,7 @@ class CvVictoryScreen:
 		sText3 = ""
 		#UHV1
 		sText1 += self.getProvinceString(vic.tArabiaControlI)
+		#sText1 += self.getMultiProvinceString([(vic.tArabiaControlI, xml.i955AD), (vic.tArabiaControlII, xml.i1291AD)])
 		#UHV2
 		sText2 += self.getProvinceString(vic.tArabiaControlII)
 		#UHV3
@@ -1050,7 +1051,7 @@ class CvVictoryScreen:
 		sText2 = ""
 		sText3 = ""
 		#UHV1
-		iCulture = pPlayer.getUHVCounter( 0 ) + pPlayer.countCultureProduced()
+		iCulture = pPlayer.getUHVCounter( 0 )
 		sText1 += localText.getText("TXT_KEY_UHV_CULTURE",()) + ": " + self.determineColor(iCulture >= 10000, str(iCulture))
 		#UHV2
 		sText2 += self.getProvinceString(vic.tBurgundyControl)
@@ -1554,7 +1555,7 @@ class CvVictoryScreen:
 		iConstantinopleOwner = gc.getMap().plot( tConstantinople[0], tConstantinople[1] ).getPlotCity().getOwner()
 		if iNumAccess > 0 or iConstantinopleOwner == iPlayer:
 			bColor = True
-		sText3 += localText.getText("TXT_KEY_CITY_NAME_CONSTANTINOPLE",()) + ": " + self.determineColor(bColor, str(iNumAccess))
+		sText3 += localText.getText("TXT_KEY_BONUS_ACCESS",()) + ": " + self.determineColor(bColor, str(iNumAccess))
 		if self.checkCity(tConstantinople, con.iMoscow, localText.getText("TXT_KEY_CITY_NAME_CONSTANTINOPLE",()), True, True) == -1:
 			sText3 += "\n" + localText.getText("TXT_KEY_UHV_CONTROLLER_OF",()) + " " + localText.getText("TXT_KEY_CITY_NAME_CONSTANTINOPLE",()) + " : " + self.determineColor(bColor, gc.getPlayer(iConstantinopleOwner).getName())
 		else:
@@ -1587,7 +1588,7 @@ class CvVictoryScreen:
 	def getBaseString(self, iUHV):
 		pPlayer = gc.getPlayer(self.iActivePlayer)
 		iGoal = pPlayer.getUHV( iUHV )
-		# 3Miro: I don't undestand how strings in C++ and Python work. For some reason, I managed to get C++ to return a unicode string
+		# 3Miro: I don't understand how strings in C++ and Python work. For some reason, I managed to get C++ to return a unicode string
 		#	just as it would on another alphabet. I had to "Typecast" the string to ASCII to get it to register in the text manager
 		if ( iGoal == 1 ):
 			sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.HAPPY_CHAR))) + localText.getText(pPlayer.getUHVDescription(iUHV).encode('ascii', 'replace'),())
@@ -1620,6 +1621,18 @@ class CvVictoryScreen:
 		sString = self.getBaseString(2)
 		screen.addMultilineText("Child" + self.UHV3_ID, sString, self.X_UHV3+6, self.Y_UHV3+14, self.W_UHV3-12, self.H_UHV3-26, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 
+	def getMultiProvinceString(self, lVictories):
+		iGameTurn = gc.getGame().getGameTurn()
+		sString = "" 
+		for iGoal in range(len(lVictories)):
+			if iGoal > 0:
+				sString += "\n\n"
+			sString += localText.getText("TXT_KEY_UHV_PART",()) + " " + str(iGoal+1) + "\n"
+			if iGameTurn > lVictories[iGoal][1]:
+				sString += localText.getText("TXT_KEY_VICTORY_SCREEN_ACCOMPLISHED",())		
+			else:
+				sString += self.getProvinceString(lVictories[iGoal][0])
+		return sString
 
 	def getProvinceString(self, tProvsToCheck, tCount = (False, 0)):
 		sStringConq = localText.getText("TXT_KEY_UHV_CONQUERED",()) + ":"
@@ -1685,7 +1698,7 @@ class CvVictoryScreen:
 
 	def getReligionProvinceString(self, tProvsToCheck, iReligion, iFunction):
 		#iFuction == 1 = provinceIsSpreadReligion (Cordoba 3rd UHV)
-		#iFuction == 2  = provinceIsConvertReligion (Spain 1st UHV)
+		#iFuction == 2 = provinceIsConvertReligion (Spain 1st UHV)
 		sAdjective = str(gc.getReligionInfo(iReligion).getAdjectiveKey())
 		sStringSpread = localText.getText(sAdjective,()) + ":"
 		sStringMiss = localText.getText("TXT_KEY_UHV_NOT_YET",()) + ":"
