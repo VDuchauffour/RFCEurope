@@ -149,6 +149,7 @@ BeginPlayer
 	LeaderType=LEADER_CHARLEMAGNE
 	CivType=CIVILIZATION_FRANCE
 	PlayableCiv=1
+	StateReligion=RELIGION_CATHOLICISM
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
@@ -164,6 +165,7 @@ BeginPlayer
 	LeaderType=LEADER_SIMEON
 	CivType=CIVILIZATION_BULGARIA
 	PlayableCiv=1
+	StateReligion=RELIGION_ORTHODOXY
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
@@ -179,6 +181,7 @@ BeginPlayer
 	LeaderType=LEADER_ENRICO_DANDOLO
 	CivType=CIVILIZATION_VENEZIA
 	PlayableCiv=1
+	StateReligion=RELIGION_CATHOLICISM
 	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_MERCHANT_REPUBLIC
 	Handicap=HANDICAP_PRINCE
 EndPlayer
@@ -187,6 +190,7 @@ BeginPlayer
 	LeaderType=LEADER_OTTO_WILLIAM
 	CivType=CIVILIZATION_BURGUNDY
 	PlayableCiv=1
+	StateReligion=RELIGION_CATHOLICISM
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
@@ -194,6 +198,7 @@ BeginPlayer
 	LeaderType=LEADER_OTTO
 	CivType=CIVILIZATION_GERMANY
 	PlayableCiv=1
+	StateReligion=RELIGION_CATHOLICISM
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
@@ -201,6 +206,7 @@ BeginPlayer
 	LeaderType=LEADER_RURIK
 	CivType=CIVILIZATION_NOVGOROD
 	PlayableCiv=1
+	StateReligion=RELIGION_ORTHODOXY
 	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_BUREAUCRACY
 	Handicap=HANDICAP_PRINCE
 EndPlayer
@@ -230,6 +236,7 @@ BeginPlayer
 	LeaderType=LEADER_FERDINAND_III
 	CivType=CIVILIZATION_SPAIN
 	PlayableCiv=1
+	StateReligion=RELIGION_CATHOLICISM
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
@@ -244,6 +251,7 @@ BeginPlayer
 	LeaderType=LEADER_ROBERT_THE_BRUCE
 	CivType=CIVILIZATION_SCOTLAND
 	PlayableCiv=1
+	StateReligion=RELIGION_CATHOLICISM
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
@@ -251,6 +259,7 @@ BeginPlayer
 	LeaderType=LEADER_MIESZKO
 	CivType=CIVILIZATION_POLAND
 	PlayableCiv=1
+	StateReligion=RELIGION_CATHOLICISM
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
@@ -258,6 +267,7 @@ BeginPlayer
 	LeaderType=LEADER_EMBRIACO
 	CivType=CIVILIZATION_GENOA
 	PlayableCiv=1
+	StateReligion=RELIGION_CATHOLICISM
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
@@ -265,6 +275,7 @@ BeginPlayer
 	LeaderType=LEADER_YAQUB_AL_MANSUR
 	CivType=CIVILIZATION_MOROCCO
 	PlayableCiv=1
+	StateReligion=RELIGION_ISLAM
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
@@ -272,6 +283,7 @@ BeginPlayer
 	LeaderType=LEADER_WILLIAM
 	CivType=CIVILIZATION_ENGLAND
 	PlayableCiv=1
+	StateReligion=RELIGION_CATHOLICISM
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
@@ -279,6 +291,7 @@ BeginPlayer
 	LeaderType=LEADER_AFONSO
 	CivType=CIVILIZATION_PORTUGAL
 	PlayableCiv=1
+	StateReligion=RELIGION_CATHOLICISM
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
@@ -286,6 +299,7 @@ BeginPlayer
 	LeaderType=LEADER_JAMES_I
 	CivType=CIVILIZATION_ARAGON
 	PlayableCiv=1
+	StateReligion=RELIGION_CATHOLICISM
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
@@ -293,6 +307,7 @@ BeginPlayer
 	LeaderType=LEADER_MAGNUS_LADULAS
 	CivType=CIVILIZATION_SWEDEN
 	PlayableCiv=1
+	StateReligion=RELIGION_CATHOLICISM
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
@@ -316,6 +331,7 @@ BeginPlayer
 	LeaderType=LEADER_MAXIMILIAN
 	CivType=CIVILIZATION_AUSTRIA
 	PlayableCiv=1
+	StateReligion=RELIGION_CATHOLICISM
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
@@ -331,6 +347,7 @@ BeginPlayer
 	LeaderType=LEADER_IVAN_IV
 	CivType=CIVILIZATION_MOSCOW
 	PlayableCiv=1
+	StateReligion=RELIGION_ORTHODOXY
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
