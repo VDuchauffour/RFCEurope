@@ -326,6 +326,8 @@ Changes for RFCE 1.3:
 		- Updated Dutch Dawn of Man text
 		- New DoM text for Scotland (by gilgames)
 		- Switched to CE instead of AD for non-christian civs
+		- Germany and Venice start with missionaries
+		- Civs start with a state religion corresponding to their spawning missionaries (no first turn anarchy required anymore)
 
 	Art updates:
 		- New art for Isabella (Spain), Casimir III (Poland), Ivan IV (Muscovy), Simeon I (Bulgaria), Ivan Asen (Bulgaria)
