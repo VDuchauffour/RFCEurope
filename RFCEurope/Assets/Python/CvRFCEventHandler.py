@@ -263,26 +263,22 @@ class CvRFCEventHandler:
 				self.crusade.success( playerType )
 
 		# Sedna17: code for Krak des Chevaliers
-		bKrak = False
 		if (bConquest):
 			iNewOwner = city.getOwner()
 			pNewOwner = gc.getPlayer(iNewOwner)
 			if pNewOwner.countNumBuildings(xml.iKrakDesChevaliers) > 0:
-				bKrak = True
-
-		if bKrak:
-			if iNewOwner == con.iMorocco:
-				city.setHasRealBuilding(xml.iMorocccoKasbah, True)
-			else:
-				city.setHasRealBuilding(xml.iWalls, True)
-			if iNewOwner == con.iSpain:
-				city.setHasRealBuilding(xml.iSpanishCitadel, True)
-			elif iNewOwner == con.iMoscow:
-				city.setHasRealBuilding(xml.iMoscowKremlin, True)
-			elif iNewOwner == con.iHungary:
-				city.setHasRealBuilding(xml.iHungarianStronghold, True)
-			else:
-				city.setHasRealBuilding(xml.iCastle, True)
+				if iNewOwner == con.iMorocco:
+					city.setHasRealBuilding(xml.iMorocccoKasbah, True)
+				else:
+					city.setHasRealBuilding(xml.iWalls, True)
+				if iNewOwner == con.iSpain:
+					city.setHasRealBuilding(xml.iSpanishCitadel, True)
+				elif iNewOwner == con.iMoscow:
+					city.setHasRealBuilding(xml.iMoscowKremlin, True)
+				elif iNewOwner == con.iHungary:
+					city.setHasRealBuilding(xml.iHungarianStronghold, True)
+				else:
+					city.setHasRealBuilding(xml.iCastle, True)
 		# Sedna17, end
 
 		# 3Miro: National wonders and city acquire by trade

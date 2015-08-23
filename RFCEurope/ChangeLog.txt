@@ -108,8 +108,8 @@ Changes for RFCE 1.3:
 		Start Date: 960
 		Leaders: Robert the Bruce (1274-1329), James IV (1473-1513)
 		UP: The Power of Defiance: When one of your cities is conquered all your other cities get free defenders; lower stability hit from losing a city
-		UHV1: Fortification: Have 10 Forts and 4 Castles in 1296
-		UHV2: The Auld Alliance: Have 1000 Attitude points with France by 1560
+		UHV1: Fortification: Have 10 Forts and 4 Castles by 1296
+		UHV2: The Auld Alliance: Have 2500 Attitude points with France by 1560
 		UHV3: The Celtic Union: Control Scotland, the Isles, Ireland, Wales and Bretagne in 1700
 		UU: Sheltron (Guisarmier)
 		UB: Shieling (Smokehouse)
@@ -194,6 +194,7 @@ Changes for RFCE 1.3:
 		- Byzantine 2nd UHV also needs Thrace, Thessaloniki, Moesia, Macedonia, Serbia, Arberia, Epirus, Thessaly and Morea provinces
 		- Some of the UHVs are coded more efficiently
 		- Detailed info for UHV progress for all civs, in the Victory Screen (F8)
+		- Removed some detailed info from the UHV texts (details are in are in the victory screen)
 		- New UHV help for the 1st Polish UHV
 		- All UHV colony checks are handled on project built (instead of every turn), should make checks much faster (except for the Spanish UHV, which is only checked on a given turn)
 		- Trading companies don't count as colonies for the UHV anymore
@@ -328,6 +329,7 @@ Changes for RFCE 1.3:
 		- Switched to CE instead of AD for non-christian civs
 		- Germany and Venice start with missionaries
 		- Civs start with a state religion corresponding to their spawning missionaries (no first turn anarchy required anymore)
+		- Burgundy starts preset civics
 
 	Art updates:
 		- New art for Isabella (Spain), Casimir III (Poland), Ivan IV (Muscovy), Simeon I (Bulgaria), Ivan Asen (Bulgaria)

@@ -3692,11 +3692,11 @@
 			<FreeTechs/>
 			<DisableTechs/>
 			<InitialCivics>
-				<CivicType>CIVIC_DESPOTISM</CivicType>
-				<CivicType>CIVIC_TRIBAL_LAW</CivicType>
-				<CivicType>CIVIC_TRIBALISM</CivicType>
-				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
-				<CivicType>CIVIC_PAGANISM</CivicType>
+				<CivicType>CIVIC_FEUDAL_MONARCHY</CivicType>
+				<CivicType>CIVIC_FEUDAL_LAW</CivicType>
+				<CivicType>CIVIC_SERFDOM</CivicType>
+				<CivicType>CIVIC_MANORIALISM</CivicType>
+				<CivicType>CIVIC_STATE_RELIGION</CivicType>
 				<!-- Rhye -->
 				<CivicType>CIVIC_SUBJUGATION</CivicType>
 			</InitialCivics>

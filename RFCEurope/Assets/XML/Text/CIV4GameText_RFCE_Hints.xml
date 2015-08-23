@@ -1139,4 +1139,13 @@
 		<Spanish>Pulsa [CTRL + H] para seleccionar todas las unidades heridas en una casilla.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HINT_INTERFACE_68</Tag>
+		<English>Open the victory screen to view more detailed information about the Unique Historical Victory.</English>
+		<French>Open the victory screen to view more detailed information about the Unique Historical Victory.</French>
+		<German>Open the victory screen to view more detailed information about the Unique Historical Victory.</German>
+		<Italian>Open the victory screen to view more detailed information about the Unique Historical Victory.</Italian>
+		<Spanish>Open the victory screen to view more detailed information about the Unique Historical Victory.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
 </Civ4GameText>

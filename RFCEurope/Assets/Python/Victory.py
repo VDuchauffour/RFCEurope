@@ -1109,7 +1109,7 @@ class Victory:
 	def checkScotland( self, iGameTurn ):
 
 		# UHV 1: Have 10 Forts and 4 Castles in 1296.
-		if ( iGameTurn == xml.i1296AD ):
+		if ( iGameTurn <= xml.i1296AD and pScotland.getUHV( 0 ) == -1):
 			iForts = pScotland.getImprovementCount( xml.iImprovementFort )
 			iCastles = pScotland.countNumBuildings( xml.iCastle )
 			print("Forts:",iForts,"Castles:",iCastles)
@@ -1119,7 +1119,7 @@ class Victory:
 				pScotland.setUHV( 0, 0 )
 
 		# UHV 2: Have 1000 attitude points with France by 1560. Attitude points go up every turn depending on relations
-		if ( iGameTurn <= xml.i1560AD and pFrankia.isAlive()):
+		if ( iGameTurn <= xml.i1560AD and pFrankia.isAlive() and pScotland.getUHV( 1 ) == -1):
 			# -2 for Furious -1 for Annoyed 0 for Cautious 1 for Pleased 2 for Friendly
 			iScore = pFrankia.AI_getAttitude(iScotland) - 2
 			# Agreements
@@ -1147,7 +1147,7 @@ class Victory:
 			iOldScore = pScotland.getUHVCounter(1)
 			iNewScore = iOldScore + iScore
 			pScotland.setUHVCounter(1, iNewScore)
-			if(iNewScore >= 1000):
+			if(iNewScore >= 2500):
 				pScotland.setUHV( 1, 1 )
 		elif ( iGameTurn > xml.i1560AD and pScotland.getUHV( 1 ) == -1 ):
 			pScotland.setUHV( 1, 0 )
