@@ -1103,6 +1103,7 @@ class CvVictoryScreen:
 		sText2 = ""
 		sText3 = ""
 		#UHV1
+		sText1 += localText.getText("TXT_KEY_UHV_NOR1_HELP",()) + "\n"
 		iCount = pPlayer.getUHVCounter( 2 )
 		sText1 += self.getCounterString(iCount, 80)
 		#UHV2
@@ -1258,8 +1259,9 @@ class CvVictoryScreen:
 		sText1 += sScotlandFort + self.determineColor(iScotlandFort >= 10, str(iScotlandFort))
 		sText1 += "\n" + sScotlandCastle + self.determineColor(iScotlandCastle >= 4, str(iScotlandCastle))
 		#UHV2
+		sText2 += localText.getText("TXT_KEY_UHV_SCO2_HELP",()) + "\n"
 		iScore = pPlayer.getUHVCounter(1)
-		sText2 += self.getCounterString(iScore, 1000)
+		sText2 += self.getCounterString(iScore, 2500)
 		#UHV3
 		sText3 += self.getProvinceString(vic.tScotlandControl)
 		lHelpTexts = [sText1, sText2, sText3]
@@ -1325,10 +1327,9 @@ class CvVictoryScreen:
 		#UHV1
 		sText1 += self.getProvinceString(vic.tGenoaControl)
 		#UHV2
-		iBankCount = pPlayer.countNumBuildings(xml.iGenoaBank)
-		iCorpCount = 0
-		for iCorp in range(xml.iCorporation1, xml.iCorporation7):
-			iCorpCount += pPlayer.countNumBuildings(iCorp)
+		iCounter = pPlayer.getUHVCounter( 1 )
+		iCorpCount = iCounter % 100
+		iBankCount = iCounter / 100
 		sText2 += localText.getText("TXT_KEY_CONCEPT_CORPORATIONS",()) + ": " + self.determineColor(iCorpCount >= 2, str(iCorpCount))
 		sText2 += "\n" + localText.getText("TXT_KEY_BUILDING_GENOA_BANK",()) + ": " + self.determineColor(iBankCount >= 8, str(iBankCount))
 		#UHV3
@@ -1756,24 +1757,25 @@ class CvVictoryScreen:
 		iOwnRank = gc.getGame().getTeamRank(self.iActivePlayer)
 		sStringLower = localText.getText("TXT_KEY_UHV_LOWER_SCORE",()) + ":"
 		sStringHigher = localText.getText("TXT_KEY_UHV_HIGHER_SCORE",()) + ":"
-		for iTestPlayer in tCompetetors:
-			pTestPlayer = gc.getPlayer(iTestPlayer)
+		iGameTurn = gc.getGame().getGameTurn()
+		for iLoopPlayer in tCompetetors:
+			pTestPlayer = gc.getPlayer(iLoopPlayer)
 			sCivShortName = str(pTestPlayer.getCivilizationShortDescriptionKey())
-			if ( gc.getGame().getTeamRank(iTestPlayer) > iOwnRank ):
-				sStringLower += "  " + u"<color=0,255,0>%s</color>" %( localText.getText(sCivShortName,()) )
-			else:
+			if ( gc.getGame().getTeamRank(iLoopPlayer) < iOwnRank ) or iGameTurn <= con.tBirth[iLoopPlayer]:
 				sStringHigher += "  " + u"<color=208,0,0>%s</color>" %( localText.getText(sCivShortName,()) )
+			else:
+				sStringLower += "  " + u"<color=0,255,0>%s</color>" %( localText.getText(sCivShortName,()) )
 		sString = sStringLower + "\n" + sStringHigher
 		return sString
 
 	def ConquerOrVassal(self, lEnemies):
 		sStringConq = localText.getText("TXT_KEY_UHV_COLLAPSED_OR_VASSAL",()) + ":"
 		sStringMiss = localText.getText("TXT_KEY_UHV_NOT_YET",()) + ":"
+		iGameTurn = gc.getGame().getGameTurn()
 		for iEnemy in lEnemies:
 			teamOwn = gc.getTeam(self.iActivePlayer)
 			pEnemy = gc.getPlayer(iEnemy)
 			teamCiv = gc.getTeam(iEnemy)
-			iGameTurn = gc.getGame().getGameTurn()
 			sCivShortName = str(pEnemy.getCivilizationShortDescriptionKey())
 			if ( pEnemy.isAlive() and not teamCiv.isVassal( teamOwn.getID() ) ) or iGameTurn <= con.tBirth[iEnemy]:
 				sStringMiss += "  " + u"<color=208,0,0>%s</color>" %( localText.getText(sCivShortName,()) )
