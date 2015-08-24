@@ -1115,8 +1115,8 @@ class Victory:
 			print("Forts:",iForts,"Castles:",iCastles)
 			if( iForts >= 10 and iCastles >= 4 ):
 				pScotland.setUHV( 0, 1 )
-			else:
-				pScotland.setUHV( 0, 0 )
+		if ( iGameTurn == xml.i1296AD and pScotland.getUHV( 0 ) == -1):
+			pScotland.setUHV( 0, 0 )
 
 		# UHV 2: Have 1000 attitude points with France by 1560. Attitude points go up every turn depending on relations
 		if ( iGameTurn <= xml.i1560AD and pFrankia.isAlive() and pScotland.getUHV( 1 ) == -1):
