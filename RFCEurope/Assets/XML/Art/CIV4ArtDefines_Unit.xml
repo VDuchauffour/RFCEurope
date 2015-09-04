@@ -4286,9 +4286,9 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/Muslim GreatPeople/Prophet/GreatProphet.nif</NIF>
-			<KFM>Art/Units/Muslim GreatPeople/Prophet/GreatProphet.kfm</KFM>
-			<SHADERNIF>Art/Units/Muslim GreatPeople/Prophet/GreatProphet_FX.nif</SHADERNIF>
+			<NIF>Art/Units/artstyle_arab/Muslim GreatPeople/Prophet/GreatProphet.nif</NIF>
+			<KFM>Art/Units/artstyle_arab/Muslim GreatPeople/Prophet/GreatProphet.kfm</KFM>
+			<SHADERNIF>Art/Units/artstyle_arab/Muslim GreatPeople/Prophet/GreatProphet_FX.nif</SHADERNIF>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
 				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
@@ -4310,9 +4310,9 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/Muslim GreatPeople/Artist/GreatArtist.nif</NIF>
-			<KFM>Art/Units/Muslim GreatPeople/Artist/GreatArtist.kfm</KFM>
-			<SHADERNIF>Art/Units/Muslim GreatPeople/Artist/GreatArtist_FX.nif</SHADERNIF>
+			<NIF>Art/Units/artstyle_arab/Muslim GreatPeople/Artist/GreatArtist.nif</NIF>
+			<KFM>Art/Units/artstyle_arab/Muslim GreatPeople/Artist/GreatArtist.kfm</KFM>
+			<SHADERNIF>Art/Units/artstyle_arab/Muslim GreatPeople/Artist/GreatArtist_FX.nif</SHADERNIF>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
 				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
@@ -4334,9 +4334,9 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/Muslim GreatPeople/Scientist/GreatScientistAncient.nif</NIF>
-			<KFM>Art/Units/Muslim GreatPeople/Scientist/GreatScientistAncient.kfm</KFM>
-			<SHADERNIF>Art/Units/Muslim GreatPeople/Scientist/GreatScientistAncient_FX.nif</SHADERNIF>
+			<NIF>Art/Units/artstyle_arab/Muslim GreatPeople/Scientist/GreatScientistAncient.nif</NIF>
+			<KFM>Art/Units/artstyle_arab/Muslim GreatPeople/Scientist/GreatScientistAncient.kfm</KFM>
+			<SHADERNIF>Art/Units/artstyle_arab/Muslim GreatPeople/Scientist/GreatScientistAncient_FX.nif</SHADERNIF>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
 				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
@@ -4358,9 +4358,9 @@
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/Muslim GreatPeople/Merchant/GreatMerchantAncient.nif</NIF>
+			<NIF>Art/Units/artstyle_arab/Muslim GreatPeople/Merchant/GreatMerchantAncient.nif</NIF>
 			<KFM>Art/Units/GreatPeople/Merchant/GreatMerchantAncient.kfm</KFM>
-			<SHADERNIF>Art/Units/Muslim GreatPeople/Merchant/GreatMerchantAncient_FX.nif</SHADERNIF>
+			<SHADERNIF>Art/Units/artstyle_arab/Muslim GreatPeople/Merchant/GreatMerchantAncient_FX.nif</SHADERNIF>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/GreatMerchantShadow.nif</ShadowNIF>
 				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
@@ -4382,9 +4382,9 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/Muslim GreatPeople/Engineer/Engineer.nif</NIF>
-			<KFM>Art/Units/Muslim GreatPeople/Engineer/Engineer.kfm</KFM>
-			<SHADERNIF>Art/Units/Muslim GreatPeople/Engineer/Engineer_FX.nif</SHADERNIF>
+			<NIF>Art/Units/artstyle_arab/Muslim GreatPeople/Engineer/Engineer.nif</NIF>
+			<KFM>Art/Units/artstyle_arab/Muslim GreatPeople/Engineer/Engineer.kfm</KFM>
+			<SHADERNIF>Art/Units/artstyle_arab/Muslim GreatPeople/Engineer/Engineer_FX.nif</SHADERNIF>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
 				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
@@ -4406,9 +4406,9 @@
 			<fInterfaceScale>1.1</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/Muslim GreatPeople/Great Spy/Great_Spy_Ancient.nif</NIF>
-			<KFM>Art/Units/Muslim GreatPeople/Great Spy/Great_Spy_Ancient.kfm</KFM>
-			<SHADERNIF>Art/Units/Muslim GreatPeople/Great Spy/Great_Spy_Ancient_FX.nif</SHADERNIF>
+			<NIF>Art/Units/artstyle_arab/Muslim GreatPeople/Great Spy/Great_Spy_Ancient.nif</NIF>
+			<KFM>Art/Units/artstyle_arab/Muslim GreatPeople/Great Spy/Great_Spy_Ancient.kfm</KFM>
+			<SHADERNIF>Art/Units/artstyle_arab/Muslim GreatPeople/Great Spy/Great_Spy_Ancient_FX.nif</SHADERNIF>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
 				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
