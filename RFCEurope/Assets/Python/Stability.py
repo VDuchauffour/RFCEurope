@@ -51,7 +51,7 @@ class Stability:
 		iHandicap = gc.getGame().getHandicapType()
 		if (iHandicap == 0):
 			gc.getPlayer( utils.getHumanID() ).changeStabilityBase( iCathegoryExpansion, 6 )
-		elif (iHandicap == 0):
+		elif (iHandicap == 1):
 			gc.getPlayer( utils.getHumanID() ).changeStabilityBase( iCathegoryExpansion, 2 )
 
 		# Absinthe: Stability is accounted properly for stuff preplaced in the scenario file - from RFCE++
@@ -229,12 +229,12 @@ class Stability:
 			if( owner == con.iScotland ): #Scotland UP part 2
 				pOwner.changeStabilityBase( iCathegoryExpansion, -5 )
 				pOwner.setStabilitySwing( pOwner.getStabilitySwing() - 5 )
+			elif ( gc.hasUP(owner,con.iUP_Emperor) ): # If Byzantium loses Constantinople, they should lose all non-core cities
+				pOwner.changeStabilityBase( iCathegoryExpansion, -20 )
+				pOwner.setStabilitySwing( pOwner.getStabilitySwing() - 20 )
 			else:
 				pOwner.changeStabilityBase( iCathegoryExpansion, -10 )
 				pOwner.setStabilitySwing( pOwner.getStabilitySwing() - 10 )
-				if ( gc.hasUP(owner,con.iUP_Emperor) ): # If Byzantium loses Constantinople, they should lose all non-core cities
-					pOwner.changeStabilityBase( iCathegoryExpansion, -10 )
-					pOwner.setStabilitySwing( pOwner.getStabilitySwing() - 10 )
 		self.recalcEpansion( pOwner )
 		self.recalcEpansion( pConq )
 
@@ -359,7 +359,7 @@ class Stability:
 
 	def checkImplosion(self, iGameTurn):
 		if (iGameTurn > 10 and iGameTurn % 6 == 3):
-			for iPlayer in range(iNumPlayers):
+			for iPlayer in range(iNumPlayers - 1):
 				pPlayer = gc.getPlayer(iPlayer)
 				if (pPlayer.isAlive() and iGameTurn >= con.tBirth[iPlayer] + 10):
 					# Absinthe: if stability is less than -3, there is a chance that the secession/revolt or collapse mechanics start
@@ -384,7 +384,6 @@ class Stability:
 										CyInterface().addMessage(iPlayer, True, con.iDuration, CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_HUMAN", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
 										utils.killAndFragmentCiv(iPlayer, False, True)
 										self.zeroStability( iPlayer )
-										pPlayer.changeStabilityBase( iCathegoryExpansion, -3 )
 						elif (pPlayer.getNumCities() > 4):
 							if (gc.getGame().getSorenRandNum(10, 'city secession') < 4): #40 chance for secession start
 								if (gc.getGame().getSorenRandNum(10, 'city secession') < -3 - iStability): #10% at -4, increasing by 10% with each point (100% with -13 or less)
@@ -400,7 +399,6 @@ class Stability:
 										CyInterface().addMessage(iPlayer, True, con.iDuration, CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_HUMAN", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
 										utils.killAndFragmentCiv(iPlayer, False, True)
 										self.zeroStability( iPlayer )
-										pPlayer.changeStabilityBase( iCathegoryExpansion, -3 )
 						elif (gc.getGame().getSorenRandNum(10, 'civ collapse') < 7  and iGameTurn >= con.tBirth[iPlayer] + 20): #70 chance for collapse start
 							if (gc.getGame().getSorenRandNum(10, 'civ collapse') < -1.5 - (iStability/2)): #10% at -4, increasing by 10% with 2 points (100% with -22 or less)
 								print ("COLLAPSE: CIVIL WAR", gc.getPlayer(iPlayer).getCivilizationAdjective(0))
@@ -412,7 +410,6 @@ class Stability:
 									CyInterface().addMessage(iPlayer, True, con.iDuration, CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_HUMAN", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
 									utils.killAndFragmentCiv(iPlayer, False, True)
 									self.zeroStability( iPlayer )
-									pPlayer.changeStabilityBase( iCathegoryExpansion, -3 )
 
 
 	def printStability(self, iGameTurn, iPlayer ):
@@ -447,7 +444,10 @@ class Stability:
 		iTotalHappy = pPlayer.calculateTotalCityHappiness() - pPlayer.calculateTotalCityUnhappiness()
 		iCityStability = 0
 		### For Debug Purposes, count individual contributions
-		iHappyStability = max( (iTotalHappy / pPlayer.getNumCities() - 1)/2, 0 ) # +k stability for an average city happiness of at least 2k+1
+		if ( pPlayer.getNumCities() == 0 ):
+			iHappyStability = 0
+		else:
+			iHappyStability = max( (iTotalHappy / pPlayer.getNumCities() - 1)/2, 0 ) # +k stability for an average city happiness of at least 2k+1
 		iHealthStability = 0
 		iHurryStability = 0
 		iMilitaryStability = 0
@@ -468,31 +468,40 @@ class Stability:
 				iHurryStability -= 1
 			if ( pCity.getNoMilitaryPercentAnger() > 0 ):
 				iMilitaryStability -= 1
-			if ( pCity.getWarWearinessPercentAnger() > 0 ):
+			# Absinthe: getWarWearinessPercentAnger is not a local variable for your cities, but a global one for your entire civ
+			#			thus it results in 1 instability for each city, if there is an ongoing war
+			if ( pCity.getWarWearinessPercentAnger() > 10 ):
 				iWarWStability -= 1
+			#print(" getWarWearinessPercentAnger_city: ",pCity.getWarWearinessPercentAnger())
+			#print(" getWarWearinessPercentAnger_player: ",pPlayer.getWarWearinessPercentAnger())
 			if ( iCivic4 != 24 ): # if not a Free religion
 				if ( ( not gc.hasUP( iPlayer, con.iUP_ReligiousTolerance )) and pCity.getNumForeignReligions() > 0 ):
 					if ( iCivic4 == 20 ): # pagans are a bit more tolerant
 						iReligionStability -= 1
 					else:
 						iReligionStability -= 2
+			#print(" iReligionStability: ",iReligionStability)
+			# Absinthe: -1 stability if own culture is less than 40% of total culture in a city, -2 stability if less than 20%
 			iTotalCulture = pCity.countTotalCultureTimes100()
 			if ( (iTotalCulture > 0) and ( (pCity.getCulture(iPlayer) * 10000) / iTotalCulture < 40 ) and ( not gc.hasUP( iPlayer, con.iUP_CulturalTolerance )) ):
 				iCultureStability -= 1
+				if ( (iTotalCulture > 0) and ( (pCity.getCulture(iPlayer) * 10000) / iTotalCulture < 20 ) and ( not gc.hasUP( iPlayer, con.iUP_CulturalTolerance )) ):
+					iCultureStability -= 1
+			#print(" iCultureStability: ",iCultureStability)
 		# Absinthe: persecution counter - cooldown is handled in Religions.checkTurn
-		#			1-5 means 1 instability, 6-10 means 2 instability, 11-15 means 3 instability, etc...
+		#			1-3 means 1 instability, 4-6 means 2 instability, 7-9 means 3 instability, etc...
 		iProsecutionCount = pPlayer.getProsecutionCount()
 		if ( iProsecutionCount > 0 ):
-			iReligionStability -= (iProsecutionCount + 4) / 5
+			iReligionStability -= (iProsecutionCount + 2) / 3
 		# Humans are far more competent then the AI, so the AI won't get all the penalties
 		if ( pPlayer.isHuman() ):
 			iCityStability += iHappyStability + iHealthStability + iReligionStability + iHurryStability + iCultureStability + iMilitaryStability
-			iCityStability += max( iWarWStability, -10 ) # max 10 instability from war weariness
+			iCityStability += max( iWarWStability/3 - 1, -10 ) # max 10 instability from war weariness
 			iCityStability = min( iCityStability, 8 ) # max 8 extra stability from cities - don't want to add too many bonuses for runaway civs
 		else:
 			iCityStability += max( iHappyStability, -3 ) + iHealthStability # AI keeps very unhappy cities
 			iCityStability += max( iReligionStability + iHurryStability, -7 ) + max( iCultureStability, -3 )
-			iCityStability += max( iMilitaryStability + iWarWStability, -3 )
+			iCityStability += max( iMilitaryStability + iWarWStability/3, -3 ) # AI is also bad at handling war weariness
 			iCityStability = min( max( iCityStability, -10 ), 8 )
 		iCityStability += pPlayer.getFaithBenefit( con.iFP_Stability )
 		#print(" City Stability for: ",iPlayer," Categories: ",iHappyStability,iHealthStability,iHurryStability,iMilitaryStability,iWarWStability,iReligionStability,iCultureStability)

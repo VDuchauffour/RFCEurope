@@ -186,14 +186,14 @@ class RFCEBalance:
 		gc.setProductionModifiersHu(iNorway,       125, 125, 100, 125 )
 		gc.setProductionModifiersAI(iDenmark,      100, 100, 100, 100 )
 		gc.setProductionModifiersHu(iDenmark,      100, 100, 100, 100 )
-		gc.setProductionModifiersAI(iVenecia,      100, 100, 100, 130 )
-		gc.setProductionModifiersHu(iVenecia,      100, 100, 100, 120 )
+		gc.setProductionModifiersAI(iVenecia,      100, 100, 100, 135 )
+		gc.setProductionModifiersHu(iVenecia,      100, 100, 100, 130 )
 		gc.setProductionModifiersAI(iNovgorod,     200, 150, 125, 150 )
 		gc.setProductionModifiersHu(iNovgorod,     150, 125, 125, 150 )
 		gc.setProductionModifiersAI(iKiev,         100, 125, 100, 150 )
 		gc.setProductionModifiersHu(iKiev,         125, 150, 125, 150 )
-		gc.setProductionModifiersAI(iHungary,      100, 100, 100, 130 )
-		gc.setProductionModifiersHu(iHungary,      125, 125, 100, 130 )
+		gc.setProductionModifiersAI(iHungary,      100, 100, 100, 140 )
+		gc.setProductionModifiersHu(iHungary,      125, 125, 100, 140 )
 		gc.setProductionModifiersAI(iGermany,      100, 100, 100, 130 )
 		gc.setProductionModifiersHu(iGermany,      125, 125, 125, 120 )
 		gc.setProductionModifiersAI(iScotland,     125, 125, 125, 125 )
@@ -233,10 +233,10 @@ class RFCEBalance:
 
 		#void setSupportModifiers( int iCiv, int iInflation, int iUnits, int iCityDist, int iCityNum, int iCivic );
 		# defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100, 100 )
-		gc.setSupportModifiersAI(iBurgundy,      10, 150,  80,  75, 110 )
-		gc.setSupportModifiersHu(iBurgundy,      10, 150,  80,  75, 110 )
-		gc.setSupportModifiersAI(iByzantium,     50, 150,  10,  10, 120 )
-		gc.setSupportModifiersHu(iByzantium,     50, 150,  10,  10, 120 )
+		gc.setSupportModifiersAI(iBurgundy,      10, 150,  60,  40, 100 )
+		gc.setSupportModifiersHu(iBurgundy,      10, 150,  60,  40, 100 )
+		gc.setSupportModifiersAI(iByzantium,     60, 150,  100,  75, 120 )
+		gc.setSupportModifiersHu(iByzantium,     60, 150,  80,  50, 120 )
 		gc.setSupportModifiersAI(iFrankia,       30, 120,  80,  35, 100 )
 		gc.setSupportModifiersHu(iFrankia,       30, 120,  80,  35, 100 )
 		gc.setSupportModifiersAI(iArabia,        30, 150,  70,  15, 120 )
@@ -283,8 +283,8 @@ class RFCEBalance:
 		gc.setSupportModifiersHu(iLithuania,     10,  85,  50,  25, 100 )
 		gc.setSupportModifiersAI(iAustria,       10,  65,  50,  25,  80 )
 		gc.setSupportModifiersHu(iAustria,       10,  65,  50,  25,  80 )
-		gc.setSupportModifiersAI(iTurkey,        30,  50,  10,  10, 100 )
-		gc.setSupportModifiersHu(iTurkey,        30,  50,  10,  10, 100 )
+		gc.setSupportModifiersAI(iTurkey,        30,  50,  50,  20, 100 )
+		gc.setSupportModifiersHu(iTurkey,        30,  50,  50,  20, 100 )
 		gc.setSupportModifiersAI(iSweden,        10,  75,  50,  25, 100 )
 		gc.setSupportModifiersHu(iSweden,        10,  75,  50,  25, 100 )
 		gc.setSupportModifiersAI(iDutch,         10,  50,  50,  50, 100 )
@@ -314,7 +314,7 @@ class RFCEBalance:
 		#3Miro: setGPModifier(iCiv,iVal) for each civ. The rate at which GP would appear. Same as growth.
 		# low percent means faster GP rate
 
-		#3Miro: setUnitSupportModifier(iCiv, iVal), set unit sipport modifiers for the player. Same as growth.
+		#3Miro: setUnitSupportModifier(iCiv, iVal), set unit support modifiers for the player. Same as growth.
 		# low percent means lower support cost)
 
 		#3Miro: setDistanceSupportModifier(iCiv,iVal), set modifiers for the distance to the capital support. Same as growth.
@@ -549,16 +549,16 @@ class RFCEBalance:
 		# iUP_CulturalTolerance. iParameter = 0 for no unhappiness or unhappiness = unhappiness / iParameter
 		# iUP_ReligiousTolerance. iParameter = 0 for no instability
 		# iUP_Conscription, iParameter = percent of foreign culture needed to draft + 100 * max number of units to draft per turn
-		# iUP_NoResistance, iParameter = 0 for no resistane or resistance turns = resistance turns / iParameter
+		# iUP_NoResistance, iParameter = 0 for no resistance or resistance turns = resistance turns / iParameter
 		# iUP_UnitProduction, iParameter = iRequiredTech * 100 + Percent ( 75% for 25% faster unit building)
 		# iUP_EnableCivic, iParameter = Civic5 * 100000000 + Civic4 * 1000000 + Civic3 * 10000 + Civic2 * 100 + Civic1, NOTE: also need to enable this in the WB, civic indexed by 0 is always available, civic5 cannot be bigger than 20
-		# iUP_TradeRoutes, iParameter = number of extra trade routes, NOTE: this must be syncronized with GlobalDefines.xml: max trade routes
+		# iUP_TradeRoutes, iParameter = number of extra trade routes, NOTE: this must be synchronized with GlobalDefines.xml: max trade routes
 		# iUP_ImprovementBonus, iParameter = iImprovement * 1000000 + iFoodBonus * 10000 + iProductionBonus * 100 + iCommerceBonus, bonuses are limited to (0-99)
 		# iUP_PromotionI, iParameter = the bonus promotion
 		# iUP_PromotionII, iParameter = the bonus promotion
 		# iUP_Inquisition, iParameter is not used
 		# iUP_CanEnterTerrain, iParameter is the terrain to enter
-		# iUP_Discoveru, iParameter = ColonyStart * 1000000 + ColonyEnd * 1000 + iModifier modifies the cost assosiated with all projects (iCost *= iModifier; iCost /= 100 )
+		# iUP_Discoveru, iParameter = ColonyStart * 1000000 + ColonyEnd * 1000 + iModifier modifies the cost associated with all projects (iCost *= iModifier; iCost /= 100 )
 		# iUP_EndlessLand, iParameter = percent change (i.e. upkeep *= iParameter, upkeep /= 100 )
 		# iUP_ForeignSea, use iParameter = 1
 		# iUP_Pious, whenever changeFaith( x ) is called, x is multiplied by iParameter

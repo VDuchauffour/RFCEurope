@@ -869,7 +869,7 @@ class RiseAndFall:
 		# Generic collapse: if 1/2 of the empire is lost in only a few turns (18 I think) = collapse
 		# Motherland collapse: if no city is in the core area and the number of cities in the normal area is less than the other's cities and have no vassal = collapse
 		# Secession: if stability is negative there is a chance (bigger chance with worse stability) for a random city to it's declare independence
-		if (iGameTurn >= 64 and iGameTurn % 5 == 0): #mainly for seljuks, mongols, timurids
+		if (iGameTurn >= 64 and iGameTurn % 5 == 0): #mainly for Seljuks, Mongols, Timurids
 			self.collapseByBarbs(iGameTurn)
 		if (iGameTurn >= 34 and iGameTurn % 16 == 0): #used to be 15 in vanilla
 			self.collapseGeneric(iGameTurn)
@@ -882,18 +882,18 @@ class RiseAndFall:
 		# 3Miro: this should not be called with high iNumDeadCivs*
 		# Sedna: This is one place to control the frequency of resurrection.
 		# Generally we want to allow Kiev, Bulgaria, Cordoba, Burgundy, Byzantium at least to be dead in late game without respawning.
-		# Absinthe: 12 and 8 for now, even with the new civs
-		iNumDeadCivs1 = 12 #5 in vanilla RFC, 8 in warlords RFC (that includes native and celt)
-		iNumDeadCivs2 = 8 #3 in vanilla RFC, 6 in Warlords RFC (where we must count natives and celts as dead too)
+		# Absinthe: was 12 and 8, we don't need too many dead civs
+		iNumDeadCivs1 = 10 #5 in vanilla RFC, 8 in warlords RFC (that includes native and celt)
+		iNumDeadCivs2 = 7 #3 in vanilla RFC, 6 in Warlords RFC (where we must count natives and celts as dead too)
 
 		iCiv = self.getSpecialRespawn( iGameTurn )
 		if ( iCiv > -1 ):
 			self.resurrection(iGameTurn,iCiv)
 		elif (gc.getGame().countCivPlayersEverAlive() - gc.getGame().countCivPlayersAlive() > iNumDeadCivs1):
-			if (iGameTurn % 18 == 11):
+			if (iGameTurn % 14 == 11):
 				self.resurrection(iGameTurn, -1)
 		elif (gc.getGame().countCivPlayersEverAlive() - gc.getGame().countCivPlayersAlive() > iNumDeadCivs2):
-			if (iGameTurn % 35 == 13):
+			if (iGameTurn % 31 == 13):
 				self.resurrection(iGameTurn, -1)
 		#lRespawnTurns = self.getAllRespawnTurns()
 		#print("Special Respawn Turns ",lRespawnTurns)
@@ -974,7 +974,7 @@ class RiseAndFall:
 			#print( " 3Miro: Called for - ",iPlayer," on turn ",iGameTurn )
 			#utils.setLastTurnAlive( iPlayer, iGameTurn )
 
-		# Absinthe: Another English cheat, extra defenders and defensive buildings in Normandy some turns after spawn - from RFCE++
+		# Absinthe: Another English AI cheat, extra defenders and defensive buildings in Normandy some turns after spawn - from RFCE++
 		if( iGameTurn == xml.i1066AD + 3 and utils.getHumanID() != iEngland and iPlayer == iEngland and pEngland.isAlive() ):
 			print("Giving England some help in Normandy..")
 			for loopx in range(39,46):
@@ -989,14 +989,6 @@ class RiseAndFall:
 							utils.makeUnit(xml.iArbalest, iEngland, (loopx,loopy), 1)
 							pCity.setHasRealBuilding(xml.iWalls, True)
 							pCity.setHasRealBuilding(xml.iCastle,True)
-
-		# Absinthe: Prussia direction change
-		if(iGameTurn == xml.i1618AD and iPlayer == iPrussia):
-			pPrussia.setProvinceType( xml.iP_Estonia, con.iProvinceNone )
-			pPrussia.setProvinceType( xml.iP_Livonia, con.iProvinceOuter )
-			pPrussia.setProvinceType( xml.iP_Brandenburg, con.iProvinceNatural )
-			pPrussia.setProvinceType( xml.iP_Silesia, con.iProvincePotential )
-			pPrussia.setProvinceType( xml.iP_GreaterPoland, con.iProvinceOuter )
 
 
 	def switchLateLeaders(self, iPlayer, iLeaderIndex):
@@ -1198,33 +1190,33 @@ class RiseAndFall:
 						if (bForce):
 							cityList.append(city)
 						# Absinthe: Byzantine UP: cities in normal and core provinces won't go on the list
-						if (city.angryPopulation(0) > 1):
+						if (city.angryPopulation(0) > 0):
 							if (not utils.collapseImmuneCity(iPlayer,city.getX(),city.getY())):
 								cityList.append(city)
-							elif (iProvType < con.iProvinceNatural):
+							elif (iProvType < con.iProvincePotential):
+								cityList.append(city)
 								cityList.append(city)
 						if (city.healthRate(False, 0) < -2):
 							if (not utils.collapseImmuneCity(iPlayer,city.getX(),city.getY())):
 								cityList.append(city)
-							elif (iProvType < con.iProvinceNatural):
+							elif (iProvType < con.iProvincePotential):
 								cityList.append(city)
-						if (city.getReligionBadHappiness() > 1):
+								cityList.append(city)
+						if (city.getReligionBadHappiness() > 0):
 							if (not utils.collapseImmuneCity(iPlayer,city.getX(),city.getY())):
 								cityList.append(city)
-							elif (iProvType < con.iProvinceNatural):
+							elif (iProvType < con.iProvincePotential):
+								cityList.append(city)
 								cityList.append(city)
 						if (city.getNoMilitaryPercentAnger() > 0):
 							if (not utils.collapseImmuneCity(iPlayer,city.getX(),city.getY())):
 								cityList.append(city)
-							elif (iProvType < con.iProvinceNatural):
+							elif (iProvType < con.iProvincePotential):
+								cityList.append(city)
 								cityList.append(city)
 						if ( iProvType == con.iProvinceOuter ):
 							cityList.append(city)
-							cityList.append(city)
-							cityList.append(city)
 						if ( iProvType == con.iProvinceNone ):
-							cityList.append(city)
-							cityList.append(city)
 							cityList.append(city)
 							cityList.append(city)
 							cityList.append(city)
@@ -1256,7 +1248,7 @@ class RiseAndFall:
 			utils.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
 			#print ("SECESSION", gc.getPlayer(iPlayer).getCivilizationAdjective(0), splittingCity.getName()) #causes c++ exception??
 			#Absinthe: loosing a city to secession/revolt gives a small boost to stability, to avoid a city-revolting chain reaction
-			pPlayer.changeStabilityBase( con.iCathegoryExpansion, 3 )
+			pPlayer.changeStabilityBase( con.iCathegoryExpansion, 2 )
 
 
 	def resurrection(self, iGameTurn, iDeadCiv):
@@ -1271,7 +1263,7 @@ class RiseAndFall:
 
 
 	def findCivToResurect( self, iGameTurn , bSpecialRespawn, iDeadCiv):
-		#print("Looking up a civ to resurect, iDeadCiv: ",iDeadCiv)
+		#print("Looking up a civ to resurrect, iDeadCiv: ",iDeadCiv)
 		if ( bSpecialRespawn ):
 			iMinNumCities = 1
 		else:
@@ -1288,7 +1280,7 @@ class RiseAndFall:
 			if (not gc.getPlayer(iDeadCiv).isAlive() and iGameTurn > con.tBirth[iDeadCiv] + 25 and iGameTurn > utils.getLastTurnAlive(iDeadCiv) + 10): #Sedna17: Allow re-spawns only 10 turns after death and 25 turns after birth
 				pDeadCiv = gc.getPlayer(iDeadCiv)
 				teamDeadCiv = gc.getTeam(pDeadCiv.getTeam())
-				#3Miro: inRFC Civs spawn according to Normal Areas, but here we want Core areas. Otherwise Normal Areas should not overlap and that is Hard.
+				#3Miro: in RFC Civs spawn according to Normal Areas, but here we want Core areas. Otherwise Normal Areas should not overlap and that is Hard.
 				#Sedna17: Normal Areas no longer overlap, so we can respawn here.
 				tTopLeft = tNormalAreasTL[iDeadCiv]
 				tBottomRight = tNormalAreasBR[iDeadCiv]
@@ -1330,8 +1322,7 @@ class RiseAndFall:
 														city.getReligionBadHappiness() > 0 or \
 														city.getLargestCityHappiness() < 0 or \
 														city.getHurryAngerModifier() > 0 or \
-														city.getNoMilitaryPercentAnger() > 0 or \
-														city.getWarWearinessPercentAnger() > 0):
+														city.getNoMilitaryPercentAnger() > 0):
 															cityList.append(pCurrent.getPlotCity())
 															#print (iDeadCiv, pCurrent.getPlotCity().getName(), pCurrent.getPlotCity().getOwner(), "3", cityList)
 										if ( (not bSpecialRespawn) and (iOwnerStability < 10) ):
@@ -2031,16 +2022,16 @@ class RiseAndFall:
 
 
 	def findSeaPlots( self, tCoords, iRange):
-		"""Searches a sea plot that isn't occupied by a unit and isn't a civ's territory surrounding the starting coordinates"""
+		"""Searches a sea plot that isn't occupied by a unit within range of the starting coordinates"""
+		# we can search inside other players territory, since all naval units can cross sea borders
 		seaPlotList = []
 		for x in range(tCoords[0] - iRange, tCoords[0] + iRange+1):
 			for y in range(tCoords[1] - iRange, tCoords[1] + iRange+1):
 				pCurrent = gc.getMap().plot( x, y )
 				if ( pCurrent.isWater()):
 					if ( not pCurrent.isUnit() ):
-						if (pCurrent.countTotalCulture() == 0 ):
-							seaPlotList.append(pCurrent)
-							# this is a good plot, so paint it and continue search
+						seaPlotList.append(pCurrent)
+						# this is a good plot, so paint it and continue search
 		if (len(seaPlotList) > 0):
 			rndNum = gc.getGame().getSorenRandNum(len(seaPlotList), 'sea plot')
 			result = seaPlotList[rndNum]
@@ -2368,17 +2359,17 @@ class RiseAndFall:
 			utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 4)
 			utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 1)
-			tSeaPlot = self.findSeaPlots(tPlot, 3)		# HHG: Calais-culture mostly prevents spawn of the galley. Range changed from 2 to 3.
+			tSeaPlot = self.findSeaPlots(tPlot, 2)
 			if ( tSeaPlot ):
 				pEngland.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
 			if (not gc.getPlayer(iEngland).isHuman()):
 				utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
 				utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 1)
 		elif (iCiv == iPortugal):
-			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
+			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iPortugalFootKnight, iCiv, tPlot, 4)
-			utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
+			utils.makeUnit(xml.iTrebuchet, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iGuisarme, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 1)
 		elif (iCiv == iAragon):
@@ -2386,8 +2377,8 @@ class RiseAndFall:
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iAragonAlmogavar, iCiv, tPlot, 5)
 			utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
-			# Look for a sea plot by the coast (not by the starting point)
-			tSeaPlot = self.findSeaPlots((38,29), 2)
+			# Look for a sea plot close to the coast
+			tSeaPlot = self.findSeaPlots((39,28), 2)
 			if ( tSeaPlot ):
 				pAragon.initUnit(xml.iWarGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ESCORT_SEA, DirectionTypes.DIRECTION_SOUTH)
 				pAragon.initUnit(xml.iCogge, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
@@ -2444,7 +2435,6 @@ class RiseAndFall:
 			utils.makeUnit(xml.iGuisarme, iCiv, tPlot, 4)
 			utils.makeUnit(xml.iOrthodoxMissionary, iCiv, tPlot, 3)
 		elif (iCiv == iDutch):
-			#print(" 3Miro: make Dutch Units in Plot ",tPlot )
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iMusketman, iCiv, tPlot, 6)
 			utils.makeUnit(xml.iProtestantMissionary, iCiv, tPlot, 2)
@@ -2462,7 +2452,7 @@ class RiseAndFall:
 		# Sedna17: Cleaned the code
 		print("Making starting workers")
 		utils.makeUnit(xml.iWorker, iCiv, tPlot, con.tStartingWorkers[iCiv])
-		# Absinthe: second Ottoman spawn stack may stay, altough they now spawn in Gallipoli in the first place (one plot SE)
+		# Absinthe: second Ottoman spawn stack may stay, although they now spawn in Gallipoli in the first place (one plot SE)
 		if ( iCiv == iTurkey ):
 			self.ottomanInvasion(iCiv,(77,23))
 
@@ -2648,12 +2638,14 @@ class RiseAndFall:
 			teamCordoba.setHasTech( xml.iStirrup, True, iCiv, False, False )
 			teamCordoba.setHasTech( xml.iBronzeCasting, True, iCiv, False, False )
 			teamCordoba.setHasTech( xml.iArchitecture, True, iCiv, False, False )
+			teamCordoba.setHasTech( xml.iLiterature, True, iCiv, False, False )
 			teamCordoba.setHasTech( xml.iMonasticism, True, iCiv, False, False )
 			teamCordoba.setHasTech( xml.iCodeOfLaws, True, iCiv, False, False )
 			teamCordoba.setHasTech( xml.iHerbalMedicine, True, iCiv, False, False )
 			teamCordoba.setHasTech( xml.iAstrolabe, True, iCiv, False, False )
 			teamCordoba.setHasTech( xml.iArabicKnowledge, True, iCiv, False, False )
 			teamCordoba.setHasTech( xml.iEngineering, True, iCiv, False, False )
+			teamCordoba.setHasTech( xml.iArabicMedicine, True, iCiv, False, False )
 
 		elif ( iCiv == iVenecia ):
 			for iTech in range( xml.iStirrup + 1 ):

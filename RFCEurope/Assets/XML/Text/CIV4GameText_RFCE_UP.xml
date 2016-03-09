@@ -556,11 +556,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_SOUND_TOLL</Tag>
-		<English>You get %d1_Gold gold from the Sound Toll.</English>
-		<French>You get %d1_Gold gold from the Sound Toll.</French>
-		<German>You get %d1_Gold gold from the Sound Toll.</German>
-		<Italian>You get %d1_Gold gold from the Sound Toll.</Italian>
-		<Spanish>You get %d1_Gold gold from the Sound Toll.</Spanish>
-		<Portuguese>You get %d1_Gold gold from the Sound Toll.</Portuguese>
+		<English>You got %d1_Gold gold income from the Sound Toll.</English>
+		<French>You got %d1_Gold gold income from the Sound Toll.</French>
+		<German>You got %d1_Gold gold income from the Sound Toll.</German>
+		<Italian>You got %d1_Gold gold income from the Sound Toll.</Italian>
+		<Spanish>You got %d1_Gold gold income from the Sound Toll.</Spanish>
+		<Portuguese>You got %d1_Gold gold income from the Sound Toll.</Portuguese>
 	</TEXT>
 </Civ4GameText>

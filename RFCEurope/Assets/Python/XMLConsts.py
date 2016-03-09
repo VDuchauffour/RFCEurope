@@ -46,6 +46,7 @@ i962AD = 121	# HRE founded
 i966AD = 122											# Spawn of Poland
 i970AD = 123
 i972AD = 124
+i987AD = 129
 i1000AD =133	# Start of the Defensive Crusades
 i1003AD =134
 i1004AD =135																		# Venice UHV 1

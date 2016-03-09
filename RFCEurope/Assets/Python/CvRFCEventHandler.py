@@ -25,6 +25,7 @@ import Victory
 import Stability
 import Plague
 import Crusades
+import ProvinceManager
 import Mercenaries
 import RFCEMaps as rfcemaps
 
@@ -180,6 +181,7 @@ class CvRFCEventHandler:
 		self.sta = Stability.Stability()
 		self.pla = Plague.Plague()
 		self.crusade = Crusades.Crusades()
+		self.province = ProvinceManager.ProvinceManager()
 		self.mercs = Mercenaries.MercenaryManager() # 3MiroMercs
 
 
@@ -472,6 +474,7 @@ class CvRFCEventHandler:
 		self.vic.checkTurn(iGameTurn)
 		self.sta.checkTurn(iGameTurn)
 		self.crusade.checkTurn(iGameTurn)
+		self.province.checkTurn(iGameTurn)
 
 		#Mercenaries - start
 
@@ -516,7 +519,6 @@ class CvRFCEventHandler:
 
 
 	def onBeginPlayerTurn(self, argsList):
-		#print( " in Begin Player Turn ")
 		iGameTurn, iPlayer = argsList
 
 		print ("onBeginPlayerTurn PLAYER", iPlayer)
@@ -532,22 +534,25 @@ class CvRFCEventHandler:
 		elif(iPlayer == con.iAragon):
 			self.up.confederationUP(iPlayer)
 
+		# Ottoman UP
+		elif ( gc.hasUP( iPlayer, con.iUP_Janissary ) ):
+			self.up.janissary( iPlayer )
+
 		self.pla.checkPlayerTurn(iGameTurn, iPlayer)
 
+		# currently only checks for the player's UHV victory
 		if (gc.getPlayer(iPlayer).isHuman()):
 			self.vic.checkPlayerTurn(iGameTurn, iPlayer)
 
 		if (gc.getPlayer(iPlayer).isAlive() and iPlayer < con.iNumPlayers and gc.getPlayer(iPlayer).getNumCities() > 0):
 			self.sta.updateBaseStability(iGameTurn, iPlayer)
 
+		# for the AI only, leader switch and cheats
 		if (gc.getPlayer(iPlayer).isAlive() and iPlayer < con.iNumPlayers and not gc.getPlayer(iPlayer).isHuman()):
-			self.rnf.checkPlayerTurn(iGameTurn, iPlayer) #for leaders switch
+			self.rnf.checkPlayerTurn(iGameTurn, iPlayer)
 
 		if ( gc.getPlayer(iPlayer).isAlive() and iPlayer < con.iNumPlayers ):
 			utils.setLastTurnAlive( iPlayer, iGameTurn )
-
-		if ( gc.hasUP( iPlayer, con.iUP_Janissary ) ):
-			self.up.janissary( iPlayer )
 
 		#Mercenaries - start
 

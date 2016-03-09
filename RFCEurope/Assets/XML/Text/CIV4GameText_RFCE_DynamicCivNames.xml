@@ -505,6 +505,15 @@
 		<Portuguese>Califado da Bulgária</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_DN_BUL08</Tag>
+		<English>Guberniya of Bulgaria</English>
+		<French>Guberniya of Bulgaria</French>
+		<German>Guberniya of Bulgaria</German>
+		<Italian>Guberniya of Bulgaria</Italian>
+		<Spanish>Guberniya of Bulgaria</Spanish>
+		<Portuguese>Guberniya of Bulgaria</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_DN_BUL09</Tag>
 		<English>Islamic Republic of Bulgaria</English>
 		<French>R&#233;publique Islamique Bulgare</French>
@@ -515,7 +524,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL10</Tag>
-		<English>Theme of Bulgaria</English>
+		<English>Exarchate of Bulgaria</English>
 		<French>Thème de Bulgarie</French>
 		<German>Byzantinisches Thema Bulgarien</German>
 		<Italian>Thema di Bulgaria</Italian>
@@ -542,7 +551,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL13</Tag>
-		<English>Spanish Kingdom of Bulgaria</English>
+		<English>Viceroyalty of Bulgaria</English>
 		<French>Royaume Espagnole de Bulgarie</French>
 		<German>Spanisches Königreich Bulgarien</German>
 		<Italian>Regno Spagnolo di Bulgaria</Italian>
@@ -560,7 +569,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL15</Tag>
-		<English>Venetian Bulgaria</English>
+		<English>Colony of Bulgaria</English>
 		<French>Bulgarie V&#233;nitienne</French>
 		<German>Venezianisch-Bulgarien</German>
 		<Italian>Bulgaria Veneziana</Italian>
@@ -578,7 +587,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL17</Tag>
-		<English>German Bulgaria</English>
+		<English>Bulgarian March</English>
 		<French>Bulgarie Allemande</French>
 		<German>Deutsch-Bulgarien</German>
 		<Italian>Bulgaria Tedesca</Italian>
@@ -605,7 +614,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL20</Tag>
-		<English>Principality of Rumelia</English>
+		<English>Eyalet of Rumelia</English>
 		<French>Principaut&#233; de Roum&#233;lie</French>
 		<German>Fürstentum Rumelia</German>
 		<Italian>Principato di Rumelia</Italian>
@@ -834,39 +843,39 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ01</Tag>
-		<English>Byzantine Empire</English>
-		<French>Empire Byzantin</French>
-		<German>Byzantinisches Reich</German>
-		<Italian>Impero Bizantino</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Império Bizantino</Portuguese>
+		<English>Eastern Roman States</English>
+		<French>Eastern Roman States</French>
+		<German>Eastern Roman States</German>
+		<Italian>Eastern Roman States</Italian>
+		<Spanish>Eastern Roman States</Spanish>
+		<Portuguese>Eastern Roman States</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ02</Tag>
-		<English>Byzantine Empire</English>
-		<French>Empire Byzantin</French>
-		<German>Byzantinisches Reich</German>
-		<Italian>Impero Bizantino</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Império Bizantino</Portuguese>
+		<English>Latin Empire</English>
+		<French>Latin Empire</French>
+		<German>Latin Empire</German>
+		<Italian>Latin Empire</Italian>
+		<Spanish>Latin Empire</Spanish>
+		<Portuguese>Latin Empire</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ03</Tag>
-		<English>Byzantine Empire</English>
-		<French>Empire Byzantin</French>
-		<German>Byzantinisches Reich</German>
-		<Italian>Impero Bizantino</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Império Bizantino</Portuguese>
+		<English>Colony of Greece</English>
+		<French>Colony of Greece</French>
+		<German>Colony of Greece</German>
+		<Italian>Colony of Greece</Italian>
+		<Spanish>Colony of Greece</Spanish>
+		<Portuguese>Colony of Greece</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ04</Tag>
-		<English>Byzantine Empire</English>
-		<French>Empire Byzantin</French>
-		<German>Byzantinisches Reich</German>
-		<Italian>Impero Bizantino</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Império Bizantino</Portuguese>
+		<English>Varangian Roman States</English>
+		<French>Varangian Roman States</French>
+		<German>Varangian Roman States</German>
+		<Italian>Varangian Roman States</Italian>
+		<Spanish>Varangian Roman States</Spanish>
+		<Portuguese>Varangian Roman States</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ05</Tag>
@@ -879,21 +888,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ06</Tag>
-		<English>Byzantine Error</English>
-		<French>Byzantine Error</French>
-		<German>Byzantine Error</German>
-		<Italian>Byzantine Error</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Byzantine Error</Portuguese>
+		<English>Duchies of Athens and Neopatria</English>
+		<French>Duchies of Athens and Neopatria</French>
+		<German>Duchies of Athens and Neopatria</German>
+		<Italian>Duchies of Athens and Neopatria</Italian>
+		<Spanish>Duchies of Athens and Neopatria</Spanish>
+		<Portuguese>Duchies of Athens and Neopatria</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ07</Tag>
-		<English>Byzantine Error</English>
-		<French>Byzantine Error</French>
-		<German>Byzantine Error</German>
-		<Italian>Byzantine Error</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Byzantine Error</Portuguese>
+		<English>Emirate of Greece</English>
+		<French>Emirate of Greece</French>
+		<German>Emirate of Greece</German>
+		<Italian>Emirate of Greece</Italian>
+		<Spanish>Emirate of Greece</Spanish>
+		<Portuguese>Emirate of Greece</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ08</Tag>
@@ -915,7 +924,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ10</Tag>
-		<English>Theme of Constantinople</English>
+		<English>Duchy of Constantinople</English>
 		<French>Thème de Constantinople</French>
 		<German>Byzantinisches Thema Konstantinopel</German>
 		<Italian>Thema di Costantinopoli</Italian>
@@ -960,7 +969,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ15</Tag>
-		<English>Kingdom of the Morea</English>
+		<English>Kingdom of Morea</English>
 		<French>Royaume de Mor&#233;e</French>
 		<German>Königreich Morea</German>
 		<Italian>Regno di Morea</Italian>
@@ -969,7 +978,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ16</Tag>
-		<English>Russian Tsargrad</English>
+		<English>Guberniya of Tsargrad</English>
 		<French>Tsargrad Russe</French>
 		<German>Russisch-Tsargrad</German>
 		<Italian>Costantinopoli Russa</Italian>
@@ -996,7 +1005,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ19</Tag>
-		<English>Habsburg Greece</English>
+		<English>Habsburg Greek States</English>
 		<French>Gr&#232;ce Habsbourg</French>
 		<German>Habsburger Griechenland</German>
 		<Italian>Grecia Asburgica</Italian>
@@ -1005,7 +1014,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ20</Tag>
-		<English>Principality of Thrace</English>
+		<English>Eyalet of Thrace</English>
 		<French>Principaut&#233; de Thrace</French>
 		<German>Fürstentum Thrakien</German>
 		<Italian>Principato di Tracia</Italian>
@@ -1020,6 +1029,60 @@
 		<Italian>Pronvincia di Bisanzio</Italian>
 		<Spanish></Spanish>
 		<Portuguese>Província de Bizâncio</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ22</Tag>
+		<English>Varangian Tsargrad</English>
+		<French>Varangian Tsargrad</French>
+		<German>Varangian Tsargrad</German>
+		<Italian>Varangian Tsargrad</Italian>
+		<Spanish>Varangian Tsargrad</Spanish>
+		<Portuguese>Varangian Tsargrad</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ23</Tag>
+		<English>Principality of Greece</English>
+		<French>Principality of Greece</French>
+		<German>Principality of Greece</German>
+		<Italian>Principality of Greece</Italian>
+		<Spanish>Principality of Greece</Spanish>
+		<Portuguese>Principality of Greece</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ24</Tag>
+		<English>Greek Governorate</English>
+		<French>Greek Governorate</French>
+		<German>Greek Governorate</German>
+		<Italian>Greek Governorate</Italian>
+		<Spanish>Greek Governorate</Spanish>
+		<Portuguese>Greek Governorate</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ25</Tag>
+		<English>Eyalet of Constantinople</English>
+		<French>Eyalet of Constantinople</French>
+		<German>Eyalet of Constantinople</German>
+		<Italian>Eyalet of Constantinople</Italian>
+		<Spanish>Eyalet of Constantinople</Spanish>
+		<Portuguese>Eyalet of Constantinople</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ26</Tag>
+		<English>Eyalet of Greece</English>
+		<French>Eyalet of Greece</French>
+		<German>Eyalet of Greece</German>
+		<Italian>Eyalet of Greece</Italian>
+		<Spanish>Eyalet of Greece</Spanish>
+		<Portuguese>Eyalet of Greece</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ27</Tag>
+		<English>Province of Greece</English>
+		<French>Province of Greece</French>
+		<German>Province of Greece</German>
+		<Italian>Province of Greece</Italian>
+		<Spanish>Province of Greece</Spanish>
+		<Portuguese>Province of Greece</Portuguese>
 	</TEXT>
 	<!-- Byzantium -->
 	<!-- Cordoba -->
@@ -1805,21 +1868,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA06</Tag>
-		<English>Frankish Error</English>
-		<French>Frankish Error</French>
-		<German>Frankish Error</German>
-		<Italian>Frankish Error</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Frankish Error</Portuguese>
+		<English>Western Republic</English>
+		<French>Western Republic</French>
+		<German>Western Republic</German>
+		<Italian>Western Republic</Italian>
+		<Spanish>Western Republic</Spanish>
+		<Portuguese>Western Republic</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA07</Tag>
-		<English>Frankish Error</English>
-		<French>Frankish Error</French>
-		<German>Frankish Error</German>
-		<Italian>Frankish Error</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Frankish Error</Portuguese>
+		<English>Western Islamic Republic</English>
+		<French>Western Islamic Republic</French>
+		<German>Western Islamic Republic</German>
+		<Italian>Western Islamic Republic</Italian>
+		<Spanish>Western Islamic Republic</Spanish>
+		<Portuguese>Western Islamic Republic</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA08</Tag>
@@ -1877,7 +1940,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA15</Tag>
-		<English>Venetian France</English>
+		<English>Colony of France</English>
 		<French>France V&#233;nitienne</French>
 		<German>Venezianisch-Frankreich</German>
 		<Italian>Francia Veneziana</Italian>
@@ -1886,7 +1949,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA16</Tag>
-		<English>Russian France</English>
+		<English>Guberniya of France</English>
 		<French>France Russe</French>
 		<German>Russisch-Frankreich</German>
 		<Italian>Francia Russa</Italian>
@@ -1904,7 +1967,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA18</Tag>
-		<English>Duchy of Chinon</English>
+		<English>Duchy of Aquitaine</English>
 		<French></French>
 		<German>Herzogtum Chinon</German>
 		<Italian>Ducato di Chinon</Italian>
@@ -1922,7 +1985,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA20</Tag>
-		<English>Principality of Frangistan</English>
+		<English>Eyalet of Frangistan</English>
 		<French></French>
 		<German>Fürstentum Frangistan</German>
 		<Italian>Principato di Francia</Italian>
@@ -1931,7 +1994,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA21</Tag>
-		<English>Emirate of Poitiers</English>
+		<English>Emirate of Arbuna</English>
 		<French></French>
 		<German>Emirat Poitiers</German>
 		<Italian>Emirato di Poitiers</Italian>
@@ -1940,12 +2003,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA22</Tag>
-		<English>Western Francia</English>
-		<French></French>
-		<German>Westfrankenreich</German>
-		<Italian>Francia Occidentale</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Francia Ocidental</Portuguese>
+		<English>County of France</English>
+		<French>County of France</French>
+		<German>County of Franceh</German>
+		<Italian>County of France</Italian>
+		<Spanish>County of France</Spanish>
+		<Portuguese>County of France</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA23</Tag>
@@ -1955,6 +2018,42 @@
 		<Italian>Provincia di Francia</Italian>
 		<Spanish></Spanish>
 		<Portuguese>Província da França</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA24</Tag>
+		<English>Western Sultanate</English>
+		<French>Western Sultanate</French>
+		<German>Western Sultanate</German>
+		<Italian>Western Sultanate</Italian>
+		<Spanish>Western Sultanate</Spanish>
+		<Portuguese>Western Sultanate</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA25</Tag>
+		<English>Western Empire</English>
+		<French>Western Empire</French>
+		<German>Western Empire</German>
+		<Italian>Western Empire</Italian>
+		<Spanish>Western Empire</Spanish>
+		<Portuguese>Western Empire</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA26</Tag>
+		<English>Kingdom of the Franks</English>
+		<French>Kingdom of the Franks</French>
+		<German>Kingdom of the Franks</German>
+		<Italian>Kingdom of the Franks</Italian>
+		<Spanish>Kingdom of the Franks</Spanish>
+		<Portuguese>Kingdom of the Franks</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA27</Tag>
+		<English>Principality of France</English>
+		<French>Principality of France</French>
+		<German>Principality of France</German>
+		<Italian>Principality of France</Italian>
+		<Spanish>Principality of France</Spanish>
+		<Portuguese>Principality of France</Portuguese>
 	</TEXT>
 	<!-- France -->
 	<!-- Genoa -->
@@ -2378,21 +2477,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN03</Tag>
-		<English>Kingdom of Hungary</English>
-		<French>Royaume de Hongrie</French>
-		<German>Königreich Ungarn</German>
-		<Italian>Regno d'Ungheria</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Reino da Hungria</Portuguese>
+		<English>Eyalet of Hungary</English>
+		<French>Eyalet of Hungary</French>
+		<German>Eyalet of Hungary</German>
+		<Italian>Eyalet of Hungary</Italian>
+		<Spanish>Eyalet of Hungary</Spanish>
+		<Portuguese>Eyalet of Hungary</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN04</Tag>
-		<English>Hungarian Empire</English>
-		<French>Empire Hongrois</French>
-		<German>Ungarisches Reich</German>
-		<Italian>Impero Ungarico</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Império Húngaro</Portuguese>
+		<English>Eyalet of Budin</English>
+		<French>Eyalet of Budin</French>
+		<German>Eyalet of Budin</German>
+		<Italian>Eyalet of Budin</Italian>
+		<Spanish>Eyalet of Budin</Spanish>
+		<Portuguese>Eyalet of Budin</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN05</Tag>
@@ -2405,21 +2504,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN06</Tag>
-		<English>Placeholder Error</English>
-		<French>Placeholder Error</French>
-		<German>Placeholder Error</German>
-		<Italian>Placeholder Error</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Placeholder Error</Portuguese>
+		<English>Principality of Hungary</English>
+		<French>Principality of Hungary</French>
+		<German>Principality of Hungary</German>
+		<Italian>Principality of Hungary</Italian>
+		<Spanish>Principality of Hungary</Spanish>
+		<Portuguese>Principality of Hungary</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN07</Tag>
-		<English>Placeholder Error</English>
-		<French>Placeholder Error</French>
-		<German>Placeholder Error</German>
-		<Italian>Placeholder Error</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Placeholder Error</Portuguese>
+		<English>Exarchate of Pannonia</English>
+		<French>Exarchate of Pannonia</French>
+		<German>Exarchate of Pannonia</German>
+		<Italian>Exarchate of Pannonia</Italian>
+		<Spanish>Exarchate of Pannonia</Spanish>
+		<Portuguese>Exarchate of Pannonia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN08</Tag>
@@ -2468,7 +2567,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN13</Tag>
-		<English>Spanish Kingdom of Hungary</English>
+		<English>Viceroyalty of Hungary</English>
 		<French>Royaume Espagnol de Hongrie</French>
 		<German>Spanisches Königreich Ungarn</German>
 		<Italian>Regno Spagnolo d'Ungheria</Italian>
@@ -2486,7 +2585,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN15</Tag>
-		<English>Venetian Hungary</English>
+		<English>Colony of Hungary</English>
 		<French>Hongrie V&#233;nitienne</French>
 		<German>Venezianisch-Ungarn</German>
 		<Italian>Ungheria Veneziana</Italian>
@@ -2495,7 +2594,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN16</Tag>
-		<English>Russian Hungary</English>
+		<English>Guberniya of Hungary</English>
 		<French>Hongrie Russe</French>
 		<German>Russisch-Ungarn</German>
 		<Italian>Ungheria Russa</Italian>
@@ -2504,7 +2603,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN17</Tag>
-		<English>German Hungary</English>
+		<English>March of Hungary</English>
 		<French>Hongrie Allemande</French>
 		<German>Deutsch-Ungarn</German>
 		<Italian>Ungheria Tedesca</Italian>
@@ -2522,7 +2621,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN19</Tag>
-		<English>Habsburg Kingdom of Hungary</English>
+		<English>Royal Hungary</English>
 		<French>Royaume Autro-Hongrois</French>
 		<German>Habsburger Königreich Ungarn</German>
 		<Italian>Regno Asburgico d'Ungheria</Italian>
