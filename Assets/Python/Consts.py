@@ -1009,7 +1009,7 @@ tPersecutionOrder = (
 	(xml.iCatholicism, xml.iIslam, xml.iOrthodoxy, xml.iJudaism),			# Protestantism
 	(xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism, xml.iJudaism),	# Islam
 	(xml.iIslam, xml.iProtestantism, xml.iJudaism, xml.iOrthodoxy),			# Catholicism
-	(xml.iIslam, xml.iJudaism, xml.iCatholicism, xml.iProtestantism),		# Orhodoxy
+	(xml.iIslam, xml.iJudaism, xml.iCatholicism, xml.iProtestantism),		# Orthodoxy
 	(xml.iIslam, xml.iProtestantism, xml.iOrthodoxy, xml.iCatholicism),		# Judaism
 )
 
@@ -1133,7 +1133,7 @@ colony_positions_xy=[
 (155,285), #Jamaica
 (130,325), #Panama
 (110,220), #Louisiana
-(960,320), #Philipines
+(960,320), #Philippines
 ]
 
 
@@ -1261,7 +1261,7 @@ tLateLeaders = (		#The switch is triggered after a few years (starting date, per
 
 
 iUP_Happiness = 0			# happiness bonus
-iUP_PerCityCommerce = 1		# bonus of commerse per city
+iUP_PerCityCommerce = 1		# bonus of commerce per city
 iUP_CityTileYield = 2		# bonus on yield on the city tile
 iUP_ReligiousTolerance = 3	# no instability from foreign religion
 iUP_CulturalTolerance = 4	# no unhappiness from foreign culture
@@ -1277,15 +1277,15 @@ iUP_NoResistance = 13		# no resistance from conquering cities
 iUP_Conscription = 14		# can draft from cities with foreign culture
 iUP_Inquisition = 15		# no instability from religious prosecution
 iUP_Emperor = 16			# no civil war and no secession in the core (Python only)
-iUP_Faith = 17				# state religion spreads to newly accuired cities (found/trade/conquest) with a temple (Python only)
+iUP_Faith = 17				# state religion spreads to newly acquired cities (found/trade/conquest) with a temple (Python only)
 iUP_Mercenaries = 18		# halves the cost of mercenaries (Python only - Mercenaries)
 iUP_LandStability = 19		# no penalty from owning unstable land (Python only)
 iUP_Discovery = 20			# lower cost of a block of projects
-iUP_EndlessLand = 21		# lower civic cost assosiated with cities
+iUP_EndlessLand = 21		# lower civic cost associated with cities
 iUP_ForeignSea = 22			# allows the ships to enter foreign sea territory (Dutch UP from RFC)
 iUP_Pious = 23				# increase the gain (and loss) of Faith Points
-iUP_PaganCulture = 24		# give bonus to culure if no state religion is present
-iUP_PaganHappy = 25			# give bonus to happyness if no state religion is present
+iUP_PaganCulture = 24		# give bonus to culture if no state religion is present
+iUP_PaganHappy = 25			# give bonus to happiness if no state religion is present
 iUP_StabilityConquestBoost = 26		# if stability is < 0, then get +1 stability on Conquest
 iUP_StabilitySettler = 27			# don't lose stability from founding cities in Outer and None Provinces
 iUP_StabilityPlaceholder1 = 28		# does nothing

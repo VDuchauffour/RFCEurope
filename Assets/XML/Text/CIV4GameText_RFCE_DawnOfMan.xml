@@ -28,7 +28,7 @@
 		<!-- 0 is Byzantium, 1 is France, 2 is Arabia, etc -->
 	<TEXT> <!-- Byzantium -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_0</Tag>
-		<English>After many glorious centuries under Rome, the great Constantine saw fit to split the mighty empire into two parts.[NEWLINE]It is the year 500 AD, the Western Roman Empire has fallen. While Rome will always have a place in your people's hearts, Constantinople is now the heart of the most glorious nation on Earth![NEWLINE][NEWLINE]Justinian, you are now the sole ruler, THE Roman Emperor. Your nation is rich and strong, but be aware: huge riches attract many enemies, and some of the barbarians may be even stronger.[NEWLINE]Your people have faith that you can lead their mighty nation through the coming storm. Will you prevail, and lead the Byzantine Empire through another 1,000 years of glory?</English>
+		<English>After many glorious centuries under Rome, the great Constantine saw fit to split the mighty empire into two parts.[NEWLINE]It is now the year 500 AD, and the Western Roman Empire has fallen. While Rome will always have a place in your people's hearts, Constantinople is now the heart of the most glorious nation on Earth![NEWLINE][NEWLINE]Justinian, you are now the sole ruler, THE Roman Emperor. Your nation is rich and strong, but be aware: vast riches attract many enemies, and some of the barbarians may be even stronger than we are.[NEWLINE]Your people have faith that you can lead their mighty nation through the coming storm. Will you prevail and lead the Byzantine Empire through another 1,000 years of glory?</English>
 		<French>.</French>
 		<German>Nach vielen glorreichen Jahrhunderten unter Rom trennte Konstantin der Große das mächtige Reich in zwei Teile.[NEWLINE]Es ist das Jahr 500 n.Chr., das Weströmische Reich war gefallen. Rom wird immer einen Platz im Herzen des Volkes haben, aber Konstantinopel ist jetzt das Herz der glorreichsten Nation auf Erden![NEWLINE][NEWLINE]Justinian, ihr seid nun der alleinige Herrscher, DER Römische Kaiser. Eure Nation ist reich und stark, aber nehmt euch in acht: Großer Reichtum zieht viele Feinde an und einige der Barbaren mögen noch stärker sein.[NEWLINE]Euer Volk hat das Vertrauen dass ihr diese mächtige Nation durch den kommenden Sturm geleiten könnt. Werdet ihr erfolgreich sein und dem Byzantinischen Reich zu weiteren 1000 Jahren Ruhm verhelfen?</German>
 		<Italian>E' l'anno 500 D.c. Dopo molti secoli sotto il dominio di Roma, Costantino ha deciso di dividere l'impero in due parit.[NEWLINE][NEWLINE]Mentre Roma avrà sempre un posto nei cuori dei tuoi sudditi, ora Costantinopoli è la città più potente del mondo![NEWLINE][NEWLINE]Ora tu, Giustiniano, governi come Imperatore Romano. La tua nazione è forte, ma i barbari potrebbero esserlo di più. La tua gente crede che puoi condurre l'impero fuori dalla tempesta in arrivo. Vincerai e riuscirai a dare all'Impero Bizantino altri 1000 anni di gloria?</Italian>
@@ -37,7 +37,7 @@
 	</TEXT>
 	<TEXT> <!-- France -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_1</Tag>
-		<English>It is the year 500 AD. As king of the Frankish people, you have lead their way in becoming the first barbarian tribe to set aside arianism and embrace catholicism, which will be the guiding principle in building a glorious civilization.[NEWLINE][NEWLINE]Your lands are vast and fertile, but the Burgundians in the Rhône valley will not always stay subdued, and the coasts may provide access to dangerous raiders from the north.</English>
+		<English>It is the year 500 AD. As king of the Frankish people, you have lead their way in becoming the first barbarian tribe to embrace Catholicism instead of Arianism, which will be our guiding principle in building a glorious civilization.[NEWLINE][NEWLINE]Your lands are vast and fertile, but the Burgundians in the Rhône valley will not always stay subdued, and the coasts may provide access to dangerous raiders from the north. Will you bear through these struggles, unify the realm, and establish the most powerful kingdom in Europe for generations to come?</English>
 		<French>.</French>
 		<German>Es ist das Jahr 500 n.Chr., als ihr König habt ihr die Franken aus dem Arianismus hin zum katholischen Glauben geführt, dieser soll nun das Leitprinzip zum Aufbau einer glorreichen Zivilisation sein.[NEWLINE][NEWLINE]Eure Ländereien sind rießig und fruchtbar, nur die Burgunder im Rhonetal werden nicht ewig zurückhaltend sein und die Küste kann gefährlichen Räubern aus dem Norden Zugang gewähren.</German>
 		<Italian>.</Italian>
@@ -46,7 +46,7 @@
 	</TEXT>
 	<TEXT> <!-- Arabia -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_2</Tag>
-		<English>It is the year 632 CE. The prophet Muhammed, peace be upon him, accomplished what no one thought was possible - uniting the tribes of Arabia. You, Abu Bakr, has been chosen to succeed him as Caliph and expand the House of Islam.[NEWLINE][NEWLINE]After a devastating war with Sassanid Persia and raging religious controversies between Chalcedonians and Monophysities, the land of the Byzantine Empire is ripe for conquest. You know you cannot miss this opportunity, and there will be many centuries to build up your forces before the western crusaders cast their gaze towards al-Quds.</English>
+		<English>It is the year 632 CE. The prophet Muhammed, peace be upon him, accomplished what no one thought was possible - uniting the tribes of Arabia. You, Abu Bakr, has been chosen to succeed him as Caliph and expand the House of Islam.[NEWLINE][NEWLINE]After a devastating war with Sassanid Persia and raging religious controversies between Chalcedonians and Monophysities, the lands of the Byzantine Empire are ripe for conquest. You know you cannot miss this opportunity, and there will be many centuries to build up your forces before the western crusaders cast their gaze towards the holy city of al-Quds.</English>
 		<French>.</French>
 		<German>Es ist das Jahr 632 n.Chr., der Prophet Mohammed, Friede sei mit ihm, hat erreicht was keiner für möglich gehalten hatte - die arabischen Stämme zu vereinen. Ihr, Abu Bakr, sollt ihm als Kalif nachfolgen und das islamische Haus vergrößern.[NEWLINE][NEWLINE]Nach einem verheerenden Krieg mit den Sassaniden und wütenden religiösen Auseinandersetzungen zwischen den Chalceoniern und Monphysiten ist das Gebiet des Byzantinischen Reiches reif für Eroberungen. Ihr wisst dass ihr diese Gelegenheit nicht verpassen dürft und dass ihr einige Jahrhunderte Zeit habt Truppen aufzustellen bevor die westlichen Kreuzfahrer ihren Blick auf al-Quds richten.</German>
 		<Italian>.</Italian>
@@ -64,7 +64,7 @@
 	</TEXT>
 	<TEXT> <!-- Cordoba -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_4</Tag>
-		<English>It is the year 711 CE. After the long struggle, the seemingly endless fleeing from the Sunni Muslims in the east, many thought your Umayyad line to be extinct.[NEWLINE]Not so! You, Abd-ar-Rahman III, led your people to a new place which you call "Al-Andalus", where you and your people may finally find a new home[NEWLINE][NEWLINE]These new lands may easily be the richest you have ever seen, so with Allah's will you might be able to build a rich and happy Caliphate - full of poetry, art and religious toleration - which can even rival that of the prophet Muhammed![NEWLINE]You only have to worry about those fanatic Christians to the north...</English>
+		<English>It is the year 711 CE. After the long struggle, the seemingly endless flight from the upstart Abbasids in the east, many thought your Umayyad line to be extinct.[NEWLINE]Not so! You, Abd-ar-Rahman III, have led your people to a new place you now call "Al-Andalus", where you and your people may finally find a new home.[NEWLINE][NEWLINE]These new lands may easily be the richest you have ever seen, so with Allah's will you might be able to build a rich and happy Caliphate - full of poetry, art and religious tolerance - to rival even that of the prophet Muhammed![NEWLINE]You only have to worry about those fanatical Christians to the north...</English>
 		<French>.</French>
 		<German>Es ist das Jahr 711 n.Chr., nach dem endlosen Bemühen, der anscheinend nicht enden wollenden Flucht vor den Sunniten im Osten, dachten viele dass eure Umayyaden-Linie ausgestorben sei.[NEWLINE]Dem ist nicht so! Ihr, Abd ar-Rahman III, führt euer Volk zu einem neuen Ort den ihr "Al-Andalus" nennt und wo ihr und euer Volk eine neue Heimat findet.[NEWLINE][NEWLINE]Dieses neue Land kann sehr leicht das Reichste sein das ihr jemals gesehen habt, sollte es Allahs Wille sein dass ihr in der Lage seid ein reiches und glückliches Kalifat aufzubauen - gefüllt mit Poesie, Kunst und religiöser Toleranz - das sogar jenem vom Propheten Mohammed Konkurrenz machen kann![NEWLINE]Ihr müsst euch nur vor diesen fanatischen Christen im Norden in acht nehmen...</German>
 		<Italian>E' l'anno 711AD. Puoi difficilmente credere alla tua fortuna. Gli stupidi seguaci del re Visigoto deposto Womba hanno appena invitato te e i tuoi compagni musulmani oltre lo stretto di Gibilterra. Dopo aver sconfitto il re Visigoto in carica, Rod, con un tradimento, è stato facile prendere il potere con l'aiuto degli Ebrei. Ora puoi costruire un ricco e felice Califfato, pieno di poesia, arte e tolleranza religiosa!</Italian>
@@ -92,7 +92,7 @@
 	</TEXT>
 	<TEXT> <!-- Burgundy -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_6</Tag>
-		<English>It is the year 843 AD. After your defeat at the hands of your brothers, you have signed the treaty of Verdun, accepting that the inheritance of the great empire that Charlemagne built will be split into three, with you taking the middle part. Your exposed position - wedged between the powerful Frankish and German kingdoms - will require great diplomatic skills, but your knights should be the envy of all of Europe!</English>
+		<English>It is the year 843 AD. After your defeat at the hands of your brothers, you have signed the treaty of Verdun, accepting that the inheritance of Charlemagne's great empire will be split into three, with you taking the middle portion. Your exposed position - wedged between the powerful French and German kingdoms - will require great diplomatic skill, but your knights shall be the envy of all of Europe!</English>
 		<French>.</French>
 		<German>Es ist das Jahr 843 n.Chr., nach den Erbstreitigkeiten mit euren Brüdern habt den Vertrag von Verdun unterzeichnet, in dem ihr anerkennt, dass das Reich Karls des Großen in drei Teile aufgespalten wird - ihr erhaltet das Mittelreich. Eure entblößte Lage - eingebettet zwischen den mächtigen fränkischen und deutschen Königreichen - wird euch großes diplomatisches Geschick abverlangen, einzig um eure Ritter sollt ihr in ganz Europa beneidet werden!</German>
 		<Italian>.</Italian>
@@ -101,7 +101,7 @@
 	</TEXT>
 	<TEXT> <!-- Germany -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_7</Tag>
-		<English>It is the year 856 AD. The great Frankish inheritance have irrevocably been split into three, with the eastern part going to you. As the Byzantine Empress Irene rejected Charlemagne's marriage proposal, you should instead build a Holy Roman Empire for yourself!</English>
+		<English>It is the year 856 AD. The great Frankish inheritance has irrevocably been split into three, with the eastern portion going to you. As the Byzantine Empress Irene rejected Charlemagne's marriage proposal, you should instead build a Holy Roman Empire for yourself!</English>
 		<French>.</French>
 		<German>Es ist das Jahr 856 n.Chr., das große Erbe der Franken wurde unwiderruflich in drei Teile aufgeteilt, wobei ihr das Ostfrankenreich erhalten habt. Nachdem die byzantinische Kaiserin Irene von Athen das Heiratsgesuch von Karl dem Großen ablehnte, solltet ihr stattdessen selbst ein Heiliges Römisches Reich gründen.</German>
 		<Italian>.</Italian>
@@ -128,7 +128,7 @@
 	</TEXT>
 	<TEXT> <!-- Kiev -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_10</Tag>
-		<English>It is the year 880 AD. After the mighty walls of Constantinople hampered your attack in 866, you decided to settle down with some of your fellow Varangians. The land you just set yout foot on seems perfect for this.[NEWLINE][NEWLINE]The slavic people living here accept you as their leader, while your Swedish Vikings establish themselves as the local elite. Life is good, the land is fertile, you and your descendants will surely lead your new nation, the Kievan Rus into glory.[NEWLINE]If only you weren't having those dreams about reckless hordes raising in the east...</English>
+		<English>It is the year 880 AD. After the mighty walls of Constantinople foiled your brazen attack in 866, you have decided to settle down with some of your loyal Varangians. This rich land you have just set foot on seems perfect.[NEWLINE][NEWLINE]The local Slavic people accept you as their leader, while your fellow Swedes, the feared Viking warriors establish themselves as the local elite. Life is good, the land is fertile, you and your descendants will surely lead your new nation, the Kievan Rus, into glory.[NEWLINE]If only you weren't having those dreams about savage hordes rising in the east...</English>
 		<French>.</French>
 		<German>Es ist das Jahr 880 n.Chr., nachdem die mächtigen Mauern von Konstantinopel euren Angriff von 866 verhinderten, habt ihr entschieden euch mit einigen eurer Warägergefolgsleuten niederzulassen. Das Land auf dem ihr gerade mit euren Füßen steht, scheint dafür perfekt zu sein.[NEWLINE][NEWLINE]Die hier lebenden slawischen Völker erkennen euch als Führer an und eure schwedischen Wikinger setzen sich als örtliche Elite durch. Das Leben ist schön, das Land fruchtbar, ihr und eure Nachkommen werdet gewiss eure neue Nation, die Kiewer Rus, zu Ruhm und Ehre führen.[NEWLINE]Wenn da nur nicht dieser Traum wäre: Rastlose Horden die sich im Osten erheben...</German>
 		<Italian>.</Italian>
@@ -164,7 +164,7 @@
 	</TEXT>
 	<TEXT> <!-- Scotland -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_14</Tag>
-		<English>It is the year 960 AD. While you are the sole ruler over some loyal subjects, most Scottish men still remember the shadows of the past. Your goal is to unite all the tribes and clans of Scotland and establish the "last free kingdom".[NEWLINE][NEWLINE]It's your choice to pass the old walls of Hadrian or stay behind it, but it's probably wise to gather some mighty allies on the Continent. Whatever path you choose, it's clear to you though: your nation is destined to survive the storms of centuries to come, and bright forever. Make the Highlanders proud and show the world: Scotland, be foe or ally, solid as a rock!</English>
+		<English>It is the year 960 AD. While you are the sole ruler over some loyal subjects, most Scottish men still remember the shadows of the past. Your goal is to unite all the tribes and clans of Scotland and establish the "last free kingdom".[NEWLINE][NEWLINE]You can choose to pass the old walls of Hadrian or stay behind it, but it would be wise to gather some mighty allies on the Continent. Whatever path you choose, it's clear to you though: your nation is destined to survive the storms of centuries to come, and bright forever. Make the Highlanders proud and show the world: Scotland, be foe or ally, solid as a rock!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -191,7 +191,7 @@
 	</TEXT>
 	<TEXT> <!-- Morocco -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_17</Tag>
-		<English>It is the year %s1_year. You, %s3_leader, are the sole ruler of the %s2_civ people.</English>
+		<English>It is the year 1041 CE, and the Almoravid dynasty is on the rise. You are the rightful ruler of the Berbers, destined to establish a great, long-lasting empire in the Maghreb. With Allah's help, you will follow the path of the Idrisids, and the great cities of Morocco are waiting to be filled with art and faith.[NEWLINE][NEWLINE]The rich, fertile coastline is also yours to claim, though it will not be easy. You will have to deal not only with the Spanish and the Portuguese, for the whole Christian world will come to their aid. Are you up to the task, with the help of your loyal Black Guards? Will you be able to protect your brothers in Al-Andalus? The Christian filth shall pay dearly for their atrocities; make your ancestors proud!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -218,7 +218,7 @@
 	</TEXT>
 	<TEXT> <!-- Aragon -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_20</Tag>
-		<English>It is the year %s1_year. You, %s3_leader, are the sole ruler of the %s2_civ people.</English>
+		<English>Greetings, my lord! It is the blessed year of 1164 AD, under your new rule these lands will finally have the possibility for strong, centralized rule. And the people of Aragon are in dire need of our guidance, as the situation is very tense; the various Principalities, Duchies and Kingdoms in the region have many diverse interests pulling in every which way, putting a heavy toll on the local populace. Religious differences are also leading to harsh tensions and conflict with the Muslims to the south.[NEWLINE][NEWLINE]The Crown of Aragon shall rule over many dominions, but your hands are also tied by the Aragonese Law. You must decide where and how to expand to make your people calm and happy.[NEWLINE][NEWLINE]Surrounded by stronger and more united states, you must fight with both sword and pen. You can choose to expand by joining the Reconquista, but the power vacuum in the vast Mediterranean is also very tempting. Small but rich kingdoms could be yours if you play your cards well, an empire to span across the sea.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>

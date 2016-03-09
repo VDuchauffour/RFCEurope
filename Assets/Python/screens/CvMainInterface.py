@@ -3369,7 +3369,7 @@ class CvMainInterface:
 										#szTempBuffer = u"%d" %(utils.countAchievedGoals(ePlayer)) #white
 										#szBuffer = szBuffer + " (" + szTempBuffer + "/3)" #white
 										if (gc.getPlayer(ePlayer).isAlive()):
-											if (ePlayer < con.iNumMajorPlayers): #in case byzantium is major
+											if (ePlayer < con.iNumMajorPlayers):
 												szTempBuffer = u"<color=%s>%d/3</color>" %(utils.getGoalsColor(ePlayer), utils.countAchievedGoals(ePlayer))
 												szBuffer = szBuffer + " - " + szTempBuffer
 										#Rhye - end victory

@@ -10,14 +10,25 @@ Please post your thoughts in our forum at http://forums.civfanatics.com/forumdis
 
 You can find more details in the Manual and Reference folders in the mod. A copy of the manual is also available at http://rfceurope.sourceforge.net/
 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Changes for RFCE 1.4:
+(SVN release only)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Changes for RFCE 1.3.1:
+(to-be-released: 2016.03.19.)
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for RFCE 1.3:
-(released: 2015.05.19.)
+(to-be-released: 2016.03.19.)
 
 	Civilization changes:
-		- Norse civ split into Denmark and Norway
-		- Sweden reworked to an earlier start
+		- Norse civ had been split into Denmark and Norway
+		- Sweden was reworked to an earlier start
 		- New civilizations: Novgorod, Prussia, Scotland, Aragon, Morocco
 		- Many things connected to the new civs are based on (or inspired by) RFCE++ changes, at least for now
 		- All 8 new civs have a completely revised settler, war, visibility, spawn and respawn map
@@ -157,7 +168,7 @@ Changes for RFCE 1.3:
 		- Message for the player when a known civ switches leaders, with the currently used DCN of the given civ
 		- Leaders moved: Norse leaders to Denmark and Norway, Yaqub al-Mansur (Cordoba -> Morocco), Frederick I (Germany -> Prussia)
 		- New leaders for existing civs: Bela III (Hungary), Mieszko (Poland), Philip August II (France), Harun al-Rashid (Arabia)
-		- New leaders for existing civs: Gustav Adolph (Sweden), Margaret I (Norse), Mstislav (Kiev), Bohdan Khmelnytsky (Kiev)
+		- New leaders for existing civs: Gustav Adolph (Sweden), Margaret I (Denmark), Mstislav (Kiev), Bohdan Khmelnytsky (Kiev)
 		- New leaders for existing civs: Basil II (Byzantium), Michael VIII Palaiologos (Byzantium), Mohammed I ibn Nasr (Cordoba)
 		- New leaders for existing civs: Magnus Ladulas (Sweden), Harald Bluetooth (Denmark), Otto I (Germany), Johan de Witt (Dutch)
 		- New leaders for existing civs: Otto-William (Burgundy), Beatrice II (Burgundy), Fernando III (Spain), Guglielmo Embriaco (Genoa)
@@ -194,7 +205,7 @@ Changes for RFCE 1.3:
 		- Byzantine 2nd UHV also needs Thrace, Thessaloniki, Moesia, Macedonia, Serbia, Arberia, Epirus, Thessaly and Morea provinces
 		- Some of the UHVs are coded more efficiently
 		- Detailed info for UHV progress for all civs, in the Victory Screen (F8)
-		- Removed some detailed info from the UHV texts (details are in are in the victory screen)
+		- Removed some redundant info from the UHV texts (details are in the victory screen)
 		- New UHV help for the 1st Polish UHV
 		- All UHV colony checks are handled on project built (instead of every turn), should make checks much faster (except for the Spanish UHV, which is only checked on a given turn)
 		- Trading companies don't count as colonies for the UHV anymore
@@ -254,7 +265,7 @@ Changes for RFCE 1.3:
 		- Revised initial stability for the different difficulty levels
 		- Rewrote most triggers for stability collapses and revolts:
 			- In huge empires, if stability is bad, there is 80% for the secession/city revolt mechanics to start, and only 10% for the collapse mechanics
-			- In medium empires, 40% for for the secession/city revolt mechanics, 40% for the collapse mechanics
+			- In medium empires, 40% for the secession/city revolt mechanics, 40% for the collapse mechanics
 			- In small empires, 70% chance for collapse mechanics, no chance for secession/city revolt mechanics
 			- Actual chance for triggering a revolt or collapse inside those mechanics is scaling with stability
 			- Note that bad stability is not the only way to trigger collapses or revolts
@@ -262,6 +273,7 @@ Changes for RFCE 1.3:
 		- Small boost to Merchant Republic and Bureaucracy stability, but both can be way more unstable than before with too many cities
 		- Imperialism civic and the French UP works without a hard cap on number of cities
 		- Fixed inconsistencies in the city stability calculations - way more deadly for the human player if the cities are managed poorly
+		- The AI has less severe stability penalties for not maintaining it's cities (populace) well enough
 		- Updated the stability guide. Civilopedia/Concepts/Stability Guide
 		- Revised stability changes and connected mechanics on religious persecution
 		- New aspect for the Venetian UP: halves instability for having too many cities in Merchant Republic
@@ -270,6 +282,12 @@ Changes for RFCE 1.3:
 			- Temporary instability: 3
 			- Norwegian UP: -1 permanent stability loss and no temporary instability for razing cities
 		- Reduced permanent stability loss from anarchies
+		- Stability always updates when entering the stability/finances (F2) screen
+		- Minor improvements in the stability code, fixing various python exceptions
+		- Fixed bug in the stability handicap levels (+2 base stability on monarch)
+		- Tuned down unintentionally harsh stability penalties connected to war weariness (4-7 stab difference for medium sized-empires, also it appears later in the war)
+		- Increased culture instability in newly conquered cities (less than 20% own culture)
+		- Small stability boost on completed UHVs (currently +3/UHV)
 
 	Persecution updates:
 		- Loot is significantly increased when you successfully purge a religion
@@ -279,8 +297,9 @@ Changes for RFCE 1.3:
 			- Nationwide variable, goes down by 1 each turn
 			- New counter for it on the main screen (Persecution, only shown if >0, right below the faith point counter)
 			- +8 to the counter on successful persecution (4 for Spain), 4 on unsuccessful (2 for Spain)
-			- Causes religious instability, 1 with 1-5, 2 with 6-10, 3 with 11-15, etc.
+			- Causes religious instability, 1 with 1-3, 2 with 4-6, 3 with 7-9, etc.
 			- The timer (Persecution Instability Cooldown), and the caused instability (Persecution Instability) are also shown in the Religion Screen (F7)
+		- Even with the increased instability from religious prosecution, still way better to persecute than to leave untolerated religions in your cities
 
 	Crusades:
 		- Increased number of units leaving the civs for a crusade, but it's low on the first 10-20 turns after a civ is born
@@ -299,7 +318,8 @@ Changes for RFCE 1.3:
 		- Improvements in the Crusader city names for England, Denmark, Poland, Genoa, Venice, Portugal, Sweden, Lithuania, and the Dutch by DC123456789
 		- Improved the German, Austrian, Prussian city name map around Bohemia, Silesia, Austria and in east Germany
 		- Small improvements on the Polish, Muscovian, Portuguese city name maps in Anatolia
-		- Fixed/improved most Dynamic Civ Names connected to Scandinavia, Bulgaria
+		- Fixed/improved most Dynamic Civ Names connected to the Scandinavian civs
+		- Updated DCN names for France, Hungary, Bulgaria, Byzantium
 		- Plague icon on the main interface when plague spreads to a new city
 		- Removed outdated xml_light files
 		- Reenabled and readded some entries in the civilopedia
@@ -324,12 +344,21 @@ Changes for RFCE 1.3:
 		- New barb-only units: Seljuk Swordsman, Seljuk Heavy Footman, Seljuk Crossbowman, Seljuk Guisarme (all for the Seljuks in Anatolia, surprisingly)
 		- New merc-only units: South Slav Vlastela (Serbia, Banat, Slavonia, Bosnia, Dalmatia), Lombard Heavy Footman (Lombardy, Liguria, Tuscany, Verona)
 		- New merc-only units: Bohemian War Wagon (Bohemia, Moravia), Mamluk Heavy Cavalry (Egypt), Crimean Tatar Rider (Crimea)
-		- Updated Dutch Dawn of Man text
-		- New DoM text for Scotland (by gilgames)
+		- Updated Dutch and Swedish Dawn of Man text
+		- New DoM text for Scotland, Aragon, Morocco inspired by gilgames' suggestions
+		- Minor DoM updates for Byzantium, France, Arabia, Cordoba, Burgundy, Germany, Kiev - by DC123456789
 		- Switched to CE instead of AD for non-christian civs
 		- Germany and Venice start with missionaries
 		- Civs start with a state religion corresponding to their spawning missionaries (no first turn anarchy required anymore)
-		- Burgundy starts preset civics
+		- Burgundy starts with preset civics
+		- Bigger city attack penalty for most mounted units: -25% for most light cavalry, -20% for most heavy cavalry, -10% for most unique and special mounted units
+		- Slightly tuned down Hungarian and Venetian tech progress (both player and AI)
+		- Increased various maintenance modifiers for Byzantium (especially for the AI), decreased for Burgundy (was still set to the 500AD start)
+		- Cordoba starts with Literature (thus they can use the Religious Law civic on start)
+		- Cordoba starts with Arabic Medicine (health is important for 1st UHV, also somewhat historic and in synergy with the UP)
+		- Portugal starts with some siege units instead of a couple melee ones
+		- Changed sea spawns: naval starting units can spawn inside other players' sea territory, as all naval units can enter foreign borders anyway
+		- Less barbs in the Maghreb, Arabia, Kiev
 
 	Art updates:
 		- New art for Isabella (Spain), Casimir III (Poland), Ivan IV (Muscovy), Simeon I (Bulgaria), Ivan Asen (Bulgaria)
@@ -373,6 +402,9 @@ Changes for RFCE 1.3:
 		- Fixed stability bug connected to the order of some Wonders
 		- Fixed bug with stability calculations on city razing
 		- Fixed bug when razing cities with wonders connected to stability
+		- Fixed bug which made it possible for the Pope to collapse
+		- Fixed bug where the Prussian province setup didn't switch for the human player in 1618
+		- Fixed bug where the Aragonese starting naval units didn't always spawn
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

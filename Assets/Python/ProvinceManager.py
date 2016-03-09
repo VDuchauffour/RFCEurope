@@ -467,6 +467,16 @@ class ProvinceManager:
 			for iProv in self.tPot2NormProvinces[iPlayer]:
 				pPlayer.setProvinceType( iProv, iProvincePotential )
 
+	def checkTurn(self, iGameTurn):
+		# Prussia direction change
+		if (iGameTurn == xml.i1618AD):
+			pPrussia.setProvinceType( xml.iP_Estonia, con.iProvinceNone )
+			pPrussia.setProvinceType( xml.iP_Livonia, con.iProvinceOuter )
+			pPrussia.setProvinceType( xml.iP_Brandenburg, con.iProvinceNatural )
+			pPrussia.setProvinceType( xml.iP_Silesia, con.iProvincePotential )
+			pPrussia.setProvinceType( xml.iP_GreaterPoland, con.iProvinceOuter )
+			print("Yes! Prussia can into Germany!")
+
 	def onCityBuilt(self, iPlayer, x, y):
 		if ( iPlayer >= con.iNumPlayers -1 ):
 			return

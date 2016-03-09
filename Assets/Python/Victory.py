@@ -175,6 +175,8 @@ tDenmarkControlIII = [ xml.iP_Denmark, xml.iP_Norway, xml.iP_Vestfold, xml.iP_Sk
 #tHugeHungaryControl = ( 0, 23, 99, 72 )
 totalLand = gc.getMap().getLandPlots()
 
+iCathegoryExpansion = con.iCathegoryExpansion
+
 class Victory:
 
 	def __init__(self ):
@@ -291,6 +293,7 @@ class Victory:
 					iAfrica += 1
 				if ( iIslands >= 3 and iAfrica >= 2 ):
 					pPortugal.setUHV( 0, 1 )
+					pPortugal.changeStabilityBase( iCathegoryExpansion, 3 )
 				pPortugal.setUHVCounter( 0, iAfrica * 100 + iIslands )
 
 
@@ -299,6 +302,7 @@ class Victory:
 		if (iReligion == xml.iProtestantism):
 			if iFounder == iGermany:
 				pGermany.setUHV( 1, 1 )
+				pGermany.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pGermany.setUHV( 1, 0 )
 
@@ -338,6 +342,7 @@ class Victory:
 				pPoland.setUHVCounter( 2, iCounter )
 				if ( iCathCath >= 3 and iOrthCath >= 2 and iProtCath >= 2 and iJewishQu >= 2 ):
 					pPoland.setUHV( 2, 1 )
+					pPoland.changeStabilityBase( iCathegoryExpansion, 3 )
 
 		# Prussia UHV 2: Conquer two cities from each of Austria, Muscowy, Germany, Sweden, France and Spain between 1650AD and 1763AD, if they are still alive.
 		elif(playerType == iPrussia and owner in tPrussiaDefeat and iGameTurn >= xml.i1650AD and iGameTurn <= xml.i1763AD):
@@ -356,6 +361,7 @@ class Victory:
 
 			if(pPrussia.getUHV(1) == -1 and bConq):
 				pPrussia.setUHV( 1, 1 )
+				pPrussia.changeStabilityBase( iCathegoryExpansion, 3 )
 
 			iConqRaw = 0
 			for iI in range(len(tPrussiaDefeat)):
@@ -370,7 +376,8 @@ class Victory:
 				iRazed = pSweden.getUHVCounter(1)+1
 				pSweden.setUHVCounter(1,iRazed)
 				if(iRazed >= 5):
-					pSweden.setUHV(1,1)
+					pSweden.setUHV( 1, 1 )
+					pSweden.changeStabilityBase( iCathegoryExpansion, 3 )
 
 
 	def onPillageImprovement( self, iPillager, iVictim, iImprovement, iRoute, iX, iY ):
@@ -399,6 +406,7 @@ class Victory:
 			if ( pEngland.getUHV( 2 ) == -1 ):
 				if ( iPlayer == iEngland ):
 					pEngland.setUHV( 2, 1 )
+					pEngland.changeStabilityBase( iCathegoryExpansion, 3 )
 				else:
 					pEngland.setUHV( 2, 0 )
 
@@ -422,6 +430,7 @@ class Victory:
 						iCathedralCounter += 1
 					if ( iCathedralCounter >= 2 and iMonasteryCounter >= 8 ):
 						pKiev.setUHV( 0, 1 )
+						pKiev.changeStabilityBase( iCathegoryExpansion, 3 )
 					pKiev.setUHVCounter( 0, 100 * iMonasteryCounter + iCathedralCounter )
 
 		# Poland UHV 3:
@@ -447,6 +456,7 @@ class Victory:
 						iJewishQu += 1
 					if ( iCathCath >= 3 and iOrthCath >= 3 and iProtCath >= 2 and iJewishQu >= 2 ):
 						pPoland.setUHV( 2, 1 )
+						pPoland.changeStabilityBase( iCathegoryExpansion, 3 )
 					iCounter = iJewishQu + 100 * iProtCath + 1000 * iOrthCath + 10000 * iCathCath
 					pPoland.setUHVCounter( 2, iCounter )
 
@@ -459,6 +469,7 @@ class Victory:
 					iBanks = iCounter / 100 + 1
 					if ( iBanks >= 8 and iCorps >= 2 ):
 						pGenoa.setUHV( 1, 1 )
+						pGenoa.changeStabilityBase( iCathegoryExpansion, 3 )
 					pGenoa.setUHVCounter( 1, 100 * iBanks + iCorps )
 
 		# Cordoba UHV 2:
@@ -469,6 +480,7 @@ class Victory:
 					pCordoba.setUHVCounter( 1, iWondersBuilt + 1 )
 					if (iWondersBuilt == 2): # so we already had 2 wonders
 						pCordoba.setUHV( 1, 1 )
+						pCordoba.changeStabilityBase( iCathegoryExpansion, 3 )
 				else:
 					pCordoba.setUHV( 1, 0 )
 
@@ -483,6 +495,7 @@ class Victory:
 			if bColony:
 				if ( iPlayer == iVenecia ):
 					pVenecia.setUHV( 2, 1 )
+					pVenecia.changeStabilityBase( iCathegoryExpansion, 3 )
 				else:
 					pVenecia.setUHV( 2, 0 )
 
@@ -493,6 +506,7 @@ class Victory:
 				if ( pFrankia.getUHV( 2 ) == -1 ):
 					if ( pFrankia.getUHVCounter( 2 ) >= 5 ):
 						pFrankia.setUHV( 2, 1 )
+						pFrankia.changeStabilityBase( iCathegoryExpansion, 3 )
 
 		# England UHV 2:
 		elif ( iPlayer == iEngland ):
@@ -501,6 +515,7 @@ class Victory:
 				if ( pEngland.getUHV( 1 ) == -1 ):
 					if ( pEngland.getUHVCounter( 1 ) >= 7 ):
 						pEngland.setUHV( 1, 1 )
+						pEngland.changeStabilityBase( iCathegoryExpansion, 3 )
 
 		# Spain UHV 2: this is only for the Main Screen counter
 		elif ( iPlayer == iSpain ):
@@ -514,6 +529,7 @@ class Victory:
 				if ( pPortugal.getUHV( 2 ) == -1 ):
 					if ( pPortugal.getUHVCounter( 2 ) >= 5 ):
 						pPortugal.setUHV( 2, 1 )
+						pPortugal.changeStabilityBase( iCathegoryExpansion, 3 )
 
 		# Dutch UHV 2:
 		elif ( iPlayer == iDutch ):
@@ -527,6 +543,7 @@ class Victory:
 					if ( iProject == xml.iWestIndiaCompany or iWestCompany == 1 ):
 						if ( iProject == xml.iEastIndiaCompany or iEastCompany == 1):
 							pDutch.setUHV( 1, 1 )
+							pDutch.changeStabilityBase( iCathegoryExpansion, 3 )
 
 		# Denmark UHV 3:
 		elif ( iPlayer == iDenmark ):
@@ -540,6 +557,7 @@ class Victory:
 					if ( iProject == xml.iWestIndiaCompany or iWestCompany == 1 ):
 						if ( iProject == xml.iEastIndiaCompany or iEastCompany == 1):
 							pDenmark.setUHV( 2, 1 )
+							pDenmark.changeStabilityBase( iCathegoryExpansion, 3 )
 
 
 	def onCorporationFounded(self, iPlayer ):
@@ -551,6 +569,7 @@ class Victory:
 			iBanks = iCounter / 100
 			if ( iBanks >= 8 and iCorps >= 2 ):
 				pGenoa.setUHV( 1, 1 )
+				pGenoa.changeStabilityBase( iCathegoryExpansion, 3 )
 			pGenoa.setUHVCounter( 1, 100 * iBanks + iCorps )
 		if ( self.getCorporationsFounded() == 7 and pGenoa.getUHV( 1 ) == -1 ):
 			iCounter = pGenoa.getUHVCounter( 1 )
@@ -628,6 +647,7 @@ class Victory:
 		if ( iGameTurn == xml.i1025AD and pByzantium.getUHV( 0 ) == -1 ):
 			if ( gc.isLargestCity( con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] ) and gc.isTopCultureCity( con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] ) and gc.getMap().plot( con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] ).getPlotCity().getOwner() == iByzantium ):
 				pByzantium.setUHV( 0, 1 )
+				pByzantium.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pByzantium.setUHV( 0, 0 )
 
@@ -640,6 +660,7 @@ class Victory:
 					break
 			if ( bOwn ):
 				pByzantium.setUHV( 1, 1 )
+				pByzantium.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pByzantium.setUHV( 1, 0 )
 
@@ -653,6 +674,7 @@ class Victory:
 						bMost = False
 			if ( bMost ):
 				 pByzantium.setUHV( 2, 1 )
+				 pByzantium.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				 pByzantium.setUHV( 2, 0 )
 
@@ -669,6 +691,7 @@ class Victory:
 					break
 			if ( bCharlemagneEmpire ):
 				pFrankia.setUHV( 0, 1 )
+				pFrankia.changeStabilityBase( iCathegoryExpansion, 3 )
 			elif ( iGameTurn == xml.i840AD ):
 				pFrankia.setUHV( 0, 0 )
 
@@ -678,6 +701,7 @@ class Victory:
 			if ( pJPlot.isCity()):
 				if ( pJPlot.getPlotCity().getOwner() == iFrankia ):
 					pFrankia.setUHV( 1, 1 )
+					pFrankia.changeStabilityBase( iCathegoryExpansion, 3 )
 				else:
 					pFrankia.setUHV( 1, 0 )
 			else:
@@ -698,6 +722,7 @@ class Victory:
 					break
 			if ( bConq ):
 				pArabia.setUHV( 0, 1 )
+				pArabia.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pArabia.setUHV( 0, 0 )
 
@@ -710,6 +735,7 @@ class Victory:
 					break
 			if ( bConq ):
 				pArabia.setUHV( 1, 1 )
+				pArabia.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pArabia.setUHV( 1, 0 )
 
@@ -718,6 +744,7 @@ class Victory:
 			iPerc = gc.getGame().calculateReligionPercent( xml.iIslam )
 			if ( iPerc >= 35 ):
 				pArabia.setUHV( 2, 1 )
+				pArabia.changeStabilityBase( iCathegoryExpansion, 3 )
 
 
 	def checkBulgaria( self, iGameTurn ):
@@ -731,6 +758,7 @@ class Victory:
 					break
 			if ( bConq ):
 				pBulgaria.setUHV( 0, 1 )
+				pBulgaria.changeStabilityBase( iCathegoryExpansion, 3 )
 			elif ( iGameTurn == xml.i917AD ):
 				pBulgaria.setUHV( 0, 0 )
 
@@ -738,6 +766,7 @@ class Victory:
 		if ( iGameTurn <= xml.i1259AD and pBulgaria.getUHV( 1 ) == -1 ):
 			if ( pBulgaria.getFaith() >= 100 ):
 				pBulgaria.setUHV( 1, 1 )
+				pBulgaria.changeStabilityBase( iCathegoryExpansion, 3 )
 			elif ( iGameTurn == xml.i1259AD ):
 				pBulgaria.setUHV( 1, 0 )
 
@@ -745,6 +774,7 @@ class Victory:
 		# Controlled in the onCityAcquired function
 		if ( iGameTurn == xml.i1393AD and pBulgaria.getUHV( 2 ) == -1 ):
 			pBulgaria.setUHV( 2, 1 )
+			pBulgaria.changeStabilityBase( iCathegoryExpansion, 3 )
 
 
 	def checkCordoba( self, iGameTurn ):
@@ -753,6 +783,7 @@ class Victory:
 		if ( iGameTurn == xml.i961AD and pCordoba.getUHV(0) == -1 ):
 			if ( gc.isLargestCity( con.tCapitals[iCordoba][0], con.tCapitals[iCordoba][1] ) and gc.getMap().plot( con.tCapitals[iCordoba][0], con.tCapitals[iCordoba][1] ).getPlotCity().getOwner() == iCordoba ):
 				pCordoba.setUHV( 0, 1 )
+				pCordoba.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pCordoba.setUHV( 0, 0 )
 
@@ -770,6 +801,7 @@ class Victory:
 					break
 			if ( bIslamized ):
 				pCordoba.setUHV( 2, 1 )
+				pCordoba.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pCordoba.setUHV( 2, 0 )
 
@@ -788,6 +820,7 @@ class Victory:
 		if ( iGameTurn <= xml.i1066AD and pNorway.getUHV( 0 ) == -1 ):
 			if ( pNorway.getUHVCounter( 2 ) >= 80 ): # It's still counter 2, for the sake of convenience and confusion
 				pNorway.setUHV( 0, 1 )
+				pNorway.changeStabilityBase( iCathegoryExpansion, 3 )
 			elif ( iGameTurn == xml.i1066AD ):
 				pNorway.setUHV( 0, 0 )
 
@@ -800,6 +833,7 @@ class Victory:
 					break
 			if(bConq and teamNorway.getProjectCount(xml.iColVinland) >= 1):
 				pNorway.setUHV( 1, 1 )
+				pNorway.changeStabilityBase( iCathegoryExpansion, 3 )
 			elif(iGameTurn == xml.i1263AD):
 				pNorway.setUHV( 1, 0 )
 
@@ -813,6 +847,7 @@ class Victory:
 					break
 			if(bIsOnTop):
 				pNorway.setUHV( 2, 1 )
+				pNorway.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pNorway.setUHV( 2, 0 )
 
@@ -828,6 +863,7 @@ class Victory:
 					break
 			if ( bConq ):
 				pDenmark.setUHV( 0, 1 )
+				pDenmark.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pDenmark.setUHV( 0, 0 )
 
@@ -840,6 +876,7 @@ class Victory:
 					break
 			if ( bConq ):
 				pDenmark.setUHV( 1, 1 )
+				pDenmark.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pDenmark.setUHV( 1, 0 )
 
@@ -858,6 +895,7 @@ class Victory:
 					break
 			if ( bConq ):
 				pVenecia.setUHV( 0, 1 )
+				pVenecia.changeStabilityBase( iCathegoryExpansion, 3 )
 			elif ( iGameTurn == xml.i1004AD ):
 				pVenecia.setUHV( 0, 0 )
 
@@ -865,6 +903,7 @@ class Victory:
 		if ( iGameTurn <= xml.i1204AD and pVenecia.getUHV( 1 ) == -1 ):
 			if ( pVenecia.getProvinceCurrentState( xml.iP_Constantinople ) >= con.iProvinceConquer ):
 				pVenecia.setUHV( 1, 1 )
+				pVenecia.changeStabilityBase( iCathegoryExpansion, 3 )
 			elif ( iGameTurn == xml.i1204AD ):
 				pVenecia.setUHV( 1, 0 )
 
@@ -880,6 +919,7 @@ class Victory:
 		if ( iGameTurn <= xml.i1336AD and pBurgundy.getUHV( 0 ) == -1 ):
 			if ( iCulture >= 10000 ):
 				pBurgundy.setUHV( 0, 1 )
+				pBurgundy.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				if ( iGameTurn == xml.i1336AD ):
 					pBurgundy.setUHV( 0, 0 )
@@ -893,6 +933,7 @@ class Victory:
 					break
 			if ( bOwn ):
 				pBurgundy.setUHV( 1, 1 )
+				pBurgundy.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pBurgundy.setUHV( 1, 0 )
 
@@ -906,6 +947,7 @@ class Victory:
 					break
 			if ( bIsOnTop ):
 				pBurgundy.setUHV( 2, 1 )
+				pBurgundy.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pBurgundy.setUHV( 2, 0 )
 
@@ -924,6 +966,7 @@ class Victory:
 					break
 			if ( bOwn ):
 				pGermany.setUHV( 0, 1 )
+				pGermany.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pGermany.setUHV( 0, 0 )
 
@@ -939,6 +982,7 @@ class Victory:
 					break
 			if ( bOwn ):
 				pGermany.setUHV( 2, 1 )
+				pGermany.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pGermany.setUHV( 2, 0 )
 
@@ -954,6 +998,7 @@ class Victory:
 					break
 			if ( bOwn ):
 				pNovgorod.setUHV( 0, 1 )
+				pNovgorod.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pNovgorod.setUHV( 0, 0 )
 
@@ -962,6 +1007,7 @@ class Victory:
 			if (iGameTurn <= xml.i1397AD):
 				if (pNovgorod.countOwnedBonuses(xml.iFur) >= 12):
 					pNovgorod.setUHV( 1, 1 )
+					pNovgorod.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pNovgorod.setUHV( 1, 0 )
 
@@ -972,6 +1018,7 @@ class Victory:
 				iNumCities += pNovgorod.getProvinceCityCount( iProv )
 			if ( iNumCities >= 7 ):
 				pNovgorod.setUHV( 2, 1 )
+				pNovgorod.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pNovgorod.setUHV( 2, 0 )
 
@@ -991,6 +1038,7 @@ class Victory:
 					iConq += 1
 			if ( iConq > 9 ):
 				pKiev.setUHV( 1, 1 )
+				pKiev.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pKiev.setUHV( 1, 0 )
 
@@ -1000,6 +1048,7 @@ class Victory:
 		if ( iGameTurn <= xml.i1300AD and pKiev.getUHV( 2 ) == -1 ):
 			if ( iFood > 25000 ):
 				pKiev.setUHV( 2, 1 )
+				pKiev.changeStabilityBase( iCathegoryExpansion, 3 )
 			elif ( iGameTurn == xml.i1300AD ):
 				pKiev.setUHV( 2, 0 )
 
@@ -1016,6 +1065,7 @@ class Victory:
 						break
 			if ( bClean ):
 				pHungary.setUHV( 0, 1 )
+				pHungary.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pHungary.setUHV( 0, 0 )
 
@@ -1031,6 +1081,7 @@ class Victory:
 					break
 			if bMost:
 				pHungary.setUHV( 1, 1 )
+				pHungary.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pHungary.setUHV( 1, 0 )
 
@@ -1039,6 +1090,7 @@ class Victory:
 			iCivic = pHungary.getCivics(4)
 			if ( iCivic == 24 ):
 				pHungary.setUHV( 2, 1 )
+				pHungary.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				for iPlayer in range( iNumMajorPlayers ):
 					pPlayer = gc.getPlayer( iPlayer )
@@ -1057,6 +1109,7 @@ class Victory:
 					break
 			if ( bConverted ):
 				pSpain.setUHV( 0, 1 )
+				pSpain.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pSpain.setUHV( 0, 0 )
 
@@ -1071,6 +1124,7 @@ class Victory:
 						bMost = False
 			if ( bMost and iSpainColonies >= 3 ):
 				pSpain.setUHV( 1, 1 )
+				pSpain.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pSpain.setUHV( 1, 0 )
 
@@ -1102,23 +1156,25 @@ class Victory:
 
 			if ( pSpain.getStateReligion() == xml.iCatholicism and bWon ):
 				pSpain.setUHV( 2, 1 )
+				pSpain.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pSpain.setUHV( 2, 0 )
 
 
 	def checkScotland( self, iGameTurn ):
 
-		# UHV 1: Have 10 Forts and 4 Castles in 1296.
+		# UHV 1: Have 10 Forts and 4 Castles by 1296.
 		if ( iGameTurn <= xml.i1296AD and pScotland.getUHV( 0 ) == -1):
 			iForts = pScotland.getImprovementCount( xml.iImprovementFort )
 			iCastles = pScotland.countNumBuildings( xml.iCastle )
 			print("Forts:",iForts,"Castles:",iCastles)
 			if( iForts >= 10 and iCastles >= 4 ):
 				pScotland.setUHV( 0, 1 )
+				pScotland.changeStabilityBase( iCathegoryExpansion, 3 )
 		if ( iGameTurn == xml.i1296AD and pScotland.getUHV( 0 ) == -1):
 			pScotland.setUHV( 0, 0 )
 
-		# UHV 2: Have 1000 attitude points with France by 1560. Attitude points go up every turn depending on relations
+		# UHV 2: Have 2500 attitude points with France by 1560. Attitude points go up every turn depending on relations
 		if ( iGameTurn <= xml.i1560AD and pFrankia.isAlive() and pScotland.getUHV( 1 ) == -1):
 			# -2 for Furious -1 for Annoyed 0 for Cautious 1 for Pleased 2 for Friendly
 			iScore = pFrankia.AI_getAttitude(iScotland) - 2
@@ -1149,6 +1205,7 @@ class Victory:
 			pScotland.setUHVCounter(1, iNewScore)
 			if(iNewScore >= 2500):
 				pScotland.setUHV( 1, 1 )
+				pScotland.changeStabilityBase( iCathegoryExpansion, 3 )
 		elif ( iGameTurn > xml.i1560AD and pScotland.getUHV( 1 ) == -1 ):
 			pScotland.setUHV( 1, 0 )
 
@@ -1161,6 +1218,7 @@ class Victory:
 					break
 			if ( bConq ):
 				pScotland.setUHV( 2, 1 )
+				pScotland.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pScotland.setUHV( 2, 0 )
 
@@ -1180,6 +1238,7 @@ class Victory:
 					break
 			if (bFood):
 				pPoland.setUHV( 0, 1 )
+				pPoland.changeStabilityBase( iCathegoryExpansion, 3 )
 			elif ( iGameTurn == xml.i1520AD ):
 				pPoland.setUHV( 0, 0 )
 
@@ -1190,6 +1249,7 @@ class Victory:
 				iNumCities += pPoland.getProvinceCityCount( iProv )
 			if ( iNumCities >= 12 ):
 				pPoland.setUHV( 1, 1 )
+				pPoland.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pPoland.setUHV( 1, 0 )
 
@@ -1208,6 +1268,7 @@ class Victory:
 					break
 			if ( bConq ):
 				pGenoa.setUHV( 0, 1 )
+				pGenoa.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pGenoa.setUHV( 0, 0 )
 
@@ -1226,6 +1287,7 @@ class Victory:
 						break
 			if ( bLargest ):
 				pGenoa.setUHV( 2, 1 )
+				pGenoa.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pGenoa.setUHV( 2, 0 )
 
@@ -1241,6 +1303,7 @@ class Victory:
 					break
 			if ( bConq ):
 				pMorocco.setUHV( 0, 1 )
+				pMorocco.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pMorocco.setUHV( 0, 0 )
 
@@ -1255,6 +1318,7 @@ class Victory:
 
 			if(iGoodCities >= 3):
 				pMorocco.setUHV( 1, 1 )
+				pMorocco.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pMorocco.setUHV( 1, 0 )
 
@@ -1270,6 +1334,7 @@ class Victory:
 
 			if( bConq ):
 				pMorocco.setUHV( 2, 1 )
+				pMorocco.changeStabilityBase( iCathegoryExpansion, 3 )
 		elif (iGameTurn > xml.i1578AD and pMorocco.getUHV( 2 ) == -1):
 			pMorocco.setUHV( 2, 0 )
 
@@ -1285,6 +1350,7 @@ class Victory:
 					break
 			if ( bConq ):
 				pEngland.setUHV( 0, 1 )
+				pEngland.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pEngland.setUHV( 0, 0 )
 
@@ -1304,6 +1370,7 @@ class Victory:
 		# Controlled in the onCityAcquired function
 		if ( iGameTurn == xml.i1640AD and pPortugal.getUHV( 1 ) == -1 ):
 			pPortugal.setUHV( 1, 1 )
+			pPortugal.changeStabilityBase( iCathegoryExpansion, 3 )
 
 		# UHV 3: Build 5 Colonies
 		# Controlled in the onProjectBuilt function
@@ -1311,7 +1378,7 @@ class Victory:
 
 	def checkAragon( self, iGameTurn ):
 
-		# UHV 1: Control Catalonia, Valencia, Baleares and Sicily in 1282
+		# UHV 1: Control Catalonia, Valencia, Balears and Sicily in 1282
 		if ( iGameTurn == xml.i1282AD and pAragon.getUHV( 0 ) == -1 ):
 			bConq = True
 			for iProv in tAragonControlI:
@@ -1320,6 +1387,7 @@ class Victory:
 					break
 			if ( bConq ):
 				pAragon.setUHV( 0, 1 )
+				pAragon.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pAragon.setUHV( 0, 0 )
 
@@ -1329,10 +1397,11 @@ class Victory:
 			print("Ports:",iPorts)
 			if( iPorts >= 12  ):
 				pAragon.setUHV( 1, 1 )
+				pAragon.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pAragon.setUHV( 1, 0 )
 
-		# UHV 3: Control Catalonia, Valencia, Aragon, Baleares, Corsica, Sardinia, Sicily, Apulia, Provence and Thessaly in 1474
+		# UHV 3: Control Catalonia, Valencia, Aragon, Balears, Corsica, Sardinia, Sicily, Apulia, Provence and Thessaly in 1474
 		if ( iGameTurn == xml.i1474AD and pAragon.getUHV( 2 ) == -1 ):
 			bConq = True
 			for iProv in tAragonControlII:
@@ -1341,6 +1410,7 @@ class Victory:
 					break
 			if ( bConq ):
 				pAragon.setUHV( 2, 1 )
+				pAragon.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pAragon.setUHV( 2, 0 )
 
@@ -1356,6 +1426,7 @@ class Victory:
 					break
 			if ( bOwn ):
 				pPrussia.setUHV( 0, 1 )
+				pPrussia.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pPrussia.setUHV( 0, 0 )
 
@@ -1374,6 +1445,7 @@ class Victory:
 				iGPeople += pCapital.getFreeSpecialistCount(iType)
 			if(iGPeople >= 15):
 				pPrussia.setUHV( 2, 1 )
+				pPrussia.changeStabilityBase( iCathegoryExpansion, 3 )
 
 
 	def checkLithuania( self, iGameTurn ):
@@ -1386,6 +1458,7 @@ class Victory:
 				pLithuania.setUHV( 0, 0 )
 			elif ( iCulture >= 2000 ):
 				pLithuania.setUHV( 0, 1 )
+				pLithuania.changeStabilityBase( iCathegoryExpansion, 3 )
 			elif ( iGameTurn == xml.i1386AD ):
 				pLithuania.setUHV( 0, 0 )
 
@@ -1393,6 +1466,7 @@ class Victory:
 		if ( iGameTurn == xml.i1569AD and pLithuania.getUHV( 1 ) == -1 ):
 			if ( pLithuania.getNumCities() >= 18 ):
 				pLithuania.setUHV( 1, 1 )
+				pLithuania.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pLithuania.setUHV( 1, 0 )
 
@@ -1400,8 +1474,10 @@ class Victory:
 		if ( pLithuania.getUHV( 2 ) == -1 ):
 			if ( pMoscow.isAlive() and teamMoscow.isVassal( teamLithuania.getID() ) ):
 				pLithuania.setUHV( 2, 1 )
+				pLithuania.changeStabilityBase( iCathegoryExpansion, 3 )
 			elif ( (iGameTurn > xml.i1401AD) and (pLithuania.getProvinceCurrentState( xml.iP_Moscow ) >= con.iProvinceConquer) ):
 				pLithuania.setUHV( 2, 1 )
+				pLithuania.changeStabilityBase( iCathegoryExpansion, 3 )
 
 
 	def checkAustria( self, iGameTurn ):
@@ -1415,6 +1491,7 @@ class Victory:
 					break
 			if ( bConq ):
 				pAustria.setUHV( 0, 1 )
+				pAustria.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pAustria.setUHV( 0, 0 )
 
@@ -1428,6 +1505,7 @@ class Victory:
 						iCount += 1
 			if ( iCount >= 3 ):
 				 pAustria.setUHV( 1, 1 )
+				 pAustria.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				 pAustria.setUHV( 1, 0 )
 
@@ -1435,6 +1513,7 @@ class Victory:
 		if ( iGameTurn == xml.i1780AD and pAustria.getUHV( 2 ) == -1 ):
 			if ( gc.getGame().getTeamRank(iAustria) == 0 ):
 				 pAustria.setUHV( 2, 1 )
+				 pAustria.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				 pAustria.setUHV( 2, 0 )
 
@@ -1450,6 +1529,7 @@ class Victory:
 					break
 			if ( bConq ):
 				pTurkey.setUHV( 0, 1 )
+				pTurkey.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pTurkey.setUHV( 0, 0 )
 
@@ -1462,6 +1542,7 @@ class Victory:
 					break
 			if ( bConq ):
 				pTurkey.setUHV( 1, 1 )
+				pTurkey.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pTurkey.setUHV( 1, 0 )
 
@@ -1474,6 +1555,7 @@ class Victory:
 					break
 			if ( bConq ):
 				pTurkey.setUHV( 2, 1 )
+				pTurkey.changeStabilityBase( iCathegoryExpansion, 3 )
 			elif ( iGameTurn == xml.i1683AD ):
 				pTurkey.setUHV( 2, 0 )
 
@@ -1489,6 +1571,7 @@ class Victory:
 					break
 			if ( bClean ):
 				pMoscow.setUHV( 0, 1 )
+				pMoscow.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pMoscow.setUHV( 0, 0 )
 
@@ -1502,13 +1585,16 @@ class Victory:
 				landPercent = 0.0
 			if ( landPercent >= 20 ):
 				pMoscow.setUHV( 1, 1 )
+				pMoscow.changeStabilityBase( iCathegoryExpansion, 3 )
 
 		# UHV 3: Get into warm waters
 		if ( pMoscow.getUHV( 2 ) == -1 ):
 			if ( pMoscow.countOwnedBonuses( xml.iAccess ) > 0 ):
 				pMoscow.setUHV( 2, 1 )
+				pMoscow.changeStabilityBase( iCathegoryExpansion, 3 )
 			elif ( gc.getMap().plot( con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] ).getPlotCity().getOwner() == iMoscow ):
 				pMoscow.setUHV( 2, 1 )
+				pMoscow.changeStabilityBase( iCathegoryExpansion, 3 )
 
 
 	def checkSweden( self, iGameTurn ):
@@ -1524,6 +1610,7 @@ class Victory:
 				iNumCities += pSweden.getProvinceCityCount(iProv)
 			if ( iNumCities >= 6 ):
 				pSweden.setUHV( 0, 1 )
+				pSweden.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				pSweden.setUHV( 0, 0 )
 
@@ -1538,6 +1625,7 @@ class Victory:
 				pSweden.setUHV( 2, 0 )
 			else:
 				pSweden.setUHV( 2, 1 )
+				pSweden.changeStabilityBase( iCathegoryExpansion, 3 )
 
 
 	def checkDutch( self, iGameTurn ):
@@ -1548,6 +1636,7 @@ class Victory:
 			if ( pPlot.isCity() ):
 				if ( pPlot.getPlotCity().getFreeSpecialistCount(xml.iGreatMerchant) >= 5 ):
 					pDutch.setUHV( 0, 1 )
+					pDutch.changeStabilityBase( iCathegoryExpansion, 3 )
 		else:
 			if ( pDutch.getUHV( 0 ) == -1 ):
 				pDutch.setUHV( 0, 0 )
@@ -1565,6 +1654,7 @@ class Victory:
 						bMost = False
 			if ( bMost ):
 				 pDutch.setUHV( 2, 1 )
+				 pDutch.changeStabilityBase( iCathegoryExpansion, 3 )
 
 	def setAllUHVFailed( self, iCiv ):
 		pPlayer = gc.getPlayer(iCiv)

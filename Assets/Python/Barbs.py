@@ -121,11 +121,11 @@ lReykjavik = [2,70,270,0] #1410 AD
 lValletta = [57,14,315,0] #1530 AD
 
 
-# Minor Nations sructure: [ int Province: all cities in this province will revolt
+# Minor Nations structure: [ int Province: all cities in this province will revolt
 #			list nations: a city controlled by those players will not revolt (i.e. Greece wouldn't revolt against the Byz)
 #			list religions: a city owned by someone with one of those state religions will not revolt (i.e. Jerusalem doesn't revolt against Muslims)
 #			list revolt dates: the dates for the revolt,
-#			list revolt strength: this is substracted from the odds to suppress the revolt (i.e. high number more likely to succeed in the revolt)
+#			list revolt strength: this is subtracted from the odds to suppress the revolt (i.e. high number more likely to succeed in the revolt)
 #			list units: corresponding to the revolt, if we crack down on the rebels, what barbarian units should spawn
 #			list number: corresponding to the revolt, if we crack down on the rebels, how many units should spawn (note if we don't bribe the Lords, then double the number of Units will spawn)
 #			list text keys: text keys for "The Nation" and "Nation Adjective"
@@ -288,17 +288,17 @@ class Barbs:
 			self.spawnUnits( iBarbarian, (88,31),(99,40), xml.iAxeman, 1, iGameTurn,7,0,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_KHAZARS", ()))
 		if (iGameTurn >= xml.i864AD and iGameTurn < xml.i920AD):
 			if (gc.getPlayer(con.iKiev).isHuman()): #more barbs for human Kiev
-				self.spawnUnits( iBarbarian, (88,31),(99,40), xml.iAxeman, 1, iGameTurn,7,0,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_KHAZARS", ()))
-				self.spawnUnits( iBarbarian, (88,31),(99,40), xml.iSpearman, 1, iGameTurn,7,0,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_KHAZARS", ()))
+				self.spawnUnits( iBarbarian, (88,31),(99,40), xml.iAxeman, 1, iGameTurn,9,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_KHAZARS", ()))
+				self.spawnUnits( iBarbarian, (88,31),(99,40), xml.iSpearman, 1, iGameTurn,9,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_KHAZARS", ()))
 			else: #less for the AI
-				self.spawnUnits( iBarbarian, (88,31),(99,40), xml.iAxeman, 1, iGameTurn,7,0,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_KHAZARS", ()))
+				self.spawnUnits( iBarbarian, (88,31),(99,40), xml.iAxeman, 1, iGameTurn,9,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_KHAZARS", ()))
 
 		#Pechenegs
 		if (iGameTurn >= xml.i920AD and iGameTurn < xml.i1040AD):
 			#in the Rus
-			self.spawnUnits( iBarbarian, (89,34),(97,40), xml.iSteppeHorseArcher, 1, iGameTurn,6,3,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_PECHENEGS", ()))
+			self.spawnUnits( iBarbarian, (89,34),(97,40), xml.iSteppeHorseArcher, 1, iGameTurn,8,3,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_PECHENEGS", ()))
 			if (gc.getPlayer(con.iKiev).isHuman()): #more barbs for human Kiev
-				self.spawnUnits( iBarbarian, (91,35),(99,44), xml.iSteppeHorseArcher, 1 + iHandicap, iGameTurn,4,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_PECHENEGS", ()))
+				self.spawnUnits( iBarbarian, (91,35),(99,44), xml.iSteppeHorseArcher, 1 + iHandicap, iGameTurn,5,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_PECHENEGS", ()))
 			#in Hungary
 			self.spawnUnits( iBarbarian, (66,35),(75,42), xml.iSteppeHorseArcher, 1, iGameTurn,9,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_PECHENEGS", ()))
 			if (gc.getPlayer(con.iHungary).isHuman()): #extra barbs for human Hungary
@@ -311,11 +311,11 @@ class Barbs:
 		if (iGameTurn >= xml.i1040AD and iGameTurn < xml.i1200AD):
 			#in the Rus
 			if (gc.getPlayer(con.iKiev).isHuman()): #more barbs for human Kiev
-				self.spawnUnits( iBarbarian, (89,34),(99,40), xml.iSteppeHorseArcher, 2, iGameTurn,6,3,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_CUMANS", ()))
-				self.spawnUnits( iBarbarian, (90,33),(97,44), xml.iSteppeHorseArcher, 2 + iHandicap, iGameTurn,4,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_KIPCHAKS", ()))
+				self.spawnUnits( iBarbarian, (89,34),(99,40), xml.iSteppeHorseArcher, 2, iGameTurn,6,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_CUMANS", ()))
+				self.spawnUnits( iBarbarian, (90,33),(97,44), xml.iSteppeHorseArcher, 2 + iHandicap, iGameTurn,7,5,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_KIPCHAKS", ()))
 			else: #less for the AI
-				self.spawnUnits( iBarbarian, (89,34),(99,40), xml.iSteppeHorseArcher, 1, iGameTurn,6,3,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_CUMANS", ()))
-				self.spawnUnits( iBarbarian, (89,34),(99,40), xml.iSteppeHorseArcher, 1, iGameTurn,6,3,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_KIPCHAKS", ()))
+				self.spawnUnits( iBarbarian, (89,34),(99,40), xml.iSteppeHorseArcher, 1, iGameTurn,6,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_CUMANS", ()))
+				self.spawnUnits( iBarbarian, (89,34),(99,40), xml.iSteppeHorseArcher, 1, iGameTurn,7,5,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_KIPCHAKS", ()))
 			#in Hungary
 			self.spawnUnits( iBarbarian, (64,33),(77,43), xml.iSteppeHorseArcher, 1, iGameTurn,7,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_CUMANS", ()))
 			if (gc.getPlayer(con.iHungary).isHuman()): #extra barbs for human Hungary
@@ -403,26 +403,26 @@ class Barbs:
 		#Barbs in the middle east
 		if (iGameTurn >= xml.i700AD and iGameTurn <= xml.i1300AD ):
 			if (not gc.getTeam(gc.getPlayer(con.iArabia).getTeam()).isHasTech(xml.iFarriers)):
-				self.spawnUnits( iBarbarian, (94,0),(99,3), xml.iHorseArcher, 1, iGameTurn,8,3,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()))
+				self.spawnUnits( iBarbarian, (94,0),(99,3), xml.iHorseArcher, 1, iGameTurn,11,3,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()))
 			else:
-				self.spawnUnits( iBarbarian, (94,0),(99,3), xml.iBedouin, 1, iGameTurn,9,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()))
+				self.spawnUnits( iBarbarian, (94,0),(99,3), xml.iBedouin, 1, iGameTurn,10,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()))
 		if (gc.getPlayer(con.iArabia).isHuman()): #extra barbs for human Arabia
 			if (iGameTurn >= xml.i700AD and iGameTurn <= xml.i1300AD ):
 				if (not gc.getTeam(gc.getPlayer(con.iArabia).getTeam()).isHasTech(xml.iFarriers)):
-					self.spawnUnits( iBarbarian, (94,0),(99,3), xml.iHorseArcher, 1 + iHandicap, iGameTurn,8,3,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()))
-					self.spawnUnits( iBarbarian, (92,1),(98,4), xml.iHorseArcher, 1, iGameTurn,5,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()))
+					self.spawnUnits( iBarbarian, (94,0),(99,3), xml.iHorseArcher, 1 + iHandicap, iGameTurn,11,3,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()))
+					self.spawnUnits( iBarbarian, (92,1),(98,4), xml.iHorseArcher, 1, iGameTurn,8,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()))
 				else:
-					self.spawnUnits( iBarbarian, (94,0),(99,3), xml.iBedouin, 1 + iHandicap, iGameTurn,9,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()))
+					self.spawnUnits( iBarbarian, (94,0),(99,3), xml.iBedouin, 1 + iHandicap, iGameTurn,10,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()))
 					self.spawnUnits( iBarbarian, (95,1),(98,5), xml.iBedouin, 1, iGameTurn,7,3,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()))
 
 		#Banu Hilal and Bani Hassan, in Morocco and Tunesia
 		if (iGameTurn >= xml.i1040AD and iGameTurn < xml.i1229AD):
 			if (gc.getPlayer(con.iMorocco).isHuman()): #more barbs for human Morocco
-				self.spawnUnits( iBarbarian, (40,10),(44,14), xml.iBedouin, 2 + iHandicap, iGameTurn,6,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BANU_HILAL", ()))
-				self.spawnUnits( iBarbarian, (44,1),(50,8), xml.iTouareg, 2 + iHandicap, iGameTurn,7,5,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BANU_HILAL", ()))
+				self.spawnUnits( iBarbarian, (40,10),(44,14), xml.iBedouin, 2 + iHandicap, iGameTurn,11,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BANU_HILAL", ()))
+				self.spawnUnits( iBarbarian, (44,1),(50,8), xml.iTouareg, 2 + iHandicap, iGameTurn,8,5,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BANU_HILAL", ()))
 			else:
-				self.spawnUnits( iBarbarian, (40,10),(44,14), xml.iBedouin, 1, iGameTurn,6,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BANU_HILAL", ()))
-				self.spawnUnits( iBarbarian, (44,1),(50,8), xml.iTouareg, 1, iGameTurn,7,5,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BANU_HILAL", ()))
+				self.spawnUnits( iBarbarian, (40,10),(44,14), xml.iBedouin, 1, iGameTurn,11,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BANU_HILAL", ()))
+				self.spawnUnits( iBarbarian, (44,1),(50,8), xml.iTouareg, 1, iGameTurn,8,5,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BANU_HILAL", ()))
 		if (iGameTurn >= xml.i1640AD and iGameTurn < xml.i1680AD):
 			self.spawnUnits( iBarbarian, (7,2),(10,10), xml.iBedouin, 5 + iHandicap*2, iGameTurn,3,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BANI_HASSAN", ()))
 

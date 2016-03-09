@@ -97,7 +97,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_11</Tag>
-		<English>Hungarian Vegvars are excellent defensive buildings, damaging all enemy units in a 2x2 square around the city</English>
+		<English>Hungarian Vegvars are excellent defensive buildings, damaging all enemy units within 2 tiles of the city</English>
 		<French></French>
 		<German>Ungarische Vegvars sind exzellente Verteidigungsgebäude, durch die feindliche Einheiten in einem 2x2 Quadrat um die Stadt beschädigt werden.</German>
 		<Italian></Italian>

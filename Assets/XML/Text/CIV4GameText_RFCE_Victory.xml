@@ -866,12 +866,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SCO1</Tag>
-		<English>[COLOR_YELLOW]Fortification:[COLOR_REVERT] Have 10 Forts and 4 Castles in 1296.</English>
-		<French>[COLOR_YELLOW]Fortification:[COLOR_REVERT] Have 10 Forts and 4 Castles in 1296.</French>
-		<German>[COLOR_YELLOW]Fortification:[COLOR_REVERT] Have 10 Forts and 4 Castles in 1296.</German>
-		<Italian>[COLOR_YELLOW]Fortification:[COLOR_REVERT] Have 10 Forts and 4 Castles in 1296.</Italian>
-		<Spanish>[COLOR_YELLOW]Fortification:[COLOR_REVERT] Have 10 Forts and 4 Castles in 1296.</Spanish>
-		<Portuguese>[COLOR_YELLOW]Fortification:[COLOR_REVERT] Have 10 Forts and 4 Castles in 1296.</Portuguese>
+		<English>[COLOR_YELLOW]Fortification:[COLOR_REVERT] Have 10 Forts and 4 Castles by 1296.</English>
+		<French>[COLOR_YELLOW]Fortification:[COLOR_REVERT] Have 10 Forts and 4 Castles by 1296.</French>
+		<German>[COLOR_YELLOW]Fortification:[COLOR_REVERT] Have 10 Forts and 4 Castles by 1296.</German>
+		<Italian>[COLOR_YELLOW]Fortification:[COLOR_REVERT] Have 10 Forts and 4 Castles by 1296.</Italian>
+		<Spanish>[COLOR_YELLOW]Fortification:[COLOR_REVERT] Have 10 Forts and 4 Castles by 1296.</Spanish>
+		<Portuguese>[COLOR_YELLOW]Fortification:[COLOR_REVERT] Have 10 Forts and 4 Castles by 1296.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SCO2</Tag>
@@ -893,10 +893,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ARG1</Tag>
-		<English>[COLOR_YELLOW]The Sicilian Vespers:[COLOR_REVERT] Control Catalonia, Valencia, Baleares and Sicily in 1282AD.</English>
+		<English>[COLOR_YELLOW]The Sicilian Vespers:[COLOR_REVERT] Control Catalonia, Valencia, Balears and Sicily in 1282AD.</English>
 		<French>[COLOR_YELLOW]The Sicilian Vespers:[COLOR_REVERT] Control Catalonia, Valencia, Baleares and Sicily in 1282AD.</French>
-		<German>[COLOR_YELLOW]The Sicilian Vespers:[COLOR_REVERT] Control Catalonia, Valencia, Baleares and Sicily in 1282AD.</German>
-		<Italian>[COLOR_YELLOW]The Sicilian Vespers:[COLOR_REVERT] Control Catalonia, Valencia, Baleares and Sicily in 1282AD.</Italian>
+		<German>[COLOR_YELLOW]The Sicilian Vespers:[COLOR_REVERT] Control Catalonia, Valencia, Balears and Sicily in 1282AD.</German>
+		<Italian>[COLOR_YELLOW]The Sicilian Vespers:[COLOR_REVERT] Control Catalonia, Valencia, Balears and Sicily in 1282AD.</Italian>
 		<Spanish>[COLOR_YELLOW]The Sicilian Vespers:[COLOR_REVERT] Control Catalonia, Valencia, Baleares and Sicily in 1282AD.</Spanish>
 		<Portuguese>[COLOR_YELLOW]The Sicilian Vespers:[COLOR_REVERT] Control Catalonia, Valencia, Baleares and Sicily in 1282AD.</Portuguese>
 	</TEXT>
@@ -911,10 +911,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ARG3</Tag>
-		<English>[COLOR_YELLOW]Realms of the Crown:[COLOR_REVERT] Control Catalonia, Valencia, Aragon, Baleares, Corsica, Sardinia, Sicily, Apulia, Provence and Thessaly in 1474AD.</English>
+		<English>[COLOR_YELLOW]Realms of the Crown:[COLOR_REVERT] Control Catalonia, Valencia, Aragon, Balears, Corsica, Sardinia, Sicily, Apulia, Provence and Thessaly in 1474AD.</English>
 		<French>[COLOR_YELLOW]Realms of the Crown:[COLOR_REVERT] Control Catalonia, Valencia, Aragon, Baleares, Corsica, Sardinia, Sicily, Apulia, Provence and Thessaly in 1474AD.</French>
-		<German>[COLOR_YELLOW]Realms of the Crown:[COLOR_REVERT] Control Catalonia, Valencia, Aragon, Baleares, Corsica, Sardinia, Sicily, Apulia, Provence and Thessaly in 1474AD.</German>
-		<Italian>[COLOR_YELLOW]Realms of the Crown:[COLOR_REVERT] Control Catalonia, Valencia, Aragon, Baleares, Corsica, Sardinia, Sicily, Apulia, Provence and Thessaly in 1474AD.</Italian>
+		<German>[COLOR_YELLOW]Realms of the Crown:[COLOR_REVERT] Control Catalonia, Valencia, Aragon, Balears, Corsica, Sardinia, Sicily, Apulia, Provence and Thessaly in 1474AD.</German>
+		<Italian>[COLOR_YELLOW]Realms of the Crown:[COLOR_REVERT] Control Catalonia, Valencia, Aragon, Balears, Corsica, Sardinia, Sicily, Apulia, Provence and Thessaly in 1474AD.</Italian>
 		<Spanish>[COLOR_YELLOW]Realms of the Crown:[COLOR_REVERT] Control Catalonia, Valencia, Aragon, Baleares, Corsica, Sardinia, Sicily, Apulia, Provence and Thessaly in 1474AD.</Spanish>
 		<Portuguese>[COLOR_YELLOW]Realms of the Crown:[COLOR_REVERT] Control Catalonia, Valencia, Aragon, Baleares, Corsica, Sardinia, Sicily, Apulia, Provence and Thessaly in 1474AD.</Portuguese>
 	</TEXT>

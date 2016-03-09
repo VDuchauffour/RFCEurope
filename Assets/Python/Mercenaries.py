@@ -484,7 +484,7 @@ class MercenaryManager:
 			lHumanProvinces = self.GMU.getOwnedProvinces( gc.getPlayer(iHuman) )
 			iMercsLeft = 0
 			for lMerc in self.lGlobalPool:
-				#iNewProv = lMercList[lMerc[0]][4][gc.getGame().getSorenRandNum( len(lMercList[lMerc[0]][4]), 'pick available prvonce') ]
+				#iNewProv = lMercList[lMerc[0]][4][gc.getGame().getSorenRandNum( len(lMercList[lMerc[0]][4]), 'pick available province') ]
 				#if ( ( not ( lMerc[4] in lHumanProvinces ) ) and ( iNewProv in lHumanProvinces ) ):
 					#CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
 				#lMerc[4] = iNewProv
@@ -555,7 +555,7 @@ class MercenaryManager:
 
 		# add the merc, keep the merc index, costs and promotions
 		self.lGlobalPool.append( [iMerc, lPromotions, iPurchaseCost, iUpkeepCost, iCurrentProvince] )
-		#print(" 3Miro Added Merc: ",[iMerc, lPromotions, iPurchaseCost, iUpkeepCost, iCurrentProvince])
+		print(" 3Miro Added Merc: ",[iMerc, lPromotions, iPurchaseCost, iUpkeepCost, iCurrentProvince])
 
 	def processNewMercs( self, iGameTurn ):
 		# add new mercs to the pool
@@ -948,7 +948,7 @@ class GlobalMercenaryUtils:
 		lGlobalPool = self.getMercGlobalPool()
 		lHiredByList = self.getMercHiredBy()
 
-		print(" 3Miro: fire Merc: ",lMerc[0], iPlayer )
+		print(" 3Miro: hire Merc: ",lMerc[0], iPlayer )
 
 		iCost = self.getModifiedCostPerPlayer( lMerc[2], iPlayer )
 		iUpkeep = self.getModifiedCostPerPlayer( lMerc[3], iPlayer )
