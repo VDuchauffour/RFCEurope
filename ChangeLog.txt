@@ -14,12 +14,7 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for RFCE 1.4:
-(SVN release only)
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-Changes for RFCE 1.3.1:
-(to-be-released: 2016.03.19.)
+(under development)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -40,8 +35,8 @@ Changes for RFCE 1.3:
 		UHV1: North Sea Empire: Control Denmark, Skaneland, Götaland, Svealand, Vestfold, Mercia, London, Northumbria and East Anglia in 1050
 		UHV2: Kalmar Union: Control Denmark, Norway, Vestfold, Skaneland, Götaland, Svealand, Norrland, Gotland, Österland, Estonia and Iceland in 1523
 		UHV3: Ostindisk Kompagni: Build 3 Colonies and complete both Trading Companies
-		UU: Huskarl (Swordsman)
-		UB: Research Institute (Observatory)
+		UU: Huskarl (replacing Swordsman)
+		UB: Research Institute (replacing Observatory)
 		CNM: Scandinavian base CNM, with small differences
 		Province setup:
 			Core: Denmark, Skaneland
@@ -56,8 +51,8 @@ Changes for RFCE 1.3:
 		UHV1: Vikings: Gain 50 Viking points by 1066
 		UHV2: Conquerors: Conquer The Isles, Ireland, Mercia, Normandy, Iceland and build Vinland by 1263
 		UHV3: Statesmen: Have higher score than Sweden, Denmark, Scotland, England, Germany and France in 1320
-		UU: Berserker (Axeman)
-		UB: Trading Post (Lighthouse)
+		UU: Berserker (replacing Axeman)
+		UB: Trading Post (replacing Lighthouse)
 		CNM: Scandinavian base CNM, with small differences
 		Province setup:
 			Core: Norway, Vestfold
@@ -73,8 +68,8 @@ Changes for RFCE 1.3:
 		UHV1: The Eastern Lands: Have six cities in Norrland, Finland and Karelia in 1323
 		UHV2: Lion of the North: Raze 5 Catholic cities while being Protestant by 1660
 		UHV3: Dominium Maris Baltici: Control every coastal city on the Baltic in 1750
-		UU: Karolin (Musketman)
-		UB: Soldattorp (Night Watch)
+		UU: Karolin (replacing Musketman)
+		UB: Soldattorp (replacing Night Watch)
 		CNM: Scandinavian base CNM, with small differences
 		Province setup:
 			Core: Svealand, Norrland
@@ -89,8 +84,8 @@ Changes for RFCE 1.3:
 		UHV1: Defender of Rus': Control Novgorod, Karelia, Estonia and Livonia in 1250
 		UHV2: The Fur Trade: Control twelve sources of fur by 1397
 		UHV3: The Great Hinterlands: Have seven cities in Karelia and Vologda in 1478
-		UU: Ushkuinik (Maceman)
-		UB: Konets (Guild Hall)
+		UU: Ushkuinik (replacing Maceman)
+		UB: Konets (replacing Guild Hall)
 		CNM: same as the CNM for the Kievan Rus
 		Province setup:
 			Core: Novgorod, Karelia
@@ -106,8 +101,8 @@ Changes for RFCE 1.3:
 		UHV1: The Northern Crusades: Control Prussia, Suvalkija, Lithuania, Livonia, Estonia, and Pomerania in 1410
 		UHV2: Seven Years' War: Conquer two cities from each of Austria, Muscovy, Germany, Sweden, France and Spain between 1650 and 1763, if they are still alive
 		UHV3: Enlightened Despotism: Settle a total of 15 Great People in any combination, including Great Generals, in your capital
-		UU: Death's Head Hussar / Totenkopfhusar (Hussar)
-		UB: Public School (Observatory)
+		UU: Death's Head Hussar / Totenkopfhusar (replacing Hussar)
+		UB: Public School (replacing Observatory)
 		CNM: same as the CNM for Germany and Austria
 		Province setup:
 			Core: Prussia
@@ -122,8 +117,8 @@ Changes for RFCE 1.3:
 		UHV1: Fortification: Have 10 Forts and 4 Castles by 1296
 		UHV2: The Auld Alliance: Have 2500 Attitude points with France by 1560
 		UHV3: The Celtic Union: Control Scotland, the Isles, Ireland, Wales and Bretagne in 1700
-		UU: Sheltron (Guisarmier)
-		UB: Shieling (Smokehouse)
+		UU: Sheltron (replacing Guisarmier)
+		UB: Shieling (replacing Smokehouse)
 		CNM: Scottish CNM by DC123456789 (positions are based on the English one, language is Scottish Gaelic > English)
 		Province setup:
 			Core: Scotland
@@ -139,8 +134,8 @@ Changes for RFCE 1.3:
 		UHV1: The Sicilian Vespers: Control Catalonia, Valencia, Baleares and Sicily in 1282
 		UHV2: Thalassocracy: Have 12 Seaports in 1444
 		UHV3: Realms of the Crown: Control Catalonia, Valencia, Aragon, Baleares, Corsica, Sardinia, Sicily, Apulia, Provence and Thessaly in 1474
-		UU: Almogavar (Guisarmier)
-		UB: Seaport (Lighthouse)
+		UU: Almogavar (replacing Guisarmier)
+		UB: Seaport (replacing Lighthouse)
 		CNM: Aragonese CNM by DC123456789 (positions are based on the Spanish (Castilian) one, language is Aragonese > Catalan > Spanish)
 		Province setup:
 			Core: Aragon, Catalonia, Balears, Valencia
@@ -154,8 +149,8 @@ Changes for RFCE 1.3:
 		UHV1: The Almohads: Control Morocco, Marrakesh, Fez, Tetouan, Oran, Algiers, Ifriqiya, Tripolitania, Andalusia, and Valencia in 1227
 		UHV2: The Marinids: Have 5000 culture in each of three cities in 1465
 		UHV3: The Saadis: Collapse or vassalize Portugal, Spain, and Aragon by 1578
-		UU: Black Guard (Musketman)
-		UB: Kasbah (Walls)
+		UU: Black Guard (replacing Musketman)
+		UB: Kasbah (replacing Walls)
 		CNM: same as the CNM for Cordoba and Arabia
 		Province setup:
 			Core: Marrakesh, Morocco, Fez
@@ -197,6 +192,12 @@ Changes for RFCE 1.3:
 		- Revised AI war initialization for all players
 		- Revised settler map for Byzantium, Cordoba, Venice, Burgundy, Germany, Spain, Poland, England, Portugal, Lithuania, Muscovy
 		- Revised war map for Germany, Spain, Poland, England, Lithuania, Muscovy, especially in territories of the new civs
+		- Germany and Venice start with missionaries
+		- Civs start with a state religion corresponding to their spawning missionaries (no first turn anarchy required anymore)
+		- Burgundy starts with preset civics
+		- Cordoba starts with Literature (thus they can use the Religious Law civic on start)
+		- Cordoba starts with Arabic Medicine (health is important for 1st UHV, also somewhat historic and in synergy with the UP)
+		- Portugal starts with some siege units instead of a couple melee ones
 
 	UHV updates:
 		- Small diplo penalty with all leaders after a player accomplished 2 UHVs
@@ -250,6 +251,7 @@ Changes for RFCE 1.3:
 			- Barbarian Scottish Highlanders only spawn when Scotland is dead
 			- Barbarian Vikings in the 9-10th century, in small numbers for the AI (and only if the player is not Norway), but a bigger threat to human France
 			- Revised some areas of the Mongol spawn zone, for example no Keshiks directly for Novgorod
+			- Less barbs in the Maghreb, in Arabia, and near Kiev
 		- New independent city: Londinium. Starts in 500 AD, size 2, 2 archers, catholic religion, prebuilt walls
 		- New independent city: Caen. Starts in 912 AD (establishment of the Duchy of Normandy), size 1, 2 crossbowman, catholic religion
 		- Catalonia province won't revolt against Aragon, Scotland province won't revolt against Scotland
@@ -288,7 +290,7 @@ Changes for RFCE 1.3:
 		- Tuned down unintentionally harsh stability penalties connected to war weariness (4-7 stab difference for medium sized-empires, also it appears later in the war)
 		- Increased culture instability in newly conquered cities (less than 20% own culture)
 		- Small stability boost on completed UHVs (currently +3/UHV)
-		- Improved civic stability calculations
+		- Improved code for civic stability calculations
 
 	Persecution updates:
 		- Loot is significantly increased when you successfully purge a religion
@@ -315,7 +317,7 @@ Changes for RFCE 1.3:
 	General changes:
 		- Added a small initial food reserve on city foundation, currently 1/5 of the next growth threshold
 		- Free walls in the city if it is built on a fort
-		- Removed National Wonder limit (per city), doesn't make that much sense in RFC-type mods
+		- Removed National Wonder limit (per city), doesn't make that much sense in RFCE
 		- Improvements in the Crusader city names for England, Denmark, Poland, Genoa, Venice, Portugal, Sweden, Lithuania, and the Dutch by DC123456789
 		- Improved the German, Austrian, Prussian city name map around Bohemia, Silesia, Austria and in east Germany
 		- Small improvements on the Polish, Muscovian, Portuguese city name maps in Anatolia
@@ -323,7 +325,7 @@ Changes for RFCE 1.3:
 		- Updated DCN names for France, Hungary, Bulgaria, Byzantium
 		- Plague icon on the main interface when plague spreads to a new city
 		- Removed outdated xml_light files
-		- Reenabled and readded some entries in the civilopedia
+		- Reenabled and readded some entries (ie: Keshik, Seljuks) in the civilopedia
 		- Cannons also buildable with iron + sulphur
 		- New promotion: Cargo Capacity (+1 cargo space in ships)
 		- Boost for Workshops and Lumbermills - were total worthless before, now they are somewhat on pair with Windmills and Watermills
@@ -345,21 +347,15 @@ Changes for RFCE 1.3:
 		- New barb-only units: Seljuk Swordsman, Seljuk Heavy Footman, Seljuk Crossbowman, Seljuk Guisarme (all for the Seljuks in Anatolia, surprisingly)
 		- New merc-only units: South Slav Vlastela (Serbia, Banat, Slavonia, Bosnia, Dalmatia), Lombard Heavy Footman (Lombardy, Liguria, Tuscany, Verona)
 		- New merc-only units: Bohemian War Wagon (Bohemia, Moravia), Mamluk Heavy Cavalry (Egypt), Crimean Tatar Rider (Crimea)
-		- Updated Dutch and Swedish Dawn of Man text
+		- Updated Dutch, Swedish and Kievan Dawn of Man text
 		- New DoM text for Scotland, Aragon, Morocco inspired by gilgames' suggestions
-		- Minor DoM updates for Byzantium, France, Arabia, Cordoba, Burgundy, Germany, Kiev - by DC123456789
+		- Minor DoM updates for Byzantium, France, Arabia, Cordoba, Burgundy, Germany - by DC123456789
+		- Minor DoM updates for Hungary, Bulgaria, Genoa, England - by DC123456789
 		- Switched to CE instead of AD for non-christian civs
-		- Germany and Venice start with missionaries
-		- Civs start with a state religion corresponding to their spawning missionaries (no first turn anarchy required anymore)
-		- Burgundy starts with preset civics
 		- Bigger city attack penalty for most mounted units: -25% for most light cavalry, -20% for most heavy cavalry, -10% for most unique and special mounted units
 		- Slightly tuned down Hungarian and Venetian tech progress (both player and AI)
 		- Increased various maintenance modifiers for Byzantium (especially for the AI), decreased for Burgundy (was still set to the 500AD start)
-		- Cordoba starts with Literature (thus they can use the Religious Law civic on start)
-		- Cordoba starts with Arabic Medicine (health is important for 1st UHV, also somewhat historic and in synergy with the UP)
-		- Portugal starts with some siege units instead of a couple melee ones
 		- Changed sea spawns: naval starting units can spawn inside other players' sea territory, as all naval units can enter foreign borders anyway
-		- Less barbs in the Maghreb, Arabia, Kiev
 
 	Art updates:
 		- New art for Isabella (Spain), Casimir III (Poland), Ivan IV (Muscovy), Simeon I (Bulgaria), Ivan Asen (Bulgaria)

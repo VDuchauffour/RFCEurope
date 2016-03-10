@@ -7272,7 +7272,7 @@
 			<iPaganCulturePerCity>0</iPaganCulturePerCity>
 			<iInterestPerTurn>0</iInterestPerTurn>
 		</BuildingInfo>
-		<BuildingInfo>
+		<BuildingInfo> <!-- Brewery -->
 			<BuildingClass>BUILDINGCLASS_BREWERY</BuildingClass>
 			<Type>BUILDING_BREWERY</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -11135,7 +11135,7 @@
 			<iPaganCulturePerCity>0</iPaganCulturePerCity>
 			<iInterestPerTurn>0</iInterestPerTurn>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Dike -->
+		<BuildingInfo> <!-- Dutch Dike -->
 			<BuildingClass>BUILDINGCLASS_LEVEE</BuildingClass>
 			<Type>BUILDING_NETHERLANDS_DIKE</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -27327,7 +27327,7 @@
 			<iPaganCulturePerCity>0</iPaganCulturePerCity>
 			<iInterestPerTurn>0</iInterestPerTurn>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Prussia - Public School -->
+		<BuildingInfo> <!-- Prussian Public School -->
 			<BuildingClass>BUILDINGCLASS_OBSERVATORY</BuildingClass>
 			<Type>BUILDING_PRUSSIA_PUBLIC_SCHOOL</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>

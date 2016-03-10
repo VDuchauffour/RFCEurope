@@ -359,7 +359,7 @@ class CvRFCEventHandler:
 		#			Currently 1/5 of the treshold of the next population growth
 		city.setFood( city.growthThreshold() / 5 )
 
-		# 3MiroUP: faith on city foundation
+		# 3MiroUP: spread religion on city foundation
 		if ( gc.hasUP( iOwner, con.iUP_Faith ) ):
 			self.up.faithUP( iOwner, city )
 
