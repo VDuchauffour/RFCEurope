@@ -288,6 +288,7 @@ Changes for RFCE 1.3:
 		- Tuned down unintentionally harsh stability penalties connected to war weariness (4-7 stab difference for medium sized-empires, also it appears later in the war)
 		- Increased culture instability in newly conquered cities (less than 20% own culture)
 		- Small stability boost on completed UHVs (currently +3/UHV)
+		- Improved civic stability calculations
 
 	Persecution updates:
 		- Loot is significantly increased when you successfully purge a religion
@@ -381,6 +382,7 @@ Changes for RFCE 1.3:
 		- Units and buildings that require corporations now have a button instead of some text in the corresponding section in the civilopedia
 		- Units which are only available as mercenary/barb have a button indicating that instead of a text
 		- All civs have the correct coloured dot on the colonial world map in the Colony Screen
+		- New civic screen from History Rewritten + colored civic stability combos like DoC
 
 	Bugfixes:
 		- Fixed bug where all mercs got free medic3 promotion (missing change in one of the files when Pinch was reintroduced)

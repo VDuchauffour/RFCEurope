@@ -1074,7 +1074,7 @@ class Victory:
 			bMost = True
 			iCount = self.getTerritoryPercentEurope(iHungary)
 			for iOtherPlayer in range(con.iNumPlayers):
-				if not gc.getPlayer(iOtherPlayer).isAlive(): continue
+				if not gc.getPlayer(iOtherPlayer).isAlive() or iOtherPlayer == iHungary: continue
 				iOtherCount = self.getTerritoryPercentEurope(iOtherPlayer)
 				if iOtherCount >= iCount:
 					bMost = False
@@ -1088,13 +1088,13 @@ class Victory:
 		# UHV 3: Be the first to adopt Free Religion
 		if ( pHungary.getUHV( 2 ) == -1 ):
 			iCivic = pHungary.getCivics(4)
-			if ( iCivic == 24 ):
+			if ( iCivic == xml.iCivicFreeReligion ):
 				pHungary.setUHV( 2, 1 )
 				pHungary.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
 				for iPlayer in range( iNumMajorPlayers ):
 					pPlayer = gc.getPlayer( iPlayer )
-					if ( pPlayer.isAlive() and pPlayer.getCivics(4) == 24 ):
+					if ( pPlayer.isAlive() and pPlayer.getCivics(4) == xml.iCivicFreeReligion ):
 						pHungary.setUHV( 2, 0 )
 
 
