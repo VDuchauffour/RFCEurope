@@ -430,7 +430,7 @@ class CvReligionScreen:
 			sString = localText.getText("TXT_KEY_FAITH_DIPLOMACY",()) + (" +%i " %pPlayer.getFaithBenefit(con.iFP_Displomacy) )
 			szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
 		if ( iProsecutionCount > 0 ):
-			iProsecutionInstability = (iProsecutionCount + 4) / 5
+			iProsecutionInstability = (iProsecutionCount + 2) / 3
 			sString = localText.getText("TXT_KEY_FAITH_PROSECUTION_INSTABILITY",()) + (" -%i " %iProsecutionInstability )
 			szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
 
