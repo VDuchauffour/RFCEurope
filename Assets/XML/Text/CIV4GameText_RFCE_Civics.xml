@@ -88,15 +88,6 @@
 		<Portuguese>Suas primeiras unidades não terão custo de manutenção e você ganha um pequeno incremento de felicidade no seu quartel</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FEUDAL_MONARCHY_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Feudal Law[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Lehnswesen[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Feduale[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Lei Feudal[COLOR_REVERT]</Portuguese>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_DIVINE_MONARCHY</Tag>
 		<English>Divine Monarchy</English>
 		<French>Monarchie Divine</French>
@@ -124,15 +115,6 @@
 		<Portuguese>Unidades militares em cidades fornecem felicidade; castelos fornecem felicidade; espionagem incrementada</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_DIVINE_MONARCHY_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Theocracy, State Religion, Organized Religion, Religious Law[COLOR_REVERT], Unstable with [COLOR_RED]Paganism, Free Religion[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Theokratie, Staatsreligion, Organisierte Religion, Kirchenrecht[COLOR_REVERT], Instabil mit [COLOR_RED]Heidentum, Religionsfreiheit[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Teocrazia, Religione di Stato, Religione Organizzata, Legge Religiosa[COLOR_REVERT], Instabile con [COLOR_RED]Paganesimo, Libertà religiosa[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Teocracia, Religião de Estado, Religião Organizada, Legislação Religiosa[COLOR_REVERT], Instável com [COLOR_RED]Paganismo, Livre Culto[COLOR_REVERT]</Portuguese>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY</Tag>
 		<English>Limited Monarchy</English>
 		<French>Monarchie Constitutionnelle</French>
@@ -158,15 +140,6 @@
 		<Italian>Puoi usare l'oro per completare la produzione; +1 martello dai paesi</Italian>
 		<Spanish></Spanish>
 		<Portuguese>Pode pagar para acelerar a produção; +1[ICON_PRODUCTION] por distritos</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_LIMITED_MONARCHY_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Common Law, Free Peasantry, Free Labor[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Gewohnheitsrecht, Bauernbefreiung, Gewerbefreiheit[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Comune, Contadini Liberi, Libertà Lavorativa[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Direito Comum, Campesinato Livre, Labor Livre[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC</Tag>
@@ -197,7 +170,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Common Law, Free Peasantry, Free Labor, Trade Economy, Less than 5 cities[COLOR_REVERT], Unstable with [COLOR_RED]Feudal Law, More than 5 cities[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable when controlling less than 5 cities, unstable when controlling more than 5 cities</English>
 		<French>.</French>
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Gewohnheitsrecht, Bauernbefreiung, Gewerbefreiheit, Marktwirtschaft, Weniger als 5 Städten[COLOR_REVERT], Instabil mit [COLOR_RED]Lehnswesen, Mehr als 5 Städten[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Comune, Contadini Liberi,Libertà Lavorativa, Economia di Mercato, Meno di 5 città[COLOR_REVERT], Instabile con [COLOR_RED]Legge Feudale, più di 5 città[COLOR_REVERT]</Italian>
@@ -270,15 +243,6 @@
 		<Portuguese>Bônus para produção de unidades, e custo reduzido de manutenção por distância entre cidades</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FEUDAL_LAW_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Feudal Monarchy, Serfdom, Manorialism[COLOR_REVERT], Unstable with [COLOR_RED]Merchant Republic, Free Peasantry[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Absolute Monarchie, Leibeigenschaft, Grundherrschaft[COLOR_REVERT], Instabil mit [COLOR_RED]Handelsrepublik, Bauernbefreiung[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Feudale, Servitù, Manorialismo[COLOR_REVERT], Instabile con [COLOR_RED]Repubblica Mercantile, Contadini Liberi[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Monarquia Feudal, Servidão, Senhorialismo[COLOR_REVERT], Instável com [COLOR_RED]República Mercante, Campesinato Livre[COLOR_REVERT]</Portuguese>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUREAUCRACY</Tag>
 		<English>Bureaucracy</English>
 		<French>Bureaucratie</French>
@@ -307,7 +271,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUREAUCRACY_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Less than 6 cities[COLOR_REVERT], Unstable with [COLOR_RED]More than 6 cities[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Stable when controlling less than 6 cities, unstable when controlling more than 6 cities</English>
 		<French>.</French>
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Weniger als 6 Städten[COLOR_REVERT], Instabil mit [COLOR_RED]Mehr als 6 Städten[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]meno di 6 città[COLOR_REVERT], instabile con [COLOR_RED]più di 6 città[COLOR_REVERT]</Italian>
@@ -342,15 +306,6 @@
 		<Portuguese>Pode treinar missionários sem mosteiros; infelicidade com religião não estatal; reduz infelicidade pela guerra</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Divine Monarchy, Theocracy[COLOR_REVERT], Unstable with [COLOR_RED]Paganism, Free Religion[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Göttlicher Monarchie, Theokratie[COLOR_REVERT], Instabil mit [COLOR_RED]Heidentum, Religionsfreiheit[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Divina, Teocrazia[COLOR_REVERT], instabile con [COLOR_RED]Paganesimo, Libertà Religiosa[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Monarquia Divina, Teocracia[COLOR_REVERT], Instável com [COLOR_RED]Paganismo, Livre Culto[COLOR_REVERT]</Portuguese>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COMMON_LAW</Tag>
 		<English>Common Law</English>
 		<French>Loi Commune</French>
@@ -376,15 +331,6 @@
 		<Italian>Velocizza la nascita di Grandi Personaggi. Aumenta i costi di supporo delle unità</Italian>
 		<Spanish></Spanish>
 		<Portuguese>Grande bônus de cultura, penalidade para jogadores sem Direito Comum</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_COMMON_LAW_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Limited Monarchy, Merchant Republic, Free Labor[COLOR_REVERT], Unstable with [COLOR_RED]Theocracy[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Konstit. Monarchie, Handelsrepublik, Gewerbefreiheit[COLOR_REVERT], Instabil mit [COLOR_RED]Theokratie[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Costituzionale, Repubblica Mercantile, Libertà Lavorativa [COLOR_REVERT], instabile con [COLOR_RED]Teocrazia[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Monarquia Constiucional, República Mercante, Labor Livre[COLOR_REVERT], Instável com [COLOR_RED]Teocracia[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<!-- Civic Category Legal -->
 	<!-- Civic Category Labor -->
@@ -452,15 +398,6 @@
 		<Portuguese>+1 [ICON_PRODUCTION] por fazenda, reduz a taxa de Grandes Personalidades e de crescimento de cabanas</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_SERFDOM_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Feudal Law, Manorialism[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Lehnswesen, Grundherrschaft[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Feudale, Manorialismo[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Lei Feudal, Senhorialismo[COLOR_REVERT]</Portuguese>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_PEASANTRY</Tag>
 		<English>Free Peasantry</English>
 		<French>Paysannerie</French>
@@ -486,15 +423,6 @@
 		<Italian>+100% alla crescita di casali, villette e villaggi; +2 oro dai paesi.</Italian>
 		<Spanish></Spanish>
 		<Portuguese>+100% na taxa de crescimento de cabanas, aldeias, e vilarejos; trabalhadores acabam melhorias mais rápido</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FREE_PEASANTRY_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Limited Monarchy, Merchant Republic[COLOR_REVERT], Unstable with [COLOR_RED]Feudal Law[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Konstit. Monarchie, Handelsrepublik[COLOR_REVERT], Instabil mit [COLOR_RED]Lehnswesen[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Costituzionale, Repubblica Mercantile[COLOR_REVERT], instabile con [COLOR_RED]Legge Feudale[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Monarquia Constitucional, República Mercante[COLOR_REVERT], Instável com [COLOR_RED]Lei Feudal[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP</Tag>
@@ -524,15 +452,6 @@
 		<Portuguese>Artistas, mercadores e intelectuais ilimitados; oficinas, moinhos de vento e moinhos d'água fornecem produção extra</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_APPRENTICESHIP_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Guilds[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Gilden[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Associazioni[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Corporações de Ofício[COLOR_REVERT]</Portuguese>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_LABOR</Tag>
 		<English>Free Labor</English>
 		<French>Libert&#233; de Travail</French>
@@ -558,15 +477,6 @@
 		<Italian>Più commercio e produzione dalle città; penalità per le civiltà che non la adottano</Italian>
 		<Spanish></Spanish>
 		<Portuguese>+2 especialistas livres nas suas cidades</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FREE_LABOR_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Limited Monarchy, Merchant Republic, Common Law[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Konstit. Monarchie, Handelsrepublik, Gewohnheitsrecht[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Costituzionale, Repubblica Mercantile, Legge Comune[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Monarquia Constitucional, República Mercante, Direito Comum[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<!-- Civic Category Labor -->
 	<!-- Civic Category Economy -->
@@ -634,15 +544,6 @@
 		<Portuguese>-1 rota comercial nas suas cidades, comércio por fazendas, pequena renda por solares</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_MANORIALISM_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Feudal Law, Serfdom[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Lehnswesen, Leibeigenschaft[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Feudale, Servitù[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Lei Feudal, Servidão[COLOR_REVERT]</Portuguese>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_TRADE_ECONOMY</Tag>
 		<English>Trade Economy</English>
 		<French>Économie de marché</French>
@@ -670,15 +571,6 @@
 		<Portuguese>Uma rota comercial adicional em todas as suas cidades</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_TRADE_ECONOMY_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Merchant Republic[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Handelsrepublik[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stable with [COLOR_GREEN]Repubblica Mercantile[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]República Mercante[COLOR_REVERT]</Portuguese>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_GUILDS</Tag>
 		<English>Guilds</English>
 		<French>Guildes</French>
@@ -704,15 +596,6 @@
 		<Italian>Nessuna strategia.</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>Todos os seus especialistas contribuem mais para seu desenvolvimento científico</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_GUILDS_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Apprenticeship[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Berufslehre[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Apprendistato[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Aprendizagem[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MERCANTILISM</Tag>
@@ -780,15 +663,6 @@
 		<Portuguese>Você não pode ter uma religião estatal sob Paganismo, mas você ganha um bônus de felicidade por Santuários Pagãos</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_PAGANISM_HELP</Tag>
-		<English>[ICON_BULLET]Unstable with [COLOR_RED]Divine Monarchy, Religious Law[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Instabil mit [COLOR_RED]Göttliche Monarchie, Kirchenrecht[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Instabile con [COLOR_RED]Monarchia Divina, Legge Religiosa[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Instável com [COLOR_RED]Monarquia Divina, Legislação Religiosa[COLOR_REVERT]</Portuguese>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_STATE_RELIGION</Tag>
 		<English>State Religion</English>
 		<French>Religion d'&#201;tat</French>
@@ -814,15 +688,6 @@
 		<Italian>Le città con Religione Ufficiale addestrano più velocemente le unità</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>Aumenta a taxa de produção de construções em todas suas cidades que possuam sua religião estatal.</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_STATE_RELIGION_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Divine Monarchy[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Göttliche Monarchie[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Divina[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Monarquia Divina[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_THEOCRACY</Tag>
@@ -852,15 +717,6 @@
 		<Portuguese>Aumenta a taxa de produção de unidades e lhes dá XP de graça em todas suas cidades que possuam a sua religião estatal</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_THEOCRACY_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Divine Monarchy, Religious Law[COLOR_REVERT], Unstable with [COLOR_RED]Common Law[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Göttliche Monarchie, Kirchenrecht[COLOR_REVERT], Instabil mit [COLOR_RED]Gewohnheitsrecht[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Divina, Legge Religiosa[COLOR_REVERT], instabile con [COLOR_RED]Legge Comune[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Monarquia Divina, Legislação Religiosa[COLOR_REVERT], Instável com [COLOR_RED]Direito Comum[COLOR_REVERT]</Portuguese>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_ORGANIZED_RELIGION</Tag>
 		<English>Organized Religion</English>
 		<French>Religion organis&#233;e</French>
@@ -888,15 +744,6 @@
 		<Portuguese>Sacerdotes ilimitados e um grande bônus para a taxa de nascimento de Grandes Personalidades onde sua religião estatal está presente</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ORGANIZED_RELIGION_HELP</Tag>
-		<English>[ICON_BULLET]Stable with [COLOR_GREEN]Divine Monarchy[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Göttliche Monarchie[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Divina[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Estável com [COLOR_GREEN]Monarquia Divina[COLOR_REVERT]</Portuguese>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_RELIGION</Tag>
 		<English>Free Religion</English>
 		<French>Libert&#233; de culte</French>
@@ -922,15 +769,6 @@
 		<Italian>Nessuna strategia.</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>Bônus de felicidade nas cidades onde sua religião estatal está presente; permite a construção de construções religiosas de outras religiões; +10% ciência</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_FREE_RELIGION_HELP</Tag>
-		<English>[ICON_BULLET]Unstable with [COLOR_RED]Divine Monarchy, Religious Law[COLOR_REVERT]</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Instabil mit [COLOR_RED]Göttliche Monarchie, Kirchenrecht[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Instabile con [COLOR_RED]Monarchia Divina, Legge Religiosa[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Instável com [COLOR_RED]Monarquia Divina, Legislação Religiosa[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<!-- Civic Category Religion -->
 	<!-- Civic Category Expansion -->

@@ -1157,17 +1157,14 @@ class CvVictoryScreen:
 					iMostPlayer = iLoopPlayer
 		if (iCount > 0):
 			landPercent = (iCount * 100.0) / iTotal
-			landPercent = "%.2f" % landPercent
 		else:
 			landPercent = 0.0
 		if (iOtherCount > 0):
 			otherlandPercent = (iOtherCount * 100.0) / iTotal
-			otherlandPercent = "%.2f" % otherlandPercent
 		else:
 			otherlandPercent = 0.0
 		sText = localText.getText("TXT_KEY_UHV_CONTROL_TERRITORY",())
-		sUnit = "%"
-		sText2 += self.getCompetition(landPercent, otherlandPercent, iMostPlayer, sText, sUnit)
+		sText2 += self.getLandCompetition(landPercent, otherlandPercent, iMostPlayer, sText)
 		#UHV3
 		iGoal = pPlayer.getUHV( 2 )
 		sText3 += self.determineColor(iGoal != 0, localText.getText("TXT_KEY_UHV_NO_ADOPTION_YET", ()))
@@ -1240,8 +1237,7 @@ class CvVictoryScreen:
 		#UHV2
 		sText2 += self.getProvinceString(vic.tDenmarkControlIII)
 		#UHV3
-		sText3 += self.getNumColoniesString(3)
-		sText3 += "\n" + self.getProjectsString((xml.iWestIndiaCompany, xml.iEastIndiaCompany))
+		sText3 += self.getNumColoniesString(3, True)
 		lHelpTexts = [sText1, sText2, sText3]
 		return lHelpTexts
 
@@ -1579,8 +1575,7 @@ class CvVictoryScreen:
 		else:
 			sText1 += self.checkCity(tAmsterdam, iPlayer, localText.getText("TXT_KEY_CITY_NAME_AMSTERDAM",()))
 		#UHV2
-		sText2 += self.getNumColoniesString(3)
-		sText2 += "\n" + self.getProjectsString((xml.iWestIndiaCompany, xml.iEastIndiaCompany))
+		sText2 += self.getNumColoniesString(3, True)
 		#UHV3
 		sText3 += self.RichestString()
 		lHelpTexts = [sText1, sText2, sText3]
@@ -1727,9 +1722,11 @@ class CvVictoryScreen:
 			sString = localText.getText("TXT_KEY_UHV_CURRENTLY",()) + ": " + self.determineColor(iCounter <= iRequired, str(iNewCounter))
 		return sString
 
-	def getNumColoniesString(self, iRequired):
+	def getNumColoniesString(self, iRequired, bTradingCompanies = False):
 		iCount = vic.Victory().getNumRealColonies(self.iActivePlayer)
 		sString = localText.getText("TXT_KEY_UHV_COLONIES",()) + ": " + self.determineColor(iCount >= iRequired, iCount)
+		if bTradingCompanies:
+			sString += "\n" + self.getProjectsString((xml.iWestIndiaCompany, xml.iEastIndiaCompany))
 		return sString
 
 	def determineColor(self, bVal, sTextGood, sTextBad = ""):
@@ -1808,4 +1805,17 @@ class CvVictoryScreen:
 		if iEnemy != -1:
 			pEnemyPlayer = gc.getPlayer(iEnemy)
 			sString += " " + sUnit + ", " + pEnemyPlayer.getName()
+		return sString
+		
+	def getLandCompetition(self, fLand, fLandEnemy, iEnemy, sText):
+		bVal = fLand > fLandEnemy
+		sLand = "%.2f" % fLand
+		sOtherLand = "%.2f" % fLandEnemy
+		sString = ""
+		sString += sText + ": " + self.determineColor(bVal, sLand) + " %"
+		sString += "   " + localText.getText("TXT_KEY_UHV_BEST",()) + ": " + self.determineColor(bVal, localText.getText("TXT_KEY_POPUP_YES",()), localText.getText("TXT_KEY_POPUP_NO",()))
+		sString += "\n" + localText.getText("TXT_KEY_UHV_BEST_COMPETITOR",()) + ": " + self.determineColor(bVal, sOtherLand)
+		if iEnemy != -1:
+			pEnemyPlayer = gc.getPlayer(iEnemy)
+			sString += " %, " + pEnemyPlayer.getName()
 		return sString
