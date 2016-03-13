@@ -1725,7 +1725,7 @@ class RiseAndFall:
 					pCurrent=gc.getMap().plot(x, y)
 					utils.convertPlotCulture(pCurrent, iCiv, 100, True)
 					if (pCurrent.getCulture(iCiv) < 3000):
-						pCurrent.setCulture(iCiv, 3000, True) #2000 in vanilla/warlords, cos here Portugal is choked by spanish culture
+						pCurrent.setCulture(iCiv, 3000, True) #2000 in vanilla/warlords, cos here Portugal is choked by Spanish culture
 					pCurrent.setOwner(iCiv)
 			self.setDeleteMode(0, -1)
 			return
@@ -2973,24 +2973,28 @@ class RiseAndFall:
 		if ( iCiv == iByzantium ):
 			if ( pPope.isAlive() and ( not teamByzantium.isHasMet( pPope.getTeam() ) ) ):
 				teamByzantium.meet( pPope.getTeam(), True )
-		elif ( iCiv == iBurgundy ):
-			if ( pFrankia.isAlive() and ( not teamBurgundy.isHasMet( pFrankia.getTeam() ) ) ):
-				teamBurgundy.meet( pFrankia.getTeam(), True )
+		elif ( iCiv == iArabia ):
+			if ( pByzantium.isAlive() and ( not teamArabia.isHasMet( pByzantium.getTeam() ) ) ):
+				teamArabia.meet( pByzantium.getTeam(), True )
+		elif ( iCiv == iBulgaria ):
+			if ( pByzantium.isAlive() and ( not teamBulgaria.isHasMet( pByzantium.getTeam() ) ) ):
+				teamBulgaria.meet( pByzantium.getTeam(), True )
 		elif ( iCiv == iCordoba ):
 			if ( pArabia.isAlive() and ( not teamCordoba.isHasMet( pArabia.getTeam() ) ) ):
 				teamCordoba.meet( pArabia.getTeam(), True )
-		elif ( iCiv == iSpain ):
-			if ( pBurgundy.isAlive() and ( not teamSpain.isHasMet( pBurgundy.getTeam() ) ) ):
-				teamSpain.meet( pBurgundy.getTeam(), True )
-			if ( pFrankia.isAlive() and ( not teamSpain.isHasMet( pFrankia.getTeam() ) ) ):
-				teamSpain.meet( pFrankia.getTeam(), True )
-			if ( pCordoba.isAlive() and ( not teamSpain.isHasMet( pCordoba.getTeam() ) ) ):
-				teamSpain.meet( pCordoba.getTeam(), True )
 		elif ( iCiv == iVenecia ):
-			if ( pPope.isAlive() and ( not teamByzantium.isHasMet( pPope.getTeam() ) ) ):
-				teamByzantium.meet( pPope.getTeam(), True )
+			if ( pPope.isAlive() and ( not teamVenecia.isHasMet( pPope.getTeam() ) ) ):
+				teamVenecia.meet( pPope.getTeam(), True )
 			if ( pByzantium.isAlive() and ( not teamVenecia.isHasMet( pByzantium.getTeam() ) ) ):
 				teamVenecia.meet( pByzantium.getTeam(), True )
+		elif ( iCiv == iBurgundy ):
+			if ( pFrankia.isAlive() and ( not teamBurgundy.isHasMet( pFrankia.getTeam() ) ) ):
+				teamBurgundy.meet( pFrankia.getTeam(), True )
+		elif ( iCiv == iGermany ):
+			if ( pBurgundy.isAlive() and ( not teamGermany.isHasMet( pBurgundy.getTeam() ) ) ):
+				teamGermany.meet( pBurgundy.getTeam(), True )
+			if ( pFrankia.isAlive() and ( not teamGermany.isHasMet( pFrankia.getTeam() ) ) ):
+				teamGermany.meet( pFrankia.getTeam(), True )
 		elif ( iCiv == iNovgorod ):
 			if ( pBulgaria.isAlive() and ( not teamNovgorod.isHasMet( pBulgaria.getTeam() ) ) ):
 				teamNovgorod.meet( pBulgaria.getTeam(), True )
@@ -3008,13 +3012,20 @@ class RiseAndFall:
 				teamHungary.meet( pBulgaria.getTeam(), True )
 			if ( pByzantium.isAlive() and ( not teamHungary.isHasMet( pByzantium.getTeam() ) ) ):
 				teamHungary.meet( pByzantium.getTeam(), True )
-		elif ( iCiv == iGermany ):
-			if ( pBurgundy.isAlive() and ( not teamGermany.isHasMet( pBurgundy.getTeam() ) ) ):
-				teamGermany.meet( pBurgundy.getTeam(), True )
-			if ( pFrankia.isAlive() and ( not teamGermany.isHasMet( pFrankia.getTeam() ) ) ):
-				teamGermany.meet( pFrankia.getTeam(), True )
-			if ( pHungary.isAlive() and ( not teamGermany.isHasMet( pHungary.getTeam() ) ) ):
-				teamGermany.meet( pHungary.getTeam(), True )
+			if ( pKiev.isAlive() and ( not teamHungary.isHasMet( pKiev.getTeam() ) ) ):
+				teamHungary.meet( pKiev.getTeam(), True )
+		elif ( iCiv == iSpain ):
+			if ( pBurgundy.isAlive() and ( not teamSpain.isHasMet( pBurgundy.getTeam() ) ) ):
+				teamSpain.meet( pBurgundy.getTeam(), True )
+			if ( pFrankia.isAlive() and ( not teamSpain.isHasMet( pFrankia.getTeam() ) ) ):
+				teamSpain.meet( pFrankia.getTeam(), True )
+			if ( pCordoba.isAlive() and ( not teamSpain.isHasMet( pCordoba.getTeam() ) ) ):
+				teamSpain.meet( pCordoba.getTeam(), True )
+		elif ( iCiv == iDenmark ):
+			if ( pNorway.isAlive() and ( not teamDenmark.isHasMet( pNorway.getTeam() ) ) ):
+				teamDenmark.meet( pNorway.getTeam(), True )
+			if ( pGermany.isAlive() and ( not teamDenmark.isHasMet( pGermany.getTeam() ) ) ):
+				teamDenmark.meet( pGermany.getTeam(), True )
 		elif ( iCiv == iScotland ):
 			if ( pFrankia.isAlive() and ( not teamScotland.isHasMet( pFrankia.getTeam() ) ) ):
 				teamScotland.meet( pFrankia.getTeam(), True )
@@ -3025,6 +3036,52 @@ class RiseAndFall:
 				teamPoland.meet( pGermany.getTeam(), True )
 			if ( pHungary.isAlive() and ( not teamPoland.isHasMet( pHungary.getTeam() ) ) ):
 				teamPoland.meet( pHungary.getTeam(), True )
+		elif ( iCiv == iGenoa ):
+			if ( pBurgundy.isAlive() and ( not teamGenoa.isHasMet( pBurgundy.getTeam() ) ) ):
+				teamGenoa.meet( pBurgundy.getTeam(), True )
+			if ( pByzantium.isAlive() and ( not teamGenoa.isHasMet( pByzantium.getTeam() ) ) ):
+				teamGenoa.meet( pByzantium.getTeam(), True )
+			if ( pVenecia.isAlive() and ( not teamGenoa.isHasMet( pVenecia.getTeam() ) ) ):
+				teamGenoa.meet( pVenecia.getTeam(), True )
+			if ( pPope.isAlive() and ( not teamGenoa.isHasMet( pPope.getTeam() ) ) ):
+				teamGenoa.meet( pPope.getTeam(), True )
+		elif ( iCiv == iMorocco ):
+			if ( pArabia.isAlive() and ( not teamMorocco.isHasMet( pArabia.getTeam() ) ) ):
+				teamMorocco.meet( pArabia.getTeam(), True )
+			if ( pSpain.isAlive() and ( not teamMorocco.isHasMet( pSpain.getTeam() ) ) ):
+				teamMorocco.meet( pSpain.getTeam(), True )
+			if ( pCordoba.isAlive() and ( not teamMorocco.isHasMet( pCordoba.getTeam() ) ) ):
+				teamMorocco.meet( pCordoba.getTeam(), True )
+		elif ( iCiv == iEngland ):
+			if ( pScotland.isAlive() and ( not teamEngland.isHasMet( pScotland.getTeam() ) ) ):
+				teamEngland.meet( pScotland.getTeam(), True )
+			if ( pFrankia.isAlive() and ( not teamEngland.isHasMet( pFrankia.getTeam() ) ) ):
+				teamEngland.meet( pFrankia.getTeam(), True )
+			if ( pDenmark.isAlive() and ( not teamEngland.isHasMet( pDenmark.getTeam() ) ) ):
+				teamEngland.meet( pDenmark.getTeam(), True )
+			if ( pNorway.isAlive() and ( not teamEngland.isHasMet( pNorway.getTeam() ) ) ):
+				teamEngland.meet( pNorway.getTeam(), True )
+		elif ( iCiv == iPortugal ):
+			if ( pSpain.isAlive() and ( not teamPortugal.isHasMet( pSpain.getTeam() ) ) ):
+				teamPortugal.meet( pSpain.getTeam(), True )
+			if ( pCordoba.isAlive() and ( not teamPortugal.isHasMet( pCordoba.getTeam() ) ) ):
+				teamPortugal.meet( pCordoba.getTeam(), True )
+		elif ( iCiv == iAragon ):
+			if ( pSpain.isAlive() and ( not teamAragon.isHasMet( pSpain.getTeam() ) ) ):
+				teamAragon.meet( pSpain.getTeam(), True )
+			if ( pCordoba.isAlive() and ( not teamAragon.isHasMet( pCordoba.getTeam() ) ) ):
+				teamAragon.meet( pCordoba.getTeam(), True )
+			if ( pBurgundy.isAlive() and ( not teamAragon.isHasMet( pBurgundy.getTeam() ) ) ):
+				teamAragon.meet( pBurgundy.getTeam(), True )
+			if ( pFrankia.isAlive() and ( not teamAragon.isHasMet( pFrankia.getTeam() ) ) ):
+				teamAragon.meet( pFrankia.getTeam(), True )
+		elif ( iCiv == iSweden ):
+			if ( pNovgorod.isAlive() and ( not teamSweden.isHasMet( pNovgorod.getTeam() ) ) ):
+				teamSweden.meet( pNovgorod.getTeam(), True )
+			if ( pDenmark.isAlive() and ( not teamSweden.isHasMet( pDenmark.getTeam() ) ) ):
+				teamSweden.meet( pDenmark.getTeam(), True )
+			if ( pNorway.isAlive() and ( not teamSweden.isHasMet( pNorway.getTeam() ) ) ):
+				teamSweden.meet( pNorway.getTeam(), True )
 		elif ( iCiv == iPrussia):
 			if ( pPoland.isAlive() and ( not teamPrussia.isHasMet( pPoland.getTeam() ) ) ):
 				teamPrussia.meet( pPoland.getTeam(), True )
@@ -3037,42 +3094,31 @@ class RiseAndFall:
 				teamLithuania.meet( pPoland.getTeam(), True )
 			if ( pKiev.isAlive() and ( not teamLithuania.isHasMet( pKiev.getTeam() ) ) ):
 				teamLithuania.meet( pKiev.getTeam(), True )
+			if ( pNovgorod.isAlive() and ( not teamLithuania.isHasMet( pNovgorod.getTeam() ) ) ):
+				teamLithuania.meet( pNovgorod.getTeam(), True )
 			if ( pPrussia.isAlive() and ( not teamLithuania.isHasMet( pPrussia.getTeam() ) ) ):
 				teamLithuania.meet( pPrussia.getTeam(), True )
+		elif ( iCiv == iAustria):
+			if ( pPoland.isAlive() and ( not teamAustria.isHasMet( pPoland.getTeam() ) ) ):
+				teamAustria.meet( pPoland.getTeam(), True )
+			if ( pHungary.isAlive() and ( not teamAustria.isHasMet( pHungary.getTeam() ) ) ):
+				teamAustria.meet( pHungary.getTeam(), True )
+			if ( pGermany.isAlive() and ( not teamAustria.isHasMet( pGermany.getTeam() ) ) ):
+				teamAustria.meet( pGermany.getTeam(), True )
+			if ( pVenecia.isAlive() and ( not teamAustria.isHasMet( pVenecia.getTeam() ) ) ):
+				teamAustria.meet( pVenecia.getTeam(), True )
+		elif ( iCiv == iTurkey):
+			if ( pByzantium.isAlive() and ( not teamTurkey.isHasMet( pByzantium.getTeam() ) ) ):
+				teamTurkey.meet( pByzantium.getTeam(), True )
+			if ( pArabia.isAlive() and ( not teamTurkey.isHasMet( pArabia.getTeam() ) ) ):
+				teamTurkey.meet( pArabia.getTeam(), True )
 		elif ( iCiv == iMoscow ):
 			if ( pKiev.isAlive() and ( not teamMoscow.isHasMet( pKiev.getTeam() ) ) ):
 				teamMoscow.meet( pKiev.getTeam(), True )
 			if ( pNovgorod.isAlive() and ( not teamMoscow.isHasMet( pNovgorod.getTeam() ) ) ):
 				teamMoscow.meet( pNovgorod.getTeam(), True )
-			if ( pSweden.isAlive() and ( not teamMoscow.isHasMet( pSweden.getTeam() ) ) ):
-				teamMoscow.meet( pSweden.getTeam(), True )
 			if ( pLithuania.isAlive() and ( not teamMoscow.isHasMet( pLithuania.getTeam() ) ) ):
 				teamMoscow.meet( pLithuania.getTeam(), True )
-		elif ( iCiv == iGenoa ):
-			if ( pBurgundy.isAlive() and ( not teamGenoa.isHasMet( pBurgundy.getTeam() ) ) ):
-				teamGenoa.meet( pBurgundy.getTeam(), True )
-			if ( pByzantium.isAlive() and ( not teamGenoa.isHasMet( pByzantium.getTeam() ) ) ):
-				teamGenoa.meet( pByzantium.getTeam(), True )
-			if ( pVenecia.isAlive() and ( not teamGenoa.isHasMet( pVenecia.getTeam() ) ) ):
-				teamGenoa.meet( pVenecia.getTeam(), True )
-		elif ( iCiv == iMorocco ):
-			if ( pArabia.isAlive() and ( not teamMorocco.isHasMet( pArabia.getTeam() ) ) ):
-				teamMorocco.meet( pArabia.getTeam(), True )
-			if ( pSpain.isAlive() and ( not teamMorocco.isHasMet( pSpain.getTeam() ) ) ):
-				teamMorocco.meet( pSpain.getTeam(), True )
-			if ( pCordoba.isAlive() and ( not teamMorocco.isHasMet( pCordoba.getTeam() ) ) ):
-				teamMorocco.meet( pCordoba.getTeam(), True )
-		elif ( iCiv == iSweden ):
-			if ( pPoland.isAlive() and ( not teamSweden.isHasMet( pPoland.getTeam() ) ) ):
-				teamSweden.meet( pPoland.getTeam(), True )
-			if ( pGermany.isAlive() and ( not teamSweden.isHasMet( pGermany.getTeam() ) ) ):
-				teamSweden.meet( pGermany.getTeam(), True )
-			if ( pNovgorod.isAlive() and ( not teamSweden.isHasMet( pNovgorod.getTeam() ) ) ):
-				teamSweden.meet( pNovgorod.getTeam(), True )
-			if ( pDenmark.isAlive() and ( not teamDutch.isHasMet( pDenmark.getTeam() ) ) ):
-				teamDutch.meet( pDenmark.getTeam(), True )
-			if ( pNorway.isAlive() and ( not teamDutch.isHasMet( pNorway.getTeam() ) ) ):
-				teamDutch.meet( pNorway.getTeam(), True )
 		elif ( iCiv == iDutch ):
 			if ( pEngland.isAlive() and ( not teamDutch.isHasMet( pEngland.getTeam() ) ) ):
 				teamDutch.meet( pEngland.getTeam(), True )
@@ -3086,6 +3132,4 @@ class RiseAndFall:
 				teamDutch.meet( pDenmark.getTeam(), True )
 			if ( pNorway.isAlive() and ( not teamDutch.isHasMet( pNorway.getTeam() ) ) ):
 				teamDutch.meet( pNorway.getTeam(), True )
-			if ( pSweden.isAlive() and ( not teamDutch.isHasMet( pSweden.getTeam() ) ) ):
-				teamDutch.meet( pSweden.getTeam(), True )
 
