@@ -23589,7 +23589,7 @@ int CvPlayer::getStabilitySwing(){
 void CvPlayer::setStabilitySwing( int iNewValue ){
 	m_iStabilitySwing = iNewValue;
 };
-int CvPlayer::getStability(){ // sum all cathegories and returns one number
+int CvPlayer::getStability(){ // sum all categories and returns one number
 	int iI, iStab = 0;
 	for( iI = 0; iI<4; iI++ ){
 		iStab += m_aiStabilityBase[iI] + m_aiStabilityVary[iI];
@@ -23607,7 +23607,7 @@ int CvPlayer::getWarPeaceChange(){
 	if ( bIsAtWar && bPeace ){ // we have gone into peace
 		bIsAtWar = false;
 		return 1;
-	}else if ( !bIsAtWar && !bPeace ){
+	}else if ( !bIsAtWar && !bPeace ){ // we have gone into war
 		bIsAtWar = true;
 		return -1;
 	}else{

@@ -49,7 +49,7 @@
 #define RANDPLOT_NOT_CITY											(0x00000040)
 
 #ifdef _USRDLL
-#define MAX_CIV_PLAYERS												(33) // Absinthe:  33, with Prussia, Novgorod, Norway, Scotland, Aragon, Morocco
+#define MAX_CIV_PLAYERS												(33) // Absinthe: 28 playable civs (with Prussia, Novgorod, Norway, Scotland, Aragon, Morocco) + Pope + 4 Indies
 #else
 #define MAX_CIV_PLAYERS												(CvGlobals::getInstance().getMaxCivPlayers())
 #endif

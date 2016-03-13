@@ -232,6 +232,7 @@ extern int* lOwnedCities;
 extern int* lOwnedPlots;
 
 // 3Miro: counts the turn for prosecution instability
+// Absinthe: in python now
 // extern int* ProsecutionCount;
 
 // 3Miro: Normal and Core Areas for stability and map swaps
@@ -258,7 +259,7 @@ extern int iAutorunUnit;
 extern int iAutorunX;
 extern int iAutorunY;
 
-// 3Miro: Commerse from Building + Civic
+// 3Miro: Commerce from Building + Civic
 extern int iCivicBuildingCommerse1;
 extern int iCivicBuildingCommerse2;
 extern int iCivicBuildingCommerse3;

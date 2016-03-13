@@ -10033,10 +10033,10 @@ bool CvCivilizationInfo::read(CvXMLLoadUtility* pXML)
 						pXML->GetNextXmlVal(  m_pszDCNTempMasterOf2[j] ); // read the Master of
 						pXML->GetNextXmlVal( &m_piDCNGenericMaster[j] ); // generic Master of anyone
 						pXML->GetNextXmlVal( &m_piDCNAfterTurn[j] ); // when do we change
-						pXML->GetNextXmlVal( &m_piDCNConqProvinceOfTypeType[j] ); // conq outer provinces (give the type)
+						pXML->GetNextXmlVal( &m_piDCNConqProvinceOfTypeType[j] ); // conquer outer provinces (give the type)
 						pXML->GetNextXmlVal( &m_piDCNConqProvinceOfTypeNum[j] ); // how many other provinces
 						pXML->GetNextXmlVal( &m_piDCNCondSpecificProvince[j] ); // conquer a specific province
-						pXML->GetNextXmlVal( &m_piDCNCondHasRespawned[j] ); // conquer a specific province
+						pXML->GetNextXmlVal( &m_piDCNCondHasRespawned[j] ); // respawned or not
 						pXML->GetNextXmlVal(  m_pszDCNName[j] ); // get the name
 
 						gDLL->getXMLIFace()->SetToParent(pXML->GetXML()); // get back to DCNCondition being the root
@@ -10060,7 +10060,7 @@ bool CvCivilizationInfo::read(CvXMLLoadUtility* pXML)
 						//gDLL->getXMLIFace()->NextSibling(pXML->GetXML()
 					}
 
-					if (!gDLL->getXMLIFace()->NextSibling(pXML->GetXML())) // this looks redundant, but if there are no mote DNCondition tags, break the loop
+					if (!gDLL->getXMLIFace()->NextSibling(pXML->GetXML())) // this looks redundant, but if there are no more DNCondition tags, break the loop
 					{
 						break;
 					}

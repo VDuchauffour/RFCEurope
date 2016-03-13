@@ -356,6 +356,7 @@ Changes for RFCE 1.3:
 		- Slightly tuned down Hungarian and Venetian tech progress (both player and AI)
 		- Increased various maintenance modifiers for Byzantium (especially for the AI), decreased for Burgundy (was still set to the 500AD start)
 		- Changed sea spawns: naval starting units can spawn inside other players' sea territory, as all naval units can enter foreign borders anyway
+		- Revised initial contacts for each civ
 
 	Art updates:
 		- New art for Isabella (Spain), Casimir III (Poland), Ivan IV (Muscovy), Simeon I (Bulgaria), Ivan Asen (Bulgaria)
@@ -403,6 +404,8 @@ Changes for RFCE 1.3:
 		- Fixed bug which made it possible for the Pope to collapse
 		- Fixed bug where the Prussian province setup didn't switch for the human player in 1618
 		- Fixed bug where the Aragonese starting naval units didn't always spawn
+		- Fixed CTD connected to the Portuguese spawn
+		- Fixed a couple bugs in the initial contact setup
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

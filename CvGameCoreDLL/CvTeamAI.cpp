@@ -1558,7 +1558,10 @@ int CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const
 		}
 	}
 
-	iValue += (((iCost / 2) * (iPossibleKnownCount - iKnownCount)) / iPossibleKnownCount);
+	if (iPossibleKnownCount != 0)
+	{
+		iValue += (((iCost / 2) * (iPossibleKnownCount - iKnownCount)) / iPossibleKnownCount);
+	}
 
 	iValue *= std::max(0, (GC.getTechInfo(eTech).getAITradeModifier() + 100));
 	iValue /= 100;
