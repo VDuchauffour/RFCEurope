@@ -1065,7 +1065,7 @@
 					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
 					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
 					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-					<DCNName>TXT_KEY_DN_FRA13</DCNName>
+					<DCNName>TXT_KEY_DN_FRA28</DCNName>
 				</DCNCondition>
 				<DCNCondition>
 					<DCNConditionCivic>NONE</DCNConditionCivic>
@@ -2220,6 +2220,24 @@
 			<SituationGrowth>TXT_KEY_3STARS</SituationGrowth>
 			<SituationStart>TXT_KEY_3STARS</SituationStart>
 			<DCNConditions>
+				<DCNCondition>
+					<DCNConditionCivic>NONE</DCNConditionCivic>
+					<DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
+					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
+					<DCNConditionReligion>NONE</DCNConditionReligion>
+					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
+					<DCNConditionVassalOf>CIVILIZATION_BYZANTIUM</DCNConditionVassalOf>
+					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
+					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
+					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
+					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
+					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
+					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
+					<DCNConditionConqASpecificProvince>80</DCNConditionConqASpecificProvince>
+					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
+					<DCNName>TXT_KEY_DN_BUL22</DCNName>
+				</DCNCondition>
 				<DCNCondition>
 					<DCNConditionCivic>NONE</DCNConditionCivic>
 					<DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
@@ -5425,7 +5443,7 @@
 				<CivicType>CIVIC_BUREAUCRACY</CivicType>
 				<CivicType>CIVIC_SERFDOM</CivicType>
 				<CivicType>CIVIC_MANORIALISM</CivicType>
-				<CivicType>CIVIC_STATE_RELIGION</CivicType>
+				<CivicType>CIVIC_PAGANISM</CivicType>
 				<!-- Rhye -->
 				<CivicType>CIVIC_SUBJUGATION</CivicType>
 			</InitialCivics>
@@ -5978,7 +5996,7 @@
 			<Adjective>TXT_KEY_CIV_KIEV_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_KIEV_PEDIA</Civilopedia>
 			<!-- 3Miro Begin Update -->
-			<StartingYear>880AD</StartingYear>
+			<StartingYear>882AD</StartingYear>
 			<LoadingTime>10</LoadingTime>
 			<UP1>TXT_KEY_UP_KIE</UP1>
 			<UP2>TXT_KEY_UP_KIE2</UP2>
@@ -8082,7 +8100,7 @@
 				<CivicType>CIVIC_TRIBAL_LAW</CivicType>
 				<CivicType>CIVIC_TRIBALISM</CivicType>
 				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
-				<CivicType>CIVIC_STATE_RELIGION</CivicType>
+				<CivicType>CIVIC_PAGANISM</CivicType>
 				<!-- Rhye -->
 				<CivicType>CIVIC_SUBJUGATION</CivicType>
 			</InitialCivics>

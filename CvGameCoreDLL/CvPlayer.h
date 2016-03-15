@@ -1055,7 +1055,7 @@ public:
 	DllExport LeaderHeadTypes getLeader(); //Rhye
 	void resetRelations( PlayerTypes ePlayer ); //Rhye
 	void reinit( PlayerTypes eID, LeaderHeadTypes prevLeader, bool doReset );  //Rhye
-	void processCivNames(); //Rhye - dynamic civ names - not jdog's
+	void processCivNames(); //Rhye - dynamic civ names - not jdog's		// Absinthe: added to python
 
 	// 3Miro: some additional utils
 	// Absinthe: with the new persecution code added from SoI, these functions are currently unused
@@ -1114,7 +1114,7 @@ public:
 	void setStabilityVary( int iCathegory, int iNewValue );
 	int getStabilitySwing();
 	void setStabilitySwing( int iNewValue );
-	int getStability(); // sum all cathegories and returns one number
+	int getStability(); // sum all categories and returns one number
 	int getWarPeaceChange(); // war peace change since last time it was called
 
 	// 3MiroProjects: count the number of colonies here

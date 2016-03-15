@@ -75,6 +75,9 @@ void CyPlayerPythonInterface2(python::class_<CyPlayer>& x)
 		.def("getMaster", &CyPlayer::getMaster, "int ( )")
 		.def("countVassals", &CyPlayer::countVassals, "int ( )")
 
+		// Absinthe: DCN update
+		.def("processCivNames", &CyPlayer::processCivNames, "void ( )")
+
 		// 3MiroProvinces: extra province functions
 		.def("provinceIsSpreadReligion", &CyPlayer::provinceIsSpreadReligion, "bool (int, int)")
 		.def("provinceIsConvertReligion", &CyPlayer::provinceIsConvertReligion, "bool (int, int)")

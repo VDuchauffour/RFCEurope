@@ -149,7 +149,6 @@ BeginPlayer
 	LeaderType=LEADER_CHARLEMAGNE
 	CivType=CIVILIZATION_FRANCE
 	PlayableCiv=1
-	StateReligion=RELIGION_CATHOLICISM
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
@@ -165,7 +164,6 @@ BeginPlayer
 	LeaderType=LEADER_SIMEON
 	CivType=CIVILIZATION_BULGARIA
 	PlayableCiv=1
-	StateReligion=RELIGION_ORTHODOXY
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
@@ -206,7 +204,6 @@ BeginPlayer
 	LeaderType=LEADER_RURIK
 	CivType=CIVILIZATION_NOVGOROD
 	PlayableCiv=1
-	StateReligion=RELIGION_ORTHODOXY
 	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_BUREAUCRACY
 	Handicap=HANDICAP_PRINCE
 EndPlayer

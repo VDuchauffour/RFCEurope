@@ -23127,6 +23127,7 @@ void CvPlayer::processCivNames()
 				};
 			};
 
+			// -----------------  Date Check: needs some turn-based check for refreshing correctly -------------------------- //
 			if ( bPasses ){
 				iVal = GC.getCivilizationInfo(getCivilizationType() ).getDCNCondCondSpecificProvince(iI);
 				if ( (iVal>-1) && (iVal<=MAX_NUM_PROVINCES) ){
