@@ -22,7 +22,7 @@ iMapMaxY = 73
 # Germany     i856AD
 # Novgorod    i864AD
 # Norway      i872AD
-# Kiev        i880AD
+# Kiev        i882AD
 # Hungary     i895AD
 # Spain       i910AD
 # Denmark     i936AD
@@ -193,9 +193,9 @@ xml.i711AD,			#Cordoba		turn 53, so 712AD
 xml.i810AD,			#Venice			turn 78, so 812AD			#De Facto independence: Pax Nicephori (803)		#810: the "modern" city of Venice (on the sea) was born
 xml.i843AD,			#Burgundy		turn 86, so 844AD			#Treaty of Verdun in 843 AD, splitting the Frankish Empire into West, Middle and East Francia
 xml.i856AD,			#Germany		turn 89, so 856AD
-xml.i864AD,			#Novgorod		turn 91, so 864AD
+xml.i864AD,			#Novgorod		turn 91, so 864AD			#Rurik moves capital to Novgorod
 xml.i872AD,			#Norway			turn 93, so 872AD
-xml.i880AD,			#Kiev			turn 95, so 880AD
+xml.i882AD,			#Kiev			turn 95, so 880AD			#Oleg captures Kiev
 xml.i895AD,			#Hungary		turn 99, so 896AD			#Hungarian invasion of the Carpathian basin (Honfoglalás) in 895-896 AD
 xml.i910AD,			#Spain			turn 103, so 909AD			#The Kingdom of Leon was founded in 910 AD
 xml.i936AD,			#Denmark		turn 112, so 936AD
@@ -397,25 +397,25 @@ tNewCapitals = (  #for RiseAndFall
 ((48, 16),(50, 18)), #Cordoba: Cordoba --> Hafsids at Tunis
 ((56, 35),(56, 35)), #Venezia: Venice
 ((47, 41),(47, 41)), #Burgundy: Dijon
-((57, 41),(57, 41)), #Germany --> Munich (Bavaria respawn)
-((80, 62),(80, 62)), #Novgorod
-((59, 64),(59, 64)), #Norway --> Oslo
-((88, 40),(88, 40)), #Kiev --> Stara Sich (Cossack respawn)
+((57, 41),(57, 41)), #Germany: Frankfurt --> Munich (Bavaria respawn)
+((80, 62),(80, 62)), #Novgorod: Novgorod
+((59, 64),(59, 64)), #Norway: Tonsberg --> Oslo
+((88, 40),(88, 40)), #Kiev: Kiev --> Stara Sich (Cossack respawn)
 ((66, 37),(66, 37)), #Hungary: Buda
 ((30, 27),(31, 27),(31, 28),(32, 28)), #Spain: Leon --> Toledo or Madrid
-((59, 57),(59, 57)), #Denmark
-((37, 63),(37, 63)), #Scotland
+((59, 57),(59, 57)), #Denmark: Roskilde/Kobenhavn
+((37, 63),(37, 63)), #Scotland: Edinburgh
 ((65, 49),(65, 49)), #Poland: Poznan
 ((50, 34),(50, 34)), #Genoa: Genoa
-((25, 13),(25, 13)), #Morocco --> Rabat
+((25, 13),(25, 13)), #Morocco: Marrakesh --> Rabat
 ((41, 52),(41, 52)), #England: London
 ((21, 25),(21, 25)), #Portugal: Lisboa
-((59, 24),(59, 24)), #Aragon --> Naples
+((59, 24),(59, 24)), #Aragon: Zaragoza --> Naples
 ((66, 64),(66, 64)), #Sweden: Stockholm
-((60, 48),(61, 48),(61, 49),(62, 48)), #Prussia --> Berlin
+((60, 48),(61, 48),(61, 49),(62, 48)), #Prussia: Königsberg --> Berlin
 ((75, 53),(75, 53)), #Lithuania: Vilnius
 ((62, 40),(62, 40)), #Austria: Wien
-((78, 22),(78, 22)), #Turkey, Gallipoli
+((78, 22),(78, 22)), #Turkey: Gallipoli
 ((91, 56),(91, 56)), #Moscow: Moscow
 ((49, 52),(49, 52)), #Dutch: Amsterdam
 ((56, 27),(56, 27))  #Pope: Rome
@@ -536,8 +536,8 @@ tNormalAreasTL = (
 (77,59),   #Novgorod
 (53,63),   #Norway
 (78,41),   #Kiev
-(63,33),   #Hungary
-(25,18),   #Spain
+(63,32),   #Hungary
+(25,26),   #Spain
 (54,55),   #Denmark
 (34,63),   #Scotland
 (63,43),   #Poland
@@ -569,13 +569,13 @@ tNormalAreasBR = (
 (58,72),   #Norway
 (91,50),   #Kiev
 (77,41),   #Hungary
-(42,36),   #Spain
+(34,36),   #Spain
 (59,61),   #Denmark
 (39,69),   #Scotland
 (77,50),   #Poland
 (52,36),   #Genoa
 (27,13),   #Morocco
-(43,71),   #England
+(43,62),   #England
 (25,32),   #Portugal
 (64,26),   #Aragon
 (75,72),   #Sweden
@@ -600,14 +600,14 @@ tNormalAreasSubtract = ( #These plots are subtracted from the tNormalAreasTL+tNo
 ((87,59), (88,59), (89,59), (89,60)), #Novgorod
 (), #Norway
 ((87,41),(88,41),(89,41),(90,41),(91,41)), #Kiev
-((63,39),(63,40),(63,41),(63,42),(64,41),(64,42),(75,41),(76,40),(76,41),(77,39),(77,40),(77,41)), #Hungary
-((25,27),(25,28),(25,29),(25,30),(25,31),(34,36),(35,35),(35,36),(36,34),(36,35),(36,36),(37,33),(37,34),(37,35),(37,36),(38,33),(38,34),(38,35),(38,36),(39,32),(39,33),(39,34),(39,35),(39,36),(40,32),(40,33),(40,34),(40,35),(40,36),(41,31),(41,32),(41,33),(41,34),(41,35),(41,36),(42,31),(42,32),(42,33),(42,34),(42,35),(42,36)), #Spain
+((63,32),(63,39),(63,40),(63,41),(64,41),(72,32),(73,32),(74,32),(75,32),(75,41),(76,32),(76,40),(76,41),(77,32),(77,39),(77,40),(77,41)), #Hungary
+((25,26),(25,27),(25,28),(25,29),(25,30),(25,31),(34,36)), #Spain
 (), #Denmark
 ((34,69),), #Scotland
 ((63,43),(63,44),(63,45),(64,43),(64,44),(65,43)), #Poland
 (), #Genoa
 (), #Morocco
-((32,55),(32,56),(32,57),(32,58),(32,59),(32,60),(32,61),(32,62),(32,63),(32,64),(33,56),(33,57),(33,58),(33,59),(33,60),(33,61),(33,62),(33,63)), #England
+((32,55),(32,56),(32,57),(32,58),(32,59),(32,60),(32,61),(32,62),(33,56),(33,57),(33,58),(33,59),(33,60),(33,61),(33,62)), #England
 ((25,21),(25,22),(25,23),(25,24),(25,25),(25,26),(25,32)), #Portugal
 (), #Aragon
 ((60,59),(60,60),(60,61),(60,70),(60,71),(60,72),(61,59),(61,60),(61,72),(70,59),(70,60),(70,61),(71,59),(71,60),(71,61),(72,59),(72,60),(72,61),(73,59),(73,60),(73,61),(74,59),(74,60),(74,61),(75,59),(75,60),(75,61)), #Sweden
@@ -970,14 +970,14 @@ tReligionSpreadFactor = ( # PROT, ISL, CATH, ORTH, JUD
 (100,  50,  70, 150,  10), #Byzantium
 (150,  20, 250,  70,  10), #France
 ( 20, 350,  50,  10,  10), #Arabia
-(100,  50, 100, 350,  10), #Bulgaria
+( 80,  50,  80, 400,  10), #Bulgaria
 ( 50, 250, 100,  20,  10), #Cordoba
 ( 90,  50, 200,  30,  10), #Venezia
 (150,  20, 150,  70,  10), #Burgundy
 (450,  20, 250,  20,  10), #Germany
-( 60,  60,  60, 400,  10), #Novgorod
+( 60,  40,  60, 500,  10), #Novgorod
 (250,  50, 150,  80,  10), #Norway
-( 90,  60,  90, 250,  10), #Kiev
+( 90,  60,  90, 400,  10), #Kiev
 (250,  60, 200,  80,  10), #Hungary
 (100,  20, 200,  20,  10), #Spain
 (250,  50, 180,  80,  10), #Denmark

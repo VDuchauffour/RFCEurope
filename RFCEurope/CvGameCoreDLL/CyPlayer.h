@@ -571,6 +571,9 @@ public:
 	int getMaster();
 	int countVassals();
 
+	// Absinthe: DCN update
+	void processCivNames();
+
 	// 3MiroProvince: religion in province
 	bool provinceIsSpreadReligion( int iProvince, int iReligion );
 	bool provinceIsConvertReligion( int iProvince, int iReligion );

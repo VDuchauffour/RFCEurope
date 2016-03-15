@@ -29,7 +29,8 @@ i856AD = 89												# Spawn of Germany
 i864AD = 91		# Rus' capital moved to Novgorod		# Spawn of Novgorod
 i867AD = 92
 i872AD = 93												# Spawn of Norway
-i880AD = 95												# Spawn of Kiev
+i880AD = 95
+i882AD = 95												# Spawn of Kiev
 i892AD = 98
 i895AD = 99		# Honfoglalás							# Spawn of Hungary
 i900AD = 100
@@ -385,17 +386,17 @@ iP_Dummy1,
 iP_Pomerania, iP_GaliciaPoland, iP_GreaterPoland, iP_Masovia, iP_LesserPoland, iP_Suvalkija, iP_Lithuania, iP_Livonia, iP_Estonia,
 iP_Dummy2,
 
-# Austria and Hungary, +1 dummy
+# Austria and Hungary 60+, +1 dummy
 iP_Carinthia, iP_Austria, iP_Slavonia,
 #iP_Tyrol = 63 # merged with Bavaria
 #iP_Salzburg = 63 # merged with Bavaria
 iP_Dummy3,
 iP_Transylvania, iP_Hungary, iP_Moravia, iP_Silesia, iP_Pannonia, iP_UpperHungary,
 
-# Italy
+# Italy 70+
 iP_Lombardy, iP_Verona, iP_Tuscany, iP_Latium, iP_Calabria, iP_Apulia, iP_Liguria,
 
-# Balkans
+# Balkans 77+
 iP_Arberia, iP_Dalmatia, iP_Banat, iP_Moesia, iP_Constantinople, iP_Thrace, iP_Thessaly, iP_Macedonia, iP_Serbia, iP_Bosnia,
 #iP_Croatia = 86 # merged with Slavonia
 iP_Epirus, iP_Morea, iP_Wallachia,

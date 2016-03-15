@@ -183,17 +183,22 @@ Changes for RFCE 1.3:
 		- 1 extra Settler and 1 Crossbowman for AI England
 		- Lowered almost all leaders willingness to vassalize voluntarily
 		- Increased Cordoban leaders' religion flavor, they will spread out Islam better in their cities
-		- Lowered Orthodoxy spread values for Scandinavian civs
+		- Lowered Orthodoxy spread values for Scandinavian civs, increased them in the eastern regions (Bulgaria, Novgorod, Kiev)
 		- Muscovy spawn zone reduced in the north, so Novgorod gets a chance to be an early rival for Muscovy
 		- Lithuanian spawn zone reduced around Riga and the Prussian core territory, but enlarged on the east, so Minsk flips to them
-		- Updated Lithuanian and Swedish respawn zones
+		- Updated Lithuanian, Swedish, Spanish, English, and Hungarian respawn zones
 		- Revised visibility map for Byzantium, Bulgaria, Cordoba, Burgundy, Novgorod, Kiev, Scotland, Morocco, Portugal, Aragon, Sweden, Lithuania, Austria, Ottomans, Moscow, Dutch
 		- Revised the setup of initial contacts between all civs
 		- Revised AI war initialization for all players
 		- Revised settler map for Byzantium, Cordoba, Venice, Burgundy, Germany, Spain, Poland, England, Portugal, Lithuania, Muscovy
 		- Revised war map for Germany, Spain, Poland, England, Lithuania, Muscovy, especially in territories of the new civs
-		- Germany and Venice start with missionaries
-		- Civs start with a state religion corresponding to their spawning missionaries (no first turn anarchy required anymore)
+		- All civs start with missionaries and under a religious civic if they have a preset religion, without missionaries and under Paganism if they don't have one
+			- Germany and Venice start with missionaries
+			- Many civs start with one of the religious civics instead of Paganism
+			- Bulgaria starts without missionaries or Orthodoxy as a State Religion
+			- Novgorod starts without missionaries or Orthodoxy as a State Religion, and under the Paganism civic
+			- France starts without Catholicism as a State Religion, but only because doesn't have Theology thus the needed civic, so it still has a missionary (only exception)
+			- Denmark starts under the Paganism civic
 		- Burgundy starts with preset civics
 		- Cordoba starts with Literature (thus they can use the Religious Law civic on start)
 		- Cordoba starts with Arabic Medicine (health is important for 1st UHV, also somewhat historic and in synergy with the UP)
@@ -323,6 +328,7 @@ Changes for RFCE 1.3:
 		- Small improvements on the Polish, Muscovian, Portuguese city name maps in Anatolia
 		- Fixed/improved most Dynamic Civ Names connected to the Scandinavian civs
 		- Updated DCN names for France, Hungary, Bulgaria, Byzantium
+		- Dynamic civ names also refresh on start of a new turn, not just on specific events like new city foundation or city ownership change
 		- Plague icon on the main interface when plague spreads to a new city
 		- Removed outdated xml_light files
 		- Reenabled and readded some entries (ie: Keshik, Seljuks) in the civilopedia
@@ -356,7 +362,7 @@ Changes for RFCE 1.3:
 		- Slightly tuned down Hungarian and Venetian tech progress (both player and AI)
 		- Increased various maintenance modifiers for Byzantium (especially for the AI), decreased for Burgundy (was still set to the 500AD start)
 		- Changed sea spawns: naval starting units can spawn inside other players' sea territory, as all naval units can enter foreign borders anyway
-		- Revised initial contacts for each civ
+		- Kiev moved to 882 AD (text only though, so no changes in the gameturn)
 
 	Art updates:
 		- New art for Isabella (Spain), Casimir III (Poland), Ivan IV (Muscovy), Simeon I (Bulgaria), Ivan Asen (Bulgaria)
@@ -380,6 +386,7 @@ Changes for RFCE 1.3:
 		- Units which are only available as mercenary/barb have a button indicating that instead of a text
 		- All civs have the correct coloured dot on the colonial world map in the Colony Screen
 		- New civic screen from History Rewritten + colored civic stability combos like DoC
+		- New spawn map for RFCE 1.3 by HolyHandGrenade, located in the Reference folder
 
 	Bugfixes:
 		- Fixed bug where all mercs got free medic3 promotion (missing change in one of the files when Pinch was reintroduced)

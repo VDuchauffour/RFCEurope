@@ -497,7 +497,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL07</Tag>
-		<English>Caliphate of Bulgaria</English>
+		<English>Sultanate of Bulgaria</English>
 		<French></French>
 		<German>Kalifat Bulgarien</German>
 		<Italian>Califfato di Bulgaria</Italian>
@@ -524,7 +524,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL10</Tag>
-		<English>Exarchate of Bulgaria</English>
+		<English>Theme of Bulgaria</English>
 		<French>Thème de Bulgarie</French>
 		<German>Byzantinisches Thema Bulgarien</German>
 		<Italian>Thema di Bulgaria</Italian>
@@ -614,7 +614,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUL20</Tag>
-		<English>Eyalet of Rumelia</English>
+		<English>Eyalet of Silistra</English>
 		<French>Principaut&#233; de Roum&#233;lie</French>
 		<German>Fürstentum Rumelia</German>
 		<Italian>Principato di Rumelia</Italian>
@@ -629,6 +629,15 @@
 		<Italian>Provincia di Bulgaria</Italian>
 		<Spanish></Spanish>
 		<Portuguese>Província da Bulgária</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL22</Tag>
+		<English>Theme of Paristrion</English>
+		<French>Theme of Paristrion</French>
+		<German>Theme of Paristrion</German>
+		<Italian>Theme of Paristrion</Italian>
+		<Spanish>Theme of Paristrion</Spanish>
+		<Portuguese>Theme of Paristrion</Portuguese>
 	</TEXT>
 	<!-- Bulgaria -->
 	<!-- Burgundy -->
@@ -897,12 +906,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ07</Tag>
-		<English>Emirate of Greece</English>
-		<French>Emirate of Greece</French>
-		<German>Emirate of Greece</German>
-		<Italian>Emirate of Greece</Italian>
-		<Spanish>Emirate of Greece</Spanish>
-		<Portuguese>Emirate of Greece</Portuguese>
+		<English>Emirate of Rumiyah</English>
+		<French>Emirate of Rumiyah</French>
+		<German>Emirate of Rumiyah</German>
+		<Italian>Emirate of Rumiyah</Italian>
+		<Spanish>Emirate of Rumiyah</Spanish>
+		<Portuguese>Emirate of Rumiyah</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ08</Tag>
@@ -1068,12 +1077,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ26</Tag>
-		<English>Eyalet of Greece</English>
-		<French>Eyalet of Greece</French>
-		<German>Eyalet of Greece</German>
-		<Italian>Eyalet of Greece</Italian>
-		<Spanish>Eyalet of Greece</Spanish>
-		<Portuguese>Eyalet of Greece</Portuguese>
+		<English>Eyalet of Rumelia</English>
+		<French>Eyalet of Rumelia</French>
+		<German>Eyalet of Rumelia</German>
+		<Italian>Eyalet of Rumelia</Italian>
+		<Spanish>Eyalet of Rumelia</Spanish>
+		<Portuguese>Eyalet of Rumelia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ27</Tag>
@@ -2054,6 +2063,15 @@
 		<Italian>Principality of France</Italian>
 		<Spanish>Principality of France</Spanish>
 		<Portuguese>Principality of France</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA28</Tag>
+		<English>County of Toulouse</English>
+		<French>County of Toulouse</French>
+		<German>County of Toulouse</German>
+		<Italian>County of Toulouse</Italian>
+		<Spanish>County of Toulouse</Spanish>
+		<Portuguese>County of Toulouse</Portuguese>
 	</TEXT>
 	<!-- France -->
 	<!-- Genoa -->

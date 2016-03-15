@@ -2422,6 +2422,10 @@ int CyPlayer::getMaster(){
 int CyPlayer::countVassals(){
 	return m_pPlayer ->countVassals();
 };
+// Absinthe: DCN update
+void CyPlayer::processCivNames(){
+	return m_pPlayer ->processCivNames();
+};
 bool CyPlayer::provinceIsSpreadReligion( int iProvince, int iReligion ){
 	return m_pPlayer ->provinceIsSpreadReligion( iProvince, iReligion );
 };

@@ -526,12 +526,16 @@ class CvRFCEventHandler:
 		if (self.rnf.getDeleteMode(0) != -1):
 			self.rnf.deleteMode(iPlayer)
 
+		# refresh Dynamic Civ Names
+		if (iPlayer < con.iNumMajorPlayers):
+			gc.getPlayer(iPlayer).processCivNames()
+
 		# Denmark UP
-		if(iPlayer == con.iDenmark):
+		if (iPlayer == con.iDenmark):
 			self.up.soundUP(iPlayer)
 
 		# Aragon UP
-		elif(iPlayer == con.iAragon):
+		elif (iPlayer == con.iAragon):
 			self.up.confederationUP(iPlayer)
 
 		# Ottoman UP

@@ -2244,7 +2244,6 @@ class RiseAndFall:
 			utils.makeUnit(xml.iArcher, iCiv, tPlot, 4)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iBulgarianKonnik, iCiv, tPlot, 5)
-			utils.makeUnit(xml.iOrthodoxMissionary, iCiv, tPlot, 1)
 		elif (iCiv == iCordoba):
 			utils.makeUnit(xml.iArcher, iCiv, tPlot, 4)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
@@ -2281,7 +2280,6 @@ class RiseAndFall:
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
 			utils.makeUnit(xml.iAxeman, iCiv, tPlot, 1)
 			utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 1)
-			utils.makeUnit(xml.iOrthodoxMissionary, iCiv, tPlot, 1)
 		elif (iCiv == iNorway):
 			utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
@@ -2480,7 +2478,6 @@ class RiseAndFall:
 		utils.makeUnit(xml.iWorker, iFrankia, tCapitals[iFrankia], 2)
 		utils.makeUnit(xml.iCatholicMissionary, iFrankia, tCapitals[iFrankia], 1)
 
-		#self.showArea(iBurgundy)
 		self.showArea(iByzantium)
 		self.initContact(iByzantium)
 		self.showArea(iFrankia)
