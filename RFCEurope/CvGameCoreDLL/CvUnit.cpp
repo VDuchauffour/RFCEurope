@@ -2307,13 +2307,8 @@ bool CvUnit::canEnterTerritory(TeamTypes eTeam, bool bIgnoreRightOfPassage) cons
 		}
 	}
 
-	//Rhye - start UP (Dutch)
-	// 3Miro
-	//if (getOwnerINLINE() == NETHERLANDS && DOMAIN_SEA == getDomainType())
-	//	return true;
-	//Rhye - end
-
 	// 3MiroUP: foreign sea
+	// Absinthe: currently unused, all civs' naval units can enter sea tiles
 	if ( UniquePowers[getOwnerINLINE() * UP_TOTAL_NUM + UP_FOREIGN_SEA ] > 0 && DOMAIN_SEA == getDomainType() ){
 		return true;
 	};

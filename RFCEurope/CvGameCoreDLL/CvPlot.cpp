@@ -6624,20 +6624,28 @@ int CvPlot::calculateImprovementYieldChange(ImprovementTypes eImprovement, Yield
 		{
 			iYield += GC.getImprovementInfo(eImprovement).getImprovementBonusYield(eBonus, eYield);
 		}
-	}
-	// 3MiroUP: UP_IMPROVEMENT_BONUS
-	if ( ePlayer != NO_PLAYER ){
+
+		// Absinthe: England: UP_IMPROVEMENT_BONUS
 		int iUPW = UniquePowers[((int)ePlayer) * UP_TOTAL_NUM + UP_IMPROVEMENT_BONUS];
-		if ( eImprovement == iUPW / 1000000 ){
-			if ( eYield == YIELD_COMMERCE ){
-				iYield += iUPW % 100;
-			}else if ( eYield == YIELD_PRODUCTION ){
-				iYield += (iUPW / 100) % 100;
-			}else if ( eYield == YIELD_FOOD ){
-				iYield += (iUPW / 10000) % 100;
-			};
-		};
-	};
+		if (iUPW / 100000 == 1)
+		{
+			if ( eImprovement == (iUPW / 1000) % 100 )
+			{
+				if ( eYield == YIELD_COMMERCE )
+				{
+					iYield += iUPW % 10;
+				}
+				else if ( eYield == YIELD_PRODUCTION )
+				{
+					iYield += (iUPW / 10) % 10;
+				}
+				else if ( eYield == YIELD_FOOD )
+				{
+					iYield += (iUPW / 100) % 10;
+				}
+			}
+		}
+	}
 
 /*************************************************************************************************/
 /* UNOFFICIAL_PATCH                       06/02/10                     Afforess & jdog5000       */
@@ -6866,18 +6874,24 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 	if (bCity)
 	{
 		iYield = std::max(iYield, GC.getYieldInfo(eYield).getMinCity());
-		// 3MiroUP
-		//if ( (UniquePowers[pCity->getOwner()][UP_GROWTH] == 1)&&(eYield==0) ) iYield += 2;
+
+		// Absinthe: Kiev: UP_CITY_TILE_YIELD
 		int iUPY = UniquePowers[pCity->getOwner() * UP_TOTAL_NUM + UP_CITY_TILE_YIELD];
-		if ( iUPY > -1 ){
-			if ( eYield == YIELD_COMMERCE ){
-				iYield += iUPY % 1000;
-			}else if ( eYield == YIELD_PRODUCTION ){
-				iYield += (iUPY / 1000) % 100;
-			}else if ( eYield == YIELD_FOOD ){
-				iYield += (iUPY / 100000) % 100;
-			};
-		};
+		if ( iUPY / 1000 == 1 )
+		{
+			if ( eYield == YIELD_COMMERCE )
+			{
+				iYield += iUPY % 10;
+			}
+			else if ( eYield == YIELD_PRODUCTION )
+			{
+				iYield += (iUPY / 10) % 10;
+			}
+			else if ( eYield == YIELD_FOOD )
+			{
+				iYield += (iUPY / 100) % 10;
+			}
+		}
 	}
 
 	iYield += GC.getGameINLINE().getPlotExtraYield(m_iX, m_iY, eYield);
@@ -6889,6 +6903,42 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 			if (iYield >= GET_PLAYER(ePlayer).getExtraYieldThreshold(eYield))
 			{
 				iYield += GC.getDefineINT("EXTRA_YIELD");
+			}
+		}
+
+		// Absinthe: Morocco: UP_DESERT_BONUS
+		int iUPDB = UniquePowers[((int)ePlayer) * UP_TOTAL_NUM + UP_DESERT_BONUS];
+		if (iUPDB / 1000 == 1 && getTerrainType() == GC.getInfoTypeForString("TERRAIN_DESERT") && getPlotType() != PLOT_PEAK)
+		{
+			if ( eYield == YIELD_COMMERCE )
+			{
+				iYield += iUPDB % 10;
+			}
+			else if ( eYield == YIELD_PRODUCTION )
+			{
+				iYield += (iUPDB / 10) % 10;
+			}
+			else if ( eYield == YIELD_FOOD )
+			{
+				iYield += (iUPDB / 100) % 10;
+			}
+		}
+
+		// Absinthe: Morocco: UP_OASIS_BONUS
+		int iUPOB = UniquePowers[((int)ePlayer) * UP_TOTAL_NUM + UP_OASIS_BONUS];
+		if (iUPOB / 1000 == 1 && getFeatureType() == GC.getInfoTypeForString("FEATURE_OASIS"))
+		{
+			if ( eYield == YIELD_COMMERCE )
+			{
+				iYield += iUPOB % 10;
+			}
+			else if ( eYield == YIELD_PRODUCTION )
+			{
+				iYield += (iUPOB / 10) % 10;
+			}
+			else if ( eYield == YIELD_FOOD )
+			{
+				iYield += (iUPOB / 100) % 10;
 			}
 		}
 

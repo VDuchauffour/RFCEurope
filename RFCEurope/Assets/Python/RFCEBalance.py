@@ -75,6 +75,9 @@ iUP_PaganHappy = con.iUP_PaganHappy
 iUP_StabilityConquestBoost = con.iUP_StabilityConquestBoost
 iUP_StabilitySettler = con.iUP_StabilitySettler
 iUP_Janissary = con.iUP_Janissary
+iUP_HealthFood = con.iUP_HealthFood
+iUP_DesertBonus = con.iUP_DesertBonus
+iUP_OasisBonus = con.iUP_OasisBonus
 #iUP_NoAnarchyInstability = con.iUP_NoAnarchyInstability
 #iUP_ProvinceCommerce = con.iUP_ProvinceCommerce
 #iUP_Defiance = con.iUP_Defiance
@@ -544,7 +547,6 @@ class RFCEBalance:
 		#3Miro: setUP(iCiv,iPower,iParameter)
 		# iUP_Happiness, iParameter = the amount of additional happiness
 		# iUP_PerCityCommerce, iParameter = 1000000 * bonus_in_gold + 10000*bonus_in_research + 100*bonus_in_culture + bonus_in_espionage (bonuses are limited to 0 - 99)
-		# iUP_CityTileYield, iParameter = 100000 * iFoodBonus + 1000 * iProductionBonus + iCommerceBonus, food and production are limited to (0-99) and commerce to (0-999)
 		# iUP_CommercePercent, iParameter = 1000000 * bonus_in_gold + 10000*bonus_in_research + 100*bonus_in_culture + bonus_in_espionage (bonuses are limited to 0 - 99 percent)
 		# iUP_CulturalTolerance. iParameter = 0 for no unhappiness or unhappiness = unhappiness / iParameter
 		# iUP_ReligiousTolerance. iParameter = 0 for no instability
@@ -553,7 +555,6 @@ class RFCEBalance:
 		# iUP_UnitProduction, iParameter = iRequiredTech * 100 + Percent ( 75% for 25% faster unit building)
 		# iUP_EnableCivic, iParameter = Civic5 * 100000000 + Civic4 * 1000000 + Civic3 * 10000 + Civic2 * 100 + Civic1, NOTE: also need to enable this in the WB, civic indexed by 0 is always available, civic5 cannot be bigger than 20
 		# iUP_TradeRoutes, iParameter = number of extra trade routes, NOTE: this must be synchronized with GlobalDefines.xml: max trade routes
-		# iUP_ImprovementBonus, iParameter = iImprovement * 1000000 + iFoodBonus * 10000 + iProductionBonus * 100 + iCommerceBonus, bonuses are limited to (0-99)
 		# iUP_PromotionI, iParameter = the bonus promotion
 		# iUP_PromotionII, iParameter = the bonus promotion
 		# iUP_Inquisition, iParameter is not used
@@ -562,6 +563,11 @@ class RFCEBalance:
 		# iUP_EndlessLand, iParameter = percent change (i.e. upkeep *= iParameter, upkeep /= 100 )
 		# iUP_ForeignSea, use iParameter = 1
 		# iUP_Pious, whenever changeFaith( x ) is called, x is multiplied by iParameter
+		# iUP_HealthFood, use iParameter = 1 to activate
+		# iUP_DesertBonus, iParameter = iActivate * 1000 (1 to be active) + iFoodBonus * 100 + iProductionBonus * 10 + iCommerceBonus (bonuses are limited to 0-9)
+		# iUP_OasisBonus, iParameter = iActivate * 1000 (1 to be active) + iFoodBonus * 100 + iProductionBonus * 10 + iCommerceBonus, (bonuses are limited to 0-9)
+		# iUP_ImprovementBonus, iParameter = iActivate * 100000 (1 to be active) + iImprovement * 1000 + iFoodBonus * 100 + iProductionBonus * 10 + iCommerceBonus, bonuses are limited to (0-9)
+		# iUP_CityTileYield, iParameter = iActivate * 1000 (1 to be active) + iFoodBonus * 100 + iProductionBonus * 10 + iCommerceBonus, (bonuses are limited to 0-9)
 
 		gc.setUP( iBurgundy, iUP_Happiness, 1 )
 		gc.setUP( iBurgundy, iUP_PerCityCommerce, 200)
@@ -575,6 +581,10 @@ class RFCEBalance:
 		gc.setUP( iBulgaria, iUP_NoResistance, 0 )
 
 		gc.setUP( iCordoba, iUP_PromotionI, xml.iPromotionMedic1 )
+		gc.setUP( iCordoba, iUP_HealthFood, 1 )
+
+		gc.setUP( iMorocco, iUP_DesertBonus, 1 * 1000 + 10 + 1 )
+		gc.setUP( iMorocco, iUP_OasisBonus, 1 * 1000 + 100 + 1 )
 
 		gc.setUP( iSpain, iUP_Inquisition, 1 )
 		gc.setUP( iSpain, iUP_PerCityCommerce, 2 )
@@ -585,7 +595,7 @@ class RFCEBalance:
 		gc.setUP( iVenecia, iUP_EnableCivic, xml.iCivicMerchantRepublic )
 		#gc.setUP( iVenecia, iUP_ForeignSea, 1 )
 
-		gc.setUP( iKiev, iUP_CityTileYield, 100000 * 2 )
+		gc.setUP( iKiev, iUP_CityTileYield, 100 * 2 )
 
 		gc.setUP( iHungary, iUP_Happiness, 1 )
 		gc.setUP( iHungary, iUP_CulturalTolerance, 0 )
@@ -601,9 +611,9 @@ class RFCEBalance:
 		gc.setSupportModifiersHu(iMoscow, 10, 100, 25, 12, 100 )
 		gc.setUP( iMoscow, iUP_EndlessLand, 50 )
 
-		gc.setUP( iGenoa, iUP_Mercenaries, 1 ) # this actually has no effect, it is implemented in Mercenaries entirelly
+		gc.setUP( iGenoa, iUP_Mercenaries, 1 ) # this actually has no effect, it is implemented in Mercenaries.py entirely
 
-		gc.setUP( iEngland, iUP_ImprovementBonus, xml.iImprovementWorkshop * 1000000 + 100 + 1 )
+		gc.setUP( iEngland, iUP_ImprovementBonus, 1 * 100000 + xml.iImprovementWorkshop * 1000 + 10 + 1 )
 
 		# Speedup East/West India Trading Companies
 		gc.setUP( iPortugal, iUP_Discovery, (xml.iNumNotColonies-2) * 1000000 + (xml.iNumTotalColonies-1) * 1000 + 40 );
@@ -633,7 +643,7 @@ class RFCEBalance:
 		#gc.setUP( iScotland, iUP_Defiance, 1 )
 
 		gc.setUP( iDutch, iUP_TradeRoutes, 2 )
-		gc.setUP( iDutch, iUP_Pious, 2 ) # 3Miro: "hidden" buff to the Dutch FP, otherwise they have too little piety (not enouth cities)
+		gc.setUP( iDutch, iUP_Pious, 2 ) # 3Miro: "hidden" buff to the Dutch FP, otherwise they have too little piety (not enough cities)
 		gc.setUP( iDutch, iUP_Discovery, (xml.iNumNotColonies-2) * 1000000 + (xml.iNumTotalColonies-1) * 1000 + 30 );
 
 		gc.setUP( iPope, iUP_Emperor, 1 )
