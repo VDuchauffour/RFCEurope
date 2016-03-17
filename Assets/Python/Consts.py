@@ -1236,64 +1236,46 @@ tLateLeaders = (		#The switch is triggered after a few years (starting date, per
 )
 
 
-# 3Miro: UP begins here
-#iUP_Culture = 0
-#iUP_Emperor = 1
-#iUP_Stability = 2
-#iUP_Faith = 3
-#iUP_Khan = 4
-#iUP_Medicine = 5
-#iUP_Inquisition = 6
-#iUP_Sea = 7
-#iUP_Trade = 8
-#iUP_Growth = 9
-#iUP_Tolerance = 10
-#iUP_Industry = 11
-#iUP_GoldenLiberty = 12
-#iUP_EndlessLand = 13
-#iUP_Mercenaries = 14
-#iUP_Workshops = 15
-#iUP_Alliances = 17
-#iUP_Conscription = 18
-#iUP_Formation = 19
-#iUP_Commerce = 20
-# Alliances and Endless land could be fixed in diplo relations and maintenance
+# Absinthe: UP initialization
 
-
-iUP_Happiness = 0			# happiness bonus
-iUP_PerCityCommerce = 1		# bonus of commerce per city
-iUP_CityTileYield = 2		# bonus on yield on the city tile
-iUP_ReligiousTolerance = 3	# no instability from foreign religion
-iUP_CulturalTolerance = 4	# no unhappiness from foreign culture
-iUP_CommercePercent = 5		# global bonus to specific type of commerce
-iUP_UnitProduction = 6		# after specific tech, faster unit production
-iUP_EnableCivic = 7			# always enable some civics (also use the WB)
-iUP_TradeRoutes = 8			# add some trade routes (sync with GlobalDefines.xml for max trade routes)
-iUP_ImprovementBonus = 9	# change the yield of a specific improvement
-iUP_PromotionI = 10			# give a promotion to all units for which it is valid
-iUP_PromotionII = 11		# give a promotion to all units regardless if it is valid
-iUP_CanEnterTerrain = 12	# all unit can enter some terrain type
-iUP_NoResistance = 13		# no resistance from conquering cities
-iUP_Conscription = 14		# can draft from cities with foreign culture
-iUP_Inquisition = 15		# no instability from religious prosecution
-iUP_Emperor = 16			# no civil war and no secession in the core (Python only)
-iUP_Faith = 17				# state religion spreads to newly acquired cities (found/trade/conquest) with a temple (Python only)
-iUP_Mercenaries = 18		# halves the cost of mercenaries (Python only - Mercenaries)
-iUP_LandStability = 19		# no penalty from owning unstable land (Python only)
-iUP_Discovery = 20			# lower cost of a block of projects
-iUP_EndlessLand = 21		# lower civic cost associated with cities
-iUP_ForeignSea = 22			# allows the ships to enter foreign sea territory (Dutch UP from RFC)
-iUP_Pious = 23				# increase the gain (and loss) of Faith Points
-iUP_PaganCulture = 24		# give bonus to culture if no state religion is present
-iUP_PaganHappy = 25			# give bonus to happiness if no state religion is present
-iUP_StabilityConquestBoost = 26		# if stability is < 0, then get +1 stability on Conquest
-iUP_StabilitySettler = 27			# don't lose stability from founding cities in Outer and None Provinces
-iUP_StabilityPlaceholder1 = 28		# does nothing
-iUP_StabilityPlaceholder2 = 29		# does nothing
-iUP_Janissary = 30					# free units for foreign religions (Python only)
-#iUP_NoAnarchyInstability = 31		# no anarchy instability on civic or religion change
-#iUP_ProvinceCommerce = 32			# extra commerce in capital for each controlled province
-#iUP_Defiance = 33					# extra units in all cities when a city is lost
+iUP_Happiness = 0					# happiness bonus
+iUP_PerCityCommerce = 1				# bonus of commerce per city
+iUP_CityTileYield = 2				# bonus on yield on the city tile
+iUP_ReligiousTolerance = 3			# no instability from foreign religion
+iUP_CulturalTolerance = 4			# no unhappiness from foreign culture
+iUP_CommercePercent = 5				# global bonus to specific type of commerce
+iUP_UnitProduction = 6				# after specific tech, faster unit production
+iUP_EnableCivic = 7					# always enable some civics (also use the WB)
+iUP_TradeRoutes = 8					# add some trade routes (sync with GlobalDefines.xml for max trade routes)
+iUP_ImprovementBonus = 9			# change the yield of a specific improvement
+iUP_PromotionI = 10					# give a promotion to all units for which it is valid
+iUP_PromotionII = 11				# give a promotion to all units regardless if it is valid
+iUP_CanEnterTerrain = 12			# all unit can enter some terrain type
+iUP_NoResistance = 13				# no resistance from conquering cities
+iUP_Conscription = 14				# can draft from cities with foreign culture
+iUP_Inquisition = 15				# no instability from religious prosecution
+iUP_Emperor = 16					# no civil war and no secession in the core (Python only)
+iUP_Faith = 17						# state religion spreads to newly acquired cities (found/trade/conquest) with a temple (Python only)
+iUP_Mercenaries = 18				# halves the cost of mercenaries (Python only - Mercenaries)
+iUP_LandStability = 19				# no penalty from owning unstable land (Python only)
+iUP_Discovery = 20					# lower cost of a block of projects
+iUP_EndlessLand = 21				# lower civic cost associated with cities
+iUP_ForeignSea = 22					# allows the ships to enter foreign sea territory (currently unused)
+iUP_Pious = 23						# increase the gain (and loss) of Faith Points
+iUP_PaganCulture = 24				# give bonus to culture if no state religion is present
+iUP_PaganHappy = 25					# give bonus to happiness if no state religion is present
+iUP_HealthFood = 26					# positive health contributes to city growth
+iUP_DesertBonus = 27				# add bonus to one or more types of yield for all desert tiles
+iUP_OasisBonus = 28					# add bonus to one or more types of yield for oasis features
+iUP_StabilityConquestBoost = 29		# if stability is < 0, then get +1 stability on Conquest
+iUP_StabilitySettler = 30			# don't lose stability from founding cities in Outer and None Provinces
+iUP_StabilityPlaceholder1 = 31		# does nothing
+iUP_StabilityPlaceholder2 = 32		# does nothing
+iUP_Janissary = 33					# free units for foreign religions (Python only)
+# The following are python-only (ATM), not added to the .dll at all
+#iUP_NoAnarchyInstability = 34		# no anarchy instability on civic or religion change
+#iUP_ProvinceCommerce = 35			# extra commerce in capital for each controlled province
+#iUP_Defiance = 36					# extra units in all cities when a city is lost
 
 
 iFP_Stability = 0		# stability bonus

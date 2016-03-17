@@ -7524,12 +7524,7 @@ bool CvPlayer::canDoCivics(CivicTypes eCivic) const
 			return true;
 		}
 	}
-	//Rhye - start UP
-	// 3Miro: UP in part here
-	//if (getID() == EGYPT)
-	//	if ((eCivic == 1) || (eCivic == 11))
-	//		return true;
-	//Rhye - end UP
+
 	// 3MiroUP: Trade
 	/*if ( UniquePowers[getID()][UP_TRADE] == 1 ){
 		if ( (eCivic == 4) || (eCivic == 19) ) return true;

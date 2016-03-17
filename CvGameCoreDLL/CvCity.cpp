@@ -5785,19 +5785,9 @@ int CvCity::calculateColonyMaintenanceTimes100() const
 		return 0;
 	}
 
-	//Rhye - start switch
 	// 3Miro: Some nations have no colony maintanence
 	if ( isIndep( getOwnerINLINE() ) )
 		return 0;
-	/*switch (getOwnerINLINE())
-	{
-		case INDEPENDENT:
-		case INDEPENDENT2:
-		//case NATIVE:
-		//case CELTIA: //late start too, as Byzantium stands in the junction point of 3 continents
-			return 0;
-	}*/
-	//Rhye - end
 
 	int iNumCitiesPercent = 100;
 
@@ -7365,6 +7355,43 @@ void CvCity::setOccupationTimer(int iNewValue)
 {
 	bool bOldOccupation;
 
+	// Absinthe: revolt changes: already gets reduced values compared to population (based on culture percent for example), but some further decrease for RFCE:
+	// so it results in 1 turn of revolt with iNewValue of 1-2, 2 turns with 3-4, 3 turns with 5-6, 4 turns with 7-8, 5 turns with 9+
+	// this more or less corresponds to: 1 turn with 1-2 population, 2 turns with 3-5 population, 3 turns with 6-9 population, 4 turns with 10-14 population, 5 turns with 15+ population
+	if (iNewValue > 8)
+	{
+		iNewValue = 5;
+	}
+	else
+	{
+		if (iNewValue > 6)
+		{
+			iNewValue = 4;
+		}
+		else
+		{
+			if (iNewValue > 4)
+			{
+				iNewValue = 3;
+			}
+			else
+			{
+				if (iNewValue > 2)
+				{
+					iNewValue = 2;
+				}
+				else
+				{
+					if (iNewValue > 0)
+					{
+						iNewValue = 1;
+					}
+				}
+			}
+		}
+	}
+	// Absinthe: end
+
 	if (getOccupationTimer() != iNewValue)
 	{
 		bOldOccupation = isOccupation();
@@ -7936,7 +7963,19 @@ int CvCity::getBaseYieldRateModifier(YieldTypes eIndex, int iExtra) const
 
 int CvCity::getYieldRate(YieldTypes eIndex) const
 {
-	return ((getBaseYieldRate(eIndex) * getBaseYieldRateModifier(eIndex)) / 100);
+	int iYieldRateTimes100 = getBaseYieldRate(eIndex) * getBaseYieldRateModifier(eIndex);
+
+	// Absinthe: Cordoba: UP_HEALTH_FOOD: positive health contributes to city growth
+	int iUPHF = UniquePowers[getOwnerINLINE() * UP_TOTAL_NUM + UP_HEALTH_FOOD];
+	if (iUPHF == 1 && eIndex == YIELD_FOOD && !isFoodProduction())
+	{
+		if (iYieldRateTimes100 - foodConsumption() * 100 >= 0 && goodHealth() - badHealth() > 0)
+		{
+			iYieldRateTimes100 += 100 * (goodHealth() - badHealth());
+		}
+	}
+
+	return (iYieldRateTimes100 / 100);
 }
 
 
