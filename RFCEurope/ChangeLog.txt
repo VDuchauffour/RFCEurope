@@ -19,7 +19,7 @@ Changes for RFCE 1.4:
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for RFCE 1.3:
-(to-be-released: 2016.03.18.)
+(released: 2016.03.18.)
 
 	Civilization changes:
 		- Norse civ had been split into Denmark and Norway
@@ -355,10 +355,10 @@ Changes for RFCE 1.3:
 		- New barb-only units: Seljuk Swordsman, Seljuk Heavy Footman, Seljuk Crossbowman, Seljuk Guisarme (all for the Seljuks in Anatolia, surprisingly)
 		- New merc-only units: South Slav Vlastela (Serbia, Banat, Slavonia, Bosnia, Dalmatia), Lombard Heavy Footman (Lombardy, Liguria, Tuscany, Verona)
 		- New merc-only units: Bohemian War Wagon (Bohemia, Moravia), Mamluk Heavy Cavalry (Egypt), Crimean Tatar Rider (Crimea)
-		- Updated Dutch, Swedish and Kievan Dawn of Man text
+		- Updated Dutch, Swedish and Kievan Dawn of Man texts
 		- New DoM text for Scotland, Aragon, Morocco inspired by gilgames' suggestions
-		- Minor DoM updates for Byzantium, France, Arabia, Cordoba, Burgundy, Germany - by DC123456789
-		- Minor DoM updates for Hungary, Bulgaria, Genoa, England - by DC123456789
+		- Minor DoM updates for the Ottomans, Byzantium, France, Arabia, Cordoba, Burgundy, Germany - by DC123456789
+		- Minor DoM updates for Hungary, Bulgaria, Genoa, England, Portugal, Lithuania, Austria - by DC123456789
 		- Switched to CE instead of AD for non-christian civs
 		- Limited Monarchy = Constitutional Monarchy, Free Religion = Religious Tolerance
 		- Bigger city attack penalty for most mounted units: -25% for most light cavalry, -20% for most heavy cavalry, -10% for most unique and special mounted units

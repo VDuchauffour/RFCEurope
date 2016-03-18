@@ -870,7 +870,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ03</Tag>
-		<English>Colony of Greece</English>
+		<English>Venetokratia</English>
 		<French>Colony of Greece</French>
 		<German>Colony of Greece</German>
 		<Italian>Colony of Greece</Italian>
@@ -942,7 +942,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ11</Tag>
-		<English>Duchy of Greece</English>
+		<English>Frankokratia</English>
 		<French>Duché de Gr&#232;ce</French>
 		<German>Herzogtum Griechenland</German>
 		<Italian>Ducato di Grecia</Italian>
@@ -2594,7 +2594,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_HUN14</Tag>
-		<English>Norse Hungary</English>
+		<English>Jarldom of Hungary</English>
 		<French>Hongrie Nordique</French>
 		<German>Nordisch-Ungarn</German>
 		<Italian>Ungheria Vichinga</Italian>
