@@ -110,7 +110,7 @@
 	</TEXT>
 	<TEXT> <!-- Novgorod -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_8</Tag>
-		<English>It is the year %s1_year. You, %s3_leader, have been invited by the %s2_civ people to rule over them. Novgorod the Great has the potential to grow into a fabulously wealthy city, the envy of both West and East. But can you hold the fledgling principality together when both West and East come for you?</English>
+		<English>It is the year 864 AD. You, Rurik, have been invited by the warring local tribes to reestablish order; to rule over them. Novgorod the Great has the potential to grow into a fabulously wealthy city, the envy of both West and East.[NEWLINE]But can you hold the fledgling principality together when both West and East come for you?</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -119,7 +119,7 @@
 	</TEXT>
 	<TEXT> <!-- Norway -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_9</Tag>
-		<English>It is the year %s1_year. The various petty kingdoms of Norway have been united by Harald Fairhair, who once vowed not to cut his hair until he was king of all of Norway. Norway is, given its location, a surprisingly wealthy land with a large population of skilled seafarers. Skills you will have to utilize in order to keep ahead of your neighbors!</English>
+		<English>It is the year 872 AD. The various petty kingdoms of Norway have been united by Harald Fairhair, who once vowed not to cut his hair until he was king of all of Norway.[NEWLINE][NEWLINE]Norway is, given its location, a surprisingly wealthy land with a large population of skilled seafarers. Skills you will have to utilize in order to keep ahead of your neighbors!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -155,7 +155,7 @@
 	</TEXT>
 	<TEXT> <!-- Denmark -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_13</Tag>
-		<English>It is the year %s1_year. Denmark, once a collection of petty kingdoms, has been united under Gorm the Old, and forged into a centralized state. Denmark now stands at a crossroads of sorts, with Viking influences and craftmanship from the North and Christian influences and statesmanship from the South. Take advantage of both for as long as you can, but eventually you will have to choose!</English>
+		<English>It is the year 936 AD. Denmark, once a collection of petty kingdoms, has been united under Gorm the Old, and forged into a centralized state.[NEWLINE][NEWLINE]Your country now stands at a crossroads of sorts, with Viking influences and craftmanship from the North and Christian influences and statesmanship from the South. Take advantage of both for as long as you can, but eventually you will have to choose!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -209,7 +209,7 @@
 	</TEXT>
 	<TEXT> <!-- Portugal -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_19</Tag>
-		<English>Your small county of Portugal just decided to break the family ties with Leon and declared it's independence, creating the Kingdom of Portugal. It's 1139 AD, and you, Afonso Henriques, are the king of the newly formed country.[NEWLINE][NEWLINE]It is time to strengthen your position by proceeding with the reconquista to the south, but you should also prepare for your ultimate goal: to expand beyond the Iberian Peninsula. Your position makes it ideal to claim the riches of North Africa and the Atlantic islands - and who knows, maybe even much further lands than those.</English>
+		<English>Your small county of Portugal has just decided to break its familial ties with the Kingdom of León and declare its independence, creating the Kingdom of Portugal. It is 1139 AD, and you, Afonso Henriques, are the king of this newly formed kingdom.[NEWLINE][NEWLINE]It is time to strengthen your position by advancing to the south and continuing the Reconquista, but you should also prepare for your ultimate goal: to expand beyond the Iberian Peninsula. Your position makes it ideal to claim the riches of North Africa and the Atlantic islands - and who knows, maybe even much further lands than those.</English>
 		<French>.</French>
 		<German>Eure kleine Grafschaft Portugal hat gerade beschlossen die Familienbande mit Leon zu brechen, seine Unabhängigkeit zu erklären und das Königreich Portugal zu erschaffen. Es ist 1139 n.Chr., und ihr, Alfons I, seid der König dieses neu gebildeten Landes.[NEWLINE][NEWLINE]Es ist an der Zeit eure Lage durch die Reconquista im Süden zu stärken. Aber ihr solltet euch außerdem auf euer endgültiges Ziel vorbereiten: Expansion über die iberische Halbinsel hinaus. Eure Lage ist ideal um die Reichtümer Nordafrikas und der Atlantikinseln zu beanspruchen - und wer weiß, vielleicht auch noch weit entfernterer Länder.</German>
 		<Italian>.</Italian>
@@ -237,7 +237,7 @@
 	</TEXT>-->
 	<TEXT> <!-- Sweden -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_21</Tag>
-		<English>For the last few hundred years, Sweden has in some ways been the least developed of the Scandinavian nations. Though several rulers at Uppsala have claimed kingship over Sweden, few have had any power outside Uppland. Christianisation has been slow as well, pagan beliefs are still important in much of the country and southern Sweden was the target of a crusade less than a hundred years ago.[NEWLINE][NEWLINE]This year things are to change. Eric the Survivor has managed to destroy his rivals in a bloody civil war and become the first ever Swedish King to be crowned by the Church. The separatists are rapidly losing power and the people of Uppland are about to lose their ancient privileges. The stage is set for the consolidation of Sweden.</English>
+		<English>For the last few hundred years, Sweden has in some ways been the least developed of the Scandinavian nations. Though several rulers at Uppsala have claimed kingship over Sweden, few have had any power outside Uppland. Christianisation has been slow as well. Southern Sweden was even the target of a crusade less than a century ago, yet pagan beliefs are still important in much of the country.[NEWLINE][NEWLINE]It is now the year 1210 AD, and this year things are to change. Eric the Survivor has managed to destroy his rivals in a bloody civil war and become the first ever Swedish King to be crowned by the Church. The separatists are rapidly losing power and the people of Uppland are about to lose their ancient privileges. The stage is set for the consolidation of Sweden.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -246,7 +246,7 @@
 	</TEXT>
 	<TEXT> <!-- Prussia -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_22</Tag>
-		<English>It is the year %s1_year. The Northern Crusades have been raging since 1193 and the Sword Brethren are making slow progress in Livonia. Konrad I of Masovia, a Polish Duke, has now invited the Teutonic Order to conquer and christianise the pagan Prussian tribe. The Teutonic Order has experience from defending both the Holy Land and the borderlands of Hungary, and is able to call on the finest knights of Europe. A speedy subjugation of Prussia might not only decide the war in the Crusader's favor, but provide the foundations of an empire.</English>
+		<English>It is the year 1224 AD. The Northern Crusades have been raging since 1193 and the Livonian Brothers of the Sword - the Sword Brethren - are making slow progress in Livonia. Konrad I of Masovia, a Polish Duke, has now invited the Teutonic Order to conquer and Christianise the pagan Prussian tribes.[NEWLINE][NEWLINE]The Teutonic Order has experience from defending both the Holy Land and the borderlands of Hungary, and is able to call on the finest knights of Europe. A speedy subjugation of Prussia might not only decide the war in the Crusaders' favor, but provide the foundations of an empire.</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -255,7 +255,7 @@
 	</TEXT>
 	<TEXT> <!-- Lithuania -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_23</Tag>
-		<English>It is the year 1236 AD. Strange invaders - calling themselves Teutonic Knights and worshipping a man on a cross - have disturbed the tranquility of the land. However, they are not invincible. You, Mindaugas, showed that they bleed and die, just like other men.[NEWLINE]It is high time to drive them out, as the religion of your ancestors is surely also the best for you. Make them proud!</English>
+		<English>It is the year 1236 AD. Strange invaders - calling themselves Teutonic Knights and worshiping a man on a cross - have disturbed the tranquility of the land. However, they are not invincible. You, Mindaugas, have shown that they bleed and die, just like other men.[NEWLINE]It is high time to drive them out, as the ancient religion of your ancestors is surely also the best for you. Make them proud!</English>
 		<French>.</French>
 		<German>Es ist das Jahr 1236 n.Chr., seltsame Eindringlinge - nennen sich selbst Deutscher Orden und beten einen Mann an einem Kreuz an - haben den Seelenfrieden des Landes gestört. Wie auch immer, sie sind nicht unbesiegbar. Ihr, Mindaugas, habt gezeigt, dass sie bluten und sterben, so wie andere Menschen auch.[NEWLINE]Es ist an der Zeit sie hinauszujagen, da die Religion unserer Vorfahren auch für euch das Beste ist. Macht sie stolz!</German>
 		<Italian>.</Italian>
@@ -264,7 +264,7 @@
 	</TEXT>
 	<TEXT> <!-- Austria -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_24</Tag>
-		<English>It is the year 1282 AD. In the last few decades your Habsburg dynasty was quickly gaining strength through the estates of the Holy Roman Empire. With recently acquiring the rich lands of Austria, you are much more powerful than you ever dreamt of. Still, your ambitions are forcing you to climb much higher, and who knows where will be the end?[NEWLINE][NEWLINE]Navigate carefully through the intricate diplomacy of central Europe, and your dynasty will still stand proudly many hundreds of years from now!</English>
+		<English>It is the year 1282 AD. In the last few decades your dynasty, the Habsburgs, have been quickly gaining strength in the Holy Roman Empire through your ever-growing estates.[NEWLINE]Now King of the Romans and having just acquired the rich Duchy of Austria, you are much more powerful than you had ever dreamt of. Still, your ambitions are forcing you to climb much higher, and who knows where will be the end?[NEWLINE][NEWLINE]Leave the waging of wars to others! You, happy Austria, marry; for the realms which Mars awards to others, Venus transfers to you. Navigate carefully through the intricate diplomacy of central Europe, and your dynasty will still stand proudly many hundreds of years from now!</English>
 		<French>.</French>
 		<German>Es ist das Jahr 1282 n.Chr., in den letzten Jahrzehnten gewann eure Habsburger Dynastie durch die Besitztümer des Heiligen Römischen Reiches schnell an Stärke. Durch die kürzlich erworbenen reichen Ländereien in Österreich seid ihr mächtiger als ihr euch jemals erträumt habt. Euer Ehrgeiz treibt euch dazu nach noch Höherem zu streben, und wer weiß wo das Ende ist?[NEWLINE][NEWLINE]Navigiert vorsichtig durch die verzwickte Diplomatie Zentraleuropas und eure Dynastie wird auch in vielen hundert Jahren noch stolz da stehen.</German>
 		<Italian>E' il 1282AD. Il Sacro Romano Impero ne ha avuto abbastanza degli eccessi degli Hohenstaufen. Federico II, detto Stupor Mundi, ha fatto venire molta voglia di stabilità e moderazione al popolo. La tua dinastia Asburgica gliele può dare. Naviga con attenzione attraverso l'intricata diplomazia dell'Europa Centrale, e la tua dinastia resisterà con orgoglio per centinaia di anni!</Italian>
@@ -273,7 +273,7 @@
 	</TEXT>
 	<TEXT> <!-- Ottomans -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_25</Tag>
-		<English>It is the year 1356 CE. Allah has truly shown his favour towards you. Firstly, the Black Death affected the Byzantines in the cities, but largely spared the countryside of the Turks. Secondly, the earthquake in 1354 levelled all the walls of Gallipoli. The way to Europe is open, you only need to reach out and grasp it![NEWLINE]If you play your cards right, your Ottoman Empire will surely be unstoppable!</English>
+		<English>It is the year 1356 CE. Allah has truly shown his favour towards you. Firstly, the Black Death decimated the Byzantines in the cities, but largely spared the countryside of the Turks. Secondly, the earthquake in 1354 leveled all the walls of Gallipoli, leaving the strategic fortress ripe for conquest. The way to Europe is open, and you only need to reach out and grasp it![NEWLINE]If you play your cards right, your Ottoman Empire will surely be unstoppable!</English>
 		<French>.</French>
 		<German>Es ist das Jahr 1356 n.Chr., Allah hat euch wahrlich seine Gunst geschenkt. Zuerst überkam der Schwarze Tod die städtischen Byzantiner, verschonte aber die Landbevölkerung der Türken. Dann schliff ein Erdbeben in Gallipoli 1354 alle Mauern. Der Weg nach Europa ist offen, ihr müsst nur danach greifen und zupacken![NEWLINE]Wenn ihr eure Karten richtig ausspielt wird euer Osmanisches Reich ganz bestimmt unaufhaltsam sein!</German>
 		<Italian>.</Italian>
@@ -282,7 +282,7 @@
 	</TEXT>
 	<TEXT> <!-- Moscow -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_26</Tag>
-		<English>It is the year 1380 AD. The shadow of the Mongol Golden Horde has loomed over the land for more than a hundred years. With the people chafing under their oppression, fear has prevented effective resistance. All has changed now on the fields of Kulikovo, where you led your coalition to victory. The road ahead is long and arduous, but in the end, Mother Russia will prevail!</English>
+		<English>It is the year 1380 AD. The shadow of the Mongol Golden Horde has loomed over the land for more than a hundred years. With the people chafing under their oppression, fear has prevented effective resistance.[NEWLINE]All has changed now on the fields of Kulikovo, where you led your coalition to victory. The road ahead is long and arduous, but in the end, Mother Russia will prevail!</English>
 		<French>.</French>
 		<German>Es ist das Jahr 1380 n.Chr., der Schatten der mongolischen Goldenen Horde zeichnete sich mehr als ein Jahrhundert auf dem Land ab. Im durch Unterdrückung wundgescheuerten Volk verhinderte Furcht wirkungsvollen Widerstand. All das veränderte sich auf den Feldern Kulikowo Pole, wo ihr eure Koalition zum Sieg führtet. Der Weg vor euch ist lang und mühselig, doch am Ende wird Mutter Russland erfolgreich sein.</German>
 		<Italian>.</Italian>
@@ -291,7 +291,7 @@
 	</TEXT>
 	<TEXT> <!-- Dutch -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_27</Tag>
-		<English>It is the year 1581 AD. The Low Countries have been under control by the Spanish Empire for a long time. This is your chance though! The Plakkaat van Verlatinghe (Act of Abjuration) was signed on July 22th this year, absolving the oath of allegiance to Philip II of Spain, thus making your beloved Dutch nation officially independent. This could be the start of an empire that will become one of the wealthiest civilizations in the world!</English>
+		<English>It is the year 1581 AD. The Low Countries have been under foreign rule - German, Burgundian, Austrian, and now Spanish - for a long time.[NEWLINE]This is your chance, though! The Act of Abjuration was signed on July 22nd of this year, absolving the provinces of the Union of Utrecht of their oath of allegiance to Philip II of Spain and finally declaring the independence of your beloved Dutch nation.[NEWLINE][NEWLINE]While it will be many years before our independence is finally accepted, this will be the start of an empire that will become one of the wealthiest civilizations in the world!</English>
 		<French>.</French>
 		<German>Es ist das Jahr 1581 n.Chr., die Niederlande waren lange Zeit unter der Kontrolle des Spanischen Reiches. Am 26. Juli dieses Jahres wurde das Plakaat van Verlatinghe (Unabhängigkeitserklärung) von Philip II unterzeichnet, wodurch Holland offiziell unabhängig wurde. Dies könnte die Geburt eines Reiches sein, das einmal eines der reichsten Zivilisationen der Welt wird!</German>
 		<Italian>.</Italian>
