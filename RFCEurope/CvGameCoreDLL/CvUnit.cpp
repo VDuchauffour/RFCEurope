@@ -2455,29 +2455,31 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bo
 	bool bCanEnterArea = canEnterArea(ePlotTeam, pPlotArea);
 	if (bCanEnterArea)
 	{
-		// 3MiroUP: Sea
-		//if ( !( (UniquePowers[getOwnerINLINE()][UP_SEA]==1) && (pPlot->getTerrainType() == 6) ) ){
+		// Absinthe: Norway: UP_CAN_ENTER_TERRAIN
 		int iUPS = UniquePowers[getOwnerINLINE() * UP_TOTAL_NUM + UP_CAN_ENTER_TERRAIN];
-		if ( !((iUPS > -1) && (pPlot->getTerrainType() == iUPS)) ){
-		if (pPlot->getFeatureType() != NO_FEATURE)
+		if ( !((iUPS > -1) && (pPlot->getTerrainType() == iUPS)) )
 		{
-
-			if (m_pUnitInfo->getFeatureImpassable(pPlot->getFeatureType()))
+			if (pPlot->getFeatureType() != NO_FEATURE)
 			{
-				TechTypes eTech = (TechTypes)m_pUnitInfo->getFeaturePassableTech(pPlot->getFeatureType());
-				if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
+				if (m_pUnitInfo->getFeatureImpassable(pPlot->getFeatureType()))
 				{
-					if (DOMAIN_SEA != getDomainType() || pPlot->getTeam() != getTeam())  // sea units can enter impassable in own cultural borders
+					TechTypes eTech = (TechTypes)m_pUnitInfo->getFeaturePassableTech(pPlot->getFeatureType());
+					if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
 					{
-						if ( (StrategicTileX[getOwnerINLINE()] == pPlot ->getX()) && (StrategicTileY[getOwnerINLINE()] == pPlot ->getY()) ){
-							return true;
-						}else{
-							return false;
-						};
+						if (DOMAIN_SEA != getDomainType() || pPlot->getTeam() != getTeam())  // sea units can always enter impassable in own cultural borders
+						{
+							if ( (StrategicTileX[getOwnerINLINE()] == pPlot ->getX()) && (StrategicTileY[getOwnerINLINE()] == pPlot ->getY()) )
+							{
+								return true;
+							}
+							else
+							{
+								return false;
+							}
+						}
 					}
 				}
 			}
-		}
 /************************************************************************************************/
 /* UNOFFICIAL_PATCH                       09/17/09                         TC01 & jdog5000      */
 /*                                                                                              */
@@ -2490,13 +2492,12 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bo
 /************************************************************************************************/
 /* UNOFFICIAL_PATCH                        END                                                  */
 /************************************************************************************************/
-		{
 			if (m_pUnitInfo->getTerrainImpassable(pPlot->getTerrainType()))
 			{
 				TechTypes eTech = (TechTypes)m_pUnitInfo->getTerrainPassableTech(pPlot->getTerrainType());
 				if (NO_TECH == eTech || !GET_TEAM(getTeam()).isHasTech(eTech))
 				{
-					if (DOMAIN_SEA != getDomainType() || pPlot->getTeam() != getTeam())  // sea units can enter impassable in own cultural borders
+					if (DOMAIN_SEA != getDomainType() || pPlot->getTeam() != getTeam())  // sea units can always enter impassable in own cultural borders
 					{
 						if (bIgnoreLoad || !canLoad(pPlot))
 						{
@@ -2505,7 +2506,6 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bo
 					}
 				}
 			}
-		}
 		}
 	}
 

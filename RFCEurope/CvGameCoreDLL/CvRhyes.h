@@ -77,8 +77,8 @@
 #define UP_PAGAN_CULTURE		(24)
 #define UP_PAGAN_HAPPY			(25)
 #define UP_HEALTH_FOOD			(26)
-#define UP_DESERT_BONUS			(27)
-#define UP_OASIS_BONUS			(28)
+#define UP_TERRAIN_BONUS		(27)
+#define UP_FEATURE_BONUS		(28)
 #define UP_STABILITY_1			(29) // stability is handled in Python so make those generic
 #define UP_STABILITY_2			(30)
 #define UP_STABILITY_3			(31)
