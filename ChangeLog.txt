@@ -19,7 +19,7 @@ Changes for RFCE 1.4:
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for RFCE 1.3:
-(to-be-released: 2016.03.19.)
+(to-be-released: 2016.03.18.)
 
 	Civilization changes:
 		- Norse civ had been split into Denmark and Norway
@@ -182,6 +182,7 @@ Changes for RFCE 1.3:
 		- English AI gets some defenders and defensive buildings in Normandy a couple turns after their spawn
 		- 1 extra Settler and 1 Crossbowman for AI England
 		- Lowered almost all leaders' willingness to vassalize voluntarily
+		- Venetian AI's favourite civic is Trade Economy (they start in Merchant Republic anyway)
 		- Increased Cordoban leaders' religion flavor, they will spread out Islam better in their cities
 		- Lowered Orthodoxy spread values for Scandinavian civs, increased them in the eastern regions (Bulgaria, Novgorod, Kiev)
 		- Muscovy spawn zone reduced in the north, so Novgorod gets a chance to be an early rival for Muscovy
@@ -295,7 +296,8 @@ Changes for RFCE 1.3:
 		- Tuned down unintentionally harsh stability penalties connected to war weariness (4-7 stab difference for medium sized-empires, also it appears later in the war)
 		- Increased culture instability in newly conquered cities (less than 20% own culture)
 		- Small stability boost on completed UHVs (currently +3/UHV)
-		- Improved code for civic stability calculations
+		- Vassalage is stable with Feudal Law, Common Law is unstable with Serfdom, Imperialism is unstable with Merchant Republic
+		- Increased stability bonus for "good" civic combinations, also decreased a couple penalties for using "wrong" combinations
 
 	Persecution updates:
 		- Loot is significantly increased when you successfully purge a religion
@@ -358,6 +360,7 @@ Changes for RFCE 1.3:
 		- Minor DoM updates for Byzantium, France, Arabia, Cordoba, Burgundy, Germany - by DC123456789
 		- Minor DoM updates for Hungary, Bulgaria, Genoa, England - by DC123456789
 		- Switched to CE instead of AD for non-christian civs
+		- Limited Monarchy = Constitutional Monarchy, Free Religion = Religious Tolerance
 		- Bigger city attack penalty for most mounted units: -25% for most light cavalry, -20% for most heavy cavalry, -10% for most unique and special mounted units
 		- Slightly tuned down Hungarian and Venetian tech progress (both player and AI)
 		- Increased various maintenance modifiers for Byzantium (especially for the AI), decreased for Burgundy (was still set to the 500AD start)
@@ -419,7 +422,7 @@ Changes for RFCE 1.3:
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for RFCE 1.2:
-(SVN release only)
+(no release, SVN only)
 
 	Stability improvements:
 		- Province stability levels:
@@ -428,7 +431,7 @@ Changes for RFCE 1.2:
 			- Potential: Your potentially stable area; becomes a Natural province when you settle or conquer a city there, but no penalties until this happens
 			- Border: Outer or contested area; small initial stability penalty for expanding there
 			- Foreign: Unstable area; large stability penalty and revolt risk for having cities there
-			- Removed Desired province type alltogether
+			- Removed Desired province type altogether
 		- Stability Overlay:
 			- Color code for the provinces: Cyan for Core, Green for Natural, Yellow for Potential, Orange for Border, Red for Foreign
 			- The overlay may be toggled with it's button above the minimap, or with the Ctrl+K key combination

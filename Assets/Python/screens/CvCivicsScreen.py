@@ -49,7 +49,7 @@ class CvCivicsScreen:
 		self.W_CIVIC_CATEGORY = ((self.W_SCREEN - self.X_CIVIC_CATEGORY) / self.nColumns) - self.MARGIN
 		self.H_CIVIC_CATEGORY = (self.nCategoryCivics * self.LINE) + self.MARGIN
 
-		self.W_CIVIC_TEXT = self.W_CIVIC_CATEGORY - 250
+		self.W_CIVIC_TEXT = self.W_CIVIC_CATEGORY - 260
 		self.H_CIVIC_TEXT = self.H_CIVIC_CATEGORY - (self.MARGIN * 2)
 
 		self.X_TURNS = 25

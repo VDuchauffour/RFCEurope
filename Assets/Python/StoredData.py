@@ -85,7 +85,7 @@ class StoredData:
 
 				# 3Miro: Mercs
 				'lMercGlobalPool': [],
-				'lMercsHiredBy': [-1]*400, # must be at least as long as lMercList (currently allow for 400)
+				'lMercsHiredBy': [-1]*500, # must be at least as long as lMercList (currently allow for 500)
 
 				# Absinthe: Persecution popup
 				'lPersecutionData': [-1, -1, -1],

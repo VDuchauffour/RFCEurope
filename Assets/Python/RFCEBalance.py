@@ -76,8 +76,8 @@ iUP_StabilityConquestBoost = con.iUP_StabilityConquestBoost
 iUP_StabilitySettler = con.iUP_StabilitySettler
 iUP_Janissary = con.iUP_Janissary
 iUP_HealthFood = con.iUP_HealthFood
-iUP_DesertBonus = con.iUP_DesertBonus
-iUP_OasisBonus = con.iUP_OasisBonus
+iUP_TerrainBonus = con.iUP_TerrainBonus
+iUP_FeatureBonus = con.iUP_FeatureBonus
 #iUP_NoAnarchyInstability = con.iUP_NoAnarchyInstability
 #iUP_ProvinceCommerce = con.iUP_ProvinceCommerce
 #iUP_Defiance = con.iUP_Defiance
@@ -564,9 +564,9 @@ class RFCEBalance:
 		# iUP_ForeignSea, use iParameter = 1
 		# iUP_Pious, whenever changeFaith( x ) is called, x is multiplied by iParameter
 		# iUP_HealthFood, use iParameter = 1 to activate
-		# iUP_DesertBonus, iParameter = iActivate * 1000 (1 to be active) + iFoodBonus * 100 + iProductionBonus * 10 + iCommerceBonus (bonuses are limited to 0-9)
-		# iUP_OasisBonus, iParameter = iActivate * 1000 (1 to be active) + iFoodBonus * 100 + iProductionBonus * 10 + iCommerceBonus, (bonuses are limited to 0-9)
-		# iUP_ImprovementBonus, iParameter = iActivate * 100000 (1 to be active) + iImprovement * 1000 + iFoodBonus * 100 + iProductionBonus * 10 + iCommerceBonus, bonuses are limited to (0-9)
+		# iUP_TerrainBonus, iParameter = iActivate * 100000 (1 to be active) + iTerrain * 1000 + iFoodBonus * 100 + iProductionBonus * 10 + iCommerceBonus (bonuses are limited to 0-9)
+		# iUP_FeatureBonus, iParameter = iActivate * 100000 (1 to be active) + iFeature * 1000 + iFoodBonus * 100 + iProductionBonus * 10 + iCommerceBonus (bonuses are limited to 0-9)
+		# iUP_ImprovementBonus, iParameter = iActivate * 100000 (1 to be active) + iImprovement * 1000 + iFoodBonus * 100 + iProductionBonus * 10 + iCommerceBonus (bonuses are limited to 0-9)
 		# iUP_CityTileYield, iParameter = iActivate * 1000 (1 to be active) + iFoodBonus * 100 + iProductionBonus * 10 + iCommerceBonus, (bonuses are limited to 0-9)
 
 		gc.setUP( iBurgundy, iUP_Happiness, 1 )
@@ -583,8 +583,8 @@ class RFCEBalance:
 		gc.setUP( iCordoba, iUP_PromotionI, xml.iPromotionMedic1 )
 		gc.setUP( iCordoba, iUP_HealthFood, 1 )
 
-		gc.setUP( iMorocco, iUP_DesertBonus, 1 * 1000 + 10 + 1 )
-		gc.setUP( iMorocco, iUP_OasisBonus, 1 * 1000 + 100 + 1 )
+		gc.setUP( iMorocco, iUP_TerrainBonus, 1 * 100000 + xml.iTerrainDesert * 1000 + 10 + 1 )
+		gc.setUP( iMorocco, iUP_FeatureBonus, 1 * 100000 + xml.iOasis * 1000 + 100 + 1 )
 
 		gc.setUP( iSpain, iUP_Inquisition, 1 )
 		gc.setUP( iSpain, iUP_PerCityCommerce, 2 )

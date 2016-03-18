@@ -6906,39 +6906,45 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 			}
 		}
 
-		// Absinthe: Morocco: UP_DESERT_BONUS
-		int iUPDB = UniquePowers[((int)ePlayer) * UP_TOTAL_NUM + UP_DESERT_BONUS];
-		if (iUPDB / 1000 == 1 && getTerrainType() == GC.getInfoTypeForString("TERRAIN_DESERT") && getPlotType() != PLOT_PEAK)
+		// Absinthe: Morocco: UP_TERRAIN_BONUS
+		int iUPTB = UniquePowers[((int)ePlayer) * UP_TOTAL_NUM + UP_TERRAIN_BONUS];
+		if (iUPTB / 100000 == 1)
 		{
-			if ( eYield == YIELD_COMMERCE )
+			if (getTerrainType() == (iUPTB / 1000) % 100 && getPlotType() != PLOT_PEAK)
 			{
-				iYield += iUPDB % 10;
-			}
-			else if ( eYield == YIELD_PRODUCTION )
-			{
-				iYield += (iUPDB / 10) % 10;
-			}
-			else if ( eYield == YIELD_FOOD )
-			{
-				iYield += (iUPDB / 100) % 10;
+				if ( eYield == YIELD_COMMERCE )
+				{
+					iYield += iUPTB % 10;
+				}
+				else if ( eYield == YIELD_PRODUCTION )
+				{
+					iYield += (iUPTB / 10) % 10;
+				}
+				else if ( eYield == YIELD_FOOD )
+				{
+					iYield += (iUPTB / 100) % 10;
+				}
 			}
 		}
 
-		// Absinthe: Morocco: UP_OASIS_BONUS
-		int iUPOB = UniquePowers[((int)ePlayer) * UP_TOTAL_NUM + UP_OASIS_BONUS];
-		if (iUPOB / 1000 == 1 && getFeatureType() == GC.getInfoTypeForString("FEATURE_OASIS"))
+		// Absinthe: Morocco: UP_FEATURE_BONUS
+		int iUPFB = UniquePowers[((int)ePlayer) * UP_TOTAL_NUM + UP_FEATURE_BONUS];
+		if (iUPFB / 100000 == 1)
 		{
-			if ( eYield == YIELD_COMMERCE )
+			if (getFeatureType() == (iUPFB / 1000) % 100)
 			{
-				iYield += iUPOB % 10;
-			}
-			else if ( eYield == YIELD_PRODUCTION )
-			{
-				iYield += (iUPOB / 10) % 10;
-			}
-			else if ( eYield == YIELD_FOOD )
-			{
-				iYield += (iUPOB / 100) % 10;
+				if ( eYield == YIELD_COMMERCE )
+				{
+					iYield += iUPFB % 10;
+				}
+				else if ( eYield == YIELD_PRODUCTION )
+				{
+					iYield += (iUPFB / 10) % 10;
+				}
+				else if ( eYield == YIELD_FOOD )
+				{
+					iYield += (iUPFB / 100) % 10;
+				}
 			}
 		}
 
