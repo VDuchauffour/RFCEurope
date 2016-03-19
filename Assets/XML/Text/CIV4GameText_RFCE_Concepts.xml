@@ -596,43 +596,48 @@ Or you get a minor bonus to your stability in case you successfully complete one
 [BOLD]Civics[\BOLD]
 [TAB]Feudal Monarchy with
 [TAB][TAB]the Stephansdom wonder: +2
-[TAB][TAB]Feudal Law: +1
+[TAB][TAB]Feudal Law: +3
 [TAB]Divine Monarchy with
+[TAB][TAB]the Stephansdom wonder: +2
 [TAB][TAB]Paganism: -4
 [TAB][TAB]State Religion: +2
 [TAB][TAB]Theocracy: +3
-[TAB][TAB]Organized Religion: +2
-[TAB][TAB]Free Religion: -5
+[TAB][TAB]Organized Religion: +4
+[TAB][TAB]Religious Tolerance: -3
 [TAB][TAB]Religious Law: +2
-[TAB][TAB]the Stephansdom wonder: +2
-[TAB]Limited Monarchy with
+[TAB]Constitutional Monarchy with
 [TAB][TAB]the Stephansdom wonder: +2
 [TAB][TAB]Common Law: +3
 [TAB][TAB]Free Peasantry: +2
 [TAB][TAB]Free Labor: +2
 [TAB]Merchant Republic with
-[TAB][TAB]Feudal Law: -4
-[TAB][TAB]Trade Economy: +3
+[TAB][TAB]Feudal Law: -3
+[TAB][TAB]Trade Economy: +4
 [TAB][TAB]Common Law: +3
 [TAB][TAB]Free Peasantry: +2
 [TAB][TAB]Free Labor: +2
+[TAB][TAB]Imperialism: -2
 [TAB]Merchant Republic with k cities: 5-k (0 with 5 cities)
 [TAB][TAB]the penalties are halved for Venice ((5-k)/2, if k>5)
 [TAB]Feudal Law with
-[TAB][TAB]Serfdom: +1
-[TAB][TAB]Manorialism: +1
+[TAB][TAB]Serfdom: +3
+[TAB][TAB]Manorialism: +2
 [TAB][TAB]Free Peasantry: -4
+[TAB][TAB]Vassalage: +2
 [TAB]Bureaucracy with k cities: 6-k (0 with 6 cities)
 [TAB][TAB]the penalties are halved for Novgorod ((6-k)/2, if k>6)
+[TAB]Serfdom with
+[TAB][TAB]Manorialism: +2
+[TAB][TAB]Common Law: -3
 [TAB]Religious Law with
 [TAB][TAB]Paganism: -5
-[TAB][TAB]Theocracy: +3
-[TAB][TAB]Free Religion: -5
+[TAB][TAB]Theocracy: +4
+[TAB][TAB]Religious Tolerance: -3
 [TAB]Common Law with
 [TAB][TAB]Free Labor: +3
 [TAB][TAB]Theocracy: -4
-[TAB]Serfdom with Manorialism: +2
-[TAB]Apprenticeship with Guilds: +3
+[TAB]Apprenticeship with
+[TAB][TAB]Guilds: +3
 
 [BOLD]Expansion[\BOLD]
 [TAB]For each own city

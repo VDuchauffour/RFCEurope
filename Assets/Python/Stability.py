@@ -590,7 +590,7 @@ class Stability:
 
 		if set([xml.iCivicLimitedMonarchy, xml.iCivicMerchantRepublic]) & lCivics: #Constitutional Monarchy and Republic both like enlightened civics
 			if xml.iCivicCommonLaw in lCivics: return 3
-			if set([xml.iCivicFreePeasantry, xml.iCivicFreeLabor]) & lCivics: return 3
+			if set([xml.iCivicFreePeasantry, xml.iCivicFreeLabor]) & lCivics: return 2
 
 		if xml.iCivicFeudalLaw in lCivics:
 			if xml.iCivicSerfdom in lCivics: return 3
@@ -601,6 +601,7 @@ class Stability:
 
 		if xml.iCivicSerfdom in lCivics:
 			if xml.iCivicManorialism in lCivics: return 2
+			if xml.iCivicCommonLaw in lCivics: return -3
 
 		if xml.iCivicReligiousLaw in lCivics:
 			if xml.iCivicPaganism in lCivics: return -5
@@ -608,7 +609,6 @@ class Stability:
 			if xml.iCivicTheocracy in lCivics:  return 4
 
 		if xml.iCivicCommonLaw in lCivics:
-			if xml.iCivicSerfdom in lCivics: return -3
 			if xml.iCivicFreeLabor in lCivics: return 3
 			if xml.iCivicTheocracy in lCivics: return -4
 
