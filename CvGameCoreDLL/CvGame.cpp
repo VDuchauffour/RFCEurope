@@ -2224,9 +2224,13 @@ void CvGame::update()
 		if ( startingTurn[iHuman] > 0 )
 		{
 			if (getGameTurn() == 0)
+			{
 				setAIAutoPlay(1);
+			}
 			else if (getGameTurn() <= startingTurn[iHuman])
+			{
 				setAIAutoPlayCatapult(1);
+			}
 		}
 		// Absinthe: end
 	}
@@ -4058,8 +4062,6 @@ void CvGame::setAIAutoPlayCatapult(int iNewValue)
 
 	iOldValue = getAIAutoPlay();
 
-	//logMsg(" setAIAutoPlayCatapult  %d  %d ",iNewValue,iOldValue );
-
 	if (iOldValue != iNewValue)
 	{
 		m_iAIAutoPlay = std::max(0, iNewValue);
@@ -4067,80 +4069,58 @@ void CvGame::setAIAutoPlayCatapult(int iNewValue)
 		if ((iOldValue == 0) && (getAIAutoPlay() > 0))
 		{
 			CvPlot* pPlot = GC.getMapINLINE().plotINLINE( iAutorunX, iAutorunY ); // 3Miro: the plot
-
-			//logMsg(" setAIAutoPlayCatapult  %d  %d ",iAutorunX,iAutorunY );
-
 			if (pPlot->isUnit()) {
 				GC.getMapINLINE().plotINLINE( iAutorunX, iAutorunY )->getUnitByIndex(0)->kill(false); // 3Miro catapult coordinates
-				//if ( pPlot ->isUnit() ){
-				//	logMsg(" setAIAutoPlayCatapult  more Units " );
-				//};
-
 				for (int iI = 0; iI < MAX_PLAYERS; iI++)
 				{
 					if (GET_PLAYER((PlayerTypes)iI).isHuman())
 					{
-						// 3Miro: I am not sure what this hides, so remove it (does not mach the map anyway)
-						// 3Miro: it hides something at 0,0 - a catapult?
-						/*GC.getMapINLINE().plotINLINE(0, 0)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						GC.getMapINLINE().plotINLINE(0, 1)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						GC.getMapINLINE().plotINLINE(1, 0)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						GC.getMapINLINE().plotINLINE(1, 1)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						GC.getMapINLINE().plotINLINE(123, 0)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						GC.getMapINLINE().plotINLINE(123, 1)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						GC.getMapINLINE().plotINLINE(2, 0)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						GC.getMapINLINE().plotINLINE(2, 1)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						GC.getMapINLINE().plotINLINE(2, 2)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						GC.getMapINLINE().plotINLINE(1, 2)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						GC.getMapINLINE().plotINLINE(0, 2)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						GC.getMapINLINE().plotINLINE(123, 2)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						GC.getMapINLINE().plotINLINE(122, 2)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						GC.getMapINLINE().plotINLINE(122, 1)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						GC.getMapINLINE().plotINLINE(122, 0)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						GC.getMapINLINE().plotINLINE( 4, 72)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						GC.getMapINLINE().plotINLINE( 5, 72)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						GC.getMapINLINE().plotINLINE( 6, 72)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						GC.getMapINLINE().plotINLINE( 4, 71)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						GC.getMapINLINE().plotINLINE( 5, 71)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						GC.getMapINLINE().plotINLINE( 6, 71)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						GC.getMapINLINE().plotINLINE( 3, 71)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);// 3Miro some mountains
-						GC.getMapINLINE().plotINLINE( 3, 72)->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);*/
 						iX = iAutorunX; iY = iAutorunY;
-						if ( (iX>=0)&&(iX<EARTH_X)&&(iY>=0)&&(iY<EARTH_Y) ){
+						if ( (iX>=0)&&(iX<EARTH_X)&&(iY>=0)&&(iY<EARTH_Y) )
+						{
 							GC.getMapINLINE().plotINLINE( iX, iY )->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						};
+						}
 						iX = iAutorunX+1; iY = iAutorunY;
-						if ( (iX>=0)&&(iX<EARTH_X)&&(iY>=0)&&(iY<EARTH_Y) ){
+						if ( (iX>=0)&&(iX<EARTH_X)&&(iY>=0)&&(iY<EARTH_Y) )
+						{
 							GC.getMapINLINE().plotINLINE( iX, iY )->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						};
+						}
 						iX = iAutorunX; iY = iAutorunY+1;
-						if ( (iX>=0)&&(iX<EARTH_X)&&(iY>=0)&&(iY<EARTH_Y) ){
+						if ( (iX>=0)&&(iX<EARTH_X)&&(iY>=0)&&(iY<EARTH_Y) )
+						{
 							GC.getMapINLINE().plotINLINE( iX, iY )->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						};
+						}
 						iX = iAutorunX-1; iY = iAutorunY;
-						if ( (iX>=0)&&(iX<EARTH_X)&&(iY>=0)&&(iY<EARTH_Y) ){
+						if ( (iX>=0)&&(iX<EARTH_X)&&(iY>=0)&&(iY<EARTH_Y) )
+						{
 							GC.getMapINLINE().plotINLINE( iX, iY )->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						};
+						}
 						iX = iAutorunX; iY = iAutorunY-1;
-						if ( (iX>=0)&&(iX<EARTH_X)&&(iY>=0)&&(iY<EARTH_Y) ){
+						if ( (iX>=0)&&(iX<EARTH_X)&&(iY>=0)&&(iY<EARTH_Y) )
+						{
 							GC.getMapINLINE().plotINLINE( iX, iY )->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						};
+						}
 						iX = iAutorunX+1; iY = iAutorunY+1;
-						if ( (iX>=0)&&(iX<EARTH_X)&&(iY>=0)&&(iY<EARTH_Y) ){
+						if ( (iX>=0)&&(iX<EARTH_X)&&(iY>=0)&&(iY<EARTH_Y) )
+						{
 							GC.getMapINLINE().plotINLINE( iX, iY )->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						};
+						}
 						iX = iAutorunX+1; iY = iAutorunY-1;
-						if ( (iX>=0)&&(iX<EARTH_X)&&(iY>=0)&&(iY<EARTH_Y) ){
+						if ( (iX>=0)&&(iX<EARTH_X)&&(iY>=0)&&(iY<EARTH_Y) )
+						{
 							GC.getMapINLINE().plotINLINE( iX, iY )->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						};
+						}
 						iX = iAutorunX-1; iY = iAutorunY+1;
-						if ( (iX>=0)&&(iX<EARTH_X)&&(iY>=0)&&(iY<EARTH_Y) ){
+						if ( (iX>=0)&&(iX<EARTH_X)&&(iY>=0)&&(iY<EARTH_Y) )
+						{
 							GC.getMapINLINE().plotINLINE( iX, iY )->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						};
+						}
 						iX = iAutorunX-1; iY = iAutorunY-1;
-						if ( (iX>=0)&&(iX<EARTH_X)&&(iY>=0)&&(iY<EARTH_Y) ){
+						if ( (iX>=0)&&(iX<EARTH_X)&&(iY>=0)&&(iY<EARTH_Y) )
+						{
 							GC.getMapINLINE().plotINLINE( iX, iY )->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
-						};
+						}
+						break; // Absinthe: only the human player can have a unit there, no reason to continue
 					}
 				}
 			}
@@ -5904,17 +5884,14 @@ void CvGame::doTurn()
 		};
 	};
 
-
 	// 3Miro: DamageEnemy
 	if ( getGameTurn() > 1 ){
-		//logMsg("doTurn in");
 		for ( iI = 0; iI <MAX_PLAYERS; iI++ ){
 			if ( GET_PLAYER((PlayerTypes)iI).isAlive() ){
 				GET_PLAYER((PlayerTypes)iI).doDamageEnemy();
 			};
 		};
 	};
-	//logMsg(" End Enemy Damage");
 
 	/*GC.getGameINLINE().logMsg(" TURN=%d ",getGameTurn() );
 	CvPlot *ppPlot = GC.getMapINLINE().plot( 76, 28 );
@@ -5933,7 +5910,6 @@ void CvGame::doTurn()
 	};*/
 
 
-
 	// END OF TURN
 	CvEventReporter::getInstance().beginGameTurn( getGameTurn() );
 
@@ -5947,62 +5923,48 @@ void CvGame::doTurn()
 	{
 		if (GET_TEAM((TeamTypes)iI).isAlive())
 		{
-			//logMsg("doTurn for team: %d",iI);
 			GET_TEAM((TeamTypes)iI).doTurn();
 		}
 	}
 
 	GC.getMapINLINE().doTurn();
 
-	//Rhye
+	// Absinthe: python only
 	//createBarbarianCities();
 
-	//logMsg("doTurn Here 1");
 	// 3Miro: create the Barbarians in Python
 	//createBarbarianUnits();
-	//logMsg("doTurn Here 1.1");
 
-	// 3Miro: disable global warming
-	doGlobalWarming();
+	// Absinthe: disabled
+	//doGlobalWarming();
 
-	//Rhye - comment this to stop religion founding
+	// Rhye - comment this to stop religion founding
 	//doHolyCity();
 
-	//logMsg("doTurn Here 1.2");
+	// Absinthe: disable after companies added
 	doHeadquarters();
-	//logMsg("doTurn Here 1.3");
 
-	//logMsg("doTurn Here 1.4");
-	doDiploVote();
-	//logMsg("doTurn Here 1.5");
+	// Absinthe: disabled
+	//doDiploVote();
 
-	//logMsg("doTurn Here 1.6");
 	gDLL->getInterfaceIFace()->setEndTurnMessage(false);
-	//logMsg("doTurn Here 1.7");
 	gDLL->getInterfaceIFace()->setHasMovedUnit(false);
-	//logMsg("doTurn Here 1.8");
 
-	//logMsg(" -- doTurn getAIAutoplay() = %d",getAIAutoPlay());
 	if (getAIAutoPlay() > 0)
 	{
 		changeAIAutoPlay(-1);
-		//logMsg(" ----- doTurn getAIAutoplay() = %d",getAIAutoPlay());
 
 		if (getAIAutoPlay() == 0)
 		{
-			//logMsg(" ----- doTurn 2 getAIAutoplay() = %d",getAIAutoPlay());
 			reviveActivePlayer();
 		}
 	}
 
-	//logMsg("doTurn Here 1.9");
 	CvEventReporter::getInstance().endGameTurn(getGameTurn());
-	//logMsg("doTurn Here 1.10");
 
-	incrementGameTurn(); //logMsg("doTurn Here 1.11");
+	incrementGameTurn();
 	incrementElapsedGameTurns();
 
-	//logMsg("doTurn Here 2");
 	if (isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
 	{
 		shuffleArray(aiShuffle, MAX_PLAYERS, getSorenRand());
@@ -6026,19 +5988,30 @@ void CvGame::doTurn()
 			{
 				kTeam.setTurnActive(true);
 				FAssert(getNumGameTurnActive() == kTeam.getAliveCount());
+/*************************************************************************************************/
+/* UNOFFICIAL_PATCH                       06/10/10                       snarko & jdog5000       */
+/*                                                                                               */
+/* Bugfix                                                                                        */
+/*************************************************************************************************/
+/* original bts code
 			}
 
 			break;
+*/
+				// Break only after first found alive player
+				break;
+			}
+/*************************************************************************************************/
+/* UNOFFICIAL_PATCH                         END                                                  */
+/*************************************************************************************************/
 		}
 	}
 	else
 	{
 		for (iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			//logMsg("  in loop Game doTurn setting setTurnActive(true) for player: %d ",iI);
 			if (GET_PLAYER((PlayerTypes)iI).isAlive())
 			{
-				//logMsg("  is Alive setting setTurnActive(true) for player: %d ",iI);
 				if (isPbem() && GET_PLAYER((PlayerTypes)iI).isHuman())
 				{
 					if (iI == getActivePlayer())
@@ -6054,7 +6027,6 @@ void CvGame::doTurn()
 				}
 				else
 				{
-					//logMsg(" Game doTurn setting setTurnActive(true) for player: %d ",iI);
 					GET_PLAYER((PlayerTypes)iI).setTurnActive(true);
 					FAssert(getNumGameTurnActive() == 1);
 				}
@@ -6063,7 +6035,6 @@ void CvGame::doTurn()
 			}
 		}
 	}
-	//logMsg("doTurn Here 3");
 
 	testVictory();
 
@@ -6073,7 +6044,6 @@ void CvGame::doTurn()
 	PROFILE_END();
 
 	stopProfilingDLL();
-	//logMsg("doTurn Here 4");
 
 	// Absinthe: disable autosave during autoplay
 	if ((getGameTurn() > 0) && !(getGameTurn() < startingTurn[getActivePlayer()]))
@@ -6081,7 +6051,7 @@ void CvGame::doTurn()
 		gDLL->getEngineIFace()->AutoSave();
 	}
 	// Absinthe: end
-	//logMsg("doTurn Here 5");
+	//gDLL->getEngineIFace()->AutoSave();
 }
 
 
@@ -6940,59 +6910,35 @@ void CvGame::updateMoves()
 	{
 		CvPlayer& player = GET_PLAYER((PlayerTypes)(aiShuffle[iI]));
 
-		//logMsg(" Update Moves: %d  HERE 1",iI); //3Miro
 		if (player.isAlive())
 		{
 			if (player.isTurnActive())
 			{
-				//logMsg(" Update Moves: %d  HERE 1.1",iI); //3Miro
 				if (!(player.isAutoMoves()))
 				{
-					//logMsg(" Update Moves: %d  HERE 1.2",iI); //3Miro
 					player.AI_unitUpdate();
-					//logMsg(" Update Moves: %d  HERE 1.3",iI); //3Miro
 
 					if (!(player.isHuman()))
 					{
-						//logMsg(" Update Moves: %d  HERE 1.4",iI); //3Miro
-						// 3MiroDebug: remove this
-						/*if ( player.hasBusyUnit() ){
-							logMsg(" Update Moves: has Busy Unit",iI); //3Miro
-						};
-						if ( player.hasReadyUnit(true) ){
-							logMsg(" Update Moves: has Ready Unit",iI); //3Miro
-						};*/
-						// 3MiroDebug: end
 						if (!(player.hasBusyUnit()) && !(player.hasReadyUnit(true)))
 						{
-							//logMsg(" Update Moves: %d  HERE 1.5",iI); //3Miro
 							player.setAutoMoves(true);
-							//logMsg(" Update Moves: %d  HERE 1.6",iI); //3Miro
 						}
-						//logMsg(" Update Moves: %d  HERE 1.7",iI); //3Miro
 					}
-					//logMsg(" Update Moves: %d  HERE 1.8",iI); //3Miro
 				}
-				//logMsg(" Update Moves: %d  HERE 2",iI); //3Miro
 
 				if (player.isAutoMoves())
 				{
-					//logMsg(" Update Moves: %d  HERE 2.1",iI); //3Miro
 					for(pLoopSelectionGroup = player.firstSelectionGroup(&iLoop); pLoopSelectionGroup; pLoopSelectionGroup = player.nextSelectionGroup(&iLoop))
 					{
-						//logMsg(" Update Moves: %d  HERE 2.1.1",iI); //3Miro
 						pLoopSelectionGroup->autoMission();
 					}
-					//logMsg(" Update Moves: %d  HERE 2.2",iI); //3Miro
 
 					if (!(player.hasBusyUnit()))
 					{
-						//logMsg(" Update Moves: %d  HERE 2.3",iI); //3Miro
 						player.setAutoMoves(false);
 					}
-					//logMsg(" Update Moves: %d  HERE 2.4",iI); //3Miro
 				}
-				//logMsg(" Update Moves: %d  HERE 3",iI); //3Miro
 			}
 		}
 	}

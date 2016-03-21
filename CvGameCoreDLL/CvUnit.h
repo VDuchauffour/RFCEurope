@@ -770,7 +770,9 @@ public:
 	virtual bool AI_isCityAIType() const = 0;
 	virtual UnitAITypes AI_getUnitAIType() const = 0;																				// Exposed to Python
 	virtual void AI_setUnitAIType(UnitAITypes eNewValue) = 0;
-    virtual int AI_sacrificeValue(const CvPlot* pPlot) const = 0;
+	virtual int AI_sacrificeValue(const CvPlot* pPlot) const = 0;
+
+	int m_iStuckLoopCount; // Absinthe: eternal loop fix from Afforess
 
 	// 3MiroMercs: mercenary properties for the Unit
 	void setMercID( int iMercID );

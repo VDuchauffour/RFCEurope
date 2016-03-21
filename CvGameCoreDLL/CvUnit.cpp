@@ -379,6 +379,8 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_eFacingDirection = DIRECTION_SOUTH;
 	m_iImmobileTimer = 0;
 
+	m_iStuckLoopCount = 0; // Absinthe: eternal loop fix from Afforess
+
 	m_bMadeAttack = false;
 	m_bMadeInterception = false;
 	m_bPromotionReady = false;
@@ -723,76 +725,51 @@ void CvUnit::NotifyEntity(MissionTypes eMission)
 
 void CvUnit::doTurn()
 {
-
-	//if ( (getX_INLINE() < 0) || ( getX_INLINE() >= EARTH_X ) || (getY_INLINE() < 0) || ( getY_INLINE() >= EARTH_Y ) ){
-	//	GC.getGameINLINE().logMsg("CvUnit doTurn FALLEN OFF THE FACE OF THE EARTH %d %d %d ",INVALID_PLOT_COORD,getUnitType(),getOwner() ); // 3Miro
-		//this ->kill(false);
-	//};
-
-	//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 1 " ); // 3Miro
 	PROFILE("CvUnit::doTurn()")
 
 	FAssertMsg(!isDead(), "isDead did not return false as expected");
 	FAssertMsg(getGroup() != NULL, "getGroup() is not expected to be equal with NULL");
 
-	//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 2 " ); // 3Miro
 	testPromotionReady();
-	//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 3 " ); // 3Miro
 
 	if (isBlockading())
 	{
-		//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 4 " ); // 3Miro
 		collectBlockadeGold();
 	}
-	//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 5 " ); // 3Miro
 
 	if (isSpy() && isIntruding() && !isCargo())
 	{
-		//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 6 " ); // 3Miro
 		TeamTypes eTeam = plot()->getTeam();
 		if (NO_TEAM != eTeam)
 		{
-			//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 7 " ); // 3Miro
 			if (GET_TEAM(getTeam()).isOpenBorders(eTeam))
 			{
-				//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 8 " ); // 3Miro
 				testSpyIntercepted(plot()->getOwnerINLINE(), GC.getDefineINT("ESPIONAGE_SPY_NO_INTRUDE_INTERCEPT_MOD"));
 			}
 			else
 			{
-				//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 9 %d %d %d",getX_INLINE(),getY_INLINE(),getUnitType() ); // 3Miro
 				testSpyIntercepted(plot()->getOwnerINLINE(), GC.getDefineINT("ESPIONAGE_SPY_INTERCEPT_MOD"));
 			}
 		}
 	}
-	//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 10 " ); // 3Miro
 
 	if (baseCombatStr() > 0)
 	{
-		//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 11 %d %d %d %d %d",getID(),getOwner(),getX_INLINE(),getY_INLINE(),getUnitType() ); // 3Miro
-		//CvPlot *pPlot = plot();
-		//FeatureTypes eFeature = ( pPlot == NULL ) ? NO_FEATURE : plot()->getFeatureType();
 		FeatureTypes eFeature = plot()->getFeatureType();
 
-		//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 11.1 " ); // 3Miro
 		if (NO_FEATURE != eFeature)
 		{
-			//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 12 " ); // 3Miro
 			if (0 != GC.getFeatureInfo(eFeature).getTurnDamage())
 			{
-				//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 13 " ); // 3Miro
 				changeDamage(GC.getFeatureInfo(eFeature).getTurnDamage(), NO_PLAYER);
 			}
 		}
 	}
 
-	//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 14 " ); // 3Miro
 	if (hasMoved())
 	{
-		//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 15 " ); // 3Miro
 		if (isAlwaysHeal())
 		{
-			//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 16 " ); // 3Miro
 			doHeal();
 		}
 	}
@@ -800,31 +777,25 @@ void CvUnit::doTurn()
 	{
 		if (isHurt())
 		{
-			//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 17 " ); // 3Miro
 			doHeal();
 		}
 
-		//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 18 " ); // 3Miro
 		if (!isCargo())
 		{
-			//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 19 " ); // 3Miro
 			changeFortifyTurns(1);
 		}
 	}
 
-	//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 20 " ); // 3Miro
 	changeImmobileTimer(-1);
 
-	//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 21 " ); // 3Miro
 	setMadeAttack(false);
 	setMadeInterception(false);
-	//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 22 " ); // 3Miro
 
 	setReconPlot(NULL);
-	//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 23 " ); // 3Miro
 
 	setMoves(0);
-	//GC.getGameINLINE().logMsg("CvUnit doTurn HERE 24 " ); // 3Miro
+
+	m_iStuckLoopCount = 0; // Absinthe: eternal loop fix from Afforess
 }
 
 
@@ -1293,8 +1264,6 @@ void CvUnit::updateCombat(bool bQuick)
 
 	CvPlot* pPlot = getAttackPlot();
 
-	//GC.getGameINLINE().logMsg(" I am at: %d %d attacking %d %d",getX(),getY(),pPlot->getX(),pPlot->getY() ); // 3Miro
-	//GC.getGameINLINE().logMsg(" CvUnit::updateCombat Here 1"); // 3Miro
 	if (pPlot == NULL)
 	{
 		return;
@@ -1306,7 +1275,6 @@ void CvUnit::updateCombat(bool bQuick)
 		return;
 	}
 
-	//GC.getGameINLINE().logMsg(" CvUnit::updateCombat Here 2"); // 3Miro
 	CvUnit* pDefender = NULL;
 	if (bFinish)
 	{
@@ -1316,7 +1284,6 @@ void CvUnit::updateCombat(bool bQuick)
 	{
 		pDefender = pPlot->getBestDefender(NO_PLAYER, getOwnerINLINE(), this, true);
 	}
-	//GC.getGameINLINE().logMsg(" CvUnit::updateCombat Here 3"); // 3Miro
 
 	if (pDefender == NULL)
 	{
@@ -1330,7 +1297,6 @@ void CvUnit::updateCombat(bool bQuick)
 		return;
 	}
 
-	//GC.getGameINLINE().logMsg(" CvUnit::updateCombat Here 4"); // 3Miro
 	//check if quick combat
 	if (!bQuick)
 	{
@@ -1340,7 +1306,6 @@ void CvUnit::updateCombat(bool bQuick)
 	//FAssertMsg((pPlot == pDefender->plot()), "There is not expected to be a defender or the defender's plot is expected to be pPlot (the attack plot)");
 
 	//if not finished and not fighting yet, set up combat damage and mission
-	//GC.getGameINLINE().logMsg(" CvUnit::updateCombat Here 5"); // 3Miro
 	if (!bFinish)
 	{
 		if (!isFighting())
@@ -1365,7 +1330,6 @@ void CvUnit::updateCombat(bool bQuick)
 			{
 				pDefender->setFacingDirection(newDirection);
 			}
-			//GC.getGameINLINE().logMsg(" CvUnit::updateCombat Here 5.1"); // 3Miro
 
 			setCombatUnit(pDefender, true);
 			pDefender->setCombatUnit(this, false);
@@ -1374,7 +1338,6 @@ void CvUnit::updateCombat(bool bQuick)
 
 			bool bFocused = (bVisible && isCombatFocus() && gDLL->getInterfaceIFace()->isCombatFocus());
 
-			//GC.getGameINLINE().logMsg(" CvUnit::updateCombat Here 5.2"); // 3Miro
 			if (bFocused)
 			{
 				DirectionTypes directionType = directionXY(plot(), pPlot);
@@ -1413,7 +1376,6 @@ void CvUnit::updateCombat(bool bQuick)
 
 		if (!pDefender->canDefend())
 		{
-			//GC.getGameINLINE().logMsg(" CvUnit::updateCombat Here 5.3"); // 3Miro
 			if (!bVisible)
 			{
 				bFinish = true;
@@ -1453,7 +1415,6 @@ void CvUnit::updateCombat(bool bQuick)
 			}
 			else
 			{
-				//GC.getGameINLINE().logMsg(" CvUnit::updateCombat Here 5.4"); // 3Miro
 				kBattle.setDamage(BATTLE_UNIT_ATTACKER, BATTLE_TIME_END, getDamage());
 				kBattle.setDamage(BATTLE_UNIT_DEFENDER, BATTLE_TIME_END, pDefender->getDamage());
 				kBattle.setAdvanceSquare(canAdvance(pPlot, 1));
@@ -1484,10 +1445,8 @@ void CvUnit::updateCombat(bool bQuick)
 		}
 	}
 
-	//GC.getGameINLINE().logMsg(" CvUnit::updateCombat Here 6"); // 3Miro
 	if (bFinish)
 	{
-		//GC.getGameINLINE().logMsg(" CvUnit::updateCombat Here 7"); // 3Miro
 		if (bVisible)
 		{
 			if (isCombatFocus() && gDLL->getInterfaceIFace()->isCombatFocus())
@@ -1498,7 +1457,6 @@ void CvUnit::updateCombat(bool bQuick)
 				}
 			}
 		}
-		//GC.getGameINLINE().logMsg(" CvUnit::updateCombat Here 8"); // 3Miro
 
 		//end the combat mission if this code executes first
 		gDLL->getEntityIFace()->RemoveUnitFromBattle(this);
@@ -1509,7 +1467,6 @@ void CvUnit::updateCombat(bool bQuick)
 		NotifyEntity(MISSION_DAMAGE);
 		pDefender->NotifyEntity(MISSION_DAMAGE);
 
-		//GC.getGameINLINE().logMsg(" CvUnit::updateCombat Here 9"); // 3Miro
 		if (isDead())
 		{
 			if (isBarbarian())
@@ -1535,7 +1492,6 @@ void CvUnit::updateCombat(bool bQuick)
 		}
 		else if (pDefender->isDead())
 		{
-			//GC.getGameINLINE().logMsg(" CvUnit::updateCombat Here 10"); // 3Miro
 			if (pDefender->isBarbarian())
 			{
 				GET_PLAYER(getOwnerINLINE()).changeWinsVsBarbs(1);
@@ -1566,7 +1522,6 @@ void CvUnit::updateCombat(bool bQuick)
 
 			bool bAdvance = false;
 
-			//GC.getGameINLINE().logMsg(" CvUnit::updateCombat Here 11"); // 3Miro
 			if (isSuicide())
 			{
 				kill(true);
@@ -1597,23 +1552,17 @@ void CvUnit::updateCombat(bool bQuick)
 				}
 			}
 
-			//GC.getGameINLINE().logMsg(" CvUnit::updateCombat Here 12"); // 3Miro
 			if (pPlot->getNumVisibleEnemyDefenders(this) == 0)
 			{
-				//GC.getGameINLINE().logMsg(" CvUnit::updateCombat Here 12.1"); // 3Miro
 				getGroup()->groupMove(pPlot, true, ((bAdvance) ? this : NULL));
-				//GC.getGameINLINE().logMsg(" CvUnit::updateCombat Here 12.2"); // 3Miro
 			}
-			//GC.getGameINLINE().logMsg(" CvUnit::updateCombat Here 12.3"); // 3Miro
 
 			// This is is put before the plot advancement, the unit will always try to walk back
 			// to the square that they came from, before advancing.
 			getGroup()->clearMissionQueue();
-			//GC.getGameINLINE().logMsg(" CvUnit::updateCombat Here 12.4"); // 3Miro
 		}
 		else
 		{
-			//GC.getGameINLINE().logMsg(" CvUnit::updateCombat Here 13"); // 3Miro
 			szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WITHDRAW", getNameKey(), pDefender->getNameKey());
 			gDLL->getInterfaceIFace()->addMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
 			szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_UNIT_WITHDRAW", getNameKey(), pDefender->getNameKey());
@@ -1622,12 +1571,9 @@ void CvUnit::updateCombat(bool bQuick)
 			changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 			checkRemoveSelectionAfterAttack();
 
-			//GC.getGameINLINE().logMsg(" CvUnit::updateCombat Here 14"); // 3Miro
 			getGroup()->clearMissionQueue();
 		}
-		//GC.getGameINLINE().logMsg(" CvUnit::updateCombat Here 15"); // 3Miro
 	}
-	//GC.getGameINLINE().logMsg(" CvUnit::updateCombat Here 16"); // 3Miro
 }
 
 void CvUnit::checkRemoveSelectionAfterAttack()
@@ -2763,13 +2709,9 @@ void CvUnit::attack(CvPlot* pPlot, bool bQuick)
 	FAssert(canMoveInto(pPlot, true));
 	FAssert(getCombatTimer() == 0);
 
-	//GC.getGameINLINE().logMsg("CvUnit::attack Here 1"); //3Miro
-	//GC.getGameINLINE().logMsg("CvUnit::attack plot %d %d",pPlot->getX(),pPlot->getY()); //3Miro
 	setAttackPlot(pPlot, false);
 
-	//GC.getGameINLINE().logMsg("CvUnit::attack Here 2"); //3Miro
 	updateCombat(bQuick);
-	//GC.getGameINLINE().logMsg("CvUnit::attack Here 3"); //3Miro
 }
 
 void CvUnit::fightInterceptor(const CvPlot* pPlot, bool bQuick)
@@ -7437,19 +7379,16 @@ int CvUnit::movesLeft() const
 
 bool CvUnit::canMove() const
 {
-	//GC.getGameINLINE().logMsg(" CvUnit::canMove Here 1"); // 3Miro
 	if (isDead())
 	{
 		return false;
 	}
 
-	//GC.getGameINLINE().logMsg(" CvUnit::canMove Here 2"); // 3Miro
 	if (getMoves() >= maxMoves())
 	{
 		return false;
 	}
 
-	//GC.getGameINLINE().logMsg(" CvUnit::canMove Here 3"); // 3Miro
 	if (getImmobileTimer() > 0)
 	{
 		return false;
