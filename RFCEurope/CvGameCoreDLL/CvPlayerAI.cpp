@@ -1183,12 +1183,10 @@ void CvPlayerAI::AI_unitUpdate()
 
 	if (!hasBusyUnit())
 	{
-		//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 1 "); // 3Miro
 		pCurrUnitNode = headGroupCycleNode();
 
 		while (pCurrUnitNode != NULL)
 		{
-			//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 2 "); // 3Miro
 			pLoopSelectionGroup = getSelectionGroup(pCurrUnitNode->m_data);
 			pCurrUnitNode = nextGroupCycleNode(pCurrUnitNode);
 
@@ -1204,7 +1202,6 @@ void CvPlayerAI::AI_unitUpdate()
 
 		if (isHuman())
 		{
-			//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 3 "); // 3Miro
 			pCurrUnitNode = headGroupCycleNode();
 
 			while (pCurrUnitNode != NULL)
@@ -1220,7 +1217,6 @@ void CvPlayerAI::AI_unitUpdate()
 		}
 		else
 		{
-			//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 4 "); // 3Miro
 			tempGroupCycle.clear();
 			finalGroupCycle.clear();
 
@@ -1236,7 +1232,6 @@ void CvPlayerAI::AI_unitUpdate()
 
 			while (tempGroupCycle.getLength() > 0)
 			{
-				//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 5 "); // 3Miro
 				pCurrUnitNode = tempGroupCycle.head();
 
 				while (pCurrUnitNode != NULL)
@@ -1259,31 +1254,23 @@ void CvPlayerAI::AI_unitUpdate()
 			}
 
 			pCurrUnitNode = finalGroupCycle.head();
-			//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 6 "); // 3Miro
 
 			while (pCurrUnitNode != NULL)
 			{
-				//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 7 "); // 3Miro
 				pLoopSelectionGroup = getSelectionGroup(pCurrUnitNode->m_data);
-				//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 7.1 "); // 3Miro
 
 				if (NULL != pLoopSelectionGroup)  // group might have been killed by a previous group update
 				{
-					//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 7.2 "); // 3Miro
 					if (pLoopSelectionGroup->AI_update())
 					{
-						//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 7.3 "); // 3Miro
 						break; // pointers could become invalid...
 					}
 				}
 
-				//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 7.4 "); // 3Miro
 				pCurrUnitNode = finalGroupCycle.next(pCurrUnitNode);
-				//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 7.5 "); // 3Miro
 			}
 		}
 	}
-	//GC.getGameINLINE().logMsg(" AI_UNIT_UPDATE Here 8 "); // 3Miro
 }
 
 

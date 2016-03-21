@@ -119,7 +119,10 @@ void CvSelectionGroupAI::AI_seperateAI(UnitAITypes eUnitAI)
 		if (pLoopUnit->AI_getUnitAIType() == eUnitAI)
 		{
 			pLoopUnit->joinGroup(NULL);
-			if (plot()->getTeam() == getTeam())
+			// Absinthe: potential crash in use of plot() if group emptied?
+			if (pLoopUnit->plot()->getTeam() == getTeam())
+			// original:
+			//if (plot()->getTeam() == getTeam())
 			{
 				pLoopUnit->getGroup()->pushMission(MISSION_SKIP);
 			}
@@ -138,15 +141,8 @@ bool CvSelectionGroupAI::AI_update()
 
 	FAssert(getOwnerINLINE() != NO_PLAYER);
 
-	//GC.getGameINLINE().logMsg(" AI_UPDATE Here 1 %d %d",getX(),getY()); // 3Miro
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
-		GC.getGameINLINE().logMsg(" AI_Update Group Size %d",getNumUnits() ); // 3Miro
-	};*/
 	if (!AI_isControlled())
 	{
-		/*if ( ( getX() == 94) && ( getY() == 6) ){
-			GC.getGameINLINE().logMsg(" AI_Update return controlled " ); // 3Miro
-		};*/
 		return false;
 	}
 
@@ -155,11 +151,15 @@ bool CvSelectionGroupAI::AI_update()
 		return false;
 	}
 
+	// Absinthe: K-Mod / BBAI
+	if (getActivityType() == ACTIVITY_SLEEP && !isHuman() && !getHeadUnit()->isCargo())
+	{
+		setForceUpdate(true);
+	}
+	// end
+
 	if (isForceUpdate())
 	{
-		/*if ( ( getX() == 94) && ( getY() == 6) ){
-			GC.getGameINLINE().logMsg(" AI_Update is Forced Update " ); // 3Miro
-		};*/
 		clearMissionQueue(); // XXX ???
 		setActivityType(ACTIVITY_AWAKE);
 		setForceUpdate(false);
@@ -168,32 +168,20 @@ bool CvSelectionGroupAI::AI_update()
 		AI_cancelGroupAttack();
 	}
 
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
-		GC.getGameINLINE().logMsg(" AI_Update HERE 1" ); // 3Miro
-	};*/
-
 	FAssert(!(GET_PLAYER(getOwnerINLINE()).isAutoMoves()));
 
 	int iTempHack = 0; // XXX
 
 	bDead = false;
 	
-	//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2 "); // 3Miro
 	bool bFailedAlreadyFighting = false;
-	/*if ( ( getX() == 94) && ( getY() == 6) ){
-		GC.getGameINLINE().logMsg(" AI_Update HERE 2" ); // 3Miro
-	};*/
 	while ((m_bGroupAttack && !bFailedAlreadyFighting) || readyToMove())
 	{
-		//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.1 "); // 3Miro
 		iTempHack++;
 		if (iTempHack > 100)
 		{
 			FAssert(false);
 			CvUnit* pHeadUnit = getHeadUnit();
-			/*if ( ( getX() == 94) && ( getY() == 6) ){
-				GC.getGameINLINE().logMsg(" head Unit: %d",pHeadUnit->getUnitType()); // 3Miro
-			};*/
 			if (NULL != pHeadUnit)
 			{
 				if (GC.getLogging())
@@ -205,74 +193,38 @@ bool CvSelectionGroupAI::AI_update()
 						pHeadUnit->getX_INLINE(), pHeadUnit->getY_INLINE(), szTempString.GetCString());
 					gDLL->messageControlLog(szOut);
 				}
-				//GC.getGameINLINE().logMsg(" AI_UPDATE Stuck HERE Unit type: %d at %d %d",pHeadUnit->getUnitType(),pHeadUnit->getX(),pHeadUnit->getY() ); // 3Miro
+
 				pHeadUnit->finishMoves();
 			}
 			break;
 		}
 
-		//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2 "); // 3Miro
 		// if we want to force the group to attack, force another attack
 		if (m_bGroupAttack)
 		{
-			/*if ( ( getX() == 94) && ( getY() == 6) ){
-				GC.getGameINLINE().logMsg(" AI_Update HERE 3: groupAttack" ); // 3Miro
-			};*/
-			//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2.1 "); // 3Miro
 			m_bGroupAttack = false;
 
-			//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2.2 "); // 3Miro
 			groupAttack(m_iGroupAttackX, m_iGroupAttackY, MOVE_DIRECT_ATTACK, bFailedAlreadyFighting);
-			//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2.3 "); // 3Miro
 		}
 		// else pick AI action
 		else
 		{
-			/*if ( ( getX() == 94) && ( getY() == 6) ){
-				GC.getGameINLINE().logMsg(" AI_Update HERE 4: not groupAttack" ); // 3Miro
-			};*/
-			//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2.4 "); // 3Miro
 			CvUnit* pHeadUnit = getHeadUnit();
-			//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2.5 "); // 3Miro
-			/*if ( ( getX() == 94) && ( getY() == 6) ){
-				GC.getGameINLINE().logMsg(" AI_Update HERE 4.1: head unit %d",pHeadUnit->getUnitType() ); // 3Miro
-			};*/
 
 			if (pHeadUnit == NULL || pHeadUnit->isDelayedDeath())
 			{
-				//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2.6 "); // 3Miro
 				break;
 			}
 
-			/*if ( ( getX() == 94) && ( getY() == 6) ){
-				GC.getGameINLINE().logMsg(" AI_Update HERE 4.2 " ); // 3Miro
-			};*/
-
-			//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2.7 "); // 3Miro
 			resetPath();
-			//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2.8 "); // 3Miro
-
-			/*if ( ( getX() == 94) && ( getY() == 6) ){
-				GC.getGameINLINE().logMsg(" AI_Update HERE 4.3 " ); // 3Miro
-			};*/
 
 			if (pHeadUnit->AI_update())
 			{
-				/*if ( ( getX() == 94) && ( getY() == 6) ){
-					GC.getGameINLINE().logMsg(" AI_Update HERE AI_Update foe hrad Unit " ); // 3Miro
-				};*/
 				// AI_update returns true when we should abort the loop and wait until next slice
-				//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2.9 "); // 3Miro
 				break;
 			}
-			//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.2.10 "); // 3Miro
-			/*if ( ( getX() == 94) && ( getY() == 6) ){
-				GC.getGameINLINE().logMsg(" AI_Update HERE 4.4 " ); // 3Miro
-			};*/
 		}
-			
 
-		//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.3 "); // 3Miro
 		if (doDelayedDeath())
 		{
 			bDead = true;
@@ -281,15 +233,14 @@ bool CvSelectionGroupAI::AI_update()
 
 		// if no longer group attacking, and force separate is true, then bail, decide what to do after group is split up
 		// (UnitAI of head unit may have changed)
-		//GC.getGameINLINE().logMsg(" AI_UPDATE Here 2.4 "); // 3Miro
 		if (!m_bGroupAttack && AI_isForceSeparate())
 		{
 			AI_separate();	// pointers could become invalid...
-			return true;
+			//return true;
+			return false; // Absinthe: K-Mod
 		}
 	}
 
-	//GC.getGameINLINE().logMsg(" AI_UPDATE Here 3 "); // 3Miro
 	if (!bDead)
 	{
 		if (!isHuman())
@@ -334,10 +285,10 @@ bool CvSelectionGroupAI::AI_update()
 		}
 	}
 
-	//GC.getGameINLINE().logMsg(" AI_UPDATE Here 4 "); // 3Miro
 	if (bDead)
 	{
-		return true;
+		//return true;
+		return false; // Absinthe: K-Mod
 	}
 
 	return (isBusy() || isCargoBusy());
@@ -351,7 +302,19 @@ int CvSelectionGroupAI::AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy)
 
 	FAssert(getOwnerINLINE() != NO_PLAYER);
 
-	if (pPlot->getBestDefender(NO_PLAYER, getOwnerINLINE(), NULL, !bPotentialEnemy, bPotentialEnemy) == NULL)
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
+/*                                                                                              */
+/* Efficiency, Lead From Behind                                                                 */
+/************************************************************************************************/
+	// From Lead From Behind by UncutDragon
+	// original
+	//if (pPlot->getBestDefender(NO_PLAYER, getOwnerINLINE(), NULL, !bPotentialEnemy, bPotentialEnemy) == NULL)
+	// modified
+	if (!pPlot->hasDefender(false, NO_PLAYER, getOwnerINLINE(), NULL, !bPotentialEnemy, bPotentialEnemy))
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 	{
 		return 100;
 	}

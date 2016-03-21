@@ -272,22 +272,22 @@ iTea , iTobacco , iOlives , iAccess , iNorthAccess , iSouthAccess , iAsiaAccess 
 #Buildings
 
 iNumBuildings = 152 # Should equal iPlague
-(iPalace, iSummerPalace, iRoyalAcademy, iVersailles, iWalls, iStarFort, iCastle, iMoscowKremlin, iHungarianStronghold,
-iSpanishCitadel, iBarracks, iArcheryRange, iStable, iBulgarianStan, iGranary, iCordobanNoria, iPolishFolwark, iAqueduct, iOttomanHammam,
-iLighthouse, iVikingTradingPost, iWharf, iHarbor, iPortugalFeitoria, iCustomHouse, iDrydock, iVeniceArsenal, iForge, iGuildHall,
-iTextileMill, iRoyalDungeon, iUniversity, iObservatory, iHospital, iTheatre, iByzantineHippodrome, iAustrianOperaHouse, iMarket, iArabicCaravan,
-iBrewery, iBurgundianWinery, iJeweler, iWeaver, iSmokehouse, iTannery, iLuxuryStore, iWarehouse, iApothecary, iBank,
-iGenoaBank, iEnglishRoyalExchange, iCourthouse, iKievVeche, iHolyRomanRathaus, iLithuanianVoivodeship, iDungeon, iNightWatch, iSwedishTennant, iLevee,
-iNetherlandsDike, iInn, iCoffeeHouse, iManorHouse, iFrenchChateau, iInfirmary, iPaganShrine, iJewishQuarter, iJewishShrine, iProtestantTemple,
-iProtestantSchool, iProtestantCathedral, iProtestantChapel, iProtestantSeminary, iProtestantShrine, iIslamicTemple, iIslamicChapel, iIslamicCathedral, iIslamicSchool, iIslamicMadrassa,
-iIslamicShrine, iCatholicTemple, iCatholicCathedral, iCatholicChapel, iCatholicReliquary, iCatholicMonastery, iCatholicSeminary, iCatholicShrine, iOrthodoxTemple, iOrthodoxCathedral,
-iOrthodoxChapel, iOrthodoxReliquary, iOrthodoxMonastery, iOrthodoxSeminary, iOrthodoxShrine, iSistineChapel, iNotreDame, iLeaningTower, iTheodosianWalls, iTopkapiPalace,
-iShrineOfUppsala, iNationalTheatre, iNationalGallery, iNationalUniversity, iHeroicEpic, iAlhambra, iKrakDesChevaliers, iSanMarco, iLaMezquita, iStBasil,
-iMagnaCarta, iSophiaKiev, iDomeRock, iBrandenburgGate, iPalacioDaPena, iMonasteryOfCluny, iRoundChurch, iCorporation1, iCorporation2, iCorporation3,
-iCorporation4, iCorporation5, iCorporation6, iCorporation7, iLeonardosWorkshop, iGardensAlAndalus, iMagellansVoyage, iMarcoPolo, iEscorial, iKazimierz,
-iBelemTower, iGoldenBull, iKalmarCastle, iPalaisPapes, iTombKhal, iStephansdom, iBibliothecaCorviniana, iFontainebleau, iImperialDiet, iBeurs,
-iCopernicus, iSanGiorgio, iWestminster, iPressburg, iLanterna, iPrussiaPublicSchool, iAragonSeaport, iMorocccoKasbah, iScotlandShieling, iDenmarkResearchInstitute,
-iNovgorodKonets, iNationalEpic, iTriumphalArch) = range(iNumBuildings)
+(iPalace, iSummerPalace, iRoyalAcademy, iVersailles, iWalls, iStarFort, iCastle, iMoscowKremlin, iHungarianStronghold, iSpanishCitadel,
+iBarracks, iArcheryRange, iStable, iBulgarianStan, iGranary, iCordobanNoria, iPolishFolwark, iAqueduct, iOttomanHammam, iLighthouse,
+iVikingTradingPost, iWharf, iHarbor, iPortugalFeitoria, iCustomHouse, iDrydock, iVeniceArsenal, iForge, iGuildHall, iTextileMill,
+iRoyalDungeon, iUniversity, iObservatory, iHospital, iTheatre, iByzantineHippodrome, iAustrianOperaHouse, iMarket, iArabicCaravan, iBrewery,
+iBurgundianWinery, iJeweler, iWeaver, iSmokehouse, iTannery, iLuxuryStore, iWarehouse, iApothecary, iBank, iGenoaBank,
+iEnglishRoyalExchange, iCourthouse, iKievVeche, iHolyRomanRathaus, iLithuanianVoivodeship, iDungeon, iNightWatch, iSwedishTennant, iLevee, iNetherlandsDike,
+iInn, iCoffeeHouse, iManorHouse, iFrenchChateau, iInfirmary, iPaganShrine, iJewishQuarter, iJewishShrine, iProtestantTemple, iProtestantSchool,
+iProtestantCathedral, iProtestantChapel, iProtestantSeminary, iProtestantShrine, iIslamicTemple, iIslamicChapel, iIslamicCathedral, iIslamicSchool, iIslamicMadrassa, iIslamicShrine,
+iCatholicTemple, iCatholicCathedral, iCatholicChapel, iCatholicReliquary, iCatholicMonastery, iCatholicSeminary, iCatholicShrine, iOrthodoxTemple, iOrthodoxCathedral, iOrthodoxChapel,
+iOrthodoxReliquary, iOrthodoxMonastery, iOrthodoxSeminary, iOrthodoxShrine, iSistineChapel, iNotreDame, iLeaningTower, iTheodosianWalls, iTopkapiPalace, iShrineOfUppsala,
+iNationalTheatre, iNationalGallery, iNationalUniversity, iHeroicEpic, iAlhambra, iKrakDesChevaliers, iSanMarco, iLaMezquita, iStBasil, iMagnaCarta,
+iSophiaKiev, iDomeRock, iBrandenburgGate, iPalacioDaPena, iMonasteryOfCluny, iRoundChurch, iCorporation1, iCorporation2, iCorporation3, iCorporation4,
+iCorporation5, iCorporation6, iCorporation7, iLeonardosWorkshop, iGardensAlAndalus, iMagellansVoyage, iMarcoPolo, iEscorial, iKazimierz, iBelemTower,
+iGoldenBull, iKalmarCastle, iPalaisPapes, iTombKhal, iStephansdom, iBibliothecaCorviniana, iFontainebleau, iImperialDiet, iBeurs, iCopernicus,
+iSanGiorgio, iWestminster, iPressburg, iLanterna, iPrussiaPublicSchool, iAragonSeaport, iMorocccoKasbah, iScotlandShieling, iDenmarkResearchInstitute, iNovgorodKonets,
+iNationalEpic, iTriumphalArch) = range(iNumBuildings)
 
 iGreatPalace = iSummerPalace
 iPlague = iNumBuildings
