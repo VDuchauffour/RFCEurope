@@ -377,15 +377,15 @@ class Religions:
 			pPlayer.changeFaith( 1 )
 			if ( iBuilding == xml.iCatholicCathedral ):
 				pPlayer.changeFaith( 3 )
-		if ( iStateReligion == xml.iOrthodoxy and ( iBuilding in tOrthodoxBuildings ) ):
+		elif ( iStateReligion == xml.iOrthodoxy and ( iBuilding in tOrthodoxBuildings ) ):
 			pPlayer.changeFaith( 1 )
 			if ( iBuilding == xml.iOrthodoxCathedral ):
 				pPlayer.changeFaith( 3 )
-		if ( iStateReligion == xml.iIslam and ( iBuilding in tIslamicBuildings ) ):
+		elif ( iStateReligion == xml.iIslam and ( iBuilding in tIslamicBuildings ) ):
 			pPlayer.changeFaith( 1 )
 			if ( iBuilding == xml.iIslamicCathedral ):
 				pPlayer.changeFaith( 3 )
-		if ( iStateReligion == xml.iProtestantism and ( iBuilding in tProtestantBuildings ) ):
+		elif ( iStateReligion == xml.iProtestantism and ( iBuilding in tProtestantBuildings ) ):
 			pPlayer.changeFaith( 1 )
 			if ( iBuilding == xml.iProtestantCathedral ):
 				pPlayer.changeFaith( 3 )
@@ -792,10 +792,15 @@ class Religions:
 	def spread1200ADJews(self):
 		# Spread Judaism to a random city in Africa
 		tCity = self.selectRandomCityArea(tWestAfrica)
-		self.spreadReligion(tCity,xml.iJudaism)
+		self.spreadReligion(tCity, xml.iJudaism)
 		# Spread Judaism to another city in Spain
 		tCity = self.selectRandomCityArea(tSpain)
-		self.spreadReligion(tCity,xml.iJudaism)
+		self.spreadReligion(tCity, xml.iJudaism)
 		# Spread Judaism to a city in France/Germany
 		tCity = self.selectRandomCityArea(tGermany)
-		self.spreadReligion(tCity,xml.iJudaism)
+		self.spreadReligion(tCity, xml.iJudaism)
+
+	def set1200Faith(self):
+		for iPlayer in range(con.iNumPlayers):
+			pPlayer = gc.getPlayer(iPlayer)
+			pPlayer.setFaith(con.t1200ADFaith[iPlayer])

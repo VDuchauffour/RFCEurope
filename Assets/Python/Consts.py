@@ -255,6 +255,8 @@ xml.i1569AD, #Lithuania - Lithuania UHV 3
 999  #Pope
 )
 
+(i500AD, i1200AD) = range(2)
+
 tYear = ( #For the Dawn of Man starting screen
 ("500", "TXT_KEY_AD"),
 ("500", "TXT_KEY_AD"),
@@ -349,6 +351,103 @@ tStartingWorkers = (
 4, #Turkey
 4, #Moscow
 4, #Dutch
+0  #Papal
+)
+
+tStartingGold = ((
+# 500 AD
+1000, #Byzantium
+50, #France
+200, #Arabia
+100, #Bulgaria
+200, #Cordoba
+300, #Venice
+250, #Burgundy
+300, #Germany
+400, #Novgorod
+250, #Norway
+250, #Kiev
+300, #Hungary
+500, #Spain
+300, #Denmark
+300, #Scotland
+300, #Poland
+400, #Genoa
+400, #Morocco
+400, #England
+450, #Portugal
+450, #Aragon
+400, #Sweden
+300, #Prussia
+400, #Lithuania
+1000, #Austria
+1000, #Turkey
+500, #Moscow
+1500, #Dutch
+50  #Papal
+),
+# 1200 AD
+(
+750, #Byzantium
+250, #France
+300, #Arabia
+150, #Bulgaria
+0, #Cordoba
+500, #Venice
+0, #Burgundy
+300, #Germany
+400, #Novgorod
+250, #Norway
+250, #Kiev
+300, #Hungary
+500, #Spain
+300, #Denmark
+300, #Scotland
+300, #Poland
+500, #Genoa
+400, #Morocco
+400, #England
+450, #Portugal
+450, #Aragon
+400, #Sweden
+300, #Prussia
+400, #Lithuania
+1000, #Austria
+1000, #Turkey
+500, #Moscow
+1500, #Dutch
+200  #Papal
+))
+
+t1200ADFaith = (
+40, #Byzantium
+30, #France
+50, #Arabia
+50, #Bulgaria
+0, #Cordoba
+25, #Venice
+0, #Burgundy
+30, #Germany
+25, #Novgorod
+0, #Norway
+20, #Kiev
+25, #Hungary
+35, #Spain
+20, #Denmark
+20, #Scotland
+30, #Poland
+25, #Genoa
+35, #Morocco
+20, #England
+20, #Portugal
+10, #Aragon
+0, #Sweden
+0, #Prussia
+0, #Lithuania
+0, #Austria
+0, #Turkey
+0, #Moscow
+0, #Dutch
 0  #Papal
 )
 
@@ -686,7 +785,8 @@ tBroaderAreasBR = (
 )
 
 #Visible Area: One or more rectangles.
-tVisible = (
+tVisible = ((
+#500 AD
 ( (64, 0,99,34),(49, 1,63,38),(24,13,48,36), ), # Byzantium
 ( (35,31,52,51),(49,26,59,38), ), # France
 ( (79, 0,89, 6),(90, 0,99,22), ), # Arabia
@@ -716,11 +816,45 @@ tVisible = (
 ( (77,42,99,51),(74,52,99,67), ), # Moscow
 ( (40,45,65,57),(49,58,67,66),(46,39,63,44), ), # Dutch
 ( (39,12,73,44), ), # Pope
-)
+),
+#1200 AD
+(
+( (64, 0,99,34),(49, 1,63,38),(24,13,48,36), ), # Byzantium
+( (30,26,59,54),(35,55,40,70), ), # France
+( (26,20,35,23),(22, 5,27,19),(28, 9,53,19),(47, 0,85, 8),(86, 0,99,20), ), # Arabia
+( (65,12,83,38),(78,31,99,41), ), # Bulgaria
+( (18,13,39,33),(40, 0,59,20),(60, 0,95, 7), ), # Cordoba
+( (46,14,70,41),(49, 7,82,25),(83, 7,91,13), ), # Venice
+( (43,31,53,53), ), # Burgundy
+( (41,31,61,58),(47,27,61,30),(62,34,70,55),(55,22,61,26), ), # Germany
+( (72,55,90,72),(79,41,88,54),(91,60,99,72), ), # Novgorod
+( (30,52,71,72),( 0,67,29,72), ), # Norway
+( (75,42,94,62),(77,31,94,41),(77,24,82,40), ), # Kiev
+( (56,27,82,45),(83,31,92,42),(65,12,82,26), ), # Hungary
+( (20,17,56,40), ), # Spain
+( (34,46,71,72),(72,57,78,72), ), # Denmark
+( (30,43,46,72), ), # Scotland
+( (60,37,79,60), ), # Poland
+( (39,15,60,39),(47, 9,82,25),(61,26,67,32), ), # Genoa
+( (12, 2,42,31),(43,2,53,20), ), # Morocco
+( (26,54,46,64),(31,34,46,53), ), # England
+( (18,17,34,39), ), # Portugal
+( (19,29,56,40),(19,21,34,28),(35,14,63,28), ),# Aragon
+#Below same as 500 AD
+( (39,52,82,66),(34,61,71,72), ), # Sweden
+( (51,43,73,56),(66,57,82,62),(69,63,79,66), ), # Prussia
+( (67,46,76,55),(73,44,81,58), ), # Lithuania
+( (49,27,61,55),(62,34,67,46), ), # Austria
+( (75,13,99,27),(92, 4,99,12), ), # Turkey
+( (77,42,99,51),(74,52,99,67), ), # Moscow
+( (40,45,65,57),(49,58,67,66),(46,39,63,44), ), # Dutch
+( (39,12,73,44), ), # Pope
+))
 
 
 # 3Miro: Initial Wars, note only the upper triangle of the array is valid, the lower should be all zeros
-tWarAtSpawn = (
+tWarAtSpawn = ((
+# 500 AD
 #Byz Fra Ara Bul Cor Ven Bur Ger Nov Nor Kie Hun Spn Den Sco Pol Gen Mor Eng Por Arg Swe Pru Lit Aus Tur Mos Dut Pop In1 In2 In3 In4
 ( 0,  0, 90, 90,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 90,  0,  0,  0,  0,  0,  0,  0, ), #Byz
 ( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 60,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Fra
@@ -750,7 +884,104 @@ tWarAtSpawn = (
 ( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 50, 50, 50, 50, ), #Tur
 ( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Mos
 ( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Dut
-)
+),
+(
+# 1200 AD
+#Byz Fra Ara Bul Cor Ven Bur Ger Nov Nor Kie Hun Spn Den Sco Pol Gen Mor Eng Por Arg Swe Pru Lit Aus Tur Mos Dut Pop In1 In2 In3 In4
+( 0,  0, 20, 70,  0, 90,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 90,  0,  0,  0,  0,  0,  0,  0, ), #Byz
+( 0,  0, 30,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 90,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Fra
+( 0,  0,  0,  0,  0,  0,  0, 20,  0,  0,  0, 20, 30,  0,  0,  0, 20,  0, 20, 20, 10,  0,  0,  0,  0, 60,  0,  0,  0,  0,  0,  0,  0, ), #Ara
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 70,  0,  0,  0,  0,  0,  0,  0, ), #Bul
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 90,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Cor
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Ven
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Bur
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Ger
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 80,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Nov
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Nor
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Kie
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Hun
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Spn
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 60,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Den
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 60,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Sco
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 20,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Pol
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Gen
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 90,  0,  0,  0,  0,  0,  0, 80, 80,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Mor
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Eng
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Por
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Arg
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Swe
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  80, 0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Pru
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Lit
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Aus
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 50, 50, 50, 50, ), #Tur
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Mos
+( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Dut
+))
+
+lInitialContacts = ((
+#500 AD
+[ iPope ], # Byzantium
+[  ], # France
+[ iByzantium ], # Arabia
+[ iByzantium ], # Bulgaria
+[ iArabia ], # Cordoba
+[ iByzantium, iPope ], # Venice
+[ iFrankia ], # Burgundy
+[ iBurgundy, iFrankia ], # Germany
+[ iByzantium, iBulgaria ], # Novgorod
+[  ], # Norway
+[ iByzantium, iBulgaria, iNovgorod ], # Kiev
+[ iByzantium, iBulgaria, iKiev ], # Hungary
+[ iFrankia, iBurgundy, iCordoba ], # Spain
+[ iNorway, iGermany ], # Denmark
+[ iFrankia, iNorway ], # Scotland
+[ iGermany, iHungary ], # Poland
+[ iBurgundy, iByzantium, iVenice, iPope ], # Genoa
+[ iArabia, iSpain, iCordoba ], # Morocco
+[ iFrankia, iDenmark, iScotland, iNorway ], # England
+[ iSpain, iCordoba ], # Portugal
+[ iBurgundy, iSpain, iCordoba, iFrankia ], # Aragon
+[ iDenmark, iNorway, iNovgorod ], # Sweden
+[ iGermany, iPoland, iNovgorod ], # Prussia
+[ iPoland, iKiev, iNovgorod, iPrussia ], # Lithuania
+[ iGermany, iVenice, iPoland, iHungary ], # Austria
+[ iByzantium, iArabia ], # Turkey
+[ iKiev, iNovgorod, iLithuania ], # Moscow
+[ iEngland, iSpain, iFrankia, iGermany, iDenmark, iNorway ], # Dutch
+[  ], # Pope
+),
+#1200 AD
+(
+[ iVenice, iGenoa, iHungary, iPope, iBulgaria, iArabia, iKiev, iNovgorod ], # Byzantium
+[ iScotland, iEngland, iNorway, iAragon, iSpain, iGermany ], # France
+[ iByzantium, iMorocco ], # Arabia
+[ iByzantium, iKiev, iNovgorod, iVenice, iHungary ], # Bulgaria
+[  ], # Cordoba
+[ iGenoa, iByzantium, iHungary, iPope ], # Venice
+[  ], # Burgundy
+[ iNorway, iFrankia, iDenmark, iEngland, iPoland, iHungary, iVenice, iGenoa, iPope ], # Germany
+[ iKiev, iPoland, iBulgaria, iByzantium ], # Novgorod
+[ iDenmark, iEngland, iScotland, iFrankia ], # Norway
+[ iNovgorod, iByzantium, iHungary, iBulgaria ], # Kiev
+[ iVenice, iGermany, iPoland, iBulgaria, iByzantium, iKiev, iPope ], # Hungary
+[ iPortugal, iAragon, iMorocco, iFrankia, iPope ], # Spain
+[ iNorway, iGermany, iFrankia, iEngland, iPoland ], # Denmark
+[ iNorway, iDenmark, iEngland, iFrankia ], # Scotland
+[ iGermany, iHungary, iDenmark, iKiev, iNovgorod ], # Poland
+[ iByzantium, iFrankia, iVenice, iGermany, iPope ], # Genoa
+[ iArabia, iPortugal, iSpain, iAragon ], # Morocco
+[ iScotland, iFrankia, iDenmark, iNorway, iPope ], # England
+[ iSpain, iMorocco, iPope, iAragon ], # Portugal
+[ iSpain, iPortugal, iMorocco, iGenoa, iPope ], # Aragon
+#Below same as 500 AD
+[ iPoland, iGermany, iDenmark, iNorway, iNovgorod ], # Sweden
+[ iGermany, iPoland, iNovgorod ], # Prussia
+[ iPoland, iKiev, iPrussia ], # Lithuania
+[ iGermany, iVenice, iPoland, iHungary ], # Austria
+[ iByzantium, iHungary, iArabia ], # Turkey
+[ iKiev, iNovgorod, iSweden, iLithuania ], # Moscow
+[ iEngland, iSpain, iFrankia, iGermany, iDenmark, iNorway, iSweden ], # Dutch
+))
 
 #Mercenaries. Higher number = less likely to hire
 tHire = (

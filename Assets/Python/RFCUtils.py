@@ -1533,3 +1533,15 @@ class RFCUtils:
 		else:
 			return 0 # unstable
 	#Absinthe: end
+
+	def getScenario(self):
+		if gc.getPlayer(con.iBurgundy).isPlayable(): return con.i500AD
+		return con.i1200AD
+
+	def getScenarioStartYear(self):
+		lStartYears = [500, 1200]
+		return lStartYears[self.getScenario()]
+
+	def getScenarioStartTurn(self):
+		lStartTurn = [xml.i500AD, xml.i1200AD]
+		return lStartTurn[self.getScenario()]

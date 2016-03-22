@@ -1660,3 +1660,23 @@ class Victory:
 		pPlayer = gc.getPlayer(iCiv)
 		for i in range(3):
 			pPlayer.setUHV( i, 0 )
+
+	def set1200UHVDone( self, iCiv ):
+		if iCiv == iByzantium:
+			pByzantium.setUHV( 0, 1 )
+		elif iCiv == iFrankia:
+			pFrankia.setUHV( 0, 1 )
+		elif iCiv == iArabia:
+			pArabia.setUHV( 0, 1 )
+		elif iCiv == iBulgaria:
+			pBulgaria.setUHV( 0, 1 )
+		elif iCiv == iVenecia: #Venice gets conquerors near Constantinople for 2nd UHV
+			pVenecia.setUHV( 0, 1 )
+		elif iCiv == iGermany:
+			pGermany.setUHV( 0, 1 )
+		elif iCiv == iNorway:
+			pNorway.setUHV( 0, 1 )
+		elif iCiv == iDenmark:
+			pDenmark.setUHV( 0, 1 )
+		elif iCiv == iScotland:
+			pScotland.setUHVCounter(1, 100)
