@@ -1114,6 +1114,9 @@ public:
 	void setStabilityVary( int iCathegory, int iNewValue );
 	int getStabilitySwing();
 	void setStabilitySwing( int iNewValue );
+	// Absinthe: swing instability in anarchy
+	int getStabSwingAnarchy();
+	void setStabSwingAnarchy( int iNewValue );
 	int getStability(); // sum all categories and returns one number
 	int getWarPeaceChange(); // war peace change since last time it was called
 
@@ -1196,8 +1199,9 @@ protected:
 
 	// 3MiroStability: the Stability parameters
 	int m_aiStabilityBase[4]; // long term memory of past events
-	int m_aiStabilityVary[4]; // instanat change every X turns, no memory beyond that
-	int m_iStabilitySwing; // short tuerm memory keeping track of anarchy and such
+	int m_aiStabilityVary[4]; // instant change every X turns, no memory beyond that
+	int m_iStabilitySwing; // short term memory keeping track of anarchy and such
+	int m_iStabSwingAnarchy; // Absinthe: swing instability in anarchy
 	bool bIsAtWar; //are we at war with anybody (only major players count)
 
 	// 3Miro: get 10 pickle free parameters to remove the need for that module (at least in part)

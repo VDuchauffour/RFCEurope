@@ -999,7 +999,7 @@ class RFCEBalance:
 		gc.setIndependnets( con.iIndepStart, con.iIndepEnd, con.iBarbarian )
 		gc.setPapalPlayer( iPope, xml.iCatholicism )
 
-		gc.setAutorunHack( xml.iCatapult, 32, 0 ) # Autorun hack, sync with RNF module
+		gc.setAutorunHack( xml.iCatapult, 30, 0 ) # Autorun hack, sync with RNF module
 
 		#3MiroMercs: set the merc promotion
 		gc.setMercPromotion( xml.iPromotionMerc )

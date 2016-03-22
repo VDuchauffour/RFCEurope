@@ -62,6 +62,9 @@ void CyPlayerPythonInterface2(python::class_<CyPlayer>& x)
 		.def("setStabilityVary", &CyPlayer::setStabilityVary, "void ( int, int )")
 		.def("getStabilitySwing", &CyPlayer::getStabilitySwing, "int ( )")
 		.def("setStabilitySwing", &CyPlayer::setStabilitySwing, "void ( int )")
+		// Absinthe: swing instability in anarchy
+		.def("getStabSwingAnarchy", &CyPlayer::getStabSwingAnarchy, "int ( )")
+		.def("setStabSwingAnarchy", &CyPlayer::setStabSwingAnarchy, "void ( int )")
 		.def("getStability", &CyPlayer::getStability, "int ( )")
 		.def("getWarPeaceChange", &CyPlayer::getWarPeaceChange, "int ( )")
 

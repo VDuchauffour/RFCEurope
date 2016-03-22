@@ -129,34 +129,63 @@ class Stability:
 
 		# Swing stability converges to zero very fast
 		iStabilitySwing = pPlayer.getStabilitySwing()
-		if ( iStabilitySwing < -7 or iStabilitySwing > 7 ):
-			pPlayer.setStabilitySwing( pPlayer.getStabilitySwing()/2 )
+		if ( iStabilitySwing < -3 or iStabilitySwing > 3 ):
+			pPlayer.setStabilitySwing ( pPlayer.getStabilitySwing() / 2 )
 		elif ( iStabilitySwing < 0 ):
-			pPlayer.setStabilitySwing( min( 0, pPlayer.getStabilitySwing() + 3) )
+			pPlayer.setStabilitySwing ( min( 0, pPlayer.getStabilitySwing() + 2) )
 		elif ( iStabilitySwing > 0 ):
-			pPlayer.setStabilitySwing( max( 0, pPlayer.getStabilitySwing() - 3) )
+			pPlayer.setStabilitySwing ( max( 0, pPlayer.getStabilitySwing() - 2) )
 
-		if ( pPlayer.getAnarchyTurns() != 0 ):
+		# Absinthe: Anarchy swing stability gets halved every turn
+		iStabSwingAnarchy = pPlayer.getStabSwingAnarchy()
+		if ( iStabSwingAnarchy > 1):
+			pPlayer.setStabSwingAnarchy ( pPlayer.getStabSwingAnarchy() / 2 )
+		elif ( iStabSwingAnarchy == 1):
+			pPlayer.setStabSwingAnarchy ( 0 )
+
+		# Absinthe: anarchy timer refreshes later in the turn, so it should be -1 if we want to have it on the correct turns, at least for the human player
+		# 			but this also means that all 1st turn instability has to be added right on the revolution / converting - CivicsScreen.doRevolution / ReligionScreen.ReligionConvert
+		#			those functions are only applied on human interaction, so we keep thing the way they were before (1 turn delay) for the AI
+		if ( pPlayer.isHuman() ):
+			if ( pPlayer.getAnarchyTurns() - 1 > 0 ):
+				print ("at least 2nd anarchy turn")
+				self.recalcCivicCombos(iPlayer)
+				self.recalcEpansion(pPlayer)
+				iNumCities = pPlayer.getNumCities()
+				if ( iPlayer != con.iPrussia ): # Absinthe: Prussian UP
+					pPlayer.changeStabilityBase ( iCathegoryCivics, min( 0, max( -2, (-iNumCities+4) / 7 ) ) ) # 0 with 1-4 cities, -1 with 5-11 cities, -2 with at least 12 cities
+
+					# Absinthe: more constant swing instability during anarchy, instead of ever-increasing instability from it
+					iStabSwingAnarchy = pPlayer.getStabSwingAnarchy()
+					if ( iStabSwingAnarchy > 0 ): # half of it is already included in the swing, we only add the other half
+						pPlayer.setStabSwingAnarchy ( 4 )
+					else: # safety net (for the human player we add it before the first check)
+						pPlayer.setStabSwingAnarchy ( 8 )
+					pPlayer.setStabilitySwing ( pPlayer.getStabilitySwing() - pPlayer.getStabSwingAnarchy() )
+
+		elif ( pPlayer.getAnarchyTurns() > 0 ): # with the delay for the AI
 			self.recalcCivicCombos(iPlayer)
 			self.recalcEpansion(pPlayer)
 			iNumCities = pPlayer.getNumCities()
 			if ( iPlayer != con.iPrussia ): # Absinthe: Prussian UP
-				if ( pPlayer.isHuman() ):
-					pPlayer.changeStabilityBase( iCathegoryCivics, min( 0, max( -2, (-iNumCities+3) / 6 ) ) ) # 0 with 1-3 cities, -1 with 4-9 cities, -2 with at least 10 cities
-				else:
-					pPlayer.changeStabilityBase( iCathegoryCivics, min( 0, max( -1, (-iNumCities+3) / 6 ) ) ) # the AI is largely unaware of Stability issues
+				pPlayer.changeStabilityBase ( iCathegoryCivics, min( 0, max( -1, (-iNumCities+6) / 7 ) ) ) # Absinthe: reduced for the AI: 0 with 1-6 cities, -1 with at least 7
 
-			if ( iPlayer != con.iPrussia ): # Absinthe: Prussian UP
-				pPlayer.setStabilitySwing( pPlayer.getStabilitySwing() - 8  )
+				# Absinthe: more constant swing instability during anarchy, instead of ever-increasing instability from it
+				iStabSwingAnarchy = pPlayer.getStabSwingAnarchy()
+				if ( iStabSwingAnarchy > 0 ): # it was already halved at least once (thus half of it is already included in the swing), we only add the other half
+					pPlayer.setStabSwingAnarchy ( 2 )
+				else: # add the normal value on the first check
+					pPlayer.setStabSwingAnarchy ( 4 )
+				pPlayer.setStabilitySwing ( pPlayer.getStabilitySwing() - pPlayer.getStabSwingAnarchy() )
 
 		if ( pPlayer.getWarPeaceChange() == -1 ): # Whenever your nation switches from peace to the state of war (with a major nation)
 			gc.getPlayer( iPlayer ).changeStabilityBase( iCathegoryCities, -1 ) # 1 permanent stability loss, since your people won't appreciate leaving the state of peace
 			pPlayer.setStabilitySwing( pPlayer.getStabilitySwing() - 3  )
 
 		if ( (iGameTurn + iPlayer) % 3 == 0 ): # Economy Check every 3 turns
-			self.recalcEconomy( pPlayer )
+			self.recalcEconomy ( pPlayer )
 
-		self.recalcCity( iPlayer ) # update city stability
+		self.recalcCity ( iPlayer ) # update city stability
 
 		# # Absinthe: Collapse dates for AI nations
 		if(iGameTurn > con.tCollapse[iPlayer] and iPlayer != utils.getHumanID() and pPlayer.isAlive()):
@@ -164,8 +193,17 @@ class Stability:
 			if(iGameTurn % 4 == 0 and iGameTurn <= con.tCollapse[iPlayer] + 60):
 				pPlayer.changeStabilityBase(iCathegoryCities, -1)
 
-		#if ( iGameTurn % 6 == 1 ):
-		#	self.printStability( iGameTurn, iPlayer )
+
+	def refreshBaseStability(self, iPlayer): #Base stability is temporary (i.e. turn-based) stability
+		# Absinthe: this is called upon entering the stability/finance screen (F2)
+
+		cyPlayer = PyHelpers.PyPlayer(iPlayer)
+		pPlayer = gc.getPlayer(iPlayer)
+
+		self.recalcCivicCombos ( iPlayer )
+		self.recalcEpansion ( pPlayer )
+		self.recalcEconomy ( pPlayer )
+		self.recalcCity ( iPlayer )
 
 
 	def continentsNormalization(self, iGameTurn): #Sedna17
@@ -652,15 +690,17 @@ class Stability:
 				iProduction -= pCity.getYieldRate(YieldTypes.YIELD_PRODUCTION) / 10
 				iLargeCities += 1
 
-		iFinances = (iFinances * ( 100 - 20 * iLargeCities / iNumCities ) ) / 100
-		iProductionPenalty = min( iProductionPenalty + iNumCities / 3, 0 )
-		if ( pPlayer.getPicklefreeParameter( con.iIsHasEscorial ) == 1 ): # remove the production penalty, otherwise it will be OP
-			iProductionPenalty = max( iProductionPenalty, 0 )
-		iIndustrialStability = min( max( 2 * ( 2 * iAgriculture + iProduction ) / iPopNum - 13, -3 ), 3 )
-		iFinancialPowerPerCity = ( iFinances - iInflation + iImports + iExports ) / iNumCities
-		iFinancialStability = min( max( ( iFinances - iInflation + iImports + iExports )/iPopNum + iProductionPenalty,  -4 ), 4 )
-		#print(" Civilization: ",pPlayer.getID(),"  ",iFinancialStability,iIndustrialStability )
-		pPlayer.setStabilityVary( iCathegoryEconomy, iFinancialStability + iIndustrialStability )
+		if ( iNumCities > 0 ):
+			iFinances = (iFinances * ( 100 - 20 * iLargeCities / iNumCities ) ) / 100
+			iProductionPenalty = min( iProductionPenalty + iNumCities / 3, 0 )
+			if ( pPlayer.getPicklefreeParameter( con.iIsHasEscorial ) == 1 ): # remove the production penalty, otherwise it will be OP
+				iProductionPenalty = max( iProductionPenalty, 0 )
+			iIndustrialStability = min( max( 2 * ( 2 * iAgriculture + iProduction ) / iPopNum - 13, -3 ), 3 )
+			iFinancialPowerPerCity = ( iFinances - iInflation + iImports + iExports ) / iNumCities
+			iFinancialStability = min( max( ( iFinances - iInflation + iImports + iExports )/iPopNum + iProductionPenalty,  -4 ), 4 )
+			pPlayer.setStabilityVary( iCathegoryEconomy, iFinancialStability + iIndustrialStability )
+		else:
+			pPlayer.setStabilityVary( iCathegoryEconomy, 0 )
 
 
 	def recalcEpansion( self, pPlayer ):

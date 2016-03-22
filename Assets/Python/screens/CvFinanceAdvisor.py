@@ -106,9 +106,9 @@ class CvFinanceAdvisor:
 				if (gc.getPlayer(j).isAlive()):
 					screen.addPullDownString(self.szDropdownName, gc.getPlayer(j).getName(), j, j, False )
 
-		# update all stability values for the active player
-		iGameTurn = gc.getGame().getGameTurn()
-		stab.updateBaseStability(iGameTurn, self.iActiveLeader)
+		# Absinthe: update all stability values for the active player
+		#iGameTurn = gc.getGame().getGameTurn()
+		stab.refreshBaseStability(self.iActiveLeader)
 
 		# draw the contents
 		self.drawContents()

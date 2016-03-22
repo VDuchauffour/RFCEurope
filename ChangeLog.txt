@@ -16,6 +16,16 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 Changes for RFCE 1.4:
 (under development)
 
+	General changes:
+		- Anarchy instability now appears right away for the human player, not with a turn delay
+		- Revised swing stability calculations, now converges to 0 a little slower
+		- Lowered anarchy swing instability for the AI, normal anarchy instability for everyone
+
+	Bugfixes:
+		- Various dll bugfixes and optimizations from Better BTS AI, K-Mod, Afforess
+		- Fixed serious bug with stability refreshment on demand (F2), which caused continuously changing (mostly decreasing) stability in some cases
+		- Fixed 2 different issues connected to stability calculations in anarchy (resulted in extra instability in longer anarchies)
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for RFCE 1.3:
