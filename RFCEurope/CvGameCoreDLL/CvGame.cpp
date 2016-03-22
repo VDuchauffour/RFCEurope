@@ -2221,9 +2221,9 @@ void CvGame::update()
 		*/ //Absinthe: disabling old code end
 		// Absinthe: start Rhye's AIAutoPlay
 		int iHuman = getActivePlayer();
-		if ( startingTurn[iHuman] > 0 )
+		if ( startingTurn[iHuman] > getScenarioStartTurn() )
 		{
-			if (getGameTurn() == 0)
+			if (getGameTurn() == getScenarioStartTurn())
 			{
 				setAIAutoPlay(1);
 			}

@@ -10,6 +10,7 @@ import RFCUtils
 import ProvinceManager # manage provinces here to link to spawn/rebirth
 import Consts as con
 import XMLConsts as xml
+import Religions
 import Victory
 
 
@@ -20,6 +21,7 @@ import Victory
 gc = CyGlobalContext()	# LOQ
 PyPlayer = PyHelpers.PyPlayer	# LOQ
 utils = RFCUtils.RFCUtils()
+rel = Religions.Religions()
 vic = Victory.Victory()
 
 iCheatersPeriod = 12
@@ -642,59 +644,39 @@ class RiseAndFall:
 
 		#self.setupBirthTurnModifiers() #causes a crash on civ switch?
 
-		# 3Miro:
-		#if (not gc.getPlayer(0).isPlayable()): #late start condition
-		#	self.clear600ADChina()
-
-		#if (gc.getPlayer(0).isPlayable()): #late start condition
-		self.create4000BCstartingUnits()
-		#else:
-		#	self.create600ADstartingUnits()
-		#self.assign4000BCtechs()
 		self.setEarlyLeaders()
-		iHuman = utils.getHumanID()
-		if iHuman != iByzantium:
-			vic.setAllUHVFailed(iByzantium)
-		if iHuman != iFrankia:
-			vic.setAllUHVFailed(iFrankia)
-		vic.setAllUHVFailed(iPope)
 
 		#Sedna17 Respawn setup special respawn turns
 		self.setupRespawnTurns()
 
-		# set starting gold
-		pBurgundy.changeGold(250)
-		pByzantium.changeGold(1000)
-		pFrankia.changeGold(50)
-		pArabia.changeGold(200)
-		pBulgaria.changeGold(100)
-		pCordoba.changeGold(200)
-		pSpain.changeGold(500)
-		pNorway.changeGold( 250 )
-		pDenmark.changeGold( 300 )
-		pVenecia.changeGold(300)
-		pNovgorod.changeGold(400)
-		pKiev.changeGold(250)
-		pHungary.changeGold(300)
-		pGermany.changeGold(300)
-		pScotland.changeGold(300)
-		pPoland.changeGold(300)
-		pPrussia.changeGold(300)
-		pLithuania.changeGold(400)
-		pMoscow.changeGold(400)
-		pGenoa.changeGold(400)
-		pMorocco.changeGold(400)
-		pEngland.changeGold(400)
-		pPortugal.changeGold(450)
-		pAragon.changeGold(450)
-		pAustria.changeGold(1000)
-		pTurkey.changeGold(1000)
-		pSweden.changeGold(400)
-		pDutch.changeGold(1500)
-		pIndependent.changeGold(50)
-		pIndependent2.changeGold(50)
-		pIndependent3.changeGold(50)
-		pIndependent4.changeGold(50)
+		iHuman = utils.getHumanID()
+		if utils.getScenario() == con.i500AD:
+			self.create500ADstartingUnits()
+			if iHuman != iByzantium:
+				vic.setAllUHVFailed(iByzantium)
+			if iHuman != iFrankia:
+				vic.setAllUHVFailed(iFrankia)
+		else:
+			self.create1200ADstartingUnits()
+			for iCiv in range(iAragon+1):
+				self.showArea(iCiv, con.i1200AD)
+				self.assign1200ADtechs(iCiv)	#Temporary all civs get Aragon starting techs
+				self.initContact(iCiv, False)
+				if iHuman != iCiv:
+					vic.setAllUHVFailed(iCiv)
+			rel.set1200Faith()
+			self.setDiplo1200AD()
+			self.LeaningTowerGP()
+			rel.spread1200ADJews() # Spread Jews to some random cities
+			vic.set1200UHVDone(iHuman)
+			self.assign1200ADtechs(iPope)	#Temporary all civs get Aragon starting techs
+
+		self.assignGold(utils.getScenario())
+		vic.setAllUHVFailed(iPope)
+
+	def assignGold(self, iScenario):
+		for iPlayer in range(con.iNumPlayers):
+			gc.getPlayer(iPlayer).changeGold(con.tStartingGold[iScenario][iPlayer])
 
 		# display welcome message
 		#self.displayWelcomePopup()
@@ -813,8 +795,8 @@ class RiseAndFall:
 			iTeamMajor = gc.getPlayer(i).getTeam()
 			pTeamMajor = gc.getTeam( iTeamMajor )
 			for j in range( iNumTotalPlayers ):
-				if ( con.tWarAtSpawn[i][j] > 0 ): # if there is a chance for war
-					if ( gc.getGame().getSorenRandNum(100, 'war on spawn roll') < con.tWarAtSpawn[i][j] ):
+				if ( con.tWarAtSpawn[utils.getScenario()][i][j] > 0 ): # if there is a chance for war
+					if ( gc.getGame().getSorenRandNum(100, 'war on spawn roll') < con.tWarAtSpawn[utils.getScenario()][i][j] ):
 						iTeamSecond = gc.getPlayer(j).getTeam()
 						pTeamSecond = gc.getTeam( iTeamSecond )
 						#print(" 3Miro WAR ON SPAWN between ",iTeamMajor,iTeamSecond)
@@ -2455,10 +2437,32 @@ class RiseAndFall:
 			self.ottomanInvasion(iCiv,(77,23))
 
 
-	def create600ADstartingUnits( self ):
-		# 3Miro: not needed
-		pass
+	def create1200ADstartingUnits( self ):
 
+		if ( pSweden.isHuman() and tBirth[iSweden] > 0 ):
+			utils.makeUnit(iSettler, iSweden, tCapitals[iSweden], 1)
+			utils.makeUnit(xml.iSwordsman, iSweden, tCapitals[iSweden], 1)
+
+		elif ( pPrussia.isHuman() and tBirth[iPrussia] > 0 ):
+			utils.makeUnit(iSettler, iPrussia, tCapitals[iPrussia], 1)
+			utils.makeUnit(xml.iSwordsman, iPrussia, tCapitals[iPrussia], 1)
+
+		elif ( pLithuania.isHuman() and tBirth[iLithuania] > 0 ):
+			utils.makeUnit(iSettler, iLithuania, tCapitals[iLithuania], 1)
+			utils.makeUnit(xml.iSwordsman, iLithuania, tCapitals[iLithuania], 1)
+
+		elif ( pAustria.isHuman() and tBirth[iAustria] > 0 ):
+			utils.makeUnit(iSettler, iAustria, tCapitals[iAustria], 1)
+			utils.makeUnit(xml.iLongSwordsman, iAustria, tCapitals[iAustria], 1)
+
+		elif ( pTurkey.isHuman() and tBirth[iTurkey] > 0 ):
+			tTurkishStart = ( tCapitals[iTurkey][0]+5, tCapitals[iTurkey][1]+30 )
+			utils.makeUnit(iSettler, iTurkey, tTurkishStart, 1)
+			utils.makeUnit(xml.iMaceman, iTurkey, tTurkishStart, 1)
+
+		elif ( pDutch.isHuman() and tBirth[iDutch] > 0 ):
+			utils.makeUnit(iSettler, iDutch, tCapitals[iDutch], 1)
+			utils.makeUnit(xml.iMaceman, iDutch, tCapitals[iDutch], 1)
 
 	def ottomanInvasion(self,iCiv,tPlot):
 		print("I made Ottomans on Gallipoli")
@@ -2469,7 +2473,7 @@ class RiseAndFall:
 		utils.makeUnit(xml.iIslamicMissionary, iCiv, tPlot, 2)
 
 
-	def create4000BCstartingUnits( self ):
+	def create500ADstartingUnits( self ):
 		# 3Miro: units on start (note Spearman might be an up to date upgraded defender, tech dependent)
 
 		utils.makeUnit(xml.iSettler, iFrankia, tCapitals[iFrankia], 3)
@@ -2595,11 +2599,20 @@ class RiseAndFall:
 			utils.makeUnit(iSettler, iDutch, tCapitals[iDutch], 1)
 			utils.makeUnit(xml.iMaceman, iDutch, tCapitals[iDutch], 1)
 
-
-	def assign600ADTechs( self ):
-		# 3Miro: not needed
-		pass
-
+	def assign1200ADtechs(self, iCiv):
+		# Temporary everyone gets Aragon techs
+		teamCiv = gc.getTeam(iCiv)
+		for iTech in range( xml.iFarriers + 1 ):
+			teamCiv.setHasTech( iTech, True, iCiv, False, False )
+		teamCiv.setHasTech( xml.iBlastFurnace, True, iCiv, False, False )
+		teamCiv.setHasTech( xml.iCodeOfLaws, True, iCiv, False, False )
+		teamCiv.setHasTech( xml.iLiterature, True, iCiv, False, False )
+		teamCiv.setHasTech( xml.iLateenSails, True, iCiv, False, False )
+		teamCiv.setHasTech( xml.iMapMaking, True, iCiv, False, False )
+		teamCiv.setHasTech( xml.iAristocracy, True, iCiv, False, False )
+		teamCiv.setHasTech( xml.iPlateArmor, True, iCiv, False, False )
+		teamCiv.setHasTech( xml.iGothicArchitecture, True, iCiv, False, False )
+		teamCiv.setHasTech( xml.iSiegeEngines, True, iCiv, False, False )
 
 	def assignTechs( self, iCiv ):
 		# 3Miro: other than the original techs
@@ -2958,175 +2971,33 @@ class RiseAndFall:
 				gc.getMap().plot(iX, iY).setRevealed(gc.getPlayer(iCiv).getTeam(), True, False, -1)
 
 
-	def showArea(self,iCiv):
+	def showArea(self, iCiv, iScenario = con.i500AD):
 		#print(" Visible for: ",iCiv )
-		for iI in range( len( tVisible[iCiv] ) ):
-			self.showRect( iCiv, tVisible[iCiv][iI][0], tVisible[iCiv][iI][1], tVisible[iCiv][iI][2], tVisible[iCiv][iI][3] )
+		for iI in range( len( tVisible[iScenario][iCiv] ) ):
+			self.showRect( iCiv, tVisible[iScenario][iCiv][iI][0], tVisible[iScenario][iCiv][iI][1], tVisible[iScenario][iCiv][iI][2], tVisible[iScenario][iCiv][iI][3] )
 		#print(" Visible for: ",iCiv )
 		#pass
 
 
-	def initContact(self, iCiv ):
-		if ( iCiv == iByzantium ):
-			if ( pPope.isAlive() and ( not teamByzantium.isHasMet( pPope.getTeam() ) ) ):
-				teamByzantium.meet( pPope.getTeam(), True )
-		elif ( iCiv == iArabia ):
-			if ( pByzantium.isAlive() and ( not teamArabia.isHasMet( pByzantium.getTeam() ) ) ):
-				teamArabia.meet( pByzantium.getTeam(), True )
-		elif ( iCiv == iBulgaria ):
-			if ( pByzantium.isAlive() and ( not teamBulgaria.isHasMet( pByzantium.getTeam() ) ) ):
-				teamBulgaria.meet( pByzantium.getTeam(), True )
-		elif ( iCiv == iCordoba ):
-			if ( pArabia.isAlive() and ( not teamCordoba.isHasMet( pArabia.getTeam() ) ) ):
-				teamCordoba.meet( pArabia.getTeam(), True )
-		elif ( iCiv == iVenecia ):
-			if ( pPope.isAlive() and ( not teamVenecia.isHasMet( pPope.getTeam() ) ) ):
-				teamVenecia.meet( pPope.getTeam(), True )
-			if ( pByzantium.isAlive() and ( not teamVenecia.isHasMet( pByzantium.getTeam() ) ) ):
-				teamVenecia.meet( pByzantium.getTeam(), True )
-		elif ( iCiv == iBurgundy ):
-			if ( pFrankia.isAlive() and ( not teamBurgundy.isHasMet( pFrankia.getTeam() ) ) ):
-				teamBurgundy.meet( pFrankia.getTeam(), True )
-		elif ( iCiv == iGermany ):
-			if ( pBurgundy.isAlive() and ( not teamGermany.isHasMet( pBurgundy.getTeam() ) ) ):
-				teamGermany.meet( pBurgundy.getTeam(), True )
-			if ( pFrankia.isAlive() and ( not teamGermany.isHasMet( pFrankia.getTeam() ) ) ):
-				teamGermany.meet( pFrankia.getTeam(), True )
-		elif ( iCiv == iNovgorod ):
-			if ( pBulgaria.isAlive() and ( not teamNovgorod.isHasMet( pBulgaria.getTeam() ) ) ):
-				teamNovgorod.meet( pBulgaria.getTeam(), True )
-			if ( pByzantium.isAlive() and ( not teamNovgorod.isHasMet( pByzantium.getTeam() ) ) ):
-				teamNovgorod.meet( pByzantium.getTeam(), True )
-		elif ( iCiv == iKiev ):
-			if ( pBulgaria.isAlive() and ( not teamKiev.isHasMet( pBulgaria.getTeam() ) ) ):
-				teamKiev.meet( pBulgaria.getTeam(), True )
-			if ( pByzantium.isAlive() and ( not teamKiev.isHasMet( pByzantium.getTeam() ) ) ):
-				teamKiev.meet( pByzantium.getTeam(), True )
-			if ( pNovgorod.isAlive() and ( not teamKiev.isHasMet( pNovgorod.getTeam() ) ) ):
-				teamKiev.meet( pNovgorod.getTeam(), True )
-		elif ( iCiv == iHungary ):
-			if ( pBulgaria.isAlive() and ( not teamHungary.isHasMet( pBulgaria.getTeam() ) ) ):
-				teamHungary.meet( pBulgaria.getTeam(), True )
-			if ( pByzantium.isAlive() and ( not teamHungary.isHasMet( pByzantium.getTeam() ) ) ):
-				teamHungary.meet( pByzantium.getTeam(), True )
-			if ( pKiev.isAlive() and ( not teamHungary.isHasMet( pKiev.getTeam() ) ) ):
-				teamHungary.meet( pKiev.getTeam(), True )
-		elif ( iCiv == iSpain ):
-			if ( pBurgundy.isAlive() and ( not teamSpain.isHasMet( pBurgundy.getTeam() ) ) ):
-				teamSpain.meet( pBurgundy.getTeam(), True )
-			if ( pFrankia.isAlive() and ( not teamSpain.isHasMet( pFrankia.getTeam() ) ) ):
-				teamSpain.meet( pFrankia.getTeam(), True )
-			if ( pCordoba.isAlive() and ( not teamSpain.isHasMet( pCordoba.getTeam() ) ) ):
-				teamSpain.meet( pCordoba.getTeam(), True )
-		elif ( iCiv == iDenmark ):
-			if ( pNorway.isAlive() and ( not teamDenmark.isHasMet( pNorway.getTeam() ) ) ):
-				teamDenmark.meet( pNorway.getTeam(), True )
-			if ( pGermany.isAlive() and ( not teamDenmark.isHasMet( pGermany.getTeam() ) ) ):
-				teamDenmark.meet( pGermany.getTeam(), True )
-		elif ( iCiv == iScotland ):
-			if ( pFrankia.isAlive() and ( not teamScotland.isHasMet( pFrankia.getTeam() ) ) ):
-				teamScotland.meet( pFrankia.getTeam(), True )
-			if ( pNorway.isAlive() and ( not teamScotland.isHasMet( pNorway.getTeam() ) ) ):
-				teamScotland.meet( pNorway.getTeam(), True )
-		elif ( iCiv == iPoland ):
-			if ( pGermany.isAlive() and ( not teamPoland.isHasMet( pGermany.getTeam() ) ) ):
-				teamPoland.meet( pGermany.getTeam(), True )
-			if ( pHungary.isAlive() and ( not teamPoland.isHasMet( pHungary.getTeam() ) ) ):
-				teamPoland.meet( pHungary.getTeam(), True )
-		elif ( iCiv == iGenoa ):
-			if ( pBurgundy.isAlive() and ( not teamGenoa.isHasMet( pBurgundy.getTeam() ) ) ):
-				teamGenoa.meet( pBurgundy.getTeam(), True )
-			if ( pByzantium.isAlive() and ( not teamGenoa.isHasMet( pByzantium.getTeam() ) ) ):
-				teamGenoa.meet( pByzantium.getTeam(), True )
-			if ( pVenecia.isAlive() and ( not teamGenoa.isHasMet( pVenecia.getTeam() ) ) ):
-				teamGenoa.meet( pVenecia.getTeam(), True )
-			if ( pPope.isAlive() and ( not teamGenoa.isHasMet( pPope.getTeam() ) ) ):
-				teamGenoa.meet( pPope.getTeam(), True )
-		elif ( iCiv == iMorocco ):
-			if ( pArabia.isAlive() and ( not teamMorocco.isHasMet( pArabia.getTeam() ) ) ):
-				teamMorocco.meet( pArabia.getTeam(), True )
-			if ( pSpain.isAlive() and ( not teamMorocco.isHasMet( pSpain.getTeam() ) ) ):
-				teamMorocco.meet( pSpain.getTeam(), True )
-			if ( pCordoba.isAlive() and ( not teamMorocco.isHasMet( pCordoba.getTeam() ) ) ):
-				teamMorocco.meet( pCordoba.getTeam(), True )
-		elif ( iCiv == iEngland ):
-			if ( pScotland.isAlive() and ( not teamEngland.isHasMet( pScotland.getTeam() ) ) ):
-				teamEngland.meet( pScotland.getTeam(), True )
-			if ( pFrankia.isAlive() and ( not teamEngland.isHasMet( pFrankia.getTeam() ) ) ):
-				teamEngland.meet( pFrankia.getTeam(), True )
-			if ( pDenmark.isAlive() and ( not teamEngland.isHasMet( pDenmark.getTeam() ) ) ):
-				teamEngland.meet( pDenmark.getTeam(), True )
-			if ( pNorway.isAlive() and ( not teamEngland.isHasMet( pNorway.getTeam() ) ) ):
-				teamEngland.meet( pNorway.getTeam(), True )
-		elif ( iCiv == iPortugal ):
-			if ( pSpain.isAlive() and ( not teamPortugal.isHasMet( pSpain.getTeam() ) ) ):
-				teamPortugal.meet( pSpain.getTeam(), True )
-			if ( pCordoba.isAlive() and ( not teamPortugal.isHasMet( pCordoba.getTeam() ) ) ):
-				teamPortugal.meet( pCordoba.getTeam(), True )
-		elif ( iCiv == iAragon ):
-			if ( pSpain.isAlive() and ( not teamAragon.isHasMet( pSpain.getTeam() ) ) ):
-				teamAragon.meet( pSpain.getTeam(), True )
-			if ( pCordoba.isAlive() and ( not teamAragon.isHasMet( pCordoba.getTeam() ) ) ):
-				teamAragon.meet( pCordoba.getTeam(), True )
-			if ( pBurgundy.isAlive() and ( not teamAragon.isHasMet( pBurgundy.getTeam() ) ) ):
-				teamAragon.meet( pBurgundy.getTeam(), True )
-			if ( pFrankia.isAlive() and ( not teamAragon.isHasMet( pFrankia.getTeam() ) ) ):
-				teamAragon.meet( pFrankia.getTeam(), True )
-		elif ( iCiv == iSweden ):
-			if ( pNovgorod.isAlive() and ( not teamSweden.isHasMet( pNovgorod.getTeam() ) ) ):
-				teamSweden.meet( pNovgorod.getTeam(), True )
-			if ( pDenmark.isAlive() and ( not teamSweden.isHasMet( pDenmark.getTeam() ) ) ):
-				teamSweden.meet( pDenmark.getTeam(), True )
-			if ( pNorway.isAlive() and ( not teamSweden.isHasMet( pNorway.getTeam() ) ) ):
-				teamSweden.meet( pNorway.getTeam(), True )
-		elif ( iCiv == iPrussia):
-			if ( pPoland.isAlive() and ( not teamPrussia.isHasMet( pPoland.getTeam() ) ) ):
-				teamPrussia.meet( pPoland.getTeam(), True )
-			if ( pNovgorod.isAlive() and ( not teamPrussia.isHasMet( pNovgorod.getTeam() ) ) ):
-				teamPrussia.meet( pNovgorod.getTeam(), True )
-			if ( pGermany.isAlive() and ( not teamPrussia.isHasMet( pGermany.getTeam() ) ) ):
-				teamPrussia.meet( pGermany.getTeam(), True )
-		elif ( iCiv == iLithuania):
-			if ( pPoland.isAlive() and ( not teamLithuania.isHasMet( pPoland.getTeam() ) ) ):
-				teamLithuania.meet( pPoland.getTeam(), True )
-			if ( pKiev.isAlive() and ( not teamLithuania.isHasMet( pKiev.getTeam() ) ) ):
-				teamLithuania.meet( pKiev.getTeam(), True )
-			if ( pNovgorod.isAlive() and ( not teamLithuania.isHasMet( pNovgorod.getTeam() ) ) ):
-				teamLithuania.meet( pNovgorod.getTeam(), True )
-			if ( pPrussia.isAlive() and ( not teamLithuania.isHasMet( pPrussia.getTeam() ) ) ):
-				teamLithuania.meet( pPrussia.getTeam(), True )
-		elif ( iCiv == iAustria):
-			if ( pPoland.isAlive() and ( not teamAustria.isHasMet( pPoland.getTeam() ) ) ):
-				teamAustria.meet( pPoland.getTeam(), True )
-			if ( pHungary.isAlive() and ( not teamAustria.isHasMet( pHungary.getTeam() ) ) ):
-				teamAustria.meet( pHungary.getTeam(), True )
-			if ( pGermany.isAlive() and ( not teamAustria.isHasMet( pGermany.getTeam() ) ) ):
-				teamAustria.meet( pGermany.getTeam(), True )
-			if ( pVenecia.isAlive() and ( not teamAustria.isHasMet( pVenecia.getTeam() ) ) ):
-				teamAustria.meet( pVenecia.getTeam(), True )
-		elif ( iCiv == iTurkey):
-			if ( pByzantium.isAlive() and ( not teamTurkey.isHasMet( pByzantium.getTeam() ) ) ):
-				teamTurkey.meet( pByzantium.getTeam(), True )
-			if ( pArabia.isAlive() and ( not teamTurkey.isHasMet( pArabia.getTeam() ) ) ):
-				teamTurkey.meet( pArabia.getTeam(), True )
-		elif ( iCiv == iMoscow ):
-			if ( pKiev.isAlive() and ( not teamMoscow.isHasMet( pKiev.getTeam() ) ) ):
-				teamMoscow.meet( pKiev.getTeam(), True )
-			if ( pNovgorod.isAlive() and ( not teamMoscow.isHasMet( pNovgorod.getTeam() ) ) ):
-				teamMoscow.meet( pNovgorod.getTeam(), True )
-			if ( pLithuania.isAlive() and ( not teamMoscow.isHasMet( pLithuania.getTeam() ) ) ):
-				teamMoscow.meet( pLithuania.getTeam(), True )
-		elif ( iCiv == iDutch ):
-			if ( pEngland.isAlive() and ( not teamDutch.isHasMet( pEngland.getTeam() ) ) ):
-				teamDutch.meet( pEngland.getTeam(), True )
-			if ( pSpain.isAlive() and ( not teamDutch.isHasMet( pSpain.getTeam() ) ) ):
-				teamDutch.meet( pSpain.getTeam(), True )
-			if ( pFrankia.isAlive() and ( not teamDutch.isHasMet( pFrankia.getTeam() ) ) ):
-				teamDutch.meet( pFrankia.getTeam(), True )
-			if ( pGermany.isAlive() and ( not teamDutch.isHasMet( pGermany.getTeam() ) ) ):
-				teamDutch.meet( pGermany.getTeam(), True )
-			if ( pDenmark.isAlive() and ( not teamDutch.isHasMet( pDenmark.getTeam() ) ) ):
-				teamDutch.meet( pDenmark.getTeam(), True )
-			if ( pNorway.isAlive() and ( not teamDutch.isHasMet( pNorway.getTeam() ) ) ):
-				teamDutch.meet( pNorway.getTeam(), True )
+	def initContact(self, iCiv , bMeet = True):
+		pCiv = gc.getPlayer(iCiv)
+		teamCiv = gc.getTeam(pCiv.getTeam())
+		for iOtherPlayer in con.lInitialContacts[utils.getScenario()][iCiv]:
+			pOtherPlayer = gc.getPlayer(iOtherPlayer)
+			tOtherPlayer = pOtherPlayer.getTeam()
+			if pOtherPlayer.isAlive() and not teamCiv.isHasMet(tOtherPlayer):
+				teamCiv.meet(tOtherPlayer, bMeet)
 
+	def LeaningTowerGP(self):
+		iGP = gc.getGame().getSorenRandNum(7, 'starting count')
+		pFlorentia = gc.getMap().plot(54, 32).getPlotCity()
+		iSpecialist = xml.iGreatProphet + iGP
+		pFlorentia.setFreeSpecialistCount(iSpecialist, 1)
+
+	def setDiplo1200AD(self):
+		self.changeAttitudeExtra(iByzantium, iArabia, -2)
+		self.changeAttitudeExtra(iScotland, iFrankia, 4)
+
+	def changeAttitudeExtra(self, iPlayer1, iPlayer2, iValue):	
+		gc.getPlayer(iPlayer1).AI_changeAttitudeExtra(iPlayer2, iValue)
+		gc.getPlayer(iPlayer2).AI_changeAttitudeExtra(iPlayer1, iValue)
