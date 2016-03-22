@@ -1821,17 +1821,17 @@ class RiseAndFall:
 			for i in range( con.iIndepStart, con.iIndepEnd + 1 ):
 				utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, i, False, False) #remaining independents in the region now belong to the new civ
 			print ("utils.flipUnitsInArea()")
-			#cover plots revealed by the lion (catapult in RFC)
-			plotZero = gc.getMap().plot( 32, 0 )
+			#cover plots revealed by the catapult
+			plotZero = gc.getMap().plot( 30, 0 ) #sync with rfcebalance module
 			if (plotZero.getNumUnits()):
 				catapult = plotZero.getUnit(0)
 				catapult.kill(False, iCiv)
+			gc.getMap().plot(29, 0).setRevealed(iCiv, False, True, -1);
+			gc.getMap().plot(30, 0).setRevealed(iCiv, False, True, -1);
 			gc.getMap().plot(31, 0).setRevealed(iCiv, False, True, -1);
-			gc.getMap().plot(32, 0).setRevealed(iCiv, False, True, -1);
-			gc.getMap().plot(33, 0).setRevealed(iCiv, False, True, -1);
+			gc.getMap().plot(29, 1).setRevealed(iCiv, False, True, -1);
+			gc.getMap().plot(30, 1).setRevealed(iCiv, False, True, -1);
 			gc.getMap().plot(31, 1).setRevealed(iCiv, False, True, -1);
-			gc.getMap().plot(32, 1).setRevealed(iCiv, False, True, -1);
-			gc.getMap().plot(33, 1).setRevealed(iCiv, False, True, -1);
 			print ("Plots covered")
 
 			if (gc.getPlayer(iCiv).getNumCities() > 0):

@@ -53,9 +53,9 @@ class CvCivicsScreen:
 		self.H_CIVIC_TEXT = self.H_CIVIC_CATEGORY - (self.MARGIN * 2)
 
 		self.X_TURNS = 25
-		self.Y_TURNS = self.Y_BOTTOM_PANEL + 24
+		self.Y_TURNS = self.Y_BOTTOM_PANEL + 20
 
-		self.X_MAINTENANCE = (self.W_BOTTOM_PANEL / 2) - 25
+		self.X_MAINTENANCE = (self.W_BOTTOM_PANEL / 3) * 2
 		self.Y_MAINTENANCE = self.Y_BOTTOM_PANEL + 20
 
 		self.X_DISSENT = (self.W_BOTTOM_PANEL / 2) + 25
@@ -302,11 +302,27 @@ class CvCivicsScreen:
 
 	def doRevolution(self):
 		'Change civics to player selection'
+		iplayer = self.iActivePlayer
 		player = gc.getPlayer(self.iActivePlayer)
 		screen = self.getScreen()
 
 		CyMessageControl().sendUpdateCivics(self.DisplayedCivics)
 		screen.hideScreen()
+
+		# Absinthe: stability stuff
+		print ("1st anarchy turn")
+		sta.recalcCivicCombos(iplayer)
+		sta.recalcEpansion(player)
+		iNumCities = player.getNumCities()
+
+		# Absinthe: anarchy swing instability should appear right on revolution (for the human player), not one turn later
+		if ( iplayer != con.iPrussia ): # Absinthe: Prussian UP
+			if ( player.isHuman() ): # the function is only called on human interaction, safety net
+				player.setStabilitySwing ( player.getStabilitySwing() -8 )
+				player.setStabSwingAnarchy ( 8 ) # the value doesn't really matter, but has to remain > 0 after the first StabSwingAnarchy check of sta.updateBaseStability
+
+				# Absinthe: base instability
+				player.changeStabilityBase ( con.iCathegoryCivics, min( 0, max( -2, (-iNumCities+4) / 7 ) ) ) # 0 with 1-4 cities, -1 with 5-11 cities, -2 with at least 12 cities
 
 
 

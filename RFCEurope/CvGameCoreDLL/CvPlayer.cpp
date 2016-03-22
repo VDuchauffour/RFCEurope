@@ -105,6 +105,7 @@ CvPlayer::CvPlayer()
 	m_aiStabilityBase[0] = 0; m_aiStabilityBase[1] = 0; m_aiStabilityBase[2] = 0; m_aiStabilityBase[3] = 0;
 	m_aiStabilityVary[0] = 0; m_aiStabilityVary[1] = 0; m_aiStabilityVary[2] = 0; m_aiStabilityVary[3] = 0;
 	m_iStabilitySwing = 0;
+	m_iStabSwingAnarchy = 0; // Absinthe: swing instability in anarchy
 	bIsAtWar = 0;
 	for( int i=0; i<10; i++ ){
 		m_aiPickleFree[i] = 0;
@@ -795,6 +796,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_aiStabilityBase[0] = 0; m_aiStabilityBase[1] = 0; m_aiStabilityBase[2] = 0; m_aiStabilityBase[3] = 0;
 	m_aiStabilityVary[0] = 0; m_aiStabilityVary[1] = 0; m_aiStabilityVary[2] = 0; m_aiStabilityVary[3] = 0;
 	m_iStabilitySwing = 0;
+	m_iStabSwingAnarchy = 0; // Absinthe: swing instability in anarchy
 	bIsAtWar = 0;
 	for( iI=0; iI<10; iI++ ){
 		m_aiPickleFree[iI] = 0;
@@ -17301,6 +17303,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	pStream ->Read(4,m_aiStabilityBase);
 	pStream ->Read(4,m_aiStabilityVary);
 	pStream ->Read(&m_iStabilitySwing);
+	pStream ->Read(&m_iStabSwingAnarchy); // Absinthe: swing instability in anarchy
 	pStream ->Read(&bIsAtWar);
 
 	pStream ->Read(10,m_aiPickleFree);
@@ -17754,6 +17757,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 	pStream ->Write(4,m_aiStabilityBase);
 	pStream ->Write(4,m_aiStabilityVary);
 	pStream ->Write(m_iStabilitySwing);
+	pStream ->Write(m_iStabSwingAnarchy); // Absinthe: swing instability in anarchy
 	pStream ->Write(bIsAtWar);
 	pStream ->Write(10,m_aiPickleFree);
 	pStream ->Write(m_iCivicUnitProductionModifier);
@@ -23584,6 +23588,13 @@ int CvPlayer::getStabilitySwing(){
 };
 void CvPlayer::setStabilitySwing( int iNewValue ){
 	m_iStabilitySwing = iNewValue;
+};
+// Absinthe: swing instability in anarchy
+int CvPlayer::getStabSwingAnarchy(){
+	return m_iStabSwingAnarchy;
+};
+void CvPlayer::setStabSwingAnarchy( int iNewValue ){
+	m_iStabSwingAnarchy = iNewValue;
 };
 int CvPlayer::getStability(){ // sum all categories and returns one number
 	int iI, iStab = 0;

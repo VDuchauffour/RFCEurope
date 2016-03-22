@@ -2395,6 +2395,13 @@ int CyPlayer::getStabilitySwing(){
 void CyPlayer::setStabilitySwing( int iNewValue ){
 	m_pPlayer ->setStabilitySwing( iNewValue );
 };
+// Absinthe: swing instability in anarchy
+int CyPlayer::getStabSwingAnarchy(){
+	return m_pPlayer ->getStabSwingAnarchy();
+};
+void CyPlayer::setStabSwingAnarchy( int iNewValue ){
+	m_pPlayer ->setStabSwingAnarchy( iNewValue );
+};
 int CyPlayer::getStability(){
 	return m_pPlayer ->getStability();
 };

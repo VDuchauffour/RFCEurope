@@ -556,6 +556,9 @@ public:
 	void setStabilityVary( int iCathegory, int iNewValue );
 	int getStabilitySwing();
 	void setStabilitySwing( int iNewValue );
+	// Absinthe: swing instability in anarchy
+	int getStabSwingAnarchy();
+	void setStabSwingAnarchy( int iNewValue );
 	int getStability();
 	int getWarPeaceChange();
 

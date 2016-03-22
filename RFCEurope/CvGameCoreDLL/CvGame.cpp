@@ -2221,9 +2221,9 @@ void CvGame::update()
 		*/ //Absinthe: disabling old code end
 		// Absinthe: start Rhye's AIAutoPlay
 		int iHuman = getActivePlayer();
-		if ( startingTurn[iHuman] > getScenarioStartTurn() )
+		if ( startingTurn[iHuman] > 0 )
 		{
-			if (getGameTurn() == getScenarioStartTurn())
+			if (getGameTurn() == 0)
 			{
 				setAIAutoPlay(1);
 			}
@@ -3438,9 +3438,7 @@ void CvGame::reviveActivePlayer()
 //Speed: End Modify
 		//Rhye - end
 
-		//GET_PLAYER(getActivePlayer()).initUnit(((UnitTypes)0), 0, 0); //Rhye
-		GET_PLAYER(getActivePlayer()).initUnit(((UnitTypes)iAutorunUnit), iAutorunX, iAutorunY); //Rhye (catapult) // 3Miro catapult, change to warrior //Sedna, not warrior anymore
-		//logMsg("init catapult in 00"); //Rhye
+		GET_PLAYER(getActivePlayer()).initUnit(((UnitTypes)iAutorunUnit), iAutorunX, iAutorunY); //Rhye: catapult // Absinthe: coordinates handled in RiseAndFall.py and RFCEBalance.py
 	}
 }
 
@@ -4120,7 +4118,7 @@ void CvGame::setAIAutoPlayCatapult(int iNewValue)
 						{
 							GC.getMapINLINE().plotINLINE( iX, iY )->setRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false, false, NO_TEAM, true);
 						}
-						break; // Absinthe: only the human player can have a unit there, no reason to continue
+						break; // Absinthe: if it was already set for the human player, no reason to continue
 					}
 				}
 			}
