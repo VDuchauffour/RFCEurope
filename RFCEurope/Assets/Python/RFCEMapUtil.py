@@ -8,7 +8,7 @@ import CvMainInterface
 import CvScreenEnums
 import RFCEMaps
 import RFCUtils
-import Consts as con
+import Consts
 
 
 gc = CyGlobalContext()
@@ -21,8 +21,8 @@ engine = CyEngine()
 #iMapMaxY = map.getGridHeight()
 #iMapMaxX = map.getGridWidth()
 #iNumPlots = map.numPlots()
-iMapMaxX = con.iMapMaxX
-iMapMaxY = con.iMapMaxY
+iMapMaxX = Consts.iMapMaxX
+iMapMaxY = Consts.iMapMaxY
 iNumPlots = iMapMaxX * iMapMaxY
 
 # Reserved AreaBorderLayers: 100 - 260(100 to iAreaBorderLayerProvinceOffset+iNumProvinces)
@@ -67,12 +67,12 @@ class RFCEMapManager:
 			self.settlerMap = self.convertMap(RFCEMaps.tSettlersMaps)
 			self.warMap = self.convertMap(RFCEMaps.tWarsMaps)
 			self.cityNameMap = self.convertMap(RFCEMaps.tCityMap)
-			self.coreAreasBL = self.convertArray(con.tCoreAreasTL)
-			self.coreAreasTR = self.convertArray(con.tCoreAreasBR)
-			self.coreAreasAdditionalPlots = self.convertNestedArray(con.tExceptions)
-			self.normalAreasBL = self.convertArray(con.tNormalAreasTL)
-			self.normalAreasTR = self.convertArray(con.tNormalAreasBR)
-			self.normalAreasSubtractedPlots = self.convertNestedArray(con.tNormalAreasSubtract)
+			self.coreAreasBL = self.convertArray(Consts.tCoreAreasTL)
+			self.coreAreasTR = self.convertArray(Consts.tCoreAreasBR)
+			self.coreAreasAdditionalPlots = self.convertNestedArray(Consts.tExceptions)
+			self.normalAreasBL = self.convertArray(Consts.tNormalAreasTL)
+			self.normalAreasTR = self.convertArray(Consts.tNormalAreasBR)
+			self.normalAreasSubtractedPlots = self.convertNestedArray(Consts.tNormalAreasSubtract)
 
 			self.mapsInitiated = True
 

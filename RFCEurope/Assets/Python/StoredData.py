@@ -12,22 +12,11 @@ PyPlayer = PyHelpers.PyPlayer
 
 class StoredData:
 
-	def __init__(self):
-		self.setup()
-
-	def load(self):
-		"""Loads and unpickles script data"""
-		self.scriptDict.update(pickle.loads(gc.getPlayer(con.iBarbarian).getScriptData()))
-
-	def save(self):
-		"""Pickles and saves script data"""
-		gc.getPlayer(con.iBarbarian).setScriptData(pickle.dumps(self.scriptDict))
-
-	def setup( self ):
+	def setupScriptData( self ):
 		"""Initialise the global script data dictionary for usage."""
 		#print( " 3Miro: Set The Array ",gc.getGame().getScriptData() )
 
-		self.scriptDict = {
+		scriptDict = {
 				# RiseAndFall
 				'iNewCiv': -1,
 				'iNewCivFlip': -1,
@@ -79,7 +68,7 @@ class StoredData:
 				'lVotesGathered': [0, 0],
 				'iRichestCatholic': 0,
 				'lDeviateTargets': [False for i in range(con.iNumPlayers)], #major players only
-				'tTarget': (0, 0),
+				'iTarget': [0, 0],
 				'iCrusadePower': 0,
 				'iCrusadeSucceeded': 0,
 				'iCrusadeToReturn': -1,
@@ -101,12 +90,6 @@ class StoredData:
 				# Absinthe: Persecution popup
 				'lPersecutionData': [-1, -1, -1],
 				'lPersecutionReligions': [],
-				
-				# Merijn: AI UHV
-				'bIgnoreAIUHV': True,
 				}
-		self.save()
+		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
-# All modules import the following single instance, not the class
-
-sd = StoredData()

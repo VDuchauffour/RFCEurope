@@ -143,9 +143,9 @@ class Stability:
 		elif ( iStabSwingAnarchy == 1):
 			pPlayer.setStabSwingAnarchy ( 0 )
 
-		# Absinthe: anarchy timer refreshes later in the turn, so it should be -1 if we want to have it on the correct turns, at least for the human player
-		# 			but this also means that all 1st turn instability has to be added right on the revolution / converting - CivicsScreen.doRevolution / ReligionScreen.ReligionConvert
-		#			those functions are only applied on human interaction, so we keep thing the way they were before (1 turn delay) for the AI
+		# Absinthe: anarchy timer refreshes later in the turn, so it should be reduced by 1 if we want to have it on the correct turns (if nothing else then for the human player)
+		# 			but this also means that all 1st turn instability has to be added directly on the revolution / converting - CivicsScreen.doRevolution / ReligionScreen.ReligionConvert
+		#			those functions are only applied on human interaction, so we keep things the way they were before (with the 1 turn delay) for the AI
 		if ( pPlayer.isHuman() ):
 			if ( pPlayer.getAnarchyTurns() - 1 > 0 ):
 				print ("at least 2nd anarchy turn")

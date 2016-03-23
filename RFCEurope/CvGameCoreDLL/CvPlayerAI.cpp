@@ -14969,6 +14969,22 @@ bool CvPlayerAI::AI_disbandUnit(int iExpThreshold, bool bObsolete)
 	iBestValue = MAX_INT;
 	pBestUnit = NULL;
 
+	// Absinthe: since independents and barbs do not have unit upkeep, they never have to disband their units - idea from DoC
+	//if (getID() == INDEPENDENT || getID() == INDEPENDENT2)
+	//if (eIndex == BARBARIAN)
+	//if (isIndep( GET_TEAM(eTeam).getLeaderID() ))
+	//if ( isIndep( eIndex ) )
+	if (getID() >= NUM_MAJOR_PLAYERS)
+	{
+		return false;
+	}
+
+	// Absinthe: prevent AI units from being disbanded for 20 turns after spawn - idea from DoC
+	if (getID() < NUM_MAJOR_PLAYERS && GC.getGame().getGameTurn() < startingTurn[getID()] + 20)
+	{
+		return false;
+	}
+
 	for(pLoopUnit = firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
 	{
 		if (!(pLoopUnit->hasCargo()))

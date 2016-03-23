@@ -5,11 +5,11 @@ from CvPythonExtensions import *
 import CvUtil
 import PyHelpers
 import Popup
+import cPickle as pickle
 import Consts as con
 import XMLConsts as xml
 import RFCUtils
 utils = RFCUtils.RFCUtils()
-from StoredData import sd
 
 # globals
 gc = CyGlobalContext()
@@ -45,22 +45,31 @@ class Plague:
 
 
 	def getPlagueCountdown( self, iCiv ):
-		return sd.scriptDict['lPlagueCountdown'][iCiv]
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		return scriptDict['lPlagueCountdown'][iCiv]
 
 	def setPlagueCountdown( self, iCiv, iNewValue ):
-		sd.scriptDict['lPlagueCountdown'][iCiv] = iNewValue
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		scriptDict['lPlagueCountdown'][iCiv] = iNewValue
+		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
 	def getGenericPlagueDates( self, i ):
-		return sd.scriptDict['lGenericPlagueDates'][i]
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		return scriptDict['lGenericPlagueDates'][i]
 
 	def setGenericPlagueDates( self, i, iNewValue ):
-		sd.scriptDict['lGenericPlagueDates'][i] = iNewValue
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		scriptDict['lGenericPlagueDates'][i] = iNewValue
+		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
 	def getBadPlague( self ):
-		return sd.scriptDict['bBadPlague']
+			scriptDict = pickle.loads( gc.getGame().getScriptData() )
+			return scriptDict['bBadPlague']
 
 	def setBadPlague( self, bBad ):
-		sd.scriptDict['bBadPlague'] = bBad
+			scriptDict = pickle.loads( gc.getGame().getScriptData() )
+			scriptDict['bBadPlague'] = bBad
+			gc.getGame().setScriptData(pickle.dumps(scriptDict))
 
 
 

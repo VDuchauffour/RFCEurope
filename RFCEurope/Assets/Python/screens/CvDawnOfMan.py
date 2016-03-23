@@ -135,10 +135,7 @@ class CvDawnOfMan:
 
 		# Added civ specific Dawn of Man screen, while keeping the generic version too - AbsintheRed
 		year = con.tYear[CyGame().getActiveTeam()][0] + CyTranslator().getText(con.tYear[CyGame().getActiveTeam()][1], ()) #3Miro
-		if utils.getScenario() == con.i1200ADScenario:
-			textKey = "TXT_KEY_DAWN_OF_MAN_TEXT_%d_1200" %(CyGame().getActiveTeam()) # edead - civ-specific dawn of man
-		else:
-			textKey = "TXT_KEY_DAWN_OF_MAN_TEXT_%d" %(CyGame().getActiveTeam()) # edead - civ-specific dawn of man
+		textKey = "TXT_KEY_DAWN_OF_MAN_TEXT_%d" %(CyGame().getActiveTeam()) # edead - civ-specific dawn of man
 		bodyString = localText.getText(textKey, (year, self.player.getCivilizationAdjectiveKey(), self.player.getNameKey())) # Absinthe
 
 		#Progress bar position (top left corner, width, height) #X coordinate: self.X_MAIN_PANEL + self.W_MAIN_PANEL/2 - Progress bar width/2

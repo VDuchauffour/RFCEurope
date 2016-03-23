@@ -11842,7 +11842,7 @@ void CvCity::doCulture()
 	if 	(getCommerceRate(COMMERCE_CULTURE) <=4)
 		changeCultureTimes100(getOwnerINLINE(), getCommerceRateTimes100(COMMERCE_CULTURE), false, true);
 	else {
-		// 3Miro: do culture modifyers if culture bonus is more than 4
+		// 3Miro: do culture modifiers if culture bonus is more than 4
 		if ( GET_PLAYER(getOwnerINLINE() ).isHuman() ){
 			changeCultureTimes100(getOwnerINLINE(), (getCommerceRateTimes100(COMMERCE_CULTURE) * cultureModifierHu[getOwnerINLINE()]) /100, false, true);
 		}else{
@@ -11866,7 +11866,7 @@ void CvCity::doCulture()
 				// find the first indep civ with non-zero culture in the city
 				iLoopCiv = INDEP_START;
 				while ( (iLoopCiv < NUM_ALL_PLAYERS) && (m_aiCulture[iLoopCiv] == 0) ) iLoopCiv++;
-				// remome either 1 point or 3% of the total independent culture
+				// remove either 1 point or 3% of the total independent culture
 				if ( isIndep( iLoopCiv ) ){
 					m_aiCulture[iLoopCiv] -=  std::max( 100, ( iIndepCulture * 3 ) / 100 );
 					if ( m_aiCulture[iLoopCiv] < 0 ) m_aiCulture[iLoopCiv] = 0;
