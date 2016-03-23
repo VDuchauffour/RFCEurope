@@ -5,7 +5,7 @@
 from CvPythonExtensions import *
 gc = CyGlobalContext()
 
-import XMLConsts as xml
+from XMLConsts import *
 
 # 3Miro: map size entered here
 iMapMaxX = 100
@@ -185,34 +185,34 @@ lOlderNeighbours = [
 # civ birth dates
 tBirth = (
 #Historic date		#Civ			#Actual spawn ingame		#Historic reference
-xml.i500AD,			#Byzantium		turn 0, so 500AD
-xml.i500AD,			#Frankia		turn 0, so 500AD
-xml.i632AD,			#Arabia			turn 33, so 632AD
-xml.i680AD,			#Bulgaria		turn 45, so 680AD
-xml.i711AD,			#Cordoba		turn 53, so 712AD
-xml.i810AD,			#Venice			turn 78, so 812AD			#De Facto independence: Pax Nicephori (803)		#810: the "modern" city of Venice (on the sea) was born
-xml.i843AD,			#Burgundy		turn 86, so 844AD			#Treaty of Verdun in 843 AD, splitting the Frankish Empire into West, Middle and East Francia
-xml.i856AD,			#Germany		turn 89, so 856AD
-xml.i864AD,			#Novgorod		turn 91, so 864AD			#Rurik moves capital to Novgorod
-xml.i872AD,			#Norway			turn 93, so 872AD
-xml.i882AD,			#Kiev			turn 95, so 880AD			#Oleg captures Kiev
-xml.i895AD,			#Hungary		turn 99, so 896AD			#Hungarian invasion of the Carpathian basin (Honfoglalás) in 895-896 AD
-xml.i910AD,			#Spain			turn 103, so 909AD			#The Kingdom of Leon was founded in 910 AD
-xml.i936AD,			#Denmark		turn 112, so 936AD
-xml.i960AD,			#Scotland		turn 120, so 960AD
-xml.i966AD,			#Poland			turn 122, so 966AD
-xml.i1016AD,		#Genoa			turn 139, so 1017AD			#Genoan and Pisan forces defeat the Muslim invaders of Sardinia in 1016 AD		#By 1015, the Republic of Genoa rised to control the entirety of Liguria
-xml.i1040AD,		#Morocco		turn 147, so 1041AD
-xml.i1066AD,		#England		turn 155, so 1065AD			#Battle of Hastings in 1066 AD
-xml.i1139AD,		#Portugal		turn 180, so 1140AD
-xml.i1164AD,		#Aragon			turn 188, so 1164AD
-xml.i1210AD,		#Sweden			turn 203, so 1209AD
-xml.i1224AD,		#Prussia		turn 208, so 1224AD
-xml.i1236AD,		#Lithuania		turn 212, so 1236AD
-xml.i1282AD,		#Austria		turn 227, so 1281AD			#The Habsburgs gained the rulership of the Duchy of Austria in 1282 AD
-xml.i1356AD,		#Ottomans		turn 252, so 1356AD			#The Earthquake of Gallipoli: 1354 AD		#Conquest of Adrianopolis: somewhere between 1361-1367 AD
-xml.i1380AD,		#Moscow			turn 260, so 1380AD
-xml.i1581AD,		#Dutch			turn 340, so 1580AD
+i500AD,			#Byzantium		turn 0, so 500AD
+i500AD,			#Frankia		turn 0, so 500AD
+i632AD,			#Arabia			turn 33, so 632AD
+i680AD,			#Bulgaria		turn 45, so 680AD
+i711AD,			#Cordoba		turn 53, so 712AD
+i810AD,			#Venice			turn 78, so 812AD			#De Facto independence: Pax Nicephori (803)		#810: the "modern" city of Venice (on the sea) was born
+i843AD,			#Burgundy		turn 86, so 844AD			#Treaty of Verdun in 843 AD, splitting the Frankish Empire into West, Middle and East Francia
+i856AD,			#Germany		turn 89, so 856AD
+i864AD,			#Novgorod		turn 91, so 864AD			#Rurik moves capital to Novgorod
+i872AD,			#Norway			turn 93, so 872AD
+i882AD,			#Kiev			turn 95, so 880AD			#Oleg captures Kiev
+i895AD,			#Hungary		turn 99, so 896AD			#Hungarian invasion of the Carpathian basin (Honfoglalás) in 895-896 AD
+i910AD,			#Spain			turn 103, so 909AD			#The Kingdom of Leon was founded in 910 AD
+i936AD,			#Denmark		turn 112, so 936AD
+i960AD,			#Scotland		turn 120, so 960AD
+i966AD,			#Poland			turn 122, so 966AD
+i1016AD,		#Genoa			turn 139, so 1017AD			#Genoan and Pisan forces defeat the Muslim invaders of Sardinia in 1016 AD		#By 1015, the Republic of Genoa rised to control the entirety of Liguria
+i1040AD,		#Morocco		turn 147, so 1041AD
+i1066AD,		#England		turn 155, so 1065AD			#Battle of Hastings in 1066 AD
+i1139AD,		#Portugal		turn 180, so 1140AD
+i1164AD,		#Aragon			turn 188, so 1164AD
+i1210AD,		#Sweden			turn 203, so 1209AD
+i1224AD,		#Prussia		turn 208, so 1224AD
+i1236AD,		#Lithuania		turn 212, so 1236AD
+i1282AD,		#Austria		turn 227, so 1281AD			#The Habsburgs gained the rulership of the Duchy of Austria in 1282 AD
+i1356AD,		#Ottomans		turn 252, so 1356AD			#The Earthquake of Gallipoli: 1354 AD		#Conquest of Adrianopolis: somewhere between 1361-1367 AD
+i1380AD,		#Moscow			turn 260, so 1380AD
+i1581AD,		#Dutch			turn 340, so 1580AD
 0,	#Papal States
 0,	#Indy1
 0,	#Indy2
@@ -224,30 +224,30 @@ xml.i1581AD,		#Dutch			turn 340, so 1580AD
 # "Collapse dates", gives a stability penalty to AI civs past this date. The idea is to speed up late game a bit - from RFCE++
 # Currently the penalty is small, mostly to weaken the civs if they are powerful
 tCollapse = (
-xml.i1453AD, #Byzantium - Ottoman conquest of Constantinople
+i1453AD, #Byzantium - Ottoman conquest of Constantinople
 999, #Frankia
-xml.i1517AD, #Arabia - to make room for the Ottomans
-xml.i1393AD, #Bulgaria - Bulgaria UHV 3
-xml.i1492AD, #Cordoba - Cordoba UHV 3
+i1517AD, #Arabia - to make room for the Ottomans
+i1393AD, #Bulgaria - Bulgaria UHV 3
+i1492AD, #Cordoba - Cordoba UHV 3
 999, #Venice
-xml.i1473AD, #Burgundy - Burgundy UHV 3
-xml.i1648AD, #Germany - to make room for Prussia
-xml.i1478AD, #Novgorod
-xml.i1523AD, #Norway
-xml.i1300AD, #Kiev - Kiev UHV 1
-xml.i1542AD, #Hungary - 1541, Ottoman conquest of Buda
+i1473AD, #Burgundy - Burgundy UHV 3
+i1648AD, #Germany - to make room for Prussia
+i1478AD, #Novgorod
+i1523AD, #Norway
+i1300AD, #Kiev - Kiev UHV 1
+i1542AD, #Hungary - 1541, Ottoman conquest of Buda
 999, #Spain
 999, #Denmark
-xml.i1650AD, #Scotland
-xml.i1780AD, #Poland
-xml.i1500AD, #Genoa
+i1650AD, #Scotland
+i1780AD, #Poland
+i1500AD, #Genoa
 999, #Morocco
 999, #England
 999, #Portugal
-xml.i1474AD, #Aragon
+i1474AD, #Aragon
 999, #Sweden
 999, #Prussia
-xml.i1569AD, #Lithuania - Lithuania UHV 3
+i1569AD, #Lithuania - Lithuania UHV 3
 999, #Austria
 999, #Turkey
 999, #Moscow
@@ -255,7 +255,7 @@ xml.i1569AD, #Lithuania - Lithuania UHV 3
 999  #Pope
 )
 
-(i500AD, i1200AD) = range(2)
+(i500ADScenario, i1200ADScenario) = range(2)
 
 tYear = ( #For the Dawn of Man starting screen
 ("500", "TXT_KEY_AD"),
@@ -1237,11 +1237,11 @@ tReligionSpreadFactor = ( # PROT, ISL, CATH, ORTH, JUD
 
 # The AI will persecute religions in this order, depending on its own state religion (one row per religion)
 tPersecutionOrder = (
-	(xml.iCatholicism, xml.iIslam, xml.iOrthodoxy, xml.iJudaism),			# Protestantism
-	(xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism, xml.iJudaism),	# Islam
-	(xml.iIslam, xml.iProtestantism, xml.iJudaism, xml.iOrthodoxy),			# Catholicism
-	(xml.iIslam, xml.iJudaism, xml.iCatholicism, xml.iProtestantism),		# Orthodoxy
-	(xml.iIslam, xml.iProtestantism, xml.iOrthodoxy, xml.iCatholicism),		# Judaism
+	(iCatholicism, iIslam, iOrthodoxy, iJudaism),			# Protestantism
+	(iCatholicism, iOrthodoxy, iProtestantism, iJudaism),	# Islam
+	(iIslam, iProtestantism, iJudaism, iOrthodoxy),			# Catholicism
+	(iIslam, iJudaism, iCatholicism, iProtestantism),		# Orthodoxy
+	(iIslam, iProtestantism, iOrthodoxy, iCatholicism),		# Judaism
 )
 
 
@@ -1369,101 +1369,101 @@ colony_positions_xy=[
 
 
 tLeaders = (		#First has to be the primary leader (the one that appears on the civ selection screen). Can be changed in the WB file (AbsintheRed)
-(xml.iJustinian, xml.iBasil_II, xml.iPalaiologos),
-(xml.iCharlemagne, xml.iPhilip_Augustus, xml.iJoan, xml.iLouis_Xiv),
-(xml.iAbu_Bakr, xml.iHarun_al_Rashid, xml.iSaladin),
-(xml.iSimeon, xml.iIvan_Asen),
-(xml.iAbd_ar_Rahman, xml.iMohammed_ibn_Nasr),
-(xml.iEnrico_Dandolo, xml.iAndrea_Gritti),
-(xml.iOtto_William, xml.iBeatrice, xml.iPhilip_the_Bold),
-(xml.iOtto_I, xml.iBarbarossa),
-(xml.iRurik, xml.iAlexander_Nevsky, xml.iMarfa),
-(xml.iHarald_Hardrada, xml.iHaakon_Iv),
-(xml.iYaroslav, xml.iMstislav, xml.iBohdan_Khmelnytsky),
-(xml.iStephen, xml.iBela_III, xml.iMatthias),
-(xml.iFerdinand_III, xml.iIsabella, xml.iPhilip_Ii),
-(xml.iHarald_Bluetooth, xml.iMargaret_I, xml.iChristian_Iv),
-(xml.iRobert_the_Bruce, xml.iJames_IV),
-(xml.iMieszko, xml.iCasimir, xml.iSobieski),
-(xml.iEmbriaco, xml.iBoccanegra),
-(xml.iYaqub_al_Mansur, xml.iIsmail_ibn_Sharif),
-(xml.iWilliam, xml.iElizabeth, xml.iGeorge_Iii),
-(xml.iAfonso, xml.iJoao, xml.iMaria_I),
-(xml.iJames_I, xml.iJohn_II),
-(xml.iMagnus_Ladulas, xml.iGustav_Vasa, xml.iGustav_Adolf, xml.iKarl_Xii),
-(xml.iHermann_von_Salza, xml.iFrederick,),
-(xml.iMindaugas, xml.iVytautas),
-(xml.iMaximilian, xml.iMaria_Theresa),
-(xml.iMehmed, xml.iSuleiman),
-(xml.iIvan_Iv, xml.iPeter, xml.iCatherine),
-(xml.iWillem_Van_Oranje, xml.iJohan_de_Witt),
-(xml.iThe_Pope,)
+(iJustinian, iBasil_II, iPalaiologos),
+(iCharlemagne, iPhilip_Augustus, iJoan, iLouis_Xiv),
+(iAbu_Bakr, iHarun_al_Rashid, iSaladin),
+(iSimeon, iIvan_Asen),
+(iAbd_ar_Rahman, iMohammed_ibn_Nasr),
+(iEnrico_Dandolo, iAndrea_Gritti),
+(iOtto_William, iBeatrice, iPhilip_the_Bold),
+(iOtto_I, iBarbarossa),
+(iRurik, iAlexander_Nevsky, iMarfa),
+(iHarald_Hardrada, iHaakon_Iv),
+(iYaroslav, iMstislav, iBohdan_Khmelnytsky),
+(iStephen, iBela_III, iMatthias),
+(iFerdinand_III, iIsabella, iPhilip_Ii),
+(iHarald_Bluetooth, iMargaret_I, iChristian_Iv),
+(iRobert_the_Bruce, iJames_IV),
+(iMieszko, iCasimir, iSobieski),
+(iEmbriaco, iBoccanegra),
+(iYaqub_al_Mansur, iIsmail_ibn_Sharif),
+(iWilliam, iElizabeth, iGeorge_Iii),
+(iAfonso, iJoao, iMaria_I),
+(iJames_I, iJohn_II),
+(iMagnus_Ladulas, iGustav_Vasa, iGustav_Adolf, iKarl_Xii),
+(iHermann_von_Salza, iFrederick,),
+(iMindaugas, iVytautas),
+(iMaximilian, iMaria_Theresa),
+(iMehmed, iSuleiman),
+(iIvan_Iv, iPeter, iCatherine),
+(iWillem_Van_Oranje, iJohan_de_Witt),
+(iThe_Pope,)
 )
 
 
 tEarlyLeaders = (		#Don't have to be the same as the primary leader (AbsintheRed)
-(xml.iJustinian),
-(xml.iCharlemagne),
-(xml.iAbu_Bakr),
-(xml.iSimeon),
-(xml.iAbd_ar_Rahman),
-(xml.iEnrico_Dandolo),
-(xml.iOtto_William),
-(xml.iOtto_I),
-(xml.iRurik),
-(xml.iHarald_Hardrada),
-(xml.iYaroslav),
-(xml.iStephen),
-(xml.iFerdinand_III),
-(xml.iHarald_Bluetooth),
-(xml.iRobert_the_Bruce),
-(xml.iMieszko),
-(xml.iEmbriaco),
-(xml.iYaqub_al_Mansur),
-(xml.iWilliam),
-(xml.iAfonso),
-(xml.iJames_I),
-(xml.iMagnus_Ladulas),
-(xml.iHermann_von_Salza),
-(xml.iMindaugas),
-(xml.iMaximilian),
-(xml.iMehmed),
-(xml.iIvan_Iv),
-(xml.iWillem_Van_Oranje),
-(xml.iThe_Pope)
+(iJustinian),
+(iCharlemagne),
+(iAbu_Bakr),
+(iSimeon),
+(iAbd_ar_Rahman),
+(iEnrico_Dandolo),
+(iOtto_William),
+(iOtto_I),
+(iRurik),
+(iHarald_Hardrada),
+(iYaroslav),
+(iStephen),
+(iFerdinand_III),
+(iHarald_Bluetooth),
+(iRobert_the_Bruce),
+(iMieszko),
+(iEmbriaco),
+(iYaqub_al_Mansur),
+(iWilliam),
+(iAfonso),
+(iJames_I),
+(iMagnus_Ladulas),
+(iHermann_von_Salza),
+(iMindaugas),
+(iMaximilian),
+(iMehmed),
+(iIvan_Iv),
+(iWillem_Van_Oranje),
+(iThe_Pope)
 )
 
 
 tLateLeaders = (		#The switch is triggered after a few years (starting date, percentage, era)
-(xml.iBasil_II, xml.i910AD, 10, 2, xml.iPalaiologos, xml.i1230AD, 5, 2),
-(xml.iPhilip_Augustus, xml.i1101AD, 10, 2, xml.iJoan, xml.i1376AD, 10, 2, xml.iLouis_Xiv, xml.i1523AD, 25, 3),
-(xml.iHarun_al_Rashid, xml.i752AD, 25, 1, xml.iSaladin, xml.i1160AD, 25, 2),
-(xml.iIvan_Asen, xml.i1101AD, 10, 2),
-(xml.iMohammed_ibn_Nasr, xml.i1202AD, 10, 2),
-(xml.iAndrea_Gritti, xml.i1259AD, 10, 2),
-(xml.iBeatrice, xml.i1200AD, 10, 2, xml.iPhilip_the_Bold, xml.i1356AD, 15, 2),
-(xml.iBarbarossa, xml.i1139AD, 20, 2),
-(xml.iAlexander_Nevsky, xml.i1150AD, 10, 2, xml.iMarfa, xml.i1380AD, 10, 3),
-(xml.iHaakon_Iv, xml.i1160AD, 25, 2),
-(xml.iMstislav, xml.i1101AD, 5, 2, xml.iBohdan_Khmelnytsky, xml.i1520AD, 10, 3),
-(xml.iBela_III, xml.i1167AD, 15, 2, xml.iMatthias, xml.i1444AD, 5, 3),
-(xml.iIsabella, xml.i1250AD, 10, 2, xml.iPhilip_Ii, xml.i1520AD, 10, 3),
-(xml.iMargaret_I, xml.i1320AD, 10, 2, xml.iChristian_Iv, xml.i1520AD, 5, 3),
-(xml.iJames_IV, xml.i1296AD, 10, 2),
-(xml.iCasimir, xml.i1320AD, 20, 2, xml.iSobieski, xml.i1570AD, 10, 3),
-(xml.iBoccanegra, xml.i1101AD, 10, 2),
-(xml.iIsmail_ibn_Sharif, xml.i1419AD, 5, 3),
-(xml.iElizabeth, xml.i1452AD, 10, 3, xml.iGeorge_Iii, xml.i1700AD, 10, 3),
-(xml.iJoao, xml.i1419AD, 10, 3, xml.iMaria_I, xml.i1700AD, 10, 3),
-(xml.iJohn_II, xml.i1397AD, 15, 3),
-(xml.iGustav_Vasa, xml.i1470AD, 20, 3, xml.iGustav_Adolf, xml.i1540AD, 25, 3, xml.iKarl_Xii, xml.i1680AD, 10, 3),
-(xml.iFrederick, xml.i1580AD, 5, 3),
-(xml.iVytautas, xml.i1377AD, 10, 3),
-(xml.iMaria_Theresa, xml.i1700AD, 25, 3),
-(xml.iSuleiman, xml.i1520AD, 15, 3),
-(xml.iPeter, xml.i1570AD, 10, 3, xml.iCatherine, xml.i1700AD, 25, 3),
-(xml.iJohan_de_Witt, xml.i1650AD, 30, 3),
-(xml.iThe_Pope,)
+(iBasil_II, i910AD, 10, 2, iPalaiologos, i1230AD, 5, 2),
+(iPhilip_Augustus, i1101AD, 10, 2, iJoan, i1376AD, 10, 2, iLouis_Xiv, i1523AD, 25, 3),
+(iHarun_al_Rashid, i752AD, 25, 1, iSaladin, i1160AD, 25, 2),
+(iIvan_Asen, i1101AD, 10, 2),
+(iMohammed_ibn_Nasr, i1202AD, 10, 2),
+(iAndrea_Gritti, i1259AD, 10, 2),
+(iBeatrice, i1200AD, 10, 2, iPhilip_the_Bold, i1356AD, 15, 2),
+(iBarbarossa, i1139AD, 20, 2),
+(iAlexander_Nevsky, i1150AD, 10, 2, iMarfa, i1380AD, 10, 3),
+(iHaakon_Iv, i1160AD, 25, 2),
+(iMstislav, i1101AD, 5, 2, iBohdan_Khmelnytsky, i1520AD, 10, 3),
+(iBela_III, i1167AD, 15, 2, iMatthias, i1444AD, 5, 3),
+(iIsabella, i1250AD, 10, 2, iPhilip_Ii, i1520AD, 10, 3),
+(iMargaret_I, i1320AD, 10, 2, iChristian_Iv, i1520AD, 5, 3),
+(iJames_IV, i1296AD, 10, 2),
+(iCasimir, i1320AD, 20, 2, iSobieski, i1570AD, 10, 3),
+(iBoccanegra, i1101AD, 10, 2),
+(iIsmail_ibn_Sharif, i1419AD, 5, 3),
+(iElizabeth, i1452AD, 10, 3, iGeorge_Iii, i1700AD, 10, 3),
+(iJoao, i1419AD, 10, 3, iMaria_I, i1700AD, 10, 3),
+(iJohn_II, i1397AD, 15, 3),
+(iGustav_Vasa, i1470AD, 20, 3, iGustav_Adolf, i1540AD, 25, 3, iKarl_Xii, i1680AD, 10, 3),
+(iFrederick, i1580AD, 5, 3),
+(iVytautas, i1377AD, 10, 3),
+(iMaria_Theresa, i1700AD, 25, 3),
+(iSuleiman, i1520AD, 15, 3),
+(iPeter, i1570AD, 10, 3, iCatherine, i1700AD, 25, 3),
+(iJohan_de_Witt, i1650AD, 30, 3),
+(iThe_Pope,)
 )
 
 
@@ -1523,7 +1523,7 @@ iSaintBenefit = 10		# number of Faith points generated by a saint
 
 # Crusade section / Towns
 iNumCrusades = 5
-iJerusalem = ( 93, 5 )
+tJerusalem = ( 93, 5 )
 
 # Province Status
 iProvinceOwn = 5      # own every tile

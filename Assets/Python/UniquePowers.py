@@ -7,7 +7,7 @@ from CvPythonExtensions import *
 import CvUtil
 import PyHelpers
 import Popup
-import cPickle as pickle
+#import cPickle as pickle
 import Consts as con
 import XMLConsts as xml
 import RFCUtils
