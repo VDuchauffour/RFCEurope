@@ -15326,35 +15326,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=54
-	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
-	BeginUnit
-		UnitType=UNIT_WELSH_LONGBOWMAN, UnitOwner=30
-		Damage=0
-		Level=1, Experience=0
-		FacingDirection=4
-		UnitAIType=UNITAI_CITY_DEFENSE
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_WELSH_LONGBOWMAN, UnitOwner=30
-		Damage=0
-		Level=1, Experience=0
-		FacingDirection=4
-		UnitAIType=UNITAI_CITY_DEFENSE
-	EndUnit
-	BeginCity
-		CityOwner=30
-		CityName=Cardiff
-		CityPopulation=5
-		BuildingType=BUILDING_WALLS
-		BuildingType=BUILDING_GRANARY
-		BuildingType=BUILDING_HARBOR
-		BuildingType=BUILDING_SMOKEHOUSE
-		BuildingType=BUILDING_MANOR_HOUSE
-		ReligionType=RELIGION_CATHOLICISM
-		Player30Culture=20
-	EndCity
 EndPlot
 BeginPlot
 	x=36,y=55
@@ -15374,8 +15347,35 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=57
+	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
+	BeginUnit
+		UnitType=UNIT_WELSH_LONGBOWMAN, UnitOwner=30
+		Damage=0
+		Level=1, Experience=0
+		FacingDirection=4
+		UnitAIType=UNITAI_CITY_DEFENSE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WELSH_LONGBOWMAN, UnitOwner=30
+		Damage=0
+		Level=1, Experience=0
+		FacingDirection=4
+		UnitAIType=UNITAI_CITY_DEFENSE
+	EndUnit
+	BeginCity
+		CityOwner=30
+		CityName=Caernarfon
+		CityPopulation=5
+		BuildingType=BUILDING_WALLS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_SMOKEHOUSE
+		BuildingType=BUILDING_MANOR_HOUSE
+		ReligionType=RELIGION_CATHOLICISM
+		Player30Culture=20
+	EndCity
 EndPlot
 BeginPlot
 	x=36,y=58
@@ -44843,6 +44843,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=96,y=23
+	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -45371,6 +45372,8 @@ EndPlot
 BeginPlot
 	x=97,y=24
 	BonusType=BONUS_WINE
+	ImprovementType=IMPROVEMENT_WINERY
+	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -45815,18 +45818,51 @@ BeginPlot
 	x=98,y=23
 	BonusType=BONUS_SHEEP
 	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=98,y=24
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN, UnitOwner=0
+		Damage=0
+		Level=1, Experience=0
+		FacingDirection=4
+		UnitAIType=UNITAI_CITY_DEFENSE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN, UnitOwner=0
+		Damage=0
+		Level=1, Experience=0
+		FacingDirection=4
+		UnitAIType=UNITAI_CITY_DEFENSE
+	EndUnit
+	BeginCity
+		CityOwner=0
+		CityName=Trapezounta
+		CityPopulation=5
+		BuildingType=BUILDING_WALLS
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_SMOKEHOUSE
+		BuildingType=BUILDING_COURTHOUSE
+		BuildingType=BUILDING_MANOR_HOUSE
+		BuildingType=BUILDING_ORTHODOX_TEMPLE
+		BuildingType=BUILDING_ORTHODOX_MONASTERY
+		ReligionType=RELIGION_ORTHODOXY
+		Player0Culture=20
+	EndCity
 EndPlot
 BeginPlot
 	x=98,y=25
 	BonusType=BONUS_CRAB
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -46296,7 +46332,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=99,y=24
-	ImprovementType=IMPROVEMENT_VILLAGE
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot

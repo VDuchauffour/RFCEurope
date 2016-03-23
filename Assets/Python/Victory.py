@@ -1,17 +1,16 @@
 # Rhye's and Fall of Civilizations: Europe - Historical Victory Goals
 
-
 from CvPythonExtensions import *
 import CvUtil
 import PyHelpers
 import Popup
-import cPickle as pickle
 import Consts as con
 import XMLConsts as xml
 import RFCUtils
 import Crusades as cru
 import UniquePowers
 import RFCEMaps as rfcemaps
+from StoredData import sd
 
 utils = RFCUtils.RFCUtils()
 up = UniquePowers.UniquePowers()
@@ -214,14 +213,27 @@ class Victory:
 ### Secure storage & retrieval of script data ###
 ################################################
 
+	def setup( self ):
+		# ignore AI goals
+		bIgnoreAI = (gc.getDefineINT("NO_AI_UHV_CHECKS") == 1)
+		self.setIgnoreAI(bIgnoreAI)
+		if bIgnoreAI:
+			for iPlayer in range(iNumPlayers):
+				if utils.getHumanID() != iPlayer:
+					self.setAllUHVFailed(iPlayer)
+			
+
 	def getCorporationsFounded( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['bCorpsFounded']
+		return sd.scriptDict['bCorpsFounded']
 
 	def setCorporationsFounded( self, iChange ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['bCorpsFounded'] = iChange
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['bCorpsFounded'] = iChange
+		
+	def isIgnoreAI(self):
+		return sd.scriptDict['bIgnoreAIUHV']
+		
+	def setIgnoreAI(self, bVal):
+		sd.scriptDict['bIgnoreAIUHV'] = bVal
 
 #######################################
 ### Main methods (Event-Triggered) ###
@@ -235,6 +247,10 @@ class Victory:
 		# We use Python version of Switch statement, it is supposed to be better, now all condition checks are in separate functions
 		pPlayer = gc.getPlayer(iPlayer)
 		#if ( iPlayer < iPope and pPlayer.isAlive() ): # don't count the Pope
+		if iPlayer != utils.getHumanID() and self.isIgnoreAI():
+			return
+		if (not gc.getGame().isVictoryValid(7)): #7 == historical
+			return
 		self.switchConditionsPerCiv[iPlayer](iGameTurn)
 
 		# Generic checks:
@@ -1660,6 +1676,13 @@ class Victory:
 		pPlayer = gc.getPlayer(iCiv)
 		for i in range(3):
 			pPlayer.setUHV( i, 0 )
+
+	def SwitchUHV(self, iNewCiv, iOldCiv):
+		pPlayer = gc.getPlayer(iNewCiv)
+		for i in range(3):
+			pPlayer.setUHV( i, -1 )
+		if self.isIgnoreAI():
+			self.setAllUHVFailed(iOldCiv)
 
 	def set1200UHVDone( self, iCiv ):
 		if iCiv == iByzantium:

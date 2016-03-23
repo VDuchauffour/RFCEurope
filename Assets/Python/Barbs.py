@@ -4,10 +4,10 @@ from CvPythonExtensions import *
 import CvUtil
 import PyHelpers		# LOQ
 import Popup
-import cPickle as pickle		# LOQ 2005-10-12
 import RFCUtils
 import Consts as con
 import XMLConsts as xml
+from StoredData import sd
 
 # globals
 gc = CyGlobalContext()
@@ -144,37 +144,22 @@ lMinorNations = [ [ xml.iP_Serbia, [], [], [xml.i852AD,xml.i1346AD], [20,20], [x
 class Barbs:
 
 	def getRevolDates( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['lNextMinorRevolt']
-
+		return sd.scriptDict['lNextMinorRevolt']
 
 	def setRevolDates( self, lNextMinorRevolt ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['lNextMinorRevolt'] = lNextMinorRevolt
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-
+		sd.scriptDict['lNextMinorRevolt'] = lNextMinorRevolt
 
 	def getTempFlippingCity( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['tempFlippingCity']
-
+		return sd.scriptDict['tempFlippingCity']
 
 	def setTempFlippingCity( self, tNewValue ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['tempFlippingCity'] = tNewValue
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-
+		sd.scriptDict['tempFlippingCity'] = tNewValue
 
 	def getNationRevoltIndex( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['lRevoltinNationRevoltIndex']
-
+		return sd.scriptDict['lRevoltinNationRevoltIndex']
 
 	def setNationRevoltIndex( self, iNationIndex, iRevoltIndex ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['lRevoltinNationRevoltIndex'] = [iNationIndex,iRevoltIndex]
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-
+		sd.scriptDict['lRevoltinNationRevoltIndex'] = [iNationIndex,iRevoltIndex]
 
 	def makeUnit(self, iUnit, iPlayer, tCoords, iNum, iForceAttack, szName ):
 		'Makes iNum units for player iPlayer of the type iUnit at tCoords.'

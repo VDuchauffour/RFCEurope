@@ -4,7 +4,6 @@ from CvPythonExtensions import *
 import CvUtil
 import PyHelpers	# LOQ
 import Popup
-import cPickle as pickle		# LOQ 2005-10-12
 import CvTranslator
 import RFCUtils
 import ProvinceManager # manage provinces here to link to spawn/rebirth
@@ -12,6 +11,8 @@ import Consts as con
 import XMLConsts as xml
 import Religions
 import Victory
+from StoredData import sd
+import Crusades
 
 
 ################
@@ -23,6 +24,7 @@ PyPlayer = PyHelpers.PyPlayer	# LOQ
 utils = RFCUtils.RFCUtils()
 rel = Religions.Religions()
 vic = Victory.Victory()
+cru = Crusades.Crusades()
 
 iCheatersPeriod = 12
 iBetrayalPeriod = 8
@@ -192,221 +194,149 @@ class RiseAndFall:
 
 
 	def getNewCiv( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['iNewCiv']
+		return sd.scriptDict['iNewCiv']
 
 	def setNewCiv( self, iNewValue ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['iNewCiv'] = iNewValue
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['iNewCiv'] = iNewValue
 
 	def getNewCivFlip( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['iNewCivFlip']
+		return sd.scriptDict['iNewCivFlip']
 
 	def setNewCivFlip( self, iNewValue ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['iNewCivFlip'] = iNewValue
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['iNewCivFlip'] = iNewValue
 
 	def getOldCivFlip( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['iOldCivFlip']
+		return sd.scriptDict['iOldCivFlip']
 
 	def setOldCivFlip( self, iNewValue ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['iOldCivFlip'] = iNewValue
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['iOldCivFlip'] = iNewValue
 
 	def getTempTopLeft( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['tempTopLeft']
+		return sd.scriptDict['tempTopLeft']
 
 	def setTempTopLeft( self, tNewValue ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['tempTopLeft'] = tNewValue
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['tempTopLeft'] = tNewValue
 
 	def getTempBottomRight( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['tempBottomRight']
+		return sd.scriptDict['tempBottomRight']
 
 	def setTempBottomRight( self, tNewValue ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['tempBottomRight'] = tNewValue
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['tempBottomRight'] = tNewValue
 
 	def getSpawnWar( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['iSpawnWar']
+		return sd.scriptDict['iSpawnWar']
 
 	def setSpawnWar( self, iNewValue ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['iSpawnWar'] = iNewValue
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['iSpawnWar'] = iNewValue
 
 	def getAlreadySwitched( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['bAlreadySwitched']
+		return sd.scriptDict['bAlreadySwitched']
 
 	def setAlreadySwitched( self, bNewValue ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['bAlreadySwitched'] = bNewValue
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['bAlreadySwitched'] = bNewValue
 
 	def getColonistsAlreadyGiven( self, iCiv ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['lColonistsAlreadyGiven'][iCiv]
+		return sd.scriptDict['lColonistsAlreadyGiven'][iCiv]
 
 	def setColonistsAlreadyGiven( self, iCiv, iNewValue ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['lColonistsAlreadyGiven'][iCiv] = iNewValue
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['lColonistsAlreadyGiven'][iCiv] = iNewValue
 
 	def getNumCities( self, iCiv ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['lNumCities'][iCiv]
+		return sd.scriptDict['lNumCities'][iCiv]
 
 	def setNumCities( self, iCiv, iNewValue ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['lNumCities'][iCiv] = iNewValue
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['lNumCities'][iCiv] = iNewValue
 
 	def getSpawnDelay( self, iCiv ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['lSpawnDelay'][iCiv]
+		return sd.scriptDict['lSpawnDelay'][iCiv]
 
 	def setSpawnDelay( self, iCiv, iNewValue ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['lSpawnDelay'][iCiv] = iNewValue
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['lSpawnDelay'][iCiv] = iNewValue
 
 	def getFlipsDelay( self, iCiv ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['lFlipsDelay'][iCiv]
+		return sd.scriptDict['lFlipsDelay'][iCiv]
 
 	def setFlipsDelay( self, iCiv, iNewValue ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['lFlipsDelay'][iCiv] = iNewValue
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['lFlipsDelay'][iCiv] = iNewValue
 
 	def getBetrayalTurns( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['iBetrayalTurns']
+		return sd.scriptDict['iBetrayalTurns']
 
 	def setBetrayalTurns( self, iNewValue ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['iBetrayalTurns'] = iNewValue
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['iBetrayalTurns'] = iNewValue
 
 	def getLatestFlipTurn( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['iLatestFlipTurn']
+		return sd.scriptDict['iLatestFlipTurn']
 
 	def setLatestFlipTurn( self, iNewValue ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['iLatestFlipTurn'] = iNewValue
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['iLatestFlipTurn'] = iNewValue
 
 	def getLatestRebellionTurn( self, iCiv ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['lLatestRebellionTurn'][iCiv]
+		return sd.scriptDict['lLatestRebellionTurn'][iCiv]
 
 	def setLatestRebellionTurn( self, iCiv, iNewValue ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['lLatestRebellionTurn'][iCiv] = iNewValue
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['lLatestRebellionTurn'][iCiv] = iNewValue
 
 	def getRebelCiv( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['iRebelCiv']
+		return sd.scriptDict['iRebelCiv']
 
 	def setRebelCiv( self, iNewValue ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['iRebelCiv'] = iNewValue
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['iRebelCiv'] = iNewValue
 
 	def getRebelCities( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['lRebelCities']
+		return sd.scriptDict['lRebelCities']
 
 	def setRebelCities( self, lCityList ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['lRebelCities'] = lCityList
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['lRebelCities'] = lCityList
 
 	def getRebelSuppress( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['lRebelSuppress']
+		return sd.scriptDict['lRebelSuppress']
 
 	def setRebelSuppress( self, lSuppressList ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['lRebelSuppress'] = lSuppressList
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['lRebelSuppress'] = lSuppressList
 
 	def getExileData( self, i ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['lExileData'][i]
+		return sd.scriptDict['lExileData'][i]
 
 	def setExileData( self, i, iNewValue ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['lExileData'][i] = iNewValue
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['lExileData'][i] = iNewValue
 
 	def getTempFlippingCity( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['tempFlippingCity']
+		return sd.scriptDict['tempFlippingCity']
 
 	def setTempFlippingCity( self, tNewValue ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['tempFlippingCity'] = tNewValue
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['tempFlippingCity'] = tNewValue
 
 	def getCheatersCheck( self, i ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['lCheatersCheck'][i]
+		return sd.scriptDict['lCheatersCheck'][i]
 
 	def setCheatersCheck( self, i, iNewValue ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['lCheatersCheck'][i] = iNewValue
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['lCheatersCheck'][i] = iNewValue
 
 	def getBirthTurnModifier( self, iCiv ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['lBirthTurnModifier'][iCiv]
+		return sd.scriptDict['lBirthTurnModifier'][iCiv]
 
 	def setBirthTurnModifier( self, iCiv, iNewValue ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['lBirthTurnModifier'][iCiv] = iNewValue
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['lBirthTurnModifier'][iCiv] = iNewValue
 
 	def getDeleteMode( self, i ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['lDeleteMode'][i]
+		return sd.scriptDict['lDeleteMode'][i]
 
 	def setDeleteMode( self, i, iNewValue ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['lDeleteMode'][i] = iNewValue
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['lDeleteMode'][i] = iNewValue
 
 	def getFirstContactConquerors( self, iCiv ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['lFirstContactConquerors'][iCiv]
+		return sd.scriptDict['lFirstContactConquerors'][iCiv]
 
 	def setFirstContactConquerors( self, iCiv, iNewValue ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['lFirstContactConquerors'][iCiv] = iNewValue
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['lFirstContactConquerors'][iCiv] = iNewValue
 
 	#Sedna17 Respawn
 	def setRespawnTurn( self, iCiv, iNewValue ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['lRespawnTurns'][iCiv] = iNewValue
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['lRespawnTurns'][iCiv] = iNewValue
 
 	def getAllRespawnTurns( self):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['lRespawnTurns']
+		return sd.scriptDict['lRespawnTurns']
 
 
 ###############
@@ -430,11 +360,12 @@ class RiseAndFall:
 	def eventApply7614(self, popupReturn):
 		if( popupReturn.getButtonClicked() == 0 ): # 1st button
 			iOldHandicap = gc.getActivePlayer().getHandicapType()
-			vic.setAllUHVFailed(gc.getGame().getActivePlayer())
-			gc.getActivePlayer().setHandicapType(gc.getPlayer(self.getNewCiv()).getHandicapType())
-			gc.getGame().setActivePlayer(self.getNewCiv(), False)
-			gc.getPlayer(self.getNewCiv()).setHandicapType(iOldHandicap)
-			#for i in range(con.iNumStabilityParameters):
+			iNewCiv = self.getNewCiv()
+			vic.SwitchUHV(iNewCiv, utils.getHumanID())
+			gc.getActivePlayer().setHandicapType(gc.getPlayer(iNewCiv).getHandicapType())
+			gc.getGame().setActivePlayer(iNewCiv, False)
+			gc.getPlayer(iNewCiv).setHandicapType(iOldHandicap)
+			#for i in range(iNumStabilityParameters):
 			#	utils.setStabilityParameters(utils.getHumanID(),i, 0)
 			#	utils.setLastRecordedStabilityStuff(0, 0)
 			#	utils.setLastRecordedStabilityStuff(1, 0)
@@ -443,15 +374,13 @@ class RiseAndFall:
 			#	utils.setLastRecordedStabilityStuff(4, 0)
 			#	utils.setLastRecordedStabilityStuff(5, 0)
 			for iMaster in range(con.iNumPlayers):
-				if (gc.getTeam(gc.getPlayer(self.getNewCiv()).getTeam()).isVassal(iMaster)):
-					gc.getTeam(gc.getPlayer(self.getNewCiv()).getTeam()).setVassal(iMaster, False, False)
+				if (gc.getTeam(gc.getPlayer(iNewCiv).getTeam()).isVassal(iMaster)):
+					gc.getTeam(gc.getPlayer(iNewCiv).getTeam()).setVassal(iMaster, False, False)
 			self.setAlreadySwitched(True)
-			gc.getPlayer(self.getNewCiv()).setPlayable(True)
+			gc.getPlayer(iNewCiv).setPlayable(True)
 			#CyInterface().addImmediateMessage("first button", "")
 		#elif( popupReturn.getButtonClicked() == 1 ): # 2nd button
 			#CyInterface().addImmediateMessage("second button", "")
-		else:
-			vic.setAllUHVFailed(self.getNewCiv())
 
 
 	def flipPopup(self, iNewCiv, tTopLeft, tBottomRight):
@@ -650,29 +579,24 @@ class RiseAndFall:
 		self.setupRespawnTurns()
 
 		iHuman = utils.getHumanID()
-		if utils.getScenario() == con.i500AD:
+		if utils.getScenario() == con.i500ADScenario:
 			self.create500ADstartingUnits()
-			if iHuman != iByzantium:
-				vic.setAllUHVFailed(iByzantium)
-			if iHuman != iFrankia:
-				vic.setAllUHVFailed(iFrankia)
 		else:
 			self.create1200ADstartingUnits()
 			for iCiv in range(iAragon+1):
-				self.showArea(iCiv, con.i1200AD)
+				self.showArea(iCiv, con.i1200ADScenario)
 				self.assign1200ADtechs(iCiv)	#Temporary all civs get Aragon starting techs
 				self.initContact(iCiv, False)
-				if iHuman != iCiv:
-					vic.setAllUHVFailed(iCiv)
 			rel.set1200Faith()
 			self.setDiplo1200AD()
 			self.LeaningTowerGP()
 			rel.spread1200ADJews() # Spread Jews to some random cities
 			vic.set1200UHVDone(iHuman)
 			self.assign1200ADtechs(iPope)	#Temporary all civs get Aragon starting techs
+			cru.do1200ADCrusades()
+			
 
 		self.assignGold(utils.getScenario())
-		vic.setAllUHVFailed(iPope)
 
 	def assignGold(self, iScenario):
 		for iPlayer in range(con.iNumPlayers):
@@ -1664,9 +1588,6 @@ class RiseAndFall:
 		if (iCurrentTurn == iBirthYear + self.getSpawnDelay(iCiv)):
 			if (gc.getPlayer(iCiv).isAlive()) and (self.getAlreadySwitched() == False) and (iCurrentTurn > tBirth[iHuman]+40) and ( not gc.getPlayer( iHuman ).getIsCrusader() ):
 				self.newCivPopup(iCiv)
-			else:
-				if iCiv != iHuman:
-					vic.setAllUHVFailed(iCiv)
 
 
 ##	def moveOutUnits(self, x, y, tCapitalX, tCapitalY) #not used
@@ -2613,6 +2534,8 @@ class RiseAndFall:
 		teamCiv.setHasTech( xml.iPlateArmor, True, iCiv, False, False )
 		teamCiv.setHasTech( xml.iGothicArchitecture, True, iCiv, False, False )
 		teamCiv.setHasTech( xml.iSiegeEngines, True, iCiv, False, False )
+		if iCiv in [iArabia, iMorocco]:
+			teamCiv.setHasTech( xml.iArabicKnowledge, True, iCiv, False, False )
 
 	def assignTechs( self, iCiv ):
 		# 3Miro: other than the original techs
@@ -2971,7 +2894,7 @@ class RiseAndFall:
 				gc.getMap().plot(iX, iY).setRevealed(gc.getPlayer(iCiv).getTeam(), True, False, -1)
 
 
-	def showArea(self, iCiv, iScenario = con.i500AD):
+	def showArea(self, iCiv, iScenario = con.i500ADScenario):
 		#print(" Visible for: ",iCiv )
 		for iI in range( len( tVisible[iScenario][iCiv] ) ):
 			self.showRect( iCiv, tVisible[iScenario][iCiv][iI][0], tVisible[iScenario][iCiv][iI][1], tVisible[iScenario][iCiv][iI][2], tVisible[iScenario][iCiv][iI][3] )

@@ -8,7 +8,7 @@ import CvMercenaryManager #Mercenaries
 import CvScreenEnums #Mercenaries
 import Popup as PyPopup
 
-import StoredData
+from StoredData import sd #edead
 import RiseAndFall
 import Barbs
 import Religions
@@ -157,7 +157,8 @@ class CvRFCEventHandler:
 		eventManager.addEventHandler("kbdEvent",self.onKbdEvent) #Mercenaries and Stability overlay
 		eventManager.addEventHandler("unitLost",self.onUnitLost) #Mercenaries
 		eventManager.addEventHandler("unitKilled",self.onUnitKilled) #Mercenaries
-		eventManager.addEventHandler("OnLoad",self.onLoadGame) #Mercenaries
+		eventManager.addEventHandler("OnPreSave",self.onPreSave) #edead: StoredData
+		eventManager.addEventHandler("OnLoad",self.onLoadGame) #Mercenaries, StoredData
 		eventManager.addEventHandler("unitPromoted",self.onUnitPromoted) #Mercenaries
 		eventManager.addEventHandler("techAcquired",self.onTechAcquired) #Mercenaries, Rhye #Stability
 		#eventManager.addEventHandler("improvementDestroyed",self.onImprovementDestroyed) #Stability
@@ -168,8 +169,6 @@ class CvRFCEventHandler:
 
 		self.eventManager = eventManager
 
-
-		self.data = StoredData.StoredData()
 		self.rnf = RiseAndFall.RiseAndFall()
 		self.barb = Barbs.Barbs()
 		self.rel = Religions.Religions()
@@ -218,7 +217,7 @@ class CvRFCEventHandler:
 	def onGameStart(self, argsList):
 		'Called at the start of the game'
 		#self.pm.setup()
-		self.data.setupScriptData()
+		sd.setup()
 		self.rnf.setup()
 		self.rel.setup()
 		self.pla.setup()
@@ -227,6 +226,7 @@ class CvRFCEventHandler:
 
 		# 3Miro: WarOnSpawn
 		self.rnf.setWarOnSpawn()
+		self.vic.setup()
 
 		#Mercenaries - start
 		#global objMercenaryUtils
@@ -292,6 +292,10 @@ class CvRFCEventHandler:
 
 		self.pla.onCityAcquired(owner, playerType, city) #Plague
 		self.vic.onCityAcquired(owner, playerType, city, bConquest) #Victory
+		
+		# Remove horse resource near Hadrianople in 1200 AD scenario if someone captures Hadrianople or Constantinople
+		if (city.getX() == 76 and city.getY() == 25) or (city.getX() == 81 and city.getY() == 24):
+			self.res.removeResource(77, 24)
 
 		return 0
 
@@ -644,10 +648,14 @@ class CvRFCEventHandler:
 			self.rel.onTechAcquired(argsList[0], argsList[2])
 			self.sta.onTechAcquired(argsList[0], argsList[2])
 
+	def onPreSave(self, argsList):
+		'called before a game is actually saved'
+		sd.save() # edead: pickle & save script data
 
 	# This method creates a new instance of the MercenaryUtils class to be used later
 	def onLoadGame(self, argsList):
-		pass
+		sd.load() # edead: load & unpickle script data
+		#pass
 
 		#if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(con.iNationalism)) and gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]): #Rhye
 		#if (gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]):

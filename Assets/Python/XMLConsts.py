@@ -262,11 +262,11 @@ iTouareg, iTurcomanHorseArcher, iWelshLongbowman]
 #Bonuses: initialize bonus variables to bonus IDs from WBSinulAi
 
 iNumBonus = 48
-(iRelic , iCoal , iCopper , iHorse , iIron , iMarble , iStone , iBanana , iClam , iCorn,
-iCow , iCrab , iDeer , iFish , iPig , iRice , iSheep , iWheat , iDye , iFur,
-iGems , iGold , iIncense , iIvory , iSilk , iSilver , iSpices , iSugar , iWine , iWhale,
-iCotton , iApple , iBarley , iHoney , iPotato , iSalt , iSulphur , iTimber , iCoffee , iSlaves,
-iTea , iTobacco , iOlives , iAccess , iNorthAccess , iSouthAccess , iAsiaAccess , iAmber) = range(iNumBonus)
+(iRelic, iCoal, iCopper, iHorse, iIron, iMarble, iStone, iBanana, iClam, iCorn,
+iCow, iCrab, iDeer, iFish, iPig, iRice, iSheep, iWheat, iDye, iFur,
+iGems, iGold, iIncense, iIvory, iSilk, iSilver, iSpices, iSugar, iWine, iWhale,
+iCotton, iApple, iBarley, iHoney, iPotato, iSalt, iSulphur, iTimber, iCoffee, iSlaves,
+iTea, iTobacco, iOlives, iAccess, iNorthAccess, iSouthAccess, iAsiaAccess, iAmber) = range(iNumBonus)
 
 
 #Buildings

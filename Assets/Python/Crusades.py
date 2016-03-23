@@ -4,12 +4,12 @@ from CvPythonExtensions import *
 import CvUtil
 import PyHelpers
 import Popup
-import cPickle as pickle
 import RFCUtils
 import Consts as con
 import XMLConsts as xml
 import RFCEMaps as rfceMaps
 import CityNameManager
+from StoredData import sd
 
 # globals
 gc = CyGlobalContext()
@@ -67,179 +67,121 @@ class Crusades:
 #############
 
 	def getCrusadeInit( self, iCrusade ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['lCrusadeInit'][iCrusade]
+		return sd.scriptDict['lCrusadeInit'][iCrusade]
 
 	def setCrusadeInit( self, iCrusade, iNewCode ):
 		# codes are: -2, no crusade yet,
 		#-1 crusade is active but waiting to start (Holy City is Christian and/or another Crusade in progress)
 		# 0 or more, the turn when it was initialized
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['lCrusadeInit'][iCrusade] = iNewCode
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['lCrusadeInit'][iCrusade] = iNewCode
 
 	def addSelectedUnit( self, iUnitPlace ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['lSelectedUnits'][iUnitPlace] += 1
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['lSelectedUnits'][iUnitPlace] += 1
 
 	def setSelectedUnit( self, iUnitPlace, iNewNumber ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['lSelectedUnits'][iUnitPlace] = iNewNumber
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['lSelectedUnits'][iUnitPlace] = iNewNumber
 
 	def getSelectedUnit( self, iUnitPlace ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['lSelectedUnits'][iUnitPlace]
+		return sd.scriptDict['lSelectedUnits'][iUnitPlace]
 
 	def getActiveCrusade( self, iGameTurn ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
 		for i in range( iNumCrusades ):
-			iInit = scriptDict['lCrusadeInit'][i]
+			iInit = sd.scriptDict['lCrusadeInit'][i]
 			if ( iInit > -1 and iInit + 9 > iGameTurn ):
 				return i
 		return -1
 
 	def getParticipate( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['bParticipate']
+		return sd.scriptDict['bParticipate']
 
 	def setParticipate( self, bVal ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['bParticipate'] = bVal
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['bParticipate'] = bVal
 
 	def getVotingPower( self, iCiv ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['lVotingPower'][iCiv]
+		return sd.scriptDict['lVotingPower'][iCiv]
 
 	def setVotingPower( self, iCiv, iVotes ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['lVotingPower'][iCiv] = iVotes
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['lVotingPower'][iCiv] = iVotes
 
 	def getCrusadePower( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['iCrusadePower']
+		return sd.scriptDict['iCrusadePower']
 
 	def setCrusadePower( self, iPower ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['iCrusadePower'] = iPower
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['iCrusadePower'] = iPower
 
 	def getFavorite( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['iFavorite']
+		return sd.scriptDict['iFavorite']
 
 	def setFavorite( self, iFavorite ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['iFavorite'] = iFavorite
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['iFavorite'] = iFavorite
 
 	def getPowerful( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['iPowerful']
+		return sd.scriptDict['iPowerful']
 
 	def setPowerful( self, iPowerful ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['iPowerful'] = iPowerful
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['iPowerful'] = iPowerful
 
 	def getLeader( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['iLeader']
+		return sd.scriptDict['iLeader']
 
 	def setLeader( self, iLeader ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['iLeader'] = iLeader
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['iLeader'] = iLeader
 
 	def getVotesGatheredFavorite( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['lVotesGathered'][0]
+		return sd.scriptDict['lVotesGathered'][0]
 
 	def setVotesGatheredFavorite( self, iVotes ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['lVotesGathered'][0] = iVotes
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['lVotesGathered'][0] = iVotes
 
 	def getVotesGatheredPowerful( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['lVotesGathered'][1]
+		return sd.scriptDict['lVotesGathered'][1]
 
 	def setVotesGatheredPowerful( self, iVotes ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['lVotesGathered'][1] = iVotes
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['lVotesGathered'][1] = iVotes
 
 	def getRichestCatholic( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['iRichestCatholic']
+		return sd.scriptDict['iRichestCatholic']
 
 	def setRichestCatholic( self, iPlayer ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['iRichestCatholic'] = iPlayer
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['iRichestCatholic'] = iPlayer
 
 	def getIsTarget( self, iCiv ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['lDeviateTargets'][iCiv]
+		return sd.scriptDict['lDeviateTargets'][iCiv]
 
 	def setIsTarget( self, iCiv, bTarget ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['lDeviateTargets'][iCiv] = bTarget
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-
- 	def getTargetX( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['iTarget'][0]
-
- 	def getTargetY( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['iTarget'][1]
+		sd.scriptDict['lDeviateTargets'][iCiv] = bTarget
+		
+	def getTargetPlot( self ):
+		return sd.scriptDict['tTarget']
 
  	def setTarget( self, iX, iY ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['iTarget'] = [ iX, iY ]
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['tTarget'] = (iX, iY)
 
 	def hasSucceeded( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		iSucc = scriptDict['iCrusadeSucceeded']
+		iSucc = sd.scriptDict['iCrusadeSucceeded']
 		iTest = iSucc == 1
 		return iTest
 
 	def setSucceeded( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['iCrusadeSucceeded'] = 1
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['iCrusadeSucceeded'] = 1
 
 	def getCrusadeToReturn( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['iCrusadeToReturn']
+		return sd.scriptDict['iCrusadeToReturn']
 
 	def setCrusadeToReturn( self, iNewValue ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['iCrusadeToReturn'] = iNewValue
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['iCrusadeToReturn'] = iNewValue
 
 	def isDCEnabled( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['bDCEnabled']
+		return sd.scriptDict['bDCEnabled']
 
 	def setDCEnabled( self, bNewValue ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['bDCEnabled'] = bNewValue
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['bDCEnabled'] = bNewValue
 
 	def getDCLast( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['iDCLast']
+		return sd.scriptDict['iDCLast']
 
 	def setDCLast( self, iLast ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['iDCLast'] = iLast
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['iDCLast'] = iLast
 
 	''' popupID has to be a registered ID in CvRhyesCatapultEventManager.__init__!! '''
 	def showPopup(self, popupID, title, message, labels):
@@ -758,7 +700,8 @@ class Crusades:
 	def startCrusade( self ):
 		iHuman = utils.getHumanID()
 		iLeader = self.getLeader()
-		pTargetCity = gc.getMap().plot( self.getTargetX(), self.getTargetY() ).getPlotCity()
+		iX, iY = self.getTargetPlot()
+		pTargetCity = gc.getMap().plot( iX, iY ).getPlotCity()
 		iTargetPlayer = pTargetCity.getOwner()
 		# Jerusalem can change ownership during the voting
 		if ( gc.getPlayer( iTargetPlayer ).getStateReligion() == iCatholicism ):
@@ -781,8 +724,7 @@ class Crusades:
 			gc.getPlayer( i ).setIsCrusader( False )
 
 	def crusadeArrival( self ):
-		iTX = self.getTargetX()
-		iTY = self.getTargetY()
+		iTX, iTY = self.getTargetPlot()
 		iChosenX = -1
 		iChosenY = -1
 
@@ -884,8 +826,7 @@ class Crusades:
 		#print( " Crusade Siege    : ",self.getSelectedUnit( 4 ) )
 		#print( " Crusade Other    : ",self.getSelectedUnit( 5 ) )
 
-		iTX = self.getTargetX()
-		iTY = self.getTargetY()
+		iTX, iTY = self.getTargetPlot()
 		if ( iTX == iJerusalem[0] and iTY == iJerusalem[1] ): # if the target is Jerusalem
 			iRougeModifier = 1
 		else:
@@ -1231,3 +1172,7 @@ class Crusades:
 			return xml.iLancer
 		return xml.iScout
 
+	def do1200ADCrusades( self ):
+		self.setCrusadeInit(0, xml.i1096AD)
+		self.setCrusadeInit(1, xml.i1147AD)
+		self.setCrusadeInit(2, xml.i1187AD)

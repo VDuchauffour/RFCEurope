@@ -6,6 +6,7 @@ import Popup
 import cPickle as pickle
 import Consts as con
 import XMLConsts as xml
+from StoredData import sd
 
 #from sets import Set
 
@@ -468,15 +469,12 @@ class MercenaryManager:
 		pass
 
 	def getMercLists(self):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		self.lGlobalPool = scriptDict['lMercGlobalPool']
-		self.lHiredBy = scriptDict['lMercsHiredBy']
+		self.lGlobalPool = sd.scriptDict['lMercGlobalPool']
+		self.lHiredBy = sd.scriptDict['lMercsHiredBy']
 
 	def setMercLists( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['lMercGlobalPool'] = self.lGlobalPool
-		scriptDict['lMercsHiredBy'] = self.lHiredBy
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['lMercGlobalPool'] = self.lGlobalPool
+		sd.scriptDict['lMercsHiredBy'] = self.lHiredBy
 
 	def rendomizeMercProvinces( self, iGameTurn ):
 		if ( iGameTurn % 2 == gc.getGame().getSorenRandNum( 2, 'shall we randomize mercs' ) ):
@@ -869,22 +867,16 @@ class GlobalMercenaryUtils:
 	# the Utils class should be used for interface commands (like for the Human UI)
 
 	def getMercGlobalPool( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['lMercGlobalPool']
+		return sd.scriptDict['lMercGlobalPool']
 
 	def setMercGlobalPool( self, lNewPool ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['lMercGlobalPool'] = lNewPool
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['lMercGlobalPool'] = lNewPool
 
 	def getMercHiredBy( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['lMercsHiredBy']
+		return sd.scriptDict['lMercsHiredBy']
 
 	def setMercHiredBy( self, lNewList ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['lMercsHiredBy'] = lNewList
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['lMercsHiredBy'] = lNewList
 
 	def getOwnedProvinces( self, pPlayer ):
 		lProvList = [] # all available cities that the Merc can appear in
