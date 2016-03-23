@@ -255,7 +255,7 @@ xml.i1569AD, #Lithuania - Lithuania UHV 3
 999  #Pope
 )
 
-(i500AD, i1200AD) = range(2)
+(i500ADScenario, i1200ADScenario) = range(2)
 
 tYear = ( #For the Dawn of Man starting screen
 ("500", "TXT_KEY_AD"),

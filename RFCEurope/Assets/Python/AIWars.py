@@ -4,11 +4,11 @@ from CvPythonExtensions import *
 import CvUtil
 import PyHelpers		# LOQ
 import Popup
-import cPickle as pickle		# LOQ 2005-10-12
 import Consts as con
 import XMLConsts as xml
 import RFCUtils
 import RFCEMaps as rfcemaps
+from StoredData import sd
 
 # globals
 gc = CyGlobalContext()
@@ -43,25 +43,16 @@ teamVenice = gc.getTeam( pVenice.getTeam() )
 class AIWars:
 
 	def getAttackingCivsArray( self, iCiv ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['lAttackingCivsArray'][iCiv]
-
+		return sd.scriptDict['lAttackingCivsArray'][iCiv]
 
 	def setAttackingCivsArray( self, iCiv, iNewValue ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['lAttackingCivsArray'][iCiv] = iNewValue
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
-
+		sd.scriptDict['lAttackingCivsArray'][iCiv] = iNewValue
 
 	def getNextTurnAIWar( self ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		return scriptDict['iNextTurnAIWar']
-
+		return sd.scriptDict['iNextTurnAIWar']
 
 	def setNextTurnAIWar( self, iNewValue ):
-		scriptDict = pickle.loads( gc.getGame().getScriptData() )
-		scriptDict['iNextTurnAIWar'] = iNewValue
-		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+		sd.scriptDict['iNextTurnAIWar'] = iNewValue
 
 
 	def setup(self):

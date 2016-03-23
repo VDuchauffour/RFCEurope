@@ -436,7 +436,7 @@ class ProvinceManager:
 			for iProv in self.tPot2NormProvinces[iPlayer]:
 				pPlayer.setProvinceType( iProv, iProvincePotential )
 		#Update provinces for 1200 Scenario
-		if utils.getScenario() == con.i1200AD:
+		if utils.getScenario() == con.i1200ADScenario:
 			for iPlayer in range(con.iNumPlayers -1):
 				if con.tBirth[iPlayer] < xml.i1200AD:
 					self.onSpawn(iPlayer)
