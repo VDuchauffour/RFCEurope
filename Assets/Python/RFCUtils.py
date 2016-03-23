@@ -8,7 +8,7 @@ import PyHelpers
 import Popup #Absinthe
 import Consts as con
 import XMLConsts as xml
-from StoredData import sd
+import cPickle as pickle
 
 # globals
 gc = CyGlobalContext()
@@ -43,72 +43,102 @@ class RFCUtils:
 
 	#RiseAndFall, Stability
 	def getLastTurnAlive( self, iCiv ):
-		return sd.scriptDict['lLastTurnAlive'][iCiv]
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		return scriptDict['lLastTurnAlive'][iCiv]
 
 	def setLastTurnAlive( self, iCiv, iNewValue ):
-		sd.scriptDict['lLastTurnAlive'][iCiv] = iNewValue
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		scriptDict['lLastTurnAlive'][iCiv] = iNewValue
+		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
 	#Victory
 	#def getGoal( self, i, j ):
-		#return sd.scriptDict['lGoals'][i][j]
+		#scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		#return scriptDict['lGoals'][i][j]
 
 	#def setGoal( self, i, j, iNewValue ):
-		#sd.scriptDict['lGoals'][i][j] = iNewValue
+		#scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		#scriptDict['lGoals'][i][j] = iNewValue
+		#gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
 	#Stability
 	def getTempFlippingCity( self ):
-		return sd.scriptDict['tempFlippingCity']
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		return scriptDict['tempFlippingCity']
 
 	def setTempFlippingCity( self, tNewValue ):
-		sd.scriptDict['tempFlippingCity'] = tNewValue
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		scriptDict['tempFlippingCity'] = tNewValue
+		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
 	def getStability( self, iCiv ):
 		return gc.getPlayer( iCiv ).getStability()
 
 	#def setStability( self, iCiv, iNewValue ):
-		#sd.scriptDict['lStability'][iCiv] = iNewValue
+		#scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		#scriptDict['lStability'][iCiv] = iNewValue
+		#gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
 	#def getBaseStabilityLastTurn( self, iCiv ):
-		#return sd.scriptDict['lBaseStabilityLastTurn'][iCiv]
+		#scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		#return scriptDict['lBaseStabilityLastTurn'][iCiv]
 
 	#def setBaseStabilityLastTurn( self, iCiv, iNewValue ):
-		#sd.scriptDict['lBaseStabilityLastTurn'][iCiv] = iNewValue
+		#scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		#scriptDict['lBaseStabilityLastTurn'][iCiv] = iNewValue
+		#gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
 	#def getStabilityParameters( self, iCiv, iParameter ):
-		#return sd.scriptDict['lStabilityParameters'][iCiv][iParameter]
+		#scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		#return scriptDict['lStabilityParameters'][iCiv][iParameter]
 
 	#def setStabilityParameters( self, iCiv,iParameter, iNewValue ):
-		#sd.scriptDict['lStabilityParameters'][iCiv][iParameter] = iNewValue
+		#scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		#scriptDict['lStabilityParameters'][iCiv][iParameter] = iNewValue
+		#gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
 	#def getGreatDepressionCountdown( self, iCiv ):
-		#return sd.scriptDict['lGreatDepressionCountdown'][iCiv]
+		#scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		#return scriptDict['lGreatDepressionCountdown'][iCiv]
 
 	#def setGreatDepressionCountdown( self, iCiv, iNewValue ):
-		#sd.scriptDict['lGreatDepressionCountdown'][iCiv] = iNewValue
+		#scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		#scriptDict['lGreatDepressionCountdown'][iCiv] = iNewValue
+		#gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
 	#def getLastRecordedStabilityStuff( self, iParameter ):
-		#return sd.scriptDict['lLastRecordedStabilityStuff'][iParameter]
+		#scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		#return scriptDict['lLastRecordedStabilityStuff'][iParameter]
 
 	#def setLastRecordedStabilityStuff( self, iParameter, iNewValue ):
-		#sd.scriptDict['lLastRecordedStabilityStuff'][iParameter] = iNewValue
+		#scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		#scriptDict['lLastRecordedStabilityStuff'][iParameter] = iNewValue
+		#gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
 	def getProsecutionCount( self, iCiv ):
-		#return sd.scriptDict['iProsecutionCount'][iCiv]
+		#scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		#return scriptDict['iProsecutionCount'][iCiv]
 		return gc.getProsecutionCount( iCiv )
 
 	def setProsecutionCount( self, iCiv, iNewValue ):
-		#sd.scriptDict['iProsecutionCount'][iCiv] = iNewValue
+		#scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		#scriptDict['iProsecutionCount'][iCiv] = iNewValue
+		#gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 		gc.setProsecutionCount( iCiv, iNewValue )
 
 	#Plague
 	def getPlagueCountdown( self, iCiv ):
-		return sd.scriptDict['lPlagueCountdown'][iCiv]
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		return scriptDict['lPlagueCountdown'][iCiv]
 
 	def setPlagueCountdown( self, iCiv, iNewValue ):
-		sd.scriptDict['lPlagueCountdown'][iCiv] = iNewValue
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		scriptDict['lPlagueCountdown'][iCiv] = iNewValue
+		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
 	def getSeed( self ):
-		return sd.scriptDict['iSeed']
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		return scriptDict['iSeed']
 
 #######################################
 
@@ -230,29 +260,33 @@ class RFCUtils:
 	# 3Miro: BEGIN Utilities for the extra UHV info
 	def getBurgundyCulture( self ):
 		return 0
-		#if ( sd.scriptDict['lGoals'][con.iBurgundy][1] == -1 ):
-		#	return sd.scriptDict['iBurgundyCulture']
+		#scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		#if ( scriptDict['lGoals'][con.iBurgundy][1] == -1 ):
+		#	return scriptDict['iBurgundyCulture']
 		#else:
 		#	return -1
 
 	def getArabianInfluence( self ):
 		return 0
-		#if ( sd.scriptDict['lGoals'][con.iArabia][1] == -1 ):
+		#scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		#if ( scriptDict['lGoals'][con.iArabia][1] == -1 ):
 		#	return gc.getGame().calculateReligionPercent( xml.iIslam )
 		#else:
 		#	return -1
 
 	def getNorseRazed( self ):
 		return 0
-		#if ( sd.scriptDict['lGoals'][con.iNorse][1] == -1 ):
-		#	return sd.scriptDict['iNorseRazed']
+		#scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		#if ( scriptDict['lGoals'][con.iNorse][1] == -1 ):
+		#	return scriptDict['iNorseRazed']
 		#else:
 		#	return -1
 
 	def getKievFood( self ):
 		return 0
-		#if ( sd.scriptDict['lGoals'][con.iKiev][0] == -1 ):
-		#	return sd.scriptDict['iKievFood']
+		#scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		#if ( scriptDict['lGoals'][con.iKiev][0] == -1 ):
+		#	return scriptDict['iKievFood']
 		#else:
 		#	return -1
 	# 3Miro: END Utilities
@@ -1102,16 +1136,22 @@ class RFCUtils:
 		popup.launch(False)
 
 	def getPersecutionData(self):
-		return sd.scriptDict['lPersecutionData'][0], sd.scriptDict['lPersecutionData'][1], sd.scriptDict['lPersecutionData'][2]
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		return scriptDict['lPersecutionData'][0], scriptDict['lPersecutionData'][1], scriptDict['lPersecutionData'][2]
 
 	def setPersecutionData(self, iPlotX, iPlotY, iUnitID):
-		sd.scriptDict['lPersecutionData'] = [iPlotX, iPlotY, iUnitID]
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		scriptDict['lPersecutionData'] = [iPlotX, iPlotY, iUnitID]
+		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
 	def getPersecutionReligions(self):
-		return sd.scriptDict['lPersecutionReligions']
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		return scriptDict['lPersecutionReligions']
 
 	def setPersecutionReligions(self, val):
-		sd.scriptDict['lPersecutionReligions'] = val
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		scriptDict['lPersecutionReligions'] = val
+		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 	#Absinthe: end
 
 	#Absinthe: persecution
@@ -1157,7 +1197,7 @@ class RFCUtils:
 		## iChance = 60 + max(-10, min(30, pPlayer.getFaith()/3))
 		iChance = 55 + pPlayer.getFaith()/3
 		# lower chance for purging any religion from Jerusalem:
-		if (iPlotX == con.tJerusalem[0] and iPlotY == con.tJerusalem[1]):
+		if (iPlotX == con.iJerusalem[0] and iPlotY == con.iJerusalem[1]):
 			iChance -= 25
 		# lower chance if the city has the chosen religion's buildings/wonders:
 		iChance -= (len(lReligionBuilding) * 8 + lReligionWonder * 17)		# the wonders have an extra chance reduction (in addition to the first reduction)
@@ -1495,8 +1535,8 @@ class RFCUtils:
 	#Absinthe: end
 
 	def getScenario(self):
-		if gc.getPlayer(con.iBurgundy).isPlayable(): return con.i500ADScenario
-		return con.i1200ADScenario
+		if gc.getPlayer(con.iBurgundy).isPlayable(): return con.i500AD
+		return con.i1200AD
 
 	def getScenarioStartYear(self):
 		lStartYears = [500, 1200]

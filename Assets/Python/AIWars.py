@@ -4,11 +4,11 @@ from CvPythonExtensions import *
 import CvUtil
 import PyHelpers		# LOQ
 import Popup
+import cPickle as pickle		# LOQ 2005-10-12
 import Consts as con
 import XMLConsts as xml
 import RFCUtils
 import RFCEMaps as rfcemaps
-from StoredData import sd
 
 # globals
 gc = CyGlobalContext()
@@ -43,16 +43,25 @@ teamVenice = gc.getTeam( pVenice.getTeam() )
 class AIWars:
 
 	def getAttackingCivsArray( self, iCiv ):
-		return sd.scriptDict['lAttackingCivsArray'][iCiv]
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		return scriptDict['lAttackingCivsArray'][iCiv]
+
 
 	def setAttackingCivsArray( self, iCiv, iNewValue ):
-		sd.scriptDict['lAttackingCivsArray'][iCiv] = iNewValue
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		scriptDict['lAttackingCivsArray'][iCiv] = iNewValue
+		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
+
 
 	def getNextTurnAIWar( self ):
-		return sd.scriptDict['iNextTurnAIWar']
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		return scriptDict['iNextTurnAIWar']
+
 
 	def setNextTurnAIWar( self, iNewValue ):
-		sd.scriptDict['iNextTurnAIWar'] = iNewValue
+		scriptDict = pickle.loads( gc.getGame().getScriptData() )
+		scriptDict['iNextTurnAIWar'] = iNewValue
+		gc.getGame().setScriptData( pickle.dumps(scriptDict) )
 
 
 	def setup(self):
@@ -66,30 +75,30 @@ class AIWars:
 
 		#turn automatically peace on between independent cities and all the major civs
 		if (iGameTurn % 20 == 0):
-			utils.restorePeaceHuman(iIndependent2, False)
+			utils.restorePeaceHuman(con.iIndependent2, False)
 		if (iGameTurn % 20 == 5):
-			utils.restorePeaceHuman(iIndependent, False)
+			utils.restorePeaceHuman(con.iIndependent, False)
 		if (iGameTurn % 20 == 10):
-			utils.restorePeaceHuman(iIndependent3, False)
+			utils.restorePeaceHuman(con.iIndependent3, False)
 		if (iGameTurn % 20 == 15):
-			utils.restorePeaceHuman(iIndependent4, False)
+			utils.restorePeaceHuman(con.iIndependent4, False)
 		if (iGameTurn % 60 == 0 and iGameTurn > 50):
-			utils.restorePeaceAI(iIndependent, False)
+			utils.restorePeaceAI(con.iIndependent, False)
 		if (iGameTurn % 60 == 15 and iGameTurn > 50):
-			utils.restorePeaceAI(iIndependent2, False)
+			utils.restorePeaceAI(con.iIndependent2, False)
 		if (iGameTurn % 60 == 30 and iGameTurn > 50):
-			utils.restorePeaceAI(iIndependent3, False)
+			utils.restorePeaceAI(con.iIndependent3, False)
 		if (iGameTurn % 60 == 45 and iGameTurn > 50):
-			utils.restorePeaceAI(iIndependent4, False)
+			utils.restorePeaceAI(con.iIndependent4, False)
 		#turn automatically war on between independent cities and some AI major civs
 		if (iGameTurn % 60 == 2 and iGameTurn > 50): #1 turn after restorePeace()
-			utils.minorWars(iIndependent)
+			utils.minorWars(con.iIndependent)
 		if (iGameTurn % 60 == 17 and iGameTurn > 50): #1 turn after restorePeace()
-			utils.minorWars(iIndependent2)
+			utils.minorWars(con.iIndependent2)
 		if (iGameTurn % 60 == 32 and iGameTurn > 50): #1 turn after restorePeace()
-			utils.minorWars(iIndependent3)
+			utils.minorWars(con.iIndependent3)
 		if (iGameTurn % 60 == 47 and iGameTurn > 50): #1 turn after restorePeace()
-			utils.minorWars(iIndependent4)
+			utils.minorWars(con.iIndependent4)
 
 		### 3Miro: AI Hacking - Venice has hard time dealing with Indy Ragusa
 		if ( (iGameTurn % 7 == 3) and (not pVenice.isHuman()) ):

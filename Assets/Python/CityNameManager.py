@@ -12,6 +12,14 @@ import RFCEMaps as rfcemaps
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer
 
+### Constants ###
+
+# initialise player variables to player IDs from WBS
+iNumPlayers = con.iNumPlayers
+iNumMajorPlayers = con.iNumMajorPlayers
+iNumActivePlayers = con.iNumActivePlayers
+iNumTotalPlayers = con.iNumTotalPlayers
+
 # city coordinates
 tCityMap = rfcemaps.tCityMap
 
@@ -21,7 +29,7 @@ class CityNameManager:
 	def assignName(self, city):
 		"""Names a city depending on its plot"""
 		iOwner = city.getOwner()
-		if (iOwner < con.iNumMajorPlayers):
+		if (iOwner < iNumMajorPlayers):
 			#print(" City Name ",iOwner,con.iMapMaxY-1-city.getY(),city.getX()) #Sedna17 Needed to throw an extra -1 in the Y coordinate to get things to line up right. I love zero-indexing.
 			cityName = tCityMap[iOwner][con.iMapMaxY-1-city.getY()][city.getX()]
 			#print(" City Name ",cityName)
@@ -32,14 +40,14 @@ class CityNameManager:
 		"""Renames a city depending on its owner"""
 
 		#sName = city.getName()
-		if ( iNewOwner < con.iNumMajorPlayers ):
+		if ( iNewOwner < iNumMajorPlayers ):
 			cityName = tCityMap[iNewOwner][con.iMapMaxY-1-city.getY()][city.getX()]
 			if ( cityName != "-1" ):
 				city.setName(unicode(cityName, 'latin-1'), False)
 
 	def lookupName(self,city,iPlayer):
 		"""Looks up a city name in another player's map"""
-		if (iPlayer < con.iNumMajorPlayers):
+		if (iPlayer < iNumMajorPlayers):
 			cityName = tCityMap[iPlayer][con.iMapMaxY-1-city.getY()][city.getX()]
 			if (cityName == "-1"):
 				return "Unknown"

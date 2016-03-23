@@ -1,179 +1,263 @@
 # RFC Europe, balancing modifiers are placed here
 from CvPythonExtensions import *
-from Consts import *
-from XMLConsts import *
+import Consts as con
+import XMLConsts as xml
 import RFCEMaps as rfcemaps
 import RFCUtils # Absinthe
+
 
 gc = CyGlobalContext()
 utils = RFCUtils.RFCUtils() # Absinthe
 
 
+### Constants ###
+iBurgundy = con.iBurgundy
+iByzantium = con.iByzantium
+iFrankia = con.iFrankia
+iArabia = con.iArabia
+iBulgaria = con.iBulgaria
+iCordoba = con.iCordoba
+iSpain = con.iSpain
+iNorway = con.iNorway
+iDenmark = con.iDenmark
+iVenecia = con.iVenecia
+iNovgorod = con.iNovgorod
+iKiev = con.iKiev
+iHungary = con.iHungary
+iGermany = con.iGermany
+iScotland = con.iScotland
+iPoland = con.iPoland
+iMoscow = con.iMoscow
+iGenoa = con.iGenoa
+iMorocco = con.iMorocco
+iEngland = con.iEngland
+iPortugal = con.iPortugal
+iAragon = con.iAragon
+iPrussia = con.iPrussia
+iLithuania = con.iLithuania
+iAustria = con.iAustria
+iTurkey = con.iTurkey
+iSweden = con.iSweden
+iDutch = con.iDutch
+iPope = con.iPope
+iNumPlayers = con.iNumPlayers
+iNumMajorPlayers = con.iNumMajorPlayers
+iNumActivePlayers = con.iNumActivePlayers
+iIndependent = con.iIndependent
+iIndependent2 = con.iIndependent2
+iBarbarian = con.iBarbarian
+iNumTotalPlayers = con.iNumTotalPlayers
+
+pBurgundy = gc.getPlayer(iBurgundy)
+pByzantium = gc.getPlayer(iByzantium)
+pFrankia = gc.getPlayer(iFrankia)
+pArabia = gc.getPlayer(iArabia)
+pBulgaria = gc.getPlayer(iBulgaria)
+pCordoba = gc.getPlayer(iCordoba)
+pSpain = gc.getPlayer(iSpain)
+pNorway = gc.getPlayer(iNorway)
+pDenmark = gc.getPlayer(iDenmark)
+pVenecia = gc.getPlayer(iVenecia)
+pNovgorod = gc.getPlayer(iNovgorod)
+pKiev = gc.getPlayer(iKiev)
+pHungary = gc.getPlayer(iHungary)
+pGermany = gc.getPlayer(iGermany)
+pScotland = gc.getPlayer(iScotland)
+pPoland = gc.getPlayer(iPoland)
+pMoscow = gc.getPlayer(iMoscow)
+pGenoa = gc.getPlayer(iGenoa)
+pMorocco = gc.getPlayer(iMorocco)
+pEngland = gc.getPlayer(iEngland)
+pPortugal = gc.getPlayer(iPortugal)
+pAragon = gc.getPlayer(iAragon)
+pPrussia = gc.getPlayer(iPrussia)
+pLithuania = gc.getPlayer(iLithuania)
+pAustria = gc.getPlayer(iAustria)
+pTurkey = gc.getPlayer(iTurkey)
+pSweden = gc.getPlayer(iSweden)
+pDutch = gc.getPlayer(iDutch)
+pPope = gc.getPlayer(iPope)
+
+# Province Status
+iProvinceNone = con.iProvinceNone
+iProvinceOwn = con.iProvinceOwn
+iProvinceConquer = con.iProvinceConquer
+iProvinceDominate = con.iProvinceDominate
+iProvinceLost = con.iProvinceLost
+
+# Province Types
+iProvinceNone      = con.iProvinceNone
+iProvinceOuter     = con.iProvinceOuter
+iProvincePotential = con.iProvincePotential
+iProvinceNatural   = con.iProvinceNatural
+iProvinceCore      = con.iProvinceCore
+iNumProvinceTypes  = con.iNumProvinceTypes
+
 ############ Lists of all the provinces for each Civ ###################
-tByzantiumCore = [iP_Constantinople,iP_Thrace,iP_Thessaly,iP_Thessaloniki,iP_Epirus,iP_Morea,iP_Opsikion,iP_Paphlagonia,iP_Thrakesion,iP_Cilicia,iP_Anatolikon,iP_Armeniakon,iP_Charsianon,iP_Colonea,iP_Antiochia]
-tByzantiumNorm = [iP_Moesia,iP_Serbia,iP_Macedonia,iP_Arberia,iP_Cyprus,iP_Crete,iP_Rhodes,iP_Syria,iP_Lebanon,iP_Jerusalem,iP_Egypt,iP_Cyrenaica]
-tByzantiumOuter = [iP_Crimea,iP_Arabia,iP_Bosnia,iP_Slavonia,iP_Dalmatia,iP_Verona,iP_Lombardy,iP_Liguria,iP_Tuscany,iP_Latium,iP_Sardinia,iP_Corsica]
+tByzantiumCore = [xml.iP_Constantinople,xml.iP_Thrace,xml.iP_Thessaly,xml.iP_Thessaloniki,xml.iP_Epirus,xml.iP_Morea,xml.iP_Opsikion,xml.iP_Paphlagonia,xml.iP_Thrakesion,xml.iP_Cilicia,xml.iP_Anatolikon,xml.iP_Armeniakon,xml.iP_Charsianon,xml.iP_Colonea,xml.iP_Antiochia]
+tByzantiumNorm = [xml.iP_Moesia,xml.iP_Serbia,xml.iP_Macedonia,xml.iP_Arberia,xml.iP_Cyprus,xml.iP_Crete,xml.iP_Rhodes,xml.iP_Syria,xml.iP_Lebanon,xml.iP_Jerusalem,xml.iP_Egypt,xml.iP_Cyrenaica]
+tByzantiumOuter = [xml.iP_Crimea,xml.iP_Arabia,xml.iP_Bosnia,xml.iP_Slavonia,xml.iP_Dalmatia,xml.iP_Verona,xml.iP_Lombardy,xml.iP_Liguria,xml.iP_Tuscany,xml.iP_Latium,xml.iP_Sardinia,xml.iP_Corsica]
 tByzantiumPot2Core = []
-tByzantiumPot2Norm = [iP_Calabria,iP_Apulia,iP_Sicily,iP_Malta,iP_Tripolitania,iP_Ifriqiya]
+tByzantiumPot2Norm = [xml.iP_Calabria,xml.iP_Apulia,xml.iP_Sicily,xml.iP_Malta,xml.iP_Tripolitania,xml.iP_Ifriqiya]
 
-tFranceCore = [iP_IleDeFrance,iP_Orleans,iP_Champagne]
-tFranceNorm = [iP_Picardy,iP_Normandy,iP_Aquitania]
-tFranceOuter = [iP_Catalonia,iP_Aragon,iP_Navarre,iP_Lorraine,iP_Netherlands,iP_Bavaria,iP_Saxony,iP_Swabia,iP_Franconia,iP_Lombardy,iP_Liguria,iP_Corsica]
+tFranceCore = [xml.iP_IleDeFrance,xml.iP_Orleans,xml.iP_Champagne]
+tFranceNorm = [xml.iP_Picardy,xml.iP_Normandy,xml.iP_Aquitania]
+tFranceOuter = [xml.iP_Catalonia,xml.iP_Aragon,xml.iP_Navarre,xml.iP_Lorraine,xml.iP_Netherlands,xml.iP_Bavaria,xml.iP_Saxony,xml.iP_Swabia,xml.iP_Franconia,xml.iP_Lombardy,xml.iP_Liguria,xml.iP_Corsica]
 tFrancePot2Core = []
-tFrancePot2Norm = [iP_Bretagne,iP_Provence,iP_Burgundy,iP_Flanders]
+tFrancePot2Norm = [xml.iP_Bretagne,xml.iP_Provence,xml.iP_Burgundy,xml.iP_Flanders]
 
-tArabiaCore = [iP_Syria,iP_Lebanon,iP_Jerusalem,iP_Arabia]
-tArabiaNorm = [iP_Egypt,iP_Cyrenaica]
-tArabiaOuter = [iP_Oran,iP_Algiers,iP_Sicily,iP_Malta,iP_Crete,iP_Rhodes,iP_Cilicia]
+tArabiaCore = [xml.iP_Syria,xml.iP_Lebanon,xml.iP_Jerusalem,xml.iP_Arabia]
+tArabiaNorm = [xml.iP_Egypt,xml.iP_Cyrenaica]
+tArabiaOuter = [xml.iP_Oran,xml.iP_Algiers,xml.iP_Sicily,xml.iP_Malta,xml.iP_Crete,xml.iP_Rhodes,xml.iP_Cilicia]
 tArabiaPot2Core = []
-tArabiaPot2Norm = [iP_Antiochia,iP_Cyprus,iP_Ifriqiya,iP_Tripolitania]
+tArabiaPot2Norm = [xml.iP_Antiochia,xml.iP_Cyprus,xml.iP_Ifriqiya,xml.iP_Tripolitania]
 
-tBulgariaCore = [iP_Moesia]
-tBulgariaNorm = [iP_Macedonia,iP_Wallachia]
-tBulgariaOuter = [iP_Serbia,iP_Banat,iP_Epirus,iP_Arberia,iP_Constantinople]
+tBulgariaCore = [xml.iP_Moesia]
+tBulgariaNorm = [xml.iP_Macedonia,xml.iP_Wallachia]
+tBulgariaOuter = [xml.iP_Serbia,xml.iP_Banat,xml.iP_Epirus,xml.iP_Arberia,xml.iP_Constantinople]
 tBulgariaPot2Core = []
-tBulgariaPot2Norm = [iP_Thrace,iP_Thessaloniki]
+tBulgariaPot2Norm = [xml.iP_Thrace,xml.iP_Thessaloniki]
 
-tCordobaCore = [iP_Andalusia,iP_Valencia,iP_LaMancha]
-tCordobaNorm = [iP_Tetouan]
-tCordobaOuter = [iP_Leon,iP_Lusitania,iP_Navarre,iP_Castile,iP_Oran]
+tCordobaCore = [xml.iP_Andalusia,xml.iP_Valencia,xml.iP_LaMancha]
+tCordobaNorm = [xml.iP_Tetouan]
+tCordobaOuter = [xml.iP_Leon,xml.iP_Lusitania,xml.iP_Navarre,xml.iP_Castile,xml.iP_Oran]
 tCordobaPot2Core = []
-tCordobaPot2Norm = [iP_Morocco,iP_Fez,iP_Marrakesh,iP_Catalonia,iP_Aragon,iP_Balears]
+tCordobaPot2Norm = [xml.iP_Morocco,xml.iP_Fez,xml.iP_Marrakesh,xml.iP_Catalonia,xml.iP_Aragon,xml.iP_Balears]
 
-tVeniceCore = [iP_Verona]
-tVeniceNorm = [iP_Dalmatia]
-tVeniceOuter = [iP_Epirus,iP_Morea,iP_Rhodes,iP_Constantinople]
+tVeniceCore = [xml.iP_Verona]
+tVeniceNorm = [xml.iP_Dalmatia]
+tVeniceOuter = [xml.iP_Epirus,xml.iP_Morea,xml.iP_Rhodes,xml.iP_Constantinople]
 tVenicePot2Core = []
-tVenicePot2Norm = [iP_Tuscany,iP_Arberia,iP_Crete,iP_Cyprus]
+tVenicePot2Norm = [xml.iP_Tuscany,xml.iP_Arberia,xml.iP_Crete,xml.iP_Cyprus]
 
-tBurgundyCore = [iP_Burgundy]
-tBurgundyNorm = [iP_Provence,iP_Flanders]
-tBurgundyOuter = [iP_Lorraine,iP_Swabia,iP_Lombardy,iP_Liguria,iP_Bretagne]
+tBurgundyCore = [xml.iP_Burgundy]
+tBurgundyNorm = [xml.iP_Provence,xml.iP_Flanders]
+tBurgundyOuter = [xml.iP_Lorraine,xml.iP_Swabia,xml.iP_Lombardy,xml.iP_Liguria,xml.iP_Bretagne]
 tBurgundyPot2Core = []
-tBurgundyPot2Norm = [iP_Champagne,iP_Picardy,iP_IleDeFrance,iP_Aquitania,iP_Orleans,iP_Normandy]
+tBurgundyPot2Norm = [xml.iP_Champagne,xml.iP_Picardy,xml.iP_IleDeFrance,xml.iP_Aquitania,xml.iP_Orleans,xml.iP_Normandy]
 
-tGermanyCore = [iP_Franconia,iP_Lorraine,iP_Bavaria,iP_Swabia,iP_Saxony]
-tGermanyNorm = [iP_Brandenburg]
-tGermanyOuter = [iP_Champagne,iP_Picardy,iP_Burgundy,iP_Liguria,iP_Verona,iP_Tuscany,iP_Austria,iP_Moravia,iP_Silesia,iP_GreaterPoland,iP_Carinthia]
+tGermanyCore = [xml.iP_Franconia,xml.iP_Lorraine,xml.iP_Bavaria,xml.iP_Swabia,xml.iP_Saxony]
+tGermanyNorm = [xml.iP_Brandenburg]
+tGermanyOuter = [xml.iP_Champagne,xml.iP_Picardy,xml.iP_Burgundy,xml.iP_Liguria,xml.iP_Verona,xml.iP_Tuscany,xml.iP_Austria,xml.iP_Moravia,xml.iP_Silesia,xml.iP_GreaterPoland,xml.iP_Carinthia]
 tGermanyPot2Core = []
-tGermanyPot2Norm = [iP_Bohemia,iP_Holstein,iP_Pomerania,iP_Netherlands,iP_Flanders,iP_Lombardy]
+tGermanyPot2Norm = [xml.iP_Bohemia,xml.iP_Holstein,xml.iP_Pomerania,xml.iP_Netherlands,xml.iP_Flanders,xml.iP_Lombardy]
 
-tNovgorodCore = [iP_Novgorod, iP_Karelia]
-tNovgorodNorm = [iP_Rostov, iP_Vologda]
-tNovgorodOuter = [iP_Smolensk, iP_Polotsk, iP_Livonia]
+tNovgorodCore = [xml.iP_Novgorod, xml.iP_Karelia]
+tNovgorodNorm = [xml.iP_Rostov, xml.iP_Vologda]
+tNovgorodOuter = [xml.iP_Smolensk, xml.iP_Polotsk, xml.iP_Livonia]
 tNovgorodPot2Core = []
-tNovgorodPot2Norm = [iP_Estonia, iP_Osterland]
+tNovgorodPot2Norm = [xml.iP_Estonia, xml.iP_Osterland]
 
-tNorwayCore = [iP_Norway,iP_Vestfold]
-tNorwayNorm = [iP_Iceland]
-tNorwayOuter = [iP_Scotland,iP_Northumbria,iP_Ireland,iP_Normandy,iP_Svealand,iP_Norrland]
+tNorwayCore = [xml.iP_Norway,xml.iP_Vestfold]
+tNorwayNorm = [xml.iP_Iceland]
+tNorwayOuter = [xml.iP_Scotland,xml.iP_Northumbria,xml.iP_Ireland,xml.iP_Normandy,xml.iP_Svealand,xml.iP_Norrland]
 tNorwayPot2Core = []
-tNorwayPot2Norm = [iP_TheIsles,iP_Jamtland]
+tNorwayPot2Norm = [xml.iP_TheIsles,xml.iP_Jamtland]
 
-tKievCore = [iP_Kiev,iP_Sloboda,iP_Pereyaslavl,iP_Chernigov]
-tKievNorm = [iP_Podolia,iP_Volhynia]
-tKievOuter = [iP_Moldova,iP_GaliciaPoland,iP_Brest,iP_Polotsk,iP_Novgorod,iP_Moscow,iP_Murom,iP_Simbirsk,iP_Crimea,iP_Donets,iP_Kuban]
+tKievCore = [xml.iP_Kiev,xml.iP_Sloboda,xml.iP_Pereyaslavl,xml.iP_Chernigov]
+tKievNorm = [xml.iP_Podolia,xml.iP_Volhynia]
+tKievOuter = [xml.iP_Moldova,xml.iP_GaliciaPoland,xml.iP_Brest,xml.iP_Polotsk,xml.iP_Novgorod,xml.iP_Moscow,xml.iP_Murom,xml.iP_Simbirsk,xml.iP_Crimea,xml.iP_Donets,xml.iP_Kuban]
 tKievPot2Core = []
-tKievPot2Norm = [iP_Minsk,iP_Smolensk,iP_Zaporizhia]
+tKievPot2Norm = [xml.iP_Minsk,xml.iP_Smolensk,xml.iP_Zaporizhia]
 
-tHungaryCore = [iP_Hungary,iP_UpperHungary,iP_Pannonia,iP_Transylvania]
-tHungaryNorm = [iP_Slavonia,iP_Banat,iP_Bosnia,iP_Dalmatia]
-tHungaryOuter = [iP_Serbia,iP_Wallachia,iP_Moldova,iP_GaliciaPoland,iP_Bavaria,iP_Bohemia,iP_Silesia]
+tHungaryCore = [xml.iP_Hungary,xml.iP_UpperHungary,xml.iP_Pannonia,xml.iP_Transylvania]
+tHungaryNorm = [xml.iP_Slavonia,xml.iP_Banat,xml.iP_Bosnia,xml.iP_Dalmatia]
+tHungaryOuter = [xml.iP_Serbia,xml.iP_Wallachia,xml.iP_Moldova,xml.iP_GaliciaPoland,xml.iP_Bavaria,xml.iP_Bohemia,xml.iP_Silesia]
 tHungaryPot2Core = []
-tHungaryPot2Norm = [iP_Moravia,iP_Austria,iP_Carinthia]
+tHungaryPot2Norm = [xml.iP_Moravia,xml.iP_Austria,xml.iP_Carinthia]
 
-tSpainCore = [iP_Leon,iP_GaliciaSpain,iP_Castile]
+tSpainCore = [xml.iP_Leon,xml.iP_GaliciaSpain,xml.iP_Castile]
 tSpainNorm = []
-tSpainOuter = [iP_Lusitania,iP_Catalonia,iP_Aragon,iP_Balears,iP_Aquitania,iP_Provence,iP_Tetouan,iP_Fez,iP_Oran,iP_Algiers,iP_Sardinia,iP_Corsica,iP_Azores,iP_Sicily,iP_Calabria,iP_Apulia]
+tSpainOuter = [xml.iP_Lusitania,xml.iP_Catalonia,xml.iP_Aragon,xml.iP_Balears,xml.iP_Aquitania,xml.iP_Provence,xml.iP_Tetouan,xml.iP_Fez,xml.iP_Oran,xml.iP_Algiers,xml.iP_Sardinia,xml.iP_Corsica,xml.iP_Azores,xml.iP_Sicily,xml.iP_Calabria,xml.iP_Apulia]
 tSpainPot2Core = []
-tSpainPot2Norm = [iP_Navarre,iP_Andalusia,iP_Valencia,iP_LaMancha,iP_Canaries,iP_Madeira]
+tSpainPot2Norm = [xml.iP_Navarre,xml.iP_Andalusia,xml.iP_Valencia,xml.iP_LaMancha,xml.iP_Canaries,xml.iP_Madeira]
 
-tDenmarkCore = [iP_Denmark,iP_Skaneland]
+tDenmarkCore = [xml.iP_Denmark,xml.iP_Skaneland]
 tDenmarkNorm = []
-tDenmarkOuter = [iP_Gotaland,iP_Svealand,iP_Northumbria,iP_Mercia,iP_EastAnglia,iP_London,iP_Brandenburg,iP_Norway,iP_Vestfold,iP_Normandy]
+tDenmarkOuter = [xml.iP_Gotaland,xml.iP_Svealand,xml.iP_Northumbria,xml.iP_Mercia,xml.iP_EastAnglia,xml.iP_London,xml.iP_Brandenburg,xml.iP_Norway,xml.iP_Vestfold,xml.iP_Normandy]
 tDenmarkPot2Core = []
-tDenmarkPot2Norm = [iP_Estonia,iP_Gotland,iP_Holstein]
+tDenmarkPot2Norm = [xml.iP_Estonia,xml.iP_Gotland,xml.iP_Holstein]
 
-tScotlandCore = [iP_Scotland]
-tScotlandNorm = [iP_TheIsles]
-tScotlandOuter = [iP_Ireland, iP_Mercia, iP_Wales]
+tScotlandCore = [xml.iP_Scotland]
+tScotlandNorm = [xml.iP_TheIsles]
+tScotlandOuter = [xml.iP_Ireland, xml.iP_Mercia, xml.iP_Wales]
 tScotlandPot2Core = []
-tScotlandPot2Norm = [iP_Northumbria]
+tScotlandPot2Norm = [xml.iP_Northumbria]
 
-tPolandCore = [iP_GreaterPoland,iP_LesserPoland,iP_Masovia]
-tPolandNorm = [iP_Brest,iP_GaliciaPoland]
-tPolandOuter = [iP_Prussia,iP_Lithuania,iP_Polotsk,iP_Minsk,iP_Volhynia,iP_Podolia,iP_Moldova,iP_Kiev]
+tPolandCore = [xml.iP_GreaterPoland,xml.iP_LesserPoland,xml.iP_Masovia]
+tPolandNorm = [xml.iP_Brest,xml.iP_GaliciaPoland]
+tPolandOuter = [xml.iP_Prussia,xml.iP_Lithuania,xml.iP_Polotsk,xml.iP_Minsk,xml.iP_Volhynia,xml.iP_Podolia,xml.iP_Moldova,xml.iP_Kiev]
 tPolandPot2Core = []
-tPolandPot2Norm = [iP_Pomerania,iP_Silesia,iP_Suvalkija]
+tPolandPot2Norm = [xml.iP_Pomerania,xml.iP_Silesia,xml.iP_Suvalkija]
 
-tGenoaCore = [iP_Liguria]
-tGenoaNorm = [iP_Corsica,iP_Sardinia]
-tGenoaOuter = [iP_Ifriqiya,iP_Constantinople,iP_Crete,iP_Cyprus,iP_Morea]
+tGenoaCore = [xml.iP_Liguria]
+tGenoaNorm = [xml.iP_Corsica,xml.iP_Sardinia]
+tGenoaOuter = [xml.iP_Ifriqiya,xml.iP_Constantinople,xml.iP_Crete,xml.iP_Cyprus,xml.iP_Morea]
 tGenoaPot2Core = []
-tGenoaPot2Norm = [iP_Sicily,iP_Malta,iP_Lombardy,iP_Tuscany,iP_Rhodes,iP_Crimea]
+tGenoaPot2Norm = [xml.iP_Sicily,xml.iP_Malta,xml.iP_Lombardy,xml.iP_Tuscany,xml.iP_Rhodes,xml.iP_Crimea]
 
-tMoroccoCore = [iP_Marrakesh, iP_Morocco, iP_Fez]
-tMoroccoNorm = [iP_Tetouan]
-tMoroccoOuter = [iP_Ifriqiya, iP_Andalusia, iP_Valencia, iP_Tripolitania]
+tMoroccoCore = [xml.iP_Marrakesh, xml.iP_Morocco, xml.iP_Fez]
+tMoroccoNorm = [xml.iP_Tetouan]
+tMoroccoOuter = [xml.iP_Ifriqiya, xml.iP_Andalusia, xml.iP_Valencia, xml.iP_Tripolitania]
 tMoroccoPot2Core = []
-tMoroccoPot2Norm = [iP_Oran, iP_Algiers]
+tMoroccoPot2Norm = [xml.iP_Oran, xml.iP_Algiers]
 
-tEnglandCore = [iP_London,iP_EastAnglia,iP_Mercia,iP_Wessex]
-tEnglandNorm = [iP_Northumbria]
-tEnglandOuter = [iP_IleDeFrance,iP_Bretagne,iP_Aquitania,iP_Orleans,iP_Champagne,iP_Flanders,iP_Normandy,iP_Picardy,iP_Scotland,iP_TheIsles,iP_Ireland]
+tEnglandCore = [xml.iP_London,xml.iP_EastAnglia,xml.iP_Mercia,xml.iP_Wessex]
+tEnglandNorm = [xml.iP_Northumbria]
+tEnglandOuter = [xml.iP_IleDeFrance,xml.iP_Bretagne,xml.iP_Aquitania,xml.iP_Orleans,xml.iP_Champagne,xml.iP_Flanders,xml.iP_Normandy,xml.iP_Picardy,xml.iP_Scotland,xml.iP_TheIsles,xml.iP_Ireland]
 tEnglandPot2Core = []
-tEnglandPot2Norm = [iP_Wales]
+tEnglandPot2Norm = [xml.iP_Wales]
 
-tPortugalCore = [iP_Lusitania]
-tPortugalNorm = [iP_Azores]
-tPortugalOuter = [iP_Morocco,iP_Tetouan,iP_Leon,iP_GaliciaSpain]
+tPortugalCore = [xml.iP_Lusitania]
+tPortugalNorm = [xml.iP_Azores]
+tPortugalOuter = [xml.iP_Morocco,xml.iP_Tetouan,xml.iP_Leon,xml.iP_GaliciaSpain]
 tPortugalPot2Core = []
-tPortugalPot2Norm = [iP_Madeira,iP_Canaries,iP_Andalusia]
+tPortugalPot2Norm = [xml.iP_Madeira,xml.iP_Canaries,xml.iP_Andalusia]
 
-tAragonCore = [iP_Aragon,iP_Catalonia,iP_Balears,iP_Valencia]
+tAragonCore = [xml.iP_Aragon,xml.iP_Catalonia,xml.iP_Balears,xml.iP_Valencia]
 tAragonNorm = []
-tAragonOuter = [iP_Castile,iP_Provence,iP_Corsica,iP_Thessaly]
+tAragonOuter = [xml.iP_Castile,xml.iP_Provence,xml.iP_Corsica,xml.iP_Thessaly]
 tAragonPot2Core = []
-tAragonPot2Norm = [iP_Navarre,iP_Andalusia,iP_LaMancha,iP_Sardinia,iP_Sicily,iP_Apulia,iP_Calabria,iP_Malta]
+tAragonPot2Norm = [xml.iP_Navarre,xml.iP_Andalusia,xml.iP_LaMancha,xml.iP_Sardinia,xml.iP_Sicily,xml.iP_Apulia,xml.iP_Calabria,xml.iP_Malta]
 
-tSwedenCore = [iP_Norrland,iP_Svealand]
-tSwedenNorm = [iP_Gotaland,iP_Gotland]
-tSwedenOuter = [iP_Skaneland,iP_Vestfold,iP_Pomerania,iP_Livonia,iP_Prussia,iP_Novgorod]
+tSwedenCore = [xml.iP_Norrland,xml.iP_Svealand]
+tSwedenNorm = [xml.iP_Gotaland,xml.iP_Gotland]
+tSwedenOuter = [xml.iP_Skaneland,xml.iP_Vestfold,xml.iP_Pomerania,xml.iP_Livonia,xml.iP_Prussia,xml.iP_Novgorod]
 tSwedenPot2Core = []
-tSwedenPot2Norm = [iP_Jamtland,iP_Osterland,iP_Karelia,iP_Estonia]
+tSwedenPot2Norm = [xml.iP_Jamtland,xml.iP_Osterland,xml.iP_Karelia,xml.iP_Estonia]
 
-tPrussiaCore = [iP_Prussia]
+tPrussiaCore = [xml.iP_Prussia]
 tPrussiaNorm = []
-tPrussiaOuter = [iP_Brandenburg,iP_Estonia,iP_Gotland]
+tPrussiaOuter = [xml.iP_Brandenburg,xml.iP_Estonia,xml.iP_Gotland]
 tPrussiaPot2Core = []
-tPrussiaPot2Norm = [iP_Pomerania,iP_Livonia]
+tPrussiaPot2Norm = [xml.iP_Pomerania,xml.iP_Livonia]
 
-tLithuaniaCore = [iP_Lithuania]
-tLithuaniaNorm = [iP_Suvalkija,iP_Minsk,iP_Polotsk]
-tLithuaniaOuter = [iP_GreaterPoland,iP_LesserPoland,iP_Masovia,iP_GaliciaPoland,iP_Sloboda,iP_Pereyaslavl,iP_Livonia,iP_Estonia,iP_Novgorod,iP_Smolensk,iP_Chernigov]
+tLithuaniaCore = [xml.iP_Lithuania]
+tLithuaniaNorm = [xml.iP_Suvalkija,xml.iP_Minsk,xml.iP_Polotsk]
+tLithuaniaOuter = [xml.iP_GreaterPoland,xml.iP_LesserPoland,xml.iP_Masovia,xml.iP_GaliciaPoland,xml.iP_Sloboda,xml.iP_Pereyaslavl,xml.iP_Livonia,xml.iP_Estonia,xml.iP_Novgorod,xml.iP_Smolensk,xml.iP_Chernigov]
 tLithuaniaPot2Core = []
-tLithuaniaPot2Norm = [iP_Brest,iP_Podolia,iP_Volhynia,iP_Kiev]
+tLithuaniaPot2Norm = [xml.iP_Brest,xml.iP_Podolia,xml.iP_Volhynia,xml.iP_Kiev]
 
-tAustriaCore = [iP_Austria,iP_Carinthia]
-tAustriaNorm = [iP_Bohemia,iP_Moravia]
-tAustriaOuter = [iP_Verona,iP_Hungary,iP_Transylvania,iP_Slavonia,iP_Dalmatia,iP_LesserPoland,iP_GaliciaPoland,iP_Netherlands,iP_Flanders]
+tAustriaCore = [xml.iP_Austria,xml.iP_Carinthia]
+tAustriaNorm = [xml.iP_Bohemia,xml.iP_Moravia]
+tAustriaOuter = [xml.iP_Verona,xml.iP_Hungary,xml.iP_Transylvania,xml.iP_Slavonia,xml.iP_Dalmatia,xml.iP_LesserPoland,xml.iP_GaliciaPoland,xml.iP_Netherlands,xml.iP_Flanders]
 tAustriaPot2Core = []
-tAustriaPot2Norm = [iP_Bavaria,iP_Silesia,iP_Pannonia,iP_UpperHungary]
+tAustriaPot2Norm = [xml.iP_Bavaria,xml.iP_Silesia,xml.iP_Pannonia,xml.iP_UpperHungary]
 
-tTurkeyCore = [iP_Opsikion,iP_Thrakesion,iP_Paphlagonia,iP_Anatolikon,iP_Constantinople]
-tTurkeyNorm = [iP_Thrace,iP_Armeniakon,iP_Charsianon,iP_Cilicia]
-tTurkeyOuter = [iP_Thessaly,iP_Epirus,iP_Morea,iP_Arberia,iP_Wallachia,iP_Serbia,iP_Bosnia,iP_Banat,iP_Slavonia,iP_Pannonia,iP_Hungary,iP_Transylvania,iP_Moldova,iP_Crimea,iP_Crete,iP_Cyrenaica,iP_Tripolitania]
+tTurkeyCore = [xml.iP_Opsikion,xml.iP_Thrakesion,xml.iP_Paphlagonia,xml.iP_Anatolikon,xml.iP_Constantinople]
+tTurkeyNorm = [xml.iP_Thrace,xml.iP_Armeniakon,xml.iP_Charsianon,xml.iP_Cilicia]
+tTurkeyOuter = [xml.iP_Thessaly,xml.iP_Epirus,xml.iP_Morea,xml.iP_Arberia,xml.iP_Wallachia,xml.iP_Serbia,xml.iP_Bosnia,xml.iP_Banat,xml.iP_Slavonia,xml.iP_Pannonia,xml.iP_Hungary,xml.iP_Transylvania,xml.iP_Moldova,xml.iP_Crimea,xml.iP_Crete,xml.iP_Cyrenaica,xml.iP_Tripolitania]
 tTurkeyPot2Core = []
-tTurkeyPot2Norm = [iP_Colonea,iP_Antiochia,iP_Syria,iP_Lebanon,iP_Jerusalem,iP_Egypt,iP_Arabia,iP_Macedonia,iP_Thessaloniki,iP_Moesia,iP_Cyprus,iP_Rhodes]
+tTurkeyPot2Norm = [xml.iP_Colonea,xml.iP_Antiochia,xml.iP_Syria,xml.iP_Lebanon,xml.iP_Jerusalem,xml.iP_Egypt,xml.iP_Arabia,xml.iP_Macedonia,xml.iP_Thessaloniki,xml.iP_Moesia,xml.iP_Cyprus,xml.iP_Rhodes]
 
-tMoscowCore = [iP_Moscow,iP_Murom,iP_Rostov,iP_Smolensk]
-tMoscowNorm = [iP_NizhnyNovgorod,iP_Simbirsk,iP_Pereyaslavl,iP_Chernigov]
-tMoscowOuter = [iP_Crimea,iP_Moldova,iP_GaliciaPoland,iP_Kuban,iP_Brest,iP_Lithuania,iP_Livonia,iP_Estonia,iP_Karelia,iP_Osterland,iP_Prussia,iP_Suvalkija]
+tMoscowCore = [xml.iP_Moscow,xml.iP_Murom,xml.iP_Rostov,xml.iP_Smolensk]
+tMoscowNorm = [xml.iP_NizhnyNovgorod,xml.iP_Simbirsk,xml.iP_Pereyaslavl,xml.iP_Chernigov]
+tMoscowOuter = [xml.iP_Crimea,xml.iP_Moldova,xml.iP_GaliciaPoland,xml.iP_Kuban,xml.iP_Brest,xml.iP_Lithuania,xml.iP_Livonia,xml.iP_Estonia,xml.iP_Karelia,xml.iP_Osterland,xml.iP_Prussia,xml.iP_Suvalkija]
 tMoscowPot2Core = []
-tMoscowPot2Norm = [iP_Novgorod,iP_Vologda,iP_Kiev,iP_Minsk,iP_Polotsk,iP_Volhynia,iP_Podolia,iP_Donets,iP_Sloboda,iP_Zaporizhia]
+tMoscowPot2Norm = [xml.iP_Novgorod,xml.iP_Vologda,xml.iP_Kiev,xml.iP_Minsk,xml.iP_Polotsk,xml.iP_Volhynia,xml.iP_Podolia,xml.iP_Donets,xml.iP_Sloboda,xml.iP_Zaporizhia]
 
-tDutchCore = [iP_Netherlands]
-tDutchNorm = [iP_Flanders]
+tDutchCore = [xml.iP_Netherlands]
+tDutchNorm = [xml.iP_Flanders]
 tDutchOuter = []
 tDutchPot2Core = []
 tDutchPot2Norm = []
@@ -339,7 +423,7 @@ class ProvinceManager:
 
 	def setup( self ):
 		# set the initial situation for all players
-		for iPlayer in range( iNumPlayers -1 ): # this discounts the Pope
+		for iPlayer in range( con.iNumPlayers -1 ): # this discounts the Pope
 			pPlayer = gc.getPlayer(iPlayer)
 			for iProv in self.tCoreProvinces[iPlayer]:
 				pPlayer.setProvinceType( iProv, iProvinceCore )
@@ -352,23 +436,23 @@ class ProvinceManager:
 			for iProv in self.tPot2NormProvinces[iPlayer]:
 				pPlayer.setProvinceType( iProv, iProvincePotential )
 		#Update provinces for 1200 Scenario
-		if utils.getScenario() == i1200ADScenario:
-			for iPlayer in range(iNumPlayers -1):
-				if tBirth[iPlayer] < i1200AD:
+		if utils.getScenario() == con.i1200AD:
+			for iPlayer in range(con.iNumPlayers -1):
+				if con.tBirth[iPlayer] < xml.i1200AD:
 					self.onSpawn(iPlayer)
 
 	def checkTurn(self, iGameTurn):
 		# Prussia direction change
-		if (iGameTurn == i1618AD):
-			pPrussia.setProvinceType( iP_Estonia, iProvinceNone )
-			pPrussia.setProvinceType( iP_Livonia, iProvinceOuter )
-			pPrussia.setProvinceType( iP_Brandenburg, iProvinceNatural )
-			pPrussia.setProvinceType( iP_Silesia, iProvincePotential )
-			pPrussia.setProvinceType( iP_GreaterPoland, iProvinceOuter )
+		if (iGameTurn == xml.i1618AD):
+			pPrussia.setProvinceType( xml.iP_Estonia, con.iProvinceNone )
+			pPrussia.setProvinceType( xml.iP_Livonia, con.iProvinceOuter )
+			pPrussia.setProvinceType( xml.iP_Brandenburg, con.iProvinceNatural )
+			pPrussia.setProvinceType( xml.iP_Silesia, con.iProvincePotential )
+			pPrussia.setProvinceType( xml.iP_GreaterPoland, con.iProvinceOuter )
 			print("Yes! Prussia can into Germany!")
 
 	def onCityBuilt(self, iPlayer, x, y):
-		if ( iPlayer >= iNumPlayers -1 ):
+		if ( iPlayer >= con.iNumPlayers -1 ):
 			return
 		pPlayer = gc.getPlayer(iPlayer)
 		iProv = rfcemaps.tProinceMap[y][x]
@@ -381,7 +465,7 @@ class ProvinceManager:
 				utils.refreshStabilityOverlay() # refresh the stability overlay
 
 	def onCityAcquired(self, owner, playerType, city, bConquest, bTrade):
-		if ( playerType >= iNumPlayers -1 ):
+		if ( playerType >= con.iNumPlayers -1 ):
 			return
 		pPlayer = gc.getPlayer(playerType)
 		iProv = city.getProvince()
@@ -412,7 +496,7 @@ class ProvinceManager:
 
 		#### -------- Special Respawn Conditions ---------- ####
 		if ( iPlayer == iArabia ):
-			for iProv in range( iP_MaxNumberOfProvinces ):
+			for iProv in range( xml.iP_MaxNumberOfProvinces ):
 				pArabia.setProvinceType( iProv, iProvinceNone )
 			for iProv in self.tCoreProvinces[iPlayer]:
 				pArabia.setProvinceType( iProv, iProvinceCore )
@@ -425,133 +509,133 @@ class ProvinceManager:
 			for iProv in self.tPot2NormProvinces[iPlayer]:
 				pArabia.setProvinceType( iProv, iProvincePotential )
 		elif ( iPlayer == iCordoba ):
-			for iProv in range( iP_MaxNumberOfProvinces ):
+			for iProv in range( xml.iP_MaxNumberOfProvinces ):
 				pCordoba.setProvinceType( iProv, iProvinceNone )
-			pCordoba.setProvinceType( iP_Ifriqiya, iProvinceCore )
-			pCordoba.setProvinceType( iP_Algiers, iProvinceNatural )
-			pCordoba.setProvinceType( iP_Oran, iProvinceOuter )
-			pCordoba.setProvinceType( iP_Tripolitania, iProvinceOuter )
-			pCordoba.setProvinceType( iP_Tetouan, iProvinceOuter )
-			pCordoba.setProvinceType( iP_Morocco, iProvinceOuter )
-			pCordoba.setProvinceType( iP_Fez, iProvinceOuter )
+			pCordoba.setProvinceType( xml.iP_Ifriqiya, iProvinceCore )
+			pCordoba.setProvinceType( xml.iP_Algiers, iProvinceNatural )
+			pCordoba.setProvinceType( xml.iP_Oran, iProvinceOuter )
+			pCordoba.setProvinceType( xml.iP_Tripolitania, iProvinceOuter )
+			pCordoba.setProvinceType( xml.iP_Tetouan, iProvinceOuter )
+			pCordoba.setProvinceType( xml.iP_Morocco, iProvinceOuter )
+			pCordoba.setProvinceType( xml.iP_Fez, iProvinceOuter )
 
 	def onSpawn( self, iPlayer ):
 		# when a new nations spawns, old nations in the region should lose some of their provinces
 		if ( iPlayer == iArabia ):
-			pByzantium.setProvinceType( iP_Cyrenaica, iProvinceOuter )
-			pByzantium.setProvinceType( iP_Tripolitania, iProvinceOuter )
-			pByzantium.setProvinceType( iP_Ifriqiya, iProvinceOuter )
-			pByzantium.setProvinceType( iP_Egypt, iProvinceOuter )
-			pByzantium.setProvinceType( iP_Arabia, iProvinceNone )
-			pByzantium.setProvinceType( iP_Syria, iProvinceOuter )
-			pByzantium.setProvinceType( iP_Lebanon, iProvinceOuter )
-			pByzantium.setProvinceType( iP_Jerusalem, iProvinceOuter )
-			pByzantium.setProvinceType( iP_Antiochia, iProvinceNatural )
-			pByzantium.setProvinceType( iP_Cilicia, iProvinceNatural )
-			pByzantium.setProvinceType( iP_Charsianon, iProvinceNatural )
-			pByzantium.setProvinceType( iP_Colonea, iProvinceNatural )
+			pByzantium.setProvinceType( xml.iP_Cyrenaica, iProvinceOuter )
+			pByzantium.setProvinceType( xml.iP_Tripolitania, iProvinceOuter )
+			pByzantium.setProvinceType( xml.iP_Ifriqiya, iProvinceOuter )
+			pByzantium.setProvinceType( xml.iP_Egypt, iProvinceOuter )
+			pByzantium.setProvinceType( xml.iP_Arabia, iProvinceNone )
+			pByzantium.setProvinceType( xml.iP_Syria, iProvinceOuter )
+			pByzantium.setProvinceType( xml.iP_Lebanon, iProvinceOuter )
+			pByzantium.setProvinceType( xml.iP_Jerusalem, iProvinceOuter )
+			pByzantium.setProvinceType( xml.iP_Antiochia, iProvinceNatural )
+			pByzantium.setProvinceType( xml.iP_Cilicia, iProvinceNatural )
+			pByzantium.setProvinceType( xml.iP_Charsianon, iProvinceNatural )
+			pByzantium.setProvinceType( xml.iP_Colonea, iProvinceNatural )
 			utils.refreshStabilityOverlay() # refresh the stability overlay
 		elif ( iPlayer == iBulgaria ):
-			pByzantium.setProvinceType( iP_Serbia, iProvinceOuter )
-			pByzantium.setProvinceType( iP_Moesia, iProvinceOuter )
-			pByzantium.setProvinceType( iP_Thrace, iProvinceNatural )
+			pByzantium.setProvinceType( xml.iP_Serbia, iProvinceOuter )
+			pByzantium.setProvinceType( xml.iP_Moesia, iProvinceOuter )
+			pByzantium.setProvinceType( xml.iP_Thrace, iProvinceNatural )
 			utils.refreshStabilityOverlay() # refresh the stability overlay
 		elif ( iPlayer == iVenecia ):
-			pByzantium.setProvinceType( iP_Dalmatia, iProvinceNone )
-			pByzantium.setProvinceType( iP_Bosnia, iProvinceNone )
-			pByzantium.setProvinceType( iP_Slavonia, iProvinceNone )
-			pByzantium.setProvinceType( iP_Verona, iProvinceNone )
-			pByzantium.setProvinceType( iP_Tuscany, iProvinceNone )
-			pByzantium.setProvinceType( iP_Lombardy, iProvinceNone )
-			pByzantium.setProvinceType( iP_Liguria, iProvinceNone )
-			pByzantium.setProvinceType( iP_Corsica, iProvinceNone )
-			pByzantium.setProvinceType( iP_Sardinia, iProvinceNone )
-			pByzantium.setProvinceType( iP_Latium, iProvinceNone )
+			pByzantium.setProvinceType( xml.iP_Dalmatia, iProvinceNone )
+			pByzantium.setProvinceType( xml.iP_Bosnia, iProvinceNone )
+			pByzantium.setProvinceType( xml.iP_Slavonia, iProvinceNone )
+			pByzantium.setProvinceType( xml.iP_Verona, iProvinceNone )
+			pByzantium.setProvinceType( xml.iP_Tuscany, iProvinceNone )
+			pByzantium.setProvinceType( xml.iP_Lombardy, iProvinceNone )
+			pByzantium.setProvinceType( xml.iP_Liguria, iProvinceNone )
+			pByzantium.setProvinceType( xml.iP_Corsica, iProvinceNone )
+			pByzantium.setProvinceType( xml.iP_Sardinia, iProvinceNone )
+			pByzantium.setProvinceType( xml.iP_Latium, iProvinceNone )
 			utils.refreshStabilityOverlay() # refresh the stability overlay
 		elif ( iPlayer == iBurgundy ):
-			pFrankia.setProvinceType( iP_Provence, iProvincePotential ) # these areas flip to Burgundy, so resetting them to Potential will work perfectly
-			pFrankia.setProvinceType( iP_Burgundy, iProvincePotential ) # these areas flip to Burgundy, so resetting them to Potential will work perfectly
+			pFrankia.setProvinceType( xml.iP_Provence, iProvincePotential ) # these areas flip to Burgundy, so resetting them to Potential will work perfectly
+			pFrankia.setProvinceType( xml.iP_Burgundy, iProvincePotential ) # these areas flip to Burgundy, so resetting them to Potential will work perfectly
 			utils.refreshStabilityOverlay() # refresh the stability overlay
 		elif ( iPlayer == iGermany ):
-			pFrankia.setProvinceType( iP_Bavaria, iProvinceNone )
-			pFrankia.setProvinceType( iP_Franconia, iProvinceNone )
-			pFrankia.setProvinceType( iP_Saxony, iProvinceNone )
-			pFrankia.setProvinceType( iP_Netherlands, iProvinceNone )
+			pFrankia.setProvinceType( xml.iP_Bavaria, iProvinceNone )
+			pFrankia.setProvinceType( xml.iP_Franconia, iProvinceNone )
+			pFrankia.setProvinceType( xml.iP_Saxony, iProvinceNone )
+			pFrankia.setProvinceType( xml.iP_Netherlands, iProvinceNone )
 			utils.refreshStabilityOverlay() # refresh the stability overlay
 		elif ( iPlayer == iHungary ):
-			pBulgaria.setProvinceType( iP_Banat, iProvinceNone )
-			pBulgaria.setProvinceType( iP_Wallachia, iProvinceOuter )
+			pBulgaria.setProvinceType( xml.iP_Banat, iProvinceNone )
+			pBulgaria.setProvinceType( xml.iP_Wallachia, iProvinceOuter )
 			utils.refreshStabilityOverlay() # refresh the stability overlay
 		elif ( iPlayer == iSpain ):
-			pCordoba.setProvinceType( iP_LaMancha, iProvinceNatural )
+			pCordoba.setProvinceType( xml.iP_LaMancha, iProvinceNatural )
 			utils.refreshStabilityOverlay() # refresh the stability overlay
 		elif ( iPlayer == iMorocco ):
-			pCordoba.setProvinceType( iP_Morocco, iProvinceNone )
-			pCordoba.setProvinceType( iP_Marrakesh, iProvinceNone )
-			pCordoba.setProvinceType( iP_Fez, iProvinceOuter )
-			pCordoba.setProvinceType( iP_Tetouan, iProvinceOuter )
+			pCordoba.setProvinceType( xml.iP_Morocco, iProvinceNone )
+			pCordoba.setProvinceType( xml.iP_Marrakesh, iProvinceNone )
+			pCordoba.setProvinceType( xml.iP_Fez, iProvinceOuter )
+			pCordoba.setProvinceType( xml.iP_Tetouan, iProvinceOuter )
 			utils.refreshStabilityOverlay() # refresh the stability overlay
 		elif ( iPlayer == iEngland ):
-			pFrankia.setProvinceType( iP_Normandy, iProvincePotential )
-			pFrankia.setProvinceType( iP_Picardy, iProvincePotential )
-			pScotland.setProvinceType( iP_Northumbria, iProvinceOuter )
-			pScotland.setProvinceType( iP_Mercia, iProvinceNone )
-			pNorway.setProvinceType( iP_Normandy, iProvinceNone )
-			pNorway.setProvinceType( iP_Northumbria, iProvinceNone )
-			pDenmark.setProvinceType( iP_Normandy, iProvinceNone )
-			pDenmark.setProvinceType( iP_Northumbria, iProvinceNone )
-			pDenmark.setProvinceType( iP_Mercia, iProvinceNone )
-			pDenmark.setProvinceType( iP_EastAnglia, iProvinceNone )
-			pDenmark.setProvinceType( iP_London, iProvinceNone )
+			pFrankia.setProvinceType( xml.iP_Normandy, iProvincePotential )
+			pFrankia.setProvinceType( xml.iP_Picardy, iProvincePotential )
+			pScotland.setProvinceType( xml.iP_Northumbria, iProvinceOuter )
+			pScotland.setProvinceType( xml.iP_Mercia, iProvinceNone )
+			pNorway.setProvinceType( xml.iP_Normandy, iProvinceNone )
+			pNorway.setProvinceType( xml.iP_Northumbria, iProvinceNone )
+			pDenmark.setProvinceType( xml.iP_Normandy, iProvinceNone )
+			pDenmark.setProvinceType( xml.iP_Northumbria, iProvinceNone )
+			pDenmark.setProvinceType( xml.iP_Mercia, iProvinceNone )
+			pDenmark.setProvinceType( xml.iP_EastAnglia, iProvinceNone )
+			pDenmark.setProvinceType( xml.iP_London, iProvinceNone )
 			utils.refreshStabilityOverlay() # refresh the stability overlay
 		elif ( iPlayer == iAragon ):
-			pByzantium.setProvinceType( iP_Apulia, iProvinceOuter )
-			pByzantium.setProvinceType( iP_Calabria, iProvinceOuter )
-			pByzantium.setProvinceType( iP_Sicily, iProvinceOuter )
-			pByzantium.setProvinceType( iP_Malta, iProvinceOuter )
-			pCordoba.setProvinceType( iP_Aragon, iProvinceOuter )
-			pCordoba.setProvinceType( iP_Catalonia, iProvinceOuter )
-			pCordoba.setProvinceType( iP_Valencia, iProvinceNatural )
-			pCordoba.setProvinceType( iP_Balears, iProvinceOuter )
+			pByzantium.setProvinceType( xml.iP_Apulia, iProvinceOuter )
+			pByzantium.setProvinceType( xml.iP_Calabria, iProvinceOuter )
+			pByzantium.setProvinceType( xml.iP_Sicily, iProvinceOuter )
+			pByzantium.setProvinceType( xml.iP_Malta, iProvinceOuter )
+			pCordoba.setProvinceType( xml.iP_Aragon, iProvinceOuter )
+			pCordoba.setProvinceType( xml.iP_Catalonia, iProvinceOuter )
+			pCordoba.setProvinceType( xml.iP_Valencia, iProvinceNatural )
+			pCordoba.setProvinceType( xml.iP_Balears, iProvinceOuter )
 			utils.refreshStabilityOverlay() # refresh the stability overlay
 		elif ( iPlayer == iSweden ):
-			pNorway.setProvinceType( iP_Svealand, iProvinceNone )
-			pDenmark.setProvinceType(iP_Gotaland, iProvinceNone )
-			pDenmark.setProvinceType(iP_Svealand, iProvinceNone )
-			pNovgorod.setProvinceType( iP_Osterland, iProvinceOuter )
+			pNorway.setProvinceType( xml.iP_Svealand, iProvinceNone )
+			pDenmark.setProvinceType(xml.iP_Gotaland, iProvinceNone )
+			pDenmark.setProvinceType(xml.iP_Svealand, iProvinceNone )
+			pNovgorod.setProvinceType( xml.iP_Osterland, iProvinceOuter )
 			utils.refreshStabilityOverlay() # refresh the stability overlay
 		elif ( iPlayer == iAustria ):
-			pHungary.setProvinceType( iP_Carinthia, iProvinceOuter )
-			pHungary.setProvinceType( iP_Austria, iProvinceOuter )
-			pHungary.setProvinceType( iP_Moravia, iProvinceOuter )
-			pHungary.setProvinceType( iP_Bavaria, iProvinceNone )
-			pGermany.setProvinceType( iP_Bavaria, iProvinceOuter )
-			pGermany.setProvinceType( iP_Bohemia, iProvinceOuter )
-			pSpain.setProvinceType( iP_Netherlands, iProvinceOuter )
-			pSpain.setProvinceType( iP_Flanders, iProvinceOuter )
+			pHungary.setProvinceType( xml.iP_Carinthia, iProvinceOuter )
+			pHungary.setProvinceType( xml.iP_Austria, iProvinceOuter )
+			pHungary.setProvinceType( xml.iP_Moravia, iProvinceOuter )
+			pHungary.setProvinceType( xml.iP_Bavaria, iProvinceNone )
+			pGermany.setProvinceType( xml.iP_Bavaria, iProvinceOuter )
+			pGermany.setProvinceType( xml.iP_Bohemia, iProvinceOuter )
+			pSpain.setProvinceType( xml.iP_Netherlands, iProvinceOuter )
+			pSpain.setProvinceType( xml.iP_Flanders, iProvinceOuter )
 			utils.refreshStabilityOverlay() # refresh the stability overlay
 		elif ( iPlayer == iTurkey ):
-			pByzantium.setProvinceType( iP_Antiochia, iProvinceOuter )
-			pByzantium.setProvinceType( iP_Cilicia, iProvinceOuter )
-			pByzantium.setProvinceType( iP_Charsianon, iProvinceOuter )
-			pByzantium.setProvinceType( iP_Colonea, iProvinceOuter )
-			pByzantium.setProvinceType( iP_Armeniakon, iProvinceOuter )
-			pByzantium.setProvinceType( iP_Cyprus, iProvinceOuter )
-			pByzantium.setProvinceType( iP_Anatolikon, iProvinceNatural )
-			pByzantium.setProvinceType( iP_Opsikion, iProvinceNatural )
-			pByzantium.setProvinceType( iP_Thrakesion, iProvinceNatural )
-			pByzantium.setProvinceType( iP_Paphlagonia, iProvinceNatural )
-			pHungary.setProvinceType( iP_Dalmatia, iProvinceOuter )
-			pHungary.setProvinceType( iP_Bosnia, iProvinceOuter )
-			pHungary.setProvinceType( iP_Banat, iProvinceOuter )
+			pByzantium.setProvinceType( xml.iP_Antiochia, iProvinceOuter )
+			pByzantium.setProvinceType( xml.iP_Cilicia, iProvinceOuter )
+			pByzantium.setProvinceType( xml.iP_Charsianon, iProvinceOuter )
+			pByzantium.setProvinceType( xml.iP_Colonea, iProvinceOuter )
+			pByzantium.setProvinceType( xml.iP_Armeniakon, iProvinceOuter )
+			pByzantium.setProvinceType( xml.iP_Cyprus, iProvinceOuter )
+			pByzantium.setProvinceType( xml.iP_Anatolikon, iProvinceNatural )
+			pByzantium.setProvinceType( xml.iP_Opsikion, iProvinceNatural )
+			pByzantium.setProvinceType( xml.iP_Thrakesion, iProvinceNatural )
+			pByzantium.setProvinceType( xml.iP_Paphlagonia, iProvinceNatural )
+			pHungary.setProvinceType( xml.iP_Dalmatia, iProvinceOuter )
+			pHungary.setProvinceType( xml.iP_Bosnia, iProvinceOuter )
+			pHungary.setProvinceType( xml.iP_Banat, iProvinceOuter )
 			utils.refreshStabilityOverlay() # refresh the stability overlay
 		elif ( iPlayer == iMoscow ):
-			pNovgorod.setProvinceType( iP_Rostov, iProvinceOuter )
-			pNovgorod.setProvinceType( iP_Smolensk, iProvinceNone )
+			pNovgorod.setProvinceType( xml.iP_Rostov, iProvinceOuter )
+			pNovgorod.setProvinceType( xml.iP_Smolensk, iProvinceNone )
 			utils.refreshStabilityOverlay() # refresh the stability overlay
 		elif ( iPlayer == iDutch ):
-			pSpain.setProvinceType( iP_Netherlands, iProvinceNone )
-			pSpain.setProvinceType( iP_Flanders, iProvinceNone )
-			pAustria.setProvinceType( iP_Netherlands, iProvinceNone )
-			pAustria.setProvinceType( iP_Flanders, iProvinceNone )
+			pSpain.setProvinceType( xml.iP_Netherlands, iProvinceNone )
+			pSpain.setProvinceType( xml.iP_Flanders, iProvinceNone )
+			pAustria.setProvinceType( xml.iP_Netherlands, iProvinceNone )
+			pAustria.setProvinceType( xml.iP_Flanders, iProvinceNone )
 			utils.refreshStabilityOverlay() # refresh the stability overlay

@@ -931,7 +931,9 @@ class CvVictoryScreen:
 	def getByzantiumText(self):
 		iPlayer = self.iActivePlayer
 		pPlayer = gc.getPlayer(iPlayer)
-		sText1, sText2, sText3 = self.getEmptyTexts()
+		sText1 = ""
+		sText2 = ""
+		sText3 = ""
 		#UHV1
 		tConstantinople = con.tCapitals[iPlayer]
 		pConstantinople = gc.getMap().plot( tConstantinople[0], tConstantinople[1] ).getPlotCity()
@@ -955,11 +957,13 @@ class CvVictoryScreen:
 	def getFrankiaText(self):
 		iPlayer = self.iActivePlayer
 		pPlayer = gc.getPlayer(iPlayer)
-		sText1, sText2, sText3 = self.getEmptyTexts()
+		sText1 = ""
+		sText2 = ""
+		sText3 = ""
 		#UHV1
 		sText1 += self.getProvinceString(vic.tFrankControl)
 		#UHV2
-		tPlot = con.tJerusalem
+		tPlot = con.iJerusalem
 		sText2 += self.checkCity(tPlot, iPlayer, localText.getText("TXT_KEY_UHV_JERUSALEM",()), True)
 		#UHV3
 		sText3 += self.getNumColoniesString(5)
@@ -969,7 +973,9 @@ class CvVictoryScreen:
 	def getArabiaText(self):
 		iPlayer = self.iActivePlayer
 		pPlayer = gc.getPlayer(iPlayer)
-		sText1, sText2, sText3 = self.getEmptyTexts()
+		sText1 = ""
+		sText2 = ""
+		sText3 = ""
 		#UHV1
 		sText1 += self.getProvinceString(vic.tArabiaControlI)
 		#sText1 += self.getMultiProvinceString([(vic.tArabiaControlI, xml.i955AD), (vic.tArabiaControlII, xml.i1291AD)])
@@ -984,7 +990,9 @@ class CvVictoryScreen:
 	def getBulgariaText(self):
 		iPlayer = self.iActivePlayer
 		pPlayer = gc.getPlayer(iPlayer)
-		sText1, sText2, sText3 = self.getEmptyTexts()
+		sText1 = ""
+		sText2 = ""
+		sText3 = ""
 		#UHV1
 		sText1 += self.getProvinceString(vic.tBulgariaControl)
 		#UHV2
@@ -999,7 +1007,9 @@ class CvVictoryScreen:
 	def getCordobaText(self):
 		iPlayer = self.iActivePlayer
 		pPlayer = gc.getPlayer(iPlayer)
-		sText1, sText2, sText3 = self.getEmptyTexts()
+		sText1 = ""
+		sText2 = ""
+		sText3 = ""
 		#UHV1
 		tCordoba = con.tCapitals[iPlayer]
 		pCordoba = gc.getMap().plot( tCordoba[0], tCordoba[1] ).getPlotCity()
@@ -1020,7 +1030,9 @@ class CvVictoryScreen:
 	def getVeneciaText(self):
 		iPlayer = self.iActivePlayer
 		pPlayer = gc.getPlayer(iPlayer)
-		sText1, sText2, sText3 = self.getEmptyTexts()
+		sText1 = ""
+		sText2 = ""
+		sText3 = ""
 		#UHV1
 		sText1 += self.getProvinceString(vic.tVenetianControl)
 		#UHV2
@@ -1035,7 +1047,9 @@ class CvVictoryScreen:
 	def getBurgundyText(self):
 		iPlayer = self.iActivePlayer
 		pPlayer = gc.getPlayer(iPlayer)
-		sText1, sText2, sText3 = self.getEmptyTexts()
+		sText1 = ""
+		sText2 = ""
+		sText3 = ""
 		#UHV1
 		iCulture = pPlayer.getUHVCounter( 0 )
 		sText1 += localText.getText("TXT_KEY_UHV_CULTURE",()) + ": " + self.determineColor(iCulture >= 10000, str(iCulture))
@@ -1049,7 +1063,9 @@ class CvVictoryScreen:
 	def getGermanyText(self):
 		iPlayer = self.iActivePlayer
 		pPlayer = gc.getPlayer(iPlayer)
-		sText1, sText2, sText3 = self.getEmptyTexts()
+		sText1 = ""
+		sText2 = ""
+		sText3 = ""
 		#UHV1
 		sText1 += self.getProvinceString(vic.tGermanyControl)
 		#UHV2
@@ -1064,7 +1080,9 @@ class CvVictoryScreen:
 	def getNovgorodText(self):
 		iPlayer = self.iActivePlayer
 		pPlayer = gc.getPlayer(iPlayer)
-		sText1, sText2, sText3 = self.getEmptyTexts()
+		sText1 = ""
+		sText2 = ""
+		sText3 = ""
 		#UHV1
 		sText1 += self.getProvinceString(vic.tNovgorodControl)
 		#UHV2
@@ -1081,7 +1099,9 @@ class CvVictoryScreen:
 	def getNorwayText(self):
 		iPlayer = self.iActivePlayer
 		pPlayer = gc.getPlayer(iPlayer)
-		sText1, sText2, sText3 = self.getEmptyTexts()
+		sText1 = ""
+		sText2 = ""
+		sText3 = ""
 		#UHV1
 		sText1 += localText.getText("TXT_KEY_UHV_NOR1_HELP",()) + "\n"
 		iCount = pPlayer.getUHVCounter( 2 )
@@ -1097,7 +1117,9 @@ class CvVictoryScreen:
 	def getKievText(self):
 		iPlayer = self.iActivePlayer
 		pPlayer = gc.getPlayer(iPlayer)
-		sText1, sText2, sText3 = self.getEmptyTexts()
+		sText1 = ""
+		sText2 = ""
+		sText3 = ""
 		#UHV1
 		iKievCath = pPlayer.countNumBuildings(xml.iOrthodoxCathedral)
 		iKievMona = pPlayer.countNumBuildings(xml.iOrthodoxMonastery)
@@ -1116,7 +1138,9 @@ class CvVictoryScreen:
 	def getHungaryText(self):
 		iPlayer = self.iActivePlayer
 		pPlayer = gc.getPlayer(iPlayer)
-		sText1, sText2, sText3 = self.getEmptyTexts()
+		sText1 = ""
+		sText2 = ""
+		sText3 = ""
 		#UHV1
 		sText1 += self.getNotCivProvinceString(con.iTurkey, vic.tHungarynControl)
 		#UHV2
@@ -1150,7 +1174,9 @@ class CvVictoryScreen:
 	def getSpainText(self):
 		iPlayer = self.iActivePlayer
 		pPlayer = gc.getPlayer(iPlayer)
-		sText1, sText2, sText3 = self.getEmptyTexts()
+		sText1 = ""
+		sText2 = ""
+		sText3 = ""
 		#UHV1
 		sText1 += self.getReligionProvinceString(vic.tSpainConvert, xml.iCatholicism, 2)
 		#UHV2
@@ -1203,7 +1229,9 @@ class CvVictoryScreen:
 	def getDenmarkText(self):
 		iPlayer = self.iActivePlayer
 		pPlayer = gc.getPlayer(iPlayer)
-		sText1, sText2, sText3 = self.getEmptyTexts()
+		sText1 = ""
+		sText2 = ""
+		sText3 = ""
 		#UHV1
 		sText1 += self.getProvinceString(vic.tDenmarkControlI)
 		#UHV2
@@ -1216,7 +1244,9 @@ class CvVictoryScreen:
 	def getScotlandText(self):
 		iPlayer = self.iActivePlayer
 		pPlayer = gc.getPlayer(iPlayer)
-		sText1, sText2, sText3 = self.getEmptyTexts()
+		sText1 = ""
+		sText2 = ""
+		sText3 = ""
 		#UHV1
 		iScotlandFort = gc.getPlayer(con.iScotland).getImprovementCount( xml.iImprovementFort )
 		iScotlandCastle = gc.getPlayer(con.iScotland).countNumBuildings(xml.iCastle)
@@ -1236,7 +1266,9 @@ class CvVictoryScreen:
 	def getPolandText(self):
 		iPlayer = self.iActivePlayer
 		pPlayer = gc.getPlayer(iPlayer)
-		sText1, sText2, sText3 = self.getEmptyTexts()
+		sText1 = ""
+		sText2 = ""
+		sText3 = ""
 		#UHV1
 		if gc.getGame().getGameTurn()  < xml.i1500AD:
 			sText1 += localText.getText("TXT_KEY_UHV_TOO_EARLY",()) + "\n"
@@ -1285,7 +1317,9 @@ class CvVictoryScreen:
 	def getGenoaText(self):
 		iPlayer = self.iActivePlayer
 		pPlayer = gc.getPlayer(iPlayer)
-		sText1, sText2, sText3 = self.getEmptyTexts()
+		sText1 = ""
+		sText2 = ""
+		sText3 = ""
 		#UHV1
 		sText1 += self.getProvinceString(vic.tGenoaControl)
 		#UHV2
@@ -1315,7 +1349,9 @@ class CvVictoryScreen:
 	def getMoroccoText(self):
 		iPlayer = self.iActivePlayer
 		pPlayer = gc.getPlayer(iPlayer)
-		sText1, sText2, sText3 = self.getEmptyTexts()
+		sText1 = ""
+		sText2 = ""
+		sText3 = ""
 		#UHV1
 		sText1 += self.getProvinceString(vic.tMoroccoControl)
 		#UHV2
@@ -1333,7 +1369,9 @@ class CvVictoryScreen:
 	def getEnglandText(self):
 		iPlayer = self.iActivePlayer
 		pPlayer = gc.getPlayer(iPlayer)
-		sText1, sText2, sText3 = self.getEmptyTexts()
+		sText1 = ""
+		sText2 = ""
+		sText3 = ""
 		#UHV1
 		sText1 += self.getProvinceString(vic.tEnglandControl)
 		#UHV2
@@ -1347,7 +1385,9 @@ class CvVictoryScreen:
 	def getPortugalText(self):
 		iPlayer = self.iActivePlayer
 		pPlayer = gc.getPlayer(iPlayer)
-		sText1, sText2, sText3 = self.getEmptyTexts()
+		sText1 = ""
+		sText2 = ""
+		sText3 = ""
 		#UHV1
 		iCounter = pPlayer.getUHVCounter( 0 )
 		iIslands = iCounter % 100
@@ -1365,7 +1405,9 @@ class CvVictoryScreen:
 	def getAragonText(self):
 		iPlayer = self.iActivePlayer
 		pPlayer = gc.getPlayer(iPlayer)
-		sText1, sText2, sText3 = self.getEmptyTexts()
+		sText1 = ""
+		sText2 = ""
+		sText3 = ""
 		#UHV1
 		sText1 += self.getProvinceString(vic.tAragonControlI)
 		#UHV2
@@ -1379,7 +1421,9 @@ class CvVictoryScreen:
 	def getSwedenText(self):
 		iPlayer = self.iActivePlayer
 		pPlayer = gc.getPlayer(iPlayer)
-		sText1, sText2, sText3 = self.getEmptyTexts()
+		sText1 = ""
+		sText2 = ""
+		sText3 = ""
 		#UHV1
 		iCounter = 0
 		for iProv in vic.tSwedenControl:
@@ -1398,7 +1442,9 @@ class CvVictoryScreen:
 	def getPrussiaText(self):
 		iPlayer = self.iActivePlayer
 		pPlayer = gc.getPlayer(iPlayer)
-		sText1, sText2, sText3 = self.getEmptyTexts()
+		sText1 = ""
+		sText2 = ""
+		sText3 = ""
 		#UHV1
 		sText1 += self.getProvinceString(vic.tPrussiaControlI)
 		#UHV2
@@ -1430,7 +1476,9 @@ class CvVictoryScreen:
 	def getLithuaniaText(self):
 		iPlayer = self.iActivePlayer
 		pPlayer = gc.getPlayer(iPlayer)
-		sText1, sText2, sText3 = self.getEmptyTexts()
+		sText1 = ""
+		sText2 = ""
+		sText3 = ""
 		#UHV1
 		iCulture = pPlayer.getUHVCounter( 0 )
 		sText1 += self.getCounterString(iCulture, 2000)
@@ -1445,7 +1493,9 @@ class CvVictoryScreen:
 	def getAustriaText(self):
 		iPlayer = self.iActivePlayer
 		pPlayer = gc.getPlayer(iPlayer)
-		sText1, sText2, sText3 = self.getEmptyTexts()
+		sText1 = ""
+		sText2 = ""
+		sText3 = ""
 		#UHV1
 		sText1 += self.getProvinceString(vic.tAustriaControl)
 		#UHV2
@@ -1467,7 +1517,9 @@ class CvVictoryScreen:
 	def getTurkeyText(self):
 		iPlayer = self.iActivePlayer
 		pPlayer = gc.getPlayer(iPlayer)
-		sText1, sText2, sText3 = self.getEmptyTexts()
+		sText1 = ""
+		sText2 = ""
+		sText3 = ""
 		#UHV1
 		sText1 += self.getProvinceString(vic.tOttomanControlI)
 		#UHV2
@@ -1480,7 +1532,9 @@ class CvVictoryScreen:
 	def getMoscowText(self):
 		iPlayer = self.iActivePlayer
 		pPlayer = gc.getPlayer(iPlayer)
-		sText1, sText2, sText3 = self.getEmptyTexts()
+		sText1 = ""
+		sText2 = ""
+		sText3 = ""
 		#UHV1
 		sText1 += self.getNotCivProvinceString(con.iBarbarian, vic.tMoscowControl)
 		#UHV2
@@ -1509,7 +1563,9 @@ class CvVictoryScreen:
 	def getDutchText(self):
 		iPlayer = self.iActivePlayer
 		pPlayer = gc.getPlayer(iPlayer)
-		sText1, sText2, sText3 = self.getEmptyTexts()
+		sText1 = ""
+		sText2 = ""
+		sText3 = ""
 		#UHV1
 		tAmsterdam = con.tCapitals[iPlayer]
 		pPlot = gc.getMap().plot( tAmsterdam[0], tAmsterdam[1])
@@ -1763,6 +1819,3 @@ class CvVictoryScreen:
 			pEnemyPlayer = gc.getPlayer(iEnemy)
 			sString += " %, " + pEnemyPlayer.getName()
 		return sString
-
-	def getEmptyTexts(self):
-		return ("", "", "")
