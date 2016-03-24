@@ -959,7 +959,7 @@ class CvVictoryScreen:
 		#UHV1
 		sText1 += self.getProvinceString(vic.tFrankControl)
 		#UHV2
-		tPlot = con.tJerusalem
+		tPlot = con.iJerusalem
 		sText2 += self.checkCity(tPlot, iPlayer, localText.getText("TXT_KEY_UHV_JERUSALEM",()), True)
 		#UHV3
 		sText3 += self.getNumColoniesString(5)

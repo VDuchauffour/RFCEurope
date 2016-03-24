@@ -292,10 +292,11 @@ class CvRFCEventHandler:
 
 		self.pla.onCityAcquired(owner, playerType, city) #Plague
 		self.vic.onCityAcquired(owner, playerType, city, bConquest) #Victory
-		
+
 		# Remove horse resource near Hadrianople in 1200 AD scenario if someone captures Hadrianople or Constantinople
-		if (city.getX() == 76 and city.getY() == 25) or (city.getX() == 81 and city.getY() == 24):
-			self.res.removeResource(77, 24)
+		if (utils.getScenario() == con.i1200ADScenario):
+			if (city.getX() == 76 and city.getY() == 25) or (city.getX() == 81 and city.getY() == 24):
+				self.res.removeResource(77, 24)
 
 		return 0
 

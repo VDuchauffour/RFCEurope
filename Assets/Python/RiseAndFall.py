@@ -365,7 +365,7 @@ class RiseAndFall:
 			gc.getActivePlayer().setHandicapType(gc.getPlayer(iNewCiv).getHandicapType())
 			gc.getGame().setActivePlayer(iNewCiv, False)
 			gc.getPlayer(iNewCiv).setHandicapType(iOldHandicap)
-			#for i in range(iNumStabilityParameters):
+			#for i in range(con.iNumStabilityParameters):
 			#	utils.setStabilityParameters(utils.getHumanID(),i, 0)
 			#	utils.setLastRecordedStabilityStuff(0, 0)
 			#	utils.setLastRecordedStabilityStuff(1, 0)
