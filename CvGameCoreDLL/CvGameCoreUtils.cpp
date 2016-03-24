@@ -2234,6 +2234,15 @@ int getTurnMonthForGame(int iGameTurn, int iStartYear, CalendarTypes eCalendar, 
 	return iTurnMonth;
 }
 
+// Absinthe: identify the active scenario
+ScenarioTypes getScenario()
+{
+	int iBurgundyNumber = 6; // Burgundy is the 7th civ
+	if (GET_PLAYER((PlayerTypes)iBurgundyNumber).isPlayable()) return SCENARIO_500AD;
+
+	return SCENARIO_1200AD; // Burgundy is unplayable in the 1200 AD scenario
+}
+
 // these string functions should only be used under chipotle cheat code (not internationalized)
 
 void getDirectionTypeString(CvWString& szString, DirectionTypes eDirectionType)

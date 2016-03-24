@@ -2757,4 +2757,12 @@ enum CivilopediaWidgetShowTypes
 	CIVILOPEDIA_WIDGET_SHOW_WATER,
 };
 
+// Absinthe: scenario types and identification
+enum ScenarioTypes
+{
+	SCENARIO_500AD,
+	SCENARIO_1200AD,
+	NUM_SCENARIO_TYPES,
+};
+
 #endif	// CVENUMS_h
