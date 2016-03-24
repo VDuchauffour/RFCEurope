@@ -1157,7 +1157,7 @@ class RFCUtils:
 		## iChance = 60 + max(-10, min(30, pPlayer.getFaith()/3))
 		iChance = 55 + pPlayer.getFaith()/3
 		# lower chance for purging any religion from Jerusalem:
-		if (iPlotX == con.iJerusalem[0] and iPlotY == con.iJerusalem[1]):
+		if (iPlotX == con.tJerusalem[0] and iPlotY == con.tJerusalem[1]):
 			iChance -= 25
 		# lower chance if the city has the chosen religion's buildings/wonders:
 		iChance -= (len(lReligionBuilding) * 8 + lReligionWonder * 17)		# the wonders have an extra chance reduction (in addition to the first reduction)

@@ -259,7 +259,7 @@ class CvRFCEventHandler:
 		self.sta.onCityAcquired(owner,playerType,city,bConquest,bTrade)
 
 		# 3Miro: Jerusalem's Golden Age Incentive
-		if ( city.getX() == con.iJerusalem[0] and city.getY() == con.iJerusalem[1] ):
+		if ( city.getX() == con.tJerusalem[0] and city.getY() == con.tJerusalem[1] ):
 			pPlayer = gc.getPlayer(playerType)
 			if ( pPlayer.getStateReligion() == xml.iCatholicism ):
 				self.crusade.success( playerType )

@@ -8,14 +8,6 @@ import Consts as con
 import XMLConsts as xml
 from StoredData import sd
 
-#from sets import Set
-
-iNumPlayers = con.iNumPlayers
-
-iMercPromotion = xml.iPromotionMerc
-
-#PyGame = PyHelpers.PyGame()
-
 # globals
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer
@@ -593,7 +585,7 @@ class MercenaryManager:
 		#	print( "3Miro Merc Pool: ", iGameTurn, lMerc)
 
 		# Go through each of the players and deduct their mercenary maintenance amount from their gold (round up)
-		for iPlayer in range( iNumPlayers - 1 ): # minus the Pope
+		for iPlayer in range( con.iNumPlayers - 1 ): # minus the Pope
 			pPlayer = gc.getPlayer( iPlayer )
 			if ( pPlayer.isAlive() ):
 				if ( (pPlayer.getCommercePercent(CommerceTypes.COMMERCE_GOLD) == 100) and (pPlayer.getGold() < (pPlayer.getPicklefreeParameter( iMercCostPerTurn )+99)/100) ):
@@ -985,7 +977,7 @@ class GlobalMercenaryUtils:
 		for iPromotion in lMerc[1]:
 			pUnit.setHasPromotion( iPromotion, True )
 
-		pUnit.setHasPromotion( iMercPromotion, True )
+		pUnit.setHasPromotion( xml.iPromotionMerc, True )
 
 		# set the MercID
 		pUnit.setMercID( lMerc[0] )

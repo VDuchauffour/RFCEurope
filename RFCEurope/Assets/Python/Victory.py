@@ -713,7 +713,7 @@ class Victory:
 
 		# UHV 2: Control Jerusalem in 1291
 		if (iGameTurn == xml.i1291AD and pFrankia.getUHV(1) == -1 ):
-			pJPlot = gc.getMap().plot( con.iJerusalem[0], con.iJerusalem[1] )
+			pJPlot = gc.getMap().plot( con.tJerusalem[0], con.tJerusalem[1] )
 			if ( pJPlot.isCity()):
 				if ( pJPlot.getPlotCity().getOwner() == iFrankia ):
 					pFrankia.setUHV( 1, 1 )

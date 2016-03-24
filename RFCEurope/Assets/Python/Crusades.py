@@ -18,11 +18,9 @@ utils = RFCUtils.RFCUtils()
 cnm = CityNameManager.CityNameManager()
 
 iNumCrusades = con.iNumCrusades
-iJerusalem = con.iJerusalem
+tJerusalem = con.tJerusalem
 iCatholicism = xml.iCatholicism
 iOrthodoxy = xml.iOrthodoxy
-iIslam = xml.iIslam
-iNumReligions = xml.iNumReligions
 
 ProvMap = rfceMaps.tProinceMap
 
@@ -212,7 +210,7 @@ class Crusades:
 
 	def deviateNewTargetPopup( self ):
 		lTargetList = []
-		lTargetList.append( gc.getMap().plot( iJerusalem[0], iJerusalem[1] ).getPlotCity().getName() + " (" + gc.getPlayer( gc.getMap().plot( iJerusalem[0], iJerusalem[1] ).getPlotCity().getOwner() ).getCivilizationAdjective(0) + ")" )
+		lTargetList.append( gc.getMap().plot( tJerusalem[0], tJerusalem[1] ).getPlotCity().getName() + " (" + gc.getPlayer( gc.getMap().plot( tJerusalem[0], tJerusalem[1] ).getPlotCity().getOwner() ).getCivilizationAdjective(0) + ")" )
 		for iPlayer in range( con.iNumPlayers ):
 			pPlayer = gc.getPlayer( iPlayer )
 			if ( iPlayer == con.iPope or pPlayer.getStateReligion() == iCatholicism or ( not pPlayer.isAlive() ) ):
@@ -306,13 +304,13 @@ class Crusades:
 
 	def checkToStart( self, iGameTurn ):
 	# if Jerusalem is Islamic or Pagan, Crusade has been initialized and it has been at least 5 turns since the last crusade and there are any Catholics, begin crusade
-		pJPlot = gc.getMap().plot( iJerusalem[0], iJerusalem[1] )
+		pJPlot = gc.getMap().plot( tJerusalem[0], tJerusalem[1] )
 		for i in range( iNumCrusades ): # check the Crusades
 			if ( self.getCrusadeInit( i ) == -1 ): # if this one is to start
 				if ( pJPlot.isCity() and self.anyCatholic() ): # if there is Jerusalem and there are any Catholics
 					#Sedna17 -- allowing crusades against independent Jerusalem
 					#if ( pJPlot.getPlotCity().getOwner() < con.iNumMajorPlayers ): # if Jerusalem is not Independent
-					#iTJerusalem = gc.getTeam( gc.getPlayer( gc.getMap().plot( iJerusalem[0], iJerusalem[1] ).getPlotCity().getOwner() ).getTeam() )
+					#iTmJerusalem = gc.getTeam( gc.getPlayer( gc.getMap().plot( tJerusalem[0], tJerusalem[1] ).getPlotCity().getOwner() ).getTeam() )
 					iVictim = pJPlot.getPlotCity().getOwner() # get the information for the potential Victim
 					pVictim = gc.getPlayer( iVictim )
 					teamVictim = gc.getTeam( pVictim.getTeam() )
@@ -375,13 +373,13 @@ class Crusades:
 			self.setCrusadePower( self.getCrusadePower() / 2 )
 			self.deviateNewTargetPopup()
 		else:
-			self.setTarget( iJerusalem[0], iJerusalem[1] )
+			self.setTarget( tJerusalem[0], tJerusalem[1] )
 			self.startCrusade()
 
 	def eventApply7620( self, popupReturn ):
 		iDecision = popupReturn.getButtonClicked()
 		if ( iDecision == 0 ):
-			self.setTarget( iJerusalem[0], iJerusalem[1] )
+			self.setTarget( tJerusalem[0], tJerusalem[1] )
 			self.startCrusade()
 			return
 		iTargets = 0
@@ -447,14 +445,14 @@ class Crusades:
 
 
 	def computeVotingPower( self, iGameTurn ):
-		#teamJerusalem = gc.getTeam( gc.getPlayer( gc.getMap().plot( iJerusalem[0], iJerusalem[1] ).getPlotCity().getOwner() ).getTeam() )
-		#pPJerusalem = gc.getPlayer( gc.getMap().plot( iJerusalem[0], iJerusalem[1] ).getPlotCity().getOwner() )
-		#iPJerusalem = gc.getMap().plot( iJerusalem[0], iJerusalem[1] ).getPlotCity().getOwner()
-		iTJerusalem = gc.getPlayer( gc.getMap().plot( iJerusalem[0], iJerusalem[1] ).getPlotCity().getOwner() ).getTeam()
+		#teamJerusalem = gc.getTeam( gc.getPlayer( gc.getMap().plot( tJerusalem[0], tJerusalem[1] ).getPlotCity().getOwner() ).getTeam() )
+		#pPJerusalem = gc.getPlayer( gc.getMap().plot( tJerusalem[0], tJerusalem[1] ).getPlotCity().getOwner() )
+		#iPJerusalem = gc.getMap().plot( tJerusalem[0], tJerusalem[1] ).getPlotCity().getOwner()
+		iTmJerusalem = gc.getPlayer( gc.getMap().plot( tJerusalem[0], tJerusalem[1] ).getPlotCity().getOwner() ).getTeam()
 
 		for iPlayer in range( con.iNumPlayers ):
 			pPlayer = gc.getPlayer( iPlayer )
-			if ( (con.tBirth[iPlayer] > iGameTurn) or (not pPlayer.isAlive()) or (pPlayer.getStateReligion() != iCatholicism) or ( gc.getTeam( pPlayer.getTeam() ).isVassal( iTJerusalem ) )  ):
+			if ( (con.tBirth[iPlayer] > iGameTurn) or (not pPlayer.isAlive()) or (pPlayer.getStateReligion() != iCatholicism) or ( gc.getTeam( pPlayer.getTeam() ).isVassal( iTmJerusalem ) )  ):
 				self.setVotingPower( iPlayer, 0 )
 			else:
 				self.setVotingPower( iPlayer, pPlayer.getVotingPower( iCatholicism ) )
@@ -475,7 +473,7 @@ class Crusades:
 
 	def setCrusaders( self ):
 		iHuman = utils.getHumanID()
-		#teamJerusalem = gc.getTeam( gc.getPlayer( gc.getMap().plot( iJerusalem[0], iJerusalem[1] ).getPlotCity().getOwner() ).getTeam() )
+		#teamJerusalem = gc.getTeam( gc.getPlayer( gc.getMap().plot( tJerusalem[0], tJerusalem[1] ).getPlotCity().getOwner() ).getTeam() )
 		for iPlayer in range( con.iNumPlayers ):
 			if ( (not iPlayer == iHuman) and self.getVotingPower( iPlayer ) > 0 ):
 				gc.getPlayer( iPlayer ).setIsCrusader( True )
@@ -640,7 +638,7 @@ class Crusades:
 			CyInterface().addMessage(utils.getHumanID(), True, con.iDuration/2, gc.getPlayer( self.getLeader() ).getName() + CyTranslator().getText("TXT_KEY_CRUSADE_LEAD", ()), "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
 
 		# not yet, check to see for deviations
-		#pJPlot = gc.getMap().plot( iJerusalem[0], iJerusalem[1] )
+		#pJPlot = gc.getMap().plot( tJerusalem[0], tJerusalem[1] )
 		#gc.getTeam( gc.getPlayer( self.getLeader() ) ).declareWar( pJPlot.getPlotCity().getOwner(), True, -1 )
 
 	def decideTheRichestCatholic( self, iActiveCrusade ):
@@ -682,7 +680,7 @@ class Crusades:
 				self.crusadeStolenAI( iRichest, con.iCordoba )
 				bStolen = True
 		if ( not bStolen ):
-			self.setTarget( iJerusalem[0], iJerusalem[1] )
+			self.setTarget( tJerusalem[0], tJerusalem[1] )
 
 		self.startCrusade()
 
@@ -735,8 +733,8 @@ class Crusades:
 			return
 
 		# if in the mean time Jerusalem has been captured by an Orthodox or Catholic player (and target is Jerusalem), cancel the Crusade
-		if ( iTX == iJerusalem[0] and iTY == iJerusalem[1] ): # if the target is Jerusalem
-			pPlot = gc.getMap().plot( iJerusalem[0], iJerusalem[1] )
+		if ( iTX == tJerusalem[0] and iTY == tJerusalem[1] ): # if the target is Jerusalem
+			pPlot = gc.getMap().plot( tJerusalem[0], tJerusalem[1] )
 			if ( pPlot.isCity() ): # and it is still there
 				iVictim = pPlot.getPlotCity().getOwner() # get the Victim
 				if ( iVictim < con.iNumMajorPlayers ): # if not Independent
@@ -827,7 +825,7 @@ class Crusades:
 		#print( " Crusade Other    : ",self.getSelectedUnit( 5 ) )
 
 		iTX, iTY = self.getTargetPlot()
-		if ( iTX == iJerusalem[0] and iTY == iJerusalem[1] ): # if the target is Jerusalem
+		if ( iTX == tJerusalem[0] and iTY == tJerusalem[1] ): # if the target is Jerusalem
 			iRougeModifier = 1
 		else:
 			iRougeModifier = 2
@@ -914,21 +912,21 @@ class Crusades:
 		if ( not self.hasSucceeded() ):
 			pPlayer.changeGoldenAgeTurns( gc.getPlayer( iPlayer).getGoldenAgeLength() )
 			self.setSucceeded()
-			pCurrent = gc.getMap().plot( iJerusalem[0]-1, iJerusalem[1]-1 )
+			pCurrent = gc.getMap().plot( tJerusalem[0]-1, tJerusalem[1]-1 )
 			utils.convertPlotCulture(pCurrent, iPlayer, 100, False)
-			pCurrent = gc.getMap().plot( iJerusalem[0]-1, iJerusalem[1] )
+			pCurrent = gc.getMap().plot( tJerusalem[0]-1, tJerusalem[1] )
 			utils.convertPlotCulture(pCurrent, iPlayer, 100, False)
-			pCurrent = gc.getMap().plot( iJerusalem[0]-1, iJerusalem[1]+1 )
+			pCurrent = gc.getMap().plot( tJerusalem[0]-1, tJerusalem[1]+1 )
 			utils.convertPlotCulture(pCurrent, iPlayer, 100, False)
-			pCurrent = gc.getMap().plot( iJerusalem[0]+1, iJerusalem[1]+1 )
+			pCurrent = gc.getMap().plot( tJerusalem[0]+1, tJerusalem[1]+1 )
 			utils.convertPlotCulture(pCurrent, iPlayer, 100, False)
-			pCurrent = gc.getMap().plot( iJerusalem[0]+1, iJerusalem[1] )
+			pCurrent = gc.getMap().plot( tJerusalem[0]+1, tJerusalem[1] )
 			utils.convertPlotCulture(pCurrent, iPlayer, 100, False)
-			pCurrent = gc.getMap().plot( iJerusalem[0]+1, iJerusalem[1]-1 )
+			pCurrent = gc.getMap().plot( tJerusalem[0]+1, tJerusalem[1]-1 )
 			utils.convertPlotCulture(pCurrent, iPlayer, 100, False)
-			pCurrent = gc.getMap().plot( iJerusalem[0], iJerusalem[1]+1 )
+			pCurrent = gc.getMap().plot( tJerusalem[0], tJerusalem[1]+1 )
 			utils.convertPlotCulture(pCurrent, iPlayer, 100, False)
-			pCurrent = gc.getMap().plot( iJerusalem[0], iJerusalem[1]-1 )
+			pCurrent = gc.getMap().plot( tJerusalem[0], tJerusalem[1]-1 )
 			utils.convertPlotCulture(pCurrent, iPlayer, 100, False)
 
 

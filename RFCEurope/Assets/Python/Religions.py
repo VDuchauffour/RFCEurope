@@ -295,7 +295,7 @@ class Religions:
 				pPope = gc.getPlayer( con.iPope )
 				teamPope = gc.getTeam( pPope.getTeam() )
 				iCatholicFaith = 0
-				iJerusalemOwner = gc.getMap().plot( con.iJerusalem[0], con.iJerusalem[1]).getPlotCity().getOwner()
+				iJerusalemOwner = gc.getMap().plot( con.tJerusalem[0], con.tJerusalem[1]).getPlotCity().getOwner()
 				for i in range( iNumPlayers - 1 ): # the Pope cannot gift to himself
 					pPlayer = gc.getPlayer( i )
 					if ( pPlayer.getStateReligion() == xml.iCatholicism and teamPope.isOpenBorders( pPlayer.getTeam() ) ):

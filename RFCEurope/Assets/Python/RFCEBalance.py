@@ -662,7 +662,7 @@ class RFCEBalance:
 		# set the religions and year of the great schism
 		gc.setSchism( xml.iCatholicism, xml.iOrthodoxy, xml.i1053AD )
 
-		gc.setHoliestCity( con.iJerusalem[0], con.iJerusalem[1] )
+		gc.setHoliestCity( con.tJerusalem[0], con.tJerusalem[1] )
 
 		# 3Miro: Faith Points benefits
 		#gc.setReligionBenefit( iReligion, iFP_(whatever it is), iParameter, iCap )
