@@ -2220,21 +2220,16 @@ void CvGame::update()
 		};
 		*/ //Absinthe: disabling old code end
 
-		// Absinthe: identify start turn for the active scenario
-		int iScenarioStartTurn;
-		int iBurgundyNumber = 6; // Burgundy is the 7th civ
-		if (GET_PLAYER((PlayerTypes)iBurgundyNumber).isPlayable())
-		{
-			iScenarioStartTurn = 0; // 500 AD
-		}
-		else // Burgundy is unplayable in the 1200 AD scenario
+		// Absinthe: identify the active scenario
+		int iScenarioStartTurn = 0; // 500 AD
+		if (getScenario() == SCENARIO_1200AD)
 		{
 			iScenarioStartTurn = 200; // 1200 AD
 		}
 
 		// Absinthe: start Rhye's AIAutoPlay
 		int iHuman = getActivePlayer();
-		if ( startingTurn[iHuman] > iScenarioStartTurn )
+		if (startingTurn[iHuman] > iScenarioStartTurn)
 		{
 			if (getGameTurn() == iScenarioStartTurn)
 			{
