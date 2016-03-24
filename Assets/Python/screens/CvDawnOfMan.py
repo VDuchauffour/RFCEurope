@@ -186,7 +186,7 @@ class CvDawnOfMan:
 			screen = CyGInterfaceScreen( "CvLoadingScreen", self.iScreenID )
 
 			exponent = 1 + iNumAutoPlayTurns/190
-			if (gc.getPlayer(0).isPlayable()):  #late start condition
+			if (gc.getPlayer(6).isPlayable()):  # 1200 AD start condition, Burgundy
 				screen.setBarPercentage("ProgressBar", InfoBarTypes.INFOBAR_STORED, float(math.pow(iGameTurn, exponent)) / float(math.pow(iNumAutoPlayTurns, exponent)))
 			else:
 				screen.setBarPercentage("ProgressBar", InfoBarTypes.INFOBAR_STORED, float(math.pow(iGameTurn-151, exponent)) / float(math.pow(iNumAutoPlayTurns-151, exponent)))

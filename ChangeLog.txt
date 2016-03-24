@@ -23,6 +23,8 @@ Changes for RFCE 1.4:
 		- Anarchy instability now appears right away for the human player, not with a turn delay
 		- Revised swing stability calculations, now converges to 0 a little slower
 		- Lowered anarchy swing instability for the AI, normal anarchy instability for everyone
+		- Improved StoredData handling like SoI and DoC, credits to Edead
+		- Included option to disable AI UHV in GlobalDefinesAlt, instead of predetermined disabling (disabled by default)
 
 	Bugfixes:
 		- Various dll bugfixes and optimizations from Better BTS AI, K-Mod, Afforess
