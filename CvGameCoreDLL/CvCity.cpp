@@ -919,9 +919,7 @@ void CvCity::kill(bool bUpdatePlotGroups)
 
 void CvCity::doTurn()
 {
-	//GC.getGameINLINE().logMsg("   city doTurn begin "); //Rhye and 3Miro
 	PROFILE("CvCity::doTurn()");
-	//GC.getGameINLINE().logMsg("   city doTurn PROFILE "); //Rhye and 3Miro
 
 	CvPlot* pLoopPlot;
 	int iI;
@@ -937,45 +935,35 @@ void CvCity::doTurn()
 	setDrafted(false);
 	setAirliftTargeted(false);
 	setCurrAirlift(0);
-	//GC.getGameINLINE().logMsg("   city doTurn bisect, disorder out "); //Rhye and 3Miro
 
 	AI_doTurn();
 
 	bool bAllowNoProduction = !doCheckProduction();
 
 	doGrowth();
-	//GC.getGameINLINE().logMsg("   city doTurn bisect, growth out "); //Rhye and 3Miro
 
 	// 3Miro: SPEEDTWEAK (BarbCities) Sephi: This function can be very slow for barbarian cities(adds 1-3sec to turn time).Reason unknown
 	// 3Miro: this turns off Barbarian culture, however it also messes the Barb AI trying to build culture
-	//doCulture();
 	//if (!isBarbarian())
 	//{
-	doCulture();
+	//	doCulture();
 	//}
-	//GC.getGameINLINE().logMsg("   city doTurn bisect, culture out "); //Rhye and 3Miro
+	doCulture();
 
 	doPlotCulture(false, getOwnerINLINE(), getCommerceRate(COMMERCE_CULTURE));
-	//GC.getGameINLINE().logMsg("   city doTurn bisect, culture plot out "); //Rhye and 3Miro
 
 	doProduction(bAllowNoProduction);
-	//GC.getGameINLINE().logMsg("   city doTurn bisect, production out "); //Rhye and 3Miro
 
 	doDecay();
-	//GC.getGameINLINE().logMsg("   city doTurn bisect, decay out "); //Rhye and 3Miro
 
 	doReligion();
-	//GC.getGameINLINE().logMsg("   city doTurn bisect, religion out "); //Rhye and 3Miro
 
 	doGreatPeople();
-	//GC.getGameINLINE().logMsg("   city doTurn bisect, GP out "); //Rhye and 3Miro
 
-	// 3Miro: this actually does some work, since we have no meltdown in the mod, we can remove it
+	// Absinthe: not used in RFCE, we can remove it
 	//doMeltdown();
-	//GC.getGameINLINE().logMsg("   city doTurn bisect, meltdown out "); //Rhye and 3Miro
 
 	updateEspionageVisibility(true);
-	//GC.getGameINLINE().logMsg("   city doTurn bisect, epspionage out "); //Rhye and 3Miro
 
 	if (!isDisorder())
 	{
@@ -996,7 +984,6 @@ void CvCity::doTurn()
 			}
 		}
 	}
-	//GC.getGameINLINE().logMsg("   city doTurn bisect, disorder out "); //Rhye and 3Miro
 
 	if (getCultureUpdateTimer() > 0)
 	{
@@ -1054,7 +1041,6 @@ void CvCity::doTurn()
 	// ONEVENT - Do turn
 	CvEventReporter::getInstance().cityDoTurn(this, getOwnerINLINE());
 
-	//GC.getGameINLINE().logMsg("   city doTurn out "); //Rhye and 3Miro
 
 	// XXX
 #ifdef _DEBUG
@@ -12361,7 +12347,8 @@ void CvCity::doGreatPeople()
 }
 
 
-void CvCity::doMeltdown()
+// Absinthe: not used in RFCE, we can remove it
+/*void CvCity::doMeltdown()
 {
 	CvWString szBuffer;
 	int iI;
@@ -12400,7 +12387,7 @@ void CvCity::doMeltdown()
 			}
 		}
 	}
-}
+}*/
 
 // Private Functions...
 

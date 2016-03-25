@@ -14,6 +14,7 @@ import Popup as PyPopup
 #import MercenaryUtils
 import Mercenaries
 import Consts as con
+import XMLConsts as xml
 #from sets import Set
 #import CvConfigParser #Rhye
 import math
@@ -31,7 +32,6 @@ localText = CyTranslator()
 # 3Miro: this class will provide the needed interface for the RFCE Merc mechanics
 GMU = Mercenaries.GlobalMercenaryUtils()
 lMercList = Mercenaries.lMercList
-iMercCostPerTurn = con.iMercCostPerTurn
 
 # Change this to true if hiring mercenaries should only be allowed if one or more of
 # a player's civilization contains one or more of the buildings specified in the
@@ -377,7 +377,7 @@ class CvMercenaryManager:
 
 		#iCost = objMercenaryUtils.getPlayerMercenaryMaintenanceCost(gc.getGame().getActivePlayer())
 		pPlayer = gc.getPlayer( gc.getGame().getActivePlayer() )
-		strCost = u"%s %c: %1.2f" %("Mercenary Maintenance", gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar(), 0.01*pPlayer.getPicklefreeParameter( iMercCostPerTurn ) )
+		strCost = u"%s %c: %1.2f" %("Mercenary Maintenance", gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar(), 0.01*pPlayer.getPicklefreeParameter( con.iMercCostPerTurn ) )
 
 		# Get the players current gold text
 		szText = self.getGoldText(gc.getGame().getActivePlayer())
@@ -462,7 +462,7 @@ class CvMercenaryManager:
 		totalPreInflatedCosts = pPlayer.calculatePreInflatedCosts()
 		totalInflatedCosts = pPlayer.calculateInflatedCosts()
 		#totalMercenaryCost = objMercenaryUtils.getPlayerMercenaryMaintenanceCost(iPlayer)
-		totalMercenaryCost = (pPlayer.getPicklefreeParameter( iMercCostPerTurn ) + 99) / 100
+		totalMercenaryCost = (pPlayer.getPicklefreeParameter( con.iMercCostPerTurn ) + 99) / 100
 		#totalMercenaryContractIncome = (pPlayer.getPlayerMercenaryContractIncome(iPlayer) + 99) / 100
 		goldCommerce = pPlayer.getCommerceRate(CommerceTypes.COMMERCE_GOLD)
 		gold = pPlayer.getGold()
@@ -661,7 +661,7 @@ class CvMercenaryManager:
 					if ( lGlobalMercPool[iI][0] == iMerc ):
 						lMerc =lGlobalMercPool[iI]
 
-				lMerc[1].append( Mercenaries.iMercPromotion )
+				lMerc[1].append( xml.iPromotionMerc )
 
 				self.calculateScreenWidgetData(screen)
 
@@ -690,7 +690,7 @@ class CvMercenaryManager:
 					if ( pMerc.isHasPromotion( iPromotion ) ):
 						lPromotionList.append( iPromotion )
 
-				lPromotionList.append( Mercenaries.iMercPromotion )
+				lPromotionList.append( xml.iPromotionMerc )
 
 				lMerc = [ iMerc, lPromotionList, 0, iUpkeepCost, -1 ]
 

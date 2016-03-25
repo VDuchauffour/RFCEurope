@@ -144,39 +144,37 @@ class Stability:
 			pPlayer.setStabSwingAnarchy ( 0 )
 
 		# Absinthe: anarchy timer refreshes later in the turn, so it should be reduced by 1 if we want to have it on the correct turns (if nothing else then for the human player)
-		# 			but this also means that all 1st turn instability has to be added directly on the revolution / converting - CivicsScreen.doRevolution / ReligionScreen.ReligionConvert
-		#			those functions are only applied on human interaction, so we keep things the way they were before (with the 1 turn delay) for the AI
-		if ( pPlayer.isHuman() ):
-			if ( pPlayer.getAnarchyTurns() - 1 > 0 ):
-				print ("at least 2nd anarchy turn")
-				self.recalcCivicCombos(iPlayer)
-				self.recalcEpansion(pPlayer)
-				iNumCities = pPlayer.getNumCities()
-				if ( iPlayer != con.iPrussia ): # Absinthe: Prussian UP
+		# 			but this also means that all 1st turn instability has to be added directly on the revolution / converting - CvPlayer::revolution and CvPlayer::convert
+		if ( pPlayer.getAnarchyTurns() - 1 > 0 ):
+			print ("at least 2nd anarchy turn for:", iPlayer)
+			self.recalcCivicCombos(iPlayer)
+			self.recalcEpansion(pPlayer)
+			iNumCities = pPlayer.getNumCities()
+
+			if ( iPlayer != con.iPrussia ): # Absinthe: Prussian UP
+				if ( pPlayer.isHuman() ):
+					# Absinthe: anarchy base instability
 					pPlayer.changeStabilityBase ( iCathegoryCivics, min( 0, max( -2, (-iNumCities+4) / 7 ) ) ) # 0 with 1-4 cities, -1 with 5-11 cities, -2 with at least 12 cities
 
 					# Absinthe: more constant swing instability during anarchy, instead of ever-increasing instability from it
 					iStabSwingAnarchy = pPlayer.getStabSwingAnarchy()
 					if ( iStabSwingAnarchy > 0 ): # half of it is already included in the swing, we only add the other half
 						pPlayer.setStabSwingAnarchy ( 4 )
-					else: # safety net (for the human player we add it before the first check)
+					else: # safety net (should be positive, as we add it before the first check)
 						pPlayer.setStabSwingAnarchy ( 8 )
 					pPlayer.setStabilitySwing ( pPlayer.getStabilitySwing() - pPlayer.getStabSwingAnarchy() )
 
-		elif ( pPlayer.getAnarchyTurns() > 0 ): # with the delay for the AI
-			self.recalcCivicCombos(iPlayer)
-			self.recalcEpansion(pPlayer)
-			iNumCities = pPlayer.getNumCities()
-			if ( iPlayer != con.iPrussia ): # Absinthe: Prussian UP
-				pPlayer.changeStabilityBase ( iCathegoryCivics, min( 0, max( -1, (-iNumCities+6) / 7 ) ) ) # Absinthe: reduced for the AI: 0 with 1-6 cities, -1 with at least 7
+				else:
+					# Absinthe: anarchy base instability
+					pPlayer.changeStabilityBase ( iCathegoryCivics, min( 0, max( -1, (-iNumCities+6) / 7 ) ) ) # Absinthe: reduced for the AI: 0 with 1-6 cities, -1 with at least 7
 
-				# Absinthe: more constant swing instability during anarchy, instead of ever-increasing instability from it
-				iStabSwingAnarchy = pPlayer.getStabSwingAnarchy()
-				if ( iStabSwingAnarchy > 0 ): # it was already halved at least once (thus half of it is already included in the swing), we only add the other half
-					pPlayer.setStabSwingAnarchy ( 2 )
-				else: # add the normal value on the first check
-					pPlayer.setStabSwingAnarchy ( 4 )
-				pPlayer.setStabilitySwing ( pPlayer.getStabilitySwing() - pPlayer.getStabSwingAnarchy() )
+					# Absinthe: more constant swing instability during anarchy, instead of ever-increasing instability from it
+					iStabSwingAnarchy = pPlayer.getStabSwingAnarchy()
+					if ( iStabSwingAnarchy > 0 ): # half of it is already included in the swing, we only add the other half
+						pPlayer.setStabSwingAnarchy ( 2 )
+					else: # safety net (should be positive, as we add it before the first check)
+						pPlayer.setStabSwingAnarchy ( 4 )
+					pPlayer.setStabilitySwing ( pPlayer.getStabilitySwing() - pPlayer.getStabSwingAnarchy() )
 
 		if ( pPlayer.getWarPeaceChange() == -1 ): # Whenever your nation switches from peace to the state of war (with a major nation)
 			gc.getPlayer( iPlayer ).changeStabilityBase( iCathegoryCities, -1 ) # 1 permanent stability loss, since your people won't appreciate leaving the state of peace

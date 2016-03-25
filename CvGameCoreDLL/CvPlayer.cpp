@@ -7628,6 +7628,12 @@ void CvPlayer::revolution(CivicTypes* paeNewCivics, bool bForce)
 	if (iAnarchyLength > 0)
 	{
 		changeAnarchyTurns(iAnarchyLength);
+		// Absinthe: 1st turn anarchy instability
+		CyArgsList argsList;
+		argsList.add(getID());		// pass the player's ID
+		long lResult=0;
+		gDLL->getPythonIFace()->callFunction(PYGameModule, "doAnarchyInstability", argsList.makeFunctionArgs(), &lResult);
+		//delete pyPlayer;	// python fxn must not hold on to this pointer
 
 		for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 		{
@@ -7798,6 +7804,12 @@ void CvPlayer::convert(ReligionTypes eReligion)
 	iAnarchyLength = getReligionAnarchyLength();
 
 	changeAnarchyTurns(iAnarchyLength);
+	// Absinthe: 1st turn anarchy instability
+	CyArgsList argsList;
+	argsList.add(getID());		// pass the player's ID
+	long lResult=0;
+	gDLL->getPythonIFace()->callFunction(PYGameModule, "doAnarchyInstability", argsList.makeFunctionArgs(), &lResult);
+	//delete pyPlayer;	// python fxn must not hold on to this pointer
 
 	setLastStateReligion(eReligion);
 

@@ -10,11 +10,13 @@ import PyHelpers # Absinthe
 import XMLConsts as xml # Absinthe
 import Consts as con # Absinthe
 import RFCUtils
+import Stability # Absinthe
 
 # globals
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer # Absinthe
 utils = RFCUtils.RFCUtils() # Absinthe
+sta = Stability.Stability() # Absinthe
 
 
 class CvGameUtils:
@@ -460,9 +462,10 @@ class CvGameUtils:
 		return False
 
 
-	def doMeltdown(self,argsList):
-		pCity = argsList[0]
-		return False
+	# Absinthe: not used in RFCE, we can remove it
+	#def doMeltdown(self,argsList):
+	#	pCity = argsList[0]
+	#	return False
 
 
 	def doReviveActivePlayer(self,argsList):
@@ -575,6 +578,36 @@ class CvGameUtils:
 		elif ( iData1 == 1920 ):
 			return CyTranslator().getText("TXT_KEY_BARBONLY_HELP", ())
 		return u""
+
+
+	# Absinthe: 1st turn anarchy instability, called form C++ CvPlayer::revolution and CvPlayer::convert
+	def doAnarchyInstability(self, argsList):
+		iPlayer = argsList[0]
+
+		print ("1st anarchy turn for:", iPlayer)
+		pPlayer = gc.getPlayer(iPlayer)
+		sta.recalcCivicCombos(iPlayer)
+		sta.recalcEpansion(pPlayer)
+		iNumCities = pPlayer.getNumCities()
+
+		# anarchy instability should appear right on revolution / converting, not one turn later
+		if ( iPlayer != con.iPrussia ): # Prussian UP
+			if ( pPlayer.isHuman() ):
+				# anarchy swing instability
+				pPlayer.setStabilitySwing ( pPlayer.getStabilitySwing() -8 )
+				pPlayer.setStabSwingAnarchy ( 8 ) # the value doesn't really matter, but has to remain > 0 after the first StabSwingAnarchy check of sta.updateBaseStability
+				# anarchy base instability
+				pPlayer.changeStabilityBase ( con.iCathegoryCivics, min( 0, max( -2, (-iNumCities+4) / 7 ) ) ) # 0 with 1-4 cities, -1 with 5-11 cities, -2 with at least 12 cities
+
+			else:
+				# anarchy swing instability
+				pPlayer.setStabilitySwing ( pPlayer.getStabilitySwing() -4 ) # reduced for the AI
+				pPlayer.setStabSwingAnarchy ( 4 ) # the value doesn't really matter, but has to remain > 0 after the first StabSwingAnarchy check of sta.updateBaseStability
+				# anarchy base instability
+				pPlayer.changeStabilityBase ( con.iCathegoryCivics, min( 0, max( -1, (-iNumCities+6) / 7 ) ) ) # reduced for the AI: 0 with 1-6 cities, -1 with at least 7
+
+		lResult = 1
+		return lResult
 
 
 	def getUpgradePriceOverride(self, argsList):
