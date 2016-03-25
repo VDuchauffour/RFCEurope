@@ -6,8 +6,6 @@ import CvUtil
 import ScreenInput
 import CvScreenEnums
 import Consts as con
-import Stability
-sta = Stability.Stability()
 
 PyPlayer = PyHelpers.PyPlayer
 
@@ -498,24 +496,6 @@ class CvReligionScreen:
 		screen = self.getScreen()
 		if (inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED) :
 			screen.hideScreen()
-
-			iplayer = self.iActivePlayer
-			player = gc.getPlayer(self.iActivePlayer)
-
-			# Absinthe: stability stuff
-			print ("religious anarchy")
-			sta.recalcCivicCombos(iplayer)
-			sta.recalcEpansion(player)
-			iNumCities = player.getNumCities()
-
-			# Absinthe: anarchy swing instability should appear right on converting (for the human player), not one turn later
-			if ( iplayer != con.iPrussia ): # Absinthe: Prussian UP
-				if ( player.isHuman() ): # the function is only called on human interaction, safety net
-					player.setStabilitySwing ( player.getStabilitySwing() -8 )
-					player.setStabSwingAnarchy ( 8 ) # the value doesn't really matter, but has to remain > 0 after the first StabSwingAnarchy check of sta.updateBaseStability
-
-					# Absinthe: base instability
-					player.changeStabilityBase ( con.iCathegoryCivics, min( 0, max( -2, (-iNumCities+4) / 7 ) ) ) # 0 with 1-4 cities, -1 with 5-11 cities, -2 with at least 12 cities
 
 	def ReligionCancel(self, inputClass):
 		screen = self.getScreen()

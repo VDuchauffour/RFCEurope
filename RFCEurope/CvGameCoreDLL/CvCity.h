@@ -1172,7 +1172,7 @@ protected:
 	void doDecay();
 	void doReligion();
 	void doGreatPeople();
-	void doMeltdown();
+	//void doMeltdown(); // Absinthe: not used in RFCE, we can remove it
 	bool doCheckProduction();
 
 	int getExtraProductionDifference(int iExtra, UnitTypes eUnit) const;
