@@ -25,11 +25,14 @@ Changes for RFCE 1.4:
 		- Lowered anarchy swing instability for the AI, normal anarchy instability for everyone
 		- Improved StoredData handling like SoI and DoC, credits to Edead
 		- Included option to disable AI UHV in GlobalDefinesAlt, instead of predetermined disabling (disabled by default)
+		- Sweden starts with the following civics: Feudal Monarchy, Serfdom, Manoralism
 
 	Bugfixes:
 		- Various dll bugfixes and optimizations from Better BTS AI, K-Mod, Afforess
 		- Fixed serious bug with stability refreshment on demand (F2), which caused continuously changing (mostly decreasing) stability in some cases
 		- Fixed 2 different issues connected to stability calculations in anarchy (resulted in extra instability in longer anarchies)
+		- Fixed Religion Screen bug which was caused by the Convert and Exit buttons being the same (you actually click on both when clicking on either)
+		- Fixed bug with anarchy instability if you switch civics/religion on popup, not on the screens
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

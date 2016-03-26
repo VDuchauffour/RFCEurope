@@ -135,7 +135,7 @@ class CvDawnOfMan:
 
 		# Added civ specific Dawn of Man screen, while keeping the generic version too - AbsintheRed
 		year = con.tYear[CyGame().getActiveTeam()][0] + CyTranslator().getText(con.tYear[CyGame().getActiveTeam()][1], ()) #3Miro
-		if utils.getScenario() == con.i1200ADScenario:
+		if (utils.getScenario() == con.i1200ADScenario):
 			textKey = "TXT_KEY_DAWN_OF_MAN_TEXT_%d_1200" %(CyGame().getActiveTeam()) # edead - civ-specific dawn of man
 		else:
 			textKey = "TXT_KEY_DAWN_OF_MAN_TEXT_%d" %(CyGame().getActiveTeam()) # edead - civ-specific dawn of man
@@ -186,10 +186,8 @@ class CvDawnOfMan:
 			screen = CyGInterfaceScreen( "CvLoadingScreen", self.iScreenID )
 
 			exponent = 1 + iNumAutoPlayTurns/190
-			if utils.getScenario() == con.i1200ADScenario:  # 1200 AD start condition
-				screen.setBarPercentage("ProgressBar", InfoBarTypes.INFOBAR_STORED, float(math.pow(iGameTurn, exponent)) / float(math.pow(iNumAutoPlayTurns, exponent)))
-			else:
-				screen.setBarPercentage("ProgressBar", InfoBarTypes.INFOBAR_STORED, float(math.pow(iGameTurn-151, exponent)) / float(math.pow(iNumAutoPlayTurns-151, exponent)))
+			# Absinthe: for all scenarios:
+			screen.setBarPercentage("ProgressBar", InfoBarTypes.INFOBAR_STORED, float(math.pow(iGameTurn-utils.getScenarioStartTurn(), exponent)) / float(math.pow(iNumAutoPlayTurns-utils.getScenarioStartTurn(), exponent)))
 			screen.setLabel("Text", "", CyTranslator().getText("TXT_KEY_AUTOPLAY_TURNS_REMAINING", (iNumTurnsRemaining,)), CvUtil.FONT_CENTER_JUSTIFY, 514, 465, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 			if (iNumTurnsRemaining <= 0):  #Rhye
 				screen.show( "Exit" )  #Rhye
