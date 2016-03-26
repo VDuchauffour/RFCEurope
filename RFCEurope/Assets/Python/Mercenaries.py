@@ -3,7 +3,7 @@ from CvPythonExtensions import *
 import CvUtil
 import PyHelpers
 import Popup
-import cPickle as pickle
+#import cPickle as pickle
 import Consts as con
 import XMLConsts as xml
 from StoredData import sd
@@ -412,7 +412,7 @@ lPromotionOdds = [ 100, 80, 40, 10,  5, 50, 50, 40, 60, 40, 20, 50, 20, 10, 40, 
 lPromotionCost = [  10, 15, 30, 30, 40, 20, 20, 20, 20, 20, 20, 20, 30, 40, 20, 30, 15, 20, 30, 15, 20, 30, 20, 30, 50, 20, 30, 50, 10, 20, 40, 50, 10, 10, 10, 20, 10, 10, 10, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
 iNumTotalPromotions = 40 # without navigation 1-2, cargo, commando and leader-tied promotions - those are unnecessary here (unavailable for all mercs anyway)
 iNumPromotionsSoftCap = 3 # can get more promotions if you get a high promotion (i.e. combat 5), but overall it should be unlikely
-iNumPromorionIterations = 4 # how many attemps shall we make to add promotion (the bigger the number, the more likely it is for a unit to have at least iNumPromotionsSoftCap promotions)
+iNumPromotionIterations = 4 # how many attemps shall we make to add promotion (the bigger the number, the more likely it is for a unit to have at least iNumPromotionsSoftCap promotions)
 
 # 3MiroUP: set the merc cost modifiers here
 lMercCostModifier = (
@@ -511,7 +511,7 @@ class MercenaryManager:
 		iNumPromotions = 0
 		lPromotions = []
 		iIterations = 0 # limit the number of iterations so we can have mercs with only a few promotions
-		while ( iNumPromotions < iNumPromotionsSoftCap and iIterations < iNumPromorionIterations):
+		while ( iNumPromotions < iNumPromotionsSoftCap and iIterations < iNumPromotionIterations):
 			iPromotion = gc.getGame().getSorenRandNum( iNumTotalPromotions, 'merc get promotion')
 			if ( isPromotionValid(iPromotion, lMercInfo[0], False) ):
 				if ( (not iPromotion in lPromotions) and gc.getGame().getSorenRandNum( 100, 'merc set promotion') < lPromotionOdds[iPromotion] ):
