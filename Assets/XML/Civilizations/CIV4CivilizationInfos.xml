@@ -11768,10 +11768,10 @@
 			<FreeTechs/>
 			<DisableTechs/>
 			<InitialCivics>
-				<CivicType>CIVIC_DESPOTISM</CivicType>
+				<CivicType>CIVIC_FEUDAL_MONARCHY</CivicType>
 				<CivicType>CIVIC_TRIBAL_LAW</CivicType>
-				<CivicType>CIVIC_APPRENTICESHIP</CivicType>
-				<CivicType>CIVIC_GUILDS</CivicType>
+				<CivicType>CIVIC_SERFDOM</CivicType>
+				<CivicType>CIVIC_MANORIALISM</CivicType>
 				<CivicType>CIVIC_STATE_RELIGION</CivicType>
 				<!-- Rhye -->
 				<CivicType>CIVIC_SUBJUGATION</CivicType>
