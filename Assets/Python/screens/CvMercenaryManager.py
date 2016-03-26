@@ -661,7 +661,8 @@ class CvMercenaryManager:
 					if ( lGlobalMercPool[iI][0] == iMerc ):
 						lMerc =lGlobalMercPool[iI]
 
-				lMerc[1].append( xml.iPromotionMerc )
+				if xml.iPromotionMerc not in lMerc[1]:
+					lMerc[1].append( xml.iPromotionMerc )
 
 				self.calculateScreenWidgetData(screen)
 
