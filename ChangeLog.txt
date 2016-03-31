@@ -26,6 +26,14 @@ Changes for RFCE 1.4:
 		- Improved StoredData handling like SoI and DoC, credits to Edead
 		- Included option to disable AI UHV in GlobalDefinesAlt, instead of predetermined disabling (disabled by default)
 		- Sweden starts with the following civics: Feudal Monarchy, Serfdom, Manoralism
+		- Increased the significance of war maps - both with increased values (when choosing target) in general, and with more differentiation between the levels
+		- Indy and barb cities inside war maps have a much increased chance to be AI targets, and now this also heavily depends on the war map levels
+			So indy/barb cities in core areas will almost always be primary targets
+		- Indy and barb cities outside war maps now have some chance (were totally ignored previously), but it's significantly reduced compared to normal targets
+		- Revised code and fixed various inconsistencies in the settler and war maps
+		- Added new hover-function: holding down alt when hovering on the map will display the respawn areas
+		- Option to enable/disable both the spawn and respawn hover displays, in the RFCEBalance.py
+		- Colour for respawn areas is white, colour for spawn areas changed to purple (for now)
 
 	Bugfixes:
 		- Various dll bugfixes and optimizations from Better BTS AI, K-Mod, Afforess

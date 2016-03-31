@@ -120,7 +120,7 @@ bool MiroBelongToNormal( int iCiv, int x, int y );
 int getSettlersMaps( int iCiv, int y, int x, char * );
 int getWarsMaps( int iCiv, int y, int x, char * );
 
-bool isIndep( int iCiv ); // true if the nations is independent
+bool isIndep( int iCiv ); // true if the nation is independent
 
 int getModifiedTechCostForTurn( int iTech, int iTurn );
 
@@ -296,9 +296,12 @@ extern int *provinceRegionMap; // give the region for each province (province -1
 // Additional Plotting Tools:
 extern int iPlotCore; // plot the core area of this player
 extern int iPlotNormal; // plot the normal area of this player
-extern int iPlotSettlers; // which player to plot for the settlers map
-extern int iPlotWars; // which player to plot for the wars map
-extern int iWhatToPlot; // 0 plots Core, 1 plots Normal, 2 plots Settlers and 3 plots Wars
+// Absinthe: plotting updates:
+//extern int iPlotSettlers; // which player to plot for the settlers map
+//extern int iPlotWars; // which player to plot for the wars map
+extern int iCoreToPlot;
+extern int iNormalToPlot;
+//extern int iWhatToPlot; // 0 plots Core, 1 plots Normal, 2 plots Settlers and 3 plots Wars
 
 
 extern int *conditionalVassalage; // conditions for vassalizing, -1 cannot vassalize, 1 can vassalize, 0 condition

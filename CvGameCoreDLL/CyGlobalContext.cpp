@@ -1259,7 +1259,15 @@ int CyGlobalContext::getMinorReligionRefugies(){
 	return minorReligionRefugies;
 };
 
-void CyGlobalContext::setWhatToPlot( int iToPlot ){
+// Absinthe: set the plotting parameters
+void CyGlobalContext::setCoreToPlot( int iToPlot ){
+	iCoreToPlot = iToPlot;
+};
+void CyGlobalContext::setNormalToPlot( int iToPlot ){
+	iNormalToPlot = iToPlot;
+};
+// Absinthe: unused plot parameters
+/*void CyGlobalContext::setWhatToPlot( int iToPlot ){
 	iWhatToPlot = iToPlot;
 };
 void CyGlobalContext::setCivForCore( int iCiv ){
@@ -1273,4 +1281,4 @@ void CyGlobalContext::setCivForWars( int iCiv ){
 };
 void CyGlobalContext::setCivForSettler( int iCiv ){
 	iPlotSettlers = iCiv;
-};
+};*/

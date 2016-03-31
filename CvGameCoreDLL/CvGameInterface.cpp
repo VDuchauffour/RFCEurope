@@ -119,10 +119,10 @@ void CvGame::updateColoredPlots()
 	// 3MiroProvince: end
 	*/
 
-	// 3MiroMaps: colors the maps
-	if ( (iWhatToPlot == 0) && (iPlotCore>-1) && (iPlotCore<NUM_MAJOR_PLAYERS) ){
-		NiColorA mcolor(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_RED")).getColor());
-		mcolor.a = 0.5f;
+	// Absinthe: colour the spawn and respawn areas on the map
+	if ( (iCoreToPlot == 1) && (iPlotCore>-1) && (iPlotCore<NUM_MAJOR_PLAYERS) ){
+		NiColorA mcolor(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_MAGENTA")).getColor());
+		mcolor.a = 0.9f;
 		for( iI = 0; iI < EARTH_Y; iI++ ){
 			for( iJ = 0; iJ < EARTH_X; iJ++ ){
 				if ( MiroBelongToCore( iPlotCore, iJ, iI ) ){
@@ -131,7 +131,7 @@ void CvGame::updateColoredPlots()
 			};
 		};
 	};
-	if ( (iWhatToPlot == 1) && (iPlotNormal>-1) && (iPlotNormal<NUM_MAJOR_PLAYERS) ){
+	if ( (iNormalToPlot == 1) && (iPlotNormal>-1) && (iPlotNormal<NUM_MAJOR_PLAYERS) ){
 		NiColorA mcolor(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_WHITE")).getColor());
 		mcolor.a = 0.7f;
 		for( iI = 0; iI < EARTH_Y; iI++ ){
@@ -142,7 +142,8 @@ void CvGame::updateColoredPlots()
 			};
 		};
 	};
-	if ( (iWhatToPlot == 2) && (iPlotSettlers>-1) && (iPlotSettlers<NUM_MAJOR_PLAYERS) ){
+	// Absinthe: unused, we have a better tool for this in WB. also this wasn't working perfectly
+	/*if ( (iWhatToPlot == 2) && (iPlotSettlers>-1) && (iPlotSettlers<NUM_MAJOR_PLAYERS) ){
 		NiColorA mcolor7(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_MAGENTA")).getColor());
 		mcolor7.a = 0.9f;
 		NiColorA mcolor5(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_RED")).getColor());
@@ -178,6 +179,7 @@ void CvGame::updateColoredPlots()
 			};
 		};
 	};
+	// Absinthe: unused, we have a better tool for this in WB. also this wasn't working perfectly
 	if ( (iWhatToPlot == 3) && (iPlotWars>-1) && (iPlotWars<NUM_MAJOR_PLAYERS) ){
 		NiColorA mcolor7(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_MAGENTA")).getColor());
 		mcolor7.a = 0.5f;
@@ -209,8 +211,8 @@ void CvGame::updateColoredPlots()
 				};
 			};
 		};
-	};
-	// 3MiroMaps: end
+	};*/
+	// Absinthe: end
 
 	if (pHeadSelectedCity != NULL)
 	{
