@@ -411,64 +411,64 @@ class RFCEBalance:
 		# if ( iTaken > 21 * iTop / iBottom - iMinus ) do not build city there.
 		# RFC default values are 2/3 -1 for Europe, 1/3 - 0 for Russia and 1/2 for Mongolia
 		# for example gc.setCityClusterAI( iByzantium, 1, 3, 1 ) would force Byzantium to spread out
-		gc.setCityClusterAI( iBurgundy, 2, 3, 3 ) #12
 		gc.setCityClusterAI( iByzantium, 1, 3, 1 ) #7
 		gc.setCityClusterAI( iFrankia, 1, 3, 1 ) #7
 		gc.setCityClusterAI( iArabia, 1, 3, 1 ) #7
 		gc.setCityClusterAI( iBulgaria, 1, 2, 1 ) #10
 		gc.setCityClusterAI( iCordoba, 1, 2, 2 ) #9
-		gc.setCityClusterAI( iSpain, 1, 2, 2 ) #9
-		gc.setCityClusterAI( iNorway, 1, 2, 2 ) #9
-		gc.setCityClusterAI( iDenmark, 2, 3, 3 ) #12
 		gc.setCityClusterAI( iVenecia, 2, 3, 1 ) #14
-		gc.setCityClusterAI( iNovgorod, 1, 4, 1 ) #5
+		gc.setCityClusterAI( iBurgundy, 2, 3, 3 ) #12
+		gc.setCityClusterAI( iGermany, 2, 3, 3 ) #12
+		gc.setCityClusterAI( iNovgorod, 1, 2, 2 ) #9
+		gc.setCityClusterAI( iNorway, 1, 2, 2 ) #9
 		gc.setCityClusterAI( iKiev, 1, 4, 1 ) #5
 		gc.setCityClusterAI( iHungary, 1, 2, 1 ) #10
-		gc.setCityClusterAI( iGermany, 2, 3, 3 ) #12
+		gc.setCityClusterAI( iSpain, 1, 2, 2 ) #9
+		gc.setCityClusterAI( iDenmark, 2, 3, 3 ) #12
 		gc.setCityClusterAI( iScotland, 2, 3, 3 ) #12
 		gc.setCityClusterAI( iPoland, 1, 3, 1 ) #7
-		gc.setCityClusterAI( iMoscow, 1, 4, 1 ) #5
-		gc.setCityClusterAI( iPortugal, 2, 3, 1 ) #14
-		gc.setCityClusterAI( iAragon, 2, 3, 1 ) #14
-		gc.setCityClusterAI( iPrussia, 2, 3, 1 ) #14
-		gc.setCityClusterAI( iLithuania, 1, 3, 1 ) #7
 		gc.setCityClusterAI( iGenoa, 2, 3, 1 ) #14
 		gc.setCityClusterAI( iMorocco, 1, 3, 1 ) #7
 		gc.setCityClusterAI( iEngland, 1, 2, 2 ) #9
+		gc.setCityClusterAI( iPortugal, 2, 3, 1 ) #14
+		gc.setCityClusterAI( iAragon, 2, 3, 1 ) #14
+		gc.setCityClusterAI( iSweden, 1, 2, 2 ) #9
+		gc.setCityClusterAI( iPrussia, 2, 3, 1 ) #14
+		gc.setCityClusterAI( iLithuania, 1, 3, 1 ) #7
 		gc.setCityClusterAI( iAustria, 2, 3, 3 ) #12
 		gc.setCityClusterAI( iTurkey, 1, 3, 1 ) #7
-		gc.setCityClusterAI( iSweden, 1, 2, 2 ) #9
+		gc.setCityClusterAI( iMoscow, 1, 4, 1 ) #5
 		gc.setCityClusterAI( iDutch, 2, 3, 1 ) #14
 
 		#3Miro: setCityWarDistanceAI(iCiv,iVal), depending on the type of the empire, modify how likely the AI is to attack a city
 		# values are 1 - small empires, 2 - large continuous empires, 3 - not necessarily continuous empires
-		gc.setCityWarDistanceAI( iBurgundy, 1 )
 		gc.setCityWarDistanceAI( iByzantium, 2 )
 		gc.setCityWarDistanceAI( iFrankia, 2 )
 		gc.setCityWarDistanceAI( iArabia, 2 )
-		gc.setCityWarDistanceAI( iBulgaria, 2 )
-		gc.setCityWarDistanceAI( iCordoba, 1 )
-		gc.setCityWarDistanceAI( iSpain, 3 )
-		gc.setCityWarDistanceAI( iAragon, 3 )
-		gc.setCityWarDistanceAI( iNorway, 3 )
-		gc.setCityWarDistanceAI( iDenmark, 2 )
+		gc.setCityWarDistanceAI( iBulgaria, 1 )
+		gc.setCityWarDistanceAI( iCordoba, 2 )
 		gc.setCityWarDistanceAI( iVenecia, 3 )
+		gc.setCityWarDistanceAI( iBurgundy, 1 )
+		gc.setCityWarDistanceAI( iGermany, 2 )
 		gc.setCityWarDistanceAI( iNovgorod, 2 )
+		gc.setCityWarDistanceAI( iNorway, 3 )
 		gc.setCityWarDistanceAI( iKiev, 2 )
 		gc.setCityWarDistanceAI( iHungary, 2 )
-		gc.setCityWarDistanceAI( iGermany, 2 )
+		gc.setCityWarDistanceAI( iSpain, 3 )
+		gc.setCityWarDistanceAI( iDenmark, 2 )
 		gc.setCityWarDistanceAI( iScotland, 1 )
 		gc.setCityWarDistanceAI( iPoland, 2 )
-		gc.setCityWarDistanceAI( iMoscow, 2 )
-		gc.setCityWarDistanceAI( iPortugal, 2 )
-		gc.setCityWarDistanceAI( iPrussia, 2 )
-		gc.setCityWarDistanceAI( iLithuania, 2 )
 		gc.setCityWarDistanceAI( iGenoa, 3 )
 		gc.setCityWarDistanceAI( iMorocco, 2 )
 		gc.setCityWarDistanceAI( iEngland, 3 )
+		gc.setCityWarDistanceAI( iPortugal, 3 )
+		gc.setCityWarDistanceAI( iAragon, 3 )
+		gc.setCityWarDistanceAI( iSweden, 3 )
+		gc.setCityWarDistanceAI( iPrussia, 2 )
+		gc.setCityWarDistanceAI( iLithuania, 2 )
 		gc.setCityWarDistanceAI( iAustria, 2 )
 		gc.setCityWarDistanceAI( iTurkey, 2 )
-		gc.setCityWarDistanceAI( iSweden, 2 )
+		gc.setCityWarDistanceAI( iMoscow, 2 )
 		gc.setCityWarDistanceAI( iDutch, 1 )
 
 		#3Miro: setTechPreferenceAI(iCiv,iTech,iVal), for each civ, for each tech, specify how likable it is. iVal is same as in growth.
@@ -851,13 +851,18 @@ class RFCEBalance:
 		# block declaration of war against newly spawning nations for this many turns (pre-set wars are not affected)
 		gc.setPaceTurnsAfterSpawn( 5 )
 
-		# set the Visualization parameters, note that those functions can be accessed at any time, not just here
-		# note that if you set Civs for mode 0 and 1 in WB mode, they will stay set until you exit
-		gc.setWhatToPlot( 0 ) # 0 - Core (default), 1 - Normal, 2 - Settler, 3 - Wars
-		#gc.setCivForCore( iByzantium ) # plot the Core of Byzantium (only if setWhatToPlot is set to 0)
-		#gc.setCivForNormal( iByzantium ) # plot the Normal area of Byzantium (only if setWhatToPlot is set to 1)
-		#gc.setCivForSettler( iFrankia ) # plot the Settlers Map of Byzantium (only if setWhatToPlot is set to 2)
-		#gc.setCivForWars( iByzantium ) # plot the Wars Map of of Byzantium (only if setWhatToPlot is set to 3)
+		# Absinthe: Separate visualization function for spawn and respawn areas, set it to 1 if you want to enable it
+		gc.setCoreToPlot(1) # hold down the shift key, and hover over the map
+		gc.setNormalToPlot(1) # hold down the alt key, and hover over the map
+
+		# Absinthe: this is outdated: Core and Normal are set above (which is the only 2 you might want to use on the main map), for everything else we have better tools in the WB
+		## set the Visualization parameters, note that those functions can be accessed at any time, not just here
+		## note that if you set Civs for mode 0 and 1 in WB mode, they will stay set until you exit
+		#gc.setWhatToPlot( 0 ) # 0 - Core (default), 1 - Normal, 2 - Settler, 3 - Wars
+		##gc.setCivForCore( iByzantium ) # plot the Core of Byzantium (only if setWhatToPlot is set to 0)
+		##gc.setCivForNormal( iByzantium ) # plot the Normal area of Byzantium (only if setWhatToPlot is set to 1)
+		##gc.setCivForSettler( iFrankia ) # plot the Settlers Map of Byzantium (only if setWhatToPlot is set to 2)
+		##gc.setCivForWars( iByzantium ) # plot the Wars Map of of Byzantium (only if setWhatToPlot is set to 3)
 
 		self.postAreas()
 

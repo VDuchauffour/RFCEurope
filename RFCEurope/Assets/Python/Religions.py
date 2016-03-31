@@ -171,7 +171,7 @@ class Religions:
 		self.setSeed()
 
 	def checkTurn(self, iGameTurn):
-		# Absinthe: Spreading religions in a couple preset dates
+		# Absinthe: Spreading religion in a couple preset dates
 		if (iGameTurn == xml.i700AD-2):
 			# Spread Judaism to Toledo
 			self.spreadReligion(tToledo,xml.iJudaism)
@@ -247,14 +247,14 @@ class Religions:
 			if ( pPlayer.getProsecutionCount() > 0 ):
 				pPlayer.changeProsecutionCount( -1 )
 
-		# Resettle Jewish refuges
+		# Resettle Jewish refugees
 		iRefugies = gc.getMinorReligionRefugies()
 		for i in range(iRefugies):
 			self.resettleRefugies()
 		gc.setMinorReligionRefugies( 0 )
 
 		# 3Miro: Catholic Benefits from the Pope
-		# the Pope gifts gold every 3 turns
+		# the Pope gifts gold every 17 turns before the Schism, every 7 turns after it
 		if ( iGameTurn > xml.i1053AD ):
 			iDivBy = 7
 		else:
@@ -288,8 +288,8 @@ class Religions:
 									CyInterface().addMessage(i, True, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iOrange), -1, -1, True, True)
 								break
 
-		# free religious building every 6 turns
-		if ( iGameTurn > xml.i800AD ): # 66 = 800AD, the crouning of Charlemagne
+		# free religious building every 11 turns
+		if ( iGameTurn > xml.i800AD ): # the crowning of Charlemagne
 			if ( iGameTurn % 11 == 3 ):
 				#print(" 3Miro Pope Builds " )
 				pPope = gc.getPlayer( con.iPope )

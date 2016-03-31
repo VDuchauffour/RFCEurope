@@ -165,10 +165,14 @@ void CyGlobalContextPythonInterface5(python::class_<CyGlobalContext>& x)
 		.def("setMinorReligionRefugies", &CyGlobalContext::setMinorReligionRefugies, "void ( int )")
 		.def("getMinorReligionRefugies", &CyGlobalContext::getMinorReligionRefugies, "int( )")
 
-		.def("setWhatToPlot", &CyGlobalContext::setWhatToPlot, "void ( int )")
-		.def("setCivForCore", &CyGlobalContext::setCivForCore, "void ( int )")
-		.def("setCivForNormal", &CyGlobalContext::setCivForNormal, "void ( int )")
-		.def("setCivForWars", &CyGlobalContext::setCivForWars, "void ( int )")
-		.def("setCivForSettler", &CyGlobalContext::setCivForSettler, "void ( int )")
+		// Absinthe: set the plotting parameters
+		.def("setCoreToPlot", &CyGlobalContext::setCoreToPlot, "void ( int )")
+		.def("setNormalToPlot", &CyGlobalContext::setNormalToPlot, "void ( int )")
+		// Absinthe: unused plot parameters
+		//.def("setWhatToPlot", &CyGlobalContext::setNormalToPlot, "void ( int )")
+		//.def("setCivForCore", &CyGlobalContext::setCivForCore, "void ( int )")
+		//.def("setCivForNormal", &CyGlobalContext::setCivForNormal, "void ( int )")
+		//.def("setCivForWars", &CyGlobalContext::setCivForWars, "void ( int )")
+		//.def("setCivForSettler", &CyGlobalContext::setCivForSettler, "void ( int )")
 		;
 }

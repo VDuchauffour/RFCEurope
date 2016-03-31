@@ -226,9 +226,12 @@ int *iCultureImmuneException = NULL; // the only player that can put culture on 
 // Additional Plotting Tools:
 int iPlotCore = -1; // plot the core area of this player
 int iPlotNormal = -1; // plot the normal area of this player
-int iPlotSettlers = -1; // which player to plot for the settlers map
-int iPlotWars = -1; // which player to plot for the wars map
-int iWhatToPlot = 0; // 0 plots Core, 1 plots Normal, 2 plots Settlers and 3 plots Wars
+// Absinthe: plotting updates:
+//int iPlotSettlers = -1; // which player to plot for the settlers map
+//int iPlotWars = -1; // which player to plot for the wars map
+int iCoreToPlot = 0; // set in RFCEBalance.py if you want to use
+int iNormalToPlot = 0; // set in RFCEBalance.py if you want to use
+//int iWhatToPlot = 0; // 0 plots Core, 1 plots Normal, 2 plots Settlers and 3 plots Wars
 
 int *conditionalVassalage = NULL;
 int provinceFlagToVassalize;
@@ -244,13 +247,6 @@ int minorReligion = -1;
 int minorReligionRefugies = 0;
 
 bool MiroBelongToCore( int iCiv, int x, int y ){
-	/*if ( ( x>= CoreAreasRect[iCiv][0] ) && ( y >= CoreAreasRect[iCiv][1] ) && ( x<= CoreAreasRect[iCiv][2] ) && ( y<= CoreAreasRect[iCiv][3] ) ){
-		for ( int i=0; i<CoreAreasMinusCount[iCiv]; i++ ){
-			if ( (CoreAreasMinus[iCiv][2*i] == x)&&(CoreAreasMinus[iCiv][2*i+1] == y) ) return false;
-		};
-		return true;
-	};
-	return false;*/
 	// Wrong name, Minus is actually added to the core area
 	if ( ( x>= CoreAreasRect[iCiv][0] ) && ( y >= CoreAreasRect[iCiv][1] ) && ( x<= CoreAreasRect[iCiv][2] ) && ( y<= CoreAreasRect[iCiv][3] ) ){
 		return true;
@@ -287,11 +283,11 @@ int getSettlersMaps( int iCiv, int y, int x, char * w ){
 	};
 };
 int getWarsMaps( int iCiv, int y, int x, char *w ){
-	if ( settlersMaps == NULL || iCiv >= NUM_MAJOR_PLAYERS ){ //fixed value for the Pope and the Independents
+	if ( warsMaps == NULL || iCiv >= NUM_MAJOR_PLAYERS ){ //fixed value for the Pope and the Independents
 		return 0;
 	}else{
 		if ( (x>=0)&&(x<EARTH_X)&&(y>=0)&&(y<EARTH_Y) ){
-			//return settlersMaps[iCiv][y][x];
+			//return warsMaps[iCiv][y][x];
 			return warsMaps[ iCiv * SETTLER_OFFSET + y * EARTH_X + x ];
 		}else{
 			if ( w != NULL ){

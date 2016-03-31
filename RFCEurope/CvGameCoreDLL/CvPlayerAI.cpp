@@ -1819,7 +1819,6 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 	int iBadTile;
 	int iTakenTiles;
 	int iTeammateTakenTiles;
-//	int iDifferentAreaTile;
 	int iTeamAreaCities;
 	int iHealth;
 	int iValue;
@@ -1853,16 +1852,6 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 
 	bool bAdvancedStart = (getAdvancedStartPoints() >= 0);
 
-	//Rhye - start switch
-	/*if (!bStartingLoc && !bAdvancedStart)
-	{
-		if (!bIsCoastal && iNumAreaCities == 0)
-		{
-			return 0;
-		}
-	}*/
-
-
 	// 3Miro
 	//if (getID() != RUSSIA)
 	if (!bStartingLoc && !bAdvancedStart)
@@ -1872,7 +1861,6 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 			return 0;
 		}
 	}
-	//Rhye - end
 
 
 	if (bAdvancedStart)
@@ -1885,7 +1873,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 		}
 	}
 
-	//Explaination of city site adjustment:
+	//Explanation of city site adjustment:
 	//Any plot which is otherwise within the radius of a city site
 	//is basically treated as if it's within an existing city radius
 	std::vector<bool> abCitySiteRadius(NUM_CITY_PLOTS, false);
@@ -1923,10 +1911,10 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 
 	std::vector<int> paiBonusCount;
 
-    for (iI = 0; iI < GC.getNumBonusInfos(); iI++)
-    {
-        paiBonusCount.push_back(0);
-    }
+	for (iI = 0; iI < GC.getNumBonusInfos(); iI++)
+	{
+		paiBonusCount.push_back(0);
+	}
 
 	if (iMinRivalRange != -1)
 	{
@@ -1976,12 +1964,12 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 			iOwnedTiles++;
 		}
 		else if (pLoopPlot->isOwned())
-        {
-            if (pLoopPlot->getTeam() != getTeam())
-            {
-                iOwnedTiles++;
-            }
-        }
+		{
+			if (pLoopPlot->getTeam() != getTeam())
+			{
+				iOwnedTiles++;
+			}
+		}
 	}
 
 	//Rhye - start
@@ -2018,16 +2006,16 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 					iBadTile++;
 				}
 			}
-            else if (pLoopPlot->isOwned())
-            {
-                if (pLoopPlot->getTeam() == getTeam())
-                {
-                    if (pLoopPlot->isCityRadius() || abCitySiteRadius[iI])
-                    {
-                        iBadTile += bAdvancedStart ? 2 : 1;
-                    }
-                }
-            }
+			else if (pLoopPlot->isOwned())
+			{
+				if (pLoopPlot->getTeam() == getTeam())
+				{
+					if (pLoopPlot->isCityRadius() || abCitySiteRadius[iI])
+					{
+						iBadTile += bAdvancedStart ? 2 : 1;
+					}
+				}
+			}
 		}
 	}
 
@@ -2084,24 +2072,34 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 		iGreed = 150;
 	}
 	else if (!bStartingLoc)
-    {
-        for (iI = 0; iI < GC.getNumTraitInfos(); iI++)
-        {
-            if (hasTrait((TraitTypes)iI))
-            {
-                //Greedy founding means getting the best possible sites - fitting maximum
-                //resources into the fat cross.
-                iGreed += (GC.getTraitInfo((TraitTypes)iI).getUpkeepModifier() / 2);
-                iGreed += 20 * (GC.getTraitInfo((TraitTypes)iI).getCommerceChange(COMMERCE_CULTURE));
-            }
-        }
-    }
-    //iClaimThreshold is the culture required to pop the 2nd borders.
-    int iClaimThreshold = GC.getGameINLINE().getCultureThreshold((CultureLevelTypes)(std::min(2, (GC.getNumCultureLevelInfos() - 1))));
-    iClaimThreshold = std::max(1, iClaimThreshold);
-    iClaimThreshold *= (std::max(100, iGreed));
+	{
+		for (iI = 0; iI < GC.getNumTraitInfos(); iI++)
+		{
+			if (hasTrait((TraitTypes)iI))
+			{
+				//Greedy founding means getting the best possible sites - fitting maximum
+				//resources into the fat cross.
+				iGreed += (GC.getTraitInfo((TraitTypes)iI).getUpkeepModifier() / 2);
+				iGreed += 20 * (GC.getTraitInfo((TraitTypes)iI).getCommerceChange(COMMERCE_CULTURE));
+			}
+		}
+	}
+	//iClaimThreshold is the culture required to pop the 2nd borders.
+	int iClaimThreshold = GC.getGameINLINE().getCultureThreshold((CultureLevelTypes)(std::min(2, (GC.getNumCultureLevelInfos() - 1))));
+	iClaimThreshold = std::max(1, iClaimThreshold);
+	iClaimThreshold *= (std::max(100, iGreed));
+/************************************************************************************************/
+/* UNOFFICIAL_PATCH                       04/25/10                          denev & jdog5000    */
+/*                                                                                              */
+/* Bugfix                                                                                       */
+/************************************************************************************************/
+	// Was missing this
+	iClaimThreshold /= 100;
+/************************************************************************************************/
+/* UNOFFICIAL_PATCH                        END                                                  */
+/************************************************************************************************/
 
-    int iYieldLostHere = 0;
+	int iYieldLostHere = 0;
 
 	for (iI = 0; iI < NUM_CITY_PLOTS; iI++)
 	{
@@ -2129,28 +2127,28 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 			eBonusImprovement = NO_IMPROVEMENT;
 
 			int iCultureMultiplier;
-            if (!pLoopPlot->isOwned() || (pLoopPlot->getOwnerINLINE() == getID()))
-            {
-                iCultureMultiplier = 100;
-            }
-            else
-            {
-            	bNeutralTerritory = false;
-                int iOurCulture = pLoopPlot->getCulture(getID());
-                int iOtherCulture = std::max(1, pLoopPlot->getCulture(pLoopPlot->getOwnerINLINE()));
-                iCultureMultiplier = 100 * (iOurCulture + iClaimThreshold);
-                iCultureMultiplier /= (iOtherCulture + iClaimThreshold);
-                iCultureMultiplier = std::min(100, iCultureMultiplier);
-                //The multiplier is basically normalized...
-                //100% means we own (or rightfully own) the tile.
-                //50% means the hostile culture is fairly firmly entrenched.
-            }
+			if (!pLoopPlot->isOwned() || (pLoopPlot->getOwnerINLINE() == getID()))
+			{
+				iCultureMultiplier = 100;
+			}
+			else
+			{
+				bNeutralTerritory = false;
+				int iOurCulture = pLoopPlot->getCulture(getID());
+				int iOtherCulture = std::max(1, pLoopPlot->getCulture(pLoopPlot->getOwnerINLINE()));
+				iCultureMultiplier = 100 * (iOurCulture + iClaimThreshold);
+				iCultureMultiplier /= (iOtherCulture + iClaimThreshold);
+				iCultureMultiplier = std::min(100, iCultureMultiplier);
+				//The multiplier is basically normalized...
+				//100% means we own (or rightfully own) the tile.
+				//50% means the hostile culture is fairly firmly entrenched.
+			}
 
-            if (iCultureMultiplier < ((iNumAreaCities > 0) ? 25 : 50))
-            {
-                //discourage hopeless cases, especially on other continents.
-                iTakenTiles += (iNumAreaCities > 0) ? 1 : 2;
-            }
+			if (iCultureMultiplier < ((iNumAreaCities > 0) ? 25 : 50))
+			{
+				//discourage hopeless cases, especially on other continents.
+				iTakenTiles += (iNumAreaCities > 0) ? 1 : 2;
+			}
 
 			if (eBonus != NO_BONUS)
 			{
@@ -2301,26 +2299,26 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 				if ((eBonus != NO_BONUS) && ((pLoopPlot->area() == pPlot->area()) ||
 					(pLoopPlot->area()->getCitiesPerPlayer(getID()) > 0)))
 				{
-                    paiBonusCount[eBonus]++;
-                    FAssert(paiBonusCount[eBonus] > 0);
+					paiBonusCount[eBonus]++;
+					FAssert(paiBonusCount[eBonus] > 0);
 
-                    iTempValue = (AI_bonusVal(eBonus) * ((!bStartingLoc && (getNumTradeableBonuses(eBonus) == 0) && (paiBonusCount[eBonus] == 1)) ? 80 : 20));
-                    iTempValue *= ((bStartingLoc) ? 100 : iGreed);
-                    iTempValue /= 100;
+					iTempValue = (AI_bonusVal(eBonus) * ((!bStartingLoc && (getNumTradeableBonuses(eBonus) == 0) && (paiBonusCount[eBonus] == 1)) ? 80 : 20));
+					iTempValue *= ((bStartingLoc) ? 100 : iGreed);
+					iTempValue /= 100;
 
-                    if (iI != CITY_HOME_PLOT && !bStartingLoc)
-                    {
-                        if ((pLoopPlot->getOwnerINLINE() != getID()) && stepDistance(pPlot->getX_INLINE(),pPlot->getY_INLINE(), pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE()) > 1)
+					if (iI != CITY_HOME_PLOT && !bStartingLoc)
+					{
+						if ((pLoopPlot->getOwnerINLINE() != getID()) && stepDistance(pPlot->getX_INLINE(),pPlot->getY_INLINE(), pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE()) > 1)
 						{
-                            iTempValue *= 2;
-                            iTempValue /= 3;
+							iTempValue *= 2;
+							iTempValue /= 3;
 
-                            iTempValue *= std::min(150, iGreed);
-                            iTempValue /= 100;
+							iTempValue *= std::min(150, iGreed);
+							iTempValue /= 100;
 						}
 					}
 
-                    iValue += (iTempValue + 10);
+					iValue += (iTempValue + 10);
 
 					if (iI != CITY_HOME_PLOT)
 					{
@@ -2347,11 +2345,11 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 							}
 						}
 
-                        if (pLoopPlot->isWater())
-                        {
-                            iValue += (bIsCoastal ? 100 : -800);
-                        }
-                    }
+						if (pLoopPlot->isWater())
+						{
+							iValue += (bIsCoastal ? 100 : -800);
+						}
+					}
 				}
 			}
 		}
@@ -2360,10 +2358,10 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 	iResourceValue += iSpecialFood * 50;
 	iResourceValue += iSpecialProduction * 50;
 	iResourceValue += iSpecialCommerce * 50;
-    if (bStartingLoc)
-    {
-        iResourceValue /= 2;
-    }
+	if (bStartingLoc)
+	{
+		iResourceValue /= 2;
+	}
 
 	iValue += std::max(0, iResourceValue);
 
@@ -2415,14 +2413,14 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 		}
 		else
 		{
-		    //let other penalties bring this down.
-		    iValue += 600;
-		    if (!pPlot->isStartingPlot())
-		    {
-                if (pArea->getNumStartingPlots() == 0)
-                {
-                    iValue += 1000;
-                }
+			//let other penalties bring this down.
+			iValue += 600;
+			if (!pPlot->isStartingPlot())
+			{
+				if (pArea->getNumStartingPlots() == 0)
+				{
+					iValue += 1000;
+				}
 			}
 		}
 	}
@@ -2460,7 +2458,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 					{
 						if (plotDistance(iX, iY, pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE()) <= iRange)
 						{
-						    iTempValue = 0;
+							iTempValue = 0;
 							iTempValue += (pLoopPlot->getYield(YIELD_FOOD) * 15);
 							iTempValue += (pLoopPlot->getYield(YIELD_PRODUCTION) * 11);
 							iTempValue += (pLoopPlot->getYield(YIELD_COMMERCE) * 5);
@@ -2471,10 +2469,10 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 								iGreaterBadTile += 2;
 								if (pLoopPlot->getFeatureType() != NO_FEATURE)
 								{
-							    	if (pLoopPlot->calculateBestNatureYield(YIELD_FOOD,getTeam()) > 1)
-							    	{
+									if (pLoopPlot->calculateBestNatureYield(YIELD_FOOD,getTeam()) > 1)
+									{
 										iGreaterBadTile--;
-							    	}
+									}
 								}
 							}
 						}
@@ -2497,16 +2495,16 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 
 		for (iI = 0; iI < NUM_CITY_PLOTS; iI++)
 		{
-		    pLoopPlot = plotCity(iX, iY, iI);
+			pLoopPlot = plotCity(iX, iY, iI);
 
-            if (pLoopPlot != NULL)
-		    {
-		        if (pLoopPlot->isWater())
-		        {
-		            iWaterCount ++;
-		            if (pLoopPlot->getYield(YIELD_FOOD) <= 1)
-		            {
-		                iWaterCount++;
+			if (pLoopPlot != NULL)
+			{
+				if (pLoopPlot->isWater())
+				{
+					iWaterCount ++;
+					if (pLoopPlot->getYield(YIELD_FOOD) <= 1)
+					{
+						iWaterCount++;
 					}
 				}
 			}
@@ -2517,9 +2515,9 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 
 		if (iLandCount < (NUM_CITY_PLOTS / 2))
 		{
-		    //discourage very water-heavy starts.
-		    iValue *= 1 + iLandCount;
-		    iValue /= (1 + (NUM_CITY_PLOTS / 2));
+			//discourage very water-heavy starts.
+			iValue *= 1 + iLandCount;
+			iValue /= (1 + (NUM_CITY_PLOTS / 2));
 		}
 	}
 
@@ -2578,10 +2576,10 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 
 			iValue /= 10;
 
-            if (pPlot->getBonusType() != NO_BONUS)
-            {
-                iValue /= 2;
-            }
+			if (pPlot->getBonusType() != NO_BONUS)
+			{
+				iValue /= 2;
+			}
 		}
 	}
 
@@ -2605,145 +2603,11 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 		}
 		else
 		{
-		    int iDistance = plotDistance(iX, iY, pNearestCity->getX_INLINE(), pNearestCity->getY_INLINE());
-		    int iNumCities = getNumCities();
-			//Rhye - start switch
-			/*
-		    if (iDistance > 5)
-		    {
-		    	iValue -= (iDistance - 5) * 500;
-		    }
-		    else if (iDistance < 4)
-		    {
-		    	iValue -= (4 - iDistance) * 2000;
-		    }
-			*/
-			// 3Miro: penalize the distance to the capital, leave for now since it is tech dependent, set everyone to act like Rome
+			int iDistance = plotDistance(iX, iY, pNearestCity->getX_INLINE(), pNearestCity->getY_INLINE());
+			int iNumCities = getNumCities();
+
+			// Absinthe: penalize the distance to the capital, in RFC and DoC it's civ-dependent, we use an average value here for everyone
 			iValue -= (abs(iDistance) - 3) * 300;
-			/*switch (getID())
-			{
-				// 3Miro distance to capital value
-			case EGYPT:
-				iValue -= (abs(iDistance) - 4) * 500;
-				break;
-			case INDIA:
-				iValue -= (abs(iDistance) - 5) * 500;
-				break;
-			case CHINA:
-				iValue -= (abs(iDistance) - 5) * 400;
-				break;
-			case BABYLONIA:
-				iValue -= (abs(iDistance) - 3) * 500;
-				break;
-			case GREECE:
-				iValue -= (abs(iDistance) - 3) * 300;
-				break;
-			case PERSIA:
-				iValue -= (abs(iDistance) - 4) * 500;
-				break;
-			case CARTHAGE:
-				iValue -= (abs(iDistance) - 4) * 500;
-				break;
-			case ROME:
-				iValue -= (abs(iDistance) - 3) * 300;
-				break;
-			case JAPAN:
-				iValue -= (abs(iDistance) - 3) * 500;
-				break;
-			case ETHIOPIA:
-				iValue -= (abs(iDistance) - 4) * 500;
-				break;
-			case MAYA:
-				iValue -= (abs(iDistance) - 3) * 500;
-				break;
-			case VIKING:
-				if (!GET_TEAM((TeamTypes)VIKING).isHasTech((TechTypes)OPTICS))
-				{
-					iValue -= (abs(iDistance) - 4) * 500;
-				}
-				else
-				{
-					iValue -= (abs(iDistance) - 4) * 300;
-				}
-				break;
-			case ARABIA:
-				iValue -= (abs(iDistance) - 4) * 250;
-				break;
-			case KHMER:
-				iValue -= (abs(iDistance) - 4) * 400;
-				break;
-			case SPAIN:
-				if (!GET_TEAM((TeamTypes)SPAIN).isHasTech((TechTypes)ASTRONOMY)) //OPTICS?
-				{
-					iValue -= (abs(iDistance) - 3) * 500;
-				}
-				else
-				{
-					iValue -= (abs(iDistance) - 4) * 150;
-				}
-				break;
-			case FRANCE:
-				if (!GET_TEAM((TeamTypes)FRANCE).isHasTech((TechTypes)ASTRONOMY))
-				{
-					iValue -= (abs(iDistance) - 3) * 500;
-				}
-				else
-				{
-					iValue -= (abs(iDistance) - 4) * 150;
-				}
-				break;
-			case ENGLAND:
-				if (!GET_TEAM((TeamTypes)ENGLAND).isHasTech((TechTypes)ASTRONOMY))
-				{
-					iValue -= (abs(iDistance) - 3) * 500;
-				}
-				else
-				{
-					iValue -= (abs(iDistance) - 4) * 100;
-				}
-				break;
-			case GERMANY:
-				if (!GET_TEAM((TeamTypes)GERMANY).isHasTech((TechTypes)ASTRONOMY))
-				{
-					iValue -= (abs(iDistance) - 3) * 500;
-				}
-				else
-				{
-					iValue -= (abs(iDistance) - 4) * 300;
-				}
-				break;
-			case RUSSIA:
-				iValue -= (abs(iDistance) - 5) * 150;
-				break;
-			case NETHERLANDS:
-				iValue -= (abs(iDistance) - 4) * 150;
-				break;
-			case MALI:
-				iValue -= (abs(iDistance) - 3) * 500;
-				break;
-			case TURKEY:
-				iValue -= (abs(iDistance) - 3) * 400;
-				break;
-			case PORTUGAL:
-				iValue -= (abs(iDistance) - 4) * 150;
-				break;
-			case INCA:
-				iValue -= (abs(iDistance) - 3) * 500;
-				break;
-			case MONGOLIA:
-				iValue -= (abs(iDistance) - 4) * 200;
-				break;
-			case AZTEC:
-				iValue -= (abs(iDistance) - 3) * 500;
-				break;
-			case AMERICA:
-				iValue -= (abs(iDistance) - 5) * 400;
-				break;
-			default:
-				iValue -= (abs(iDistance) - 4) * 500;
-				break;
-			}*/
-			//Rhye - end
 
 			iValue *= (8 + iNumCities * 4);
 			iValue /= (2 + (iNumCities * 4) + iDistance);
@@ -2759,7 +2623,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 				//compared with the most distance city from the core
 				//(having a boost rather than distance penalty avoids some distortion)
 
-				//This is not primarly about maitenance but more about empire
+				//This is not primarily about maintenance but more about empire
 				//shape as such forbidden palace/state property are not big deal.
 				CvCity* pLoopCity;
 				int iLoop;
@@ -2778,103 +2642,12 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 				FAssert(iMaxDistanceFromCapital > 0);
 
 				//Rhye - start switch
-				// 3Miro: another tech dependent, forces Empires to spread overseas or not
+				// Absinthe: can be used to spread out empires more, increasing chance for oversea territories
+				//			(mostly useful after researching certain techs - ie: start of colonization after Astronomy in base RFC and DoC)
+				// Absinthe: in RFCE no real need for this, we use a constant for all civs
 				int compactEmpireModifier;
-				compactEmpireModifier = 30; // Rome 30, Egypt 40, Spain after Astronomy 5
-				/*switch (getID())
-				{
-					// 3Miro no clue what that stands for
-				case EGYPT:
-					compactEmpireModifier = 40;
-					break;
-				case INDIA:
-					compactEmpireModifier = 40;
-					break;
-				case CHINA:
-					compactEmpireModifier = 40;
-					break;
-				case BABYLONIA:
-					compactEmpireModifier = 40;
-					break;
-				case GREECE:
-					compactEmpireModifier = 10;
-					break;
-				case PERSIA:
-					compactEmpireModifier = 40;
-					break;
-				case CARTHAGE:
-					compactEmpireModifier = 20;
-					break;
-				case ROME:
-					compactEmpireModifier = 30;
-					break;
-				case JAPAN:
-					compactEmpireModifier = 20;
-					break;
-				case ETHIOPIA:
-					compactEmpireModifier = 40;
-					break;
-				case MAYA:
-					compactEmpireModifier = 40;
-					break;
-				case VIKING:
-					compactEmpireModifier = 5;
-					break;
-				case ARABIA:
-					compactEmpireModifier = 10;
-					break;
-				case KHMER:
-					compactEmpireModifier = 40;
-					break;
-				case SPAIN:
-					compactEmpireModifier = 40;
-					if (GET_TEAM(getTeam()).isHasTech((TechTypes)ASTRONOMY))
-						compactEmpireModifier = 10;
-					break;
-				case FRANCE:
-					compactEmpireModifier = 40;
-					if (GET_TEAM(getTeam()).isHasTech((TechTypes)ASTRONOMY))
-						compactEmpireModifier = 5;
-					break;
-				case ENGLAND:
-					compactEmpireModifier = 30;
-					if (GET_TEAM(getTeam()).isHasTech((TechTypes)ASTRONOMY))
-						compactEmpireModifier = 5;
-					break;
-				case GERMANY:
-					compactEmpireModifier = 40;
-					break;
-				case RUSSIA:
-					compactEmpireModifier = 40;
-					break;
-				case NETHERLANDS:
-					compactEmpireModifier = 5;
-					break;
-				case MALI:
-					compactEmpireModifier = 40;
-					break;
-				case TURKEY:
-					compactEmpireModifier = 40;
-					break;
-				case PORTUGAL:
-					compactEmpireModifier = 5;
-					break;
-				case INCA:
-					compactEmpireModifier = 40;
-					break;
-				case MONGOLIA:
-					compactEmpireModifier = 40;
-					break;
-				case AZTEC:
-					compactEmpireModifier = 40;
-					break;
-				case AMERICA:
-					compactEmpireModifier = 40;
-					break;
-				default:
-					compactEmpireModifier = 10;
-					break;
-				}*/
+				compactEmpireModifier = 20;
+
 				//iValue *= 100 + (((bAdvancedStart ? 80 : 50) * std::max(0, (iMaxDistanceFromCapital - iDistance))) / iMaxDistanceFromCapital);
 				iValue *= 100 + (((bAdvancedStart ? 80 : compactEmpireModifier) * std::max(0, (iMaxDistanceFromCapital - iDistance))) / iMaxDistanceFromCapital);
 				//Rhye - end
@@ -2911,7 +2684,6 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 			iValue *= 3;
 			iValue /= 2;
 		}
-		//else if (pArea->getNumCities() == (iTeamAreaCities + GET_TEAM(BARBARIAN_TEAM).countNumCitiesByArea(pArea))) //Rhye
 		else if (pArea->getNumCities() == (iTeamAreaCities + GET_TEAM(BARBARIAN_TEAM).countNumCitiesByArea(pArea))) //Rhye
 		{
 			iValue *= 4;
@@ -2930,7 +2702,6 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 		if (iTeamAreaCities == 0) {
 			switch (getID())
 			{
-				// 3Miro : again no clue, something about colonial powers
 			case FRANCE:
 				iValue *= 5;
 				iValue /= 4;
@@ -2965,23 +2736,23 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 
 	if ((!bStartingLoc) && (getNumCities() > 0))
 	{
-	    int iBonusCount = 0;
-	    int iUniqueBonusCount = 0;
-	    for (iI = 0; iI < GC.getNumBonusInfos(); iI++)
-	    {
-	        iBonusCount += paiBonusCount[iI];
-	        iUniqueBonusCount += (paiBonusCount[iI] > 0) ? 1 : 0;
-	    }
-	    if (iBonusCount > 4)
-	    {
-	        iValue *= 5;
-	        iValue /= (1 + iBonusCount);
-	    }
-	    else if (iUniqueBonusCount > 2)
-	    {
-	        iValue *= 5;
-	        iValue /= (3 + iUniqueBonusCount);
-	    }
+		int iBonusCount = 0;
+		int iUniqueBonusCount = 0;
+		for (iI = 0; iI < GC.getNumBonusInfos(); iI++)
+		{
+			iBonusCount += paiBonusCount[iI];
+			iUniqueBonusCount += (paiBonusCount[iI] > 0) ? 1 : 0;
+		}
+		if (iBonusCount > 4)
+		{
+			iValue *= 5;
+			iValue /= (1 + iBonusCount);
+		}
+		else if (iUniqueBonusCount > 2)
+		{
+			iValue *= 5;
+			iValue /= (3 + iUniqueBonusCount);
+		}
 	}
 	//Rhye - value with bonus
 
@@ -2996,25 +2767,6 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 	}
 
 	iValue /= (std::max(0, (iBadTile - (NUM_CITY_PLOTS / 4))) + 3);
-	// 3Miro no clue, but there is no Siberia
-	/*if (!(iX >= 67 && iX <= 70 && iY >= 43 && iY <= 46) && !(iX >= 79 && iX <= 18 && iY >= 110 && iY <= 10)) { //Rhye (exclude Turkey and Siberia)
-	if (bStartingLoc)
-	{
-		iDifferentAreaTile = 0;
-
-		for (iI = 0; iI < NUM_CITY_PLOTS; iI++)
-		{
-			pLoopPlot = plotCity(iX, iY, iI);
-
-			if ((pLoopPlot == NULL) || !(pLoopPlot->isWater() || pLoopPlot->area() == pArea))
-			{
-				iDifferentAreaTile++;
-			}
-		}
-
-		iValue /= (std::max(0, (iDifferentAreaTile - ((NUM_CITY_PLOTS * 2) / 3))) + 2);
-	}
-	}*/ //Rhye
 
 	//Rhye - start // 3Miro: Useful for settling cities
 	int tempX = pPlot->getX_INLINE();
@@ -3057,9 +2809,6 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 
 bool CvPlayerAI::AI_isAreaAlone(CvArea* pArea) const
 {
-	//return ((pArea->getNumCities() - GET_TEAM(BARBARIAN_TEAM).countNumCitiesByArea(pArea)) == GET_TEAM(getTeam()).countNumCitiesByArea(pArea)); //Rhye
-	// 3Miro
-	//return ((pArea->getNumCities() - GET_TEAM(BARBARIAN_TEAM).countNumCitiesByArea(pArea)) - GET_TEAM((TeamTypes)NATIVE).countNumCitiesByArea(pArea) == GET_TEAM(getTeam()).countNumCitiesByArea(pArea)); //Rhye
 	return ((pArea->getNumCities() - GET_TEAM(BARBARIAN_TEAM).countNumCitiesByArea(pArea)) == GET_TEAM(getTeam()).countNumCitiesByArea(pArea)); //Rhye
 }
 
@@ -3159,37 +2908,6 @@ int CvPlayerAI::AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreA
 		iValue += 3;
 	}
 
-	//Rhye - start
-
-	/*if (settlersMaps[getID()][EARTH_Y - 1 - pCity->plot()->getY_INLINE()][pCity->plot()->getX_INLINE()] <= 3)
-		iValue -= 2;
-	else if (settlersMaps[getID()][EARTH_Y - 1 - pCity->plot()->getY_INLINE()][pCity->plot()->getX_INLINE()] <= 20)
-		iValue -= 1;
-	else if (settlersMaps[getID()][EARTH_Y - 1 - pCity->plot()->getY_INLINE()][pCity->plot()->getX_INLINE()] >= 500) //500-700
-		iValue += 4;
-	else if (settlersMaps[getID()][EARTH_Y - 1 - pCity->plot()->getY_INLINE()][pCity->plot()->getX_INLINE()] >= 300) //300-400
-		iValue += 3;
-	else if (settlersMaps[getID()][EARTH_Y - 1 - pCity->plot()->getY_INLINE()][pCity->plot()->getX_INLINE()] >= 150) //150-200
-		iValue += 2;
-	else if (settlersMaps[getID()][EARTH_Y - 1 - pCity->plot()->getY_INLINE()][pCity->plot()->getX_INLINE()] >= 40) //40-60-90
-		iValue += 1;*/
-
-	/*if (getSettlersMaps(EARTH_Y - 1 - pCity->plot()->getY_INLINE(),pCity->plot()->getX_INLINE()) <= 3)
-		iValue -= 2;
-	else if (getSettlersMaps(EARTH_Y - 1 - pCity->plot()->getY_INLINE(),pCity->plot()->getX_INLINE()) <= 20)
-		iValue -= 1;
-	else if (getSettlersMaps(EARTH_Y - 1 - pCity->plot()->getY_INLINE(),pCity->plot()->getX_INLINE()) >= 500) //500-700
-		iValue += 4;
-	else if (getSettlersMaps(EARTH_Y - 1 - pCity->plot()->getY_INLINE(),pCity->plot()->getX_INLINE()) >= 300) //300-400
-		iValue += 3;
-	else if (getSettlersMaps(EARTH_Y - 1 - pCity->plot()->getY_INLINE(),pCity->plot()->getX_INLINE()) >= 150) //150-200
-		iValue += 2;
-	else if (getSettlersMaps(EARTH_Y - 1 - pCity->plot()->getY_INLINE(),pCity->plot()->getX_INLINE()) >= 40) //40-60-90
-		iValue += 1;*/
-
-
-	//Rhye - end
-
 	if (!bIgnoreAttackers)
 	{
 		iValue += AI_adjacentPotentialAttackers(pCity->plot());
@@ -3222,11 +2940,7 @@ int CvPlayerAI::AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreA
 
 	if (pNearestCity != NULL)
 	{
-		//Rhye - start switch
-		/*
-		iValue += std::max(1, ((GC.getMapINLINE().maxStepDistance() * 2) - GC.getMapINLINE().calculatePathDistance(pNearestCity->plot(), pCity->plot())));
-		*/
-		// 3Miro: value to attack to the empire, Rome and England expand further then Egypt
+		// Absinthe: modifier based on empire type, set in RFCEBalance.py -> setCityWarDistanceAI
 		if ( cityWarDistance[getID()] == 2 ){
 			iValue += std::max(1, ((GC.getMapINLINE().maxStepDistance() * 2) - GC.getMapINLINE().calculatePathDistance(pNearestCity->plot(), pCity->plot()))*2/3);
 		}else if ( cityWarDistance[getID()] == 3 ){
@@ -3234,49 +2948,29 @@ int CvPlayerAI::AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreA
 		}else{
 			iValue += std::max(1, ((GC.getMapINLINE().maxStepDistance() * 2) - GC.getMapINLINE().calculatePathDistance(pNearestCity->plot(), pCity->plot())));
 		};
-		//Rhye - end
 	}
-
-	//Rhye - start switch
-	// 3Miro
-	/*if (pCity->getX_INLINE() <= 43) { //wars in America
-		switch (getID())
-		{
-			case SPAIN:
-			case FRANCE:
-			case ENGLAND:
-			case NETHERLANDS:
-			case PORTUGAL:
-				iValue *= 4;
-				iValue /= 3;
-				break;
-			default:
-				break;
-		}
-	}*/
-	//Rhye - end
 
 	if (bRandomize)
 	{
 		iValue += GC.getGameINLINE().getSorenRandNum(((pCity->getPopulation() / 2) + 1), "AI Target City Value");
 	}
 
-	// 3MiroAI: values in attacking a city, no longer use Settlers Maps and use Wars Maps, also ignore Barbs and Indies outside of Wars Maps
-	// 3Miro: consider WAR MAPS in deciding where to attack, wars maps go from 0,2,4,6,8,10 -> add value/2
+	// 3MiroAI: values in attacking a city no longer use Settlers Maps but Wars Maps, also ignore Barbs and Indies outside of Wars Maps
+	// Absinthe: War Maps should be a more important factor in deciding where to attack, so increased their value to 0,2,6,10,16
+	// Absinthe: Barbs and Indies outside War Maps are not totally ignored anymore, have a much decreased chance instead
 	int iWarsVale = getWarsMaps(getID(), EARTH_Y - 1 - pCity->plot()->getY_INLINE(),pCity->plot()->getX_INLINE(), NULL);
 	iValue += iWarsVale/2;
 	if ( iWarsVale == 0 ){
 		iValue = std::max( iValue - 2, 0 );
 		if (pCity->getOwner() >= NUM_MAJOR_PLAYERS){
-			iValue = 0; // completely ignore Barbs and Indies outside of War Maps
+			iValue /= 2; // Absinthe: much reduced chance for Barbs and Indies outside the war map
 		};
 	}else{
-		iValue += 2; // fixed bonus for having this in the wars map
+		iValue += 1; // fixed bonus for tiles in the war map
 		if (pCity->getOwner() >= NUM_MAJOR_PLAYERS){
-			iValue += 2; // prioritize Indies
+			iValue += iWarsVale/2; // Absinthe: highly prioritize Indies and Barbs inside the war map
 		};
 	};
-	// 3MiroAI: end
 
 	return iValue;
 }
@@ -3438,17 +3132,17 @@ bool CvPlayerAI::AI_getAnyPlotDanger(CvPlot* pPlot, int iRange, bool bTestMoves)
 							{
 								if (!(pLoopUnit->isInvisible(eTeam, false)))
 								{
-								    if (pLoopUnit->canMoveOrAttackInto(pPlot))
-								    {
-                                        if (!bTestMoves)
-                                        {
-                                            return true;
-                                        }
-                                        else
-                                        {
-                                            iDangerRange = pLoopUnit->baseMoves();
-                                            iDangerRange += ((pLoopPlot->isValidRoute(pLoopUnit)) ? 1 : 0);
-                                            if (iDangerRange >= iDistance)
+									if (pLoopUnit->canMoveOrAttackInto(pPlot))
+									{
+										if (!bTestMoves)
+										{
+											return true;
+										}
+										else
+										{
+											iDangerRange = pLoopUnit->baseMoves();
+											iDangerRange += ((pLoopPlot->isValidRoute(pLoopUnit)) ? 1 : 0);
+											if (iDangerRange >= iDistance)
 											{
 												return true;
 											}
@@ -17907,24 +17601,23 @@ void CvPlayerAI::AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) 
 			CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
 			if (pLoopPlot->isRevealed(getTeam(), false))
 			{
-				//GC.getGameINLINE().logMsg("     HERE 2");
 				//if (settlersMaps[getID()][EARTH_Y -1 - pLoopPlot->getY()][pLoopPlot->getX()] >= 90) //Rhye
 				if (getSettlersMaps(EARTH_Y -1 - pLoopPlot->getY(),pLoopPlot->getX()) >= 90) //Rhye
 				{ //Rhye
-				iValue = pLoopPlot->getFoundValue(getID());
-				if (iValue > iMinFoundValueThreshold)
-				{
-					if (!AI_isPlotCitySite(pLoopPlot))
+					iValue = pLoopPlot->getFoundValue(getID());
+					if (iValue > iMinFoundValueThreshold)
 					{
-						iValue *= std::min(NUM_CITY_PLOTS * 2, pLoopPlot->area()->getNumUnownedTiles());
-
-						if (iValue > iBestFoundValue)
+						if (!AI_isPlotCitySite(pLoopPlot))
 						{
-							iBestFoundValue = iValue;
-							pBestFoundPlot = pLoopPlot;
+							iValue *= std::min(NUM_CITY_PLOTS * 2, pLoopPlot->area()->getNumUnownedTiles());
+
+							if (iValue > iBestFoundValue)
+							{
+								iBestFoundValue = iValue;
+								pBestFoundPlot = pLoopPlot;
+							}
 						}
 					}
-				}
 				} //Rhye
 			}
 		}
@@ -17938,22 +17631,7 @@ void CvPlayerAI::AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) 
 			iBestFoundValue = AI_browseStep(iMinFoundValueThreshold, iBestFoundValue, pBestFoundPlot, 300);
 		if (pBestFoundPlot != NULL)
 			iBestFoundValue = AI_browseStep(iMinFoundValueThreshold, iBestFoundValue, pBestFoundPlot, 200);
-		if (pBestFoundPlot != NULL)
-			iBestFoundValue = AI_browseStep(iMinFoundValueThreshold, iBestFoundValue, pBestFoundPlot, 150);
-		if (pBestFoundPlot != NULL)
-			iBestFoundValue = AI_browseStep(iMinFoundValueThreshold, iBestFoundValue, pBestFoundPlot, 90);
-		if (pBestFoundPlot != NULL)
-			if (GET_TEAM(getTeam()).isHasTech((TechTypes)COMPASS))
-				{
-					iBestFoundValue = AI_browseStep(iMinFoundValueThreshold, iBestFoundValue, pBestFoundPlot, 60);
-					iBestFoundValue = AI_browseStep(iMinFoundValueThreshold, iBestFoundValue, pBestFoundPlot, 40);
-				}
-		if (pBestFoundPlot != NULL)
-			if (GET_TEAM(getTeam()).isHasTech((TechTypes)ASTRONOMY))
-				{
-					iBestFoundValue = AI_browseStep(iMinFoundValueThreshold, iBestFoundValue, pBestFoundPlot, 20);
-					//iBestFoundValue = AI_browseStep(iMinFoundValueThreshold, iBestFoundValue, pBestFoundPlot, 3);
-				}*/
+		}*/
 		//Rhye - end
 
 		if (pBestFoundPlot != NULL)
@@ -17981,7 +17659,6 @@ int CvPlayerAI::AI_browseStep(int iMinFoundValueThreshold, int iBestFoundValue, 
 	for (iJ = 0; iJ < EARTH_Y; iJ++)
 	{
 		CvPlot* pLoopPlot = GC.getMapINLINE().plotINLINE(iI, iJ);
-		//GC.getGameINLINE().logMsg("     HERE 3 ");
 		//if (settlersMaps[getID()][EARTH_Y -1 -iJ][iI] == iModifier)
 		if (getSettlersMaps(EARTH_Y -1 -iJ,iI) == iModifier)
 

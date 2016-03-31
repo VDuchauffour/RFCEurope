@@ -39,7 +39,7 @@ tDefaultExportFileName = "./Mods/RFCEurope/Reference/ModdingTools/RFCEMaps.py"
 # - The color that this value is rendered in
 # - a key that is used for the AreaBorderPlots, (like AreaBorderLayers.AREA_BORDER_LAYER_REVEALED_PLOTS). This key must be unique within one array and should not conflict with other AreaBorderLayer Constants. -1 means that it is not rendered
 settlerMapShades = ((700, "COLOR_YELLOW", 100,"highest [700]"),(500, "COLOR_PLAYER_RED", 101, "high [500]"),(400, "COLOR_PLAYER_DARK_RED", 102, "medium [400]"),(300, "COLOR_PLAYER_ORANGE", 103,"low [300]"),(200, "COLOR_PLAYER_PEACH", 104,"lowest [200]"),(20, "COLOR_BLACK", -1, "doesn't settle [20]"),(-1, "COLOR_WHITE", 105, "never [-1]"))
-warMapShades = ((8, "COLOR_PLAYER_DARK_RED", 100 , "8"),(6, "COLOR_PLAYER_RED", 101 , "6"),(4, "COLOR_PLAYER_ORANGE", 102 , "4"),(2, "COLOR_PLAYER_LIGHT_ORANGE", 103 , "2"),(0, "COLOR_BLACK", -1 , "0"))
+warMapShades = ((16, "COLOR_PLAYER_DARK_RED", 100 , "16"),(10, "COLOR_PLAYER_RED", 101 , "10"),(6, "COLOR_PLAYER_ORANGE", 102 , "6"),(2, "COLOR_PLAYER_LIGHT_ORANGE", 103 , "2"),(0, "COLOR_BLACK", -1 , "0"))
 
 #provinceColors = ("COLOR_YELLOW","COLOR_RED","COLOR_BLUE","COLOR_BLACK","COLOR_GREEN","COLOR_PLAYER_ORANGE","COLOR_PLAYER_BROWN", "COLOR_MAGENTA")
 provinceColors = ("COLOR_YELLOW","COLOR_RED","COLOR_BLUE","COLOR_GREEN","COLOR_PLAYER_ORANGE","COLOR_MAGENTA","COLOR_CYAN")

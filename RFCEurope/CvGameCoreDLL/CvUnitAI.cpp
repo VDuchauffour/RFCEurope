@@ -581,14 +581,6 @@ bool CvUnitAI::AI_follow()
 			{
 				return true;
 			}
-			if (AI_found_map(150))
-			{
-				return true;
-			}
-			if (AI_found_map(90))
-			{
-				return true;
-			}
 			//Rhye - end
 		}
 	}
@@ -1503,38 +1495,6 @@ void CvUnitAI::AI_settleMove()
 		{
 			return;
 		}
-		if (AI_found_map(150))
-		{
-			return;
-		}
-		if (AI_found_map(90))
-		{
-			return;
-		}
-		// 3Miro: where to settle
-		/*if (GET_TEAM((TeamTypes)getOwnerINLINE()).isHasTech((TechTypes)COMPASS))
-		{
-			if (AI_found_map(60))
-			{
-				return;
-			}
-			if (AI_found_map(40))
-			{
-				return;
-			}
-		}*/
-		// 3Miro: where to settle
-		//if (GET_TEAM((TeamTypes)getOwnerINLINE()).isHasTech((TechTypes)ASTRONOMY))
-		//{
-		//	if (AI_found_map(20))
-		//	{
-		//		return;
-		//	}
-		//	/*if (AI_found_map(3))
-		//	{
-		//		return;
-		//	}*/
-		//}
 		//Rhye - end
 	}
 

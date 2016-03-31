@@ -2215,17 +2215,31 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 	};
 	// 3MiroProvince: end
 
-	// 3MiroMaps: colors the maps
+	// Absinthe: colour the spawn and respawn areas on the map
+	// Absinthe: first the spawn maps, with holding down shift
 	if ( !(gDLL->GetWorldBuilderMode() ) ){
 		if ( bShift && (pPlot != NULL) ){
-			if ( iWhatToPlot == 0 ){
+			if ( iCoreToPlot == 1 ){
 				iPlotCore = -1;
 				for( iI = 0; iI < NUM_MAJOR_PLAYERS; iI++ ){
 					if ( MiroBelongToCore( iI, pPlot ->getX_INLINE(), pPlot->getY_INLINE() ) ){
 						iPlotCore = iI;
 					};
 				};
-			}else if ( iWhatToPlot == 1 ){
+			};
+			GC.getGameINLINE().updateColoredPlots();
+		};
+		if ( !bShift ){
+			if ( (iCoreToPlot == 1) && (iPlotCore>-1) && (iPlotCore<NUM_MAJOR_PLAYERS) ){
+				iPlotCore = -1;
+			};
+			GC.getGameINLINE().updateColoredPlots();
+		};
+	};
+	// Absinthe: second the respawn maps, with holding down alt
+	if ( !(gDLL->GetWorldBuilderMode() ) ){
+		if ( bAlt && (pPlot != NULL) ){
+			if ( iNormalToPlot == 1 ){
 				iPlotNormal = -1;
 				for( iI = 0; iI < NUM_MAJOR_PLAYERS; iI++ ){
 					if ( MiroBelongToNormal( iI, pPlot ->getX_INLINE(), pPlot->getY_INLINE() ) ){
@@ -2235,16 +2249,14 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			};
 			GC.getGameINLINE().updateColoredPlots();
 		};
-		if ( !bShift ){
-			if ( (iWhatToPlot == 0) && (iPlotCore>-1) && (iPlotCore<NUM_MAJOR_PLAYERS) ){
-				iPlotCore = -1;
-			}else if ( (iWhatToPlot == 1) && (iPlotNormal>-1) && (iPlotNormal<NUM_MAJOR_PLAYERS) ){
+		if ( !bAlt ){
+			if ( (iNormalToPlot == 1) && (iPlotNormal>-1) && (iPlotNormal<NUM_MAJOR_PLAYERS) ){
 				iPlotNormal = -1;
 			};
 			GC.getGameINLINE().updateColoredPlots();
 		};
 	};
-	// 3MiroMaps: end
+	// Absinthe: end
 
 	if (bCtrl && (gDLL->getChtLvl() > 0))
 	{
