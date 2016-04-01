@@ -341,11 +341,23 @@ class CvEventManager:
 
 	def onLoadGame(self, argsList):
 		CvAdvisorUtils.resetNoLiberateCities()
+		# Absinthe: separate visualization function for spawn and respawn areas
+		#			set it to 1 in the GlobalDefines_Alt.xml if you want to enable it
+		gc.setCoreToPlot(gc.getDefineINT("ENABLE_SPAWN_AREA_DISPLAY")) # hold down the shift key, and hover over the map
+		gc.setNormalToPlot(gc.getDefineINT("ENABLE_RESPAWN_AREA_DISPLAY")) # hold down the alt key, and hover over the map
 		return 0
 
 	def onGameStart(self, argsList):
 		'Called at the start of the game'
-		#Rhye - dawn of map must appear in late starts too
+
+		# Absinthe: separate visualization function for spawn and respawn areas
+		#			set it to 1 in the GlobalDefines_Alt.xml if you want to enable it
+		gc.setCoreToPlot(gc.getDefineINT("ENABLE_SPAWN_AREA_DISPLAY")) # hold down the shift key, and hover over the map
+		gc.setNormalToPlot(gc.getDefineINT("ENABLE_RESPAWN_AREA_DISPLAY")) # hold down the alt key, and hover over the map
+		#print ("SpawnAreaDisplay", gc.getDefineINT("ENABLE_SPAWN_AREA_DISPLAY"))
+		#print ("RespawnAreaDisplay", gc.getDefineINT("ENABLE_RESPAWN_AREA_DISPLAY"))
+
+		#Rhye - Dawn of Man must appear in late starts too
 		#if (gc.getGame().getGameTurnYear() == gc.getDefineINT("START_YEAR") and not gc.getGame().isOption(GameOptionTypes.GAMEOPTION_ADVANCED_START)):
 		if (gc.getGame().getStartEra() == gc.getDefineINT("STANDARD_ERA") or gc.getGame().isOption(GameOptionTypes.GAMEOPTION_ADVANCED_START)):
 			for iPlayer in range(gc.getMAX_PLAYERS()):

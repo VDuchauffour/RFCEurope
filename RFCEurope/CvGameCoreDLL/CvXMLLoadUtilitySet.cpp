@@ -186,7 +186,7 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 		return false;
 	}
 
-	if (!ReadGlobalDefines("xml\\GlobalDefinesAlt.xml", cache))
+	if (!ReadGlobalDefines("xml\\GlobalDefines_Alt.xml", cache))
 	{
 		return false;
 	}
@@ -1335,6 +1335,8 @@ void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const char* s
 				// loop through each tag
 				for (std::vector<T*>::iterator it = aInfos.begin(); it != aInfos.end(); ++it)
 				{
+					SkipToNextVal();	// skip to the next non-comment node
+
 					(*it)->readPass2(this);
 
 					if (!gDLL->getXMLIFace()->NextSibling(m_pFXml))

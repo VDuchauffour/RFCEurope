@@ -24,16 +24,20 @@ Changes for RFCE 1.4:
 		- Revised swing stability calculations, now converges to 0 a little slower
 		- Lowered anarchy swing instability for the AI, normal anarchy instability for everyone
 		- Improved StoredData handling like SoI and DoC, credits to Edead
-		- Included option to disable AI UHV in GlobalDefinesAlt, instead of predetermined disabling (disabled by default)
 		- Sweden starts with the following civics: Feudal Monarchy, Serfdom, Manoralism
 		- Increased the significance of war maps - both with increased values (when choosing target) in general, and with more differentiation between the levels
 		- Indy and barb cities inside war maps have a much increased chance to be AI targets, and now this also heavily depends on the war map levels
 			So indy/barb cities in core areas will almost always be primary targets
 		- Indy and barb cities outside war maps now have some chance (were totally ignored previously), but it's significantly reduced compared to normal targets
-		- Revised code and fixed various inconsistencies in the settler and war maps
+		- Revised code and fixed various inconsistencies connected to the settler and war map setup
+		- Removed all unnecessary values from all settler and war maps, now they only have WB values everywhere
+		
+		- New GlobalDefines_Alt.xml file, users can change RFCE-specific settings there
+		- Included option in the GlobalDefines_Alt to enable/disable AI UHV checks, they are enabled by default
 		- Added new hover-function: holding down alt when hovering on the map will display the respawn areas
-		- Option to enable/disable both the spawn and respawn hover displays, in the RFCEBalance.py
+		- Option to enable/disable both the spawn and respawn hover displays, in the GlobalDefines_Alt (enabled by default)
 		- Colour for respawn areas is white, colour for spawn areas changed to purple (for now)
+		- Added option to enable/disable autosaves during AI autoplay, also in the GlobalDefines_Alt (disabled by default)
 
 	Bugfixes:
 		- Various dll bugfixes and optimizations from Better BTS AI, K-Mod, Afforess

@@ -17,8 +17,6 @@ utils = RFCUtils.RFCUtils()
 
 ### Constants ###
 
-
-iStartTurn = xml.i500AD
 iMinIntervalEarly = 15
 iMaxIntervalEarly = 30
 iMinIntervalLate = 40
@@ -56,9 +54,7 @@ class AIWars:
 
 
 	def setup(self):
-		iTurn = iStartTurn
-		#if (not gc.getPlayer(0).isPlayable()): #late start condition
-		#	iTurn = con.i900AD
+		iTurn = utils.getScenarioStartTurn() #only check from the start turn of the scenario
 		self.setNextTurnAIWar(iTurn + gc.getGame().getSorenRandNum(iMaxIntervalEarly-iMinIntervalEarly, 'random turn'))
 
 
