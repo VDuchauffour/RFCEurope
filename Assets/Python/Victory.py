@@ -221,7 +221,6 @@ class Victory:
 			for iPlayer in range(iNumPlayers):
 				if utils.getHumanID() != iPlayer:
 					self.setAllUHVFailed(iPlayer)
-			
 
 	def getCorporationsFounded( self ):
 		return sd.scriptDict['bCorpsFounded']

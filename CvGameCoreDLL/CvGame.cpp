@@ -2147,11 +2147,12 @@ void CvGame::update()
 		if (getTurnSlice() == 0)
 		{
 			// Absinthe: disable autosave during autoplay
-			if ((getGameTurn() > 0) && !(getGameTurn() < startingTurn[getActivePlayer()]))
+			if ((GC.getDefineINT("NO_AUTOSAVE_DURING_AUTOPLAY") == 0) || ((getGameTurn() > 0) && !(getGameTurn() < startingTurn[getActivePlayer()])))
 			{
 				gDLL->getEngineIFace()->AutoSave(true);
 			}
 			// Absinthe: end
+			//gDLL->getEngineIFace()->AutoSave(true);
 		}
 
 		if (getNumGameTurnActive() == 0)
@@ -6051,7 +6052,7 @@ void CvGame::doTurn()
 	stopProfilingDLL();
 
 	// Absinthe: disable autosave during autoplay
-	if ((getGameTurn() > 0) && !(getGameTurn() < startingTurn[getActivePlayer()]))
+	if ((GC.getDefineINT("NO_AUTOSAVE_DURING_AUTOPLAY") == 0) || ((getGameTurn() > 0) && !(getGameTurn() < startingTurn[getActivePlayer()])))
 	{
 		gDLL->getEngineIFace()->AutoSave();
 	}
