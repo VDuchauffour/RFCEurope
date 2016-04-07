@@ -19,7 +19,7 @@ class Resources:
 	def createResource(self, iX, iY, iBonus, textKey="TXT_KEY_RESOURCE_DISCOVERED"):
 		"""Creates a bonus resource and alerts the plot owner"""
 
-		if gc.getMap().plot(iX,iY).getBonusType(-1) == -1 or iBonus == -1: # only proceed if the bonus isn't already there or if we're removing the bonus
+		if gc.getMap().plot(iX,iY).getBonusType(-1) == -1 or iBonus == -1: # only proceed if there isn't any bonus resources on the plot, or if we're removing the bonus
 			if iBonus == -1:
 				iBonus = gc.getMap().plot(iX,iY).getBonusType(-1) # for alert
 				gc.getMap().plot(iX,iY).setBonusType(-1)
@@ -37,7 +37,8 @@ class Resources:
 	def removeResource(self, iX, iY, textKey="TXT_KEY_RESOURCE_EXHAUSTED"):
 		"""Removes a bonus resource and alerts the plot owner"""
 
-		self.createResource(iX, iY, -1, textKey)
+		if gc.getMap().plot(iX,iY).getBonusType(-1) != -1: # only proceed if there is a bonus resource on the plot
+			self.createResource(iX, iY, -1, textKey)
 
 
 	def checkTurn(self, iGameTurn):

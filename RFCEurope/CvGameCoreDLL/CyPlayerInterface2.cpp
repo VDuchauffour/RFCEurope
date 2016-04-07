@@ -85,8 +85,12 @@ void CyPlayerPythonInterface2(python::class_<CyPlayer>& x)
 		.def("provinceIsSpreadReligion", &CyPlayer::provinceIsSpreadReligion, "bool (int, int)")
 		.def("provinceIsConvertReligion", &CyPlayer::provinceIsConvertReligion, "bool (int, int)")
 
-		.def("getRespawned", &CyPlayer::getRespawned, "bool ()")
-		.def("setRespawned", &CyPlayer::setRespawned, "void ( bool )")
+		// Absinthe: respawn status
+		.def("getRespawnedAlive", &CyPlayer::getRespawnedAlive, "bool ()")
+		.def("setRespawnedAlive", &CyPlayer::setRespawnedAlive, "void ( bool )")
+
+		.def("getEverRespawned", &CyPlayer::getEverRespawned, "bool ()")
+		.def("setEverRespawned", &CyPlayer::setEverRespawned, "void ( bool )")
 
 		.def("getForcedHistoricityUnitProduction", &CyPlayer::getForcedHistoricityUnitProduction, "int ()")
 		.def("setForcedHistoricityUnitProduction", &CyPlayer::setForcedHistoricityUnitProduction, "void ( int )")

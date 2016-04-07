@@ -1298,8 +1298,9 @@ class RiseAndFall:
 		pDeadCiv = gc.getPlayer(iDeadCiv)
 		teamDeadCiv = gc.getTeam(pDeadCiv.getTeam())
 
-		# 3Miro: set respawned
-		pDeadCiv.setRespawned( True )
+		# Absinthe: respawn status
+		pDeadCiv.setRespawnedAlive( True )
+		pDeadCiv.setEverRespawned( True ) # needed for first turn vassalization and peace status fixes
 
 		if (len(tLeaders[iDeadCiv]) > 1):
 			iLen = len(tLeaders[iDeadCiv])
@@ -1312,14 +1313,16 @@ class RiseAndFall:
 					break
 
 		for l in range(iNumPlayers):
-			teamDeadCiv.makePeace(l)
+			if (l != iDeadCiv):
+				teamDeadCiv.makePeace(l)
 		self.setNumCities(iDeadCiv, 0) #reset collapse condition
 
 		#reset vassalage
 		for iOtherCiv in range(iNumPlayers):
-			if (teamDeadCiv.isVassal(iOtherCiv) or gc.getTeam(gc.getPlayer(iOtherCiv).getTeam()).isVassal(iDeadCiv)):
-				teamDeadCiv.freeVassal(iOtherCiv)
-				gc.getTeam(gc.getPlayer(iOtherCiv).getTeam()).freeVassal(iDeadCiv)
+			if (iOtherCiv != iDeadCiv):
+				if (teamDeadCiv.isVassal(iOtherCiv) or gc.getTeam(gc.getPlayer(iOtherCiv).getTeam()).isVassal(iDeadCiv)):
+					teamDeadCiv.freeVassal(iOtherCiv)
+					gc.getTeam(gc.getPlayer(iOtherCiv).getTeam()).freeVassal(iDeadCiv)
 
 		iNewUnits = 2
 		if (self.getLatestRebellionTurn(iDeadCiv) > 0):
@@ -1346,7 +1349,6 @@ class RiseAndFall:
 			bOwnerVassal = teamOwner.isAVassal()
 			bOwnerHumanVassal = teamOwner.isVassal(iHuman)
 
-			#if (iOwner == iBarbarian or iOwner == iIndependent or iOwner == iIndependent2 ):
 			if (iOwner == iBarbarian or utils.isIndep( iOwner ) ):
 				utils.cultureManager((pCity.getX(),pCity.getY()), 100, iDeadCiv, iOwner, False, True, True)
 				utils.flipUnitsInCityBefore((pCity.getX(),pCity.getY()), iDeadCiv, iOwner)
@@ -1439,7 +1441,7 @@ class RiseAndFall:
 		self.convertBackCulture(iDeadCiv)
 
 		self.pm.onRespawn( iDeadCiv ) # 3Miro: for Cordoba's new provinces
-		gc.getPlayer( iDeadCiv ).setRespawned( True )
+		#gc.getPlayer( iDeadCiv ).setRespawnedAlive( True )
 		return
 
 
@@ -1954,72 +1956,72 @@ class RiseAndFall:
 
 
 	def getSpecialRespawn( self, iGameTurn ): #Absinthe: only the first civ for which it is true is returned, so the order of the civs is very important here
-		if ( (not pFrankia.isAlive()) and (not pFrankia.getRespawned()) and iGameTurn > con.tBirth[iFrankia] + 25 and iGameTurn > utils.getLastTurnAlive(iFrankia) + 12 ):
+		if ( (not pFrankia.isAlive()) and (not pFrankia.getEverRespawned()) and iGameTurn > con.tBirth[iFrankia] + 25 and iGameTurn > utils.getLastTurnAlive(iFrankia) + 12 ):
 			# France united in it's modern borders, start of the Bourbon royal line
 			if ( iGameTurn > xml.i1588AD and iGameTurn < xml.i1700AD and iGameTurn % 5 == 3 ):
 				return iFrankia
-		if ( (not pArabia.isAlive()) and (not pArabia.getRespawned()) and iGameTurn > con.tBirth[iArabia] + 25 and iGameTurn > utils.getLastTurnAlive(iArabia) + 10 ):
+		if ( (not pArabia.isAlive()) and (not pArabia.getEverRespawned()) and iGameTurn > con.tBirth[iArabia] + 25 and iGameTurn > utils.getLastTurnAlive(iArabia) + 10 ):
 			# Saladin, Ayyubid Dynasty
 			if ( iGameTurn > xml.i1080AD and iGameTurn < xml.i1291AD and iGameTurn % 7 == 3 ):
 				return iArabia
-		if ( (not pBulgaria.isAlive()) and (not pBulgaria.getRespawned()) and iGameTurn > con.tBirth[iBulgaria] + 25 and iGameTurn > utils.getLastTurnAlive(iBulgaria) + 10 ):
+		if ( (not pBulgaria.isAlive()) and (not pBulgaria.getEverRespawned()) and iGameTurn > con.tBirth[iBulgaria] + 25 and iGameTurn > utils.getLastTurnAlive(iBulgaria) + 10 ):
 			# second Bulgarian Empire
 			if ( iGameTurn > xml.i1080AD and iGameTurn < xml.i1299AD and iGameTurn % 5 == 1 ):
 				return iBulgaria
-		if ( (not pCordoba.isAlive()) and (not pCordoba.getRespawned()) and iGameTurn > con.tBirth[iCordoba] + 25 and iGameTurn > utils.getLastTurnAlive(iCordoba) + 10 ):
+		if ( (not pCordoba.isAlive()) and (not pCordoba.getEverRespawned()) and iGameTurn > con.tBirth[iCordoba] + 25 and iGameTurn > utils.getLastTurnAlive(iCordoba) + 10 ):
 			# special respawn as the Hafsid dynasty in North Africa
 			if ( iGameTurn > xml.i1229AD and iGameTurn < xml.i1540AD and iGameTurn % 5 == 3 ):
 				return iCordoba
-		if ( (not pBurgundy.isAlive()) and (not pBurgundy.getRespawned()) and iGameTurn > con.tBirth[iBurgundy] + 25 and iGameTurn > utils.getLastTurnAlive(iBurgundy) + 20 ):
+		if ( (not pBurgundy.isAlive()) and (not pBurgundy.getEverRespawned()) and iGameTurn > con.tBirth[iBurgundy] + 25 and iGameTurn > utils.getLastTurnAlive(iBurgundy) + 20 ):
 			# Burgundy in the 100 years war
 			if ( iGameTurn > xml.i1336AD and iGameTurn < xml.i1453AD and iGameTurn % 8 == 1 ):
 				return iBurgundy
-		if ( (not pPrussia.isAlive()) and (not pPrussia.getRespawned()) and iGameTurn > con.tBirth[iPrussia] + 25 and iGameTurn > utils.getLastTurnAlive(iPrussia) + 10 ):
+		if ( (not pPrussia.isAlive()) and (not pPrussia.getEverRespawned()) and iGameTurn > con.tBirth[iPrussia] + 25 and iGameTurn > utils.getLastTurnAlive(iPrussia) + 10 ):
 			# respawn as the unified Prussia
 			if ( iGameTurn > xml.i1618AD and iGameTurn % 3 == 1 ):
 				return iPrussia
-		if ( (not pHungary.isAlive()) and (not pHungary.getRespawned()) and iGameTurn > con.tBirth[iHungary] + 25 and iGameTurn > utils.getLastTurnAlive(iHungary) + 10 ):
+		if ( (not pHungary.isAlive()) and (not pHungary.getEverRespawned()) and iGameTurn > con.tBirth[iHungary] + 25 and iGameTurn > utils.getLastTurnAlive(iHungary) + 10 ):
 			# reconquest of Buda from the Ottomans
 			if ( iGameTurn > xml.i1680AD and iGameTurn % 6 == 2 ):
 				return iHungary
-		if ( (not pSpain.isAlive()) and (not pSpain.getRespawned()) and iGameTurn > con.tBirth[iSpain] + 25 and iGameTurn > utils.getLastTurnAlive(iSpain) + 25 ):
+		if ( (not pSpain.isAlive()) and (not pSpain.getEverRespawned()) and iGameTurn > con.tBirth[iSpain] + 25 and iGameTurn > utils.getLastTurnAlive(iSpain) + 25 ):
 			# respawn as the Castile/Aragon Union
 			if ( iGameTurn > xml.i1470AD and iGameTurn < xml.i1580AD and iGameTurn % 5 == 0 ):
 				return iSpain
-		if ( (not pEngland.isAlive()) and (not pEngland.getRespawned()) and iGameTurn > con.tBirth[iEngland] + 25 and iGameTurn > utils.getLastTurnAlive(iEngland) + 12 ):
+		if ( (not pEngland.isAlive()) and (not pEngland.getEverRespawned()) and iGameTurn > con.tBirth[iEngland] + 25 and iGameTurn > utils.getLastTurnAlive(iEngland) + 12 ):
 			# restoration of monarchy
 			if ( iGameTurn > xml.i1660AD and iGameTurn % 6 == 2 ):
 				return iEngland
-		if ( (not pScotland.isAlive()) and (not pScotland.getRespawned()) and iGameTurn > con.tBirth[iScotland] + 25 and iGameTurn > utils.getLastTurnAlive(iScotland) + 30 ):
+		if ( (not pScotland.isAlive()) and (not pScotland.getEverRespawned()) and iGameTurn > con.tBirth[iScotland] + 25 and iGameTurn > utils.getLastTurnAlive(iScotland) + 30 ):
 			if ( iGameTurn <= xml.i1600AD and iGameTurn % 6 == 3 ):
 				return iScotland
-		if ( (not pPortugal.isAlive()) and (not pPortugal.getRespawned()) and iGameTurn > con.tBirth[iPortugal] + 25 and iGameTurn > utils.getLastTurnAlive(iPortugal) + 10 ):
+		if ( (not pPortugal.isAlive()) and (not pPortugal.getEverRespawned()) and iGameTurn > con.tBirth[iPortugal] + 25 and iGameTurn > utils.getLastTurnAlive(iPortugal) + 10 ):
 			# respawn to be around for colonies
 			if ( iGameTurn > xml.i1431AD and iGameTurn < xml.i1580AD and iGameTurn % 5 == 3 ):
 				return iPortugal
-		if ( (not pAustria.isAlive()) and (not pAustria.getRespawned()) and iGameTurn > con.tBirth[iAustria] + 25 and iGameTurn > utils.getLastTurnAlive(iAustria) + 10 ):
+		if ( (not pAustria.isAlive()) and (not pAustria.getEverRespawned()) and iGameTurn > con.tBirth[iAustria] + 25 and iGameTurn > utils.getLastTurnAlive(iAustria) + 10 ):
 			# increasing Habsburg influence in Hungary
 			if ( iGameTurn > xml.i1526AD and iGameTurn < xml.i1690AD and iGameTurn % 8 == 3 ):
 				return iAustria
-		if ( (not pKiev.isAlive()) and (not pKiev.getRespawned()) and iGameTurn > con.tBirth[iKiev] + 25 and iGameTurn > utils.getLastTurnAlive(iKiev) + 10 ):
+		if ( (not pKiev.isAlive()) and (not pKiev.getEverRespawned()) and iGameTurn > con.tBirth[iKiev] + 25 and iGameTurn > utils.getLastTurnAlive(iKiev) + 10 ):
 			# Cossack Hetmanate
 			if ( iGameTurn >= xml.i1620AD and iGameTurn < xml.i1750AD and iGameTurn % 5 == 3 ):
 				return iKiev
-		if ( (not pMorocco.isAlive()) and (not pMorocco.getRespawned()) and iGameTurn > con.tBirth[iMorocco] + 25 and iGameTurn > utils.getLastTurnAlive(iMorocco) + 10 ):
+		if ( (not pMorocco.isAlive()) and (not pMorocco.getEverRespawned()) and iGameTurn > con.tBirth[iMorocco] + 25 and iGameTurn > utils.getLastTurnAlive(iMorocco) + 10 ):
 			# Alaouite Dynasty
 			if ( iGameTurn > xml.i1631AD and iGameTurn % 8 == 7 ):
 				return iMorocco
-		if ( (not pAragon.isAlive()) and (not pAragon.getRespawned()) and iGameTurn > con.tBirth[iAragon] + 25 and iGameTurn > utils.getLastTurnAlive(iAragon) + 10 ):
+		if ( (not pAragon.isAlive()) and (not pAragon.getEverRespawned()) and iGameTurn > con.tBirth[iAragon] + 25 and iGameTurn > utils.getLastTurnAlive(iAragon) + 10 ):
 			# Kingdom of Sicily
 			if ( iGameTurn > xml.i1700AD and iGameTurn % 8 == 7 ):
 				return iAragon
-		if ( (not pVenecia.isAlive()) and (not pVenecia.getRespawned()) and iGameTurn > con.tBirth[iVenecia] + 25 and iGameTurn > utils.getLastTurnAlive(iVenecia) + 10 ):
+		if ( (not pVenecia.isAlive()) and (not pVenecia.getEverRespawned()) and iGameTurn > con.tBirth[iVenecia] + 25 and iGameTurn > utils.getLastTurnAlive(iVenecia) + 10 ):
 			if ( iGameTurn > xml.i1401AD and iGameTurn < xml.i1571AD and iGameTurn % 8 == 7 ):
 				return iVenecia
-		if ( (not pPoland.isAlive()) and (not pPoland.getRespawned()) and iGameTurn > con.tBirth[iPoland] + 25 and iGameTurn > utils.getLastTurnAlive(iPoland) + 10 ):
+		if ( (not pPoland.isAlive()) and (not pPoland.getEverRespawned()) and iGameTurn > con.tBirth[iPoland] + 25 and iGameTurn > utils.getLastTurnAlive(iPoland) + 10 ):
 			if ( iGameTurn > xml.i1410AD and iGameTurn < xml.i1570AD and iGameTurn % 8 == 7 ):
 				return iPoland
-		if ( (not pTurkey.isAlive()) and (not pTurkey.getRespawned()) and iGameTurn > con.tBirth[iTurkey] + 25 and iGameTurn > utils.getLastTurnAlive(iTurkey) + 10 ):
+		if ( (not pTurkey.isAlive()) and (not pTurkey.getEverRespawned()) and iGameTurn > con.tBirth[iTurkey] + 25 and iGameTurn > utils.getLastTurnAlive(iTurkey) + 10 ):
 			# Mehmed II's conquests
 			if ( iGameTurn > xml.i1453AD and iGameTurn < xml.i1514AD and iGameTurn % 6 == 3 ):
 				return iTurkey

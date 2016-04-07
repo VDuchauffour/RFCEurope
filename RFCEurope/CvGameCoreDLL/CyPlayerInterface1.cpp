@@ -294,6 +294,7 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("changeCoastalTradeRoutes", &CyPlayer::changeCoastalTradeRoutes, "void (int iChange)")
 		.def("getTradeRoutes", &CyPlayer::getTradeRoutes, "int ()")
 		.def("getConversionTimer", &CyPlayer::getConversionTimer, "int ()")
+		.def("setConversionTimer", &CyPlayer::setConversionTimer, "void (int iNewValue)") // Absinthe
 		.def("getRevolutionTimer", &CyPlayer::getRevolutionTimer, "int ()")
 
 		.def("isStateReligion", &CyPlayer::isStateReligion, "bool ()")
@@ -321,6 +322,7 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("isMinorCiv", &CyPlayer::isMinorCiv, "bool ()")
 		.def("isAlive", &CyPlayer::isAlive, "bool ()")
 		.def("isEverAlive", &CyPlayer::isEverAlive, "bool ()")
+		.def("setAlive", &CyPlayer::setAlive, "void ( bool )") // Absinthe
 		.def("isExtendedGame", &CyPlayer::isExtendedGame, "bool ()")
 		.def("isFoundedFirstCity", &CyPlayer::isFoundedFirstCity, "bool ()")
 

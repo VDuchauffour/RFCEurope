@@ -1293,6 +1293,12 @@ int CyPlayer::getConversionTimer()
 	return m_pPlayer ? m_pPlayer->getConversionTimer() : -1;
 }
 
+void CyPlayer::setConversionTimer(int iNewValue) // Absinthe
+{
+	if (m_pPlayer)
+		m_pPlayer->setConversionTimer(iNewValue);
+}
+
 int CyPlayer::getRevolutionTimer()
 {
 	return m_pPlayer ? m_pPlayer->getRevolutionTimer() : -1;
@@ -1414,6 +1420,12 @@ bool CyPlayer::isAlive()
 bool CyPlayer::isEverAlive()
 {
 	return m_pPlayer ? m_pPlayer->isEverAlive() : false;
+}
+
+void CyPlayer::setAlive( bool bNewValue ) //Absinthe:
+{
+	if (m_pPlayer)
+		m_pPlayer->setAlive( bNewValue );
 }
 
 bool CyPlayer::isExtendedGame()
@@ -2439,12 +2451,23 @@ bool CyPlayer::provinceIsSpreadReligion( int iProvince, int iReligion ){
 bool CyPlayer::provinceIsConvertReligion( int iProvince, int iReligion ){
 	return m_pPlayer ->provinceIsConvertReligion( iProvince, iReligion );
 };
-bool CyPlayer::getRespawned(){
-	return m_pPlayer ->getRespawned();
-};
-void CyPlayer::setRespawned( bool bNewValue ){
-	m_pPlayer ->setRespawned( bNewValue );
-};
+// Absinthe: respawn status
+bool CyPlayer::getRespawnedAlive()
+{
+	return m_pPlayer ->getRespawnedAlive();
+}
+void CyPlayer::setRespawnedAlive( bool bNewValue )
+{
+	m_pPlayer ->setRespawnedAlive( bNewValue );
+}
+bool CyPlayer::getEverRespawned()
+{
+	return m_pPlayer ->getEverRespawned();
+}
+void CyPlayer::setEverRespawned( bool bNewValue )
+{
+	m_pPlayer ->setEverRespawned( bNewValue );
+}
 
 void CyPlayer::setForcedHistoricityUnitProduction( int iNewValue ){
 	//m_iUnitsProduction = iNewValue;

@@ -1104,9 +1104,14 @@ bool CvTeam::canDeclareWar(TeamTypes eTeam) const
 
 	// 3Miro: Cannot Declare War for 5 turns after player spawn - variable exported into python
 	int iPlayer = GET_TEAM(eTeam).getLeaderID();
-	if ( GC.getGameINLINE().getGameTurn() < startingTurn[iPlayer] + iPeaceTurnsAfterSpawn ){
-		return false;
-	};
+	// Absinthe: this originally meant that no wars at all in the first 5 turns after 500 AD, but now you can declare on indies and barbs anytime
+	if ( eTeam < NUM_MAJOR_PLAYERS )
+	{
+		if ( GC.getGameINLINE().getGameTurn() < startingTurn[iPlayer] + iPeaceTurnsAfterSpawn )
+		{
+			return false;
+		}
+	}
 	// 3Miro: end
 
 	if (eTeam == getID())
@@ -1964,7 +1969,8 @@ void CvTeam::makePeace(TeamTypes eTeam, bool bBumpUnits)
 		{
 			if (iI != getID() && iI != eTeam)
 			{
-				if (GET_TEAM((TeamTypes)iI).isAlive())
+				// Absinthe: alive status is only set 1 turn after the respawn
+				if (GET_TEAM((TeamTypes)iI).isAlive() || GET_PLAYER((PlayerTypes)iI).getRespawnedAlive())
 				{
 					if (GET_TEAM((TeamTypes)iI).isVassal(eTeam))
 					{

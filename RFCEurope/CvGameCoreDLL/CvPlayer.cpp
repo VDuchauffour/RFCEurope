@@ -17320,7 +17320,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 
 	pStream ->Read(10,m_aiPickleFree);
 	pStream ->Read(&m_iCivicUnitProductionModifier);
-	pStream ->Read(&m_bRespawned);
+	pStream ->Read(&m_bRespawnedAlive); // Absinthe: respawn status
+	pStream ->Read(&m_bEverRespawned); // Absinthe: respawn status
 
 	pStream ->Read(&m_iUnitsProduction);
 	pStream ->Read(&m_iUnitsSupport);
@@ -17773,7 +17774,8 @@ void CvPlayer::write(FDataStreamBase* pStream)
 	pStream ->Write(bIsAtWar);
 	pStream ->Write(10,m_aiPickleFree);
 	pStream ->Write(m_iCivicUnitProductionModifier);
-	pStream ->Write(m_bRespawned);
+	pStream ->Write(m_bRespawnedAlive); // Absinthe: respawn status
+	pStream ->Write(m_bEverRespawned); // Absinthe: respawn status
 
 	pStream ->Write(m_iUnitsProduction);
 	pStream ->Write(m_iUnitsSupport);
@@ -22994,7 +22996,7 @@ void CvPlayer::processCivNames()
 			// ----------------- Respawned check -------------------------- //
 			if ( bPasses ) {
 				if ( GC.getCivilizationInfo(getCivilizationType() ).getDCNCondHasRespawned( iI ) ){
-					bPasses = getRespawned();
+					bPasses = getEverRespawned();
 				};
 			};
 			// -----------------  VassalOf Check -------------------------- //
@@ -23751,16 +23753,30 @@ int CvPlayer::getCivicUnitProductionModifier() const
 {
 	return m_iCivicUnitProductionModifier;
 };
-bool CvPlayer::getRespawned() const
+// Absinthe: respawn status
+bool CvPlayer::getRespawnedAlive() const
 {
-	return m_bRespawned;
-};
-void CvPlayer::setRespawned( bool bNewValue ){
-	if ( m_bRespawned != bNewValue ){
-		m_bRespawned = bNewValue;
+	return m_bRespawnedAlive;
+}
+void CvPlayer::setRespawnedAlive( bool bNewValue )
+{
+	if ( m_bRespawnedAlive != bNewValue )
+	{
+		m_bRespawnedAlive = bNewValue;
 		processCivNames();
-	};
-};
+	}
+}
+bool CvPlayer::getEverRespawned() const
+{
+	return m_bEverRespawned;
+}
+void CvPlayer::setEverRespawned( bool bNewValue )
+{
+	if ( m_bEverRespawned != bNewValue )
+	{
+		m_bEverRespawned = bNewValue;
+	}
+}
 
 void CvPlayer::setForcedHistoricityUnitProduction( int iNewValue ){
 	m_iUnitsProduction = iNewValue;

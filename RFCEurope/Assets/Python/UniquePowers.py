@@ -199,7 +199,6 @@ class UniquePowers:
 			PolearmClass = xml.iGuisarme
 
 		print("Making ", RangedClass, " and ", PolearmClass)
-
 		apCityList = PyPlayer(iPlayer).getCityList()
 		for pLoopCity in apCityList:
 			pCity = pLoopCity.GetCy()
@@ -208,5 +207,5 @@ class UniquePowers:
 				utils.makeUnit(RangedClass, iPlayer, tPlot, 1)
 			else:
 				utils.makeUnit(PolearmClass, iPlayer, tPlot, 1)
-			print(tPlot)
+			print("In city: ", tPlot)
 

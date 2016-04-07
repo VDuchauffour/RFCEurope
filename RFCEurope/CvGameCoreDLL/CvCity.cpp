@@ -7955,9 +7955,12 @@ int CvCity::getYieldRate(YieldTypes eIndex) const
 	int iUPHF = UniquePowers[getOwnerINLINE() * UP_TOTAL_NUM + UP_HEALTH_FOOD];
 	if (iUPHF == 1 && eIndex == YIELD_FOOD && !isFoodProduction())
 	{
-		if (iYieldRateTimes100 - foodConsumption() * 100 >= 0 && goodHealth() - badHealth() > 0)
+		// Absinthe: UP update: lowered rate to 1/2, but always applied with positive health
+		if (goodHealth() - badHealth() > 0)
+		//if (iYieldRateTimes100 - foodConsumption() * 100 >= 0 && goodHealth() - badHealth() > 0)
 		{
-			iYieldRateTimes100 += 100 * (goodHealth() - badHealth());
+			iYieldRateTimes100 += 50 * (goodHealth() - badHealth());
+			//iYieldRateTimes100 += 100 * (goodHealth() - badHealth());
 		}
 	}
 

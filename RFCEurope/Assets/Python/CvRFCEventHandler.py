@@ -249,19 +249,27 @@ class CvRFCEventHandler:
 			self.up.faithUP( playerType, city )
 
 		# Absinthe: Scottish UP
-		if ( owner == iScotland and playerType < iNumPlayers):
+		if ( owner == iScotland and playerType < iNumPlayers ):
 			self.up.defianceUP( owner )
 
 		# Absinthe: Spread some culture of the conqueror civ to the occupied city
-		if (playerType < iNumMajorPlayers):
-			utils.spreadMajorCulture(playerType, city.getX(), city.getY())
+		if ( playerType < iNumMajorPlayers ):
+			utils.spreadMajorCulture( playerType, city.getX(), city.getY() )
 
-		self.sta.onCityAcquired(owner,playerType,city,bConquest,bTrade)
+		self.sta.onCityAcquired( owner, playerType, city, bConquest, bTrade )
 
 		# 3Miro: Jerusalem's Golden Age Incentive
 		if ( city.getX() == con.tJerusalem[0] and city.getY() == con.tJerusalem[1] ):
-			pPlayer = gc.getPlayer(playerType)
+			pPlayer = gc.getPlayer( playerType )
 			if ( pPlayer.getStateReligion() == xml.iCatholicism ):
+				# Absinthe: interface message for the player
+				if (pPlayer.isHuman()):
+					CityName = city.getNameKey()
+					CyInterface().addMessage(utils.getHumanID(), True, con.iDuration, CyTranslator().getText("TXT_KEY_CRUSADE_JERUSALEM_SAFE", (CityName, )), "", 0, "", ColorTypes(con.iGreen), -1, -1, True, True)
+				# Absinthe: spread Catholicism if not present already
+				if ( not city.isHasReligion( xml.iCatholicism ) ):
+					tCity = [city.getX(), city.getY()]
+					self.rel.spreadReligion( tCity, xml.iCatholicism )
 				self.crusade.success( playerType )
 
 		# Sedna17: code for Krak des Chevaliers

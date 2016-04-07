@@ -735,8 +735,12 @@ class RFCUtils:
 		self.flipUnitsInArea([0,0], [con.iMapMaxX,con.iMapMaxY], iNewCiv, iCiv, False, True)
 		#self.flipUnitsInArea([0,0], [123,67], iNewCiv, iCiv, False, True)
 		#self.killUnitsInArea([0,0], [123,67], iNewCiv, iCiv) ?
-		self.setLastTurnAlive(iCiv, gc.getGame().getGameTurn())
+
 		self.resetUHV(iCiv)
+		self.setLastTurnAlive(iCiv, gc.getGame().getGameTurn())
+		# Absinthe: respawn status
+		if ( gc.getPlayer( iCiv ).getRespawnedAlive() == True ):
+			gc.getPlayer( iCiv ).setRespawnedAlive( False )
 
 
 	def killAndFragmentCiv(self, iCiv, bBarbs, bAssignOneCity):
@@ -812,6 +816,10 @@ class RFCUtils:
 			self.killUnitsInArea([0,0], [con.iMapMaxX,con.iMapMaxY], iCiv)
 			self.resetUHV(iCiv)
 		self.setLastTurnAlive(iCiv, gc.getGame().getGameTurn())
+		# Absinthe: respawn status
+		#print ("getRespawnedAlive", gc.getPlayer( iCiv ).getRespawnedAlive())
+		if ( gc.getPlayer( iCiv ).getRespawnedAlive() == True ):
+			gc.getPlayer( iCiv ).setRespawnedAlive( False )
 
 
 	def resetUHV(self, iPlayer):
@@ -1212,7 +1220,11 @@ class RFCUtils:
 				if gc.getGame().getSorenRandNum(100, "judaism spread chance") < 80:
 					tCity = self.selectRandomCity()
 					self.spreadJews(tCity,xml.iJudaism)
-					CyInterface().addMessage(iOwner, False, con.iDuration, localText.getText("TXT_KEY_MESSAGE_JEWISH_MOVE", (city.getName(), )), "AS2D_PLAGUE", InterfaceMessageTypes.MESSAGE_TYPE_INFO, pUnit.getButton(), ColorTypes(con.iGreen), iPlotX, iPlotY, True, True)
+					pSpreadCity = gc.getMap().plot(tCity[0], tCity[1]).getPlotCity()
+					if (pSpreadCity.getOwner() == iOwner):
+						CyInterface().addMessage(iOwner, False, con.iDuration, localText.getText("TXT_KEY_MESSAGE_JEWISH_MOVE_OWN_CITY", (city.getName(), pSpreadCity.getName())), "AS2D_PLAGUE", InterfaceMessageTypes.MESSAGE_TYPE_INFO, pUnit.getButton(), ColorTypes(con.iGreen), iPlotX, iPlotY, True, True)
+					else:
+						CyInterface().addMessage(iOwner, False, con.iDuration, localText.getText("TXT_KEY_MESSAGE_JEWISH_MOVE", (city.getName(), )), "AS2D_PLAGUE", InterfaceMessageTypes.MESSAGE_TYPE_INFO, pUnit.getButton(), ColorTypes(con.iGreen), iPlotX, iPlotY, True, True)
 
 			# persecution countdown for the civ (causes indirect instability - stability.recalcCity)
 			if ( gc.hasUP(iOwner,con.iUP_Inquisition) ): # Spanish UP

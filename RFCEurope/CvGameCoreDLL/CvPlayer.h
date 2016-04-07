@@ -537,7 +537,7 @@ public:
 	void changeRevolutionTimer(int iChange);
 
 	int getConversionTimer() const;																																						// Exposed to Python
-	void setConversionTimer(int iNewValue);
+	void setConversionTimer(int iNewValue);																																			// Exposed to Python
 	void changeConversionTimer(int iChange);
 
 	int getStateReligionCount() const;
@@ -604,7 +604,7 @@ public:
 
 	DllExport bool isAlive() const;																																						// Exposed to Python
 	DllExport bool isEverAlive() const;																																				// Exposed to Python
-	void setAlive(bool bNewValue);
+	void setAlive(bool bNewValue);																																			// Exposed to Python
 	void verifyAlive();
 
 	DllExport bool isTurnActive() const;
@@ -1145,8 +1145,12 @@ public:
 	void changCivicUnitProductionModifier( int iChange );
 	int getCivicUnitProductionModifier() const;
 
-	bool getRespawned() const;
-	void setRespawned( bool bNewValue );
+	// Absinthe: respawn status
+	bool getRespawnedAlive() const;
+	void setRespawnedAlive( bool bNewValue );
+
+	bool getEverRespawned() const;
+	void setEverRespawned( bool bNewValue );
 
 	void setForcedHistoricityUnitProduction( int iNewValue );
 	int getForcedHistoricityUnitProduction() const;
@@ -1210,8 +1214,9 @@ protected:
 	// 3MiroCivic
 	int m_iCivicUnitProductionModifier;
 
-	// 3Miro: respawned
-	bool m_bRespawned;
+	// Absinthe: respawn status
+	bool m_bRespawnedAlive;
+	bool m_bEverRespawned;
 
 	int m_iStartingX;
 	int m_iStartingY;
