@@ -9683,12 +9683,15 @@ bool CvGame::pythonIsBonusIgnoreLatitudes() const
 bool CvGame::isLargestCity( int x, int y ){
 	if ( GC.getMapINLINE().plot(x,y) -> isCity() ){
 		int iPopulation = GC.getMapINLINE().plot(x,y) ->getPlotCity() ->getPopulation();
+		int iCityOwner = GC.getMapINLINE().plot(x,y) ->getPlotCity() ->getOwner();
 		int iPlayer, iLoop;
 		CvCity *pCity;
 		for ( iPlayer = 0; iPlayer < NUM_ALL_PLAYERS; iPlayer++ ){
-			for ( pCity = GET_PLAYER((PlayerTypes)iPlayer).firstCity(&iLoop); pCity != NULL; pCity = GET_PLAYER((PlayerTypes)iPlayer).nextCity(&iLoop) ){
-				if ( pCity ->getPopulation() > iPopulation ){
-					return false;
+			if ( iCityOwner != iPlayer ){
+				for ( pCity = GET_PLAYER((PlayerTypes)iPlayer).firstCity(&iLoop); pCity != NULL; pCity = GET_PLAYER((PlayerTypes)iPlayer).nextCity(&iLoop) ){
+					if ( pCity ->getPopulation() >= iPopulation ){
+						return false;
+					};
 				};
 			};
 		};
@@ -9870,7 +9873,8 @@ bool CvGame::safeMotherland( int iCiv ){
 		};
 	};
 	if ( iCitiesOwned > iCitiesLost ) return true;
-	if ( (GET_PLAYER((PlayerTypes)iCiv).getRespawned()) && (iCitiesOwned > 0) ) return true;
+	if ( (GET_PLAYER((PlayerTypes)iCiv).getRespawnedAlive()) && (iCitiesOwned > 0) ) return true;
+	//if ( (GET_PLAYER((PlayerTypes)iCiv).getEverRespawned()) && (iCitiesOwned > 0) ) return true;
 	if ( GET_TEAM((TeamTypes) GET_PLAYER((PlayerTypes)iCiv).getTeam() ).isAVassal() ){
 		return true;
 	}else{

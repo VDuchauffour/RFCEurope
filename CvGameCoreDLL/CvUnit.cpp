@@ -9810,7 +9810,8 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 
 	// report event to Python, along with some other key state
 	// 3Miro: SPEEDTWEAK more Python
-	//CvEventReporter::getInstance().unitSetXY(pNewPlot, this);
+	// Absinthe: readded
+	CvEventReporter::getInstance().unitSetXY(pNewPlot, this);
 	// 3Miro: end
 	// 3MiroBugfix: start
 	if ( conqueredCity ){

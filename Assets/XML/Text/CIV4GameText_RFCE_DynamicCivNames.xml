@@ -652,7 +652,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR01</Tag>
-		<English>Kingdom of Burgundy</English>
+		<English>Kingdom of Middle Francia</English>
 		<French>Royaume de Bourgogne</French>
 		<German>Königreich Burgund</German>
 		<Italian>Regno di Borgogna</Italian>
@@ -661,15 +661,6 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR02</Tag>
-		<English>Kingdom of Burgundy</English>
-		<French>Royaume de Bourgogne</French>
-		<German>Königreich Burgund</German>
-		<Italian>Regno di Borgogna</Italian>
-		<Spanish>Reino de Borgoña</Spanish>
-		<Portuguese>Reino da Borgonha</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DN_BUR03</Tag>
 		<English>Duchy of Burgundy</English>
 		<French>Duché de Bourgogne</French>
 		<German>Herzogtum Burgund</German>
@@ -678,8 +669,17 @@
 		<Portuguese>Ducado da Borgonha</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_DN_BUR03</Tag>
+		<English>Kingdom of Burgundy</English>
+		<French>Royaume de Bourgogne</French>
+		<German>Königreich Burgund</German>
+		<Italian>Regno di Borgogna</Italian>
+		<Spanish>Reino de Borgoña</Spanish>
+		<Portuguese>Reino da Borgonha</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_DN_BUR04</Tag>
-		<English>Duchy of Burgundy</English>
+		<English>Burgundian Empire</English>
 		<French>Duché de Bourgogne</French>
 		<German>Herzogtum Burgund</German>
 		<Italian>Ducato di Borgogna</Italian>
@@ -697,21 +697,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR06</Tag>
-		<English>Burgundy Error</English>
-		<French>Burgundy Error</French>
-		<German>Burgundy Error</German>
-		<Italian>Burgundy Error</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Burgundy Error</Portuguese>
+		<English>Principality of Burgundy</English>
+		<French>Principality of Burgundy</French>
+		<German>Principality of Burgundy</German>
+		<Italian>Principality of Burgundy</Italian>
+		<Spanish>Principality of Burgundy</Spanish>
+		<Portuguese>Principality of Burgundy</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR07</Tag>
-		<English>Burgundy Error</English>
-		<French>Burgundy Error</French>
-		<German>Burgundy Error</German>
-		<Italian>Burgundy Error</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Burgundy Error</Portuguese>
+		<English>County of Provence</English>
+		<French>County of Provence</French>
+		<German>County of Provence</German>
+		<Italian>County of Provence</Italian>
+		<Spanish>County of Provence</Spanish>
+		<Portuguese>County of Provence</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR08</Tag>
@@ -733,7 +733,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR10</Tag>
-		<English>Exarchate of Burgundy</English>
+		<English>Exarchate of Burgundia</English>
 		<French>Exarchat de Bourgogne</French>
 		<German>Exarchat Burgund</German>
 		<Italian>Esarcato di Borgogna</Italian>
@@ -742,7 +742,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR11</Tag>
-		<English>French Duchy of Bourgogne</English>
+		<English>Duchy of Bourgogne</English>
 		<French>Duch&#233; Fran&#231;ais de Bougogne</French>
 		<German>Französisches Herzogtum Bourgogne</German>
 		<Italian>Ducato Francese di Borgogna</Italian>
@@ -760,7 +760,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR13</Tag>
-		<English>County of Burgundy</English>
+		<English>Viceroyalty of Burgundy</English>
 		<French>Franche-Comt&#233;</French>
 		<German>Spanisch-Burgund</German>
 		<Italian>Contea di Borgogna</Italian>
@@ -769,7 +769,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR14</Tag>
-		<English>New Bornholm</English>
+		<English>Jarldom of Burgundaholmr</English>
 		<French>Nouveau Bornholm</French>
 		<German>Neu Bornholm</German>
 		<Italian>Nuova Bornholm</Italian>
@@ -778,7 +778,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR15</Tag>
-		<English>Venetian Burgundy</English>
+		<English>Colony of Burgundy</English>
 		<French>Bourgogne V&#233;nitienne</French>
 		<German>Venezianisch-Burgund</German>
 		<Italian>Borgogna Veneziana</Italian>
@@ -787,7 +787,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR16</Tag>
-		<English>Russian Burgundy</English>
+		<English>Guberniya of Burgundy</English>
 		<French>Bourgogne Russe</French>
 		<German>Russisch-Burgund</German>
 		<Italian>Borgogna Russa</Italian>
@@ -814,7 +814,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR19</Tag>
-		<English>Habsburg Burgundy</English>
+		<English>Free County of Burgundy</English>
 		<French>Bourgogne Habsbourgeoise</French>
 		<German>Habsburger Burgund</German>
 		<Italian>Borgogna Asburgica</Italian>
@@ -823,7 +823,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR20</Tag>
-		<English>Principality of Burgonya</English>
+		<English>Eyalet of Burgonya</English>
 		<French>Principaut&#233; de Burgonya</French>
 		<German>Fürstentum Burgonya</German>
 		<Italian>Principato di Borgogna</Italian>
@@ -838,6 +838,24 @@
 		<Italian>Provincia di Borgogna</Italian>
 		<Spanish>Provincia de Borgoña</Spanish>
 		<Portuguese>Província da Borgonha</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR22</Tag>
+		<English>Burgundian Circle</English>
+		<French>Burgundian Circle</French>
+		<German>Burgundian Circle</German>
+		<Italian>Burgundian Circle</Italian>
+		<Spanish>Burgundian Circle</Spanish>
+		<Portuguese>Burgundian Circle</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR23</Tag>
+		<English>Kingdom of Arles</English>
+		<French>Kingdom of Arles</French>
+		<German>Kingdom of Arles</German>
+		<Italian>Kingdom of Arles</Italian>
+		<Spanish>Kingdom of Arles</Spanish>
+		<Portuguese>Kingdom of Arles</Portuguese>
 	</TEXT>
 	<!-- Burgundy -->
 	<!-- Byzantium -->
@@ -1115,30 +1133,30 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR02</Tag>
-		<English>Duchy of Andalusia</English>
-		<French>Duch&#233; d'Andalousie</French>
-		<German>Herzogtum Andalusien</German>
-		<Italian>Ducato dell' Andalusia</Italian>
+		<English>Kingdom of Andalusia</English>
+		<French>Royaume d'Andalousie</French>
+		<German>Königreich Andalusien</German>
+		<Italian>Regno dell' Andalusia</Italian>
 		<Spanish></Spanish>
-		<Portuguese>Ducado da Andaluzia</Portuguese>
+		<Portuguese>Reino da Andaluzia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR03</Tag>
-		<English>Kingdom of Andalusia</English>
-		<French>Royaume d'Andalousie</French>
-		<German>Königreich Andalusien</German>
-		<Italian>Regno dell' Andalusia</Italian>
+		<English>Emirate of Cordoba</English>
+		<French>Emirat de Courdoue</French>
+		<German>Emirat Córdoba</German>
+		<Italian>Emirato di Cordoba</Italian>
 		<Spanish></Spanish>
-		<Portuguese>Reino da Andaluzia</Portuguese>
+		<Portuguese>Emirado de Córdova</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR04</Tag>
-		<English>Kingdom of Andalusia</English>
-		<French>Royaume d'Andalousie</French>
-		<German>Königreich Andalusien</German>
-		<Italian>Regno dell' Andalusia</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Reino da Andaluzia</Portuguese>
+		<English>Sultanate of Al-Andalus</English>
+		<French>Sultanate of Al-Andalus</French>
+		<German>Sultanate of Al-Andalus</German>
+		<Italian>Sultanate of Al-Andalus</Italian>
+		<Spanish>Sultanate of Al-Andalus</Spanish>
+		<Portuguese>Sultanate of Al-Andalus</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR05</Tag>
@@ -1151,21 +1169,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR06</Tag>
-		<English>Placeholder Error</English>
-		<French>Placeholder Error</French>
-		<German>Placeholder Error</German>
-		<Italian>Placeholder Error</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Placeholder Error</Portuguese>
+		<English>Principality of Andalusia</English>
+		<French>Principality of Andalusia</French>
+		<German>Principality of Andalusia</German>
+		<Italian>Principality of Andalusia</Italian>
+		<Spanish>Principality of Andalusia</Spanish>
+		<Portuguese>Principality of Andalusia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR07</Tag>
-		<English>Placeholder Error</English>
-		<French>Placeholder Error</French>
-		<German>Placeholder Error</German>
-		<Italian>Placeholder Error</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Placeholder Error</Portuguese>
+		<English>Emirate of Granada</English>
+		<French>Emirate of Granada</French>
+		<German>Emirate of Granada</German>
+		<Italian>Emirate of Granada</Italian>
+		<Spanish>Emirate of Granada</Spanish>
+		<Portuguese>Emirate of Granada</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR08</Tag>
@@ -1214,7 +1232,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR13</Tag>
-		<English>Kingdom of Andalusia</English>
+		<English>Kingdom of Granada</English>
 		<French>Andalousie Reconquite</French>
 		<German>Reconquista Andalusien</German>
 		<Italian>Regno dell' Andalusia</Italian>
@@ -1223,7 +1241,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR14</Tag>
-		<English>Norse Andalusia</English>
+		<English>Jarldom of Andalusia</English>
 		<French>Andalousie Nordique</French>
 		<German>Nordisch-Andalusien</German>
 		<Italian>Andalusia Nordica</Italian>
@@ -1232,7 +1250,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR15</Tag>
-		<English>Venetian Andalusia</English>
+		<English>Colony of Andalusia</English>
 		<French>Andalousie V&#233;nitienne</French>
 		<German>Venezianisch-Andalusien</German>
 		<Italian>Andalusia Veneziana</Italian>
@@ -1241,7 +1259,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR16</Tag>
-		<English>Russian Andalusia</English>
+		<English>Guberniya of Andalusia</English>
 		<French>Andalousie Russe</French>
 		<German>Russisch-Andalusien</German>
 		<Italian>Andalusia Russa</Italian>
@@ -1250,7 +1268,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR17</Tag>
-		<English>German Andalusia</English>
+		<English>March of Andalusia</English>
 		<French>Andalousie Allemande</French>
 		<German>Deutsch-Andalusien</German>
 		<Italian>Andalusia Tedesca</Italian>
@@ -1277,7 +1295,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_COR20</Tag>
-		<English>Principality of Endulus</English>
+		<English>Eyalet of Endulus</English>
 		<French>Principaut&#233; de l'Endulus</French>
 		<German>Fürstentum Endulus</German>
 		<Italian>Principato dell'Andalusia</Italian>
@@ -1293,35 +1311,19 @@
 		<Spanish></Spanish>
 		<Portuguese>Província da Andaluzia</Portuguese>
 	</TEXT>
+	<!-- Cordoba -->
+	<!-- Tunesia -->
 	<TEXT>
-		<Tag>TXT_KEY_DN_RESPAWNED_DEFAULT_MUSLIM</Tag>
-		<English>Hafsid Caliphate</English>
-		<French>.</French>
-		<German>Hafsidenkalifat</German>
-		<Italian>Califfato degli Hafsidi</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>Califado Háfsida</Portuguese>
+		<Tag>TXT_KEY_DN_TUN00</Tag>
+		<English>Tunisian Peoples</English>
+		<French>Tunisian Peoples</French>
+		<German>Tunisian Peoples</German>
+		<Italian>Tunisian Peoples</Italian>
+		<Spanish>Tunisian Peoples</Spanish>
+		<Portuguese>Tunisian Peoples</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DN_RESPAWNED_DEFAULT_NONMUSLIM</Tag>
-		<English>Hafsid Kingdom</English>
-		<French>.</French>
-		<German>Königreich der Hafsiden</German>
-		<Italian>Regno degli Hafsidi</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>Reino Háfsida</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DN_COR30</Tag>
-		<English>Exarchate of Tunisia</English>
-		<French>.</French>
-		<German>Exarchat Tunisia</German>
-		<Italian>Esarcato di Tunisia</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>Exarcado da Tunísia</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DN_COR31</Tag>
+		<Tag>TXT_KEY_DN_TUN01</Tag>
 		<English>Duchy of Tunisia</English>
 		<French>.</French>
 		<German>Herzogtum Tunesien</German>
@@ -1330,7 +1332,79 @@
 		<Portuguese>Ducado da Tunísia</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DN_COR32</Tag>
+		<Tag>TXT_KEY_DN_TUN02</Tag>
+		<English>Hafsid Caliphate</English>
+		<French>.</French>
+		<German>Hafsidenkalifat</German>
+		<Italian>Califfato degli Hafsidi</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>Califado Háfsida</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUN03</Tag>
+		<English>Hafsid Kingdom</English>
+		<French>.</French>
+		<German>Königreich der Hafsiden</German>
+		<Italian>Regno degli Hafsidi</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>Reino Háfsida</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUN04</Tag>
+		<English>Taifa of Tunisia</English>
+		<French>Taifa of Tunisia</French>
+		<German>Taifa of Tunisia</German>
+		<Italian>Taifa of Tunisia</Italian>
+		<Spanish>Taifa of Tunisia</Spanish>
+		<Portuguese>Taifa of Tunisia</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUN05</Tag>
+		<English>Republic of Tunisia</English>
+		<French>Republic of Tunisia</French>
+		<German>Republic of Tunisia</German>
+		<Italian>Republic of Tunisia</Italian>
+		<Spanish>Republic of Tunisia</Spanish>
+		<Portuguese>Republic of Tunisia</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUN06</Tag>
+		<English>Emirate of Oran</English>
+		<French>Emirate of Oran</French>
+		<German>Emirate of Oran</German>
+		<Italian>Emirate of Oran</Italian>
+		<Spanish>Emirate of Oran</Spanish>
+		<Portuguese>Emirate of Oran</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUN07</Tag>
+		<English>Principality of Tunisia</English>
+		<French>Principality of Tunisia</French>
+		<German>Principality of Tunisia</German>
+		<Italian>Principality of Tunisia</Italian>
+		<Spanish>Principality of Tunisia</Spanish>
+		<Portuguese>Principality of Tunisia</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUN10</Tag>
+		<English>Exarchate of Tunisia</English>
+		<French>.</French>
+		<German>Exarchat Tunisia</German>
+		<Italian>Esarcato di Tunisia</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>Exarcado da Tunísia</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUN11</Tag>
+		<English>Duchy of Tunisia</English>
+		<French>.</French>
+		<German>Herzogtum Tunesien</German>
+		<Italian>Ducato di Tunisia</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>Ducado da Tunísia</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUN12</Tag>
 		<English>Emirate of Tunisia</English>
 		<French>.</French>
 		<German>Emirat Tunesien</German>
@@ -1339,8 +1413,8 @@
 		<Portuguese>Emirado da Tunísia</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DN_COR33</Tag>
-		<English>Spanish Kingdom of Tunisia</English>
+		<Tag>TXT_KEY_DN_TUN13</Tag>
+		<English>Kingdom of Oran</English>
 		<French>.</French>
 		<German>Spanisches Königreich Tunesien</German>
 		<Italian>Regno Spagnolo di Tunisia</Italian>
@@ -1348,8 +1422,8 @@
 		<Portuguese>Reino Espanhol da Tunísia</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DN_COR34</Tag>
-		<English>Norse Tunisia</English>
+		<Tag>TXT_KEY_DN_TUN14</Tag>
+		<English>Jarldom of Tunisia</English>
 		<French>.</French>
 		<German>Nordisch-Tunesien</German>
 		<Italian>Tunisia Vichinga</Italian>
@@ -1357,8 +1431,8 @@
 		<Portuguese>Tunísia Nórdica</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DN_COR35</Tag>
-		<English>Venetian Tunisia</English>
+		<Tag>TXT_KEY_DN_TUN15</Tag>
+		<English>Colony of Tunisia</English>
 		<French>.</French>
 		<German>Venezianisch-Tunesien</German>
 		<Italian>Tunisia Veneziana</Italian>
@@ -1366,8 +1440,8 @@
 		<Portuguese>Tunísia Veneziana</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DN_COR36</Tag>
-		<English>Russian Tunisia</English>
+		<Tag>TXT_KEY_DN_TUN16</Tag>
+		<English>Guberniya of Tunisia</English>
 		<French>.</French>
 		<German>Russisch-Tunesien</German>
 		<Italian>Tunisia Russa</Italian>
@@ -1375,8 +1449,8 @@
 		<Portuguese>Tunísia Russa</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DN_COR37</Tag>
-		<English>German Tunisia</English>
+		<Tag>TXT_KEY_DN_TUN17</Tag>
+		<English>March of Tunisia</English>
 		<French>.</French>
 		<German>Deutsch-Tunesien</German>
 		<Italian>Tunisia Tedesca</Italian>
@@ -1384,8 +1458,8 @@
 		<Portuguese>Tunísia Alemã</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DN_COR38</Tag>
-		<English>County of Tunisia</English>
+		<Tag>TXT_KEY_DN_TUN18</Tag>
+		<English>Protectorate of Tunisia</English>
 		<French>.</French>
 		<German>Grafschaft Tunesien</German>
 		<Italian>Contea di Tunisia</Italian>
@@ -1393,7 +1467,7 @@
 		<Portuguese>Condado da Tunísia</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DN_COR39</Tag>
+		<Tag>TXT_KEY_DN_TUN19</Tag>
 		<English>Habsburg Tunisia</English>
 		<French>.</French>
 		<German>Habsburger Tunesien</German>
@@ -1402,8 +1476,8 @@
 		<Portuguese>Tunísia Habsburga</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DN_COR40</Tag>
-		<English>Principality of Tunisia</English>
+		<Tag>TXT_KEY_DN_TUN20</Tag>
+		<English>Eyalet of Tunisia</English>
 		<French>.</French>
 		<German>Fürstentum Tunesien</German>
 		<Italian>Principato di Tunisia</Italian>
@@ -1411,7 +1485,7 @@
 		<Portuguese>Principado da Tunísia</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DN_COR41</Tag>
+		<Tag>TXT_KEY_DN_TUN21</Tag>
 		<English>Province of Tunisia</English>
 		<French>.</French>
 		<German>Provinz Tunesien</German>
@@ -1419,7 +1493,7 @@
 		<Spanish>.</Spanish>
 		<Portuguese>Província da Tunísia</Portuguese>
 	</TEXT>
-	<!-- Cordoba -->
+	<!-- Tunesia -->
 	<!-- Dutch -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT00</Tag>
@@ -5495,6 +5569,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOR04</Tag>
+		<English>Wattasid Empire</English>
+		<French>Wattasid Empire</French>
+		<German>Wattasid Empire</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_MOR05</Tag>
 		<English>Saadi Empire</English>
 		<French>Saadi Empire</French>
 		<German>Saadi Empire</German>
@@ -5503,28 +5586,19 @@
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DN_MOR05</Tag>
-		<English>Moroccan Republic</English>
-		<French>Moroccan Republic</French>
-		<German>Moroccan Republic</German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-		<Portuguese></Portuguese>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_DN_MOR06</Tag>
-		<English>Placeholder Error</English>
-		<French>Placeholder Error</French>
-		<German>Placeholder Error</German>
+		<English>Alaouite Empire</English>
+		<French>Alaouite Empire</French>
+		<German>Alaouite Empire</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOR07</Tag>
-		<English>Placeholder Error</English>
-		<French>Placeholder Error</French>
-		<German>Placeholder Error</German>
+		<English>Moroccan Republic</English>
+		<French>Moroccan Republic</French>
+		<German>Moroccan Republic</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
@@ -5549,18 +5623,18 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOR10</Tag>
-		<English>Province of Mauretania</English>
-		<French>Province of Mauretania</French>
-		<German>Province of Mauretania</German>
+		<English>Exarchate of Mauretania</English>
+		<French>Exarchate of Mauretania</French>
+		<German>Exarchate of Mauretania</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOR11</Tag>
-		<English>Protectorate of Morocco</English>
-		<French>Protectorate of Morocco</French>
-		<German>Protectorate of Morocco</German>
+		<English>Duchy of Morocco</English>
+		<French>Duchy of Morocco</French>
+		<German>Duchy of Morocco</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
@@ -5576,45 +5650,45 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOR13</Tag>
-		<English>Protectorate of Morocco</English>
-		<French>Protectorate of Morocco</French>
-		<German>Protectorate of Morocco</German>
+		<English>Viceroyalty of Morocco</English>
+		<French>Viceroyalty of Morocco</French>
+		<German>Viceroyalty of Morocco</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOR14</Tag>
-		<English>Norse Maghreb</English>
-		<French>Norse Maghreb</French>
-		<German>Norse Maghreb</German>
+		<English>Maghreb Jarldom</English>
+		<French>Maghreb Jarldom</French>
+		<German>Maghreb Jarldom</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOR15</Tag>
-		<English>Venetian Maghreb</English>
-		<French>Venetian Maghreb</French>
-		<German>Venetian Maghreb</German>
+		<English>Colony of Morocco</English>
+		<French>Colony of Morocco</French>
+		<German>Colony of Morocco</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOR16</Tag>
-		<English>Russian Maghreb</English>
-		<French>Russian Maghreb</French>
-		<German>Russian Maghreb</German>
+		<English>Guberniya of Morocco</English>
+		<French>Guberniya of Morocco</French>
+		<German>Guberniya of Morocco</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOR17</Tag>
-		<English>German Maghreb</English>
-		<French>German Maghreb</French>
-		<German>German Maghreb</German>
+		<English>Maghreb March</English>
+		<French>Maghreb March</French>
+		<German>Maghreb March</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
@@ -5639,30 +5713,39 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOR20</Tag>
-		<English>Principality of Maghreb</English>
-		<French>Principality of Maghreb</French>
-		<German>Principality of Maghreb</German>
+		<English>Eyalet of Morocco</English>
+		<French>Eyalet of Morocco</French>
+		<German>Eyalet of Morocco</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOR21</Tag>
-		<English>Province of Maghreb</English>
-		<French>Province of Maghreb</French>
-		<German>Province of Maghreb</German>
+		<English>Province of Morocco</English>
+		<French>Province of Morocco</French>
+		<German>Province of Morocco</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOR22</Tag>
-		<English>Alaouite Empire</English>
-		<French>Alaouite Empire</French>
-		<German>Alaouite Empire</German>
+		<English>Principality of Morocco</English>
+		<French>Principality of Morocco</French>
+		<German>Principality of Morocco</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_MOR23</Tag>
+		<English>Kingdom of Mauretania</English>
+		<French>Kingdom of Mauretania</French>
+		<German>Kingdom of Mauretania</German>
+		<Italian>Kingdom of Mauretania</Italian>
+		<Spanish>Kingdom of Mauretania</Spanish>
+		<Portuguese>Kingdom of Mauretania</Portuguese>
 	</TEXT>
 	<!-- Morocco -->
 	<!-- Novgorod -->

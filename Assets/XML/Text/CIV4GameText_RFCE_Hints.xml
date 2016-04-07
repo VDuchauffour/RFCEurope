@@ -7,7 +7,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_1</Tag>
-		<English>To hire a mercenary, click on the "axe" icon in the upper left hand side of the screen</English>
+		<English>To hire a mercenary, click on the "axe" icon in the upper left hand side of the screen.</English>
 		<French>Pour engager un mercenaire, cliquez sur la hache dans la partie sup&#233;rieure gauche de l'&#233;cran.</French>
 		<German>Um einen Söldner anzuheuern, klickt auf das Axt-Symbol in der oberen linken Ecke des Bildschirms.</German>
 		<Italian>Per assoldare dei mercenari clicca sull'icona a forma di "ascia" in alto a sinistra, sullo schermo.</Italian>
@@ -16,7 +16,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_2</Tag>
-		<English>If you can read any of French, German, Italian, Spanish or Portuguese, you could help us translate this mod into that language</English>
+		<English>If you can read any of French, German, Italian, Spanish or Portuguese, you could help us translate this mod into that language.</English>
 		<French></French>
 		<German>Falls ihr des Französischen, Deutschen, Italienischen, Spanischen oder Russischen mächtig seid, könnt ihr uns helfen diese Mod in die entsprechende Sprache zu übersetzen</German>
 		<Italian></Italian>
@@ -25,7 +25,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_3</Tag>
-		<English>Combining more oppressive civics with more liberal ones will result in a stability penalty</English>
+		<English>Combining more oppressive civics with more liberal ones will result in a stability penalty.</English>
 		<French>Si vous passez d'une doctrine autoritaire &#233; la d&#233;mocratie, votre empire conna&#233;tra une p&#233;riode d'instabilit&#233;.</French>
 		<German>Die Kombination von gewaltsamen mit liberalen Gesellschaftsformen führt zu Stabilitätsverlusten.</German>
 		<Italian>Passare da una forma di governo autoritaria alla democrazia causer&#224; un periodo di instabilit&#224;.</Italian>
@@ -34,7 +34,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_4</Tag>
-		<English>You can check the parameters influencing your stability in the Financial Advisor</English>
+		<English>You can check the parameters influencing your stability in the Financial Advisor.</English>
 		<French>Vous pouvez consulter les param&#233;tres qui influencent votre stabilit&#233; dans l'&#233;cran du conseiller financier.</French>
 		<German>Im Finanzberater könnt Ihr die für eure Stabilität entscheidenden Parameter überprüfen</German>
 		<Italian>Puoi controllare i parametri che influenzano la tua stabilit&#224; nella schermata del consigliere economico.</Italian>
@@ -43,7 +43,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_5</Tag>
-		<English>RFC Europe is based on Rhye's and Fall of Civilization</English>
+		<English>RFC Europe is based on Rhye's and Fall of Civilization. You can visit the official site for the original mod at http://rhye.civfanatics.net</English>
 		<French>RFC Europe est bas&#233; de Rhye's and Fall of Civilization</French>
 		<German>RFC Europe basiert auf Rhye's and Fall of Civilization</German>
 		<Italian></Italian>
@@ -52,7 +52,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_6</Tag>
-		<English>In RFC Europe, nothing can keep you safe from plagues</English>
+		<English>In RFC Europe plagues are often fatal, and nothing can keep you safe from them.</English>
 		<French>Dans RFC Europe, rien ne pourra vous prot&#233;ger de la peste.</French>
 		<German>In RFC Europe schützt euch nichts vor der Pest</German>
 		<Italian>Scoprendo la medicina sarai al sicuro dalla peste.</Italian>
@@ -61,7 +61,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_7</Tag>
-		<English>For RFC Europe discussions, visit the official site for "Rhye's and Fall" at http://rhye.civfanatics.net and go to the modmod forum</English>
+		<English>For RFC Europe discussions and lots of additional information about RFCE visit the mod forum at Civfanatics: http://forums.civfanatics.com/forumdisplay.php?f=386</English>
 		<French>Visitez le site officiel de "Rhye's and Fall" sur http://rhye.civfanatics.net (site en anglais).</French>
 		<German>Zum Diskutieren von RFC Europe besucht die offizielle "Rhye's and Fall"-Website unter http://rhye.civfanatics.net und wechselt ins modmod Forum.</German>
 		<Italian>Visita il sito ufficiale di "Rhye's and Fall" all'indirizzo http://rhye.civfanatics.net</Italian>
@@ -70,7 +70,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_8</Tag>
-		<English>In RFC Europe contacts are permanent and all Catholic nations establish contact with the Pope upon conversion</English>
+		<English>In RFC Europe contacts are permanent and all nations establish contact with the Pope when Catholicism first spread to their cities.</English>
 		<French></French>
 		<German>In RFC Europe sind Kontakte permanent und all katholischen Zivilisationen stellen bei der Konvertierung den Kontakt zum Papst her</German>
 		<Italian></Italian>
@@ -79,7 +79,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_9</Tag>
-		<English>Embassies have been removed from RFC Europe.</English>
+		<English>Embassies have been removed from RFC Europe, all contacts are permanent in the mod.</English>
 		<French></French>
 		<German>Botschaften wurden aus RFC Europe entfernt.</German>
 		<Italian></Italian>
@@ -97,7 +97,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_11</Tag>
-		<English>Hungarian Vegvars are excellent defensive buildings, damaging all enemy units within 2 tiles of the city</English>
+		<English>Hungarian Végvárs are excellent defensive buildings, damaging all enemy units within 2 tiles of the city.</English>
 		<French></French>
 		<German>Ungarische Vegvars sind exzellente Verteidigungsgebäude, durch die feindliche Einheiten in einem 2x2 Quadrat um die Stadt beschädigt werden.</German>
 		<Italian></Italian>
@@ -106,7 +106,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_12</Tag>
-		<English>Janissaries were the elite guards of the Ottoman Sultans and were drafted from the conquered Christian population in the Empire</English>
+		<English>Janissaries were the elite guards of the Ottoman Sultans and were drafted from the conquered Christian population in the Empire.</English>
 		<French></French>
 		<German>Janitscharen waren die Elitegardisten des Osmanischen Sultans und wurden aus der eroberten christlichen Bevölkerung rekrutiert</German>
 		<Italian></Italian>
@@ -115,7 +115,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_13</Tag>
-		<English>The only way in and out of the Black Sea is via the Bosporus near Constantinople (Istanbul)</English>
+		<English>The only way in and out of the Black Sea is via the Bosporus near Constantinople (Istanbul).</English>
 		<French></French>
 		<German>Der einzige Zugang zum Schwarzen Meer ist über den Bosporus nahe Konstantinopel (Istanbul)</German>
 		<Italian></Italian>
@@ -133,7 +133,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_15</Tag>
-		<English>Plague can spread in many ways - through trade routes, along roads and between neighbouring cities</English>
+		<English>Plague can spread in many ways - through trade routes, along roads and between neighbouring cities.</English>
 		<French>La peste peut se propager de nombreuses fa&#233;ons. Elle peut &#233;tre apport&#233;e par les routes commerciales, les routes et les villes voisines.</French>
 		<German>Die Pest kann sich auf viele Arten ausbreiten - über Handelswege, Straßen und zwischen benachbarten Städten.</German>
 		<Italian>La peste si pu&#242; diffondere in molti modi: attraverso rotte commerciali, lungo le strade e tra citt&#224; confinanti.</Italian>
@@ -142,7 +142,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_16</Tag>
-		<English>The civilization you choose to play affects your difficulty every bit as much as the difficulty level you choose. Make sure to pick a civ that suits your playing style and your level of expertise</English>
+		<English>The civilization you choose to play affects your difficulty every bit as much as the difficulty level you choose. Make sure to pick a civ that suits your playing style and your level of expertise.</English>
 		<French>La difficult&#233; du jeu d&#233;pend tout autant du niveau de difficult&#233; s&#233;lectionn&#233; que de la civilisation avec laquelle vous jouez. Veillez &#233; choisir une civilisation qui correspond &#233; votre fa&#233;on de jouer et &#233; votre niveau d'exp&#233;rience.</French>
 		<German>Neben dem eingestellten Schwierigkeitsgrad wirkt sich auch die Wahl der Zivilisation auf das Schwierigkeitsniveau dieser Partie aus. Achtet deshalb darauf, eine Zivilisation zu wählen, die Eurem Spielstil und Eurem Erfahrungsstand entspricht.</German>
 		<Italian>La civilt&#224; che scegli influenza la difficolt&#224; tanto quanto il livello di difficolt&#224; che hai scelto. Assicurati di selezionare una civilt&#224; che sia adatta al tuo stile di gioco e al tuo livello di esperienza.</Italian>
@@ -160,7 +160,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_18</Tag>
-		<English>You can declare war on independent states and minor civs only by moving your units into their territory.</English>
+		<English>You can declare war on independent states and minor civs simply by moving your units into their territory.</English>
 		<French>Vous ne pouvez d&#233;clarer la guerre aux &#233;tats ind&#233;pendants et aux petites civilisations qu'en envoyant des unit&#233;s sur leur territoire.</French>
 		<German>Ihr könnt unabhängigen Staaten und unbedeutenderen Zivilisationen nur dadurch den Krieg erklären, dass Ihr Einheiten in ihr Territorium einmarschieren lässt.</German>
 		<Italian>Puoi dichiarare guerra agli stati indipendenti e alle civilt&#224; minori solo facendo entrare le tue unit&#224; nel loro territorio.</Italian>
@@ -196,7 +196,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_22</Tag>
-		<English>Keep track of the current year, this mod spans 500AD - 1800AD in 500 turns.</English>
+		<English>Keep track of the current year, this mod spans from 500 AD to 1800 AD in 500 turns.</English>
 		<French></French>
 		<German>Behaltet das aktuelle Jahr im Auge, diese Mod erstreckt sich von 500 n.Chr. bis 1800 n.Chr. in 500 Runden.</German>
 		<Italian></Italian>
@@ -214,7 +214,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_24</Tag>
-		<English>Combining Religious Law and Religious Tolerance (Free Religion) is not a good idea.</English>
+		<English>Combining Religious Law and Religious Tolerance is not a good idea.</English>
 		<French>Il est d&#233;conseill&#233; d'instaurer la libert&#233; d'expression dans un &#233;tat policier.</French>
 		<German>Die Kombination von Kirchenrecht und Religionsfreiheit ist keine gute Idee.</German>
 		<Italian>Combinare lo stato di polizia con la libert&#224; di parola non &#232; una buona idea.</Italian>
@@ -250,7 +250,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_28</Tag>
-		<English>RFC Europe introduces many wonders which correspond to the time period and the nations not included in standard Civilization</English>
+		<English>RFC Europe introduces many wonders which correspond to the time period and the nations not included in standard Civilization.</English>
 		<French></French>
 		<German>RFC Europe führt viele zetigenössischen Wunder und Zivilisationen ein, die im normalen Civilization nicht vorhanden sind</German>
 		<Italian></Italian>
@@ -268,7 +268,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_30</Tag>
-		<English>In RFC you can hire out one of your units as a Mercenary by clicking on the button with the hand symbol on it in the unit actions interface, and another civ may hire it. This is disabled in RFCE, because it wouldn't fit in the theme of a medieval European mod.</English>
+		<English>While in RFC you can hire out one of your units as a Mercenary and another civ may hire it, this feature is disabled in RFCE. In our mod all potential mercenaries come from a global mercenary pool instead.</English>
 		<French>Vous pouvez louer les services de l'une de vos unit&#233;s comme mercenaire. Pour cela, cliquez sur la main dans sa fen&#233;tre d'action. Une autre civilisation pourra alors l'engager.</French>
 		<German>Ihr könnt eine Eurer Einheiten als Söldner verdingen, indem Ihr den Button mit dem Hand-Symbol im Einheitenaktionsmenü anklickt. Anschließend kann sie von anderen Zivilisationen angeheuert werden.</German>
 		<Italian>Puoi affittare una delle tue unit&#224; come mercenari cliccando sul pulsante con il simbolo della mano, nell'interfaccia delle azioni delle unit&#224;. Potrebbe essere ingaggiata da un'altra civilt&#224;.</Italian>
@@ -277,7 +277,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_31</Tag>
-		<English>If you like the mod, and if you have any ideas to improve it, or you just have a bug to report, make sure to check out the development forum at CivFanatics.com.</English>
+		<English>If you have have a bug to report, have any ideas how to improve the mod, or just simply like RFCE, make sure to check out the development forum at CivFanatics.com.</English>
 		<French>Si le mod vous pla&#233;t et que vous avez des id&#233;es pour l'am&#233;liorer, ou simplement un bug &#233; signaler, pensez &#233; consulter le forum de d&#233;veloppement sur CivFanatics.com.</French>
 		<German>Wenn Ihr die Mod mögt und Verbesserungsvorschläge habt oder einen Bug melden wollt, besucht das Entwicklerforum unter CivFanatics.com.</German>
 		<Italian>Se ti piace questo mod e hai delle idee per migliorarlo, o anche se devi semplicemente segnalare un problema, assicurati di controllare il forum di sviluppo su CivFanatics.com.</Italian>
@@ -304,7 +304,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_34</Tag>
-		<English>Check the files in the Reference folder for details on the new features in RFCE</English>
+		<English>Check the files in the Reference folder for details on some of the new features in RFCE.</English>
 		<French></French>
 		<German>Schaut euch die Dateien im Reference Verzeichnis an um Details und Eigenschaften von RFC Europe zu erhalten</German>
 		<Italian></Italian>
@@ -313,7 +313,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_35</Tag>
-		<English>In Rhye's and Fall of Civilization and RFC Europe, camera flying mode hotkey has changed to [CTRL + F]</English>
+		<English>In Rhye's and Fall of Civilization and RFC Europe, camera flying mode hotkey has changed to [CTRL + F].</English>
 		<French>Dans Rhye's and Fall of Civilization, le raccourci pour activer la cam&#233;ra libre est [CTRL + F].</French>
 		<German>In Rhye's and Fall of Civilization und RFC Europe ist die Schnelltaste für den Kameraflugmodus [STRG + F]</German>
 		<Italian>In Rhye's and Fall la combinazione di tasti per la selezione rapida della visuale dall'alto &#232; diventata [CTRL + F]</Italian>
@@ -322,7 +322,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_36</Tag>
-		<English>RFC Europe has many new terrain types and resources</English>
+		<English>RFC Europe has many new terrain types and resources, to be able to better represent medieval Europe in the mod.</English>
 		<French></French>
 		<German>RFC Europe beinhaltet viele neuen Landschaftstypen und Resourcen</German>
 		<Italian></Italian>
@@ -331,7 +331,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_37</Tag>
-		<English>RFC Europe has a completely reworked tech tree</English>
+		<English>RFC Europe has a completely reworked mod-specific technology tree, with lots of new techs from the Middle Ages.</English>
 		<French></French>
 		<German>RFC Europe besitzt einen vollständig überarbeiteten Technologiebaum</German>
 		<Italian></Italian>
@@ -349,7 +349,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_39</Tag>
-		<English>RFC Europe has several new unit types which change the combat mechanics.</English>
+		<English>RFC Europe has several new unit types which significantly change the combat mechanics.</English>
 		<French>Dans Rhye's and Fall of Civilization, les effets de beaucoup de merveilles ont &#233;t&#233; modifi&#233;s.</French>
 		<German>RFC Europe enthält mehrere neue Einheitentypen die die Kampfmechanik verändern.</German>
 		<Italian>In Rhye's and Fall sono stati cambiati gli effetti di molte Grandi Meraviglie.</Italian>
@@ -358,7 +358,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_40</Tag>
-		<English>You can do religious prosecutions with the Prosecutor unit</English>
+		<English>You can do religious persecutions with the Prosecutor unit. Having many foreign religions in your cities will hurt your stability severely, so use them!</English>
 		<French>Les unit&#233;s militaires azt&#233;ques peuvent asservir les unit&#233;s ennemies vaincues.</French>
 		<German>Ihr könnt religöse Verfolgungen mit einem Inquisitor durchführen</German>
 		<Italian>Le unit&#224; militari azteche possono schiavizzare le unit&#224; nemiche sconfitte.</Italian>
@@ -385,7 +385,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_43</Tag>
-		<English>If you are too tired to keep playing, there's always coffee...</English>
+		<English>If you feel you are too tired to keep playing, there's always coffee :)</English>
 		<French>Si vous &#234;tes trop fatigu&#233; pour continuer, il y a toujours le caf&#233;...</French>
 		<German>Falls Ihr zu müde seid um weiterzuspielen, es gibt immer Kaffee...</German>
 		<Italian>Se siete stanchi di continuare a giocare, c'è sempre il caffè...</Italian>
@@ -394,7 +394,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_44</Tag>
-		<English>Snacks are good in moderation.</English>
+		<English>RNG can be a b*tch... so keep in mind that snacks are good in moderation :)</English>
 		<French>Les en-cas sont &#224; consommer avec mod&#233;ration.</French>
 		<German>Snacks in Maßen schaden nicht!</German>
 		<Italian>Gli spuntini sono buoni con moderazione.</Italian>
@@ -412,7 +412,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_46</Tag>
-		<English>If you hold down the "Ctrl" key while hovering over the map, you can highlight the province's borders.</English>
+		<English>If you hold down the "Ctrl" key while hovering over the map, you can highlight the provinces' borders.</English>
 		<French>.</French>
 		<German>Wenn Ihr bei gedrückter [Strg]-Taste über die Landkarte gleitet, könnt Ihr die Provinzgrenzen hervorheben.</German>
 		<Italian>.</Italian>
@@ -430,7 +430,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_48</Tag>
-		<English>Press the "Ctrl" key and hover over the tile to see which Province it is.</English>
+		<English>Press the "Ctrl" key and hover over a tile to see which Province it is in.</English>
 		<French>.</French>
 		<German>Drückt die [Strg]-Taste und bewegt den Mauszeiger über die einzelnen Felder um zu sehen um welche Provinz es sich handelt.</German>
 		<Italian>.</Italian>
@@ -475,7 +475,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_53</Tag>
-		<English>Watch out for changing civics. Combining the right ones have huge advantages, but do not switch too often. Every turn of anarchy can permanently cause up to 3 stability points loss!</English>
+		<English>Watch out for changing civics. Combining the right ones have huge advantages, but do not switch too often. Every turn you spend in anarchy can permanently cause stability points loss!</English>
 		<French>.</French>
 		<German>Achtet auf den Wechsel der Gesellschaftsformen. Die Richtigen zu kombinieren hat enorme Vorteile, aber wechselt nicht zu oft. Jede Runde in Anarchie kann bis zu 3 Stabilitätspunkte permanent abziehen.</German>
 		<Italian>.</Italian>
@@ -520,7 +520,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_58</Tag>
-		<English>Stability can ruin your games if you overexpand. Watch for building as many stability boosting buildings (Manor House, Courthouse, Castle and Night Watch) as possible in all your cities.</English>
+		<English>Stability can ruin your games if you overexpand. Make sure you build as many stability boosting buildings (Manor House, Courthouse, Castle and Night Watch) as possible in all your cities.</English>
 		<French>.</French>
 		<German>Stabilität kann Ihre Partie bei Überexpansion ruinieren. Achtet darauf in all Euren Städten so viele stabilitätssteigernde Gebäude (Herrenhaus, Gericht, Burg und Nachtwache) wie nur möglich zu errichten.</German>
 		<Italian>.</Italian>
@@ -556,7 +556,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_62</Tag>
-		<English>You won't get huge diplo boost just for sharing a religion with another civ. You have to earn faith points for that.</English>
+		<English>You won't get a huge diplo boost just for sharing a religion with another civ. You have to earn faith points in the common religion to be recognized.</English>
 		<French>.</French>
 		<German>Ihr werdet keinen hohen Diplomatiebonus mit einer anderen Zivilisation erhalten nur weil Ihr dieselbe Religion habt. Dafür müsst Ihr Glaubenspunkte sammeln.</German>
 		<Italian>.</Italian>
@@ -565,7 +565,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_63</Tag>
-		<English>The scrolling image in the opening screen of RFCE is the Bayeux Tapestry, in case you were wondering.</English>
+		<English>The scrolling image in the loading screen of RFCE is the Bayeux Tapestry, in case you were wondering.</English>
 		<French>.</French>
 		<German>Das Panoramabild im Öffnungsbildschirm von RFC Europe ist der "Teppich von Bayeux" - nur falls Ihr euch wundert.</German>
 		<Italian>.</Italian>
@@ -573,8 +573,116 @@
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HINT_RFCE_64</Tag>
+		<English>Be sure to check out the Colony Screen - you can find it in the Info Screen (F9) - and follow the progress of European dominance throughout the World!</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HINT_RFCE_65</Tag>
+		<English>Open the victory screen to view more detailed information about your civ's Unique Historical Victory.</English>
+		<French>Open the victory screen to view more detailed information about your civ's Unique Historical Victory.</French>
+		<German>Open the victory screen to view more detailed information about your civ's Unique Historical Victory.</German>
+		<Italian>Open the victory screen to view more detailed information about your civ's Unique Historical Victory.</Italian>
+		<Spanish>Open the victory screen to view more detailed information about your civ's Unique Historical Victory.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HINT_RFCE_66</Tag>
+		<English>In RFCE the following straits are passable by both naval and land units: Oresund, Bosporus, Dardanelles</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HINT_RFCE_67</Tag>
+		<English>In RFCE diagonally connected land tiles are passable for naval units too. The narrow straits of Bosporus, Dardanelles, Oresund are represented this way, also this makes naval movement more realistic between small groups of islands.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HINT_RFCE_68</Tag>
+		<English>Naval units can pass foreign territory without signing open borders with the owner or declaring war on them!</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HINT_RFCE_69</Tag>
+		<English>Sleep is for the weak! RFCE is for the bold! Your choice...</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HINT_RFCE_70</Tag>
+		<English>Yeah, I can get behind this. Just load back your game, it's not that late. You will sleep tomorrow. Or next week. No prob.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HINT_RFCE_71</Tag>
+		<English>Your nation needs you more than ever, don't dare to leave your people alone until history proves your choices right!</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HINT_RFCE_72</Tag>
+		<English>You know you shouldn't continue playing. Yeah, I'm talking to you, no more "just one more turn". Seriously, stop... you have work to do!</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HINT_RFCE_73</Tag>
+		<English>The opening image of the mod is depicting the fall of Acre in 1291 by Dominique Papety (Guillaume de Clermont defending the walls at the Siege of Acre, 1291), in case you were wondering.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HINT_RFCE_74</Tag>
+		<English>Under most religious civics your nation's stability highly depends on your religious unity. So try not to keep multiple religions in your cities unless you run Religious Tolerance; use those Prosecutors!</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HINT_RFCE_75</Tag>
+		<English>If you hold down the "Shift" key while hovering over the map, you can check all civilizations' spawn zones. Same with the "Alt" key and respawn zones. Take a look before you decide where to expand!</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_1</Tag>
-		<English>Use your mouse wheel to zoom</English>
+		<English>Use your mouse wheel to zoom.</English>
 		<French>Utilisez la molette de la souris pour zoomer.</French>
 		<German>Dreht das Mausrad zum zoomen.</German>
 		<Italian>Usa la rotellina del mouse per zoomare...</Italian>
@@ -808,7 +916,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_28</Tag>
-		<English>Press [CTRL + T] to toggle the Tile Grid</English>
+		<English>Press [CTRL + T] to toggle the Tile Grid.</English>
 		<French>Appuyez sur [CTRL + T] pour afficher ou masquer la grille.</French>
 		<German>Blendet das Geländeraster mit [STRG + T] ein/aus.</German>
 		<Italian>Premi [CTRL + T] per attivare la griglia delle caselle...</Italian>
@@ -1137,15 +1245,6 @@
 		<German>Drückt [STRG + H] um alle verwundeten Einheiten auf einem Geländefeld zu markieren.</German>
 		<Italian>Premi [CTRL + H] per selezionare tutte le unit&#224; ferite sulla casella.</Italian>
 		<Spanish>Pulsa [CTRL + H] para seleccionar todas las unidades heridas en una casilla.</Spanish>
-		<Portuguese>.</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HINT_INTERFACE_68</Tag>
-		<English>Open the victory screen to view more detailed information about the Unique Historical Victory.</English>
-		<French>Open the victory screen to view more detailed information about the Unique Historical Victory.</French>
-		<German>Open the victory screen to view more detailed information about the Unique Historical Victory.</German>
-		<Italian>Open the victory screen to view more detailed information about the Unique Historical Victory.</Italian>
-		<Spanish>Open the victory screen to view more detailed information about the Unique Historical Victory.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 </Civ4GameText>

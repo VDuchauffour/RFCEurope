@@ -212,9 +212,6 @@
 			<Description>TXT_KEY_HINT_INTERFACE_67</Description>
 		</HintInfo>
 		<HintInfo>
-			<Description>TXT_KEY_HINT_INTERFACE_68</Description>
-		</HintInfo>
-		<HintInfo>
 			<Description>TXT_KEY_HINT_RFCE_1</Description>
 		</HintInfo>
 		<HintInfo>
@@ -399,6 +396,42 @@
 		</HintInfo>
 		<HintInfo>
 			<Description>TXT_KEY_HINT_RFCE_63</Description>
+		</HintInfo>
+		<HintInfo>
+			<Description>TXT_KEY_HINT_RFCE_64</Description>
+		</HintInfo>
+		<HintInfo>
+			<Description>TXT_KEY_HINT_RFCE_65</Description>
+		</HintInfo>
+		<HintInfo>
+			<Description>TXT_KEY_HINT_RFCE_66</Description>
+		</HintInfo>
+		<HintInfo>
+			<Description>TXT_KEY_HINT_RFCE_67</Description>
+		</HintInfo>
+		<HintInfo>
+			<Description>TXT_KEY_HINT_RFCE_68</Description>
+		</HintInfo>
+		<HintInfo>
+			<Description>TXT_KEY_HINT_RFCE_69</Description>
+		</HintInfo>
+		<HintInfo>
+			<Description>TXT_KEY_HINT_RFCE_70</Description>
+		</HintInfo>
+		<HintInfo>
+			<Description>TXT_KEY_HINT_RFCE_71</Description>
+		</HintInfo>
+		<HintInfo>
+			<Description>TXT_KEY_HINT_RFCE_72</Description>
+		</HintInfo>
+		<HintInfo>
+			<Description>TXT_KEY_HINT_RFCE_73</Description>
+		</HintInfo>
+		<HintInfo>
+			<Description>TXT_KEY_HINT_RFCE_74</Description>
+		</HintInfo>
+		<HintInfo>
+			<Description>TXT_KEY_HINT_RFCE_75</Description>
 		</HintInfo>
 	</HintInfos>
 </Civ4Hints>

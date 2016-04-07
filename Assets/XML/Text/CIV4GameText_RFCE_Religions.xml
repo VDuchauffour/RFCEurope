@@ -193,11 +193,47 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REFORMATION_MESSAGE</Tag>
-		<English>The invention of the Printing Press has sparked a wave of new doctrines. Protestant churches are opposing the power of the Pope over Christian affairs. Shall we embrace the Reformation? (All our Catholic cities and buildings will be converted to the new religion)</English>
+		<English>The invention of the Printing Press has sparked a wave of new doctrines. Protestant churches are opposing the power of the Pope over Christian affairs. Shall we embrace the Reformation? (More of our Catholic cities and buildings will be converted to the new religion, Protestantism will be your new State Religion)</English>
 		<French>L'invention de l'imprimerie a suscité&#233; une r&#233;formation du Catholicisme. Allons-nous accepter cette r&#233;forme ? Toutes nos villes Catholique seront automatiquement convertie.</French>
 		<German>Die Erfindung des Buchdrucks entfachte eine Welle von Glaubenslehren. Protestantische Kirchen traten der Macht des Papstes wegen christlicher Skandale entgegen. Sollen wir den Protestantismus annehmen? Sämtliche unserer katholischen Städte werden konvertiert werden.</German>
 		<Italian>L'invenzione della Stampa ha fatto diffondere nuove dottrine. Chiese Protestanti si stanno opponendo al potere del Papa. Dobbiamo appoggiare la Riforma? (Tutti gli edifici e le città Cattolici verrano convertiti in Protestanti)</Italian>
 		<Spanish>The invention of the Printing Press has sparked a Reformation of Catholicism. Shall we embrace Protestantism? All our Catholic cities will be converted.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REFORMATION_RELIGION_STILL_SPREAD</Tag>
+		<English>Despite our pro-Catholic policies, [COLOR_HIGHLIGHT_TEXT]Protestantism[COLOR_REVERT] has spread in %s1!</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_1</Tag>
+		<English>The vast majority of Catholic people in %s1 chose to follow Protestantism, Catholicism is no longer present in the city!</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_2</Tag>
+		<English>Not that we care too much about those infidels, but the vast majority of Catholics in %s1 chose to follow Protestantism. Catholicism is no longer present in the city!</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_3</Tag>
+		<English>Not that we care too much about those heretics, but the vast majority of Catholics in %s1 chose to follow Protestantism. Catholicism is no longer present in the city!</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -419,6 +455,15 @@
 	<TEXT>
 		<Tag>TXT_KEY_MESSAGE_JEWISH_MOVE</Tag>
 		<English>The Jews from %s1_city established a new home in a distant city!</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_JEWISH_MOVE_OWN_CITY</Tag>
+		<English>The Jews from %s1_city established a new home in %s2_city!</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>

@@ -307,6 +307,7 @@ public:
 	void changeCoastalTradeRoutes(int iChange);
 	int getTradeRoutes();
 	int getConversionTimer();
+	void setConversionTimer(int iNewValue); // Absinthe
 	int getRevolutionTimer();
 
 	bool isStateReligion();
@@ -334,6 +335,7 @@ public:
 	bool isMinorCiv();
 	bool isAlive();
 	bool isEverAlive();
+	void setAlive( bool bNewValue ); // Absinthe
 	bool isExtendedGame();
 	bool isFoundedFirstCity();
 
@@ -581,8 +583,12 @@ public:
 	bool provinceIsSpreadReligion( int iProvince, int iReligion );
 	bool provinceIsConvertReligion( int iProvince, int iReligion );
 
-	bool getRespawned();
-	void setRespawned( bool bNewValue );
+	// Absinthe: respawn status
+	bool getRespawnedAlive();
+	void setRespawnedAlive( bool bNewValue );
+
+	bool getEverRespawned();
+	void setEverRespawned( bool bNewValue );
 
 	void setForcedHistoricityUnitProduction( int iNewValue );
 	int getForcedHistoricityUnitProduction() const;

@@ -354,6 +354,7 @@ class Crusades:
 			pPlayer = gc.getPlayer( iHuman )
 			pPlayer.setIsCrusader( False )
 			pPlayer.changeFaith( - min( 5, pPlayer.getFaith() ) )
+			CyInterface().addMessage(iHuman, True, con.iDuration, CyTranslator().getText("TXT_KEY_CRUSADE_DENY_FAITH", ()), "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
 			gc.getPlayer( con.iPope ).AI_changeMemoryCount( iHuman, MemoryTypes.MEMORY_REJECTED_DEMAND, 2 )
 			#3Miro: put penalty for not going to the crusade
 
