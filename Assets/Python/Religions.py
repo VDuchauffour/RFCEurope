@@ -285,7 +285,7 @@ class Religions:
 								pPlayer.changeGold( iGift )
 								if ( utils.getHumanID() == i ):
 									sText = CyTranslator().getText("TXT_KEY_FAITH_GIFT", ())
-									CyInterface().addMessage(i, True, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iOrange), -1, -1, True, True)
+									CyInterface().addMessage(i, True, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iBlue), -1, -1, True, True)
 								break
 
 		# free religious building every 11 turns
@@ -486,7 +486,7 @@ class Religions:
 			gc.getPlayer( iPlayer ).changeFaith( 1 )
 			if ( utils.getHumanID() == iPlayer ):
 				sText = CyTranslator().getText("TXT_KEY_FAITH_BUILDING1", ()) +" " + gc.getBuildingInfo( iBuilding ).getDescription() + " " + CyTranslator().getText("TXT_KEY_FAITH_BUILDING2", ()) + " " + city.getName()
-				CyInterface().addMessage(iPlayer, True, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iOrange), -1, -1, True, True)
+				CyInterface().addMessage(iPlayer, True, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iBlue), -1, -1, True, True)
 
 ##REFORMATION
 

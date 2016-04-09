@@ -73,7 +73,9 @@ Changes for RFCE 1.4:
 		- Fixed issue where some AI civs would switch back from Protestantism right away / as soon as it was possible
 		- Fixed critical bug which resulted in some weird cases where masters and vassals were not mutually at war with an enemy
 		- Fixed issue where you couldn't declare war on indies and barbs in first 5 turns
-		- Fixed issue when trying to remove a bonus resource from a plot if there wasn't any
+		- Fixed issue which appeared if the game was trying to remove a bonus resource from a plot when there wasn't any
+		- Fixed inconsistencies with the Scottish UP - will work against major civs and indies, but not against barbarians
+		- Fixed issue with Venetian naval units' starting position
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

@@ -825,7 +825,7 @@ class RiseAndFall:
 		if(pPlot.isCity()):
 			# Apologize from the player:
 			msgString = CyTranslator().getText("TXT_KEY_REDUCE_CITY_1", ()) + " " + pPlot.getPlotCity().getName() + " " + CyTranslator().getText("TXT_KEY_REDUCE_CITY_2", ())
-			CyInterface().addMessage(pPlot.getPlotCity().getOwner(), True, con.iDuration, msgString, "", 0, "", ColorTypes(con.iLightRed), tPlot[0], tPlot[1], True, True)
+			CyInterface().addMessage(pPlot.getPlotCity().getOwner(), True, con.iDuration, msgString, "", 0, "", ColorTypes(con.iOrange), tPlot[0], tPlot[1], True, True)
 
 			pPlot.eraseCityDevelopment()
 			pPlot.setImprovementType(xml.iImprovementTown) # Improvement Town instead of the city
@@ -1423,7 +1423,7 @@ class RiseAndFall:
 		#		utils.flipUnitsInCityAfter(tCoords, iOwner)
 		#		utils.flipUnitsInArea((tCoords[0]-2, tCoords[1]-2), (tCoords[0]+2, tCoords[1]+2), iDeadCiv, iOwner, True, False)
 
-		CyInterface().addMessage(iHuman, True, con.iDuration, (CyTranslator().getText("TXT_KEY_INDEPENDENCE_TEXT", (pDeadCiv.getCivilizationAdjectiveKey(),))), "", 0, "", ColorTypes(con.iGreen), -1, -1, True, True)
+		CyInterface().addMessage(iHuman, True, con.iDuration, (CyTranslator().getText("TXT_KEY_INDEPENDENCE_TEXT", (pDeadCiv.getCivilizationAdjectiveKey(),))), "", 0, "", ColorTypes(con.iDarkPink), -1, -1, True, True)
 		#if (bHuman == True):
 		#	self.rebellionPopup(iDeadCiv)
 		if ( lSuppressList[iHuman] == 2 or lSuppressList[iHuman] == 3 or lSuppressList[iHuman] == 4 ):
@@ -2159,7 +2159,7 @@ class RiseAndFall:
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
 			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 1)
 			utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 1)
-			tSeaPlot = self.findSeaPlots(tPlot, 2)
+			tSeaPlot = self.findSeaPlots((57,35), 2)
 			if ( tSeaPlot ):
 				utils.makeUnit(xml.iWorkboat, iCiv, tSeaPlot, 1 )
 				pVenecia.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
@@ -2294,7 +2294,7 @@ class RiseAndFall:
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
 			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 4)
 			utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
-			tSeaPlot = self.findSeaPlots((71,64), 2)
+			tSeaPlot = self.findSeaPlots((69,65), 2)
 			if ( tSeaPlot ):
 				utils.makeUnit(xml.iWorkboat, iCiv, tSeaPlot, 1 )
 				pSweden.initUnit(xml.iWarGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ESCORT_SEA, DirectionTypes.DIRECTION_SOUTH)

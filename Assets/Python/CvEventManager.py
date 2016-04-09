@@ -1000,13 +1000,13 @@ class CvEventManager:
 						iX = pCity.getX()
 						iY = pCity.getY()
 						if ConquerPlayer.isHuman():
-							CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_CAPTURED_1", (WonderName,"1")), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(i).getButton(), ColorTypes(con.iPurple), iX, iY, True, True)
+							CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_CAPTURED_1", (WonderName,"1")), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(i).getButton(), ColorTypes(con.iBlue), iX, iY, True, True)
 						else:
 							if HumanTeam.isHasMet(ConquerTeam):
-								CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_CAPTURED_2", (ConquerName,WonderName)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(i).getButton(), ColorTypes(con.iPurple), iX, iY, True, True)
+								CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_CAPTURED_2", (ConquerName,WonderName)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(i).getButton(), ColorTypes(con.iCyan), iX, iY, True, True)
 							else:
 								if HumanTeam.isHasMet(PreviousTeam):
-									CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_CAPTURED_3", (PreviousName,WonderName)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(i).getButton(), ColorTypes(con.iPurple), iX, iY, True, True)
+									CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_CAPTURED_3", (PreviousName,WonderName)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(i).getButton(), ColorTypes(con.iCyan), iX, iY, True, True)
 		# Absinthe - wonder captured message end
 
 		CvUtil.pyPrint('City Acquired and Kept Event: %s' %(pCity.getName()))

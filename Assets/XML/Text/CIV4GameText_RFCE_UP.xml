@@ -475,12 +475,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_SCO2</Tag>
-		<English>When one of your cities is conquered all your other cities get free defenders. Lower stability hit from losing a city.</English>
-		<French>When one of your cities is conquered all your other cities get free defenders. Lower stability hit from losing a city.</French>
-		<German>When one of your cities is conquered all your other cities get free defenders. Lower stability hit from losing a city.</German>
-		<Italian>When one of your cities is conquered all your other cities get free defenders. Lower stability hit from losing a city.</Italian>
-		<Spanish>When one of your cities is conquered all your other cities get free defenders. Lower stability hit from losing a city.</Spanish>
-		<Portuguese>When one of your cities is conquered all your other cities get free defenders. Lower stability hit from losing a city.</Portuguese>
+		<English>When one of your cities is conquered by a non-barbarian civilization, all your other cities get free defenders. Lower stability hit from losing a city.</English>
+		<French>When one of your cities is conquered by a non-barbarian civilization, all your other cities get free defenders. Lower stability hit from losing a city.</French>
+		<German>When one of your cities is conquered by a non-barbarian civilization, all your other cities get free defenders. Lower stability hit from losing a city.</German>
+		<Italian>When one of your cities is conquered by a non-barbarian civilization, all your other cities get free defenders. Lower stability hit from losing a city.</Italian>
+		<Spanish>When one of your cities is conquered by a non-barbarian civilization, all your other cities get free defenders. Lower stability hit from losing a city.</Spanish>
+		<Portuguese>When one of your cities is conquered by a non-barbarian civilization, all your other cities get free defenders. Lower stability hit from losing a city.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ARG</Tag>
