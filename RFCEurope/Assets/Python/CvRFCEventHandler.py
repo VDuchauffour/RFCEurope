@@ -249,7 +249,7 @@ class CvRFCEventHandler:
 			self.up.faithUP( playerType, city )
 
 		# Absinthe: Scottish UP
-		if ( owner == iScotland and playerType < iNumPlayers ):
+		if ( owner == iScotland and playerType < con.iNumTotalPlayers ):
 			self.up.defianceUP( owner )
 
 		# Absinthe: Spread some culture of the conqueror civ to the occupied city
@@ -472,7 +472,7 @@ class CvRFCEventHandler:
 		if ( iGameTurn == xml.i1053AD ):
 			iHuman = utils.getHumanID()
 			sText = CyTranslator().getText("TXT_KEY_GREAT_SCHISM", ())
-			CyInterface().addMessage(iHuman, True, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
+			CyInterface().addMessage(iHuman, True, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iDarkPink), -1, -1, True, True)
 
 		print("3Miro: Byz Rank is: ",gc.getGame().getTeamRank(iByzantium))
 

@@ -275,7 +275,7 @@ class Victory:
 							# Absinthe: maximum 3 of your rivals declare war on you
 							iWarCounter = 0
 							iRndnum = gc.getGame().getSorenRandNum(iNumPlayers, 'civs')
-							CyInterface().addMessage(iPlayer, False, con.iDuration, CyTranslator().getText("TXT_KEY_VICTORY_RIVAL_CIVS", ()), "", 0, "", ColorTypes(con.iPurple), -1, -1, True, True)
+							CyInterface().addMessage(iPlayer, False, con.iDuration, CyTranslator().getText("TXT_KEY_VICTORY_RIVAL_CIVS", ()), "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
 							for i in range( iRndnum, iNumPlayers + iRndnum ):
 								iCiv = i % iNumPlayers
 								pCiv = gc.getPlayer(iCiv)

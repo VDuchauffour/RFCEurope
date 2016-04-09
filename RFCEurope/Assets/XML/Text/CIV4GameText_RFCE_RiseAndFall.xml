@@ -132,24 +132,6 @@
 		<Portuguese>As cidades %s1:4 declararam sua independência do domínio estrangeiro.</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_INDEPENDENCE1</Tag>
-		<English></English>
-		<French>Les villes </French>
-		<German></German>
-		<Italian>Le citt&#224; </Italian>
-		<Spanish>Las ciudades </Spanish>
-		<Portuguese>As cidades</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_INDEPENDENCE2</Tag>
-		<English>cities have declared independence from their foreign domination!</English>
-		<French>ont d&#233;clar&#233; leur ind&#233;pendance par rapport &#224; la domination &#233;trang&#232;re !</French>
-		<German>St&#228;dte haben ihre Unabh&#228;ngigkeit von der Fremdherrschaft erkl&#228;rt!</German>
-		<Italian>citt&#224; hanno dichiarato la propria indipendenza dal dominio straniero!</Italian>
-		<Spanish>ciudades han declarado su independencia del dominio extranjero.</Spanish>
-		<Portuguese>cidades declararam independência de seu domínio estrangeiro.</Portuguese>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_REBELLION_TITLE</Tag>
 		<English>Independence!</English>
 		<French>Ind&#233;pendance !</French>
