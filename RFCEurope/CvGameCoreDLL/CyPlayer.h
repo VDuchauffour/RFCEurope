@@ -510,6 +510,7 @@ public:
 	void forcePeace(int iPlayer);
 
 	int getSettlersMaps(int y, int x); //Rhye
+	int getWarsMaps(int y, int x); //Absinthe
 	// 3Miro: balance
 	//void setFlag(CvWString s); //Rhye
 	void setLeader(int i); //Rhye

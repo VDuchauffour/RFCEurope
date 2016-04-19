@@ -97,7 +97,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_11</Tag>
-		<English>Hungarian Végvárs are excellent defensive buildings, damaging all enemy units within 2 tiles of the city.</English>
+		<English>The Hungarian Végvár is an excellent defensive building, damaging all enemy units within 2 tiles of the city.</English>
 		<French></French>
 		<German>Ungarische Vegvars sind exzellente Verteidigungsgebäude, durch die feindliche Einheiten in einem 2x2 Quadrat um die Stadt beschädigt werden.</German>
 		<Italian></Italian>
@@ -637,7 +637,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_71</Tag>
-		<English>Your nation needs you more than ever, don't dare to leave your people alone until history proves your choices right!</English>
+		<English>Your nation needs you more than ever, don't dare to leave your people alone until you reach that UHV!</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>

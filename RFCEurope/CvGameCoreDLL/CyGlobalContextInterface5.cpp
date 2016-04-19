@@ -62,20 +62,22 @@ void CyGlobalContextPythonInterface5(python::class_<CyGlobalContext>& x)
 		.def("safeMotherland", &CyGlobalContext::safeMotherland, "bool (int iCiv)") // 3Miro
 		.def("canSeeAllTerrain", &CyGlobalContext::canSeeAllTerrain, "bool (int iCiv, int iTerrain)") // 3Miro
 		.def("controlMostTeritory", &CyGlobalContext::controlMostTeritory, "bool ( int iCiv, int BLx, int BLy, int TRx, int TRy );") // 3Miro
-		.def("damageFromBuilding", &CyGlobalContext::damageFromBuilding, "void (int iPlayer, int iBuilding, int iFoeDamage, int iBarbDamage ))") // 3Miro
 
 		// Core and Normal Areas
 		.def("setCoreNormal", &CyGlobalContext::setCoreNormal, "void ( int iCiv, int iCBLx, int iCBLy, int iCTRx, int iCTRy, int iNBLx, int iNBLy, int iNTRx, int iNTRy, int iCCE, int iCNE )") // 3Miro
 		.def("addCoreException", &CyGlobalContext::addCoreException, "void (int iCiv, int x, int y)") // 3Miro
 		.def("addNormalException", &CyGlobalContext::addNormalException, "void (int iCiv, int x, int y)") // 3Miro
 
-		// stability sweep
+		// Absinthe: unused in RFCE
+	/*	// stability sweep
 		.def("calcLastOwned", &CyGlobalContext::calcLastOwned, "void ()") // 3Miro
 		.def("getlOwnedPlots", &CyGlobalContext::getlOwnedPlots, "int (int iCiv )") // 3Miro
 		.def("getlOwnedCities", &CyGlobalContext::getlOwnedCities, "int (int iCiv )") // 3Miro
 		// stability city sweep
 		.def("cityStabilityExpansion", &CyGlobalContext::cityStabilityExpansion, "int (int iPlayer, int iFCity)") // 3Miro
 		.def("cityStabilityPenalty", &CyGlobalContext::cityStabilityPenalty, "int ( int iPlayer, int iAnger, int iHealth, int iReligion, int iLarge, int iHurry, int iNoMilitary, int iWarW, int iFReligion, int iFCulture, int iPerCityCap )") // 3Miro
+		.def("damageFromBuilding", &CyGlobalContext::damageFromBuilding, "void (int iPlayer, int iBuilding, int iFoeDamage, int iBarbDamage ))") // 3Miro
+	*/
 
 		// prosecution consts
 		//.def("getProsecutionCount", &CyGlobalContext::getProsecutionCount, "int (int iCiv )") // 3Miro

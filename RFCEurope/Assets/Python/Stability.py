@@ -102,7 +102,7 @@ class Stability:
 				#if ( gc.hasUP(iLoopCiv, con.iUP_LandStability) ): #French UP
 					#self.setOwnedPlotsLastTurn(iLoopCiv, 0)
 				#else:
-						#self.setOwnedPlotsLastTurn(iLoopCiv, gc.getlOwnedPlots(iLoopCiv))
+					#self.setOwnedPlotsLastTurn(iLoopCiv, gc.getlOwnedPlots(iLoopCiv))
 				#self.setOwnedCitiesLastTurn(iLoopCiv, gc.getlOwnedCities(iLoopCiv))
 
 			##Display up/down arrows
@@ -394,10 +394,12 @@ class Stability:
 
 
 	def checkImplosion(self, iGameTurn):
-		if (iGameTurn > 10 and iGameTurn % 6 == 3):
+		if (iGameTurn > 14 and iGameTurn % 6 == 3):
 			for iPlayer in range(iNumPlayers - 1):
 				pPlayer = gc.getPlayer(iPlayer)
-				if (pPlayer.isAlive() and iGameTurn >= con.tBirth[iPlayer] + 10):
+				# Absinthe: no city secession for 15 turns after spawn, for 10 turns after respawn
+				iRespawnTurn = utils.getLastRespawnTurn( iPlayer )
+				if (pPlayer.isAlive() and iGameTurn >= con.tBirth[iPlayer] + 15 and iGameTurn >= iRespawnTurn + 10):
 					# Absinthe: if stability is less than -3, there is a chance that the secession/revolt or collapse mechanics start
 					#			if more than 8 cities: high chance for secession mechanics, low chance for collapse
 					#			elif more than 4 cities: medium chance for collapse mechanics, medium chance for secession
@@ -409,7 +411,7 @@ class Stability:
 							if (gc.getGame().getSorenRandNum(10, 'city secession') < 8): #80 chance for secession start
 								if (gc.getGame().getSorenRandNum(10, 'city secession') < -3 - iStability): #10% at -4, increasing by 10% with each point (100% with -13 or less)
 									rnf.revoltCity( iPlayer, False )
-							elif (gc.getGame().getSorenRandNum(10, 'civ collapse') < 1 and iGameTurn >= con.tBirth[iPlayer] + 20): #10 chance for collapse start
+							elif (gc.getGame().getSorenRandNum(10, 'civ collapse') < 1 and iGameTurn >= con.tBirth[iPlayer] + 20 and not utils.collapseImmune(iPlayer)): #10 chance for collapse start
 								if (gc.getGame().getSorenRandNum(10, 'civ collapse') < -1.5 - (iStability/2)): #10% at -4, increasing by 10% with 2 points (100% with -22 or less)
 									print ("COLLAPSE: CIVIL WAR", gc.getPlayer(iPlayer).getCivilizationAdjective(0))
 									if (iPlayer != utils.getHumanID()):
@@ -424,7 +426,7 @@ class Stability:
 							if (gc.getGame().getSorenRandNum(10, 'city secession') < 4): #40 chance for secession start
 								if (gc.getGame().getSorenRandNum(10, 'city secession') < -3 - iStability): #10% at -4, increasing by 10% with each point (100% with -13 or less)
 									rnf.revoltCity( iPlayer, False )
-							elif (gc.getGame().getSorenRandNum(10, 'civ collapse') < 4 and iGameTurn >= con.tBirth[iPlayer] + 20): #40 chance for collapse start
+							elif (gc.getGame().getSorenRandNum(10, 'civ collapse') < 4 and iGameTurn >= con.tBirth[iPlayer] + 20 and not utils.collapseImmune(iPlayer)): #40 chance for collapse start
 								if (gc.getGame().getSorenRandNum(10, 'civ collapse') < -1.5 - (iStability/2)): #10% at -4, increasing by 10% with 2 points (100% with -22 or less)
 									print ("COLLAPSE: CIVIL WAR", gc.getPlayer(iPlayer).getCivilizationAdjective(0))
 									if (iPlayer != utils.getHumanID()):
@@ -435,7 +437,7 @@ class Stability:
 										CyInterface().addMessage(iPlayer, True, con.iDuration, CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_HUMAN", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
 										utils.killAndFragmentCiv(iPlayer, False, True)
 										self.zeroStability( iPlayer )
-						elif (gc.getGame().getSorenRandNum(10, 'civ collapse') < 7  and iGameTurn >= con.tBirth[iPlayer] + 20): #70 chance for collapse start
+						elif (gc.getGame().getSorenRandNum(10, 'civ collapse') < 7  and iGameTurn >= con.tBirth[iPlayer] + 20 and not utils.collapseImmune(iPlayer)): #70 chance for collapse start
 							if (gc.getGame().getSorenRandNum(10, 'civ collapse') < -1.5 - (iStability/2)): #10% at -4, increasing by 10% with 2 points (100% with -22 or less)
 								print ("COLLAPSE: CIVIL WAR", gc.getPlayer(iPlayer).getCivilizationAdjective(0))
 								if (iPlayer != utils.getHumanID()):
@@ -711,6 +713,14 @@ class Stability:
 		for pLoopCity in apCityList:
 			pCity = pLoopCity.GetCy()
 			iProvType = pPlayer.getProvinceType( pCity.getProvince() )
+			iProvNum = pCity.getProvince()
+			CityName = pCity.getNameKey()
+			if not (0 <= iProvType < len(tStabilityPenalty)):
+				print ("ProvinceType issue, iProvType:", iProvType)
+				print ("ProvinceType issue, iProvNum:", iProvNum)
+				print ("ProvinceType issue, CityName:", CityName)
+			assert (0 <= iProvType < len(tStabilityPenalty)), "Bad ProvinceType value for CityName (%s)" % CityName
+
 			iExpStability += tStabilityPenalty[ iProvType ]
 			if ( iProvType <= con.iProvinceOuter ):
 				if ( iCivic5 == xml.iCivicImperialism ): # Imperialism

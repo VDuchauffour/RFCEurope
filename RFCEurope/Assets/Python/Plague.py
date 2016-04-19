@@ -83,6 +83,9 @@ class Plague:
 		self.setGenericPlagueDates(3, 375 + gc.getGame().getSorenRandNum(40, 'Variation') - 30) #1650 Great Plague
 		self.setGenericPlagueDates(4, 440 + gc.getGame().getSorenRandNum(40, 'Variation') - 30) #1740 Small Pox
 
+		for i in range(iNumPlagues):
+			print ( "plagues", self.getGenericPlagueDates( i ) )
+
 
 	def checkTurn(self, iGameTurn):
 

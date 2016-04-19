@@ -10950,7 +10950,6 @@ EraTypes CvPlayer::getCurrentEra() const
 }
 
 
-
 void CvPlayer::setCurrentEra(EraTypes eNewValue)
 {
 	CvCity* pLoopCity;
@@ -16703,7 +16702,7 @@ int CvPlayer::verifySettlersHalt(int threshold)
 
 int CvPlayer::getSettlersMaps(int y, int x) const
 {
-	if ( settlersMaps == NULL || getID() >= NUM_MAJOR_PLAYERS ){
+	if ( settlersMaps == NULL || getID() >= NUM_MAJOR_PLAYERS ){ //fixed value for the Pope and the Independents
 		return 20;
 	}else{
 		//return getSettlersMaps(getID(),y,x);
@@ -16717,6 +16716,21 @@ int CvPlayer::getSettlersMaps(int y, int x) const
 		};
 	};
 }
+
+// Absinthe
+int CvPlayer::getWarsMaps(int y, int x) const
+{
+	if ( warsMaps == NULL || getID() >= NUM_MAJOR_PLAYERS ){ //fixed value for the Pope and the Independents
+		return 0;
+	}else{
+		if ( (x>=0)&&(x<EARTH_X)&&(y>=0)&&(y<EARTH_Y) ){
+			return warsMaps[ getID() * SETTLER_OFFSET + y * EARTH_X + x ];
+		}else{
+			GC.getGameINLINE().logMsg(" ARGH ");
+			return 0;
+		};
+	};
+};
 
 /*void CvPlayer::setFlag(CvWString s)
 {
@@ -16838,7 +16852,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	int iI;
 
 	// Init data before load
-	reset();
+	reset(getID());
 
 	uint uiFlag=0;
 	pStream->Read(&uiFlag);	// flags for expansion
@@ -23501,7 +23515,8 @@ std::wstring CvPlayer::getUHVDescription( int iUHV ) const
 	};
 };
 
-void CvPlayer::setProvinceType( int iProvince, int iType ){
+void CvPlayer::setProvinceType( int iProvince, int iType )
+{
 	m_aiProvinceType[iProvince] = iType;
 };
 

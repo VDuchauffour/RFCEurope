@@ -722,13 +722,21 @@ void CyGlobalContext::setSizeNPlayers( int iMaxX, int iMaxY, int iNumPlayers, in
 	SETTLER_OFFSET = EARTH_X * EARTH_Y;
 	MAX_NUM_TECHS = iNumTechs;
 	NUM_BUILDINGS = iNumBuildings;
-	//settlersMaps = new int**[NUM_MAJOR_PLAYERS];
 	int i;
-	/*for ( i=0; i<NUM_MAJOR_PLAYERS; i++ ){
+	/*settlersMaps = new int**[NUM_MAJOR_PLAYERS];
+	for ( i=0; i<NUM_MAJOR_PLAYERS; i++ ){
 		settlersMaps[i] = new int*[iMaxY];
 		for ( j=0; j<iMaxY; j++ ){
 			settlersMaps[i][j] = new int[iMaxX];
 			for ( k=0; k<iMaxX; k++ ) settlersMaps[i][j][k] = 20;
+		};
+	};*/
+	/*warsMaps = new int**[NUM_MAJOR_PLAYERS];
+	for ( i=0; i<NUM_MAJOR_PLAYERS; i++ ){
+		warsMaps[i] = new int*[iMaxY];
+		for ( j=0; j<iMaxY; j++ ){
+			warsMaps[i][j] = new int[iMaxX];
+			for ( k=0; k<iMaxX; k++ ) warsMaps[i][j][k] = 0;
 		};
 	};*/
 	provinceMap = new int[EARTH_X* EARTH_Y];
@@ -744,14 +752,6 @@ void CyGlobalContext::setSizeNPlayers( int iMaxX, int iMaxY, int iNumPlayers, in
 	for( i=0; i<NUM_MAJOR_PLAYERS *EARTH_X* EARTH_Y; i++ ) warsMaps[i] = 0;
 	conditionalVassalage = new int[ NUM_ALL_PLAYERS_B * NUM_ALL_PLAYERS_B ];
 	for( i=0; i< NUM_ALL_PLAYERS_B * NUM_ALL_PLAYERS_B; i++ ){conditionalVassalage[i] = 0; };
-	/*warsMaps = new int**[NUM_MAJOR_PLAYERS];
-	for ( i=0; i<NUM_MAJOR_PLAYERS; i++ ){
-		warsMaps[i] = new int*[iMaxY];
-		for ( j=0; j<iMaxY; j++ ){
-			warsMaps[i][j] = new int[iMaxX];
-			for ( k=0; k<iMaxX; k++ ) warsMaps[i][j][k] = 0;
-		};
-	};*/
 	CoreAreasRect = new int*[NUM_ALL_PLAYERS_B];
 	CoreAreasMinusCount = new int[NUM_ALL_PLAYERS_B];
 	CoreAreasMinus = new int*[NUM_ALL_PLAYERS_B];
@@ -1001,6 +1001,20 @@ void CyGlobalContext::addNormalException( int iCiv, int x, int y ){
 	NormalAreasMinusCount[iCiv]++;
 };
 
+// Absinthe: unused in RFCE
+/*
+int CyGlobalContext::cityStabilityExpansion( int iPlayer, int iFCity ){
+	return getCyGame() ->cityStabilityExpansion( iPlayer, iFCity );
+};
+
+int CyGlobalContext::cityStabilityPenalty( int iPlayer, int iAnger, int iHealth, int iReligion, int iLarge, int iHurry, int iNoMilitary, int iWarW, int iFReligion, int iFCulture, int iPerCityCap ){
+	return getCyGame() ->cityStabilityPenalty( iPlayer, iAnger, iHealth, iReligion, iLarge, iHurry, iNoMilitary, iWarW, iFReligion, iFCulture, iPerCityCap );
+};
+
+void CyGlobalContext::damageFromBuilding( int iPlayer, int iBuilding, int iFoeDamage, int iBarbDamage ){
+	return getCyGame() ->damageFromBuilding( iPlayer, iBuilding, iFoeDamage, iBarbDamage );
+};
+
 void CyGlobalContext::calcLastOwned(){
 	getCyGame() ->calcLastOwned();
 };
@@ -1012,7 +1026,7 @@ int CyGlobalContext::getlOwnedPlots( int iCiv ){
 int CyGlobalContext::getlOwnedCities( int iCiv ){
 	return lOwnedCities[iCiv];
 };
-
+*/
 /*int CyGlobalContext::getProsecutionCount( int iCiv ){
 	return ProsecutionCount[iCiv];
 };*/
@@ -1032,18 +1046,6 @@ void CyGlobalContext::setSaintParameters( int iUnitID, int iBenefit, int iTreshh
 	UNIT_SAINT_BENEFIT = iBenefit;
 	UNIT_SAINT_1_TRESHHOLD = iTreshhold1;
 	UNIT_SAINT_3_TRESHHOLD = iTreshhold3;
-};
-
-int CyGlobalContext::cityStabilityExpansion( int iPlayer, int iFCity ){
-	return getCyGame() ->cityStabilityExpansion( iPlayer, iFCity );
-};
-
-int CyGlobalContext::cityStabilityPenalty( int iPlayer, int iAnger, int iHealth, int iReligion, int iLarge, int iHurry, int iNoMilitary, int iWarW, int iFReligion, int iFCulture, int iPerCityCap ){
-	return getCyGame() ->cityStabilityPenalty( iPlayer, iAnger, iHealth, iReligion, iLarge, iHurry, iNoMilitary, iWarW, iFReligion, iFCulture, iPerCityCap );
-};
-
-void CyGlobalContext::damageFromBuilding( int iPlayer, int iBuilding, int iFoeDamage, int iBarbDamage ){
-	return getCyGame() ->damageFromBuilding( iPlayer, iBuilding, iFoeDamage, iBarbDamage );
 };
 
 void CyGlobalContext::setIndependnets( int iIndyStart, int iIndyEnd, int iBarb ){

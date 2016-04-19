@@ -33481,7 +33481,7 @@ BeginPlot
 	EndUnit
 	BeginCity
 		CityOwner=11
-		CityName=Gyulaf&#233;herv&#225;r
+		CityName=Gyulafeh&#233;rv&#225;r
 		CityPopulation=5
 		BuildingType=BUILDING_WALLS
 		BuildingType=BUILDING_BARRACKS

@@ -867,6 +867,7 @@ class CvEventManager:
 		CvUtil.pyPrint('Player %d Civilization %s golden age has ended'
 			%(iPlayer, player.getCivilizationName()))
 
+	# Absinthe: currently unused
 	def onChangeWar(self, argsList):
 		'War Status Changes'
 		bIsWar = argsList[0]

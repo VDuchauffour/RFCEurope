@@ -2,7 +2,7 @@
 
 from CvPythonExtensions import *
 import CvUtil
-import CvScreenEnums #Absinhe
+import CvScreenEnums #Absinthe
 import RFCEMaps #Absinthe
 import PyHelpers
 import Popup #Absinthe
@@ -47,6 +47,12 @@ class RFCUtils:
 
 	def setLastTurnAlive( self, iCiv, iNewValue ):
 		sd.scriptDict['lLastTurnAlive'][iCiv] = iNewValue
+
+	def getLastRespawnTurn( self, iCiv ):
+		return sd.scriptDict['lLastRespawnTurn'][iCiv]
+
+	def setLastRespawnTurn( self, iCiv, iNewValue ):
+		sd.scriptDict['lLastRespawnTurn'][iCiv] = iNewValue
 
 	#Victory
 	#def getGoal( self, i, j ):
@@ -313,7 +319,7 @@ class RFCUtils:
 							teamMinor.signOpenBorders(iActiveCiv)
 
 	#AIWars
-	def restorePeaceHuman(self, iMinorCiv, bOpenBorders):
+	def restorePeaceHuman(self, iMinorCiv):
 		teamMinor = gc.getTeam(gc.getPlayer(iMinorCiv).getTeam())
 		for iActiveCiv in range( iNumActivePlayers ):
 			if (gc.getPlayer(iActiveCiv).isHuman()):
@@ -326,7 +332,7 @@ class RFCUtils:
 				return
 
 	#AIWars
-	def minorWars(self, iMinorCiv):
+	def minorWars(self, iMinorCiv, iGameTurn):
 		teamMinor = gc.getTeam(gc.getPlayer(iMinorCiv).getTeam())
 		apCityList = PyPlayer(iMinorCiv).getCityList()
 		for pCity in apCityList:
@@ -334,13 +340,44 @@ class RFCUtils:
 			x = city.getX()
 			y = city.getY()
 			for iActiveCiv in range( iNumActivePlayers ):
-				# 3MiroPapal: the Pope does not attack independent
 				if ( gc.getPlayer(iActiveCiv).isAlive() and (not gc.getPlayer(iActiveCiv).isHuman()) and (not iActiveCiv == con.iPope) ):
-					if (gc.getPlayer(iActiveCiv).getSettlersMaps( con.iMapMaxY-y-1, x ) >= 90):
-						if (not teamMinor.isAtWar(iActiveCiv)):
-							teamMinor.declareWar(iActiveCiv, False, WarPlanTypes.WARPLAN_LIMITED)
-							print ("Minor war", city.getName(), gc.getPlayer(iActiveCiv).getCivilizationAdjective(0))
+					if (not teamMinor.isAtWar(iActiveCiv)):
+						if (iGameTurn > con.tBirth[iActiveCiv] + 20):
+							# Absinthe: probably better to use war maps instead of settler maps, but let the AI concentrate on it's core area first
+							#			maybe we should use both settler and war maps? distance calculations would be great, but use too much iterations
+							#if (gc.getPlayer(iActiveCiv).getSettlersMaps( con.iMapMaxY-y-1, x ) >= 90 or gc.getPlayer(iActiveCiv).getSettlersMaps( con.iMapMaxY-y-1, x ) == -1):
+							#if (gc.getPlayer(iActiveCiv).getWarsMaps( con.iMapMaxY-y-1, x ) >= 2):
+							iRndNum = gc.getGame().getSorenRandNum( 10, 'random warmap chance')
+							if (gc.getPlayer(iActiveCiv).getWarsMaps( con.iMapMaxY-y-1, x ) >= 10):
+								# 100% chance for cities with high war map value
+								teamMinor.declareWar(iActiveCiv, False, WarPlanTypes.WARPLAN_LIMITED)
+								print ("minorWars", city.getName(), gc.getPlayer(iActiveCiv).getCivilizationAdjective(0), gc.getPlayer(iActiveCiv).getSettlersMaps( con.iMapMaxY-y-1, x ), gc.getPlayer(iActiveCiv).getWarsMaps( con.iMapMaxY-y-1, x ), "WARPLAN_LIMITED")
+							elif (gc.getPlayer(iActiveCiv).getWarsMaps( con.iMapMaxY-y-1, x ) >= 6):
+								if (iRndNum < 8): # 80% chance for cities with medium war map value
+									teamMinor.declareWar(iActiveCiv, False, WarPlanTypes.WARPLAN_LIMITED)
+									print ("minorWars", city.getName(), gc.getPlayer(iActiveCiv).getCivilizationAdjective(0), gc.getPlayer(iActiveCiv).getSettlersMaps( con.iMapMaxY-y-1, x ), gc.getPlayer(iActiveCiv).getWarsMaps( con.iMapMaxY-y-1, x ), "WARPLAN_LIMITED")
+							elif (gc.getPlayer(iActiveCiv).getWarsMaps( con.iMapMaxY-y-1, x ) >= 2):
+								if (iRndNum < 5): # 50% chance for cities with low war map value
+									teamMinor.declareWar(iActiveCiv, False, WarPlanTypes.WARPLAN_LIMITED)
+									print ("minorWars", city.getName(), gc.getPlayer(iActiveCiv).getCivilizationAdjective(0), gc.getPlayer(iActiveCiv).getSettlersMaps( con.iMapMaxY-y-1, x ), gc.getPlayer(iActiveCiv).getWarsMaps( con.iMapMaxY-y-1, x ), "WARPLAN_LIMITED")
 
+	#AIWars
+	# Absinthe: declare war sooner / more frequently if an Indy city has huge value on the civ's war map
+	def minorCoreWars(self, iMinorCiv, iGameTurn):
+		teamMinor = gc.getTeam(gc.getPlayer(iMinorCiv).getTeam())
+		apCityList = PyPlayer(iMinorCiv).getCityList()
+		for pCity in apCityList:
+			city = pCity.GetCy()
+			x = city.getX()
+			y = city.getY()
+			for iActiveCiv in range( iNumActivePlayers ):
+				if ( gc.getPlayer(iActiveCiv).isAlive() and (not gc.getPlayer(iActiveCiv).isHuman()) and (not iActiveCiv == con.iPope) ):
+					# Absinthe: do not want to force the AI into these wars with WARPLAN_TOTAL too early
+					if (iGameTurn > con.tBirth[iActiveCiv] + 40):
+						if (not teamMinor.isAtWar(iActiveCiv)):
+							if (gc.getPlayer(iActiveCiv).getWarsMaps( con.iMapMaxY-y-1, x ) == 16):
+								teamMinor.declareWar(iActiveCiv, False, WarPlanTypes.WARPLAN_TOTAL)
+								print ("minorWars", city.getName(), gc.getPlayer(iActiveCiv).getCivilizationAdjective(0), gc.getPlayer(iActiveCiv).getSettlersMaps( con.iMapMaxY-y-1, x ), gc.getPlayer(iActiveCiv).getWarsMaps( con.iMapMaxY-y-1, x ), "WARPLAN_TOTAL")
 
 	#RiseAndFall, Stability
 	def calculateDistance(self, x1, y1, x2, y2):
@@ -390,9 +427,15 @@ class RFCUtils:
 			unit = plotCity.getUnit(j)
 			unitType = unit.getUnitType()
 			if (unit.getOwner() == iOldOwner):
-				unit.kill(False, con.iBarbarian)
-				if (iNewOwner < con.iNumActivePlayers or unitType > xml.iSettler):
-					self.makeUnit(unitType, iNewOwner, [0, 72], 1)
+				# Absinthe: only 50% chance that the unit will defect
+				if ( gc.getGame().getSorenRandNum(2, 'Convert Unit') == 1 ):
+					unit.kill(False, con.iBarbarian)
+					if (iNewOwner < con.iNumActivePlayers or unitType > xml.iSettler):
+						self.makeUnit(unitType, iNewOwner, [0, 72], 1)
+				# skip unit if it won't defect, so it will move out of the city territory
+				else:
+					j += 1
+			# skip unit if from another player
 			else:
 				j += 1
 

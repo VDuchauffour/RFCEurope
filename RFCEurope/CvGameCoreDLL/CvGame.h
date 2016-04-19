@@ -569,16 +569,17 @@ public:
 	bool controlMostTeritory( int iCiv, int BLx, int BLy, int TRx, int TRy );
 		// true if iCiv control more plots than any other nation
 
-	int countCitiesLostTo( int iCiv, int iNewOwner ); 
-	// count how many cities are lost to specific civ (i.e. belongs to iNewOwner and iCiv is the original Owner)
+	int countCitiesLostTo( int iCiv, int iNewOwner ); // count how many cities are lost to specific civ (i.e. belongs to iNewOwner and iCiv is the original Owner)
 	bool safeMotherland( int iCiv ); // returns true if the civ is someone else's Vassal or still keeps some of its Core and Normal Areas
-	int cityStabilityExpansion( int iPlayer, int iFCity );
+
+	// Absinthe: unused in RFCE
+/*	int cityStabilityExpansion( int iPlayer, int iFCity );
 	int cityStabilityPenalty( int iPlayer, int iAnger, int iHealth, int iReligion, int iLarge, int iHurry, int iNoMilitary, int iWarW, int iFReligion, int iFCulture, int iPerCityCap );
 	void calcLastOwned(); // calculates last owned stuff and puts it in Rhyes.* arrays
-	
 	// 3MiroBuildings: special building properties
 	void damageFromBuilding( int iPlayer, int iBuilding, int iFoeDamage, int iBarbDamage );
 	void damagePlot( int iPlayer, int iFoeDamage, int iBarbDamage, CvPlot *pPlot );
+*/
 
 	void doHolyCity();	// 3Miro: expose this function to allow founding of religion on city build
 

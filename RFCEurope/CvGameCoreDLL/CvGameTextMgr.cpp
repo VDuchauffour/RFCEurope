@@ -239,19 +239,16 @@ void CvGameTextMgr::setDateStr(CvWString& szString, int iGameTurn, bool bSave, C
 //Rhye - start
 void CvGameTextMgr::setDateStrPlayer(CvWString& szString, int iGameTurn, bool bSave, CalendarTypes eCalendar, int iStartYear, GameSpeedTypes eSpeed, PlayerTypes ePlayer)
 {
-	// 3Miro: this displays either the year (with Calendar) or the age
-		setDateStr(szString, iGameTurn, bSave, eCalendar, iStartYear, eSpeed);
-	/*if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isHasTech((TechTypes)CALENDAR))
+	// Absinthe: this displays either the year (with Calendar, which is tech 0 in RFCE) or the current era
+	if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isHasTech((TechTypes)0) || iGameTurn < startingTurn[ePlayer])
 		setDateStr(szString, iGameTurn, bSave, eCalendar, iStartYear, eSpeed);
 	else if (GET_PLAYER(ePlayer).getCurrentEra() >= 3)
-		szString = gDLL->getText("TXT_KEY_AGE_RENAISSANCE");
+		szString = gDLL->getText("TXT_KEY_ERA_RENAISSANCE");
 	else if (GET_PLAYER(ePlayer).getCurrentEra() == 2)
-		szString = gDLL->getText("TXT_KEY_AGE_MEDIEVAL");
-	else if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isHasTech((TechTypes)IRONWORKING))
-		szString = gDLL->getText("TXT_KEY_AGE_IRON");
-	else if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isHasTech((TechTypes)BRONZEWORKING))
-		szString = gDLL->getText("TXT_KEY_AGE_BRONZE");
-	else szString = gDLL->getText("TXT_KEY_AGE_STONE");*/
+		szString = gDLL->getText("TXT_KEY_ERA_LATE_MEDIEVAL");
+	else if (GET_PLAYER(ePlayer).getCurrentEra() == 1)
+		szString = gDLL->getText("TXT_KEY_ERA_HIGH_MEDIEVAL");
+	else szString = gDLL->getText("TXT_KEY_ERA_EARLY_MEDIEVAL");
 	if (bSave)
 		szString = szString + " " + gDLL->getText("TXT_KEY_SAVEGAME_TURN", (iGameTurn));
 		/*if (gDLL->getCurrentLanguage() == 0)
@@ -7729,7 +7726,6 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, BuildingTypes eBu
 	};
 	if ( kBuilding.getBombardImmuneDefense() > 0 ){
 			szBuffer.append(NEWLINE);
-			//szBuffer.append(gDLL->getText("TXT_KEY_MISC_SPREAD_IRRIGATION"));
 			szBuffer.append( gDLL->getText("TXT_KEY_BOMBARD_IMMUNE_DEFENSE", kBuilding.getBombardImmuneDefense() ) );
 	};
 	if ( kBuilding.getStateReligionCulture() > 0 ){

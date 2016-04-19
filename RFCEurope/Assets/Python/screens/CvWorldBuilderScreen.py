@@ -927,6 +927,11 @@ class CvWorldBuilderScreen:
 					iX = self.m_pCurrentPlot.getX()
 					iY = self.m_pCurrentPlot.getY()
 					pPlayer.initCity(iX, iY)
+					# Absinthe: correct CNM name for new cities in the WB
+					cityName = MapManager.getCityName(self.m_iCurrentPlayer, self.m_pCurrentPlot);
+					if (cityName != None):
+						city = gc.getMap().plot( iX, iY ).getPlotCity()
+						city.setName(unicode(cityName, 'latin-1'), False)
 		elif ((self.m_bNormalMap) and (self.m_normalMapTabCtrl.getActiveTab() == self.m_iImprovementTabID)):
 			iImprovementType = self.m_iNormalMapCurrentIndexes[self.m_normalMapTabCtrl.getActiveTab()]
 			iIndex = -1

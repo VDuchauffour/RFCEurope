@@ -1228,6 +1228,8 @@ bool CyGame::safeMotherland( int iCiv ){
 	return m_pGame ->safeMotherland( iCiv );
 };
 
+// Absinthe: unused in RFCE
+/*
 int CyGame::cityStabilityExpansion( int iPlayer, int iFCity ){
 	return m_pGame ->cityStabilityExpansion( iPlayer, iFCity );
 };
@@ -1243,4 +1245,4 @@ void CyGame::calcLastOwned(){
 void CyGame::damageFromBuilding( int iPlayer, int iBuilding, int iFoeDamage, int iBarbDamage ){
 	m_pGame ->damageFromBuilding( iPlayer, iBuilding, iFoeDamage, iBarbDamage );
 };
-
+*/

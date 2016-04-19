@@ -1050,6 +1050,7 @@ public:
 
 	int verifySettlersHalt(int threshold); //Rhye
 	DllExport int getSettlersMaps(int y, int x) const; //Rhye
+	DllExport int getWarsMaps(int y, int x) const; //Absinthe
 	//DllExport void setFlag(CvWString s); //Rhye
 	DllExport void setLeader(int i); //Rhye
 	DllExport LeaderHeadTypes getLeader(); //Rhye

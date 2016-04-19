@@ -203,7 +203,7 @@
 		<Portuguese>DC</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ERA_ANCIENT</Tag>
+		<Tag>TXT_KEY_ERA_EARLY_MEDIEVAL</Tag>
 		<English>Early Middle Ages</English>
 		<French>Haut Moyen &#194;ge</French>
 		<German>Frühes Mittelalter</German>
@@ -212,7 +212,7 @@
 		<Portuguese>Alta Idade Média</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ERA_CLASSICAL</Tag>
+		<Tag>TXT_KEY_ERA_HIGH_MEDIEVAL</Tag>
 		<English>High Middle Ages</English>
 		<French>Moyen &#194;ge</French>
 		<German>Hochmittelalter</German>
@@ -221,7 +221,7 @@
 		<Portuguese>Idade Média Plena</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ERA_MEDIEVAL</Tag>
+		<Tag>TXT_KEY_ERA_LATE_MEDIEVAL</Tag>
 		<English>Late Middle Ages</English>
 		<French>Bas Moyen &#194;ge</French>
 		<German>Sp&#228;tmittelalter</German>
@@ -230,13 +230,94 @@
 		<Portuguese>Idade Média Tardia</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_AGE_MEDIEVAL</Tag>
-		<English>Early Middle Ages</English>
+		<Tag>TXT_KEY_ERA_RENAISSANCE</Tag>
+		<English>Renaissance</English>
+		<French>Renaissance</French>
+		<German>Renaissance</German>
+		<Italian>Rinascimentale</Italian>
+		<Spanish>Renacimiento</Spanish>
+		<Portuguese>Renacimiento</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FOUNDED_BEFORE_START</Tag>
+		<English>Good Ol' Days</English>
 		<French>Haut Moyen &#194;ge</French>
 		<German>Frühes Mittelalter</German>
 		<Italian>Alto Medioevo</Italian>
 		<Spanish>Alta Edad Media</Spanish>
 		<Portuguese>Alta Idade Média</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FOUNDED_BEFORE_ERA</Tag>
+		<English>Before our Age</English>
+		<French>Haut Moyen &#194;ge</French>
+		<German>Frühes Mittelalter</German>
+		<Italian>Alto Medioevo</Italian>
+		<Spanish>Alta Edad Media</Spanish>
+		<Portuguese>Alta Idade Média</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FOUNDED_BEFORE_500AD</Tag>
+		<English>Before 500 AD</English>
+		<French>Haut Moyen &#194;ge</French>
+		<German>Frühes Mittelalter</German>
+		<Italian>Alto Medioevo</Italian>
+		<Spanish>Alta Edad Media</Spanish>
+		<Portuguese>Alta Idade Média</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FOUNDED_BEFORE_1200AD</Tag>
+		<English>Before 1200 AD</English>
+		<French>Haut Moyen &#194;ge</French>
+		<German>Frühes Mittelalter</German>
+		<Italian>Alto Medioevo</Italian>
+		<Spanish>Alta Edad Media</Spanish>
+		<Portuguese>Alta Idade Média</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_FOUNDED</Tag>
+		<English>Founded: %s1_DateStr</English>
+		<French>Haut Moyen &#194;ge</French>
+		<German>Frühes Mittelalter</German>
+		<Italian>Alto Medioevo</Italian>
+		<Spanish>Alta Edad Media</Spanish>
+		<Portuguese>Alta Idade Média</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INFO_UNKNOWN_CITY</Tag>
+		<English>Unknown city</English>
+		<French>Unknown city</French>
+		<German>Unknown city</German>
+		<Italian>Unknown city</Italian>
+		<Spanish>Unknown city</Spanish>
+		<Portuguese>Unknown city</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INFO_WONDER_CITY_NAME</Tag>
+		<English>City: %s1_CityStr</English>
+		<French>City: %s1_CityStr</French>
+		<German>City: %s1_CityStr</German>
+		<Italian>City: %s1_CityStr</Italian>
+		<Spanish>City: %s1_CityStr</Spanish>
+		<Portuguese>City: %s1_CityStr</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INFO_WONDER_DATE</Tag>
+		<English>Completed: %s1_DateStr</English>
+		<French>Date: %s1_DateStr</French>
+		<German>Date: %s1_DateStr</German>
+		<Italian>Date: %s1_DateStr</Italian>
+		<Spanish>Date: %s1_DateStr</Spanish>
+		<Portuguese>Date: %s1_DateStr</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INFO_WONDER_CIV_NAME</Tag>
+		<English>Civ: %s1_CivStr</English>
+		<French>Civ: %s1_CivStr</French>
+		<German>Civ: %s1_CivStr</German>
+		<Italian>Civ: %s1_CivStr</Italian>
+		<Spanish>Civ: %s1_CivStr</Spanish>
+		<Portuguese>Civ: %s1_CivStr</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MM_GOLD</Tag>

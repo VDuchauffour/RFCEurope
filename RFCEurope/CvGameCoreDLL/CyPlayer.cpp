@@ -2273,10 +2273,14 @@ void  CyPlayer::forcePeace(int iPlayer)
 		m_pPlayer->forcePeace((PlayerTypes)iPlayer);
 }
 
-//Rhye - start
-int CyPlayer::getSettlersMaps(int y, int x)
+int CyPlayer::getSettlersMaps(int y, int x) //Rhye
 {
 	return m_pPlayer ? m_pPlayer->getSettlersMaps(y, x) : -1;
+}
+
+int CyPlayer::getWarsMaps(int y, int x) //Absinthe
+{
+	return m_pPlayer ? m_pPlayer->getWarsMaps(y, x) : -1;
 }
 
 /*void CyPlayer::setFlag(CvWString s)
@@ -2295,8 +2299,6 @@ int /*LeaderHeadTypes*/ CyPlayer::getLeader()
 {
 	return m_pPlayer ? m_pPlayer->getLeader() : -1;
 }
-
-//Rhye - end
 
 // 3Miro:
 int CyPlayer::getFinancialPower(){

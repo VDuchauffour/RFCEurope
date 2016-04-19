@@ -121,7 +121,7 @@ void CvGame::updateColoredPlots()
 
 	// Absinthe: colour the spawn and respawn areas on the map
 	if ( (iCoreToPlot == 1) && (iPlotCore>-1) && (iPlotCore<NUM_MAJOR_PLAYERS) ){
-		NiColorA mcolor(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_MAGENTA")).getColor());
+		NiColorA mcolor(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_WHITE")).getColor());
 		mcolor.a = 0.9f;
 		for( iI = 0; iI < EARTH_Y; iI++ ){
 			for( iJ = 0; iJ < EARTH_X; iJ++ ){
@@ -132,7 +132,7 @@ void CvGame::updateColoredPlots()
 		};
 	};
 	if ( (iNormalToPlot == 1) && (iPlotNormal>-1) && (iPlotNormal<NUM_MAJOR_PLAYERS) ){
-		NiColorA mcolor(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_WHITE")).getColor());
+		NiColorA mcolor(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_MAGENTA")).getColor());
 		mcolor.a = 0.7f;
 		for( iI = 0; iI < EARTH_Y; iI++ ){
 			for( iJ = 0; iJ < EARTH_X; iJ++ ){
