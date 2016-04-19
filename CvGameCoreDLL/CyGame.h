@@ -277,7 +277,7 @@ public:
 	bool isEventActive(int /*EventTriggerTypes*/ eTrigger);
 	void doControl(int iControl);
 
-	// 3Miro: optimized functions for faster rearch, mostly for UHVs
+	// 3Miro: optimized functions for faster reach, mostly for UHVs
 	bool isLargestCity( int x, int y ); // returns true if the x,y plot is a city and is the largest city
 	bool isTopCultureCity( int x, int y ); // true if plot x,y is the most cultured city
 	int doesOwnCities( int iCiv, int BLx, int BLy, int TRx, int TRy );
@@ -286,14 +286,16 @@ public:
 	int countOwnedCities( int iCiv, int BLx, int BLy, int TRx, int TRy );
 	int countCitiesLostTo( int iCiv, int iNewOwner );
 	bool safeMotherland( int iCiv );
-	int cityStabilityExpansion( int iPlayer, int iFCity );
-	int cityStabilityPenalty( int iPlayer, int iAnger, int iHealth, int iReligion, int iLarge, int iHurry, int iNoMilitary, int iWarW, int iFReligion, int iFCulture, int iPerCityCap );
 	bool canSeeAllTerrain( int iCiv, int iTerrain );
 	bool controlMostTeritory( int iCiv, int BLx, int BLy, int TRx, int TRy );
-	void damageFromBuilding( int iPlayer, int iBuilding, int iFoeDamage, int iBarbDamage );
 
+	// Absinthe: unused in RFCE
+/*	int cityStabilityExpansion( int iPlayer, int iFCity );
+	int cityStabilityPenalty( int iPlayer, int iAnger, int iHealth, int iReligion, int iLarge, int iHurry, int iNoMilitary, int iWarW, int iFReligion, int iFCulture, int iPerCityCap );
+	void damageFromBuilding( int iPlayer, int iBuilding, int iFoeDamage, int iBarbDamage );
 	// 3Miro: some stability optimizations
 	void calcLastOwned();
+*/
 
 protected:
 	CvGame* m_pGame;

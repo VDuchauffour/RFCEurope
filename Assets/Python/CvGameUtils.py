@@ -277,8 +277,7 @@ class CvGameUtils:
 		iOwner = pUnit.getOwner()
 		if not gc.getPlayer(iOwner).isHuman():
 			if pUnit.getUnitType() == xml.iProsecutor:
-				self.doInquisitorCore_AI(pUnit)
-				return True
+				return self.doInquisitorCore_AI(pUnit)
 		# Absinthe: end
 		return False
 
@@ -326,7 +325,8 @@ class CvGameUtils:
 						city = pCity.GetCy()
 						if pUnit.generatePath(city.plot(), 0, False, None):
 							self.doInquisitorMove(pUnit, city)
-							return
+							return True
+		return False
 
 
 	def doInquisitorMove(self, pUnit, pCity):

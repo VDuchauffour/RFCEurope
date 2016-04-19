@@ -144,6 +144,7 @@ void CyPlayerPythonInterface2(python::class_<CyPlayer>& x)
 		.def("forcePeace", &CyPlayer::forcePeace, "void (int)")
 
 		.def("getSettlersMaps", &CyPlayer::getSettlersMaps, "int (int i, int j)") //Rhye
+		.def("getWarsMaps", &CyPlayer::getWarsMaps, "int (int i, int j)") //Absinthe
 		.def("setLeader", &CyPlayer::setLeader, "void (int i)") //Rhye
 		.def("getLeader", &CyPlayer::getLeader, "int /*LeaderHeadTypes*/ ()") //Rhye
 		;

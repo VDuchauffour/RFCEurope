@@ -33,11 +33,6 @@ iNumTotalPlayers = con.iNumTotalPlayers
 tWarsMap = rfcemaps.tWarsMaps
 
 
-# for AI Hack
-pVenice = gc.getPlayer( con.iVenecia )
-teamVenice = gc.getTeam( pVenice.getTeam() )
-
-
 class AIWars:
 
 	def getAttackingCivsArray( self, iCiv ):
@@ -60,41 +55,60 @@ class AIWars:
 
 	def checkTurn(self, iGameTurn):
 
-		#turn automatically peace on between independent cities and all the major civs
-		if (iGameTurn % 20 == 0):
-			utils.restorePeaceHuman(con.iIndependent2, False)
-		if (iGameTurn % 20 == 5):
-			utils.restorePeaceHuman(con.iIndependent, False)
-		if (iGameTurn % 20 == 10):
-			utils.restorePeaceHuman(con.iIndependent3, False)
-		if (iGameTurn % 20 == 15):
-			utils.restorePeaceHuman(con.iIndependent4, False)
-		if (iGameTurn % 60 == 0 and iGameTurn > 50):
+		# Absinthe: automatically turn peace on between independent cities and all the major civs
+		if (iGameTurn % 20 == 4 and iGameTurn > 20):
+			utils.restorePeaceHuman(con.iIndependent2)
+		if (iGameTurn % 20 == 9 and iGameTurn > 20):
+			utils.restorePeaceHuman(con.iIndependent)
+		if (iGameTurn % 20 == 14 and iGameTurn > 20):
+			utils.restorePeaceHuman(con.iIndependent3)
+		if (iGameTurn % 20 == 19 and iGameTurn > 20):
+			utils.restorePeaceHuman(con.iIndependent4)
+		if (iGameTurn % 36 == 0 and iGameTurn > 30):
 			utils.restorePeaceAI(con.iIndependent, False)
-		if (iGameTurn % 60 == 15 and iGameTurn > 50):
+		if (iGameTurn % 36 == 9 and iGameTurn > 30):
 			utils.restorePeaceAI(con.iIndependent2, False)
-		if (iGameTurn % 60 == 30 and iGameTurn > 50):
+		if (iGameTurn % 36 == 18 and iGameTurn > 30):
 			utils.restorePeaceAI(con.iIndependent3, False)
-		if (iGameTurn % 60 == 45 and iGameTurn > 50):
+		if (iGameTurn % 36 == 27 and iGameTurn > 30):
 			utils.restorePeaceAI(con.iIndependent4, False)
-		#turn automatically war on between independent cities and some AI major civs
-		if (iGameTurn % 60 == 2 and iGameTurn > 50): #1 turn after restorePeace()
-			utils.minorWars(con.iIndependent)
-		if (iGameTurn % 60 == 17 and iGameTurn > 50): #1 turn after restorePeace()
-			utils.minorWars(con.iIndependent2)
-		if (iGameTurn % 60 == 32 and iGameTurn > 50): #1 turn after restorePeace()
-			utils.minorWars(con.iIndependent3)
-		if (iGameTurn % 60 == 47 and iGameTurn > 50): #1 turn after restorePeace()
-			utils.minorWars(con.iIndependent4)
 
-		### 3Miro: AI Hacking - Venice has hard time dealing with Indy Ragusa
-		if ( (iGameTurn % 7 == 3) and (not pVenice.isHuman()) ):
-			pRagusa = gc.getMap().plot( 64, 28 )
-			if ( pRagusa.isCity() ):
-				pRagusa = pRagusa.getPlotCity()
-				if ( utils.isIndep( pRagusa.getOwner() ) ):
-					teamVenice.setAtWar( gc.getPlayer( pRagusa.getOwner() ).getTeam(), True )
-		### 3Miro: End of AI Hacking
+		# Absinthe: automatically turn war on between independent cities and some AI major civs
+		if (iGameTurn % 36 == 2 and iGameTurn > 30): #1 turn after restorePeace()
+			utils.minorWars(con.iIndependent, iGameTurn)
+		if (iGameTurn % 36 == 11 and iGameTurn > 30): #1 turn after restorePeace()
+			utils.minorWars(con.iIndependent2, iGameTurn)
+		if (iGameTurn % 36 == 20 and iGameTurn > 30): #1 turn after restorePeace()
+			utils.minorWars(con.iIndependent3, iGameTurn)
+		if (iGameTurn % 36 == 29 and iGameTurn > 30): #1 turn after restorePeace()
+			utils.minorWars(con.iIndependent4, iGameTurn)
+
+		# Absinthe: declare war sooner / more frequently if there is an Indy city inside the core area
+		#			so the AI will declare war much sooner after an indy city appeared in it's core
+		if (iGameTurn % 12 == 1 and iGameTurn > 40):
+			utils.minorCoreWars(con.iIndependent4, iGameTurn)
+		if (iGameTurn % 12 == 4 and iGameTurn > 40):
+			utils.minorCoreWars(con.iIndependent3, iGameTurn)
+		if (iGameTurn % 12 == 7 and iGameTurn > 40):
+			utils.minorCoreWars(con.iIndependent2, iGameTurn)
+		if (iGameTurn % 12 == 10 and iGameTurn > 40):
+			utils.minorCoreWars(con.iIndependent, iGameTurn)
+
+		# Absinthe: Venice always seeks war with an Independent Ragusa - should help AI Venice significantly
+		pVenice = gc.getPlayer( con.iVenecia )
+		teamVenice = gc.getTeam( pVenice.getTeam() )
+		if ( (pVenice.isAlive()) and (iGameTurn % 9 == 2) and (not pVenice.isHuman()) ):
+			pRagusaPlot = gc.getMap().plot( 64, 28 )
+			if ( pRagusaPlot.isCity() ):
+				pRagusaCity = pRagusaPlot.getPlotCity()
+				iRagusa = pRagusaCity.getOwner()
+				if ( utils.isIndep( iRagusa ) ):
+					# Absinthe: probably better to use declareWar instead of setAtWar
+					teamVenice.declareWar(iRagusa, False, WarPlanTypes.WARPLAN_LIMITED)
+					print ("minorWars_Ragusa", "WARPLAN_LIMITED")
+					#teamVenice.setAtWar( gc.getPlayer( iRagusa ).getTeam(), True )
+					#teamRagusa = gc.getTeam( gc.getPlayer( iRagusa ).getTeam() )
+					#teamRagusa.setAtWar( pVenice.getTeam(), True )
 
 		if (iGameTurn == self.getNextTurnAIWar()):
 

@@ -6119,7 +6119,7 @@ void CvCityAI::AI_updateBestBuild()
 	}
 	
 	
-	{	//new experimental yieldValue calcuation
+	{	//new experimental yieldValue calculation
 		short aiYields[NUM_YIELD_TYPES];
 		int iBestPlot = -1;
 		int iBestPlotValue = -1;
@@ -8588,7 +8588,9 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 							{
 								iValue = 10000;
 
-								iValue /= (GC.getBuildInfo(eBuild).getTime() + 1);
+								if (GC.getBuildInfo(eBuild).getTime() != -1){
+									iValue /= (GC.getBuildInfo(eBuild).getTime() + 1);
+								}
 
 								// XXX feature production???
 
@@ -8698,7 +8700,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 						aiFinalYields[iJ] += (pPlot->calculateImprovementYieldChange(eImprovement, ((YieldTypes)iJ), getOwnerINLINE(), false));
 						if (bIgnoreFeature && pPlot->getFeatureType() != NO_FEATURE)
 						{
-							aiFinalYields[iJ] -= 2 * GC.getFeatureInfo(pPlot->getFeatureType()).getYieldChange((YieldTypes)iJ);							
+							aiFinalYields[iJ] -= 2 * GC.getFeatureInfo(pPlot->getFeatureType()).getYieldChange((YieldTypes)iJ);
 						}
 						aiDiffYields[iJ] = (aiFinalYields[iJ] - (2 * pPlot->getYield(((YieldTypes)iJ))));
 					}
@@ -8709,12 +8711,21 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 
 					iValue /= 2;
 
-                    for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
+					for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 					{
-					    aiFinalYields[iJ] /= 2;
-					    aiDiffYields[iJ] /= 2;
+						// Start Fix for Integer division by 0 error - By Orion Veteran
+						// The error is prevented by making sure we don't divide by 0
+						if (aiFinalYields[iJ] > 0)
+						{
+							aiFinalYields[iJ] /= 2;
+						}
+						if (aiDiffYields[iJ] > 0)
+						{
+							aiDiffYields[iJ] /= 2;
+						}
+						// End Fix for Integer division by 0 error - By Orion Veteran
 					}
-					
+
 					if (iValue > 0)
 					{
 						// this is mainly to make it improve better tiles first
@@ -8729,7 +8740,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 							if (iFoodPriority > 100)
 							{
 								iValue *= 100 + iFoodPriority;
-								iValue /= 200;							
+								iValue /= 200;
 							}
 							if (iFoodChange > 0)
 							{
@@ -9001,7 +9012,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
                     iTempValue += ((GC.getImprovementInfo(pPlot->getImprovementType()).getRouteYieldChanges(eRoute, YIELD_PRODUCTION)) * 60);
                     iTempValue += ((GC.getImprovementInfo(pPlot->getImprovementType()).getRouteYieldChanges(eRoute, YIELD_COMMERCE)) * 40);
                 }
-                
+
                 if (pPlot->isBeingWorked())
                 {
                 	iTempValue *= 2;
@@ -9012,7 +9023,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 					iTempValue += (pPlot->isConnectedToCapital() ? 10 : 30);
 				}
             }
-                                
+
 			if (iTempValue > 0)
 			{
 				for (iJ = 0; iJ < GC.getNumBuildInfos(); iJ++)
@@ -9024,7 +9035,9 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 						{
 							//the value multiplier is based on the default time...
 							iValue = iTempValue * 5 * 300;
-							iValue /= GC.getBuildInfo(eBuild).getTime();
+							if (GC.getBuildInfo(eBuild).getTime() != 0){
+								iValue /= GC.getBuildInfo(eBuild).getTime();
+							}
 
 							if ((iValue > iBestValue) || ((iValue > 0) && (eBestBuild == NO_BUILD)))
 							{
@@ -9038,8 +9051,6 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
         }
     }
 
-
-
 	if (eBestBuild != NO_BUILD)
 	{
 		FAssertMsg(iBestValue > 0, "iBestValue is expected to be greater than 0");
@@ -9052,7 +9063,6 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 				iBestValue += (iBestValue * std::max(0, aiBestDiffYields[YIELD_COMMERCE])) / 4;
 				iBestValue = std::max(1, iBestValue);
 			}
-			
 		}
 
 		if (piBestValue != NULL)

@@ -228,6 +228,23 @@ class CvRFCEventHandler:
 		self.rnf.setWarOnSpawn()
 		self.vic.setup()
 
+		# Absinthe: rename cities on the 1200AD scenario - the WB file cannot handle special chars and long names properly
+		#			some of the cities intentionally have different names though (compared to the CNM), for example some Kievan cities
+		#			thus it's only set for Hungary for now, we can add more civs/cities later on if there are naming issues
+		if utils.getScenario() == con.i1200ADScenario:
+			apCityList = PyPlayer(con.iHungary).getCityList()
+			for pLoopCity in apCityList:
+				pCity = pLoopCity.GetCy()
+				self.cnm.renameCities(pCity, con.iHungary)
+		# Absinthe: for all civs:
+		#if utils.getScenario() == con.i1200ADScenario:
+		#	for iPlayer in range(con.iNumPlayers -1):
+		#		pPlayer = gc.getPlayer(iPlayer)
+		#		apCityList = PyPlayer(iPlayer).getCityList()
+		#		for pLoopCity in apCityList:
+		#			pCity = pLoopCity.GetCy()
+		#			self.cnm.renameCities(pCity, iPlayer)
+
 		#Mercenaries - start
 		#global objMercenaryUtils
 		#objMercenaryUtils = MercenaryUtils.MercenaryUtils()
@@ -568,6 +585,7 @@ class CvRFCEventHandler:
 		if (gc.getPlayer(iPlayer).isAlive() and iPlayer < con.iNumPlayers and not gc.getPlayer(iPlayer).isHuman()):
 			self.rnf.checkPlayerTurn(iGameTurn, iPlayer)
 
+		# not really needed, we set it on collapse anyway
 		if ( gc.getPlayer(iPlayer).isAlive() and iPlayer < con.iNumPlayers ):
 			utils.setLastTurnAlive( iPlayer, iGameTurn )
 

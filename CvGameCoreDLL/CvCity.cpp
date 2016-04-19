@@ -14393,6 +14393,11 @@ void CvCity::damagePlot( int iFoeDamage, int iBarbDamage, CvPlot *pPlot ){
 		for ( i=0; i<N; i++ ){
 			pUnit = pPlot ->getUnitByIndex(i);
 			if ( GET_TEAM( GET_PLAYER((PlayerTypes)iPlayer).getTeam() ).isAtWar( pUnit ->getTeam() ) ){
+				// Absinthe: not a constant amount of damage, depends on current damage
+				iBarbDamage *= ((120 * pUnit->currHitPoints()) / pUnit->maxHitPoints());
+				iFoeDamage *= ((120 * pUnit->currHitPoints()) / pUnit->maxHitPoints());
+				iBarbDamage /= 100;
+				iFoeDamage /= 100;
 				if ( pUnit ->getOwner() == BARBARIAN ){
 					pUnit ->setDamage( pUnit->getDamage() + iBarbDamage, (PlayerTypes) iPlayer );
 				}else{
@@ -14448,7 +14453,6 @@ void CvCity::doDamageEnemy(){
 					damagePlot( iFoeDamage/2, iBarbDamage/2, pPlot );
 				};
 			};
-
 		};
 };
 

@@ -1211,11 +1211,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DAMAGE_ABILITY</Tag>
-		<English>[ICON_BULLET]Damages enemy units in the area.</English>
-		<French>[ICON_BULLET]Damages enemy units in the area.</French>
-		<German>[ICON_BULLET]Beschädigt feindliche Einheiten in der Umgebung.</German>
-		<Italian>[ICON_BULLET]Danneggia le unità nemiche nei paraggi.</Italian>
-		<Spanish>[ICON_BULLET]Damages enemy units in the area.</Spanish>
+		<English>[ICON_BULLET]Damages enemy units in the area</English>
+		<French>[ICON_BULLET]Damages enemy units in the area</French>
+		<German>[ICON_BULLET]Beschädigt feindliche Einheiten in der Umgebung</German>
+		<Italian>[ICON_BULLET]Danneggia le unità nemiche nei paraggi</Italian>
+		<Spanish>[ICON_BULLET]Damages enemy units in the area</Spanish>
 		<Portuguese>[ICON_BULLET]Danifica unidades inimigas na área</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -1265,30 +1265,30 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PAGAN_CULTURE_PER_CITY</Tag>
-		<English>[ICON_BULLET]%D1_Mod[ICON_CULTURE] per city, if you don't have a State Religion. </English>
-		<French>[ICON_BULLET]%D1_Mod[ICON_CULTURE] per city, if you don't have a State Religion. </French>
-		<German>[ICON_BULLET]%D1_Mod[ICON_CULTURE] in jeder Stadt sofern ihr keine Staatsreligion habt. </German>
-		<Italian>[ICON_BULLET]%D1_Mod[ICON_CULTURE] per città, se non hai una Religione Ufficiale. </Italian>
-		<Spanish>[ICON_BULLET]%D1_Mod[ICON_CULTURE] per city, if you don't have a State Religion. </Spanish>
-		<Portuguese>[ICON_BULLET]%D1_Mod[ICON_CULTURE] por cidade, se você não possuir uma religião estatal. </Portuguese>
+		<English>[ICON_BULLET]%D1_Mod[ICON_CULTURE] per city, if you don't have a State Religion</English>
+		<French>[ICON_BULLET]%D1_Mod[ICON_CULTURE] per city, if you don't have a State Religion</French>
+		<German>[ICON_BULLET]%D1_Mod[ICON_CULTURE] in jeder Stadt sofern ihr keine Staatsreligion habt</German>
+		<Italian>[ICON_BULLET]%D1_Mod[ICON_CULTURE] per città, se non hai una Religione Ufficiale</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod[ICON_CULTURE] per city, if you don't have a State Religion</Spanish>
+		<Portuguese>[ICON_BULLET]%D1_Mod[ICON_CULTURE] por cidade, se você não possuir uma religião estatal</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PAGAN_CULTURE</Tag>
-		<English>[ICON_BULLET]%D1_Mod[ICON_CULTURE] without a State Religion. </English>
-		<French>[ICON_BULLET]%D1_Mod[ICON_CULTURE] without a State Religion. </French>
-		<German>[ICON_BULLET]%D1_Mod[ICON_CULTURE] ohne Staatsreligion. </German>
-		<Italian>[ICON_BULLET]%D1_Mod[ICON_CULTURE] se non hai una Religione Ufficiale. </Italian>
-		<Spanish>[ICON_BULLET]%D1_Mod[ICON_CULTURE] without a State Religion. </Spanish>
-		<Portuguese>[ICON_BULLET]%D1_Mod[ICON_CULTURE] sem uma religião estatal. </Portuguese>
+		<English>[ICON_BULLET]%D1_Mod[ICON_CULTURE] without a State Religion</English>
+		<French>[ICON_BULLET]%D1_Mod[ICON_CULTURE] without a State Religion</French>
+		<German>[ICON_BULLET]%D1_Mod[ICON_CULTURE] ohne Staatsreligion</German>
+		<Italian>[ICON_BULLET]%D1_Mod[ICON_CULTURE] se non hai una Religione Ufficiale</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod[ICON_CULTURE] without a State Religion</Spanish>
+		<Portuguese>[ICON_BULLET]%D1_Mod[ICON_CULTURE] sem uma religião estatal</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTEREST_RATE</Tag>
-		<English>[ICON_BULLET]%D1_Mod % interest added to your [ICON_GOLD] at the beginning of every turn. </English>
-		<French>[ICON_BULLET]%D1_Mod % interest added to your [ICON_GOLD] at the beginning of every turn. </French>
-		<German>[ICON_BULLET]%D1_Mod % Zins wird ihrem [ICON_GOLD] zu Beginn jeder Runde hinzugefügt. </German>
-		<Italian>[ICON_BULLET]%D1_Mod % di interessi aggiunti al tuo [ICON_GOLD] all'inizio di ogni turno. </Italian>
-		<Spanish>[ICON_BULLET]%D1_Mod % interest added to your [ICON_GOLD] at the beginning of every turn. </Spanish>
-		<Portuguese>[ICON_BULLET]%D1_Mod % de juro adicionado ao [ICON_GOLD] no começo de cada turno. </Portuguese>
+		<English>[ICON_BULLET]%D1_Mod % interest added to your [ICON_GOLD] at the beginning of every turn</English>
+		<French>[ICON_BULLET]%D1_Mod % interest added to your [ICON_GOLD] at the beginning of every turn</French>
+		<German>[ICON_BULLET]%D1_Mod % Zins wird ihrem [ICON_GOLD] zu Beginn jeder Runde hinzugefügt</German>
+		<Italian>[ICON_BULLET]%D1_Mod % di interessi aggiunti al tuo [ICON_GOLD] all'inizio di ogni turno</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod % interest added to your [ICON_GOLD] at the beginning of every turn</Spanish>
+		<Portuguese>[ICON_BULLET]%D1_Mod % de juro adicionado ao [ICON_GOLD] no começo de cada turno</Portuguese>
 	</TEXT>
 		<!-- Other -->
 </Civ4GameText>

@@ -374,7 +374,7 @@ class CvCivicsScreen:
 						sText = CyTranslator().changeTextColor(sText, gc.getInfoTypeForString('COLOR_PLAYER_DARK_RED'))
 				else:
 					if player.canDoCivics(iCivic):
-						sText = CyTranslator().changeTextColor(sText, gc.getInfoTypeForString('WHITE'))
+						sText = CyTranslator().changeTextColor(sText, gc.getInfoTypeForString('COLOR_WHITE'))
 					else:
 						sText = CyTranslator().changeTextColor(sText, gc.getInfoTypeForString('COLOR_LIGHT_GREY'))
 			else:

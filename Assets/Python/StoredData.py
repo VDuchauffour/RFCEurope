@@ -37,8 +37,7 @@ class StoredData:
 				'iSpawnWar': 0, #if 1, add units and declare war. If >=2, do nothing
 				'bAlreadySwitched': False,
 				'lColonistsAlreadyGiven': [0 for i in range(con.iNumPlayers)], #major players only, currently unused
-				'lNumCities': [0 for i in range(con.iNumTotalPlayers)], #total players (major + indy)
-				'lLastTurnAlive': [0 for i in range(con.iNumTotalPlayers)], #total players (major + indy)
+				'lNumCities': [0 for i in range(con.iNumPlayers)], #major players only
 				'lSpawnDelay': [0 for i in range(con.iNumPlayers)], #major players only
 				'lFlipsDelay': [0 for i in range(con.iNumPlayers)], #major players only
 				'iBetrayalTurns': 0,
@@ -58,6 +57,10 @@ class StoredData:
 				'bReformationActive': False,
 				'lReformationHitMatrix': [0 for i in range(con.iNumPlayers)], #major players only
 				'bCounterReformationActive': False,
+
+				# Absinthe: Persecution popup
+				'lPersecutionData': [-1, -1, -1],
+				'lPersecutionReligions': [],
 
 				# AIWars
 				'lAttackingCivsArray': [0, 0, -1, -1, 0, 0, 0, -1, 0, -1, -1, -1, -1, -1, 0, 0, 0, -1, -1, 0, 0, -1, 0, 0, -1, -1, -1, 0, 0], #major players only
@@ -87,8 +90,10 @@ class StoredData:
 				'bDCEnabled': False,
 				'iDCLast': 0,
 
-				# Sedna17: Respawns
-				'lRespawnTurns': [0 for i in range(con.iNumPlayers)], #major players only
+				# Absinthe: Respawns
+				'lSpecialRespawnTurn': [0 for i in range(con.iNumPlayers)], #major players only, currently unused
+				'lLastTurnAlive': [0 for i in range(con.iNumPlayers)], #major players only
+				'lLastRespawnTurn': [0 for i in range(con.iNumPlayers)], #major players only
 
 				# 3Miro: Minor Nations
 				'lNextMinorRevolt': [-1, -1, -1, -1, -1, -1, -1],
@@ -98,10 +103,6 @@ class StoredData:
 				'lMercGlobalPool': [],
 				'lMercsHiredBy': [-1]*500, # must be at least as long as lMercList (currently allow for 500)
 
-				# Absinthe: Persecution popup
-				'lPersecutionData': [-1, -1, -1],
-				'lPersecutionReligions': [],
-				
 				# Merijn: AI UHV
 				'bIgnoreAIUHV': True,
 				}

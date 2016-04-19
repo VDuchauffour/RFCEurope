@@ -106,8 +106,9 @@
 //#define PROMOTION_MEDIC		(12)
 //#define PROMOTION_FORMATION	(7)
 
-#define ENEMY_DAMAGE			(16)
-#define BARB_DAMAGE				(32)
+// Absinthe: damage modifiers for the Hungarian UB
+#define ENEMY_DAMAGE			(12)
+#define BARB_DAMAGE				(18)
 
 #define PROTESTANTISM			(0)
 #define ISLAM					(1)
@@ -118,6 +119,7 @@
 bool MiroBelongToCore( int iCiv, int x, int y );
 bool MiroBelongToNormal( int iCiv, int x, int y );
 int getSettlersMaps( int iCiv, int y, int x, char * );
+// Absinthe: moved to CvPlayer, exported to python
 int getWarsMaps( int iCiv, int y, int x, char * );
 
 bool isIndep( int iCiv ); // true if the nation is independent
@@ -230,13 +232,14 @@ extern int psychoAI_player;
 // 3Miro: AI cheats to help nations historically conquer certain players
 extern int *historicalEnemyAIcheat;
 
+// Absinthe: unused in RFCE
 // 3Miro: Stability last owned cities and plots
-extern int* lOwnedCities;
-extern int* lOwnedPlots;
+//extern int* lOwnedCities;
+//extern int* lOwnedPlots;
 
-// 3Miro: counts the turn for prosecution instability
 // Absinthe: in python now
-// extern int* ProsecutionCount;
+// 3Miro: counts the turn for prosecution instability
+extern int* ProsecutionCount;
 
 // 3Miro: Normal and Core Areas for stability and map swaps
 extern int** CoreAreasRect;

@@ -31,6 +31,18 @@ Changes for RFCE 1.4:
 		- If Protestantism spreads to a city and all the religious buildings are converted, Catholicism itself might also disappear from the city
 		- Various new interface messages for the different situations connected to the Reformation
 
+	RiseAndFall updates:
+		- Respawned civs can no longer collapse in the first 10 turns
+		- No city secession in the first 15 turns after spawn, or in the first 10 turns after respawn
+		- If the civ is respawned, it's harder to collapse them by barbs
+		- Vassals can now also instantly collapse if they lose a significant amount of their territory in a couple turns
+		- Fixed issue where the human player collapsed less often then it should
+		- Fixed issue where Byzantium could collapse in some rare cases even without losing Constantinople
+		- Improved mechanics for all 4 different collapse types, collapses should be way more straightforward
+		- Increased frequency of resurrections, decreased number of civs that can stay in a collapsed state at a given time
+		- AI declares war on the new indy city right after city secession
+		- Only half of the units present in the city will flip to the new indy civ/city on secession
+
 	General changes:
 		- Anarchy instability now appears right away for the human player, not with a turn delay
 		- Revised swing stability calculations, now converges to 0 a little slower
@@ -41,15 +53,27 @@ Changes for RFCE 1.4:
 		- Indy and barb cities outside war maps now have some chance to be AI targets (were totally ignored previously), but it's significantly reduced compared to normal targets
 		- Revised code and fixed various inconsistencies connected to the settler and war map setup
 		- Removed all unnecessary values from all settler and war maps, now they only have WB values everywhere
+		- Correct CNM name for new cities placed in the WB, now cities added there will get their RFCE name instead of one from the default city list
+		- Since the WB file cannot handle special characters and long names perfectly, added function to rename city names on the start of the scenario
+		- AI civs will more often reconsider their wars against minor civs (note that being an AI target and declaring an actual war is also handled separately)
+		- AI war declaration on indies is now based on their war maps, the chance is increased with higher war map values
+		- AI civs will much more frequently declare war on indies in their core area
+
+	Text/GUI improvements:
 		- New GlobalDefines_Alt.xml file, users can change RFCE-specific settings there (RFCEurope\Assets\XML\)
 		- Included option in the GlobalDefines_Alt to enable/disable AI UHV checks, they are enabled by default
+		- Added option to enable/disable autosaves during AI autoplay, also in the GlobalDefines_Alt (disabled by default)
 		- Added new hover-function: holding down alt when hovering on the map will display the respawn areas
 		- Option to enable/disable both the spawn and respawn hover displays, in the GlobalDefines_Alt (enabled by default)
-		- Colour for respawn areas is white, colour for spawn areas changed to purple (for now)
-		- Added option to enable/disable autosaves during AI autoplay, also in the GlobalDefines_Alt (disabled by default)
+		- Colour for respawn areas is purple, colour for spawn areas changed to white (for now)
 		- Added some new and improved some old event and interface messages connected to Crusades and to religious persecution
 		- Revised all older hints (which can be seen on loading a game) to be in sync with the latest version of the mod
 		- Added around 10 new hints - some are only for fun though :)
+		- Religion Screen and Company Screen can now handle unicode characters
+		- Improved religion foundation date information on the Religion Screen, also it now takes different scenarios into account
+		- Improved city and wonder foundation date/city/civ information on the Info Screen, also it now takes different scenarios into account
+		- Fixed mistakes on the Info Screen where information from the top5 cities and from the wonders were not in sync (connected to city visibility and contact with the civ)
+		- Readded era displays to various screens (main, info, religion) before the discovery of Calendar
 
 	Balance/setup:
 		- Sweden starts with the following civics: Feudal Monarchy, Serfdom, Manoralism
@@ -62,6 +86,7 @@ Changes for RFCE 1.4:
 		- Less barbarians around Novgorod, reduced both the generic barb spawns and the Mongol threat for them
 		- Successful Crusade spreads Catholicism to Jerusalem (if not present already)
 		- Wattasids won't revolt if Morocco controls the region, they now appear in their DCN as a ruling dynasty
+		- Reduced overall damage from the Hungarian Végvár: units won't get a fixed amount of damage, it depends on their current HP instead (so Végvár won't kill units, only weaken them)
 
 	Bugfixes:
 		- Various dll bugfixes and optimizations from Better BTS AI, K-Mod, Afforess
@@ -76,6 +101,18 @@ Changes for RFCE 1.4:
 		- Fixed issue which appeared if the game was trying to remove a bonus resource from a plot when there wasn't any
 		- Fixed inconsistencies with the Scottish UP - will work against major civs and indies, but not against barbarians
 		- Fixed issue with Venetian naval units' starting position
+		- Fixed serious AI bug where a major nation was not mutually in war with an indy civ in some special cases
+		- Fixed bug where later set (on other civs spawn for example) potential provinces were never upgraded to historical/core
+		- Fixed bug where all provinces of the given civ were reset to their initial status on respawn (thus not taking later changes into account)
+		- Fixed issue on respawn where potential provinces didn't change status with the flipped cities
+		- Fixed assert failure connected to the new civic screen
+		- Fixed possible CTD with some AI worker action calculations, based on a Firaxis mistake - by OrionVeteran
+		- Fixed another (probably harmless) assert failure, connected to civ initialization
+		- Fixed bug in unit looping connected to prosecutors, which results in a huge performance improvement - thanks to Nightinggale
+		- Fixed various bugs in the Venetian preset war against independent Ragusa
+		- Fixed bug (and potential crash) connected to renaming the city on city secession
+		- Fixed bug where religion foundation date were displayed as "Early Middle Ages" for almost all game long
+		- Fixed bug: the Pope now always ignores Barbs and Indies outside it's war map
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

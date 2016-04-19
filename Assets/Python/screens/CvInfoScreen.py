@@ -13,6 +13,7 @@ import time
 
 import Consts as con #Rhye
 import XMLConsts as xml
+import RFCUtils
 
 from PyHelpers import PyPlayer
 
@@ -20,6 +21,7 @@ from PyHelpers import PyPlayer
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
 localText = CyTranslator()
+utils = RFCUtils.RFCUtils()
 
 def iff(b, x, y):
 	if b:
@@ -1560,44 +1562,46 @@ class CvInfoScreen:
 
 				iTurnYear = CyGame().getTurnYear(pCity.getGameTurnFounded())
 
-
-				#Rhye - start
-##				if (iTurnYear < 0):
-##					szTurnFounded = localText.getText("TXT_KEY_TIME_BC", (-iTurnYear,))#"%d %s" %(-iTurnYear, self.TEXT_BC)
-##				else:
-##					szTurnFounded = localText.getText("TXT_KEY_TIME_AD", (iTurnYear,))#"%d %s" %(iTurnYear, self.TEXT_AD)
-
 				iActivePlayer = CyGame().getActivePlayer()
 				pActivePlayer = gc.getPlayer(iActivePlayer)
 				tActivePlayer = gc.getTeam(pActivePlayer.getTeam())
-				#iBronzeWorking = 61
-				#iIronWorking = 63
-				#iCalendar = 33
 
+				# Absinthe: top5 city foundation text
 				if (tActivePlayer.isHasTech(xml.iCalendar)):
-					if (iTurnYear < 0):
-						szTurnFounded = localText.getText("TXT_KEY_TIME_BC", (-iTurnYear,))
+					if (iTurnYear <= utils.getScenarioStartYear()):
+						if utils.getScenario() == con.i500ADScenario:
+							szTurnFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_500AD", ())
+						else:
+							szTurnFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_1200AD", ())
 					else:
 						szTurnFounded = localText.getText("TXT_KEY_TIME_AD", (iTurnYear,))
-				elif (iTurnYear >= 1500):
-					szTurnFounded = localText.getText("TXT_KEY_AGE_RENAISSANCE", ())
-				elif (iTurnYear >= 450):
-					szTurnFounded = localText.getText("TXT_KEY_AGE_MEDIEVAL", ())
-				elif (iTurnYear >= -800):
-					szTurnFounded = localText.getText("TXT_KEY_AGE_IRON", ())
-				elif (iTurnYear >= -2000):
-					szTurnFounded = localText.getText("TXT_KEY_AGE_BRONZE", ())
 				else:
-					szTurnFounded = localText.getText("TXT_KEY_AGE_STONE", ())
-				#Rhye - end
+					if (iTurnYear <= utils.getScenarioStartYear()):
+						szTurnFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_ERA", ())
+					elif (iTurnYear >= 1500):
+						szTurnFounded = localText.getText("TXT_KEY_ERA_RENAISSANCE", ())
+					elif (iTurnYear >= 1200):
+						szTurnFounded = localText.getText("TXT_KEY_ERA_LATE_MEDIEVAL", ())
+					elif (iTurnYear >= 900):
+						szTurnFounded = localText.getText("TXT_KEY_ERA_HIGH_MEDIEVAL", ())
+					else:
+						szTurnFounded = localText.getText("TXT_KEY_ERA_EARLY_MEDIEVAL", ())
 
-
-				if (pCity.isRevealed(gc.getGame().getActiveTeam()) or gc.getTeam(pPlayer.getTeam()).isHasMet(gc.getGame().getActiveTeam())):
-					self.szCityNames[iRankLoop] = pCity.getName().upper()
-					self.szCityDescs[iRankLoop] = ("%s, %s" %(pPlayer.getCivilizationAdjective(0), localText.getText("TXT_KEY_MISC_FOUNDED_IN", (szTurnFounded,))))
+				# Absinthe: top5 city name/civ visibility
+				if (gc.getTeam(pPlayer.getTeam()).isHasMet(gc.getGame().getActiveTeam())):
+					if (pCity.isRevealed(gc.getGame().getActiveTeam())):
+						self.szCityNames[iRankLoop] = pCity.getName().upper()
+						self.szCityDescs[iRankLoop] = ("%s, %s" %(pPlayer.getCivilizationAdjective(0), localText.getText("TXT_KEY_MISC_FOUNDED", (szTurnFounded,))))
+					else:
+						self.szCityNames[iRankLoop] = localText.getText("TXT_KEY_UNKNOWN", ()).upper()
+						self.szCityDescs[iRankLoop] = ("%s, %s" %(pPlayer.getCivilizationAdjective(0), localText.getText("TXT_KEY_MISC_FOUNDED", (szTurnFounded,))))
 				else:
-					self.szCityNames[iRankLoop] = localText.getText("TXT_KEY_UNKNOWN", ()).upper()
-					self.szCityDescs[iRankLoop] = ("%s" %(localText.getText("TXT_KEY_MISC_FOUNDED_IN", (szTurnFounded,)), ))
+					if (pCity.isRevealed(gc.getGame().getActiveTeam())):
+						self.szCityNames[iRankLoop] = pCity.getName().upper()
+						self.szCityDescs[iRankLoop] = ("%s" %(localText.getText("TXT_KEY_MISC_FOUNDED", (szTurnFounded,)), ))
+					else:
+						self.szCityNames[iRankLoop] = localText.getText("TXT_KEY_UNKNOWN", ()).upper()
+						self.szCityDescs[iRankLoop] = ("%s" %(localText.getText("TXT_KEY_MISC_FOUNDED", (szTurnFounded,)), ))
 				self.iCitySizes[iRankLoop] = pCity.getPopulation()
 				self.aaCitiesXY[iRankLoop] = [pCity.getX(), pCity.getY()]
 
@@ -1698,10 +1702,10 @@ class CvInfoScreen:
 				szProjectName = pProjectInfo.getDescription()
 
 				self.aiWonderListBoxIDs.append(iProjectType)
-				self.aiTurnYearBuilt.append(-9999)
+				self.aiTurnYearBuilt.append(self.aaWondersBuilt[iWonderLoop][0])
 				szWonderBuiltBy = self.aaWondersBuilt[iWonderLoop][2]
 				self.aiWonderBuiltBy.append(szWonderBuiltBy)
-				szWonderCity = self.aaWondersBuilt[iWonderLoop][3]
+				szWonderCity = ""
 				self.aszWonderCity.append(szWonderCity)
 
 				screen.appendListBoxString( self.szWondersListBox, szProjectName + " (" + szWonderBuiltBy + ")", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
@@ -1720,7 +1724,7 @@ class CvInfoScreen:
 				self.aiTurnYearBuilt.append(-9999)
 				szWonderBuiltBy = self.aaWondersBeingBuilt[iWonderLoop][1]
 				self.aiWonderBuiltBy.append(szWonderBuiltBy)
-				szWonderCity = ""
+				szWonderCity = self.aaWondersBeingBuilt[iWonderLoop][2]
 				self.aszWonderCity.append(szWonderCity)
 
 				screen.appendListBoxString( self.szWondersListBox, szWonderName + " (" + szWonderBuiltBy + ")", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
@@ -1778,22 +1782,35 @@ class CvInfoScreen:
 				szProjectDesc = u"<font=3b>" + pProjectInfo.getDescription().upper() + u"</font>"
 				szStatsText = szProjectDesc + "\n\n"
 
-				# Say whether this project is built yet or not
-
+				# Absinthe: project completion date
 				iTurnYear = self.aiTurnYearBuilt[self.iActiveWonderCounter]
-				if (iTurnYear == -6666):	# -6666 used for wonders in progress
-					szTempText = localText.getText("TXT_KEY_BEING_BUILT", ())
+				if (iTurnYear != -6666):	# -6666 used for wonders in progress
+
+					iActivePlayer = CyGame().getActivePlayer()
+					pActivePlayer = gc.getPlayer(iActivePlayer)
+					tActivePlayer = gc.getTeam(pActivePlayer.getTeam())
+
+					if (tActivePlayer.isHasTech(xml.iCalendar)):
+						szTurnFounded = localText.getText("TXT_KEY_TIME_AD", (iTurnYear,))
+					elif (iTurnYear >= 1500):
+						szTurnFounded = localText.getText("TXT_KEY_ERA_RENAISSANCE", ())
+					elif (iTurnYear >= 1200):
+						szTurnFounded = localText.getText("TXT_KEY_ERA_LATE_MEDIEVAL", ())
+					elif (iTurnYear >= 900):
+						szTurnFounded = localText.getText("TXT_KEY_ERA_HIGH_MEDIEVAL", ())
+					else:
+						szTurnFounded = localText.getText("TXT_KEY_ERA_EARLY_MEDIEVAL", ())
+
+					szDateBuilt = ("%s" %(szTurnFounded))
+					szProjectDesc2 = "%s" %("%s" %(localText.getText("TXT_KEY_INFO_WONDER_DATE", (szDateBuilt,)), ))
 
 				else:
-					szTempText = localText.getText("TXT_KEY_INFO_SCREEN_BUILT", ())
+					szProjectDesc2 = ("%s" %(localText.getText("TXT_KEY_BEING_BUILT", ())))
 
-				szWonderDesc = "%s, %s" %(self.aiWonderBuiltBy[self.iActiveWonderCounter], szTempText)
-				szStatsText += szWonderDesc + "\n"
-
-				if (self.aszWonderCity[self.iActiveWonderCounter] != ""):
-					szStatsText += self.aszWonderCity[self.iActiveWonderCounter] + "\n\n"
-				else:
-					szStatsText += "\n"
+				# Absinthe: project info display
+				szProjectDesc1 = "%s" %("%s" %(localText.getText("TXT_KEY_INFO_WONDER_CIV_NAME", (self.aiWonderBuiltBy[self.iActiveWonderCounter],)), )) + "\n"
+				szStatsText += szProjectDesc1 + szProjectDesc2 + "\n"
+				szStatsText += self.aszWonderCity[self.iActiveWonderCounter] + "\n\n"
 
 				if (pProjectInfo.getProductionCost() > 0):
 					szCost = localText.getText("TXT_KEY_PEDIA_COST", (gc.getActivePlayer().getProjectProductionNeeded(self.iWonderID),))
@@ -1850,58 +1867,38 @@ class CvInfoScreen:
 				szWonderDesc = u"<font=3b>" + gc.getBuildingInfo(self.iWonderID).getDescription().upper() + u"</font>"
 				szStatsText = szWonderDesc + "\n\n"
 
-				# Wonder built-in year
+				# Absinthe: wonder foundation text
 				iTurnYear = self.aiTurnYearBuilt[self.iActiveWonderCounter]#self.aaWondersBuilt[self.iActiveWonderCounter][0]#.append([0,iProjectLoop,""]
-
-				szDateBuilt = ""
-
 				if (iTurnYear != -9999):	# -9999 used for wonders in progress
-					#Rhye - start
-
-##					if (iTurnYear < 0):
-##						szTurnFounded = localText.getText("TXT_KEY_TIME_BC", (-iTurnYear,))
-##					else:
-##						szTurnFounded = localText.getText("TXT_KEY_TIME_AD", (iTurnYear,))
-##
-##					szDateBuilt = (", %s" %(szTurnFounded))
 
 					iActivePlayer = CyGame().getActivePlayer()
 					pActivePlayer = gc.getPlayer(iActivePlayer)
 					tActivePlayer = gc.getTeam(pActivePlayer.getTeam())
-					#iCalendar = 33
 
-					if (tActivePlayer.isHasTech(xml.iCalendar)):
-						if (iTurnYear < 0):
-							szTurnFounded = localText.getText("TXT_KEY_TIME_BC", (-iTurnYear,))
-						else:
-							szTurnFounded = localText.getText("TXT_KEY_TIME_AD", (iTurnYear,))
-
-					elif (iTurnYear >= 1500):
-						szTurnFounded = localText.getText("TXT_KEY_AGE_RENAISSANCE", ())
-					elif (iTurnYear >= 450):
-						szTurnFounded = localText.getText("TXT_KEY_AGE_MEDIEVAL", ())
-					elif (iTurnYear >= -800):
-						szTurnFounded = localText.getText("TXT_KEY_AGE_IRON", ())
-					elif (iTurnYear >= -2000):
-						szTurnFounded = localText.getText("TXT_KEY_AGE_BRONZE", ())
+					if (iTurnYear <= utils.getScenarioStartYear()):
+						szTurnFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_START", ())
 					else:
-						szTurnFounded = localText.getText("TXT_KEY_AGE_STONE", ())
+						if (tActivePlayer.isHasTech(xml.iCalendar)):
+							szTurnFounded = localText.getText("TXT_KEY_TIME_AD", (iTurnYear,))
+						elif (iTurnYear >= 1500):
+							szTurnFounded = localText.getText("TXT_KEY_ERA_RENAISSANCE", ())
+						elif (iTurnYear >= 1200):
+							szTurnFounded = localText.getText("TXT_KEY_ERA_LATE_MEDIEVAL", ())
+						elif (iTurnYear >= 900):
+							szTurnFounded = localText.getText("TXT_KEY_ERA_HIGH_MEDIEVAL", ())
+						else:
+							szTurnFounded = localText.getText("TXT_KEY_ERA_EARLY_MEDIEVAL", ())
 
-					szDateBuilt = (", %s" %(szTurnFounded))
-					#Rhye - end
-
-
+					szDateBuilt = ("%s" %(szTurnFounded))
+					szWonderDesc2 = "%s" %("%s" %(localText.getText("TXT_KEY_INFO_WONDER_DATE", (szDateBuilt,)), ))
 
 				else:
-					szDateBuilt = (", %s" %(localText.getText("TXT_KEY_BEING_BUILT", ())))
+					szWonderDesc2 = ("%s" %(localText.getText("TXT_KEY_BEING_BUILT", ())))
 
-				szWonderDesc = "%s%s" %(self.aiWonderBuiltBy[self.iActiveWonderCounter], szDateBuilt)
-				szStatsText += szWonderDesc + "\n"
-
-				if (self.aszWonderCity[self.iActiveWonderCounter] != ""):
-					szStatsText += self.aszWonderCity[self.iActiveWonderCounter] + "\n\n"
-				else:
-					szStatsText += "\n"
+				# Absinthe: wonder info display
+				szWonderDesc1 = "%s" %("%s" %(localText.getText("TXT_KEY_INFO_WONDER_CIV_NAME", (self.aiWonderBuiltBy[self.iActiveWonderCounter],)), )) + "\n"
+				szStatsText += szWonderDesc1 + szWonderDesc2 + "\n"
+				szStatsText += self.aszWonderCity[self.iActiveWonderCounter] + "\n\n"
 
 				# Building attributes
 
@@ -1991,9 +1988,10 @@ class CvInfoScreen:
 					pCityPlot = CyMap().plot(pCity.getX(), pCity.getY())
 
 					# Check to see if active player can see this city
-					szCityName = ""
-					if (pCityPlot.isActiveVisible(false)):
-						szCityName = pCity.getName()
+					# Absinthe: this is disabled, instead a check later with isRevealed: able to see the city name if we have ever saw the city
+					#szCityName = ""
+					#if (pCityPlot.isActiveVisible(false)):
+					#	szCityName = pCity.getName()
 
 					# Loop through projects to find any under construction
 					if (self.szWonderDisplayMode == "Projects"):
@@ -2008,7 +2006,7 @@ class CvInfoScreen:
 								# Project Mode
 								if (iPlayerTeam == gc.getTeam(gc.getPlayer(self.iActivePlayer).getTeam()).getID()):
 
-									self.aaWondersBeingBuilt.append([iProjectProd, pPlayer.getCivilizationShortDescription(0)])
+									self.aaWondersBeingBuilt.append([iProjectProd, pPlayer.getCivilizationShortDescription(0),localText.getText("TXT_KEY_INFO_WONDER_CITY_NAME", (pCity.getName(),))])
 
 					# Loop through buildings
 					else:
@@ -2028,14 +2026,20 @@ class CvInfoScreen:
 									# Only show our wonders under construction
 									if (iPlayerTeam == gc.getPlayer(self.iActivePlayer).getTeam()):
 
-										self.aaWondersBeingBuilt.append([iBuildingProd, pPlayer.getCivilizationShortDescription(0)])
+										self.aaWondersBeingBuilt.append([iBuildingProd, pPlayer.getCivilizationShortDescription(0),localText.getText("TXT_KEY_INFO_WONDER_CITY_NAME", (pCity.getName(),))])
 
+								# Absinthe: world wonder display
 								if (pCity.getNumBuilding(iBuildingLoop) > 0):
 									if (iPlayerTeam == gc.getPlayer(self.iActivePlayer).getTeam() or gc.getTeam(gc.getPlayer(self.iActivePlayer).getTeam()).isHasMet(iPlayerTeam)):
-										self.aaWondersBuilt.append([pCity.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,pPlayer.getCivilizationShortDescription(0),szCityName])
+										if (pCity.isRevealed(gc.getGame().getActiveTeam())):
+											self.aaWondersBuilt.append([pCity.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,pPlayer.getCivilizationShortDescription(0),localText.getText("TXT_KEY_INFO_WONDER_CITY_NAME", (pCity.getName(),))])
+										else:
+											self.aaWondersBuilt.append([pCity.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,pPlayer.getCivilizationShortDescription(0),localText.getText("TXT_KEY_INFO_UNKNOWN_CITY", ())])
 									else:
-										self.aaWondersBuilt.append([pCity.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,localText.getText("TXT_KEY_UNKNOWN", ()),localText.getText("TXT_KEY_UNKNOWN", ())])
-	#								print("Adding World wonder to list: %s, %d, %s" %(pCity.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,pPlayer.getCivilizationAdjective(0)))
+										if (pCity.isRevealed(gc.getGame().getActiveTeam())):
+											self.aaWondersBuilt.append([pCity.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,localText.getText("TXT_KEY_UNKNOWN", ()),localText.getText("TXT_KEY_INFO_WONDER_CITY_NAME", (pCity.getName(),))])
+										else:
+											self.aaWondersBuilt.append([pCity.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,localText.getText("TXT_KEY_UNKNOWN", ()),localText.getText("TXT_KEY_INFO_UNKNOWN_CITY", ())])
 									self.iNumWonders += 1
 
 							# National/Team Wonder Mode
@@ -2047,15 +2051,20 @@ class CvInfoScreen:
 									# Only show our wonders under construction
 									if (iPlayerTeam == gc.getPlayer(self.iActivePlayer).getTeam()):
 
-										self.aaWondersBeingBuilt.append([iBuildingProd, pPlayer.getCivilizationShortDescription(0)])
+										self.aaWondersBeingBuilt.append([iBuildingProd, pPlayer.getCivilizationShortDescription(0),localText.getText("TXT_KEY_INFO_WONDER_CITY_NAME", (pCity.getName(),))])
 
+								# Absinthe: national wonder display - added code, but note that RFCE only shows own national wonders ATM
 								if (pCity.getNumBuilding(iBuildingLoop) > 0):
-
-	#								print("Adding National wonder to list: %s, %d, %s" %(pCity.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,pPlayer.getCivilizationAdjective(0)))
 									if (iPlayerTeam == gc.getPlayer(self.iActivePlayer).getTeam() or gc.getTeam(gc.getPlayer(self.iActivePlayer).getTeam()).isHasMet(iPlayerTeam)):
-										self.aaWondersBuilt.append([pCity.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,pPlayer.getCivilizationShortDescription(0), szCityName])
+										if (pCity.isRevealed(gc.getGame().getActiveTeam())):
+											self.aaWondersBuilt.append([pCity.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,pPlayer.getCivilizationShortDescription(0),localText.getText("TXT_KEY_INFO_WONDER_CITY_NAME", (pCity.getName(),))])
+										else:
+											self.aaWondersBuilt.append([pCity.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,pPlayer.getCivilizationShortDescription(0),localText.getText("TXT_KEY_INFO_UNKNOWN_CITY", ())])
 									else:
-										self.aaWondersBuilt.append([pCity.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,localText.getText("TXT_KEY_UNKNOWN", ()), localText.getText("TXT_KEY_UNKNOWN", ())])
+										if (pCity.isRevealed(gc.getGame().getActiveTeam())):
+											self.aaWondersBuilt.append([pCity.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,localText.getText("TXT_KEY_UNKNOWN", ()),localText.getText("TXT_KEY_INFO_WONDER_CITY_NAME", (pCity.getName(),))])
+										else:
+											self.aaWondersBuilt.append([pCity.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,localText.getText("TXT_KEY_UNKNOWN", ()),localText.getText("TXT_KEY_INFO_UNKNOWN_CITY", ())])
 									self.iNumWonders += 1
 
 		# This array used to store which players have already used up a team's slot so team projects don't get added to list more than once
@@ -2083,10 +2092,17 @@ class CvInfoScreen:
 
 							for iI in range(pTeam.getProjectCount(iProjectLoop)):
 
+								# Absinthe: project wonder display
 								if (iTeamLoop == gc.getPlayer(self.iActivePlayer).getTeam() or gc.getTeam(gc.getPlayer(self.iActivePlayer).getTeam()).isHasMet(iTeamLoop)):
-									self.aaWondersBuilt.append([-9999,iProjectLoop,gc.getPlayer(iPlayerLoop).getCivilizationShortDescription(0),szCityName])
+									if (pCity.isRevealed(gc.getGame().getActiveTeam())):
+										self.aaWondersBuilt.append([pCity.getBuildingOriginalTime(iProjectLoop),iProjectLoop,gc.getPlayer(iPlayerLoop).getCivilizationShortDescription(0),localText.getText("TXT_KEY_INFO_WONDER_CITY_NAME", (pCity.getName(),))])
+									else:
+										self.aaWondersBuilt.append([pCity.getBuildingOriginalTime(iProjectLoop),iProjectLoop,gc.getPlayer(iPlayerLoop).getCivilizationShortDescription(0),localText.getText("TXT_KEY_INFO_UNKNOWN_CITY", ())])
 								else:
-									self.aaWondersBuilt.append([-9999,iProjectLoop,localText.getText("TXT_KEY_UNKNOWN", ()),localText.getText("TXT_KEY_UNKNOWN", ())])
+									if (pCity.isRevealed(gc.getGame().getActiveTeam())):
+										self.aaWondersBuilt.append([pCity.getBuildingOriginalTime(iProjectLoop),iProjectLoop,localText.getText("TXT_KEY_UNKNOWN", ()),localText.getText("TXT_KEY_INFO_WONDER_CITY_NAME", (pCity.getName(),))])
+									else:
+										self.aaWondersBuilt.append([pCity.getBuildingOriginalTime(iProjectLoop),iProjectLoop,localText.getText("TXT_KEY_UNKNOWN", ()),localText.getText("TXT_KEY_INFO_UNKNOWN_CITY", ())])
 								self.iNumWonders += 1
 
 		# Sort wonders in order of date built
@@ -2387,33 +2403,21 @@ class CvInfoScreen:
 
 		year = CyGame().getTurnYear(turn)
 
-		#Rhye - start
-##		if (year < 0):
-##			return localText.getText("TXT_KEY_TIME_BC", (-year,))
-##		else:
-##			return localText.getText("TXT_KEY_TIME_AD", (year,))
-
 		iPlayer = CyGame().getActivePlayer()
 		pPlayer = gc.getPlayer(iPlayer)
 		tPlayer = gc.getTeam(pPlayer.getTeam())
 
+		#Absinthe: based on the knowledge of Calendar and the corresponding era
 		if (tPlayer.isHasTech(xml.iCalendar)):
-			if (year < 0):
-				return localText.getText("TXT_KEY_TIME_BC", (-year,))
-			else:
-				return localText.getText("TXT_KEY_TIME_AD", (year,))
+			return localText.getText("TXT_KEY_TIME_AD", (year,))
 		elif (year >= 1500):
-			return localText.getText("TXT_KEY_AGE_RENAISSANCE", ())
-		elif (year >= 450):
-			return localText.getText("TXT_KEY_AGE_MEDIEVAL", ())
-		elif (year >= -800):
-			return localText.getText("TXT_KEY_AGE_IRON", ())
-		elif (year >= -2000):
-			return localText.getText("TXT_KEY_AGE_BRONZE", ())
+			return localText.getText("TXT_KEY_ERA_RENAISSANCE", ())
+		elif (year >= 1200):
+			return localText.getText("TXT_KEY_ERA_LATE_MEDIEVAL", ())
+		elif (year >= 900):
+			return localText.getText("TXT_KEY_ERA_HIGH_MEDIEVAL", ())
 		else:
-			return localText.getText("TXT_KEY_AGE_STONE", ())
-		#Rhye - end
-
+			return localText.getText("TXT_KEY_ERA_EARLY_MEDIEVAL", ())
 
 	def lineName(self,i):
 		return self.LINE_ID + str(i)

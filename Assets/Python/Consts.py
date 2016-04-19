@@ -73,10 +73,9 @@ teamAragon, teamSweden, teamPrussia, teamLithuania, teamAustria, teamTurkey, tea
 iIndepStart = iIndependent # creates the block of independent civs
 iIndepEnd = iIndependent4
 
-l0Array =       [0 for i in range(iNumPlayers)]			# currently unused
-l0ArrayActive = [0 for i in range(iNumPlayers)]			# currently unused
-l0ArrayTotal =  [0 for i in range(iNumTotalPlayers)]	# counts the cities for each player, used in RiseAndFall.py
-lm1Array =      [-1 for i in range(iNumTotalPlayers)]
+l0ArrayMajor = [0 for i in range(iNumPlayers)]			# temp counter for the number of cities for each player, used in RiseAndFall.py
+l0ArrayTotal = [0 for i in range(iNumTotalPlayers)]		# currently unused
+lm1Array = [-1 for i in range(iNumTotalPlayers)]		# currently unused
 
 #for Congresses and Victory
 lCivGroups = [[iByzantium,iBulgaria,iNovgorod,iKiev,iLithuania,iMoscow],		#Eastern

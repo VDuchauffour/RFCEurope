@@ -9873,15 +9873,13 @@ bool CvGame::safeMotherland( int iCiv ){
 		};
 	};
 	if ( iCitiesOwned > iCitiesLost ) return true;
-	if ( (GET_PLAYER((PlayerTypes)iCiv).getRespawnedAlive()) && (iCitiesOwned > 0) ) return true;
+	//if ( (GET_PLAYER((PlayerTypes)iCiv).getRespawnedAlive()) && (iCitiesOwned > 0) ) return true;
 	//if ( (GET_PLAYER((PlayerTypes)iCiv).getEverRespawned()) && (iCitiesOwned > 0) ) return true;
-	if ( GET_TEAM((TeamTypes) GET_PLAYER((PlayerTypes)iCiv).getTeam() ).isAVassal() ){
-		return true;
-	}else{
-		return false;
-	};
+	return false;
 };
 
+// Absinthe: unused in RFCE
+/*
 int CvGame::cityStabilityExpansion( int iPlayer, int iFCity ){
 	// 3Miro: Note that this is Rhye's original scheme, we use provinces for Stability
 	CvCity *pCity;
@@ -9904,6 +9902,7 @@ int CvGame::cityStabilityExpansion( int iPlayer, int iFCity ){
 	return iExp;
 };
 
+// Absinthe: unused in RFCE
 int CvGame::cityStabilityPenalty( int iPlayer, int iAnger, int iHealth, int iReligion, int iLarge, int iHurry, int iNoMilitary, int iWarW, int iFReligion, int iFCulture, int iPerCityCap ){
 	int iNumCities, iLoop;
 	int iTCS=0, iCS=0;
@@ -9953,6 +9952,7 @@ int CvGame::cityStabilityPenalty( int iPlayer, int iAnger, int iHealth, int iRel
 	return iCS;
 };
 
+// Absinthe: unused in RFCE
 void CvGame::calcLastOwned(){
 	int x, y, i;
 	if ( lOwnedCities == NULL ) lOwnedCities = new int[NUM_ALL_PLAYERS_B];
@@ -9994,6 +9994,7 @@ void CvGame::calcLastOwned(){
 	};
 };
 
+// Absinthe: unused in RFCE
 void CvGame::damagePlot( int iPlayer, int iFoeDamage, int iBarbDamage, CvPlot *pPlot ){
 	int i, N;
 	CvUnit *pUnit;
@@ -10012,6 +10013,7 @@ void CvGame::damagePlot( int iPlayer, int iFoeDamage, int iBarbDamage, CvPlot *p
 	};
 };
 
+// Absinthe: unused in RFCE
 void CvGame::damageFromBuilding( int iPlayer, int iBuilding, int iFoeDamage, int iBarbDamage ){
 
 	int iLoop;
@@ -10058,7 +10060,7 @@ void CvGame::damageFromBuilding( int iPlayer, int iBuilding, int iFoeDamage, int
 					damagePlot( iPlayer, iFoeDamage/2, iBarbDamage/2, pPlot );
 				};
 			};
-
 		};
 	};
 };
+*/

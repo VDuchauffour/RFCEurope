@@ -139,11 +139,11 @@ int *buildingPrefs = NULL;
 int* cityWarDistance = NULL;
 int** techPreferences = NULL;
 
+// Absinthe: unused in RFCE
+//int* lOwnedCities = NULL;
+//int* lOwnedPlots = NULL;
 
-int* lOwnedCities = NULL;
-int* lOwnedPlots = NULL;
-
-
+// Absinthe: in python now
 int* ProsecutionCount = NULL;
 
 
@@ -282,6 +282,8 @@ int getSettlersMaps( int iCiv, int y, int x, char * w ){
 		};
 	};
 };
+
+// Absinthe: moved to CvPlayer, exported to python
 int getWarsMaps( int iCiv, int y, int x, char *w ){
 	if ( warsMaps == NULL || iCiv >= NUM_MAJOR_PLAYERS ){ //fixed value for the Pope and the Independents
 		return 0;

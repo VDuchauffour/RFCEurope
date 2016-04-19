@@ -6,7 +6,10 @@ import CvUtil
 import ScreenInput
 import CvScreenEnums
 import Consts as con
+import XMLConsts as xml
+import RFCUtils
 
+utils = RFCUtils.RFCUtils()
 PyPlayer = PyHelpers.PyPlayer
 
 # globals
@@ -62,7 +65,7 @@ class CvReligionScreen:
 
 		self.LEFT_EDGE_TEXT = 10
 		self.X_RELIGION_START = 180
-		self.DX_RELIGION = 98
+		self.DX_RELIGION = 128
 		self.Y_RELIGION = 35
 		self.Y_FOUNDED = 90
 		self.Y_HOLY_CITY = 115
@@ -204,34 +207,32 @@ class CvReligionScreen:
 			if (gc.getGame().getReligionGameTurnFounded(i) < 0):
 				szFounded = localText.getText("TXT_KEY_RELIGION_SCREEN_NOT_FOUNDED", ())
 			else:
-				#Rhye - start
-
-				#szFounded = CyGameTextMgr().getTimeStr(gc.getGame().getReligionGameTurnFounded(i), false)
-
 				iPlayer = CyGame().getActivePlayer()
 				pPlayer = gc.getPlayer(iPlayer)
 				tPlayer = gc.getTeam(pPlayer.getTeam())
-				iCalendar = 33
 
 				year = CyGame().getTurnYear(gc.getGame().getReligionGameTurnFounded(i))
 
-				if (not gc.getPlayer(0).isPlayable() and i != 2):  #late start condition (2 == Islam)
-					szFounded = localText.getText("TXT_KEY_AGE_BRONZE", ())
-				else:
-
-					if (tPlayer.isHasTech(iCalendar)):
-						szFounded = CyGameTextMgr().getTimeStr(gc.getGame().getReligionGameTurnFounded(i), false)
-					elif (year >= 1500):
-						szFounded = localText.getText("TXT_KEY_AGE_RENAISSANCE", ())
-					elif (year >= 450):
-						szFounded = localText.getText("TXT_KEY_AGE_MEDIEVAL", ())
-					elif (year >= -800):
-						szFounded = localText.getText("TXT_KEY_AGE_IRON", ())
-					elif (year >= -2000):
-						szFounded = localText.getText("TXT_KEY_AGE_BRONZE", ())
+				# Absinthe: foundation text, based on the knowledge of Calendar, whether the foundation was before or after the Scenario start date, and the corresponding era
+				if (tPlayer.isHasTech(xml.iCalendar)):
+					if (year <= utils.getScenarioStartYear()):
+						if utils.getScenario() == con.i500ADScenario:
+							szFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_500AD", ())
+						else:
+							szFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_1200AD", ())
 					else:
-						szFounded = localText.getText("TXT_KEY_AGE_STONE", ())
-				#Rhye - end
+						szFounded = CyGameTextMgr().getTimeStr(gc.getGame().getReligionGameTurnFounded(i), false)
+				else:
+					if (year <= utils.getScenarioStartYear()):
+						szFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_ERA", ())
+					elif (year >= 1500):
+						szFounded = localText.getText("TXT_KEY_ERA_RENAISSANCE", ())
+					elif (year >= 1200):
+						szFounded = localText.getText("TXT_KEY_ERA_LATE_MEDIEVAL", ())
+					elif (year >= 900):
+						szFounded = localText.getText("TXT_KEY_ERA_HIGH_MEDIEVAL", ())
+					else:
+						szFounded = localText.getText("TXT_KEY_ERA_EARLY_MEDIEVAL", ())
 
 			screen.setLabelAt("", szArea, szFounded, CvUtil.FONT_CENTER_JUSTIFY, xLoop, self.Y_FOUNDED, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 			xLoop += self.DX_RELIGION
@@ -341,7 +342,8 @@ class CvReligionScreen:
 					if lReligions[iI] not in lHolyCity:
 						szCityName += u"%c" %(gc.getReligionInfo(lReligions[iI]).getChar())
 
-			szCityName += pLoopCity.getName()[0:17] + "  "
+			# Absinthe: long name fix
+			szCityName += pLoopCity.getName()[0:27] + "  "
 
 			if (iLinkReligion == -1):
 				bFirst = True

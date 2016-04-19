@@ -435,7 +435,7 @@ class ProvinceManager:
 				pPlayer.setProvinceType( iProv, iProvincePotential )
 			for iProv in self.tPot2NormProvinces[iPlayer]:
 				pPlayer.setProvinceType( iProv, iProvincePotential )
-		#Update provinces for 1200 Scenario
+		# update provinces for the 1200 AD Scenario
 		if utils.getScenario() == con.i1200ADScenario:
 			for iPlayer in range(con.iNumPlayers -1):
 				if con.tBirth[iPlayer] < xml.i1200AD:
@@ -444,15 +444,15 @@ class ProvinceManager:
 	def checkTurn(self, iGameTurn):
 		# Prussia direction change
 		if (iGameTurn == xml.i1618AD):
-			pPrussia.setProvinceType( xml.iP_Estonia, con.iProvinceNone )
-			pPrussia.setProvinceType( xml.iP_Livonia, con.iProvinceOuter )
-			pPrussia.setProvinceType( xml.iP_Brandenburg, con.iProvinceNatural )
-			pPrussia.setProvinceType( xml.iP_Silesia, con.iProvincePotential )
-			pPrussia.setProvinceType( xml.iP_GreaterPoland, con.iProvinceOuter )
+			pPrussia.setProvinceType( xml.iP_Estonia, iProvinceNone )
+			pPrussia.setProvinceType( xml.iP_Livonia, iProvinceOuter )
+			pPrussia.setProvinceType( xml.iP_Brandenburg, iProvinceNatural )
+			pPrussia.setProvinceType( xml.iP_Silesia, iProvincePotential )
+			pPrussia.setProvinceType( xml.iP_GreaterPoland, iProvinceOuter )
 			print("Yes! Prussia can into Germany!")
 
 	def onCityBuilt(self, iPlayer, x, y):
-		if ( iPlayer >= con.iNumPlayers -1 ):
+		if ( iPlayer >= con.iNumPlayers -1 ): # Pope, indies, barbs
 			return
 		pPlayer = gc.getPlayer(iPlayer)
 		iProv = rfcemaps.tProinceMap[y][x]
@@ -460,12 +460,16 @@ class ProvinceManager:
 			if ( iProv in self.tPot2NormProvinces[iPlayer] ):
 				pPlayer.setProvinceType( iProv, iProvinceNatural )
 				utils.refreshStabilityOverlay() # refresh the stability overlay
-			if ( iProv in self.tPot2CoreProvinces[iPlayer] ):
+			elif ( iProv in self.tPot2CoreProvinces[iPlayer] ):
 				pPlayer.setProvinceType( iProv, iProvinceCore )
+				utils.refreshStabilityOverlay() # refresh the stability overlay
+			# Absinthe: bug if we tie potential only to the preset status of provinces
+			else: # also update if it was changed to be a potential province later in the game
+				pPlayer.setProvinceType( iProv, iProvinceNatural )
 				utils.refreshStabilityOverlay() # refresh the stability overlay
 
 	def onCityAcquired(self, owner, playerType, city, bConquest, bTrade):
-		if ( playerType >= con.iNumPlayers -1 ):
+		if ( playerType >= con.iNumPlayers -1 ): # Pope, indies, barbs
 			return
 		pPlayer = gc.getPlayer(playerType)
 		iProv = city.getProvince()
@@ -473,16 +477,46 @@ class ProvinceManager:
 			if ( iProv in self.tPot2NormProvinces[playerType] ):
 				pPlayer.setProvinceType( iProv, iProvinceNatural )
 				utils.refreshStabilityOverlay() # refresh the stability overlay
-			if ( iProv in self.tPot2CoreProvinces[playerType] ):
+			elif ( iProv in self.tPot2CoreProvinces[playerType] ):
 				pPlayer.setProvinceType( iProv, iProvinceCore )
+				utils.refreshStabilityOverlay() # refresh the stability overlay
+			# Absinthe: bug if we tie potential only to the preset status of provinces
+			else: # also update if it was changed to be a potential province later in the game
+				pPlayer.setProvinceType( iProv, iProvinceNatural )
 				utils.refreshStabilityOverlay() # refresh the stability overlay
 
 	def onCityRazed(self, iOwner, playerType, city):
 		pass
 
 	def onRespawn(self, iPlayer ):
-		# reset the provinces
+		# Absinthe: reset the original potential provinces, but only if they wasn't changed to something entirely different later on
 		pPlayer = gc.getPlayer(iPlayer)
+		for iProv in self.tPot2CoreProvinces[iPlayer]:
+			if ( pPlayer.getProvinceType( iProv ) == iProvinceCore ):
+				pPlayer.setProvinceType( iProv, iProvincePotential )
+		for iProv in self.tPot2NormProvinces[iPlayer]:
+			if ( pPlayer.getProvinceType( iProv ) == iProvinceNatural ):
+				pPlayer.setProvinceType( iProv, iProvincePotential )
+
+		# Absinthe: special respawn conditions
+		#if ( iPlayer == iArabia ):
+		#	self.resetProvinces(iPlayer)
+		if ( iPlayer == iCordoba ):
+			for iProv in range( xml.iP_MaxNumberOfProvinces ):
+				pCordoba.setProvinceType( iProv, iProvinceNone )
+			pCordoba.setProvinceType( xml.iP_Ifriqiya, iProvinceCore )
+			pCordoba.setProvinceType( xml.iP_Algiers, iProvinceNatural )
+			pCordoba.setProvinceType( xml.iP_Oran, iProvinceOuter )
+			pCordoba.setProvinceType( xml.iP_Tripolitania, iProvinceOuter )
+			pCordoba.setProvinceType( xml.iP_Tetouan, iProvinceOuter )
+			pCordoba.setProvinceType( xml.iP_Morocco, iProvinceOuter )
+			pCordoba.setProvinceType( xml.iP_Fez, iProvinceOuter )
+
+	def resetProvinces(self, iPlayer ):
+		# Absinthe: keep in mind that this will reset all to the initial status, so won't take later province changes into account
+		pPlayer = gc.getPlayer(iPlayer)
+		for iProv in range( xml.iP_MaxNumberOfProvinces ):
+			pPlayer.setProvinceType( iProv, iProvinceNone )
 		for iProv in self.tCoreProvinces[iPlayer]:
 			pPlayer.setProvinceType( iProv, iProvinceCore )
 		for iProv in self.tNormProvinces[iPlayer]:
@@ -493,31 +527,6 @@ class ProvinceManager:
 			pPlayer.setProvinceType( iProv, iProvincePotential )
 		for iProv in self.tPot2NormProvinces[iPlayer]:
 			pPlayer.setProvinceType( iProv, iProvincePotential )
-
-		#### -------- Special Respawn Conditions ---------- ####
-		if ( iPlayer == iArabia ):
-			for iProv in range( xml.iP_MaxNumberOfProvinces ):
-				pArabia.setProvinceType( iProv, iProvinceNone )
-			for iProv in self.tCoreProvinces[iPlayer]:
-				pArabia.setProvinceType( iProv, iProvinceCore )
-			for iProv in self.tNormProvinces[iPlayer]:
-				pArabia.setProvinceType( iProv, iProvinceNatural)
-			for iProv in self.tOuterProvinces[iPlayer]:
-				pArabia.setProvinceType( iProv, iProvinceOuter )
-			for iProv in self.tPot2CoreProvinces[iPlayer]:
-				pArabia.setProvinceType( iProv, iProvincePotential )
-			for iProv in self.tPot2NormProvinces[iPlayer]:
-				pArabia.setProvinceType( iProv, iProvincePotential )
-		elif ( iPlayer == iCordoba ):
-			for iProv in range( xml.iP_MaxNumberOfProvinces ):
-				pCordoba.setProvinceType( iProv, iProvinceNone )
-			pCordoba.setProvinceType( xml.iP_Ifriqiya, iProvinceCore )
-			pCordoba.setProvinceType( xml.iP_Algiers, iProvinceNatural )
-			pCordoba.setProvinceType( xml.iP_Oran, iProvinceOuter )
-			pCordoba.setProvinceType( xml.iP_Tripolitania, iProvinceOuter )
-			pCordoba.setProvinceType( xml.iP_Tetouan, iProvinceOuter )
-			pCordoba.setProvinceType( xml.iP_Morocco, iProvinceOuter )
-			pCordoba.setProvinceType( xml.iP_Fez, iProvinceOuter )
 
 	def onSpawn( self, iPlayer ):
 		# when a new nations spawns, old nations in the region should lose some of their provinces

@@ -361,7 +361,6 @@ public:
 	bool safeMotherland( int iCiv );
 	bool canSeeAllTerrain( int iCiv, int iTerrain );
 	bool controlMostTeritory( int iCiv, int BLx, int BLy, int TRx, int TRy );
-	void damageFromBuilding( int iPlayer, int iBuilding, int iFoeDamage, int iBarbDamage );
 
 	// 3Miro: set Core and Normal Areas
 	void setCoreNormal( int iCiv, int iCBLx, int iCBLy, int iCTRx, int iCTRy, int iNBLx, int iNBLy, int iNTRx, int iNTRy, int iCCE, int iCNE );
@@ -376,15 +375,16 @@ public:
 	// 3Miro: set Saint AI
 	void setSaintParameters( int iUnitID, int iBenefit, int iTreshhold1, int iTreshhold3 );
 
-	// city stability loop
+	// Absinthe: unused in RFCE
+/*	// city stability loop
 	int cityStabilityExpansion( int iPlayer, int iFCity );
 	int cityStabilityPenalty( int iPlayer, int iAnger, int iHealth, int iReligion, int iLarge, int iHurry, int iNoMilitary, int iWarW, int iFReligion, int iFCulture, int iPerCityCap );
-
-
+	void damageFromBuilding( int iPlayer, int iBuilding, int iFoeDamage, int iBarbDamage );
 	// 3Miro: do Stability map sweep
 	void calcLastOwned();
 	int getlOwnedPlots( int iCiv );
 	int getlOwnedCities( int iCiv );
+*/
 
 	// 3Miro: AI atitude stuff
 	int getRelationTowards( int iWho, int iTowards );
