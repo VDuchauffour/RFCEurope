@@ -595,7 +595,7 @@ class RFCEBalance:
 		gc.setUP( iVenecia, iUP_EnableCivic, xml.iCivicMerchantRepublic )
 		#gc.setUP( iVenecia, iUP_ForeignSea, 1 )
 
-		gc.setUP( iKiev, iUP_CityTileYield, 100 * 2 )
+		gc.setUP( iKiev, iUP_CityTileYield, 1 * 1000 + 100 * 2 )
 
 		gc.setUP( iHungary, iUP_Happiness, 1 )
 		gc.setUP( iHungary, iUP_CulturalTolerance, 0 )

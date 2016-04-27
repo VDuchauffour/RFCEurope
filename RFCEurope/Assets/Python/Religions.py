@@ -532,7 +532,7 @@ class Religions:
 		while ( self.getReformationHitMatrix(iCiv) != 1 ):
 			iCiv = gc.getGame().getSorenRandNum(iNumPlayers, 'Civ chosen for reformation')
 		#print( " Chosen civ:", iCiv )
-		if(self.getReformationHitMatrix(iCiv) == 1):
+		if (self.getReformationHitMatrix(iCiv) == 1):
 			#print( " Chosen civ eligible for Reformation")
 			pPlayer = gc.getPlayer( iCiv )
 			if ( pPlayer.isAlive() and pPlayer.getStateReligion() == xml.iCatholicism ):
@@ -557,10 +557,10 @@ class Religions:
 			self.reformationyes(iCiv)
 		elif ((gc.getPlayer(iCiv)).isHuman()):
 			self.reformationPopup()
-		else:
+		elif (lReformationMatrix[iCiv] != 0): # Absinthe: totally exclude the Pope from the Reformation
 			rndnum = gc.getGame().getSorenRandNum(100, 'Reformation')
 			#print( "Reformation calculus:", rndnum, lReformationMatrix[iCiv] )
-			if(rndnum <= lReformationMatrix[iCiv]):
+			if (rndnum <= lReformationMatrix[iCiv]):
 				self.reformationyes(iCiv)
 				#print( " Yes to Reformation" )
 			else:

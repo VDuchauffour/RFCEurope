@@ -1139,12 +1139,12 @@ class RiseAndFall:
 			if (iPlayer == utils.getHumanID()):
 				CyInterface().addMessage(iPlayer, True, con.iDuration, sCityName + " " + CyTranslator().getText("TXT_KEY_STABILITY_SECESSION", ()), "", 0, "", ColorTypes(con.iOrange), -1, -1, True, True)
 			utils.cultureManager((splittingCity.getX(),splittingCity.getY()), 50, iNewCiv, iPlayer, False, True, True)
-			utils.flipUnitsInCityBefore((splittingCity.getX(),splittingCity.getY()), iNewCiv, iPlayer)
+			utils.flipUnitsInCitySecession((splittingCity.getX(),splittingCity.getY()), iNewCiv, iPlayer)
 			self.setTempFlippingCity((splittingCity.getX(),splittingCity.getY()))
 			utils.flipCity((splittingCity.getX(),splittingCity.getY()), 0, 0, iNewCiv, [iPlayer]) #by trade because by conquest may raze the city
 			utils.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
 
-			print ("SECESSION", gc.getPlayer(iPlayer).getCivilizationAdjective(0), sCityName)
+			print ("SECESSION", gc.getPlayer(iPlayer).getCivilizationAdjective(0), sCityName, "Stability:", iStability)
 			# Absinthe: loosing a city to secession/revolt gives a small boost to stability, to avoid a city-revolting chain reaction
 			pPlayer.changeStabilityBase( con.iCathegoryExpansion, 2 )
 			# Absinthe: AI declares war on the indy city right away

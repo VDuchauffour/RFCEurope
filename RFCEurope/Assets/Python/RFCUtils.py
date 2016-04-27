@@ -348,17 +348,18 @@ class RFCUtils:
 							#if (gc.getPlayer(iActiveCiv).getSettlersMaps( con.iMapMaxY-y-1, x ) >= 90 or gc.getPlayer(iActiveCiv).getSettlersMaps( con.iMapMaxY-y-1, x ) == -1):
 							#if (gc.getPlayer(iActiveCiv).getWarsMaps( con.iMapMaxY-y-1, x ) >= 2):
 							iRndNum = gc.getGame().getSorenRandNum( 10, 'random warmap chance')
+							teamActive = gc.getTeam(gc.getPlayer(iActiveCiv).getTeam())
 							if (gc.getPlayer(iActiveCiv).getWarsMaps( con.iMapMaxY-y-1, x ) >= 10):
 								# 100% chance for cities with high war map value
-								teamMinor.declareWar(iActiveCiv, False, WarPlanTypes.WARPLAN_LIMITED)
+								teamActive.declareWar(iMinorCiv, False, WarPlanTypes.WARPLAN_LIMITED)
 								print ("minorWars", city.getName(), gc.getPlayer(iActiveCiv).getCivilizationAdjective(0), gc.getPlayer(iActiveCiv).getSettlersMaps( con.iMapMaxY-y-1, x ), gc.getPlayer(iActiveCiv).getWarsMaps( con.iMapMaxY-y-1, x ), "WARPLAN_LIMITED")
 							elif (gc.getPlayer(iActiveCiv).getWarsMaps( con.iMapMaxY-y-1, x ) >= 6):
-								if (iRndNum < 8): # 80% chance for cities with medium war map value
-									teamMinor.declareWar(iActiveCiv, False, WarPlanTypes.WARPLAN_LIMITED)
+								if (iRndNum < 7): # 70% chance for cities with medium war map value
+									teamActive.declareWar(iMinorCiv, False, WarPlanTypes.WARPLAN_LIMITED)
 									print ("minorWars", city.getName(), gc.getPlayer(iActiveCiv).getCivilizationAdjective(0), gc.getPlayer(iActiveCiv).getSettlersMaps( con.iMapMaxY-y-1, x ), gc.getPlayer(iActiveCiv).getWarsMaps( con.iMapMaxY-y-1, x ), "WARPLAN_LIMITED")
 							elif (gc.getPlayer(iActiveCiv).getWarsMaps( con.iMapMaxY-y-1, x ) >= 2):
-								if (iRndNum < 5): # 50% chance for cities with low war map value
-									teamMinor.declareWar(iActiveCiv, False, WarPlanTypes.WARPLAN_LIMITED)
+								if (iRndNum < 3): # 30% chance for cities with low war map value
+									teamActive.declareWar(iMinorCiv, False, WarPlanTypes.WARPLAN_LIMITED)
 									print ("minorWars", city.getName(), gc.getPlayer(iActiveCiv).getCivilizationAdjective(0), gc.getPlayer(iActiveCiv).getSettlersMaps( con.iMapMaxY-y-1, x ), gc.getPlayer(iActiveCiv).getWarsMaps( con.iMapMaxY-y-1, x ), "WARPLAN_LIMITED")
 
 	#AIWars
@@ -376,7 +377,8 @@ class RFCUtils:
 					if (iGameTurn > con.tBirth[iActiveCiv] + 40):
 						if (not teamMinor.isAtWar(iActiveCiv)):
 							if (gc.getPlayer(iActiveCiv).getWarsMaps( con.iMapMaxY-y-1, x ) == 16):
-								teamMinor.declareWar(iActiveCiv, False, WarPlanTypes.WARPLAN_TOTAL)
+								teamActive = gc.getTeam(gc.getPlayer(iActiveCiv).getTeam())
+								teamActive.declareWar(iMinorCiv, False, WarPlanTypes.WARPLAN_TOTAL)
 								print ("minorWars", city.getName(), gc.getPlayer(iActiveCiv).getCivilizationAdjective(0), gc.getPlayer(iActiveCiv).getSettlersMaps( con.iMapMaxY-y-1, x ), gc.getPlayer(iActiveCiv).getWarsMaps( con.iMapMaxY-y-1, x ), "WARPLAN_TOTAL")
 
 	#RiseAndFall, Stability
@@ -417,25 +419,73 @@ class RFCUtils:
 		return gc.getGame().getActivePlayer()
 
 	#RiseAndFall
+	# Absinthe: separate city flip rules for secession and minor nation mechanics
+	def flipUnitsInCitySecession(self, tCityPlot, iNewOwner, iOldOwner):
+		plotCity = gc.getMap().plot(tCityPlot[0], tCityPlot[1])
+		city = plotCity.getPlotCity()
+		iNumUnitsInAPlot = plotCity.getNumUnits()
+		j = 0 # Absinthe: index for remaining units in the plot
+		k = 0 # Absinthe: counter for all units from the original owner
+
+		# Absinthe: one free defender unit
+		pPlayer = gc.getPlayer(iOldOwner)
+		teamPlayer = gc.getTeam(pPlayer.getTeam())
+		iFreeDefender = xml.iArcher
+		if(teamPlayer.isHasTech(xml.iCombinedArms) and teamPlayer.isHasTech(xml.iNationalism)):
+			iFreeDefender = xml.iLineInfantry
+		elif(teamPlayer.isHasTech(xml.iMatchlock)):
+			iFreeDefender = xml.iMusketman
+		elif(teamPlayer.isHasTech(xml.iChivalry) and teamPlayer.isHasTech(xml.iReplaceableParts)):
+			iFreeDefender = xml.iLongbowman
+		elif(teamPlayer.isHasTech(xml.iPlateArmor)):
+			iFreeDefender = xml.iArbalest
+		elif(teamPlayer.isHasTech(xml.iMachinery)):
+			iFreeDefender = xml.iCrossbowman
+		self.makeUnit(iFreeDefender, iNewOwner, [0, 72], 1)
+
+		for i in range(iNumUnitsInAPlot):
+			unit = plotCity.getUnit(j)
+			unitType = unit.getUnitType()
+			bSafeUnit = False
+			if (unit.getOwner() == iOldOwner):
+				# Absinthe: # no civilian units will flip on city secession
+				lNoFlip = [xml.iSettler, xml.iProphet, xml.iArtist, xml.iScientist, xml.iMerchant, xml.iEngineer, xml.iGreatGeneral, xml.iGreatSpy]
+				for i in range( 0, len(lNoFlip) ):
+					if ( lNoFlip[i] == unitType ):
+						bSafeUnit = True
+				if not bSafeUnit:
+					# Absinthe: only 50% chance that the unit will defect
+					#			the first unit from the old owner should always defect though
+					k += 1
+					if ( k < 2 or gc.getGame().getSorenRandNum(10, 'Convert Unit') < 4 ):
+						unit.kill(False, con.iBarbarian)
+						self.makeUnit(unitType, iNewOwner, [0, 72], 1)
+					# Absinthe: skip unit if it won't defect, so it will move out of the city territory
+					else:
+						j += 1
+				# Absinthe: skip unit if civilian
+				else:
+					j += 1
+			# Absinthe: skip unit if from another player
+			else:
+				j += 1
+
+	#RiseAndFall
+	# Absinthe: this is for city flips connected to spawn, collapse and respawn mechanics
 	def flipUnitsInCityBefore(self, tCityPlot, iNewOwner, iOldOwner):
 		#print ("tCityPlot Before", tCityPlot)
 		plotCity = gc.getMap().plot(tCityPlot[0], tCityPlot[1])
 		city = plotCity.getPlotCity()
 		iNumUnitsInAPlot = plotCity.getNumUnits()
-		j = 0
+		j = 0 # Absinthe: index for remaining units in the plot
 		for i in range(iNumUnitsInAPlot):
 			unit = plotCity.getUnit(j)
 			unitType = unit.getUnitType()
 			if (unit.getOwner() == iOldOwner):
-				# Absinthe: only 50% chance that the unit will defect
-				if ( gc.getGame().getSorenRandNum(2, 'Convert Unit') == 1 ):
-					unit.kill(False, con.iBarbarian)
-					if (iNewOwner < con.iNumActivePlayers or unitType > xml.iSettler):
-						self.makeUnit(unitType, iNewOwner, [0, 72], 1)
-				# skip unit if it won't defect, so it will move out of the city territory
-				else:
-					j += 1
-			# skip unit if from another player
+				unit.kill(False, con.iBarbarian)
+				if (iNewOwner < con.iNumActivePlayers or unitType > xml.iSettler): # Absinthe: major players can even flip settlers (spawn/respawn mechanics)
+					self.makeUnit(unitType, iNewOwner, [0, 72], 1)
+			# Absinthe: skip unit if from another player
 			else:
 				j += 1
 
