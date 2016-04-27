@@ -96,6 +96,7 @@ Changes for RFCE 1.4:
 		- Wattasids won't revolt if Morocco controls the region, they now appear in their DCN as a ruling dynasty
 		- Reduced overall damage from the Hungarian Végvár: units won't get a fixed amount of damage, it depends on their current HP instead (so Végvár won't kill units, only weaken them)
 		- Slightly decreased number of Steppe Horse Archer barbs for Kiev
+		- New Sahara province, adjusted borders of North African provinces
 
 	Bugfixes:
 		- Various dll bugfixes and optimizations from Better BTS AI, K-Mod, Afforess
@@ -124,6 +125,8 @@ Changes for RFCE 1.4:
 		- Fixed bug: the Pope now always ignores Barbs and Indies outside it's war map
 		- Fixed Kievan Food UP, now it correctly gives +2 food on all city tiles
 		- Fixed issue where the Pope could potentially choose to follow Protestantism on Reformation, now it will never spread to Rome if the Pope is Catholic
+		- Fixed non-defined provincetype issue connected to province initialization, added some safety asserts for it
+		- Fixed bug where the Krak the Chevalier was not working in some rare situations
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

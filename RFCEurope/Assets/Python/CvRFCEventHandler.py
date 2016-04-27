@@ -295,7 +295,7 @@ class CvRFCEventHandler:
 			pNewOwner = gc.getPlayer(iNewOwner)
 			if pNewOwner.countNumBuildings(xml.iKrakDesChevaliers) > 0:
 				if iNewOwner == con.iMorocco:
-					city.setHasRealBuilding(xml.iMorocccoKasbah, True)
+					city.setHasRealBuilding(xml.iMoroccoKasbah, True)
 				else:
 					city.setHasRealBuilding(xml.iWalls, True)
 				if iNewOwner == con.iSpain:

@@ -198,7 +198,7 @@ tGenoaPot2Norm = [xml.iP_Sicily,xml.iP_Malta,xml.iP_Lombardy,xml.iP_Tuscany,xml.
 
 tMoroccoCore = [xml.iP_Marrakesh, xml.iP_Morocco, xml.iP_Fez]
 tMoroccoNorm = [xml.iP_Tetouan]
-tMoroccoOuter = [xml.iP_Ifriqiya, xml.iP_Andalusia, xml.iP_Valencia, xml.iP_Tripolitania]
+tMoroccoOuter = [xml.iP_Ifriqiya, xml.iP_Andalusia, xml.iP_Valencia, xml.iP_Tripolitania, xml.iP_Sahara]
 tMoroccoPot2Core = []
 tMoroccoPot2Norm = [xml.iP_Oran, xml.iP_Algiers]
 
