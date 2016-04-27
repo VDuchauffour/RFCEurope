@@ -296,11 +296,11 @@ class Barbs:
 		if (iGameTurn >= xml.i1040AD and iGameTurn < xml.i1200AD):
 			#in the Rus
 			if (gc.getPlayer(con.iKiev).isHuman()): #more barbs for human Kiev
-				self.spawnUnits( iBarbarian, (89,34),(99,40), xml.iSteppeHorseArcher, 2, iGameTurn,6,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_CUMANS", ()))
-				self.spawnUnits( iBarbarian, (90,33),(97,44), xml.iSteppeHorseArcher, 2 + iHandicap, iGameTurn,7,5,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_KIPCHAKS", ()))
+				self.spawnUnits( iBarbarian, (89,34),(99,40), xml.iSteppeHorseArcher, 2, iGameTurn,7,5,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_CUMANS", ()))
+				self.spawnUnits( iBarbarian, (90,33),(97,44), xml.iSteppeHorseArcher, 2 + iHandicap, iGameTurn,9,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_KIPCHAKS", ()))
 			else: #less for the AI
-				self.spawnUnits( iBarbarian, (89,34),(99,40), xml.iSteppeHorseArcher, 1, iGameTurn,6,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_CUMANS", ()))
-				self.spawnUnits( iBarbarian, (89,34),(99,40), xml.iSteppeHorseArcher, 1, iGameTurn,7,5,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_KIPCHAKS", ()))
+				self.spawnUnits( iBarbarian, (89,34),(99,40), xml.iSteppeHorseArcher, 1, iGameTurn,7,5,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_CUMANS", ()))
+				self.spawnUnits( iBarbarian, (89,34),(99,40), xml.iSteppeHorseArcher, 1, iGameTurn,9,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_KIPCHAKS", ()))
 			#in Hungary
 			self.spawnUnits( iBarbarian, (64,33),(77,43), xml.iSteppeHorseArcher, 1, iGameTurn,7,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_CUMANS", ()))
 			if (gc.getPlayer(con.iHungary).isHuman()): #extra barbs for human Hungary
@@ -856,7 +856,7 @@ class Barbs:
 			for iI in range( len( cityList ) ):
 				pCity = cityList[iI]
 				utils.cultureManager((pCity.getX(),pCity.getY()), 50, iNewCiv, iPlayer, False, True, True)
-				utils.flipUnitsInCityBefore((pCity.getX(),pCity.getY()), iNewCiv, iPlayer)
+				utils.flipUnitsInCitySecession((pCity.getX(),pCity.getY()), iNewCiv, iPlayer)
 				self.setTempFlippingCity((pCity.getX(),pCity.getY()))
 				utils.flipCity((pCity.getX(),pCity.getY()), 0, 0, iNewCiv, [iPlayer]) #by trade because by conquest may raze the city
 				utils.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
@@ -939,7 +939,7 @@ class Barbs:
 				pCity = cityList[iI]
 				CyInterface().addMessage(iPlayer, True, con.iDuration, pCity.getName() + " " + CyTranslator().getText("TXT_KEY_STABILITY_SECESSION", ()), "", 0, "", ColorTypes(con.iOrange), -1, -1, True, True)
 				utils.cultureManager((pCity.getX(),pCity.getY()), 50, iNewCiv, iPlayer, False, True, True)
-				utils.flipUnitsInCityBefore((pCity.getX(),pCity.getY()), iNewCiv, iPlayer)
+				utils.flipUnitsInCitySecession((pCity.getX(),pCity.getY()), iNewCiv, iPlayer)
 				self.setTempFlippingCity((pCity.getX(),pCity.getY()))
 				utils.flipCity((pCity.getX(),pCity.getY()), 0, 0, iNewCiv, [iPlayer]) #by trade because by conquest may raze the city
 				utils.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)

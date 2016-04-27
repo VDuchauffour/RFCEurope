@@ -33,15 +33,23 @@ Changes for RFCE 1.4:
 
 	RiseAndFall updates:
 		- Respawned civs can no longer collapse in the first 10 turns
-		- No city secession in the first 15 turns after spawn, or in the first 10 turns after respawn
 		- If the civ is respawned, it's harder to collapse them by barbs
 		- Vassals can now also instantly collapse if they lose a significant amount of their territory in a couple turns
 		- Fixed issue where the human player collapsed less often then it should
 		- Fixed issue where Byzantium could collapse in some rare cases even without losing Constantinople
 		- Improved mechanics for all 4 different collapse types, collapses should be way more straightforward
 		- Increased frequency of resurrections, decreased number of civs that can stay in a collapsed state at a given time
+		- Respawned Cordoba or Aragon are not affected by stability penalties for not holding the original core area
+		- Fixed inconsistencies on city flips connected to the spawn and respawn mechanics
+
+	Secession updates:
+		- No city secession in the first 15 turns after spawn, or in the first 10 turns after respawn
 		- AI declares war on the new indy city right after city secession
-		- Only half of the units present in the city will flip to the new indy civ/city on secession
+		- The minor nation revolt mechanics also use the new city secession rules
+		- One free defender unit for the new owner of the city
+		- The first unit from the original owner will always defect to indies on city secession
+		- All the other units have 60% chance to stay with the original civ
+		- Settlers and Great People never flip to the indy civ on secession
 
 	General changes:
 		- Anarchy instability now appears right away for the human player, not with a turn delay
@@ -87,6 +95,7 @@ Changes for RFCE 1.4:
 		- Successful Crusade spreads Catholicism to Jerusalem (if not present already)
 		- Wattasids won't revolt if Morocco controls the region, they now appear in their DCN as a ruling dynasty
 		- Reduced overall damage from the Hungarian Végvár: units won't get a fixed amount of damage, it depends on their current HP instead (so Végvár won't kill units, only weaken them)
+		- Slightly decreased number of Steppe Horse Archer barbs for Kiev
 
 	Bugfixes:
 		- Various dll bugfixes and optimizations from Better BTS AI, K-Mod, Afforess
@@ -113,6 +122,8 @@ Changes for RFCE 1.4:
 		- Fixed bug (and potential crash) connected to renaming the city on city secession
 		- Fixed bug where religion foundation date were displayed as "Early Middle Ages" for almost all game long
 		- Fixed bug: the Pope now always ignores Barbs and Indies outside it's war map
+		- Fixed Kievan Food UP, now it correctly gives +2 food on all city tiles
+		- Fixed issue where the Pope could potentially choose to follow Protestantism on Reformation, now it will never spread to Rome if the Pope is Catholic
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
