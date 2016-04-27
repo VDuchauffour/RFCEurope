@@ -645,7 +645,7 @@ class Religions:
 
 			# remove Catholicism if there are no religious buildings left, and there are no catholic wonders in the city
 			if (gc.getGame().getSorenRandNum(100, 'Remove Religion') < 55 + ((lReformationMatrix[iCiv] / 5) * 2) - iPopBonus ): # range goes from 39-59% to 71-91%, based on lReformationMatrix
-				lCathlist = [xml.iCatholicTemple, xml.iCatholicChapel, xml.iCatholicMonastery, xml.iCatholicCathedral, xml.iMonasteryOfCluny, xml.iKrakDesChevaliers, xml.iPalaisPapes]
+				lCathlist = [xml.iCatholicTemple, xml.iCatholicChapel, xml.iCatholicMonastery, xml.iCatholicCathedral, xml.iMonasteryOfCluny, xml.iKrakDesChevaliers, xml.iPalaisPapes, xml.iNotreDame, xml.iWestminster]
 				for i in range( 0, len(lCathlist) ):
 					if ( pCity.hasBuilding (lCathlist[i]) ):
 						bCathBuildings = True
@@ -694,7 +694,7 @@ class Religions:
 
 			# remove Catholicism if there are no religious buildings left, and there are no catholic wonders in the city
 			if (gc.getGame().getSorenRandNum(100, 'Remove Religion') < 50 + ((lReformationMatrix[iCiv] / 5) * 2) - (iPopBonus / 2) ): # range goes from 39-54% to 71-86%, based on lReformationMatrix
-				lCathlist = [xml.iCatholicTemple, xml.iCatholicChapel, xml.iCatholicMonastery, xml.iCatholicCathedral, xml.iMonasteryOfCluny, xml.iKrakDesChevaliers, xml.iPalaisPapes]
+				lCathlist = [xml.iCatholicTemple, xml.iCatholicChapel, xml.iCatholicMonastery, xml.iCatholicCathedral, xml.iMonasteryOfCluny, xml.iKrakDesChevaliers, xml.iPalaisPapes, xml.iNotreDame, xml.iWestminster]
 				for i in range( 0, len(lCathlist) ):
 					if ( pCity.hasBuilding (lCathlist[i]) ):
 						bCathBuildings = True

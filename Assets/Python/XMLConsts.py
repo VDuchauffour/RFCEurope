@@ -286,7 +286,7 @@ iNationalTheatre, iNationalGallery, iNationalUniversity, iHeroicEpic, iAlhambra,
 iSophiaKiev, iDomeRock, iBrandenburgGate, iPalacioDaPena, iMonasteryOfCluny, iRoundChurch, iCorporation1, iCorporation2, iCorporation3, iCorporation4,
 iCorporation5, iCorporation6, iCorporation7, iLeonardosWorkshop, iGardensAlAndalus, iMagellansVoyage, iMarcoPolo, iEscorial, iKazimierz, iBelemTower,
 iGoldenBull, iKalmarCastle, iPalaisPapes, iTombKhal, iStephansdom, iBibliothecaCorviniana, iFontainebleau, iImperialDiet, iBeurs, iCopernicus,
-iSanGiorgio, iWestminster, iPressburg, iLanterna, iPrussiaPublicSchool, iAragonSeaport, iMorocccoKasbah, iScotlandShieling, iDenmarkResearchInstitute, iNovgorodKonets,
+iSanGiorgio, iWestminster, iPressburg, iLanterna, iPrussiaPublicSchool, iAragonSeaport, iMoroccoKasbah, iScotlandShieling, iDenmarkResearchInstitute, iNovgorodKonets,
 iNationalEpic, iTriumphalArch) = range(iNumBuildings)
 
 iGreatPalace = iSummerPalace
@@ -418,10 +418,8 @@ iP_Moldova, iP_Crimea, iP_Novgorod, iP_Kuban, iP_Zaporizhia, iP_Rostov, iP_Mosco
 iP_Murom, iP_Chernigov, iP_Pereyaslavl, iP_Sloboda, iP_Donets, iP_Kiev, iP_Podolia, iP_Minsk, iP_Brest, iP_Simbirsk,
 iP_NizhnyNovgorod, iP_Karelia, iP_Volhynia,
 
-iP_Dummy4,
-
 # Rest
-iP_Thessaloniki, iP_Marrakesh, iP_Madeira, iP_Malta, iP_Fez, iP_Picardy) = range(iP_MaxNumberOfProvinces)
+iP_Sahara, iP_Thessaloniki, iP_Marrakesh, iP_Madeira, iP_Malta, iP_Fez, iP_Picardy) = range(iP_MaxNumberOfProvinces)
 
 
 # these regions are for easier access for UHVs and Mercenaries
@@ -444,7 +442,7 @@ lRegionKiev			= [ iP_Moldova, iP_Kiev, iP_Crimea, iP_Zaporizhia, iP_Sloboda, iP_
 lRegionItaly		= [ iP_Lombardy, iP_Liguria, iP_Verona, iP_Tuscany, iP_Latium, iP_Calabria, iP_Apulia, iP_Arberia, iP_Malta, iP_Dalmatia ]
 lRegionSwiss		= [ iP_Bavaria, iP_Austria, iP_Swabia, iP_Burgundy, iP_Lorraine, iP_Champagne, iP_Provence, iP_Lombardy, iP_Liguria, iP_Verona, iP_Franconia, iP_Bohemia ]
 # Hungarian UHV most territory in Europe:
-lNotEurope			= [ iP_Oran, iP_Algiers, iP_Ifriqiya, iP_Cyrenaica, iP_Tripolitania, iP_Tetouan, iP_Morocco, iP_Marrakesh, iP_Fez, iP_Egypt, iP_Antiochia, iP_Syria, iP_Lebanon, iP_Arabia, iP_Jerusalem, iP_Colonea, iP_Charsianon, iP_Cilicia, iP_Armeniakon, iP_Anatolikon, iP_Paphlagonia, iP_Thrakesion, iP_Opsikion ]
+lNotEurope			= [ iP_Oran, iP_Algiers, iP_Ifriqiya, iP_Cyrenaica, iP_Tripolitania, iP_Tetouan, iP_Morocco, iP_Marrakesh, iP_Fez, iP_Sahara, iP_Egypt, iP_Antiochia, iP_Syria, iP_Lebanon, iP_Arabia, iP_Jerusalem, iP_Colonea, iP_Charsianon, iP_Cilicia, iP_Armeniakon, iP_Anatolikon, iP_Paphlagonia, iP_Thrakesion, iP_Opsikion ]
 
 ## Absinthe: was only needed for the AI regions
 ## these regions are for the map and AI
@@ -455,7 +453,7 @@ lNotEurope			= [ iP_Oran, iP_Algiers, iP_Ifriqiya, iP_Cyrenaica, iP_Tripolitania
 #[ iP_Prussia, iP_Suvalkija, iP_Lithuania, iP_Livonia, iP_Moesia, iP_Constantinople, iP_Thrace, iP_Thessaly, iP_Macedonia, iP_Serbia, iP_Epirus, iP_Morea, iP_Wallachia, iP_Moldova, iP_Crimea, iP_Novgorod, iP_Kuban, iP_Zaporizhia, iP_Rostov, iP_Moscow, iP_Vologda, iP_Smolensk, iP_Polotsk, iP_Murom, iP_Chernigov, iP_Pereyaslavl, iP_Sloboda, iP_Donets, iP_Kiev, iP_Podolia, iP_Minsk, iP_Brest, iP_Simbirsk, iP_NizhnyNovgorod, iP_Karelia, iP_Volhynia, iP_Thessaloniki, iP_Estonia, iP_Osterland ], # Eastern Europe
 #[ iP_Jerusalem, iP_Paphlagonia, iP_Opsikion, iP_Thrakesion, iP_Cilicia, iP_Anatolikon, iP_Armeniakon, iP_Charsianon, iP_Colonea, iP_Antiochia, iP_Syria, iP_Lebanon, iP_Arabia, iP_Egypt ], # Asia
 #[ iP_Sicily, iP_Crete, iP_Cyprus, iP_Rhodes, iP_Corsica, iP_Sardinia, iP_Balears, iP_Canaries, iP_Azores, iP_Malta, iP_Madeira ], # Islands
-#[ iP_Cyrenaica, iP_Tripolitania, iP_Ifriqiya, iP_Algiers, iP_Tetouan, iP_Oran, iP_Marrakesh, iP_Morocco, iP_Fez ], # North Africa
+#[ iP_Cyrenaica, iP_Tripolitania, iP_Ifriqiya, iP_Algiers, iP_Tetouan, iP_Oran, iP_Marrakesh, iP_Morocco, iP_Fez, iP_Sahara ], # North Africa
 #]
 #iNumMapRegions = 8
 
