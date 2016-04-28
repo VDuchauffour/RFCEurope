@@ -400,25 +400,36 @@ class Stability:
 				# Absinthe: no city secession for 15 turns after spawn, for 10 turns after respawn
 				iRespawnTurn = utils.getLastRespawnTurn( iPlayer )
 				if (pPlayer.isAlive() and iGameTurn >= con.tBirth[iPlayer] + 15 and iGameTurn >= iRespawnTurn + 10):
+					iStability = pPlayer.getStability()
+					# Absinthe: human player with very bad stability should have a much bigger chance for collapse
+					if (iStability < -14 and iPlayer == utils.getHumanID()):
+						if (gc.getGame().getSorenRandNum(50, 'human collapse') < 15 - iStability): #60 chance with -15, 80% with -25, 100% with -35
+							if (pPlayer.getNumCities() > 1):
+								print ("COLLAPSE: CIVIL WAR", gc.getPlayer(iPlayer).getCivilizationAdjective(0), "Stability:", iStability)
+								CyInterface().addMessage(iPlayer, True, con.iDuration, CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_HUMAN", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
+								utils.killAndFragmentCiv(iPlayer, False, True)
+								self.zeroStability( iPlayer )
+						else: # when won't collapse, secession should always happen
+							rnf.revoltCity( iPlayer, False )
 					# Absinthe: if stability is less than -3, there is a chance that the secession/revolt or collapse mechanics start
 					#			if more than 8 cities: high chance for secession mechanics, low chance for collapse
 					#			elif more than 4 cities: medium chance for collapse mechanics, medium chance for secession
 					#			otherwise big chance for collapse mechanics
 					#			the actual chance for both secession/revolt and total collapse is increasing with lower stability
-					iStability = pPlayer.getStability()
-					if (iStability < -3):
+					elif (iStability < -3):
 						if (pPlayer.getNumCities() > 8):
 							if (gc.getGame().getSorenRandNum(10, 'city secession') < 8): #80 chance for secession start
 								if (gc.getGame().getSorenRandNum(10, 'city secession') < -3 - iStability): #10% at -4, increasing by 10% with each point (100% with -13 or less)
 									rnf.revoltCity( iPlayer, False )
 							elif (gc.getGame().getSorenRandNum(10, 'civ collapse') < 1 and iGameTurn >= con.tBirth[iPlayer] + 20 and not utils.collapseImmune(iPlayer)): #10 chance for collapse start
 								if (gc.getGame().getSorenRandNum(10, 'civ collapse') < -1.5 - (iStability/2)): #10% at -4, increasing by 10% with 2 points (100% with -22 or less)
-									print ("COLLAPSE: CIVIL WAR", gc.getPlayer(iPlayer).getCivilizationAdjective(0), "Stability:", iStability)
 									if (iPlayer != utils.getHumanID()):
+										print ("COLLAPSE: CIVIL WAR", gc.getPlayer(iPlayer).getCivilizationAdjective(0), "Stability:", iStability)
 										if (gc.getPlayer(utils.getHumanID()).canContact(iPlayer)):
 											CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, gc.getPlayer(iPlayer).getCivilizationDescription(0) + " " + CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
 										utils.killAndFragmentCiv(iPlayer, False, False)
 									elif (pPlayer.getNumCities() > 1):
+										print ("COLLAPSE: CIVIL WAR", gc.getPlayer(iPlayer).getCivilizationAdjective(0), "Stability:", iStability)
 										CyInterface().addMessage(iPlayer, True, con.iDuration, CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_HUMAN", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
 										utils.killAndFragmentCiv(iPlayer, False, True)
 										self.zeroStability( iPlayer )
@@ -428,23 +439,25 @@ class Stability:
 									rnf.revoltCity( iPlayer, False )
 							elif (gc.getGame().getSorenRandNum(10, 'civ collapse') < 4 and iGameTurn >= con.tBirth[iPlayer] + 20 and not utils.collapseImmune(iPlayer)): #40 chance for collapse start
 								if (gc.getGame().getSorenRandNum(10, 'civ collapse') < -1.5 - (iStability/2)): #10% at -4, increasing by 10% with 2 points (100% with -22 or less)
-									print ("COLLAPSE: CIVIL WAR", gc.getPlayer(iPlayer).getCivilizationAdjective(0), "Stability:", iStability)
 									if (iPlayer != utils.getHumanID()):
+										print ("COLLAPSE: CIVIL WAR", gc.getPlayer(iPlayer).getCivilizationAdjective(0), "Stability:", iStability)
 										if (gc.getPlayer(utils.getHumanID()).canContact(iPlayer)):
 											CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, gc.getPlayer(iPlayer).getCivilizationDescription(0) + " " + CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
 										utils.killAndFragmentCiv(iPlayer, False, False)
 									elif (pPlayer.getNumCities() > 1):
+										print ("COLLAPSE: CIVIL WAR", gc.getPlayer(iPlayer).getCivilizationAdjective(0), "Stability:", iStability)
 										CyInterface().addMessage(iPlayer, True, con.iDuration, CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_HUMAN", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
 										utils.killAndFragmentCiv(iPlayer, False, True)
 										self.zeroStability( iPlayer )
 						elif (gc.getGame().getSorenRandNum(10, 'civ collapse') < 7  and iGameTurn >= con.tBirth[iPlayer] + 20 and not utils.collapseImmune(iPlayer)): #70 chance for collapse start
 							if (gc.getGame().getSorenRandNum(10, 'civ collapse') < -1.5 - (iStability/2)): #10% at -4, increasing by 10% with 2 points (100% with -22 or less)
-								print ("COLLAPSE: CIVIL WAR", gc.getPlayer(iPlayer).getCivilizationAdjective(0), "Stability:", iStability)
 								if (iPlayer != utils.getHumanID()):
+									print ("COLLAPSE: CIVIL WAR", gc.getPlayer(iPlayer).getCivilizationAdjective(0), "Stability:", iStability)
 									if (gc.getPlayer(utils.getHumanID()).canContact(iPlayer)):
 										CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, gc.getPlayer(iPlayer).getCivilizationDescription(0) + " " + CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
 									utils.killAndFragmentCiv(iPlayer, False, False)
 								elif (pPlayer.getNumCities() > 1):
+									print ("COLLAPSE: CIVIL WAR", gc.getPlayer(iPlayer).getCivilizationAdjective(0), "Stability:", iStability)
 									CyInterface().addMessage(iPlayer, True, con.iDuration, CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_HUMAN", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
 									utils.killAndFragmentCiv(iPlayer, False, True)
 									self.zeroStability( iPlayer )

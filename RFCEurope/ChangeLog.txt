@@ -41,6 +41,7 @@ Changes for RFCE 1.4:
 		- Increased frequency of resurrections, decreased number of civs that can stay in a collapsed state at a given time
 		- Respawned Cordoba or Aragon are not affected by stability penalties for not holding the original core area
 		- Fixed inconsistencies on city flips connected to the spawn and respawn mechanics
+		- Total collapse has much more chance to happen for the human player, for example: 60% with -15 stability, 100% with -35
 
 	Secession updates:
 		- No city secession in the first 15 turns after spawn, or in the first 10 turns after respawn
@@ -50,6 +51,7 @@ Changes for RFCE 1.4:
 		- The first unit from the original owner will always defect to indies on city secession
 		- All the other units have 60% chance to stay with the original civ
 		- Settlers and Great People never flip to the indy civ on secession
+		- Chance from stability on minor nation revolts will never be negative if you are very stable
 
 	General changes:
 		- Anarchy instability now appears right away for the human player, not with a turn delay
@@ -66,6 +68,7 @@ Changes for RFCE 1.4:
 		- AI civs will more often reconsider their wars against minor civs (note that being an AI target and declaring an actual war is also handled separately)
 		- AI war declaration on indies is now based on their war maps, the chance is increased with higher war map values
 		- AI civs will much more frequently declare war on indies in their core area
+		- Increased city cluster for many civs, it's possible for them to have closer cities
 
 	Text/GUI improvements:
 		- New GlobalDefines_Alt.xml file, users can change RFCE-specific settings there (RFCEurope\Assets\XML\)
