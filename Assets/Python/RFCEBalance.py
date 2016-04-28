@@ -410,31 +410,31 @@ class RFCEBalance:
 		# in CivIV, if more than a third of the tiles are "taken", do not found city there. In RFC, cities are clustered closer
 		# if ( iTaken > 21 * iTop / iBottom - iMinus ) do not build city there.
 		# RFC default values are 2/3 -1 for Europe, 1/3 - 0 for Russia and 1/2 for Mongolia
-		# for example gc.setCityClusterAI( iByzantium, 1, 3, 1 ) would force Byzantium to spread out
-		gc.setCityClusterAI( iByzantium, 1, 3, 1 ) #7
-		gc.setCityClusterAI( iFrankia, 1, 3, 1 ) #7
+		# for example gc.setCityClusterAI( iByzantium, 1, 3, 0 ) wouldn't allow Byzantium to settle cities if more than 7 tiles are taken
+		gc.setCityClusterAI( iByzantium, 1, 3, 0 ) # won't settle if 8+ tiles are taken
+		gc.setCityClusterAI( iFrankia, 1, 3, 0 ) #8
 		gc.setCityClusterAI( iArabia, 1, 3, 1 ) #7
-		gc.setCityClusterAI( iBulgaria, 1, 2, 1 ) #10
-		gc.setCityClusterAI( iCordoba, 1, 2, 2 ) #9
+		gc.setCityClusterAI( iBulgaria, 2, 3, 4 ) #11
+		gc.setCityClusterAI( iCordoba, 1, 2, 1 ) #10
 		gc.setCityClusterAI( iVenecia, 2, 3, 1 ) #14
 		gc.setCityClusterAI( iBurgundy, 2, 3, 3 ) #12
 		gc.setCityClusterAI( iGermany, 2, 3, 3 ) #12
 		gc.setCityClusterAI( iNovgorod, 1, 2, 2 ) #9
-		gc.setCityClusterAI( iNorway, 1, 2, 2 ) #9
-		gc.setCityClusterAI( iKiev, 1, 4, 1 ) #5
-		gc.setCityClusterAI( iHungary, 1, 2, 1 ) #10
-		gc.setCityClusterAI( iSpain, 1, 2, 2 ) #9
+		gc.setCityClusterAI( iNorway, 1, 2, 1 ) #10
+		gc.setCityClusterAI( iKiev, 1, 3, 2 ) #6
+		gc.setCityClusterAI( iHungary, 2, 3, 3 ) #12
+		gc.setCityClusterAI( iSpain, 1, 2, 1 ) #10
 		gc.setCityClusterAI( iDenmark, 2, 3, 3 ) #12
-		gc.setCityClusterAI( iScotland, 2, 3, 3 ) #12
-		gc.setCityClusterAI( iPoland, 1, 3, 1 ) #7
+		gc.setCityClusterAI( iScotland, 2, 3, 2 ) #13
+		gc.setCityClusterAI( iPoland, 1, 3, 0 ) #8
 		gc.setCityClusterAI( iGenoa, 2, 3, 1 ) #14
-		gc.setCityClusterAI( iMorocco, 1, 3, 1 ) #7
-		gc.setCityClusterAI( iEngland, 1, 2, 2 ) #9
+		gc.setCityClusterAI( iMorocco, 1, 3, 0 ) #8
+		gc.setCityClusterAI( iEngland, 1, 2, 1 ) #10
 		gc.setCityClusterAI( iPortugal, 2, 3, 1 ) #14
 		gc.setCityClusterAI( iAragon, 2, 3, 1 ) #14
 		gc.setCityClusterAI( iSweden, 1, 2, 2 ) #9
 		gc.setCityClusterAI( iPrussia, 2, 3, 1 ) #14
-		gc.setCityClusterAI( iLithuania, 1, 3, 1 ) #7
+		gc.setCityClusterAI( iLithuania, 1, 3, 0 ) #8
 		gc.setCityClusterAI( iAustria, 2, 3, 3 ) #12
 		gc.setCityClusterAI( iTurkey, 1, 3, 1 ) #7
 		gc.setCityClusterAI( iMoscow, 1, 4, 1 ) #5

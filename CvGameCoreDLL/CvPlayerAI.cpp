@@ -2366,7 +2366,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 	iValue += std::max(0, iResourceValue);
 
 	//Rhye - start
-	// consider how many plots are taken to decide to found acity there or not. 2/3 vs 1/3 Forces cities to be clustered
+	// consider how many plots are taken to decide to found a city there or not. 2/3 vs 1/3 Forces cities to be clustered
 	/*if (iTakenTiles > (NUM_CITY_PLOTS / 3) && iResourceValue < 250)
 	{
 		return 0;
@@ -2376,7 +2376,6 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 		return 0;
 	}
 	//Rhye - end
-
 
 	//Rhye - start switch
 	if ( iTakenTiles > ( NUM_CITY_PLOTS * cityClusterTop[getID()] / cityClusterBottom[getID()] - cityClusterMinus[getID()] ) ){

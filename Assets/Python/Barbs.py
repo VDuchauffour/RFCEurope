@@ -837,7 +837,7 @@ class Barbs:
 		# Passive bonus from Stability
 		pPlayer = gc.getPlayer( iPlayer )
 		if ( pPlayer.getStability() > 0 ):
-			iSuppressOdds += 20 + max( 0, min( (pPlayer.getStability() - 5)*2, 14 ) )
+			iSuppressOdds += 20 + max( 0, min( (pPlayer.getStability() - 5)*2, lNation[4][iRevoltIndex] ) )
 
 		# substract the strength of the revolt
 		iSuppressOdds -= lNation[4][iRevoltIndex]
@@ -891,7 +891,7 @@ class Barbs:
 		iSuppressOdds = - lNation[4][iRevoltIndex]
 		pPlayer = gc.getPlayer( iPlayer )
 		if ( pPlayer.getStability() > 0 ):
-			iSuppressOdds += 20 + max( 0, min( (pPlayer.getStability() - 5)*2, 14 ) )
+			iSuppressOdds += 20 + max( 0, min( (pPlayer.getStability() - 5)*2, lNation[4][iRevoltIndex] ) )
 
 		if ( iDecision == 1 or iDecision == 3 ):
 			iNumGarrason = 0
@@ -962,7 +962,7 @@ class Barbs:
 		iRawOdds = - lNation[4][iRevoltIndex]
 		pPlayer = gc.getPlayer( iPlayer )
 		if ( pPlayer.getStability() > 0 ):
-			iRawOdds += 20 + max( 0, min( (pPlayer.getStability() - 5)*2, 14 ) )
+			iRawOdds += 20 + max( 0, min( (pPlayer.getStability() - 5)*2, lNation[4][iRevoltIndex] ) )
 		# odds adjusted by a crack-down
 		iCrackOdds = 20
 		iNumGarrason = 0
