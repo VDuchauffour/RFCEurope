@@ -4135,7 +4135,9 @@ bool CvSelectionGroup::addUnit(CvUnit* pUnit, bool bMinimalChange)
 	CLLNode<IDInfo>* pUnitNode;
 	CvUnit* pLoopUnit;
 	bool bAdded;
- 
+
+	FAssertMsg(pUnit != NULL, "NULL unit added to selection group");
+
 	if (!(pUnit->canJoinGroup(pUnit->plot(), this)))
 	{
 		return false;
@@ -4190,6 +4192,8 @@ bool CvSelectionGroup::addUnit(CvUnit* pUnit, bool bMinimalChange)
 void CvSelectionGroup::removeUnit(CvUnit* pUnit)
 {
 	CLLNode<IDInfo>* pUnitNode;
+
+	FAssertMsg(pUnit != NULL, "NULL unit removed from selection group");
 
 	pUnitNode = headUnitNode();
 

@@ -481,7 +481,11 @@
 			<Description>TXT_KEY_TERRAIN_DESERT</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_DESERT_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_DESERT</ArtDefineTag>
-			<Yields/>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+			</Yields>
 			<RiverYieldChange>
 				<iYield>0</iYield>
 				<iYield>0</iYield>

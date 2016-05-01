@@ -51,6 +51,7 @@ Changes for RFCE 1.4:
 		- The first unit from the original owner will always defect to indies on city secession
 		- All the other units have 60% chance to stay with the original civ
 		- Settlers and Great People never flip to the indy civ on secession
+		- City secession only results in a 25% culture loss for the original civ
 		- Chance from stability on minor nation revolts will never be negative if you are very stable
 
 	General changes:
@@ -69,6 +70,7 @@ Changes for RFCE 1.4:
 		- AI war declaration on indies is now based on their war maps, the chance is increased with higher war map values
 		- AI civs will much more frequently declare war on indies in their core area
 		- Increased city cluster for many civs, it's possible for them to have closer cities
+		- Revised values connected to cultural revolts/flips of independents and barbs
 
 	Text/GUI improvements:
 		- New GlobalDefines_Alt.xml file, users can change RFCE-specific settings there (RFCEurope\Assets\XML\)
@@ -100,6 +102,8 @@ Changes for RFCE 1.4:
 		- Reduced overall damage from the Hungarian Végvár: units won't get a fixed amount of damage, it depends on their current HP instead (so Végvár won't kill units, only weaken them)
 		- Slightly decreased number of Steppe Horse Archer barbs for Kiev
 		- New Sahara province, adjusted borders of North African provinces
+		- Morocco starts with Literature, so they can remain in the Religious Law civic
+		- Revised all barbs for Cordoba and Morocco, no more Berber barbarians in Iberia
 
 	Bugfixes:
 		- Various dll bugfixes and optimizations from Better BTS AI, K-Mod, Afforess
@@ -130,6 +134,7 @@ Changes for RFCE 1.4:
 		- Fixed issue where the Pope could potentially choose to follow Protestantism on Reformation, now it will never spread to Rome if the Pope is Catholic
 		- Fixed non-defined provincetype issue connected to province initialization, added some safety asserts for it
 		- Fixed bug where the Krak the Chevalier was not working in some rare situations
+		- Fixed bug where previously acquired culture wasn't kept when you conquered an indy/barb city
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
