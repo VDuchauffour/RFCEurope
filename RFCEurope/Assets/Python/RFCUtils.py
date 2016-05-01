@@ -621,18 +621,32 @@ class RFCUtils:
 		#city
 		if (pCity.isCity()):
 			iCurrentCityCulture = city.getCulture(iOldOwner)
-			city.setCulture(iOldOwner, iCurrentCityCulture*(100-iCulturePercent)/100, False)
+		#	print ("iCulturePercent", iCulturePercent)
+		#	print ("iCurrentCityCulture", iCurrentCityCulture)
+		#	print ("iCurrentCityCulture2", city.getCulture(iNewOwner))
+		#	print ("iCurrentCityCultureOldOwner", iCurrentCityCulture*(100-iCulturePercent)/100)
+		#	print ("iCurrentCityCultureNewOwner", iCurrentCityCulture*iCulturePercent/100)
+			
 			if (iNewOwner != con.iBarbarian):
 				city.setCulture(con.iBarbarian, 0, True)
-			city.setCulture(iNewOwner, iCurrentCityCulture*iCulturePercent/100, False)
+
+			# Absinthe: changeCulture instead of setCulture for the new civ, so previously acquired culture won't disappear
+			#			for the old civ some of the culture is lost when the city is conquered
+			#			note that this is the amount of culture "resource" for each civ, not population percent
+			city.changeCulture(iNewOwner, iCurrentCityCulture*iCulturePercent/100, False)
+			# Absinthe: only half of the amount is lost, so only 25% on city secession and minor nation revolts
+			city.setCulture(iOldOwner, iCurrentCityCulture*(100-(iCulturePercent/2))/100, False)
+
 			if (city.getCulture(iNewOwner) <= 10):
-				city.setCulture(iNewOwner, 20, False)
+				city.setCulture(iNewOwner, 10, False)
+		#	print ("iCurrentCityCulture3", city.getCulture(iOldOwner))
+		#	print ("iCurrentCityCulture4", city.getCulture(iNewOwner))
 
 		#halve barbarian culture in a broader area
 		if (bBarbarian2x2Decay or bBarbarian2x2Conversion):
 			if (iNewOwner != con.iBarbarian and iNewOwner != con.iIndependent and iNewOwner != con.iIndependent2 and iNewOwner != con.iIndependent3 and iNewOwner != con.iIndependent4):
 				for x in range(tCityPlot[0]-2, tCityPlot[0]+3):				# from x-2 to x+2
-					for y in range(tCityPlot[1]-2, tCityPlot[1]+3):		# from y-2 to y+2
+					for y in range(tCityPlot[1]-2, tCityPlot[1]+3):			# from y-2 to y+2
 						iPlotBarbCulture = gc.getMap().plot(x, y).getCulture(con.iBarbarian)
 						if (iPlotBarbCulture > 0):
 							if (gc.getMap().plot(x, y).getPlotCity().isNone() or (x==tCityPlot[0] and y==tCityPlot[1])):
@@ -640,7 +654,8 @@ class RFCUtils:
 									gc.getMap().plot(x, y).setCulture(con.iBarbarian, iPlotBarbCulture/4, True)
 								if (bBarbarian2x2Conversion):
 									gc.getMap().plot(x, y).setCulture(con.iBarbarian, 0, True)
-									gc.getMap().plot(x, y).setCulture(iNewOwner, iPlotBarbCulture, True)
+									# Absinthe: changeCulture instead of setCulture for the new civ, so previously acquired culture won't disappear
+									gc.getMap().plot(x, y).changeCulture(iNewOwner, iPlotBarbCulture, True)
 						iPlotIndependentCulture = gc.getMap().plot(x, y).getCulture(con.iIndependent)
 						if (iPlotIndependentCulture > 0):
 							if (gc.getMap().plot(x, y).getPlotCity().isNone() or (x==tCityPlot[0] and y==tCityPlot[1])):
@@ -648,7 +663,8 @@ class RFCUtils:
 									gc.getMap().plot(x, y).setCulture(con.iIndependent, iPlotIndependentCulture/4, True)
 								if (bBarbarian2x2Conversion):
 									gc.getMap().plot(x, y).setCulture(con.iIndependent, 0, True)
-									gc.getMap().plot(x, y).setCulture(iNewOwner, iPlotIndependentCulture, True)
+									# Absinthe: changeCulture instead of setCulture for the new civ, so previously acquired culture won't disappear
+									gc.getMap().plot(x, y).changeCulture(iNewOwner, iPlotIndependentCulture, True)
 						iPlotIndependent2Culture = gc.getMap().plot(x, y).getCulture(con.iIndependent2)
 						if (iPlotIndependent2Culture > 0):
 							if (gc.getMap().plot(x, y).getPlotCity().isNone() or (x==tCityPlot[0] and y==tCityPlot[1])):
@@ -656,20 +672,25 @@ class RFCUtils:
 									gc.getMap().plot(x, y).setCulture(con.iIndependent2, iPlotIndependent2Culture/4, True)
 								if (bBarbarian2x2Conversion):
 									gc.getMap().plot(x, y).setCulture(con.iIndependent2, 0, True)
-									gc.getMap().plot(x, y).setCulture(iNewOwner, iPlotIndependent2Culture, True)
+									# Absinthe: changeCulture instead of setCulture for the new civ, so previously acquired culture won't disappear
+									gc.getMap().plot(x, y).changeCulture(iNewOwner, iPlotIndependent2Culture, True)
 
 		#plot
 		for x in range(tCityPlot[0]-1, tCityPlot[0]+2):				# from x-1 to x+1
-			for y in range(tCityPlot[1]-1, tCityPlot[1]+2):		# from y-1 to y+1
+			for y in range(tCityPlot[1]-1, tCityPlot[1]+2):			# from y-1 to y+1
 				pCurrent = gc.getMap().plot(x, y)
 				iCurrentPlotCulture = pCurrent.getCulture(iOldOwner)
 
 				if (pCurrent.isCity()):
-					pCurrent.setCulture(iNewOwner, iCurrentPlotCulture*iCulturePercent/100, True)
-					pCurrent.setCulture(iOldOwner, iCurrentPlotCulture*(100-iCulturePercent)/100, True)
+					# Absinthe: changeCulture instead of setCulture for the new civ, so previously acquired culture won't disappear
+					pCurrent.changeCulture(iNewOwner, iCurrentPlotCulture*iCulturePercent/100, True)
+					# Absinthe: only half of the amount is lost
+					pCurrent.setCulture(iOldOwner, iCurrentPlotCulture*(100-iCulturePercent/2)/100, True)
 				else:
-					pCurrent.setCulture(iNewOwner, iCurrentPlotCulture*iCulturePercent/3/100, True)
-					pCurrent.setCulture(iOldOwner, iCurrentPlotCulture*(100-iCulturePercent/3)/100, True)
+					# Absinthe: changeCulture instead of setCulture for the new civ, so previously acquired culture won't disappear
+					pCurrent.changeCulture(iNewOwner, iCurrentPlotCulture*iCulturePercent/3/100, True)
+					# Absinthe: only half of the amount is lost
+					pCurrent.setCulture(iOldOwner, iCurrentPlotCulture*(100-iCulturePercent/6)/100, True)
 
 				#cut other players culture
 ##				for iCiv in range(iNumPlayers):
@@ -688,26 +709,32 @@ class RFCUtils:
 					#print ("NewOwner", pCurrent.getOwner())
 
 
-	#handler
+	#RFCEventHandler
 	def spreadMajorCulture(self, iMajorCiv, iX, iY):
-		for x in range(iX-4, iX+5):	# from x-4 to x+4
-			for y in range(iY-4, iY+5):	# from y-4 to y+4
+		# Absinthe: spread some of the major civ's culture to the nearby indy cities
+		for x in range(iX-4, iX+5):			# from x-4 to x+4
+			for y in range(iY-4, iY+5):		# from y-4 to y+4
 				pCurrent = gc.getMap().plot(x, y)
 				if (pCurrent.isCity()):
 					city = pCurrent.getPlotCity()
-					if (city.getOwner() >= iNumMajorPlayers):
-						iMinor = city.getOwner()
+					#print ("city.getPreviousOwner", city.getPreviousOwner())
+					if (city.getPreviousOwner() >= iNumMajorPlayers):
+						iMinor = city.getPreviousOwner()
 						iDen = 25
 						if (gc.getPlayer(iMajorCiv).getSettlersMaps( con.iMapMaxY-y-1, x ) >= 400):
 							iDen = 10
 						elif (gc.getPlayer(iMajorCiv).getSettlersMaps( con.iMapMaxY-y-1, x ) >= 150):
 							iDen = 15
 
+						# Absinthe: changeCulture instead of setCulture, otherwise previous culture will be lost
 						iMinorCityCulture = city.getCulture(iMinor)
-						city.setCulture(iMajorCiv, iMinorCityCulture/iDen, True)
+						#print ("iMinorculture", city.getCulture(iMinor) )
+						#print ("iMajorculturebefore", city.getCulture(iMajorCiv) )
+						city.changeCulture(iMajorCiv, iMinorCityCulture/iDen, True)
+						#print ("iMajorcultureafter", city.getCulture(iMajorCiv) )
 
 						iMinorPlotCulture = pCurrent.getCulture(iMinor)
-						pCurrent.setCulture(iMajorCiv, iMinorPlotCulture/iDen, True)
+						pCurrent.changeCulture(iMajorCiv, iMinorPlotCulture/iDen, True)
 
 
 	#UniquePowers
@@ -863,7 +890,7 @@ class RFCUtils:
 							self.setTempFlippingCity((tCoords[0],tCoords[1]))
 							self.flipCity(tCoords, 0, 0, iLoopCiv, [iCiv])
 							#pyCity.GetCy().setHasRealBuilding(con.iPlague, False) #buggy
-							#Sedna17: Possibly buggy, used to flip units in 2x2 radius, which could take us outside the map.
+							#Sedna17: Possibly buggy, used to flip units in 2 radius, which could take us outside the map.
 							self.flipUnitsInArea([tCoords[0]-1,tCoords[1]-1], [tCoords[0]+1,tCoords[1]-1], iLoopCiv, iCiv, False, True)
 							self.flipUnitsInCityAfter(self.getTempFlippingCity(), iLoopCiv)
 							bNeighbour = True

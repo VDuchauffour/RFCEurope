@@ -9269,18 +9269,18 @@ int CvCity::getRevoltTestProbability() const
 	}
 	iBestModifier = range(iBestModifier, 0, 100);
 
-	// Absinthe: new revolt settings
+	// Absinthe: revolt modifiers
 	int result = (GC.getDefineINT("REVOLT_TEST_PROB") * (100 - iBestModifier)) / 100;
 
-	if (isIndep(getOwnerINLINE())) // indy cities are harder to flip
+	if (isIndep(getOwnerINLINE())) // indy cities are easier to flip
 	{
-		result *= 3;
-		result = std::min(std::max(result, 3), 12);
+		result *= 2;
+		result = std::min(std::max(result, 3), 16);
 	};
 
 	if (isBarbarian())
 	{
-		result /= 2; // otherwise cities captured by barb invaders get flipped back too often
+		result /= 3; // otherwise cities captured by barb invaders get flipped back too often
 	}
 
 	if (isCapital() && getOwnerINLINE() < NUM_MAJOR_PLAYERS)
@@ -9289,7 +9289,7 @@ int CvCity::getRevoltTestProbability() const
 	}
 
 	return (result);
-	// Absinthe: new revolt settings
+	// Absinthe: revolt modifiers
 }
 
 bool CvCity::isEverOwned(PlayerTypes eIndex) const

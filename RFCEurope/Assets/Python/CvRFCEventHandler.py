@@ -270,6 +270,7 @@ class CvRFCEventHandler:
 			self.up.defianceUP( owner )
 
 		# Absinthe: Spread some culture of the conqueror civ to the occupied city
+		print ("new city owner", playerType)
 		if ( playerType < iNumMajorPlayers ):
 			utils.spreadMajorCulture( playerType, city.getX(), city.getY() )
 

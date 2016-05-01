@@ -1199,12 +1199,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SCO2_HELP</Tag>
-		<English>Yet get points per turn for good relations (between -2 and 2), open borders (1), defensive pact (2), imports (1/3 per resource), exports (1/3 per resource), common wars (2 per war)</English>
-		<French>Yet get points per turn for good relations (between -2 and 2), open borders (1), defensive pact (2), imports (1/3 per resource), exports (1/3 per resource), common wars (2 per war)</French>
-		<German>Yet get points per turn for good relations (between -2 and 2), open borders (1), defensive pact (2), imports (1/3 per resource), exports (1/3 per resource), common wars (2 per war)</German>
-		<Italian>Yet get points per turn for good relations (between -2 and 2), open borders (1), defensive pact (2), imports (1/3 per resource), exports (1/3 per resource), common wars (2 per war)</Italian>
-		<Spanish>Yet get points per turn for good relations (between -2 and 2), open borders (1), defensive pact (2), imports (1/3 per resource), exports (1/3 per resource), common wars (2 per war)</Spanish>
-		<Portuguese>Yet get points per turn for good relations (between -2 and 2), open borders (1), defensive pact (2), imports (1/3 per resource), exports (1/3 per resource), common wars (2 per war)</Portuguese>
+		<English>You get points per turn for good relations (between -2 and 2), open borders (1), defensive pact (2), imports (1/3 per resource), exports (1/3 per resource), common wars (2 per war)</English>
+		<French>You get points per turn for good relations (between -2 and 2), open borders (1), defensive pact (2), imports (1/3 per resource), exports (1/3 per resource), common wars (2 per war)</French>
+		<German>You get points per turn for good relations (between -2 and 2), open borders (1), defensive pact (2), imports (1/3 per resource), exports (1/3 per resource), common wars (2 per war)</German>
+		<Italian>You get points per turn for good relations (between -2 and 2), open borders (1), defensive pact (2), imports (1/3 per resource), exports (1/3 per resource), common wars (2 per war)</Italian>
+		<Spanish>You get points per turn for good relations (between -2 and 2), open borders (1), defensive pact (2), imports (1/3 per resource), exports (1/3 per resource), common wars (2 per war)</Spanish>
+		<Portuguese>You get points per turn for good relations (between -2 and 2), open borders (1), defensive pact (2), imports (1/3 per resource), exports (1/3 per resource), common wars (2 per war)</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_CONTROLLER_OF</Tag>

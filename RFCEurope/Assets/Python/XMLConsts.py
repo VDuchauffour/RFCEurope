@@ -55,6 +55,7 @@ i1009AD =136
 i1016AD =139	# Muslims are defeated in Sardinia		# Spawn of Genoa
 i1020AD =140
 i1025AD =142	# Death of Basil II													# Byzantium UHV 1
+i1032AD =144
 i1040AD =147											# Spawn of Morocco
 i1050AD =150																		# Denmark UHV 1
 i1053AD =151

@@ -482,7 +482,8 @@ class RiseAndFall:
 					#city.setCulture(self.getNewCivFlip(), city.countTotalCulture(), True)
 					pCurrent = gc.getMap().plot(city.getX(), city.getY())
 					oldCulture = pCurrent.getCulture(iHuman)
-					pCurrent.setCulture(iNewCivFlip, oldCulture/2, True)
+					# Absinthe: changeCulture instead of setCulture, otherwise previous culture will be lost
+					pCurrent.changeCulture(iNewCivFlip, oldCulture/2, True)
 					pCurrent.setCulture(iHuman, oldCulture/2, True)
 					iWar = self.getSpawnWar() + 1
 					self.setSpawnWar(iWar)
@@ -2738,6 +2739,7 @@ class RiseAndFall:
 			teamMorocco.setHasTech( xml.iCodeOfLaws, True, iCiv, False, False )
 			teamMorocco.setHasTech( xml.iLateenSails, True, iCiv, False, False )
 			teamMorocco.setHasTech( xml.iMapMaking, True, iCiv, False, False )
+			teamMorocco.setHasTech( xml.iLiterature, True, iCiv, False, False )
 			teamMorocco.setHasTech( xml.iArabicKnowledge, True, iCiv, False, False )
 
 		elif ( iCiv == iEngland ):

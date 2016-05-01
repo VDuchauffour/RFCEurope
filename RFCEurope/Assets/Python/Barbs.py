@@ -214,20 +214,21 @@ class Barbs:
 			self.spawnUnits( iBarbarian, (49,33),(53,36), xml.iSpearman, 1, iGameTurn,12,0,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_LONGOBARDS", ()))
 
 		#Christians in Spain
-		if (iGameTurn >= xml.i700AD and iGameTurn <= xml.i880AD):
-			self.spawnUnits( iBarbarian, (24,32),(28,40), xml.iAxeman, 1, iGameTurn,9,0,utils.outerInvasion,1, "")
-			self.spawnUnits( iBarbarian, (20,28),(24,34), xml.iSpearman, 1, iGameTurn,12,5,utils.outerInvasion,1, "")
+		if (iGameTurn >= xml.i700AD and iGameTurn <= xml.i892AD):
+			self.spawnUnits( iBarbarian, (22,21),(26,25), xml.iAxeman, 1, iGameTurn,9,0,utils.outerInvasion,1, "")
+			self.spawnUnits( iBarbarian, (20,23),(24,28), xml.iSpearman, 1, iGameTurn,7,2,utils.outerInvasion,1, "")
+			self.spawnUnits( iBarbarian, (27,30),(32,35), xml.iAxeman, 1, iGameTurn,11,5,utils.outerInvasion,1, "")
 		if (gc.getPlayer(con.iCordoba).isHuman()): #extra barbs for human Cordoba
-			if (iGameTurn >= xml.i700AD and iGameTurn <= xml.i880AD):
-				self.spawnUnits( iBarbarian, (24,32),(28,40), xml.iAxeman, 1 + iHandicap, iGameTurn,14,0,utils.outerInvasion,1, "")
-				self.spawnUnits( iBarbarian, (24,32),(28,40), xml.iMountedInfantry, 1, iGameTurn,12,3,utils.outerInvasion,1, "")
+			if (iGameTurn >= xml.i700AD and iGameTurn <= xml.i892AD):
+				self.spawnUnits( iBarbarian, (24,31),(27,36), xml.iAxeman, 1 + iHandicap, iGameTurn,7,0,utils.outerInvasion,1, "")
+				self.spawnUnits( iBarbarian, (27,28),(31,36), xml.iMountedInfantry, 1, iGameTurn,6,3,utils.outerInvasion,1, "")
 
 		#Berbers in North Africa
-		if (iGameTurn >= xml.i700AD and iGameTurn < xml.i1060AD):
-			self.spawnUnits(iBarbarian, (19,18),(27,21), xml.iHorseArcher, 1, iGameTurn,8,0,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BERBERS", ()))
-			self.spawnUnits(iBarbarian, (19,18),(27,21), xml.iAxeman, 1, iGameTurn,11,3,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BERBERS", ()))
-			self.spawnUnits(iBarbarian, (19,18),(27,21), xml.iSpearman, 1, iGameTurn,7,4,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BERBERS", ()))
-			self.spawnUnits(iBarbarian, (26,12),(35,16), xml.iHorseArcher, 1 + iHandicap, iGameTurn,10,0,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BERBERS", ()))
+		if (iGameTurn >= xml.i700AD and iGameTurn < xml.i1020AD):
+			self.spawnUnits(iBarbarian, (21,3),(27,12), xml.iHorseArcher, 1, iGameTurn,9,0,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BERBERS", ()))
+			self.spawnUnits(iBarbarian, (22,3),(27,10), xml.iAxeman, 1, iGameTurn,11,3,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BERBERS", ()))
+			self.spawnUnits(iBarbarian, (23,3),(27,8), xml.iSpearman, 1, iGameTurn,7,4,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BERBERS", ()))
+			self.spawnUnits(iBarbarian, (26,10),(35,14), xml.iHorseArcher, 1 + iHandicap, iGameTurn,7,0,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BERBERS", ()))
 
 		#Avars in the Carpathian Basin
 		if (iGameTurn >= xml.i632AD and iGameTurn < xml.i800AD):
@@ -536,7 +537,7 @@ class Barbs:
 		#			Walls (and other buildings) can be added with the onCityBuilt function, in RiseAndFall.py
 
 		if ( iGameTurn < xml.i660AD ):
-			#500AD
+			# 500AD
 			self.foundCity(iIndependent2, lTangier, "Tangier", iGameTurn, 1, xml.iCordobanBerber, 2, -1, 0 )
 			self.foundCity(iBarbarian, lBurdigala, "Burdigala", iGameTurn, 2, xml.iArcher, 0, -1, 0 )
 			self.foundCity(iIndependent3, lAlger, "Alger", iGameTurn, 1, xml.iArcher, 1, -1, 1 )
@@ -638,7 +639,7 @@ class Barbs:
 
 	def foundCity(self, iCiv, lCity, name, iTurn, iPopulation, iUnitType, iNumUnits, iReligion, iWorkers):
 		if ((iTurn == lCity[2] + lCity[3]) and (lCity[3]<10)):
-			#print self.checkRegion(tUr)
+			#print self.checkRegion(lBarcino)
 			bResult, lCity[3] = self.checkRegion(lCity)
 			if (bResult == True):
 				pCiv = gc.getPlayer(iCiv)
