@@ -520,6 +520,38 @@ tNewCapitals = (  #for RiseAndFall
 )
 
 
+tStabilityBonusAI = (
+0, #Byzantium
+4, #France
+0, #Arabia
+3, #Bulgaria
+2, #Cordoba
+0, #Venice
+0, #Burgundy
+0, #Germany
+0, #Novgorod
+0, #Norway
+6, #Kiev
+0, #Hungary
+0, #Spain
+0, #Denmark
+0, #Scotland
+0, #Poland
+2, #Genoa
+0, #Morocco
+0, #England
+0, #Portugal
+4, #Aragon
+0, #Sweden
+3, #Prussia
+0, #Lithuania
+4, #Austria
+10, #Turkey
+0, #Moscow
+0, #Dutch
+)
+
+
 # 3Miro: tCoreArea, tNormalArea and tBroaderArea are misleading, TL is not TopLeft and BR is not BottomRight (unless the grid starts from 0,0 at TL and counts down as positive y direction)
 #	TL is actually BottomLeft and BR is TopRight
 #	Many functions reference those and there are search algorithms that I do not want to change, so leave this with the comment on how to be used
@@ -559,7 +591,7 @@ tCoreAreasTL = (
 
 tCoreAreasBR = (
 (84,26),   #Byzantium
-(46,47),   #Franks
+(46,48),   #Franks
 (99,12),   #Arabs
 (80,30),   #Bulgaria
 (37,28),   #Cordoba
