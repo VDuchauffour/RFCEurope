@@ -31,23 +31,19 @@ iCathegoryEconomy = con.iCathegoryEconomy
 iCathegoryExpansion = con.iCathegoryExpansion
 tCapitals = con.tCapitals
 
-tStabilityPenalty = ( -5, -2, 0, 0, 0 )
+tStabilityPenalty = ( -5, -2, 0, 0, 0 ) # province type: unstable, border, potential, historic, core
+tStabilityBonusAI = ( 0, 4, 0, 3, 2, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 2, 0, 0, 0, 4, 0, 3, 0, 4, 10, 0, 0) # iNumMajorPlayers - 1 (no Pope, Indies, or Barbs)
 
 class Stability:
 
-	def setup(self): # Sets human starting stability
+	def setup(self): # Sets starting stability
 		for iPlayer in range( iNumMajorPlayers ):
 			pPlayer = gc.getPlayer( iPlayer )
 			for iCath in range( 4 ):
 				pPlayer.changeStabilityBase( iCath, - pPlayer.getStabilityBase( iCath ) )
 				pPlayer.setStabilityVary( iCath, 0 )
 			pPlayer.setStabilitySwing( 0 )
-		#if ( not gc.getPlayer( con.iFrankia ).isHuman() ):
-		#	gc.getPlayer( con.iFrankia ).changeStabilityBase( iCathegoryExpansion, 5 ) # so that they don't collapse from the cities they lose to everyone
-		#if ( not gc.getPlayer( con.iVenecia ).isHuman() ):
-		#	gc.getPlayer( con.iVenecia ).changeStabilityBase( iCathegoryExpansion, 4 ) # they collapse too often
-		#if ( gc.getPlayer( con.iDenmark ).isHuman() ):
-		#	gc.getPlayer( con.iDenmark ).changeStabilityBase( iCathegoryExpansion, 2 ) # too many border provinces to conquer in short time
+		# Absinthe: bonus stability for the human player based on difficulty level
 		iHandicap = gc.getGame().getHandicapType()
 		if (iHandicap == 0):
 			gc.getPlayer( utils.getHumanID() ).changeStabilityBase( iCathegoryExpansion, 6 )
@@ -90,6 +86,14 @@ class Stability:
 
 			print("Player "+str(iPlayer)+" initial stability: "+str(pPlayer.getStability()))
 
+		# Absinthe: AI stability bonus - for civs that have a hard time at the beginning
+		#			France, Cordoba, Bulgaria, Ottomans
+		for iPlayer in range(iNumMajorPlayers-1): # no Pope, Indies, or Barbs
+			pPlayer = gc.getPlayer(iPlayer)
+			if (iPlayer != utils.getHumanID()):
+				pPlayer.changeStabilityBase( iCathegoryExpansion, tStabilityBonusAI[iPlayer] )
+				if (tStabilityBonusAI[iPlayer] != 0):
+					print ("AI bonus stability:", pPlayer.getCivilizationDescription(0), tStabilityBonusAI[iPlayer])
 
 	def checkTurn(self, iGameTurn):
 		#print "3Miro NewStability Check Turn"
@@ -115,6 +119,14 @@ class Stability:
 				#self.setLastRecordedStabilityStuff(4, utils.getParExpansion(iHuman))
 				#self.setLastRecordedStabilityStuff(5, utils.getParDiplomacy(iHuman))
 
+		# Absinthe: testing AI stability levels
+		if (iGameTurn % 9 == 2):
+			for iPlayer in range(iNumMajorPlayers-1):
+				pPlayer = gc.getPlayer(iPlayer)
+				if (pPlayer.getStability() != 0):
+					print ("AI stability check:", pPlayer.getCivilizationDescription(0), pPlayer.getStability())
+
+		# Absinthe: update Byzantine stability on the start of the game
 		if (iGameTurn == 0):
 			self.recalcEpansion( gc.getPlayer(con.iByzantium) )
 
@@ -185,7 +197,7 @@ class Stability:
 
 		self.recalcCity ( iPlayer ) # update city stability
 
-		# # Absinthe: Collapse dates for AI nations
+		# Absinthe: Collapse dates for AI nations
 		if(iGameTurn > con.tCollapse[iPlayer] and iPlayer != utils.getHumanID() and pPlayer.isAlive()):
 			# Absinthe: -1 stability every 4 turns up to a total of -15 stability
 			if(iGameTurn % 4 == 0 and iGameTurn <= con.tCollapse[iPlayer] + 60):

@@ -82,7 +82,7 @@ Changes for RFCE 1.4:
 		- Added some new and improved some old event and interface messages connected to Crusades and to religious persecution
 		- Revised all older hints (which can be seen on loading a game) to be in sync with the latest version of the mod
 		- Added around 10 new hints - some are only for fun though :)
-		- Religion Screen and Company Screen can now handle unicode characters
+		- Religion Screen and Company Screen can now handle long names with unicode characters
 		- Improved religion foundation date information on the Religion Screen, also it now takes different scenarios into account
 		- Improved city and wonder foundation date/city/civ information on the Info Screen, also it now takes different scenarios into account
 		- Fixed mistakes on the Info Screen where information from the top5 cities and from the wonders were not in sync (connected to city visibility and contact with the civ)
@@ -104,6 +104,8 @@ Changes for RFCE 1.4:
 		- New Sahara province, adjusted borders of North African provinces
 		- Morocco starts with Literature, so they can remain in the Religious Law civic
 		- Revised all barbs for Cordoba and Morocco, no more Berber barbarians in Iberia
+		- Lorraine province is historic for the Franks, switches to border on the German spawn
+		- Added some stability bonuses for AI civs which had a hard time at the beginning for various reasons (early civic changes, too many foreign cities, barb activity, etc.)
 
 	Bugfixes:
 		- Various dll bugfixes and optimizations from Better BTS AI, K-Mod, Afforess

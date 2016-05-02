@@ -101,8 +101,8 @@ tByzantiumPot2Core = []
 tByzantiumPot2Norm = [xml.iP_Calabria,xml.iP_Apulia,xml.iP_Sicily,xml.iP_Malta,xml.iP_Tripolitania,xml.iP_Ifriqiya]
 
 tFranceCore = [xml.iP_IleDeFrance,xml.iP_Orleans,xml.iP_Champagne]
-tFranceNorm = [xml.iP_Picardy,xml.iP_Normandy,xml.iP_Aquitania]
-tFranceOuter = [xml.iP_Catalonia,xml.iP_Aragon,xml.iP_Navarre,xml.iP_Lorraine,xml.iP_Netherlands,xml.iP_Bavaria,xml.iP_Saxony,xml.iP_Swabia,xml.iP_Franconia,xml.iP_Lombardy,xml.iP_Liguria,xml.iP_Corsica]
+tFranceNorm = [xml.iP_Picardy,xml.iP_Normandy,xml.iP_Aquitania,xml.iP_Lorraine]
+tFranceOuter = [xml.iP_Catalonia,xml.iP_Aragon,xml.iP_Navarre,xml.iP_Netherlands,xml.iP_Bavaria,xml.iP_Saxony,xml.iP_Swabia,xml.iP_Franconia,xml.iP_Lombardy,xml.iP_Liguria,xml.iP_Corsica]
 tFrancePot2Core = []
 tFrancePot2Norm = [xml.iP_Bretagne,xml.iP_Provence,xml.iP_Burgundy,xml.iP_Flanders]
 
@@ -566,6 +566,7 @@ class ProvinceManager:
 			pFrankia.setProvinceType( xml.iP_Burgundy, iProvincePotential ) # these areas flip to Burgundy, so resetting them to Potential will work perfectly
 			utils.refreshStabilityOverlay() # refresh the stability overlay
 		elif ( iPlayer == iGermany ):
+			pFrankia.setProvinceType( xml.iP_Lorraine, iProvinceOuter )
 			pFrankia.setProvinceType( xml.iP_Bavaria, iProvinceNone )
 			pFrankia.setProvinceType( xml.iP_Franconia, iProvinceNone )
 			pFrankia.setProvinceType( xml.iP_Saxony, iProvinceNone )
