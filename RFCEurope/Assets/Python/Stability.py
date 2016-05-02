@@ -30,9 +30,7 @@ iCathegoryCivics = con.iCathegoryCivics
 iCathegoryEconomy = con.iCathegoryEconomy
 iCathegoryExpansion = con.iCathegoryExpansion
 tCapitals = con.tCapitals
-
 tStabilityPenalty = ( -5, -2, 0, 0, 0 ) # province type: unstable, border, potential, historic, core
-tStabilityBonusAI = ( 0, 4, 0, 3, 2, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 2, 0, 0, 0, 4, 0, 3, 0, 4, 10, 0, 0) # iNumMajorPlayers - 1 (no Pope, Indies, or Barbs)
 
 class Stability:
 
@@ -91,9 +89,9 @@ class Stability:
 		for iPlayer in range(iNumMajorPlayers-1): # no Pope, Indies, or Barbs
 			pPlayer = gc.getPlayer(iPlayer)
 			if (iPlayer != utils.getHumanID()):
-				pPlayer.changeStabilityBase( iCathegoryExpansion, tStabilityBonusAI[iPlayer] )
-				if (tStabilityBonusAI[iPlayer] != 0):
-					print ("AI bonus stability:", pPlayer.getCivilizationDescription(0), tStabilityBonusAI[iPlayer])
+				pPlayer.changeStabilityBase( iCathegoryExpansion, con.tStabilityBonusAI[iPlayer] )
+				if (con.tStabilityBonusAI[iPlayer] != 0):
+					print ("AI bonus stability:", pPlayer.getCivilizationDescription(0), con.tStabilityBonusAI[iPlayer])
 
 	def checkTurn(self, iGameTurn):
 		#print "3Miro NewStability Check Turn"
