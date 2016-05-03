@@ -3396,6 +3396,9 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 		pLoopUnit = ::getUnit(pUnitNode->m_data);
 		pUnitNode = nextUnitNode(pUnitNode);
 
+		// adding asserts for the city conquest CTD
+		FAssertMsg(pLoopUnit != NULL, "NULL unit reached in the selection group");
+
 		if ((pLoopUnit->canMove() && ((bCombat && (!(pLoopUnit->isNoCapture()) || !(pPlot->isEnemyCity(*pLoopUnit)))) ? pLoopUnit->canMoveOrAttackInto(pPlot) : pLoopUnit->canMoveInto(pPlot))) || (pLoopUnit == pCombatUnit))
 		{
 			pLoopUnit->move(pPlot, true);
@@ -4136,6 +4139,7 @@ bool CvSelectionGroup::addUnit(CvUnit* pUnit, bool bMinimalChange)
 	CvUnit* pLoopUnit;
 	bool bAdded;
 
+	// adding asserts for the city conquest CTD
 	FAssertMsg(pUnit != NULL, "NULL unit added to selection group");
 
 	if (!(pUnit->canJoinGroup(pUnit->plot(), this)))
@@ -4193,6 +4197,7 @@ void CvSelectionGroup::removeUnit(CvUnit* pUnit)
 {
 	CLLNode<IDInfo>* pUnitNode;
 
+	// adding asserts for the city conquest CTD
 	FAssertMsg(pUnit != NULL, "NULL unit removed from selection group");
 
 	pUnitNode = headUnitNode();
