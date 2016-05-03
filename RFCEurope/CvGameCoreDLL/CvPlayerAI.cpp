@@ -1835,11 +1835,34 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 	int iSpecialCommerce = 0;
 
 	bool bNeutralTerritory = true;
+	bool bCityInRange = false;
 
 	int iGreed;
 	int iNumAreaCities;
 
 	pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+
+	// Absinthe: checks whether there is a city in 2 distance
+	iRange = 2;
+	for (iDX = -(iRange); iDX <= iRange; iDX++)
+	{
+		for (iDY = -(iRange); iDY <= iRange; iDY++)
+		{
+			pLoopPlot = plotXY(pPlot->getX_INLINE(), pPlot->getY_INLINE(), iDX, iDY);
+			if (pLoopPlot != NULL)
+			{
+				if (pLoopPlot->isCity())
+				{
+					if (pLoopPlot->area() == pPlot->area())
+					{
+						bCityInRange = true;
+						break;
+					}
+				}
+			}
+		}
+	}
+	// Absinthe: end
 
 	if (!canFound(iX, iY))
 	{
@@ -1972,16 +1995,15 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 		}
 	}
 
-	//Rhye - start
-	/*if (iOwnedTiles > (NUM_CITY_PLOTS / 3))
+	// Absinthe: no restrictions if there are no cities within 2 tiles
+	if (bCityInRange)
 	{
-		return 0;
-	}*/
-	if (iOwnedTiles > (NUM_CITY_PLOTS *2/3)) //+1?
-	{
-		return 0;
+		if (iOwnedTiles > ((NUM_CITY_PLOTS *2/3) + 1))
+		{
+			return 0;
+		}
 	}
-	//Rhye - end
+	// Absinthe: end
 
 	iBadTile = 0;
 
@@ -2365,32 +2387,26 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 
 	iValue += std::max(0, iResourceValue);
 
-	//Rhye - start
-	// consider how many plots are taken to decide to found a city there or not. 2/3 vs 1/3 Forces cities to be clustered
-	/*if (iTakenTiles > (NUM_CITY_PLOTS / 3) && iResourceValue < 250)
-	{
-		return 0;
-	}*/
-	if (iTakenTiles > (NUM_CITY_PLOTS *2/3) && iResourceValue < 250)
+	// Absinthe: if too many plots are taken and there are not that many resources nearby, do not found a city here
+	if (iTakenTiles > ((NUM_CITY_PLOTS *2/3) + 1) && iResourceValue < 250)
 	{
 		return 0;
 	}
-	//Rhye - end
-
-	//Rhye - start switch
-	if ( iTakenTiles > ( NUM_CITY_PLOTS * cityClusterTop[getID()] / cityClusterBottom[getID()] - cityClusterMinus[getID()] ) ){
-		return 0;
-	};
-	/*if (iTakenTiles > (NUM_CITY_PLOTS / 3))
+	// Absinthe: no restrictions if there are no cities within 2 tiles
+	if (bCityInRange)
 	{
-		return 0;
-	}*/
-
-	if (iTeammateTakenTiles > (NUM_CITY_PLOTS *2/3))
-	{
-		return 0;
+		// Absinthe: civ-specific city cluster setting, adjustable in python
+		if ( iTakenTiles > ( NUM_CITY_PLOTS * cityClusterTop[getID()] / cityClusterBottom[getID()] - cityClusterMinus[getID()] ) )
+		{
+			return 0;
+		}
+		// not really needed, but whatever
+		if (iTeammateTakenTiles > ((NUM_CITY_PLOTS *2/3) + 1))
+		{
+			return 0;
+		}
 	}
-	//Rhye - end
+	// Absinthe: end
 
 	iValue += (iHealth / 5);
 

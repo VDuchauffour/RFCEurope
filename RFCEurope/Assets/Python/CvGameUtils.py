@@ -275,7 +275,8 @@ class CvGameUtils:
 		pUnit = argsList[0]
 		# Absinthe: start Inquisitor AI from Charlemagne (based on SoI)
 		iOwner = pUnit.getOwner()
-		if not gc.getPlayer(iOwner).isHuman():
+		AIpPlayer = gc.getPlayer(iOwner)
+		if not AIpPlayer.isNone() and not AIpPlayer.isBarbarian() and not AIpPlayer.isHuman() and AIpPlayer.isAlive():
 			if pUnit.getUnitType() == xml.iProsecutor:
 				return self.doInquisitorCore_AI(pUnit)
 		# Absinthe: end

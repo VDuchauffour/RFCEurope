@@ -5363,13 +5363,11 @@ bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 	if (!bTestVisible)
 	{
 		iRange = GC.getMIN_CITY_RANGE();
-
 		for (iDX = -(iRange); iDX <= iRange; iDX++)
 		{
 			for (iDY = -(iRange); iDY <= iRange; iDY++)
 			{
 				pLoopPlot	= plotXY(pPlot->getX_INLINE(), pPlot->getY_INLINE(), iDX, iDY);
-
 				if (pLoopPlot != NULL)
 				{
 					if (pLoopPlot->isCity())
