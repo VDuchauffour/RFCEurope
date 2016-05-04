@@ -31,7 +31,7 @@ class Resources:
 				city = gc.getMap().findCity(iX, iY, iOwner, TeamTypes.NO_TEAM, True, False, TeamTypes.NO_TEAM, DirectionTypes.NO_DIRECTION, CyCity())
 				if not city.isNone():
 					szText = localText.getText(textKey, (gc.getBonusInfo(iBonus).getTextKey(), city.getName(), gc.getPlayer(iOwner).getCivilizationAdjective(0)))
-					CyInterface().addMessage(iOwner, False, con.iDuration, szText, "AS2D_DISCOVERBONUS", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBonusInfo(iBonus).getButton(), ColorTypes(con.iLightBlue), iX, iY, True, True)
+					CyInterface().addMessage(iOwner, False, con.iDuration, szText, "AS2D_DISCOVERBONUS", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBonusInfo(iBonus).getButton(), ColorTypes(con.iLime), iX, iY, True, True)
 
 
 	def removeResource(self, iX, iY, textKey="TXT_KEY_RESOURCE_EXHAUSTED"):
