@@ -25,12 +25,16 @@ iBarbarian = con.iBarbarian
 pBarbarian = gc.getPlayer(iBarbarian)
 teamBarbarian = gc.getTeam(pBarbarian.getTeam())
 
-# Tuples for independent cities
-# List of tuples with variations, civ, pop, defender type, amount defenders, religion, workers
-# Variation tuples: ( tCoords, sName, chance)
+
+# Independent and barbarians city spawns
+# Key: tCity = variations (coordinates, actual city name, chance), owner, population size, defender type, number of defenders, religion, workers
+# Notes: Indy cities start with zero-sized culture, barbs with normal culture
+#		Added some initial food reserves on founding cities, so even independents won't shrink on their first turn anymore
+#		Barbarian cities start with 2 additional defender units
+#		Walls (and other buildings) can be added with the onCityBuilt function, in RiseAndFall.py
 # 500 AD
 tTangier = ( [ ((27, 16), "Tangier", 100) ], iIndependent2, 1, xml.iCordobanBerber, 2, -1, 0 )
-tBurdeaux = ( [ ((37, 38), "Burdigala", 100) ], iBarbarian, 2, xml.iArcher, 0, -1, 0 )
+tBordeaux = ( [ ((37, 38), "Burdigala", 100) ], iBarbarian, 2, xml.iArcher, 0, -1, 0 )
 tAlger = ( [ ((40, 16), "Alger", 100) ], iIndependent3, 1, xml.iArcher, 1, -1, 0 )
 tBarcelona = ( [ ((40, 28), "Barcino", 100) ], iIndependent2, 1, xml.iArcher, 1, -1, 0 )
 tToulouse = ( [ ((41, 34), "Tolosa", 100) ], iBarbarian, 1, xml.iArcher, 0, -1, 0 )
@@ -38,7 +42,7 @@ tMarseilles = ( [ ((46, 62), "Massilia", 100) ], iIndependent, 1, xml.iArcher, 1
 tLyon = ( [ ((46, 37), "Lyon", 100) ], iIndependent3, 1, xml.iArcher, 2, xml.iCatholicism, 1 )
 tTunis = ( [ ((49, 17), "Tunis", 100) ], iIndependent4, 1, xml.iArcher, 1, -1, 0 )
 tYork = ( [ ((39, 59), "Eboracum", 100) ], iIndependent4, 1, xml.iArcher, 2, -1, 1 )
-tLondinium = ( [ ((41, 52), "Londinium", 100) ], iIndependent, 2, xml.iArcher, 2, xml.iCatholicism, 0 )
+tLondon = ( [ ((41, 52), "Londinium", 100) ], iIndependent, 2, xml.iArcher, 2, xml.iCatholicism, 0 )
 tMilan = ( [ ((52, 37), "Mediolanum", 100) ], iIndependent, 2, xml.iArcher, 1, xml.iCatholicism, 0 )
 tFlorence = ( [ ((54, 32), "Florentia", 100) ], iIndependent2, 2, xml.iArcher, 1, xml.iCatholicism, 0 )
 tTripoli = ( [ ((54, 8), "Tripoli", 100) ], iBarbarian, 1, xml.iArcher, 1, -1, 0 )
@@ -51,10 +55,10 @@ tPalermo = ( [ ((55, 19), "Palermo", 80), ((58, 17), "Syracuse", 20) ], iIndepen
 # 600 AD
 tRhodes = ( [ ((80, 13), "Rhodes", 100) ], iIndependent2, 1, xml.iArcher, 1, xml.iOrthodoxy, 0 )
 # 640 AD
-tNorwich = ( [ ((43, 55), "Norwich", 100) ], iIndependent3, 1, xml.iArcher, 1, -1, 1 )
+tNorwich = ( [ ((43, 55), "Norwich", 100) ], iIndependent3, 1, xml.iArcher, 1, -1, 1 ) #reduced to town on spawn of England
 # 680 AD
 tToledo = ( [ ((30, 27), "Toledo", 100) ], iBarbarian, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
-tLeicester = ( [ ((39, 56), "Ligeraceaster", 100) ], iIndependent, 1, xml.iArcher, 1, -1, 0 )
+tLeicester = ( [ ((39, 56), "Ligeraceaster", 100) ], iIndependent, 1, xml.iArcher, 1, -1, 0 ) #reduced to town on spawn of England
 # 700 AD
 tValencia = ( [ ((36, 25), "Valencia", 100) ], iIndependent, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
 tPamplona = ( [ ((35, 32), "Pamplona", 100) ], iIndependent4, 1, xml.iCrossbowman, 2, -1, 0 )
@@ -68,24 +72,24 @@ tRaska = ( [ ((68, 28), "Ras", 100) ], iIndependent2, 1, xml.iArcher, 2, -1, 1)
 # 780 AD
 tFez = ( [ ((29, 12), "Fes", 100) ], iIndependent4, 1, xml.iCrossbowman, 2, -1, 1)
 # 800 AD
-tMilanR = ( [ ((52, 37), "Milano", 100) ], iIndependent, 4, xml.iArcher, 2, xml.iCatholicism, 0)
-tFlorenceR = ( [ ((54, 32), "Firenze", 100) ], iIndependent2, 4, xml.iArcher, 2, xml.iCatholicism, 0 )
+tMilanR = ( [ ((52, 37), "Milano", 100) ], iIndependent, 4, xml.iArcher, 2, xml.iCatholicism, 0) #respawn, in case it was razed
+tFlorenceR = ( [ ((54, 32), "Firenze", 100) ], iIndependent2, 4, xml.iArcher, 2, xml.iCatholicism, 0 ) #respawn
 tPrague = ( [ ((60, 44), "Praha", 100) ], iIndependent, 1, xml.iCrossbowman, 2, xml.iCatholicism, 1)
 tKursk = ( [ ((90, 48), "Kursk", 100) ], iIndependent4, 1, xml.iArcher, 2, -1, 0)
 tCalais = ( [ ((44, 50), "Calais", 100) ], iIndependent3, 1, xml.iCrossbowman, 2, -1, 0)
-tNidaros = ( [ ((57, 71), "Nidaros", 100) ], iIndependent3, 1, xml.iArcher, 1, -1, 1)
-tUppsala = ( [ ((65, 66), "Uppsala", 100) ], iIndependent4, 1, xml.iArcher, 2, -1, 1)
+tNidaros = ( [ ((57, 71), "Nidaros", 100) ], iIndependent3, 1, xml.iArcher, 1, -1, 1) #Trondheim
+tUppsala = ( [ ((65, 66), "Uppsala", 100) ], iIndependent4, 1, xml.iArcher, 2, -1, 1) #reduced to town on spawn of Sweden
 tBeloozero = ( [ ((87, 65), "Beloozero", 100) ], iIndependent4, 1, xml.iCrossbowman, 1, -1, 1)
 # 860 AD
 tEdinburgh = ( [ ((37, 63), "Eidyn Dun", 100) ], iBarbarian, 1, xml.iArcher, 1, -1, 0)
 # 880 AD
-tBelgrad = ( [ ((73, 35), "Belograd", 100) ], iIndependent, 1, xml.iArcher, 2, -1, 0)
+tApulum = ( [ ((73, 35), "Belograd", 100) ], iIndependent, 1, xml.iArcher, 2, -1, 0)
 # 900 AD
-tTvanksta = ( [ ((69, 53), "Tvanksta", 100) ], iIndependent4, 1, xml.iCrossbowman, 2, -1, 0)
+tTvanksta = ( [ ((69, 53), "Tvanksta", 100) ], iIndependent4, 1, xml.iCrossbowman, 2, -1, 0) #Königsberg
 tKrakow = ( [ ((68, 44), "Krakow", 100) ], iIndependent3, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0)
-tRiga = ( [ ((74, 58), "Riga", 100) ], iIndependent, 2, xml.iCrossbowman, 2, -1, 1)
-# 920 AD
-tCaen = ( [ ((40, 47), "Caen", 100) ], iIndependent2, 1,  xml.iCrossbowman, 2, xml.iCatholicism, 0)
+tRiga = ( [ ((74, 58), "Riga", 100) ], iIndependent, 2, xml.iCrossbowman, 2, -1, 1) #maybe call it Duna in the early pediod (Duna is the name of a sheltered natural harbor near Riga)
+# 911 AD
+tCaen = ( [ ((40, 47), "Caen", 100) ], iIndependent2, 1,  xml.iCrossbowman, 2, xml.iCatholicism, 0) #spawns on the establishment of the Duchy of Normandy
 # 960 AD
 tMinsk = ( [ ((79, 52), "Minsk", 100) ], iIndependent3, 1, xml.iCrossbowman, 2, -1, 0)
 tSmolensk = ( [ ((84, 55), "Smolensk", 100) ], iIndependent4, 1, xml.iCrossbowman, 1, -1, 0)
@@ -99,23 +103,58 @@ tMus = ( [ ((99, 21), "Mus", 100) ], iBarbarian, 1, xml.iLongbowman, 2, -1, 0)
 # 1110 AD
 tGraz = ( [ ((61, 37), "Graz", 100) ], iIndependent3, 2, xml.iCrossbowman, 2, xml.iCatholicism, 0)
 # 1200 AD
-tRigaR = ( [ ((74, 58), "Riga", 100) ], iIndependent, 3, xml.iCrossbowman, 2, -1, 1)
+tRigaR = ( [ ((74, 58), "Riga", 100) ], iIndependent, 3, xml.iCrossbowman, 2, -1, 1) #respawn
 tSaraiBatu = ( [ ((99, 40), "Sarai Batu", 100) ], iBarbarian, 1, xml.iLongbowman, 2, -1, 0)
 # 1227 AD
-tTarabulus = ( [ ((54, 8), "Tarabulus", 100) ], iBarbarian, 3, xml.iArbalest, 2, xml.iIslam, 1)
+tTripoliR = ( [ ((54, 8), "Tarabulus", 100) ], iBarbarian, 3, xml.iArbalest, 2, xml.iIslam, 1) #respawn
 # 1250 AD
 tAbo = ( [ ((71, 66), "Abo", 100) ], iIndependent4, 1, xml.iCrossbowman, 1, -1, 0)
 # 1320 AD
 tNizhnyNovgorod = ( [ ((97, 58), "Nizhny Novgorod", 100) ], iIndependent, 1, xml.iCrossbowman, 1, -1, 0)
-# 1320 AD
-tTana = ( [ ((96, 38), "Tana", 100) ], iBarbarian, 1, xml.iLongbowman, 2, xml.iIslam, 0)
-# 1320 AD
+# 1392 AD
+tTanais = ( [ ((96, 38), "Tana", 100) ], iBarbarian, 1, xml.iLongbowman, 2, xml.iIslam, 0)
+# 1410 AD
 tReykjavik = ( [ ((2, 70), "Reykjavik", 100) ], iIndependent, 1, xml.iVikingBeserker, 2, -1, 0)
-# 1320 AD
+# 1530 AD
 tValletta = ( [ ((57, 14), "Valletta", 100) ], iIndependent4, 1, xml.iKnightofStJohns, 3, xml.iCatholicism, 0)
 
+# Currently unused indy cities:
+# Key: city coordinates, spawn turn, retries
+#lNantes = [36,43,0,0] #500 AD
+#lTours = [40,43,0,0] #500 AD
+#lOrleans = [42,44,0,0] #500 AD
+#lPisae = [53,32,0,0] #500 AD
+#lRoma = [56,27,0,0] #500 AD
+#lCatania = [58,18,0,0] #500 AD
+#lBeograd = [68,30,0,0] #500 AD
+#lRavenna = [55,33,0,0] #500 AD
+#lKairouan = [49,14,0,0] #500 AD
+#lZaragoza = [36,29,45,0] #680 AD
+#lBulgar = [97,60,45,0] #680 AD
+#lLeon = [27,32,50,0] # 700 AD
+#lBurgos = [30,32,50,0] #700 AD
+#lCorunna = [24,35,75,0] #800 AD
+#lLeipzig = [58,48,75,0] #800 AD
+#lKharkov = [90,46,75,0] #800 AD
+#lLadoga = [81,65,75,0] #800 AD
+#lVelehrad = [64,42,82,0] #833 AD
+#lNovgorod = [80,62,87,0] #848 AD
+#lNottingham = [39,56,92,0] #867 AD, reduced to town on spawn of England
+#lBreslau = [64,46,100,0] #900 AD
+#lMunster = [52,50,150,0] #1050 AD
+#lMarrakesh = [24,7,157,0] #1071 AD
+#lLjubljana = [60,36,173,1] #1120 AD
+#lKolyvan = [74,63,200,0] #1200 AD
+#lPinsk = [77,48,210,0] #1230 AD
+#lSamara = [97,54,240,0] #1320 AD
+#lMemel = [70,55,240,0] #1320 AD, Klaipeda
+#lVologda = [91,64,240,0] #1320 AD
+#lTver = [88,60,240,0] #1320 AD
+#lVisby = [67,60,264,0] #1393 AD
+#lStaraSich = [88,40,300,0] #1500 AD
+
 dIndependentCities = {
-xml.i500AD : [ tTangier, tBurdeaux, tAlger, tBarcelona, tToulouse, tMarseilles, tLyon, tTunis, tYork, tLondinium, tMilan, tFlorence, tTripoli, tAugsburg, tNapoli, tRagusa, tSeville],
+xml.i500AD : [ tTangier, tBordeaux, tAlger, tBarcelona, tToulouse, tMarseilles, tLyon, tTunis, tYork, tLondon, tMilan, tFlorence, tTripoli, tAugsburg, tNapoli, tRagusa, tSeville],
 xml.i508AD : [ tPalermo ],
 xml.i600AD : [ tRhodes ],
 xml.i640AD : [ tNorwich ],
@@ -126,17 +165,21 @@ xml.i768AD : [ tRaska ],
 xml.i780AD : [ tFez ],
 xml.i800AD : [ tMilanR, tFlorenceR, tPrague, tKursk, tCalais, tNidaros, tUppsala, tBeloozero ],
 xml.i860AD : [ tEdinburgh ],
-xml.i880AD : [ tBelgrad ],
+xml.i880AD : [ tApulum ],
 xml.i900AD : [ tTvanksta, tKrakow, tRiga ],
-xml.i920AD : [ tCaen ],
+xml.i911AD : [ tCaen ],
 xml.i960AD : [ tMinsk, tSmolensk ],
 xml.i1010AD : [ tYaroslavl ],
 xml.i1050AD : [ tGroningen, tKalmar ],
 xml.i1060AD : [ tMus ],
 xml.i1110AD : [ tGraz ],
 xml.i1200AD : [ tRigaR, tSaraiBatu ],
-xml.i1227AD : [ tTarabulus ],
+xml.i1227AD : [ tTripoliR ],
 xml.i1250AD : [ tAbo ],
+xml.i1320AD : [ tNizhnyNovgorod ],
+xml.i1393AD : [ tTanais ],
+xml.i1410AD : [ tReykjavik ],
+xml.i1530AD : [ tValletta ],
 }
 
 
@@ -548,18 +591,13 @@ class Barbs:
 				self.spawnUnits( iBarbarian, (93,38),(99,54), xml.iMongolKeshik, 3 + iHandicap, iGameTurn,7,0,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_KALMYKS", ()))
 
 
-		# 3Miro: Barbarian and Independent city spawns and barbarian invasions go here. Check with original RFC file for details
-		# Absinthe: Indy cities start with zero-sized culture, barbs with normal culture
-		#			Also, barb cities start with 2 additional units
-		#			Added some initial food reserves on founding cities, so even independents won't shrink on their first turn anymore
-		#			Key: self.foundCity(owner, self.lCity, actual name, iGameTurn, population size, unit type, 
-		
+		# Independent/barb city spawns and minor nations:
 		self.doIndependentCities(iGameTurn)
-		
+
 		if ( iGameTurn == 1 ):
 			self.setupMinorNation()
-
 		self.doMinorNations(iGameTurn)
+
 
 	def doIndependentCities(self, iGameTurn):
 		if iGameTurn in dIndependentCities.keys():
@@ -575,7 +613,8 @@ class Barbs:
 						iRand -= lPossibilities[iCity][2]
 				tCoords, sName, iPos = lPossibilities[iChosenCity]
 				self.foundCity(iCiv, tCoords, sName, iPop, iUnit, iNumUnits, iReligion, iWorkers)
-		
+
+
 	def foundCity(self, iCiv, tCoords, name, iPopulation, iUnitType, iNumUnits, iReligion, iWorkers):
 		if self.checkRegion(tCoords):
 			gc.getPlayer(iCiv).found(tCoords[0], tCoords[1])
@@ -589,6 +628,7 @@ class Barbs:
 				city.setHasReligion(iReligion, True, True, False)
 			if (iWorkers > 0):
 				self.makeUnit(xml.iWorker, iCiv, tCoords, iWorkers, 0, "")
+
 
 	def checkRegion(self, tCoords):
 		cityPlot = gc.getMap().plot(tCoords[0], tCoords[1])

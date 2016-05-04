@@ -69,10 +69,12 @@ Changes for RFCE 1.4:
 		- AI civs will more often reconsider their wars against minor civs (note that being an AI target and declaring an actual war is also handled separately)
 		- AI war declaration on indies is now based on their war maps, the chance is increased with higher war map values
 		- AI civs will much more frequently declare war on indies in their core area
-		- Increased city cluster for many civs, it's possible for them to have closer cities
 		- Revised values connected to cultural revolts/flips of independents and barbs
-		- New rules and various improvements in AI city settling, most civs' city-placement should be more dense overally
-		- Spawning independent cities selected from a pool of cities in an area, chance of spawning dependent of historical importance
+		- Increased city cluster for many civs, it's possible for them to have closer cities in some situations
+		- New rules and other various improvements in the AI city settling mechanics, most civs' city-placement should be more dense overally
+		- Timber, Deer and Fur resources will disappear if the Woodland/Dense Forest/Palm Forest is cut down
+		- Spawning independent cities can be selected from a pool of cities in an area, chance of spawning depends on historical importance
+		- Instead of Palermo spawning in 100% of the games in 508AD, now there is 80% chance for Palermo, 20% for Syracuse
 
 	Text/GUI improvements:
 		- New GlobalDefines_Alt.xml file, users can change RFCE-specific settings there (RFCEurope\Assets\XML\)
@@ -89,6 +91,7 @@ Changes for RFCE 1.4:
 		- Improved city and wonder foundation date/city/civ information on the Info Screen, also it now takes different scenarios into account
 		- Fixed mistakes on the Info Screen where information from the top5 cities and from the wonders were not in sync (connected to city visibility and contact with the civ)
 		- Readded era displays to various screens (main, info, religion) before the discovery of Calendar
+		- Colour changes in various interface messages
 
 	Balance/setup:
 		- Sweden starts with the following civics: Feudal Monarchy, Serfdom, Manoralism

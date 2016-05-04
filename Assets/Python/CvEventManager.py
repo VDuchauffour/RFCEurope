@@ -500,7 +500,7 @@ class CvEventManager:
 		#			Saving the improvement type and coordinates here as a global variable, and accessing later in the onCityBuilt function
 		global iImpBeforeCity
 		iImpBeforeCity = 10000*iImprovement + 100*iX + 1*iY
-		#print ("utolso megsemmisitett: ", iImprovement, iX, iY, iImpBeforeCity)
+		#print ("latest destroyed improvement: ", iImprovement, iX, iY, iImpBeforeCity)
 
 	def onRouteBuilt(self, argsList):
 		'Route Built'
@@ -517,9 +517,25 @@ class CvEventManager:
 
 	def onPlotFeatureRemoved(self, argsList):
 		'Plot Revealed'
+		# Absinthe: mistake in the Firaxis code, argslist should be switched around:
 		pPlot = argsList[0]
-		iFeatureType = argsList[1]
-		pCity = argsList[2] # This can be null
+		iFeatureType = argsList[2]
+		pCity = argsList[1] # This can be null
+		print("PlotFeatureRemoved test", argsList[0])
+		print("PlotFeatureRemoved test", argsList[1])
+		print("PlotFeatureRemoved test", argsList[2])
+
+		# Absinthe: remove specific resources if the forest/dense forest/palm forest was cut down:
+		if pPlot.getBonusType(-1) != -1: # only proceed if there is a bonus resource on the plot
+			if (iFeatureType == gc.getInfoTypeForString("FEATURE_FOREST") or iFeatureType == xml.iDenseForest or iFeatureType == xml.iPalmForest):
+				iBonusType = pPlot.getBonusType(-1)
+				if (iBonusType == xml.iTimber or iBonusType == xml.iDeer or iBonusType == xml.iFur): # deer, fur, timber
+					print ("Resource disappeared on forest removal", pPlot.getBonusType(-1))
+					pPlot.setBonusType(-1)
+					# Absinthe: message for the human player if it was inside it's territory
+					iOwner = pPlot.getOwner()
+					if (iOwner == utils.getHumanID()):
+						CyInterface().addMessage(iOwner, False, con.iDuration, (CyTranslator().getText("TXT_KEY_NO_FOREST_NO_RESOURCE", (gc.getBonusInfo(iBonusType).getTextKey(),))), "AS2D_DISCOVERBONUS", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBonusInfo(iBonusType).getButton(), ColorTypes(con.iLime), pPlot.getX(), pPlot.getY(), True, True)
 
 	def onPlotPicked(self, argsList):
 		'Plot Picked'

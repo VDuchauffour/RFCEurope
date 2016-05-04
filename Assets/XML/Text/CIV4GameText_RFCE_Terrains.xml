@@ -149,4 +149,31 @@
 		<Spanish>Construir una [LINK=IMPROVEMENT_WINERY]bodega[\LINK]</Spanish>
 		<Portuguese>Construir uma [LINK=IMPROVEMENT_WINERY]Vinícola[\LINK]</Portuguese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RESOURCE_DISCOVERED</Tag>
+		<English>You have discovered a source of %s1_BonusName near %s2_CityName!</English>
+		<French>Vous avez d&#233;couvert une source de [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] pr&#232;s de %s2_CityName !</French>
+		<German>Ihr habt in der N&#228;he der Stadt %s2_CityName ein Vorkommen des Bonusguts [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] entdeckt!</German>
+		<Italian>Hai scoperto una risorsa di [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] vicino a %s2_CityName!</Italian>
+		<Spanish>Hab&#233;is descubierto una fuente de [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] cerca de %s2_CityName.</Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RESOURCE_EXHAUSTED</Tag>
+		<English>A source of %s1_resource near %s2_CityName has been exhausted!</English>
+		<French>Notre source [NUM1:de:d'] [COLOR_HIGHLIGHT_TEXT]%s1_resource[COLOR_REVERT] est perdue.</French>
+		<German>Verlust der Ressource [COLOR_HIGHLIGHT_TEXT]%s1_resource[COLOR_REVERT].</German>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]%s1_resource[COLOR_REVERT] [NUM1:finito:finita].</Italian>
+		<Spanish>[NUM1:Se ha perdido el:Se ha perdido la:Se han perdido los:Se han perdido las] [COLOR_HIGHLIGHT_TEXT]%s1_resource[COLOR_REVERT].</Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_NO_FOREST_NO_RESOURCE</Tag>
+		<English>With the removal of the forest, the source of %s1_resource has been exhausted!</English>
+		<French>With the removal of the forest, the source of %s1_resource has been exhausted!</French>
+		<German>With the removal of the forest, the source of %s1_resource has been exhausted!</German>
+		<Italian>With the removal of the forest, the source of %s1_resource has been exhausted!</Italian>
+		<Spanish>With the removal of the forest, the source of %s1_resource has been exhausted!</Spanish>
+		<Portuguese>With the removal of the forest, the source of %s1_resource has been exhausted!</Portuguese>
+	</TEXT>
 </Civ4GameText>
