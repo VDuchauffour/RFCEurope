@@ -25,100 +25,119 @@ iBarbarian = con.iBarbarian
 pBarbarian = gc.getPlayer(iBarbarian)
 teamBarbarian = gc.getTeam(pBarbarian.getTeam())
 
+# Tuples for independent cities
+# List of tuples with variations, civ, pop, defender type, amount defenders, religion, workers
+# Variation tuples: ( tCoords, sName, chance)
+# 500 AD
+tTangier = ( [ ((27, 16), "Tangier", 100) ], iIndependent2, 1, xml.iCordobanBerber, 2, -1, 0 )
+tBurdeaux = ( [ ((37, 38), "Burdigala", 100) ], iBarbarian, 2, xml.iArcher, 0, -1, 0 )
+tAlger = ( [ ((40, 16), "Alger", 100) ], iIndependent3, 1, xml.iArcher, 1, -1, 0 )
+tBarcelona = ( [ ((40, 28), "Barcino", 100) ], iIndependent2, 1, xml.iArcher, 1, -1, 0 )
+tToulouse = ( [ ((41, 34), "Tolosa", 100) ], iBarbarian, 1, xml.iArcher, 0, -1, 0 )
+tMarseilles = ( [ ((46, 62), "Massilia", 100) ], iIndependent, 1, xml.iArcher, 1, xml.iCatholicism, 0 )
+tLyon = ( [ ((46, 37), "Lyon", 100) ], iIndependent3, 1, xml.iArcher, 2, xml.iCatholicism, 1 )
+tTunis = ( [ ((49, 17), "Tunis", 100) ], iIndependent4, 1, xml.iArcher, 1, -1, 0 )
+tYork = ( [ ((39, 59), "Eboracum", 100) ], iIndependent4, 1, xml.iArcher, 2, -1, 1 )
+tLondinium = ( [ ((41, 52), "Londinium", 100) ], iIndependent, 2, xml.iArcher, 2, xml.iCatholicism, 0 )
+tMilan = ( [ ((52, 37), "Mediolanum", 100) ], iIndependent, 2, xml.iArcher, 1, xml.iCatholicism, 0 )
+tFlorence = ( [ ((54, 32), "Florentia", 100) ], iIndependent2, 2, xml.iArcher, 1, xml.iCatholicism, 0 )
+tTripoli = ( [ ((54, 8), "Tripoli", 100) ], iBarbarian, 1, xml.iArcher, 1, -1, 0 )
+tAugsburg = ( [ ((55, 41), "Augsburg", 100) ], iIndependent3, 1, xml.iArcher, 2, -1, 0 )
+tNapoli = ( [ ((59, 24), "Neapolis", 100) ], iIndependent, 2, xml.iArcher, 1, -1, 0 )
+tRagusa = ( [ ((64, 28), "Ragusa", 100) ], iIndependent2, 1, xml.iArcher, 2, xml.iCatholicism, 0 )
+tSeville = ( [ ((27, 21), "Hispalis", 100) ], iIndependent4, 1, xml.iArcher, 2, -1, 0 )
+# 508 AD
+tPalermo = ( [ ((55, 19), "Palermo", 80), ((58, 17), "Syracuse", 20) ], iIndependent3, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
+# 600 AD
+tRhodes = ( [ ((80, 13), "Rhodes", 100) ], iIndependent2, 1, xml.iArcher, 1, xml.iOrthodoxy, 0 )
+# 640 AD
+tNorwich = ( [ ((43, 55), "Norwich", 100) ], iIndependent3, 1, xml.iArcher, 1, -1, 1 )
+# 680 AD
+tToledo = ( [ ((30, 27), "Toledo", 100) ], iBarbarian, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
+tLeicester = ( [ ((39, 56), "Ligeraceaster", 100) ], iIndependent, 1, xml.iArcher, 1, -1, 0 )
+# 700 AD
+tValencia = ( [ ((36, 25), "Valencia", 100) ], iIndependent, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
+tPamplona = ( [ ((35, 32), "Pamplona", 100) ], iIndependent4, 1, xml.iCrossbowman, 2, -1, 0 )
+tDublin = ( [ ((32, 58), "Dubh Linn", 100) ], iBarbarian, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
+tLubeck = ( [ ((57, 54), "Liubice", 100) ], iIndependent2, 1, xml.iArcher, 2, -1, 1 )
+tPorto = ( [ ((23, 31), "Portucale", 100) ], iIndependent3, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
+# 760 AD
+tTonsberg = ( [ ((57, 67), "Tonsberg", 100) ], iIndependent3, 1, xml.iArcher, 2, -1, 0)
+# 768 AD
+tRaska = ( [ ((68, 28), "Ras", 100) ], iIndependent2, 1, xml.iArcher, 2, -1, 1)
+# 780 AD
+tFez = ( [ ((29, 12), "Fes", 100) ], iIndependent4, 1, xml.iCrossbowman, 2, -1, 1)
+# 800 AD
+tMilanR = ( [ ((52, 37), "Milano", 100) ], iIndependent, 4, xml.iArcher, 2, xml.iCatholicism, 0)
+tFlorenceR = ( [ ((54, 32), "Firenze", 100) ], iIndependent2, 4, xml.iArcher, 2, xml.iCatholicism, 0 )
+tPrague = ( [ ((60, 44), "Praha", 100) ], iIndependent, 1, xml.iCrossbowman, 2, xml.iCatholicism, 1)
+tKursk = ( [ ((90, 48), "Kursk", 100) ], iIndependent4, 1, xml.iArcher, 2, -1, 0)
+tCalais = ( [ ((44, 50), "Calais", 100) ], iIndependent3, 1, xml.iCrossbowman, 2, -1, 0)
+tNidaros = ( [ ((57, 71), "Nidaros", 100) ], iIndependent3, 1, xml.iArcher, 1, -1, 1)
+tUppsala = ( [ ((65, 66), "Uppsala", 100) ], iIndependent4, 1, xml.iArcher, 2, -1, 1)
+tBeloozero = ( [ ((87, 65), "Beloozero", 100) ], iIndependent4, 1, xml.iCrossbowman, 1, -1, 1)
+# 860 AD
+tEdinburgh = ( [ ((37, 63), "Eidyn Dun", 100) ], iBarbarian, 1, xml.iArcher, 1, -1, 0)
+# 880 AD
+tBelgrad = ( [ ((73, 35), "Belograd", 100) ], iIndependent, 1, xml.iArcher, 2, -1, 0)
+# 900 AD
+tTvanksta = ( [ ((69, 53), "Tvanksta", 100) ], iIndependent4, 1, xml.iCrossbowman, 2, -1, 0)
+tKrakow = ( [ ((68, 44), "Krakow", 100) ], iIndependent3, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0)
+tRiga = ( [ ((74, 58), "Riga", 100) ], iIndependent, 2, xml.iCrossbowman, 2, -1, 1)
+# 920 AD
+tCaen = ( [ ((40, 47), "Caen", 100) ], iIndependent2, 1,  xml.iCrossbowman, 2, xml.iCatholicism, 0)
+# 960 AD
+tMinsk = ( [ ((79, 52), "Minsk", 100) ], iIndependent3, 1, xml.iCrossbowman, 2, -1, 0)
+tSmolensk = ( [ ((84, 55), "Smolensk", 100) ], iIndependent4, 1, xml.iCrossbowman, 1, -1, 0)
+# 1010 AD
+tYaroslavl = ( [ ((92, 61), "Yaroslavl", 100) ], iIndependent3, 1, xml.iCrossbowman, 1, -1, 0)
+# 1050 AD
+tGroningen = ( [ ((52, 54), "Groningen", 100) ], iIndependent2, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0)
+tKalmar = ( [ ((64, 60), "Kalmar", 100) ], iIndependent2, 2, xml.iCrossbowman, 1, xml.iCatholicism, 1)
+# 1060 AD
+tMus = ( [ ((99, 21), "Mus", 100) ], iBarbarian, 1, xml.iLongbowman, 2, -1, 0)
+# 1110 AD
+tGraz = ( [ ((61, 37), "Graz", 100) ], iIndependent3, 2, xml.iCrossbowman, 2, xml.iCatholicism, 0)
+# 1200 AD
+tRigaR = ( [ ((74, 58), "Riga", 100) ], iIndependent, 3, xml.iCrossbowman, 2, -1, 1)
+tSaraiBatu = ( [ ((99, 40), "Sarai Batu", 100) ], iBarbarian, 1, xml.iLongbowman, 2, -1, 0)
+# 1227 AD
+tTarabulus = ( [ ((54, 8), "Tarabulus", 100) ], iBarbarian, 3, xml.iArbalest, 2, xml.iIslam, 1)
+# 1250 AD
+tAbo = ( [ ((71, 66), "Abo", 100) ], iIndependent4, 1, xml.iCrossbowman, 1, -1, 0)
+# 1320 AD
+tNizhnyNovgorod = ( [ ((97, 58), "Nizhny Novgorod", 100) ], iIndependent, 1, xml.iCrossbowman, 1, -1, 0)
+# 1320 AD
+tTana = ( [ ((96, 38), "Tana", 100) ], iBarbarian, 1, xml.iLongbowman, 2, xml.iIslam, 0)
+# 1320 AD
+tReykjavik = ( [ ((2, 70), "Reykjavik", 100) ], iIndependent, 1, xml.iVikingBeserker, 2, -1, 0)
+# 1320 AD
+tValletta = ( [ ((57, 14), "Valletta", 100) ], iIndependent4, 1, xml.iKnightofStJohns, 3, xml.iCatholicism, 0)
 
-# Preplaced indy and barb cities
-# Key: city coordinates, spawn turn, retries
-lTangier = [27,16,0,0] #500 AD
-lBurdigala = [37,38,0,0] #500 AD, Bordeaux
-#lNantes = [36,43,0,0] #500 AD
-lAlger = [40,16,0,0] #500 AD
-lBarcino = [40,28,0,0] #500 AD
-lToulouse = [41,34,0,0] #500 AD
-#lTours = [40,43,0,0] #500 AD
-#lOrleans = [42,44,0,0] #500 AD
-lMarseilles = [46,32,0,0] #500 AD
-lLyon = [46,37,0,0] #500 AD
-lTunis = [49,17,0,0] #500 AD
-#lPisae = [53,32,0,0] #500 AD
-lLondinium = [41,52,0,0] #500 AD, London
-lYork = [39,59,0,0] # 500 AD, Eboracum
-lMediolanum = [52,37,0,0] #500 AD, Milan
-lFlorentia = [54,32,0,0] #500 AD, Firenze
-lTripoli = [54,8,0,0] #500 AD
-#lRoma = [56,27,0,0] #500 AD
-lAugsburg = [55,41,0,0] #500 AD
-#lCatania = [58,18,0,0] #500 AD
-lNapoli = [59,24,0,0] #500 AD
-lRagusa = [64,28,0,0] #500 AD
-#lBeograd = [68,30,0,0] #500 AD
-lSeville = [27,21,0,0] #500 AD
-#lRavenna = [55,33,0,0] #500 AD
-#lKairouan = [49,14,0,0] #500 AD
-lPalermo = [55,19,2,0] # 508 AD
-lRhodes = [80,13,25,0] # 600 AD
-lNorwich = [43,55,35,0] # 640 AD, reduced to town on spawn of England
-#lZaragoza = [36,29,45,0] #680 AD
-lToledo = [30,27,45,0] #680 AD
-lLeicester = [39,56,45,0] #680 AD, reduced to town on spawn of England
-#lBulgar = [97,60,45,0] #680 AD
-#lLeon = [27,32,50,0] # 700 AD
-#lBurgos = [30,32,50,0] #700 AD
-lValencia = [36,25,50,0] #700 AD
-lPamplona = [35,32,50,0] #700 AD
-lPorto = [23,31,50,0] #700 AD
-lDublin = [32,58,50,0] #700 AD
-lLubeck = [57,54,50,0] #700 AD
-lTonsberg = [57,65,65,0] #760 AD
-lRaska = [68,28,67,0] #768 AD
-lFez = [29,12,70,0] #780 AD
-#lCorunna = [24,35,75,0] #800 AD
-lMilan = [52,37,75,0] #800 AD, Respawn of Mediolanum, in case it was razed
-lFirenze = [54,32,75,0] #800 AD, Respawn of Florentia
-#lLeipzig = [58,48,75,0] #800 AD
-lPrague = [60,44,75,0] #800 AD
-#lKharkov = [90,46,75,0] #800 AD
-lKursk = [90,48,75,0] #800 AD
-lCalais = [44,50,75,0] #800 AD
-lNidaros = [57,71,75,0] #800 AD, Trondheim
-lUppsala = [65,66,75,0] #800 AD, reduced to town on spawn of Sweden
-#lLadoga = [81,65,75,0] #800 AD
-lBeloozero = [87,65,75,0] #800 AD
-#lVelehrad = [64,42,82,0] #833 AD
-#lNovgorod = [80,62,87,0] #848 AD
-lEdinburgh = [37,63,90,0] #860 AD
-#lNottingham = [39,56,92,0] #867 AD, reduced to town on spawn of England
-lAlbaIulia = [73,35,95,0] #880 AD
-lTvanksta = [69,53,100,0] #900 AD, Konigsberg
-#lBreslau = [64,46,100,0] #900 AD
-lKrakow = [68,44,100,0] #900 AD
-lDuna = [74,58,100,0] #900 AD, Riga (Duna is the name of a sheltered natural harbor near Riga)
-lCaen = [40,47,104,0] #911 AD, establishment of the Duchy of Normandy
-lMinsk = [79,52,120,0] #960 AD
-lSmolensk = [84,55,120,0] #960 AD
-lYaroslavl = [92,61,137,0] #1010 AD
-lGroningen = [52,54,150,0] #1050 AD
-lKalmar = [64,60,150,0] #1050 AD
-#lMunster = [52,50,150,0] #1050 AD
-lMus = [99,21,153,0] #1060 AD
-#lMarrakesh = [24,7,157,0] #1071 AD
-lGraz = [61,37,170,0] #1110 AD
-#lLjubljana = [60,36,173,1] #1120 AD
-lRiga = [74,58,200,0] #1200 AD, Respawn of Riga
-lSaraiBatu = [99,40,200,0] #1200 AD
-#lKolyvan = [74,63,200,0] #1200 AD
-lTarabulus = [54,8,209,0] #1227 AD, Respawn of Tripoli
-#lPinsk = [77,48,210,0] #1230 AD
-lAbo = [71,66,217,0] #1250 AD
-lNizhnyNovgorod = [97,58,240,0] #1320 AD
-#lSamara = [97,54,240,0] #1320 AD
-#lMemel = [70,55,240,0] #1320 AD, Klaipeda
-#lVologda = [91,64,240,0] #1320 AD
-#lTver = [88,60,240,0] #1320 AD
-lTanais = [96,38,264,0] #1392 AD
-#lVisby = [67,60,264,0] #1393 AD
-lReykjavik = [2,70,270,0] #1410 AD
-#lStaraSich = [88,40,300,0] #1500 AD
-lValletta = [57,14,315,0] #1530 AD
+dIndependentCities = {
+xml.i500AD : [ tTangier, tBurdeaux, tAlger, tBarcelona, tToulouse, tMarseilles, tLyon, tTunis, tYork, tLondinium, tMilan, tFlorence, tTripoli, tAugsburg, tNapoli, tRagusa, tSeville],
+xml.i508AD : [ tPalermo ],
+xml.i600AD : [ tRhodes ],
+xml.i640AD : [ tNorwich ],
+xml.i680AD : [ tToledo, tLeicester ],
+xml.i700AD : [ tValencia, tPamplona, tDublin, tLubeck, tPorto ],
+xml.i760AD : [ tTonsberg ],
+xml.i768AD : [ tRaska ],
+xml.i780AD : [ tFez ],
+xml.i800AD : [ tMilanR, tFlorenceR, tPrague, tKursk, tCalais, tNidaros, tUppsala, tBeloozero ],
+xml.i860AD : [ tEdinburgh ],
+xml.i880AD : [ tBelgrad ],
+xml.i900AD : [ tTvanksta, tKrakow, tRiga ],
+xml.i920AD : [ tCaen ],
+xml.i960AD : [ tMinsk, tSmolensk ],
+xml.i1010AD : [ tYaroslavl ],
+xml.i1050AD : [ tGroningen, tKalmar ],
+xml.i1060AD : [ tMus ],
+xml.i1110AD : [ tGraz ],
+xml.i1200AD : [ tRigaR, tSaraiBatu ],
+xml.i1227AD : [ tTarabulus ],
+xml.i1250AD : [ tAbo ],
+}
 
 
 # Minor Nations structure: [ int Province: all cities in this province will revolt
@@ -533,167 +552,59 @@ class Barbs:
 		# Absinthe: Indy cities start with zero-sized culture, barbs with normal culture
 		#			Also, barb cities start with 2 additional units
 		#			Added some initial food reserves on founding cities, so even independents won't shrink on their first turn anymore
-		#			Key: self.foundCity(owner, self.lCity, actual name, iGameTurn, population size, unit type, number of units, religion, workers)
-		#			Walls (and other buildings) can be added with the onCityBuilt function, in RiseAndFall.py
-
-		if ( iGameTurn < xml.i660AD ):
-			# 500AD
-			self.foundCity(iIndependent2, lTangier, "Tangier", iGameTurn, 1, xml.iCordobanBerber, 2, -1, 0 )
-			self.foundCity(iBarbarian, lBurdigala, "Burdigala", iGameTurn, 2, xml.iArcher, 0, -1, 0 )
-			self.foundCity(iIndependent3, lAlger, "Alger", iGameTurn, 1, xml.iArcher, 1, -1, 1 )
-			self.foundCity(iIndependent2, lBarcino, "Barcino", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
-			self.foundCity(iBarbarian, lToulouse, "Tolosa", iGameTurn, 1, xml.iArcher, 0, -1, 0 )
-			self.foundCity(iIndependent, lMarseilles, "Massilia", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 0 )
-			self.foundCity(iIndependent3, lLyon, "Lyon", iGameTurn, 1, xml.iArcher, 2, xml.iCatholicism, 1 ) # Lyon flips to Burgundy
-			self.foundCity(iIndependent4, lTunis, "Tunis", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
-			self.foundCity(iIndependent4, lYork, "Eboracum", iGameTurn, 1, xml.iArcher, 2, -1, 1 )
-			self.foundCity(iIndependent, lLondinium, "Londinium", iGameTurn, 2, xml.iArcher, 2, xml.iCatholicism, 0 )
-			self.foundCity(iIndependent, lMediolanum, "Mediolanum", iGameTurn, 2, xml.iArcher, 1, xml.iCatholicism, 0 )
-			self.foundCity(iIndependent2, lFlorentia, "Florentia", iGameTurn, 2, xml.iArcher, 1, xml.iCatholicism, 0 )
-			self.foundCity(iBarbarian, lTripoli, "Tripoli", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
-			self.foundCity(iIndependent3, lAugsburg, "Augsburg", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
-			self.foundCity(iIndependent, lNapoli, "Neapolis", iGameTurn, 2, xml.iArcher, 1, -1, 0 )
-			self.foundCity(iIndependent2, lRagusa, "Ragusa", iGameTurn, 1, xml.iArcher, 2, xml.iCatholicism, 0 )
-			self.foundCity(iIndependent4, lSeville, "Hispalis", iGameTurn, 1, xml.iArcher, 2, -1, 0 ) # Seville flips to Cordoba
-			# 508AD
-			self.foundCity(iIndependent3, lPalermo, "Palermo", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
-			# 600AD
-			self.foundCity(iIndependent2, lRhodes, "Rhodes", iGameTurn, 1, xml.iArcher, 1, xml.iOrthodoxy, 0 )
-			# 640AD
-			self.foundCity(iIndependent3, lNorwich, "Norwich", iGameTurn, 1, xml.iArcher, 1, -1, 1 )
-		elif ( iGameTurn > xml.i660AD and iGameTurn < xml.i892AD ):
-			# 680AD
-			self.foundCity(iBarbarian, lToledo, "Toledo", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
-			self.foundCity(iIndependent, lLeicester, "Ligeraceaster", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
-			# 700AD
-			self.foundCity(iIndependent, lValencia, "Valencia", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
-			self.foundCity(iIndependent4, lPamplona, "Pamplona", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
-			self.foundCity(iBarbarian, lDublin, "Dubh Linn", iGameTurn, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
-			self.foundCity(iIndependent2, lLubeck, "Liubice", iGameTurn, 1, xml.iArcher, 2, -1, 1 )
-			self.foundCity(iIndependent3, lPorto, "Portucale", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
-			# 760AD
-			self.foundCity(iIndependent3, lTonsberg, "Tonsberg", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
-			# 768AD
-			self.foundCity(iIndependent2, lRaska, "Ras", iGameTurn, 1, xml.iArcher, 2, -1, 1 )
-			# 780AD
-			self.foundCity(iIndependent4, lFez, "Fes", iGameTurn, 1, xml.iCrossbowman, 2, xml.iIslam, 1)
-			# 800AD
-			self.foundCity(iIndependent, lMilan, "Milano", iGameTurn, 4, xml.iArcher, 2, xml.iCatholicism, 0 )
-			self.foundCity(iIndependent2, lFirenze, "Firenze", iGameTurn, 4, xml.iArcher, 2, xml.iCatholicism, 0 )
-			self.foundCity(iIndependent, lPrague, "Praha", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 1 )
-			self.foundCity(iIndependent4, lKursk, "Kursk", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
-			self.foundCity(iIndependent3, lCalais, "Calais", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
-			self.foundCity(iIndependent3, lNidaros, "Nidaros", iGameTurn, 1, xml.iArcher, 1, -1, 1)
-			self.foundCity(iIndependent4, lUppsala, "Uppsala", iGameTurn, 1, xml.iArcher, 2, -1, 1)
-			self.foundCity(iIndependent4, lBeloozero, "Beloozero", iGameTurn, 1, xml.iCrossbowman, 1, -1, 1)
-			# 860AD
-			self.foundCity(iBarbarian, lEdinburgh, "Eidyn Dun", iGameTurn, 1, xml.iArcher, 1, -1, 0 )
-			# 880AD
-			self.foundCity(iIndependent, lAlbaIulia, "Belograd", iGameTurn, 1, xml.iArcher, 2, -1, 0 )
-		elif ( iGameTurn > xml.i895AD and iGameTurn < xml.i1259AD ):
-			# 900AD
-			self.foundCity(iIndependent4, lTvanksta, "Tvanksta", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
-			self.foundCity(iIndependent3, lKrakow, "Krakow", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
-			self.foundCity(iIndependent, lDuna, "Riga", iGameTurn, 2, xml.iCrossbowman, 2, -1, 1 )
-			# 912AD
-			self.foundCity(iIndependent2, lCaen, "Caen", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
-			# 960AD
-			self.foundCity(iIndependent3, lMinsk, "Minsk", iGameTurn, 1, xml.iCrossbowman, 2, -1, 0 )
-			self.foundCity(iIndependent4, lSmolensk, "Smolensk", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 )
-			# 1010AD
-			self.foundCity(iIndependent3, lYaroslavl, "Yaroslavl", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 )
-			# 1050AD
-			self.foundCity(iIndependent2, lGroningen, "Groningen", iGameTurn, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
-			self.foundCity(iIndependent2, lKalmar, "Kalmar", iGameTurn, 2, xml.iCrossbowman, 1, xml.iCatholicism, 1)
-			# 1060AD
-			self.foundCity(iBarbarian, lMus, "Mus", iGameTurn, 1, xml.iLongbowman, 2, -1, 0 )
-			# 1110AD
-			self.foundCity(iIndependent3, lGraz, "Graz", iGameTurn, 2, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
-			# 1200AD
-			self.foundCity(iIndependent, lRiga, "Riga", iGameTurn, 3, xml.iCrossbowman, 2, -1, 1 )
-			self.foundCity(iBarbarian, lSaraiBatu, "Sarai Batu", iGameTurn, 1, xml.iLongbowman, 2, -1, 0 )
-			# 1227 AD
-			self.foundCity(iBarbarian, lTarabulus, "Tarabulus", iGameTurn, 3, xml.iArbalest, 2, xml.iIslam, 1 )
-			# 1250 AD
-			self.foundCity(iIndependent4, lAbo, "Abo", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 )
-		elif ( iGameTurn > xml.i1300AD and iGameTurn < xml.i1540AD ):
-			# 1320AD
-			self.foundCity(iIndependent, lNizhnyNovgorod, "Nizhny Novgorod", iGameTurn, 1, xml.iCrossbowman, 1, -1, 0 )
-			# 1392AD
-			self.foundCity(iBarbarian, lTanais, "Tana", iGameTurn, 1, xml.iLongbowman, 2, xml.iIslam, 0)
-			# 1410AD
-			self.foundCity(iIndependent, lReykjavik, "Reykjavik", iGameTurn, 1, xml.iVikingBeserker, 2, -1, 1 )
-			# 1530AD
-			self.foundCity(iIndependent4, lValletta, "Valletta", iGameTurn, 1, xml.iKnightofStJohns, 3, xml.iCatholicism, 0 )
-
+		#			Key: self.foundCity(owner, self.lCity, actual name, iGameTurn, population size, unit type, 
+		
+		self.doIndependentCities(iGameTurn)
+		
 		if ( iGameTurn == 1 ):
 			self.setupMinorNation()
 
 		self.doMinorNations(iGameTurn)
 
+	def doIndependentCities(self, iGameTurn):
+		if iGameTurn in dIndependentCities.keys():
+			for tCity in dIndependentCities[iGameTurn]:
+				lPossibilities, iCiv, iPop, iUnit, iNumUnits, iReligion, iWorkers = tCity
+				iChosenCity = 0
+				if len(lPossibilities) > 1:
+					iRand = gc.getGame().getSorenRandNum(100, 'random independent city')
+					for iCity in range(len(lPossibilities)):
+						if iRand <= lPossibilities[iCity][2]:
+							iChosenCity = iCity
+							break
+						iRand -= lPossibilities[iCity][2]
+				tCoords, sName, iPos = lPossibilities[iChosenCity]
+				self.foundCity(iCiv, tCoords, sName, iPop, iUnit, iNumUnits, iReligion, iWorkers)
+		
+	def foundCity(self, iCiv, tCoords, name, iPopulation, iUnitType, iNumUnits, iReligion, iWorkers):
+		if self.checkRegion(tCoords):
+			gc.getPlayer(iCiv).found(tCoords[0], tCoords[1])
+			city = gc.getMap().plot(tCoords[0], tCoords[1]).getPlotCity()
+			city.setName(name, False)
+			if (iPopulation != 1):
+				city.setPopulation(iPopulation)
+			if (iNumUnits > 0):
+				self.makeUnit(iUnitType, iCiv, tCoords, iNumUnits, 0, "")
+			if ( iReligion > -1 ):
+				city.setHasReligion(iReligion, True, True, False)
+			if (iWorkers > 0):
+				self.makeUnit(xml.iWorker, iCiv, tCoords, iWorkers, 0, "")
 
-	def getCity(self, tCoords): #by LOQ
-		'Returns a city at coordinates tCoords.'
-		return CyGlobalContext().getMap().plot(tCoords[0], tCoords[1]).getPlotCity()
-
-
-	def foundCity(self, iCiv, lCity, name, iTurn, iPopulation, iUnitType, iNumUnits, iReligion, iWorkers):
-		if ((iTurn == lCity[2] + lCity[3]) and (lCity[3]<10)):
-			#print self.checkRegion(lBarcino)
-			bResult, lCity[3] = self.checkRegion(lCity)
-			if (bResult == True):
-				pCiv = gc.getPlayer(iCiv)
-				pCiv.found(lCity[0], lCity[1])
-				self.getCity((lCity[0], lCity[1])).setName(name, False)
-				if (iPopulation != 1):
-					self.getCity((lCity[0], lCity[1])).setPopulation(iPopulation)
-				if (iNumUnits > 0):
-					self.makeUnit(iUnitType, iCiv, (lCity[0], lCity[1]), iNumUnits, 0, "")
-				if (iWorkers > 0):
-					self.makeUnit(xml.iWorker, iCiv, (lCity[0], lCity[1]), iWorkers, 0, "")
-				if ( iReligion > -1 ):
-					self.getCity((lCity[0], lCity[1])).setHasReligion(iReligion, True, True, False)
-				return True
-			if (bResult == False) and (lCity[3] == -1):
-				return False
-
-
-	def checkRegion(self, tCity):
-		cityPlot = gc.getMap().plot(tCity[0], tCity[1])
-##		iNumUnitsInAPlot = cityPlot.getNumUnits()
-##		print iNumUnitsInAPlot
+	def checkRegion(self, tCoords):
+		cityPlot = gc.getMap().plot(tCoords[0], tCoords[1])
 
 		#checks if the plot already belongs to someone
 		if (cityPlot.isOwned()):
 			if (cityPlot.getOwner() != iBarbarian ):
-				return (False, -1)
-
-##		#checks if there's a unit on the plot
-##		if (iNumUnitsInAPlot):
-##			for i in range(iNumUnitsInAPlot):
-##				unit = currentPlot.getUnit(i)
-##				iOwner = unit.getOwner()
-##				pOwner = gc.getPlayer(iOwner)
-##				if (pOwner.isHuman()):
-##					return (False, tCity[3]+1)
-
-		#checks the surroundings and allows only AI units
-		for x in range(tCity[0]-1, tCity[0]+2):
-			for y in range(tCity[1]-1, tCity[1]+2):
-				currentPlot=gc.getMap().plot(x,y)
+				return False
+				
+		#checks the surroundings and for cities
+		for x in range(tCoords[0]-1, tCoords[0]+2):
+			for y in range(tCoords[1]-1, tCoords[1]+2):
+				currentPlot = gc.getMap().plot(x,y)
 				if (currentPlot.isCity()):
-					return (False, -1)
-				# 3Miro: Allow city founding even if the Human has units nearby
-				#iNumUnitsInAPlot = currentPlot.getNumUnits()
-				#if (iNumUnitsInAPlot):
-				#	for i in range(iNumUnitsInAPlot):
-				#		unit = currentPlot.getUnit(i)
-				#		iOwner = unit.getOwner()
-				#		pOwner = gc.getPlayer(iOwner)
-				#		if (pOwner.isHuman()):
-				#			pass
-				#		#return (False, tCity[3]+1)
-		return (True, tCity[3])
+					return False
+		return True
 
 
 	def spawnUnits(self, iCiv, tTopLeft, tBottomRight, iUnitType, iNumUnits, iTurn, iPeriod, iRest, function, iForceAttack, szName):

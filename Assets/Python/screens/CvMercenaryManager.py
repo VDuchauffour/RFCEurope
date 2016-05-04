@@ -691,7 +691,8 @@ class CvMercenaryManager:
 					if ( pMerc.isHasPromotion( iPromotion ) ):
 						lPromotionList.append( iPromotion )
 
-				lPromotionList.append( xml.iPromotionMerc )
+				if xml.iPromotionMerc not in lPromotionList:
+					lPromotionList.append( xml.iPromotionMerc )
 
 				lMerc = [ iMerc, lPromotionList, 0, iUpkeepCost, -1 ]
 

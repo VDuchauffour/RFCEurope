@@ -72,6 +72,7 @@ Changes for RFCE 1.4:
 		- Increased city cluster for many civs, it's possible for them to have closer cities
 		- Revised values connected to cultural revolts/flips of independents and barbs
 		- New rules and various improvements in AI city settling, most civs' city-placement should be more dense overally
+		- Spawning independent cities selected from a pool of cities in an area, chance of spawning dependent of historical importance
 
 	Text/GUI improvements:
 		- New GlobalDefines_Alt.xml file, users can change RFCE-specific settings there (RFCEurope\Assets\XML\)

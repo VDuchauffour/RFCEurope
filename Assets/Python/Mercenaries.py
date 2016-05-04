@@ -977,7 +977,8 @@ class GlobalMercenaryUtils:
 		for iPromotion in lMerc[1]:
 			pUnit.setHasPromotion( iPromotion, True )
 
-		pUnit.setHasPromotion( xml.iPromotionMerc, True )
+		if not pUnit.isHasPromotion( xml.iPromotionMerc ):
+			pUnit.setHasPromotion( xml.iPromotionMerc, True )
 
 		# set the MercID
 		pUnit.setMercID( lMerc[0] )
