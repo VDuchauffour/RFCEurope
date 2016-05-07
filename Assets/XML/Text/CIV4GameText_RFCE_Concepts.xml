@@ -574,20 +574,24 @@ Or you get a minor bonus to your stability in case you successfully complete one
 (dynamic, calculated each turn)
 
 [BOLD]Cities[\BOLD]
-[TAB]For an average city happiness of at least 2k+1: +k
-[TAB]At least 10% war weariness on average (in your k cities): -k/3 + 1
+[TAB]For an average city happiness of at least k: +k
+[TAB]For an average city health of at least k: +k
+[TAB]At least 10% war weariness on average (in your k cities): -k/3 - 1
+[TAB][TAB]so -1 with 1-2 cities, -2 with 3-5 cities, -3 with 6-8 cities, etc.
 [TAB]For a persecution count (nationwide) of at least 3k+1: -k-1
 [TAB][TAB]so -1 with 1-3 points, -2 with 4-6 points, -3 with 7-9 points, etc.
 [TAB][TAB]a successful purge adds 8 points to the persecution counter (4 for Spain)
 [TAB][TAB]an unsuccessful purge adds 4 points to the persecution counter (2 for Spain)
 [TAB][TAB]the persecution counter goes down with 1 point in each turn
 [TAB]For each city that
-[TAB][TAB]is healthy: +1
+[TAB][TAB]is unhealthy: -1
 [TAB][TAB]is unhappy (has at least one angry population): -2
-[TAB][TAB]has at least one foreign religion: -2 (-1 with Paganism, 0 for Poland)
-[TAB][TAB]has unhappy population because of hurrying: -1
-[TAB][TAB]has unhappy population because of no military: -1
-[TAB][TAB]has unhappy population because of religion: -1
+[TAB][TAB]has at least one foreign religion: -2 (0 for Poland, -1 for Ottomans)
+[TAB][TAB]has at least one foreign religion with Paganism: -1 (0 for Poland)
+[TAB][TAB]has at least one foreign religion with Religious Tolerance: 0
+[TAB][TAB]has some unhappiness because of whipping for production: -1
+[TAB][TAB]has some unhappiness because of no military presence: -1
+[TAB][TAB]has some unhappiness because of religious civics: -1 (0 for Poland)
 [TAB][TAB]has less than 40% own culture: -1 (0 for Hungary)
 [TAB][TAB]has less than 20% own culture: -2 (0 for Hungary)
 [TAB]Stability bonus for Orthodox faith points: +1 for 10 faith

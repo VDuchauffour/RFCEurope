@@ -2057,7 +2057,7 @@ class CvMainInterface:
 				# 3Miro: Janissary Points
 				if not CyInterface().isCityScreenUp() and ePlayer == con.iTurkey:
 					eJanissaryXPButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.STRENGTH_CHAR))
-					eJanissaryXPText = ": " + unicode(gc.getPlayer(ePlayer).getPicklefreeParameter( con.iJanissaryPoints ) ) + "/400"
+					eJanissaryXPText = ": " + unicode(gc.getPlayer(ePlayer).getPicklefreeParameter( con.iJanissaryPoints ) ) + "/300"
 					screen.setLabel( "JanissaryXPButton", "Background", eJanissaryXPButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 					screen.setLabel( "JanissaryXPText", "Background", eJanissaryXPText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 					screen.setHitTest( "JanissaryXPButton", HitTestTypes.HITTEST_NOHIT )

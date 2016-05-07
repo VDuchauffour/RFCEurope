@@ -73,6 +73,10 @@ Changes for RFCE 1.4:
 		- Increased city cluster for many civs, it's possible for them to have closer cities in some situations
 		- New rules and other various improvements in the AI city settling mechanics, most civs' city-placement should be more dense overally
 		- Timber, Deer and Fur resources will disappear if the Woodland/Dense Forest/Palm Forest is cut down
+		- Unworking stability bonus for your healthy cities changed to stability penalty for your unhealthy cities
+		- Civ-wide health stability bonus: +k with an average k happiness in your cities
+		- Changed happiness stability to +k with an average k happiness in your cities
+		- Minor changes in the city stability calculations for the AI
 		- Spawning independent cities can be selected from a pool of cities in an area, chance of spawning depends on historical importance
 		- Instead of Palermo spawning in 100% of the games in 508AD, now there is 80% chance for Palermo, 20% for Syracuse
 
@@ -92,6 +96,8 @@ Changes for RFCE 1.4:
 		- Fixed mistakes on the Info Screen where information from the top5 cities and from the wonders were not in sync (connected to city visibility and contact with the civ)
 		- Readded era displays to various screens (main, info, religion) before the discovery of Calendar
 		- Colour changes in various interface messages
+		- Minor updates in the non-CNM city names
+		- Updated the Stability Guide in the Civilopedia with all the recent changes
 
 	Balance/setup:
 		- Sweden starts with the following civics: Feudal Monarchy, Serfdom, Manoralism
@@ -111,6 +117,10 @@ Changes for RFCE 1.4:
 		- Revised all barbs for Cordoba and Morocco, no more Berber barbarians in Iberia
 		- Lorraine province is historic for the Franks, switches to border on the German spawn
 		- Added some stability bonuses for AI civs which had a hard time at the beginning for various reasons (early civic changes, too many foreign cities, barb activity, etc.)
+		- Destroying work boats is reduced to only one Viking point for the Norwegian UHV (same as for pillaging settled fishing boats)
+		- Increased Norwegian Viking points UHV from 80 to 100 (with the new cities in England it's still not hard at all)
+		- Janissary UP: only -1 instability from foreign religion in your cities - not necessarily a historical aspect of the UP, but important for gameplay
+		- Lowered Janissary threshold to 300 for the human player, 200 for the AI
 
 	Bugfixes:
 		- Various dll bugfixes and optimizations from Better BTS AI, K-Mod, Afforess
@@ -142,6 +152,10 @@ Changes for RFCE 1.4:
 		- Fixed non-defined provincetype issue connected to province initialization, added some safety asserts for it
 		- Fixed bug where the Krak the Chevalier was not working in some rare situations
 		- Fixed bug where previously acquired culture wasn't kept when you conquered an indy/barb city
+		- Fixes in stability calculations connected to city razing
+		- Fixed Viking point calculations connected to city conquest
+		- Fixed 2 different mistakes in the stability calculations on civic-happiness/unhappiness from religion
+		- Fixed an overlooked aspect of the Polish 'no instability from anything connected to religions' UP
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -856,7 +870,7 @@ Changes for RFCE 1.1:
 		- Palacio del Escorial renamed to El Escorial, Paco da Ribeira renamed to Palacio da Pena, Tower of London renamed to Royal Dungeon
 		- New text for Palacio da Pena, Atlantic Access, Protestant Church School
 		- New feat messages when you build each unittype's first unit (for the RFCE specific unit tpyes like Light and Heavy Cavalry, Polearm)
-		- Revised feat messages from population tresholds (reach 100.000, 200.000, 500.000, 1.000.000, etc. urban population)
+		- Revised feat messages from population thresholds (reach 100.000, 200.000, 500.000, 1.000.000, etc. urban population)
 
 	Art/sound updates:
 		- Fixed button for Golden Bull, West India Company, Arabian Arbalest

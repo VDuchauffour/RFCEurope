@@ -38,7 +38,7 @@ tBordeaux = ( [ ((37, 38), "Burdigala", 100) ], iBarbarian, 2, xml.iArcher, 0, -
 tAlger = ( [ ((40, 16), "Alger", 100) ], iIndependent3, 1, xml.iArcher, 1, -1, 0 )
 tBarcelona = ( [ ((40, 28), "Barcino", 100) ], iIndependent2, 1, xml.iArcher, 1, -1, 0 )
 tToulouse = ( [ ((41, 34), "Tolosa", 100) ], iBarbarian, 1, xml.iArcher, 0, -1, 0 )
-tMarseilles = ( [ ((46, 62), "Massilia", 100) ], iIndependent, 1, xml.iArcher, 1, xml.iCatholicism, 0 )
+tMarseilles = ( [ ((46, 32), "Massilia", 100) ], iIndependent, 1, xml.iArcher, 1, xml.iCatholicism, 0 )
 tLyon = ( [ ((46, 37), "Lyon", 100) ], iIndependent3, 1, xml.iArcher, 2, xml.iCatholicism, 1 )
 tTunis = ( [ ((49, 17), "Tunis", 100) ], iIndependent4, 1, xml.iArcher, 1, -1, 0 )
 tYork = ( [ ((39, 59), "Eboracum", 100) ], iIndependent4, 1, xml.iArcher, 2, -1, 1 )
@@ -66,7 +66,7 @@ tDublin = ( [ ((32, 58), "Dubh Linn", 100) ], iBarbarian, 1, xml.iArcher, 1, xml
 tLubeck = ( [ ((57, 54), "Liubice", 100) ], iIndependent2, 1, xml.iArcher, 2, -1, 1 )
 tPorto = ( [ ((23, 31), "Portucale", 100) ], iIndependent3, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
 # 760 AD
-tTonsberg = ( [ ((57, 67), "Tonsberg", 100) ], iIndependent3, 1, xml.iArcher, 2, -1, 0)
+tTonsberg = ( [ ((57, 65), "Tonsberg", 100) ], iIndependent3, 1, xml.iArcher, 2, -1, 0)
 # 768 AD
 tRaska = ( [ ((68, 28), "Ras", 100) ], iIndependent2, 1, xml.iArcher, 2, -1, 1)
 # 780 AD
