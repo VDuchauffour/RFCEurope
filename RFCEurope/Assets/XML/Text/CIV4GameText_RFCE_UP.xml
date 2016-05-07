@@ -97,7 +97,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ARA2</Tag>
-		<English>State Religion spreads to every newly acquired (founded, conquered, flipped) city, and a free Temple is built in it.</English>
+		<English>State Religion spreads to every newly acquired (founded, conquered, flipped) city, and a free Temple is built in them.</English>
 		<French>La religion d'Etat se r&#233;pand dans chaque ville avec un temple</French>
 		<German>Verbreitung der Staatsreligion und Errichtung eines Tempels in jeder gegründeten, eroberten oder übergelaufenen Stadt</German>
 		<Italian>La Religione Ufficiale si diffonde in ogni città aquisita, ed un tempio viene costruito automaticamente</Italian>
@@ -277,7 +277,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_MOS2</Tag>
-		<English>50% decrease in all maintenance cost associated with the number of the cities.</English>
+		<English>50% decrease in all maintenance cost associated with the number of your cities.</English>
 		<French>-50% de coût de maintenance pour le nombre de villes</French>
 		<German>50% reduzierte Unterhaltskosten für die Anzahl an Städten</German>
 		<Italian>-50% costo di mantenimento per il numero delle città</Italian>
@@ -367,7 +367,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_TUR2</Tag>
-		<English>Every turn you generate Janissary points for foreign religion in your cities, this gives you free units every few turns.</English>
+		<English>Your cities have less stability penalties and generate Janissary units with foreign religions in them.</English>
 		<French>Every turn you generate Janissary points for foreign religion in your cities, this gives you free units every few turns</French>
 		<German>Fremde Religionen erzeugen in jeder Runde Janitscharen-Punkte in euren Städten, dadurch erhaltet ihr alle paar Runden freie Einheiten</German>
 		<Italian>Ogni turno generi punti Giannizzeri per le religioni straniere nelle tue città, che ti forniscono dei Giannizzeri ogni tanto</Italian>

@@ -344,6 +344,9 @@ class Victory:
 		# Norway UHV 1: Going Viking
 		elif ( playerType == iNorway ):
 			pNorway.setUHVCounter( 2, pNorway.getUHVCounter( 2 ) + city.getPopulation() )
+			# Absinthe: city is already reduced by 1 on city conquest, so city.getPopulation() is one less than the original size (unless it was already 1)
+			if ( bConquest ): # note that if the size was 1 originally you get one extra point this way, but that's probably not a big issue
+				pNorway.setUHVCounter( 2, pNorway.getUHVCounter( 2 ) + 1 )
 
 		# Poland UHV 3:
 		elif ( playerType == iPoland and pPoland.getUHV( 2 ) == -1 ):
@@ -409,7 +412,12 @@ class Victory:
 		# Norway UHV 1: Going Viking
 		if ( pWinningUnit.getOwner() == iNorway ):
 			if (cLosingUnit.getDomainType() == gc.getInfoTypeForString("DOMAIN_SEA")):
-				pNorway.setUHVCounter( 2, pNorway.getUHVCounter( 2 ) + 2 )
+				# Absinthe: only 1 Viking point for Work Boats
+				#print ("viking", pLosingUnit.getUnitType())
+				if (pLosingUnit.getUnitType() != xml.iWorkboat):
+					pNorway.setUHVCounter( 2, pNorway.getUHVCounter( 2 ) + 2 )
+				else:
+					pNorway.setUHVCounter( 2, pNorway.getUHVCounter( 2 ) + 1 )
 
 
 	def onTechAcquired(self, iTech, iPlayer):
@@ -830,10 +838,10 @@ class Victory:
 		#	else:
 		#		pNorway.setUHV( 0, 0 )
 
-		# UHV 1: Gain 80 Viking points by 1066
+		# UHV 1: Gain 100 Viking points by 1066
 		# Counted in the onCityAcquired, onPillageImprovement and onCombatResult functions
 		if ( iGameTurn <= xml.i1066AD and pNorway.getUHV( 0 ) == -1 ):
-			if ( pNorway.getUHVCounter( 2 ) >= 80 ): # It's still counter 2, for the sake of convenience and confusion
+			if ( pNorway.getUHVCounter( 2 ) >= 100 ): # It's still counter 2, for the sake of convenience and confusion
 				pNorway.setUHV( 0, 1 )
 				pNorway.changeStabilityBase( iCathegoryExpansion, 3 )
 			elif ( iGameTurn == xml.i1066AD ):

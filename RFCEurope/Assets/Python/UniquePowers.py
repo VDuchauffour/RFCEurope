@@ -64,9 +64,9 @@ class UniquePowers:
 
 		iOldPoints = pPlayer.getPicklefreeParameter( iJanissaryPoints )
 
-		iNextJanissary = 250
+		iNextJanissary = 200
 		if ( pPlayer.isHuman() ):
-			iNextJanissary = 400
+			iNextJanissary = 300
 
 
 		if ( iOldPoints + iNewPoints > iNextJanissary ):

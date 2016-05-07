@@ -301,14 +301,15 @@ class Stability:
 		self.recalcCivicCombos(playerType)
 		self.recalcCivicCombos(iOwner)
 
-		# Absinthe: new city razing penalties
-		# permanent, based on city population
+		# Absinthe: city razing penalty - permanent, based on city population
+		# note that the city is already reduced by 1 on city conquest, so city.getPopulation() is one less than the original size
+		# so currently: 0 with 1-2 population, -1 with 3-5 population, -2 with 6-9 population, -3 with 10+ population
 		iRazeStab = 0
-		if (city.getPopulation() > 9):
+		if (city.getPopulation() >= 9):
 			iRazeStab = 3
-		elif (city.getPopulation() > 5):
+		elif (city.getPopulation() >= 5):
 			iRazeStab = 2
-		elif (city.getPopulation() > 2):
+		elif (city.getPopulation() >= 2):
 			iRazeStab = 1
 		# Absinthe: Norwegian UP - one less stability penalty
 		if ( playerType == con.iNorway ):
@@ -504,40 +505,49 @@ class Stability:
 		iCivic4 = pPlayer.getCivics(4)
 		iTotalHappy = pPlayer.calculateTotalCityHappiness() - pPlayer.calculateTotalCityUnhappiness()
 		iCityStability = 0
-		### For Debug Purposes, count individual contributions
 		if ( pPlayer.getNumCities() == 0 ):
 			iHappyStability = 0
 		else:
-			iHappyStability = max( (iTotalHappy / pPlayer.getNumCities() - 1)/2, 0 ) # +k stability for an average city happiness of at least 2k+1
+			iHappyStability = iTotalHappy / pPlayer.getNumCities() # +k stability for an average city happiness of at least k
+		iCivHealthStability = 0
 		iHealthStability = 0
 		iHurryStability = 0
 		iMilitaryStability = 0
 		iWarWStability  = 0
 		iReligionStability = 0
 		iCultureStability = 0
-		### end
 		apCityList = PyPlayer(iPlayer).getCityList()
 		for pLoopCity in apCityList:
 			pCity = pLoopCity.GetCy()
-			if ( pCity.healthRate(False,0) > 0 ):
-				iHealthStability += 1
+			# Absinthe: if your civ is healthy, bonus stability
+			#			if one of your is cities is unhealthy, -1 stability
+			iCivHealthStability += pCity.goodHealth()
+			iCivHealthStability -= pCity.badHealth(False)
+			if ( pCity.goodHealth() - pCity.badHealth(False) < 0 ):
+				iHealthStability -= 1
 			if ( pCity.angryPopulation(0) > 0 ):
 				iHappyStability -= 2
-			if ( pCity.getReligionBadHappiness() > 0 ):
-				iReligionStability -= 1
+			# Absinthe: This is the "We desire religious freedom!" unhappiness, from civics - currently from the Religious Law civic
+			#			also it is a negative counter with the current civic setup, so getReligionBadHappiness() == -1 with one non-state religion in the city
+			if ( pCity.getReligionBadHappiness() < 0 ):
+				if ( not gc.hasUP( iPlayer, con.iUP_ReligiousTolerance )): # Polish UP
+					iReligionStability -= 1
 			if ( pCity.getHurryAngerModifier() > 0 ):
 				iHurryStability -= 1
 			if ( pCity.getNoMilitaryPercentAnger() > 0 ):
 				iMilitaryStability -= 1
 			# Absinthe: getWarWearinessPercentAnger is not a local variable for your cities, but a global one for your entire civ
-			#			thus it results in 1 instability for each city, if there is an ongoing war
+			#			thus without any further modifications it would result in 1 instability for each city if there is an ongoing war
 			if ( pCity.getWarWearinessPercentAnger() > 10 ):
 				iWarWStability -= 1
 			#print(" getWarWearinessPercentAnger_city: ",pCity.getWarWearinessPercentAnger())
 			#print(" getWarWearinessPercentAnger_player: ",pPlayer.getWarWearinessPercentAnger())
-			if ( iCivic4 != 24 ): # if not a Free religion
-				if ( ( not gc.hasUP( iPlayer, con.iUP_ReligiousTolerance )) and pCity.getNumForeignReligions() > 0 ):
-					if ( iCivic4 == 20 ): # pagans are a bit more tolerant
+			if ( iCivic4 != 24 ): # if not in the Religious Tolerance civic
+				if ( ( not gc.hasUP( iPlayer, con.iUP_ReligiousTolerance )) and pCity.getNumForeignReligions() > 0 ): # Polish UP
+					if ( iCivic4 == 20 ): # Pagans are a bit more tolerant
+						iReligionStability -= 1
+					elif ( iPlayer == con.iTurkey ): # Janissary UP - not necessarily a historical aspect of it, but important for gameplay
+					#elif ( gc.hasUP( iPlayer, con.iUP_Janissary )):
 						iReligionStability -= 1
 					else:
 						iReligionStability -= 2
@@ -549,6 +559,11 @@ class Stability:
 				if ( (iTotalCulture > 0) and ( (pCity.getCulture(iPlayer) * 10000) / iTotalCulture < 20 ) and ( not gc.hasUP( iPlayer, con.iUP_CulturalTolerance )) ):
 					iCultureStability -= 1
 			#print(" iCultureStability: ",iCultureStability)
+		# Absinthe: if your civ is healthy, bonus stability
+		if (iCivHealthStability > 0):
+			iCivHealthStability = iCivHealthStability / pPlayer.getNumCities() # +k stability for an average city health of at least k
+			#print ("iCivHealthStability", iCivHealthStability)
+			iHealthStability += iCivHealthStability
 		# Absinthe: persecution counter - cooldown is handled in Religions.checkTurn
 		#			1-3 means 1 instability, 4-6 means 2 instability, 7-9 means 3 instability, etc...
 		iProsecutionCount = pPlayer.getProsecutionCount()
@@ -560,12 +575,12 @@ class Stability:
 			iCityStability += max( iWarWStability/3 - 1, -10 ) # max 10 instability from war weariness
 			iCityStability = min( iCityStability, 8 ) # max 8 extra stability from cities - don't want to add too many bonuses for runaway civs
 		else:
-			iCityStability += max( iHappyStability, -3 ) + iHealthStability # AI keeps very unhappy cities
-			iCityStability += max( iReligionStability + iHurryStability, -7 ) + max( iCultureStability, -3 )
+			iCityStability += max( iHappyStability, -5 ) + max( iHealthStability, -5 ) # AI keeps very unhappy cities
+			iCityStability += max( iReligionStability + iHurryStability, -7 ) + max( iCultureStability, -5 )
 			iCityStability += max( iMilitaryStability + iWarWStability/3, -3 ) # AI is also bad at handling war weariness
 			iCityStability = min( max( iCityStability, -10 ), 8 )
 		iCityStability += pPlayer.getFaithBenefit( con.iFP_Stability )
-		#print(" City Stability for: ",iPlayer," Categories: ",iHappyStability,iHealthStability,iHurryStability,iMilitaryStability,iWarWStability,iReligionStability,iCultureStability)
+		print (" City Stability for: ",iPlayer," Categories: ",iHappyStability,iHealthStability,iHurryStability,iMilitaryStability,iWarWStability,iReligionStability,iCultureStability)
 		if ( pPlayer.getGoldenAgeTurns() > 0 ):
 			iCityStability += 8
 

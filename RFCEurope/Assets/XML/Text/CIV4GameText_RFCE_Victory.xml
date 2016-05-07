@@ -758,12 +758,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOR1</Tag>
-		<English>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 80 Viking points by 1066AD.</English>
-		<French>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 80 Viking points by 1066AD.</French>
-		<German>[COLOR_YELLOW]Wikinger:[COLOR_REVERT] Erzielt bis 1066 n.Chr. 80 Wikingerpunkte.</German>
-		<Italian>[COLOR_YELLOW]Vichinghi:[COLOR_REVERT] Ottieni 80 punti Vichinghi entro il 1066AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 80 Viking points by 1066AD.</Spanish>
-		<Portuguese>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Ganhe 80 pontos Vikings até 1066DC.</Portuguese>
+		<English>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 100 Viking points by 1066AD.</English>
+		<French>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 100 Viking points by 1066AD.</French>
+		<German>[COLOR_YELLOW]Wikinger:[COLOR_REVERT] Erzielt bis 1066 n.Chr. 100 Wikingerpunkte.</German>
+		<Italian>[COLOR_YELLOW]Vichinghi:[COLOR_REVERT] Ottieni 100 punti Vichinghi entro il 1066AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 100 Viking points by 1066AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Ganhe 100 pontos Vikings até 1066DC.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOR2</Tag>

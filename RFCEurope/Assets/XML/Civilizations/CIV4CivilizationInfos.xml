@@ -8651,6 +8651,7 @@
 				<City>TXT_KEY_CITY_NAME_LEIRVIK</City>
 				<City>TXT_KEY_CITY_NAME_TINGANES</City>
 				<City>TXT_KEY_CITY_NAME_THUNDERFALL</City>
+				<City>Helsingborg</City>
 				<City>Vorbasse</City>
 				<City>Bj&#248;rgvin</City>
 				<City>T&#248;nsberg</City>
@@ -12579,7 +12580,7 @@
 				<City>Västerås</City>
 				<City>Örebro</City>
 				<City>Linköping</City>
-				<City>Helsingborg</City>
+				<City>Helsingfors</City>
 				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
@@ -15950,7 +15951,6 @@
 				<City>TXT_KEY_CITY_NAME_ALEMANNI</City>
 				<City>TXT_KEY_CITY_NAME_GEPID</City>
 				<City>TXT_KEY_CITY_NAME_HUN</City>
-				<City>TXT_KEY_CITY_NAME_PHOENICIAN</City>
 				<City>TXT_KEY_CITY_NAME_ESTRUSCAN</City>
 				<City>TXT_KEY_CITY_NAME_THRACIAN</City>
 				<City>TXT_KEY_CITY_NAME_PHRYGIAN</City>
@@ -16044,7 +16044,6 @@
 				<City>TXT_KEY_CITY_NAME_ALEMANNI</City>
 				<City>TXT_KEY_CITY_NAME_GEPID</City>
 				<City>TXT_KEY_CITY_NAME_HUN</City>
-				<City>TXT_KEY_CITY_NAME_PHOENICIAN</City>
 				<City>TXT_KEY_CITY_NAME_ESTRUSCAN</City>
 				<City>TXT_KEY_CITY_NAME_THRACIAN</City>
 				<City>TXT_KEY_CITY_NAME_PHRYGIAN</City>
@@ -16138,7 +16137,6 @@
 				<City>TXT_KEY_CITY_NAME_ALEMANNI</City>
 				<City>TXT_KEY_CITY_NAME_GEPID</City>
 				<City>TXT_KEY_CITY_NAME_HUN</City>
-				<City>TXT_KEY_CITY_NAME_PHOENICIAN</City>
 				<City>TXT_KEY_CITY_NAME_ESTRUSCAN</City>
 				<City>TXT_KEY_CITY_NAME_THRACIAN</City>
 				<City>TXT_KEY_CITY_NAME_PHRYGIAN</City>
@@ -16232,7 +16230,6 @@
 				<City>TXT_KEY_CITY_NAME_ALEMANNI</City>
 				<City>TXT_KEY_CITY_NAME_GEPID</City>
 				<City>TXT_KEY_CITY_NAME_HUN</City>
-				<City>TXT_KEY_CITY_NAME_PHOENICIAN</City>
 				<City>TXT_KEY_CITY_NAME_ESTRUSCAN</City>
 				<City>TXT_KEY_CITY_NAME_THRACIAN</City>
 				<City>TXT_KEY_CITY_NAME_PHRYGIAN</City>
@@ -16326,7 +16323,6 @@
 				<City>TXT_KEY_CITY_NAME_ALEMANNI</City>
 				<City>TXT_KEY_CITY_NAME_GEPID</City>
 				<City>TXT_KEY_CITY_NAME_HUN</City>
-				<City>TXT_KEY_CITY_NAME_PHOENICIAN</City>
 				<City>TXT_KEY_CITY_NAME_ESTRUSCAN</City>
 				<City>TXT_KEY_CITY_NAME_THRACIAN</City>
 				<City>TXT_KEY_CITY_NAME_PHRYGIAN</City>

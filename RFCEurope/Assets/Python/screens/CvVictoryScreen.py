@@ -1085,7 +1085,7 @@ class CvVictoryScreen:
 		#UHV1
 		sText1 += localText.getText("TXT_KEY_UHV_NOR1_HELP",()) + "\n"
 		iCount = pPlayer.getUHVCounter( 2 )
-		sText1 += self.getCounterString(iCount, 80)
+		sText1 += self.getCounterString(iCount, 100)
 		#UHV2
 		sText2 += self.getProvinceString(vic.tNorwayControl)
 		sText2 += "\n" + localText.getText("TXT_KEY_PROJECT_VINLAND",()) + ": " + self.determineColor(gc.getTeam(iPlayer).getProjectCount(xml.iColVinland) >= 1, localText.getText("TXT_KEY_UHV_EXPLORED",()), localText.getText("TXT_KEY_UHV_NOT_EXPLORED",()))
