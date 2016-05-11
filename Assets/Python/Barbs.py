@@ -193,7 +193,7 @@ xml.i1530AD : [ tValletta ],
 #			list text keys: text keys for "The Nation" and "Nation Adjective"
 # Note: lists 3, 4, 5, 6 should have the same size
 # Note: you should increase the size of 'lNextMinorRevolt' in StoredData to be at least the number of minor nations
-lMinorNations = [ [ xml.iP_Serbia, [], [], [xml.i852AD,xml.i1346AD], [20,20], [xml.iAxeman,xml.iLongSwordsman], [1,2], ["TXT_KEY_THE_SERBS","TXT_KEY_SERBIAN"] ],
+lMinorNations = [ [ xml.iP_Serbia, [], [], [xml.i508AD,xml.i852AD,xml.i1346AD], [20,20,20], [xml.iAxeman,xml.iAxeman,xml.iLongSwordsman], [2,1,2], ["TXT_KEY_THE_SERBS","TXT_KEY_SERBIAN"] ],
 		[ xml.iP_Scotland, [con.iScotland], [], [xml.i1297AD,xml.i1569AD,xml.i1715AD], [20,10,20], [xml.iHighlander,xml.iMusketman,xml.iGrenadier], [2,2,2], ["TXT_KEY_THE_SCOTS","TXT_KEY_SCOTTISH"] ],
 		[ xml.iP_Catalonia, [con.iAragon], [], [xml.i1164AD+10,xml.i1640AD], [20,10], [xml.iLongSwordsman,xml.iMusketman], [2,2], ["TXT_KEY_THE_CATALANS","TXT_KEY_CATALAN"] ],
 		[ xml.iP_Jerusalem, [con.iArabia,con.iTurkey,con.iByzantium], [xml.iIslam,], [xml.i1099AD+8,xml.i1099AD+16,xml.i1099AD+25,xml.i1099AD+33,xml.i1099AD+40,xml.i1099AD+47,xml.i1099AD+55,xml.i1099AD+65], [30,30,40,40,30,30,30,30], [xml.iMaceman,xml.iMaceman,xml.iMaceman,xml.iKnight,xml.iKnight,xml.iKnight,xml.iKnight,xml.iKnight], [3,3,4,3,3,3,3,3], ["TXT_KEY_THE_MUSLIMS","TXT_KEY_MUSLIM"] ],
@@ -716,10 +716,10 @@ class Barbs:
 		lNextMinorRevolt = self.getRevolDates()
 
 		for lNation in lMinorNations:
-			#iNextRevolt = lNation[3][0] -3 + gc.getGame().getSorenRandNum(6, 'roll to modify the Natios revolt odds')
+			#iNextRevolt = lNation[3][0] -3 + gc.getGame().getSorenRandNum(6, 'roll to modify the Nations revolt odds')
 			iNextRevolt = lNation[3][0]
 			while iNextRevolt in lNextMinorRevolt:
-				iNextRevolt = lNation[3][0] -3 + gc.getGame().getSorenRandNum(6, 'roll to modify the Natios revolt odds')
+				iNextRevolt = lNation[3][0] -3 + gc.getGame().getSorenRandNum(6, 'roll to modify the Nations revolt odds')
 			print(" Revolt Date ",iNextRevolt)
 			iNationIndex = lMinorNations.index(lNation)
 			print(" NationIndex ",iNationIndex)
@@ -767,9 +767,6 @@ class Barbs:
 				self.setRevolDates( lNextMinorRevolt )
 
 
-	# revolution choice effects: suppress with force, revolt +1 turn, unhappy +1 for 10 turns, suppression chance 20% + 5% per unit stationed (cap at 33%)
-	#		bribe the lords, 10 gold per population, suppression depends on the government Divine Monarchy (33%), Feudal or Limited (25%), Merchant (20%), Decentral (15%)
-	#		passive stability: >0 add 20%, additional +2% for every point above 5 (cap at 34% for +12 Stability)
 	def doRevoltAI( self, iPlayer, iGameTurn, lNation, iRevoltIndex ):
 		cityList = []
 		for iI in range( gc.getNumProvinceTiles( lNation[0] ) ):
@@ -780,19 +777,26 @@ class Barbs:
 				if ( pCity.getOwner() == iPlayer ):
 					cityList.append(pCity)
 
-		# AI always cracks on revolt
-		iSuppressOdds = 20
-		iNumGarrason = 0
+		iNumGarrison = 0
 		for iI in range( len( cityList ) ):
-			iNumGarrason += self.getGarrasonSize( cityList[iI] )
-		iSuppressOdds += min( (5 * iNumGarrason) / len( cityList ), 13 )
-		# Passive bonus from Stability
-		pPlayer = gc.getPlayer( iPlayer )
-		if ( pPlayer.getStability() > 0 ):
-			iSuppressOdds += 20 + max( 0, min( (pPlayer.getStability() - 5)*2, lNation[4][iRevoltIndex] ) )
+			iNumGarrison += self.getGarrasonSize( cityList[iI] )
 
-		# substract the strength of the revolt
-		iSuppressOdds -= lNation[4][iRevoltIndex]
+		# base rebellion odds: maximum 45%
+		# odds considering minor nation strength - between 10 and 40
+		iSuppressOdds = - lNation[4][iRevoltIndex]
+		# stability odds: maximum 20 + lNation[4][iRevoltIndex]
+		pPlayer = gc.getPlayer( iPlayer )
+		iSuppressOdds += 20 + max( -10, min( pPlayer.getStability() * 2, lNation[4][iRevoltIndex] ) )
+		# passive bonus from city garrison: maximum 15
+		iSuppressOdds += min( (3 * iNumGarrison) / len( cityList ), 15 )
+		# AI bonus
+		iSuppressOdds += 10
+
+		# AI always cracks revolt: maximum 35%
+		# with a crackdown you will get a turn of unrest and some unhappiness even if it succeeds.
+		iSuppressOdds = 10
+		iSuppressOdds += min( (5 * iNumGarrison) / len( cityList ), 25 )
+
 		# time to roll the dice
 		if ( iSuppressOdds > gc.getGame().getSorenRandNum(100, 'minor nation revolt') ):
 			# revolt suppressed
@@ -800,7 +804,7 @@ class Barbs:
 				pCity = cityList[iI]
 				pCity.changeHurryAngerTimer( 10 )
 				pCity.changeOccupationTimer( 1 )
-				self.makeRebels( pCity, lNation[5][iRevoltIndex], 2*lNation[6][iRevoltIndex], lNation[7][1] )
+				self.makeRebels( pCity, lNation[5][iRevoltIndex], lNation[6][iRevoltIndex], lNation[7][1] )
 		else:
 			# revolt succeeded
 			iRndNum = gc.getGame().getSorenRandNum( con.iIndepEnd - con.iIndepStart + 1, 'random independent')
@@ -839,29 +843,31 @@ class Barbs:
 				if ( pCity.getOwner() == iPlayer ):
 					cityList.append(pCity)
 
+		iNumGarrison = 0
+		iBribeGold = 0
+		for iI in range( len( cityList ) ):
+			iNumGarrison += self.getGarrasonSize( cityList[iI] )
+			iBribeGold += 10 * cityList[iI].getPopulation()
+
 		# raw suppress score
 		iSuppressOdds = - lNation[4][iRevoltIndex]
 		pPlayer = gc.getPlayer( iPlayer )
-		if ( pPlayer.getStability() > 0 ):
-			iSuppressOdds += 20 + max( 0, min( (pPlayer.getStability() - 5)*2, lNation[4][iRevoltIndex] ) )
+		iSuppressOdds += 20 + max( -10, min( pPlayer.getStability() * 2, lNation[4][iRevoltIndex] ) )
+		iSuppressOdds += min( (3 * iNumGarrison) / len( cityList ), 15 )
 
+		# 2nd or 4th choice
 		if ( iDecision == 1 or iDecision == 3 ):
-			iNumGarrason = 0
-			for iI in range( len( cityList ) ):
-				iNumGarrason += self.getGarrasonSize( cityList[iI] )
-			iSuppressOdds += 20 + min( (5 * iNumGarrason) / len( cityList ), 13 )
+			iSuppressOdds += 10 + min( (5 * iNumGarrison) / len( cityList ), 25 )
 
+		# 3rd or 4th choice
 		if ( iDecision == 2 or iDecision == 3 ):
-			iBribeGold = 0
-			for iI in range( len( cityList ) ):
-				iBribeGold += 10 * cityList[iI].getPopulation()
 			iGovernment = pPlayer.getCivics(0)
 			if ( iGovernment == xml.iCivicDespotism ):
 				iBribeOdds = 15
 			elif ( iGovernment == xml.iCivicFeudalMonarchy ):
 				iBribeOdds = 25
 			elif ( iGovernment == xml.iCivicDivineMonarchy ):
-				iBribeOdds = 33
+				iBribeOdds = 30
 			elif ( iGovernment == xml.iCivicLimitedMonarchy ):
 				iBribeOdds = 25
 			elif ( iGovernment == xml.iCivicMerchantRepublic ):
@@ -872,24 +878,28 @@ class Barbs:
 			pPlayer.setGold( iGold - min( iGold, iBribeGold ) )
 			iSuppressOdds += iBribeOdds
 
-		if ( iSuppressOdds > gc.getGame().getSorenRandNum(100, 'monor nation revolt') ):
+		if ( iSuppressOdds > gc.getGame().getSorenRandNum(100, 'minor nation revolt') ):
 			# revolt suppressed
-			if ( iDecision == 1 or iDecision == 3 ):
-				for iI in range( len( cityList ) ):
-					pCity = cityList[iI]
+			for iI in range( len( cityList ) ):
+				pCity = cityList[iI]
+				CyInterface().addMessage(iPlayer, True, con.iDuration, CyTranslator().getText("TXT_KEY_MINOR_NATION_REVOLT_SUPRESSED", (pCity.getName(),)), "", 0, "", ColorTypes(con.iBlue), -1, -1, True, True)
+				# cracking the rebels results in unhappiness in the general population:
+				if ( iDecision == 1 or iDecision == 3 ):
 					pCity.changeHurryAngerTimer( 10 )
 					pCity.changeOccupationTimer( 1 )
-					if ( iDecision == 2 or iDecision == 3 ):
-						self.makeRebels( pCity, lNation[5][iRevoltIndex], lNation[6][iRevoltIndex], lNation[7][1] )
-					else:
-						self.makeRebels( pCity, lNation[5][iRevoltIndex], 2*lNation[6][iRevoltIndex], lNation[7][1] )
+				# bribing their lords away from their cause angers the rebel militia further:
+				if ( iDecision == 2 or iDecision == 3 ):
+					self.makeRebels( pCity, lNation[5][iRevoltIndex], 1 + lNation[6][iRevoltIndex], lNation[7][1] )
+				else:
+					self.makeRebels( pCity, lNation[5][iRevoltIndex], lNation[6][iRevoltIndex], lNation[7][1] )
 		else:
 			# revolt succeeded
 			iRndNum = gc.getGame().getSorenRandNum( con.iIndepEnd - con.iIndepStart + 1, 'random independent')
 			iNewCiv = con.iIndepStart + iRndNum
 			for iI in range( len( cityList ) ):
 				pCity = cityList[iI]
-				CyInterface().addMessage(iPlayer, True, con.iDuration, pCity.getName() + " " + CyTranslator().getText("TXT_KEY_STABILITY_SECESSION", ()), "", 0, "", ColorTypes(con.iOrange), -1, -1, True, True)
+				sNationName = localText.getText(lNation[7][1], ())
+				CyInterface().addMessage(iPlayer, True, con.iDuration, CyTranslator().getText("TXT_KEY_MINOR_NATION_REVOLT_SUCCEEDED", (sNationName, pCity.getName(),)), "", 0, "", ColorTypes(con.iOrange), -1, -1, True, True)
 				utils.cultureManager((pCity.getX(),pCity.getY()), 50, iNewCiv, iPlayer, False, True, True)
 				utils.flipUnitsInCitySecession((pCity.getX(),pCity.getY()), iNewCiv, iPlayer)
 				self.setTempFlippingCity((pCity.getX(),pCity.getY()))
@@ -897,6 +907,10 @@ class Barbs:
 				utils.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
 
 
+	# Absinthe: revolution choice effects:
+			# base chance: stability bonus adjusted with the revolt strength + base chance + passive military presence - revolt strength
+			# suppress with force: + base chance + military strength in the city. revolt +1 turn, unhappy +1 for 10 turns
+			# bribe the lords: + financial chance: costs 10 gold per population, suppression depends on the government Divine Monarchy (30%), Feudal or Limited (25%), Merchant (20%), Decentral (15%)
 	def doRevoltHuman( self, iPlayer, iGameTurn, lNation, iRevoltIndex ):
 		self.setNationRevoltIndex( lMinorNations.index(lNation), iRevoltIndex )
 
@@ -909,29 +923,36 @@ class Barbs:
 				if ( pCity.getOwner() == iPlayer ):
 					cityList.append(pCity)
 
-		# rebellion odds
-		# raw odds considering minor nation strength and player stability
-		iRawOdds = - lNation[4][iRevoltIndex]
-		pPlayer = gc.getPlayer( iPlayer )
-		if ( pPlayer.getStability() > 0 ):
-			iRawOdds += 20 + max( 0, min( (pPlayer.getStability() - 5)*2, lNation[4][iRevoltIndex] ) )
-		# odds adjusted by a crack-down
-		iCrackOdds = 20
-		iNumGarrason = 0
+		iNumGarrison = 0
 		iBribeGold = 0
 		for iI in range( len( cityList ) ):
-			iNumGarrason += self.getGarrasonSize( cityList[iI] )
+			iNumGarrison += self.getGarrasonSize( cityList[iI] )
 			iBribeGold += 10 * cityList[iI].getPopulation()
-		iCrackOdds += min( (5 * iNumGarrason) / len( cityList ), 13 )
-		# bribery odds
-		#bribe the lords, 10 gold per population, suppression depends on the government Divine Monarchy (33%), Feudal or Limited (25%), Merchant (20%), Decentral (15%)
+
+		# base rebellion odds: maximum 35%
+		# odds considering minor nation strength - usually 10, 20, 30, or 40
+		iRawOdds = - lNation[4][iRevoltIndex]
+		# stability odds: maximum 20 + lNation[4][iRevoltIndex]
+		pPlayer = gc.getPlayer( iPlayer )
+		iRawOdds += 20 + max( -10, min( pPlayer.getStability() * 2, lNation[4][iRevoltIndex] ) )
+		# passive bonus from city garrison: maximum 15
+		iRawOdds += min( (3 * iNumGarrison) / len( cityList ), 15 )
+
+		# odds adjusted by a crackdown: maximum 35%
+		# with a crackdown you will get a turn of unrest and some unhappiness even if it succeeds.
+		iCrackOdds = 10
+		iCrackOdds += min( (5 * iNumGarrison) / len( cityList ), 25 )
+
+		# odds adjusted by bribery: maximum 30%
+		# bribe the lords, cost 10 gold per population
+		# suppression depends on the government Divine Monarchy (30%), Feudal or Limited (25%), Merchant (20%), Decentral (15%)
 		iGovernment = pPlayer.getCivics(0)
 		if ( iGovernment == xml.iCivicDespotism ):
 			iBribeOdds = 15
 		elif ( iGovernment == xml.iCivicFeudalMonarchy ):
 			iBribeOdds = 25
 		elif ( iGovernment == xml.iCivicDivineMonarchy ):
-			iBribeOdds = 33
+			iBribeOdds = 30
 		elif ( iGovernment == xml.iCivicLimitedMonarchy ):
 			iBribeOdds = 25
 		elif ( iGovernment == xml.iCivicMerchantRepublic ):
@@ -939,16 +960,21 @@ class Barbs:
 		iGold = pPlayer.getGold()
 		if ( iGold < iBribeGold ):
 			iBribeOdds = ( iBribeOdds * iGold ) / ( iBribeGold )
+		iGold = min( iGold, iBribeGold )
 
-		#iLoyalPrice = min( (10 * gc.getPlayer( utils.getHumanID() ).getGold()) / 100, 50 * iNumCities )
+		# values should be between 0 and 100
+		iAllOdds = max (0, iRawOdds + iBribeOdds + iCrackOdds)
+		iBribeOdds = max (0, iRawOdds + iBribeOdds)
+		iCrackOdds = max (0, iRawOdds + iCrackOdds)
+		iRawOdds = max (0, iRawOdds)
+
 		szRebellName = localText.getText(lNation[7][0], ())
-		#print( szTitle )
 		self.showPopup(7627, localText.getText("TXT_KEY_MINOR_REBELLION_TITLE", (szRebellName,) ), \
 				localText.getText("TXT_KEY_MINOR_REBELLION_DESC", (szRebellName,) ), \
 				(localText.getText("TXT_KEY_MINOR_REBELLION_DO_NOTHING", ( iRawOdds, )), \
-				 localText.getText("TXT_KEY_MINOR_REBELLION_CRACK", ( iRawOdds + iCrackOdds, )), \
-				 localText.getText("TXT_KEY_MINOR_REBELLION_BRIBE", ( min( iGold, iBribeGold ), iRawOdds + iBribeOdds, )), \
-				 localText.getText("TXT_KEY_MINOR_REBELLION_ALL", ( iRawOdds + iBribeOdds + iCrackOdds, )), ))
+				 localText.getText("TXT_KEY_MINOR_REBELLION_CRACK", ( iCrackOdds, )), \
+				 localText.getText("TXT_KEY_MINOR_REBELLION_BRIBE", (iGold, iBribeGold, iBribeOdds, )), \
+				 localText.getText("TXT_KEY_MINOR_REBELLION_ALL", ( iAllOdds, )), ))
 
 
 	def getGarrasonSize( self, pCity ):

@@ -23,9 +23,9 @@
 		<Spanish>RHYE'S AND FALL OF CIVILIZATIONS: EUROPE</Spanish>
 		<Portuguese>RHYE'S AND FALL OF CIVILIZATIONS: EUROPA</Portuguese>
 	</TEXT>
-		<!-- Civ Specific Dawn of Man -->
-		<!-- DAWN_OF_MAN_TEXT_0 numbers are the iCivs.Consts.py -->
-		<!-- 0 is Byzantium, 1 is France, 2 is Arabia, etc -->
+		<!-- Civ Specific Dawn of Man - 500 AD -->
+		<!-- DAWN_OF_MAN_TEXT_0 numbers are the iCivs in Consts.py -->
+		<!-- 0 is Byzantium, 1 is France, 2 is Arabia, etc. -->
 	<TEXT> <!-- Byzantium -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_0</Tag>
 		<English>After many glorious centuries under Rome, the great Constantine saw fit to split the mighty empire into two parts.[NEWLINE]It is now the year 500 AD, and the Western Roman Empire has fallen. While Rome will always have a place in your people's hearts, Constantinople is now the heart of the most glorious nation on Earth![NEWLINE][NEWLINE]Justinian, you are now the sole ruler, THE Roman Emperor. Your nation is rich and strong, but be aware: vast riches attract many enemies, and some of the barbarians may be even stronger than we are.[NEWLINE]Your people have faith that you can lead their mighty nation through the coming storm. Will you prevail and lead the Byzantine Empire through another 1,000 years of glory?</English>
@@ -71,16 +71,6 @@
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-	<!-- Norse -->
-	<!--<TEXT>
-		<Tag>TXT_KEY_DAWN_OF_MAN_NORSE</Tag>
-		<English>It is the year 780 AD. The winters in Scandinavia are harsh, but have bred a sturdy people and your longships are the envy of any sailor. Harald Hardrada, your loyal vikings are eager to show their strength to the whole world![NEWLINE][NEWLINE]Far away Vinland, the coast of Normandy and the rich monastery of Lindisfarne beckons. Which path will you follow? Explore? Conquer? Trade? Maybe all three combined? The choice is yours, only one thing is certain: Be bold, be swift, be strong, and the halls of Valhalla will await you!</English>
-		<French>.</French>
-		<German>Es ist das Jahr 780 n.Chr., die Winter in Skandinavien sind streng, haben aber ein robustes Volk hervorgebracht um deren Langboote jeder Seemann sie beneidet. Harald Hardrada, eure loyalen Wikinger brennen voller Ungeduld darauf der ganzen Welt ihre wahre Stärke zu zeigen.[NEWLINE][NEWLINE]Das ferne Vinland, die Küste der Normandie und das reiche Kloster Lindisfarne winken!		Welchem Pfad wollt ihr folgen? Entdecken? Erobern? Handeln? Oder alles zusammen? Ihr habt die Wahl, nur eines ist sicher: Seid mutig, seid flink, seid stark und die Hallen der Walhalla warten auf euch!</German>
-		<Italian>E' l'anno 780 AD. Gli inverni in Scandinavia sono rigidi, ma hai addestrato un popolo robusto e le tue drakkar suscitano l'invidia di qualunque marinaio. Ora, la lontanissima Terranova, la costa della Normandia e il ricco monastero di Lindisfarne chiamano. Sii audace, sii veloce, sii forte, i portali del Vahlalla ti aspettano!</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
-	</TEXT>-->
 	<TEXT> <!-- Venice -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_5</Tag>
 		<English>It is the year 810 AD. Fleeing the onslaught of the barbarian Lombards, your people and the remnants of the Byzantine Exarchate of Ravenna have settled on the inaccessible islands in the lagoon. The recent agreement between Charlemagne of the Franks and emperor Nicephorus in Constantinople means that you will be left alone for the time being. There has never been a better opportunity to build a rich trading empire that will dominate the seas!</English>
@@ -225,16 +215,6 @@
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-	<!-- Sweden old -->
-	<!--<TEXT>
-		<Tag>TXT_KEY_DAWN_OF_MAN_SWEDEN</Tag>
-		<English>It is 1523 AD, a couple years after the outrages of the Stockholm Bloodbath, commited by the Danish king Kristian the Tyrant. You, Gustav Vasa, have lead a rebellion since to restore independence, succesfully uniting Sweden under a hereditary monarchy.[NEWLINE][NEWLINE]Now it's time to claim your rightful place as ruler over the Baltic sea. Contested in this by mighty rivals, success can only be achieved by superior military and tactics. One way is to break the ties with Rome and build a great nation based on the true Lutheran faith!</English>
-		<French>.</French>
-		<German>Es ist das Jahr 1523 n.Chr., einige Jahre sind nach der Freveltat des Stockholmer Blutbades, vom Dänischen König Christian dem Tyrannen verübt, vergangen. Ihr, Gustaf Wasa, habt seitdem eine Rebellion zur Wiedererlangung der Unabhängigkeit angeführt, und Schweden in einer Erbmonarchie vereint.[NEWLINE][NEWLINE]Jetzt ist es an der Zeit euren rechtmäßigen Platz als Herrscher über die Baltische See zu beanspruchen. Angefochten durch mächtige Rivalen kann der Erfolg nur durch Überlegenheit in Militär und Taktik erreicht werden. Ein Weg ist es die Bande mit Rom zu brechen und eine große Nation auf dem wahren lutheranischen Glauben aufzubauen.</German>
-		<Italian>E' il 1523 AD, un paio di anni dopo gli oltraggi del Bagno di sangue di Stoccolma, commessi dal re Danese Cristiano II il Tiranno. Tu, Gustavo Vasa, hai guidato una rivolta per ottenere l'indipendenza, e hai unito con successo la Svezia sotto una monarchia ereditaria.[NEWLINE][NEWLINE]Ora è il momento di reclamare il posto che ti spetta di diritto come dominatore del Mar Baltico. Essendo in contrasto con potenti rivali, il successo può essere ottenuto solo con la superiorità militare e tattica. Una strada da seguire può essere quella di spezzare i legami con Roma e costruire una grande nazione basata sul vero credo Luterano!</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
-	</TEXT>-->
 	<TEXT> <!-- Sweden -->
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_21</Tag>
 		<English>For the last few hundred years, Sweden has in some ways been the least developed of the Scandinavian nations. Though several rulers at Uppsala have claimed kingship over Sweden, few have had any power outside Uppland. Christianisation has been slow as well. Southern Sweden was even the target of a crusade less than a century ago, yet pagan beliefs are still important in much of the country.[NEWLINE][NEWLINE]It is now the year 1210 AD, and this year things are to change. Eric the Survivor has managed to destroy his rivals in a bloody civil war and become the first ever Swedish King to be crowned by the Church. The separatists are rapidly losing power and the people of Uppland are about to lose their ancient privileges. The stage is set for the consolidation of Sweden.</English>
@@ -298,5 +278,65 @@
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
-		<!-- Civ Specific Dawn of Man -->
+		<!-- Civ Specific Dawn of Man - 500 AD -->
+		<!-- Civ Specific Dawn of Man - 1200 AD -->
+		<!-- For civs spawning later than 1200 AD we use the 500 AD texts by default -->
+	<TEXT> <!-- Byzantium -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_0_1200</Tag>
+		<English>Basileus. Though we have endured many hardships over the last several centuries, the Roman Empire still stands strong, and Constantinople, the Queen of Cities, remains the crown jewel of Europe. However, we are but a shell of our former glory. Much of the work of the Komnenian Restoration has already been undone; corruption plagues the empire, usurpers rise left and right, the Bulgarians have revolted once more, and the dream of recovering Anatolia is now more distant than ever.[NEWLINE][NEWLINE]Now we fear we may have our greatest challenge yet. It appears that the schismatic Catholics are preparing for yet another Crusade. But we fear this one will be different. Our former vassals, the Venetians, are still furious over the Massacre of the Latins several years ago. Should the Venetians choose to give the order, rather than attacking the infidels in the Holy Land, the Crusaders may instead set sail for our beating heart, the great city of Constantinople.[NEWLINE][NEWLINE]Our walls have never been breached, though many have tried. But this may prove too much. And if the Venetians can bring them down, how will we fend off invasions from the heathens in Anatolia in the years to come?</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT> <!-- Arabia -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_2_1200</Tag>
+		<English>The great Saladin has gone to Paradise, after rolling back a century of Christian gains in the Blessed Land. The holy city of al-Quds is now back in Arabian hands, and the infidel "Crusader States" that butchered Muslims by the thousands have been all but eradicated.[NEWLINE][NEWLINE]You have been chosen as the new ruler of the Ayyubid Sultanate, and it is your duty to finish off the last of the Frankish invaders. There may be more Crusades to come, though we have reason to believe that we will be spared, at least for now. With the Christians nearly finished off and stability restored to Egypt and the Levant for the first time in centuries, it is time for a great flourishing of culture and science in the Arab World once more. We should not become too complacent, however; while we may be dominant in the Middle East for now, we should recall the example of the Abbasids and be wary of the Turks to the north...</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT> <!-- Venice -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_5_1200</Tag>
+		<English>Enrico Dandolo, you are poised on the doorstep of a pivotal moment in the history of your Republic. For centuries, your Venetians have used maritime skill and control of trade routes to become the richest nation in Europe. They continued to build on this as three great Crusades left for the Holy Land, largely sailing on fleets that you provided. Now a Fourth Crusade is gathering- but this time, they aren't able to pay their way.[NEWLINE][NEWLINE]Now is your chance to become the greatest Doge in Venetian history. The Crusaders have agreed to buy their passage by doing Venice a small favor. They can return rebellious Zara to Venetian control- but your plans are much grander than that. The former colony is about to triumph over their master...</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT> <!-- England -->
+		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT_18_1200</Tag>
+		<English>The 13th Century dawns over an England in turmoil. The great Lionheart lies dead, and his soldiers returning from the Third Crusade are dejected that they never reached the Holy City despite the Crusade's general success. The once-mighty Angevin Empire now faces growing threats from a rebellious Scotland in the north, a resurgent France keen to reclaim its western lands, and dissension amongst the English barons who resent the king's despotic rule.[NEWLINE][NEWLINE]You must lead the English people through the looming civil wars and foreign invasions and emerge stronger than ever. The French will soon be looking to conquer your ancestral lands on the continent, but if you play your cards correctly you may be able to turn the tables and claim the French crown for yourself. With technological prowess, industrial might, and your strong leadership, you will turn this island nation into an empire on which the sun never sets!</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+		<!-- Civ Specific Dawn of Man - 1200 AD -->
+		<!-- Civ Specific Dawn of Man - currently unused -->
+	<!-- Norse -->
+	<!--<TEXT>
+		<Tag>TXT_KEY_DAWN_OF_MAN_NORSE</Tag>
+		<English>It is the year 780 AD. The winters in Scandinavia are harsh, but have bred a sturdy people and your longships are the envy of any sailor. Harald Hardrada, your loyal vikings are eager to show their strength to the whole world![NEWLINE][NEWLINE]Far away Vinland, the coast of Normandy and the rich monastery of Lindisfarne beckons. Which path will you follow? Explore? Conquer? Trade? Maybe all three combined? The choice is yours, only one thing is certain: Be bold, be swift, be strong, and the halls of Valhalla will await you!</English>
+		<French>.</French>
+		<German>Es ist das Jahr 780 n.Chr., die Winter in Skandinavien sind streng, haben aber ein robustes Volk hervorgebracht um deren Langboote jeder Seemann sie beneidet. Harald Hardrada, eure loyalen Wikinger brennen voller Ungeduld darauf der ganzen Welt ihre wahre Stärke zu zeigen.[NEWLINE][NEWLINE]Das ferne Vinland, die Küste der Normandie und das reiche Kloster Lindisfarne winken!		Welchem Pfad wollt ihr folgen? Entdecken? Erobern? Handeln? Oder alles zusammen? Ihr habt die Wahl, nur eines ist sicher: Seid mutig, seid flink, seid stark und die Hallen der Walhalla warten auf euch!</German>
+		<Italian>E' l'anno 780 AD. Gli inverni in Scandinavia sono rigidi, ma hai addestrato un popolo robusto e le tue drakkar suscitano l'invidia di qualunque marinaio. Ora, la lontanissima Terranova, la costa della Normandia e il ricco monastero di Lindisfarne chiamano. Sii audace, sii veloce, sii forte, i portali del Vahlalla ti aspettano!</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>-->
+	<!-- Sweden old -->
+	<!--<TEXT>
+		<Tag>TXT_KEY_DAWN_OF_MAN_SWEDEN</Tag>
+		<English>It is 1523 AD, a couple years after the outrages of the Stockholm Bloodbath, commited by the Danish king Kristian the Tyrant. You, Gustav Vasa, have lead a rebellion since to restore independence, succesfully uniting Sweden under a hereditary monarchy.[NEWLINE][NEWLINE]Now it's time to claim your rightful place as ruler over the Baltic sea. Contested in this by mighty rivals, success can only be achieved by superior military and tactics. One way is to break the ties with Rome and build a great nation based on the true Lutheran faith!</English>
+		<French>.</French>
+		<German>Es ist das Jahr 1523 n.Chr., einige Jahre sind nach der Freveltat des Stockholmer Blutbades, vom Dänischen König Christian dem Tyrannen verübt, vergangen. Ihr, Gustaf Wasa, habt seitdem eine Rebellion zur Wiedererlangung der Unabhängigkeit angeführt, und Schweden in einer Erbmonarchie vereint.[NEWLINE][NEWLINE]Jetzt ist es an der Zeit euren rechtmäßigen Platz als Herrscher über die Baltische See zu beanspruchen. Angefochten durch mächtige Rivalen kann der Erfolg nur durch Überlegenheit in Militär und Taktik erreicht werden. Ein Weg ist es die Bande mit Rom zu brechen und eine große Nation auf dem wahren lutheranischen Glauben aufzubauen.</German>
+		<Italian>E' il 1523 AD, un paio di anni dopo gli oltraggi del Bagno di sangue di Stoccolma, commessi dal re Danese Cristiano II il Tiranno. Tu, Gustavo Vasa, hai guidato una rivolta per ottenere l'indipendenza, e hai unito con successo la Svezia sotto una monarchia ereditaria.[NEWLINE][NEWLINE]Ora è il momento di reclamare il posto che ti spetta di diritto come dominatore del Mar Baltico. Essendo in contrasto con potenti rivali, il successo può essere ottenuto solo con la superiorità militare e tattica. Una strada da seguire può essere quella di spezzare i legami con Roma e costruire una grande nazione basata sul vero credo Luterano!</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>-->
 </Civ4GameText>

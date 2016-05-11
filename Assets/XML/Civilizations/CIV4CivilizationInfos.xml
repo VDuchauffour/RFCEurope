@@ -1555,7 +1555,7 @@
 				<CivicType>CIVIC_TRIBAL_LAW</CivicType>
 				<CivicType>CIVIC_TRIBALISM</CivicType>
 				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
-				<CivicType>CIVIC_PAGANISM</CivicType>
+				<CivicType>CIVIC_STATE_RELIGION</CivicType>
 				<!-- Rhye -->
 				<CivicType>CIVIC_SUBJUGATION</CivicType>
 			</InitialCivics>

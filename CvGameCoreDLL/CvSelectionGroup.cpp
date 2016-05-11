@@ -3389,15 +3389,35 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 	CLLNode<IDInfo>* pUnitNode;
 	CvUnit* pLoopUnit;
 
-	pUnitNode = headUnitNode();
+	// Absinthe: added fix for the city attack CTD - huge thanks to alberts2
+	std::set<int> movedUnitIds;
 
-	while (pUnitNode != NULL)
+	while (true)
 	{
-		pLoopUnit = ::getUnit(pUnitNode->m_data);
-		pUnitNode = nextUnitNode(pUnitNode);
+		pUnitNode = headUnitNode();
+		pLoopUnit = NULL;
 
-		// adding asserts for the city conquest CTD
-		FAssertMsg(pLoopUnit != NULL, "NULL unit reached in the selection group");
+		while (pUnitNode != NULL)
+		{
+			if (movedUnitIds.empty() || std::find(movedUnitIds.begin(), movedUnitIds.end(), pUnitNode->m_data.iID) == movedUnitIds.end())
+			{
+				pLoopUnit = ::getUnit(pUnitNode->m_data);
+
+				// adding asserts for the city conquest CTD
+				FAssertMsg(pLoopUnit != NULL, "NULL unit reached in the selection group");
+
+				if (pLoopUnit != NULL)
+					break;
+			}
+
+			pUnitNode = nextUnitNode(pUnitNode);
+		}
+
+		if (pLoopUnit == NULL)
+			break;
+
+		movedUnitIds.insert(pLoopUnit->getID());
+		// Absinthe: end fix
 
 		if ((pLoopUnit->canMove() && ((bCombat && (!(pLoopUnit->isNoCapture()) || !(pPlot->isEnemyCity(*pLoopUnit)))) ? pLoopUnit->canMoveOrAttackInto(pPlot) : pLoopUnit->canMoveInto(pPlot))) || (pLoopUnit == pCombatUnit))
 		{

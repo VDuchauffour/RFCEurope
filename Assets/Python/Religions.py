@@ -592,7 +592,7 @@ class Religions:
 					city.city.setHasReligion(xml.iProtestantism, True, False, False)
 					if ( pPlayer.isHuman() ): # message for the human player
 						CityName = city.getNameKey()
-						CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_REFORMATION_RELIGION_STILL_SPREAD", (CityName,"1")), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, "", ColorTypes(con.iWhite), -1, -1, True, True)
+						CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_REFORMATION_RELIGION_STILL_SPREAD", (CityName,)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, "", ColorTypes(con.iWhite), -1, -1, True, True)
 					iLostFaith += 1
 		gc.getPlayer(iCiv).changeFaith( - min( gc.getPlayer(iCiv).getFaith(), iLostFaith ) )
 
@@ -655,7 +655,7 @@ class Religions:
 					pCity.setHasReligion(xml.iCatholicism,False,False,False)
 					if ( pPlayer.isHuman() ): # message for the human player
 						CityName = pCity.getNameKey()
-						CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_1", (CityName,"1")), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, "", ColorTypes(con.iWhite), -1, -1, True, True)
+						CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_1", (CityName,)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, "", ColorTypes(con.iWhite), -1, -1, True, True)
 
 		return iFaith
 
@@ -703,9 +703,9 @@ class Religions:
 					if ( pPlayer.isHuman() ): # message for the human player
 						CityName = pCity.getNameKey()
 						if ( pPlayer.getStateReligion() == xml.iIslam ):
-							CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_2", (CityName,"1")), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, "", ColorTypes(con.iWhite), -1, -1, True, True)
+							CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_2", (CityName,)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, "", ColorTypes(con.iWhite), -1, -1, True, True)
 						else:
-							CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_3", (CityName,"1")), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, "", ColorTypes(con.iWhite), -1, -1, True, True)
+							CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_3", (CityName,)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, "", ColorTypes(con.iWhite), -1, -1, True, True)
 
 	def doCounterReformation(self):
 		print(" Counter Reformation ")
