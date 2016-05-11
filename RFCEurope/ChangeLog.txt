@@ -43,16 +43,28 @@ Changes for RFCE 1.4:
 		- Fixed inconsistencies on city flips connected to the spawn and respawn mechanics
 		- Total collapse has much more chance to happen for the human player, for example: 60% with -15 stability, 100% with -35
 
-	Secession updates:
+	Secession and revolt updates:
 		- No city secession in the first 15 turns after spawn, or in the first 10 turns after respawn
 		- AI declares war on the new indy city right after city secession
-		- The minor nation revolt mechanics also use the new city secession rules
+		- City flips of the minor nation revolt mechanics also use the new city secession rules
 		- One free defender unit for the new owner of the city
 		- The first unit from the original owner will always defect to indies on city secession
 		- All the other units have 60% chance to stay with the original civ
 		- Settlers and Great People never flip to the indy civ on secession
 		- City secession only results in a 25% culture loss for the original civ
-		- Chance from stability on minor nation revolts will never be negative if you are very stable
+		- Adjusted the potential bonus from stability with the strength on the revolt, so it will never be negative if you are stable enough
+		- None of the actual chances can be negative on revolts, but they can modify the other options negatively in the background calculations
+		- Updated and revised all texts connected to the minor nation revolts, most noticable in the popup
+		- New interface messages for various events on the minor nation revolt mechanics
+		- Rewrote all chance calculations for all minor nation revolt options, also the interactions between them:
+			Do nothing: base chance calculated from the strength of the revolt, your stability, and your passive military presence in the city
+			Military: base chance + significant bonuses for having many military units in the city and your military might
+			Financial: base chance + bonuses from the amount of gold you spend on bribes, adjusted with your government form
+			Both: base chance + military bonuses + financial bonuses
+		- Effects from your actions on successfully preventing the revolt:
+			Military: generates unhappiness in the city for 10 turns, the city goes into revolt for a turn
+			Financial: bribing the lords away (thus preventing their independence) angers the rebel militia further, more attacking units will appear
+			Both: all of the above effects
 
 	General changes:
 		- Anarchy instability now appears right away for the human player, not with a turn delay
@@ -72,7 +84,7 @@ Changes for RFCE 1.4:
 		- Revised values connected to cultural revolts/flips of independents and barbs
 		- Increased city cluster for many civs, it's possible for them to have closer cities in some situations
 		- New rules and other various improvements in the AI city settling mechanics, most civs' city-placement should be more dense overally
-		- Timber, Deer and Fur resources will disappear if the Woodland/Dense Forest/Palm Forest is cut down
+		- Timber, Deer and Fur resources will disappear if the Woodland/Dense Forest/Palm Forest is cut down (remain on city-settling though)
 		- Unworking stability bonus for your healthy cities changed to stability penalty for your unhealthy cities
 		- Civ-wide health stability bonus: +k with an average k happiness in your cities
 		- Changed happiness stability to +k with an average k happiness in your cities
@@ -98,6 +110,8 @@ Changes for RFCE 1.4:
 		- Colour changes in various interface messages
 		- Minor updates in the non-CNM city names
 		- Updated the Stability Guide in the Civilopedia with all the recent changes
+		- In the 1200AD scenario the 500AD DoM texts were set for all civs spawning later than 1200AD
+		- Added Venetian, Byzantine, Arab and English DoM texts for the 1200 AD scenario - by TheMulattoMaker and DC123456789
 
 	Balance/setup:
 		- Sweden starts with the following civics: Feudal Monarchy, Serfdom, Manoralism
@@ -121,6 +135,9 @@ Changes for RFCE 1.4:
 		- Increased Norwegian Viking points UHV from 80 to 100 (with the new cities in England it's still not hard at all)
 		- Janissary UP: only -1 instability from foreign religion in your cities - not necessarily a historical aspect of the UP, but important for gameplay
 		- Lowered Janissary threshold to 300 for the human player, 200 for the AI
+		- Norwegian 2nd UHV: Scotland and Northumbria instead of Mercia
+		- Franks start with the Theology tech, in the State Religion civic, and with Catholicism as their State Religion
+		- Nerfed various German production and support modifiers, they seem to have much more cities with the new AI city placement rules
 
 	Bugfixes:
 		- Various dll bugfixes and optimizations from Better BTS AI, K-Mod, Afforess
@@ -156,6 +173,7 @@ Changes for RFCE 1.4:
 		- Fixed Viking point calculations connected to city conquest
 		- Fixed 2 different mistakes in the stability calculations on civic-happiness/unhappiness from religion
 		- Fixed an overlooked aspect of the Polish 'no instability from anything connected to religions' UP
+		- Fixed the city attack CTD - huge thanks to Alberts2, also to Nightinggale and PinkPallin for their help
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

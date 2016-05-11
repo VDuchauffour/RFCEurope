@@ -542,9 +542,9 @@ class Stability:
 				iWarWStability -= 1
 			#print(" getWarWearinessPercentAnger_city: ",pCity.getWarWearinessPercentAnger())
 			#print(" getWarWearinessPercentAnger_player: ",pPlayer.getWarWearinessPercentAnger())
-			if ( iCivic4 != 24 ): # if not in the Religious Tolerance civic
+			if ( iCivic4 != xml.iCivicFreeReligion ): # if not in the Religious Tolerance civic
 				if ( ( not gc.hasUP( iPlayer, con.iUP_ReligiousTolerance )) and pCity.getNumForeignReligions() > 0 ): # Polish UP
-					if ( iCivic4 == 20 ): # Pagans are a bit more tolerant
+					if ( iCivic4 == xml.iCivicPaganism ): # Pagans are a bit more tolerant
 						iReligionStability -= 1
 					elif ( iPlayer == con.iTurkey ): # Janissary UP - not necessarily a historical aspect of it, but important for gameplay
 					#elif ( gc.hasUP( iPlayer, con.iUP_Janissary )):

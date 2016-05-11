@@ -25,39 +25,57 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MINOR_REBELLION_DO_NOTHING</Tag>
-		<English>Just ignore them, nobody would want to leave our mighty Empire. (rely on stability only %d1_RawOdds % chance to stop the rebels)</English>
-		<French>Just ignore them, nobody would want to leave our mighty Empire. (rely on stability only %d1_RawOdds % chance to stop the rebels)</French>
+		<English>[BOLD]Just ignore them, nobody would want to leave our mighty Empire.[\BOLD][NEWLINE]Do nothing; only rely on your stability and the passive military presence in the city: %d1_RawOdds % chance to stop the rebels.</English>
+		<French>[BOLD]Just ignore them, nobody would want to leave our mighty Empire.[\BOLD][NEWLINE]Do nothing; only rely on your stability and the passive military presence in the city: %d1_RawOdds % chance to stop the rebels.</French>
 		<German>Einfach ignorieren, niemand würde unser mächtiges Reich verlassen wollen. (setzt ausschließlich auf die Stabilität %d1_RawOdds % Chance die Rebellen aufzuhalten)</German>
 		<Italian>Ignorali, nessuno vorrà davvero abbandonare il nostro potente Impero. (dipende dalla stabilità, solo il %d1_RawOdds % di chance di fermare i rivoltosi)</Italian>
-		<Spanish>Just ignore them, nobody would want to leave our mighty Empire. (rely on stability only %d1_RawOdds % chance to stop the rebels)</Spanish>
-		<Portuguese>Just ignore them, nobody would want to leave our mighty Empire. (rely on stability only %d1_RawOdds % chance to stop the rebels)</Portuguese>
+		<Spanish>[BOLD]Just ignore them, nobody would want to leave our mighty Empire.[\BOLD][NEWLINE]Do nothing; only rely on your stability and the passive military presence in the city: %d1_RawOdds % chance to stop the rebels.</Spanish>
+		<Portuguese>[BOLD]Just ignore them, nobody would want to leave our mighty Empire.[\BOLD][NEWLINE]Do nothing; only rely on your stability and the passive military presence in the city: %d1_RawOdds % chance to stop the rebels.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MINOR_REBELLION_CRACK</Tag>
-		<English>Form a crackdown of the rebellion and subjugate those rebells. (rely on number of units in the cities, generates unhappiness and causes 1 turn of revolt, %d1_Odds % chance to stop the rebels)</English>
-		<French>Form a crackdown of the rebellion and subjugate those rebells. (rely on number of units in the cities, generates unhappiness and causes 1 turn of revolt, %d1_Odds % chance to stop the rebels)</French>
+		<English>[BOLD]Form a crackdown of the rebellion and subjugate those rebels.[\BOLD][NEWLINE]Suppress with force; your military might and the number of units in the city also greatly contributes to your chances, but this action will anger the general population: %d1_Odds % chance to stop the rebels, but it will generate unhappiness and causes 1 turn of revolt if succeeds.</English>
+		<French>[BOLD]Form a crackdown of the rebellion and subjugate those rebels.[\BOLD][NEWLINE]Suppress with force; your military might and the number of units in the city also greatly contributes to your chances, but this action will anger the general population: %d1_Odds % chance to stop the rebels, but it will generate unhappiness and causes 1 turn of revolt if succeeds.</French>
 		<German>Formiere die Bekämpfung der Rebellion and bezwinge diese Rebellen. (setzt auf die Anzahl der Einheiten in den Städten, erzeugt Unzufriedenheit und verursacht 1 Runde Revolte, %d1_Odds % Chance die Rebellen aufzuhalten)</German>
 		<Italian>Sopprimi la rivolta. (dipende dal numero di unità presenti nelle tue città, genera infelicità e causa un turno di rivolta, %d1_Odds % di chance di fermare i rivoltosi)</Italian>
-		<Spanish>Form a crackdown of the rebellion and subjugate those rebells. (rely on number of units in the cities, generates unhappiness and causes 1 turn of revolt, %d1_Odds % chance to stop the rebels)</Spanish>
-		<Portuguese>Form a crackdown of the rebellion and subjugate those rebells. (rely on number of units in the cities, generates unhappiness and causes 1 turn of revolt, %d1_Odds % chance to stop the rebels)</Portuguese>
+		<Spanish>[BOLD]Form a crackdown of the rebellion and subjugate those rebels.[\BOLD][NEWLINE]Suppress with force; your military might and the number of units in the city also greatly contributes to your chances, but this action will anger the general population: %d1_Odds % chance to stop the rebels, but it will generate unhappiness and causes 1 turn of revolt if succeeds.</Spanish>
+		<Portuguese>[BOLD]Form a crackdown of the rebellion and subjugate those rebels.[\BOLD][NEWLINE]Suppress with force; your military might and the number of units in the city also greatly contributes to your chances, but this action will anger the general population: %d1_Odds % chance to stop the rebels, but it will generate unhappiness and causes 1 turn of revolt if succeeds.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MINOR_REBELLION_BRIBE</Tag>
-		<English>Bribe the local Lords, the rebells have no chance without their support. (rely on your government civic, pay %d1_Gold, %d2_Odds % chance to stop the rebels)</English>
-		<French>Bribe the local Lords, the rebells have no chance without their support. (rely on your government civic, pay %d1_Gold, %d2_Odds % chance to stop the rebels)</French>
-		<German>Besteche die lokalen Fürsten, die Rebellen sind chancenlos ohne deren Unterstützung. (setzt auf die Regierungsgesellschaftsform, bezahle %d1_Gold, %d2_Odds % Chance die Rebellen aufzuhalten)</German>
-		<Italian>Corrompi l'aristocrazia locale, i ribelli non hanno possibilità di sopravvivere senza il loro supporto. (dipende dalla tua forma di governo, paga %d1_Gold, %d2_Odds % di chance di fermare i rivoltosi)</Italian>
-		<Spanish>Bribe the local Lords, the rebells have no chance without their support. (rely on your government civic, pay %d1_Gold, %d2_Odds % chance to stop the rebels)</Spanish>
-		<Portuguese>Bribe the local Lords, the rebells have no chance without their support. (rely on your government civic, pay %d1_Gold, %d2_Odds % chance to stop the rebels)</Portuguese>
+		<English>[BOLD]Bribe the local Lords, the rebels have less chance to take your city without their support.[\BOLD][NEWLINE]Send in your envoys; your financial contribution adjusted by your government form also contributes to your chances, but it will anger the rebel militia further: %d3_Odds % chance to stop the rebels, but it costs you %d1_Gold [ICON_GOLD] (full bribe = %d2_Bribe), and more attacking rebel units appear if succeeds.</English>
+		<French>[BOLD]Bribe the local Lords, the rebels have less chance to take your city without their support.[\BOLD][NEWLINE]Send in your envoys; your financial contribution adjusted by your government form also contributes to your chances, but it will anger the rebel militia further: %d3_Odds % chance to stop the rebels, but it costs you %d1_Gold [ICON_GOLD] (full bribe = %d2_Bribe), and more attacking rebel units appear if succeeds.</French>
+		<German>Besteche die lokalen Fürsten, die Rebellen sind chancenlos ohne deren Unterstützung. (setzt auf die Regierungsgesellschaftsform, bezahle %d1_Gold, %d3_Odds % Chance die Rebellen aufzuhalten)</German>
+		<Italian>Corrompi l'aristocrazia locale, i ribelli non hanno possibilità di sopravvivere senza il loro supporto. (dipende dalla tua forma di governo, paga %d1_Gold, %d3_Odds % di chance di fermare i rivoltosi)</Italian>
+		<Spanish>[BOLD]Bribe the local Lords, the rebels have less chance to take your city without their support.[\BOLD][NEWLINE]Send in your envoys; your financial contribution adjusted by your government form also contributes to your chances, but it will anger the rebel militia further: %d3_Odds % chance to stop the rebels, but it costs you %d1_Gold [ICON_GOLD] (full bribe = %d2_Bribe), and more attacking rebel units appear if succeeds.</Spanish>
+		<Portuguese>[BOLD]Bribe the local Lords, the rebels have less chance to take your city without their support.[\BOLD][NEWLINE]Send in your envoys; your financial contribution adjusted by your government form also contributes to your chances, but it will anger the rebel militia further: %d3_Odds % chance to stop the rebels, but it costs you %d1_Gold [ICON_GOLD] (full bribe = %d2_Bribe), and more attacking rebel units appear if succeeds.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MINOR_REBELLION_ALL</Tag>
-		<English>Do whatever it takes to keep them. (combine all of the above options, %d1_Odds % chance to stop the rebels)</English>
-		<French>Do whatever it takes to keep them. (combine all of the above options, %d1_Odds % chance to stop the rebels)</French>
+		<English>[BOLD]Do whatever it takes to keep them.[\BOLD][NEWLINE]Apply both military and financial measures: %d1_Odds % chance to stop the rebels, with the combined effects of the 2 options above.</English>
+		<French>[BOLD]Do whatever it takes to keep them.[\BOLD][NEWLINE]Apply both military and financial measures: %d1_Odds % chance to stop the rebels, with the combined effects of the 2 options above.</French>
 		<German>Unternimm alles um sie zu behalten. (kombiniere alle oben erwähnten Möglichkeiten, %d1_Odds % Chance die Rebellen aufzuhalten)</German>
 		<Italian>Fai qualunque cosa per fermarli. (combina tutte le opzioni di sopra, %d1_Odds % di chance di fermare i rivoltosi)</Italian>
-		<Spanish>Do whatever it takes to keep them. (combine all of the above options, %d1_Odds % chance to stop the rebels)</Spanish>
-		<Portuguese>Do whatever it takes to keep them. (combine all of the above options, %d1_Odds % chance to stop the rebels)</Portuguese>
+		<Spanish>[BOLD]Do whatever it takes to keep them.[\BOLD][NEWLINE]Apply both military and financial measures: %d1_Odds % chance to stop the rebels, with the combined effects of the 2 options above.</Spanish>
+		<Portuguese>[BOLD]Do whatever it takes to keep them.[\BOLD][NEWLINE]Apply both military and financial measures: %d1_Odds % chance to stop the rebels, with the combined effects of the 2 options above.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MINOR_NATION_REVOLT_SUPRESSED</Tag>
+		<English>Thanks to god the revolt was unsuccessful, the city of %s1 remained in our hands. Now we only need to get rid of those barbaric rebels!</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MINOR_NATION_REVOLT_SUCCEEDED</Tag>
+		<English>The %s1 revolt was successful, the city of %s2 has declared it's independence!</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_THE_SERBS</Tag>

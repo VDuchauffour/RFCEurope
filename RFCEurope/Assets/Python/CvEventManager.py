@@ -929,6 +929,7 @@ class CvEventManager:
 		city, iPlayer = argsList
 		#iOwner = city.findHighestCulture()
 
+		# Absinthe: why is this important? city.getPreviousOwner() should always be valid
 		# Rhye - start bugfix
 		owner = PyPlayer(city.getOwner())
 		if (city.getOwner() == iPlayer):
@@ -936,9 +937,10 @@ class CvEventManager:
 				owner = PyPlayer(city.getPreviousOwner())
 		# Rhye - end bugfix
 
+		CvUtil.pyPrint("City Razed Event: %s" %(city.getName(),))
 		razor = PyPlayer(iPlayer)
-		CvUtil.pyPrint('Player %d Civilization %s City %s was razed by Player %d'
-			%(owner.getID(), owner.getCivilizationName(), city.getName(), razor.getID()))
+		CvUtil.pyPrint('Player %d Civilization %s City %s was razed by Player %d Civilization %s'
+			%(owner.getID(), owner.getCivilizationName(), city.getName(), razor.getID(), razor.getCivilizationName()))
 
 		# Absinthe: wonder destroyed message start
 		pCity = city
@@ -972,8 +974,7 @@ class CvEventManager:
 									CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_DESTROYED_3", (PreviousName,WonderName)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(i).getButton(), ColorTypes(con.iLightRed), iX, iY, True, True)
 		# Absinthe - wonder destroyed message end
 
-		# Absinthe: not used - start
-		## Partisans!
+		# Absinthe: Partisans! - not used currently
 		#if city.getPopulation > 1 and iOwner != -1 and iPlayer != -1:
 		#	owner = gc.getPlayer(iOwner)
 		#	if not owner.isBarbarian() and owner.getNumCities() > 0:
@@ -982,9 +983,7 @@ class CvEventManager:
 		#				iEvent = CvUtil.findInfoTypeNum(gc.getEventTriggerInfo, gc.getNumEventTriggerInfos(),'EVENTTRIGGER_PARTISANS')
 		#				if iEvent != -1 and gc.getGame().isEventActive(iEvent) and owner.getEventTriggerWeight(iEvent) < 0:
 		#					triggerData = owner.initTriggeredData(iEvent, true, -1, city.getX(), city.getY(), iPlayer, city.getID(), -1, -1, -1, -1)
-		# Absinthe: not used - end
-
-		CvUtil.pyPrint("City Razed Event: %s" %(city.getName(),))
+		# Absinthe: end
 
 	def onCityAcquired(self, argsList):
 		'City Acquired'
@@ -1027,6 +1026,7 @@ class CvEventManager:
 		# Absinthe - wonder captured message end
 
 		CvUtil.pyPrint('City Acquired and Kept Event: %s' %(pCity.getName()))
+		CvUtil.pyPrint('NewOwner: %s, PreviousOwner: %s' %(PyPlayer(pCity.getOwner()).getCivilizationName(), PyPlayer(pCity.getPreviousOwner()).getCivilizationName()))
 
 	def onCityLost(self, argsList):
 		'City Lost'
