@@ -521,9 +521,6 @@ class CvEventManager:
 		pPlot = argsList[0]
 		iFeatureType = argsList[2]
 		pCity = argsList[1] # This can be null
-		print("PlotFeatureRemoved test", argsList[0])
-		print("PlotFeatureRemoved test", argsList[1])
-		print("PlotFeatureRemoved test", argsList[2])
 
 		# Absinthe: remove specific resources if the forest/dense forest/palm forest was cut down:
 		if pPlot.getBonusType(-1) != -1: # only proceed if there is a bonus resource on the plot

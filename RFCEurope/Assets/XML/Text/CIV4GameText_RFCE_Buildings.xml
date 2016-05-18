@@ -803,6 +803,15 @@
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_JEWISH_QUARTER_HELP</Tag>
+		<English>[ICON_BULLET]Less instability from [LINK=literal]Judaism[\LINK]</English>
+		<French>[ICON_BULLET]Less instability from [LINK=literal]Judaism[\LINK]</French>
+		<German>[ICON_BULLET]Less instability from [LINK=literal]Judaism[\LINK]</German>
+		<Italian>[ICON_BULLET]Less instability from [LINK=literal]Judaism[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]Less instability from [LINK=literal]Judaism[\LINK]</Spanish>
+		<Portuguese>[ICON_BULLET]Less instability from [LINK=literal]Judaism[\LINK]</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_TEMPLE</Tag>
 		<English>Islamic Mosque</English>
 		<French>Mosqu&#233;e</French>

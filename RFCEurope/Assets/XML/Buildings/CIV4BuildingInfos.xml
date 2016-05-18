@@ -12419,6 +12419,7 @@
 			<Description>TXT_KEY_BUILDING_JEWISH_QUARTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_JEWISH_QUARTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_JEWISH_QUARTER_STRATEGY</Strategy>
+			<Help>TXT_KEY_BUILDING_JEWISH_QUARTER_HELP</Help>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_JEWISH_QUARTER</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
@@ -17710,10 +17711,10 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SISTINE_CHAPEL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SISTINE_CHAPEL</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
-			<ReligionType>NONE</ReligionType>
-			<StateReligion>NONE</StateReligion>
-			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>NONE</PrereqReligion>
+			<ReligionType>RELIGION_CATHOLICISM</ReligionType>
+			<StateReligion>RELIGION_CATHOLICISM</StateReligion>
+			<bStateReligion>1</bStateReligion>
+			<PrereqReligion>RELIGION_CATHOLICISM</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
@@ -19644,10 +19645,10 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ALHAMBRA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ALHAMBRA</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
-			<ReligionType>NONE</ReligionType>
+			<ReligionType>RELIGION_ISLAM</ReligionType>
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>NONE</PrereqReligion>
+			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
@@ -20018,10 +20019,10 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SAN_MARCO</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SAN_MARCO</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
-			<ReligionType>NONE</ReligionType>
+			<ReligionType>RELIGION_CATHOLICISM</ReligionType>
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>NONE</PrereqReligion>
+			<PrereqReligion>RELIGION_CATHOLICISM</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
@@ -20212,10 +20213,10 @@
 			<ArtDefineTag>ART_DEF_BUILDING_LA_MEZQUITA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_LA_MEZQUITA</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
-			<ReligionType>NONE</ReligionType>
+			<ReligionType>RELIGION_ISLAM</ReligionType>
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>NONE</PrereqReligion>
+			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
@@ -20408,10 +20409,10 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ST_BASIL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ST_BASIL</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
-			<ReligionType>NONE</ReligionType>
-			<StateReligion>NONE</StateReligion>
-			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>NONE</PrereqReligion>
+			<ReligionType>RELIGION_ORTHODOXY</ReligionType>
+			<StateReligion>RELIGION_ORTHODOXY</StateReligion>
+			<bStateReligion>1</bStateReligion>
+			<PrereqReligion>RELIGION_ORTHODOXY</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
@@ -23481,10 +23482,10 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GARDENS_AL_ANDALUS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GARDENS_AL_ANDALUS</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
-			<ReligionType>NONE</ReligionType>
+			<ReligionType>RELIGION_ISLAM</ReligionType>
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>NONE</PrereqReligion>
+			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
@@ -25231,10 +25232,10 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TOMB_KHAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TOMB_KHAL</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
-			<ReligionType>NONE</ReligionType>
+			<ReligionType>RELIGION_ISLAM</ReligionType>
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>NONE</PrereqReligion>
+			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
@@ -25424,10 +25425,10 @@
 			<ArtDefineTag>ART_DEF_BUILDING_STEPHANSDOM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_STEPHANSDOM</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
-			<ReligionType>NONE</ReligionType>
+			<ReligionType>RELIGION_CATHOLICISM</ReligionType>
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>NONE</PrereqReligion>
+			<PrereqReligion>RELIGION_CATHOLICISM</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
@@ -26766,10 +26767,10 @@
 			<ArtDefineTag>ART_DEF_BUILDING_WESTMINSTER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_WESTMINSTER</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
-			<ReligionType>NONE</ReligionType>
+			<ReligionType>RELIGION_CATHOLICISM</ReligionType>
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>NONE</PrereqReligion>
+			<PrereqReligion>RELIGION_CATHOLICISM</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>

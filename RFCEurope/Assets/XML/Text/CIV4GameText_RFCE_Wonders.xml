@@ -136,12 +136,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STEPHANSDOM_HELP</Tag>
-		<English>[ICON_BULLET]+2 stability points for running a Monarchy.</English>
-		<French>[ICON_BULLET]+2 points de stabilit&#233; pour l'utilisation de la Monarchie.</French>
+		<English>[ICON_BULLET]+2 stability points for running a Monarchy</English>
+		<French>[ICON_BULLET]+2 points de stabilit&#233; pour l'utilisation de la Monarchie</French>
 		<German>[ICON_BULLET]+2 Stabilit&#228;t mit einer monarchischen Staatsform</German>
-		<Italian>[ICON_BULLET]+2 Punti Stabilità per l'utilizzo di una Monarchia.</Italian>
+		<Italian>[ICON_BULLET]+2 Punti Stabilità per l'utilizzo di una Monarchia</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]+2 pontos de estabilidade por ser uma Monarquia.</Portuguese>
+		<Portuguese>[ICON_BULLET]+2 pontos de estabilidade por ser uma Monarquia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ESCORIAL</Tag>
@@ -163,12 +163,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ESCORIAL_HELP</Tag>
-		<English>[ICON_BULLET]No stability penalty for bad economy.</English>
-		<French>[ICON_BULLET]Pas p&#233;nalit&#233; pour une mauvaise &#233;conomie.</French>
-		<German>[ICON_BULLET]Kein Stabilitätsmalus wegen schlechter Wirschaftslage.</German>
-		<Italian>[ICON_BULLET]Nessuna penalità in punti stabilità per scarsa economia.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Sem penalidade na estabilidade por uma economia deficitária.</Portuguese>
+		<English>[ICON_BULLET]No stability penalty for bad economy</English>
+		<French>[ICON_BULLET]Pas p&#233;nalit&#233; pour une mauvaise &#233;conomie</French>
+		<German>[ICON_BULLET]Kein Stabilitätsmalus wegen schlechter Wirschaftslage</German>
+		<Italian>[ICON_BULLET]Nessuna penalità in punti stabilità per scarsa economia</Italian>
+		<Spanish>[ICON_BULLET]No stability penalty for bad economy</Spanish>
+		<Portuguese>[ICON_BULLET]Sem penalidade na estabilidade por uma economia deficitária</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS</Tag>
@@ -190,12 +190,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS_HELP</Tag>
-		<English>[ICON_BULLET]Free walls and castle in every conquered city.</English>
-		<French>[ICON_BULLET]Rempart et Chateau dans chaque ville conquite.</French>
+		<English>[ICON_BULLET]Free walls and castle in every conquered city</English>
+		<French>[ICON_BULLET]Rempart et Chateau dans chaque ville conquite</French>
 		<German>[ICON_BULLET]Freie Gebäude [COLOR_BUILDING_TEXT]Stadtmauern[COLOR_REVERT] und [COLOR_BUILDING_TEXT]Burg[COLOR_REVERT] in jeder eroberten Stadt</German>
-		<Italian>[ICON_BULLET]Mura e Castello gratuiti in ogni città conquistata.</Italian>
+		<Italian>[ICON_BULLET]Mura e Castello gratuiti in ogni città conquistata</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Toda cidade conquistada gera uma muralha e um castelo de graça.</Portuguese>
+		<Portuguese>[ICON_BULLET]Toda cidade conquistada gera uma muralha e um castelo de graça</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GARDENS_AL_ANDALUS</Tag>
@@ -217,12 +217,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GARDENS_AL_ANDALUS_HELP</Tag>
-		<English>[ICON_BULLET]Allows to build [COLOR_BUILDING_TEXT]Farms[COLOR_REVERT] without Irrigation.</English>
+		<English>[ICON_BULLET]Allows to build [COLOR_BUILDING_TEXT]Farms[COLOR_REVERT] without Irrigation</English>
 		<French>[ICON_BULLET]Permet de construire une [COLOR_BUILDING_TEXT]Ferme[COLOR_REVERT] sans l'Irrigation</French>
 		<German>[ICON_BULLET]Erlaubt den Bau von [COLOR_BUILDING_TEXT]Bauernhöfen[COLOR_REVERT] ohne Bewässerung</German>
 		<Italian>[ICON_BULLET]Permette di costruire [COLOR_BUILDING_TEXT]Fattorie[COLOR_REVERT] senza irrigazione</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Permite construir [COLOR_BUILDING_TEXT]Fazendas[COLOR_REVERT] sem Irrigação.</Portuguese>
+		<Portuguese>[ICON_BULLET]Permite construir [COLOR_BUILDING_TEXT]Fazendas[COLOR_REVERT] sem Irrigação</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHRINE_OF_UPPSALA</Tag>
@@ -244,12 +244,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHRINE_OF_UPPSALA_HELP</Tag>
-		<English>[ICON_BULLET]+1[ICON_CULTURE] in all cities without a (state) religion.</English>
+		<English>[ICON_BULLET]+1[ICON_CULTURE] in all cities without a (state) religion</English>
 		<French>.</French>
-		<German>[ICON_BULLET]+1[ICON_CULTURE] in jeder Stadt ohne Staatsreligion.</German>
-		<Italian>[ICON_BULLET]+1[ICON_CULTURE] in tutte le città senza una religione ufficiale.</Italian>
+		<German>[ICON_BULLET]+1[ICON_CULTURE] in jeder Stadt ohne Staatsreligion</German>
+		<Italian>[ICON_BULLET]+1[ICON_CULTURE] in tutte le città senza una religione ufficiale</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]+1[ICON_CULTURE] em todas as cidades sem religião de estado.</Portuguese>
+		<Portuguese>[ICON_BULLET]+1[ICON_CULTURE] em todas as cidades sem religião de estado</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROUND_CHURCH</Tag>

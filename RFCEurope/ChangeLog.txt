@@ -16,15 +16,12 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 Changes for RFCE 1.4:
 (under development)
 
-	1200 AD Scenario:
-		- New scenario
-
 	Reformation updates:
 		- Strengthened the Reformation procedure, most conversion-related chances are somewhat increased
 		- Revised all civs' willingness for Reformation, which now not only affects the main decision, but almost everything connected to it
 		- Neither all your cities nor all the religious buildings will convert automatically, even if you embrace the Reformation (but still a significant number of them)
 		- Protestantism will still spread to some of your cities, even if you decide to stay Catholic (but it won't convert any buildings)
-		- Bigger number of neutral (non-Catholic, Indy+Barb) nations' Catholic cities will follow the Protestant ways
+		- Bigger number of neutral (non-Catholic majors civs, indies, barbs) nations' Catholic cities will follow the Protestant ways
 		- More populous cities have increased chance to get/keep both Protestant and Catholic religions
 		- Added the same minimum interval timer for converting your State Religion if you embrace the Reformation
 		- Somewhat increased faith point bonuses from the Reformation (both on religion spread and on building conversion)
@@ -42,6 +39,12 @@ Changes for RFCE 1.4:
 		- Respawned Cordoba or Aragon are not affected by stability penalties for not holding the original core area
 		- Fixed inconsistencies on city flips connected to the spawn and respawn mechanics
 		- Total collapse has much more chance to happen for the human player, for example: 60% with -15 stability, 100% with -35
+		- Dynamic civ names refresh for the respawned civ right after the spawn is complete, not only on the beginning of the next turn
+		- Revised civ-specific AI chances for rebirth when the actual respawn mechanics has started
+		- Revised civ-specific AI values for all the various events connected to other civs respawning in their territory
+		- Under suppress situations there is 30% chance for the AI that the full respawn does not happen, only some revolt in the corresponding cities
+		- All vassal and master status updates happen initially on respawns, DCN refreshes for all affected civs
+		- Increased chance for AI civs to vassalize respawned civs in their territory right on the spawn
 
 	Secession and revolt updates:
 		- No city secession in the first 15 turns after spawn, or in the first 10 turns after respawn
@@ -65,8 +68,10 @@ Changes for RFCE 1.4:
 			Military: generates unhappiness in the city for 10 turns, the city goes into revolt for a turn
 			Financial: bribing the lords away (thus preventing their independence) angers the rebel militia further, more attacking units will appear
 			Both: all of the above effects
+		- Improved city choosing method for city secession, based on the recent fixes in city stability calculations
 
 	General changes:
+		- Test version for the new 1200 AD scenario
 		- Anarchy instability now appears right away for the human player, not with a turn delay
 		- Revised swing stability calculations, now converges to 0 a little slower
 		- Lowered anarchy swing instability for the AI, normal anarchy instability for everyone
@@ -91,6 +96,11 @@ Changes for RFCE 1.4:
 		- Minor changes in the city stability calculations for the AI
 		- Spawning independent cities can be selected from a pool of cities in an area, chance of spawning depends on historical importance
 		- Instead of Palermo spawning in 100% of the games in 508AD, now there is 80% chance for Palermo, 20% for Syracuse
+		- Hanseatic League HQ needs to be connected to a water area of at least 10 tiles
+		- Added religion and/or state religion prerequisites to some additional wonders (mostly Islam and Catholic)
+		- +1 additional instability for each foreign religion (after the 1st foreign one) in your cities
+		- 1 less instability from Judaism with a Jewish Quarter in the city
+		- No city gifting in the first 5 turns after spawn (avoid exploit with city gifting before the spawn flip for additional units)
 
 	Text/GUI improvements:
 		- New GlobalDefines_Alt.xml file, users can change RFCE-specific settings there (RFCEurope\Assets\XML\)
@@ -112,6 +122,8 @@ Changes for RFCE 1.4:
 		- Updated the Stability Guide in the Civilopedia with all the recent changes
 		- In the 1200AD scenario the 500AD DoM texts were set for all civs spawning later than 1200AD
 		- Added Venetian, Byzantine, Arab and English DoM texts for the 1200 AD scenario - by TheMulattoMaker and DC123456789
+		- New help text for Jewish Quarter, other minor text updates in the Civilopedia
+		- Fixed potential display issue on the Info Screen with the initial selection of the graphs screen pull-down menu
 
 	Balance/setup:
 		- Sweden starts with the following civics: Feudal Monarchy, Serfdom, Manoralism
@@ -138,6 +150,9 @@ Changes for RFCE 1.4:
 		- Norwegian 2nd UHV: Scotland and Northumbria instead of Mercia
 		- Franks start with the Theology tech, in the State Religion civic, and with Catholicism as their State Religion
 		- Nerfed various German production and support modifiers, they seem to have much more cities with the new AI city placement rules
+		- Cut back tech progression for Germany and a couple other AI civs, Protestantism was founded before 1500 in most recent games
+		- Decreased Ottoman unit production and maintenance bonuses, with the recent changes they are doing better than great :)
+		- Added a couple more starting units to many later starting civs (Austria, Ottomans, Dutch included)
 
 	Bugfixes:
 		- Various dll bugfixes and optimizations from Better BTS AI, K-Mod, Afforess
@@ -174,6 +189,9 @@ Changes for RFCE 1.4:
 		- Fixed 2 different mistakes in the stability calculations on civic-happiness/unhappiness from religion
 		- Fixed an overlooked aspect of the Polish 'no instability from anything connected to religions' UP
 		- Fixed the city attack CTD - huge thanks to Alberts2, also to Nightinggale and PinkPallin for their help
+		- Fixed issue where mercenary units and some barbarian units were unaffected by plagues
+		- Fixed bug which added plague immunity with the Cargo promotion instead of the Leader promotion
+		- Fixed bug where you could ask the Pope to change to Paganism
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

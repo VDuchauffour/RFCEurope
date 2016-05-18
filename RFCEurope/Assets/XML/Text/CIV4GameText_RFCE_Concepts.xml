@@ -586,9 +586,11 @@ Or you get a minor bonus to your stability in case you successfully complete one
 [TAB]For each city that
 [TAB][TAB]is unhealthy: -1
 [TAB][TAB]is unhappy (has at least one angry population): -2
-[TAB][TAB]has at least one foreign religion: -2 (0 for Poland, -1 for Ottomans)
-[TAB][TAB]has at least one foreign religion with Paganism: -1 (0 for Poland)
-[TAB][TAB]has at least one foreign religion with Religious Tolerance: 0
+[TAB][TAB]has a foreign religion: -2 (0 for Poland, -1 for Ottomans)
+[TAB][TAB]has a foreign religion with Paganism: -1 (0 for Poland)
+[TAB][TAB]each foreign religion after the 1st one: -1 (0 for Poland)
+[TAB][TAB]any number of foreign religions with Religious Tolerance: 0
+[TAB][TAB]has a Jewish Quarter with religious penalties present in the city: +1
 [TAB][TAB]has some unhappiness because of whipping for production: -1
 [TAB][TAB]has some unhappiness because of no military presence: -1
 [TAB][TAB]has some unhappiness because of religious civics: -1 (0 for Poland)

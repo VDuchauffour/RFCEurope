@@ -4128,33 +4128,37 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 	case TRADE_CITIES:
 		{
 			// 3MiroPapal: cannot trade cities
-			if ( getID() != PAPAL_PLAYER && eWhoTo != PAPAL_PLAYER ){
-
-			CvCity* pCityTraded = getCity(item.m_iData);
-
-			if (NULL != pCityTraded && pCityTraded->getLiberationPlayer(false) == eWhoTo)
+			if ( getID() != PAPAL_PLAYER && eWhoTo != PAPAL_PLAYER )
 			{
-				return true;
-			}
-
-			if (GET_PLAYER(eWhoTo).canReceiveTradeCity())
-			{
-				if (0 == GC.getGameINLINE().getMaxCityElimination())
+				// Absinthe: Don't even show city trading for the human player in the first 5 turns after spawn (avoid exploit with city gifting before the flip for additional units)
+				if ( startingTurn[getID()] + 5 < GC.getGamePointer() ->getGameTurn())
 				{
-					if (!GET_TEAM(getTeam()).isAVassal() && !GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isVassal(getTeam()))
+					CvCity* pCityTraded = getCity(item.m_iData);
+
+					if (NULL != pCityTraded && pCityTraded->getLiberationPlayer(false) == eWhoTo)
 					{
-						pOurCapitalCity = getCapitalCity();
-						if (pOurCapitalCity != NULL)
+						return true;
+					}
+
+					if (GET_PLAYER(eWhoTo).canReceiveTradeCity())
+					{
+						if (0 == GC.getGameINLINE().getMaxCityElimination())
 						{
-							if (pOurCapitalCity->getID() != item.m_iData)
+							if (!GET_TEAM(getTeam()).isAVassal() && !GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isVassal(getTeam()))
 							{
-								return true;
+								pOurCapitalCity = getCapitalCity();
+								if (pOurCapitalCity != NULL)
+								{
+									if (pOurCapitalCity->getID() != item.m_iData)
+									{
+										return true;
+									}
+								}
 							}
 						}
 					}
 				}
 			}
-			} // Papal enf of If
 		}
 		break;
 
@@ -4190,26 +4194,25 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 		if (!isHuman() || GET_PLAYER(eWhoTo).isHuman()) //  human can't be vassal of AI
 		{
 			// 3MiroPapal: Pope cannot surrender, cannot surrender to the Pope
-			if ( getID() != PAPAL_PLAYER && eWhoTo != PAPAL_PLAYER ){
-
-
-			CvTeam& kVassalTeam = GET_TEAM(getTeam());
-			CvTeam& kMasterTeam = GET_TEAM(GET_PLAYER(eWhoTo).getTeam());
-			if (kMasterTeam.isVassalStateTrading()) // the master must possess the tech
+			if ( getID() != PAPAL_PLAYER && eWhoTo != PAPAL_PLAYER )
 			{
-				if (!kVassalTeam.isAVassal() && !kMasterTeam.isAVassal() && getTeam() != GET_PLAYER(eWhoTo).getTeam())
+				CvTeam& kVassalTeam = GET_TEAM(getTeam());
+				CvTeam& kMasterTeam = GET_TEAM(GET_PLAYER(eWhoTo).getTeam());
+				if (kMasterTeam.isVassalStateTrading()) // the master must possess the tech
 				{
-					if ((kMasterTeam.isAtWar(getTeam()) || item.m_iData == 1) && item.m_eItemType == TRADE_SURRENDER)
+					if (!kVassalTeam.isAVassal() && !kMasterTeam.isAVassal() && getTeam() != GET_PLAYER(eWhoTo).getTeam())
 					{
-						return true;
-					}
+						if ((kMasterTeam.isAtWar(getTeam()) || item.m_iData == 1) && item.m_eItemType == TRADE_SURRENDER)
+						{
+							return true;
+						}
 
-					if (!kMasterTeam.isAtWar(getTeam()) && item.m_eItemType == TRADE_VASSAL)
-					{
-						return true;
+						if (!kMasterTeam.isAtWar(getTeam()) && item.m_eItemType == TRADE_VASSAL)
+						{
+							return true;
+						}
 					}
 				}
-			}
 			}// Papal End of if
 		}
 		break;
@@ -4377,9 +4380,16 @@ DenialTypes CvPlayer::getTradeDenial(PlayerTypes eWhoTo, TradeData item) const
 		break;
 
 	case TRADE_CITIES:
-		if ( (getID() == PAPAL_PLAYER) || (eWhoTo == PAPAL_PLAYER) ){
+		// Absinthe: no city trading for the Pope
+		if ( (getID() == PAPAL_PLAYER) || (eWhoTo == PAPAL_PLAYER) )
+		{
 			return DENIAL_ATTITUDE;
 		};
+		// Absinthe: Don't enable city trading in the first 5 turns after spawn (avoid exploit with city gifting before the flip for additional units)
+		if ( startingTurn[getID()] + 5 > GC.getGamePointer() ->getGameTurn() && startingTurn[getID()] <= GC.getGamePointer() ->getGameTurn())
+		{
+			return DENIAL_ATTITUDE;
+		}
 		pCity = getCity(item.m_iData);
 		if (pCity != NULL)
 		{
@@ -4401,17 +4411,22 @@ DenialTypes CvPlayer::getTradeDenial(PlayerTypes eWhoTo, TradeData item) const
 
 	case TRADE_VASSAL:
 		// 3MiroPAPAL: Vassals
-		if ( (getID() == PAPAL_PLAYER) || (eWhoTo == PAPAL_PLAYER) ){
+		if ( (getID() == PAPAL_PLAYER) || (eWhoTo == PAPAL_PLAYER) )
+		{
 			return DENIAL_ATTITUDE;
 		};
 		// 3MiroVassal: set conditional vassalage
-		if ( !(canVassalize( eWhoTo )) ){
+		if ( !(canVassalize( eWhoTo )) )
+		{
 			return DENIAL_ATTITUDE;
 		};
-		// 3Miro: no vassals for 20 turns
-		if ( startingTurn[getID()] + 20 < GC.getGamePointer() ->getGameTurn() ){
+		// 3Miro: no vassals for 20 turns after spawn
+		if ( startingTurn[getID()] + 20 < GC.getGamePointer() ->getGameTurn() )
+		{
 			return GET_TEAM(getTeam()).AI_vassalTrade(GET_PLAYER(eWhoTo).getTeam());
-		}else{
+		}
+		else
+		{
 			return DENIAL_ATTITUDE;
 		};
 		break;
@@ -4429,12 +4444,18 @@ DenialTypes CvPlayer::getTradeDenial(PlayerTypes eWhoTo, TradeData item) const
 		break;
 
 	case TRADE_CIVIC:
+		// Absinthe: no civic trade for the Pope (but he can ask for it)
+		if ( (getID() == PAPAL_PLAYER) )
+		{
+			return DENIAL_ATTITUDE;
+		};
 		return AI_civicTrade(((CivicTypes)(item.m_iData)), eWhoTo);
 		break;
 
 	case TRADE_RELIGION:
-		// 3MiroPAPAL: Don't change religion
-		if ( (getID() == PAPAL_PLAYER) ){
+		// 3MiroPAPAL: Pope do not change religion (but he can ask for it)
+		if ( (getID() == PAPAL_PLAYER) )
+		{
 			return DENIAL_ATTITUDE;
 		};
 		return AI_religionTrade(((ReligionTypes)(item.m_iData)), eWhoTo);
@@ -4446,15 +4467,17 @@ DenialTypes CvPlayer::getTradeDenial(PlayerTypes eWhoTo, TradeData item) const
 
 	case TRADE_DEFENSIVE_PACT:
 		// 3MiroPAPAL: No defensive pacts
-		if ( (getID() == PAPAL_PLAYER) || (eWhoTo == PAPAL_PLAYER) ){
+		if ( (getID() == PAPAL_PLAYER) || (eWhoTo == PAPAL_PLAYER) )
+		{
 			return DENIAL_ATTITUDE;
 		};
 		return GET_TEAM(getTeam()).AI_defensivePactTrade(GET_PLAYER(eWhoTo).getTeam());
 		break;
 
 	case TRADE_PERMANENT_ALLIANCE:
-		// 3MiroPAPAL: no perm alliance
-		if ( (getID() == PAPAL_PLAYER) || (eWhoTo == PAPAL_PLAYER) ){
+		// 3MiroPAPAL: No perm alliance
+		if ( (getID() == PAPAL_PLAYER) || (eWhoTo == PAPAL_PLAYER) )
+		{
 			return DENIAL_ATTITUDE;
 		};
 		return GET_TEAM(getTeam()).AI_permanentAllianceTrade(GET_PLAYER(eWhoTo).getTeam());
@@ -22934,8 +22957,15 @@ bool CvPlayer::hasSpaceshipArrived() const
 //Rhye - start switch (dynamic civ names - not jdog's)
 void CvPlayer::processCivNames()
 {
-	if (getID() >= NUM_MAJOR_PLAYERS || !GET_PLAYER((PlayerTypes)getID()).isAlive())
+	if (getID() >= NUM_MAJOR_PLAYERS)
+	{
 		return;
+	}
+	// Absinthe: isAlive only refreshes on the beginning of the next turn, thus getRespawnedAlive is better for respawns
+	if (!GET_PLAYER((PlayerTypes)getID()).isAlive() && !GET_PLAYER((PlayerTypes)getID()).getRespawnedAlive())
+	{
+		return;
+	}
 
 	// 3MiroDCN
 	/*if ( getID() == 2 ){
