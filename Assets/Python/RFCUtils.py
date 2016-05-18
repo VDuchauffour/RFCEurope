@@ -283,11 +283,12 @@ class RFCUtils:
 		return civList[gc.getGame().getSorenRandNum(len(civList), 'random civ')]
 
 	def isMortalUnit(self, unit):
-		if (unit.isHasPromotion(42)): #leader
+		# Absinthe: leader units, and great people won't be killed by the plague
+		if (unit.isHasPromotion(xml.iPromotionLeader)):
 			if (not gc.getPlayer(unit.getOwner()).isHuman()):
 				return False
 		iUnitType = unit.getUnitType()
-		if (iUnitType >= xml.iProphet ):
+		if (iUnitType >= xml.iProphet and iUnitType <= xml.iGreatSpy):
 			return False
 		return True
 
@@ -737,8 +738,7 @@ class RFCUtils:
 						pCurrent.changeCulture(iMajorCiv, iMinorPlotCulture/iDen, True)
 
 
-	#UniquePowers
-	# 3Miro: Turkey I guess
+	#UniquePowers, Crusades, RiseAndFall
 	def convertPlotCulture(self, pCurrent, iCiv, iPercent, bOwner):
 
 		if (pCurrent.isCity()):

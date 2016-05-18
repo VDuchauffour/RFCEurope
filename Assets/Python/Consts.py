@@ -1087,36 +1087,36 @@ tAggressionLevel = (
 )
 
 
-#War during rise of new civs. Higher number means less chance for war
+#War during rise and respawn of new civs. Higher number means less chance for war
 tAIStopBirthThreshold = (
 30, #Byzantium
 60, #Frankia
 50, #Arabia
 70, #Bulgaria
-10, #Cordoba
-30, #Venezia
-20, #Burgundy
+20, #Cordoba
+50, #Venezia
+70, #Burgundy
 80, #Germany
 80, #Novgorod
 70, #Norway
 80, #Kiev
-80, #Hungary
-80, #Spain
+60, #Hungary
+70, #Spain
 40, #Denmark
 40, #Scotland
-40, #Poland
-40, #Genoa
-40, #Morocco
-80, #England
-30, #Portugal
-40, #Aragon
-60, #Sweden
-20, #Prussia
-40, #Lithuania
-30, #Austria
-80, #Turkey
+80, #Poland
+80, #Genoa
+50, #Morocco
+30, #England
+60, #Portugal
+60, #Aragon
+70, #Sweden
+30, #Prussia
+50, #Lithuania
+50, #Austria
+70, #Turkey
 70, #Moscow
-20, #Dutch
+80, #Dutch
 90, #Pope
 0, #Indep1
 0, #Indep2
@@ -1128,32 +1128,32 @@ tAIStopBirthThreshold = (
 
 #RiseAndFall. This is one place to tune frequency of resurrections.
 tResurrectionProb = (
-20, #Byzantium
+30, #Byzantium
 80, #Frankia
 60, #Arabia
 30, #Bulgaria
-50, #Cordoba
-20, #Venezia
-10, #Burgundy
+20, #Cordoba
+40, #Venezia
+20, #Burgundy
 70, #Germany
 20, #Novgorod
-40, #Norway
-20, #Kiev
-50, #Hungary
+50, #Norway
+30, #Kiev
+60, #Hungary
 80, #Spain
 70, #Denmark
 40, #Scotland
 60, #Poland
-10, #Genoa
+30, #Genoa
 60, #Morocco
 70, #England
 60, #Portugal
-10, #Aragon
+20, #Aragon
 70, #Sweden
-40, #Prussia
-40, #Lithuania
+50, #Prussia
+50, #Lithuania
 70, #Austria
-60, #Turkey
+70, #Turkey
 80, #Moscow
 60, #Dutch
 90  #Pope

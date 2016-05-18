@@ -159,7 +159,6 @@ class Plague:
 				CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_PLAGUE_SPREAD_CITY", ()) + " " + city.getName() + " (" + gc.getPlayer(city.getOwner()).getCivilizationAdjective(0) + ")!", "AS2D_PLAGUE", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
 
 
-
 	def calcHealth( self, iPlayer ):
 		pPlayer = gc.getPlayer(iPlayer)
 		iTCH = pPlayer.calculateTotalCityHealthiness()
@@ -197,6 +196,7 @@ class Plague:
 		iHealth /= 7 #duration range will be -4 to +5 for 30 to 90
 		self.setPlagueCountdown(iPlayer, iDuration - iHealth)
 
+
 	def infectCity( self, city ):
 		city.setHasRealBuilding(iPlague, True)
 		if (gc.getPlayer(city.getOwner()).isHuman()):
@@ -224,7 +224,6 @@ class Plague:
 
 		iCityHealthRate = city.healthRate(False, 0)
 		# do something about preserving the defenders in a city
-
 
 		if (iNumUnitsInAPlot):
 			for j in range(iNumUnitsInAPlot):
@@ -259,6 +258,7 @@ class Plague:
 						# if we have many units, decrease the damage for every other unit
 						iDamage *= 3
 						iDamage /= 4
+
 
 	def processPlague( self, iPlayer ):
 
@@ -383,6 +383,7 @@ class Plague:
 										self.infectCity(city2)
 										return # stop if one city infected, don't infect all at the same time
 
+
 	def infectCitiesNear(self, iPlayer, startingX, startingY):
 		apCityList = PyPlayer(iPlayer).getCityList()
 		for pCity in apCityList:
@@ -409,6 +410,7 @@ class Plague:
 					city.setHasRealBuilding(iPlague, False)
 					iModifier += 5 #not every city should quit
 
+
 	def stopPlague(self, iPlayer):
 
 		self.setPlagueCountdown(iPlayer, -iImmunity)
@@ -416,6 +418,7 @@ class Plague:
 
 		for pCity in apCityList:
 			pCity.GetCy().setHasRealBuilding(iPlague, False)
+
 
 	def onCityAcquired(self, iOldOwner, iNewOwner, city):
 		if (city.hasBuilding(iPlague)):
@@ -428,6 +431,7 @@ class Plague:
 						self.infectCity(cityNear)
 			else:
 				city.setHasRealBuilding(iPlague, False)
+
 
 	def onCityRazed(self, city, iNewOwner):
 		# even if you raze the city, you should still get the plague

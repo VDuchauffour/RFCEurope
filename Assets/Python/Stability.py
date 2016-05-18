@@ -542,15 +542,27 @@ class Stability:
 				iWarWStability -= 1
 			#print(" getWarWearinessPercentAnger_city: ",pCity.getWarWearinessPercentAnger())
 			#print(" getWarWearinessPercentAnger_player: ",pPlayer.getWarWearinessPercentAnger())
+			bJewInstability = False
 			if ( iCivic4 != xml.iCivicFreeReligion ): # if not in the Religious Tolerance civic
-				if ( ( not gc.hasUP( iPlayer, con.iUP_ReligiousTolerance )) and pCity.getNumForeignReligions() > 0 ): # Polish UP
-					if ( iCivic4 == xml.iCivicPaganism ): # Pagans are a bit more tolerant
-						iReligionStability -= 1
-					elif ( iPlayer == con.iTurkey ): # Janissary UP - not necessarily a historical aspect of it, but important for gameplay
-					#elif ( gc.hasUP( iPlayer, con.iUP_Janissary )):
-						iReligionStability -= 1
-					else:
+				if ( not gc.hasUP( iPlayer, con.iUP_ReligiousTolerance )): # Polish UP
+					if (pCity.getNumForeignReligions() > 0 ):
+						bJewInstability = True
+						if ( iCivic4 == xml.iCivicPaganism ): # Pagans are a bit more tolerant
+							iReligionStability -= 1
+						elif ( iPlayer == con.iTurkey ): # Janissary UP - not necessarily a historical aspect of it, but important for gameplay
+						#elif ( gc.hasUP( iPlayer, con.iUP_Janissary )):
+							iReligionStability -= 1
+						else:
+							iReligionStability -= 2
+					if (pCity.getNumForeignReligions() > 3 ): # additional -1 stability for every further foreign religion
+						iReligionStability -= 3
+					elif (pCity.getNumForeignReligions() > 2 ): # additional -1 stability for every further foreign religion
 						iReligionStability -= 2
+					elif (pCity.getNumForeignReligions() > 1 ): # additional -1 stability for every further foreign religion
+						iReligionStability -= 1
+			# Absinthe: Jewish Quarter reduces religion instability if Judaism is present in the city
+			if (bJewInstability and pCity.hasBuilding( xml.iJewishQuarter ) and pCity.isHasReligion( xml.iJudaism )): # only if there are some religious penalties present in the city
+				iReligionStability += 1
 			#print(" iReligionStability: ",iReligionStability)
 			# Absinthe: -1 stability if own culture is less than 40% of total culture in a city, -2 stability if less than 20%
 			iTotalCulture = pCity.countTotalCultureTimes100()
