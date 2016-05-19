@@ -603,14 +603,15 @@ class Barbs:
 		if iGameTurn in dIndependentCities.keys():
 			for tCity in dIndependentCities[iGameTurn]:
 				lVariations, iCiv, iPop, iUnit, iNumUnits, iReligion, iWorkers = tCity
-				iChosenCity = 0
-				if len(lVariations) > 1:
-					iRand = gc.getGame().getSorenRandNum(100, 'random independent city')
-					for iCity in range(len(lVariations)):
-						if iRand <= lVariations[iCity][2]:
-							iChosenCity = iCity
-							break
-						iRand -= lVariations[iCity][2]
+				iChosenCity = -1
+				iRand = gc.getGame().getSorenRandNum(100, 'random independent city')
+				for iCity in range(len(lVariations)):
+					if iRand <= lVariations[iCity][2]:
+						iChosenCity = iCity
+						break
+					iRand -= lVariations[iCity][2]
+				if iChosenCity == -1:
+					continue
 				tCoords, sName, iPos = lVariations[iChosenCity]
 				self.foundCity(iCiv, tCoords, sName, iPop, iUnit, iNumUnits, iReligion, iWorkers)
 
