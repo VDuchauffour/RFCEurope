@@ -4125,6 +4125,14 @@ bool CvPlot::isNetworkTerrain(TeamTypes eTeam) const
 		return true;
 	}
 
+	// Absinthe: Norwegian UP also enables ocean trade
+	//			probably better to add in isTerrainTrade itself, works better with the tech tree
+	/*int iUPS = UniquePowers[getOwnerINLINE() * UP_TOTAL_NUM + UP_CAN_ENTER_TERRAIN];
+	if ( (iUPS > -1) && (getTerrainType() == iUPS) )
+	{
+		return true;
+	}*/
+
 	if (isWater())
 	{
 		if (getTeam() == eTeam)

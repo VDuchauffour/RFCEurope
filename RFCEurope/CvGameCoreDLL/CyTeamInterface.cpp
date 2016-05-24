@@ -180,6 +180,7 @@ void CyTeamPythonInterface()
 		.def("setResearchProgress", &CyTeam::setResearchProgress, "void (TechID, iNewValue, iPlayer ) - sets progress towards TechID")
 		.def("changeResearchProgress", &CyTeam::changeResearchProgress, "void (TechID, iChange, iPlayer ) - edits progress towards TechID")
 		.def("isTerrainTrade", &CyTeam::isTerrainTrade, "bool (int iTerrainType) - will let us know if this terrain type allows trade")
+		.def("changeTerrainTradeCount", &CyTeam::changeTerrainTradeCount, "void (TerrainID, iChange) - enables trade through terrain type") // Absinthe
 		.def("isRiverTrade", &CyTeam::isRiverTrade, "bool () - will let us know if rivers allow trade")
 		.def("getTechCount", &CyTeam::getTechCount, "int (TechID)")
 

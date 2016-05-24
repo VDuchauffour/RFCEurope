@@ -275,7 +275,7 @@ public:
 
 	int getTerrainTradeCount(TerrainTypes eIndex) const;
 	bool isTerrainTrade(TerrainTypes eIndex) const;																												// Exposed to Python
-	void changeTerrainTradeCount(TerrainTypes eIndex, int iChange);
+	void changeTerrainTradeCount(TerrainTypes eIndex, int iChange);																							// Exposed to Python
 
 	int getRiverTradeCount() const;
 	bool isRiverTrade() const;																												// Exposed to Python

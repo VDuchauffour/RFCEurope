@@ -239,6 +239,33 @@
 		<Portuguese>Renacimiento</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ERA_MEDIEVAL</Tag>
+		<English>Late Middle Ages</English>
+		<French>Bas Moyen &#194;ge</French>
+		<German>Sp&#228;tmittelalter</German>
+		<Italian>Basso Medioevo</Italian>
+		<Spanish>Baja Edad Media</Spanish>
+		<Portuguese>Idade Média Tardia</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ERA_CLASSICAL</Tag>
+		<English>High Middle Ages</English>
+		<French>Moyen &#194;ge</French>
+		<German>Hochmittelalter</German>
+		<Italian>Pieno Medioevo</Italian>
+		<Spanish>Plenitud de la Edad Media</Spanish>
+		<Portuguese>Idade Média Plena</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ERA_ANCIENT</Tag>
+		<English>Early Middle Ages</English>
+		<French>Haut Moyen &#194;ge</French>
+		<German>Frühes Mittelalter</German>
+		<Italian>Alto Medioevo</Italian>
+		<Spanish>Alta Edad Media</Spanish>
+		<Portuguese>Alta Idade Média</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_FOUNDED_BEFORE_START</Tag>
 		<English>Good Ol' Days</English>
 		<French>Haut Moyen &#194;ge</French>

@@ -820,6 +820,13 @@ bool CyTeam::isTerrainTrade(int /*TerrainTypes*/ eIndex)
 	return false;
 }
 
+// Absinthe
+void CyTeam::changeTerrainTradeCount(int /*TerrainTypes*/ eIndex, int iChange)
+{
+	if (m_pTeam)
+		m_pTeam->changeTerrainTradeCount((TerrainTypes)eIndex, iChange);
+}
+
 bool CyTeam::isRiverTrade()
 {
 	if (m_pTeam)

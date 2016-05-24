@@ -317,14 +317,11 @@ void CvPlayer::init(PlayerTypes eID)
 
 	AI_init();
 
+	// Absinthe: no need to update DCN here
 	//Rhye - start (dynamic civ names - not jdog's)
 	//if (getID() < NUM_MAJOR_PLAYERS)
 	//	setCivDescription(civDynamicNames[getID()][0]);
-	// 3Miro
-	//if (getID() == EGYPT) //Egyptian UP
-	//	setCivDescription(civDynamicNames[getID()][1]); //Egypt
-	//Rhye - end
-	//GC.getGameINLINE().logMsg("player init out",getID());
+
 	m_iAllowBrothersAtWar = 0; // 3MiroBuldings
 	m_isCrusader = false; // 3MiroCrusades init Crusaders
 	m_iPaganCulture = 0;

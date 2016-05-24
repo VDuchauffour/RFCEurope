@@ -151,7 +151,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_NOR2</Tag>
-		<English>All naval units can enter ocean tiles, less stability penalty for razing cities.</English>
+		<English>All naval units can enter ocean tiles and trade is possible through them, less stability penalty for razing cities.</English>
 		<French>Toutes les unit&#233;s navales peuvent entrer dans l'oc&#233;an</French>
 		<German>Alle Marineeinheiten k&#246;nnen den Ozean befahren</German>
 		<Italian>Tutte le unità navali possono passare sulle caselle oceaniche</Italian>

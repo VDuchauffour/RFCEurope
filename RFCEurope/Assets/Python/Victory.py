@@ -133,7 +133,7 @@ tArabiaControlII = [ xml.iP_Oran, xml.iP_Algiers, xml.iP_Ifriqiya, xml.iP_Cyrena
 tBulgariaControl = [ xml.iP_Constantinople, xml.iP_Thessaloniki, xml.iP_Serbia, xml.iP_Thrace, xml.iP_Macedonia, xml.iP_Moesia, xml.iP_Arberia ]
 tCordobaWonders = [ xml.iAlhambra, xml.iLaMezquita, xml.iGardensAlAndalus ]
 tCordobaIslamize = [ xml.iP_GaliciaSpain, xml.iP_Castile, xml.iP_Leon, xml.iP_Lusitania, xml.iP_Catalonia, xml.iP_Aragon, xml.iP_Navarre, xml.iP_Valencia, xml.iP_LaMancha, xml.iP_Andalusia ]
-tNorwayControl = [xml.iP_TheIsles, xml.iP_Ireland, xml.iP_Scotland, xml.iP_Northumbria, xml.iP_Normandy, xml.iP_Iceland]
+tNorwayControl = [xml.iP_TheIsles, xml.iP_Ireland, xml.iP_Scotland, xml.iP_Normandy, xml.iP_Sicily, xml.iP_Apulia, xml.iP_Calabria, xml.iP_Iceland]
 tNorwayOutrank = [ iSweden, iDenmark, iScotland, iEngland, iGermany, iFrankia ]
 #tNorseControl = [ xml.iP_Sicily, xml.iP_Iceland, xml.iP_Northumbria, xml.iP_Scotland, xml.iP_Normandy, xml.iP_Ireland, xml.iP_Novgorod ]
 #tVenetianControl = [ xml.iP_Morea, xml.iP_Epirus, xml.iP_Dalmatia, xml.iP_Verona, xml.iP_Crete, xml.iP_Cyprus ]
@@ -838,26 +838,26 @@ class Victory:
 		#	else:
 		#		pNorway.setUHV( 0, 0 )
 
-		# UHV 1: Gain 100 Viking points by 1066
-		# Counted in the onCityAcquired, onPillageImprovement and onCombatResult functions
+		# UHV 1: Gain 100 Viking points and build Vinland by 1066
+		# Viking points counted in the onCityAcquired, onPillageImprovement and onCombatResult functions
 		if ( iGameTurn <= xml.i1066AD and pNorway.getUHV( 0 ) == -1 ):
-			if ( pNorway.getUHVCounter( 2 ) >= 100 ): # It's still counter 2, for the sake of convenience and confusion
+			if ( pNorway.getUHVCounter( 2 ) >= 100 and teamNorway.getProjectCount(xml.iColVinland) >= 1): # It's still counter 2, for the sake of convenience and confusion
 				pNorway.setUHV( 0, 1 )
 				pNorway.changeStabilityBase( iCathegoryExpansion, 3 )
 			elif ( iGameTurn == xml.i1066AD ):
 				pNorway.setUHV( 0, 0 )
 
-		# UHV 2: Conquer The Isles, Ireland, Scotland, Northumbria, Normandy, Iceland and build Vinland by 1263
-		if ( iGameTurn <= xml.i1263AD and pNorway.getUHV( 1 ) == -1 ):
+		# UHV 2: Conquer The Isles, Ireland, Scotland, Normandy, Sicily, Apulia, Calabria, Iceland by 1194
+		if ( iGameTurn <= xml.i1194AD and pNorway.getUHV( 1 ) == -1 ):
 			bConq = True
 			for iProv in tNorwayControl:
-				if(pNorway.getProvinceCurrentState( iProv ) < con.iProvinceConquer):
+				if ( pNorway.getProvinceCurrentState( iProv ) < con.iProvinceConquer ):
 					bConq = False
 					break
-			if(bConq and teamNorway.getProjectCount(xml.iColVinland) >= 1):
+			if ( bConq ):
 				pNorway.setUHV( 1, 1 )
 				pNorway.changeStabilityBase( iCathegoryExpansion, 3 )
-			elif(iGameTurn == xml.i1263AD):
+			elif ( iGameTurn == xml.i1194AD ):
 				pNorway.setUHV( 1, 0 )
 
 		# UHV 3: Have higher score than Sweden, Denmark, Scotland, England, Germany and France in 1320

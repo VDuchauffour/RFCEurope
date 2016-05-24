@@ -14,7 +14,7 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for RFCE 1.4:
-(under development)
+(to be released: 2016.05.27.)
 
 	Reformation updates:
 		- Strengthened the Reformation procedure, most conversion-related chances are somewhat increased
@@ -27,6 +27,8 @@ Changes for RFCE 1.4:
 		- Somewhat increased faith point bonuses from the Reformation (both on religion spread and on building conversion)
 		- If Protestantism spreads to a city and all the religious buildings are converted, Catholicism itself might also disappear from the city
 		- Various new interface messages for the different situations connected to the Reformation
+		- Fixed AI issue where some of your rivals switch back from Protestantism right after they choose the Reformation, not giving it a chance even if it spread to most of their cities
+		- Fixed AI issue where the Pope could potentially choose to follow Protestantism on Reformation, now it will never spread to Rome if the Pope is Catholic
 
 	RiseAndFall updates:
 		- Respawned civs can no longer collapse in the first 10 turns
@@ -70,6 +72,26 @@ Changes for RFCE 1.4:
 			Both: all of the above effects
 		- Improved city choosing method for city secession, based on the recent fixes in city stability calculations
 
+	Tech Tree updates:
+		- Biblotheca Corviniana requires Patronage and Paper instead of Patronage and Public Works
+		- Marco Polo's Embassy obsoletes on Trading Companies instead of Astronomy
+		- Theodosian Walls obsolete on Gunpowder instead of Education
+		- St. Sophia requires Civil Service instead of Guilds (and Philosophy)
+		- Kalmar Castle moved to Military Tradition from Professional Army
+		- University moved to Education from Philosophy
+		- Inn moved to Clockmaking from Education
+		- Manor House and Chateau obsoletes with Paper instead of Divine Right
+		- Free Great Theologian for the first civ to discover Philosophy
+		- Removed redundant tech requirement of Theology from Philosophy
+		- Moved Magna Carta and Golden Bull to Philosophy from Divine Right
+		- Moved St. Basil Cathedral to Divine Right from Chemistry
+		- Removed tech requirements for South America Access, East Asia Access - not needed to take space on the tech tree, as they don't have actual resources on the map
+		- North America Access is special as we have one on the map near Iceland, but as it's preadded and removed early enough, still no need for tech requirement
+		- Colonial Trade Route can be established after the discovery of Astronomy instead of Astrolabe
+		- Astrolable no longer enables Ocean trading, only Optics
+		- Inca and Aztec Conquest moved to Chemistry from Professional Army
+		- Indian Trading Post, Gold Coast and Cuba moved to Professional Army
+
 	General changes:
 		- Test version for the new 1200 AD scenario
 		- Anarchy instability now appears right away for the human player, not with a turn delay
@@ -101,6 +123,8 @@ Changes for RFCE 1.4:
 		- +1 additional instability for each foreign religion (after the 1st foreign one) in your cities
 		- 1 less instability from Judaism with a Jewish Quarter in the city
 		- No city gifting in the first 5 turns after spawn (avoid exploit with city gifting before the spawn flip for additional units)
+		- The respective Trading Company projects provide North + South America Access and East Asia Access as a free bonus, so the AI have some incentive to actually build them
+		- Corresponding improvements will also be removed on resource removal (both on cutting forests and on historic/preset resource removals)
 
 	Text/GUI improvements:
 		- New GlobalDefines_Alt.xml file, users can change RFCE-specific settings there (RFCEurope\Assets\XML\)
@@ -117,13 +141,18 @@ Changes for RFCE 1.4:
 		- Improved city and wonder foundation date/city/civ information on the Info Screen, also it now takes different scenarios into account
 		- Fixed mistakes on the Info Screen where information from the top5 cities and from the wonders were not in sync (connected to city visibility and contact with the civ)
 		- Readded era displays to various screens (main, info, religion) before the discovery of Calendar
-		- Colour changes in various interface messages
-		- Minor updates in the non-CNM city names
+		- Colour changes in various interface messages, now they are more consistent
+		- Minor updates in the non-CNM city names for a couple civs
 		- Updated the Stability Guide in the Civilopedia with all the recent changes
 		- In the 1200AD scenario the 500AD DoM texts were set for all civs spawning later than 1200AD
 		- Added Venetian, Byzantine, Arab and English DoM texts for the 1200 AD scenario - by TheMulattoMaker and DC123456789
 		- New help text for Jewish Quarter, other minor text updates in the Civilopedia
 		- Fixed potential display issue on the Info Screen with the initial selection of the graphs screen pull-down menu
+		- British Isles have new base city name map: Ireland area (Panopticon), Scotland area (TimGB), England area (Panopticon, TimGB, DC123456789)
+		- New city name map for the Scottish civ: Scottish Gaelic -> Irish Gaelic/Manx -> Welsh/Cornish/Breton -> Scots -> English - by DC123456789
+		- Updated city name maps for the civs France/Burgundy, England, Norway and Denmark (in Britain, Brittany, Greece, and the Levant/Egypt) - by DC123456789
+		- Texts in the WorldBuilder and in the Settings Screen will now also use the mod-specific era names
+		- Added notification about the Crusaders' arrival to the human player
 
 	Balance/setup:
 		- Sweden starts with the following civics: Feudal Monarchy, Serfdom, Manoralism
@@ -145,14 +174,21 @@ Changes for RFCE 1.4:
 		- Added some stability bonuses for AI civs which had a hard time at the beginning for various reasons (early civic changes, too many foreign cities, barb activity, etc.)
 		- Destroying work boats is reduced to only one Viking point for the Norwegian UHV (same as for pillaging settled fishing boats)
 		- Increased Norwegian Viking points UHV from 80 to 100 (with the new cities in England it's still not hard at all)
+		- Norwegian 1st UHV: Vinland should be completed until 1066 AD
+		- North Atlantic Access near Iceland is removed in 1068 AD
+		- Norwegian UP also enables trading through Ocean
+		- Normandy province remains contested after the English spawn for both Norway and Denmark
+		- Added Sicily, Apulia, Calabria and Malta as contested provinces for Norway and Denmark, everything changes to unstable in 1194 AD
+		- Norwegian 2nd UHV: Mercia no longer needed, added Scotland, Sicily, Calabria, Apulia as new goals, deadline is 1194 AD
 		- Janissary UP: only -1 instability from foreign religion in your cities - not necessarily a historical aspect of the UP, but important for gameplay
 		- Lowered Janissary threshold to 300 for the human player, 200 for the AI
-		- Norwegian 2nd UHV: Scotland and Northumbria instead of Mercia
 		- Franks start with the Theology tech, in the State Religion civic, and with Catholicism as their State Religion
 		- Nerfed various German production and support modifiers, they seem to have much more cities with the new AI city placement rules
 		- Cut back tech progression for Germany and a couple other AI civs, Protestantism was founded before 1500 in most recent games
+		- Nerfed Norwegian and Danish tech progression for the human player
 		- Decreased Ottoman unit production and maintenance bonuses, with the recent changes they are doing better than great :)
 		- Added a couple more starting units to many later starting civs (Austria, Ottomans, Dutch included)
+		- Folwark and Noria won't add extra health from the Rice resource (same as Granary)
 
 	Bugfixes:
 		- Various dll bugfixes and optimizations from Better BTS AI, K-Mod, Afforess
@@ -161,9 +197,8 @@ Changes for RFCE 1.4:
 		- Fixed Religion Screen bug which was caused by the Convert and Exit buttons being the same (you actually click on both when clicking on either)
 		- Fixed bug with anarchy instability if you switch civics/religion on popup, not on the screens
 		- Fixed a couple mistakes in python code which resulted in .dll assert failures (they were probably harmless though)
-		- Fixed issue where some AI civs would switch back from Protestantism right away / as soon as it was possible
 		- Fixed critical bug which resulted in some weird cases where masters and vassals were not mutually at war with an enemy
-		- Fixed issue where you couldn't declare war on indies and barbs in first 5 turns
+		- Fixed issue where you couldn't declare war on indies in the first 5 turns
 		- Fixed issue which appeared if the game was trying to remove a bonus resource from a plot when there wasn't any
 		- Fixed inconsistencies with the Scottish UP - will work against major civs and indies, but not against barbarians
 		- Fixed issue with Venetian naval units' starting position
@@ -180,7 +215,6 @@ Changes for RFCE 1.4:
 		- Fixed bug where religion foundation date were displayed as "Early Middle Ages" for almost all game long
 		- Fixed bug: the Pope now always ignores Barbs and Indies outside it's war map
 		- Fixed Kievan Food UP, now it correctly gives +2 food on all city tiles
-		- Fixed issue where the Pope could potentially choose to follow Protestantism on Reformation, now it will never spread to Rome if the Pope is Catholic
 		- Fixed non-defined provincetype issue connected to province initialization, added some safety asserts for it
 		- Fixed bug where the Krak the Chevalier was not working in some rare situations
 		- Fixed bug where previously acquired culture wasn't kept when you conquered an indy/barb city
@@ -192,6 +226,8 @@ Changes for RFCE 1.4:
 		- Fixed issue where mercenary units and some barbarian units were unaffected by plagues
 		- Fixed bug which added plague immunity with the Cargo promotion instead of the Leader promotion
 		- Fixed bug where you could ask the Pope to change to Paganism
+		- Fixed a Firaxis bug with double language tags which caused issues when running the game in German
+		- Fixed issue with era names, now vanilla BtS era names will never be displayed instead of mod-specific ones (on era splash screens for example)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -2464,7 +2500,7 @@ Changes for Alpha 1:
 	Also the five star ratings are exported to XML, someone should come up with accurate ratings for each Civ
 	Map update on the Balkan terrain around Sofia to better represent the highest Balkan mountains and hopefully make the AI settle there (it was a large city even at that time)
 	The Pope starts with Catholicism as State Religion
-	The Byzantines start with Orthodoxy (their stability is bad without the extra anarchy)
+	The Byzantines start with Orthodoxy (their stability was bad with the extra anarchy)
 	Projects generate points just like World Wonders
 	The first Catholic player who manages to obtain control over Jerusalem will enter a golden age
 	Civs start with their natural area of expansion visible (should help the AI settle better)
@@ -2581,7 +2617,7 @@ Changes for Test Version 2009.04.12.:
 	Fixed a few hints
 	Smacked down Education = Music bug again.
 	Bug fix in Victory
-	New StarFort,Access,and Ren Art buttons
+	New StarFort, Access, and Renaissance Art buttons
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -2747,7 +2783,7 @@ Changes for Test Version 2009.02.22.:
 Changes for Test Version 2009.02.17.:
 
 	Protestantism:
-		Added modified protestantism code from Panoptican's Protestantism for RFC, see that mod for full details.
+		Added modified protestantism code from Panopticon's Protestantism for RFC, see that mod for full details.
 		Protestantism is founded if you are Catholic State Religion and first to research (or acquire) Printing Press.
 		When this happens every nation has choice to flip (converting Catholic buildings and cities) or not. AI goes randomly (based partly on history), human chooses.
 		Some Catholics may linger if you flip and some Protestants may spawn even if you refuse to flip.
@@ -2791,17 +2827,23 @@ Changes for Test Version 2009.02.03.:
 		Barb warriors in Wales and barb axe/spear spawn in Scotland so unification is harder.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 The first initial test version of RFCE (basically unplayable) appeared at 2008.08.15.
 Based on 3Miro's words:
-Following a week long struggle with the code on all levels, I came up with a test version which we can actually run.
-One can now start the damn thing, select the Byzantines and play. There are no other main RFCE civs present and one cannot even build a settler.
+"Following a week long struggle with the code on all levels, I came up with a test version which we can actually run.
+One can now start the damn thing, select the Byzantines and play. There are no other main RFCE civs present and one cannot even build a settler."
 
-There were a lot of early test version in the first half year, adding the initial civs and all the necessary things.
-A base for a couple of the most basic and most important RFCE specific stuff appeared as well.
+There were a lot of early test versions in the first 4-5 months, but those were still very rudimentary, slowly adding the initial civs with all the necessary things.
+Most RFC mechanics were adapted, and a base for many important RFCE specific stuff appeared as well: Crusades, Reformation, Techs, Colonies, etc.
 I couldn't find any log about these early changes, but it's probably not that relevant.
-By the end of 2008 (or early 2009), everything started to get into shape, and we have a complete changelog since 2009 February.
-Obviously, more or less everything evolved/improved/revised/changed since, see the very long list of changes above...
+By the end of 2008 everything started to get into shape, and we have a complete changelog since 2009 January.
+
+Obviously the mod evolved a lot since, basically everything was improved/revised/changed/optimized in the last years, most of them multiple times.
+Also a lot of new additions were made, including entirely new civs and mechanics, and the mod is still in an active development.
+Check the very long list of changes above...
 
 Countless hours of development were put into the mod, by various modders/helpers.
 I (and I'm sure everyone else who ever contributed as well) hope you will have fun with it!
-Cheers: Absinthe
+Cheers: AbsintheRed

@@ -784,10 +784,17 @@ class Crusades:
 								iChosenX = iX
 								iChosenY = iY
 
-				print("Made Units on:", iChosenX, iChosenY,iLeader)
+				print("Made Units on:", iChosenX, iChosenY, iLeader)
 
+		# Absinthe: if a valid plot is found, make the units and send a message about the arrival to the human player
 		if ( (iChosenX>=0) and (iChosenX<con.iMapMaxX) and (iChosenY>=0) and (iChosenY<con.iMapMaxY) ):
 			self.crusadeMakeUnits( [iChosenX,iChosenY] )
+			if (utils.getHumanID() == iLeader):
+				pTargetCity = gc.getMap().plot( iTX, iTY ).getPlotCity()
+				sCityName = cnm.lookupName(pTargetCity,con.iPope)
+				if ( sCityName == 'Unknown' ):
+					sCityName = cnm.lookupName(pTargetCity,iLeader)
+				CyInterface().addMessage(utils.getHumanID(), True, con.iDuration, CyTranslator().getText("TXT_KEY_CRUSADE_ARRIVAL", (sCityName, )) + "!", "", 0, "", ColorTypes(con.iGreen), iChosenX, iChosenY, True, True)
 		else:
 			self.returnCrusaders()
 
