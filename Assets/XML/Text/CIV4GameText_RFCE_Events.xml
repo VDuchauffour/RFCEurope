@@ -1317,4 +1317,14 @@
 		<Italian>Gli antimonarchici %s1:3_civ_adjective stanno protestando, dicono che le istituzioni religiose non hanno abbastanza poteri rispetto al re.</Italian>
 		<Spanish>Antimon&#225;rquicos %s1_civ_adjective estan protestando, diciendo que las instituciones religiosas apenas tiene poder frente al Rey.</Spanish>
 	</TEXT>
+	<!-- Absinthe: Unused in the mod, but this is a fix for language issues as there is a double German tag in the Firaxis files -->
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_CIV_GAME_1</Tag>
+		<English>Send congratulations to the developers. Our people should enjoy this game.</English>
+		<French>Envoyez nos felicitations aux developpeurs. Notre bon peuple devrait apprecier ce jeu.</French>
+		<German>&#220;bermittelt meine Gl&#252;ckw&#252;nsche. Unser Volk soll sich an dem Spiel erfreuen.</German>
+		<Italian>Manda le nostre congratulazioni agli sviluppatori. La nostra gente si divertir&#224; con questo gioco.</Italian>
+		<Spanish>Enviar felicitaciones a los desarrolladores. Nuestro pueblo disfrutar&#225; este juego.</Spanish>
+	</TEXT>
+	<!-- Absinthe: end -->
 </Civ4GameText>

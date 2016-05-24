@@ -150,7 +150,7 @@ tNovgorodPot2Norm = [xml.iP_Estonia, xml.iP_Osterland]
 
 tNorwayCore = [xml.iP_Norway,xml.iP_Vestfold]
 tNorwayNorm = [xml.iP_Iceland]
-tNorwayOuter = [xml.iP_Scotland,xml.iP_Northumbria,xml.iP_Ireland,xml.iP_Normandy,xml.iP_Svealand,xml.iP_Norrland]
+tNorwayOuter = [xml.iP_Scotland,xml.iP_Northumbria,xml.iP_Ireland,xml.iP_Normandy,xml.iP_Svealand,xml.iP_Norrland,xml.iP_Sicily,xml.iP_Apulia,xml.iP_Calabria,xml.iP_Malta]
 tNorwayPot2Core = []
 tNorwayPot2Norm = [xml.iP_TheIsles,xml.iP_Jamtland]
 
@@ -174,7 +174,7 @@ tSpainPot2Norm = [xml.iP_Navarre,xml.iP_Andalusia,xml.iP_Valencia,xml.iP_LaManch
 
 tDenmarkCore = [xml.iP_Denmark,xml.iP_Skaneland]
 tDenmarkNorm = []
-tDenmarkOuter = [xml.iP_Gotaland,xml.iP_Svealand,xml.iP_Northumbria,xml.iP_Mercia,xml.iP_EastAnglia,xml.iP_London,xml.iP_Brandenburg,xml.iP_Norway,xml.iP_Vestfold,xml.iP_Normandy]
+tDenmarkOuter = [xml.iP_Gotaland,xml.iP_Svealand,xml.iP_Northumbria,xml.iP_Mercia,xml.iP_EastAnglia,xml.iP_London,xml.iP_Brandenburg,xml.iP_Norway,xml.iP_Vestfold,xml.iP_Normandy,xml.iP_Sicily,xml.iP_Apulia,xml.iP_Calabria,xml.iP_Malta]
 tDenmarkPot2Core = []
 tDenmarkPot2Norm = [xml.iP_Estonia,xml.iP_Gotland,xml.iP_Holstein]
 
@@ -442,6 +442,16 @@ class ProvinceManager:
 					self.onSpawn(iPlayer)
 
 	def checkTurn(self, iGameTurn):
+		# Norse provinces switch back to unstable after the fall of the Norman Kingdom of Sicily
+		if (iGameTurn == (xml.i1194AD + 1)):
+			pNorway.setProvinceType( xml.iP_Apulia, iProvinceNone )
+			pNorway.setProvinceType( xml.iP_Calabria, iProvinceNone )
+			pNorway.setProvinceType( xml.iP_Sicily, iProvinceNone )
+			pNorway.setProvinceType( xml.iP_Malta, iProvinceNone )
+			pDenmark.setProvinceType( xml.iP_Apulia, iProvinceNone )
+			pDenmark.setProvinceType( xml.iP_Calabria, iProvinceNone )
+			pDenmark.setProvinceType( xml.iP_Sicily, iProvinceNone )
+			pDenmark.setProvinceType( xml.iP_Malta, iProvinceNone )
 		# Prussia direction change
 		if (iGameTurn == xml.i1618AD):
 			pPrussia.setProvinceType( xml.iP_Estonia, iProvinceNone )
@@ -590,9 +600,7 @@ class ProvinceManager:
 			pFrankia.setProvinceType( xml.iP_Picardy, iProvincePotential )
 			pScotland.setProvinceType( xml.iP_Northumbria, iProvinceOuter )
 			pScotland.setProvinceType( xml.iP_Mercia, iProvinceNone )
-			pNorway.setProvinceType( xml.iP_Normandy, iProvinceNone )
 			pNorway.setProvinceType( xml.iP_Northumbria, iProvinceNone )
-			pDenmark.setProvinceType( xml.iP_Normandy, iProvinceNone )
 			pDenmark.setProvinceType( xml.iP_Northumbria, iProvinceNone )
 			pDenmark.setProvinceType( xml.iP_Mercia, iProvinceNone )
 			pDenmark.setProvinceType( xml.iP_EastAnglia, iProvinceNone )

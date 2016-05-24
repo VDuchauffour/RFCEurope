@@ -189,6 +189,7 @@ public:
 	int getTechCount(int /*TechTypes*/ eIndex);
 
 	bool isTerrainTrade(int /*TerrainTypes*/ eIndex);
+	void changeTerrainTradeCount(int /*TerrainTypes*/ eIndex, int iChange); // Absinthe
 	bool isRiverTrade();
 	bool isHasTech(int /*TechTypes*/ iIndex);
 	void setHasTech(int /*TechTypes*/ eIndex, bool bNewValue, int /*PlayerTypes*/ ePlayer, bool bFirst, bool bAnnounce);

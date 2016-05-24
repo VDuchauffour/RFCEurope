@@ -527,8 +527,13 @@ class CvEventManager:
 			if (iFeatureType == gc.getInfoTypeForString("FEATURE_FOREST") or iFeatureType == xml.iDenseForest or iFeatureType == xml.iPalmForest):
 				iBonusType = pPlot.getBonusType(-1)
 				if (iBonusType == xml.iTimber or iBonusType == xml.iDeer or iBonusType == xml.iFur): # deer, fur, timber
-					print ("Resource disappeared on forest removal", pPlot.getBonusType(-1))
+					print ("Resource disappeared on forest removal", iBonusType)
 					pPlot.setBonusType(-1)
+					# also remove corresponding improvements
+					iImprovementType = pPlot.getImprovementType()
+					if (iImprovementType == xml.iImprovementCamp): # camp is only buildable on resources, while lumbermills are removed by default on forest removal
+						pPlot.setImprovementType(-1)
+						print ("Improvement also removed", iImprovementType)
 					# Absinthe: message for the human player if it was inside it's territory
 					iOwner = pPlot.getOwner()
 					if (iOwner == utils.getHumanID()):

@@ -68,7 +68,12 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<FreeBonuses/>
+			<FreeBonuses>
+				<FreeBonus>
+					<FreeBonusType>BONUS_EAST_ASIA_ACCESS</FreeBonusType>
+					<iFreeBonusCount>1</iFreeBonusCount>
+				</FreeBonus>
+			</FreeBonuses>
 			<PProjects/>
 			<PBonus>NONE</PBonus>
 			<bIsColony>0</bIsColony>
@@ -105,7 +110,16 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<FreeBonuses/>
+			<FreeBonuses>
+				<FreeBonus>
+					<FreeBonusType>BONUS_NORTH_AMERICA_ACCESS</FreeBonusType>
+					<iFreeBonusCount>1</iFreeBonusCount>
+				</FreeBonus>
+				<FreeBonus>
+					<FreeBonusType>BONUS_SOUTH_AMERICA_ACCESS</FreeBonusType>
+					<iFreeBonusCount>1</iFreeBonusCount>
+				</FreeBonus>
+			</FreeBonuses>
 			<PProjects/>
 			<PBonus>NONE</PBonus>
 			<bIsColony>0</bIsColony>
@@ -164,7 +178,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_GOLD_COAST_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_GOLD_COAST_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_GUNPOWDER</TechPrereq>
+			<TechPrereq>TECH_PROFESSIONAL_ARMY</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -256,7 +270,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_CUBA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_CUBA_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_GUNPOWDER</TechPrereq>
+			<TechPrereq>TECH_PROFESSIONAL_ARMY</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -539,7 +553,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_INDIA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_INDIA_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_MILITARY_TRADITION</TechPrereq>
+			<TechPrereq>TECH_PROFESSIONAL_ARMY</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>3</iMaxGlobalInstances>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
@@ -807,7 +821,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_AZTEC_CONQUEST_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_AZTEC_CONQUEST_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_PROFESSIONAL_ARMY</TechPrereq>
+			<TechPrereq>TECH_CHEMISTRY</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -852,7 +866,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_INCA_CONQUEST_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_INCA_CONQUEST_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_PROFESSIONAL_ARMY</TechPrereq>
+			<TechPrereq>TECH_CHEMISTRY</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
