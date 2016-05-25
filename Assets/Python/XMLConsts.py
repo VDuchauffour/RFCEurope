@@ -306,8 +306,8 @@ iNumCorporations = 7 # to mark Genoa's UHV as false
 #Projects, Colonies
 iNumProjects = 25
 (iEncyclopedie, iEastIndiaCompany, iWestIndiaCompany,
-iColVinland, iColGoldCoast, iColIvoryCoast, iColCuba, iColBrazil, iColHudson, iColVirginia, iColFarEast, iColIndia, iColEastIndies,
-iColMalaysia, iColCapeTown, iColEastAfrica, iColAztec, iColIna, iColHispaniola, iColQuebec, iColNewEngland, iColJamaica, iColPanama,
+iColVinland, iColGoldCoast, iColIvoryCoast, iColCuba, iColHispaniola, iColBrazil, iColHudson, iColVirginia, iColEastAfrica, iColFarEast,
+iColIndia, iColEastIndies, iColMalaysia, iColCapeTown, iColAztec, iColInca, iColQuebec, iColNewEngland, iColJamaica, iColPanama,
 iColLouisiana, iColPhillippines) = range(iNumProjects)
 iNumNotColonies = 3
 iNumTotalColonies = iNumProjects

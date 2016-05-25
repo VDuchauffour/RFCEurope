@@ -244,12 +244,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHRINE_OF_UPPSALA_HELP</Tag>
-		<English>[ICON_BULLET]+1[ICON_CULTURE] in all cities without a (state) religion</English>
-		<French>.</French>
-		<German>[ICON_BULLET]+1[ICON_CULTURE] in jeder Stadt ohne Staatsreligion</German>
-		<Italian>[ICON_BULLET]+1[ICON_CULTURE] in tutte le città senza una religione ufficiale</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]+1[ICON_CULTURE] em todas as cidades sem religião de estado</Portuguese>
+		<English>[ICON_BULLET]Requires [LINK=literal]Paganism[\LINK]</English>
+		<French>[ICON_BULLET]Requires [LINK=literal]Paganism[\LINK]</French>
+		<German>[ICON_BULLET]Requires [LINK=literal]Paganism[\LINK]</German>
+		<Italian>[ICON_BULLET]Requires [LINK=literal]Paganism[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]Requires [LINK=literal]Paganism[\LINK]</Spanish>
+		<Portuguese>[ICON_BULLET]Requires [LINK=literal]Paganism[\LINK]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROUND_CHURCH</Tag>

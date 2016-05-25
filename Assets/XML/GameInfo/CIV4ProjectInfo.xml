@@ -49,7 +49,7 @@
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
-			<iCost>1200</iCost>
+			<iCost>800</iCost>
 			<iNukeInterception>0</iNukeInterception>
 			<iTechShare>0</iTechShare>
 			<EveryoneSpecialUnit>NONE</EveryoneSpecialUnit>
@@ -64,8 +64,8 @@
 			<iSuccessRate>0</iSuccessRate>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_ACCESS</BonusType>
-					<iProductonModifier>100</iProductonModifier>
+					<BonusType>BONUS_EAST_ASIA_ACCESS</BonusType>
+					<iProductonModifier>60</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<FreeBonuses>
@@ -75,7 +75,7 @@
 				</FreeBonus>
 			</FreeBonuses>
 			<PProjects/>
-			<PBonus>NONE</PBonus>
+			<PBonus>BONUS_ACCESS</PBonus>
 			<bIsColony>0</bIsColony>
 			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
 			<CreateSound/>
@@ -91,7 +91,7 @@
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
-			<iCost>1200</iCost>
+			<iCost>800</iCost>
 			<iNukeInterception>0</iNukeInterception>
 			<iTechShare>0</iTechShare>
 			<EveryoneSpecialUnit>NONE</EveryoneSpecialUnit>
@@ -106,8 +106,12 @@
 			<iSuccessRate>0</iSuccessRate>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_ACCESS</BonusType>
-					<iProductonModifier>100</iProductonModifier>
+					<BonusType>BONUS_NORTH_AMERICA_ACCESS</BonusType>
+					<iProductonModifier>30</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_SOUTH_AMERICA_ACCESS</BonusType>
+					<iProductonModifier>30</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<FreeBonuses>
@@ -121,7 +125,7 @@
 				</FreeBonus>
 			</FreeBonuses>
 			<PProjects/>
-			<PBonus>NONE</PBonus>
+			<PBonus>BONUS_ACCESS</PBonus>
 			<bIsColony>0</bIsColony>
 			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
 			<CreateSound/>
@@ -224,7 +228,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_IVORY_COAST_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_IVORY_COAST_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_CIVIL_ENGINEERING</TechPrereq>
+			<TechPrereq>TECH_ARABIC_MEDICINE</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -270,7 +274,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_CUBA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_CUBA_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_PROFESSIONAL_ARMY</TechPrereq>
+			<TechPrereq>TECH_CONSTITUTION</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -321,6 +325,56 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CUBA</MovieDefineTag>
 		</ProjectInfo>
 		<ProjectInfo>
+			<Type>PROJECT_HISPANIOLA</Type>
+			<Description>TXT_KEY_PROJECT_HISPANIOLA</Description>
+			<Civilopedia>TXT_KEY_PROJECT_HISPANIOLA_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_PROJECT_HISPANIOLA_STRATEGY</Strategy>
+			<VictoryPrereq>NONE</VictoryPrereq>
+			<TechPrereq>TECH_PUBLIC_WORKS</TechPrereq>
+			<AnyonePrereqProject>NONE</AnyonePrereqProject>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iCost>1000</iCost>
+			<iNukeInterception>0</iNukeInterception>
+			<iTechShare>0</iTechShare>
+			<EveryoneSpecialUnit>NONE</EveryoneSpecialUnit>
+			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
+			<bSpaceship>0</bSpaceship>
+			<bAllowsNukes>0</bAllowsNukes>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_colonies.dds,6,2</Button>
+			<PrereqProjects/>
+			<VictoryThresholds/>
+			<VictoryMinThresholds/>
+			<iVictoryDelayPercent>0</iVictoryDelayPercent>
+			<iSuccessRate>0</iSuccessRate>
+			<BonusProductionModifiers>
+				<BonusProductionModifier>
+					<BonusType>BONUS_SLAVES</BonusType>
+					<iProductonModifier>100</iProductonModifier>
+				</BonusProductionModifier>
+			</BonusProductionModifiers>
+			<FreeBonuses>
+				<FreeBonus>
+					<FreeBonusType>BONUS_SUGAR</FreeBonusType>
+					<iFreeBonusCount>2</iFreeBonusCount>
+				</FreeBonus>
+				<FreeBonus>
+					<FreeBonusType>BONUS_COFFEE</FreeBonusType>
+					<iFreeBonusCount>1</iFreeBonusCount>
+				</FreeBonus>
+				<FreeBonus>
+					<FreeBonusType>BONUS_SOUTH_AMERICA_ACCESS</FreeBonusType>
+					<iFreeBonusCount>1</iFreeBonusCount>
+				</FreeBonus>
+			</FreeBonuses>
+			<PProjects/>
+			<PBonus>BONUS_ACCESS</PBonus>
+			<bIsColony>1</bIsColony>
+			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
+			<CreateSound/>
+			<MovieDefineTag>ART_DEF_MOVIE_HISPANIOLA</MovieDefineTag>
+		</ProjectInfo>
+		<ProjectInfo>
 			<Type>PROJECT_BRAZIL</Type>
 			<Description>TXT_KEY_PROJECT_BRAZIL</Description>
 			<Civilopedia>TXT_KEY_PROJECT_BRAZIL_PEDIA</Civilopedia>
@@ -358,7 +412,11 @@
 			<FreeBonuses>
 				<FreeBonus>
 					<FreeBonusType>BONUS_SUGAR</FreeBonusType>
-					<iFreeBonusCount>2</iFreeBonusCount>
+					<iFreeBonusCount>1</iFreeBonusCount>
+				</FreeBonus>
+				<FreeBonus>
+					<FreeBonusType>BONUS_TIMBER</FreeBonusType>
+					<iFreeBonusCount>1</iFreeBonusCount>
 				</FreeBonus>
 				<FreeBonus>
 					<FreeBonusType>BONUS_GEMS</FreeBonusType>
@@ -369,12 +427,7 @@
 					<iFreeBonusCount>1</iFreeBonusCount>
 				</FreeBonus>
 			</FreeBonuses>
-			<PProjects>
-				<PProject>
-					<PProjectType>PROJECT_WEST_INDIA_COMPANY</PProjectType>
-					<iPProjectCount>1</iPProjectCount>
-				</PProject>
-			</PProjects>
+			<PProjects/>
 			<PBonus>BONUS_ACCESS</PBonus>
 			<bIsColony>1</bIsColony>
 			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
@@ -444,7 +497,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_VIRGINIA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_VIRGINIA_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_CONSTITUTION</TechPrereq>
+			<TechPrereq>TECH_NATIONALISM</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -500,12 +553,57 @@
 			<MovieDefineTag>ART_DEF_MOVIE_VIRGINIA</MovieDefineTag>
 		</ProjectInfo>
 		<ProjectInfo>
+			<Type>PROJECT_EAST_AFRICA</Type>
+			<Description>TXT_KEY_PROJECT_EAST_AFRICA</Description>
+			<Civilopedia>TXT_KEY_PROJECT_EAST_AFRICA_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_PROJECT_EAST_AFRICA_STRATEGY</Strategy>
+			<VictoryPrereq>NONE</VictoryPrereq>
+			<TechPrereq>TECH_POLYGONAL_FORT</TechPrereq>
+			<AnyonePrereqProject>NONE</AnyonePrereqProject>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iCost>800</iCost>
+			<iNukeInterception>0</iNukeInterception>
+			<iTechShare>0</iTechShare>
+			<EveryoneSpecialUnit>NONE</EveryoneSpecialUnit>
+			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
+			<bSpaceship>0</bSpaceship>
+			<bAllowsNukes>0</bAllowsNukes>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_colonies.dds,1,3</Button>
+			<PrereqProjects/>
+			<VictoryThresholds/>
+			<VictoryMinThresholds/>
+			<iVictoryDelayPercent>0</iVictoryDelayPercent>
+			<iSuccessRate>0</iSuccessRate>
+			<BonusProductionModifiers/>
+			<FreeBonuses>
+				<FreeBonus>
+					<FreeBonusType>BONUS_COFFEE</FreeBonusType>
+					<iFreeBonusCount>2</iFreeBonusCount>
+				</FreeBonus>
+				<FreeBonus>
+					<FreeBonusType>BONUS_SLAVES</FreeBonusType>
+					<iFreeBonusCount>1</iFreeBonusCount>
+				</FreeBonus>
+				<FreeBonus>
+					<FreeBonusType>BONUS_EAST_ASIA_ACCESS</FreeBonusType>
+					<iFreeBonusCount>1</iFreeBonusCount>
+				</FreeBonus>
+			</FreeBonuses>
+			<PProjects/>
+			<PBonus>BONUS_ACCESS</PBonus>
+			<bIsColony>1</bIsColony>
+			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
+			<CreateSound/>
+			<MovieDefineTag>ART_DEF_MOVIE_EAST_AFRICA</MovieDefineTag>
+		</ProjectInfo>
+		<ProjectInfo>
 			<Type>PROJECT_FAR_EASTERN_TREATY_PORT</Type>
 			<Description>TXT_KEY_PROJECT_FAR_EASTERN_TREATY_PORT</Description>
 			<Civilopedia>TXT_KEY_PROJECT_FAR_EASTERN_TREATY_PORT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_FAR_EASTERN_TREATY_PORT_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_NATIONALISM</TechPrereq>
+			<TechPrereq>TECH_MILITARY_TACTICS</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>3</iMaxGlobalInstances>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
@@ -553,7 +651,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_INDIA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_INDIA_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_PROFESSIONAL_ARMY</TechPrereq>
+			<TechPrereq>TECH_POLYGONAL_FORT</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>3</iMaxGlobalInstances>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
@@ -667,7 +765,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_MALAYSIA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_MALAYSIA_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_ARABIC_MEDICINE</TechPrereq>
+			<TechPrereq>TECH_COMBINED_ARMS</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -728,7 +826,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_CAPE_TOWN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_CAPE_TOWN_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_ECONOMICS</TechPrereq>
+			<TechPrereq>TECH_PROFESSIONAL_ARMY</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -762,12 +860,7 @@
 					<iFreeBonusCount>1</iFreeBonusCount>
 				</FreeBonus>
 			</FreeBonuses>
-			<PProjects>
-				<PProject>
-					<PProjectType>PROJECT_EAST_INDIA_COMPANY</PProjectType>
-					<iPProjectCount>1</iPProjectCount>
-				</PProject>
-			</PProjects>
+			<PProjects/>
 			<PBonus>BONUS_ACCESS</PBonus>
 			<bIsColony>1</bIsColony>
 			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
@@ -775,53 +868,12 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CAPE_TOWN</MovieDefineTag>
 		</ProjectInfo>
 		<ProjectInfo>
-			<Type>PROJECT_EAST_AFRICA</Type>
-			<Description>TXT_KEY_PROJECT_EAST_AFRICA</Description>
-			<Civilopedia>TXT_KEY_PROJECT_EAST_AFRICA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_PROJECT_EAST_AFRICA_STRATEGY</Strategy>
-			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_ARABIC_MEDICINE</TechPrereq>
-			<AnyonePrereqProject>NONE</AnyonePrereqProject>
-			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iCost>800</iCost>
-			<iNukeInterception>0</iNukeInterception>
-			<iTechShare>0</iTechShare>
-			<EveryoneSpecialUnit>NONE</EveryoneSpecialUnit>
-			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
-			<bSpaceship>0</bSpaceship>
-			<bAllowsNukes>0</bAllowsNukes>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_colonies.dds,1,3</Button>
-			<PrereqProjects/>
-			<VictoryThresholds/>
-			<VictoryMinThresholds/>
-			<iVictoryDelayPercent>0</iVictoryDelayPercent>
-			<iSuccessRate>0</iSuccessRate>
-			<BonusProductionModifiers/>
-			<FreeBonuses>
-				<FreeBonus>
-					<FreeBonusType>BONUS_COFFEE</FreeBonusType>
-					<iFreeBonusCount>2</iFreeBonusCount>
-				</FreeBonus>
-				<FreeBonus>
-					<FreeBonusType>BONUS_SLAVES</FreeBonusType>
-					<iFreeBonusCount>1</iFreeBonusCount>
-				</FreeBonus>
-			</FreeBonuses>
-			<PProjects/>
-			<PBonus>BONUS_ACCESS</PBonus>
-			<bIsColony>1</bIsColony>
-			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
-			<CreateSound/>
-			<MovieDefineTag>ART_DEF_MOVIE_EAST_AFRICA</MovieDefineTag>
-		</ProjectInfo>
-		<ProjectInfo>
 			<Type>PROJECT_AZTEC_CONQUEST</Type>
 			<Description>TXT_KEY_PROJECT_AZTEC_CONQUEST</Description>
 			<Civilopedia>TXT_KEY_PROJECT_AZTEC_CONQUEST_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_AZTEC_CONQUEST_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_CHEMISTRY</TechPrereq>
+			<TechPrereq>TECH_MATCHLOCK</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -866,7 +918,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_INCA_CONQUEST_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_INCA_CONQUEST_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_CHEMISTRY</TechPrereq>
+			<TechPrereq>TECH_MATCHLOCK</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -906,62 +958,12 @@
 			<MovieDefineTag>ART_DEF_MOVIE_INCA_CONQUEST</MovieDefineTag>
 		</ProjectInfo>
 		<ProjectInfo>
-			<Type>PROJECT_HISPANIOLA</Type>
-			<Description>TXT_KEY_PROJECT_HISPANIOLA</Description>
-			<Civilopedia>TXT_KEY_PROJECT_HISPANIOLA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_PROJECT_HISPANIOLA_STRATEGY</Strategy>
-			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_PUBLIC_WORKS</TechPrereq>
-			<AnyonePrereqProject>NONE</AnyonePrereqProject>
-			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iCost>1000</iCost>
-			<iNukeInterception>0</iNukeInterception>
-			<iTechShare>0</iTechShare>
-			<EveryoneSpecialUnit>NONE</EveryoneSpecialUnit>
-			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
-			<bSpaceship>0</bSpaceship>
-			<bAllowsNukes>0</bAllowsNukes>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_colonies.dds,6,2</Button>
-			<PrereqProjects/>
-			<VictoryThresholds/>
-			<VictoryMinThresholds/>
-			<iVictoryDelayPercent>0</iVictoryDelayPercent>
-			<iSuccessRate>0</iSuccessRate>
-			<BonusProductionModifiers>
-				<BonusProductionModifier>
-					<BonusType>BONUS_SOUTH_AMERICA_ACCESS</BonusType>
-					<iProductonModifier>20</iProductonModifier>
-				</BonusProductionModifier>
-			</BonusProductionModifiers>
-			<FreeBonuses>
-				<FreeBonus>
-					<FreeBonusType>BONUS_SUGAR</FreeBonusType>
-					<iFreeBonusCount>2</iFreeBonusCount>
-				</FreeBonus>
-				<FreeBonus>
-					<FreeBonusType>BONUS_GEMS</FreeBonusType>
-					<iFreeBonusCount>1</iFreeBonusCount>
-				</FreeBonus>
-				<FreeBonus>
-					<FreeBonusType>BONUS_SOUTH_AMERICA_ACCESS</FreeBonusType>
-					<iFreeBonusCount>1</iFreeBonusCount>
-				</FreeBonus>
-			</FreeBonuses>
-			<PProjects/>
-			<PBonus>BONUS_ACCESS</PBonus>
-			<bIsColony>1</bIsColony>
-			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
-			<CreateSound/>
-			<MovieDefineTag>ART_DEF_MOVIE_HISPANIOLA</MovieDefineTag>
-		</ProjectInfo>
-		<ProjectInfo>
 			<Type>PROJECT_QUEBEC</Type>
 			<Description>TXT_KEY_PROJECT_QUEBEC</Description>
 			<Civilopedia>TXT_KEY_PROJECT_QUEBEC_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_QUEBEC_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_NATIONALISM</TechPrereq>
+			<TechPrereq>TECH_LIBERALISM</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -1061,12 +1063,7 @@
 					<iFreeBonusCount>1</iFreeBonusCount>
 				</FreeBonus>
 			</FreeBonuses>
-			<PProjects>
-				<PProject>
-					<PProjectType>PROJECT_WEST_INDIA_COMPANY</PProjectType>
-					<iPProjectCount>1</iPProjectCount>
-				</PProject>
-			</PProjects>
+			<PProjects/>
 			<PBonus>BONUS_ACCESS</PBonus>
 			<bIsColony>1</bIsColony>
 			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
@@ -1079,7 +1076,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_JAMAICA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_JAMAICA_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_PUBLIC_WORKS</TechPrereq>
+			<TechPrereq>TECH_LIBERALISM</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -1138,7 +1135,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_PANAMA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_PANAMA_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_PUBLIC_WORKS</TechPrereq>
+			<TechPrereq>TECH_ARABIC_MEDICINE</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -1179,7 +1176,12 @@
 					<iFreeBonusCount>1</iFreeBonusCount>
 				</FreeBonus>
 			</FreeBonuses>
-			<PProjects/>
+			<PProjects>
+				<PProject>
+					<PProjectType>PROJECT_WEST_INDIA_COMPANY</PProjectType>
+					<iPProjectCount>1</iPProjectCount>
+				</PProject>
+			</PProjects>
 			<PBonus>BONUS_ACCESS</PBonus>
 			<bIsColony>1</bIsColony>
 			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>
@@ -1192,7 +1194,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_LOUISIANA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_LOUISIANA_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_ECONOMICS</TechPrereq>
+			<TechPrereq>TECH_BIOLOGY</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -1255,7 +1257,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_PHILLIPPINES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_PHILLIPPINES_STRATEGY</Strategy>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<TechPrereq>TECH_NAVAL_ARCHITECTURE</TechPrereq>
+			<TechPrereq>TECH_CIVIL_ENGINEERING</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
@@ -1296,7 +1298,12 @@
 					<iFreeBonusCount>1</iFreeBonusCount>
 				</FreeBonus>
 			</FreeBonuses>
-			<PProjects/>
+			<PProjects>
+				<PProject>
+					<PProjectType>PROJECT_EAST_INDIA_COMPANY</PProjectType>
+					<iPProjectCount>1</iPProjectCount>
+				</PProject>
+			</PProjects>
 			<PBonus>BONUS_ACCESS</PBonus>
 			<bIsColony>1</bIsColony>
 			<iCannotBeBuildAfterTurn>-1</iCannotBeBuildAfterTurn>

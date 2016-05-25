@@ -92,6 +92,9 @@ void CyPlayerPythonInterface2(python::class_<CyPlayer>& x)
 		.def("getEverRespawned", &CyPlayer::getEverRespawned, "bool ()")
 		.def("setEverRespawned", &CyPlayer::setEverRespawned, "void ( bool )")
 
+		// Absinthe: civic requirements
+		.def("hasCivic", &CyPlayer::hasCivic, "bool (int iCivic)")
+
 		.def("getForcedHistoricityUnitProduction", &CyPlayer::getForcedHistoricityUnitProduction, "int ()")
 		.def("setForcedHistoricityUnitProduction", &CyPlayer::setForcedHistoricityUnitProduction, "void ( int )")
 

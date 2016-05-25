@@ -1789,7 +1789,7 @@ bool CvCity::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool b
 		return false;
 	}
 
-	// 3MiroProsecutor: Make it so that Prosecutors can only be build in cities with state religion
+	// 3MiroProsecutor: Make it so that Prosecutors can only be built in cities with state religion
 	if ( eUnit == UNIT_PROSECUTOR ){
 		//if ( !( (GET_PLAYER(getOwnerINLINE()).getStateReligion() == NO_RELIGION) || (isHasReligion( GET_PLAYER(getOwnerINLINE()).getStateReligion())) ) ){
 		if ( !( (GET_PLAYER(getOwnerINLINE()).getStateReligion() != NO_RELIGION) && (isHasReligion( GET_PLAYER(getOwnerINLINE()).getStateReligion())) ) )

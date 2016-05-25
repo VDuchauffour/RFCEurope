@@ -5510,7 +5510,8 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 		}
 	}
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && isHuman())
+	// Absinthe: speed
+	/*if (GC.getGameINLINE().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && isHuman())
 	{
 		if (GC.getUnitInfo(eUnit).isFound())
 		{
@@ -5524,7 +5525,7 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 		{
 			return false;
 		}
-	}
+	}*/
 
 	if (!(GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getUnitInfo(eUnit).getPrereqAndTech()))))
 	{
@@ -5545,6 +5546,23 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 	if (GC.getUnitInfo(eUnit).getStateReligion() != NO_RELIGION)
 	{
 		if (getStateReligion() != GC.getUnitInfo(eUnit).getStateReligion())
+		{
+			return false;
+		}
+	}
+
+	// Absinthe: civic requirement
+	bool bFound = false;
+	if (GC.getUnitInfo(eUnit).getPrereqCivic() != NO_CIVIC)
+	{
+		for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+		{
+			if (getCivics((CivicOptionTypes)iI) == GC.getUnitInfo(eUnit).getPrereqCivic())
+			{
+				bFound = true;
+			}
+		}
+		if (!bFound)
 		{
 			return false;
 		}
@@ -5681,6 +5699,23 @@ bool CvPlayer::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestV
 			if ( !bAllowNSRB ){
 				return false;
 			};
+		}
+	}
+
+	// Absinthe: civic requirement
+	bool bFound = false;
+	if (GC.getBuildingInfo(eBuilding).getPrereqCivic() != NO_CIVIC)
+	{
+		for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+		{
+			if (getCivics((CivicOptionTypes)iI) == GC.getBuildingInfo(eBuilding).getPrereqCivic())
+			{
+				bFound = true;
+			}
+		}
+		if (!bFound)
+		{
+			return false;
 		}
 	}
 
@@ -23816,6 +23851,11 @@ void CvPlayer::setEverRespawned( bool bNewValue )
 	{
 		m_bEverRespawned = bNewValue;
 	}
+}
+// Absinthe: civic requirements
+bool CvPlayer::hasCivic(CivicTypes eCivic) const
+{
+	return (getCivics((CivicOptionTypes)GC.getCivicInfo(eCivic).getCivicOptionType()) == eCivic);
 }
 
 void CvPlayer::setForcedHistoricityUnitProduction( int iNewValue ){

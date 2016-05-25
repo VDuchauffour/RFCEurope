@@ -8154,6 +8154,16 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 			}
 		}
 
+		// Absinthe: display civic requirements
+		if (kBuilding.getPrereqCivic() != -1)
+		{
+			if (NULL != pCity && NO_PLAYER != ePlayer && !GET_PLAYER(ePlayer).hasCivic((CivicTypes)kBuilding.getPrereqCivic()))
+			{
+				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_CIVIC", GC.getCivicInfo((CivicTypes)kBuilding.getPrereqCivic()).getText()));
+			}
+		}
+
 		if (kBuilding.isStateReligion())
 		{
 			if (NULL == pCity || NO_PLAYER == ePlayer || NO_RELIGION == GET_PLAYER(ePlayer).getStateReligion() || !pCity->isHasReligion(GET_PLAYER(ePlayer).getStateReligion()))

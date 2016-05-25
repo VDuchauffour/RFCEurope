@@ -3065,6 +3065,7 @@ m_iHolyCity(NO_RELIGION),
 m_iReligionType(NO_RELIGION),
 m_iStateReligion(NO_RELIGION),
 m_iPrereqReligion(NO_RELIGION),
+m_iPrereqCivic(NO_CIVIC), // Absinthe
 m_iPrereqCorporation(NO_CORPORATION),
 m_iPrereqBuilding(NO_BUILDING),
 m_iPrereqAndTech(NO_TECH),
@@ -3529,6 +3530,12 @@ int CvUnitInfo::getStateReligion() const
 int CvUnitInfo::getPrereqReligion() const
 {
 	return m_iPrereqReligion;
+}
+
+// Absinthe
+int CvUnitInfo::getPrereqCivic() const
+{
+	return m_iPrereqCivic;
 }
 
 int CvUnitInfo::getPrereqCorporation() const
@@ -4302,6 +4309,7 @@ void CvUnitInfo::read(FDataStreamBase* stream)
 	stream->Read(&m_iReligionType);
 	stream->Read(&m_iStateReligion);
 	stream->Read(&m_iPrereqReligion);
+	stream->Read(&m_iPrereqCivic); // Absinthe
 	stream->Read(&m_iPrereqCorporation);
 	stream->Read(&m_iPrereqBuilding);
 	stream->Read(&m_iPrereqAndTech);
@@ -4610,6 +4618,7 @@ void CvUnitInfo::write(FDataStreamBase* stream)
 	stream->Write(m_iReligionType);
 	stream->Write(m_iStateReligion);
 	stream->Write(m_iPrereqReligion);
+	stream->Write(m_iPrereqCivic); // Absinthe
 	stream->Write(m_iPrereqCorporation);
 	stream->Write(m_iPrereqBuilding);
 	stream->Write(m_iPrereqAndTech);
@@ -4853,6 +4862,10 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetChildXmlValByName(szTextVal, "PrereqReligion");
 	m_iPrereqReligion = pXML->FindInInfoClass(szTextVal);
+
+	//Absinthe
+	pXML->GetChildXmlValByName(szTextVal, "PrereqCivic");
+	m_iPrereqCivic = pXML->FindInInfoClass(szTextVal);
 
 	pXML->GetChildXmlValByName(szTextVal, "PrereqCorporation");
 	m_iPrereqCorporation = pXML->FindInInfoClass(szTextVal);
@@ -6603,6 +6616,7 @@ m_iHolyCity(NO_RELIGION),
 m_iReligionType(NO_RELIGION),
 m_iStateReligion(NO_RELIGION),
 m_iPrereqReligion(NO_RELIGION),
+m_iPrereqCivic(NO_CIVIC), // Absinthe
 m_iPrereqCorporation(NO_CORPORATION),
 m_iFoundsCorporation(NO_CORPORATION),
 m_iGlobalReligionCommerce(0),
@@ -7092,6 +7106,12 @@ int CvBuildingInfo::getStateReligion() const
 int CvBuildingInfo::getPrereqReligion() const
 {
 	return m_iPrereqReligion;
+}
+
+// Absinthe
+int CvBuildingInfo::getPrereqCivic() const
+{
+	return m_iPrereqCivic;
 }
 
 int CvBuildingInfo::getPrereqCorporation() const
@@ -7855,6 +7875,7 @@ void CvBuildingInfo::read(FDataStreamBase* stream)
 	stream->Read(&m_iReligionType);
 	stream->Read(&m_iStateReligion);
 	stream->Read(&m_iPrereqReligion);
+	stream->Read(&m_iPrereqCivic); // Absinthe
 	stream->Read(&m_iPrereqCorporation);
 	stream->Read(&m_iFoundsCorporation);
 	stream->Read(&m_iGlobalReligionCommerce);
@@ -8190,6 +8211,7 @@ void CvBuildingInfo::write(FDataStreamBase* stream)
 	stream->Write(m_iReligionType);
 	stream->Write(m_iStateReligion);
 	stream->Write(m_iPrereqReligion);
+	stream->Write(m_iPrereqCivic); // Absinthe
 	stream->Write(m_iPrereqCorporation);
 	stream->Write(m_iFoundsCorporation);
 	stream->Write(m_iGlobalReligionCommerce);
@@ -8353,6 +8375,10 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetChildXmlValByName(szTextVal, "PrereqReligion");
 	m_iPrereqReligion = pXML->FindInInfoClass(szTextVal);
+
+	// Absinthe
+	pXML->GetChildXmlValByName(szTextVal, "PrereqCivic");
+	m_aszExtraXMLforPass3.push_back(szTextVal); // SoI -> readpass3
 
 	pXML->GetChildXmlValByName(szTextVal, "PrereqCorporation");
 	m_iPrereqCorporation = pXML->FindInInfoClass(szTextVal);
@@ -8930,6 +8956,21 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_piImprovementFreeSpecialist, "ImprovementFreeSpecialists", sizeof(GC.getImprovementInfo((ImprovementTypes)0)), GC.getNumImprovementInfos());
 
 	pXML->SetVariableListTagPair(&m_piBuildingHappinessChanges, "BuildingHappinessChanges", sizeof(GC.getBuildingClassInfo((BuildingClassTypes)0)), GC.getNumBuildingClassInfos());
+
+	return true;
+}
+
+// Absinthe
+bool CvBuildingInfo::readPass3()
+{
+	if (m_aszExtraXMLforPass3.size() < 1)
+	{
+		FAssert(false);
+		return false;
+	}
+
+	m_iPrereqCivic = GC.getInfoTypeForString(m_aszExtraXMLforPass3[0]);
+	m_aszExtraXMLforPass3.clear();
 
 	return true;
 }

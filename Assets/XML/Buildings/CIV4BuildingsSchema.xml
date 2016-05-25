@@ -51,6 +51,7 @@
 	<ElementType name="StateReligion" content="textOnly"/>
 	<ElementType name="bStateReligion" content="textOnly" dt:type="boolean"/>
 	<ElementType name="PrereqReligion" content="textOnly"/>
+	<ElementType name="PrereqCivic" content="textOnly"/>
 	<ElementType name="PrereqCorporation" content="textOnly"/>
 	<ElementType name="FoundsCorporation" content="textOnly"/>
 	<ElementType name="GlobalReligionCommerce" content="textOnly"/>
@@ -415,6 +416,7 @@
 		<element type="StateReligion"/>
 		<element type="bStateReligion"/>
 		<element type="PrereqReligion"/>
+		<element type="PrereqCivic" minOccurs="0"/>
 		<element type="PrereqCorporation"/>
 		<element type="FoundsCorporation"/>
 		<element type="GlobalReligionCommerce"/>

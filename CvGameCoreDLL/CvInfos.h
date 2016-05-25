@@ -873,6 +873,7 @@ public:
 	int getReligionType() const;							// Exposed to Python
 	int getStateReligion() const;							// Exposed to Python
 	int getPrereqReligion() const;						// Exposed to Python
+	int getPrereqCivic() const; // Absinthe
 	int getPrereqCorporation() const;						// Exposed to Python
 	int getPrereqBuilding() const;						// Exposed to Python
 	int getPrereqAndTech() const;							// Exposed to Python
@@ -1068,6 +1069,7 @@ protected:
 	int m_iReligionType;					
 	int m_iStateReligion;					
 	int m_iPrereqReligion;					
+	int m_iPrereqCivic; // Absinthe
 	int m_iPrereqCorporation;					
 	int m_iPrereqBuilding;					
 	int m_iPrereqAndTech;					
@@ -1650,6 +1652,7 @@ public:
 	int getReligionType() const;				// Exposed to Python
 	int getStateReligion() const;				// Exposed to Python
 	int getPrereqReligion() const;				// Exposed to Python
+	int getPrereqCivic() const; // Absinthe
 	int getPrereqCorporation() const;				// Exposed to Python
 	int getFoundsCorporation() const;				// Exposed to Python
 	int getGlobalReligionCommerce() const;				// Exposed to Python
@@ -1786,6 +1789,7 @@ public:
 	void read(FDataStreamBase*);
 	void write(FDataStreamBase*);
 	bool read(CvXMLLoadUtility* pXML);
+	bool readPass3(); // Absinthe: civic requirement
 
 	// 3Miro: new building functions
 	bool isDamageEnemy() const; // Exposed to Python
@@ -1876,6 +1880,7 @@ protected:
 	int m_iReligionType;								
 	int m_iStateReligion;								
 	int m_iPrereqReligion;								
+	int m_iPrereqCivic; // Absinthe
 	int m_iPrereqCorporation;								
 	int m_iFoundsCorporation;					
 	int m_iGlobalReligionCommerce;

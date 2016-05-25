@@ -78,19 +78,23 @@ Changes for RFCE 1.4:
 		- Theodosian Walls obsolete on Gunpowder instead of Education
 		- St. Sophia requires Civil Service instead of Guilds (and Philosophy)
 		- Kalmar Castle moved to Military Tradition from Professional Army
-		- University moved to Education from Philosophy
-		- Inn moved to Clockmaking from Education
+		- University moved to Education from Philosophy, Inn moved to Clockmaking from Education
 		- Manor House and Chateau obsoletes with Paper instead of Divine Right
 		- Free Great Theologian for the first civ to discover Philosophy
 		- Removed redundant tech requirement of Theology from Philosophy
 		- Moved Magna Carta and Golden Bull to Philosophy from Divine Right
 		- Moved St. Basil Cathedral to Divine Right from Chemistry
+		- Pinch promotion moved to Military Tactics from Flintlock
 		- Removed tech requirements for South America Access, East Asia Access - not needed to take space on the tech tree, as they don't have actual resources on the map
 		- North America Access is special as we have one on the map near Iceland, but as it's preadded and removed early enough, still no need for tech requirement
 		- Colonial Trade Route can be established after the discovery of Astronomy instead of Astrolabe
 		- Astrolable no longer enables Ocean trading, only Optics
-		- Inca and Aztec Conquest moved to Chemistry from Professional Army
-		- Indian Trading Post, Gold Coast and Cuba moved to Professional Army
+		- Aztec Conquest and Inca Conquest moved to Flintlock from Professional Army
+		- Gold Coast and Cape Town moved to Professional Army, East Africa and Indian Trading Post moved to Polygonal Fort
+		- Ivory Coast and Panama moved to Arabic Medicine, Quebec and Jamaica moved to Liberalism
+		- Cuba moved to Constitution from Professional Army, Virginia moved to Nationalism from Constitution
+		- Far Eastern Treaty Port moved to Military Tactics from Nationalism, Malaya moved to Combined Arms from Arabic Medicine
+		- Louisiana moved to Biology from Economics, Philippines moved to Civil Engineering from Naval Architecture
 
 	General changes:
 		- Test version for the new 1200 AD scenario
@@ -125,6 +129,11 @@ Changes for RFCE 1.4:
 		- No city gifting in the first 5 turns after spawn (avoid exploit with city gifting before the spawn flip for additional units)
 		- The respective Trading Company projects provide North + South America Access and East Asia Access as a free bonus, so the AI have some incentive to actually build them
 		- Corresponding improvements will also be removed on resource removal (both on cutting forests and on historic/preset resource removals)
+		- Buildings and Units can now require Civics (adapted from Sword of Islam by embryodead)
+		- Both the Pagan Shrine and the Shrine of Uppsala require the Paganism Civic
+		- West and East India Trading Companies also need Atlantic Access - ATM there is no point in building them without AA anyway
+		- East Africa provides East Asia Access, Philippines requires the East India Company, Panama requires West India Company
+		- Brazil and New England no longer require the West India Company, Cape Town no longer requires the East India Company
 
 	Text/GUI improvements:
 		- New GlobalDefines_Alt.xml file, users can change RFCE-specific settings there (RFCEurope\Assets\XML\)
@@ -151,6 +160,7 @@ Changes for RFCE 1.4:
 		- British Isles have new base city name map: Ireland area (Panopticon), Scotland area (TimGB), England area (Panopticon, TimGB, DC123456789)
 		- New city name map for the Scottish civ: Scottish Gaelic -> Irish Gaelic/Manx -> Welsh/Cornish/Breton -> Scots -> English - by DC123456789
 		- Updated city name maps for the civs France/Burgundy, England, Norway and Denmark (in Britain, Brittany, Greece, and the Levant/Egypt) - by DC123456789
+		- Updates in the Byzantine and in the General city name maps in Britain and France - by DC123456789
 		- Texts in the WorldBuilder and in the Settings Screen will now also use the mod-specific era names
 		- Added notification about the Crusaders' arrival to the human player
 
@@ -189,6 +199,9 @@ Changes for RFCE 1.4:
 		- Decreased Ottoman unit production and maintenance bonuses, with the recent changes they are doing better than great :)
 		- Added a couple more starting units to many later starting civs (Austria, Ottomans, Dutch included)
 		- Folwark and Noria won't add extra health from the Rice resource (same as Granary)
+		- Hispaniola provides 2 Sugar and 1 Coffee resource, Brazil provides 1 Sugar, 1 Timber and 1 Gems resource
+		- Double production speed with Slaves for Hispaniola, but no production bonus from South America Access
+		- Lowered price of West and East India Companies, production speed is no longer doubled with Atlantic Access, smaller bonuses from from the other 3 Access resources
 
 	Bugfixes:
 		- Various dll bugfixes and optimizations from Better BTS AI, K-Mod, Afforess
