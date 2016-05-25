@@ -2470,6 +2470,11 @@ void CyPlayer::setEverRespawned( bool bNewValue )
 {
 	m_pPlayer ->setEverRespawned( bNewValue );
 }
+//Absinthe: civic requirements
+bool CyPlayer::hasCivic(int iCivic)
+{
+	return m_pPlayer ? m_pPlayer->hasCivic((CivicTypes)iCivic) : false;
+}
 
 void CyPlayer::setForcedHistoricityUnitProduction( int iNewValue ){
 	//m_iUnitsProduction = iNewValue;

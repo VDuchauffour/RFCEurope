@@ -12238,6 +12238,7 @@
 			<Description>TXT_KEY_BUILDING_PAGAN_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PAGAN_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PAGAN_SHRINE_STRATEGY</Strategy>
+			<Help>TXT_KEY_BUILDING_PAGAN_SHRINE_HELP</Help>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PAGAN_SHRINE</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
@@ -12246,6 +12247,7 @@
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>NONE</PrereqReligion>
+			<PrereqCivic>CIVIC_PAGANISM</PrereqCivic>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
@@ -18665,6 +18667,7 @@
 			<Description>TXT_KEY_BUILDING_SHRINE_OF_UPPSALA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHRINE_OF_UPPSALA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SHRINE_OF_UPPSALA_STRATEGY</Strategy>
+			<Help>TXT_KEY_BUILDING_SHRINE_OF_UPPSALA_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHRINE_OF_UPPSALA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_OF_UPPSALA</MovieDefineTag>
@@ -18673,6 +18676,7 @@
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>NONE</PrereqReligion>
+			<PrereqCivic>CIVIC_PAGANISM</PrereqCivic>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>

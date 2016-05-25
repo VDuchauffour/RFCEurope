@@ -785,6 +785,15 @@
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PAGAN_SHRINE_HELP</Tag>
+		<English>[ICON_BULLET]Requires [LINK=literal]Paganism[\LINK]</English>
+		<French>[ICON_BULLET]Requires [LINK=literal]Paganism[\LINK]</French>
+		<German>[ICON_BULLET]Requires [LINK=literal]Paganism[\LINK]</German>
+		<Italian>[ICON_BULLET]Requires [LINK=literal]Paganism[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]Requires [LINK=literal]Paganism[\LINK]</Spanish>
+		<Portuguese>[ICON_BULLET]Requires [LINK=literal]Paganism[\LINK]</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JEWISH_QUARTER</Tag>
 		<English>Jewish Quarter</English>
 		<French>Quartier Juif</French>
@@ -1289,6 +1298,15 @@
 		<Italian>[ICON_BULLET]%D1_Mod[ICON_CULTURE] se non hai una Religione Ufficiale</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod[ICON_CULTURE] without a State Religion</Spanish>
 		<Portuguese>[ICON_BULLET]%D1_Mod[ICON_CULTURE] sem uma religião estatal</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_REQUIRES_CIVIC</Tag>
+		<English>[COLOR_WARNING_TEXT]Requires [LINK=literal]%s1[\LINK][COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requires [LINK=literal]%s1[\LINK][COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Erfordert: [LINK=literal]%s1[\LINK][COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Requires [LINK=literal]%s1[\LINK][COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requires [LINK=literal]%s1[\LINK][COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WARNING_TEXT]Requires [LINK=literal]%s1[\LINK][COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTEREST_RATE</Tag>

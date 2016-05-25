@@ -70,6 +70,7 @@ public:
 	CvSelectionGroup* cycleSelectionGroups(CvUnit* pUnit, bool bForward, bool bWorkers, bool* pbWrap);
 
 	bool hasTrait(TraitTypes eTrait) const;																																			// Exposed to Python
+	bool hasCivic(CivicTypes eCivic) const; // Absinthe: civic requirements
 	DllExport bool isHuman() const;																																							// Exposed to Python
 	DllExport void updateHuman();
 	DllExport bool isBarbarian() const;																																					// Exposed to Python

@@ -781,12 +781,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_PAGANISM_HELP</Tag>
-		<English>[ICON_BULLET]Unstable with Divine Monarchy, Religious Law</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Instabil mit [COLOR_RED]Göttliche Monarchie, Kirchenrecht[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Instabile con [COLOR_RED]Monarchia Divina, Legge Religiosa[COLOR_REVERT]</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Instável com [COLOR_RED]Monarquia Divina, Legislação Religiosa[COLOR_REVERT]</Portuguese>
+		<English>[ICON_BULLET]Unstable with Divine Monarchy, Religious Law[NEWLINE][ICON_BULLET]Enables [LINK=literal]Pagan Shrine[\LINK], [LINK=literal]The Shrine of Uppsala[\LINK]</English>
+		<French>[ICON_BULLET]Unstable with Divine Monarchy, Religious Law[NEWLINE][ICON_BULLET]Enables [LINK=literal]Pagan Shrine[\LINK], [LINK=literal]The Shrine of Uppsala[\LINK]</French>
+		<German>[ICON_BULLET]Instabil mit [COLOR_RED]Göttliche Monarchie, Kirchenrecht[COLOR_REVERT][ICON_BULLET]Enables [LINK=literal]Pagan Shrine[\LINK], [LINK=literal]The Shrine of Uppsala[\LINK]</German>
+		<Italian>[ICON_BULLET]Instabile con [COLOR_RED]Monarchia Divina, Legge Religiosa[COLOR_REVERT][ICON_BULLET]Enables [LINK=literal]Pagan Shrine[\LINK], [LINK=literal]The Shrine of Uppsala[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]Unstable with Divine Monarchy, Religious Law[NEWLINE][ICON_BULLET]Enables [LINK=literal]Pagan Shrine[\LINK], [LINK=literal]The Shrine of Uppsala[\LINK]</Spanish>
+		<Portuguese>[ICON_BULLET]Instável com [COLOR_RED]Monarquia Divina, Legislação Religiosa[COLOR_REVERT][ICON_BULLET]Enables [LINK=literal]Pagan Shrine[\LINK], [LINK=literal]The Shrine of Uppsala[\LINK]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_STATE_RELIGION</Tag>

@@ -629,6 +629,11 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	{
 		GC.getVoteSourceInfo((VoteSourceTypes)i).readPass3();
 	}
+	// Absinthe: civic requirement
+	for (int i=0; i < GC.getNumBuildingInfos(); ++i)
+	{
+		GC.getBuildingInfo((BuildingTypes)i).readPass3();
+	}
 	LoadGlobalClassInfo(GC.getLeaderHeadInfo(), "CIV4LeaderHeadInfos", "Civilizations", "Civ4LeaderHeadInfos/LeaderHeadInfos/LeaderHeadInfo", false, &CvDLLUtilityIFaceBase::createLeaderHeadInfoCacheObject);
 	LoadGlobalClassInfo(GC.getColorInfo(), "CIV4ColorVals", "Interface", "Civ4ColorVals/ColorVals/ColorVal", false);
 	LoadGlobalClassInfo(GC.getPlayerColorInfo(), "CIV4PlayerColorInfos", "Interface", "Civ4PlayerColorInfos/PlayerColorInfos/PlayerColorInfo", false);

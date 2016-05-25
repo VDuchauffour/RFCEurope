@@ -591,6 +591,9 @@ public:
 	bool getEverRespawned();
 	void setEverRespawned( bool bNewValue );
 
+	// Absinthe: civic requirements
+	bool hasCivic(int iCivic);
+
 	void setForcedHistoricityUnitProduction( int iNewValue );
 	int getForcedHistoricityUnitProduction() const;
 
