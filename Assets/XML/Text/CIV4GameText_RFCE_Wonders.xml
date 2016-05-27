@@ -117,6 +117,15 @@
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KAZIMIERZ_HELP</Tag>
+		<English>[ICON_BULLET]Establishes a free [LINK=literal]Jewish Quarter[\LINK] in all your cities with Judaism</English>
+		<French>[ICON_BULLET]Establishes a free [LINK=literal]Jewish Quarter[\LINK] in all your cities with Judaism</French>
+		<German>[ICON_BULLET]Establishes a free [LINK=literal]Jewish Quarter[\LINK] in all your cities with Judaism</German>
+		<Italian>[ICON_BULLET]Establishes a free [LINK=literal]Jewish Quarter[\LINK] in all your cities with Judaism</Italian>
+		<Spanish>[ICON_BULLET]Establishes a free [LINK=literal]Jewish Quarter[\LINK] in all your cities with Judaism</Spanish>
+		<Portuguese>[ICON_BULLET]Establishes a free [LINK=literal]Jewish Quarter[\LINK] in all your cities with Judaism</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STEPHANSDOM</Tag>
 		<English>Stephansdom</English>
 		<French>Cath&#233;drale Saint-&#201;tienne de Vienne</French>

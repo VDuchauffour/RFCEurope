@@ -12539,7 +12539,7 @@
 			<ObsoleteSafeCommerceChanges/>
 			<CommerceChangeDoubleTimes/>
 			<CommerceModifiers>
-				<iCommerce>15</iCommerce>
+				<iCommerce>25</iCommerce>
 			</CommerceModifiers>
 			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -24247,6 +24247,7 @@
 			<Description>TXT_KEY_BUILDING_KAZIMIERZ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KAZIMIERZ_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_KAZIMIERZ_STRATEGY</Strategy>
+			<Help>TXT_KEY_BUILDING_KAZIMIERZ_HELP</Help>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KAZIMIERZ</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_KAZIMIERZ</MovieDefineTag>
@@ -24263,7 +24264,7 @@
 			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>NONE</ObsoleteTech>
-			<PrereqTech>TECH_BANKING</PrereqTech>
+			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
@@ -24273,7 +24274,7 @@
 			<PowerBonus>NONE</PowerBonus>
 			<FreeBonus>NONE</FreeBonus>
 			<iNumFreeBonuses>0</iNumFreeBonuses>
-			<FreeBuilding>BUILDINGCLASS_JEWISH_QUARTER</FreeBuilding>
+			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
 			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
