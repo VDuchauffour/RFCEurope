@@ -95,6 +95,7 @@ Changes for RFCE 1.4:
 		- Cuba moved to Constitution from Professional Army, Virginia moved to Nationalism from Constitution
 		- Far Eastern Treaty Port moved to Military Tactics from Nationalism, Malaya moved to Combined Arms from Arabic Medicine
 		- Louisiana moved to Biology from Economics, Philippines moved to Civil Engineering from Naval Architecture
+		- Kazimierz moved to Civil Service from Banking
 
 	General changes:
 		- Test version for the new 1200 AD scenario
@@ -126,6 +127,8 @@ Changes for RFCE 1.4:
 		- Added religion and/or state religion prerequisites to some additional wonders (mostly Islam and Catholic)
 		- +1 additional instability for each foreign religion (after the 1st foreign one) in your cities
 		- 1 less instability from Judaism with a Jewish Quarter in the city
+		- The number of your cities where Kazimierz spreads Judaism depends on the size of your empire
+		- Kazimierz only adds free Jewish Quarter to cities where Judaism is already present (including the ones where it just spread)
 		- No city gifting in the first 5 turns after spawn (avoid exploit with city gifting before the spawn flip for additional units)
 		- The respective Trading Company projects provide North + South America Access and East Asia Access as a free bonus, so the AI have some incentive to actually build them
 		- Corresponding improvements will also be removed on resource removal (both on cutting forests and on historic/preset resource removals)
@@ -144,7 +147,7 @@ Changes for RFCE 1.4:
 		- Colour for respawn areas is purple, colour for spawn areas changed to white (for now)
 		- Added some new and improved some old event and interface messages connected to Crusades and to religious persecution
 		- Revised all older hints (which can be seen on loading a game) to be in sync with the latest version of the mod
-		- Added around 10 new hints - some are only for fun though :)
+		- Added around 15 new hints for the loading screen - some are only for fun though :)
 		- Religion Screen and Company Screen can now handle long names with unicode characters
 		- Improved religion foundation date information on the Religion Screen, also it now takes different scenarios into account
 		- Improved city and wonder foundation date/city/civ information on the Info Screen, also it now takes different scenarios into account
@@ -202,6 +205,7 @@ Changes for RFCE 1.4:
 		- Hispaniola provides 2 Sugar and 1 Coffee resource, Brazil provides 1 Sugar, 1 Timber and 1 Gems resource
 		- Double production speed with Slaves for Hispaniola, but no production bonus from South America Access
 		- Lowered price of West and East India Companies, production speed is no longer doubled with Atlantic Access, smaller bonuses from from the other 3 Access resources
+		- Jewish Quarter bonus increased to +25% gold income
 
 	Bugfixes:
 		- Various dll bugfixes and optimizations from Better BTS AI, K-Mod, Afforess

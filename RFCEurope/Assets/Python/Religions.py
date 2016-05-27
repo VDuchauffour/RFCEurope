@@ -380,12 +380,18 @@ class Religions:
 			pPlayer.changeFaith( 6 )
 		if ( iStateReligion != xml.iJudaism and iBuilding == xml.iKazimierz ):
 			pPlayer.changeFaith( - min( 1, pPlayer.getFaith() ) )
-			# Kazimierz should also spread Judaism
+			# Kazimierz tries to spread Judaism to a couple new cities
 			apCityList = PyPlayer(iPlayer).getCityList()
-			for i in range(4):
+			iJewCityNum = max ((len(apCityList) + 2) / 3 + 1, 3) # number of tries are based on number of cities, but at least 3
+			for i in range(iJewCityNum):
 				pCity = apCityList[gc.getGame().getSorenRandNum(len(apCityList), 'random city for jews')].GetCy()
-				if (not pCity.isHasReligion(xml.iJudaism) ):
+				if (not pCity.isHasReligion(xml.iJudaism)):
 					pCity.setHasReligion(xml.iJudaism, True, True, False)
+			# Adds Jewish Quarter to all cities which already has Judaism (including the ones where it just spread)
+			for i in range(len(apCityList)):
+				pCity = apCityList[i].GetCy()
+				if (pCity.isHasReligion(xml.iJudaism) and not pCity.hasBuilding(xml.iJewishQuarter)):
+					pCity. setHasRealBuilding(xml.iJewishQuarter, True)
 
 
 	def selectRandomCityAll(self):

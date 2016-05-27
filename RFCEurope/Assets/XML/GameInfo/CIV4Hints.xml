@@ -433,5 +433,23 @@
 		<HintInfo>
 			<Description>TXT_KEY_HINT_RFCE_75</Description>
 		</HintInfo>
+		<HintInfo>
+			<Description>TXT_KEY_HINT_RFCE_76</Description>
+		</HintInfo>
+		<HintInfo>
+			<Description>TXT_KEY_HINT_RFCE_77</Description>
+		</HintInfo>
+		<HintInfo>
+			<Description>TXT_KEY_HINT_RFCE_78</Description>
+		</HintInfo>
+		<HintInfo>
+			<Description>TXT_KEY_HINT_RFCE_79</Description>
+		</HintInfo>
+		<HintInfo>
+			<Description>TXT_KEY_HINT_RFCE_80</Description>
+		</HintInfo>
+		<HintInfo>
+			<Description>TXT_KEY_HINT_RFCE_81</Description>
+		</HintInfo>
 	</HintInfos>
 </Civ4Hints>
