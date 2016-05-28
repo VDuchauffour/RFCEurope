@@ -799,11 +799,15 @@ class RiseAndFall:
 		#		self.resurrection(iGameTurn,iCiv)
 
 		# Absinthe: Reduce cities to towns, in order to make room for new civs
-		if(iGameTurn == con.tBirth[con.iEngland] -3):
+		if (iGameTurn == con.tBirth[con.iScotland] -3):
+			# Reduce Inverness and Scone, so more freedom in where to found cities in Scotland
+			self.reduceCity((37,65))
+			self.reduceCity((37,67))
+		elif (iGameTurn == con.tBirth[con.iEngland] -3):
 			# Reduce Norwich and Nottingham, so more freedom in where to found cities in England
 			self.reduceCity((43,55))
 			self.reduceCity((39,56))
-		elif(iGameTurn == con.tBirth[con.iSweden] -2):
+		elif (iGameTurn == con.tBirth[con.iSweden] -2):
 			# Reduce Uppsala
 			self.reduceCity((65,66))
 
