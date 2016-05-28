@@ -45,17 +45,17 @@ tLyon = ( [ ((46, 37), "Lyon", 100) ], iIndependent3, 2, xml.iArcher, 2, xml.iCa
 tTunis = ( [ ((49, 17), "Tunis", 100) ], iIndependent4, 1, xml.iArcher, 1, -1, 0 )
 tYork = ( [ ((39, 59), "Eboracum", 100) ], iIndependent4, 1, xml.iArcher, 2, -1, 1 )
 tLondon = ( [ ((41, 52), "Londinium", 100) ], iIndependent, 2, xml.iArcher, 2, xml.iCatholicism, 0 )
-tMilan = ( [ ((52, 37), "Mediolanum", 100) ], iIndependent, 2, xml.iArcher, 1, xml.iCatholicism, 0 )
-tFlorence = ( [ ((54, 32), "Florentia", 100) ], iIndependent2, 2, xml.iArcher, 1, xml.iCatholicism, 0 )
+tMilan = ( [ ((52, 37), "Mediolanum", 100) ], iIndependent, 2, xml.iArcher, 2, xml.iCatholicism, 0 )
+tFlorence = ( [ ((54, 32), "Florentia", 40), ((53, 32), "Pisae", 20), ((57, 31), "Ankon", 20), ((56, 32), "Ariminum", 20) ], iIndependent2, 2, xml.iArcher, 2, xml.iCatholicism, 0 )
 tTripoli = ( [ ((54, 8), "Tripoli", 100) ], iBarbarian, 1, xml.iArcher, 1, -1, 0 )
 tAugsburg = ( [ ((55, 41), "Augsburg", 100) ], iIndependent3, 1, xml.iArcher, 2, -1, 0 )
-tNapoli = ( [ ((59, 24), "Neapolis", 100) ], iIndependent, 2, xml.iArcher, 1, -1, 0 )
+tNapoli = ( [ ((59, 24), "Neapolis", 40), ((60, 25), "Beneventum", 40), ((62, 24), "Tarentum", 20) ], iIndependent, 2, xml.iArcher, 1, -1, 0 )
 tRagusa = ( [ ((64, 28), "Ragusa", 100) ], iIndependent2, 1, xml.iArcher, 2, xml.iCatholicism, 0 )
 tSeville = ( [ ((27, 21), "Hispalis", 100) ], iIndependent4, 1, xml.iArcher, 2, -1, 0 )
-# 508 AD
-tPalermo = ( [ ((55, 19), "Palermo", 80), ((58, 17), "Syracuse", 20) ], iIndependent3, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
+tPalermo = ( [ ((55, 19), "Palermo", 60), ((58, 17), "Syracuse", 40) ], iIndependent3, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
 # 600 AD
 tRhodes = ( [ ((80, 13), "Rhodes", 100) ], iIndependent2, 1, xml.iArcher, 1, xml.iOrthodoxy, 0 )
+tInverness = ( [ ((37, 67), "Inbhir Nis", 50), ((37, 65), "Scaig", 50) ], iBarbarian, 1, xml.iArcher, 1, -1, 0)
 # 640 AD
 tNorwich = ( [ ((43, 55), "Norwich", 100) ], iIndependent3, 1, xml.iArcher, 1, -1, 1 ) #reduced to town on spawn of England
 # 680 AD
@@ -63,7 +63,7 @@ tToledo = ( [ ((30, 27), "Toledo", 100) ], iBarbarian, 1, xml.iArcher, 1, xml.iC
 tLeicester = ( [ ((39, 56), "Ligeraceaster", 100) ], iIndependent, 1, xml.iArcher, 1, -1, 0 ) #reduced to town on spawn of England
 # 700 AD
 tValencia = ( [ ((36, 25), "Valencia", 100) ], iIndependent, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
-tPamplona = ( [ ((35, 32), "Pamplona", 100) ], iIndependent4, 1, xml.iCrossbowman, 2, -1, 0 )
+tPamplona = ( [ ((35, 32), "Pamplona", 60), ((34, 33), "Pamplona", 20), ((34, 34), "San Sebastián", 20) ], iIndependent4, 1, xml.iCrossbowman, 2, -1, 0 )
 tDublin = ( [ ((32, 58), "Dubh Linn", 100) ], iBarbarian, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
 tLubeck = ( [ ((57, 54), "Liubice", 100) ], iIndependent2, 1, xml.iArcher, 2, -1, 1 )
 tPorto = ( [ ((23, 31), "Portucale", 100) ], iIndependent3, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
@@ -75,7 +75,7 @@ tRaska = ( [ ((68, 28), "Ras", 100) ], iIndependent2, 1, xml.iArcher, 2, -1, 1)
 tFez = ( [ ((29, 12), "Fes", 100) ], iIndependent4, 1, xml.iCrossbowman, 2, -1, 1)
 # 800 AD
 tMilanR = ( [ ((52, 37), "Milano", 100) ], iIndependent, 4, xml.iArcher, 2, xml.iCatholicism, 0) #respawn, in case it was razed
-tFlorenceR = ( [ ((54, 32), "Firenze", 100) ], iIndependent2, 4, xml.iArcher, 2, xml.iCatholicism, 0 ) #respawn
+#tFlorenceR = ( [ ((54, 32), "Firenze", 100) ], iIndependent2, 4, xml.iArcher, 2, xml.iCatholicism, 0 ) #respawn
 tPrague = ( [ ((60, 44), "Praha", 100) ], iIndependent, 1, xml.iCrossbowman, 2, xml.iCatholicism, 1)
 tKursk = ( [ ((90, 48), "Kursk", 100) ], iIndependent4, 1, xml.iArcher, 2, -1, 0)
 tCalais = ( [ ((44, 50), "Calais", 50), ((45, 50), "Dunkerque", 50)  ], iIndependent3, 1, xml.iCrossbowman, 2, -1, 0)
@@ -83,7 +83,7 @@ tNidaros = ( [ ((57, 71), "Nidaros", 100) ], iIndependent3, 1, xml.iArcher, 1, -
 tUppsala = ( [ ((65, 66), "Uppsala", 100) ], iIndependent4, 1, xml.iArcher, 2, -1, 1) #reduced to town on spawn of Sweden
 tBeloozero = ( [ ((87, 65), "Beloozero", 100) ], iIndependent4, 1, xml.iCrossbowman, 1, -1, 1)
 # 860 AD
-tEdinburgh = ( [ ((37, 63), "Eidyn Dun", 100) ], iBarbarian, 1, xml.iArcher, 1, -1, 0)
+#tEdinburgh = ( [ ((37, 63), "Eidyn Dun", 100) ], iBarbarian, 1, xml.iArcher, 1, -1, 0)
 # 880 AD
 tApulum = ( [ ((73, 35), "Belograd", 100) ], iIndependent, 1, xml.iArcher, 2, -1, 0)
 # 900 AD
@@ -124,8 +124,6 @@ tValletta = ( [ ((57, 14), "Valletta", 100) ], iIndependent4, 1, xml.iKnightofSt
 # Key: city coordinates, spawn turn, retries
 #lTours = [40,43,0,0] #500 AD
 #lOrleans = [42,44,0,0] #500 AD
-#lPisae = [53,32,0,0] #500 AD
-#lRoma = [56,27,0,0] #500 AD
 #lCatania = [58,18,0,0] #500 AD
 #lBeograd = [68,30,0,0] #500 AD
 #lRavenna = [55,33,0,0] #500 AD
@@ -155,17 +153,15 @@ tValletta = ( [ ((57, 14), "Valletta", 100) ], iIndependent4, 1, xml.iKnightofSt
 #lStaraSich = [88,40,300,0] #1500 AD
 
 dIndependentCities = {
-xml.i500AD : [ tTangier, tBordeaux, tAlger, tBarcelona, tToulouse, tMarseilles, tNantes, tCaen, tLyon, tTunis, tYork, tLondon, tMilan, tFlorence, tTripoli, tAugsburg, tNapoli, tRagusa, tSeville],
-xml.i508AD : [ tPalermo ],
-xml.i600AD : [ tRhodes ],
+xml.i500AD : [ tTangier, tBordeaux, tAlger, tBarcelona, tToulouse, tMarseilles, tNantes, tCaen, tLyon, tTunis, tYork, tLondon, tMilan, tFlorence, tTripoli, tAugsburg, tNapoli, tRagusa, tSeville, tPalermo],
+xml.i600AD : [ tRhodes, tInverness ],
 xml.i640AD : [ tNorwich ],
 xml.i680AD : [ tToledo, tLeicester ],
 xml.i700AD : [ tValencia, tPamplona, tDublin, tLubeck, tPorto ],
 xml.i760AD : [ tTonsberg ],
 xml.i768AD : [ tRaska ],
 xml.i780AD : [ tFez ],
-xml.i800AD : [ tMilanR, tFlorenceR, tPrague, tKursk, tCalais, tNidaros, tUppsala, tBeloozero ],
-xml.i860AD : [ tEdinburgh ],
+xml.i800AD : [ tMilanR, tPrague, tKursk, tCalais, tNidaros, tUppsala, tBeloozero ],
 xml.i880AD : [ tApulum ],
 xml.i900AD : [ tTvanksta, tKrakow, tRiga ],
 xml.i911AD : [ tCaenR ],

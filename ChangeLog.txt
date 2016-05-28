@@ -140,13 +140,19 @@ Changes for RFCE 1.4:
 		- West and East India Trading Companies also need Atlantic Access - ATM there is no point in building them without AA anyway
 
 	Variance in independents:
-		- Spawning independent cities can be selected from a pool of cities in an area, chance of spawning depends on historical importance
-		- Instead of Palermo spawning in 100% of the games in 508AD, now there is 80% chance for Palermo, 20% for Syracuse
-		- Marseilles, 500AD: Marseilles (50%, "Massilia"), Aix-en-Provence (50%, "Aquae Sextiae")
-		- Toulouse, 500AD: Toulouse (30%, "Tolosa"), Toulouse alternative position (30%, "Tolosa"), Narbonne (40%, "Narbo")
-		- Caen, 500AD: Caen (100%, "Caen"), starts with Catholicism, population size 2
-		- Nantes, 500AD: Nantes (50%, "Naoned"), Vannes (30%, "Gwened"), Rennes (20%, "Roazhon")
-		- Calais, 800AD: Calais (50%, "Calais"), Dunkerque (50%, "Dunkerque")
+		- Instead of placing the same indy cities in 100% of the games, one of a couple alternatives will be selected from a given area
+		- Chance of spawning for a given city from an area depends on both historical importance and gameplay related reasons
+		- Sicily, 500AD: Palermo (60%, "Palermo"), Syracuse (40%, "Syracuse")
+		- Provence, 500AD: Marseille (50%, "Massilia"), Aix-en-Provence (50%, "Aquae Sextiae")
+		- Languedoc, 500AD: Toulouse (30%, "Tolosa"), Toulouse alternative position (30%, "Tolosa"), Narbonne (40%, "Narbo")
+		- Normandy, 500AD: Caen (100%, "Caen"), starts with Catholicism, population size 2
+		- Brittany, 500AD: Nantes (50%, "Naoned"), Vannes (30%, "Gwened"), Rennes (20%, "Roazhon")
+		- Picardy, 800AD: Calais (50%, "Calais"), Dunkirk (50%, "Dunkerque")
+		- Tuscany, 500AD: Firenze (40%, "Florentia"), Pisa (20%, "Pisae"), Ancona (20%, "Ankon"), Rimini (20%, "Ariminum")
+		- South Italy, 500AD: Napoli (40%, "Neapolis"), Benevento (40%, "Beneventum"), Taranto (20%, "Tarentum")
+		- Navarre, 700AD: Pamplona (60%, "Pamplona"), Pamplona alternative position (20%, "Pamplona"), Saint Sebastian (20%, "San Sebastián")
+		- Picts in Scotland, 600AD: Scone (50%, "Scaig"), Inverness (50%, "Inbhir Nis"), barbarian city, population size 1
+		- Removed the respawn of Florence in 800AD, removed the spawn of indy Edinburgh in 860AD
 
 	Text/GUI improvements:
 		- New GlobalDefines_Alt.xml file, users can change RFCE-specific settings there (RFCEurope\Assets\XML\)
@@ -193,6 +199,7 @@ Changes for RFCE 1.4:
 		- New city name map for the Scottish civ: Scottish Gaelic -> Irish Gaelic/Manx -> Welsh/Cornish/Breton -> Scots -> English - by DC123456789
 		- Updated city name maps for the civs France/Burgundy, England, Norway and Denmark (in Britain, Brittany, Greece, and the Levant/Egypt) - by DC123456789
 		- Updates in the Byzantine and in the General city name maps in Britain and France - by DC123456789
+		- Updates in the French and in the General city name maps in Northern Italy
 		- Normandy province also needed for the French 1st UHV
 
 	Balance:
@@ -218,6 +225,7 @@ Changes for RFCE 1.4:
 		- Brazil and New England no longer require the West India Company, Cape Town no longer requires the East India Company
 		- Jewish Quarter bonus increased to +25% gold income
 		- Increased independent Lyon's starting population size to 2
+		- Both the city in Tuscany and Milan starts with an additional Archer unit
 
 	Bugfixes:
 		- Various dll bugfixes and optimizations from Better BTS AI, K-Mod, Afforess
@@ -1073,7 +1081,7 @@ Changes for RFCE 1.0:
 	Art/Sound updates:
 		- Fixed Light Forest and Luxury Store button
 		- Fixed cottages (and it's upgrades) art
-		- Spy has "Monk-art" in the renaissance era instead of the secret agent art
+		- Spy has "Monk-art" in the Renaissance era instead of the secret agent art
 		- Great Spy doesn't get the modern art in the Renaissance
 		- Lithuanian flag has colours inverted (now the colour of the borders are the same as the background of the flag, as all other flags have) + Button has correct colours now
 
@@ -1083,7 +1091,7 @@ Changes for RFCE 1.0:
 		- Swiss Line Infantry is available later
 		- Large (>11 cities) unstable Empires no longer collapse instantly, they first start to rapidly lose cities
 		- Fixed a bug with collapse and respawning in a different region (safeMotherland in C++)
-		- Nerfed France and Burgundy (in Units production)
+		- Nerfed France and Burgundy (in unit production)
 		- The French UP is disabled for the AI, it seems to do well enough with it anyway (AI doesn't build Charlemagne's Empire)
 		- Buffed expansion and city stability for Venice
 		- Various balance tweaks, the AI is about as good as it will ever get
@@ -2047,13 +2055,13 @@ Changes for Alpha 12:
 		Fixed some bugs with initial starting contact: Arabs and Ottomans mainly.
 		New LHs have first meeting quotes
 		Stronger (possibly to the extent of overkill) Frankia start
-		Gave every leader a favourite Religion.
-		Some city name synchronization in Transylvania,
+		Gave every leader a favourite Religion
+		Some city name synchronization in Transylvania
 		Removed Alsace-Lorraine off Burgundy spawn zone
-		Removed Barbarian in Syracuse (now that AI is using islands again).
+		Removed Barbarian city in Syracuse (now that AI is using islands again)
 		Removed a bunch of villages from WBSave that messed up capital city placement, and added iron to Arab start.
 		XML fixes about interface hints and tips
-		Workboat now comes at Astrolabe (useless before then).
+		Workboat now comes at Astrolabe (useless before then)
 		Forest has forest button instead of jungle
 		Byzantium text without the strategy
 		Civ rating (stars) included.
@@ -2101,7 +2109,7 @@ Changes for Alpha 11:
 		English Longbowmans are now Longbowman with Formation and Drill 1. (was Longbowman with half costs, no 50% vs. heavy infantry and heavy cavalry, with promotion.)
 		Every timber is on dense forest.
 		Slightly stronger start for Spain. Some coastal resources moved due to dumb AI not settling near enough.
-		Fixed random indy in Syracuse.
+		Fixed random indy city in Syracuse
 		Made Red Sea not fresh water. Potatoes spawn in Ireland and north-central Europe. Fixed a pig that was in dense forest.
 		Warehouse back to 5% commerce bonus.
 		Growth penalty for Byzantium is decreased.
