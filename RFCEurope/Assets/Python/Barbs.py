@@ -37,9 +37,11 @@ tTangier = ( [ ((27, 16), "Tangier", 100) ], iIndependent2, 1, xml.iCordobanBerb
 tBordeaux = ( [ ((37, 38), "Burdigala", 100) ], iBarbarian, 2, xml.iArcher, 0, -1, 0 )
 tAlger = ( [ ((40, 16), "Alger", 100) ], iIndependent3, 1, xml.iArcher, 1, -1, 0 )
 tBarcelona = ( [ ((40, 28), "Barcino", 100) ], iIndependent2, 1, xml.iArcher, 1, -1, 0 )
-tToulouse = ( [ ((41, 34), "Tolosa", 100) ], iBarbarian, 1, xml.iArcher, 0, -1, 0 )
-tMarseilles = ( [ ((46, 32), "Massilia", 100) ], iIndependent, 1, xml.iArcher, 1, xml.iCatholicism, 0 )
-tLyon = ( [ ((46, 37), "Lyon", 100) ], iIndependent3, 1, xml.iArcher, 2, xml.iCatholicism, 1 )
+tToulouse = ( [ ((41, 34), "Tolosa", 30), ((40, 34), "Tolosa", 30), ((42, 32), "Narbo", 40) ], iBarbarian, 1, xml.iArcher, 0, -1, 0 )
+tMarseilles = ( [ ((46, 32), "Massilia", 50), ((46, 33), "Aquae Sextiae", 50) ], iIndependent, 1, xml.iArcher, 1, xml.iCatholicism, 0 )
+tNantes = ( [ ((36, 43), "Naoned", 50), ((35, 43), "Gwened", 30), ((37, 44), "Roazhon", 20) ], iIndependent2, 1, xml.iArcher, 1, -1, 0 )
+tCaen = ( [ ((40, 47), "Caen", 100) ], iIndependent4, 2, xml.iArcher, 2, xml.iCatholicism, 1 )
+tLyon = ( [ ((46, 37), "Lyon", 100) ], iIndependent3, 2, xml.iArcher, 2, xml.iCatholicism, 1 )
 tTunis = ( [ ((49, 17), "Tunis", 100) ], iIndependent4, 1, xml.iArcher, 1, -1, 0 )
 tYork = ( [ ((39, 59), "Eboracum", 100) ], iIndependent4, 1, xml.iArcher, 2, -1, 1 )
 tLondon = ( [ ((41, 52), "Londinium", 100) ], iIndependent, 2, xml.iArcher, 2, xml.iCatholicism, 0 )
@@ -76,7 +78,7 @@ tMilanR = ( [ ((52, 37), "Milano", 100) ], iIndependent, 4, xml.iArcher, 2, xml.
 tFlorenceR = ( [ ((54, 32), "Firenze", 100) ], iIndependent2, 4, xml.iArcher, 2, xml.iCatholicism, 0 ) #respawn
 tPrague = ( [ ((60, 44), "Praha", 100) ], iIndependent, 1, xml.iCrossbowman, 2, xml.iCatholicism, 1)
 tKursk = ( [ ((90, 48), "Kursk", 100) ], iIndependent4, 1, xml.iArcher, 2, -1, 0)
-tCalais = ( [ ((44, 50), "Calais", 100) ], iIndependent3, 1, xml.iCrossbowman, 2, -1, 0)
+tCalais = ( [ ((44, 50), "Calais", 50), ((45, 50), "Dunkerque", 50)  ], iIndependent3, 1, xml.iCrossbowman, 2, -1, 0)
 tNidaros = ( [ ((57, 71), "Nidaros", 100) ], iIndependent3, 1, xml.iArcher, 1, -1, 1) #Trondheim
 tUppsala = ( [ ((65, 66), "Uppsala", 100) ], iIndependent4, 1, xml.iArcher, 2, -1, 1) #reduced to town on spawn of Sweden
 tBeloozero = ( [ ((87, 65), "Beloozero", 100) ], iIndependent4, 1, xml.iCrossbowman, 1, -1, 1)
@@ -89,7 +91,7 @@ tTvanksta = ( [ ((69, 53), "Tvanksta", 100) ], iIndependent4, 1, xml.iCrossbowma
 tKrakow = ( [ ((68, 44), "Krakow", 100) ], iIndependent3, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0)
 tRiga = ( [ ((74, 58), "Riga", 100) ], iIndependent, 2, xml.iCrossbowman, 2, -1, 1) #maybe call it Duna in the early pediod (Duna is the name of a sheltered natural harbor near Riga)
 # 911 AD
-tCaen = ( [ ((40, 47), "Caen", 100) ], iIndependent2, 1,  xml.iCrossbowman, 2, xml.iCatholicism, 0) #spawns on the establishment of the Duchy of Normandy
+tCaenR = ( [ ((40, 47), "Caen", 100) ], iIndependent2, 1,  xml.iCrossbowman, 2, xml.iCatholicism, 0) #respawn, on the establishment of the Duchy of Normandy
 # 960 AD
 tMinsk = ( [ ((79, 52), "Minsk", 100) ], iIndependent3, 1, xml.iCrossbowman, 2, -1, 0)
 tSmolensk = ( [ ((84, 55), "Smolensk", 100) ], iIndependent4, 1, xml.iCrossbowman, 1, -1, 0)
@@ -120,7 +122,6 @@ tValletta = ( [ ((57, 14), "Valletta", 100) ], iIndependent4, 1, xml.iKnightofSt
 
 # Currently unused indy cities:
 # Key: city coordinates, spawn turn, retries
-#lNantes = [36,43,0,0] #500 AD
 #lTours = [40,43,0,0] #500 AD
 #lOrleans = [42,44,0,0] #500 AD
 #lPisae = [53,32,0,0] #500 AD
@@ -154,7 +155,7 @@ tValletta = ( [ ((57, 14), "Valletta", 100) ], iIndependent4, 1, xml.iKnightofSt
 #lStaraSich = [88,40,300,0] #1500 AD
 
 dIndependentCities = {
-xml.i500AD : [ tTangier, tBordeaux, tAlger, tBarcelona, tToulouse, tMarseilles, tLyon, tTunis, tYork, tLondon, tMilan, tFlorence, tTripoli, tAugsburg, tNapoli, tRagusa, tSeville],
+xml.i500AD : [ tTangier, tBordeaux, tAlger, tBarcelona, tToulouse, tMarseilles, tNantes, tCaen, tLyon, tTunis, tYork, tLondon, tMilan, tFlorence, tTripoli, tAugsburg, tNapoli, tRagusa, tSeville],
 xml.i508AD : [ tPalermo ],
 xml.i600AD : [ tRhodes ],
 xml.i640AD : [ tNorwich ],
@@ -167,7 +168,7 @@ xml.i800AD : [ tMilanR, tFlorenceR, tPrague, tKursk, tCalais, tNidaros, tUppsala
 xml.i860AD : [ tEdinburgh ],
 xml.i880AD : [ tApulum ],
 xml.i900AD : [ tTvanksta, tKrakow, tRiga ],
-xml.i911AD : [ tCaen ],
+xml.i911AD : [ tCaenR ],
 xml.i960AD : [ tMinsk, tSmolensk ],
 xml.i1010AD : [ tYaroslavl ],
 xml.i1050AD : [ tGroningen, tKalmar ],
@@ -606,7 +607,7 @@ class Barbs:
 				iChosenCity = -1
 				iRand = gc.getGame().getSorenRandNum(100, 'random independent city')
 				for iCity in range(len(lVariations)):
-					if iRand <= lVariations[iCity][2]:
+					if iRand < lVariations[iCity][2]:
 						iChosenCity = iCity
 						break
 					iRand -= lVariations[iCity][2]

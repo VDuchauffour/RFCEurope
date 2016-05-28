@@ -14,7 +14,7 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for RFCE 1.4:
-(to be released: 2016.05.27.)
+(to be released: 2016.05.28.)
 
 	Reformation updates:
 		- Strengthened the Reformation procedure, most conversion-related chances are somewhat increased
@@ -30,7 +30,7 @@ Changes for RFCE 1.4:
 		- Fixed AI issue where some of your rivals switch back from Protestantism right after they choose the Reformation, not giving it a chance even if it spread to most of their cities
 		- Fixed AI issue where the Pope could potentially choose to follow Protestantism on Reformation, now it will never spread to Rome if the Pope is Catholic
 
-	RiseAndFall updates:
+	RiseAndFall (spawn, collapse, respawn) updates:
 		- Respawned civs can no longer collapse in the first 10 turns
 		- If the civ is respawned, it's harder to collapse them by barbs
 		- Vassals can now also instantly collapse if they lose a significant amount of their territory in a couple turns
@@ -59,7 +59,7 @@ Changes for RFCE 1.4:
 		- City secession only results in a 25% culture loss for the original civ
 		- Adjusted the potential bonus from stability with the strength on the revolt, so it will never be negative if you are stable enough
 		- None of the actual chances can be negative on revolts, but they can modify the other options negatively in the background calculations
-		- Updated and revised all texts connected to the minor nation revolts, most noticable in the popup
+		- Updated and revised all texts connected to the minor nation revolts, most noticeable in the popup
 		- New interface messages for various events on the minor nation revolt mechanics
 		- Rewrote all chance calculations for all minor nation revolt options, also the interactions between them:
 			Do nothing: base chance calculated from the strength of the revolt, your stability, and your passive military presence in the city
@@ -97,12 +97,12 @@ Changes for RFCE 1.4:
 		- Louisiana moved to Biology from Economics, Philippines moved to Civil Engineering from Naval Architecture
 		- Kazimierz moved to Civil Service from Banking
 
-	General changes:
-		- Test version for the new 1200 AD scenario
+	General/gameplay changes:
+		- Added new 1200 AD scenario! Note that it's only a basic version for now, for testing purposes
 		- Anarchy instability now appears right away for the human player, not with a turn delay
 		- Revised swing stability calculations, now converges to 0 a little slower
 		- Lowered anarchy swing instability for the AI, normal anarchy instability for everyone
-		- Improved StoredData handling like SoI and DoC, credits to Edead
+		- Improved StoredData handling like SoI and DoC, credits to embryodead
 		- Increased the significance of war maps - both with increased values (when choosing target) in general, and with more differentiation between the levels
 		- Indy and barb cities inside war maps have a much increased chance to be AI targets, and now this also heavily depends on the war map levels (so indy/barb cities in core areas will almost always be primary targets)
 		- Indy and barb cities outside war maps now have some chance to be AI targets (were totally ignored previously), but it's significantly reduced compared to normal targets
@@ -110,19 +110,22 @@ Changes for RFCE 1.4:
 		- Removed all unnecessary values from all settler and war maps, now they only have WB values everywhere
 		- Correct CNM name for new cities placed in the WB, now cities added there will get their RFCE name instead of one from the default city list
 		- Since the WB file cannot handle special characters and long names perfectly, added function to rename city names on the start of the scenario
-		- AI civs will more often reconsider their wars against minor civs (note that being an AI target and declaring an actual war is also handled separately)
+		- AI civs will more often reconsider their wars against minor civs (note that being an AI target and declaring an actual war by the AI is handled separately)
 		- AI war declaration on indies is now based on their war maps, the chance is increased with higher war map values
 		- AI civs will much more frequently declare war on indies in their core area
 		- Revised values connected to cultural revolts/flips of independents and barbs
+		- New Sahara province, adjusted borders of North African provinces
+		- Successful Crusade spreads Catholicism to Jerusalem (if not present already)
 		- Increased city cluster for many civs, it's possible for them to have closer cities in some situations
 		- New rules and other various improvements in the AI city settling mechanics, most civs' city-placement should be more dense overally
 		- Timber, Deer and Fur resources will disappear if the Woodland/Dense Forest/Palm Forest is cut down (remain on city-settling though)
+		- Corresponding improvements will be removed too on resource removal (both on cutting forests and on historic/preset resource removals)
 		- Unworking stability bonus for your healthy cities changed to stability penalty for your unhealthy cities
 		- Civ-wide health stability bonus: +k with an average k happiness in your cities
 		- Changed happiness stability to +k with an average k happiness in your cities
-		- Minor changes in the city stability calculations for the AI
-		- Spawning independent cities can be selected from a pool of cities in an area, chance of spawning depends on historical importance
-		- Instead of Palermo spawning in 100% of the games in 508AD, now there is 80% chance for Palermo, 20% for Syracuse
+		- Minor changes in the city stability calculations for the AI, should be able to handle it somewhat better now
+		- Added some base stability bonuses for AI civs which had a hard time at the beginning for various reasons (early civic changes, too many foreign cities, barb activity, etc.)
+		- Reduced overall damage from the Hungarian Végvár: units won't get a fixed amount of damage, it depends on their current HP instead (so Végvár won't kill units, only weaken them)
 		- Hanseatic League HQ needs to be connected to a water area of at least 10 tiles
 		- Added religion and/or state religion prerequisites to some additional wonders (mostly Islam and Catholic)
 		- +1 additional instability for each foreign religion (after the 1st foreign one) in your cities
@@ -131,12 +134,19 @@ Changes for RFCE 1.4:
 		- Kazimierz only adds free Jewish Quarter to cities where Judaism is already present (including the ones where it just spread)
 		- No city gifting in the first 5 turns after spawn (avoid exploit with city gifting before the spawn flip for additional units)
 		- The respective Trading Company projects provide North + South America Access and East Asia Access as a free bonus, so the AI have some incentive to actually build them
-		- Corresponding improvements will also be removed on resource removal (both on cutting forests and on historic/preset resource removals)
 		- Buildings and Units can now require Civics (adapted from Sword of Islam by embryodead)
 		- Both the Pagan Shrine and the Shrine of Uppsala require the Paganism Civic
+		- Work boats can also pass foreign borders, as all other naval units
 		- West and East India Trading Companies also need Atlantic Access - ATM there is no point in building them without AA anyway
-		- East Africa provides East Asia Access, Philippines requires the East India Company, Panama requires West India Company
-		- Brazil and New England no longer require the West India Company, Cape Town no longer requires the East India Company
+
+	Variance in independents:
+		- Spawning independent cities can be selected from a pool of cities in an area, chance of spawning depends on historical importance
+		- Instead of Palermo spawning in 100% of the games in 508AD, now there is 80% chance for Palermo, 20% for Syracuse
+		- Marseilles, 500AD: Marseilles (50%, "Massilia"), Aix-en-Provence (50%, "Aquae Sextiae")
+		- Toulouse, 500AD: Toulouse (30%, "Tolosa"), Toulouse alternative position (30%, "Tolosa"), Narbonne (40%, "Narbo")
+		- Caen, 500AD: Caen (100%, "Caen"), starts with Catholicism, population size 2
+		- Nantes, 500AD: Nantes (50%, "Naoned"), Vannes (30%, "Gwened"), Rennes (20%, "Roazhon")
+		- Calais, 800AD: Calais (50%, "Calais"), Dunkerque (50%, "Dunkerque")
 
 	Text/GUI improvements:
 		- New GlobalDefines_Alt.xml file, users can change RFCE-specific settings there (RFCEurope\Assets\XML\)
@@ -156,46 +166,45 @@ Changes for RFCE 1.4:
 		- Colour changes in various interface messages, now they are more consistent
 		- Minor updates in the non-CNM city names for a couple civs
 		- Updated the Stability Guide in the Civilopedia with all the recent changes
-		- In the 1200AD scenario the 500AD DoM texts were set for all civs spawning later than 1200AD
+		- Revised the changelog from the very beginning of the mod's life
+		- In the 1200AD scenario the 500AD DoM texts are now set for all civs spawning later than 1200AD
 		- Added Venetian, Byzantine, Arab and English DoM texts for the 1200 AD scenario - by TheMulattoMaker and DC123456789
-		- New help text for Jewish Quarter, other minor text updates in the Civilopedia
+		- New help text for the Jewish Quarter, other minor text updates in the Civilopedia
 		- Fixed potential display issue on the Info Screen with the initial selection of the graphs screen pull-down menu
+		- Texts in the WorldBuilder and in the Settings Screen will now also use the mod-specific era names
+		- Added main screen notification about the Crusaders' arrival to the human player
+
+	Setup for civs and UHVs:
+		- Sweden starts with the following civics: Feudal Monarchy, Serfdom, Manorialism
+		- Cordoban UP update: +1 food bonus for every 2 excess health, but applied in all cases (not only when the city is not starving without the bonus from health)
+		- For the 1st Cordoban UHV, Cordoba should be the biggest city alone (tie is not enough)
+		- Franks start with the Theology tech, in the State Religion civic, and with Catholicism as their State Religion
+		- Lorraine province is historic for the Franks, switches to border on the German spawn
+		- Morocco starts with Literature, so they can remain in the Religious Law civic
+		- New Dynamic Civ Names for Burgundy, Cordoba (+ Tunisia), Morocco
+		- Wattasids won't revolt if Morocco controls the region, they now appear in their DCN as a ruling dynasty
+		- Norwegian 1st UHV: Vinland should be completed until 1066 AD
+		- New aspect of Norwegian UP: also enables trading through Ocean
+		- Normandy province remains contested after the English spawn for both Norway and Denmark
+		- Added Sicily, Apulia, Calabria and Malta as contested provinces for Norway and Denmark, everything changes to unstable in 1194 AD
+		- Norwegian 2nd UHV: Mercia no longer needed, added Scotland, Sicily, Calabria, Apulia as new goals, deadline is 1194 AD
+		- Ottoman Janissary UP: only -1 instability from foreign religion in your cities - not necessarily a historical aspect of the UP, but important for gameplay
 		- British Isles have new base city name map: Ireland area (Panopticon), Scotland area (TimGB), England area (Panopticon, TimGB, DC123456789)
 		- New city name map for the Scottish civ: Scottish Gaelic -> Irish Gaelic/Manx -> Welsh/Cornish/Breton -> Scots -> English - by DC123456789
 		- Updated city name maps for the civs France/Burgundy, England, Norway and Denmark (in Britain, Brittany, Greece, and the Levant/Egypt) - by DC123456789
 		- Updates in the Byzantine and in the General city name maps in Britain and France - by DC123456789
-		- Texts in the WorldBuilder and in the Settings Screen will now also use the mod-specific era names
-		- Added notification about the Crusaders' arrival to the human player
+		- Normandy province also needed for the French 1st UHV
 
-	Balance/setup:
-		- Sweden starts with the following civics: Feudal Monarchy, Serfdom, Manoralism
-		- Cordoban UP update: +1 food bonus for every 2 excess health, but applied in all cases (not only when the city is not starving without the bonus from health)
-		- For the 1st Cordoban UHV, Cordoba should be the biggest city alone (tie is not enough)
-		- New Dynamic Civ Names for Burgundy, Cordoba (+ Tunisia), Morocco
-		- Work boats can also pass foreign borders, as all other naval units
+	Balance:
 		- Lowered cost of Religious Prosecutors, upped their max number to 3
 		- Decreased some production modifiers for Cordoba, increased for Novgorod
 		- Less barbarians around Novgorod, reduced both the generic barb spawns and the Mongol threat for them
-		- Successful Crusade spreads Catholicism to Jerusalem (if not present already)
-		- Wattasids won't revolt if Morocco controls the region, they now appear in their DCN as a ruling dynasty
-		- Reduced overall damage from the Hungarian Végvár: units won't get a fixed amount of damage, it depends on their current HP instead (so Végvár won't kill units, only weaken them)
 		- Slightly decreased number of Steppe Horse Archer barbs for Kiev
-		- New Sahara province, adjusted borders of North African provinces
-		- Morocco starts with Literature, so they can remain in the Religious Law civic
 		- Revised all barbs for Cordoba and Morocco, no more Berber barbarians in Iberia
-		- Lorraine province is historic for the Franks, switches to border on the German spawn
-		- Added some stability bonuses for AI civs which had a hard time at the beginning for various reasons (early civic changes, too many foreign cities, barb activity, etc.)
 		- Destroying work boats is reduced to only one Viking point for the Norwegian UHV (same as for pillaging settled fishing boats)
 		- Increased Norwegian Viking points UHV from 80 to 100 (with the new cities in England it's still not hard at all)
-		- Norwegian 1st UHV: Vinland should be completed until 1066 AD
-		- North Atlantic Access near Iceland is removed in 1068 AD
-		- Norwegian UP also enables trading through Ocean
-		- Normandy province remains contested after the English spawn for both Norway and Denmark
-		- Added Sicily, Apulia, Calabria and Malta as contested provinces for Norway and Denmark, everything changes to unstable in 1194 AD
-		- Norwegian 2nd UHV: Mercia no longer needed, added Scotland, Sicily, Calabria, Apulia as new goals, deadline is 1194 AD
-		- Janissary UP: only -1 instability from foreign religion in your cities - not necessarily a historical aspect of the UP, but important for gameplay
 		- Lowered Janissary threshold to 300 for the human player, 200 for the AI
-		- Franks start with the Theology tech, in the State Religion civic, and with Catholicism as their State Religion
+		- North Atlantic Access near Iceland is removed in 1068 AD
 		- Nerfed various German production and support modifiers, they seem to have much more cities with the new AI city placement rules
 		- Cut back tech progression for Germany and a couple other AI civs, Protestantism was founded before 1500 in most recent games
 		- Nerfed Norwegian and Danish tech progression for the human player
@@ -205,7 +214,10 @@ Changes for RFCE 1.4:
 		- Hispaniola provides 2 Sugar and 1 Coffee resource, Brazil provides 1 Sugar, 1 Timber and 1 Gems resource
 		- Double production speed with Slaves for Hispaniola, but no production bonus from South America Access
 		- Lowered price of West and East India Companies, production speed is no longer doubled with Atlantic Access, smaller bonuses from from the other 3 Access resources
+		- East Africa provides East Asia Access, Philippines requires the East India Company, Panama requires West India Company
+		- Brazil and New England no longer require the West India Company, Cape Town no longer requires the East India Company
 		- Jewish Quarter bonus increased to +25% gold income
+		- Increased independent Lyon's starting population size to 2
 
 	Bugfixes:
 		- Various dll bugfixes and optimizations from Better BTS AI, K-Mod, Afforess
@@ -474,7 +486,7 @@ Changes for RFCE 1.3:
 			- 3 new unit types: Bedouin, Turcoman Horse Archer, Steppe Horse Archer
 			- More variety in the Seljuk units (4 new units, all unique to the Seljuks, most are somewhat more powerful than their regular counterparts)
 			- Lowered Seljuk Lancer's (RFCE's "original" Seljuks) strength from 13 to 11, but Seljuks are still harder to counter because of the new unit types
-			- Livonian Order as barbs (Sword Brethen) in the area before the Prussian spawn
+			- Livonian Order as barbs (Sword Brethren) in the area before the Prussian spawn
 			- Pre-Lithanian barbs (Baltic Heathens) for human Prussia a couple turns before the Lithuanian spawn
 			- Banu Hilal and Bani Hassan barbs in Morocco and Tunesia (Bedouins)
 			- Danishmend barbarians for Byzantium after the Seljuks (Turcoman Horse Archers)
@@ -563,7 +575,7 @@ Changes for RFCE 1.3:
 		- Dynamic civ names also refresh on start of a new turn, not just on specific events like new city foundation or city ownership change
 		- Plague icon on the main interface when plague spreads to a new city
 		- Removed outdated xml_light files
-		- Reenabled and readded some entries (ie: Keshik, Seljuks) in the civilopedia
+		- Reenabled and readded some entries (ie: Keshik, Seljuks) in the Civilopedia
 		- Cannons also buildable with iron + sulphur
 		- New promotion: Cargo Capacity (+1 cargo space in ships)
 		- Boost for Workshops and Lumbermills - were total worthless before, now they are somewhat on pair with Windmills and Watermills
@@ -574,7 +586,7 @@ Changes for RFCE 1.3:
 		- Mercantilism civic gives +1 commerce for Villages too
 		- Updated Great Person lists
 		- Updated the RFCE Timeline
-		- Resource rearrengement near Prussia, Lithuania, Poland, Novgorod (mainly iron and horse)
+		- Resource rearrangement near Prussia, Lithuania, Poland, Novgorod (mainly iron and horse)
 		- Sulphur for Prussia is now in Brandenburg - UU is tied to Kingdom of Prussia, not to Teutonic Order
 		- Made Cornwall a little less fertile on the map
 		- Imported more efficient constant handling (in Consts.py and XMLConsts.py) from DoC - credit to Leoreth
@@ -589,7 +601,7 @@ Changes for RFCE 1.3:
 		- New DoM text for Scotland, Aragon, Morocco inspired by gilgames' suggestions
 		- Minor DoM updates for the Ottomans, Byzantium, France, Arabia, Cordoba, Burgundy, Germany - by DC123456789
 		- Minor DoM updates for Hungary, Bulgaria, Genoa, England, Portugal, Lithuania, Austria - by DC123456789
-		- Switched to CE instead of AD for non-christian civs
+		- Switched to CE instead of AD for non-Christian civs
 		- Limited Monarchy = Constitutional Monarchy, Free Religion = Religious Tolerance
 		- Bigger city attack penalty for most mounted units: -25% for most light cavalry, -20% for most heavy cavalry, -10% for most unique and special mounted units
 		- Slightly tuned down Hungarian and Venetian tech progress (both player and AI)
@@ -616,11 +628,11 @@ Changes for RFCE 1.3:
 		- More than 15 megabyte less art data from the BG and unit optimizations
 		- Revised all unit artstyles, rearranged the unit art file system
 		- Fixed art for Pressburg Castle, Dome of the Rock, Westminster Abbey, Cordoban Noria, Bulgarian Stan
-		- Played around with the scaling for many buildings, the size should more consistent (compared to each other) both in the civilopedia and on the main map
-		- Units and buildings that require corporations now have a button instead of some text in the corresponding section in the civilopedia
+		- Played around with the scaling for many buildings, the size should more consistent (compared to each other) both in the Civilopedia and on the main map
+		- Units and buildings that require corporations now have a button instead of some text in the corresponding section in the Civilopedia
 		- Units which are only available as mercenary/barb have a button indicating that instead of a text
 		- All civs have the correct coloured dot on the colonial world map in the Colony Screen
-		- New civic screen from History Rewritten + colored civic stability combos like DoC
+		- New civic screen from History Rewritten + coloured civic stability combos like DoC
 		- New spawn map for RFCE 1.3 by HolyHandGrenade, located in the Reference folder
 
 	Bugfixes:
@@ -663,14 +675,14 @@ Changes for RFCE 1.2:
 			- Foreign: Unstable area; large stability penalty and revolt risk for having cities there
 			- Removed Desired province type altogether
 		- Stability Overlay:
-			- Color code for the provinces: Cyan for Core, Green for Natural, Yellow for Potential, Orange for Border, Red for Foreign
+			- Colour code for the provinces: Cyan for Core, Green for Natural, Yellow for Potential, Orange for Border, Red for Foreign
 			- The overlay may be toggled with it's button above the minimap, or with the Ctrl+K key combination
-			- It shows all province tiles color-coded on the map, including mainland water tiles (fresh and salt water lakes)
+			- It shows all province tiles colour-coded on the map, including mainland water tiles (fresh and salt water lakes)
 			- When the overlay is up, there is a civ choosing table above the overlay button, so you can check province stability level for all civs, not just for yourself!!
 			- The overlay dynamically refreshes when a province's stability is changed for any of the civs
-			- Province border functions (ctrl + hover on the map) moved to python from the dll, easier to costumize this way
-			- Province borders got the same color code as they have in the stability overlay (but obviously it always shows the stability level of the civ you play with)
-			- Provinces are only colored and showed inside your visible area (both in the overlay and with ctrl + hovering) intentionally, so they may show up partly
+			- Province border functions (ctrl + hover on the map) moved to python from the dll, easier to customize this way
+			- Province borders got the same colour code as they have in the stability overlay (but obviously it always shows the stability level of the civ you play with)
+			- Provinces are only coloured and showed inside your visible area (both in the overlay and with ctrl + hovering) intentionally, so they may show up partly
 		- Tweaked the existing secession mechanics:
 			- Instead of total collapses, there is way more chance for a single city to declare independence
 			- Only one city can revolt in a turn, if it happens, there is no chance for collapse for the given civ
@@ -680,10 +692,10 @@ Changes for RFCE 1.2:
 			- Cities in Natural or Core provinces may only be chosen if happiness or health is too low, or with some specific anger modifiers (religion, no military presence, etc)
 			- Cities in Border provinces have 4x chance, cities in Foreign provinces have 9x chance to be chosen, than your cities in more stable areas
 		- Increased stability penalty for having cities in Foreign provinces
-		- Revised all civs' initial province stabilty levels, and all the dynamic province stability level changes. Some highlights:
+		- Revised all civs' initial province stability levels, and all the dynamic province stability level changes. Some highlights:
 			- Expanded and/or increased almost all civs' province stability to some extent, especially for Byzantium, the Ottomans and Kiev
 			- Byzantium keeps many of their previously important provinces as Border provinces (including southern Italy and the African coastline), for the human player
-			- Both the Mediterranean and the Atlantic Islands (Azores, Madeira, Canaries, Balears, Corsica, Sardinia, Sicily, Malta, Crete, Rhodes, Cyprus) are better for many civs
+			- Both the Mediterranean and the Atlantic Islands (Azores, Madeira, Canaries, Baleares, Corsica, Sardinia, Sicily, Malta, Crete, Rhodes, Cyprus) are better for many civs
 			- A couple more dynamic stability level changes, especially around the new provinces, in Central Europe and the Balkans, and for Byzantium
 			- France and Burgundy almost totally complete each other with their potential provinces
 
@@ -694,7 +706,7 @@ Changes for RFCE 1.2:
 		- Interface message when a resource appears/disappears within your cultural borders
 		- Interface message when wonders are destroyed/captured by you, by a known civilization, or from a known civilization
 		- Interface message for the preset religion spreads (same way as it is when religions spread "normally")
-		- Judaism got an additional random spread mechanics, with bigger chance for spreading in central european cities
+		- Judaism got an additional random spread mechanics, with bigger chance for spreading in central European cities
 		- Dead civs won't show up on the scoreboard anymore
 		- Autoraze changes: if the city has 1 population, 60% chance to autoraze if culture is less than 10, 30% chance to autoraze if culture is at least 10 but less than 50
 		- All naval units can cross cultural borders during peace (without open borders), except work boats (to avoid exploration with work boats)
@@ -736,7 +748,7 @@ Changes for RFCE 1.2:
 		- The eastern part of the Black Sea got a line of coast tiles, the actual coast is only 1-2 tiles away anyway, and this way early ships can pass there too
 		- New provinces: Banat (representing the southern Banates of medieval Hungary), Holstein (buffer province between Denmark and Germany, also helps in the French first UHV)
 		- New provinces: Prussia (for the Teutonic Order/Prussia civ), Liguria (better to have a separate province because of the French UHV)
-		- Lots of small province adjustments: primarly near the new provinces, in the Austrian territories, in Scandinavia, and in the Polish-Lithuanian-Kievan territories
+		- Lots of small province adjustments: primarily near the new provinces, in the Austrian territories, in Scandinavia, and in the Polish-Lithuanian-Kievan territories
 		- Province Croatia merged into Slavonia, province adjustment in the area - the Dalmatian coast will be better shaped (culturally between Venice and Hungary or Austria)
 		- Both Alba Iulia / Gyulafehervar and Lubeck spawns 1 tile north, to follow the province changes
 		- Small resource rearrangement in Greece/Southern Balkans, and in the Levant/Arabia
@@ -758,7 +770,7 @@ Changes for RFCE 1.2:
 		- Changed the order of the Polish, Burgundian, Kievan and Hungarian UHVs
 		- Minor fixes in the Dawn of Civilization texts
 		- Civ-specific and UHV updates in the reference texts
-		- Texts connected to Province stability also got the new province color-code
+		- Texts connected to Province stability also got the new province colour-code
 		- Changed the Genoan trade UHV text to be more clear
 		- Byzantine, Arabian/Cordoban, Ottoman, French/Burgundian, Venetian, Norse, Hungarian, Spanish city name maps updated by DC123456789
 		- Minor updates to the Dutch, Hungarian and Bulgarian city name maps
@@ -768,8 +780,8 @@ Changes for RFCE 1.2:
 	Art and sound updates:
 		- Added theme files for the mod
 		- New HUD button for the corporation/company screen
-		- Austria has german unit sounds instead of the HRE ones
-		- Lithuania has polish unit sounds instead of russian (until we manage to get proper lithuanian sounds)
+		- Austria has German unit sounds instead of the HRE ones
+		- Lithuania has polish unit sounds instead of Russian (until we manage to get proper Lithuanian sounds)
 		- New Scottish voice set by Annomander
 		- Irish Brigade got Celtic sounds, Highlander and Highlander Infantry got Scottish sounds
 		- New art for Westminster Abbey and Krak des Chevaliers by hrochland
@@ -788,7 +800,7 @@ Changes for RFCE 1.2:
 		- Plague of Constantinople will hit Byzantium earlier than before (late 6th century), thus it won't hit on the very same turns as the Arab spawn
 		- The French got some additional starting units (1 settler, 1 archer and 2 axemen)
 		- Burdigala and Tolosa (Bordeaux and Toulouse) start with less archers
-		- All naval units got one extra move (3: Work Boat; 5: Galley, War Galley, Cog, Hansa, Gun Galley, Galleas; 7: Holk, Carrack, Caravel; 9: Galleon; 11: Frigate, Privateer, Corsair)
+		- All naval units got one extra move (3: Work Boat; 5: Galley, War Galley, Cog, Hansa, Gun Galley, Galleass; 7: Holk, Carrack, Caravel; 9: Galleon; 11: Frigate, Privateer, Corsair)
 		- Unit balance changes: Knights of St. John (+15% city attack, free march and medic_1 promotion), Paladin (no first strike, -15% vs heavy cavalry, +15% vs light cavalry),
 			Berber Cavalry and Ghazi (no city attack penalty), Boyar (no first strike, but has defensive bonuses), Musketeer (-1 first strike, +10% city attack, -5% city defence),
 			Templar Kinght (+1 first strike), Janissary (-2 first strike, +50% vs heavy cavalry, free march and cover promotion), Black Guard (can twarth spies, +25% city attack),
@@ -800,7 +812,7 @@ Changes for RFCE 1.2:
 			Zaporozhian Cossack (+1 combat strength, +1 move)
 		- Building balance changes: Moscow Kremlin (+1 happiness), Spanish Citadel (+10% trade route yield, -2XP for siege units), Cordoban Noira (+1 health, -1 production),
 			Ottoman Hammam (available with Arabic Knowledge), Norse Trading Post (+1 merchant slot), Venetian Arsenal (available with Optics, -25% naval unit build rate),
-			Austrian Opera House (+1 great artist point), Burgundian Winery (-3 culture, +10% culture, +5% commerce, +1 merchant slot), German Rathaus (-10% city maintenace cost),
+			Austrian Opera House (+1 great artist point), Burgundian Winery (-3 culture, +10% culture, +5% commerce, +1 merchant slot), German Rathaus (-10% city maintenance cost),
 			Lithuanian Voivodija (-1 XP for land units), French Chateau (obsolete with Public Works), Jewish Quarter (-10% commerce, -50 production cost),
 			La Mezquita (-100 production cost, +1 free specialist, -1 gold from state religion buildings), Magellan's Voyage (-1 trade routes from coastal cities, +2 xp for naval units),
 			St. Basil's Cathedral (available with Chemistry, -10% GP modifier, -1 free specialist, +1 spy slot, +2 espionage points from state religion buildings), St. Sophia (-1 priest slot),
@@ -814,7 +826,7 @@ Changes for RFCE 1.2:
 		- Various minor changes in the tech modifiers for Cordoba, England, Venice, Poland, Burgundy
 		- Revised all civs' settler and war maps, significant improvements in AI city placement
 		- Bonus modifier for military units from the Triumphal Arch is reduced to 20% (until we find a better bonus)
-		- Cordoba and Arabia are less likely to build christian wonders
+		- Cordoba and Arabia are less likely to build Christian wonders
 		- Updates in the crusading units, bigger chance for more unique units in both "normal" and defensive crusades
 		- Caravels start with free Sentry promotion, while Privateers also have military maintenance cost
 		- Flanders and Netherlands provinces change to Border/Contested for Austria and Spain upon the Austrian spawn (Habsburgs), changes to Foreign after the Dutch spawn
@@ -832,7 +844,7 @@ Changes for RFCE 1.2:
 		- Fixed viewing issues with the GlobeView layers - now everything shows up without any problems
 		- Revised the hidden attitude modcomp, now every part of it should work (show up) correctly
 		- Fixed issue where AI built large number of settlers but didn't use them, also improvements in the settler move code
-		- Fixed critical bug, which caused most early autorun CTDs! - thanks to edead
+		- Fixed critical bug, which caused most early autorun CTDs! - thanks to embryodead
 		- Fixed issue where all islands had the same area ID (which caused serious problems for the AI when to use naval/land movement)
 		- Fixed some mistakes with handling the PsychoAI, also reduced the connected bonus which was way too powerful
 		- Fixed mistake where you couldn't build protestant missionaries without Seminaries under the Religious Law civic
@@ -852,7 +864,7 @@ Changes for RFCE 1.1:
 	Major changes:
 		- Inquisition overhaul:
 			- All persecutions can remove maximum one religion
-			- Chooseable religion for the human player, with a popup on persecution if there are more than one possible target religions
+			- Choosable religion for the human player, with a popup on persecution if there are more than one possible target religions
 			- The AI will choose it's target religion based on a preset order of the religions:
 				- Catholicism as state religion: Islam, Protestantism, Judaism, Orthodoxy
 				- Orhodoxy as state religion: Islam, Judaism, Catholicism, Protestantism
@@ -861,7 +873,7 @@ Changes for RFCE 1.1:
 				- Judaism as state religion: Islam, Protestantism, Orthodoxy, Catholicism
 			- Tolerance factor for the AI: how tolerant are the different civs towards non-state religions:
 				- The most tolerant civs won't purge any religions
-				- Some will only purge Islam if they have a Chistian State Religion, or purge the Christian religions if they have Islam as state religion
+				- Some will only purge Islam if they have a Christian State Religion, or purge the Christian religions if they have Islam as state religion
 				- Some civs will also purge Judaism (on top of the previous category)
 				- Some civs will purge everything other than their State Religion (so even the other 2 Christian religions if they are Christian)
 			- Holy cities cannot be persecuted from their holy religion
@@ -883,12 +895,12 @@ Changes for RFCE 1.1:
 			- Diplomatic penalty with civs who has the persecuted religion as their state religion
 			- Lowered the cost of persecutor units
 		- Language changes:
-			- As of revision 993, the russian version is a separate download. An add-on to the mod
-			- The main reason behind this is the need of the original special characters of Civ IV (Latin-1 character set instead of a russian one)
-			- This will enable us to use such characters: âáäéëíöüúó... (actually we could use them before, but only in the civilopedia)
+			- As of revision 993, the Russian version is a separate download. An add-on to the mod
+			- The main reason behind this is the need of the original special characters of Civ IV (Latin-1 character set instead of a Russian one)
+			- This will enable us to use such characters: âáäéëíöüúó... (actually we could use them before, but only in the Civilopedia)
 			- Now we can have civ-specific names everywhere, including everything that appear on the map
 			- Specifically: UUs, UBs, civ specific Great People names, and most importantly: city names
-			- Added special characters to some of the hungarian and german city names as a test
+			- Added special characters to some of the Hungarian and German city names as a test
 			- Instead of Russian, Portuguese is being added as the 6th language, as it uses the same gamefont set as the other main languages
 			- Caliom's WB tool updated, so it can handle all special chars from the Latin-1 set
 		- Interface:
@@ -937,7 +949,7 @@ Changes for RFCE 1.1:
 		- Atlantic Access near Sevilla
 		- Forest near Antioch, so AI Arabia will have Damascus as it's first city -> it will be the holy city of Islam
 		- Belgrade moved 1 tile south, now it's in province Serbia - rebellions to be expected there
-		- Village near (previously under) Belgrade moved to Dacia/Transylvania. Added another one for Mesembria/Nesebar.
+		- Village near (previously under) Belgrade moved to Dacia/Transylvania, added another one for Mesembria/Nesebar
 		- Adjusted culture of preplaced Byzantine cities - Byz starting area on the map will be a bit more realistic (and look better)
 		- Small resource rearrangement in the eastern part of the map. Most important change is the closer stone resource for Kiev
 
@@ -958,7 +970,7 @@ Changes for RFCE 1.1:
 		- German grammatical cases for units by HolyHandGrenade
 		- Palacio del Escorial renamed to El Escorial, Paco da Ribeira renamed to Palacio da Pena, Tower of London renamed to Royal Dungeon
 		- New text for Palacio da Pena, Atlantic Access, Protestant Church School
-		- New feat messages when you build each unittype's first unit (for the RFCE specific unit tpyes like Light and Heavy Cavalry, Polearm)
+		- New feat messages when you build the first unit from each unittype (for the RFCE specific unit types like Light and Heavy Cavalry, Polearm)
 		- Revised feat messages from population thresholds (reach 100.000, 200.000, 500.000, 1.000.000, etc. urban population)
 
 	Art/sound updates:
@@ -970,7 +982,7 @@ Changes for RFCE 1.1:
 		- New flag for Germany by zwei833
 		- New button for Germany, Bulgaria, Lithuania, Poland, Venice, improved button for almost all other civs
 		- Separated, uncompressed dds atlas for civilizations - better button quality
-		- Seperated all atlas' into more smaller ones for better organization
+		- Separated all atlas' into more smaller ones for better organization
 		- New soundtrack - 22 medieval themed songs
 		- Era specific water worked graphics, era specific fishing and whaling boats
 		- New art for Triumphal Arch, Copernicus Observatory, Gardens of Al-Andalus, Amsterdam Beurs, Round Church, Cluny Abbey, El Escorial, Tomb of al-Walid, Marco Polo Embassy
@@ -980,7 +992,7 @@ Changes for RFCE 1.1:
 		- New art for English Royal Exchange, Lithuanian Vaivadija, Arabian Bazaar, Polish Folwark, Austrian Operahouse, Cordoban Noria, Jewish Quarter, Islamic Minaret
 		- New art for Guild Hall, Star Fort, Archery Range, Forge/Blacksmith, Manor House, Walls, Barracks, Stable, Dungeon, Brewery, Tannery, Wharf, Harbor, House of Wisdom
 		- Fixed art for La Mezquita, Pressburg Castle, All Saints' Church, Dome of the Rock, St. Sophia, Torre de Belem, Alhambra, National Gallery and Burgundian Winery
-		- Revised the size of all wonders and buildings - both ingame and in the civilopedia
+		- Revised the size of all wonders and buildings - both ingame and in the Civilopedia
 		- Wondermovie for Kazimierz and Palacio da Pena
 		- Seperated the Wondermovies and the Colonymovies for better organization
 		- New button for St. Peter's Basilica, and for most of the changed/updated buildings
@@ -996,7 +1008,7 @@ Changes for RFCE 1.1:
 		- Small changes to a couple civs initially spawned units too - mostly increasing defensive units for the AI
 		- Lots of smallish base balance changes for most of the civs (both growth and production modifiers)
 		- Lowered some civs' unit production modifiers for the AI (means cheaper units), for Byzantium for the human player too
-		- Stronger Sassanid Persians and Slavic barbs for Byzantium, greatly increased barbarian activitity in North Africa and in the Middle East
+		- Stronger Sassanid Persians and Slavic barbs for Byzantium, greatly increased barbarian activity in North Africa and in the Middle East
 		- Byzantium starts with a couple additional defensive units. Also some of the UNITAI's were changed to defensive
 		- One more starting worker for Cordoba. Cordoban Berber Cavalry upgradeable to Heavy/Armored Lancer
 		- Indy Augsburg and Ragusa starts with an additional archer - so it won't be razed so often by barbs before the German and Venetian/Hungarian spawn
@@ -1011,7 +1023,7 @@ Changes for RFCE 1.1:
 		- Small temporary stability loss for losing a city in your OK or unstable provinces
 		- Lowered permanent stability loss from being in anarchy, both for small nations and for big empires
 		- Free Religion got low upkeep (previously it was the only civic with no upkeep)
-		- Mounted Sergeants recieve an attack bonus vs. Catapults and Trebuchets
+		- Mounted Sergeants receive an attack bonus vs. Catapults and Trebuchets
 		- Horse Archer slightly more expensive, to make it's cost closer to Mounted Sergeant
 
 	Bugfixes:
@@ -1022,7 +1034,7 @@ Changes for RFCE 1.1:
 		- Fixed Jewish Quarter counting bug in the Polish 3rd UHV when Kazimierz is built - by HolyHandGrenade
 		- Fixed small bug in stability counting when using Divine Monarchy and Paganism civics together - by HolyHandGrenade
 		- Removed the UHV check for the old Spanish 3rd UHV (conquer protestant cities). It was possible to trigger both 3rd UHVs!! - by lzd
-		- Fixed small python mistakes: on city name convertion, and on destroying barbarian improvements
+		- Fixed small python mistakes: on city name conversion, and on destroying barbarian improvements
 		- Fixed 2 different bugs with mercenary appearance/mercenary hiring. No more unhireable Welsh Longbowman for example
 		- Stability fixes by HolyHandGrenade
 		- Fixed improvement size of medieval mines
@@ -1056,14 +1068,14 @@ Changes for RFCE 1.0:
 	XML/text updates:
 		- New Dawn of Man text for Byzantium, Dawn of Man text fix for Venice
 		- Added second "Master of" condition to the Dynamic names
-		- Added new unique ability for a building, Amsterdam Buers gives 2% interest to gold added each turn
+		- Added new unique ability for a building, Amsterdam Beurs gives 2% interest to gold added each turn
 
 	Art/Sound updates:
 		- Fixed Light Forest and Luxury Store button
 		- Fixed cottages (and it's upgrades) art
 		- Spy has "Monk-art" in the renaissance era instead of the secret agent art
 		- Great Spy doesn't get the modern art in the Renaissance
-		- Lithuanian flag has colors inverted (now the color of the borders are the same as the background of the flag, as all other flags have) + Button has correct colors now
+		- Lithuanian flag has colours inverted (now the colour of the borders are the same as the background of the flag, as all other flags have) + Button has correct colours now
 
 	Balance:
 		- Norse got an additional Berserker on spawn
@@ -1092,7 +1104,7 @@ Changes for Beta 14 (Release Candidate):
 (released: 2012.01.08.)
 
 	General changes and UHV updates:
-		- Add a stability guide in the civilopedia (Beware, the guide is outdated at some points)
+		- Add a stability guide in the Civilopedia (Beware, the guide is outdated at some points)
 		- Vinland is buildable until 1250 (but the UHV is unchanged), adds 1 Timber and 1 Wine for now
 		- Lowered both Cordoban leaders chance for capitulation (now they should be extremely hard to capitulate)
 		- Colony screen always shows all the civs
@@ -1100,7 +1112,7 @@ Changes for Beta 14 (Release Candidate):
 		- Swedish Tennant is now a Night Watch replacement (what's the fun in a UB if it's preplaced in all your cities so you can never build it?) - from RFCE++
 		- By the same logic, Aqueduct (Hammam) is no longer a preplaced building for the Ottomans. They have reduced cost though
 		- Temple Mount (preplaced in Jerusalem) adds a Relic resource
-		- Arabian UHV requires 35% islam instead of 25%
+		- Arabian UHV requires 35% Islam instead of 25%
 		- When the Jews are prosecuted from one city, then automatically move to another city from a player that is most tolerant (measured by civics and lack of prosecutions)
 				This means that you will not be able to completely remove the Jews from the map (and leave only Jerusalem), but that at best you can get the Jews out of your land
 				Also, there should be a lot more Jews left in late game
@@ -1109,12 +1121,12 @@ Changes for Beta 14 (Release Candidate):
 		- Removed Kharkov, Samara and Bulgar as indy cities. New indy spawns: Kursk in 800 AD, Nizhny Novgorod in 1320 AD. Smolensk now spawns earlier, in 960 AD
 		- Cordoban and Kievan province stability updated
 		- Added Shrine of Uppsala code: +1 culture for all your cities if you don't have a state religion
-		- Added Pagan Shrine code so the Culture bonus goes with No State Religon only and the Shrine is now obsolete with Divine Right.
+		- Added Pagan Shrine code so the Culture bonus goes with No State Religion only and the Shrine is now obsolete with Divine Right.
 		- Shrine of Uppsala happiness bonus reduced (now that the new bonus is in place), but it gives 2 Great Prophet/Theologian points
 		- Viking 2nd UHV now needs Northumbria not Mercia, so York covers it
 		- Temples and the Shrine of Uppsala moved to the Religious Art tech, while the "build" culture option moved to the Literature tech
 		- Increased first culture expansion (Fledging) to 20 culture. We may increase it a little more, will see for the next version
-		- Added Palm Forest feature as light forest, mostly for aesthatics. No extra yields for the tile, stays when improved (so no chopping), 10% defence for units
+		- Added Palm Forest feature as light forest, mostly for Aesthetics. No extra yields for the tile, stays when improved (so no chopping), 10% defence for units
 		- Updates and fixes to some terrain, feature and improvement dependencies:
 				All tiles which produce at least one food are settleable
 				Now you can build cottages on flood plains, workshops on moorlands as it was intended.
@@ -1144,13 +1156,13 @@ Changes for Beta 14 (Release Candidate):
 		- Revised all indy/barb cities spawn coordinates and spawn attributes
 		- Adjusted core and normal areas to fit the recent changes
 		- Updated all civs' war and settler maps
-		- Added palm/light forest to the mediterranean coast
+		- Added palm/light forest to the Mediterranean coast
 
 	Other map and province changes:
 		- Coffee isn't preplaced, but appears around 1450 AD
 		- Removed Relic resource from the map (was under Jerusalem)
 		- Indy Porto renamed to Portucale
-		- Moved Estonia to Estern Europe Region, otherwise Barbarians from Estonia were trying to attack the Norse in Scandinavia and they had no way to get there
+		- Moved Estonia to Eastern Europe Region, otherwise Barbarians from Estonia were trying to attack the Norse in Scandinavia and they had no way to get there
 		- Same as Estonia, Morocco had to be moved from the Islands Region to the North Africa Region
 		- Moved Bosnia and Croatia to Central Europe Region, hopefully this will help the Venice AI
 		- Norrland province is only in Sweden, Osterland expanded
@@ -1170,7 +1182,7 @@ Changes for Beta 14 (Release Candidate):
 		- Changed the Prophet to Theologian
 
 	Art/Sound updates:
-		- New icons for the civilopedia categories
+		- New icons for the Civilopedia categories
 		- Religious building sounds updated. Now all of them have build sounds (including Pagan Shrine and Jewish buildings)
 		- Merged buttons into several atlas' (this should reduce the loading time of the mod a bit)
 		- New art for the Tercio
@@ -1178,8 +1190,8 @@ Changes for Beta 14 (Release Candidate):
 		- New cultural citystyles for all civs. Now we have 8 different styles for the different ethnic regions
 
 	Balance:
-		- Improved french start (+1 axeman and +1 worker)
-		- Reduced early barbarian Sassanid pressure on Byzantium, and early christian barb pressure on Cordoba (only on Emperor difficulty)
+		- Improved French start (+1 axeman and +1 worker)
+		- Reduced early barbarian Sassanid pressure on Byzantium, and early Christian barb pressure on Cordoba (only on Emperor difficulty)
 		- Increased NE barbarian pressure on Bulgaria, also more Pecheneg and Cuman activity in and near the Carpathian-basin
 		- Seljuks strike on Anatolia harder, but lighter in the Levant. OTOH increased Beduin barbarian threat from the Arabian peninsula
 		- Barbarian culture is enabled again, it was really hurting the Barbs by making them build useless Culture in their cities, it was removed only as a speedup feature in the first place anyway
@@ -1222,7 +1234,7 @@ Changes for Beta 13:
 			- Templars and Teutonic Knights never return, and they can be hired as mercenaries in the region, especially around Jerusalem
 			- Added Jerusalem Minor Nation so that it will revolt against the Crusaders and make it hard to keep Jerusalem
 			- Syria also got minor nation status, so Damascus won't be a so tempting target. The goal is to make Jerusalem the most important city in the region for the player too
-			- Jerusalem is on a relic bonus (so the contoller of the city gets a relic resource)
+			- Jerusalem is on a relic bonus (so the controller of the city gets a relic resource)
 		- Golden Age now allows for Anarchy-free change of Civics and Religion (like in regular BtS)
 		- Interface:
 			- New screen to display which colonies have been built.
@@ -1281,7 +1293,7 @@ Changes for Beta 13:
 		- Added a couple hints, revised all the older ones (including everything from vanilla Civ IV/Warlords/BtS)
 		- Papal States will ALWAYS be named Papal States
 		- Fixed xml mistakes and typos in the texts of Matthias and Philip the Bold, updated Simeon and Elisabeth
-		- Olives don't require Calendar to be harvested (no change gameplaywise, because you will already have calendar when they spawn)
+		- Olives don't require Calendar to be harvested (no change gameplay-wise, because you will already have calendar when they spawn)
 		- Diplotext fixes, also added a few generic first contacts
 		- Civ specific Dawn of Man screen. Most civs still have the generic text until we update them
 		- A few more hints - to keep up with the latest changes
@@ -1290,7 +1302,7 @@ Changes for Beta 13:
 		- Removed unused animal sound entries
 		- Renamed Marsh to Wetland, Mud to Marsh
 		- Huge XML organization and uniformization
-		- New civilopedia text for Abu Yusuf Yaqub (changing him to Abu Yusuf Yaqub al-Mansur), and various small fixes in most leaders' texts.
+		- New Civilopedia text for Abu Yusuf Yaqub (changing him to Abu Yusuf Yaqub al-Mansur), and various small fixes in most leaders' texts.
 		- Revised parts of the changelog file, while adding and/or organizing all the older changes too
 		- Added all missing UHV names (a couple Sweden, Genoan and Lithuanian)
 
@@ -1298,7 +1310,7 @@ Changes for Beta 13:
 		- Europe is now divided into regions (XMLConsts and RFCEurope into C++), this will affect "continent" wonders and it has big effect on the AI
 		- Cleaned some old Rhye code from the Victory and RFCEvent modules
 		- Removed some debug messages generated by Plagues
-		- Some balance tweaks for the new AI behavior (spliting Europe into areas made a significant impact on the AI)
+		- Some balance tweaks for the new AI behaviour (spliting Europe into areas made a significant impact on the AI)
 		- The AI now considers WarMaps when picking a city to attack (before WarMaps were only used for scripted wars)
 		- SettlerMaps no longer used in the city attack algorithm
 		- Reworked the targeting algorithm for attacking indy and barb cities outside the WarMap, we should see much less of that
@@ -1321,7 +1333,7 @@ Changes for Beta 13:
 		- Slightly improved Polish-Lithuanian and Polish-Hungarian relations
 		- Added defenders for the Seljuks (Arbalest and Guisarme)
 		- Removed ability of the Templar Knight to move through enemy territory
-		- All gunpowder units (except arquebuseirs) and gunpowderbased siege units (bombards and more advanced ones) ignore building defenses
+		- All gunpowder units (except Arquebusiers) and gunpowder based siege units (bombards and more advanced ones) ignore building defenses
 		- Austrian Kuirassier doesn't ignore building defences
 		- Added more Balkan provinces to the Hungarian Crusader map so they can call Defensive Crusades against the Ottomans
 		- Crossbows don't upgrade to Longbows and Longbows are about 10% more expensive (this should nerf the powerful Longbowman)
@@ -1330,7 +1342,7 @@ Changes for Beta 13:
 		- Siege and naval units cannot have march and medic promotions
 		- Papal State has more appropriate starting units (still get advanced units, but not by that much)
 		- Temple Mount (Jewish Shrine) is pre-built in Jerusalem
-		- Leonardo's Workship now adds Great Engineer points instead of Great Artist
+		- Leonardo's Workshop now adds Great Engineer points instead of Great Artist
 		- Increased/balanced a couple improvement build times
 		- Slightly balanced a couple terrains and features bonuses (unhealth, movement, defense)
 		- Marshes (Wetlands) can be improved after the removal of Mud (Marsh)
@@ -1348,7 +1360,7 @@ Changes for Beta 13:
 
 	Bugfixes:
 		- Genoa UHV no longer fails if all 7 corporations are founded before you get the 8 Banks
-		- Germany no longer wins thier UHV if they found Printing Press, but are not Catholic (you need to really found Protestantism)
+		- Germany no longer wins their UHV if they found Printing Press, but are not Catholic (you need to really found Protestantism)
 		- Calais now spawns properly in 800AD
 		- Cordoba and Sweden no longer get strange promotions on inappropriate units (i.e. no more ships with Formation)
 		- Fixed a small bug in TeamAI.cpp thanks to Morholt
@@ -1359,7 +1371,7 @@ Changes for Beta 13:
 		- Grenadiers are now correctly Gunpowder units (as opposed to Heavy Infantry)
 		- Hacked another ugly bug with the path-finding algorithm, the settler sometimes doesn't find a road to the target and then goes in an infinite loop
 		- Hopefully we finally managed to fix the huge do-nothing stacks bug
-		- Fixed a mongol spawn bug in Barbs.py (only appeared on Viceroy)
+		- Fixed a Mongol spawn bug in Barbs.py (only appeared on Viceroy)
 		- Fixed a bug associated with the return of the crusades, the game crashes if the unit conquering Jerusalem has to return, now Crusaders return on the next turn after the fall of Jerusalem
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1373,7 +1385,7 @@ Changes for Beta 12:
 		- The Dutch now spawn with contact with England, Spain, France, Germany, Norse and Sweden
 		- Norse UHV 1 now requires the conquest of Novgorod instead of Crimea (use Berserkers and it is a better representation of the Varangians)
 		- Norse UHV 2 now requires accumulation of Viking points from conquering cities, sinking ships and pillaging improvements
-		- Missile (light) Cavalries can recieve the Drill promotions
+		- Missile (light) Cavalries can receive the Drill promotions
 		- Norse now needs 30 Viking Points for their 2nd UHV, but sinking ships add 2 points instead of 1
 		- Hungarian Huszar upgradeable to Knight too (it's an Armored Lancer replacement after all)
 		- Religious buildings give half culture if using the "wrong" religion
@@ -1392,9 +1404,9 @@ Changes for Beta 12:
 			- All world wonders, corporations (and plague) have 100% chance to stay
 			- All national wonders, religious buildings, military buildings, stability/culture/defense giving buildings have 0% chance to stay
 			- All other buildings have 66% chance to stay
-			- Exceptions: Jewish Quarter with 66% (because of the judaism spread mechanics), Pagan Temple with 66% (to increase the probability of the Shrine of Uppsala wonder)
+			- Exceptions: Jewish Quarter with 66% (because of the Judaism spread mechanics), Pagan Temple with 66% (to increase the probability of the Shrine of Uppsala wonder)
 		- French 1st UHV expanded with Picardy and Lorraine
-		- Calais now spawns in 800AD (for the french UHV)
+		- Calais now spawns in 800AD (for the French UHV)
 		- Hungarian respawn chance in 1686 - reconquest of Buda from the Ottomans
 		- Reduced wild animal spawn in the mod. Also, animals can only defend
 		- Moved Pressburg Castle to Siege Engines
@@ -1407,8 +1419,8 @@ Changes for Beta 12:
 		- Moved the River near York one tile South (more geographically accurate)
 		- Expanded Franconia into Bavaria
 		- Bavaria merged with Tyrol and Salzburg (effectively moving Bavaria South-East)
-		- Added more resources to Gemany (mostly food for Bavaria and Saxony)
-		- Adjusted the borders of Saxony and Brandenburg so Luebek is in Brandenburg (French UHV now requires to build a city in Saxony, may change that)
+		- Added more resources to Germany (mostly food for Bavaria and Saxony)
+		- Adjusted the borders of Saxony and Brandenburg so Lubeck is in Brandenburg (French UHV now requires to build a city in Saxony, may change that)
 		- Readjusted Swedish provinces as per Beta 11 thread post 68
 		- Removed the land bridge between Sweden and Finland (no more Norse building strange roads)
 		- Removed some of the northern most islands above England
@@ -1431,7 +1443,7 @@ Changes for Beta 12:
 	XML/text updates:
 		- UHV name for some UHVs
 		- New texts for some leaders
-		- XML Cleanup
+		- XML cleanup
 		- Updated the UHV condition text in accordance with the new/different provinces
 		- Added names to some of the Barbarian from some of the invasions
 		- Arabian UHV reads: "The House of Islam"
@@ -1441,18 +1453,18 @@ Changes for Beta 12:
 		- Byzantine preplaced cities now Constantinopolis (was Constantinople), Thessalonica (was Thessaloniki)
 		- Spanish 1st and 3rd, French 2nd, Genoan 1st and Polish 3rd UHV text update
 		- UHV name update for Byzantium, Hungary, England and Austria
-		- Updated civilopedia entry for Free Religion (Religious Tolerance)
+		- Updated Civilopedia entry for Free Religion (Religious Tolerance)
 		- Added the dot for some civic texts
 		- Some general citynames are fixed
-		- Pedia entry for the remaining leaders
+		- Civilopedia entry for the remaining leaders
 		- Arabia UP text updated
 		- Moved Druzhina and Konnik to correct position in the XML code
-		- Added russian tags to all the leaders
+		- Added Russian tags to all the leaders
 
 	Python/C++ updates:
 		- Speedup on the code for Independent city spawn (not all cities are checked every turn)
 		- We can now add names to spawning Barbarians
-		- ADDED MINOR NATION MECHANICS:
+		- Added minor nation mechanics:
 			- Cities in some provinces try to revolt, you can do several things to prevent them.
 			- The result is either independent cities and/or spawning barbarians and/or loss of gold and/or nothing.
 			- Current "Minor Nations" include Serbia, Scotland and Catalonia
@@ -1468,7 +1480,7 @@ Changes for Beta 12:
 	Balance:
 		- Crossbowman city defense bonus reduced to 25%. They are still better than Archers, but it makes the Arbalestier more valuable
 		- Calais no longer flips to England
-		- Luebeck no longer flips to Germany
+		- Lubeck no longer flips to Germany
 		- Germany gets back the second starting settler (probably for a city in Saxony)
 		- Some large indy and barb cities spawn with Workers
 		- Removed the walls of Alexandria
@@ -1501,9 +1513,9 @@ Changes for Beta 11:
 		- Amber now replaces most of the northern Gems
 		- Provinces: the islands in the North Sea are correctly part of Gotaland now
 		- Provinces: the Yorkshire now split into Mercia and Northumbria (needs testing for the English UHV)
-		- Provinces: Ausgburg was historically part of Swabia, moved Ausgburg and adjusted the Province borders accordingly
+		- Provinces: Augsburg was historically part of Swabia, moved Augsburg and adjusted the Province borders accordingly
 		- Updated the North-East region for the city names as by krieger546's maps (for Moscow, Germany, Norse and Sweden)
-		- Moved the fish next to Genoa to make the foundig spot a bit more competitive
+		- Moved the fish next to Genoa to make the founding spot a bit more competitive
 		- Moved the dense forest and timber near Tyre to prevent Arabia from conquering it on the spawn turn
 
 	XML updates:
@@ -1517,17 +1529,17 @@ Changes for Beta 11:
 		- Changed the Access dynamics, basically things were reverted to before Vinland
 		- Atlantic Access is placed on the map from the very beginning and becomes visible with Astronomy
 		- Vinland requires North American Access
-		- NA Access is visible with Astroable, NA Access is placed near Iceland and is removed in 1050AD
+		- NA Access is visible with Astrolabe, NA Access is placed near Iceland and is removed in 1050AD
 		- The AI is now aware of the Hungarian Stronghold ability (for city improvements only)
 		- StarFort adds special defense that applies to all unit (Gunpowder and non-Gunpowder)
-		- The special defense provided by the StarFort cannot be broken by Catapults/Canons
+		- The special defense provided by the Star Fort cannot be broken by Catapults/Cannons
 		- Added more barbarians to Scotland
-		- Added some early Barbarians to the Byzantine start (the Sassanid)
+		- Added some early Barbarians to the Byzantine start (the Sassanids)
 		- Mongols, Seljuks and Scots can now spawn with the cultural borders of an Empire (you cannot block them with culture)
 		- Poland gets couple of Catholic Missionaries
 		- Cordoba gets one less Settler
 		- New Germany UHV conditions associated with the Holy Roman Empire, Reformation and Thirty Year War
-		- Luebeck flips to Germany and Germany gets fewer Settlers
+		- Lubeck flips to Germany and Germany gets fewer Settlers
 
 	Bugfixes:
 		- Bugfix: Moscow UHV 2 should work now
@@ -1550,13 +1562,13 @@ Changes for Beta 10:
 
 	XML updates:
 		XML cleanup (unused lines of code are removed)
-		New pedia text for some objects (There are still some things that haven't a text yet. Feel free to make one and post it)
+		New Civilopedia text for some objects (There are still some things that haven't a text yet. Feel free to make one and post it)
 		Proper text for Feudal Law civic
 		Ivory does receive food without an improvement
-		"The Masjid al-Haram" is no called: "The road to the Masjid al-Haram"
+		"The Masjid al-Haram" is now called: "The road to the Masjid al-Haram"
 
 	Python Updates:
-		Correct spawndates for the independent cities (the info after # shows the correct date now)
+		Correct spawn dates for the independent cities (the info after # shows the correct date now)
 
 	Art updates:
 		Proper button for Byzantine Longswordsman
@@ -1569,7 +1581,7 @@ Changes for Beta 10:
 		Granary no longer gives health bonus with Rice (there is little Rice on the map anyway and Rice by itself gives +1 Health)
 		Contact with the Pope is initiated as soon as you get a Catholic city (this is needed now as one cannot declare state religion until Theology)
 		Increased the research penalty for the Pope (this is done for purely balance reasons, otherwise he techs too much)
-		Longbowman now requires Replacable Parts
+		Longbowman now requires Replaceable Parts
 		Nerfed Longbowman strength to 8 (it is still more powerful than Knights in cities, hills and probably forest)
 
 	Bugfixes:
@@ -1671,7 +1683,7 @@ Changes for Beta 9:
 		Cities with population 1 have only 40 percent chance to autoraze
 		Poland no longer builds Prosecutors
 		Islam now spreads through North Africa
-		Longbowmans require Chivalry (instead of Military tradition), Tomb of Al Khalid requires Military Tradition (instead of Chivalry), Maceman recieve a bonus vs. Polearm (instead of Heavy Cavalry)
+		Longbowmans require Chivalry (instead of Military tradition), Tomb of Al Khalid requires Military Tradition (instead of Chivalry), Maceman receive a bonus vs. Polearm (instead of Heavy Cavalry)
 		Adjusted Longbowman and Maceman and the bonuses that they provide
 		Small tech boost to Portugal
 		Lowered German tech rate, they had it at a level for a later civ
@@ -1716,10 +1728,10 @@ Changes for Beta 8:
 		Updated unique names for the UHVs
 		"Build Vineyard" instead of "Build Winery" when you build the Vineyard improvement
 		German territory UHV has proper description
-		Proper date for Cordoban 2nd UHV in the pedia
+		Proper date for Cordoban 2nd UHV in the Civilopedia
 
 	Art updates:
-		Gold icon instead of text in the pedia of Manor House
+		Gold icon instead of text in the Civilopedia of Manor House
 		"Remove Mud" worker action shows proper button
 		New LHs: Ivan Asen II for Bulgaria, Karl XII for Sweden
 		LH update: Barbarossa, Mindaugas, Vytautas
@@ -1765,13 +1777,13 @@ Changes for Beta 7:
 		Introduction of the new province system
 		New stability system based on provinces
 		Added Lithuania as playable civ
-		Research overhaul, connecting techs to the RFCE timeline
+		Research overhaul, connecting techs to the RFCE Timeline
 		Speed tweaks
 		Moved starting date of Moscow to 1380, Austria to 1282, Portugal to 1139
 
 	Minor changes:
-		Started the process of connecting all UHVs to the RFCE timeline
-		Moved venetian starting position
+		Started the process of connecting all UHVs to the RFCE Timeline
+		Moved Venetian starting position
 		Updates to the CivGameCoreDLL's code
 		Civilopedia hides units, independent civs, barbarian LH and some other things
 		Forbidden some units to become a mercenary
@@ -1781,8 +1793,8 @@ Changes for Beta 7:
 
 	XML updates:
 		Added missing XML entries for religions and for a couple leaders
-		RRRaskolnikov's french translations
-		Added Gold icon in text for Manoralism
+		RRRaskolnikov's French translations
+		Added Gold icon in text for Manorialism
 		Deleted unused info from a few files
 		Renamed Winery improvement to Vineyard
 		Adjusted all starting dates in the XML
@@ -1790,13 +1802,13 @@ Changes for Beta 7:
 		Many translations
 
 	Art updates:
-		Ethnic russian Great General
+		Ethnic Russian Great General
 		Better looking buttons (and a smaller size of the FPK)
 
 	Balance:
 		Apothecary cost increased to 100
 		Reduced speed of the French Musketeer to 1
-		Stronger crusades
+		Stronger Crusades
 		Lithuania receives gold at spawn
 
 	Bugfixes:
@@ -1807,18 +1819,18 @@ Changes for Beta 7:
 Changes for Beta 6:
 (released: 2011.01.23.)
 
-	merijn_v1 updates some text on the new Manor House/Civic
-	art and text changes by merijn_v1
-	fixed Hungarian spawn units (2 Axes, 3 Horse Archers)
-	fixed Hungarian UU, now it accurately replaces the Heavy Lancer
-	removed the Congress.py file, it wasn't used at all
-	removed the first strikes from the Konnik
-	moved the Heavy Lancer Icon to Blast Furnace
+	Merijn_v1: updated some text on the new Manor House/Civic
+	Art and text changes by merijn_v1
+	Fixed Hungarian spawn units (2 Axes, 3 Horse Archers)
+	Fixed Hungarian UU, now it accurately replaces the Heavy Lancer
+	Removed the Congress.py file, it wasn't used at all
+	Removed the first strikes from the Konnik
+	Moved the Heavy Lancer Icon to Blast Furnace
 	Blast Furnace now requires Feudalism
 	The Pope no longer collapses due to bad stability
 	Changes Burgundian UB to Winery (extra culture, extra health from Wine), art has not been changed
 	Various Religious wonders now give Faith points
-	Increaded the FP bonus from Cathedrals to 3
+	Increased the FP bonus from Cathedrals to 3
 	Increased the requirement for Bulgarian UHV to 60 points
 	Faith points are capped at 60, can be adjusted for every individual religion
 	Pope AI now avoids the Printing Press
@@ -1829,22 +1841,22 @@ Changes for Beta 6:
 	Fixed leader cycling for all civs
 	New art for Burgundian Winery
 	New Diplo music for many leaders
-	Basic information for the leaderheads (english only)
+	Basic information for the leaderheads (English only)
 	Free Religion now allows construction of Cathedrals and Wonders from all religions
-	The Brothers at War property only affects Orthodox players (or playes associated with the Round Church's State Religion tag)
+	The Brothers at War property only affects Orthodox players (or players associated with the Round Church's State Religion tag)
 	FP capped at 100, bonuses reduces, saints give 10FP, wonders and cathedrals give 4 and 6 FP respectively
 	Changed Kiev UHV, Religious buildings have to be build by 1250AD and instead of the Grain, one has to produce 20,000 food by 1300AD
 	Changes France second UHV, instead of wonders, they have to conquer Jerusalem. Otherwise, you get the same 2nd and 3d UHV, just build like crazy.
 	Changes Burgundy UHV, they have to produce 10,000 culture, culture-bombs don't count (probably needs balancing)
 	Added feedback on the UHV progress for Arabia, Burgundy, Norse and Kiev (will add more later)
-	Merged some code in the C++ to speed things up (thanks to Sephi and Edead)
+	Merged some code in the C++ to speed things up (thanks to Sephi and embryodead)
 	Bugfix - Manor House used to not give Stability
 	Bugfix - Spanish UP now gives Espionage points
-	Bugfix - Genoa Bank and Corp UHV
+	Bugfix - Genoa Bank and Corporation UHV
 	Bugfix - Human now gets only +1 Faith from prosecuting (the AI gets +1, Human used to get +2)
 	Bugfix - Norse get Manorialism as a starting tech
 	Bugfix - French leaders now follow correctly: Charlemagne - Joan - Louis
-	Bugfix - Updated the starting years on the autorun Popup screen (Bulgaria, Hungary, Kiev and Cordoba were off)
+	Bugfix - Updated the starting years on the autorun popup screen (Bulgaria, Hungary, Kiev and Cordoba were off)
 	Bugfix - it was that Burgundy loses an UHV if they lose a city to France or Germany, this was leftover from an older UHV
 	Bugfix - Norse city razing UHV works now
 
@@ -1867,8 +1879,8 @@ Changes for Beta 5:
 	Get a speedup the hack on the semi-random bugfix from Beta 4 (look below)
 	Move University to Philosophy, Education gives a free GS
 	National University goes to Paper
-	Brewery: +1 Happy, Happyness with barley, (removed one person scientist, I didn't realize we had that with the Monasteries), lowered cost
-	Change the Smokeshouse to give health from meat, changed the cost of building it
+	Brewery: +1 Happy, Happiness with barley, (removed one person scientist, I didn't realize we had that with the Monasteries), lowered cost
+	Change the Smokehouse to give health from meat, changed the cost of building it
 	Guild hall gives an engineer, an engineer slot and a merchant slot
 	Removed Stability bonus from the Dungeon
 	Cordoba, Turkey and the Dutch start with their religions already set
@@ -1878,19 +1890,19 @@ Changes for Beta 5:
 	Many wonders now require a specific state religion (as opposed to a religion being in the city)
 	Changed the Manor House to give money early on
 	Manor house gives +2 gold only with Manorialism (the AI is "aware" of that)
-	Early Lancers and Heavy Lancers are somewhat OP, rased the cost of tech and construction
+	Early Lancers and Heavy Lancers are somewhat OP, raised the cost of tech and construction
 	Mounted Sergeants and Horse Archers come with Stirrup
-	Lancers reuire Farriers, Heavy Lancers require Blast Furnace
+	Lancers require Farriers, Heavy Lancers require Blast Furnace
 	The cost of early mounted units has increased
 	Hungarian Huszars are now lighter version of Heavy Cavalry, they don't require Iron, they are a bit cheaper, strength reduced to 9 (very few units have bonus vs light-cavalry)
 	Hungary starts with 3 Horse Archers (in place of a Swordsman and an Axeman)
 	Ghazi are the same as before (didn't want to mess up Arabia)
-	Druzjina and Cataphrac also require Blast Furnace and have their cost increased
-	The strength of Pistoler increased to 12
+	Druzhina and Cataphract also require Blast Furnace and have their cost increased
+	The strength of Pistolier increased to 12
 	Chateau moved as Frankia's UB, Salon moved to Burgundy (we probably need something completely different for Burgundy, I think Brewery -> Winery for Burgundian wine)
 	Chateau bonus changed to +2 hammers (Frankia can really use the boost early on)
 	Brothers in Faith bonus (i.e. Round Church) gives you penalty to diplomacy with people form the same faith (keep Orthodox fighting each other, as they were historically)
-	Civs without state religion (i.e. Pagans) suffee diplomatic penalty from players with State Religion
+	Civs without state religion (i.e. Pagans) suffer diplomatic penalty from players with State Religion
 	Turkey should finally be getting Constantinople
 	Changed the AI flags for the Mediterranean pirates to act more like the Vikings
 	Fixed Papal Culture bug
@@ -1910,12 +1922,12 @@ Changes for Beta 4:
 	Synchronized Units (fixed Polish Paladin bug), Projects (fixed Portugal UP bug)
 	Fixed Reformation bug, now checking for the correct buildings (CatholicScriptorium is no more)
 	Changed Bulgarian UHV to conquer Constantinople by 1000AD (it is doable and more challenging then 1200AD)
-	Changed Norce UHV to not count Independent cities
+	Changed Norse UHV to not count Independent cities
 	Reduced the Cuman barbarians near Hungary, two lancers can easily take a city guarded even by two archers
-	Add protestant missionary to the Dutch start (guarantess they are Protestant and helps them with the Faith Points)
+	Add protestant missionary to the Dutch start (guarantees they are Protestant and helps them with the Faith Points)
 	Redone identation of the UHV code, Python is very sensitive towards identations, should probably do it again
 	Completely negate the Theodosian Walls after the discovery of Gunpowder (by anyone), Turkey still doesn't take Constantinople
-	Fixed a very nasty semi-random bug cousing the old civs to kick a new civ out of the new civs' core area. The fix may cause the entire thing to run much slower, please report.
+	Fixed a very nasty semi-random bug causing the old civs to kick a new civ out of the new civs' core area. The fix may cause the entire thing to run much slower, please report.
 	English AI is too incompetent to capture Dublin, not the AI (and AI only) can cheat to do that (unless this conflicts with a major player)
 	Crusader bug allowing you to avoid a Crusade if you put units surrounding Jerusalem (can no longer do that)
 	Art cleanup
@@ -1925,15 +1937,15 @@ Changes for Beta 4:
 	Leader names are translated
 	Infirmary has +10% heal rate
 	Hungarian Végvár art is slightly changed
-	Included shortcut (if you installed the mod porperly, the link works, otherwise it doesn't)
+	Included shortcut (if you installed the mod properly, the link works, otherwise it doesn't)
 	Added basic information to leaders
 	New text for some buildings
 	New movie for the Magna Carta
 	Restored Arabian Longswordsman art
-	List of Civs show full name now
+	List of civs show full name now
 	Carracks can pillage
 	Shortcut to the Forum added
-	Unneccessary thing are hidden in the civilopedia
+	Unnecessary things are hidden in the Civilopedia
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -1954,11 +1966,11 @@ Changes for Beta 3:
 		Castles, not courthouses, now give stability and are required for dungeons and archery ranges
 		Scriptorium is merged into Monastery
 		Toll house, grocer, herbalist are cut
-		Market becomes more about trade than money, the point is to make it more useful/common on its own.
+		Market becomes more about trade than money, the point is to make it more useful/common on its own
 	Improved Barb spawning, needs testing, might be a bit over tuned
 	Bug in Frankia UHV fixed and Frankia UHV area increased
-	Crusade text now has additional information about which empires is the leader and which empire is the target.
-	Added one AI mode for maceman
+	Crusade text now has additional information about which empires is the leader and which empire is the target
+	Added one AI mode for Maceman
 	New diplo texts for some leaders
 	New texts for some leaders
 	Moved map to PrivateMaps
@@ -1972,22 +1984,21 @@ Changes for Beta 2:
 	Moved art files into a FPK
 	Ghazis upgrades to Pistoliers
 	Made naval upgrades more sensible
-	Fix to problem where civs are killed by barbs on spawn: increased area in which barbs flip and had barbs spawn before flip.
-	Made Netherlands a little more balanced. Better when small, worse when large. UHVs at this setting are about right.
-	Added custom unit art for Byzantine Dromon by Edgecrusher. Unnecessary but cool.
-	Trebs upgrade to Bombards.
-	Economics and Liberalism no longer obsolete buildings (they come so late anyway there's no need to make them weaker techs).
-	Simplified some unit tech requirements.
-	Polish Folwark stores 40% food after growth instead of 25%.
-	Text fixes.
-	Dutch Grenadier gets new color of costume.
-	AI now values project resources more.
+	Fix to problem where civs are killed by barbs on spawn: increased area in which barbs flip and had barbs spawn before flip
+	Made Netherlands a little more balanced. Better when small, worse when large. UHVs at this setting are about right
+	Added custom unit art for Byzantine Dromon by Edgecrusher
+	Trebuchets upgrade to Bombards
+	Economics and Liberalism no longer obsolete buildings (they come so late anyway there's no need to make them weaker techs)
+	Simplified some unit tech requirements
+	Polish Folwark stores 40% food after growth instead of 25%
+	Dutch Grenadier gets new colour of costume
+	AI now values project resources more
 	Updated Germanification
-	New Coffee art. It has the art of Spices, but with brown beans.
+	New Coffee art - it has the art of Spices, but with brown beans
 	Changes in Norse settler maps (Russia excluded), some changes at indy names
-	New Polish UHVs and UP.
+	New Polish UHVs and UP
 	Groningen indy added and Dutch spawn area increased
-	Indy colors now all unique
+	Indy colours now all unique
 	Bonus commerce addition displayed consistently
 	Map changes: Sweden connects to Russia -- not correct but leads to better gameplay. A few resources moved, improving London and Polish start. Apples/Ivory removed.
 	Fixed East India company button.
@@ -1995,11 +2006,11 @@ Changes for Beta 2:
 	AI uses Dutch Grenadier to do collateral damage.
 	Movie for the Brandenburg Gate
 	Field Artillery has now max damage.
-	Fixed Dutch 1 star (in civilopedia at the starting situation)
+	Fixed Dutch 1 star (in Civilopedia at the starting situation)
 	Text for Colonial Access Resources
-	Landsknecht + paladin can upgrade, landsknecht has +25% vs. heavy infantry instead of polearm
-	XML Cleanup
-	Removed happiness bonus from Gardens of Al Andalus.
+	Landsknecht + Paladin can upgrade, Landsknecht has +25% vs. heavy infantry instead of polearm
+	XML Cleanup and text fixes
+	Removed happiness bonus from Gardens of Al-Andalus
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -2018,7 +2029,7 @@ Changes for Alpha 12:
 
 	Major Changes:
 		New reformation mechanics from Panopticon. Reformation spreads gradually over Europe.
-		Dynamic LeaderHeads implemented: most Civs have multiple leaders which change over time.
+		Dynamic LeaderHeads implemented: most civs have multiple leaders which change over time.
 		Many old entries removed, so Civilopedia is cleaner.
 		Some civs resurrect at new capitol location (thanks to Panopticon for the code)
 		Better art for corporations (executives and buildings)
@@ -2036,7 +2047,7 @@ Changes for Alpha 12:
 		Fixed some bugs with initial starting contact: Arabs and Ottomans mainly.
 		New LHs have first meeting quotes
 		Stronger (possibly to the extent of overkill) Frankia start
-		Gave every leader a favorite Religion.
+		Gave every leader a favourite Religion.
 		Some city name synchronization in Transylvania,
 		Removed Alsace-Lorraine off Burgundy spawn zone
 		Removed Barbarian in Syracuse (now that AI is using islands again).
@@ -2056,11 +2067,11 @@ Changes for Alpha 12:
 		Pope/Papal text.
 		Unofficial patch: trade routes of the city deleted after razing.
 		Button Fixes
-		Bulgarian UHV, Moscowan starting Techs, Tennary cost, Prosecutions and Temple Mount, a few minor bugs
+		Bulgarian UHV, Moscowan starting Techs, Tannery cost, Prosecutions and Temple Mount, a few minor bugs
 		Moscow names changed
 		New art Genoan Bank. Mint now named Genoan.
 		Toll House Has +75% trade route modifier instead of 25%.
-		Minor balance things. One atlantic access spawn between Norse and Sweden in 1680.
+		Minor balance things. One Atlantic Access spawn between Norse and Sweden in 1680.
 		Mediterranean islands out of Arabs normal area. Pantelleria now out of Genoan settlermap (had forgotten it before).
 		BugFix: Resurrection of formerly owned cities that are now independent
 
@@ -2091,16 +2102,16 @@ Changes for Alpha 11:
 		Every timber is on dense forest.
 		Slightly stronger start for Spain. Some coastal resources moved due to dumb AI not settling near enough.
 		Fixed random indy in Syracuse.
-		Made Red Sea not fresh water. Potatos spawn in Ireland and north-central Europe. Fixed a pig that was in dense forest.
+		Made Red Sea not fresh water. Potatoes spawn in Ireland and north-central Europe. Fixed a pig that was in dense forest.
 		Warehouse back to 5% commerce bonus.
 		Growth penalty for Byzantium is decreased.
 		Gameplay: England starts with a Galley AND The Dome of the Rock requires Islam
 		Gameplay: increased Orthodox stability bonus
 		Gameplay: Bulgaria does not start with Missionaries, but Moscow does.
 		Changed musket units, archery units can get combat IV and combat V promotion again
-		Ship action tags changed. No ship upgrades to carrack, and venetian galleas has 8 attack now (as they were used extensively until galleons and frigates).
+		Ship action tags changed. No ship upgrades to Carrack, and Venetian Galleass has 8 attack now (as they were used extensively until galleons and frigates).
 		Moved some resources. Strengthened Edinburgh.
-		Belem Tower, Magellan's Voyage and Amsterdam Beurs now require atlantic access.
+		Belem Tower, Magellan's Voyage and Amsterdam Beurs now require Atlantic Access.
 		Dutch spawn correctly at 1580, not 1600.
 		Improved Spain's city names, settlermaps, warmaps, dynamic civ names.
 		Removed obsolete civic penalty
@@ -2131,7 +2142,7 @@ Changes for Alpha 10:
 		Reduced early game health and happiness by removing resources from the map, eliminating the health bonus of forests, and making early buildings give less health/happy bonuses.
 		Significant re-design of civics, focusing on simplification. Civs now spawn with a pre-defined set of civics.
 		Reduced penalties against Byzantium and gave them a navy.
-		Made Seljuk turks a major barb invasion (like Mongols). They also spread Islam on capture.
+		Made Seljuk Turks a major barb invasion (like Mongols). They also spread Islam on capture.
 		Changed Ottoman spawn zone to be much closer to Constantinople and include Hadrianopolis.
 		Removed some un-needed buildings: Monuments, Siege workshop, Catholic/Orthodox schools and Sahn. Removed unhealth from guild hall. Make Archery range obsolete with flintlock.
 
@@ -2145,7 +2156,7 @@ Changes for Alpha 10:
 		Military order executives now upgrade to pikemen, a crude way to limit their spreading after a certain date.
 		Workers can remove mud with machine tools
 		New explosives Buttons
-		New movie of Magellans Voyage
+		New movie of Magellan's Voyage
 		New movie of Copernicus Observatory
 		Many early techs with too many benefits saw things shuffled around slightly.
 		Made Mongols harder on Viceroy (so Kiev doesn't become super-power).
@@ -2184,7 +2195,7 @@ Changes for Alpha 10:
 		Cog AI fixed.
 		Fixed Venice button.
 		Fixed a small error in dynamic naming.
-		Bugfix: a Resurection Bug
+		Bugfix: a resurrection bug
 		AI: Now the AI is aware that some seemingly useless projects unlock other useful projects.
 		Fixed bug with 3rd Polish UHV
 		Fixed bug in French dynamic names
@@ -2222,9 +2233,9 @@ Changes for Alpha 9:
 		Made eastern part of Nile delta more city-friendly
 
 	Bugfixes and Minor Changes:
-		Norse UHV for France only includes Brittany/Normandie
+		Norse UHV for France only includes Brittany/Normandy
 		Moved 1st Norse UHV back to 1050
-		Removed +1 health from fish from smokehouse.
+		Removed +1 health from fish from Smokehouse.
 		Allow city founding on dense forest.
 		New texts and updated Great Person files from Jessiecat
 		Reduced tech costs, particularly in the mid-to-late game
@@ -2234,7 +2245,7 @@ Changes for Alpha 9:
 		Norse more likely to get Shrine of Uppsala
 		New cannon buttons
 		Swedish leader art is now Gustav Vasa
-		A few tweaks to Poland and neighbors
+		A few tweaks to Poland and neighbours
 		Added some German localization (ue, oe)
 		Skirmisher can't enter marsh
 		Long Swordsman now Longswordsman (name may change again)
@@ -2264,7 +2275,7 @@ Changes for Alpha 8:
 	Religion info added to manual and a little more work therein
 	New respawn mechanics
 	New optimized leadheads from embryodead
-	Merged in JediClemente's wonders and merijn_v1's texts (Civilopedias and a few other changes)
+	Merged in JediClemente's wonders and merijn_v1's texts (Civilopedia texts and a few other changes)
 	Changes to Iberia AI maps
 	Updated Colony Requirement Techs
 	Gave economy civics corporation changes.
@@ -2275,14 +2286,14 @@ Changes for Alpha 8:
 	Moorlands now support cottages.
 	New buttons for Colonies.
 	Fixed unit buttons so they work with low-resolution settings (removed Minimaps), more to come.
-	New Venice Galleas button.
+	New Venice Galleass button.
 	French translation by M41d3n.dc merged in.
 	Gustav's eyes fixed
 	Bug Fix - Fast Movement Over Snow Terrain, now Ships move fast over Ocean
 	Update on Byzantines and Hungarian civilization names
 	Lisboa moved 1S, and rework of south Iberia.
-	Naval redesign. War galley replaces trimene. Cogge renamed Cog. New units: war galley, gun galley, holk.
-	Beserker no longer upgrades to (worse) longswordsman.
+	Naval redesign. War Galley replaces Trimene. Cogge renamed Cog. New units: war galley, gun galley, holk.
+	Berserker no longer upgrades to (worse) Longswordsman.
 	Forest/Dense forest renamed to woodland/forest.
 	Bug Fix - German UHV, UHV update - Poland
 	Added War/Settler reference maps
@@ -2290,7 +2301,7 @@ Changes for Alpha 8:
 	New Moscow UHV (get warm water access) and bug fix in consts.py resource list
 	Fixed the Orthodox Arabia bug, the AI is now aware of the future cash income from the Faith UP + Holy City synergy
 	Buildings can spread irrigation ability (used for Gardens of Al-Andalus)
-	Fixed the always re-apperaring burgundy settler map bug, germany spreads out better
+	Fixed the always re-apperaring burgundy settler map bug, Germany spreads out better
 	Some map synchronizations in France/Germany
 	Stronger Cordoba
 	Added Tamerlane's invasion
@@ -2320,7 +2331,7 @@ Changes for Alpha 7:
 		Added Bia³owie¿a forest (mostly dense forest), with timber and deer. Considered adding furs as well, but had added them to Dniester headwaters
 		Added a bunch of resources to Poland, Hungary, and Austria
 		Removed hill from underneath Gdansk. Added a few near Warsawa
-	New text entries for encyclopedia (compiled by merijn_v1)
+	New text entries for the Civilopedia (compiled by merijn_v1)
 	New UHV reference maps
 	New Moscow city-name-map from Ptitsa Consul
 	Fixed bug with Arab UU
@@ -2330,16 +2341,16 @@ Changes for Alpha 7:
 Changes for Alpha 6:
 (released: 2009.08.01.)
 
-	Fixed Venician bug not allowing them to declare war to Independents
-	Fixed a bug with the Crusaders conqering Jerusalem
+	Fixed Venetian bug not allowing them to declare war to Independents
+	Fixed a bug with the Crusaders conquering Jerusalem
 	Changed the Spanish spawn date to 912AD, with Kiev and Hungary there were too many civs spawning too close to each other (chronologically)
 	Nerfed the British Barbs
 	Various Code optimizations to speed up the game
 	UHVs are now readable under the victory info screen (almost entirely)
-	Changed the names of Byzantium and Hungary to Romaii and Magyars
-	Spanish spaw date moved to 912 (+1 turn), there were too many natoins (Hungary, Kiev and Spain) spawning too close to each other (more work is needed on this bug)
-	Fixed a bug allowing a nation to resurect the next turn after they are conquered, the wait is now minimum 30 turns
-	Resurections are generally less common
+	Changed the names of Byzantium and Hungary to Romaii and Magyar
+	Spanish spawn date moved to 912 (+1 turn), there were too many nations (Hungary, Kiev and Spain) spawning too close to each other (more work is needed on this bug)
+	Fixed a bug allowing a nation to resurrect the next turn after they are conquered, the wait is now minimum 30 turns
+	Resurrections are generally less common
 	Upon conversion to Protestantism, not all Buildings in a city get converted and some Faith is generated
 	Some nations have high probability to start at war from spawn (i.e. Spain - Cordoba, Byzantium - Bulgaria)
 	Slowed down the tech rate as Myri suggested, which nerfed Kiev reasonably
@@ -2348,13 +2359,13 @@ Changes for Alpha 6:
 	Mercenaries don't go on Crusades
 	Taking over leadership for the Crusade and aiming it to Jerusalem, no longer wrongfully targets Burgundy
 	The AI is less likely to change religions as it is aware of the loss of Faith Points
-	Jewish Quartes give +1 Culture (we all know the Jews + Money jokes, but Jews contributed more than just trade and commerce to Medieval Europe)
-	Barbs and Indipendents no longer build Prosecutors
+	Jewish Quarters give +1 Culture (we all know the Jews + Money jokes, but Jews contributed more than just trade and commerce to Medieval Europe)
+	Barbs and Independents no longer build Prosecutors
 	The AI doesn't go after Barbs and Indies outside its WarsMap, i.e. no more random French cities in eastern Russia
 	Respawning civs can no longer make peace with the Barbs (this is RFC bug actually)
-	Galleas now carry units + enter rival territory. Graphics should be better now. General Venecian sea units cannot enter foreign sea (i.e. removed the RFC Dutch UP form Venice)
-	The AI should recognize Galleas and Gogge as transports
-	Addes olives and modified version of Michael Vick's map (removed most of the roads mainly)
+	Galleass now carry units + enter rival territory. Graphics should be better now. General Venetian sea units cannot enter foreign sea (i.e. removed the RFC Dutch UP form Venice)
+	The AI should recognize Galleass and Cogge as transports
+	Added olives and modified version of Michael Vick's map (removed most of the roads mainly)
 	Merged the map with the Updated Russian Map
 	Added some Mediterranean Pirates, they will need to be balanced
 	Bulgarian start moved to the accurate 680AD (since they are now strong enough) and Cordoban start moved to the more accurate 712AD
@@ -2369,8 +2380,8 @@ Changes for Alpha 5:
 	Fixed a bug with the Genoa UHV
 	Fixed a bug with the plague not being removed form cities flipping on spawn
 	Fixed a bug making a lot of the colonies to be "National" Projects
-	Fixed a bug that made Lousiana not require AA
-	Lousiana now moved to the North American region
+	Fixed a bug that made Louisiana not require AA
+	Louisiana now moved to the North American region
 	Fixed a bug wrongly defining the continents, now the entire map is considered one continent (even Africa and Middle East)
 	Nerfed the Viking and German barbs
 	Added Faith Points, please read the Civilopedia
@@ -2383,7 +2394,7 @@ Changes for Alpha 5:
 	Added the Hungarian updated map. Hungary now looks much better:
 		Added rivers: Drava and Maros
 		Corrected river Tisza (somehow it was cut shorter than it is)
-		Reduced dense forests in Transylvania, put the two tile mountains one tile norther,
+		Reduced dense forests in Transylvania, put the two tile mountains one tile north
 		Added another salt in Transylvania, and a gold to the south of it
 		Put a gold next to the copper on the north
 		Put a cow on the east
@@ -2413,7 +2424,7 @@ Changes for Alpha 4:
 	Fixed a Hungarian UHV bug (there might be more)
 	Added light version of the mod:
 		It's for people with weak machines that cannot read the new leaderheads
-		In Assets\XML\Civilzations, delete the file CIV4LeaderHeadInfos.xml and rename to CIV4LeaderHeadInfos.xml_light so that you remove the _light
+		In Assets\XML\Civilizations, delete the file CIV4LeaderHeadInfos.xml and rename CIV4LeaderHeadInfos.xml_light so that you remove the _light
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -2485,7 +2496,7 @@ Changes for Alpha 2:
 	Techs in the Tech tree have better tags for the AI (i.e. the benefits are correctly recognized as military vs gold vs culture)
 	Updated visible areas upon spawn (not everything discussed is in, but being able to see land very far away will have no effect on the gameplay)
 	Updated contacts on spawn (Byzantines now know the Pope, Kiev doesn't have to wait to meet Bulgaria and Byzantium and so on)
-	New Leaderhead graphics for: Burgundy, Bulgaria, Norse, Kiev, Poland, Swedan and the Pope (still need Hungary, Cordoba, Genoa and Austria)
+	New Leaderhead graphics for: Burgundy, Bulgaria, Norse, Kiev, Poland, Sweden and the Pope (still need Hungary, Cordoba, Genoa and Austria)
 	Updated city name map from micbic
 	Included the Russian Addon (I hope properly). There are only a few tags missing (3 + 1 that needs clarification), I have neither the Russian skill nor the tools to translate anything into the numerical values for Cyrillic, sorry!
 	If you select to load the mod from the regular Civ Menu, you should immediately be taken to the Civ selection screen
@@ -2543,7 +2554,7 @@ Changes for Test Version 2009.06.07.:
 
 Changes for Test Version 2009.05.26.:
 
-	Some new unit civilopedia texts
+	Some new unit Civilopedia texts
 	New city name maps from micbic
 	Fixed bug with religion instability (which was hitting Arabs hardest)
 	Fixed bug with barb spawning at Emperor level
@@ -2552,13 +2563,13 @@ Changes for Test Version 2009.05.26.:
 	Stability was too high with these fixes, so I fudged it with slow stability decay, though I view this as a temporary fix.
 	Reduced French research/production penalties
 	New spawn area includes more of Normandy
-	Calais spawns later (to avoid being killed by barb-vikings)
+	Calais spawns later (to avoid being killed by barb-Vikings)
 	New English UHVs
 	New barbarian units (Welsh longbow and Highlander) in Scotland and Wales. Quite possibly these barbs are a bit much -- I "cheat" and soften them for the AI.
 	Forts now possible on moors
 	Kievan UU now Druzhina
 	New unit art for Moscow Boyar
-	Byzantium starts out with some immobile guards (Tagmata).
+	Byzantium starts out with some immobile guards (Tagmata)
 	Kievan UHVs moved earlier (as suggested) and description clarified
 	New Burgundian UHVs (as suggested)
 	Fixed some out-of-order prereqs in naval tech line.
@@ -2583,7 +2594,7 @@ Changes for Test Version 2009.05.05.:
 	Small decrease to growth rates as function of era
 	Worker speed restored to default BTS speed
 	Reduced value of city cultural defenses to promote defensive buildings
-	Tech civilopedia descriptions from Jessiecat
+	Added some tech descriptions in the Civilopedia from Jessiecat
 	Increased Ottoman starting units
 	Fixed bugs in Burgundy/Venice UHV
 	Changed how economic instability is handled
@@ -2610,11 +2621,11 @@ Changes for Test Version 2009.04.18.:
 	Fixed Orthodox Belfry art
 	New estimated start times for Sweden/Dutch -> New DLL built by Sedna17, let me know if anything doesn't work.
 	Portugal now dislikes Cordoba on spawn
-	Fixed Power of Trade(Tade) typo and updated Bulgarian UHV description
-	Fixed two bugs in respawn code that were causing game-breaking CTDs. The problem was Civ collapse close too close to the edge of the map (normally Arabia).
+	Fixed Power of Trade typo and updated Bulgarian UHV description
+	Fixed two bugs in respawn code that were causing game-breaking CTDs. The problem was Civ collapse close too close to the edge of the map (normally Arabia)
 	Softened tech penalties for early Civs.
 	Added new Venice leaderhead as proof-of-concept.
-	Switched minimum city distance back to 1 sqaure, at least for now.
+	Switched minimum city distance back to 1 square, at least for now.
 	Tweaked balance parameters to even out tech rates, strengthen Turkey and weaken Poland.
 	Removed hammer bonus for farms under serfdom.
 	Made Feudal Law allow conscription (levy).
@@ -2688,7 +2699,7 @@ Changes for Test Version 2009.03.14.:
 
 	Overhauled buildings. Main features:
 		More religious buildings and religious buildings are important for early science (library -> scriptorium). Catholicism and Orthodoxy are equivalent, but Protestantism and Islam have somewhat different buildings. Some new art to accompany these changes, but not finished (particularly Orthodoxy).
-		Removed colosseum and re-assigned or gave new UBs to the civs affected
+		Removed Colosseum and re-assigned or gave new UBs to the civs affected
 		Resources now are more even. Each health/happy resource now has one building which produces a better product from the raw material (causes it to give +1 more happy/health) and one which sells the resource (causes it to give +% food or money).
 		Some production buildings (Forge/Mason/Carpenter) now give production bonuses only with the appropriate resources.
 		Market is now prerequisite for some of the buildings which sell something.
@@ -2697,7 +2708,7 @@ Changes for Test Version 2009.03.14.:
 	Map changes:
 		Map changes from Jessiecat
 		Modified city names from micbic
-		Spanish WarMap redone to encourage killing Corodoba
+		Spanish WarMap redone to encourage killing Cordoba
 		Arab WarMap redone to encourage invading Turkey
 		Austria gets Prague on spawn.
 		Cordoba spawn moved one square to the west.
@@ -2735,7 +2746,7 @@ Changes for Test Version 2009.03.05.:
 		Made .xml file for Great Person name list so that these should show up correctly now
 		Introduced some more Corporation Competition
 		Pushed Corporations a bit back in time
-		Fiddled with Colors/flags many civs. Flag symbols still need work. Still need many new buttons. Colors are approaching final colors.
+		Fiddled with Colours/flags for many civs. Flag symbols still need work. Still need many new buttons. Colours are approaching final status.
 		Replaced Bank-spread exec with new model
 		Change Kievan Leader Name to Yaroslav the Wise
 		Fixed Hudson Bay Colony Art
@@ -2756,14 +2767,14 @@ Changes for Test Version 2009.02.27.:
 		French UB, Salon, moved to Scientific Method just like Observatory
 		Konnik brought into line with new Horse Archer (both with cost and First Strikes)
 		Adjusted Ghazi/Berber costs
-		Adjusted Beserker cost
+		Adjusted Berserker cost
 		Theodosian Walls now pre-built in Constantinople to make it harder to take initially
 		Cordoba is weaker, Spain stronger, in attempt to get better Iberian dynamic
 		Burgundy and France are friendlier initially (though they still tend to go to war too often)
 		Unit costs raised by 50% across the board
 		Fixed bug with English UP (just an offset in Consts.py) so now they don't have super mines anymore
-		Changed Polish color/flag, mostly just to check that I could
-		Other civ colors changed, though much work remains to sync colors with potential flags
+		Changed Polish colour/flag, mostly just to check that I could
+		Other civ colours changed, though much work remains to sync colours with potential flags
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -2840,7 +2851,7 @@ Changes for Test Version 2009.02.03.:
 		Include updated Frankia UHV map
 		Re-arranged building order a little to be consistent.
 		England now starts with a couple Lancers and without warriors
-		England now gains armored lancers if anyone declares war on-spawn
+		England now gains Armored Lancers if anyone declares war on-spawn
 		Barb warriors in Wales and barb axe/spear spawn in Scotland so unification is harder.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
