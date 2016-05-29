@@ -1012,8 +1012,8 @@ class Victory:
 
 	def checkNovgorod( self, iGameTurn ):
 
-		# UHV 1: Control Novgorod, Karelia, Estonia and Livonia in 1250
-		if ( iGameTurn == xml.i1250AD and pNovgorod.getUHV( 0 ) == -1 ):
+		# UHV 1: Control Novgorod, Karelia, Estonia and Livonia in 1284
+		if ( iGameTurn == xml.i1284AD and pNovgorod.getUHV( 0 ) == -1 ):
 			bOwn = True
 			for iProv in tNovgorodControl:
 				if ( pNovgorod.getProvinceCurrentState( iProv ) < con.iProvinceConquer ):

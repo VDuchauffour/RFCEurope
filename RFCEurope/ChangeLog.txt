@@ -148,11 +148,12 @@ Changes for RFCE 1.4:
 		- Normandy, 500AD: Caen (100%, "Caen"), starts with Catholicism, population size 2
 		- Brittany, 500AD: Nantes (50%, "Naoned"), Vannes (30%, "Gwened"), Rennes (20%, "Roazhon")
 		- Picardy, 800AD: Calais (50%, "Calais"), Dunkirk (50%, "Dunkerque")
-		- Tuscany, 500AD: Firenze (40%, "Florentia"), Pisa (20%, "Pisae"), Ancona (20%, "Ankon"), Rimini (20%, "Ariminum")
+		- Tuscany, 500AD: Firenze (40%, "Florentia"), Pisa (40%, "Pisae"), Ancona (20%, "Ankon")
 		- South Italy, 500AD: Napoli (40%, "Neapolis"), Benevento (40%, "Beneventum"), Taranto (20%, "Tarentum")
-		- Navarre, 700AD: Pamplona (60%, "Pamplona"), Pamplona alternative position (20%, "Pamplona"), Saint Sebastian (20%, "San Sebastián")
-		- Picts in Scotland, 600AD: Scone (50%, "Scaig"), Inverness (50%, "Inbhir Nis"), barbarian city, population size 1
+		- Navarre, 700AD: Pamplona (70%, "Pamplona"), Pamplona alternative position (30%, "Pamplona")
+		- Picts in Scotland, 552AD: Scone (50%, "Scaig"), Inverness (50%, "Inbhir Nis"), barbarian city, population size 1
 		- Removed the respawn of Florence in 800AD, removed the spawn of indy Edinburgh in 860AD
+		- Scone and Inverness are reduced to towns a couple turns before the Scottish spawn - would restrict city placement way too much otherwise
 
 	Text/GUI improvements:
 		- New GlobalDefines_Alt.xml file, users can change RFCE-specific settings there (RFCEurope\Assets\XML\)
@@ -187,7 +188,10 @@ Changes for RFCE 1.4:
 		- Franks start with the Theology tech, in the State Religion civic, and with Catholicism as their State Religion
 		- Lorraine province is historic for the Franks, switches to border on the German spawn
 		- Morocco starts with Literature, so they can remain in the Religious Law civic
-		- New Dynamic Civ Names for Burgundy, Cordoba (+ Tunisia), Morocco
+		- New Dynamic Civ Names for Burgundy, Cordoba, Tunisia (respawn of Cordoba), Morocco
+		- Added Earldom (English), Mormaerdom (Scottish) and Banate (Hungarian) to vassal DCN names
+		- Small updates in the DCN for Byzantium, Hungary, France, Bulgaria
+		- New Dynamic Civ Names for Spain, Aragon, Sicily (respawn of Aragon), Portugal
 		- Wattasids won't revolt if Morocco controls the region, they now appear in their DCN as a ruling dynasty
 		- Norwegian 1st UHV: Vinland should be completed until 1066 AD
 		- New aspect of Norwegian UP: also enables trading through Ocean
@@ -201,6 +205,8 @@ Changes for RFCE 1.4:
 		- Updates in the Byzantine and in the General city name maps in Britain and France - by DC123456789
 		- Updates in the French and in the General city name maps in Northern Italy
 		- Normandy province also needed for the French 1st UHV
+		- Moved the Novgorodian 1st UHV a couple turns later, new deadline is 1284AD
+		- Revised spawn zone for Muscovy near the Novgorodian core area
 
 	Balance:
 		- Lowered cost of Religious Prosecutors, upped their max number to 3
@@ -265,6 +271,7 @@ Changes for RFCE 1.4:
 		- Fixed bug where you could ask the Pope to change to Paganism
 		- Fixed a Firaxis bug with double language tags which caused issues when running the game in German
 		- Fixed issue with era names, now vanilla BtS era names will never be displayed instead of mod-specific ones (on era splash screens for example)
+		- Fixed bug which prevented showing DCNames in some cases with the MasterOf condition
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
