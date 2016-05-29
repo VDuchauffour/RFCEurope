@@ -54,7 +54,7 @@ tRagusa = ( [ ((64, 28), "Ragusa", 100) ], iIndependent2, 1, xml.iArcher, 2, xml
 tSeville = ( [ ((27, 21), "Hispalis", 100) ], iIndependent4, 1, xml.iArcher, 2, -1, 0 )
 tPalermo = ( [ ((55, 19), "Palermo", 60), ((58, 17), "Syracuse", 40) ], iIndependent3, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
 # 552 AD
-tInverness = ( [ ((37, 67), "Inbhir Nis", 50), ((37, 65), "Scaig", 50) ], iBarbarian, 1, xml.iArcher, 1, -1, 0)
+tInverness = ( [ ((37, 67), "Inbhir Nis", 50), ((37, 65), "Scaig", 50) ], iBarbarian, 1, xml.iArcher, 1, -1, 0) #reduced to town on spawn of Scotland
 # 600 AD
 tRhodes = ( [ ((80, 13), "Rhodes", 100) ], iIndependent2, 1, xml.iArcher, 1, xml.iOrthodoxy, 0 )
 # 640 AD
@@ -65,9 +65,12 @@ tLeicester = ( [ ((39, 56), "Ligeraceaster", 100) ], iIndependent, 1, xml.iArche
 # 700 AD
 tValencia = ( [ ((36, 25), "Valencia", 100) ], iIndependent, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
 tPamplona = ( [ ((35, 32), "Pamplona", 70), ((34, 33), "Pamplona", 30) ], iIndependent4, 1, xml.iCrossbowman, 2, -1, 0 )
-tDublin = ( [ ((32, 58), "Dubh Linn", 100) ], iBarbarian, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
 tLubeck = ( [ ((57, 54), "Liubice", 100) ], iIndependent2, 1, xml.iArcher, 2, -1, 1 )
 tPorto = ( [ ((23, 31), "Portucale", 100) ], iIndependent3, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
+tDublin = ( [ ((32, 58), "Teamhair", 100) ], iBarbarian, 1, xml.iSpearman, 1, xml.iCatholicism, 1 ) #Hill of Tara, later becomes Dublin
+tDownpatrick = ( [ ((33, 61), "Rath Celtair", 100) ], iBarbarian, 1, xml.iArcher, 0, -1, 1 )
+tSligo = ( [ ((29, 60), "Cruiachain", 100) ], iBarbarian, 1, xml.iSpearman, 1, -1, 1 ) #Rathcroghan, later becomes Sligo
+tCork = ( [ ((29, 56), "Caisel", 100) ], iBarbarian, 1, xml.iSpearman, 0, -1, 1 ) #Cashel, later becomes Cork
 # 760 AD
 tTonsberg = ( [ ((57, 65), "Tonsberg", 100) ], iIndependent3, 1, xml.iArcher, 2, -1, 0)
 # 768 AD
@@ -86,16 +89,19 @@ tBeloozero = ( [ ((87, 65), "Beloozero", 100) ], iIndependent4, 1, xml.iCrossbow
 # 860 AD
 #tEdinburgh = ( [ ((37, 63), "Eidyn Dun", 100) ], iBarbarian, 1, xml.iArcher, 1, -1, 0)
 # 880 AD
-tApulum = ( [ ((73, 35), "Belograd", 100) ], iIndependent, 1, xml.iArcher, 2, -1, 0)
+tApulum = ( [ ((73, 35), "Belograd", 80), ((73, 37), "Napoca", 20) ], iIndependent, 1, xml.iArcher, 2, -1, 0) #Gyulafehérvár or Kolozsvár
 # 900 AD
 tTvanksta = ( [ ((69, 53), "Tvanksta", 100) ], iIndependent4, 1, xml.iCrossbowman, 2, -1, 0) #Königsberg
 tKrakow = ( [ ((68, 44), "Krakow", 100) ], iIndependent3, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0)
 tRiga = ( [ ((74, 58), "Riga", 100) ], iIndependent, 2, xml.iCrossbowman, 2, -1, 1) #maybe call it Duna in the early pediod (Duna is the name of a sheltered natural harbor near Riga)
+tWales = ( [ ((36, 54), "Caerdydd", 50), ((35, 57), "Aberffraw", 50) ], iBarbarian, 1, xml.iArcher, 1, -1, 1 ) #Cardiff and Caernarfon
 # 911 AD
 tCaenR = ( [ ((40, 47), "Caen", 100) ], iIndependent2, 1,  xml.iCrossbowman, 2, xml.iCatholicism, 0) #respawn, on the establishment of the Duchy of Normandy
 # 960 AD
 tMinsk = ( [ ((79, 52), "Minsk", 100) ], iIndependent3, 1, xml.iCrossbowman, 2, -1, 0)
 tSmolensk = ( [ ((84, 55), "Smolensk", 100) ], iIndependent4, 1, xml.iCrossbowman, 1, -1, 0)
+# 988 AD
+tDublinR = ( [ ((32, 58), "Dubh Linn", 100) ], iBarbarian, 1, xml.iCrossbowman, 1, xml.iCatholicism, 1 ) #respawn, on the traditional Irish foundation date of Dublin
 # 1010 AD
 tYaroslavl = ( [ ((92, 61), "Yaroslavl", 100) ], iIndependent3, 1, xml.iCrossbowman, 1, -1, 0)
 # 1050 AD
@@ -159,15 +165,16 @@ xml.i552AD : [ tInverness ],
 xml.i600AD : [ tRhodes ],
 xml.i640AD : [ tNorwich ],
 xml.i680AD : [ tToledo, tLeicester ],
-xml.i700AD : [ tValencia, tPamplona, tDublin, tLubeck, tPorto ],
+xml.i700AD : [ tValencia, tPamplona, tLubeck, tPorto, tDublin, tDownpatrick, tSligo, tCork ],
 xml.i760AD : [ tTonsberg ],
 xml.i768AD : [ tRaska ],
 xml.i780AD : [ tFez ],
 xml.i800AD : [ tMilanR, tPrague, tKursk, tCalais, tNidaros, tUppsala, tBeloozero ],
 xml.i880AD : [ tApulum ],
-xml.i900AD : [ tTvanksta, tKrakow, tRiga ],
+xml.i900AD : [ tTvanksta, tKrakow, tRiga, tWales ],
 xml.i911AD : [ tCaenR ],
 xml.i960AD : [ tMinsk, tSmolensk ],
+xml.i988AD : [ tDublinR ],
 xml.i1010AD : [ tYaroslavl ],
 xml.i1050AD : [ tGroningen, tKalmar ],
 xml.i1060AD : [ tMus ],
@@ -378,9 +385,9 @@ class Barbs:
 			pass
 		elif (iGameTurn >= xml.i780AD and iGameTurn < xml.i1000AD):
 			if (gc.getPlayer(con.iFrankia).isHuman()):
-				self.spawnVikings( iBarbarian, (35,48),(50,55), xml.iVikingBeserker, 2, iGameTurn,8,0,utils.outerSeaSpawn,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_VIKINGS", ()))
+				self.spawnVikings( iBarbarian, (37,48),(50,54), xml.iVikingBeserker, 2, iGameTurn,8,0,utils.outerSeaSpawn,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_VIKINGS", ()))
 			else:
-				self.spawnVikings( iBarbarian, (35,48),(50,55), xml.iVikingBeserker, 1, iGameTurn,8,0,utils.outerSeaSpawn,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_VIKINGS", ()))
+				self.spawnVikings( iBarbarian, (37,48),(50,54), xml.iVikingBeserker, 1, iGameTurn,8,0,utils.outerSeaSpawn,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_VIKINGS", ()))
 
 		#Swedish Crusades
 		if (iGameTurn >= xml.i1150AD and iGameTurn < xml.i1210AD):
@@ -401,14 +408,18 @@ class Barbs:
 		elif (iGameTurn >= xml.i1200AD and iGameTurn < xml.i1224AD):
 			self.spawnUnits( iBarbarian, (73,56),(76,61), xml.iTeutonic, 1, iGameTurn,2,1,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_SWORD_BRETHEN", ()))
 
+		#Couple melee barb units in Ireland:
+		if (iGameTurn >= xml.i800AD and iGameTurn < xml.i900AD):
+			self.spawnUnits( iBarbarian, (28,56),(33,62), xml.iAxeman, 1, iGameTurn,7,3,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_IRISH", ()))
+
 		#Anglo-Saxons before the Danish 1st UHV (Conquer England)
 		if (iGameTurn >= xml.i970AD and iGameTurn < xml.i1050AD):
 			if (gc.getPlayer(con.iDenmark).isHuman()): #more barbs for human Denmark
 				self.spawnUnits( iBarbarian, (36,53),(41,59), xml.iAxeman, 1, iGameTurn,8,5,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_ANGLO_SAXONS", ()))
-				self.spawnUnits( iBarbarian, (33,48),(38,56), xml.iAxeman, 1, iGameTurn,5,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_ANGLO_SAXONS", ()))
-				self.spawnUnits( iBarbarian, (33,48),(38,56), xml.iSwordsman, 1, iGameTurn,11,4,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_ANGLO_SAXONS", ()))
+				self.spawnUnits( iBarbarian, (33,48),(38,54), xml.iAxeman, 1, iGameTurn,5,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_ANGLO_SAXONS", ()))
+				self.spawnUnits( iBarbarian, (33,48),(38,54), xml.iSwordsman, 1, iGameTurn,11,6,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_ANGLO_SAXONS", ()))
 			else: #less for the AI
-				self.spawnUnits( iBarbarian, (33,48),(38,56), xml.iAxeman, 1, iGameTurn,5,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_ANGLO_SAXONS", ()))
+				self.spawnUnits( iBarbarian, (33,48),(38,54), xml.iAxeman, 1, iGameTurn,5,2,utils.outerInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_ANGLO_SAXONS", ()))
 
 		#Scots to keep England busy, but only if Scotland is dead
 		if ( not gc.getPlayer(con.iScotland).isAlive() ):
@@ -429,12 +440,12 @@ class Barbs:
 			if (iGameTurn >= xml.i1060AD and iGameTurn < xml.i1160AD):
 				self.spawnUnits( iBarbarian, (37,53),(39,57), xml.iWelshLongbowman, 1, iGameTurn,7,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_WELSH", ()))
 			if (iGameTurn >= xml.i1160AD and iGameTurn < xml.i1452AD):
-				self.spawnUnits( iBarbarian, (37,53),(39,57), xml.iWelshLongbowman, 2 + iHandicap, iGameTurn,13,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_WELSH", ()))
+				self.spawnUnits( iBarbarian, (37,53),(39,57), xml.iWelshLongbowman, 2 + iHandicap, iGameTurn,12,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_WELSH", ()))
 		else: #less for the AI
 			if (iGameTurn >= xml.i1060AD and iGameTurn < xml.i1160AD):
 				self.spawnUnits( iBarbarian, (37,53),(39,57), xml.iWelshLongbowman, 1, iGameTurn,13,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_WELSH", ()))
 			if (iGameTurn >= xml.i1160AD and iGameTurn < xml.i1452AD):
-				self.spawnUnits( iBarbarian, (37,53),(39,57), xml.iWelshLongbowman, 1, iGameTurn,7,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_WELSH", ()))
+				self.spawnUnits( iBarbarian, (37,53),(39,57), xml.iWelshLongbowman, 1, iGameTurn,9,1,utils.forcedInvasion,1, localText.getText("TXT_KEY_BARBARIAN_NAMES_WELSH", ()))
 
 		#Magyars (preceeding Hungary)
 		if (iGameTurn >= xml.i840AD and iGameTurn < xml.i892AD):

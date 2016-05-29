@@ -84,14 +84,14 @@ Changes for RFCE 1.4:
 		- Removed redundant tech requirement of Theology from Philosophy
 		- Moved Magna Carta and Golden Bull to Philosophy from Divine Right
 		- Moved St. Basil Cathedral to Divine Right from Chemistry
-		- Pinch promotion moved to Military Tactics from Flintlock
 		- Removed tech requirements for South America Access, East Asia Access - not needed to take space on the tech tree, as they don't have actual resources on the map
 		- North America Access is special as we have one on the map near Iceland, but as it's preadded and removed early enough, still no need for tech requirement
 		- Colonial Trade Route can be established after the discovery of Astronomy instead of Astrolabe
 		- Astrolable no longer enables Ocean trading, only Optics
-		- Aztec Conquest and Inca Conquest moved to Flintlock from Professional Army
-		- Gold Coast and Cape Town moved to Professional Army, East Africa and Indian Trading Post moved to Polygonal Fort
-		- Ivory Coast and Panama moved to Arabic Medicine, Quebec and Jamaica moved to Liberalism
+		- Aztec Conquest and Inca Conquest moved to Chemistry from Professional Army
+		- Ivory Coast moved to Flintlock from Civil Engineering
+		- Gold Coast moved to Professional Army, East Africa and Indian Trading Post moved to Polygonal Fort
+		- Cape Town and Panama moved to Arabic Medicine, Quebec and Jamaica moved to Liberalism
 		- Cuba moved to Constitution from Professional Army, Virginia moved to Nationalism from Constitution
 		- Far Eastern Treaty Port moved to Military Tactics from Nationalism, Malaya moved to Combined Arms from Arabic Medicine
 		- Louisiana moved to Biology from Economics, Philippines moved to Civil Engineering from Naval Architecture
@@ -152,6 +152,13 @@ Changes for RFCE 1.4:
 		- South Italy, 500AD: Napoli (40%, "Neapolis"), Benevento (40%, "Beneventum"), Taranto (20%, "Tarentum")
 		- Navarre, 700AD: Pamplona (70%, "Pamplona"), Pamplona alternative position (30%, "Pamplona")
 		- Picts in Scotland, 552AD: Scone (50%, "Scaig"), Inverness (50%, "Inbhir Nis"), barbarian city, population size 1
+		- Wales, 900AD: Cardiff (50%, "Caerdydd"), Caernarfon (50%, "Aberffraw"), barbarian, population size 2, moved stone 1NW
+		- Transylvania, 880 AD: Gyulafehérvár (80%, "Belograd"), Kolozsvár (20%, "Napoca")
+		- Ireland, 700AD: Downpatrick (100%, "Rath Celtair"), barbarian, population size 1
+		- Ireland, 700AD: Rathcroghan/Sligo (100%, "Cruiachain"), barbarian, population size 1
+		- Ireland, 700AD: Cashel/Cork (100%, "Caisel"), barbarian, population size 1
+		- Ireland, 700AD: Hill of Tara/Dublin (100%, "Teamhair"), barbarian, population size 1
+		- Reworked old spawn of Dublin to respawn of Dublin ("Dubh Linn") in 988AD, on the traditional Irish foundation date
 		- Removed the respawn of Florence in 800AD, removed the spawn of indy Edinburgh in 860AD
 		- Scone and Inverness are reduced to towns a couple turns before the Scottish spawn - would restrict city placement way too much otherwise
 
@@ -232,6 +239,8 @@ Changes for RFCE 1.4:
 		- Jewish Quarter bonus increased to +25% gold income
 		- Increased independent Lyon's starting population size to 2
 		- Both the city in Tuscany and Milan starts with an additional Archer unit
+		- Added a couple agressive melee barb units in Ireland, should be hard to invade
+		- Adjusted barb spawns in the British Isles and the Viking naval spawns
 
 	Bugfixes:
 		- Various dll bugfixes and optimizations from Better BTS AI, K-Mod, Afforess
