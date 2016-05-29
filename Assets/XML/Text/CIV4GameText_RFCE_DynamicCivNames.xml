@@ -604,6 +604,33 @@
 		<Portuguese>Condados da Bulgária</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_DN_BUL_VASSAL_OF_ENGLAND</Tag>
+		<English>Earldom of Bulgaria</English>
+		<French>Earldom of Bulgaria</French>
+		<German>Earldom of Bulgaria</German>
+		<Italian>Earldom of Bulgaria</Italian>
+		<Spanish>Earldom of Bulgaria</Spanish>
+		<Portuguese>Earldom of Bulgaria</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL_VASSAL_OF_SCOTLAND</Tag>
+		<English>Mormaerdom of Bulgaria</English>
+		<French>Mormaerdom of Bulgaria</French>
+		<German>Mormaerdom of Bulgaria</German>
+		<Italian>Mormaerdom of Bulgaria</Italian>
+		<Spanish>Mormaerdom of Bulgaria</Spanish>
+		<Portuguese>Mormaerdom of Bulgaria</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL_VASSAL_OF_HUNGARY</Tag>
+		<English>Banate of Vidin</English>
+		<French>Banate of Vidin</French>
+		<German>Banate of Vidin</German>
+		<Italian>Banate of Vidin</Italian>
+		<Spanish>Banate of Vidin</Spanish>
+		<Portuguese>Banate of Vidin</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_DN_BUL19</Tag>
 		<English>Habsburg Bulgaria</English>
 		<French>Bulgarie Habsbourg</French>
@@ -811,6 +838,33 @@
 		<Italian>Contea di Borgogna</Italian>
 		<Spanish>Condado de Borgoña</Spanish>
 		<Portuguese>Condado da Borgonha</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR_VASSAL_OF_ENGLAND</Tag>
+		<English>Earldom of Burgundy</English>
+		<French>Earldom of Burgundy</French>
+		<German>Earldom of Burgundy</German>
+		<Italian>Earldom of Burgundy</Italian>
+		<Spanish>Earldom of Burgundy</Spanish>
+		<Portuguese>Earldom of Burgundy</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR_VASSAL_OF_SCOTLAND</Tag>
+		<English>Mormaerdom of Burgundy</English>
+		<French>Mormaerdom of Burgundy</French>
+		<German>Mormaerdom of Burgundy</German>
+		<Italian>Mormaerdom of Burgundy</Italian>
+		<Spanish>Mormaerdom of Burgundy</Spanish>
+		<Portuguese>Mormaerdom of Burgundy</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR_VASSAL_OF_HUNGARY</Tag>
+		<English>Banate of Burgundy</English>
+		<French>Banate of Burgundy</French>
+		<German>Banate of Burgundy</German>
+		<Italian>Banate of Burgundy</Italian>
+		<Spanish>Banate of Burgundy</Spanish>
+		<Portuguese>Banate of Burgundy</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BUR19</Tag>
@@ -1023,7 +1077,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ18</Tag>
-		<English>Counties of Greece</English>
+		<English>Earldom of Greece</English>
 		<French>Comt&#233;s de la Gr&#232;ce</French>
 		<German>Grafschaften Griechenlands</German>
 		<Italian>Contee Greche</Italian>
@@ -1110,6 +1164,42 @@
 		<Italian>Province of Greece</Italian>
 		<Spanish>Province of Greece</Spanish>
 		<Portuguese>Province of Greece</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ_VASSAL_OF_SCOTLAND</Tag>
+		<English>Mormaerdom of Greece</English>
+		<French>Mormaerdom of Greece</French>
+		<German>Mormaerdom of Greece</German>
+		<Italian>Mormaerdom of Greece</Italian>
+		<Spanish>Mormaerdom of Greece</Spanish>
+		<Portuguese>Mormaerdom of Greece</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ_VASSAL_OF_HUNGARY</Tag>
+		<English>Banate of Greece</English>
+		<French>Banate of Greece</French>
+		<German>Banate of Greece</German>
+		<Italian>Banate of Greece</Italian>
+		<Spanish>Banate of Greece</Spanish>
+		<Portuguese>Banate of Greece</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ_VASSAL_OF_BURGUNDY</Tag>
+		<English>Duchy of Greece</English>
+		<French>Duchy of Greece</French>
+		<German>Duchy of Greece</German>
+		<Italian>Duchy of Greece</Italian>
+		<Spanish>Duchy of Greece</Spanish>
+		<Portuguese>Duchy of Greece</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ_VASSAL_OF_GERMANY_WITH_CONSTANTINOPLE</Tag>
+		<English>Empire of the Greeks</English>
+		<French>Empire of the Greeks</French>
+		<German>Empire of the Greeks</German>
+		<Italian>Empire of the Greeks</Italian>
+		<Spanish>Empire of the Greeks</Spanish>
+		<Portuguese>Empire of the Greeks</Portuguese>
 	</TEXT>
 	<!-- Byzantium -->
 	<!-- Cordoba -->
@@ -1285,6 +1375,33 @@
 		<Portuguese>Condado da Andaluzia</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_DN_COR_VASSAL_OF_ENGLAND</Tag>
+		<English>Earldom of Andalusia</English>
+		<French>Earldom of Andalusia</French>
+		<German>Earldom of Andalusia</German>
+		<Italian>Earldom of Andalusia</Italian>
+		<Spanish>Earldom of Andalusia</Spanish>
+		<Portuguese>Earldom of Andalusia</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR_VASSAL_OF_SCOTLAND</Tag>
+		<English>Mormaerdom of Andalusia</English>
+		<French>Mormaerdom of Andalusia</French>
+		<German>Mormaerdom of Andalusia</German>
+		<Italian>Mormaerdom of Andalusia</Italian>
+		<Spanish>Mormaerdom of Andalusia</Spanish>
+		<Portuguese>Mormaerdom of Andalusia</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR_VASSAL_OF_HUNGARY</Tag>
+		<English>Banate of Andalusia</English>
+		<French>Banate of Andalusia</French>
+		<German>Banate of Andalusia</German>
+		<Italian>Banate of Andalusia</Italian>
+		<Spanish>Banate of Andalusia</Spanish>
+		<Portuguese>Banate of Andalusia</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_DN_COR19</Tag>
 		<English>Habsburg Andalusia</English>
 		<French>Andalousie Habsbourg</French>
@@ -1342,7 +1459,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUN03</Tag>
-		<English>Hafsid Kingdom</English>
+		<English>Kingdom of Africa</English>
 		<French>.</French>
 		<German>Königreich der Hafsiden</German>
 		<Italian>Regno degli Hafsidi</Italian>
@@ -1351,12 +1468,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUN04</Tag>
-		<English>Taifa of Tunisia</English>
-		<French>Taifa of Tunisia</French>
-		<German>Taifa of Tunisia</German>
-		<Italian>Taifa of Tunisia</Italian>
-		<Spanish>Taifa of Tunisia</Spanish>
-		<Portuguese>Taifa of Tunisia</Portuguese>
+		<English>Islamic Republic of Tunis</English>
+		<French>Islamic Republic of Tunis</French>
+		<German>Islamic Republic of Tunis</German>
+		<Italian>Islamic Republic of Tunis</Italian>
+		<Spanish>Islamic Republic of Tunis</Spanish>
+		<Portuguese>Islamic Republic of Tunis</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUN05</Tag>
@@ -1386,8 +1503,17 @@
 		<Portuguese>Principality of Tunisia</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_DN_TUN08</Tag>
+		<English>Hafsid Emirate</English>
+		<French>Hafsid Emirate</French>
+		<German>Hafsid Emirate</German>
+		<Italian>Hafsid Emirate</Italian>
+		<Spanish>Hafsid Emirate</Spanish>
+		<Portuguese>Hafsid Emirate</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_DN_TUN10</Tag>
-		<English>Exarchate of Tunisia</English>
+		<English>Exarchate of Africa</English>
 		<French>.</French>
 		<German>Exarchat Tunisia</German>
 		<Italian>Esarcato di Tunisia</Italian>
@@ -1405,7 +1531,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUN12</Tag>
-		<English>Emirate of Tunisia</English>
+		<English>Emirate of Ifriqiya</English>
 		<French>.</French>
 		<German>Emirat Tunesien</German>
 		<Italian>Emirato di Tunisia</Italian>
@@ -1467,6 +1593,15 @@
 		<Portuguese>Condado da Tunísia</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_DN_TUN_VASSAL_OF_HUNGARY</Tag>
+		<English>Banate of Tunisia</English>
+		<French>Banate of Tunisia</French>
+		<German>Banate of Tunisia</German>
+		<Italian>Banate of Tunisia</Italian>
+		<Spanish>Banate of Tunisia</Spanish>
+		<Portuguese>Banate of Tunisia</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_DN_TUN19</Tag>
 		<English>Habsburg Tunisia</English>
 		<French>.</French>
@@ -1477,7 +1612,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_TUN20</Tag>
-		<English>Eyalet of Tunisia</English>
+		<English>Eyalet of Tunis</English>
 		<French>.</French>
 		<German>Fürstentum Tunesien</German>
 		<Italian>Principato di Tunisia</Italian>
@@ -2085,13 +2220,31 @@
 		<Portuguese>Emirado de Poitiers</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DN_FRA22</Tag>
-		<English>County of France</English>
-		<French>County of France</French>
-		<German>County of Franceh</German>
-		<Italian>County of France</Italian>
-		<Spanish>County of France</Spanish>
-		<Portuguese>County of France</Portuguese>
+		<Tag>TXT_KEY_DN_FRA_VASSAL_OF_ENGLAND</Tag>
+		<English>Earldom of France</English>
+		<French>Earldom of France</French>
+		<German>Earldom of France</German>
+		<Italian>Earldom of France</Italian>
+		<Spanish>Earldom of France</Spanish>
+		<Portuguese>Earldom of France</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA_VASSAL_OF_SCOTLAND</Tag>
+		<English>Mormaerdom of France</English>
+		<French>Mormaerdom of France</French>
+		<German>Mormaerdom of France</German>
+		<Italian>Mormaerdom of France</Italian>
+		<Spanish>Mormaerdom of France</Spanish>
+		<Portuguese>Mormaerdom of France</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA_VASSAL_OF_HUNGARY</Tag>
+		<English>Banate of France</English>
+		<French>Banate of France</French>
+		<German>Banate of France</German>
+		<Italian>Banate of France</Italian>
+		<Spanish>Banate of France</Spanish>
+		<Portuguese>Banate of France</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_FRA23</Tag>
@@ -2703,7 +2856,7 @@
 		<Portuguese>Hungria Alemã</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DN_HUN18</Tag>
+		<Tag>TXT_KEY_DN_HUN_VASSAL_OF_ENGLAND</Tag>
 		<English>County of Hungary</English>
 		<French>Comt&#233;es de Hongrie</French>
 		<German>Grafschaften Ungarns</German>
@@ -2712,7 +2865,7 @@
 		<Portuguese>Condado da Hungria</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DN_HUN19</Tag>
+		<Tag>TXT_KEY_DN_HUN_VASSAL_OF_AUSTRIA</Tag>
 		<English>Royal Hungary</English>
 		<French>Royaume Autro-Hongrois</French>
 		<German>Habsburger Königreich Ungarn</German>
@@ -2737,6 +2890,15 @@
 		<Italian>Pronvincia d'Ungheria</Italian>
 		<Spanish></Spanish>
 		<Portuguese>Província da Hungria</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_HUN_VASSAL_OF_SCOTLAND</Tag>
+		<English>Mormaerdom of Hungary</English>
+		<French>Mormaerdom of Hungary</French>
+		<German>Mormaerdom of Hungary</German>
+		<Italian>Mormaerdom of Hungary</Italian>
+		<Spanish>Mormaerdom of Hungary</Spanish>
+		<Portuguese>Mormaerdom of Hungary</Portuguese>
 	</TEXT>
 	<!-- Hungary -->
 	<!-- Kievan Rus -->
@@ -3697,7 +3859,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR02</Tag>
-		<English>Kingdom of Portugal</English>
+		<English>Kingdom of Spain</English>
 		<French>Royaume du Portugal</French>
 		<German>Königreich Portugal</German>
 		<Italian>Regno del Portogallo</Italian>
@@ -3706,12 +3868,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR03</Tag>
-		<English>Kingdom of Portugal</English>
-		<French>Royaume du Portugal</French>
-		<German>Königreich Portugal</German>
-		<Italian>Regno del Portogallo</Italian>
-		<Spanish>Reino de Portugal</Spanish>
-		<Portuguese>Reino de Portugal</Portuguese>
+		<English>Iberian Union</English>
+		<French>Iberian Union</French>
+		<German>Iberian Union</German>
+		<Italian>Iberian Union</Italian>
+		<Spanish>Iberian Union</Spanish>
+		<Portuguese>Iberian Union</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR04</Tag>
@@ -3733,16 +3895,16 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR06</Tag>
-		<English>Placeholder Error</English>
-		<French>Placeholder Error</French>
-		<German>Placeholder Error</German>
-		<Italian>Placeholder Error</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Placeholder Error</Portuguese>
+		<English>Principality of Portugal</English>
+		<French>Principality of Portugal</French>
+		<German>Principality of Portugal</German>
+		<Italian>Principality of Portugal</Italian>
+		<Spanish>Principality of Portugal</Spanish>
+		<Portuguese>Principality of Portugal</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR07</Tag>
-		<English>Placeholder Error</English>
+		<English>Emirate of al-Tagr al-Adna</English>
 		<French>Placeholder Error</French>
 		<German>Placeholder Error</German>
 		<Italian>Placeholder Error</Italian>
@@ -3787,7 +3949,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR12</Tag>
-		<English>Emirate of Portugal</English>
+		<English>Emirate of Burtughal</English>
 		<French>Emirat du Portugal</French>
 		<German>Emirat Portugal</German>
 		<Italian>Emirato del Portogallo</Italian>
@@ -3805,7 +3967,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR14</Tag>
-		<English>Suevian Kingdom of Portugal</English>
+		<English>Jarldom of Portugal</English>
 		<French>Royaume suève</French>
 		<German>Suebisches Königreich Portugal</German>
 		<Italian>Regno Svevo del Portogallo</Italian>
@@ -3814,7 +3976,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR15</Tag>
-		<English>Venetian Portugal</English>
+		<English>Colony of Portugal</English>
 		<French>Portugal V&#233;nitien</French>
 		<German>Venezianisch-Portugal</German>
 		<Italian>Portogallo Veneziano</Italian>
@@ -3823,7 +3985,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR16</Tag>
-		<English>Russian Portugal</English>
+		<English>Guberniya of Portugal</English>
 		<French>Portugal Russe</French>
 		<German>Russisch-Portugal</German>
 		<Italian>Portogallo Russo</Italian>
@@ -3832,7 +3994,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR17</Tag>
-		<English>German Portugal</English>
+		<English>March of Portugal</English>
 		<French>Portugal Allemand</French>
 		<German>Deutsch-Portugal</German>
 		<Italian>Portogallo Tedesco</Italian>
@@ -3849,6 +4011,33 @@
 		<Portuguese>Condado de Portugal</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_DN_POR_VASSAL_OF_ENGLAND</Tag>
+		<English>Earldom of Portugal</English>
+		<French>Earldom of Portugal</French>
+		<German>Earldom of Portugal</German>
+		<Italian>Earldom of Portugal</Italian>
+		<Spanish>Earldom of Portugal</Spanish>
+		<Portuguese>Earldom of Portugal</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POR_VASSAL_OF_SCOTLAND</Tag>
+		<English>Mormaerdom of Portugal</English>
+		<French>Mormaerdom of Portugal</French>
+		<German>Mormaerdom of Portugal</German>
+		<Italian>Mormaerdom of Portugal</Italian>
+		<Spanish>Mormaerdom of Portugal</Spanish>
+		<Portuguese>Mormaerdom of Portugal</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POR_VASSAL_OF_HUNGARY</Tag>
+		<English>Banate of Portugal</English>
+		<French>Banate of Portugal</French>
+		<German>Banate of Portugal</German>
+		<Italian>Banate of Portugal</Italian>
+		<Spanish>Banate of Portugal</Spanish>
+		<Portuguese>Banate of Portugal</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_DN_POR19</Tag>
 		<English>Habsburg Portugal</English>
 		<French>Portugal Habsbourg</French>
@@ -3859,7 +4048,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_POR20</Tag>
-		<English>Principality of Portekiz</English>
+		<English>Eyalet of Portekiz</English>
 		<French>Principaut&#233; de Portekiz</French>
 		<German>Fürstentum Portekiz</German>
 		<Italian>Principato del Portekiz</Italian>
@@ -3887,6 +4076,15 @@
 		<Portuguese>Povos Astúrios</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_DN_SPN_DEFAULT</Tag>
+		<English>Kingdom of Asturias</English>
+		<French>Kingdom of Asturias</French>
+		<German>Kingdom of Asturias</German>
+		<Italian>Kingdom of Asturias</Italian>
+		<Spanish>Kingdom of Asturias</Spanish>
+		<Portuguese>Kingdom of Asturias</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_DN_SPN01</Tag>
 		<English>Kingdom of Le&#243;n</English>
 		<French>Royaume de Le&#243;n</French>
@@ -3897,7 +4095,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN02</Tag>
-		<English>Kingdom of Spain</English>
+		<English>Kingdom of Castile</English>
 		<French>Royaume d'Espagne</French>
 		<German>Königreich Spanien</German>
 		<Italian>Regno di Spagna</Italian>
@@ -3933,25 +4131,25 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN06</Tag>
-		<English>Placeholder Error</English>
-		<French>Placeholder Error</French>
-		<German>Placeholder Error</German>
-		<Italian>Placeholder Error</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Placeholder Error</Portuguese>
+		<English>Emirate of al-Tagr al-Awsat</English>
+		<French>Emirate of al-Tagr al-Awsat</French>
+		<German>Emirate of al-Tagr al-Awsat</German>
+		<Italian>Emirate of al-Tagr al-Awsat</Italian>
+		<Spanish>Emirate of al-Tagr al-Awsat</Spanish>
+		<Portuguese>Emirate of al-Tagr al-Awsat</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN07</Tag>
-		<English>Placeholder Error</English>
-		<French>Placeholder Error</French>
-		<German>Placeholder Error</German>
-		<Italian>Placeholder Error</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Placeholder Error</Portuguese>
+		<English>Emirate of Tulaytulah</English>
+		<French>Emirate of Tulaytulah</French>
+		<German>Emirate of Tulaytulah</German>
+		<Italian>Emirate of Tulaytulah</Italian>
+		<Spanish>Emirate of Tulaytulah</Spanish>
+		<Portuguese>Emirate of Tulaytulah</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN08</Tag>
-		<English>Emirate of Spain</English>
+		<English>Sultanate of Spain</English>
 		<French>Emirat d'Espagne</French>
 		<German>Emirat Spanien</German>
 		<Italian>Emirato di Spagna</Italian>
@@ -3960,7 +4158,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN09</Tag>
-		<English>Spanish Islamic Republic</English>
+		<English>Islamic Republic of Spain</English>
 		<French>R&#233;publique Islamique Espagnole</French>
 		<German>Islamische Republik Spanien</German>
 		<Italian>Repubblica Islamica Spagnola</Italian>
@@ -3987,16 +4185,16 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN12</Tag>
-		<English>Al-Andalus</English>
-		<French>Al-Andalus</French>
-		<German>Al-Andalus</German>
-		<Italian>Al-Andalus</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Al-Andalus</Portuguese>
+		<English>Emirate of al-Ispanya</English>
+		<French>Emirate of al-Ispanya</French>
+		<German>Emirate of al-Ispanya</German>
+		<Italian>Emirate of al-Ispanya</Italian>
+		<Spanish>Emirate of al-Ispanya</Spanish>
+		<Portuguese>Emirate of al-Ispanya</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN13</Tag>
-		<English>Castile</English>
+		<English>County of Castile</English>
 		<French>Castile</French>
 		<German>Kastilien</German>
 		<Italian>Castiglia</Italian>
@@ -4005,7 +4203,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN14</Tag>
-		<English>Visigothic Kingdom of Spain</English>
+		<English>Jarldom of Spain</English>
 		<French>Royaume Wisigoth d'Espagne</French>
 		<German>Westgotisches Königreich Spanien</German>
 		<Italian>Regno Visigoto di Spagna</Italian>
@@ -4014,7 +4212,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN15</Tag>
-		<English>Venetian Spain</English>
+		<English>Colony of Spain</English>
 		<French>Espagne V&#233;nitienne</French>
 		<German>Venezianisch-Spanien</German>
 		<Italian>Spagna Veneziana</Italian>
@@ -4023,7 +4221,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN16</Tag>
-		<English>Russian Spain</English>
+		<English>Guberniya of Castilia</English>
 		<French>Espagne Russe</French>
 		<German>Russisch-Spanien</German>
 		<Italian>Spagna Russa</Italian>
@@ -4032,7 +4230,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN17</Tag>
-		<English>German Spain</English>
+		<English>March of Castile</English>
 		<French>Espagne Allemande</French>
 		<German>Deutsch-Spanien</German>
 		<Italian>Spagna Tedesca</Italian>
@@ -4049,6 +4247,33 @@
 		<Portuguese>Condados da Espanha</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_DN_SPN_VASSAL_OF_ENGLAND</Tag>
+		<English>Earldom of Castile</English>
+		<French>Earldom of Castile</French>
+		<German>Earldom of Castile</German>
+		<Italian>Earldom of Castile</Italian>
+		<Spanish>Earldom of Castile</Spanish>
+		<Portuguese>Earldom of Castile</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN_VASSAL_OF_SCOTLAND</Tag>
+		<English>Mormaerdom of Castile</English>
+		<French>Mormaerdom of Castile</French>
+		<German>Mormaerdom of Castile</German>
+		<Italian>Mormaerdom of Castile</Italian>
+		<Spanish>Mormaerdom of Castile</Spanish>
+		<Portuguese>Mormaerdom of Castile</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN_VASSAL_OF_HUNGARY</Tag>
+		<English>Banate of Castile</English>
+		<French>Banate of Castile</French>
+		<German>Banate of Castile</German>
+		<Italian>Banate of Castile</Italian>
+		<Spanish>Banate of Castile</Spanish>
+		<Portuguese>Banate of Castile</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_DN_SPN19</Tag>
 		<English>Habsburg Spain</English>
 		<French>Espagne Habsbourg</French>
@@ -4059,7 +4284,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN20</Tag>
-		<English>Principality of Ispanya</English>
+		<English>Eyalet of Ispanya</English>
 		<French>Principaut&#233; d'Ispanya</French>
 		<German>Fürstentum Ispanya</German>
 		<Italian>Principato d'Iberia</Italian>
@@ -4074,6 +4299,24 @@
 		<Italian>Provincia di Hispani</Italian>
 		<Spanish>Provincia de Hispania</Spanish>
 		<Portuguese>Província da Hispania</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN22</Tag>
+		<English>Principality of Spain</English>
+		<French>Province d'Espagne</French>
+		<German>Provinz Spanien</German>
+		<Italian>Provincia di Hispani</Italian>
+		<Spanish>Provincia de Hispania</Spanish>
+		<Portuguese>Província da Hispania</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN23</Tag>
+		<English>Iberian Union</English>
+		<French>Iberian Union</French>
+		<German>Iberian Union</German>
+		<Italian>Iberian Union</Italian>
+		<Spanish>Iberian Union</Spanish>
+		<Portuguese>Iberian Union</Portuguese>
 	</TEXT>
 	<!-- Spain -->
 	<!-- Sweden -->
@@ -5369,9 +5612,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARG04</Tag>
-		<English>Crown of Aragon</English>
-		<French>Crown of Aragon</French>
-		<German>Crown of Aragon</German>
+		<English>Kingdom of Spain</English>
+		<French>Kingdom of Spain</French>
+		<German>Kingdom of Spain</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
@@ -5387,27 +5630,27 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARG06</Tag>
-		<English>Kingdom of Sicily</English>
-		<French>Kingdom of Sicily</French>
-		<German>Kingdom of Sicily</German>
+		<English>Iberian Union</English>
+		<French>Iberian Union</French>
+		<German>Iberian Union</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARG07</Tag>
-		<English>Placeholder Error</English>
-		<French>Placeholder Error</French>
-		<German>Placeholder Error</German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-		<Portuguese></Portuguese>
+		<English>Emirate of al-Tagr al-A'la</English>
+		<French>Emirate of al-Tagr al-A'la</French>
+		<German>Emirate of al-Tagr al-A'la</German>
+		<Italian>Emirate of al-Tagr al-A'la</Italian>
+		<Spanish>Emirate of al-Tagr al-A'la</Spanish>
+		<Portuguese>Emirate of al-Tagr al-A'la</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARG08</Tag>
-		<English>Emirate of Aragon</English>
-		<French>Emirate of Aragon</French>
-		<German>Emirate of Aragon</German>
+		<English>Sultanate of Aragon</English>
+		<French>Sultanate of Aragon</French>
+		<German>Sultanate of Aragon</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
@@ -5432,72 +5675,99 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARG11</Tag>
-		<English>Marca Hispanica</English>
-		<French>Marca Hispanica</French>
-		<German>Marca Hispanica</German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-		<Portuguese></Portuguese>
+		<English>Spanish March</English>
+		<French>Spanish March</French>
+		<German>Spanish March</German>
+		<Italian>Spanish March</Italian>
+		<Spanish>Spanish March</Spanish>
+		<Portuguese>Spanish March</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARG12</Tag>
-		<English>Catalunya</English>
-		<French>Catalunya</French>
-		<German>Catalunya</German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-		<Portuguese></Portuguese>
+		<English>Emirate of Aragu'un</English>
+		<French>Emirate of Aragu'un</French>
+		<German>Emirate of Aragu'un</German>
+		<Italian>Emirate of Aragu'un</Italian>
+		<Spanish>Emirate of Aragu'un</Spanish>
+		<Portuguese>Emirate of Aragu'un</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARG13</Tag>
-		<English>Duchy of Barcelona</English>
-		<French>Duchy of Barcelona</French>
-		<German>Duchy of Barcelona</German>
+		<English>County of Aragon</English>
+		<French>County of Aragon</French>
+		<German>County of Aragon</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARG14</Tag>
-		<English>Visigothic Kingdom of Aragon</English>
-		<French>Visigothic Kingdom of Aragon</French>
-		<German>Visigothic Kingdom of Aragon</German>
+		<English>Jarldom of Aragon</English>
+		<French>Jarldom of Aragon</French>
+		<German>Jarldom of Aragon</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARG15</Tag>
-		<English>Venetian Aragon</English>
-		<French>Venetian Aragon</French>
-		<German>Venetian Aragon</German>
+		<English>Colony of Aragon</English>
+		<French>Colony of Aragon</French>
+		<German>Colony of Aragon</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARG16</Tag>
-		<English>Russian Aragon</English>
-		<French>Russian Aragon</French>
-		<German>Russian Aragon</German>
+		<English>Guberniya of Aragon</English>
+		<French>Guberniya of Aragon</French>
+		<German>Guberniya of Aragon</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARG17</Tag>
-		<English>German Aragon</English>
-		<French>German Aragon</French>
-		<German>German Aragon</German>
+		<English>March of Aragon</English>
+		<French>March of Aragon</French>
+		<German>March of Aragon</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARG18</Tag>
-		<English>Counties of Aragon</English>
-		<French>Counties of Aragon</French>
-		<German>Counties of Aragon</German>
+		<English>Principality of Aragon</English>
+		<French>Principality of Aragon</French>
+		<German>Principality of Aragon</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARG_VASSAL_OF_ENGLAND</Tag>
+		<English>Earldom of Aragon</English>
+		<French>Earldom of Aragon</French>
+		<German>Earldom of Aragon</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARG_VASSAL_OF_SCOTLAND</Tag>
+		<English>Mormaerdom of Aragon</English>
+		<French>Mormaerdom of Aragon</French>
+		<German>Mormaerdom of Aragon</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARG_VASSAL_OF_HUNGARY</Tag>
+		<English>Banate of Aragon</English>
+		<French>Banate of Aragon</French>
+		<German>Banate of Aragon</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
@@ -5513,9 +5783,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_ARG20</Tag>
-		<English>Principality of Catalunya</English>
-		<French>Principality of Catalunya</French>
-		<German>Principality of Catalunya</German>
+		<English>Eyalet of Aragona</English>
+		<French>Eyalet of Aragona</French>
+		<German>Eyalet of Aragona</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
@@ -5530,6 +5800,206 @@
 		<Portuguese></Portuguese>
 	</TEXT>
 	<!-- Aragon -->
+	<!-- Sicily -->
+	<TEXT>
+		<Tag>TXT_KEY_DN_SIC00</Tag>
+		<English>Sicilian Peoples</English>
+		<French>Sicilian Peoples</French>
+		<German>Sicilian Peoples</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SIC01</Tag>
+		<English>Kingdom of Sicily</English>
+		<French>Kingdom of Sicily</French>
+		<German>Kingdom of Sicily</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SIC04</Tag>
+		<English>Emirate of Bari</English>
+		<French>Emirate of Bari</French>
+		<German>Emirate of Bari</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SIC05</Tag>
+		<English>Republic of Sicily</English>
+		<French>Republic of Sicily</French>
+		<German>Republic of Sicily</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SIC06</Tag>
+		<English>Principality of Sicily</English>
+		<French>Principality of Sicily</French>
+		<German>Principality of Sicily</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SIC07</Tag>
+		<English>County of Sicily</English>
+		<French>County of Sicily</French>
+		<German>County of Sicily</German>
+		<Italian>County of Sicily</Italian>
+		<Spanish>County of Sicily</Spanish>
+		<Portuguese>County of Sicily</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SIC08</Tag>
+		<English>Sultanate of Sicily</English>
+		<French>Sultanate of Sicily</French>
+		<German>Sultanate of Sicily</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SIC09</Tag>
+		<English>Islamic Republic of Sicily</English>
+		<French>Islamic Republic of Sicily</French>
+		<German>Islamic Republic of Sicily</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SIC10</Tag>
+		<English>Catepanate of Italy</English>
+		<French>Catepanate of Italy</French>
+		<German>Catepanate of Italy</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SIC11</Tag>
+		<English>Duchy of Sicily</English>
+		<French>Duchy of Sicily</French>
+		<German>Duchy of Sicily</German>
+		<Italian>Duchy of Sicily</Italian>
+		<Spanish>Duchy of Sicily</Spanish>
+		<Portuguese>Duchy of Sicily</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SIC12</Tag>
+		<English>Emirate of Siqilliyya</English>
+		<French>Emirate of Siqilliyya</French>
+		<German>Emirate of Siqilliyya</German>
+		<Italian>Emirate of Siqilliyya</Italian>
+		<Spanish>Emirate of Siqilliyya</Spanish>
+		<Portuguese>Emirate of Siqilliyya</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SIC13</Tag>
+		<English>Council of Sicily</English>
+		<French>Council of Sicily</French>
+		<German>Council of Sicily</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SIC14</Tag>
+		<English>Jarldom of Sicily</English>
+		<French>Jarldom of Sicily</French>
+		<German>Jarldom of Sicily</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SIC15</Tag>
+		<English>Colony of Sicily</English>
+		<French>Colony of Sicily</French>
+		<German>Colony of Sicily</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SIC16</Tag>
+		<English>Guberniya of Sicily</English>
+		<French>Guberniya of Sicily</French>
+		<German>Guberniya of Sicily</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SIC17</Tag>
+		<English>March of Sicily</English>
+		<French>March of Sicily</French>
+		<German>March of Sicily</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SIC_VASSAL_OF_ENGLAND</Tag>
+		<English>Earldom of Sicily</English>
+		<French>Earldom of Sicily</French>
+		<German>Earldom of Sicily</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SIC_VASSAL_OF_SCOTLAND</Tag>
+		<English>Mormaerdom of Sicily</English>
+		<French>Mormaerdom of Sicily</French>
+		<German>Mormaerdom of Sicily</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SIC_VASSAL_OF_HUNGARY</Tag>
+		<English>Banate of Sicily</English>
+		<French>Banate of Sicily</French>
+		<German>Banate of Sicily</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SIC19</Tag>
+		<English>Habsburg Sicily</English>
+		<French>Habsburg Sicily</French>
+		<German>Habsburg Sicily</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SIC20</Tag>
+		<English>Eyalet of Sicily</English>
+		<French>Eyalet of Sicily</French>
+		<German>Eyalet of Sicily</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SIC21</Tag>
+		<English>Province of Sicilya</English>
+		<French>Province of Sicilya</French>
+		<German>Province of Sicilya</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<!-- Sicily -->
 	<!-- Morocco -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOR00</Tag>
@@ -5614,9 +6084,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOR09</Tag>
-		<English>Taifa of Morocco</English>
-		<French>Taifa of Morocco</French>
-		<German>Taifa of Morocco</German>
+		<English>Islamic Republic of Morocco</English>
+		<French>Islamic Republic of Morocco</French>
+		<German>Islamic Republic of Morocco</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
@@ -5659,9 +6129,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOR14</Tag>
-		<English>Maghreb Jarldom</English>
-		<French>Maghreb Jarldom</French>
-		<German>Maghreb Jarldom</German>
+		<English>Jarldom of Morocco</English>
+		<French>Jarldom of Morocco</French>
+		<German>Jarldom of Morocco</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
@@ -5701,6 +6171,15 @@
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_MOR_VASSAL_OF_HUNGARY</Tag>
+		<English>Banate of Morocco</English>
+		<French>Banate of Morocco</French>
+		<German>Banate of Morocco</German>
+		<Italian>Banate of Morocco</Italian>
+		<Spanish>Banate of Morocco</Spanish>
+		<Portuguese>Banate of Morocco</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_MOR19</Tag>

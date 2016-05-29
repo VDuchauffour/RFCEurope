@@ -46,16 +46,17 @@ tTunis = ( [ ((49, 17), "Tunis", 100) ], iIndependent4, 1, xml.iArcher, 1, -1, 0
 tYork = ( [ ((39, 59), "Eboracum", 100) ], iIndependent4, 1, xml.iArcher, 2, -1, 1 )
 tLondon = ( [ ((41, 52), "Londinium", 100) ], iIndependent, 2, xml.iArcher, 2, xml.iCatholicism, 0 )
 tMilan = ( [ ((52, 37), "Mediolanum", 100) ], iIndependent, 2, xml.iArcher, 2, xml.iCatholicism, 0 )
-tFlorence = ( [ ((54, 32), "Florentia", 40), ((53, 32), "Pisae", 20), ((57, 31), "Ankon", 20), ((56, 32), "Ariminum", 20) ], iIndependent2, 2, xml.iArcher, 2, xml.iCatholicism, 0 )
+tFlorence = ( [ ((54, 32), "Florentia", 40), ((53, 32), "Pisae", 40), ((57, 31), "Ankon", 20) ], iIndependent2, 2, xml.iArcher, 2, xml.iCatholicism, 0 )
 tTripoli = ( [ ((54, 8), "Tripoli", 100) ], iBarbarian, 1, xml.iArcher, 1, -1, 0 )
 tAugsburg = ( [ ((55, 41), "Augsburg", 100) ], iIndependent3, 1, xml.iArcher, 2, -1, 0 )
 tNapoli = ( [ ((59, 24), "Neapolis", 40), ((60, 25), "Beneventum", 40), ((62, 24), "Tarentum", 20) ], iIndependent, 2, xml.iArcher, 1, -1, 0 )
 tRagusa = ( [ ((64, 28), "Ragusa", 100) ], iIndependent2, 1, xml.iArcher, 2, xml.iCatholicism, 0 )
 tSeville = ( [ ((27, 21), "Hispalis", 100) ], iIndependent4, 1, xml.iArcher, 2, -1, 0 )
 tPalermo = ( [ ((55, 19), "Palermo", 60), ((58, 17), "Syracuse", 40) ], iIndependent3, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
+# 552 AD
+tInverness = ( [ ((37, 67), "Inbhir Nis", 50), ((37, 65), "Scaig", 50) ], iBarbarian, 1, xml.iArcher, 1, -1, 0)
 # 600 AD
 tRhodes = ( [ ((80, 13), "Rhodes", 100) ], iIndependent2, 1, xml.iArcher, 1, xml.iOrthodoxy, 0 )
-tInverness = ( [ ((37, 67), "Inbhir Nis", 50), ((37, 65), "Scaig", 50) ], iBarbarian, 1, xml.iArcher, 1, -1, 0)
 # 640 AD
 tNorwich = ( [ ((43, 55), "Norwich", 100) ], iIndependent3, 1, xml.iArcher, 1, -1, 1 ) #reduced to town on spawn of England
 # 680 AD
@@ -63,7 +64,7 @@ tToledo = ( [ ((30, 27), "Toledo", 100) ], iBarbarian, 1, xml.iArcher, 1, xml.iC
 tLeicester = ( [ ((39, 56), "Ligeraceaster", 100) ], iIndependent, 1, xml.iArcher, 1, -1, 0 ) #reduced to town on spawn of England
 # 700 AD
 tValencia = ( [ ((36, 25), "Valencia", 100) ], iIndependent, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
-tPamplona = ( [ ((35, 32), "Pamplona", 60), ((34, 33), "Pamplona", 20), ((34, 34), "San Sebastián", 20) ], iIndependent4, 1, xml.iCrossbowman, 2, -1, 0 )
+tPamplona = ( [ ((35, 32), "Pamplona", 70), ((34, 33), "Pamplona", 30) ], iIndependent4, 1, xml.iCrossbowman, 2, -1, 0 )
 tDublin = ( [ ((32, 58), "Dubh Linn", 100) ], iBarbarian, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
 tLubeck = ( [ ((57, 54), "Liubice", 100) ], iIndependent2, 1, xml.iArcher, 2, -1, 1 )
 tPorto = ( [ ((23, 31), "Portucale", 100) ], iIndependent3, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0 )
@@ -154,7 +155,8 @@ tValletta = ( [ ((57, 14), "Valletta", 100) ], iIndependent4, 1, xml.iKnightofSt
 
 dIndependentCities = {
 xml.i500AD : [ tTangier, tBordeaux, tAlger, tBarcelona, tToulouse, tMarseilles, tNantes, tCaen, tLyon, tTunis, tYork, tLondon, tMilan, tFlorence, tTripoli, tAugsburg, tNapoli, tRagusa, tSeville, tPalermo],
-xml.i600AD : [ tRhodes, tInverness ],
+xml.i552AD : [ tInverness ],
+xml.i600AD : [ tRhodes ],
 xml.i640AD : [ tNorwich ],
 xml.i680AD : [ tToledo, tLeicester ],
 xml.i700AD : [ tValencia, tPamplona, tDublin, tLubeck, tPorto ],
@@ -611,6 +613,7 @@ class Barbs:
 					continue
 				tCoords, sName, iPos = lVariations[iChosenCity]
 				self.foundCity(iCiv, tCoords, sName, iPop, iUnit, iNumUnits, iReligion, iWorkers)
+				print ("New indy city founded: ", sName)
 
 
 	def foundCity(self, iCiv, tCoords, name, iPopulation, iUnitType, iNumUnits, iReligion, iWorkers):
