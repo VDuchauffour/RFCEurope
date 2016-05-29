@@ -13976,6 +13976,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=55
+	BonusType=BONUS_STONE
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
 EndPlot
@@ -14376,7 +14377,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=54
-	BonusType=BONUS_STONE
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
