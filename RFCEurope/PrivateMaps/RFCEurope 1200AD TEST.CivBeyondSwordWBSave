@@ -337,6 +337,7 @@ BeginPlayer
 	LeaderType=LEADER_MAGNUS_LADULAS
 	CivType=CIVILIZATION_SWEDEN
 	PlayableCiv=1
+	StateReligion=RELIGION_CATHOLICISM
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
@@ -360,6 +361,7 @@ BeginPlayer
 	LeaderType=LEADER_MAXIMILIAN
 	CivType=CIVILIZATION_AUSTRIA
 	PlayableCiv=1
+	StateReligion=RELIGION_CATHOLICISM
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
@@ -375,6 +377,7 @@ BeginPlayer
 	LeaderType=LEADER_IVAN_IV
 	CivType=CIVILIZATION_MOSCOW
 	PlayableCiv=1
+	StateReligion=RELIGION_ORTHODOXY
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer

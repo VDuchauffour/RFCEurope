@@ -13,8 +13,21 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Changes for RFCE 1.5:
+(under development)
+
+	General changes:
+		- Fixed Muscovy start in 1200AD scenario, now all civs should work without any issues
+		- Fixed Muscovian starting religion (starts with Orthodoxy as State Religion) in the 1200AD scenario
+		- Austria and Sweden starts with Catholicism as State Religion in the 1200AD scenario
+		- Fixed Swedish initial contact with Denmark on the very beginning of the 1200AD scenario
+		- Fixed turn counter on scenario start for the 1200AD scenario, now it should show correctly for all civs
+		- Fixed strange visibility area for the Ottomans
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Changes for RFCE 1.4:
-(to be released: 2016.05.28.)
+(released: 2016.05.29.)
 
 	Reformation updates:
 		- Strengthened the Reformation procedure, most conversion-related chances are somewhat increased

@@ -592,7 +592,6 @@ class RiseAndFall:
 			vic.set1200UHVDone(iHuman)
 			self.assign1200ADtechs(iPope) # Temporarily all civs get the same starting techs as Aragon
 			cru.do1200ADCrusades()
-			
 
 		self.assignGold(utils.getScenario())
 
@@ -2388,29 +2387,43 @@ class RiseAndFall:
 	def create1200ADstartingUnits( self ):
 
 		if ( pSweden.isHuman() and con.tBirth[iSweden] > 0 ):
-			utils.makeUnit(xml.iSettler, iSweden, tCapitals[iSweden], 1)
-			utils.makeUnit(xml.iSwordsman, iSweden, tCapitals[iSweden], 1)
+			# Absinthe: prohibit Danish contact in 1200AD
+			tSwedishStart = ( tCapitals[iSweden][0]-2, tCapitals[iSweden][1]+2)
+			utils.makeUnit(xml.iSettler, iSweden, tSwedishStart, 1)
+			utils.makeUnit(xml.iSwordsman, iSweden, tSwedishStart, 1)
 
 		elif ( pPrussia.isHuman() and con.tBirth[iPrussia] > 0 ):
-			utils.makeUnit(xml.iSettler, iPrussia, tCapitals[iPrussia], 1)
-			utils.makeUnit(xml.iSwordsman, iPrussia, tCapitals[iPrussia], 1)
+			# Absinthe: prohibit Polish contact in 1200AD
+			tPrussianStart = ( tCapitals[iPrussia][0]+1, tCapitals[iPrussia][1]+1)
+			utils.makeUnit(xml.iSettler, iPrussia, tPrussianStart, 1)
+			utils.makeUnit(xml.iSwordsman, iPrussia, tPrussianStart, 1)
 
 		elif ( pLithuania.isHuman() and con.tBirth[iLithuania] > 0 ):
-			utils.makeUnit(xml.iSettler, iLithuania, tCapitals[iLithuania], 1)
-			utils.makeUnit(xml.iSwordsman, iLithuania, tCapitals[iLithuania], 1)
+			# Absinthe: prohibit Kievan contact in 1200AD
+			tLithuanianStart = ( tCapitals[iLithuania][0]-2, tCapitals[iLithuania][1])
+			utils.makeUnit(xml.iSettler, iLithuania, tLithuanianStart, 1)
+			utils.makeUnit(xml.iSwordsman, iLithuania, tLithuanianStart, 1)
 
 		elif ( pAustria.isHuman() and con.tBirth[iAustria] > 0 ):
-			utils.makeUnit(xml.iSettler, iAustria, tCapitals[iAustria], 1)
-			utils.makeUnit(xml.iLongSwordsman, iAustria, tCapitals[iAustria], 1)
+			# Absinthe: prohibit German and Hungarian contact in 1200AD
+			tAustrianStart = ( tCapitals[iAustria][0]-3, tCapitals[iAustria][1]-1)
+			utils.makeUnit(xml.iSettler, iAustria, tAustrianStart, 1)
+			utils.makeUnit(xml.iLongSwordsman, iAustria, tAustrianStart, 1)
 
 		elif ( pTurkey.isHuman() and con.tBirth[iTurkey] > 0 ):
-			tTurkishStart = ( tCapitals[iTurkey][0]+5, tCapitals[iTurkey][1]+30 )
+			# Absinthe: prohibit Byzantine contact in 1200AD
+			tTurkishStart = ( 98, 18 )
 			utils.makeUnit(xml.iSettler, iTurkey, tTurkishStart, 1)
 			utils.makeUnit(xml.iMaceman, iTurkey, tTurkishStart, 1)
+
+		elif ( pMoscow.isHuman() and con.tBirth[iMoscow] > 0 ):
+			utils.makeUnit(xml.iSettler, iMoscow, tCapitals[iMoscow], 1)
+			utils.makeUnit(xml.iMaceman, iMoscow, tCapitals[iMoscow], 1)
 
 		elif ( pDutch.isHuman() and con.tBirth[iDutch] > 0 ):
 			utils.makeUnit(xml.iSettler, iDutch, tCapitals[iDutch], 1)
 			utils.makeUnit(xml.iMaceman, iDutch, tCapitals[iDutch], 1)
+
 
 	def ottomanInvasion(self,iCiv,tPlot):
 		print("I made Ottomans on Gallipoli")
@@ -2436,20 +2449,17 @@ class RiseAndFall:
 		self.showArea(iPope)
 
 		if ( pBurgundy.isHuman() and con.tBirth[iBurgundy] > 0 ):
-			# 3Miro: prohibit contact on turn 0 (with the Chronological spawn order this should not be needed)
-			tBurgundyStart = ( tCapitals[iBurgundy][0]+2, tCapitals[iBurgundy][1] )
 			utils.makeUnit(xml.iSettler, iBurgundy, tCapitals[iBurgundy], 1)
 			utils.makeUnit(xml.iArcher, iBurgundy, tCapitals[iBurgundy], 1)
-			utils.makeUnit(xml.iWorker, iBurgundy, tCapitals[iBurgundy], 1)
 
 		elif ( pArabia.isHuman() and con.tBirth[iArabia] > 0 ):
-			# 3Miro: prohibit contact on turn 0
+			# Absinthe: prohibit Byzantine contact on turn 0
 			tArabStart = ( tCapitals[iArabia][0], tCapitals[iArabia][1]-10)
 			utils.makeUnit(xml.iSettler, iArabia, tArabStart, 1)
 			utils.makeUnit(xml.iSpearman, iArabia, tArabStart, 1)
 
 		elif ( pBulgaria.isHuman() and con.tBirth[iBulgaria] > 0 ):
-			# 3Miro: prohibit contact on turn 0
+			# Absinthe: prohibit Byzantine contact on turn 0
 			tBulgStart = ( tCapitals[iBulgaria][0], tCapitals[iBulgaria][1] + 1 )
 			utils.makeUnit(xml.iSettler, iBulgaria, tBulgStart, 1)
 			utils.makeUnit(xml.iSpearman, iBulgaria, tBulgStart, 1)
@@ -2535,7 +2545,8 @@ class RiseAndFall:
 			utils.makeUnit(xml.iLongSwordsman, iAustria, tCapitals[iAustria], 1)
 
 		elif ( pTurkey.isHuman() and con.tBirth[iTurkey] > 0 ):
-			tTurkishStart = ( tCapitals[iTurkey][0]+5, tCapitals[iTurkey][1]+30 )
+			# Absinthe: prohibit Byzantine contact on turn 0
+			tTurkishStart = ( 97, 23 )
 			utils.makeUnit(xml.iSettler, iTurkey, tTurkishStart, 1)
 			utils.makeUnit(xml.iMaceman, iTurkey, tTurkishStart, 1)
 
