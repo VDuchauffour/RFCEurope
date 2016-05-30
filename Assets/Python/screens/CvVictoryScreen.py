@@ -1068,7 +1068,7 @@ class CvVictoryScreen:
 		#UHV1
 		sText1 += self.getProvinceString(vic.tNovgorodControl)
 		#UHV2
-		iNumFurs = pPlayer.countOwnedBonuses(xml.iFur)
+		iNumFurs = pPlayer.countCultBorderBonuses(xml.iFur)
 		sText2 += self.getCounterString(iNumFurs, 12)
 		#UHV3
 		iNumCities = 0
@@ -1493,7 +1493,7 @@ class CvVictoryScreen:
 		sText2 += self.getCounterString(landPercent, 20, False, True) + " %"
 		#UHV3
 		bColor = False
-		iNumAccess = pPlayer.countOwnedBonuses(xml.iAccess)
+		iNumAccess = pPlayer.countCultBorderBonuses(xml.iAccess)
 		tConstantinople = con.tCapitals[con.iByzantium]
 		iConstantinopleOwner = gc.getMap().plot( tConstantinople[0], tConstantinople[1] ).getPlotCity().getOwner()
 		if iNumAccess > 0 or iConstantinopleOwner == iPlayer:

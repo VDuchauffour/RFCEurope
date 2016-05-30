@@ -23,6 +23,9 @@ Changes for RFCE 1.5:
 		- Fixed Swedish initial contact with Denmark on the very beginning of the 1200AD scenario
 		- Fixed turn counter on scenario start for the 1200AD scenario, now it should show correctly for all civs
 		- Fixed strange visibility area for the Ottomans
+		- Added new function which only counts resources inside cultural borders
+		- Both the Novgorod Fur UHV and the Moscow Atlantic Access UHV use this new function
+		- Reduced number of defender units in Caen, AI France should be able to conquer it more often
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

@@ -76,6 +76,7 @@ public:
 
 	int countTotalCulture();
 	int countOwnedBonuses(int /*BonusTypes*/ eBonus);
+	int countCultBorderBonuses(int /*BonusTypes*/ eBonus); // Absinthe: count bonuses inside cultural borders
 	int countUnimprovedBonuses(CyArea* pArea, CyPlot* pFromPlot);
 	int countCityFeatures(int /*FeatureTypes*/ eFeature);
 	int countNumBuildings(int /*BuildingTypes*/ eBuilding);

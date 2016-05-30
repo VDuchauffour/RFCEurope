@@ -3525,6 +3525,32 @@ int CvPlayer::countOwnedBonuses(BonusTypes eBonus) const
 }
 
 
+// Absinthe: count bonuses inside cultural borders
+int CvPlayer::countCultBorderBonuses(BonusTypes eBonus) const
+{
+	PROFILE("CvPlayer::countCultBorderBonuses");
+	CvPlot* pLoopPlot;
+	int iCount;
+	int iI;
+	iCount = 0;
+
+	// count all bonuses if on an owned tile
+	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	{
+		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+
+		if ((pLoopPlot->getOwnerINLINE() == getID()))
+		{
+			if (pLoopPlot->getBonusType(getTeam()) == eBonus)
+			{
+				iCount++;
+			}
+		}
+	}
+	return iCount;
+}
+
+
 int CvPlayer::countUnimprovedBonuses(CvArea* pArea, CvPlot* pFromPlot) const
 {
 	PROFILE_FUNC();

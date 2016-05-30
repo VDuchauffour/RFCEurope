@@ -72,6 +72,7 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 
 		.def("countTotalCulture", &CyPlayer::countTotalCulture, "int ()")
 		.def("countOwnedBonuses", &CyPlayer::countOwnedBonuses, "int (int (BonusTypes) eBonus) - ")
+		.def("countCultBorderBonuses", &CyPlayer::countCultBorderBonuses, "int (int (BonusTypes) eBonus) - ") // Absinthe: count bonuses inside cultural borders
 		.def("countUnimprovedBonuses", &CyPlayer::countUnimprovedBonuses, "int (int (CyArea* pArea, CyPlot* pFromPlot) - ")
 		.def("countCityFeatures", &CyPlayer::countCityFeatures, "int (int /*FeatureTypes*/ eFeature) - Returns ?")
 		.def("countNumBuildings", &CyPlayer::countNumBuildings, "int (int /*BuildingTypes*/ eBuilding) - Returns the number of buildings?")

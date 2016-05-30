@@ -143,6 +143,7 @@ public:
 	int countNumCoastalCitiesByArea(CvArea* pArea) const;																									// Exposed to Python
 	int countTotalCulture() const;																																				// Exposed to Python
 	int countOwnedBonuses(BonusTypes eBonus) const;																												// Exposed to Python
+	int countCultBorderBonuses(BonusTypes eBonus) const;																		// Absinthe: count bonuses inside cultural borders, exposed to Python
 	int countUnimprovedBonuses(CvArea* pArea, CvPlot* pFromPlot = NULL) const;														// Exposed to Python
 	int countCityFeatures(FeatureTypes eFeature) const;																										// Exposed to Python
 	int countNumBuildings(BuildingTypes eBuilding) const;																									// Exposed to Python

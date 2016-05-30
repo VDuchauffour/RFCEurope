@@ -1028,7 +1028,7 @@ class Victory:
 		# UHV 2: Control twelve sources of fur by 1397
 		if (pNovgorod.getUHV( 1 ) == -1):
 			if (iGameTurn <= xml.i1397AD):
-				if (pNovgorod.countOwnedBonuses(xml.iFur) >= 12):
+				if (pNovgorod.countCultBorderBonuses(xml.iFur) >= 12):
 					pNovgorod.setUHV( 1, 1 )
 					pNovgorod.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:
@@ -1612,7 +1612,7 @@ class Victory:
 
 		# UHV 3: Get into warm waters
 		if ( pMoscow.getUHV( 2 ) == -1 ):
-			if ( pMoscow.countOwnedBonuses( xml.iAccess ) > 0 ):
+			if ( pMoscow.countCultBorderBonuses( xml.iAccess ) > 0 ):
 				pMoscow.setUHV( 2, 1 )
 				pMoscow.changeStabilityBase( iCathegoryExpansion, 3 )
 			elif ( gc.getMap().plot( con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] ).getPlotCity().getOwner() == iMoscow ):
