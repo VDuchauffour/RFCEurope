@@ -1422,7 +1422,7 @@ bool CyPlayer::isEverAlive()
 	return m_pPlayer ? m_pPlayer->isEverAlive() : false;
 }
 
-void CyPlayer::setAlive( bool bNewValue ) //Absinthe:
+void CyPlayer::setAlive( bool bNewValue ) //Absinthe
 {
 	if (m_pPlayer)
 		m_pPlayer->setAlive( bNewValue );
