@@ -246,6 +246,12 @@ int CyPlayer::countOwnedBonuses(int /*BonusTypes*/ eBonus)
 	return m_pPlayer ? m_pPlayer->countOwnedBonuses((BonusTypes)eBonus) : NO_BONUS;
 }
 
+// Absinthe: count bonuses inside cultural borders
+int CyPlayer::countCultBorderBonuses(int /*BonusTypes*/ eBonus)
+{
+	return m_pPlayer ? m_pPlayer->countCultBorderBonuses((BonusTypes)eBonus) : NO_BONUS;
+}
+
 int CyPlayer::countUnimprovedBonuses(CyArea* pArea, CyPlot* pFromPlot)
 {
 	return m_pPlayer ? m_pPlayer->countUnimprovedBonuses(pArea->getArea(), pFromPlot->getPlot()) : -1;

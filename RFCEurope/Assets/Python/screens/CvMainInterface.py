@@ -2170,7 +2170,7 @@ class CvMainInterface:
 						screen.hide( "UHVText" )
 
 				elif ( ePlayer == con.iNovgorod ):
-					iNovgorodFurs = pPlayer.countOwnedBonuses(xml.iFur)
+					iNovgorodFurs = pPlayer.countCultBorderBonuses(xml.iFur)
 					if ( not CyInterface().isCityScreenUp() ):
 						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
 						szUHVText = ": " + localText.getText("TXT_KEY_UHV_FURS",()) + (" (%i) " %iNovgorodFurs )
