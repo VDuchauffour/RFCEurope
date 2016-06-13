@@ -62,6 +62,11 @@
 			<Civilopedia>TXT_KEY_CONCEPT_RELIGION_OVERHAUL_PEDIA</Civilopedia>
 		</ConceptInfo>
 		<ConceptInfo>
+			<Type>CONCEPT_RFCE_CRUSADES</Type>
+			<Description>TXT_KEY_CONCEPT_CRUSADES</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_CRUSADES_PEDIA</Civilopedia>
+		</ConceptInfo>
+		<ConceptInfo>
 			<Type>CONCEPT_ODDS</Type>
 			<Description>TXT_KEY_CONCEPT_ODDS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ODDS_PEDIA</Civilopedia>
