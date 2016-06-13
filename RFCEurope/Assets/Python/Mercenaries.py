@@ -6,11 +6,13 @@ import Popup
 #import cPickle as pickle
 import Consts as con
 import XMLConsts as xml
+import RFCUtils
 from StoredData import sd
 
 # globals
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer
+utils = RFCUtils.RFCUtils()
 
 iMercCostPerTurn = con.iMercCostPerTurn
 
@@ -523,25 +525,34 @@ class MercenaryManager:
 		(iPurchaseCost, iUpkeepCost) = self.GMU.getCost( iMerc, lPromotions )
 		iCurrentProvince = lMercInfo[4][gc.getGame().getSorenRandNum( len(lMercInfo[4]), 'available province') ]
 
-		# 3Miro: message for the human player
-		# Absinthe: different message if the player doesn't have enough culture in the province
+		# Absinthe: different message for the human player for the various cases
 		iHuman = gc.getGame().getActivePlayer()
+		pHuman = gc.getPlayer( iHuman )
 		ProvMessage = False
-		if ( gc.getPlayer( iHuman ).getProvinceCityCount( iCurrentProvince ) > 0 ):
-			apCityList = PyPlayer(iHuman).getCityList()
-			for pCity in apCityList:
-				city = pCity.GetCy()
-				if ( city.getProvince() == iCurrentProvince ):
-					if (city.getCultureLevel() >= 2):
-						szProvName = "TXT_KEY_PROVINCE_NAME_%i" %iCurrentProvince
-						szCurrentProvince = CyTranslator().getText(szProvName,())
-						CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()) + " " + szCurrentProvince, "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
-						ProvMessage = True
-						break
-			if (not ProvMessage):
+		if ( pHuman.getProvinceCityCount( iCurrentProvince ) > 0 ):
+			# Absinthe: different message if the mercenaries don't like the player's state religion
+			iStateReligion = pHuman.getStateReligion()
+			if (iStateReligion in lMercList[iMerc][5]):
 				szProvName = "TXT_KEY_PROVINCE_NAME_%i" %iCurrentProvince
 				szCurrentProvince = CyTranslator().getText(szProvName,())
-				CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()) + " " + szCurrentProvince + CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_CULTURE",()), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
+				CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()) + " " + szCurrentProvince + CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_RELIGION",()), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
+			# Absinthe: normal message
+			else:
+				apCityList = PyPlayer(iHuman).getCityList()
+				for pCity in apCityList:
+					city = pCity.GetCy()
+					if ( city.getProvince() == iCurrentProvince ):
+						if (city.getCultureLevel() >= 2):
+							szProvName = "TXT_KEY_PROVINCE_NAME_%i" %iCurrentProvince
+							szCurrentProvince = CyTranslator().getText(szProvName,())
+							CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()) + " " + szCurrentProvince + "!", "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
+							ProvMessage = True
+							break
+				# Absinthe: different message if the player doesn't have enough culture in the province
+				if (not ProvMessage):
+					szProvName = "TXT_KEY_PROVINCE_NAME_%i" %iCurrentProvince
+					szCurrentProvince = CyTranslator().getText(szProvName,())
+					CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()) + " " + szCurrentProvince + CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_CULTURE",()), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
 
 		# add the merc, keep the merc index, costs and promotions
 		self.lGlobalPool.append( [iMerc, lPromotions, iPurchaseCost, iUpkeepCost, iCurrentProvince] )
@@ -683,7 +694,6 @@ class MercenaryManager:
 			self.GMU.setMercHiredBy( lHiredByList )
 
 
-
 	def onUnitLost(self, argsList):
 		# this gets called on lost and on upgrade, check to remove the merc if it has not been upgraded?
 		pUnit = argsList[0]
@@ -821,10 +831,9 @@ class MercenaryManager:
 					return
 
 	def HireMercAI( self, pPlayer ):
-		# decide which merc to hire
+		# decide which mercenary to hire
 		lCanHireMercs = []
-		#sPlayerProvinces = Set( self.getOwnedProvinces( pPlayer ) )
-		lPlayerProvinces = self.GMU.getOwnedProvinces( pPlayer )
+		lPlayerProvinces = self.GMU.getCulturedProvinces( pPlayer )
 		iGold = pPlayer.getGold()
 		iStateReligion = pPlayer.getStateReligion()
 		iPlayer = pPlayer.getID()
@@ -876,6 +885,16 @@ class GlobalMercenaryUtils:
 		for pCity in apCityList:
 			city = pCity.GetCy()
 			iProvince = city.getProvince()
+			if ( not (iProvince in lProvList) ):
+				lProvList.append( iProvince )
+		return lProvList
+
+	def getCulturedProvinces( self, pPlayer ):
+		lProvList = [] # all available cities that the Merc can appear in
+		apCityList = PyPlayer(pPlayer.getID()).getCityList()
+		for pCity in apCityList:
+			city = pCity.GetCy()
+			iProvince = city.getProvince()
 			if ( (not (iProvince in lProvList)) and (city.getCultureLevel() >= 2) ):
 				lProvList.append( iProvince )
 		return lProvList
@@ -919,13 +938,13 @@ class GlobalMercenaryUtils:
 		return (iPurchaseCost, iUpkeepCost)
 
 	def getModifiedCostPerPlayer( self, iCost, iPlayer ):
+		# Absinthe: we need to make it sure this is modified only once for each mercenary on the mercenary screen
+		#			handled on the screen separately, this should be fine the way it is now
 		# 3MiroUP: this function gets called:
-		#	- every time a merc is hired (pPlayer.initUnit) to set the upkeep and
+		#	- every time a merc is hired (pPlayer.initUnit) to set the upkeep
 		#	- every time a merc cost is considered
-		#	- every time a merc cost is to be displaded (in the merc screen)
+		#	- every time a merc cost is to be displayed (in the merc screen)
 		return ( iCost * lMercCostModifier[iPlayer] ) / 100
-
-
 
 	def hireMerc( self, lMerc, iPlayer ):
 		# the player would hire a merc
@@ -945,9 +964,16 @@ class GlobalMercenaryUtils:
 		apCityList = PyPlayer(iPlayer).getCityList()
 		for pCity in apCityList:
 			city = pCity.GetCy()
-			#if ( city.getProvince() in lMercList[ lMerc[0] ][4] ):
 			if ( city.getProvince() == lMerc[4] ):
-				lCityList.append( city )
+				# Absinthe: note that naval mercs can appear in all coastal cities if we have enough culture in the province (at least one cultured enough city)
+				iMercType = lMercList[lMerc[0]][0]
+				if (gc.getUnitInfo(iMercType).getDomainType() == 0):
+					if city.isCoastal(1):
+						lCityList.append( city )
+				# Absinthe: otherwise only in cities with enough culture
+				else:
+					if (city.getCultureLevel() >= 2):
+						lCityList.append( city )
 
 		if ( len( lCityList ) == 0 ):
 			return
@@ -967,6 +993,15 @@ class GlobalMercenaryUtils:
 
 		self.setMercGlobalPool( lGlobalPool )
 		self.setMercHiredBy( lHiredByList )
+
+		# message for the human player if another civ hired a merc which was also available for him/her
+		iHuman = utils.getHumanID()
+		lHumanProvList = self.getOwnedProvinces( gc.getPlayer( iHuman ) )
+		if (lMerc[4] in lHumanProvList):
+			if ( iPlayer != iHuman):
+				szProvName = "TXT_KEY_PROVINCE_NAME_%i" %lMerc[4]
+				szCurrentProvince = CyTranslator().getText(szProvName,())
+				CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_HIRED_BY_SOMEONE", (szCurrentProvince,)), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
 
 		# make the unit:
 		pUnit = pPlayer.initUnit( lMercList[lMerc[0]][0], iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )

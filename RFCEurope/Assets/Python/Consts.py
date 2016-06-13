@@ -523,16 +523,16 @@ tNewCapitals = (  #for RiseAndFall
 tStabilityBonusAI = (
 0, #Byzantium
 4, #France
-0, #Arabia
+4, #Arabia
 3, #Bulgaria
 2, #Cordoba
 0, #Venice
 0, #Burgundy
 0, #Germany
-0, #Novgorod
+3, #Novgorod
 0, #Norway
 6, #Kiev
-0, #Hungary
+2, #Hungary
 0, #Spain
 0, #Denmark
 0, #Scotland
@@ -1378,18 +1378,18 @@ colony_positions_xy=[
 (480,335), #GoldCoast
 (440,335), #IvoryCoast
 (145,265), #Cuba
+(185,280), #Hispaniola
 (290,410), #Brazil
 (160,110), #Hudson
 (170,210), #Virginia
+(610,390), #EastAfrica
 (875,225), #China
 (760,260), #India
 (930,360), #East Indies
 (870,320), #Malaysia
 (560,510), #CapeTown
-(610,390), #EastAfrica
 ( 60,260), #Aztecs
 (170,420), #Inca
-(185,280), #Hispaniola
 (245,120), #Quebec
 (200,180), #New England
 (155,285), #Jamaica
@@ -1530,7 +1530,7 @@ iUP_HealthFood = 26					# positive health contributes to city growth
 iUP_TerrainBonus = 27				# add bonus to one or more types of yield for a specific terrain
 iUP_FeatureBonus = 28				# add bonus to one or more types of yield for a specific feature
 iUP_StabilityConquestBoost = 29		# if stability is < 0, then get +1 stability on Conquest
-iUP_StabilitySettler = 30			# don't lose stability from founding cities in Outer and None Provinces
+iUP_StabilitySettler = 30			# don't lose stability from founding cities in Contested (border/outer/ok) and Foreign (unstable) Provinces
 iUP_StabilityPlaceholder1 = 31		# does nothing
 iUP_StabilityPlaceholder2 = 32		# does nothing
 iUP_Janissary = 33					# free units for foreign religions (Python only)

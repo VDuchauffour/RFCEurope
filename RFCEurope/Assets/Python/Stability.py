@@ -10,9 +10,11 @@ import XMLConsts as xml
 import RFCUtils
 import RFCEMaps as rfcemaps
 import RiseAndFall
+import ProvinceManager
 
 utils = RFCUtils.RFCUtils()
 rnf = RiseAndFall.RiseAndFall()
+pm = ProvinceManager.ProvinceManager()
 
 # globals
 gc = CyGlobalContext()
@@ -51,6 +53,7 @@ class Stability:
 		# Absinthe: Stability is accounted properly for stuff preplaced in the scenario file - from RFCE++
 		for iPlayer in range(iNumMajorPlayers):
 			pPlayer = gc.getPlayer(iPlayer)
+			teamPlayer = gc.getTeam(pPlayer.getTeam())
 			apCityList = PyPlayer(iPlayer).getCityList()
 			iCounter = 0
 			for pLoopCity in apCityList:
@@ -60,32 +63,47 @@ class Stability:
 
 				# Province stability
 				iProv = rfcemaps.tProinceMap[pCity.getY()][pCity.getX()]
-				if ( pPlayer.getProvinceType( iProv ) >= con.iProvincePotential ):
+				if ( pPlayer.getProvinceType( iProv ) == con.iProvinceCore ):
 					pPlayer.changeStabilityBase( iCathegoryExpansion, 1 )
-				elif ( not gc.hasUP( iPlayer, con.iUP_StabilitySettler ) ):
-					pPlayer.changeStabilityBase( iCathegoryExpansion, -2 )
-				if ( iCounter < 5 ): # early boost to small civs
-					pPlayer.changeStabilityBase( iCathegoryExpansion, 1 )
+				elif ( not gc.hasUP( iPlayer, con.iUP_StabilitySettler ) ): # no instability with the Settler UP
+					if (pPlayer.getProvinceType( iProv ) == con.iProvinceOuter):
+						pPlayer.changeStabilityBase( iCathegoryExpansion, -1 )
+					elif (pPlayer.getProvinceType( iProv ) == con.iProvinceNone):
+						pPlayer.changeStabilityBase( iCathegoryExpansion, -2 )
 
-				# Building stability
+				# Building stability: only a chance for these, as all the permanent negative stability modifiers are missing up to the start
 				for econBuilding in (xml.iManorHouse, xml.iFrenchChateau):
-					if (pCity.hasBuilding(econBuilding)):
+					if (pCity.hasBuilding(econBuilding) and gc.getGame().getSorenRandNum(10, 'build stab chance') < 7):
 						pPlayer.changeStabilityBase( iCathegoryEconomy, 1 )
 				for expBuilding in (xml.iCastle, xml.iMoscowKremlin, xml.iHungarianStronghold, xml.iSpanishCitadel):
-					if (pCity.hasBuilding(expBuilding)):
+					if (pCity.hasBuilding(expBuilding) and gc.getGame().getSorenRandNum(10, 'build stab chance') < 7):
 						pPlayer.changeStabilityBase( iCathegoryExpansion, 1 )
 				for civicBuilding in (xml.iNightWatch, xml.iSwedishTennant):
-					if (pCity.hasBuilding(civicBuilding)):
+					if (pCity.hasBuilding(civicBuilding) and gc.getGame().getSorenRandNum(10, 'build stab chance') < 7):
 						pPlayer.changeStabilityBase( iCathegoryCivics, 1 )
 				for cityBuilding in (xml.iCourthouse, xml.iHolyRomanRathaus, xml.iKievVeche, xml.iLithuanianVoivodeship ):
-					if (pCity.hasBuilding(cityBuilding)):
+					if (pCity.hasBuilding(cityBuilding) and gc.getGame().getSorenRandNum(10, 'build stab chance') < 7):
 						pPlayer.changeStabilityBase( iCathegoryCities, 1 )
-				print(pCity.getName() + " contributes " + str(pPlayer.getStability() - iOldStab) + " stability.")
 
-			print("Player "+str(iPlayer)+" initial stability: "+str(pPlayer.getStability()))
+				print (pCity.getName() + " contributes " + str(pPlayer.getStability() - iOldStab) + " stability.")
+
+			# Small boost for small civs
+			if ( iCounter < 6 ): # instead of the additional boost for the first few cities
+				pPlayer.changeStabilityBase( iCathegoryExpansion, (6 - iCounter) / 2 + 1 )
+
+			# Known techs which otherwise give instability should also give the penalty here
+			for iTech in (xml.iFeudalism, xml.iGuilds, xml.iGunpowder, xml.iProfessionalArmy, xml.iNationalism, xml.iCivilService, xml.iEconomics, xml.iMachinery, xml.iAristocracy):
+				if (teamPlayer.isHasTech(iTech)):
+					gc.getPlayer(iPlayer).changeStabilityBase( iCathegoryEconomy, -1 )
+
+			print ("Player "+str(iPlayer)+" initial stability: "+str(pPlayer.getStability()))
+
+			# Absinthe: update all potential provinces at the start for all living players
+			if (pPlayer.isAlive()):
+				pm.updatePotential(iPlayer)
 
 		# Absinthe: AI stability bonus - for civs that have a hard time at the beginning
-		#			France, Cordoba, Bulgaria, Ottomans
+		#			for example France, Arabia, Bulgaria, Cordoba, Ottomans
 		for iPlayer in range(iNumMajorPlayers-1): # no Pope, Indies, or Barbs
 			pPlayer = gc.getPlayer(iPlayer)
 			if (iPlayer != utils.getHumanID()):
@@ -217,7 +235,7 @@ class Stability:
 	def continentsNormalization(self, iGameTurn): #Sedna17
 		#lContinentModifier = [-1, -1, 0, -2, 0, 0] #Eastern, Central, Atlantic, Islamic, Italian, Norse, see Consts.py
 		#for iPlayer in range(iNumPlayers):
-		#       if (gc.getPlayer(iPlayer).isAlive()):
+		#	if (gc.getPlayer(iPlayer).isAlive()):
 		#		for j in range(len(con.lCivStabilityGroups)):
 		#			if (iPlayer in con.lCivStabilityGroups[j]):
 		#				self.setParameter(iPlayer, iParExpansionE, True, lContinentModifier[j])
@@ -228,13 +246,15 @@ class Stability:
 	def onCityBuilt(self, iPlayer, x, y):
 		iProv = rfcemaps.tProinceMap[y][x]
 		pPlayer = gc.getPlayer( iPlayer )
-		if ( pPlayer.getProvinceType( iProv ) >= con.iProvinceNatural ):
+		# Absinthe: +1 for core, -1 for contested, -2 for foreign provinces
+		if ( pPlayer.getProvinceType( iProv ) == con.iProvinceCore ):
 			pPlayer.changeStabilityBase( iCathegoryExpansion, 1 )
-		elif ( pPlayer.getProvinceType( iProv ) == con.iProvincePotential ):
-			pPlayer.changeStabilityBase( iCathegoryExpansion, 0 )
-		elif ( not gc.hasUP( iPlayer, con.iUP_StabilitySettler ) ):
-			pPlayer.changeStabilityBase( iCathegoryExpansion, -2 )
-		if ( pPlayer.getNumCities() < 5 ): # early boost to small Empires
+		elif ( not gc.hasUP( iPlayer, con.iUP_StabilitySettler ) ): # no instability with the Settler UP
+			if (pPlayer.getProvinceType( iProv ) == con.iProvinceOuter):
+				pPlayer.changeStabilityBase( iCathegoryExpansion, -1 )
+			elif (pPlayer.getProvinceType( iProv ) == con.iProvinceNone):
+				pPlayer.changeStabilityBase( iCathegoryExpansion, -2 )
+		if ( pPlayer.getNumCities() < 5 ): # early boost to small civs
 			pPlayer.changeStabilityBase( iCathegoryExpansion, 1 )
 		self.recalcEpansion( pPlayer )
 		self.recalcCivicCombos( iPlayer )
@@ -414,7 +434,7 @@ class Stability:
 					iStability = pPlayer.getStability()
 					# Absinthe: human player with very bad stability should have a much bigger chance for collapse
 					if (iStability < -14 and iPlayer == utils.getHumanID()):
-						if (gc.getGame().getSorenRandNum(50, 'human collapse') < 15 - iStability): #60 chance with -15, 80% with -25, 100% with -35
+						if (gc.getGame().getSorenRandNum(100, 'human collapse') < 0 - 2 * iStability): #30 chance with -15, 50% with -25, 70% with -35, 100% with -50 or less
 							if (pPlayer.getNumCities() > 1):
 								print ("COLLAPSE: CIVIL WAR", gc.getPlayer(iPlayer).getCivilizationAdjective(0), "Stability:", iStability)
 								CyInterface().addMessage(iPlayer, True, con.iDuration, CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_HUMAN", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
@@ -503,6 +523,7 @@ class Stability:
 	def recalcCity( self, iPlayer ):
 		pPlayer = gc.getPlayer( iPlayer )
 		iCivic4 = pPlayer.getCivics(4)
+		iCivic5 = pPlayer.getCivics(5)
 		iTotalHappy = pPlayer.calculateTotalCityHappiness() - pPlayer.calculateTotalCityUnhappiness()
 		iCityStability = 0
 		if ( pPlayer.getNumCities() == 0 ):
@@ -515,6 +536,7 @@ class Stability:
 		iMilitaryStability = 0
 		iWarWStability  = 0
 		iReligionStability = 0
+		iCivicReligionInstability = 0
 		iCultureStability = 0
 		apCityList = PyPlayer(iPlayer).getCityList()
 		for pLoopCity in apCityList:
@@ -531,17 +553,15 @@ class Stability:
 			#			also it is a negative counter with the current civic setup, so getReligionBadHappiness() == -1 with one non-state religion in the city
 			if ( pCity.getReligionBadHappiness() < 0 ):
 				if ( not gc.hasUP( iPlayer, con.iUP_ReligiousTolerance )): # Polish UP
-					iReligionStability -= 1
+					iCivicReligionInstability += 1
 			if ( pCity.getHurryAngerModifier() > 0 ):
 				iHurryStability -= 1
 			if ( pCity.getNoMilitaryPercentAnger() > 0 ):
 				iMilitaryStability -= 1
 			# Absinthe: getWarWearinessPercentAnger is not a local variable for your cities, but a global one for your entire civ
-			#			thus without any further modifications it would result in 1 instability for each city if there is an ongoing war
+			#			it would results in 1 instability for each city if there is an ongoing war, thus I added some modifications below
 			if ( pCity.getWarWearinessPercentAnger() > 10 ):
 				iWarWStability -= 1
-			#print(" getWarWearinessPercentAnger_city: ",pCity.getWarWearinessPercentAnger())
-			#print(" getWarWearinessPercentAnger_player: ",pPlayer.getWarWearinessPercentAnger())
 			bJewInstability = False
 			if ( iCivic4 != xml.iCivicFreeReligion ): # if not in the Religious Tolerance civic
 				if ( not gc.hasUP( iPlayer, con.iUP_ReligiousTolerance )): # Polish UP
@@ -563,19 +583,21 @@ class Stability:
 			# Absinthe: Jewish Quarter reduces religion instability if Judaism is present in the city
 			if (bJewInstability and pCity.hasBuilding( xml.iJewishQuarter ) and pCity.isHasReligion( xml.iJudaism )): # only if there are some religious penalties present in the city
 				iReligionStability += 1
-			#print(" iReligionStability: ",iReligionStability)
 			# Absinthe: -1 stability if own culture is less than 40% of total culture in a city, -2 stability if less than 20%
 			iTotalCulture = pCity.countTotalCultureTimes100()
 			if ( (iTotalCulture > 0) and ( (pCity.getCulture(iPlayer) * 10000) / iTotalCulture < 40 ) and ( not gc.hasUP( iPlayer, con.iUP_CulturalTolerance )) ):
-				iCultureStability -= 1
+				# Absinthe: 1 less instability with the Vassalage Civic, so only -1 with less than 20%, 0 otherwise
+				if ( iCivic5 != xml.iCivicSubjugation ):
+					iCultureStability -= 1
 				if ( (iTotalCulture > 0) and ( (pCity.getCulture(iPlayer) * 10000) / iTotalCulture < 20 ) and ( not gc.hasUP( iPlayer, con.iUP_CulturalTolerance )) ):
 					iCultureStability -= 1
-			#print(" iCultureStability: ",iCultureStability)
 		# Absinthe: if your civ is healthy, bonus stability
 		if (iCivHealthStability > 0):
 			iCivHealthStability = iCivHealthStability / pPlayer.getNumCities() # +k stability for an average city health of at least k
-			#print ("iCivHealthStability", iCivHealthStability)
 			iHealthStability += iCivHealthStability
+		# Absinthe: reduced value for getReligionBadHappiness, shouldn't add -1 for each city if almost all of them has multiple religions
+		#			switching in and out of the civic won't result in that much fluctuation
+		iCivicReligionInstability = min( len(apCityList) / 2, iCivicReligionInstability )
 		# Absinthe: persecution counter - cooldown is handled in Religions.checkTurn
 		#			1-3 means 1 instability, 4-6 means 2 instability, 7-9 means 3 instability, etc...
 		iProsecutionCount = pPlayer.getProsecutionCount()
@@ -583,12 +605,12 @@ class Stability:
 			iReligionStability -= (iProsecutionCount + 2) / 3
 		# Humans are far more competent then the AI, so the AI won't get all the penalties
 		if ( pPlayer.isHuman() ):
-			iCityStability += iHappyStability + iHealthStability + iReligionStability + iHurryStability + iCultureStability + iMilitaryStability
+			iCityStability += iHappyStability + iHealthStability + iReligionStability - iCivicReligionInstability + iHurryStability + iCultureStability + iMilitaryStability
 			iCityStability += max( iWarWStability/3 - 1, -10 ) # max 10 instability from war weariness
 			iCityStability = min( iCityStability, 8 ) # max 8 extra stability from cities - don't want to add too many bonuses for runaway civs
 		else:
 			iCityStability += max( iHappyStability, -5 ) + max( iHealthStability, -5 ) # AI keeps very unhappy cities
-			iCityStability += max( iReligionStability + iHurryStability, -7 ) + max( iCultureStability, -5 )
+			iCityStability += max( iReligionStability - iCivicReligionInstability + iHurryStability, -7 ) + max( iCultureStability, -5 )
 			iCityStability += max( iMilitaryStability + iWarWStability/3, -3 ) # AI is also bad at handling war weariness
 			iCityStability = min( max( iCityStability, -10 ), 8 )
 		iCityStability += pPlayer.getFaithBenefit( con.iFP_Stability )
@@ -694,7 +716,7 @@ class Stability:
 		if xml.iCivicReligiousLaw in lCivics:
 			if xml.iCivicPaganism in lCivics: return -5
 			if xml.iCivicFreeReligion in lCivics: return -3
-			if xml.iCivicTheocracy in lCivics:  return 4
+			if xml.iCivicTheocracy in lCivics:  return 5
 
 		if xml.iCivicCommonLaw in lCivics:
 			if xml.iCivicFreeLabor in lCivics: return 3

@@ -752,7 +752,7 @@ class Crusades:
 				iTeamVictim = gc.getTeam( gc.getPlayer(iVictim).getTeam() ).getID()
 				if ( not teamLeader.isAtWar( iTeamVictim ) ):
 					if ( teamLeader.canDeclareWar( iTeamVictim ) ):
-						teamLeader.declareWar(iTeamVictim, True, -1)
+						teamLeader.declareWar(iTeamVictim, False, -1)
 					else:
 						# we cannot declare war to the current owner of the target city
 						self.returnCrusaders()

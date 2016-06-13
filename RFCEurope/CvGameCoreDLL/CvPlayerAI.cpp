@@ -2974,19 +2974,19 @@ int CvPlayerAI::AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreA
 	// Absinthe: War Maps should be a more important factor in deciding where to attack, so increased their value to 0,2,6,10,16
 	// Absinthe: Barbs and Indies outside War Maps are not totally ignored anymore, have a much decreased chance instead
 	int iWarsVale = getWarsMaps(EARTH_Y - 1 - pCity->plot()->getY_INLINE(),pCity->plot()->getX_INLINE());
-	iValue += iWarsVale/2;
+	iValue += (iWarsVale / 2);
 	if ( iWarsVale == 0 ){
 		iValue = std::max( iValue - 2, 0 );
 		// Absinthe: Pope always ignores Barbs and Indies outside it's war map
 		if ( getID() == PAPAL_PLAYER ){
 			iValue = 0;
 		}else if (pCity->getOwner() >= NUM_MAJOR_PLAYERS){
-			iValue /= 2; // Absinthe: much reduced chance for Barbs and Indies outside the war map
+			iValue /= 4; // Absinthe: much reduced chance for Barbs and Indies outside the war map
 		};
 	}else{
 		iValue += 1; // fixed bonus for tiles in the war map
 		if (pCity->getOwner() >= NUM_MAJOR_PLAYERS){
-			iValue += iWarsVale/2; // Absinthe: highly prioritize Indies and Barbs inside the war map
+			iValue += iWarsVale; // Absinthe: highly prioritize Indies and Barbs inside the war map
 		};
 	};
 

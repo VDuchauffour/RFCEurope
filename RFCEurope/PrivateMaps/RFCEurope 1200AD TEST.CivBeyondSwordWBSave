@@ -232,10 +232,12 @@ BeginPlayer
 	LeaderType=LEADER_HAAKON_IV
 	CivType=CIVILIZATION_NORWAY
 	PlayableCiv=1
+	StateReligion=RELIGION_CATHOLICISM
 	CivicOption=CIVICOPTION_GOVERNMENT, Civic=CIVIC_FEUDAL_MONARCHY
 	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_FEUDAL_LAW
 	CivicOption=CIVICOPTION_LABOR, Civic=CIVIC_SERFDOM
 	CivicOption=CIVICOPTION_ECONOMY, Civic=CIVIC_MANORIALISM
+	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
@@ -274,6 +276,7 @@ BeginPlayer
 	CivType=CIVILIZATION_DENMARK
 	PlayableCiv=1
 	StateReligion=RELIGION_CATHOLICISM
+	CivicOption=CIVICOPTION_RELIGION, Civic=CIVIC_STATE_RELIGION
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
@@ -23588,6 +23591,7 @@ BeginPlot
 		BuildingType=BUILDING_COURTHOUSE
 		BuildingType=BUILDING_MANOR_HOUSE
 		BuildingType=BUILDING_PAGAN_SHRINE
+		ReligionType=RELIGION_CATHOLICISM
 		Player9Culture=20
 	EndCity
 EndPlot
@@ -25747,6 +25751,7 @@ BeginPlot
 		BuildingType=BUILDING_COURTHOUSE
 		BuildingType=BUILDING_MANOR_HOUSE
 		BuildingType=BUILDING_PAGAN_SHRINE
+		ReligionType=RELIGION_CATHOLICISM
 		Player9Culture=20
 	EndCity
 EndPlot
@@ -29257,6 +29262,7 @@ BeginPlot
 	RiverWEDirection=1
 	isWOfRiver
 	BonusType=BONUS_FUR
+	ImprovementType=IMPROVEMENT_CAMP
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -29735,6 +29741,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	BonusType=BONUS_IRON
+	ImprovementType=IMPROVEMENT_MINE
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -29745,6 +29752,26 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN, UnitOwner=31
+		Damage=0
+		Level=1, Experience=0
+		FacingDirection=4
+		UnitAIType=UNITAI_CITY_DEFENSE
+	EndUnit
+	BeginCity
+		CityOwner=31
+		CityName=Uppsala
+		CityPopulation=4
+		BuildingType=BUILDING_WALLS
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_SMOKEHOUSE
+		BuildingType=BUILDING_PAGAN_SHRINE
+		BuildingType=BUILDING_SHRINE_OF_UPPSALA
+		Player9Culture=120
+	EndCity
 EndPlot
 BeginPlot
 	x=65,y=67
@@ -35376,6 +35403,7 @@ BeginPlot
 	x=77,y=24
 	BonusType=BONUS_HORSE
 	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot

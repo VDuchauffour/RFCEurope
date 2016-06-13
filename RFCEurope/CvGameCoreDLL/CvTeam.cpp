@@ -5209,8 +5209,8 @@ int CvTeam::getTerrainTradeCount(TerrainTypes eIndex) const
 
 bool CvTeam::isTerrainTrade(TerrainTypes eIndex) const
 {
-	// Absinthe: Norwegian UP also enables ocean trade (Norway ID == 9, Ocean ID == 8)
-	//if (getID() == 9 && eIndex == 8)
+	// Absinthe: Norwegian UP also enables ocean trade
+	//if (getID() == 9 && eIndex == 8) // (Norway ID == 9, Ocean ID == 8)
 	int iUPS = UniquePowers[getID() * UP_TOTAL_NUM + UP_CAN_ENTER_TERRAIN];
 	if ( (iUPS > -1) && (eIndex == iUPS) )
 	{

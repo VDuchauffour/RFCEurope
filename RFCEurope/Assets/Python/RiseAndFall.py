@@ -1087,27 +1087,29 @@ class RiseAndFall:
 					if (iDistance > 3):
 						iProvType = pPlayer.getProvinceType( city.getProvince() )
 						# Absinthe: if forced revolt, all cities go into the list by default
-						#			angry population, bad health, untolerated religion, no military garrison adds the city to the list once more (per type)
-						#			if the city is in an border/contested province, the city is added 3 more times, if in foreign, 8 more times
+						#			angry population, bad health, untolerated religion, no military garrison can add the city to the list a couple more times (per type)
+						#			if the city is in a contested province, the city is added a couple more times by default, if in a foreign province, a lot more times
 						if (bForce):
 							cityList.append(city)
 						# Absinthe: Byzantine UP: cities in normal and core provinces won't go on the list
 						if (city.angryPopulation(0) > 0):
+							# Absinthe: bigger chance to choose the city if unhappy
 							if (not utils.collapseImmuneCity(iPlayer,city.getX(),city.getY())):
 								cityList.append(city)
+								cityList.append(city)
 							elif (iProvType < con.iProvincePotential):
+								cityList.append(city)
+								cityList.append(city)
 								cityList.append(city)
 								cityList.append(city)
 						if (city.goodHealth() - city.badHealth(False) < -1):
-							if (not utils.collapseImmuneCity(iPlayer,city.getX(),city.getY())):
-								cityList.append(city)
-							elif (iProvType < con.iProvincePotential):
-								cityList.append(city)
+							# Absinthe: health issues do not cause city secession in core provinces for anyone
+							#			also less chance from unhealth for cities in contested and foreign provinces
+							if (iProvType < con.iProvincePotential):
 								cityList.append(city)
 						if (city.getReligionBadHappiness() < 0):
-							if (not utils.collapseImmuneCity(iPlayer,city.getX(),city.getY())):
-								cityList.append(city)
-							elif (iProvType < con.iProvincePotential):
+							# Absinthe: also not a cause for secession in core provinces, no need to punish the player this much (and especially the AI) for using the civic
+							if (iProvType < con.iProvincePotential):
 								cityList.append(city)
 								cityList.append(city)
 						if (city.getNoMilitaryPercentAnger() > 0):
@@ -1116,7 +1118,17 @@ class RiseAndFall:
 							elif (iProvType < con.iProvincePotential):
 								cityList.append(city)
 								cityList.append(city)
+						# Absinthe: also add the city if it has less than 30% own culture (and the civ doesn't have the Cultural Tolerance UP)
+						if (city.countTotalCultureTimes100() > 0 and (city.getCulture(iPlayer) * 10000 / city.countTotalCultureTimes100()) < 30 and ( not gc.hasUP( iPlayer, con.iUP_CulturalTolerance ))):
+							if (not utils.collapseImmuneCity(iPlayer,city.getX(),city.getY())):
+								cityList.append(city)
+								cityList.append(city)
+							elif (iProvType < con.iProvincePotential):
+								cityList.append(city)
+								cityList.append(city)
+								cityList.append(city)
 						if ( iProvType == con.iProvinceOuter ):
+							cityList.append(city)
 							cityList.append(city)
 						if ( iProvType == con.iProvinceNone ):
 							cityList.append(city)
@@ -1125,14 +1137,8 @@ class RiseAndFall:
 							cityList.append(city)
 							cityList.append(city)
 							cityList.append(city)
+							cityList.append(city)
 						continue
-
-						# Absinthe: also add the city to the list if it has foreign culture - currently unused
-						#for iLoop in range(iNumTotalPlayersB):
-						#	if (iLoop != iPlayer):
-						#		if (pCurrent.getCulture(iLoop) > 0):
-						#			cityList.append(city)
-						#			break
 
 		if (len(cityList)):
 			# Absinthe: city goes to random independent

@@ -4,9 +4,11 @@ import Consts as con
 import XMLConsts as xml
 import RFCEMaps as rfcemaps
 import RFCUtils # Absinthe
+import PyHelpers # Absinthe
 
 
 gc = CyGlobalContext()
+PyPlayer = PyHelpers.PyPlayer # Absinthe
 utils = RFCUtils.RFCUtils() # Absinthe
 
 
@@ -497,6 +499,22 @@ class ProvinceManager:
 
 	def onCityRazed(self, iOwner, playerType, city):
 		pass
+
+	def updatePotential(self, iPlayer):
+		pPlayer = gc.getPlayer(iPlayer)
+		apCityList = PyPlayer(iPlayer).getCityList()
+		for pCity in apCityList:
+			city = pCity.GetCy()
+			iProv = city.getProvince()
+			if (pPlayer.getProvinceType( iProv ) == iProvincePotential):
+				if ( iProv in self.tPot2NormProvinces[iPlayer] ):
+					pPlayer.setProvinceType( iProv, iProvinceNatural )
+				elif ( iProv in self.tPot2CoreProvinces[iPlayer] ):
+					pPlayer.setProvinceType( iProv, iProvinceCore )
+				# Absinthe: bug if we tie potential only to the preset status of provinces
+				else: # also update if it was changed to be a potential province later in the game
+					pPlayer.setProvinceType( iProv, iProvinceNatural )
+		utils.refreshStabilityOverlay() # refresh the stability overlay
 
 	def onRespawn(self, iPlayer ):
 		# Absinthe: reset the original potential provinces, but only if they wasn't changed to something entirely different later on

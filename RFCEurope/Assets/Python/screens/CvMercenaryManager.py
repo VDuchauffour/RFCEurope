@@ -133,7 +133,7 @@ class CvMercenaryManager:
 		## 3Miro: draw the available merc info
 		# read in the available mercs
 		lAvailableMercs = GMU.getMercGlobalPool()
-		print(lAvailableMercs)
+		print ("lAvailableMercs", lAvailableMercs)
 
 		# Get the ID for the current active player
 		iPlayer = gc.getGame().getActivePlayer()
@@ -143,13 +143,6 @@ class CvMercenaryManager:
 		iGold = pPlayer.getGold()
 
 		# get a list of the provinces controlled by the player
-		#lProvList = [] # all available cities that the Merc can appear in
-		#apCityList = PyPlayer(iPlayer).getCityList()
-		#for pCity in apCityList:
-			#city = pCity.GetCy()
-			#iProvince = city.getProvince()
-			#if ( (not (iProvince in lProvList)) and (city.getCultureLevel() >= 2) ):
-				#lProvList.append( iProvince )
 		lProvList = GMU.getOwnedProvinces( pPlayer )
 		#lProvList = Set( lProvList ) # set as in set-theory
 
@@ -157,15 +150,13 @@ class CvMercenaryManager:
 
 		iStateReligion = pPlayer.getStateReligion()
 
-		#print lAvailableMercs
-
 		for lMerc in lAvailableMercs:
 			# get the name and note that names are no longer Unique
 			iMerc = lMerc[0]
 			mercenaryName = CyTranslator().getText( lMercList[iMerc][1] , ())
 
-			#if ( (not len( lProvList & Set( lMercList[iMerc][4] ) ) > 0) or iStateReligion in lMercList[iMerc][5] ): # we have no matching provinces, skip
-			if ( ( not (lMerc[4] in lProvList) ) or iStateReligion in lMercList[iMerc][5] ): # we have no matching provinces, skip
+			# Absinthe: religion and culture will be checked on the hire button, so the mercs appear on the list even if you can't hire them
+			if ( ( not (lMerc[4] in lProvList) ) ): # we have no matching provinces, skip
 				continue
 
 			# screen needs unique internal names
@@ -177,7 +168,6 @@ class CvMercenaryManager:
 			screen.attachImageButton( szUniqueInternalName, szUniqueInternalName+"_AInfoButton", pUnitInfo.getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
 			screen.attachPanel(szUniqueInternalName, szUniqueInternalName+"Text",pUnitInfo.getDescription() +" ("+mercenaryName+")", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
 
-			# TODO: The UP here:
 			iHireCost = GMU.getModifiedCostPerPlayer( lMerc[2], iPlayer )
 			iUpkeepCost = GMU.getModifiedCostPerPlayer( lMerc[3], iPlayer )
 
@@ -192,14 +182,36 @@ class CvMercenaryManager:
 			screen.attachLabel( szUniqueInternalName+"Text", szUniqueInternalName  + "text4", "     Hire Cost: " + strHCost + "  Maint. Cost: " + strMCost)
 			screen.attachLabel( szUniqueInternalName+"Text", szUniqueInternalName  + "text5", "     Province: " + sProvName)
 
-			if ( iGold - iHireCost >= 0 ):
+			# Absinthe: checks whether the player has a city with enough culture in the province
+			bCulturedEnough = False
+			apCityList = PyPlayer(iPlayer).getCityList()
+			for pCity in apCityList:
+				city = pCity.GetCy()
+				if ( city.getProvince() == lMerc[4] and city.getCultureLevel() >= 2):
+					bCulturedEnough = True
+					break
+
+			# Absinthe: checks whether the player has a coastal city in the province (if the merc is a naval unit)
+			bHasCoastalCity = True
+			iMercType = lMercList[iMerc][0]
+			if (gc.getUnitInfo(iMercType).getDomainType() == 0):
+				bHasCoastalCity = False
+				apCityList = PyPlayer(iPlayer).getCityList()
+				for pCity in apCityList:
+					city = pCity.GetCy()
+					if ( city.getProvince() == lMerc[4] and city.isCoastal(1)):
+						bHasCoastalCity = True
+						break
+
+			# Absinthe: money, religion, culture and coastal city check for the hire button
+			if ( iGold - iHireCost >= 0 and iStateReligion not in lMercList[iMerc][5] and bCulturedEnough and bHasCoastalCity):
 				screen.attachPanel(szUniqueInternalName, szUniqueInternalName+"hireButtonPanel", "", "", False, True, PanelStyles.PANEL_STYLE_EMPTY)
 				screen.attachImageButton( szUniqueInternalName, szUniqueInternalName+"_HireButton", "Art/Interface/Buttons/Actions/Join.dds", GenericButtonSizes.BUTTON_SIZE_32, WidgetTypes.WIDGET_GENERAL, -1, -1, False )
 
 			mercenaryCount = mercenaryCount + 1
 
 		# Add the padding to the available mercenaries panel to improve the look of the screen
-		if((4-mercenaryCount)>0):
+		if ((4-mercenaryCount)>0):
 
 			for i in range(4-mercenaryCount):
 				screen.attachPanel(AVAILABLE_MERCENARIES_INNER_PANEL_ID, "dummyPanelHire"+str(i), "", "", True, False, PanelStyles.PANEL_STYLE_EMPTY)
@@ -349,7 +361,7 @@ class CvMercenaryManager:
 
 		screen.attachMultiListControlGFC(MERCENARY_INFORMATION_INNER_PROMOTION_PANEL_ID, MERCENARY_INFORMATION_PROMOTION_LIST_CONTROL_ID, "", 1, 64, 64, TableStyles.TABLE_STYLE_STANDARD)
 
-		# Add all of the promotions the mercenary has.
+		# Add all of the promotions the mercenary has
 		for iPromotion in lMerc[1]:
 			pPromotionInfo = gc.getPromotionInfo(iPromotion)
 			screen.appendMultiListButton( MERCENARY_INFORMATION_PROMOTION_LIST_CONTROL_ID, pPromotionInfo.getButton(), 0, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION, gc.getInfoTypeForString(pPromotionInfo.getType()), -1, false )
@@ -357,12 +369,47 @@ class CvMercenaryManager:
 		screen.addUnitGraphicGFC(MERCENARIES_UNIT_GRAPHIC, lMercList[lMerc[0]][0], self.screenWidgetData[MERCENARY_ANIMATION_X], self.screenWidgetData[MERCENARY_ANIMATION_Y], self.screenWidgetData[MERCENARY_ANIMATION_WIDTH], self.screenWidgetData[MERCENARY_ANIMATION_HEIGHT], WidgetTypes.WIDGET_GENERAL, -1, -1, self.screenWidgetData[MERCENARY_ANIMATION_ROTATION_X], self.screenWidgetData[MERCENARY_ANIMATION_ROTATION_Z], self.screenWidgetData[MERCENARY_ANIMATION_SCALE], True)
 
 		# 3Miro: Add the provinces
-		pPlayer = gc.getPlayer( gc.getGame().getActivePlayer() )
+		iPlayer = gc.getGame().getActivePlayer()
+		pPlayer = gc.getPlayer( iPlayer )
 		szProvinces = localText.getText("TXT_KEY_MERC_AVAILABLE_IN_PROVINCES",())
 		if ( lMerc[4] > -1 ):
 			sProvName = "TXT_KEY_PROVINCE_NAME_%i" %lMerc[4]
 			sProvName = localText.getText(sProvName,())
 			szProvinces = szProvinces + " " + u"<color=0,255,0>%s</color>" %(sProvName)
+
+			# Absinthe: add the money, culture, coastal city and religion prereq texts
+			# Absinthe: checks for enough gold
+			iGold = pPlayer.getGold()
+			iHireCost = lMerc[2] # it's already modified
+			if (iGold < iHireCost):
+				szProvinces = szProvinces + '\n' + u"<color=255,0,0>Can't hire them:</color>" + " " + localText.getText("TXT_KEY_MERC_NOT_ENOUGH_MONEY",())
+			# Absinthe: checks if the player has a city with enough culture in the province
+			bCulturedEnough = False
+			apCityList = PyPlayer(iPlayer).getCityList()
+			for pCity in apCityList:
+				city = pCity.GetCy()
+				if ( city.getProvince() == lMerc[4] and city.getCultureLevel() >= 2):
+					bCulturedEnough = True
+					break
+			if (bCulturedEnough == False):
+				szProvinces = szProvinces + '\n' + u"<color=255,0,0>Can't hire them:</color>" + " " + localText.getText("TXT_KEY_MERC_LACK_CULTURE",())
+			# Absinthe: checks if the player has a coastal city in the province
+			bHasCoastalCity = True
+			iMercType = lMercList[iMerc][0]
+			if (gc.getUnitInfo(iMercType).getDomainType() == 0):
+				bHasCoastalCity = False
+				apCityList = PyPlayer(iPlayer).getCityList()
+				for pCity in apCityList:
+					city = pCity.GetCy()
+					if ( city.getProvince() == lMerc[4] and city.isCoastal(1)):
+						bHasCoastalCity = True
+						break
+			if (bHasCoastalCity == False):
+				szProvinces = szProvinces + '\n' + u"<color=255,0,0>Can't hire them:</color>" + " " + localText.getText("TXT_KEY_MERC_NO_PORT",())
+			# Absinthe: checks for the correct religion
+			iStateReligion = pPlayer.getStateReligion()
+			if (iStateReligion in lMercList[iMerc][5]):
+				szProvinces = szProvinces + '\n' + u"<color=255,0,0>Can't hire them:</color>" + " " + localText.getText("TXT_KEY_MERC_WRONG_RELIGION",())
 		else:
 			szProvinces = ""
 
@@ -666,10 +713,13 @@ class CvMercenaryManager:
 
 				self.calculateScreenWidgetData(screen)
 
-				lMerc[2] = GMU.getModifiedCostPerPlayer( lMerc[2], iPlayer )
-				lMerc[3] = GMU.getModifiedCostPerPlayer( lMerc[3], iPlayer )
+				# Absinthe: we need to make sure this is applied only once
+				iModifiedCost = GMU.getModifiedCostPerPlayer( lMerc[2], iPlayer )
+				iModifiedUpkeep = GMU.getModifiedCostPerPlayer( lMerc[3], iPlayer )
 
-				self.populateMercenaryInformation(screen, lMerc )
+				lModifiedMerc = [lMerc[0], lMerc[1], iModifiedCost, iModifiedUpkeep, lMerc[4]]
+
+				self.populateMercenaryInformation(screen, lModifiedMerc )
 
 			if(function == "HInfoButton"):
 

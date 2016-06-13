@@ -971,6 +971,15 @@
 		<Portuguese>A forma mais primitiva de expansão</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIVIC_SUBJUGATION_HELP</Tag>
+		<English>[ICON_BULLET]Less instability from foreign culture</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_VASSALAGE</Tag>
 		<English>Vassalage</English>
 		<French>Vassalit&#233;</French>

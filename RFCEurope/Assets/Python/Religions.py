@@ -269,7 +269,7 @@ class Religions:
 					if ( pPlayer.getStateReligion() == xml.iCatholicism and teamPope.isOpenBorders( pPlayer.getTeam() ) ):
 						iCatholicFaith += pPlayer.getFaith()
 				if ( iCatholicFaith > 0 ):
-					iCatholicFaith += iCatholicFaith / 10 + 1
+					iCatholicFaith += iCatholicFaith / 10 + 1 # so there is some chance for not giving anything
 					if ( iGameTurn < 100 ):
 						iGift = 20
 					else:
@@ -835,7 +835,6 @@ class Religions:
 		apCityList = PyPlayer(iPlayer).getCityList()
 		for pCity in apCityList:
 			city = pCity.GetCy()
-			#if ( city.getProvince() in lMercList[ lMerc[0] ][4] ):
 			if ( not city.isHasReligion( xml.iJudaism ) ):
 				lCityList.append( city )
 

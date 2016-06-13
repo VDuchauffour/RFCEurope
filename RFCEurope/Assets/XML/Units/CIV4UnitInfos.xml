@@ -24247,7 +24247,7 @@
 			<bGoldenAge>0</bGoldenAge>
 			<bInvisible>0</bInvisible>
 			<bFirstStrikeImmune>1</bFirstStrikeImmune>
-			<bNoDefensiveBonus>0</bNoDefensiveBonus>
+			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bIgnoreBuildingDefense>0</bIgnoreBuildingDefense>
 			<bCanMoveImpassable>0</bCanMoveImpassable>
 			<bCanMoveAllTerrain>0</bCanMoveAllTerrain>

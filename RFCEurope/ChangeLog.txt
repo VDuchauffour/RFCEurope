@@ -16,16 +16,79 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 Changes for RFCE 1.5:
 (under development)
 
-	General changes:
+	1200AD scenario updates:
 		- Fixed Muscovy start in 1200AD scenario, now all civs should work without any issues
 		- Fixed Muscovian starting religion (starts with Orthodoxy as State Religion) in the 1200AD scenario
-		- Austria and Sweden starts with Catholicism as State Religion in the 1200AD scenario
+		- Austria and Sweden start with Catholicism as State Religion in the 1200AD scenario
 		- Fixed Swedish initial contact with Denmark on the very beginning of the 1200AD scenario
 		- Fixed turn counter on scenario start for the 1200AD scenario, now it should show correctly for all civs
-		- Fixed strange visibility area for the Ottomans
+		- Norway and Denmark start with Catholicism as a State Religion and with a couple additional Catholic cities in the 1200AD scenario
+		- Uppsala is preplaced in the 1200AD scenario (will be reduced to town a couple turns later), Shrine of Uppsala is preplaced there so it can't be built later
+
+	Mercenary updates:
+		- Fixed the annoying bug with mercenary notifications (both appearing merc and leaving merc messages) when there wasn't any changes in your mercenary pool
+		- Fixed bug with ever increasing cost for mercenary price and upkeep whenever you clicked on them (for civs with modified values, probably caused by the new StoredData handling)
+		- Fixed bug where you could hire naval mercenaries in non-coastal cities - they will still appear on the mercenary screen though
+		- Mercenaries requiring more culture in the province or a different state religion will also show up on the merc screen, but you can't hire them
+		- Added information texts for the mercenary screen about the reason(s) why you cannot hire specific mercs: money, culture, coastal city, religion
+		- Fixed bug where mercenaries could appear in cities without enough culture (if there were multiple cities in the province)
+		- Specific interface message for the human player when there is a new mercenary in the list, but can't be hired because needs different State Religion
+		- New interface message for the human player if a merc available for him/her was hired by another player
+
+	Plague overhaul:
+		- Improvements near a plagued city have a chance whether to reduce their level, or to reset the progress towards the next level: Towns 100%, Villages 75%, Hamlets 50%, Cottages 25%
+		- Plague chance to kill population in the city (calculated every turn) is heavily adjusted with the current population size
+		- Even though city health is also important, there is a much bigger chance for losing citizens with a bigger population
+		- So while losing some population is still common in all cities, very unlikely to shrink in each turn unless it was a huge city originally
+		- Thus cities will no longer decrease to size 1-2 in most cases, not even for small civs with less health resources
+		- On the other hand, when plague spreads to a new city, one population will be killed by default
+		- The first plague (Plague of Justinian) is less deadly for Byzantium, both for your cities and your units - not historic at all, but better for gameplay
+		- The first plague won't spread to Italy and France, so neither the Franks nor the Pope will suffer from it
+		- Moved the potential start date of the first plague a couple turns earlier
+		- While plagues can still kill units after a couple turns, they won't kill healthy units instantly when spreading to a new city
+		- Other than the initial hit, plague will also deal slightly less damage to your units generally - much less unit deaths from plague than before
+		- Damage difference for units in the city and for units adjacent to a city isn't as significant as before, so attacking armies won't have a huge advantage anymore
+		- Fixed bug which caused almost all plagues to be as deadly as the Black Death (which is supposed to be more deadly than the others)
+		- Base plague duration now heavily takes number of cities into account (instead of a constant 6 for everyone), so it won't be significantly more deadly for smaller civs
+		- Overall health in your empire is still a significant modifier for plague duration, but values are adjusted to be more coherent with the new base duration range
+		- Revised interface messages for plague spread (both to civs and cities), added new message when the plague kills units or a huge percentage of the general population
+		- Fixed bug where the plague spread to the same city multiple times in some rare cases
+		- Indies and barbs are no longer more vulnerable for plague spread than normal civs
+		- Naval units will no longer be killed by plagues (they can get some damage, but significantly less) unless they were heavily damaged already
+		- Damage from the plague will be somewhat more random for all units, especially when there are more units on the same tile
+		- The plague spread mechanics is based on trade routes and city distance, but much more random than before
+		- Plague can spread to more of your cities in a given turn (max is based on the size of the empire), bigger chance for it if there are many cities close to already infected ones
+
+	Stability updates:
+		- Increased civic stability boost from Religious Law + Theocracy
+		- Added small initial stability bonus for Arabia, Hungary and Novgorod if controlled by the AI
+		- Settling in core province means +1 stability, in historic/potential 0, in contested -1, in foreign -2
+		- Various tweaks in stability calculations for preplaced/preset stuff in the scenarios
+		- Potential provinces now properly update on the start of all new games (important for the 1200AD scenario), so stability from them is also updated correctly
+		- Revised collapse rules from bad stability for the human player, now it has a lower chance to happen generally (still very dangerous, but reaches 100% chance much slower)
+		- Reduced overall impact of unhappiness from religious civics on city instability
+		- Reduced foreign culture instability if you run the Subjugation Civic (-1 with less than 20%, 0 otherwise)
+
+	General changes:
 		- Added new function which only counts resources inside cultural borders
 		- Both the Novgorod Fur UHV and the Moscow Atlantic Access UHV use this new function
 		- Reduced number of defender units in Caen, AI France should be able to conquer it more often
+		- Revised the setup for DCNames when the Civ is a master of 1 or 2 other civilizations
+		- Updated text for some interface messages connected to the Reformation
+		- Increased AI willingness to choose indy targets inside it's war map, decreased chance for choosing indies outside the war map
+		- Seljuk Turcoman Horse Archer units no longer get defensive bonuses from tile features
+		- Tuned down the number of Seljuks spawning against human controlled Byzantium
+		- Core cities cannot be chosen for city secession because of health issues
+		- All cities have less chance for secession because of religion unhappiness, while all cities have bigger chance for secession if they are unhappy (happy faces < unhappy faces)
+		- Culture in cities is now also taken into account when choosing the city for secession (not the amount, but your cultural percentage, so the nationality of the population there)
+		- So cities with low own culture has more chance to be chosen if there is a secession - my intention with this is to add more chance for your recently acquired cities
+		- Bonuses on small islands without a city are also connected to the trade network if both their improvement and a road are built on the plot
+
+	Bugfixes:
+		- Fixed strange visibility area for the Ottomans
+		- Fixed bug in the DCNames code which made it impossible for the master condition to trigger
+		- Fixed bug which enabled some specific AI wars to be declared even when there was an active peace
+		- Fixed messed up order of colony names on the Colony Screen tab under the Info Screen
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
