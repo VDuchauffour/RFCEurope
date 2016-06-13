@@ -1365,7 +1365,7 @@
 					<DCNConditionGenericVassal>0</DCNConditionGenericVassal>
 					<DCNConditionMasterlOf>CIVILIZATION_BURGUNDY</DCNConditionMasterlOf>
 					<DCNConditionMasterlOf2>CIVILIZATION_GERMANY</DCNConditionMasterlOf2>
-					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionGenericMasterl>1</DCNConditionGenericMasterl>
 					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
 					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
 					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
@@ -1401,7 +1401,7 @@
 					<DCNConditionGenericVassal>0</DCNConditionGenericVassal>
 					<DCNConditionMasterlOf>CIVILIZATION_BURGUNDY</DCNConditionMasterlOf>
 					<DCNConditionMasterlOf2>CIVILIZATION_GERMANY</DCNConditionMasterlOf2>
-					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionGenericMasterl>1</DCNConditionGenericMasterl>
 					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
 					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
 					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
@@ -1419,7 +1419,7 @@
 					<DCNConditionGenericVassal>0</DCNConditionGenericVassal>
 					<DCNConditionMasterlOf>CIVILIZATION_BURGUNDY</DCNConditionMasterlOf>
 					<DCNConditionMasterlOf2>CIVILIZATION_GERMANY</DCNConditionMasterlOf2>
-					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionGenericMasterl>1</DCNConditionGenericMasterl>
 					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
 					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
 					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
@@ -1473,7 +1473,7 @@
 					<DCNConditionGenericVassal>0</DCNConditionGenericVassal>
 					<DCNConditionMasterlOf>CIVILIZATION_BURGUNDY</DCNConditionMasterlOf>
 					<DCNConditionMasterlOf2>CIVILIZATION_GERMANY</DCNConditionMasterlOf2>
-					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionGenericMasterl>1</DCNConditionGenericMasterl>
 					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
 					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
 					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
@@ -8496,7 +8496,7 @@
 					<DCNConditionGenericVassal>0</DCNConditionGenericVassal>
 					<DCNConditionMasterlOf>CIVILIZATION_ARAGON</DCNConditionMasterlOf>
 					<DCNConditionMasterlOf2>CIVILIZATION_PORTUGAL</DCNConditionMasterlOf2>
-					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionGenericMasterl>1</DCNConditionGenericMasterl>
 					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
 					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
 					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
@@ -8514,7 +8514,7 @@
 					<DCNConditionGenericVassal>0</DCNConditionGenericVassal>
 					<DCNConditionMasterlOf>CIVILIZATION_ARAGON</DCNConditionMasterlOf>
 					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
-					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionGenericMasterl>1</DCNConditionGenericMasterl>
 					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
 					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
 					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
@@ -8532,7 +8532,7 @@
 					<DCNConditionGenericVassal>0</DCNConditionGenericVassal>
 					<DCNConditionMasterlOf>CIVILIZATION_PORTUGAL</DCNConditionMasterlOf>
 					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
-					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionGenericMasterl>1</DCNConditionGenericMasterl>
 					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
 					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
 					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
@@ -8604,7 +8604,7 @@
 					<DCNConditionGenericVassal>0</DCNConditionGenericVassal>
 					<DCNConditionMasterlOf>CIVILIZATION_ARAGON</DCNConditionMasterlOf>
 					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
-					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionGenericMasterl>1</DCNConditionGenericMasterl>
 					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
 					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
 					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
@@ -12353,7 +12353,7 @@
 					<DCNConditionGenericVassal>0</DCNConditionGenericVassal>
 					<DCNConditionMasterlOf>CIVILIZATION_ARAGON</DCNConditionMasterlOf>
 					<DCNConditionMasterlOf2>CIVILIZATION_SPAIN</DCNConditionMasterlOf2>
-					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionGenericMasterl>1</DCNConditionGenericMasterl>
 					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
 					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
 					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
@@ -12371,7 +12371,7 @@
 					<DCNConditionGenericVassal>0</DCNConditionGenericVassal>
 					<DCNConditionMasterlOf>CIVILIZATION_SPAIN</DCNConditionMasterlOf>
 					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
-					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionGenericMasterl>1</DCNConditionGenericMasterl>
 					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
 					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
 					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
@@ -12389,7 +12389,7 @@
 					<DCNConditionGenericVassal>0</DCNConditionGenericVassal>
 					<DCNConditionMasterlOf>CIVILIZATION_ARAGON</DCNConditionMasterlOf>
 					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
-					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionGenericMasterl>1</DCNConditionGenericMasterl>
 					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
 					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
 					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
@@ -12461,7 +12461,7 @@
 					<DCNConditionGenericVassal>0</DCNConditionGenericVassal>
 					<DCNConditionMasterlOf>CIVILIZATION_SPAIN</DCNConditionMasterlOf>
 					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
-					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionGenericMasterl>1</DCNConditionGenericMasterl>
 					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
 					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
 					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
@@ -13586,7 +13586,7 @@
 					<DCNConditionGenericVassal>0</DCNConditionGenericVassal>
 					<DCNConditionMasterlOf>CIVILIZATION_SPAIN</DCNConditionMasterlOf>
 					<DCNConditionMasterlOf2>CIVILIZATION_PORTUGAL</DCNConditionMasterlOf2>
-					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionGenericMasterl>1</DCNConditionGenericMasterl>
 					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
 					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
 					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
@@ -13604,7 +13604,7 @@
 					<DCNConditionGenericVassal>0</DCNConditionGenericVassal>
 					<DCNConditionMasterlOf>CIVILIZATION_SPAIN</DCNConditionMasterlOf>
 					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
-					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionGenericMasterl>1</DCNConditionGenericMasterl>
 					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
 					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
 					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
@@ -13622,7 +13622,7 @@
 					<DCNConditionGenericVassal>0</DCNConditionGenericVassal>
 					<DCNConditionMasterlOf>CIVILIZATION_PORTUGAL</DCNConditionMasterlOf>
 					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
-					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionGenericMasterl>1</DCNConditionGenericMasterl>
 					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
 					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
 					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
@@ -13694,7 +13694,7 @@
 					<DCNConditionGenericVassal>0</DCNConditionGenericVassal>
 					<DCNConditionMasterlOf>CIVILIZATION_SPAIN</DCNConditionMasterlOf>
 					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
-					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionGenericMasterl>1</DCNConditionGenericMasterl>
 					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
 					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
 					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>

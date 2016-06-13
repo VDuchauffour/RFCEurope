@@ -535,8 +535,9 @@ Or you get a minor bonus to your stability in case you successfully complete one
 [BOLD]Expansion[\BOLD]
 [TAB]Building a castle: +1
 [TAB]Founding a city
-[TAB][TAB]in a core or historic province: +1
-[TAB][TAB]in a border or foreign province: -2 (0 for Portugal)
+[TAB][TAB]in a core province: +1
+[TAB][TAB]in a contested province: -1
+[TAB][TAB]in a foreign province: -2
 [TAB][TAB]while the number of your cities is less than 5: +1
 [TAB]Conquering a city in a core or historic province: +1
 [TAB]Conquering a city while running Militarism: +1
@@ -595,7 +596,9 @@ Or you get a minor bonus to your stability in case you successfully complete one
 [TAB][TAB]has some unhappiness because of no military presence: -1
 [TAB][TAB]has some unhappiness because of religious civics: -1 (0 for Poland)
 [TAB][TAB]has less than 40% own culture: -1 (0 for Hungary)
+[TAB][TAB]has less than 40% own culture with Subjugation: 0
 [TAB][TAB]has less than 20% own culture: -2 (0 for Hungary)
+[TAB][TAB]has less than 20% own culture with Subjugation: -1 (0 for Hungary)
 [TAB]Stability bonus for Orthodox faith points: +1 for 10 faith
 [TAB]While in a golden age: +8
 
@@ -637,7 +640,7 @@ Or you get a minor bonus to your stability in case you successfully complete one
 [TAB][TAB]Common Law: -3
 [TAB]Religious Law with
 [TAB][TAB]Paganism: -5
-[TAB][TAB]Theocracy: +4
+[TAB][TAB]Theocracy: +5
 [TAB][TAB]Religious Tolerance: -3
 [TAB]Common Law with
 [TAB][TAB]Free Labor: +3

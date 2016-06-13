@@ -2380,9 +2380,9 @@ class CvInfoScreen:
 					builtcount += 1
 					#screen.moveToFront(self.mark1)
 				#self.aaColoniesUnbuilt.append([iProjectLoop,-1,"TXT_KEY_UNKNOWN"]) #This should be something else probably
-			if i == 10:
+			if i == 12:
 				possible = 3
-			if i == 11:
+			if i == 13:
 				possible = 3
 			for n in range(builtcount,possible):
 				self.mark1 = self.getNextWidgetName()

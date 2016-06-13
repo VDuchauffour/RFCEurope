@@ -590,7 +590,7 @@ class RFCEBalance:
 		gc.setUP( iSpain, iUP_PerCityCommerce, 2 )
 
 		gc.setUP( iNorway, iUP_CanEnterTerrain, xml.iTerrainOcean )
-		gc.setUP( iNorway, iUP_StabilitySettler, 1 )
+		gc.setUP( iNorway, iUP_StabilitySettler, 1 ) # hidden part of the UP
 
 		gc.setUP( iVenecia, iUP_EnableCivic, xml.iCivicMerchantRepublic )
 		#gc.setUP( iVenecia, iUP_ForeignSea, 1 )
@@ -611,13 +611,13 @@ class RFCEBalance:
 		gc.setSupportModifiersHu(iMoscow, 10, 100, 25, 12, 100 )
 		gc.setUP( iMoscow, iUP_EndlessLand, 50 )
 
-		gc.setUP( iGenoa, iUP_Mercenaries, 1 ) # this actually has no effect, it is implemented in Mercenaries.py entirely
+		gc.setUP( iGenoa, iUP_Mercenaries, 1 ) # Absinthe: this actually has no effect, it is implemented in Mercenaries.py entirely
 
 		gc.setUP( iEngland, iUP_ImprovementBonus, 1 * 100000 + xml.iImprovementWorkshop * 1000 + 10 + 1 )
 
 		# Speed up East/West India Trading Companies and all Colonies
 		gc.setUP( iPortugal, iUP_Discovery, (xml.iNumNotColonies-2) * 1000000 + (xml.iNumTotalColonies-1) * 1000 + 40 );
-		gc.setUP( iPortugal, iUP_StabilitySettler, 1 )
+		gc.setUP( iPortugal, iUP_StabilitySettler, 1 ) # hidden part of the UP
 
 		for i in range( iNumTotalPlayers ):
 			if ( not i == iAustria ):
@@ -644,7 +644,7 @@ class RFCEBalance:
 
 		gc.setUP( iDutch, iUP_TradeRoutes, 2 )
 		gc.setUP( iDutch, iUP_Pious, 2 ) # 3Miro: "hidden" buff to the Dutch FP, otherwise they have too little piety (not enough cities)
-		gc.setUP( iDutch, iUP_Discovery, (xml.iNumNotColonies-2) * 1000000 + (xml.iNumTotalColonies-1) * 1000 + 30 );
+		gc.setUP( iDutch, iUP_Discovery, (xml.iNumNotColonies-2) * 1000000 + (xml.iNumTotalColonies-1) * 1000 + 30 ); # hidden part of the UP
 
 		gc.setUP( iPope, iUP_Emperor, 1 )
 

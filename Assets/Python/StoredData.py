@@ -51,14 +51,15 @@ class StoredData:
 				'lBirthTurnModifier': [0 for i in range(con.iNumPlayers)], #major players only, currently unused
 				'lDeleteMode': [-1, -1, -1], #first is a bool, the other values are capital coordinates
 				'bCorpsFounded': 0,
+				'iSeed': -1, # random delay, currently unused
 
 				# Religions
-				'iSeed': -1,
+				'lReligionFounded': [-1, -1, -1, -1, -1],
+				# Absinthe: Reformation
 				'bReformationActive': False,
 				'lReformationHitMatrix': [0 for i in range(con.iNumPlayers)], #major players only
 				'bCounterReformationActive': False,
-
-				# Absinthe: Persecution popup
+				# Absinthe: Persecution
 				'lPersecutionData': [-1, -1, -1],
 				'lPersecutionReligions': [],
 
@@ -66,11 +67,11 @@ class StoredData:
 				'lAttackingCivsArray': [0, 0, -1, -1, 0, 0, 0, -1, 0, -1, -1, -1, -1, -1, 0, 0, 0, -1, -1, 0, 0, -1, 0, 0, -1, -1, -1, 0, 0], #major players only
 				'iNextTurnAIWar': -1,
 
-				# Plague
+				# Absinthe: Plagues
 				'lPlagueCountdown': [0 for i in range(con.iNumTotalPlayersB)], #total players B (major + indy + barbarian)
 				'lGenericPlagueDates': [-1, -1, -1, -1, -1],
 				'bBadPlague':False,
-				'lReligionFounded': [-1, -1, -1, -1, -1],
+				'bFirstPlague':False,
 
 				# Crusades
 				'lCrusadeInit': [-2, -2, -2, -2, -2],
@@ -99,7 +100,7 @@ class StoredData:
 				'lNextMinorRevolt': [-1, -1, -1, -1, -1, -1, -1],
 				'lRevoltinNationRevoltIndex': [-1, -1, -1, -1, -1, -1, -1],
 
-				# 3Miro: Mercs
+				# 3Miro: Mercenaries
 				'lMercGlobalPool': [],
 				'lMercsHiredBy': [-1]*500, # must be at least as long as lMercList (currently allow for 500)
 

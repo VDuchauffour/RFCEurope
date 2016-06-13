@@ -211,7 +211,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_1</Tag>
-		<English>The vast majority of Catholic people in %s1 chose to follow Protestantism, Catholicism is no longer present in the city!</English>
+		<English>The vast majority of Catholic people in %s1 chose to follow Protestantism, Catholicism is no longer significant in the city!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -220,7 +220,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_2</Tag>
-		<English>Not that we care too much about those infidels, but the vast majority of Catholics in %s1 chose to follow Protestantism. Catholicism is no longer present in the city!</English>
+		<English>Not that we care too much about those infidels, but the vast majority of the Catholic population in %s1 is now Protestant. Catholicism is no longer significant in the city!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>
@@ -229,7 +229,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_3</Tag>
-		<English>Not that we care too much about those heretics, but the vast majority of Catholics in %s1 chose to follow Protestantism. Catholicism is no longer present in the city!</English>
+		<English>It seems that the Reformation among the schismatics has spread to %s1. Not that it matters to us, but the vast majority of the Catholic population there is now Protestant, Catholicism is no longer significant in the city!</English>
 		<French>.</French>
 		<German>.</German>
 		<Italian>.</Italian>

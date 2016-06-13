@@ -9492,10 +9492,12 @@ m_piDCNOrCicivc2(NULL),
 m_piDCNVassalOf(NULL),
 m_piDCNGenericVassal(NULL),
 m_piDCNMasterOf(NULL),
+m_piDCNMasterOf2(NULL),
 m_piDCNGenericMaster(NULL),
 m_piDCNAfterTurn(NULL),
 m_pszDCNName(NULL),
 m_pszDCNTempMasterOf(NULL),
+m_pszDCNTempMasterOf2(NULL),
 m_pszDCNTempVassalOf(NULL),
 m_iNumDCNConditions(0)
 {
@@ -9529,6 +9531,7 @@ CvCivilizationInfo::~CvCivilizationInfo()
 	SAFE_DELETE_ARRAY(m_piDCNVassalOf)
 	SAFE_DELETE_ARRAY(m_piDCNGenericVassal)
 	SAFE_DELETE_ARRAY(m_piDCNMasterOf)
+	SAFE_DELETE_ARRAY(m_piDCNMasterOf2)
 	SAFE_DELETE_ARRAY(m_piDCNGenericMaster)
 	SAFE_DELETE_ARRAY(m_piDCNAfterTurn)
 	SAFE_DELETE_ARRAY(m_piDCNConqProvinceOfTypeType)
@@ -9537,6 +9540,7 @@ CvCivilizationInfo::~CvCivilizationInfo()
 	SAFE_DELETE_ARRAY(m_piDCNCondHasRespawned)
 	SAFE_DELETE_ARRAY(m_pszDCNName)
 	SAFE_DELETE_ARRAY(m_pszDCNTempMasterOf)
+	SAFE_DELETE_ARRAY(m_pszDCNTempMasterOf2)
 	SAFE_DELETE_ARRAY(m_pszDCNTempVassalOf)
 	m_iNumDCNConditions = 0;
 }
@@ -10068,7 +10072,7 @@ bool CvCivilizationInfo::read(CvXMLLoadUtility* pXML)
 						m_piDCNReligions[j] = pXML->FindInInfoClass(szTextVal); // should return -1 if it could not find it
 						pXML->GetNextXmlVal( szTextVal); // read NotReligion
 						m_piDCNNotReligions[j] = pXML->FindInInfoClass(szTextVal); // should return -1 if it could not find it
-						pXML->GetNextXmlVal(  m_pszDCNTempVassalOf[j] ); // read the temp name of MasterOf
+						pXML->GetNextXmlVal(  m_pszDCNTempVassalOf[j] ); // read the temp name of VassalOf
 						pXML->GetNextXmlVal( &m_piDCNGenericVassal[j]); // generic vassal of anyone
 						pXML->GetNextXmlVal(  m_pszDCNTempMasterOf[j] ); // read the Master of
 						pXML->GetNextXmlVal(  m_pszDCNTempMasterOf2[j] ); // read the Master of
@@ -10321,6 +10325,7 @@ bool CvCivilizationInfo::readPass2(CvXMLLoadUtility* pXML)
 	for( int j = 0; j < m_iNumDCNConditions; j++ ){
 		m_piDCNVassalOf[j] = GC.getInfoTypeForString(m_pszDCNTempVassalOf[j]);
 		m_piDCNMasterOf[j] = GC.getInfoTypeForString(m_pszDCNTempMasterOf[j]);
+		m_piDCNMasterOf2[j] = GC.getInfoTypeForString(m_pszDCNTempMasterOf2[j]);
 	};
 
 	return true;

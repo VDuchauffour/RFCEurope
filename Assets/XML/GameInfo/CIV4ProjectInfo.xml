@@ -172,7 +172,7 @@
 			<PProjects/>
 			<PBonus>BONUS_NORTH_AMERICA_ACCESS</PBonus>
 			<bIsColony>1</bIsColony>
-			<iCannotBeBuildAfterTurn>221</iCannotBeBuildAfterTurn>
+			<iCannotBeBuildAfterTurn>160</iCannotBeBuildAfterTurn>
 			<CreateSound/>
 			<MovieDefineTag>ART_DEF_MOVIE_VINLAND</MovieDefineTag>
 		</ProjectInfo>

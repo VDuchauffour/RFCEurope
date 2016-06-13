@@ -4227,7 +4227,10 @@ bool CvPlot::isTradeNetworkConnected(const CvPlot* pPlot, TeamTypes eTeam) const
 		}
 	}
 
-	if (isCity(true, eTeam))
+	// Absinthe: bonuses on small islands without a city were not connected to the trade network
+	bool bBonusFromSmallIsland = (!isWater() && GC.getMap().getArea(getArea())->getNumTiles() < 4);
+
+	if (isCity(true, eTeam) || bBonusFromSmallIsland)
 	{
 		if (pPlot->isNetworkTerrain(eTeam))
 		{
@@ -4237,7 +4240,7 @@ bool CvPlot::isTradeNetworkConnected(const CvPlot* pPlot, TeamTypes eTeam) const
 
 	if (isNetworkTerrain(eTeam))
 	{
-		if (pPlot->isCity(true, eTeam))
+		if (pPlot->isCity(true, eTeam) || bBonusFromSmallIsland)
 		{
 			return true;
 		}

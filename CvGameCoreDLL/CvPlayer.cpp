@@ -23012,7 +23012,7 @@ bool CvPlayer::hasSpaceshipArrived() const
 
 
 
-//Rhye - start switch (dynamic civ names - not jdog's)
+// Dynamic Civ Names - 3Miro and AbsintheRed
 void CvPlayer::processCivNames()
 {
 	if (getID() >= NUM_MAJOR_PLAYERS)
@@ -23043,11 +23043,6 @@ void CvPlayer::processCivNames()
 		setCivDescription( GC.getCivilizationInfo(getCivilizationType() ).getDCNName(0) );
 		return;
 	};*/
-
-	//if ((GC.getGameINLINE().getGameTurn() == 0 && GET_PLAYER((PlayerTypes)EGYPT).isPlayable())
-	//	|| (GC.getGameINLINE().getGameTurn() == 151 && !GET_PLAYER((PlayerTypes)EGYPT).isPlayable())) //late start condition (to be changed in MP)
-	//if (GC.getGameINLINE().getGameTurn() == 0 && getID() != EGYPT) //Egyptian UP
-	//	return;
 
 	int iNumDCNNumber = GC.getCivilizationInfo(getCivilizationType() ).getDCNNumber();
 	//GC.getGameINLINE().logMsg("     Condition civ and num conds %d  %d",getID(),iNumDCNNumber );
@@ -23163,7 +23158,7 @@ void CvPlayer::processCivNames()
 				};
 			};
 			//GC.getGameINLINE().logMsg("     Condition check iI %d 1 Setting New Name",iI );
-			// -----------------  MasterOf Check: last because is most time consuming -------------------------- //
+			// -----------------  MasterOf Check: at the end because it is more time consuming -------------------------- //
 			if ( bPasses ){
 				iVal = GC.getCivilizationInfo(getCivilizationType() ).getDCNCondGenericMaster(iI);
 				if ( iVal == 1 ){ // we are checking for being master
@@ -23176,7 +23171,6 @@ void CvPlayer::processCivNames()
 								break;
 							};
 						};
-						//GC.getGameINLINE().logMsg("     Condition civ and master %d  Fail 9 (maybe)",getID() );
 						bPasses = bHasVassal;
 					}else{
 						bHasVassal = false;
@@ -23186,12 +23180,11 @@ void CvPlayer::processCivNames()
 								break;
 							};
 						};
-						//GC.getGameINLINE().logMsg("     Condition civ and master %d  Fail 10 (maybe)",getID() );
 						bPasses = bHasVassal;
 					};
 				};
 			};
-			// -----------------  MasterOf2 Check: last because is most time consuming -------------------------- //
+			// -----------------  MasterOf2 Check: at the end because it is more time consuming -------------------------- //
 			if ( bPasses ){
 				iVal = GC.getCivilizationInfo(getCivilizationType() ).getDCNCondGenericMaster(iI);
 				if ( iVal == 1 ){ // we are checking for being master
@@ -23204,7 +23197,6 @@ void CvPlayer::processCivNames()
 								break;
 							};
 						};
-						//GC.getGameINLINE().logMsg("     Condition civ and master %d  Fail 9 (maybe)",getID() );
 						bPasses = bHasVassal;
 					}else{
 						bHasVassal = false;
@@ -23214,13 +23206,12 @@ void CvPlayer::processCivNames()
 								break;
 							};
 						};
-						//GC.getGameINLINE().logMsg("     Condition civ and master %d  Fail 10 (maybe)",getID() );
 						bPasses = bHasVassal;
 					};
 				};
 			};
 
-			// -----------------  Provinces Check: last because is most time consuming -------------------------- //
+			// -----------------  Provinces Check: last because it is the most time consuming -------------------------- //
 			if ( bPasses ){
 				iVal2 = GC.getCivilizationInfo(getCivilizationType() ).getDCNCondConqProvinceOfTypeNum(iI);
 				if ( iVal2 > 0 ){
@@ -23241,6 +23232,7 @@ void CvPlayer::processCivNames()
 			};
 
 			// -----------------  Date Check: needs some turn-based check for refreshing correctly -------------------------- //
+			//						Absinthe: already added the check in a different place
 			if ( bPasses ){
 				iVal = GC.getCivilizationInfo(getCivilizationType() ).getDCNCondCondSpecificProvince(iI);
 				if ( (iVal>-1) && (iVal<=MAX_NUM_PROVINCES) ){
@@ -23250,133 +23242,14 @@ void CvPlayer::processCivNames()
 				};
 			};
 
-			//GC.getGameINLINE().logMsg("     Condition check iI 2 %d Setting New Name",iI );
-
 			if ( bPasses ){
-				//GC.getGameINLINE().logMsg("     Condition check iI 3 %d Setting New Name",iI );
 				setCivDescription( GC.getCivilizationInfo(getCivilizationType() ).getDCNName(iI) );
-				//setCivDescription( GC.getCivilizationInfo(getCivilizationType() ).getDCNName(0) );
 				return;
 			};
 		};
 	};
-
-	/*if (getID() < NUM_MAJOR_PLAYERS) {
-		int iMaster = -1;
-		int iI;
-		for (iI = 0; iI < MAX_CIV_TEAMS; iI++)
-		{
-			if (GET_TEAM((TeamTypes)iI).isAlive())
-			{
-				if (iI != getID())
-				{
-					if (GET_TEAM(getTeam()).isVassal((TeamTypes)iI))
-					{
-						iMaster = iI;
-						break;
-					}
-				}
-			}
-		}
-
-		if (iMaster != -1) {
-			switch (iMaster)
-			{
-			case BYZANTIUM:
-				setCivDescription(civDynamicNames[getID()][10]);
-				break;
-			case FRANKIA:
-				setCivDescription(civDynamicNames[getID()][11]);
-				break;
-			case ARABIA:
-				setCivDescription(civDynamicNames[getID()][12]);
-				break;
-			case CORDOBA:
-				setCivDescription(civDynamicNames[getID()][12]);
-				break;
-			case SPAIN:
-				setCivDescription(civDynamicNames[getID()][13]);
-				break;
-			case NORSE:
-				setCivDescription(civDynamicNames[getID()][14]);
-				break;
-			case SWEDEN:
-				setCivDescription(civDynamicNames[getID()][14]);
-				break;
-			case VENECIA:
-				setCivDescription(civDynamicNames[getID()][15]);
-				break;
-			case KIEV:
-				setCivDescription(civDynamicNames[getID()][16]);
-				break;
-			case MOSCOW:
-				setCivDescription(civDynamicNames[getID()][16]);
-				break;
-			case GERMANY:
-				setCivDescription(civDynamicNames[getID()][17]);
-				break;
-			case ENGLAND:
-				setCivDescription(civDynamicNames[getID()][18]);
-				break;
-			case AUSTRIA:
-				setCivDescription(civDynamicNames[getID()][19]);
-				break;
-			case TURKEY:
-				setCivDescription(civDynamicNames[getID()][20]);
-				break;
-			default:
-				setCivDescription(civDynamicNames[getID()][21]);
-				break;
-			}
-			return;
-		}
-		else { //not a vassal
-			// Sedna17: Implementing a crude initial renaming scheme based on Panopticon's list
-			if (civDynamicNamesFlag[getID()] == 1 && getStateReligion() == 1) { //Islam
-
-				if (getCivics((CivicOptionTypes)0) == 4 || getCivics((CivicOptionTypes)3) == 4) { //Republic or Merchant Republic
-					setCivDescription(civDynamicNames[getID()][9]);
-					return;
-					}
-				else if (getCivics((CivicOptionTypes)0) == 0 || getCivics((CivicOptionTypes)0) == 1 || getCivics((CivicOptionTypes)0) == 3 || getCivics((CivicOptionTypes)0) == 4) { //Despotism,Electorate,Divine/Limited Monarchy
-					setCivDescription(civDynamicNames[getID()][8]);
-					return;
-					}
-
-				}
-
-			if (getCivics((CivicOptionTypes)0) == 4 || getCivics((CivicOptionTypes)3) == 4) { //Republic or Merchant Republic
-				setCivDescription(civDynamicNames[getID()][5]);
-				return;
-				}
-			else if (getCivics((CivicOptionTypes)0) == 0 || getCivics((CivicOptionTypes)0) == 1 || getCivics((CivicOptionTypes)0) == 3 || getCivics((CivicOptionTypes)0) == 4) { //Any monarch
-				if (getCurrentEra() < civDynamicNamesEraThreshold[getID()]) {
-					if (getNumCities() <= 6) {
-						setCivDescription(civDynamicNames[getID()][1]);
-						return;
-					}
-					else {
-						setCivDescription(civDynamicNames[getID()][2]);
-						return;
-					}
-				}
-				else { //industrial and modern
-					if (getNumCities() <= 6) {
-						setCivDescription(civDynamicNames[getID()][3]);
-						return;
-					}
-					else {
-						setCivDescription(civDynamicNames[getID()][4]);
-						return;
-					}
-				}
-			}
-		}
-	}*/
 }
-//Rhye - end
 
-// 3Miro: additional utils
 // Absinthe: with the new persecution code added from SoI, these functions are currently unused
 /*CvCity* CvPlayer::choosePurgeCity(){
 	int iLoop;

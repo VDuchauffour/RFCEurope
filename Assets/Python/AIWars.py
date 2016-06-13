@@ -148,9 +148,16 @@ class AIWars:
 
 
 	def initWar(self, iCiv, iTargetCiv, iGameTurn, iMaxInterval, iMinInterval):
-		gc.getTeam(gc.getPlayer(iCiv).getTeam()).declareWar(iTargetCiv, True, -1) ##False?
-		self.setNextTurnAIWar(iGameTurn + iMinInterval + gc.getGame().getSorenRandNum(iMaxInterval-iMinInterval, 'random turn'))
-		print("Setting AIWar", iCiv, "attacking", iTargetCiv)
+		# Absinthe: don't declare if couldn't do it otherwise
+		teamAgressor = gc.getTeam( gc.getPlayer(iCiv).getTeam() )
+		if ( teamAgressor.canDeclareWar( iTargetCiv ) ):
+			gc.getTeam(gc.getPlayer(iCiv).getTeam()).declareWar(iTargetCiv, True, -1)
+			self.setNextTurnAIWar(iGameTurn + iMinInterval + gc.getGame().getSorenRandNum(iMaxInterval-iMinInterval, 'random turn'))
+			print("Setting AIWar", iCiv, "attacking", iTargetCiv)
+		# Absinthe: if not, next try will come 1/2 time later
+		else:
+			self.setNextTurnAIWar(iGameTurn + (iMinInterval + gc.getGame().getSorenRandNum(iMaxInterval-iMinInterval, 'random turn') / 2))
+			print("No AIWar this time, but the next try will come sooner")
 
 
 ##	def initArray(self):

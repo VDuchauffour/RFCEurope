@@ -154,16 +154,52 @@
 		<German>Der Nationalismus ver&#228;nderte das Prinzip des strukturellen Aufbaus einer Armee so grundlegend, dass S&#246;ldner nicht mehr in das Konzept passen.</German>
 		<Italian>Il nazionalismo ha cambiato la concezione degli eserciti: non c'&#232; pi&#249; posto per i mercenari!</Italian>
 		<Spanish>El nacionalismo ha cambiado la concepci&#243;n de los ej&#233;rcitos: &#161;los mercenarios ya no encajan en ellos!</Spanish>
-		<Portuguese>.</Portuguese>
+		<Portuguese>Nationalism has changed the conception of armies: Mercenaries no longer fit in!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_AVAILABLE_IN_PROVINCES</Tag>
-		<English>Available in the following Province(s):</English>
-		<French>Available in the following Province(s):</French>
+		<English>Available in the following province:</English>
+		<French>Available in the following province:</French>
 		<German>Verfügbar in den Provinzen:</German>
 		<Italian>Disponibili nelle seguenti Province:</Italian>
-		<Spanish>Available in the following Province(s):</Spanish>
-		<Portuguese>Available in the following Province(s):</Portuguese>
+		<Spanish>Available in the following province:</Spanish>
+		<Portuguese>Available in the following province:</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MERC_NOT_ENOUGH_MONEY</Tag>
+		<English>You don't have enough money</English>
+		<French>They won't fight for beggars</French>
+		<German>You don't have enough money</German>
+		<Italian>You don't have enough money</Italian>
+		<Spanish>You don't have enough money</Spanish>
+		<Portuguese>You don't have enough money</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MERC_LACK_CULTURE</Tag>
+		<English>You need more culture in the province</English>
+		<French>They won't follow barbarians</French>
+		<German>You need more culture in the province</German>
+		<Italian>You need more culture in the province</Italian>
+		<Spanish>You need more culture in the province</Spanish>
+		<Portuguese>You need more culture in the province</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MERC_NO_PORT</Tag>
+		<English>You need a coastal city in the province</English>
+		<French>They want a pirate h(e)aven</French>
+		<German>You need more culture in the province</German>
+		<Italian>You need more culture in the province</Italian>
+		<Spanish>You need more culture in the province</Spanish>
+		<Portuguese>You need more culture in the province</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MERC_WRONG_RELIGION</Tag>
+		<English>Only with a different state religion</English>
+		<French>They despise your infidel ways</French>
+		<German>Only with a different state religion</German>
+		<Italian>Only with a different state religion</Italian>
+		<Spanish>Only with a different state religion</Spanish>
+		<Portuguese>Only with a different state religion</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_NEW_MERC_AVAILABLE</Tag>
@@ -175,13 +211,22 @@
 		<Portuguese>New Mercenaries are available for hire in</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MERC_NEW_MERC_RELIGION</Tag>
+		<English>, but they won't follow anyone with your state religion!</English>
+		<French>, but they won't follow anyone with your state religion!</French>
+		<German>, but they won't follow anyone with your state religion!</German>
+		<Italian>, but they won't follow anyone with your state religion!</Italian>
+		<Spanish>, but they won't follow anyone with your state religion!</Spanish>
+		<Portuguese>, but they won't follow anyone with your state religion!</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MERC_NEW_MERC_CULTURE</Tag>
 		<English>, but only if you develop a base culture level in the province!</English>
-		<French></French>
-		<German></German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-		<Portuguese></Portuguese>
+		<French>, but only if you develop a base culture level in the province!</French>
+		<German>, but only if you develop a base culture level in the province!</German>
+		<Italian>, but only if you develop a base culture level in the province!</Italian>
+		<Spanish>, but only if you develop a base culture level in the province!</Spanish>
+		<Portuguese>, but only if you develop a base culture level in the province!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_NEW_MERC_MOVING</Tag>
@@ -191,6 +236,15 @@
 		<Italian>I Mercenari si sono stancati di aspettare il contratto e sono partiti per cercare fortuna altrove.</Italian>
 		<Spanish>Mercenaries got tired of waiting for a contract and have left to seek their fortune elsewhere.</Spanish>
 		<Portuguese>Mercenaries got tired of waiting for a contract and have left to seek their fortune elsewhere.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MERC_HIRED_BY_SOMEONE</Tag>
+		<English>Mercenaries in %s1 are no longer available, another civilization has hired them!</English>
+		<French>Mercenaries in %s1 are no longer available, another civilization has hired them!</French>
+		<German>Mercenaries in %s1 are no longer available, another civilization has hired them!</German>
+		<Italian>Mercenaries in %s1 are no longer available, another civilization has hired them!</Italian>
+		<Spanish>Mercenaries in %s1 are no longer available, another civilization has hired them!</Spanish>
+		<Portuguese>Mercenaries in %s1 are no longer available, another civilization has hired them!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_NEW_MERC_DESERTERS</Tag>
