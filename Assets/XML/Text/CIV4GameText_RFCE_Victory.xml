@@ -929,12 +929,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_MOR2</Tag>
-		<English>[COLOR_YELLOW]The Marinids:[COLOR_REVERT] Have 5000 culture in each of three cities in 1465AD.</English>
-		<French>[COLOR_YELLOW]The Marinids:[COLOR_REVERT] Have 5000 culture in each of three cities in 1465AD.</French>
-		<German>[COLOR_YELLOW]The Marinids:[COLOR_REVERT] Have 5000 culture in each of three cities in 1465AD.</German>
-		<Italian>[COLOR_YELLOW]The Marinids:[COLOR_REVERT] Have 5000 culture in each of three cities in 1465AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The Marinids:[COLOR_REVERT] Have 5000 culture in each of three cities in 1465AD.</Spanish>
-		<Portuguese>[COLOR_YELLOW]The Marinids:[COLOR_REVERT] Have 5000 culture in each of three cities in 1465AD.</Portuguese>
+		<English>[COLOR_YELLOW]The Marinids:[COLOR_REVERT] Have three cities with 5000 culture each in 1465AD.</English>
+		<French>[COLOR_YELLOW]The Marinids:[COLOR_REVERT] Have three cities with 5000 culture each in 1465AD.</French>
+		<German>[COLOR_YELLOW]The Marinids:[COLOR_REVERT] Have three cities with 5000 culture each in 1465AD.</German>
+		<Italian>[COLOR_YELLOW]The Marinids:[COLOR_REVERT] Have three cities with 5000 culture each in 1465AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Marinids:[COLOR_REVERT] Have three cities with 5000 culture each in 1465AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]The Marinids:[COLOR_REVERT] Have three cities with 5000 culture each in 1465AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_MOR3</Tag>
