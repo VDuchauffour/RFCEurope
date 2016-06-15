@@ -14086,6 +14086,8 @@ m_iBuildModifier(0),
 m_iDefenseModifier(0),
 m_bWater(false),
 m_bImpassable(false),
+m_bSalineLake(false), // Absinthe
+m_bFreshLake(false), // Absinthe
 m_bFound(false),
 m_bFoundCoast(false),
 m_bFoundFreshWater(false),
@@ -14146,6 +14148,18 @@ bool CvTerrainInfo::isImpassable() const
 {
 	return m_bImpassable;
 }
+
+// Absinthe: Salt and Freshwater lakes
+bool CvTerrainInfo::isSalineLake() const
+{
+	return m_bSalineLake;
+}
+
+bool CvTerrainInfo::isFreshLake() const
+{
+	return m_bFreshLake;
+}
+// Absinthe: end
 
 bool CvTerrainInfo::isFound() const
 {
@@ -14250,6 +14264,8 @@ bool CvTerrainInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetChildXmlValByName(&m_bWater, "bWater");
 	pXML->GetChildXmlValByName(&m_bImpassable, "bImpassable");
+	pXML->GetChildXmlValByName(&m_bSalineLake, "bSalineLake"); // Absinthe
+	pXML->GetChildXmlValByName(&m_bFreshLake, "bFreshLake"); // Absinthe
 	pXML->GetChildXmlValByName(&m_bFound, "bFound");
 	pXML->GetChildXmlValByName(&m_bFoundCoast, "bFoundCoast");
 	pXML->GetChildXmlValByName(&m_bFoundFreshWater, "bFoundFreshWater");
