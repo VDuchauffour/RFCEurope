@@ -115,7 +115,7 @@
 				</FeatureArtPieces>
 				<FeatureDummyNodes/>
 				<bGenerateRotations>0</bGenerateRotations>
-				<VarietyButton>Art/Interface/Buttons/TerrainFeatures/Ice.dds</VarietyButton>
+				<VarietyButton>,-,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,4,3</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
@@ -203,7 +203,7 @@
 			<LightType>LIGHT_TYPE_SUN</LightType>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
-			<Button>,-,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,3,3</Button>
+			<Button>Art/Interface/Buttons/TerrainFeatures/Denseforest.dds</Button>
 			<FeatureVariety>
 				<FeatureArtPieces>
 					<FeatureArtPiece>
@@ -336,7 +336,7 @@
 				</FeatureArtPieces>
 				<FeatureDummyNodes/>
 				<bGenerateRotations>0</bGenerateRotations>
-				<VarietyButton>Art/Interface/Buttons/TerrainFeatures/Denseforest.dds</VarietyButton>
+				<VarietyButton>Art/Interface/Buttons/TerrainFeatures/Denseforest_2.dds</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
@@ -554,7 +554,7 @@
 			<LightType>LIGHT_TYPE_SUN</LightType>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,2,1</Button>
+			<Button>Art/Interface/Buttons/TerrainFeatures/swamp.dds</Button>
 			<FeatureVariety>
 				<FeatureArtPieces>
 					<FeatureArtPiece>
@@ -564,7 +564,7 @@
 				</FeatureArtPieces>
 				<FeatureDummyNodes/>
 				<bGenerateRotations>0</bGenerateRotations>
-				<VarietyButton>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,2,1</VarietyButton>
+				<VarietyButton>Art/Interface/Buttons/TerrainFeatures/swamp.dds</VarietyButton>
 			</FeatureVariety>
 			<FeatureVariety>
 				<FeatureArtPieces>
@@ -575,7 +575,7 @@
 				</FeatureArtPieces>
 				<FeatureDummyNodes/>
 				<bGenerateRotations>0</bGenerateRotations>
-				<VarietyButton>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,2,1</VarietyButton>
+				<VarietyButton>Art/Interface/Buttons/TerrainFeatures/swamp.dds</VarietyButton>
 			</FeatureVariety>
 			<FeatureVariety>
 				<FeatureArtPieces>
@@ -586,7 +586,7 @@
 				</FeatureArtPieces>
 				<FeatureDummyNodes/>
 				<bGenerateRotations>0</bGenerateRotations>
-				<VarietyButton>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,2,1</VarietyButton>
+				<VarietyButton>Art/Interface/Buttons/TerrainFeatures/swamp.dds</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
@@ -664,6 +664,125 @@
 				<FeatureDummyNodes/>
 				<bGenerateRotations>0</bGenerateRotations>
 				<VarietyButton>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,1,1</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_ISLAND</Type>
+			<bAnimated>0</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_HALF_TILING</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>0.3</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<Button>Art/Interface/Buttons/TerrainFeatures/island.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Features/Island/island1_nw.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Island/island2_nw.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Island/island3_nw.nif</ModelFile>
+						<Connections>NW</Connections>
+					</FeatureArtPiece>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Features/Island/island0.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Island/island1_ne.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Island/island2_ne.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Island/island3_ne.nif</ModelFile>
+						<Connections>NE</Connections>
+					</FeatureArtPiece>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Features/Island/island0.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Island/island1_sw.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Island/island2_sw.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Island/island3_sw.nif</ModelFile>
+						<Connections>SW</Connections>
+					</FeatureArtPiece>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Features/Island/island0.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Island/island1_se.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Island/island2_se.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Island/island3_se.nif</ModelFile>
+						<Connections>SE</Connections>
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes/>
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Interface/Buttons/TerrainFeatures/island.dds</VarietyButton>
+			</FeatureVariety>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Features/Island_north/island1_nw.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Island_north/island2_nw.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Island_north/island3_nw.nif</ModelFile>
+						<Connections>NW</Connections>
+					</FeatureArtPiece>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Features/Island_north/island0.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Island_north/island1_ne.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Island_north/island2_ne.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Island_north/island3_ne.nif</ModelFile>
+						<Connections>NE</Connections>
+					</FeatureArtPiece>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Features/Island_north/island0.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Island_north/island1_sw.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Island_north/island2_sw.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Island_north/island3_sw.nif</ModelFile>
+						<Connections>SW</Connections>
+					</FeatureArtPiece>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Features/Island_north/island0.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Island_north/island1_se.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Island_north/island2_se.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Island_north/island3_se.nif</ModelFile>
+						<Connections>SE</Connections>
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes/>
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Interface/Buttons/TerrainFeatures/island_north.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_REEF</Type>
+			<bAnimated>1</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_HALF_TILING</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>0.4</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<Button>Art/Interface/Buttons/TerrainFeatures/reefs.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Features/Reef/stone_nw.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Reef/stone_nw2.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Reef/stone_nw3.nif</ModelFile>
+						<Connections>NW</Connections>
+					</FeatureArtPiece>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Features/Reef/stone_ne.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Reef/stone_ne2.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Reef/stone_ne3.nif</ModelFile>
+						<Connections>NE</Connections>
+					</FeatureArtPiece>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Features/Reef/stone_sw.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Reef/stone_sw2.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Reef/stone_sw3.nif</ModelFile>
+						<Connections>SW</Connections>
+					</FeatureArtPiece>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Features/Reef/stone_se.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Reef/stone_se2.nif</ModelFile>
+						<ModelFile>Art/Terrain/Features/Reef/stone_se3.nif</ModelFile>
+						<Connections>SE</Connections>
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes/>
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Interface/Buttons/TerrainFeatures/reefs.dds</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
 	</FeatureArtInfos>

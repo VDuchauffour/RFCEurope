@@ -1411,10 +1411,8 @@ bool CvPlot::isLake() const
 {
 	CvArea* pArea = area();
 
-	// Absinthe: salt lakes and smaller seas in Europe, based on Rhye's original code
-	int saltLakePlots[11][2] = {
-	{94,  5}, // Dead Sea near Jerusalem
-	{89, 19}, // Lake Tuz in Anatolia
+	// Absinthe: Smaller Seas in Europe
+	int saltLakePlots[9][2] = {
 	{88,  0}, // Red Sea, on both sides of the Sinai-peninsula
 	{88,  1},
 	{89,  0},
@@ -1426,7 +1424,7 @@ bool CvPlot::isLake() const
 	{81, 23},
 	};
 
-	for (int i = 0; i < 11; i++) {
+	for (int i = 0; i < 9; i++) {
 		if (getX() == saltLakePlots[i][0] && getY() == saltLakePlots[i][1])
 			return false;
 	}
@@ -1447,6 +1445,18 @@ bool CvPlot::isFreshWater() const
 {
 	CvPlot* pLoopPlot;
 	int iDX, iDY;
+
+	// Absinthe: Salt and Freshwater Lakes
+	if (GC.getTerrainInfo(getTerrainType()).isSalineLake())
+	{
+		return false;
+	}
+
+	if (GC.getTerrainInfo(getTerrainType()).isFreshLake())
+	{
+		return true;
+	}
+	// Absinthe: end
 
 	if (isWater())
 	{
@@ -1471,7 +1481,7 @@ bool CvPlot::isFreshWater() const
 
 			if (pLoopPlot != NULL)
 			{
-				if (pLoopPlot->isLake())
+				if (pLoopPlot->isLake() && !GC.getTerrainInfo(pLoopPlot->getTerrainType()).isSalineLake()) // Absinthe: Salt Lakes
 				{
 					return true;
 				}

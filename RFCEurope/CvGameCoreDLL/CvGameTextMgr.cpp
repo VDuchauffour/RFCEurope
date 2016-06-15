@@ -2999,13 +2999,15 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			}
 		}
 
-		if (pPlot->isFreshWater())
+		// Absinthe: Freshwater Lakes - redundant text
+		if (pPlot->isFreshWater() && !GC.getTerrainInfo(pPlot->getTerrainType()).isFreshLake())
 		{
 			szString.append(NEWLINE);
 			szString.append(gDLL->getText("TXT_KEY_PLOT_FRESH_WATER"));
 		}
 
-		if (pPlot->isLake())
+		// Absinthe: Salt and Freshwater Lakes
+		if (pPlot->isLake() && !GC.getTerrainInfo(pPlot->getTerrainType()).isSalineLake() && !GC.getTerrainInfo(pPlot->getTerrainType()).isFreshLake())
 		{
 			szString.append(NEWLINE);
 			szString.append(gDLL->getText("TXT_KEY_PLOT_FRESH_WATER_LAKE"));

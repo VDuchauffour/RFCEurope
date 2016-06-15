@@ -15,6 +15,204 @@
 		<Portuguese>Mapa Largo da Europa</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_MOORLAND</Tag>
+		<English>Moorland</English>
+		<French>Terre Maure</French>
+		<German>Moor</German>
+		<Italian>Brughiera</Italian>
+		<Spanish>Páramo</Spanish>
+		<Portuguese>Moor</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_SEMIDESERT</Tag>
+		<English>Semidesert</English>
+		<French>Semidesert</French>
+		<German>Semidesert</German>
+		<Italian>Semidesert</Italian>
+		<Spanish>Semidesert</Spanish>
+		<Portuguese>Semidesert</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_SALTLAKE</Tag>
+		<English>Salt Lake</English>
+		<French>Lac salé</French>
+		<German>Salzsee</German>
+		<Italian>Lago salato</Italian>
+		<Spanish>Lago salado</Spanish>
+		<Portuguese>Salt Lake</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_FRESHLAKE</Tag>
+		<English>Fresh Water Lake</English>
+		<French>Lac salé</French>
+		<German>Salzsee</German>
+		<Italian>Lago salato</Italian>
+		<Spanish>Lago salado</Spanish>
+		<Portuguese>Fresh Water Lake</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_WETLAND</Tag>
+		<English>Wetland</English>
+		<French>.</French>
+		<German>Feuchtgebiet</German>
+		<Italian>Zone Umide</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>Zona Úmida</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_SNOW</Tag>
+		<English>Permanent Snow</English>
+		<French>Permanent Snow</French>
+		<German>Permanent Snow</German>
+		<Italian>Permanent Snow</Italian>
+		<Spanish>Permanent Snow</Spanish>
+		<Portuguese>Permanent Snow</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_GRASS_PEDIA</Tag>
+		<English>[TAB]Grasslands are areas where the vegetation is dominated by grasses and other herbaceous plants. Grasslands occur naturally on all continents except Antarctica. In temperate latitudes native grasslands are dominated by perennial bunch grass species, whereas in warmer climates annual species form a greater component of the vegetation.</English>
+		<French>Grasslands</French>
+		<German>Grasslands</German>
+		<Italian>Grasslands</Italian>
+		<Spanish>Grasslands</Spanish>
+		<Portuguese>Grasslands</Portuguese>
+	</TEXT>
+    <TEXT>
+		<Tag>TXT_KEY_TERRAIN_PLAINS_PEDIA</Tag>
+		<English>[TAB]Plains are a big flat areas of land with little to no forestation, and often characterized by a semi-arid continental climate. Steppes and prairies are varieties of plains.</English>
+		<French>Plains</French>
+		<German>Plains</German>
+		<Italian>Plains</Italian>
+		<Spanish>Plains</Spanish>
+		<Portuguese>Plains</Portuguese>
+	</TEXT>
+    <TEXT>
+		<Tag>TXT_KEY_TERRAIN_DESERT_PEDIA</Tag>
+		<English>[TAB]A desert is a landscape or region that receives an extremely low amount of precipitation, less than enough to support growth of most plants. Deserts are often composed of sand and rocky surfaces. Sand dunes called ergs and stony surfaces called hamada compose a minority of desert surfaces. Exposures of rocky terrain are typical, and reflect minimal soil development and sparseness of vegetation. Deserts take up about 20% of the Earth's land surface.</English>
+		<French>Desert</French>
+		<German>Desert</German>
+		<Italian>Desert</Italian>
+		<Spanish>Desert</Spanish>
+		<Portuguese>Desert</Portuguese>
+	</TEXT>
+    <TEXT>
+		<Tag>TXT_KEY_TERRAIN_TUNDRA_PEDIA</Tag>
+		<English>[TAB]Tundra is a terrain where the tree growth is hindered by low temperatures, short growing seasons, and sometimes permafrost subsoil. Vegetation is sparse and composed of dwarf shrubs, sedges and grasses, mosses, and lichens. Scattered trees grow in some tundra. The boundary between tundra and forest is known as the tree line.</English>
+		<French>Tundra</French>
+		<German>Tundra</German>
+		<Italian>Tundra</Italian>
+		<Spanish>Tundra</Spanish>
+		<Portuguese>Tundra</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_PEAK_PEDIA</Tag>
+		<English>[TAB]A mountain is a large landform that stretches above the surrounding land in a limited area, usually in the form of a peak. They are usually formed by movement and intersection of tectonic plates. Tall mountains reach into the colder layers of the atmosphere where they are subject to glaciation and erosion through frost action. They have different climatic conditions at the top than at the base, meaning different life zones at different altitudes.</English>
+		<French>Mountain</French>
+		<German>Mountain</German>
+		<Italian>Mountain</Italian>
+		<Spanish>Mountain</Spanish>
+		<Portuguese>Mountain</Portuguese>
+	</TEXT>
+    <TEXT>
+		<Tag>TXT_KEY_TERRAIN_HILL_PEDIA</Tag>
+		<English>[TAB]A hill is a landform that extends above the surrounding terrain, with or without a distinct summit. Hills may form through a number of geomorphic phenomena: faulting, erosion of larger landforms such as mountains, and the deposition of sediment by glaciers. The distinction between a hill and a mountain is unclear and largely subjective, but a hill is generally somewhat lower and less steep than a mountain.</English>
+		<French>Hill</French>
+		<German>Hill</German>
+		<Italian>Hill</Italian>
+		<Spanish>Hill</Spanish>
+		<Portuguese>Hill</Portuguese>
+	</TEXT>
+    <TEXT>
+		<Tag>TXT_KEY_TERRAIN_COAST_PEDIA</Tag>
+		<English>[TAB]The coastline is where the land meets the sea or ocean. A precise line that can be called a coastline cannot be determined due to the dynamic nature of tides. The term "coastal zone" can be used instead, which is a spatial zone where interaction of the sea and land processes occurs.</English>
+		<French>Coast</French>
+		<German>Coast</German>
+		<Italian>Coast</Italian>
+		<Spanish>Coast</Spanish>
+		<Portuguese>Coast</Portuguese>
+	</TEXT>
+    <TEXT>
+		<Tag>TXT_KEY_TERRAIN_OCEAN_PEDIA</Tag>
+		<English>[TAB]An ocean is a major body of saline water, and a principal component of the hydrosphere. Approximately 71% of the Earth's surface is covered by ocean, a continuous body of water that is customarily divided into several principal oceans and smaller seas.</English>
+		<French>Ocean</French>
+		<German>Ocean</German>
+		<Italian>Ocean</Italian>
+		<Spanish>Ocean</Spanish>
+		<Portuguese>Ocean</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_JUNGLE_PEDIA</Tag>
+		<English>[TAB]A jungle is an area of land in the tropics overgrown with dense vegetation. The undergrowth in a rainforest is restricted in many areas by the poor penetration of sunlight to ground level. This makes it easy to walk through undisturbed, mature rainforest. If the leaf canopy is destroyed or thinned, the ground beneath is soon colonized by a dense, tangled growth of vines, shrubs and small trees, called a jungle. There are two types of rainforest, tropical rainforest and temperate rainforest.</English>
+		<French>Jungle</French>
+		<German>Jungle</German>
+		<Italian>Jungle</Italian>
+		<Spanish>Jungle</Spanish>
+		<Portuguese>Jungle</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_FLOOD_PLAINS_PEDIA</Tag>
+		<English>[TAB]A floodplain, or flood plain, is a flat or nearly flat land adjacent to a stream or river that stretches from the banks of its channel to the base of the enclosing valley walls and experiences flooding during periods of high discharge. It includes the floodway, which consists of the stream channel and adjacent areas that carry flood flows, and the flood fringe, which are areas covered by the flood, but which do not experience a strong current.</English>
+		<French>Flood plain</French>
+		<German>Flood plain</German>
+		<Italian>Flood plain</Italian>
+		<Spanish>Flood plain</Spanish>
+		<Portuguese>Flood plain</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_OASIS_PEDIA</Tag>
+		<English>[TAB]An oasis is an isolated area of vegetation in a desert, typically surrounding a spring or similar water source. Oases also provide habitat for animals and even humans if the area is big enough. The location of oases has been of critical importance for trade and transportation routes in desert areas. Caravans must travel via oases so that supplies of water and food can be replenished. Thus, political or military control of an oasis has in many cases meant control of trade on a particular route.</English>
+		<French>Oasis</French>
+		<German>Oasis</German>
+		<Italian>Oasis</Italian>
+		<Spanish>Oasis</Spanish>
+		<Portuguese>Oasis</Portuguese>
+	</TEXT>	
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_FALLOUT_PEDIA</Tag>
+		<English>[TAB]Fallout is the residual radioactive material propelled into the upper atmosphere following a nuclear blast or a nuclear reaction conducted in an unshielded facility, so called because it "falls out" of the sky after the explosion and shock wave have passed. It commonly refers to the radioactive dust and ash created when a nuclear weapon explodes, but this dust can also be originated in a damaged nuclear plant. This radioactive dust, consisting of material either directly vaporized by a nuclear blast or charged by exposure, is a highly dangerous kind of radioactive contamination. It can lead to the contamination of aquifers or soil and devastate the affected ecosystems years after the initial exposure.</English>
+		<French>Fallout</French>
+		<German>Fallout</German>
+		<Italian>Fallout</Italian>
+		<Spanish>Fallout</Spanish>
+		<Portuguese>Fallout</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_MARSH</Tag>
+		<English>Marsh</English>
+		<French>Marécage</French>
+		<German>Sumpf</German>
+		<Italian>Palude</Italian>
+		<Spanish>Ci&#233;naga</Spanish>
+		<Portuguese>Marisma</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_MARSH_PEDIA</Tag>
+		<English>[TAB]In low-lying terrain, where water is plentiful and the water table lies close to the surface, it is common for the land to be muddy and heavily overgrown with vegetation. This type of terrain can be known as a swamp, bog, fen, marsh, or wetlands.[PARAGRAPH:1]Human interaction with swamps is complex. Swampy ground is difficult and dangerous to move through, often riddled with quicksand and bodies of water that make land vehicles useless, movement on foot difficult, and even small boat traffic a challenge. It is usually unsafe to build on wet ground, as heavy buildings will simply sink into the mud, never to be seen again. Construction on such unstable terrain requires the use of piles sunk deep into the swamp, and even then is often uneconomical for use on a large scale. Wetlands also serve as breeding grounds for insects that can carry diseases such as malaria.[PARAGRAPH:1]For all these reasons, many civilizations have attempted to drain the wetlands around them of water, so that the land can be used for other purposes. This often causes environmental damage and can destroy the livelihood of the inhabitants.</English>
+		<French>Marécage</French>
+		<German>Sumpf</German>
+		<Italian>Palude</Italian>
+		<Spanish>Ci&#233;naga</Spanish>
+		<Portuguese>Marisma</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_ICE</Tag>
+		<English>Sea Ice</English>
+		<French>Sea Ice</French>
+		<German>Sea Ice</German>
+		<Italian>Sea Ice</Italian>
+		<Spanish>Sea Ice</Spanish>
+		<Portuguese>Sea Ice</Portuguese>
+	</TEXT>	
+    <TEXT>
+		<Tag>TXT_KEY_FEATURE_ICE_PEDIA</Tag>
+		<English>[TAB]Ice sheets are masses of glacial ice that cover land in Earth's polar regions. They currently exist in just Antarctica and Greenland and hold over 90% of all fresh water on Earth. Even larger ice sheets existed in the geological past, covering much of Europe and the Americas.</English>
+		<French>Ice</French>
+		<German>Ice</German>
+		<Italian>Ice</Italian>
+		<Spanish>Ice</Spanish>
+		<Portuguese>Ice</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_FEATURE_DENSE_FOREST</Tag>
 		<English>Dense Forest</English>
 		<French>For&#234;t Dense</French>
@@ -22,6 +220,15 @@
 		<Italian>Foresta Fitta</Italian>
 		<Spanish>Bosque</Spanish>
 		<Portuguese>Floresta Densa</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_DENSE_FOREST_PEDIA</Tag>
+		<English>[TAB]A forest, is an area with a high density of trees. There are many definitions for forest, based on the various criteria. These plant communities cover approximately 9.4% of the Earth's surface (or 30% of total land area), though they once covered much more (about 50% of total land area), in many different regions and function as habitats for organisms, hydrologic flow modulators, and soil conservers, constituting one of the most important aspects of the Earth's biosphere. Although a forest is classified primarily by trees a forest ecosystem is defined intrinsically with additional species such as fungi.</English>
+		<French>Forest</French>
+		<German>Forest</German>
+		<Italian>Forest</Italian>
+		<Spanish>Forest</Spanish>
+		<Portuguese>Forest</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_FOREST</Tag>
@@ -33,15 +240,6 @@
 		<Portuguese>Bosque</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_MOORLAND</Tag>
-		<English>Moorland</English>
-		<French>Terre Maure</French>
-		<German>Moor</German>
-		<Italian>Brughiera</Italian>
-		<Spanish>Páramo</Spanish>
-		<Portuguese>Moor</Portuguese>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_FEATURE_PALM_FOREST</Tag>
 		<English>Palm Forest</English>
 		<French>Palm Forest</French>
@@ -49,6 +247,42 @@
 		<Italian>Foresta di Palme</Italian>
 		<Spanish>Palm Forest</Spanish>
 		<Portuguese>Palmeiral</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_REEF</Tag>
+		<English>Reef</English>
+		<French>Reef</French>
+		<German>Reef</German>
+		<Italian>Reef</Italian>
+		<Spanish>Reef</Spanish>
+		<Portuguese>Reef</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_REEF_PEDIA</Tag>
+		<English>[TAB]Not all ocean waters make for smooth sailing. Wherever there is an island chain, there will be seamounts and rises that only *almost* break the surface of the water, creating patches of extremely shallow seabed studded with rocks that can tear out the bottom of even the sturdiest ships. Reefs are hazardous for navigation, especially in ships designed for deep water sailing. Travel through reefs requires a skillful steersman and good charts - and even then, the patterns of sandbanks and coral formations in shoal waters can change unpredictably.[PARAGRAPH:1]In nautical terminology, a reef is a rock, sandbar, or other feature lying beneath the surface of the water (six fathoms or less beneath low water).[PARAGRAPH:1]Many reefs result from abiotic processes-deposition of sand, wave erosion planning down rock outcrops, and other natural processes-but the best-known reefs are the coral reefs of tropical waters developed through biotic processes dominated by corals and calcareous algae. Artificial reefs such as shipwrecks are sometimes created to enhance physical complexity on generally featureless sand bottoms in order to attract a diverse assemblage of organisms, especially fish.</English>
+		<French>Reef</French>
+		<German>Reef</German>
+		<Italian>Reef</Italian>
+		<Spanish>Reef</Spanish>
+		<Portuguese>Reef</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_ISLAND</Tag>
+		<English>Islands</English>
+		<French>Islands</French>
+		<German>Islands</German>
+		<Italian>Islands</Italian>
+		<Spanish>Islands</Spanish>
+		<Portuguese>Islands</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_ISLAND_PEDIA</Tag>
+		<English>[TAB]An island is any piece of sub-continental land that is surrounded by water. Very small islands such as emergent land features on atolls can be called islets, cays or keys. A grouping of geographically or geologically related islands is called an archipelago.</English>
+		<French>Islands</French>
+		<German>Islands</German>
+		<Italian>Islands</Italian>
+		<Spanish>Islands</Spanish>
+		<Portuguese>Islands</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_APIARY</Tag>
@@ -87,6 +321,15 @@
 		<Portuguese>Estabeleça uma [LINK=IMPROVEMENT_COLONIAL_TRADE]Rota Comercial Colonial[\LINK]</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILD_WINERY</Tag>
+		<English>Build a [LINK=IMPROVEMENT_WINERY]Vineyard[\LINK]</English>
+		<French>construire une [LINK=IMPROVEMENT_WINERY]exploitation vinicole[\LINK]</French>
+		<German>[LINK=IMPROVEMENT_WINERY]Weingut[\LINK] errichten</German>
+		<Italian>Costruire un'[LINK=IMPROVEMENT_WINERY]azienda vinicola[\LINK]</Italian>
+		<Spanish>Construir una [LINK=IMPROVEMENT_WINERY]bodega[\LINK]</Spanish>
+		<Portuguese>Construir uma [LINK=IMPROVEMENT_WINERY]Vinícola[\LINK]</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_APIARY</Tag>
 		<English>Build a [LINK=IMPROVEMENT_APIARY]Apiary[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_APIARY]ruche[\LINK]</French>
@@ -94,24 +337,6 @@
 		<Italian>Costruisci un [LINK=IMPROVEMENT_APIARY]Apiario[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_APIARY]Colmenar[\LINK]</Spanish>
 		<Portuguese>Construir um [LINK=IMPROVEMENT_APIARY]Apiário[\LINK]</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_WETLAND</Tag>
-		<English>Wetland</English>
-		<French>.</French>
-		<German>Feuchtgebiet</German>
-		<Italian>Zone Umide</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>Zona Úmida</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FEATURE_MARSH</Tag>
-		<English>Marsh</English>
-		<French>Marécage</French>
-		<German>Sumpf</German>
-		<Italian>Palude</Italian>
-		<Spanish>Ci&#233;naga</Spanish>
-		<Portuguese>Marisma</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_REMOVE_DENSE_FOREST</Tag>
@@ -139,15 +364,6 @@
 		<Italian>Bonificare la [LINK=FEATURE_MARSH]Palude[\LINK]</Italian>
 		<Spanish>Vacíe [LINK=FEATURE_MARSH]Ci&#233;naga[\LINK]</Spanish>
 		<Portuguese>Drenar [LINK=FEATURE_MARSH]Marisma[\LINK]</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_WINERY</Tag>
-		<English>Build a [LINK=IMPROVEMENT_WINERY]Vineyard[\LINK]</English>
-		<French>construire une [LINK=IMPROVEMENT_WINERY]exploitation vinicole[\LINK]</French>
-		<German>[LINK=IMPROVEMENT_WINERY]Weingut[\LINK] errichten</German>
-		<Italian>Costruire un'[LINK=IMPROVEMENT_WINERY]azienda vinicola[\LINK]</Italian>
-		<Spanish>Construir una [LINK=IMPROVEMENT_WINERY]bodega[\LINK]</Spanish>
-		<Portuguese>Construir uma [LINK=IMPROVEMENT_WINERY]Vinícola[\LINK]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RESOURCE_DISCOVERED</Tag>

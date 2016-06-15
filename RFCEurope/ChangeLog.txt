@@ -69,6 +69,20 @@ Changes for RFCE 1.5:
 		- Reduced overall impact of unhappiness from religious civics on city instability
 		- Reduced foreign culture instability if you run the Subjugation Civic (-1 with less than 20%, 0 otherwise)
 
+	Terrain updates:
+		- New base terrain: Semidesert - 1 production, +1 commerce near rivers, city founding only possible near fresh water
+		- New base terrain: Salt Lake - 1 food, 3 commerce, +1 food with Harbor, +10% defence
+		- New base terrain: Fresh Water Lake - 2 food, 2 commerce, +1 food with Harbor, +10% defence
+		- New terrain feature: Islands (2 variety, green and rocky) - +1 food, +1 production, +10% defence
+		- New terrain feature: Reefs - costs 4 movement points, 25% damage if naval units end their turn on it
+		- Renamed Ice base terrain to Permafrost / Permanent Snow, Ice terrain feature to Sea Ice
+		- You can no longer found cities on coastal Desert tiles, only near fresh water (same as for Semidesert)
+		- Forts are buildable on Semidesert, Tundra, Desert and Snow tiles too
+		- Semidesert, Wetland and Tundra have +25 build time modifier, Desert and Permafrost have +50%
+		- New button for Moorland, Dense Forest, Permanent Snow, Marsh, Tundra
+		- Cottages can be built on Moorland, Semidesert and Tundra tiles too, but fresh water doesn't enable them automatically
+		- Cottages no longer need at least 1 base food on the tile, so they can be built on most Hills
+
 	General changes:
 		- Added new function which only counts resources inside cultural borders
 		- Both the Novgorod Fur UHV and the Moscow Atlantic Access UHV use this new function
@@ -92,6 +106,7 @@ Changes for RFCE 1.5:
 		- Fixed bug in the DCNames code which made it impossible for the master condition to trigger
 		- Fixed bug which enabled some specific AI wars to be declared even when there was an active peace
 		- Fixed messed up order of colony names on the Colony Screen tab under the Info Screen
+		- Fixed bug with terrain layer orders, thus corrected some blending mistakes when joining some terrain types together
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

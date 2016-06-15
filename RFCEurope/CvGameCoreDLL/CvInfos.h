@@ -3493,6 +3493,8 @@ public:
 
 	bool isWater() const;								// Exposed to Python
 	bool isImpassable() const;					// Exposed to Python
+	bool isSalineLake() const;				// Absinthe
+	bool isFreshLake() const;				// Absinthe
 	bool isFound() const;								// Exposed to Python
 	bool isFoundCoast() const;					// Exposed to Python
 	bool isFoundFreshWater() const;			// Exposed to Python
@@ -3527,6 +3529,8 @@ protected:
 
 	bool m_bWater;					
 	bool m_bImpassable;
+	bool m_bSalineLake; // Absinthe
+	bool m_bFreshLake; // Absinthe
 	bool m_bFound;
 	bool m_bFoundCoast;
 	bool m_bFoundFreshWater;
