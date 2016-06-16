@@ -10406,12 +10406,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=58
+	BonusType=BONUS_WHALE
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
 	x=26,y=59
-	BonusType=BONUS_WHALE
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -11199,9 +11199,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=58
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_MOORLAND
-	PlotType=2
+	TerrainType=TERRAIN_COAST
+	PlotType=3
 EndPlot
 BeginPlot
 	x=28,y=59
@@ -11211,6 +11210,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=60
+	BonusType=BONUS_IRON
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
 EndPlot
@@ -11617,8 +11617,7 @@ BeginPlot
 	x=29,y=59
 	RiverNSDirection=2
 	isWOfRiver
-	FeatureType=FEATURE_MARSH, FeatureVariety=2
-	TerrainType=TERRAIN_WETLAND
+	TerrainType=TERRAIN_MOORLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -12001,13 +12000,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=56
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_MOORLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=30,y=57
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_MOORLAND
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -12017,13 +12016,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=59
-	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	FeatureType=FEATURE_MARSH, FeatureVariety=0
+	TerrainType=TERRAIN_WETLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=30,y=60
-	FeatureType=FEATURE_MARSH, FeatureVariety=0
+	FeatureType=FEATURE_MARSH, FeatureVariety=2
 	TerrainType=TERRAIN_WETLAND
 	PlotType=2
 EndPlot
@@ -12031,15 +12030,15 @@ BeginPlot
 	x=30,y=61
 	RiverNSDirection=0
 	isWOfRiver
-	FeatureType=FEATURE_MARSH, FeatureVariety=2
-	TerrainType=TERRAIN_WETLAND
-	PlotType=2
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_MOORLAND
+	PlotType=1
 EndPlot
 BeginPlot
 	x=30,y=62
 	RiverNSDirection=0
 	isWOfRiver
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -12413,18 +12412,17 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=57
-	BonusType=BONUS_IRON
+	BonusType=BONUS_COPPER
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
 EndPlot
 BeginPlot
 	x=31,y=58
-	TerrainType=TERRAIN_MOORLAND
+	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=31,y=59
-	BonusType=BONUS_HONEY
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -12439,7 +12437,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_MOORLAND
 	PlotType=2
 EndPlot
 BeginPlot
@@ -12813,11 +12811,13 @@ EndPlot
 BeginPlot
 	x=32,y=57
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_MOORLAND
 	PlotType=2
 EndPlot
 BeginPlot
 	x=32,y=58
+	isNOfRiver
+	RiverWEDirection=1
 	ImprovementType=IMPROVEMENT_VILLAGE
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -12829,18 +12829,18 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=60
-	TerrainType=TERRAIN_MOORLAND
+	BonusType=BONUS_HONEY
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=32,y=61
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
-	PlotType=1
+	TerrainType=TERRAIN_FRESHLAKE
+	PlotType=3
 EndPlot
 BeginPlot
 	x=32,y=62
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_MOORLAND
 	PlotType=1
 EndPlot
 BeginPlot
@@ -19592,7 +19592,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=39
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -21239,7 +21239,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=40
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -21624,7 +21624,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=37
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -22219,7 +22219,7 @@ EndPlot
 BeginPlot
 	x=55,y=59
 	BonusType=BONUS_CLAM
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -24375,7 +24375,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=64
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -24818,12 +24818,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=64
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
 	x=61,y=65
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -25236,12 +25236,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62,y=62
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
 	x=62,y=63
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -25293,13 +25293,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62,y=71
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
 	x=62,y=72
-	RiverNSDirection=2
-	isWOfRiver
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_TUNDRA
 	PlotType=1
@@ -25925,7 +25923,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64,y=36
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -26096,7 +26094,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64,y=64
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -26352,7 +26350,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=65,y=36
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -26516,7 +26514,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=65,y=64
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -26715,7 +26713,7 @@ BeginPlot
 	x=66,y=27
 	isNOfRiver
 	RiverWEDirection=3
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -27978,7 +27976,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=23
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -29037,7 +29035,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=52
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -29127,7 +29125,7 @@ BeginPlot
 	x=71,y=68
 	isNOfRiver
 	RiverWEDirection=3
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -29618,7 +29616,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=69
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -30518,12 +30516,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=68
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
 	x=74,y=69
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -30959,7 +30957,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=68
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -30976,7 +30974,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=71
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -31446,7 +31444,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=72
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -31800,17 +31798,17 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=60
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
 	x=77,y=61
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
 	x=77,y=62
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -31845,7 +31843,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=68
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -31856,7 +31854,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=70
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -32301,7 +32299,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=69
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -32313,12 +32311,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=71
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
 	x=78,y=72
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -32757,7 +32755,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=68
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -33158,7 +33156,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=80,y=61
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -33191,22 +33189,22 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=80,y=66
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
 	x=80,y=67
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
 	x=80,y=68
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
 	x=80,y=69
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -33703,17 +33701,17 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=81,y=66
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
 	x=81,y=67
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
 	x=81,y=68
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -34656,7 +34654,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=83,y=72
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -34676,7 +34674,7 @@ BeginPlot
 	BonusType=BONUS_COTTON
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
 	RouteType=ROUTE_ROAD
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
 BeginPlot
@@ -34686,7 +34684,7 @@ BeginPlot
 	RiverWEDirection=3
 	isWOfRiver
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
 BeginPlot
@@ -35042,7 +35040,7 @@ BeginPlot
 	x=84,y=60
 	isNOfRiver
 	RiverWEDirection=1
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -35096,12 +35094,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=84,y=69
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
 	x=84,y=70
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -35121,7 +35119,7 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
-	TerrainType=TERRAIN_DESERT
+	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
 BeginPlot
@@ -35129,7 +35127,7 @@ BeginPlot
 	RiverNSDirection=0
 	isWOfRiver
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
-	TerrainType=TERRAIN_DESERT
+	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
 BeginPlot
@@ -35139,7 +35137,7 @@ BeginPlot
 	RiverWEDirection=3
 	isWOfRiver
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
 BeginPlot
@@ -35227,7 +35225,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=18
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -35540,12 +35538,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=68
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
 	x=85,y=69
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -35572,14 +35570,14 @@ BeginPlot
 	ImprovementType=IMPROVEMENT_VILLAGE
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
 	RouteType=ROUTE_ROAD
-	TerrainType=TERRAIN_DESERT
+	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
 BeginPlot
 	x=86,y=1
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
 	RouteType=ROUTE_ROAD
-	TerrainType=TERRAIN_DESERT
+	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
 BeginPlot
@@ -35590,7 +35588,7 @@ BeginPlot
 	isWOfRiver
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
 	RouteType=ROUTE_ROAD
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
 BeginPlot
@@ -35673,7 +35671,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=86,y=17
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -36041,7 +36039,7 @@ EndPlot
 BeginPlot
 	x=87,y=2
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
 BeginPlot
@@ -36049,14 +36047,14 @@ BeginPlot
 	BonusType=BONUS_INCENSE
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
 	RouteType=ROUTE_ROAD
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
 BeginPlot
 	x=87,y=4
 	isNOfRiver
 	RiverWEDirection=1
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
 BeginPlot
@@ -36066,6 +36064,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=87,y=6
+	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -36444,7 +36443,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=87,y=66
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -36501,7 +36500,7 @@ EndPlot
 BeginPlot
 	x=88,y=3
 	RouteType=ROUTE_ROAD
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=1
 EndPlot
 BeginPlot
@@ -36511,7 +36510,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=5
-	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -36924,7 +36922,7 @@ BeginPlot
 	x=89,y=3
 	BonusType=BONUS_SALT
 	RouteType=ROUTE_ROAD
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=1
 EndPlot
 BeginPlot
@@ -37012,7 +37010,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=89,y=19
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_SALTLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -37370,7 +37368,7 @@ EndPlot
 BeginPlot
 	x=90,y=3
 	RouteType=ROUTE_ROAD
-	TerrainType=TERRAIN_DESERT
+	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=1
 EndPlot
 BeginPlot
@@ -37786,7 +37784,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=91,y=3
-	TerrainType=TERRAIN_DESERT
+	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=1
 EndPlot
 BeginPlot
@@ -38242,7 +38240,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=92,y=2
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=1
 EndPlot
 BeginPlot
@@ -39199,7 +39197,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=5
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_SALTLAKE
 	PlotType=3
 EndPlot
 BeginPlot
@@ -40106,7 +40104,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=95,y=72
-	TerrainType=TERRAIN_COAST
+	TerrainType=TERRAIN_FRESHLAKE
 	PlotType=3
 EndPlot
 BeginPlot
