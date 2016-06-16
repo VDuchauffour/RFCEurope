@@ -26,7 +26,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BULGARIAN_STAN</Tag>
-		<English>Bulgarian Stan</English>
+		<English>Stan</English>
 		<French>Stan Bulgare</French>
 		<German>Bulgarisches Stan</German>
 		<Italian>Stan Bulgaro</Italian>
@@ -35,7 +35,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BULGARIAN_STAN_PEDIA</Tag>
-		<English>[TAB]The Byzantine historian Pseudo-Simeon stated that Krum sent a 30,000 strong cavalry, "the whole armoured with iron", which devastated Thrace. According to inscriptions found in the region of Pliska, Preslav, Madara and Shabla in north-eastern Bulgaria, armaments for 1,713 heavy riders were available. Assuming that the surviving inscriptions are around 1/10 of the total number, that makes 17,130 men only in the so called "inner region" of Bulgaria. After comparison with the data of Pseudo-Simeon, it can be assumed that the heavy cavalry component of the Bulgarian army numbered between 17-20,000 and 30,000 men, depending on the level of mobilization. During the end of the 9th and the beginning of the 10th centuries, Emperor Simeon the Great was able to lead in battle more than 60,000 soldiers.</English>
+		<English>[TAB]Stan means Camp in Bulgarian. The building is a reference to the early Bulgarians' highly developed horsemanship and their traditions associated with it, especially in warfare. The usage of mounted warriors in the Bulgarian armies was remarkable.[PARAGRAPH:2]The Byzantine historian Pseudo-Simeon stated that Krum sent a 30,000 strong cavalry, "the whole armoured with iron", which devastated Thrace. According to inscriptions found in the region of Pliska, Preslav, Madara and Shabla in north-eastern Bulgaria, armaments for 1,713 heavy riders were available. Assuming that the surviving inscriptions are around 1/10 of the total number, that makes 17,130 men only in the so called "inner region" of Bulgaria. After comparison with the data of Pseudo-Simeon, it can be assumed that the heavy cavalry component of the Bulgarian army numbered between 17-20,000 and 30,000 men, depending on the level of mobilization. During the end of the 9th and the beginning of the 10th centuries, Emperor Simeon the Great was able to lead in battle more than 60,000 soldiers.</English>
 		<French>.</French>
 		<German>[TAB]Das Suffix -stan bedeutet im Persischen "Ort des" oder "Heimat von" und geht auf einen indoiranischen (Indoarisch) Grundausdruck für "Platz" oder "wo man steht" zurück. Diese Form beruht auf einer indogermanischen Wurzel *sta- "stehen," die auch Wörtern wie englisch stand, lateinisch stare und altgriechisch histamai zugrunde liegt, alle mit der Bedeutung "stehen", ebenso zahlreichen anderen Wörtern wie z. B. in slawischen Sprachen dem russischen Wort ???? (stan) für "Siedlung" oder "Lager" oder bosnisch/kroatisch/serbisch stan für "Wohnung". Auch in germanischen Wörtern wie Stand (Ort, Platz) oder Stadt ist die Wurzel erhalten.</German>
 		<Italian>.</Italian>
@@ -314,16 +314,16 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARAGON_SEAPORT</Tag>
-		<English>Seaport</English>
-		<French>Seaport</French>
-		<German>Seaport</German>
-		<Italian>Seaport</Italian>
-		<Spanish>Seaport</Spanish>
-		<Portuguese>Seaport</Portuguese>
+		<English>Consulate of the Sea</English>
+		<French>Consulate of the Sea</French>
+		<German>Consulate of the Sea</German>
+		<Italian>Consulate of the Sea</Italian>
+		<Spanish>Consulate of the Sea</Spanish>
+		<Portuguese>Consulate of the Sea</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARAGON_SEAPORT_PEDIA</Tag>
-		<English>[TAB]A Seaport is a port or harbour either accessible to or on a seacoast able to provide accommodations for seagoing vessels. It's further categorized as a "cruise port" or a "cargo port", depending on whenever their purpose is either passengers' boarding or merchandise's handling.[PARAGRAPH:2]The power of the Crown of Aragon is greatly merited from it's Thassalocratic nature, which was in turn based on the highly developed Seaports in most of their cities.</English>
+		<English>[TAB]The Consulate of the Sea was a quasi-judicial body set up in the Crown of Aragon, later to spread throughout the Mediterranean basin, to administer maritime and commercial law. The term may also refer to a celebrated collection of maritime customs and ordinances in Catalan, also known in English as The Customs of the Sea, compiled over the 14th and 15th centuries and published at Barcelona in or before 1494.[PARAGRAPH:2]As the territories of the Crown of Aragon expanded, it was customary to establish new Consulates of the Sea in the major ports. One of the earliest was in Valencia (1283), where the charter of Peter III of Aragon makes it clear that disputes are to be settled "according to maritime customs, as these are accepted in Barcelona."[PARAGRAPH:2]The power of the Crown of Aragon is greatly merited from it's Thassalocratic nature, which was in turn based on the highly developed ports and the associated institutions in most of their cities.</English>
 		<French>.</French>
 		<German></German>
 		<Italian>.</Italian>
@@ -332,16 +332,16 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRUSSIA_PUBLIC_SCHOOL</Tag>
-		<English>Public School</English>
-		<French>Public School</French>
-		<German>Public School</German>
-		<Italian>Public School</Italian>
-		<Spanish>Public School</Spanish>
-		<Portuguese>Public School</Portuguese>
+		<English>Volksschule</English>
+		<French>Volksschule</French>
+		<German>Volksschule</German>
+		<Italian>Volksschule</Italian>
+		<Spanish>Volksschule</Spanish>
+		<Portuguese>Volksschule</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRUSSIA_PUBLIC_SCHOOL_PEDIA</Tag>
-		<English>[TAB]State schools, also known as public schools outside of England and Wales, generally refer to primary or secondary schools mandated for or offered to all children without charge, funded in whole or in part by taxation. The term may also refer to public institutions of post-secondary education.[PARAGRAPH:2]In 1717 King Frederick William I of Prussia decreed the compulsory education of children from the age of five to twelve. They had to be able to read and write and were obliged to memorise the Protestant catechism. In 1763 King Frederick the Great enacted a first Prussian general school law, elaborated by the theologian Johann Julius Hecker. This law saw the establishment of extensive public school networks across Prussia, and later the wider German states.</English>
+		<English>[TAB]In 1717 King Frederick William I of Prussia decreed the compulsory education of children from the age of five to twelve. They had to be able to read and write and were obliged to memorise the Protestant catechism. In 1763 King Frederick the Great enacted a first Prussian general school law, elaborated by the theologian Johann Julius Hecker. This law saw the establishment of extensive public school networks across Prussia, and later the wider German states.[PARAGRAPH:2]State schools, also known as public schools outside of England and Wales, generally refer to primary or secondary schools mandated for or offered to all children without charge, funded in whole or in part by taxation. The term may also refer to public institutions of post-secondary education.</English>
 		<French>.</French>
 		<German></German>
 		<Italian>.</Italian>
@@ -377,7 +377,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NOVGOROD_KONETS_PEDIA</Tag>
-		<English>[TAB]Konets</English>
+		<English>[TAB]Kontsy literally means "ends", with Konets being it's singular form. Originally the Kontsy were the five boroughs into which medieval Novgorod the Great was divided. They were based on the three original settlements that combined to form the city toward the end of the tenth century, and two later additions. Many of these boroughs were highly specialized, even called like "Potters' End" or "Carpenters' End".[PARAGRAPH:2]Ingame the Konets building represents a specialized Guild, which dominates production and trade in the entire city.</English>
 		<French>.</French>
 		<German></German>
 		<Italian>.</Italian>

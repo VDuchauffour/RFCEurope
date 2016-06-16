@@ -73,18 +73,14 @@
 [PARAGRAPH:2]Tra le altre aggiunte ci sono le epidemie di peste, le ambasciate, i congressi mondiali nei quali scambiare le citt&#224;, la diffusione dinamica delle risorse, e una nuova grafica per bandiere e terreno.
 [PARAGRAPH:2]Il file readme contiene ulteriori informazioni. Per ogni altro dubbio potete visitare il sito ufficiale (http://rhye.civfanatics.net), il forum degli sviluppatori (http://forums.civfanatics.com/forumdisplay.php?f=204) o la voce wiki (http://wikirhye.wikidot.com/), che contiene utili consigli strategici.
 		</Italian>
-		<Spanish>[H1]Bienvenido a "Rhye's and Fall of Civilization"[\H1]
-[PARAGRAPH:0]v1.181
-[PARAGRAPH:2]"Rhye's and Fall of Civilization" es un mod basado en un mapa del mundo que intenta hacer que la partida para un jugador sea una simulaci&#243;n realista de la historia de la Tierra. Es la secuela de "Rhye's of Civilization", uno de los mods m&#225;s populares de Civilization III. 
-[PARAGRAPH:2]El mod gira en torno al auge y ca&#237;da hist&#243;ricos de las civilizaciones: no empezar&#225;n todas al mismo tiempo, sino en las fechas precisas. El jugador puede optar por un inicio tard&#237;o (si se espera a que el programa juegue por s&#237; mismo) o tomar el control de una de las civilizaciones y cambiar posteriormente a otra. Las civilizaciones pueden caer por muchos factores, incluyendo las guerras civiles causadas por la inestabilidad interna y los ataques b&#225;rbaros programados en el script.
-[PARAGRAPH:2]Cada civilizaci&#243;n se diferencia acusadamente de las dem&#225;s gracias a los PU (poderes &#250;nicos), las condiciones UVH (condiciones &#250;nicas para la victoria hist&#243;rica) y una IA propia que ubicar&#225; las ciudades en su emplazamiento hist&#243;rico y les dar&#225; su nombre real.
-[PARAGRAPH:2]Otros a&#241;adidos incluyen apariciones de plagas, embajadas, congresos mundiales donde se intercambian ciudades, una propagaci&#243;n din&#225;mica de los recursos y nuevos gr&#225;ficos para las marcas y terrenos.
-[PARAGRAPH:2]En el documento "Readme (L&#233;ame)" se proporciona informaci&#243;n m&#225;s detallada. Para cualquier otra cuesti&#243;n, visita la p&#225;gina oficial (http://rhye.civfanatics.net), el foro de desarrollo (http://forums.civfanatics.com/forumdisplay.php?f=204) o la wikigu&#237;a (http://wikirhye.wikidot.com/), que contiene consejos &#250;tiles sobre la estrategia.
+		<Spanish>[H1]Bienvenido a "Rhye's and Fall of Civilization: Europe"[\H1][PARAGRAPH:2]RFC Europe es un mod derivado de "Rhye's and Fall of Civilization". Es de naturaleza euroc&#233;ntrica y cubre los periodos desde la edad media hasta el renacimiento, comprendiendo los a&#241;os entre el 500DC y el 1800DC.
+[PARAGRAPH:2]Para cualquier otra pregunta, puedes visitar nuestro foro de desarrollo en CivFanatics: (http://forums.civfanatics.com/forumdisplay.php?f=386)
+[PARAGRAPH:2]Todo en el mod est&#225; en pleno proceso y abierto a debate, por lo que no dudes en darnos tus comentarios o sugerencias.
 		</Spanish>
 		<Portuguese>[H1]Bem-Vindo ao Rhye's and Fall of Civilization[\H1]
 [PARAGRAPH:0]v Teste
-[PARAGRAPH:2]RFC Europa é um mod derivado do Rhye's and Fall of Civilization. Ele é Eurocêntrico, percorre o período medieval e a renascença na Europa de 500DC até 1800DC.
-[PARAGRAPH:2]Quaisquer outras dúvidas você pode visitar o sítio oficial (http://rhye.civfanatics.net), o fórum de desenvolvimento (http://forums.civfanatics.com/showthread.php?t=250322) ou a wiki (http://wikirhye.wikidot.com/rhyes-of-europe).
+[PARAGRAPH:2]RFC Europa é um mod derivado do Rhye's and Fall of Civilization. Ele é Eurocêntrico, percorre o per&#237;odo medieval e a renascença na Europa de 500DC até 1800DC.
+[PARAGRAPH:2]Quaisquer outras dúvidas você pode visitar o s&#237;tio oficial (http://rhye.civfanatics.net), o fórum de desenvolvimento (http://forums.civfanatics.com/showthread.php?t=250322) ou a wiki (http://wikirhye.wikidot.com/rhyes-of-europe).
 [PARAGRAPH:2]Tudo neste mod está em construção e aberto ao debate.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -102,7 +98,7 @@
 		<French>[H1]D&#233;buts historiques[\H1][PARAGRAPH:2]L'absence de la plupart des civilisations au d&#233;but du jeu a une explication. Le mod de Rhye a &#233;t&#233; con&#231;u avant tout pour refl&#233;ter l'histoire. Par cons&#233;quent, beaucoup de civilisations apparaissent assez tardivement dans le jeu, la derni&#232;re &#233;tant l'Am&#233;rique en 1733. Si vous voulez jouer tout de suite avec une des civilisations tardives, chargez une des sauvegardes rapides. Pour que vous ne soyez pas d&#233;favoris&#233; par rapport &#224; l'IA, vous commencerez avec un grand nombre de technologies et d'unit&#233;s.[PARAGRAPH:2]En plus de disposer de nombreuses unit&#233;s et technologies, vous pourrez m&#234;me prendre le contr&#244;le de certaines villes. Cependant, prenez garde si vous jouez avec des civilisations imp&#233;rialistes comme la Perse, l'Arabie ou Rome. De nouvelles civilisations se tailleront un empire dans votre territoire ! Si vous refusez de leur c&#233;der vos villes, des unit&#233;s de la zone rejoindront la r&#233;sistance pendant plusieurs tours. Si vous d&#233;cidez de r&#233;sister &#224; la vague de nationalisme, assurez-vous que votre arm&#233;e est assez grande pour faire face aux transfuges !</French>
 		<German>[H1]Historische Starts[\H1][PARAGRAPH:2]Diese Einstellung verhindert f&#252;r die meisten Zivilisationen einen sofortigen Spielstart. Das Rhye's-Mod wurde in erster Linie so entworfen, dass es die Geschichte realistisch widerspiegelt. Dementsprechend sto&#223;en die meisten Zivilisationen - wie geschichtlich belegt - erst nach vielen Jahren zum Spiel hinzu, als letzte Nation Amerika im Jahr 1733. Wenn Sie mit einer dieser erst in sp&#228;teren Jahren hinzukommenden Nationen spielen wollen, sollten Sie eine der Schnellstartoptionen laden. Und machen Sie sich keine Gedanken dar&#252;ber, dass Sie in diesem Fall vielleicht zu r&#252;ckst&#228;ndig starten: Sie werden das Spiel mit zahlreichen Einheiten und Technologien beginnen, damit Sie den KIs ebenb&#252;rtig sind.[PARAGRAPH:2]Neben diesen Einheiten und Technologien k&#246;nnten auch gleich zu Beginn einige St&#228;dte ihr Interesse bekunden, sich Ihrer Zivilisation anschlie&#223;en zu wollen. Hier ist allerdings Vorsicht geboten, wenn Sie das Spiel mit einer imperialistischen Zivilisation wie Persien, Rom oder Arabien bestreiten, denn wiederum sp&#228;ter neu entstehende Zivilisationen werden ihre Reiche auf Teilen Ihres bisherigen Territoriums aufbauen! Und sollten Sie sich weigern, Ihre St&#228;dte, die sich m&#246;glicherweise einer solchen neuen Nation anschlie&#223;en m&#246;chte, ziehen zu lassen, werden sich die umliegenden Einheiten einige Runden lang dem Widerstand anschlie&#223;en. F&#252;r den Fall, dass Sie vorhaben, sich der Welle des Nationalismus zu widersetzen, sollten Sie sicherstellen, dass Ihre Armee gro&#223; genug ist, um mit &#220;berl&#228;ufern fertig zu werden!</German>
 		<Italian>[H1]Avvii storici[\H1][PARAGRAPH:2]Ecco perch&#233; la partita non comincer&#224; immediatamente, per la maggior parte delle civilt&#224;. Questo mod, per prima cosa, &#232; stato pensato per riprodurre la storia, per cui molte civilt&#224; nasceranno molti anni dopo l'inizio del gioco, fino al 1733 dell'America. Se vuoi giocare subito una delle civilt&#224; che nascono tardi, carica uno degli avvii rapidi. Non preoccuparti di restare indietro: comincerai con abbastanza unit&#224; e tecnologie da metterti alla pari con l'IA.[PARAGRAPH:2]Oltre ad avere tutte le unit&#224; e tecnologie, potresti addirittura ottenere che qualche citt&#224; cambi schieramento. Attento per&#242;, che quando giochi con civilt&#224; imperialiste come quella persiana, romana o araba, le nuove civilt&#224; creeranno i propri imperi con le tue terre! Se ti rifiuti di lasciar andare le citt&#224;, le unit&#224; della zona si uniranno per diversi turni alla resistenza. Se decidi di resistere all'ondata di nazionalismo assicurati che il tuo esercito sia abbastanza grande da gestire i disertori!</Italian>
-		<Spanish>[H1]Comienzos hist&#243;ricos[\H1][PARAGRAPH:2]A continuaci&#243;n se explica por qu&#233; la mayor&#237;a de las civilizaciones no comenzar&#225;n inmediatamente. El mod de Rhye ha sido dise&#241;ado para reflejar la historia por encima de todo lo dem&#225;s. Por ello, la mayor&#237;a de las civilizaciones aparecen tarde en la partida, como Estados Unidos, que lo hace en 1733. Si quieres jugar con una de las civilizaciones que aparecen tarde, carga uno de los inicios r&#225;pidos. Sin embargo, no te quedar&#225;s atr&#225;s, pues comenzar&#225;s con muchas unidades y tecnolog&#237;as que equilibrar&#225;n tu posici&#243;n con la de las IA.[PARAGRAPH:2]Adem&#225;s de todas esas unidades y tecnolog&#237;as, tambi&#233;n podr&#237;an un&#237;rsete algunas ciudades. Ten cuidado al jugar con algunas civilizaciones imperialistas, como Persia, Roma y Arabia, &#161;pues surgir&#225;n nuevas civilizaciones que querr&#225;n labrar su imperio con tus territorios! Si te niegas a hacer concesiones a las ciudades, las unidades de la zona se unir&#225;n a la resistencia durante varios turnos. Si decides resistirte al empuje del nacionalismo, &#161;no olvides mantener un ej&#233;rcito lo bastante grande como para que las deserciones no sean un problema!</Spanish>
+		<Spanish>[H1]Comienzos hist&#243;ricos[\H1][PARAGRAPH:2]A continuaci&#243;n se explica por qu&#233; la mayor&#237;a de las civilizaciones no comenzar&#225;n inmediatamente. El mod de Rhye ha sido dise&#241;ado para reflejar la historia por encima de todo lo dem&#225;s. Por ello, la mayor&#237;a de las civilizaciones aparecen tarde en la partida, como Holanda, que lo hace en 1581. Si quieres jugar con una de las civilizaciones que aparecen tarde, pudes usar el scenario 1200AD. Sin embargo, no te quedar&#225;s atr&#225;s, pues comenzar&#225;s con muchas unidades y tecnolog&#237;as que equilibrar&#225;n tu posici&#243;n con la de las IA.[PARAGRAPH:2]Adem&#225;s de todas esas unidades y tecnolog&#237;as, tambi&#233;n podr&#237;an un&#237;rsete algunas ciudades. Ten cuidado al jugar con algunas civilizaciones imperialistas, como Byzancio, Francia y Alemania, &#161;pues surgir&#225;n nuevas civilizaciones que querr&#225;n labrar su imperio con tus territorios! Si te niegas a hacer concesiones a las ciudades, las unidades de la zona se unir&#225;n a la resistencia durante varios turnos. Si decides resistirte al empuje del nacionalismo, &#161;no olvides mantener un ej&#233;rcito lo bastante grande como para que las deserciones no sean un problema!</Spanish>
 		<Portuguese>[H1]Começos Históricos[\H1][PARAGRAPH:2]É por isso que seu jogo não começará imediatamente com a maioria das civilizações. Os mods "Rhye", mais que todos os outros, foi projetado para espelhar a história. Desta forma, a maioria das civilizações surgem com muitos anos de jogo já passados. Se você quer jogar com uma civilização de surgimento tardio agora, carregue um dos "quick starts". Não se preocupe em estar para trás; você começará com muitas unidades e tecnologias para colocá-lo em pé de igualdade com a IA.[PARAGRAPH:2]Junto com todas essas unidades e tecnologias, você pode até ter cidades pedindo para pertencer a você. Porém, esteja atento ao jogar com civilizações imperialistas como a Pérsia, Roma ou Arábia. Novas civilizações surgirão de dentro do seu território! Se você não permitir que elas integrem esta nova civilização, unidades na área se juntarão à resistência por vários turnos. Se você decidir resistir a onda de nacionalismo, garanta que seu exército é grande o suficiente para lidar com os desertores.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -121,7 +117,7 @@
 		<German>[H1]Stabilit&#228;t[\H1][PARAGRAPH:2]Die Stabilit&#228;t, wom&#246;glich das Kronjuwel dieses Mods, war geschichtlich gesehen ein entscheidender Faktor f&#252;r den Untergang zahlreicher dynamischer Reiche. Die Idee hinter dem Prinzip der Stabilit&#228;t ist, dass die Expansion Ihres Reiches nur bis zu einem bestimmten Punkt betrieben werden kann, bevor die Rufe nach Unabh&#228;ngigkeit dazu f&#252;hren werden, dass sich ganze Nationen erheben oder in B&#252;rgerkriegen aufreiben. Dies ist gleicherma&#223;en frustrierend wie aufregend und deshalb soll Ihnen dieser Abschnitt ein besseres Verst&#228;ndnis f&#252;r das Konzept der Stabilit&#228;t vermitteln, damit Sie nicht "ohne ersichtlichen Grund" scheitern.[PARAGRAPH:2]Der Inlandsberater (F2) wurde um 5 zus&#228;tzliche Anzeigen erg&#228;nzt. Diese Sternwertungen geben an, wie gut Sie sich in einigen Bereichen der Stabilit&#228;t bew&#228;hren. 3 Sterne repr&#228;sentieren eine Durchschnittswertung, wobei alle Zivilisationen zun&#228;chst mit 3 Sternen in jedem Anzeigefeld beginnen. Ein Durchschnitt von 3 Sternen entspricht der Wertung "Stabil", d. h., Ihre Nation ist nicht vom Zerfall bedroht, dies k&#246;nnte sich jedoch durch einige destabilisierende Entscheidungen &#228;ndern. "Instabil" deutet darauf hin, dass sich neue Zivilisationen bilden und ihre Unabh&#228;ngigkeit von Ihrem Reich erkl&#228;ren k&#246;nnten. "Zerfallend" bedeutet, dass Sie die Massen nicht l&#228;nger im Zaum halten k&#246;nnen: Nach ein paar Runden in diesem Stabilit&#228;tszustand "Zerfallend" wird ein B&#252;rgerkrieg in Ihrem Reich ausbrechen und Sie werden nur noch Ihre Hauptstadt kontrollieren. Sollte die Wertung dagegen "Solide" oder "Sehr solide" entsprechen, sollten Sie die Gunst der Stunde nutzen und Ihr Reich erweitern. Die neuen Symbole in der Miniatur-Punkteanzeige bieten Ihnen einen &#220;berblick &#252;ber Ihre eigenen Stabilit&#228;tswertungen und die anderer Zivilisationen. Der rote Ball oberhalb eines H&#252;gels steht f&#252;r die Wertung "Instabil" oder "Zerfallend", befindet er sich auf einer ebenen Fl&#228;che, bedeutet er "Stabil" oder "Wankend" und wenn er in einer Senke angezeigt wird, repr&#228;sentiert er die Stabilit&#228;tszust&#228;nde "Solide" oder "Sehr solide".[PARAGRAPH:2]Die f&#252;nf Kategorien der Sternwertung spiegeln grob wider, wie sich Ihre Zivilisation in den verschiedenen Bereichen entwickelt. Unter "St&#228;dte" sehen Sie, wie weit die Entwicklung Ihrer St&#228;dte bislang fortgeschritten ist. Der Bereich "Staatsformen" gibt Aufschluss dar&#252;ber, wie viele Runden Anarchie Sie bereits durchlebt haben (schlecht) und inwiefern sich Ihre gegenw&#228;rtigen Staatsformen erg&#228;nzen oder nicht erg&#228;nzen. Die Angaben unter "Wirtschaft" basieren vorwiegend auf Ihrem BSP, das sich aus den Faktoren Wirtschaft, Produktion, Nahrung sowie einigen anderen Werten ergibt. Im Bereich "Expansion" erfahren Sie, inwieweit Sie Ihr "nat&#252;rliches" Heimatterritorium" (schlagen Sie ggf. in einem historischen Atlas nach) &#252;berschritten haben und wie gut oder schlecht die von Ihnen gew&#228;hlte Staatsform f&#252;r eine territoriale Expansion geeignet ist. Und die Kategorie "Ausland" informiert Sie schlie&#223;lich &#252;ber das allgemeine Ansehen, das Sie im Ausland genie&#223;en, und die Stabilit&#228;t Ihrer diplomatischen Beziehungen.[PARAGRAPH:2]Im Grunde wirkt sich fast alles auf Ihre Stabilit&#228;tswerte aus, aber Sie werden sicher schnell erkennen, wie Sie sie verbessern k&#246;nnen und wann Sie einen B&#252;rgerkrieg riskieren.</German>
 		<Italian>[H1]Stabilit&#224;[\H1][PARAGRAPH:2]La stabilit&#224; &#232; forse la caratteristica pi&#249; importante del mod e ha causato la caduta di molti imperi. L'idea generale della stabilit&#224; &#232; che il tuo impero si pu&#242; espandere solo fino a un certo punto, prima che sentimenti di indipendenza portino all'insurrezione delle nazioni, o a una guerra civile. La stabilit&#224; &#232; tanto frustrante quanto eccitante e questa sezione ti aiuter&#224; a capirla meglio, impedendo che il tuo impero crolli "apparentemente senza ragione".[PARAGRAPH:2]Nella schermata del consigliere interno (F2) sono stati aggiunti 5 box. Le stelle indicano le tue prestazioni nelle diverse aree della stabilit&#224;. 3 stelle &#232; nella media e tutte le civilt&#224; partono con 3 stelle in ogni box. Una media di 3 stelle d&#224; un giudizio "stabile". Ci&#242; significa che il tuo impero non sta cadendo a pezzi, ma potrebbe in seguito a decisioni "instabili". Instabile significa che potrebbero insorgere nuove civilt&#224; e dichiarare la propria indipendenza. Collasso significa che non riesci pi&#249; a controllare le masse e che fra qualche turno scoppier&#224; una guerra civile, che ti lascer&#224; il controllo solo sulla tua capitale. Solido e Molto solido invece indicano che &#232; un buon momento per espandere l'impero. Puoi tenere d'occhio i valori di stabilit&#224; della tua e di altre civilt&#224; con le nuove icone nella schermata dei punteggi. La palla rossa in cima alla collina sta per Instabile o Collasso, in pianura sta per Stabile o Traballante e in una fossa sta per Solido o Molto solido.[PARAGRAPH:2]Le cinque aree della stabilit&#224; indicano come te la stai cavando sotto vari aspetti. Citt&#224; mostra quanto siano sviluppate le tue citt&#224;. Forme di governo dipende da quanti turni di anarchia hai avuto (male) e da quanta sinergia c'&#232; nella tua forma di governo. Economia si basa principalmente sul tuo PIL, che misura commercio, produzione, cibo e un altro paio di valori. Espansione indica quanto sei uscito dalla tua sede "naturale" (controlla un atlante storico) e con che efficacia hai usato la forma di governo espansione. Estero rappresenta i sentimenti generali esteri nei tuoi confronti e le solide relazioni diplomatiche.[PARAGRAPH:2]In verit&#224; quasi tutto influenza la stabilit&#224;. Il buon senso ti aiuter&#224; a capire cosa porti alla stabilit&#224; e cosa alla guerra civile.</Italian>
 		<Spanish>[H1]Estabilidad[\H1][PARAGRAPH:2]La joya de la corona del mod, la estabilidad, ha provocado la ca&#237;da de muchos imperios. La idea general de la estabilidad es que tu imperio solo puede expandirse por el mundo hasta que las ansias de independencia provoquen que las naciones vuelvan a surgir del olvido o se caiga en un estado de guerra civil. Esta secci&#243;n, tan frustrante como interesante, te ayudar&#225; a comprender mejor la estabilidad y evitar que tu civilizaci&#243;n se hunda "sin motivo aparente".[PARAGRAPH:2]Se han a&#241;adido 5 nuevas secciones en la pantalla del consejero de Interior (F2). Los &#237;ndices de estrellas representan lo bien que lo est&#225;s haciendo en diversas &#225;reas de la estabilidad. La media es 3, por lo que todas las civilizaciones comienzan con 3 estrellas en cada casilla. Una media de 3 supone un &#237;ndice "Estable". Eso significa que tu civilizaci&#243;n no se cae a pedazos, pero pueden producirse algunas decisiones inestables. "Inestable" supone que nuevas civilizaciones podr&#225;n levantarse en armas y declarar su independencia de la tuya. "Al borde del colapso" significa que ya no puedes contener a las masas. Tras unos pocos turnos al borde del colapso, tu imperio entrar&#225; en una guerra civil, y solo la capital quedar&#225; bajo tu control. "S&#243;lida" y "Muy s&#243;lida" constituyen los mejores momentos para expandir tu imperio. No pierdas de vista los &#237;ndices de estabilidad de las dem&#225;s civilizaciones con los iconos del mini-visor de puntuaciones. La bola roja encima de una colina significa "Inestable" o "Al borde del colapso", en un terreno llano significa "Estable" o "Incierta", y si est&#225; en el interior de un hoyo, "S&#243;lida" o "Muy s&#243;lida".[PARAGRAPH:2]Las cinco posibilidades del &#237;ndice de estrellas constituyen un reflejo aproximado de lo bien que lo est&#225;s haciendo en diversos aspectos. "Ciudades" refleja lo desarrolladas que est&#225;n tus ciudades. "Principios" depende de los turnos de anarqu&#237;a que hayas sufrido (malo) y de la sinergia existente entre tus principios. "Econom&#237;a" est&#225; basada principalmente en tu PNB, que afecta a tu comercio, producci&#243;n, comida y un par de valores m&#225;s. "Expansi&#243;n" refleja lo lejos de tu enclave natural que has llegado (consulta un atlas hist&#243;rico) y lo bien que has aprovechado el principio de expansi&#243;n elegido. "Asuntos Exteriores" es un &#237;ndice general de tus pol&#237;ticas internacionales y relaciones diplom&#225;ticas s&#243;lidas.[PARAGRAPH:2]De hecho, casi todo afecta a tu estabilidad. El sentido com&#250;n te ayudar&#225; a determinar lo que reporta estabilidad y lo que conduce hasta la guerra civil.</Spanish>
-		<Portuguese>[H1]Estabilidade[\H1][PARAGRAPH:2]Talvez a menina dos olhos do mod RFC, a Estabilidade causou muitos Impérios a cair. A idéia geral por trás da Estabilidade é que seu império só pode crescer até o ponto que gritos por independência levem nações inteiras a ressurgirem do nada, ou um colapso em Guerra Civil. Frustrante e ao mesmo tempo excitante, esta secção ajudará você a entender melhor a Estabilidade e a previnir-se de um colapso "por nenhuma razão aparente".[PARAGRAPH:2]Na tela do conselheiro do Interior (F2), há 5 novas tabelas adicionadas. Estas nivelações por estrela representam wuão bem você está se saindo em diversas áreas de estabilidade. 3 é médio, e todas as civilizações começam com 3 em cada tabela. Uma média de 3 estrelas produz um nível "estável". Isto significa que você não está desintegrando, mas pode devido a decisões instáveis. Instável significa que novas civilizações podem brotar e declarar independência de você. Colapsando significa que você não pode mais controlar as massas. Alguns turnos Colapsando levará seu império à Guerra Civil, deixando você somente com o controle da sua Capital. Sólido e Muito Sólido são bons momentos para expandir seu império. Você pode ficar de olho na sua estabilidade e na dos outros com os novos ícones na mini-lista de "scores". A bola vermelha em cima de uma colina significa Instável ou Colapsando, no chão reto significa Estável ou Turbulento e dentro de um vale significa Sólido ou Muito Sólido.[PARAGRAPH:2]Os 5 grupos de nivelações por estrela são indicativos de como está sua situação em vários aspectos. Cidades refletem quão desenvolvidas as mesmas estão. Civics refletem quantos turnos de anarquia você teve (ruim) e quanta sinergia está presente nas suas civics. Economia é baseada primariamente no seu GNP, que se baseia no seu comércio, produção e comida, além de alguns outros valores. Expansão reflete quão longe você foi do seu território "natural" (procure um atlas histórico) e quão bem você escolheu sua civic de Expansão. Estrangeiro representa as opiniões internacionais de você e suas sólidas relações diplomáticas.[PARAGRAPH:2]Na realidade quase tudo afeta sua estabilidade. Senso comum ajudará você a determinar o que leva à estabilidade e o que leva à Guerra Civil.</Portuguese>
+		<Portuguese>[H1]Estabilidade[\H1][PARAGRAPH:2]Talvez a menina dos olhos do mod RFC, a Estabilidade causou muitos Impérios a cair. A idéia geral por trás da Estabilidade é que seu império só pode crescer até o ponto que gritos por independência levem nações inteiras a ressurgirem do nada, ou um colapso em Guerra Civil. Frustrante e ao mesmo tempo excitante, esta secção ajudará você a entender melhor a Estabilidade e a previnir-se de um colapso "por nenhuma razão aparente".[PARAGRAPH:2]Na tela do conselheiro do Interior (F2), há 5 novas tabelas adicionadas. Estas nivelações por estrela representam wuão bem você está se saindo em diversas áreas de estabilidade. 3 é médio, e todas as civilizações começam com 3 em cada tabela. Uma média de 3 estrelas produz um n&#237;vel "estável". Isto significa que você não está desintegrando, mas pode devido a decisões instáveis. Instável significa que novas civilizações podem brotar e declarar independência de você. Colapsando significa que você não pode mais controlar as massas. Alguns turnos Colapsando levará seu império à Guerra Civil, deixando você somente com o controle da sua Capital. Sólido e Muito Sólido são bons momentos para expandir seu império. Você pode ficar de olho na sua estabilidade e na dos outros com os novos &#237;cones na mini-lista de "scores". A bola vermelha em cima de uma colina significa Instável ou Colapsando, no chão reto significa Estável ou Turbulento e dentro de um vale significa Sólido ou Muito Sólido.[PARAGRAPH:2]Os 5 grupos de nivelações por estrela são indicativos de como está sua situação em vários aspectos. Cidades refletem quão desenvolvidas as mesmas estão. Civics refletem quantos turnos de anarquia você teve (ruim) e quanta sinergia está presente nas suas civics. Economia é baseada primariamente no seu GNP, que se baseia no seu comércio, produção e comida, além de alguns outros valores. Expansão reflete quão longe você foi do seu território "natural" (procure um atlas histórico) e quão bem você escolheu sua civic de Expansão. Estrangeiro representa as opiniões internacionais de você e suas sólidas relações diplomáticas.[PARAGRAPH:2]Na realidade quase tudo afeta sua estabilidade. Senso comum ajudará você a determinar o que leva à estabilidade e o que leva à Guerra Civil.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_UP_UHV</Tag>
@@ -139,7 +135,7 @@
 		<German>[H1]Einzigartige M&#228;chte und Historische Siege[\H1][PARAGRAPH:2]Anders als im Hauptspiel sind den Staatsoberh&#228;uptern in Rhye's and Fall of Civilization keine Eigenschaften zugewiesen. Diese wurden stattdessen durch die so genannten Einzigartigen M&#228;chte ersetzt: Jede Zivilisation besitzt entsprechend ihrer historischen Bedeutung eine einzigartige F&#228;higkeit. Angesichts der unterschiedlichen Startjahre verf&#252;gt jede Zivilisation &#252;ber eigene Modifikatoren (wodurch sich die Eigenschaften der Staatsoberh&#228;upter er&#252;brigen). Deren Auswirkungen werden zu Beginn des Spiels im Bildschirm f&#252;r die Zivilisationsauswahl mit einer allgemeinen Parameterwertung von 1 bis 5 Sternen zusammengefasst.[PARAGRAPH:2]Jede Zivilisation kann einen "Historischen Sieg" erringen, indem sie 3 Ziele erreicht, die sich von Nation zu Nation unterscheiden und ihrem jeweiligen historischen Hintergrund oder einfach nur ihren aktuellen Bestrebungen im Spiel entsprechen. Auf diese Weise bleiben auch f&#252;r eine Zivilisation mit einer schw&#228;cheren Ausgangsposition beim Spielstart (z. B. die Azteken) die Erfolgschancen gewahrt. Sobald 2 von 3 Zielen erf&#252;llt sind, wird in der Hauptstadt des betreffenden Spielers automatisch ein "Triumphbogen" errichtet und ein Goldenes Zeitalter ausgel&#246;st.</German>
 		<Italian>[H1]Poteri unici e vittorie storiche[\H1][PARAGRAPH:2]Non ci sono caratteristiche dei leader, in Rhye's and Fall. Sono state tolte e rimpiazzate con un sistema di poteri unici: ogni civilt&#224; ha un'abilit&#224; esclusiva, secondo il proprio ruolo storico. Dati i diversi anni di avvio, ogni civilt&#224; ha i propri modificatori (che rendevano inutili le caratteristiche dei leader). Gli effetti sono riassunti nella schermata di selezione della civilt&#224;, all'inizio del gioco, coi parametri generali indicati con un numero di stelle da 1 a 5.[PARAGRAPH:2]Ogni civilt&#224; pu&#242; ottenere una "vittoria storica", raggiungendo 3 obiettivi diversi, che variano da civilt&#224; a civilt&#224; e che si rifanno al loro background storico o a quello che stavano cercando di ottenere. In questo modo anche una civilt&#224; con una situazione di partenza pi&#249; debole, come gli Aztechi, ha probabilit&#224; di successo. Quando vengono raggiunti 2 obiettivi su 3 viene costruito automaticamente un "Arco di trionfo" nella capitale del giocatore, avviando un'et&#224; dell'oro.</Italian>
 		<Spanish>[H1]Poderes &#250;nicos y victorias hist&#243;ricas[\H1][PARAGRAPH:2]No hay rasgos de los l&#237;deres en Rhye's and Fall of Civilization. &#201;stos han sido eliminados y sustituidos por un sistema de poderes &#250;nicos: todas las civilizaciones tienen una habilidad &#250;nica relacionada con su papel en la historia. Como las fechas de inicio son diferentes, cada civilizaci&#243;n tiene sus propios modificadores (por lo que los rasgos de los l&#237;deres son in&#250;tiles). Su efecto se resume en la pantalla de selecci&#243;n de la civilizaci&#243;n, al comienzo de la partida, con unos par&#225;metros generales que van de 1 a 5 estrellas.[PARAGRAPH:2]Todas las civilizaciones pueden conseguir una "victoria hist&#243;rica" si cumplen tres objetivos diferentes en funci&#243;n de la civilizaci&#243;n de la que se trate; objetivos que concuerdan con su trasfondo hist&#243;rico o que simplemente intentaban lograr. De este modo, hasta las civilizaciones con peores situaciones de inicio, como la Azteca, pueden lograr el &#233;xito. Cuando se cumplen 2 de los 3 objetivos, autom&#225;ticamente se construye un "Arco de Triunfo" en la capital del jugador y se inicia una edad de oro.</Spanish>
-		<Portuguese>[H1]Poderes Únicos e Vitórias Históricas[\H1][PARAGRAPH:2]Não há traços de líderes em Rhye's and Fall of Civilization. Eles foram removidos e substituídos por um sistema de Poderes Únicos: cada civilização tem uma abilidade única de acordo com seu papel histórico. Dadas as diferentes datas de começo, cada civilização tem seus próprios modificadores (o que levou à inutilidade dos traços de liderança). Seus efeitos estão resumidos na tela de escolha de civilização, no começo do jogo, com parâmetros gerais indicando de 1 a 5 estrelas.[PARAGRAPH:2]Cada civilização pode atingir uma "Vitória Histórica" cumprindo 3 objetivos que diferem de civilização a civilização e combinam com sua história ou somente o que elas tentaram cumprir. Desta forma mesmo uma civilização com um começo mais fraco como os Astecas tem uma chance de sucesso. Quando 2 dos 3 objetivos são cumpridos, um "Arco Triunfal" é automaticamente construído na capital do jogador, iniciando uma Era de Ouro.</Portuguese>
+		<Portuguese>[H1]Poderes Únicos e Vitórias Históricas[\H1][PARAGRAPH:2]Não há traços de l&#237;deres em Rhye's and Fall of Civilization. Eles foram removidos e substitu&#237;dos por um sistema de Poderes Únicos: cada civilização tem uma abilidade única de acordo com seu papel histórico. Dadas as diferentes datas de começo, cada civilização tem seus próprios modificadores (o que levou à inutilidade dos traços de liderança). Seus efeitos estão resumidos na tela de escolha de civilização, no começo do jogo, com parâmetros gerais indicando de 1 a 5 estrelas.[PARAGRAPH:2]Cada civilização pode atingir uma "Vitória Histórica" cumprindo 3 objetivos que diferem de civilização a civilização e combinam com sua história ou somente o que elas tentaram cumprir. Desta forma mesmo uma civilização com um começo mais fraco como os Astecas tem uma chance de sucesso. Quando 2 dos 3 objetivos são cumpridos, um "Arco Triunfal" é automaticamente constru&#237;do na capital do jogador, iniciando uma Era de Ouro.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_CONTINENTS</Tag>
@@ -148,7 +144,7 @@
 		<German>Kontinente, L&#228;nder und Einzigartige Historische Siege</German>
 		<Italian>Continenti, paesi e Vittorie Storiche uniche</Italian>
 		<Spanish>Continentes, pa&#237;ses y victorias hist&#243;ricas &#250;nicas</Spanish>
-		<Portuguese>Continentes, Países e Vitórias Históricas Únicas</Portuguese>
+		<Portuguese>Continentes, Pa&#237;ses e Vitórias Históricas Únicas</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_CONTINENTS_PEDIA</Tag>
@@ -156,8 +152,8 @@
 		<French>[H1]Continents, Countries and Unique Historical Victories[\H1][PARAGRAPH:2]Everything on the map is considered to be one continent. All the wonder effects cover the entire world.[PARAGRAPH:2]Just like RFC, in RFC:Europe all the cities automatically have geographically and historically accurate names associated with them. UHV conditions also work accordingly.</French>
 		<German>[H1]Kontinente, Länder und Einzigartige Historische Siege[\H1][PARAGRAPH:2]Alles auf der Landkarte wird als ein einziger Kontinent betrachtet. Alle Wundereffekte decken die gesamte Welt ab.[PARAGRAPH:2]So wie in RFC werden auch in RFC:Europe allen Städten automatisch geographisch und historisch zutreffende Namen zugewiesen. UHV Bedingungen arbeiten dementsprechend.</German>
 		<Italian>[H1]Continents, Countries and Unique Historical Victories[\H1][PARAGRAPH:2]Everything on the map is considered to be one continent. All the wonder effects cover the entire world.[PARAGRAPH:2]Just like RFC, in RFC:Europe all the cities automatically have geographically and historically accurate names associated with them. UHV conditions also work accordingly.</Italian>
-		<Spanish>[H1]Continents, Countries and Unique Historical Victories[\H1][PARAGRAPH:2]Everything on the map is considered to be one continent. All the wonder effects cover the entire world.[PARAGRAPH:2]Just like RFC, in RFC:Europe all the cities automatically have geographically and historically accurate names associated with them. UHV conditions also work accordingly.</Spanish>
-		<Portuguese>[H1]Continentes, Países e Vitórias Históricas Únicas[\H1][PARAGRAPH:2]Tudo no mapa é considerado um único continente. Todos os efeitos das maravilhas cobrem o mundo todo.[PARAGRAPH:2]Assim como o RFC, no RFC:Europa todas as cidades automaticamente ganham nomes historica e geograficamente associados a elas. Condições de UHV (Vitória Histórica Única) funcionam da mesma forma.</Portuguese>
+		<Spanish>[H1]Continentes, pa&#237;ses y victorias hist&#243;ricas &#250;nicas[\H1][PARAGRAPH:2]Se considera que todo el mapa es un &#250;nico continente. Loas efectos de todas las maravillas cubren todo el mundo.[PARAGRAPH:2]Tal y como en RFC, en RFC:Europe todas las ciudades tienen asociados nombres apropiados para su realidad hist&#243;rica y geogr&#225;fica. Las condiciones de victoria hist&#243;rica (UHV) tambi&#233;n funcionan de acuerdo a ello.</Spanish>
+		<Portuguese>[H1]Continentes, Pa&#237;ses e Vitórias Históricas Únicas[\H1][PARAGRAPH:2]Tudo no mapa é considerado um único continente. Todos os efeitos das maravilhas cobrem o mundo todo.[PARAGRAPH:2]Assim como o RFC, no RFC:Europa todas as cidades automaticamente ganham nomes historica e geograficamente associados a elas. Condições de UHV (Vitória Histórica Única) funcionam da mesma forma.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_GOLDEN_AGE</Tag>
@@ -165,7 +161,7 @@
 		<French>Golden Age</French>
 		<German>Goldenes Zeitalter</German>
 		<Italian>Golden Age</Italian>
-		<Spanish>Golden Age</Spanish>
+		<Spanish>Edades de oro en RFCE</Spanish>
 		<Portuguese>Eras de Ouro no RFCE</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -174,8 +170,8 @@
 		<French>[H1]Age d'or[\H1][PARAGRAPH:2]Il arrive que les civilisations connaissent des p&#233;riodes durant lesquelles leur &#233;nergie et leur cr&#233;ativit&#233; atteignent des sommets. La population devient particuli&#232;rement productive, le progr&#232;s technologique s'acc&#233;l&#232;re et la culture rayonne sur les autres civilisations. L'Italie a connu une telle p&#233;riode au cours de sa Renaissance, ou encore la Grande-Bretagne au XIXe si&#232;cle. Ces p&#233;riodes sont baptis&#233;es dans Civilization IV les "Ages d'or".[PARAGRAPH:2][H2]Entrer dans un Age d'Or[\H2][PARAGRAPH:2][BOLD]Merveilles:[\BOLD] une civilisation peut conna&#238;tre un Age d'or en construisant la merveille [LINK=TAJ_MAHAL]Taj Mahal[\LINK].[PARAGRAPH:2][BOLD]Personnages illustres:[\BOLD] une civilisation peut sacrifier un [LINK=CONCEPT_GREAT_PEOPLE]personnage illustre[\LINK], ou davantage, pour entrer dans un Age d'or. Le co&#251;t de cette m&#233;thode tend &#224; augmenter : le premier &#226;ge d'or co&#251;te un personnage illustre, le deuxi&#232;me en co&#251;te deux, le troisi&#232;me en co&#251;te trois, etc.[PARAGRAPH:2][H2]Effets de l'Age d'or[\H2][PARAGRAPH:2]L'Age d'or am&#233;liore consid&#233;rablement la production et le commerce de la civilisation, ce qui signifie qu'elle construit plus vite et que sa recherche est acc&#233;l&#233;r&#233;e (cela se traduit dans le jeu par une unit&#233; suppl&#233;mentaire de commerce par case de terrain exploit&#233;e produisant d&#233;j&#224; du commerce. Il en est de m&#234;me pour la production).[PARAGRAPH:2][H2]Dur&#233;e de l'Age d'or[\H2][PARAGRAPH:2]Un Age d'or dure huit tours &#224; vitesse normale. Si vous atteignez un nouvel Age d'or avant la fin du pr&#233;c&#233;dent, les huit tours s'additionnent &#224; ceux du pr&#233;c&#233;dent. Vous pouvez contr&#244;ler la dur&#233;e de vos Ages d'or gr&#226;ce au [LINK=BUILDING_MAUSOLEUM_OF_MAUSSOLLOS]Mausol&#233;e d'Halicarnasse[\LINK].[PARAGRAPH:2][H2]La fin d'un Age d'or[\H2][PARAGRAPH:2]Une fois l'Age d'or termin&#233;, le commerce et la production de votre civilisation reviennent &#224; leur (path&#233;tique) niveau normal.[PARAGRAPH:2]</French>
 		<German>[H1]Goldene Zeitalter[\H1][PARAGRAPH:2]In bestimmten Zeitabschnitten ist die Energie und Kreativit&#228;t einiger Zivilisationen besonders gro&#223;. Ist dies der Fall, entwickelt die Bev&#246;lkerung der entsprechenden Zivilisationen eine au&#223;ergew&#246;hnliche Produktivit&#228;t. Technische Fortschritte werden dadurch m&#252;helos realisiert und alle Welt staunt &#252;ber die Kultur der Zivilisation. Typische Beispiele f&#252;r dieses Ph&#228;nomen sind Italien (w&#228;hrend der Renaissance) und Gro&#223;britannien (im 19. Jahrhundert). In Civilization IV bezeichen wir derartige Epochen als "Goldene Zeitalter".[PARAGRAPH:2][H2]Beginn eines Goldenen Zeitalters[\H2][PARAGRAPH:2][BOLD]Wunder:[\BOLD] Eine Zivilisation kann ein Goldenes Zeitalter durch den Bau des [LINK=BUILDING_TAJ_MAHAL]Taj Mahal[\LINK] einleiten.[PARAGRAPH:2][BOLD]Gro&#223;e Pers&#246;nlichkeiten:[\BOLD] Eine Zivilisation kann verschiedene Typen [LINK=CONCEPT_GREAT_PEOPLE]Gro&#223;er Pers&#246;nlichkeiten[\LINK] kombinieren, um ein Goldenes Zeitalter einzuleiten. Die Kosten sind dabei kumulativ: Das erste Goldene Zeitalter kostet eine Gro&#223;e Pers&#246;nlichkeit, das zweite kostet zwei, das dritte kostet drei und so fort.[PARAGRAPH:2][H2]Auswirkungen eines Goldenen Zeitalters[\H2][PARAGRAPH:2]W&#228;hrend eines Goldenen Zeitalters erleben die Produktion und die Wirtschaft Ihrer Zivilisation einen bemerkenswerten Aufschwung. Dadurch k&#246;nnen Sie deutlich schneller bauen und forschen. (Gel&#228;ndefelder innerhalb des Stadtgebiets, die zum Wirtschaftsertrag beitragen, sind noch produktiver. Gel&#228;ndefelder mit aktiver Produktion produzieren eine zus&#228;tzliche Einheit.)[PARAGRAPH:2][H2]Dauer des Goldenen Zeitalters[\H2][PARAGRAPH:2]Ein Goldenes Zeitalter dauert acht Runden bei normaler Spielgeschwindigkeit. Leiten Sie in dieser Zeit ein weiteres Goldenes Zeitalter ein, werden die acht Runden an das Ende des laufenden Zeitalters geh&#228;ngt. Wenn Sie &#252;ber das [LINK=BUILDING_MAUSOLEUM_OF_MAUSSOLLOS]Mausoleum von Halikarnassos[\LINK] verf&#252;gen, k&#246;nnen Sie die Dauer Ihrer Goldenen Zeitalter beeinflussen.[H2]Ende des Zeitalters[\H2][PARAGRAPH:2]Endet ein Goldenes Zeitalter, fallen Wirtschaft und Produktion der Zivilisation auf ihre normalen Werte zur&#252;ck.[PARAGRAPH:2]</German>
 		<Italian>[H1]Ere dell'oro[\H1][PARAGRAPH:2]Nel corso di alcune epoche storiche, sembra che alcune civilt&#224; abbiano avuto un'impennata di energia e creativit&#224;. La popolazione &#232; diventata via via pi&#249; produttiva, i progressi tecnologici si sono susseguiti a ritmo serrato, e la loro cultura &#232; stata invidiata da tutto il mondo. Un esempio &#232; l'Italia del Rinascimento, o la Gran Bretagna nel XIX secolo. In Civilization IV, questi periodi sono chiamati "et&#224; dell'oro".[PARAGRAPH:2][H2]Entrare nell'Et&#224; dell'Oro[\H2][PARAGRAPH:2][BOLD]Meraviglie:[\BOLD] una civilt&#224; pu&#242; entrare nell'Et&#224; dell'oro costruendo il [LINK=BUILDING_TAJ_MAHAL]Taj Mahal[\LINK].[PARAGRAPH:2][BOLD]Grande Personaggio:[\BOLD] Una civilt&#224; pu&#242; sacrificare uno o pi&#249; [LINK=CONCEPT_GREAT_PEOPLE]Grandi Personaggi[\LINK] di differenti tipi per iniziare un'et&#224; dell'oro. Il costo di questa scelta si intensifica via via: la prima et&#224; dell'oro costa un Grande Personaggio, la seconda due, la terza tre, e cos&#236; via.[PARAGRAPH:2][H2]Effetti dell'Et&#224; dell'Oro[\H2][PARAGRAPH:2]Nel corso di una et&#224; dell'oro, la tua civilt&#224; aumenta la produzione e il commercio, il che significa tempi di costruzione e di ricerca pi&#249; rapidi. In termini di gioco, ogni casella all'interno del raggio d'azione della citt&#224; che genera commercio produce un punto commercio aggiuntivo, e ogni casella che produce genera un punto produzione in pi&#249;.[PARAGRAPH:2][H2]Durata dell'Et&#224; dell'Oro[\H2][PARAGRAPH:2]Le et&#224; dell'oro durano otto turni alla velocit&#224; normale. Se riesci ad entrare in un'altra et&#224; dell'oro mentre una &#232; ancora in svolgimento, vengono aggiunti altri otto turni a quella corrente (il che significa che due et&#224; dell'oro durano - combinate - sedici turni). Puoi aumentare la durata delle tue et&#224; dell'oro controllando il [LINK=BUILDING_MAUSOLEUM_OF_MAUSSOLLOS]Mausoleo di Mausolo[\LINK].[PARAGRAPH:2][H2]Termine dell'Et&#224; dell'Oro[\H2][PARAGRAPH:2]Una volta finita l'et&#224; dell'oro, il commercio e la produzione della tua civilt&#224; ritornano ai livelli normali.[PARAGRAPH:2]</Italian>
-		<Spanish>[H1]Edades de oro[\H1][PARAGRAPH:2]Durante ciertos periodos, algunas civilizaciones parecen rebosar de energ&#237;a y creatividad. Ese pueblo se hace cada vez m&#225;s productivo, los avances tecnol&#243;gicos son m&#225;s f&#225;ciles para esa civilizaci&#243;n y su cultura es la envidia de todo el mundo. Un par de ejemplos ser&#237;an Italia durante el Renacimiento y Gran Breta&#241;a durante el s. XIX. En Civilization IV, a tales periodos se los denomina "edades de oro".[PARAGRAPH:2][H2]Entrar en una edad de oro[\H2][PARAGRAPH:2][BOLD]Maravillas:[\BOLD] Una civilizaci&#243;n puede entrar en una edad de oro si construye la maravilla del [LINK=BUILDING_TAJ_MAHAL]Taj Mahal[\LINK].[PARAGRAPH:2][BOLD]Sacrificar a grandes personajes:[\BOLD] Una civilizaci&#243;n puede sacrificar uno o m&#225;s [LINK=CONCEPT_GREAT_PEOPLE]grandes personajes[\LINK] de distintos tipos para entrar en una edad de oro. El coste de este m&#233;todo va en aumento: la primera edad de oro cuesta un gran personaje; la segunda, dos; la tercera, tres; y as&#237; sucesivamente.[PARAGRAPH:2][H2]Efectos de las edades de oro[\H2][PARAGRAPH:2]Durante una edad de oro, la civilizaci&#243;n aumentar&#225; intensamente sus reg&#237;menes de producci&#243;n y comercio, lo que supone mayor velocidad en la construcci&#243;n y la investigaci&#243;n (en t&#233;rminos de juego: cada casilla que est&#233; dentro del radio urbano de tus ciudades y que proporcione comercio dar&#225; uno m&#225;s de comercio y cada casilla que proporcione producci&#243;n pasar&#225; a producir uno m&#225;s).[PARAGRAPH:2][H2]Duraci&#243;n de las edades de oro[\H2][PARAGRAPH:2]Las edades de oro duran ocho turnos a velocidad Normal. Si logras otra edad de oro mientras est&#233;s en medio de una, los ocho turnos adicionales enlazar&#225;n con el final de la edad de oro presente. Puedes aumentar la duraci&#243;n de tus edades de oro si controlas el [LINK=BUILDING_MAUSOLEUM_OF_MAUSSOLLOS]Mausoleo de Mausolo[\LINK].[PARAGRAPH:2][H2]El fin de la edad[\H2][PARAGRAPH:2]Cuando una edad de oro termine, el comercio y la producci&#243;n de tu civilizaci&#243;n volver&#225;n a sus niveles normales (y pat&#233;ticos).[PARAGRAPH:2]</Spanish>
-		<Portuguese>[H1]Eras de Ouro[\H1][PARAGRAPH:2]Durante alguns períodos da história, algumas civilizações parecem ter florescido com energia e criatividade. O povo da civilização tornou-se incrivelmente produtivo; avanços tecnológicos vieram facilmente; e sua cultura tornou-se a inveja do mundo. A Itália durante a Renascença é um exemplo, e a Grã-Bretanha no século XIX outro. No Civilization IV, tais períodos são chamados "Eras de Ouro".[PARAGRAPH:2][H2]Entrando em uma Era de Ouro[\H2][PARAGRAPH:2][BOLD]Maravilhas:[\BOLD] Uma civilização pode entrar em uma Era de Ouro construindo o [LINK=BUILDING_VERSAILLES]Palácio de Versalhes[\LINK].[PARAGRAPH:2][BOLD]Grandes Personalidades:[\BOLD] Uma civilização pode combinar [LINK=CONCEPT_GREAT_PEOPLE]Grandes Personalidades[\LINK] de diferentes tipos para começar uma Era de Ouro. O custo deste método aumenta: a primeira era de ouro custa 2 grandes personalidades, a segunda 3, a terceira 4, e assim por diante.[PARAGRAPH:2][H2]Efeitos de uma Era de Ouro[\H2][PARAGRAPH:2]Durante uma Era de Ouro, sua civilização aumenta substancialmente seus valores de produção e comércio, significando tempos mais breves de conclusão de construção e taxas de pesquisa mais rápidas. (Em termos de jogo, todo "tile" explorável por suas cidades que já produza comércio, produz 1 comércio extra, e todos aqueles que já dão produção dão 1 produção adicional.)[PARAGRAPH:2][H2]Duração das Eras de Ouro[\H2][PARAGRAPH:2]Eras de Ouro duram 8 turnos na Velocidade Normal. Se você atingir outra Era de Ouro durante uma, os 8 turnos adicionais são anexados ao fim da atual Era de Ouro, aumentando seu limite. Você pode aumentar o tempo de duração de uma Era de Ouro se controlar a [LINK=BUILDING_DOME_ROCK]Cúpula da Rocha[\LINK].[PARAGRAPH:2][H2]O fim da Era[\H2][PARAGRAPH:2]Assim que a Era de Ouro terminar, seu comércio e produção retornam ao normal.[PARAGRAPH:2]</Portuguese>
+		<Spanish>[H1]Edades de oro[\H1][PARAGRAPH:2]Durante ciertos periodos, algunas civilizaciones parecen rebosar de energ&#237;a y creatividad. Ese pueblo se hace cada vez m&#225;s productivo, los avances tecnol&#243;gicos son m&#225;s f&#225;ciles para esa civilizaci&#243;n y su cultura es la envidia de todo el mundo. Un par de ejemplos ser&#237;an Italia durante el Renacimiento y Gran Breta&#241;a durante el s. XIX. En Civilization IV, a tales periodos se los denomina "edades de oro".[PARAGRAPH:2][H2]Entrar en una edad de oro[\H2][PARAGRAPH:1][BOLD]Maravillas:[\BOLD] Una civilizaci&#243;n puede entrar en una edad de oro si construye la maravilla [LINK=BUILDING_VERSAILLES]El palacio de Versailles[\LINK].[PARAGRAPH:2][BOLD]Sacrificar a grandes personajes:[\BOLD] Una civilizaci&#243;n puede sacrificar uno o m&#225;s [LINK=CONCEPT_GREAT_PEOPLE]grandes personajes[\LINK] de distintos tipos para entrar en una edad de oro. El coste de este m&#233;todo va en aumento: la primera edad de oro cuesta un gran personaje; la segunda, dos; la tercera, tres; y as&#237; sucesivamente.[PARAGRAPH:2][H2]Efectos de las edades de oro[\H2][PARAGRAPH:2]Durante una edad de oro, la civilizaci&#243;n aumentar&#225; intensamente sus reg&#237;menes de producci&#243;n y comercio, lo que supone mayor velocidad en la construcci&#243;n y la investigaci&#243;n (en t&#233;rminos de juego: cada casilla que est&#233; dentro del radio urbano de tus ciudades y que proporcione comercio dar&#225; uno m&#225;s de comercio y cada casilla que proporcione producci&#243;n pasar&#225; a producir uno m&#225;s).[PARAGRAPH:2][H2]Duraci&#243;n de las edades de oro[\H2][PARAGRAPH:2]Las edades de oro duran ocho turnos a velocidad Normal. Si logras otra edad de oro mientras est&#233;s en medio de una, los ocho turnos adicionales enlazar&#225;n con el final de la edad de oro presente. Puedes aumentar la duraci&#243;n de tus edades de oro si controlas la [LINK=BUILDING_DOME_ROCK]C&#250;pula de la Roca[\LINK].[PARAGRAPH:2][H2]El fin de la edad[\H2][PARAGRAPH:2]Cuando una edad de oro termine, el comercio y la producci&#243;n de tu civilizaci&#243;n volver&#225;n a sus niveles normales.[PARAGRAPH:2]</Spanish>
+		<Portuguese>[H1]Eras de Ouro[\H1][PARAGRAPH:2]Durante alguns per&#237;odos da história, algumas civilizações parecem ter florescido com energia e criatividade. O povo da civilização tornou-se incrivelmente produtivo; avanços tecnológicos vieram facilmente; e sua cultura tornou-se a inveja do mundo. A Itália durante a Renascença é um exemplo, e a Grã-Bretanha no século XIX outro. No Civilization IV, tais per&#237;odos são chamados "Eras de Ouro".[PARAGRAPH:2][H2]Entrando em uma Era de Ouro[\H2][PARAGRAPH:2][BOLD]Maravilhas:[\BOLD] Uma civilização pode entrar em uma Era de Ouro construindo o [LINK=BUILDING_VERSAILLES]Palácio de Versalhes[\LINK].[PARAGRAPH:2][BOLD]Grandes Personalidades:[\BOLD] Uma civilização pode combinar [LINK=CONCEPT_GREAT_PEOPLE]Grandes Personalidades[\LINK] de diferentes tipos para começar uma Era de Ouro. O custo deste método aumenta: a primeira era de ouro custa 2 grandes personalidades, a segunda 3, a terceira 4, e assim por diante.[PARAGRAPH:2][H2]Efeitos de uma Era de Ouro[\H2][PARAGRAPH:2]Durante uma Era de Ouro, sua civilização aumenta substancialmente seus valores de produção e comércio, significando tempos mais breves de conclusão de construção e taxas de pesquisa mais rápidas. (Em termos de jogo, todo "tile" explorável por suas cidades que já produza comércio, produz 1 comércio extra, e todos aqueles que já dão produção dão 1 produção adicional.)[PARAGRAPH:2][H2]Duração das Eras de Ouro[\H2][PARAGRAPH:2]Eras de Ouro duram 8 turnos na Velocidade Normal. Se você atingir outra Era de Ouro durante uma, os 8 turnos adicionais são anexados ao fim da atual Era de Ouro, aumentando seu limite. Você pode aumentar o tempo de duração de uma Era de Ouro se controlar a [LINK=BUILDING_DOME_ROCK]Cúpula da Rocha[\LINK].[PARAGRAPH:2][H2]O fim da Era[\H2][PARAGRAPH:2]Assim que a Era de Ouro terminar, seu comércio e produção retornam ao normal.[PARAGRAPH:2]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_PLAGUE</Tag>
@@ -192,7 +188,7 @@
 		<French>[H1]Peste[\H1][PARAGRAPH:2]Bien que ce soit l'ajout le plus controvers&#233; et le plus contest&#233; de ce mod, la peste donne encore plus de dynamisme &#224; RFC que la stabilit&#233;. Il y a cinq &#233;pid&#233;mies de peste pr&#233;d&#233;finies. Elles &#233;clatent approximativement vers 400 apr. J.-C., 1300 apr. J.-C., 1650 apr. J.-C. et 1850 apr. J.-C. La cinqui&#232;me &#233;pid&#233;mie de peste &#233;clate seulement en M&#233;so-Am&#233;rique, quand les Europ&#233;ens la d&#233;couvrent pour la premi&#232;re fois. Cette derni&#232;re &#233;pid&#233;mie sert &#224; simuler la propagation de la variole. Mais n'ayez crainte ! Vous pouvez contr&#244;ler la propagation et la dur&#233;e de la peste de nombreuses fa&#231;ons.[PARAGRAPH:2]La propagation de la peste est favoris&#233;e par les contacts avec l'&#233;tranger et la proximit&#233; de villes contamin&#233;es. Vous pouvez limiter cette propagation en annulant les accords de libre passage, en instaurant le mercantilisme et en &#233;vitant de construire des ambassades. Le facteur d&#233;terminant dans l'apparition de la peste est le niveau de sant&#233;. Si vous avez bien plus de bonus de sant&#233; que de malus, vos villes ne seront pas touch&#233;es par la peste. M&#234;me si vous n'atteignez pas le seuil d'immunisation, une sant&#233; &#233;lev&#233;e r&#233;duira la dur&#233;e et la gravit&#233; de la maladie. Les greniers, les aqueducs, les ports et les &#233;piceries sont essentiels pour tout empire peupl&#233;. Si, malgr&#233; vos pr&#233;cautions, la peste apparaissait dans l'une de vos villes, vous ne pourrez pas faire grand-chose pour emp&#234;cher l'&#233;pid&#233;mie de gagner les villes voisines. En d&#233;couvrant la m&#233;decine, vous pouvez enrayer la propagation de la peste, quel que soit votre niveau de sant&#233;.</French>
 		<German>[H1]Pest[\H1][PARAGRAPH:2]Die kontroverseste und umstrittenste Neuerung in diesem Mod ist, dass die Pest RFC noch dynamischer gestaltet als die Stabilit&#228;t. Es gibt 5 vorbestimmte Pestausbr&#252;che, die in etwa um 400 n. Chr., 1300 n. Chr., 1650 n. Chr. und 1850 n. Chr. stattfinden. Die f&#252;nfte Pestepidemie bricht nur in Mesoamerika aus, und zwar beim ersten Kontakt mit den Europ&#228;ern - damit soll die Verbreitung der Pocken simuliert werden. Aber keine Sorge: Sie haben viele M&#246;glichkeiten, die Ausbreitung und Dauer der Pest zu kontrollieren.[PARAGRAPH:2]Die Verbreitung der Pest erfolgt durch den Kontakt mit Fremden und die N&#228;he zu infizierten St&#228;dten. Sie k&#246;nnen sie aber eind&#228;mmen, indem Sie Offene-Grenzen-Abkommen aufheben, die Staatsform "Merkantilismus" anwenden und keinerlei Botschaftsgeb&#228;ude errichten. Der entscheidende Faktor bei der Bek&#228;mpfung der Pest ist jedoch Ihr "Gesundheits&#252;berschuss": Wenn Sie deutlich mehr Gesundheitsboni vorweisen k&#246;nnen als Krankheitsfaktoren, wird dies die Ausbreitung der Pest in Ihren St&#228;dten verhindern. Und auch wenn Sie den pr&#228;ventiven Schwellenwert nicht erreichen, wird ein hoher Gesundheitswert die Dauer und Intensit&#228;t der Pest mindern. Kornspeicher, Aqu&#228;dukte, H&#228;fen und Kr&#228;mer sind f&#252;r eine bev&#246;lkerungsreiche Nation allerdings unerl&#228;sslich. Trotz aller Vorsichtsma&#223;nahmen gibt es, wenn die Pest erst einmal in einer Stadt aufgetreten ist, nur wenig M&#246;glichkeiten, ein &#220;bergreifen auf benachbarte St&#228;dte zu unterbinden - lediglich die Entdeckung der "Medizin" kann die Pest unabh&#228;ngig von dem aktuellen Gesundheitswert stoppen.</German>
 		<Italian>[H1]Peste[\H1][PARAGRAPH:2]La pi&#249; controversa e criticata aggiunta a questo mod &#232; la peste, che lo ha reso dinamico ancor pi&#249; della stabilit&#224;. La peste si verifica in 5 occasioni predeterminate: circa nel 400 d.C., 1300 d.C:, 1650 d.C: e 1850 d.C. La quinta volta accade solo nel centro America, all'arrivo degli europei; l'intento &#232; simulare lo scoppio dell'epidemia di vaiolo. Ma non temere! Hai molti modi per controllare la diffusione e la durata delle epidemie.[PARAGRAPH:2]La peste si diffonde tramite il contatto con gli stranieri e la vicinanza alle citt&#224; infette. Puoi limitare questo tipo di diffusione annullando il diritto di passaggio, usando il mercantilismo come forma di governo e non costruendo ambasciate. Il fattore pi&#249; determinante &#232; comunque il surplus di salute. Se i bonus di salute superano la mancanza di salute impedirai alla peste di diffondersi nelle tue citt&#224;. Anche se non raggiungi il limite di prevenzione, tanta salute far&#224; in modo che la peste duri meno e sia meno grave. Granai, acquedotti, porti e droghieri sono essenziali per la vita di qualsiasi impero popoloso. Anche con queste precauzioni, una volta che una citt&#224; ha preso la peste puoi fare ben poco per impedire che si diffonda nelle citt&#224; vicine. Se scopri la medicina impedirai la diffusione della peste a prescindere dalla salute.</Italian>
-		<Spanish>[H1]Peste[\H1][PARAGRAPH:2]La novedad m&#225;s pol&#233;mica de este mod es la relativa a la peste, ya que ha suscitado a&#250;n m&#225;s comentarios de la comunidad que la relativa a la estabilidad. Hay cinco momentos predeterminados en los que surgir&#225; la peste. &#201;sta se producir&#225; aproximadamente en torno a los a&#241;os 400, 1300, 1650 y 1850, todos ellos d. C. Y la quinta peste se produce &#250;nicamente en Centroam&#233;rica, cuando se traban los primeros contactos con los europeos (esta &#250;ltima simular&#225; la propagaci&#243;n de la viruela). &#161;Pero no temas! Existen muchas formas de controlar la propagaci&#243;n y la duraci&#243;n de la peste.[PARAGRAPH:2]La peste se propaga gracias al contacto con extranjeros y a la proximidad con ciudades infectadas. Puedes limitar su propagaci&#243;n si cierras las fronteras, empleas el Mercantilismo y evitas abrir embajadas. El factor m&#225;s determinante a la hora de controlar la peste es tu excedente de salud. Disponer de m&#225;s bonificaciones de salud que de insalubridad evitar&#225; que la peste se extienda por tus ciudades. Incluso si no alcanzas el umbral preventivo, una salud elevada reducir&#225; la duraci&#243;n y la gravedad de la peste. Los graneros, los acueductos, los puertos y los colmados son vitales para conseguir un imperio bien poblado. Si la peste entra en una ciudad a pesar de todas esas precauciones, poco puede hacerse para evitar que se extienda a las ciudades vecinas. El descubrimiento de la medicina evitar&#225; que la peste se extienda, independientemente de tu nivel de salud.</Spanish>
+		<Spanish>[H1]Peste[\H1][PARAGRAPH:2]Siendo la adici&#243;n m&#225;s controversial a este mod, la Peste ha hecho a RFC m&#225;s din&#225;mico que incluso la estabilidad. Existen 5 instancias predeterminadas en las cuales esta aparece, alrededor de los a&#241;os 700DC, 1350DC, 1500DC, 1650DC y 1740DC. &#161;Pero no temas! Existen multitud de maneras de controlar la propagaci&#243;n y duraci&#243;n de la peste.[PARAGRAPH:2]La peste se dispersa a trav&#233;s de contacto con extranjeros y proximidad a las ciudades infectadas. Una forma de limitar su propagaci&#243;n es cancelando tus tratados de apertura de fronteras y usando principios que "no permitan rutas comerciales extranjeras". El factor m&#225;s importante a la hora de determinar donde aparecer&#225; la plaga es tu exceso de [ICON_HEALTHY]. El tener mayor cantidad de bonos de [ICON_HEALTHY] que de [ICON_UNHEALTHY]previene la propagaci&#243;n de la plaga a tus ciudades. Incluso si no alcanzas el ratio preventivo, tener alta [ICON_HEALTHY] disminuye la severidad y duraci&#243;n de la misma. Edificios que incrementen [ICON_HEALTHY] son vitales para cualquier imperio bien poblado. Si ha pesar de todo una de tus ciudades es infectada por la plaga, no hay mucho que puedas hacer para prevenir su propagaci&#243;n a ciudades vecinas.</Spanish>
 		<Portuguese>[H1]Praga[\H1][PARAGRAPH:2]A mais controversa e lamentável adição a este mod, a Praga fez o RFC ainda mais dinâmico que a Estabilidade. Não tema! Há diversas maneiras para você poder controlar a proliferação e duração da praga.[PARAGRAPH:2]A Praga espalha-se por contato estrangeiro e proximidade a cidades infectadas. Você pode limitar a proliferação cancelando pactos de livre passagem e usando a civic "sem rotas comerciais estrangeiras". O fator mais determinante para pegar a praga é o seu excedente de saúde. Tendo muito mais bônus de saúde que penalidades você poderá previnir-se da praga com maior eficácia. Mesmo que você não atinja este ponto preventivo, muita saúde diminuirá a duração e severidade da praga. Construções que aumentam a saúde são todas vitais para qualquer império populoso. Mesmo com essas precauções, assim que uma cidade pegar a praga, há pouco que você possa fazer para previnir a proliferação para cidades vizinhas.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -210,8 +206,8 @@
 		<French>[H1]Mercenaires[\H1][PARAGRAPH:2]Les mercenaires sont des soldats qui se battent avant tout pour leur profit personnel, et n'ont que peu de consid&#233;rations id&#233;ologiques, territoriales, politiques ou morales. Lorsque ce terme est utilis&#233; pour un soldat d'une arm&#233;e r&#233;guli&#232;re, c'est en g&#233;n&#233;ral insultant.[PARAGRAPH:2]Les mercenaires ont souvent &#233;t&#233; employ&#233;s depuis l'&#233;poque de l'Egypte ancienne et de Carthage, jusqu'au 16e si&#232;cle, avec les c&#233;l&#232;bres Gardes Suisses et les Lansquenets. Vous pouvez recruter des mercenaires jusqu'&#224; la d&#233;couverte du nationalisme, qui modifie la conception des arm&#233;es et entra&#238;ne un rapide d&#233;clin de l'utilisation des mercenaires.[PARAGRAPH:2]</French>
 		<German>[H1]S&#246;ldner[\H1][PARAGRAPH:2]S&#246;ldner sind K&#228;mpfer, die meist ohne jede R&#252;cksicht auf ideologische, patriotische, politische oder moralische &#220;berlegungen in erster Linie ihre pers&#246;nlichen Interessen verfolgen. Manchmal wird der Begriff auch als Bezeichnung f&#252;r Soldaten verwendet, die in einer regul&#228;ren nationalen Armee ihren Dienst verrichten, in diesem Fall ist er jedoch in aller Regel als Beleidigung zu verstehen.[PARAGRAPH:2]Der Einsatz von S&#246;ldnern in der Schlacht war seit der Zeit des antiken &#196;gyptens und Karthagos bis ins 16. Jahrhundert, beispielsweise mit der Schweizergarde und den Landsknechten, weit verbreitet. Im Spiel k&#246;nnen S&#246;ldner bis zur Entdeckung des "Nationalismus" angeheuert werden, der das Prinzip des strukturellen Aufbaus einer Armee so stark ver&#228;nderte, dass er das Ende des S&#246;ldnertums einl&#228;utete.[PARAGRAPH:2]</German>
 		<Italian>[H1]Mercenari[\H1][PARAGRAPH:2]I mercenari sono soldati che combattono principalmente per un tornaconto privato, di solito senza considerazioni di ordine ideologico, nazionale, politico o morale. Per&#242; quando il termine viene utilizzato riferendosi a un soldato di un regolare esercito nazionale, &#232; considerato un insulto.[PARAGRAPH:2]I mercenari sono stati impiegati in battaglia fin dai tempi dell'antico Egitto e di Cartagine fino al sedicesimo secolo, e tra l'altro includono i famosi Lanzichenecchi e la Guardia Svizzera. Nel gioco i mercenari possono essere assoldati solo fino alla scoperta del nazionalismo, che ha rivoluzionato la concezione degli eserciti e ha causato un rapido declino nell'utilizzo di truppe a pagamento.[PARAGRAPH:2]</Italian>
-		<Spanish>[H1]Mercenarios[\H1][PARAGRAPH:2]Los mercenarios son soldados a los que no les interesan las consideraciones ideol&#243;gicas, nacionales, pol&#237;ticas ni morales y que combaten fundamentalmente en busca de un beneficio propio. Sin embargo, cuando se utiliza este t&#233;rmino para referirse a un soldado de un ej&#233;rcito permanente, suele considerarse un insulto.[PARAGRAPH:2]Los mercenarios han participado en guerras con regularidad desde la &#233;poca del antiguo Egipto y Cartago hasta el siglo XVI, como la famosa Guardia Suiza y los Lansquenetes. En el juego, solo se pueden contratar mercenarios hasta el descubrimiento del nacionalismo, que cambi&#243; la concepci&#243;n de los ej&#233;rcitos y provoc&#243; un r&#225;pido declive del empleo de mercenarios.[PARAGRAPH:2]</Spanish>
-		<Portuguese>[H1]Mercenários[\H1][PARAGRAPH:2]Mercenários são soldados que lutam principalmente para ganho pessoal, normalmente pouco se importando com questões ideológicas, nacionais, políticas ou morais. Porém, quando o termo é utilizado para referir-se a um soldado em um exército nacional, é normalmente considerado um insulto.[PARAGRAPH:2]Mercenários são utilizados em batalha desde os tempos do Antigo Egito e Cartago, até o século XVI, incluindo a famosa Guarda Suíça e os Lansquenetes.[PARAGRAPH:2]A tela de mercenários pode ser acessada clicando no ícone com um pequeno machado no canto superior esquerdo da tela. Aqui você pode contratar unidades estrangeiras para suas guerras. Mercenários são amarrados a províncias, e eles aparecem em uma cidade aleatória da dada província, no mesmo turno em que você os contratou. </Portuguese>
+		<Spanish>[H1]Mercenarios[\H1][PARAGRAPH:2]Los mercenarios son soldados a los que no les interesan las consideraciones ideol&#243;gicas, nacionales, pol&#237;ticas ni morales y que combaten fundamentalmente en busca de un beneficio propio. Sin embargo, cuando se utiliza este t&#233;rmino para referirse a un soldado de un ej&#233;rcito permanente, suele considerarse un insulto.[PARAGRAPH:2]Los mercenarios han participado en guerras con regularidad desde la &#233;poca del antiguo Egipto y Cartago hasta el siglo XVI, como la famosa Guardia Suiza y los Lansquenetes. En el juego, solo se pueden contratar mercenarios hasta el descubrimiento del nacionalismo, que cambi&#243; la concepci&#243;n de los ej&#233;rcitos y provoc&#243; un r&#225;pido declive del empleo de mercenarios.[PARAGRAPH:2]La ventana de mercenarios puede ser accedida presionando el bot&#243;n rojo con el peque&#241;o icono de un hacha en la parte superior izquierda de la pantalla. Aqu&#237; puedes contratar unidades extranjeras para pelear tus guerras. Los mercenarios est&#225;n ligados a provincias, y aparecen en una ciudad aleatoria de la misma el mismo turno que son contratados.</Spanish>
+		<Portuguese>[H1]Mercenários[\H1][PARAGRAPH:2]Mercenários são soldados que lutam principalmente para ganho pessoal, normalmente pouco se importando com questões ideológicas, nacionais, pol&#237;ticas ou morais. Porém, quando o termo é utilizado para referir-se a um soldado em um exército nacional, é normalmente considerado um insulto.[PARAGRAPH:2]Mercenários são utilizados em batalha desde os tempos do Antigo Egito e Cartago, até o século XVI, incluindo a famosa Guarda Su&#237;ça e os Lansquenetes.[PARAGRAPH:2]A tela de mercenários pode ser acessada clicando no &#237;cone com um pequeno machado no canto superior esquerdo da tela. Aqui você pode contratar unidades estrangeiras para suas guerras. Mercenários são amarrados a prov&#237;ncias, e eles aparecem em uma cidade aleatória da dada prov&#237;ncia, no mesmo turno em que você os contratou. </Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ODDS</Tag>
@@ -219,7 +215,7 @@
 		<French>Pr&#233;cisions</French>
 		<German>Sonstiges</German>
 		<Italian>Varie ed eventuali</Italian>
-		<Spanish>Demás aspectos</Spanish>
+		<Spanish>Otros aspectos</Spanish>
 		<Portuguese>Demais Aspectos</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -261,15 +257,12 @@
 - A mano a mano che cresci le tecnologie costano di pi&#249;.
 - Le bombe nucleari fanno molti pi&#249; danni e sono un'arma mortale.
 - C'&#232; una sola velocit&#224;, per via degli eventi programmati.</Italian>
-		<Spanish>[H1]Dem&#225;s aspectos[\H1]
-[PARAGRAPH:2]
-- La mayor&#237;a de las unidades no pueden atravesar junglas, y estas &#250;ltimas solo se pueden talar con Biolog&#237;a.
-- Nuevas casillas de ci&#233;naga y pantano, que no se puede despejar nunca.
-- Se ha a&#241;adido un nuevo recurso de lujo: el algod&#243;n.
-- Los santuarios no producen m&#225;s de 20 monedas por turno.
+		<Spanish>[H1]Dem&#225;s aspectos[\H1][PARAGRAPH:2]
+- Existen nuevos tipos de terreno; consulta la secci&#243;n terrenos para m&#225;s detalles.
+- Nuevos recursos: consulta la secci&#243;n recursos para m&#225;s detalles.
+- Los santuarios no producen m&#225;s de 20 [ICON_GOLD] por turno.
 - Las corporaciones consumir&#225;n un m&#225;ximo de 12 recursos.
-- Los costes de tecnolog&#237;a aumentan con el crecimiento.
-- Las armas nucleares hacen mucho m&#225;s da&#241;o y son verdaderamente mortales.
+- Los costes de tecnolog&#237;a aumentan conforme aumenta el n&#250;mero de ciudades que controlas.
 - Como consecuencia de los sucesos programados, solo existe una velocidad.</Spanish>
 		<Portuguese>[H1]Demais Aspectos[\H1]
 [PARAGRAPH:2]
@@ -286,7 +279,7 @@
 		<French>Resources Colonies et Acc&#232;s</French>
 		<German>Kolonien und Transfer-Ressourcen</German>
 		<Italian></Italian>
-		<Spanish></Spanish>
+		<Spanish>Colonias y recursos de acceso</Spanish> <!-- Modificado -->
 		<Portuguese>Colônias e Recursos de Acesso</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -296,8 +289,8 @@
 		<German>>[PARAGRAPH:2]Kolonien spielten eine bedeutende Rolle in der wirtschaftlichen Entwicklung Europas. Innerhalb von RFC:Europe werden sie durch Kolonieprojekte dargestellt.[PARAGRAPH:2] Es gibt zwei Handelsgesellschaften, die nationale Projekte sind (also kann jeder seine eigenen haben) und eine Vielzahl von Kolonien, die Weltprojekte sind (also nur von einem Spieler gebaut werden können). Manche Kolonien benötigen eine der Handelsgesellschaften um errichtet werden zu können. Jede Kolonie benötigt eine bestimmte Technologie und alle Kolonien benötigen den abstrakten Rohstoff "Atlantikzugang" 
 [PARAGRAPH:2]Wir haben den Rohstoff Antlantikzugang eingefügt, um sicherzustellen, dass Kolonien hauptsächlich von den historischen Kolonialmächten gebaut werden (der Rohstoff entspricht nicht dem Zugang zum Atlantik auf der Landkarte). Die Anzahl der Atlantikzugänge wird gering gehalten um für ein spannendes Spiel zu sorgen. Traditionelle Kolonialmächte wie Portugal, Spanien, England, Frankreich oder die Niederlande erhalten einen eigenen Zugang in ihrem Territorium. Nationen aus dem Mittelmeerraum können einen Atlantikzugang über die Kontrolle Gibraltars erhalten und der Rest kann sie mit Gewalt oder durch Handel von den Kolonialmächten erhalten.[PARAGRAPH:2]Die Kolonien sind darüber hinaus in unterschiedliche Regionen aufgeteilt (Südamerika, Nordamerika, Asien und Afrika). Mit Ausnahme der afrikanischen Kolonien, liefern Kolonien eine zusätzliche Route in die entsprechende Gegend, was die Gründung weiterer Kolonien dort erleichtert (beispielsweise erleichtert der Besitz von Virginia die Kolonisierung Neuenglands).[PARAGRAPH:2]Jede Kolonie versorgt die Nation, von der sie errichtet wird, mit einer bestimmten Menge an Rohstoffen. Viele dieser Rohstoffe können nicht anders erworben werden (sie sind nicht auf der Karte vorhanden). Kolonien steigern die Gesamtpunktzahl des Spielers. Einige historische Siegbedingungen erfordern den Bau einer bestimmten Menge an Kolonien - beachte dass die Handelsgesellschaften nicht als Kolonien zählen.</German>
 		<Italian></Italian>
-		<Spanish></Spanish>
-		<Portuguese>[PARAGRAPH:2]As Colônias desempenharam um papel bastante importante no desenvolvimento econômico europeu. No RFC:Europa colônias são representadas por projetos coloniais.[PARAGRAPH:2]Há duas Companhias Mercantis que são projetos nacionais (ex.: todo mundo pode ter uma delas) e algumas colônias são projetos mundiais (ex.: somente um jogador pode construí-las). Alguns projetos coloniais requerem uma Companhia Mercantil ou outra para serem construídos. Toda colônia requer uma tecnologia especpifica e todas as colônias necessitam do recurso abstrato "Acesso Atlântico".[PARAGRAPH:2]Nós adicionamos o Acesso Atlântico para garantir que as colônias sejam principalmente construídas pelas potências coloniais históricas (note que isso é diferente do acesso físico ao Oceano Atlântico). O número de recursos AA é mantido a um mínimo para providenciar uma jogabilidade interessante. Potências coloniais tradicionais, tais como Portugal, Espanha, Inglaterra, França e os Países Baixos, recebem um AA. Nações Mediterrâneas podem obter um AA estabelecendo seu domínio sobre o Estreito de Gibraltar e outras podem fazer isso por guerra ou troca com as potências coloniais.[PARAGRAPH:2]Além disso, colônias são divididas entre diversas regiões (América do Sul, América do Norte, Ásia e África). A exclusão das colônias da região africana, estabelecer uma colônia na região respectiva garante ao jogador um recurso de acesso adicional tornando mais fácil estabelecer mais colônias nessa região (ex.: Ter a colônia de Virginia torna mais fácil a colonização da Nova Inglaterra).[PARAGRAPH:2]Toda colônia providencia um número de recursos para a nação que a constrói. Muitos destes recursos não podem ser obtidos de outra forma (eles não encontram-se presentes no mapa). Colônias adicionam pontos ao "score" do jogador. Um número de condições para UHVs (Vitórias Históricas Únicas) requerem a construção de colônias. Note que Companhias Mercantis não contam como Colônias.</Portuguese>
+		<Spanish>[H1]Colonias y recursos de acceso[\H1][PARAGRAPH:2]Las colonias jugaron un importante papel en el desarrollo econ&#243;mico de Europa. En RFC:Europe las colonias son representadas por medio de proyectos coloniales.[PARAGRAPH:2]Existen dos proyectos nacionales llamados "Trading Companies" (ej: todos pueden tener uno de estos) y un n&#250;mero de colonias que son proyectos mundiales (i.e. s&#243;lo un jugador puede construirlos). Algunos de los proyectos requieren una Trading Company especifica para ser construidos. Cada colonia requiere tanto una tecnolog&#237;a especifica como acceso al recurso abstracto "acceso al Atl&#225;ntico".[PARAGRAPH:2]Los "acceso al Atl&#225;ntico" han sido agregados para asegurar que las colonias sean construidas principalmente por los poderes coloniales hist&#243;ricos (cabe notar que esto es diferente a tener acceso f&#237;sico al oc&#233;ano Atl&#225;ntico). El n&#250;mero de AA es m&#237;nimo para proveer un juego interesante. Los poderes coloniales tradicionales, tales como Portugal, Espa&#241;a, Inglaterra, Francia y Holanda reciben AA por defecto. Las naciones mediterr&#225;neas pueden obtener AA estableciendo control sobre el estrecho de Gibraltar y los otros pueden lograrlo por medio de guerras o intercambios con los poderes coloniales.[PARAGRAPH:2]Las colonias est&#225;n divididas por regi&#243;n (Sudam&#233;rica, Norteam&#233;rica, Asia y &#225;frica). Excluyendo a las colonias africanas, estableciendo una colonia en un regi&#243;n determinada otorgar&#225; al jugador un recurso de acceso adicional que facilitar&#225; la creaci&#243;n de m&#225;s colonias en esa regi&#243;n (ej: tener Virginia facilitar&#237;a la colonizaci&#243;n de New England).[PARAGRAPH:2]Cada colonia provee un n&#250;mero de recursos a la naci&#243;n que la construye, muchos de los cuales no pueden ser obtenidos de otra forma (ej: no est&#225;n presentes en el mapa). Las colonias incremental el puntaje del jugador. Si bien algunas UHV requieren construir un cierto n&#250;mero de colonias, cabe destacar que las Trading Companies no cuentas como tales para este efecto.</Spanish>
+		<Portuguese>[PARAGRAPH:2]As Colônias desempenharam um papel bastante importante no desenvolvimento econômico europeu. No RFC:Europa colônias são representadas por projetos coloniais.[PARAGRAPH:2]Há duas Companhias Mercantis que são projetos nacionais (ex.: todo mundo pode ter uma delas) e algumas colônias são projetos mundiais (ex.: somente um jogador pode constru&#237;-las). Alguns projetos coloniais requerem uma Companhia Mercantil ou outra para serem constru&#237;dos. Toda colônia requer uma tecnologia especpifica e todas as colônias necessitam do recurso abstrato "Acesso Atlântico".[PARAGRAPH:2]Nós adicionamos o Acesso Atlântico para garantir que as colônias sejam principalmente constru&#237;das pelas potências coloniais históricas (note que isso é diferente do acesso f&#237;sico ao Oceano Atlântico). O número de recursos AA é mantido a um m&#237;nimo para providenciar uma jogabilidade interessante. Potências coloniais tradicionais, tais como Portugal, Espanha, Inglaterra, França e os Pa&#237;ses Baixos, recebem um AA. Nações Mediterrâneas podem obter um AA estabelecendo seu dom&#237;nio sobre o Estreito de Gibraltar e outras podem fazer isso por guerra ou troca com as potências coloniais.[PARAGRAPH:2]Além disso, colônias são divididas entre diversas regiões (América do Sul, América do Norte, Ásia e África). A exclusão das colônias da região africana, estabelecer uma colônia na região respectiva garante ao jogador um recurso de acesso adicional tornando mais fácil estabelecer mais colônias nessa região (ex.: Ter a colônia de Virginia torna mais fácil a colonização da Nova Inglaterra).[PARAGRAPH:2]Toda colônia providencia um número de recursos para a nação que a constrói. Muitos destes recursos não podem ser obtidos de outra forma (eles não encontram-se presentes no mapa). Colônias adicionam pontos ao "score" do jogador. Um número de condições para UHVs (Vitórias Históricas Únicas) requerem a construção de colônias. Note que Companhias Mercantis não contam como Colônias.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_RELIGION_OVERHAUL</Tag>
@@ -305,7 +298,7 @@
 		<French>R&#233;vision de la Religion</French>
 		<German>Instandsetzung der Religion</German>
 		<Italian></Italian>
-		<Spanish></Spanish>
+		<Spanish>Cambios a la religi&#243;n</Spanish>
 		<Portuguese>Aspectos da Religião</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -350,83 +343,96 @@
 		<French></French>
 		<German></German>
 		<Italian></Italian>
-		<Spanish></Spanish>
+		<Spanish>[H1]Cambios a las Religiones[\H1]
+[PARAGRAPH:2]Lo que diferencia a RFC:Europe de RFC son los cambios en la din&#225;mica de las religiones. Existen cuatro religiones mayores (Catolicismo, Ortodoxia, Protestantismo, Islam) y Juda&#237;smo como religi&#243;n menor. Todas las religiones son asim&#233;tricas, cada una proveyendo un beneficio &#250;nico. Para simular las complicadas din&#225;micas entre credos que exist&#237;a en el periodo, implementamos "El gran cisma", La Reforma protestante, Cruzadas, El papa como un ente especial, puntos de fe e inquisiciones.
+[H1]Sobre las cinco religiones[\H1]
+[PARAGRAPH:2]Al inicio del juego tanto el Catolicismo, como el Juda&#237;smo y el cristianismo ortodoxo (ortodoxia) ya est&#225;n fundadas, siendo sus ciudades santas Roma, Jerusal&#233;n y Constantinopla respectivamente. El Islam es fundado el turno que Arabia hace su aparici&#243;n, con su ciudad santa en Damasco. Puesto que la ciudad de la Meca no est&#225; incluida en el mapa, Damasco fue elegido como el centro religioso &#225;rabe (y capital). El protestantismo es fundado por el primer jugador que investigue la imprenta, con su ciudad santa elegida de manera aleatoria. Cuando una religi&#243;n es fundada, su santuario es autom&#225;ticamente construida en la correspondiente ciudad santa.
+[H1]Juda&#237;smo[\H1][PARAGRAPH:2]A diferencia de las otras cuatro religiones, los jud&#237;os nunca intentaron esparcir su fe por la fuerza y eran victimizados a menudo por la misma. En RFC:Europe los jud&#237;os se esparcen a trav&#233;s de Europa de forma semi-aleatoria, impulsados por el comercio y oportunidades del mismo. Las ciudades donde se encuentre presente pueden construir un  distrito jud&#237;o que otorga un incremento a la [ICON_CULTURE] y [ICON_GOLD] generado.
+[H1]El gran cisma[\H1][PARAGRAPH:2]Antes de 1054 DC, los cat&#243;licos y ortodoxos ten&#237;an m&#250;ltiples diferencias, pero a efectos pr&#225;cticos actuaban como una religi&#243;n &#250;nica. En RFC:Europe, no existe penalidad diplom&#225;tica entre los jugadores cat&#243;licos y ortodoxos hasta que dicho a&#241;o es alcanzado.
+[H1]La reforma protestante[\H1][PARAGRAPH:2]El descubrimiento de la imprenta y la fundaci&#243;n del protestantismo inician la reforma. Todos los jugadores cat&#243;licos tiene la oportunidad de convertirse a la nueva religi&#243;n. La conversi&#243;n cambia el catolicismo y edificios asociados a sus versiones protestantes, no obstante el catolicismo no ser&#225; completamente removido de las ciudades m&#225;s  grandes. Algunos puntos de fe son generados en el proceso. La probabilidad de la IA de aceptar el cambio est&#225; basada en las acciones hist&#243;ricas de dicha naci&#243;n.
+[H1]Puntos de fe[\H1][PARAGRAPH:2]Los punto de fe son un concepto abstracto que determina el nivel de beneficios que el jugador puede obtiener de su religi&#243;n.
+[ICON_BULLET] En general, las civilizaciones empiezan con 0 puntos de fe.
+[ICON_BULLET] Cambios a la religi&#243;n oficial resetean los puntos de fe a 0.
+[ICON_BULLET] Tanto el difundir la religi&#243;n estatal a trav&#233;s del imperio como construir edificios religiosos relacionados ([COLOR_BUILDING_TEXT]Templos[COLOR_REVERT], [COLOR_BUILDING_TEXT]Monasterios[COLOR_REVERT] y [COLOR_BUILDING_TEXT]Catedrales[COLOR_REVERT]) genera puntos de fe.
+[ICON_BULLET] La propagaci&#243;n de religiones no oficiales disminuye la cantidad de puntos de fe.
+[ICON_BULLET] Los beneficios proporcionados por los puntos de fe var&#237;an de acuerdo a la religi&#243;n en cuesti&#243;n.
+[ICON_BULLET] En vez de construir santuarios, los grandes profetas pueden generar grandes incrementos al n&#250;nero de puntos de fe.
+[ICON_BULLET] El n&#250;mero actual de puto de fe y los beneficios otorgados pueden ser vistos en la pesta&#241;a del consejero de religiones.
+[H2]Catolicismo[\H2][PARAGRAPH:1]Los beneficios del catolicismo no son tan simples como los de las dem&#225;s religiones. Todo gira en torno al Papa y su rol como autoridad absoluta sobre la iglesia catolica. Revisa la secci&#243;n sobre el Papa m&#225;s abajo para mayor informaci&#243;n.
+[H2]Islam[\H2][PARAGRAPH:1]Geogr&#225;ficamente, el islam se extiende mucho m&#225;s all&#225; de los limites de nuestro mapa. Por tanto, una fe fuerte (muchos puntos de fe) le otorga a las naciones isl&#225;micas un bono en su crecimiento de sus ciudades y un descuento en el coste de unidades.
+[H2]Ortodoxia[\H2][PARAGRAPH:1]Uno de los conceptos clave de la iglesia ortodoxa es el principio de Cesaropapismo, esto es, la subyugaci&#243;n de la autoridad religiosa bajo la autoridad secular. Como resultado, una fe fuerte incrementa la estabilidad de las naciones ortodoxas y disminuye el coste de mantenimiento de todos los principios.
+[H2]Protestantismo[\H2][PARAGRAPH:1]Las nuevas ideas liberales y emfasis en las libertades personas otorgan a las naciones protestantes descuentos a la hora de investigar nuevas tecnolog&#237;as y en el costo en [ICON_PRODUCTION] en la producci&#243;n de maravillas y colonias.
+[H1]Inquisiciones y estabilidad[\H1][PARAGRAPH:1]Tan feas como fueron, las persecuciones religiosas eran muy comunes en la Europa medieval. Por tanto, en RFC:Europe presentamos el Inquisidor, una unidad que puede ser usada para remover todas las religiones no oficiales y edificios asociados de una determinada ciudad.
+[ICON_BULLET] La presencia de [ICON_RELIGION] no estatales en tus ciudades causa inestabilidad.
+[ICON_BULLET] Las inquisiciones remueven las [ICON_RELIGION] no oficiales y edificios asociados, pero generan infelicidad e inestabilidad en el corto plazo.
+[ICON_BULLET] La inestabilidad e infelicidad producto de una inquisici&#243;n desaparece con el tiempo, por lo que se trata de una penalidad a corto plazo a cambio de un beneficio a largo plazo.
+[ICON_BULLET] Espa&#241;a no sufre penalidades de estabilidad por inquisiciones, pero si sufre la infelicidad asociada.
+[ICON_BULLET] Las inquisiciones generan punos de fe.
+[ICON_BULLET] La inestabilidad generada por una inquisici&#243;n vs los puntos de fe agregados y el incremento de estabilidad de la fe ortodoxa todav&#237;a significa inestabilidad en el corto plazo.
+[ICON_BULLET] Una religi&#243;n no puede ser removida ni de su ciudad santa (i.e. no puedes completamente erradicar una religi&#243;n) ni de Jerusal&#233;n.
+[ICON_BULLET] Cuando los jud&#237;os son perseguidos en una ciudad, estos se mueven autom&#225;ticamente a otra; ya sea de la misma u otra civilizaci&#243;n.
+[ICON_BULLET] Bajo el principio de libertad religiosa, las inquisiciones son imposibles y no hay inestabilidad generada por multiples religiones en la misma ciudad.
+[H1]El Papa[\H1][PARAGRAPH:2]El Papa es la cabeza del a iglesia cat&#243;lica y posee autoridad absoluta sobre la misma. Cada jugador que elge catolicismo puede interactuar con el Papa de diveras formas:
+[ICON_BULLET] El Papa no puede controlar ninguna ciudad excepto Roma, y su [ICON_CULTURE] no puede extenderse fuera de la provincia de Roma.
+[ICON_BULLET] Ocasionalmente, el papa hace regalos de [ICON_GOLD] y unidades a los jugadores cat&#243;licos creyentes.
+[ICON_BULLET] Las relaciones con el Papa juegan un importante papel en la din&#225;mica de las Cruzadas.
+[ICON_BULLET] Para obtener cualquier beneficio, es necesario tener un tratado de apertura de fronteras con &#233;l.
+[ICON_BULLET] Una vez tengas un tratado de apertura de fronteras con el Papa, un ejercito de misionarios esparcir&#225; el catolicismo por ti.
+[ICON_BULLET] Por lo mismo, probablemente no sea buena idea tener un tratado de apertura de fronteras con el Papa si no eres cat&#243;lico (ver Inquisici&#243;n y estabilidad)
+[ICON_BULLET] Ocasionalmente, el Papa construir&#225; iglesias y monasterios para las naciones cat&#243;licas.
+[ICON_BULLET] El Papa puede remover religiones distintas al catolicismo de las ciudades de jugadores cat&#243;licos (generando infelicidad e inestabilidad al jugador en el proceso)
+[H1]Eligiendo tu religi&#243;n[\H1][PARAGRAPH:2]Los beneficios de elegir una religi&#243;n sobre otra est&#225;n vinculados a las preferencias individuales de cada civilizaci&#243;n. Por ejemplo, los bizantinos se beneficiar&#237;an m&#225;s siguiendo la ortodoxia y Espa&#241;a siguiendo el Catolicismo. Usar la religi&#243;n hist&#243;rica nunca es una mala elecci&#243;n, pero eres libre de experimentar como quieras.[NEWLINE]
+</Spanish>
 		<Portuguese>[H1]Aspectos da Religião[\H1]
-[PARAGRAPH:2]O que diferencia o RFC:Europa do RFC é a completa mudança na dinâmica de religiões. Nós temos 4 principais religiões (Catolicismo, Ortodoxismo, Protestantismo and Islã) além do Judaísmo como uma religião menor. Todas as religiões são asimétricas, cada uma providenciando benefícios únicos. Para simular o complicado dinamismo que existiu entre as religiões, nós implementamos o Grande Cisma, a Reforma, as Crusadas, o Papa como um jogador especial, Pontos de Fé e Perseguições Religiosas.
+[PARAGRAPH:2]O que diferencia o RFC:Europa do RFC é a completa mudança na dinâmica de religiões. Nós temos 4 principais religiões (Catolicismo, Ortodoxismo, Protestantismo and Islã) além do Juda&#237;smo como uma religião menor. Todas as religiões são asimétricas, cada uma providenciando benef&#237;cios únicos. Para simular o complicado dinamismo que existiu entre as religiões, nós implementamos o Grande Cisma, a Reforma, as Crusadas, o Papa como um jogador especial, Pontos de Fé e Perseguições Religiosas.
 [H1]Nas 5 religiões[\H1]
-[PARAGRAPH:2]Catolicismo, Judaísmo and Ortodoxismo são fundados no começo do jogo, sendo as cidades sagradas Roma, Jerusalem and Constantinopla. O Islã é fundado no turno que a Arábia surge, com a cidade sagrada Damasco. Mecca é geograficamente excluída e Damasco foi escolhida como o centro árabe de poder religioso (além da própria capital árabe). Protestantismo é fundado pelo primeiro jogador a descobrir a Imprensa, a cidade sgrada do protestantismo é escolhida ao acaso, muito parecido com as cidades sagradas no BtS original. Toda vez que uma religião é fundada, o Santuário Sagrado é construído automaticamente na cidade sagrada correspondente.
-[H1]Judaísmo[\H1]
-[PARAGRAPH:2]Diferente das outras 4 religiões, os judeos nunca tentaram espalhar sua fé pela espada e muitas vezes eles eram vítimas desta espada. No RFC:Europa judeus espalham-se pela Europa em uma maneira semi-aleatória, movidos por trocas e oportunidades de troca. Cidades com Judaísmo podem construir Bairros Judeus que providenciam um incremento de cultura e dinheiro.
+[PARAGRAPH:2]Catolicismo, Juda&#237;smo and Ortodoxismo são fundados no começo do jogo, sendo as cidades sagradas Roma, Jerusalem and Constantinopla. O Islã é fundado no turno que a Arábia surge, com a cidade sagrada Damasco. Mecca é geograficamente exclu&#237;da e Damasco foi escolhida como o centro árabe de poder religioso (além da própria capital árabe). Protestantismo é fundado pelo primeiro jogador a descobrir a Imprensa, a cidade sgrada do protestantismo é escolhida ao acaso, muito parecido com as cidades sagradas no BtS original. Toda vez que uma religião é fundada, o Santuário Sagrado é constru&#237;do automaticamente na cidade sagrada correspondente.
+[H1]Juda&#237;smo[\H1]
+[PARAGRAPH:2]Diferente das outras 4 religiões, os judeos nunca tentaram espalhar sua fé pela espada e muitas vezes eles eram v&#237;timas desta espada. No RFC:Europa judeus espalham-se pela Europa em uma maneira semi-aleatória, movidos por trocas e oportunidades de troca. Cidades com Juda&#237;smo podem construir Bairros Judeus que providenciam um incremento de cultura e dinheiro.
 [H1]O Grande Cisma[\H1]
 [PARAGRAPH:2]Antes de 1054DC, Católicos e Ortodoxos tinham muitas diferenças, mas em demais aspectos agiam como uma única religião. No RFC:Europa, não há penalidade diplomática entre jogadores Católicos e Ortodoxos até 1054DC.
 [H1]Reforma[\H1]
 [PARAGRAPH:2]A descoberta da Imprensa e fundação do Protestantismo ativa a Reforma. Todos os jogadores católicos têm a oportunidade de converter-se à nova religião. A conversão troca o Catolicismo pelo Protestantismo e todas as construções religiosas são convertidas aos seus respectivos da outra religião, porém, o Catolicismo não é completamente removido de todas as cidades grandes. Alguns dos Pontos de Fé são gerados também. A probabilidade da IA converter-se é baseada na história real da nação correspondente.
 [H1]Pontos de Fé[\H1]
-[PARAGRAPH:2]Pontos de Fé são um conceito abstrato que determina o nível de benefícios que o jogador pode obter da religião correspondente.
+[PARAGRAPH:2]Pontos de Fé são um conceito abstrato que determina o n&#237;vel de benef&#237;cios que o jogador pode obter da religião correspondente.
 - Geralmente civilizações começam com 0 pontos de fé.
 - Trocar a religião estatal volta os pontos de fé a 0.
 - Espalhar a religião estatal pelo império e fazer construções religiosas (Templos, Mosteiros e Catedrais) gera pontos de fé.
 - A incursão de religiões estrangeiras nas suas cidades diminui a quantidade de pontos de fé.
-- Pontos de Fé providenciam benefícios distintos para cada religião.
+- Pontos de Fé providenciam benef&#237;cios distintos para cada religião.
 - Um grande incremento de Pontos de Fé é providenciado por Grandes Profetas (Grandes Teólogos) para compensar o fato de não poderem mais construir santuários sagrados.
-- O atual número de Pontos de Fé e os benefícios providenciados podem ser vistos na tela do conselheiro religioso
+- O atual número de Pontos de Fé e os benef&#237;cios providenciados podem ser vistos na tela do conselheiro religioso
 [H2]Catolicismo[\H2]
-[PARAGRAPH:2]Os benefícios por Pontos de Fé para os jogadores católicos não são tão diretos quanto para as outras religiões. Tudo gira entorno do Papa e seu papel como autoridade absoluta sobre a Igreja Católica. Consulte a secção especial sobre o Papa e seu papel no jogo.
+[PARAGRAPH:2]Os benef&#237;cios por Pontos de Fé para os jogadores católicos não são tão diretos quanto para as outras religiões. Tudo gira entorno do Papa e seu papel como autoridade absoluta sobre a Igreja Católica. Consulte a secção especial sobre o Papa e seu papel no jogo.
 [H2]Islã[\H2]
 [PARAGRAPH:2]Geograficamente o Islã espalhou-se bem além dos limites de nosso mapa. Então, com uma forte fé (ex.: muitos Pontos de Fé), as nações islâmicas ganham um incremento no seu crescimento assim como um desconto na produção de novas unidades.
 [H2]Ortodoxismo[\H2]
-[PARAGRAPH:2]Um dos conceitos chave da Igreja Ortodoxa é o princípio do Cesaropapismo, que significa o domínio da autoridade secular sobre a autoridade religiosa. Como resultado, forte fé incrementa a estabilidade de nações ortodoxas e diminui o custo de manutenção das civics.
+[PARAGRAPH:2]Um dos conceitos chave da Igreja Ortodoxa é o princ&#237;pio do Cesaropapismo, que significa o dom&#237;nio da autoridade secular sobre a autoridade religiosa. Como resultado, forte fé incrementa a estabilidade de nações ortodoxas e diminui o custo de manutenção das civics.
 [H2]Protestantismo[\H2]
 [PARAGRAPH:2]As novas idéias liberais e ênfases na liberdade pessoal, garantem às nações protestantes um desconto na pesquisa de novas tecnologias e na produção de Colônias e Maravilhas.
 [H1]Perseguições Religiosas e Estabilidade[\H1]
 [PARAGRAPH:2]Feias como eram, as perseguições religiosas eram muito comuns na Europa Medieval. Então, no RFC:Europa nós apresentamos o Perseguidor, uma unidade que pode ser usada para remover religiões estrangeiras e suas construções de uma dada cidade.
 - religiões estrangeiras em suas cidades causam instabilidade
 - Perseguições removem a religião estrangeira e suas construções, mas geram infelicidade e causam instabilidade por si próprias, resultando em uma penalidade ainda maior
-- Instabilidade e infelicidade por perseguição desaparecem com o tempo, então a penalidade de curto prazo cria um benefício a longo prazo.
+- Instabilidade e infelicidade por perseguição desaparecem com o tempo, então a penalidade de curto prazo cria um benef&#237;cio a longo prazo.
 - A Espanha não sofre penalidade por perseguição, porém sofrem por infelicidade
 - Perseguições geram Pontos de Fé
 - A combinação de instabilidade por perseguição e os Pontos de Fé adicionais garantindo um incremento na estabilidade Ortodoxa, ainda geram instabilidade de curto prazo
-- A religião não pode ser removida da cidade sagrada (ex.: nenhuma religião pode ser completamente destruída) e nenhuma religião pode ser removida de Jerusalem
+- A religião não pode ser removida da cidade sagrada (ex.: nenhuma religião pode ser completamente destru&#237;da) e nenhuma religião pode ser removida de Jerusalem
 - Quando judeus são perseguidos em uma cidade, eles automaticamente movem-se para outra do mesmo jogador ou de outro
 - Sob a civic Livre Culto, Perseguições são impossibilitadas e nenhuma instabilidade é gerada por inúmeras religiões estrangeiras nas cidades.
 [H1]O Papa[\H1]
-[PARAGRAPH:2]O Papa é o líder da Igreja Católica e tem autoridade absoluta sobre a mesma. Todo jogador que escolhe o Catolicismo terá de interagir com o papa em mais de uma via.
+[PARAGRAPH:2]O Papa é o l&#237;der da Igreja Católica e tem autoridade absoluta sobre a mesma. Todo jogador que escolhe o Catolicismo terá de interagir com o papa em mais de uma via.
 - The Pope can never control any city other than Rome and the Pope's culture cannot extend beyond Rome's BFC
 - O Papa dá presentes em forma de dinheiro e unidades para jogadores católicos fiéis.
 - Relações com o Papa cumprem um papel importante na definição das dinâmicas das crusadas
-- Para ganhar qualquer benefício com o Papa você deve fazer um tratado de livre passagem com ele
+- Para ganhar qualquer benef&#237;cio com o Papa você deve fazer um tratado de livre passagem com ele
 - Se você realiza o tratado de livre passagem com o Papa, rapidamente você verá um exército de missionários espalhando o Catolicismo para você
 - Seguindo a mesma idéia, para um jogador não-católico, Livre Passagem com o Papa é provavelmente uma má idéia (veja Perseguições Religiosas e Estabilidade)
 - O Papa também constrói aleatoriamente Igrejas e Mosteiros em nações Católicas
 - O Papa pode remover religiões estrangeiras das cidades de jogadores católicos (causando infelicidade e instabilidade para o jogador correspondente)
-[H1]Cruzadas[\H1]
-Há dois tipos de Cruzadas: Para a Terra Santa cujo foco é capturar Jerusalém e as de Defesa cujo foco é reconquistar uma cidade perdida por um jogador católico.
-[H2]Cruzadas para a Terra Santa[\H2]
-- De 1000DC em diante, o Papa pode periodicamente formar uma Cruzada para a Terra Santa
-- Uma Cruzada é organizada somente se Jerusalem for controlada por um jogador não-Católico, não-Ortodoxo e não-Independente.
-- Toda nação Católica pode participar nas Cruzadas, enviando algumas tropas ao acaso (defendores de cidades não são enviados, mas outras unidades são)
-- Cavaleiros Teutônicos e Templários tem grandes chances de ir às Cruzadas, e Cavaleiros em geral são mais chamados que Arqueiros
-- Todos os participantes podem votar no líder da Cruzada, onde os candidatos são escolhidos por seu valor de Pontos de Fé, tamanho do Império e boas relações com o Papa
-- O Líder escolhido declara guerra em quem possuir Jerusalem e poucos turnos depois recebe um destacamento de tropas perto da cidade
-- O primeiro jogador Católico que capturar Jerusalem (com ou sem uma Cruzada) ganha uma Era de Ouro e um incremento na estabilidade e na fé.
-- Recusar participar na Cruzada diminui seus pontos de fé e relações com o Papa
-- Algumas vezes, as Cruzadas podem ser desviadas para não ir a Jerusalém, e sim à capital de uma nação não-Católica
-- O jogador Católico mais rico ganha a oportunidade de desviar a Cruzada por uma determinada quantia em dinheiro
-- Se alguém usa dinheiro para desviar a Cruzada, ela ainda pode ser feita a Jerusalém
-- A Reforma faz a Igreja Católica virar-se para suas próprias questões internas, e então para de fazer novas Cruzadas à Terra Santa
-[H2]Cruzadas Defensivas[\H2]
-- Se há um jogador não-Católico e não-Ortodoxo controlando uma cidade no mapa de guerra de uma nação Católica, uma Cruzada defensiva pode ser organizada
-- Se o jogador Católico está em guerra com aquele que controla tal cidade, e se o jogador Católico possui boas relações com o Papa, o jogador Católico ganha a oportunidade de uma Cruzada Defensiva
-- Uma Cruzada Defensiva significa que algumas unidades vão surgir na capital do jogador Católico
-- Cruzadas Defensivas custam Pontos de Fé
-- Pontos de Fé podem ser recuperados conquistando as cidades do outro jogador e convertendo-as ao Catolicismo
-[H2]Cruzadas e jogadores não-Católicos[\H2]
-[PARAGRAPH:2]Se você é um jogador Islâmico, prepare-se para os Cruzados. Seja lutando contra a Reconquista, defendendo Jerusalém ou conquistando a Hungria, Cruzados virão visitá-lo. Encontre-os de frente.Uma forte Fé Islâmica ajudará você a treinar mais unidades e derrotar os Cruzados.
-[PARAGRAPH:2]O Judaísmo não foi desenvolvido para ser a religião estatal de ninguém, porém é vulnerável às Cruzadas da mesma forma que o Islã.
-[PARAGRAPH:2]Jogadores Ortodoxos são geralmente imunes a Cruzadas, mas fique atento com Balduíno I, VI e IX (todos os números referem-se à mesma pessoa).Cruzados podem sempre ficar gananciosos e atacar você por razões puramente economicas.
-[PARAGRAPH:2]A Reforma termina as Cruzadas para a Terra Santa, porém se você está em guerra com uma nação Católica, você ainda pode sofrer uma Cruzada Defensiva.
 [H1]A Escolha da Religião[\H1]
-[PARAGRAPH:2]Os benefícios de escolher uma religião ou outra estão amarrados às preferências históricas de cada civilização. Os Byzantinos, por exemplo, terão mais benefícios do Ortodoxismo e a Espanha do Catolicismo. Adotar o posicionamento histórico nunca é uma decisão errada, porém você é sempre livre para experimentar do jeito que quiser.</Portuguese>
+[PARAGRAPH:2]Os benef&#237;cios de escolher uma religião ou outra estão amarrados às preferências históricas de cada civilização. Os Byzantinos, por exemplo, terão mais benef&#237;cios do Ortodoxismo e a Espanha do Catolicismo. Adotar o posicionamento histórico nunca é uma decisão errada, porém você é sempre livre para experimentar do jeito que quiser.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_CRUSADES</Tag>
@@ -434,7 +440,7 @@ Há dois tipos de Cruzadas: Para a Terra Santa cujo foco é capturar Jerusalém e a
 		<French></French>
 		<German></German>
 		<Italian></Italian>
-		<Spanish></Spanish>
+		<Spanish>Cruzadas</Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
@@ -466,8 +472,56 @@ Há dois tipos de Cruzadas: Para a Terra Santa cujo foco é capturar Jerusalém e a
 		<French></French>
 		<German></German>
 		<Italian></Italian>
-		<Spanish></Spanish>
-		<Portuguese></Portuguese>
+		<Spanish>[H1]Cruzadas[\H1][PARAGRAPH:2]Existen dos tipos de cruzadas: cruzadas por la tierra santa, cuyo objetivo es capturar Jerusal&#233;n, y cruzadas defensivas cuyo prop&#243;sito es reclamar una ciudad perdida por un jugador cat&#243;lico.[NEWLINE]
+[H2]Cruzadas por la tierra santa[\H2]
+[ICON_BULLET] Desde el 1000 DC en adelante, el papa puede llamar periodicamente por cruzadas por la tierra santa.
+[ICON_BULLET] Una cruzada es llamada s&#243;lo si Jerusal&#233;n es controlada por un jugador que no sea ni cat&#243;lico ni ortodoxo.
+[ICON_BULLET] Cada naci&#243;n cat&#243;lica puede participar en las cruzadas, enviando algunas de sus unidades de forma aleatoria (los defensores de ciudades no son enviados, pero otras unidades pueden ir).
+[ICON_BULLET] Los caballeros teut&#243;nicos y los caballeros templarios tienen una alta probabilidad de ir, los caballeros son m&#225;s probables de ser elegidos que arqueros.
+[ICON_BULLET] Todos los participantes votan por un l&#237;der de cruzada, con los candidatos elegidos en base a sus puntos de fe, tama&#241;o de imperio y buenas relaciones con el Papa.
+[ICON_BULLET] El l&#237;der elegido declara la guerra a quien sea que controle Jerusal&#233;n y recibe un grupo de unidades cerca de la ciudad objetivo unos cuantos turnos m&#225;s tarde.
+[ICON_BULLET] El primer jugador cat&#243;lico que capture Jerusal&#233;n (con o sin a cruzada) recibe una era de oro y un incremento en su estabilidad y puntos de fe.
+[ICON_BULLET] Negarse a participar reduce los puntos de fe y relaciones con el Papa.
+[ICON_BULLET] El jugador cat&#243;lico m&#225;s rico tiene la oportunidad de desviar la cruzada por una cierta cantidad de [ICON_GOLD].
+[ICON_BULLET] Si usas [ICON_GOLD] para tomar control de una Cruzada, puedes dirigirla hacia la capital de cualquier naci&#243;n no cat&#243;lica o Jerusal&#233;n.
+[ICON_BULLET] La reforma protestante cambia el foco del catolicismo hacia sus asuntos internos, deteniendo cruzadas por la tierra santa posteriores.[NEWLINE]
+[H2]Cruzadas Defensivas[\H2]
+[ICON_BULLET] Si existe un jugador que no es ni cat&#243;lico ni ortodoxo y este posee una ciudad en el mapa de guerra de un jugador cat&#243;lico, se puede llamar una cruzada defensiva.
+[ICON_BULLET] Si el jugador cat&#243;lico est&#225; en guerra con el poseedor de dicha ciudad, y adem&#225;s tiene buenas relaciones con el Papa, &#233;ste tiene la oportunidad de llamar una cruzada defensiva.
+[ICON_BULLET] Una vez llamada, aparecer&#225;n varias unidades en la capital del jugador cat&#243;lico.
+[ICON_BULLET] Llamar una de estas cruzadas cuesta puntos de fe.
+[ICON_BULLET] Se puede obtener puntos de fe conquistando las ciudades del otro jugador y convirti&#233;ndolas al catolicismo.[NEWLINE]
+[H2]Las cruzadas y las religiones no cat&#243;licas[\H2][PARAGRAPH:1]Si eres un jugador isl&#225;mico, prep&#225;rate. Ya sea peleando en contra de la reconquista, defendiendo Jerusal&#233;n o conquistando Hungr&#237;a, los cruzados van a visitarte. Rec&#237;belos como se merecen. Una fuerte fe isl&#225;mica te permitir&#225; construir m&#225;s unidades y repelerlos exitosamente.
+[PARAGRAPH:1]El juda&#237;smo no est&#225; pensado para ser la religi&#243;n oficial de nadie, pero es tan vulnerable a las cruzadas como el Islam.
+[PARAGRAPH:1]Generalmente, los jugadores ortodoxos son inmunes a las cruzadas, pero cu&#237;date de Balduin I, VI y IX (todos los n&#250;meros se refieren a la misma persona). Los cruzados pueden volverse codiciosos y atacarte por razones puramente econ&#243;micas.
+[PARAGRAPH:1]La reforma detiene cruzadas por la tierra santa. No obstante, las cruzadas defensivas a&#250;n siguen en efecto.[NEWLINE]
+</Spanish>
+		<Portuguese>[H1]Cruzadas[\H1]
+Há dois tipos de Cruzadas: Para a Terra Santa cujo foco é capturar Jerusalém e as de Defesa cujo foco é reconquistar uma cidade perdida por um jogador católico.
+[H2]Cruzadas para a Terra Santa[\H2]
+- De 1000DC em diante, o Papa pode periodicamente formar uma Cruzada para a Terra Santa
+- Uma Cruzada é organizada somente se Jerusalem for controlada por um jogador não-Católico, não-Ortodoxo e não-Independente.
+- Toda nação Católica pode participar nas Cruzadas, enviando algumas tropas ao acaso (defendores de cidades não são enviados, mas outras unidades são)
+- Cavaleiros Teutônicos e Templários tem grandes chances de ir às Cruzadas, e Cavaleiros em geral são mais chamados que Arqueiros
+- Todos os participantes podem votar no l&#237;der da Cruzada, onde os candidatos são escolhidos por seu valor de Pontos de Fé, tamanho do Império e boas relações com o Papa
+- O L&#237;der escolhido declara guerra em quem possuir Jerusalem e poucos turnos depois recebe um destacamento de tropas perto da cidade
+- O primeiro jogador Católico que capturar Jerusalem (com ou sem uma Cruzada) ganha uma Era de Ouro e um incremento na estabilidade e na fé.
+- Recusar participar na Cruzada diminui seus pontos de fé e relações com o Papa
+- Algumas vezes, as Cruzadas podem ser desviadas para não ir a Jerusalém, e sim à capital de uma nação não-Católica
+- O jogador Católico mais rico ganha a oportunidade de desviar a Cruzada por uma determinada quantia em dinheiro
+- Se alguém usa dinheiro para desviar a Cruzada, ela ainda pode ser feita a Jerusalém
+- A Reforma faz a Igreja Católica virar-se para suas próprias questões internas, e então para de fazer novas Cruzadas à Terra Santa
+[H2]Cruzadas Defensivas[\H2]
+- Se há um jogador não-Católico e não-Ortodoxo controlando uma cidade no mapa de guerra de uma nação Católica, uma Cruzada defensiva pode ser organizada
+- Se o jogador Católico está em guerra com aquele que controla tal cidade, e se o jogador Católico possui boas relações com o Papa, o jogador Católico ganha a oportunidade de uma Cruzada Defensiva
+- Uma Cruzada Defensiva significa que algumas unidades vão surgir na capital do jogador Católico
+- Cruzadas Defensivas custam Pontos de Fé
+- Pontos de Fé podem ser recuperados conquistando as cidades do outro jogador e convertendo-as ao Catolicismo
+[H2]Cruzadas e jogadores não-Católicos[\H2]
+[PARAGRAPH:2]Se você é um jogador Islâmico, prepare-se para os Cruzados. Seja lutando contra a Reconquista, defendendo Jerusalém ou conquistando a Hungria, Cruzados virão visitá-lo. Encontre-os de frente.Uma forte Fé Islâmica ajudará você a treinar mais unidades e derrotar os Cruzados.
+[PARAGRAPH:2]O Juda&#237;smo não foi desenvolvido para ser a religião estatal de ninguém, porém é vulnerável às Cruzadas da mesma forma que o Islã.
+[PARAGRAPH:2]Jogadores Ortodoxos são geralmente imunes a Cruzadas, mas fique atento com Baldu&#237;no I, VI e IX (todos os números referem-se à mesma pessoa).Cruzados podem sempre ficar gananciosos e atacar você por razões puramente economicas.
+[PARAGRAPH:2]A Reforma termina as Cruzadas para a Terra Santa, porém se você está em guerra com uma nação Católica, você ainda pode sofrer uma Cruzada Defensiva.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_STABILITY_GUIDE</Tag>
@@ -475,7 +529,7 @@ Há dois tipos de Cruzadas: Para a Terra Santa cujo foco é capturar Jerusalém e a
 		<French></French>
 		<German>Stabilitätsratgeber</German>
 		<Italian></Italian>
-		<Spanish></Spanish>
+		<Spanish>Gu&#237;a de estabilidad</Spanish>
 		<Portuguese>Guia de Estabilidade</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -523,15 +577,15 @@ Or you get a minor bonus to your stability in case you successfully complete one
 
 [BOLD]Cities[\BOLD]
 [TAB]Entering a war: -1
-[TAB]Building a courthouse: +1
+[TAB]Building a [LINK=BUILDING_COURTHOUSE]courthouse[\LINK]: +1
 [TAB]After AI collapse date: -1 stability every 4 turns up to a total of -15 stability
 
 [BOLD]Civics[\BOLD]
-[TAB]Building a nightwatch: +1
+[TAB]Building a [LINK=BUILDING_NIGHT_WATCH]nightwatch[\LINK]: +1
 [TAB]Being in anarchy: 0, -1 or -2 for each turn, based on city number (0 for Prussia)
 
 [BOLD]Expansion[\BOLD]
-[TAB]Building a castle: +1
+[TAB]Building a [LINK=BUILDING_CASTLE]castle[\LINK]: +1
 [TAB]Founding a city
 [TAB][TAB]in a core province: +1
 [TAB][TAB]in a contested province: -1
@@ -550,7 +604,7 @@ Or you get a minor bonus to your stability in case you successfully complete one
 [TAB]Building a colony: -2 (-1 with Colonialism)
 
 [BOLD]Economy[\BOLD]
-[TAB]Building a manor house: +1
+[TAB]Building a [LINK=BUILDING_MANOR_HOUSE]manor house[\LINK]: +1
 [TAB]Founding a corporation: -2
 [TAB]Researching certain techs: -1
 [TAB][TAB](Feudalism, Guilds, Machinery, Aristocracy, Nationalism,
@@ -600,7 +654,7 @@ Or you get a minor bonus to your stability in case you successfully complete one
 
 [BOLD]Civics[\BOLD]
 [TAB]Feudal Monarchy with
-[TAB][TAB]the Stephansdom wonder: +2
+[TAB][TAB]the [LINK=BUILDING_STEPHANSDOM]Stephansdom[\LINK] wonder: +2
 [TAB][TAB]Feudal Law: +3
 [TAB]Divine Monarchy with
 [TAB][TAB]the Stephansdom wonder: +2
@@ -668,7 +722,178 @@ Or you get a minor bonus to your stability in case you successfully complete one
 		<French></French>
 		<German></German>
 		<Italian></Italian>
-		<Spanish></Spanish>
+		<Spanish>[H1]Gu&#237;a de estabilidad para RFCE:[\H1]
+[BOLD]La ventana F2[\BOLD]
+[PARAGRAPH:1]En la ventana-F2 puedes ver las cuatros principales categor&#237;as de estabilidad: ciudades, principios, econom&#237;a, expansi&#243;n y la quinta categor&#237;a especial oscilaci&#243;n.[PARAGRAPH:1]Las categor&#237;as principales tienen dos valores: el de la izquierda es la suma de todos los modificadores permanentes y el de la derecha es un valor calculado cada turno. La categor&#237;a oscilaci&#243;n s&#243;lo tiene un valor que representa efectos de corta duraci&#243;n. La mayor parte del tiempo, el valor de la misma deber&#237;a ser 0.[PARAGRAPH:1]Todos los valores son sumados para dar el valor de estabilidad total, o simplemente estabilidad (el valor que puede verse en la pantalla principal). Al final del d&#237;a, este es el valor que importa.
+
+[BOLD]Las dos formas en que es calculada[\BOLD]
+[PARAGRAPH:1]Existen dos formas paralelas de calcular la estabilidad; basada en eventos y basada en estado.
+Se pod&#237;a decir que los modificadores basados en estados ven tu estado actual (ej: n&#250;mero total de ciudades) y las basadas en eventos ven como llegaste hasta ah&#237; (ej: fundaste una ciudad o la conquistaste).
+
+[BOLD]Modificadores basados en estado[\BOLD][PARAGRAPH:1]Los modificadores por estado deben ser actualizados cada cierto tanto. Esto ocurre cada turno, cada tres turno o cuando un cambio evidente a ocurrido (ej: fundar una ciudad cambia el n&#250;mero total de ciudades e inicia un recalculo). Puesto que s&#243;lo revisa el estado actual desde cero, los valores anteriores no necesitan ser recordados. Esto significa que si un error ocurre, &#233;ste no puede acumularse y el efecto del mismo es limitado. Este tipo de modificadores son dif&#237;ciles de rastrear puesto que todas las variables involucradas son calculadas a las vez.
+
+[BOLD]Modificadores basados en eventos[\BOLD][PARAGRAPH:1]Los modificadores basados por evento no pueden ser calculados cada vez desde cero, por lo que deben ser recordados. Esto se logra guardando un &#250;nico numero para cada categor&#237;a, el cual representa la suma de todos los modificadores ocurridos hasta la fecha. Esto significa que estos modificadores son permanentes y acumulativos, con el efecto secundario que los errores tambi&#233;n pueden acumularse. Puesto que un &#250;nico n&#250;mero es guardado por categor&#237;a, es imposible decir cuan a menudo un evento determinado ha sucedido y por tanto, no es posible limitar el efecto total de un &#250;nico modificador.
+[TAB]Esto efectos son f&#225;ciles de ver. Simplemente funda, conquista o arrasa una ciudad y mira la ventana F2 para ver como el valor asociado ha cambiado. A veces, m&#225;s de un evento es iniciado a la vez (ej: arrazar una ciudad tambi&#233;n inicia conquistar una ciudad)
+
+[BOLD]Consejos[\BOLD]
+[TAB]La categor&#237;a oscilaci&#243;n s&#243;lo contiene modificadores basados en eventos, a veces con valores bastante altos. No obstante, su valor es partido a la mitad cada turno, por lo que converge r&#225;pidamente a cero. [PARAGRAPH:1]Cabe destacar que grandes cambios en estabilidad suceden cuando tus provincia empeoran su estado. Normalmente, esto ocurre cuando nace una nueva civilizaci&#243;n en o cerca de tu territorio (el primer ejemplo es la aparici&#243;n de los &#225;rabes para Bizancio). [PARAGRAPH:1]Varios eventos especiales y mecanismos hist&#243;ricos pueden afectar tu estabilidad.
+Por ejemplo, en el evento de la reforma: Si eligen permanecer como cat&#243;lico, pierdes los bonos econ&#243;micos y cient&#237;ficos del protestantismo, pero a cambio la contrarreforma podr&#237;a otorgar estabilidad a tu reino. Tambi&#233;n obtienes un peque&#241;o bono de estabilidad cuando completas exitosamente uno de tus UHV.
+
+[H1]Lista de eventos basados en estabilidad:[\H1](Todos permanentes, excepto la estabilidad en oscilaci&#243;n)
+
+[BOLD]Estabilidad base[\BOLD]
+[TAB]Difficultad:
+[TAB][TAB]Virrey: +6
+[TAB][TAB]Monarca: +2
+[TAB][TAB]Emperador: 0
+[TAB]Completar uno de tus UHV: +3
+
+[BOLD]Ciudades[\BOLD]
+[TAB]Entrar en guerra: -1
+[TAB]Construir una [LINK=BUILDING_COURTHOUSE]corte[\LINK]: +1
+[TAB]Tras la fecha de colapso de la IA: -1 por cada 4 turnos, hasta un m&#225;ximo de -15.
+
+[BOLD]Principios[\BOLD]
+[TAB]Construir una [LINK=BUILDING_NIGHT_WATCH]patrulla nocturna[\LINK]: +1
+[TAB]Estar en anarqu&#237;a: 0, -1 &#243; -2 por cada turno, basado en el numero de ciudades
+[TAB](0 para Prusia)
+
+[BOLD]Expansi&#243;n[\BOLD]
+[TAB]Construir un [LINK=BUILDING_CASTLE]castillo[\LINK]: +1
+[TAB]Fundar una ciudad
+[TAB][TAB]en una provincia nuclear (core): +1
+[TAB][TAB]en una provincia disputada: -1
+[TAB][TAB]en una provincia extranjera: -2
+[TAB][TAB]mientras el n&#250;mero total de tus ciudades es menos a 5: +1
+[TAB]Conquistar una ciudad en una provincia hist&#243;rica o nuclear: +1
+[TAB]Conquistar una ciudad con el principio de militarismo: +1
+[TAB]Arrazar una ciudad
+[TAB][TAB]con poblaci&#243;n entre 3-5: -1
+[TAB][TAB]con poblaci&#243;n entre 6-9: -2
+[TAB][TAB]con poblaci&#243;n entre 10+: -3
+[TAB][TAB]Noruega recibe un punto menos de inestabilidad por ciudad arrazada.
+[TAB]Perder una ciudad en una provincia hist&#243;rica o nuclear: -3 (-2 para Escocia)
+[TAB]Perder la capital: -10 (-20 para Bizancio, -5 para Escocia)
+[TAB]Mover el palacio: -2
+[TAB]Construir una colonia: -2 (-1 con colonialismo)
+
+[BOLD]Econom&#237;a[\BOLD]
+[TAB]Construir una [LINK=BUILDING_MANOR_HOUSE]casa solariega[\LINK] (solar): +1
+[TAB]Fundar una corporaci&#243;n: -2
+[TAB]Desarrollar ciertas tecnolog&#237;as: -1
+[TAB][TAB](Feudalismo, gremios, maquinaria, Aristocracia, Nacionalismo,
+[TAB][TAB]servicio civil, p&#243;lvora, ejercito profesional, econom&#237;a)
+
+[BOLD]Oscilaci&#243;n[\BOLD]
+(Si bien estos valores son altos, sus efectos disminuyen a la mitad cada turno)
+[TAB]Estar en anarqu&#237;a: -8 (0 para Prussia)
+[TAB]Inquisici&#243;n exitosa: -3 (0 para Espa&#241;a)
+[TAB]Entrar en una guerra: -3
+[TAB]Arrazar una ciudad: -3 (0 para Noruega)
+[TAB]Mejoras propias fueron saqueadas: -2 por mejora.
+[TAB]Mover el palacio: -5
+[TAB]Conquistar una ciudad en una provincia hist&#243;rica o nuclear: +3
+[TAB]Perder una ciudad en una provincia hist&#243;rica o nuclear: -4 (-2 para Escocia)
+[TAB]Perder una ciudad en una provincia disputada o extranjera: -2 (-1 para Escocia)
+[TAB]Perder la capital: -10 (-20 para Bizancio, -5 para Escocia)
+
+[H1]Lista de modificadores basados en estado:[\H1]
+(Din&#225;micos, calculados cada turno)
+
+[BOLD]Ciudades[\BOLD]
+[TAB]Por una felicidad promedio de al menos k: +k
+[TAB]Por una salubridad promedio de al menos k: +k
+[TAB]Al menos 10% de hast&#237;o b&#233;lico en promedio (en tus k ciudades): -k/3 - 1
+[TAB][TAB]Por tanto: -1 con 1-2 ciudades, -2 con 3-5, -3 con 6-8, etc.
+[TAB]Por un contador de inquisici&#243;n (nacional) de al menos 3k+1: -k-1
+[TAB][TAB]Por tanto: -1 con 1-3 puntos, -2 con 4-6 puntos, -3 con 7-9 puntos, etc.
+[TAB][TAB]Una inquisici&#243;n exitosa agrega 8 puntos al contador (4 para Espa&#241;a)
+[TAB][TAB]Una inquisici&#243;n fallida agrega 4 puntos al contador (2 para Espa&#241;a)
+[TAB][TAB]El contador de inquisici&#243;n disminuye en 1 punto cada turno.
+[TAB]Por cada ciudad que
+[TAB][TAB]es insalubre: -1
+[TAB][TAB]es infeliz (tiene al menos un ciudadano enfadado): -2
+[TAB][TAB]tiene [ICON_RELIGION] no oficial: -2 (0 para Polonia, -1 para los Otomanos)
+[TAB][TAB]tiene [ICON_RELIGION] no oficial bajo Paganismo: -1 (0 para Polonia)
+[TAB][TAB]por cada [ICON_RELIGION] no oficial despu&#233;s de la primera: -1 (0 para Polonia)
+[TAB][TAB]cualquier n&#250;mero de [ICON_RELIGION] bajo Tolerancia Religiosa: 0
+[TAB][TAB]tiene un distrito jud&#237;o con penalidades religiosas presentes: +1
+[TAB][TAB]tiene [ICON_UNHAPPY] producto de acelerar producci&#243;n: -1
+[TAB][TAB]tiene [ICON_UNHAPPY] producto de falta de presencia militar: -1
+[TAB][TAB]tiene [ICON_UNHAPPY] producto de principios religiosos: -1 (0 para Poland)
+[TAB][TAB]tiene menos de 40% de tu propia cultura: -1 (0 para Hungr&#237;a)
+[TAB][TAB]tiene menos de 20% de tu propia cultura: -2 (0 para Hungr&#237;a)
+[TAB]Bono de estabilidad por puntos de fe ortodoxos: +1 por cada 10 puntos
+[TAB]Mientras est&#233;s en edad de oro: +8
+
+[BOLD]Principios[\BOLD]
+[TAB]Monarqu&#237;a feudal con
+[TAB][ICON_BULLET]la maravilla [LINK=BUILDING_STEPHANSDOM]Stephansdom[\LINK]: +2
+[TAB][ICON_BULLET]Ley feudal: +3
+[TAB]Monarqu&#237;a divina con
+[TAB][TAB]la maravilla Stephansdom: +2
+[TAB][TAB]Paganismo: -4
+[TAB][TAB]Religi&#243;n estatal: +2
+[TAB][TAB]Teocracia: +3
+[TAB][TAB]Religi&#243;n organizada: +4
+[TAB][TAB]Tolerancia religiosa: -3
+[TAB][TAB]Ley religiosa: +2
+[TAB]Monarqu&#237;a constitucional con
+[TAB][TAB]la maravilla Stephansdom: +2
+[TAB][TAB]Ley com&#250;n: +3
+[TAB][TAB]Campesinos libres: +2
+[TAB][TAB]Trabajo libre: +2
+[TAB]Merchant Republic with
+[TAB][TAB]Ley feudal: -3
+[TAB][TAB]Econom&#237;a de mercado: +4
+[TAB][TAB]Ley com&#250;n: +3
+[TAB][TAB]Campesinos libres: +2
+[TAB][TAB]Trabajo libre: +2
+[TAB][TAB]Imperialism: -2
+[TAB]Rep&#250;blica mercante con k ciudades: 5-k (0 con 5 ciudades)
+[TAB][TAB]Venecia recibe la mitad de las penalidades normales ( [BOLD](5-k)/2[\BOLD], si k>5)
+[TAB]Ley feudal con
+[TAB][TAB]Servidumbre: +3
+[TAB][TAB]Manorialism: +2
+[TAB][TAB]Campesinos libres: -4
+[TAB][TAB]Vasallaje: +2
+[TAB]Burocracia con k ciudades: 6-k (0 con 6 ciudades)
+[TAB][TAB]Novgorod recibe la mitad de las penalidades normales ( [BOLD](6-k)/2[\BOLD], si k>6)
+[TAB]Servidumbre con
+[TAB][TAB]Manorialism: +2
+[TAB][TAB]Ley com&#250;n: -3
+[TAB]Religious Law with
+[TAB][TAB]Paganismo: -5
+[TAB][TAB]Teocracia: +4
+[TAB][TAB]Tolerancia religiosa: -3
+[TAB]Ley com&#250;n with
+[TAB][TAB]Trabajo libre: +3
+[TAB][TAB]Teocracia: -4
+[TAB]Aprendices con
+[TAB][TAB]Gremios: +3
+
+[BOLD]Expansi&#243;n[\BOLD]
+[TAB]Por cada ciudad propia
+[TAB][TAB]en una provincia extranjera: -5 (-4 con imperialismo)
+[TAB][TAB]en una provincia disputada: -2 (-1 con imperialismo)
+[TAB][TAB]PU franc&#233;s: +1 por cada ciudad en provincias disputadas y extranjeras.
+[TAB]Por cada ciudad extranjera
+[TAB][TAB]en una provincia nuclear: -3 (0 con militarismo)
+[TAB][TAB]en una provincia hist&#243;rica: -1 (0 con militarismo)
+[TAB]Por cada vasallo: +1 (+3 con Vasallaje)
+[TAB]Por ser vasallo de alguien m&#225;s: +8
+[TAB]Penalidad por el n&#250;mero de ciudades (con k ciudades): -(k*k)/40
+[TAB][TAB]Por tanto, 0 con menos de 7 ciudades,
+[TAB][TAB]-1 con 7 y 8 ciudades, -2 con 9 y 10 ciudades, -3 con 11 y 12 ciudades,
+[TAB][TAB] -4 con 13 y 14 ciudades, -5 con 15 ciudades,
+[TAB][TAB]-1 por ciudad despu&#233;s de la 15va, -2 por ciudad despu&#233;s de la 31va
+[TAB]Los Otomanos y Moscovia reciben 5 ciudades adicionales libre de penalidades.
+
+[BOLD]Econom&#237;a[\BOLD]
+[TAB]Estabilidad industrial de tu imperio: entre -3 y +3
+[TAB][TAB]Basado en tu desarrollo agr&#237;cola, productivo e industrial.
+[TAB]Estabilidad financiera de tu imperio: entre -4 y +4
+[TAB][TAB]Basado en tus finanzas, comercio, inflaci&#243;n y desarrollo econ&#243;mico.</Spanish>
 		<Portuguese>[H1]Lista dos modificadores por evento / estabilidade permanente:[\H1]
 
 [BOLD]Cities[\BOLD]
@@ -677,20 +902,20 @@ construir um fórum +1
 
 
 [BOLD]Civics[\BOLD]
-construir uma vigília noturna +1
+construir uma vig&#237;lia noturna +1
 estar em anarquia max(-3, -numCities/3) (isso se aplica para cada turno em anarquia)
 
 
 [BOLD]Expansion[\BOLD]
 construir um castelo +1
 fundar uma cidade
-- em uma província sólida +1
-- em uma província OK ou instável -2 (0 para Portugal e Escandinávia)
+- em uma prov&#237;ncia sólida +1
+- em uma prov&#237;ncia OK ou instável -2 (0 para Portugal e Escandinávia)
 - enquanto seu número de cidades é menor que 5 +1
-conquistar uma cidade em uma província sólida +1
+conquistar uma cidade em uma prov&#237;ncia sólida +1
 conquistar uma cidade enquanto usar a civic Militarismo +1
 destruir uma cidade -2 (-1 for Norse)
-perder uma cidade em uma província sólida -4
+perder uma cidade em uma prov&#237;ncia sólida -4
 perder a capital -10 (-20 para Bizâncio)
 mover o palácio -3
 construir uma colônia enquanto usar a civic Colonialismo +1
@@ -700,16 +925,16 @@ construir uma colônia enquanto usar a civic Colonialismo +1
 construir um Solar +1
 fundar uma corporação -2
 desenvolver certas tecnologias -1
-(Feudalismo, Corporações de Ofício, Pólvora, Exércitos Profissionalizados, Nacionalismo, Serviço Civil, Economia, Maquinaria, Aristocracia)
+(Feudalismo, Corporações de Of&#237;cio, Pólvora, Exércitos Profissionalizados, Nacionalismo, Serviço Civil, Economia, Maquinaria, Aristocracia)
 
 
 [BOLD]Swing[\BOLD]
 estar em anarquia -8
 entrar em guerra -3
-melhoria própria destruída -2
+melhoria própria destru&#237;da -2
 mover o palácio -5
-conquistar uma cidade em uma província sólida +3
-perder uma cidade em uma província sólida -3
+conquistar uma cidade em uma prov&#237;ncia sólida +3
+perder uma cidade em uma prov&#237;ncia sólida -3
 perder a capital -10
 (nota: esses valores são altos, mas seus efeitos são cortados pela metade todo turno)
 
@@ -794,22 +1019,22 @@ Servidão com
 - Senhorialismo +2
 
 Aprendizagem com
-- Corporações de Ofício +3
+- Corporações de Of&#237;cio +3
 
 
 [BOLD]Expansão[\BOLD]
 para cada cidade própria em
-- uma província instável -3
-- uma província OK -1
+- uma prov&#237;ncia instável -3
+- uma prov&#237;ncia OK -1
 
-com Imperialismo +1 para cada cidade em uma província não sólida (até um máximo de +6) 
+com Imperialismo +1 para cada cidade em uma prov&#237;ncia não sólida (até um máximo de +6) 
 (com a França +2 por cidade a um máximo de +12)
 
 para cada cidade estrangeira em 
-- uma província central -3
-- uma província normal -1
-(note que províncias centrais e normais são ambas denominadas sólidas no jogo)
-(essas penalidades não se aplicam se a civilização estiver usando a civic militarismo ou não tenha possuído uma cidade na determinada província pelo menos uma vez)
+- uma prov&#237;ncia central -3
+- uma prov&#237;ncia normal -1
+(note que prov&#237;ncias centrais e normais são ambas denominadas sólidas no jogo)
+(essas penalidades não se aplicam se a civilização estiver usando a civic militarismo ou não tenha possu&#237;do uma cidade na determinada prov&#237;ncia pelo menos uma vez)
 
 para cada vassalo +1 (+3 com vassalagem)
 
