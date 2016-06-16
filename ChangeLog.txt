@@ -83,6 +83,11 @@ Changes for RFCE 1.5:
 		- Cottages can be built on Moorland, Semidesert and Tundra tiles too, but fresh water doesn't enable them automatically
 		- Cottages no longer need at least 1 base food on the tile, so they can be built on most Hills
 
+	Map updates:
+		- Replaced all previous lakes with the new Salt Lakes and Fresh Water Lakes
+		- Various resource and terrain rearrangements in Ireland
+		- Updated Egypt with the new Semidesert terrain, increased chance for AI settling Damietta
+
 	General changes:
 		- Added new function which only counts resources inside cultural borders
 		- Both the Novgorod Fur UHV and the Moscow Atlantic Access UHV use this new function
