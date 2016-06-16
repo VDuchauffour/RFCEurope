@@ -102,7 +102,8 @@ Changes for RFCE 1.5:
 		- Culture in cities is now also taken into account when choosing the city for secession (not the amount, but your cultural percentage, so the nationality of the population there)
 		- So cities with low own culture has more chance to be chosen if there is a secession - my intention with this is to add more chance for your recently acquired cities
 		- Bonuses on small islands without a city are also connected to the trade network if both their improvement and a road are built on the plot
-		- Various fixes and updates in the Civilopedia by Arcangelus
+		- Aragonese UB: Consulate of the Sea (instead of Seaport), Prussian UB: Volksschule (instead of Public School), Bulgarian UB: Stan (instead of Bulgarian Stan)
+		- Spanish translations, also various fixes and updates in the Civilopedia by Arcangelus
 		- New Civilopedia text for some buildings and units by Arcangelus
 		- Improvements (both text and formatting) in the Concepts page in the Civilopedia
 

@@ -1414,7 +1414,7 @@ class Victory:
 			else:
 				pAragon.setUHV( 0, 0 )
 
-		# UHV 2: Have 12 seaports in 1444
+		# UHV 2: Have 12 Consulates of the Sea in 1444
 		if ( iGameTurn == xml.i1444AD ):
 			iPorts = pAragon.countNumBuildings(xml.iAragonSeaport)
 			print("Ports:",iPorts)
