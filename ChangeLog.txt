@@ -68,6 +68,7 @@ Changes for RFCE 1.5:
 		- Revised collapse rules from bad stability for the human player, now it has a lower chance to happen generally (still very dangerous, but reaches 100% chance much slower)
 		- Reduced overall impact of unhappiness from religious civics on city instability
 		- Reduced foreign culture instability if you run the Subjugation Civic (-1 with less than 20%, 0 otherwise)
+		- Fixed mistake in religious stability calculations when Judaism is your State Religion
 
 	Terrain updates:
 		- New base terrain: Semidesert - 1 production, +1 commerce near rivers, city founding only possible near fresh water
@@ -87,6 +88,15 @@ Changes for RFCE 1.5:
 		- Replaced all previous lakes with the new Salt Lakes and Fresh Water Lakes
 		- Various resource and terrain rearrangements in Ireland
 		- Updated Egypt with the new Semidesert terrain, increased chance for AI settling Damietta
+		- Lake Tuz and the Dead Sea now take 2 tiles, added Sea of Galilee
+		- A few additional tiles in Lake Ladoga and Lake Onega, added Islands feature to both lakes
+		- Removed the misplaced 1 tile lake from the south of Onega, revised placement of northern Russian lakes
+		- Revised all Finnish Lakes, Saimaa and Paijanne have better placement, also moved around a couple smaller lakes
+		- Revised rivers in Finland, in Norway, longer Jordan river in the Levant
+		- Changed Limfjord in Denmark to be an actual Coast Sea tile instead of a lake
+		- Added inland Coast Sea tile near Trondheim/Nidaros to represent the huge fjords in the area
+		- Added Islands features south of Bergen, west of Nidaros, on the Finnish coastline
+		- Terrain and resource rearrangement in Norway, in north Sweden and in Finland
 
 	General changes:
 		- Added new function which only counts resources inside cultural borders
@@ -106,6 +116,18 @@ Changes for RFCE 1.5:
 		- Spanish translations, also various fixes and updates in the Civilopedia by Arcangelus
 		- New Civilopedia text for some buildings and units by Arcangelus
 		- Improvements (both text and formatting) in the Concepts page in the Civilopedia
+		- Enabled coast tiles in a diagonal position from actual seas to become normal coast tiles instead of lakes, representing fjords
+		- Naval units cannot enter lake tiles (neither freshwater nor salt) or forts, but they can enter fjords
+		- Settling on a hamlet improvement results in a free granary in your cities
+		- Settling on a village or town improvement results in a free granary and an additional starting population
+		- Mines get +1 commerce after researching Replaceable Parts
+		- Sulphur yields less production with mines, some of the precious resources yield 1 less commerce with mines
+		- Switched early naval buildings' tech tree position: Harbor with Astrolabe, Lighthouse with Cartography
+		- Trading Post replaces Harbor (instead of Lighthouse), free Navigation 1 promotion for all naval units, +1 commerce
+		- Feitoria replaces Lighthouse (instead of Harbor), +1 commerce on all water tiles, prebuilt in all newly founded cities with Astronomy
+		- Consulate of the Sea replaces Lighthouse (as before, but now in it's new position), also now it enables 1 merchant specialist
+		- Venice, Genoa and Aragon starts with Harbor in their cities
+		- Venetian Arsenal available earlier, moved to Clockmaking from Optics
 
 	Bugfixes:
 		- Fixed strange visibility area for the Ottomans
@@ -113,6 +135,9 @@ Changes for RFCE 1.5:
 		- Fixed bug which enabled some specific AI wars to be declared even when there was an active peace
 		- Fixed messed up order of colony names on the Colony Screen tab under the Info Screen
 		- Fixed bug with terrain layer orders, thus corrected some blending mistakes when joining some terrain types together
+		- Fixed bug with city resistance timer on multiple persecutions in the same turn
+		- Fixed oversight where the Arabian UP could be used with Judaism, thus enabled spreading the minor religion
+		- Fixed bug with free walls: Morocco gets a free Kasbah instead of walls when founding cities on a fort improvement
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

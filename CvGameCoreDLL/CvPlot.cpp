@@ -1411,8 +1411,8 @@ bool CvPlot::isLake() const
 {
 	CvArea* pArea = area();
 
-	// Absinthe: Smaller Seas in Europe
-	int saltLakePlots[9][2] = {
+	// Absinthe: Smaller Seas and bigger Fjords in Europe
+	int saltLakePlots[11][2] = {
 	{88,  0}, // Red Sea, on both sides of the Sinai-peninsula
 	{88,  1},
 	{89,  0},
@@ -1422,9 +1422,11 @@ bool CvPlot::isLake() const
 	{79, 23},
 	{80, 23},
 	{81, 23},
+	{55, 59}, // Limfjord, Denmark
+	{58, 71}, // Trondheimsfjord, Norway
 	};
 
-	for (int i = 0; i < 9; i++) {
+	for (int i = 0; i < 11; i++) {
 		if (getX() == saltLakePlots[i][0] && getY() == saltLakePlots[i][1])
 			return false;
 	}

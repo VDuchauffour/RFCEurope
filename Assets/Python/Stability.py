@@ -566,7 +566,9 @@ class Stability:
 			if ( iCivic4 != xml.iCivicFreeReligion ): # if not in the Religious Tolerance civic
 				if ( not gc.hasUP( iPlayer, con.iUP_ReligiousTolerance )): # Polish UP
 					if (pCity.getNumForeignReligions() > 0 ):
-						bJewInstability = True
+						# only calculate if Judaism is not the State Religion
+						if (pPlayer.getStateReligion() != xml.iJudaism):
+							bJewInstability = True
 						if ( iCivic4 == xml.iCivicPaganism ): # Pagans are a bit more tolerant
 							iReligionStability -= 1
 						elif ( iPlayer == con.iTurkey ): # Janissary UP - not necessarily a historical aspect of it, but important for gameplay

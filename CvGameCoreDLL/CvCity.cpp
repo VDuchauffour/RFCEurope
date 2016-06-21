@@ -7341,7 +7341,8 @@ void CvCity::setOccupationTimer(int iNewValue)
 {
 	bool bOldOccupation;
 
-	// Absinthe: revolt changes: already gets reduced values compared to population (based on culture percent for example), but some further decrease for RFCE:
+	// Absinthe: moved revolt reduction to CvPlayer::acquireCity, so it only affects city conquests
+	/*// Absinthe: revolt changes: already gets reduced values compared to population (based on culture percent for example), but some further decrease for RFCE:
 	// so it results in 1 turn of revolt with iNewValue of 1-2, 2 turns with 3-4, 3 turns with 5-6, 4 turns with 7-8, 5 turns with 9+
 	// this more or less corresponds to: 1 turn with 1-2 population, 2 turns with 3-5 population, 3 turns with 6-9 population, 4 turns with 10-14 population, 5 turns with 15+ population
 	if (iNewValue > 8)
@@ -7376,7 +7377,7 @@ void CvCity::setOccupationTimer(int iNewValue)
 			}
 		}
 	}
-	// Absinthe: end
+	// Absinthe: end*/
 
 	if (getOccupationTimer() != iNewValue)
 	{

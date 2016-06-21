@@ -624,22 +624,46 @@ class RiseAndFall:
 		# Absinthe: We can add free buildings for new cities here
 		#			It will add the building every time a city is founded on the plot, not just on the first time
 		if ( (pCity.getX()==56) and (pCity.getY()==35) ): #Venice - early defence boost, the rivers alone are not enough
-			pCity.setHasRealBuilding( xml.iWalls, True )
+			if ( iPlayer == iMorocco ):
+				pCity.setHasRealBuilding( xml.iMoroccoKasbah, True )
+			else:
+				pCity.setHasRealBuilding( xml.iWalls, True )
 		if ( (pCity.getX()==55) and (pCity.getY()==41) ): #Augsburg
-			pCity.setHasRealBuilding( xml.iWalls, True )
+			if ( iPlayer == iMorocco ):
+				pCity.setHasRealBuilding( xml.iMoroccoKasbah, True )
+			else:
+				pCity.setHasRealBuilding( xml.iWalls, True )
 		#if ( (pCity.getX()==41) and (pCity.getY()==52) ): #London			preplaced fort on the map instead of preplaced walls
-		#	pCity.setHasRealBuilding( xml.iWalls, True )
+		#	if ( iPlayer == iMorocco ):
+		#		pCity.setHasRealBuilding( xml.iMoroccoKasbah, True )
+		#	else:
+		#		pCity.setHasRealBuilding( xml.iWalls, True )
 		if ( (pCity.getX()==23) and (pCity.getY()==31) ): #Porto
-			pCity.setHasRealBuilding( xml.iWalls, True )
+			if ( iPlayer == iMorocco ):
+				pCity.setHasRealBuilding( xml.iMoroccoKasbah, True )
+			else:
+				pCity.setHasRealBuilding( xml.iWalls, True )
 		if ( (pCity.getX()==60) and (pCity.getY()==44) ): #Prague
-			pCity.setHasRealBuilding( xml.iWalls, True )
+			if ( iPlayer == iMorocco ):
+				pCity.setHasRealBuilding( xml.iMoroccoKasbah, True )
+			else:
+				pCity.setHasRealBuilding( xml.iWalls, True )
 		#if ( (pCity.getX()==80) and (pCity.getY()==62) ): #Novgorod		preplaced fort on the map instead of preplaced walls
-		#	pCity.setHasRealBuilding( xml.iWalls, True )
+		#	if ( iPlayer == iMorocco ):
+		#		pCity.setHasRealBuilding( xml.iMoroccoKasbah, True )
+		#	else:
+		#		pCity.setHasRealBuilding( xml.iWalls, True )
 		if ( (pCity.getX()==74) and (pCity.getY()==58) ): #Riga
-			pCity.setHasRealBuilding( xml.iWalls, True )
+			if ( iPlayer == iMorocco ):
+				pCity.setHasRealBuilding( xml.iMoroccoKasbah, True )
+			else:
+				pCity.setHasRealBuilding( xml.iWalls, True )
 		if (not gc.getPlayer(iLithuania).isHuman()):
 			if ( (pCity.getX()==75) and (pCity.getY()==53) ): #Vilnius - important for AI Lithuania against Prussia
-				pCity.setHasRealBuilding( xml.iWalls, True )
+				if ( iPlayer == iMorocco ):
+					pCity.setHasRealBuilding( xml.iMoroccoKasbah, True )
+				else:
+					pCity.setHasRealBuilding( xml.iWalls, True )
 
 
 	def onCityAcquired(self, owner, playerType, city, bConquest, bTrade):

@@ -1777,15 +1777,17 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 		if (iTeamCulturePercent < GC.getDefineINT("OCCUPATION_CULTURE_PERCENT_THRESHOLD"))
 		{
-			// 3MiroUP: Occupation
+			// Absinthe: Bulgarian UP: No resistance in conquered cities
 			int iUPR = UniquePowers[getID() * UP_TOTAL_NUM + UP_NO_RESISTANCE];
 			if (  iUPR < 0 )
-				pNewCity->changeOccupationTimer(((GC.getDefineINT("BASE_OCCUPATION_TURNS") + ((pNewCity->getPopulation() * GC.getDefineINT("OCCUPATION_TURNS_POPULATION_PERCENT")) / 100)) * (100 - iTeamCulturePercent)) / 100);
+				// Absinthe: reduced resistance on city conquest
+				pNewCity->changeOccupationTimer(((GC.getDefineINT("BASE_OCCUPATION_TURNS") + ((pNewCity->getPopulation() * GC.getDefineINT("OCCUPATION_TURNS_POPULATION_PERCENT")) / 100)) * (100 - iTeamCulturePercent)) / 100 * 2 / 3);
 			else
 				if ( iUPR == 0 ){
 					pNewCity->changeOccupationTimer(0);
 				}else{
-					pNewCity->changeOccupationTimer( ( ((GC.getDefineINT("BASE_OCCUPATION_TURNS") + ((pNewCity->getPopulation() * GC.getDefineINT("OCCUPATION_TURNS_POPULATION_PERCENT")) / 100)) * (100 - iTeamCulturePercent)) / 100 ) / iUPR );
+					// Absinthe: reduced resistance on city conquest
+					pNewCity->changeOccupationTimer( ( ((GC.getDefineINT("BASE_OCCUPATION_TURNS") + ((pNewCity->getPopulation() * GC.getDefineINT("OCCUPATION_TURNS_POPULATION_PERCENT")) / 100)) * (100 - iTeamCulturePercent)) / 100 * 2 / 3 ) / iUPR );
 				};
 		}
 

@@ -500,7 +500,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-1</iYieldChange>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -511,7 +511,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-1</iYieldChange>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -543,7 +543,7 @@
 					<iDiscoverRand>10000</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>1</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -561,7 +561,16 @@
 			</BonusTypeStructs>
 			<ImprovementPillage/>
 			<ImprovementUpgrade/>
-			<TechYieldChanges/>
+			<TechYieldChanges>
+				<TechYieldChange>
+					<PrereqTech>TECH_REPLACEABLE_PARTS</PrereqTech>
+					<TechYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYields>
+				</TechYieldChange>
+			</TechYieldChanges>
 			<RouteYieldChanges/>
 			<bGraphicalOnly>0</bGraphicalOnly>
 		</ImprovementInfo>
