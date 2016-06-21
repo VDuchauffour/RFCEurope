@@ -391,7 +391,7 @@ class Religions:
 			for i in range(len(apCityList)):
 				pCity = apCityList[i].GetCy()
 				if (pCity.isHasReligion(xml.iJudaism) and not pCity.hasBuilding(xml.iJewishQuarter)):
-					pCity. setHasRealBuilding(xml.iJewishQuarter, True)
+					pCity.setHasRealBuilding(xml.iJewishQuarter, True)
 
 
 	def selectRandomCityAll(self):

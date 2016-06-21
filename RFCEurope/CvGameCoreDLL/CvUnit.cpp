@@ -2458,9 +2458,30 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bo
 	switch (getDomainType())
 	{
 	case DOMAIN_SEA:
+		// Absinthe: naval units can't enter inland lakes
+		if (GC.getTerrainInfo(pPlot->getTerrainType()).isFreshLake() || GC.getTerrainInfo(pPlot->getTerrainType()).isSalineLake())
+		{
+			return false;
+		}
+		// Absinthe: naval unit's can't enter forts (iImprovementFort == 22)
+		if (pPlot->getImprovementType() == 22)
+		{
+			return false;
+		}
+		// Absinthe: can also be solved with isActsAsCity while the forts are the only improvement with this
+		/*ImprovementTypes eImprovement = plot()->getImprovementType();
+		if (eImprovement != NO_IMPROVEMENT)
+		{
+			if (GC.getImprovementInfo(eImprovement).isActsAsCity())
+			{
+				return false;
+			}
+		}
+		*/
+		// Absinthe: naval unit's can still enter coastal cities (no change here)
 		if (!pPlot->isWater())
 		{
-			if (!pPlot->isFriendlyCity(*this, true) || !pPlot->isCoastalLand())
+			if (!pPlot->isFriendlyCity(*this, true) || !pPlot->isCoastalLand()) // if not water, can only enter coastal cities
 			{
 				return false;
 			}

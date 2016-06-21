@@ -366,7 +366,7 @@ class CvRFCEventHandler:
 		if ( iOwner == iPortugal ):
 			self.vic.onCityBuilt(city, iOwner) # needed in Victory.py
 
-		# Absinthe: Free walls if city is built on a fort
+		# Absinthe: Free buildings if city is built on a tile improvement
 		#			The problem is that the improvement is auto-destroyed before the city is founded, and totally separately from this function, thus a workaround is needed
 		#			Solution: getting the coordinates of the last destroyed improvement from a different file in a global variable
 		#			If the last destroyed improvement in the game is a fort, and it was in the same place as the city, then it's good enough for me
@@ -378,10 +378,32 @@ class CvRFCEventHandler:
 		iImpBeforeCityType = (CvEventManager.iImpBeforeCity / 10000) % 100
 		iImpBeforeCityX = (CvEventManager.iImpBeforeCity / 100) % 100
 		iImpBeforeCityY = CvEventManager.iImpBeforeCity % 100
-		print ("coordinates: ", city.getX(), city.getY())
-		#print ("ez van a globalban: ", CvEventManager.iImpBeforeCity, iImpBeforeCityType, iImpBeforeCityX, iImpBeforeCityY)
+		#print ("new city coordinates: ", city.getX(), city.getY())
+		#print ("destroyed improvement values: ", CvEventManager.iImpBeforeCity, iImpBeforeCityType, iImpBeforeCityX, iImpBeforeCityY)
+		# Absinthe: free walls if built on fort
 		if ( iImpBeforeCityType == xml.iImprovementFort and iImpBeforeCityX == city.getX() and iImpBeforeCityY == city.getY() ):
-			city.setHasRealBuilding( xml.iWalls, True )
+			if ( iOwner == iMorocco ):
+				city.setHasRealBuilding( xml.iMoroccoKasbah, True )
+			else:
+				city.setHasRealBuilding( xml.iWalls, True )
+		# Absinthe: free granary if built on hamlet
+		if ( iImpBeforeCityType == xml.iImprovementHamlet and iImpBeforeCityX == city.getX() and iImpBeforeCityY == city.getY() ):
+			if ( iOwner == iCordoba ):
+				city.setHasRealBuilding( xml.iCordobanNoria, True )
+			elif ( iOwner == iPoland ):
+				city.setHasRealBuilding( xml.iPolishFolwark, True )
+			else:
+				city.setHasRealBuilding( xml.iGranary, True )
+		# Absinthe: free granary and +1 population if built on village or town
+		if ( iImpBeforeCityType == xml.iImprovementTown or iImpBeforeCityType == xml.iImprovementVillage):
+			if (iImpBeforeCityX == city.getX() and iImpBeforeCityY == city.getY() ):
+				city.changePopulation(1)
+				if ( iOwner == iCordoba ):
+					city.setHasRealBuilding( xml.iCordobanNoria, True )
+				elif ( iOwner == iPoland ):
+					city.setHasRealBuilding( xml.iPolishFolwark, True )
+				else:
+					city.setHasRealBuilding( xml.iGranary, True )
 
 		# Absinthe: Some initial food for all cities on foundation
 		#			So Leon and Roskilde for example don't lose a population in the first couple turns
