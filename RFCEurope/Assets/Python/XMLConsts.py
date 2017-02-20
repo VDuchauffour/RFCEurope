@@ -52,6 +52,7 @@ i962AD = 121	# HRE founded
 i966AD = 122											# Spawn of Poland
 i970AD = 123
 i972AD = 124
+i983AD = 128
 i987AD = 129
 i988AD = 129
 i1000AD =133	# Start of the Defensive Crusades
@@ -243,8 +244,8 @@ iNumTechsFuture = 1
 
 #Units: initialize unit variables to unit indices from XML
 
-iNumUnits = 133
-(iSettler, iWorker, iExecutive1, iExecutive2, iExecutive3, iExecutive4, iExecutive5, iExecutive6, iExecutive7, iCatholicMissionary,
+iNumUnits = 126
+(iSettler, iWorker, iCatholicMissionary,
 iOrthodoxMissionary, iProtestantMissionary, iIslamicMissionary, iArcher, iCrossbowman, iArbalest, iGenoaBalestrieri, iLongbowman, iEnglishLongbowman, iSpearman,
 iGuisarme, iAragonAlmogavar, iScotlandSheltron, iPikeman, iHolyRomanLandsknecht, iAxeman, iVikingBeserker, iSwordsman, iDenmarkHuskarl, iLongSwordsman,
 iKnightofStJohns, iMaceman, iPortugalFootKnight, iLithuanianBajoras, iNovgorodUshkuinik, iGrenadier, iNetherlandsGrenadier, iArquebusier, iMusketman, iSwedishKarolin,
@@ -260,7 +261,7 @@ iNubianLongbowman, iBedouin, iTurcomanHorseArcher, iMamlukHeavyCavalry, iSouthSl
 iSeljukSwordsman, iSeljukFootman, iSeljukGuisarme) = range(iNumUnits)
 
 #From the CIV4UnitClassInfos.xml
-iProsecutorClass = 58
+iProsecutorClass = 51
 
 lMercsOnly = [iCondottieri, iReiter, iBohemianWarWagon, iCorsair, iCrimeanTatarRider, iDonCossack, iDoppelsoldner, iHackapell, iHighlander, iHighlanderGun,
 iIrishBrigade, iLipkaTatar, iLombardHeavyFootman, iMamlukHeavyCavalry, iNubianLongbowman, iNaffatun, iSouthSlavVlastela, iStradiot, iSwissPikeman, iSwissGun,
@@ -302,7 +303,6 @@ iNationalEpic, iTriumphalArch) = range(iNumBuildings)
 iGreatPalace = iSummerPalace
 iPlague = iNumBuildings
 iNumBuildingsPlague = iNumBuildings+1
-iNumCorporations = 7 # to mark Genoa's UHV as false
 
 
 #Projects, Colonies
@@ -453,6 +453,31 @@ lRegionItaly		= [ iP_Lombardy, iP_Liguria, iP_Verona, iP_Tuscany, iP_Latium, iP_
 lRegionSwiss		= [ iP_Bavaria, iP_Austria, iP_Swabia, iP_Burgundy, iP_Lorraine, iP_Champagne, iP_Provence, iP_Lombardy, iP_Liguria, iP_Verona, iP_Franconia, iP_Bohemia ]
 # Hungarian UHV most territory in Europe:
 lNotEurope			= [ iP_Oran, iP_Algiers, iP_Ifriqiya, iP_Cyrenaica, iP_Tripolitania, iP_Tetouan, iP_Morocco, iP_Marrakesh, iP_Fez, iP_Sahara, iP_Egypt, iP_Antiochia, iP_Syria, iP_Lebanon, iP_Arabia, iP_Jerusalem, iP_Colonea, iP_Charsianon, iP_Cilicia, iP_Armeniakon, iP_Anatolikon, iP_Paphlagonia, iP_Thrakesion, iP_Opsikion ]
+
+
+#Companies
+
+iNumCompanies = 9
+(iHospitallers, iTemplars, iTeutons, iHansa, iMedici, iAugsburg, iStGeorge, iDragon, iCalatrava) = range(iNumCompanies)
+#Dates:		1096	1096	1096	1358	1397	1487	1407	1408	1164
+#			n/a		1312	n/a		1669	1499	n/a		1805	n/a		1838
+tCompaniesBirth = (165, 165, 165, 252, 266, 295, 269, 269, 188)
+tCompaniesDeath = (500, 237, 500, 385, 300, 500, 500, 500, 500) # maybe add a couple extra turns for Templars and Medici?
+tCompaniesLimit = (3, 4, 3, 6, 4, 4, 3, 5, 5) # note that we have a modified limit for Hospitallers and Teutons after the Crusades
+
+# Companies will only settle in their preferred regions
+lCompanyRegions = [
+[iP_Antiochia, iP_Lebanon, iP_Jerusalem, iP_Cyprus, iP_Egypt, iP_Rhodes, iP_Malta, iP_Sicily, iP_Latium, iP_Calabria, iP_Apulia],
+[iP_Antiochia, iP_Lebanon, iP_Jerusalem, iP_Cyprus, iP_Egypt, iP_IleDeFrance, iP_Orleans, iP_Burgundy, iP_Champagne, iP_Lorraine, iP_Provence, iP_Normandy],
+[iP_Antiochia, iP_Lebanon, iP_Jerusalem, iP_Cyprus, iP_Egypt, iP_Transylvania, iP_Prussia, iP_Livonia, iP_Estonia, iP_Pomerania, iP_Brandenburg],
+[iP_Saxony, iP_Brandenburg, iP_Holstein, iP_Denmark, iP_Skaneland, iP_Prussia, iP_Livonia, iP_Estonia, iP_Pomerania, iP_Netherlands, iP_Gotaland, iP_Gotland, iP_Novgorod, iP_Karelia],
+[iP_Tuscany, iP_Lombardy, iP_Verona, iP_Latium, iP_Calabria, iP_Apulia, iP_Dalmatia, iP_Arberia],
+[iP_Bavaria, iP_Swabia, iP_Austria, iP_Bohemia, iP_Moravia, iP_Silesia, iP_Pannonia, iP_UpperHungary, iP_Hungary],
+[iP_Liguria, iP_Lombardy, iP_Tuscany, iP_Latium, iP_Corsica, iP_Sardinia, iP_Sicily, iP_Calabria, iP_Apulia],
+[iP_Hungary, iP_Pannonia, iP_UpperHungary, iP_Transylvania, iP_Slavonia, iP_Dalmatia, iP_Banat, iP_Serbia, iP_Bosnia],
+[iP_GaliciaSpain, iP_Castile, iP_Leon, iP_Lusitania, iP_Catalonia, iP_Aragon, iP_Valencia, iP_Andalusia, iP_Navarre, iP_LaMancha]
+]
+
 
 ## Absinthe: was only needed for the AI regions
 ## these regions are for the map and AI

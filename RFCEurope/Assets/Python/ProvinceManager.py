@@ -230,7 +230,7 @@ tSwedenPot2Norm = [xml.iP_Jamtland,xml.iP_Osterland,xml.iP_Karelia,xml.iP_Estoni
 
 tPrussiaCore = [xml.iP_Prussia]
 tPrussiaNorm = []
-tPrussiaOuter = [xml.iP_Brandenburg,xml.iP_Estonia,xml.iP_Gotland]
+tPrussiaOuter = [xml.iP_Brandenburg,xml.iP_Estonia,xml.iP_Gotland,xml.iP_Lithuania,xml.iP_Suvalkija]
 tPrussiaPot2Core = []
 tPrussiaPot2Norm = [xml.iP_Pomerania,xml.iP_Livonia]
 
@@ -248,7 +248,7 @@ tAustriaPot2Norm = [xml.iP_Bavaria,xml.iP_Silesia,xml.iP_Pannonia,xml.iP_UpperHu
 
 tTurkeyCore = [xml.iP_Opsikion,xml.iP_Thrakesion,xml.iP_Paphlagonia,xml.iP_Anatolikon,xml.iP_Constantinople]
 tTurkeyNorm = [xml.iP_Thrace,xml.iP_Armeniakon,xml.iP_Charsianon,xml.iP_Cilicia]
-tTurkeyOuter = [xml.iP_Thessaly,xml.iP_Epirus,xml.iP_Morea,xml.iP_Arberia,xml.iP_Wallachia,xml.iP_Serbia,xml.iP_Bosnia,xml.iP_Banat,xml.iP_Slavonia,xml.iP_Pannonia,xml.iP_Hungary,xml.iP_Transylvania,xml.iP_Moldova,xml.iP_Crimea,xml.iP_Crete,xml.iP_Cyrenaica,xml.iP_Tripolitania]
+tTurkeyOuter = [xml.iP_Thessaly,xml.iP_Epirus,xml.iP_Morea,xml.iP_Arberia,xml.iP_Wallachia,xml.iP_Serbia,xml.iP_Bosnia,xml.iP_Banat,xml.iP_Slavonia,xml.iP_Pannonia,xml.iP_Hungary,xml.iP_Transylvania,xml.iP_Moldova,xml.iP_Crimea,xml.iP_Crete,xml.iP_Cyrenaica,xml.iP_Tripolitania,xml.iP_Kuban]
 tTurkeyPot2Core = []
 tTurkeyPot2Norm = [xml.iP_Colonea,xml.iP_Antiochia,xml.iP_Syria,xml.iP_Lebanon,xml.iP_Jerusalem,xml.iP_Egypt,xml.iP_Arabia,xml.iP_Macedonia,xml.iP_Thessaloniki,xml.iP_Moesia,xml.iP_Cyprus,xml.iP_Rhodes]
 
@@ -457,7 +457,10 @@ class ProvinceManager:
 		# Prussia direction change
 		if (iGameTurn == xml.i1618AD):
 			pPrussia.setProvinceType( xml.iP_Estonia, iProvinceNone )
+			pPrussia.setProvinceType( xml.iP_Lithuania, iProvinceNone )
+			pPrussia.setProvinceType( xml.iP_Suvalkija, iProvinceNone )
 			pPrussia.setProvinceType( xml.iP_Livonia, iProvinceOuter )
+			pPrussia.setProvinceType( xml.iP_Pomerania, iProvinceNatural )
 			pPrussia.setProvinceType( xml.iP_Brandenburg, iProvinceNatural )
 			pPrussia.setProvinceType( xml.iP_Silesia, iProvincePotential )
 			pPrussia.setProvinceType( xml.iP_GreaterPoland, iProvinceOuter )

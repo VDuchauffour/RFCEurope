@@ -263,6 +263,8 @@ public:
 
 	// Absinthe: start
 	int getProvince();
+	int getProvinceID();
+	void setProvinceID(int iNewValue);
 	// Absinthe: end
 
 private:

@@ -97,7 +97,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ARA2</Tag>
-		<English>If your State Religion is a major religion, it spreads to each newly acquired (founded, conquered, flipped) city and a free Temple is built in the city.</English>
+		<English>If your State Religion is a major religion, it spreads to each newly acquired (founded, conquered, flipped) city and a free Temple is built there.</English>
 		<French>La religion d'Etat se r&#233;pand dans chaque ville avec un temple</French>
 		<German>Verbreitung der Staatsreligion und Errichtung eines Tempels in jeder gegründeten, eroberten oder übergelaufenen Stadt</German>
 		<Italian>La Religione Ufficiale si diffonde in ogni città aquisita, ed un tempio viene costruito automaticamente</Italian>

@@ -77,7 +77,7 @@ void CvDeal::kill(bool bKillTeam)
 			szDealString.clear();
 			GAMETEXT.getDealString(szDealString, *this, getFirstPlayer());
 			szString.Format(L"%s: %s", szCancelString.GetCString(), szDealString.getCString());
-			gDLL->getInterfaceIFace()->addMessage((PlayerTypes)getFirstPlayer(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_DEAL_CANCELLED");
+			gDLL->getInterfaceIFace()->addHumanMessage((PlayerTypes)getFirstPlayer(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_DEAL_CANCELLED");
 		}
 
 		if (GET_TEAM(GET_PLAYER(getSecondPlayer()).getTeam()).isHasMet(GET_PLAYER(getFirstPlayer()).getTeam()))
@@ -85,20 +85,26 @@ void CvDeal::kill(bool bKillTeam)
 			szDealString.clear();
 			GAMETEXT.getDealString(szDealString, *this, getSecondPlayer());
 			szString.Format(L"%s: %s", szCancelString.GetCString(), szDealString.getCString());
-			gDLL->getInterfaceIFace()->addMessage((PlayerTypes)getSecondPlayer(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_DEAL_CANCELLED");
+			gDLL->getInterfaceIFace()->addHumanMessage((PlayerTypes)getSecondPlayer(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_DEAL_CANCELLED");
 		}
 	}
 
 	CLLNode<TradeData>* pNode;
 
-	for (pNode = headFirstTradesNode(); (pNode != NULL); pNode = nextFirstTradesNode(pNode))
+	if (getLengthFirstTrades() > 0) // Absinthe: fixes a rare crash (from edead)
 	{
-		endTrade(pNode->m_data, getFirstPlayer(), getSecondPlayer(), bKillTeam);
+		for (pNode = headFirstTradesNode(); (pNode != NULL); pNode = nextFirstTradesNode(pNode))
+		{
+			endTrade(pNode->m_data, getFirstPlayer(), getSecondPlayer(), bKillTeam);
+		}
 	}
 
-	for (pNode = headSecondTradesNode(); (pNode != NULL); pNode = nextSecondTradesNode(pNode))
+	if (getLengthFirstTrades() > 0) // Absinthe: fixes a rare crash (from edead)
 	{
-		endTrade(pNode->m_data, getSecondPlayer(), getFirstPlayer(), bKillTeam);
+		for (pNode = headSecondTradesNode(); (pNode != NULL); pNode = nextSecondTradesNode(pNode))
+		{
+			endTrade(pNode->m_data, getSecondPlayer(), getFirstPlayer(), bKillTeam);
+		}
 	}
 
 	GC.getGameINLINE().deleteDeal(getID());

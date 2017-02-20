@@ -24,6 +24,7 @@
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_WORKER</DefaultUnit>
 		</UnitClassInfo>
+		<!--
 		<UnitClassInfo>
 			<Type>UNITCLASS_EXECUTIVE_1</Type>
 			<Description>TXT_KEY_UNIT_EXECUTIVE_1</Description>
@@ -87,6 +88,7 @@
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_EXECUTIVE_7</DefaultUnit>
 		</UnitClassInfo>
+		-->
 		<UnitClassInfo>
 			<Type>UNITCLASS_CATHOLIC_MISSIONARY</Type>
 			<Description>TXT_KEY_UNIT_CATHOLIC_MISSIONARY</Description>
@@ -529,7 +531,7 @@
 			<DefaultUnit>UNIT_SPY</DefaultUnit>
 		</UnitClassInfo>
 		<!-- Persecutor's unitclass: it's ordered number is referenced in the XMLConst.py -->
-		<!-- 59th class currently, so iProsecutorClass = 58 -->
+		<!-- 52th class currently, so iProsecutorClass = 51 -->
 		<UnitClassInfo>
 			<Type>UNITCLASS_PROSECUTOR</Type>
 			<Description>TXT_KEY_UNIT_PROSECUTOR</Description>

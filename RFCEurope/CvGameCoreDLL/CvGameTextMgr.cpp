@@ -9860,43 +9860,45 @@ void CvGameTextMgr::setCorporationHelp(CvWStringBuffer &szBuffer, CorporationTyp
 		}
 	}
 
-	std::vector<CorporationTypes> aCompetingCorps;
-	bFirst = true;
-	for (int iCorporation = 0; iCorporation < GC.getNumCorporationInfos(); ++iCorporation)
-	{
-		if (iCorporation != eCorporation)
-		{
-			bool bCompeting = false;
+	// Absinthe: Dynamic companies - no competition
+	// std::vector<CorporationTypes> aCompetingCorps;
+	// bFirst = true;
+	// for (int iCorporation = 0; iCorporation < GC.getNumCorporationInfos(); ++iCorporation)
+	// {
+		// if (iCorporation != eCorporation)
+		// {
+			// bool bCompeting = false;
 
-			CvCorporationInfo& kLoopCorporation = GC.getCorporationInfo((CorporationTypes)iCorporation);
-			for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
-			{
-				if (kCorporation.getPrereqBonus(i) != NO_BONUS)
-				{
-					for (int j = 0; j < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++j)
-					{
-						if (kLoopCorporation.getPrereqBonus(j) == kCorporation.getPrereqBonus(i))
-						{
-							bCompeting = true;
-							break;
-						}
-					}
-				}
+			// CvCorporationInfo& kLoopCorporation = GC.getCorporationInfo((CorporationTypes)iCorporation);	
+			// for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+			// {
+				// if (kCorporation.getPrereqBonus(i) != NO_BONUS)
+				// {
+					// for (int j = 0; j < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++j)
+					// {
+						// if (kLoopCorporation.getPrereqBonus(j) == kCorporation.getPrereqBonus(i))
+						// {
+							// bCompeting = true;
+							// break;
+						// }
+					// }
+				// }
 
-				if (bCompeting)
-				{
-					break;
-				}
-			}
+				// if (bCompeting)
+				// {
+					// break;
+				// }
+			// }
 
-			if (bCompeting)
-			{
-				CvWString szTemp = CvWString::format(L"<link=literal>%s</link>", kLoopCorporation.getDescription());
-				setListHelp(szBuffer, gDLL->getText("TXT_KEY_CORPORATION_COMPETES").c_str(), szTemp.GetCString(), L", ", bFirst);
-				bFirst = false;
-			}
-		}
-	}
+			// if (bCompeting)
+			// {
+				// CvWString szTemp = CvWString::format(L"<link=literal>%s</link>", kLoopCorporation.getDescription());
+				// setListHelp(szBuffer, gDLL->getText("TXT_KEY_CORPORATION_COMPETES").c_str(), szTemp.GetCString(), L", ", bFirst);
+				// bFirst = false;
+			// }
+		// }
+	// }
+	// Absinthe: Dynamic companies end
 }
 
 void CvGameTextMgr::setCorporationHelpCity(CvWStringBuffer &szBuffer, CorporationTypes eCorporation, CvCity *pCity, bool bCityScreen, bool bForceCorporation)
@@ -12771,6 +12773,13 @@ void CvGameTextMgr::buildCityBillboardIconString( CvWStringBuffer& szBuffer, CvC
 				szBuffer.append(CvWString::format(L"%c", gDLL->getSymbolID(TRADE_CHAR)));
 			}
 		}
+
+		// Absinthe: Plague icon on the city billboard
+		if (pCity->isHasRealBuilding((BuildingTypes)BUILDING_PLAGUE))
+		{
+			szBuffer.append(CvWString::format(L"%c", gDLL->getSymbolID(PLAGUE_CHAR)));
+		}
+		// Absinthe: end
 	}
 
 	// religion icons

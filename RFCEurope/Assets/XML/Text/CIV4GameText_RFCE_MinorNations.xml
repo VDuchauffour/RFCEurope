@@ -321,6 +321,15 @@
 		<Portuguese>Berbers</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_VISIGOTHS</Tag>
+		<English>Visigoths</English>
+		<French>Visigoths</French>
+		<German>Visigoths</German>
+		<Italian>Visigoths</Italian>
+		<Spanish>Visigoths</Spanish>
+		<Portuguese>Visigoths</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_BARBARY_PIRATES</Tag>
 		<English>Barbary Pirates</English>
 		<French>Barbary Pirates</French>
@@ -382,6 +391,15 @@
 		<Italian>Calmucchi</Italian>
 		<Spanish>Kalmyks</Spanish>
 		<Portuguese>Kalmyks</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_NAMES_WENDS</Tag>
+		<English>Wends</English>
+		<French>Wends</French>
+		<German>Wends</German>
+		<Italian>Wends</Italian>
+		<Spanish>Wends</Spanish>
+		<Portuguese>Wends</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_SERBS</Tag>

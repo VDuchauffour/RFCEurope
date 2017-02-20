@@ -434,6 +434,8 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 
 		tList = self.getSortedList( gc.getNumReligionInfos(), gc.getReligionInfo )
 		self.displayTopics(tList, WidgetTypes.WIDGET_PEDIA_JUMP_TO_RELIGION, gc.getReligionInfo)
+
+
 	def placeCorporations(self):
 
 		tList = self.getSortedList( gc.getNumCorporationInfos(), gc.getCorporationInfo )

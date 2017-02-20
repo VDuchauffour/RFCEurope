@@ -17,7 +17,7 @@
 
 #define MAX_COM_SHRINE			(20)
 
-// 3Miro: Hard-coding things in the C++ makes the mod very ridgit. We should use XML and Python to set the variables here
+// 3Miro: Hard-coding things in the C++ makes the mod very rigid. We should use XML and Python to set the variables here
 // this was needed for the Dynamic Civ Names, but not anymore (DCN is messed up code)
 /*#define BURGUNDY				(0)
 #define BYZANTIUM				(1)
@@ -158,7 +158,8 @@ extern int NUM_ALL_PLAYERS_B;
 extern int SETTLER_OFFSET;
 
 extern int MAX_NUM_TECHS;
-extern int NUM_BUILDINGS;
+extern int NUM_BUILDINGS; // Plague is the last "building"
+#define BUILDING_PLAGUE			(NUM_BUILDINGS-1)
 
 extern int *startingTurn;
 
