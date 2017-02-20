@@ -203,8 +203,11 @@ class Plague:
 		if (gc.getPlayer(iHuman).canContact(iPlayer) and iHuman != iPlayer):
 			if (city != -1 and city.isRevealed(iHuman, False)):
 				CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_PLAGUE_SPREAD_CITY", ()) + " " + city.getName() + " (" + gc.getPlayer(city.getOwner()).getCivilizationAdjective(0) + ")!", "AS2D_PLAGUE", 0, gc.getBuildingInfo(iPlague).getButton(), ColorTypes(con.iLime), city.getX(), city.getY(), True, True)
-			else:
-				CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_PLAGUE_SPREAD_CIV", ()) + " " + gc.getPlayer(city.getOwner()).gc.getPlayer(iPlayer).getCivilizationDescriptionKey() + "!", "AS2D_PLAGUE", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
+			elif (city != -1):
+				pCiv = gc.getPlayer(city.getOwner())
+				print ("pCiv.getCivilizationDescriptionKey()", pCiv.getCivilizationDescriptionKey())
+				print ("pCiv.getCivilizationDescription(0)", pCiv.getCivilizationDescription(0))
+				CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_PLAGUE_SPREAD_CIV", ()) + " " + pCiv.getCivilizationDescription(0) + "!", "AS2D_PLAGUE", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
 
 		iHealth = self.calcHealth( iPlayer )
 		iHealth /= 7 # duration will be modified by -4 to +5
@@ -507,7 +510,7 @@ class Plague:
 
 	def onCityAcquired(self, iOldOwner, iNewOwner, city):
 		if (city.hasBuilding(iPlague)):
-			if (self.getPlagueCountdown(iNewOwner) <= 0 and gc.getGame().getGameTurn() > con.tBirth[iNewOwner] + iImmunity ): # skip immunity in this case, but not for the new born civs
+			if (self.getPlagueCountdown(iNewOwner) <= 0 and gc.getGame().getGameTurn() > con.tBirth[iNewOwner] + iImmunity ): # skip immunity in this case, but not for the recently born civs
 				self.spreadPlague(iNewOwner, -1)
 				apCityList = PyPlayer(iNewOwner).getCityList()
 				for pCity in apCityList:

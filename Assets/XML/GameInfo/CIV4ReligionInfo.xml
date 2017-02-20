@@ -47,7 +47,7 @@
 			<TechPrereq>TECH_ARABIC_KNOWLEDGE</TechPrereq>
 			<FreeUnitClass>UNITCLASS_ISLAMIC_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>0</iFreeUnits>
-			<iSpreadFactor>150</iSpreadFactor> <!-- Rhye -->
+			<iSpreadFactor>100</iSpreadFactor>
 			<GlobalReligionCommerces>
 				<iGlobalReligionCommerce>1</iGlobalReligionCommerce>
 				<iGlobalReligionCommerce>0</iGlobalReligionCommerce>
@@ -146,7 +146,7 @@
 			<TechPrereq>NONE</TechPrereq>
 			<FreeUnitClass>NONE</FreeUnitClass>
 			<iFreeUnits>0</iFreeUnits>
-			<iSpreadFactor>0</iSpreadFactor> <!-- Rhye -->
+			<iSpreadFactor>0</iSpreadFactor>
 			<GlobalReligionCommerces>
 				<iGlobalReligionCommerce>0</iGlobalReligionCommerce>
 				<iGlobalReligionCommerce>0</iGlobalReligionCommerce>

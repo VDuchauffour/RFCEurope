@@ -258,6 +258,8 @@ void CyPlotPythonInterface1(python::class_<CyPlot>& x)
 
 		// Absinthe: start
 		.def("getProvince", &CyPlot::getProvince, "int ()")
+		.def("getProvinceID", &CyPlot::getProvinceID, "int ()") 
+		.def("setProvinceID", &CyPlot::setProvinceID, "void (int iNewValue)") 
 		// Absinthe: end
 	;
 }

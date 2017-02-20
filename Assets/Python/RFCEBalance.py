@@ -181,7 +181,7 @@ class RFCEBalance:
 		gc.setProductionModifiersHu(iArabia,       150, 125, 150, 230 )
 		gc.setProductionModifiersAI(iBulgaria,     130, 125, 125, 250 )
 		gc.setProductionModifiersHu(iBulgaria,     150, 150, 125, 200 )
-		gc.setProductionModifiersAI(iCordoba,      150, 170, 125, 250 )
+		gc.setProductionModifiersAI(iCordoba,      170, 170, 130, 250 )
 		gc.setProductionModifiersHu(iCordoba,      200, 180, 140, 230 )
 		gc.setProductionModifiersAI(iSpain,        100, 100, 100, 120 )
 		gc.setProductionModifiersHu(iSpain,        125, 100, 100, 120 )
@@ -193,7 +193,7 @@ class RFCEBalance:
 		gc.setProductionModifiersHu(iVenecia,      100, 100, 100, 125 )
 		gc.setProductionModifiersAI(iNovgorod,     150, 140, 125, 150 )
 		gc.setProductionModifiersHu(iNovgorod,     150, 125, 125, 150 )
-		gc.setProductionModifiersAI(iKiev,         100, 125, 100, 150 )
+		gc.setProductionModifiersAI(iKiev,         100, 120, 100, 140 )
 		gc.setProductionModifiersHu(iKiev,         125, 150, 125, 150 )
 		gc.setProductionModifiersAI(iHungary,      100, 100, 100, 140 )
 		gc.setProductionModifiersHu(iHungary,      125, 125, 100, 130 )
@@ -213,7 +213,7 @@ class RFCEBalance:
 		gc.setProductionModifiersHu(iEngland,      100, 100, 100, 110 )
 		gc.setProductionModifiersAI(iPortugal,      70,  90, 100, 100 )
 		gc.setProductionModifiersHu(iPortugal,      80,  90, 100,  90 )
-		gc.setProductionModifiersAI(iAragon,        80, 100, 100, 125 )
+		gc.setProductionModifiersAI(iAragon,        75,  90, 100, 125 )
 		gc.setProductionModifiersHu(iAragon,        80, 100, 100, 125 )
 		gc.setProductionModifiersAI(iPrussia,       60,  80, 120,  90 )
 		gc.setProductionModifiersHu(iPrussia,       75,  80, 120, 100 )
@@ -474,8 +474,6 @@ class RFCEBalance:
 
 		#3Miro: setTechPreferenceAI(iCiv,iTech,iVal), for each civ, for each tech, specify how likable it is. iVal is same as in growth.
 		# low percent makes the tech less desirable
-		#gc.setTechPreferenceAI(iByzantium,1,200)
-		#gc.setTechPreferenceAI(iFrankia,1,200)
 		gc.setTechPreferenceAI(iBulgaria,xml.iBronzeCasting,200)
 		gc.setTechPreferenceAI(iGermany,xml.iPrintingPress,200)
 		gc.setTechPreferenceAI(iEngland,xml.iPrintingPress,150)
@@ -698,9 +696,9 @@ class RFCEBalance:
 		gc.setReligionBenefit( xml.iProtestantism, con.iFP_Science, 30, 100 )
 		gc.setReligionBenefit( xml.iProtestantism, con.iFP_Production, 30, 100 )
 
-		gc.setReligionBenefit( xml.iCatholicism, con.iFP_Displomacy, 7, 100 )
-		gc.setReligionBenefit( xml.iIslam, con.iFP_Displomacy, 6, 100 )
-		gc.setReligionBenefit( xml.iProtestantism, con.iFP_Displomacy, 5, 100 )
+		gc.setReligionBenefit( xml.iCatholicism, con.iFP_Displomacy, 6, 100 )
+		gc.setReligionBenefit( xml.iIslam, con.iFP_Displomacy, 5, 100 )
+		gc.setReligionBenefit( xml.iProtestantism, con.iFP_Displomacy, 4, 100 )
 		gc.setReligionBenefit( xml.iOrthodoxy, con.iFP_Displomacy, 3, 100 )
 
 		# every nation gets a land tile that is normally impassable and now pass through it
@@ -1003,7 +1001,7 @@ class RFCEBalance:
 		gc.setIndependnets( con.iIndepStart, con.iIndepEnd, con.iBarbarian )
 		gc.setPapalPlayer( iPope, xml.iCatholicism )
 
-		gc.setAutorunHack( xml.iCatapult, 30, 0 ) # Autorun hack, sync with RNF module
+		gc.setAutorunHack( xml.iCatapult, 32, 0 ) # Autorun hack, sync with RNF module
 
 		#3MiroMercs: set the merc promotion
 		gc.setMercPromotion( xml.iPromotionMerc )

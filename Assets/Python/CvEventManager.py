@@ -568,8 +568,9 @@ class CvEventManager:
 			iGP = gc.getGame().getSorenRandNum(7, "Leaning Tower")
 			iUnit = xml.iProphet + iGP
 			pNewUnit = pPlayer.initUnit(iUnit, iX, iY, UnitAITypes(gc.getUnitInfo(iUnit).getDefaultUnitAIType()), DirectionTypes.NO_DIRECTION)
-			szText = localText.getText("TXT_KEY_LEANING_TOWER", ()) + " " + gc.getUnitInfo(iUnit).getDescription()
-			CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, szText, "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, "", ColorTypes(con.iLightBlue), -1, -1, True, True)
+			if utils.isActive(utils.getHumanID()):
+				szText = localText.getText("TXT_KEY_LEANING_TOWER", ()) + " " + gc.getUnitInfo(iUnit).getDescription()
+				CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, szText, "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, "", ColorTypes(con.iLightBlue), -1, -1, True, True)
 # The Leaning Tower End
 
 		if ((not gc.getGame().isNetworkMultiPlayer()) and (pCity.getOwner() == gc.getGame().getActivePlayer()) and isWorldWonderClass(gc.getBuildingInfo(iBuildingType).getBuildingClassType())):
@@ -969,10 +970,10 @@ class CvEventManager:
 						if ConquerPlayer.isHuman():
 							CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_DESTROYED_1", (WonderName,"1")), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(i).getButton(), ColorTypes(con.iLightRed), iX, iY, True, True)
 						else:
-							if HumanTeam.isHasMet(ConquerTeam):
+							if HumanTeam.isHasMet(ConquerTeam) and utils.isActive(utils.getHumanID()):
 								CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_DESTROYED_2", (ConquerName,WonderName)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(i).getButton(), ColorTypes(con.iLightRed), iX, iY, True, True)
 							else:
-								if HumanTeam.isHasMet(PreviousTeam):
+								if HumanTeam.isHasMet(PreviousTeam) and utils.isActive(utils.getHumanID()):
 									CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_DESTROYED_3", (PreviousName,WonderName)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(i).getButton(), ColorTypes(con.iLightRed), iX, iY, True, True)
 		# Absinthe - wonder destroyed message end
 
@@ -1020,10 +1021,10 @@ class CvEventManager:
 						if ConquerPlayer.isHuman():
 							CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_CAPTURED_1", (WonderName,"1")), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(i).getButton(), ColorTypes(con.iBlue), iX, iY, True, True)
 						else:
-							if HumanTeam.isHasMet(ConquerTeam):
+							if HumanTeam.isHasMet(ConquerTeam) and utils.isActive(utils.getHumanID()):
 								CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_CAPTURED_2", (ConquerName,WonderName)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(i).getButton(), ColorTypes(con.iCyan), iX, iY, True, True)
 							else:
-								if HumanTeam.isHasMet(PreviousTeam):
+								if HumanTeam.isHasMet(PreviousTeam) and utils.isActive(utils.getHumanID()):
 									CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_CAPTURED_3", (PreviousName,WonderName)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(i).getButton(), ColorTypes(con.iCyan), iX, iY, True, True)
 		# Absinthe - wonder captured message end
 

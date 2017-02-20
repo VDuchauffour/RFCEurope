@@ -406,6 +406,8 @@ def endTurnFeats(iPlayer):
 
 						break
 
+		# Absinthe: no need for this with the dynamic company system
+		'''
 		if (not gc.getPlayer(iPlayer).isFeatAccomplished(FeatTypes.FEAT_CORPORATION_ENABLED)):
 
 			for iI in range(gc.getNumBuildingInfos()):
@@ -453,6 +455,7 @@ def endTurnFeats(iPlayer):
 							popupInfo.addPopup(iPlayer)
 
 						break
+		'''
 
 def cityAdvise(pCity, iPlayer):
 

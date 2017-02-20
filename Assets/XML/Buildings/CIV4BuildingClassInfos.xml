@@ -1437,7 +1437,7 @@
 		<!--******************* WONDERS END *******************-->
 
 		<!--******************* CORPORATIONS START *******************-->
-		<BuildingClassInfo><!-- CORPORATION_1 -->
+		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_1</Type>
 			<Description>TXT_KEY_CORPORATION_1</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1449,7 +1449,7 @@
 			<DefaultBuilding>BUILDING_CORPORATION_1</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- CORPORATION_2 -->
+		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_2</Type>
 			<Description>CHANGED_TXT_KEY_CORPORATION_2</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1461,7 +1461,7 @@
 			<DefaultBuilding>BUILDING_CORPORATION_2</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- CORPORATION_3 -->
+		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_3</Type>
 			<Description>TXT_KEY_CORPORATION_3</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1473,7 +1473,7 @@
 			<DefaultBuilding>BUILDING_CORPORATION_3</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- CORPORATION_4 -->
+		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_4</Type>
 			<Description>TXT_KEY_CORPORATION_4</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1485,7 +1485,7 @@
 			<DefaultBuilding>BUILDING_CORPORATION_4</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- CORPORATION_5 -->
+		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_5</Type>
 			<Description>TXT_KEY_CORPORATION_5</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1497,7 +1497,7 @@
 			<DefaultBuilding>BUILDING_CORPORATION_5</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- CORPORATION_6 -->
+		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_6</Type>
 			<Description>TXT_KEY_CORPORATION_6</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1509,7 +1509,7 @@
 			<DefaultBuilding>BUILDING_CORPORATION_6</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- CORPORATION_7 -->
+		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_7</Type>
 			<Description>TXT_KEY_CORPORATION_7</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>

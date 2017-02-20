@@ -25,6 +25,8 @@ import Victory
 import Stability
 import Plague
 import Crusades
+import Companies
+import DataLoader
 import ProvinceManager
 import Mercenaries
 import RFCEMaps as rfcemaps
@@ -67,6 +69,8 @@ iNumMajorPlayers = con.iNumMajorPlayers
 iNumActivePlayers = con.iNumActivePlayers
 iIndependent = con.iIndependent
 iIndependent2 = con.iIndependent2
+iIndependent3 = con.iIndependent3
+iIndependent4 = con.iIndependent4
 iBarbarian = con.iBarbarian
 iNumTotalPlayers = con.iNumTotalPlayers
 
@@ -160,12 +164,12 @@ class CvRFCEventHandler:
 		eventManager.addEventHandler("OnPreSave",self.onPreSave) #edead: StoredData
 		eventManager.addEventHandler("OnLoad",self.onLoadGame) #Mercenaries, StoredData
 		eventManager.addEventHandler("unitPromoted",self.onUnitPromoted) #Mercenaries
-		eventManager.addEventHandler("techAcquired",self.onTechAcquired) #Mercenaries, Rhye #Stability
+		eventManager.addEventHandler("techAcquired",self.onTechAcquired) #Mercenaries #Stability
 		#eventManager.addEventHandler("improvementDestroyed",self.onImprovementDestroyed) #Stability
 		eventManager.addEventHandler("unitPillage",self.onUnitPillage) #Stability
 		eventManager.addEventHandler("religionSpread",self.onReligionSpread) #Stability
 		eventManager.addEventHandler("firstContact",self.onFirstContact)
-		eventManager.addEventHandler("corporationFounded",self.onCorporationFounded) #Stability
+		eventManager.addEventHandler("playerChangeStateReligion", self.onPlayerChangeStateReligion)
 
 		self.eventManager = eventManager
 
@@ -182,6 +186,7 @@ class CvRFCEventHandler:
 		self.crusade = Crusades.Crusades()
 		self.province = ProvinceManager.ProvinceManager()
 		self.mercs = Mercenaries.MercenaryManager() # 3MiroMercs
+		self.company = Companies.Companies() # Absinthe
 
 
 		#Mercenaries - start
@@ -217,7 +222,8 @@ class CvRFCEventHandler:
 	def onGameStart(self, argsList):
 		'Called at the start of the game'
 		#self.pm.setup()
-		sd.setup()
+		DataLoader.setup()
+		sd.setup() # initialise global script data
 		self.rnf.setup()
 		self.rel.setup()
 		self.pla.setup()
@@ -269,6 +275,22 @@ class CvRFCEventHandler:
 		if ( owner == iScotland and playerType < con.iNumTotalPlayers ):
 			self.up.defianceUP( owner )
 
+		# Absinthe: If Protestantism has not been founded by the time the Dutch spawn, then the Dutch should found it with their first city
+		if ( playerType == iDutch and (not gc.getGame().isReligionFounded(xml.iProtestantism)) ):
+			gc.getPlayer(iDutch).foundReligion(xml.iProtestantism,xml.iProtestantism,false)
+			gc.getGame().getHolyCity(xml.iProtestantism).setNumRealBuilding(xml.iProtestantShrine,1)
+			self.rel.setReformationActive(True)
+			self.rel.reformationchoice(iDutch)
+			self.rel.reformationOther(iIndependent)
+			self.rel.reformationOther(iIndependent2)
+			self.rel.reformationOther(iIndependent3)
+			self.rel.reformationOther(iIndependent4)
+			self.rel.reformationOther(iBarbarian)
+			self.rel.setReformationHitMatrix(iDutch,2)
+			for iCiv in range(iNumPlayers):
+				if ((iCiv in Religions.lReformationNeighbours[iDutch]) and self.rel.getReformationHitMatrix(iCiv) == 0):
+					self.rel.setReformationHitMatrix(iCiv,1)
+
 		# Absinthe: Spread some culture of the conqueror civ to the occupied city
 		if ( playerType < iNumMajorPlayers ):
 			utils.spreadMajorCulture( playerType, city.getX(), city.getY() )
@@ -317,6 +339,7 @@ class CvRFCEventHandler:
 
 		self.pla.onCityAcquired(owner, playerType, city) #Plague
 		self.vic.onCityAcquired(owner, playerType, city, bConquest) #Victory
+		self.company.onCityAcquired(city)
 
 		# Remove horse resource near Hadrianople in 1200 AD scenario if someone captures Hadrianople or Constantinople
 		if (utils.getScenario() == con.i1200ADScenario):
@@ -415,6 +438,22 @@ class CvRFCEventHandler:
 		if ( gc.hasUP( iOwner, con.iUP_Faith ) ):
 			self.up.faithUP( iOwner, city )
 
+		# Absinthe: If Protestantism has not been founded by the time the Dutch spawn, then the Dutch should found it with their first city
+		if ( iOwner == iDutch and (not gc.getGame().isReligionFounded(xml.iProtestantism)) ):
+			gc.getPlayer(iDutch).foundReligion(xml.iProtestantism,xml.iProtestantism,false)
+			gc.getGame().getHolyCity(xml.iProtestantism).setNumRealBuilding(xml.iProtestantShrine,1)
+			self.rel.setReformationActive(True)
+			self.rel.reformationchoice(iDutch)
+			self.rel.reformationOther(iIndependent)
+			self.rel.reformationOther(iIndependent2)
+			self.rel.reformationOther(iIndependent3)
+			self.rel.reformationOther(iIndependent4)
+			self.rel.reformationOther(iBarbarian)
+			self.rel.setReformationHitMatrix(iDutch,2)
+			for iCiv in range(iNumPlayers):
+				if ((iCiv in Religions.lReformationNeighbours[iDutch]) and self.rel.getReformationHitMatrix(iCiv) == 0):
+					self.rel.setReformationHitMatrix(iCiv,1)
+
 		if ( iOwner < con.iNumPlayers ):
 			self.sta.onCityBuilt( iOwner, city.getX(), city.getY() )
 
@@ -460,16 +499,6 @@ class CvRFCEventHandler:
 			self.crusade.endCrusades()
 
 
-	def onCorporationFounded(self, argsList):
-		'Corporation Founded'
-		iCorporation, iFounder = argsList
-		#player = PyPlayer(iFounder)
-
-		if (iFounder < con.iNumPlayers):
-			self.sta.onCorporationFounded(iFounder)
-			self.vic.onCorporationFounded(iFounder)
-
-
 	def onBuildingBuilt(self, argsList):
 		city, iBuildingType = argsList
 		iOwner = city.getOwner()
@@ -508,10 +537,37 @@ class CvRFCEventHandler:
 	def onBeginGameTurn(self, argsList):
 		iGameTurn = argsList[0]
 
+		# tests
+		if (iGameTurn == xml.i508AD):
+			apCityList = PyPlayer(1).getCityList()
+			for pCity in apCityList:
+				city = pCity.GetCy()
+				plot = gc.getMap().plot(city.getX(),city.getY())
+				print ('provincetest', plot.getProvinceID (), city.getName())
+			for iCiv in range(con.iNumPlayers):
+				pCiv = gc.getPlayer(iCiv)
+				leaderName = pCiv.getLeader()
+				leaderName2 = gc.getLeaderHeadInfo( pCiv.getLeaderType() )
+				leaderName3 = leaderName2.getDescription()
+				leaderName4 = leaderName2.getLeaderHead()
+			#	leaderName5 = (pCiv.getLeaderType()).getLeaderID()
+			#	leaderName6 = leaderName2.getLeaderType()
+				leaderName7 = pCiv.getLeaderType()
+				LeaderType = gc.getLeaderHeadInfo(pCiv.getLeaderType()).getType()
+				print ("leaderName", leaderName)
+				print ("leaderName2", leaderName2)
+				print ("leaderName3", leaderName3)
+				print ("leaderName4", leaderName4)
+			#	print ("leaderName5", leaderName5)
+			#	print ("leaderName6", leaderName6)
+				print ("leaderName7", leaderName7)
+				print ("LeaderType", LeaderType)
+
 		if ( iGameTurn == xml.i1053AD ):
 			iHuman = utils.getHumanID()
-			sText = CyTranslator().getText("TXT_KEY_GREAT_SCHISM", ())
-			CyInterface().addMessage(iHuman, True, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iDarkPink), -1, -1, True, True)
+			if utils.isActive(iHuman):
+				sText = CyTranslator().getText("TXT_KEY_GREAT_SCHISM", ())
+				CyInterface().addMessage(iHuman, True, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iDarkPink), -1, -1, True, True)
 
 		print("3Miro: Byz Rank is: ",gc.getGame().getTeamRank(iByzantium))
 
@@ -527,6 +583,7 @@ class CvRFCEventHandler:
 		self.sta.checkTurn(iGameTurn)
 		self.crusade.checkTurn(iGameTurn)
 		self.province.checkTurn(iGameTurn)
+		self.company.checkTurn(iGameTurn)
 
 		#Mercenaries - start
 
@@ -681,6 +738,14 @@ class CvRFCEventHandler:
 
 		iTeamX,iHasMetTeamY = argsList
 		self.rnf.onFirstContact(iTeamX, iHasMetTeamY)
+
+
+	def onPlayerChangeStateReligion(self, argsList):
+		'Player changes his state religion'
+		iPlayer, iNewReligion, iOldReligion = argsList
+		
+		if iPlayer < iNumPlayers:
+			self.company.onPlayerChangeStateReligion(argsList)
 
 
 	def onTechAcquired(self, argsList):
@@ -862,7 +927,7 @@ class CvRFCEventHandler:
 
 		if ( eventType == self.EventKeyDown and theKey == int(InputTypes.KB_E) and self.eventManager.bAlt and self.eventManager.bShift):
 			print("SHIFT-ALT-E") #picks a dead civ so that autoplay can be started with game.AIplay xx
-			iDebugDeadCiv = iCarthage #default iEthiopia: always dead in 600AD
+			iDebugDeadCiv = iBurgundy #default iEthiopia: always dead in 500AD
 			# 3Miro: not sure
 			#gc.getTeam(gc.getPlayer(iDebugDeadCiv).getTeam()).setHasTech(con.iCalendar, True, iDebugDeadCiv, False, False)
 			utils.makeUnit(con.iAxeman, iDebugDeadCiv, (0,0), 1)

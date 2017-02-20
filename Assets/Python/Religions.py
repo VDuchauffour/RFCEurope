@@ -86,47 +86,52 @@ lReformationMatrix = [
 #Reformation neighbours spread reformation choice to each other
 lReformationNeighbours = [
 [con.iArabia,con.iBulgaria,con.iTurkey], #Byzantium
-[con.iBurgundy,con.iSpain,con.iGermany,con.iGenoa,con.iEngland,con.iDutch,con.iScotland], #Frankia
-[con.iByzantium,con.iCordoba,con.iTurkey],			#Arabia
-[con.iByzantium,con.iKiev,con.iHungary,con.iTurkey],		#Bulgaria
-[con.iArabia,con.iSpain,con.iPortugal,con.iAragon,con.iMorocco],			#Cordoba
-[con.iGenoa,con.iGermany,con.iAustria,con.iHungary,con.iPope],			#Venecia
-[con.iFrankia,con.iGermany,con.iGenoa,con.iDutch],			#Burgundy
-[con.iBurgundy,con.iFrankia,con.iDenmark,con.iVenecia,con.iHungary,con.iPoland,con.iGenoa,con.iAustria,con.iDutch],		#Germany
-[con.iSweden,con.iHungary,con.iPoland,con.iMoscow,con.iLithuania,con.iKiev],		#Novgorod
-[con.iDenmark,con.iSweden],		#Norway
-[con.iBulgaria,con.iHungary,con.iPoland,con.iMoscow,con.iLithuania,con.iNovgorod],		#Kiev
-[con.iBulgaria,con.iVenecia,con.iKiev,con.iGermany,con.iPoland,con.iAustria,con.iTurkey],		#Hungary
-[con.iFrankia,con.iCordoba,con.iPortugal,con.iAragon],			#Spain
-[con.iNorway,con.iSweden,con.iGermany],		#Denmark
-[con.iFrankia,con.iDutch,con.iEngland],			#Scotland
-[con.iKiev,con.iHungary,con.iGermany,con.iMoscow,con.iAustria,con.iLithuania],			#Poland
-[con.iBurgundy,con.iFrankia,con.iVenecia,con.iGermany,con.iPope,con.iAragon],		#Genoa
-[con.iArabia,con.iSpain,con.iPortugal,con.iAragon,con.iCordoba],	#Morocco
-[con.iFrankia,con.iDutch,con.iScotland],			#England
-[con.iSpain,con.iCordoba,con.iAragon],			#Portugal
-[con.iSpain,con.iCordoba,con.iPortugal,con.iFrankia,con.iGenoa],		#Aragon
-[con.iNorway,con.iDenmark,con.iMoscow,con.iNovgorod],		#Sweden
-[con.iGermany,con.iLithuania,con.iMoscow,con.iAustria,con.iPoland],		#Prussia
-[con.iKiev,con.iMoscow,con.iPrussia,con.iNovgorod,con.iPoland],		#Lithuania
-[con.iVenecia,con.iHungary,con.iGermany,con.iPoland],		#Austria
-[con.iByzantium,con.iArabia,con.iBulgaria,con.iHungary],		#Turkey
-[con.iKiev,con.iPoland,con.iSweden,con.iLithuania,con.iNovgorod],			#Moscow
-[con.iBurgundy,con.iFrankia,con.iGermany,con.iEngland,con.iScotland],			#Dutch
-[con.iVenecia,con.iGenoa]			#Pope
+[con.iBurgundy,con.iSpain,con.iGermany,con.iGenoa,con.iEngland,con.iDutch,con.iScotland], #France
+[con.iByzantium,con.iCordoba,con.iTurkey], #Arabia
+[con.iByzantium,con.iKiev,con.iHungary,con.iTurkey], #Bulgaria
+[con.iArabia,con.iSpain,con.iPortugal,con.iAragon,con.iMorocco], #Cordoba
+[con.iGenoa,con.iGermany,con.iAustria,con.iHungary,con.iPope], #Venice
+[con.iFrankia,con.iGermany,con.iGenoa,con.iDutch], #Burgundy
+[con.iBurgundy,con.iFrankia,con.iDenmark,con.iVenecia,con.iHungary,con.iPoland,con.iGenoa,con.iAustria,con.iDutch], #Germany
+[con.iSweden,con.iHungary,con.iPoland,con.iMoscow,con.iLithuania,con.iKiev], #Novgorod
+[con.iDenmark,con.iSweden], #Norway
+[con.iBulgaria,con.iHungary,con.iPoland,con.iMoscow,con.iLithuania,con.iNovgorod], #Kiev
+[con.iBulgaria,con.iVenecia,con.iKiev,con.iGermany,con.iPoland,con.iAustria,con.iTurkey], #Hungary
+[con.iFrankia,con.iCordoba,con.iPortugal,con.iAragon], #Spain
+[con.iNorway,con.iSweden,con.iGermany], #Denmark
+[con.iFrankia,con.iDutch,con.iEngland], #Scotland
+[con.iKiev,con.iHungary,con.iGermany,con.iMoscow,con.iAustria,con.iLithuania], #Poland
+[con.iBurgundy,con.iFrankia,con.iVenecia,con.iGermany,con.iPope,con.iAragon], #Genoa
+[con.iArabia,con.iSpain,con.iPortugal,con.iAragon,con.iCordoba], #Morocco
+[con.iFrankia,con.iDutch,con.iScotland], #England
+[con.iSpain,con.iCordoba,con.iAragon], #Portugal
+[con.iSpain,con.iCordoba,con.iPortugal,con.iFrankia,con.iGenoa], #Aragon
+[con.iNorway,con.iDenmark,con.iMoscow,con.iNovgorod], #Sweden
+[con.iGermany,con.iLithuania,con.iMoscow,con.iAustria,con.iPoland], #Prussia
+[con.iKiev,con.iMoscow,con.iPrussia,con.iNovgorod,con.iPoland], #Lithuania
+[con.iVenecia,con.iHungary,con.iGermany,con.iPoland], #Austria
+[con.iByzantium,con.iArabia,con.iBulgaria,con.iHungary], #Turkey
+[con.iKiev,con.iPoland,con.iSweden,con.iLithuania,con.iNovgorod], #Moscow
+[con.iBurgundy,con.iFrankia,con.iGermany,con.iEngland,con.iScotland], #Dutch
+[con.iVenecia,con.iGenoa] #Pope
 ]
 ### Reformation End ###
 
 
 ### Regions to spread religion ###
 tProvinceMap = rfcemaps.tProinceMap
-tSpain = [xml.iP_Leon,xml.iP_GaliciaSpain,xml.iP_Aragon,xml.iP_Catalonia,xml.iP_Castile,xml.iP_Andalusia,xml.iP_Valencia]
-tPoland = [xml.iP_GreaterPoland,xml.iP_LesserPoland,xml.iP_Masovia,xml.iP_Silesia,xml.iP_Suvalkija,xml.iP_Brest,xml.iP_Pomerania]
+tSpain = [xml.iP_Leon,xml.iP_GaliciaSpain,xml.iP_Aragon,xml.iP_Catalonia,xml.iP_Castile,xml.iP_LaMancha,xml.iP_Andalusia,xml.iP_Valencia]
+tPoland = [xml.iP_GreaterPoland,xml.iP_LesserPoland,xml.iP_Masovia,xml.iP_Silesia,xml.iP_Suvalkija,xml.iP_Brest,xml.iP_Pomerania,xml.iP_GaliciaPoland]
 tGermany = [xml.iP_Lorraine,xml.iP_Franconia,xml.iP_Bavaria,xml.iP_Swabia]
 tWestAfrica = [xml.iP_Tetouan,xml.iP_Morocco,xml.iP_Marrakesh,xml.iP_Fez,xml.iP_Oran]
 tNorthAfrica = [xml.iP_Algiers,xml.iP_Ifriqiya,xml.iP_Tripolitania,xml.iP_Cyrenaica]
 tBalkansAndAnatolia = [xml.iP_Constantinople,xml.iP_Thrace,xml.iP_Opsikion,xml.iP_Paphlagonia,xml.iP_Thrakesion,xml.iP_Cilicia,xml.iP_Anatolikon,xml.iP_Armeniakon,xml.iP_Charsianon]
 tCentralEurope = [xml.iP_GreaterPoland,xml.iP_LesserPoland,xml.iP_Masovia,xml.iP_GaliciaPoland,xml.iP_Brest,xml.iP_Suvalkija,xml.iP_Lithuania,xml.iP_Prussia,xml.iP_Pomerania,xml.iP_Saxony,xml.iP_Brandenburg,xml.iP_Holstein,xml.iP_Denmark,xml.iP_Bavaria,xml.iP_Swabia,xml.iP_Bohemia,xml.iP_Moravia,xml.iP_Silesia,xml.iP_Hungary,xml.iP_Transylvania,xml.iP_UpperHungary,xml.iP_Pannonia,xml.iP_Slavonia,xml.iP_Carinthia,xml.iP_Austria]
+tMaghrebAndalusia = [xml.iP_Tetouan,xml.iP_Morocco,xml.iP_Marrakesh,xml.iP_Fez,xml.iP_Oran,xml.iP_Algiers,xml.iP_Ifriqiya,xml.iP_Tripolitania,xml.iP_Cyrenaica,xml.iP_LaMancha,xml.iP_Andalusia,xml.iP_Valencia]
+tBulgariaBalkans = [xml.iP_Moesia,xml.iP_Macedonia,xml.iP_Serbia,xml.iP_Wallachia]
+tOldRus = [xml.iP_Novgorod,xml.iP_Polotsk,xml.iP_Smolensk,xml.iP_Minsk,xml.iP_Chernigov,xml.iP_Kiev,xml.iP_Pereyaslavl,xml.iP_Sloboda]
+tSouthScandinavia = [xml.iP_Denmark,xml.iP_Gotaland,xml.iP_Skaneland,xml.iP_Vestfold,xml.iP_Norway]
+tHungary = [xml.iP_Hungary,xml.iP_Transylvania,xml.iP_UpperHungary,xml.iP_Pannonia]
 
 class Religions:
 
@@ -175,101 +180,139 @@ class Religions:
 		if (iGameTurn == xml.i700AD-2):
 			# Spread Judaism to Toledo
 			self.spreadReligion(tToledo,xml.iJudaism)
-			# Spread Judaism and Islam to a random city in Africa
+			# Spread Islam to a random city in Africa
 			tCity = self.selectRandomCityArea(tNorthAfrica)
-			self.spreadReligion(tCity,xml.iIslam)
-			tCity = self.selectRandomCityArea(tNorthAfrica)
-			self.spreadReligion(tCity,xml.iIslam)
+			if (tCity != 0):
+				self.spreadReligion(tCity,xml.iIslam)
 		elif (iGameTurn == xml.i700AD+2):
 			# Spread Judaism and Islam to a random city in Africa
 			tCity = self.selectRandomCityArea(tWestAfrica)
-			self.spreadReligion(tCity,xml.iIslam)
+			if (tCity != 0):
+				self.spreadReligion(tCity,xml.iIslam)
 			tCity = self.selectRandomCityArea(tWestAfrica)
-			self.spreadReligion(tCity,xml.iJudaism)
+			if (tCity != 0):
+				self.spreadReligion(tCity,xml.iJudaism)
 		elif (iGameTurn == xml.i900AD):
 			# Spread Judaism to another city in Spain
 			tCity = self.selectRandomCityArea(tSpain)
-			self.spreadReligion(tCity,xml.iJudaism)
+			if (tCity != 0):
+				self.spreadReligion(tCity,xml.iJudaism)
 		elif (iGameTurn == xml.i1000AD):
 			# Spread Judaism to a city in France/Germany
 			tCity = self.selectRandomCityArea(tGermany)
-			self.spreadReligion(tCity,xml.iJudaism)
+			if (tCity != 0):
+				self.spreadReligion(tCity,xml.iJudaism)
 			# Spread Islam to another city in Africa
 			tCity = self.selectRandomCityArea(tNorthAfrica)
-			self.spreadReligion(tCity,xml.iIslam)
+			if (tCity != 0):
+				self.spreadReligion(tCity,xml.iIslam)
 		elif (iGameTurn == xml.i1101AD):
 			# Spread Judaism to a couple towns in Poland
 			tCity = self.selectRandomCityArea(tPoland)
-			self.spreadReligion(tCity,xml.iJudaism)
+			if (tCity != 0):
+				self.spreadReligion(tCity,xml.iJudaism)
 		elif (iGameTurn == xml.i1200AD):
 			# Spread Judaism to a couple towns in Poland
 			tCity = self.selectRandomCityArea(tPoland)
-			self.spreadReligion(tCity,xml.iJudaism)
+			if (tCity != 0):
+				self.spreadReligion(tCity,xml.iJudaism)
 		elif (iGameTurn > xml.i1299AD and iGameTurn < xml.i1350AD and iGameTurn % 3 == 0):
 			# Spread Islam to a couple cities in Anatolia before the Ottoman spawn
 			tCity = self.selectRandomCityArea(tBalkansAndAnatolia)
-			self.spreadReligion(tCity,xml.iIslam)
+			if (tCity != 0):
+				self.spreadReligion(tCity,xml.iIslam)
 		elif (iGameTurn == xml.i1401AD):
 			# Spread Judaism to a couple towns in Poland
 			tCity = self.selectRandomCityArea(tPoland)
-			self.spreadReligion(tCity,xml.iJudaism)
-		elif (iGameTurn == xml.i1580AD and (not gc.getGame().isReligionFounded(xml.iProtestantism) ) ):
-			# If Protestantism has not been founded by the time the Dutch spawn, then the Dutch should found it
-			gc.getPlayer(con.iDutch).foundReligion(xml.iProtestantism,xml.iProtestantism,false)
-			gc.getGame().getHolyCity(xml.iProtestantism).setNumRealBuilding(xml.iProtestantShrine,1)
-			self.setReformationActive(True)
-			self.reformationchoice(con.iDutch)
-			self.reformationOther(con.iIndependent)
-			self.reformationOther(con.iIndependent2)
-			self.reformationOther(con.iIndependent3)
-			self.reformationOther(con.iIndependent4)
-			self.reformationOther(con.iBarbarian)
-			self.setReformationHitMatrix(con.iDutch,2)
-			for iCiv in range(iNumPlayers):
-				if ((iCiv in lReformationNeighbours[con.iDutch]) and self.getReformationHitMatrix(iCiv) == 0):
-					self.setReformationHitMatrix(iCiv,1)
+			if (tCity != 0):
+				self.spreadReligion(tCity,xml.iJudaism)
 
 		# Absinthe: Spreading Judaism in random dates
-		# general 5% chance to spread Jews to a random city in every third turn
+		# General 6% chance to spread Jews to a random city in every third turn
 		if (iGameTurn > xml.i800AD and iGameTurn < xml.i1700AD and iGameTurn % 3 == 0):
-			if ( gc.getGame().getSorenRandNum(100, 'Spread Jews') < 5 ):
+			if ( gc.getGame().getSorenRandNum(100, 'Spread Jews') < 6 ):
 				tCity = self.selectRandomCityAll()
-				self.spreadReligion(tCity,xml.iJudaism)
-		# additional 9% chance to spread Jews to a random Central European city in every third turn
+				if (tCity != 0):
+					self.spreadReligion(tCity,xml.iJudaism)
+		# Additional 11% chance to spread Jews to a random Central European city in every third turn
 		if (iGameTurn > xml.i1000AD and iGameTurn < xml.i1500AD and iGameTurn % 3 == 1):
-			if ( gc.getGame().getSorenRandNum(100, 'Spread Jews') < 9 ):
+			if ( gc.getGame().getSorenRandNum(100, 'Spread Jews') < 11 ):
 				tCity = self.selectRandomCityArea(tCentralEurope)
-				self.spreadReligion(tCity,xml.iJudaism)
+				if (tCity != 0):
+					self.spreadReligion(tCity,xml.iJudaism)
 
-		# Persecution cooldown
+		# Absinthe: Encouraging desired religion spread in a couple areas (mostly for Islam and Orthodoxy)
+		# Maghreb and Cordoba:
+		if (iGameTurn > xml.i700AD and iGameTurn < xml.i1200AD and iGameTurn % 3 == 2):
+			if ( gc.getGame().getSorenRandNum(100, 'Spread chance') < 22 ):
+				tCity = self.selectRandomCityAreaNoReligion(tMaghrebAndalusia)
+				if (tCity != 0):
+					self.spreadReligion(tCity,xml.iIslam)
+		# Bulgaria and Balkans:
+		if (iGameTurn > xml.i700AD and iGameTurn < xml.i800AD and iGameTurn % 3 == 1):
+			if ( gc.getGame().getSorenRandNum(100, 'Spread chance') < 25 ):
+				tCity = self.selectRandomCityAreaNoReligion(tBulgariaBalkans)
+				if (tCity != 0):
+					self.spreadReligion(tCity,xml.iOrthodoxy)
+		if (iGameTurn > xml.i800AD and iGameTurn < xml.i1000AD and iGameTurn % 4 == 1):
+			if ( gc.getGame().getSorenRandNum(100, 'Spread chance') < 15 ):
+				tCity = self.selectRandomCityAreaNoReligion(tBulgariaBalkans)
+				if (tCity != 0):
+					self.spreadReligion(tCity,xml.iOrthodoxy)
+		# Old Rus territories:
+		if (iGameTurn > xml.i852AD and iGameTurn < xml.i1300AD and iGameTurn % 4 == 3):
+			if ( gc.getGame().getSorenRandNum(100, 'Spread chance') < 25 ):
+				tCity = self.selectRandomCityAreaNoReligion(tOldRus)
+				if (tCity != 0):
+					self.spreadReligion(tCity,xml.iOrthodoxy)
+		# Hungary:
+		if (iGameTurn > xml.i960AD and iGameTurn < xml.i1200AD and iGameTurn % 4 == 2):
+			if ( gc.getGame().getSorenRandNum(100, 'Spread chance') < 18 ):
+				tCity = self.selectRandomCityAreaNoReligion(tHungary)
+				if (tCity != 0):
+					self.spreadReligion(tCity,xml.iCatholicism)
+		# Scandinavia:
+		if (iGameTurn > xml.i1000AD and iGameTurn < xml.i1300AD and iGameTurn % 4 == 0):
+			if ( gc.getGame().getSorenRandNum(100, 'Spread chance') < 22 ):
+				tCity = self.selectRandomCityAreaNoReligion(tSouthScandinavia)
+				if (tCity != 0):
+					self.spreadReligion(tCity,xml.iCatholicism)
+
+		# Absinthe: Persecution cooldown
 		for i in range( con.iNumPlayers ):
 			pPlayer = gc.getPlayer( i )
 			if ( pPlayer.getProsecutionCount() > 0 ):
 				pPlayer.changeProsecutionCount( -1 )
 
-		# Resettle Jewish refugees
+		# Absinthe: Resettle Jewish refugees
 		iRefugies = gc.getMinorReligionRefugies()
 		for i in range(iRefugies):
 			self.resettleRefugies()
 		gc.setMinorReligionRefugies( 0 )
 
-		# 3Miro: Catholic Benefits from the Pope
-		# the Pope gifts gold every 17 turns before the Schism, every 7 turns after it
-		if ( iGameTurn > xml.i1053AD ):
-			iDivBy = 7
+		# Absinthe: Benefits for Catholics from the Pope
+		# Gold gifts
+		if ( iGameTurn > xml.i1648AD ): # End of religious wars
+			iDivBy = 14
+		elif ( iGameTurn > xml.i1517AD ): # Protestantism
+			iDivBy = 11
+		elif ( iGameTurn > xml.i1053AD ): # Schism
+			iDivBy = 6
 		else:
-			iDivBy = 17
+			iDivBy = 9
 		if ( iGameTurn >= xml.i752AD and iGameTurn % iDivBy == 3 ):
 			pPope = gc.getPlayer( con.iPope )
 			teamPope = gc.getTeam( pPope.getTeam() )
 			if ( pPope.getGold() > 100 ):
 				iCatholicFaith = 0
-				for i in range( iNumPlayers - 1 ): # the Pope cannot gift to himself
+				for i in range( iNumPlayers - 1 ): # The Pope cannot add any gifts to himself
 					pPlayer = gc.getPlayer( i )
 					if ( pPlayer.getStateReligion() == xml.iCatholicism and teamPope.isOpenBorders( pPlayer.getTeam() ) ):
+						# Relations with the Pope are much more important here
 						iCatholicFaith += pPlayer.getFaith()
+						iCatholicFaith += 8 * max( 0, pPope.AI_getAttitude( i ) )
 				if ( iCatholicFaith > 0 ):
-					iCatholicFaith += iCatholicFaith / 10 + 1 # so there is some chance for not giving anything
+					iCatholicFaith += iCatholicFaith / 10 + 1 # So there is around 10% chance for not giving anything
 					if ( iGameTurn < 100 ):
 						iGift = 20
 					else:
@@ -279,51 +322,61 @@ class Religions:
 						pPlayer = gc.getPlayer( i )
 						if ( pPlayer.getStateReligion() == xml.iCatholicism and teamPope.isOpenBorders( pPlayer.getTeam() ) ):
 							iRandomNum -= pPlayer.getFaith()
-							if ( iRandomNum <= 0 ):
-								#print(" The Pope gifts 50 gold to ",i )
+							iRandomNum -= 8 * max( 0, pPope.AI_getAttitude( i ) )
+							if ( iRandomNum <= 0 ): # The given civ is chosen
 								pPope.changeGold( -iGift )
 								pPlayer.changeGold( iGift )
 								if ( utils.getHumanID() == i ):
 									sText = CyTranslator().getText("TXT_KEY_FAITH_GIFT", ())
 									CyInterface().addMessage(i, True, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iBlue), -1, -1, True, True)
 								break
-
-		# free religious building every 11 turns
-		if ( iGameTurn > xml.i800AD ): # the crowning of Charlemagne
-			if ( iGameTurn % 11 == 3 ):
-				#print(" 3Miro Pope Builds " )
+		# Free religious building
+		if ( iGameTurn > xml.i1648AD ): # End of religious wars
+			iDivBy = 21
+		elif ( iGameTurn > xml.i1517AD ): # Protestantism
+			iDivBy = 14
+		elif ( iGameTurn > xml.i1053AD ): # Schism
+			iDivBy = 8
+		else:
+			iDivBy = 11
+		if ( iGameTurn > xml.i800AD ): # The crowning of Charlemagne
+			if ( iGameTurn % iDivBy == 2 ):
 				pPope = gc.getPlayer( con.iPope )
 				teamPope = gc.getTeam( pPope.getTeam() )
 				iCatholicFaith = 0
 				iJerusalemOwner = gc.getMap().plot( con.tJerusalem[0], con.tJerusalem[1]).getPlotCity().getOwner()
-				for i in range( iNumPlayers - 1 ): # the Pope cannot gift to himself
+				for i in range( iNumPlayers - 1 ): # The Pope cannot add any gifts to himself
 					pPlayer = gc.getPlayer( i )
 					if ( pPlayer.getStateReligion() == xml.iCatholicism and teamPope.isOpenBorders( pPlayer.getTeam() ) ):
-						#iCatholicFaith += pPlayer.getFaith() + pPope.AI_getAttitude( i )
-						iCatholicFaith += max( 0, pPope.AI_getAttitude( i ) )
-						if ( i == iJerusalemOwner ):
-							iCatholicFaith += 20
-				#print(" Catholic Faith: ",iCatholicFaith)
+						# Faith points are the deciding factor for buildings
+						iCatholicFaith += pPlayer.getFaith()
+						iCatholicFaith += 2 * max( 0, pPope.AI_getAttitude( i ) )
+						if ( i == iJerusalemOwner ): # The Catholic owner of Jerusalem has a greatly improved chance
+							iCatholicFaith += 30
 				if ( iCatholicFaith > 0 ):
-					iCatholicFaith += iCatholicFaith / 5 + 1
-					if ( gc.getGame().getSorenRandNum(100, 'random Catholic BuildingType') % 2 == 0 ):
-						iCatholicBuilding = xml.iCatholicTemple
-					else:
-						iCatholicBuilding = xml.iCatholicMonastery
+					iCatholicFaith += iCatholicFaith / 5 + 1 # So there is around 20% chance for not giving anything
 					iRandomNum = gc.getGame().getSorenRandNum(iCatholicFaith, 'random Pope Building Build')
-					#print(" 3Miro Pope Builds " )
 					for i in range( iNumPlayers - 1 ):
 						pPlayer = gc.getPlayer( i )
 						if ( pPlayer.getStateReligion() == xml.iCatholicism and teamPope.isOpenBorders( pPlayer.getTeam() ) ):
-							#iRandomNum -= pPlayer.getFaith() + pPope.AI_getAttitude( i )
-							iRandomNum -= max( 0, pPope.AI_getAttitude( i ) )
+							iRandomNum -= pPlayer.getFaith()
+							iRandomNum -= 2 * max( 0, pPope.AI_getAttitude( i ) )
 							if ( i == iJerusalemOwner ):
-								iCatholicFaith -= 20
-							if ( iRandomNum <= 0 ):
-								#print(" The Pope Builds ",iCatholicBuilding," for ",i )
+								iCatholicFaith -= 30
+							if ( iRandomNum <= 0 ): # The given civ is chosen
+								# No chance for monastery if the selected player knows the Scientific Method tech (which obsoletes monasteries)
+								teamPlayer = gc.getTeam(pPlayer.getTeam())
+								if (teamPlayer.isHasTech(xml.iScientificMethod)):
+									iCatholicBuilding = xml.iCatholicTemple
+								else: # 50-50% chance for temple and monastery otherwise
+									if ( gc.getGame().getSorenRandNum(100, 'random Catholic BuildingType') % 2 == 0 ):
+										iCatholicBuilding = xml.iCatholicTemple
+									else:
+										iCatholicBuilding = xml.iCatholicMonastery
 								self.buildInRandomCity( i, iCatholicBuilding, xml.iCatholicism )
 								break
-	##Reformation code
+
+		##Reformation code
 		if ( self.getCounterReformationActive() ):
 			self.doCounterReformation()
 		if (self.getReformationActive() ):
@@ -406,7 +459,7 @@ class Religions:
 			city = cityList[iCity]
 			return (city.getX(), city.getY())
 		else:
-			return False
+			return 0
 
 	def selectRandomCityCiv(self, iCiv):
 		if (gc.getPlayer(iCiv).isAlive()):
@@ -416,7 +469,7 @@ class Religions:
 			iCity = gc.getGame().getSorenRandNum(len(cityList), 'random city')
 			city = cityList[iCity]
 			return (city.getX(), city.getY())
-		return False
+		return 0
 
 	def selectRandomCityArea(self, tProvinces):
 		cityList = []
@@ -431,7 +484,30 @@ class Religions:
 			city = cityList[iCity]
 			return (city.getX(), city.getY())
 		else:
-			return False
+			return 0
+
+	def selectRandomCityAreaNoReligion(self, tProvinces):
+		cityList = []
+		for x in range( con.iMapMaxX ):
+			for y in range( con.iMapMaxY ):
+				if ( tProvinceMap[y][x] in tProvinces ):
+					pCurrent = gc.getMap().plot( x, y )
+					if ( pCurrent.isCity()):
+						bNoReligion = True
+						PlotCity = pCurrent.getPlotCity()
+						# Check if there is a religion already present in the city
+						for iReligion in range( xml.iNumReligions ):
+							if (PlotCity.isHasReligion(iReligion)):
+								bNoReligion = False
+								break
+						if bNoReligion:
+							cityList.append(pCurrent.getPlotCity())
+		if (len(cityList) >= 1):
+			iCity = gc.getGame().getSorenRandNum(len(cityList), 'random city')
+			city = cityList[iCity]
+			return (city.getX(), city.getY())
+		else:
+			return 0
 
 	def selectRandomCityAreaCiv(self, tTopLeft, tBottomRight, iCiv):
 		cityList = []
@@ -446,7 +522,7 @@ class Religions:
 			city = cityList[iCity]
 			return (city.getX(), city.getY())
 		else:
-			return False
+			return 0
 
 	def selectRandomCityReligion(self, iReligion):
 		if (gc.getGame().isReligionFounded(iReligion)):
@@ -458,7 +534,7 @@ class Religions:
 			iCity = gc.getGame().getSorenRandNum(len(cityList), 'random city')
 			city = cityList[iCity]
 			return (city.getX(), city.getY())
-		return False
+		return 0
 
 	def selectRandomCityReligionCiv(self, iReligion, iCiv):
 		if (gc.getGame().isReligionFounded(iReligion)):
@@ -472,7 +548,7 @@ class Religions:
 				iCity = gc.getGame().getSorenRandNum(len(cityList), 'random city')
 				city = cityList[iCity]
 				return (city.getX(), city.getY())
-		return False
+		return 0
 
 	def spreadReligion(self, tPlot, iReligion ):
 		pPlot = gc.getMap().plot( tPlot[0], tPlot[1] )

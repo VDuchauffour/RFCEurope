@@ -404,11 +404,6 @@ class Stability:
 		pass
 
 
-	def onCorporationFounded(self, iPlayer):
-		gc.getPlayer( iPlayer ).changeStabilityBase( iCathegoryEconomy, -2 ) # a small offset to the large boost of income
-		#print("Stability - onCorporationFounded", iPlayer)
-
-
 	def onReligionSpread(self, iReligion, iPlayer):
 		pass
 		#Sedna17: Religions seemed to be subtracted and re-inserted into cities, which makes this a bad idea.

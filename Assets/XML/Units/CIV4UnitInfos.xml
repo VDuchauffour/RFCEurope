@@ -445,6 +445,7 @@
 			<bSpreadBySword>0</bSpreadBySword>
 			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
+		<!--
 		<UnitInfo>
 			<Class>UNITCLASS_EXECUTIVE_1</Class>
 			<Type>UNIT_EXECUTIVE_1</Type>
@@ -552,14 +553,12 @@
 			<iGreatWorkCulture>0</iGreatWorkCulture>
 			<iEspionagePoints>0</iEspionagePoints>
 			<TerrainImpassables/>
-			<!-- Rhye - start -->
 			<FeatureImpassables>
 				<FeatureImpassable>
 					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
 				</FeatureImpassable>
 			</FeatureImpassables>
-			<!-- Rhye - end -->
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
 			<iCombat>0</iCombat>
@@ -733,14 +732,12 @@
 			<iGreatWorkCulture>0</iGreatWorkCulture>
 			<iEspionagePoints>0</iEspionagePoints>
 			<TerrainImpassables/>
-			<!-- Rhye - start -->
 			<FeatureImpassables>
 				<FeatureImpassable>
 					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
 				</FeatureImpassable>
 			</FeatureImpassables>
-			<!-- Rhye - end -->
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
 			<iCombat>0</iCombat>
@@ -914,14 +911,12 @@
 			<iGreatWorkCulture>0</iGreatWorkCulture>
 			<iEspionagePoints>0</iEspionagePoints>
 			<TerrainImpassables/>
-			<!-- Rhye - start -->
 			<FeatureImpassables>
 				<FeatureImpassable>
 					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
 				</FeatureImpassable>
 			</FeatureImpassables>
-			<!-- Rhye - end -->
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
 			<iCombat>0</iCombat>
@@ -1269,14 +1264,12 @@
 			<iGreatWorkCulture>0</iGreatWorkCulture>
 			<iEspionagePoints>0</iEspionagePoints>
 			<TerrainImpassables/>
-			<!-- Rhye - start -->
 			<FeatureImpassables>
 				<FeatureImpassable>
 					<FeatureType>FEATURE_MARSH</FeatureType>
 					<bFeatureImpassable>1</bFeatureImpassable>
 				</FeatureImpassable>
 			</FeatureImpassables>
-			<!-- Rhye - end -->
 			<TerrainPassableTechs/>
 			<FeaturePassableTechs/>
 			<iCombat>0</iCombat>
@@ -1445,7 +1438,6 @@
 			<iGreatWorkCulture>0</iGreatWorkCulture>
 			<iEspionagePoints>0</iEspionagePoints>
 			<TerrainImpassables/>
-			<!-- Rhye -->
 			<FeatureImpassables>
 				<FeatureImpassable>
 					<FeatureType>FEATURE_MARSH</FeatureType>
@@ -1620,7 +1612,6 @@
 			<iGreatWorkCulture>0</iGreatWorkCulture>
 			<iEspionagePoints>0</iEspionagePoints>
 			<TerrainImpassables/>
-			<!-- Rhye -->
 			<FeatureImpassables>
 				<FeatureImpassable>
 					<FeatureType>FEATURE_MARSH</FeatureType>
@@ -1693,6 +1684,7 @@
 			<bSpreadBySword>0</bSpreadBySword>
 			<SpreadBySword>NONE</SpreadBySword>
 		</UnitInfo>
+		-->
 		<UnitInfo>
 			<Class>UNITCLASS_CATHOLIC_MISSIONARY</Class>
 			<Type>UNIT_CATHOLIC_MISSIONARY</Type>
@@ -17161,20 +17153,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<Buildings>
-				<Building>
-					<BuildingType>BUILDING_CORPORATION_1</BuildingType>
-					<bBuilding>1</bBuilding>
-				</Building>
-				<Building>
-					<BuildingType>BUILDING_CORPORATION_2</BuildingType>
-					<bBuilding>1</bBuilding>
-				</Building>
-				<Building>
-					<BuildingType>BUILDING_CORPORATION_3</BuildingType>
-					<bBuilding>1</bBuilding>
-				</Building>
-			</Buildings>
+			<Buildings/>
 			<ForceBuildings/>
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>NONE</ReligionType>
@@ -17838,24 +17817,7 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<Buildings>
-				<Building>
-					<BuildingType>BUILDING_CORPORATION_4</BuildingType>
-					<bBuilding>1</bBuilding>
-				</Building>
-				<Building>
-					<BuildingType>BUILDING_CORPORATION_5</BuildingType>
-					<bBuilding>1</bBuilding>
-				</Building>
-				<Building>
-					<BuildingType>BUILDING_CORPORATION_6</BuildingType>
-					<bBuilding>1</bBuilding>
-				</Building>
-				<Building>
-					<BuildingType>BUILDING_CORPORATION_7</BuildingType>
-					<bBuilding>1</bBuilding>
-				</Building>
-			</Buildings>
+			<Buildings/>
 			<ForceBuildings/>
 			<HolyCity>NONE</HolyCity>
 			<ReligionType>NONE</ReligionType>

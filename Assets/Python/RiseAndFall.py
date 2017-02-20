@@ -622,7 +622,7 @@ class RiseAndFall:
 	def onCityBuilt(self, iPlayer, pCity):
 		self.pm.onCityBuilt (iPlayer, pCity.getX(), pCity.getY())
 		# Absinthe: We can add free buildings for new cities here
-		#			It will add the building every time a city is founded on the plot, not just on the first time
+		#			Note that it will add the building every time a city is founded on the plot, not just on the first time
 		if ( (pCity.getX()==56) and (pCity.getY()==35) ): #Venice - early defence boost, the rivers alone are not enough
 			if ( iPlayer == iMorocco ):
 				pCity.setHasRealBuilding( xml.iMoroccoKasbah, True )
@@ -924,7 +924,7 @@ class RiseAndFall:
 				iHuman = utils.getHumanID()
 				HumanTeam = gc.getTeam(gc.getPlayer(iHuman).getTeam())
 				PlayerTeam = gc.getPlayer(iPlayer).getTeam()
-				if (HumanTeam.isHasMet(PlayerTeam)): # only if it's a known civ
+				if (HumanTeam.isHasMet(PlayerTeam) and utils.isActive(iHuman)): # only if it's a known civ
 					CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_LEADER_SWITCH", (gc.getPlayer(iPlayer).getName(), gc.getPlayer(iPlayer).getCivilizationDescriptionKey())), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, "", ColorTypes(con.iPurple), -1, -1, True, True)
 
 
@@ -1307,6 +1307,7 @@ class RiseAndFall:
 
 		self.setRebelSuppress( lSuppressList )
 
+		# Possible issue here for AI civs - do we always "resurrect" the new civ, even without any cities actually selected for resurrection?
 		if ( lCityCount[iHuman] > 0 ):
 			self.rebellionPopup( iDeadCiv, lCityCount[iHuman] )
 		else:
@@ -1347,15 +1348,27 @@ class RiseAndFall:
 		# Absinthe: update province status before the cities are flipped, so potential provinces will update if there are cities in them
 		self.pm.onRespawn( iDeadCiv ) # Absinthe: resetting the original potential provinces, and adding special province changes on respawn (Cordoba)
 
+		# Absinthe: we shouldn't get a previous leader on respawn - would be changed to a newer one in a couple turns anyway
+		#			instead we have a random chance to remain with the leader before the collapse, or to switch to the next one
 		if (len(tLeaders[iDeadCiv]) > 1):
 			iLen = len(tLeaders[iDeadCiv])
-			iRnd = gc.getGame().getSorenRandNum(iLen, 'odds')
-			for k in range(iLen):
-				iLeader = (iRnd + k) % iLen
-				if (pDeadCiv.getLeader() != tLeaders[iDeadCiv][iLeader]):
-					print ("leader switch after resurrection", pDeadCiv.getLeader(), tLeaders[iDeadCiv][iLeader])
-					pDeadCiv.setLeader(tLeaders[iDeadCiv][iLeader])
+			for iLeader in range(iLen-1): # no change if we are already at the last leader
+				if (pDeadCiv.getLeader() == tLeaders[iDeadCiv][iLeader]):
+					iRnd = gc.getGame().getSorenRandNum(5, 'odds')
+					if (iRnd > 1): # 60 chance for the next leader
+						print ("leader switch after resurrection", pDeadCiv.getLeader(), tLeaders[iDeadCiv][iLeader])
+						pDeadCiv.setLeader(tLeaders[iDeadCiv][iLeader])
 					break
+		# Absinthe: old code for leader-change on respawn
+		#if (len(tLeaders[iDeadCiv]) > 1):
+		#	iLen = len(tLeaders[iDeadCiv])
+		#	iRnd = gc.getGame().getSorenRandNum(iLen, 'odds')
+		#	for k in range(iLen):
+		#		iLeader = (iRnd + k) % iLen
+		#		if (pDeadCiv.getLeader() != tLeaders[iDeadCiv][iLeader]):
+		#			print ("leader switch after resurrection", pDeadCiv.getLeader(), tLeaders[iDeadCiv][iLeader])
+		#			pDeadCiv.setLeader(tLeaders[iDeadCiv][iLeader])
+		#			break
 
 		for l in range(iNumPlayers):
 			if (l != iDeadCiv):
@@ -1366,6 +1379,7 @@ class RiseAndFall:
 		for iOtherCiv in range(iNumPlayers):
 			if (iOtherCiv != iDeadCiv):
 				if (teamDeadCiv.isVassal(iOtherCiv) or gc.getTeam(gc.getPlayer(iOtherCiv).getTeam()).isVassal(iDeadCiv)):
+					print ("vassalage reset on resurrection", iDeadCiv, iOtherCiv)
 					teamDeadCiv.freeVassal(iOtherCiv)
 					gc.getTeam(gc.getPlayer(iOtherCiv).getTeam()).freeVassal(iDeadCiv)
 					gc.getPlayer(iOtherCiv).processCivNames()
@@ -1473,7 +1487,8 @@ class RiseAndFall:
 		#		utils.flipUnitsInCityAfter(tCoords, iOwner)
 		#		utils.flipUnitsInArea((tCoords[0]-2, tCoords[1]-2), (tCoords[0]+2, tCoords[1]+2), iDeadCiv, iOwner, True, False)
 
-		CyInterface().addMessage(iHuman, True, con.iDuration, (CyTranslator().getText("TXT_KEY_INDEPENDENCE_TEXT", (pDeadCiv.getCivilizationAdjectiveKey(),))), "", 0, "", ColorTypes(con.iDarkPink), -1, -1, True, True)
+		if utils.isActive(iHuman):
+			CyInterface().addMessage(iHuman, True, con.iDuration, (CyTranslator().getText("TXT_KEY_INDEPENDENCE_TEXT", (pDeadCiv.getCivilizationAdjectiveKey(),))), "", 0, "", ColorTypes(con.iDarkPink), -1, -1, True, True)
 		#if (bHuman == True):
 		#	self.rebellionPopup(iDeadCiv)
 		if ( lSuppressList[iHuman] == 2 or lSuppressList[iHuman] == 3 or lSuppressList[iHuman] == 4 ):
@@ -1798,16 +1813,16 @@ class RiseAndFall:
 				utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, i, False, False) #remaining independents in the region now belong to the new civ
 			print ("utils.flipUnitsInArea()")
 			#cover plots revealed by the catapult
-			plotZero = gc.getMap().plot( 30, 0 ) #sync with rfcebalance module
+			plotZero = gc.getMap().plot( 32, 0 ) #sync with rfcebalance module
 			if (plotZero.getNumUnits()):
 				catapult = plotZero.getUnit(0)
 				catapult.kill(False, iCiv)
-			gc.getMap().plot(29, 0).setRevealed(iCiv, False, True, -1);
-			gc.getMap().plot(30, 0).setRevealed(iCiv, False, True, -1);
 			gc.getMap().plot(31, 0).setRevealed(iCiv, False, True, -1);
-			gc.getMap().plot(29, 1).setRevealed(iCiv, False, True, -1);
-			gc.getMap().plot(30, 1).setRevealed(iCiv, False, True, -1);
+			gc.getMap().plot(32, 0).setRevealed(iCiv, False, True, -1);
+			gc.getMap().plot(33, 0).setRevealed(iCiv, False, True, -1);
 			gc.getMap().plot(31, 1).setRevealed(iCiv, False, True, -1);
+			gc.getMap().plot(32, 1).setRevealed(iCiv, False, True, -1);
+			gc.getMap().plot(33, 1).setRevealed(iCiv, False, True, -1);
 			print ("Plots covered")
 
 			if (gc.getPlayer(iCiv).getNumCities() > 0):
@@ -2136,6 +2151,7 @@ class RiseAndFall:
 
 
 	def createAdditionalUnits( self, iCiv, tPlot ):
+		# additional starting units if someone declares war on the civ during birth
 		if ( iCiv == iArabia ):
 			utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 4)
 		elif ( iCiv == iBulgaria ):
@@ -2210,7 +2226,7 @@ class RiseAndFall:
 		elif (iCiv == iVenecia):
 			utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
-			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 1)
+			utils.makeUnit(xml.iSpearman, iCiv, tPlot, 1)
 			utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 1)
 			tSeaPlot = self.findSeaPlots((57,35), 2)
 			if ( tSeaPlot ):
@@ -2221,17 +2237,19 @@ class RiseAndFall:
 				utils.makeUnit(xml.iArcher,iCiv,tSeaPlot,1)
 				pVenecia.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ESCORT_SEA, DirectionTypes.DIRECTION_SOUTH)
 				utils.makeUnit(xml.iSettler,iCiv,tSeaPlot,1)
-				utils.makeUnit(xml.iCrossbowman,iCiv,tSeaPlot,1)
+				utils.makeUnit(xml.iSpearman,iCiv,tSeaPlot,1)
 		elif (iCiv == iBurgundy):
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
-			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
+			utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
+			utils.makeUnit(xml.iGuisarme, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 1)
 		elif (iCiv == iGermany):
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
-			utils.makeUnit(xml.iAxeman, iCiv, tPlot, 3)
-			utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 3)
-			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
+			utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
+			utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 2)
+			utils.makeUnit(xml.iGuisarme, iCiv, tPlot, 2)
+			utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
 		elif (iCiv == iNovgorod):
 			utils.makeUnit(xml.iArcher, iCiv, tPlot, 3)
@@ -2356,11 +2374,11 @@ class RiseAndFall:
 				utils.makeUnit(xml.iSettler,iCiv,tSeaPlot,1)
 				utils.makeUnit(xml.iCrossbowman,iCiv,tSeaPlot,1)
 		elif (iCiv == iPrussia):
-			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 4)
+			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
-			utils.makeUnit(xml.iTeutonic, iCiv, tPlot, 3) # one will probably leave for Crusade
+			utils.makeUnit(xml.iTeutonic, iCiv, tPlot, 3) # at least one will probably leave for Crusade
+			utils.makeUnit(xml.iGuisarme, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iTrebuchet, iCiv, tPlot, 2)
-			utils.makeUnit(xml.iExecutive3, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 3)
 		elif (iCiv == iLithuania):
 			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 4)
@@ -2465,13 +2483,14 @@ class RiseAndFall:
 
 
 	def create500ADstartingUnits( self ):
-		# 3Miro: units on start (note Spearman might be an up to date upgraded defender, tech dependent)
+		# 3Miro: units on start (note Spearman might become an upgraded defender, tech dependent)
 
 		utils.makeUnit(xml.iSettler, iFrankia, tCapitals[iFrankia], 3)
-		utils.makeUnit(xml.iArcher, iFrankia, tCapitals[iFrankia], 3)
-		utils.makeUnit(xml.iAxeman, iFrankia, tCapitals[iFrankia], 4)
+		utils.makeUnit(xml.iArcher, iFrankia, tCapitals[iFrankia], 4)
+		utils.makeUnit(xml.iAxeman, iFrankia, tCapitals[iFrankia], 5)
+		utils.makeUnit(xml.iScout, iFrankia, tCapitals[iFrankia], 1)
 		utils.makeUnit(xml.iWorker, iFrankia, tCapitals[iFrankia], 2)
-		utils.makeUnit(xml.iCatholicMissionary, iFrankia, tCapitals[iFrankia], 1)
+		utils.makeUnit(xml.iCatholicMissionary, iFrankia, tCapitals[iFrankia], 2)
 
 		self.showArea(iByzantium)
 		self.initContact(iByzantium)
@@ -2589,7 +2608,7 @@ class RiseAndFall:
 			utils.makeUnit(xml.iMaceman, iDutch, tCapitals[iDutch], 1)
 
 	def assign1200ADtechs(self, iCiv):
-		# Temporary everyone gets Aragon techs
+		# As a temporary solution, everyone gets Aragon's starting techs
 		teamCiv = gc.getTeam(iCiv)
 		for iTech in range( xml.iFarriers + 1 ):
 			teamCiv.setHasTech( iTech, True, iCiv, False, False )
@@ -2656,8 +2675,6 @@ class RiseAndFall:
 			teamVenecia.setHasTech( xml.iMonasticism, True, iCiv, False, False )
 			teamVenecia.setHasTech( xml.iMusic, True, iCiv, False, False )
 			teamVenecia.setHasTech( xml.iHerbalMedicine, True, iCiv, False, False )
-			teamVenecia.setHasTech( xml.iVassalage, True, iCiv, False, False )
-			teamVenecia.setHasTech( xml.iCodeOfLaws, True, iCiv, False, False )
 			teamVenecia.setHasTech( xml.iChainMail, True, iCiv, False, False )
 			
 		elif ( iCiv == iBurgundy ):
@@ -2670,6 +2687,7 @@ class RiseAndFall:
 			teamBurgundy.setHasTech( xml.iArt, True, iCiv, False, False )
 			teamBurgundy.setHasTech( xml.iEngineering, True, iCiv, False, False )
 			teamBurgundy.setHasTech( xml.iChainMail, True, iCiv, False, False )
+			teamBurgundy.setHasTech( xml.iAristocracy, True, iCiv, False, False )
 			teamBurgundy.setHasTech( xml.iCodeOfLaws, True, iCiv, False, False )
 			teamBurgundy.setHasTech( xml.iAstrolabe, True, iCiv, False, False )
 
@@ -2682,7 +2700,6 @@ class RiseAndFall:
 			teamGermany.setHasTech( xml.iFarriers, True, iCiv, False, False )
 			teamGermany.setHasTech( xml.iArt, True, iCiv, False, False )
 			teamGermany.setHasTech( xml.iEngineering, True, iCiv, False, False )
-			teamGermany.setHasTech( xml.iMachinery, True, iCiv, False, False )
 			teamGermany.setHasTech( xml.iChainMail, True, iCiv, False, False )
 			teamGermany.setHasTech( xml.iAristocracy, True, iCiv, False, False )
 			teamGermany.setHasTech( xml.iCodeOfLaws, True, iCiv, False, False )
@@ -2693,7 +2710,6 @@ class RiseAndFall:
 				teamNovgorod.setHasTech( iTech, True, iCiv, False, False )
 			teamNovgorod.setHasTech( xml.iMonasticism, True, iCiv, False, False )
 			teamNovgorod.setHasTech( xml.iVassalage, True, iCiv, False, False )
-			teamNovgorod.setHasTech( xml.iFeudalism, True, iCiv, False, False )
 			teamNovgorod.setHasTech( xml.iFarriers, True, iCiv, False, False )
 			teamNovgorod.setHasTech( xml.iChainMail, True, iCiv, False, False )
 

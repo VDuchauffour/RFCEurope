@@ -222,15 +222,9 @@ class Victory:
 				if utils.getHumanID() != iPlayer:
 					self.setAllUHVFailed(iPlayer)
 
-	def getCorporationsFounded( self ):
-		return sd.scriptDict['bCorpsFounded']
-
-	def setCorporationsFounded( self, iChange ):
-		sd.scriptDict['bCorpsFounded'] = iChange
-		
 	def isIgnoreAI(self):
 		return sd.scriptDict['bIgnoreAIUHV']
-		
+
 	def setIgnoreAI(self, bVal):
 		sd.scriptDict['bIgnoreAIUHV'] = bVal
 
@@ -487,13 +481,12 @@ class Victory:
 		elif ( iPlayer == iGenoa ):
 			if ( pGenoa.isAlive() and pGenoa.getUHV( 1 ) == -1 ):
 				if ( iBuilding == xml.iGenoaBank ):
-					iCounter = pGenoa.getUHVCounter( 1 )
-					iCorps = iCounter % 100
-					iBanks = iCounter / 100 + 1
-					if ( iBanks >= 8 and iCorps >= 2 ):
+					iBanks = pGenoa.getUHVCounter( 1 )
+					iBanks += 1
+					if ( iBanks >= 8 ):
 						pGenoa.setUHV( 1, 1 )
 						pGenoa.changeStabilityBase( iCathegoryExpansion, 3 )
-					pGenoa.setUHVCounter( 1, 100 * iBanks + iCorps )
+					pGenoa.setUHVCounter( 1, iBanks )
 
 		# Cordoba UHV 2:
 		if ( iBuilding in tCordobaWonders ):
@@ -581,24 +574,6 @@ class Victory:
 						if ( iProject == xml.iEastIndiaCompany or iEastCompany == 1):
 							pDenmark.setUHV( 2, 1 )
 							pDenmark.changeStabilityBase( iCathegoryExpansion, 3 )
-
-
-	def onCorporationFounded(self, iPlayer ):
-		# Genoa UHV 2:
-		self.setCorporationsFounded( self.getCorporationsFounded() + 1 )
-		if ( iPlayer == iGenoa ):
-			iCounter = pGenoa.getUHVCounter( 1 )
-			iCorps = iCounter % 100 + 1
-			iBanks = iCounter / 100
-			if ( iBanks >= 8 and iCorps >= 2 ):
-				pGenoa.setUHV( 1, 1 )
-				pGenoa.changeStabilityBase( iCathegoryExpansion, 3 )
-			pGenoa.setUHVCounter( 1, 100 * iBanks + iCorps )
-		if ( self.getCorporationsFounded() == 7 and pGenoa.getUHV( 1 ) == -1 ):
-			iCounter = pGenoa.getUHVCounter( 1 )
-			iCorps = iCounter % 100 + 1
-			if ( iCorps < 2 ):
-				pGenoa.setUHV( 1, 0 )
 
 
 	def getOwnedLuxes( self, pPlayer ):
@@ -1295,8 +1270,8 @@ class Victory:
 			else:
 				pGenoa.setUHV( 0, 0 )
 
-		# UHV 2: Found 2 Corporations and build 8 Banks
-		# Controlled in the onBuildingBuilt and onCorporationFounded functions
+		# UHV 2: Build 8 Banks
+		# Controlled in the onBuildingBuilt function
 
 		# UHV 3: Have the largest total amount of commerce from foreign Trade Route Exports and Imports in 1640
 		if ( iGameTurn == xml.i1640AD and pGenoa.getUHV( 2 ) == -1 ):

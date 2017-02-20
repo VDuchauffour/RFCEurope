@@ -442,7 +442,7 @@ class RFCUtils:
 			iFreeDefender = xml.iArbalest
 		elif(teamPlayer.isHasTech(xml.iMachinery)):
 			iFreeDefender = xml.iCrossbowman
-		self.makeUnit(iFreeDefender, iNewOwner, [0, 72], 1)
+		self.makeUnit(iFreeDefender, iNewOwner, [28, 0], 1)
 
 		for i in range(iNumUnitsInAPlot):
 			unit = plotCity.getUnit(j)
@@ -455,12 +455,12 @@ class RFCUtils:
 					if ( lNoFlip[i] == unitType ):
 						bSafeUnit = True
 				if not bSafeUnit:
-					# Absinthe: only 50% chance that the unit will defect
+					# Absinthe: instead of switching all units to indy, only 60% chance that the unit will defect
 					#			the first unit from the old owner should always defect though
 					k += 1
-					if ( k < 2 or gc.getGame().getSorenRandNum(10, 'Convert Unit') < 4 ):
+					if ( k < 2 or gc.getGame().getSorenRandNum(10, 'Convert Unit') < 6 ):
 						unit.kill(False, con.iBarbarian)
-						self.makeUnit(unitType, iNewOwner, [0, 72], 1)
+						self.makeUnit(unitType, iNewOwner, [28, 0], 1)
 					# Absinthe: skip unit if it won't defect, so it will move out of the city territory
 					else:
 						j += 1
@@ -485,7 +485,7 @@ class RFCUtils:
 			if (unit.getOwner() == iOldOwner):
 				unit.kill(False, con.iBarbarian)
 				if (iNewOwner < con.iNumActivePlayers or unitType > xml.iSettler): # Absinthe: major players can even flip settlers (spawn/respawn mechanics)
-					self.makeUnit(unitType, iNewOwner, [0, 72], 1)
+					self.makeUnit(unitType, iNewOwner, [28, 0], 1)
 			# Absinthe: skip unit if from another player
 			else:
 				j += 1
@@ -494,7 +494,7 @@ class RFCUtils:
 	def flipUnitsInCityAfter(self, tCityPlot, iCiv):
 		#moves new units back in their place
 		#print ("tCityPlot After", tCityPlot)
-		tempPlot = gc.getMap().plot(0,72)
+		tempPlot = gc.getMap().plot(28, 0)
 		if (tempPlot.getNumUnits() != 0):
 			iNumUnitsInAPlot = tempPlot.getNumUnits()
 			#print ("iNumUnitsInAPlot", iNumUnitsInAPlot)
@@ -503,10 +503,12 @@ class RFCUtils:
 				#print("  3Miro Unit Type and Owner ",unit.getUnitType(),"  ",unit.getOwner() )
 				unit.setXYOld(tCityPlot[0],tCityPlot[1])
 		#cover revealed plots
-		gc.getMap().plot(0, 72).setRevealed(iCiv, False, True, -1);
-		gc.getMap().plot(0, 71).setRevealed(iCiv, False, True, -1);
-		gc.getMap().plot(1, 72).setRevealed(iCiv, False, True, -1);
-		gc.getMap().plot(1, 71).setRevealed(iCiv, False, True, -1);
+		gc.getMap().plot(27, 0).setRevealed(iCiv, False, True, -1);
+		gc.getMap().plot(28, 0).setRevealed(iCiv, False, True, -1);
+		gc.getMap().plot(29, 0).setRevealed(iCiv, False, True, -1);
+		gc.getMap().plot(27, 1).setRevealed(iCiv, False, True, -1);
+		gc.getMap().plot(28, 1).setRevealed(iCiv, False, True, -1);
+		gc.getMap().plot(29, 1).setRevealed(iCiv, False, True, -1);
 
 	def killUnitsInArea(self, tTopLeft, tBottomRight, iCiv):
 		for x in range(tTopLeft[0], tBottomRight[0]+1):
@@ -541,7 +543,7 @@ class RFCUtils:
 				iNumUnitsInAPlot = killPlot.getNumUnits()
 				if (iNumUnitsInAPlot):
 					bRevealedZero = False
-					if (gc.getMap().plot(0, 72).isRevealed(iNewOwner, False)):
+					if (gc.getMap().plot(28, 0).isRevealed(iNewOwner, False)):
 						bRevealedZero = True
 					#print ("killplot", x, y)
 					if (bSkipPlotCity == True) and (killPlot.isCity()):
@@ -557,13 +559,13 @@ class RFCUtils:
 								unit.kill(False, con.iBarbarian)
 								if (bKillSettlers):
 									if ((unit.getUnitType() > iSettler)):
-										self.makeUnit(unit.getUnitType(), iNewOwner, [0, 72], 1)
+										self.makeUnit(unit.getUnitType(), iNewOwner, [28, 0], 1)
 								else:
 									if ((unit.getUnitType() >= iSettler)): #skip animals
-										self.makeUnit(unit.getUnitType(), iNewOwner, [0, 72], 1)
+										self.makeUnit(unit.getUnitType(), iNewOwner, [28, 0], 1)
 							else:
 								j += 1
-						tempPlot = gc.getMap().plot(0,72)
+						tempPlot = gc.getMap().plot(28, 0)
 						#moves new units back in their place
 						if (tempPlot.getNumUnits() != 0):
 							iNumUnitsInAPlot = tempPlot.getNumUnits()
@@ -573,10 +575,12 @@ class RFCUtils:
 								unit.setXYOld(x,y)
 							iCiv = iNewOwner
 							if (bRevealedZero == False):
-								gc.getMap().plot(0, 72).setRevealed(iCiv, False, True, -1);
-								gc.getMap().plot(0, 71).setRevealed(iCiv, False, True, -1);
-								gc.getMap().plot(1, 72).setRevealed(iCiv, False, True, -1);
-								gc.getMap().plot(1, 71).setRevealed(iCiv, False, True, -1);
+								gc.getMap().plot(27, 0).setRevealed(iCiv, False, True, -1);
+								gc.getMap().plot(28, 0).setRevealed(iCiv, False, True, -1);
+								gc.getMap().plot(29, 0).setRevealed(iCiv, False, True, -1);
+								gc.getMap().plot(27, 1).setRevealed(iCiv, False, True, -1);
+								gc.getMap().plot(28, 1).setRevealed(iCiv, False, True, -1);
+								gc.getMap().plot(29, 1).setRevealed(iCiv, False, True, -1);
 
 
 	#RiseAndFall
@@ -974,6 +978,15 @@ class RFCUtils:
 			if (gc.getTeam(gc.getPlayer(iCiv).getTeam()).isVassal(iMaster)):
 				return True
 		return False
+
+
+	def isActive(self, iPlayer):
+		"""Returns true if the player is spawned and alive."""
+		if gc.getPlayer(iPlayer).getNumCities() < 1: return False
+		if not gc.getPlayer(iPlayer).isAlive: return False
+		iGameTurn = gc.getGame().getGameTurn()
+		if iGameTurn < con.tBirth[iPlayer]: return False
+		return True
 
 
 	# UP, UHV, by Leoreth

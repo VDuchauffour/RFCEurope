@@ -1289,10 +1289,7 @@ class CvVictoryScreen:
 		#UHV1
 		sText1 += self.getProvinceString(vic.tGenoaControl)
 		#UHV2
-		iCounter = pPlayer.getUHVCounter( 1 )
-		iCorpCount = iCounter % 100
-		iBankCount = iCounter / 100
-		sText2 += localText.getText("TXT_KEY_CONCEPT_CORPORATIONS",()) + ": " + self.determineColor(iCorpCount >= 2, str(iCorpCount))
+		iBankCount = pPlayer.getUHVCounter( 1 )
 		sText2 += "\n" + localText.getText("TXT_KEY_BUILDING_GENOA_BANK",()) + ": " + self.determineColor(iBankCount >= 8, str(iBankCount))
 		#UHV3
 		iGenoaTrade = pPlayer.calculateTotalImports(YieldTypes.YIELD_COMMERCE) + pPlayer.calculateTotalExports(YieldTypes.YIELD_COMMERCE)

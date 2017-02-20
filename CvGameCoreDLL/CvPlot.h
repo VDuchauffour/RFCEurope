@@ -532,6 +532,8 @@ public:
 
 	// Absinthe: start
 	int getProvince();
+	int getProvinceID() const;
+	void setProvinceID(int iNewValue);
 	// Absinthe: end
 
 	// 3MiroCAR: Sanguo Mod Performance, start, added by poyuzhe 08.13.09
@@ -647,6 +649,10 @@ protected:
 
 	// added so under cheat mode we can access protected stuff
 	friend class CvGameTextMgr;
+
+	// Absinthe: start
+	short m_iProvinceID;
+	// Absinthe: end
 
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */

@@ -7,25 +7,25 @@
 <Civ4CorporationInfo xmlns="x-schema:CIV4GameInfoSchema.xml">
 	<CorporationInfos>
 		<CorporationInfo>
-			<Type>CORPORATION_1</Type> <!-- Knights Hospitaller-->
+			<Type>CORPORATION_1</Type> <!-- Knights Hospitaller -->
 			<Description>TXT_KEY_KNIGHTS_HOSPITALLER</Description>
 			<Civilopedia>TXT_KEY_KNIGHTS_HOSPITALLER_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
 			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
-			<iSpreadCost>50</iSpreadCost>
-			<iMaintenance>100</iMaintenance>
+			<iSpreadCost>0</iSpreadCost>
+			<iMaintenance>0</iMaintenance>
 			<PrereqBonuses>
 				<BonusType>BONUS_IRON</BonusType>
 				<BonusType>BONUS_TIMBER</BonusType>
 				<BonusType>BONUS_INCENSE</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
-				<iHeadquarterCommerce>4</iHeadquarterCommerce>
+				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 			</HeadquarterCommerces>
-			<BonusProduced>NONE</BonusProduced>
+			<BonusProduced>BONUS_RELIC</BonusProduced>
 			<CommercesProduced>
 				<iCommerceProduced>0</iCommerceProduced>
 				<iCommerceProduced>0</iCommerceProduced>
@@ -42,14 +42,14 @@
 			<Sound>AS2D_BUILD_BARRACKS</Sound>
 		</CorporationInfo>
 		<CorporationInfo>
-			<Type>CORPORATION_2</Type> <!--Knights Templar-->
+			<Type>CORPORATION_2</Type> <!-- Knights Templar -->
 			<Description>TXT_KEY_KNIGHTS_TEMPLAR</Description>
 			<Civilopedia>TXT_KEY_KNIGHTS_TEMPLAR_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
 			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
-			<iSpreadCost>50</iSpreadCost>
-			<iMaintenance>100</iMaintenance>
+			<iSpreadCost>0</iSpreadCost>
+			<iMaintenance>0</iMaintenance>
 			<PrereqBonuses>
 				<BonusType>BONUS_WINE</BonusType>
 				<BonusType>BONUS_WHEAT</BonusType>
@@ -57,11 +57,11 @@
 				<BonusType>BONUS_IRON</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
-				<iHeadquarterCommerce>4</iHeadquarterCommerce>
+				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 			</HeadquarterCommerces>
-			<BonusProduced>NONE</BonusProduced>
+			<BonusProduced>BONUS_RELIC</BonusProduced>
 			<CommercesProduced>
 				<iCommerceProduced>0</iCommerceProduced>
 				<iCommerceProduced>50</iCommerceProduced>
@@ -78,14 +78,14 @@
 			<Sound>AS2D_BUILD_BARRACKS</Sound>
 		</CorporationInfo>
 		<CorporationInfo>
-			<Type>CORPORATION_3</Type> <!-- Teutonic Knights-->
+			<Type>CORPORATION_3</Type> <!-- Teutonic Knights -->
 			<Description>TXT_KEY_TEUTONIC_KNIGHTS</Description>
 			<Civilopedia>TXT_KEY_TEUTONIC_KNIGHTS_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
 			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
-			<iSpreadCost>50</iSpreadCost>
-			<iMaintenance>100</iMaintenance>
+			<iSpreadCost>0</iSpreadCost>
+			<iMaintenance>0</iMaintenance>
 			<PrereqBonuses>
 				<BonusType>BONUS_CLAM</BonusType>
 				<BonusType>BONUS_SALT</BonusType>
@@ -93,7 +93,7 @@
 				<BonusType>BONUS_IRON</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
-				<iHeadquarterCommerce>4</iHeadquarterCommerce>
+				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 			</HeadquarterCommerces>
@@ -112,14 +112,14 @@
 			<Sound>AS2D_BUILD_BARRACKS</Sound>
 		</CorporationInfo>
 		<CorporationInfo>
-			<Type>CORPORATION_4</Type> <!-- Hanseatic League-->
+			<Type>CORPORATION_4</Type> <!-- Hanseatic League -->
 			<Description>TXT_KEY_HANSEATIC_LEAGUE</Description>
 			<Civilopedia>TXT_KEY_HANSEATIC_LEAGUE_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
 			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
-			<iSpreadCost>50</iSpreadCost>
-			<iMaintenance>100</iMaintenance>
+			<iSpreadCost>0</iSpreadCost>
+			<iMaintenance>0</iMaintenance>
 			<PrereqBonuses>
 				<BonusType>BONUS_SALT</BonusType>
 				<BonusType>BONUS_FISH</BonusType>
@@ -127,7 +127,7 @@
 				<BonusType>BONUS_FUR</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
-				<iHeadquarterCommerce>4</iHeadquarterCommerce>
+				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 			</HeadquarterCommerces>
@@ -148,14 +148,14 @@
 			<Sound>AS2D_BUILD_PALACE</Sound>
 		</CorporationInfo>
 		<CorporationInfo>
-			<Type>CORPORATION_5</Type> <!--Medici Banks-->
+			<Type>CORPORATION_5</Type> <!-- Medici Banks -->
 			<Description>TXT_KEY_MEDICI_BANKS</Description>
 			<Civilopedia>TXT_KEY_MEDICI_BANKS_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
 			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
-			<iSpreadCost>50</iSpreadCost>
-			<iMaintenance>100</iMaintenance>
+			<iSpreadCost>0</iSpreadCost>
+			<iMaintenance>0</iMaintenance>
 			<PrereqBonuses>
 				<BonusType>BONUS_SILK</BonusType>
 				<BonusType>BONUS_SHEEP</BonusType>
@@ -163,7 +163,7 @@
 				<BonusType>BONUS_FUR</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
-				<iHeadquarterCommerce>4</iHeadquarterCommerce>
+				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 			</HeadquarterCommerces>
@@ -183,14 +183,14 @@
 			<Sound>AS2D_BUILD_BANK</Sound>
 		</CorporationInfo>
 		<CorporationInfo>
-			<Type>CORPORATION_6</Type> <!--Augsburg-->
+			<Type>CORPORATION_6</Type> <!-- Augsburg Banking Families -->
 			<Description>TXT_KEY_AUGSBURG_FAMILIES</Description>
 			<Civilopedia>TXT_KEY_AUGSBURG_FAMILIES_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
 			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
-			<iSpreadCost>50</iSpreadCost>
-			<iMaintenance>100</iMaintenance>
+			<iSpreadCost>0</iSpreadCost>
+			<iMaintenance>0</iMaintenance>
 			<PrereqBonuses>
 				<BonusType>BONUS_GOLD</BonusType>
 				<BonusType>BONUS_SILVER</BonusType>
@@ -198,7 +198,7 @@
 				<BonusType>BONUS_SHEEP</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
-				<iHeadquarterCommerce>4</iHeadquarterCommerce>
+				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 			</HeadquarterCommerces>
@@ -218,14 +218,14 @@
 			<Sound>AS2D_BUILD_BANK</Sound>
 		</CorporationInfo>
 		<CorporationInfo>
-			<Type>CORPORATION_7</Type> <!--Bank of St. George-->
+			<Type>CORPORATION_7</Type> <!-- Bank of St. George -->
 			<Description>TXT_KEY_BANK_OF_ST_GEORGE</Description>
 			<Civilopedia>TXT_KEY_BANK_OF_ST_GEORGE_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
 			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
-			<iSpreadCost>50</iSpreadCost>
-			<iMaintenance>100</iMaintenance>
+			<iSpreadCost>0</iSpreadCost>
+			<iMaintenance>0</iMaintenance>
 			<PrereqBonuses>
 				<BonusType>BONUS_SUGAR</BonusType>
 				<BonusType>BONUS_SILK</BonusType>
@@ -233,7 +233,7 @@
 				<BonusType>BONUS_GOLD</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
-				<iHeadquarterCommerce>4</iHeadquarterCommerce>
+				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 			</HeadquarterCommerces>
@@ -252,6 +252,78 @@
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>
 			<Sound>AS2D_BUILD_BANK</Sound>
+		</CorporationInfo>
+		<CorporationInfo>
+			<Type>CORPORATION_8</Type> <!-- Order of the Dragon -->
+			<Description>TXT_KEY_ORDER_OF_DRAGON</Description>
+			<Civilopedia>TXT_KEY_ORDER_OF_DRAGON_PEDIA</Civilopedia>
+			<TechPrereq>NONE</TechPrereq>
+			<FreeUnitClass>NONE</FreeUnitClass>
+			<iSpreadFactor>200</iSpreadFactor>
+			<iSpreadCost>0</iSpreadCost>
+			<iMaintenance>0</iMaintenance>
+			<PrereqBonuses>
+				<BonusType>BONUS_SUGAR</BonusType>
+				<BonusType>BONUS_SILK</BonusType>
+				<BonusType>BONUS_WHEAT</BonusType>
+				<BonusType>BONUS_GOLD</BonusType>
+			</PrereqBonuses>
+			<HeadquarterCommerces>
+				<iHeadquarterCommerce>0</iHeadquarterCommerce>
+				<iHeadquarterCommerce>0</iHeadquarterCommerce>
+				<iHeadquarterCommerce>0</iHeadquarterCommerce>
+			</HeadquarterCommerces>
+			<BonusProduced>NONE</BonusProduced>
+			<CommercesProduced>
+				<iCommerceProduced>100</iCommerceProduced>
+				<iCommerceProduced>0</iCommerceProduced>
+				<iCommerceProduced>0</iCommerceProduced>
+				<iCommerceProduced>300</iCommerceProduced>
+			</CommercesProduced>
+			<YieldsProduced>
+				<iYieldProduced>0</iYieldProduced>
+				<iYieldProduced>0</iYieldProduced>
+			</YieldsProduced>
+			<Button>Art/Interface/Buttons/Corporations/Grimaldi.dds</Button>
+			<MovieFile>NONE</MovieFile>
+			<MovieSound>NONE</MovieSound>
+			<Sound>AS2D_BUILD_BARRACKS</Sound>
+		</CorporationInfo>
+		<CorporationInfo>
+			<Type>CORPORATION_9</Type> <!-- Order of Calatrava -->
+			<Description>TXT_KEY_ORDER_OF_CALATRAVA</Description>
+			<Civilopedia>TXT_KEY_ORDER_OF_CALATRAVA_PEDIA</Civilopedia>
+			<TechPrereq>NONE</TechPrereq>
+			<FreeUnitClass>NONE</FreeUnitClass>
+			<iSpreadFactor>200</iSpreadFactor>
+			<iSpreadCost>0</iSpreadCost>
+			<iMaintenance>0</iMaintenance>
+			<PrereqBonuses>
+				<BonusType>BONUS_SUGAR</BonusType>
+				<BonusType>BONUS_SILK</BonusType>
+				<BonusType>BONUS_WHEAT</BonusType>
+				<BonusType>BONUS_GOLD</BonusType>
+			</PrereqBonuses>
+			<HeadquarterCommerces>
+				<iHeadquarterCommerce>0</iHeadquarterCommerce>
+				<iHeadquarterCommerce>0</iHeadquarterCommerce>
+				<iHeadquarterCommerce>0</iHeadquarterCommerce>
+			</HeadquarterCommerces>
+			<BonusProduced>NONE</BonusProduced>
+			<CommercesProduced>
+				<iCommerceProduced>100</iCommerceProduced>
+				<iCommerceProduced>0</iCommerceProduced>
+				<iCommerceProduced>0</iCommerceProduced>
+				<iCommerceProduced>300</iCommerceProduced>
+			</CommercesProduced>
+			<YieldsProduced>
+				<iYieldProduced>0</iYieldProduced>
+				<iYieldProduced>0</iYieldProduced>
+			</YieldsProduced>
+			<Button>Art/Interface/Buttons/Corporations/Grimaldi.dds</Button>
+			<MovieFile>NONE</MovieFile>
+			<MovieSound>NONE</MovieSound>
+			<Sound>AS2D_BUILD_BARRACKS</Sound>
 		</CorporationInfo>
 	</CorporationInfos>
 </Civ4CorporationInfo>

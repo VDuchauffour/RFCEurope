@@ -16,24 +16,47 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 Changes for RFCE 1.5:
 (under development)
 
-	1200AD scenario updates:
-		- Fixed Muscovy start in 1200AD scenario, now all civs should work without any issues
-		- Fixed Muscovian starting religion (starts with Orthodoxy as State Religion) in the 1200AD scenario
-		- Austria and Sweden start with Catholicism as State Religion in the 1200AD scenario
-		- Fixed Swedish initial contact with Denmark on the very beginning of the 1200AD scenario
-		- Fixed turn counter on scenario start for the 1200AD scenario, now it should show correctly for all civs
-		- Norway and Denmark start with Catholicism as a State Religion and with a couple additional Catholic cities in the 1200AD scenario
-		- Uppsala is preplaced in the 1200AD scenario (will be reduced to town a couple turns later), Shrine of Uppsala is preplaced there so it can't be built later
-
-	Mercenary updates:
-		- Fixed the annoying bug with mercenary notifications (both appearing merc and leaving merc messages) when there wasn't any changes in your mercenary pool
-		- Fixed bug with ever increasing cost for mercenary price and upkeep whenever you clicked on them (for civs with modified values, probably caused by the new StoredData handling)
-		- Fixed bug where you could hire naval mercenaries in non-coastal cities - they will still appear on the mercenary screen though
-		- Mercenaries requiring more culture in the province or a different state religion will also show up on the merc screen, but you can't hire them
-		- Added information texts for the mercenary screen about the reason(s) why you cannot hire specific mercs: money, culture, coastal city, religion
-		- Fixed bug where mercenaries could appear in cities without enough culture (if there were multiple cities in the province)
-		- Specific interface message for the human player when there is a new mercenary in the list, but can't be hired because needs different State Religion
-		- New interface message for the human player if a merc available for him/her was hired by another player
+	Company overhaul:
+		- A Dynamic Company system is introduced to the mod! Idea from SoI
+		- Companies are not founded by civs anymore (or with GPs actually), but are independent entities on their own
+		- They semi-automatically spread to cities based on their own preferences:
+			- Available regions and provinces for the companies are set up on a (more or less) historic base
+			- Most companies have hated and preferred religions, and have modifiers for most religions (both on a state and on a city level)
+			- Hated state religion or the lack of preferred religion in the city can even be an excluding reason for some companies
+			- Wars might also add negative or positive effects to company spread on some situations, mostly based on state religion of the participants
+			- Knowledge of some techs give better odds for some companies (e.g. Chivalry, Plate Armor for military orders; Banking, Shipbuilding for trade companies)
+			- Military buildings will boost your chances for a military order, trade buildings for a trading/banking company
+			- Many civics have various modifiers to company spread, for example Merchant Republic, Feudal Law, Mercantilism, Religious Tolerance, Militarism
+			- Trade goods available to a city is fairly significant in spread chance, also you get bonuses to yields in a similar fashion as in vanilla BtS corps
+			- Number of trade routes is also an important factor for deciding where to spread the trading/banking companies
+		- They have a "birth" date and some have a "death" date, and are mostly active between those (these are usually set on historic dates)
+		- All of them have a limit for the number of cities they can be active at at a given time
+		- There is competition between the cities for the companies - every few turns the company may leave some cities if there are better ones for their needs
+		- If there is a huge drop in the preference value for a company (for example on state religion change or city ownership change) it may leave the city right away
+		- There might also be competition between companies for a given city (e.g. Templars-Teutons-Hospitallers), if one is present the rest have decreased chance
+		- If a given company has already spread to some cities of a civ, it will have somewhat decreased chance for further spread in that civ's cities
+		
+		- Masters/Executives can no longer spread companies, they are effectively removed from the mod
+		- Currently there are no Headquarters, all cities with the given company spread into them are considered equal - this might change later on
+		- Companies have resource preferences, and add various yield bonuses if you have access to them (based on their quantity) - as in the vanilla game
+		- Hospitaller, Templar and Teutonic Knights also give you access to the Relic resource type, which adds extra happiness to your civ
+		- Companies might have special units and/or buildings associated with them, all of which are only buildable while the company is present in the city
+		- Company costs are independent from your civ: do not cost any money when they spread to your cities, and do not cost any maintenance for being present
+		- Added various interface messages for companies spreading/leaving, both for your own cities and for foreign cities visible to you
+		- Removed unnecessary popups connected to company availability
+		- Corporations in your cities no longer add any stability penalty
+		
+		- All 7 previous RFCE companies were integrated into the new system
+		- 2 new companies: the Order of the Dragon, the Order of Calatrava
+		- Hanseatic League can only spread to coastal cities
+		- Hospitallers, Templars, Teutons and Calatrava spread Catholicism to the city when they spread there
+		- The Levant (and especially Jerusalem) has a greatly improved chance for Hospitallers, Templars and Teutons
+		- Trading/banking companies have a preference (smallish) to their historical founding provinces
+		- Hospitaller preferred region change after the Crusades, with Malta and Rhodes gaining importance
+		- Teutons preferred region change after the Crusades, with Transylvania and the lands of Prussia gaining importance
+		- Teutons are set to have a very high chance to spread to cities of the Teutonic Order (Prussia)
+		- City limit is also modified for Hospitallers and Teutons after the Crusades are over
+		- The Genoese UHV is changed to simply build 8 banks (for now)
 
 	Plague overhaul:
 		- Improvements near a plagued city have a chance whether to reduce their level, or to reset the progress towards the next level: Towns 100%, Villages 75%, Hamlets 50%, Cottages 25%
@@ -58,17 +81,23 @@ Changes for RFCE 1.5:
 		- Damage from the plague will be somewhat more random for all units, especially when there are more units on the same tile
 		- The plague spread mechanics is based on trade routes and city distance, but much more random than before
 		- Plague can spread to more of your cities in a given turn (max is based on the size of the empire), bigger chance for it if there are many cities close to already infected ones
+		- Plague icon on the city banner, not only the plague cloud above them (idea from DoC)
 
-	Stability updates:
-		- Increased civic stability boost from Religious Law + Theocracy
-		- Added small initial stability bonus for Arabia, Hungary and Novgorod if controlled by the AI
-		- Settling in core province means +1 stability, in historic/potential 0, in contested -1, in foreign -2
-		- Various tweaks in stability calculations for preplaced/preset stuff in the scenarios
-		- Potential provinces now properly update on the start of all new games (important for the 1200AD scenario), so stability from them is also updated correctly
-		- Revised collapse rules from bad stability for the human player, now it has a lower chance to happen generally (still very dangerous, but reaches 100% chance much slower)
-		- Reduced overall impact of unhappiness from religious civics on city instability
-		- Reduced foreign culture instability if you run the Subjugation Civic (-1 with less than 20%, 0 otherwise)
-		- Fixed mistake in religious stability calculations when Judaism is your State Religion
+	Crusade updates:
+		- Crusading units now have a chance to arrive to their destination, around 70% of the units will arrive for the first Crusade
+		- Number of arriving Crusader units scale reversed with the start date of Crusades, to counterbalance the increasing number of units available for selection
+		- This reduction is very significant for an AI-controlled Jerusalem, much less if the human player has to defend the city
+		- When the Crusade is deviated to a new target, it gets only a little more than half the units as it would have if it was a normal Crusade
+		- Increased gold cost for deviating Crusades for both the human and the AI player
+		- Decreased extra votes for the Papal States (they were the deciding factor before, thus almost always the Papal favourite civ was chosen to lead)
+		- Adjusted some minor inconsistencies with unit types in the Crusading unit categories
+		- Revised how special units and UUs are handled on Crusades if the leader of the Crusade has access to the given unit
+		- Fixed calculation bug when Paladin units were participating in Crusades, which caused issues with number of Knights as well
+		- Fixed bug where both Catapults and Trebuchets were added to the Crusading stack in many cases (doubling the intended amount of siege units)
+		- Added Cordoba as the primary target for stolen Crusades for AI Portugal, Aragon (Castile already had it this way) if they are Muslim and not a vassal
+		- Added Ottomans as the primary target for stolen Crusades for AI Hungary, Austria and Poland (if there is a late Crusade) if they are Muslim and not a vassal
+		- Byzantium will only be the primary target for stolen Crusades for AI Venice and Genoa if they hold Constantinople and they are not a vassal
+		- Fixed mistake which would kill all units around the Crusade's target city (instead of only making room on one tile) if no valid plot was found
 
 	Terrain updates:
 		- New base terrain: Semidesert - 1 production, +1 commerce near rivers, city founding only possible near fresh water
@@ -96,17 +125,92 @@ Changes for RFCE 1.5:
 		- Changed Limfjord in Denmark to be an actual Coast Sea tile instead of a lake
 		- Added inland Coast Sea tile near Trondheim/Nidaros to represent the huge fjords in the area
 		- Added Islands features south of Bergen, west of Nidaros, on the Finnish coastline
-		- Terrain and resource rearrangement in Norway, in north Sweden and in Finland
+		- Terrain and resource rearrangements in Norway, in north Sweden and in Finland
+		- Adjusted province borders in Ireland, Norway, and Finland
+
+	1200AD scenario updates:
+		- Fixed Muscovy start in 1200AD scenario, now all civs should work without any issues
+		- Fixed Muscovian starting religion (starts with Orthodoxy as State Religion) in the 1200AD scenario
+		- Austria and Sweden start with Catholicism as State Religion in the 1200AD scenario
+		- Fixed Swedish initial contact with Denmark on the very beginning of the 1200AD scenario
+		- Fixed turn counter on scenario start for the 1200AD scenario, now it should show correctly for all civs
+		- Norway and Denmark start with Catholicism as a State Religion and with a couple additional Catholic cities in the 1200AD scenario
+		- Uppsala is preplaced in the 1200AD scenario (will be reduced to town a couple turns later), Shrine of Uppsala is preplaced there so it can't be built later
+		- Fixed oversight in the 1200AD scenario where Norwegian cities started with both Trading Post and Harbor - now they have Lighthouse instead
+		- Fixed oversight in the 1200AD scenario where Portuguese cities started with both Feitoria and Lighthouse - now they have Harbor instead
+		- NOTE: Most of the map updates for the 1.5 version are not yet implemented in the 1200AD scenario
+
+	Mercenary updates:
+		- Fixed the annoying bug with mercenary notifications (both appearing merc and leaving merc messages) when there wasn't any changes in your mercenary pool
+		- Fixed bug with ever increasing cost for mercenary price and upkeep whenever you clicked on them (for civs with modified values, probably caused by the new StoredData handling)
+		- Fixed bug where you could hire naval mercenaries in non-coastal cities - they will still appear on the mercenary screen though
+		- Mercenaries requiring more culture in the province or a different state religion will also show up on the merc screen, but you can't hire them
+		- Added information texts for the mercenary screen about the reason(s) why you cannot hire specific mercs: money, culture, coastal city, religion
+		- Fixed bug where mercenaries could appear in cities without enough culture (if there were multiple cities in the province)
+		- Specific interface message for the human player when there is a new mercenary in the list, but can't be hired because needs different State Religion
+		- New interface message for the human player if a merc available for him/her was hired by another player
+
+	Stability updates:
+		- Increased civic stability boost from Religious Law + Theocracy
+		- Added small initial stability bonus for Arabia, Hungary and Novgorod if controlled by the AI
+		- Settling in core province means +1 stability, in historic/potential 0, in contested -1, in foreign -2
+		- Various tweaks in stability calculations for preplaced/preset stuff in the scenarios
+		- Potential provinces now properly update on the start of all new games (important for the 1200AD scenario), so stability from them is also updated correctly
+		- Revised collapse rules from bad stability for the human player, now it has a lower chance to happen generally (still very dangerous, but reaches 100% chance much slower)
+		- Reduced overall impact of unhappiness from religious civics on city instability
+		- Reduced foreign culture instability if you run the Subjugation Civic (-1 with less than 20%, 0 otherwise)
+		- Fixed mistake in religious stability calculations when Judaism is your State Religion
+
+	Religion spread rules:
+		- Added special religion spread rules for a couple areas, based on provinces, only checks for cities without a religion
+		- Orthodoxy: increased chance to spread in Rus territories between 850-1300AD, in Bulgaria and the Balkans between 700-1000AD
+		- Islam: greatly increased chance to spread in the Maghreb and in the southern part of the Iberian-peninsula between 700-1200AD
+		- Catholicism: increased chance to spread in southern Scandinavia between 1000-1300AD, in Hungary between 960-1200AD
+		- Increased generic Judaism spread chance slightly, especially in Central-Europe
+		- Reduced Islam spread, it will have a harder time reaching the faraway parts of the map (Scandinavia, Novgorod)
+		- Fixed bug which could mess up Judaism spread if some parts of the map were sparsely populated with cities
+
+	Papal bonuses:
+		- When choosing where to construct free buildings or whom to give gold the Pope considers a weighted value of both faith points and diplomatic relations
+		- You need to have Catholicism as a state religion and open borders with the Papal States to be eligible for any bonuses
+		- For gold gifts diplomatic relations matter much more, for religious buildings faith points are the deciding factor
+		- The (Catholic) owner of Jerusalem has a greatly increased chance to be selected for free Papal buildings
+		- Increased frequency of Papal gifts between the Schism and the Protestant Reformation, decreased afterwards
+		- No monasteries will be built for the chosen player after the discovery of Scientific Method (so the Pope may only build temples)
+		- Changed civ selecting method on Papal bonuses, earlier civs (with lower IDs) won't have a bigger chance anymore
+
+	Indy and barb changes:
+		- Reduced number of defender units in indy Caen, AI France should be able to conquer it more often
+		- Tuned down the number of Seljuks spawning against human controlled Byzantium
+		- Seljuk Turcoman Horse Archer units no longer get defensive bonuses from tile features
+		- Revised NW Keshik spawns, to move the Mongol threat more on Poland and Hungary (instead of the recently spawned Prussia and Lithuania)
+		- Changed barb city spawns in Ireland, not all 4 will spawn in all games, 2 is enough (already provides an early barb-island feel)
+		- Ireland, 700 AD: Hill of Tara/Dublin (100%, "Teamhair"), barbarian, population size 1, has a respawn in 988 AD
+		- Ireland, 700 AD: Downpatrick (20%, "Rath Celtair"), Rathcroghan/Sligo (30%, "Cruiachain"), Cashel/Cork (50%, "Caisel"), barbarian, population size 1
+		- Redesigned early barbs in Iberia as Visigoths (also to represent the Kingdom of Asturias), strengthened them to slow down early Cordoban expansion
+		- Wends added as new barbarians for Germany, with extra threat from them around the Great Slav Rising of 983AD
+		- Revised barbarian Magyar spawn areas and numbers in the late 9th century in Central Europe (before the Hungarian spawn)
+		- Toned down stregth of "barbarian" Teutonic Knight spawns in Livonia in the early 13th century (right before the Prussian spawn)
+		- Reduced number of Berber barbarians in North Africa (especially for Cordoba), less early barbs for AI Kiev
+
+	Civ spawns:
+		- Starting civic changes: Arabia (Trade Economy), Kiev (Serfdom, Manoralism), Spain (Serfdom, Manoralism), Morocco (Trade Economy, Militarism)
+		- Starting civic changes: Genoa (Feudal Monarchy, Serfdom, Manoralism, Vassalage), England (Vassalage), Portugal (Serfdom, Manoralism, Vassalage)
+		- Starting civic changes: Aragon (Serfdom, Manoralism, Vassalage), Sweden (Feudal Law, Vassalage), Prussia (Militarism), Austria (Vassalage)
+		- Starting civic changes: Ottomans (Apprenticeship, Guilds, Militarism), Moscow (Feudal Monarchy, Feudal Law, Vassalage), Dutch (Colonialism)
+		- Novgorod starts without the Feudalism tech, thus in the Despotism civic (similarly to Kiev)
+		- Venice starts without the Vassalage and Code of Laws techs, Germany without Machinery, Burgundy with Aristocracy
+		- Venice starts with Spearman instead of Crossbowman, Germany and Burgundy with Guisarme instead of Crossbowman
+		- Burgundy and Germany stars with a couple additional defensive starting units
+		- Additional starting units for the French, to be able to get more aggressive with early conquests
+		- Revised Prussian starting units - instead of Teutonic Masters, they start with more military units
 
 	General changes:
 		- Added new function which only counts resources inside cultural borders
 		- Both the Novgorod Fur UHV and the Moscow Atlantic Access UHV use this new function
-		- Reduced number of defender units in Caen, AI France should be able to conquer it more often
 		- Revised the setup for DCNames when the Civ is a master of 1 or 2 other civilizations
 		- Updated text for some interface messages connected to the Reformation
 		- Increased AI willingness to choose indy targets inside it's war map, decreased chance for choosing indies outside the war map
-		- Seljuk Turcoman Horse Archer units no longer get defensive bonuses from tile features
-		- Tuned down the number of Seljuks spawning against human controlled Byzantium
 		- Core cities cannot be chosen for city secession because of health issues
 		- All cities have less chance for secession because of religion unhappiness, while all cities have bigger chance for secession if they are unhappy (happy faces < unhappy faces)
 		- Culture in cities is now also taken into account when choosing the city for secession (not the amount, but your cultural percentage, so the nationality of the population there)
@@ -124,10 +228,23 @@ Changes for RFCE 1.5:
 		- Sulphur yields less production with mines, some of the precious resources yield 1 less commerce with mines
 		- Switched early naval buildings' tech tree position: Harbor with Astrolabe, Lighthouse with Cartography
 		- Trading Post replaces Harbor (instead of Lighthouse), free Navigation 1 promotion for all naval units, +1 commerce
-		- Feitoria replaces Lighthouse (instead of Harbor), +1 commerce on all water tiles, prebuilt in all newly founded cities with Astronomy
+		- Feitoria replaces Lighthouse (instead of Harbor), +1 commerce on all water tiles, prebuilt in all newly founded cities after the discovery of Astronomy
 		- Consulate of the Sea replaces Lighthouse (as before, but now in it's new position), also now it enables 1 merchant specialist
 		- Venice, Genoa and Aragon starts with Harbor in their cities
 		- Venetian Arsenal available earlier, moved to Clockmaking from Optics
+		- Tuned down Cordoban production modifiers a bit, increased Castilian and Aragonese
+		- Increased production modifiers for AI Kiev (stays more or less the same for the human player)
+		- Kuban province changed to contested for the Ottomans, Lithuania and Suvalkija contested for Prussia
+		- No interface messages are displayed during autoplay/autorun (Crusades, RiseAndFall, Religion, Wonders, Leaders, etc.)
+		- Bonus health from Infirmary increased to 2
+		- Removed unnecessary Derivative Civ settings for all civilizations
+		- Reduced unit chance to stay with the original civ on city secession
+		- Minor updates in the CNMs in Ireland, Norway, Finland and Karelia
+		- Updated CNMs for all civs around the lakes in Anatolia and the Levant
+		- Lowered diplomatic bonuses for sharing a religion, for almost all religions
+		- Civs can't get back one of their previous leaders on resurrection (would be changed to the later one anyway in a couple turns)
+		- Civs have 40% chance to remain with the leader before the collapse, 60% chance to get the next leader (chronologically)
+		- Minor text updates in the wording of some UHVs and UPs
 
 	Bugfixes:
 		- Fixed strange visibility area for the Ottomans
@@ -137,7 +254,15 @@ Changes for RFCE 1.5:
 		- Fixed bug with terrain layer orders, thus corrected some blending mistakes when joining some terrain types together
 		- Fixed bug with city resistance timer on multiple persecutions in the same turn
 		- Fixed oversight where the Arabian UP could be used with Judaism, thus enabled spreading the minor religion
-		- Fixed bug with free walls: Morocco gets a free Kasbah instead of walls when founding cities on a fort improvement
+		- Fixed bug with free walls: Morocco now gets a free Kasbah instead of walls when founding cities on a fort improvement
+		- Fixed bug which sometimes caused issues when the plague spread to a known civ's unknown city
+		- Fixed a couple oversights in various province lists (representing regions)
+		- Fixed bug where Protestantism wasn't auto-founded by the Dutch even if no civs researched Printing Press by their spawn
+		- Fixed bug in the Genoese UHV counter for Banks
+		- Fixed bug with unit removal in the NW tile of Iceland (related to various mechanics which include switching/moving units - ie: spawn, respawn, secession)
+		- Fixed bug that caused AI civs to produce unnecessary prosecutors way too often
+		- Fixed a couple minor issues and inconsistencies with some old leftover code from vanilla RFC
+		- Added a couple more fixes for Firaxis oversights and bugfixes from Karadoc/K-mod
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -226,7 +351,7 @@ Changes for RFCE 1.4:
 		- Kazimierz moved to Civil Service from Banking
 
 	General/gameplay changes:
-		- Added new 1200 AD scenario! Note that it's only a basic version for now, for testing purposes
+		- Added new 1200 AD scenario! NOTE: it's only a basic version for now, for testing purposes
 		- Anarchy instability now appears right away for the human player, not with a turn delay
 		- Revised swing stability calculations, now converges to 0 a little slower
 		- Lowered anarchy swing instability for the AI, normal anarchy instability for everyone
@@ -238,7 +363,7 @@ Changes for RFCE 1.4:
 		- Removed all unnecessary values from all settler and war maps, now they only have WB values everywhere
 		- Correct CNM name for new cities placed in the WB, now cities added there will get their RFCE name instead of one from the default city list
 		- Since the WB file cannot handle special characters and long names perfectly, added function to rename city names on the start of the scenario
-		- AI civs will more often reconsider their wars against minor civs (note that being an AI target and declaring an actual war by the AI is handled separately)
+		- AI civs will more often reconsider their wars against minor civs (Note: a city being an AI target and declaring an actual war by the AI are handled separately)
 		- AI war declaration on indies is now based on their war maps, the chance is increased with higher war map values
 		- AI civs will much more frequently declare war on indies in their core area
 		- Revised values connected to cultural revolts/flips of independents and barbs
@@ -268,8 +393,8 @@ Changes for RFCE 1.4:
 		- West and East India Trading Companies also need Atlantic Access - ATM there is no point in building them without AA anyway
 
 	Variance in independents:
-		- Instead of placing the same indy cities in 100% of the games, one of a couple alternatives will be selected from a given area
-		- Chance of spawning for a given city from an area depends on both historical importance and gameplay related reasons
+		- Instead of placing the same indy cities in 100% of the games, one of a couple alternatives will be selected to represent the given area/population
+		- The chance for selecting a city in a given variety list depends on both historical importance and gameplay related reasons
 		- Sicily, 500AD: Palermo (60%, "Palermo"), Syracuse (40%, "Syracuse")
 		- Provence, 500AD: Marseille (50%, "Massilia"), Aix-en-Provence (50%, "Aquae Sextiae")
 		- Languedoc, 500AD: Toulouse (30%, "Tolosa"), Toulouse alternative position (30%, "Tolosa"), Narbonne (40%, "Narbo")
@@ -670,7 +795,7 @@ Changes for RFCE 1.3:
 			- In medium empires, 40% for the secession/city revolt mechanics, 40% for the collapse mechanics
 			- In small empires, 70% chance for collapse mechanics, no chance for secession/city revolt mechanics
 			- Actual chance for triggering a revolt or collapse inside those mechanics is scaling with stability
-			- Note that bad stability is not the only way to trigger collapses or revolts
+			- Note: bad stability is not the only way to trigger collapses or revolts
 		- Having a city in a foreign province means -5 stability, in a border/contested province -2 stability
 		- Small boost to Merchant Republic and Bureaucracy stability, but both can be way more unstable than before with too many cities
 		- Imperialism civic and the French UP works without a hard cap on number of cities
@@ -1349,7 +1474,7 @@ Changes for Beta 14 (Release Candidate):
 		- Barbarian culture is enabled again, it was really hurting the Barbs by making them build useless Culture in their cities, it was removed only as a speedup feature in the first place anyway
 		- Merc Upkeep cost also depends on the hammer cost of the Unit
 		- Brewery replaced by Tavern with +1 happy from wine and barley, also small +5% gold bonus
-		- Inn has +5% gold bonus independent from wine (Note: Inn should be renamed to something to represent the Secret Societies like Masons and Assasins)
+		- Inn has +5% gold bonus independent from wine (Note: Inn should be renamed to something to represent the Secret Societies like Masons and Assassins)
 		- Indy Porto strengthened - it shouldn't be conquered by Leon before the Portuguese spawn
 		- Decreased all Muscovian leaders willingness to vassalization
 
@@ -1514,7 +1639,7 @@ Changes for Beta 13:
 		- Genoa UHV no longer fails if all 7 corporations are founded before you get the 8 Banks
 		- Germany no longer wins their UHV if they found Printing Press, but are not Catholic (you need to really found Protestantism)
 		- Calais now spawns properly in 800AD
-		- Cordoba and Sweden no longer get strange promotions on inappropriate units (i.e. no more ships with Formation)
+		- Cordoba and Sweden no longer get strange promotions on inappropriate units (e.g. no more ships with Formation)
 		- Fixed a small bug in TeamAI.cpp thanks to Morholt
 		- Removed BtS interface hints which were inaccurate for RFCE (multiplayer, spaceship, etc)
 		- Horse Archers do Flanking damage now (as it was intended)
@@ -1796,7 +1921,7 @@ Changes for Beta 9:
 		Updated the text for the Expansion civics
 		The English UP is now correctly listed as +2 hammer from Workshop
 		Added text showing info for the Civic combo Stability boost/penalty
-		Added condition for the Dynamic Names for the case when the player has respawned (note XML value of 0 passes regardless whether the player has respawned)
+		Added condition for the Dynamic Names for the case when the player has respawned (Note: XML value of 0 passes regardless whether the player has respawned)
 		Many small XML updates regarding religious buildings
 		Walrus (ivory) gives 1 food without a camp and an additional 1 food, 1 production and 1 commerce with a camp
 
@@ -1964,7 +2089,7 @@ Changes for Beta 7:
 		Lithuania receives gold at spawn
 
 	Bugfixes:
-		!!!NOTE!!! Due to the large amount of major changes, there will be a large number of new bugs introduced in this version
+		NOTE: While quite a few bugs were already fixed with the new systems, due to the large amount of major changes some new bugs have most certainly been introduced
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -2020,7 +2145,7 @@ Changes for Beta 5:
 	added merijn_v1 XML modifications, some unit abilities and removing old and unused XML entries
 	Fixed the Papal Culture Bug
 	Fixed Venetian UHV
-	Moved Hungarian and Kievan starting turns, with no conflict with Cordoba, we can use more historical dates (note on the bug of one extra autoturn)
+	Moved Hungarian and Kievan starting turns, with no conflict with Cordoba, we can use more historical dates (Note: there is a bug with one extra autoturn in some cases)
 	Added info for Stability, Faith, GP and GG
 	Removed the exile mechanics
 	Nerf to the Barbarians around Frankia, to many to allow you to grow
@@ -2114,17 +2239,18 @@ Changes for Beta 3:
 	Flanking attacks now activated for light cavalry
 	Indies split in 2 groups (more cultured - more warlike)
 	New UHV's for Venice
-	Changes to buildings (1) Reducing the number of individual buildings (2) Increasing the number of buildings that require other buildings. Some highlights:
+	Changes to buildings with 2 main reasons in mind: (1) Reducing the number of individual buildings (2) Increasing the number of buildings that require other buildings
+	Some highlights:
 		Castles, not courthouses, now give stability and are required for dungeons and archery ranges
 		Scriptorium is merged into Monastery
-		Toll house, grocer, herbalist are cut
+		Toll house, Grocer, Herbalist are cut
 		Market becomes more about trade than money, the point is to make it more useful/common on its own
 	Improved Barb spawning, needs testing, might be a bit over tuned
 	Bug in Frankia UHV fixed and Frankia UHV area increased
 	Crusade text now has additional information about which empires is the leader and which empire is the target
 	Added one AI mode for Maceman
 	New diplo texts for some leaders
-	New texts for some leaders
+	New Civilopedia texts for some leaders
 	Moved map to PrivateMaps
 	Turned on aggressive AI (not sure if this will do much)
 
@@ -2504,7 +2630,7 @@ Changes for Alpha 6:
 	Fixed a bug allowing a nation to resurrect the next turn after they are conquered, the wait is now minimum 30 turns
 	Resurrections are generally less common
 	Upon conversion to Protestantism, not all Buildings in a city get converted and some Faith is generated
-	Some nations have high probability to start at war from spawn (i.e. Spain - Cordoba, Byzantium - Bulgaria)
+	Some nations have high probability to start at war from spawn (e.g. Spain - Cordoba, Byzantium - Bulgaria)
 	Slowed down the tech rate as Myri suggested, which nerfed Kiev reasonably
 	Your advisor no longer suggests that you should liberate cities to the Pope
 	Units leaving for the Crusade: fewer leave altogether, even fewer for newly spawned nations, 3 units in a city would no leave
@@ -2513,9 +2639,10 @@ Changes for Alpha 6:
 	The AI is less likely to change religions as it is aware of the loss of Faith Points
 	Jewish Quarters give +1 Culture (we all know the Jews + Money jokes, but Jews contributed more than just trade and commerce to Medieval Europe)
 	Barbs and Independents no longer build Prosecutors
-	The AI doesn't go after Barbs and Indies outside its WarsMap, i.e. no more random French cities in eastern Russia
+	The AI doesn't go after Barbs and Indies outside its WarsMap, e.g. no more random French cities in eastern Russia
 	Respawning civs can no longer make peace with the Barbs (this is RFC bug actually)
-	Galleass now carry units + enter rival territory. Graphics should be better now. General Venetian sea units cannot enter foreign sea (i.e. removed the RFC Dutch UP form Venice)
+	Galleass now carry units + enter rival territory, graphics should also be better now
+	General Venetian sea units cannot enter foreign sea (i.e. removed the RFC Dutch UP form Venice)
 	The AI should recognize Galleass and Cogge as transports
 	Added olives and modified version of Michael Vick's map (removed most of the roads mainly)
 	Merged the map with the Updated Russian Map
@@ -2803,10 +2930,10 @@ Changes for Test Version 2009.04.12.:
 
 Changes for Test Version 2009.03.30.:
 
-	New tech quotes from Jessiecat (no quotes are read anymore -- i.e. no audio).
+	New tech quotes from Jessiecat (no quotes are read anymore - i.e. no audio)
 	New orthodox building art and buttons
-	Normalization code turned back on in stability. Does not appear to have large impact.
-	Increased the number of dead civs required for resurrection to occur.
+	Normalization code turned back on in stability (does not appear to have large impact)
+	Increased the number of dead civs required for resurrection to occur
 	House of Wisdom obsoletes with Chivalry
 	Typo in Venice Rise tech list (astrolabe)
 	Encylopedia no longer counts as colony for victory purposes

@@ -12145,7 +12145,7 @@
 			<iGlobalWarWearinessModifier>0</iGlobalWarWearinessModifier>
 			<iEnemyWarWearinessModifier>0</iEnemyWarWearinessModifier>
 			<iHealRateChange>10</iHealRateChange>
-			<iHealth>1</iHealth>
+			<iHealth>2</iHealth>
 			<iAreaHealth>0</iAreaHealth>
 			<iGlobalHealth>0</iGlobalHealth>
 			<iHappiness>0</iHappiness>
@@ -21945,9 +21945,9 @@
 			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>NONE</ObsoleteTech>
-			<PrereqTech>TECH_PLATE_ARMOR</PrereqTech>
+			<PrereqTech>NONE</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_CHIVALRY</PrereqTech>
+				<PrereqTech>NONE</PrereqTech>
 				<PrereqTech>NONE</PrereqTech>
 				<PrereqTech>NONE</PrereqTech>
 			</TechTypes>
@@ -22134,9 +22134,9 @@
 			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>NONE</ObsoleteTech>
-			<PrereqTech>TECH_CLASSICAL_KNOWLEDGE</PrereqTech>
+			<PrereqTech>NONE</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_CHIVALRY</PrereqTech>
+				<PrereqTech>NONE</PrereqTech>
 				<PrereqTech>NONE</PrereqTech>
 				<PrereqTech>NONE</PrereqTech>
 			</TechTypes>
@@ -22323,9 +22323,9 @@
 			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>NONE</ObsoleteTech>
-			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
+			<PrereqTech>NONE</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_CHIVALRY</PrereqTech>
+				<PrereqTech>NONE</PrereqTech>
 				<PrereqTech>NONE</PrereqTech>
 				<PrereqTech>NONE</PrereqTech>
 			</TechTypes>
@@ -22513,7 +22513,7 @@
 			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>NONE</ObsoleteTech>
-			<PrereqTech>TECH_CLOCKMAKING</PrereqTech>
+			<PrereqTech>NONE</PrereqTech>
 			<TechTypes>
 				<PrereqTech>NONE</PrereqTech>
 				<PrereqTech>NONE</PrereqTech>
@@ -22702,7 +22702,7 @@
 			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>NONE</ObsoleteTech>
-			<PrereqTech>TECH_PAPER</PrereqTech>
+			<PrereqTech>NONE</PrereqTech>
 			<TechTypes>
 				<PrereqTech>NONE</PrereqTech>
 				<PrereqTech>NONE</PrereqTech>
@@ -22891,7 +22891,7 @@
 			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>NONE</ObsoleteTech>
-			<PrereqTech>TECH_CHEMISTRY</PrereqTech>
+			<PrereqTech>NONE</PrereqTech>
 			<TechTypes>
 				<PrereqTech>NONE</PrereqTech>
 				<PrereqTech>NONE</PrereqTech>
@@ -23080,7 +23080,7 @@
 			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>NONE</ObsoleteTech>
-			<PrereqTech>TECH_SHIPBUILDING</PrereqTech>
+			<PrereqTech>NONE</PrereqTech>
 			<TechTypes>
 				<PrereqTech>NONE</PrereqTech>
 				<PrereqTech>NONE</PrereqTech>

@@ -285,6 +285,7 @@ def canUpgradeAnywhere(argsList):
 def getWidgetHelp(argsList):
 	return gameUtils().getWidgetHelp(argsList)
 
+# Absinthe
 def doAnarchyInstability(argsList):
 	return gameUtils().doAnarchyInstability(argsList)
 

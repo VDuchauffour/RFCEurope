@@ -50,7 +50,6 @@ class StoredData:
 				'lCheatersCheck': [0, -1],
 				'lBirthTurnModifier': [0 for i in range(con.iNumPlayers)], #major players only, currently unused
 				'lDeleteMode': [-1, -1, -1], #first is a bool, the other values are capital coordinates
-				'bCorpsFounded': 0,
 				'iSeed': -1, # random delay, currently unused
 
 				# Religions
