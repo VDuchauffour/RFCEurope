@@ -356,7 +356,7 @@
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
 			<iDistanceMaintenanceModifier>0</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
-			<iCorporationMaintenanceModifier>-25</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -377,7 +377,7 @@
 			<iLargestCityHappiness>0</iLargestCityHappiness>
 			<iWarWearinessModifier>100</iWarWearinessModifier>
 			<iFreeSpecialist>0</iFreeSpecialist>
-			<iTradeRoutes>0</iTradeRoutes>
+			<iTradeRoutes>1</iTradeRoutes>
 			<bNoForeignTrade>0</bNoForeignTrade>
 			<bNoCorporations>0</bNoCorporations>
 			<bNoForeignCorporations>0</bNoForeignCorporations>
@@ -1578,6 +1578,7 @@
 			<Description>TXT_KEY_CIVIC_MERCANTILISM</Description>
 			<Civilopedia>TXT_KEY_CIVIC_MERCANTILISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_MERCANTILISM_STRATEGY</Strategy>
+			<Help>TXT_KEY_CIVIC_MERCANTILISM_HELP</Help>
 			<Button>,-,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,4,3</Button>
 			<TechPrereq>TECH_PAPER</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -1613,7 +1614,7 @@
 			<iTradeRoutes>0</iTradeRoutes>
 			<bNoForeignTrade>1</bNoForeignTrade>
 			<bNoCorporations>0</bNoCorporations>
-			<bNoForeignCorporations>1</bNoForeignCorporations>
+			<bNoForeignCorporations>0</bNoForeignCorporations>
 			<iCivicPercentAnger>0</iCivicPercentAnger>
 			<bStateReligion>0</bStateReligion>
 			<bNoNonStateReligionSpread>0</bNoNonStateReligionSpread>

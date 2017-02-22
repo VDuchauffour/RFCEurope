@@ -741,6 +741,15 @@
 		<Spanish>.</Spanish>
 		<Portuguese>Desabilitando o comércio estrangeiro e as corporações, seus mercados locais e distritos podem prosperar. Mercantilismo pode ser muito fortalecedor quando suas relações com seus vizinhos não são muito boas</Portuguese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_MERCANTILISM_HELP</Tag>
+		<English>[ICON_BULLET]Companies have less chance to spread</English>
+		<French>[ICON_BULLET]Companies have less chance to spread</French>
+		<German>[ICON_BULLET]Companies have less chance to spread</German>
+		<Italian>[ICON_BULLET]Companies have less chance to spread</Italian>
+		<Spanish>[ICON_BULLET]Companies have less chance to spread</Spanish>
+		<Portuguese>[ICON_BULLET]Companies have less chance to spread</Portuguese>
+	</TEXT>
 	<!-- Civic Category Economy -->
 	<!-- Civic Category Religion -->
 	<TEXT>
