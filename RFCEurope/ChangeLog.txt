@@ -35,7 +35,7 @@ Changes for RFCE 1.5:
 		- If there is a huge drop in the preference value for a company (for example on state religion change or city ownership change) it may leave the city right away
 		- There might also be competition between companies for a given city (e.g. Templars-Teutons-Hospitallers), if one is present the rest have decreased chance
 		- If a given company has already spread to some cities of a civ, it will have somewhat decreased chance for further spread in that civ's cities
-		
+
 		- Masters/Executives can no longer spread companies, they are effectively removed from the mod
 		- Currently there are no Headquarters, all cities with the given company spread into them are considered equal - this might change later on
 		- Companies have resource preferences, and add various yield bonuses if you have access to them (based on their quantity) - as in the vanilla game
@@ -45,7 +45,7 @@ Changes for RFCE 1.5:
 		- Added various interface messages for companies spreading/leaving, both for your own cities and for foreign cities visible to you
 		- Removed unnecessary popups connected to company availability
 		- Corporations in your cities no longer add any stability penalty
-		
+
 		- All 7 previous RFCE companies were integrated into the new system
 		- 2 new companies: the Order of the Dragon, the Order of Calatrava
 		- Hanseatic League can only spread to coastal cities
@@ -57,6 +57,13 @@ Changes for RFCE 1.5:
 		- Teutons are set to have a very high chance to spread to cities of the Teutonic Order (Prussia)
 		- City limit is also modified for Hospitallers and Teutons after the Crusades are over
 		- The Genoese UHV is changed to simply build 8 banks (for now)
+
+		- Updated the Company Advisor / Company Screen, now all 9 companies should fit without any issues
+		- Removed date founded, headquarters, founded by GP information from the company screen (all of which is irrelevant or non-existent with the new system)
+		- Added icon/button/gamefont for the Order of Calatrava and the Order of the Dragon
+		- New gamefont icon for Teutonic Knights, Templar Knights, Bank of St. George (the latter 2 from SoI)
+		- Mercantilism enables company spread (trading/banking companies do have a lower chance though)
+		- Updated Merchant Republic civic, new trade route bonus instead of the corporation maintenance reduction
 
 	Plague overhaul:
 		- Improvements near a plagued city have a chance whether to reduce their level, or to reset the progress towards the next level: Towns 100%, Villages 75%, Hamlets 50%, Cottages 25%

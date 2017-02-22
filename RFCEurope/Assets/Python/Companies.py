@@ -49,7 +49,7 @@ class Companies:
 	#				for pCity in apCityList:
 	#					city = pCity.GetCy()
 	#					city.setHasCorporation(0, True, True, True)
-	#	
+	#
 	#	if (iGameTurn == 8):
 	#		for iPlayer in range(iNumPlayers):
 	#			if (iPlayer == 1):
@@ -197,22 +197,22 @@ class Companies:
 
 
 	def getCityValue(self, city, iCompany):
-		
+
 		if city is None: return -1
 		elif city.isNone(): return -1
-		
+
 		iValue = 0
-		
+
 		owner = gc.getPlayer(city.getOwner())
 		ownerTeam = gc.getTeam(owner.getTeam())
-		
+
 		# spread the Teutons to Teutonic Order cities and don't spread if the owner civ is at war with the Teutons
 		if iCompany == iTeutons:
 			if owner.getID() == con.iPrussia:
 				iValue += 4
 			elif ownerTeam.isAtWar(con.iPrussia):
 				return -1
-		
+
 		# state religion requirements
 		iStateReligion = owner.getStateReligion()
 		if iCompany == iHospitallers or iCompany == iTemplars or iCompany == iTeutons:
@@ -237,7 +237,7 @@ class Companies:
 		else:
 			if iStateReligion == iIslam:
 				return -1
-		
+
 		# geographical requirements
 		iProvince = city.getProvince()
 		if len(lCompanyRegions[iCompany]) > 0 and iProvince not in lCompanyRegions[iCompany]:
@@ -346,7 +346,7 @@ class Companies:
 			if city.getNumRealBuilding(xml.iTannery) > 0: iValue += 1
 			if city.getNumRealBuilding(xml.iTextileMill) > 0: iValue += 1
 			iValue += city.getTradeRoutes()
-	
+
 		# civic bonuses
 		if owner.getCivics(0) == xml.iCivicMerchantRepublic:
 			if (iCompany == iMedici or iCompany == iStGeorge):
@@ -370,7 +370,7 @@ class Companies:
 		if owner.getCivics(3) == xml.iCivicGuilds:
 			if (iCompany == iHospitallers or iCompany == iTemplars or iCompany == iTeutons or iCompany == iHansa or iCompany == iDragon or iCompany == iCalatrava):
 				iValue += 1
-		if owner.getCivics(3) == xml.iCivicMercantilism: 
+		if owner.getCivics(3) == xml.iCivicMercantilism:
 			if iCompany == iHansa:
 				return -1
 			elif (iCompany == iMedici or iCompany == iAugsburg or iCompany == iStGeorge):
@@ -388,7 +388,7 @@ class Companies:
 		if owner.getCivics(5) == xml.iCivicOccupation:
 			if (iCompany == iHospitallers or iCompany == iTemplars or iCompany == iTeutons or iCompany == iDragon or iCompany == iCalatrava):
 				iValue += 1
-	
+
 		# bonus for techs
 		if (iCompany == iHospitallers or iCompany == iTemplars or iCompany == iTeutons or iCompany == iDragon or iCompany == iCalatrava):
 			for iTech in (xml.iChivalry, xml.iPlateArmor, xml.iGuilds, xml.iMilitaryTradition):
@@ -406,7 +406,7 @@ class Companies:
 			for iTech in (xml.iBanking, xml.iPaper, xml.iChemistry):
 				if (ownerTeam.isHasTech(iTech)):
 					iValue += 1
-		
+
 		# resources
 		iTempValue = 0
 		bFound = False
@@ -420,9 +420,9 @@ class Companies:
 					iTempValue += city.getNumBonuses(iBonus) * 2
 		if iCompany in [iHansa, iMedici, iAugsburg, iStGeorge] and not bFound: return -1
 		iValue += iTempValue
-		
+
 		# bonus for resources in the fat cross of a city?
-		
+
 		# competition
 		if iCompany == iHospitallers:
 			if city.isHasCorporation(iTemplars):
@@ -448,11 +448,11 @@ class Companies:
 		elif iCompany == iAugsburg:
 			if city.isHasCorporation(iMedici) or city.isHasCorporation(iStGeorge):
 				iValue /= 2
-		
+
 		# threshold
 		if iValue < 3: return -1
-		
+
 		# spread it out
 		iValue -= owner.countCorporations(iCompany)
-		
+
 		return iValue
