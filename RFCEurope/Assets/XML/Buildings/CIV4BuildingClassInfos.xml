@@ -463,6 +463,18 @@
 			<DefaultBuilding>BUILDING_INFIRMARY</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
+		<BuildingClassInfo><!-- KONTOR -->
+			<Type>BUILDINGCLASS_KONTOR</Type>
+			<Description>TXT_KEY_BUILDING_KONTOR</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_KONTOR</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
 		<BuildingClassInfo><!-- PLAGUE -->
 			<Type>BUILDINGCLASS_PLAGUE</Type>
 			<Description>TXT_KEY_BUILDING_PLAGUE</Description>

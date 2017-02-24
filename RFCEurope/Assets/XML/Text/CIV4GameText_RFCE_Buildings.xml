@@ -764,6 +764,24 @@
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KONTOR</Tag>
+		<English>Kontor</English>
+		<French>Kontor</French>
+		<German>Kontor</German>
+		<Italian>Kontor</Italian>
+		<Spanish>Kontor</Spanish>
+		<Portuguese>Kontor</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KONTOR_PEDIA</Tag>
+		<English>Kontor</English>
+		<French>Kontor</French>
+		<German>Kontor</German>
+		<Italian>Kontor</Italian>
+		<Spanish>Kontor</Spanish>
+		<Portuguese>Kontor</Portuguese>
+	</TEXT>
 		<!-- General Buildings -->
 		<!-- Religious Buildings -->
 	<TEXT>

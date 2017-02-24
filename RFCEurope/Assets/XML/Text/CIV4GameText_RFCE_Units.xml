@@ -1247,6 +1247,24 @@
 		<Spanish>Caballero Teut&#243;nico</Spanish>
 		<Portuguese>Cavaleiro Teutônico</Portuguese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DRAGON_KNIGHT</Tag>
+		<English>Knight of the Dragon</English>
+		<French>Knight of the Dragon</French>
+		<German>Knight of the Dragon</German>
+		<Italian>Knight of the Dragon</Italian>
+		<Spanish>Knight of the Dragon</Spanish>
+		<Portuguese>Knight of the Dragon</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CALATRAVA_KNIGHT</Tag>
+		<English>Calatrava Knight</English>
+		<French>Calatrava Knight</French>
+		<German>Calatrava Knight</German>
+		<Italian>Calatrava Knight</Italian>
+		<Spanish>Calatrava Knight</Spanish>
+		<Portuguese>Calatrava Knight</Portuguese>
+	</TEXT>
 	<!-- Company Units -->
 	<!-- Barbarian Units -->
 	<TEXT>
