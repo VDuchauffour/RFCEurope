@@ -244,7 +244,7 @@ iNumTechsFuture = 1
 
 #Units: initialize unit variables to unit indices from XML
 
-iNumUnits = 126
+iNumUnits = 128
 (iSettler, iWorker, iCatholicMissionary,
 iOrthodoxMissionary, iProtestantMissionary, iIslamicMissionary, iArcher, iCrossbowman, iArbalest, iGenoaBalestrieri, iLongbowman, iEnglishLongbowman, iSpearman,
 iGuisarme, iAragonAlmogavar, iScotlandSheltron, iPikeman, iHolyRomanLandsknecht, iAxeman, iVikingBeserker, iSwordsman, iDenmarkHuskarl, iLongSwordsman,
@@ -258,7 +258,7 @@ iMerchant, iEngineer, iGreatGeneral, iGreatSpy, iMongolKeshik, iSeljukLancer, iJ
 iWelshLongbowman, iCondottieri, iSwissPikeman, iVarangianGuard, iHackapell, iReiter, iZaporozhianCossack, iDonCossack, iDoppelsoldner, iIrishBrigade,
 iStradiot, iWaardgelder, iNaffatun, iTurkopoles, iWalloonGuard, iSwissGun, iLipkaTatar, iHighlanderGun, iZanji, iTouareg,
 iNubianLongbowman, iBedouin, iTurcomanHorseArcher, iMamlukHeavyCavalry, iSouthSlavVlastela, iBohemianWarWagon, iLombardHeavyFootman, iSteppeHorseArcher, iCrimeanTatarRider, iSeljukCrossbow,
-iSeljukSwordsman, iSeljukFootman, iSeljukGuisarme) = range(iNumUnits)
+iSeljukSwordsman, iSeljukFootman, iSeljukGuisarme, iDragonKnight, iCalatravaKnight) = range(iNumUnits)
 
 #From the CIV4UnitClassInfos.xml
 iProsecutorClass = 51
@@ -282,14 +282,14 @@ iTea, iTobacco, iOlives, iAccess, iNorthAccess, iSouthAccess, iAsiaAccess, iAmbe
 
 #Buildings
 
-iNumBuildings = 152 # Should equal iPlague
+iNumBuildings = 153 # Should equal iPlague
 (iPalace, iSummerPalace, iRoyalAcademy, iVersailles, iWalls, iStarFort, iCastle, iMoscowKremlin, iHungarianStronghold, iSpanishCitadel,
 iBarracks, iArcheryRange, iStable, iBulgarianStan, iGranary, iCordobanNoria, iPolishFolwark, iAqueduct, iOttomanHammam, iLighthouse,
 iVikingTradingPost, iWharf, iHarbor, iPortugalFeitoria, iCustomHouse, iDrydock, iVeniceArsenal, iForge, iGuildHall, iTextileMill,
 iRoyalDungeon, iUniversity, iObservatory, iHospital, iTheatre, iByzantineHippodrome, iAustrianOperaHouse, iMarket, iArabicCaravan, iBrewery,
 iBurgundianWinery, iJeweler, iWeaver, iSmokehouse, iTannery, iLuxuryStore, iWarehouse, iApothecary, iBank, iGenoaBank,
 iEnglishRoyalExchange, iCourthouse, iKievVeche, iHolyRomanRathaus, iLithuanianVoivodeship, iDungeon, iNightWatch, iSwedishTennant, iLevee, iNetherlandsDike,
-iInn, iCoffeeHouse, iManorHouse, iFrenchChateau, iInfirmary, iPaganShrine, iJewishQuarter, iJewishShrine, iProtestantTemple, iProtestantSchool,
+iInn, iCoffeeHouse, iManorHouse, iFrenchChateau, iInfirmary, iKontor, iPaganShrine, iJewishQuarter, iJewishShrine, iProtestantTemple, iProtestantSchool,
 iProtestantCathedral, iProtestantChapel, iProtestantSeminary, iProtestantShrine, iIslamicTemple, iIslamicChapel, iIslamicCathedral, iIslamicSchool, iIslamicMadrassa, iIslamicShrine,
 iCatholicTemple, iCatholicCathedral, iCatholicChapel, iCatholicReliquary, iCatholicMonastery, iCatholicSeminary, iCatholicShrine, iOrthodoxTemple, iOrthodoxCathedral, iOrthodoxChapel,
 iOrthodoxReliquary, iOrthodoxMonastery, iOrthodoxSeminary, iOrthodoxShrine, iSistineChapel, iNotreDame, iLeaningTower, iTheodosianWalls, iTopkapiPalace, iShrineOfUppsala,

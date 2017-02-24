@@ -16,5 +16,5 @@ def setup():
 			plot = map.plot(x, y) # no need for [iMaxY - iY - 1] inversion, the province map is upside down visually
 			if plot:
 				plot.setProvinceID(maps.tProinceMap[y][x])
-				print ('ProvinceID', x, y, plot.getProvinceID)
+				#print ('ProvinceID', x, y, plot.getProvinceID)
 

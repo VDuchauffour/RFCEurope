@@ -17,7 +17,7 @@ Changes for RFCE 1.5:
 (under development)
 
 	Company overhaul:
-		- A Dynamic Company system is introduced to the mod! Idea from SoI
+		- A Dynamic Company system is introduced to the mod! Idea from SoI (edead)
 		- Companies are not founded by civs anymore (or with GPs actually), but are independent entities on their own
 		- They semi-automatically spread to cities based on their own preferences:
 			- Available regions and provinces for the companies are set up on a (more or less) historic base
@@ -60,10 +60,13 @@ Changes for RFCE 1.5:
 
 		- Updated the Company Advisor / Company Screen, now all 9 companies should fit without any issues
 		- Removed date founded, headquarters, founded by GP information from the company screen (all of which is irrelevant or non-existent with the new system)
-		- Added icon/button/gamefont for the Order of Calatrava and the Order of the Dragon
-		- New gamefont icon for Teutonic Knights, Templar Knights, Bank of St. George (the latter 2 from SoI)
 		- Mercantilism enables company spread (trading/banking companies do have a lower chance though)
 		- Updated Merchant Republic civic, new trade route bonus instead of the corporation maintenance reduction
+
+		- Added Kontor UB for the Hanseatic League: +1 trade route, +25% income from foreign trade routes
+		- Added Knight of the Dragon UU: 12 strength heavy infantry, +10% against cavalry units, may cause small collateral damage
+		- Added Calatrava Knight UU: 9 strength heavy infantry, +10% city strength, +25% attack against heavy infantry units
+		- Significantly reduced cost for the original Knightly Orders' UUs, nerfed some bonuses
 
 	Plague overhaul:
 		- Improvements near a plagued city have a chance whether to reduce their level, or to reset the progress towards the next level: Towns 100%, Villages 75%, Hamlets 50%, Cottages 25%
@@ -88,7 +91,6 @@ Changes for RFCE 1.5:
 		- Damage from the plague will be somewhat more random for all units, especially when there are more units on the same tile
 		- The plague spread mechanics is based on trade routes and city distance, but much more random than before
 		- Plague can spread to more of your cities in a given turn (max is based on the size of the empire), bigger chance for it if there are many cities close to already infected ones
-		- Plague icon on the city banner, not only the plague cloud above them (idea from DoC)
 
 	Crusade updates:
 		- Crusading units now have a chance to arrive to their destination, around 70% of the units will arrive for the first Crusade
@@ -133,7 +135,7 @@ Changes for RFCE 1.5:
 		- Added inland Coast Sea tile near Trondheim/Nidaros to represent the huge fjords in the area
 		- Added Islands features south of Bergen, west of Nidaros, on the Finnish coastline
 		- Terrain and resource rearrangements in Norway, in north Sweden and in Finland
-		- Adjusted province borders in Ireland, Norway, and Finland
+		- Minor adjustments to province borders in Ireland, Norway, and Finland
 
 	1200AD scenario updates:
 		- Fixed Muscovy start in 1200AD scenario, now all civs should work without any issues
@@ -200,7 +202,7 @@ Changes for RFCE 1.5:
 		- Toned down stregth of "barbarian" Teutonic Knight spawns in Livonia in the early 13th century (right before the Prussian spawn)
 		- Reduced number of Berber barbarians in North Africa (especially for Cordoba), less early barbs for AI Kiev
 
-	Civ spawns:
+	Initial civ setup:
 		- Starting civic changes: Arabia (Trade Economy), Kiev (Serfdom, Manoralism), Spain (Serfdom, Manoralism), Morocco (Trade Economy, Militarism)
 		- Starting civic changes: Genoa (Feudal Monarchy, Serfdom, Manoralism, Vassalage), England (Vassalage), Portugal (Serfdom, Manoralism, Vassalage)
 		- Starting civic changes: Aragon (Serfdom, Manoralism, Vassalage), Sweden (Feudal Law, Vassalage), Prussia (Militarism), Austria (Vassalage)
@@ -211,6 +213,17 @@ Changes for RFCE 1.5:
 		- Burgundy and Germany stars with a couple additional defensive starting units
 		- Additional starting units for the French, to be able to get more aggressive with early conquests
 		- Revised Prussian starting units - instead of Teutonic Masters, they start with more military units
+
+	Art updates:
+		- Historic icon/button/gamefont for the Order of Calatrava and the Order of the Dragon
+		- New gamefont icon for Teutonic Knights, Templar Knights, Bank of St. George (the latter 2 from SoI)
+		- New unit art and icon for Knight of St. John (Hospitaller UU), new icon for Teutonic Knight UU
+		- Unit art and icon for Kontor, Knight of the Dragon and Calatrava Knight from Realism Invictus
+		- Added new unit art for Janissary (3 different versions) and Inquisitor
+		- New icon for all 4 Missionaries, new unit art for Orthodox and Islamic Missionary
+		- New icon for Végvár (Hungarian UB), new icon for Manorialism civic and tech
+		- Plague icon on the city banner, not only the plague cloud above them (idea from DoC)
+		- Improved religion and company icon positioning on the city screen
 
 	General changes:
 		- Added new function which only counts resources inside cultural borders

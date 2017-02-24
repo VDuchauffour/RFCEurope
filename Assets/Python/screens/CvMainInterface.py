@@ -572,14 +572,14 @@ class CvMainInterface:
 
 		# Holy City Overlay
 		for i in range( gc.getNumReligionInfos() ):
-			xCoord = xResolution - 242 + (i * 34)
+			xCoord = xResolution - 238 + (i * 48) # Absinthe: set distance between religion icons in the city screen
 			yCoord = 42
 			szName = "ReligionHolyCityDDS" + str(i)
 			screen.addDDSGFC( szName, ArtFileMgr.getInterfaceArtInfo("INTERFACE_HOLYCITY_OVERLAY").getPath(), xCoord, yCoord, 24, 24, WidgetTypes.WIDGET_HELP_RELIGION_CITY, i, -1 )
 			screen.hide( szName )
 
 		for i in range( gc.getNumCorporationInfos() ):
-			xCoord = xResolution - 242 + (i * 34)
+			xCoord = xResolution - 254 + (i * 28) # Absinthe: set distance between company icons in the city screen
 			yCoord = 66
 			szName = "CorporationHeadquarterDDS" + str(i)
 			screen.addDDSGFC( szName, ArtFileMgr.getInterfaceArtInfo("INTERFACE_HOLYCITY_OVERLAY").getPath(), xCoord, yCoord, 24, 24, WidgetTypes.WIDGET_HELP_CORPORATION_CITY, i, -1 )
@@ -2617,7 +2617,7 @@ class CvMainInterface:
 				iNumBuildings = 0
 				for i in range( gc.getNumBuildingInfos() ):
 
-					if gc.getBuildingInfo(i).isGraphicalOnly(): continue # Do not display hidden buildings - plague for example
+					if gc.getBuildingInfo(i).isGraphicalOnly(): continue # Absinthe: do not display hidden buildings - plague for example
 
 					if (pHeadSelectedCity.getNumBuilding(i) > 0):
 
@@ -2816,7 +2816,7 @@ class CvMainInterface:
 				szBuffer = u""
 
 				for i in range(gc.getNumReligionInfos()):
-					xCoord = xResolution - 242 + (i * 34)
+					xCoord = xResolution - 238 + (i * 48) # Absinthe: set distance between religion icons in the city screen
 					yCoord = 42
 
 					bEnable = True
@@ -2867,7 +2867,7 @@ class CvMainInterface:
 					screen.show( szName )
 
 				for i in range(gc.getNumCorporationInfos()):
-					xCoord = xResolution - 242 + (i * 34)
+					xCoord = xResolution - 254 + (i * 28) # Absinthe: set distance between company icons in the city screen
 					yCoord = 66
 
 					bEnable = True
