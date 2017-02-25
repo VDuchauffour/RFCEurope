@@ -129,7 +129,7 @@ tBalkansAndAnatolia = [xml.iP_Constantinople,xml.iP_Thrace,xml.iP_Opsikion,xml.i
 tCentralEurope = [xml.iP_GreaterPoland,xml.iP_LesserPoland,xml.iP_Masovia,xml.iP_GaliciaPoland,xml.iP_Brest,xml.iP_Suvalkija,xml.iP_Lithuania,xml.iP_Prussia,xml.iP_Pomerania,xml.iP_Saxony,xml.iP_Brandenburg,xml.iP_Holstein,xml.iP_Denmark,xml.iP_Bavaria,xml.iP_Swabia,xml.iP_Bohemia,xml.iP_Moravia,xml.iP_Silesia,xml.iP_Hungary,xml.iP_Transylvania,xml.iP_UpperHungary,xml.iP_Pannonia,xml.iP_Slavonia,xml.iP_Carinthia,xml.iP_Austria]
 tMaghrebAndalusia = [xml.iP_Tetouan,xml.iP_Morocco,xml.iP_Marrakesh,xml.iP_Fez,xml.iP_Oran,xml.iP_Algiers,xml.iP_Ifriqiya,xml.iP_Tripolitania,xml.iP_Cyrenaica,xml.iP_LaMancha,xml.iP_Andalusia,xml.iP_Valencia]
 tBulgariaBalkans = [xml.iP_Moesia,xml.iP_Macedonia,xml.iP_Serbia,xml.iP_Wallachia]
-tOldRus = [xml.iP_Novgorod,xml.iP_Polotsk,xml.iP_Smolensk,xml.iP_Minsk,xml.iP_Chernigov,xml.iP_Kiev,xml.iP_Pereyaslavl,xml.iP_Sloboda]
+tOldRus = [xml.iP_Novgorod,xml.iP_Rostov,xml.iP_Polotsk,xml.iP_Smolensk,xml.iP_Minsk,xml.iP_Chernigov,xml.iP_Kiev,xml.iP_Pereyaslavl,xml.iP_Sloboda]
 tSouthScandinavia = [xml.iP_Denmark,xml.iP_Gotaland,xml.iP_Skaneland,xml.iP_Vestfold,xml.iP_Norway]
 tHungary = [xml.iP_Hungary,xml.iP_Transylvania,xml.iP_UpperHungary,xml.iP_Pannonia]
 
@@ -263,6 +263,12 @@ class Religions:
 		if (iGameTurn > xml.i852AD and iGameTurn < xml.i1300AD and iGameTurn % 4 == 3):
 			if ( gc.getGame().getSorenRandNum(100, 'Spread chance') < 25 ):
 				tCity = self.selectRandomCityAreaNoReligion(tOldRus)
+				if (tCity != 0):
+					self.spreadReligion(tCity,xml.iOrthodoxy)
+		# Extra chance for early Orthodoxy spread in Novgorod:
+		if (iGameTurn > xml.i852AD and iGameTurn < xml.i1000AD and iGameTurn % 5 == 2):
+			if ( gc.getGame().getSorenRandNum(100, 'Spread chance') < 20 ):
+				tCity = self.selectRandomCityAreaNoReligion([xml.iP_Novgorod, xml.iP_Polotsk, xml.iP_Smolensk])
 				if (tCity != 0):
 					self.spreadReligion(tCity,xml.iOrthodoxy)
 		# Hungary:

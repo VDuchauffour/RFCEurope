@@ -361,11 +361,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_VEN2</Tag>
-		<English>[COLOR_YELLOW]Domination of the Mediterranean Sea:[COLOR_REVERT] Conquer Constantinople by 1204AD.</English>
-		<French>[COLOR_YELLOW]Domination of the Mediterranean Sea:[COLOR_REVERT] Conquer Constantinople by 1204AD.</French>
+		<English>[COLOR_YELLOW]Domination of the Mediterranean Sea:[COLOR_REVERT] Conquer Constantinople, Thessaly, Morea, Crete and Cyprus by 1204AD.</English>
+		<French>[COLOR_YELLOW]Domination of the Mediterranean Sea:[COLOR_REVERT] Conquer Constantinople, Thessaly, Morea, Crete and Cyprus by 1204AD.</French>
 		<German>[COLOR_YELLOW]Dominanz des Mittelmeeres:[COLOR_REVERT] Erobert bis 1204 n.Chr. Konstantinopel.</German>
 		<Italian>[COLOR_YELLOW]Dominio sul Mediterraneo:[COLOR_REVERT] ConquistaCostantinopoli entro il 1240AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Domination of the Mediterranean Sea:[COLOR_REVERT] Conquer Constantinople by 1204AD.</Spanish>
+		<Spanish>[COLOR_YELLOW]Domination of the Mediterranean Sea:[COLOR_REVERT] Conquer Constantinople, Thessaly, Morea, Crete and Cyprus by 1204AD.</Spanish>
 		<Portuguese>[COLOR_YELLOW]Dominação do Mar Mediterrâneo:[COLOR_REVERT] Conquiste Constantinopla até 1204DC.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -550,7 +550,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GEN2</Tag>
-		<English>[COLOR_YELLOW]The Bank of Europe:[COLOR_REVERT] Found 2 Corporations and build 8 Banks</English>
+		<English>[COLOR_YELLOW]The Bank of Europe:[COLOR_REVERT] Build 8 Banks in your cities.</English>
 		<French>[COLOR_YELLOW]The Bank of Europe:[COLOR_REVERT] Fonder 2 Soci&#233;t&#233;s Commerciale et construire 8 Banques.</French>
 		<German>[COLOR_YELLOW]Die Bank von Europa:[COLOR_REVERT] Gründet 2 Gesellschaften und baut 8 Banken.</German>
 		<Italian>[COLOR_YELLOW]La Banca d'Europa:[COLOR_REVERT] Fonda 2 Corporazioni e costruisci 8 Banche.</Italian>
@@ -911,21 +911,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ARG3</Tag>
-		<English>[COLOR_YELLOW]Realms of the Crown:[COLOR_REVERT] Control Catalonia, Valencia, Aragon, Balears, Corsica, Sardinia, Sicily, Apulia, Provence and Thessaly in 1474AD.</English>
-		<French>[COLOR_YELLOW]Realms of the Crown:[COLOR_REVERT] Control Catalonia, Valencia, Aragon, Baleares, Corsica, Sardinia, Sicily, Apulia, Provence and Thessaly in 1474AD.</French>
-		<German>[COLOR_YELLOW]Realms of the Crown:[COLOR_REVERT] Control Catalonia, Valencia, Aragon, Balears, Corsica, Sardinia, Sicily, Apulia, Provence and Thessaly in 1474AD.</German>
-		<Italian>[COLOR_YELLOW]Realms of the Crown:[COLOR_REVERT] Control Catalonia, Valencia, Aragon, Balears, Corsica, Sardinia, Sicily, Apulia, Provence and Thessaly in 1474AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Realms of the Crown:[COLOR_REVERT] Control Catalonia, Valencia, Aragon, Baleares, Corsica, Sardinia, Sicily, Apulia, Provence and Thessaly in 1474AD.</Spanish>
-		<Portuguese>[COLOR_YELLOW]Realms of the Crown:[COLOR_REVERT] Control Catalonia, Valencia, Aragon, Baleares, Corsica, Sardinia, Sicily, Apulia, Provence and Thessaly in 1474AD.</Portuguese>
+		<English>[COLOR_YELLOW]Realms of the Crown:[COLOR_REVERT] Control Catalonia, Valencia, Aragon, Balears, Corsica, Sardinia, Sicily, Calabria, Apulia, Provence and Thessaly in 1474AD.</English>
+		<French>[COLOR_YELLOW]Realms of the Crown:[COLOR_REVERT] Control Catalonia, Valencia, Aragon, Baleares, Corsica, Sardinia, Sicily, Calabria, Apulia, Provence and Thessaly in 1474AD.</French>
+		<German>[COLOR_YELLOW]Realms of the Crown:[COLOR_REVERT] Control Catalonia, Valencia, Aragon, Balears, Corsica, Sardinia, Sicily, Calabria, Apulia, Provence and Thessaly in 1474AD.</German>
+		<Italian>[COLOR_YELLOW]Realms of the Crown:[COLOR_REVERT] Control Catalonia, Valencia, Aragon, Balears, Corsica, Sardinia, Sicily, Calabria, Apulia, Provence and Thessaly in 1474AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Realms of the Crown:[COLOR_REVERT] Control Catalonia, Valencia, Aragon, Baleares, Corsica, Sardinia, Sicily, Calabria, Apulia, Provence and Thessaly in 1474AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]Realms of the Crown:[COLOR_REVERT] Control Catalonia, Valencia, Aragon, Baleares, Corsica, Sardinia, Sicily, Calabria, Apulia, Provence and Thessaly in 1474AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_MOR1</Tag>
-		<English>[COLOR_YELLOW]The Almohads:[COLOR_REVERT] Control Morocco, Marrakesh, Fez, Tetouan, Oran, Algiers, Ifriqiya, Tripolitania, Andalusia, and Valencia in 1227AD.</English>
-		<French>[COLOR_YELLOW]The Almohads:[COLOR_REVERT] Control Morocco, Marrakesh, Fez, Tetouan, Oran, Algiers, Ifriqiya, Tripolitania, Andalusia, and Valencia in 1227AD.</French>
-		<German>[COLOR_YELLOW]The Almohads:[COLOR_REVERT] Control Morocco, Marrakesh, Fez, Tetouan, Oran, Algiers, Ifriqiya, Tripolitania, Andalusia, and Valencia in 1227AD.</German>
-		<Italian>[COLOR_YELLOW]The Almohads:[COLOR_REVERT] Control Morocco, Marrakesh, Fez, Tetouan, Oran, Algiers, Ifriqiya, Tripolitania, Andalusia, and Valencia in 1227AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The Almohads:[COLOR_REVERT] Control Morocco, Marrakesh, Fez, Tetouan, Oran, Algiers, Ifriqiya, Tripolitania, Andalusia, and Valencia in 1227AD.</Spanish>
-		<Portuguese>[COLOR_YELLOW]The Almohads:[COLOR_REVERT] Control Morocco, Marrakesh, Fez, Tetouan, Oran, Algiers, Ifriqiya, Tripolitania, Andalusia, and Valencia in 1227AD.</Portuguese>
+		<English>[COLOR_YELLOW]The Almohads:[COLOR_REVERT] Control Morocco, Marrakesh, Fez, Tetouan, Oran, Algiers, Ifriqiya, Andalusia, Valencia and the Balearic Islands in 1227AD.</English>
+		<French>[COLOR_YELLOW]The Almohads:[COLOR_REVERT] Control Morocco, Marrakesh, Fez, Tetouan, Oran, Algiers, Ifriqiya, Andalusia, Valencia and the Balearic Islands in 1227AD.</French>
+		<German>[COLOR_YELLOW]The Almohads:[COLOR_REVERT] Control Morocco, Marrakesh, Fez, Tetouan, Oran, Algiers, Ifriqiya, Andalusia, Valencia and the Balearic Islands in 1227AD.</German>
+		<Italian>[COLOR_YELLOW]The Almohads:[COLOR_REVERT] Control Morocco, Marrakesh, Fez, Tetouan, Oran, Algiers, Ifriqiya, Andalusia, Valencia and the Balearic Islands in 1227AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Almohads:[COLOR_REVERT] Control Morocco, Marrakesh, Fez, Tetouan, Oran, Algiers, Ifriqiya, Andalusia, Valencia and the Balearic Islands in 1227AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]The Almohads:[COLOR_REVERT] Control Morocco, Marrakesh, Fez, Tetouan, Oran, Algiers, Ifriqiya, Andalusia, Valencia and the Balearic Islands in 1227AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_MOR2</Tag>

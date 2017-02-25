@@ -467,20 +467,20 @@ tCompaniesLimit = (3, 4, 3, 6, 4, 4, 3, 5, 5) # note that we have a modified lim
 
 # Companies will only settle in their preferred regions
 lCompanyRegions = [
-[iP_Antiochia, iP_Lebanon, iP_Jerusalem, iP_Cyprus, iP_Egypt, iP_Rhodes, iP_Malta, iP_Sicily, iP_Latium, iP_Calabria, iP_Apulia],
-[iP_Antiochia, iP_Lebanon, iP_Jerusalem, iP_Cyprus, iP_Egypt, iP_IleDeFrance, iP_Orleans, iP_Burgundy, iP_Champagne, iP_Lorraine, iP_Provence, iP_Normandy],
+[iP_Antiochia, iP_Lebanon, iP_Jerusalem, iP_Cyprus, iP_Egypt, iP_Rhodes, iP_Crete, iP_Malta, iP_Sicily, iP_Latium, iP_Calabria, iP_Apulia],
+[iP_Antiochia, iP_Lebanon, iP_Jerusalem, iP_Cyprus, iP_Egypt, iP_IleDeFrance, iP_Orleans, iP_Burgundy, iP_Champagne, iP_Picardy, iP_Provence, iP_Aquitania, iP_Normandy, iP_London, iP_Wales, iP_Wessex, iP_EastAnglia, iP_Mercia, iP_Northumbria],
 [iP_Antiochia, iP_Lebanon, iP_Jerusalem, iP_Cyprus, iP_Egypt, iP_Transylvania, iP_Prussia, iP_Livonia, iP_Estonia, iP_Pomerania, iP_Brandenburg],
-[iP_Saxony, iP_Brandenburg, iP_Holstein, iP_Denmark, iP_Skaneland, iP_Prussia, iP_Livonia, iP_Estonia, iP_Pomerania, iP_Netherlands, iP_Gotaland, iP_Gotland, iP_Novgorod, iP_Karelia],
-[iP_Tuscany, iP_Lombardy, iP_Verona, iP_Latium, iP_Calabria, iP_Apulia, iP_Dalmatia, iP_Arberia],
-[iP_Bavaria, iP_Swabia, iP_Austria, iP_Bohemia, iP_Moravia, iP_Silesia, iP_Pannonia, iP_UpperHungary, iP_Hungary],
-[iP_Liguria, iP_Lombardy, iP_Tuscany, iP_Latium, iP_Corsica, iP_Sardinia, iP_Sicily, iP_Calabria, iP_Apulia],
-[iP_Hungary, iP_Pannonia, iP_UpperHungary, iP_Transylvania, iP_Slavonia, iP_Dalmatia, iP_Banat, iP_Serbia, iP_Bosnia],
-[iP_GaliciaSpain, iP_Castile, iP_Leon, iP_Lusitania, iP_Catalonia, iP_Aragon, iP_Valencia, iP_Andalusia, iP_Navarre, iP_LaMancha]
+[iP_Saxony, iP_Brandenburg, iP_Holstein, iP_London, iP_EastAnglia, iP_Norway, iP_Vestfold, iP_Denmark, iP_Skaneland, iP_Gotaland, iP_Gotland, iP_Svealand, iP_Prussia, iP_Livonia, iP_Estonia, iP_Pomerania, iP_Netherlands, iP_Flanders, iP_Novgorod, iP_Karelia, iP_Osterland],
+[iP_Tuscany, iP_Lombardy, iP_Verona, iP_Latium, iP_Calabria, iP_Apulia, iP_Dalmatia, iP_Arberia, iP_Epirus, iP_Morea],
+[iP_Bavaria, iP_Swabia, iP_Franconia, iP_Austria, iP_Carinthia, iP_Bohemia, iP_Moravia, iP_Silesia, iP_UpperHungary, iP_Hungary, iP_Pannonia, iP_Slavonia],
+[iP_Liguria, iP_Lombardy, iP_Tuscany, iP_Latium, iP_Corsica, iP_Sardinia, iP_Sicily, iP_Calabria, iP_Apulia, iP_Provence, iP_Catalonia, iP_Balears],
+[iP_Hungary, iP_Pannonia, iP_UpperHungary, iP_Transylvania, iP_Slavonia, iP_Dalmatia, iP_Banat, iP_Bosnia, iP_Serbia, iP_Arberia, iP_Wallachia, iP_Moesia],
+[iP_GaliciaSpain, iP_Castile, iP_Leon, iP_Lusitania, iP_Catalonia, iP_Aragon, iP_Valencia, iP_Andalusia, iP_Navarre, iP_LaMancha, iP_Balears]
 ]
 
 
-## Absinthe: was only needed for the AI regions
-## these regions are for the map and AI
+## Absinthe: was only needed for the AI regions, disabled them
+## 3Miro: these regions are for the map and AI
 #tRegionMap = [ [], # default region is empty
 #[ iP_GaliciaSpain, iP_Castile, iP_Leon, iP_Lusitania, iP_Catalonia, iP_Aragon, iP_Navarre, iP_LaMancha, iP_Valencia, iP_Andalusia, iP_Bretagne, iP_Normandy, iP_Aquitania, iP_IleDeFrance, iP_Provence, iP_Burgundy, iP_Orleans, iP_Champagne, iP_Flanders, iP_Picardy, iP_London, iP_Wessex, iP_Wales, iP_Scotland, iP_Ireland, iP_Mercia, iP_EastAnglia, iP_Northumbria, iP_Iceland, iP_TheIsles ], # Western Europe
 #[ iP_Norway, iP_Vestfold, iP_Gotaland, iP_Svealand, iP_Norrland, iP_Jamtland, iP_Skaneland, iP_Gotland ], # Northern Europe

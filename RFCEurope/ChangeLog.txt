@@ -217,6 +217,7 @@ Changes for RFCE 1.5:
 	Art updates:
 		- Historic icon/button/gamefont for the Order of Calatrava and the Order of the Dragon
 		- New gamefont icon for Teutonic Knights, Templar Knights, Bank of St. George (the latter 2 from SoI)
+		- Resized/improved all other Company gamefont icons, not all of them were displayed perfectly (also to be more in line with the new ones)
 		- New unit art and icon for Knight of St. John (Hospitaller UU), new icon for Teutonic Knight UU
 		- Unit art and icon for Kontor, Knight of the Dragon and Calatrava Knight from Realism Invictus
 		- Added new unit art for Janissary (3 different versions) and Inquisitor
@@ -265,6 +266,11 @@ Changes for RFCE 1.5:
 		- Civs can't get back one of their previous leaders on resurrection (would be changed to the later one anyway in a couple turns)
 		- Civs have 40% chance to remain with the leader before the collapse, 60% chance to get the next leader (chronologically)
 		- Minor text updates in the wording of some UHVs and UPs
+		- Minor DCN update for France: Empire status needs more provinces
+		- The province of Calabria was added to the 3rd Aragonese UHV, the Balearic Islands are needed for the 1st Moroccan UHV instead of Tripolitania
+		- Thessaly, Morea, Crete and Cyprus provinces are also needed for the 2nd Venetian UHV (besides the city of Constantinople)
+		- Turns remaining message only show up in the last 30 turns of the game (instead of 100)
+		- No permanent (flashing) victory message on the middle of the screen after you are victorious (from DoC)
 
 	Bugfixes:
 		- Fixed strange visibility area for the Ottomans
@@ -281,8 +287,9 @@ Changes for RFCE 1.5:
 		- Fixed bug in the Genoese UHV counter for Banks
 		- Fixed bug with unit removal in the NW tile of Iceland (related to various mechanics which include switching/moving units - ie: spawn, respawn, secession)
 		- Fixed bug that caused AI civs to produce unnecessary prosecutors way too often
+		- Fixed issue where naval units skip turn on unit unload even with movement points left (from DoC)
 		- Fixed a couple minor issues and inconsistencies with some old leftover code from vanilla RFC
-		- Added a couple more fixes for Firaxis oversights and bugfixes from Karadoc/K-mod
+		- Added a couple more bugfixes (and minor fixes for Firaxis oversights) from Karadoc/K-mod
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

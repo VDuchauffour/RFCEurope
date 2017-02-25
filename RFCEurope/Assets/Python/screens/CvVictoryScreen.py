@@ -1026,6 +1026,7 @@ class CvVictoryScreen:
 		#UHV2
 		tConstantinople = con.tCapitals[con.iByzantium]
 		sText2 += self.checkCity(tConstantinople, iPlayer, localText.getText("TXT_KEY_CITY_NAME_CONSTANTINOPLE",()), True)
+		sText2 += "\n" + self.getProvinceString(vic.tVenetianControlII)
 		#UHV3
 		iGoal = pPlayer.getUHV( 2 )
 		sText3 += self.determineColor(iGoal == -1, localText.getText("TXT_KEY_UHV_NO_COLONIES_YET", ()))

@@ -136,8 +136,8 @@ tCordobaIslamize = [ xml.iP_GaliciaSpain, xml.iP_Castile, xml.iP_Leon, xml.iP_Lu
 tNorwayControl = [xml.iP_TheIsles, xml.iP_Ireland, xml.iP_Scotland, xml.iP_Normandy, xml.iP_Sicily, xml.iP_Apulia, xml.iP_Calabria, xml.iP_Iceland]
 tNorwayOutrank = [ iSweden, iDenmark, iScotland, iEngland, iGermany, iFrankia ]
 #tNorseControl = [ xml.iP_Sicily, xml.iP_Iceland, xml.iP_Northumbria, xml.iP_Scotland, xml.iP_Normandy, xml.iP_Ireland, xml.iP_Novgorod ]
-#tVenetianControl = [ xml.iP_Morea, xml.iP_Epirus, xml.iP_Dalmatia, xml.iP_Verona, xml.iP_Crete, xml.iP_Cyprus ]
 tVenetianControl = [ xml.iP_Epirus, xml.iP_Dalmatia, xml.iP_Verona, xml.iP_Arberia ]
+tVenetianControlII = [ xml.iP_Thessaly, xml.iP_Morea, xml.iP_Crete, xml.iP_Cyprus ]
 tBurgundyControl = [ xml.iP_Flanders, xml.iP_Picardy, xml.iP_Provence, xml.iP_Burgundy, xml.iP_Champagne, xml.iP_Lorraine ]
 tBurgundyOutrank = [ iFrankia, iEngland, iGermany ]
 tGermanyControl = [ xml.iP_Tuscany, xml.iP_Lombardy, xml.iP_Lorraine, xml.iP_Swabia, xml.iP_Saxony, xml.iP_Bavaria, xml.iP_Franconia, xml.iP_Brandenburg, xml.iP_Holstein ]
@@ -161,9 +161,9 @@ tMoscowControl = [ xml.iP_Donets, xml.iP_Kuban, xml.iP_Zaporizhia, xml.iP_Slobod
 tSwedenControl = [ xml.iP_Norrland, xml.iP_Osterland, xml.iP_Karelia]
 tNovgorodControl = [ xml.iP_Novgorod, xml.iP_Karelia, xml.iP_Estonia, xml.iP_Livonia, ]
 tNovgorodControlII = [ xml.iP_Karelia, xml.iP_Vologda ]
-tMoroccoControl = [ xml.iP_Morocco, xml.iP_Marrakesh, xml.iP_Fez, xml.iP_Tetouan, xml.iP_Oran, xml.iP_Algiers, xml.iP_Ifriqiya, xml.iP_Tripolitania, xml.iP_Andalusia, xml.iP_Valencia ]
+tMoroccoControl = [ xml.iP_Morocco, xml.iP_Marrakesh, xml.iP_Fez, xml.iP_Tetouan, xml.iP_Oran, xml.iP_Algiers, xml.iP_Ifriqiya, xml.iP_Andalusia, xml.iP_Valencia, xml.iP_Balears ]
 tAragonControlI = [ xml.iP_Catalonia, xml.iP_Valencia, xml.iP_Balears, xml.iP_Sicily ]
-tAragonControlII = [ xml.iP_Catalonia, xml.iP_Valencia, xml.iP_Aragon, xml.iP_Balears, xml.iP_Corsica, xml.iP_Sardinia, xml.iP_Sicily, xml.iP_Apulia, xml.iP_Provence, xml.iP_Thessaly ]
+tAragonControlII = [ xml.iP_Catalonia, xml.iP_Valencia, xml.iP_Aragon, xml.iP_Balears, xml.iP_Corsica, xml.iP_Sardinia, xml.iP_Sicily, xml.iP_Calabria, xml.iP_Apulia, xml.iP_Provence, xml.iP_Thessaly ]
 tPrussiaControlI = [ xml.iP_Lithuania, xml.iP_Suvalkija, xml.iP_Livonia, xml.iP_Estonia, xml.iP_Pomerania, xml.iP_Prussia]
 tPrussiaDefeat = [ iAustria, iMoscow, iGermany, iSweden, iFrankia, iSpain ]
 tScotlandControl = [ xml.iP_Scotland, xml.iP_TheIsles, xml.iP_Ireland, xml.iP_Wales, xml.iP_Bretagne ]
@@ -897,15 +897,23 @@ class Victory:
 			elif ( iGameTurn == xml.i1004AD ):
 				pVenecia.setUHV( 0, 0 )
 
-		# UHV 2: Conquer Constantinople by 1204
+		# UHV 2: Conquer Constantinople, Thessaly, Morea, Crete and Cyprus by 1204AD
 		if ( iGameTurn <= xml.i1204AD and pVenecia.getUHV( 1 ) == -1 ):
 			if ( pVenecia.getProvinceCurrentState( xml.iP_Constantinople ) >= con.iProvinceConquer ):
-				pVenecia.setUHV( 1, 1 )
-				pVenecia.changeStabilityBase( iCathegoryExpansion, 3 )
+				bConq = True
+				for iProv in tVenetianControlII:
+					if ( pVenecia.getProvinceCurrentState( iProv ) < con.iProvinceConquer ):
+						bConq = False
+						break
+				if ( bConq ):
+					pVenecia.setUHV( 1, 1 )
+					pVenecia.changeStabilityBase( iCathegoryExpansion, 3 )
+				elif ( iGameTurn == xml.i1204AD ):
+					pVenecia.setUHV( 1, 0 )
 			elif ( iGameTurn == xml.i1204AD ):
 				pVenecia.setUHV( 1, 0 )
 
-		# UHV 3: Be the first to build a modern Colony (so Vinland doesn't count)
+		# UHV 3: Be the first to build a Colony from the Age of Discovery (Vinland is from the Viking Age)
 		# handled in the onProjectBuilt function
 
 
@@ -1161,7 +1169,7 @@ class Victory:
 
 	def checkScotland( self, iGameTurn ):
 
-		# UHV 1: Have 10 Forts and 4 Castles by 1296.
+		# UHV 1: Have 10 Forts and 4 Castles by 1296
 		if ( iGameTurn <= xml.i1296AD and pScotland.getUHV( 0 ) == -1):
 			iForts = pScotland.getImprovementCount( xml.iImprovementFort )
 			iCastles = pScotland.countNumBuildings( xml.iCastle )
@@ -1207,7 +1215,7 @@ class Victory:
 		elif ( iGameTurn > xml.i1560AD and pScotland.getUHV( 1 ) == -1 ):
 			pScotland.setUHV( 1, 0 )
 
-		# UHV 3: Control Scotland, The Isles, Ireland, Wales, Brittany and Galicia in 1700.
+		# UHV 3: Control Scotland, The Isles, Ireland, Wales, Brittany and Galicia in 1700
 		if ( iGameTurn == xml.i1700AD and pScotland.getUHV( 2 ) == -1 ):
 			bConq = True
 			for iProv in tScotlandControl:
@@ -1292,7 +1300,7 @@ class Victory:
 
 	def checkMorocco( self, iGameTurn ):
 
-		# UHV 1: Control Morocco, Marrakesh, Fez, Tetouan, Oran, Algiers, Ifriqiya, Tripolitania, Andalusia, and Valencia in 1227AD.
+		# UHV 1: Control Morocco, Marrakesh, Fez, Tetouan, Oran, Algiers, Ifriqiya, Andalusia, Valencia and the Balearic Islands in 1227AD
 		if (iGameTurn == xml.i1227AD and pMorocco.getUHV( 0 ) == -1 ):
 			bConq = True
 			for iProv in tMoroccoControl:
@@ -1305,7 +1313,7 @@ class Victory:
 			else:
 				pMorocco.setUHV( 0, 0 )
 
-		# UHV 2: Have 5000 culture in each of three cities in 1465AD.
+		# UHV 2: Have 5000 culture in each of three cities in 1465AD
 		if (iGameTurn == xml.i1465AD and pMorocco.getUHV( 1 ) == -1):
 			iGoodCities = 0
 			apCityList = PyPlayer(iMorocco).getCityList()
@@ -1320,7 +1328,7 @@ class Victory:
 			else:
 				pMorocco.setUHV( 1, 0 )
 
-		# UHV 3: Collapse or vassalize Portugal, Spain, and Aragon by 1578AD.
+		# UHV 3: Collapse or vassalize Portugal, Spain, and Aragon by 1578AD
 		if (iGameTurn >= xml.i1164AD and iGameTurn <= xml.i1578AD and pMorocco.getUHV( 2 ) == -1):
 			bConq = True
 			if ( pSpain.isAlive() and (not teamSpain.isVassal( teamMorocco.getID() )) ):
@@ -1399,7 +1407,7 @@ class Victory:
 			else:
 				pAragon.setUHV( 1, 0 )
 
-		# UHV 3: Control Catalonia, Valencia, Aragon, Balears, Corsica, Sardinia, Sicily, Apulia, Provence and Thessaly in 1474
+		# UHV 3: Control Catalonia, Valencia, Aragon, Balears, Corsica, Sardinia, Sicily, Calabria, Apulia, Provence and Thessaly in 1474
 		if ( iGameTurn == xml.i1474AD and pAragon.getUHV( 2 ) == -1 ):
 			bConq = True
 			for iProv in tAragonControlII:

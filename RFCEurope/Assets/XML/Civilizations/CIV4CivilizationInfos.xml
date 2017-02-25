@@ -1493,7 +1493,7 @@
 					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
 					<DCNConditionAfterTurn>86</DCNConditionAfterTurn>
 					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
-					<DCNConditionConqNumOfProvincesOfTypeNum>2</DCNConditionConqNumOfProvincesOfTypeNum>
+					<DCNConditionConqNumOfProvincesOfTypeNum>4</DCNConditionConqNumOfProvincesOfTypeNum>
 					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
 					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
 					<DCNName>TXT_KEY_DN_FRA04</DCNName>
@@ -1511,7 +1511,7 @@
 					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
 					<DCNConditionAfterTurn>86</DCNConditionAfterTurn>
 					<DCNConditionConqNumOfProvincesOfTypeType>1</DCNConditionConqNumOfProvincesOfTypeType>
-					<DCNConditionConqNumOfProvincesOfTypeNum>6</DCNConditionConqNumOfProvincesOfTypeNum>
+					<DCNConditionConqNumOfProvincesOfTypeNum>7</DCNConditionConqNumOfProvincesOfTypeNum>
 					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
 					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
 					<DCNName>TXT_KEY_DN_FRA04</DCNName>
@@ -1529,7 +1529,7 @@
 					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
 					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
 					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
-					<DCNConditionConqNumOfProvincesOfTypeNum>2</DCNConditionConqNumOfProvincesOfTypeNum>
+					<DCNConditionConqNumOfProvincesOfTypeNum>4</DCNConditionConqNumOfProvincesOfTypeNum>
 					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
 					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
 					<DCNName>TXT_KEY_DN_FRA02</DCNName>
@@ -1547,7 +1547,7 @@
 					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
 					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
 					<DCNConditionConqNumOfProvincesOfTypeType>1</DCNConditionConqNumOfProvincesOfTypeType>
-					<DCNConditionConqNumOfProvincesOfTypeNum>6</DCNConditionConqNumOfProvincesOfTypeNum>
+					<DCNConditionConqNumOfProvincesOfTypeNum>7</DCNConditionConqNumOfProvincesOfTypeNum>
 					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
 					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
 					<DCNName>TXT_KEY_DN_FRA02</DCNName>
