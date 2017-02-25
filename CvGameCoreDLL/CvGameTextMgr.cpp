@@ -14622,14 +14622,20 @@ void CvGameTextMgr::getInterfaceCenterText(CvWString& strText)
 	strText.clear();
 	if (!gDLL->getInterfaceIFace()->isCityScreenUp())
 	{
-		if (GC.getGameINLINE().getWinner() != NO_TEAM)
+		// Absinthe: disable permanent victory message
+		/*if (GC.getGameINLINE().getWinner() != NO_TEAM)
 		{
 			strText = gDLL->getText("TXT_KEY_MISC_WINS_VICTORY", GET_TEAM(GC.getGameINLINE().getWinner()).getName().GetCString(), GC.getVictoryInfo(GC.getGameINLINE().getVictory()).getTextKeyWide());
 		}
 		else if (!(GET_PLAYER(GC.getGameINLINE().getActivePlayer()).isAlive()))
 		{
 			strText = gDLL->getText("TXT_KEY_MISC_DEFEAT");
+		}*/
+		if (!(GET_PLAYER(GC.getGameINLINE().getActivePlayer()).isAlive()))
+		{
+			strText = gDLL->getText("TXT_KEY_MISC_DEFEAT");
 		}
+		// Absinthe: end
 	}
 }
 
@@ -14704,7 +14710,8 @@ void CvGameTextMgr::getTurnTimerText(CvWString& strText)
 			}
 			else if (GC.getGameINLINE().getMaxTurns() > 0)
 			{
-				if ((GC.getGameINLINE().getElapsedGameTurns() >= (GC.getGameINLINE().getMaxTurns() - 100)) && (GC.getGameINLINE().getElapsedGameTurns() < GC.getGameINLINE().getMaxTurns()))
+				// Absinthe: changed to show up only in the last 30 turns (original is 100)
+				if ((GC.getGameINLINE().getElapsedGameTurns() >= (GC.getGameINLINE().getMaxTurns() - 30)) && (GC.getGameINLINE().getElapsedGameTurns() < GC.getGameINLINE().getMaxTurns()))
 				{
 					if (!strText.empty())
 					{

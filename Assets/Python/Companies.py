@@ -34,6 +34,7 @@ tCompaniesLimit = xml.tCompaniesLimit
 lCompanyRegions = xml.lCompanyRegions
 iCatholicism = xml.iCatholicism
 iOrthodoxy = xml.iOrthodoxy
+iProtestantism = xml.iProtestantism
 iIslam = xml.iIslam
 iJudaism = xml.iJudaism
 
@@ -220,6 +221,8 @@ class Companies:
 				iValue += 3
 			elif iStateReligion == iOrthodoxy:
 				iValue += 1
+			elif iStateReligion == iProtestantism:
+				iValue -= -2
 			else:
 				return -1
 		elif iCompany == iDragon:
@@ -287,7 +290,7 @@ class Companies:
 				return -1
 		elif iCompany == iHospitallers:
 			if city.isCoastal(20):
-				iValue += 1
+				iValue += 2
 
 		# bonus for religions in the city
 		if (iCompany == iHansa or iCompany == iMedici or iCompany == iAugsburg or iCompany == iStGeorge):
@@ -312,6 +315,8 @@ class Companies:
 			if city.getNumRealBuilding(xml.iBarracks) > 0: iValue += 1
 			if city.getNumRealBuilding(xml.iStable) > 0 or city.getNumRealBuilding(xml.iBulgarianStan) > 0: iValue += 1
 			if city.getNumRealBuilding(xml.iArcheryRange) > 0: iValue += 1
+			if city.getNumRealBuilding(xml.iCatholicTemple) > 0: iValue += 1
+			if city.getNumRealBuilding(xml.iCatholicMonastery) > 0: iValue += 1
 			if city.getNumRealBuilding(xml.iGuildHall) > 0 or city.getNumRealBuilding(xml.iNovgorodKonets) > 0: iValue += 1
 			if iCompany == iHospitallers and city.getNumRealBuilding(xml.iKrakDesChevaliers) > 0: iValue += 5
 			elif city.getNumRealBuilding(xml.iKrakDesChevaliers) > 0: iValue += 2
@@ -337,6 +342,7 @@ class Companies:
 		if iCompany == iHansa:
 			if city.getNumRealBuilding(xml.iHarbor) > 0 or city.getNumRealBuilding(xml.iVikingTradingPost) > 0: iValue += 1
 			if city.getNumRealBuilding(xml.iLighthouse) > 0 or city.getNumRealBuilding(xml.iPortugalFeitoria) > 0 or city.getNumRealBuilding(xml.iAragonSeaport) > 0: iValue += 1
+			if city.getNumRealBuilding(xml.iWharf) > 0: iValue += 1
 			if city.getNumRealBuilding(xml.iCustomHouse) > 0: iValue += 1
 			if city.getNumRealBuilding(xml.iMarket) > 0: iValue += 1
 			if city.getNumRealBuilding(xml.iBrewery) > 0 or city.getNumRealBuilding(xml.iBurgundianWinery) > 0: iValue += 1
@@ -349,7 +355,7 @@ class Companies:
 
 		# civic bonuses
 		if owner.getCivics(0) == xml.iCivicMerchantRepublic:
-			if (iCompany == iMedici or iCompany == iStGeorge):
+			if (iCompany == iMedici or iCompany == iStGeorge or iCompany == iHospitallers):
 				iValue += 1
 			if iCompany == iHansa:
 				iValue += 2
@@ -361,7 +367,7 @@ class Companies:
 				iValue += 1
 		if owner.getCivics(2) == xml.iCivicApprenticeship:
 			if iCompany == iHansa:
-				iValue += 2
+				iValue += 1
 		if owner.getCivics(3) == xml.iCivicTradeEconomy:
 			if (iCompany == iMedici or iCompany == iAugsburg or iCompany == iStGeorge):
 				iValue += 1

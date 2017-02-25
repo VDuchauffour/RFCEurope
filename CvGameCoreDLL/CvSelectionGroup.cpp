@@ -1542,6 +1542,8 @@ void CvSelectionGroup::continueMission(int iSteps)
 					}
 					else
 					{
+						// Absinthe: commenting out 3Miro's original bugfix here
+						/*
 						//GC.getGameINLINE().logMsg(" MISSION_MOVE_TO 3 ");
 						//GC.getGameINLINE().logMsg(" Workaround Bugfix for CvSelectionGroup ");
 						//GC.getGameINLINE().logMsg("                    Location at %d %d ",getX(),getY());
@@ -1563,6 +1565,21 @@ void CvSelectionGroup::continueMission(int iSteps)
 						};
 						//GC.getGameINLINE().logMsg(" Workaround Bugfix - FINISHED ");
 						//bDone = true; // 3Miro: Original code
+						*/
+						// Absinthe: end
+						// Absinthe: adapting 3Miro's infinite settler loop fix, also avoiding transports skipping turn on unload
+						bDone = true;
+						if (headMissionQueueNode() != NULL && headMissionQueueNode()->m_data.eMissionType == MISSION_MOVE_TO)
+						{
+							if (getX() != headMissionQueueNode()->m_data.iData1 && getY() != headMissionQueueNode()->m_data.iData2)
+							{
+								if (!(plot()->isWater() && GC.getMap().plot(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2)->isCoastalLand()))
+								{
+									pushMission(MISSION_SKIP);
+								}
+							}
+						}
+						// Absinthe: end
 					}
 					break;
 

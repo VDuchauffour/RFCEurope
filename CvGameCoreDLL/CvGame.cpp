@@ -1400,7 +1400,7 @@ void CvGame::normalizeRemoveBadFeatures()
 					}
 				}
 			}
-        }
+		}
 	}
 }
 
@@ -5947,8 +5947,8 @@ void CvGame::doTurn()
 	// Rhye - comment this to stop religion founding
 	//doHolyCity();
 
-	// Absinthe: disable after companies added
-	doHeadquarters();
+	// Absinthe: disable after dynamic companies are added
+	//doHeadquarters();
 
 	// Absinthe: disabled
 	//doDiploVote();
@@ -8503,10 +8503,10 @@ void CvGame::write(FDataStreamBase* pStream)
 	pStream->Write(GC.getNumBuildingInfos(), m_aiShrineReligion);
 	pStream->Write(m_iNumCultureVictoryCities);
 	pStream->Write(m_eCultureVictoryCultureLevel);
-	// 3Miro: save the minorReligion refugie count
+	// 3Miro: save the minorReligion refugee count
 	pStream->Write(minorReligionRefugies);
 
-	// 3Miro: save/load the Tech Date Restrction
+	// 3Miro: save/load the Tech Date Restriction
 	pStream->Write(120,techFoundedDate);
 }
 
