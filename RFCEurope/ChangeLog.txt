@@ -171,7 +171,8 @@ Changes for RFCE 1.5:
 		- Fixed mistake in religious stability calculations when Judaism is your State Religion
 
 	Religion spread rules:
-		- Added special religion spread rules for a couple areas, based on provinces, only checks for cities without a religion
+		- Added special religion spread rules for a couple areas which more often than not ended up with ahistorical religions
+		- The spread is based on provinces (and indirectly on civs in the area), only checks for cities without a religion
 		- Orthodoxy: increased chance to spread in Rus territories between 850-1300AD, in Bulgaria and the Balkans between 700-1000AD
 		- Islam: greatly increased chance to spread in the Maghreb and in the southern part of the Iberian-peninsula between 700-1200AD
 		- Catholicism: increased chance to spread in southern Scandinavia between 1000-1300AD, in Hungary between 960-1200AD
@@ -223,6 +224,7 @@ Changes for RFCE 1.5:
 		- Added new unit art for Janissary (3 different versions) and Inquisitor
 		- New icon for all 4 Missionaries, new unit art for Orthodox and Islamic Missionary
 		- New icon for Végvár (Hungarian UB), new icon for Manorialism civic and tech
+		- Fixed minor glitch with the leaderhead art of Bela III (Hungary)
 		- Plague icon on the city banner, not only the plague cloud above them (idea from DoC)
 		- Improved religion and company icon positioning on the city screen
 
@@ -271,6 +273,7 @@ Changes for RFCE 1.5:
 		- Thessaly, Morea, Crete and Cyprus provinces are also needed for the 2nd Venetian UHV (besides the city of Constantinople)
 		- Turns remaining message only show up in the last 30 turns of the game (instead of 100)
 		- No permanent (flashing) victory message on the middle of the screen after you are victorious (from DoC)
+		- Removed all leaderhead FPK-s from the mod, no use in PAK-ing leaderhead art files
 
 	Bugfixes:
 		- Fixed strange visibility area for the Ottomans
