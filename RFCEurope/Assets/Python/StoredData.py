@@ -86,7 +86,7 @@ class StoredData:
 				'iCrusadePower': 0,
 				'iCrusadeSucceeded': 0,
 				'iCrusadeToReturn': -1,
-				'lSelectedUnits': [0, 0, 0, 0, 0, 0], # Templars, Zerglings, oops! ... Templar Knights, Teutonic Knights, Knights, Heavy Lancers, Siege Weapons, Generic
+				'lSelectedUnits': [0, 0, 0, 0, 0, 0, 0, 0], # Templar Knights, Teutonic Knights, Hospitaller Knights, Knights, Heavy Lancers, Lancers, Siege Weapons, Generic
 				'bDCEnabled': False,
 				'iDCLast': 0,
 

@@ -265,6 +265,10 @@ public:
 	int getProvince();
 	int getProvinceID();
 	void setProvinceID(int iNewValue);
+	std::string getCityNameMap(int /*PlayerTypes*/ eIndex) const;
+	void setCityNameMap(int /*PlayerTypes*/ eIndex, std::string szNewValue);
+	std::string getCityNameDefault() const;
+	void setCityNameDefault(std::string szNewValue);
 	// Absinthe: end
 
 private:

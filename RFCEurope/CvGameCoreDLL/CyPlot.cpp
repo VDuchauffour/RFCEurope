@@ -1065,4 +1065,26 @@ void CyPlot::setProvinceID(int iNewValue)
 	if (m_pPlot)
 		m_pPlot->setProvinceID(iNewValue);
 }
+
+std::string CyPlot::getCityNameMap(int eIndex) const
+{
+	return m_pPlot ? m_pPlot->getCityNameMap((PlayerTypes) eIndex) : "";
+}
+
+void CyPlot::setCityNameMap(int eIndex, std::string szNewValue)
+{
+	if (m_pPlot)
+		m_pPlot->setCityNameMap((PlayerTypes) eIndex, szNewValue);
+}
+
+std::string CyPlot::getCityNameDefault() const
+{
+	return m_pPlot ? m_pPlot->getCityNameDefault() : "";
+}
+
+void CyPlot::setCityNameDefault(std::string szNewValue)
+{
+	if (m_pPlot)
+		m_pPlot->setCityNameDefault(szNewValue.c_str());
+}
 // Absinthe: end

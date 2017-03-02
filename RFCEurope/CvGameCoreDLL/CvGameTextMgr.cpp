@@ -2212,6 +2212,31 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 	};
 	// 3MiroProvince: end
 
+	// Absinthe: City Name text for settler units
+	CvWString szName;
+	CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+	szName = pPlot->getCityNameMap(GC.getGameINLINE().getActivePlayer());
+	if (!szName.empty())
+	{
+		if (pHeadSelectedUnit != NULL)
+		{
+			if (pHeadSelectedUnit->isFound())
+			{
+				if (szName[0] != '-' || szName[1] != '1') // -1 is the base value for city name maps
+				{
+					if (pPlot->getPlotType() == PLOT_LAND || pPlot->getPlotType() == PLOT_HILLS)
+					{
+						//szString.append("City name: " + szName);
+						szString.append(gDLL->getText("TXT_KEY_CITY_NAME_TILE_HELP"));
+						szString.append(szName);
+						szString.append(NEWLINE);
+					}
+				}
+			}
+		}
+	}
+	// Absinthe: end
+
 	// Absinthe: colour the spawn and respawn areas on the map
 	// Absinthe: first the spawn maps, with holding down shift
 	if ( !(gDLL->GetWorldBuilderMode() ) ){
@@ -2233,7 +2258,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			GC.getGameINLINE().updateColoredPlots();
 		};
 	};
-	// Absinthe: second the respawn maps, with holding down alt
+	// Absinthe: then the respawn maps, with holding down alt
 	if ( !(gDLL->GetWorldBuilderMode() ) ){
 		if ( bAlt && (pPlot != NULL) ){
 			if ( iNormalToPlot == 1 ){
@@ -12773,14 +12798,17 @@ void CvGameTextMgr::buildCityBillboardIconString( CvWStringBuffer& szBuffer, CvC
 				szBuffer.append(CvWString::format(L"%c", gDLL->getSymbolID(TRADE_CHAR)));
 			}
 		}
+	}
 
-		// Absinthe: Plague icon on the city billboard
+	// Absinthe: Plague icon on the city billboard (for all visible cities)
+	if (pCity->isVisible(GC.getGameINLINE().getActiveTeam(), true))
+	{
 		if (pCity->isHasRealBuilding((BuildingTypes)BUILDING_PLAGUE))
 		{
 			szBuffer.append(CvWString::format(L"%c", gDLL->getSymbolID(PLAGUE_CHAR)));
 		}
-		// Absinthe: end
 	}
+	// Absinthe: end
 
 	// religion icons
 	for (int iI = 0; iI < GC.getNumReligionInfos(); ++iI)
@@ -12833,17 +12861,17 @@ void CvGameTextMgr::buildCityBillboardIconString( CvWStringBuffer& szBuffer, CvC
 
 	// defense icon and text
 	//if (pCity->getTeam() != GC.getGameINLINE().getActiveTeam())
+	//{
+	if (pCity->isVisible(GC.getGameINLINE().getActiveTeam(), true))
 	{
-		if (pCity->isVisible(GC.getGameINLINE().getActiveTeam(), true))
-		{
-			int iDefenseModifier = pCity->getDefenseModifier(GC.getGameINLINE().selectionListIgnoreBuildingDefense());
+		int iDefenseModifier = pCity->getDefenseModifier(GC.getGameINLINE().selectionListIgnoreBuildingDefense());
 
-			if (iDefenseModifier != 0)
-			{
-				szBuffer.append(CvWString::format(L" %c:%s%d%%", gDLL->getSymbolID(DEFENSE_CHAR), ((iDefenseModifier > 0) ? "+" : ""), iDefenseModifier));
-			}
+		if (iDefenseModifier != 0)
+		{
+			szBuffer.append(CvWString::format(L" %c:%s%d%%", gDLL->getSymbolID(DEFENSE_CHAR), ((iDefenseModifier > 0) ? "+" : ""), iDefenseModifier));
 		}
 	}
+	//}
 }
 
 void CvGameTextMgr::buildCityBillboardCityNameString( CvWStringBuffer& szBuffer, CvCity* pCity)

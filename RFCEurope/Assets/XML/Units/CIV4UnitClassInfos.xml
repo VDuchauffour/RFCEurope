@@ -216,15 +216,6 @@
 			<DefaultUnit>UNIT_LONG_SWORDSMAN</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
-			<Type>UNITCLASS_KNIGHT_OF_ST_JOHNS</Type>
-			<Description>TXT_KEY_UNIT_KNIGHT_OF_ST_JOHNS</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<iInstanceCostModifier>0</iInstanceCostModifier>
-			<DefaultUnit>UNIT_KNIGHT_OF_ST_JOHNS</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
 			<Type>UNITCLASS_MACEMAN</Type>
 			<Description>TXT_KEY_UNIT_MACEMAN</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
@@ -351,6 +342,15 @@
 			<DefaultUnit>UNIT_KNIGHT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
+			<Type>UNITCLASS_CUIRASSIER</Type>
+			<Description>TXT_KEY_UNIT_CUIRASSIER</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>UNIT_CUIRASSIER</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
 			<Type>UNITCLASS_TEMPLAR</Type>
 			<Description>TXT_KEY_UNIT_TEMPLAR</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
@@ -369,13 +369,31 @@
 			<DefaultUnit>UNIT_TEUTONIC</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
-			<Type>UNITCLASS_CUIRASSIER</Type>
-			<Description>TXT_KEY_UNIT_CUIRASSIER</Description>
+			<Type>UNITCLASS_KNIGHT_OF_ST_JOHNS</Type>
+			<Description>TXT_KEY_UNIT_KNIGHT_OF_ST_JOHNS</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
-			<DefaultUnit>UNIT_CUIRASSIER</DefaultUnit>
+			<DefaultUnit>UNIT_KNIGHT_OF_ST_JOHNS</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>UNITCLASS_DRAGON_KNIGHT</Type>
+			<Description>TXT_KEY_UNIT_DRAGON_KNIGHT</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>UNIT_DRAGON_KNIGHT</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>UNITCLASS_CALATRAVA_KNIGHT</Type>
+			<Description>TXT_KEY_UNIT_CALATRAVA_KNIGHT</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>UNIT_CALATRAVA_KNIGHT</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_CATAPULT</Type>
@@ -531,7 +549,7 @@
 			<DefaultUnit>UNIT_SPY</DefaultUnit>
 		</UnitClassInfo>
 		<!-- Persecutor's unitclass: it's ordered number is referenced in the XMLConst.py -->
-		<!-- 52th class currently, so iProsecutorClass = 51 -->
+		<!-- 54th class currently, so iProsecutorClass = 53 -->
 		<UnitClassInfo>
 			<Type>UNITCLASS_PROSECUTOR</Type>
 			<Description>TXT_KEY_UNIT_PROSECUTOR</Description>
@@ -603,24 +621,6 @@
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_GREAT_SPY</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
-			<Type>UNITCLASS_DRAGON_KNIGHT</Type>
-			<Description>TXT_KEY_UNIT_DRAGON_KNIGHT</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<iInstanceCostModifier>0</iInstanceCostModifier>
-			<DefaultUnit>UNIT_DRAGON_KNIGHT</DefaultUnit>
-		</UnitClassInfo>
-		<UnitClassInfo>
-			<Type>UNITCLASS_CALATRAVA_KNIGHT</Type>
-			<Description>TXT_KEY_UNIT_CALATRAVA_KNIGHT</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<iInstanceCostModifier>0</iInstanceCostModifier>
-			<DefaultUnit>UNIT_CALATRAVA_KNIGHT</DefaultUnit>
 		</UnitClassInfo>
 	</UnitClassInfos>
 </Civ4UnitClassInfos>

@@ -3,6 +3,7 @@
 
 from CvPythonExtensions import *
 import RFCEMaps as maps
+import Consts as con
 
 gc = CyGlobalContext()
 
@@ -17,4 +18,15 @@ def setup():
 			if plot:
 				plot.setProvinceID(maps.tProinceMap[y][x])
 				#print ('ProvinceID', x, y, plot.getProvinceID)
+
+	# City name maps
+	for iLoopPlayer in range(con.iNumPlayers - 1): # currently neither the papal nor the default maps are added
+		if len(maps.tCityMap) > iLoopPlayer:
+			for y in range(len(maps.tCityMap[iLoopPlayer])):
+				for x in range(len(maps.tCityMap[iLoopPlayer][y])):
+					plot = map.plot(x, len(maps.tCityMap[iLoopPlayer]) - 1 - y) # because Civ4 maps are reversed on Y-axis
+					if plot:
+						sName = maps.tCityMap[iLoopPlayer][y][x]
+						# Set the value in CvPlot instance
+						plot.setCityNameMap(iLoopPlayer, sName)
 
