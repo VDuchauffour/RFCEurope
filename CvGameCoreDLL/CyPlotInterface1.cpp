@@ -258,8 +258,12 @@ void CyPlotPythonInterface1(python::class_<CyPlot>& x)
 
 		// Absinthe: start
 		.def("getProvince", &CyPlot::getProvince, "int ()")
-		.def("getProvinceID", &CyPlot::getProvinceID, "int ()") 
-		.def("setProvinceID", &CyPlot::setProvinceID, "void (int iNewValue)") 
+		.def("getProvinceID", &CyPlot::getProvinceID, "int ()")
+		.def("setProvinceID", &CyPlot::setProvinceID, "void (int iNewValue)")
+		.def("getCityNameMap", &CyPlot::getCityNameMap, "str (int /*PlayerTypes*/ eIndex)")
+		.def("setCityNameMap", &CyPlot::setCityNameMap, "void (int /*PlayerTypes*/ eIndex, str)")
+		.def("getCityNameDefault", &CyPlot::getCityNameDefault, "str ()")
+		.def("setCityNameDefault", &CyPlot::setCityNameDefault, "void (str)")
 		// Absinthe: end
 	;
 }

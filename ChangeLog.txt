@@ -65,7 +65,7 @@ Changes for RFCE 1.5:
 
 		- Added Kontor UB for the Hanseatic League: +1 trade route, +25% income from foreign trade routes
 		- Added Knight of the Dragon UU: 12 strength heavy infantry, +10% against cavalry units, may cause small collateral damage
-		- Added Calatrava Knight UU: 9 strength heavy infantry, +10% city strength, +25% attack against heavy infantry units
+		- Added Calatrava Knight UU: 9 strength heavy infantry, +10% city strength, +25% attack against Swordsman and Maceman unit classes
 		- Significantly reduced cost for the original Knightly Orders' UUs, nerfed some bonuses
 
 	Plague overhaul:
@@ -107,6 +107,10 @@ Changes for RFCE 1.5:
 		- Added Ottomans as the primary target for stolen Crusades for AI Hungary, Austria and Poland (if there is a late Crusade) if they are Muslim and not a vassal
 		- Byzantium will only be the primary target for stolen Crusades for AI Venice and Genoa if they hold Constantinople and they are not a vassal
 		- Fixed mistake which would kill all units around the Crusade's target city (instead of only making room on one tile) if no valid plot was found
+		- Revised Crusade unit categories and chances, updated both with the new units
+		- Improved selection method for units leaving for Crusades
+		- Fixed bug where some of your last defender units in a city could potentially leave for a Crusade
+		- Fixed bug where Knights of St. John weren't eligible for Crusades
 
 	Terrain updates:
 		- New base terrain: Semidesert - 1 production, +1 commerce near rivers, city founding only possible near fresh water
@@ -273,7 +277,14 @@ Changes for RFCE 1.5:
 		- Thessaly, Morea, Crete and Cyprus provinces are also needed for the 2nd Venetian UHV (besides the city of Constantinople)
 		- Turns remaining message only show up in the last 30 turns of the game (instead of 100)
 		- No permanent (flashing) victory message on the middle of the screen after you are victorious (from DoC)
+		- No looped victory music during your play if you decide to continue after your victory
 		- Removed all leaderhead FPK-s from the mod, no use in PAK-ing leaderhead art files
+		- Plot information shows city name when a settler is selected (for plots where your civ have a civ-specific city name)
+		- Adjusted some colours on the plot tooltip, to make information more noticeable
+		- Fixed setup for python Dataloader, it will now correctly handle data on loaded games too
+		- Revised XML and python order for buildings and units
+		- Picardy will remain historic for France on the English spawn, Northumbria will remain contested for Norway
+		- Krak des Chevaliers will add bonus stability for Castle-type buildings if they weren't present before the conquest
 
 	Bugfixes:
 		- Fixed strange visibility area for the Ottomans

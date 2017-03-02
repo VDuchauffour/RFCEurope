@@ -285,19 +285,21 @@ class Crusades:
 			elif ( iStartDate + 1 == iGameTurn ):
 				self.computeVotingPower( iGameTurn )
 				self.setCrusaders()
-				for i in range( 6 ):
+				for i in range( 8 ):
 					self.setSelectedUnit( i, 0 )
 				for iPlayer in range( con.iNumPlayers ):
 					if ( self.getVotingPower( iPlayer ) > 0 ):
 						self.sendUnits( iPlayer )
 				print( " After the units are sent: " )
-				print( " Crusade has Power ", self.getCrusadePower() )
-				print( " Crusade Templars : ",self.getSelectedUnit( 0 ) )
-				print( " Crusade Teutonic : ",self.getSelectedUnit( 1 ) )
-				print( " Crusade Knights  : ",self.getSelectedUnit( 2 ) )
-				print( " Crusade H Lancers: ",self.getSelectedUnit( 3 ) )
-				print( " Crusade Siege    : ",self.getSelectedUnit( 4 ) )
-				print( " Crusade Other    : ",self.getSelectedUnit( 5 ) )
+				print( " Crusade has Power: ", self.getCrusadePower() )
+				print( " Crusade Templars: ",self.getSelectedUnit( 0 ) )
+				print( " Crusade Teutonic: ",self.getSelectedUnit( 1 ) )
+				print( " Crusade Hospitallers: ",self.getSelectedUnit( 2 ) )
+				print( " Crusade Knights: ",self.getSelectedUnit( 3 ) )
+				print( " Crusade H Lancers: ",self.getSelectedUnit( 4 ) )
+				print( " Crusade Lancers: ",self.getSelectedUnit( 5 ) )
+				print( " Crusade Siege: ",self.getSelectedUnit( 6 ) )
+				print( " Crusade Other: ",self.getSelectedUnit( 7 ) )
 				if ( not self.anyParticipate() ):
 					return
 				self.chooseCandidates( iGameTurn )
@@ -488,7 +490,7 @@ class Crusades:
 			self.setVotingPower( iHuman, 0 )
 
 		# The Pope has more votes (Rome is small anyway)
-		self.setVotingPower( con.iPope, self.getVotingPower( con.iPope ) * (3 / 2) )
+		self.setVotingPower( con.iPope, self.getVotingPower( con.iPope ) * (5 / 4) )
 
 		iPower = 0
 		for iPlayer in range( con.iNumPlayers ):
@@ -505,6 +507,7 @@ class Crusades:
 			if ( (not iPlayer == iHuman) and self.getVotingPower( iPlayer ) > 0 ):
 				gc.getPlayer( iPlayer ).setIsCrusader( True )
 
+
 	def sendUnits( self, iPlayer ):
 		#iHuman = utils.getHumanID()
 		pPlayer = gc.getPlayer( iPlayer )
@@ -514,58 +517,68 @@ class Crusades:
 				iMaxToSend = 0
 			else:
 				iMaxToSend = 1
-		elif ( con.tBirth[iPlayer] + 20 > gc.getGame().getGameTurn() ): # between turn 10-20
+		elif ( con.tBirth[iPlayer] + 25 > gc.getGame().getGameTurn() ): # between turn 10-25
 			iMaxToSend = min( 10, max( 1, (5*iNumUnits) / 50 ) )
 		else:
-			iMaxToSend = min( 10, max( 1, (5*iNumUnits) / 30 ) ) # after turn 20
+			iMaxToSend = min( 10, max( 1, (5*iNumUnits) / 35 ) ) # after turn 25
 		iCrusadersSend = 0
+		print ("iMaxToSend", iPlayer, iNumUnits, iMaxToSend)
 		if (iMaxToSend > 0):
 			for i in range( iNumUnits ):
 				pUnit = pPlayer.getUnit( i )
-				# Absinthe: mercenaries and leaders (units with attached Great Generals) won't go
-				if ( (not pUnit.isHasPromotion( xml.iPromotionMerc )) and (not pUnit.isHasPromotion( xml.iPromotionLeader )) ):
-					iCrusadeCategory = self.unitCrusadeCategory( pUnit.getUnitType() )
-					if ( iCrusadeCategory < 3 ):
+				# Absinthe: check only for combat units and ignore naval units
+				if (pUnit.baseCombatStr() > 0 and pUnit.getDomainType() != 0):
+					# Absinthe: mercenaries and leaders (units with attached Great Generals) won't go
+					if ( (not pUnit.isHasPromotion( xml.iPromotionMerc )) and (not pUnit.isHasPromotion( xml.iPromotionLeader )) ):
+						iCrusadeCategory = self.unitCrusadeCategory( pUnit.getUnitType() )
 						pPlot = gc.getMap().plot( pUnit.getX(), pUnit.getY() )
-						if ( pPlot.isCity() ):
-							#if ( pPlot.getNumUnits() > 2 ):
-							if ( self.getNumDefendersAtPlot( pPlot ) > 3 ):
-								iRandNum = gc.getGame().getSorenRandNum(100, 'roll to send special Unit to Crusade')
-								if ( iCrusadeCategory < 3 and iRandNum < 90 ):
-									iCrusadersSend += 1
-									self.sendUnit( pUnit )
-								elif ( iRandNum < 50 ):
-									iCrusadersSend += 1
-									self.sendUnit( pUnit )
+						iRandNum = gc.getGame().getSorenRandNum(100, 'roll to send Unit to Crusade')
+						# Absinthe: much bigger chance for special Crusader units and Knights
+						if ( iCrusadeCategory < 4):
+							if ( pPlot.isCity() ):
+								if ( self.getNumDefendersAtPlot( pPlot ) > 3 ):
+									if (iRandNum < 90 ):
+										iCrusadersSend += 1
+										self.sendUnit( pUnit )
+								elif ( self.getNumDefendersAtPlot( pPlot ) > 1 ):
+									if (iRandNum < 60 ):
+										iCrusadersSend += 1
+										self.sendUnit( pUnit )
+							elif (iRandNum < 90 ):
+								iCrusadersSend += 1
+								self.sendUnit( pUnit )
 						else:
-							iRandNum = gc.getGame().getSorenRandNum(100, 'roll to send special Unit to Crusade')
-							if ( iCrusadeCategory < 3 and iRandNum < 90 ):
-								iCrusadersSend += 1
-								self.sendUnit( pUnit )
-							elif ( iRandNum < 50 ):
-								iCrusadersSend += 1
-								self.sendUnit( pUnit )
+							if ( pPlot.isCity() ):
+								if ( self.getNumDefendersAtPlot( pPlot ) > 2 ):
+									if (iRandNum < self.unitProbability( pUnit.getUnitType() ) ):
+										iCrusadersSend += 1
+										self.sendUnit( pUnit )
+							elif ( iRandNum < self.unitProbability( pUnit.getUnitType() ) ):
+									iCrusadersSend += 1
+									self.sendUnit( pUnit )
 						if ( iCrusadersSend == iMaxToSend ):
 							return
-
-			for i in range( 20 ):
+			# Absinthe: extra chance for some random units, if we didn't fill the quota
+			for i in range( 15 ):
 				iRandUnit = gc.getGame().getSorenRandNum(iNumUnits, 'roll to pick Unit for Crusade')
 				pUnit = pPlayer.getUnit( iRandUnit )
 				pPlot = gc.getMap().plot( pUnit.getX(), pUnit.getY() )
-				# Absinthe: mercenaries and leaders (units with attached Great Generals) won't go
-				if ( (not pUnit.isHasPromotion( xml.iPromotionMerc )) and (not pUnit.isHasPromotion( xml.iPromotionLeader )) ):
-					if ( pPlot.isCity() ):
-						#if ( pPlot.getNumUnits() > 2 ):
-						if ( self.getNumDefendersAtPlot( pPlot ) > 3 ):
+				# Absinthe: check only for combat units and ignore naval units
+				if (pUnit.baseCombatStr() > 0 and pUnit.getDomainType() != 0):
+					# Absinthe: mercenaries and leaders (units with attached Great Generals) won't go
+					if ( (not pUnit.isHasPromotion( xml.iPromotionMerc )) and (not pUnit.isHasPromotion( xml.iPromotionLeader )) ):
+						if ( pPlot.isCity() ):
+							if ( self.getNumDefendersAtPlot( pPlot ) > 2 ):
+								if ( gc.getGame().getSorenRandNum(100, 'roll to send Unit to Crusade') < self.unitProbability( pUnit.getUnitType() ) ):
+									iCrusadersSend += 1
+									self.sendUnit( pUnit )
+						else:
 							if ( gc.getGame().getSorenRandNum(100, 'roll to send Unit to Crusade') < self.unitProbability( pUnit.getUnitType() ) ):
 								iCrusadersSend += 1
 								self.sendUnit( pUnit )
-					else:
-						if ( gc.getGame().getSorenRandNum(100, 'roll to send Unit to Crusade') < self.unitProbability( pUnit.getUnitType() ) ):
-							iCrusadersSend += 1
-							self.sendUnit( pUnit )
-					if ( iCrusadersSend == iMaxToSend ):
-						break
+						if ( iCrusadersSend == iMaxToSend ):
+							break
+
 
 	def getNumDefendersAtPlot( self, pPlot ):
 		iOwner = pPlot.getOwner()
@@ -574,9 +587,12 @@ class Crusades:
 		iNumUnits = pPlot.getNumUnits()
 		iDefenders = 0
 		for i in range( iNumUnits ):
-			if ( pPlot.getUnit(i).getOwner() == iOwner ):
-				iDefenders += 1
+			pUnit = pPlot.getUnit(i)
+			if ( pUnit.getOwner() == iOwner ):
+				if (pUnit.baseCombatStr() > 0 and pUnit.getDomainType() != 0):
+					iDefenders += 1
 		return iDefenders
+
 
 	def sendUnit( self, pUnit ):
 		iHuman = utils.getHumanID()
@@ -588,29 +604,36 @@ class Crusades:
 			CyInterface().addMessage(iHuman, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_CRUSADE_LEAVE", ()) + " " + pUnit.getName(), "AS2D_BUILD_CHRISTIAN", 0, "", ColorTypes(con.iOrange), -1, -1, True, True)
 		pUnit.kill( 0, -1 )
 
+
 	def unitProbability( self, iUnitType ):
 		if iUnitType in [xml.iArcher, xml.iCrossbowman, xml.iArbalest, xml.iGenoaBalestrieri, xml.iLongbowman, xml.iEnglishLongbowman, xml.iPortugalFootKnight]:
 			return 33
-		if iUnitType in [xml.iLancer, xml.iCordobanBerber, xml.iHeavyLancer, xml.iHungarianHuszar, xml.iArabiaGhazi, xml.iByzantineCataphract, xml.iKievDruzhina, xml.iKnight, xml.iMoscowBoyar, xml.iBurgundianPaladin]:
+		if iUnitType in [xml.iLancer, xml.iBulgarianKonnik, xml.iCordobanBerber, xml.iHeavyLancer, xml.iHungarianHuszar, xml.iArabiaGhazi, xml.iByzantineCataphract, xml.iKievDruzhina, xml.iKnight, xml.iMoscowBoyar, xml.iBurgundianPaladin]:
 			return 66
-		if iUnitType in [xml.iTemplar, xml.iTeutonic]:
+		if iUnitType in [xml.iTemplar, xml.iTeutonic, xml.iKnightofStJohns, xml.iCalatravaKnight, xml.iDragonKnight]:
 			return 90
 		if ( iUnitType < xml.iArcher or iUnitType > xml.iFieldArtillery ): # Workers, Executives, Missionaries, Sea Units and Mercenaries do not go
 			return -1
 		return 50
+
 
 	def unitCrusadeCategory( self, iUnitType ):
 		if ( iUnitType == xml.iTemplar ):
 			return 0
 		if ( iUnitType == xml.iTeutonic ):
 			return 1
-		if iUnitType in [xml.iKnight, xml.iMoscowBoyar, xml.iBurgundianPaladin]:
+		if iUnitType in [xml.iKnightofStJohns, xml.iCalatravaKnight, xml.iDragonKnight]:
 			return 2
-		if iUnitType in [xml.iHeavyLancer, xml.iHungarianHuszar, xml.iArabiaGhazi, xml.iByzantineCataphract, xml.iKievDruzhina]:
+		if iUnitType in [xml.iKnight, xml.iMoscowBoyar, xml.iBurgundianPaladin]:
 			return 3
-		if iUnitType in [xml.iCatapult, xml.iTrebuchet]:
+		if iUnitType in [xml.iHeavyLancer, xml.iHungarianHuszar, xml.iArabiaGhazi, xml.iByzantineCataphract, xml.iKievDruzhina]:
 			return 4
-		return 5
+		if iUnitType in [xml.iLancer, xml.iBulgarianKonnik, xml.iCordobanBerber]:
+			return 5
+		if iUnitType in [xml.iCatapult, xml.iTrebuchet]:
+			return 6
+		return 7
+
 
 	def voteForCandidatesAI( self ):
 		iHuman = utils.getHumanID()
@@ -856,13 +879,15 @@ class Crusades:
 		iLeader = self.getLeader()
 		teamLeader = gc.getTeam( gc.getPlayer( iLeader ).getTeam() )
 
-		print( " Crusade has Power ", self.getCrusadePower() )
-		print( " Crusade Templars : ",self.getSelectedUnit( 0 ) )
-		print( " Crusade Teutonic : ",self.getSelectedUnit( 1 ) )
-		print( " Crusade Knights  : ",self.getSelectedUnit( 2 ) )
-		print( " Crusade H Lancers: ",self.getSelectedUnit( 3 ) )
-		print( " Crusade Siege    : ",self.getSelectedUnit( 4 ) )
-		print( " Crusade Other    : ",self.getSelectedUnit( 5 ) )
+		print( " Crusade has Power: ", self.getCrusadePower() )
+		print( " Crusade Templars: ",self.getSelectedUnit( 0 ) )
+		print( " Crusade Teutonic: ",self.getSelectedUnit( 1 ) )
+		print( " Crusade Hospitallers: ",self.getSelectedUnit( 2 ) )
+		print( " Crusade Knights: ",self.getSelectedUnit( 3 ) )
+		print( " Crusade H Lancers: ",self.getSelectedUnit( 4 ) )
+		print( " Crusade Lancers: ",self.getSelectedUnit( 5 ) )
+		print( " Crusade Siege: ",self.getSelectedUnit( 6 ) )
+		print( " Crusade Other: ",self.getSelectedUnit( 7 ) )
 
 		iTX, iTY = self.getTargetPlot()
 		# if the target is Jerusalem
@@ -937,7 +962,9 @@ class Crusades:
 		if ( self.getSelectedUnit( 1 ) > 0 ):
 			self.makeUnit( xml.iTeutonic, iLeader, tPlot, self.getSelectedUnit( 1 ) * 100 / iRougeModifier )
 		if ( self.getSelectedUnit( 2 ) > 0 ):
-			iKnightNumber = self.getSelectedUnit( 2 ) * 100 / iRougeModifier
+			self.makeUnit( xml.iKnightofStJohns, iLeader, tPlot, self.getSelectedUnit( 2 ) * 100 / iRougeModifier )
+		if ( self.getSelectedUnit( 3 ) > 0 ):
+			iKnightNumber = self.getSelectedUnit( 3 ) * 100 / iRougeModifier
 			if ( iLeader == con.iBurgundy ):
 				for i in range( 0, iKnightNumber ):
 					if (gc.getGame().getSorenRandNum(10, 'chance for Paladin') > 4): # Absinthe: 50% chance for a Paladin for each unit
@@ -950,8 +977,8 @@ class Crusades:
 						self.makeUnit( xml.iBurgundianPaladin, iLeader, tPlot, 1 )
 					else:
 						self.makeUnit( xml.iKnight, iLeader, tPlot, 1 )
-		if ( self.getSelectedUnit( 3 ) > 0 ):
-			iLightCavNumber = self.getSelectedUnit( 3 ) * 100 / iRougeModifier
+		if ( self.getSelectedUnit( 4 ) > 0 ):
+			iLightCavNumber = self.getSelectedUnit( 4 ) * 100 / iRougeModifier
 			if ( iLeader == con.iHungary ):
 				for i in range( 0, iLightCavNumber ):
 					if (gc.getGame().getSorenRandNum(10, 'chance for Huszar') > 4): # Absinthe: 50% chance for a Huszár for each unit
@@ -960,15 +987,17 @@ class Crusades:
 						self.makeUnit( xml.iHeavyLancer, iLeader, tPlot, 1 )
 			else:
 				self.makeUnit( xml.iHeavyLancer, iLeader, tPlot, iLightCavNumber )
-		if ( self.getSelectedUnit( 4 ) > 0 ):
-			iSiegeNumber = self.getSelectedUnit( 4 ) * 100 / iRougeModifier
+		if ( self.getSelectedUnit( 5 ) > 0 ):
+			self.makeUnit( xml.iLancer, iLeader, tPlot, self.getSelectedUnit( 5 ) * 100 / iRougeModifier )
+		if ( self.getSelectedUnit( 6 ) > 0 ):
+			iSiegeNumber = self.getSelectedUnit( 6 ) * 100 / iRougeModifier
 			if (iSiegeNumber > 2):
 				self.makeUnit( xml.iCatapult, iLeader, tPlot, 2 )
 				self.makeUnit( xml.iTrebuchet, iLeader, tPlot, iSiegeNumber - 2 )
 			else:
 				self.makeUnit( xml.iCatapult, iLeader, tPlot, iSiegeNumber )
-		if ( self.getSelectedUnit( 5 ) > 0 ):
-			iFootNumber = self.getSelectedUnit( 5 ) * 100 / iRougeModifier
+		if ( self.getSelectedUnit( 7 ) > 0 ):
+			iFootNumber = self.getSelectedUnit( 7 ) * 100 / iRougeModifier
 			for i in range( 0, iFootNumber ):
 				if (gc.getGame().getSorenRandNum(2, 'coinflip') == 1): # Absinthe: 50% chance for both type
 					self.makeUnit( xml.iLongSwordsman, iLeader, tPlot, 1 )
@@ -1006,9 +1035,9 @@ class Crusades:
 				pPlot = gc.getMap().plot( pUnit.getX(), pUnit.getY() )
 				iOdds = 80
 				iCrusadeCategory = self.unitCrusadeCategory( pUnit.getUnitType() )
-				if ( iCrusadeCategory < 2 ):
+				if ( iCrusadeCategory < 3 ):
 					iOdds = -1 # Knight Orders don't return
-				elif ( iCrusadeCategory == 5 ):
+				elif ( iCrusadeCategory == 7 ):
 					iOdds = 50 # leave some defenders
 				if ( iOdds > 0 and pPlot.isCity() ):
 					if ( pPlot.getPlotCity().getOwner() == iPlayer ):

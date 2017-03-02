@@ -320,14 +320,24 @@ class CvRFCEventHandler:
 					city.setHasRealBuilding(xml.iMoroccoKasbah, True)
 				else:
 					city.setHasRealBuilding(xml.iWalls, True)
+				# Absinthe: if the Castle building were built with the Krak, then it should add stability
+				#			the safety checks are probably unnecessary, as Castle buildings are destroyed on conquest (theoretically)
 				if iNewOwner == con.iSpain:
-					city.setHasRealBuilding(xml.iSpanishCitadel, True)
+					if not (city.isHasBuilding(xml.iSpanishCitadel) or city.isHasBuilding(xml.iMoscowKremlin) or city.isHasBuilding(xml.iHungarianStronghold) or city.isHasBuilding(xml.iCastle)):
+						city.setHasRealBuilding(xml.iSpanishCitadel, True)
+						pNewOwner.changeStabilityBase( con.iCathegoryExpansion, 1 )
 				elif iNewOwner == con.iMoscow:
-					city.setHasRealBuilding(xml.iMoscowKremlin, True)
+					if not (city.isHasBuilding(xml.iSpanishCitadel) or city.isHasBuilding(xml.iMoscowKremlin) or city.isHasBuilding(xml.iHungarianStronghold) or city.isHasBuilding(xml.iCastle)):
+						city.setHasRealBuilding(xml.iMoscowKremlin, True)
+						pNewOwner.changeStabilityBase( con.iCathegoryExpansion, 1 )
 				elif iNewOwner == con.iHungary:
-					city.setHasRealBuilding(xml.iHungarianStronghold, True)
+					if not (city.isHasBuilding(xml.iSpanishCitadel) or city.isHasBuilding(xml.iMoscowKremlin) or city.isHasBuilding(xml.iHungarianStronghold) or city.isHasBuilding(xml.iCastle)):
+						city.setHasRealBuilding(xml.iHungarianStronghold, True)
+						pNewOwner.changeStabilityBase( con.iCathegoryExpansion, 1 )
 				else:
-					city.setHasRealBuilding(xml.iCastle, True)
+					if not (city.isHasBuilding(xml.iSpanishCitadel) or city.isHasBuilding(xml.iMoscowKremlin) or city.isHasBuilding(xml.iHungarianStronghold) or city.isHasBuilding(xml.iCastle)):
+						city.setHasRealBuilding(xml.iCastle, True)
+						pNewOwner.changeStabilityBase( con.iCathegoryExpansion, 1 )
 		# Sedna17, end
 
 		# 3Miro: National wonders and city acquire by trade
@@ -562,6 +572,12 @@ class CvRFCEventHandler:
 			#	print ("leaderName6", leaderName6)
 				print ("leaderName7", leaderName7)
 				print ("LeaderType", LeaderType)
+			#for x in range(76):
+			#	plot = CyMap().plot(x, 46) # France, Paris included
+			#	print ("cityname at y height", x, plot.getCityNameMap(1))
+			#for x in range(76):
+			#	plot = CyMap().plot(x, 36) # Hungary, accents
+			#	print ("cityname at y height", x, plot.getCityNameMap(11))
 
 		if ( iGameTurn == xml.i1053AD ):
 			iHuman = utils.getHumanID()
@@ -769,6 +785,7 @@ class CvRFCEventHandler:
 	# This method creates a new instance of the MercenaryUtils class to be used later
 	def onLoadGame(self, argsList):
 		sd.load() # edead: load & unpickle script data
+		DataLoader.setup() # Absinthe: also needed on loading saved games
 		#pass
 
 		#if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(con.iNationalism)) and gc.getGame().getGameTurn() >= con.tBirth[utils.getHumanID()]): #Rhye

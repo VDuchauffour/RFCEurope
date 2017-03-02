@@ -534,6 +534,10 @@ public:
 	int getProvince();
 	int getProvinceID() const;
 	void setProvinceID(int iNewValue);
+	CvString getCityNameMap(PlayerTypes eIndex) const;
+	void setCityNameMap(PlayerTypes eIndex, std::string szNewValue);
+	CvString getCityNameDefault() const;
+	void setCityNameDefault(const char* szNewValue);
 	// Absinthe: end
 
 	// 3MiroCAR: Sanguo Mod Performance, start, added by poyuzhe 08.13.09
@@ -652,6 +656,8 @@ protected:
 
 	// Absinthe: start
 	short m_iProvinceID;
+	std::string m_aszCityNameMap[30]; // NUM_MAJOR_PLAYERS + 1: the last one is the (potential) default city name map
+	char* m_szCityNameDefault;
 	// Absinthe: end
 
 /************************************************************************************************/

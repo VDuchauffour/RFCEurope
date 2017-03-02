@@ -593,8 +593,8 @@ class ProvinceManager:
 			pByzantium.setProvinceType( xml.iP_Latium, iProvinceNone )
 			utils.refreshStabilityOverlay() # refresh the stability overlay
 		elif ( iPlayer == iBurgundy ):
-			pFrankia.setProvinceType( xml.iP_Provence, iProvincePotential ) # these areas flip to Burgundy, so resetting them to Potential will work perfectly
-			pFrankia.setProvinceType( xml.iP_Burgundy, iProvincePotential ) # these areas flip to Burgundy, so resetting them to Potential will work perfectly
+			pFrankia.setProvinceType( xml.iP_Provence, iProvincePotential ) # these areas flip to Burgundy, so resetting them to Potential won't cause any issues
+			pFrankia.setProvinceType( xml.iP_Burgundy, iProvincePotential ) # these areas flip to Burgundy, so resetting them to Potential won't cause any issues
 			utils.refreshStabilityOverlay() # refresh the stability overlay
 		elif ( iPlayer == iGermany ):
 			pFrankia.setProvinceType( xml.iP_Lorraine, iProvinceOuter )
@@ -617,11 +617,9 @@ class ProvinceManager:
 			pCordoba.setProvinceType( xml.iP_Tetouan, iProvinceOuter )
 			utils.refreshStabilityOverlay() # refresh the stability overlay
 		elif ( iPlayer == iEngland ):
-			pFrankia.setProvinceType( xml.iP_Normandy, iProvincePotential )
-			pFrankia.setProvinceType( xml.iP_Picardy, iProvincePotential )
+			pFrankia.setProvinceType( xml.iP_Normandy, iProvincePotential ) # these areas flip to England, so resetting them to Potential won't cause any issues
 			pScotland.setProvinceType( xml.iP_Northumbria, iProvinceOuter )
 			pScotland.setProvinceType( xml.iP_Mercia, iProvinceNone )
-			pNorway.setProvinceType( xml.iP_Northumbria, iProvinceNone )
 			pDenmark.setProvinceType( xml.iP_Northumbria, iProvinceNone )
 			pDenmark.setProvinceType( xml.iP_Mercia, iProvinceNone )
 			pDenmark.setProvinceType( xml.iP_EastAnglia, iProvinceNone )

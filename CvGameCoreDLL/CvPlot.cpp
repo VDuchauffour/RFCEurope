@@ -58,6 +58,8 @@ CvPlot::CvPlot()
 
 	m_aiCulture = NULL;
 	m_aiFoundValue = NULL;
+	//m_aszCityNameMap = NULL; // Absinthe
+	m_szCityNameDefault = NULL; // Absinthe
 	m_aiPlayerCityRadiusCount = NULL;
 	m_aiPlotGroup = NULL;
 	m_aiVisibilityCount = NULL;
@@ -125,6 +127,8 @@ void CvPlot::init(int iX, int iY)
 void CvPlot::uninit()
 {
 	SAFE_DELETE_ARRAY(m_szScriptData);
+	//SAFE_DELETE_ARRAY(m_aszCityNameMap); // Absinthe
+	SAFE_DELETE_ARRAY(m_szCityNameDefault); // Absinthe
 
 	gDLL->getFeatureIFace()->destroy(m_pFeatureSymbol);
 	if(m_pPlotBuilder)
@@ -9290,7 +9294,7 @@ void CvPlot::doFeature()
 									{
 										// Tell the owner of this city.
 										szBuffer = gDLL->getText("TXT_KEY_MISC_FEATURE_GROWN_NEAR_CITY", GC.getFeatureInfo((FeatureTypes) iI).getTextKeyWide(), pCity->getNameKey());
-										gDLL->getInterfaceIFace()->addHumanMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_FEATUREGROWTH", MESSAGE_TYPE_INFO, GC.getFeatureInfo((FeatureTypes) iI).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getX_INLINE(), getY_INLINE(), true, true);
+										gDLL->getInterfaceIFace()->addMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_FEATUREGROWTH", MESSAGE_TYPE_INFO, GC.getFeatureInfo((FeatureTypes) iI).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getX_INLINE(), getY_INLINE(), true, true);
 									}
 
 									break;
@@ -9666,6 +9670,19 @@ void CvPlot::read(FDataStreamBase* pStream)
 		pStream->Read(cCount, m_aiFoundValue);
 	}
 
+	// Absinthe: start
+	m_szCityNameDefault = pStream->ReadString();
+/*
+	SAFE_DELETE_ARRAY(m_aszCityNameMap);
+	pStream->Read(&cCount);
+	if (cCount > 0)
+	{
+		m_aszCityNameMap = new char[cCount];
+		pStream->Read(cCount, m_aszCityNameMap);
+	}
+*/
+	// Absinthe: end
+
 	SAFE_DELETE_ARRAY(m_aiPlayerCityRadiusCount);
 	pStream->Read(&cCount);
 	if (cCount > 0)
@@ -9888,6 +9905,21 @@ void CvPlot::write(FDataStreamBase* pStream)
 		pStream->Write((char)MAX_PLAYERS);
 		pStream->Write(MAX_PLAYERS, m_aiFoundValue);
 	}
+
+	// Absinthe: start
+	pStream->WriteString(m_szCityNameDefault);
+/*
+	if (NULL == m_aszCityNameMap)
+	{
+		pStream->Write((char)0);
+	}
+	else
+	{
+		pStream->Write((char)MAX_PLAYERS);
+		pStream->Write(MAX_PLAYERS, m_aszCityNameMap);
+	}
+*/
+	// Absinthe: end
 
 	if (NULL == m_aiPlayerCityRadiusCount)
 	{
@@ -11122,7 +11154,7 @@ int CvPlot::getProvince(){
 	return provinceMap[ getY_INLINE() * EARTH_X + getX_INLINE() ];
 }
 
-// returns province ID as int (based on dataloader)
+// province ID as int (based on dataloader)
 int CvPlot::getProvinceID() const
 {
 	return m_iProvinceID;
@@ -11131,5 +11163,35 @@ int CvPlot::getProvinceID() const
 void CvPlot::setProvinceID(int iNewValue)
 {
 	m_iProvinceID = iNewValue;
+}
+
+// city name maps with dataloader
+CvString CvPlot::getCityNameMap(PlayerTypes eIndex) const
+{
+	//if (NULL == m_aszCityNameMap)
+	//{
+	//	return -1;
+	//}
+	return m_aszCityNameMap[eIndex];
+}
+
+void CvPlot::setCityNameMap(PlayerTypes eIndex, std::string szNewValue)
+{
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
+	FAssertMsg(eIndex < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FAssert(szNewValue >= -1);
+
+	m_aszCityNameMap[eIndex] = szNewValue;
+}
+
+CvString CvPlot::getCityNameDefault() const
+{
+	return m_szCityNameDefault;
+}
+
+void CvPlot::setCityNameDefault(const char* szNewValue)
+{
+	SAFE_DELETE_ARRAY(m_szCityNameDefault);
+	m_szCityNameDefault = _strdup(szNewValue);
 }
 // Absinthe: end

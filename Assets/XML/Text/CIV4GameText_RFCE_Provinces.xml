@@ -7,7 +7,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_TILE_HELP</Tag>
-		<English>Province:[SPACE]</English>
+		<English>[COLOR_PLAYER_DARK_GRAY_TEXT]Province:[SPACE][COLOR_REVERT]</English>
 		<French>Province: </French>
 		<German>Provinz: </German>
 		<Italian>Provincia: </Italian>
@@ -15,8 +15,17 @@
 		<Portuguese>Provincia: </Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TILE_HELP</Tag>
+		<English>[COLOR_PLAYER_DARK_GRAY_TEXT]City name:[SPACE][COLOR_REVERT]</English>
+		<French>City name: </French>
+		<German>City name: </German>
+		<Italian>City name: </Italian>
+		<Spanish>City name: </Spanish>
+		<Portuguese>City name: </Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_STABILITY_HELP</Tag>
-		<English>Stability:[SPACE]</English>
+		<English>[COLOR_PLAYER_DARK_GRAY_TEXT]Stability:[SPACE][COLOR_REVERT]</English>
 		<French>Stabilit&#233;: </French>
 		<German>Stabilit&#228;t: </German>
 		<Italian>Stabilit&#224;: </Italian>
@@ -25,7 +34,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_TYPE_0</Tag>
-		<English>[COLOR_HIGHLIGHT_FOREIGN]Foreign / Unstable area[COLOR_REVERT]</English>
+		<English>[COLOR_HIGHLIGHT_FOREIGN]Foreign area[COLOR_REVERT]</English>
 		<French>Instable</French>
 		<German>Instabil</German>
 		<Italian>Instabile</Italian>
@@ -34,7 +43,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_TYPE_1</Tag>
-		<English>[COLOR_HIGHLIGHT_BORDER]Border / Outer / Contested area[COLOR_REVERT]</English>
+		<English>[COLOR_HIGHLIGHT_BORDER]Contested area[COLOR_REVERT]</English>
 		<French>OK</French>
 		<German>OK</German>
 		<Italian>OK</Italian>
@@ -52,7 +61,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_TYPE_3</Tag>
-		<English>[COLOR_HIGHLIGHT_NATURAL]Natural / Historically stable area[COLOR_REVERT]</English>
+		<English>[COLOR_HIGHLIGHT_NATURAL]Historically stable area[COLOR_REVERT]</English>
 		<French>Solide</French>
 		<German>Solide</German>
 		<Italian>Solido</Italian>

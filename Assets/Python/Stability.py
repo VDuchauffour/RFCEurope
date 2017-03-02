@@ -98,7 +98,7 @@ class Stability:
 
 			print ("Player "+str(iPlayer)+" initial stability: "+str(pPlayer.getStability()))
 
-			# Absinthe: update all potential provinces at the start for all living players
+			# Absinthe: update all potential provinces at the start for all living players (needed for the scenario)
 			if (pPlayer.isAlive()):
 				pm.updatePotential(iPlayer)
 
