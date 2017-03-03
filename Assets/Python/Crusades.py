@@ -783,7 +783,7 @@ class Crusades:
 			if ( sCityName == 'Unknown' ):
 				sCityName = cnm.lookupName(pTargetCity,iLeader)
 			sText = CyTranslator().getText("TXT_KEY_CRUSADE_START", (gc.getPlayer(iLeader).getCivilizationAdjectiveKey(), gc.getPlayer(iLeader).getName(), gc.getPlayer(iTargetPlayer).getCivilizationAdjectiveKey(), sCityName))
-			CyInterface().addMessage(iHuman, True, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
+			CyInterface().addMessage(iHuman, False, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
 
 		gc.getTeam( gc.getPlayer( iLeader ).getTeam() ).declareWar( gc.getPlayer( pTargetCity.getOwner() ).getTeam(), True, -1 )
 

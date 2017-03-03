@@ -466,9 +466,9 @@ tCompaniesLimit = (3, 4, 3, 6, 4, 4, 3, 5, 5) # note that we have a modified lim
 
 # Companies will only settle in their preferred regions
 lCompanyRegions = [
-[iP_Antiochia, iP_Lebanon, iP_Jerusalem, iP_Cyprus, iP_Egypt, iP_Rhodes, iP_Crete, iP_Malta, iP_Sicily, iP_Latium, iP_Calabria, iP_Apulia],
+[iP_Antiochia, iP_Lebanon, iP_Jerusalem, iP_Cyprus, iP_Egypt, iP_Rhodes, iP_Crete, iP_Malta, iP_Sicily, iP_Corsica, iP_Sardinia, iP_Latium, iP_Calabria, iP_Apulia],
 [iP_Antiochia, iP_Lebanon, iP_Jerusalem, iP_Cyprus, iP_Egypt, iP_IleDeFrance, iP_Orleans, iP_Burgundy, iP_Champagne, iP_Picardy, iP_Provence, iP_Aquitania, iP_Normandy, iP_London, iP_Wales, iP_Wessex, iP_EastAnglia, iP_Mercia, iP_Northumbria],
-[iP_Antiochia, iP_Lebanon, iP_Jerusalem, iP_Cyprus, iP_Egypt, iP_Transylvania, iP_Prussia, iP_Livonia, iP_Estonia, iP_Pomerania, iP_Brandenburg],
+[iP_Antiochia, iP_Lebanon, iP_Jerusalem, iP_Cyprus, iP_Egypt, iP_Transylvania, iP_Prussia, iP_Livonia, iP_Estonia, iP_Pomerania, iP_Brandenburg, iP_Holstein, iP_Saxony, iP_Netherlands, iP_Flanders, iP_Lorraine, iP_Franconia, iP_Swabia, iP_Bavaria, iP_Bohemia, iP_Moravia, iP_Silesia],
 [iP_Saxony, iP_Brandenburg, iP_Holstein, iP_London, iP_EastAnglia, iP_Norway, iP_Vestfold, iP_Denmark, iP_Skaneland, iP_Gotaland, iP_Gotland, iP_Svealand, iP_Prussia, iP_Livonia, iP_Estonia, iP_Pomerania, iP_Netherlands, iP_Flanders, iP_Novgorod, iP_Karelia, iP_Osterland],
 [iP_Tuscany, iP_Lombardy, iP_Verona, iP_Latium, iP_Calabria, iP_Apulia, iP_Dalmatia, iP_Arberia, iP_Epirus, iP_Morea],
 [iP_Bavaria, iP_Swabia, iP_Franconia, iP_Austria, iP_Carinthia, iP_Bohemia, iP_Moravia, iP_Silesia, iP_UpperHungary, iP_Hungary, iP_Pannonia, iP_Slavonia],

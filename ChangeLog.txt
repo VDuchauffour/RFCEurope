@@ -66,6 +66,11 @@ Changes for RFCE 1.5:
 		- Added Calatrava Knight UU: 9 strength heavy infantry, +10% city strength, +25% attack against Swordsman and Maceman unit classes
 		- Significantly reduced cost for the original Knightly Orders' UUs, nerfed some bonuses
 		- Bonus health from Hospitallers' Infirmary UB increased to 2, reduced cost
+		
+		- Companies have increased penalties if they are already present in a couple cities for the given civ (try to spread them out)
+		- Rebalanced contribution from different building types for company building spread bonus calculations
+		- Decreased significance of buildings/infrastructure in a city in the overall spread value calculations
+		- More balanced bonus for company spread from number of desired resources
 
 	Plague overhaul:
 		- Improvements near a plagued city have a chance whether to reduce their level, or to reset the progress towards the next level: Towns 100%, Villages 75%, Hamlets 50%, Cottages 25%
@@ -154,6 +159,7 @@ Changes for RFCE 1.5:
 		- Uppsala is preplaced in the 1200AD scenario (will be reduced to town a couple turns later), Shrine of Uppsala is preplaced there so it can't be built later
 		- Fixed oversight in the 1200AD scenario where Norwegian cities started with both Trading Post and Harbor - now they have Lighthouse instead
 		- Fixed oversight in the 1200AD scenario where Portuguese cities started with both Feitoria and Lighthouse - now they have Harbor instead
+		- Company spread is updated to an initial state in the first turn of the 1200 AD scenario
 		- NOTE: Most of the map updates for the 1.5 version are not yet implemented in the 1200AD scenario
 
 	Mercenary updates:
@@ -242,8 +248,9 @@ Changes for RFCE 1.5:
 		- Minor updates in the CNMs in Ireland, Norway, Finland and Karelia
 		- Updated CNMs for all civs around the lakes in Anatolia and the Levant
 		- Minor text updates in the wording of some UHVs and UPs
-		- Minor DCN update for France: Empire status needs more provinces
 		- New interface text message when a new Janissary unit is ready for your service
+		- Dynamic Civ Names for Norway, Denmark, Sweden, lots of interconnected names between them
+		- Updated DCN Empire trigger conditions and early DCNames for France / the Franks
 
 	General changes:
 		- Updated the Novgorod Fur UHV and the Moscow Atlantic Access UHV to count resources only inside cultural borders
