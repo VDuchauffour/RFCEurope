@@ -4376,12 +4376,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE06</Tag>
-		<English>Placeholder Error</English>
-		<French>Placeholder Error</French>
-		<German>Placeholder Error</German>
-		<Italian>Placeholder Error</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Placeholder Error</Portuguese>
+		<English>Kalmar Union</English>
+		<French>Kalmar Union</French>
+		<German>Kalmar Union</German>
+		<Italian>Kalmar Union</Italian>
+		<Spanish>Kalmar Union</Spanish>
+		<Portuguese>Kalmar Union</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE07</Tag>
@@ -4439,7 +4439,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE13</Tag>
-		<English>Spanish Kingdom of Sweden</English>
+		<English>Viceroyalty of Sweden</English>
 		<French>Royaume Espagnol de Su&#232;de</French>
 		<German>Spanisches Königreich Schweden</German>
 		<Italian>Regno Spagnolo di Svezia</Italian>
@@ -4448,7 +4448,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE14</Tag>
-		<English>Kalmar Sweden</English>
+		<English>Jarldom of Sweden</English>
 		<French>Su&#232;de Kalmar</French>
 		<German>Kalmar Schweden</German>
 		<Italian>Kalmar Svedese</Italian>
@@ -4457,7 +4457,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE15</Tag>
-		<English>Venetian Sweden</English>
+		<English>Colony of Sweden</English>
 		<French>Su&#232;de V&#233;nitienne</French>
 		<German>Venezianisch-Schweden</German>
 		<Italian>Svezia Veneziana</Italian>
@@ -4466,7 +4466,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE16</Tag>
-		<English>Russian Sweden</English>
+		<English>Principality of Sweden</English>
 		<French>Su&#232;de Russe</French>
 		<German>Russisch-Schweden</German>
 		<Italian>Svezia Russa</Italian>
@@ -4475,7 +4475,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE17</Tag>
-		<English>German Sweden</English>
+		<English>March of Sweden</English>
 		<French>Su&#232;de Allemande</French>
 		<German>Deutsch-Schweden</German>
 		<Italian>Svezia Tedesca</Italian>
@@ -4484,7 +4484,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE18</Tag>
-		<English>Counties of Sweden</English>
+		<English>Earldom of Sweden</English>
 		<French>Comt&#233;s de Su&#232;de</French>
 		<German>Grafschaften Schwedens</German>
 		<Italian>Contee di Svezia</Italian>
@@ -4502,7 +4502,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SWE20</Tag>
-		<English>Principality of Isves</English>
+		<English>Eyalet of Isves</English>
 		<French>Principaut&#233; de Isves</French>
 		<German>Fürstentum Isves</German>
 		<Italian>Principato di Isves</Italian>
@@ -4517,6 +4517,69 @@
 		<Italian>Provincia di Svezia</Italian>
 		<Spanish></Spanish>
 		<Portuguese>Província da Suécia</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE22</Tag>
+		<English>Guberniya of Sweden</English>
+		<French>Guberniya of Sweden</French>
+		<German>Guberniya of Sweden</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE23</Tag>
+		<English>Mormaerdom of Sweden</English>
+		<French>Mormaerdom of Sweden</French>
+		<German>Mormaerdom of Sweden</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE24</Tag>
+		<English>Banate of Sweden</English>
+		<French>Banate of Sweden</French>
+		<German>Banate of Sweden</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE25</Tag>
+		<English>Kingdoms of Sweden and Norway</English>
+		<French>Kingdoms of Sweden and Norway</French>
+		<German>Kingdoms of Sweden and Norway</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE26</Tag>
+		<English>Sweden-Norway</English>
+		<French>Sweden-Norway</French>
+		<German>Sweden-Norway</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE27</Tag>
+		<English>Kingdoms of Sweden and Denmark</English>
+		<French>Kingdoms of Sweden and Denmark</French>
+		<German>Kingdoms of Sweden and Denmark</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SWE28</Tag>
+		<English>Sweden-Denmark</English>
+		<French>Sweden-Denmark</French>
+		<German>Sweden-Denmark</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<!-- Sweden -->
 	<!-- Turkey -->
@@ -4985,9 +5048,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR07</Tag>
-		<English>Placeholder Error</English>
-		<French>Placeholder Error</French>
-		<German>Placeholder Error</German>
+		<English>Kingdoms of Norway and Sweden</English>
+		<French>Kingdoms of Norway and Sweden</French>
+		<German>Kingdoms of Norway and Sweden</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
@@ -5039,54 +5102,54 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR13</Tag>
-		<English>Spanish Kingdom of Norway</English>
-		<French>Spanish Kingdom of Norway</French>
-		<German>Spanish Kingdom of Norway</German>
+		<English>Viceroyalty of Norway</English>
+		<French>Viceroyalty of Norway</French>
+		<German>Viceroyalty of Norway</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR14</Tag>
-		<English>Norwegian Scandinavia</English>
-		<French>Norwegian Scandinavia</French>
-		<German>Norwegian Scandinavia</German>
+		<English>Jarldom of Norway</English>
+		<French>Jarldom of Norway</French>
+		<German>Jarldom of Norway</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR15</Tag>
-		<English>Venetian Norway</English>
-		<French>Venetian Norway</French>
-		<German>Venetian Norway</German>
+		<English>Colony of Norway</English>
+		<French>Colony of Norway</French>
+		<German>Colony of Norway</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR16</Tag>
-		<English>Russian Norway</English>
-		<French>Russian Norway</French>
-		<German>Russian Norway</German>
+		<English>Principality of Norway</English>
+		<French>Principality of Norway</French>
+		<German>Principality of Norway</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR17</Tag>
-		<English>German Norway</English>
-		<French>German Norway</French>
-		<German>German Norway</German>
+		<English>March of Norway</English>
+		<French>March of Norway</French>
+		<German>March of Norway</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR18</Tag>
-		<English>Counties of Norway</English>
-		<French>Counties of Norway</French>
-		<German>Counties of Norway</German>
+		<English>Earldom of Norway</English>
+		<French>Earldom of Norway</French>
+		<German>Earldom of Norway</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
@@ -5102,9 +5165,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_NOR20</Tag>
-		<English>Principality of Norvec</English>
-		<French>Principality of Norvec</French>
-		<German>Principality of Norvec</German>
+		<English>Eyalet of Norvec</English>
+		<French>Eyalet of Norvec</French>
+		<German>Eyalet of Norvec</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
@@ -5114,6 +5177,42 @@
 		<English>Province of Norway</English>
 		<French>Province of Norway</French>
 		<German>Province of Norway</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR22</Tag>
+		<English>Guberniya of Norway</English>
+		<French>Guberniya of Norway</French>
+		<German>Guberniya of Norway</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR23</Tag>
+		<English>Mormaerdom of Norway</English>
+		<French>Mormaerdom of Norway</French>
+		<German>Mormaerdom of Norway</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR24</Tag>
+		<English>Banate of Norway</English>
+		<French>Banate of Norway</French>
+		<German>Banate of Norway</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_NOR25</Tag>
+		<English>Kalmar Union</English>
+		<French>Kalmar Union</French>
+		<German>Kalmar Union</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
@@ -5257,54 +5356,54 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DEN13</Tag>
-		<English>Spanish Kingdom of Denmark</English>
-		<French>Spanish Kingdom of Denmark</French>
-		<German>Spanish Kingdom of Denmark</German>
+		<English>Viceroyalty of Denmark</English>
+		<French>Viceroyalty of Denmark</French>
+		<German>Viceroyalty of Denmark</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DEN14</Tag>
-		<English>Danish Scandinavia</English>
-		<French>Danish Scandinavia</French>
-		<German>Danish Scandinavia</German>
+		<English>Jarldom of Denmark</English>
+		<French>Jarldom of Denmark</French>
+		<German>Jarldom of Denmark</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DEN15</Tag>
-		<English>Venetian Denmark</English>
-		<French>Venetian Denmark</French>
-		<German>Venetian Denmark</German>
+		<English>Colony of Denmark</English>
+		<French>Colony of Denmark</French>
+		<German>Colony of Denmark</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DEN16</Tag>
-		<English>Russian Denmark</English>
-		<French>Russian Denmark</French>
-		<German>Russian Denmark</German>
+		<English>Principality of Denmark</English>
+		<French>Principality of Denmark</French>
+		<German>Principality of Denmark</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DEN17</Tag>
-		<English>German Denmark</English>
-		<French>German Denmark</French>
-		<German>German Denmark</German>
+		<English>March of Denmark</English>
+		<French>March of Denmark</French>
+		<German>March of Denmark</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DEN18</Tag>
-		<English>Counties of Denmark</English>
-		<French>Counties of Denmark</French>
-		<German>Counties of Denmark</German>
+		<English>Earldom of Denmark</English>
+		<French>Earldom of Denmark</French>
+		<German>Earldom of Denmark</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
@@ -5320,9 +5419,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DEN20</Tag>
-		<English>Principality of Danimarka</English>
-		<French>Principality of Danimarka</French>
-		<German>Principality of Danimarka</German>
+		<English>Eyalet of Danimarka</English>
+		<French>Eyalet of Danimarka</French>
+		<German>Eyalet of Danimarka</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
@@ -5332,6 +5431,51 @@
 		<English>Province of Denmark</English>
 		<French>Province of Denmark</French>
 		<German>Province of Denmark</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_DEN22</Tag>
+		<English>Guberniya of Denmark</English>
+		<French>Guberniya of Denmark</French>
+		<German>Guberniya of Denmark</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_DEN23</Tag>
+		<English>Mormaerdom of Denmark</English>
+		<French>Mormaerdom of Denmark</French>
+		<German>Mormaerdom of Denmark</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_DEN24</Tag>
+		<English>Banate of Denmark</English>
+		<French>Banate of Denmark</French>
+		<German>Banate of Denmark</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_DEN25</Tag>
+		<English>Kingdoms of Denmark and Sweden</English>
+		<French>Kingdoms of Denmark and Sweden</French>
+		<German>Kingdoms of Denmark and Sweden</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_DEN26</Tag>
+		<English>Denmark-Sweden</English>
+		<French>Denmark-Sweden</French>
+		<German>Denmark-Sweden</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
