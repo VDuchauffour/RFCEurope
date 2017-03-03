@@ -58,8 +58,6 @@ Changes for RFCE 1.5:
 		- City limit is also modified for Hospitallers and Teutons after the Crusades are over
 		- The Genoese UHV is changed to simply build 8 banks (for now)
 
-		- Updated the Company Advisor / Company Screen, now all 9 companies should fit without any issues
-		- Removed date founded, headquarters, founded by GP information from the company screen (all of which is irrelevant or non-existent with the new system)
 		- Mercantilism enables company spread (trading/banking companies do have a lower chance though)
 		- Updated Merchant Republic civic, new trade route bonus instead of the corporation maintenance reduction
 
@@ -67,6 +65,7 @@ Changes for RFCE 1.5:
 		- Added Knight of the Dragon UU: 12 strength heavy infantry, +10% against cavalry units, may cause small collateral damage
 		- Added Calatrava Knight UU: 9 strength heavy infantry, +10% city strength, +25% attack against Swordsman and Maceman unit classes
 		- Significantly reduced cost for the original Knightly Orders' UUs, nerfed some bonuses
+		- Bonus health from Hospitallers' Infirmary UB increased to 2, reduced cost
 
 	Plague overhaul:
 		- Improvements near a plagued city have a chance whether to reduce their level, or to reset the progress towards the next level: Towns 100%, Villages 75%, Hamlets 50%, Cottages 25%
@@ -87,10 +86,14 @@ Changes for RFCE 1.5:
 		- Revised interface messages for plague spread (both to civs and cities), added new message when the plague kills units or a huge percentage of the general population
 		- Fixed bug where the plague spread to the same city multiple times in some rare cases
 		- Indies and barbs are no longer more vulnerable for plague spread than normal civs
-		- Naval units will no longer be killed by plagues (they can get some damage, but significantly less) unless they were heavily damaged already
-		- Damage from the plague will be somewhat more random for all units, especially when there are more units on the same tile
+		- Naval units will no longer be killed by plagues (damage is decreased for them) unless they were heavily damaged already
+		- Civilian units also get less damage from plagues, but it's still deadly for them (especially for workers)
+		- The amount of damage from the plague will be somewhat more random for all units, especially when there are more units on the same tile
 		- The plague spread mechanics is based on trade routes and city distance, but much more random than before
 		- Plague can spread to more of your cities in a given turn (max is based on the size of the empire), bigger chance for it if there are many cities close to already infected ones
+		- Additional checks for the plague to leave some of your cities even before it stops completely
+		- Plague leaving your cities is much more common in general (after it stopped the spread in your civ)
+		- It's way more likely that the plague leaves smaller, less unhealthy cities than bigger ones
 
 	Crusade updates:
 		- Crusading units now have a chance to arrive to their destination, around 70% of the units will arrive for the first Crusade
@@ -229,24 +232,29 @@ Changes for RFCE 1.5:
 		- New icon for all 4 Missionaries, new unit art for Orthodox and Islamic Missionary
 		- New icon for Végvár (Hungarian UB), new icon for Manorialism civic and tech
 		- Fixed minor glitch with the leaderhead art of Bela III (Hungary)
-		- Plague icon on the city banner, not only the plague cloud above them (idea from DoC)
-		- Improved religion and company icon positioning on the city screen
+
+	Text updates:
+		- Updated text for some interface messages connected to the Reformation
+		- Aragonese UB: Consulate of the Sea (instead of Seaport), Prussian UB: Volksschule (instead of Public School), Bulgarian UB: Stan (instead of Bulgarian Stan)
+		- Spanish translations, also various fixes and updates in the Civilopedia by Arcangelus
+		- New Civilopedia text for some buildings and units by Arcangelus
+		- Improvements (both text and formatting) in the Concepts page in the Civilopedia
+		- Minor updates in the CNMs in Ireland, Norway, Finland and Karelia
+		- Updated CNMs for all civs around the lakes in Anatolia and the Levant
+		- Minor text updates in the wording of some UHVs and UPs
+		- Minor DCN update for France: Empire status needs more provinces
+		- New interface text message when a new Janissary unit is ready for your service
 
 	General changes:
-		- Added new function which only counts resources inside cultural borders
-		- Both the Novgorod Fur UHV and the Moscow Atlantic Access UHV use this new function
-		- Revised the setup for DCNames when the Civ is a master of 1 or 2 other civilizations
-		- Updated text for some interface messages connected to the Reformation
+		- Updated the Novgorod Fur UHV and the Moscow Atlantic Access UHV to count resources only inside cultural borders
+		- Revised the setup for DCNames when the civ is the master of 1 or 2 other civilizations, should work for all civs without any issues (e.g. Iberian Union)
 		- Increased AI willingness to choose indy targets inside it's war map, decreased chance for choosing indies outside the war map
 		- Core cities cannot be chosen for city secession because of health issues
 		- All cities have less chance for secession because of religion unhappiness, while all cities have bigger chance for secession if they are unhappy (happy faces < unhappy faces)
 		- Culture in cities is now also taken into account when choosing the city for secession (not the amount, but your cultural percentage, so the nationality of the population there)
 		- So cities with low own culture has more chance to be chosen if there is a secession - my intention with this is to add more chance for your recently acquired cities
+		- Reduced unit chance to stay with the original civ on city secession
 		- Bonuses on small islands without a city are also connected to the trade network if both their improvement and a road are built on the plot
-		- Aragonese UB: Consulate of the Sea (instead of Seaport), Prussian UB: Volksschule (instead of Public School), Bulgarian UB: Stan (instead of Bulgarian Stan)
-		- Spanish translations, also various fixes and updates in the Civilopedia by Arcangelus
-		- New Civilopedia text for some buildings and units by Arcangelus
-		- Improvements (both text and formatting) in the Concepts page in the Civilopedia
 		- Enabled coast tiles in a diagonal position from actual seas to become normal coast tiles instead of lakes, representing fjords
 		- Naval units cannot enter lake tiles (neither freshwater nor salt) or forts, but they can enter fjords
 		- Settling on a hamlet improvement results in a free granary in your cities
@@ -262,29 +270,33 @@ Changes for RFCE 1.5:
 		- Tuned down Cordoban production modifiers a bit, increased Castilian and Aragonese
 		- Increased production modifiers for AI Kiev (stays more or less the same for the human player)
 		- Kuban province changed to contested for the Ottomans, Lithuania and Suvalkija contested for Prussia
-		- No interface messages are displayed during autoplay/autorun (Crusades, RiseAndFall, Religion, Wonders, Leaders, etc.)
-		- Bonus health from Infirmary increased to 2
-		- Removed unnecessary Derivative Civ settings for all civilizations
-		- Reduced unit chance to stay with the original civ on city secession
-		- Minor updates in the CNMs in Ireland, Norway, Finland and Karelia
-		- Updated CNMs for all civs around the lakes in Anatolia and the Levant
 		- Lowered diplomatic bonuses for sharing a religion, for almost all religions
 		- Civs can't get back one of their previous leaders on resurrection (would be changed to the later one anyway in a couple turns)
 		- Civs have 40% chance to remain with the leader before the collapse, 60% chance to get the next leader (chronologically)
-		- Minor text updates in the wording of some UHVs and UPs
-		- Minor DCN update for France: Empire status needs more provinces
 		- The province of Calabria was added to the 3rd Aragonese UHV, the Balearic Islands are needed for the 1st Moroccan UHV instead of Tripolitania
 		- Thessaly, Morea, Crete and Cyprus provinces are also needed for the 2nd Venetian UHV (besides the city of Constantinople)
+		- Picardy will remain historic for France even after the English spawn, Northumbria will remain contested for Norway
+		- Krak des Chevaliers will add bonus stability for Castle-type buildings if they weren't present before the conquest
+		- Reduced German respawn zone around Brandenburg, now it doesn't have an overlap with Prussia's
+		- Minor updates in the Swedish and Prussian respawn zones, to avoid overlap with Lithuania
+		- Revised respawn zone for Novgorod and Russia, better shape for both without any overlaps
+
+	Technical / UI changes:
+		- No interface messages are displayed during autoplay/autorun (Crusades, RiseAndFall, Religion, Wonders, Leaders, etc.)
 		- Turns remaining message only show up in the last 30 turns of the game (instead of 100)
 		- No permanent (flashing) victory message on the middle of the screen after you are victorious (from DoC)
-		- No looped victory music during your play if you decide to continue after your victory
+		- No looped victory music during your play if you decide to continue after you have won
+		- Updated the Company Advisor / Company Screen, now all 9 companies should be displayed without any issues
+		- Removed date founded, headquarters, founded by GP information from the company screen (all of which is irrelevant or non-existent with the new system)
+		- City screen updated: improved religion and company icon positioning on the city screen
 		- Removed all leaderhead FPK-s from the mod, no use in PAK-ing leaderhead art files
 		- Plot information shows city name when a settler is selected (for plots where your civ have a civ-specific city name)
 		- Adjusted some colours on the plot tooltip, to make information more noticeable
-		- Fixed setup for python Dataloader, it will now correctly handle data on loaded games too
-		- Revised XML and python order for buildings and units
-		- Picardy will remain historic for France on the English spawn, Northumbria will remain contested for Norway
-		- Krak des Chevaliers will add bonus stability for Castle-type buildings if they weren't present before the conquest
+		- Plague icon is shown on the city banner, not only the plague cloud above the city (idea from DoC)
+		- Removed unnecessary Derivative Civ settings for all civilizations, various other minor python and XML optimizations
+		- Added DataLoader functionality to the mod, loads the desired python data into appropriate objects within the CvGameCoreDLL (both on startup and game load)
+		- Revised XML and python order for buildings and units, will make XML initialization on starting the mod slightly faster
+		- Revised timing and availability for most previously added interface messages
 
 	Bugfixes:
 		- Fixed strange visibility area for the Ottomans

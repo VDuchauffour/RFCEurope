@@ -100,9 +100,12 @@ class Plague:
 			if (gc.getPlayer(i).isAlive()):
 				if (self.getPlagueCountdown(i) > 0):
 					self.setPlagueCountdown(i, self.getPlagueCountdown(i)-1)
-					if (self.getPlagueCountdown(i) == 2):
-						self.preStopPlague(i)
-					elif (self.getPlagueCountdown(i) == 0):
+					iPlagueCountDown = self.getPlagueCountdown(i)
+					if (iPlagueCountDown == 2):
+						self.preStopPlague(i, iPlagueCountDown)
+					elif (iPlagueCountDown == 1):
+						self.preStopPlague(i, iPlagueCountDown)
+					elif (iPlagueCountDown == 0):
 						self.stopPlague(i)
 				elif (self.getPlagueCountdown(i) < 0):
 					self.setPlagueCountdown(i, self.getPlagueCountdown(i)+1)
@@ -292,17 +295,17 @@ class Plague:
 					# if some defenders are set to be preserved for some reason, they won't get more damage if they are already under 50%
 					if ( unit.getOwner() == iCityOwner and iPreserveDefenders > 0 and unit.getDomainType() != 0 and unit.baseCombatStr() > 0): # only units which can really defend
 						iPreserveDefenders -= 1
-						if (unit.getDomainType() == 0): # naval units get less damage, won't be killed unless they were very badly damaged originally
-							iShipDamage = iDamage * 95 / 100
-							unit.setDamage( max( iUnitDamage, min( 50, iUnitDamage + iShipDamage - unit.getExperience()/10 - 2*unit.baseCombatStr() ) ), iBarbarian )
-						else:
-							unit.setDamage( max( iUnitDamage, min( 50, iUnitDamage + iDamage - unit.getExperience()/10 - 2*unit.baseCombatStr() ) ), iBarbarian )
+						unit.setDamage( max( iUnitDamage, min( 50, iUnitDamage + iDamage - unit.getExperience()/10 - 3*unit.baseCombatStr() / 7 ) ), iBarbarian )
 					else:
-						if (unit.getDomainType() == 0): # naval units get less damage, won't be killed unless they were very badly damaged originally
-							iShipDamage = iDamage * 95 / 100
-							iUnitDamage = max( iUnitDamage, unit.getDamage() + iShipDamage - unit.getExperience()/10 - 2*unit.baseCombatStr() / 7 )
-						else:
-							iUnitDamage = max( iUnitDamage, unit.getDamage() + iDamage - unit.getExperience()/10 - 2*unit.baseCombatStr() / 7 )
+						if (unit.baseCombatStr() > 0):
+							if (unit.getDomainType() == 0): # naval units get less damage, won't be killed unless they were very badly damaged originally
+								iShipDamage = iDamage * 93 / 100
+								iUnitDamage = max( iUnitDamage, unit.getDamage() + iShipDamage - unit.getExperience()/10 - 3*unit.baseCombatStr() / 7 )
+							else:
+								iUnitDamage = max( iUnitDamage, unit.getDamage() + iDamage - unit.getExperience()/10 - 3*unit.baseCombatStr() / 7 )
+						else: # less damage for civilian units - workers, settlers, missionaries, etc.
+							iCivilDamage = iDamage * 96 / 100 # workers will be killed with any value here if they are automated (thus moving instead of healing)
+							iUnitDamage = max( iUnitDamage, unit.getDamage() + iCivilDamage)
 						# kill the unit if necessary
 						if ( iUnitDamage >= 100 ):
 							unit.kill( False, iBarbarian )
@@ -484,7 +487,7 @@ class Plague:
 					self.infectCity(city)
 
 
-	def preStopPlague(self, iPlayer):
+	def preStopPlague(self, iPlayer, iPlagueCountDown):
 		cityList = []
 		apCityList = PyPlayer(iPlayer).getCityList()
 		for pCity in apCityList:
@@ -493,11 +496,18 @@ class Plague:
 				cityList.append(city)
 
 		if (len(cityList)):
-			iModifier = 0
+			iRemoveModifier = 0
+			iTimeModifier = iPlagueCountDown * 15
+			iPopModifier = 0
+			iHealthModifier = 0
+			# small cities should have a good chance to be chosen
 			for city in cityList:
-				if (gc.getGame().getSorenRandNum(100, 'roll') > 30 - 5*city.healthRate(False, 0) + iModifier):
+				# iPopModifier: -28, -21, -14, -7, 0, 7, 14, 21, 28, 35, etc.
+				iPopModifier = 7 * city.getPopulation() - 35
+				iHealthModifier = 5 * city.healthRate(False, 0)
+				if (gc.getGame().getSorenRandNum(100, 'roll') < (100 - iTimeModifier - iPopModifier + iHealthModifier - iRemoveModifier)):
 					city.setHasRealBuilding(iPlague, False)
-					iModifier += 5 # not every city should quit
+					iRemoveModifier += 5 # less chance for each city which already quit
 
 
 	def stopPlague(self, iPlayer):

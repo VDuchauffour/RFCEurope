@@ -841,7 +841,7 @@ class RiseAndFall:
 		if(pPlot.isCity()):
 			# Absinthe: apologize from the player:
 			msgString = CyTranslator().getText("TXT_KEY_REDUCE_CITY_1", ()) + " " + pPlot.getPlotCity().getName() + " " + CyTranslator().getText("TXT_KEY_REDUCE_CITY_2", ())
-			CyInterface().addMessage(pPlot.getPlotCity().getOwner(), True, con.iDuration, msgString, "", 0, "", ColorTypes(con.iOrange), tPlot[0], tPlot[1], True, True)
+			CyInterface().addMessage(pPlot.getPlotCity().getOwner(), False, con.iDuration, msgString, "", 0, "", ColorTypes(con.iOrange), tPlot[0], tPlot[1], True, True)
 
 			pPlot.eraseCityDevelopment()
 			pPlot.setImprovementType(xml.iImprovementTown) # Improvement Town instead of the city
@@ -925,7 +925,7 @@ class RiseAndFall:
 				HumanTeam = gc.getTeam(gc.getPlayer(iHuman).getTeam())
 				PlayerTeam = gc.getPlayer(iPlayer).getTeam()
 				if (HumanTeam.isHasMet(PlayerTeam) and utils.isActive(iHuman)): # only if it's a known civ
-					CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_LEADER_SWITCH", (gc.getPlayer(iPlayer).getName(), gc.getPlayer(iPlayer).getCivilizationDescriptionKey())), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, "", ColorTypes(con.iPurple), -1, -1, True, True)
+					CyInterface().addMessage(iHuman, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_LEADER_SWITCH", (gc.getPlayer(iPlayer).getName(), gc.getPlayer(iPlayer).getCivilizationDescriptionKey())), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, "", ColorTypes(con.iPurple), -1, -1, True, True)
 
 
 	def fragmentIndependents(self):

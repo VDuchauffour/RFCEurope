@@ -583,7 +583,7 @@ class CvRFCEventHandler:
 			iHuman = utils.getHumanID()
 			if utils.isActive(iHuman):
 				sText = CyTranslator().getText("TXT_KEY_GREAT_SCHISM", ())
-				CyInterface().addMessage(iHuman, True, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iDarkPink), -1, -1, True, True)
+				CyInterface().addMessage(iHuman, False, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iDarkPink), -1, -1, True, True)
 
 		print("3Miro: Byz Rank is: ",gc.getGame().getTeamRank(iByzantium))
 

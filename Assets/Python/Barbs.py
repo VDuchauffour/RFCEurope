@@ -917,7 +917,7 @@ class Barbs:
 			# revolt suppressed
 			for iI in range( len( cityList ) ):
 				pCity = cityList[iI]
-				CyInterface().addMessage(iPlayer, True, con.iDuration, CyTranslator().getText("TXT_KEY_MINOR_NATION_REVOLT_SUPRESSED", (pCity.getName(),)), "", 0, "", ColorTypes(con.iBlue), -1, -1, True, True)
+				CyInterface().addMessage(iPlayer, False, con.iDuration, CyTranslator().getText("TXT_KEY_MINOR_NATION_REVOLT_SUPRESSED", (pCity.getName(),)), "", 0, "", ColorTypes(con.iBlue), -1, -1, True, True)
 				# cracking the rebels results in unhappiness in the general population:
 				if ( iDecision == 1 or iDecision == 3 ):
 					pCity.changeHurryAngerTimer( 10 )
@@ -934,7 +934,7 @@ class Barbs:
 			for iI in range( len( cityList ) ):
 				pCity = cityList[iI]
 				sNationName = localText.getText(lNation[7][1], ())
-				CyInterface().addMessage(iPlayer, True, con.iDuration, CyTranslator().getText("TXT_KEY_MINOR_NATION_REVOLT_SUCCEEDED", (sNationName, pCity.getName(),)), "", 0, "", ColorTypes(con.iOrange), -1, -1, True, True)
+				CyInterface().addMessage(iPlayer, False, con.iDuration, CyTranslator().getText("TXT_KEY_MINOR_NATION_REVOLT_SUCCEEDED", (sNationName, pCity.getName(),)), "", 0, "", ColorTypes(con.iOrange), -1, -1, True, True)
 				utils.cultureManager((pCity.getX(),pCity.getY()), 50, iNewCiv, iPlayer, False, True, True)
 				utils.flipUnitsInCitySecession((pCity.getX(),pCity.getY()), iNewCiv, iPlayer)
 				self.setTempFlippingCity((pCity.getX(),pCity.getY()))
