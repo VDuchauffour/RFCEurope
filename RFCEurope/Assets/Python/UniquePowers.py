@@ -25,7 +25,7 @@ class UniquePowers:
 		pass
 
 
-#------------------U.P. FAITH-------------------
+# Absinthe: Arabian UP
 	def faithUP(self, iPlayer, city):
 		pFaithful = gc.getPlayer(iPlayer)
 		iStateReligion = pFaithful.getStateReligion()
@@ -49,7 +49,7 @@ class UniquePowers:
 				pFaithful.changeFaith( 1 )
 
 
-#------------------U.P. Janissary-------------------
+# Absinthe: Ottoman UP
 	def janissary(self, iPlayer ):
 		pPlayer = gc.getPlayer( iPlayer )
 		iStateReligion = pPlayer.getStateReligion()
@@ -69,17 +69,18 @@ class UniquePowers:
 		if ( pPlayer.isHuman() ):
 			iNextJanissary = 300
 
-
 		if ( iOldPoints + iNewPoints > iNextJanissary ):
-			#iNewPoints = 0
 			apCityList = PyPlayer(iPlayer).getCityList()
 			iRandCity = gc.getGame().getSorenRandNum(len( apCityList ), 'Janissary city')
 			pCity = apCityList[iRandCity].GetCy()
 			utils.makeUnit( xml.iJanissary, iPlayer, [pCity.getX(), pCity.getY()], 1 )
+			# interface message for the human player
+			if (iPlayer == utils.getHumanID()):
+				CyInterface().addMessage(iPlayer, False, con.iDuration, CyTranslator().getText("TXT_KEY_UNIT_NEW_JANISSARY", ()) + " " + pCity.getName() + "!", "AS2D_UNIT_BUILD_UNIQUE_UNIT", 0, gc.getUnitInfo(xml.iJanissary).getButton(), ColorTypes(con.iGreen), pCity.getX(), pCity.getY(), True, True)
 			pPlayer.setPicklefreeParameter( iJanissaryPoints, 0 )
-			#print(" 3Miro making a Janissary in ",pCity.getName() )
+			print(" New Janissary in ",pCity.getName() )
 		else:
-		     pPlayer.setPicklefreeParameter( iJanissaryPoints, iOldPoints + iNewPoints )
+			pPlayer.setPicklefreeParameter( iJanissaryPoints, iOldPoints + iNewPoints )
 
 		#print(" 3Miro Janissaries for player: ",iPlayer,pPlayer.getPicklefreeParameter( iJanissaryPoints ) )
 		#print(" 3Miro Janissaries this turn addes: ", iNewPoints)
@@ -107,7 +108,7 @@ class UniquePowers:
 		print("We got %d gold." % iGold)
 		gc.getPlayer(iPlayer).changeGold(iGold)
 
-		CyInterface().addMessage(iPlayer, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_UP_SOUND_TOLL", ( iGold, )), "", 0, "", ColorTypes(con.iGreen), -1, -1, True, True)
+		CyInterface().addMessage(iPlayer, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_UP_SOUND_TOLL", ( iGold, )), "", 0, "", ColorTypes(con.iGreen), -1, -1, True, True)
 
 	def getNumForeignCitiesOnBaltic(self, iPlayer, bVassal = False):
 		lBalticRects = [((56, 52), (70, 57)), ((62, 58), (74, 62)), ((64, 63), (79, 66)), ((64, 67), (71, 72))]
@@ -135,7 +136,7 @@ class UniquePowers:
 		return iCities
 
 
-# Absinthe: Aragon UP
+# Absinthe: Aragonese UP
 	def confederationUP(self, iPlayer):
 		pPlayer = gc.getPlayer(iPlayer)
 		#Only recalc if we have a different number of cities from last turn.

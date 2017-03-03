@@ -121,7 +121,7 @@ class Companies:
 			iValue = cityValueList[i][1]
 			if city.isHasCorporation(iCompany):
 				continue
-			if iCompanyCount >= iMaxCompanies and i >= iMaxCompanies: # don't spread to weak cities if the limit was reached
+			if (iCompanyCount >= iMaxCompanies and i >= (iMaxCompanies + 3)): # don't spread to weak cities if the limit was reached
 				break
 			city.setHasCorporation(iCompany, True, True, True)
 			sCityName = city.getName()
@@ -459,6 +459,6 @@ class Companies:
 		if iValue < 3: return -1
 
 		# spread it out
-		iValue -= owner.countCorporations(iCompany)
+		iValue -= 2 * owner.countCorporations(iCompany)
 
 		return iValue

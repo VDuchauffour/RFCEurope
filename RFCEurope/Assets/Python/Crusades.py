@@ -757,7 +757,7 @@ class Crusades:
 		pLeader = gc.getPlayer( iNewLeader )
 		iHuman = utils.getHumanID()
 		if utils.isActive(iHuman):
-			CyInterface().addMessage(iHuman, True, con.iDuration/2, pLeader.getName() + CyTranslator().getText("TXT_KEY_CRUSADE_DEVIATED", ()), "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
+			CyInterface().addMessage(iHuman, False, con.iDuration/2, pLeader.getName() + CyTranslator().getText("TXT_KEY_CRUSADE_DEVIATED", ()), "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
 		#pLeader.setGold( pLeader.getGold() - gc.getPlayer( con.iPope ).getGold() / 3 )
 		#pLeader.setGold( gc.getPlayer( con.iPope ).getGold() / 4 )
 		pLeader.setGold( 2 * pLeader.getGold() / 3 )
@@ -864,7 +864,7 @@ class Crusades:
 				sCityName = cnm.lookupName(pTargetCity,con.iPope)
 				if ( sCityName == 'Unknown' ):
 					sCityName = cnm.lookupName(pTargetCity,iLeader)
-				CyInterface().addMessage(utils.getHumanID(), True, con.iDuration, CyTranslator().getText("TXT_KEY_CRUSADE_ARRIVAL", (sCityName, )) + "!", "", 0, "", ColorTypes(con.iGreen), iChosenX, iChosenY, True, True)
+				CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_CRUSADE_ARRIVAL", (sCityName, )) + "!", "", 0, "", ColorTypes(con.iGreen), iChosenX, iChosenY, True, True)
 		else:
 			self.returnCrusaders()
 
@@ -1255,7 +1255,7 @@ class Crusades:
 
 		# Absinthe: interface message for the player
 		if (gc.getPlayer(iPlayer).isHuman()):
-			CyInterface().addMessage(iPlayer, True, con.iDuration, CyTranslator().getText("TXT_KEY_CRUSADE_DEFENSIVE_HUMAN_MESSAGE", ()), "", 0, "", ColorTypes(con.iGreen), iX, iY, True, True)
+			CyInterface().addMessage(iPlayer, False, con.iDuration, CyTranslator().getText("TXT_KEY_CRUSADE_DEFENSIVE_HUMAN_MESSAGE", ()), "", 0, "", ColorTypes(con.iGreen), iX, iY, True, True)
 
 		pPlayer.initUnit(iBestInfantry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 		pPlayer.initUnit(iBestCavalry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
