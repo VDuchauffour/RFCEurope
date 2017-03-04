@@ -226,7 +226,7 @@ tCollapse = (
 xml.i1453AD, #Byzantium - Ottoman conquest of Constantinople
 999, #Frankia
 xml.i1517AD, #Arabia - to make room for the Ottomans
-xml.i1393AD, #Bulgaria - Bulgaria UHV 3
+xml.i1396AD, #Bulgaria - Bulgaria UHV 3
 xml.i1492AD, #Cordoba - Cordoba UHV 3
 999, #Venice
 xml.i1473AD, #Burgundy - Burgundy UHV 3

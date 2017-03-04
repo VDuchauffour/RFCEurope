@@ -1324,7 +1324,7 @@ class CvVictoryScreen:
 			if (len(ourBestCities) > i):
 				sText2 += "  " + ourBestCities[i][1].getName() + ": " + self.determineColor(ourBestCities[i][0] >= 5000, ourBestCities[i][0])
 		#UHV3
-		sText3 += self.ConquerOrVassal([con.iSpain, con.iPortugal, con.iAragon])
+		sText3 += self.CollapseOrVassal([con.iSpain, con.iPortugal, con.iAragon])
 		lHelpTexts = [sText1, sText2, sText3]
 		return lHelpTexts
 
@@ -1707,8 +1707,24 @@ class CvVictoryScreen:
 		sString = sStringLower + "\n" + sStringHigher
 		return sString
 
+	def CollapseOrVassal(self, lEnemies):
+		sStringConq = localText.getText("TXT_KEY_UHV_COLLAPSE_OR_VASSALIZE",()) + ":"
+		sStringMiss = localText.getText("TXT_KEY_UHV_NOT_YET",()) + ":"
+		iGameTurn = gc.getGame().getGameTurn()
+		for iEnemy in lEnemies:
+			teamOwn = gc.getTeam(self.iActivePlayer)
+			pEnemy = gc.getPlayer(iEnemy)
+			teamCiv = gc.getTeam(iEnemy)
+			sCivShortName = str(pEnemy.getCivilizationShortDescriptionKey())
+			if ( pEnemy.isAlive() and not teamCiv.isVassal( teamOwn.getID() ) ) or iGameTurn <= con.tBirth[iEnemy]:
+				sStringMiss += "  " + u"<color=208,0,0>%s</color>" %( localText.getText(sCivShortName,()) )
+			else:
+				sStringConq += "  " + u"<color=0,255,0>%s</color>" %( localText.getText(sCivShortName,()) )
+		sString = sStringConq + "\n" + sStringMiss
+		return sString
+
 	def ConquerOrVassal(self, lEnemies):
-		sStringConq = localText.getText("TXT_KEY_UHV_COLLAPSED_OR_VASSAL",()) + ":"
+		sStringConq = localText.getText("TXT_KEY_UHV_CONQUER_OR_VASSALIZE",()) + ":"
 		sStringMiss = localText.getText("TXT_KEY_UHV_NOT_YET",()) + ":"
 		iGameTurn = gc.getGame().getGameTurn()
 		for iEnemy in lEnemies:

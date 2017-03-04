@@ -247,10 +247,16 @@ Changes for RFCE 1.5:
 		- Improvements (both text and formatting) in the Concepts page in the Civilopedia
 		- Minor updates in the CNMs in Ireland, Norway, Finland and Karelia
 		- Updated CNMs for all civs around the lakes in Anatolia and the Levant
-		- Minor text updates in the wording of some UHVs and UPs
+		- Minor text updates in the wording of some UPs
+		- Various UHV text improvements by DC123456789 and 2phunkey4u
 		- New interface text message when a new Janissary unit is ready for your service
 		- Dynamic Civ Names for Norway, Denmark, Sweden, lots of interconnected names between them
 		- Updated DCN Empire trigger conditions and early DCNames for France / the Franks
+		- Dynamic Civ Names for Novgorod, Kiev, Muscovy by DC123456789 and SanJose
+		- Dynamic Civ Names for England, Scotland, the Dutch with the help of DC123456789
+		- Colony for Genoan, Zhupa for Bulgarian, Voivodeship for Polish and Lithuanian vassals' DCNames (already added to the recently updated civs)
+		- Added Dynamic Civ Names reference text file to the mod
+		- Civilopedia entries for the new companies, UUs, UBs
 
 	General changes:
 		- Updated the Novgorod Fur UHV and the Moscow Atlantic Access UHV to count resources only inside cultural borders
@@ -287,6 +293,7 @@ Changes for RFCE 1.5:
 		- Reduced German respawn zone around Brandenburg, now it doesn't have an overlap with Prussia's
 		- Minor updates in the Swedish and Prussian respawn zones, to avoid overlap with Lithuania
 		- Revised respawn zone for Novgorod and Russia, better shape for both without any overlaps
+		- Fixed dates for a couple events/deadlines, including the Norwegian 2nd UHV and the Bulgarian 3rd UHV
 
 	Technical / UI changes:
 		- No interface messages are displayed during autoplay/autorun (Crusades, RiseAndFall, Religion, Wonders, Leaders, etc.)

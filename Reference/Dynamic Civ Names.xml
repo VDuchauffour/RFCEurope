@@ -1,0 +1,283 @@
+
+<Denmark>
+Vassal of Byzantium: Exarchate of Cimbria
+Vassal of France/Burgundy: Duchy of Denmark
+Vassal of Arabia/Cordoba/Morocco: Emirate of Denmark
+Vassal of Spain/Aragon: Viceroyalty of Denmark
+Vassal of Norway: Jarldom of Denmark
+Vassal of Sweden: Jarldom of Scania
+Vassal of Venice/Genoa: Colony of Denmark
+Vassal of Novgorod/Kiev: Principality of Denmark
+Vassal of Muscovy: Guberniya of Denmark
+Vassal of Germany/Prussia: March of Schleswig
+Vassal of England: Earldom of Denmark
+Vassal of Scotland: Mormaerdom of Denmark
+Vassal of Hungary: Banate of Denmark
+Vassal of Austria: Habsburg Denmark
+Vassal of Ottomans: Eyalet of Danimarka
+Vassal of Poland/Lithuania: Voivodeship of Denmark
+Vassal of Bulgaria: Zhupa of Denmark
+Generic Vassal (all the other civs): Province of Denmark
+
+Master of Sweden and Norway: Kalmar Union
+Master of Sweden, controls Norway province: Kalmar Union
+Master of Norway, controls Svaeland province: Kalmar Union
+Merchant Republic civic, Islam State Religion: Danish Islamic Republic
+Merchant Republic civic, controls Norway province: Republic of Denmark-Norway
+Merchant Republic civic, controls Svaeland province: Kalmar Republic
+Merchant Republic civic: Danish Republic
+Islam State Religion: Sultanate of Denmark
+Controls Svealand province, at least 7 provinces, after 1397: Kalmar Union
+Controls Mercia province, at least 5 provinces: North Sea Empire
+Master of Norway: Kingdom of Denmark-Norway
+Controls Norway province, after 1534: Kingdom of Denmark-Norway
+Controls Norway province: Kingdoms of Denmark and Norway
+Master of Sweden: Kingdom of Denmark-Sweden
+Controls Svealand province, after 1397: Kingdom of Denmark-Sweden
+Controls Svealand province: Kingdoms of Denmark and Sweden
+Default: Kingdom of Denmark
+
+<Norway>
+Vassal of Byzantium: Exarchate of Thule
+Vassal of France/Burgundy: Duchy of Norway
+Vassal of Arabia/Cordoba/Morocco: Emirate of Norway
+Vassal of Spain/Aragon: Viceroyalty of Norway
+Vassal of Denmark: Jarldom of Norway
+Vassal of Sweden: Jarldom of Trondelag
+Vassal of Venice/Genoa: Colony of Norway
+Vassal of Novgorod/Kiev: Principality of Norway
+Vassal of Muscovy: Guberniya of Norway
+Vassal of Germany/Prussia: March of Norway
+Vassal of England: Earldom of Norway
+Vassal of Scotland: Mormaerdom of Norway
+Vassal of Hungary: Banate of Norway
+Vassal of Austria: Habsburg Norway
+Vassal of Ottomans: Eyalet of Norvec
+Vassal of Poland/Lithuania: Voivodeship of Norway
+Vassal of Bulgaria: Zhupa of Norway
+Generic Vassal (all the other civs): Province of Norway
+
+Master of Sweden and Denmark: Kalmar Union
+Master of Sweden, controls Denmark province: Kalmar Union
+Master of Denmark, controls Svaeland province: Kalmar Union
+Merchant Republic civic, Islam State Religion: Norwegian Islamic Republic
+Merchant Republic civic: Norwegian Republic
+Islam State Religion: Sultanate of Norway
+Master of Denmark: Kingdom of Norway-Denmark
+Controls Denmark province, after 1534: Kingdom of Norway-Denmark
+Controls Denmark province: Kingdoms of Norway and Denmark
+Master of Sweden: Kingdom of Norway-Sweden
+Controls Svaeland province, after 1209: Kingdom of Norway-Sweden
+Controls Svaeland province: Kingdoms of Norway and Sweden
+Controls Vestfold province: Kingdom of Norway
+Default: Jarldom of Lade
+
+<Sweden>
+Vassal of Byzantium: Exarchate of Suedia
+Vassal of France/Burgundy: Duchy of Sweden
+Vassal of Arabia/Cordoba/Morocco: Emirate of Sweden
+Vassal of Spain/Aragon: Viceroyalty of Sweden
+Vassal of Denmark/Norway: Jarldom of Sweden
+Vassal of Venice/Genoa: Colony of Sweden
+Vassal of Novgorod/Kiev: Principality of Sweden
+Vassal of Muscovy: Guberniya of Sweden
+Vassal of Germany/Prussia: March of Sweden
+Vassal of England: Earldom of Sweden
+Vassal of Scotland: Mormaerdom of Sweden
+Vassal of Hungary: Banate of Sweden
+Vassal of Austria: Habsburg Sweden
+Vassal of Ottomans: Eyalet of Isves
+Vassal of Poland/Lithuania: Voivodeship of Sweden
+Vassal of Bulgaria: Zhupa of Sweden
+Generic Vassal (all the other civs): Province of Sweden
+
+Master of Sweden and Denmark: Kalmar Union
+Master of Norway, controls Denmark province: Kalmar Union
+Master of Denmark, controls Norway province: Kalmar Union
+Merchant Republic civic, Islam State Religion: Islamic Republic of Sweden
+Merchant Republic civic: Republic of Sweden
+Islam State Religion: Sultanate of Sweden
+At least 10 provinces: Swedish Empire
+Master of Denmark: Kingdom of Sweden-Denmark
+Controls Denmark province, after 1397: Kingdom of Sweden-Denmark
+Controls Denmark province: Kingdoms of Sweden and Denmark
+Master of Norway: Kingdom of Sweden-Norway
+Controls Norway province, after 1209: Kingdom of Sweden-Norway
+Controls Norway province: Kingdoms of Sweden and Norway
+Default: Kingdom of Sweden
+
+<Novgorod>
+Vassal of Byzantium: Exarchate of Nemogardas
+Vassal of France/Burgundy: Duchy of Novgorod
+Vassal of Arabs/Cordoba/Morocco: Emirate of Salawiya
+Vassal of Spain/Aragon: Viceroyalty of Novgorod
+Vassal of Denmark/Norway, at least 4 provinces: Jarldom of Gar?aríki
+Vassal of Denmark/Norway: Jarldom of Holmgar?r
+Vassal of Sweden: Jarldom of Ingria
+Vassal of Venice/Genoa: Colony of Novgorod
+Vassal of Kiev: Novgorod Volost'
+Vassal of Muscovy: Novgorod Land
+Vassal of Germany: Free State of Novgorod
+Vassal of Prussia: Bailiwick of Novgorod
+Vassal of England: Earldom of Novgorod
+Vassal of Scotland: Mormaerdom of Novgorod
+Vassal of Hungary: Banate of Novgorod
+Vassal of Austria: Habsburg Novgorod
+Vassal of Ottomans: Eyalet of Novgorod
+Vassal of Poland/Lithuania: Novgorod Voivodeship
+Vassal of Bulgaria, at least 4 provinces: Comitatus of Novgorod
+Vassal of Bulgaria: Zhupa of Volkhov
+Generic Vassal: Province of Novgorod
+
+Merchant Republic civic, Islam State Religion: Islamic Republic of Novgorod
+Merchant Republic civic: Novgorod Republic
+Islam State Religion: Sultanate of Novgorod
+Catholic/Protestant State Religion: Kingdom of Novgorod
+Bureaucracy civic, after 1136: Novgorod Republic
+Tribal Law civic: Ilmen Slavs
+Default: Principality of Novgorod
+
+<Kiev>
+Vassal of Byzantium: Exarchate of Ruthenia
+Vassal of France/Burgundy: Duchy of Kiev
+Vassal of Arabs/Cordoba/Morocco: Emirate of Kuyavia
+Vassal of Spain/Aragon: Viceroyalty of Kiev
+Vassal of Denmark/Norway/Sweden: Jarldom of Konugar?r
+Vassal of Venice/Genoa: Colony of Kiev
+Vassal of Novgorod: Kiev Volost'
+Vassal of Muscovy, at least 4 provinces: Cossack Hetmanate
+Vassal of Muscovy: Guberniya of Kiev
+Vassal of Germany/Prussia: March of Kiev
+Vassal of England: Earldom of Kiev
+Vassal of Scotland: Mormaerdom of Kiev
+Vassal of Hungary: Principality of Galicia-Volhynia
+Vassal of Austria: Habsburg Galicia and Lodomeria
+Vassal of Ottomans: Eyalet of Podolia
+Vassal of Poland/Lithuania: Kijow Voivodeship
+Vassal of Bulgaria, at least 4 provinces: Comitatus of Kiev
+Vassal of Bulgaria: Zhupa of Kiev
+Generic Vassal: Province of Kiev
+
+Merchant Republic civic, Islam State Religion: Islamic Republic of Kiev
+Merchant Republic civic: Republic of Kiev
+Islam State Religion, after 1380: Sultanate of Kiev
+Islam State Religion: Rurikid Sultanate
+Catholic/Protestant State Religion: Kingdom of Rus
+After 1110, at least 6 provinces: Kievan' Rus
+After 1110: Principality of Kiev
+Default: Kievan' Rus
+
+<Muscovy>
+Vassal of Byzantium: Exarchate of Moscovia
+Vassal of France/Burgundy: Duchy of Muscovy
+Vassal of Arabs/Cordoba/Morocco: Emirate of Artaniya
+Vassal of Spain/Aragon: Viceroyalty of Moscow
+Vassal of Denmark/Norway/Sweden: Jarldom of Móramar
+Vassal of Venice/Genoa: Colony of Moscow
+Vassal of Novgorod/Kiev: Muscovy Volost'
+Vassal of Germany/Prussia: March of Moscow
+Vassal of England: Earldom of Muscovy
+Vassal of Scotland: Mormaerdom of Muscovy
+Vassal of Hungary: Banate of Muscovy
+Vassal of Austria: Habsburg Muscovy
+Vassal of Ottomans: Eyalet of Moskova
+Vassal of Poland/Lithuania: Moscow Voivodeship
+Vassal of Bulgaria: Zhupa of Moscow
+Generic Vassal: Province of Muscovy
+
+Merchant Republic civic, Islam State Religion: Islamic Republic of Moscow
+Merchant Republic civic: Republic of Moscow
+Islam State Religion: Sultanate of Moscow
+Catholic/Protestant State Religion: Kingdom of Russia
+At least 7 provinces, Despotism/Feudal Monarchy civic: Tsardom of Russia
+At least 7 provinces: Russian Empire
+At least 4 provinces: Grand Duchy of Moscow
+Default: Principality of Moscow
+
+<England>
+Vassal of Byzantium: Exarchate of Britannia
+Vassal of France/Burgundy: Duchy of La Manche
+Vassal of Arabia/Cordoba/Morocco: Emirate of Ingeltra
+Vassal of Spain/Aragon: Viceroyalty of England
+Vassal of Denmark: Jarldom of the Danelaw
+Vassal of Norway/Sweden: Jarldom of England
+Vassal of Venice/Genoa: Colony of England
+Vassal of Novgorod/Kiev: Principality of England
+Vassal of Muscovy: Guberniya of England
+Vassal of Germany/Prussia: March of British Saxony
+Vassal of Scotland: Mormaerdom of Cumberland
+Vassal of Hungary: Banate of England
+Vassal of Austria: Habsburg England
+Vassal of Ottomans: Eyalet of Britanya
+Vassal of Poland/Lithuania: Voivodeship of England
+Vassal of Bulgaria: Zhupa of England
+Generic Vassal: Province of England
+
+Merchant Republic civic, Islam State Religion, master of Scotland: Islamic Republic of Great Britain
+Merchant Republic civic, Islam State Religion, controls Scotland province: Islamic Republic of Great Britain
+Merchant Republic civic, master of Scotland: Commonwealth of Great Britain
+Merchant Republic civic, controls Scotland province: Commonwealth of Great Britain
+Islam State Religion, master of Scotland: Sultanate of Great Britain
+Islam State Religion, controls Scotland province: Sultanate of Great Britain
+Merchant Republic civic, Islam State Religion: Islamic Republic of England
+Merchant Republic civic: Commonwealth of England
+Islam State Religion: Sultanate of England
+Master of Scotland: Kingdom of Great Britain
+Controls Scotland province: Kingdom of Great Britain
+Default: Kingdom of England
+
+<Scotland>
+Vassal of Byzantium: Exarchate of Caledonia
+Vassal of France/Burgundy: Duchy of Ecosse
+Vassal of Arabia/Cordoba/Morocco: Emirate of Scotland
+Vassal of Spain/Aragon: Viceroyalty of Scotland
+Vassal of Denmark/Norway/Sweden: Jarldom of the Isles
+Vassal of Venice/Genoa: Colony of Scotland
+Vassal of Novgorod/Kiev: Principality of Scotland
+Vassal of Muscovy: Guberniya of Scotland
+Vassal of Germany/Prussia: March of Scotland
+Vassal of England: Earldom of Lothian
+Vassal of Hungary: Banate of Scotland
+Vassal of Austria: Habsburg Scotland
+Vassal of Ottomans: Eyalet of Iskocya
+Vassal of Poland/Lithuania: Voivodeship of Scotland
+Vassal of Bulgaria: Zhupa of Scotland
+Generic Vassal (all the other civs): Province of Scotland
+
+Merchant Republic civic, Islam State Religion: Islamic Republic of Scotland
+Merchant Republic civic: Commonwealth of Scotland
+Islam State Religion: Sultanate of Scotland
+Controls Bretagne province, at least 5 provinces: Celtic Union
+Controls London province, at least 5 provinces: Kingdom of Great Britain
+Master of England: Kingdom of Great Britain
+After 1281: Kingdom of Scotland
+Default: Kingdom of Alba
+
+<Dutch>
+Vassal of Byzantium: Exarchate of Batavia
+Vassal of France: County of Flanders
+Vassal of Burgundy: Burgundian Netherlands
+Vassal of Arabia/Cordoba/Morocco: Emirate of the Netherlands
+Vassal of Spain: Seventeen Provinces
+Vassal of Aragon: Viceroyalty of the Netherlands
+Vassal of Denmark/Norway/Sweden: Jarldom of Frisia
+Vassal of Venice/Genoa: Colony of Holland
+Vassal of Novgorod/Kiev: Principality of Holland
+Vassal of Muscovy: Guberniya of Holland
+Vassal of Germany/Prussia: County of Holland
+Vassal of England: Earldom of the Netherlands
+Vassal of Scotland: Mormaerdom of the Netherlands
+Vassal of Hungary: Banate of Holland
+Vassal of Austria: Habsburg Netherlands
+Vassal of Ottomans: Eyalet of Holland
+Vassal of Poland/Lithuania: Voivodeship of Holland
+Vassal of Bulgaria: Zhupa of Holland
+Generic Vassal (all the other civs): Province of Holland
+
+Merchant Republic civic, Islam State Religion: Islamic Republic of the Netherlands
+Merchant Republic civic, controls Flanders: Republic of the Seventeen United Netherlands
+Merchant Republic civic: Republic of the Seven United Netherlands
+Islam State Religion: Sultanate of the Netherlands
+Controls Flanders: United Kingdom of the Netherlands
+Default: Kingdom of the Netherlands
+

@@ -325,7 +325,7 @@ class Victory:
 
 		# Bulgaria UHV 3:
 		if ( iPlayer == iBulgaria and pBulgaria.isAlive() ):
-			if ( iGameTurn <= xml.i1393AD and pBulgaria.getUHV( 2 ) == -1 ):
+			if ( iGameTurn <= xml.i1396AD and pBulgaria.getUHV( 2 ) == -1 ):
 				if ( playerType == iBarbarian or playerType == iTurkey or playerType == iByzantium ):
 					pBulgaria.setUHV( 2, 0 )
 
@@ -649,7 +649,7 @@ class Victory:
 			else:
 				pByzantium.setUHV( 0, 0 )
 
-		# UHV 2: Keep or reconquer Constantinople, Thrace, Thessaloniki, Moesia, Macedonia, Serbia, Arberia, Epirus, Thessaly, Morea, Colonea, Antiochia, Charsianon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282
+		# UHV 2: Control Constantinople, Thrace, Thessaloniki, Moesia, Macedonia, Serbia, Arberia, Epirus, Thessaly, Morea, Colonea, Antiochia, Charsianon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282
 		if ( iGameTurn == xml.i1282AD and pByzantium.getUHV( 1 ) == -1 ):
 			bOwn = True
 			for iProv in tByzantumControl:
@@ -768,9 +768,9 @@ class Victory:
 			elif ( iGameTurn == xml.i1259AD ):
 				pBulgaria.setUHV( 1, 0 )
 
-		# UHV 3: Do not lose a city to barbarians (Mongols), Byzantines, or Ottomans before 1393
+		# UHV 3: Do not lose a city to barbarians (Mongols), Byzantines, or Ottomans before 1396
 		# Controlled in the onCityAcquired function
-		if ( iGameTurn == xml.i1393AD and pBulgaria.getUHV( 2 ) == -1 ):
+		if ( iGameTurn == xml.i1396AD and pBulgaria.getUHV( 2 ) == -1 ):
 			pBulgaria.setUHV( 2, 1 )
 			pBulgaria.changeStabilityBase( iCathegoryExpansion, 3 )
 
@@ -790,7 +790,7 @@ class Victory:
 		if ( iGameTurn == xml.i1309AD and pCordoba.getUHV(1) == -1 ):
 			pCordoba.setUHV( 1, 0 )
 
-		# UHV 3: Have Islam spread in every city in Andalusia, Galicia, Leon, Castile, Navarre, Lusitania, Catalonia, Aragon, La Mancha and Valencia in 1492
+		# UHV 3: Make sure Islam is present in every city in the Iberian peninsula in 1492
 		if ( iGameTurn == xml.i1492AD and pCordoba.getUHV(2) == -1 ):
 			bIslamized = True
 			for iProv in tCordobaIslamize:
@@ -822,7 +822,7 @@ class Victory:
 			elif ( iGameTurn == xml.i1066AD ):
 				pNorway.setUHV( 0, 0 )
 
-		# UHV 2: Conquer The Isles, Ireland, Scotland, Normandy, Sicily, Apulia, Calabria, Iceland by 1194
+		# UHV 2: Conquer The Isles, Ireland, Scotland, Normandy, Sicily, Apulia, Calabria and Iceland by 1194
 		if ( iGameTurn <= xml.i1194AD and pNorway.getUHV( 1 ) == -1 ):
 			bConq = True
 			for iProv in tNorwayControl:
@@ -835,7 +835,7 @@ class Victory:
 			elif ( iGameTurn == xml.i1194AD ):
 				pNorway.setUHV( 1, 0 )
 
-		# UHV 3: Have higher score than Sweden, Denmark, Scotland, England, Germany and France in 1320
+		# UHV 3: Have a higher score than Sweden, Denmark, Scotland, England, Germany and France in 1320
 		if ( iGameTurn == xml.i1320AD and pNorway.getUHV( 2 ) == -1 ):
 			iNorwayRank = gc.getGame().getTeamRank(iNorway)
 			bIsOnTop = True
@@ -930,7 +930,7 @@ class Victory:
 				if ( iGameTurn == xml.i1336AD ):
 					pBurgundy.setUHV( 0, 0 )
 
-		# UHV 2: Conquer Burgundy, Provence, Picardy, Flanders, Champagne and Lorraine in 1376
+		# UHV 2: Control Burgundy, Provence, Picardy, Flanders, Champagne and Lorraine in 1376
 		if ( iGameTurn == xml.i1376AD and pBurgundy.getUHV( 1 ) == -1 ):
 			bOwn = True
 			for iProv in tBurgundyControl:
@@ -943,7 +943,7 @@ class Victory:
 			else:
 				pBurgundy.setUHV( 1, 0 )
 
-		# UHV 3: Have higher score than France, England and Germany in 1473
+		# UHV 3: Have a higher score than France, England and Germany in 1473
 		if ( iGameTurn == xml.i1473AD and pBurgundy.getUHV( 2 ) == -1 ):
 			iBurgundyRank = gc.getGame().getTeamRank(iBurgundy)
 			bIsOnTop = True
@@ -979,7 +979,7 @@ class Victory:
 		# UHV 2: Start the Reformation (Found Protestantism)
 		# Controlled in the onReligionFounded function
 
-		# UHV 3: Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Holstein, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria in 1648
+		# UHV 3: Control Swabia, Saxony, Bavaria, Franconia, Brandenburg, Holstein, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria in 1648
 		if ( iGameTurn == xml.i1648AD and pGermany.getUHV( 2 ) == -1 ):
 			bOwn = True
 			for iProv in tGermanyControlII:
@@ -1036,7 +1036,7 @@ class Victory:
 		if ( iGameTurn == xml.i1250AD+1 and pKiev.getUHV( 0 ) == -1 ):
 			pKiev.setUHV( 0, 0 )
 
-		# UHV 2: Conquer 10 provinces in Eastern Europe
+		# UHV 2: Control 10 provinces out of Kiev, Podolia, Pereyaslavl, Sloboda, Chernigov, Volhynia, Minsk, Polotsk, Smolensk, Moscow, Murom, Rostov, Novgorod and Vologda in 1288
 		if ( iGameTurn == xml.i1288AD and pKiev.getUHV( 1 ) == -1 ):
 			iConq = 0
 			for iProv in tKievControl:
@@ -1106,7 +1106,7 @@ class Victory:
 
 	def checkSpain( self, iGameTurn ):
 
-		# UHV 1: Reconquista (Make Catholicism the only religion in the Iberian peninsula in 1492 and spread catholicism to all the cities)
+		# UHV 1: Reconquista (make sure Catholicism is the only religion present in every city in the Iberian peninsula in 1492)
 		if ( iGameTurn == xml.i1492AD and pSpain.getUHV( 0 ) == -1 ):
 			bConverted = True
 			for iProv in tSpainConvert:
@@ -1119,7 +1119,7 @@ class Victory:
 			else:
 				pSpain.setUHV( 0, 0 )
 
-		# UHV 2: Have more Colonies than any other nation in 1588AD (while having at least 3)
+		# UHV 2: Have more Colonies than any other nation in 1588 (while having at least 3)
 		if ( iGameTurn == xml.i1588AD and pSpain.getUHV( 1 ) == -1 ):
 			bMost = True
 			iSpainColonies = self.getNumRealColonies(iSpain)
@@ -1180,7 +1180,7 @@ class Victory:
 		if ( iGameTurn == xml.i1296AD and pScotland.getUHV( 0 ) == -1):
 			pScotland.setUHV( 0, 0 )
 
-		# UHV 2: Have 2500 attitude points with France by 1560. Attitude points go up every turn depending on relations
+		# UHV 2: Have 2500 attitude points with France by 1560 (attitude points go up every turn depending on your relations)
 		if ( iGameTurn <= xml.i1560AD and pFrankia.isAlive() and pScotland.getUHV( 1 ) == -1):
 			# -2 for Furious -1 for Annoyed 0 for Cautious 1 for Pleased 2 for Friendly
 			iScore = pFrankia.AI_getAttitude(iScotland) - 2
@@ -1200,7 +1200,7 @@ class Victory:
 					continue
 				if(teamFrankia.isAtWar(iEnemy) and teamScotland.isAtWar(iEnemy)):
 					iScore+=2
-			# Being at war with France gives a big penalty (and no bonuses)!
+			# Being at war with France gives a big penalty (and ignores all bonuses!)
 			if(teamScotland.isAtWar(iFrankia)):
 				iScore = -10
 			# Different religion from France also gives a penalty
@@ -1231,10 +1231,10 @@ class Victory:
 
 	def checkPoland( self, iGameTurn ):
 
-		# Old UHVs: Don't lose cities until 1772 AD or conquer Russia until 1772 AD
+		# Old UHVs: Don't lose cities until 1772AD or conquer Russia until 1772AD
 		#			Vassalize Russia, Germany and Austria
 
-		# UHV 1: Food production between 1500 and 1520 AD
+		# UHV 1: Food production between 1500AD and 1520AD
 		if ((iGameTurn >= xml.i1500AD) and (iGameTurn <= xml.i1520AD) and pPoland.getUHV( 0 ) == -1 ):
 			iAgriculturePolish = pPoland.calculateTotalYield(YieldTypes.YIELD_FOOD)
 			bFood = True
@@ -1248,7 +1248,7 @@ class Victory:
 			elif ( iGameTurn == xml.i1520AD ):
 				pPoland.setUHV( 0, 0 )
 
-		# UHV 2: Control 12 cities in the given provinces in 1600 AD
+		# UHV 2: Control 12 cities in the given provinces in 1600AD
 		if (iGameTurn == xml.i1600AD and pPoland.getUHV( 1 ) == -1 ):
 			iNumCities = 0
 			for iProv in tPolishControl:
@@ -1300,7 +1300,7 @@ class Victory:
 
 	def checkMorocco( self, iGameTurn ):
 
-		# UHV 1: Control Morocco, Marrakesh, Fez, Tetouan, Oran, Algiers, Ifriqiya, Andalusia, Valencia and the Balearic Islands in 1227AD
+		# UHV 1: Control Morocco, Marrakesh, Fez, Tetouan, Oran, Algiers, Ifriqiya, Andalusia, Valencia and the Balearic Islands in 1227
 		if (iGameTurn == xml.i1227AD and pMorocco.getUHV( 0 ) == -1 ):
 			bConq = True
 			for iProv in tMoroccoControl:
@@ -1313,7 +1313,7 @@ class Victory:
 			else:
 				pMorocco.setUHV( 0, 0 )
 
-		# UHV 2: Have 5000 culture in each of three cities in 1465AD
+		# UHV 2: Have 5000 culture in each of three cities in 1465
 		if (iGameTurn == xml.i1465AD and pMorocco.getUHV( 1 ) == -1):
 			iGoodCities = 0
 			apCityList = PyPlayer(iMorocco).getCityList()
@@ -1328,7 +1328,7 @@ class Victory:
 			else:
 				pMorocco.setUHV( 1, 0 )
 
-		# UHV 3: Collapse or vassalize Portugal, Spain, and Aragon by 1578AD
+		# UHV 3: Destroy or vassalize Portugal, Spain, and Aragon by 1578
 		if (iGameTurn >= xml.i1164AD and iGameTurn <= xml.i1578AD and pMorocco.getUHV( 2 ) == -1):
 			bConq = True
 			if ( pSpain.isAlive() and (not teamSpain.isVassal( teamMorocco.getID() )) ):
@@ -1456,7 +1456,7 @@ class Victory:
 
 	def checkLithuania( self, iGameTurn ):
 
-		# UHV 1: Accumulate 2000 Culture points without declaring state religion before 1386
+		# UHV 1: Accumulate 2000 Culture points without declaring a state religion before 1386
 		iCulture = pLithuania.getUHVCounter( 0 ) + pLithuania.countCultureProduced()
 		pLithuania.setUHVCounter( 0, iCulture )
 		if ( iGameTurn <= xml.i1386AD and pLithuania.getUHV( 0 ) == -1 ):
@@ -1476,7 +1476,7 @@ class Victory:
 			else:
 				pLithuania.setUHV( 1, 0 )
 
-		# UHV 3: Conquer or Vassalize Moscow
+		# UHV 3: Conquer the province of Moscow or vassalize Muscovy
 		if ( pLithuania.getUHV( 2 ) == -1 ):
 			if ( pMoscow.isAlive() and teamMoscow.isVassal( teamLithuania.getID() ) ):
 				pLithuania.setUHV( 2, 1 )
