@@ -144,11 +144,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BYZ2</Tag>
-		<English>[COLOR_YELLOW]Reliving the Roman Glory:[COLOR_REVERT] Keep or reconquer the Balkans and Anatolia in 1282AD.</English>
-		<French>[COLOR_YELLOW]Reliving the Roman Glory:[COLOR_REVERT] Keep or reconquer the Balkans and Anatolia in 1282AD.</French>
+		<English>[COLOR_YELLOW]Reliving the Roman Glory:[COLOR_REVERT] Control the Balkans and Anatolia in 1282AD.</English>
+		<French>[COLOR_YELLOW]Reliving the Roman Glory:[COLOR_REVERT] Control the Balkans and Anatolia in 1282AD.</French>
 		<German>[COLOR_YELLOW]Wiederbelebung des Römischen Glanzes:[COLOR_REVERT] Behaltet oder erobert bis 1282 n.Chr. dem Balkan und Anatolien.</German>
 		<Italian>[COLOR_YELLOW]Rivivere la Gloria di Roma:[COLOR_REVERT] Mantieni o riconquista di nei Balcani e l'Anatolia nel 1282AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Reliving the Roman Glory:[COLOR_REVERT] Keep or reconquer the Balkans and Anatolia in 1282AD.</Spanish>
+		<Spanish>[COLOR_YELLOW]Reliving the Roman Glory:[COLOR_REVERT] Control the Balkans and Anatolia in 1282AD.</Spanish>
 		<Portuguese>[COLOR_YELLOW]Revivendo a Glória Romana:[COLOR_REVERT] Mantenha ou reconquiste os Balcãs e Anatolia em 1282DC.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -171,21 +171,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUL2</Tag>
-		<English>[COLOR_YELLOW]The Beginning of the Renaissance:[COLOR_REVERT] Accumulate at least 100 Orthodox Faith Points by 1259AD</English>
-		<French>[COLOR_YELLOW]The Beginning of the Renaissance:[COLOR_REVERT] Accumulate at least 100 Orthodox Faith Points by 1259AD</French>
+		<English>[COLOR_YELLOW]The Beginning of the Renaissance:[COLOR_REVERT] Accumulate at least 100 Orthodox Faith Points by 1259AD.</English>
+		<French>[COLOR_YELLOW]The Beginning of the Renaissance:[COLOR_REVERT] Accumulate at least 100 Orthodox Faith Points by 1259AD.</French>
 		<German>[COLOR_YELLOW]Der Beginn der Renaissance:[COLOR_REVERT] Sammelt bis 1259 n.Chr. mindestens 100 orthodoxe Glaubenspunkte.</German>
 		<Italian>[COLOR_YELLOW]L'Inizio del Rinascimento:[COLOR_REVERT] Accumula almeno 100 Punti Fede Ortodossi entro il 1259AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The Beginning of the Renaissance:[COLOR_REVERT] Accumulate at least 100 Orthodox Faith Points by 1259AD</Spanish>
-		<Portuguese>[COLOR_YELLOW]O Começo da Renascença:[COLOR_REVERT] Acumule pelo menos 100 Pontos de Fé Ortodoxa até 1259DC</Portuguese>
+		<Spanish>[COLOR_YELLOW]The Beginning of the Renaissance:[COLOR_REVERT] Accumulate at least 100 Orthodox Faith Points by 1259AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]O Começo da Renascença:[COLOR_REVERT] Acumule pelo menos 100 Pontos de Fé Ortodoxa até 1259DC.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUL3</Tag>
-		<English>[COLOR_YELLOW]Not Even the Birds Can Fly Through:[COLOR_REVERT] Do not lose a city to barbarians (Mongols), Byzantines, or Ottomans before 1393AD.</English>
-		<French>[COLOR_YELLOW]Not Even the Birds Can Fly Through:[COLOR_REVERT] Ne perdre aucune ville par les Mongoles, les Byzantins ou les Ottomans avant 1393 ap.JC.</French>
-		<German>[COLOR_YELLOW]Nicht Einmal Vögel Können es Durchqueren:[COLOR_REVERT] Verliert vor 1393 n.Chr. keine Stadt an die Barbaren (Mongolen), die Byzantiner oder Osmanen.</German>
-		<Italian>[COLOR_YELLOW]Neanche gli uccelli possono attraversare le nostre mura:[COLOR_REVERT] Non farti conquistare nessuna città da Mongoli (Barbari), Bizantini o Ottomani prima del 1393AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Not Even the Birds Can Fly Through:[COLOR_REVERT] Do not lose a city to barbarians (Mongols), Byzantines, or Ottomans before 1393AD.</Spanish>
-		<Portuguese>[COLOR_YELLOW]Nem Mesmo os Pássaros Conseguem Passar:[COLOR_REVERT] Não perca cidades para os bárbaros (Mongóis), Bizantinos, ou Otomanos antes de 1393DC.</Portuguese>
+		<English>[COLOR_YELLOW]Not Even the Birds Can Fly Through:[COLOR_REVERT] Do not lose a city to barbarians (Mongols), Byzantines, or Ottomans before 1396AD.</English>
+		<French>[COLOR_YELLOW]Not Even the Birds Can Fly Through:[COLOR_REVERT] Ne perdre aucune ville par les Mongoles, les Byzantins ou les Ottomans avant 1396 ap.JC.</French>
+		<German>[COLOR_YELLOW]Nicht Einmal Vögel Können es Durchqueren:[COLOR_REVERT] Verliert vor 1396 n.Chr. keine Stadt an die Barbaren (Mongolen), die Byzantiner oder Osmanen.</German>
+		<Italian>[COLOR_YELLOW]Neanche gli uccelli possono attraversare le nostre mura:[COLOR_REVERT] Non farti conquistare nessuna città da Mongoli (Barbari), Bizantini o Ottomani prima del 1396AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Not Even the Birds Can Fly Through:[COLOR_REVERT] Do not lose a city to barbarians (Mongols), Byzantines, or Ottomans before 1396AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]Nem Mesmo os Pássaros Conseguem Passar:[COLOR_REVERT] Não perca cidades para os bárbaros (Mongóis), Bizantinos, ou Otomanos antes de 1396DC.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_FRA1</Tag>
@@ -225,20 +225,20 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUR2</Tag>
-		<English>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Picardy, Flanders, Champagne and Lorraine in 1376AD.</English>
-		<French>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Picardy, Flanders, Champagne and Lorraine in 1376AD.</French>
+		<English>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Control Burgundy, Provence, Picardy, Flanders, Champagne and Lorraine in 1376AD.</English>
+		<French>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Control Burgundy, Provence, Picardy, Flanders, Champagne and Lorraine in 1376AD.</French>
 		<German>[COLOR_YELLOW]Wiedervereinigung:[COLOR_REVERT] Erobert bis 1376 n.Chr. Burgund, Provence, Picardie, Flandern, Champagne und Lothringen.</German>
 		<Italian>[COLOR_YELLOW]Riunificazione:[COLOR_REVERT] Controlla le province di Borgogna, Provenza, Piccardia, Fiandre, Champagne e Lorena nel 1376AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Conquer Burgundy, Provence, Picardy, Flanders, Champagne and Lorraine in 1376AD.</Spanish>
+		<Spanish>[COLOR_YELLOW]Reunification:[COLOR_REVERT] Control Burgundy, Provence, Picardy, Flanders, Champagne and Lorraine in 1376AD.</Spanish>
 		<Portuguese>[COLOR_YELLOW]Reunificação:[COLOR_REVERT] Conquiste Borgonha, Provença, Picardia, Flandres, Champagne e Lorena em 1376DC.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUR3</Tag>
-		<English>[COLOR_YELLOW]The Western Power:[COLOR_REVERT] Have higher score than France, England and Germany in 1473AD.</English>
-		<French>[COLOR_YELLOW]The Western Power:[COLOR_REVERT] Have higher score than France, England and Germany in 1473AD.</French>
+		<English>[COLOR_YELLOW]The Western Power:[COLOR_REVERT] Have a higher score than France, England and Germany in 1473AD.</English>
+		<French>[COLOR_YELLOW]The Western Power:[COLOR_REVERT] Have a higher score than France, England and Germany in 1473AD.</French>
 		<German>[COLOR_YELLOW]Die Macht im Westen:[COLOR_REVERT] Erreicht 1473 n.Chr. eine höhere Punktzahl als Frankreich, England und Deutschland.</German>
 		<Italian>[COLOR_YELLOW]La Potenza dell'Occidente:[COLOR_REVERT] Devi avere il punteggio più alto di Francia, Inghilterra e Germania nel 1473AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The Western Power:[COLOR_REVERT] Have higher score than France, England and Germany in 1473AD.</Spanish>
+		<Spanish>[COLOR_YELLOW]The Western Power:[COLOR_REVERT] Have a higher score than France, England and Germany in 1473AD.</Spanish>
 		<Portuguese>[COLOR_YELLOW]A Potência Ocidental:[COLOR_REVERT] Tenha uma colocação (score) melhor que França, Inglaterra e Alemanha em 1473DC.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -288,20 +288,20 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_COR3</Tag>
-		<English>[COLOR_YELLOW]Ummah of Iberia:[COLOR_REVERT] Have Islam spread in every city in the Iberian peninsula in 1492AD.</English>
-		<French>[COLOR_YELLOW]Ummah of Iberia:[COLOR_REVERT] Have Islam spread in every city in the Iberian peninsula in 1492AD.</French>
+		<English>[COLOR_YELLOW]Ummah of Iberia:[COLOR_REVERT] Make sure Islam is present in every city in the Iberian peninsula in 1492AD.</English>
+		<French>[COLOR_YELLOW]Ummah of Iberia:[COLOR_REVERT] Make sure Islam is present in every city in the Iberian peninsula in 1492AD.</French>
 		<German>[COLOR_YELLOW]Ummah von Iberien:[COLOR_REVERT] Verbreitet bis 1492 n.Chr. den Islam in allen Städten in die Iberische Halbinsel.</German>
 		<Italian>[COLOR_YELLOW]Ummah d'Iberia:[COLOR_REVERT] L'Islam deve essere presente in ogni città nelle province della Penisola iberica nel 1492AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Ummah of Iberia:[COLOR_REVERT] Have Islam spread in every city in the Iberian peninsula in 1492AD.</Spanish>
+		<Spanish>[COLOR_YELLOW]Ummah of Iberia:[COLOR_REVERT] Make sure Islam is present in every city in the Iberian peninsula in 1492AD.</Spanish>
 		<Portuguese>[COLOR_YELLOW]Ummah da Ibéria:[COLOR_REVERT] Garanta a presença do Islã em todas cidades em Península Ibérica em 1492DC.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SPN1</Tag>
-		<English>[COLOR_YELLOW]The Reconquista:[COLOR_REVERT] Make Catholicism the only religion in the Iberian peninsula, and spread catholicism to all the cities in the Iberian peninsula in 1492AD.</English>
-		<French>[COLOR_YELLOW]The Reconquista:[COLOR_REVERT] Make Catholicism the only religion in the Iberian peninsula, and spread catholicism to all the cities in the Iberian peninsula in 1492AD.</French>
+		<English>[COLOR_YELLOW]The Reconquista:[COLOR_REVERT] Make sure Catholicism is the only religion present in every city in the Iberian peninsula in 1492AD.</English>
+		<French>[COLOR_YELLOW]The Reconquista:[COLOR_REVERT] Make sure Catholicism is the only religion present in every city in the Iberian peninsula in 1492AD.</French>
 		<German>[COLOR_YELLOW]Die Reconquista:[COLOR_REVERT] Macht Katholizismus zur alleinigen Religion auf der Iberischen Halbinsel und verbreitet bis 1492 n.Chr. den katholischen Glauben in allen Städten in die Iberische Halbinsel.</German>
 		<Italian>[COLOR_YELLOW]La Reconquista:[COLOR_REVERT] Rendi il Cattolicesimo l'unica religione presente nella penisola Iberica, e diffondilo in tutte le città delle province della Penisola iberica nel 1492AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The Reconquista:[COLOR_REVERT] Make Catholicism the only religion in the Iberian peninsula, and spread catholicism to all the cities in the Iberian peninsula in 1492AD.</Spanish>
+		<Spanish>[COLOR_YELLOW]The Reconquista:[COLOR_REVERT] Make sure Catholicism is the only religion present in every city in the Iberian peninsula in 1492AD.</Spanish>
 		<Portuguese>[COLOR_YELLOW]A Reconquista:[COLOR_REVERT] Faça do Catolicismo a única religião presente na Península Ibérica, e espalhe o catolicismo para todas as cidades em Península Ibérica em 1492DC.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -388,11 +388,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_KIE2</Tag>
-		<English>[COLOR_YELLOW]Rulers of the northern Black Sea:[COLOR_REVERT] Conquer 10 provinces from Kiev, Podolia, Pereyaslavl, Sloboda, Chernigov, Volhynia, Minsk, Polotsk, Smolensk, Moscow, Murom, Rostov, Novgorod and Vologda in 1288AD.</English>
-		<French>[COLOR_YELLOW]Rulers of the northern Black Sea:[COLOR_REVERT] Conquer 10 provinces from Kiev, Podolia, Pereyaslavl, Sloboda, Chernigov, Volhynia, Minsk, Polotsk, Smolensk, Moscow, Murom, Rostov, Novgorod and Vologda in 1288AD.</French>
+		<English>[COLOR_YELLOW]Rulers of the northern Black Sea:[COLOR_REVERT] Control 10 provinces out of Kiev, Podolia, Pereyaslavl, Sloboda, Chernigov, Volhynia, Minsk, Polotsk, Smolensk, Moscow, Murom, Rostov, Novgorod and Vologda in 1288AD.</English>
+		<French>[COLOR_YELLOW]Rulers of the northern Black Sea:[COLOR_REVERT] Control 10 provinces out of Kiev, Podolia, Pereyaslavl, Sloboda, Chernigov, Volhynia, Minsk, Polotsk, Smolensk, Moscow, Murom, Rostov, Novgorod and Vologda in 1288AD.</French>
 		<German>[COLOR_YELLOW]Herrscher des nördlichen Schwarzen Meeres:[COLOR_REVERT] Erobert bis 1288 n.Chr. 10 Provinzen aus Kiev, Podolien, Pereyaslawl, Sloboda, Tschernigow, Wolhynien, Minsk, Polotsk, Smolensk, Moscow, Murom, Rostov, Nowgorod und Vologda.</German>
 		<Italian>[COLOR_YELLOW]Dominatore del Mar Nero settentrionale:[COLOR_REVERT] Controlla 10 province tra le seguenti: Kiev, Podolia, Pereyaslavl, Sloboda, Chernihiv, Volinia, Minsk, Polack, Smolensk, Moscow, Murom, Rostov, Novgorod e Vologda nel 1288AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Rulers of the northern Black Sea:[COLOR_REVERT] Conquer 10 provinces from Kiev, Podolia, Pereyaslavl, Sloboda, Chernigov, Volhynia, Minsk, Polotsk, Smolensk, Moscow, Murom, Rostov, Novgorod and Vologda in 1288AD.</Spanish>
+		<Spanish>[COLOR_YELLOW]Rulers of the northern Black Sea:[COLOR_REVERT] Control 10 provinces out of Kiev, Podolia, Pereyaslavl, Sloboda, Chernigov, Volhynia, Minsk, Polotsk, Smolensk, Moscow, Murom, Rostov, Novgorod and Vologda in 1288AD.</Spanish>
 		<Portuguese>[COLOR_YELLOW]Lordes do Norte do Mar Negro:[COLOR_REVERT] Conquiste 10 províncias entre Kiev, Podólia, Pereyaslavl, Sloboda, Chernigov, Volínia, Minsk, Polotsk, Smolensk, Moscow, Murom, Rostov, Novgorod e Vologda em 1288DC.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -406,11 +406,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_LIT1</Tag>
-		<English>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 2000 Culture points without declaring state religion before 1386AD.</English>
-		<French>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 2000 Culture points without declaring state religion before 1386AD.</French>
+		<English>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 2000 Culture points without declaring a state religion before 1386AD.</English>
+		<French>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 2000 Culture points without declaring a state religion before 1386AD.</French>
 		<German>[COLOR_YELLOW]Heidentum:[COLOR_REVERT] Sammelt bis 1386 n.Chr. 2000 Kulturpunkte ohne eine Staatsreligion zu deklarieren.</German>
 		<Italian>[COLOR_YELLOW]Paganesimo:[COLOR_REVERT] Accumula 2000 punti Cultura senza dichiarare alcuna Religione Ufficiale entro il 1386AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 2000 Culture points without declaring state religion before 1386AD.</Spanish>
+		<Spanish>[COLOR_YELLOW]Paganism:[COLOR_REVERT] Accumulate 2000 Culture points without declaring a state religion before 1386AD.</Spanish>
 		<Portuguese>[COLOR_YELLOW]Paganismo:[COLOR_REVERT] Acumule 2000 pontos de cultura sem declarar religião estatal antes de 1386DC.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -424,11 +424,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_LIT3</Tag>
-		<English>[COLOR_YELLOW]The Domination of Eastern Europe:[COLOR_REVERT] Conquer or Vassalize Moscow.</English>
-		<French>[COLOR_YELLOW]The Domination of Eastern Europe:[COLOR_REVERT] Conquer or Vassalize Moscow.</French>
+		<English>[COLOR_YELLOW]The Domination of Eastern Europe:[COLOR_REVERT] Conquer the province of Moscow or vassalize Muscovy.</English>
+		<French>[COLOR_YELLOW]The Domination of Eastern Europe:[COLOR_REVERT] Conquer the province of Moscow or vassalize Muscovy.</French>
 		<German>[COLOR_YELLOW]Die Osteuropäische Dominanz:[COLOR_REVERT] Erobert oder unterwerft Moskau.</German>
 		<Italian>[COLOR_YELLOW]Il Dominio dell'Europa Orientale:[COLOR_REVERT] Conquista o vassallizza Mosca.</Italian>
-		<Spanish>[COLOR_YELLOW]The Domination of Eastern Europe:[COLOR_REVERT] Conquer or Vassalize Moscow.</Spanish>
+		<Spanish>[COLOR_YELLOW]The Domination of Eastern Europe:[COLOR_REVERT] Conquer the province of Moscow or vassalize Muscovy.</Spanish>
 		<Portuguese>[COLOR_YELLOW]Dominação da Europa Oriental:[COLOR_REVERT] Conquiste ou avassale Moscou.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -478,16 +478,16 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GER3</Tag>
-		<English>[COLOR_YELLOW]The Thirty-Year War:[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Holstein, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria in 1648AD.</English>
-		<French>[COLOR_YELLOW]The Thirty-Year War:[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Holstein, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria in 1648AD.</French>
+		<English>[COLOR_YELLOW]The Thirty Years' War:[COLOR_REVERT] Control Swabia, Saxony, Bavaria, Franconia, Brandenburg, Holstein, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria in 1648AD.</English>
+		<French>[COLOR_YELLOW]The Thirty Years' War:[COLOR_REVERT] Control Swabia, Saxony, Bavaria, Franconia, Brandenburg, Holstein, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria in 1648AD.</French>
 		<German>[COLOR_YELLOW]Der Dreißigjährige Krieg:[COLOR_REVERT] Erobert bis 1648 n.Chr. Schwaben, Sachsen, Bayern, Franken, Brandenburg, Holstein, Flandern, Pommern, Schlesien, Böhmen, Mähren und Österreich.</German>
 		<Italian>[COLOR_YELLOW]La Guerra dei Trent'Anni:[COLOR_REVERT] Conquista le province di Svevia, Sassonia, Baviera, Franconia, Brandeburgo, Holstein, Fiandre, Pomerania, Silesia, Boemia, Moravia ed Austria entro il 1648AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The Thirty-Year War:[COLOR_REVERT] Conquer Swabia, Saxony, Bavaria, Franconia, Brandenburg, Holstein, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria in 1648AD.</Spanish>
+		<Spanish>[COLOR_YELLOW]The Thirty Years' War:[COLOR_REVERT] Control Swabia, Saxony, Bavaria, Franconia, Brandenburg, Holstein, Flanders, Pomerania, Silesia, Bohemia, Moravia and Austria in 1648AD.</Spanish>
 		<Portuguese>[COLOR_YELLOW]A Guerra dos Trinta Anos:[COLOR_REVERT] Conquiste Suábia, Saxônia, Baviera, Francônia, Brandemburgo, Holstein, Flandres, Silésia, Boêmia, Morávia e Áustria em 1648DC.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POL1</Tag>
-		<English>[COLOR_YELLOW]The Granary of Europe:[COLOR_REVERT] Produce the most food at least one year between 1500 and 1520 AD.</English>
+		<English>[COLOR_YELLOW]The Granary of Europe:[COLOR_REVERT] Produce the most food at least one year between 1500AD and 1520AD.</English>
 		<French>[COLOR_YELLOW]The Granary of Europe:[COLOR_REVERT] Produce the most food at least one year between 1500 and 1520 AD.</French>
 		<German>[COLOR_YELLOW]Die Kornkammer Europas:[COLOR_REVERT] Produziert zwischen 1500 und 1520 n.Chr. mindestens ein Jahr lang die meiste Nahrung.</German>
 		<Italian>[COLOR_YELLOW]Il Granaio d'Europa:[COLOR_REVERT] Devi produrre la maggior quantità di cibo in almeno un turno tra il 1500 e 1520 AD.</Italian>
@@ -731,30 +731,30 @@
 	</TEXT>-->
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SWE1</Tag>
-		<English>[COLOR_YELLOW]The Eastern Lands:[COLOR_REVERT] Have six cities in Norrland, Österland and Karelia in 1323.</English>
-		<French>[COLOR_YELLOW]The Eastern Lands:[COLOR_REVERT] Have six cities in Norrland, Österland and Karelia in 1323.</French>
-		<German>[COLOR_YELLOW]The Eastern Lands:[COLOR_REVERT] Have six cities in Norrland, Österland and Karelia in 1323.</German>
-		<Italian>[COLOR_YELLOW]The Eastern Lands:[COLOR_REVERT] Have six cities in Norrland, Österland and Karelia in 1323.</Italian>
-		<Spanish>[COLOR_YELLOW]The Eastern Lands:[COLOR_REVERT] Have six cities in Norrland, Österland and Karelia in 1323.</Spanish>
-		<Portuguese>[COLOR_YELLOW]The Eastern Lands:[COLOR_REVERT] Have six cities in Norrland, Österland and Karelia in 1323.</Portuguese>
+		<English>[COLOR_YELLOW]The Eastern Lands:[COLOR_REVERT] Have six cities in Norrland, Österland and Karelia in 1323AD.</English>
+		<French>[COLOR_YELLOW]The Eastern Lands:[COLOR_REVERT] Have six cities in Norrland, Österland and Karelia in 1323AD.</French>
+		<German>[COLOR_YELLOW]The Eastern Lands:[COLOR_REVERT] Have six cities in Norrland, Österland and Karelia in 1323AD.</German>
+		<Italian>[COLOR_YELLOW]The Eastern Lands:[COLOR_REVERT] Have six cities in Norrland, Österland and Karelia in 1323AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Eastern Lands:[COLOR_REVERT] Have six cities in Norrland, Österland and Karelia in 1323AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]The Eastern Lands:[COLOR_REVERT] Have six cities in Norrland, Österland and Karelia in 1323AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SWE2</Tag>
-		<English>[COLOR_YELLOW]Lion of the North:[COLOR_REVERT] Raze 5 Catholic cities while being Protestant by 1660.</English>
-		<French>[COLOR_YELLOW]Lion of the North:[COLOR_REVERT] Raze 5 Catholic cities while being Protestant by 1660.</French>
-		<German>[COLOR_YELLOW]Lion of the North:[COLOR_REVERT] Raze 5 Catholic cities while being Protestant by 1660.</German>
-		<Italian>[COLOR_YELLOW]Lion of the North:[COLOR_REVERT] Raze 5 Catholic cities while being Protestant by 1660.</Italian>
-		<Spanish>[COLOR_YELLOW]Lion of the North:[COLOR_REVERT] Raze 5 Catholic cities while being Protestant by 1660.</Spanish>
-		<Portuguese>[COLOR_YELLOW]Lion of the North:[COLOR_REVERT] Raze 5 Catholic cities while being Protestant by 1660.</Portuguese>
+		<English>[COLOR_YELLOW]Lion of the North:[COLOR_REVERT] Raze 5 Catholic cities while being Protestant by 1660AD.</English>
+		<French>[COLOR_YELLOW]Lion of the North:[COLOR_REVERT] Raze 5 Catholic cities while being Protestant by 1660AD.</French>
+		<German>[COLOR_YELLOW]Lion of the North:[COLOR_REVERT] Raze 5 Catholic cities while being Protestant by 1660AD.</German>
+		<Italian>[COLOR_YELLOW]Lion of the North:[COLOR_REVERT] Raze 5 Catholic cities while being Protestant by 1660AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Lion of the North:[COLOR_REVERT] Raze 5 Catholic cities while being Protestant by 1660AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]Lion of the North:[COLOR_REVERT] Raze 5 Catholic cities while being Protestant by 1660AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SWE3</Tag>
-		<English>[COLOR_YELLOW]Dominium Maris Baltici:[COLOR_REVERT] Control every coastal city on the Baltic in 1750.</English>
-		<French>[COLOR_YELLOW]Dominium Maris Baltici:[COLOR_REVERT] Control every coastal city on the Baltic in 1750.</French>
-		<German>[COLOR_YELLOW]Dominium Maris Baltici:[COLOR_REVERT] Control every coastal city on the Baltic in 1750.</German>
-		<Italian>[COLOR_YELLOW]Dominium Maris Baltici:[COLOR_REVERT] Control every coastal city on the Baltic in 1750.</Italian>
-		<Spanish>[COLOR_YELLOW]Dominium Maris Baltici:[COLOR_REVERT] Control every coastal city on the Baltic in 1750.</Spanish>
-		<Portuguese>[COLOR_YELLOW]Dominium Maris Baltici:[COLOR_REVERT] Control every coastal city on the Baltic in 1750.</Portuguese>
+		<English>[COLOR_YELLOW]Dominium Maris Baltici:[COLOR_REVERT] Control every coastal city on the Baltic in 1750AD.</English>
+		<French>[COLOR_YELLOW]Dominium Maris Baltici:[COLOR_REVERT] Control every coastal city on the Baltic in 1750AD.</French>
+		<German>[COLOR_YELLOW]Dominium Maris Baltici:[COLOR_REVERT] Control every coastal city on the Baltic in 1750AD.</German>
+		<Italian>[COLOR_YELLOW]Dominium Maris Baltici:[COLOR_REVERT] Control every coastal city on the Baltic in 1750AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Dominium Maris Baltici:[COLOR_REVERT] Control every coastal city on the Baltic in 1750AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]Dominium Maris Baltici:[COLOR_REVERT] Control every coastal city on the Baltic in 1750AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOR1</Tag>
@@ -767,39 +767,39 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOR2</Tag>
-		<English>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer The Isles, Ireland, Scotland, Normandy, Sicily, Apulia, Calabria, Iceland by 1194AD.</English>
-		<French>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer The Isles, Ireland, Scotland, Normandy, Sicily, Apulia, Calabria, Iceland by 1194AD.</French>
-		<German>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer The Isles, Ireland, Scotland, Normandy, Sicily, Apulia, Calabria, Iceland by 1194AD.</German>
-		<Italian>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer The Isles, Ireland, Scotland, Normandy, Sicily, Apulia, Calabria, Iceland by 1194AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer The Isles, Ireland, Scotland, Normandy, Sicily, Apulia, Calabria, Iceland by 1194AD.</Spanish>
-		<Portuguese>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer The Isles, Ireland, Scotland, Normandy, Sicily, Apulia, Calabria, Iceland by 1194AD.</Portuguese>
+		<English>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer The Isles, Ireland, Scotland, Normandy, Sicily, Apulia, Calabria and Iceland by 1194AD.</English>
+		<French>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer The Isles, Ireland, Scotland, Normandy, Sicily, Apulia, Calabria and Iceland by 1194AD.</French>
+		<German>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer The Isles, Ireland, Scotland, Normandy, Sicily, Apulia, Calabria and Iceland by 1194AD.</German>
+		<Italian>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer The Isles, Ireland, Scotland, Normandy, Sicily, Apulia, Calabria and Iceland by 1194AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer The Isles, Ireland, Scotland, Normandy, Sicily, Apulia, Calabria and Iceland by 1194AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]Conquerors:[COLOR_REVERT] Conquer The Isles, Ireland, Scotland, Normandy, Sicily, Apulia, Calabria and Iceland by 1194AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOR3</Tag>
-		<English>[COLOR_YELLOW]Statesmen:[COLOR_REVERT] Have higher score than Sweden, Denmark, Scotland, England, Germany and France in 1320AD.</English>
-		<French>[COLOR_YELLOW]Statesmen:[COLOR_REVERT] Have higher score than Sweden, Denmark, Scotland, England, Germany and France in 1320AD.</French>
-		<German>[COLOR_YELLOW]Statesmen:[COLOR_REVERT] Have higher score than Sweden, Denmark, Scotland, England, Germany and France in 1320AD.</German>
-		<Italian>[COLOR_YELLOW]Statesmen:[COLOR_REVERT] Have higher score than Sweden, Denmark, Scotland, England, Germany and France in 1320AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Statesmen:[COLOR_REVERT] Have higher score than Sweden, Denmark, Scotland, England, Germany and France in 1320AD.</Spanish>
-		<Portuguese>[COLOR_YELLOW]Statesmen:[COLOR_REVERT] Have higher score than Sweden, Denmark, Scotland, England, Germany and France in 1320AD.</Portuguese>
+		<English>[COLOR_YELLOW]Statesmen:[COLOR_REVERT] Have a higher score than Sweden, Denmark, Scotland, England, Germany and France in 1320AD.</English>
+		<French>[COLOR_YELLOW]Statesmen:[COLOR_REVERT] Have a higher score than Sweden, Denmark, Scotland, England, Germany and France in 1320AD.</French>
+		<German>[COLOR_YELLOW]Statesmen:[COLOR_REVERT] Have a higher score than Sweden, Denmark, Scotland, England, Germany and France in 1320AD.</German>
+		<Italian>[COLOR_YELLOW]Statesmen:[COLOR_REVERT] Have a higher score than Sweden, Denmark, Scotland, England, Germany and France in 1320AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Statesmen:[COLOR_REVERT] Have a higher score than Sweden, Denmark, Scotland, England, Germany and France in 1320AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]Statesmen:[COLOR_REVERT] Have a higher score than Sweden, Denmark, Scotland, England, Germany and France in 1320AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_DEN1</Tag>
-		<English>[COLOR_YELLOW]North Sea Empire:[COLOR_REVERT] Control Denmark, Skaneland, Götaland, Svealand, Mercia, London, Northumbria and East Anglia in 1050.</English>
-		<French>[COLOR_YELLOW]North Sea Empire:[COLOR_REVERT] Control Denmark, Skaneland, Götaland, Svealand, Mercia, London, Northumbria and East Anglia in 1050.</French>
-		<German>[COLOR_YELLOW]North Sea Empire:[COLOR_REVERT] Control Denmark, Skaneland, Götaland, Svealand, Mercia, London, Northumbria and East Anglia in 1050.</German>
-		<Italian>[COLOR_YELLOW]North Sea Empire:[COLOR_REVERT] Control Denmark, Skaneland, Götaland, Svealand, Mercia, London, Northumbria and East Anglia in 1050.</Italian>
-		<Spanish>[COLOR_YELLOW]North Sea Empire:[COLOR_REVERT] Control Denmark, Skaneland, Götaland, Svealand, Mercia, London, Northumbria and East Anglia in 1050.</Spanish>
-		<Portuguese>[COLOR_YELLOW]North Sea Empire:[COLOR_REVERT] Control Denmark, Skaneland, Götaland, Svealand, Mercia, London, Northumbria and East Anglia in 1050.</Portuguese>
+		<English>[COLOR_YELLOW]North Sea Empire:[COLOR_REVERT] Control Denmark, Skaneland, Götaland, Svealand, Mercia, London, Northumbria and East Anglia in 1050AD.</English>
+		<French>[COLOR_YELLOW]North Sea Empire:[COLOR_REVERT] Control Denmark, Skaneland, Götaland, Svealand, Mercia, London, Northumbria and East Anglia in 1050AD.</French>
+		<German>[COLOR_YELLOW]North Sea Empire:[COLOR_REVERT] Control Denmark, Skaneland, Götaland, Svealand, Mercia, London, Northumbria and East Anglia in 1050AD.</German>
+		<Italian>[COLOR_YELLOW]North Sea Empire:[COLOR_REVERT] Control Denmark, Skaneland, Götaland, Svealand, Mercia, London, Northumbria and East Anglia in 1050AD.</Italian>
+		<Spanish>[COLOR_YELLOW]North Sea Empire:[COLOR_REVERT] Control Denmark, Skaneland, Götaland, Svealand, Mercia, London, Northumbria and East Anglia in 1050AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]North Sea Empire:[COLOR_REVERT] Control Denmark, Skaneland, Götaland, Svealand, Mercia, London, Northumbria and East Anglia in 1050AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_DEN2</Tag>
-		<English>[COLOR_YELLOW]Kalmar Union:[COLOR_REVERT] Control Denmark, Norway, Vestfold, Skaneland, Götaland, Svealand, Norrland, Gotland, Österland, Estonia and Iceland in 1523.</English>
-		<French>[COLOR_YELLOW]Kalmar Union:[COLOR_REVERT] Control Denmark, Norway, Vestfold, Skaneland, Götaland, Svealand, Norrland, Gotland, Österland, Estonia and Iceland in 1523.</French>
-		<German>[COLOR_YELLOW]Kalmar Union:[COLOR_REVERT] Control Denmark, Norway, Vestfold, Skaneland, Götaland, Svealand, Norrland, Gotland, Österland, Estonia and Iceland in 1523.</German>
-		<Italian>[COLOR_YELLOW]Kalmar Union:[COLOR_REVERT] Control Denmark, Norway, Vestfold, Skaneland, Götaland, Svealand, Norrland, Gotland, Österland, Estonia and Iceland in 1523.</Italian>
-		<Spanish>[COLOR_YELLOW]Kalmar Union:[COLOR_REVERT] Control Denmark, Norway, Vestfold, Skaneland, Götaland, Svealand, Norrland, Gotland, Österland, Estonia and Iceland in 1523.</Spanish>
-		<Portuguese>[COLOR_YELLOW]Kalmar Union:[COLOR_REVERT] Control Denmark, Norway, Vestfold, Skaneland, Götaland, Svealand, Norrland, Gotland, Österland, Estonia and Iceland in 1523.</Portuguese>
+		<English>[COLOR_YELLOW]Kalmar Union:[COLOR_REVERT] Control Denmark, Norway, Vestfold, Skaneland, Götaland, Svealand, Norrland, Gotland, Österland, Estonia and Iceland in 1523AD.</English>
+		<French>[COLOR_YELLOW]Kalmar Union:[COLOR_REVERT] Control Denmark, Norway, Vestfold, Skaneland, Götaland, Svealand, Norrland, Gotland, Österland, Estonia and Iceland in 1523AD.</French>
+		<German>[COLOR_YELLOW]Kalmar Union:[COLOR_REVERT] Control Denmark, Norway, Vestfold, Skaneland, Götaland, Svealand, Norrland, Gotland, Österland, Estonia and Iceland in 1523AD.</German>
+		<Italian>[COLOR_YELLOW]Kalmar Union:[COLOR_REVERT] Control Denmark, Norway, Vestfold, Skaneland, Götaland, Svealand, Norrland, Gotland, Österland, Estonia and Iceland in 1523AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Kalmar Union:[COLOR_REVERT] Control Denmark, Norway, Vestfold, Skaneland, Götaland, Svealand, Norrland, Gotland, Österland, Estonia and Iceland in 1523AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]Kalmar Union:[COLOR_REVERT] Control Denmark, Norway, Vestfold, Skaneland, Götaland, Svealand, Norrland, Gotland, Österland, Estonia and Iceland in 1523AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_DEN3</Tag>
@@ -812,30 +812,30 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOV1</Tag>
-		<English>[COLOR_YELLOW]Defender of Rus':[COLOR_REVERT] Control Novgorod, Karelia, Estonia and Livonia in 1284.</English>
-		<French>[COLOR_YELLOW]Defender of Rus':[COLOR_REVERT] Control Novgorod, Karelia, Estonia and Livonia in 1284.</French>
-		<German>[COLOR_YELLOW]Defender of Rus':[COLOR_REVERT] Control Novgorod, Karelia, Estonia and Livonia in 1284.</German>
-		<Italian>[COLOR_YELLOW]Defender of Rus':[COLOR_REVERT] Control Novgorod, Karelia, Estonia and Livonia in 1284.</Italian>
-		<Spanish>[COLOR_YELLOW]Defender of Rus':[COLOR_REVERT] Control Novgorod, Karelia, Estonia and Livonia in 1284.</Spanish>
-		<Portuguese>[COLOR_YELLOW]Defender of Rus':[COLOR_REVERT] Control Novgorod, Karelia, Estonia and Livonia in 1284.</Portuguese>
+		<English>[COLOR_YELLOW]Defender of Rus':[COLOR_REVERT] Control Novgorod, Karelia, Estonia and Livonia in 1284AD.</English>
+		<French>[COLOR_YELLOW]Defender of Rus':[COLOR_REVERT] Control Novgorod, Karelia, Estonia and Livonia in 1284AD.</French>
+		<German>[COLOR_YELLOW]Defender of Rus':[COLOR_REVERT] Control Novgorod, Karelia, Estonia and Livonia in 1284AD.</German>
+		<Italian>[COLOR_YELLOW]Defender of Rus':[COLOR_REVERT] Control Novgorod, Karelia, Estonia and Livonia in 1284AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Defender of Rus':[COLOR_REVERT] Control Novgorod, Karelia, Estonia and Livonia in 1284AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]Defender of Rus':[COLOR_REVERT] Control Novgorod, Karelia, Estonia and Livonia in 1284AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOV2</Tag>
-		<English>[COLOR_YELLOW]The Fur Trade:[COLOR_REVERT] Control twelve sources of fur by 1397.</English>
-		<French>[COLOR_YELLOW]The Fur Trade:[COLOR_REVERT] Control twelve sources of fur by 1397.</French>
-		<German>[COLOR_YELLOW]The Fur Trade:[COLOR_REVERT] Control twelve sources of fur by 1397.</German>
-		<Italian>[COLOR_YELLOW]The Fur Trade:[COLOR_REVERT] Control twelve sources of fur by 1397.</Italian>
-		<Spanish>[COLOR_YELLOW]The Fur Trade:[COLOR_REVERT] Control twelve sources of fur by 1397.</Spanish>
-		<Portuguese>[COLOR_YELLOW]The Fur Trade:[COLOR_REVERT] Control twelve sources of fur by 1397.</Portuguese>
+		<English>[COLOR_YELLOW]The Fur Trade:[COLOR_REVERT] Control twelve sources of fur by 1397AD.</English>
+		<French>[COLOR_YELLOW]The Fur Trade:[COLOR_REVERT] Control twelve sources of fur by 1397AD.</French>
+		<German>[COLOR_YELLOW]The Fur Trade:[COLOR_REVERT] Control twelve sources of fur by 1397AD.</German>
+		<Italian>[COLOR_YELLOW]The Fur Trade:[COLOR_REVERT] Control twelve sources of fur by 1397AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Fur Trade:[COLOR_REVERT] Control twelve sources of fur by 1397AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]The Fur Trade:[COLOR_REVERT] Control twelve sources of fur by 1397AD.</Portuguese>
 	</TEXT>
  	<TEXT>
  		<Tag>TXT_KEY_UHV_NOV3</Tag>
- 		<English>[COLOR_YELLOW]The Great Hinterlands:[COLOR_REVERT] Have seven cities in Karelia and Vologda in 1478.</English>
- 		<French>[COLOR_YELLOW]The Great Hinterlands:[COLOR_REVERT] Have seven cities in Karelia and Vologda in 1478.</French>
- 		<German>[COLOR_YELLOW]The Great Hinterlands:[COLOR_REVERT] Have seven cities in Karelia and Vologda in 1478.</German>
- 		<Italian>[COLOR_YELLOW]The Great Hinterlands:[COLOR_REVERT] Have seven cities in Karelia and Vologda in 1478.</Italian>
- 		<Spanish>[COLOR_YELLOW]The Great Hinterlands:[COLOR_REVERT] Have seven cities in Karelia and Vologda in 1478.</Spanish>
- 		<Portuguese>[COLOR_YELLOW]The Great Hinterlands:[COLOR_REVERT] Have seven cities in Karelia and Vologda in 1478.</Portuguese>
+ 		<English>[COLOR_YELLOW]The Great Hinterlands:[COLOR_REVERT] Have seven cities in Karelia and Vologda in 1478AD.</English>
+ 		<French>[COLOR_YELLOW]The Great Hinterlands:[COLOR_REVERT] Have seven cities in Karelia and Vologda in 1478AD.</French>
+ 		<German>[COLOR_YELLOW]The Great Hinterlands:[COLOR_REVERT] Have seven cities in Karelia and Vologda in 1478AD.</German>
+ 		<Italian>[COLOR_YELLOW]The Great Hinterlands:[COLOR_REVERT] Have seven cities in Karelia and Vologda in 1478AD.</Italian>
+ 		<Spanish>[COLOR_YELLOW]The Great Hinterlands:[COLOR_REVERT] Have seven cities in Karelia and Vologda in 1478AD.</Spanish>
+ 		<Portuguese>[COLOR_YELLOW]The Great Hinterlands:[COLOR_REVERT] Have seven cities in Karelia and Vologda in 1478AD.</Portuguese>
  	</TEXT>
  	<TEXT>
 		<Tag>TXT_KEY_UHV_PRU1</Tag>
@@ -866,30 +866,30 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SCO1</Tag>
-		<English>[COLOR_YELLOW]Fortification:[COLOR_REVERT] Have 10 Forts and 4 Castles by 1296.</English>
-		<French>[COLOR_YELLOW]Fortification:[COLOR_REVERT] Have 10 Forts and 4 Castles by 1296.</French>
-		<German>[COLOR_YELLOW]Fortification:[COLOR_REVERT] Have 10 Forts and 4 Castles by 1296.</German>
-		<Italian>[COLOR_YELLOW]Fortification:[COLOR_REVERT] Have 10 Forts and 4 Castles by 1296.</Italian>
-		<Spanish>[COLOR_YELLOW]Fortification:[COLOR_REVERT] Have 10 Forts and 4 Castles by 1296.</Spanish>
-		<Portuguese>[COLOR_YELLOW]Fortification:[COLOR_REVERT] Have 10 Forts and 4 Castles by 1296.</Portuguese>
+		<English>[COLOR_YELLOW]Fortification:[COLOR_REVERT] Have 10 Forts and 4 Castles by 1296AD.</English>
+		<French>[COLOR_YELLOW]Fortification:[COLOR_REVERT] Have 10 Forts and 4 Castles by 1296AD.</French>
+		<German>[COLOR_YELLOW]Fortification:[COLOR_REVERT] Have 10 Forts and 4 Castles by 1296AD.</German>
+		<Italian>[COLOR_YELLOW]Fortification:[COLOR_REVERT] Have 10 Forts and 4 Castles by 1296AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Fortification:[COLOR_REVERT] Have 10 Forts and 4 Castles by 1296AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]Fortification:[COLOR_REVERT] Have 10 Forts and 4 Castles by 1296AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SCO2</Tag>
-		<English>[COLOR_YELLOW]The Auld Alliance:[COLOR_REVERT] Have 2500 Attitude points with France by 1560.</English>
-		<French>[COLOR_YELLOW]The Auld Alliance:[COLOR_REVERT] Have 2500 Attitude points with France by 1560.</French>
-		<German>[COLOR_YELLOW]The Auld Alliance:[COLOR_REVERT] Have 2500 Attitude points with France by 1560.</German>
-		<Italian>[COLOR_YELLOW]The Auld Alliance:[COLOR_REVERT] Have 2500 Attitude points with France by 1560.</Italian>
-		<Spanish>[COLOR_YELLOW]The Auld Alliance:[COLOR_REVERT] Have 2500 Attitude points with France by 1560.</Spanish>
-		<Portuguese>[COLOR_YELLOW]The Auld Alliance:[COLOR_REVERT] Have 2500 Attitude points with France by 1560.</Portuguese>
+		<English>[COLOR_YELLOW]The Auld Alliance:[COLOR_REVERT] Have 2500 Attitude points with France by 1560AD.</English>
+		<French>[COLOR_YELLOW]The Auld Alliance:[COLOR_REVERT] Have 2500 Attitude points with France by 1560AD.</French>
+		<German>[COLOR_YELLOW]The Auld Alliance:[COLOR_REVERT] Have 2500 Attitude points with France by 1560AD.</German>
+		<Italian>[COLOR_YELLOW]The Auld Alliance:[COLOR_REVERT] Have 2500 Attitude points with France by 1560AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Auld Alliance:[COLOR_REVERT] Have 2500 Attitude points with France by 1560AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]The Auld Alliance:[COLOR_REVERT] Have 2500 Attitude points with France by 1560AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SCO3</Tag>
-		<English>[COLOR_YELLOW]The Celtic Union:[COLOR_REVERT] Control Scotland, the Isles, Ireland, Wales and Bretagne in 1700.</English>
-		<French>[COLOR_YELLOW]The Celtic Union:[COLOR_REVERT] Control Scotland, the Isles, Ireland, Wales and Bretagne in 1700.</French>
-		<German>[COLOR_YELLOW]The Celtic Union:[COLOR_REVERT] Control Scotland, the Isles, Ireland, Wales and Bretagne in 1700.</German>
-		<Italian>[COLOR_YELLOW]The Celtic Union:[COLOR_REVERT] Control Scotland, the Isles, Ireland, Wales and Bretagne in 1700.</Italian>
-		<Spanish>[COLOR_YELLOW]The Celtic Union:[COLOR_REVERT] Control Scotland, the Isles, Ireland, Wales and Bretagne in 1700.</Spanish>
-		<Portuguese>[COLOR_YELLOW]The Celtic Union:[COLOR_REVERT] Control Scotland, the Isles, Ireland, Wales and Bretagne in 1700.</Portuguese>
+		<English>[COLOR_YELLOW]The Celtic Union:[COLOR_REVERT] Control Scotland, the Isles, Ireland, Wales and Bretagne in 1700AD.</English>
+		<French>[COLOR_YELLOW]The Celtic Union:[COLOR_REVERT] Control Scotland, the Isles, Ireland, Wales and Bretagne in 1700AD.</French>
+		<German>[COLOR_YELLOW]The Celtic Union:[COLOR_REVERT] Control Scotland, the Isles, Ireland, Wales and Bretagne in 1700AD.</German>
+		<Italian>[COLOR_YELLOW]The Celtic Union:[COLOR_REVERT] Control Scotland, the Isles, Ireland, Wales and Bretagne in 1700AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Celtic Union:[COLOR_REVERT] Control Scotland, the Isles, Ireland, Wales and Bretagne in 1700AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]The Celtic Union:[COLOR_REVERT] Control Scotland, the Isles, Ireland, Wales and Bretagne in 1700AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ARG1</Tag>
@@ -938,12 +938,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_MOR3</Tag>
-		<English>[COLOR_YELLOW]The Saadis:[COLOR_REVERT] Collapse or vassalize Portugal, Spain, and Aragon by 1578AD.</English>
-		<French>[COLOR_YELLOW]The Saadis:[COLOR_REVERT] Collapse or vassalize Portugal, Spain, and Aragon by 1578AD.</French>
-		<German>[COLOR_YELLOW]The Saadis:[COLOR_REVERT] Collapse or vassalize Portugal, Spain, and Aragon by 1578AD.</German>
-		<Italian>[COLOR_YELLOW]The Saadis:[COLOR_REVERT] Collapse or vassalize Portugal, Spain, and Aragon by 1578AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The Saadis:[COLOR_REVERT] Collapse or vassalize Portugal, Spain, and Aragon by 1578AD.</Spanish>
-		<Portuguese>[COLOR_YELLOW]The Saadis:[COLOR_REVERT] Collapse or vassalize Portugal, Spain, and Aragon by 1578AD.</Portuguese>
+		<English>[COLOR_YELLOW]The Saadis:[COLOR_REVERT] Destroy or vassalize Portugal, Spain, and Aragon by 1578AD.</English>
+		<French>[COLOR_YELLOW]The Saadis:[COLOR_REVERT] Destroy or vassalize Portugal, Spain, and Aragon by 1578AD.</French>
+		<German>[COLOR_YELLOW]The Saadis:[COLOR_REVERT] Destroy or vassalize Portugal, Spain, and Aragon by 1578AD.</German>
+		<Italian>[COLOR_YELLOW]The Saadis:[COLOR_REVERT] Destroy or vassalize Portugal, Spain, and Aragon by 1578AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Saadis:[COLOR_REVERT] Destroy or vassalize Portugal, Spain, and Aragon by 1578AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]The Saadis:[COLOR_REVERT] Destroy or vassalize Portugal, Spain, and Aragon by 1578AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POP1</Tag>
@@ -1387,13 +1387,22 @@
 		<Portuguese>You do not control the most colonies</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UHV_COLLAPSED_OR_VASSAL</Tag>
-		<English>Collapsed or vassalized</English>
-		<French>Collapsed or vassalized</French>
-		<German>Collapsed or vassalized</German>
-		<Italian>Collapsed or vassalized</Italian>
-		<Spanish>Collapsed or vassalized</Spanish>
-		<Portuguese>Collapsed or vassalized</Portuguese>
+		<Tag>TXT_KEY_UHV_COLLAPSE_OR_VASSALIZE</Tag>
+		<English>Destroyed or vassalized</English>
+		<French>Destroyed or vassalized</French>
+		<German>Destroyed or vassalized</German>
+		<Italian>Destroyed or vassalized</Italian>
+		<Spanish>Destroyed or vassalized</Spanish>
+		<Portuguese>Destroyed or vassalized</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_CONQUER_OR_VASSALIZE</Tag>
+		<English>Conquered or vassalized</English>
+		<French>Conquered or vassalized</French>
+		<German>Conquered or vassalized</German>
+		<Italian>Conquered or vassalized</Italian>
+		<Spanish>Conquered or vassalized</Spanish>
+		<Portuguese>Conquered or vassalized</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NO_INDUSTRIAL</Tag>
