@@ -1459,10 +1459,10 @@
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CORPORATION_4</Type>
-			<LSystem>LSYSTEM_COAST</LSystem>
+			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>1</bAnimated>
 			<fScale>0.94</fScale>
-			<fInterfaceScale>0.98</fInterfaceScale>
+			<fInterfaceScale>0.66</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Corporations/Hanseatic/medieval_house2.nif</NIF>
 			<KFM/>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,5,7</Button>
@@ -1496,6 +1496,26 @@
 			<NIF>Art/Structures/Wonders/Corporations/St_George/medieval_house2.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Corporations/Grimaldi.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_CORPORATION_8</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.28</fScale>
+			<fInterfaceScale>0.56</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Companies/Dragon/Military_Encampments.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Corporations/Dragon.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_CORPORATION_9</Type>
+			<LSystem>LSYSTEM_2x3</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>2.1</fScale>
+			<fInterfaceScale>0.56</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Companies/Calatrava/christian monastery.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Corporations/Calatrava.dds</Button>
 		</BuildingArtInfo>
 		<!-- Corporations -->
 		<BuildingArtInfo>

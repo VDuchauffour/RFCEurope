@@ -2072,7 +2072,7 @@ class CvMainInterface:
 				if ( ePlayer == con.iBurgundy ):
 					#iBurgundyCulture = utils.getBurgundyCulture()
 					iBurgundyCulture = pPlayer.getUHVCounter( 0 )
-					#Absinthe: only display UHV counter until the UHV date
+					# Absinthe: only display UHV counter until the UHV date
 					if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (xml.i1336AD + 2) ):
 						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
 						szUHVText = ": " + localText.getText("TXT_KEY_UHV_CULTURE",()) + (" (%i) " %iBurgundyCulture )
@@ -2088,7 +2088,7 @@ class CvMainInterface:
 				elif ( ePlayer == con.iLithuania ):
 					#iLithuaniaCulture = utils.getLithuaniaCulture()
 					iLithuaniaCulture = pPlayer.getUHVCounter( 0 )
-					#Absinthe: only display UHV counter until the UHV date
+					# Absinthe: only display UHV counter until the UHV date
 					if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (xml.i1386AD + 2) ):
 						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
 						szUHVText = ": " + localText.getText("TXT_KEY_UHV_CULTURE",()) + (" (%i) " %iLithuaniaCulture )
@@ -2104,7 +2104,7 @@ class CvMainInterface:
 				elif ( ePlayer == con.iArabia ):
 					#iIslamInfluence = utils.getArabianInfluence()
 					iIslamInfluence = gc.getGame().calculateReligionPercent( xml.iIslam )
-					#HHG: only display UHV counter as long as the UHV is undefined
+					# HHG: only display UHV counter as long as the UHV is undefined
 					if ( not CyInterface().isCityScreenUp() and pPlayer.getUHV( 2 ) == -1 ):
 						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
 						szUHVText = ": " + localText.getText("TXT_KEY_UHV_ISLAM",()) + (" (%i) " %iIslamInfluence )
@@ -2120,7 +2120,7 @@ class CvMainInterface:
 				elif ( ePlayer == con.iNorway ):
 					#iNorseRaized = utils.getNorseRazed()
 					iNorwayRaized = pPlayer.getUHVCounter( 2 )
-					#Absinthe: only display UHV counter until the UHV date
+					# Absinthe: only display UHV counter until the UHV date
 					if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (xml.i1066AD + 2) ):
 						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
 						szUHVText = ": " + localText.getText("TXT_KEY_UHV_VIKING",()) + (" (%i) " %iNorwayRaized )
@@ -2136,7 +2136,7 @@ class CvMainInterface:
 				elif ( ePlayer == con.iKiev ):
 					#iKievFood = utils.getKievFood()
 					iKievFood = pPlayer.getUHVCounter( 2 )
-					#Absinthe: only display UHV counter until the UHV date
+					# Absinthe: only display UHV counter until the UHV date
 					if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (xml.i1300AD + 2) ):
 						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
 						szUHVText = ": " + localText.getText("TXT_KEY_UHV_FOOD",()) + (" (%i) " %iKievFood )
@@ -2171,7 +2171,8 @@ class CvMainInterface:
 
 				elif ( ePlayer == con.iNovgorod ):
 					iNovgorodFurs = pPlayer.countCultBorderBonuses(xml.iFur)
-					if ( not CyInterface().isCityScreenUp() ):
+					# Absinthe: only display UHV counter until the UHV date
+					if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (xml.i1397AD + 2) ):
 						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
 						szUHVText = ": " + localText.getText("TXT_KEY_UHV_FURS",()) + (" (%i) " %iNovgorodFurs )
 						screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -2185,7 +2186,8 @@ class CvMainInterface:
 
 				elif ( ePlayer == con.iScotland ):
 					iScotlandFrench = pPlayer.getUHVCounter( 1 )
-					if ( not CyInterface().isCityScreenUp() ):
+					# Absinthe: only display UHV counter until the UHV date
+					if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (xml.i1560AD + 2) ):
 						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
 						szUHVText = ": " + localText.getText("TXT_KEY_UHV_FRENCH",()) + (" (%i) " %iScotlandFrench )
 						screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -2214,7 +2216,8 @@ class CvMainInterface:
 
 				elif ( ePlayer == con.iSweden ):
 					iSwedenRazed = pPlayer.getUHVCounter(1)
-					if ( not CyInterface().isCityScreenUp() ):
+					# Absinthe: only display UHV counter until the UHV date
+					if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (xml.i1660AD + 2) ):
 						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
 						szUHVText = ": " + localText.getText("TXT_KEY_UHV_RAZED",()) + (" (%i) " %iSwedenRazed )
 						screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)

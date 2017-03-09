@@ -21,7 +21,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Copper/Copper.nif</NIF>
 			<KFM>Art/Terrain/Resources/Copper/Copper.kfm</KFM>
-			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,5,12</Button>
+			<Button>Art/Interface/Buttons/Resources/copper.dds</Button>
 			<FontButtonIndex>2</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -49,7 +49,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Marble/Marble.nif</NIF>
 			<KFM>Art/Terrain/Resources/Marble/Marble.kfm</KFM>
-			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,8,13</Button>
+			<Button>Art/Interface/Buttons/Resources/marble.dds</Button>
 			<FontButtonIndex>5</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -58,7 +58,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Stone/Stone.nif</NIF>
 			<KFM>Art/Terrain/Resources/Stone/Stone.kfm</KFM>
-			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,6,14</Button>
+			<Button>Art/Interface/Buttons/Resources/stone.dds</Button>
 			<FontButtonIndex>7</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -67,7 +67,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Dye/Dye.nif</NIF>
 			<KFM>Art/Terrain/Resources/Dye/Dye.kfm</KFM>
-			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,3,15</Button>
+			<Button>Art/Interface/Buttons/Resources/dye.dds</Button>
 			<FontButtonIndex>20</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -86,7 +86,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Gems/Gems.nif</NIF>
 			<KFM>Art/Terrain/Resources/Gems/Gems.kfm</KFM>
-			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,2,13</Button>
+			<Button>Art/Interface/Buttons/Resources/gems.dds</Button>
 			<FontButtonIndex>22</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -123,7 +123,7 @@
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Silk/Silk.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,3,14</Button>
+			<Button>Art/Interface/Buttons/Resources/silk.dds</Button>
 			<FontButtonIndex>26</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -150,7 +150,7 @@
 			<fInterfaceScale>1.3</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Sugar/Sugar.nif</NIF>
 			<KFM>Art/Terrain/Resources/Sugar/Sugar.kfm</KFM>
-			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,14</Button>
+			<Button>Art/Interface/Buttons/Resources/sugar.dds</Button>
 			<FontButtonIndex>29</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -195,7 +195,7 @@
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Corn/Corn.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,6,12</Button>
+			<Button>Art/Interface/Buttons/Resources/corn.dds</Button>
 			<FontButtonIndex>11</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -273,7 +273,7 @@
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Wheat/Wheat.nif</NIF>
 			<KFM>Art/Terrain/Resources/Wheat/Wheat.kfm</KFM>
-			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,2,16</Button>
+			<Button>Art/Interface/Buttons/Resources/wheat.dds</Button>
 			<FontButtonIndex>19</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -282,7 +282,7 @@
 			<fInterfaceScale>1.6</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Olives/olives.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/Warlords_Atlas_1.dds,1,14</Button>
+			<Button>Art/Interface/Buttons/Resources/olives.dds</Button>
 			<FontButtonIndex>33</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -300,7 +300,7 @@
 			<fInterfaceScale>1.6</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Cotton/cotton.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/Warlords_Atlas_1.dds,3,14</Button>
+			<Button>Art/Interface/Buttons/Resources/cotton.dds</Button>
 			<FontButtonIndex>35</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -327,7 +327,7 @@
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Honey/flowers.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,6,2</Button>
+			<Button>Art/Interface/Buttons/Resources/honey.dds</Button>
 			<FontButtonIndex>38</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -336,7 +336,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Potato/Wheat.nif</NIF>
 			<KFM>Art/Terrain/Resources/Potato/Wheat.kfm</KFM>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,5,2</Button>
+			<Button>Art/Interface/Buttons/Resources/potato.dds</Button>
 			<FontButtonIndex>39</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -345,7 +345,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Salt/Marble.nif</NIF>
 			<KFM>Art/Terrain/Resources/Salt/Marble.kfm</KFM>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,3,2</Button>
+			<Button>Art/Interface/Buttons/Resources/salt.dds</Button>
 			<FontButtonIndex>40</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -372,7 +372,7 @@
 			<fInterfaceScale>1.6</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Coffee/Spices.nif</NIF>
 			<KFM>Art/Terrain/Resources/Coffee/Spices.kfm</KFM>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,7,2</Button>
+			<Button>Art/Interface/Buttons/Resources/coffee.dds</Button>
 			<FontButtonIndex>43</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -417,7 +417,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Amber/Gems.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,3,1</Button>
+			<Button>Art/Interface/Buttons/Resources/amber.dds</Button>
 			<FontButtonIndex>48</FontButtonIndex>
 		</BonusArtInfo>
 	</BonusArtInfos>

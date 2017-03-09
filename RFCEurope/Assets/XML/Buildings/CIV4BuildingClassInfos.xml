@@ -1111,11 +1111,9 @@
 		<BuildingClassInfo><!-- SHRINE_OF_UPPSALA -->
 			<Type>BUILDINGCLASS_SHRINE_OF_UPPSALA</Type>
 			<Description>TXT_KEY_BUILDING_SHRINE_OF_UPPSALA</Description>
-			<!-- Rhye - start -->
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<!-- Rhye - end -->
 			<iExtraPlayerInstances>0</iExtraPlayerInstances>
 			<bNoLimit>0</bNoLimit>
 			<bMonument>0</bMonument>
@@ -1452,7 +1450,7 @@
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_1</Type>
 			<Description>TXT_KEY_CORPORATION_1</Description>
-			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<iExtraPlayerInstances>0</iExtraPlayerInstances>
@@ -1464,7 +1462,7 @@
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_2</Type>
 			<Description>CHANGED_TXT_KEY_CORPORATION_2</Description>
-			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<iExtraPlayerInstances>0</iExtraPlayerInstances>
@@ -1476,7 +1474,7 @@
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_3</Type>
 			<Description>TXT_KEY_CORPORATION_3</Description>
-			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<iExtraPlayerInstances>0</iExtraPlayerInstances>
@@ -1488,7 +1486,7 @@
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_4</Type>
 			<Description>TXT_KEY_CORPORATION_4</Description>
-			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<iExtraPlayerInstances>0</iExtraPlayerInstances>
@@ -1500,7 +1498,7 @@
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_5</Type>
 			<Description>TXT_KEY_CORPORATION_5</Description>
-			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<iExtraPlayerInstances>0</iExtraPlayerInstances>
@@ -1512,7 +1510,7 @@
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_6</Type>
 			<Description>TXT_KEY_CORPORATION_6</Description>
-			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<iExtraPlayerInstances>0</iExtraPlayerInstances>
@@ -1524,13 +1522,37 @@
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_CORPORATION_7</Type>
 			<Description>TXT_KEY_CORPORATION_7</Description>
-			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<iExtraPlayerInstances>0</iExtraPlayerInstances>
 			<bNoLimit>0</bNoLimit>
 			<bMonument>0</bMonument>
 			<DefaultBuilding>BUILDING_CORPORATION_7</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CORPORATION_8</Type>
+			<Description>TXT_KEY_CORPORATION_8</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_CORPORATION_8</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+		<BuildingClassInfo>
+			<Type>BUILDINGCLASS_CORPORATION_9</Type>
+			<Description>TXT_KEY_CORPORATION_9</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_CORPORATION_9</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
 		<!--******************* CORPORATIONS END *******************-->

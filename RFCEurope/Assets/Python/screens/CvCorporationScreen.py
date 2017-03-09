@@ -171,11 +171,11 @@ class CvCorporationScreen:
 					if iNum == 0:
 						szList = u""
 					else:
-						szList += u", "
+						szList += u"  " # Absinthe
 					iNum += 1
 					szList += u"%c" % (gc.getBonusInfo(eBonus).getChar(), )
 
-					if iNum > 3:
+					if iNum > 2: # Absinthe
 						iNum = 0
 						szListLabels.append(szList)
 						szList = u""
