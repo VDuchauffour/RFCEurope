@@ -596,7 +596,6 @@ class Victory:
 		iCount += pPlayer.countOwnedBonuses( xml.iCoffee )
 		iCount += pPlayer.countOwnedBonuses( xml.iTea )
 		iCount += pPlayer.countOwnedBonuses( xml.iTobacco )
-		#iCount += pPlayer.countOwnedBonuses( xml.iRelic )
 		return iCount
 
 
@@ -1008,10 +1007,10 @@ class Victory:
 			else:
 				pNovgorod.setUHV( 0, 0 )
 
-		# UHV 2: Control twelve sources of fur by 1397
+		# UHV 2: Control eleven sources of fur by 1397
 		if (pNovgorod.getUHV( 1 ) == -1):
 			if (iGameTurn <= xml.i1397AD):
-				if (pNovgorod.countCultBorderBonuses(xml.iFur) >= 12):
+				if (pNovgorod.countCultBorderBonuses(xml.iFur) >= 11):
 					pNovgorod.setUHV( 1, 1 )
 					pNovgorod.changeStabilityBase( iCathegoryExpansion, 3 )
 			else:

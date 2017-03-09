@@ -37,6 +37,7 @@ iOrthodoxy = xml.iOrthodoxy
 iProtestantism = xml.iProtestantism
 iIslam = xml.iIslam
 iJudaism = xml.iJudaism
+lCompanyBuilding = [xml.iCorporation1, xml.iCorporation2, xml.iCorporation3, xml.iCorporation4, xml.iCorporation5, xml.iCorporation6, xml.iCorporation7, xml.iCorporation8, xml.iCorporation9]
 
 class Companies:
 
@@ -70,10 +71,14 @@ class Companies:
 
 		# modified limit for Hospitallers and Teutons after the Crusades
 		if (iGameTurn > tCompaniesDeath[iTemplars]):
-			if iCompany == iHospitallers:
+			if iCompany == iHospitallers and iGameTurn < tCompaniesDeath[iCompany]:
 				iMaxCompanies -= 1
-			elif iCompany == iTeutons:
+			elif iCompany == iTeutons and iGameTurn < tCompaniesDeath[iCompany]:
 				iMaxCompanies += 2
+		# increased limit for Hansa after their first general Diet in 1356
+		if iCompany == iHansa:
+			if (iGameTurn > xml.i1356AD and iGameTurn < tCompaniesDeath[iCompany]):
+				iMaxCompanies += 3
 
 		# loop through all cities, check the company value for each and add the good ones to a list of tuples (city, value)
 		cityValueList = []
@@ -91,6 +96,7 @@ class Companies:
 					cityValueList.append((city, iValue * 10 + gc.getGame().getSorenRandNum(10, 'random bonus')))
 				elif city.isHasCorporation(iCompany): # remove company from cities with a negative value
 					city.setHasCorporation(iCompany, False, True, True)
+					city.setHasRealBuilding(lCompanyBuilding[iCompany], False)
 					sCityName = city.getName()
 					print ("Company removed: ", sCityName, iCompany, iValue)
 					# interface message for the human player
@@ -119,6 +125,7 @@ class Companies:
 			if (iCompanyCount >= iMaxCompanies and i >= iMaxCompanies): # the goal is to spread the company to the first iMaxCompanies number of cities
 				break
 			city.setHasCorporation(iCompany, True, True, True)
+			city.setHasRealBuilding(lCompanyBuilding[iCompany], True)
 			iCompanyCount += 1
 			sCityName = city.getName()
 			print ("Company spread: ", sCityName, iCompany, iValue)
@@ -143,6 +150,7 @@ class Companies:
 				iValue = cityValueList[i][1]
 				if city.isHasCorporation(iCompany):
 					city.setHasCorporation(iCompany, False, True, True)
+					city.setHasRealBuilding(lCompanyBuilding[iCompany], False)
 					sCityName = city.getName()
 					print ("Company removed: ", sCityName, iCompany, iValue)
 					# interface message for the human player
@@ -166,6 +174,7 @@ class Companies:
 				if city.isHasCorporation(iCompany):
 					if self.getCityValue(city, iCompany) < 0:
 						city.setHasCorporation(iCompany, False, True, True)
+						city.setHasRealBuilding(lCompanyBuilding[iCompany], False)
 						sCityName = city.getName()
 						print ("Company removed on religion change: ", sCityName, iCompany)
 						# interface message for the human player
@@ -183,6 +192,7 @@ class Companies:
 			if city.isHasCorporation(iCompany):
 				if self.getCityValue(city, iCompany) < 0:
 					city.setHasCorporation(iCompany, False, True, True)
+					city.setHasRealBuilding(lCompanyBuilding[iCompany], False)
 					sCityName = city.getName()
 					print ("Company removed on conquest: ", sCityName, iCompany)
 					# interface message for the human player
@@ -255,9 +265,9 @@ class Companies:
 				iValue += 3
 		if iCompany == iHansa:
 			if iProvince == xml.iP_Holstein:
-				iValue += 2
+				iValue += 4
 			if iProvince == xml.iP_Brandenburg or iProvince == xml.iP_Saxony:
-				iValue += 1
+				iValue += 2
 
 		# geographical requirement changes after the crusades
 		iGameTurn = gc.getGame().getGameTurn()
@@ -281,10 +291,11 @@ class Companies:
 			if (iCompany == iHospitallers or iCompany == iTemplars or iCompany == iTeutons):
 				iValue += 3
 
-		# coastal city check
+		# coastal and riverside check
 		if iCompany == iHansa:
-			if not city.isCoastal(20):
-				return -1
+			if not city.isCoastal(20): # water body with at least 20 tiles
+				if not city.plot().isRiverSide():
+					return -1
 		elif iCompany == iHospitallers:
 			if city.isCoastal(20):
 				iValue += 2
@@ -304,6 +315,25 @@ class Companies:
 				iValue += 1
 			if city.isHasReligion(iIslam):
 				iValue -= 1
+
+		# faith points of the population
+		if (iCompany == iHospitallers or iCompany == iTemplars or iCompany == iTeutons or iCompany == iCalatrava):
+			#print ("faith points:", city.getOwner(), owner.getFaith())
+			if owner.getFaith() >= 50:
+				iValue += 3
+			elif owner.getFaith() >= 30:
+				iValue += 2
+			elif owner.getFaith() >= 15:
+				iValue += 1
+
+		# city size
+		if (iCompany == iHansa or iCompany == iDragon or iCompany == iMedici or iCompany == iAugsburg or iCompany == iStGeorge):
+			if city.getPopulation() > 9:
+				iValue += 3
+			elif city.getPopulation() > 6:
+				iValue += 2
+			elif city.getPopulation() > 3:
+				iValue += 1
 
 		# various building bonuses, trade route bonus
 		if (iCompany == iHospitallers or iCompany == iTemplars or iCompany == iTeutons):
@@ -476,7 +506,7 @@ class Companies:
 						iTempValue += (city.getNumBonuses(iBonus) + 1) * 2 # 4 for the first bonus, 2 for the rest
 		if iCompany in [iHansa, iMedici, iAugsburg, iStGeorge] and not bFound: return -1
 		# we don't want the bonus to get too big, and dominate the selection values
-		iValue += (iTempValue * 2) / 5
+		iValue += iTempValue / 4
 
 		# bonus for resources in the fat cross of a city?
 
@@ -540,6 +570,7 @@ class Companies:
 			city = cityValueList[i][0]
 			if not city.isHasCorporation(iCompany):
 				city.setHasCorporation(iCompany, True, True, True)
+				city.setHasRealBuilding(lCompanyBuilding[iCompany], True)
 				print ("Company added under special circumstance:", city.getName(), iCompany)
 				iCompaniesAdded += 1
 				if iCompaniesAdded == iNumber:

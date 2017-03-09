@@ -1665,7 +1665,6 @@
 			<FeatureBooleans/>
 			<FeatureTerrainBooleans/>
 		</BonusInfo>
-		<!-- Rhye - start -->
 		<BonusInfo>
 			<Type>BONUS_COTTON</Type>
 			<Description>TXT_KEY_BONUS_COTTON</Description>
@@ -1720,7 +1719,6 @@
 			<FeatureTerrainBooleans/>
 			<bUseLSystem>1</bUseLSystem>
 		</BonusInfo>
-		<!-- Senda start -->
 		<BonusInfo>
 			<Type>BONUS_APPLE</Type>
 			<Description>TXT_KEY_BONUS_APPLE</Description>
@@ -2004,7 +2002,7 @@
 			<Type>BONUS_SULPHUR</Type>
 			<Description>TXT_KEY_BONUS_SULPHUR</Description>
 			<Civilopedia>TXT_KEY_BONUS_SULPHUR_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_RUSH</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SULPHUR</ArtDefineTag>
 			<TechReveal>TECH_GUNPOWDER</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
@@ -2391,7 +2389,7 @@
 			<Type>BONUS_ACCESS</Type>
 			<Description>TXT_KEY_BONUS_ACCESS</Description>
 			<Civilopedia>TXT_KEY_BONUS_ACCESS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_RUSH</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ACCESS</ArtDefineTag>
 			<TechReveal>TECH_ASTRONOMY</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
@@ -2444,7 +2442,7 @@
 			<Type>BONUS_NORTH_AMERICA_ACCESS</Type>
 			<Description>TXT_KEY_BONUS_NORTH_AMERICA_ACCESS</Description>
 			<Civilopedia>TXT_KEY_BONUS_NORTH_AMERICA_ACCESS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_RUSH</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ACCESS</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
@@ -2497,7 +2495,7 @@
 			<Type>BONUS_SOUTH_AMERICA_ACCESS</Type>
 			<Description>TXT_KEY_BONUS_SOUTH_AMERICA_ACCESS</Description>
 			<Civilopedia>TXT_KEY_BONUS_SOUTH_AMERICA_ACCESS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_RUSH</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ACCESS</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
@@ -2550,7 +2548,7 @@
 			<Type>BONUS_EAST_ASIA_ACCESS</Type>
 			<Description>TXT_KEY_BONUS_EAST_ASIA_ACCESS</Description>
 			<Civilopedia>TXT_KEY_BONUS_EAST_ASIA_ACCESS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_RUSH</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ACCESS</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>

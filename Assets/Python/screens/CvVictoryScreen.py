@@ -1070,7 +1070,7 @@ class CvVictoryScreen:
 		sText1 += self.getProvinceString(vic.tNovgorodControl)
 		#UHV2
 		iNumFurs = pPlayer.countCultBorderBonuses(xml.iFur)
-		sText2 += self.getCounterString(iNumFurs, 12)
+		sText2 += self.getCounterString(iNumFurs, 11)
 		#UHV3
 		iNumCities = 0
 		for iProv in vic.tNovgorodControlII:

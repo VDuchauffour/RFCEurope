@@ -821,12 +821,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOV2</Tag>
-		<English>[COLOR_YELLOW]The Fur Trade:[COLOR_REVERT] Control twelve sources of fur by 1397AD.</English>
-		<French>[COLOR_YELLOW]The Fur Trade:[COLOR_REVERT] Control twelve sources of fur by 1397AD.</French>
-		<German>[COLOR_YELLOW]The Fur Trade:[COLOR_REVERT] Control twelve sources of fur by 1397AD.</German>
-		<Italian>[COLOR_YELLOW]The Fur Trade:[COLOR_REVERT] Control twelve sources of fur by 1397AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The Fur Trade:[COLOR_REVERT] Control twelve sources of fur by 1397AD.</Spanish>
-		<Portuguese>[COLOR_YELLOW]The Fur Trade:[COLOR_REVERT] Control twelve sources of fur by 1397AD.</Portuguese>
+		<English>[COLOR_YELLOW]The Fur Trade:[COLOR_REVERT] Control eleven sources of fur by 1397AD.</English>
+		<French>[COLOR_YELLOW]The Fur Trade:[COLOR_REVERT] Control eleven sources of fur by 1397AD.</French>
+		<German>[COLOR_YELLOW]The Fur Trade:[COLOR_REVERT] Control eleven sources of fur by 1397AD.</German>
+		<Italian>[COLOR_YELLOW]The Fur Trade:[COLOR_REVERT] Control eleven sources of fur by 1397AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Fur Trade:[COLOR_REVERT] Control eleven sources of fur by 1397AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]The Fur Trade:[COLOR_REVERT] Control eleven sources of fur by 1397AD.</Portuguese>
 	</TEXT>
  	<TEXT>
  		<Tag>TXT_KEY_UHV_NOV3</Tag>

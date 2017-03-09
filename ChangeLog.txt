@@ -64,13 +64,20 @@ Changes for RFCE 1.5:
 		- Added Kontor UB for the Hanseatic League: +1 trade route, +25% income from foreign trade routes
 		- Added Knight of the Dragon UU: 12 strength heavy infantry, +10% against cavalry units, may cause small collateral damage
 		- Added Calatrava Knight UU: 9 strength heavy infantry, +10% city strength, +25% attack against Swordsman and Maceman unit classes
-		- Significantly reduced cost for the original Knightly Orders' UUs, nerfed some bonuses
-		- Bonus health from Hospitallers' Infirmary UB increased to 2, reduced cost
+		- Significantly reduced cost for the original Knightly Orders' UUs and the Infirmary UB, nerfed some bonuses
 		
 		- Companies have increased penalties if they are already present in a couple cities for the given civ (try to spread them out)
 		- Rebalanced contribution from different building types for company building spread bonus calculations
 		- Decreased significance of buildings/infrastructure in a city in the overall spread value calculations
 		- More balanced bonus for company spread from number of desired resources
+		
+		- Company HQs redesigned as generic buildings, as an indicator for company spread - they show up in the city while the company is present
+		- These temporary company buildings can get various bonuses, which are independent from the main company bonuses (based on number of resources available in your city)
+		- Possible bonuses for the company buildings include GP points, military bonuses, small economic bonuses
+		- Hanseatic League can spread to riverside cities too, not only coastal ones
+		- Faith points taken into account for religious military order spread
+		- City size taken into account for company spread, especially for trade based companies
+		- Hanseatic League starts earlier, in 1157 (earliest remaining documentary mention), with much increased city number limit in 1356 (the first general Diet of the Hansa)
 
 	Plague overhaul:
 		- Improvements near a plagued city have a chance whether to reduce their level, or to reset the progress towards the next level: Towns 100%, Villages 75%, Hamlets 50%, Cottages 25%
@@ -216,7 +223,7 @@ Changes for RFCE 1.5:
 		- Toned down stregth of "barbarian" Teutonic Knight spawns in Livonia in the early 13th century (right before the Prussian spawn)
 		- Reduced number of Berber barbarians in North Africa (especially for Cordoba), less early barbs for AI Kiev
 
-	Initial civ setup:
+	Civ and UHV setup:
 		- Starting civic changes: Arabia (Trade Economy), Kiev (Serfdom, Manoralism), Spain (Serfdom, Manoralism), Morocco (Trade Economy, Militarism)
 		- Starting civic changes: Genoa (Feudal Monarchy, Serfdom, Manoralism, Vassalage), England (Vassalage), Portugal (Serfdom, Manoralism, Vassalage)
 		- Starting civic changes: Aragon (Serfdom, Manoralism, Vassalage), Sweden (Feudal Law, Vassalage), Prussia (Militarism), Austria (Vassalage)
@@ -227,6 +234,14 @@ Changes for RFCE 1.5:
 		- Burgundy and Germany stars with a couple additional defensive starting units
 		- Additional starting units for the French, to be able to get more aggressive with early conquests
 		- Revised Prussian starting units - instead of Teutonic Masters, they start with more military units
+		- Venice, Genoa and Aragon start with a Harbor in their cities
+		- Tuned down Cordoban production modifiers a bit, increased Castilian and Aragonese
+		- Increased production modifiers for AI Kiev (stays more or less the same for the human player)
+		- Kuban province changed to contested for the Ottomans, Lithuania and Suvalkija contested for Prussia
+		- The province of Calabria was added to the 3rd Aragonese UHV, the Balearic Islands are needed for the 1st Moroccan UHV instead of Tripolitania
+		- Thessaly, Morea, Crete and Cyprus provinces are also needed for the 2nd Venetian UHV (besides the city of Constantinople)
+		- Picardy will remain historic for France even after the English spawn, Northumbria will remain contested for Norway
+		- Changed the Novgorodian 2nd UHV goal to 11 fur resources (was 12)
 
 	Art updates:
 		- Historic icon/button/gamefont for the Order of Calatrava and the Order of the Dragon
@@ -238,6 +253,11 @@ Changes for RFCE 1.5:
 		- New icon for all 4 Missionaries, new unit art for Orthodox and Islamic Missionary
 		- New icon for Végvár (Hungarian UB), new icon for Manorialism civic and tech
 		- Fixed minor glitch with the leaderhead art of Bela III (Hungary)
+		- Changes in the Hanseatic League building art, it is now displayed more in line with the other companies in the Civilopedia
+		- Added separate building art for the 2 new Chivalric Orders (Dragon and Calatrava)
+		- New gamefont icon for copper, timber, tea, tobacco, silk, sugar, corn, marble, stone, dye, gems, wheat
+		- Improved gamefont icon for olives, cotton, apples, honey, potatoes, coffee, fur, amber, salt, sulphur
+		- New map/civilopedia icon for copper, amber, silk, sugar, corn, potato, cotton, coffee, salt, honey, marble, stone, dye, gems, wheat, olives
 
 	Text updates:
 		- Updated text for some interface messages connected to the Reformation
@@ -257,6 +277,7 @@ Changes for RFCE 1.5:
 		- Colony for Genoan, Zhupa for Bulgarian, Voivodeship for Polish and Lithuanian vassals' DCNames (already added to the recently updated civs)
 		- Added Dynamic Civ Names reference text file to the mod
 		- Civilopedia entries for the new companies, UUs, UBs
+		- Added help text and bonus information for the various company buildings
 
 	General changes:
 		- Updated the Novgorod Fur UHV and the Moscow Atlantic Access UHV to count resources only inside cultural borders
@@ -278,22 +299,14 @@ Changes for RFCE 1.5:
 		- Trading Post replaces Harbor (instead of Lighthouse), free Navigation 1 promotion for all naval units, +1 commerce
 		- Feitoria replaces Lighthouse (instead of Harbor), +1 commerce on all water tiles, prebuilt in all newly founded cities after the discovery of Astronomy
 		- Consulate of the Sea replaces Lighthouse (as before, but now in it's new position), also now it enables 1 merchant specialist
-		- Venice, Genoa and Aragon starts with Harbor in their cities
 		- Venetian Arsenal available earlier, moved to Clockmaking from Optics
-		- Tuned down Cordoban production modifiers a bit, increased Castilian and Aragonese
-		- Increased production modifiers for AI Kiev (stays more or less the same for the human player)
-		- Kuban province changed to contested for the Ottomans, Lithuania and Suvalkija contested for Prussia
 		- Lowered diplomatic bonuses for sharing a religion, for almost all religions
 		- Civs can't get back one of their previous leaders on resurrection (would be changed to the later one anyway in a couple turns)
 		- Civs have 40% chance to remain with the leader before the collapse, 60% chance to get the next leader (chronologically)
-		- The province of Calabria was added to the 3rd Aragonese UHV, the Balearic Islands are needed for the 1st Moroccan UHV instead of Tripolitania
-		- Thessaly, Morea, Crete and Cyprus provinces are also needed for the 2nd Venetian UHV (besides the city of Constantinople)
-		- Picardy will remain historic for France even after the English spawn, Northumbria will remain contested for Norway
 		- Krak des Chevaliers will add bonus stability for Castle-type buildings if they weren't present before the conquest
 		- Reduced German respawn zone around Brandenburg, now it doesn't have an overlap with Prussia's
 		- Minor updates in the Swedish and Prussian respawn zones, to avoid overlap with Lithuania
 		- Revised respawn zone for Novgorod and Russia, better shape for both without any overlaps
-		- Fixed dates for a couple events/deadlines, including the Norwegian 2nd UHV and the Bulgarian 3rd UHV
 
 	Technical / UI changes:
 		- No interface messages are displayed during autoplay/autorun (Crusades, RiseAndFall, Religion, Wonders, Leaders, etc.)
@@ -309,8 +322,10 @@ Changes for RFCE 1.5:
 		- Plague icon is shown on the city banner, not only the plague cloud above the city (idea from DoC)
 		- Removed unnecessary Derivative Civ settings for all civilizations, various other minor python and XML optimizations
 		- Added DataLoader functionality to the mod, loads the desired python data into appropriate objects within the CvGameCoreDLL (both on startup and game load)
-		- Revised XML and python order for buildings and units, will make XML initialization on starting the mod slightly faster
+		- Optimized XML and python setup for buildings and units, revised order - will make XML initialization on starting the mod slightly faster
 		- Revised timing and availability for most previously added interface messages
+		- Updated resource alignment and positioning in the Company Screen
+		- Adjusted main screen UHV counter for a couple civs, it won't be displayed after the UHV date
 
 	Bugfixes:
 		- Fixed strange visibility area for the Ottomans
@@ -324,12 +339,14 @@ Changes for RFCE 1.5:
 		- Fixed bug which sometimes caused issues when the plague spread to a known civ's unknown city
 		- Fixed a couple oversights in various province lists (representing regions)
 		- Fixed bug where Protestantism wasn't auto-founded by the Dutch even if no civs researched Printing Press by their spawn
-		- Fixed bug in the Genoese UHV counter for Banks
+		- Fixed mistake in the Genoese UHV counter for Banks and the check conditions for it
 		- Fixed bug with unit removal in the NW tile of Iceland (related to various mechanics which include switching/moving units - ie: spawn, respawn, secession)
 		- Fixed bug that caused AI civs to produce unnecessary prosecutors way too often
 		- Fixed issue where naval units skip turn on unit unload even with movement points left (from DoC)
 		- Fixed a couple minor issues and inconsistencies with some old leftover code from vanilla RFC
 		- Added a couple more bugfixes (and minor fixes for Firaxis oversights) from Karadoc/K-mod
+		- Fixed dates for a couple events/deadlines, including the Norwegian 2nd UHV and the Bulgarian 3rd UHV
+		- Fixed wrong class for a couple resources, which resulted in wrong AI value associated with them
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

@@ -284,7 +284,7 @@ iTea, iTobacco, iOlives, iAccess, iNorthAccess, iSouthAccess, iAsiaAccess, iAmbe
 
 #Buildings
 
-iNumBuildings = 153 # Should equal iPlague
+iNumBuildings = 155 # Should equal iPlague
 (iPalace, iSummerPalace, iHeroicEpic, iNationalEpic, iNationalTheatre, iNationalGallery, iNationalUniversity, iRoyalDungeon, iRoyalAcademy, iStarFort,
 iWalls, iMoroccoKasbah, iCastle, iMoscowKremlin, iHungarianStronghold, iSpanishCitadel, iBarracks, iArcheryRange, iStable, iBulgarianStan,
 iGranary, iCordobanNoria, iPolishFolwark, iSmokehouse, iScotlandShieling, iAqueduct, iOttomanHammam, iHarbor, iVikingTradingPost, iLighthouse,
@@ -296,7 +296,7 @@ iNightWatch, iSwedishTennant, iLevee, iNetherlandsDike, iPaganShrine, iJewishQua
 iProtestantChapel, iProtestantSeminary, iProtestantShrine, iIslamicTemple, iIslamicChapel, iIslamicCathedral, iIslamicSchool, iIslamicMadrassa, iIslamicShrine, iCatholicTemple,
 iCatholicCathedral, iCatholicChapel, iCatholicReliquary, iCatholicMonastery, iCatholicSeminary, iCatholicShrine, iOrthodoxTemple, iOrthodoxCathedral, iOrthodoxChapel, iOrthodoxReliquary,
 iOrthodoxMonastery, iOrthodoxSeminary, iOrthodoxShrine, iInfirmary, iKontor, iCorporation1, iCorporation2, iCorporation3, iCorporation4, iCorporation5,
-iCorporation6, iCorporation7, iVersailles, iNotreDame, iLeaningTower, iSistineChapel, iTheodosianWalls, iTopkapiPalace,
+iCorporation6, iCorporation7, iCorporation8, iCorporation9, iVersailles, iNotreDame, iLeaningTower, iSistineChapel, iTheodosianWalls, iTopkapiPalace,
 iShrineOfUppsala, iAlhambra, iKrakDesChevaliers, iSanMarco, iLaMezquita, iStBasil, iMagnaCarta, iSophiaKiev, iDomeRock, iBrandenburgGate,
 iPalacioDaPena, iMonasteryOfCluny, iRoundChurch, iLeonardosWorkshop, iGardensAlAndalus, iMagellansVoyage, iMarcoPolo, iEscorial, iKazimierz, iBelemTower,
 iGoldenBull, iKalmarCastle, iPalaisPapes, iTombKhal, iStephansdom, iBibliothecaCorviniana, iFontainebleau, iImperialDiet, iBeurs, iCopernicus,
@@ -461,11 +461,11 @@ lNotEurope			= [ iP_Oran, iP_Algiers, iP_Ifriqiya, iP_Cyrenaica, iP_Tripolitania
 
 iNumCompanies = 9
 (iHospitallers, iTemplars, iTeutons, iHansa, iMedici, iAugsburg, iStGeorge, iDragon, iCalatrava) = range(iNumCompanies)
-#Dates:		1096	1096	1096	1358	1397	1487	1407	1408	1164
+#Dates:		1096	1096	1096	1157	1397	1487	1407	1408	1164
 #			n/a		1312	n/a		1669	1499	n/a		1805	n/a		1838
-tCompaniesBirth = (165, 165, 165, 252, 266, 295, 269, 269, 188)
+tCompaniesBirth = (165, 165, 165, 186, 266, 295, 269, 269, 188)
 tCompaniesDeath = (500, 237, 500, 385, 300, 500, 500, 500, 500) # maybe add a couple extra turns for Templars and Medici?
-tCompaniesLimit = (3, 4, 3, 6, 4, 4, 3, 5, 5) # note that we have a modified limit for Hospitallers and Teutons after the Crusades
+tCompaniesLimit = (3, 4, 3, 3, 4, 4, 3, 5, 5) # note that we have a modified limit for Hospitallers and Teutons after the Crusades
 
 # Companies will only settle in their preferred regions
 lCompanyRegions = [
