@@ -9892,7 +9892,6 @@ void CvCivilizationInfo::read(FDataStreamBase* stream)
 	m_piDCNCondHasRespawned = new int[m_iNumDCNConditions];
 	stream->Read(m_iNumDCNConditions, m_piDCNCondHasRespawned);
 
-
 	SAFE_DELETE_ARRAY(m_pszDCNName);
 	m_pszDCNName = new CvWString[m_iNumDCNConditions];
 	stream->ReadString(m_iNumDCNConditions, m_pszDCNName);

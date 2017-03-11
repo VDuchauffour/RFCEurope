@@ -229,6 +229,7 @@ class CvRFCEventHandler:
 		self.pla.setup()
 		self.sta.setup()
 		self.aiw.setup()
+		self.company.setup() # Absinthe: initial company setup for the 1200AD scenario
 
 		# 3Miro: WarOnSpawn
 		self.rnf.setWarOnSpawn()

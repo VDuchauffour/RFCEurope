@@ -1112,6 +1112,7 @@ bool CvTeam::canDeclareWar(TeamTypes eTeam) const
 			return false;
 		}
 	}
+	// Absinthe: end
 	// 3Miro: end
 
 	if (eTeam == getID())

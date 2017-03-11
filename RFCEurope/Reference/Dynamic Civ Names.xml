@@ -1,9 +1,220 @@
+﻿
+<Cordoba>
+Vassal of Byzantium: Exarchate of Andalusia
+Vassal of France/Burgundy: Duchy of Andalusia
+Vassal of Arabia/Morocco: Emirate of Cordoba
+Vassal of Castile/Aragon/Portugal, Islam state religion: Emirate of Granada
+Vassal of Castile/Aragon/Portugal: Kingdom of Granada
+Vassal of Denmark/Norway/Sweden: Jarldom of Andalusia
+Vassal of Venice/Genoa: Colony of Andalusia
+Vassal of Novgorod/Kiev: Principality of Andalusia
+Vassal of Muscovy: Guberniya of Andalusia
+Vassal of Germany/Prussia: March of Andalusia
+Vassal of England: Earldom of Andalusia
+Vassal of Scotland: Mormaerdom of Andalusia
+Vassal of Hungary: Banate of Andalusia
+Vassal of Austria: Habsburg Andalusia
+Vassal of Ottomans: Eyalet of Endulus
+Vassal of Poland/Lithuania: Voivodeship of Andalusia
+Vassal of Bulgaria: Zhupa of Andalusia
+Generic Vassal: Province of Andalusia
+
+Merchant Republic civic, Islam State Religion: Taifa of Cordoba
+Merchant Republic civic: Andalusian Republic
+Islam State Religion, after 1238 (turn 213): Sultanate of Al-Andalus
+Islam State Religion, after 929 (turn 110): Caliphate of Cordoba
+Islam State Religion: Emirate of Cordoba
+Any Christian state religion: Kingdom of Andalusia
+Default: Duchy of Andalusia
+Initial: Andalusian Peoples
+
+<Tunesia> respawn of Cordoba
+Vassal of Byzantium: Exarchate of Africa
+Vassal of France/Burgundy: Duchy of Tunisia
+Vassal of Arabia/Morocco: Emirate of Ifriqiya
+Vassal of Castile/Aragon/Portugal, Islam state religion: Emirate of Oran
+Vassal of Castile/Aragon/Portugal: Kingdom of Oran
+Vassal of Norway/Denmark/Sweden: Jarldom of Tunisia
+Vassal of Venice/Genoa: Colony of Tunisia
+Vassal of Novgorod/Kiev: Principality of Tunisia
+Vassal of Muscovy: Guberniya of Tunisia
+Vassal of Germany/Prussia: March of Tunisia
+Vassal of England/Scotland: Protectorate of Tunisia
+Vassal of Hungary: Banate of Tunisia
+Vassal of Austria: Habsburg Tunisia
+Vassal of Ottomans: Eyalet of Tunis
+Vassal of Poland/Lithuania: Voivodeship of Tunisia
+Vassal of Bulgaria: Zhupa of Tunisia
+Generic Vassal: Province of Tunisia
+
+Merchant Republic civic, Islam State Religion: Islamic Republic of Tunis
+Merchant Republic civic: Republic of Tunisia
+Any Christian State Religion: Kingdom of Africa
+Islam State Religion, at least 3 provinces: Hafsid Caliphate
+Islam State Religion: Hafsid Emirate
+Default: Duchy of Tunisia
+Initial: Tunisian Peoples
+
+<Morocco>
+Vassal of Byzantium: Exarchate of Mauretania
+Vassal of France/Burgundy: Duchy of Morocco
+Vassal of Arabia/Cordoba: Emirate of Morocco
+Vassal of Castile/Aragon: Viceroyalty of Morocco
+Vassal of Norway/Denmark/Sweden: Jarldom of Morocco
+Vassal of Venice/Genoa: Colony of Morocco
+Vassal of Novgorod/Kiev: Principality of Morocco
+Vassal of Muscovy: Guberniya of Morocco
+Vassal of Germany/Prussia: Maghreb March
+Vassal of England/Scotland: Protectorate of Morocco
+Vassal of Hungary: Banate of Morocco
+Vassal of Austria: Habsburg Maghreb
+Vassal of Ottomans: Eyalet of Morocco
+Vassal of Poland/Lithuania: Voivodeship of Morocco
+Vassal of Bulgaria: Zhupa of Morocco
+Generic Vassal: Province of Morocco
+
+Merchant Republic civic, Islam State Religion: Islamic Republic of Morocco
+Merchant Republic civic: Moroccan Republic
+Any Christian State Religion: Kingdom of Mauretania
+After 1659 (turn 380): Alaouite Empire
+After 1554 (turn 327): Saadi Empire
+After 1472 (turn 291): Wattasid Empire
+After 1269 (turn 223): Marinid Empire
+After 1147 (turn 183): Almohad Empire
+Default: Almoravid Empire
+Initial: Maghrebi Peoples
+
+<Castile>
+Vassal of Byzantium: Exarchate of Hispania
+Vassal of France/Burgundy: Duchy of Leon
+Vassal of Arabia/Morocco, holds Toledo: Emirate of Tulaytulah
+Vassal of Arabia/Morocco: Emirate of al-Ispanya
+Vassal of Cordoba: Emirate of al-Tagr al-Awsat
+Vassal of Aragon/Portugal: County of Castile
+Vassal of Norway/Denmark/Sweden: Jarldom of Castile
+Vassal of Venice/Genoa: Colony of Castile
+Vassal of Novgorod/Kiev: Principality of Castile
+Vassal of Muscovy: Guberniya of Castilia
+Vassal of Germany/Prussia: March of Castile
+Vassal of England: Earldom of Castile
+Vassal of Scotland: Mormaerdom of Castile
+Vassal of Hungary: Banate of Castile
+Vassal of Austria: Habsburg Spain
+Vassal of Ottomans: Eyalet of Ispanya
+Vassal of Poland/Lithuania: Voivodeship of Castile
+Vassal of Bulgaria: Zhupa of Castile
+Generic Vassal: Province of Castile
+
+Master of Aragon and Portugal: Iberian Union
+Master of Aragon, controls Lusitania province: Iberian Union
+Master of Portugal, controls Aragon province: Iberian Union
+Merchant Republic civic, Islam State Religion: Islamic Republic of Spain
+Merchant Republic civic: Spanish Republic
+Islam State Religion: Sultanate of Spain
+Master of Aragon: Kingdom of Spain
+Controls Aragon province: Kingdom of Spain
+At least 4 provinces: Crown of Castile
+Controls Castile province: Kingdom of Castile
+After 924 (turn 108): Kingdom of Leon
+Default: Kingdom of Asturias
+Initial: Asturian Peoples
+
+<Portugal>
+Vassal of Byzantium: Exarchate of Lusitania
+Vassal of France/Burgundy: Duchy of Portugal
+Vassal of Arabia/Morocco: Emirate of Burtughal
+Vassal of Cordoba: Emirate of al-Tagr al-Adna
+Vassal of Castile/Aragon, at least 3 provinces: Council of Portugal
+Vassal of Castile/Aragon: County of Portugal
+Vassal of Norway/Denmark/Sweden: Jarldom of Portugal
+Vassal of Venice/Genoa: Colony of Portugal
+Vassal of Novgorod/Kiev: Principality of Portugal
+Vassal of Muscovy: Guberniya of Portugal
+Vassal of Germany/Prussia: March of Portugal
+Vassal of England: Earldom of Portugal
+Vassal of Scotland: Mormaerdom of Portugal
+Vassal of Hungary: Banate of Portugal
+Vassal of Austria: Habsburg Portugal
+Vassal of Ottomans: Eyalet of Portekiz
+Vassal of Poland/Lithuania: Voivodeship of Portugal
+Vassal of Bulgaria: Zhupa of Portugal
+Generic Vassal: Province of Portugal
+
+Master of Aragon and Castile: Iberian Union
+Master of Aragon, controls Leon province: Iberian Union
+Master of Castile, controls Aragon province: Iberian Union
+Merchant Republic civic, Islam State Religion: Portuguese Islamic Republic
+Merchant Republic civic: Portuguese Republic
+Islam State Religion: Sultanate of Portugal
+Master of Castile: Kingdom of Spain
+Controls Leon province: Kingdom of Spain
+Default: Kingdom of Portugal
+Initial: Lusitanian Peoples
+
+<Aragon>
+Vassal of Byzantium: Exarchate of Tarraconensis
+Vassal of France/Burgundy: Spanish March
+Vassal of Arabia/Morocco: Emirate of Aragu'un
+Vassal of Cordoba: Emirate of al-Tagr al-A'la
+Vassal of Castile/Portugal: County of Aragon
+Vassal of Norway/Denmark/Sweden: Jarldom of Aragon
+Vassal of Venice/Genoa: Colony of Aragon
+Vassal of Novgorod/Kiev: Principality of Aragon
+Vassal of Muscovy: Guberniya of Aragon
+Vassal of Germany/Prussia: March of Aragon
+Vassal of England: Earldom of Aragon
+Vassal of Scotland: Mormaerdom of Aragon
+Vassal of Hungary: Banate of Aragon
+Vassal of Austria: Habsburg Aragon
+Vassal of Ottomans: Eyalet of Aragona
+Vassal of Poland/Lithuania: Voivodeship of Aragon
+Vassal of Bulgaria: Zhupa of Aragon
+Generic Vassal: Province of Aragon
+
+Master of Portugal and Castile: Iberian Union
+Master of Portugal, controls Leon province: Iberian Union
+Master of Castile, controls Lusitania province: Iberian Union
+Merchant Republic civic, Islam State Religion: Aragonese Islamic Commonwealth
+Merchant Republic civic: Aragonese Commonwealth
+Islam State Religion: Sultanate of Aragon
+Master of Castile: Kingdom of Spain
+Controls Leon province: Kingdom of Spain
+At least 5 provinces: Crown of Aragon
+Default: Kingdom of Aragon
+Initial: Aragonese Peoples
+
+<Sicily> respawn of Aragon
+Vassal of Byzantium: Catepanate of Italy
+Vassal of France/Burgundy: Duchy of Sicily
+Vassal of Arabia/Cordoba/Morocco: Emirate of Siqilliyya
+Vassal of Castile/Portugal, at least 3 provinces: Council of Sicily
+Vassal of Castile/Portugal: County of Sicily
+Vassal of Norway/Denmark/Sweden: Jarldom of Sicily
+Vassal of Venice/Genoa: Colony of Sicily
+Vassal of Novgorod/Kiev: Principality of Sicily
+Vassal of Muscovy: Guberniya of Sicily
+Vassal of Germany/Prussia: March of Sicily
+Vassal of England: Earldom of Sicily
+Vassal of Scotland: Mormaerdom of Sicily
+Vassal of Hungary: Banate of Sicily
+Vassal of Austria: Habsburg Sicily
+Vassal of Ottomans: Eyalet of Sicily
+Vassal of Poland/Lithuania: Voivodeship of Sicily
+Vassal of Bulgaria: Zhupa of Sicily
+Generic Vassal: Province of Sicilya
+
+Merchant Republic civic, Islam State Religion: Islamic Republic of Sicily
+Merchant Republic civic: Republic of Sicily
+Islam State Religion, at least 3 provinces: Sultanate of Sicily
+Islam State Religion: Emirate of Bari
+Default: Kingdom of Sicily
+Initial: Sicilian Peoples
 
 <Denmark>
 Vassal of Byzantium: Exarchate of Cimbria
 Vassal of France/Burgundy: Duchy of Denmark
 Vassal of Arabia/Cordoba/Morocco: Emirate of Denmark
-Vassal of Spain/Aragon: Viceroyalty of Denmark
+Vassal of Castile/Aragon: Viceroyalty of Denmark
 Vassal of Norway: Jarldom of Denmark
 Vassal of Sweden: Jarldom of Scania
 Vassal of Venice/Genoa: Colony of Denmark
@@ -17,7 +228,7 @@ Vassal of Austria: Habsburg Denmark
 Vassal of Ottomans: Eyalet of Danimarka
 Vassal of Poland/Lithuania: Voivodeship of Denmark
 Vassal of Bulgaria: Zhupa of Denmark
-Generic Vassal (all the other civs): Province of Denmark
+Generic Vassal: Province of Denmark
 
 Master of Sweden and Norway: Kalmar Union
 Master of Sweden, controls Norway province: Kalmar Union
@@ -27,21 +238,20 @@ Merchant Republic civic, controls Norway province: Republic of Denmark-Norway
 Merchant Republic civic, controls Svaeland province: Kalmar Republic
 Merchant Republic civic: Danish Republic
 Islam State Religion: Sultanate of Denmark
-Controls Svealand province, at least 7 provinces, after 1397: Kalmar Union
+Controls Svealand province, at least 7 provinces, after 1397 (turn 266): Kalmar Union
 Controls Mercia province, at least 5 provinces: North Sea Empire
 Master of Norway: Kingdom of Denmark-Norway
-Controls Norway province, after 1534: Kingdom of Denmark-Norway
-Controls Norway province: Kingdoms of Denmark and Norway
+Controls Norway province: Kingdom of Denmark-Norway
 Master of Sweden: Kingdom of Denmark-Sweden
-Controls Svealand province, after 1397: Kingdom of Denmark-Sweden
-Controls Svealand province: Kingdoms of Denmark and Sweden
+Controls Svealand province: Kingdom of Denmark-Sweden
 Default: Kingdom of Denmark
+Initial: Danish Peoples
 
 <Norway>
 Vassal of Byzantium: Exarchate of Thule
 Vassal of France/Burgundy: Duchy of Norway
 Vassal of Arabia/Cordoba/Morocco: Emirate of Norway
-Vassal of Spain/Aragon: Viceroyalty of Norway
+Vassal of Castile/Aragon: Viceroyalty of Norway
 Vassal of Denmark: Jarldom of Norway
 Vassal of Sweden: Jarldom of Trondelag
 Vassal of Venice/Genoa: Colony of Norway
@@ -55,7 +265,7 @@ Vassal of Austria: Habsburg Norway
 Vassal of Ottomans: Eyalet of Norvec
 Vassal of Poland/Lithuania: Voivodeship of Norway
 Vassal of Bulgaria: Zhupa of Norway
-Generic Vassal (all the other civs): Province of Norway
+Generic Vassal: Province of Norway
 
 Master of Sweden and Denmark: Kalmar Union
 Master of Sweden, controls Denmark province: Kalmar Union
@@ -64,19 +274,18 @@ Merchant Republic civic, Islam State Religion: Norwegian Islamic Republic
 Merchant Republic civic: Norwegian Republic
 Islam State Religion: Sultanate of Norway
 Master of Denmark: Kingdom of Norway-Denmark
-Controls Denmark province, after 1534: Kingdom of Norway-Denmark
-Controls Denmark province: Kingdoms of Norway and Denmark
+Controls Denmark province: Kingdom of Norway-Denmark
 Master of Sweden: Kingdom of Norway-Sweden
-Controls Svaeland province, after 1209: Kingdom of Norway-Sweden
-Controls Svaeland province: Kingdoms of Norway and Sweden
+Controls Svaeland province: Kingdom of Norway-Sweden
 Controls Vestfold province: Kingdom of Norway
 Default: Jarldom of Lade
+Initial: Norwegian Peoples
 
 <Sweden>
 Vassal of Byzantium: Exarchate of Suedia
 Vassal of France/Burgundy: Duchy of Sweden
 Vassal of Arabia/Cordoba/Morocco: Emirate of Sweden
-Vassal of Spain/Aragon: Viceroyalty of Sweden
+Vassal of Castile/Aragon: Viceroyalty of Sweden
 Vassal of Denmark/Norway: Jarldom of Sweden
 Vassal of Venice/Genoa: Colony of Sweden
 Vassal of Novgorod/Kiev: Principality of Sweden
@@ -89,7 +298,7 @@ Vassal of Austria: Habsburg Sweden
 Vassal of Ottomans: Eyalet of Isves
 Vassal of Poland/Lithuania: Voivodeship of Sweden
 Vassal of Bulgaria: Zhupa of Sweden
-Generic Vassal (all the other civs): Province of Sweden
+Generic Vassal: Province of Sweden
 
 Master of Sweden and Denmark: Kalmar Union
 Master of Norway, controls Denmark province: Kalmar Union
@@ -99,20 +308,19 @@ Merchant Republic civic: Republic of Sweden
 Islam State Religion: Sultanate of Sweden
 At least 10 provinces: Swedish Empire
 Master of Denmark: Kingdom of Sweden-Denmark
-Controls Denmark province, after 1397: Kingdom of Sweden-Denmark
-Controls Denmark province: Kingdoms of Sweden and Denmark
+Controls Denmark province: Kingdom of Sweden-Denmark
 Master of Norway: Kingdom of Sweden-Norway
-Controls Norway province, after 1209: Kingdom of Sweden-Norway
-Controls Norway province: Kingdoms of Sweden and Norway
+Controls Norway province: Kingdom of Sweden-Norway
 Default: Kingdom of Sweden
+Initial: Swedish Peoples
 
 <Novgorod>
 Vassal of Byzantium: Exarchate of Nemogardas
 Vassal of France/Burgundy: Duchy of Novgorod
 Vassal of Arabs/Cordoba/Morocco: Emirate of Salawiya
-Vassal of Spain/Aragon: Viceroyalty of Novgorod
-Vassal of Denmark/Norway, at least 4 provinces: Jarldom of Gar?ar�ki
-Vassal of Denmark/Norway: Jarldom of Holmgar?r
+Vassal of Castile/Aragon: Viceroyalty of Novgorod
+Vassal of Denmark/Norway, at least 4 provinces: Jarldom of Garðaríki
+Vassal of Denmark/Norway: Jarldom of Holmgarðr
 Vassal of Sweden: Jarldom of Ingria
 Vassal of Venice/Genoa: Colony of Novgorod
 Vassal of Kiev: Novgorod Volost'
@@ -133,16 +341,17 @@ Merchant Republic civic, Islam State Religion: Islamic Republic of Novgorod
 Merchant Republic civic: Novgorod Republic
 Islam State Religion: Sultanate of Novgorod
 Catholic/Protestant State Religion: Kingdom of Novgorod
-Bureaucracy civic, after 1136: Novgorod Republic
+Bureaucracy civic, after 1136 (turn 179): Novgorod Republic
 Tribal Law civic: Ilmen Slavs
 Default: Principality of Novgorod
+Initial: Novgorodian Peoples
 
 <Kiev>
 Vassal of Byzantium: Exarchate of Ruthenia
 Vassal of France/Burgundy: Duchy of Kiev
 Vassal of Arabs/Cordoba/Morocco: Emirate of Kuyavia
-Vassal of Spain/Aragon: Viceroyalty of Kiev
-Vassal of Denmark/Norway/Sweden: Jarldom of Konugar?r
+Vassal of Castile/Aragon: Viceroyalty of Kiev
+Vassal of Denmark/Norway/Sweden: Jarldom of Kœnugarðr
 Vassal of Venice/Genoa: Colony of Kiev
 Vassal of Novgorod: Kiev Volost'
 Vassal of Muscovy, at least 4 provinces: Cossack Hetmanate
@@ -160,19 +369,20 @@ Generic Vassal: Province of Kiev
 
 Merchant Republic civic, Islam State Religion: Islamic Republic of Kiev
 Merchant Republic civic: Republic of Kiev
-Islam State Religion, after 1380: Sultanate of Kiev
+Islam State Religion, after 1380 (turn 260): Sultanate of Kiev
 Islam State Religion: Rurikid Sultanate
 Catholic/Protestant State Religion: Kingdom of Rus
-After 1110, at least 6 provinces: Kievan' Rus
-After 1110: Principality of Kiev
+After 1110 (turn 170), at least 6 provinces: Kievan' Rus
+After 1110 (turn 170): Principality of Kiev
 Default: Kievan' Rus
+Initial: Kievan Peoples
 
 <Muscovy>
 Vassal of Byzantium: Exarchate of Moscovia
 Vassal of France/Burgundy: Duchy of Muscovy
 Vassal of Arabs/Cordoba/Morocco: Emirate of Artaniya
-Vassal of Spain/Aragon: Viceroyalty of Moscow
-Vassal of Denmark/Norway/Sweden: Jarldom of M�ramar
+Vassal of Castile/Aragon: Viceroyalty of Moscow
+Vassal of Denmark/Norway/Sweden: Jarldom of Móramar
 Vassal of Venice/Genoa: Colony of Moscow
 Vassal of Novgorod/Kiev: Muscovy Volost'
 Vassal of Germany/Prussia: March of Moscow
@@ -193,12 +403,13 @@ At least 7 provinces, Despotism/Feudal Monarchy civic: Tsardom of Russia
 At least 7 provinces: Russian Empire
 At least 4 provinces: Grand Duchy of Moscow
 Default: Principality of Moscow
+Initial: Muscovite Peoples
 
 <England>
 Vassal of Byzantium: Exarchate of Britannia
 Vassal of France/Burgundy: Duchy of La Manche
 Vassal of Arabia/Cordoba/Morocco: Emirate of Ingeltra
-Vassal of Spain/Aragon: Viceroyalty of England
+Vassal of Castile/Aragon: Viceroyalty of England
 Vassal of Denmark: Jarldom of the Danelaw
 Vassal of Norway/Sweden: Jarldom of England
 Vassal of Venice/Genoa: Colony of England
@@ -225,12 +436,13 @@ Islam State Religion: Sultanate of England
 Master of Scotland: Kingdom of Great Britain
 Controls Scotland province: Kingdom of Great Britain
 Default: Kingdom of England
+Initial: Anglo-Saxon Peoples
 
 <Scotland>
 Vassal of Byzantium: Exarchate of Caledonia
 Vassal of France/Burgundy: Duchy of Ecosse
 Vassal of Arabia/Cordoba/Morocco: Emirate of Scotland
-Vassal of Spain/Aragon: Viceroyalty of Scotland
+Vassal of Castile/Aragon: Viceroyalty of Scotland
 Vassal of Denmark/Norway/Sweden: Jarldom of the Isles
 Vassal of Venice/Genoa: Colony of Scotland
 Vassal of Novgorod/Kiev: Principality of Scotland
@@ -242,7 +454,7 @@ Vassal of Austria: Habsburg Scotland
 Vassal of Ottomans: Eyalet of Iskocya
 Vassal of Poland/Lithuania: Voivodeship of Scotland
 Vassal of Bulgaria: Zhupa of Scotland
-Generic Vassal (all the other civs): Province of Scotland
+Generic Vassal: Province of Scotland
 
 Merchant Republic civic, Islam State Religion: Islamic Republic of Scotland
 Merchant Republic civic: Commonwealth of Scotland
@@ -250,15 +462,16 @@ Islam State Religion: Sultanate of Scotland
 Controls Bretagne province, at least 5 provinces: Celtic Union
 Controls London province, at least 5 provinces: Kingdom of Great Britain
 Master of England: Kingdom of Great Britain
-After 1281: Kingdom of Scotland
+After 1281 (turn 227): Kingdom of Scotland
 Default: Kingdom of Alba
+Initial: Scottish Peoples
 
 <Dutch>
 Vassal of Byzantium: Exarchate of Batavia
 Vassal of France: County of Flanders
 Vassal of Burgundy: Burgundian Netherlands
 Vassal of Arabia/Cordoba/Morocco: Emirate of the Netherlands
-Vassal of Spain: Seventeen Provinces
+Vassal of Castile: Seventeen Provinces
 Vassal of Aragon: Viceroyalty of the Netherlands
 Vassal of Denmark/Norway/Sweden: Jarldom of Frisia
 Vassal of Venice/Genoa: Colony of Holland
@@ -272,7 +485,7 @@ Vassal of Austria: Habsburg Netherlands
 Vassal of Ottomans: Eyalet of Holland
 Vassal of Poland/Lithuania: Voivodeship of Holland
 Vassal of Bulgaria: Zhupa of Holland
-Generic Vassal (all the other civs): Province of Holland
+Generic Vassal: Province of Holland
 
 Merchant Republic civic, Islam State Religion: Islamic Republic of the Netherlands
 Merchant Republic civic, controls Flanders: Republic of the Seventeen United Netherlands
@@ -280,4 +493,5 @@ Merchant Republic civic: Republic of the Seven United Netherlands
 Islam State Religion: Sultanate of the Netherlands
 Controls Flanders: United Kingdom of the Netherlands
 Default: Kingdom of the Netherlands
+Initial: Batavian Peoples
 

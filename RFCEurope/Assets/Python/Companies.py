@@ -41,14 +41,17 @@ lCompanyBuilding = [xml.iCorporation1, xml.iCorporation2, xml.iCorporation3, xml
 
 class Companies:
 
-	def checkTurn(self, iGameTurn):
+	def setup(self):
 
 		# update companies at the beginning of the 1200AD scenario:
 		if utils.getScenario() == con.i1200ADScenario:
-			if iGameTurn == xml.i1200AD:
-				for iCompany in range(xml.iNumCompanies):
-					if iGameTurn > tCompaniesBirth[iCompany] and iGameTurn < tCompaniesDeath[iCompany]:
-						self.addCompany (iCompany, 2)
+			iGameTurn = 200
+			for iCompany in range(xml.iNumCompanies):
+				if iGameTurn > tCompaniesBirth[iCompany] and iGameTurn < tCompaniesDeath[iCompany]:
+					self.addCompany (iCompany, 2)
+
+
+	def checkTurn(self, iGameTurn):
 
 		# check if it's not too early
 		iCompany = iGameTurn % iNumCompanies
@@ -513,19 +516,25 @@ class Companies:
 		# competition
 		if iCompany == iHospitallers:
 			if city.isHasCorporation(iTemplars):
-				iValue *= 0.66
+				iValue *= 2
+				iValue /= 3
 			if city.isHasCorporation(iTeutons):
-				iValue *= 0.66
+				iValue *= 2
+				iValue /= 3
 		elif iCompany == iTemplars:
 			if city.isHasCorporation(iHospitallers):
-				iValue *= 0.66
+				iValue *= 2
+				iValue /= 3
 			if city.isHasCorporation(iTeutons):
-				iValue *= 0.66
+				iValue *= 2
+				iValue /= 3
 		elif iCompany == iTeutons:
 			if city.isHasCorporation(iTemplars):
-				iValue *= 0.66
+				iValue *= 2
+				iValue /= 3
 			if city.isHasCorporation(iHospitallers):
-				iValue *= 0.66
+				iValue *= 2
+				iValue /= 3
 		elif iCompany == iMedici:
 			if city.isHasCorporation(iStGeorge) or city.isHasCorporation(iAugsburg):
 				iValue /= 2

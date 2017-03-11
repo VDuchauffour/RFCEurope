@@ -162,14 +162,9 @@ extern int NUM_BUILDINGS; // Plague is the last "building"
 #define BUILDING_PLAGUE			(NUM_BUILDINGS-1)
 
 extern int *startingTurn;
-
 extern int *turnPlayed; // 3Miro: overkill but leave it
 extern int *civSpreadFactor; // 3Miro: includes major players, minor players, indeps and barbs
 
-
-//extern wchar civDynamicNames[22][22][19]; //(dynamic civ names - not jdog's) 3Miro: all made the same for now, not sure we will ever go beyond
-//extern int civDynamicNamesFlag[22]; // 3Miro: two items, that are not used right now, all names are the same
-//extern int civDynamicNamesEraThreshold[22];
 extern int techFoundedDate[120]; // 3Miro the date a tech has been founded, currently 120 tech allowed, read/write from CvGame
 
 extern int *settlersMaps;

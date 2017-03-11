@@ -78,6 +78,7 @@ Changes for RFCE 1.5:
 		- Faith points taken into account for religious military order spread
 		- City size taken into account for company spread, especially for trade based companies
 		- Hanseatic League starts earlier, in 1157 (earliest remaining documentary mention), with much increased city number limit in 1356 (the first general Diet of the Hansa)
+		- Fixed issue where company resources added half as much bonuses ingame as they were set up and as they were shown in the Civilopedia before starting an actual game
 
 	Plague overhaul:
 		- Improvements near a plagued city have a chance whether to reduce their level, or to reset the progress towards the next level: Towns 100%, Villages 75%, Hamlets 50%, Cottages 25%
@@ -166,7 +167,7 @@ Changes for RFCE 1.5:
 		- Uppsala is preplaced in the 1200AD scenario (will be reduced to town a couple turns later), Shrine of Uppsala is preplaced there so it can't be built later
 		- Fixed oversight in the 1200AD scenario where Norwegian cities started with both Trading Post and Harbor - now they have Lighthouse instead
 		- Fixed oversight in the 1200AD scenario where Portuguese cities started with both Feitoria and Lighthouse - now they have Harbor instead
-		- Company spread is updated to an initial state in the first turn of the 1200 AD scenario
+		- Company spread is updated to an initial state before the first turn of the 1200 AD scenario starts
 		- NOTE: Most of the map updates for the 1.5 version are not yet implemented in the 1200AD scenario
 
 	Mercenary updates:
@@ -270,12 +271,16 @@ Changes for RFCE 1.5:
 		- Minor text updates in the wording of some UPs
 		- Various UHV text improvements by DC123456789 and 2phunkey4u
 		- New interface text message when a new Janissary unit is ready for your service
+		- Readded initial civ name functionality to the DCN system (usually something like Xyz Peoples)
+		- Dynamic Civ Names won't refresh if you don't have any cities (e.g. you stay with the initial name until you found/acquire your first city)
+		- Added initial Dynamic Civ Name for all the 28 civs, most of them are based on the entry they had in the old system
 		- Dynamic Civ Names for Norway, Denmark, Sweden, lots of interconnected names between them
 		- Updated DCN Empire trigger conditions and early DCNames for France / the Franks
+		- Fixed minor mistakes in the Aragonese DCN, changed a couple entries in the Castilian vassal DCN from "Spain" to "Castile"
 		- Dynamic Civ Names for Novgorod, Kiev, Muscovy by DC123456789 and SanJose
 		- Dynamic Civ Names for England, Scotland, the Dutch with the help of DC123456789
-		- Colony for Genoan, Zhupa for Bulgarian, Voivodeship for Polish and Lithuanian vassals' DCNames (already added to the recently updated civs)
-		- Added Dynamic Civ Names reference text file to the mod
+		- Colony for Genoan, Zhupa for Bulgarian, Voivodeship for Polish and Lithuanian vassals' DCNames (added to all the recently updated civs)
+		- Added Dynamic Civ Names and Lakes of RFCEurope reference text files to the mod
 		- Civilopedia entries for the new companies, UUs, UBs
 		- Added help text and bonus information for the various company buildings
 
@@ -307,6 +312,8 @@ Changes for RFCE 1.5:
 		- Reduced German respawn zone around Brandenburg, now it doesn't have an overlap with Prussia's
 		- Minor updates in the Swedish and Prussian respawn zones, to avoid overlap with Lithuania
 		- Revised respawn zone for Novgorod and Russia, better shape for both without any overlaps
+		- Vassals are now allowed to trade cities with their master, e.g. you can give cities to your vassal if they are willing to accept it
+		- The Papal States cannot trade any technologies (you can neither trade techs from the Pope, nor trade techs to him)
 
 	Technical / UI changes:
 		- No interface messages are displayed during autoplay/autorun (Crusades, RiseAndFall, Religion, Wonders, Leaders, etc.)
@@ -326,6 +333,7 @@ Changes for RFCE 1.5:
 		- Revised timing and availability for most previously added interface messages
 		- Updated resource alignment and positioning in the Company Screen
 		- Adjusted main screen UHV counter for a couple civs, it won't be displayed after the UHV date
+		- Yields are now displayed correctly for 0 base yield plots which have yield modifiers on them (bonus resources, Moroccan UP)
 
 	Bugfixes:
 		- Fixed strange visibility area for the Ottomans
@@ -347,6 +355,7 @@ Changes for RFCE 1.5:
 		- Added a couple more bugfixes (and minor fixes for Firaxis oversights) from Karadoc/K-mod
 		- Fixed dates for a couple events/deadlines, including the Norwegian 2nd UHV and the Bulgarian 3rd UHV
 		- Fixed wrong class for a couple resources, which resulted in wrong AI value associated with them
+		- Fixed issue with character encoding in a couple DCN related files, now all special characters should be displayed correctly
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
