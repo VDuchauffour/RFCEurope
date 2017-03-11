@@ -850,7 +850,7 @@ class RFCEBalance:
 		# block declaration of war against newly spawning nations for this many turns (pre-set wars are not affected)
 		gc.setPaceTurnsAfterSpawn( 5 )
 
-		# Absinthe: this is outdated
+		# Absinthe: Visualization parameters are outdated
 		#			display for Core and Normal areas were added in CvEventManager/onGameStart, can be enabled/disabled in the GlobalDefines_Alt.xml
 		#			those are the only 2 you might want to use on the main map, for everything else we have better tools in the WB
 		## set the Visualization parameters, note that those functions can be accessed at any time, not just here

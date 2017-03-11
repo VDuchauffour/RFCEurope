@@ -1428,6 +1428,24 @@
 		<Spanish></Spanish>
 		<Portuguese>Província da Andaluzia</Portuguese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR22</Tag>
+		<English>Voivodeship of Andalusia</English>
+		<French>Province d'Andalousie</French>
+		<German>Provinz Andalusien</German>
+		<Italian>Pronvincia dell'Andalusia</Italian>
+		<Spanish></Spanish>
+		<Portuguese>Província da Andaluzia</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_COR23</Tag>
+		<English>Zhupa of Andalusia</English>
+		<French>Province d'Andalousie</French>
+		<German>Provinz Andalusien</German>
+		<Italian>Pronvincia dell'Andalusia</Italian>
+		<Spanish></Spanish>
+		<Portuguese>Província da Andaluzia</Portuguese>
+	</TEXT>
 	<!-- Cordoba -->
 	<!-- Tunesia -->
 	<TEXT>
@@ -1627,6 +1645,24 @@
 		<Italian>Provincia di Tunisia</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>Província da Tunísia</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUN22</Tag>
+		<English>Voivodeship of Tunisia</English>
+		<French>Voivodeship of Tunisia</French>
+		<German>Voivodeship of Tunisia</German>
+		<Italian>Voivodeship of Tunisia</Italian>
+		<Spanish>Voivodeship of Tunisia</Spanish>
+		<Portuguese>Voivodeship of Tunisia</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_TUN23</Tag>
+		<English>Zhupa of Tunisia</English>
+		<French>Zhupa of Tunisia</French>
+		<German>Zhupa of Tunisia</German>
+		<Italian>Zhupa of Tunisia</Italian>
+		<Spanish>Zhupa of Tunisia</Spanish>
+		<Portuguese>Zhupa of Tunisia</Portuguese>
 	</TEXT>
 	<!-- Tunesia -->
 	<!-- Dutch -->
@@ -4289,6 +4325,24 @@
 		<Spanish></Spanish>
 		<Portuguese>Província de Portugal</Portuguese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POR22</Tag>
+		<English>Voivodeship of Portugal</English>
+		<French>Voivodeship du Portugal</French>
+		<German>Voivodeship Portugal</German>
+		<Italian>Voivodeship del Portogallo</Italian>
+		<Spanish></Spanish>
+		<Portuguese>Voivodeship de Portugal</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_POR23</Tag>
+		<English>Zhupa of Portugal</English>
+		<French>Zhupa du Portugal</French>
+		<German>Zhupa Portugal</German>
+		<Italian>Zhupa del Portogallo</Italian>
+		<Spanish></Spanish>
+		<Portuguese>Zhupa de Portugal</Portuguese>
+	</TEXT>
 	<!-- Portugal -->
 	<!-- Spain -->
 	<TEXT>
@@ -4428,7 +4482,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN14</Tag>
-		<English>Jarldom of Spain</English>
+		<English>Jarldom of Castile</English>
 		<French>Royaume Wisigoth d'Espagne</French>
 		<German>Westgotisches Königreich Spanien</German>
 		<Italian>Regno Visigoto di Spagna</Italian>
@@ -4437,7 +4491,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN15</Tag>
-		<English>Colony of Spain</English>
+		<English>Colony of Castile</English>
 		<French>Espagne V&#233;nitienne</French>
 		<German>Venezianisch-Spanien</German>
 		<Italian>Spagna Veneziana</Italian>
@@ -4518,7 +4572,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN21</Tag>
-		<English>Province of Spain</English>
+		<English>Province of Castile</English>
 		<French>Province d'Espagne</French>
 		<German>Provinz Spanien</German>
 		<Italian>Provincia di Hispani</Italian>
@@ -4527,7 +4581,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SPN22</Tag>
-		<English>Principality of Spain</English>
+		<English>Principality of Castile</English>
 		<French>Province d'Espagne</French>
 		<German>Provinz Spanien</German>
 		<Italian>Provincia di Hispani</Italian>
@@ -4542,6 +4596,24 @@
 		<Italian>Iberian Union</Italian>
 		<Spanish>Iberian Union</Spanish>
 		<Portuguese>Iberian Union</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN23</Tag>
+		<English>Voivodeship of Castile</English>
+		<French>Voivodeship of Castile</French>
+		<German>Voivodeship of Castile</German>
+		<Italian>Voivodeship of Castile</Italian>
+		<Spanish>Voivodeship of Castile</Spanish>
+		<Portuguese>Voivodeship of Castile</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SPN24</Tag>
+		<English>Zhupa of Castile</English>
+		<French>Zhupa of Castile</French>
+		<German>Zhupa of Castile</German>
+		<Italian>Zhupa of Castile</Italian>
+		<Spanish>Zhupa of Castile</Spanish>
+		<Portuguese>Zhupa of Castile</Portuguese>
 	</TEXT>
 	<!-- Spain -->
 	<!-- Sweden -->
@@ -6240,6 +6312,24 @@
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARG22</Tag>
+		<English>Voivodeship of Aragon</English>
+		<French>Voivodeship of Aragon</French>
+		<German>Voivodeship of Aragon</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ARG23</Tag>
+		<English>Zhupa of Aragon</English>
+		<French>Zhupa of Aragon</French>
+		<German>Zhupa of Aragon</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
 	<!-- Aragon -->
 	<!-- Sicily -->
 	<TEXT>
@@ -6436,6 +6526,24 @@
 		<English>Province of Sicilya</English>
 		<French>Province of Sicilya</French>
 		<German>Province of Sicilya</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SIC22</Tag>
+		<English>Voivodeship of Sicily</English>
+		<French>Voivodeship of Sicily</French>
+		<German>Voivodeship of Sicily</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_SIC23</Tag>
+		<English>Zhupa of Sicily</English>
+		<French>Zhupa of Sicily</French>
+		<German>Zhupa of Sicily</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
@@ -6666,6 +6774,24 @@
 		<Italian>Kingdom of Mauretania</Italian>
 		<Spanish>Kingdom of Mauretania</Spanish>
 		<Portuguese>Kingdom of Mauretania</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_MOR24</Tag>
+		<English>Voivodeship of Morocco</English>
+		<French>Voivodeship of Morocco</French>
+		<German>Voivodeship of Morocco</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_MOR25</Tag>
+		<English>Zhupa of Morocco</English>
+		<French>Zhupa of Morocco</French>
+		<German>Zhupa of Morocco</German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese></Portuguese>
 	</TEXT>
 	<!-- Morocco -->
 	<!-- Novgorod -->

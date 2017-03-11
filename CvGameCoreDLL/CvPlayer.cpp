@@ -328,10 +328,11 @@ void CvPlayer::init(PlayerTypes eID)
 
 	AI_init();
 
-	// Absinthe: no need to update DCN here
-	//Rhye - start (dynamic civ names - not jdog's)
-	//if (getID() < NUM_MAJOR_PLAYERS)
-	//	setCivDescription(civDynamicNames[getID()][0]);
+	// Absinthe: initial Dynamic Civ Name (before you found your first city)
+	int iNumDCNNumber = GC.getCivilizationInfo(getCivilizationType() ).getDCNNumber();
+	if (getID() < NUM_MAJOR_PLAYERS)
+		setCivDescription( GC.getCivilizationInfo(getCivilizationType() ).getDCNName(iNumDCNNumber-1) );
+	// Absinthe: end
 
 	m_iAllowBrothersAtWar = 0; // 3MiroBuldings
 	m_isCrusader = false; // 3MiroCrusades init Crusaders
@@ -4158,24 +4159,28 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 	case TRADE_TECHNOLOGIES:
 		if (!(GC.getGameINLINE().isOption(GAMEOPTION_NO_TECH_TRADING)))
 		{
-			if (GC.getTechInfo((TechTypes)(item.m_iData)).isTrade())
+			// Absinthe: cannot trade technologies with the Pope
+			if ( getID() != PAPAL_PLAYER && eWhoTo != PAPAL_PLAYER )
 			{
-				if (GET_TEAM(getTeam()).isHasTech((TechTypes)(item.m_iData)) && !(GET_TEAM(getTeam()).isNoTradeTech((TechTypes)(item.m_iData))))
+				if (GC.getTechInfo((TechTypes)(item.m_iData)).isTrade())
 				{
-					if (!GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isHasTech((TechTypes)(item.m_iData)))
+					if (GET_TEAM(getTeam()).isHasTech((TechTypes)(item.m_iData)) && !(GET_TEAM(getTeam()).isNoTradeTech((TechTypes)(item.m_iData))))
 					{
-						//if (GET_PLAYER(eWhoTo).isHuman() || (GET_PLAYER(eWhoTo).getCurrentResearch() != item.m_iData))
+						if (!GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isHasTech((TechTypes)(item.m_iData)))
 						{
-							if (GET_TEAM(getTeam()).isTechTrading() || GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isTechTrading())
+							//if (GET_PLAYER(eWhoTo).isHuman() || (GET_PLAYER(eWhoTo).getCurrentResearch() != item.m_iData))
 							{
-								FAssertMsg(item.m_iData >= 0, "item.m_iData is expected to be non-negative (invalid Index)");
-
-								if (GET_PLAYER(eWhoTo).canResearch(((TechTypes)item.m_iData), true))
+								if (GET_TEAM(getTeam()).isTechTrading() || GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isTechTrading())
 								{
-									// 3MiroTimeline: Cannot trade for 20 turns after a tech discovery
-									if ( canTradeTech( item.m_iData ) ){
-										return true;
-									};
+									FAssertMsg(item.m_iData >= 0, "item.m_iData is expected to be non-negative (invalid Index)");
+
+									if (GET_PLAYER(eWhoTo).canResearch(((TechTypes)item.m_iData), true))
+									{
+										// 3MiroTimeline: Cannot trade for 20 turns after a tech discovery
+										if ( canTradeTech( item.m_iData ) ){
+											return true;
+										};
+									}
 								}
 							}
 						}
@@ -4206,7 +4211,7 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 
 	case TRADE_CITIES:
 		{
-			// 3MiroPapal: cannot trade cities
+			// 3MiroPapal: cannot trade cities with the Pope
 			if ( getID() != PAPAL_PLAYER && eWhoTo != PAPAL_PLAYER )
 			{
 				// Absinthe: Don't even show city trading for the human player in the first 5 turns after spawn (avoid exploit with city gifting before the flip for additional units)
@@ -4223,17 +4228,18 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 					{
 						if (0 == GC.getGameINLINE().getMaxCityElimination())
 						{
-							if (!GET_TEAM(getTeam()).isAVassal() && !GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isVassal(getTeam()))
+							// Absinthe: reenabled city trade for vassals
+							//if (!GET_TEAM(getTeam()).isAVassal() && !GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isVassal(getTeam()))
+							//{
+							pOurCapitalCity = getCapitalCity();
+							if (pOurCapitalCity != NULL)
 							{
-								pOurCapitalCity = getCapitalCity();
-								if (pOurCapitalCity != NULL)
+								if (pOurCapitalCity->getID() != item.m_iData)
 								{
-									if (pOurCapitalCity->getID() != item.m_iData)
-									{
-										return true;
-									}
+									return true;
 								}
 							}
+							//}
 						}
 					}
 				}
@@ -23083,6 +23089,13 @@ void CvPlayer::processCivNames()
 	{
 		return;
 	}
+
+	// Absinthe: do not refresh DCN if the civ doesn't have any cities (e.g. before you found your first city)
+	if (getNumCities() < 1)
+	{
+		return;
+	}
+	// Absinthe: end
 
 	// 3MiroDCN
 	/*if ( getID() == 2 ){

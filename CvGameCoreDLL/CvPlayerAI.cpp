@@ -10457,7 +10457,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 		}
 		iTempValue += ((kCivic.getSpecialistExtraCommerce(iI) * getTotalPopulation()) / 15);
 
-		// 3MiroCivic: caculate the civic/building class combo
+		// 3MiroCivic: calculate the civic/building class combo
 		if ( (iI == COMMERCE_GOLD) && (kCivic.getBuildingCivicComboGold() != 0) ){
 			iTempValue += kCivic.getBuildingCivicComboGold() * getNumCities();
 		};

@@ -3010,19 +3010,20 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			}
 		}
 
-		if (pPlot->hasYield())
+		// Absinthe: some yields are updated later (yields from bonus resources, Moroccan UP), so won't be displayed on an otherwise 0 yield tile if we have this check here
+		//if (pPlot->hasYield())
+		//{
+		for (iI = 0; iI < NUM_YIELD_TYPES; ++iI)
 		{
-			for (iI = 0; iI < NUM_YIELD_TYPES; ++iI)
-			{
-				iYield = pPlot->calculateYield(((YieldTypes)iI), true);
+			iYield = pPlot->calculateYield(((YieldTypes)iI), true);
 
-				if (iYield != 0)
-				{
-					szTempBuffer.Format(L", %d%c", iYield, GC.getYieldInfo((YieldTypes) iI).getChar());
-					szString.append(szTempBuffer);
-				}
+			if (iYield != 0)
+			{
+				szTempBuffer.Format(L", %d%c", iYield, GC.getYieldInfo((YieldTypes) iI).getChar());
+				szString.append(szTempBuffer);
 			}
 		}
+		//}
 
 		// Absinthe: Freshwater Lakes - redundant text
 		if (pPlot->isFreshWater() && !GC.getTerrainInfo(pPlot->getTerrainType()).isFreshLake())
@@ -9758,7 +9759,9 @@ void CvGameTextMgr::setCorporationHelp(CvWStringBuffer &szBuffer, CorporationTyp
 		int iYieldProduced = GC.getCorporationInfo(eCorporation).getYieldProduced((YieldTypes)iI);
 		if (NO_PLAYER != GC.getGameINLINE().getActivePlayer())
 		{
-			iYieldProduced *= GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getCorporationMaintenancePercent();
+			// Absinthe: bonus from corporations/companies is halved because of getWorldSize, so we manually adjust it here (don't want to mess up everything else connected to getWorldSize)
+			//iYieldProduced *= GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getCorporationMaintenancePercent();
+			iYieldProduced *= 2 * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getCorporationMaintenancePercent();
 			iYieldProduced /= 100;
 		}
 
@@ -9798,7 +9801,9 @@ void CvGameTextMgr::setCorporationHelp(CvWStringBuffer &szBuffer, CorporationTyp
 		int iCommerceProduced = GC.getCorporationInfo(eCorporation).getCommerceProduced((CommerceTypes)iI);
 		if (NO_PLAYER != GC.getGameINLINE().getActivePlayer())
 		{
-			iCommerceProduced *= GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getCorporationMaintenancePercent();
+			// Absinthe: bonus from corporations/companies is halved because of getWorldSize, so we manually adjust it here (don't want to mess up everything else connected to getWorldSize)
+			//iCommerceProduced *= GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getCorporationMaintenancePercent();
+			iCommerceProduced *= 2 * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getCorporationMaintenancePercent();
 			iCommerceProduced /= 100;
 		}
 		if (iCommerceProduced != 0)
@@ -9976,7 +9981,9 @@ void CvGameTextMgr::setCorporationHelpCity(CvWStringBuffer &szBuffer, Corporatio
 
 		if (bActive)
 		{
-			iYield += (kCorporation.getYieldProduced(i) * iNumResources * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getCorporationMaintenancePercent()) / 100;
+			// Absinthe: bonus from corporations/companies is halved because of getWorldSize, so we manually adjust it here (don't want to mess up everything else connected to getWorldSize)
+			//iYield += (kCorporation.getYieldProduced(i) * iNumResources * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getCorporationMaintenancePercent()) / 100;
+			iYield += (kCorporation.getYieldProduced(i) * iNumResources * 2 * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getCorporationMaintenancePercent()) / 100;
 			//iYield += (kCorporation.getYieldProduced(i) * std::min(12,iNumResources) * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getCorporationMaintenancePercent()) / 100; //Rhye - corporation cap
 		}
 
@@ -10001,7 +10008,9 @@ void CvGameTextMgr::setCorporationHelpCity(CvWStringBuffer &szBuffer, Corporatio
 
 		if (bActive)
 		{
-			iCommerce += (kCorporation.getCommerceProduced(i) * iNumResources * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getCorporationMaintenancePercent()) / 100;
+			// Absinthe: bonus from corporations/companies is halved because of getWorldSize, so we manually adjust it here (don't want to mess up everything else connected to getWorldSize)
+			//iCommerce += (kCorporation.getCommerceProduced(i) * iNumResources * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getCorporationMaintenancePercent()) / 100;
+			iCommerce += (kCorporation.getCommerceProduced(i) * iNumResources * 2 * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getCorporationMaintenancePercent()) / 100;
 			//iCommerce += (kCorporation.getCommerceProduced(i) * std::min(12,iNumResources) * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getCorporationMaintenancePercent()) / 100; //Rhye - corporation cap
 		}
 
