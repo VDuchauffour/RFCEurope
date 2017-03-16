@@ -6,15 +6,6 @@
 <!-- Game Text - RFCE Provinces -->
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
-		<Tag>TXT_KEY_PROVINCE_TILE_HELP</Tag>
-		<English>[COLOR_PLAYER_DARK_GRAY_TEXT]Province:[SPACE][COLOR_REVERT]</English>
-		<French>Province: </French>
-		<German>Provinz: </German>
-		<Italian>Provincia: </Italian>
-		<Spanish>Provincia: </Spanish>
-		<Portuguese>Provincia: </Portuguese>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TILE_HELP</Tag>
 		<English>[COLOR_PLAYER_DARK_GRAY_TEXT]City name:[SPACE][COLOR_REVERT]</English>
 		<French>City name: </French>
@@ -22,6 +13,303 @@
 		<Italian>City name: </Italian>
 		<Spanish>City name: </Spanish>
 		<Portuguese>City name: </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COORDINATES_TILE_HELP</Tag>
+		<English>[COLOR_PLAYER_DARK_GRAY_TEXT]Coordinates:[SPACE][COLOR_REVERT]%d1_X_coordinate, %d2_Y_coordinate</English>
+		<French>Coordinates: </French>
+		<German>Coordinates: </German>
+		<Italian>Coordinates: </Italian>
+		<Spanish>Coordinates: </Spanish>
+		<Portuguese>Coordinates: </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_0</Tag>
+		<English>[COLOR_WATER_TEXT]Lough Neagh[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lough Neagh[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lough Neagh[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lough Neagh[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lough Neagh[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lough Neagh[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_1</Tag>
+		<English>[COLOR_WATER_TEXT]Lake Balaton[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake Balaton[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake Balaton[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake Balaton[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake Balaton[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake Balaton[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_2</Tag>
+		<English>[COLOR_WATER_TEXT]Dead Sea[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Dead Sea[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Dead Sea[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Dead Sea[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Dead Sea[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Dead Sea[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_3</Tag>
+		<English>[COLOR_WATER_TEXT]Sea of Galilee[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Sea of Galilee[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Sea of Galilee[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Sea of Galilee[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Sea of Galilee[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Sea of Galilee[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_4</Tag>
+		<English>[COLOR_WATER_TEXT]Lake Tuz[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake Tuz[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake Tuz[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake Tuz[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake Tuz[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake Tuz[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_5</Tag>
+		<English>[COLOR_WATER_TEXT]Lake Egirdir[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake Egirdir[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake Egirdir[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake Egirdir[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake Egirdir[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake Egirdir[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_6</Tag>
+		<English>[COLOR_WATER_TEXT]Lake Beysehir[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake Beysehir[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake Beysehir[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake Beysehir[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake Beysehir[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake Beysehir[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_7</Tag>
+		<English>[COLOR_WATER_TEXT]Lake Garda[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake Garda[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake Garda[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake Garda[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake Garda[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake Garda[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_8</Tag>
+		<English>[COLOR_WATER_TEXT]Lake Geneva[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake Geneva[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake Geneva[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake Geneva[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake Geneva[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake Geneva[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_9</Tag>
+		<English>[COLOR_WATER_TEXT]Lake Constance[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake Constance[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake Constance[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake Constance[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake Constance[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake Constance[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_10</Tag>
+		<English>[COLOR_WATER_TEXT]Lake Scutari[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake Scutari[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake Scutari[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake Scutari[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake Scutari[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake Scutari[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_11</Tag>
+		<English>[COLOR_WATER_TEXT]Lake Ohrid[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake Ohrid[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake Ohrid[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake Ohrid[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake Ohrid[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake Ohrid[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_12</Tag>
+		<English>[COLOR_WATER_TEXT]Lake Sniardwy[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake Sniardwy[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake Sniardwy[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake Sniardwy[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake Sniardwy[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake Sniardwy[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_13</Tag>
+		<English>[COLOR_WATER_TEXT]Lake Vättern[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake Vättern[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake Vättern[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake Vättern[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake Vättern[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake Vättern[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_14</Tag>
+		<English>[COLOR_WATER_TEXT]Lake Vänern[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake Vänern[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake Vänern[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake Vänern[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake Vänern[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake Vänern[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_15</Tag>
+		<English>[COLOR_WATER_TEXT]Lake Mälaren[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake Mälaren[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake Mälaren[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake Mälaren[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake Mälaren[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake Mälaren[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_16</Tag>
+		<English>[COLOR_WATER_TEXT]Lake Storsjön[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake Storsjön[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake Storsjön[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake Storsjön[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake Storsjön[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake Storsjön[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_17</Tag>
+		<English>[COLOR_WATER_TEXT]Lake Peipus[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake Peipus[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake Peipus[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake Peipus[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake Peipus[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake Peipus[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_18</Tag>
+		<English>[COLOR_WATER_TEXT]Lake Ilmen[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake Ilmen[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake Ilmen[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake Ilmen[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake Ilmen[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake Ilmen[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_19</Tag>
+		<English>[COLOR_WATER_TEXT]Lake Ladoga[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake Ladoga[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake Ladoga[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake Ladoga[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake Ladoga[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake Ladoga[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_20</Tag>
+		<English>[COLOR_WATER_TEXT]Lake Onega[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake Onega[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake Onega[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake Onega[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake Onega[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake Onega[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_21</Tag>
+		<English>[COLOR_WATER_TEXT]Lake Beloye[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake Beloye[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake Beloye[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake Beloye[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake Beloye[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake Beloye[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_22</Tag>
+		<English>[COLOR_WATER_TEXT]Lake Saimaa[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake Saimaa[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake Saimaa[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake Saimaa[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake Saimaa[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake Saimaa[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_23</Tag>
+		<English>[COLOR_WATER_TEXT]Lake Päijänne[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake Päijänne[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake Päijänne[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake Päijänne[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake Päijänne[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake Päijänne[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_24</Tag>
+		<English>[COLOR_WATER_TEXT]Lake Vygozero[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake Vygozero[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake Vygozero[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake Vygozero[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake Vygozero[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake Vygozero[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_25</Tag>
+		<English>[COLOR_WATER_TEXT]Lake Segozero[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake Segozero[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake Segozero[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake Segozero[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake Segozero[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake Segozero[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_26</Tag>
+		<English>[COLOR_WATER_TEXT]Lake Kallavesi[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake Kallavesi[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake Kallavesi[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake Kallavesi[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake Kallavesi[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake Kallavesi[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_27</Tag>
+		<English>[COLOR_WATER_TEXT]Lake Keitele[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake Keitele[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake Keitele[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake Keitele[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake Keitele[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake Keitele[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_28</Tag>
+		<English>[COLOR_WATER_TEXT]Lake Pielinen[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake Pielinen[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake Pielinen[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake Pielinen[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake Pielinen[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake Pielinen[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_29</Tag>
+		<English>[COLOR_WATER_TEXT]Lake Näsijärvi[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Lake Näsijärvi[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Lake Näsijärvi[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Lake Näsijärvi[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Lake Näsijärvi[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Lake Näsijärvi[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_30</Tag>
+		<English>[COLOR_WATER_TEXT]Limfjorden[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Limfjorden[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Limfjorden[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Limfjorden[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Limfjorden[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Limfjorden[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LAKE_NAME_31</Tag>
+		<English>[COLOR_WATER_TEXT]Trondheimsfjorden[COLOR_REVERT]</English>
+		<French>[COLOR_WATER_TEXT]Trondheimsfjorden[COLOR_REVERT]</French>
+		<German>[COLOR_WATER_TEXT]Trondheimsfjorden[COLOR_REVERT]</German>
+		<Italian>[COLOR_WATER_TEXT]Trondheimsfjorden[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WATER_TEXT]Trondheimsfjorden[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WATER_TEXT]Trondheimsfjorden[COLOR_REVERT]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_STABILITY_HELP</Tag>
@@ -76,6 +364,15 @@
 		<Italian>Solido</Italian>
 		<Spanish>S&#243;lida</Spanish>
 		<Portuguese>Sólida</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROVINCE_TILE_HELP</Tag>
+		<English>[COLOR_PLAYER_DARK_GRAY_TEXT]Province:[SPACE][COLOR_REVERT]</English>
+		<French>Province: </French>
+		<German>Provinz: </German>
+		<Italian>Provincia: </Italian>
+		<Spanish>Provincia: </Spanish>
+		<Portuguese>Provincia: </Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROVINCE_NAME_0</Tag>

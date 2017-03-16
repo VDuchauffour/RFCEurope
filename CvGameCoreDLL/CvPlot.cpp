@@ -11165,6 +11165,17 @@ void CvPlot::setProvinceID(int iNewValue)
 	m_iProvinceID = iNewValue;
 }
 
+// lake name ID as int (based on dataloader)
+int CvPlot::getLakeNameID() const
+{
+	return m_iLakeNameID;
+}
+
+void CvPlot::setLakeNameID(int iNewValue)
+{
+	m_iLakeNameID = iNewValue;
+}
+
 // city name maps with dataloader
 CvString CvPlot::getCityNameMap(PlayerTypes eIndex) const
 {

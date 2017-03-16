@@ -30,3 +30,19 @@ def setup():
 						# Set the value in CvPlot instance
 						plot.setCityNameMap(iLoopPlayer, sName)
 
+	# Lake name IDs
+	# first set all plots to -1
+	for y in range(len(maps.tProinceMap)):
+		for x in range(len(maps.tProinceMap[y])):
+			plot = map.plot(x, y)
+			if plot:
+				plot.setLakeNameID(-1)
+	# then we add the ID to the actual lake tiles
+	for i in range(len(con.lLakeNameIDs)):
+		x = con.lLakeNameIDs[i][0]
+		y = con.lLakeNameIDs[i][1]
+		iLakeNameID = con.lLakeNameIDs[i][2]
+		plot = map.plot(x, y)
+		if plot:
+			plot.setLakeNameID(iLakeNameID)
+

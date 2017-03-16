@@ -534,6 +534,8 @@ public:
 	int getProvince();
 	int getProvinceID() const;
 	void setProvinceID(int iNewValue);
+	int getLakeNameID() const;
+	void setLakeNameID(int iNewValue);
 	CvString getCityNameMap(PlayerTypes eIndex) const;
 	void setCityNameMap(PlayerTypes eIndex, std::string szNewValue);
 	CvString getCityNameDefault() const;
@@ -656,6 +658,7 @@ protected:
 
 	// Absinthe: start
 	short m_iProvinceID;
+	short m_iLakeNameID;
 	std::string m_aszCityNameMap[30]; // NUM_MAJOR_PLAYERS + 1: the last one is the (potential) default city name map
 	char* m_szCityNameDefault;
 	// Absinthe: end

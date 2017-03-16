@@ -5,7 +5,7 @@
 <!-- Global Defines -->
 <Civ4Defines xmlns="x-schema:CIV4GlobalDefinesSchema.xml">
 	<Define>
-		<!-- set this to 0 if you want to have autosaves during AI autoplay for some reason -->
+		<!-- set this to 0 if you want to have autosaves during AI autoplay -->
 		<DefineName>NO_AUTOSAVE_DURING_AUTOPLAY</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
@@ -14,6 +14,16 @@
 		<!-- note that this only works when starting new games, won't affect savegames neither on enabling nor on disabling the checks -->
 		<DefineName>NO_AI_UHV_CHECKS</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
+	</Define>
+	<Define>
+		<!-- set to 1 to enable city naming popup on city foundation -->
+		<DefineName>CITY_NAME_POPUP</DefineName>
+		<iDefineIntVal>1</iDefineIntVal>
+	</Define>
+	<Define>
+		<!-- set to 1 to enable plot coordinates in the plot information tooltip -->
+		<DefineName>PLOT_COORDINATES</DefineName>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<!-- set to 1 to enable spawn area display on the map -->

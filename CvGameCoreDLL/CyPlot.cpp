@@ -1066,6 +1066,17 @@ void CyPlot::setProvinceID(int iNewValue)
 		m_pPlot->setProvinceID(iNewValue);
 }
 
+int CyPlot::getLakeNameID()
+{
+	return m_pPlot ? m_pPlot->getLakeNameID() : -1;
+}
+
+void CyPlot::setLakeNameID(int iNewValue)
+{
+	if (m_pPlot)
+		m_pPlot->setLakeNameID(iNewValue);
+}
+
 std::string CyPlot::getCityNameMap(int eIndex) const
 {
 	return m_pPlot ? m_pPlot->getCityNameMap((PlayerTypes) eIndex) : "";
