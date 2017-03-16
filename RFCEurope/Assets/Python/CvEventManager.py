@@ -22,20 +22,16 @@ import CvAdvisorUtils
 import CvTechChooser
 import Consts as con
 import XMLConsts as xml
-
-#Rhye
+import RFCEMaps as rfcemaps
 import RFCUtils
-utils = RFCUtils.RFCUtils()
+import RFCEBalance
 
+utils = RFCUtils.RFCUtils()
+balance = RFCEBalance.RFCEBalance()
 gc = CyGlobalContext()
 localText = CyTranslator()
 PyPlayer = PyHelpers.PyPlayer
 PyInfo = PyHelpers.PyInfo
-
-#3Miro
-import RFCEBalance
-balance = RFCEBalance.RFCEBalance()
-
 
 # globals
 ###################################################
@@ -922,9 +918,12 @@ class CvEventManager:
 	def onCityBuilt(self, argsList):
 		'City Built'
 		city = argsList[0]
-		# Rhye: no city naming in RFC on settling, so this is commented out
-		#if (city.getOwner() == gc.getGame().getActivePlayer()):
- 		#	self.__eventEditCityNameBegin(city, False)
+		# Absinthe: city naming popup on city foundation - settable in GlobalDefines_Alt.xml
+		bCityNamePopup = (gc.getDefineINT("CITY_NAME_POPUP") == 1)
+		if bCityNamePopup:
+			if (city.getOwner() == gc.getGame().getActivePlayer()):
+				self.__eventEditCityNameBegin(city, False)
+		# Absinthe: end
 		CvUtil.pyPrint('City Built Event: %s' %(city.getName()))
 
 	def onCityRazed(self, argsList):
@@ -1148,7 +1147,17 @@ class CvEventManager:
 		popup.setUserData((city.getID(), bRename))
 		popup.setHeaderString(localText.getText("TXT_KEY_NAME_CITY", ()))
 		popup.setBodyString(localText.getText("TXT_KEY_SETTLE_NEW_CITY_NAME", ()))
-		popup.createEditBox(city.getName())
+		# Absinthe: if not a rename, it should offer the CNM name as the default name
+		if bRename:
+			popup.createEditBox(city.getName())
+		else:
+			szName = rfcemaps.tCityMap[city.getOwner()][con.iMapMaxY-1-city.getY()][city.getX()]
+			if (szName == "-1"):
+				popup.createEditBox(city.getName())
+			else:
+				szName = unicode(szName, 'latin-1')
+				popup.createEditBox(szName)
+		# Absinthe: end
 		popup.setEditBoxMaxCharCount( 15 )
 		popup.launch()
 

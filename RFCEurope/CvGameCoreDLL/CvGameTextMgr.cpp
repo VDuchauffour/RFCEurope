@@ -2212,6 +2212,14 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 	};
 	// 3MiroProvince: end
 
+	// Absinthe: Plot coordinates - settable in GlobalDefines_Alt.xml
+	if (GC.getDefineINT("PLOT_COORDINATES") == 1)
+	{
+		szString.append(gDLL->getText("TXT_KEY_COORDINATES_TILE_HELP", pPlot ->getX(), pPlot ->getY()));
+		szString.append(NEWLINE);
+	}
+	// Absinthe: end
+
 	// Absinthe: City Name text for settler units
 	CvWString szName;
 	CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
@@ -3024,6 +3032,14 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			}
 		}
 		//}
+
+		// Absinthe: Lake names (with lake name IDs added with the DataLoader)
+		if ( pPlot->getLakeNameID() != -1 )
+		{
+			szString.append( NEWLINE );
+			szTempBuffer.Format(L"TXT_KEY_LAKE_NAME_%d",pPlot->getLakeNameID());
+			szString.append( gDLL->getText(szTempBuffer.GetCString() ) );
+		}
 
 		// Absinthe: Freshwater Lakes - redundant text
 		if (pPlot->isFreshWater() && !GC.getTerrainInfo(pPlot->getTerrainType()).isFreshLake())

@@ -175,7 +175,7 @@ Changes for RFCE 1.5:
 		- Fixed bug with ever increasing cost for mercenary price and upkeep whenever you clicked on them (for civs with modified values, probably caused by the new StoredData handling)
 		- Fixed bug where you could hire naval mercenaries in non-coastal cities - they will still appear on the mercenary screen though
 		- Mercenaries requiring more culture in the province or a different state religion will also show up on the merc screen, but you can't hire them
-		- Added information texts for the mercenary screen about the reason(s) why you cannot hire specific mercs: money, culture, coastal city, religion
+		- Added information texts for the mercenary screen about the reason(s) why you cannot hire specific mercs: money, culture, coastal city
 		- Fixed bug where mercenaries could appear in cities without enough culture (if there were multiple cities in the province)
 		- Specific interface message for the human player when there is a new mercenary in the list, but can't be hired because needs different State Religion
 		- New interface message for the human player if a merc available for him/her was hired by another player
@@ -334,6 +334,9 @@ Changes for RFCE 1.5:
 		- Updated resource alignment and positioning in the Company Screen
 		- Adjusted main screen UHV counter for a couple civs, it won't be displayed after the UHV date
 		- Yields are now displayed correctly for 0 base yield plots which have yield modifiers on them (bonus resources, Moroccan UP)
+		- Added plot coordinates to the tile information tooltip - settable in GlobalDefines_Alt.xml file, disabled by default
+		- Added option for city naming popup on city foundation (with the civ's CNM name where it is available) - settable in GlobalDefines_Alt.xml file, disabled by default
+		- Added specific name to the plot information tooltip for all lakes (and fjords) on the map
 
 	Bugfixes:
 		- Fixed strange visibility area for the Ottomans
@@ -513,7 +516,7 @@ Changes for RFCE 1.4:
 		- Included option in the GlobalDefines_Alt to enable/disable AI UHV checks, they are enabled by default
 		- Added option to enable/disable autosaves during AI autoplay, also in the GlobalDefines_Alt (disabled by default)
 		- Added new hover-function: holding down alt when hovering on the map will display the respawn areas
-		- Option to enable/disable both the spawn and respawn hover displays, in the GlobalDefines_Alt (enabled by default)
+		- Option to enable/disable both the spawn and respawn hover displays, in the GlobalDefines_Alt (they are enabled by default)
 		- Colour for respawn areas is purple, colour for spawn areas changed to white (for now)
 		- Added some new and improved some old event and interface messages connected to Crusades and to religious persecution
 		- Revised all older hints (which can be seen on loading a game) to be in sync with the latest version of the mod

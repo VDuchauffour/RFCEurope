@@ -1,51 +1,52 @@
 
 
 Continued my lake census on the map of RFCE.
+Note that in RFCE lakes are part of provinces, not handled as separate provinces/regions as in SoI.
 Collected them together here, this is what I have currently:
 
 Lough Neagh, Ireland, 392 km2 - 1 tile
 Lake Balaton, Hungary, 592 km2 - 2 tiles, should be 1, but represented this way because of it's shape
 Dead Sea, Levant, 600 km2 - while it's too small for 2 tiles, represented that way because of the Sea of Galilee
-Galilee Sea, Levant, 167 km2 - too small, but still represented because it's significant role in the Levant and around the Crusades
+Sea of Galilee, Levant, 167 km2 - too small, but still represented because it's significant role in the Levant and around the Crusades
 Lake Tuz, Anatolia, 1600 km2 - 2 tiles, even though it's significantly smaller during Summer
 Lake Egirdir, Anatolia, 482 km2 - 1 tile
 Lake Beysehir, Anatolia, 650 km2 - 1 tile
 Lake Garda, Italy, 370 km2 - 1 tile
 Lake Geneva, Switzerland/France, 581 km2 - 1 tile
 Lake Constance (Bodensee), Switzerland/Austria, 541 km2 - 1 tile
-Lake Scutari (Skadar), Balkans, 370-530 km2 - 1 tile
+Lake Scutari (Lake Skadar), Balkans, 370-530 km2 - 1 tile
 Lake Ohrid, Balkans, 358 km2 - 1 tile, represented together with Prespa
 Lake Prespa, Balkans, 259 km2 - represented together with Ohrid
-Lake Sniardwy, Poland/Prussia, 114 km2 - 1 tile, a lot of other smaller lakes in the area are also represented by this
-Lake Vattern, Sweden, 1912 km2 - 2 tiles
-Lake Vanern, Sweden, 5650 km2 - 3 tiles
-Lake Malaren, Sweden, 1140 km2 - 2 tiles
-Lake Hjalmaren, Sweden, 483 km2 - represented together with Malaren
-Lake Storsjon, Sweden, 464 km2 - 1 tile
+Lake Sniardwy (Spirdingsee), Poland/Prussia, 114 km2 - 1 tile, a lot of other smaller lakes in the area are also represented by this
+Lake Vättern, Sweden, 1912 km2 - 2 tiles
+Lake Vänern, Sweden, 5650 km2 - 3 tiles
+Lake Mälaren (Lake Malar), Sweden, 1140 km2 - 2 tiles
+Lake Hjälmaren, Sweden, 483 km2 - represented together with Malaren
+Lake Storsjön, Sweden, 464 km2 - 1 tile
 Lake Peipus, Estonia/Novgorod, 3555 km2 - 3 tiles
 Lake Ilmen, Russia/Novgorod, 982 km2 - 1 tile
 Lake Ladoga, Russia/Novgorod, 17700 km2 - 10 tiles, islands in the north
 Lake Onega, Russia, 9700 km2 - 5 tiles, with some islands in the north
-Lake Beloye (Beloozero), Russia, 1130 km2 - 1 tile
+Lake Beloye, Russia, 1130 km2 - 1 tile
 Lake Saimaa, Finland, 4400 km2 - a system of lakes, currently represented by 2+1 tiles (because of it's shape)
-Lake Paijanne, Finland, 1083 km2 - 2 tiles, because of it's shape
-Limfjord, Denmark - not actually a lake, represented as a Coast tile diagonally from the Sea
-Trondheimsfjord, Norway - not actually a lake, represented as a Coast tile diagonally from the Sea
+Lake Päijänne, Finland, 1083 km2 - 2 tiles, because of it's shape
 Lake Vygozero, Russia, 1250 km2 - 1 tile, on the northern border of the map
 Lake Segozero, Russia, 815 km2 - 1 tile, on the northern border of the map
 Lake Kallavesi, Finland, 473 km2 (890 km2 with the surrounding lakes) - 1 tile, close to the northern border of the map
 Lake Suvasvesi, Finland, 234 km2 - represented together with the Kallavesi lake-system
 Lake Keitele, Finland, 494 km2 - also some other lakes in the area, 1 tile, close to the northern border of the map
 Lake Pielinen, Finland, 894 km2 - 1 tile on the northern border of the map
-Lake Nasijarvi, Finland, 256 km2 - 1 tile, lots of other lakes in the region are also represented by this
+Lake Näsijärvi, Finland, 256 km2 - 1 tile, lots of other lakes in the region are also represented by this
+Limfjord (Limfjorden), Denmark - not actually a lake, represented as a Coast tile diagonally from the Sea
+Trondheim Fjord (Trondheimsfjorden), Norway - not actually a lake, represented as a Coast tile diagonally from the Sea
 
 Fairly big lakes not present on the map currently
-Lake Ferto (Neusiedlersee), Hungary - 315 km2
+Lake Fertő (Neusiedler See), Hungary - 315 km2 (0-515 km2)
 Lake Vozhe, Russia, 416 km2
 Lake Lacha, Russia, 334 km2
 Lake Kubenskoye, Russia, 407 km2
 Lake Siljan, Sweden, 354 km2
-Lake Puula, Finland, 331 km2
+Lake Puula (Lake Puulavesi), Finland, 331 km2
 
 Salt Lakes in Tunisia/Algeria, most of these dry out or become significantly smaller in the Summer
 Chott el Djerid (el-Jerid), 5000-7000 km2, including Chott el Fejej - 4-5 tiles
