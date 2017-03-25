@@ -1652,4 +1652,4 @@ class RFCUtils:
 		return list[gc.getGame().getSorenRandNum(len(list), 'Random entry')]
 		
 	def isWonder(self, iBuilding):
-		return xml.iSistineChapel <= iBuilding <= xml.iLanterna
+		return xml.iVersailles <= iBuilding <= xml.iLanterna

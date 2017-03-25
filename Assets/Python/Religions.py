@@ -588,7 +588,7 @@ class Religions:
 		x, y = tPlot
 		pPlot = gc.getMap().plot(x, y)
 		if pPlot.isCity():
-			pPlot.getPlotCity().setHasReligion(iReligion, True, False, False) # Absinthe: puts the given religion into this city, with interface message
+			pPlot.getPlotCity().setHasReligion(iReligion, True, True, False) # Absinthe: puts the given religion into this city, with interface message
 
 	def buildInRandomCity(self, iPlayer, iBuilding, iReligion):
 		#print(" Building ",iBuilding," for ",iPlayer )
