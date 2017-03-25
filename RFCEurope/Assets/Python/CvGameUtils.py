@@ -588,7 +588,7 @@ class CvGameUtils:
 		print ("1st anarchy turn for:", iPlayer)
 		pPlayer = gc.getPlayer(iPlayer)
 		sta.recalcCivicCombos(iPlayer)
-		sta.recalcEpansion(pPlayer)
+		sta.recalcEpansion(iPlayer)
 		iNumCities = pPlayer.getNumCities()
 
 		# anarchy instability should appear right on revolution / converting, not one turn later

@@ -1577,11 +1577,11 @@ class CvVictoryScreen:
 		sStringMiss = localText.getText("TXT_KEY_UHV_NOT_YET",()) + ":"
 		sStringConqTemp = ""
 		iCount = 0
+		pActivePlayer = gc.getPlayer(self.iActivePlayer)
 		for iProv in tProvsToCheck:
 			sProvName = "TXT_KEY_PROVINCE_NAME_%i" %iProv
 			sProvName = localText.getText(sProvName,())
 			#localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),())
-			pActivePlayer = gc.getPlayer(self.iActivePlayer)
 			iHave = pActivePlayer.getProvinceCurrentState( iProv )
 			if ( iHave < con.iProvinceConquer ):
 				sStringMiss += "  " + u"<color=208,0,0>%s</color>" %(sProvName)
@@ -1640,10 +1640,10 @@ class CvVictoryScreen:
 		sAdjective = str(gc.getReligionInfo(iReligion).getAdjectiveKey())
 		sStringSpread = localText.getText(sAdjective,()) + ":"
 		sStringMiss = localText.getText("TXT_KEY_UHV_NOT_YET",()) + ":"
+		pActivePlayer = gc.getPlayer(self.iActivePlayer)
 		for iProv in tProvsToCheck:
 			sProvName = "TXT_KEY_PROVINCE_NAME_%i" %iProv
 			sProvName = localText.getText(sProvName,())
-			pActivePlayer = gc.getPlayer(self.iActivePlayer)
 			if iFunction == 1 and pActivePlayer.provinceIsSpreadReligion( iProv, iReligion ):
 				sStringSpread = sStringSpread + "  " + u"<color=0,255,0>%s</color>" %(sProvName)
 			elif iFunction == 2 and pActivePlayer.provinceIsConvertReligion( iProv, iReligion ):

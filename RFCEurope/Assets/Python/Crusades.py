@@ -727,7 +727,7 @@ class Crusades:
 				pConstantinoplePlot = gc.getMap().plot( 81, 24 ) # tCapitals[con.iByzantium]
 				pConstantinopleCity = pConstantinoplePlot.getPlotCity()
 				iConstantinopleOwner = pConstantinopleCity.getOwner()
-				bIsNotAVassal = utils.isNoVassal(con.iByzantium)
+				bIsNotAVassal = not utils.isAVassal(con.iByzantium)
 				if (iConstantinopleOwner == con.iByzantium and bIsNotAVassal):
 					self.crusadeStolenAI( iRichest, con.iByzantium )
 					bStolen = True
@@ -735,7 +735,7 @@ class Crusades:
 			pCordoba = gc.getPlayer( con.iCordoba )
 			if ( pCordoba.isAlive() ):
 				# Only if Cordoba is Muslim and not a vassal
-				bIsNotAVassal = utils.isNoVassal(con.iCordoba)
+				bIsNotAVassal = not utils.isAVassal(con.iCordoba)
 				if (pCordoba.getStateReligion() == xml.iIslam and bIsNotAVassal):
 					self.crusadeStolenAI( iRichest, con.iCordoba )
 					bStolen = True
@@ -743,7 +743,7 @@ class Crusades:
 			pTurkey = gc.getPlayer( con.iTurkey )
 			if ( pTurkey.isAlive() ):
 				# Only if the Ottomans are Muslim and not a vassal
-				bIsNotAVassal = utils.isNoVassal(con.iTurkey)
+				bIsNotAVassal = not utils.isAVassal(con.iTurkey)
 				if (pTurkey.getStateReligion() == xml.iIslam and bIsNotAVassal):
 					self.crusadeStolenAI( iRichest, con.iTurkey )
 					bStolen = True
