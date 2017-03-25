@@ -328,8 +328,9 @@ class Companies:
 				iValue += 1
 
 		# various building bonuses, trade route bonus
-		iBuildCounter = 0
+		iBuildCounter = 0 # building bonus counter: we don't want buildings to be the deciding factor in company spread
 		if iCompany in [iHospitallers, iTemplars, iTeutons]:
+			iMaxPossible = 11 # building bonus counter: we don't want buildings to be the deciding factor in company spread
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iWalls)) > 0: iBuildCounter += 1
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iCastle)) > 0: iBuildCounter += 2
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iBarracks)) > 0: iBuildCounter += 1
@@ -339,13 +340,16 @@ class Companies:
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iCatholicTemple)) > 0: iBuildCounter += 1
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iCatholicMonastery)) > 0: iBuildCounter += 2
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iGuildHall)) > 0: iBuildCounter += 1
-			iValue += min(4, iBuildCounter) # maximum is 4, with all buildings built
+			iValue += (4 * iBuildCounter) / iMaxPossible # maximum is 4, with all buildings built
 			# wonders should be handled separately
-			if city.getNumRealBuilding(xml.iKrakDesChevaliers) > 0: iValue += 2
+			if city.getNumRealBuilding(xml.iKrakDesChevaliers) > 0:
+				if iCompany == iHospitallers: iValue += 5
+				else: iValue += 2
 			if city.getNumRealBuilding(xml.iDomeRock) > 0:
 				if iCompany == iTemplars: iValue += 5
 				else: iValue += 2
 		elif iCompany == iCalatrava:
+			iMaxPossible = 11 # building bonus counter: we don't want buildings to be the deciding factor in company spread
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iWalls)) > 0: iBuildCounter += 1
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iCastle)) > 0: iBuildCounter += 2
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iBarracks)) > 0: iBuildCounter += 1
@@ -355,8 +359,9 @@ class Companies:
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iCatholicTemple)) > 0: iBuildCounter += 1
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iCatholicMonastery)) > 0: iBuildCounter += 2
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iStarFort)) > 0: iBuildCounter += 1
-			iValue += min(5, iBuildCounter) # maximum is 5, with all buildings built
+			iValue += (5 * iBuildCounter) / iMaxPossible # maximum is 5, with all buildings built
 		elif iCompany == iDragon:
+			iMaxPossible = 9 # building bonus counter: we don't want buildings to be the deciding factor in company spread
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iWalls)) > 0: iBuildCounter += 1
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iCastle)) > 0: iBuildCounter += 2
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iBarracks)) > 0: iBuildCounter += 1
@@ -364,21 +369,23 @@ class Companies:
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iArcheryRange)) > 0: iBuildCounter += 1
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iForge)) > 0: iBuildCounter += 1
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iStarFort)) > 0: iBuildCounter += 2
-			iValue += min(5, iBuildCounter) # maximum is 5, with all buildings built
+			iValue += (5 * iBuildCounter) / iMaxPossible # maximum is 5, with all buildings built
 		elif iCompany in [iMedici, iAugsburg, iStGeorge]:
+			iMaxPossible = 11 # building bonus counter: we don't want buildings to be the deciding factor in company spread
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iMarket)) > 0: iBuildCounter += 1
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iBank)) > 0: iBuildCounter += 3
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iJeweler)) > 0: iBuildCounter += 2
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iGuildHall)) > 0: iBuildCounter += 1
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iLuxuryStore)) > 0: iBuildCounter += 2
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iCourthouse)) > 0: iBuildCounter += 2
-			iValue += min(5, iBuildCounter) # maximum is 5, with all buildings built
+			iValue += (5 * iBuildCounter) / iMaxPossible # maximum is 5, with all buildings built
 			# wonders should be handled separately
 			if city.getNumRealBuilding(xml.iPalace) > 0: iValue += 1
 			if city.getNumRealBuilding(xml.iSummerPalace) > 0: iValue += 1
 			# bonus from trade routes
 			iValue += max(0, city.getTradeRoutes() - 1)
 		elif iCompany == iHansa:
+			iMaxPossible = 16 # building bonus counter: we don't want buildings to be the deciding factor in company spread
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iHarbor)) > 0: iBuildCounter += 2
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iLighthouse)) > 0: iBuildCounter += 2
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iWharf)) > 0: iBuildCounter += 2
@@ -390,7 +397,7 @@ class Companies:
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iWarehouse)) > 0: iBuildCounter += 2
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iTannery)) > 0: iBuildCounter += 1
 			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iTextileMill)) > 0: iBuildCounter += 1
-			iValue += min(6, iBuildCounter) # maximum is 6, with all buildings built
+			iValue += (6 * iBuildCounter) / iMaxPossible # maximum is 6, with all buildings built
 			# bonus from trade routes
 			iValue += city.getTradeRoutes()
 

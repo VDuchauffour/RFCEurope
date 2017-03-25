@@ -388,6 +388,7 @@ Changes for RFCE 1.5:
 		- Fixed issue where some indy/barb units could remain in the core area on the new civ's birth
 		- Fixed bug with autopeace messages with dead civs on civ resurrection
 		- Fixed a couple instances of the autoplay going to -1 turn bug (hopefully all of it)
+		- Fixed minor oversight on economy stability calculations where some wonders were not recognized correctly
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
