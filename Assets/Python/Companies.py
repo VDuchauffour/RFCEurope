@@ -45,7 +45,7 @@ class Companies:
 
 		# update companies at the beginning of the 1200AD scenario:
 		if utils.getScenario() == con.i1200ADScenario:
-			iGameTurn = 200
+			iGameTurn = xml.i1200AD
 			for iCompany in range(xml.iNumCompanies):
 				if iGameTurn > tCompaniesBirth[iCompany] and iGameTurn < tCompaniesDeath[iCompany]:
 					self.addCompany (iCompany, 2)
@@ -73,7 +73,7 @@ class Companies:
 			iMaxCompanies = tCompaniesLimit[iCompany]
 
 		# modified limit for Hospitallers and Teutons after the Crusades
-		if (iGameTurn > tCompaniesDeath[iTemplars]):
+		if iGameTurn > tCompaniesDeath[iTemplars]:
 			if iCompany == iHospitallers and iGameTurn < tCompaniesDeath[iCompany]:
 				iMaxCompanies -= 1
 			elif iCompany == iTeutons and iGameTurn < tCompaniesDeath[iCompany]:
@@ -86,9 +86,7 @@ class Companies:
 		# loop through all cities, check the company value for each and add the good ones to a list of tuples (city, value)
 		cityValueList = []
 		for iPlayer in range(iNumPlayers):
-			apCityList = PyPlayer(iPlayer).getCityList()
-			for pCity in apCityList:
-				city = pCity.GetCy()
+			for city in utils.getCityList(iPlayer):
 				iValue = self.getCityValue(city, iCompany)
 				if iValue > 0:
 					sCityName = city.getName()
@@ -103,12 +101,7 @@ class Companies:
 					sCityName = city.getName()
 					print ("Company removed: ", sCityName, iCompany, iValue)
 					# interface message for the human player
-					iHuman = utils.getHumanID()
-					sCompanyName = gc.getCorporationInfo(iCompany).getDescription()
-					iX = city.getX()
-					iY = city.getY()
-					if (utils.isActive(iHuman) and city.isRevealed(iHuman, False)):
-						CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_CORPORATION_REMOVED", (sCompanyName,sCityName)), gc.getCorporationInfo(iCompany).getSound(), InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getCorporationInfo(iCompany).getButton(), ColorTypes(con.iWhite), iX, iY, True, True)
+					self.announceHuman(iCompany, city, True)
 
 		# sort cities from highest to lowest value
 		cityValueList.sort(key=itemgetter(1), reverse=True)
@@ -133,14 +126,9 @@ class Companies:
 			sCityName = city.getName()
 			print ("Company spread: ", sCityName, iCompany, iValue)
 			# interface message for the human player
-			iHuman = utils.getHumanID()
-			sCompanyName = gc.getCorporationInfo(iCompany).getDescription()
-			iX = city.getX()
-			iY = city.getY()
-			if (utils.isActive(iHuman) and city.isRevealed(iHuman, False)):
-				CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_CORPORATION_SPREAD", (sCompanyName,sCityName)), gc.getCorporationInfo(iCompany).getSound(), InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getCorporationInfo(iCompany).getButton(), ColorTypes(con.iWhite), iX, iY, True, True)
+			self.announceHuman(iCompany, city)
 			# spread the religion if it wasn't present before
-			if (iCompany == iHospitallers or iCompany == iTemplars or iCompany == iTeutons or iCompany == iCalatrava):
+			if iCompany in [iHospitallers, iTemplars, iTeutons, iCalatrava]:
 				if not city.isHasReligion(iCatholicism):
 					city.setHasReligion(iCatholicism, True, True, False)
 			# one change at a time, only add the highest ranked city (which didn't have the company before)
@@ -157,12 +145,7 @@ class Companies:
 					sCityName = city.getName()
 					print ("Company removed: ", sCityName, iCompany, iValue)
 					# interface message for the human player
-					iHuman = utils.getHumanID()
-					sCompanyName = gc.getCorporationInfo(iCompany).getDescription()
-					iX = city.getX()
-					iY = city.getY()
-					if (utils.isActive(iHuman) and city.isRevealed(iHuman, False)):
-						CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_CORPORATION_REMOVED", (sCompanyName,sCityName)), gc.getCorporationInfo(iCompany).getSound(), InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getCorporationInfo(iCompany).getButton(), ColorTypes(con.iWhite), iX, iY, True, True)
+					self.announceHuman(iCompany, city, True)
 					# one change at a time, only add the lowest ranked city
 					break
 
@@ -170,9 +153,7 @@ class Companies:
 	def onPlayerChangeStateReligion(self, argsList):
 		iPlayer, iNewReligion, iOldReligion = argsList
 
-		apCityList = PyPlayer(iPlayer).getCityList()
-		for pCity in apCityList:
-			city = pCity.GetCy()
+		for city in utils.getCityList(iPlayer):
 			for iCompany in range(iNumCompanies):
 				if city.isHasCorporation(iCompany):
 					if self.getCityValue(city, iCompany) < 0:
@@ -181,12 +162,7 @@ class Companies:
 						sCityName = city.getName()
 						print ("Company removed on religion change: ", sCityName, iCompany)
 						# interface message for the human player
-						iHuman = utils.getHumanID()
-						sCompanyName = gc.getCorporationInfo(iCompany).getDescription()
-						iX = city.getX()
-						iY = city.getY()
-						if (utils.isActive(iHuman) and city.isRevealed(iHuman, False)):
-							CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_CORPORATION_REMOVED", (sCompanyName,sCityName)), gc.getCorporationInfo(iCompany).getSound(), InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getCorporationInfo(iCompany).getButton(), ColorTypes(con.iWhite), iX, iY, True, True)
+						self.announceHuman(iCompany, city, True)
 
 
 	def onCityAcquired(self, city):
@@ -199,12 +175,24 @@ class Companies:
 					sCityName = city.getName()
 					print ("Company removed on conquest: ", sCityName, iCompany)
 					# interface message for the human player
-					iHuman = utils.getHumanID()
-					sCompanyName = gc.getCorporationInfo(iCompany).getDescription()
-					iX = city.getX()
-					iY = city.getY()
-					if (utils.isActive(iHuman) and city.isRevealed(iHuman, False)):
-						CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_CORPORATION_REMOVED", (sCompanyName,sCityName)), gc.getCorporationInfo(iCompany).getSound(), InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getCorporationInfo(iCompany).getButton(), ColorTypes(con.iWhite), iX, iY, True, True)
+					self.announceHuman(iCompany, city, True)
+
+
+	def announceHuman(self, iCompany, city, bRemove = False):
+		iHuman = utils.getHumanID()
+		if not utils.isActive(iHuman) or not city.isRevealed(iHuman, False):
+			return
+
+		sCityName = city.getName()
+		sCompanyName = gc.getCorporationInfo(iCompany).getDescription()
+		iX = city.getX()
+		iY = city.getY()
+
+		if bRemove:
+			sText = CyTranslator().getText("TXT_KEY_MISC_CORPORATION_REMOVED", (sCompanyName, sCityName))
+		else:
+			sText = CyTranslator().getText("TXT_KEY_MISC_CORPORATION_SPREAD", (sCompanyName, sCityName))
+		CyInterface().addMessage(iHuman, False, con.iDuration, sText, gc.getCorporationInfo(iCompany).getSound(), InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getCorporationInfo(iCompany).getButton(), ColorTypes(con.iWhite), iX, iY, True, True)
 
 
 	def getCityValue(self, city, iCompany):
@@ -215,18 +203,19 @@ class Companies:
 		iValue = 0
 
 		owner = gc.getPlayer(city.getOwner())
+		iOwner = owner.getID()
 		ownerTeam = gc.getTeam(owner.getTeam())
 
 		# spread the Teutons to Teutonic Order cities and don't spread if the owner civ is at war with the Teutons
 		if iCompany == iTeutons:
-			if owner.getID() == con.iPrussia:
+			if iOwner == con.iPrussia:
 				iValue += 5
 			elif ownerTeam.isAtWar(con.iPrussia):
 				return -1
 
 		# state religion requirements
 		iStateReligion = owner.getStateReligion()
-		if iCompany == iHospitallers or iCompany == iTemplars or iCompany == iTeutons:
+		if iCompany in [iHospitallers, iTemplars, iTeutons]:
 			if iStateReligion == iCatholicism:
 				iValue += 3
 			elif iStateReligion == iOrthodoxy:
@@ -258,40 +247,40 @@ class Companies:
 		if iCompany == iMedici:
 			if iProvince == xml.iP_Tuscany:
 				iValue += 4
-		if iCompany == iAugsburg:
+		elif iCompany == iAugsburg:
 			if iProvince == xml.iP_Bavaria:
 				iValue += 3
-			if iProvince == xml.iP_Swabia:
+			elif iProvince == xml.iP_Swabia:
 				iValue += 2
-		if iCompany == iStGeorge:
+		elif iCompany == iStGeorge:
 			if iProvince == xml.iP_Liguria:
 				iValue += 3
-		if iCompany == iHansa:
+		elif iCompany == iHansa:
 			if iProvince == xml.iP_Holstein:
 				iValue += 5
-			if iProvince == xml.iP_Brandenburg or iProvince == xml.iP_Saxony:
+			if iProvince in [xml.iP_Brandenburg, xml.iP_Saxony]:
 				iValue += 2
 
 		# geographical requirement changes after the crusades
 		iGameTurn = gc.getGame().getGameTurn()
-		if (iGameTurn < tCompaniesDeath[iTemplars]):
-			if (iCompany == iHospitallers or iCompany == iTemplars or iCompany == iTeutons):
+		if iGameTurn < tCompaniesDeath[iTemplars]:
+			if iCompany in [iHospitallers, iTemplars, iTeutons]:
 				if iStateReligion == iCatholicism:
-					if (iProvince == xml.iP_Antiochia or iProvince == xml.iP_Lebanon or iProvince == xml.iP_Jerusalem):
+					if iProvince in [xml.iP_Antiochia, xml.iP_Lebanon, xml.iP_Jerusalem]:
 						iValue += 5
-					if (iProvince == xml.iP_Cyprus or iProvince == xml.iP_Egypt):
+					elif iProvince in [xml.iP_Cyprus, xml.iP_Egypt]:
 						iValue += 3
 		else:
 			if iCompany == iHospitallers:
-				if (iProvince == xml.iP_Rhodes or iProvince == xml.iP_Malta):
+				if iProvince in [xml.iP_Rhodes, xml.iP_Malta]:
 					iValue += 4
-			if iCompany == iTeutons:
+			elif iCompany == iTeutons:
 				if iProvince == xml.iP_Transylvania:
 					iValue += 2
 
 		# additional bonus for the city of Jerusalem
-		if (city.getX() == con.tJerusalem[0] and city.getY() == con.tJerusalem[1]):
-			if (iCompany == iHospitallers or iCompany == iTemplars or iCompany == iTeutons):
+		if (city.getX(), city.getY()) == con.tJerusalem:
+			if iCompany in [iHospitallers, iTemplars, iTeutons]:
 				iValue += 3
 
 		# coastal and riverside check
@@ -304,16 +293,16 @@ class Companies:
 				iValue += 2
 
 		# bonus for religions in the city
-		if (iCompany == iHansa or iCompany == iMedici or iCompany == iAugsburg or iCompany == iStGeorge):
+		if iCompany in [iHansa, iMedici, iAugsburg, iStGeorge]:
 			if city.isHasReligion(iJudaism): # not necessarily historic, but has great gameplay synergies
 				iValue += 1
-		if (iCompany == iHospitallers or iCompany == iTemplars or iCompany == iTeutons or iCompany == iCalatrava):
+		elif iCompany in [iHospitallers, iTemplars, iTeutons, iCalatrava]:
 			# they have a harder time to choose a city without Catholicism, but they spread the religion there
 			if not city.isHasReligion(iCatholicism):
 				iValue -= 1
 			if city.isHasReligion(iIslam):
 				iValue -= 1
-		if iCompany == iDragon:
+		elif iCompany == iDragon:
 			if city.isHasReligion(iCatholicism) or city.isHasReligion(iOrthodoxy):
 				iValue += 1
 			if city.isHasReligion(iIslam):
@@ -339,160 +328,130 @@ class Companies:
 				iValue += 1
 
 		# various building bonuses, trade route bonus
-		if (iCompany == iHospitallers or iCompany == iTemplars or iCompany == iTeutons):
-			# building bonus counter: we don't want buildings to be the deciding factor in company spread
-			iBuildCounter = 0
-			iMaxPossible = 11
-			if city.getNumRealBuilding(xml.iWalls) > 0 or city.getNumRealBuilding(xml.iMoroccoKasbah) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iCastle) > 0 or city.getNumRealBuilding(xml.iHungarianStronghold) > 0 or city.getNumRealBuilding(xml.iSpanishCitadel) > 0 or city.getNumRealBuilding(xml.iMoscowKremlin) > 0: iBuildCounter += 2
-			if city.getNumRealBuilding(xml.iBarracks) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iStable) > 0 or city.getNumRealBuilding(xml.iBulgarianStan) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iArcheryRange) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iForge) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iCatholicTemple) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iCatholicMonastery) > 0: iBuildCounter += 2
-			if city.getNumRealBuilding(xml.iGuildHall) > 0 or city.getNumRealBuilding(xml.iNovgorodKonets) > 0: iBuildCounter += 1
-			iValue += (4 * iBuildCounter) / iMaxPossible # maximum is 4, with all buildings built
-			# wonders should be handled separately
-			if city.getNumRealBuilding(xml.iKrakDesChevaliers) > 0: iValue += 5
-			if city.getNumRealBuilding(xml.iDomeRock) > 0: iValue += 2
-		if (iCompany == iTemplars or iCompany == iTeutons):
-			# building bonus counter: we don't want buildings to be the deciding factor in company spread
-			iBuildCounter = 0
-			iMaxPossible = 11
-			if city.getNumRealBuilding(xml.iWalls) > 0 or city.getNumRealBuilding(xml.iMoroccoKasbah) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iCastle) > 0 or city.getNumRealBuilding(xml.iHungarianStronghold) > 0 or city.getNumRealBuilding(xml.iSpanishCitadel) > 0 or city.getNumRealBuilding(xml.iMoscowKremlin) > 0: iBuildCounter += 2
-			if city.getNumRealBuilding(xml.iBarracks) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iStable) > 0 or city.getNumRealBuilding(xml.iBulgarianStan) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iArcheryRange) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iForge) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iCatholicTemple) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iCatholicMonastery) > 0: iBuildCounter += 2
-			if city.getNumRealBuilding(xml.iGuildHall) > 0 or city.getNumRealBuilding(xml.iNovgorodKonets) > 0: iBuildCounter += 1
-			iValue += (4 * iBuildCounter) / iMaxPossible # maximum is 4, with all buildings built
+		iBuildCounter = 0
+		if iCompany in [iHospitallers, iTemplars, iTeutons]:
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iWalls)) > 0: iBuildCounter += 1
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iCastle)) > 0: iBuildCounter += 2
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iBarracks)) > 0: iBuildCounter += 1
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iStable)) > 0: iBuildCounter += 1
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iArcheryRange)) > 0: iBuildCounter += 1
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iForge)) > 0: iBuildCounter += 1
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iCatholicTemple)) > 0: iBuildCounter += 1
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iCatholicMonastery)) > 0: iBuildCounter += 2
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iGuildHall)) > 0: iBuildCounter += 1
+			iValue += min(4, iBuildCounter) # maximum is 4, with all buildings built
 			# wonders should be handled separately
 			if city.getNumRealBuilding(xml.iKrakDesChevaliers) > 0: iValue += 2
-			if iCompany == iTemplars and city.getNumRealBuilding(xml.iDomeRock) > 0: iValue += 5
-			elif city.getNumRealBuilding(xml.iDomeRock) > 0: iValue += 2
-		if (iCompany == iCalatrava):
-			# building bonus counter: we don't want buildings to be the deciding factor in company spread
-			iBuildCounter = 0
-			iMaxPossible = 11
-			if city.getNumRealBuilding(xml.iWalls) > 0 or city.getNumRealBuilding(xml.iMoroccoKasbah) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iCastle) > 0 or city.getNumRealBuilding(xml.iHungarianStronghold) > 0 or city.getNumRealBuilding(xml.iSpanishCitadel) > 0 or city.getNumRealBuilding(xml.iMoscowKremlin) > 0: iBuildCounter += 2
-			if city.getNumRealBuilding(xml.iBarracks) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iStable) > 0 or city.getNumRealBuilding(xml.iBulgarianStan) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iArcheryRange) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iForge) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iCatholicTemple) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iCatholicMonastery) > 0: iBuildCounter += 2
-			if city.getNumRealBuilding(xml.iStarFort) > 0: iBuildCounter += 1
-			iValue += (5 * iBuildCounter) / iMaxPossible # maximum is 5, with all buildings built
-		if (iCompany == iDragon):
-			# building bonus counter: we don't want buildings to be the deciding factor in company spread
-			iBuildCounter = 0
-			iMaxPossible = 9
-			if city.getNumRealBuilding(xml.iWalls) > 0 or city.getNumRealBuilding(xml.iMoroccoKasbah) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iCastle) > 0 or city.getNumRealBuilding(xml.iHungarianStronghold) > 0 or city.getNumRealBuilding(xml.iSpanishCitadel) > 0 or city.getNumRealBuilding(xml.iMoscowKremlin) > 0: iBuildCounter += 2
-			if city.getNumRealBuilding(xml.iBarracks) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iStable) > 0 or city.getNumRealBuilding(xml.iBulgarianStan) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iArcheryRange) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iForge) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iStarFort) > 0: iBuildCounter += 2
-			iValue += (5 * iBuildCounter) / iMaxPossible # maximum is 5, with all buildings built
-		if (iCompany == iMedici or iCompany == iAugsburg or iCompany == iStGeorge):
-			# building bonus counter: we don't want buildings to be the deciding factor in company spread
-			iBuildCounter = 0
-			iMaxPossible = 11
-			if city.getNumRealBuilding(xml.iMarket) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iBank) > 0 or city.getNumRealBuilding(xml.iGenoaBank) > 0 or city.getNumRealBuilding(xml.iEnglishRoyalExchange) > 0: iBuildCounter += 3
-			if city.getNumRealBuilding(xml.iJeweler) > 0: iBuildCounter += 2
-			if city.getNumRealBuilding(xml.iGuildHall) > 0 or city.getNumRealBuilding(xml.iNovgorodKonets) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iLuxuryStore) > 0: iBuildCounter += 2
-			if city.getNumRealBuilding(xml.iCourthouse) > 0 or city.getNumRealBuilding(xml.iHolyRomanRathaus) > 0 or city.getNumRealBuilding(xml.iKievVeche) > 0 or city.getNumRealBuilding(xml.iLithuanianVoivodeship) > 0: iBuildCounter += 2
-			iValue += (5 * iBuildCounter) / iMaxPossible # maximum is 5, with all buildings built
+			if city.getNumRealBuilding(xml.iDomeRock) > 0:
+				if iCompany == iTemplars: iValue += 5
+				else: iValue += 2
+		elif iCompany == iCalatrava:
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iWalls)) > 0: iBuildCounter += 1
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iCastle)) > 0: iBuildCounter += 2
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iBarracks)) > 0: iBuildCounter += 1
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iStable)) > 0: iBuildCounter += 1
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iArcheryRange)) > 0: iBuildCounter += 1
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iForge)) > 0: iBuildCounter += 1
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iCatholicTemple)) > 0: iBuildCounter += 1
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iCatholicMonastery)) > 0: iBuildCounter += 2
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iStarFort)) > 0: iBuildCounter += 1
+			iValue += min(5, iBuildCounter) # maximum is 5, with all buildings built
+		elif iCompany == iDragon:
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iWalls)) > 0: iBuildCounter += 1
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iCastle)) > 0: iBuildCounter += 2
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iBarracks)) > 0: iBuildCounter += 1
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iStable)) > 0: iBuildCounter += 1
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iArcheryRange)) > 0: iBuildCounter += 1
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iForge)) > 0: iBuildCounter += 1
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iStarFort)) > 0: iBuildCounter += 2
+			iValue += min(5, iBuildCounter) # maximum is 5, with all buildings built
+		elif iCompany in [iMedici, iAugsburg, iStGeorge]:
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iMarket)) > 0: iBuildCounter += 1
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iBank)) > 0: iBuildCounter += 3
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iJeweler)) > 0: iBuildCounter += 2
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iGuildHall)) > 0: iBuildCounter += 1
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iLuxuryStore)) > 0: iBuildCounter += 2
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iCourthouse)) > 0: iBuildCounter += 2
+			iValue += min(5, iBuildCounter) # maximum is 5, with all buildings built
 			# wonders should be handled separately
 			if city.getNumRealBuilding(xml.iPalace) > 0: iValue += 1
 			if city.getNumRealBuilding(xml.iSummerPalace) > 0: iValue += 1
 			# bonus from trade routes
-			iValue += city.getTradeRoutes() - 1
-		if iCompany == iHansa:
-			# building bonus counter: we don't want buildings to be the deciding factor in company spread
-			iBuildCounter = 0
-			iMaxPossible = 16
-			if city.getNumRealBuilding(xml.iHarbor) > 0 or city.getNumRealBuilding(xml.iVikingTradingPost) > 0: iBuildCounter += 2
-			if city.getNumRealBuilding(xml.iLighthouse) > 0 or city.getNumRealBuilding(xml.iPortugalFeitoria) > 0 or city.getNumRealBuilding(xml.iAragonSeaport) > 0: iBuildCounter += 2
-			if city.getNumRealBuilding(xml.iWharf) > 0: iBuildCounter += 2
-			if city.getNumRealBuilding(xml.iCustomHouse) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iMarket) > 0: iBuildCounter += 2
-			if city.getNumRealBuilding(xml.iBrewery) > 0 or city.getNumRealBuilding(xml.iBurgundianWinery) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iWeaver) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iGuildHall) > 0 or city.getNumRealBuilding(xml.iNovgorodKonets) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iWarehouse) > 0: iBuildCounter += 2
-			if city.getNumRealBuilding(xml.iTannery) > 0: iBuildCounter += 1
-			if city.getNumRealBuilding(xml.iTextileMill) > 0: iBuildCounter += 1
-			iValue += (6 * iBuildCounter) / iMaxPossible # maximum is 6, with all buildings built
+			iValue += max(0, city.getTradeRoutes() - 1)
+		elif iCompany == iHansa:
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iHarbor)) > 0: iBuildCounter += 2
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iLighthouse)) > 0: iBuildCounter += 2
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iWharf)) > 0: iBuildCounter += 2
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iCustomHouse)) > 0: iBuildCounter += 1
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iMarket)) > 0: iBuildCounter += 2
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iBrewery)) > 0: iBuildCounter += 1
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iWeaver)) > 0: iBuildCounter += 1
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iGuildHall)) > 0: iBuildCounter += 1
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iWarehouse)) > 0: iBuildCounter += 2
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iTannery)) > 0: iBuildCounter += 1
+			if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iTextileMill)) > 0: iBuildCounter += 1
+			iValue += min(6, iBuildCounter) # maximum is 6, with all buildings built
 			# bonus from trade routes
 			iValue += city.getTradeRoutes()
 
 		# civic bonuses
 		if owner.getCivics(0) == xml.iCivicMerchantRepublic:
-			if (iCompany == iMedici or iCompany == iStGeorge or iCompany == iHospitallers):
+			if iCompany in [iMedici, iStGeorge, iHospitallers]:
 				iValue += 1
-			if iCompany == iHansa:
+			elif iCompany == iHansa:
 				iValue += 2
 		if owner.getCivics(1) == xml.iCivicFeudalLaw:
-			if (iCompany == iHospitallers or iCompany == iTemplars or iCompany == iTeutons or iCompany == iDragon or iCompany == iCalatrava):
+			if iCompany in [iHospitallers, iTemplars, iTeutons, iDragon, iCalatrava]:
 				iValue += 2
-		if owner.getCivics(1) == xml.iCivicReligiousLaw:
-			if (iCompany == iHospitallers or iCompany == iTemplars or iCompany == iTeutons or iCompany == iCalatrava):
+		elif owner.getCivics(1) == xml.iCivicReligiousLaw:
+			if iCompany in [iHospitallers, iTemplars, iTeutons, iCalatrava]:
 				iValue += 1
 		if owner.getCivics(2) == xml.iCivicApprenticeship:
 			if iCompany == iHansa:
 				iValue += 1
 		if owner.getCivics(3) == xml.iCivicTradeEconomy:
-			if (iCompany == iMedici or iCompany == iAugsburg or iCompany == iStGeorge):
+			if iCompany in [iMedici, iAugsburg, iStGeorge]:
 				iValue += 1
-			if iCompany == iHansa:
+			elif iCompany == iHansa:
 				iValue += 2
-		if owner.getCivics(3) == xml.iCivicGuilds:
-			if (iCompany == iHospitallers or iCompany == iTemplars or iCompany == iTeutons or iCompany == iHansa or iCompany == iDragon or iCompany == iCalatrava):
+		elif owner.getCivics(3) == xml.iCivicGuilds:
+			if iCompany in [iHospitallers, iTemplars, iTeutons, iHansa, iDragon, iCalatrava]:
 				iValue += 1
 		if owner.getCivics(3) == xml.iCivicMercantilism:
 			if iCompany == iHansa:
 				return -1
-			elif (iCompany == iMedici or iCompany == iAugsburg or iCompany == iStGeorge):
+			elif iCompany in [iMedici, iAugsburg, iStGeorge]:
 				iValue -= 2
 		if owner.getCivics(4) == xml.iCivicTheocracy:
-			if (iCompany == iHospitallers or iCompany == iTemplars):
+			if iCompany in [iHospitallers, iTemplars]:
 				iValue += 1
-			if iCompany == iTeutons:
+			elif iCompany == iTeutons:
 				iValue += 2
-		if owner.getCivics(4) == xml.iCivicFreeReligion:
-			if (iCompany == iHospitallers or iCompany == iTemplars or iCompany == iTeutons or iCompany == iDragon):
+		elif owner.getCivics(4) == xml.iCivicFreeReligion:
+			if iCompany in [iHospitallers, iTemplars, iTeutons, iDragon]:
 				iValue -= 1
-			if iCompany == iCalatrava:
+			elif iCompany == iCalatrava:
 				iValue -= 2
 		if owner.getCivics(5) == xml.iCivicOccupation:
-			if (iCompany == iHospitallers or iCompany == iTemplars or iCompany == iTeutons or iCompany == iDragon or iCompany == iCalatrava):
+			if iCompany in [iHospitallers, iTemplars, iCompany, iCompany == iCalatrava]:
 				iValue += 1
 
 		# bonus for techs
-		if (iCompany == iHospitallers or iCompany == iTemplars or iCompany == iTeutons or iCompany == iDragon or iCompany == iCalatrava):
-			for iTech in (xml.iChivalry, xml.iPlateArmor, xml.iGuilds, xml.iMilitaryTradition):
-				if (ownerTeam.isHasTech(iTech)):
+		if iCompany in [iHospitallers, iTemplars, iTeutons, iDragon, iCalatrava]:
+			for iTech in [xml.iChivalry, xml.iPlateArmor, xml.iGuilds, xml.iMilitaryTradition]:
+				if ownerTeam.isHasTech(iTech):
 					iValue += 1
-		if iCompany == iHansa:
-			for iTech in (xml.iGuilds, xml.iClockmaking, xml.iOptics, xml.iShipbuilding):
-				if (ownerTeam.isHasTech(iTech)):
+		elif iCompany == iHansa:
+			for iTech in [xml.iGuilds, xml.iClockmaking, xml.iOptics, xml.iShipbuilding]:
+				if ownerTeam.isHasTech(iTech):
 					iValue += 1
-		if (iCompany == iMedici or iCompany == iStGeorge):
-			for iTech in (xml.iBanking, xml.iPaper, xml.iClockmaking, xml.iOptics, xml.iShipbuilding):
-				if (ownerTeam.isHasTech(iTech)):
+		elif iCompany in [iMedici, iStGeorge]:
+			for iTech in [xml.iBanking, xml.iPaper, xml.iClockmaking, xml.iOptics, xml.iShipbuilding]:
+				if ownerTeam.isHasTech(iTech):
 					iValue += 1
-		if iCompany == iAugsburg:
-			for iTech in (xml.iBanking, xml.iPaper, xml.iChemistry):
-				if (ownerTeam.isHasTech(iTech)):
+		elif iCompany == iAugsburg:
+			for iTech in [xml.iBanking, xml.iPaper, xml.iChemistry]:
+				if ownerTeam.isHasTech(iTech):
 					iValue += 1
 
 		# resources
@@ -566,9 +525,7 @@ class Companies:
 		cityValueList = []
 		iCompaniesAdded = 0
 		for iPlayer in range(iNumPlayers):
-			apCityList = PyPlayer(iPlayer).getCityList()
-			for pCity in apCityList:
-				city = pCity.GetCy()
+			for city in utils.getCityList(iPlayer):
 				iValue = self.getCityValue(city, iCompany)
 				if iValue > 0:
 					cityValueList.append((city, iValue * 10 + gc.getGame().getSorenRandNum(10, 'random bonus')))

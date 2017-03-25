@@ -31,20 +31,20 @@ class UniquePowers:
 		iStateReligion = pFaithful.getStateReligion()
 		iTemple = 0
 		# Absinthe: shouldn't work on minor religions, to avoid exploit with spreading Judaism this way
-		if (iStateReligion >= 0 and iStateReligion <= 3):
-			if (not city.isHasReligion(iStateReligion)):
+		if 0 <= iStateReligion <= 3:
+			if not city.isHasReligion(iStateReligion):
 				city.setHasReligion(iStateReligion, True, True, False)
 				pFaithful.changeFaith( 1 )
-		if (iStateReligion >= 0 and iStateReligion <= 3):
-			if (iStateReligion == 0):
+				
+			if iStateReligion == 0:
 				iTemple = xml.iProtestantTemple
-			elif (iStateReligion == 1):
+			elif iStateReligion == 1:
 				iTemple = xml.iIslamicTemple
-			elif (iStateReligion == 2):
+			elif iStateReligion == 2:
 				iTemple = xml.iCatholicTemple
-			elif (iStateReligion == 3):
+			elif iStateReligion == 3:
 				iTemple = xml.iOrthodoxTemple
-			if (not city.hasBuilding(iTemple)):
+			if not city.hasBuilding(iTemple):
 				city.setHasRealBuilding(iTemple, True)
 				pFaithful.changeFaith( 1 )
 
@@ -54,29 +54,27 @@ class UniquePowers:
 		pPlayer = gc.getPlayer( iPlayer )
 		iStateReligion = pPlayer.getStateReligion()
 
-		apCityList = PyPlayer(iPlayer).getCityList()
 		iNewPoints = 0
-		for apCity in apCityList:
-			pCity = apCity.GetCy()
+		for city in utils.getCityList(iPlayer):
 			for iReligion in range( xml.iNumReligions ):
-				if ( iReligion != iStateReligion and pCity.isHasReligion( iReligion ) ):
-					iNewPoints += pCity.getPopulation()
+				if iReligion != iStateReligion and city.isHasReligion( iReligion ):
+					iNewPoints += city.getPopulation()
 					break
 
 		iOldPoints = pPlayer.getPicklefreeParameter( iJanissaryPoints )
 
 		iNextJanissary = 200
-		if ( pPlayer.isHuman() ):
+		if pPlayer.isHuman():
 			iNextJanissary = 300
 
 		if ( iOldPoints + iNewPoints > iNextJanissary ):
-			apCityList = PyPlayer(iPlayer).getCityList()
-			iRandCity = gc.getGame().getSorenRandNum(len( apCityList ), 'Janissary city')
-			pCity = apCityList[iRandCity].GetCy()
-			utils.makeUnit( xml.iJanissary, iPlayer, [pCity.getX(), pCity.getY()], 1 )
+			pCity = utils.getRandomEntry(utils.getCityList(iPlayer))
+			iX = pCity.getX()
+			iY = pCity.getY()
+			utils.makeUnit( xml.iJanissary, iPlayer, (iX, iY), 1 )
 			# interface message for the human player
-			if (iPlayer == utils.getHumanID()):
-				CyInterface().addMessage(iPlayer, False, con.iDuration, CyTranslator().getText("TXT_KEY_UNIT_NEW_JANISSARY", ()) + " " + pCity.getName() + "!", "AS2D_UNIT_BUILD_UNIQUE_UNIT", 0, gc.getUnitInfo(xml.iJanissary).getButton(), ColorTypes(con.iGreen), pCity.getX(), pCity.getY(), True, True)
+			if iPlayer == utils.getHumanID():
+				CyInterface().addMessage(iPlayer, False, con.iDuration, CyTranslator().getText("TXT_KEY_UNIT_NEW_JANISSARY", ()) + " " + pCity.getName() + "!", "AS2D_UNIT_BUILD_UNIQUE_UNIT", 0, gc.getUnitInfo(xml.iJanissary).getButton(), ColorTypes(con.iGreen), iX, iY, True, True)
 			pPlayer.setPicklefreeParameter( iJanissaryPoints, 0 )
 			print(" New Janissary in ",pCity.getName() )
 		else:
@@ -94,11 +92,11 @@ class UniquePowers:
 		#Check if we control the Sound
 		bControlsSound = False
 		for tCoord in lSoundCoords:
-			pPlot = gc.getMap().plot(tCoord[0],tCoord[1])
-			if(pPlot.calculateCulturalOwner() == iPlayer):
+			pPlot = gc.getMap().plot(tCoord[0], tCoord[1])
+			if pPlot.calculateCulturalOwner() == iPlayer:
 				bControlsSound = True
 				break
-		if(not bControlsSound):
+		if not bControlsSound:
 			print("No sound dues, sound not controlled")
 			return
 
@@ -116,46 +114,39 @@ class UniquePowers:
 		#Count foreign coastal cities
 		iCities = 0
 		for tRect in lBalticRects:
-			for iX in range(tRect[0][0], tRect[1][0]+1):
-				for iY in range(tRect[0][1], tRect[1][1]+1):
-					#print(iX,iY)
-					pPlot = gc.getMap().plot(iX,iY)
-					if(pPlot.isCity()):
-						pCity = pPlot.getPlotCity()
-						#print(pCity.getName() + " is a city.")
-						if pCity.isCoastal(5):
-							if not bVassal:
-								if (pCity.getOwner() != iPlayer):
-									#print(pCity.getName() + " is a foreign coastal city on the Baltic.")
-									iCities += 1
-							else:
-								bCount = False
-								iOwner = pCity.getOwner()
-								if (iOwner != iPlayer and iOwner != utils.getMaster(iOwner) != iPlayer):
-									iCities += 1
+			for (iX, iY) in utils.getPlotList(tRect[0], tRect[1]):
+				#print(iX,iY)
+				pPlot = gc.getMap().plot(iX, iY)
+				if pPlot.isCity():
+					pCity = pPlot.getPlotCity()
+					#print(pCity.getName() + " is a city.")
+					if pCity.isCoastal(5):
+						if not bVassal:
+							if pCity.getOwner() != iPlayer:
+								#print(pCity.getName() + " is a foreign coastal city on the Baltic.")
+								iCities += 1
+						else:
+							iOwner = pCity.getOwner()
+							if iOwner != iPlayer and iOwner != utils.getMaster(iOwner) != iPlayer:
+								iCities += 1
 		return iCities
 
 
 # Absinthe: Aragonese UP
 	def confederationUP(self, iPlayer):
 		pPlayer = gc.getPlayer(iPlayer)
-		#Only recalc if we have a different number of cities from last turn.
+		# Only recalc if we have a different number of cities from last turn.
 		if pPlayer.getNumCities() == pPlayer.getUHVCounter(1):
 			return
 		pPlayer.setUHVCounter(1, pPlayer.getNumCities())
 
 		#print("Recalc Province Commerce UP")
 		cityProvinces = []
-		iCapitalX = -1
-		iCapitalY = -1
-		apCityList = PyPlayer(iPlayer).getCityList()
-		for pLoopCity in apCityList:
-			pCity = pLoopCity.GetCy()
-			# The capital, note the position
-			if(pCity.hasBuilding(xml.iPalace)):
-				iCapitalX = pCity.getX()
-				iCapitalY = pCity.getY()
-			pProvince = pCity.getProvince()
+		capital = pPlayer.getCapitalCity()
+		iCapitalX = capital.getX()
+		iCapitalY = capital.getY()
+		for city in utils.getCityList(iPlayer):
+			pProvince = city.getProvince()
 			cityProvinces.append(pProvince)
 		# How many unique provinces?
 		uniqueProvinces = set(cityProvinces)
@@ -176,36 +167,27 @@ class UniquePowers:
 	def defianceUP(self, iPlayer):
 		print("Defiance called")
 		pPlayer = gc.getPlayer(iPlayer)
-		teamPlayer = gc.getTeam(pPlayer.getTeam())
-
+			
 		# One ranged/gun class
-		RangedClass = xml.iArcher
-		if(teamPlayer.isHasTech(xml.iCombinedArms) and teamPlayer.isHasTech(xml.iNationalism)):
-			RangedClass = xml.iLineInfantry
-		elif(teamPlayer.isHasTech(xml.iMatchlock)):
-			RangedClass = xml.iMusketman
-		elif(teamPlayer.isHasTech(xml.iChivalry) and teamPlayer.isHasTech(xml.iReplaceableParts)):
-			RangedClass = xml.iLongbowman
-		elif(teamPlayer.isHasTech(xml.iPlateArmor)):
-			RangedClass = xml.iArbalest
-		elif(teamPlayer.isHasTech(xml.iMachinery)):
-			RangedClass = xml.iCrossbowman
+		RangedClass = utils.getUniqueUnit(iPlayer, xml.iArcher)
+		lRangedList = [xml.iLineInfantry, xml.iMusketman, xml.iLongbowman, xml.iArbalest, xml.iCrossbowman, xml.iArcher]
+		for iUnit in lRangedList:
+			if pPlayer.canTrain(utils.getUniqueUnit(iPlayer, iUnit), False, False):
+				RangedClass = utils.getUniqueUnit(iPlayer, iUnit)
+				break
 
 		# One polearm class
-		PolearmClass = xml.iSpearman
-		if(teamPlayer.isHasTech(xml.iCombinedArms) and teamPlayer.isHasTech(xml.iNationalism)):
-			PolearmClass = xml.iLineInfantry
-		elif(teamPlayer.isHasTech(xml.iProfessionalArmy)):
-			PolearmClass = xml.iPikeman
-		elif(teamPlayer.isHasTech(xml.iAristocracy)):
-			PolearmClass = xml.iGuisarme
+		PolearmClass = utils.getUniqueUnit(iPlayer, xml.iSpearman)
+		lPolearmList = [xml.iLineInfantry, xml.iPikeman, xml.iGuisarme]
+		for iUnit in lPolearmList:
+			if pPlayer.canTrain(utils.getUniqueUnit(iPlayer, iUnit), False, False):
+				PolearmClass = utils.getUniqueUnit(iPlayer, iUnit)
+				break
 
 		print("Making ", RangedClass, " and ", PolearmClass)
-		apCityList = PyPlayer(iPlayer).getCityList()
-		for pLoopCity in apCityList:
-			pCity = pLoopCity.GetCy()
-			tPlot = (pCity.getX(), pCity.getY())
-			if(gc.getGame().getSorenRandNum(2,'DefiancyType') == 1):
+		for city in utils.getCityList(iPlayer):
+			tPlot = (city.getX(), city.getY())
+			if gc.getGame().getSorenRandNum(2,'DefiancyType') == 1:
 				utils.makeUnit(RangedClass, iPlayer, tPlot, 1)
 			else:
 				utils.makeUnit(PolearmClass, iPlayer, tPlot, 1)

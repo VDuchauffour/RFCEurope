@@ -30,13 +30,13 @@ class CvPediaCorporation:
 		self.Y_ICON = self.Y_MAIN_PANE + (self.H_MAIN_PANE-self.H_ICON)/2
 		self.ICON_SIZE = 64
 
-		self.X_REQUIRES = self.X_MAIN_PANE + self.W_MAIN_PANE + 10
-		self.Y_REQUIRES = 55
-		self.W_REQUIRES = 1024 - (self.X_REQUIRES) -24
-		self.H_REQUIRES = 110
+		self.X_ENABLES = self.X_MAIN_PANE + self.W_MAIN_PANE + 10
+		self.Y_ENABLES = 55
+		self.W_ENABLES = 1024 - (self.X_ENABLES) -24
+		self.H_ENABLES = 110
 
 		self.X_SPECIAL = self.X_MAIN_PANE + self.W_MAIN_PANE + 10
-		self.Y_SPECIAL = self.Y_REQUIRES + self.H_REQUIRES
+		self.Y_SPECIAL = self.Y_ENABLES + self.H_ENABLES
 		self.W_SPECIAL = 1024 - (self.X_MAIN_PANE + self.W_MAIN_PANE + 10) - 24
 		self.H_SPECIAL = self.Y_MAIN_PANE + self.H_MAIN_PANE - self.Y_SPECIAL
 
@@ -81,34 +81,23 @@ class CvPediaCorporation:
 			self.X_ICON + self.W_ICON/2 - self.ICON_SIZE/2, self.Y_ICON + self.H_ICON/2 - self.ICON_SIZE/2, self.ICON_SIZE, self.ICON_SIZE, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
 		self.placeSpecial()
-		self.placeRequires()
+		self.placeEnables()
 		self.placeText()
 
-	def placeRequires(self):
+	def placeEnables(self):
 
 		screen = self.top.getScreen()
 
 		panelName = self.top.getNextWidgetName()
-		screen.addPanel( panelName, localText.getText("TXT_KEY_PEDIA_REQUIRES", ()), "", false, true, self.X_REQUIRES, self.Y_REQUIRES, self.W_REQUIRES, self.H_REQUIRES, PanelStyles.PANEL_STYLE_BLUE50 )
+		screen.addPanel( panelName, localText.getText("TXT_KEY_PEDIA_BONUS_TRADE", ()), "", false, true, self.X_ENABLES, self.Y_ENABLES, self.W_ENABLES, self.H_ENABLES, PanelStyles.PANEL_STYLE_BLUE50 )
 		screen.attachLabel(panelName, "", "  ")
 
-		iTech = gc.getCorporationInfo(self.iCorporation).getTechPrereq()
-		if (iTech > -1):
-			screen.attachImageButton( panelName, "", gc.getTechInfo(iTech).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_TECH, iTech, 1, False )
-
 		for iBuilding in range(gc.getNumBuildingInfos()):
-			if (gc.getBuildingInfo(iBuilding).getFoundsCorporation() == self.iCorporation):
+			if gc.getBuildingInfo(iBuilding).getPrereqCorporation() == self.iCorporation:
 				screen.attachImageButton( panelName, "", gc.getBuildingInfo(iBuilding).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, iBuilding, 1, False )
 
 		for iUnit in range(gc.getNumUnitInfos()):
-			bRequired = false
-			for iBuilding in range(gc.getNumBuildingInfos()):
-				if (gc.getBuildingInfo(iBuilding).getFoundsCorporation() == self.iCorporation):
-					if gc.getUnitInfo(iUnit).getBuildings(iBuilding) or gc.getUnitInfo(iUnit).getForceBuildings(iBuilding):
-						bRequired = true
-						break
-
-			if bRequired:
+			if gc.getUnitInfo(iUnit).getPrereqCorporation() == self.iCorporation:
 				screen.attachImageButton( panelName, "", gc.getUnitInfo(iUnit).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT, iUnit, 1, False )
 
 	def placeSpecial(self):
