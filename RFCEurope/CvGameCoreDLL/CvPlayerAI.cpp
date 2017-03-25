@@ -5601,7 +5601,7 @@ int CvPlayerAI::AI_getAttitudeVal(PlayerTypes ePlayer, bool bForced) const
 	return range(iAttitude, -100, 100);*/
 }
 
-// BEGIN: Show Hidden Attitude Mod - modified by Absinthe, based on SoI
+// BEGIN: Show Hidden Attitude Mod - implemented by Absinthe, based on SoI
 int CvPlayerAI::AI_getFirstImpressionAttitude(PlayerTypes ePlayer) const
 {
 	CvPlayerAI& kPlayer = GET_PLAYER(ePlayer);
@@ -5777,17 +5777,20 @@ int CvPlayerAI::AI_getCloseBordersAttitude(PlayerTypes ePlayer) const
 		return 0;
 	}
 
-	//iPercent = std::min(60, (AI_calculateStolenCityRadiusPlots(ePlayer) * 3)); //Rhye
-	iPercent = std::min(60, (AI_calculateStolenCityRadiusPlots(ePlayer) * 6)); //Rhye
+	//iPercent = std::min(60, (AI_calculateStolenCityRadiusPlots(ePlayer) * 3)); // Absinthe
+	iPercent = std::min(60, (AI_calculateStolenCityRadiusPlots(ePlayer) * 4)); // Absinthe
 
 	if (GET_TEAM(getTeam()).AI_isLandTarget(GET_PLAYER(ePlayer).getTeam()))
 	{
 		iPercent += 40;
 	}
 
-		//m_aiCloseBordersAttitudeCache[ePlayer] = ((GC.getLeaderHeadInfo(getPersonalityType()).getCloseBordersAttitudeChange() * iPercent) / 100); //Rhye
-		m_aiCloseBordersAttitudeCache[ePlayer] = (2 * (GC.getLeaderHeadInfo(getPersonalityType()).getCloseBordersAttitudeChange() * iPercent) / 100); //Rhye
+		//m_aiCloseBordersAttitudeCache[ePlayer] = ((GC.getLeaderHeadInfo(getPersonalityType()).getCloseBordersAttitudeChange() * iPercent) / 100); // Absinthe
+		m_aiCloseBordersAttitudeCache[ePlayer] = ((GC.getLeaderHeadInfo(getPersonalityType()).getCloseBordersAttitudeChange() * iPercent) / 66); // Absinthe (50 in vanilla RFC)
 	}
+	
+	// Absinthe: should we have a maximum value for it instead?
+	//m_aiCloseBordersAttitudeCache[ePlayer] = std::min(6, m_aiCloseBordersAttitudeCache[ePlayer]);
 
 	return m_aiCloseBordersAttitudeCache[ePlayer];
 }
@@ -5851,35 +5854,42 @@ int CvPlayerAI::AI_getSameReligionAttitude(PlayerTypes ePlayer) const
 			iAttitude += range(iAttitudeChange, -(abs(GC.getLeaderHeadInfo(getPersonalityType()).getSameReligionAttitudeChangeLimit())), abs(GC.getLeaderHeadInfo(getPersonalityType()).getSameReligionAttitudeChangeLimit()));
 		}
 
-		// 3MiroFaith: diplomacy boost
+		// Absinthe: halved normal diplo bonuses from sharing a religion, the bonus from faith points should be the dominating factor
+		//iAttitude /= 2;
+		// Absinthe: little more clear to reduce it this way: 1 with 1 or 2, 2 with 3 or 4
+		if (iAttitude > 3)
+		{
+			iAttitude -= 1;
+		}
+		else if (iAttitude > 1)
+		{
+			iAttitude -= 1;
+		}
+		// Absinthe: end
+
+		// 3MiroFaith: diplomacy boost from faith points
 		if ( isFaithBenefit( FP_DIPLOMACY) ){
 			iAttitude += GET_PLAYER(ePlayer).getFaithBenefit( FP_DIPLOMACY );
 		};
 	}
 
 	// 3MiroSchism: if before the schism date, make the two like each other
-	if ( GC.getGameINLINE().getGameTurn() < SCHISM_YEAR ){
-		if ( ((getStateReligion() == SCHISM_A) && (GET_PLAYER(ePlayer).getStateReligion() == SCHISM_B)) ||
-			((getStateReligion() == SCHISM_B) && (GET_PLAYER(ePlayer).getStateReligion() == SCHISM_A)) ){
+	if ( GC.getGameINLINE().getGameTurn() < SCHISM_YEAR )
+	{
+		if ( ((getStateReligion() == SCHISM_A) && (GET_PLAYER(ePlayer).getStateReligion() == SCHISM_B)) || ((getStateReligion() == SCHISM_B) && (GET_PLAYER(ePlayer).getStateReligion() == SCHISM_A)) )
+		{
 				iAttitude++;
 		};
 	};
 
+	// Absinthe: this is too harsh IMO, getting the wonder shouldn't totally negate all bonuses from shared religion
+	/*
 	// 3MiroBuildings: If they can fight with each other, then they get no diplo boost
 	if ( GET_PLAYER(getID()).canFightBrothers() || GET_PLAYER(ePlayer).canFightBrothers() ){
 		iAttitude = 0;
-	};
+	};*/
 
 	//iAttitude += AI_getFaithAttitude( ePlayer );
-
-	//Rhye - start
-	// 3Miro: religion is equally important fro this mod
-	/*if (getCurrentEra() == 3 || getCurrentEra() == 4) //renaissance and industrial
-		iAttitude /= 4;
-	else if (getCurrentEra() <= 1 || getCurrentEra() == 5) //ancient, classical and modern
-		iAttitude /= 2;*/
-	//medieval = default
-	//Rhye - end
 
 	return iAttitude;
 }
@@ -5924,21 +5934,13 @@ int CvPlayerAI::AI_getDifferentReligionAttitude(PlayerTypes ePlayer) const
 		};
 	};
 
+	// Absinthe: instead of the 0 bonus from sharing a religion, I would rather have increased penalty here. -3 instead of -1 for now
 	// 3MiroBuildings: If they can fight with each other, then they get -1 diplo penalty
 	if ((getStateReligion() != NO_RELIGION) && (getStateReligion() == GET_PLAYER(ePlayer).getStateReligion())){
 		if ( GET_PLAYER(getID()).canFightBrothers() || GET_PLAYER(ePlayer).canFightBrothers() ){
-			iAttitude = -1;
+			iAttitude = -3;
 		};
 	};
-
-	//Rhye - start
-	// 3Miro: Religion equally important
-	/*if (getCurrentEra() == 2) //medieval
-		iAttitude *= 4;
-	else if (getCurrentEra() <= 1 || getCurrentEra() == 5) //ancient, classical and modern
-		iAttitude *= 2;*/
-	//renaissance and industrial = default
-	//Rhye - end
 
 	return iAttitude;
 }
@@ -12107,19 +12109,28 @@ void CvPlayerAI::AI_doCivics()
 		return;
 	}
 
-	// 3Miro9
-	//if (getMaxAnarchyTurns() > 0)
-	//{
-	//	if (isGoldenAge())
-	//	{
-	//		return;
-	//	}
-	//}
-
 	if (!canRevolution(NULL))
 	{
 		return;
 	}
+
+	// Absinthe: AI shouldn't want a revolution in the first 10 turns after birth (wait for the potential city flips, initial conquests/settling, war declarations, and whatnot)
+	if ( GC.getGameINLINE().getGameTurn() < startingTurn[getID()] + 10 )
+	{
+		return;
+	}
+	// Absinthe: end
+	// Absinthe: AI shouldn't want a revolution in the first 7 turns of the scenario either
+	int iScenarioStartTurn = 0; // 500 AD
+	if (getScenario() == SCENARIO_1200AD)
+	{
+		iScenarioStartTurn = 200; // 1200 AD
+	}
+	if ( GC.getGameINLINE().getGameTurn() < iScenarioStartTurn + 7 )
+	{
+		return;
+	}
+	// Absinthe: end
 
 	FAssertMsg(AI_getCivicTimer() == 0, "AI Civic timer is expected to be 0");
 

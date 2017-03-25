@@ -168,6 +168,7 @@ public:
 	bool canChangeReligion();
 	bool canConvert(int /*ReligionTypes*/ iIndex);
 	void convert(int /*ReligionTypes*/ iIndex);
+	void convertForFree(int /*ReligionTypes*/ iIndex); // Absinthe: free religious revolution
 	bool hasHolyCity(int /*ReligionTypes*/ eReligion);
 	int countHolyCities();
 
@@ -578,7 +579,7 @@ public:
 	int getMaster();
 	int countVassals();
 
-	// Absinthe: DCN update
+	// Absinthe: DCN Dynamic Civ Names
 	void processCivNames();
 
 	// 3MiroProvince: religion in province

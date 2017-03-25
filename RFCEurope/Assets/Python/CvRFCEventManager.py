@@ -65,6 +65,7 @@ class CvRFCEventManager(CvEventManager.CvEventManager, object):
 			7626 : ('CounterReformationEvent',self.relEventApply7626, self.relEventBegin7626),
 			7627 : ('CounterReformationEvent',self.barbEventApply7627, self.barbEventBegin7627),
 			7628 : ('Religious Persecution', self.relEventApply7628, self.relEventBegin7628), #Absinthe: persecution popup
+			7629 : ('Free Religious Revolution', self.relEventApply7629, self.relEventBegin7629), #Absinthe: free religion change
 		}
 
 		# --> INSERT EVENT HANDLER INITIALIZATION HERE <--
@@ -295,4 +296,12 @@ class CvRFCEventManager(CvEventManager.CvEventManager, object):
 
 	def relEventApply7628(self, playerID, netUserData, popupReturn):
 		self.rel.eventApply7628(popupReturn)
+	#Absinthe: end
+
+	#Absinthe: free religion change
+	def relEventBegin7629(self):
+		pass
+
+	def relEventApply7629(self, playerID, netUserData, popupReturn):
+		self.rel.eventApply7629(playerID, popupReturn)
 	#Absinthe: end

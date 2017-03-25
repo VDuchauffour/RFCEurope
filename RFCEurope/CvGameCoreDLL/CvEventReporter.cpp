@@ -377,6 +377,18 @@ void CvEventReporter::setPlayerAlive( PlayerTypes ePlayerID, bool bNewValue )
 	m_kPythonEventMgr.reportSetPlayerAlive( ePlayerID, bNewValue );
 }
 
+// Absinthe: Python Event for civic changes
+void CvEventReporter::playerChangeAllCivics(PlayerTypes ePlayerID, CivicTypes* paeNewCivics, CivicTypes* paeOldCivics)
+{
+	m_kPythonEventMgr.reportPlayerChangeAllCivics(ePlayerID, paeNewCivics, paeOldCivics);
+}
+
+void CvEventReporter::playerChangeSingleCivic(PlayerTypes ePlayerID, CivicTypes eNewCivic, CivicTypes eOldCivic)
+{
+	m_kPythonEventMgr.reportPlayerChangeSingleCivic(ePlayerID, eNewCivic, eOldCivic);
+}
+// Absinthe: end
+
 void CvEventReporter::playerChangeStateReligion(PlayerTypes ePlayerID, ReligionTypes eNewReligion, ReligionTypes eOldReligion)
 {
 	m_kPythonEventMgr.reportPlayerChangeStateReligion(ePlayerID, eNewReligion, eOldReligion);

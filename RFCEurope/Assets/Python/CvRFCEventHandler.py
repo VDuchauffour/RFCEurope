@@ -169,6 +169,8 @@ class CvRFCEventHandler:
 		eventManager.addEventHandler("unitPillage",self.onUnitPillage) #Stability
 		eventManager.addEventHandler("religionSpread",self.onReligionSpread) #Stability
 		eventManager.addEventHandler("firstContact",self.onFirstContact)
+		eventManager.addEventHandler("playerChangeAllCivics", self.onPlayerChangeAllCivics) # Absinthe: Python Event for civic changes
+		eventManager.addEventHandler("playerChangeSingleCivic", self.onPlayerChangeSingleCivic) # Absinthe: Python Event for civic changes
 		eventManager.addEventHandler("playerChangeStateReligion", self.onPlayerChangeStateReligion)
 
 		self.eventManager = eventManager
@@ -245,7 +247,7 @@ class CvRFCEventHandler:
 				self.cnm.renameCities(pCity, con.iHungary)
 		# Absinthe: for all civs:
 		#if utils.getScenario() == con.i1200ADScenario:
-		#	for iPlayer in range(con.iNumPlayers -1):
+		#	for iPlayer in range(con.iNumPlayers - 1):
 		#		pPlayer = gc.getPlayer(iPlayer)
 		#		apCityList = PyPlayer(iPlayer).getCityList()
 		#		for pLoopCity in apCityList:
@@ -256,6 +258,10 @@ class CvRFCEventHandler:
 		#global objMercenaryUtils
 		#objMercenaryUtils = MercenaryUtils.MercenaryUtils()
 		#Mercenaries - end
+
+		# Absinthe: refresh Dynamic Civ Names for all civs on the initial turn of the given scenario
+		for iPlayer in range(con.iNumMajorPlayers):
+			gc.getPlayer(iPlayer).processCivNames()
 
 		return 0
 
@@ -656,6 +662,12 @@ class CvRFCEventHandler:
 		if (iPlayer < con.iNumMajorPlayers):
 			gc.getPlayer(iPlayer).processCivNames()
 
+		# refresh Dynamic Civ Names for all civs on the human player's initial turn of the given scenario
+		if utils.getHumanID() == iPlayer:
+			if iGameTurn == utils.getScenarioStartTurn():
+				for iDCNPlayer in range(con.iNumMajorPlayers):
+					gc.getPlayer(iDCNPlayer).processCivNames()
+
 		# Denmark UP
 		if (iPlayer == con.iDenmark):
 			self.up.soundUP(iPlayer)
@@ -757,10 +769,33 @@ class CvRFCEventHandler:
 		self.rnf.onFirstContact(iTeamX, iHasMetTeamY)
 
 
+	# Absinthe: Python Event for civic changes
+	def onPlayerChangeAllCivics(self, argsList):
+		# note that this only reports civic change if it happened via normal revolution
+		'Player changes his civics'
+		iPlayer = argsList[0]
+		lNewCivics = [argsList[1], argsList[2], argsList[3], argsList[4], argsList[5], argsList[6]]
+		lOldCivics = [argsList[7], argsList[8], argsList[9], argsList[10], argsList[11], argsList[12]]
+		if iPlayer < con.iNumPlayers:
+			print ("ChangeAllCivics civic change, player:", iPlayer)
+			print ("ChangeAllCivics civic change, new civics:", lNewCivics)
+			print ("ChangeAllCivics civic change, old civics:", lOldCivics)
+			self.rel.onPlayerChangeAllCivics(iPlayer, lNewCivics, lOldCivics)
+
+
+	def onPlayerChangeSingleCivic(self, argsList):
+		# note that this reports all civic changes in single instances (so also reports force converts by diplomacy or with spies)
+		'Civics are changed for a player'
+		iPlayer, iNewCivic, iOldCivic = argsList
+		if iPlayer < con.iNumPlayers:
+			print ("ChangeSingleCivic civic change, Player, NewCivic, OldCivic:", argsList)
+	# Absinthe: end
+
+
 	def onPlayerChangeStateReligion(self, argsList):
 		'Player changes his state religion'
 		iPlayer, iNewReligion, iOldReligion = argsList
-		
+
 		if iPlayer < iNumPlayers:
 			self.company.onPlayerChangeStateReligion(argsList)
 

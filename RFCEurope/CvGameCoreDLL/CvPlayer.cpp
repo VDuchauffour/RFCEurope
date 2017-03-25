@@ -1924,8 +1924,8 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 	//pCityPlot->verifyUnitValidPlot();
 	// 3MiroBugfix: end
 
-	processCivNames(); //Rhye - dynamic civ names - not jdog's
-	GET_PLAYER(eOldOwner).processCivNames(); //Rhye - dynamic civ names - not jdog's
+	processCivNames(); // Absinthe: DCN Dynamic Civ Names
+	GET_PLAYER(eOldOwner).processCivNames(); // Absinthe: DCN Dynamic Civ Names
 
 	// 3Miro: Founding City
 	GC.getGameINLINE().doHolyCity(); // 3Miro: see if we need to found a new religion here
@@ -2814,7 +2814,20 @@ void CvPlayer::doTurn()
 		changeAnarchyTurns(-1);
 	}
 
-	verifyCivics();
+	// Absinthe: without this check, civics are set back to a 0 state after initialization in the 1st turn - for civs before the autoplay civ
+	// identify the active scenario
+	int iScenarioStartTurn = 0; // 500 AD
+	if (getScenario() == SCENARIO_1200AD)
+	{
+		iScenarioStartTurn = 200; // 1200 AD
+	}
+	// enough to check on the first turn of the scenario
+	//if ( GC.getGameINLINE().getGameTurn() >= startingTurn[getID()] )
+	if ( GC.getGameINLINE().getGameTurn() != iScenarioStartTurn )
+	{
+		verifyCivics();
+	}
+	// Absinthe: end
 
 	updateTradeRoutes();
 
@@ -2933,20 +2946,24 @@ void CvPlayer::verifyCivics()
 {
 	int iI, iJ;
 
-	if (!isAnarchy())
+	// Absinthe: safety check
+	if (isAlive())
 	{
-		for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+		if (!isAnarchy())
 		{
-			if (!canDoCivics(getCivics((CivicOptionTypes)iI)))
+			for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 			{
-				for (iJ = 0; iJ < GC.getNumCivicInfos(); iJ++)
+				if (!canDoCivics(getCivics((CivicOptionTypes)iI)))
 				{
-					if (GC.getCivicInfo((CivicTypes)iJ).getCivicOptionType() == iI)
+					for (iJ = 0; iJ < GC.getNumCivicInfos(); iJ++)
 					{
-						if (canDoCivics((CivicTypes)iJ))
+						if (GC.getCivicInfo((CivicTypes)iJ).getCivicOptionType() == iI)
 						{
-							setCivics(((CivicOptionTypes)iI), ((CivicTypes)iJ));
-							break;
+							if (canDoCivics((CivicTypes)iJ))
+							{
+								setCivics(((CivicOptionTypes)iI), ((CivicTypes)iJ));
+								break;
+							}
 						}
 					}
 				}
@@ -4891,14 +4908,6 @@ bool CvPlayer::canRaze(CvCity* pCity) const
 			return false;
 		}
 
-		//Rhye - start UP (Turkish)
-		// 3Miro (nothing erased)
-		/*if (getID() == TURKEY)
-		{
-			return true;
-		}*/
-		//Rhye - end UP (Turkish)
-
 		if (pCity->calculateTeamCulturePercent(getTeam()) >= GC.getDefineINT("RAZING_CULTURAL_PERCENT_THRESHOLD"))
 		{
 			return false;
@@ -4994,7 +5003,7 @@ void CvPlayer::raze(CvCity* pCity)
 
 	disband(pCity);
 
-	processCivNames(); //Rhye - dynamic civ names - not jdog's
+	processCivNames(); // Absinthe: DCN Dynamic Civ Names
 }
 
 
@@ -5570,7 +5579,7 @@ void CvPlayer::found(int iX, int iY)
 
 	CvEventReporter::getInstance().cityBuilt(pCity);
 
-	processCivNames(); //Rhye - dynamic civ names - not jdog's
+	processCivNames(); // Absinthe: DCN Dynamic Civ Names
 
 }
 
@@ -7668,10 +7677,7 @@ bool CvPlayer::canDoCivics(CivicTypes eCivic) const
 		}
 	}
 
-	// 3MiroUP: Trade
-	/*if ( UniquePowers[getID()][UP_TRADE] == 1 ){
-		if ( (eCivic == 4) || (eCivic == 19) ) return true;
-	};*/
+	// Absinthe: UP enable civic
 	int iUPC = UniquePowers[getID() * UP_TOTAL_NUM + UP_ENABLE_CIVIC];
 	if ( iUPC > -1 ){
 		if ( eCivic == iUPC % 100 ){ return true; }else
@@ -7758,6 +7764,15 @@ void CvPlayer::revolution(CivicTypes* paeNewCivics, bool bForce)
 {
 	int iAnarchyLength;
 	int iI;
+	CivicTypes* paeOldCivics;
+
+	// Absinthe: Python Event for civic changes
+	paeOldCivics = new CivicTypes[GC.getNumCivicOptionInfos()];
+	for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+	{
+		paeOldCivics[iI] = getCivics((CivicOptionTypes)iI);
+	}
+	// Absinthe: end
 
 	if (!bForce && !canRevolution(paeNewCivics))
 	{
@@ -7788,6 +7803,13 @@ void CvPlayer::revolution(CivicTypes* paeNewCivics, bool bForce)
 			setCivics(((CivicOptionTypes)iI), paeNewCivics[iI]);
 		}
 	}
+
+	// Absinthe: Python Event for civic changes
+	if (getID() < MAX_PLAYERS)
+	{
+		CvEventReporter::getInstance().playerChangeAllCivics(getID(), paeNewCivics, paeOldCivics);
+	}
+	// Absinthe: end
 
 	setRevolutionTimer(std::max(1, ((100 + getAnarchyModifier()) * GC.getDefineINT("MIN_REVOLUTION_TURNS")) / 100) + iAnarchyLength);
 
@@ -7971,7 +7993,7 @@ void CvPlayer::convert(ReligionTypes eReligion)
 		m_iFaith ++;
 	};
 
-	// 3Miro: Brothers in Faith and War, if the religion has been changes, then lose the ability
+	// 3Miro: Brothers in Faith and War, if the religion has been changed, then lose the ability
 	if ( canFightBrothers() ){
 		while ( canFightBrothers() ){
 			changeWarWithBrothers( -1 );
@@ -7979,8 +8001,42 @@ void CvPlayer::convert(ReligionTypes eReligion)
 	};
 
 
-	processCivNames(); //Rhye - dynamic civ names - not jdog's
+	processCivNames(); // Absinthe: DCN Dynamic Civ Names
 }
+
+
+// Absinthe: free religious revolution
+void CvPlayer::convertForFree(ReligionTypes eReligion)
+{
+	setLastStateReligion(eReligion);
+
+	setConversionTimer(std::max(1, GC.getDefineINT("MIN_CONVERSION_TURNS")));
+
+	// meet the Pope
+	if ( eReligion == PAPAL_RELIGION ){
+		if ( !GET_TEAM( getTeam() ).isHasMet( GET_PLAYER( (PlayerTypes) PAPAL_PLAYER ).getTeam() ) ){
+			GET_TEAM( getTeam() ).meet( GET_PLAYER( (PlayerTypes) PAPAL_PLAYER ).getTeam(), true );
+		};
+	};
+
+	// reset faith points
+	m_iFaith = 0;
+
+	// converting to the Pope's religion gives a free point (so you can get gifts)
+	if ( eReligion == PAPAL_RELIGION ){
+		m_iFaith ++;
+	};
+
+	// if the religion has been changed, then lose the ability
+	if ( canFightBrothers() ){
+		while ( canFightBrothers() ){
+			changeWarWithBrothers( -1 );
+		};
+	};
+
+	processCivNames(); // Absinthe: DCN Dynamic Civ Names
+}
+// Absinthe: end
 
 
 bool CvPlayer::hasHolyCity(ReligionTypes eReligion) const
@@ -8881,8 +8937,8 @@ void CvPlayer::updateMaxAnarchyTurns()
 		}
 	}
 
-	//Rhye - start UP
-	// 3Miro India UP ?
+	// Absinthe: possible place to set UP for no anarchy
+	//Rhye - India UP
 	//if (getID() == INDIA)
 	//{
 	//	iBestValue = 0;
@@ -11225,8 +11281,8 @@ void CvPlayer::setLastStateReligion(ReligionTypes eNewValue)
 						{
 							if (GET_TEAM(getTeam()).isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
 							{
-								//szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_CONVERT_RELIGION", getNameKey(), GC.getReligionInfo(getLastStateReligion()).getTextKeyWide()); //Rhye
-								szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_CONVERT_RELIGION", getCivilizationShortDescriptionKey(), GC.getReligionInfo(getLastStateReligion()).getTextKeyWide()); //Rhye
+								//szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_CONVERT_RELIGION", getNameKey(), GC.getReligionInfo(getLastStateReligion()).getTextKeyWide()); // Absinthe
+								szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_CONVERT_RELIGION", getCivilizationDescriptionKey(), GC.getReligionInfo(getLastStateReligion()).getTextKeyWide()); // Absinthe
 								gDLL->getInterfaceIFace()->addHumanMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_RELIGION_CONVERT", MESSAGE_TYPE_MAJOR_EVENT);
 							}
 						}
@@ -11234,8 +11290,8 @@ void CvPlayer::setLastStateReligion(ReligionTypes eNewValue)
 
 					if (isAlive()) // Absinthe: cleaner replay log (from DoC)
 					{
-						//szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_CONVERT_RELIGION", getNameKey(), GC.getReligionInfo(getLastStateReligion()).getTextKeyWide()); //Rhye
-						szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_CONVERT_RELIGION", getCivilizationShortDescriptionKey(), GC.getReligionInfo(getLastStateReligion()).getTextKeyWide()); //Rhye
+						//szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_CONVERT_RELIGION", getNameKey(), GC.getReligionInfo(getLastStateReligion()).getTextKeyWide()); // Absinthe
+						szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_CONVERT_RELIGION", getCivilizationDescriptionKey(), GC.getReligionInfo(getLastStateReligion()).getTextKeyWide()); // Absinthe
 						GC.getGameINLINE().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getID(), szBuffer);
 					}
 				}
@@ -12679,7 +12735,7 @@ void CvPlayer::setCivics(CivicOptionTypes eIndex, CivicTypes eNewValue)
 {
 	CvWString szBuffer;
 	CivicTypes eOldCivic;
-	//int iI; //Rhye
+	int iI;
 
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumCivicOptionInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
@@ -12701,6 +12757,13 @@ void CvPlayer::setCivics(CivicOptionTypes eIndex, CivicTypes eNewValue)
 			processCivics(getCivics(eIndex), 1);
 		}
 
+		// Absinthe: Python Event for civic changes
+		if (getID() < MAX_PLAYERS)
+		{
+			CvEventReporter::getInstance().playerChangeSingleCivic(getID(), eNewValue, eOldCivic);
+		}
+		// Absinthe: end
+
 		GC.getGameINLINE().updateSecretaryGeneral();
 
 		GC.getGameINLINE().AI_makeAssignWorkDirty();
@@ -12712,35 +12775,41 @@ void CvPlayer::setCivics(CivicOptionTypes eIndex, CivicTypes eNewValue)
 				gDLL->updateDiplomacyAttitude(true);
 			}
 
-			//Rhye - start comment (adopt)
-			/*
-			if (!isBarbarian())
+			// Absinthe: reenable civic change reports and messages for the human player
+			//if (!isBarbarian()) // Absinthe
+			if (!isBarbarian() && !isMinorCiv()) // Absinthe
 			{
 				if (getCivics(eIndex) != NO_CIVIC)
 				{
-					if (getCivics(eIndex) != GC.getCivilizationInfo(getCivilizationType()).getCivilizationInitialCivics(eIndex))
+					// Absinthe: we may have different initial starting civics for the different civs
+					//if (getCivics(eIndex) != GC.getCivilizationInfo(getCivilizationType()).getCivilizationInitialCivics(eIndex))
+					//{
+					for (iI = 0; iI < MAX_PLAYERS; iI++)
 					{
-						for (iI = 0; iI < MAX_PLAYERS; iI++)
+						if (GET_PLAYER((PlayerTypes)iI).isAlive())
 						{
-							if (GET_PLAYER((PlayerTypes)iI).isAlive())
+							if (GET_TEAM(getTeam()).isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
 							{
-								if (GET_TEAM(getTeam()).isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
-								{
-									szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_ADOPTED_CIVIC", getNameKey(), GC.getCivicInfo(getCivics(eIndex)).getTextKeyWide());
-									gDLL->getInterfaceIFace()->addHumanMessage(((PlayerTypes)iI), false, GC.getDefineINT("EVENT_MESSAGE_TIME"), szBuffer, "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MAJOR_EVENT);
-								}
+								//szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_ADOPTED_CIVIC", getNameKey(), GC.getCivicInfo(getCivics(eIndex)).getTextKeyWide()); // Absinthe
+								szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_ADOPTED_CIVIC", getCivilizationDescriptionKey(), GC.getCivicInfo(getCivics(eIndex)).getTextKeyWide()); // Absinthe
+								gDLL->getInterfaceIFace()->addHumanMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MAJOR_EVENT);
 							}
 						}
+					}
 
-						szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_ADOPTED_CIVIC", getNameKey(), GC.getCivicInfo(getCivics(eIndex)).getTextKeyWide());
+					if (isAlive()) // Absinthe: cleaner replay log
+					{
+						//szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_ADOPTED_CIVIC", getNameKey(), GC.getCivicInfo(getCivics(eIndex)).getTextKeyWide()); // Absinthe
+						szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_ADOPTED_CIVIC", getCivilizationDescriptionKey(), GC.getCivicInfo(getCivics(eIndex)).getTextKeyWide()); // Absinthe
 						GC.getGameINLINE().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getID(), szBuffer);
 					}
+					//}
 				}
 			}
-			*/
-			//Rhye - end
-		// 3MiroCAR (this should reser attitude upon Civic change): Sanguo Mod Performance start, added by poyuzhe 07.26.09
-		for (int iI = 0; iI < MAX_PLAYERS; iI++)
+			// Absinthe: end
+
+		// 3MiroCAR (this should reset attitude upon Civic change): Sanguo Mod Performance start, added by poyuzhe 07.26.09
+		for (iI = 0; iI < MAX_PLAYERS; iI++)
 		{
 			if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getCivics(eIndex) == eNewValue)
 			{
@@ -12756,9 +12825,9 @@ void CvPlayer::setCivics(CivicOptionTypes eIndex, CivicTypes eNewValue)
 		}
 		// Sanguo Mod Performance, end
 
-			//Rhye - start (dynamic civ names - not jdog's)
+			// Absinthe: DCN Dynamic Civ Names
 			processCivNames();
-			//Rhye - end
+			// Absinthe: end
 		}
 	}
 }
@@ -16984,7 +17053,6 @@ void CvPlayer::reinit( PlayerTypes eID, LeaderHeadTypes prevLeader, bool doReset
 
 }
 //Rhye - end
-
 
 
 //
@@ -23077,7 +23145,7 @@ bool CvPlayer::hasSpaceshipArrived() const
 
 
 
-// Dynamic Civ Names - 3Miro and AbsintheRed
+// DCN Dynamic Civ Names - 3Miro and AbsintheRed
 void CvPlayer::processCivNames()
 {
 	if (getID() >= NUM_MAJOR_PLAYERS)
@@ -23809,7 +23877,7 @@ void CvPlayer::setRespawnedAlive( bool bNewValue )
 	if ( m_bRespawnedAlive != bNewValue )
 	{
 		m_bRespawnedAlive = bNewValue;
-		processCivNames();
+		processCivNames(); // Absinthe: DCN Dynamic Civ Names
 	}
 }
 bool CvPlayer::getEverRespawned() const

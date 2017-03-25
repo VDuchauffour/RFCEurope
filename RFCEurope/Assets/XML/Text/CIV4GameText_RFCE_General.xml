@@ -1093,4 +1093,22 @@
 		<Spanish>[NEWLINE]%d1 [ICON_GOLD]: mantenimiento por lejan&#237;a[NEWLINE]%d2 [ICON_GOLD]: mantenimiento por cantidad de ciudades[NEWLINE]%d3[ICON_GOLD]: gastos de la colonia[NEWLINE]%d4 [ICON_GOLD]: pagos a la corporaci&#243;n[NEWLINE]------------------------[NEWLINE]------------------------[NEWLINE]COSTE TOTAL MANTENIMIENTO CIUDAD: %d5 [ICON_GOLD]</Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_IMP_DESTROYED</Tag>
+		<English>A %s1_ImpName has been destroyed by a marauding %s3_civ_adjective %s2_UnitName!</English>
+		<French>Destruction de [NUM1:un:une:des:des] %s1_ImpName - %s2_UnitName (%s3_civ_adjective) !</French>
+		<German>Eine Modernisierung %s1_ImpName wurde vernichtet - %s2_UnitName (%s3_civ_adjective)!</German>
+		<Italian>[NUM1:Un:Una] %s1_ImpName &#232; [NUM1:stato sabotato:stata sabotata] - %s2_UnitName (%s3_civ_adjective)!</Italian>
+		<Spanish>[NUM1:Un:Una:Unos:Unas] %s1_ImpName [NUM1:ha sido destruido:ha sido destruida:han sido destruidos:han sido destruidas] - %s2_UnitName (%s3_civ_adjective).</Spanish>
+		<Portuguese>A %s1_ImpName has been destroyed by a marauding %s3_civ_adjective %s2_UnitName!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ROAD_DESTROYED</Tag>
+		<English>A road system has been made impassable by a marauding %s2_civ_adjective %s1_UnitName!</English>
+		<French>A road system has been made impassable by a marauding %s2_civ_adjective %s1_UnitName!</French>
+		<German>A road system has been made impassable by a marauding %s2_civ_adjective %s1_UnitName!</German>
+		<Italian>A road system has been made impassable by a marauding %s2_civ_adjective %s1_UnitName!</Italian>
+		<Spanish>A road system has been made impassable by a marauding %s2_civ_adjective %s1_UnitName!</Spanish>
+		<Portuguese>A road system has been made impassable by a marauding %s2_civ_adjective %s1_UnitName!</Portuguese>
+	</TEXT>
 </Civ4GameText>

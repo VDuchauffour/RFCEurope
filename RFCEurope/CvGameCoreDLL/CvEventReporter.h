@@ -111,6 +111,8 @@ public:
 	void changeWar(bool bWar, TeamTypes eTeam, TeamTypes eOtherTeam);
 
 	void setPlayerAlive( PlayerTypes ePlayerID, bool bNewValue );
+	void playerChangeAllCivics(PlayerTypes ePlayerID, CivicTypes* paeNewCivics, CivicTypes* paeOldCivics); // Absinthe: Python Event for civic changes
+	void playerChangeSingleCivic(PlayerTypes ePlayerID, CivicTypes eNewCivic, CivicTypes eOldCivic); // Absinthe: Python Event for civic changes
 	void playerChangeStateReligion(PlayerTypes ePlayerID, ReligionTypes eNewReligion, ReligionTypes eOldReligion);
 	void playerGoldTrade(PlayerTypes eFromPlayer, PlayerTypes eToPlayer, int iAmount);
 

@@ -654,6 +654,14 @@ void CyPlayer::convert(int /*ReligionTypes*/ iIndex)
 		m_pPlayer->convert((ReligionTypes)iIndex);
 }
 
+// Absinthe: free religious revolution
+void CyPlayer::convertForFree(int /*ReligionTypes*/ iIndex)
+{
+	if (m_pPlayer)
+		m_pPlayer->convertForFree((ReligionTypes)iIndex);
+}
+// Absinthe: end
+
 bool CyPlayer::hasHolyCity(int /*ReligionTypes*/ eReligion)
 {
 	return m_pPlayer ? m_pPlayer->hasHolyCity((ReligionTypes)eReligion) : false;
@@ -2449,7 +2457,7 @@ int CyPlayer::getMaster(){
 int CyPlayer::countVassals(){
 	return m_pPlayer ->countVassals();
 };
-// Absinthe: DCN update
+// Absinthe: DCN Dynamic Civ Names
 void CyPlayer::processCivNames(){
 	return m_pPlayer ->processCivNames();
 };

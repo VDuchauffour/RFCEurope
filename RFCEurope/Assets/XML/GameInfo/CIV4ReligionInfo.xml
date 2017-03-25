@@ -45,7 +45,7 @@
 			<TechPrereq>TECH_ARABIC_KNOWLEDGE</TechPrereq>
 			<FreeUnitClass>UNITCLASS_ISLAMIC_MISSIONARY</FreeUnitClass>
 			<iFreeUnits>0</iFreeUnits>
-			<iSpreadFactor>50</iSpreadFactor>
+			<iSpreadFactor>80</iSpreadFactor>
 			<GlobalReligionCommerces>
 				<iGlobalReligionCommerce>1</iGlobalReligionCommerce>
 				<iGlobalReligionCommerce>0</iGlobalReligionCommerce>
