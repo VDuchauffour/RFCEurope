@@ -439,12 +439,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_PRU2</Tag>
-		<English>Start with Theocracy and no stability penalties from anarchy.</English>
-		<French>Start with Theocracy and no stability penalties from anarchy.</French>
-		<German>Start with Theocracy and no stability penalties from anarchy.</German>
-		<Italian>Start with Theocracy and no stability penalties from anarchy.</Italian>
-		<Spanish>Start with Theocracy and no stability penalties from anarchy.</Spanish>
-		<Portuguese>Start with Theocracy and no stability penalties from anarchy.</Portuguese>
+		<English>Starts with Theocracy and no stability penalties from anarchy.</English>
+		<French>Starts with Theocracy and no stability penalties from anarchy.</French>
+		<German>Starts with Theocracy and no stability penalties from anarchy.</German>
+		<Italian>Starts with Theocracy and no stability penalties from anarchy.</Italian>
+		<Spanish>Starts with Theocracy and no stability penalties from anarchy.</Spanish>
+		<Portuguese>Starts with Theocracy and no stability penalties from anarchy.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_NOV</Tag>

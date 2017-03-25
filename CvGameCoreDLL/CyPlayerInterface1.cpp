@@ -156,6 +156,7 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("canChangeReligion", &CyPlayer::canChangeReligion, "bool ()")
 		.def("canConvert", &CyPlayer::canConvert, "bool (int /*ReligionTypes*/ iIndex)")
 		.def("convert", &CyPlayer::convert, "void (int /*ReligionTypes*/ iIndex)")
+		.def("convertForFree", &CyPlayer::convertForFree, "void (int /*ReligionTypes*/ iIndex)") // Absinthe: free religious revolution
 		.def("hasHolyCity", &CyPlayer::hasHolyCity, "bool (int (ReligionTypes) eReligion)")
 		.def("countHolyCities", &CyPlayer::countHolyCities, "int () - Counts the # of holy cities this player has")
 

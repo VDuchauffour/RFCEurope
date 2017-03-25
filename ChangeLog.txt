@@ -107,6 +107,8 @@ Changes for RFCE 1.5:
 		- Additional checks for the plague to leave some of your cities even before it stops completely
 		- Plague leaving your cities is much more common in general (after it stopped the spread in your civ)
 		- It's way more likely that the plague leaves smaller, less unhealthy cities than bigger ones
+		- Little shorter plague duration (on civ-level), also it spreads to a little less cities in a given turn
+		- Revised plague related health calculations, now there is a real chance to avoid or mitigate plagues if the civ is healthy enough
 
 	Crusade updates:
 		- Crusading units now have a chance to arrive to their destination, around 70% of the units will arrive for the first Crusade
@@ -168,6 +170,8 @@ Changes for RFCE 1.5:
 		- Fixed oversight in the 1200AD scenario where Norwegian cities started with both Trading Post and Harbor - now they have Lighthouse instead
 		- Fixed oversight in the 1200AD scenario where Portuguese cities started with both Feitoria and Lighthouse - now they have Harbor instead
 		- Company spread is updated to an initial state before the first turn of the 1200 AD scenario starts
+		- Dynamic civ names are refreshed for all civs right before the player starts the first turn of the scenario
+		- AI civs won't do a revolution in the first couple turns of the scenario (keep the initial civics until relations are more established)
 		- NOTE: Most of the map updates for the 1.5 version are not yet implemented in the 1200AD scenario
 
 	Mercenary updates:
@@ -191,6 +195,13 @@ Changes for RFCE 1.5:
 		- Reduced foreign culture instability if you run the Subjugation Civic (-1 with less than 20%, 0 otherwise)
 		- Fixed mistake in religious stability calculations when Judaism is your State Religion
 
+	Religion changes:
+		- Switching from Paganism to State Religion/Theocracy/Organized Religion gives you a free religion choice (so no extra anarchy) right on civic change
+		- Mainly for civs who start without a religion (Bulgaria, Norse civs, Rus civs, Hungary, Lithuania), no need for the annoying double-revolution anymore
+		- AI will also use the function, the choice for a free religion is based on number of cities with the religion, on available holy cities, and on historical preference
+		
+		- The Papal States cannot trade any technologies (you can neither trade techs from the Pope, nor trade techs to him)
+		- The Pope gets all technologies automatically which is known by at least 3 Catholic civs
 	Religion spread rules:
 		- Added special religion spread rules for a couple areas which more often than not ended up with ahistorical religions
 		- The spread is based on provinces (and indirectly on civs in the area), only checks for cities without a religion
@@ -200,7 +211,6 @@ Changes for RFCE 1.5:
 		- Increased generic Judaism spread chance slightly, especially in Central-Europe
 		- Reduced Islam spread, it will have a harder time reaching the faraway parts of the map (Scandinavia, Novgorod)
 		- Fixed bug which could mess up Judaism spread if some parts of the map were sparsely populated with cities
-
 	Papal bonuses:
 		- When choosing where to construct free buildings or whom to give gold the Pope considers a weighted value of both faith points and diplomatic relations
 		- You need to have Catholicism as a state religion and open borders with the Papal States to be eligible for any bonuses
@@ -209,6 +219,10 @@ Changes for RFCE 1.5:
 		- Increased frequency of Papal gifts between the Schism and the Protestant Reformation, decreased afterwards
 		- No monasteries will be built for the chosen player after the discovery of Scientific Method (so the Pope may only build temples)
 		- Changed civ selecting method on Papal bonuses, earlier civs (with lower IDs) won't have a bigger chance anymore
+		- The Pope might also give free techs to the most pious civs
+		- You can only get one tech at a time, and only from techs which are known to the Pope
+		- For selecting the civ, relations with the Pope matter, but faith points are much more important
+		- The possibility for a free Papal tech is somewhat slim, but the selected civ has bigger chance if it's more techs behind
 
 	Indy and barb changes:
 		- Reduced number of defender units in indy Caen, AI France should be able to conquer it more often
@@ -313,7 +327,12 @@ Changes for RFCE 1.5:
 		- Minor updates in the Swedish and Prussian respawn zones, to avoid overlap with Lithuania
 		- Revised respawn zone for Novgorod and Russia, better shape for both without any overlaps
 		- Vassals are now allowed to trade cities with their master, e.g. you can give cities to your vassal if they are willing to accept it
-		- The Papal States cannot trade any technologies (you can neither trade techs from the Pope, nor trade techs to him)
+		- AI civs won't do a revolution in the first couple turns after birth (wait for the potential city flips, initial conquests/settling, war declarations, and whatnot)
+		- Reduced diplomatic relations penalties from close borders
+		- Decreased normal (vanilla BtS) diplo bonuses from sharing a religion, faith points should be the dominating factor
+		- Round church no longer negates all diplo bonuses from sharing a religion, but it has increased diplo penalties against civs with the same faith
+		- AI won't consider their trade partner worst enemy for tech/map/resource trades and open borders, if diplo relations between them is pleased or friendly
+		- Decreased general AI willingness for vassalization, also greatly reduced chance for vassalization on resurrection
 
 	Technical / UI changes:
 		- No interface messages are displayed during autoplay/autorun (Crusades, RiseAndFall, Religion, Wonders, Leaders, etc.)
@@ -337,6 +356,10 @@ Changes for RFCE 1.5:
 		- Added plot coordinates to the tile information tooltip - settable in GlobalDefines_Alt.xml file, disabled by default
 		- Added option for city naming popup on city foundation (with the civ's CNM name where it is available) - settable in GlobalDefines_Alt.xml file, disabled by default
 		- Added specific name to the plot information tooltip for all lakes (and fjords) on the map
+		- Cleaner replay log for civic and religion changes, also on peace declarations
+		- Reenabled civic change messages - for all civs you have contact with, for all change-types (revolution, diplo, spy, etc.)
+		- Civic/religion/many other interface messages will now use the DCN name instead of the short description of the civ
+		- Revised frequency of pillaging messages, added message on pillaged roads too
 
 	Bugfixes:
 		- Fixed strange visibility area for the Ottomans
@@ -359,6 +382,12 @@ Changes for RFCE 1.5:
 		- Fixed dates for a couple events/deadlines, including the Norwegian 2nd UHV and the Bulgarian 3rd UHV
 		- Fixed wrong class for a couple resources, which resulted in wrong AI value associated with them
 		- Fixed issue with character encoding in a couple DCN related files, now all special characters should be displayed correctly
+		- Fixed vanilla BtS display bug where messages about civic changes didn't show up if it was an initially set civic
+		- Fixed vanilla RFC bug where civics were set back to the basic ones for most AI civs which started before the civ with autoplay (so the human controlled civ)
+		- Fixed issue where some civs started without any techs and without their initial stack if their capital was flipped from another player
+		- Fixed issue where some indy/barb units could remain in the core area on the new civ's birth
+		- Fixed bug with autopeace messages with dead civs on civ resurrection
+		- Fixed a couple instances of the autoplay going to -1 turn bug (hopefully all of it)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -930,7 +959,7 @@ Changes for RFCE 1.3:
 		- Increased number of units leaving the civs for a crusade, but it's low on the first 10-20 turns after a civ is born
 		- Also, more crusader units will go home (leave your army)
 		- Some of the units will return from all Crusades after a couple turns, not only if Jerusalem is conquered
-		- No more free Templars/Teutons/Paladins/Knights for the base crusader army if the crusading civ doesn't know Chivalry yet (Lancers and Heavy Lancers instead)
+		- No more free Templars/Teutons/Paladins/Knights for the base Crusader army if the crusading civ doesn't know Chivalry yet (Lancers and Heavy Lancers instead)
 		- No longer possible for your GG units to leave you for a crusade (as normal units)
 		- Slightly reduced number of units for Defensive Crusades
 		- Separated unit randomizing method for Defensive Crusades (so no more all Paladin DCs), also reduced chance for Paladins

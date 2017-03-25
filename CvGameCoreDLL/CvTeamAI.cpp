@@ -1626,12 +1626,17 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
 		return NO_DENIAL;
 	}
 
+	// Absinthe: won't deny tech trade with worst enemy with good enough relations
+	eAttitude = AI_getAttitude(eTeam);
 	if (AI_getWorstEnemy() == eTeam)
 	{
-		return DENIAL_WORST_ENEMY;
+		if (eAttitude < ATTITUDE_PLEASED)
+		{
+			return DENIAL_WORST_ENEMY;
+		}
 	}
+	// Absinthe: end
 
-	eAttitude = AI_getAttitude(eTeam);
 	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
 	// for (iI = 0; iI < MAX_PLAYERS; iI++)
 	// {
@@ -1849,12 +1854,17 @@ DenialTypes CvTeamAI::AI_mapTrade(TeamTypes eTeam) const
 		return NO_DENIAL;
 	}
 
+	// Absinthe: won't deny map trade with worst enemy with good enough relations
+	eAttitude = AI_getAttitude(eTeam);
 	if (AI_getWorstEnemy() == eTeam)
 	{
-		return DENIAL_WORST_ENEMY;
+		if (eAttitude < ATTITUDE_PLEASED)
+		{
+			return DENIAL_WORST_ENEMY;
+		}
 	}
+	// Absinthe: end
 
-	eAttitude = AI_getAttitude(eTeam);
 	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
 	// for (iI = 0; iI < MAX_PLAYERS; iI++)
 	// {
@@ -2094,10 +2104,14 @@ DenialTypes CvTeamAI::AI_surrenderTrade(TeamTypes eTeam, int iPowerMultiplier) c
 				iMasterPower /= 2;
 			}
 		}
+	// Absinthe: why do we want to increase general AI willingness for vassalization? I see no point in this for RFCE, if anything, I would decrease it
+	/*
 	//Rhye - start
 	iMasterPower *= 3;
 	iMasterPower /= 2;
 	//Rhye - end
+	*/
+	// Absinthe: end
 
 
 		for (int iLoopTeam = 0; iLoopTeam < MAX_CIV_TEAMS; iLoopTeam++)
@@ -2300,7 +2314,7 @@ DenialTypes CvTeamAI::AI_surrenderTrade(TeamTypes eTeam, int iPowerMultiplier) c
 	}
 
 	if (mastersVassals >= 4 && bStrongest)
-		return DENIAL_POWER_YOU;	
+		return DENIAL_POWER_YOU;
 	//Rhye - end
 	
 	return NO_DENIAL;
@@ -2730,12 +2744,17 @@ DenialTypes CvTeamAI::AI_openBordersTrade(TeamTypes eTeam) const
 		return DENIAL_RECENT_CANCEL;
 	}
 
+	// Absinthe: won't deny open borders with worst enemy with good enough relations
+	eAttitude = AI_getAttitude(eTeam);
 	if (AI_getWorstEnemy() == eTeam)
 	{
-		return DENIAL_WORST_ENEMY;
+		if (eAttitude < ATTITUDE_PLEASED)
+		{
+			return DENIAL_WORST_ENEMY;
+		}
 	}
+	// Absinthe: end
 
-	eAttitude = AI_getAttitude(eTeam);
 	// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.29.09
 	// for (iI = 0; iI < MAX_PLAYERS; iI++)
 	// {
@@ -2847,7 +2866,7 @@ DenialTypes CvTeamAI::AI_defensivePactTrade(TeamTypes eTeam) const
 
 	// 3MiroAI: Alliances
 	//Rhye - start
-	//no world alliances until industrial era (renesance in this case)
+	//no world alliances until industrial era (renaissance in this case)
 	if (!AI_hasCitiesInPrimaryArea(eTeam) && AI_calculateAdjacentLandPlots(eTeam) == 0 && GET_PLAYER((PlayerTypes)eTeam).getCurrentEra() <= 3)
 	{
 		return DENIAL_TOO_FAR;
@@ -3120,7 +3139,23 @@ DenialTypes CvTeamAI::AI_permanentAllianceTrade(TeamTypes eTeam) const
 
 TeamTypes CvTeamAI::AI_getWorstEnemy() const
 {
-	return m_eWorstEnemy;
+	// Absinthe: safety check, AI should never consider a civ "worst enemy" with pleased or friendly relations
+	if (m_eWorstEnemy == NO_TEAM)
+	{
+		return NO_TEAM;
+	}
+	else
+	{
+		if (AI_getAttitude(m_eWorstEnemy) < ATTITUDE_PLEASED)
+		{
+			return m_eWorstEnemy;
+		}
+		else
+		{
+			return NO_TEAM;
+		}
+	}
+	// Absinthe: end
 }
 
 

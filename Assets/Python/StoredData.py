@@ -61,6 +61,8 @@ class StoredData:
 				# Absinthe: Persecution
 				'lPersecutionData': [-1, -1, -1],
 				'lPersecutionReligions': [],
+				# Absinthe: Free religious revolution
+				'lReligionChoices': [],
 
 				# AIWars
 				'lAttackingCivsArray': [0, 0, -1, -1, 0, 0, 0, -1, 0, -1, -1, -1, -1, -1, 0, 0, 0, -1, -1, 0, 0, -1, 0, 0, -1, -1, -1, 0, 0], #major players only

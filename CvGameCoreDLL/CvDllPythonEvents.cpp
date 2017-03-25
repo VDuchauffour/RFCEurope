@@ -1105,6 +1105,45 @@ void CvDllPythonEvents::reportSetPlayerAlive( PlayerTypes ePlayerID, bool bNewVa
 	}
 }
 
+// Absinthe: Python Event for civic changes
+void CvDllPythonEvents::reportPlayerChangeAllCivics(PlayerTypes ePlayerID, CivicTypes* paeNewCivics, CivicTypes* paeOldCivics)
+{
+	if (preEvent())
+	{
+		CyArgsList eventData;
+		eventData.add("playerChangeAllCivics");			// add key to lookup python handler fxn
+
+		eventData.add((int)ePlayerID);
+		int iI;
+		for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+		{
+			eventData.add((int)paeNewCivics[iI]);
+		}
+		for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+		{
+			eventData.add((int)paeOldCivics[iI]);
+		}
+
+		postEvent(eventData);
+	}
+}
+
+void CvDllPythonEvents::reportPlayerChangeSingleCivic(PlayerTypes ePlayerID, CivicTypes eNewCivic, CivicTypes eOldCivic)
+{
+	if (preEvent())
+	{
+		CyArgsList eventData;
+		eventData.add("playerChangeSingleCivic");			// add key to lookup python handler fxn
+
+		eventData.add((int)ePlayerID);
+		eventData.add((int)eNewCivic);
+		eventData.add((int)eOldCivic);
+
+		postEvent(eventData);
+	}
+}
+// Absinthe: end
+
 void CvDllPythonEvents::reportPlayerChangeStateReligion(PlayerTypes ePlayerID, ReligionTypes eNewReligion, ReligionTypes eOldReligion)
 {
 	if (preEvent())
@@ -1119,7 +1158,6 @@ void CvDllPythonEvents::reportPlayerChangeStateReligion(PlayerTypes ePlayerID, R
 		postEvent(eventData);
 	}
 }
-
 
 void CvDllPythonEvents::reportPlayerGoldTrade(PlayerTypes eFromPlayer, PlayerTypes eToPlayer, int iAmount)
 {

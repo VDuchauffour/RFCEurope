@@ -659,7 +659,7 @@ protected:
 	// Absinthe: start
 	short m_iProvinceID;
 	short m_iLakeNameID;
-	std::string m_aszCityNameMap[30]; // NUM_MAJOR_PLAYERS + 1: the last one is the (potential) default city name map
+	std::string m_aszCityNameMap[MAX_CIV_PLAYERS - 3]; // NUM_MAJOR_PLAYERS + 1: the last one is the (potential) default city name map
 	char* m_szCityNameDefault;
 	// Absinthe: end
 

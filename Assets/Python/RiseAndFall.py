@@ -1217,12 +1217,8 @@ class RiseAndFall:
 			if (not gc.getPlayer(iDeadCiv).isAlive() and iGameTurn > con.tBirth[iDeadCiv] + 25 and iGameTurn > utils.getLastTurnAlive(iDeadCiv) + 10): #Sedna17: Allow re-spawns only 10 turns after death and 25 turns after birth
 				pDeadCiv = gc.getPlayer(iDeadCiv)
 				teamDeadCiv = gc.getTeam(pDeadCiv.getTeam())
-				#3Miro: in RFC Civs spawn according to Normal Areas, but here we want Core areas. Otherwise Normal Areas should not overlap and that is Hard.
-				#Sedna17: Normal Areas no longer overlap, so we can respawn here.
 				tTopLeft = tNormalAreasTL[iDeadCiv]
 				tBottomRight = tNormalAreasBR[iDeadCiv]
-				#tTopLeft = tCoreAreasTL[iDeadCiv]
-				#tBottomRight = tCoreAreasBR[iDeadCiv]
 
 				for x in range(tTopLeft[0], tBottomRight[0]+1):
 					for y in range(tTopLeft[1], tBottomRight[1]+1):
@@ -1385,6 +1381,8 @@ class RiseAndFall:
 					gc.getPlayer(iOtherCiv).processCivNames()
 					gc.getPlayer(iDeadCiv).processCivNames()
 
+		# Absinthe: no vassalization in the first 10 turns after resurrection?
+
 		iNewUnits = 2
 		if (self.getLatestRebellionTurn(iDeadCiv) > 0):
 			iNewUnits = 4
@@ -1437,8 +1435,9 @@ class RiseAndFall:
 					if (rndNum >= tAIStopBirthThreshold[iOwner] and bOwnerHumanVassal == False and bAlreadyVassal == False): #if bOwnerHumanVassal is true, it will skip to the 3rd condition, as bOwnerVassal is true as well
 						teamOwner.declareWar(iDeadCiv, False, -1)
 						bAtWar = True
-					# Absinthe: de we really want to auto-vassal them on respawn?
-					elif (rndNum <= 60 - (tAIStopBirthThreshold[iOwner]/2)):
+					# Absinthe: do we really want to auto-vassal them on respawn? why?
+					#			set it to 0 from 60 temporarily (so it's never true), as a quick fix until the mechanics are revised
+					elif (rndNum <= 0 - (tAIStopBirthThreshold[iOwner]/2)):
 						teamOwner.makePeace(iDeadCiv)
 						if (bAlreadyVassal == False and bHuman == False and bOwnerVassal == False and bAtWar == False): #bHuman == False cos otherwise human player can be deceived to declare war without knowing the new master
 							if (iOwner < iNumActivePlayers):
@@ -1452,8 +1451,9 @@ class RiseAndFall:
 						if (teamOwner.isHasTech(t)):
 							teamDeadCiv.setHasTech(t, True, iDeadCiv, False, False)
 
+		# all techs added from minor civs
 		for t in range(xml.iNumTechs):
-			if (teamBarbarian.isHasTech(t) or teamIndependent.isHasTech(t) or teamIndependent2.isHasTech(t) or teamIndependent3.isHasTech(t) or teamIndependent4.isHasTech(t)): #remove indep in vanilla
+			if (teamBarbarian.isHasTech(t) or teamIndependent.isHasTech(t) or teamIndependent2.isHasTech(t) or teamIndependent3.isHasTech(t) or teamIndependent4.isHasTech(t)):
 				teamDeadCiv.setHasTech(t, True, iDeadCiv, False, False)
 
 		self.moveBackCapital(iDeadCiv)
@@ -1599,7 +1599,7 @@ class RiseAndFall:
 			tBroaderBottomRight = tBroaderAreasBR[iCiv]
 			if (self.getFlipsDelay(iCiv) == 0): #city hasn't already been founded)
 
-			# Absinthe: this probably fixes a couple instances of the -1 turn autoplay bug - code adapted from SoI
+				# Absinthe: this probably fixes a couple instances of the -1 turn autoplay bug - code adapted from SoI
 				if (iCiv == iHuman): 
 					killPlot = gc.getMap().plot(tCapital[0], tCapital[1])
 					iNumUnitsInAPlot = killPlot.getNumUnits()
@@ -1639,6 +1639,7 @@ class RiseAndFall:
 							for iLoopCiv in range(iNumTotalPlayersB): #Barbarians as well
 								if (iCiv != iLoopCiv):
 									utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iLoopCiv, True, False)
+									utils.flipUnitsInCoreExceptions(iCiv, iLoopCiv, True, False)
 							if (pCurrent.isCity()):
 								pCurrent.eraseAIDevelopment() #new function, similar to erase but won't delete rivers, resources and features
 							for iLoopCiv in range(iNumTotalPlayersB): #Barbarians as well
@@ -1723,6 +1724,7 @@ class RiseAndFall:
 					#pCurrent.setOwner(-1)
 					pCurrent.setOwner(iCiv)
 
+		# Absinthe: what's this +-11?
 		for x in range(tCapital[0] - 11, tCapital[0] + 12): # must include the distance from Sogut to the Caspius
 			for y in range(tCapital[1] - 11, tCapital[1] + 12):
 				#print ("units", x, y, gc.getMap().plot(x, y).getNumUnits(), tCapital[0], tCapital[1])
@@ -1800,8 +1802,6 @@ class RiseAndFall:
 				self.assignTechs(iCiv)
 				utils.setPlagueCountdown(iCiv, -con.iImmunity)
 				utils.clearPlague(iCiv)
-				#gc.getPlayer(iCiv).changeAnarchyTurns(1)
-				#gc.getPlayer(iCiv).setCivics(2, 11)
 				self.setFlipsDelay(iCiv, iFlipsDelay) #save
 
 
@@ -1809,8 +1809,10 @@ class RiseAndFall:
 			iNumAICitiesConverted, iNumHumanCitiesToConvert = self.convertSurroundingCities(iCiv, tTopLeft, tBottomRight)
 			self.convertSurroundingPlotCulture(iCiv, tTopLeft, tBottomRight)
 			utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iBarbarian, False, True) #remaining barbs in the region now belong to the new civ
+			utils.flipUnitsInCoreExceptions(iCiv, iBarbarian, False, True) #remaining barbs in the region now belong to the new civ
 			for i in range( con.iIndepStart, con.iIndepEnd + 1 ):
 				utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, i, False, False) #remaining independents in the region now belong to the new civ
+				utils.flipUnitsInCoreExceptions(iCiv, i, False, False) #remaining independents in the region now belong to the new civ
 			print ("utils.flipUnitsInArea()")
 			#cover plots revealed by the catapult
 			plotZero = gc.getMap().plot( 32, 0 ) #sync with rfcebalance module
@@ -1835,16 +1837,29 @@ class RiseAndFall:
 
 	def birthInForeignBorders(self, iCiv, tTopLeft, tBottomRight, tBroaderTopLeft, tBroaderBottomRight, tCapital):
 
-		print( " 3Miro: Birth in Foreign Land: ",iCiv,tTopLeft, tBottomRight, tBroaderTopLeft, tBroaderBottomRight, tCapital)
+		print( " 3Miro: Birth in Foreign Land: ",iCiv, tTopLeft, tBottomRight, tBroaderTopLeft, tBroaderBottomRight, tCapital)
 		iNumAICitiesConverted, iNumHumanCitiesToConvert = self.convertSurroundingCities(iCiv, tTopLeft, tBottomRight)
 		self.convertSurroundingPlotCulture(iCiv, tTopLeft, tBottomRight)
+
+		print ("iNumAICitiesConverted", iNumAICitiesConverted)
+		print ("iNumHumanCitiesToConvert", iNumHumanCitiesToConvert)
 
 		#now starting units must be placed
 		if (iNumAICitiesConverted > 0):
 			#utils.debugTextPopup( 'iConverted OK for placing units' )
+			# Absinthe: there is an issue that core area are not calculated correctly for flips, as the additional tiles in tExceptions are not checked here
+			#			so if all flipped cities are outside of the core area (they are in the "exceptions"), the civ will start without it's starting units and techs
+			print ("tTopLeft, tBottomRight", tTopLeft, tBottomRight)
 			dummy1, plotList = utils.squareSearch( tTopLeft, tBottomRight, utils.ownedCityPlots, iCiv )
+			print ("plotList", plotList)
+			# Absinthe: add the exception plots
+			for tPlot in con.tExceptions[iCiv]:
+				pCurrent = gc.getMap().plot( tPlot[0], tPlot[1] )
+				if (pCurrent.getOwner() == iCiv ):
+					if (pCurrent.isCity()):
+						plotList.append(tPlot)
 			rndNum = gc.getGame().getSorenRandNum(len(plotList), 'searching any city just flipped')
-			#print ("rndNum for starting units", rndNum)
+			print ("plotList", plotList)
 			if (len(plotList)):
 				result = plotList[rndNum]
 				if (result):
@@ -1855,11 +1870,24 @@ class RiseAndFall:
 					utils.clearPlague(iCiv)
 					#gc.getPlayer(iCiv).changeAnarchyTurns(1)
 			utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iBarbarian, False, True) #remaining barbs in the region now belong to the new civ
+			utils.flipUnitsInCoreExceptions(iCiv, iBarbarian, False, True) #remaining barbs in the region now belong to the new civ
 			for i in range( con.iIndepStart, con.iIndepEnd + 1 ):
 				utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, i, False, False) #remaining barbs in the region now belong to the new civ
+				utils.flipUnitsInCoreExceptions(iCiv, i, False, False) #remaining barbs in the region now belong to the new civ
 
 		else: #search another place
+			# Absinthe: there is an issue that core area are not calculated correctly for flips, as the additional tiles in tExceptions are not checked here
+			#			so if all flipped cities are outside of the core area (they are in the "exceptions"), the civ will start without it's starting units and techs
 			dummy, plotList = utils.squareSearch( tTopLeft, tBottomRight, utils.goodPlots, [] )
+			# Absinthe: add the exception plots
+			for tPlot in con.tExceptions[iCiv]:
+				pCurrent = gc.getMap().plot( tPlot[0], tPlot[1] )
+				if ( pCurrent.isHills() or pCurrent.isFlatlands() ):
+					if ( not pCurrent.isImpassable()):
+						if ( not pCurrent.isUnit() ):
+							if (pCurrent.getTerrainType() != xml.iTerrainDesert) and (pCurrent.getTerrainType() != xml.iTerrainTundra) and (pCurrent.getFeatureType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
+								if (pCurrent.countTotalCulture() == 0 ):
+									plotList.append(tPlot)
 			rndNum = gc.getGame().getSorenRandNum(len(plotList), 'searching another free plot')
 			if (len(plotList)):
 				result = plotList[rndNum]
@@ -1882,8 +1910,10 @@ class RiseAndFall:
 						utils.setPlagueCountdown(iCiv, -con.iImmunity)
 						utils.clearPlague(iCiv)
 			utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iBarbarian, True, True) #remaining barbs in the region now belong to the new civ
+			utils.flipUnitsInCoreExceptions(iCiv, iBarbarian, True, True) #remaining barbs in the region now belong to the new civ
 			for i in range( con.iIndepStart, con.iIndepEnd + 1 ):
 				utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, i, True, False) #remaining barbs in the region now belong to the new civ
+				utils.flipUnitsInCoreExceptions(iCiv, i, True, False) #remaining barbs in the region now belong to the new civ
 
 		if (iNumHumanCitiesToConvert> 0):
 			self.flipPopup(iCiv, tTopLeft, tBottomRight)

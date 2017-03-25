@@ -268,7 +268,7 @@ class Companies:
 				iValue += 3
 		if iCompany == iHansa:
 			if iProvince == xml.iP_Holstein:
-				iValue += 4
+				iValue += 5
 			if iProvince == xml.iP_Brandenburg or iProvince == xml.iP_Saxony:
 				iValue += 2
 

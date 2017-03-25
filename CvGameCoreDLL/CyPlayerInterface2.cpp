@@ -78,7 +78,7 @@ void CyPlayerPythonInterface2(python::class_<CyPlayer>& x)
 		.def("getMaster", &CyPlayer::getMaster, "int ( )")
 		.def("countVassals", &CyPlayer::countVassals, "int ( )")
 
-		// Absinthe: DCN update
+		// Absinthe: DCN Dynamic Civ Names
 		.def("processCivNames", &CyPlayer::processCivNames, "void ( )")
 
 		// 3MiroProvinces: extra province functions

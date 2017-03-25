@@ -12,6 +12,7 @@ from StoredData import sd
 
 # globals
 gc = CyGlobalContext()
+localText = CyTranslator() #Absinthe
 PyPlayer = PyHelpers.PyPlayer
 utils = RFCUtils.RFCUtils()
 
@@ -243,7 +244,12 @@ class Religions:
 
 		# Absinthe: Encouraging desired religion spread in a couple areas (mostly for Islam and Orthodoxy)
 		# Maghreb and Cordoba:
-		if (iGameTurn > xml.i700AD and iGameTurn < xml.i1200AD and iGameTurn % 3 == 2):
+		if (iGameTurn > xml.i700AD and iGameTurn < xml.i800AD and iGameTurn % 2 == 1):
+			if ( gc.getGame().getSorenRandNum(100, 'Spread chance') < 28 ):
+				tCity = self.selectRandomCityAreaNoReligion(tMaghrebAndalusia)
+				if (tCity != 0):
+					self.spreadReligion(tCity,xml.iIslam)
+		if (iGameTurn > xml.i800AD and iGameTurn < xml.i1200AD and iGameTurn % 3 == 2):
 			if ( gc.getGame().getSorenRandNum(100, 'Spread chance') < 22 ):
 				tCity = self.selectRandomCityAreaNoReligion(tMaghrebAndalusia)
 				if (tCity != 0):
@@ -323,7 +329,7 @@ class Religions:
 						iGift = 20
 					else:
 						iGift = 50
-					iRandomNum = gc.getGame().getSorenRandNum(iCatholicFaith, 'random Pope gold gift')
+					iRandomNum = gc.getGame().getSorenRandNum(iCatholicFaith, 'Pope random gold gift chance')
 					for i in range( iNumPlayers - 1 ):
 						pPlayer = gc.getPlayer( i )
 						if ( pPlayer.getStateReligion() == xml.iCatholicism and teamPope.isOpenBorders( pPlayer.getTeam() ) ):
@@ -333,7 +339,7 @@ class Religions:
 								pPope.changeGold( -iGift )
 								pPlayer.changeGold( iGift )
 								if ( utils.getHumanID() == i ):
-									sText = CyTranslator().getText("TXT_KEY_FAITH_GIFT", ())
+									sText = CyTranslator().getText("TXT_KEY_FAITH_GOLD_GIFT", ())
 									CyInterface().addMessage(i, False, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iBlue), -1, -1, True, True)
 								break
 		# Free religious building
@@ -361,7 +367,7 @@ class Religions:
 							iCatholicFaith += 30
 				if ( iCatholicFaith > 0 ):
 					iCatholicFaith += iCatholicFaith / 5 + 1 # So there is around 20% chance for not giving anything
-					iRandomNum = gc.getGame().getSorenRandNum(iCatholicFaith, 'random Pope Building Build')
+					iRandomNum = gc.getGame().getSorenRandNum(iCatholicFaith, 'Pope random building chance')
 					for i in range( iNumPlayers - 1 ):
 						pPlayer = gc.getPlayer( i )
 						if ( pPlayer.getStateReligion() == xml.iCatholicism and teamPope.isOpenBorders( pPlayer.getTeam() ) ):
@@ -381,18 +387,68 @@ class Religions:
 										iCatholicBuilding = xml.iCatholicMonastery
 								self.buildInRandomCity( i, iCatholicBuilding, xml.iCatholicism )
 								break
+		# Free technology
+		if ( iGameTurn > xml.i800AD ): # The crowning of Charlemagne
+			if ( iGameTurn % 9 == 4 ): # checked every 9th turn - won't change it as the game progresses, as the number of available techs will already change with the number of Catholic civs
+				pPope = gc.getPlayer( con.iPope )
+				teamPope = gc.getTeam( pPope.getTeam() )
+				iCatholicFaith = 0
+				for i in range( iNumPlayers - 1 ): # The Pope cannot add any gifts to himself
+					pPlayer = gc.getPlayer( i )
+					if ( pPlayer.getStateReligion() == xml.iCatholicism and teamPope.isOpenBorders( pPlayer.getTeam() ) ):
+						# Faith points are the deciding factor for techs
+						iCatholicFaith += pPlayer.getFaith()
+						iCatholicFaith += 2 * max( 0, pPope.AI_getAttitude( i ) )
+				if ( iCatholicFaith > 0 ):
+					iRandomNum = gc.getGame().getSorenRandNum(iCatholicFaith, 'Pope choose random civ')
+					for i in range( iNumPlayers - 1 ):
+						pPlayer = gc.getPlayer( i )
+						if ( pPlayer.getStateReligion() == xml.iCatholicism and teamPope.isOpenBorders( pPlayer.getTeam() ) ):
+							iRandomNum -= pPlayer.getFaith()
+							iRandomNum -= 2 * max( 0, pPope.AI_getAttitude( i ) )
+							if ( iRandomNum <= 0 ): # The given civ is chosen
+								# run through all techs, check if there is at least one which is known by the Pope but unknown to the chosen civ
+								teamPlayer = gc.getTeam(pPlayer.getTeam())
+								for iTech in range(xml.iNumTechs):
+									if (teamPope.isHasTech(iTech)):
+										if not (teamPlayer.isHasTech(iTech)):
+											# chance for actually giving the tech, based on faith points
+											iRandomTechNum = gc.getGame().getSorenRandNum(60, 'Pope random tech chance')
+											if (pPlayer.getFaith() + 20 > iRandomTechNum): # +20, to have a real chance with low faith points as well
+												teamPlayer.setHasTech( iTech, True, i, False, True )
+												print ("Pope gave tech: civ, tech", i, iTech)
+												if ( utils.getHumanID() == i ):
+													sText = CyTranslator().getText("TXT_KEY_FAITH_TECH_GIFT", ())
+													CyInterface().addMessage(i, True, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iBlue), -1, -1, True, True)
+												# we try it for all possible techs, unless it has already succeeded for an earlier one
+												break
+								break
 
-		##Reformation code
+		# Absinthe: Pope gets all techs known by at least 3 catholic civs
+		if ( iGameTurn % 6 == 3 ):
+			pPope = gc.getPlayer( con.iPope )
+			teamPope = gc.getTeam( pPope.getTeam() )
+			for iTech in range(xml.iNumTechs):
+				iTechCounter = 0
+				if not (teamPope.isHasTech(iTech)):
+					for i in range( iNumPlayers - 1 ): # don't check for the Pope himself
+						pPlayer = gc.getPlayer( i )
+						teamPlayer = gc.getTeam(pPlayer.getTeam())
+						if ( pPlayer.getStateReligion() == xml.iCatholicism):
+							if (teamPlayer.isHasTech(iTech)):
+								iTechCounter += 1
+					if iTechCounter >= 3:
+						teamPope.setHasTech( iTech, True, i, False, True )
+						print ("Pope got tech", iTech)
+
+		# Absinthe: Reformation
 		if ( self.getCounterReformationActive() ):
 			self.doCounterReformation()
 		if (self.getReformationActive() ):
-			#print( " Reformation #1 " )
 			self.reformationArrayChoice()
 			if (self.getReformationActive() ):
-				#print( " Reformation #2 " )
 				self.reformationArrayChoice()
 				if (self.getReformationActive() ):
-					#print( " Reformation #3 " )
 					self.reformationArrayChoice()
 
 
@@ -575,6 +631,93 @@ class Religions:
 			if ( utils.getHumanID() == iPlayer ):
 				sText = CyTranslator().getText("TXT_KEY_FAITH_BUILDING1", ()) +" " + gc.getBuildingInfo( iBuilding ).getDescription() + " " + CyTranslator().getText("TXT_KEY_FAITH_BUILDING2", ()) + " " + city.getName()
 				CyInterface().addMessage(iPlayer, False, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iBlue), -1, -1, True, True)
+
+	# Absinthe: free religious revolution
+	def onPlayerChangeAllCivics(self, iPlayer, lNewCivics, lOldCivics):
+		# free religion change when switching away from Paganism
+		if ( utils.getHumanID() == iPlayer ):
+			if lOldCivics[4] == xml.iCivicPaganism:
+				if lNewCivics[4] == xml.iCivicStateReligion or lNewCivics[4] == xml.iCivicTheocracy or lNewCivics[4] == xml.iCivicOrganizedReligion:
+					# check the available religions
+					religionList = []
+					apCityList = PyPlayer(iPlayer).getCityList()
+					for city in apCityList:
+						for iReligion in range(gc.getNumReligionInfos()):
+							if iReligion not in religionList:
+								pCity = city.GetCy()
+								if pCity.isHasReligion(iReligion):
+									religionList.append(iReligion)
+					print ("religionList", religionList)
+					self.setFreeRevolutionReligions(religionList)
+					# no popup if no available religions
+					if len(religionList) != 0:
+						self.showFreeRevolutionPopup(iPlayer, religionList)
+		elif iPlayer < (con.iNumPlayers - 1):
+			if lOldCivics[4] == xml.iCivicPaganism:
+				if lNewCivics[4] == xml.iCivicStateReligion or lNewCivics[4] == xml.iCivicTheocracy or lNewCivics[4] == xml.iCivicOrganizedReligion:
+					iBestReligionPoint = 0
+					iBestReligion = xml.iCatholicism
+					apCityList = PyPlayer(iPlayer).getCityList()
+					# loop through all religions
+					for iReligion in range(gc.getNumReligionInfos()):
+						iReligionPoint = 0
+						# check cities for religions and holy cities
+						for city in apCityList:
+							pCity = city.GetCy()
+							if pCity.isHasReligion(iReligion):
+								iReligionPoint += 10
+							if pCity.isHolyCityByType(iReligion):
+								iReligionPoint += 1000
+						# historical flavor based on religion spread factor
+						print ("tReligionSpreadFactor", iPlayer, iReligion, con.tReligionSpreadFactor[iPlayer][iReligion])
+						if con.tReligionSpreadFactor[iPlayer][iReligion] < 60:
+							iReligionPoint = (iReligionPoint * 5) / 10
+						elif con.tReligionSpreadFactor[iPlayer][iReligion] < 100:
+							iReligionPoint = (iReligionPoint * 8) / 10
+						elif con.tReligionSpreadFactor[iPlayer][iReligion] > 200:
+							iReligionPoint = (iReligionPoint * 12) / 10
+						# update if better
+						if iReligionPoint > iBestReligionPoint:
+							iBestReligionPoint = iReligionPoint
+							iBestReligion = iReligion
+					# convert to the best religion
+					pPlayer = gc.getPlayer(iPlayer)
+					pPlayer.convertForFree(iBestReligion)
+					print ("AI free religion change:", iPlayer, iBestReligionPoint, iBestReligion)
+
+	def getFreeRevolutionReligions(self):
+		return sd.scriptDict['lReligionChoices']
+
+	def setFreeRevolutionReligions(self, val):
+		sd.scriptDict['lReligionChoices'] = val
+
+	# Absinthe: free religion change popup
+	def showFreeRevolutionPopup(self, iPlayer, religionList):
+		"""Possibility for the human player to select a religion anarchy-free."""
+		popup = Popup.PyPopup(7629, EventContextTypes.EVENTCONTEXT_ALL)
+		popup.setHeaderString("Religious Revolution")
+		popup.setBodyString("Choose the religion you want to adopt as your State Religion:")
+		for iReligion in religionList:
+			strIcon = gc.getReligionInfo(iReligion).getType()
+			strIcon = "[%s]" %(strIcon.replace("RELIGION_", "ICON_"))
+			strButtonText = "%s %s" %(localText.getText(strIcon, ()), gc.getReligionInfo(iReligion).getText())
+			popup.addButton(strButtonText)
+		popup.addButton("We don't want to adopt a State Religion right now")
+		popup.launch(False)
+
+	# Absinthe: event of the free religion change popup
+	def eventApply7629(self, playerID, popupReturn):
+		"""Free religious revolution."""
+		iDecision = popupReturn.getButtonClicked()
+		religionList = self.getFreeRevolutionReligions()
+		# the last option is the no change option
+		if iDecision == len(religionList):
+			print ("playerID didn't choose a free religion:", playerID)
+		# otherwise convert to the selected religion
+		else:
+			pPlayer = gc.getPlayer(playerID)
+			pPlayer.convertForFree(religionList[popupReturn.getButtonClicked()])
+			print ("playerID has chosen a free religion:", playerID)
 
 ##REFORMATION
 
@@ -873,7 +1016,8 @@ class Religions:
 	def doCounterReformationNo( self, iPlayer ):
 		pPlayer = gc.getPlayer( iPlayer )
 		pPlayer.changeStabilityBase( con.iCathegoryCities, max( 1, pPlayer.getNumCities() / 3 ) )
-	### End Reformation ###
+
+### End Reformation ###
 
 	def resettleRefugies( self ):
 		intolerance = [-1]*con.iNumTotalPlayersB

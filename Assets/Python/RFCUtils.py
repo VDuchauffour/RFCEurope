@@ -522,10 +522,9 @@ class RFCUtils:
 							unit.kill(False, con.iBarbarian)
 
 	#RiseAndFall
-	# 3Miro: why create units at (0, 67), have seen it in other places.
-	# Multiple civs may have units in those tiles, still maybe better to check in a unit can be created in the tile before it is created
+	# Absinthe: create units at (28, 0), in the unreachable desert area, near the autoplay plot
 	def flipUnitsInArea(self, tTopLeft, tBottomRight, iNewOwner, iOldOwner, bSkipPlotCity, bKillSettlers):
-		"""Deletes, recreates units in 0,67 and moves them to the previous tile.
+		"""Deletes, recreates units in 28, 0 and moves them to the previous tile.
 		If there are units belonging to others in that plot and the new owner is barbarian, the units aren't recreated.
 		Settlers aren't created.
 		If bSkipPlotCity is True, units in a city won't flip. This is to avoid converting barbarian units that would capture a city before the flip delay"""
@@ -581,6 +580,62 @@ class RFCUtils:
 								gc.getMap().plot(27, 1).setRevealed(iCiv, False, True, -1);
 								gc.getMap().plot(28, 1).setRevealed(iCiv, False, True, -1);
 								gc.getMap().plot(29, 1).setRevealed(iCiv, False, True, -1);
+
+
+	#RiseAndFall
+	# Absinthe: similar to the function above, but flips on the extra tiles of the core area (tExceptions)
+	def flipUnitsInCoreExceptions(self, iNewOwner, iOldOwner, bSkipPlotCity, bKillSettlers):
+		"""Deletes, recreates units in 28, 0 and moves them to the previous tile.
+		If there are units belonging to others in that plot and the new owner is barbarian, the units aren't recreated.
+		Settlers aren't created.
+		If bSkipPlotCity is True, units in a city won't flip. This is to avoid converting barbarian units that would capture a city before the flip delay"""
+		print ("con.tExceptions[iNewOwner], iOldOwner:", con.tExceptions[iNewOwner], iOldOwner)
+		for tPlot in con.tExceptions[iNewOwner]:
+			#print ("tExceptions tPlot", tPlot)
+			x = tPlot[0]
+			y = tPlot[1]
+			killPlot = gc.getMap().plot(x,y)
+			iNumUnitsInAPlot = killPlot.getNumUnits()
+			if (iNumUnitsInAPlot):
+				bRevealedZero = False
+				if (gc.getMap().plot(28, 0).isRevealed(iNewOwner, False)):
+					bRevealedZero = True
+				#print ("killplot", x, y)
+				if (bSkipPlotCity == True) and (killPlot.isCity()):
+					#print (killPlot.isCity())
+					#print 'do nothing'
+					pass
+				else:
+					j = 0
+					for i in range(iNumUnitsInAPlot):
+						unit = killPlot.getUnit(j)
+						#print ("killplot", x, y, unit.getUnitType(), unit.getOwner(), "j", j)
+						if (unit.getOwner() == iOldOwner):
+							unit.kill(False, con.iBarbarian)
+							if (bKillSettlers):
+								if ((unit.getUnitType() > iSettler)):
+									self.makeUnit(unit.getUnitType(), iNewOwner, [28, 0], 1)
+							else:
+								if ((unit.getUnitType() >= iSettler)): #skip animals
+									self.makeUnit(unit.getUnitType(), iNewOwner, [28, 0], 1)
+						else:
+							j += 1
+					tempPlot = gc.getMap().plot(28, 0)
+					#moves new units back in their place
+					if (tempPlot.getNumUnits() != 0):
+						iNumUnitsInAPlot = tempPlot.getNumUnits()
+						for i in range(iNumUnitsInAPlot):
+							unit = tempPlot.getUnit(0)
+							#print("  3Miro 1 Unit Type and Owner plot ",unit.getID(),unit.getUnitType(),"  ",unit.getOwner(),x,y )
+							unit.setXYOld(x,y)
+						iCiv = iNewOwner
+						if (bRevealedZero == False):
+							gc.getMap().plot(27, 0).setRevealed(iCiv, False, True, -1);
+							gc.getMap().plot(28, 0).setRevealed(iCiv, False, True, -1);
+							gc.getMap().plot(29, 0).setRevealed(iCiv, False, True, -1);
+							gc.getMap().plot(27, 1).setRevealed(iCiv, False, True, -1);
+							gc.getMap().plot(28, 1).setRevealed(iCiv, False, True, -1);
+							gc.getMap().plot(29, 1).setRevealed(iCiv, False, True, -1);
 
 
 	#RiseAndFall
@@ -857,8 +912,6 @@ class RFCUtils:
 			self.flipCity(tCoords, 0, 0, iNewCiv, [iCiv]) #by trade because by conquest may raze the city
 			#pyCity.GetCy().setHasRealBuilding(con.iPlague, False) #buggy
 		self.flipUnitsInArea([0,0], [con.iMapMaxX,con.iMapMaxY], iNewCiv, iCiv, False, True)
-		#self.flipUnitsInArea([0,0], [123,67], iNewCiv, iCiv, False, True)
-		#self.killUnitsInArea([0,0], [123,67], iNewCiv, iCiv) ?
 
 		self.resetUHV(iCiv)
 		self.setLastTurnAlive(iCiv, gc.getGame().getGameTurn())

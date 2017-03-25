@@ -1233,7 +1233,7 @@ tReligionSpreadFactor = ( # PROT, ISL, CATH, ORTH, JUD
 (150,  20, 250,  70,  10), #France
 ( 20, 350,  50,  10,  10), #Arabia
 ( 80,  50,  80, 400,  10), #Bulgaria
-( 50, 250, 100,  20,  10), #Cordoba
+( 50, 250,  80,  20,  10), #Cordoba
 ( 90,  50, 200,  30,  10), #Venezia
 (150,  20, 150,  70,  10), #Burgundy
 (450,  20, 250,  20,  10), #Germany
@@ -1246,7 +1246,7 @@ tReligionSpreadFactor = ( # PROT, ISL, CATH, ORTH, JUD
 (450,  20, 100,  20,  10), #Scotland
 (200, 100, 400, 200,  10), #Poland
 (190,  50, 250,  30,  10), #Genoa
-( 50, 250, 100,  20,  10), #Morocco
+( 50, 250,  70,  20,  10), #Morocco
 (450,  20, 100,  20,  10), #England
 (200,  80, 250,  20,  10), #Portugal
 (150,  80, 250,  20,  10), #Aragon

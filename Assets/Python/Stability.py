@@ -111,6 +111,7 @@ class Stability:
 				if (con.tStabilityBonusAI[iPlayer] != 0):
 					print ("AI bonus stability:", pPlayer.getCivilizationDescription(0), con.tStabilityBonusAI[iPlayer])
 
+
 	def checkTurn(self, iGameTurn):
 		#print "3Miro NewStability Check Turn"
 		# 3Miro: hidden modifier based upon the group/continent
@@ -619,7 +620,7 @@ class Stability:
 
 
 	def recalcCivicCombos(self, iPlayer):
-		# Note from 3Miro: this is the only place Civics are referenced, yet referring them by number makes this hard to read
+		# Note: this is more or less the only place where Civics are referenced, yet referring them by number makes this hard to read
 		pPlayer = gc.getPlayer(iPlayer)
 		iCivicGovernment = pPlayer.getCivics(0)
 		iCivicLegal = pPlayer.getCivics(1)
@@ -664,21 +665,9 @@ class Stability:
 				else:
 					iCivicCombo += max( -5, 5 - pPlayer.getNumCities() ) #max -5 penalty for the AI
 
-		# TODO: boost for stability depending on the current stability
-		#if (iCivic0 == 2): #Divine Monarchy
-		#	if (self.getStability(iPlayer) > 30):
-		#		iCivicCombo += 5
-		#if (iCivic0 == 3): #Limited Monarchy
-		#	if (self.getStability(iPlayer) < -60):
-		#		iCivicCombo += 5
-		#if (iCivic0 == 4): #Republic
-		#	if (self.getStability(iPlayer) > 50):
-		#		iCivicCombo += 10
-		#szShortName = pPlayer.getCivilizationShortDescription()
-		#print(" Civic Combo for ",iPlayer,"   is ",iCivicCombo)
-		#print("       Civics  ",iCivic0,"  ",iCivic1,"  ",iCivic2,"  ",iCivic3,"  ",iCivic4)
 		pPlayer.setStabilityVary( iCathegoryCivics, iCivicCombo)
-			
+
+
 	def getCivicCombinationStability(self, iCivic0, iCivic1):
 		lCivics = set([iCivic0, iCivic1])
 
@@ -723,6 +712,7 @@ class Stability:
 			if xml.iCivicGuilds in lCivics: return 3
 
 		return 0
+
 
 	def recalcEconomy(self, pPlayer):
 		iPopNum = pPlayer.getTotalPopulation()

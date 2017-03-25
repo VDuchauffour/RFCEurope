@@ -260,6 +260,7 @@ public:
 	bool canChangeReligion() const;																																				// Exposed to Python
 	DllExport bool canConvert(ReligionTypes eReligion) const;																							// Exposed to Python
 	DllExport void convert(ReligionTypes eReligion);																								// Exposed to Python
+	DllExport void convertForFree(ReligionTypes eReligion); // Absinthe: free religious revolution																Exposed to Python
 	bool hasHolyCity(ReligionTypes eReligion) const;																											// Exposed to Python
 	int countHolyCities() const;																																					// Exposed to Python
 	DllExport void foundReligion(ReligionTypes eReligion, ReligionTypes eSlotReligion, bool bAward);																										// Exposed to Python
@@ -1069,7 +1070,7 @@ public:
 	DllExport LeaderHeadTypes getLeader(); //Rhye
 	void resetRelations( PlayerTypes ePlayer ); //Rhye
 	void reinit( PlayerTypes eID, LeaderHeadTypes prevLeader, bool doReset );  //Rhye
-	void processCivNames(); //Rhye - dynamic civ names - not jdog's		// Absinthe: added to python
+	void processCivNames(); // Absinthe: DCN Dynamic Civ Names (also added to python)
 
 	// 3Miro: some additional utils
 	// Absinthe: with the new persecution code added from SoI, these functions are currently unused

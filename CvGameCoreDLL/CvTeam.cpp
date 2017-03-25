@@ -1861,7 +1861,8 @@ void CvTeam::makePeace(TeamTypes eTeam, bool bBumpUnits)
 		}
 
 
-		if (!GET_PLAYER((PlayerTypes)eTeam).isMinorCiv() && !GET_PLAYER((PlayerTypes)getID()).isMinorCiv()) { //Rhye
+		if (!GET_PLAYER((PlayerTypes)eTeam).isMinorCiv() && !GET_PLAYER((PlayerTypes)getID()).isMinorCiv()) //Rhye
+		{
 
 
 /************************************************************************************************/
@@ -1874,43 +1875,45 @@ void CvTeam::makePeace(TeamTypes eTeam, bool bBumpUnits)
 
 /************************************************************************************************/
 
-		// From Sanguo Mod Performance, ie the CAR Mod
+			// From Sanguo Mod Performance, ie the CAR Mod
 
-		// Attitude cache
+			// Attitude cache
 
-		if (GC.getGameINLINE().isFinalInitialized())
-
-		{
-
-			for (int iI = 0; iI < MAX_PLAYERS; iI++)
+			if (GC.getGameINLINE().isFinalInitialized())
 
 			{
 
-				if( GET_PLAYER((PlayerTypes)iI).isAlive() )
+				for (int iI = 0; iI < MAX_PLAYERS; iI++)
 
 				{
 
-					if( GET_PLAYER((PlayerTypes)iI).getTeam() == getID() || GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam
-
-						|| GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isAtWar(getID()) || GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isAtWar(eTeam) )
+					if( GET_PLAYER((PlayerTypes)iI).isAlive() )
 
 					{
 
-						for (int iJ = 0; iJ < MAX_PLAYERS; iJ++)
+						if( GET_PLAYER((PlayerTypes)iI).getTeam() == getID() || GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam
+
+							|| GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isAtWar(getID()) || GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isAtWar(eTeam) )
 
 						{
 
-							if( GET_PLAYER((PlayerTypes)iJ).isAlive() && GET_PLAYER((PlayerTypes)iJ).getTeam() != GET_PLAYER((PlayerTypes)iI).getTeam() )
+							for (int iJ = 0; iJ < MAX_PLAYERS; iJ++)
 
 							{
 
-								if( GET_PLAYER((PlayerTypes)iJ).getTeam() == getID() || GET_PLAYER((PlayerTypes)iJ).getTeam() == eTeam )
+								if( GET_PLAYER((PlayerTypes)iJ).isAlive() && GET_PLAYER((PlayerTypes)iJ).getTeam() != GET_PLAYER((PlayerTypes)iI).getTeam() )
 
 								{
 
-									GET_PLAYER((PlayerTypes)iJ).AI_invalidateAttitudeCache((PlayerTypes)iI);
+									if( GET_PLAYER((PlayerTypes)iJ).getTeam() == getID() || GET_PLAYER((PlayerTypes)iJ).getTeam() == eTeam )
 
-									GET_PLAYER((PlayerTypes)iI).AI_invalidateAttitudeCache((PlayerTypes)iJ);
+									{
+
+										GET_PLAYER((PlayerTypes)iJ).AI_invalidateAttitudeCache((PlayerTypes)iI);
+
+										GET_PLAYER((PlayerTypes)iI).AI_invalidateAttitudeCache((PlayerTypes)iJ);
+
+									}
 
 								}
 
@@ -1924,8 +1927,6 @@ void CvTeam::makePeace(TeamTypes eTeam, bool bBumpUnits)
 
 			}
 
-		}
-
 /************************************************************************************************/
 
 /* BETTER_BTS_AI_MOD                       END                                                  */
@@ -1933,34 +1934,39 @@ void CvTeam::makePeace(TeamTypes eTeam, bool bBumpUnits)
 /************************************************************************************************/
 
 
-		for (iI = 0; iI < MAX_PLAYERS; iI++)
-		{
-			if (GET_PLAYER((PlayerTypes)iI).isAlive())
+			for (iI = 0; iI < MAX_PLAYERS; iI++)
 			{
-				if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+				// Absinthe: no message if the civ someone made peace with is dead (for example on resurrection)
+				if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)eTeam).isAlive())
 				{
-					//szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_MADE_PEACE_WITH", GET_TEAM(eTeam).getName().GetCString()); //Rhye
-					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_MADE_PEACE_WITH", GET_PLAYER((PlayerTypes)eTeam).getCivilizationShortDescription()); //Rhye
-					gDLL->getInterfaceIFace()->addHumanMessage(((PlayerTypes)iI), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_MAKEPEACE", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
-				}
-				else if (GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam)
-				{
-					//szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_MADE_PEACE_WITH", getName().GetCString()); //Rhye
-					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_MADE_PEACE_WITH", GET_PLAYER((PlayerTypes)getID()).getCivilizationShortDescription()); //Rhye
-					gDLL->getInterfaceIFace()->addHumanMessage(((PlayerTypes)iI), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_MAKEPEACE", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
-				}
-				else if (GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isHasMet(getID()) && GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isHasMet(eTeam))
-				{
-					//szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_MADE_PEACE", getName().GetCString(), GET_TEAM(eTeam).getName().GetCString()); //Rhye
-					szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_MADE_PEACE", GET_PLAYER((PlayerTypes)getID()).getCivilizationShortDescription(), GET_PLAYER((PlayerTypes)eTeam).getCivilizationShortDescription()); //Rhye
-					gDLL->getInterfaceIFace()->addHumanMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIRMAKEPEACE", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+					if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+					{
+						//szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_MADE_PEACE_WITH", GET_TEAM(eTeam).getName().GetCString()); //Rhye
+						szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_MADE_PEACE_WITH", GET_PLAYER((PlayerTypes)eTeam).getCivilizationShortDescription()); //Rhye
+						gDLL->getInterfaceIFace()->addHumanMessage(((PlayerTypes)iI), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_MAKEPEACE", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+					}
+					else if (GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam)
+					{
+						//szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_MADE_PEACE_WITH", getName().GetCString()); //Rhye
+						szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_MADE_PEACE_WITH", GET_PLAYER((PlayerTypes)getID()).getCivilizationShortDescription()); //Rhye
+						gDLL->getInterfaceIFace()->addHumanMessage(((PlayerTypes)iI), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_MAKEPEACE", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+					}
+					else if (GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isHasMet(getID()) && GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isHasMet(eTeam))
+					{
+						//szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_MADE_PEACE", getName().GetCString(), GET_TEAM(eTeam).getName().GetCString()); //Rhye
+						szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_MADE_PEACE", GET_PLAYER((PlayerTypes)getID()).getCivilizationShortDescription(), GET_PLAYER((PlayerTypes)eTeam).getCivilizationShortDescription()); //Rhye
+						gDLL->getInterfaceIFace()->addHumanMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIRMAKEPEACE", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+					}
 				}
 			}
-		}
 
-		//szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_MADE_PEACE", getName().GetCString(), GET_TEAM(eTeam).getName().GetCString()); //Rhye
-		szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_MADE_PEACE", GET_PLAYER((PlayerTypes)getID()).getCivilizationShortDescription(), GET_PLAYER((PlayerTypes)eTeam).getCivilizationShortDescription()); //Rhye
-		GC.getGameINLINE().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+			// Absinthe: cleaner replay log, no message if the civ someone made peace with is dead (for example on resurrection)
+			if (GET_PLAYER((PlayerTypes)getID()).isAlive() && GET_PLAYER((PlayerTypes)eTeam).isAlive())
+			{
+				//szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_MADE_PEACE", getName().GetCString(), GET_TEAM(eTeam).getName().GetCString()); //Rhye
+				szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_MADE_PEACE", GET_PLAYER((PlayerTypes)getID()).getCivilizationShortDescription(), GET_PLAYER((PlayerTypes)eTeam).getCivilizationShortDescription()); //Rhye
+				GC.getGameINLINE().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getLeaderID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+			}
 
 		} //Rhye
 
@@ -4522,7 +4528,7 @@ void CvTeam::setVassal(TeamTypes eIndex, bool bNewValue, bool bCapitulated)
 			CvEventReporter::getInstance().vassalState(eIndex, getID(), bNewValue);
 		}
 
-		GET_PLAYER((PlayerTypes)getID()).processCivNames(); //Rhye - dynamic civ names - not jdog's
+		GET_PLAYER((PlayerTypes)getID()).processCivNames(); // Absinthe: DCN Dynamic Civ Names
 
 		// 3MiroCAR: Sanguo Mod Performance start, added by poyuzhe 07.26.09
 		for (std::vector<PlayerTypes>::const_iterator iter1 = m_aePlayerMembers.begin(); iter1 != m_aePlayerMembers.end(); ++iter1)
@@ -5795,8 +5801,8 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 							{
 								if (isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
 								{
-									//szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_FIRST_TO_TECH", GET_PLAYER(ePlayer).getNameKey(), GC.getTechInfo(eIndex).getTextKeyWide()); //Rhye
-									szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_FIRST_TO_TECH", GET_PLAYER(ePlayer).getCivilizationShortDescriptionKey(), GC.getTechInfo(eIndex).getTextKeyWide()); //Rhye
+									//szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_FIRST_TO_TECH", GET_PLAYER(ePlayer).getNameKey(), GC.getTechInfo(eIndex).getTextKeyWide()); // Absinthe
+									szBuffer = gDLL->getText("TXT_KEY_MISC_SOMEONE_FIRST_TO_TECH", GET_PLAYER(ePlayer).getCivilizationDescriptionKey(), GC.getTechInfo(eIndex).getTextKeyWide()); // Absinthe
 								}
 								else
 								{

@@ -160,6 +160,8 @@ class CvEventManager:
 			'vassalState'			: self.onVassalState,
 			'changeWar'				: self.onChangeWar,
 			'setPlayerAlive'		: self.onSetPlayerAlive,
+			'playerChangeAllCivics'		: self.onPlayerChangeAllCivics, # Absinthe: Python Event for civic changes
+			'playerChangeSingleCivic'		: self.onPlayerChangeSingleCivic, # Absinthe: Python Event for civic changes
 			'playerChangeStateReligion'		: self.onPlayerChangeStateReligion,
 			'playerGoldTrade'		: self.onPlayerGoldTrade,
 			'windowActivation'		: self.onWindowActivation,
@@ -907,6 +909,20 @@ class CvEventManager:
 		bNewValue = argsList[1]
 		CvUtil.pyPrint("Player %d's alive status set to: %d" %(iPlayerID, int(bNewValue)))
 
+	# Absinthe: Python Event for civic changes
+	def onPlayerChangeAllCivics(self, argsList):
+		# note that this only reports civic change if it happened via normal revolution
+		'Player changes his civics'
+		iPlayer = argsList[0]
+		lNewCivics = [argsList[1], argsList[2], argsList[3], argsList[4], argsList[5], argsList[6]]
+		lOldCivics = [argsList[7], argsList[8], argsList[9], argsList[10], argsList[11], argsList[12]]
+
+	def onPlayerChangeSingleCivic(self, argsList):
+		# note that this reports all civic changes in single instances (so also reports force converts by diplomacy or with spies)
+		'Civics are changed for a player'
+		iPlayer, iNewCivic, iOldCivic = argsList
+	# Absinthe: end
+
 	def onPlayerChangeStateReligion(self, argsList):
 		'Player changes his state religion'
 		iPlayer, iNewReligion, iOldReligion = argsList
@@ -1108,7 +1124,7 @@ class CvEventManager:
 		'sample generic event, called on each game turn slice'
 		genericArgs = argsList[0][0]	# tuple of tuple of my args
 		turnSlice = genericArgs[0]
-		#print(" 3Miro: onGameUpdate")
+		#print ("onGameUpdate test")
 
 	def onMouseEvent(self, argsList):
 		'mouse handler - returns 1 if the event was consumed'

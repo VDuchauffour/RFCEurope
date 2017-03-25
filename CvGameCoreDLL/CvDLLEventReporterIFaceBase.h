@@ -93,6 +93,8 @@ public:
 	virtual void changeWar(bool bWar, TeamTypes eTeam, TeamTypes eOtherTeam) = 0;
 
 	virtual void setPlayerAlive(PlayerTypes ePlayerID, bool bNewValue) = 0;
+	virtual void playerChangeAllCivics(PlayerTypes ePlayerID, CivicTypes* paeNewCivics, CivicTypes* paeOldCivics) = 0; // Absinthe: Python Event for civic changes
+	virtual void playerChangeSingleCivic(PlayerTypes ePlayerID, CivicTypes eNewCivic, CivicTypes eOldCivic) = 0; // Absinthe: Python Event for civic changes
 	virtual void playerChangeStateReligion(PlayerTypes ePlayerID, ReligionTypes eNewReligion, ReligionTypes eOldReligion) = 0;
 	virtual void playerGoldTrade(PlayerTypes eFromPlayer, PlayerTypes eToPlayer, int iAmount) = 0;
 

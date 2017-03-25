@@ -92,6 +92,8 @@ public:
 	void reportVassalState(TeamTypes eMaster, TeamTypes eVassal, bool bVassal);
 
 	void reportSetPlayerAlive(PlayerTypes ePlayerID, bool bNewValue);
+	void reportPlayerChangeAllCivics(PlayerTypes ePlayerID, CivicTypes* paeNewCivics, CivicTypes* paeOldCivics); // Absinthe: Python Event for civic changes
+	void reportPlayerChangeSingleCivic(PlayerTypes ePlayerID, CivicTypes eNewCivic, CivicTypes eOldCivic); // Absinthe: Python Event for civic changes
 	void reportPlayerChangeStateReligion(PlayerTypes ePlayerID, ReligionTypes eNewReligion, ReligionTypes eOldReligion);
 	void reportPlayerGoldTrade(PlayerTypes eFromPlayer, PlayerTypes eToPlayer, int iAmount);
 

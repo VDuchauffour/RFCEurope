@@ -26,7 +26,7 @@ iNumTotalPlayersB = con.iNumTotalPlayersB
 iPlague = xml.iPlague
 
 # Absinthe: Black Death is more severe, while the Plague of Justinian is less severe than the others plagues
-iDuration = 9
+iBaseDuration = 8
 iImmunity = con.iImmunity
 iNumPlagues = 5
 iConstantinople = 0
@@ -135,12 +135,12 @@ class Plague:
 
 	def startPlague( self, iPlagueCount ):
 		iWorstCiv = -1
-		iWorstHealth = 200
+		iWorstHealth = 100
 		for i in range(iNumMajorPlayers):
 			pPlayer = gc.getPlayer(i)
 			if (pPlayer.isAlive()):
 				if (self.isVulnerable(i) ):
-					iHealth = self.calcHealth( i ) / 2 + gc.getGame().getSorenRandNum(20, 'random modifier')
+					iHealth = self.calcHealth( i ) - gc.getGame().getSorenRandNum(10, 'random modifier')
 					if ( iHealth < iWorstHealth ):
 						iWorstCiv = i
 						iWorstHealth = iHealth
@@ -174,10 +174,15 @@ class Plague:
 		pPlayer = gc.getPlayer(iPlayer)
 		iTCH = pPlayer.calculateTotalCityHealthiness()
 		iTCU = pPlayer.calculateTotalCityUnhealthiness()
-		if ( iTCH > 0 ):
-			return int((1.0 * iTCH) / (iTCH + iTCU) * 100) - 60
-		else:
-			return -30
+		# Absinthe: use average city health instead
+		iNumCities = pPlayer.getNumCities()
+		iAverageCityHealth = int((10 * (iTCH - iTCU)) / iNumCities) # 10x the average health actually
+		print ("iAverageCityHealth", iAverageCityHealth)
+		return iAverageCityHealth
+		#if ( iTCH > 0 ):
+		#	return int((10.0 * iTCH) / (iTCH + iTCU)) - 5 # theoretically between 5 and -5, but almost always between -2 and +2
+		#else:
+		#	return -4
 
 
 	def isVulnerable(self, iPlayer):
@@ -191,7 +196,7 @@ class Plague:
 			pPlayer = gc.getPlayer(iPlayer)
 			if (self.getPlagueCountdown(iPlayer) == 0):
 				iHealth = self.calcHealth( iPlayer )
-				if (iHealth < 14): # won't spread if the civ is very healthy
+				if (iHealth < 17): # won't spread at all if the average surplus health in the cities is at least 1.7
 					return True
 		return False
 
@@ -212,14 +217,16 @@ class Plague:
 				print ("pCiv.getCivilizationDescription(0)", pCiv.getCivilizationDescription(0))
 				CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_PLAGUE_SPREAD_CIV", ()) + " " + pCiv.getCivilizationDescription(0) + "!", "AS2D_PLAGUE", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
 
-		iHealth = self.calcHealth( iPlayer )
-		iHealth /= 7 # duration will be modified by -4 to +5
 		# Absinthe: this is where the duration is handled for each civ
 		#			number of cities should be a significant factor, so plague isn't way more deadly for smaller civs
+		iHealth = self.calcHealth( iPlayer )
+		iHealthDuration = max ( min ( (iHealth / 5), 3 ), -4 ) # between -4 and +3
 		apCityList = PyPlayer(iPlayer).getCityList()
-		iCities = min ( (len(apCityList) + 1) / 2, 10 ) # between 1 and 10 from cities
-		# Overall duration for the plague is between 3 and 12
-		iValue = ( iDuration + iCities - iHealth ) / 2
+		iCityDuration = min ( (len(apCityList) + 2) / 3, 10 ) # between 1 and 10 from cities
+		print ("plague duration iCities", iCityDuration)
+		# Overall duration for the plague is between 3 and 11 (usually between 4-8)
+		iValue = ( iBaseDuration + iCityDuration - iHealthDuration ) / 2
+		print ("plague duration overall, iPlayer, iValue", iPlayer, iValue)
 		self.setPlagueCountdown(iPlayer, iValue)
 
 
@@ -452,14 +459,14 @@ class Plague:
 		#			cities are chosen randomly from the possible targets
 		#			the maximum number of infections is based on the size of the empire
 		iInfectedCites = 0
-		iNumInfections = 1
-		if (len(apCityList) > 16):
-			iNumInfections = 4
-		elif (len(apCityList) > 12):
-			iNumInfections = 3
-		elif (len(apCityList) > 8):
-			iNumInfections = 2
-		iNumSpreads = gc.getGame().getSorenRandNum(iNumInfections, 'max number of new infections')
+		iMaxNumInfections = 1
+		if (len(apCityList) > 21):
+			iMaxNumInfections = 4
+		elif (len(apCityList) > 14):
+			iMaxNumInfections = 3
+		elif (len(apCityList) > 7):
+			iMaxNumInfections = 2
+		iNumSpreads = gc.getGame().getSorenRandNum(iMaxNumInfections, 'max number of new infections')
 		if ( len(apCityList) > 0 ):
 			if (self.getPlagueCountdown(iPlayer) > 2): # don't spread in the last turns
 				for x in range(0, len(apCityList)):
