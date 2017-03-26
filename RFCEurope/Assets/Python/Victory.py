@@ -12,16 +12,14 @@ import UniquePowers
 import RFCEMaps as rfcemaps
 from StoredData import sd
 
+# Globals
 utils = RFCUtils.RFCUtils()
 up = UniquePowers.UniquePowers()
-
-# globals
 gc = CyGlobalContext()
+localText = CyTranslator() #Absinthe
 PyPlayer = PyHelpers.PyPlayer
 
-
-### Constants ###
-# initialise player variables
+# Constants
 iBurgundy = con.iBurgundy
 iByzantium = con.iByzantium
 iFrankia = con.iFrankia
@@ -301,8 +299,7 @@ class Victory:
 				else:
 					iAfrica += 1
 				if ( iIslands >= 3 and iAfrica >= 2 ):
-					pPortugal.setUHV( 0, 1 )
-					pPortugal.changeStabilityBase( iCathegoryExpansion, 3 )
+					self.wonUHV( iPortugal, 0 )
 				pPortugal.setUHVCounter( 0, iAfrica * 100 + iIslands )
 
 
@@ -310,10 +307,9 @@ class Victory:
 		# Germany UHV 2:
 		if (iReligion == xml.iProtestantism):
 			if iFounder == iGermany:
-				pGermany.setUHV( 1, 1 )
-				pGermany.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iGermany, 1 )
 			else:
-				pGermany.setUHV( 1, 0 )
+				self.lostUHV( iGermany, 1 )
 
 
 	def onCityAcquired(self, owner, playerType, city, bConquest):
@@ -327,13 +323,13 @@ class Victory:
 		if ( iPlayer == iBulgaria and pBulgaria.isAlive() ):
 			if ( iGameTurn <= xml.i1396AD and pBulgaria.getUHV( 2 ) == -1 ):
 				if ( playerType == iBarbarian or playerType == iTurkey or playerType == iByzantium ):
-					pBulgaria.setUHV( 2, 0 )
+					self.lostUHV( iBulgaria, 2 )
 
 		# Portugal UHV 2:
 		elif ( iPlayer == iPortugal and pPortugal.isAlive() ):
 			if ( bConquest ):
 				if ( pPortugal.getUHV( 1 ) == -1 ):
-					pPortugal.setUHV( 1, 0 )
+					self.lostUHV( iPortugal, 1 )
 
 		# Norway UHV 1: Going Viking
 		elif ( playerType == iNorway ):
@@ -353,8 +349,7 @@ class Victory:
 				iCounter = iJewishQu + 100 * iProtCath + 1000 * iOrthCath + 10000 * iCathCath
 				pPoland.setUHVCounter( 2, iCounter )
 				if ( iCathCath >= 3 and iOrthCath >= 2 and iProtCath >= 2 and iJewishQu >= 2 ):
-					pPoland.setUHV( 2, 1 )
-					pPoland.changeStabilityBase( iCathegoryExpansion, 3 )
+					self.wonUHV( iPoland, 2 )
 
 		# Prussia UHV 2: Conquer two cities from each of Austria, Muscowy, Germany, Sweden, France and Spain between 1650AD and 1763AD, if they are still alive.
 		elif(playerType == iPrussia and owner in tPrussiaDefeat and iGameTurn >= xml.i1650AD and iGameTurn <= xml.i1763AD):
@@ -365,15 +360,14 @@ class Victory:
 				lNumConq.append((iConqRaw / pow(10,iI)) % 10)
 				if(tPrussiaDefeat[iI] == owner):
 					lNumConq[iI] += 1
-					if(lNumConq[iI] > 9):
+					if (lNumConq[iI] > 9):
 						# Prevent overflow
 						lNumConq[iI] = 9
-				if(lNumConq[iI] < 2 and gc.getPlayer(tPrussiaDefeat[iI]).isAlive()):
+				if (lNumConq[iI] < 2 and gc.getPlayer(tPrussiaDefeat[iI]).isAlive()):
 					bConq = False
 
-			if(pPrussia.getUHV(1) == -1 and bConq):
-				pPrussia.setUHV( 1, 1 )
-				pPrussia.changeStabilityBase( iCathegoryExpansion, 3 )
+			if ( pPrussia.getUHV(1) == -1 and bConq ):
+				self.wonUHV( iPrussia, 1 )
 
 			iConqRaw = 0
 			for iI in range(len(tPrussiaDefeat)):
@@ -383,13 +377,12 @@ class Victory:
 
 	def onCityRazed(self, iPlayer, city):
 		# Sweden UHV 2: Raze 5 Catholic cities while being Protestant
-		if(iPlayer == iSweden):
-			if(pSweden.getStateReligion() == xml.iProtestantism and city.isHasReligion(xml.iCatholicism)):
+		if (iPlayer == iSweden):
+			if (pSweden.getStateReligion() == xml.iProtestantism and city.isHasReligion(xml.iCatholicism)):
 				iRazed = pSweden.getUHVCounter(1)+1
 				pSweden.setUHVCounter(1,iRazed)
-				if(iRazed >= 5):
-					pSweden.setUHV( 1, 1 )
-					pSweden.changeStabilityBase( iCathegoryExpansion, 3 )
+				if (iRazed >= 5):
+					self.wonUHV( iSweden, 1 )
 
 
 	def onPillageImprovement( self, iPillager, iVictim, iImprovement, iRoute, iX, iY ):
@@ -422,10 +415,9 @@ class Victory:
 		if ( iTech == xml.iIndustrialTech ):
 			if ( pEngland.getUHV( 2 ) == -1 ):
 				if ( iPlayer == iEngland ):
-					pEngland.setUHV( 2, 1 )
-					pEngland.changeStabilityBase( iCathegoryExpansion, 3 )
+					self.wonUHV( iEngland, 2 )
 				else:
-					pEngland.setUHV( 2, 0 )
+					self.lostUHV( iEngland, 2 )
 
 
 	def onBuildingBuilt(self, iPlayer, iBuilding):
@@ -446,8 +438,7 @@ class Victory:
 					else:
 						iCathedralCounter += 1
 					if ( iCathedralCounter >= 2 and iMonasteryCounter >= 8 ):
-						pKiev.setUHV( 0, 1 )
-						pKiev.changeStabilityBase( iCathegoryExpansion, 3 )
+						self.wonUHV( iKiev, 0 )
 					pKiev.setUHVCounter( 0, 100 * iMonasteryCounter + iCathedralCounter )
 
 		# Poland UHV 3:
@@ -472,8 +463,7 @@ class Victory:
 					elif ( iBuilding == xml.iJewishQuarter and iJewishQu < 99 ):
 						iJewishQu += 1
 					if ( iCathCath >= 3 and iOrthCath >= 3 and iProtCath >= 2 and iJewishQu >= 2 ):
-						pPoland.setUHV( 2, 1 )
-						pPoland.changeStabilityBase( iCathegoryExpansion, 3 )
+						self.wonUHV( iPoland, 2 )
 					iCounter = iJewishQu + 100 * iProtCath + 1000 * iOrthCath + 10000 * iCathCath
 					pPoland.setUHVCounter( 2, iCounter )
 
@@ -484,8 +474,7 @@ class Victory:
 					iBanks = pGenoa.getUHVCounter( 1 )
 					iBanks += 1
 					if ( iBanks >= 8 ):
-						pGenoa.setUHV( 1, 1 )
-						pGenoa.changeStabilityBase( iCathegoryExpansion, 3 )
+						self.wonUHV( iGenoa, 1 )
 					pGenoa.setUHVCounter( 1, iBanks )
 
 		# Cordoba UHV 2:
@@ -495,10 +484,9 @@ class Victory:
 					iWondersBuilt = pCordoba.getUHVCounter( 1 )
 					pCordoba.setUHVCounter( 1, iWondersBuilt + 1 )
 					if (iWondersBuilt == 2): # so we already had 2 wonders
-						pCordoba.setUHV( 1, 1 )
-						pCordoba.changeStabilityBase( iCathegoryExpansion, 3 )
+						self.wonUHV( iCordoba, 1 )
 				else:
-					pCordoba.setUHV( 1, 0 )
+					self.lostUHV( iCordoba, 1 )
 
 
 	def onProjectBuilt(self, iPlayer, iProject):
@@ -510,10 +498,9 @@ class Victory:
 		if ( pVenecia.getUHV( 2 ) == -1 and iProject != xml.iColVinland ):
 			if bColony:
 				if ( iPlayer == iVenecia ):
-					pVenecia.setUHV( 2, 1 )
-					pVenecia.changeStabilityBase( iCathegoryExpansion, 3 )
+					self.wonUHV( iVenecia, 2 )
 				else:
-					pVenecia.setUHV( 2, 0 )
+					self.lostUHV( iVenecia, 2 )
 
 		# France UHV 3:
 		if ( iPlayer == iFrankia ):
@@ -521,8 +508,7 @@ class Victory:
 				pFrankia.setUHVCounter( 2, pFrankia.getUHVCounter( 2 ) + 1 )
 				if ( pFrankia.getUHV( 2 ) == -1 ):
 					if ( pFrankia.getUHVCounter( 2 ) >= 5 ):
-						pFrankia.setUHV( 2, 1 )
-						pFrankia.changeStabilityBase( iCathegoryExpansion, 3 )
+						self.wonUHV( iFrankia, 2 )
 
 		# England UHV 2:
 		elif ( iPlayer == iEngland ):
@@ -530,8 +516,7 @@ class Victory:
 				pEngland.setUHVCounter( 1, pEngland.getUHVCounter( 1 ) + 1 )
 				if ( pEngland.getUHV( 1 ) == -1 ):
 					if ( pEngland.getUHVCounter( 1 ) >= 7 ):
-						pEngland.setUHV( 1, 1 )
-						pEngland.changeStabilityBase( iCathegoryExpansion, 3 )
+						self.wonUHV( iEngland, 1 )
 
 		# Spain UHV 2: this is only for the Main Screen counter
 		elif ( iPlayer == iSpain ):
@@ -544,8 +529,7 @@ class Victory:
 				pPortugal.setUHVCounter( 2, pPortugal.getUHVCounter( 2 ) + 1 )
 				if ( pPortugal.getUHV( 2 ) == -1 ):
 					if ( pPortugal.getUHVCounter( 2 ) >= 5 ):
-						pPortugal.setUHV( 2, 1 )
-						pPortugal.changeStabilityBase( iCathegoryExpansion, 3 )
+						self.wonUHV( iPortugal, 2 )
 
 		# Dutch UHV 2:
 		elif ( iPlayer == iDutch ):
@@ -558,8 +542,7 @@ class Victory:
 					# if the companies are already built previously, or currently being built (one of them is the current project)
 					if ( iProject == xml.iWestIndiaCompany or iWestCompany == 1 ):
 						if ( iProject == xml.iEastIndiaCompany or iEastCompany == 1):
-							pDutch.setUHV( 1, 1 )
-							pDutch.changeStabilityBase( iCathegoryExpansion, 3 )
+							self.wonUHV( iDutch, 1 )
 
 		# Denmark UHV 3:
 		elif ( iPlayer == iDenmark ):
@@ -572,8 +555,7 @@ class Victory:
 					# if the companies are already built previously, or currently being built (one of them is the current project)
 					if ( iProject == xml.iWestIndiaCompany or iWestCompany == 1 ):
 						if ( iProject == xml.iEastIndiaCompany or iEastCompany == 1):
-							pDenmark.setUHV( 2, 1 )
-							pDenmark.changeStabilityBase( iCathegoryExpansion, 3 )
+							self.wonUHV( iDenmark, 2 )
 
 
 	def getOwnedLuxes( self, pPlayer ):
@@ -622,6 +604,7 @@ class Victory:
 				iCount += 1
 		return iCount
 
+
 	def getTerritoryPercentEurope(self, iPlayer, bReturnTotal = False):
 		iTotal = 0
 		iCount = 0
@@ -638,15 +621,15 @@ class Victory:
 			return iCount, iTotal
 		return iCount
 
+
 	def checkByzantium( self, iGameTurn ):
 
 		# UHV 1: Make Constantinople the largest and most cultured city in 1025
 		if ( iGameTurn == xml.i1025AD and pByzantium.getUHV( 0 ) == -1 ):
 			if ( gc.isLargestCity( con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] ) and gc.isTopCultureCity( con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] ) and gc.getMap().plot( con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] ).getPlotCity().getOwner() == iByzantium ):
-				pByzantium.setUHV( 0, 1 )
-				pByzantium.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iByzantium, 0 )
 			else:
-				pByzantium.setUHV( 0, 0 )
+				self.lostUHV( iByzantium, 0 )
 
 		# UHV 2: Control Constantinople, Thrace, Thessaloniki, Moesia, Macedonia, Serbia, Arberia, Epirus, Thessaly, Morea, Colonea, Antiochia, Charsianon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282
 		if ( iGameTurn == xml.i1282AD and pByzantium.getUHV( 1 ) == -1 ):
@@ -656,10 +639,9 @@ class Victory:
 					bOwn = False
 					break
 			if ( bOwn ):
-				pByzantium.setUHV( 1, 1 )
-				pByzantium.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iByzantium, 1 )
 			else:
-				pByzantium.setUHV( 1, 0 )
+				self.lostUHV( iByzantium, 1 )
 
 		# UHV 3: Be the richest empire in the world in 1453
 		if ( iGameTurn == xml.i1453AD and pByzantium.getUHV( 2 ) == -1 ):
@@ -670,10 +652,9 @@ class Victory:
 					if (gc.getPlayer(iCiv).getGold() > iGold):
 						bMost = False
 			if ( bMost ):
-				 pByzantium.setUHV( 2, 1 )
-				 pByzantium.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iByzantium, 2 )
 			else:
-				 pByzantium.setUHV( 2, 0 )
+				self.lostUHV( iByzantium, 2 )
 
 
 	def checkFrankia( self, iGameTurn ):
@@ -687,22 +668,20 @@ class Victory:
 					bCharlemagneEmpire = False
 					break
 			if ( bCharlemagneEmpire ):
-				pFrankia.setUHV( 0, 1 )
-				pFrankia.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iFrankia, 0 )
 			elif ( iGameTurn == xml.i840AD ):
-				pFrankia.setUHV( 0, 0 )
+				self.lostUHV( iFrankia, 0 )
 
 		# UHV 2: Control Jerusalem in 1291
 		if (iGameTurn == xml.i1291AD and pFrankia.getUHV(1) == -1 ):
 			pJPlot = gc.getMap().plot( con.tJerusalem[0], con.tJerusalem[1] )
 			if ( pJPlot.isCity()):
 				if ( pJPlot.getPlotCity().getOwner() == iFrankia ):
-					pFrankia.setUHV( 1, 1 )
-					pFrankia.changeStabilityBase( iCathegoryExpansion, 3 )
+					self.wonUHV( iFrankia, 1 )
 				else:
-					pFrankia.setUHV( 1, 0 )
+					self.lostUHV( iFrankia, 1 )
 			else:
-				pFrankia.setUHV( 1, 0 )
+				self.lostUHV( iFrankia, 1 )
 
 		# UHV 3: Build 5 Colonies
 		# handled in the onProjectBuilt function
@@ -718,10 +697,9 @@ class Victory:
 					bConq = False
 					break
 			if ( bConq ):
-				pArabia.setUHV( 0, 1 )
-				pArabia.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iArabia, 0 )
 			else:
-				pArabia.setUHV( 0, 0 )
+				self.lostUHV( iArabia, 0 )
 
 		# UHV 2: Conquer all territories from Oran to Asia Minor by 1291
 		if ( iGameTurn == xml.i1291AD and pArabia.getUHV( 1 ) == -1 ):
@@ -731,17 +709,15 @@ class Victory:
 					bConq = False
 					break
 			if ( bConq ):
-				pArabia.setUHV( 1, 1 )
-				pArabia.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iArabia, 1 )
 			else:
-				pArabia.setUHV( 1, 0 )
+				self.lostUHV( iArabia, 1 )
 
 		# UHV 3: Spread Islam to at least 35% of the population of Europe
 		if ( pArabia.getUHV( 2 ) == -1 ):
 			iPerc = gc.getGame().calculateReligionPercent( xml.iIslam )
 			if ( iPerc >= 35 ):
-				pArabia.setUHV( 2, 1 )
-				pArabia.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iArabia, 2 )
 
 
 	def checkBulgaria( self, iGameTurn ):
@@ -754,24 +730,21 @@ class Victory:
 					bConq = False
 					break
 			if ( bConq ):
-				pBulgaria.setUHV( 0, 1 )
-				pBulgaria.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iBulgaria, 0 )
 			elif ( iGameTurn == xml.i917AD ):
-				pBulgaria.setUHV( 0, 0 )
+				self.lostUHV( iBulgaria, 0 )
 
 		# UHV 2: Accumulate at least 100 Orthodox Faith Points by 1259
 		if ( iGameTurn <= xml.i1259AD and pBulgaria.getUHV( 1 ) == -1 ):
 			if ( pBulgaria.getFaith() >= 100 ):
-				pBulgaria.setUHV( 1, 1 )
-				pBulgaria.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iBulgaria, 1 )
 			elif ( iGameTurn == xml.i1259AD ):
-				pBulgaria.setUHV( 1, 0 )
+				self.lostUHV( iBulgaria, 1 )
 
 		# UHV 3: Do not lose a city to barbarians (Mongols), Byzantines, or Ottomans before 1396
 		# Controlled in the onCityAcquired function
 		if ( iGameTurn == xml.i1396AD and pBulgaria.getUHV( 2 ) == -1 ):
-			pBulgaria.setUHV( 2, 1 )
-			pBulgaria.changeStabilityBase( iCathegoryExpansion, 3 )
+			self.wonUHV( iBulgaria, 2 )
 
 
 	def checkCordoba( self, iGameTurn ):
@@ -779,15 +752,14 @@ class Victory:
 		# UHV 1: Make Cordoba the largest city in the world in 961
 		if ( iGameTurn == xml.i961AD and pCordoba.getUHV(0) == -1 ):
 			if ( gc.isLargestCity( con.tCapitals[iCordoba][0], con.tCapitals[iCordoba][1] ) and gc.getMap().plot( con.tCapitals[iCordoba][0], con.tCapitals[iCordoba][1] ).getPlotCity().getOwner() == iCordoba ):
-				pCordoba.setUHV( 0, 1 )
-				pCordoba.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iCordoba, 0 )
 			else:
-				pCordoba.setUHV( 0, 0 )
+				self.lostUHV( iCordoba, 0 )
 
 		# UHV 2: Build the Alhambra, the Gardens of Al-Andalus, and La Mezquita by 1309
 		# Controlled in the onBuildingBuilt function
 		if ( iGameTurn == xml.i1309AD and pCordoba.getUHV(1) == -1 ):
-			pCordoba.setUHV( 1, 0 )
+			self.lostUHV( iCordoba, 1 )
 
 		# UHV 3: Make sure Islam is present in every city in the Iberian peninsula in 1492
 		if ( iGameTurn == xml.i1492AD and pCordoba.getUHV(2) == -1 ):
@@ -797,10 +769,9 @@ class Victory:
 					bIslamized = False
 					break
 			if ( bIslamized ):
-				pCordoba.setUHV( 2, 1 )
-				pCordoba.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iCordoba, 2 )
 			else:
-				pCordoba.setUHV( 2, 0 )
+				self.lostUHV( iCordoba, 2 )
 
 
 	def checkNorway( self, iGameTurn ):
@@ -808,18 +779,17 @@ class Victory:
 		# Old UHVs: explore all water tiles
 		#if ( iGameTurn == xml.i1009AD and pNorway.getUHV( 0 ) == -1 ):
 		#	if ( gc.canSeeAllTerrain( iNorway, xml.iTerrainOcean ) ):
-		#		pNorway.setUHV( 0, 1 )
+		#		self.wonUHV( iNorway, 0 )
 		#	else:
-		#		pNorway.setUHV( 0, 0 )
+		#		self.lostUHV( iNorway, 0 )
 
 		# UHV 1: Gain 100 Viking points and build Vinland by 1066
 		# Viking points counted in the onCityAcquired, onPillageImprovement and onCombatResult functions
 		if ( iGameTurn <= xml.i1066AD and pNorway.getUHV( 0 ) == -1 ):
 			if ( pNorway.getUHVCounter( 2 ) >= 100 and teamNorway.getProjectCount(xml.iColVinland) >= 1): # It's still counter 2, for the sake of convenience and confusion
-				pNorway.setUHV( 0, 1 )
-				pNorway.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iNorway, 0 )
 			elif ( iGameTurn == xml.i1066AD ):
-				pNorway.setUHV( 0, 0 )
+				self.lostUHV( iNorway, 0 )
 
 		# UHV 2: Conquer The Isles, Ireland, Scotland, Normandy, Sicily, Apulia, Calabria and Iceland by 1194
 		if ( iGameTurn <= xml.i1194AD and pNorway.getUHV( 1 ) == -1 ):
@@ -829,10 +799,9 @@ class Victory:
 					bConq = False
 					break
 			if ( bConq ):
-				pNorway.setUHV( 1, 1 )
-				pNorway.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iNorway, 1 )
 			elif ( iGameTurn == xml.i1194AD ):
-				pNorway.setUHV( 1, 0 )
+				self.lostUHV( iNorway, 1 )
 
 		# UHV 3: Have a higher score than Sweden, Denmark, Scotland, England, Germany and France in 1320
 		if ( iGameTurn == xml.i1320AD and pNorway.getUHV( 2 ) == -1 ):
@@ -843,10 +812,9 @@ class Victory:
 					bIsOnTop = False
 					break
 			if(bIsOnTop):
-				pNorway.setUHV( 2, 1 )
-				pNorway.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iNorway, 2 )
 			else:
-				pNorway.setUHV( 2, 0 )
+				self.lostUHV( iNorway, 2 )
 
 
 	def checkDenmark(self,iGameTurn):
@@ -859,10 +827,9 @@ class Victory:
 					bConq = False
 					break
 			if ( bConq ):
-				pDenmark.setUHV( 0, 1 )
-				pDenmark.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iDenmark, 0 )
 			else:
-				pDenmark.setUHV( 0, 0 )
+				self.lostUHV( iDenmark, 0 )
 
 		# UHV 2: Control Denmark, Norway, Vestfold, Skaneland, Götaland, Svealand, Norrland, Gotland, Österland, Estonia and Iceland in 1523
 		if ( iGameTurn == xml.i1523AD and pDenmark.getUHV( 1 ) == -1 ):
@@ -872,10 +839,9 @@ class Victory:
 					bConq = False
 					break
 			if ( bConq ):
-				pDenmark.setUHV( 1, 1 )
-				pDenmark.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iDenmark, 1 )
 			else:
-				pDenmark.setUHV( 1, 0 )
+				self.lostUHV( iDenmark, 1 )
 
 		# UHV 3: Get 3 Colonies and complete both Trading Companies
 		# handled in the onProjectBuilt function
@@ -891,10 +857,9 @@ class Victory:
 					bConq = False
 					break
 			if ( bConq ):
-				pVenecia.setUHV( 0, 1 )
-				pVenecia.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iVenecia, 0 )
 			elif ( iGameTurn == xml.i1004AD ):
-				pVenecia.setUHV( 0, 0 )
+				self.lostUHV( iVenecia, 0 )
 
 		# UHV 2: Conquer Constantinople, Thessaly, Morea, Crete and Cyprus by 1204AD
 		if ( iGameTurn <= xml.i1204AD and pVenecia.getUHV( 1 ) == -1 ):
@@ -905,12 +870,11 @@ class Victory:
 						bConq = False
 						break
 				if ( bConq ):
-					pVenecia.setUHV( 1, 1 )
-					pVenecia.changeStabilityBase( iCathegoryExpansion, 3 )
+					self.wonUHV( iVenecia, 1 )
 				elif ( iGameTurn == xml.i1204AD ):
-					pVenecia.setUHV( 1, 0 )
+					self.lostUHV( iVenecia, 1 )
 			elif ( iGameTurn == xml.i1204AD ):
-				pVenecia.setUHV( 1, 0 )
+				self.lostUHV( iVenecia, 1 )
 
 		# UHV 3: Be the first to build a Colony from the Age of Discovery (Vinland is from the Viking Age)
 		# handled in the onProjectBuilt function
@@ -923,11 +887,10 @@ class Victory:
 		pBurgundy.setUHVCounter( 0, iCulture )
 		if ( iGameTurn <= xml.i1336AD and pBurgundy.getUHV( 0 ) == -1 ):
 			if ( iCulture >= 10000 ):
-				pBurgundy.setUHV( 0, 1 )
-				pBurgundy.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iBurgundy, 0 )
 			else:
 				if ( iGameTurn == xml.i1336AD ):
-					pBurgundy.setUHV( 0, 0 )
+					self.lostUHV( iBurgundy, 0 )
 
 		# UHV 2: Control Burgundy, Provence, Picardy, Flanders, Champagne and Lorraine in 1376
 		if ( iGameTurn == xml.i1376AD and pBurgundy.getUHV( 1 ) == -1 ):
@@ -937,10 +900,9 @@ class Victory:
 					bOwn = False
 					break
 			if ( bOwn ):
-				pBurgundy.setUHV( 1, 1 )
-				pBurgundy.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iBurgundy, 1 )
 			else:
-				pBurgundy.setUHV( 1, 0 )
+				self.lostUHV( iBurgundy, 1 )
 
 		# UHV 3: Have a higher score than France, England and Germany in 1473
 		if ( iGameTurn == xml.i1473AD and pBurgundy.getUHV( 2 ) == -1 ):
@@ -951,10 +913,9 @@ class Victory:
 					bIsOnTop = False
 					break
 			if ( bIsOnTop ):
-				pBurgundy.setUHV( 2, 1 )
-				pBurgundy.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iBurgundy, 2 )
 			else:
-				pBurgundy.setUHV( 2, 0 )
+				self.lostUHV( iBurgundy, 2 )
 
 
 	def checkGermany( self, iGameTurn ):
@@ -970,10 +931,9 @@ class Victory:
 					bOwn = False
 					break
 			if ( bOwn ):
-				pGermany.setUHV( 0, 1 )
-				pGermany.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iGermany, 0 )
 			else:
-				pGermany.setUHV( 0, 0 )
+				self.lostUHV( iGermany, 0 )
 
 		# UHV 2: Start the Reformation (Found Protestantism)
 		# Controlled in the onReligionFounded function
@@ -986,10 +946,9 @@ class Victory:
 					bOwn = False
 					break
 			if ( bOwn ):
-				pGermany.setUHV( 2, 1 )
-				pGermany.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iGermany, 2 )
 			else:
-				pGermany.setUHV( 2, 0 )
+				self.lostUHV( iGermany, 2 )
 
 
 	def checkNovgorod( self, iGameTurn ):
@@ -1002,19 +961,17 @@ class Victory:
 					bOwn = False
 					break
 			if ( bOwn ):
-				pNovgorod.setUHV( 0, 1 )
-				pNovgorod.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iNovgorod, 0 )
 			else:
-				pNovgorod.setUHV( 0, 0 )
+				self.lostUHV( iNovgorod, 0 )
 
 		# UHV 2: Control eleven sources of fur by 1397
 		if (pNovgorod.getUHV( 1 ) == -1):
 			if (iGameTurn <= xml.i1397AD):
 				if (pNovgorod.countCultBorderBonuses(xml.iFur) >= 11):
-					pNovgorod.setUHV( 1, 1 )
-					pNovgorod.changeStabilityBase( iCathegoryExpansion, 3 )
+					self.wonUHV( iNovgorod, 1 )
 			else:
-				pNovgorod.setUHV( 1, 0 )
+				self.lostUHV( iNovgorod, 1 )
 
 		# UHV 3: Have seven cities in Karelia and Vologda in 1478
 		if (iGameTurn == xml.i1478AD and pNovgorod.getUHV( 2 ) == -1 ):
@@ -1022,10 +979,9 @@ class Victory:
 			for iProv in tNovgorodControlII:
 				iNumCities += pNovgorod.getProvinceCityCount( iProv )
 			if ( iNumCities >= 7 ):
-				pNovgorod.setUHV( 2, 1 )
-				pNovgorod.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iNovgorod, 2 )
 			else:
-				pNovgorod.setUHV( 2, 0 )
+				self.lostUHV( iNovgorod, 2 )
 
 
 	def checkKiev( self, iGameTurn ):
@@ -1033,7 +989,7 @@ class Victory:
 		# UHV 1: Build 2 Orthodox cathedrals and 8 Orthodox monasteries by 1250
 		# Controlled in the onBuildingBuilt function
 		if ( iGameTurn == xml.i1250AD+1 and pKiev.getUHV( 0 ) == -1 ):
-			pKiev.setUHV( 0, 0 )
+			self.lostUHV( iKiev, 0 )
 
 		# UHV 2: Control 10 provinces out of Kiev, Podolia, Pereyaslavl, Sloboda, Chernigov, Volhynia, Minsk, Polotsk, Smolensk, Moscow, Murom, Rostov, Novgorod and Vologda in 1288
 		if ( iGameTurn == xml.i1288AD and pKiev.getUHV( 1 ) == -1 ):
@@ -1042,20 +998,18 @@ class Victory:
 				if ( pKiev.getProvinceCurrentState( iProv ) >= con.iProvinceConquer ):
 					iConq += 1
 			if ( iConq > 9 ):
-				pKiev.setUHV( 1, 1 )
-				pKiev.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iKiev, 1 )
 			else:
-				pKiev.setUHV( 1, 0 )
+				self.lostUHV( iKiev, 1 )
 
 		# UHV 3: Produce 25000 food by 1300
 		iFood = pKiev.getUHVCounter( 2 ) + pKiev.calculateTotalYield(YieldTypes.YIELD_FOOD)
 		pKiev.setUHVCounter( 2, iFood )
 		if ( iGameTurn <= xml.i1300AD and pKiev.getUHV( 2 ) == -1 ):
 			if ( iFood > 25000 ):
-				pKiev.setUHV( 2, 1 )
-				pKiev.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iKiev, 2 )
 			elif ( iGameTurn == xml.i1300AD ):
-				pKiev.setUHV( 2, 0 )
+				self.lostUHV( iKiev, 2 )
 
 
 	def checkHungary( self, iGameTurn ):
@@ -1069,10 +1023,9 @@ class Victory:
 						bClean = False
 						break
 			if ( bClean ):
-				pHungary.setUHV( 0, 1 )
-				pHungary.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iHungary, 0 )
 			else:
-				pHungary.setUHV( 0, 0 )
+				self.lostUHV( iHungary, 0 )
 
 		# UHV 2: Control the most territory in Europe in 1490
 		if ( iGameTurn == xml.i1490AD and pHungary.getUHV( 1 ) == -1 ):
@@ -1085,22 +1038,20 @@ class Victory:
 					bMost = False
 					break
 			if bMost:
-				pHungary.setUHV( 1, 1 )
-				pHungary.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iHungary, 1 )
 			else:
-				pHungary.setUHV( 1, 0 )
+				self.lostUHV( iHungary, 1 )
 
 		# UHV 3: Be the first to adopt Free Religion
 		if ( pHungary.getUHV( 2 ) == -1 ):
 			iCivic = pHungary.getCivics(4)
 			if ( iCivic == xml.iCivicFreeReligion ):
-				pHungary.setUHV( 2, 1 )
-				pHungary.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iHungary, 2 )
 			else:
 				for iPlayer in range( iNumMajorPlayers ):
 					pPlayer = gc.getPlayer( iPlayer )
 					if ( pPlayer.isAlive() and pPlayer.getCivics(4) == xml.iCivicFreeReligion ):
-						pHungary.setUHV( 2, 0 )
+						self.lostUHV( iHungary, 2 )
 
 
 	def checkSpain( self, iGameTurn ):
@@ -1113,10 +1064,9 @@ class Victory:
 					bConverted = False
 					break
 			if ( bConverted ):
-				pSpain.setUHV( 0, 1 )
-				pSpain.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iSpain, 0 )
 			else:
-				pSpain.setUHV( 0, 0 )
+				self.lostUHV( iSpain, 0 )
 
 		# UHV 2: Have more Colonies than any other nation in 1588 (while having at least 3)
 		if ( iGameTurn == xml.i1588AD and pSpain.getUHV( 1 ) == -1 ):
@@ -1128,10 +1078,9 @@ class Victory:
 					if ( pPlayer.isAlive() and self.getNumRealColonies(iPlayer) >= iSpainColonies ):
 						bMost = False
 			if ( bMost and iSpainColonies >= 3 ):
-				pSpain.setUHV( 1, 1 )
-				pSpain.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iSpain, 1 )
 			else:
-				pSpain.setUHV( 1, 0 )
+				self.lostUHV( iSpain, 1 )
 
 		# UHV 3: Ensure that the Catholic nations have more population and more land than any other religion in 1648
 		if ( iGameTurn == xml.i1648AD and pSpain.getUHV( 2 ) == -1 ):
@@ -1160,10 +1109,9 @@ class Victory:
 						bWon = False
 
 			if ( pSpain.getStateReligion() == xml.iCatholicism and bWon ):
-				pSpain.setUHV( 2, 1 )
-				pSpain.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iSpain, 2 )
 			else:
-				pSpain.setUHV( 2, 0 )
+				self.lostUHV( iSpain, 2 )
 
 
 	def checkScotland( self, iGameTurn ):
@@ -1174,10 +1122,9 @@ class Victory:
 			iCastles = pScotland.countNumBuildings( xml.iCastle )
 			print("Forts:",iForts,"Castles:",iCastles)
 			if( iForts >= 10 and iCastles >= 4 ):
-				pScotland.setUHV( 0, 1 )
-				pScotland.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iScotland, 0 )
 		if ( iGameTurn == xml.i1296AD and pScotland.getUHV( 0 ) == -1):
-			pScotland.setUHV( 0, 0 )
+			self.lostUHV( iScotland, 0 )
 
 		# UHV 2: Have 2500 attitude points with France by 1560 (attitude points go up every turn depending on your relations)
 		if ( iGameTurn <= xml.i1560AD and pFrankia.isAlive() and pScotland.getUHV( 1 ) == -1):
@@ -1209,10 +1156,9 @@ class Victory:
 			iNewScore = iOldScore + iScore
 			pScotland.setUHVCounter(1, iNewScore)
 			if(iNewScore >= 2500):
-				pScotland.setUHV( 1, 1 )
-				pScotland.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iScotland, 1 )
 		elif ( iGameTurn > xml.i1560AD and pScotland.getUHV( 1 ) == -1 ):
-			pScotland.setUHV( 1, 0 )
+			self.lostUHV( iScotland, 1 )
 
 		# UHV 3: Control Scotland, The Isles, Ireland, Wales, Brittany and Galicia in 1700
 		if ( iGameTurn == xml.i1700AD and pScotland.getUHV( 2 ) == -1 ):
@@ -1222,10 +1168,9 @@ class Victory:
 					bConq = False
 					break
 			if ( bConq ):
-				pScotland.setUHV( 2, 1 )
-				pScotland.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iScotland, 2 )
 			else:
-				pScotland.setUHV( 2, 0 )
+				self.lostUHV( iScotland, 2 )
 
 
 	def checkPoland( self, iGameTurn ):
@@ -1242,10 +1187,9 @@ class Victory:
 					bFood = False
 					break
 			if (bFood):
-				pPoland.setUHV( 0, 1 )
-				pPoland.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iPoland, 0 )
 			elif ( iGameTurn == xml.i1520AD ):
-				pPoland.setUHV( 0, 0 )
+				self.lostUHV( iPoland, 0 )
 
 		# UHV 2: Control 12 cities in the given provinces in 1600AD
 		if (iGameTurn == xml.i1600AD and pPoland.getUHV( 1 ) == -1 ):
@@ -1253,10 +1197,9 @@ class Victory:
 			for iProv in tPolishControl:
 				iNumCities += pPoland.getProvinceCityCount( iProv )
 			if ( iNumCities >= 12 ):
-				pPoland.setUHV( 1, 1 )
-				pPoland.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iPoland, 1 )
 			else:
-				pPoland.setUHV( 1, 0 )
+				self.lostUHV( iPoland, 1 )
 
 		# UHV 3: Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and have at least 2 Jewish Quarters in your cities
 		# Controlled in the onBuildingBuilt and onCityAcquired functions
@@ -1272,10 +1215,9 @@ class Victory:
 					bConq = False
 					break
 			if ( bConq ):
-				pGenoa.setUHV( 0, 1 )
-				pGenoa.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iGenoa, 0 )
 			else:
-				pGenoa.setUHV( 0, 0 )
+				self.lostUHV( iGenoa, 0 )
 
 		# UHV 2: Build 8 Banks
 		# Controlled in the onBuildingBuilt function
@@ -1291,10 +1233,9 @@ class Victory:
 						bLargest = False
 						break
 			if ( bLargest ):
-				pGenoa.setUHV( 2, 1 )
-				pGenoa.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iGenoa, 2 )
 			else:
-				pGenoa.setUHV( 2, 0 )
+				self.lostUHV( iGenoa, 2 )
 
 
 	def checkMorocco( self, iGameTurn ):
@@ -1307,10 +1248,9 @@ class Victory:
 					bConq = False
 					break
 			if ( bConq ):
-				pMorocco.setUHV( 0, 1 )
-				pMorocco.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iMorocco, 0 )
 			else:
-				pMorocco.setUHV( 0, 0 )
+				self.lostUHV( iMorocco, 0 )
 
 		# UHV 2: Have 5000 culture in each of three cities in 1465
 		if (iGameTurn == xml.i1465AD and pMorocco.getUHV( 1 ) == -1):
@@ -1322,10 +1262,9 @@ class Victory:
 					iGoodCities += 1;
 
 			if(iGoodCities >= 3):
-				pMorocco.setUHV( 1, 1 )
-				pMorocco.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iMorocco, 1 )
 			else:
-				pMorocco.setUHV( 1, 0 )
+				self.lostUHV( iMorocco, 1 )
 
 		# UHV 3: Destroy or vassalize Portugal, Spain, and Aragon by 1578
 		if (iGameTurn >= xml.i1164AD and iGameTurn <= xml.i1578AD and pMorocco.getUHV( 2 ) == -1):
@@ -1338,10 +1277,9 @@ class Victory:
 				bConq = False
 
 			if( bConq ):
-				pMorocco.setUHV( 2, 1 )
-				pMorocco.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iMorocco, 2 )
 		elif (iGameTurn > xml.i1578AD and pMorocco.getUHV( 2 ) == -1):
-			pMorocco.setUHV( 2, 0 )
+			self.lostUHV( iMorocco, 2 )
 
 
 	def checkEngland( self, iGameTurn ):
@@ -1354,10 +1292,9 @@ class Victory:
 					bConq = False
 					break
 			if ( bConq ):
-				pEngland.setUHV( 0, 1 )
-				pEngland.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iEngland, 0 )
 			else:
-				pEngland.setUHV( 0, 0 )
+				self.lostUHV( iEngland, 0 )
 
 		# UHV 2: Build 7 Colonies
 		# Controlled in the onProjectBuilt function
@@ -1374,8 +1311,7 @@ class Victory:
 		# UHV 2: Do not lose a city before 1640
 		# Controlled in the onCityAcquired function
 		if ( iGameTurn == xml.i1640AD and pPortugal.getUHV( 1 ) == -1 ):
-			pPortugal.setUHV( 1, 1 )
-			pPortugal.changeStabilityBase( iCathegoryExpansion, 3 )
+			self.wonUHV( iPortugal, 1 )
 
 		# UHV 3: Build 5 Colonies
 		# Controlled in the onProjectBuilt function
@@ -1391,20 +1327,18 @@ class Victory:
 					bConq = False
 					break
 			if ( bConq ):
-				pAragon.setUHV( 0, 1 )
-				pAragon.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iAragon, 0 )
 			else:
-				pAragon.setUHV( 0, 0 )
+				self.lostUHV( iAragon, 0 )
 
 		# UHV 2: Have 12 Consulates of the Sea in 1444
 		if ( iGameTurn == xml.i1444AD ):
 			iPorts = pAragon.countNumBuildings(xml.iAragonSeaport)
 			print("Ports:",iPorts)
 			if( iPorts >= 12  ):
-				pAragon.setUHV( 1, 1 )
-				pAragon.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iAragon, 1 )
 			else:
-				pAragon.setUHV( 1, 0 )
+				self.lostUHV( iAragon, 1 )
 
 		# UHV 3: Control Catalonia, Valencia, Aragon, Balears, Corsica, Sardinia, Sicily, Calabria, Apulia, Provence and Thessaly in 1474
 		if ( iGameTurn == xml.i1474AD and pAragon.getUHV( 2 ) == -1 ):
@@ -1414,10 +1348,9 @@ class Victory:
 					bConq = False
 					break
 			if ( bConq ):
-				pAragon.setUHV( 2, 1 )
-				pAragon.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iAragon, 2 )
 			else:
-				pAragon.setUHV( 2, 0 )
+				self.lostUHV( iAragon, 2 )
 
 
 	def checkPrussia( self, iGameTurn ):
@@ -1430,15 +1363,14 @@ class Victory:
 					bOwn = False
 					break
 			if ( bOwn ):
-				pPrussia.setUHV( 0, 1 )
-				pPrussia.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iPrussia, 0 )
 			else:
-				pPrussia.setUHV( 0, 0 )
+				self.lostUHV( iPrussia, 0 )
 
 		# UHV 2: Conquer two cities from each of Austria, Muscowy, Germany, Sweden, France and Spain between 1650 and 1763, if they are still alive
 		# Controlled in the onCityAcquired function
 		if ( iGameTurn > xml.i1763AD and pPrussia.getUHV( 1 ) == -1 ):
-			pPrussia.setUHV( 1, 0 )
+			self.lostUHV( iPrussia, 1 )
 
 		# UHV 3: Settle a total of 15 Great People in your capital
 		if ( pPrussia.getUHV(2) == - 1 ):
@@ -1449,8 +1381,7 @@ class Victory:
 			for iType in range(iGPStart, iGPEnd+1):
 				iGPeople += pCapital.getFreeSpecialistCount(iType)
 			if(iGPeople >= 15):
-				pPrussia.setUHV( 2, 1 )
-				pPrussia.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iPrussia, 2 )
 
 
 	def checkLithuania( self, iGameTurn ):
@@ -1460,29 +1391,25 @@ class Victory:
 		pLithuania.setUHVCounter( 0, iCulture )
 		if ( iGameTurn <= xml.i1386AD and pLithuania.getUHV( 0 ) == -1 ):
 			if ( pLithuania.getStateReligion() != -1 ):
-				pLithuania.setUHV( 0, 0 )
+				self.lostUHV( iLithuania, 0 )
 			elif ( iCulture >= 2000 ):
-				pLithuania.setUHV( 0, 1 )
-				pLithuania.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iLithuania, 0 )
 			elif ( iGameTurn == xml.i1386AD ):
-				pLithuania.setUHV( 0, 0 )
+				self.lostUHV( iLithuania, 0 )
 
 		# UHV 2: Have at least 18 cities in 1569
 		if ( iGameTurn == xml.i1569AD and pLithuania.getUHV( 1 ) == -1 ):
 			if ( pLithuania.getNumCities() >= 18 ):
-				pLithuania.setUHV( 1, 1 )
-				pLithuania.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iLithuania, 1 )
 			else:
-				pLithuania.setUHV( 1, 0 )
+				self.lostUHV( iLithuania, 1 )
 
 		# UHV 3: Conquer the province of Moscow or vassalize Muscovy
 		if ( pLithuania.getUHV( 2 ) == -1 ):
 			if ( pMoscow.isAlive() and teamMoscow.isVassal( teamLithuania.getID() ) ):
-				pLithuania.setUHV( 2, 1 )
-				pLithuania.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iLithuania, 2 )
 			elif ( (iGameTurn > xml.i1401AD) and (pLithuania.getProvinceCurrentState( xml.iP_Moscow ) >= con.iProvinceConquer) ):
-				pLithuania.setUHV( 2, 1 )
-				pLithuania.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iLithuania, 2 )
 
 
 	def checkAustria( self, iGameTurn ):
@@ -1495,10 +1422,9 @@ class Victory:
 					bConq = False
 					break
 			if ( bConq ):
-				pAustria.setUHV( 0, 1 )
-				pAustria.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iAustria, 0 )
 			else:
-				pAustria.setUHV( 0, 0 )
+				self.lostUHV( iAustria, 0 )
 
 		# UHV 2: Have 3 vassals in 1700
 		if ( iGameTurn == xml.i1700AD and pAustria.getUHV( 1 ) == -1 ):
@@ -1509,18 +1435,16 @@ class Victory:
 					if ( gc.getTeam( pPlayer.getTeam() ).isVassal( iAustria ) ):
 						iCount += 1
 			if ( iCount >= 3 ):
-				 pAustria.setUHV( 1, 1 )
-				 pAustria.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iAustria, 1 )
 			else:
-				 pAustria.setUHV( 1, 0 )
+				self.lostUHV( iAustria, 1 )
 
 		# UHV 3: Have the highest score in 1780
 		if ( iGameTurn == xml.i1780AD and pAustria.getUHV( 2 ) == -1 ):
 			if ( gc.getGame().getTeamRank(iAustria) == 0 ):
-				 pAustria.setUHV( 2, 1 )
-				 pAustria.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iAustria, 2 )
 			else:
-				 pAustria.setUHV( 2, 0 )
+				self.lostUHV( iAustria, 2 )
 
 
 	def checkTurkey( self, iGameTurn ):
@@ -1533,10 +1457,9 @@ class Victory:
 					bConq = False
 					break
 			if ( bConq ):
-				pTurkey.setUHV( 0, 1 )
-				pTurkey.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iTurkey, 0 )
 			else:
-				pTurkey.setUHV( 0, 0 )
+				self.lostUHV( iTurkey, 0 )
 
 		# UHV 2: Conquer Anatolia, the Levant and Egypt by 1517
 		if ( iGameTurn == xml.i1517AD and pTurkey.getUHV( 1 ) == -1 ):
@@ -1546,10 +1469,9 @@ class Victory:
 					bConq = False
 					break
 			if ( bConq ):
-				pTurkey.setUHV( 1, 1 )
-				pTurkey.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iTurkey, 1 )
 			else:
-				pTurkey.setUHV( 1, 0 )
+				self.lostUHV( iTurkey, 1 )
 
 		# UHV 3: Conquer Austria by 1683
 		if ( iGameTurn <= xml.i1683AD and pTurkey.getUHV( 2 ) == -1 ):
@@ -1559,10 +1481,9 @@ class Victory:
 					bConq = False
 					break
 			if ( bConq ):
-				pTurkey.setUHV( 2, 1 )
-				pTurkey.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iTurkey, 2 )
 			elif ( iGameTurn == xml.i1683AD ):
-				pTurkey.setUHV( 2, 0 )
+				self.lostUHV( iTurkey, 2 )
 
 
 	def checkMoscow( self, iGameTurn ):
@@ -1575,10 +1496,9 @@ class Victory:
 					bClean = False
 					break
 			if ( bClean ):
-				pMoscow.setUHV( 0, 1 )
-				pMoscow.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iMoscow, 0 )
 			else:
-				pMoscow.setUHV( 0, 0 )
+				self.lostUHV( iMoscow, 0 )
 
 		# UHV 2: Control at least 20% of Europe
 		if ( pMoscow.getUHV( 1 ) == -1 ):
@@ -1589,17 +1509,14 @@ class Victory:
 			else:
 				landPercent = 0.0
 			if ( landPercent >= 20 ):
-				pMoscow.setUHV( 1, 1 )
-				pMoscow.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iMoscow, 1 )
 
 		# UHV 3: Get into warm waters
 		if ( pMoscow.getUHV( 2 ) == -1 ):
 			if ( pMoscow.countCultBorderBonuses( xml.iAccess ) > 0 ):
-				pMoscow.setUHV( 2, 1 )
-				pMoscow.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iMoscow, 2 )
 			elif ( gc.getMap().plot( con.tCapitals[iByzantium][0], con.tCapitals[iByzantium][1] ).getPlotCity().getOwner() == iMoscow ):
-				pMoscow.setUHV( 2, 1 )
-				pMoscow.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iMoscow, 2 )
 
 
 	def checkSweden( self, iGameTurn ):
@@ -1614,23 +1531,21 @@ class Victory:
 			for iProv in tSwedenControl:
 				iNumCities += pSweden.getProvinceCityCount(iProv)
 			if ( iNumCities >= 6 ):
-				pSweden.setUHV( 0, 1 )
-				pSweden.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iSweden, 0 )
 			else:
-				pSweden.setUHV( 0, 0 )
+				self.lostUHV( iSweden, 0 )
 
 		# UHV 2: Raze 5 Catholic cities while being Protestant by 1660
 		# Controlled in the onCityRazed function
 		if ( iGameTurn == xml.i1660AD and pSweden.getUHV( 1 ) == -1 ):
-			pSweden.setUHV( 1, 0 )
+			self.lostUHV( iSweden, 1 )
 
 		# UHV 3: Control every coastal city on the Baltic in 1750
 		if (iGameTurn == xml.i1750AD):
-			if(up.getNumForeignCitiesOnBaltic(iSweden, True) > 0):
-				pSweden.setUHV( 2, 0 )
+			if (up.getNumForeignCitiesOnBaltic(iSweden, True) > 0):
+				self.lostUHV( iSweden, 2 )
 			else:
-				pSweden.setUHV( 2, 1 )
-				pSweden.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iSweden, 2 )
 
 
 	def checkDutch( self, iGameTurn ):
@@ -1640,11 +1555,10 @@ class Victory:
 			pPlot = gc.getMap().plot( con.tCapitals[iDutch][0], con.tCapitals[iDutch][1])
 			if ( pPlot.isCity() ):
 				if ( pPlot.getPlotCity().getFreeSpecialistCount(xml.iGreatMerchant) >= 5 ):
-					pDutch.setUHV( 0, 1 )
-					pDutch.changeStabilityBase( iCathegoryExpansion, 3 )
+					self.wonUHV( iDutch, 0 )
 		else:
 			if ( pDutch.getUHV( 0 ) == -1 ):
-				pDutch.setUHV( 0, 0 )
+				self.lostUHV( iDutch, 0 )
 
 		# UHV 2: Build 3 Colonies and complete both Trading Companies
 		# Controlled in the onProjectBuilt function
@@ -1658,13 +1572,33 @@ class Victory:
 					if (gc.getPlayer(iCiv).getGold() > iGold):
 						bMost = False
 			if ( bMost ):
-				 pDutch.setUHV( 2, 1 )
-				 pDutch.changeStabilityBase( iCathegoryExpansion, 3 )
+				self.wonUHV( iDutch, 2 )
+
+
+	def wonUHV(self, iCiv, iUHV):
+		pCiv = gc.getPlayer(iCiv)
+		pCiv.setUHV( iUHV, 1 )
+		pCiv.changeStabilityBase( iCathegoryExpansion, 3 )
+		if utils.getHumanID() == iCiv:
+			popup = Popup.PyPopup()
+			popup.setBodyString(localText.getText("TXT_KEY_VICTORY_UHV_GOAL_WON", (iUHV+1,)))
+			popup.launch()
+
+
+	def lostUHV(self, iCiv, iUHV):
+		pCiv = gc.getPlayer(iCiv)
+		pCiv.setUHV( iUHV, 0 )
+		if utils.getHumanID() == iCiv:
+			popup = Popup.PyPopup()
+			popup.setBodyString(localText.getText("TXT_KEY_VICTORY_UHV_GOAL_LOST", (iUHV+1,)))
+			popup.launch()
+
 
 	def setAllUHVFailed( self, iCiv ):
 		pPlayer = gc.getPlayer(iCiv)
 		for i in range(3):
 			pPlayer.setUHV( i, 0 )
+
 
 	def SwitchUHV(self, iNewCiv, iOldCiv):
 		pPlayer = gc.getPlayer(iNewCiv)
@@ -1672,6 +1606,7 @@ class Victory:
 			pPlayer.setUHV( i, -1 )
 		if self.isIgnoreAI():
 			self.setAllUHVFailed(iOldCiv)
+
 
 	def set1200UHVDone( self, iCiv ):
 		if iCiv == iByzantium:

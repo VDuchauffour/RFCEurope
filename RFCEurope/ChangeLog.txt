@@ -362,6 +362,8 @@ Changes for RFCE 1.5:
 		- Revised frequency of pillaging messages, added message on pillaged roads too
 		- Incorporated useful RFCUtils from Dawn of Civilization (Credits to Leoreth)
 		- Revision of python code: More efficiency and better readability
+		- Popup message for the player when a UHV goal is completed or failed
+		- Popup message for the player a couple turns before the Seljuk/Mongol/Timurid invasions
 
 	Bugfixes:
 		- Fixed strange visibility area for the Ottomans
@@ -382,7 +384,7 @@ Changes for RFCE 1.5:
 		- Fixed a couple minor issues and inconsistencies with some old leftover code from vanilla RFC
 		- Added a couple more bugfixes (and minor fixes for Firaxis oversights) from Karadoc/K-mod
 		- Fixed dates for a couple events/deadlines, including the Norwegian 2nd UHV and the Bulgarian 3rd UHV
-		- Fixed wrong class for a couple resources, which resulted in wrong AI value associated with them
+		- Fixed wrong class for a couple resources, which resulted in wrong AI values associated with them (for example in trade deals)
 		- Fixed issue with character encoding in a couple DCN related files, now all special characters should be displayed correctly
 		- Fixed vanilla BtS display bug where messages about civic changes didn't show up if it was an initially set civic
 		- Fixed vanilla RFC bug where civics were set back to the basic ones for most AI civs which started before the civ with autoplay (so the human controlled civ)

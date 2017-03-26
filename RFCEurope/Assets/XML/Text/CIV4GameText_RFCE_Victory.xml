@@ -125,6 +125,24 @@
 		<Portuguese>Objetivos históricos cumpridos:</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_UHV_GOAL_WON</Tag>
+		<English>Rejoice! Goal %d1 of your historical victory has been accomplished!</English>
+		<French>Rejoice! Goal %d1 of your historical victory has been accomplished!</French>
+		<German>Rejoice! Goal %d1 of your historical victory has been accomplished!</German>
+		<Italian>Rejoice! Goal %d1 of your historical victory has been accomplished!</Italian>
+		<Spanish>Rejoice! Goal %d1 of your historical victory has been accomplished!</Spanish>
+		<Portuguese>Rejoice! Goal %d1 of your historical victory has been accomplished!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_UHV_GOAL_LOST</Tag>
+		<English>Unfortunately you have failed goal %d1 of your historical victory!</English>
+		<French>Unfortunately you have failed goal %d1 of your historical victory!</French>
+		<German>Unfortunately you have failed goal %d1 of your historical victory!</German>
+		<Italian>Unfortunately you have failed goal %d1 of your historical victory!</Italian>
+		<Spanish>Unfortunately you have failed goal %d1 of your historical victory!</Spanish>
+		<Portuguese>Unfortunately you have failed goal %d1 of your historical victory!</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MIN_LATITUDE</Tag>
 		<English>[COLOR_WARNING_TEXT]Is automatically built in your capital when you achieve 2 out of your 3 Historical Goals[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Est automatiquement construit lorsque 2 objectifs historiques sur 3 sont atteints[COLOR_REVERT]</French>

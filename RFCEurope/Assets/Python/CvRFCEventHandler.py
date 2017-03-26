@@ -6,7 +6,7 @@ import PyHelpers
 import CvMainInterface #Mercenaries
 import CvMercenaryManager #Mercenaries
 import CvScreenEnums #Mercenaries
-import Popup as PyPopup
+import Popup
 
 from StoredData import sd #edead
 import RiseAndFall
@@ -32,6 +32,7 @@ import Mercenaries
 import RFCEMaps as rfcemaps
 
 gc = CyGlobalContext()
+localText = CyTranslator() #Absinthe
 #iBetrayalCheaters = 15
 
 #Civ constants
@@ -658,15 +659,53 @@ class CvRFCEventHandler:
 		if (self.rnf.getDeleteMode(0) != -1):
 			self.rnf.deleteMode(iPlayer)
 
-		# refresh Dynamic Civ Names
+		# Absinthe: refresh Dynamic Civ Names
 		if (iPlayer < con.iNumMajorPlayers):
 			gc.getPlayer(iPlayer).processCivNames()
 
-		# refresh Dynamic Civ Names for all civs on the human player's initial turn of the given scenario
+		# Absinthe: refresh Dynamic Civ Names for all civs on the human player's initial turn of the given scenario
 		if utils.getHumanID() == iPlayer:
 			if iGameTurn == utils.getScenarioStartTurn():
 				for iDCNPlayer in range(con.iNumMajorPlayers):
 					gc.getPlayer(iDCNPlayer).processCivNames()
+
+		# Absinthe: popup message a couple turns before the Seljuk/Mongol/Timurid invasions
+		# Seljuks
+		if iGameTurn == xml.i1064AD - 7:
+			if iPlayer == con.iByzantium and utils.getHumanID() == iPlayer:
+				popup = Popup.PyPopup()
+				popup.setBodyString(localText.getText("TXT_KEY_BARBARIAN_INVASION_START", ()))
+				popup.launch()
+		if iGameTurn == xml.i1094AD + 1:
+			if iPlayer == con.iByzantium and utils.getHumanID() == iPlayer:
+				popup = Popup.PyPopup()
+				sText = "Seljuk"
+				popup.setBodyString(localText.getText("TXT_KEY_BARBARIAN_INVASION_END", (sText,)))
+				popup.launch()
+		# Mongols
+		if iGameTurn == xml.i1236AD - 7:
+			if iPlayer in [con.iKiev, con.iHungary, con.iPoland, con.iBulgaria] and utils.getHumanID() == iPlayer:
+				popup = Popup.PyPopup()
+				popup.setBodyString(localText.getText("TXT_KEY_BARBARIAN_INVASION_START", ()))
+				popup.launch()
+		if iGameTurn == xml.i1288AD + 1:
+			if iPlayer in [con.iKiev, con.iHungary, con.iPoland, con.iBulgaria] and utils.getHumanID() == iPlayer:
+				popup = Popup.PyPopup()
+				sText = "Tatar"
+				popup.setBodyString(localText.getText("TXT_KEY_BARBARIAN_INVASION_END", (sText,)))
+				popup.launch()
+		# Timurids
+		if iGameTurn == xml.i1380AD - 7:
+			if iPlayer in [con.iArabia, con.iTurkey, con.iByzantium] and utils.getHumanID() == iPlayer:
+				popup = Popup.PyPopup()
+				popup.setBodyString(localText.getText("TXT_KEY_TIMURID_INVASION_START", ()))
+				popup.launch()
+		if iGameTurn == xml.i1431AD + 1:
+			if iPlayer in [con.iArabia, con.iTurkey, con.iByzantium] and utils.getHumanID() == iPlayer:
+				popup = Popup.PyPopup()
+				sText = "Timurid"
+				popup.setBodyString(localText.getText("TXT_KEY_BARBARIAN_INVASION_END", (sText,)))
+				popup.launch()
 
 		# Denmark UP
 		if (iPlayer == con.iDenmark):
