@@ -360,6 +360,8 @@ Changes for RFCE 1.5:
 		- Reenabled civic change messages - for all civs you have contact with, for all change-types (revolution, diplo, spy, etc.)
 		- Civic/religion/many other interface messages will now use the DCN name instead of the short description of the civ
 		- Revised frequency of pillaging messages, added message on pillaged roads too
+		- Incorporated useful RFCUtils from Dawn of Civilization (Credits to Leoreth)
+		- Revision of python code: More efficiency and better readability
 
 	Bugfixes:
 		- Fixed strange visibility area for the Ottomans

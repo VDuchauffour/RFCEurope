@@ -306,6 +306,8 @@ iGreatPalace = iSummerPalace
 iPlague = iNumBuildings
 iNumBuildingsPlague = iNumBuildings+1
 
+iBeginWonders = iVersailles
+iEndWonders = iLanterna
 
 #Projects, Colonies
 iNumProjects = 25

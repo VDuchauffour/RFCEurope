@@ -213,7 +213,7 @@ class Crusades:
 		lTargetList.append( gc.getMap().plot( tJerusalem[0], tJerusalem[1] ).getPlotCity().getName() + " (" + gc.getPlayer( gc.getMap().plot( tJerusalem[0], tJerusalem[1] ).getPlotCity().getOwner() ).getCivilizationAdjective(0) + ")" )
 		for iPlayer in range( con.iNumPlayers ):
 			pPlayer = gc.getPlayer( iPlayer )
-			if ( iPlayer == con.iPope or pPlayer.getStateReligion() == iCatholicism or ( not pPlayer.isAlive() ) ):
+			if iPlayer == con.iPope or pPlayer.getStateReligion() == iCatholicism or not pPlayer.isAlive():
 				self.setIsTarget( iPlayer, False )
 			else:
 				self.setIsTarget( iPlayer, True )
@@ -243,52 +243,52 @@ class Crusades:
 
 	def endCrusades(self):
 		for i in range( iNumCrusades ):
-			if ( self.getCrusadeInit( i ) < 0 ):
+			if self.getCrusadeInit( i ) < 0:
 				self.setCrusadeInit( i, 0 )
 
 	def checkTurn( self, iGameTurn ):
 		#print(" 3Miro Crusades ")
 		#self.informPopup()
 
-		if ( self.getCrusadeToReturn() > -1 ):
+		if self.getCrusadeToReturn() > -1:
 			self.freeCrusaders( self.getCrusadeToReturn() )
 			self.setCrusadeToReturn( -1 )
 
 		# Absinthe: crusade date - 5 means the exact time for the arrival
-		if ( iGameTurn == (xml.i1096AD - 5) ): #First Crusade arrives in 1096AD
+		if iGameTurn == (xml.i1096AD - 5): #First Crusade arrives in 1096AD
 			self.setCrusadeInit( 0, -1 ) # turn 160
-		elif ( iGameTurn >= (xml.i1147AD - 7) and self.getCrusadeInit( 0 ) > 0 and self.getCrusadeInit(1) == -2 ): # Crusade of 1147AD, little earlier (need to be more than 9 turns between crusades)
+		elif iGameTurn >= (xml.i1147AD - 7) and self.getCrusadeInit( 0 ) > 0 and self.getCrusadeInit(1) == -2: # Crusade of 1147AD, little earlier (need to be more than 9 turns between crusades)
 			self.setCrusadeInit( 1, -1 ) # turn 176
-		elif ( iGameTurn >= (xml.i1187AD - 8) and self.getCrusadeInit( 1 ) > 0 and self.getCrusadeInit(2) == -2 ): # Crusade of 1187AD, little earlier (need to be more than 9 turns between crusades)
+		elif iGameTurn >= (xml.i1187AD - 8) and self.getCrusadeInit( 1 ) > 0 and self.getCrusadeInit(2) == -2: # Crusade of 1187AD, little earlier (need to be more than 9 turns between crusades)
 			self.setCrusadeInit( 2, -1 ) # turn 187
-		elif ( iGameTurn >= (xml.i1202AD - 4) and self.getCrusadeInit( 2 ) > 0 and self.getCrusadeInit(3) == -2 ): # Crusade of 1202AD, little later (need to be more than 9 turns between crusades)
+		elif iGameTurn >= (xml.i1202AD - 4) and self.getCrusadeInit( 2 ) > 0 and self.getCrusadeInit(3) == -2: # Crusade of 1202AD, little later (need to be more than 9 turns between crusades)
 			self.setCrusadeInit( 3, -1 ) # turn 197
-		elif ( iGameTurn >= (xml.i1229AD - 3) and self.getCrusadeInit( 3 ) > 0 and self.getCrusadeInit(4) == -2 ): # Crusade of 1229AD, little later (need to be more than 9 turns between crusades)
+		elif iGameTurn >= (xml.i1229AD - 3) and self.getCrusadeInit( 3 ) > 0 and self.getCrusadeInit(4) == -2: # Crusade of 1229AD, little later (need to be more than 9 turns between crusades)
 			self.setCrusadeInit( 4, -1 ) # turn 207
-	#	elif ( iGameTurn >= (xml.i1271AD - 5) and self.getCrusadeInit( 4 ) > 0 and self.getCrusadeInit(5) == -2 ): # Crusade of 1270AD
+	#	elif iGameTurn >= (xml.i1271AD - 5) and self.getCrusadeInit( 4 ) > 0 and self.getCrusadeInit(5) == -2: # Crusade of 1270AD
 	#		self.setCrusadeInit( 5, -1 ) # turn 219
 
-		if ( iGameTurn == xml.i1000AD ): # indulgances for the Reconquista given by the Catholic Church 1000AD
+		if iGameTurn == xml.i1000AD: # indulgances for the Reconquista given by the Catholic Church 1000AD
 			self.setDCEnabled( True )
 
-		if ( self.isDCEnabled() ):
+		if self.isDCEnabled():
 			self.doDC( iGameTurn )
 
 		self.checkToStart( iGameTurn )
 
 		iActiveCrusade = self.getActiveCrusade( iGameTurn )
-		if ( iActiveCrusade > -1 ):
+		if iActiveCrusade > -1:
 			iStartDate = self.getCrusadeInit( iActiveCrusade )
-			if ( iStartDate == iGameTurn ):
+			if iStartDate == iGameTurn:
 				self.doParticipation( iGameTurn )
 
-			elif ( iStartDate + 1 == iGameTurn ):
+			elif iStartDate + 1 == iGameTurn:
 				self.computeVotingPower( iGameTurn )
 				self.setCrusaders()
 				for i in range( 8 ):
 					self.setSelectedUnit( i, 0 )
 				for iPlayer in range( con.iNumPlayers ):
-					if ( self.getVotingPower( iPlayer ) > 0 ):
+					if self.getVotingPower( iPlayer ) > 0:
 						self.sendUnits( iPlayer )
 				print( " After the units are sent: " )
 				print( " Crusade has Power: ", self.getCrusadePower() )
@@ -300,30 +300,30 @@ class Crusades:
 				print( " Crusade Lancers: ",self.getSelectedUnit( 5 ) )
 				print( " Crusade Siege: ",self.getSelectedUnit( 6 ) )
 				print( " Crusade Other: ",self.getSelectedUnit( 7 ) )
-				if ( not self.anyParticipate() ):
+				if not self.anyParticipate():
 					return
 				self.chooseCandidates( iGameTurn )
 				self.voteForCandidatesAI()
 				self.voteForCandidatesHuman()
 				#print("  Votes are: ",self.getVotesGatheredFavorite(), self.getVotesGatheredPowerful() )
 
-			elif ( iStartDate + 2 == iGameTurn ):
-				if ( not self.anyParticipate() ):
+			elif iStartDate + 2 == iGameTurn:
+				if not self.anyParticipate():
 					return
 				self.selectVoteWinner()
 				self.decideTheRichestCatholic( iActiveCrusade )
-				if ( self.getRichestCatholic() == utils.getHumanID() ):
+				if self.getRichestCatholic() == utils.getHumanID():
 					self.decideDeviateHuman()
 				else:
 					self.decideDeviateAI()
 
-			elif ( iStartDate + 5 == iGameTurn ):
-				if ( not self.anyParticipate() ):
+			elif iStartDate + 5 == iGameTurn:
+				if not self.anyParticipate():
 					return
 				print( " Arrival " )
 				self.crusadeArrival()
 
-			elif ( iStartDate + 8 == iGameTurn ):
+			elif iStartDate + 8 == iGameTurn:
 				iLeader = self.getLeader()
 				self.setCrusadeToReturn( iLeader )
 				self.setLeader(-1)
@@ -333,45 +333,30 @@ class Crusades:
 	# if Jerusalem is Islamic or Pagan, Crusade has been initialized and it has been at least 5 turns since the last crusade and there are any Catholics, begin crusade
 		pJPlot = gc.getMap().plot( tJerusalem[0], tJerusalem[1] )
 		for i in range( iNumCrusades ): # check the Crusades
-			if ( self.getCrusadeInit( i ) == -1 ): # if this one is to start
-				if ( pJPlot.isCity() and self.anyCatholic() ): # if there is Jerusalem and there are any Catholics
+			if self.getCrusadeInit( i ) == -1: # if this one is to start
+				if pJPlot.isCity() and self.anyCatholic(): # if there is Jerusalem and there are any Catholics
 					#Sedna17 -- allowing crusades against independent Jerusalem
-					#if ( pJPlot.getPlotCity().getOwner() < con.iNumMajorPlayers ): # if Jerusalem is not Independent
-					#iTmJerusalem = gc.getTeam( gc.getPlayer( gc.getMap().plot( tJerusalem[0], tJerusalem[1] ).getPlotCity().getOwner() ).getTeam() )
-					iVictim = pJPlot.getPlotCity().getOwner() # get the information for the potential Victim
-					pVictim = gc.getPlayer( iVictim )
-					teamVictim = gc.getTeam( pVictim.getTeam() )
-					iVictimReligion = pVictim.getStateReligion()
-					if ( (iVictimReligion != iCatholicism and iVictimReligion != iOrthodoxy) or (pJPlot.getPlotCity().getOwner() > con.iNumMajorPlayers) ): # if the Victim is non-Catholic non-Orthodox
-						bVassalOfImmune = False
-						for iPlayerMaster in range( con.iNumMajorPlayers ): # for all the players, check to see if the Victim is a Vassal of a Catholic or Orthodox player
-							pMaster = gc.getPlayer( iPlayerMaster ) # they are immune from Crusades
-							iTMaster = pMaster.getTeam()
-							if ( iPlayerMaster != iVictim and teamVictim.isVassal( iTMaster ) ):
-								iMasterReligion = pMaster.getStateReligion()
-								if ( iMasterReligion == iOrthodoxy or iMasterReligion == iCatholicism ):
-									bVassalOfImmune = True
-
-						if ( (not bVassalOfImmune) and (i == 0 or ( self.getCrusadeInit( i-1 ) > -1 and self.getCrusadeInit( i-1 ) + 9 < iGameTurn ) ) ):
-							self.setCrusadeInit( i, iGameTurn )
-							print( "Crusade Starting Turn ",iGameTurn )
+					iVictim = pJPlot.getPlotCity().getOwner()
+					if self.isOrMasterChristian(iVictim):
+						break
+					if i == 0 or ( self.getCrusadeInit( i-1 ) > -1 and self.getCrusadeInit( i-1 ) + 9 < iGameTurn ):
+						self.setCrusadeInit( i, iGameTurn )
+						print( "Crusade Starting Turn ",iGameTurn )
 
 	def anyCatholic( self ):
-		for i in range( con.iNumPlayers ):
-			if ( not ( i == con.iPope ) ):
-				if ( gc.getPlayer(i).getStateReligion() == iCatholicism ):
-					return True
+		for i in range( con.iNumPlayers-1 ):
+			if gc.getPlayer(i).getStateReligion() == iCatholicism:
+				return True
 		return False
 
 	def anyParticipate( self ):
-		for i in range( con.iNumPlayers ):
-			if ( not ( i == con.iPope ) ):
-				if ( self.getVotingPower( i ) > 0 ):
-					return True
+		for i in range( con.iNumPlayers-1 ):
+			if self.getVotingPower( i ) > 0:
+				return True
 		return False
 
 	def eventApply7616( self, popupReturn ):
-		if ( popupReturn.getButtonClicked() == 0 ):
+		if popupReturn.getButtonClicked() == 0:
 			self.setParticipate( True )
 			gc.getPlayer( utils.getHumanID() ).setIsCrusader( True )
 			print("  Going on a Crusade " )
@@ -386,17 +371,17 @@ class Crusades:
 			#3Miro: put penalty for not going to the crusade
 
 	def eventApply7618( self, popupReturn ):
-		if ( popupReturn.getButtonClicked() == 0 ):
+		if popupReturn.getButtonClicked() == 0:
 			self.setVotesGatheredFavorite( self.getVotesGatheredFavorite() + self.getVotingPower( utils.getHumanID() ) )
 		else:
 			self.setVotesGatheredPowerful( self.getVotesGatheredPowerful() + self.getVotingPower( utils.getHumanID() ) )
 
 	def eventApply7619( self, popupReturn ):
-		if ( popupReturn.getButtonClicked() == 0 ):
+		if popupReturn.getButtonClicked() == 0:
 			iHuman = utils.getHumanID()
 			pHuman = gc.getPlayer( iHuman )
 			#pHuman.setGold( pHuman.getGold() - gc.getPlayer( utils.getHumanID() ).getGold() / 4 )
-			pHuman.setGold( pHuman.getGold() - pHuman.getGold() / 3 )
+			pHuman.changeGold( - pHuman.getGold() / 3 )
 			self.setLeader( iHuman )
 			self.setCrusadePower( self.getCrusadePower() / 2 )
 			self.deviateNewTargetPopup()
@@ -406,16 +391,16 @@ class Crusades:
 
 	def eventApply7620( self, popupReturn ):
 		iDecision = popupReturn.getButtonClicked()
-		if ( iDecision == 0 ):
+		if iDecision == 0:
 			self.setTarget( tJerusalem[0], tJerusalem[1] )
 			self.startCrusade()
 			return
 		iTargets = 0
 		#print(" 3Miro Deviate Crusade: ",iDecision )
 		for i in range( con.iNumPlayers ):
-			if ( self.getIsTarget( i ) ):
+			if self.getIsTarget( i ):
 				iTargets += 1
-			if ( iTargets == iDecision ):
+			if iTargets == iDecision:
 				pTargetCity = gc.getPlayer( i ).getCapitalCity()
 				self.setTarget( pTargetCity.getX(), pTargetCity.getY() )
 				iDecision = -2
@@ -425,9 +410,9 @@ class Crusades:
 	def doParticipation( self, iGameTurn ):
 		iHuman = utils.getHumanID()
 		#print(" 3Miro Crusades doPart", iHuman, iGameTurn )
-		if ( con.tBirth[iHuman] < iGameTurn ):
+		if con.tBirth[iHuman] < iGameTurn:
 			pHuman = gc.getPlayer( iHuman )
-			if ( pHuman.getStateReligion() != iCatholicism ):
+			if pHuman.getStateReligion() != iCatholicism:
 				self.setParticipate( False )
 				CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_CRUSADE_CALLED", ()), "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
 				#print(" 3Miro Crusades not Catholic: " )
@@ -441,33 +426,31 @@ class Crusades:
 		bFound = False
 		iFavorite = 0
 		iFavor = 0
-		for i in range( con.iNumPlayers ):
-			if ( not ( i == con.iPope ) ):
-				if ( self.getVotingPower( i ) > 0 ):
-					if ( bFound ):
-						iNFavor = gc.getRelationTowards( con.iPope, i )
-						if ( iNFavor > iFavor ):
-							iNFavor = iFavor
-							iFavorite = i
-					else:
-						iFavor = gc.getRelationTowards( con.iPope, i )
+		for i in range( con.iNumPlayers-1 ):
+			if self.getVotingPower( i ) > 0:
+				if bFound:
+					iNFavor = gc.getRelationTowards( con.iPope, i )
+					if iNFavor > iFavor:
+						iNFavor = iFavor
 						iFavorite = i
-						bFound = True
+				else:
+					iFavor = gc.getRelationTowards( con.iPope, i )
+					iFavorite = i
+					bFound = True
 		self.setFavorite( iFavorite )
 
 		iPowerful = iFavorite
 		iPower = self.getVotingPower( iPowerful )
 
-		for i in range( con.iNumPlayers ):
-			if ( not ( i == con.iPope ) ):
-				if ( self.getVotingPower( i ) > iPower or ( iPowerful == iFavorite and self.getVotingPower( i ) > 0 ) ):
-					iPowerful = i
-					iPower = self.getVotingPower( iPowerful )
+		for i in range( con.iNumPlayers-1 ):
+			if self.getVotingPower( i ) > iPower or ( iPowerful == iFavorite and self.getVotingPower( i ) > 0 ):
+				iPowerful = i
+				iPower = self.getVotingPower( iPowerful )
 
 		print( " Candidates ", iFavorite, iPowerful )
 		for i in range( con.iNumPlayers ):
 			print( " Civ voting power is: ", i, self.getVotingPower(i) )
-		if ( iPowerful == iFavorite ):
+		if iPowerful == iFavorite:
 			self.setPowerful( -1 )
 		else:
 			self.setPowerful( iPowerful )
@@ -477,7 +460,7 @@ class Crusades:
 		iTmJerusalem = gc.getPlayer( gc.getMap().plot( tJerusalem[0], tJerusalem[1] ).getPlotCity().getOwner() ).getTeam()
 		for iPlayer in range( con.iNumPlayers ):
 			pPlayer = gc.getPlayer( iPlayer )
-			if ( (con.tBirth[iPlayer] > iGameTurn) or (not pPlayer.isAlive()) or (pPlayer.getStateReligion() != iCatholicism) or ( gc.getTeam( pPlayer.getTeam() ).isVassal( iTmJerusalem ) )  ):
+			if con.tBirth[iPlayer] > iGameTurn or not pPlayer.isAlive() or pPlayer.getStateReligion() != iCatholicism or gc.getTeam( pPlayer.getTeam() ).isVassal( iTmJerusalem ):
 				self.setVotingPower( iPlayer, 0 )
 			else:
 				# We use the (similarly named) getVotingPower from CvPlayer.cpp to determine a vote value for a given State Religion, but it's kinda strange
@@ -486,7 +469,7 @@ class Crusades:
 
 		# No votes from the human player if he/she won't participate (AI civs will always participate)
 		iHuman = utils.getHumanID()
-		if ( not self.getParticipate() ):
+		if not self.getParticipate():
 			self.setVotingPower( iHuman, 0 )
 
 		# The Pope has more votes (Rome is small anyway)
@@ -504,7 +487,7 @@ class Crusades:
 		iHuman = utils.getHumanID()
 		#teamJerusalem = gc.getTeam( gc.getPlayer( gc.getMap().plot( tJerusalem[0], tJerusalem[1] ).getPlotCity().getOwner() ).getTeam() )
 		for iPlayer in range( con.iNumPlayers ):
-			if ( (not iPlayer == iHuman) and self.getVotingPower( iPlayer ) > 0 ):
+			if not iPlayer == iHuman and self.getVotingPower( iPlayer ) > 0:
 				gc.getPlayer( iPlayer ).setIsCrusader( True )
 
 
@@ -512,84 +495,84 @@ class Crusades:
 		#iHuman = utils.getHumanID()
 		pPlayer = gc.getPlayer( iPlayer )
 		iNumUnits = pPlayer.getNumUnits()
-		if ( con.tBirth[iPlayer] + 10 > gc.getGame().getGameTurn() ): # in the first 10 turns
-			if (iNumUnits < 10):
+		if con.tBirth[iPlayer] + 10 > gc.getGame().getGameTurn(): # in the first 10 turns
+			if iNumUnits < 10:
 				iMaxToSend = 0
 			else:
 				iMaxToSend = 1
-		elif ( con.tBirth[iPlayer] + 25 > gc.getGame().getGameTurn() ): # between turn 10-25
+		elif con.tBirth[iPlayer] + 25 > gc.getGame().getGameTurn(): # between turn 10-25
 			iMaxToSend = min( 10, max( 1, (5*iNumUnits) / 50 ) )
 		else:
 			iMaxToSend = min( 10, max( 1, (5*iNumUnits) / 35 ) ) # after turn 25
 		iCrusadersSend = 0
 		print ("iMaxToSend", iPlayer, iNumUnits, iMaxToSend)
-		if (iMaxToSend > 0):
+		if iMaxToSend > 0:
 			for i in range( iNumUnits ):
 				pUnit = pPlayer.getUnit( i )
 				# Absinthe: check only for combat units and ignore naval units
-				if (pUnit.baseCombatStr() > 0 and pUnit.getDomainType() != 0):
+				if pUnit.baseCombatStr() > 0 and pUnit.getDomainType() != DomainTypes.DOMAIN_SEA:
 					# Absinthe: mercenaries and leaders (units with attached Great Generals) won't go
-					if ( (not pUnit.isHasPromotion( xml.iPromotionMerc )) and (not pUnit.isHasPromotion( xml.iPromotionLeader )) ):
+					if not pUnit.isHasPromotion( xml.iPromotionMerc ) and not pUnit.isHasPromotion( xml.iPromotionLeader ):
 						iCrusadeCategory = self.unitCrusadeCategory( pUnit.getUnitType() )
 						pPlot = gc.getMap().plot( pUnit.getX(), pUnit.getY() )
 						iRandNum = gc.getGame().getSorenRandNum(100, 'roll to send Unit to Crusade')
 						# Absinthe: much bigger chance for special Crusader units and Knights
-						if ( iCrusadeCategory < 4):
-							if ( pPlot.isCity() ):
-								if ( self.getNumDefendersAtPlot( pPlot ) > 3 ):
-									if (iRandNum < 90 ):
+						if iCrusadeCategory < 4:
+							if pPlot.isCity():
+								if self.getNumDefendersAtPlot( pPlot ) > 3:
+									if iRandNum < 90:
 										iCrusadersSend += 1
 										self.sendUnit( pUnit )
-								elif ( self.getNumDefendersAtPlot( pPlot ) > 1 ):
-									if (iRandNum < 60 ):
+								elif self.getNumDefendersAtPlot( pPlot ) > 1:
+									if iRandNum < 60:
 										iCrusadersSend += 1
 										self.sendUnit( pUnit )
-							elif (iRandNum < 90 ):
+							elif iRandNum < 90:
 								iCrusadersSend += 1
 								self.sendUnit( pUnit )
 						else:
-							if ( pPlot.isCity() ):
-								if ( self.getNumDefendersAtPlot( pPlot ) > 2 ):
-									if (iRandNum < self.unitProbability( pUnit.getUnitType() ) ):
+							if pPlot.isCity():
+								if self.getNumDefendersAtPlot( pPlot ) > 2:
+									if iRandNum < self.unitProbability( pUnit.getUnitType() ):
 										iCrusadersSend += 1
 										self.sendUnit( pUnit )
-							elif ( iRandNum < self.unitProbability( pUnit.getUnitType() ) ):
+							elif iRandNum < self.unitProbability( pUnit.getUnitType() ):
 									iCrusadersSend += 1
 									self.sendUnit( pUnit )
-						if ( iCrusadersSend == iMaxToSend ):
+						if iCrusadersSend == iMaxToSend:
 							return
 			# Absinthe: extra chance for some random units, if we didn't fill the quota
 			for i in range( 15 ):
 				iRandUnit = gc.getGame().getSorenRandNum(iNumUnits, 'roll to pick Unit for Crusade')
 				pUnit = pPlayer.getUnit( iRandUnit )
-				pPlot = gc.getMap().plot( pUnit.getX(), pUnit.getY() )
 				# Absinthe: check only for combat units and ignore naval units
-				if (pUnit.baseCombatStr() > 0 and pUnit.getDomainType() != 0):
+				if pUnit.baseCombatStr() > 0 and pUnit.getDomainType() != 0:
 					# Absinthe: mercenaries and leaders (units with attached Great Generals) won't go
-					if ( (not pUnit.isHasPromotion( xml.iPromotionMerc )) and (not pUnit.isHasPromotion( xml.iPromotionLeader )) ):
-						if ( pPlot.isCity() ):
-							if ( self.getNumDefendersAtPlot( pPlot ) > 2 ):
-								if ( gc.getGame().getSorenRandNum(100, 'roll to send Unit to Crusade') < self.unitProbability( pUnit.getUnitType() ) ):
+					if not pUnit.isHasPromotion( xml.iPromotionMerc ) and not pUnit.isHasPromotion( xml.iPromotionLeader ):
+						pPlot = gc.getMap().plot( pUnit.getX(), pUnit.getY() )
+						if pPlot.isCity():
+							if self.getNumDefendersAtPlot( pPlot ) > 2:
+								if gc.getGame().getSorenRandNum(100, 'roll to send Unit to Crusade') < self.unitProbability( pUnit.getUnitType() ):
 									iCrusadersSend += 1
 									self.sendUnit( pUnit )
 						else:
-							if ( gc.getGame().getSorenRandNum(100, 'roll to send Unit to Crusade') < self.unitProbability( pUnit.getUnitType() ) ):
+							if gc.getGame().getSorenRandNum(100, 'roll to send Unit to Crusade') < self.unitProbability( pUnit.getUnitType() ):
 								iCrusadersSend += 1
 								self.sendUnit( pUnit )
-						if ( iCrusadersSend == iMaxToSend ):
-							break
+						if iCrusadersSend == iMaxToSend:
+							return
 
 
 	def getNumDefendersAtPlot( self, pPlot ):
 		iOwner = pPlot.getOwner()
-		if ( iOwner < 0 ):
+		if iOwner < 0:
 			return 0
 		iNumUnits = pPlot.getNumUnits()
 		iDefenders = 0
 		for i in range( iNumUnits ):
 			pUnit = pPlot.getUnit(i)
-			if ( pUnit.getOwner() == iOwner ):
-				if (pUnit.baseCombatStr() > 0 and pUnit.getDomainType() != 0):
+			if pUnit.getOwner() == iOwner:
+				if pUnit.baseCombatStr() > 0 and pUnit.getDomainType() != DomainTypes.DOMAIN_SEA:
 					iDefenders += 1
 		return iDefenders
 
@@ -600,7 +583,7 @@ class Crusades:
 		self.addSelectedUnit( self.unitCrusadeCategory( pUnit.getUnitType() ) )
 		self.setVotingPower( iOwner, self.getVotingPower( iOwner ) + 2 )
 		print ("Unit was chosen for Crusade:", iOwner, pUnit.getUnitType() )
-		if ( iOwner == iHuman ):
+		if iOwner == iHuman:
 			CyInterface().addMessage(iHuman, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_CRUSADE_LEAVE", ()) + " " + pUnit.getName(), "AS2D_BUILD_CHRISTIAN", 0, "", ColorTypes(con.iOrange), -1, -1, True, True)
 		pUnit.kill( 0, -1 )
 
@@ -612,15 +595,15 @@ class Crusades:
 			return 66
 		if iUnitType in [xml.iTemplar, xml.iTeutonic, xml.iKnightofStJohns, xml.iCalatravaKnight, xml.iDragonKnight]:
 			return 90
-		if ( iUnitType < xml.iArcher or iUnitType > xml.iFieldArtillery ): # Workers, Executives, Missionaries, Sea Units and Mercenaries do not go
+		if iUnitType < xml.iArcher or iUnitType > xml.iFieldArtillery: # Workers, Executives, Missionaries, Sea Units and Mercenaries do not go
 			return -1
 		return 50
 
 
 	def unitCrusadeCategory( self, iUnitType ):
-		if ( iUnitType == xml.iTemplar ):
+		if iUnitType == xml.iTemplar:
 			return 0
-		if ( iUnitType == xml.iTeutonic ):
+		if iUnitType == xml.iTeutonic:
 			return 1
 		if iUnitType in [xml.iKnightofStJohns, xml.iCalatravaKnight, xml.iDragonKnight]:
 			return 2
@@ -637,9 +620,9 @@ class Crusades:
 
 	def voteForCandidatesAI( self ):
 		iHuman = utils.getHumanID()
-		if ( self.getPowerful() == -1 ):
+		if self.getPowerful() == -1:
 			self.setLeader( self.getFavorite() )
-			if ( self.getParticipate() ):
+			if self.getParticipate():
 				self.informLeaderPopup()
 			elif utils.isActive(iHuman):
 				CyInterface().addMessage(iHuman, True, con.iDuration/2, gc.getPlayer( self.getLeader() ).getName() + CyTranslator().getText("TXT_KEY_CRUSADE_LEAD", ()), "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
@@ -647,23 +630,24 @@ class Crusades:
 
 		iFavorite = self.getFavorite()
 		iPowerful = self.getPowerful()
-		if ( iFavorite == iHuman ):
+		if iFavorite == iHuman:
 			iFavorVotes = 0
 		else:
 			iFavorVotes = self.getVotingPower( iFavorite )
-		if ( iPowerful == iHuman ):
+		if iPowerful == iHuman:
 			iPowerVotes = 0
 		else:
 			iPowerVotes = self.getVotingPower( iPowerful )
 
 		#print( " AI Voting for self", iFavorVotes, iPowerVotes )
 
-		for i in range( con.iNumPlayers ):
-			iVotes = self.getVotingPower( i )
-			if ( iVotes > 0 and ( not ( (i == iHuman) or (i == iFavorite) or (i == iPowerful) ) ) ):
+		for iPlayer in range( con.iNumPlayers ):
+			if iPlayer == iHuman or iPlayer == iFavorite or iPlayer == iPowerful: continue
+			iVotes = self.getVotingPower( iPlayer )
+			if iVotes > 0:
 				# vote AI
 				#print( " AI now voting ",i,iVotes )
-				if ( gc.getRelationTowards( i, iFavorite ) > gc.getRelationTowards( i, iPowerful ) ):
+				if gc.getRelationTowards( iPlayer, iFavorite ) > gc.getRelationTowards( iPlayer, iPowerful ):
 					iFavorVotes += iVotes
 				else:
 					iPowerVotes += iVotes
@@ -674,16 +658,16 @@ class Crusades:
 		self.setVotesGatheredPowerful( iPowerVotes )
 
 	def voteForCandidatesHuman( self ):
-		if ( self.getParticipate() and ( not self.getPowerful() == -1 ) ):
+		if self.getParticipate() and not self.getPowerful() == -1:
 			self.voteHumanPopup()
 
 	def selectVoteWinner( self ):
-		if ( self.getVotesGatheredPowerful() > self.getVotesGatheredFavorite() ):
+		if self.getVotesGatheredPowerful() > self.getVotesGatheredFavorite():
 			self.setLeader( self.getPowerful() )
 		else:
 			self.setLeader( self.getFavorite() )
 
-		if ( self.getParticipate() ):
+		if self.getParticipate():
 			self.informLeaderPopup()
 		elif utils.isActive(utils.getHumanID()):
 			CyInterface().addMessage(utils.getHumanID(), True, con.iDuration/2, gc.getPlayer( self.getLeader() ).getName() + CyTranslator().getText("TXT_KEY_CRUSADE_LEAD", ()), "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
@@ -693,26 +677,28 @@ class Crusades:
 		#gc.getTeam( gc.getPlayer( self.getLeader() ) ).declareWar( pJPlot.getPlotCity().getOwner(), True, -1 )
 
 	def decideTheRichestCatholic( self, iActiveCrusade ):
+		# The First Crusade cannot be deviated
+		if iActiveCrusade == 0:
+			self.setRichestCatholic( -1 )
+			return
+
 		iRichest = -1
 		iMoney = 0
 		#iPopeMoney = gc.getPlayer( con.iPope ).getGold()
 		for i in range( con.iNumPlayers -1 ):
-			pPlayer = gc.getPlayer( i )
-			if ( self.getVotingPower( i ) > 0 ):
+			if self.getVotingPower( i ) > 0:
+				pPlayer = gc.getPlayer( i )
 				iPlayerMoney = pPlayer.getGold()
 				#if ( iPlayerMoney > iMoney and iPlayerMoney > iPopeMoney ):
-				if ( iPlayerMoney > iMoney ):
+				if iPlayerMoney > iMoney:
 					iRichest = i
 					iMoney = iPlayerMoney
 
-		if ( not iRichest == con.iPope ):
+		if iRichest != con.iPope:
 			self.setRichestCatholic( iRichest )
 		else:
 			self.setRichestCatholic( -1 )
 
-		# The First Crusade cannot be deviated
-		if ( iActiveCrusade == 0 ):
-			self.setRichestCatholic( -1 )
 
 	def decideDeviateHuman( self ):
 		self.deviateHumanPopup()
@@ -720,34 +706,34 @@ class Crusades:
 	def decideDeviateAI( self ):
 		iRichest = self.getRichestCatholic()
 		bStolen = False
-		if ( iRichest == con.iVenecia or iRichest == con.iGenoa ):
+		if iRichest in [con.iVenecia, con.iGenoa]:
 			pByzantium = gc.getPlayer( con.iByzantium )
-			if ( pByzantium.isAlive() ):
+			if pByzantium.isAlive():
 				# Only if Byzantium holds Constantinople and not a vassal
 				pConstantinoplePlot = gc.getMap().plot( 81, 24 ) # tCapitals[con.iByzantium]
 				pConstantinopleCity = pConstantinoplePlot.getPlotCity()
 				iConstantinopleOwner = pConstantinopleCity.getOwner()
 				bIsNotAVassal = not utils.isAVassal(con.iByzantium)
-				if (iConstantinopleOwner == con.iByzantium and bIsNotAVassal):
+				if iConstantinopleOwner == con.iByzantium and bIsNotAVassal:
 					self.crusadeStolenAI( iRichest, con.iByzantium )
 					bStolen = True
-		if ( iRichest == con.iSpain or iRichest == con.iPortugal or iRichest == con.iAragon ):
+		elif iRichest in [con.iSpain, con.iPortugal, con.iAragon]:
 			pCordoba = gc.getPlayer( con.iCordoba )
-			if ( pCordoba.isAlive() ):
+			if pCordoba.isAlive():
 				# Only if Cordoba is Muslim and not a vassal
 				bIsNotAVassal = not utils.isAVassal(con.iCordoba)
-				if (pCordoba.getStateReligion() == xml.iIslam and bIsNotAVassal):
+				if pCordoba.getStateReligion() == xml.iIslam and bIsNotAVassal:
 					self.crusadeStolenAI( iRichest, con.iCordoba )
 					bStolen = True
-		if ( iRichest == con.iHungary or iRichest == con.iPoland or iRichest == con.iAustria ):
+		elif iRichest in [con.iHungary, con.iPoland, con.iAustria]:
 			pTurkey = gc.getPlayer( con.iTurkey )
-			if ( pTurkey.isAlive() ):
+			if pTurkey.isAlive():
 				# Only if the Ottomans are Muslim and not a vassal
 				bIsNotAVassal = not utils.isAVassal(con.iTurkey)
-				if (pTurkey.getStateReligion() == xml.iIslam and bIsNotAVassal):
+				if pTurkey.getStateReligion() == xml.iIslam and bIsNotAVassal:
 					self.crusadeStolenAI( iRichest, con.iTurkey )
 					bStolen = True
-		if ( not bStolen ):
+		if not bStolen:
 			self.setTarget( tJerusalem[0], tJerusalem[1] )
 
 		self.startCrusade()
@@ -772,16 +758,16 @@ class Crusades:
 		pTargetCity = gc.getMap().plot( iX, iY ).getPlotCity()
 		iTargetPlayer = pTargetCity.getOwner()
 		# Target city can change ownership during the voting
-		if ( gc.getPlayer( iTargetPlayer ).getStateReligion() == iCatholicism ):
+		if gc.getPlayer( iTargetPlayer ).getStateReligion() == iCatholicism:
 			self.setLeader( -1 )
 			self.returnCrusaders()
 			return
-		if ( iTargetPlayer == iHuman ):
+		if iTargetPlayer == iHuman:
 			self.underCrusadeAttackPopup( pTargetCity.getName(), iLeader )
 		elif utils.isActive(iHuman):
-			sCityName = cnm.lookupName(pTargetCity,con.iPope)
-			if ( sCityName == 'Unknown' ):
-				sCityName = cnm.lookupName(pTargetCity,iLeader)
+			sCityName = cnm.lookupName(pTargetCity, con.iPope)
+			if sCityName == 'Unknown':
+				sCityName = cnm.lookupName(pTargetCity, iLeader)
 			sText = CyTranslator().getText("TXT_KEY_CRUSADE_START", (gc.getPlayer(iLeader).getCivilizationAdjectiveKey(), gc.getPlayer(iLeader).getName(), gc.getPlayer(iTargetPlayer).getCivilizationAdjectiveKey(), sCityName))
 			CyInterface().addMessage(iHuman, False, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
 
@@ -798,72 +784,62 @@ class Crusades:
 
 		# if the leader has been destroyed, cancel the Crusade
 		iLeader = self.getLeader()
-		if ( (iLeader==-1) or (not gc.getPlayer( iLeader ).isAlive()) ):
+		if iLeader == -1 or not gc.getPlayer( iLeader ).isAlive():
 			self.returnCrusaders()
 			return
 
 		# if in the mean time Jerusalem has been captured by an Orthodox or Catholic player (and target is Jerusalem), cancel the Crusade
-		if ( iTX == tJerusalem[0] and iTY == tJerusalem[1] ): # if the target is Jerusalem
+		if (iTX, iTY) == tJerusalem:
 			pPlot = gc.getMap().plot( tJerusalem[0], tJerusalem[1] )
-			if ( pPlot.isCity() ): # and it is still there
-				iVictim = pPlot.getPlotCity().getOwner() # get the Victim
-				if ( iVictim < con.iNumMajorPlayers ): # if not Independent
+			if pPlot.isCity():
+				iVictim = pPlot.getPlotCity().getOwner()
+				if iVictim < con.iNumMajorPlayers:
 					iReligion = gc.getPlayer( iVictim ).getStateReligion()
-					if ( iReligion == iCatholicism or iReligion == iOrthodoxy ): # now controlled by Orthodox or Catholic (i.e. change of Religion)
+					if iReligion in [iCatholicism, iOrthodoxy]:
 						return
 
 		# if not at war with the owner of the city, declare war
 		pPlot = gc.getMap().plot( iTX, iTY )
-		if ( pPlot.isCity() ):
+		if pPlot.isCity():
 			iVictim = pPlot.getPlotCity().getOwner()
-			if ( iVictim != iLeader and gc.getPlayer(iVictim).getStateReligion() != iCatholicism ):
+			if iVictim != iLeader and gc.getPlayer(iVictim).getStateReligion() != iCatholicism:
 				teamLeader = gc.getTeam( gc.getPlayer(iLeader).getTeam() )
-				iTeamVictim = gc.getTeam( gc.getPlayer(iVictim).getTeam() ).getID()
-				if ( not teamLeader.isAtWar( iTeamVictim ) ):
-					if ( teamLeader.canDeclareWar( iTeamVictim ) ):
+				iTeamVictim = gc.getPlayer(iVictim).getTeam()
+				if not teamLeader.isAtWar( iTeamVictim ):
+					if teamLeader.canDeclareWar( iTeamVictim ):
 						teamLeader.declareWar(iTeamVictim, False, -1)
 					else:
 						# we cannot declare war to the current owner of the target city
 						self.returnCrusaders()
 						return
 
-		for y in range( 3 ):
-			for x in range( 3 ):
-				iX = iTX + x - 1 # try to spawn not across the river
-				iY = iTY - y + 1
-				if ( iChosenX == -1 ): # if we haven't found a valid plot yet
-					if ( (iX>=0) and (iX<con.iMapMaxX) and (iY>=0) and (iY<con.iMapMaxY) ):
-						pPlot = gc.getMap().plot( iX, iY )
-						if ( pPlot.isHills() or pPlot.isFlatlands() ):
-							if ( pPlot.getNumUnits() == 0 and (not pPlot.isCity()) ):
-								iChosenX = iX
-								iChosenY = iY
+		lFreeLandPlots = []
+		lLandPlots = []
+		for (x, y) in utils.surroundingPlots((iTX, iTY)):
+			pPlot = gc.getMap().plot(x, y)
+			if (pPlot.isHills() or pPlot.isFlatlands()) and not pPlot.isCity():
+				lLandPlots.append((x, y))
+				if pPlot.getNumUnits() == 0:
+					lFreeLandPlots.append((x, y))
+		
+		if lFreeLandPlots:
+			(iChosenX, iChosenY) = utils.getRandomEntry(lFreeLandPlots)
+		elif lLandPlots:
+			(iChosenX, iChosenY) = utils.getRandomEntry(lLandPlots)
+			pPlot = gc.getMap().plot(iChosenX, iChosenY)
+			for i in range( pPlot.getNumUnits() ):
+				pPlot.getUnit(0).kill( False, con.iBarbarian )
 
-		if ( iChosenX == -1 ):
-			for y in range( 3 ):
-				for x in range( 3 ):
-					iX = iTX + x - 1
-					iY = iTY - y + 1
-					if ( iChosenX == -1 ): # if we haven't found a valid plot yet
-						if ( (iX>=0) and (iX<con.iMapMaxX) and (iY>=0) and (iY<con.iMapMaxY) ):
-							pPlot = gc.getMap().plot( iX, iY )
-							if ( pPlot.isHills or pPlot.isFlatlands() ):
-								iN = pPlot.getNumUnits()
-								for i in range( iN ):
-									pPlot.getUnit( i ).kill( False, con.iBarbarian )
-									iChosenX = iX
-									iChosenY = iY
-
-				print("Made Units on:", iChosenX, iChosenY, iLeader)
+		print("Made Units on:", iChosenX, iChosenY, iLeader)
 
 		# Absinthe: if a valid plot is found, make the units and send a message about the arrival to the human player
-		if ( (iChosenX>=0) and (iChosenX<con.iMapMaxX) and (iChosenY>=0) and (iChosenY<con.iMapMaxY) ):
-			self.crusadeMakeUnits( [iChosenX,iChosenY] )
-			if (utils.getHumanID() == iLeader):
+		if (iChosenX, iChosenY) != (-1, -1):
+			self.crusadeMakeUnits( (iChosenX, iChosenY) )
+			if utils.getHumanID() == iLeader:
 				pTargetCity = gc.getMap().plot( iTX, iTY ).getPlotCity()
-				sCityName = cnm.lookupName(pTargetCity,con.iPope)
-				if ( sCityName == 'Unknown' ):
-					sCityName = cnm.lookupName(pTargetCity,iLeader)
+				sCityName = cnm.lookupName(pTargetCity, con.iPope)
+				if sCityName == 'Unknown':
+					sCityName = cnm.lookupName(pTargetCity, iLeader)
 				CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_CRUSADE_ARRIVAL", (sCityName, )) + "!", "", 0, "", ColorTypes(con.iGreen), iChosenX, iChosenY, True, True)
 		else:
 			self.returnCrusaders()
@@ -891,9 +867,9 @@ class Crusades:
 
 		iTX, iTY = self.getTargetPlot()
 		# if the target is Jerusalem
-		if ( iTX == tJerusalem[0] and iTY == tJerusalem[1] ):
+		if (iTX, iTY) == tJerusalem:
 			iRougeModifier = 100
-			if (teamLeader.isHasTech( xml.iChivalry )):
+			if teamLeader.isHasTech( xml.iChivalry ):
 				self.makeUnit( xml.iKnight, iLeader, tPlot, 1 )
 				self.makeUnit( xml.iBurgundianPaladin, iLeader, tPlot, 1 )
 				self.makeUnit( xml.iTemplar, iLeader, tPlot, 1 )
@@ -909,7 +885,7 @@ class Crusades:
 		# if the Crusade is stolen
 		else:
 			iRougeModifier = 200
-			if (teamLeader.isHasTech( xml.iChivalry )):
+			if teamLeader.isHasTech( xml.iChivalry ):
 				self.makeUnit( xml.iKnight, iLeader, tPlot, 1 )
 				self.makeUnit( xml.iTeutonic, iLeader, tPlot, 1 )
 				self.makeUnit( xml.iLongSwordsman, iLeader, tPlot, 1 )
@@ -930,188 +906,143 @@ class Crusades:
 		# Absinthe: this reduction is very significant for an AI-controlled Jerusalem, but Crusades should remain an increasing threat to the human player
 		pPlot = gc.getMap().plot( tJerusalem[0], tJerusalem[1] )
 		iVictim = pPlot.getPlotCity().getOwner()
-		if (iVictim != iHuman):
-			if ( iCrusade == 0 ):
+		if iVictim != iHuman:
+			if iCrusade == 0:
 				iRougeModifier *= 7 / 5
-			elif ( iCrusade == 1 ):
+			elif iCrusade == 1:
 				iRougeModifier *= 8 / 5
-			elif ( iCrusade == 2 ):
+			elif iCrusade == 2:
 				iRougeModifier *= 10 / 5
-			elif ( iCrusade == 3 ):
+			elif iCrusade == 3:
 				iRougeModifier *= 12 / 5
-			elif ( iCrusade == 4 ):
+			elif iCrusade == 4:
 				iRougeModifier *= 15 / 5
 			else:
 				iRougeModifier *= 18 / 5
 		else:
-			if ( iCrusade == 0 ):
+			if iCrusade == 0:
 				iRougeModifier *= 6 / 5
-			elif ( iCrusade == 1 ):
+			elif iCrusade == 1:
 				iRougeModifier *= 7 / 5
-			elif ( iCrusade == 2 ):
+			elif iCrusade == 2:
 				iRougeModifier *= 8 / 5
-			elif ( iCrusade == 3 ):
+			elif iCrusade == 3:
 				iRougeModifier *= 9 / 5
-			elif ( iCrusade == 4 ):
+			elif iCrusade == 4:
 				iRougeModifier *= 10 / 5
 			else:
 				iRougeModifier *= 12 / 5
 
-		if ( self.getSelectedUnit( 0 ) > 0 ):
+		if self.getSelectedUnit( 0 ) > 0:
 			self.makeUnit( xml.iTemplar, iLeader, tPlot, self.getSelectedUnit( 0 ) * 100 / iRougeModifier )
-		if ( self.getSelectedUnit( 1 ) > 0 ):
+		if self.getSelectedUnit( 1 ) > 0:
 			self.makeUnit( xml.iTeutonic, iLeader, tPlot, self.getSelectedUnit( 1 ) * 100 / iRougeModifier )
-		if ( self.getSelectedUnit( 2 ) > 0 ):
+		if self.getSelectedUnit( 2 ) > 0:
 			self.makeUnit( xml.iKnightofStJohns, iLeader, tPlot, self.getSelectedUnit( 2 ) * 100 / iRougeModifier )
-		if ( self.getSelectedUnit( 3 ) > 0 ):
+		if self.getSelectedUnit( 3 ) > 0:
 			iKnightNumber = self.getSelectedUnit( 3 ) * 100 / iRougeModifier
-			if ( iLeader == con.iBurgundy ):
+			if iLeader == con.iBurgundy:
 				for i in range( 0, iKnightNumber ):
-					if (gc.getGame().getSorenRandNum(10, 'chance for Paladin') > 4): # Absinthe: 50% chance for a Paladin for each unit
+					if gc.getGame().getSorenRandNum(10, 'chance for Paladin') >= 5: # Absinthe: 50% chance for a Paladin for each unit
 						self.makeUnit( xml.iBurgundianPaladin, iLeader, tPlot, 1 )
 					else:
 						self.makeUnit( xml.iKnight, iLeader, tPlot, 1 )
 			else:
 				for i in range( 0, iKnightNumber ):
-					if (gc.getGame().getSorenRandNum(10, 'chance for Paladin') > 7): # Absinthe: 20% chance for a Paladin for each unit
+					if gc.getGame().getSorenRandNum(10, 'chance for Paladin') >= 8: # Absinthe: 20% chance for a Paladin for each unit
 						self.makeUnit( xml.iBurgundianPaladin, iLeader, tPlot, 1 )
 					else:
 						self.makeUnit( xml.iKnight, iLeader, tPlot, 1 )
-		if ( self.getSelectedUnit( 4 ) > 0 ):
+		if self.getSelectedUnit( 4 ) > 0:
 			iLightCavNumber = self.getSelectedUnit( 4 ) * 100 / iRougeModifier
-			if ( iLeader == con.iHungary ):
+			if iLeader == con.iHungary:
 				for i in range( 0, iLightCavNumber ):
-					if (gc.getGame().getSorenRandNum(10, 'chance for Huszar') > 4): # Absinthe: 50% chance for a Huszár for each unit
+					if (gc.getGame().getSorenRandNum(10, 'chance for Huszar') >= 5): # Absinthe: 50% chance for a Huszár for each unit
 						self.makeUnit( xml.iHungarianHuszar, iLeader, tPlot, 1 )
 					else:
 						self.makeUnit( xml.iHeavyLancer, iLeader, tPlot, 1 )
 			else:
 				self.makeUnit( xml.iHeavyLancer, iLeader, tPlot, iLightCavNumber )
-		if ( self.getSelectedUnit( 5 ) > 0 ):
+		if self.getSelectedUnit( 5 ) > 0:
 			self.makeUnit( xml.iLancer, iLeader, tPlot, self.getSelectedUnit( 5 ) * 100 / iRougeModifier )
-		if ( self.getSelectedUnit( 6 ) > 0 ):
+		if self.getSelectedUnit( 6 ) > 0:
 			iSiegeNumber = self.getSelectedUnit( 6 ) * 100 / iRougeModifier
-			if (iSiegeNumber > 2):
+			if iSiegeNumber > 2:
 				self.makeUnit( xml.iCatapult, iLeader, tPlot, 2 )
 				self.makeUnit( xml.iTrebuchet, iLeader, tPlot, iSiegeNumber - 2 )
 			else:
 				self.makeUnit( xml.iCatapult, iLeader, tPlot, iSiegeNumber )
-		if ( self.getSelectedUnit( 7 ) > 0 ):
+		if self.getSelectedUnit( 7 ) > 0:
 			iFootNumber = self.getSelectedUnit( 7 ) * 100 / iRougeModifier
 			for i in range( 0, iFootNumber ):
-				if (gc.getGame().getSorenRandNum(2, 'coinflip') == 1): # Absinthe: 50% chance for both type
+				if gc.getGame().getSorenRandNum(2, 'coinflip') == 1: # Absinthe: 50% chance for both type
 					self.makeUnit( xml.iLongSwordsman, iLeader, tPlot, 1 )
 				else:
 					self.makeUnit( xml.iGuisarme, iLeader, tPlot, 1 )
-
-
-		#if ( self.getCrusadePower() >  20 ):
-		#	self.makeUnit( xml.iLongSwordsman, iLeader, tPlot, 1 )
-
-		#if ( self.getCrusadePower() > 40 ):
-		#	self.makeUnit( xml.iLongSwordsman, iLeader, tPlot, 1 )
-		#	self.makeUnit( xml.iCatapult, iLeader, tPlot, 1 )
-
-		#if ( self.getCrusadePower() > 50 ):
-		#	self.makeUnit( xml.iLancer, iLeader, tPlot, 1 )
-
-		#if ( self.getCrusadePower() > 60 ):
-		#	#self.makeUnit( xml.iLancer, iLeader, tPlot, 1 )
-		#	self.makeUnit( xml.iTrebuchet, iLeader, tPlot, 1 )
-
-		#if ( self.getCrusadePower() > 70 ):
-		#	self.makeUnit( xml.iLancer, iLeader, tPlot, 1 )
-
-		#if ( self.getCrusadePower() > 90 ):
-		#	self.makeUnit( xml.iKnight, iLeader, tPlot, 1 )
-		#	self.makeUnit( xml.iTrebuchet, iLeader, tPlot, 1 )
 
 
 	def freeCrusaders( self, iPlayer ):
 		# the majority of Crusader units will return from the Crusade, so the Crusading civ will have harder time keeping Jerusalem and the Levant
 		unitList = PyPlayer( iPlayer ).getUnitList()
 		for pUnit in unitList:
-			if ( pUnit.getMercID() == -5 ): # so this is a Crusader Unit
+			if pUnit.getMercID() == -5: # so this is a Crusader Unit
 				pPlot = gc.getMap().plot( pUnit.getX(), pUnit.getY() )
 				iOdds = 80
 				iCrusadeCategory = self.unitCrusadeCategory( pUnit.getUnitType() )
-				if ( iCrusadeCategory < 3 ):
-					iOdds = -1 # Knight Orders don't return
-				elif ( iCrusadeCategory == 7 ):
+				if iCrusadeCategory < 3:
+					continue # Knight Orders don't return
+				elif iCrusadeCategory == 7:
 					iOdds = 50 # leave some defenders
-				if ( iOdds > 0 and pPlot.isCity() ):
-					if ( pPlot.getPlotCity().getOwner() == iPlayer ):
+				if pPlot.isCity():
+					if pPlot.getPlotCity().getOwner() == iPlayer:
 						iDefenders = self.getNumDefendersAtPlot( pPlot )
-						if ( iDefenders < 4 ):
+						if iDefenders < 4:
 							iOdds = 20
-							if ( iDefenders == 0 ):
-								iOdds = -1
+							if iDefenders == 0:
+								continue
 
-				if ( gc.getGame().getSorenRandNum(100, 'free Crusaders') < iOdds ):
+				if gc.getGame().getSorenRandNum(100, 'free Crusaders') < iOdds:
 					pUnit.kill( 0, -1 )
 					iHuman = utils.getHumanID()
-					if ( iHuman == iPlayer ):
+					if iHuman == iPlayer:
 						CyInterface().addMessage(iHuman, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_CRUSADE_CRUSADERS_RETURNING_HOME", ()) + " " + pUnit.getName(), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
 
 
 	# Absinthe: called from CvRFCEventHandler.onCityAcquired
 	def success( self, iPlayer ):
 		pPlayer = gc.getPlayer( iPlayer )
-		if ( not self.hasSucceeded() ):
+		if not self.hasSucceeded():
 			pPlayer.changeGoldenAgeTurns( gc.getPlayer( iPlayer).getGoldenAgeLength() )
 			self.setSucceeded()
-			pCurrent = gc.getMap().plot( tJerusalem[0]-1, tJerusalem[1]-1 )
-			utils.convertPlotCulture(pCurrent, iPlayer, 100, False)
-			pCurrent = gc.getMap().plot( tJerusalem[0]-1, tJerusalem[1] )
-			utils.convertPlotCulture(pCurrent, iPlayer, 100, False)
-			pCurrent = gc.getMap().plot( tJerusalem[0]-1, tJerusalem[1]+1 )
-			utils.convertPlotCulture(pCurrent, iPlayer, 100, False)
-			pCurrent = gc.getMap().plot( tJerusalem[0]+1, tJerusalem[1]+1 )
-			utils.convertPlotCulture(pCurrent, iPlayer, 100, False)
-			pCurrent = gc.getMap().plot( tJerusalem[0]+1, tJerusalem[1] )
-			utils.convertPlotCulture(pCurrent, iPlayer, 100, False)
-			pCurrent = gc.getMap().plot( tJerusalem[0]+1, tJerusalem[1]-1 )
-			utils.convertPlotCulture(pCurrent, iPlayer, 100, False)
-			pCurrent = gc.getMap().plot( tJerusalem[0], tJerusalem[1]+1 )
-			utils.convertPlotCulture(pCurrent, iPlayer, 100, False)
-			pCurrent = gc.getMap().plot( tJerusalem[0], tJerusalem[1]-1 )
-			utils.convertPlotCulture(pCurrent, iPlayer, 100, False)
+			for (x, y) in utils.surroundingPlots(tJerusalem):
+				pPlot = gc.getMap().plot( x, y )
+				utils.convertPlotCulture(pPlot, iPlayer, 100, False)
 
 
 	def doDC( self, iGameTurn ):
 		#print(" DC Check 1",iGameTurn,self.getDCLast())
-		if ( iGameTurn < self.getDCLast() + 15 ): # wait 15 turns between DCs (Defensive Crusades)
+		if iGameTurn < self.getDCLast() + 15: # wait 15 turns between DCs (Defensive Crusades)
 			return
-		if ( iGameTurn % 3 != gc.getGame().getSorenRandNum(3, 'roll to see if we should DC')  ): # otherwise every turn gets too much to check
+		if iGameTurn % 3 != gc.getGame().getSorenRandNum(3, 'roll to see if we should DC'): # otherwise every turn gets too much to check
 			return
 		#print(" DC Check")
-		lPotentials = []
-		for iPlayer in range( con.iNumPlayers - 1 ): # everyone except the Pope
-			if ( self.canDC( iPlayer, iGameTurn ) ):
-				lPotentials.append( iPlayer )
-				#print(" Oh, Holy Father, ",iPlayer," needs help! ")
+		lPotentials = [iPlayer for iPlayer in range(con.iNumPlayers-1) if self.canDC(iPlayer, iGameTurn)]
 		iChosen = -1
-		if ( len(lPotentials) > 0 ):
+		if lPotentials:
 			#print(" Oh, Holy Father, someone needs help! " )
 			pPope = gc.getPlayer( con.iPope )
 			iCatholicFaith = 0
-			for i in range( len(lPotentials) ):
-				pPlayer = gc.getPlayer( lPotentials[i] )
-				iCatholicFaith += pPlayer.getFaith() + pPope.AI_getAttitude( lPotentials[i] )
+			for iPlayer in lPotentials:
+				pPlayer = gc.getPlayer(iPlayer)
+				iCatholicFaith += pPlayer.getFaith() + pPope.AI_getAttitude(iPlayer)
 			#print(" Faith of the needy: ",iCatholicFaith )
-			if ( iCatholicFaith > 0 ):
-				iCatholicFaith += iCatholicFaith / 2 + 1
-				iRandNum = gc.getGame().getSorenRandNum(iCatholicFaith, 'roll to pick Someone for DC')
-				for i in range( len(lPotentials) ):
-					pPlayer = gc.getPlayer( lPotentials[i] )
-					iRandNum -= pPlayer.getFaith() + pPope.AI_getAttitude( lPotentials[i] )
-					if ( iRandNum <= 0 ):
-						iChosen = lPotentials[i]
-						break
+			if iCatholicFaith > 0:
+				if gc.getGame().getSorenRandNum(3, 'roll to pick Someone for DC') != 1: # 2/3 chance
+					iChosen = utils.getRandomEntry(lPotentials)
 		#print(" DC Chosen ",iChosen)
-		if ( iChosen > -1 ):
+		if iChosen > -1:
 			iHuman = utils.getHumanID()
-			if ( iChosen == iHuman ):
+			if iChosen == iHuman:
 				self.callDCHuman()
 			else:
 				self.callDCAI( iChosen )
@@ -1121,86 +1052,23 @@ class Crusades:
 	def canDC( self, iPlayer, iGameTurn ):
 		#print(" DC Chech for player ",iPlayer,iGameTurn)
 		pPlayer = gc.getPlayer( iPlayer )
-		if ( (iGameTurn < con.tBirth[iPlayer]+5) or (not pPlayer.isAlive()) or pPlayer.getStateReligion() != iCatholicism ):
 		# only born, flipped and living Catholics can DC
+		if (iGameTurn < con.tBirth[iPlayer]+5) or not pPlayer.isAlive() or pPlayer.getStateReligion() != iCatholicism:
 			return False
 		teamPlayer = gc.getTeam( pPlayer.getTeam() )
-		if ( not teamPlayer.isOpenBorders( gc.getPlayer( con.iPope ).getTeam() ) ):
+		if not teamPlayer.isOpenBorders( gc.getPlayer( con.iPope ).getTeam() ):
 			return False
-		#print( " Check to see if player can apply for DC ",iPlayer )
-		#for iX in range( con.tNormalAreasTL[iPlayer][0], con.tNormalAreasBR[iPlayer][0] +1 ):
-		#	for iY in range( con.tNormalAreasTL[iPlayer][1], con.tNormalAreasBR[iPlayer][1] +1 ):
-		#		if ((iX,iY) not in con.tNormalAreasSubtract[iPlayer]):
-		#			pPlot = gc.getMap().plot( iX, iY ) # plot in normal area
-		#			if ( pPlot.isCity() ): # is a city
-		#				pCity = pPlot.getPlotCity()
-		#				print( " A city " )
-		#				if ( pCity.getOwner() != iPlayer ): # owned by someone else
-		#					print( " owned by enemy ",pCity.getName() )
-		#					pEnemy = gc.getPlayer( pCity.getOwner() )
-		#					iEnemyReligion = pEnemy.getStateReligion()
-		#					if ( iEnemyReligion != iCatholicism and iEnemyReligion != iOrthodoxy ):
-		#						print( " Enemy is an infidel " )
-		#						# who is potential victim (i.e. infidel)
-		#						if ( gc.getTeam( pPlayer.getTeam() ).isAtWar( pEnemy.getTeam() ) ):
-		#							teamEnemy = gc.getTeam( pEnemy.getTeam() )
-		#							print( " at war " )
-		#							# check to see if Vassalized By Christians
-		#							for iPotentialGuardian in range ( con.iNumPlayers ):
-		#								pPotentialGuardian = gc.getPlayer( iPotentialGuardian )
-		#								if ( pPotentialGuardian.isAlive() and teamEnemy.isVassal( pPotentialGuardian.getTeam() ) ):
-		#									iGuardianReligion = pPotentialGuardian.getStateReligion()
-		#									if ( iGuardianReligion != iCatholicism and iGuardianReligion != iOrthodoxy ):
-		#										return True
-		#for iEnemy in range( con.iNumPlayers ):
-		#	pEnemy = gc.getPlayer( iEnemy )
-		#	if ( teamPlayer.isAtWar( pEnemy.getTeam() ) and con.tBirth[iEnemy] + 10 < iGameTurn ):
-		#		iEnemyReligion = pEnemy.getStateReligion()
-		#		print( " Crusade condition war meet: ",iEnemy,iEnemyReligion )
-		#		if ( iEnemyReligion != iCatholicism and iEnemyReligion != iOrthodoxy ):
-		#			print( " Crusade condition Enemy Religion Meet: " )
-		#			for pyCity in PyPlayer(iEnemy).getCityList():
-		#				pCity = pyCity.GetCy()
-		#				if ( rfceMaps.tWarsMaps[iPlayer][con.iMapMaxY-1-pCity.getY()][pCity.getX()] > 0 ):
-		#					print( " Crusade War map condition meat: ",pCity.getName() )
-		#					teamEnemy = gc.getTeam( pEnemy.getTeam() )
-		#					bSafe = False
-		#					for iPotentialGuardian in range ( con.iNumPlayers ):
-		#						pPotentialGuardian = gc.getPlayer( iPotentialGuardian )
-		#						#print( " Crusade potential guardian: ",iPotentialGuardian )
-		#						if ( pPotentialGuardian.isAlive() and iPotentialGuardian != iEnemy and teamEnemy.isVassal( pPotentialGuardian.getTeam() ) ):
-		#							iGuardianReligion = pPotentialGuardian.getStateReligion()
-		#							#print( " Crusade has a guardian ",iGuardianReligion )
-		#							if ( iGuardianReligion == iCatholicism or iGuardianReligion == iOrthodoxy ):
-		#								#print( " Crusade guardian saves " )
-		#								bSafe = True
-		#					if ( not bSafe ):
-		#						return True
+
 		tPlayerDCMap = tDefensiveCrusadeMap[iPlayer]
+		# Can DC if at war with a non-catholic/orthodox enemy, enemy is not a vassal of a catholic/orthodox civ and has a city in the DC map
 		for iEnemy in range( con.iNumPlayers ):
 			pEnemy = gc.getPlayer( iEnemy )
-			if ( teamPlayer.isAtWar( pEnemy.getTeam() ) and con.tBirth[iEnemy] + 10 < iGameTurn ):
-				iEnemyReligion = pEnemy.getStateReligion()
-				#print( " Crusade condition war meet: ",iEnemy,iEnemyReligion )
-				if ( iEnemyReligion != iCatholicism and iEnemyReligion != iOrthodoxy ):
-					#print( " Crusade condition Enemy Religion Meet: " )
-					for pyCity in PyPlayer(iEnemy).getCityList():
-						pCity = pyCity.GetCy()
-						if ( ProvMap[pCity.getY()][pCity.getX()] in tPlayerDCMap ):
-							#print( " Crusade War map condition meat: ",pCity.getName() )
-							teamEnemy = gc.getTeam( pEnemy.getTeam() )
-							bSafe = False
-							for iPotentialGuardian in range ( con.iNumPlayers ):
-								pPotentialGuardian = gc.getPlayer( iPotentialGuardian )
-								#print( " Crusade potential guardian: ",iPotentialGuardian )
-								if ( pPotentialGuardian.isAlive() and iPotentialGuardian != iEnemy and teamEnemy.isVassal( pPotentialGuardian.getTeam() ) ):
-									iGuardianReligion = pPotentialGuardian.getStateReligion()
-									#print( " Crusade has a guardian ",iGuardianReligion )
-									if ( iGuardianReligion == iCatholicism or iGuardianReligion == iOrthodoxy ):
-										#print( " Crusade guardian saves " )
-										bSafe = True
-							if ( not bSafe ):
-								return True
+			if teamPlayer.isAtWar( pEnemy.getTeam() ) and con.tBirth[iEnemy] + 10 < iGameTurn:
+				if self.isOrMasterChristian(iEnemy):
+					continue
+				for pCity in utils.getCityList(iEnemy):
+					if ProvMap[pCity.getY()][pCity.getX()] in tPlayerDCMap:
+						return True
 		return False
 
 
@@ -1215,7 +1083,7 @@ class Crusades:
 		pHuman = gc.getPlayer( iHuman )
 		pPlayer = gc.getPlayer( iPlayer )
 		if utils.isActive(iHuman):
-			if ( gc.getTeam( pHuman.getTeam() ).canContact( pPlayer.getTeam() ) or pHuman.getStateReligion() == iCatholicism ): # as you have contact with the Pope by default
+			if gc.getTeam( pHuman.getTeam() ).canContact( pPlayer.getTeam() ) or pHuman.getStateReligion() == iCatholicism: # as you have contact with the Pope by default
 				sText = CyTranslator().getText("TXT_KEY_CRUSADE_DEFENSIVE_AI_MESSAGE", ()) + " " + pPlayer.getName()
 				CyInterface().addMessage(iHuman, True, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
 		self.makeDCUnits( iPlayer )
@@ -1226,12 +1094,12 @@ class Crusades:
 		iDecision = popupReturn.getButtonClicked()
 		iHuman = utils.getHumanID()
 		pHuman = gc.getPlayer( iHuman )
-		if ( iDecision == 0 ):
+		if iDecision == 0:
 			self.makeDCUnits( iHuman )
 			pHuman.changeFaith( - min( 2, pHuman.getFaith() ) )
-		else:
-			#pHuman.changeFaith( - min( 1, pHuman.getFaith() ) )
-			pass
+		# else:
+			# #pHuman.changeFaith( - min( 1, pHuman.getFaith() ) )
+			# pass
 
 
 	def makeDCUnits( self, iPlayer ):
@@ -1241,52 +1109,55 @@ class Crusades:
 		iBestInfantry = self.getDCBestInfantry( iPlayer )
 		iBestCavalry = self.getDCBestCavalry( iPlayer )
 		pCapital = pPlayer.getCapitalCity()
-		iX = pCapital.getX()
-		iY = pCapital.getY()
-		if ( iX == -1 or iY == -1 ):
-			apCityList = PyPlayer(iPlayer).getCityList()
-			if ( len(apCityList) > 0 ):
-				pCity = apCityList[gc.getGame().getSorenRandNum(len(apCityList), 'random city for DC')]
-				city = pCity.GetCy()
+		if pCapital:
+			iX = pCapital.getX()
+			iY = pCapital.getY()
+		else:
+			city = utils.getRandomEntry(utils.getCityList(iPlayer))
+			if city:
 				iX = city.getX()
 				iY = city.getY()
 			else:
 				return
 
 		# Absinthe: interface message for the player
-		if (gc.getPlayer(iPlayer).isHuman()):
+		if gc.getPlayer(iPlayer).isHuman():
 			CyInterface().addMessage(iPlayer, False, con.iDuration, CyTranslator().getText("TXT_KEY_CRUSADE_DEFENSIVE_HUMAN_MESSAGE", ()), "", 0, "", ColorTypes(con.iGreen), iX, iY, True, True)
 
 		pPlayer.initUnit(iBestInfantry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 		pPlayer.initUnit(iBestCavalry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
-		if ( pPlayer.getNumCities() < 6 ): # smaller Empires need a bit more help
-			if (iBestCavalry == xml.iKnight):
-				if (gc.getGame().getSorenRandNum(10, 'chance for Paladin') > 6): # 30% chance for a Paladin
+
+		# smaller Empires need a bit more help
+		if pPlayer.getNumCities() < 6:
+			if iBestCavalry == xml.iKnight:
+				if gc.getGame().getSorenRandNum(10, 'chance for Paladin') >= 7: # 30% chance for a Paladin
 					pPlayer.initUnit(xml.iBurgundianPaladin, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 				else:
 					pPlayer.initUnit(iBestCavalry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 			else:
 				pPlayer.initUnit(iBestCavalry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
-		if ( iFaith > 4 ):
+
+		if iFaith > 4:
 			pPlayer.initUnit(iBestInfantry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
-		if ( iFaith > 11 ):
-			if (iBestCavalry == xml.iKnight):
-				if (gc.getGame().getSorenRandNum(10, 'chance for Paladin') > 6): # 30% chance for a Paladin
+		if iFaith > 11:
+			if iBestCavalry == xml.iKnight:
+				if gc.getGame().getSorenRandNum(10, 'chance for Paladin') >= 7: # 30% chance for a Paladin
 					pPlayer.initUnit(xml.iBurgundianPaladin, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 				else:
 					pPlayer.initUnit(iBestCavalry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 			else:
 				pPlayer.initUnit(iBestCavalry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
-		if ( iFaith > 20 ):
+		if iFaith > 20:
 			pPlayer.initUnit(iBestInfantry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
-		if ( iFaith > 33 ):
+		if iFaith > 33:
 			pPlayer.initUnit(iBestCavalry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
+
 		# extra units for the AI, it is dumb anyway
-		if ( not iPlayer == utils.getHumanID() ):
+		if not iPlayer == utils.getHumanID():
 			pPlayer.initUnit(iBestInfantry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 			pPlayer.initUnit(iBestCavalry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
-			if (iBestCavalry == xml.iKnight):
-				if (gc.getGame().getSorenRandNum(10, 'chance for Paladin') > 6): # 30% chance for a Paladin
+			if iBestCavalry == xml.iKnight:
+				if gc.getGame().getSorenRandNum(10, 'chance for Paladin') >= 7: # 30% chance for a Paladin
 					pPlayer.initUnit(xml.iBurgundianPaladin, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 				else:
 					pPlayer.initUnit(iBestCavalry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
@@ -1295,31 +1166,35 @@ class Crusades:
 
 
 	def getDCBestInfantry( self, iPlayer ):
-		teamPlayer = gc.getTeam( gc.getPlayer( iPlayer ).getTeam() )
-		if ( teamPlayer.isHasTech( xml.iNationalism ) and teamPlayer.isHasTech( xml.iChemistry ) ):
-			return xml.iGrenadier
-		if ( teamPlayer.isHasTech( xml.iCivilService ) and teamPlayer.isHasTech( xml.iMachinery ) ):
-			return xml.iMaceman
-		if ( teamPlayer.isHasTech( xml.iBlastFurnace ) ):
-			return xml.iLongSwordsman
-		if ( teamPlayer.isHasTech( xml.iChainMail ) ):
-			return xml.iSwordsman
-		return xml.iAxeman
+		pPlayer = gc.getPlayer(iPlayer)
+		lUnits = [xml.iGrenadier, xml.iMaceman, xml.iLongSwordsman, xml.iSwordsman]
+		for iUnit in lUnits:
+			if pPlayer.canTrain(utils.getUniqueUnit(iPlayer, iUnit), False, False):
+				return utils.getUniqueUnit(iPlayer, iUnit)
+		return utils.getUniqueUnit(iPlayer, xml.iAxeman)
 
 
 	def getDCBestCavalry( self, iPlayer ):
-		teamPlayer = gc.getTeam( gc.getPlayer( iPlayer ).getTeam() )
-		if ( teamPlayer.isHasTech( xml.iMilitaryTactics ) ):
-			return xml.iCuirassier
-		if ( teamPlayer.isHasTech( xml.iChivalry ) ):
-			return xml.iKnight
-		if ( teamPlayer.isHasTech( xml.iFarriers ) and teamPlayer.isHasTech( xml.iFeudalism ) ):
-			return xml.iHeavyLancer
-		if ( teamPlayer.isHasTech( xml.iManorialism ) and teamPlayer.isHasTech( xml.iStirrup ) ):
-			return xml.iLancer
-		return xml.iScout
+		pPlayer = gc.getPlayer(iPlayer)
+		lUnits = [xml.iCuirassier, xml.iKnight, xml.iHeavyLancer, xml.iLancer]
+		for iUnit in lUnits:
+			if pPlayer.canTrain(utils.getUniqueUnit(iPlayer, iUnit), False, False):
+				return utils.getUniqueUnit(iPlayer, iUnit)
+		return utils.getUniqueUnit(iPlayer, xml.iScout)
 
 	def do1200ADCrusades( self ):
 		self.setCrusadeInit(0, xml.i1096AD)
 		self.setCrusadeInit(1, xml.i1147AD)
 		self.setCrusadeInit(2, xml.i1187AD)
+
+	def isOrMasterChristian(self, iPlayer):
+		pPlayer = gc.getPlayer(iPlayer)
+		iReligion = pPlayer.getStateReligion()
+		if iReligion in [iCatholicism, iOrthodoxy]:
+			return True
+		iMaster = utils.getMaster(iPlayer)
+		if iMaster != -1:
+			iMasterReligion = gc.getPlayer(iMaster).getStateReligion()
+			if iMasterReligion in [iCatholicism, iOrthodoxy]:
+				return True
+		return False
