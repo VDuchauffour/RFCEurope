@@ -22,9 +22,7 @@ iIndependent = con.iIndependent
 iIndependent2 = con.iIndependent2
 iNumTotalPlayers = con.iNumTotalPlayers
 iBarbarian = con.iBarbarian
-
 iSettler = xml.iSettler
-
 iNumBuildingsPlague = xml.iNumBuildingsPlague
 
 tCol = (

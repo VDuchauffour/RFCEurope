@@ -186,6 +186,33 @@
 		<Portuguese>Wattasid</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_INVASION_START</Tag>
+		<English>Rumours arrived at your palace that massive barbarian hordes had emerged in the east, and they are already closing to your neighbours.[NEWLINE][NEWLINE]It is said that their first raging armies will probably arrive near your borders in a couple years (5-10 turns).[NEWLINE][NEWLINE]While you are quite sure that those stories must be exaggerated, maybe it would be wise to strengthen your defences, just in case?</English>
+		<French>Rumours arrived at your palace that massive barbarian hordes had emerged in the east, and they are already closing to your neighbours.[NEWLINE][NEWLINE]It is said that their first raging armies will probably arrive near your borders in a couple years (5-10 turns).[NEWLINE][NEWLINE]While you are quite sure that those stories must be exaggerated, maybe it would be wise to strengthen your defences, just in case?</French>
+		<German>Rumours arrived at your palace that massive barbarian hordes had emerged in the east, and they are already closing to your neighbours.[NEWLINE][NEWLINE]It is said that their first raging armies will probably arrive near your borders in a couple years (5-10 turns).[NEWLINE][NEWLINE]While you are quite sure that those stories must be exaggerated, maybe it would be wise to strengthen your defences, just in case?</German>
+		<Italian>Rumours arrived at your palace that massive barbarian hordes had emerged in the east, and they are already closing to your neighbours.[NEWLINE][NEWLINE]It is said that their first raging armies will probably arrive near your borders in a couple years (5-10 turns).[NEWLINE][NEWLINE]While you are quite sure that those stories must be exaggerated, maybe it would be wise to strengthen your defences, just in case?</Italian>
+		<Spanish>Rumours arrived at your palace that massive barbarian hordes had emerged in the east, and they are already closing to your neighbours.[NEWLINE][NEWLINE]It is said that their first raging armies will probably arrive near your borders in a couple years (5-10 turns).[NEWLINE][NEWLINE]While you are quite sure that those stories must be exaggerated, maybe it would be wise to strengthen your defences, just in case?</Spanish>
+		<Portuguese>Rumours arrived at your palace that massive barbarian hordes had emerged in the east, and they are already closing to your neighbours.[NEWLINE][NEWLINE]It is said that their first raging armies will probably arrive near your borders in a couple years (5-10 turns).[NEWLINE][NEWLINE]While you are quite sure that those stories must be exaggerated, maybe it would be wise to strengthen your defences, just in case?</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TIMURID_INVASION_START</Tag>
+		<English>Your spies report that a dangerous warlord called Tamerlane gathers a mighty force in the east, planning huge conquests.[NEWLINE][NEWLINE]It might even bring danger to you too, possibly arriving at your borders in a couple years (5-10 turns). Make sure that your nation is prepared!</English>
+		<French>Your spies report that a dangerous warlord called Tamerlane gathers a mighty force in the east, planning huge conquests.[NEWLINE][NEWLINE]It might even bring danger to you too, possibly arriving at your borders in a couple years (5-10 turns). Make sure that your nation is prepared!</French>
+		<German>Your spies report that a dangerous warlord called Tamerlane gathers a mighty force in the east, planning huge conquests.[NEWLINE][NEWLINE]It might even bring danger to you too, possibly arriving at your borders in a couple years (5-10 turns). Make sure that your nation is prepared!</German>
+		<Italian>Your spies report that a dangerous warlord called Tamerlane gathers a mighty force in the east, planning huge conquests.[NEWLINE][NEWLINE]It might even bring danger to you too, possibly arriving at your borders in a couple years (5-10 turns). Make sure that your nation is prepared!</Italian>
+		<Spanish>Your spies report that a dangerous warlord called Tamerlane gathers a mighty force in the east, planning huge conquests.[NEWLINE][NEWLINE]It might even bring danger to you too, possibly arriving at your borders in a couple years (5-10 turns). Make sure that your nation is prepared!</Spanish>
+		<Portuguese>Your spies report that a dangerous warlord called Tamerlane gathers a mighty force in the east, planning huge conquests.[NEWLINE][NEWLINE]It might even bring danger to you too, possibly arriving at your borders in a couple years (5-10 turns). Make sure that your nation is prepared!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BARBARIAN_INVASION_END</Tag>
+		<English>Good news! It seems that the worst part of the %s1 invasions are finally over.</English>
+		<French>Good news! It seems that the worst part of the %s1 invasions are finally over.</French>
+		<German>Good news! It seems that the worst part of the %s1 invasions are finally over.</German>
+		<Italian>Good news! It seems that the worst part of the %s1 invasions are finally over.</Italian>
+		<Spanish>Good news! It seems that the worst part of the %s1 invasions are finally over.</Spanish>
+		<Portuguese>Good news! It seems that the worst part of the %s1 invasions are finally over.</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NAMES_KHAZARS</Tag>
 		<English>Khazars</English>
 		<French>Khazars</French>
