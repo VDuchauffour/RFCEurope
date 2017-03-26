@@ -1277,7 +1277,7 @@ class RFCUtils:
 		## iChance = 60 + max(-10, min(30, pPlayer.getFaith()/3))
 		iChance = 55 + pPlayer.getFaith()/3
 		# lower chance for purging any religion from Jerusalem:
-		if iPlotX == con.tJerusalem[0] and iPlotY == con.tJerusalem[1]:
+		if (iPlotX, iPlotY) == con.tJerusalem:
 			iChance -= 25
 		# lower chance if the city has the chosen religion's buildings/wonders:
 		iChance -= (len(lReligionBuilding) * 8 + lReligionWonder * 17)		# the wonders have an extra chance reduction (in addition to the first reduction)
@@ -1650,6 +1650,9 @@ class RFCUtils:
 	def getRandomEntry(self, list):
 		if not list: return False
 		return list[gc.getGame().getSorenRandNum(len(list), 'Random entry')]
-		
+
 	def isWonder(self, iBuilding):
-		return xml.iVersailles <= iBuilding <= xml.iLanterna
+		return xml.iBeginWonders <= iBuilding <= xml.iEndWonders
+
+	def getWorldPlotsList(self):
+		return [(x, y) for x in range(con.iMapMaxX) for y in range(con.iMapMaxY)]

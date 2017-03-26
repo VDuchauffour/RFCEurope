@@ -35,7 +35,7 @@ class UniquePowers:
 			if not city.isHasReligion(iStateReligion):
 				city.setHasReligion(iStateReligion, True, True, False)
 				pFaithful.changeFaith( 1 )
-				
+
 			if iStateReligion == 0:
 				iTemple = xml.iProtestantTemple
 			elif iStateReligion == 1:
