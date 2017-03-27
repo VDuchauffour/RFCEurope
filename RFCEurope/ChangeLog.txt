@@ -129,6 +129,9 @@ Changes for RFCE 1.5:
 		- Improved selection method for units leaving for Crusades
 		- Fixed bug where some of your last defender units in a city could potentially leave for a Crusade
 		- Fixed bug where Knights of St. John weren't eligible for Crusades
+		- No more Defensive Crusades after Protestantism is founded
+		- Later Crusades won't send back units from earlier Crusades (i.e. if they initially remained Crusaders, it should remain that way)
+		- Added option for another Crusade in the late 13th century
 
 	Terrain updates:
 		- New base terrain: Semidesert - 1 production, +1 commerce near rivers, city founding only possible near fresh water
@@ -393,6 +396,7 @@ Changes for RFCE 1.5:
 		- Fixed bug with autopeace messages with dead civs on civ resurrection
 		- Fixed a couple instances of the autoplay going to -1 turn bug (hopefully all of it)
 		- Fixed minor oversight on economy stability calculations where some wonders were not recognized correctly
+		- Fixed mistake where some barbarian units outside the civ's spawn area were intentionally converted to the new civ on birth
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

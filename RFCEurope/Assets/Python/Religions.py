@@ -182,51 +182,52 @@ class Religions:
 			# Spread Judaism to Toledo
 			self.spreadReligion(tToledo, xml.iJudaism)
 			# Spread Islam to a random city in Africa
-			tCity = self.selectRandomCityArea(tNorthAfrica)
+			tCity = self.selectRandomCityArea(tNorthAfrica, xml.iIslam)
 			if tCity:
 				self.spreadReligion(tCity, xml.iIslam)
+				print ("special religion spread in tToledo")
 		elif (iGameTurn == xml.i700AD+2):
 			# Spread Judaism and Islam to a random city in Africa
-			tCity = self.selectRandomCityArea(tWestAfrica)
+			tCity = self.selectRandomCityArea(tWestAfrica, xml.iIslam)
 			if tCity:
 				self.spreadReligion(tCity, xml.iIslam)
-			tCity = self.selectRandomCityArea(tWestAfrica)
+			tCity = self.selectRandomCityArea(tWestAfrica, xml.iJudaism)
 			if tCity:
 				self.spreadReligion(tCity, xml.iJudaism)
 		elif (iGameTurn == xml.i900AD):
 			# Spread Judaism to another city in Spain
-			tCity = self.selectRandomCityArea(tSpain)
+			tCity = self.selectRandomCityArea(tSpain, xml.iJudaism)
 			if tCity:
 				self.spreadReligion(tCity, xml.iJudaism)
 		elif (iGameTurn == xml.i1000AD):
 			# Spread Judaism to a city in France/Germany
-			tCity = self.selectRandomCityArea(tGermany)
+			tCity = self.selectRandomCityArea(tGermany, xml.iJudaism)
 			if tCity:
 				self.spreadReligion(tCity, xml.iJudaism)
 			# Spread Islam to another city in Africa
-			tCity = self.selectRandomCityArea(tNorthAfrica)
+			tCity = self.selectRandomCityArea(tNorthAfrica, xml.iIslam)
 			if tCity:
 				self.spreadReligion(tCity, xml.iIslam)
 		elif (iGameTurn == xml.i1101AD):
 			# Spread Judaism to a couple towns in Poland
-			tCity = self.selectRandomCityArea(tPoland)
+			tCity = self.selectRandomCityArea(tPoland, xml.iJudaism)
 			if tCity:
 				self.spreadReligion(tCity, xml.iJudaism)
 		elif (iGameTurn == xml.i1200AD):
 			# Spread Judaism to a couple towns in Poland
-			tCity = self.selectRandomCityArea(tPoland)
+			tCity = self.selectRandomCityArea(tPoland, xml.iJudaism)
 			if tCity:
 				self.spreadReligion(tCity, xml.iJudaism)
 		elif (iGameTurn > xml.i1299AD and iGameTurn < xml.i1350AD and iGameTurn % 3 == 0):
 			# Spread Islam to a couple cities in Anatolia before the Ottoman spawn
-			tCity = self.selectRandomCityArea(tBalkansAndAnatolia)
+			tCity = self.selectRandomCityArea(tBalkansAndAnatolia, xml.iIslam)
 			if tCity:
 				self.spreadReligion(tCity, xml.iIslam)
 		elif (iGameTurn == xml.i1401AD):
 			# Spread Judaism to a couple towns in Poland
-			tCity = self.selectRandomCityArea(tPoland)
+			tCity = self.selectRandomCityArea(tPoland, xml.iJudaism)
 			if tCity:
-				self.spreadReligion(tCity,xml.iJudaism)
+				self.spreadReligion(tCity, xml.iJudaism)
 
 		# Absinthe: Spreading Judaism in random dates
 		# General 6% chance to spread Jews to a random city in every third turn
@@ -234,61 +235,69 @@ class Religions:
 			if ( gc.getGame().getSorenRandNum(100, 'Spread Jews') < 6 ):
 				tCity = self.selectRandomCityAll()
 				if (tCity != 0):
-					self.spreadReligion(tCity,xml.iJudaism)
+					self.spreadReligion(tCity, xml.iJudaism)
 		# Additional 11% chance to spread Jews to a random Central European city in every third turn
 		if (iGameTurn > xml.i1000AD and iGameTurn < xml.i1500AD and iGameTurn % 3 == 1):
 			if ( gc.getGame().getSorenRandNum(100, 'Spread Jews') < 11 ):
-				tCity = self.selectRandomCityArea(tCentralEurope)
+				tCity = self.selectRandomCityArea(tCentralEurope, xml.iJudaism)
 				if (tCity != 0):
-					self.spreadReligion(tCity,xml.iJudaism)
+					self.spreadReligion(tCity, xml.iJudaism)
 
 		# Absinthe: Encouraging desired religion spread in a couple areas (mostly for Islam and Orthodoxy)
 		# Maghreb and Cordoba:
 		if (iGameTurn > xml.i700AD and iGameTurn < xml.i800AD and iGameTurn % 2 == 1):
 			if ( gc.getGame().getSorenRandNum(100, 'Spread chance') < 28 ):
-				tCity = self.selectRandomCityArea(tMaghrebAndalusia, True)
+				tCity = self.selectRandomCityArea(tMaghrebAndalusia, xml.iIslam, True)
 				if (tCity != 0):
-					self.spreadReligion(tCity,xml.iIslam)
+					self.spreadReligion(tCity, xml.iIslam)
+					print ("special religion spread in tMaghrebAndalusia")
 		if (iGameTurn > xml.i800AD and iGameTurn < xml.i1200AD and iGameTurn % 3 == 2):
 			if ( gc.getGame().getSorenRandNum(100, 'Spread chance') < 22 ):
-				tCity = self.selectRandomCityArea(tMaghrebAndalusia, True)
+				tCity = self.selectRandomCityArea(tMaghrebAndalusia, xml.iIslam, True)
 				if tCity:
 					self.spreadReligion(tCity, xml.iIslam)
+					print ("special religion spread in tMaghrebAndalusia")
 		# Bulgaria and Balkans:
 		if (iGameTurn > xml.i700AD and iGameTurn < xml.i800AD and iGameTurn % 3 == 1):
 			if ( gc.getGame().getSorenRandNum(100, 'Spread chance') < 25 ):
-				tCity = self.selectRandomCityArea(tBulgariaBalkans, True)
+				tCity = self.selectRandomCityArea(tBulgariaBalkans, xml.iOrthodoxy, True)
 				if tCity:
-					self.spreadReligion(tCity,xml.iOrthodoxy)
+					self.spreadReligion(tCity, xml.iOrthodoxy)
+					print ("special religion spread in tBulgariaBalkans")
 		if (iGameTurn > xml.i800AD and iGameTurn < xml.i1000AD and iGameTurn % 4 == 1):
 			if ( gc.getGame().getSorenRandNum(100, 'Spread chance') < 15 ):
-				tCity = self.selectRandomCityArea(tBulgariaBalkans, True)
+				tCity = self.selectRandomCityArea(tBulgariaBalkans, xml.iOrthodoxy, True)
 				if tCity:
-					self.spreadReligion(tCity,xml.iOrthodoxy)
+					self.spreadReligion(tCity, xml.iOrthodoxy)
+					print ("special religion spread in tBulgariaBalkans")
 		# Old Rus territories:
 		if (iGameTurn > xml.i852AD and iGameTurn < xml.i1300AD and iGameTurn % 4 == 3):
 			if ( gc.getGame().getSorenRandNum(100, 'Spread chance') < 25 ):
-				tCity = self.selectRandomCityArea(tOldRus, True)
+				tCity = self.selectRandomCityArea(tOldRus, xml.iOrthodoxy, True)
 				if tCity:
-					self.spreadReligion(tCity,xml.iOrthodoxy)
+					self.spreadReligion(tCity, xml.iOrthodoxy)
+					print ("special religion spread in tOldRus")
 		# Extra chance for early Orthodoxy spread in Novgorod:
 		if (iGameTurn > xml.i852AD and iGameTurn < xml.i1000AD and iGameTurn % 5 == 2):
 			if ( gc.getGame().getSorenRandNum(100, 'Spread chance') < 20 ):
-				tCity = self.selectRandomCityArea([xml.iP_Novgorod, xml.iP_Polotsk, xml.iP_Smolensk], True)
+				tCity = self.selectRandomCityArea([xml.iP_Novgorod, xml.iP_Polotsk, xml.iP_Smolensk], xml.iOrthodoxy, True)
 				if tCity:
-					self.spreadReligion(tCity,xml.iOrthodoxy)
+					self.spreadReligion(tCity, xml.iOrthodoxy)
+					print ("special religion spread in the Novgorod area")
 		# Hungary:
 		if (iGameTurn > xml.i960AD and iGameTurn < xml.i1200AD and iGameTurn % 4 == 2):
 			if ( gc.getGame().getSorenRandNum(100, 'Spread chance') < 18 ):
-				tCity = self.selectRandomCityArea(tHungary, True)
+				tCity = self.selectRandomCityArea(tHungary, xml.iCatholicism, True)
 				if tCity:
-					self.spreadReligion(tCity,xml.iCatholicism)
+					self.spreadReligion(tCity, xml.iCatholicism)
+					print ("special religion spread in tHungary")
 		# Scandinavia:
 		if (iGameTurn > xml.i1000AD and iGameTurn < xml.i1300AD and iGameTurn % 4 == 0):
 			if ( gc.getGame().getSorenRandNum(100, 'Spread chance') < 22 ):
-				tCity = self.selectRandomCityArea(tSouthScandinavia, True)
+				tCity = self.selectRandomCityArea(tSouthScandinavia, xml.iCatholicism, True)
 				if tCity:
-					self.spreadReligion(tCity,xml.iCatholicism)
+					self.spreadReligion(tCity, xml.iCatholicism)
+					print ("special religion spread in tSouthScandinavia")
 
 		# Absinthe: Persecution cooldown
 		for i in range( con.iNumPlayers ):
@@ -527,19 +536,22 @@ class Religions:
 				return (city.getX(), city.getY())
 		return 0
 
-	def selectRandomCityArea(self, tProvinces, bNoReligion = False):
+	def selectRandomCityArea(self, tProvinces, iDesiredReligion, bNoSpreadWithReligion = False):
 		cityList = []
 		for iPlayer in range(con.iNumTotalPlayersB):
 			if not gc.getPlayer(iPlayer).isAlive(): continue
 			for city in utils.getCityList(iPlayer):
 				if tProvinceMap[city.getY()][city.getX()] in tProvinces:
-					bHasReligion = True
-					for iReligion in range(xml.iNumReligions):
-						if city.isHasReligion(iReligion):
-							bHasReligion = bHasReligion
-							break
-					if not (bNoReligion and bHasReligion):
-						cityList.append(city)
+					# do not try to spread to cities which already have the desired religion
+					if not city.isHasReligion(iDesiredReligion):
+						# check if there is any religion already present in the city
+						bHasNoReligion = True
+						for iReligion in range(xml.iNumReligions):
+							if city.isHasReligion(iReligion):
+								bHasNoReligion = False
+								break
+						if not (bNoSpreadWithReligion and bHasNoReligion): # add the city if at least one of these is False
+							cityList.append(city)
 		if cityList:
 			city = utils.getRandomEntry(cityList)
 			return (city.getX(), city.getY())
@@ -787,7 +799,7 @@ class Religions:
 			if city.isHasReligion(xml.iCatholicism) and not city.isHasReligion(xml.iProtestantism):
 				rndnum = gc.getGame().getSorenRandNum(100, 'ReformationAnyway')
 				if rndnum <= 25 + (lReformationMatrix[iCiv] / 2): # only add the religion, chance between 30% and 70%, based on lReformationMatrix
-					city.setHasReligion(xml.iProtestantism, True, False, False)
+					city.setHasReligion(xml.iProtestantism, True, False, False) # no announcement in this case
 					if pPlayer.isHuman(): # message for the human player
 						CityName = city.getNameKey()
 						CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_REFORMATION_RELIGION_STILL_SPREAD", (CityName,)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, "", ColorTypes(con.iWhite), -1, -1, True, True)
@@ -903,7 +915,7 @@ class Religions:
 					pCity.setHasReligion(xml.iCatholicism, False, False, False)
 					if pPlayer.isHuman(): # message for the human player
 						CityName = pCity.getNameKey()
-						if pPlayer.getStateReligion() == xml.iPlayerslam:
+						if pPlayer.getStateReligion() == xml.iIslam:
 							CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_2", (CityName,)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, "", ColorTypes(con.iWhite), -1, -1, True, True)
 						else:
 							CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_3", (CityName,)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, "", ColorTypes(con.iWhite), -1, -1, True, True)
@@ -1033,15 +1045,15 @@ class Religions:
 
 	def spread1200ADJews(self):
 		# Spread Judaism to a random city in Africa
-		tCity = self.selectRandomCityArea(tWestAfrica)
+		tCity = self.selectRandomCityArea(tWestAfrica, xml.iJudaism)
 		if tCity:
 			self.spreadReligion(tCity, xml.iJudaism)
 		# Spread Judaism to another city in Spain
-		tCity = self.selectRandomCityArea(tSpain)
+		tCity = self.selectRandomCityArea(tSpain, xml.iJudaism)
 		if tCity:
 			self.spreadReligion(tCity, xml.iJudaism)
 		# Spread Judaism to a city in France/Germany
-		tCity = self.selectRandomCityArea(tGermany)
+		tCity = self.selectRandomCityArea(tGermany, xml.iJudaism)
 		if tCity:
 			self.spreadReligion(tCity, xml.iJudaism)
 

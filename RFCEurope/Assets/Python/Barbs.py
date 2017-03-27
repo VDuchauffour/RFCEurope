@@ -242,12 +242,12 @@ class Barbs:
 
 
 	def checkTurn(self, iGameTurn):
-		#handicap level modifier
-		#getHandicapType: Viceroy=0, Monarch=1, Emperor=2
+		#Handicap level modifier
 		iHandicap = gc.getGame().getHandicapType() - 1
+		#gc.getGame().getHandicapType: Viceroy=0, Monarch=1, Emperor=2
 		#iHandicap: Viceroy=-1, Monarch=0, Emperor=1
 
-		# Human has more barbarians
+		#The Human player usually gets some additional barbarians
 		iHuman = utils.getHumanID()
 
 		#Mediterranean Pirates (Light before 1500, then heavy for rest of game)
@@ -255,7 +255,7 @@ class Barbs:
 			self.spawnPirate(iBarbarian, (9, 15), (55, 33), xml.iWarGalley, 2, 0, 0, iGameTurn, 10, 3, utils.outerSeaSpawn, 1, "")
 		elif iGameTurn >= xml.i1401AD:
 			self.spawnPirate(iBarbarian, (9, 15), (55, 33), xml.iCorsair, 2, 0, 0, iGameTurn, 10,3, utils.outerSeaSpawn, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BARBARY_PIRATES", ()))
-			#extra corsairs around Tunisia
+			#extra Corsairs around Tunisia
 			self.spawnPirate(iBarbarian, (42, 15), (54, 23), xml.iCorsair, 1, 0, 0, iGameTurn, 5,0, utils.outerSeaSpawn, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BARBARY_PIRATES", ()))
 		if xml.i1200AD <= iGameTurn < xml.i1500AD:
 			self.spawnPirate(iBarbarian, (9, 15), (55, 33), xml.iCogge, 1, xml.iSwordsman, 2, iGameTurn, 10, 5, utils.outerSeaSpawn, 1, "")
@@ -662,8 +662,8 @@ class Barbs:
 		if cityPlot.isOwned():
 			if cityPlot.getOwner() != iBarbarian:
 				return False
-				
-		#checks the surroundings and for cities
+
+		#checks the surroundings for cities
 		for (x, y) in utils.surroundingPlots(tCoords):
 			currentPlot = gc.getMap().plot(x, y)
 			if currentPlot.isCity():
@@ -709,7 +709,7 @@ class Barbs:
 		for (x, y) in utils.surroundingPlots(tCoords):
 			killPlot = CyMap().getPlot(x, y)
 			for i in range(killPlot.getNumUnits()):
-				unit = killPlot.getUnit(0)	# 0 instead of i because killing units changes the indices
+				unit = killPlot.getUnit(0) #killPlot.getUnit(0) instead of killPlot.getUnit(i) because killing units changes the indices
 				unit.kill(False, iBarbarian)
 
 

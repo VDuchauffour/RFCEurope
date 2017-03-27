@@ -55,8 +55,8 @@ class AIWars:
 
 	def checkTurn(self, iGameTurn):
 
-		# Absinthe: automatically turn peace on between independent cities and all the major civs
 		if iGameTurn > 20:
+			# Absinthe: automatically turn peace on between independent cities and all the major civs
 			if iGameTurn % 20 == 4:
 				utils.restorePeaceHuman(con.iIndependent2)
 			elif iGameTurn % 20 == 9:
@@ -65,37 +65,36 @@ class AIWars:
 				utils.restorePeaceHuman(con.iIndependent3)
 			elif iGameTurn % 20 == 19:
 				utils.restorePeaceHuman(con.iIndependent4)
-				
-			if iGameTurn > 30:
-				#1 turn after restorePeace() initiate minorWars()
-				if iGameTurn % 36 == 0:
-					utils.restorePeaceAI(con.iIndependent, False)
-				elif iGameTurn % 36 == 2: #1 turn after restorePeace()
-					utils.minorWars(con.iIndependent, iGameTurn)
-				elif iGameTurn % 36 == 9:
-					utils.restorePeaceAI(con.iIndependent2, False)
-				elif iGameTurn % 36 == 11: #1 turn after restorePeace()
-					utils.minorWars(con.iIndependent2, iGameTurn)
-				elif iGameTurn % 36 == 18:
-					utils.restorePeaceAI(con.iIndependent3, False)
-				elif iGameTurn % 36 == 20: #1 turn after restorePeace()
-					utils.minorWars(con.iIndependent3, iGameTurn)
-				elif iGameTurn % 36 == 27:
-					utils.restorePeaceAI(con.iIndependent4, False)
-				elif iGameTurn % 36 == 29: #1 turn after restorePeace()
-					utils.minorWars(con.iIndependent4, iGameTurn)
-					
-				if iGameTurn > 40:
-					# Absinthe: declare war sooner / more frequently if there is an Indy city inside the core area
-					#			so the AI will declare war much sooner after an indy city appeared in it's core
-					if iGameTurn % 12 == 1:
-						utils.minorCoreWars(con.iIndependent4, iGameTurn)
-					elif iGameTurn % 12 == 4:
-						utils.minorCoreWars(con.iIndependent3, iGameTurn)
-					elif iGameTurn % 12 == 7:
-						utils.minorCoreWars(con.iIndependent2, iGameTurn)
-					elif iGameTurn % 12 == 10:
-						utils.minorCoreWars(con.iIndependent, iGameTurn)
+
+			if iGameTurn % 36 == 0:
+				utils.restorePeaceAI(con.iIndependent, False)
+			elif iGameTurn % 36 == 9:
+				utils.restorePeaceAI(con.iIndependent2, False)
+			elif iGameTurn % 36 == 18:
+				utils.restorePeaceAI(con.iIndependent3, False)
+			elif iGameTurn % 36 == 27:
+				utils.restorePeaceAI(con.iIndependent4, False)
+
+			# Absinthe: automatically turn war on between independent cities and some AI major civs
+			elif iGameTurn % 36 == 2: #on the 2nd turn after restorePeaceAI()
+				utils.minorWars(con.iIndependent, iGameTurn)
+			elif iGameTurn % 36 == 11: #on the 2nd turn after restorePeaceAI()
+				utils.minorWars(con.iIndependent2, iGameTurn)
+			elif iGameTurn % 36 == 20: #on the 2nd turn after restorePeaceAI()
+				utils.minorWars(con.iIndependent3, iGameTurn)
+			elif iGameTurn % 36 == 29: #on the 2nd turn after restorePeaceAI()
+				utils.minorWars(con.iIndependent4, iGameTurn)
+
+			# Absinthe: declare war sooner / more frequently if there is an Indy city inside the core area
+			#			so the AI will declare war much sooner after an indy city appeared in it's core
+			if iGameTurn % 12 == 1:
+				utils.minorCoreWars(con.iIndependent4, iGameTurn)
+			elif iGameTurn % 12 == 4:
+				utils.minorCoreWars(con.iIndependent3, iGameTurn)
+			elif iGameTurn % 12 == 7:
+				utils.minorCoreWars(con.iIndependent2, iGameTurn)
+			elif iGameTurn % 12 == 10:
+				utils.minorCoreWars(con.iIndependent, iGameTurn)
 
 		# Absinthe: Venice always seeks war with an Independent Ragusa - should help AI Venice significantly
 		pVenice = gc.getPlayer( con.iVenecia )
@@ -157,7 +156,7 @@ class AIWars:
 			gc.getTeam(gc.getPlayer(iCiv).getTeam()).declareWar(iTargetCiv, True, -1)
 			self.setNextTurnAIWar(iGameTurn + iMinInterval + gc.getGame().getSorenRandNum(iMaxInterval-iMinInterval, 'random turn'))
 			print("Setting AIWar", iCiv, "attacking", iTargetCiv)
-		# Absinthe: if not, next try will come 1/2 time later
+		# Absinthe: if not, next try will come the 1/2 of this time later
 		else:
 			self.setNextTurnAIWar(iGameTurn + (iMinInterval + gc.getGame().getSorenRandNum(iMaxInterval-iMinInterval, 'random turn') / 2))
 			print("No AIWar this time, but the next try will come sooner")
@@ -226,17 +225,17 @@ class AIWars:
 	def checkGrid(self, iCiv):
 		pCiv = gc.getPlayer(iCiv)
 		tCiv = gc.getTeam(pCiv.getTeam())
-		lTargetCivs = [0] * iNumTotalPlayers
+		lTargetCivs = [0] * iNumTotalPlayers #clean it, sometimes it takes old values in memory
 
-		##set alive civs to 1 to differentiate them from dead civs
+		#set alive civs to 1 to differentiate them from dead civs
 		for iLoopPlayer in range(iNumTotalPlayers):
 			if iLoopPlayer == iCiv: continue
-			if tCiv.isAtWar(iLoopPlayer):
+			if tCiv.isAtWar(iLoopPlayer): #if already at war with iCiv then it remains 0
 				continue
-			if iLoopPlayer < iNumPlayers:
+			if iLoopPlayer < iNumPlayers: #if master or vassal of iCiv then it remains 0
 				if gc.getTeam(gc.getPlayer(iLoopPlayer).getTeam()).isVassal(iCiv) or tCiv.isVassal(iLoopPlayer):
 					continue
-			if gc.getPlayer(iLoopPlayer).isAlive() and tCiv.isHasMet(iLoopPlayer): #canContact here?
+			if gc.getPlayer(iLoopPlayer).isAlive() and tCiv.isHasMet(iLoopPlayer):
 				lTargetCivs[iLoopPlayer] = 1
 
 		for (i, j) in utils.getWorldPlotsList():
@@ -248,10 +247,10 @@ class AIWars:
 						iValue /= 3
 					lTargetCivs[iOwner] += iValue
 
-		#can they attack civs with lost contact?
-		for k in range( iNumPlayers ):
-			if not pCiv.canContact(k):
-				lTargetCivs[k] /= 8
+		#contacts do not disappear in RFCE, so if isHasMet was true they do have a contact
+		#for k in range( iNumPlayers ):
+		#	if not pCiv.canContact(k):
+		#		lTargetCivs[k] /= 8
 
 		#print(lTargetCivs)
 

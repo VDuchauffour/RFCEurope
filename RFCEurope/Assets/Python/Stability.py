@@ -430,9 +430,9 @@ class Stability:
 					#			otherwise big chance for collapse mechanics
 					#			the actual chance for both secession/revolt and total collapse is increasing with lower stability
 					elif iStability < -3:
-						iRand1 = gc.getGame().getSorenRandNum(10, 'city secession')
-						iRand2 = gc.getGame().getSorenRandNum(10, 'city secession')
-						iRand3 = gc.getGame().getSorenRandNum(10, 'city secession')
+						iRand1 = gc.getGame().getSorenRandNum(10, 'chance for city secession or civ collapse')
+						iRand2 = gc.getGame().getSorenRandNum(10, 'chance for city secession or civ collapse')
+						iRand3 = gc.getGame().getSorenRandNum(10, 'chance for city secession or civ collapse')
 						if pPlayer.getNumCities() > 8:
 							if iRand1 < 8: #80 chance for secession start
 								if iRand2 < (-3 - iStability): #10% at -4, increasing by 10% with each point (100% with -13 or less)
@@ -450,7 +450,8 @@ class Stability:
 						elif iRand1 < 7  and iGameTurn >= con.tBirth[iPlayer] + 20 and not utils.collapseImmune(iPlayer): #70 chance for collapse start
 							if iRand2 < (-1.5 - (iStability/2)): #10% at -4, increasing by 10% with 2 points (100% with -22 or less)
 								self.collapseCivilWar(iPlayer, iStability)
-									
+
+
 	def collapseCivilWar(self, iPlayer, iStability):
 		pPlayer = gc.getPlayer(iPlayer)
 		if iPlayer != utils.getHumanID():
@@ -535,7 +536,7 @@ class Stability:
 				iWarWStability -= 1
 
 			bJewInstability = False
-			if iCivic4 != xml.iCivicFreeReligion:
+			if iCivic4 != xml.iCivicFreeReligion: # Religious Tolerance negates stability penalties from non-state religions
 				if not gc.hasUP( iPlayer, con.iUP_ReligiousTolerance ): # Polish UP
 					if pCity.getNumForeignReligions() > 0:
 						# only calculate if Judaism is not the State Religion
@@ -628,7 +629,7 @@ class Stability:
 			if not pPlayer.isHuman(): #max -5 penalty for the AI
 				iBureaucracyCap = max(-5, iBureaucracyCap)
 			iCivicCombo += iBureaucracyCap
-			
+
 		if iCivicGovernment == xml.iCivicMerchantRepublic: #Merchant Republic city cap
 			if iPlayer == con.iVenecia and pPlayer.getNumCities() > 5: #the penalties are halved for Venice
 				iMerchantRepublicCap = (( 5 - pPlayer.getNumCities() ) / 2 )
