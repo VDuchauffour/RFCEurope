@@ -148,7 +148,7 @@ class Crusades:
 
 	def setIsTarget( self, iCiv, bTarget ):
 		sd.scriptDict['lDeviateTargets'][iCiv] = bTarget
-		
+
 	def getTargetPlot( self ):
 		return sd.scriptDict['tTarget']
 
@@ -220,10 +220,10 @@ class Crusades:
 				lTargetList.append( pPlayer.getCapitalCity().getName() + " (" + pPlayer.getCivilizationAdjective(0) + ")" )
 		# Absinthe: might be a good idea to add a couple more target cities (only if the owner is a major civ with Islam as a state religion)
 		#			like Alexandria, Damascus, Sevilla, Tangier
-	#	tAlexandriaPlot = 
-	#	tPlotDamascus = 
-	#	tPlotSevilla = 
-	#	tPlotTanja = 
+	#	tAlexandriaPlot =
+	#	tPlotDamascus =
+	#	tPlotSevilla =
+	#	tPlotTanja =
 	#	lCityPlots = []
 	#	for tPlot in lCityPlots:
 	#		pPlot = gc.getMap().plot( tPlot )
@@ -257,19 +257,25 @@ class Crusades:
 		# Absinthe: crusade date - 5 means the exact time for the arrival
 		if iGameTurn == (xml.i1096AD - 5): #First Crusade arrives in 1096AD
 			self.setCrusadeInit( 0, -1 ) # turn 160
-		elif iGameTurn >= (xml.i1147AD - 7) and self.getCrusadeInit( 0 ) > 0 and self.getCrusadeInit(1) == -2: # Crusade of 1147AD, little earlier (need to be more than 9 turns between crusades)
+		elif iGameTurn >= (xml.i1147AD - 7) and self.getCrusadeInit( 0 ) > 0 and self.getCrusadeInit( 1 ) == -2: # Crusade of 1147AD, little earlier (need to be more than 9 turns between crusades)
 			self.setCrusadeInit( 1, -1 ) # turn 176
-		elif iGameTurn >= (xml.i1187AD - 8) and self.getCrusadeInit( 1 ) > 0 and self.getCrusadeInit(2) == -2: # Crusade of 1187AD, little earlier (need to be more than 9 turns between crusades)
+		elif iGameTurn >= (xml.i1187AD - 8) and self.getCrusadeInit( 1 ) > 0 and self.getCrusadeInit( 2 ) == -2: # Crusade of 1187AD, little earlier (need to be more than 9 turns between crusades)
 			self.setCrusadeInit( 2, -1 ) # turn 187
-		elif iGameTurn >= (xml.i1202AD - 4) and self.getCrusadeInit( 2 ) > 0 and self.getCrusadeInit(3) == -2: # Crusade of 1202AD, little later (need to be more than 9 turns between crusades)
+		elif iGameTurn >= (xml.i1202AD - 4) and self.getCrusadeInit( 2 ) > 0 and self.getCrusadeInit( 3 ) == -2: # Crusade of 1202AD, little later (need to be more than 9 turns between crusades)
 			self.setCrusadeInit( 3, -1 ) # turn 197
-		elif iGameTurn >= (xml.i1229AD - 3) and self.getCrusadeInit( 3 ) > 0 and self.getCrusadeInit(4) == -2: # Crusade of 1229AD, little later (need to be more than 9 turns between crusades)
+		elif iGameTurn >= (xml.i1229AD - 3) and self.getCrusadeInit( 3 ) > 0 and self.getCrusadeInit( 4 ) == -2: # Crusade of 1229AD, little later (need to be more than 9 turns between crusades)
 			self.setCrusadeInit( 4, -1 ) # turn 207
-	#	elif iGameTurn >= (xml.i1271AD - 5) and self.getCrusadeInit( 4 ) > 0 and self.getCrusadeInit(5) == -2: # Crusade of 1270AD
-	#		self.setCrusadeInit( 5, -1 ) # turn 219
+		elif iGameTurn >= (xml.i1271AD - 5) and self.getCrusadeInit( 4 ) > 0 and self.getCrusadeInit( 5 ) == -2: # Crusade of 1270AD
+			self.setCrusadeInit( 5, -1 ) # turn 219
 
-		if iGameTurn == xml.i1000AD: # indulgances for the Reconquista given by the Catholic Church 1000AD
+		# Start of Defensive Crusades: indulgences for the Reconquista given by the Catholic Church in 1000AD
+		if iGameTurn == xml.i1000AD:
 			self.setDCEnabled( True )
+
+		# End of Defensive Crusades: no more DCs after Protestantism is founded
+		if self.isDCEnabled():
+			if gc.getGame().isReligionFounded(xml.iProtestantism):
+				self.setDCEnabled( False )
 
 		if self.isDCEnabled():
 			self.doDC( iGameTurn )
@@ -321,7 +327,7 @@ class Crusades:
 				if not self.anyParticipate():
 					return
 				print( " Arrival " )
-				self.crusadeArrival()
+				self.crusadeArrival( iActiveCrusade )
 
 			elif iStartDate + 8 == iGameTurn:
 				iLeader = self.getLeader()
@@ -685,7 +691,7 @@ class Crusades:
 		iRichest = -1
 		iMoney = 0
 		#iPopeMoney = gc.getPlayer( con.iPope ).getGold()
-		for i in range( con.iNumPlayers -1 ):
+		for i in range( con.iNumPlayers-1 ):
 			if self.getVotingPower( i ) > 0:
 				pPlayer = gc.getPlayer( i )
 				iPlayerMoney = pPlayer.getGold()
@@ -777,7 +783,7 @@ class Crusades:
 		for i in range( con.iNumPlayers ):
 			gc.getPlayer( i ).setIsCrusader( False )
 
-	def crusadeArrival( self ):
+	def crusadeArrival( self, iActiveCrusade ):
 		iTX, iTY = self.getTargetPlot()
 		iChosenX = -1
 		iChosenY = -1
@@ -788,7 +794,7 @@ class Crusades:
 			self.returnCrusaders()
 			return
 
-		# if in the mean time Jerusalem has been captured by an Orthodox or Catholic player (and target is Jerusalem), cancel the Crusade
+		# if the target is Jerusalem, and in the mean time it has been captured by an Orthodox or Catholic player (or the owner of Jerusalem converted to a Christian religion), cancel the Crusade
 		if (iTX, iTY) == tJerusalem:
 			pPlot = gc.getMap().plot( tJerusalem[0], tJerusalem[1] )
 			if pPlot.isCity():
@@ -821,11 +827,30 @@ class Crusades:
 				lLandPlots.append((x, y))
 				if pPlot.getNumUnits() == 0:
 					lFreeLandPlots.append((x, y))
-		
+
+		# Absinthe: we try to spawn the army west from the target city (preferably northwest), or at least on as low x coordinates as possible
+		#			works great both for Jerusalem (try not to spawn across the Jordan river) and for Constantinople (European side, where the actual city is located)
+		#			also better for most cities in the Levant and in Egypt, and doesn't really matter for the rest
 		if lFreeLandPlots:
-			(iChosenX, iChosenY) = utils.getRandomEntry(lFreeLandPlots)
+			iChosenX = 200
+			iChosenY = 200
+			for tFreeLandPlot in lFreeLandPlots:
+				if tFreeLandPlot[0] < iChosenX:
+					iChosenX = tFreeLandPlot[0]
+					iChosenY = tFreeLandPlot[1]
+				elif tFreeLandPlot[0] == iChosenX:
+					if tFreeLandPlot[0] > iChosenY:
+						iChosenY = tFreeLandPlot[1]
 		elif lLandPlots:
-			(iChosenX, iChosenY) = utils.getRandomEntry(lLandPlots)
+			iChosenX = 200
+			iChosenY = 200
+			for tLandPlot in lLandPlots:
+				if tLandPlot[0] < iChosenX:
+					iChosenX = tLandPlot[0]
+					iChosenY = tLandPlot[1]
+				elif tLandPlot[0] == iChosenX:
+					if tLandPlot[0] > iChosenY:
+						iChosenY = tLandPlot[1]
 			pPlot = gc.getMap().plot(iChosenX, iChosenY)
 			for i in range( pPlot.getNumUnits() ):
 				pPlot.getUnit(0).kill( False, con.iBarbarian )
@@ -834,7 +859,7 @@ class Crusades:
 
 		# Absinthe: if a valid plot is found, make the units and send a message about the arrival to the human player
 		if (iChosenX, iChosenY) != (-1, -1):
-			self.crusadeMakeUnits( (iChosenX, iChosenY) )
+			self.crusadeMakeUnits( (iChosenX, iChosenY), iActiveCrusade )
 			if utils.getHumanID() == iLeader:
 				pTargetCity = gc.getMap().plot( iTX, iTY ).getPlotCity()
 				sCityName = cnm.lookupName(pTargetCity, con.iPope)
@@ -844,14 +869,15 @@ class Crusades:
 		else:
 			self.returnCrusaders()
 
-	def makeUnit(self, iUnit, iPlayer, tCoords, iNum): #by LOQ
+	def makeUnit(self, iUnit, iPlayer, iActiveCrusade, tCoords, iNum): #by LOQ
 		'Makes iNum units for player iPlayer of the type iUnit at tCoords.'
 		pPlayer = gc.getPlayer(iPlayer)
+		print ("iActiveCrusade on units arriving", iActiveCrusade)
 		for i in range(iNum):
 			pUnit = pPlayer.initUnit(iUnit, tCoords[0], tCoords[1], UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
-			pUnit.setMercID( -5 ) # 3Miro: this is a hack to distinguish Crusades without making a separate variable
+			pUnit.setMercID( -5 - iActiveCrusade ) # 3Miro: this is a hack to distinguish Crusades without making a separate variable
 
-	def crusadeMakeUnits( self, tPlot ):
+	def crusadeMakeUnits( self, tPlot, iActiveCrusade ):
 		iLeader = self.getLeader()
 		teamLeader = gc.getTeam( gc.getPlayer( iLeader ).getTeam() )
 
@@ -870,122 +896,123 @@ class Crusades:
 		if (iTX, iTY) == tJerusalem:
 			iRougeModifier = 100
 			if teamLeader.isHasTech( xml.iChivalry ):
-				self.makeUnit( xml.iKnight, iLeader, tPlot, 1 )
-				self.makeUnit( xml.iBurgundianPaladin, iLeader, tPlot, 1 )
-				self.makeUnit( xml.iTemplar, iLeader, tPlot, 1 )
-				self.makeUnit( xml.iTeutonic, iLeader, tPlot, 1 )
-				self.makeUnit( xml.iGuisarme, iLeader, tPlot, 1 )
-				self.makeUnit( xml.iCatapult, iLeader, tPlot, 1 )
+				self.makeUnit( xml.iKnight, iLeader, iActiveCrusade, tPlot, 1 )
+				self.makeUnit( xml.iBurgundianPaladin, iLeader, iActiveCrusade, tPlot, 1 )
+				self.makeUnit( xml.iTemplar, iLeader, iActiveCrusade, tPlot, 1 )
+				self.makeUnit( xml.iTeutonic, iLeader, iActiveCrusade, tPlot, 1 )
+				self.makeUnit( xml.iGuisarme, iLeader, iActiveCrusade, tPlot, 1 )
+				self.makeUnit( xml.iCatapult, iLeader, iActiveCrusade, tPlot, 1 )
 			else:
-				self.makeUnit( xml.iHeavyLancer, iLeader, tPlot, 2 )
-				self.makeUnit( xml.iLancer, iLeader, tPlot, 1 )
-				self.makeUnit( xml.iLongSwordsman, iLeader, tPlot, 1 )
-				self.makeUnit( xml.iSpearman, iLeader, tPlot, 1 )
-				self.makeUnit( xml.iTrebuchet, iLeader, tPlot, 1 )
+				self.makeUnit( xml.iHeavyLancer, iLeader, iActiveCrusade, tPlot, 2 )
+				self.makeUnit( xml.iLancer, iLeader, iActiveCrusade, tPlot, 1 )
+				self.makeUnit( xml.iLongSwordsman, iLeader, iActiveCrusade, tPlot, 1 )
+				self.makeUnit( xml.iSpearman, iLeader, iActiveCrusade, tPlot, 1 )
+				self.makeUnit( xml.iTrebuchet, iLeader, iActiveCrusade, tPlot, 1 )
 		# if the Crusade is stolen
 		else:
 			iRougeModifier = 200
 			if teamLeader.isHasTech( xml.iChivalry ):
-				self.makeUnit( xml.iKnight, iLeader, tPlot, 1 )
-				self.makeUnit( xml.iTeutonic, iLeader, tPlot, 1 )
-				self.makeUnit( xml.iLongSwordsman, iLeader, tPlot, 1 )
-				self.makeUnit( xml.iGuisarme, iLeader, tPlot, 1 )
-				self.makeUnit( xml.iCatapult, iLeader, tPlot, 1 )
+				self.makeUnit( xml.iKnight, iLeader, iActiveCrusade, tPlot, 1 )
+				self.makeUnit( xml.iTeutonic, iLeader, iActiveCrusade, tPlot, 1 )
+				self.makeUnit( xml.iLongSwordsman, iLeader, iActiveCrusade, tPlot, 1 )
+				self.makeUnit( xml.iGuisarme, iLeader, iActiveCrusade, tPlot, 1 )
+				self.makeUnit( xml.iCatapult, iLeader, iActiveCrusade, tPlot, 1 )
 			else:
-				self.makeUnit( xml.iHeavyLancer, iLeader, tPlot, 1 )
-				self.makeUnit( xml.iLancer, iLeader, tPlot, 1 )
-				self.makeUnit( xml.iLongSwordsman, iLeader, tPlot, 1 )
-				self.makeUnit( xml.iSpearman, iLeader, tPlot, 1 )
-				self.makeUnit( xml.iTrebuchet, iLeader, tPlot, 1 )
+				self.makeUnit( xml.iHeavyLancer, iLeader, iActiveCrusade, tPlot, 1 )
+				self.makeUnit( xml.iLancer, iLeader, iActiveCrusade, tPlot, 1 )
+				self.makeUnit( xml.iLongSwordsman, iLeader, iActiveCrusade, tPlot, 1 )
+				self.makeUnit( xml.iSpearman, iLeader, iActiveCrusade, tPlot, 1 )
+				self.makeUnit( xml.iTrebuchet, iLeader, iActiveCrusade, tPlot, 1 )
 
 		# Absinthe: not all units should arrive near Jerusalem
 		#			later Crusades have more units in the pool, so they should have bigger reduction
-		iGameTurn = gc.getGame().getGameTurn()
-		iCrusade = self.getActiveCrusade( iGameTurn )
 		iHuman = utils.getHumanID()
-		# Absinthe: this reduction is very significant for an AI-controlled Jerusalem, but Crusades should remain an increasing threat to the human player
 		pPlot = gc.getMap().plot( tJerusalem[0], tJerusalem[1] )
 		iVictim = pPlot.getPlotCity().getOwner()
+		# Absinthe: this reduction is very significant for an AI-controlled Jerusalem, but Crusades should remain an increasing threat to the human player
 		if iVictim != iHuman:
-			if iCrusade == 0:
+			if iActiveCrusade == 0:
 				iRougeModifier *= 7 / 5
-			elif iCrusade == 1:
+			elif iActiveCrusade == 1:
 				iRougeModifier *= 8 / 5
-			elif iCrusade == 2:
+			elif iActiveCrusade == 2:
 				iRougeModifier *= 10 / 5
-			elif iCrusade == 3:
+			elif iActiveCrusade == 3:
 				iRougeModifier *= 12 / 5
-			elif iCrusade == 4:
+			elif iActiveCrusade == 4:
 				iRougeModifier *= 15 / 5
 			else:
 				iRougeModifier *= 18 / 5
 		else:
-			if iCrusade == 0:
+			if iActiveCrusade == 0:
 				iRougeModifier *= 6 / 5
-			elif iCrusade == 1:
+			elif iActiveCrusade == 1:
 				iRougeModifier *= 7 / 5
-			elif iCrusade == 2:
+			elif iActiveCrusade == 2:
 				iRougeModifier *= 8 / 5
-			elif iCrusade == 3:
+			elif iActiveCrusade == 3:
 				iRougeModifier *= 9 / 5
-			elif iCrusade == 4:
+			elif iActiveCrusade == 4:
 				iRougeModifier *= 10 / 5
 			else:
 				iRougeModifier *= 12 / 5
 
 		if self.getSelectedUnit( 0 ) > 0:
-			self.makeUnit( xml.iTemplar, iLeader, tPlot, self.getSelectedUnit( 0 ) * 100 / iRougeModifier )
+			self.makeUnit( xml.iTemplar, iLeader, iActiveCrusade, tPlot, self.getSelectedUnit( 0 ) * 100 / iRougeModifier )
 		if self.getSelectedUnit( 1 ) > 0:
-			self.makeUnit( xml.iTeutonic, iLeader, tPlot, self.getSelectedUnit( 1 ) * 100 / iRougeModifier )
+			self.makeUnit( xml.iTeutonic, iLeader, iActiveCrusade, tPlot, self.getSelectedUnit( 1 ) * 100 / iRougeModifier )
 		if self.getSelectedUnit( 2 ) > 0:
-			self.makeUnit( xml.iKnightofStJohns, iLeader, tPlot, self.getSelectedUnit( 2 ) * 100 / iRougeModifier )
+			self.makeUnit( xml.iKnightofStJohns, iLeader, iActiveCrusade, tPlot, self.getSelectedUnit( 2 ) * 100 / iRougeModifier )
 		if self.getSelectedUnit( 3 ) > 0:
 			iKnightNumber = self.getSelectedUnit( 3 ) * 100 / iRougeModifier
 			if iLeader == con.iBurgundy:
 				for i in range( 0, iKnightNumber ):
 					if gc.getGame().getSorenRandNum(10, 'chance for Paladin') >= 5: # Absinthe: 50% chance for a Paladin for each unit
-						self.makeUnit( xml.iBurgundianPaladin, iLeader, tPlot, 1 )
+						self.makeUnit( xml.iBurgundianPaladin, iLeader, iActiveCrusade, tPlot, 1 )
 					else:
-						self.makeUnit( xml.iKnight, iLeader, tPlot, 1 )
+						self.makeUnit( xml.iKnight, iLeader, iActiveCrusade, tPlot, 1 )
 			else:
 				for i in range( 0, iKnightNumber ):
 					if gc.getGame().getSorenRandNum(10, 'chance for Paladin') >= 8: # Absinthe: 20% chance for a Paladin for each unit
-						self.makeUnit( xml.iBurgundianPaladin, iLeader, tPlot, 1 )
+						self.makeUnit( xml.iBurgundianPaladin, iLeader, iActiveCrusade, tPlot, 1 )
 					else:
-						self.makeUnit( xml.iKnight, iLeader, tPlot, 1 )
+						self.makeUnit( xml.iKnight, iLeader, iActiveCrusade, tPlot, 1 )
 		if self.getSelectedUnit( 4 ) > 0:
 			iLightCavNumber = self.getSelectedUnit( 4 ) * 100 / iRougeModifier
 			if iLeader == con.iHungary:
 				for i in range( 0, iLightCavNumber ):
 					if (gc.getGame().getSorenRandNum(10, 'chance for Huszar') >= 5): # Absinthe: 50% chance for a Huszár for each unit
-						self.makeUnit( xml.iHungarianHuszar, iLeader, tPlot, 1 )
+						self.makeUnit( xml.iHungarianHuszar, iLeader, iActiveCrusade, tPlot, 1 )
 					else:
-						self.makeUnit( xml.iHeavyLancer, iLeader, tPlot, 1 )
+						self.makeUnit( xml.iHeavyLancer, iLeader, iActiveCrusade, tPlot, 1 )
 			else:
-				self.makeUnit( xml.iHeavyLancer, iLeader, tPlot, iLightCavNumber )
+				self.makeUnit( xml.iHeavyLancer, iLeader, iActiveCrusade, tPlot, iLightCavNumber )
 		if self.getSelectedUnit( 5 ) > 0:
-			self.makeUnit( xml.iLancer, iLeader, tPlot, self.getSelectedUnit( 5 ) * 100 / iRougeModifier )
+			self.makeUnit( xml.iLancer, iLeader, iActiveCrusade, tPlot, self.getSelectedUnit( 5 ) * 100 / iRougeModifier )
 		if self.getSelectedUnit( 6 ) > 0:
 			iSiegeNumber = self.getSelectedUnit( 6 ) * 100 / iRougeModifier
 			if iSiegeNumber > 2:
-				self.makeUnit( xml.iCatapult, iLeader, tPlot, 2 )
-				self.makeUnit( xml.iTrebuchet, iLeader, tPlot, iSiegeNumber - 2 )
+				self.makeUnit( xml.iCatapult, iLeader, iActiveCrusade, tPlot, 2 )
+				self.makeUnit( xml.iTrebuchet, iLeader, iActiveCrusade, tPlot, iSiegeNumber - 2 )
 			else:
-				self.makeUnit( xml.iCatapult, iLeader, tPlot, iSiegeNumber )
+				self.makeUnit( xml.iCatapult, iLeader, iActiveCrusade, tPlot, iSiegeNumber )
 		if self.getSelectedUnit( 7 ) > 0:
 			iFootNumber = self.getSelectedUnit( 7 ) * 100 / iRougeModifier
 			for i in range( 0, iFootNumber ):
 				if gc.getGame().getSorenRandNum(2, 'coinflip') == 1: # Absinthe: 50% chance for both type
-					self.makeUnit( xml.iLongSwordsman, iLeader, tPlot, 1 )
+					self.makeUnit( xml.iLongSwordsman, iLeader, iActiveCrusade, tPlot, 1 )
 				else:
-					self.makeUnit( xml.iGuisarme, iLeader, tPlot, 1 )
+					self.makeUnit( xml.iGuisarme, iLeader, iActiveCrusade, tPlot, 1 )
 
 
 	def freeCrusaders( self, iPlayer ):
 		# the majority of Crusader units will return from the Crusade, so the Crusading civ will have harder time keeping Jerusalem and the Levant
 		unitList = PyPlayer( iPlayer ).getUnitList()
+		iGameTurn = gc.getGame().getGameTurn() - 1 # process for freeCrusaders was actually started in the previous turn, iActiveCrusade might have changed for this turn
+		iActiveCrusade = self.getActiveCrusade( iGameTurn ) # Absinthe: the Crusader units are called back before the next Crusade is initialized
+		print ("iActiveCrusade on units returning", iActiveCrusade)
 		for pUnit in unitList:
-			if pUnit.getMercID() == -5: # so this is a Crusader Unit
+			if pUnit.getMercID() == (-5 - iActiveCrusade): # Absinthe: so this is a Crusader Unit of the active Crusade
 				pPlot = gc.getMap().plot( pUnit.getX(), pUnit.getY() )
 				iOdds = 80
 				iCrusadeCategory = self.unitCrusadeCategory( pUnit.getUnitType() )
@@ -1026,7 +1053,7 @@ class Crusades:
 		if iGameTurn % 3 != gc.getGame().getSorenRandNum(3, 'roll to see if we should DC'): # otherwise every turn gets too much to check
 			return
 		#print(" DC Check")
-		lPotentials = [iPlayer for iPlayer in range(con.iNumPlayers-1) if self.canDC(iPlayer, iGameTurn)]
+		lPotentials = [iPlayer for iPlayer in range(con.iNumPlayers-1) if self.canDC(iPlayer, iGameTurn)] # exclude the Pope
 		iChosen = -1
 		if lPotentials:
 			#print(" Oh, Holy Father, someone needs help! " )
@@ -1037,8 +1064,15 @@ class Crusades:
 				iCatholicFaith += pPlayer.getFaith() + pPope.AI_getAttitude(iPlayer)
 			#print(" Faith of the needy: ",iCatholicFaith )
 			if iCatholicFaith > 0:
-				if gc.getGame().getSorenRandNum(3, 'roll to pick Someone for DC') != 1: # 2/3 chance
-					iChosen = utils.getRandomEntry(lPotentials)
+				iCatholicFaith += iCatholicFaith / 2 + 1 # there is 2/3 chance that any civ is selected
+				iRandNum = gc.getGame().getSorenRandNum(iCatholicFaith, 'roll to pick Someone for DC')
+				for iPlayer in lPotentials:
+					pPlayer = gc.getPlayer( iPlayer )
+					iRandNum -= (pPlayer.getFaith() + pPope.AI_getAttitude( iPlayer ))
+					# select the actual civ when we first go below 0
+					if ( iRandNum <= 0 ):
+						iChosen = iPlayer
+						break
 		#print(" DC Chosen ",iChosen)
 		if iChosen > -1:
 			iHuman = utils.getHumanID()
@@ -1052,16 +1086,17 @@ class Crusades:
 	def canDC( self, iPlayer, iGameTurn ):
 		#print(" DC Chech for player ",iPlayer,iGameTurn)
 		pPlayer = gc.getPlayer( iPlayer )
+		teamPlayer = gc.getTeam( pPlayer.getTeam() )
 		# only born, flipped and living Catholics can DC
 		if (iGameTurn < con.tBirth[iPlayer]+5) or not pPlayer.isAlive() or pPlayer.getStateReligion() != iCatholicism:
 			return False
-		teamPlayer = gc.getTeam( pPlayer.getTeam() )
+		# need to have open borders with the Pope
 		if not teamPlayer.isOpenBorders( gc.getPlayer( con.iPope ).getTeam() ):
 			return False
 
 		tPlayerDCMap = tDefensiveCrusadeMap[iPlayer]
 		# Can DC if at war with a non-catholic/orthodox enemy, enemy is not a vassal of a catholic/orthodox civ and has a city in the DC map
-		for iEnemy in range( con.iNumPlayers ):
+		for iEnemy in range( con.iNumPlayers-1 ): # exclude the Pope
 			pEnemy = gc.getPlayer( iEnemy )
 			if teamPlayer.isAtWar( pEnemy.getTeam() ) and con.tBirth[iEnemy] + 10 < iGameTurn:
 				if self.isOrMasterChristian(iEnemy):

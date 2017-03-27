@@ -75,7 +75,7 @@ class StoredData:
 				'bFirstPlague':False,
 
 				# Crusades
-				'lCrusadeInit': [-2, -2, -2, -2, -2],
+				'lCrusadeInit': [-2, -2, -2, -2, -2, -2],
 				'bParticipate': False,
 				'lVotingPower': [0 for i in range(con.iNumPlayers)], #major players only
 				'iFavorite': 0,

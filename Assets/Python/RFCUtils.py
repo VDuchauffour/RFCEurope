@@ -654,7 +654,7 @@ class RFCUtils:
 		#	print ("iCurrentCityCulture2", city.getCulture(iNewOwner))
 		#	print ("iCurrentCityCultureOldOwner", iCurrentCityCulture*(100-iCulturePercent)/100)
 		#	print ("iCurrentCityCultureNewOwner", iCurrentCityCulture*iCulturePercent/100)
-			
+
 			if iNewOwner != con.iBarbarian:
 				city.setCulture(con.iBarbarian, 0, True)
 
@@ -676,15 +676,15 @@ class RFCUtils:
 			if iNewOwner not in lMinors:
 				for (x, y) in self.surroundingPlots(tCityPlot, 2):
 					for iMinor in lMinors:
-						iPlotBarbCulture = gc.getMap().plot(x, y).getCulture(iMinor)
-						if iPlotBarbCulture > 0:
+						iPlotMinorCulture = gc.getMap().plot(x, y).getCulture(iMinor)
+						if iPlotMinorCulture > 0:
 							if gc.getMap().plot(x, y).getPlotCity().isNone() or (x, y) == tCityPlot:
 								if bBarbarian2x2Decay:
-									gc.getMap().plot(x, y).setCulture(iMinor, iPlotBarbCulture/4, True)
+									gc.getMap().plot(x, y).setCulture(iMinor, iPlotMinorCulture/4, True)
 								if bBarbarian2x2Conversion:
 									gc.getMap().plot(x, y).setCulture(iMinor, 0, True)
 									# Absinthe: changeCulture instead of setCulture for the new civ, so previously acquired culture won't disappear
-									gc.getMap().plot(x, y).changeCulture(iNewOwner, iPlotBarbCulture, True)
+									gc.getMap().plot(x, y).changeCulture(iNewOwner, iPlotMinorCulture, True)
 
 		#plot
 		for (x, y) in self.surroundingPlots(tCityPlot):

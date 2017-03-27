@@ -68,7 +68,7 @@ class UniquePowers:
 			iNextJanissary = 300
 
 		if ( iOldPoints + iNewPoints > iNextJanissary ):
-			pCity = utils.getRandomEntry(utils.getCityList(iPlayer))
+			pCity = utils.getRandomEntry(utils.getCityList(iPlayer)) # The Janissary unit appears in a random city - should it be the capital instead?
 			iX = pCity.getX()
 			iY = pCity.getY()
 			utils.makeUnit( xml.iJanissary, iPlayer, (iX, iY), 1 )
@@ -167,7 +167,7 @@ class UniquePowers:
 	def defianceUP(self, iPlayer):
 		print("Defiance called")
 		pPlayer = gc.getPlayer(iPlayer)
-			
+
 		# One ranged/gun class
 		RangedClass = utils.getUniqueUnit(iPlayer, xml.iArcher)
 		lRangedList = [xml.iLineInfantry, xml.iMusketman, xml.iLongbowman, xml.iArbalest, xml.iCrossbowman, xml.iArcher]

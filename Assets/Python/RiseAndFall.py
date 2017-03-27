@@ -1600,7 +1600,7 @@ class RiseAndFall:
 			if (self.getFlipsDelay(iCiv) == 0): #city hasn't already been founded)
 
 				# Absinthe: this probably fixes a couple instances of the -1 turn autoplay bug - code adapted from SoI
-				if (iCiv == iHuman): 
+				if (iCiv == iHuman):
 					killPlot = gc.getMap().plot(tCapital[0], tCapital[1])
 					iNumUnitsInAPlot = killPlot.getNumUnits()
 					if (iNumUnitsInAPlot):
@@ -1796,9 +1796,12 @@ class RiseAndFall:
 ##					if (unit.getUnitType() == xml.iSettler):
 ##						break
 ##				unit.found()
-				utils.flipUnitsInArea((tCapital[0]-4, tCapital[1]-4), (tCapital[0]+4, tCapital[1]+4), iCiv, iBarbarian, True, True) #This is for AI only. During Human player spawn, that area is already cleaned
+				# Absinthe: there was another silly mistake here with barbarian and indy unit flips... switched to properly check spawn area instead of the preset area based on distance from capital
+				utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iBarbarian, True, True) #remaining barbs in the region now belong to the new civ
+				utils.flipUnitsInCoreExceptions(iCiv, iBarbarian, True, True) #remaining barbs in the region now belong to the new civ
 				for i in range( con.iIndepStart, con.iIndepEnd + 1 ):
-					utils.flipUnitsInArea((tCapital[0]-2, tCapital[1]-2), (tCapital[0]+2, tCapital[1]+2), iCiv, i, True, False) #This is for AI only. During Human player spawn, that area is already cleaned
+					utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, i, True, False) #remaining independents in the region now belong to the new civ
+					utils.flipUnitsInCoreExceptions(iCiv, i, True, False) #remaining independents in the region now belong to the new civ
 				self.assignTechs(iCiv)
 				utils.setPlagueCountdown(iCiv, -con.iImmunity)
 				utils.clearPlague(iCiv)
@@ -2706,7 +2709,7 @@ class RiseAndFall:
 			teamVenecia.setHasTech( xml.iMusic, True, iCiv, False, False )
 			teamVenecia.setHasTech( xml.iHerbalMedicine, True, iCiv, False, False )
 			teamVenecia.setHasTech( xml.iChainMail, True, iCiv, False, False )
-			
+
 		elif ( iCiv == iBurgundy ):
 			for iTech in range( xml.iStirrup + 1 ):
 				teamBurgundy.setHasTech( iTech, True, iCiv, False, False )
