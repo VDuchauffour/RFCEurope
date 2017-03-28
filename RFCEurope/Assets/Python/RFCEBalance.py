@@ -701,7 +701,7 @@ class RFCEBalance:
 		gc.setReligionBenefit( xml.iProtestantism, con.iFP_Displomacy, 4, 100 )
 		gc.setReligionBenefit( xml.iOrthodoxy, con.iFP_Displomacy, 3, 100 )
 
-		# every nation gets a land tile that is normally impassable and now pass through it
+		# a land tile that is normally impassable but the desired player can pass through it
 		#gc.setStrategicTile( iVenecia, 56, 35 )
 
 		# set AI modifiers for preferred buildings
