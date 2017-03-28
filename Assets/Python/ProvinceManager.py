@@ -470,7 +470,7 @@ class ProvinceManager:
 		if ( iPlayer >= con.iNumPlayers -1 ): # Pope, indies, barbs
 			return
 		pPlayer = gc.getPlayer(iPlayer)
-		iProv = rfcemaps.tProinceMap[y][x]
+		iProv = rfcemaps.tProvinceMap[y][x]
 		if ( pPlayer.getProvinceType( iProv ) == iProvincePotential ):
 			if ( iProv in self.tPot2NormProvinces[iPlayer] ):
 				pPlayer.setProvinceType( iProv, iProvinceNatural )

@@ -12,11 +12,11 @@ def setup():
 
 	# Region (province) maps
 	map = CyMap()
-	for y in range(len(maps.tProinceMap)):
-		for x in range(len(maps.tProinceMap[y])):
+	for y in range(len(maps.tProvinceMap)):
+		for x in range(len(maps.tProvinceMap[y])):
 			plot = map.plot(x, y) # no need for [iMaxY - iY - 1] inversion, the province map is upside down visually
 			if plot:
-				plot.setProvinceID(maps.tProinceMap[y][x])
+				plot.setProvinceID(maps.tProvinceMap[y][x])
 				#print ('ProvinceID', x, y, plot.getProvinceID)
 
 	# City name maps
@@ -32,8 +32,8 @@ def setup():
 
 	# Lake name IDs
 	# first set all plots to -1
-	for y in range(len(maps.tProinceMap)):
-		for x in range(len(maps.tProinceMap[y])):
+	for y in range(len(maps.tProvinceMap)):
+		for x in range(len(maps.tProvinceMap[y])):
 			plot = map.plot(x, y)
 			if plot:
 				plot.setLakeNameID(-1)

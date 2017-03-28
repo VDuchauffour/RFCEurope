@@ -36,19 +36,19 @@ class StoredData:
 				'tTempBottomRight': -1,
 				'iSpawnWar': 0, #if 1, add units and declare war. If >=2, do nothing
 				'bAlreadySwitched': False,
-				'lColonistsAlreadyGiven': [0 for i in range(con.iNumPlayers)], #major players only, currently unused
-				'lNumCities': [0 for i in range(con.iNumPlayers)], #major players only
-				'lSpawnDelay': [0 for i in range(con.iNumPlayers)], #major players only
-				'lFlipsDelay': [0 for i in range(con.iNumPlayers)], #major players only
+				'lColonistsAlreadyGiven': [0] * con.iNumPlayers, #major players only, currently unused
+				'lNumCities': [0] * con.iNumPlayers, #major players only
+				'lSpawnDelay': [0] * con.iNumPlayers, #major players only
+				'lFlipsDelay': [0] * con.iNumPlayers, #major players only
 				'iBetrayalTurns': 0,
 				'lLatestRebellionTurn': [0 for i in range(con.iNumPlayers)], #major players only
 				'iRebelCiv': 0,
 				'lRebelCities': [], # 3Miro: store the rebelling cities
-				'lRebelSuppress': [0 for i in range(con.iNumPlayers)], #major players only
+				'lRebelSuppress': [0] * con.iNumPlayers, #major players only
 				'lExileData': [-1, -1, -1, -1, -1],
 				'tTempFlippingCity': -1,
 				'lCheatersCheck': [0, -1],
-				'lBirthTurnModifier': [0 for i in range(con.iNumPlayers)], #major players only, currently unused
+				'lBirthTurnModifier': [0] * con.iNumPlayers, #major players only, currently unused
 				'lDeleteMode': [-1, -1, -1], #first is a bool, the other values are capital coordinates
 				'iSeed': -1, # random delay, currently unused
 
@@ -56,7 +56,7 @@ class StoredData:
 				'lReligionFounded': [-1, -1, -1, -1, -1],
 				# Absinthe: Reformation
 				'bReformationActive': False,
-				'lReformationHitMatrix': [0 for i in range(con.iNumPlayers)], #major players only
+				'lReformationHitMatrix': [0] * con.iNumPlayers, #major players only
 				'bCounterReformationActive': False,
 				# Absinthe: Persecution
 				'lPersecutionData': [-1, -1, -1],
@@ -69,21 +69,21 @@ class StoredData:
 				'iNextTurnAIWar': -1,
 
 				# Absinthe: Plagues
-				'lPlagueCountdown': [0 for i in range(con.iNumTotalPlayersB)], #total players B (major + indy + barbarian)
+				'lPlagueCountdown': [0] * con.iNumTotalPlayersB, #total players B (major + indy + barbarian)
 				'lGenericPlagueDates': [-1, -1, -1, -1, -1],
 				'bBadPlague':False,
 				'bFirstPlague':False,
 
 				# Crusades
-				'lCrusadeInit': [-2, -2, -2, -2, -2, -2],
+				'lCrusadeInit': [-2] * con.iNumCrusades,
 				'bParticipate': False,
-				'lVotingPower': [0 for i in range(con.iNumPlayers)], #major players only
+				'lVotingPower': [0] * con.iNumPlayers, #major players only
 				'iFavorite': 0,
 				'iPowerful': 0,
 				'iLeader': 0,
 				'lVotesGathered': [0, 0],
 				'iRichestCatholic': 0,
-				'lDeviateTargets': [False for i in range(con.iNumPlayers)], #major players only
+				'lDeviateTargets': [False] * con.iNumPlayers, #major players only
 				'tTarget': (0, 0),
 				'iCrusadePower': 0,
 				'iCrusadeSucceeded': 0,
@@ -93,9 +93,9 @@ class StoredData:
 				'iDCLast': 0,
 
 				# Absinthe: Respawns
-				'lSpecialRespawnTurn': [0 for i in range(con.iNumPlayers)], #major players only, currently unused
-				'lLastTurnAlive': [0 for i in range(con.iNumPlayers)], #major players only
-				'lLastRespawnTurn': [0 for i in range(con.iNumPlayers)], #major players only
+				'lSpecialRespawnTurn': [0] * con.iNumPlayers, #major players only, currently unused
+				'lLastTurnAlive': [0] * con.iNumPlayers, #major players only
+				'lLastRespawnTurn': [0] * con.iNumPlayers, #major players only
 
 				# 3Miro: Minor Nations
 				'lNextMinorRevolt': [-1, -1, -1, -1, -1, -1, -1],
@@ -103,7 +103,7 @@ class StoredData:
 
 				# 3Miro: Mercenaries
 				'lMercGlobalPool': [],
-				'lMercsHiredBy': [-1]*500, # must be at least as long as lMercList (currently allow for 500)
+				'lMercsHiredBy': [-1] * 500, # must be at least as long as lMercList (currently allow for 500)
 
 				# Merijn: AI UHV
 				'bIgnoreAIUHV': True,
