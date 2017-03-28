@@ -612,7 +612,7 @@ class Victory:
 			for y in range(con.iMapMaxY):
 				plot = gc.getMap().plot(x,y)
 				if plot.isWater(): continue
-				iProvinceID = rfcemaps.tProinceMap[plot.getY()][plot.getX()]
+				iProvinceID = rfcemaps.tProvinceMap[plot.getY()][plot.getX()]
 				if iProvinceID in xml.lNotEurope: continue
 				iTotal += 1
 				if plot.getOwner() == iPlayer:

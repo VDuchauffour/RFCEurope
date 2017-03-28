@@ -654,19 +654,18 @@ class CvEventManager:
 
 		if pTeam.isTrainVassalUU():
 			l_vassalUU = []
-			iDefaultUnit = gc.getUnitClassInfo(iUnitType).getDefaultUnitIndex()
-			iPlayerUU = utils.getUniqueUnit(unit.getOwner(), iUnitType)
-			if iPlayerUU != iDefaultUnit:
-				l_vassalUU.append(iPlayerUU)
+			iDefaultUnit = utils.getBaseUnit(iUnitType)
 			for iLoopPlayer in range(con.iNumPlayers):
 				pLoopPlayer = gc.getPlayer(iLoopPlayer)
 				if pLoopPlayer.isAlive():
 					if gc.getTeam(pLoopPlayer.getTeam()).isVassal(iTeam):
-						civ_type = gc.getPlayer(iLoopPlayer).getCivilizationType()
 						iUniqueUnit = utils.getUniqueUnit(iLoopPlayer, iUnitType)
 						if iUniqueUnit != iDefaultUnit:
 							l_vassalUU.append(iUniqueUnit)
-			if len(l_vassalUU) >= 2: # Only 1 unit in the list indicate own UU, which doesn't need to be converted
+			if l_vassalUU: # Only convert if vassal UU is possible
+				iPlayerUU = utils.getUniqueUnit(unit.getOwner(), iUnitType)
+				if iPlayerUU != iDefaultUnit:
+					l_vassalUU.append(iPlayerUU)
 				iUnit = utils.getRandomEntry(l_vassalUU)
 				pNewUnit = pPlayer.initUnit( iUnit, unit.getX(), unit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION )
 				pNewUnit.convert(unit)

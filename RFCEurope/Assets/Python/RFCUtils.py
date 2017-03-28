@@ -116,100 +116,6 @@ class RFCUtils:
 
 #######################################
 
-	#Stability, RiseNFall, CvFinanceAdvisor
-	#def setParameter(self, iPlayer, iParameter, bPreviousAmount, iAmount):
-		#if (bPreviousAmount):
-			#self.setStabilityParameters(iPlayer, iParameter, self.getStabilityParameters(iPlayer,iParameter) + iAmount)
-		#else:
-			#self.setStabilityParameters(iPlayer, iParameter, 0 + iAmount)
-
-	## 3Miro: for numbers in the stability screen
-	#def getParString( self, iPlayer, iCathegory ):
-		#if ( gc.getPlayer(iPlayer).isHuman()):
-			#if ( iCathegory == 0 ):
-				#sString = "%i | %i" %( self.getStabilityParameters(iPlayer, con.iParCitiesE), self.getStabilityParameters(iPlayer,con.iParCities3) )
-			#elif ( iCathegory == 1 ):
-				#sString = "%i | %i | %i" %(self.getStabilityParameters(iPlayer, con.iParCivicsE), self.getStabilityParameters(iPlayer, con.iParCivics3), self.getStabilityParameters(iPlayer, con.iParCivics1) )
-			#elif ( iCathegory == 2 ):
-				#sString = "%i | %i | %i" %(self.getStabilityParameters(iPlayer, con.iParEconomyE), self.getStabilityParameters(iPlayer, con.iParEconomy3), self.getStabilityParameters(iPlayer, con.iParEconomy1) )
-			#elif ( iCathegory == 3 ):
-				#sString = "%i | %i | %i" %(self.getStabilityParameters(iPlayer, con.iParExpansionE), self.getStabilityParameters(iPlayer, con.iParExpansion3), self.getStabilityParameters(iPlayer, con.iParExpansion1) )
-			#elif ( iCathegory == 4 ):
-				#sString = "%i | %i" %(self.getStabilityParameters(iPlayer, con.iParDiplomacyE), self.getStabilityParameters(iPlayer, con.iParDiplomacy3) )
-			#else:
-				#sString = ""
-		#else:
-			#sString = ""
-		#return sString
-
-	##CvFinanceAdvisor
-	#def getParCities(self,iCiv):
-		#if (self.getStabilityParameters(iCiv,con.iParCitiesE) > 7):
-			#return self.getStabilityParameters(iCiv,con.iParCities3) + self.getStabilityParameters(iCiv,con.iParCitiesE)
-		#elif (self.getStabilityParameters(iCiv, con.iParCitiesE) < -7):
-			#return self.getStabilityParameters(iCiv,con.iParCities3) + self.getStabilityParameters(iCiv,con.iParCitiesE)
-		#else:
-			#return self.getStabilityParameters(iCiv,con.iParCities3) + self.getStabilityParameters(iCiv,con.iParCitiesE)
-
-	#def getParCivics(self,iCiv):
-		#if (self.getStabilityParameters(iCiv, con.iParCivicsE) > 7):
-			#return self.getStabilityParameters(iCiv, con.iParCivics3) + self.getStabilityParameters(iCiv, con.iParCivics1) + self.getStabilityParameters(iCiv, con.iParCivicsE)
-		#elif (self.getStabilityParameters(iCiv, con.iParCivicsE) < -7):
-			#return self.getStabilityParameters(iCiv, con.iParCivics3) + self.getStabilityParameters(iCiv, con.iParCivics1) + self.getStabilityParameters(iCiv, con.iParCivicsE)
-		#else:
-			#return self.getStabilityParameters(iCiv, con.iParCivics3) + self.getStabilityParameters(iCiv, con.iParCivics1) + self.getStabilityParameters(iCiv, con.iParCivicsE)
-
-	#def getParDiplomacy(self,iCiv):
-		#if (self.getStabilityParameters(iCiv, con.iParDiplomacyE) > 7):
-			#return self.getStabilityParameters(iCiv, con.iParDiplomacy3) + self.getStabilityParameters(iCiv, con.iParDiplomacyE)
-		#elif (self.getStabilityParameters(iCiv, con.iParDiplomacyE) < -7):
-			#return self.getStabilityParameters(iCiv, con.iParDiplomacy3) + self.getStabilityParameters(iCiv, con.iParDiplomacyE)
-		#else:
-			#return self.getStabilityParameters(iCiv, con.iParDiplomacy3) + self.getStabilityParameters(iCiv, con.iParDiplomacyE)
-
-	#def getParEconomy(self, iCiv):
-		##print ("ECO", self.getStabilityParameters(con.iParEconomy3), self.getStabilityParameters(con.iParEconomy1), self.getStabilityParameters(con.iParEconomyE))
-		#if (self.getStabilityParameters(iCiv, con.iParEconomyE) > 7):
-			#return self.getStabilityParameters(iCiv, con.iParEconomy3) + self.getStabilityParameters(iCiv, con.iParEconomy1) + self.getStabilityParameters(iCiv, con.iParEconomyE)
-		#elif (self.getStabilityParameters(iCiv, con.iParEconomyE) < -7):
-			#return self.getStabilityParameters(iCiv, con.iParEconomy3) + self.getStabilityParameters(iCiv, con.iParEconomy1) + self.getStabilityParameters(iCiv, con.iParEconomyE)
-		#else:
-			#return self.getStabilityParameters(iCiv, con.iParEconomy3) + self.getStabilityParameters(iCiv, con.iParEconomy1) + self.getStabilityParameters(iCiv, con.iParEconomyE)
-
-	#def getParExpansion(self, iCiv):
-		#if (self.getStabilityParameters(iCiv, con.iParExpansionE) > 7):
-			#return self.getStabilityParameters(iCiv, con.iParExpansion3) + self.getStabilityParameters(iCiv, con.iParExpansion1) + self.getStabilityParameters(iCiv, con.iParExpansionE)
-		#elif (self.getStabilityParameters(iCiv, con.iParExpansionE) < -7):
-			#return self.getStabilityParameters(iCiv, con.iParExpansion3) + self.getStabilityParameters(iCiv, con.iParExpansion1) + self.getStabilityParameters(iCiv, con.iParExpansionE)
-		#else:
-			#return self.getStabilityParameters(iCiv, con.iParExpansion3) + self.getStabilityParameters(iCiv, con.iParExpansion1) + self.getStabilityParameters(iCiv, con.iParExpansionE)
-
-	#def getArrow(self, iParameter):
-		#if (iParameter == 0):
-			#if (self.getStability(self.getHumanID()) >= self.getLastRecordedStabilityStuff(iParameter) + 6):
-				#return 1
-			#elif (self.getStability(self.getHumanID()) <= self.getLastRecordedStabilityStuff(iParameter) - 6):
-				#return -1
-			#else:
-				#return 0
-		#else:
-			#if (iParameter == 1):
-				#iNewValue = self.getParCities()
-			#elif (iParameter == 2):
-				#iNewValue = self.getParCivics()
-			#elif (iParameter == 3):
-				#iNewValue = self.getParEconomy()
-			#elif (iParameter == 4):
-				#iNewValue = self.getParExpansion()
-			#elif (iParameter == 5):
-				#iNewValue = self.getParDiplomacy()
-			#if (iNewValue >= self.getLastRecordedStabilityStuff(iParameter) + 4):
-				#return 1
-			#elif (iNewValue <= self.getLastRecordedStabilityStuff(iParameter) - 4):
-				#return -1
-			#else:
-				#return 0
-
 	#Victory
 	def countAchievedGoals(self, iPlayer):
 		pPlayer = gc.getPlayer( iPlayer )
@@ -1491,7 +1397,7 @@ class RFCUtils:
 		for i in range(map.numPlots()):
 			plot = map.plotByIndex(i)
 			if gc.getGame().isDebugMode() or plot.isRevealed(iHumanTeam, False):
-				if RFCEMaps.tProinceMap[plot.getY()][plot.getX()] == -1: # ocean and non-province tiles
+				if RFCEMaps.tProvinceMap[plot.getY()][plot.getX()] == -1: # ocean and non-province tiles
 					szColor = "COLOR_GREY"
 				else:
 					szColor = colors[self.getProvinceStabilityLevel(iHuman, plot.getProvince())]
@@ -1527,7 +1433,7 @@ class RFCUtils:
 			for i in range(map.numPlots()):
 				plot = map.plotByIndex(i)
 				if gc.getGame().isDebugMode() or plot.isRevealed(iHumanTeam, False):
-					if RFCEMaps.tProinceMap[plot.getY()][plot.getX()] == -1: # ocean and non-province tiles
+					if RFCEMaps.tProvinceMap[plot.getY()][plot.getX()] == -1: # ocean and non-province tiles
 						szColor = "COLOR_GREY"
 					else:
 						szColor = colors[self.getProvinceStabilityLevel(iSelectedCivID, plot.getProvince())]
@@ -1591,7 +1497,7 @@ class RFCUtils:
 		for i in range(map.numPlots()):
 			plot = map.plotByIndex(i)
 			if gc.getGame().isDebugMode() or plot.isRevealed(iHumanTeam, False):
-				if RFCEMaps.tProinceMap[plot.getY()][plot.getX()] == -1: # ocean and non-province tiles
+				if RFCEMaps.tProvinceMap[plot.getY()][plot.getX()] == -1: # ocean and non-province tiles
 					szColor = "COLOR_GREY"
 				else:
 					szColor = colors[self.getProvinceStabilityLevel(iChoice, plot.getProvince())]
@@ -1631,6 +1537,9 @@ class RFCUtils:
 		pPlayer = gc.getPlayer(iPlayer)
 		return gc.getCivilizationInfo(pPlayer.getCivilizationType()).getCivilizationUnits(gc.getUnitInfo(iUnit).getUnitClassType())
 
+	def getBaseUnit(self, iUnit):
+		return gc.getUnitClassInfo(gc.getUnitInfo(iUnit).getUnitClassType()).getDefaultUnitIndex()
+
 	def getUniqueBuilding(self, iPlayer, iBuilding):
 		return gc.getCivilizationInfo(gc.getPlayer(iPlayer).getCivilizationType()).getCivilizationBuildings(gc.getBuildingInfo(iBuilding).getBuildingClassType())
 
@@ -1654,3 +1563,16 @@ class RFCUtils:
 
 	def getWorldPlotsList(self):
 		return [(x, y) for x in range(con.iMapMaxX) for y in range(con.iMapMaxY)]
+
+	def getRandomByWeight(self, lList, iNothing = 0):
+		if not lList: return -1
+		if gc.getGame().getSorenRandNum(100, 'Random entry') < iNothing: # iNothing in %
+			return -1
+		iTemp = 0
+		iRand = gc.getGame().getSorenRandNum(sum(x[1] for x in lList), 'Random entry')
+		for tCiv in lList:
+			iPlayer, iValue = tCiv
+			iTemp += iValue
+			if iTemp >= iRand:
+				return iPlayer
+		return -1

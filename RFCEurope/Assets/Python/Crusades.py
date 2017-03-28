@@ -22,7 +22,7 @@ tJerusalem = con.tJerusalem
 iCatholicism = xml.iCatholicism
 iOrthodoxy = xml.iOrthodoxy
 
-ProvMap = rfceMaps.tProinceMap
+ProvMap = rfceMaps.tProvinceMap
 
 # Can call DC to aid Catholics, if at war with Non-Catholic and Non-Orthodox player, who isn't vassal of Catholic or Orthodox player and has at least one city in the provinces listed here
 tDefensiveCrusadeMap = [
@@ -1054,33 +1054,24 @@ class Crusades:
 			return
 		#print(" DC Check")
 		lPotentials = [iPlayer for iPlayer in range(con.iNumPlayers-1) if self.canDC(iPlayer, iGameTurn)] # exclude the Pope
-		iChosen = -1
 		if lPotentials:
 			#print(" Oh, Holy Father, someone needs help! " )
 			pPope = gc.getPlayer( con.iPope )
-			iCatholicFaith = 0
+			lWeightValues = []
 			for iPlayer in lPotentials:
+				iCatholicFaith = 0
 				pPlayer = gc.getPlayer(iPlayer)
 				iCatholicFaith += pPlayer.getFaith() + pPope.AI_getAttitude(iPlayer)
-			#print(" Faith of the needy: ",iCatholicFaith )
-			if iCatholicFaith > 0:
-				iCatholicFaith += iCatholicFaith / 2 + 1 # there is 2/3 chance that any civ is selected
-				iRandNum = gc.getGame().getSorenRandNum(iCatholicFaith, 'roll to pick Someone for DC')
-				for iPlayer in lPotentials:
-					pPlayer = gc.getPlayer( iPlayer )
-					iRandNum -= (pPlayer.getFaith() + pPope.AI_getAttitude( iPlayer ))
-					# select the actual civ when we first go below 0
-					if ( iRandNum <= 0 ):
-						iChosen = iPlayer
-						break
-		#print(" DC Chosen ",iChosen)
-		if iChosen > -1:
-			iHuman = utils.getHumanID()
-			if iChosen == iHuman:
-				self.callDCHuman()
-			else:
-				self.callDCAI( iChosen )
-			self.setDCLast( iGameTurn )
+				if iCatholicFaith > 0:
+					lWeightValues.append((iPlayer, iCatholicFaith))
+			iChosenPlayer = utils.getRandomByWeight(lWeightValues, 33) # 33% chance for no DC
+			if iChosenPlayer != -1:
+				#print(" DC Chosen ", iChosenPlayer)
+				if iChosenPlayer == utils.getHumanID():
+					self.callDCHuman()
+				else:
+					self.callDCAI( iChosenPlayer )
+				self.setDCLast( iGameTurn )
 
 
 	def canDC( self, iPlayer, iGameTurn ):

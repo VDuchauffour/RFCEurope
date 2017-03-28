@@ -956,11 +956,11 @@ class RFCEBalance:
 
 		for y in range( con.iMapMaxY ):
 			for x in range( con.iMapMaxX ):
-				if ( rfcemaps.tProinceMap[y][x] > -1 ):
+				if ( rfcemaps.tProvinceMap[y][x] > -1 ):
 					# "no province" of ocean is settled different than -1, set only non-negative values,
 					# the C++ map is initialized to "no-province" by setSizeNPlayers(...)
 					# "no-province" is returned as -1 via the Cy interface
-					gc.setProvince( x, y, rfcemaps.tProinceMap[y][x] )
+					gc.setProvince( x, y, rfcemaps.tProvinceMap[y][x] )
 		gc.createProvinceCrossreferenceList() # make sure to call this AFTER setting all the Province entries
 
 		gc.setProvinceTypeNumber( con.iNumProvinceTypes ) # set the Number of Provinces, call this before you set any AI or culture modifiers

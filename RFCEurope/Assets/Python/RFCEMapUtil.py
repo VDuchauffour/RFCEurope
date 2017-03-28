@@ -63,7 +63,7 @@ class RFCEMapManager:
 	def initMaps(self):
 		if(not self.mapsInitiated):
 			showMessage("initializing RFCEMaps")
-			self.provinceMap = self.convertProvinceMap(RFCEMaps.tProinceMap)
+			self.provinceMap = self.convertProvinceMap(RFCEMaps.tProvinceMap)
 			self.settlerMap = self.convertMap(RFCEMaps.tSettlersMaps)
 			self.warMap = self.convertMap(RFCEMaps.tWarsMaps)
 			self.cityNameMap = self.convertMap(RFCEMaps.tCityMap)
@@ -542,7 +542,7 @@ class RFCEMapExporter:
 		self.writePlayerMap(self.mapManager.settlerMap, "tSettlersMaps", file, "%3d", "# Settler Maps")
 		self.writePlayerMap(self.mapManager.warMap, "tWarsMaps", file, "%2d", "# War Maps")
 		self.writePlayerMap(self.mapManager.cityNameMap, "tCityMap", file, "\"%s\"", "# City Name Maps")
-		self.writeArray(self.mapManager.provinceMap, "tProinceMap" , file, self.writeTupel, self.write3Digit,  None, "# 3Miro: Provinces - This is right now the only map that doesn't require the [iMaxY - iY - 1] inversion (i.e. visually the map is upside down)")
+		self.writeArray(self.mapManager.provinceMap, "tProvinceMap" , file, self.writeTupel, self.write3Digit,  None, "# 3Miro: Provinces - This is right now the only map that doesn't require the [iMaxY - iY - 1] inversion (i.e. visually the map is upside down)")
 
 		self.writeArray(self.mapManager.coreAreasBL, "tCoreAreasTL", file, self.writeCoords, None, self.getCommentCivName, "#Core Area is initial spawn location, no longer relevant for stability")
 		self.writeArray(self.mapManager.coreAreasTR, "tCoreAreasBR", file, self.writeCoords, None, self.getCommentCivName)
