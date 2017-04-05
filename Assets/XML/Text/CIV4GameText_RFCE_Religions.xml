@@ -400,7 +400,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_GOLD_GIFT</Tag>
-		<English>You have received a gift of gold from the Pope!</English>
+		<English>You have received a gift of gold from the Pope, worth %d1!</English>
 		<French>Le Pape vous &#224; offert de l'or</French>
 		<German>Ihr habt ein päpstliches Goldgeschenk erhalten</German>
 		<Italian>Hai ricevuto un regalo in oro dal Papa</Italian>
@@ -409,7 +409,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FAITH_TECH_GIFT</Tag>
-		<English>The Pope has honoured your commitment in the one true faith with a free technology!</English>
+		<English>The Pope has honoured your commitment in the one true faith with a free technology, %s1!</English>
 		<French>Le Pape vous &#224; offert de l'or</French>
 		<German>Ihr habt ein päpstliches Goldgeschenk erhalten</German>
 		<Italian>Hai ricevuto un regalo in oro dal Papa</Italian>

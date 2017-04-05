@@ -1,3 +1,5 @@
+# Rhye's and Fall of Civilization: Europe - Event handler
+
 from CvPythonExtensions import *
 import CvUtil
 import CvEventManager #Mercenaries
@@ -218,9 +220,6 @@ class CvRFCEventHandler:
 ##			g_bDisplayMercenaryMessages = config.getboolean("Mercenaries Mod", "Display Mercenary Messages", true)
 		#Rhye - end comment
 
-		#objMercenaryUtils = MercenaryUtils.MercenaryUtils()
-		#Mercenaries - end
-
 
 	def onGameStart(self, argsList):
 		'Called at the start of the game'
@@ -250,11 +249,6 @@ class CvRFCEventHandler:
 		#		for city in utils.getCityList(iPlayer):
 		#			self.cnm.renameCities(city, iPlayer)
 
-		#Mercenaries - start
-		#global objMercenaryUtils
-		#objMercenaryUtils = MercenaryUtils.MercenaryUtils()
-		#Mercenaries - end
-
 		# Absinthe: refresh Dynamic Civ Names for all civs on the initial turn of the given scenario
 		for iPlayer in range(con.iNumMajorPlayers):
 			gc.getPlayer(iPlayer).processCivNames()
@@ -263,7 +257,7 @@ class CvRFCEventHandler:
 
 
 	def onCityAcquired(self, argsList):
-		#'City Acquired'
+		'City Acquired'
 		owner, playerType, city, bConquest, bTrade = argsList
 		#CvUtil.pyPrint('City Acquired Event: %s' %(city.getName()))
 
@@ -271,6 +265,12 @@ class CvRFCEventHandler:
 		self.cnm.renameCities(city, playerType)
 
 		tCity = (city.getX(), city.getY())
+
+		# Absinthe: If Arabia doesn't found it's first city, but acquires it with a different method (conquest, flip, trade), it should found Islam there (otherwise no holy city at all)
+		if playerType == iArabia and not gc.getGame().isReligionFounded(xml.iIslam):
+			# has to be before the Arab UP is triggered
+			gc.getPlayer(iArabia).foundReligion(xml.iIslam, xml.iIslam, False)
+			gc.getGame().getHolyCity(xml.iIslam).setNumRealBuilding(xml.iIslamicShrine, 1)
 
 		# 3Miro: Arab UP
 		if gc.hasUP( playerType, con.iUP_Faith ):
@@ -346,8 +346,9 @@ class CvRFCEventHandler:
 
 		return 0
 
+
 	def onCityRazed(self, argsList):
-		#'City Razed'
+		'City Razed'
 		city, iPlayer = argsList
 
 		iPreviousOwner = city.getOwner()
@@ -426,7 +427,7 @@ class CvRFCEventHandler:
 
 		# Absinthe: If Protestantism has not been founded by the time the Dutch spawn, then the Dutch should found it with their first city
 		if iOwner == iDutch and not gc.getGame().isReligionFounded(xml.iProtestantism):
-			gc.getPlayer(iDutch).foundReligion(xml.iProtestantism, xml.iProtestantism,false)
+			gc.getPlayer(iDutch).foundReligion(xml.iProtestantism, xml.iProtestantism, False)
 			gc.getGame().getHolyCity(xml.iProtestantism).setNumRealBuilding(xml.iProtestantShrine, 1)
 			self.rel.setReformationActive(True)
 			self.rel.reformationchoice(iDutch)
@@ -526,6 +527,7 @@ class CvRFCEventHandler:
 			for city in utils.getCityList(1):
 				plot = gc.getMap().plot(city.getX(),city.getY())
 				print ('provincetest', plot.getProvinceID (), city.getName())
+
 			for iCiv in range(con.iNumPlayers):
 				pCiv = gc.getPlayer(iCiv)
 				leaderName = pCiv.getLeader()
@@ -536,14 +538,9 @@ class CvRFCEventHandler:
 			#	leaderName6 = leaderName2.getLeaderType()
 				leaderName7 = pCiv.getLeaderType()
 				LeaderType = gc.getLeaderHeadInfo(pCiv.getLeaderType()).getType()
-				print ("leaderName", leaderName)
-				print ("leaderName2", leaderName2)
-				print ("leaderName3", leaderName3)
-				print ("leaderName4", leaderName4)
-			#	print ("leaderName5", leaderName5)
-			#	print ("leaderName6", leaderName6)
 				print ("leaderName7", leaderName7)
 				print ("LeaderType", LeaderType)
+
 			#for x in range(76):
 			#	plot = CyMap().plot(x, 46) # France, Paris included
 			#	print ("cityname at y height", x, plot.getCityNameMap(1))
@@ -557,7 +554,7 @@ class CvRFCEventHandler:
 				sText = CyTranslator().getText("TXT_KEY_GREAT_SCHISM", ())
 				CyInterface().addMessage(iHuman, False, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iDarkPink), -1, -1, True, True)
 
-		print("3Miro: Byz Rank is: ",gc.getGame().getTeamRank(iByzantium))
+		print(" 3Miro: Byz Rank is: ",gc.getGame().getTeamRank(iByzantium))
 
 		print(" 3Miro onBegTurn: ",iGameTurn)
 		self.barb.checkTurn(iGameTurn)
@@ -591,6 +588,12 @@ class CvRFCEventHandler:
 		if iPlayer < con.iNumMajorPlayers:
 			gc.getPlayer(iPlayer).processCivNames()
 
+		## Absinthe: refresh Dynamic Civ Names for all civs on the human player's initial turn of the given scenario
+		#if utils.getHumanID() == iPlayer:
+		#	if iGameTurn == utils.getScenarioStartTurn():
+		#		for iDCNPlayer in range(con.iNumMajorPlayers):
+		#			gc.getPlayer(iDCNPlayer).processCivNames()
+
 		# Absinthe: popup message a couple turns before the Seljuk/Mongol/Timurid invasions
 		if iPlayer == iHuman:
 			# Seljuks
@@ -606,7 +609,7 @@ class CvRFCEventHandler:
 					popup.setBodyString(localText.getText("TXT_KEY_BARBARIAN_INVASION_END", (sText,)))
 					popup.launch()
 			# Mongols
-			if iGameTurn == xml.i1236AD - 7:
+			elif iGameTurn == xml.i1236AD - 7:
 				if iPlayer in [con.iKiev, con.iHungary, con.iPoland, con.iBulgaria]:
 					popup = Popup.PyPopup()
 					popup.setBodyString(localText.getText("TXT_KEY_BARBARIAN_INVASION_START", ()))
@@ -618,7 +621,7 @@ class CvRFCEventHandler:
 					popup.setBodyString(localText.getText("TXT_KEY_BARBARIAN_INVASION_END", (sText,)))
 					popup.launch()
 			# Timurids
-			if iGameTurn == xml.i1380AD - 7:
+			elif iGameTurn == xml.i1380AD - 7:
 				if iPlayer in [con.iArabia, con.iTurkey, con.iByzantium]:
 					popup = Popup.PyPopup()
 					popup.setBodyString(localText.getText("TXT_KEY_TIMURID_INVASION_START", ()))
@@ -640,7 +643,7 @@ class CvRFCEventHandler:
 
 		# Ottoman UP
 		elif gc.hasUP( iPlayer, con.iUP_Janissary ):
-			self.up.janissary( iPlayer )
+			self.up.janissaryUP( iPlayer )
 
 		self.pla.checkPlayerTurn(iGameTurn, iPlayer)
 

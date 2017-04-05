@@ -835,7 +835,7 @@ void CvCityAI::AI_chooseProduction()
         }
 	}
 
-	// if we just captured this city, dont build a unit first
+	// if we just captured this city, don't build a unit first
 	if (isOccupation())
 	{
 		// pick granary or lighthouse, any duration
@@ -981,7 +981,7 @@ void CvCityAI::AI_chooseProduction()
 		
 		return;
 	}
-    
+
 	if (((iTargetCulturePerTurn > 0) || (getPopulation() > 5)) && (getCommerceRate(COMMERCE_CULTURE) == 0))
 	{
 		if (AI_chooseBuilding(BUILDINGFOCUS_CULTURE, 30))
@@ -989,7 +989,7 @@ void CvCityAI::AI_chooseProduction()
 			return;
 		}
 	}
-      
+
     if ((iExistingWorkers == 0) && (!bDanger) && ((AI_getWorkersNeeded() > 0) || ((isCapital() && (GC.getGame().getElapsedGameTurns() < ((30 * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getTrainPercent()) / 100))))))
 	{
 		int iLandBonuses = AI_countNumBonuses(NO_BONUS, /*bIncludeOurs*/ true, /*bIncludeNeutral*/ true, -1, /*bLand*/ true, /*bWater*/ false);
@@ -1105,7 +1105,8 @@ void CvCityAI::AI_chooseProduction()
 	int iPlotSettlerCount = (iNumSettlers == 0) ? 0 : plot()->plotCount(PUF_isUnitAIType, UNITAI_SETTLE, -1, getOwnerINLINE());
 	int iPlotCityDefenderCount = plot()->plotCount(PUF_isUnitAIType, UNITAI_CITY_DEFENSE, -1, getOwnerINLINE());
 	//minimal defense.
-	if (iPlotCityDefenderCount <= iPlotSettlerCount)
+	// Absinthe: AI tends to send out defenseless settlers, and generally it could have more defenders in it's cities anyway
+	if (iPlotCityDefenderCount <= iPlotSettlerCount + 1)
 	{
 		if (AI_chooseUnit(UNITAI_CITY_DEFENSE))
 		{
@@ -1241,10 +1242,7 @@ void CvCityAI::AI_chooseProduction()
 		else
 		{
 			int iStartAttackStackRand = 0;
-		//if (pArea->getCitiesPerPlayer(BARBARIAN_PLAYER)) //Rhye
-			// 3Miro
-		//if ((pArea->getCitiesPerPlayer(BARBARIAN_PLAYER)) || (pArea->getCitiesPerPlayer((PlayerTypes)CELTIA)) || (pArea->getCitiesPerPlayer((PlayerTypes)NATIVE))) //Rhye
-		if ((pArea->getCitiesPerPlayer(BARBARIAN_PLAYER))) //Rhye
+			if (pArea->getCitiesPerPlayer(BARBARIAN_PLAYER))
 			{
 				iStartAttackStackRand += 15;
 			}
@@ -1265,7 +1263,7 @@ void CvCityAI::AI_chooseProduction()
 	}
 	//GC.getGameINLINE().logMsg("   city doTurn - doProduction - popOrder - AI bisect 6 "); //Rhye and 3Miro
         
-	//oppurunistic wonder build (1)
+	//opportunistic wonder build (1)
 	if (!bDanger && (!hasActiveWorldWonder()) && (kPlayer.getNumCities() <= 3))
 	{
 		int iWonderTime = GC.getGameINLINE().getSorenRandNum(GC.getLeaderHeadInfo(getPersonalityType()).getWonderConstructRand(), "Wonder Construction Rand");
@@ -1292,33 +1290,34 @@ void CvCityAI::AI_chooseProduction()
 	{
 		return;
 	}
-	
 
-	int iSpreadUnitThreshold = 1000;
+	// Absinthe: in RFCE we want to spread state religion whenever it is possible
+	//int iSpreadUnitThreshold = 1000;
+	//iSpreadUnitThreshold += bLandWar ? 1000 : 0;
+	int iSpreadUnitThreshold = 500;
 	iSpreadUnitThreshold += bLandWar ? 1000 : 0;
 	
 	UnitTypes eBestSpreadUnit = NO_UNIT;
 	int iBestSpreadUnitValue = -1;
 	
+	// Absinthe: in RFCE we want to spread state religion whenever it is possible
+	//int iSpreadUnitRoll = (100 - iBuildUnitProb) / 3;
+	int iSpreadUnitRoll = (100 - iBuildUnitProb);
+	iSpreadUnitRoll += bLandWar ? 0 : 10;
+	// Absinthe: no need to check corporation spread units
+	//if (AI_bestSpreadUnit(true, true, iSpreadUnitRoll, &eBestSpreadUnit, &iBestSpreadUnitValue))
+	if (AI_bestSpreadUnit(true, false, iSpreadUnitRoll, &eBestSpreadUnit, &iBestSpreadUnitValue))
 	{
-		int iSpreadUnitRoll = (100 - iBuildUnitProb) / 3;
-		iSpreadUnitRoll += bLandWar ? 0 : 10;
-		
-		if (AI_bestSpreadUnit(true, true, iSpreadUnitRoll, &eBestSpreadUnit, &iBestSpreadUnitValue))
+		if (iBestSpreadUnitValue > iSpreadUnitThreshold)
 		{
-			//GC.getGame().logMsg( "  After best spread: %d %d %d ",eBestSpreadUnit,iBestSpreadUnitValue,iSpreadUnitThreshold );
-			if (iBestSpreadUnitValue > iSpreadUnitThreshold)
+			if (AI_chooseUnit(eBestSpreadUnit, UNITAI_MISSIONARY))
 			{
-				if (AI_chooseUnit(eBestSpreadUnit, UNITAI_MISSIONARY))
-				{
-					//GC.getGameINLINE().logMsg("  Building %d",eBestSpreadUnit.getUnitType()); //Rhye and 3Miro
-					return;
-				}
-				FAssertMsg(false, "AI_bestSpreadUnit should provide a valid unit when it returns true");
+				return;
 			}
+			FAssertMsg(false, "AI_bestSpreadUnit should provide a valid unit when it returns true");
 		}
 	}
-	
+
 	if (!bDanger && (iProductionRank <= ((kPlayer.getNumCities() / 5) + 1)))
 	{
 		if (AI_chooseProject())
@@ -1457,7 +1456,7 @@ void CvCityAI::AI_chooseProduction()
 		return;
 	}
 	
-	//oppurunistic wonder build
+	//opportunistic wonder build
 	if (!bDanger && (!hasActiveWorldWonder() || (kPlayer.getNumCities() > 3)))
 	{
 		int iWonderTime = GC.getGameINLINE().getSorenRandNum(GC.getLeaderHeadInfo(getPersonalityType()).getWonderConstructRand(), "Wonder Construction Rand");
@@ -2358,8 +2357,6 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[iI] /= 100;
 	}
 
-	//Rhye - start switch (unit AI types)
-
 	if (GET_PLAYER((PlayerTypes)getOwnerINLINE()).verifySettlersHalt(300)) {}
 	else if (GET_PLAYER((PlayerTypes)getOwnerINLINE()).verifySettlersHalt(100)) 
 		{
@@ -2380,212 +2377,6 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 			aiUnitAIVal[UNITAI_SETTLE] *= 2;
 			aiUnitAIVal[UNITAI_SETTLE] /= 3;
 		}
-
-
-		// 3Miro
-	//switch (getOwnerINLINE())
-	//{
-	/*case EGYPT:
-		aiUnitAIVal[UNITAI_EXPLORE] /= 2;
-		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 3;
-		/*if (GET_TEAM((TeamTypes)getOwnerINLINE()).isHasTech((TechTypes)FEUDALISM))
-			aiUnitAIVal[UNITAI_SETTLE] /= 3;
-		else {
-			aiUnitAIVal[UNITAI_SETTLE] *= 2;
-			aiUnitAIVal[UNITAI_SETTLE] /= 3;
-		}*/
-		/*break;
-	case INDIA:
-		aiUnitAIVal[UNITAI_EXPLORE] /= 2;
-		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 3;
-		aiUnitAIVal[UNITAI_ICBM] *= 2;
-		break;
-	case CHINA:
-		aiUnitAIVal[UNITAI_EXPLORE] /= 2;
-		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 3;
-		break;
-	case BABYLONIA:
-		aiUnitAIVal[UNITAI_EXPLORE] /= 2;
-		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 3;
-		aiUnitAIVal[UNITAI_ATTACK] *= 2;
-		break;
-	case GREECE:
-		aiUnitAIVal[UNITAI_SETTLE] *= 2;
-		aiUnitAIVal[UNITAI_EXPLORE] *= 2;
-		aiUnitAIVal[UNITAI_EXPLORE_SEA] *= 3;
-		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 2;
-		break;
-	case PERSIA:
-		aiUnitAIVal[UNITAI_ATTACK] *= 2;
-		break;
-	case CARTHAGE:
-		aiUnitAIVal[UNITAI_EXPLORE] *= 2;
-		aiUnitAIVal[UNITAI_EXPLORE_SEA] *= 3;
-		aiUnitAIVal[UNITAI_SETTLER_SEA] *= 3;
-		if (!GET_TEAM((TeamTypes)getOwnerINLINE()).isHasTech((TechTypes)OPTICS))
-				aiUnitAIVal[UNITAI_SETTLE] *= 2;
-		break;
-	case ROME:
-		aiUnitAIVal[UNITAI_SETTLE] *= 2;
-		aiUnitAIVal[UNITAI_ASSAULT_SEA] *= 2;
-		aiUnitAIVal[UNITAI_EXPLORE] *= 2;
-		aiUnitAIVal[UNITAI_WORKER] *= 2;
-		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 3;
-		aiUnitAIVal[UNITAI_ATTACK_CITY] /= 2;
-		break;
-	case JAPAN:
-		if (!GET_TEAM((TeamTypes)getOwnerINLINE()).isHasTech((TechTypes)INDUSTRIALISM))
-				aiUnitAIVal[UNITAI_ATTACK_SEA] /= 3;
-		else 
-				aiUnitAIVal[UNITAI_ATTACK_SEA] *= 3;
-		aiUnitAIVal[UNITAI_ASSAULT_SEA] *= 2;
-		aiUnitAIVal[UNITAI_EXPLORE] /= 4;
-		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 4;
-		aiUnitAIVal[UNITAI_SETTLER_SEA] /= 2;
-		aiUnitAIVal[UNITAI_SETTLE] *= 2;
-		aiUnitAIVal[UNITAI_SETTLE] /= 3;
-		break;
-	case ETHIOPIA:
-		aiUnitAIVal[UNITAI_EXPLORE] /= 2;
-		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 2;
-		aiUnitAIVal[UNITAI_SETTLE] *= 2;
-		aiUnitAIVal[UNITAI_SETTLE] /= 3;
-		break;
-	case MAYA:
-		aiUnitAIVal[UNITAI_EXPLORE] /= 2;
-		break;
-	case VIKING:
-		aiUnitAIVal[UNITAI_EXPLORE_SEA] *= 3;
-		aiUnitAIVal[UNITAI_SETTLER_SEA] *= 2;
-		aiUnitAIVal[UNITAI_ATTACK_SEA] *= 3;
-		aiUnitAIVal[UNITAI_ASSAULT_SEA] *= 3;
-		aiUnitAIVal[UNITAI_SETTLE] *= 2;
-		aiUnitAIVal[UNITAI_SETTLE] /= 2;
-		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 2;
-		aiUnitAIVal[UNITAI_COUNTER] *= 2;
-		break;
-	case ARABIA:
-		aiUnitAIVal[UNITAI_ATTACK] *= 2;
-		aiUnitAIVal[UNITAI_CITY_DEFENSE] *= 3;
-		aiUnitAIVal[UNITAI_CITY_DEFENSE] /= 2;
-		aiUnitAIVal[UNITAI_MISSIONARY] *= 2;
-		aiUnitAIVal[UNITAI_ICBM] *= 2;
-		break;
-	case KHMER:
-		aiUnitAIVal[UNITAI_EXPLORE_SEA] *= 2;
-		aiUnitAIVal[UNITAI_SETTLER_SEA] *= 2;
-		break;
-	case SPAIN:
-		aiUnitAIVal[UNITAI_EXPLORE_SEA] *= 3;
-		aiUnitAIVal[UNITAI_SETTLER_SEA] *= 2;
-		aiUnitAIVal[UNITAI_ESCORT_SEA] *= 2;
-		if (GET_TEAM((TeamTypes)getOwnerINLINE()).isHasTech((TechTypes)ASTRONOMY))
-			aiUnitAIVal[UNITAI_SETTLE] *= 2;
-		aiUnitAIVal[UNITAI_MISSIONARY_SEA] *= 2;
-		aiUnitAIVal[UNITAI_MISSIONARY] *= 2;
-		aiUnitAIVal[UNITAI_ASSAULT_SEA] *= 3;
-		aiUnitAIVal[UNITAI_ASSAULT_SEA] /= 2;
-		break;
-	case FRANCE:
-		aiUnitAIVal[UNITAI_COUNTER] *= 2;
-		aiUnitAIVal[UNITAI_EXPLORE_SEA] *= 2;
-		aiUnitAIVal[UNITAI_SETTLER_SEA] *= 2;
-		aiUnitAIVal[UNITAI_ESCORT_SEA] *= 2;
-		if (GET_TEAM((TeamTypes)getOwnerINLINE()).isHasTech((TechTypes)ASTRONOMY))
-			aiUnitAIVal[UNITAI_SETTLE] *= 2;
-		break;
-	case ENGLAND:
-		aiUnitAIVal[UNITAI_EXPLORE_SEA] *= 5;
-		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 2;
-		aiUnitAIVal[UNITAI_SETTLER_SEA] *= 2;
-		aiUnitAIVal[UNITAI_ESCORT_SEA] *= 2;
-		if (GET_TEAM((TeamTypes)getOwnerINLINE()).isHasTech((TechTypes)ASTRONOMY))
-			aiUnitAIVal[UNITAI_SETTLE] *= 2;
-		aiUnitAIVal[UNITAI_DEFENSE_AIR] *= 2;
-		aiUnitAIVal[UNITAI_RESERVE_SEA] *= 2;
-		aiUnitAIVal[UNITAI_WORKER_SEA] *= 3;
-		aiUnitAIVal[UNITAI_WORKER_SEA] /= 2;
-		aiUnitAIVal[UNITAI_ASSAULT_SEA] *= 3;
-		aiUnitAIVal[UNITAI_ASSAULT_SEA] /= 2;
-		aiUnitAIVal[UNITAI_DEFENSE_AIR] *= 3;
-		aiUnitAIVal[UNITAI_DEFENSE_AIR] /= 2;
-		break;
-	case GERMANY:
-		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 2;
-		aiUnitAIVal[UNITAI_ATTACK_AIR] *= 2;
-		aiUnitAIVal[UNITAI_DEFENSE_AIR] *= 2;
-		aiUnitAIVal[UNITAI_RESERVE_SEA] *= 2;
-		aiUnitAIVal[UNITAI_ICBM] *= 2;
-		break;
-	case RUSSIA:
-		aiUnitAIVal[UNITAI_EXPLORE] *= 3;
-		aiUnitAIVal[UNITAI_EXPLORE] /= 2;
-		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 2;	
-		aiUnitAIVal[UNITAI_SETTLER_SEA] /= 2;
-		aiUnitAIVal[UNITAI_SETTLE] *= 2;
-		aiUnitAIVal[UNITAI_RESERVE] *= 2;
-		aiUnitAIVal[UNITAI_ICBM] *= 2;
-		break;
-	case NETHERLANDS:
-		aiUnitAIVal[UNITAI_EXPLORE_SEA] *= 5;
-		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 2;
-		aiUnitAIVal[UNITAI_SETTLER_SEA] *= 3;
-		aiUnitAIVal[UNITAI_ESCORT_SEA] *= 2;
-		if (GET_TEAM((TeamTypes)getOwnerINLINE()).isHasTech((TechTypes)ASTRONOMY))
-			aiUnitAIVal[UNITAI_SETTLE] *= 2;
-		aiUnitAIVal[UNITAI_RESERVE_SEA] *= 2;
-		aiUnitAIVal[UNITAI_WORKER_SEA] *= 3;
-		aiUnitAIVal[UNITAI_WORKER_SEA] /= 2;
-		aiUnitAIVal[UNITAI_ASSAULT_SEA] *= 3;
-		aiUnitAIVal[UNITAI_ASSAULT_SEA] /= 2;
-		break;
-	case MALI:
-		break;
-	case TURKEY:
-		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 2;
-		aiUnitAIVal[UNITAI_ATTACK] *= 2;
-		aiUnitAIVal[UNITAI_COUNTER] *= 3;
-		aiUnitAIVal[UNITAI_COUNTER] /= 2;
-		break;
-	case PORTUGAL:
-		aiUnitAIVal[UNITAI_EXPLORE_SEA] *= 5;
-		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 2;
-		aiUnitAIVal[UNITAI_SETTLER_SEA] *= 3;
-		aiUnitAIVal[UNITAI_ESCORT_SEA] *= 2;
-		if (GET_TEAM((TeamTypes)getOwnerINLINE()).isHasTech((TechTypes)ASTRONOMY))
-			aiUnitAIVal[UNITAI_SETTLE] *= 2;
-		aiUnitAIVal[UNITAI_RESERVE_SEA] *= 2;
-		aiUnitAIVal[UNITAI_WORKER_SEA] *= 3;
-		aiUnitAIVal[UNITAI_WORKER_SEA] /= 2;
-		aiUnitAIVal[UNITAI_ASSAULT_SEA] *= 3;
-		aiUnitAIVal[UNITAI_ASSAULT_SEA] /= 2;
-		break;
-	case INCA:
-		aiUnitAIVal[UNITAI_EXPLORE] *= 2;
-		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 2;
-		break;
-	case MONGOLIA:
-		aiUnitAIVal[UNITAI_ATTACK] *= 2;
-		break;
-	case AZTEC:
-		aiUnitAIVal[UNITAI_EXPLORE] /= 2;
-		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 2;
-		aiUnitAIVal[UNITAI_SETTLE] *= 2;
-		aiUnitAIVal[UNITAI_SETTLE] /= 3;
-		break;
-	case AMERICA:
-		aiUnitAIVal[UNITAI_RESERVE] *= 2;
-		aiUnitAIVal[UNITAI_ASSAULT_SEA] *= 2;
-		aiUnitAIVal[UNITAI_ICBM] *= 2;
-		aiUnitAIVal[UNITAI_CARRIER_AIR] *= 2;
-		aiUnitAIVal[UNITAI_ATTACK_AIR] *= 2;
-		aiUnitAIVal[UNITAI_DEFENSE_AIR] *= 2;
-		break;*/
-	//default:
-	//	break;
-	//}
-
-	//Rhye - end
 
 	iBestValue = 0;
 	eBestUnit = NO_UNIT;
@@ -6871,47 +6662,59 @@ void CvCityAI::AI_doEmphasize()
 
 bool CvCityAI::AI_chooseUnit(UnitAITypes eUnitAI)
 {
-	// 3MiroAI: Prosecutor make sure the AI builds Prosecutors
-	//GC.getGameINLINE().logMsg("   Into AI Chose unit: %d",UNIT_PROSECUTOR); //Rhye and 3Miro
-	if ( UNIT_PROSECUTOR != -2 && getOwnerINLINE() < NUM_MAJOR_PLAYERS ){
-		//GC.getGameINLINE().logMsg("   Step 1 ");
-		//GC.getGameINLINE().logMsg("    Missionary AI: %d  this AI: %d ",UNITAI_MISSIONARY,eUnitAI);
-		//if ( canTrain( (UnitTypes) UNIT_PROSECUTOR ) ){
-		//	GC.getGameINLINE().logMsg("  %d can train Prosecutors",getOwnerINLINE() );
-		//};
-		//if ( ((eUnitAI == UNITAI_CITY_SPECIAL)) && (canTrain( (UnitTypes) UNIT_PROSECUTOR )) && (UniquePowers[getOwnerINLINE() * UP_TOTAL_NUM + UP_RELIGIOUS_TOLERANCE]>-1) ){
-		//if ( ((eUnitAI == UNITAI_CITY_SPECIAL)) && (canTrain( (UnitTypes) UNIT_PROSECUTOR )) ){
-		if ( (canTrain( (UnitTypes) UNIT_PROSECUTOR )) && ((eUnitAI == UNITAI_MISSIONARY) || (GC.getGameINLINE().getSorenRandNum(100," Shall we build a Prosecutor") < 33) ) ){
-			//GC.getGameINLINE().logMsg("   Step 2 for %d",getOwnerINLINE());
-			// check if running an oppressive civic
+	/*
+	// Absinthe: new code for AI persecution - handled through python
+	//			this is where the AI decides whether to build a prosecutor unit
+	if ( UNIT_PROSECUTOR != -2 && getOwnerINLINE() < NUM_MAJOR_PLAYERS )
+	{
+		// we add a chance for it whenever the AI would build type UNITAI_MISSIONARY, also have a base chance for it otherwise
+		//if ( (canTrain( (UnitTypes) UNIT_PROSECUTOR )) && ((eUnitAI == UNITAI_MISSIONARY) || (GC.getGameINLINE().getSorenRandNum(100," Shall we build a Prosecutor") < 33) ) )
+		if ( (canTrain( (UnitTypes) UNIT_PROSECUTOR )) && (GC.getGameINLINE().getSorenRandNum(100," Shall we build a Prosecutor") < 20) )
+		{
 			bool bOpressor = true;
-			for ( int iI = 0; iI < GC.getNumCivicInfos(); iI++ ){
-				if ( (GET_PLAYER(getOwnerINLINE()).isCivic( (CivicTypes) iI) ) &&  (GC.getCivicInfo( (CivicTypes) iI ).getNonStateReligionHappiness() > 0) ){
+			// check if it has a civic which adds non-state religion happiness (currently no civics has it in the mod)
+			for ( int iI = 0; iI < GC.getNumCivicInfos(); iI++ )
+			{
+				if ( (GET_PLAYER(getOwnerINLINE()).isCivic( (CivicTypes) iI) ) &&  (GC.getCivicInfo( (CivicTypes) iI ).getNonStateReligionHappiness() > 0) )
+				{
 					bOpressor = false;
-					//GC.getGameINLINE().logMsg("   --- not oppression ");
-				};
-			};
-			if ( (UniquePowers[getOwnerINLINE() * UP_TOTAL_NUM + UP_RELIGIOUS_TOLERANCE]>-1) ){
+				}
+			}
+			// check if it has the religious tolerance UP
+			if ( (UniquePowers[getOwnerINLINE() * UP_TOTAL_NUM + UP_RELIGIOUS_TOLERANCE] > -1) )
+			{
 				bOpressor = false;
-			};
-			
-			if ( bOpressor ){
-				//GC.getLeaderHeadInfo( GET_PLAYER( getOwner() ).getLeader() ).getFlavorValue( 1 );
-				//GC.getGameINLINE().logMsg("   Step 3 Opressor is %d",getOwnerINLINE());
-				int iProb = 6* GET_PLAYER( getOwnerINLINE() ).AI_getFlavorValue( (FlavorTypes)1 ) + 30; // max 90, Flavor religion
-				int iMaxCount = (getOwnerINLINE() == PAPAL_PLAYER) ? 5 : 1;
-				// 3MiroProsecutions
-				if ( (GET_PLAYER(getOwnerINLINE()).getUnitClassCount((UnitClassTypes)UNIT_PROSECUTOR_CLASS) < iMaxCount) && (GC.getGameINLINE().getSorenRandNum(100," Shall we build a Prosecutor") < iProb) ){
-					//GC.getGameINLINE().logMsg("   city doTurn - doProduction - Miro AI 3 "); //Rhye and 3Miro
-					pushOrder( ORDER_TRAIN, UNIT_PROSECUTOR, eUnitAI, false, false, false );
-					//GC.getGameINLINE().logMsg("  Building prosecutor for: %d ",getOwnerINLINE()); //Rhye and 3Miro
-					return true;
-				};
-			};
-		};
-	};
-	
-	
+			}
+
+			if ( bOpressor )
+			{
+				// check whether the AI controls a city with a target religion that is not the State Religion, not a Holy City, and doesn't have religious wonders in it
+				CyArgsList argsList;
+				argsList.add(getOwnerINLINE());	// Player ID
+				argsList.add(false);
+				long lResult=0;
+				gDLL->getPythonIFace()->callFunction(PYGameModule, "isHasPurgeTarget", argsList.makeFunctionArgs(), &lResult);
+				// if we have a valid target city
+				if (lResult == 1)
+				{
+					// only train persecutors in big enough cities
+					if (getPopulation() > 3)
+					{
+						int iProb = 6 * GET_PLAYER( getOwnerINLINE() ).AI_getFlavorValue( (FlavorTypes)1 ) + 30; // max 90, Flavor religion
+						int iMaxCount = (getOwnerINLINE() == PAPAL_PLAYER) ? 5 : 2; // Papal player used to be able to build many persecutors (when it had special rules for persecution), now it doesn't really matter
+						if ( (GET_PLAYER(getOwnerINLINE()).getUnitClassCount((UnitClassTypes)UNIT_PROSECUTOR_CLASS) < iMaxCount) && (GC.getGameINLINE().getSorenRandNum(100," Shall we build a Prosecutor") < iProb) )
+						{
+							pushOrder( ORDER_TRAIN, UNIT_PROSECUTOR, eUnitAI, false, false, false );
+							return true;
+						}
+					}
+				}
+			}
+		}
+	}
+	// Absinthe: end
+	*/
+
 	UnitTypes eBestUnit;
 
 	if (eUnitAI != NO_UNITAI)
@@ -6936,13 +6739,10 @@ bool CvCityAI::AI_chooseUnit(UnitTypes eUnit, UnitAITypes eUnitAI)
 {
 	if (eUnit != NO_UNIT)
 	{
-		/*if ( eUnit == UNIT_PROSECUTOR ){
-			GC.getGame().logMsg(" REALLY building prosecutor for: %d ",getOwnerINLINE() );
-		};*/
 		pushOrder(ORDER_TRAIN, eUnit, eUnitAI, false, false, false);
 		return true;
 	}
-	return false;	
+	return false;
 }
 
 
@@ -7017,53 +6817,47 @@ bool CvCityAI::AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseCha
 			ReligionTypes eReligion = (ReligionTypes)iReligion;
 			if (isHasReligion(eReligion))
 			{
-				int iHasCount = kPlayer.getHasReligionCount(eReligion);
-				FAssert(iHasCount > 0);
-				int iRoll = (iHasCount > 4) ? iBaseChance : (((100 - iBaseChance) / iHasCount) + iBaseChance);
-				if (kPlayer.AI_isDoStrategy(AI_STRATEGY_MISSIONARY))
+				// Absinthe: in RFCE, never spread non-state religions
+				if (kPlayer.getStateReligion() == eReligion)
 				{
-					iRoll *= (kPlayer.getStateReligion() == eReligion) ? 170 : 65;
-					iRoll /= 100;
-				}
-				if (kPlayer.AI_isDoStrategy(AI_STRATEGY_CULTURE2))
-				{
-					iRoll += 25;
-				}
-				else if (!kTeam.hasHolyCity(eReligion) && !(kPlayer.getStateReligion() == eReligion))
-				{
-					// 3MiroAI: don't spread non-state religion
-					//iRoll /= 2;
-					iRoll /= 6;
-					if (kPlayer.isNoNonStateReligionSpread())
+					int iHasCount = kPlayer.getHasReligionCount(eReligion);
+					FAssert(iHasCount > 0);
+					int iRoll = (iHasCount > 4) ? iBaseChance : (((100 - iBaseChance) / iHasCount) + iBaseChance);
+					if (kPlayer.AI_isDoStrategy(AI_STRATEGY_MISSIONARY))
 					{
-						iRoll /= 2;
+						iRoll *= (kPlayer.getStateReligion() == eReligion) ? 170 : 65;
+						iRoll /= 100;
 					}
-				}
-
-				if (iRoll > kGame.getSorenRandNum(100, "AI choose missionary"))
-				{
-					int iReligionValue = kPlayer.AI_missionaryValue(area(), eReligion);
-					if (iReligionValue > 0)
+					if (kPlayer.AI_isDoStrategy(AI_STRATEGY_CULTURE2))
 					{
-						for (int iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
-						{
-							UnitTypes eLoopUnit = ((UnitTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(iI)));
+						iRoll += 25;
+					}
 
-							if (eLoopUnit != NO_UNIT)
+					if (iRoll > kGame.getSorenRandNum(100, "AI choose missionary"))
+					{
+						int iReligionValue = kPlayer.AI_missionaryValue(area(), eReligion);
+						if (iReligionValue > 0)
+						{
+							for (int iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
 							{
-								CvUnitInfo& kUnitInfo = GC.getUnitInfo(eLoopUnit);
-								if (kUnitInfo.getReligionSpreads(eReligion) > 0)
+								UnitTypes eLoopUnit = ((UnitTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(iI)));
+
+								if (eLoopUnit != NO_UNIT)
 								{
-									if (canTrain(eLoopUnit))
+									CvUnitInfo& kUnitInfo = GC.getUnitInfo(eLoopUnit);
+									if (kUnitInfo.getReligionSpreads(eReligion) > 0)
 									{
-										int iValue = iReligionValue;
-										iValue /= kUnitInfo.getProductionCost();
-										
-										if (iValue > iBestValue)
+										if (canTrain(eLoopUnit))
 										{
-											iBestValue = iValue;
-											*eBestSpreadUnit = eLoopUnit;
-											*iBestSpreadUnitValue = iReligionValue;
+											int iValue = iReligionValue;
+											iValue /= kUnitInfo.getProductionCost();
+											
+											if (iValue > iBestValue)
+											{
+												iBestValue = iValue;
+												*eBestSpreadUnit = eLoopUnit;
+												*iBestSpreadUnitValue = iReligionValue;
+											}
 										}
 									}
 								}
@@ -7073,35 +6867,63 @@ bool CvCityAI::AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseCha
 				}
 			}
 		}
-		// 3MiroAI: The code to build Prosecutors in place of missionaries comes here, the other one in AI_choseUnit
-		// is only for special units which I guess comess not very often
-		if ( (!isIndep( getOwnerINLINE())) && (UNIT_PROSECUTOR != -2) ){
-			bool bOpressor = true;
-			for ( int iCivic = 0; iCivic < GC.getNumCivicInfos(); iCivic++ ){
-				if ( (GET_PLAYER(getOwnerINLINE()).isCivic( (CivicTypes) iCivic) ) &&  (GC.getCivicInfo( (CivicTypes) iCivic ).getNonStateReligionHappiness() > 0) ){
+		// Absinthe: new code for AI persecution - handled through python
+		//			this is where the AI decides whether to build a prosecutor unit
+		if ( UNIT_PROSECUTOR != -2 && getOwnerINLINE() < NUM_MAJOR_PLAYERS )
+		{
+			// we add a chance for it whenever the AI would build type UNITAI_MISSIONARY, also have a base chance for it otherwise
+			//if ( (canTrain( (UnitTypes) UNIT_PROSECUTOR )) && ((eUnitAI == UNITAI_MISSIONARY) || (GC.getGameINLINE().getSorenRandNum(100," Shall we build a Prosecutor") < 33) ) )
+			if ( canTrain( (UnitTypes) UNIT_PROSECUTOR ) )
+			{
+				bool bOpressor = true;
+				// check if it has a civic which adds non-state religion happiness (currently no civics has it in the mod)
+				for ( int iI = 0; iI < GC.getNumCivicInfos(); iI++ )
+				{
+					if ( (GET_PLAYER(getOwnerINLINE()).isCivic( (CivicTypes) iI) ) &&  (GC.getCivicInfo( (CivicTypes) iI ).getNonStateReligionHappiness() > 0) )
+					{
+						bOpressor = false;
+					}
+				}
+				// check if it has the religious tolerance UP
+				if ( (UniquePowers[getOwnerINLINE() * UP_TOTAL_NUM + UP_RELIGIOUS_TOLERANCE] > -1) )
+				{
 					bOpressor = false;
-					//GC.getGameINLINE().logMsg("   --- not oppression ");
-				};
-			};
-			
-			if ( bOpressor ){
-				//GC.getLeaderHeadInfo( GET_PLAYER( getOwner() ).getLeader() ).getFlavorValue( 1 );
-				int iProsProb = GET_PLAYER( getOwnerINLINE() ).AI_getFlavorValue( (FlavorTypes)1 ) + 10;// max 20, Flavor religion
-				int iProsMaxCount = (getOwnerINLINE() == PAPAL_PLAYER) ? 5 : 1;
-				//GC.getGameINLINE().logMsg("  Max for: %d  %d ",iProsMaxCount,getOwnerINLINE()); //Rhye and 3Miro
-				// 3MiroProsecutions
-				if ( (GET_PLAYER(getOwnerINLINE()).getUnitClassCount((UnitClassTypes)UNIT_PROSECUTOR_CLASS) < iProsMaxCount) && (GC.getGameINLINE().getSorenRandNum(100," Shall we build a Prosecutor") < iProsProb) ){
-					//GC.getGameINLINE().logMsg("   city doTurn - doProduction - Miro AI 3 "); //Rhye and 3Miro
-					UnitTypes eProsecutorUnit = ((UnitTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(UNIT_PROSECUTOR_CLASS)));
-					*eBestSpreadUnit = eProsecutorUnit;
-					*iBestSpreadUnitValue = 1500;
-					//GC.getGameINLINE().logMsg("  Building prosecutor for: %d %d ",getOwnerINLINE(),eProsecutorUnit); //Rhye and 3Miro
-				};
-			};
-		};
-		// 3MiroAI: end
+				}
+
+				if ( bOpressor )
+				{
+					// check whether the AI controls a city with a target religion that is not the State Religion, not a Holy City, and doesn't have religious wonders in it
+					CyArgsList argsList;
+					argsList.add(getOwnerINLINE());	// Player ID
+					argsList.add(false);
+					long lResult=0;
+					gDLL->getPythonIFace()->callFunction(PYGameModule, "isHasPurgeTarget", argsList.makeFunctionArgs(), &lResult);
+					// if we have a valid target city
+					if (lResult == 1)
+					{
+						// only train persecutors in big enough cities
+						if (getPopulation() > 3)
+						{
+							int iProb = 6 * GET_PLAYER( getOwnerINLINE() ).AI_getFlavorValue( (FlavorTypes)1 ) + 30; // max 90, Flavor religion
+							int iMaxCount = (getOwnerINLINE() == PAPAL_PLAYER) ? 5 : 2; // Papal player used to be able to build many persecutors (when it had special rules for persecution), now it doesn't really matter
+							if ( (GET_PLAYER(getOwnerINLINE()).getUnitClassCount((UnitClassTypes)UNIT_PROSECUTOR_CLASS) < iMaxCount) && (GC.getGameINLINE().getSorenRandNum(100," Shall we build a Prosecutor") < iProb) )
+							{
+								// if missionary value isn't too high (or the AI doesn't need a missionary at all), return the Prosecutor instead
+								if (*iBestSpreadUnitValue < 1500)
+								{
+									UnitTypes eProsecutorUnit = ((UnitTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(UNIT_PROSECUTOR_CLASS)));
+									*eBestSpreadUnit = eProsecutorUnit;
+									*iBestSpreadUnitValue = 1500;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		// Absinthe: end
 	}
-	
+
 	if (bExecutive)
 	{
 		for (int iCorporation = 0; iCorporation < GC.getNumCorporationInfos(); iCorporation++)

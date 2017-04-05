@@ -1,7 +1,4 @@
-# Rhye's and Fall of Civilization - (a part of) Unique Powers
-
-#Emperor UP is in RiseAndFall in the collapse and secession functions, RFCUtils.collapseImmune and stability
-#Khan UP is in c++ CvPlayer.cpp::acquireCity()
+# Rhye's and Fall of Civilization: Europe - Unique Powers (only a couple of them is here, most are handled in the .dll)
 
 from CvPythonExtensions import *
 import CvUtil
@@ -10,12 +7,14 @@ import Popup
 #import cPickle as pickle
 import Consts as con
 import XMLConsts as xml
+import Religions
 import RFCUtils
-utils = RFCUtils.RFCUtils()
 
 # globals
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer
+utils = RFCUtils.RFCUtils()
+religion = Religions.Religions()
 
 iJanissaryPoints = con.iJanissaryPoints
 
@@ -25,7 +24,7 @@ class UniquePowers:
 		pass
 
 
-# Absinthe: Arabian UP
+	# Absinthe: Arabian UP
 	def faithUP(self, iPlayer, city):
 		pFaithful = gc.getPlayer(iPlayer)
 		iStateReligion = pFaithful.getStateReligion()
@@ -49,8 +48,8 @@ class UniquePowers:
 				pFaithful.changeFaith( 1 )
 
 
-# Absinthe: Ottoman UP
-	def janissary(self, iPlayer ):
+	# Absinthe: Ottoman UP
+	def janissaryUP(self, iPlayer ):
 		pPlayer = gc.getPlayer( iPlayer )
 		iStateReligion = pPlayer.getStateReligion()
 
@@ -68,28 +67,28 @@ class UniquePowers:
 			iNextJanissary = 300
 
 		if ( iOldPoints + iNewPoints > iNextJanissary ):
-			pCity = utils.getRandomEntry(utils.getCityList(iPlayer)) # The Janissary unit appears in a random city - should it be the capital instead?
-			iX = pCity.getX()
-			iY = pCity.getY()
-			utils.makeUnit( xml.iJanissary, iPlayer, (iX, iY), 1 )
-			# interface message for the human player
-			if iPlayer == utils.getHumanID():
-				CyInterface().addMessage(iPlayer, False, con.iDuration, CyTranslator().getText("TXT_KEY_UNIT_NEW_JANISSARY", ()) + " " + pCity.getName() + "!", "AS2D_UNIT_BUILD_UNIQUE_UNIT", 0, gc.getUnitInfo(xml.iJanissary).getButton(), ColorTypes(con.iGreen), iX, iY, True, True)
-			pPlayer.setPicklefreeParameter( iJanissaryPoints, 0 )
-			print(" New Janissary in ",pCity.getName() )
+			#tCity = religion.selectRandomCityCiv(iPlayer)
+			#utils.makeUnit( xml.iJanissary, iPlayer, tCity, 1 )
+			pCity = utils.getRandomCity(iPlayer) # The Janissary unit appears in a random city - should it be the capital instead?
+			if pCity != -1:
+				iX = pCity.getX()
+				iY = pCity.getY()
+				utils.makeUnit( xml.iJanissary, iPlayer, (iX, iY), 1 )
+				# interface message for the human player
+				if iPlayer == utils.getHumanID():
+					CyInterface().addMessage(iPlayer, False, con.iDuration, CyTranslator().getText("TXT_KEY_UNIT_NEW_JANISSARY", ()) + " " + pCity.getName() + "!", "AS2D_UNIT_BUILD_UNIQUE_UNIT", 0, gc.getUnitInfo(xml.iJanissary).getButton(), ColorTypes(con.iGreen), iX, iY, True, True)
+				pPlayer.setPicklefreeParameter( iJanissaryPoints, 0 )
+				print(" New Janissary in ",pCity.getName() )
 		else:
 			pPlayer.setPicklefreeParameter( iJanissaryPoints, iOldPoints + iNewPoints )
 
-		#print(" 3Miro Janissaries for player: ",iPlayer,pPlayer.getPicklefreeParameter( iJanissaryPoints ) )
-		#print(" 3Miro Janissaries this turn addes: ", iNewPoints)
 
-
-# Absinthe: Danish UP
+	# Absinthe: Danish UP
 	def soundUP(self, iPlayer):
 		print("Sound dues")
 		lSoundCoords = [(60,57),(60,58)]
 
-		#Check if we control the Sound
+		# Check if we control the Sound
 		bControlsSound = False
 		for tCoord in lSoundCoords:
 			pPlot = gc.getMap().plot(tCoord[0], tCoord[1])
@@ -111,7 +110,7 @@ class UniquePowers:
 	def getNumForeignCitiesOnBaltic(self, iPlayer, bVassal = False):
 		lBalticRects = [((56, 52), (70, 57)), ((62, 58), (74, 62)), ((64, 63), (79, 66)), ((64, 67), (71, 72))]
 
-		#Count foreign coastal cities
+		# Count foreign coastal cities
 		iCities = 0
 		for tRect in lBalticRects:
 			for (iX, iY) in utils.getPlotList(tRect[0], tRect[1]):
@@ -132,10 +131,10 @@ class UniquePowers:
 		return iCities
 
 
-# Absinthe: Aragonese UP
+	# Absinthe: Aragonese UP
 	def confederationUP(self, iPlayer):
 		pPlayer = gc.getPlayer(iPlayer)
-		# Only recalc if we have a different number of cities from last turn.
+		# Only recalculate if we have a different number of cities from last turn.
 		if pPlayer.getNumCities() == pPlayer.getUHVCounter(1):
 			return
 		pPlayer.setUHVCounter(1, pPlayer.getNumCities())
@@ -163,7 +162,7 @@ class UniquePowers:
 		pPlayer.setUHVCounter(0, iProvinceCommerceNextBonus )
 
 
-# Absinthe: Scottish UP
+	# Absinthe: Scottish UP
 	def defianceUP(self, iPlayer):
 		print("Defiance called")
 		pPlayer = gc.getPlayer(iPlayer)

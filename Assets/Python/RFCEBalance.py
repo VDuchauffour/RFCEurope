@@ -1,4 +1,5 @@
-# RFC Europe, balancing modifiers are placed here
+# Rhye's and Fall of Civilization: Europe - Balancing modifiers are placed here
+
 from CvPythonExtensions import *
 import Consts as con
 import XMLConsts as xml
@@ -998,7 +999,7 @@ class RFCEBalance:
 
 		gc.setProsecutorReligions( xml.iProsecutor, xml.iProsecutorClass )
 		gc.setSaintParameters( xml.iProphet, con.iSaintBenefit, 20, 40 ) # try to amass at least 20 and don't bother above 40 points
-		gc.setIndependnets( con.iIndepStart, con.iIndepEnd, con.iBarbarian )
+		gc.setIndependnets( con.iIndepStart, con.iIndepEnd, iBarbarian )
 		gc.setPapalPlayer( iPope, xml.iCatholicism )
 
 		gc.setAutorunHack( xml.iCatapult, 32, 0 ) # Autorun hack, sync with RNF module

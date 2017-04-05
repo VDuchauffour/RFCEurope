@@ -1,4 +1,4 @@
-# Rhye's and Fall of Civilization - Stored Data
+# Rhye's and Fall of Civilization: Europe - Stored Data
 
 from CvPythonExtensions import *
 import CvUtil

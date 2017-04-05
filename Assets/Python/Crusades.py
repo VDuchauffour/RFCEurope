@@ -1,4 +1,5 @@
-## This file is part of RFC Europe. Created by 3Miro, revised and improved by AbsintheRed
+# Rhye's and Fall of Civilization: Europe - Crusades
+# Created by 3Miro, revised and improved by AbsintheRed
 
 from CvPythonExtensions import *
 import CvUtil
@@ -896,10 +897,10 @@ class Crusades:
 		if (iTX, iTY) == tJerusalem:
 			iRougeModifier = 100
 			if teamLeader.isHasTech( xml.iChivalry ):
-				self.makeUnit( xml.iKnight, iLeader, iActiveCrusade, tPlot, 1 )
 				self.makeUnit( xml.iBurgundianPaladin, iLeader, iActiveCrusade, tPlot, 1 )
 				self.makeUnit( xml.iTemplar, iLeader, iActiveCrusade, tPlot, 1 )
 				self.makeUnit( xml.iTeutonic, iLeader, iActiveCrusade, tPlot, 1 )
+				self.makeUnit( xml.iKnightofStJohns, iLeader, iActiveCrusade, tPlot, 1 )
 				self.makeUnit( xml.iGuisarme, iLeader, iActiveCrusade, tPlot, 1 )
 				self.makeUnit( xml.iCatapult, iLeader, iActiveCrusade, tPlot, 1 )
 			else:
@@ -908,7 +909,11 @@ class Crusades:
 				self.makeUnit( xml.iLongSwordsman, iLeader, iActiveCrusade, tPlot, 1 )
 				self.makeUnit( xml.iSpearman, iLeader, iActiveCrusade, tPlot, 1 )
 				self.makeUnit( xml.iTrebuchet, iLeader, iActiveCrusade, tPlot, 1 )
-		# if the Crusade is stolen
+			# there are way too many generic units in most Crusades:
+			if self.getSelectedUnit( 7 ) > 1:
+				iReducedNumber = self.getSelectedUnit( 7 ) * 6 / 10 # note that this is before the specific Crusade reduction
+				self.setSelectedUnit( 7 , iReducedNumber )
+		# if the Crusade was derailed
 		else:
 			iRougeModifier = 200
 			if teamLeader.isHasTech( xml.iChivalry ):
@@ -923,6 +928,10 @@ class Crusades:
 				self.makeUnit( xml.iLongSwordsman, iLeader, iActiveCrusade, tPlot, 1 )
 				self.makeUnit( xml.iSpearman, iLeader, iActiveCrusade, tPlot, 1 )
 				self.makeUnit( xml.iTrebuchet, iLeader, iActiveCrusade, tPlot, 1 )
+			# there are way too many generic units in most Crusades:
+			if self.getSelectedUnit( 7 ) > 1:
+				iReducedNumber = self.getSelectedUnit( 7 ) * 8 / 10 # note that this is before the specific Crusade reduction
+				self.setSelectedUnit( 7 , iReducedNumber )
 
 		# Absinthe: not all units should arrive near Jerusalem
 		#			later Crusades have more units in the pool, so they should have bigger reduction
@@ -936,26 +945,26 @@ class Crusades:
 			elif iActiveCrusade == 1:
 				iRougeModifier *= 8 / 5
 			elif iActiveCrusade == 2:
-				iRougeModifier *= 10 / 5
+				iRougeModifier *= 9 / 5
 			elif iActiveCrusade == 3:
-				iRougeModifier *= 12 / 5
+				iRougeModifier *= 10 / 5
 			elif iActiveCrusade == 4:
-				iRougeModifier *= 15 / 5
+				iRougeModifier *= 12 / 5
 			else:
-				iRougeModifier *= 18 / 5
+				iRougeModifier *= 14 / 5
 		else:
 			if iActiveCrusade == 0:
-				iRougeModifier *= 6 / 5
+				iRougeModifier *= 11 / 10
 			elif iActiveCrusade == 1:
-				iRougeModifier *= 7 / 5
+				iRougeModifier *= 6 / 5
 			elif iActiveCrusade == 2:
-				iRougeModifier *= 8 / 5
+				iRougeModifier *= 7 / 5
 			elif iActiveCrusade == 3:
-				iRougeModifier *= 9 / 5
+				iRougeModifier *= 8 / 5
 			elif iActiveCrusade == 4:
-				iRougeModifier *= 10 / 5
+				iRougeModifier *= 9 / 5
 			else:
-				iRougeModifier *= 12 / 5
+				iRougeModifier *= 10 / 5
 
 		if self.getSelectedUnit( 0 ) > 0:
 			self.makeUnit( xml.iTemplar, iLeader, iActiveCrusade, tPlot, self.getSelectedUnit( 0 ) * 100 / iRougeModifier )
@@ -1008,8 +1017,8 @@ class Crusades:
 	def freeCrusaders( self, iPlayer ):
 		# the majority of Crusader units will return from the Crusade, so the Crusading civ will have harder time keeping Jerusalem and the Levant
 		unitList = PyPlayer( iPlayer ).getUnitList()
-		iGameTurn = gc.getGame().getGameTurn() - 1 # process for freeCrusaders was actually started in the previous turn, iActiveCrusade might have changed for this turn
-		iActiveCrusade = self.getActiveCrusade( iGameTurn ) # Absinthe: the Crusader units are called back before the next Crusade is initialized
+		iPrevGameTurn = gc.getGame().getGameTurn() - 1 # process for freeCrusaders was actually started in the previous turn, iActiveCrusade might have changed for this turn
+		iActiveCrusade = self.getActiveCrusade( iPrevGameTurn ) # Absinthe: the Crusader units are called back before the next Crusade is initialized
 		print ("iActiveCrusade on units returning", iActiveCrusade)
 		for pUnit in unitList:
 			if pUnit.getMercID() == (-5 - iActiveCrusade): # Absinthe: so this is a Crusader Unit of the active Crusade
@@ -1050,7 +1059,7 @@ class Crusades:
 		#print(" DC Check 1",iGameTurn,self.getDCLast())
 		if iGameTurn < self.getDCLast() + 15: # wait 15 turns between DCs (Defensive Crusades)
 			return
-		if iGameTurn % 3 != gc.getGame().getSorenRandNum(3, 'roll to see if we should DC'): # otherwise every turn gets too much to check
+		if iGameTurn % 5 != gc.getGame().getSorenRandNum(5, 'roll to see if we should DC'): # otherwise every turn gets too much to check
 			return
 		#print(" DC Check")
 		lPotentials = [iPlayer for iPlayer in range(con.iNumPlayers-1) if self.canDC(iPlayer, iGameTurn)] # exclude the Pope
@@ -1061,10 +1070,12 @@ class Crusades:
 			for iPlayer in lPotentials:
 				iCatholicFaith = 0
 				pPlayer = gc.getPlayer(iPlayer)
-				iCatholicFaith += pPlayer.getFaith() + pPope.AI_getAttitude(iPlayer)
+				# while faith points matter more, diplomatic relations are also very important
+				iCatholicFaith += pPlayer.getFaith()
+				iCatholicFaith += 3 * max(0, pPope.AI_getAttitude(iPlayer))
 				if iCatholicFaith > 0:
 					lWeightValues.append((iPlayer, iCatholicFaith))
-			iChosenPlayer = utils.getRandomByWeight(lWeightValues, 33) # 33% chance for no DC
+			iChosenPlayer = utils.getRandomByWeight(lWeightValues, 33) # there is 33% chance that no civ is selected, so only 2/3 chance for an actual DC
 			if iChosenPlayer != -1:
 				#print(" DC Chosen ", iChosenPlayer)
 				if iChosenPlayer == utils.getHumanID():

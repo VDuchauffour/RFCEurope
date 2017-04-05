@@ -180,17 +180,26 @@ def AI_chooseProduction(argsList):
 	return gameUtils().AI_chooseProduction(argsList)
 
 def AI_unitUpdate(argsList):
-	'AI moves units - return 0 to let AI handle it, return 1 to say that the move is handled in python '
+	'AI moves units - return 0 to let AI handle it, return 1 to say that the move is handled in python'
 	#CvUtil.pyPrint( "CvGameInterface.AI_unitUpdate" )
 	return gameUtils().AI_unitUpdate(argsList)
 
+# Absinthe: new code for AI persecution - handled through python
+def isHasPurgeTarget(argsList):
+	'AI has target for persecution - return 0 if no possible targets, return 1 if there are at least one'
+	iCiv = argsList[0]
+	bReportCity = argsList[1]
+	#print ("isHasPurgeTarget argsList", iCiv, bReportCity)
+	#CvUtil.pyPrint( "CvGameInterface.isHasPurgeTarget" )
+	return gameUtils().isHasPurgeTarget(iCiv, bReportCity)
+
 def AI_doWar(argsList):
-	'AI decides whether to make war or peace - return 0 to let AI handle it, return 1 to say that the move is handled in python '
+	'AI decides whether to make war or peace - return 0 to let AI handle it, return 1 to say that the move is handled in python'
 	#CvUtil.pyPrint( "CvGameInterface.AI_doWar" )
 	return gameUtils().AI_doWar(argsList)
 
 def AI_doDiplo(argsList):
-	'AI decides does diplomacy for the turn - return 0 to let AI handle it, return 1 to say that the move is handled in python '
+	'AI decides does diplomacy for the turn - return 0 to let AI handle it, return 1 to say that the move is handled in python'
 	#CvUtil.pyPrint( "CvGameInterface.AI_doDiplo" )
 	return gameUtils().AI_doDiplo(argsList)
 

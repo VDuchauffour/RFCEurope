@@ -1,4 +1,4 @@
-## RFCEMaptUtils
+## RFCEMapUtils
 ## contains classes for reading, editing, visualizing and saving SettlerMaps, WarMaps, CityNameMaps, Provinces, CoreAreas and NormalAreas from RFCE
 ##
 ## Author: Caliom

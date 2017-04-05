@@ -95,8 +95,9 @@ bool CvUnitAI::AI_update()
 		getGroup()->pushMission(MISSION_SKIP);
 		return false;
 	}
+	// Absinthe: end
 
-	// Absinthe: old code for AI persecution
+	// Absinthe: old code for AI persecution - has some interesting parts as it had special rules for Papal persecution
 	/*
 	// 3MiroAI: decide how the AI would do with a prosecutor
 	//GC.getGameINLINE().logMsg("   Unit AI  at %d %d   UnitType: %d",getX(),getY(),getUnitType() );
@@ -118,7 +119,7 @@ bool CvUnitAI::AI_update()
 			return false;
 		};
 		if ( UniquePowers[getOwnerINLINE() * UP_TOTAL_NUM + UP_JANISSARY] > -1 ){
-			// 3MiroUP: if we have the Janissaries UP then we should be far less likely to prosecure as foreign religion does giveup bonuses
+			// 3MiroUP: if we have the Janissaries UP then we should be far less likely to prosecute as foreign religion does giveup bonuses
 			if ( GC.getGameINLINE().getSorenRandNum( 100, "Janissary Prosecution") > 1 ){ // only 2% chance to do prosecution
 				getGroup() ->pushMission(MISSION_SKIP);
 				return false;
@@ -1328,6 +1329,7 @@ void CvUnitAI::AI_settleMove()
 		}
 	}
 
+	// Absinthe: this doesn't contribute to the settlers wandering alone problem, and it's probably better if civs expand more aggressively
 	//Rhye - don't be so shy (restored Warlords settings)
 	/*int iDanger = GET_PLAYER(getOwnerINLINE()).AI_getPlotDanger(plot(), 3);
 
@@ -1556,7 +1558,9 @@ void CvUnitAI::AI_workerMove()
 	{
 		//if (GET_PLAYER(getOwnerINLINE()).AI_isPlotThreatened(plot(), 2))
 		// 3Miro: Make it more to compensate for movement 3 units (incompetent AI)
-		if (GET_PLAYER(getOwnerINLINE()).AI_isPlotThreatened(plot(), 3))
+		// Absinthe: switched back for now, workers do not notice 3 move enemies with this anyway
+		//if (GET_PLAYER(getOwnerINLINE()).AI_isPlotThreatened(plot(), 3))
+		if (GET_PLAYER(getOwnerINLINE()).AI_isPlotThreatened(plot(), 2))
 		{
 			if (AI_retreatToCity()) // XXX maybe not do this??? could be working productively somewhere else...
 			{
@@ -1745,54 +1749,54 @@ void CvUnitAI::AI_workerMove()
 		}
 	}
 
-		if (bCanRoute)
-		{
-			if (AI_routeTerritory(true))
-			{
-				return;
-			}
-
-			if (AI_connectBonus(false))
-			{
-				return;
-			}
-
-			if (AI_routeCity())
-			{
-				return;
-			}
-		}
-
-		if (AI_irrigateTerritory())
+	if (bCanRoute)
+	{
+		if (AI_routeTerritory(true))
 		{
 			return;
 		}
 
-		if (!bBuildFort)
+		if (AI_connectBonus(false))
 		{
-			bool bCanal = ((100 * area()->getNumCities()) / std::max(1, GC.getGame().getNumCities()) < 85);
-			CvPlayerAI& kPlayer = GET_PLAYER(getOwnerINLINE());
-			bool bAirbase = false;
-			bAirbase = (kPlayer.AI_totalUnitAIs(UNITAI_PARADROP) || kPlayer.AI_totalUnitAIs(UNITAI_ATTACK_AIR) || kPlayer.AI_totalUnitAIs(UNITAI_MISSILE_AIR));
-
-			if (bCanal || bAirbase)
-			{
-				if (AI_fortTerritory(bCanal, bAirbase))
-				{
-					return;
-				}
-			}
+			return;
 		}
 
-	//Rhye - start comment
-	/*
-		if (bCanRoute)
+		if (AI_routeCity())
 		{
-			if (AI_routeTerritory())
+			return;
+		}
+	}
+
+	if (AI_irrigateTerritory())
+	{
+		return;
+	}
+
+	if (!bBuildFort)
+	{
+		bool bCanal = ((100 * area()->getNumCities()) / std::max(1, GC.getGame().getNumCities()) < 85);
+		CvPlayerAI& kPlayer = GET_PLAYER(getOwnerINLINE());
+		bool bAirbase = false;
+		bAirbase = (kPlayer.AI_totalUnitAIs(UNITAI_PARADROP) || kPlayer.AI_totalUnitAIs(UNITAI_ATTACK_AIR) || kPlayer.AI_totalUnitAIs(UNITAI_MISSILE_AIR));
+
+		if (bCanal || bAirbase)
+		{
+			if (AI_fortTerritory(bCanal, bAirbase))
 			{
 				return;
 			}
 		}
+	}
+
+	//Rhye - start comment
+	/*
+	if (bCanRoute)
+	{
+		if (AI_routeTerritory())
+		{
+			return;
+		}
+	}
 	*/
 	//Rhye - end comment
 
@@ -6018,8 +6022,8 @@ void CvUnitAI::AI_attackAirMove()
 		}
 		if (AI_airStrike())
 		{
-		return;
-	}
+			return;
+		}
 	}
 
 	CvPlayerAI& kPlayer = GET_PLAYER(getOwnerINLINE());
@@ -7531,6 +7535,7 @@ bool CvUnitAI::AI_groupMergeRange(UnitAITypes eUnitAI, int iMaxRange, bool bBigg
 					// 3MiroBugfix: it seems that we are trying to add to the group units that are already part of the group
 					//        to avoid this, ignore units that are already part of this group and lets see what will happen
 					//    ---- maybe not
+					// Absinthe: I'm not convinced at all that this is a "fix", not a mistake. Restored original for now.
 					//if (AI_allowGroup(pLoopUnit, eUnitAI) && (pLoopGroup ->getID() != getGroup()->getID()) && (pLoopGroup->getNumUnits()<30)  )
 					if (AI_allowGroup(pLoopUnit, eUnitAI))
 					{
@@ -9158,7 +9163,7 @@ bool CvUnitAI::AI_spreadReligion()
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
-		    iPlayerMultiplierPercent = 0;
+			iPlayerMultiplierPercent = 0;
 
 			if (GET_PLAYER((PlayerTypes)iI).getTeam() != getTeam())
 			{
@@ -9179,7 +9184,10 @@ bool CvUnitAI::AI_spreadReligion()
 							iPlayerMultiplierPercent += 300;
 						}
 						else
+						// Absinthe: in RFCE don't spread to civs with a different State Religion
 						{
+							iPlayerMultiplierPercent = 0;
+							/*
 							if (GET_PLAYER((PlayerTypes)iI).hasHolyCity(GET_PLAYER((PlayerTypes)iI).getStateReligion()))
 							{
 								iPlayerMultiplierPercent += 50;
@@ -9188,25 +9196,30 @@ bool CvUnitAI::AI_spreadReligion()
 							{
 								iPlayerMultiplierPercent += 300;
 							}
+							*/
 						}
 
-						int iReligionCount = GET_PLAYER((PlayerTypes)iI).countTotalHasReligion();
-						int iCityCount = GET_PLAYER(getOwnerINLINE()).getNumCities();
-						//magic formula to produce normalized adjustment factor based on religious infusion
-						int iAdjustment = (100 * (iCityCount + 1));
-						iAdjustment /= ((iCityCount + 1) + iReligionCount);
-						iAdjustment = (((iAdjustment - 25) * 4) / 3);
-
-						iAdjustment = (std::max(10, iAdjustment));
-
-						iPlayerMultiplierPercent *= iAdjustment;
-						iPlayerMultiplierPercent /= 100;
-
-						// if we have a holy city, but not this holy city, then we will likely switch
-						// religions soon, so try to spread this religion internally, not externally
-						if (bHasAnyHolyCity && !bHasHolyCity)
+						// Absinthe: additional check to see if it was set back to 0
+						if (iPlayerMultiplierPercent > 0)
 						{
-							iPlayerMultiplierPercent /= 10;
+							int iReligionCount = GET_PLAYER((PlayerTypes)iI).countTotalHasReligion();
+							int iCityCount = GET_PLAYER(getOwnerINLINE()).getNumCities();
+							//magic formula to produce normalized adjustment factor based on religious infusion
+							int iAdjustment = (100 * (iCityCount + 1));
+							iAdjustment /= ((iCityCount + 1) + iReligionCount);
+							iAdjustment = (((iAdjustment - 25) * 4) / 3);
+
+							iAdjustment = (std::max(10, iAdjustment));
+
+							iPlayerMultiplierPercent *= iAdjustment;
+							iPlayerMultiplierPercent /= 100;
+
+							// if we have a holy city, but not this holy city, then we will likely switch
+							// religions soon, so try to spread this religion internally, not externally
+							if (bHasAnyHolyCity && !bHasHolyCity)
+							{
+								iPlayerMultiplierPercent /= 10;
+							}
 						}
 					}
 				}
@@ -9930,19 +9943,19 @@ bool CvUnitAI::AI_join(int iMaxCount)
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 							{
-							iValue = pLoopCity->AI_specialistValue(((SpecialistTypes)iI), pLoopCity->AI_avoidGrowth(), false);
-							if (iValue > iBestValue)
-							{
-								iBestValue = iValue;
-								pBestPlot = getPathEndTurnPlot();
-								eBestSpecialist = ((SpecialistTypes)iI);
+								iValue = pLoopCity->AI_specialistValue(((SpecialistTypes)iI), pLoopCity->AI_avoidGrowth(), false);
+								if (iValue > iBestValue)
+								{
+									iBestValue = iValue;
+									pBestPlot = getPathEndTurnPlot();
+									eBestSpecialist = ((SpecialistTypes)iI);
+								}
 							}
 						}
 					}
 				}
 			}
 		}
-	}
 	}
 
 	if ((pBestPlot != NULL) && (eBestSpecialist != NO_SPECIALIST))
@@ -15915,6 +15928,7 @@ bool CvUnitAI::AI_retreatToCity(bool bPrimary, bool bAirlift, int iMaxPath)
 		//	GC.getGameINLINE().logMsg("                                4.1 Owner   %d ", GC.getMapINLINE().plot( pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE() ) ->getOwner()  );
 		//};
 		// 3MiroBug: with the pass condition, this causes a settlers to not know where to go and puts the game into infinite loop (going all the way from CvGame::update() )
+		// Absinthe: never experienced this in BtS, but it does appear in RFCE... now yet sure why, and it might contribute to the settlers without defenders bug
 		//getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), ((iPass > 0) ? MOVE_IGNORE_DANGER : 0));
 		getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), MOVE_IGNORE_DANGER );
 		return true;

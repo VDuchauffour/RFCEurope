@@ -1,4 +1,6 @@
-# Rhye's and Fall of Civilization - Mercenaries Written mostly by 3Miro
+# Rhye's and Fall of Civilization: Europe - Mercenaries
+# Written mostly by 3Miro
+
 from CvPythonExtensions import *
 import CvUtil
 import PyHelpers

@@ -109,6 +109,7 @@ Changes for RFCE 1.5:
 		- It's way more likely that the plague leaves smaller, less unhealthy cities than bigger ones
 		- Little shorter plague duration (on civ-level), also it spreads to a little less cities in a given turn
 		- Revised plague related health calculations, now there is a real chance to avoid or mitigate plagues if the civ is healthy enough
+		- Plague will be restarted only for the human player on conquering an infected city
 
 	Crusade updates:
 		- Crusading units now have a chance to arrive to their destination, around 70% of the units will arrive for the first Crusade
@@ -132,6 +133,7 @@ Changes for RFCE 1.5:
 		- No more Defensive Crusades after Protestantism is founded
 		- Later Crusades won't send back units from earlier Crusades (i.e. if they initially remained Crusaders, it should remain that way)
 		- Added option for another Crusade in the late 13th century
+		- Tuned down Defensive Crusade frequency, reduced number of generic units for normal Crusades
 
 	Terrain updates:
 		- New base terrain: Semidesert - 1 production, +1 commerce near rivers, city founding only possible near fresh water
@@ -189,7 +191,7 @@ Changes for RFCE 1.5:
 
 	Stability updates:
 		- Increased civic stability boost from Religious Law + Theocracy
-		- Added small initial stability bonus for Arabia, Hungary and Novgorod if controlled by the AI
+		- Added small initial stability bonus for Arabia, Venice, Hungary and Novgorod if controlled by the AI
 		- Settling in core province means +1 stability, in historic/potential 0, in contested -1, in foreign -2
 		- Various tweaks in stability calculations for preplaced/preset stuff in the scenarios
 		- Potential provinces now properly update on the start of all new games (important for the 1200AD scenario), so stability from them is also updated correctly
@@ -226,6 +228,7 @@ Changes for RFCE 1.5:
 		- You can only get one tech at a time, and only from techs which are known to the Pope
 		- For selecting the civ, relations with the Pope matter, but faith points are much more important
 		- The possibility for a free Papal tech is somewhat slim, but the selected civ has bigger chance if it's more techs behind
+		- Gold gifts from the Pope are more randomized (well, semi-randomized)
 
 	Indy and barb changes:
 		- Reduced number of defender units in indy Caen, AI France should be able to conquer it more often
@@ -238,8 +241,12 @@ Changes for RFCE 1.5:
 		- Redesigned early barbs in Iberia as Visigoths (also to represent the Kingdom of Asturias), strengthened them to slow down early Cordoban expansion
 		- Wends added as new barbarians for Germany, with extra threat from them around the Great Slav Rising of 983AD
 		- Revised barbarian Magyar spawn areas and numbers in the late 9th century in Central Europe (before the Hungarian spawn)
-		- Toned down stregth of "barbarian" Teutonic Knight spawns in Livonia in the early 13th century (right before the Prussian spawn)
+		- Tuned down stregth of "barbarian" Teutonic Knight spawns in Livonia in the early 13th century (right before the Prussian spawn)
 		- Reduced number of Berber barbarians in North Africa (especially for Cordoba), less early barbs for AI Kiev
+		- New indy city: Perekop (as Taphros), 500 AD, starts with walls and Orthodoxy, separating Crimean peninsula from the mainland
+		- New indy city: Halych, 1124 AD, starts with Orthodoxy, representing the western Rus principalities
+		- Alternative spawn position for indy Lubeck, one tile south of the current one (60% for the new position, 40% for the old)
+		- New indy city: Zagreb, 800 AD, early buffer zone between Hungary and Venice (also makes Venetian coastal cities' cultural expansion limited in Croatia)
 
 	Civ and UHV setup:
 		- Starting civic changes: Arabia (Trade Economy), Kiev (Serfdom, Manoralism), Spain (Serfdom, Manoralism), Morocco (Trade Economy, Militarism)
@@ -260,6 +267,8 @@ Changes for RFCE 1.5:
 		- Thessaly, Morea, Crete and Cyprus provinces are also needed for the 2nd Venetian UHV (besides the city of Constantinople)
 		- Picardy will remain historic for France even after the English spawn, Northumbria will remain contested for Norway
 		- Changed the Novgorodian 2nd UHV goal to 11 fur resources (was 12)
+		- Revised starting units for Arabia - more melee units, less horse archers
+		- Additional defensive units and in some cases additional settler(s) for AI Arabia, Bulgaria, Cordoba, Germany, Novgorod, Kiev, Hungary, Poland, Morocco, Ottomans
 
 	Art updates:
 		- Historic icon/button/gamefont for the Order of Calatrava and the Order of the Dragon
@@ -304,7 +313,6 @@ Changes for RFCE 1.5:
 	General changes:
 		- Updated the Novgorod Fur UHV and the Moscow Atlantic Access UHV to count resources only inside cultural borders
 		- Revised the setup for DCNames when the civ is the master of 1 or 2 other civilizations, should work for all civs without any issues (e.g. Iberian Union)
-		- Increased AI willingness to choose indy targets inside it's war map, decreased chance for choosing indies outside the war map
 		- Core cities cannot be chosen for city secession because of health issues
 		- All cities have less chance for secession because of religion unhappiness, while all cities have bigger chance for secession if they are unhappy (happy faces < unhappy faces)
 		- Culture in cities is now also taken into account when choosing the city for secession (not the amount, but your cultural percentage, so the nationality of the population there)
@@ -330,12 +338,31 @@ Changes for RFCE 1.5:
 		- Minor updates in the Swedish and Prussian respawn zones, to avoid overlap with Lithuania
 		- Revised respawn zone for Novgorod and Russia, better shape for both without any overlaps
 		- Vassals are now allowed to trade cities with their master, e.g. you can give cities to your vassal if they are willing to accept it
-		- AI civs won't do a revolution in the first couple turns after birth (wait for the potential city flips, initial conquests/settling, war declarations, and whatnot)
-		- Reduced diplomatic relations penalties from close borders
+		- Reduced diplomatic relation penalties with other civs from close borders
 		- Decreased normal (vanilla BtS) diplo bonuses from sharing a religion, faith points should be the dominating factor
 		- Round church no longer negates all diplo bonuses from sharing a religion, but it has increased diplo penalties against civs with the same faith
+		- If Arabia acquires a city before it founds his first one, that will become the Islamic holy city (otherwise Islam would end up without one)
+		- AI civs now have separate starting stacks - usually strengthening their early expansion when the AI is spawned in an otherwise unpopulated area
+
+	AI improvements:
+		- AI civs won't do a revolution in the first couple turns after birth (wait for the potential city flips, initial conquests/settling, war declarations, and whatnot)
 		- AI won't consider their trade partner worst enemy for tech/map/resource trades and open borders, if diplo relations between them is pleased or friendly
-		- Decreased general AI willingness for vassalization, also greatly reduced chance for vassalization on resurrection
+		- Decreased general AI willingness for vassalization, furthermore greatly reduced chance for vassalization on resurrection
+		- Increased AI willingness to choose indy targets inside it's war map, decreased chance for choosing indies outside the war map
+		- Made the AI take number of cities into consideration for the Merchant Republic civic - hopefully most civs won't choose it as often anymore
+		- AI civs with special bonuses for civics as their UP (Venice, Novgorod, Prussia) have much increased chance for that civic
+		- AI will now only build prosecutors in it's cities if it intends to use it
+		- AI civs won't train persecutors in small cities (won't cripple new cities early production with it)
+		- Revised AI persecution values and religions for all civs, improved AI logic when and what to purge
+		- An AI city may become target for persecution if it has a religion the civ wants to purge, and it doesn't have a wonder associated with that religion
+		- AI civs will try to build more defender units for escorting settlers
+		- Fixed serious vanilla BtS bug which messed up AI value calculations for training missionaries in their cities, resulting in way fewer missionaries in RFCE than intended
+		- As a result of the above, and some further improvements and adjustments, the AI will build and use both missionaries and persecutors more often
+		- Increased religion flavor for most AI leaders, resulting in more efforts to spread/build in their state religion
+		- AI civs will only spread religion to other civs if it's their current state religion or they do not have a state religion
+		- Decreased willingness for vassalization for almost all AI leaders, even small civs won't vassalize so easily now
+		- Most AI civs are now more unlikely to raze cities, barbs also have slightly less chance for city razing
+		- Smaller AI civs will now have increased probability to build units (to be a better match for bigger civs' armies)
 
 	Technical / UI changes:
 		- No interface messages are displayed during autoplay/autorun (Crusades, RiseAndFall, Religion, Wonders, Leaders, etc.)
@@ -367,6 +394,7 @@ Changes for RFCE 1.5:
 		- Revision of python code: More efficiency and better readability
 		- Popup message for the player when a UHV goal is completed or failed
 		- Popup message for the player a couple turns before the Seljuk/Mongol/Timurid invasions
+		- Improved interface messages connected to Papal bonuses, added message for the Topkapi Palace effect
 
 	Bugfixes:
 		- Fixed strange visibility area for the Ottomans

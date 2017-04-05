@@ -1,5 +1,4 @@
-# Rhye's and Fall of Civilization - Historical Victory Goals
-
+# Rhye's and Fall of Civilization: Europe - Plague
 
 from CvPythonExtensions import *
 import CvUtil
@@ -26,7 +25,8 @@ iNumTotalPlayersB = con.iNumTotalPlayersB
 iPlague = xml.iPlague
 
 # Absinthe: Black Death is more severe, while the Plague of Justinian is less severe than the others plagues
-iBaseDuration = 8
+iBaseHumanDuration = 10
+iBaseAIDuration = 6
 iImmunity = con.iImmunity
 iNumPlagues = 5
 iConstantinople = 0
@@ -186,9 +186,7 @@ class Plague:
 
 
 	def isVulnerable(self, iPlayer):
-		# calculate the total health percent, to determine if vulnerable or not (also tech immunity should go here, if ever get added to the mod)
-		# Indies and Barbs are always vulnerable if the plague counter is 0
-		# for other players: if iHealth == -100, calculate player's health, else: use the value
+		# determine if vulnerable based on recent infections and the average city healthiness (also tech immunity should go here, if ever get added to the mod)
 		if (iPlayer >= iNumMajorPlayers):
 			if (self.getPlagueCountdown(iPlayer) == 0):
 				return True
@@ -196,7 +194,7 @@ class Plague:
 			pPlayer = gc.getPlayer(iPlayer)
 			if (self.getPlagueCountdown(iPlayer) == 0):
 				iHealth = self.calcHealth( iPlayer )
-				if (iHealth < 17): # won't spread at all if the average surplus health in the cities is at least 1.7
+				if (iHealth < 42): # won't spread at all if the average surplus health in the cities is at least 4.2
 					return True
 		return False
 
@@ -220,12 +218,16 @@ class Plague:
 		# Absinthe: this is where the duration is handled for each civ
 		#			number of cities should be a significant factor, so plague isn't way more deadly for smaller civs
 		iHealth = self.calcHealth( iPlayer )
-		iHealthDuration = max ( min ( (iHealth / 5), 3 ), -4 ) # between -4 and +3
+		iHealthDuration = max ( min ( (iHealth / 14), 3 ), -4 ) # between -4 and +3
 		apCityList = PyPlayer(iPlayer).getCityList()
 		iCityDuration = min ( (len(apCityList) + 2) / 3, 10 ) # between 1 and 10 from cities
 		print ("plague duration iCities", iCityDuration)
-		# Overall duration for the plague is between 3 and 11 (usually between 4-8)
-		iValue = ( iBaseDuration + iCityDuration - iHealthDuration ) / 2
+		if iPlayer == iHuman:
+			# Overall duration for the plague is between 4 and 12 (usually between 6-8)
+			iValue = ( iBaseHumanDuration + iCityDuration - iHealthDuration ) / 2
+		else:
+			# Overall duration for the plague is between 2 and 10 (usually around 5-6)
+			iValue = max ((( iBaseAIDuration + iCityDuration - iHealthDuration ) / 2), 4) # at least 4
 		print ("plague duration overall, iPlayer, iValue", iPlayer, iValue)
 		self.setPlagueCountdown(iPlayer, iValue)
 
@@ -468,7 +470,7 @@ class Plague:
 			iMaxNumInfections = 2
 		iNumSpreads = gc.getGame().getSorenRandNum(iMaxNumInfections, 'max number of new infections')
 		if ( len(apCityList) > 0 ):
-			if (self.getPlagueCountdown(iPlayer) > 2): # don't spread in the last turns
+			if (self.getPlagueCountdown(iPlayer) > 2): # don't spread in the last turns, when preStopPlague is active
 				for x in range(0, len(apCityList)):
 					pCity1 = apCityList[gc.getGame().getSorenRandNum(len(apCityList), 'random city')]
 					city1 = pCity1.GetCy()
@@ -527,15 +529,36 @@ class Plague:
 
 	def onCityAcquired(self, iOldOwner, iNewOwner, city):
 		if (city.hasBuilding(iPlague)):
-			if (self.getPlagueCountdown(iNewOwner) <= 0 and gc.getGame().getGameTurn() > con.tBirth[iNewOwner] + iImmunity ): # skip immunity in this case, but not for the recently born civs
-				self.spreadPlague(iNewOwner, -1)
-				apCityList = PyPlayer(iNewOwner).getCityList()
-				for pCity in apCityList:
-					cityNear = pCity.GetCy()
-					if (utils.calculateDistance(city.getX(), city.getY(), cityNear.getX(), cityNear.getY()) <= 3):
-						self.infectCity(cityNear)
+			# reinfect the human player if conquering plagued cities
+			if iNewOwner == utils.getHumanID():
+				# only if it's not a recently born civ
+				if (gc.getGame().getGameTurn() > con.tBirth[iNewOwner] + iImmunity):
+					# if > 0 do nothing, if < 0 skip immunity and restart the plague, if == 0 start the plague
+					if (self.getPlagueCountdown(iNewOwner) <= 0):
+						self.spreadPlague(iNewOwner, -1)
+						apCityList = PyPlayer(iNewOwner).getCityList()
+						for pCity in apCityList:
+							cityNear = pCity.GetCy()
+							if (utils.calculateDistance(city.getX(), city.getY(), cityNear.getX(), cityNear.getY()) <= 3):
+								self.infectCity(cityNear)
+				else:
+					city.setHasRealBuilding(iPlague, False)
+			# no reinfect for the AI, only infect
 			else:
-				city.setHasRealBuilding(iPlague, False)
+				# only if it's not a recently born civ
+				if (gc.getGame().getGameTurn() > con.tBirth[iNewOwner] + iImmunity):
+					# if > 0 do nothing, if < 0 keep immunity and remove plague from the city, if == 0 start the plague
+					if (self.getPlagueCountdown(iNewOwner) == 0):
+						self.spreadPlague(iNewOwner, -1)
+						apCityList = PyPlayer(iNewOwner).getCityList()
+						for pCity in apCityList:
+							cityNear = pCity.GetCy()
+							if (utils.calculateDistance(city.getX(), city.getY(), cityNear.getX(), cityNear.getY()) <= 3):
+								self.infectCity(cityNear)
+					elif (self.getPlagueCountdown(iNewOwner) < 0):
+						city.setHasRealBuilding(iPlague, False)
+				else:
+					city.setHasRealBuilding(iPlague, False)
 
 
 	def onCityRazed(self, city, iNewOwner):

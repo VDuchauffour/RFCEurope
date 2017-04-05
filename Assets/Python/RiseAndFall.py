@@ -1,4 +1,4 @@
-# Rhye's and Fall of Civilization - Main Scenario
+# Rhye's and Fall of Civilization: Europe - Main RFC mechanics
 
 from CvPythonExtensions import *
 import CvUtil
@@ -644,6 +644,11 @@ class RiseAndFall:
 			else:
 				pCity.setHasRealBuilding( xml.iWalls, True )
 		if ( (pCity.getX()==60) and (pCity.getY()==44) ): #Prague
+			if ( iPlayer == iMorocco ):
+				pCity.setHasRealBuilding( xml.iMoroccoKasbah, True )
+			else:
+				pCity.setHasRealBuilding( xml.iWalls, True )
+		if ( (pCity.getX()==87) and (pCity.getY()==36) ): #Perekop (Or Qapi)
 			if ( iPlayer == iMorocco ):
 				pCity.setHasRealBuilding( xml.iMoroccoKasbah, True )
 			else:
@@ -1639,7 +1644,7 @@ class RiseAndFall:
 							for iLoopCiv in range(iNumTotalPlayersB): #Barbarians as well
 								if (iCiv != iLoopCiv):
 									utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iLoopCiv, True, False)
-									utils.flipUnitsInCoreExceptions(iCiv, iLoopCiv, True, False)
+									utils.flipUnitsInPlots(con.tExceptions[iCiv], iCiv, iLoopCiv, True, False)
 							if (pCurrent.isCity()):
 								pCurrent.eraseAIDevelopment() #new function, similar to erase but won't delete rivers, resources and features
 							for iLoopCiv in range(iNumTotalPlayersB): #Barbarians as well
@@ -1796,12 +1801,31 @@ class RiseAndFall:
 ##					if (unit.getUnitType() == xml.iSettler):
 ##						break
 ##				unit.found()
-				# Absinthe: there was another silly mistake here with barbarian and indy unit flips... switched to properly check spawn area instead of the preset area based on distance from capital
-				utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iBarbarian, True, True) #remaining barbs in the region now belong to the new civ
-				utils.flipUnitsInCoreExceptions(iCiv, iBarbarian, True, True) #remaining barbs in the region now belong to the new civ
-				for i in range( con.iIndepStart, con.iIndepEnd + 1 ):
-					utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, i, True, False) #remaining independents in the region now belong to the new civ
-					utils.flipUnitsInCoreExceptions(iCiv, i, True, False) #remaining independents in the region now belong to the new civ
+
+				# Absinthe: there was another silly mistake here with barbarian and indy unit flips... 
+				#			we don't simply want to check an area based on distance from capital, as it might lead out from the actual spawn area
+				#			so we check plots which are in the core area, and in 4 distance for barb units, 2 distance for indies
+				lPlotBarbFlip = []
+				lPlotIndyFlip = []
+				# if inside the core rectangle, and in 4 distance from the starting plot, append to barb flip zone
+				for tPlot in utils.getPlotList(tTopLeft, tBottomRight):
+					if tPlot in utils.getPlotList((tCapital[0]-4, tCapital[1]-4), (tCapital[0]+4, tCapital[1]+4)):
+						lPlotBarbFlip.append(tPlot)
+				# if in the core exceptions, and in 4 distance from the starting plot, append to barb flip zone
+				for tPlot in con.tExceptions[iCiv]:
+					if tPlot in utils.getPlotList((tCapital[0]-4, tCapital[1]-4), (tCapital[0]+4, tCapital[1]+4)):
+						lPlotBarbFlip.append(tPlot)
+				# if inside the core rectangle, and in 2 distance from the starting plot, append to indy flip zone
+				for tPlot in utils.getPlotList(tTopLeft, tBottomRight):
+					if tPlot in utils.getPlotList((tCapital[0]-2, tCapital[1]-2), (tCapital[0]+2, tCapital[1]+2)):
+						lPlotIndyFlip.append(tPlot)
+				# if in the core exceptions, and in 2 distance from the starting plot, append to indy flip zone
+				for tPlot in con.tExceptions[iCiv]:
+					if tPlot in utils.getPlotList((tCapital[0]-2, tCapital[1]-2), (tCapital[0]+2, tCapital[1]+2)):
+						lPlotIndyFlip.append(tPlot)
+				utils.flipUnitsInPlots(lPlotBarbFlip, iCiv, iBarbarian, True, True) #remaining barbs in the region now belong to the new civ
+				for iIndyCiv in range( con.iIndepStart, con.iIndepEnd + 1 ):
+					utils.flipUnitsInPlots(lPlotIndyFlip, iCiv, iIndyCiv, True, False) #remaining independents in the region now belong to the new civ
 				self.assignTechs(iCiv)
 				utils.setPlagueCountdown(iCiv, -con.iImmunity)
 				utils.clearPlague(iCiv)
@@ -1812,10 +1836,10 @@ class RiseAndFall:
 			iNumAICitiesConverted, iNumHumanCitiesToConvert = self.convertSurroundingCities(iCiv, tTopLeft, tBottomRight)
 			self.convertSurroundingPlotCulture(iCiv, tTopLeft, tBottomRight)
 			utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iBarbarian, False, True) #remaining barbs in the region now belong to the new civ
-			utils.flipUnitsInCoreExceptions(iCiv, iBarbarian, False, True) #remaining barbs in the region now belong to the new civ
-			for i in range( con.iIndepStart, con.iIndepEnd + 1 ):
-				utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, i, False, False) #remaining independents in the region now belong to the new civ
-				utils.flipUnitsInCoreExceptions(iCiv, i, False, False) #remaining independents in the region now belong to the new civ
+			utils.flipUnitsInPlots(con.tExceptions[iCiv], iCiv, iBarbarian, False, True) #remaining barbs in the region now belong to the new civ
+			for iIndyCiv in range( con.iIndepStart, con.iIndepEnd + 1 ):
+				utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iIndyCiv, False, False) #remaining independents in the region now belong to the new civ
+				utils.flipUnitsInPlots(con.tExceptions[iCiv], iCiv, iIndyCiv, False, False) #remaining independents in the region now belong to the new civ
 			print ("utils.flipUnitsInArea()")
 			#cover plots revealed by the catapult
 			plotZero = gc.getMap().plot( 32, 0 ) #sync with rfcebalance module
@@ -1873,10 +1897,10 @@ class RiseAndFall:
 					utils.clearPlague(iCiv)
 					#gc.getPlayer(iCiv).changeAnarchyTurns(1)
 			utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iBarbarian, False, True) #remaining barbs in the region now belong to the new civ
-			utils.flipUnitsInCoreExceptions(iCiv, iBarbarian, False, True) #remaining barbs in the region now belong to the new civ
-			for i in range( con.iIndepStart, con.iIndepEnd + 1 ):
-				utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, i, False, False) #remaining barbs in the region now belong to the new civ
-				utils.flipUnitsInCoreExceptions(iCiv, i, False, False) #remaining barbs in the region now belong to the new civ
+			utils.flipUnitsInPlots(con.tExceptions[iCiv], iCiv, iBarbarian, False, True) #remaining barbs in the region now belong to the new civ
+			for iIndyCiv in range( con.iIndepStart, con.iIndepEnd + 1 ):
+				utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iIndyCiv, False, False) #remaining independents in the region now belong to the new civ
+				utils.flipUnitsInPlots(con.tExceptions[iCiv], iCiv, iIndyCiv, False, False) #remaining independents in the region now belong to the new civ
 
 		else: #search another place
 			# Absinthe: there is an issue that core area are not calculated correctly for flips, as the additional tiles in tExceptions are not checked here
@@ -1913,10 +1937,10 @@ class RiseAndFall:
 						utils.setPlagueCountdown(iCiv, -con.iImmunity)
 						utils.clearPlague(iCiv)
 			utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iBarbarian, True, True) #remaining barbs in the region now belong to the new civ
-			utils.flipUnitsInCoreExceptions(iCiv, iBarbarian, True, True) #remaining barbs in the region now belong to the new civ
-			for i in range( con.iIndepStart, con.iIndepEnd + 1 ):
-				utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, i, True, False) #remaining barbs in the region now belong to the new civ
-				utils.flipUnitsInCoreExceptions(iCiv, i, True, False) #remaining barbs in the region now belong to the new civ
+			utils.flipUnitsInPlots(con.tExceptions[iCiv], iCiv, iBarbarian, True, True) #remaining barbs in the region now belong to the new civ
+			for iIndyCiv in range( con.iIndepStart, con.iIndepEnd + 1 ):
+				utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iIndyCiv, True, False) #remaining independents in the region now belong to the new civ
+				utils.flipUnitsInPlots(con.tExceptions[iCiv], iCiv, iIndyCiv, True, False) #remaining independents in the region now belong to the new civ
 
 		if (iNumHumanCitiesToConvert> 0):
 			self.flipPopup(iCiv, tTopLeft, tBottomRight)
@@ -2242,20 +2266,38 @@ class RiseAndFall:
 	def createStartingUnits( self, iCiv, tPlot ):
 		# set the provinces
 		self.pm.onSpawn( iCiv )
+		iHuman = utils.getHumanID()
 		# Change here to make later starting civs work
 		if (iCiv == iArabia):
 			utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
-			utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 6)
+			utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 2)
+			utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
+			utils.makeUnit(xml.iSpearman, iCiv, tPlot, 2)
+			# additional units for the AI
+			if (iCiv != iHuman):
+				utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
+				utils.makeUnit(xml.iSpearman, iCiv, tPlot, 2)
+				utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
 		elif (iCiv == iBulgaria):
 			utils.makeUnit(xml.iArcher, iCiv, tPlot, 4)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iBulgarianKonnik, iCiv, tPlot, 5)
+			# additional units for the AI
+			if (iCiv != iHuman):
+				utils.makeUnit(xml.iArcher, iCiv, tPlot, 1)
+				utils.makeUnit(xml.iSpearman, iCiv, tPlot, 2)
+				utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
 		elif (iCiv == iCordoba):
 			utils.makeUnit(xml.iArcher, iCiv, tPlot, 4)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
 			utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iIslamicMissionary, iCiv, tPlot, 3)
+			# additional units for the AI
+			if (iCiv != iHuman):
+				utils.makeUnit(xml.iArcher, iCiv, tPlot, 4)
+				utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
+				utils.makeUnit(xml.iIslamicMissionary, iCiv, tPlot, 2)
 		elif (iCiv == iVenecia):
 			utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
@@ -2284,11 +2326,20 @@ class RiseAndFall:
 			utils.makeUnit(xml.iGuisarme, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
+			# additional units for the AI
+			if (iCiv != iHuman):
+				utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
+				utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
+				utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 1)
 		elif (iCiv == iNovgorod):
 			utils.makeUnit(xml.iArcher, iCiv, tPlot, 3)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
 			utils.makeUnit(xml.iAxeman, iCiv, tPlot, 1)
 			utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 1)
+			# additional units for the AI
+			if (iCiv != iHuman):
+				utils.makeUnit(xml.iArcher, iCiv, tPlot, 4)
+				utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
 		elif (iCiv == iNorway):
 			utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
@@ -2306,11 +2357,21 @@ class RiseAndFall:
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
 			utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 3)
+			# additional units for the AI
+			if (iCiv != iHuman):
+				utils.makeUnit(xml.iArcher, iCiv, tPlot, 3)
+				utils.makeUnit(xml.iSpearman, iCiv, tPlot, 3)
+				utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
 		elif (iCiv == iHungary):
 			utils.makeUnit(xml.iArcher, iCiv, tPlot, 4)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
 			utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 4)
+			# additional units for the AI
+			if (iCiv != iHuman):
+				utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
+				utils.makeUnit(xml.iSpearman, iCiv, tPlot, 2)
+				utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
 		elif (iCiv == iSpain):
 			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
@@ -2342,6 +2403,10 @@ class RiseAndFall:
 			utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
+			# additional units for the AI
+			if (iCiv != iHuman):
+				utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
+				utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
 		elif (iCiv == iGenoa):
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 2)
@@ -2360,6 +2425,11 @@ class RiseAndFall:
 			utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 4)
 			utils.makeUnit(xml.iIslamicMissionary, iCiv, tPlot, 1)
+			# additional units for the AI
+			if (iCiv != iHuman):
+				utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
+				utils.makeUnit(xml.iIslamicMissionary, iCiv, tPlot, 2)
+				utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
 		elif (iCiv == iEngland):
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iLongSwordsman, iCiv, tPlot, 2)
@@ -2430,11 +2500,16 @@ class RiseAndFall:
 			utils.makeUnit(xml.iLongbowman, iCiv, tPlot, 5)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
 			utils.makeUnit(xml.iMaceman, iCiv, tPlot, 3)
-			utils.makeUnit(xml.iKnight, iCiv, tPlot, 4)
+			utils.makeUnit(xml.iKnight, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 4)
 			utils.makeUnit(xml.iTrebuchet, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iTurkeyGreatBombard, iCiv, tPlot, 3)
 			utils.makeUnit(xml.iIslamicMissionary, iCiv, tPlot, 4)
+			# additional units for the AI
+			if (iCiv != iHuman):
+				utils.makeUnit(xml.iKnight, iCiv, tPlot, 2)
+				utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 2)
+				utils.makeUnit(xml.iLongbowman, iCiv, tPlot, 3)
 		elif (iCiv == iMoscow):
 			utils.makeUnit(xml.iArbalest, iCiv, tPlot, 5)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)

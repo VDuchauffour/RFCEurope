@@ -722,7 +722,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 			m_paiHasReligionCount[iI] = 0;
 		}
 
-		FAssertMsg(m_paiHasCorporationCount==NULL, "about to leak memory, CvPlayer::m_paiHasReligionCount");
+		FAssertMsg(m_paiHasCorporationCount==NULL, "about to leak memory, CvPlayer::m_paiHasCorporationCount"); // Absinthe: text fix
 		m_paiHasCorporationCount = new int[GC.getNumCorporationInfos()];
 		for (iI = 0;iI < GC.getNumCorporationInfos();iI++)
 		{
@@ -6390,6 +6390,7 @@ int CvPlayer::getProductionNeeded(ProjectTypes eProject) const
 		iProductionNeeded /= 100;
 	}
 
+	// Absinthe: UP discovery - Portugal and Dutch colony production boost
 	int iUPD = UniquePowers[getID() * UP_TOTAL_NUM + UP_DISCOVERY];
 	if ( iUPD > -1 ){
 		if ( (eProject >= (iUPD/1000000)%1000) && (eProject <= (iUPD/1000)%1000) ){
@@ -8092,23 +8093,6 @@ void CvPlayer::foundReligion(ReligionTypes eReligion, ReligionTypes eSlotReligio
 
 	if (GC.getGameINLINE().isReligionFounded(eReligion))
 	{
-		//Rhye - start comment (bugfix)
-		/*
-		if (isHuman())
-		{
-			CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_FOUND_RELIGION, eSlotReligion);
-			if (NULL != pInfo)
-			{
-				gDLL->getInterfaceIFace()->addPopup(pInfo, getID());
-			}
-		}
-		else
-		{
-			foundReligion(AI_chooseReligion(), eSlotReligion, bAward);
-		}
-		*/
-		//Rhye - end comment (bugfix)
-
 		return;
 	}
 
@@ -9461,6 +9445,7 @@ void CvPlayer::setHighestUnitLevel(int iNewValue)
 
 int CvPlayer::getMaxConscript() const
 {
+	// Absinthe: UP conscription
 	int iUPC = UniquePowers[getID() * UP_TOTAL_NUM + UP_CONSCRIPTION];
 	if ( iUPC > -1){
 		return std::max( iUPC / 100, m_iMaxConscript );
@@ -23534,6 +23519,7 @@ void CvPlayer::setFaith( int iNewFaith ){
 
 void CvPlayer::changeFaith( int iChange ){
 	int iStateReligion = getStateReligion();
+	// Absinthe: UP faith - hidden boost for the Dutch
 	int iUP = UniquePowers[getID() * UP_TOTAL_NUM + UP_PIOUS ];
 	m_iFaith += ( iUP > 0 ) ? iUP * iChange : iChange;
 	if ( (iStateReligion != NO_RELIGION) && (m_iFaith > FaithPointsCap[iStateReligion]) ){

@@ -31,7 +31,7 @@
 			<CommercesProduced>
 				<iCommerceProduced>0</iCommerceProduced>
 				<iCommerceProduced>0</iCommerceProduced>
-				<iCommerceProduced>100</iCommerceProduced>
+				<iCommerceProduced>66</iCommerceProduced>
 			</CommercesProduced>
 			<YieldsProduced>
 				<iYieldProduced>0</iYieldProduced>
@@ -67,7 +67,7 @@
 			<BonusProduced>BONUS_RELIC</BonusProduced>
 			<CommercesProduced>
 				<iCommerceProduced>0</iCommerceProduced>
-				<iCommerceProduced>100</iCommerceProduced>
+				<iCommerceProduced>66</iCommerceProduced>
 				<iCommerceProduced>0</iCommerceProduced>
 			</CommercesProduced>
 			<YieldsProduced>
@@ -108,7 +108,7 @@
 			</CommercesProduced>
 			<YieldsProduced>
 				<iYieldProduced>0</iYieldProduced>
-				<iYieldProduced>100</iYieldProduced>
+				<iYieldProduced>66</iYieldProduced>
 			</YieldsProduced>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,1,7</Button>
 			<MovieFile>NONE</MovieFile>
@@ -175,8 +175,8 @@
 			</HeadquarterCommerces>
 			<BonusProduced>NONE</BonusProduced>
 			<CommercesProduced>
-				<iCommerceProduced>200</iCommerceProduced>
 				<iCommerceProduced>100</iCommerceProduced>
+				<iCommerceProduced>66</iCommerceProduced>
 			</CommercesProduced>
 			<YieldsProduced>
 				<iYieldProduced>0</iYieldProduced>
@@ -217,7 +217,7 @@
 			</CommercesProduced>
 			<YieldsProduced>
 				<iYieldProduced>0</iYieldProduced>
-				<iYieldProduced>100</iYieldProduced>
+				<iYieldProduced>66</iYieldProduced>
 			</YieldsProduced>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,6,7</Button>
 			<MovieFile>NONE</MovieFile>
@@ -250,7 +250,7 @@
 				<iCommerceProduced>100</iCommerceProduced>
 				<iCommerceProduced>0</iCommerceProduced>
 				<iCommerceProduced>0</iCommerceProduced>
-				<iCommerceProduced>200</iCommerceProduced>
+				<iCommerceProduced>66</iCommerceProduced>
 			</CommercesProduced>
 			<YieldsProduced>
 				<iYieldProduced>0</iYieldProduced>
@@ -286,7 +286,7 @@
 			<CommercesProduced>
 				<iCommerceProduced>0</iCommerceProduced>
 				<iCommerceProduced>0</iCommerceProduced>
-				<iCommerceProduced>100</iCommerceProduced>
+				<iCommerceProduced>66</iCommerceProduced>
 				<iCommerceProduced>0</iCommerceProduced>
 			</CommercesProduced>
 			<YieldsProduced>
@@ -324,7 +324,7 @@
 				<iCommerceProduced>0</iCommerceProduced>
 				<iCommerceProduced>0</iCommerceProduced>
 				<iCommerceProduced>0</iCommerceProduced>
-				<iCommerceProduced>100</iCommerceProduced>
+				<iCommerceProduced>66</iCommerceProduced>
 			</CommercesProduced>
 			<YieldsProduced>
 				<iYieldProduced>0</iYieldProduced>
