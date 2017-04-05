@@ -7053,7 +7053,8 @@ int CvTeam::getTrainVassalUU() const
 {
 	return m_iVassalUU;
 };
-void CvTeam::setTrainVassalUU( int iNewVal ){
+void CvTeam::setTrainVassalUU( int iNewVal )
+{
 	m_iVassalUU = iNewVal;
 };
 

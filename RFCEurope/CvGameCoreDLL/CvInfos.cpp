@@ -5404,6 +5404,7 @@ m_bNoCorporations(false),
 m_bNoForeignCorporations(false),
 m_bStateReligion(false),
 m_bNoNonStateReligionSpread(false),
+m_bStabilityBadForBigEmpire(false), // Absinthe: AI civic modifier, bad with many cities
 m_bStabilityVassalBonus(false), //Rhye 6th
 m_bStabilityFoundBonus(false), //Rhye 6th
 m_bStabilityConquestBonus(false), //Rhye 6th
@@ -5681,6 +5682,13 @@ bool CvCivicInfo::isNoNonStateReligionSpread() const
 	return m_bNoNonStateReligionSpread;
 }
 
+// Absinthe: AI civic modifier, bad with many cities
+bool CvCivicInfo::isStabilityBadForBigEmpire() const
+{
+	return m_bStabilityBadForBigEmpire;
+}
+// Absinthe: end
+
 //Rhye - start 6th
 bool CvCivicInfo::isStabilityVassalBonus() const
 {
@@ -5904,6 +5912,7 @@ void CvCivicInfo::read(FDataStreamBase* stream)
 	stream->Read(&m_bNoForeignCorporations);
 	stream->Read(&m_bStateReligion);
 	stream->Read(&m_bNoNonStateReligionSpread);
+	stream->Read(&m_bStabilityBadForBigEmpire); // Absinthe: AI civic modifier, bad with many cities
 	stream->Read(&m_bStabilityVassalBonus); //Rhye 6th
 	stream->Read(&m_bStabilityFoundBonus); //Rhye 6th
 	stream->Read(&m_bStabilityConquestBonus); //Rhye 6th
@@ -6034,6 +6043,7 @@ void CvCivicInfo::write(FDataStreamBase* stream)
 	stream->Write(m_bNoForeignCorporations);
 	stream->Write(m_bStateReligion);
 	stream->Write(m_bNoNonStateReligionSpread);
+	stream->Write(m_bStabilityBadForBigEmpire); // Absinthe: AI civic modifier, bad with many cities
 	stream->Write(m_bStabilityVassalBonus); //Rhye 6th
 	stream->Write(m_bStabilityFoundBonus); //Rhye 6th
 	stream->Write(m_bStabilityConquestBonus); //Rhye 6th
@@ -6124,6 +6134,7 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetChildXmlValByName(&m_iCivicPercentAnger, "iCivicPercentAnger");
 	pXML->GetChildXmlValByName(&m_bStateReligion, "bStateReligion");
 	pXML->GetChildXmlValByName(&m_bNoNonStateReligionSpread, "bNoNonStateReligionSpread");
+	pXML->GetChildXmlValByName(&m_bStabilityBadForBigEmpire, "bStabilityBadForBigEmpire"); // Absinthe: AI civic modifier, bad with many cities
 	pXML->GetChildXmlValByName(&m_bStabilityVassalBonus, "bStabilityVassalBonus"); //Rhye 6th
 	pXML->GetChildXmlValByName(&m_bStabilityFoundBonus, "bStabilityFoundBonus"); //Rhye 6th
 	pXML->GetChildXmlValByName(&m_bStabilityConquestBonus, "bStabilityConquestBonus"); //Rhye 6th
@@ -8988,12 +8999,10 @@ bool CvBuildingInfo::isVassalUU() const
 {
 	return m_bVassalUU;
 };
-
 bool CvBuildingInfo::isAllowIrrigation() const
 {
 	return m_bAllowIrrigation;
 };
-
 int CvBuildingInfo::getBombardImmuneDefense() const
 {
 	return m_iBombardImmuneDefense;

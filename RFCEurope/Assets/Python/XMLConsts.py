@@ -1,4 +1,4 @@
-# RFCEurope - XML Constants (the other file got crowded)
+# Rhye's and Fall of Civilization: Europe - XML Constants (separated the Consts.py file, as it got crowded)
 
 # Timeline of the mod, all important years to be references by year as opposed to hard-to-follow turn numbers
 #				#Important event						#Spawn						#UHV
@@ -43,6 +43,7 @@ i910AD = 103	# Kingdom of Leon						# Spawn of Spain
 i911AD = 104	# Establishment of the Duchy of Normandy
 i917AD = 106																		# Bulgaria UHV 1
 i920AD = 107	# Kievan Rus - Pecheneg Wars
+i925AD = 108
 i936AD = 112											# Spawn of Denmark
 i940AD = 113
 i955AD = 118	# Basil defeats the Arabs											# Arab UHV 1
@@ -84,6 +85,7 @@ i1101AD =167
 i1107AD =169	# Norwegian Crusade (1107-1110)
 i1110AD =170
 i1120AD =173
+i1124AD =175
 i1136AD =179	# Traditional beginning of the Novgorod Republic
 i1139AD =180											# Spawn of Portugal
 i1147AD =183	# Second Crusade 1147-1149

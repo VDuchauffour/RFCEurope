@@ -680,7 +680,8 @@
 	<ElementType name="iStateReligionUnitProductionModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iStateReligionBuildingProductionModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iStateReligionFreeExperience" content="textOnly" dt:type="int"/>
-	<!-- Rhye - start -->
+	<!-- RFCE - start -->
+	<ElementType name="bStabilityBadForBigEmpire" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bStabilityVassalBonus" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bStabilityFoundBonus" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bStabilityConquestBonus" content="textOnly" dt:type="boolean"/>
@@ -689,7 +690,7 @@
 	<ElementType name="iCivicGoldBuildingClass" content="textOnly"/>
 	<ElementType name="iCivicGoldGoldAmount" content="textOnly" dt:type="int"/>
 	<ElementType name="iUnitProductionBoost" content="textOnly" dt:type="int"/>
-	<!-- Rhye - end -->
+	<!-- RFCE - end -->
 	<ElementType name="Upkeep" content="textOnly"/>
 	<ElementType name="iYield" content="textOnly" dt:type="int"/>
 	<ElementType name="YieldModifiers" content="eltOnly">
@@ -826,7 +827,8 @@
 		<element type="iStateReligionUnitProductionModifier"/>
 		<element type="iStateReligionBuildingProductionModifier"/>
 		<element type="iStateReligionFreeExperience"/>
-		<!-- Rhye - start -->
+		<!-- RFCE - start -->
+		<element type="bStabilityBadForBigEmpire"/>
 		<element type="bStabilityVassalBonus"/>
 		<element type="bStabilityFoundBonus"/>
 		<element type="bStabilityConquestBonus"/>
@@ -835,7 +837,7 @@
 		<element type="iCivicGoldBuildingClass"/>
 		<element type="iCivicGoldGoldAmount"/>
 		<element type="iUnitProductionBoost"/>
-		<!-- Rhye - end -->
+		<!-- RFCE - end -->
 		<element type="YieldModifiers"/>
 		<element type="CapitalYieldModifiers"/>
 		<element type="TradeYieldModifiers"/>

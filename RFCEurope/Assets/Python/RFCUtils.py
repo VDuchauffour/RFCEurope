@@ -1,4 +1,4 @@
-# Rhye's and Fall of Civilization - Utilities
+# Rhye's and Fall of Civilization: Europe - Utilities
 
 from CvPythonExtensions import *
 import CvUtil
@@ -168,13 +168,12 @@ class RFCUtils:
 	# 3Miro: END Utilities
 
 
-	#Plague
+	#Plague, UP
 	def getRandomCity(self, iPlayer):
 		cityList =  self.getCityList(iPlayer)
 		if cityList:
 			return self.getRandomEntry(cityList)
-		else:
-			return -1
+		return -1
 
 	def getRandomCiv( self ):
 		civList = [iCiv for iCiv in range(iNumPlayers) if gc.getPlayer(iCiv).isAlive()]
@@ -446,7 +445,6 @@ class RFCUtils:
 						iNumUnitsInAPlot = tempPlot.getNumUnits()
 						for i in range(iNumUnitsInAPlot):
 							unit = tempPlot.getUnit(0)
-							#print("  3Miro 1 Unit Type and Owner plot ",unit.getID(),unit.getUnitType(),"  ",unit.getOwner(),x,y )
 							unit.setXYOld(x,y)
 						iCiv = iNewOwner
 						if not bRevealedZero:
@@ -459,15 +457,15 @@ class RFCUtils:
 
 
 	#RiseAndFall
-	# Absinthe: similar to the function above, but flips on the extra tiles of the core area (tExceptions)
-	def flipUnitsInCoreExceptions(self, iNewOwner, iOldOwner, bSkipPlotCity, bKillSettlers):
+	# Absinthe: similar to the function above, but flips on a list of plots
+	def flipUnitsInPlots(self, lPlots, iNewOwner, iOldOwner, bSkipPlotCity, bKillSettlers):
 		"""Deletes, recreates units in 28, 0 and moves them to the previous tile.
 		If there are units belonging to others in that plot and the new owner is barbarian, the units aren't recreated.
 		Settlers aren't created.
 		If bSkipPlotCity is True, units in a city won't flip. This is to avoid converting barbarian units that would capture a city before the flip delay"""
-		print ("con.tExceptions[iNewOwner], iOldOwner:", con.tExceptions[iNewOwner], iOldOwner)
-		for tPlot in con.tExceptions[iNewOwner]:
-			#print ("tExceptions tPlot", tPlot)
+		#print ("searched plots", lPlots)
+		for tPlot in lPlots:
+			#print ("searched plots", tPlot)
 			x = tPlot[0]
 			y = tPlot[1]
 			killPlot = gc.getMap().plot(x,y)
@@ -502,7 +500,6 @@ class RFCUtils:
 						iNumUnitsInAPlot = tempPlot.getNumUnits()
 						for i in range(iNumUnitsInAPlot):
 							unit = tempPlot.getUnit(0)
-							#print("  3Miro 1 Unit Type and Owner plot ",unit.getID(),unit.getUnitType(),"  ",unit.getOwner(),x,y )
 							unit.setXYOld(x,y)
 						iCiv = iNewOwner
 						if (bRevealedZero == False):
@@ -1161,6 +1158,7 @@ class RFCUtils:
 			for iReligion in con.tPersecutionOrder[iStateReligion]:
 				if not city.isHolyCityByType(iReligion): # spare holy cities
 					if city.isHasReligion(iReligion):
+						# so this will be remain the iReligion for further calculations
 						break
 
 		# count the number of religious buildings and wonders (for the chance)
@@ -1185,9 +1183,13 @@ class RFCUtils:
 			iChance -= 25
 		# lower chance if the city has the chosen religion's buildings/wonders:
 		iChance -= (len(lReligionBuilding) * 8 + lReligionWonder * 17)		# the wonders have an extra chance reduction (in addition to the first reduction)
+		# bonus for the AI:
+		if self.getHumanID() != iOwner:
+			iChance += 15
 
 		if gc.getGame().getSorenRandNum(100, "purge chance") < iChance:
 		# on successful persecution:
+			print ("Successful persecution for civ:", iOwner, iReligion, (iPlotX, iPlotY), city.getName())
 
 			# remove a single non-state religion and its buildings from the city, count the loot
 			iLootModifier = 3 * city.getPopulation() / city.getReligionCount()
@@ -1233,7 +1235,7 @@ class RFCUtils:
 
 			# Jews may spread to another random city
 			if iReligion == xml.iJudaism:
-				if gc.getGame().getSorenRandNum(100, "judaism spread chance") < 80:
+				if gc.getGame().getSorenRandNum(100, "Judaism spread chance") < 80:
 					tCity = self.selectRandomCity()
 					self.spreadJews(tCity, xml.iJudaism)
 					pSpreadCity = gc.getMap().plot(tCity[0], tCity[1]).getPlotCity()
@@ -1255,6 +1257,7 @@ class RFCUtils:
 			city.changeHurryAngerTimer(city.flatHurryAngerLength())
 
 		else: # on failed persecution:
+			print ("Unsuccessful persecution for civ:", iOwner, iReligion, (iPlotX, iPlotY), city.getName())
 			CyInterface().addMessage(iOwner, False, con.iDuration, localText.getText("TXT_KEY_MESSAGE_INQUISITION_FAIL", (city.getName(), )), "AS2D_SABOTAGE", InterfaceMessageTypes.MESSAGE_TYPE_INFO, pUnit.getButton(), ColorTypes(con.iRed), iPlotX, iPlotY, True, True)
 
 			# persecution countdown for the civ (causes indirect instability - stability.recalcCity)

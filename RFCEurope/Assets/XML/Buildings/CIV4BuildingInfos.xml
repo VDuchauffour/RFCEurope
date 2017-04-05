@@ -335,7 +335,6 @@
 			<ConstructSound/>
 			<BonusHealthChanges/>
 			<BonusHappinessChanges/>
-			<!-- Rhye -->
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_MARBLE</BonusType>
@@ -377,7 +376,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>

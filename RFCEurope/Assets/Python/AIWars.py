@@ -1,4 +1,4 @@
-# Rhye's and Fall of Civilization - AI Wars
+# Rhye's and Fall of Civilization: Europe - AI Wars
 
 from CvPythonExtensions import *
 import CvUtil

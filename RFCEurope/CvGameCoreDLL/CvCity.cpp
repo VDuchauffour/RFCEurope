@@ -1789,8 +1789,9 @@ bool CvCity::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool b
 		return false;
 	}
 
-	// 3MiroProsecutor: Make it so that Prosecutors can only be built in cities with state religion
-	if ( eUnit == UNIT_PROSECUTOR ){
+	// Absinthe: new code for AI persecution - Prosecutors can only be built in cities with state religion
+	if ( eUnit == UNIT_PROSECUTOR )
+	{
 		// Absinthe: Prosecutor availability
 		// (if there is a state religion and the city has the state religion) not true -> no state religion or state religion not present in the city
 		//if ( !( (GET_PLAYER(getOwnerINLINE()).getStateReligion() == NO_RELIGION) || (isHasReligion( GET_PLAYER(getOwnerINLINE()).getStateReligion())) ) ){

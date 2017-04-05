@@ -9656,10 +9656,11 @@ int CvPlayerAI::AI_missionaryValue(CvArea* pArea, ReligionTypes eReligion, Playe
 	{
 		iSpreadInternalValue += 1000;
 	}
-	else
+	// Absinthe: AI should never want to spread non-state religion in it's own cities
+	/*else
 	{
 		iSpreadInternalValue += (500 * getHasReligionCount(eReligion)) / std::max(1, getNumCities());
-	}
+	}*/
 
 	if (kTeam.hasHolyCity(eReligion))
 	{
@@ -9678,7 +9679,9 @@ int CvPlayerAI::AI_missionaryValue(CvArea* pArea, ReligionTypes eReligion, Playe
 	int iOurCitiesHave = 0;
 	int iOurCitiesCount = 0;
 
-	if (NULL == pArea)
+	// Absinthe: we don't want to use area calculations in RFCE, should always want missionaries when there are cities without the state religion
+	//			if it's a far away city - e.g. in the Levant after a Crusade, it should try to transport it
+	/*if (NULL == pArea)
 	{
 		iOurCitiesHave = kTeam.getHasReligionCount(eReligion);
 		iOurCitiesCount = kTeam.getNumCities();
@@ -9687,12 +9690,19 @@ int CvPlayerAI::AI_missionaryValue(CvArea* pArea, ReligionTypes eReligion, Playe
 	{
 		iOurCitiesHave = pArea->countHasReligion(eReligion, getID());
 		iOurCitiesCount = pArea->getCitiesPerPlayer(getID());
-	}
+	}*/
+	// Absinthe: manually calculate cities with the religion instead of getHasReligionCount?
+	iOurCitiesHave = kTeam.getHasReligionCount(eReligion);
+	iOurCitiesCount = kTeam.getNumCities();
 
 	if (iOurCitiesHave < iOurCitiesCount)
 	{
-		iSpreadInternalValue *= 50 + 50 * (iOurCitiesCount - iOurCitiesHave);
-		iSpreadInternalValue /= 100 * iOurCitiesCount;
+		// Absinthe: the goal is to spread even if only one city is without the religion, so make sure to be above the threshold
+		//iSpreadInternalValue *= 50 + 50 * (iOurCitiesCount - iOurCitiesHave);
+		iSpreadInternalValue *= 100 + 100 * (iOurCitiesCount - iOurCitiesHave);
+		// Absinthe: huge vanilla BtS bug, totally messes up values for AI missionary calculations
+		//iSpreadInternalValue /= 100 * iOurCitiesCount;
+		iSpreadInternalValue /= 100;
 	}
 	else
 	{
@@ -9715,7 +9725,9 @@ int CvPlayerAI::AI_missionaryValue(CvArea* pArea, ReligionTypes eReligion, Playe
 						int iCitiesCount = 0;
 						int iCitiesHave = 0;
 						int iMultiplier = AI_isDoStrategy(AI_STRATEGY_MISSIONARY) ? 60 : 25;
-						if (!kLoopPlayer.isNoNonStateReligionSpread() || (kLoopPlayer.getStateReligion() == eReligion))
+						// Absinthe: in RFCE don't spread to civs with a different State Religion
+						//if (!kLoopPlayer.isNoNonStateReligionSpread() || (kLoopPlayer.getStateReligion() == eReligion))
+						if (kLoopPlayer.getStateReligion() == eReligion)
 						{
 							if (NULL == pArea)
 							{
@@ -10304,7 +10316,6 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 			iCorpCount += countCorporations((CorporationTypes)iCorp);
 		}
 		iValue += (-kCivic.getCorporationMaintenanceModifier() * (iHQCount * (25 + getNumCities() * 2) + iCorpCount * 7)) / 25;
-
 	}
 
 	if (kCivic.getCivicPercentAnger() != 0)
@@ -10411,6 +10422,29 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 	// 3MiroCivic: Units Production boost
 	iValue += kCivic.getUnitProductionBoost() * getNumCities() / 4;
 	// 3MiroCivic: end
+
+	// Absinthe: AI civic modifier, bad with many cities - mainly meant for the Merchant Republic civic
+	if (kCivic.isStabilityBadForBigEmpire())
+	{
+		// penalty for each city from the 5th
+		// Venice has additional benefits to the Merchant Republic civic, so it should want it in all cases - but no real issue since it also should stay fairly small
+		if (getNumCities() > 4)
+		{
+			iValue -= ((getNumCities() - 4) * 10);
+		}
+	}
+	// Absinthe: end
+
+	// Absinthe: if an AI civ has a civic as their UP, it should almost always want it (Venice - Merchant Republic, Novgorod - Bureaucracy, Prussia - Theocracy)
+	int iUPC = UniquePowers[getID() * UP_TOTAL_NUM + UP_ENABLE_CIVIC];
+	if ( iUPC > -1 )
+	{
+		if (( eCivic == iUPC % 100 ) || ( eCivic == (iUPC/100) % 100 ) || ( eCivic == (iUPC/10000) % 100 ) || ( eCivic == (iUPC/1000000) % 100 ) || ( eCivic == (iUPC/100000000) % 100 ))
+		{
+			iValue += (getNumCities() * 10);
+		}
+	}
+	// Absinthe: end
 
 	for (iI = 0; iI < NUM_YIELD_TYPES; iI++)
 	{

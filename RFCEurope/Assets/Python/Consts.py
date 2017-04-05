@@ -1,11 +1,10 @@
-# Rhye's and Fall of Civilization - Constants
-
-# globals
+# Rhye's and Fall of Civilization: Europe - Constants
 
 from CvPythonExtensions import *
-gc = CyGlobalContext()
-
 import XMLConsts as xml
+
+# globals
+gc = CyGlobalContext()
 
 # 3Miro: map size entered here
 iMapMaxX = 100
@@ -526,7 +525,7 @@ tStabilityBonusAI = (
 4, #Arabia
 3, #Bulgaria
 2, #Cordoba
-0, #Venice
+3, #Venice
 0, #Burgundy
 0, #Germany
 3, #Novgorod
@@ -630,7 +629,7 @@ tExceptions = ( #Unfortunate name. These are extra plots used in spawn.
 ((60,33),(60,34),(60,35)), #Venice
 ((49,39),(49,40),(49,41),(49,42)), #Burgundy
 (), #Germany
-((78,60), (78,59)), #Novgorod
+((78,59), (78,60)), #Novgorod
 (), #Norway
 (), #Kiev
 (), #Hungary
@@ -1286,7 +1285,7 @@ tReligiousTolerance = (
 40, #Venezia
 20, #Burgundy
 20, #Germany
-40, #Novgorod
+60, #Novgorod
 60, #Norway
 40, #Kiev
 60, #Hungary
@@ -1295,15 +1294,15 @@ tReligiousTolerance = (
 40, #Scotland
 80, #Poland
 20, #Genoa
-80, #Morocco
+60, #Morocco
 40, #England
-20, #Portugal
+40, #Portugal
 60, #Aragon
 60, #Sweden
-40, #Prussia
+20, #Prussia
 80, #Lithuania
 20, #Austria
-20, #Turkey
+80, #Turkey
 40, #Moscow
 40, #Dutch
 20, #Pope

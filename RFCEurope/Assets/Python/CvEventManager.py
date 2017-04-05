@@ -567,7 +567,7 @@ class CvEventManager:
 			iUnit = xml.iProphet + iGP
 			pNewUnit = pPlayer.initUnit(iUnit, iX, iY, UnitAITypes(gc.getUnitInfo(iUnit).getDefaultUnitAIType()), DirectionTypes.NO_DIRECTION)
 			if utils.isActive(utils.getHumanID()):
-				szText = localText.getText("TXT_KEY_LEANING_TOWER", ()) + " " + gc.getUnitInfo(iUnit).getDescription()
+				szText = localText.getText("TXT_KEY_LEANING_TOWER_EFFECT", ()) + " " + gc.getUnitInfo(iUnit).getDescription()
 				CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, szText, "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, "", ColorTypes(con.iLightBlue), -1, -1, True, True)
 		# Absinthe: Leaning Tower end
 
@@ -647,7 +647,8 @@ class CvEventManager:
 		player = PyPlayer(city.getOwner())
 
 		# Topkapi Palace start
-		pPlayer = gc.getPlayer(unit.getOwner())
+		iPlayer = unit.getOwner()
+		pPlayer = gc.getPlayer(iPlayer)
 		iUnitType = unit.getUnitType()
 		iTeam = pPlayer.getTeam()
 		pTeam = gc.getTeam(iTeam)
@@ -663,12 +664,20 @@ class CvEventManager:
 						if iUniqueUnit != iDefaultUnit:
 							l_vassalUU.append(iUniqueUnit)
 			if l_vassalUU: # Only convert if vassal UU is possible
-				iPlayerUU = utils.getUniqueUnit(unit.getOwner(), iUnitType)
+				iPlayerUU = utils.getUniqueUnit(iPlayer, iUnitType)
 				if iPlayerUU != iDefaultUnit:
+					# double chance for the original UU
+					l_vassalUU.append(iPlayerUU)
 					l_vassalUU.append(iPlayerUU)
 				iUnit = utils.getRandomEntry(l_vassalUU)
 				pNewUnit = pPlayer.initUnit( iUnit, unit.getX(), unit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION )
 				pNewUnit.convert(unit)
+				# message if it was changed to a vassal UU
+				if iUnit != iPlayerUU and iUnit != iDefaultUnit:
+					iHuman = utils.getHumanID()
+					if iHuman == iPlayer:
+						szText = localText.getText("TXT_KEY_TOPKAPI_PALACE_EFFECT", (gc.getUnitInfo(iUnit).getDescription(), gc.getUnitInfo(iPlayerUU).getDescription(), ))
+						CyInterface().addMessage(iHuman, False, con.iDuration, szText, "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getUnitInfo(iUnit).getButton(), ColorTypes(con.iLightBlue), city.getX(), city.getY(), True, True)
 		# Topkapi Palace end
 
 		CvAdvisorUtils.unitBuiltFeats(city, unit)

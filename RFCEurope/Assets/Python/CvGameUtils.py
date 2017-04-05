@@ -271,62 +271,78 @@ class CvGameUtils:
 		return False
 
 
+	# Absinthe: start Inquisitor AI proper (based on SoI)
 	def AI_unitUpdate(self,argsList):
 		pUnit = argsList[0]
-		# Absinthe: start Inquisitor AI from Charlemagne (based on SoI)
 		iOwner = pUnit.getOwner()
 		AIpPlayer = gc.getPlayer(iOwner)
 		if not AIpPlayer.isNone() and not AIpPlayer.isBarbarian() and not AIpPlayer.isHuman() and AIpPlayer.isAlive():
 			if pUnit.getUnitType() == xml.iProsecutor:
 				return self.doInquisitorCore_AI(pUnit)
-		# Absinthe: end
 		return False
 
 
-	# Absinthe: start Inquisitor AI proper (based on SoI)
+	# Absinthe: Inquisitor AI, this is also called from the .dll, CvCityAI::AI_chooseUnit
+	def isHasPurgeTarget(self, iCiv, bReportCity):
+		iStateReligion = gc.getPlayer(iCiv).getStateReligion()
+		iTolerance = con.tReligiousTolerance[iCiv]
+		apCityList = PyPlayer(iCiv).getCityList()
+		# Checks whether the AI controls a city with a target religion that is not the State Religion, not a Holy City, and doesn't have religious wonders in it
+		for iReligion in con.tPersecutionOrder[iStateReligion]:
+			bCanPurge = False
+			# If the civ's tolerance > 70 it won't purge any religions
+			# If > 50 (but < 70) it will only purge Islam with a Christian State Religion, and all Christian Religions with Islam as State Religion
+			# If > 30 (but < 50) it will also purge Judaism
+			# If < 30 it will purge all but the State Religion (so the other 2 Christian Religions as well)
+			if iTolerance < 70:
+				if iReligion == xml.iIslam:
+					bCanPurge = True
+				elif iReligion == xml.iCatholicism or iReligion == xml.iOrthodoxy or iReligion == xml.iProtestantism:
+					if iStateReligion == xml.iIslam:
+						bCanPurge = True
+			if not bCanPurge and iTolerance < 50:
+				if iReligion == xml.iJudaism:
+					bCanPurge = True
+			if not bCanPurge and iTolerance < 30:
+				bCanPurge = True
+
+			if bCanPurge:
+				for pCity in apCityList:
+					if pCity.GetCy().isHasReligion(iReligion) and not pCity.GetCy().isHolyCityByType(iReligion):
+						# do not purge religions with an associated wonder in the city
+						bWonder = False
+						for iBuilding in xrange(gc.getNumBuildingInfos()):
+							if pCity.GetCy().getNumRealBuilding(iBuilding):
+								BuildingInfo = gc.getBuildingInfo(iBuilding)
+								if BuildingInfo.getPrereqReligion() == iReligion:
+									if isWorldWonderClass(BuildingInfo.getBuildingClassType()) or isNationalWonderClass(BuildingInfo.getBuildingClassType()):
+										bWonder = True
+										break # end the loop if found one
+						if not bWonder:
+							# for the python code below, we need to pass the city too
+							if bReportCity:
+								print ("isHasPurgeTarget we return pCity, bReportCity:", bReportCity)
+								return pCity
+							# for the AI function in the .dll we only need to know whether such city exist
+							else:
+								print ("isHasPurgeTarget we return True, bReportCity:", bReportCity)
+								return True
+		print ("isHasPurgeTarget we return False, bReportCity:", bReportCity)
+		return False
+
+
 	def doInquisitorCore_AI(self, pUnit):
 
 		iOwner = pUnit.getOwner()
-		iStateReligion = gc.getPlayer(iOwner).getStateReligion()
-		iTolerance = con.tReligiousTolerance[iOwner]
-		apCityList = PyPlayer(iOwner).getCityList()
-
-		# Looks to see if the AI controls a city with a religion that is not the State Religion, not a Holy City, and do not has religious wonders in it
-		for iReligion in con.tPersecutionOrder[iStateReligion]:
-			for pCity in apCityList:
-				if pCity.GetCy().isHasReligion(iReligion) and not pCity.GetCy().isHolyCityByType(iReligion):
-
-					bWonder = false
-					for iBuilding in xrange(gc.getNumBuildingInfos()):
-						if pCity.GetCy().getNumRealBuilding(iBuilding):
-							BuildingInfo = gc.getBuildingInfo(iBuilding)
-							if BuildingInfo.getPrereqReligion() == iReligion:
-								if isWorldWonderClass(BuildingInfo.getBuildingClassType()) or isNationalWonderClass(BuildingInfo.getBuildingClassType()):
-									bWonder = true
-									break
-
-					if bWonder: continue # skip the code below, and continue with the next city in the loop
-
-					bFound = False
-					# If the civ's tolerance > 70 it won't purge any religions
-					# If > 50 (but < 70) it will only purge Islam with a Christian State Religion, and all Christian Religions with Islam as State Religion
-					# If > 30 (but < 50) it will also purge Judaism
-					# If < 30 it will purge all but the State Religion (so the other 2 Christian Religions as well)
-					if iTolerance < 70:
-						if iReligion == xml.iIslam: bFound = True
-						elif iReligion == xml.iCatholicism or iReligion == xml.iOrthodoxy or iReligion == xml.iProtestantism:
-							if iStateReligion != xml.iCatholicism and iStateReligion != xml.iOrthodoxy and iStateReligion != xml.iProtestantism:
-								bFound = True
-					if iTolerance < 50:
-						if iReligion == xml.iJudaism: bFound = True
-					if iTolerance < 30:
-						bFound = True
-
-					if bFound:
-						city = pCity.GetCy()
-						if pUnit.generatePath(city.plot(), 0, False, None):
-							self.doInquisitorMove(pUnit, city)
-							return True
+		pCity = self.isHasPurgeTarget(iOwner, True)
+		if pCity:
+			city = pCity.GetCy()
+			print ("isHasPurgeTarget pCity, city:", pCity, city)
+			# if we can generate a valid path to the city
+			if pUnit.generatePath(city.plot(), 0, False, None):
+				print ("isHasPurgeTarget city path valid")
+				self.doInquisitorMove(pUnit, city)
+				return True
 		return False
 
 
@@ -335,7 +351,8 @@ class CvGameUtils:
 			pUnit.getGroup().pushMission(MissionTypes.MISSION_MOVE_TO, pCity.getX(), pCity.getY(), 0, False, True, MissionAITypes.NO_MISSIONAI, pUnit.plot(), pUnit)
 		else:
 			utils.prosecute(pCity.getX(), pCity.getY(), pUnit.getID())
-	# Absinthe: end
+			print ("AI prosecution in city", pCity.getX(), pCity.getY())
+	# Absinthe: end Inquisitor AI
 
 
 	def AI_doWar(self,argsList):

@@ -56,6 +56,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
@@ -130,6 +131,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
@@ -209,6 +211,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
@@ -293,6 +296,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
@@ -381,6 +385,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>1</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
@@ -462,6 +467,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
@@ -536,6 +542,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
@@ -610,6 +617,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
@@ -688,6 +696,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
@@ -775,6 +784,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
@@ -852,6 +862,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
@@ -926,6 +937,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
@@ -1009,6 +1021,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
@@ -1083,6 +1096,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
@@ -1203,6 +1217,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
@@ -1276,6 +1291,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
@@ -1350,6 +1366,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
@@ -1433,6 +1450,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
@@ -1507,6 +1525,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
@@ -1585,6 +1604,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
@@ -1676,6 +1696,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
@@ -1755,6 +1776,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>25</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
@@ -1829,6 +1851,7 @@
 			<iStateReligionUnitProductionModifier>25</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>2</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
@@ -1903,6 +1926,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
@@ -1982,6 +2006,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
@@ -2060,6 +2085,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
@@ -2134,6 +2160,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>1</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
@@ -2208,6 +2235,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>1</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
@@ -2281,6 +2309,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>1</bStabilityConquestBonus>
@@ -2355,6 +2384,7 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
+			<bStabilityBadForBigEmpire>0</bStabilityBadForBigEmpire>
 			<bStabilityVassalBonus>0</bStabilityVassalBonus>
 			<bStabilityFoundBonus>0</bStabilityFoundBonus>
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>

@@ -1367,6 +1367,7 @@ public:
 	bool isNoForeignCorporations() const;				// Exposed to Python
 	bool isStateReligion() const;				// Exposed to Python
 	bool isNoNonStateReligionSpread() const;				// Exposed to Python
+	bool isStabilityBadForBigEmpire() const;				// Absinthe: AI civic modifier, bad with many cities
 	bool isStabilityVassalBonus() const;				//Rhye 6th
 	bool isStabilityFoundBonus() const;				//Rhye 6th
 	bool isStabilityConquestBonus() const;				//Rhye 6th
@@ -1465,6 +1466,7 @@ protected:
 	bool m_bNoForeignCorporations;
 	bool m_bStateReligion;
 	bool m_bNoNonStateReligionSpread;
+	bool m_bStabilityBadForBigEmpire; // Absinthe: AI civic modifier, bad with many cities
 	bool m_bStabilityVassalBonus; //Rhye 6th
 	bool m_bStabilityFoundBonus; //Rhye 6th
 	bool m_bStabilityConquestBonus; //Rhye 6th

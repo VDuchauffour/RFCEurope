@@ -1,4 +1,4 @@
-# Rhye's and Fall of Civilization - City naming and renaming management
+# Rhye's and Fall of Civilization: Europe - City naming and renaming management
 
 from CvPythonExtensions import *
 import CvUtil

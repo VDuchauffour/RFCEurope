@@ -1,4 +1,4 @@
-# Rhye's and Fall of Civilization - Stability
+# Rhye's and Fall of Civilization: Europe - Stability
 
 from CvPythonExtensions import *
 import CvUtil

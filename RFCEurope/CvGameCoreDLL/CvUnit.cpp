@@ -576,7 +576,9 @@ void CvUnit::kill(bool bDelay, PlayerTypes ePlayer)
 		{
 			for (int iI = 0; iI < MAX_PLAYERS; iI++)
 			{
-				if (GET_PLAYER((PlayerTypes)iI).isAlive())
+				// Absinthe: only if the player is also alive (no message in autoplay)
+				//if (GET_PLAYER((PlayerTypes)iI).isAlive())
+				if ((GET_PLAYER((PlayerTypes)iI).isAlive()) && (GC.getGameINLINE().getGameTurn() >= startingTurn[GC.getGameINLINE().getActivePlayer()]))
 				{
 					szBuffer = gDLL->getText("TXT_KEY_MISC_GENERAL_KILLED", getNameKey());
 					gDLL->getInterfaceIFace()->addHumanMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_MAJOR_EVENT);
@@ -7155,7 +7157,7 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 					CvArea* pWaterArea = NULL;
 					if (!bCoastalOnly || ((pWaterArea = pLoopCity->waterArea()) != NULL && !pWaterArea->isLake()))
 					{
-						// can this city tran this unit?
+						// can this city train this unit?
 						if (pLoopCity->canTrain(eUnit, false, false, true))
 						{
 							// if we do not care about distance, then the first match will do

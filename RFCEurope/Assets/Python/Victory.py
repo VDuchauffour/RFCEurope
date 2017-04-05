@@ -1,4 +1,4 @@
-# Rhye's and Fall of Civilizations: Europe - Historical Victory Goals
+# Rhye's and Fall of Civilization: Europe - Historical Victory Goals
 
 from CvPythonExtensions import *
 import CvUtil

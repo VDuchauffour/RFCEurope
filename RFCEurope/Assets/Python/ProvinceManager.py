@@ -1,4 +1,5 @@
-# RFC Europe, balancing modifiers are placed here
+# RFC Europe - Province manager
+
 from CvPythonExtensions import *
 import Consts as con
 import XMLConsts as xml

@@ -1,6 +1,5 @@
-## This file is part of Rhye's and Fall of Civilization.
-## This file was originally taken from CivPath mod.
-## modified by eN
+# Rhye's and Fall of Civilization: Europe - Event manager
+
 import CvEventManager
 import CvRFCEventHandler
 import RiseAndFall
