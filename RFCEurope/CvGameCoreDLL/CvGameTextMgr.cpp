@@ -3931,14 +3931,16 @@ void CvGameTextMgr::parseCivInfos(CvWStringBuffer &szInfoText, CivilizationTypes
 
 		if (bDawnOfMan)
 		{
-			// 3Miro: Loading time
+			// Absinthe: Loading time
 			szText = gDLL->getText("TXT_KEY_LOADING_TIME") + " ";
-			// 3Miro
-			//if (GET_PLAYER((PlayerTypes)EGYPT).isPlayable()) //late start condition
-				//szText = szText + loadingTime[eCivilization];
-			szText = szText + GC.getCivilizationInfo(eCivilization).getLoadingTime();
-			//else
-			//	szText = szText + loadingTime600AD[eCivilization];
+			if (getScenario() == SCENARIO_1200AD)
+			{
+				szText = szText + GC.getCivilizationInfo(eCivilization).getLoadingTime1200();
+			}
+			else
+			{
+				szText = szText + GC.getCivilizationInfo(eCivilization).getLoadingTime500();
+			}
 			szText += " " + gDLL->getText("TXT_KEY_MINUTES");
 			szText += NEWLINE;
 			swprintf(szBuffer, L"%s", szText.GetCString());
@@ -7026,14 +7028,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, BuildingTypes eBu
 				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_TEAM_WONDER_LEFT", (GC.getBuildingClassInfo((BuildingClassTypes) kBuilding.getBuildingClassType()).getMaxTeamInstances() - GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getBuildingClassCountPlusMaking((BuildingClassTypes)(kBuilding.getBuildingClassType())))));
 			}
 		}
-		//Rhye - start (embassy)
-		// 3Miro: remove the embassy
-		/*if (eBuilding >= NUM_BUILDINGS_PLAGUE) {
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_EMBASSY_ABILITY"));
-		}
-		else {*/
-			//Rhye - end (embassy)
+
 		if (isNationalWonderClass((BuildingClassTypes)(kBuilding.getBuildingClassType())))
 		{
 			if (pCity == NULL || ePlayer == NO_PLAYER)
@@ -7047,7 +7042,6 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, BuildingTypes eBu
 				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_NATIONAL_WONDER_LEFT", (GC.getBuildingClassInfo((BuildingClassTypes) kBuilding.getBuildingClassType()).getMaxPlayerInstances() - GET_PLAYER(ePlayer).getBuildingClassCountPlusMaking((BuildingClassTypes)(kBuilding.getBuildingClassType())))));
 			}
 		}
-		//} //Rhye (embassy)
 	}
 
 	if (kBuilding.getGlobalReligionCommerce() != NO_RELIGION)
@@ -12826,13 +12820,14 @@ void CvGameTextMgr::buildCityBillboardIconString( CvWStringBuffer& szBuffer, CvC
 	}
 
 	// Absinthe: Plague icon on the city billboard (for all visible cities)
-	if (pCity->isVisible(GC.getGameINLINE().getActiveTeam(), true))
+	//			only add the isVisible check if you want it to be hidden for cities under fog of war
+	//if (pCity->isVisible(GC.getGameINLINE().getActiveTeam(), true))
+	//{
+	if (pCity->isHasRealBuilding((BuildingTypes)BUILDING_PLAGUE))
 	{
-		if (pCity->isHasRealBuilding((BuildingTypes)BUILDING_PLAGUE))
-		{
-			szBuffer.append(CvWString::format(L"%c", gDLL->getSymbolID(PLAGUE_CHAR)));
-		}
+		szBuffer.append(CvWString::format(L"%c", gDLL->getSymbolID(PLAGUE_CHAR)));
 	}
+	//}
 	// Absinthe: end
 
 	// religion icons

@@ -1,11 +1,183 @@
 ﻿
+<Hungary>
+Vassal of Byzantium, controls Pannonia province: Exarchate of Pannonia
+Vassal of Byzantium: Exarchate of Sirmium
+Vassal of France/Burgundy: Duchy of Hungary
+Vassal of Arabia/Cordoba/Morocco: Emirate of Hungary
+Vassal of Castile/Aragon: Viceroyalty of Hungary
+Vassal of Norway/Denmark/Sweden: Jarldom of Hungary
+Vassal of Venice/Genoa: Colony of Hungary
+Vassal of Novgorod/Kiev: Principality of Hungary
+Vassal of Muscovy: Guberniya of Hungary
+Vassal of Germany/Prussia: March of Hungary
+Vassal of England: Earldom of Hungary
+Vassal of Scotland: Mormaerdom of Hungary
+Vassal of Austria: Royal Hungary
+Vassal of Ottomans, controls Transylvania province: Principality of Transylvania
+Vassal of Ottomans, controls Pannonia province: Eyalet of Budin
+Vassal of Ottomans: Eyalet of Hungary
+Vassal of Poland/Lithuania: Voivodeship of Hungary
+Vassal of Bulgaria: Zhupa of Hungary
+Generic Vassal: Province of Hungary
+
+Merchant Republic civic, Islam State Religion: Islamic Republic of Hungary
+Merchant Republic civic: Republic of Hungary
+Islam State Religion: Sultanate of Hungary
+At least 2 unstable provinces: Hungarian Empire
+At least 6 ok or unstable provinces: Hungarian Empire
+After 1001 (turn 133): Kingdom of Hungary
+Any Christian State Religion: Kingdom of Hungary
+Default: Principality of Hungary
+Initial: Magyar Peoples
+
+<Byzantium>
+Vassal of France/Burgundy, controls Constantinople province: Duchy of Constantinople
+Vassal of France: Frankokratia
+Vassal of Burgundy: Duchy of Greece
+Vassal of Arabia/Cordoba/Morocco: Emirate of Rumiyah
+Vassal of Castile/Aragon, controls Thessaly province: Duchies of Athens and Neopatria
+Vassal of Castile/Aragon: Duchy of Neopatria
+Vassal of Norway/Denmark/Sweden, controls Constantinople province: Varangian Roman Empire
+Vassal of Norway/Denmark/Sweden: Varangian Roman States
+Vassal of Venice/Genoa, controls Constantinople province: Latin Empire
+Vassal of Venice, controls Morea province, not Islam State Religion: Kingdom of Morea
+Vassal of Venice: Venetokratia
+Vassal of Genoa: Colony of Greece
+Vassal of Novgorod/Kiev, controls Constantinople province: Varangian Tsargrad
+Vassal of Novgorod/Kiev: Principality of Greece
+Vassal of Muscovy, controls Constantinople province: Guberniya of Tsargrad
+Vassal of Muscovy: Greek Governorate
+Vassal of Germany/Prussia, controls Constantinople province: Empire of the Greeks
+Vassal of Germany/Prussia: Eastern Roman States
+Vassal of England: Earldom of Greece
+Vassal of Scotland: Mormaerdom of Greece
+Vassal of Hungary: Banate of Greece
+Vassal of Austria: Habsburg Greek States
+Vassal of Ottomans: Eyalet of Rumelia
+Vassal of Poland/Lithuania: Voivodeship of Greece
+Vassal of Bulgaria: Zhupa of Greece
+Generic Vassal, controls Constantinople province: Province of Byzantium
+Generic Vassal: Province of Greece
+
+Merchant Republic civic, Islam State Religion: Islamic Roman Republic
+Merchant Republic civic: Second Roman Republic
+Islam State Religion: Islamic Byzantine Empire
+Controls Constantinople province: Byzantine Empire
+At least 7 provinces: Eastern Roman Empire
+Default: Eastern Roman States
+Initial: Byzantine Empire
+
+<France>
+Vassal of Byzantium: Exarchate of Gallia
+Vassal of Arabia: Emirate of Frangistan
+Vassal of Cordoba/Morocco: Emirate of Arbuna
+Vassal of Castile: Viceroyalty of France
+Vassal of Aragon: County of Toulouse
+Vassal of Norway/Denmark/Sweden: Duchy of Normandy
+Vassal of Venice/Genoa: Colony of France
+Vassal of Novgorod/Kiev: Principality of France
+Vassal of Muscovy: Guberniya of France
+Vassal of Burgundy/Germany/Prussia: Western Francia
+Vassal of England, controls Aquitaine province: Duchy of Aquitaine
+Vassal of England: Earldom of France
+Vassal of Scotland: Mormaerdom of France
+Vassal of Hungary: Banate of France
+Vassal of Austria: Habsburg France
+Vassal of Ottomans: Eyalet of Frangistan
+Vassal of Poland/Lithuania: Voivodeship of France
+Vassal of Bulgaria: Zhupa of France
+Generic Vassal: Province of France
+
+Master of Burgundy and Germany, Merchant Republic civic, Islam State Religion: Western Islamic Republic
+Merchant Republic civic, Islam State Religion: French Islamic Republic
+Master of Burgundy and Germany, Merchant Republic civic: Western Republic
+Master of Burgundy and Germany, Islam State Religion: Western Sultanate
+Merchant Republic civic: French Republic
+Islam State Religion: Sultanate of France
+Master of Burgundy and Germany: Western Empire
+
+At least 4 unstable provinces, after 843 (turn 86): French Empire
+At least 7 ok or unstable provinces, after 843 (turn 86): French Empire
+At least 2 unstable provinces, after 987 (turn 129): Kingdom of France
+At least 5 ok or unstable provinces, after 987 (turn 129): Kingdom of France
+At least 2 unstable provinces, after 843 (turn 86): Kingdom of West Francia
+At least 5 ok or unstable provinces, after 843 (turn 86): Kingdom of West Francia
+At least 2 unstable provinces: Frankish Empire
+At least 5 ok or unstable provinces: Frankish Empire
+After 987 (turn 129): Kingdom of France
+After 843 (turn 86): Kingdom of West Francia
+Default: Kingdom of the Franks
+Initial: Burgundian Peoples
+
+<Burgundy>
+Vassal of Byzantium: Exarchate of Burgundia
+Vassal of France: Duchy of Bourgogne
+Vassal of Arabia/Cordoba/Morocco: Emirate of Burgundy
+Vassal of Castile: Viceroyalty of Burgundy
+Vassal of Aragon: County of Provence
+Vassal of Norway/Denmark/Sweden: Jarldom of Burgundaholmr
+Vassal of Venice/Genoa: Colony of Burgundy
+Vassal of Novgorod/Kiev: Principality of Burgundy
+Vassal of Muscovy: Guberniya of Burgundy
+Vassal of Germany/Prussia, after 1512 (turn 306): Burgundian Circle
+Vassal of Germany/Prussia, controls Provence province: Kingdom of Arles
+Vassal of Germany/Prussia: Duchy of Lothringen
+Vassal of England: Earldom of Burgundy
+Vassal of Scotland: Mormaerdom of Burgundy
+Vassal of Hungary: Banate of Burgundy
+Vassal of Austria: Free County of Burgundy
+Vassal of Ottomans: Eyalet of Burgonya
+Vassal of Poland/Lithuania: Voivodeship of Burgundy
+Vassal of Bulgaria: Zhupa of Burgundy
+Generic Vassal: Province of Burgundy
+
+Merchant Republic civic, Islam State Religion: Islamic Republic of Burgundy
+Merchant Republic civic: Burgundian Republic
+Islam State Religion: Sultanate of Burgundy
+At least 3 unstable provinces: Burgundian Empire
+At least 6 ok or unstable provinces: Burgundian Empire
+At least 4 provinces, after 925 (turn 108): Kingdom of Burgundy
+After 925 (turn 108): Duchy of Burgundy
+Default: Kingdom of Middle Francia
+Initial: Burgundian Peoples
+
+<Bulgaria>
+Vassal of Byzantium, holding Moesia: Theme of Paristrion
+Vassal of Byzantium: Theme of Bulgaria
+Vassal of France/Burgundy: Duchy of Bulgaria
+Vassal of Arabia/Cordoba/Morocco: Emirate of Bulgaria
+Vassal of Castile/Aragon: Viceroyalty of Bulgaria
+Vassal of Norway/Denmark/Sweden: Varangian Bulgaria
+Vassal of Venice/Genoa: Colony of Bulgaria
+Vassal of Novgorod/Kiev: Principality of Bulgaria
+Vassal of Muscovy: Guberniya of Bulgaria
+Vassal of Germany/Prussia: Bulgarian March
+Vassal of England: Earldom of Bulgaria
+Vassal of Scotland: Mormaerdom of Bulgaria
+Vassal of Hungary: Banate of Vidin
+Vassal of Austria: Habsburg Bulgaria
+Vassal of Ottomans: Eyalet of Silistra
+Vassal of Poland/Lithuania: Voivodeship of Bulgaria
+Generic Vassal: Province of Bulgaria
+
+Merchant Republic civic, Islam State Religion: Islamic Republic of Bulgaria
+Merchant Republic civic: Republic of Bulgaria
+Islam State Religion: Sultanate of Bulgaria
+At least 2 unstable provinces, respawned: Second Bulgarian Empire
+At least 2 unstable provinces, after 1050 (turn 150): Second Bulgarian Empire
+At least 2 unstable provinces: Bulgarian Empire
+Orthodox State Religion: Bulgarian Tsardom
+Catholic/Protestant State Religion: Bulgarian Kingdom
+Default: Bulgarian Khanate
+Initial: Bulgar Peoples
+
 <Cordoba>
 Vassal of Byzantium: Exarchate of Andalusia
 Vassal of France/Burgundy: Duchy of Andalusia
 Vassal of Arabia/Morocco: Emirate of Cordoba
 Vassal of Castile/Aragon/Portugal, Islam state religion: Emirate of Granada
 Vassal of Castile/Aragon/Portugal: Kingdom of Granada
-Vassal of Denmark/Norway/Sweden: Jarldom of Andalusia
+Vassal of Norway/Denmark/Sweden: Jarldom of Andalusia
 Vassal of Venice/Genoa: Colony of Andalusia
 Vassal of Novgorod/Kiev: Principality of Andalusia
 Vassal of Muscovy: Guberniya of Andalusia
@@ -24,7 +196,7 @@ Merchant Republic civic: Andalusian Republic
 Islam State Religion, after 1238 (turn 213): Sultanate of Al-Andalus
 Islam State Religion, after 929 (turn 110): Caliphate of Cordoba
 Islam State Religion: Emirate of Cordoba
-Any Christian state religion: Kingdom of Andalusia
+Any Christian State Religion: Kingdom of Andalusia
 Default: Duchy of Andalusia
 Initial: Andalusian Peoples
 
@@ -87,7 +259,7 @@ Initial: Maghrebi Peoples
 <Castile>
 Vassal of Byzantium: Exarchate of Hispania
 Vassal of France/Burgundy: Duchy of Leon
-Vassal of Arabia/Morocco, holds Toledo: Emirate of Tulaytulah
+Vassal of Arabia/Morocco, controls Toledo province: Emirate of Tulaytulah
 Vassal of Arabia/Morocco: Emirate of al-Ispanya
 Vassal of Cordoba: Emirate of al-Tagr al-Awsat
 Vassal of Aragon/Portugal: County of Castile
@@ -286,7 +458,7 @@ Vassal of Byzantium: Exarchate of Suedia
 Vassal of France/Burgundy: Duchy of Sweden
 Vassal of Arabia/Cordoba/Morocco: Emirate of Sweden
 Vassal of Castile/Aragon: Viceroyalty of Sweden
-Vassal of Denmark/Norway: Jarldom of Sweden
+Vassal of Norway/Denmark: Jarldom of Sweden
 Vassal of Venice/Genoa: Colony of Sweden
 Vassal of Novgorod/Kiev: Principality of Sweden
 Vassal of Muscovy: Guberniya of Sweden
@@ -319,8 +491,8 @@ Vassal of Byzantium: Exarchate of Nemogardas
 Vassal of France/Burgundy: Duchy of Novgorod
 Vassal of Arabs/Cordoba/Morocco: Emirate of Salawiya
 Vassal of Castile/Aragon: Viceroyalty of Novgorod
-Vassal of Denmark/Norway, at least 4 provinces: Jarldom of Garðaríki
-Vassal of Denmark/Norway: Jarldom of Holmgarðr
+Vassal of Norway/Denmark, at least 4 provinces: Jarldom of Garðaríki
+Vassal of Norway/Denmark: Jarldom of Holmgarðr
 Vassal of Sweden: Jarldom of Ingria
 Vassal of Venice/Genoa: Colony of Novgorod
 Vassal of Kiev: Novgorod Volost'
@@ -351,7 +523,7 @@ Vassal of Byzantium: Exarchate of Ruthenia
 Vassal of France/Burgundy: Duchy of Kiev
 Vassal of Arabs/Cordoba/Morocco: Emirate of Kuyavia
 Vassal of Castile/Aragon: Viceroyalty of Kiev
-Vassal of Denmark/Norway/Sweden: Jarldom of Kœnugarðr
+Vassal of Norway/Denmark/Sweden: Jarldom of Kœnugarðr
 Vassal of Venice/Genoa: Colony of Kiev
 Vassal of Novgorod: Kiev Volost'
 Vassal of Muscovy, at least 4 provinces: Cossack Hetmanate
@@ -382,7 +554,7 @@ Vassal of Byzantium: Exarchate of Moscovia
 Vassal of France/Burgundy: Duchy of Muscovy
 Vassal of Arabs/Cordoba/Morocco: Emirate of Artaniya
 Vassal of Castile/Aragon: Viceroyalty of Moscow
-Vassal of Denmark/Norway/Sweden: Jarldom of Móramar
+Vassal of Norway/Denmark/Sweden: Jarldom of Móramar
 Vassal of Venice/Genoa: Colony of Moscow
 Vassal of Novgorod/Kiev: Muscovy Volost'
 Vassal of Germany/Prussia: March of Moscow
@@ -411,7 +583,9 @@ Vassal of France/Burgundy: Duchy of La Manche
 Vassal of Arabia/Cordoba/Morocco: Emirate of Ingeltra
 Vassal of Castile/Aragon: Viceroyalty of England
 Vassal of Denmark: Jarldom of the Danelaw
-Vassal of Norway/Sweden: Jarldom of England
+Vassal of Norway, controls London province: Jarldom of England
+Vassal of Norway: Jarldom of Jórvík
+Vassal of Sweden: Jarldom of England
 Vassal of Venice/Genoa: Colony of England
 Vassal of Novgorod/Kiev: Principality of England
 Vassal of Muscovy: Guberniya of England
@@ -441,9 +615,9 @@ Initial: Anglo-Saxon Peoples
 <Scotland>
 Vassal of Byzantium: Exarchate of Caledonia
 Vassal of France/Burgundy: Duchy of Ecosse
-Vassal of Arabia/Cordoba/Morocco: Emirate of Scotland
+Vassal of Arabia/Cordoba/Morocco: Emirate of Asktalanda
 Vassal of Castile/Aragon: Viceroyalty of Scotland
-Vassal of Denmark/Norway/Sweden: Jarldom of the Isles
+Vassal of Norway/Denmark/Sweden: Jarldom of the Isles
 Vassal of Venice/Genoa: Colony of Scotland
 Vassal of Novgorod/Kiev: Principality of Scotland
 Vassal of Muscovy: Guberniya of Scotland
@@ -460,8 +634,9 @@ Merchant Republic civic, Islam State Religion: Islamic Republic of Scotland
 Merchant Republic civic: Commonwealth of Scotland
 Islam State Religion: Sultanate of Scotland
 Controls Bretagne province, at least 5 provinces: Celtic Union
-Controls London province, at least 5 provinces: Kingdom of Great Britain
 Master of England: Kingdom of Great Britain
+Controls London province, at least 5 provinces, after 1066 (turn 155): Kingdom of Great Britain
+Controls London province, at least 5 provinces: Kingdom of Britain
 After 1281 (turn 227): Kingdom of Scotland
 Default: Kingdom of Alba
 Initial: Scottish Peoples
@@ -470,10 +645,10 @@ Initial: Scottish Peoples
 Vassal of Byzantium: Exarchate of Batavia
 Vassal of France: County of Flanders
 Vassal of Burgundy: Burgundian Netherlands
-Vassal of Arabia/Cordoba/Morocco: Emirate of the Netherlands
+Vassal of Arabia/Cordoba/Morocco: Emirate of Hulanda
 Vassal of Castile: Seventeen Provinces
 Vassal of Aragon: Viceroyalty of the Netherlands
-Vassal of Denmark/Norway/Sweden: Jarldom of Frisia
+Vassal of Norway/Denmark/Sweden: Jarldom of Frisia
 Vassal of Venice/Genoa: Colony of Holland
 Vassal of Novgorod/Kiev: Principality of Holland
 Vassal of Muscovy: Guberniya of Holland
@@ -482,7 +657,7 @@ Vassal of England: Earldom of the Netherlands
 Vassal of Scotland: Mormaerdom of the Netherlands
 Vassal of Hungary: Banate of Holland
 Vassal of Austria: Habsburg Netherlands
-Vassal of Ottomans: Eyalet of Holland
+Vassal of Ottomans: Eyalet of Hollanda
 Vassal of Poland/Lithuania: Voivodeship of Holland
 Vassal of Bulgaria: Zhupa of Holland
 Generic Vassal: Province of Holland

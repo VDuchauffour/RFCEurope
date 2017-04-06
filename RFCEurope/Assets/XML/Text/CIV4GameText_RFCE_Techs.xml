@@ -1252,13 +1252,4 @@
 			<Plural>0</Plural>
 		</Portuguese>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_PROFESSIONAL_ARMY_HELP</Tag>
-		<English>[ICON_BULLET]Obsoletes Knightly Orders' Masters (Executives)</English>
-		<French>.</French>
-		<German>[ICON_BULLET]Veraltet Ordensmeister der Ritterorden</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>[ICON_BULLET]Obsoleta Mestres (Executivos) das Ordens Cavalariças</Portuguese>
-	</TEXT>
 </Civ4GameText>

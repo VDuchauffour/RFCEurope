@@ -12,9 +12,9 @@
 			<ShortDescription>TXT_KEY_CIV_BYZANTIUM_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_BYZANTIUM_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_BYZANTIUM_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>500AD</StartingYear>
-			<LoadingTime>0</LoadingTime>
+			<LoadingTime500>0</LoadingTime500>
+			<LoadingTime1200>0</LoadingTime1200>
 			<UP1>TXT_KEY_UP_BYZ</UP1>
 			<UP2>TXT_KEY_UP_BYZ2</UP2>
 			<UHV1>TXT_KEY_UHV_BYZ1</UHV1>
@@ -337,7 +337,7 @@
 					<DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
 					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
 					<DCNConditionReligion>NONE</DCNConditionReligion>
-					<DCNConditionNotReligion>RELIGION_ISLAM</DCNConditionNotReligion>
+					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
 					<DCNConditionVassalOf>CIVILIZATION_VENEZIA</DCNConditionVassalOf>
 					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
 					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
@@ -355,7 +355,7 @@
 					<DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
 					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
 					<DCNConditionReligion>NONE</DCNConditionReligion>
-					<DCNConditionNotReligion>RELIGION_ISLAM</DCNConditionNotReligion>
+					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
 					<DCNConditionVassalOf>CIVILIZATION_GENOA</DCNConditionVassalOf>
 					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
 					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
@@ -403,6 +403,24 @@
 					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
 					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
 					<DCNName>TXT_KEY_DN_BYZ03</DCNName>
+				</DCNCondition>
+				<DCNCondition>
+					<DCNConditionCivic>NONE</DCNConditionCivic>
+					<DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
+					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
+					<DCNConditionReligion>NONE</DCNConditionReligion>
+					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
+					<DCNConditionVassalOf>CIVILIZATION_GENOA</DCNConditionVassalOf>
+					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
+					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
+					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
+					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
+					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
+					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
+					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
+					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
+					<DCNName>TXT_KEY_DN_BYZ28</DCNName>
 				</DCNCondition>
 				<DCNCondition>
 					<DCNConditionCivic>NONE</DCNConditionCivic>
@@ -680,6 +698,60 @@
 					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
 					<DCNConditionReligion>NONE</DCNConditionReligion>
 					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
+					<DCNConditionVassalOf>CIVILIZATION_POLAND</DCNConditionVassalOf>
+					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
+					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
+					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
+					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
+					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
+					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
+					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
+					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
+					<DCNName>TXT_KEY_DN_BYZ29</DCNName>
+				</DCNCondition>
+				<DCNCondition>
+					<DCNConditionCivic>NONE</DCNConditionCivic>
+					<DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
+					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
+					<DCNConditionReligion>NONE</DCNConditionReligion>
+					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
+					<DCNConditionVassalOf>CIVILIZATION_LITHUANIA</DCNConditionVassalOf>
+					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
+					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
+					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
+					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
+					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
+					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
+					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
+					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
+					<DCNName>TXT_KEY_DN_BYZ29</DCNName>
+				</DCNCondition>
+				<DCNCondition>
+					<DCNConditionCivic>NONE</DCNConditionCivic>
+					<DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
+					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
+					<DCNConditionReligion>NONE</DCNConditionReligion>
+					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
+					<DCNConditionVassalOf>CIVILIZATION_BULGARIA</DCNConditionVassalOf>
+					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
+					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
+					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
+					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
+					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
+					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
+					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
+					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
+					<DCNName>TXT_KEY_DN_BYZ30</DCNName>
+				</DCNCondition>
+				<DCNCondition>
+					<DCNConditionCivic>NONE</DCNConditionCivic>
+					<DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
+					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
+					<DCNConditionReligion>NONE</DCNConditionReligion>
+					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
 					<DCNConditionVassalOf>NONE</DCNConditionVassalOf>
 					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
 					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
@@ -837,7 +909,6 @@
 					<DCNName>TXT_KEY_DN_BYZ00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
 			<DefaultPlayerColor>PLAYERCOLOR_ROYAL_PURPLE_AND_WHITE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_BYZANTIUM</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_GRECO_ROMAN</ArtStyleType>
@@ -944,9 +1015,9 @@
 			<ShortDescription>TXT_KEY_CIV_FRANCE_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_FRANCE_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_FRANCE_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>500AD</StartingYear>
-			<LoadingTime>0</LoadingTime>
+			<LoadingTime500>0</LoadingTime500>
+			<LoadingTime1200>0</LoadingTime1200>
 			<UP1>TXT_KEY_UP_FRA</UP1>
 			<UP2>TXT_KEY_UP_FRA2</UP2>
 			<UHV1>TXT_KEY_UHV_FRA1</UHV1>
@@ -1127,6 +1198,24 @@
 					<DCNConditionReligion>NONE</DCNConditionReligion>
 					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
 					<DCNConditionVassalOf>CIVILIZATION_VENEZIA</DCNConditionVassalOf>
+					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
+					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
+					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
+					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
+					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
+					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
+					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
+					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
+					<DCNName>TXT_KEY_DN_FRA15</DCNName>
+				</DCNCondition>
+				<DCNCondition>
+					<DCNConditionCivic>NONE</DCNConditionCivic>
+					<DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
+					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
+					<DCNConditionReligion>NONE</DCNConditionReligion>
+					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
+					<DCNConditionVassalOf>CIVILIZATION_GENOA</DCNConditionVassalOf>
 					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
 					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
 					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
@@ -1353,6 +1442,60 @@
 					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
 					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
 					<DCNName>TXT_KEY_DN_FRA20</DCNName>
+				</DCNCondition>
+				<DCNCondition>
+					<DCNConditionCivic>NONE</DCNConditionCivic>
+					<DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
+					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
+					<DCNConditionReligion>NONE</DCNConditionReligion>
+					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
+					<DCNConditionVassalOf>CIVILIZATION_POLAND</DCNConditionVassalOf>
+					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
+					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
+					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
+					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
+					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
+					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
+					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
+					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
+					<DCNName>TXT_KEY_DN_FRA29</DCNName>
+				</DCNCondition>
+				<DCNCondition>
+					<DCNConditionCivic>NONE</DCNConditionCivic>
+					<DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
+					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
+					<DCNConditionReligion>NONE</DCNConditionReligion>
+					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
+					<DCNConditionVassalOf>CIVILIZATION_LITHUANIA</DCNConditionVassalOf>
+					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
+					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
+					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
+					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
+					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
+					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
+					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
+					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
+					<DCNName>TXT_KEY_DN_FRA29</DCNName>
+				</DCNCondition>
+				<DCNCondition>
+					<DCNConditionCivic>NONE</DCNConditionCivic>
+					<DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
+					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
+					<DCNConditionReligion>NONE</DCNConditionReligion>
+					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
+					<DCNConditionVassalOf>CIVILIZATION_BULGARIA</DCNConditionVassalOf>
+					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
+					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
+					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
+					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
+					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
+					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
+					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
+					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
+					<DCNName>TXT_KEY_DN_FRA30</DCNName>
 				</DCNCondition>
 				<DCNCondition>
 					<DCNConditionCivic>NONE</DCNConditionCivic>
@@ -1715,7 +1858,6 @@
 					<DCNName>TXT_KEY_DN_FRA00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_BLUE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_FRANCE</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
@@ -1723,7 +1865,6 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
 				<City>TXT_KEY_CITY_NAME_POITIERS</City>
 				<City>TXT_KEY_CITY_NAME_BAYONNE</City>
 				<City>TXT_KEY_CITY_NAME_LE_MANS</City>
@@ -1732,7 +1873,6 @@
 				<City>TXT_KEY_CITY_NAME_LOURDES</City>
 				<City>TXT_KEY_CITY_NAME_LA_ROCHELLE</City>
 				<City>TXT_KEY_CITY_NAME_BOURGES</City>
-				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
 				<Building>
@@ -1800,10 +1940,9 @@
 			<ShortDescription>TXT_KEY_CIV_ARABIA_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_ARABIA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_ARABIA_PEDIA</Civilopedia>
-			<!-- Rhye -->
-			<!-- 3Miro Begin Update -->
 			<StartingYear>632AD</StartingYear>
-			<LoadingTime>5</LoadingTime>
+			<LoadingTime500>1</LoadingTime500>
+			<LoadingTime1200>0</LoadingTime1200>
 			<UP1>TXT_KEY_UP_ARA</UP1>
 			<UP2>TXT_KEY_UP_ARA2</UP2>
 			<UHV1>TXT_KEY_UHV_ARA1</UHV1>
@@ -2266,7 +2405,6 @@
 					<DCNName>TXT_KEY_DN_ARA00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
 			<DefaultPlayerColor>PLAYERCOLOR_GREEN_AND_WHITE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_ARABIA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_ARABIA</ArtStyleType>
@@ -2274,14 +2412,12 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
 				<City>Dimashq</City>
 				<City>Anjar</City>
 				<City>Al-Mansura</City>
 				<City>Al-Fustat</City>
 				<City>Hamah</City>
 				<City>Tabuk</City>
-				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
 				<Building>
@@ -2345,9 +2481,9 @@
 			<ShortDescription>TXT_KEY_CIV_BULGARIA_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_BULGARIA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_BULGARIA_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>680AD</StartingYear>
-			<LoadingTime>5</LoadingTime>
+			<LoadingTime500>1</LoadingTime500>
+			<LoadingTime1200>0</LoadingTime1200>
 			<UP1>TXT_KEY_UP_BUL</UP1>
 			<UP2>TXT_KEY_UP_BUL2</UP2>
 			<UHV1>TXT_KEY_UHV_BUL1</UHV1>
@@ -2599,6 +2735,24 @@
 					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
 					<DCNConditionReligion>NONE</DCNConditionReligion>
 					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
+					<DCNConditionVassalOf>CIVILIZATION_GENOA</DCNConditionVassalOf>
+					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
+					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
+					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
+					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
+					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
+					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
+					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
+					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
+					<DCNName>TXT_KEY_DN_BUL15</DCNName>
+				</DCNCondition>
+				<DCNCondition>
+					<DCNConditionCivic>NONE</DCNConditionCivic>
+					<DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
+					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
+					<DCNConditionReligion>NONE</DCNConditionReligion>
+					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
 					<DCNConditionVassalOf>CIVILIZATION_KIEV</DCNConditionVassalOf>
 					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
 					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
@@ -2772,6 +2926,42 @@
 					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
 					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
 					<DCNName>TXT_KEY_DN_BUL20</DCNName>
+				</DCNCondition>
+				<DCNCondition>
+					<DCNConditionCivic>NONE</DCNConditionCivic>
+					<DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
+					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
+					<DCNConditionReligion>NONE</DCNConditionReligion>
+					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
+					<DCNConditionVassalOf>CIVILIZATION_POLAND</DCNConditionVassalOf>
+					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
+					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
+					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
+					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
+					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
+					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
+					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
+					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
+					<DCNName>TXT_KEY_DN_BUL23</DCNName>
+				</DCNCondition>
+				<DCNCondition>
+					<DCNConditionCivic>NONE</DCNConditionCivic>
+					<DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
+					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
+					<DCNConditionReligion>NONE</DCNConditionReligion>
+					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
+					<DCNConditionVassalOf>CIVILIZATION_LITHUANIA</DCNConditionVassalOf>
+					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
+					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
+					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
+					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
+					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
+					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
+					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
+					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
+					<DCNName>TXT_KEY_DN_BUL23</DCNName>
 				</DCNCondition>
 				<DCNCondition>
 					<DCNConditionCivic>NONE</DCNConditionCivic>
@@ -2990,8 +3180,6 @@
 					<DCNName>TXT_KEY_DN_BUL00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
-			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_LIME</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_BULGARIA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_LITHUANIA</ArtStyleType>
@@ -2999,7 +3187,6 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
 				<City>Pliska</City>
 				<City>Plovdiv</City>
 				<City>Burgas</City>
@@ -3007,7 +3194,6 @@
 				<City>Dobrich</City>
 				<City>Gabrovo</City>
 				<City>Haskovo</City>
-				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
 				<Building>
@@ -3025,7 +3211,7 @@
 					<UnitType>NONE</UnitType>
 				</Unit>
 			</Units>
-			<!-- 3Miro, some free units were added here, makes no difference since they are killed in the autoplay -->
+			<!-- 3Miro: if some free units are added here, it makes no difference since they are killed in the autoplay -->
 			<FreeUnitClasses>
 				<FreeUnitClass>
 					<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
@@ -3068,9 +3254,9 @@
 			<ShortDescription>TXT_KEY_CIV_CORDOBA_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_CORDOBA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_CORDOBA_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>711AD</StartingYear>
-			<LoadingTime>5</LoadingTime>
+			<LoadingTime500>1</LoadingTime500>
+			<LoadingTime1200>0</LoadingTime1200>
 			<UP1>TXT_KEY_UP_COR</UP1>
 			<UP2>TXT_KEY_UP_COR2</UP2>
 			<UHV1>TXT_KEY_UHV_COR1</UHV1>
@@ -4487,8 +4673,6 @@
 					<DCNName>TXT_KEY_DN_COR00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
-			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_GREEN</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_CORDOBA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_ARABIA</ArtStyleType>
@@ -4496,12 +4680,10 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
 				<City>Yamama</City>
 				<City>Al-Qairawan</City>
 				<City>Oran</City>
 				<City>Ad-Dar al-Baydah</City>
-				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
 				<Building>
@@ -4561,9 +4743,9 @@
 			<ShortDescription>TXT_KEY_CIV_VENEZIA_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_VENEZIA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_VENEZIA_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>810AD</StartingYear>
-			<LoadingTime>5</LoadingTime>
+			<LoadingTime500>2</LoadingTime500>
+			<LoadingTime1200>0</LoadingTime1200>
 			<UP1>TXT_KEY_UP_VEN</UP1>
 			<UP2>TXT_KEY_UP_VEN2</UP2>
 			<UHV1>TXT_KEY_UHV_VEN1</UHV1>
@@ -4936,8 +5118,6 @@
 					<DCNName>TXT_KEY_DN_VEN00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
-			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_VENETIAN_RED_AND_WHITE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_VENEZIA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_GRECO_ROMAN</ArtStyleType>
@@ -4945,7 +5125,6 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
 				<City>Padua</City>
 				<City>Verona</City>
 				<City>Trevixo</City>
@@ -4958,7 +5137,6 @@
 				<City>Codroipo</City>
 				<City>Aquileia</City>
 				<City>Asolo</City>
-				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
 				<Building>
@@ -5018,9 +5196,9 @@
 			<ShortDescription>TXT_KEY_CIV_BURGUNDY_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_BURGUNDY_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_BURGUNDY_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>843AD</StartingYear>
-			<LoadingTime>10</LoadingTime>
+			<LoadingTime500>2</LoadingTime500>
+			<LoadingTime1200>0</LoadingTime1200>
 			<UP1>TXT_KEY_UP_BUR</UP1>
 			<UP2>TXT_KEY_UP_BUR2</UP2>
 			<UHV1>TXT_KEY_UHV_BUR1</UHV1>
@@ -5219,6 +5397,24 @@
 					<DCNConditionReligion>NONE</DCNConditionReligion>
 					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
 					<DCNConditionVassalOf>CIVILIZATION_VENEZIA</DCNConditionVassalOf>
+					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
+					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
+					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
+					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
+					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
+					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
+					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
+					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
+					<DCNName>TXT_KEY_DN_BUR15</DCNName>
+				</DCNCondition>
+				<DCNCondition>
+					<DCNConditionCivic>NONE</DCNConditionCivic>
+					<DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
+					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
+					<DCNConditionReligion>NONE</DCNConditionReligion>
+					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
+					<DCNConditionVassalOf>CIVILIZATION_GENOA</DCNConditionVassalOf>
 					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
 					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
 					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
@@ -5488,6 +5684,60 @@
 					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
 					<DCNConditionReligion>NONE</DCNConditionReligion>
 					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
+					<DCNConditionVassalOf>CIVILIZATION_POLAND</DCNConditionVassalOf>
+					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
+					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
+					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
+					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
+					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
+					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
+					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
+					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
+					<DCNName>TXT_KEY_DN_BUR24</DCNName>
+				</DCNCondition>
+				<DCNCondition>
+					<DCNConditionCivic>NONE</DCNConditionCivic>
+					<DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
+					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
+					<DCNConditionReligion>NONE</DCNConditionReligion>
+					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
+					<DCNConditionVassalOf>CIVILIZATION_LITHUANIA</DCNConditionVassalOf>
+					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
+					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
+					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
+					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
+					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
+					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
+					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
+					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
+					<DCNName>TXT_KEY_DN_BUR24</DCNName>
+				</DCNCondition>
+				<DCNCondition>
+					<DCNConditionCivic>NONE</DCNConditionCivic>
+					<DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
+					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
+					<DCNConditionReligion>NONE</DCNConditionReligion>
+					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
+					<DCNConditionVassalOf>CIVILIZATION_BULGARIA</DCNConditionVassalOf>
+					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
+					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
+					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
+					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
+					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
+					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
+					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
+					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
+					<DCNName>TXT_KEY_DN_BUR25</DCNName>
+				</DCNCondition>
+				<DCNCondition>
+					<DCNConditionCivic>NONE</DCNConditionCivic>
+					<DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
+					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
+					<DCNConditionReligion>NONE</DCNConditionReligion>
+					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
 					<DCNConditionVassalOf>NONE</DCNConditionVassalOf>
 					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
 					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
@@ -5663,7 +5913,6 @@
 					<DCNName>TXT_KEY_DN_BUR00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
 			<DefaultPlayerColor>PLAYERCOLOR_BURGUNDY</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_BURGUNDY</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
@@ -5671,7 +5920,6 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
 				<City>Grenoble</City>
 				<City>Carcassonne</City>
 				<City>Toulon</City>
@@ -5681,7 +5929,6 @@
 				<City>Montpellier</City>
 				<City>Cannes</City>
 				<City>Saint &#201;tienne</City>
-				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
 				<Building>
@@ -5745,9 +5992,9 @@
 			<ShortDescription>TXT_KEY_CIV_GERMANY_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_GERMANY_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_GERMANY_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>856AD</StartingYear>
-			<LoadingTime>10</LoadingTime>
+			<LoadingTime500>2</LoadingTime500>
+			<LoadingTime1200>0</LoadingTime1200>
 			<UP1>TXT_KEY_UP_GER</UP1>
 			<UP2>TXT_KEY_UP_GER2</UP2>
 			<UHV1>TXT_KEY_UHV_GER1</UHV1>
@@ -6084,7 +6331,6 @@
 					<DCNName>TXT_KEY_DN_GER00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_LEMON</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_GERMANY</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
@@ -6092,7 +6338,6 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
 				<City>TXT_KEY_CITY_NAME_ESSEN</City>
 				<City>TXT_KEY_CITY_NAME_DUISBURG</City>
 				<City>TXT_KEY_CITY_NAME_BONN</City>
@@ -6138,7 +6383,6 @@
 				<City>TXT_KEY_CITY_NAME_HILDESHEIM</City>
 				<City>TXT_KEY_CITY_NAME_ERLANGEN</City>
 				<City>D&#252;sseldorf</City>
-				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
 				<Building>
@@ -6198,9 +6442,9 @@
 			<ShortDescription>TXT_KEY_CIV_NOVGOROD_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_NOVGOROD_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_NOVGOROD_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>864AD</StartingYear>
-			<LoadingTime>10</LoadingTime>
+			<LoadingTime500>2</LoadingTime500>
+			<LoadingTime1200>0</LoadingTime1200>
 			<UP1>TXT_KEY_UP_NOV</UP1>
 			<UP2>TXT_KEY_UP_NOV2</UP2>
 			<UHV1>TXT_KEY_UHV_NOV1</UHV1>
@@ -6915,8 +7159,6 @@
 					<DCNName>TXT_KEY_DN_NOV00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
-			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_MIDDLE_GREEN</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_NOVGOROD</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_RUSSIA</ArtStyleType>
@@ -6924,7 +7166,6 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
 				<City>Khabarovsk</City>
 				<City>Brjanks</City>
 				<City>Omsk</City>
@@ -6938,7 +7179,6 @@
 				<City>Saransk</City>
 				<City>Jelets</City>
 				<City>Ribinsk</City>
-				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
 				<Building>
@@ -7002,9 +7242,9 @@
 			<ShortDescription>TXT_KEY_CIV_NORWAY_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_NORWAY_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_NORWAY_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>872AD</StartingYear>
-			<LoadingTime>10</LoadingTime>
+			<LoadingTime500>2</LoadingTime500>
+			<LoadingTime1200>0</LoadingTime1200>
 			<UP1>TXT_KEY_UP_NOR</UP1>
 			<UP2>TXT_KEY_UP_NOR2</UP2>
 			<UHV1>TXT_KEY_UHV_NOR1</UHV1>
@@ -7719,8 +7959,6 @@
 					<DCNName>TXT_KEY_DN_NOR00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
-			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_BLUE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_NORWAY</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_NORSE</ArtStyleType>
@@ -7728,7 +7966,6 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
 				<City>TXT_KEY_CITY_NAME_BIRKA</City>
 				<City>TXT_KEY_CITY_NAME_ROSKILDE</City>
 				<City>TXT_KEY_CITY_NAME_SIGTUNA</City>
@@ -7752,7 +7989,6 @@
 				<City>T&#248;nsberg</City>
 				<City>Kirkjub&#248;ur</City>
 				<City>TXT_KEY_CITY_NAME_LODOSE</City>
-				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
 				<Building>
@@ -7812,9 +8048,9 @@
 			<ShortDescription>TXT_KEY_CIV_KIEV_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_KIEV_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_KIEV_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>882AD</StartingYear>
-			<LoadingTime>10</LoadingTime>
+			<LoadingTime500>3</LoadingTime500>
+			<LoadingTime1200>0</LoadingTime1200>
 			<UP1>TXT_KEY_UP_KIE</UP1>
 			<UP2>TXT_KEY_UP_KIE2</UP2>
 			<UHV1>TXT_KEY_UHV_KIE1</UHV1>
@@ -8511,8 +8747,6 @@
 					<DCNName>TXT_KEY_DN_KIE00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
-			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_PURPLE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_KIEV</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_RUSSIA</ArtStyleType>
@@ -8520,13 +8754,11 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
 				<City>Chernigov</City>
 				<City>Bilhorod Kyivsky</City>
 				<City>Vyshhorod</City>
 				<City>Halych</City>
 				<City>Tmutarakan</City>
-				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
 				<Building>
@@ -8590,9 +8822,9 @@
 			<ShortDescription>TXT_KEY_CIV_HUNGARY_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_HUNGARY_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_HUNGARY_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>895AD</StartingYear>
-			<LoadingTime>10</LoadingTime>
+			<LoadingTime500>3</LoadingTime500>
+			<LoadingTime1200>0</LoadingTime1200>
 			<UP1>TXT_KEY_UP_HUN</UP1>
 			<UP2>TXT_KEY_UP_HUN2</UP2>
 			<UHV1>TXT_KEY_UHV_HUN1</UHV1>
@@ -8844,6 +9076,24 @@
 					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
 					<DCNConditionReligion>NONE</DCNConditionReligion>
 					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
+					<DCNConditionVassalOf>CIVILIZATION_GENOA</DCNConditionVassalOf>
+					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
+					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
+					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
+					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
+					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
+					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
+					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
+					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
+					<DCNName>TXT_KEY_DN_HUN15</DCNName>
+				</DCNCondition>
+				<DCNCondition>
+					<DCNConditionCivic>NONE</DCNConditionCivic>
+					<DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
+					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
+					<DCNConditionReligion>NONE</DCNConditionReligion>
+					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
 					<DCNConditionVassalOf>CIVILIZATION_NOVGOROD</DCNConditionVassalOf>
 					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
 					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
@@ -9035,6 +9285,60 @@
 					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
 					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
 					<DCNName>TXT_KEY_DN_HUN03</DCNName>
+				</DCNCondition>
+				<DCNCondition>
+					<DCNConditionCivic>NONE</DCNConditionCivic>
+					<DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
+					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
+					<DCNConditionReligion>NONE</DCNConditionReligion>
+					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
+					<DCNConditionVassalOf>CIVILIZATION_POLAND</DCNConditionVassalOf>
+					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
+					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
+					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
+					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
+					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
+					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
+					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
+					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
+					<DCNName>TXT_KEY_DN_HUN22</DCNName>
+				</DCNCondition>
+				<DCNCondition>
+					<DCNConditionCivic>NONE</DCNConditionCivic>
+					<DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
+					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
+					<DCNConditionReligion>NONE</DCNConditionReligion>
+					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
+					<DCNConditionVassalOf>CIVILIZATION_LITHUANIA</DCNConditionVassalOf>
+					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
+					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
+					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
+					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
+					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
+					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
+					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
+					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
+					<DCNName>TXT_KEY_DN_HUN22</DCNName>
+				</DCNCondition>
+				<DCNCondition>
+					<DCNConditionCivic>NONE</DCNConditionCivic>
+					<DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
+					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
+					<DCNConditionReligion>NONE</DCNConditionReligion>
+					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
+					<DCNConditionVassalOf>CIVILIZATION_BULGARIA</DCNConditionVassalOf>
+					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
+					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
+					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
+					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
+					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
+					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
+					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
+					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
+					<DCNName>TXT_KEY_DN_HUN23</DCNName>
 				</DCNCondition>
 				<DCNCondition>
 					<DCNConditionCivic>NONE</DCNConditionCivic>
@@ -9253,7 +9557,6 @@
 					<DCNName>TXT_KEY_DN_HUN00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
 			<DefaultPlayerColor>PLAYERCOLOR_BROWN_AND_WHITE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_HUNGARY</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_LITHUANIA</ArtStyleType>
@@ -9261,7 +9564,6 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
 				<City>Visegrád</City>
 				<City>Kecskemét</City>
 				<City>Gyõr</City>
@@ -9285,7 +9587,6 @@
 				<City>Torda</City>
 				<City>Szentes</City>
 				<City>Bihar</City>
-				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
 				<Building>
@@ -9349,9 +9650,9 @@
 			<ShortDescription>TXT_KEY_CIV_SPAIN_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_SPAIN_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_SPAIN_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>910AD</StartingYear>
-			<LoadingTime>10</LoadingTime>
+			<LoadingTime500>3</LoadingTime500>
+			<LoadingTime1200>0</LoadingTime1200>
 			<UP1>TXT_KEY_UP_SPN</UP1>
 			<UP2>TXT_KEY_UP_SPN2</UP2>
 			<UHV1>TXT_KEY_UHV_SPN1</UHV1>
@@ -10120,8 +10421,6 @@
 					<DCNName>TXT_KEY_DN_SPN00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
-			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_YELLOW</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_SPAIN</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_IBERIA</ArtStyleType>
@@ -10129,7 +10428,6 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
 				<City>TXT_KEY_CITY_NAME_VITORIA</City>
 				<City>Oviedo</City>
 				<City>TXT_KEY_CITY_NAME_ALICANTE</City>
@@ -10146,7 +10444,6 @@
 				<City>TXT_KEY_CITY_NAME_SAN_SEBASTIAN</City>
 				<City>TXT_KEY_CITY_NAME_HUELVA</City>
 				<City>TXT_KEY_CITY_NAME_IBIZA</City>
-				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
 				<Building>
@@ -10210,9 +10507,9 @@
 			<ShortDescription>TXT_KEY_CIV_DENMARK_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_DENMARK_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_DENMARK_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>936AD</StartingYear>
-			<LoadingTime>10</LoadingTime>
+			<LoadingTime500>3</LoadingTime500>
+			<LoadingTime1200>0</LoadingTime1200>
 			<UP1>TXT_KEY_UP_DEN</UP1>
 			<UP2>TXT_KEY_UP_DEN2</UP2>
 			<UHV1>TXT_KEY_UHV_DEN1</UHV1>
@@ -10981,8 +11278,6 @@
 					<DCNName>TXT_KEY_DN_DEN00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
-			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_RED</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_DENMARK</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_NORSE</ArtStyleType>
@@ -10990,7 +11285,6 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
 				<City>TXT_KEY_CITY_NAME_ODENSE</City>
 				<City>TXT_KEY_CITY_NAME_RIBE</City>
 				<City>TXT_KEY_CITY_NAME_LINDHOLM</City>
@@ -11008,7 +11302,6 @@
 				<City>T&#248;nsberg</City>
 				<City>Kirkjub&#248;ur</City>
 				<City>TXT_KEY_CITY_NAME_LODOSE</City>
-				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
 				<Building>
@@ -11072,9 +11365,9 @@
 			<ShortDescription>TXT_KEY_CIV_SCOTLAND_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_SCOTLAND_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_SCOTLAND_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>960AD</StartingYear>
-			<LoadingTime>15</LoadingTime>
+			<LoadingTime500>4</LoadingTime500>
+			<LoadingTime1200>0</LoadingTime1200>
 			<UP1>TXT_KEY_UP_SCO</UP1>
 			<UP2>TXT_KEY_UP_SCO2</UP2>
 			<UHV1>TXT_KEY_UHV_SCO1</UHV1>
@@ -11634,10 +11927,28 @@
 					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
 					<DCNConditionVassalOf>NONE</DCNConditionVassalOf>
 					<DCNConditionGenericVassal>0</DCNConditionGenericVassal>
+					<DCNConditionMasterlOf>CIVILIZATION_ENGLAND</DCNConditionMasterlOf>
+					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
+					<DCNConditionGenericMasterl>1</DCNConditionGenericMasterl>
+					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
+					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
+					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
+					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
+					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
+					<DCNName>TXT_KEY_DN_SCO06</DCNName>
+				</DCNCondition>
+				<DCNCondition>
+					<DCNConditionCivic>NONE</DCNConditionCivic>
+					<DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
+					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
+					<DCNConditionReligion>NONE</DCNConditionReligion>
+					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
+					<DCNConditionVassalOf>NONE</DCNConditionVassalOf>
+					<DCNConditionGenericVassal>0</DCNConditionGenericVassal>
 					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
 					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
 					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
-					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
+					<DCNConditionAfterTurn>155</DCNConditionAfterTurn>
 					<DCNConditionConqNumOfProvincesOfTypeType>4</DCNConditionConqNumOfProvincesOfTypeType>
 					<DCNConditionConqNumOfProvincesOfTypeNum>5</DCNConditionConqNumOfProvincesOfTypeNum>
 					<DCNConditionConqASpecificProvince>20</DCNConditionConqASpecificProvince>
@@ -11652,15 +11963,15 @@
 					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
 					<DCNConditionVassalOf>NONE</DCNConditionVassalOf>
 					<DCNConditionGenericVassal>0</DCNConditionGenericVassal>
-					<DCNConditionMasterlOf>CIVILIZATION_ENGLAND</DCNConditionMasterlOf>
+					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
 					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
-					<DCNConditionGenericMasterl>1</DCNConditionGenericMasterl>
+					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
 					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
-					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
-					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
-					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
+					<DCNConditionConqNumOfProvincesOfTypeType>4</DCNConditionConqNumOfProvincesOfTypeType>
+					<DCNConditionConqNumOfProvincesOfTypeNum>5</DCNConditionConqNumOfProvincesOfTypeNum>
+					<DCNConditionConqASpecificProvince>20</DCNConditionConqASpecificProvince>
 					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
-					<DCNName>TXT_KEY_DN_SCO06</DCNName>
+					<DCNName>TXT_KEY_DN_SCO07</DCNName>
 				</DCNCondition>
 				<DCNCondition>
 					<DCNConditionCivic>NONE</DCNConditionCivic>
@@ -11717,8 +12028,6 @@
 					<DCNName>TXT_KEY_DN_SCO00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
-			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_SCOTLAND</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_SCOTLAND</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_ANGLO_AMERICA</ArtStyleType>
@@ -11726,7 +12035,6 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
 				<City>Cambridge</City>
 				<City>TXT_KEY_CITY_NAME_HASTINGS</City>
 				<City>TXT_KEY_CITY_NAME_COVENTRY</City>
@@ -11755,7 +12063,6 @@
 				<City>TXT_KEY_CITY_NAME_BLACKPOOL</City>
 				<City>TXT_KEY_CITY_NAME_WINCHESTER</City>
 				<City>TXT_KEY_CITY_NAME_HULL</City>
-				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
 				<Building>
@@ -11815,9 +12122,9 @@
 			<ShortDescription>TXT_KEY_CIV_POLAND_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_POLAND_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_POLAND_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>966AD</StartingYear>
-			<LoadingTime>15</LoadingTime>
+			<LoadingTime500>4</LoadingTime500>
+			<LoadingTime1200>0</LoadingTime1200>
 			<UP1>TXT_KEY_UP_POL</UP1>
 			<UP2>TXT_KEY_UP_POL2</UP2>
 			<UHV1>TXT_KEY_UHV_POL1</UHV1>
@@ -12208,8 +12515,6 @@
 					<DCNName>TXT_KEY_DN_POL00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
-			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_CERISE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_POLAND</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_LITHUANIA</ArtStyleType>
@@ -12217,7 +12522,6 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
 				<City>Lodz</City>
 				<City>Lublin</City>
 				<City>Gdynia</City>
@@ -12228,7 +12532,6 @@
 				<City>Elblag</City>
 				<City>Plock</City>
 				<City>Katowice</City>
-				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
 				<Building>
@@ -12292,9 +12595,9 @@
 			<ShortDescription>TXT_KEY_CIV_GENOA_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_GENOA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_GENOA_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>1016AD</StartingYear>
-			<LoadingTime>15</LoadingTime>
+			<LoadingTime500>5</LoadingTime500>
+			<LoadingTime1200>0</LoadingTime1200>
 			<UP1>TXT_KEY_UP_GEN</UP1>
 			<UP2>TXT_KEY_UP_GEN2</UP2>
 			<UHV1>TXT_KEY_UHV_GEN1</UHV1>
@@ -12685,8 +12988,6 @@
 					<DCNName>TXT_KEY_DN_GEN00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
-			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_WHITE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_GENOA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_GRECO_ROMAN</ArtStyleType>
@@ -12694,13 +12995,11 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
 				<City>Sann-a</City>
 				<City>Speza</City>
 				<City>Sanremo</City>
 				<City>Chiavari</City>
 				<City>Camuggi</City>
-				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
 				<Building>
@@ -12760,9 +13059,9 @@
 			<ShortDescription>TXT_KEY_CIV_MOROCCO_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_MOROCCO_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_MOROCCO_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>1040AD</StartingYear>
-			<LoadingTime>15</LoadingTime>
+			<LoadingTime500>6</LoadingTime500>
+			<LoadingTime1200>0</LoadingTime1200>
 			<UP1>TXT_KEY_UP_MOR</UP1>
 			<UP2>TXT_KEY_UP_MOR2</UP2>
 			<UHV1>TXT_KEY_UHV_MOR1</UHV1>
@@ -13459,8 +13758,6 @@
 					<DCNName>TXT_KEY_DN_MOR00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
-			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_MOROCCO</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_MOROCCO</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_ARABIA</ArtStyleType>
@@ -13468,7 +13765,6 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
 				<City>TXT_KEY_CITY_NAME_KUFAH</City>
 				<City>TXT_KEY_CITY_NAME_KHURASAN</City>
 				<City>TXT_KEY_CITY_NAME_ANJAR</City>
@@ -13482,7 +13778,6 @@
 				<City>Abu Dhabi</City>
 				<City>TXT_KEY_CITY_NAME_KAIROUAN</City>
 				<City>TXT_KEY_CITY_NAME_ORAN</City>
-				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
 				<Building>
@@ -13542,9 +13837,9 @@
 			<ShortDescription>TXT_KEY_CIV_ENGLAND_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_ENGLAND_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_ENGLAND_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>1066AD</StartingYear>
-			<LoadingTime>15</LoadingTime>
+			<LoadingTime500>6</LoadingTime500>
+			<LoadingTime1200>0</LoadingTime1200>
 			<UP1>TXT_KEY_UP_ENG</UP1>
 			<UP2>TXT_KEY_UP_ENG2</UP2>
 			<UHV1>TXT_KEY_UHV_ENG1</UHV1>
@@ -13732,9 +14027,27 @@
 					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
 					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
 					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
-					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
+					<DCNConditionConqASpecificProvince>20</DCNConditionConqASpecificProvince>
 					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
 					<DCNName>TXT_KEY_DN_ENG07</DCNName>
+				</DCNCondition>
+				<DCNCondition>
+					<DCNConditionCivic>NONE</DCNConditionCivic>
+					<DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
+					<DCNConditionOrCivic2>NONE</DCNConditionOrCivic2>
+					<DCNConditionReligion>NONE</DCNConditionReligion>
+					<DCNConditionNotReligion>NONE</DCNConditionNotReligion>
+					<DCNConditionVassalOf>CIVILIZATION_NORWAY</DCNConditionVassalOf>
+					<DCNConditionGenericVassal>1</DCNConditionGenericVassal>
+					<DCNConditionMasterlOf>NONE</DCNConditionMasterlOf>
+					<DCNConditionMasterlOf2>NONE</DCNConditionMasterlOf2>
+					<DCNConditionGenericMasterl>0</DCNConditionGenericMasterl>
+					<DCNConditionAfterTurn>0</DCNConditionAfterTurn>
+					<DCNConditionConqNumOfProvincesOfTypeType>0</DCNConditionConqNumOfProvincesOfTypeType>
+					<DCNConditionConqNumOfProvincesOfTypeNum>0</DCNConditionConqNumOfProvincesOfTypeNum>
+					<DCNConditionConqASpecificProvince>-1</DCNConditionConqASpecificProvince>
+					<DCNConditionHasRespawned>0</DCNConditionHasRespawned>
+					<DCNName>TXT_KEY_DN_ENG29</DCNName>
 				</DCNCondition>
 				<DCNCondition>
 					<DCNConditionCivic>NONE</DCNConditionCivic>
@@ -14259,8 +14572,6 @@
 					<DCNName>TXT_KEY_DN_ENG00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
-			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_RED_AND_GOLD</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_ENGLAND</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_ANGLO_AMERICA</ArtStyleType>
@@ -14268,7 +14579,6 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
 				<City>Cambridge</City>
 				<City>TXT_KEY_CITY_NAME_HASTINGS</City>
 				<City>TXT_KEY_CITY_NAME_COVENTRY</City>
@@ -14298,7 +14608,6 @@
 				<City>TXT_KEY_CITY_NAME_BLACKPOOL</City>
 				<City>TXT_KEY_CITY_NAME_WINCHESTER</City>
 				<City>TXT_KEY_CITY_NAME_HULL</City>
-				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
 				<Building>
@@ -14362,9 +14671,9 @@
 			<ShortDescription>TXT_KEY_CIV_PORTUGAL_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_PORTUGAL_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_PORTUGAL_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>1139AD</StartingYear>
-			<LoadingTime>20</LoadingTime>
+			<LoadingTime500>8</LoadingTime500>
+			<LoadingTime1200>0</LoadingTime1200>
 			<UP1>TXT_KEY_UP_POR</UP1>
 			<UP2>TXT_KEY_UP_POR2</UP2>
 			<UHV1>TXT_KEY_UHV_POR1</UHV1>
@@ -15079,7 +15388,6 @@
 					<DCNName>TXT_KEY_DN_POR00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
 			<DefaultPlayerColor>PLAYERCOLOR_BLUE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_PORTUGAL</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_IBERIA</ArtStyleType>
@@ -15087,7 +15395,6 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
 				<City>TXT_KEY_CITY_NAME_SAGRES</City>
 				<City>TXT_KEY_CITY_NAME_AVEIRO</City>
 				<City>TXT_KEY_CITY_NAME_VISEU</City>
@@ -15115,7 +15422,6 @@
 				<City>Alc&#225;cer do Sal</City>
 				<City>M&#233;rtola</City>
 				<City>Angra do Hero&#237;smo</City>
-				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
 				<Building>
@@ -15179,9 +15485,9 @@
 			<ShortDescription>TXT_KEY_CIV_ARAGON_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_ARAGON_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_ARAGON_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>1164AD</StartingYear>
-			<LoadingTime>20</LoadingTime>
+			<LoadingTime500>9</LoadingTime500>
+			<LoadingTime1200>0</LoadingTime1200>
 			<UP1>TXT_KEY_UP_ARG</UP1>
 			<UP2>TXT_KEY_UP_ARG2</UP2>
 			<UHV1>TXT_KEY_UHV_ARG1</UHV1>
@@ -16490,8 +16796,6 @@
 					<DCNName>TXT_KEY_DN_ARG00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
-			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_PINK</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_ARAGON</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_IBERIA</ArtStyleType>
@@ -16499,7 +16803,6 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
 				<City>TXT_KEY_CITY_NAME_MURCIA</City>
 				<City>TXT_KEY_CITY_NAME_VITORIA</City>
 				<City>Oviedo</City>
@@ -16518,7 +16821,6 @@
 				<City>TXT_KEY_CITY_NAME_HUELVA</City>
 				<City>TXT_KEY_CITY_NAME_IBIZA</City>
 				<City>TXT_KEY_CITY_NAME_LAS_PALMAS</City>
-				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
 				<Building>
@@ -16578,9 +16880,9 @@
 			<ShortDescription>TXT_KEY_CIV_SWEDEN_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_SWEDEN_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_SWEDEN_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>1210AD</StartingYear>
-			<LoadingTime>25</LoadingTime>
+			<LoadingTime500>11</LoadingTime500>
+			<LoadingTime1200>0</LoadingTime1200>
 			<UP1>TXT_KEY_UP_SWE</UP1>
 			<UP2>TXT_KEY_UP_SWE2</UP2>
 			<UHV1>TXT_KEY_UHV_SWE1</UHV1>
@@ -17295,8 +17597,6 @@
 					<DCNName>TXT_KEY_DN_SWE00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
-			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_CYAN_AND_LEMON</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_SWEDEN</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_NORSE</ArtStyleType>
@@ -17304,13 +17604,11 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
 				<City>Sigtuna</City>
 				<City>Västerås</City>
 				<City>Örebro</City>
 				<City>Linköping</City>
 				<City>Helsingfors</City>
-				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
 				<Building>
@@ -17378,9 +17676,9 @@
 			<ShortDescription>TXT_KEY_CIV_PRUSSIA_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_PRUSSIA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_PRUSSIA_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>1224AD</StartingYear>
-			<LoadingTime>25</LoadingTime>
+			<LoadingTime500>12</LoadingTime500>
+			<LoadingTime1200>1</LoadingTime1200>
 			<UP1>TXT_KEY_UP_PRU</UP1>
 			<UP2>TXT_KEY_UP_PRU2</UP2>
 			<UHV1>TXT_KEY_UHV_PRU1</UHV1>
@@ -17861,7 +18159,6 @@
 					<DCNName>TXT_KEY_DN_PRU00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
 			<DefaultPlayerColor>PLAYERCOLOR_WHITE_AND_BLACK</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_PRUSSIA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
@@ -17869,7 +18166,6 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
 				<City>TXT_KEY_CITY_NAME_ESSEN</City>
 				<City>TXT_KEY_CITY_NAME_DUISBURG</City>
 				<City>TXT_KEY_CITY_NAME_BONN</City>
@@ -17915,7 +18211,6 @@
 				<City>TXT_KEY_CITY_NAME_HILDESHEIM</City>
 				<City>TXT_KEY_CITY_NAME_ERLANGEN</City>
 				<City>D&#252;sseldorf</City>
-				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
 				<Building>
@@ -17975,9 +18270,9 @@
 			<ShortDescription>TXT_KEY_CIV_LITHUANIA_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_LITHUANIA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_LITHUANIA_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>1236AD</StartingYear>
-			<LoadingTime>25</LoadingTime>
+			<LoadingTime500>12</LoadingTime500>
+			<LoadingTime1200>1</LoadingTime1200>
 			<UP1>TXT_KEY_UP_LIT</UP1>
 			<UP2>TXT_KEY_UP_LIT2</UP2>
 			<UHV1>TXT_KEY_UHV_LIT1</UHV1>
@@ -18368,8 +18663,6 @@
 					<DCNName>TXT_KEY_DN_LIT00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
-			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_GRAY</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_LITHUANIA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_LITHUANIA</ArtStyleType>
@@ -18377,7 +18670,6 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
 				<City>Siauliai</City>
 				<City>Panevezys</City>
 				<City>Visaginas</City>
@@ -18394,7 +18686,6 @@
 				<City>Kretinga</City>
 				<City>Radviliskis</City>
 				<City>Palanga</City>
-				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
 				<Building>
@@ -18454,9 +18745,9 @@
 			<ShortDescription>TXT_KEY_CIV_AUSTRIA_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_AUSTRIA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_AUSTRIA_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>1282AD</StartingYear>
-			<LoadingTime>30</LoadingTime>
+			<LoadingTime500>15</LoadingTime500>
+			<LoadingTime1200>3</LoadingTime1200>
 			<UP1>TXT_KEY_UP_AUS</UP1>
 			<UP2>TXT_KEY_UP_AUS2</UP2>
 			<UHV1>TXT_KEY_UHV_AUS1</UHV1>
@@ -18829,7 +19120,6 @@
 					<DCNName>TXT_KEY_DN_AUS00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
 			<DefaultPlayerColor>PLAYERCOLOR_CYAN_AND_BLACK</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_AUSTRIA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
@@ -18837,7 +19127,6 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
 				<City>Graz</City>
 				<City>Linz</City>
 				<City>Innsbruck</City>
@@ -18846,7 +19135,6 @@
 				<City>Bregenz</City>
 				<City>Villach</City>
 				<City>St. Polten</City>
-				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
 				<Building>
@@ -18906,9 +19194,9 @@
 			<ShortDescription>TXT_KEY_CIV_OTTOMAN_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_OTTOMAN_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_OTTOMAN_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>1356AD</StartingYear>
-			<LoadingTime>40</LoadingTime>
+			<LoadingTime500>20</LoadingTime500>
+			<LoadingTime1200>7</LoadingTime1200>
 			<UP1>TXT_KEY_UP_TUR</UP1>
 			<UP2>TXT_KEY_UP_TUR2</UP2>
 			<UHV1>TXT_KEY_UHV_TUR1</UHV1>
@@ -19281,8 +19569,6 @@
 					<DCNName>TXT_KEY_DN_TUR00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
-			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_ORANGE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_OTTOMAN</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_ARABIA</ArtStyleType>
@@ -19290,7 +19576,6 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
 				<City>TXT_KEY_CITY_NAME_MARSIN</City>
 				<City>TXT_KEY_CITY_NAME_ZONGULDAK</City>
 				<City>TXT_KEY_CITY_NAME_DENIZLI</City>
@@ -19313,7 +19598,6 @@
 				<City>Kerc</City>
 				<City>Tergoviste</City>
 				<City>Semendre</City>
-				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
 				<Building>
@@ -19373,9 +19657,9 @@
 			<ShortDescription>TXT_KEY_CIV_MOSCOW_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_MOSCOW_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_MOSCOW_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>1380AD</StartingYear>
-			<LoadingTime>40</LoadingTime>
+			<LoadingTime500>20</LoadingTime500>
+			<LoadingTime1200>8</LoadingTime1200>
 			<UP1>TXT_KEY_UP_MOS</UP1>
 			<UP2>TXT_KEY_UP_MOS2</UP2>
 			<UHV1>TXT_KEY_UHV_MOS1</UHV1>
@@ -20054,8 +20338,6 @@
 					<DCNName>TXT_KEY_DN_MOS00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
-			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_VERYDARK_RED</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_MOSCOW</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_RUSSIA</ArtStyleType>
@@ -20063,7 +20345,6 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
 				<City>Vologda</City>
 				<City>Perm</City>
 				<City>Pskov</City>
@@ -20071,7 +20352,6 @@
 				<City>Saransk</City>
 				<City>Jelets</City>
 				<City>Ribinsk</City>
-				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
 				<Building>
@@ -20135,9 +20415,9 @@
 			<ShortDescription>TXT_KEY_CIV_DUTCH_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_DUTCH_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_DUTCH_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>1581AD</StartingYear>
-			<LoadingTime>70</LoadingTime>
+			<LoadingTime500>40</LoadingTime500>
+			<LoadingTime1200>25</LoadingTime1200>
 			<UP1>TXT_KEY_UP_DUT</UP1>
 			<UP2>TXT_KEY_UP_DUT2</UP2>
 			<UHV1>TXT_KEY_UHV_DUT1</UHV1>
@@ -20762,8 +21042,6 @@
 					<DCNName>TXT_KEY_DN_DUT00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
-			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_ORANGE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_DUTCH</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
@@ -20771,7 +21049,6 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<!-- Rhye - start -->
 				<City>'s-Gravenhage</City>
 				<City>TXT_KEY_CITY_NAME_MAASTRICHT</City>
 				<City>TXT_KEY_CITY_NAME_MIDDELBURG</City>
@@ -20809,7 +21086,6 @@
 				<City>TXT_KEY_CITY_NAME_ENSCHEDE</City>
 				<City>TXT_KEY_CITY_NAME_APELDOORN</City>
 				<City>Weert</City>
-				<!-- Rhye - end -->
 			</Cities>
 			<Buildings>
 				<Building>
@@ -20869,9 +21145,9 @@
 			<ShortDescription>TXT_KEY_CIV_PAPAL_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_PAPAL_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_PAPAL_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>500AD</StartingYear>
-			<LoadingTime>0</LoadingTime>
+			<LoadingTime500>0</LoadingTime500>
+			<LoadingTime1200>0</LoadingTime1200>
 			<UP1>TXT_KEY_UP_POP</UP1>
 			<UP2>TXT_KEY_UP_POP2</UP2>
 			<UHV1>TXT_KEY_UHV_POP1</UHV1>
@@ -20902,8 +21178,6 @@
 					<DCNName>TXT_KEY_DN_POP00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<!-- 3Miro End Update -->
-			<!-- Rhye -->
 			<DefaultPlayerColor>PLAYERCOLOR_OFF_WHITE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_PAPAL</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_GRECO_ROMAN</ArtStyleType>
@@ -20957,9 +21231,9 @@
 			<ShortDescription>TXT_KEY_CIV_INDEPENDENT_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_INDEPENDENT_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_INDEPENDENT_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>500AD</StartingYear>
-			<LoadingTime>0</LoadingTime>
+			<LoadingTime500>0</LoadingTime500>
+			<LoadingTime1200>0</LoadingTime1200>
 			<UP1>TXT_KEY_UP_NONE</UP1>
 			<UP2>TXT_KEY_UP_NONE</UP2>
 			<UHV1>TXT_KEY_UHV_NONE</UHV1>
@@ -20971,7 +21245,6 @@
 			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
 			<SituationStart>TXT_KEY_5STARS</SituationStart>
 			<DCNConditions/>
-			<!-- 3Miro End Update -->
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_GRAY1</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_INDEPENDENT</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_BARBARIAN</ArtStyleType>
@@ -21050,9 +21323,9 @@
 			<ShortDescription>TXT_KEY_CIV_INDEPENDENT_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_INDEPENDENT_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_INDEPENDENT_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>500AD</StartingYear>
-			<LoadingTime>0</LoadingTime>
+			<LoadingTime500>0</LoadingTime500>
+			<LoadingTime1200>0</LoadingTime1200>
 			<UP1>TXT_KEY_UP_NONE</UP1>
 			<UP2>TXT_KEY_UP_NONE</UP2>
 			<UHV1>TXT_KEY_UHV_NONE</UHV1>
@@ -21064,7 +21337,6 @@
 			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
 			<SituationStart>TXT_KEY_5STARS</SituationStart>
 			<DCNConditions/>
-			<!-- 3Miro End Update -->
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_GRAY2</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_INDEPENDENT</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_BARBARIAN</ArtStyleType>
@@ -21143,9 +21415,9 @@
 			<ShortDescription>TXT_KEY_CIV_INDEPENDENT_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_INDEPENDENT_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_INDEPENDENT_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>500AD</StartingYear>
-			<LoadingTime>0</LoadingTime>
+			<LoadingTime500>0</LoadingTime500>
+			<LoadingTime1200>0</LoadingTime1200>
 			<UP1>TXT_KEY_UP_NONE</UP1>
 			<UP2>TXT_KEY_UP_NONE</UP2>
 			<UHV1>TXT_KEY_UHV_NONE</UHV1>
@@ -21157,7 +21429,6 @@
 			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
 			<SituationStart>TXT_KEY_5STARS</SituationStart>
 			<DCNConditions/>
-			<!-- 3Miro End Update -->
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_GRAY3</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_INDEPENDENT</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_BARBARIAN</ArtStyleType>
@@ -21236,9 +21507,9 @@
 			<ShortDescription>TXT_KEY_CIV_INDEPENDENT_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_INDEPENDENT_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_INDEPENDENT_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>500AD</StartingYear>
-			<LoadingTime>0</LoadingTime>
+			<LoadingTime500>0</LoadingTime500>
+			<LoadingTime1200>0</LoadingTime1200>
 			<UP1>TXT_KEY_UP_NONE</UP1>
 			<UP2>TXT_KEY_UP_NONE</UP2>
 			<UHV1>TXT_KEY_UHV_NONE</UHV1>
@@ -21250,7 +21521,6 @@
 			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
 			<SituationStart>TXT_KEY_5STARS</SituationStart>
 			<DCNConditions/>
-			<!-- 3Miro End Update -->
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_GRAY4</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_INDEPENDENT</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_BARBARIAN</ArtStyleType>
@@ -21329,9 +21599,9 @@
 			<ShortDescription>TXT_KEY_CIV_BARBARIAN_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_BARBARIAN_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_BARBARIAN_PEDIA</Civilopedia>
-			<!-- 3Miro Begin Update -->
 			<StartingYear>500AD</StartingYear>
-			<LoadingTime>0</LoadingTime>
+			<LoadingTime500>0</LoadingTime500>
+			<LoadingTime1200>0</LoadingTime1200>
 			<UP1>TXT_KEY_UP_NONE</UP1>
 			<UP2>TXT_KEY_UP_NONE</UP2>
 			<UHV1>TXT_KEY_UHV_NONE</UHV1>
@@ -21343,7 +21613,6 @@
 			<SituationGrowth>TXT_KEY_4STARS</SituationGrowth>
 			<SituationStart>TXT_KEY_5STARS</SituationStart>
 			<DCNConditions/>
-			<!-- 3Miro End Update -->
 			<DefaultPlayerColor>PLAYERCOLOR_BLACK</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_BARBARIAN</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_BARBARIAN</ArtStyleType>

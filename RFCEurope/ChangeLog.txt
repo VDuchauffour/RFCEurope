@@ -177,6 +177,7 @@ Changes for RFCE 1.5:
 		- Company spread is updated to an initial state before the first turn of the 1200 AD scenario starts
 		- Dynamic civ names are refreshed for all civs right before the player starts the first turn of the scenario
 		- AI civs won't do a revolution in the first couple turns of the scenario (keep the initial civics until relations are more established)
+		- Civs now have a separate loading time info for the 1200AD scenario (it will show up instead of the normal one)
 		- NOTE: Most of the map updates for the 1.5 version are not yet implemented in the 1200AD scenario
 
 	Mercenary updates:
@@ -395,6 +396,7 @@ Changes for RFCE 1.5:
 		- Popup message for the player when a UHV goal is completed or failed
 		- Popup message for the player a couple turns before the Seljuk/Mongol/Timurid invasions
 		- Improved interface messages connected to Papal bonuses, added message for the Topkapi Palace effect
+		- Revised loading times (on the civ selection screen) in the 500AD scenario for all civs
 
 	Bugfixes:
 		- Fixed strange visibility area for the Ottomans
