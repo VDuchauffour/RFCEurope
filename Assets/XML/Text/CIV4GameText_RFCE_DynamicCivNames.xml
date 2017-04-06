@@ -666,6 +666,15 @@
 		<Spanish>Theme of Paristrion</Spanish>
 		<Portuguese>Theme of Paristrion</Portuguese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUL23</Tag>
+		<English>Voivodeship of Bulgaria</English>
+		<French>Voivodeship of Bulgaria</French>
+		<German>Voivodeship of Bulgaria</German>
+		<Italian>Voivodeship of Bulgaria</Italian>
+		<Spanish>Voivodeship of Bulgaria</Spanish>
+		<Portuguese>Voivodeship of Bulgaria</Portuguese>
+	</TEXT>
 	<!-- Bulgaria -->
 	<!-- Burgundy -->
 	<TEXT>
@@ -911,6 +920,24 @@
 		<Spanish>Kingdom of Arles</Spanish>
 		<Portuguese>Kingdom of Arles</Portuguese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR24</Tag>
+		<English>Voivodeship of Burgundy</English>
+		<French>Voivodeship of Burgundy</French>
+		<German>Voivodeship of Burgundy</German>
+		<Italian>Voivodeship of Burgundy</Italian>
+		<Spanish>Voivodeship of Burgundy</Spanish>
+		<Portuguese>Voivodeship of Burgundy</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BUR25</Tag>
+		<English>Zhupa of Burgundy</English>
+		<French>Zhupa of Burgundy</French>
+		<German>Zhupa of Burgundy</German>
+		<Italian>Zhupa of Burgundy</Italian>
+		<Spanish>Zhupa of Burgundy</Spanish>
+		<Portuguese>Zhupa of Burgundy</Portuguese>
+	</TEXT>
 	<!-- Burgundy -->
 	<!-- Byzantium -->
 	<TEXT>
@@ -943,11 +970,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ03</Tag>
 		<English>Venetokratia</English>
-		<French>Colony of Greece</French>
-		<German>Colony of Greece</German>
-		<Italian>Colony of Greece</Italian>
-		<Spanish>Colony of Greece</Spanish>
-		<Portuguese>Colony of Greece</Portuguese>
+		<French>Venetokratia</French>
+		<German>Venetokratia</German>
+		<Italian>Venetokratia</Italian>
+		<Spanish>Venetokratia</Spanish>
+		<Portuguese>Venetokratia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_BYZ04</Tag>
@@ -1200,6 +1227,33 @@
 		<Italian>Empire of the Greeks</Italian>
 		<Spanish>Empire of the Greeks</Spanish>
 		<Portuguese>Empire of the Greeks</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ28</Tag>
+		<English>Colony of Greece</English>
+		<French>Colony of Greece</French>
+		<German>Colony of Greece</German>
+		<Italian>Colony of Greece</Italian>
+		<Spanish>Colony of Greece</Spanish>
+		<Portuguese>Colony of Greece</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ29</Tag>
+		<English>Voivodeship of Greece</English>
+		<French>Voivodeship of Greece</French>
+		<German>Voivodeship of Greece</German>
+		<Italian>Voivodeship of Greece</Italian>
+		<Spanish>Voivodeship of Greece</Spanish>
+		<Portuguese>Voivodeship of Greece</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_BYZ30</Tag>
+		<English>Zhupa of Greece</English>
+		<French>Zhupa of Greece</French>
+		<German>Zhupa of Greece</German>
+		<Italian>Zhupa of Greece</Italian>
+		<Spanish>Zhupa of Greece</Spanish>
+		<Portuguese>Zhupa of Greece</Portuguese>
 	</TEXT>
 	<!-- Byzantium -->
 	<!-- Cordoba -->
@@ -1776,7 +1830,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT12</Tag>
-		<English>Emirate of the Netherlands</English>
+		<English>Emirate of Hulanda</English>
 		<French>Emirat des Pays-Bas</French>
 		<German>Emirat der Niederlande</German>
 		<Italian>Emirato dei Paesi Bassi</Italian>
@@ -1848,7 +1902,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT20</Tag>
-		<English>Eyalet of Holland</English>
+		<English>Eyalet of Hollanda</English>
 		<French>Principaut&#233; de Hollande</French>
 		<German>Fürstentum Holland</German>
 		<Italian>Principato d'Olanda</Italian>
@@ -2190,6 +2244,15 @@
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_ENG29</Tag>
+		<English>Jarldom of Jórvík</English>
+		<French>Jarldom of Jórvík</French>
+		<German>Jarldom of Jórvík</German>
+		<Italian>Jarldom of Jórvík</Italian>
+		<Spanish>Jarldom of Jórvík</Spanish>
+		<Portuguese>Jarldom of Jórvík</Portuguese>
+	</TEXT>
 	<!-- England -->
 	<!-- France -->
 	<TEXT>
@@ -2461,6 +2524,24 @@
 		<Italian>County of Toulouse</Italian>
 		<Spanish>County of Toulouse</Spanish>
 		<Portuguese>County of Toulouse</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA29</Tag>
+		<English>Voivodeship of France</English>
+		<French>Voivodeship of France</French>
+		<German>Voivodeship of France</German>
+		<Italian>Voivodeship of France</Italian>
+		<Spanish>Voivodeship of France</Spanish>
+		<Portuguese>Voivodeship of France</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_FRA30</Tag>
+		<English>Zhupa of France</English>
+		<French>Zhupa of France</French>
+		<German>Zhupa of France</German>
+		<Italian>Zhupa of France</Italian>
+		<Spanish>Zhupa of France</Spanish>
+		<Portuguese>Zhupa of France</Portuguese>
 	</TEXT>
 	<!-- France -->
 	<!-- Genoa -->
@@ -3061,6 +3142,24 @@
 		<Italian>Mormaerdom of Hungary</Italian>
 		<Spanish>Mormaerdom of Hungary</Spanish>
 		<Portuguese>Mormaerdom of Hungary</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_HUN22</Tag>
+		<English>Voivodeship of Hungary</English>
+		<French>Voivodeship of Hungary</French>
+		<German>Voivodeship of Hungary</German>
+		<Italian>Voivodeship of Hungary</Italian>
+		<Spanish>Voivodeship of Hungary</Spanish>
+		<Portuguese>Voivodeship of Hungary</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_HUN23</Tag>
+		<English>Zhupa of Hungary</English>
+		<French>Zhupa of Hungary</French>
+		<German>Zhupa of Hungary</German>
+		<Italian>Zhupa of Hungary</Italian>
+		<Spanish>Zhupa of Hungary</Spanish>
+		<Portuguese>Zhupa of Hungary</Portuguese>
 	</TEXT>
 	<!-- Hungary -->
 	<!-- Kievan Rus -->
@@ -7141,9 +7240,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SCO07</Tag>
-		<English>Placeholder Error</English>
-		<French>Placeholder Error</French>
-		<German>Placeholder Error</German>
+		<English>Kingdom of Britain</English>
+		<French>Kingdom of Britain</French>
+		<German>Kingdom of Britain</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>
@@ -7186,9 +7285,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SCO12</Tag>
-		<English>Emirate of Scotland</English>
-		<French>Emirate of Scotland</French>
-		<German>Emirate of Scotland</German>
+		<English>Emirate of Asktalanda</English>
+		<French>Emirate of Asktalanda</French>
+		<German>Emirate of Asktalanda</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>

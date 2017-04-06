@@ -10,7 +10,8 @@
 	<ElementType name="ArtDefineTag" content="textOnly"/>
 	<!-- 3Miro Begin Update -->
 	<ElementType name="StartingYear" content="textOnly"/>
-	<ElementType name="LoadingTime" content="textOnly"/>
+	<ElementType name="LoadingTime500" content="textOnly"/>
+	<ElementType name="LoadingTime1200" content="textOnly"/>
 	<ElementType name="UP1" content="textOnly"/>
 	<ElementType name="UP2" content="textOnly"/>
 	<ElementType name="UHV1" content="textOnly"/>
@@ -490,7 +491,8 @@
 		<element type="Civilopedia"/>
 		<!-- 3Miro Begin Update -->
 		<element type="StartingYear"/>
-		<element type="LoadingTime"/>
+		<element type="LoadingTime500"/>
+		<element type="LoadingTime1200"/>
 		<element type="UP1"/>
 		<element type="UP2"/>
 		<element type="UHV1"/>

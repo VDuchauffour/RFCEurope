@@ -9656,8 +9656,10 @@ void CvCivilizationInfo::setArtDefineTag(const TCHAR* szVal)
 // 3MiroCiv: Implementation
 const wchar* CvCivilizationInfo::getStartingYear() const
 {return m_szStartingYear;};
-const wchar* CvCivilizationInfo::getLoadingTime() const
-{return m_szLoadingTime;};
+const wchar* CvCivilizationInfo::getLoadingTime500() const
+{return m_szLoadingTime500;};
+const wchar* CvCivilizationInfo::getLoadingTime1200() const
+{return m_szLoadingTime1200;};
 const wchar* CvCivilizationInfo::getUP1() const
 {return m_szUP1;};
 const wchar* CvCivilizationInfo::getUP2() const
@@ -9826,7 +9828,8 @@ void CvCivilizationInfo::read(FDataStreamBase* stream)
 
 	// 3MiroCIV: New Atts
 	stream->ReadString(m_szStartingYear);
-	stream->ReadString(m_szLoadingTime);
+	stream->ReadString(m_szLoadingTime500);
+	stream->ReadString(m_szLoadingTime1200);
 	stream->ReadString(m_szUP1);
 	stream->ReadString(m_szUP2);
 	stream->ReadString(m_szUHV1);
@@ -9970,7 +9973,8 @@ void CvCivilizationInfo::write(FDataStreamBase* stream)
 
 	// 3MiroCiv: New Atts
 	stream->WriteString(m_szStartingYear);
-	stream->WriteString(m_szLoadingTime);
+	stream->WriteString(m_szLoadingTime500);
+	stream->WriteString(m_szLoadingTime1200);
 	stream->WriteString(m_szUP1);
 	stream->WriteString(m_szUP2);
 	stream->WriteString(m_szUHV1);
@@ -10027,7 +10031,8 @@ bool CvCivilizationInfo::read(CvXMLLoadUtility* pXML)
 
 	// 3MiroCIV: New Civ Attributes
 	pXML->GetChildXmlValByName(m_szStartingYear, "StartingYear");
-	pXML->GetChildXmlValByName(m_szLoadingTime, "LoadingTime");
+	pXML->GetChildXmlValByName(m_szLoadingTime500, "LoadingTime500");
+	pXML->GetChildXmlValByName(m_szLoadingTime1200, "LoadingTime1200");
 	pXML->GetChildXmlValByName(m_szUP1, "UP1");
 	pXML->GetChildXmlValByName(m_szUP2, "UP2");
 	pXML->GetChildXmlValByName(m_szUHV1, "UHV1");

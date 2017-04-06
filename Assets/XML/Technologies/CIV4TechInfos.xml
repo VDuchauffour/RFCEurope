@@ -3172,7 +3172,7 @@
 			<Type>TECH_PROFESSIONAL_ARMY</Type>
 			<Description>TXT_KEY_TECH_PROFESSIONAL_ARMY</Description>
 			<Civilopedia>TXT_KEY_TECH_EU_PROFESSIONAL_ARMY_PEDIA</Civilopedia>
-			<Help>TXT_KEY_TECH_PROFESSIONAL_ARMY_HELP</Help>
+			<Help/>
 			<Strategy>TXT_KEY_TECH_PROFESSIONAL_ARMY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAIWeight>0</iAIWeight>

@@ -2262,8 +2262,10 @@ public:
 	// 3MiroCIV: get new attrs
 	DllExport const wchar* getStartingYear() const;				// Exposed to Python
 	std::wstring pyGetStartingYear() { return getStartingYear(); }				// Exposed to Python
-	DllExport const wchar* getLoadingTime() const;				// Exposed to Python
-	std::wstring pyGetLoadingTime() { return getLoadingTime(); }				// Exposed to Python
+	DllExport const wchar* getLoadingTime500() const;				// Exposed to Python
+	std::wstring pyGetLoadingTime500() { return getLoadingTime500(); }				// Exposed to Python
+	DllExport const wchar* getLoadingTime1200() const;				// Exposed to Python
+	std::wstring pyGetLoadingTime1200() { return getLoadingTime1200(); }				// Exposed to Python
 	DllExport const wchar* getUP1() const;				// Exposed to Python
 	std::wstring pyGetUP1() { return getUP1(); }				// Exposed to Python
 	DllExport const wchar* getUP2() const;				// Exposed to Python
@@ -2327,7 +2329,8 @@ protected:
 
 	// 3MiroCIV: New Civ Attributes
 	CvWString m_szStartingYear;
-	CvWString m_szLoadingTime;
+	CvWString m_szLoadingTime500;
+	CvWString m_szLoadingTime1200;
 	CvWString m_szUP1;
 	CvWString m_szUP2;
 	CvWString m_szUHV1;

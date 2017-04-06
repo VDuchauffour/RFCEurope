@@ -18,12 +18,12 @@
 	<Define>
 		<!-- set to 1 to enable city naming popup on city foundation -->
 		<DefineName>CITY_NAME_POPUP</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
+		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<!-- set to 1 to enable plot coordinates in the plot information tooltip -->
 		<DefineName>PLOT_COORDINATES</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
+		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<!-- set to 1 to enable spawn area display on the map -->
