@@ -989,11 +989,11 @@ class RFCEBalance:
 			iNBLy = con.tNormalAreasTL[iCiv][1]
 			iNTRx = con.tNormalAreasBR[iCiv][0]
 			iNTRy = con.tNormalAreasBR[iCiv][1]
-			iCCE = len( con.tExceptions[iCiv] )
+			iCCE = len( con.lExtraPlots[iCiv] )
 			iCNE = len( con.tNormalAreasSubtract[iCiv] )
 			gc.setCoreNormal( iCiv, iCBLx, iCBLy, iCTRx, iCTRy, iNBLx, iNBLy, iNTRx, iNTRy, iCCE, iCNE )
 			for iEx in range( iCCE ):
-				gc.addCoreException( iCiv, con.tExceptions[iCiv][iEx][0], con.tExceptions[iCiv][iEx][1] )
+				gc.addCoreException( iCiv, con.lExtraPlots[iCiv][iEx][0], con.lExtraPlots[iCiv][iEx][1] )
 			for iEx in range( iCNE ):
 				gc.addNormalException( iCiv, con.tNormalAreasSubtract[iCiv][iEx][0], con.tNormalAreasSubtract[iCiv][iEx][1] )
 

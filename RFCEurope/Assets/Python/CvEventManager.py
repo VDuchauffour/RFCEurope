@@ -965,31 +965,29 @@ class CvEventManager:
 			%(owner.getID(), owner.getCivilizationName(), city.getName(), razor.getID(), razor.getCivilizationName()))
 
 		# Absinthe: wonder destroyed message start
-		NumWonders = city.getNumWorldWonders
-		if NumWonders() > 0:
-			for iWonder in range(xml.iBeginWonders, xml.iEndWonders):
-				if city.getNumBuilding(iWonder) > 0:
-					actualbuilding = gc.getBuildingInfo(iWonder)
-					ConquerPlayer = gc.getPlayer(city.getOwner())
-					ConquerTeam = ConquerPlayer.getTeam()
-					ConquerName = ConquerPlayer.getCivilizationDescriptionKey()
-					if city.getPreviousOwner() != -1:
-						PreviousPlayer = gc.getPlayer(city.getPreviousOwner())
-						PreviousTeam = PreviousPlayer.getTeam()
-						PreviousName = PreviousPlayer.getCivilizationDescriptionKey()
-					HumanPlayer = gc.getPlayer(utils.getHumanID())
-					HumanTeam = gc.getTeam(HumanPlayer.getTeam())
-					WonderName = actualbuilding.getDescription()
-					iX = city.getX()
-					iY = city.getY()
-					if ConquerPlayer.isHuman():
-						CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_DESTROYED_1", (WonderName, "1")), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(iWonder).getButton(), ColorTypes(con.iLightRed), iX, iY, True, True)
-					else:
-						if HumanTeam.isHasMet(ConquerTeam) and utils.isActive(utils.getHumanID()):
-							CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_DESTROYED_2", (ConquerName, WonderName)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(iWonder).getButton(), ColorTypes(con.iLightRed), iX, iY, True, True)
-						else:
-							if HumanTeam.isHasMet(PreviousTeam) and utils.isActive(utils.getHumanID()):
-								CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_DESTROYED_3", (PreviousName, WonderName)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(iWonder).getButton(), ColorTypes(con.iLightRed), iX, iY, True, True)
+		if city.getNumWorldWonders() > 0:
+			ConquerPlayer = gc.getPlayer(city.getOwner())
+			ConquerTeam = ConquerPlayer.getTeam()
+			if city.getPreviousOwner() != -1:
+				PreviousPlayer = gc.getPlayer(city.getPreviousOwner())
+				PreviousTeam = PreviousPlayer.getTeam()
+			iHuman = utils.getHumanID()
+			HumanPlayer = gc.getPlayer(iHuman)
+			HumanTeam = gc.getTeam(HumanPlayer.getTeam())
+			if ConquerPlayer.isHuman() or (utils.isActive(iHuman) and (HumanTeam.isHasMet(ConquerTeam) or HumanTeam.isHasMet(PreviousTeam))):
+				iX = city.getX()
+				iY = city.getY()
+				for iWonder in range(xml.iBeginWonders, xml.iEndWonders):
+					if city.getNumBuilding(iWonder) > 0:
+						sWonderName = gc.getBuildingInfo(iWonder).getDescription()
+						if ConquerPlayer.isHuman():
+							CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_CAPTURED_1", (sWonderName,"1")), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(iWonder).getButton(), ColorTypes(con.iBlue), iX, iY, True, True)
+						elif HumanTeam.isHasMet(ConquerTeam):
+							ConquerName = ConquerPlayer.getCivilizationDescriptionKey()
+							CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_CAPTURED_2", (ConquerName, sWonderName)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(iWonder).getButton(), ColorTypes(con.iCyan), iX, iY, True, True)
+						elif HumanTeam.isHasMet(PreviousTeam):
+							PreviousName = PreviousPlayer.getCivilizationDescriptionKey()
+							CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_CAPTURED_3", (PreviousName, sWonderName)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(iWonder).getButton(), ColorTypes(con.iCyan), iX, iY, True, True)
 		# Absinthe - wonder destroyed message end
 
 		# Absinthe: Partisans! - not used currently
@@ -1010,34 +1008,32 @@ class CvEventManager:
 
 	def onCityAcquiredAndKept(self, argsList):
 		'City Acquired and Kept'
-		iOwner,pCity = argsList
+		iOwner, pCity = argsList
 
 		# Absinthe: wonder captured message start
-		NumWonders = pCity.getNumWorldWonders
-		if NumWonders() > 0:
-			for iWonder in range(xml.iBeginWonders, xml.iEndWonders):
-				if pCity.getNumBuilding(iWonder) > 0:
-					actualbuilding = gc.getBuildingInfo(iWonder)
-					ConquerPlayer = gc.getPlayer(pCity.getOwner())
-					ConquerTeam = ConquerPlayer.getTeam()
-					ConquerName = ConquerPlayer.getCivilizationDescriptionKey()
-					if pCity.getPreviousOwner() != -1:
-						PreviousPlayer = gc.getPlayer(pCity.getPreviousOwner())
-						PreviousTeam = PreviousPlayer.getTeam()
-						PreviousName = PreviousPlayer.getCivilizationDescriptionKey()
-					HumanPlayer = gc.getPlayer(utils.getHumanID())
-					HumanTeam = gc.getTeam(HumanPlayer.getTeam())
-					WonderName = actualbuilding.getDescription()
-					iX = pCity.getX()
-					iY = pCity.getY()
-					if ConquerPlayer.isHuman():
-						CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_CAPTURED_1", (WonderName,"1")), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(iWonder).getButton(), ColorTypes(con.iBlue), iX, iY, True, True)
-					else:
-						if HumanTeam.isHasMet(ConquerTeam) and utils.isActive(utils.getHumanID()):
-							CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_CAPTURED_2", (ConquerName,WonderName)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(iWonder).getButton(), ColorTypes(con.iCyan), iX, iY, True, True)
-						else:
-							if HumanTeam.isHasMet(PreviousTeam) and utils.isActive(utils.getHumanID()):
-								CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_CAPTURED_3", (PreviousName,WonderName)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(iWonder).getButton(), ColorTypes(con.iCyan), iX, iY, True, True)
+		if pCity.getNumWorldWonders() > 0:
+			ConquerPlayer = gc.getPlayer(pCity.getOwner())
+			ConquerTeam = ConquerPlayer.getTeam()
+			if pCity.getPreviousOwner() != -1:
+				PreviousPlayer = gc.getPlayer(pCity.getPreviousOwner())
+				PreviousTeam = PreviousPlayer.getTeam()
+			iHuman = utils.getHumanID()
+			HumanPlayer = gc.getPlayer(iHuman)
+			HumanTeam = gc.getTeam(HumanPlayer.getTeam())
+			if ConquerPlayer.isHuman() or (utils.isActive(iHuman) and (HumanTeam.isHasMet(ConquerTeam) or HumanTeam.isHasMet(PreviousTeam))):
+				iX = pCity.getX()
+				iY = pCity.getY()
+				for iWonder in range(xml.iBeginWonders, xml.iEndWonders):
+					if pCity.getNumBuilding(iWonder) > 0:
+						sWonderName = gc.getBuildingInfo(iWonder).getDescription()
+						if ConquerPlayer.isHuman():
+							CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_CAPTURED_1", (sWonderName,"1")), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(iWonder).getButton(), ColorTypes(con.iBlue), iX, iY, True, True)
+						elif HumanTeam.isHasMet(ConquerTeam):
+							ConquerName = ConquerPlayer.getCivilizationDescriptionKey()
+							CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_CAPTURED_2", (ConquerName, sWonderName)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(iWonder).getButton(), ColorTypes(con.iCyan), iX, iY, True, True)
+						elif HumanTeam.isHasMet(PreviousTeam):
+							PreviousName = PreviousPlayer.getCivilizationDescriptionKey()
+							CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_CAPTURED_3", (PreviousName, sWonderName)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(iWonder).getButton(), ColorTypes(con.iCyan), iX, iY, True, True)
 		# Absinthe - wonder captured message end
 
 		CvUtil.pyPrint('City Acquired and Kept Event: %s' %(pCity.getName()))
