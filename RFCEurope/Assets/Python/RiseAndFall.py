@@ -1509,10 +1509,10 @@ class RiseAndFall:
 ##			tDestination = (-1, -1)
 ##			plotList = []
 ##			if unit.getDomainType() == DomainTypes.DOMAIN_LAND:
-##				dummy, plotList = utils.squareSearch( (tCapitalX-3, tCapitalY-3), (tCapitalX+4, tCapitalY+4), utils.goodPlots, [] )
-##				#dummy, plotList = utils.squareSearch( (tCapitalX-3, tCapitalY-3), (tCapitalX+4, tCapitalY+4), utils.goodOwnedPlots, [] )
+##				plotList = utils.squareSearch( (tCapitalX-3, tCapitalY-3), (tCapitalX+4, tCapitalY+4), utils.goodPlots, [] )
+##				#plotList = utils.squareSearch( (tCapitalX-3, tCapitalY-3), (tCapitalX+4, tCapitalY+4), utils.goodOwnedPlots, [] )
 ##			else: #sea unit
-##				dummy, plotList = utils.squareSearch( (tCapitalX-3, tCapitalY-3), (tCapitalX+4, tCapitalY+4), utils.goodOwnedPlots, [] )
+##				plotList = utils.squareSearch( (tCapitalX-3, tCapitalY-3), (tCapitalX+4, tCapitalY+4), utils.goodOwnedPlots, [] )
 ##
 ##			if plotList:
 ##				tPlot = utils.getRandomEntry(plotList)
@@ -1591,7 +1591,7 @@ class RiseAndFall:
 ##					iFlipsDelay = self.getFlipsDelay(iCiv) + 2
 ##					#utils.debugTextPopup( 'birthInFreeRegion in starting location' )
 ##				else: #search another place
-##					dummy, plotList = utils.squareSearch( tTopLeft, tBottomRight, utils.goodPlots, [] )
+##					plotList = utils.squareSearch( tTopLeft, tBottomRight, utils.goodPlots, [] )
 ##					if plotList:
 ##						tPlot = utils.getRandomEntry(plotList)
 ##						self.createStartingUnits(iCiv, tPlot)
@@ -1695,7 +1695,7 @@ class RiseAndFall:
 			# Absinthe: there is an issue that core area are not calculated correctly for flips, as the additional tiles in lExtraPlots are not checked here
 			#			so if all flipped cities are outside of the core area (they are in the "exceptions"), the civ will start without it's starting units and techs
 			print ("tTopLeft, tBottomRight", tTopLeft, tBottomRight)
-			dummy1, plotList = utils.squareSearch( tTopLeft, tBottomRight, utils.ownedCityPlots, iCiv )
+			plotList = utils.squareSearch( tTopLeft, tBottomRight, utils.ownedCityPlots, iCiv )
 			print ("plotList", plotList)
 			# Absinthe: add the exception plots
 			for tPlot in lExtraPlots[iCiv]:
@@ -1721,7 +1721,7 @@ class RiseAndFall:
 		else: #search another place
 			# Absinthe: there is an issue that core area are not calculated correctly for flips, as the additional tiles in lExtraPlots are not checked here
 			#			so if all flipped cities are outside of the core area (they are in the "exceptions"), the civ will start without it's starting units and techs
-			dummy, plotList = utils.squareSearch( tTopLeft, tBottomRight, utils.goodPlots, [] )
+			plotList = utils.squareSearch( tTopLeft, tBottomRight, utils.goodPlots, [] )
 			# Absinthe: add the exception plots
 			for tPlot in lExtraPlots[iCiv]:
 				plot = gc.getMap().plot( tPlot[0], tPlot[1] )
@@ -1739,7 +1739,7 @@ class RiseAndFall:
 				utils.setPlagueCountdown(iCiv, -con.iImmunity)
 				utils.clearPlague(iCiv)
 			else:
-				dummy1, plotList = utils.squareSearch( tBroaderTopLeft, tBroaderBottomRight, utils.goodPlots, [] )
+				plotList = utils.squareSearch( tBroaderTopLeft, tBroaderBottomRight, utils.goodPlots, [] )
 				if plotList:
 					tPlot = utils.getRandomEntry(plotList)
 					self.createStartingUnits(iCiv, tPlot)
@@ -1956,7 +1956,7 @@ class RiseAndFall:
 
 	def initMinorBetrayal( self, iCiv ):
 		iHuman = utils.getHumanID()
-		dummy, plotList = utils.squareSearch( tCoreAreasTL[iCiv], tCoreAreasBR[iCiv], utils.outerInvasion, [] )
+		plotList = utils.squareSearch( tCoreAreasTL[iCiv], tCoreAreasBR[iCiv], utils.outerInvasion, [] )
 		if plotList:
 			tPlot = utils.getRandomEntry(plotList)
 			self.createAdditionalUnits(iCiv, tPlot)
@@ -1966,11 +1966,11 @@ class RiseAndFall:
 	def initBetrayal( self ):
 		iHuman = utils.getHumanID()
 		turnsLeft = self.getBetrayalTurns()
-		dummy, plotList = utils.squareSearch( self.getTempTopLeft(), self.getTempBottomRight(), utils.outerInvasion, [] )
+		plotList = utils.squareSearch( self.getTempTopLeft(), self.getTempBottomRight(), utils.outerInvasion, [] )
 		if not plotList:
-			dummy, plotList = utils.squareSearch( self.getTempTopLeft(), self.getTempBottomRight(), utils.innerSpawn, [self.getOldCivFlip(), self.getNewCivFlip()] )
+			plotList = utils.squareSearch( self.getTempTopLeft(), self.getTempBottomRight(), utils.innerSpawn, [self.getOldCivFlip(), self.getNewCivFlip()] )
 		if not plotList:
-			dummy, plotList = utils.squareSearch( self.getTempTopLeft(), self.getTempBottomRight(), utils.innerInvasion, [self.getOldCivFlip(), self.getNewCivFlip()] )
+			plotList = utils.squareSearch( self.getTempTopLeft(), self.getTempBottomRight(), utils.innerInvasion, [self.getOldCivFlip(), self.getNewCivFlip()] )
 		if plotList:
 			tPlot = utils.getRandomEntry(plotList)
 			if turnsLeft == iBetrayalPeriod:

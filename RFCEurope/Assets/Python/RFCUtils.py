@@ -873,211 +873,118 @@ class RFCUtils:
 		return -1
 
 
-	#Barbs, RiseAndFall
 	def squareSearch( self, tTopLeft, tBottomRight, function, argsList ): #by LOQ
 		"""Searches all tile in the square from tTopLeft to tBottomRight and calls function for
-		every tile, passing argsList. The function called must return a tuple: (1) a result, (2) if
-		a plot should be painted and (3) if the search should continue."""
+		every tile, passing argsList."""
 		tPaintedList = []
-		result = None
-		for x in range(tTopLeft[0], tBottomRight[0]+1):
-			for y in range(tTopLeft[1], tBottomRight[1]+1):
-				result, bPaintPlot, bContinueSearch = function((x, y), result, argsList)
-				if bPaintPlot:				# paint plot
-					tPaintedList.append((x, y))
-				if not bContinueSearch:		# goal reached, so stop
-					return result, tPaintedList
-		return result, tPaintedList
+		for tPlot in self.getPlotList(tTopLeft, tBottomRight):
+			bPaintPlot = function(tPlot, argsList)
+			if bPaintPlot:
+				tPaintedList.append(tPlot)
+		return tPaintedList
 
-	#Barbs, RiseAndFall
-	def outerInvasion( self, tCoords, result, argsList ):
-		"""Checks validity of the plot at the current tCoords, returns plot if valid (which stops the search).
-		Plot is valid if it's hill or flatlands, it isn't marsh or jungle, it isn't occupied by a unit or city and if it isn't a civ's territory"""
-		bPaint = True
-		bContinue = True
+	def landInvasion(self, tCoords, bOuter, argsList):
 		pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
-		if ( pCurrent.isHills() or pCurrent.isFlatlands() ):
-			if (pCurrent.getFeatureType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
-				if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
-					if (pCurrent.countTotalCulture() == 0 ):
-						# this is a good plot, so paint it and continue search
-						return (None, bPaint, bContinue)
-		# not a good plot, so don't paint it but continue search
-		return (None, not bPaint, bContinue)
+		if pCurrent.isHills() or pCurrent.isFlatlands():
+			if pCurrent.getFeatureType() not in [xml.iMarsh, xml.iJungle]:
+				if not pCurrent.isCity() and not pCurrent.isUnit():
+					if not (bOuter and pCurrent.countTotalCulture() != 0):
+						return True
+		return False
+	
+	def outerInvasion( self, tCoords, argsList ):
+		"""Plot is valid if it's hill or flatlands, it isn't marsh or jungle, it isn't occupied by a unit or city and if it isn't a civ's territory"""
+		return self.landInvasion(tCoords, True, argsList)
+		
+	def innerInvasion( self, tCoords, argsList ):
+		"""Plot is valid if it's hill or flatlands, it isn't marsh or jungle, it isn't occupied by a unit or city"""
+		return self.landInvasion(tCoords, False, argsList)
 
-	def forcedInvasion( self, tCoords, result, argsList ):
-		"""Checks validity of the plot at the current tCoords, returns plot if valid (which stops the search).
-		Plot is valid if it's hill or flatlands, it isn't marsh or jungle, and it isn't occupied by a unit or city"""
-		bPaint = True
-		bContinue = True
+	def forcedInvasion( self, tCoords, argsList ):
+		"""Plot is valid if it's hill or flatlands, it isn't marsh or jungle, and it isn't occupied by a unit or city"""
 		pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
-		if ( pCurrent.isHills() or pCurrent.isFlatlands() ):
-			if (pCurrent.getFeatureType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
-				if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
-					#if (pCurrent.countTotalCulture() == 0 ):
-					 # this is a good plot, so paint it and continue search
-					 return (None, bPaint, bContinue)
-		# not a good plot, so don't paint it but continue search
-		return (None, not bPaint, bContinue)
+		if pCurrent.isHills() or pCurrent.isFlatlands():
+			if pCurrent.getFeatureType() not in [xml.iMarsh, xml.iJungle]:
+				if not pCurrent.isCity() and not pCurrent.isUnit():
+					 return True
+		return False
 
-	#Barbs
-	def innerSeaSpawn( self, tCoords, result, argsList ):
-		"""Checks validity of the plot at the current tCoords, returns plot if valid (which stops the search).
-		Plot is valid if it's water and it isn't occupied by any unit. Unit check extended to adjacent plots"""
-		bPaint = True
-		bContinue = True
+	def seaSpawn(self, tCoords, bOuter, argsList):
 		pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
-		if ( pCurrent.isWater()) and (pCurrent.getTerrainType() == xml.iTerrainCoast):
-			if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
-				iClean = 0
-				for x in range(tCoords[0] - 1, tCoords[0] + 2):				# from x-1 to x+1
-					for y in range(tCoords[1] - 1, tCoords[1] + 2):		# from y-1 to y+1
-						if (pCurrent.getNumUnits() != 0):
-							iClean += 1
-				if ( iClean == 0 ):
-					# this is a good plot, so paint it and continue search
-					return (None, bPaint, bContinue)
-		# not a good plot, so don't paint it but continue search
-		return (None, not bPaint, bContinue)
+		if pCurrent.isWater() and pCurrent.getTerrainType() == xml.iTerrainCoast:
+			if not pCurrent.isCity() and not pCurrent.isUnit():
+				if not (bOuter and pCurrent.countTotalCulture() != 0):
+					for (x, y) in self.surroundingPlots(tCoords):
+						if gc.getMap().plot(x, y).isUnit():
+							return False
+					return True
+		return False
+	
+	def innerSeaSpawn( self, tCoords, argsList ):
+		"""Plot is valid if it's water and it isn't occupied by any unit. Unit check extended to adjacent plots"""
+		return self.seaSpawn(tCoords, False, argsList)
 
-	#Barbs
-	def outerSeaSpawn( self, tCoords, result, argsList ):
-		"""Checks validity of the plot at the current tCoords, returns plot if valid (which stops the search).
-		Plot is valid if it's water and it isn't occupied by any unit and if it isn't a civ's territory. Unit check extended to adjacent plots"""
-		bPaint = True
-		bContinue = True
+	def outerSeaSpawn( self, tCoords, argsList ):
+		"""Plot is valid if it's water and it isn't occupied by any unit and if it isn't a civ's territory. Unit check extended to adjacent plots"""
+		return self.seaSpawn(tCoords, True, argsList)
+
+	def landSpawn(self, tCoords, bOuter, argsList):
 		pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
-		if ( pCurrent.isWater()) and (pCurrent.getTerrainType() == xml.iTerrainCoast):
-			if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
-				if (pCurrent.countTotalCulture() == 0 ):
-					iClean = 0
-					for x in range(tCoords[0] - 1, tCoords[0] + 2):				# from x-1 to x+1
-						for y in range(tCoords[1] - 1, tCoords[1] + 2):		# from y-1 to y+1
-							if (pCurrent.getNumUnits() != 0):
-								iClean += 1
-					if ( iClean == 0 ):
-						# this is a good plot, so paint it and continue search
-						return (None, bPaint, bContinue)
-		# not a good plot, so don't paint it but continue search
-		return (None, not bPaint, bContinue)
+		if pCurrent.isHills() or pCurrent.isFlatlands():
+			if pCurrent.getFeatureType() not in [xml.iMarsh, xml.iJungle]:
+				if not pCurrent.isCity() and not pCurrent.isUnit():
+					if not (bOuter and pCurrent.countTotalCulture() != 0):
+						for (x, y) in self.surroundingPlots(tCoords):
+							if gc.getMap().plot(x, y).isUnit():
+								return False
+						return True
+		return False
 
-	#Barbs
-	def outerSpawn( self, tCoords, result, argsList ):
-		"""Checks validity of the plot at the current tCoords, returns plot if valid (which stops the search).
-		Plot is valid if it's hill or flatlands, it isn't marsh or jungle, it isn't occupied by a unit or city and if it isn't a civ's territory.
+	def outerSpawn( self, tCoords, argsList ):
+		"""Plot is valid if it's hill or flatlands, it isn't marsh or jungle, it isn't occupied by a unit or city and if it isn't a civ's territory.
 		Unit check extended to adjacent plots"""
-		bPaint = True
-		bContinue = True
-		pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
-		if ( pCurrent.isHills() or pCurrent.isFlatlands() ):
-			if (pCurrent.getFeatureType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
-				if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
-					iClean = 0
-					for x in range(tCoords[0] - 1, tCoords[0] + 2):				# from x-1 to x+1
-						for y in range(tCoords[1] - 1, tCoords[1] + 2):		# from y-1 to y+1
-							if (pCurrent.getNumUnits() != 0):
-								iClean += 1
-					if ( iClean == 0 ):
-						if (pCurrent.countTotalCulture() == 0 ):
-							# this is a good plot, so paint it and continue search
-							return (None, bPaint, bContinue)
-		# not a good plot, so don't paint it but continue search
-		return (None, not bPaint, bContinue)
+		return landSpawn(tCoords, True, argsList)
 
-	#RiseAndFall
-	def innerInvasion( self, tCoords, result, argsList ):
-		"""Checks validity of the plot at the current tCoords, returns plot if valid (which stops the search).
-		Plot is valid if it's hill or flatlands, it isn't marsh or jungle, it isn't occupied by a unit or city and if it isn't a civ's territory"""
-		bPaint = True
-		bContinue = True
-		pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
-		if ( pCurrent.isHills() or pCurrent.isFlatlands() ):
-			if (pCurrent.getFeatureType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
-				if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
-						# this is a good plot, so paint it and continue search
-						return (None, bPaint, bContinue)
-		# not a good plot, so don't paint it but continue search
-		return (None, not bPaint, bContinue)
+	def innerSpawn( self, tCoords, argsList ):
+		"""Plot is valid if it's hill or flatlands, it isn't marsh or jungle, it isn't occupied by a unit or city and if it isn't a civ's territory"""
+		return landSpawn(tCoords, False, argsList)
 
-	def innerSpawn( self, tCoords, result, argsList ):
-		"""Checks validity of the plot at the current tCoords, returns plot if valid (which stops the search).
-		Plot is valid if it's hill or flatlands, it isn't marsh or jungle, it isn't occupied by a unit or city and if it isn't a civ's territory"""
-		bPaint = True
-		bContinue = True
-		pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
-		if ( pCurrent.isHills() or pCurrent.isFlatlands() ):
-			if (pCurrent.getFeatureType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
-				if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
-					iClean = 0
-					for x in range(tCoords[0] - 1, tCoords[0] + 2):				# from x-1 to x+1
-						for y in range(tCoords[1] - 1, tCoords[1] + 2):		# from y-1 to y+1
-							if (pCurrent.getNumUnits() != 0):
-								iClean += 1
-					if ( iClean == 0 ):
-						if (pCurrent.getOwner() in argsList ):
-							# this is a good plot, so paint it and continue search
-							return (None, bPaint, bContinue)
-		# not a good plot, so don't paint it but continue search
-		return (None, not bPaint, bContinue)
-
-	#RiseAndFall
-	def goodPlots( self, tCoords, result, argsList ):
-		"""Checks validity of the plot at the current tCoords, returns plot if valid (which stops the search).
-		Plot is valid if it's hill or flatlands, it isn't desert, tundra, marsh or jungle; it isn't occupied by a unit or city and if it isn't a civ's territory.
+	def goodPlots( self, tCoords, argsList ):
+		"""Plot is valid if it's hill or flatlands, it isn't desert, tundra, marsh or jungle; it isn't occupied by a unit or city and if it isn't a civ's territory.
 		Unit check extended to adjacent plots"""
-		bPaint = True
-		bContinue = True
 		pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
-		if ( pCurrent.isHills() or pCurrent.isFlatlands() ):
-			if ( not pCurrent.isImpassable()):
-				if ( not pCurrent.isUnit() ):
-					if (pCurrent.getTerrainType() != xml.iTerrainDesert) and (pCurrent.getTerrainType() != xml.iTerrainTundra) and (pCurrent.getFeatureType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
-						if (pCurrent.countTotalCulture() == 0 ):
-							# this is a good plot, so paint it and continue search
-							return (None, bPaint, bContinue)
-		# not a good plot, so don't paint it but continue search
-		return (None, not bPaint, bContinue)
+		if pCurrent.isHills() or pCurrent.isFlatlands():
+			if not pCurrent.isImpassable():
+				if not pCurrent.isUnit():
+					if pCurrent.getTerrainType() not in [xml.iTerrainDesert, xml.iTerrainTundra] and pCurrent.getFeatureType() not in [xml.iMarsh, xml.iJungle]:
+						if pCurrent.countTotalCulture() == 0:
+							return True
+		return False
 
-	#RiseAndFall
-	def ownedCityPlots( self, tCoords, result, argsList ):
-		"""Checks validity of the plot at the current tCoords, returns plot if valid (which stops the search).
-		Plot is valid if it contains a city belonging to the civ"""
-		bPaint = True
-		bContinue = True
+	def ownedCityPlots( self, tCoords, argsList ):
+		"""Plot is valid if it contains a city belonging to the civ"""
 		pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
-		if (pCurrent.getOwner() == argsList ):
-			if (pCurrent.isCity()):
-				# this is a good plot, so paint it and continue search
-				return (None, bPaint, bContinue)
-		# not a good plot, so don't paint it but continue search
-		return (None, not bPaint, bContinue)
+		if pCurrent.getOwner() == argsList:
+			if pCurrent.isCity():
+				return True
+		return False
 
-	def ownedPlots( self, tCoords, result, argsList ):
-		"""Checks validity of the plot at the current tCoords, returns plot if valid (which stops the search).
-		Plot is valid if it is in civ's territory."""
-		bPaint = True
-		bContinue = True
+	def ownedPlots( self, tCoords, argsList ):
+		"""Plot is valid if it is in civ's territory."""
 		pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
-		if (pCurrent.getOwner() == argsList ):
-			# this is a good plot, so paint it and continue search
-			return (None, bPaint, bContinue)
-		# not a good plot, so don't paint it but continue search
-		return (None, not bPaint, bContinue)
+		if pCurrent.getOwner() == argsList:
+			return True
+		return False
 
-	def goodOwnedPlots( self, tCoords, result, argsList ):
-		"""Checks validity of the plot at the current tCoords, returns plot if valid (which stops the search).
-		Plot is valid if it's hill or flatlands; it isn't marsh or jungle, it isn't occupied by a unit and if it is in civ's territory."""
-		bPaint = True
-		bContinue = True
+	def goodOwnedPlots( self, tCoords, argsList ):
+		"""Plot is valid if it's hill or flatlands; it isn't marsh or jungle, it isn't occupied by a unit and if it is in civ's territory."""
 		pCurrent = gc.getMap().plot( tCoords[0], tCoords[1] )
-		if ( pCurrent.isHills() or pCurrent.isFlatlands() ):
-			if (pCurrent.getFeatureType() != xml.iMarsh) and (pCurrent.getFeatureType() != xml.iJungle):
-				if ( not pCurrent.isCity() and not pCurrent.isUnit() ):
-						if (pCurrent.getOwner() == argsList ):
-							# this is a good plot, so paint it and continue search
-							return (None, bPaint, bContinue)
-		# not a good plot, so don't paint it but continue search
-		return (None, not bPaint, bContinue)
+		if pCurrent.isHills() or pCurrent.isFlatlands():
+			if pCurrent.getFeatureType() not in [xml.iMarsh, xml.iJungle]:
+				if not pCurrent.isCity() and not pCurrent.isUnit():
+					if pCurrent.getOwner() == argsList:
+						return True
+		return False
 
 	def collapseImmune( self, iCiv ):
 		#3MiroUP: Emperor

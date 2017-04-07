@@ -678,7 +678,7 @@ class Barbs:
 
 	def spawnUnits(self, iCiv, tTopLeft, tBottomRight, iUnitType, iNumUnits, iTurn, iPeriod, iRest, function, iForceAttack, szName):
 		if (iTurn % iPeriod) == iRest:
-			dummy, plotList = utils.squareSearch( tTopLeft, tBottomRight, function, [] )
+			plotList = utils.squareSearch( tTopLeft, tBottomRight, function, [] )
 			if plotList:
 				tPlot = utils.getRandomEntry(plotList)
 				if tPlot:
@@ -688,7 +688,7 @@ class Barbs:
 	#This is just a clone of spawnUnits but attempting to put a boat under them
 	def spawnVikings(self, iCiv, tTopLeft, tBottomRight, iUnitType, iNumUnits, iTurn, iPeriod, iRest, function, iForceAttack, szName):
 		if (iTurn % iPeriod) == iRest:
-			dummy, plotList = utils.squareSearch( tTopLeft, tBottomRight, function, [] )
+			plotList = utils.squareSearch( tTopLeft, tBottomRight, function, [] )
 			if plotList:
 				tPlot = utils.getRandomEntry(plotList)
 				if tPlot:
@@ -701,7 +701,7 @@ class Barbs:
 
 	def spawnPirate(self, iCiv, tTopLeft, tBottomRight, iShipType, iNumShips, iFighterType, iNumFighters, iTurn, iPeriod, iRest, function, iForceAttack, szName):
 		if (iTurn % iPeriod) == iRest:
-			dummy, plotList = utils.squareSearch( tTopLeft, tBottomRight, function, [] )
+			plotList = utils.squareSearch( tTopLeft, tBottomRight, function, [] )
 			if plotList:
 				tPlot = utils.getRandomEntry(plotList)
 				if tPlot:
