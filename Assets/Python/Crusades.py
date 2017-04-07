@@ -602,7 +602,7 @@ class Crusades:
 			return 66
 		if iUnitType in [xml.iTemplar, xml.iTeutonic, xml.iKnightofStJohns, xml.iCalatravaKnight, xml.iDragonKnight]:
 			return 90
-		if iUnitType < xml.iArcher or iUnitType > xml.iFieldArtillery: # Workers, Executives, Missionaries, Sea Units and Mercenaries do not go
+		if iUnitType <= xml.iIslamicMissionary or iUnitType >= xml.iWorkboat: # Workers, Executives, Missionaries, Sea Units and Mercenaries do not go
 			return -1
 		return 50
 
@@ -1061,6 +1061,8 @@ class Crusades:
 			return
 		if iGameTurn % 5 != gc.getGame().getSorenRandNum(5, 'roll to see if we should DC'): # otherwise every turn gets too much to check
 			return
+		if gc.getGame().getSorenRandNum(3, 'Random entry') == 0: # 33% chance for no DC
+			return
 		#print(" DC Check")
 		lPotentials = [iPlayer for iPlayer in range(con.iNumPlayers-1) if self.canDC(iPlayer, iGameTurn)] # exclude the Pope
 		if lPotentials:
@@ -1075,7 +1077,7 @@ class Crusades:
 				iCatholicFaith += 3 * max(0, pPope.AI_getAttitude(iPlayer))
 				if iCatholicFaith > 0:
 					lWeightValues.append((iPlayer, iCatholicFaith))
-			iChosenPlayer = utils.getRandomByWeight(lWeightValues, 33) # there is 33% chance that no civ is selected, so only 2/3 chance for an actual DC
+			iChosenPlayer = utils.getRandomByWeight(lWeightValues)
 			if iChosenPlayer != -1:
 				#print(" DC Chosen ", iChosenPlayer)
 				if iChosenPlayer == utils.getHumanID():

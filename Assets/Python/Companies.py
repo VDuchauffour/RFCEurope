@@ -80,7 +80,7 @@ class Companies:
 				iMaxCompanies += 2
 		# increased limit for Hansa after their first general Diet in 1356
 		if iCompany == iHansa:
-			if (iGameTurn > xml.i1356AD and iGameTurn < tCompaniesDeath[iCompany]):
+			if xml.i1356AD < iGameTurn < tCompaniesDeath[iCompany]:
 				iMaxCompanies += 3
 
 		# loop through all cities, check the company value for each and add the good ones to a list of tuples (city, value)
@@ -90,9 +90,9 @@ class Companies:
 				iValue = self.getCityValue(city, iCompany)
 				if iValue > 0:
 					sCityName = city.getName()
-					bPresent = 0
+					bPresent = False
 					if city.isHasCorporation(iCompany):
-						bPresent = 1
+						bPresent = True
 					print ("Company value:", sCityName, iCompany, iValue, bPresent)
 					cityValueList.append((city, iValue * 10 + gc.getGame().getSorenRandNum(10, 'random bonus')))
 				elif city.isHasCorporation(iCompany): # remove company from cities with a negative value
@@ -114,11 +114,10 @@ class Companies:
 
 		# spread the company
 		for i in range(len(cityValueList)):
-			city = cityValueList[i][0]
-			iValue = cityValueList[i][1]
+			city, iValue = cityValueList[i]
 			if city.isHasCorporation(iCompany):
 				continue
-			if (iCompanyCount >= iMaxCompanies and i >= iMaxCompanies): # the goal is to spread the company to the first iMaxCompanies number of cities
+			if i >= iMaxCompanies: # the goal is to spread the company to the first iMaxCompanies number of cities
 				break
 			city.setHasCorporation(iCompany, True, True, True)
 			city.setHasRealBuilding(lCompanyBuilding[iCompany], True)
@@ -136,9 +135,7 @@ class Companies:
 
 		# if the limit was exceeded, remove company from it's worst city
 		if iCompanyCount > iMaxCompanies:
-			for i in range(len(cityValueList) - 1, iMaxCompanies - 1 , -1): # loop backwards in the ordered list
-				city = cityValueList[i][0]
-				iValue = cityValueList[i][1]
+			for (city, iValue) in reversed(cityValueList): # loop backwards in the ordered list
 				if city.isHasCorporation(iCompany):
 					city.setHasCorporation(iCompany, False, True, True)
 					city.setHasRealBuilding(lCompanyBuilding[iCompany], False)
@@ -309,7 +306,7 @@ class Companies:
 				iValue -= 1
 
 		# faith points of the population
-		if (iCompany == iHospitallers or iCompany == iTemplars or iCompany == iTeutons or iCompany == iCalatrava):
+		if iCompany in [iHospitallers, iTemplars, iTeutons, iCalatrava]:
 			#print ("faith points:", city.getOwner(), owner.getFaith())
 			if owner.getFaith() >= 50:
 				iValue += 3
@@ -319,7 +316,7 @@ class Companies:
 				iValue += 1
 
 		# city size
-		if (iCompany == iHansa or iCompany == iDragon or iCompany == iMedici or iCompany == iAugsburg or iCompany == iStGeorge):
+		if iCompany in [iHansa, iDragon, iMedici, iAugsburg, iStGeorge]:
 			if city.getPopulation() > 9:
 				iValue += 3
 			elif city.getPopulation() > 6:
@@ -424,7 +421,7 @@ class Companies:
 		elif owner.getCivics(3) == xml.iCivicGuilds:
 			if iCompany in [iHospitallers, iTemplars, iTeutons, iHansa, iDragon, iCalatrava]:
 				iValue += 1
-		if owner.getCivics(3) == xml.iCivicMercantilism:
+		elif owner.getCivics(3) == xml.iCivicMercantilism:
 			if iCompany == iHansa:
 				return -1
 			elif iCompany in [iMedici, iAugsburg, iStGeorge]:
@@ -539,8 +536,7 @@ class Companies:
 		# sort cities from highest to lowest value
 		cityValueList.sort(key=itemgetter(1), reverse=True)
 		# spread the company
-		for i in range(len(cityValueList)):
-			city = cityValueList[i][0]
+		for (city, _) in cityValueList:
 			if not city.isHasCorporation(iCompany):
 				city.setHasCorporation(iCompany, True, True, True)
 				city.setHasRealBuilding(lCompanyBuilding[iCompany], True)

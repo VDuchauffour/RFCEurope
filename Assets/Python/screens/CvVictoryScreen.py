@@ -1528,10 +1528,10 @@ class CvVictoryScreen:
 		iGoal = pPlayer.getUHV( iUHV )
 		# 3Miro: I don't understand how strings in C++ and Python work. For some reason, I managed to get C++ to return a unicode string
 		#	just as it would on another alphabet. I had to "Typecast" the string to ASCII to get it to register in the text manager
-		if ( iGoal == 1 ):
+		if iGoal == 1:
 			sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.HAPPY_CHAR))) + localText.getText(pPlayer.getUHVDescription(iUHV).encode('ascii', 'replace'),())
 			sString += "\n\n" + u"<color=0,255,0>%s</color>" %(localText.getText("TXT_KEY_VICTORY_SCREEN_ACCOMPLISHED",()))
-		elif ( iGoal == 0 ):
+		elif iGoal == 0:
 			sString = (u"<font=5>%c</font>" %(CyGame().getSymbolID(FontSymbols.UNHAPPY_CHAR))) + localText.getText(pPlayer.getUHVDescription(iUHV).encode('ascii', 'replace'),())
 			sString += "\n\n" + u"<color=208,0,0>%s</color>" %(localText.getText("TXT_KEY_VICTORY_SCREEN_FAILED",()))
 		else:

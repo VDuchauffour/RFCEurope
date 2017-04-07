@@ -620,37 +620,37 @@ tCoreAreasBR = (
 (58,29)    #Pope
 )
 
-tExceptions = ( #Unfortunate name. These are extra plots used in spawn.
-(), #Byzantium
-(), #Frankia
-(), #Arabia
-(), #Bulgaria
-((26,15),(26,16),(26,17),(26,18),(27,15),(27,16),(27,17),(27,18),(28,15),(28,16),(28,17),(28,18),(29,15),(29,16),(29,17),(29,18)), #Cordoba
-((60,33),(60,34),(60,35)), #Venice
-((49,39),(49,40),(49,41),(49,42)), #Burgundy
-(), #Germany
-((78,59), (78,60)), #Novgorod
-(), #Norway
-(), #Kiev
-(), #Hungary
-(), #Spain
-(), #Denmark
-((37,69),(38,69)), #Scotland
-((63,46),(63,47),(63,48),(63,49),(63,50)), #Poland
-(), #Genoa
-(), #Morocco
-((37,46),(37,47),(38,46),(38,47),(39,46),(39,47),(40,46),(40,47),(41,46),(41,47),(42,47)), #England		3Miro: Calais shouldn't flip to them on spawn
-((25,27),(25,28),(25,29),(25,30),(25,31)), #Portugal
-((40,23),(42,23),(42,24),(44,24)), #Aragon
-((60,61),(60,62),(60,63),(61,71),(62,71),(62,72),(63,71),(63,72),(64,71),(64,72),(65,71),(65,72),(66,64),(66,65),(66,66),(66,72),(68,65),(70,67),(70,68),(71,66),(71,67),(71,68),(72,65),(72,66),(72,67)), #Sweden
-((68,51),(68,52),(68,53),(69,51),(69,52),(69,53),(70,51),(71,59),(72,57),(72,58),(73,57),(73,58),(74,57),(74,58),(74,59),(74,60),(75,57),(75,58),(75,59),(75,60),(76,58),(76,59),(76,60)), #Prussia
-((76,57),(77,57),(78,57),(79,57),(80,57)), #Lithuania
-((60,36),(61,36)), #Austria
-((76,23),(77,23),(78,23),(79,23)), #Ottomans
-((83,53),(83,54),(83,55),(83,56),(83,57),(87,60),(88,60),(89,60),(90,60),(91,60),(92,60),(93,60),(94,60),(95,60),(96,60),(97,60),(88,61),(89,61),(90,61),(91,61),(92,61),(93,61),(94,61),(95,61),(96,61),(97,61),(88,62),(89,62),(90,62),(91,62),(92,62),(93,62),(94,62),(95,62),(96,62),(97,62),(88,63),(89,63),(90,63),(91,63),(92,63),(93,63),(94,63),(95,63),(96,63),(97,63)), #Moscow
-((46,49),(47,49),(48,49),(49,49),(50,49)), #Dutch
-()  #Pope
-)
+lExtraPlots = [
+[], #Byzantium
+[], #Frankia
+[], #Arabia
+[], #Bulgaria
+[(26,15),(26,16),(26,17),(26,18),(27,15),(27,16),(27,17),(27,18),(28,15),(28,16),(28,17),(28,18),(29,15),(29,16),(29,17),(29,18)], #Cordoba
+[(60,33),(60,34),(60,35)], #Venice
+[(49,39),(49,40),(49,41),(49,42)], #Burgundy
+[], #Germany
+[(78,59), (78,60)], #Novgorod
+[], #Norway
+[], #Kiev
+[], #Hungary
+[], #Spain
+[], #Denmark
+[(37,69),(38,69)], #Scotland
+[(63,46),(63,47),(63,48),(63,49),(63,50)], #Poland
+[], #Genoa
+[], #Morocco
+[(37,46),(37,47),(38,46),(38,47),(39,46),(39,47),(40,46),(40,47),(41,46),(41,47),(42,47)], #England		3Miro: Calais shouldn't flip to them on spawn
+[(25,27),(25,28),(25,29),(25,30),(25,31)], #Portugal
+[(40,23),(42,23),(42,24),(44,24)], #Aragon
+[(60,61),(60,62),(60,63),(61,71),(62,71),(62,72),(63,71),(63,72),(64,71),(64,72),(65,71),(65,72),(66,64),(66,65),(66,66),(66,72),(68,65),(70,67),(70,68),(71,66),(71,67),(71,68),(72,65),(72,66),(72,67)], #Sweden
+[(68,51),(68,52),(68,53),(69,51),(69,52),(69,53),(70,51),(71,59),(72,57),(72,58),(73,57),(73,58),(74,57),(74,58),(74,59),(74,60),(75,57),(75,58),(75,59),(75,60),(76,58),(76,59),(76,60)], #Prussia
+[(76,57),(77,57),(78,57),(79,57),(80,57)], #Lithuania
+[(60,36),(61,36)], #Austria
+[(76,23),(77,23),(78,23),(79,23)], #Ottomans
+[(83,53),(83,54),(83,55),(83,56),(83,57),(87,60),(88,60),(89,60),(90,60),(91,60),(92,60),(93,60),(94,60),(95,60),(96,60),(97,60),(88,61),(89,61),(90,61),(91,61),(92,61),(93,61),(94,61),(95,61),(96,61),(97,61),(88,62),(89,62),(90,62),(91,62),(92,62),(93,62),(94,62),(95,62),(96,62),(97,62),(88,63),(89,63),(90,63),(91,63),(92,63),(93,63),(94,63),(95,63),(96,63),(97,63)], #Moscow
+[(46,49),(47,49),(48,49),(49,49),(50,49)], #Dutch
+[]  #Pope
+]
 
 #NormalAreas: Normal Area is typically used for resurrection.
 tNormalAreasTL = (
@@ -1503,35 +1503,35 @@ tEarlyLeaders = (		#Don't have to be the same as the primary leader (AbsintheRed
 
 
 tLateLeaders = (		#The switch is triggered after a few years (starting date, percentage, era)
-(xml.iBasil_II, xml.i910AD, 10, 2, xml.iPalaiologos, xml.i1230AD, 5, 2),
-(xml.iPhilip_Augustus, xml.i1101AD, 10, 2, xml.iJoan, xml.i1376AD, 10, 2, xml.iLouis_Xiv, xml.i1523AD, 25, 3),
-(xml.iHarun_al_Rashid, xml.i752AD, 25, 1, xml.iSaladin, xml.i1160AD, 25, 2),
-(xml.iIvan_Asen, xml.i1101AD, 10, 2),
-(xml.iMohammed_ibn_Nasr, xml.i1202AD, 10, 2),
-(xml.iAndrea_Gritti, xml.i1259AD, 10, 2),
-(xml.iBeatrice, xml.i1200AD, 10, 2, xml.iPhilip_the_Bold, xml.i1356AD, 15, 2),
-(xml.iBarbarossa, xml.i1139AD, 20, 2),
-(xml.iAlexander_Nevsky, xml.i1150AD, 10, 2, xml.iMarfa, xml.i1380AD, 10, 3),
-(xml.iHaakon_Iv, xml.i1160AD, 25, 2),
-(xml.iMstislav, xml.i1101AD, 5, 2, xml.iBohdan_Khmelnytsky, xml.i1520AD, 10, 3),
-(xml.iBela_III, xml.i1167AD, 15, 2, xml.iMatthias, xml.i1444AD, 5, 3),
-(xml.iIsabella, xml.i1250AD, 10, 2, xml.iPhilip_Ii, xml.i1520AD, 10, 3),
-(xml.iMargaret_I, xml.i1320AD, 10, 2, xml.iChristian_Iv, xml.i1520AD, 5, 3),
-(xml.iJames_IV, xml.i1296AD, 10, 2),
-(xml.iCasimir, xml.i1320AD, 20, 2, xml.iSobieski, xml.i1570AD, 10, 3),
-(xml.iBoccanegra, xml.i1101AD, 10, 2),
-(xml.iIsmail_ibn_Sharif, xml.i1419AD, 5, 3),
-(xml.iElizabeth, xml.i1452AD, 10, 3, xml.iGeorge_Iii, xml.i1700AD, 10, 3),
-(xml.iJoao, xml.i1419AD, 10, 3, xml.iMaria_I, xml.i1700AD, 10, 3),
-(xml.iJohn_II, xml.i1397AD, 15, 3),
-(xml.iGustav_Vasa, xml.i1470AD, 20, 3, xml.iGustav_Adolf, xml.i1540AD, 25, 3, xml.iKarl_Xii, xml.i1680AD, 10, 3),
-(xml.iFrederick, xml.i1580AD, 5, 3),
-(xml.iVytautas, xml.i1377AD, 10, 3),
-(xml.iMaria_Theresa, xml.i1700AD, 25, 3),
-(xml.iSuleiman, xml.i1520AD, 15, 3),
-(xml.iPeter, xml.i1570AD, 10, 3, xml.iCatherine, xml.i1700AD, 25, 3),
-(xml.iJohan_de_Witt, xml.i1650AD, 30, 3),
-(xml.iThe_Pope,)
+((xml.iBasil_II, xml.i910AD, 10, 2), (xml.iPalaiologos, xml.i1230AD, 5, 2),),
+((xml.iPhilip_Augustus, xml.i1101AD, 10, 2), (xml.iJoan, xml.i1376AD, 10, 2), (xml.iLouis_Xiv, xml.i1523AD, 25, 3),),
+((xml.iHarun_al_Rashid, xml.i752AD, 25, 1), (xml.iSaladin, xml.i1160AD, 25, 2),),
+((xml.iIvan_Asen, xml.i1101AD, 10, 2),),
+((xml.iMohammed_ibn_Nasr, xml.i1202AD, 10, 2),),
+((xml.iAndrea_Gritti, xml.i1259AD, 10, 2),),
+((xml.iBeatrice, xml.i1200AD, 10, 2), (xml.iPhilip_the_Bold, xml.i1356AD, 15, 2),),
+((xml.iBarbarossa, xml.i1139AD, 20, 2),),
+((xml.iAlexander_Nevsky, xml.i1150AD, 10, 2), (xml.iMarfa, xml.i1380AD, 10, 3),),
+((xml.iHaakon_Iv, xml.i1160AD, 25, 2),),
+((xml.iMstislav, xml.i1101AD, 5, 2), (xml.iBohdan_Khmelnytsky, xml.i1520AD, 10, 3),),
+((xml.iBela_III, xml.i1167AD, 15, 2), (xml.iMatthias, xml.i1444AD, 5, 3),),
+((xml.iIsabella, xml.i1250AD, 10, 2), (xml.iPhilip_Ii, xml.i1520AD, 10, 3),),
+((xml.iMargaret_I, xml.i1320AD, 10, 2), (xml.iChristian_Iv, xml.i1520AD, 5, 3),),
+((xml.iJames_IV, xml.i1296AD, 10, 2),),
+((xml.iCasimir, xml.i1320AD, 20, 2), (xml.iSobieski, xml.i1570AD, 10, 3),),
+((xml.iBoccanegra, xml.i1101AD, 10, 2),),
+((xml.iIsmail_ibn_Sharif, xml.i1419AD, 5, 3),),
+((xml.iElizabeth, xml.i1452AD, 10, 3), (xml.iGeorge_Iii, xml.i1700AD, 10, 3),),
+((xml.iJoao, xml.i1419AD, 10, 3), (xml.iMaria_I, xml.i1700AD, 10, 3),),
+((xml.iJohn_II, xml.i1397AD, 15, 3),),
+((xml.iGustav_Vasa, xml.i1470AD, 20, 3), (xml.iGustav_Adolf, xml.i1540AD, 25, 3), (xml.iKarl_Xii, xml.i1680AD, 10, 3),),
+((xml.iFrederick, xml.i1580AD, 5, 3),),
+((xml.iVytautas, xml.i1377AD, 10, 3),),
+((xml.iMaria_Theresa, xml.i1700AD, 25, 3),),
+((xml.iSuleiman, xml.i1520AD, 15, 3),),
+((xml.iPeter, xml.i1570AD, 10, 3), (xml.iCatherine, xml.i1700AD, 25, 3),),
+((xml.iJohan_de_Witt, xml.i1650AD, 30, 3),),
+((xml.iThe_Pope,),)
 )
 
 

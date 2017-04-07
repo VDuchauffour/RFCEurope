@@ -475,7 +475,7 @@ class MercenaryManager:
 	def rendomizeMercProvinces( self, iGameTurn ):
 		if iGameTurn % 2 == gc.getGame().getSorenRandNum( 2, 'shall we randomize mercs' ):
 			iHuman = gc.getGame().getActivePlayer()
-			lHumanProvinces = self.GMU.getOwnedProvinces( gc.getPlayer(iHuman) )
+			lHumanProvinces = self.GMU.getOwnedProvinces( iHuman )
 			iMercsLeft = 0
 			for lMerc in self.lGlobalPool:
 				#iNewProv = lMercList[lMerc[0]][4][gc.getGame().getSorenRandNum( len(lMercList[lMerc[0]][4]), 'pick available province') ]
@@ -606,7 +606,7 @@ class MercenaryManager:
 				pPlayer.setGold(pPlayer.getGold()-(pPlayer.getPicklefreeParameter( iMercCostPerTurn )+99)/100 )
 				# TODO: AI
 				if iPlayer != iHuman:
-					self.processMercAI( pPlayer )
+					self.processMercAI( iPlayer )
 
 			#playerList[i].setGold(playerList[i].getGold()-(playerList[i].getPicklefreeParameter( iMercCostPerTurn )+99)/100 )
 
@@ -719,8 +719,9 @@ class MercenaryManager:
 			lHiredByList[iMerc] = -1
 			self.GMU.setMercHiredBy( lHiredByList )
 
-	def processMercAI( self, pPlayer ):
-		if pPlayer.isHuman() or pPlayer.isBarbarian() or pPlayer.getID() == con.iPope:
+	def processMercAI( self, iPlayer ):
+		pPlayer = gc.getPlayer(iPlayer)
+		if pPlayer.isHuman() or pPlayer.isBarbarian() or iPlayer == con.iPope:
 			return
 
 		#print(" MercAI for ",pPlayer.getID())
@@ -752,21 +753,21 @@ class MercenaryManager:
 		elif iWarValue < 2 and 20*iGold < iUpkeep:
 			bFire = True
 
-		if ( bFire ):
+		if bFire:
 			# the AI fires a Merc
-			self.FireMercAI( pPlayer )
+			self.FireMercAI( iPlayer )
 
 			# make sure we can affort the mercs that we keep
 			#print(" Merc Upkeep: ",pPlayer.getPicklefreeParameter( iMercCostPerTurn )," Gold ",pPlayer.getGold() )
 			while ( pPlayer.getPicklefreeParameter( iMercCostPerTurn )>0 and 100*pPlayer.getGold() < pPlayer.getPicklefreeParameter( iMercCostPerTurn ) ):
 				#print(" Merc Upkeep: ",pPlayer.getPicklefreeParameter( iMercCostPerTurn )," Gold ",pPlayer.getGold() )
 				self.GMU.playerMakeUpkeepSane( pPlayer.getID() )
-				self.FireMercAI( pPlayer )
+				self.FireMercAI( iPlayer )
 			return
 
 		if iWarValue > 0:
 			#we have to be at war to hire
-			iOdds = con.tHire[pPlayer.getID()]
+			iOdds = con.tHire[iPlayer]
 			if iWarValue < 2:
 				iOdds *= 2 # small wars are hardly worth the trouble
 			elif iWarValue > 4: # large war
@@ -774,13 +775,13 @@ class MercenaryManager:
 
 			if gc.getGame().getSorenRandNum(100, 'shall we hire a merc') > iOdds:
 				# hiring a merc
-				self.HireMercAI( pPlayer )
+				self.HireMercAI( iPlayer )
 
 
-	def FireMercAI( self, pPlayer ):
+	def FireMercAI( self, iPlayer ):
 		#iNumUnits = pPlayer.getNumUnits()
 		iGameTurn = gc.getGame().getGameTurn()
-		iPlayer = pPlayer.getID()
+		pPlayer = gc.getPlayer(iPlayer)
 		lMercs = [unit for unit in PyPlayer( iPlayer ).getUnitList() if unit.getMercID() > -1]
 
 		#print(" Hired Mercs: ",len( lMercs ) )
@@ -819,13 +820,13 @@ class MercenaryManager:
 					self.GMU.fireMerc( lMercs[iI] )
 					return
 
-	def HireMercAI( self, pPlayer ):
+	def HireMercAI( self, iPlayer ):
 		# decide which mercenary to hire
 		lCanHireMercs = []
-		lPlayerProvinces = self.GMU.getCulturedProvinces( pPlayer )
+		pPlayer = gc.getPlayer(iPlayer)
+		lPlayerProvinces = self.GMU.getCulturedProvinces( iPlayer )
 		iGold = pPlayer.getGold()
 		iStateReligion = pPlayer.getStateReligion()
-		iPlayer = pPlayer.getID()
 		for lMerc in self.lGlobalPool:
 			iMercTotalCost = self.GMU.getModifiedCostPerPlayer( lMerc[2] + (lMerc[3]+99)/100, iPlayer )
 			#sMercProvinces = Set( lMercList[lMerc[0]][4] )
@@ -868,17 +869,17 @@ class GlobalMercenaryUtils:
 	def setMercHiredBy( self, lNewList ):
 		sd.scriptDict['lMercsHiredBy'] = lNewList
 
-	def getOwnedProvinces( self, pPlayer ):
+	def getOwnedProvinces( self, iPlayer ):
 		lProvList = [] # all available cities that the Merc can appear in
-		for city in utils.getCityList(pPlayer.getID()):
+		for city in utils.getCityList(iPlayer):
 			iProvince = city.getProvince()
 			if iProvince not in lProvList:
 				lProvList.append( iProvince )
 		return lProvList
 
-	def getCulturedProvinces( self, pPlayer ):
+	def getCulturedProvinces( self, iPlayer ):
 		lProvList = [] # all available cities that the Merc can appear in
-		for city in utils.getCityList(pPlayer.getID()):
+		for city in utils.getCityList(iPlayer):
 			iProvince = city.getProvince()
 			if iProvince not in lProvList and city.getCultureLevel() >= 2:
 				lProvList.append( iProvince )
@@ -976,7 +977,7 @@ class GlobalMercenaryUtils:
 		# message for the human player if another civ hired a merc which was also available for him/her
 		iHuman = utils.getHumanID()
 		if iPlayer != iHuman:
-			lHumanProvList = self.getOwnedProvinces( gc.getPlayer( iHuman ) )
+			lHumanProvList = self.getOwnedProvinces( iHuman )
 			if lMerc[4] in lHumanProvList:
 				szProvName = "TXT_KEY_PROVINCE_NAME_%i" %lMerc[4]
 				szCurrentProvince = CyTranslator().getText(szProvName,())

@@ -143,7 +143,7 @@ class CvMercenaryManager:
 		iGold = pPlayer.getGold()
 
 		# get a list of the provinces controlled by the player
-		lProvList = GMU.getOwnedProvinces( pPlayer )
+		lProvList = GMU.getOwnedProvinces( iPlayer )
 		#lProvList = Set( lProvList ) # set as in set-theory
 
 		mercenaryCount = 0

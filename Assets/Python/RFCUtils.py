@@ -464,18 +464,16 @@ class RFCUtils:
 		Settlers aren't created.
 		If bSkipPlotCity is True, units in a city won't flip. This is to avoid converting barbarian units that would capture a city before the flip delay"""
 		#print ("searched plots", lPlots)
-		for tPlot in lPlots:
-			#print ("searched plots", tPlot)
-			x = tPlot[0]
-			y = tPlot[1]
+		for (x, y) in lPlots:
+			#print ("searched plots", (x, y))
 			killPlot = gc.getMap().plot(x,y)
 			iNumUnitsInAPlot = killPlot.getNumUnits()
-			if (iNumUnitsInAPlot):
+			if iNumUnitsInAPlot > 0:
 				bRevealedZero = False
-				if (gc.getMap().plot(28, 0).isRevealed(iNewOwner, False)):
+				if gc.getMap().plot(28, 0).isRevealed(iNewOwner, False):
 					bRevealedZero = True
 				#print ("killplot", x, y)
-				if (bSkipPlotCity == True) and (killPlot.isCity()):
+				if bSkipPlotCity and killPlot.isCity():
 					#print (killPlot.isCity())
 					#print 'do nothing'
 					pass
@@ -484,25 +482,25 @@ class RFCUtils:
 					for i in range(iNumUnitsInAPlot):
 						unit = killPlot.getUnit(j)
 						#print ("killplot", x, y, unit.getUnitType(), unit.getOwner(), "j", j)
-						if (unit.getOwner() == iOldOwner):
+						if unit.getOwner() == iOldOwner:
 							unit.kill(False, con.iBarbarian)
-							if (bKillSettlers):
-								if ((unit.getUnitType() > iSettler)):
+							if bKillSettlers:
+								if unit.getUnitType() > iSettler:
 									self.makeUnit(unit.getUnitType(), iNewOwner, [28, 0], 1)
 							else:
-								if ((unit.getUnitType() >= iSettler)): #skip animals
+								if unit.getUnitType() >= iSettler: #skip animals
 									self.makeUnit(unit.getUnitType(), iNewOwner, [28, 0], 1)
 						else:
 							j += 1
 					tempPlot = gc.getMap().plot(28, 0)
 					#moves new units back in their place
-					if (tempPlot.getNumUnits() != 0):
+					if tempPlot.getNumUnits() > 0:
 						iNumUnitsInAPlot = tempPlot.getNumUnits()
 						for i in range(iNumUnitsInAPlot):
 							unit = tempPlot.getUnit(0)
 							unit.setXYOld(x,y)
 						iCiv = iNewOwner
-						if (bRevealedZero == False):
+						if  not bRevealedZero:
 							gc.getMap().plot(27, 0).setRevealed(iCiv, False, True, -1);
 							gc.getMap().plot(28, 0).setRevealed(iCiv, False, True, -1);
 							gc.getMap().plot(29, 0).setRevealed(iCiv, False, True, -1);
@@ -512,19 +510,19 @@ class RFCUtils:
 
 
 	#RiseAndFall
-	def flipCity(self, tCityPlot, bFlipType, bKillUnits, iNewOwner, iOldOwners):
+	def flipCity(self, tCityPlot, bFlipType, bKillUnits, iNewOwner, lOldOwners):
 		"""Changes owner of city specified by tCityPlot.
 		bFlipType specifies if it's conquered or traded.
 		If bKillUnits != 0 all the units in the city will be killed.
 		iRetainCulture will determine the split of the current culture between old and new owner. -1 will skip
-		iOldOwners is a list. Flip happens only if the old owner is in the list.
+		lOldOwners is a list. Flip happens only if the old owner is in the list.
 		An empty list will cause the flip to always happen."""
 		pNewOwner = gc.getPlayer(iNewOwner)
 		if gc.getMap().plot(tCityPlot[0], tCityPlot[1]).isCity():
 			city = gc.getMap().plot(tCityPlot[0], tCityPlot[1]).getPlotCity()
 			if not city.isNone():
 				iOldOwner = city.getOwner()
-				if (iOldOwner in iOldOwners or not iOldOwners):
+				if iOldOwner in lOldOwners or not lOldOwners:
 					if bKillUnits:
 						killPlot = gc.getMap().plot( tCityPlot[0], tCityPlot[1] )
 						for i in range(killPlot.getNumUnits()):
@@ -733,7 +731,7 @@ class RFCUtils:
 		lUnits = [xml.iLineInfantry, xml.iMusketman, xml.iArquebusier, xml.iArbalest, xml.iArbalest, xml.iCrossbowman]
 		for iUnit in lUnits:
 			if pPlayer.canTrain(self.getUniqueUnit(iNewOwner, iUnit), False, False):
-				iUnit = self.getUniqueUnit(iNewOwner, iUnit)
+				iUnitType = self.getUniqueUnit(iNewOwner, iUnit)
 				break
 
 		self.makeUnit(iUnitType, iNewOwner, tCityPlot, iNumUnits)
@@ -753,7 +751,7 @@ class RFCUtils:
 		self.resetUHV(iCiv)
 		self.setLastTurnAlive(iCiv, gc.getGame().getGameTurn())
 		# Absinthe: respawn status
-		if ( gc.getPlayer( iCiv ).getRespawnedAlive() == True ):
+		if gc.getPlayer( iCiv ).getRespawnedAlive():
 			gc.getPlayer( iCiv ).setRespawnedAlive( False )
 
 
@@ -763,8 +761,7 @@ class RFCUtils:
 		iCounter = gc.getGame().getSorenRandNum(6, 'random start')
 		for city in self.getCityList(iCiv):
 			tCoords = (city.getX(), city.getY())
-			iX = city.getX()
-			iY = city.getY()
+			iX, iY = tCoords
 			pCurrent = gc.getMap().plot(iX, iY)
 			#1 loyal city for the human player
 			if bAssignOneCity and iNumLoyalCities < 1 and city.isCapital():
@@ -777,8 +774,8 @@ class RFCUtils:
 			#assign to neighbours first
 			bNeighbour = False
 			iRndnum = gc.getGame().getSorenRandNum(iNumPlayers, 'starting count')
-			for j in range(iRndnum, iRndnum + iNumPlayers): #only major players
-				iLoopCiv = j % iNumPlayers
+			for j in range(iNumPlayers): #only major players
+				iLoopCiv = (j + iRndnum) % iNumPlayers
 				if gc.getPlayer(iLoopCiv).isAlive() and iLoopCiv != iCiv and not gc.getPlayer(iLoopCiv).isHuman():
 					if pCurrent.getCulture(iLoopCiv) > 0:
 						if (pCurrent.getCulture(iLoopCiv)*100 / (pCurrent.getCulture(iLoopCiv) + pCurrent.getCulture(iCiv) + pCurrent.getCulture(iBarbarian) + pCurrent.getCulture(iIndependent) + pCurrent.getCulture(iIndependent2)) >= 5): #change in vanilla
@@ -1567,14 +1564,11 @@ class RFCUtils:
 	def getWorldPlotsList(self):
 		return [(x, y) for x in range(con.iMapMaxX) for y in range(con.iMapMaxY)]
 
-	def getRandomByWeight(self, lList, iNothing = 0):
+	def getRandomByWeight(self, lList):
 		if not lList: return -1
-		if gc.getGame().getSorenRandNum(100, 'Random entry') < iNothing: # iNothing in %
-			return -1
 		iTemp = 0
 		iRand = gc.getGame().getSorenRandNum(sum(x[1] for x in lList), 'Random entry')
-		for tCiv in lList:
-			iPlayer, iValue = tCiv
+		for (iPlayer, iValue) in lList:
 			iTemp += iValue
 			if iTemp >= iRand:
 				return iPlayer

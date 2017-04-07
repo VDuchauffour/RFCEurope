@@ -69,7 +69,7 @@ class RFCEMapManager:
 			self.cityNameMap = self.convertMap(RFCEMaps.tCityMap)
 			self.coreAreasBL = self.convertArray(con.tCoreAreasTL)
 			self.coreAreasTR = self.convertArray(con.tCoreAreasBR)
-			self.coreAreasAdditionalPlots = self.convertNestedArray(con.tExceptions)
+			self.coreAreasAdditionalPlots = con.lExtraPlots
 			self.normalAreasBL = self.convertArray(con.tNormalAreasTL)
 			self.normalAreasTR = self.convertArray(con.tNormalAreasBR)
 			self.normalAreasSubtractedPlots = self.convertNestedArray(con.tNormalAreasSubtract)
@@ -546,7 +546,7 @@ class RFCEMapExporter:
 
 		self.writeArray(self.mapManager.coreAreasBL, "tCoreAreasTL", file, self.writeCoords, None, self.getCommentCivName, "#Core Area is initial spawn location, no longer relevant for stability")
 		self.writeArray(self.mapManager.coreAreasTR, "tCoreAreasBR", file, self.writeCoords, None, self.getCommentCivName)
-		self.writeArray(self.mapManager.coreAreasAdditionalPlots, "tExceptions", file, self.writeTupel, self.writeCoords, self.getCommentCivName, "#for RiseAndFall. These are (badly named) extra squares used in spawn.")
+		self.writeArray(self.mapManager.coreAreasAdditionalPlots, "lExtraPlots", file, self.writeTupel, self.writeCoords, self.getCommentCivName, "#for RiseAndFall. These are (badly named) extra squares used in spawn.")
 		self.writeArray(self.mapManager.normalAreasBL, "tNormalAreasTL", file, self.writeCoords, None, self.getCommentCivName, "#These areas are typically used for resurrection.")
 		self.writeArray(self.mapManager.normalAreasTR, "tNormalAreasBR", file, self.writeCoords, None, self.getCommentCivName)
 		self.writeArray(self.mapManager.normalAreasSubtractedPlots, "tNormalAreasSubtract", file, self.writeTupel, self.writeCoords, self.getCommentCivName, "#These are squares subtracted from normal areas")

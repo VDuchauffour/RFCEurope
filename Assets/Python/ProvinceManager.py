@@ -446,7 +446,7 @@ class ProvinceManager:
 
 	def checkTurn(self, iGameTurn):
 		# Norse provinces switch back to unstable after the fall of the Norman Kingdom of Sicily
-		if (iGameTurn == (xml.i1194AD + 1)):
+		if iGameTurn == xml.i1194AD + 1:
 			pNorway.setProvinceType( xml.iP_Apulia, iProvinceNone )
 			pNorway.setProvinceType( xml.iP_Calabria, iProvinceNone )
 			pNorway.setProvinceType( xml.iP_Sicily, iProvinceNone )
@@ -456,7 +456,7 @@ class ProvinceManager:
 			pDenmark.setProvinceType( xml.iP_Sicily, iProvinceNone )
 			pDenmark.setProvinceType( xml.iP_Malta, iProvinceNone )
 		# Prussia direction change
-		if (iGameTurn == xml.i1618AD):
+		elif iGameTurn == xml.i1618AD:
 			pPrussia.setProvinceType( xml.iP_Estonia, iProvinceNone )
 			pPrussia.setProvinceType( xml.iP_Lithuania, iProvinceNone )
 			pPrussia.setProvinceType( xml.iP_Suvalkija, iProvinceNone )
@@ -468,15 +468,15 @@ class ProvinceManager:
 			print("Yes! Prussia can into Germany!")
 
 	def onCityBuilt(self, iPlayer, x, y):
-		if ( iPlayer >= con.iNumPlayers -1 ): # Pope, indies, barbs
+		if iPlayer >= con.iNumPlayers -1: # Pope, indies, barbs
 			return
 		pPlayer = gc.getPlayer(iPlayer)
 		iProv = rfcemaps.tProvinceMap[y][x]
-		if ( pPlayer.getProvinceType( iProv ) == iProvincePotential ):
-			if ( iProv in self.tPot2NormProvinces[iPlayer] ):
+		if pPlayer.getProvinceType( iProv ) == iProvincePotential:
+			if iProv in self.tPot2NormProvinces[iPlayer]:
 				pPlayer.setProvinceType( iProv, iProvinceNatural )
 				utils.refreshStabilityOverlay() # refresh the stability overlay
-			elif ( iProv in self.tPot2CoreProvinces[iPlayer] ):
+			elif iProv in self.tPot2CoreProvinces[iPlayer]:
 				pPlayer.setProvinceType( iProv, iProvinceCore )
 				utils.refreshStabilityOverlay() # refresh the stability overlay
 			# Absinthe: bug if we tie potential only to the preset status of provinces
@@ -484,16 +484,16 @@ class ProvinceManager:
 				pPlayer.setProvinceType( iProv, iProvinceNatural )
 				utils.refreshStabilityOverlay() # refresh the stability overlay
 
-	def onCityAcquired(self, owner, playerType, city, bConquest, bTrade):
-		if ( playerType >= con.iNumPlayers -1 ): # Pope, indies, barbs
+	def onCityAcquired(self, owner, iPlayer, city, bConquest, bTrade):
+		if iPlayer >= con.iNumPlayers -1: # Pope, indies, barbs
 			return
-		pPlayer = gc.getPlayer(playerType)
+		pPlayer = gc.getPlayer(iPlayer)
 		iProv = city.getProvince()
-		if ( pPlayer.getProvinceType( iProv ) == iProvincePotential ):
-			if ( iProv in self.tPot2NormProvinces[playerType] ):
+		if pPlayer.getProvinceType( iProv ) == iProvincePotential:
+			if iProv in self.tPot2NormProvinces[iPlayer]:
 				pPlayer.setProvinceType( iProv, iProvinceNatural )
 				utils.refreshStabilityOverlay() # refresh the stability overlay
-			elif ( iProv in self.tPot2CoreProvinces[playerType] ):
+			elif iProv in self.tPot2CoreProvinces[iPlayer]:
 				pPlayer.setProvinceType( iProv, iProvinceCore )
 				utils.refreshStabilityOverlay() # refresh the stability overlay
 			# Absinthe: bug if we tie potential only to the preset status of provinces
@@ -501,19 +501,17 @@ class ProvinceManager:
 				pPlayer.setProvinceType( iProv, iProvinceNatural )
 				utils.refreshStabilityOverlay() # refresh the stability overlay
 
-	def onCityRazed(self, iOwner, playerType, city):
+	def onCityRazed(self, iOwner, iPlayer, city):
 		pass
 
 	def updatePotential(self, iPlayer):
 		pPlayer = gc.getPlayer(iPlayer)
-		apCityList = PyPlayer(iPlayer).getCityList()
-		for pCity in apCityList:
-			city = pCity.GetCy()
+		for city in utils.getCityList(iPlayer):
 			iProv = city.getProvince()
-			if (pPlayer.getProvinceType( iProv ) == iProvincePotential):
-				if ( iProv in self.tPot2NormProvinces[iPlayer] ):
+			if pPlayer.getProvinceType( iProv ) == iProvincePotential:
+				if iProv in self.tPot2NormProvinces[iPlayer]:
 					pPlayer.setProvinceType( iProv, iProvinceNatural )
-				elif ( iProv in self.tPot2CoreProvinces[iPlayer] ):
+				elif iProv in self.tPot2CoreProvinces[iPlayer]:
 					pPlayer.setProvinceType( iProv, iProvinceCore )
 				# Absinthe: bug if we tie potential only to the preset status of provinces
 				else: # also update if it was changed to be a potential province later in the game
@@ -524,7 +522,7 @@ class ProvinceManager:
 		# Absinthe: reset the original potential provinces, but only if they wasn't changed to something entirely different later on
 		pPlayer = gc.getPlayer(iPlayer)
 		for iProv in self.tPot2CoreProvinces[iPlayer]:
-			if ( pPlayer.getProvinceType( iProv ) == iProvinceCore ):
+			if pPlayer.getProvinceType( iProv ) == iProvinceCore:
 				pPlayer.setProvinceType( iProv, iProvincePotential )
 		for iProv in self.tPot2NormProvinces[iPlayer]:
 			if ( pPlayer.getProvinceType( iProv ) == iProvinceNatural ):
@@ -533,7 +531,7 @@ class ProvinceManager:
 		# Absinthe: special respawn conditions
 		#if ( iPlayer == iArabia ):
 		#	self.resetProvinces(iPlayer)
-		if ( iPlayer == iCordoba ):
+		if iPlayer == iCordoba:
 			for iProv in range( xml.iP_MaxNumberOfProvinces ):
 				pCordoba.setProvinceType( iProv, iProvinceNone )
 			pCordoba.setProvinceType( xml.iP_Ifriqiya, iProvinceCore )
@@ -562,7 +560,7 @@ class ProvinceManager:
 
 	def onSpawn( self, iPlayer ):
 		# when a new nations spawns, old nations in the region should lose some of their provinces
-		if ( iPlayer == iArabia ):
+		if iPlayer == iArabia:
 			pByzantium.setProvinceType( xml.iP_Cyrenaica, iProvinceOuter )
 			pByzantium.setProvinceType( xml.iP_Tripolitania, iProvinceOuter )
 			pByzantium.setProvinceType( xml.iP_Ifriqiya, iProvinceOuter )
@@ -575,13 +573,11 @@ class ProvinceManager:
 			pByzantium.setProvinceType( xml.iP_Cilicia, iProvinceNatural )
 			pByzantium.setProvinceType( xml.iP_Charsianon, iProvinceNatural )
 			pByzantium.setProvinceType( xml.iP_Colonea, iProvinceNatural )
-			utils.refreshStabilityOverlay() # refresh the stability overlay
-		elif ( iPlayer == iBulgaria ):
+		elif iPlayer == iBulgaria:
 			pByzantium.setProvinceType( xml.iP_Serbia, iProvinceOuter )
 			pByzantium.setProvinceType( xml.iP_Moesia, iProvinceOuter )
 			pByzantium.setProvinceType( xml.iP_Thrace, iProvinceNatural )
-			utils.refreshStabilityOverlay() # refresh the stability overlay
-		elif ( iPlayer == iVenecia ):
+		elif iPlayer == iVenecia:
 			pByzantium.setProvinceType( xml.iP_Dalmatia, iProvinceNone )
 			pByzantium.setProvinceType( xml.iP_Bosnia, iProvinceNone )
 			pByzantium.setProvinceType( xml.iP_Slavonia, iProvinceNone )
@@ -592,32 +588,27 @@ class ProvinceManager:
 			pByzantium.setProvinceType( xml.iP_Corsica, iProvinceNone )
 			pByzantium.setProvinceType( xml.iP_Sardinia, iProvinceNone )
 			pByzantium.setProvinceType( xml.iP_Latium, iProvinceNone )
-			utils.refreshStabilityOverlay() # refresh the stability overlay
-		elif ( iPlayer == iBurgundy ):
-			pFrankia.setProvinceType( xml.iP_Provence, iProvincePotential ) # these areas flip to Burgundy, so resetting them to Potential won't cause any issues
-			pFrankia.setProvinceType( xml.iP_Burgundy, iProvincePotential ) # these areas flip to Burgundy, so resetting them to Potential won't cause any issues
-			utils.refreshStabilityOverlay() # refresh the stability overlay
-		elif ( iPlayer == iGermany ):
+		elif iPlayer == iBurgundy:
+			# these areas flip to Burgundy, so resetting them to Potential won't cause any issues
+			pFrankia.setProvinceType( xml.iP_Provence, iProvincePotential )
+			pFrankia.setProvinceType( xml.iP_Burgundy, iProvincePotential )
+		elif iPlayer == iGermany:
 			pFrankia.setProvinceType( xml.iP_Lorraine, iProvinceOuter )
 			pFrankia.setProvinceType( xml.iP_Bavaria, iProvinceNone )
 			pFrankia.setProvinceType( xml.iP_Franconia, iProvinceNone )
 			pFrankia.setProvinceType( xml.iP_Saxony, iProvinceNone )
 			pFrankia.setProvinceType( xml.iP_Netherlands, iProvinceNone )
-			utils.refreshStabilityOverlay() # refresh the stability overlay
-		elif ( iPlayer == iHungary ):
+		elif iPlayer == iHungary:
 			pBulgaria.setProvinceType( xml.iP_Banat, iProvinceNone )
 			pBulgaria.setProvinceType( xml.iP_Wallachia, iProvinceOuter )
-			utils.refreshStabilityOverlay() # refresh the stability overlay
-		elif ( iPlayer == iSpain ):
+		elif iPlayer == iSpain:
 			pCordoba.setProvinceType( xml.iP_LaMancha, iProvinceNatural )
-			utils.refreshStabilityOverlay() # refresh the stability overlay
-		elif ( iPlayer == iMorocco ):
+		elif iPlayer == iMorocco:
 			pCordoba.setProvinceType( xml.iP_Morocco, iProvinceNone )
 			pCordoba.setProvinceType( xml.iP_Marrakesh, iProvinceNone )
 			pCordoba.setProvinceType( xml.iP_Fez, iProvinceOuter )
 			pCordoba.setProvinceType( xml.iP_Tetouan, iProvinceOuter )
-			utils.refreshStabilityOverlay() # refresh the stability overlay
-		elif ( iPlayer == iEngland ):
+		elif iPlayer == iEngland:
 			pFrankia.setProvinceType( xml.iP_Normandy, iProvincePotential ) # these areas flip to England, so resetting them to Potential won't cause any issues
 			pScotland.setProvinceType( xml.iP_Northumbria, iProvinceOuter )
 			pScotland.setProvinceType( xml.iP_Mercia, iProvinceNone )
@@ -625,8 +616,7 @@ class ProvinceManager:
 			pDenmark.setProvinceType( xml.iP_Mercia, iProvinceNone )
 			pDenmark.setProvinceType( xml.iP_EastAnglia, iProvinceNone )
 			pDenmark.setProvinceType( xml.iP_London, iProvinceNone )
-			utils.refreshStabilityOverlay() # refresh the stability overlay
-		elif ( iPlayer == iAragon ):
+		elif iPlayer == iAragon:
 			pByzantium.setProvinceType( xml.iP_Apulia, iProvinceOuter )
 			pByzantium.setProvinceType( xml.iP_Calabria, iProvinceOuter )
 			pByzantium.setProvinceType( xml.iP_Sicily, iProvinceOuter )
@@ -635,14 +625,12 @@ class ProvinceManager:
 			pCordoba.setProvinceType( xml.iP_Catalonia, iProvinceOuter )
 			pCordoba.setProvinceType( xml.iP_Valencia, iProvinceNatural )
 			pCordoba.setProvinceType( xml.iP_Balears, iProvinceOuter )
-			utils.refreshStabilityOverlay() # refresh the stability overlay
-		elif ( iPlayer == iSweden ):
+		elif iPlayer == iSweden:
 			pNorway.setProvinceType( xml.iP_Svealand, iProvinceNone )
 			pDenmark.setProvinceType(xml.iP_Gotaland, iProvinceNone )
 			pDenmark.setProvinceType(xml.iP_Svealand, iProvinceNone )
 			pNovgorod.setProvinceType( xml.iP_Osterland, iProvinceOuter )
-			utils.refreshStabilityOverlay() # refresh the stability overlay
-		elif ( iPlayer == iAustria ):
+		elif iPlayer == iAustria:
 			pHungary.setProvinceType( xml.iP_Carinthia, iProvinceOuter )
 			pHungary.setProvinceType( xml.iP_Austria, iProvinceOuter )
 			pHungary.setProvinceType( xml.iP_Moravia, iProvinceOuter )
@@ -651,8 +639,7 @@ class ProvinceManager:
 			pGermany.setProvinceType( xml.iP_Bohemia, iProvinceOuter )
 			pSpain.setProvinceType( xml.iP_Netherlands, iProvinceOuter )
 			pSpain.setProvinceType( xml.iP_Flanders, iProvinceOuter )
-			utils.refreshStabilityOverlay() # refresh the stability overlay
-		elif ( iPlayer == iTurkey ):
+		elif iPlayer == iTurkey:
 			pByzantium.setProvinceType( xml.iP_Antiochia, iProvinceOuter )
 			pByzantium.setProvinceType( xml.iP_Cilicia, iProvinceOuter )
 			pByzantium.setProvinceType( xml.iP_Charsianon, iProvinceOuter )
@@ -666,14 +653,13 @@ class ProvinceManager:
 			pHungary.setProvinceType( xml.iP_Dalmatia, iProvinceOuter )
 			pHungary.setProvinceType( xml.iP_Bosnia, iProvinceOuter )
 			pHungary.setProvinceType( xml.iP_Banat, iProvinceOuter )
-			utils.refreshStabilityOverlay() # refresh the stability overlay
-		elif ( iPlayer == iMoscow ):
+		elif iPlayer == iMoscow:
 			pNovgorod.setProvinceType( xml.iP_Rostov, iProvinceOuter )
 			pNovgorod.setProvinceType( xml.iP_Smolensk, iProvinceNone )
-			utils.refreshStabilityOverlay() # refresh the stability overlay
-		elif ( iPlayer == iDutch ):
+		elif iPlayer == iDutch:
 			pSpain.setProvinceType( xml.iP_Netherlands, iProvinceNone )
 			pSpain.setProvinceType( xml.iP_Flanders, iProvinceNone )
 			pAustria.setProvinceType( xml.iP_Netherlands, iProvinceNone )
 			pAustria.setProvinceType( xml.iP_Flanders, iProvinceNone )
-			utils.refreshStabilityOverlay() # refresh the stability overlay
+
+		utils.refreshStabilityOverlay() # refresh the stability overlay

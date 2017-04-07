@@ -340,27 +340,29 @@ class Religions:
 			if iGameTurn % iDivBy == 3:
 				iPopeGold = pPope.getGold()
 				if iPopeGold > 100:
-					lWeightValues = []
-					for iPlayer in lCatholicCivs: # all Catholic civs with open borders with the Pope
-						iCatholicFaith = 0
-						pPlayer = gc.getPlayer(iPlayer)
-						# Relations with the Pope are much more important here
-						iCatholicFaith += pPlayer.getFaith()
-						iCatholicFaith += 8 * max(0, pPope.AI_getAttitude(iPlayer))
-						if iCatholicFaith > 0:
-							lWeightValues.append((iPlayer, iCatholicFaith))
-					iChosenPlayer = utils.getRandomByWeight(lWeightValues, 10) # there is 10% chance for not giving anything
-					if iChosenPlayer != -1:
-						pPlayer = gc.getPlayer(iChosenPlayer)
-						if iGameTurn < 100:
-							iGift = min(iPopeGold / 5, 40) # between 20-40, based on the Pope's wealth
-						else:
-							iGift = min(iPopeGold / 2, 80) # between 50-80, based on the Pope's wealth
-						pPope.changeGold( -iGift )
-						pPlayer.changeGold( iGift )
-						if iChosenPlayer == utils.getHumanID():
-							sText = CyTranslator().getText("TXT_KEY_FAITH_GOLD_GIFT", (iGift, ))
-							CyInterface().addMessage(iPlayer, False, con.iDuration, sText, "", 0, "", ColorTypes(con.iBlue), -1, -1, True, True)
+					if gc.getGame().getSorenRandNum(10, 'Random entry') == 0: # 10% chance for not giving anything
+						pass
+					else:
+						lWeightValues = []
+						for iPlayer in lCatholicCivs:
+							iCatholicFaith = 0
+							pPlayer = gc.getPlayer(iPlayer)
+							# Relations with the Pope are much more important here
+							iCatholicFaith += pPlayer.getFaith()
+							iCatholicFaith += 8 * max(0, pPope.AI_getAttitude(iPlayer))
+							if iCatholicFaith > 0:
+								lWeightValues.append((iPlayer, iCatholicFaith))
+						iChosenPlayer = utils.getRandomByWeight(lWeightValues)
+						if iChosenPlayer != -1:
+							pPlayer = gc.getPlayer(iChosenPlayer)
+							if iGameTurn < 100:
+								iGift = min(iPopeGold / 5, 40) # between 20-40, based on the Pope's wealth
+							else:
+								iGift = min(iPopeGold / 2, 80) # between 50-80, based on the Pope's wealth
+							pPope.changeGold( -iGift )
+							pPlayer.changeGold( iGift )
+							if iChosenPlayer == utils.getHumanID():
+								CyInterface().addMessage(iPlayer, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_FAITH_GOLD_GIFT", ()), "", 0, "", ColorTypes(con.iBlue), -1, -1, True, True)
 		# Free religious building
 		if iGameTurn > xml.i800AD: # The crowning of Charlemagne
 			if iGameTurn > xml.i1648AD: # End of religious wars
@@ -372,31 +374,30 @@ class Religions:
 			else:
 				iDivBy = 11
 			if iGameTurn % iDivBy == 2:
-				lWeightValues = []
-				iJerusalemOwner = gc.getMap().plot( con.tJerusalem[0], con.tJerusalem[1]).getPlotCity().getOwner()
-				for iPlayer in lCatholicCivs: # all Catholic civs with open borders with the Pope
-					iCatholicFaith = 0
-					pPlayer = gc.getPlayer(iPlayer)
-					# Faith points are the deciding factor for buildings
-					iCatholicFaith += pPlayer.getFaith()
-					iCatholicFaith += 2 * max(0, pPope.AI_getAttitude(iPlayer))
-					if iPlayer == iJerusalemOwner: # The Catholic owner of Jerusalem has a greatly improved chance
-						iCatholicFaith += 30
-					if iCatholicFaith > 0:
-						lWeightValues.append((iPlayer, iCatholicFaith))
-				iChosenPlayer = utils.getRandomByWeight(lWeightValues, 20) # there is 20% chance for not building anything
-				if iChosenPlayer != -1:
-					pPlayer = gc.getPlayer(iChosenPlayer)
-					# No chance for monastery if the selected player knows the Scientific Method tech (which obsoletes monasteries)
-					teamPlayer = gc.getTeam(pPlayer.getTeam())
-					if teamPlayer.isHasTech(xml.iScientificMethod):
+				if gc.getGame().getSorenRandNum(5, 'Random entry') == 0: # there is 20% chance for not building anything
+					pass
+				else:
+					lWeightValues = []
+					iJerusalemOwner = gc.getMap().plot( con.tJerusalem[0], con.tJerusalem[1]).getPlotCity().getOwner()
+					for iPlayer in lCatholicCivs:  # all Catholic civs with open borders with the Pope
+						iCatholicFaith = 0
+						pPlayer = gc.getPlayer(iPlayer)
+						# Faith points are the deciding factor for buildings
+						iCatholicFaith += pPlayer.getFaith()
+						iCatholicFaith += 2 * max(0, pPope.AI_getAttitude(iPlayer))
+						if iPlayer == iJerusalemOwner: # The Catholic owner of Jerusalem has a greatly improved chance
+							iCatholicFaith += 30
+						if iCatholicFaith > 0:
+							lWeightValues.append((iPlayer, iCatholicFaith))
+					iChosenPlayer = utils.getRandomByWeight(lWeightValues)
+					if iChosenPlayer != -1:
+						pPlayer = gc.getPlayer(iChosenPlayer)
 						iCatholicBuilding = xml.iCatholicTemple
-					else: # 50-50% chance for temple and monastery otherwise
-						if gc.getGame().getSorenRandNum(100, 'random Catholic BuildingType') % 2 == 0:
-							iCatholicBuilding = xml.iCatholicTemple
-						else:
+						# No chance for monastery if the selected player knows the Scientific Method tech (which obsoletes monasteries), otherwise 50-50%
+						teamPlayer = gc.getTeam(pPlayer.getTeam())
+						if not teamPlayer.isHasTech(xml.iScientificMethod) and gc.getGame().getSorenRandNum(100, 'random Catholic BuildingType') % 2 == 0:
 							iCatholicBuilding = xml.iCatholicMonastery
-					self.buildInRandomCity(iChosenPlayer, iCatholicBuilding, xml.iCatholicism)
+						self.buildInRandomCity(iChosenPlayer, iCatholicBuilding, xml.iCatholicism)
 		# Free technology
 		if iGameTurn > xml.i843AD: # Treaty of Verdun, the Carolingian Empire divided into 3 parts
 			if iGameTurn % 13 == 4: # checked every 13th turn - won't change it as the game progresses, as the number of available techs will already change with the number of Catholic civs

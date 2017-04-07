@@ -1025,12 +1025,4 @@ class Barbs:
 			pUnit.setName( localText.getText(szName, ()))
 
 	def getProvincePlayerCityList(self, iProvince, iPlayer):
-		cityList = []
-		for iI in range( gc.getNumProvinceTiles( iProvince ) ):
-			iX = gc.getProvinceX( iProvince, iI )
-			iY = gc.getProvinceY( iProvince, iI )
-			if gc.getMap().plot( iX, iY ).isCity():
-				pCity = gc.getMap().plot( iX, iY ).getPlotCity()
-				if pCity.getOwner() == iPlayer:
-					cityList.append(pCity)
-		return cityList
+		return [city for city in utils.getCityList(iPlayer) if city.getProvince() == iProvince]
