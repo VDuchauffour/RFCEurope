@@ -10,6 +10,7 @@ import Crusades as cru
 import UniquePowers
 import RFCEMaps as rfcemaps
 from StoredData import sd
+import random
 
 # Globals
 utils = RFCUtils.RFCUtils()
@@ -268,11 +269,10 @@ class Victory:
 
 						# Absinthe: maximum 3 of your rivals declare war on you
 						lCivs = [iCiv for iCiv in range(iNumPlayers-1) if iCiv != iPlayer and gc.getPlayer(iCiv).isAlive()]
-						iStartCivIndex = gc.getGame().getSorenRandNum(len(lCivs), 'first civ to check')
 						iWarCounter = 0
-						# starting at a random civ, we run through all available civs to check for potential wars
-						for i in range( iStartCivIndex, len(lCivs) + iStartCivIndex ):
-							iCiv = lCivs[i % len(lCivs)]
+						# we run through a randomized list of all available civs
+						random.shuffle(lCivs)
+						for iCiv in lCivs:
 							pCiv = gc.getPlayer(iCiv)
 							teamCiv = gc.getTeam(pCiv.getTeam())
 							teamOwn = gc.getTeam(pPlayer.getTeam())
