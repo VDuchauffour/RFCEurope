@@ -360,7 +360,8 @@ class Religions:
 							pPope.changeGold( -iGift )
 							pPlayer.changeGold( iGift )
 							if iChosenPlayer == utils.getHumanID():
-								CyInterface().addMessage(iPlayer, False, con.iDuration, CyTranslator().getText("TXT_KEY_FAITH_GOLD_GIFT", ()), "", 0, "", ColorTypes(con.iBlue), -1, -1, True, True)
+								sText = CyTranslator().getText("TXT_KEY_FAITH_GOLD_GIFT", (iGift, ))
+								CyInterface().addMessage(iPlayer, False, con.iDuration, sText, "", 0, "", ColorTypes(con.iBlue), -1, -1, True, True)
 		# Free religious building
 		if iGameTurn > xml.i800AD: # The crowning of Charlemagne
 			if iGameTurn > xml.i1648AD: # End of religious wars
@@ -389,7 +390,7 @@ class Religions:
 					if iChosenPlayer != -1:
 						pPlayer = gc.getPlayer(iChosenPlayer)
 						iCatholicBuilding = xml.iCatholicTemple
-						# No chance for monastery if the selected player knows the Scientific Method tech (which obsoletes monasteries), otherwise 50-50%
+						# No chance for monastery if the selected player knows the Scientific Method tech (which obsoletes monasteries), otherwise 50-50% for temple and monastery
 						teamPlayer = gc.getTeam(pPlayer.getTeam())
 						if not teamPlayer.isHasTech(xml.iScientificMethod) and gc.getGame().getSorenRandNum(100, 'random Catholic BuildingType') % 2 == 0:
 							iCatholicBuilding = xml.iCatholicMonastery
@@ -642,7 +643,7 @@ class Religions:
 			gc.getPlayer(iPlayer).changeFaith(1)
 			if utils.getHumanID() == iPlayer:
 				sText = CyTranslator().getText("TXT_KEY_FAITH_BUILDING1", ()) + " " + gc.getBuildingInfo( iBuilding ).getDescription() + " " + CyTranslator().getText("TXT_KEY_FAITH_BUILDING2", ()) + " " + city.getName()
-				CyInterface().addMessage(iPlayer, False, con.iDuration, sText, "", 0, "", ColorTypes(con.iBlue), -1, -1, True, True)
+				CyInterface().addMessage(iPlayer, False, con.iDuration, sText, "", 0, gc.getBuildingInfo(iBuilding).getButton(), ColorTypes(con.iBlue), city.getX(), city.getY(), True, True)
 
 	# Absinthe: free religious revolution
 	def onPlayerChangeAllCivics(self, iPlayer, lNewCivics, lOldCivics):

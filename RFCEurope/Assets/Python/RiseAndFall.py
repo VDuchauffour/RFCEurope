@@ -1442,7 +1442,7 @@ class RiseAndFall:
 		for (x, y) in utils.getPlotList(tTopLeft, tBottomRight):
 			pCurrent = gc.getMap().plot( x, y )
 			if pCurrent.isCity():
-				for (ix, iy) in utils.surroundingPlot((x, y)):
+				for (ix, iy) in utils.surroundingPlots((x, y)):
 					pCityArea = gc.getMap().plot( ix, iy )
 					iCivCulture = pCityArea.getCulture(iCiv)
 					iLoopCivCulture = 0

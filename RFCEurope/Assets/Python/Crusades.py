@@ -337,7 +337,7 @@ class Crusades:
 				self.returnCrusaders()
 
 	def checkToStart( self, iGameTurn ):
-	# if Jerusalem is Islamic or Pagan, Crusade has been initialized and it has been at least 5 turns since the last crusade and there are any Catholics, begin crusade
+		# if Jerusalem is Islamic or Pagan, Crusade has been initialized and it has been at least 5 turns since the last crusade and there are any Catholics, begin crusade
 		pJPlot = gc.getMap().plot( tJerusalem[0], tJerusalem[1] )
 		for i in range( iNumCrusades ): # check the Crusades
 			if self.getCrusadeInit( i ) == -1: # if this one is to start
@@ -1053,6 +1053,24 @@ class Crusades:
 			for (x, y) in utils.surroundingPlots(tJerusalem):
 				pPlot = gc.getMap().plot( x, y )
 				utils.convertPlotCulture(pPlot, iPlayer, 100, False)
+
+
+	# Absinthe: pilgrims in Jerusalem if it's held by a Catholic civ
+	def checkPlayerTurn(self, iGameTurn, iPlayer):
+		if iGameTurn % 3 == 1: # checked every 3rd turn
+			pCity = gc.getMap().plot(tJerusalem[0], tJerusalem[1]).getPlotCity()
+			if pCity.getOwner() == iPlayer:
+				pPlayer = gc.getPlayer( iPlayer )
+				if pPlayer.getStateReligion() == iCatholicism:
+					# possible population gain, chance based on the current size
+					iRandom = gc.getGame().getSorenRandNum(10, 'random pop threshold')
+					if (1 + pCity.getPopulation()) <= iRandom: # 1 -> 80%, 2 -> 70%, 3 -> 60% ...  7 -> 20%, 8 -> 10%, 9+ -> 0%
+						pCity.changePopulation(1)
+						if iPlayer == utils.getHumanID():
+							CyInterface().addMessage(iPlayer, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_CRUSADE_JERUSALEM_PILGRIMS", ()), "", 0, "", ColorTypes(con.iGreen), pCity.getX(), pCity.getY(), True, True)
+						# spread Catholicism if not present
+						if not pCity.isHasReligion( iCatholicism ):
+							pCity.setHasReligion(iCatholicism, True, True, False)
 
 
 	def doDC( self, iGameTurn ):

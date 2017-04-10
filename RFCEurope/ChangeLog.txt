@@ -189,6 +189,7 @@ Changes for RFCE 1.5:
 		- Fixed bug where mercenaries could appear in cities without enough culture (if there were multiple cities in the province)
 		- Specific interface message for the human player when there is a new mercenary in the list, but can't be hired because needs different State Religion
 		- New interface message for the human player if a merc available for him/her was hired by another player
+		- If there are mercs available in a newly acquired city's province, interface message about it to the human player
 
 	Stability updates:
 		- Increased civic stability boost from Religious Law + Theocracy
@@ -208,6 +209,7 @@ Changes for RFCE 1.5:
 		
 		- The Papal States cannot trade any technologies (you can neither trade techs from the Pope, nor trade techs to him)
 		- The Pope gets all technologies automatically which is known by at least 3 Catholic civs
+		- Chance for population gain in Jerusalem if a Catholic civ owns it, with Catholicism spread if it isn't present
 	Religion spread rules:
 		- Added special religion spread rules for a couple areas which more often than not ended up with ahistorical religions
 		- The spread is based on provinces (and indirectly on civs in the area), only checks for cities without a religion

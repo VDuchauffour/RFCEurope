@@ -151,6 +151,7 @@ class CvRFCEventHandler:
 		eventManager.addEventHandler("GameStart", self.onGameStart) #Stability
 		eventManager.addEventHandler("BeginGameTurn", self.onBeginGameTurn) #Stability
 		eventManager.addEventHandler("cityAcquired", self.onCityAcquired) #Stability
+		eventManager.addEventHandler("cityAcquiredAndKept", self.onCityAcquiredAndKept) #Stability
 		eventManager.addEventHandler("cityRazed", self.onCityRazed) #Stability
 		eventManager.addEventHandler("cityBuilt", self.onCityBuilt) #Stability
 		eventManager.addEventHandler("combatResult", self.onCombatResult) #Stability
@@ -345,6 +346,13 @@ class CvRFCEventHandler:
 				self.res.removeResource(77, 24)
 
 		return 0
+
+
+	def onCityAcquiredAndKept(self, argsList):
+		'City Acquired and Kept'
+		iOwner, pCity = argsList
+
+		self.mercs.onCityAcquiredAndKept(iOwner, pCity)
 
 
 	def onCityRazed(self, argsList):
@@ -589,6 +597,7 @@ class CvRFCEventHandler:
 			gc.getPlayer(iPlayer).processCivNames()
 
 		## Absinthe: refresh Dynamic Civ Names for all civs on the human player's initial turn of the given scenario
+		##			it's probably enough to refresh it on onGameStart for the scenario
 		#if utils.getHumanID() == iPlayer:
 		#	if iGameTurn == utils.getScenarioStartTurn():
 		#		for iDCNPlayer in range(con.iNumMajorPlayers):
@@ -646,10 +655,7 @@ class CvRFCEventHandler:
 			self.up.janissaryUP( iPlayer )
 
 		self.pla.checkPlayerTurn(iGameTurn, iPlayer)
-
-		# currently only checks for the player's UHV victory
-		if iPlayer == iHuman:
-			self.vic.checkPlayerTurn(iGameTurn, iPlayer)
+		self.vic.checkPlayerTurn(iGameTurn, iPlayer)
 
 		if gc.getPlayer(iPlayer).isAlive() and iPlayer < con.iNumPlayers:
 			if gc.getPlayer(iPlayer).getNumCities() > 0:
@@ -661,6 +667,8 @@ class CvRFCEventHandler:
 
 			# not really needed, we set it on collapse anyway
 			# utils.setLastTurnAlive( iPlayer, iGameTurn )
+
+		self.crusade.checkPlayerTurn(iGameTurn, iPlayer)
 
 		##print ("PLAYER FINE", iPlayer)
 		##print( " out Begin Player Turn ",iGameTurn, iPlayer )

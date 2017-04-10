@@ -464,13 +464,16 @@ class MercenaryManager:
 		self.GMU = GlobalMercenaryUtils()
 		pass
 
+
 	def getMercLists(self):
 		self.lGlobalPool = sd.scriptDict['lMercGlobalPool']
 		self.lHiredBy = sd.scriptDict['lMercsHiredBy']
 
+
 	def setMercLists( self ):
 		sd.scriptDict['lMercGlobalPool'] = self.lGlobalPool
 		sd.scriptDict['lMercsHiredBy'] = self.lHiredBy
+
 
 	def rendomizeMercProvinces( self, iGameTurn ):
 		if iGameTurn % 2 == gc.getGame().getSorenRandNum( 2, 'shall we randomize mercs' ):
@@ -491,6 +494,7 @@ class MercenaryManager:
 						# don't let too many mercs leave the pool
 						return
 
+
 	def setPrereqConsistentPromotions( self, lPromotions ):
 		bPass = False
 		while not bPass:
@@ -506,6 +510,7 @@ class MercenaryManager:
 					lPromotions.append( iPrereq )
 					bPass = False
 		return lPromotions
+
 
 	def addNewMerc( self, iMerc ):
 		# this processes the available promotions
@@ -538,8 +543,8 @@ class MercenaryManager:
 				szProvName = "TXT_KEY_PROVINCE_NAME_%i" %iCurrentProvince
 				szCurrentProvince = CyTranslator().getText(szProvName,())
 				CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()) + " " + szCurrentProvince + CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_RELIGION",()), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
-			# Absinthe: normal message
 			else:
+				# Absinthe: normal message
 				for city in utils.getCityList(iHuman):
 					if city.getProvince() == iCurrentProvince:
 						if city.getCultureLevel() >= 2:
@@ -557,6 +562,7 @@ class MercenaryManager:
 		# add the merc, keep the merc index, costs and promotions
 		self.lGlobalPool.append( [iMerc, lPromotions, iPurchaseCost, iUpkeepCost, iCurrentProvince] )
 		print(" 3Miro Added Merc: ",[iMerc, lPromotions, iPurchaseCost, iUpkeepCost, iCurrentProvince])
+
 
 	def processNewMercs( self, iGameTurn ):
 		# add new mercs to the pool
@@ -628,7 +634,7 @@ class MercenaryManager:
 	def desertMercs( self, iPlayer ):
 		pPlayer = gc.getPlayer( iPlayer )
 		if iPlayer == utils.getHumanID():
-			CyInterface().addMessage(gc.getGame().getActivePlayer(), True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_DESERTERS",()), "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
+			CyInterface().addMessage(iPlayer, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_DESERTERS",()), "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
 
 		while True:
 			lHiredMercs = [unit for unit in PyPlayer( iPlayer ).getUnitList() if unit.getMercID() > -1]
@@ -639,6 +645,18 @@ class MercenaryManager:
 			else:
 				# if the player has no mercs, then stop the loop
 				break
+
+
+	def onCityAcquiredAndKept( self, iCiv, pCity ):
+		# Absinthe: if there are mercs available in the new city's province, interface message about it to the human player
+		iProvince = pCity.getProvince()
+		self.getMercLists() # load the current mercenary pool
+		#print ("self.lGlobalPool", self.lGlobalPool)
+		for lMerc in self.lGlobalPool:
+			if lMerc[4] == iProvince:
+				if iCiv == utils.getHumanID():
+					CyInterface().addMessage(iCiv, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_AVAILABLE_NEAR_NEW_CITY", (pCity.getName(),)), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
+					break
 
 
 	def onUnitPromoted( self, argsList ):
@@ -718,6 +736,7 @@ class MercenaryManager:
 			# remove the merc (presumably disbanded here)
 			lHiredByList[iMerc] = -1
 			self.GMU.setMercHiredBy( lHiredByList )
+
 
 	def processMercAI( self, iPlayer ):
 		pPlayer = gc.getPlayer(iPlayer)
@@ -820,6 +839,7 @@ class MercenaryManager:
 					self.GMU.fireMerc( lMercs[iI] )
 					return
 
+
 	def HireMercAI( self, iPlayer ):
 		# decide which mercenary to hire
 		lCanHireMercs = []
@@ -839,6 +859,7 @@ class MercenaryManager:
 
 			self.GMU.hireMerc(utils.getRandomEntry(lCanHireMercs), iPlayer)
 			self.getMercLists()
+
 
 	def getNumDefendersAtPlot( self, pPlot ):
 		iOwner = pPlot.getOwner()
@@ -860,14 +881,18 @@ class GlobalMercenaryUtils:
 	def getMercGlobalPool( self ):
 		return sd.scriptDict['lMercGlobalPool']
 
+
 	def setMercGlobalPool( self, lNewPool ):
 		sd.scriptDict['lMercGlobalPool'] = lNewPool
+
 
 	def getMercHiredBy( self ):
 		return sd.scriptDict['lMercsHiredBy']
 
+
 	def setMercHiredBy( self, lNewList ):
 		sd.scriptDict['lMercsHiredBy'] = lNewList
+
 
 	def getOwnedProvinces( self, iPlayer ):
 		lProvList = [] # all available cities that the Merc can appear in
@@ -877,6 +902,7 @@ class GlobalMercenaryUtils:
 				lProvList.append( iProvince )
 		return lProvList
 
+
 	def getCulturedProvinces( self, iPlayer ):
 		lProvList = [] # all available cities that the Merc can appear in
 		for city in utils.getCityList(iPlayer):
@@ -884,6 +910,7 @@ class GlobalMercenaryUtils:
 			if iProvince not in lProvList and city.getCultureLevel() >= 2:
 				lProvList.append( iProvince )
 		return lProvList
+
 
 	def playerMakeUpkeepSane( self, iPlayer ):
 		pPlayer = gc.getPlayer( iPlayer )
@@ -902,6 +929,7 @@ class GlobalMercenaryUtils:
 			return False
 		return True
 
+
 	def getCost( self, iMerc, lPromotions ):
 		# note that the upkeep is in the units of 100, i.e. iUpkeepCost = 100 means 1 gold
 		lMercInfo = lMercList[iMerc]
@@ -919,6 +947,7 @@ class GlobalMercenaryUtils:
 
 		return (iPurchaseCost, iUpkeepCost)
 
+
 	def getModifiedCostPerPlayer( self, iCost, iPlayer ):
 		# Absinthe: we need to make it sure this is modified only once for each mercenary on the mercenary screen
 		#			handled on the screen separately, this should be fine the way it is now
@@ -927,6 +956,7 @@ class GlobalMercenaryUtils:
 		#	- every time a merc cost is considered
 		#	- every time a merc cost is to be displayed (in the merc screen)
 		return ( iCost * lMercCostModifier[iPlayer] ) / 100
+
 
 	def hireMerc( self, lMerc, iPlayer ):
 		# the player would hire a merc
@@ -1000,6 +1030,7 @@ class GlobalMercenaryUtils:
 
 		# set the Upkeep
 		pUnit.setMercUpkeep( iUpkeep )
+
 
 	def fireMerc( self, pMerc ):
 		# fires the merc unit pMerc (pointer to CyUnit)

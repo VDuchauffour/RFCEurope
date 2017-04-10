@@ -276,6 +276,15 @@
 		<Portuguese>After years of fighting to accomplish their mission, some of our Crusaders are returning home: </Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_JERUSALEM_PILGRIMS</Tag>
+		<English>Christian pilgrims are filling the roads of Jerusalem!</English>
+		<French>Christian pilgrims are filling the roads of Jerusalem!</French>
+		<German>Christian pilgrims are filling the roads of Jerusalem!</German>
+		<Italian>Christian pilgrims are filling the roads of Jerusalem!</Italian>
+		<Spanish>Christian pilgrims are filling the roads of Jerusalem!</Spanish>
+		<Portuguese>Christian pilgrims are filling the roads of Jerusalem!</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CRUSADE_DEFENSIVE_PROPOSAL_POPUP</Tag>
 		<English>Defensive Crusade</English>
 		<French>Croisade D&#233;fensive</French>

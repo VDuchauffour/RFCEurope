@@ -212,12 +212,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_NEW_MERC_RELIGION</Tag>
-		<English>, but they won't follow anyone with your state religion!</English>
-		<French>, but they won't follow anyone with your state religion!</French>
-		<German>, but they won't follow anyone with your state religion!</German>
-		<Italian>, but they won't follow anyone with your state religion!</Italian>
-		<Spanish>, but they won't follow anyone with your state religion!</Spanish>
-		<Portuguese>, but they won't follow anyone with your state religion!</Portuguese>
+		<English>, but they won't follow anyone with your State Religion!</English>
+		<French>, but they won't follow anyone with your State Religion!</French>
+		<German>, but they won't follow anyone with your State Religion!</German>
+		<Italian>, but they won't follow anyone with your State Religion!</Italian>
+		<Spanish>, but they won't follow anyone with your State Religion!</Spanish>
+		<Portuguese>, but they won't follow anyone with your State Religion!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_NEW_MERC_CULTURE</Tag>
@@ -227,6 +227,15 @@
 		<Italian>, but only if you develop a base culture level in the province!</Italian>
 		<Spanish>, but only if you develop a base culture level in the province!</Spanish>
 		<Portuguese>, but only if you develop a base culture level in the province!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MERC_AVAILABLE_NEAR_NEW_CITY</Tag>
+		<English>There are available mercenaries in the province of %s1!</English>
+		<French>There are available mercenaries in the province of %s1!</French>
+		<German>There are available mercenaries in the province of %s1!</German>
+		<Italian>There are available mercenaries in the province of %s1!</Italian>
+		<Spanish>There are available mercenaries in the province of %s1!</Spanish>
+		<Portuguese>There are available mercenaries in the province of %s1!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERC_NEW_MERC_MOVING</Tag>
