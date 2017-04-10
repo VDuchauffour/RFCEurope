@@ -1247,11 +1247,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DAMAGE_ABILITY</Tag>
-		<English>[ICON_BULLET]Damages enemy units in the area</English>
-		<French>[ICON_BULLET]Damages enemy units in the area</French>
+		<English>[ICON_BULLET]Damages enemy units in your nearby territory</English>
+		<French>[ICON_BULLET]Damages enemy units in your nearby territory</French>
 		<German>[ICON_BULLET]Beschädigt feindliche Einheiten in der Umgebung</German>
 		<Italian>[ICON_BULLET]Danneggia le unità nemiche nei paraggi</Italian>
-		<Spanish>[ICON_BULLET]Damages enemy units in the area</Spanish>
+		<Spanish>[ICON_BULLET]Damages enemy units in your nearby territory</Spanish>
 		<Portuguese>[ICON_BULLET]Danifica unidades inimigas na área</Portuguese>
 	</TEXT>
 	<TEXT>

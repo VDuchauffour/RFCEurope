@@ -340,9 +340,7 @@ class Religions:
 			if iGameTurn % iDivBy == 3:
 				iPopeGold = pPope.getGold()
 				if iPopeGold > 100:
-					if gc.getGame().getSorenRandNum(10, 'Random entry') == 0: # 10% chance for not giving anything
-						pass
-					else:
+					if gc.getGame().getSorenRandNum(10, 'Random entry') != 0: # 10% chance for not giving anything
 						lWeightValues = []
 						for iPlayer in lCatholicCivs:
 							iCatholicFaith = 0
@@ -362,7 +360,7 @@ class Religions:
 							pPope.changeGold( -iGift )
 							pPlayer.changeGold( iGift )
 							if iChosenPlayer == utils.getHumanID():
-								CyInterface().addMessage(iPlayer, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_FAITH_GOLD_GIFT", ()), "", 0, "", ColorTypes(con.iBlue), -1, -1, True, True)
+								CyInterface().addMessage(iPlayer, False, con.iDuration, CyTranslator().getText("TXT_KEY_FAITH_GOLD_GIFT", ()), "", 0, "", ColorTypes(con.iBlue), -1, -1, True, True)
 		# Free religious building
 		if iGameTurn > xml.i800AD: # The crowning of Charlemagne
 			if iGameTurn > xml.i1648AD: # End of religious wars
@@ -374,12 +372,10 @@ class Religions:
 			else:
 				iDivBy = 11
 			if iGameTurn % iDivBy == 2:
-				if gc.getGame().getSorenRandNum(5, 'Random entry') == 0: # there is 20% chance for not building anything
-					pass
-				else:
+				if gc.getGame().getSorenRandNum(5, 'Random entry') != 0: # there is 20% chance for not building anything
 					lWeightValues = []
 					iJerusalemOwner = gc.getMap().plot( con.tJerusalem[0], con.tJerusalem[1]).getPlotCity().getOwner()
-					for iPlayer in lCatholicCivs:  # all Catholic civs with open borders with the Pope
+					for iPlayer in lCatholicCivs:
 						iCatholicFaith = 0
 						pPlayer = gc.getPlayer(iPlayer)
 						# Faith points are the deciding factor for buildings
@@ -402,7 +398,7 @@ class Religions:
 		if iGameTurn > xml.i843AD: # Treaty of Verdun, the Carolingian Empire divided into 3 parts
 			if iGameTurn % 13 == 4: # checked every 13th turn - won't change it as the game progresses, as the number of available techs will already change with the number of Catholic civs
 				lWeightValues = []
-				for iPlayer in lCatholicCivs: # all Catholic civs with open borders with the Pope
+				for iPlayer in lCatholicCivs:
 					iCatholicFaith = 0
 					pPlayer = gc.getPlayer(iPlayer)
 					# Faith points are the deciding factor for techs

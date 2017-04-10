@@ -261,20 +261,20 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ARA1</Tag>
-		<English>[COLOR_YELLOW]The Sword of Islam:[COLOR_REVERT] Conquer the Levant and Egypt in 955AD.</English>
-		<French>[COLOR_YELLOW]The Sword of Islam:[COLOR_REVERT] Conquer the Levant and Egypt in 955AD.</French>
+		<English>[COLOR_YELLOW]The Sword of Islam:[COLOR_REVERT] Control the Levant and Egypt in 955AD.</English>
+		<French>[COLOR_YELLOW]The Sword of Islam:[COLOR_REVERT] Control the Levant and Egypt in 955AD.</French>
 		<German>[COLOR_YELLOW]Das Schwert des Islam:[COLOR_REVERT] Erobert bis 955 n.Chr. Levante und Ägypten.</German>
 		<Italian>[COLOR_YELLOW]La Spada dell'Islam:[COLOR_REVERT] Conquista Levante ed Egitto entro il 955AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The Sword of Islam:[COLOR_REVERT] Conquer the Levant and Egypt in 955AD.</Spanish>
+		<Spanish>[COLOR_YELLOW]The Sword of Islam:[COLOR_REVERT] Control the Levant and Egypt in 955AD.</Spanish>
 		<Portuguese>[COLOR_YELLOW]A Espada do Islã:[COLOR_REVERT] Conquiste Levante e Egito em 955DC.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ARA2</Tag>
-		<English>[COLOR_YELLOW]The House of Islam:[COLOR_REVERT] Conquer the Levant, Egypt and Northern Africa in 1291AD.</English>
-		<French>[COLOR_YELLOW]The House of Islam:[COLOR_REVERT] Conquer the Levant, Egypt and Northern Africa in 1291AD.</French>
+		<English>[COLOR_YELLOW]The House of Islam:[COLOR_REVERT] Control the Levant, Egypt and Northern Africa in 1291AD.</English>
+		<French>[COLOR_YELLOW]The House of Islam:[COLOR_REVERT] Control the Levant, Egypt and Northern Africa in 1291AD.</French>
 		<German>[COLOR_YELLOW]Das Haus des Islam:[COLOR_REVERT] Erobert bis 1291 n.Chr. Levante, Ägypten und Nordafrika.</German>
 		<Italian>[COLOR_YELLOW]La Sede dell'Islam:[COLOR_REVERT] Conquista Levante, Egitto ed Africa del Nord entro il 1291AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The House of Islam:[COLOR_REVERT] Conquer the Levant, Egypt and Northern Africa in 1291AD.</Spanish>
+		<Spanish>[COLOR_YELLOW]The House of Islam:[COLOR_REVERT] Control the Levant, Egypt and Northern Africa in 1291AD.</Spanish>
 		<Portuguese>[COLOR_YELLOW]A Casa do Islã:[COLOR_REVERT] Conquiste Levante, Egito e norte da Africa em 1282DC</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -406,7 +406,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_KIE2</Tag>
-		<English>[COLOR_YELLOW]Rulers of the northern Black Sea:[COLOR_REVERT] Control 10 provinces out of Kiev, Podolia, Pereyaslavl, Sloboda, Chernigov, Volhynia, Minsk, Polotsk, Smolensk, Moscow, Murom, Rostov, Novgorod and Vologda in 1288AD.</English>
+		<English>[COLOR_YELLOW]Dominance of the Rus':[COLOR_REVERT] Control 10 provinces out of Kiev, Podolia, Pereyaslavl, Sloboda, Chernigov, Volhynia, Minsk, Polotsk, Smolensk, Moscow, Murom, Rostov, Novgorod and Vologda in 1288AD.</English>
 		<French>[COLOR_YELLOW]Rulers of the northern Black Sea:[COLOR_REVERT] Control 10 provinces out of Kiev, Podolia, Pereyaslavl, Sloboda, Chernigov, Volhynia, Minsk, Polotsk, Smolensk, Moscow, Murom, Rostov, Novgorod and Vologda in 1288AD.</French>
 		<German>[COLOR_YELLOW]Herrscher des nördlichen Schwarzen Meeres:[COLOR_REVERT] Erobert bis 1288 n.Chr. 10 Provinzen aus Kiev, Podolien, Pereyaslawl, Sloboda, Tschernigow, Wolhynien, Minsk, Polotsk, Smolensk, Moscow, Murom, Rostov, Nowgorod und Vologda.</German>
 		<Italian>[COLOR_YELLOW]Dominatore del Mar Nero settentrionale:[COLOR_REVERT] Controlla 10 province tra le seguenti: Kiev, Podolia, Pereyaslavl, Sloboda, Chernihiv, Volinia, Minsk, Polack, Smolensk, Moscow, Murom, Rostov, Novgorod e Vologda nel 1288AD.</Italian>
@@ -586,11 +586,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ENG1</Tag>
-		<English>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Mercia, Northumbria, Scotland, Wales, Ireland, Normandy, Picardy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</English>
-		<French>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Mercia, Northumbria, Scotland, Wales, Ireland, Normandy, Picardy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</French>
+		<English>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Control London, Wessex, East Anglia, Mercia, Northumbria, Scotland, Wales, Ireland, Normandy, Picardy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</English>
+		<French>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Control London, Wessex, East Anglia, Mercia, Northumbria, Scotland, Wales, Ireland, Normandy, Picardy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</French>
 		<German>[COLOR_YELLOW]Die Krone:[COLOR_REVERT] Erobert bis 1452 n.Chr. London, Wessex, Ostanglien, Mercia, Northumbria, Schottland, Wales, Irland, Normandie, Picardie, Bretagne, Il-de-France, Aquitanien und Orleans.</German>
 		<Italian>[COLOR_YELLOW]La Corona:[COLOR_REVERT] Conquista le province di Londra, Wessex, Anglia Orientale, Mercia, Northumbria, Scozia, Galles, Irlanda, Normandia, Piccardia, Bretagna, Ile-de-France, Aquitania ed Orleans entro il 1452AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Conquer London, Wessex, East Anglia, Mercia, Northumbria, Scotland, Wales, Ireland, Normandy, Picardy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</Spanish>
+		<Spanish>[COLOR_YELLOW]The Crown:[COLOR_REVERT] Control London, Wessex, East Anglia, Mercia, Northumbria, Scotland, Wales, Ireland, Normandy, Picardy, Bretagne, Il-de-France, Aquitania and Orleans in 1452AD.</Spanish>
 		<Portuguese>[COLOR_YELLOW]A Coroa:[COLOR_REVERT] Conquiste Londres, Wessex, ânglia Oriental, Mércia, Nortúmbria, Escócia, Gales, Irlanda, Normandia, Picardia, Bretanha, Ilha de França, Aquitânia e Orleans em 1452DC.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -640,11 +640,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_AUS1</Tag>
-		<English>[COLOR_YELLOW]Habsburg Empire:[COLOR_REVERT] Conquer Hungary, Upper Hungary, Austria, Bavaria, Carinthia, Transylvania, Pannonia, Moravia, Silesia and Bohemia in 1617AD.</English>
-		<French>[COLOR_YELLOW]Habsburg Empire:[COLOR_REVERT] Conquer Hungary, Upper Hungary, Austria, Bavaria, Carinthia, Transylvania, Pannonia, Moravia, Silesia and Bohemia in 1617AD.</French>
+		<English>[COLOR_YELLOW]Habsburg Empire:[COLOR_REVERT] Control Hungary, Upper Hungary, Austria, Bavaria, Carinthia, Transylvania, Pannonia, Moravia, Silesia and Bohemia in 1617AD.</English>
+		<French>[COLOR_YELLOW]Habsburg Empire:[COLOR_REVERT] Control Hungary, Upper Hungary, Austria, Bavaria, Carinthia, Transylvania, Pannonia, Moravia, Silesia and Bohemia in 1617AD.</French>
 		<German>[COLOR_YELLOW]Habsburger Kaiserreich:[COLOR_REVERT] Erobert bis 1617 n.Chr. Ungarn, Oberungarn, Österreich, Bayern, Kärnten, Siebenbürgen, Pannonien, Mähren, Schlesien und Böhmen.</German>
 		<Italian>[COLOR_YELLOW]Impero Asburgico:[COLOR_REVERT] Conquista le provincie di Ungheria, Alta Ungheria, Austria, Baviera, Carinzia, Transilvania, Pannonia, Moravia, Silezia e Boemia entro il 1617AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Habsburg Empire:[COLOR_REVERT] Conquer Hungary, Upper Hungary, Austria, Bavaria, Carinthia, Transylvania, Pannonia, Moravia, Silesia and Bohemia in 1617AD.</Spanish>
+		<Spanish>[COLOR_YELLOW]Habsburg Empire:[COLOR_REVERT] Control Hungary, Upper Hungary, Austria, Bavaria, Carinthia, Transylvania, Pannonia, Moravia, Silesia and Bohemia in 1617AD.</Spanish>
 		<Portuguese>[COLOR_YELLOW]Império Habsburgo:[COLOR_REVERT] Conquiste Hungria, Alta Hungria, Áustria, Baviera, Caríntia, Transilvânia, Panônia, Morávia, Silésia e Boêmia em 1617DC.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -667,20 +667,20 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_TUR1</Tag>
-		<English>[COLOR_YELLOW]Osman's Empire:[COLOR_REVERT] Conquer Constantinople and the Balkans in 1453AD.</English>
-		<French>[COLOR_YELLOW]Osman's Empire:[COLOR_REVERT] Conquer Constantinople and the Balkans in 1453AD.</French>
+		<English>[COLOR_YELLOW]Osman's Empire:[COLOR_REVERT] Control Constantinople and the Balkans in 1453AD.</English>
+		<French>[COLOR_YELLOW]Osman's Empire:[COLOR_REVERT] Control Constantinople and the Balkans in 1453AD.</French>
 		<German>[COLOR_YELLOW]Osmans Reich:[COLOR_REVERT] Erobert bis 1453 n.Chr. Konstantinopel und dem Balkan.</German>
 		<Italian>[COLOR_YELLOW]L'Impero di Osman:[COLOR_REVERT] Conquista Costantinopoli e nei Balcani il 1453AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Osman's Empire:[COLOR_REVERT] Conquer Constantinople and the Balkans in 1453AD.</Spanish>
+		<Spanish>[COLOR_YELLOW]Osman's Empire:[COLOR_REVERT] Control Constantinople and the Balkans in 1453AD.</Spanish>
 		<Portuguese>[COLOR_YELLOW]Império de Osmã:[COLOR_REVERT] Conquiste Constantinopla e os Balcãs em 1453DC.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_TUR2</Tag>
-		<English>[COLOR_YELLOW]Osman's Dream:[COLOR_REVERT] Conquer Anatolia, the Levant and Egypt in 1517AD.</English>
-		<French>[COLOR_YELLOW]Osman's Dream:[COLOR_REVERT] Conquer Anatolia, the Levant and Egypt in 1517AD.</French>
+		<English>[COLOR_YELLOW]Osman's Dream:[COLOR_REVERT] Control Anatolia, the Levant and Egypt in 1517AD.</English>
+		<French>[COLOR_YELLOW]Osman's Dream:[COLOR_REVERT] Control Anatolia, the Levant and Egypt in 1517AD.</French>
 		<German>[COLOR_YELLOW]Osmans Traum:[COLOR_REVERT] Erobert bis 1517 n.Chr. Anatolien, der Levante und Ägypten.</German>
 		<Italian>[COLOR_YELLOW]Il Sogno di Osman:[COLOR_REVERT] Conquista l'Anatolia, il Levante e l'Egitto entro il 1517AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Osman's Dream:[COLOR_REVERT] Conquer Anatolia, the Levant and Egypt in 1517AD.</Spanish>
+		<Spanish>[COLOR_YELLOW]Osman's Dream:[COLOR_REVERT] Control Anatolia, the Levant and Egypt in 1517AD.</Spanish>
 		<Portuguese>[COLOR_YELLOW]Sonho de Osmã:[COLOR_REVERT] Conquiste Anatolia, o Levante e Egito em 1517DC.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -722,11 +722,11 @@
 	<!-- Old UHVs, for later starting date
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SWEDEN1</Tag>
-		<English>[COLOR_YELLOW]Uniting Sweden:[COLOR_REVERT] Conquer Gotaland, Svealand, Norrland, Skaneland, Gotland and Osterland in 1600AD.</English>
-		<French>[COLOR_YELLOW]Uniting Sweden:[COLOR_REVERT] Conquer Gotaland, Svealand, Norrland, Skaneland, Gotland and Osterland in 1600AD.</French>
+		<English>[COLOR_YELLOW]Uniting Sweden:[COLOR_REVERT] Control Gotaland, Svealand, Norrland, Skaneland, Gotland and Osterland in 1600AD.</English>
+		<French>[COLOR_YELLOW]Uniting Sweden:[COLOR_REVERT] Control Gotaland, Svealand, Norrland, Skaneland, Gotland and Osterland in 1600AD.</French>
 		<German>[COLOR_YELLOW]Vereinigtes Schweden:[COLOR_REVERT] Erobert bis 1600 n.Chr. Gotaland, Svealand, Norrland, Skaneland, Gotland und Osterland.</German>
 		<Italian>[COLOR_YELLOW]Svezia Unita:[COLOR_REVERT] Conquista le province di Gotaland, Svealand, Norrland, Skaneland, Gotland e Osterland entro il 1600AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Uniting Sweden:[COLOR_REVERT] Conquer Gotaland, Svealand, Norrland, Skaneland, Gotland and Osterland in 1600AD.</Spanish>
+		<Spanish>[COLOR_YELLOW]Uniting Sweden:[COLOR_REVERT] Control Gotaland, Svealand, Norrland, Skaneland, Gotland and Osterland in 1600AD.</Spanish>
 		<Portuguese>[COLOR_YELLOW]Unificando a Suécia:[COLOR_REVERT] Conquiste Gotaland, Svealand, Norrland, Skaneland, Gotland and Osterland em 1600DC.</Portuguese>
 	</TEXT>
 	<TEXT>

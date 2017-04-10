@@ -609,7 +609,7 @@ class ProvinceManager:
 			pCordoba.setProvinceType( xml.iP_Fez, iProvinceOuter )
 			pCordoba.setProvinceType( xml.iP_Tetouan, iProvinceOuter )
 		elif iPlayer == iEngland:
-			pFrankia.setProvinceType( xml.iP_Normandy, iProvincePotential ) # these areas flip to England, so resetting them to Potential won't cause any issues
+			pFrankia.setProvinceType( xml.iP_Normandy, iProvincePotential ) # it flips to England, so resetting them to Potential won't cause any issues
 			pScotland.setProvinceType( xml.iP_Northumbria, iProvinceOuter )
 			pScotland.setProvinceType( xml.iP_Mercia, iProvinceNone )
 			pDenmark.setProvinceType( xml.iP_Northumbria, iProvinceNone )

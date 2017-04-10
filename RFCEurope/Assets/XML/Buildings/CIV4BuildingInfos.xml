@@ -176,7 +176,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -566,7 +565,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -757,7 +755,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -953,7 +950,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -1135,7 +1131,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -1207,13 +1202,11 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<!-- Rhye -->
 			<iCost>500</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMinAreaSize>-1</iMinAreaSize>
-			<!-- Rhye -->
 			<iConquestProb>0</iConquestProb>
 			<iCitiesPrereq>0</iCitiesPrereq>
 			<iTeamsPrereq>0</iTeamsPrereq>
@@ -1304,7 +1297,6 @@
 			<ConstructSound/>
 			<BonusHealthChanges/>
 			<BonusHappinessChanges/>
-			<!-- Rhye -->
 			<BonusProductionModifiers/>
 			<UnitCombatFreeExperiences/>
 			<DomainFreeExperiences/>
@@ -1337,7 +1329,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -1520,7 +1511,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -1706,7 +1696,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -1879,7 +1868,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -1917,7 +1905,6 @@
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
-			<!-- Rhye -->
 			<ProductionTraits/>
 			<HappinessTraits/>
 			<NoBonus>NONE</NoBonus>
@@ -2058,7 +2045,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -2096,7 +2082,6 @@
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
-			<!-- Rhye -->
 			<ProductionTraits/>
 			<HappinessTraits/>
 			<NoBonus>NONE</NoBonus>
@@ -2241,7 +2226,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -2433,7 +2417,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -2472,7 +2455,6 @@
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
-			<!-- Rhye -->
 			<ProductionTraits/>
 			<HappinessTraits/>
 			<NoBonus>NONE</NoBonus>
@@ -2639,7 +2621,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -2835,7 +2816,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>1</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -3036,7 +3016,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -3214,7 +3193,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -3252,7 +3230,6 @@
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
-			<!-- Rhye -->
 			<ProductionTraits/>
 			<HappinessTraits/>
 			<NoBonus>NONE</NoBonus>
@@ -3398,7 +3375,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -3580,7 +3556,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -3762,7 +3737,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -3944,7 +3918,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -4130,7 +4103,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -4314,7 +4286,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -4501,7 +4472,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -4697,7 +4667,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -4871,7 +4840,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -5044,7 +5012,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -5976,7 +5943,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -6153,7 +6119,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -6331,7 +6296,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -6369,7 +6333,6 @@
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
-			<!-- Rhye -->
 			<ProductionTraits/>
 			<HappinessTraits/>
 			<NoBonus>NONE</NoBonus>
@@ -6520,7 +6483,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -6708,7 +6670,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -6912,7 +6873,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -7101,7 +7061,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -7294,7 +7253,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -7472,7 +7430,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -7661,7 +7618,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -7842,7 +7798,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -8023,7 +7978,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -8209,7 +8163,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -8382,7 +8335,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -8560,7 +8512,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -8755,7 +8706,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -8945,7 +8895,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -9144,7 +9093,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -9324,7 +9272,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -9504,7 +9451,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -9689,7 +9635,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -9889,7 +9834,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -10084,7 +10028,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -10299,7 +10242,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -10495,7 +10437,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -10689,7 +10630,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -10884,7 +10824,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -11108,7 +11047,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -11351,7 +11289,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -11526,7 +11463,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -11706,7 +11642,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -11881,7 +11816,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -12059,7 +11993,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -12244,7 +12177,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -12432,7 +12364,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -12471,7 +12402,6 @@
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
-			<!-- Rhye -->
 			<ProductionTraits/>
 			<HappinessTraits/>
 			<NoBonus>NONE</NoBonus>
@@ -12621,7 +12551,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -12660,7 +12589,6 @@
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
-			<!-- Rhye -->
 			<ProductionTraits/>
 			<HappinessTraits/>
 			<NoBonus>NONE</NoBonus>
@@ -12810,7 +12738,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -13003,7 +12930,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -13201,7 +13127,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -13389,7 +13314,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -13428,7 +13352,6 @@
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
-			<!-- Rhye -->
 			<ProductionTraits/>
 			<HappinessTraits/>
 			<NoBonus>NONE</NoBonus>
@@ -13583,7 +13506,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -13759,7 +13681,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -13938,7 +13859,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -14113,7 +14033,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -14298,7 +14217,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -14493,7 +14411,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -14675,7 +14592,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -14865,7 +14781,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -15062,7 +14977,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -15248,7 +15162,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -15432,7 +15345,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -15627,7 +15539,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -15809,7 +15720,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -15995,7 +15905,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -16192,7 +16101,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -16373,7 +16281,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -16566,7 +16473,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -16761,7 +16667,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -16943,7 +16848,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -17140,7 +17044,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -17330,7 +17233,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -17513,7 +17415,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -17702,7 +17603,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -17886,7 +17786,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -18081,7 +17980,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -18263,7 +18161,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -18460,7 +18357,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -18650,7 +18546,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -18833,7 +18728,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -19022,7 +18916,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -19206,7 +19099,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -19401,7 +19293,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -21594,7 +21485,6 @@
 			<ConstructSound/>
 			<BonusHealthChanges/>
 			<BonusHappinessChanges/>
-			<!-- Rhye -->
 			<BonusProductionModifiers/>
 			<UnitCombatFreeExperiences/>
 			<DomainFreeExperiences/>
@@ -21617,7 +21507,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -21807,7 +21696,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -22000,7 +21888,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -22198,7 +22085,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -22270,7 +22156,6 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<!-- Rhye -->
 			<iCost>450</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -22389,7 +22274,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -22583,7 +22467,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>1</bAllowVassalUU>
@@ -22780,7 +22663,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -22854,7 +22736,6 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<!-- Rhye -->
 			<iCost>500</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -22968,7 +22849,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -23154,7 +23034,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -23348,7 +23227,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -23544,7 +23422,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -23739,7 +23616,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -23924,7 +23800,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -24126,7 +24001,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -24316,7 +24190,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -24507,7 +24380,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -24545,7 +24417,6 @@
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
-			<!-- Rhye -->
 			<ProductionTraits/>
 			<HappinessTraits/>
 			<NoBonus>NONE</NoBonus>
@@ -24688,7 +24559,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -24886,7 +24756,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -24918,7 +24787,6 @@
 			<GlobalCorporationCommerce>NONE</GlobalCorporationCommerce>
 			<VictoryPrereq>NONE</VictoryPrereq>
 			<FreeStartEra>NONE</FreeStartEra>
-			<!-- Rhye -->
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>TECH_PRINTING_PRESS</ObsoleteTech>
 			<PrereqTech>TECH_VAULTED_ARCHES</PrereqTech>
@@ -25080,7 +24948,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>1</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -25292,7 +25159,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -25480,7 +25346,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -25682,7 +25547,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -25877,7 +25741,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -26066,7 +25929,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -26267,7 +26129,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -26473,7 +26334,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -26663,7 +26523,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -26854,7 +26713,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -27044,7 +26902,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -27236,7 +27093,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -27427,7 +27283,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -27459,7 +27314,6 @@
 			<GlobalCorporationCommerce>NONE</GlobalCorporationCommerce>
 			<VictoryPrereq>NONE</VictoryPrereq>
 			<FreeStartEra>NONE</FreeStartEra>
-			<!-- Rhye -->
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>NONE</ObsoleteTech>
 			<PrereqTech>TECH_PATRONAGE</PrereqTech>
@@ -27620,7 +27474,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -27816,7 +27669,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -28001,7 +27853,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -28210,7 +28061,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -28388,7 +28238,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -28579,7 +28428,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -28769,7 +28617,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -28963,7 +28810,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -29151,7 +28997,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -29169,7 +29014,6 @@
 			<SpecialBuildingType>NONE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TRIUMPHAL_ARCH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRIUMPHAL_ARCH_PEDIA</Civilopedia>
-			<!-- Rhye -->
 			<Strategy>TXT_KEY_BUILDING_TRIUMPHAL_ARCH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TRIUMPHAL_ARCH</ArtDefineTag>
@@ -29183,13 +29027,10 @@
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
 			<GlobalCorporationCommerce>NONE</GlobalCorporationCommerce>
-			<!-- Rhye -->
 			<VictoryPrereq>VICTORY_HISTORICAL</VictoryPrereq>
 			<FreeStartEra>NONE</FreeStartEra>
-			<!-- Rhye -->
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>NONE</ObsoleteTech>
-			<!-- Rhye -->
 			<PrereqTech>NONE</PrereqTech>
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
@@ -29203,7 +29044,6 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
-			<!-- Rhye -->
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -29218,7 +29058,6 @@
 			<bForceTeamVoteEligible>0</bForceTeamVoteEligible>
 			<bCapital>0</bCapital>
 			<bGovernmentCenter>0</bGovernmentCenter>
-			<!-- Rhye -->
 			<bGoldenAge>1</bGoldenAge>
 			<bAllowsNukes>0</bAllowsNukes>
 			<bMapCentering>0</bMapCentering>
@@ -29230,7 +29069,6 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<!-- Rhye -->
 			<iCost>-1</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -29240,10 +29078,8 @@
 			<iCitiesPrereq>0</iCitiesPrereq>
 			<iTeamsPrereq>0</iTeamsPrereq>
 			<iLevelPrereq>0</iLevelPrereq>
-			<!-- Rhye -->
 			<iMinLatitude>91</iMinLatitude>
 			<iMaxLatitude>90</iMaxLatitude>
-			<!-- Rhye -->
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
@@ -29275,7 +29111,6 @@
 			<iGlobalHappiness>0</iGlobalHappiness>
 			<iStateReligionHappiness>0</iStateReligionHappiness>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
-			<!-- Rhye -->
 			<iMilitaryProductionModifier>20</iMilitaryProductionModifier>
 			<iSpaceProductionModifier>0</iSpaceProductionModifier>
 			<iGlobalSpaceProductionModifier>0</iGlobalSpaceProductionModifier>
@@ -29321,14 +29156,12 @@
 			<ConstructSound/>
 			<BonusHealthChanges/>
 			<BonusHappinessChanges/>
-			<!-- Rhye -->
 			<BonusProductionModifiers/>
 			<UnitCombatFreeExperiences/>
 			<DomainFreeExperiences/>
 			<DomainProductionModifiers/>
 			<BuildingHappinessChanges/>
 			<PrereqBuildingClasses/>
-			<!-- Rhye -->
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
 			<BonusYieldModifiers/>
@@ -29345,7 +29178,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>
@@ -29513,7 +29345,6 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<!-- 3Miro -->
 			<bDamageEnemies>0</bDamageEnemies>
 			<bAllowBrotherWar>0</bAllowBrotherWar>
 			<bAllowVassalUU>0</bAllowVassalUU>

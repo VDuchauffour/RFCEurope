@@ -388,7 +388,7 @@ class Plague:
 							self.spreadPlague(plot.getOwner(), -1)
 							self.infectCitiesNear(plot.getOwner(), x, y)
 
-			# kill units further from the city
+			# kill units around the city
 			for (x, y) in utils.surroundingPlots((city.getX(), city.getY()), 3):
 				plot = gc.getMap().plot(x, y)
 				iDistance = utils.calculateDistance(city.getX(), city.getY(), x, y)
@@ -396,15 +396,20 @@ class Plague:
 				if iDistance == 0: # City
 					self.killUnitsByPlague(city, plot, 20, 40, 2)
 				elif not plot.isCity():
-					if iDistance < 3:
+					if iDistance == 1:
 						if plot.isRoute():
 							self.killUnitsByPlague(city, plot, 20, 30, 0)
 						else:
 							self.killUnitsByPlague(city, plot, 30, 30, 0)
+					elif iDistance == 2:
+						if plot.isRoute():
+							self.killUnitsByPlague(city, plot, 30, 30, 0)
+						else:
+							self.killUnitsByPlague(city, plot, 40, 30, 0)
 					else:
 						if plot.getOwner() == iPlayer or not plot.isOwned():
 							if plot.isRoute() or plot.isWater():
-								self.killUnitsByPlague(city, plot, 30, 30, 0)
+								self.killUnitsByPlague(city, plot, 40, 30, 0)
 
 			# spread by the trade routes
 			if self.getPlagueCountdown(iPlayer) > 2: # don't spread in the last turns
@@ -433,8 +438,9 @@ class Plague:
 					iMaxNumInfections = 2
 				else:
 					iMaxNumInfections = 1
-				iMaxNumInfections = min(len(lNotInfectedCities), iMaxNumInfections)
-				iNumSpreads = gc.getGame().getSorenRandNum(iMaxNumInfections+1, 'max number of new infections')
+
+				iNumSpreads = gc.getGame().getSorenRandNum(iMaxNumInfections, 'max number of new infections') + 1 # plagues are rather short, always spread at least once
+				iNumSpreads = min(len(lNotInfectedCities), iNumSpreads) # in case there are not enough uninfected cities
 
 				if iNumSpreads > 0:
 					iInfections = 0
@@ -445,6 +451,7 @@ class Plague:
 							iInfections += 1
 							if iInfections >= iNumSpreads:
 								break
+
 
 	def infectCitiesNear(self, iPlayer, startingX, startingY):
 		cityList = [city for city in utils.getCityList(iPlayer) if not city.hasBuilding(iPlague)]
@@ -491,7 +498,7 @@ class Plague:
 								self.infectCity(cityNear)
 				# no reinfect for the AI, only infect
 				else:
-					# if > 0 do nothing, if < 0 skip immunity and restart the plague, if == 0 start the plague
+					 # if > 0 do nothing, if < 0 keep immunity and remove plague from the city, if == 0 start the plague
 					if self.getPlagueCountdown(iNewOwner) == 0:
 						self.spreadPlague(iNewOwner, -1)
 						for cityNear in utils.getCityList(iNewOwner):

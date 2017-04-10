@@ -14430,20 +14430,24 @@ void CvCity::damagePlot( int iFoeDamage, int iBarbDamage, CvPlot *pPlot ){
 	int i, N;
 	CvUnit *pUnit;
 	int iPlayer = getOwner();
+	int iActualBarbDamage;
+	int iActualFoeDamage;
 	if ( pPlot ->getOwner() == iPlayer ){
 		N = pPlot ->getNumUnits();
 		for ( i=0; i<N; i++ ){
 			pUnit = pPlot ->getUnitByIndex(i);
 			if ( GET_TEAM( GET_PLAYER((PlayerTypes)iPlayer).getTeam() ).isAtWar( pUnit ->getTeam() ) ){
-				// Absinthe: not a constant amount of damage, depends on current damage
-				iBarbDamage *= ((120 * pUnit->currHitPoints()) / pUnit->maxHitPoints());
-				iFoeDamage *= ((120 * pUnit->currHitPoints()) / pUnit->maxHitPoints());
-				iBarbDamage /= 100;
-				iFoeDamage /= 100;
+				// Absinthe: not a constant amount of damage, depends on current damage of the given unit, also a little randomization
+				iActualBarbDamage = iBarbDamage * ((100 * pUnit->currHitPoints()) / pUnit->maxHitPoints());
+				iActualFoeDamage = iFoeDamage * ((100 * pUnit->currHitPoints()) / pUnit->maxHitPoints());
+				iActualBarbDamage += GC.getGameINLINE().getSorenRandNum(iActualBarbDamage/2, "Randomize damage");
+				iActualFoeDamage += GC.getGameINLINE().getSorenRandNum(iActualFoeDamage/2, "Randomize damage");
+				iActualBarbDamage /= 100;
+				iActualFoeDamage /= 100;
 				if ( pUnit ->getOwner() == BARBARIAN ){
-					pUnit ->setDamage( pUnit->getDamage() + iBarbDamage, (PlayerTypes) iPlayer );
+					pUnit ->setDamage( pUnit->getDamage() + iActualBarbDamage, (PlayerTypes) iPlayer );
 				}else{
-					pUnit ->setDamage( pUnit->getDamage() + iFoeDamage, (PlayerTypes) iPlayer );
+					pUnit ->setDamage( pUnit->getDamage() + iActualFoeDamage, (PlayerTypes) iPlayer );
 				};
 			};
 		};

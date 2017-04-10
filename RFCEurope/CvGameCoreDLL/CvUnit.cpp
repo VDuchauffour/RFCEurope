@@ -4842,6 +4842,13 @@ void CvUnit::updatePlunder(int iChange, bool bUpdatePlotGroups)
 
 					if (NULL != pLoopPlot && pLoopPlot->isWater() && pLoopPlot->area() == area())
 					{
+						// Absinthe: no blockade on the other side of an isthmus
+						if( GC.getMapINLINE().calculatePathDistance(plotXY(getX_INLINE(), getY_INLINE(), 0, 0),pLoopPlot) > iBlockadeRange )
+						{
+							continue;
+						}
+						// Absinthe: end
+
 						if (!bChanged)
 						{
 							bOldTradeNet = pLoopPlot->isTradeNetwork((TeamTypes)iTeam);

@@ -117,7 +117,7 @@ class Companies:
 			city, iValue = cityValueList[i]
 			if city.isHasCorporation(iCompany):
 				continue
-			if i >= iMaxCompanies: # the goal is to spread the company to the first iMaxCompanies number of cities
+			if i >= iMaxCompanies: # the goal is to have the company in the first iMaxCompanies number of cities
 				break
 			city.setHasCorporation(iCompany, True, True, True)
 			city.setHasRealBuilding(lCompanyBuilding[iCompany], True)

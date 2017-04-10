@@ -4482,16 +4482,6 @@ DenialTypes CvPlayer::getTradeDenial(PlayerTypes eWhoTo, TradeData item) const
 		break;
 
 	case TRADE_CITIES:
-		// Absinthe: no city trading for the Pope
-		if ( (getID() == PAPAL_PLAYER) || (eWhoTo == PAPAL_PLAYER) )
-		{
-			return DENIAL_ATTITUDE;
-		};
-		// Absinthe: Don't enable city trading in the first 5 turns after spawn (avoid exploit with city gifting before the flip for additional units)
-		if ( startingTurn[getID()] + 5 > GC.getGamePointer() ->getGameTurn() && startingTurn[getID()] <= GC.getGamePointer() ->getGameTurn())
-		{
-			return DENIAL_ATTITUDE;
-		}
 		pCity = getCity(item.m_iData);
 		if (pCity != NULL)
 		{

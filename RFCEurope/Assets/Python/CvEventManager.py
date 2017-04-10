@@ -981,13 +981,13 @@ class CvEventManager:
 					if city.getNumBuilding(iWonder) > 0:
 						sWonderName = gc.getBuildingInfo(iWonder).getDescription()
 						if ConquerPlayer.isHuman():
-							CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_CAPTURED_1", (sWonderName,"1")), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(iWonder).getButton(), ColorTypes(con.iBlue), iX, iY, True, True)
+							CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_DESTROYED_1", (sWonderName, )), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(iWonder).getButton(), ColorTypes(con.iLightRed), iX, iY, True, True)
 						elif HumanTeam.isHasMet(ConquerTeam):
 							ConquerName = ConquerPlayer.getCivilizationDescriptionKey()
-							CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_CAPTURED_2", (ConquerName, sWonderName)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(iWonder).getButton(), ColorTypes(con.iCyan), iX, iY, True, True)
+							CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_DESTROYED_2", (ConquerName, sWonderName)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(iWonder).getButton(), ColorTypes(con.iLightRed), iX, iY, True, True)
 						elif HumanTeam.isHasMet(PreviousTeam):
 							PreviousName = PreviousPlayer.getCivilizationDescriptionKey()
-							CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_CAPTURED_3", (PreviousName, sWonderName)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(iWonder).getButton(), ColorTypes(con.iCyan), iX, iY, True, True)
+							CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_DESTROYED_3", (PreviousName, sWonderName)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(iWonder).getButton(), ColorTypes(con.iLightRed), iX, iY, True, True)
 		# Absinthe - wonder destroyed message end
 
 		# Absinthe: Partisans! - not used currently
@@ -1027,7 +1027,7 @@ class CvEventManager:
 					if pCity.getNumBuilding(iWonder) > 0:
 						sWonderName = gc.getBuildingInfo(iWonder).getDescription()
 						if ConquerPlayer.isHuman():
-							CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_CAPTURED_1", (sWonderName,"1")), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(iWonder).getButton(), ColorTypes(con.iBlue), iX, iY, True, True)
+							CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_CAPTURED_1", (sWonderName, )), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(iWonder).getButton(), ColorTypes(con.iBlue), iX, iY, True, True)
 						elif HumanTeam.isHasMet(ConquerTeam):
 							ConquerName = ConquerPlayer.getCivilizationDescriptionKey()
 							CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_CAPTURED_2", (ConquerName, sWonderName)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(iWonder).getButton(), ColorTypes(con.iCyan), iX, iY, True, True)
