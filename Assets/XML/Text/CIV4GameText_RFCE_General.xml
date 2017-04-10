@@ -1111,4 +1111,49 @@
 		<Spanish>A road system has been made impassable by a marauding %s2_civ_adjective %s1_UnitName!</Spanish>
 		<Portuguese>A road system has been made impassable by a marauding %s2_civ_adjective %s1_UnitName!</Portuguese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_TOO_FAR</Tag>
+		<English>"Your land is too far away."</English>
+		<French>"Votre territoire est trop &#233;loign&#233;"</French>
+		<German>"Euer Reich ist zu weit entfernt."</German>
+		<Italian>"Il tuo territorio &#232; troppo lontano"</Italian>
+		<Spanish>"Vuestra tierra est&#225; demasiado lejos."</Spanish>
+		<Portuguese>"Your land is too far away."</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_VASSAL</Tag>
+		<English>"Sorry, it's out of our hands."</English>
+		<French>"D&#233;sol&#233;, cela ne nous concerne plus."</French>
+		<German>"Es liegt leider nicht in unserer Hand."</German>
+		<Italian>"Spiacente, non possiamo farci nulla."</Italian>
+		<Spanish>"Lo sentimos, no est&#225; en nuestras manos."</Spanish>
+		<Portuguese>"Sorry, it's out of our hands."</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_POWER_YOUR_ENEMIES</Tag>
+		<English>"We are afraid of your enemies!"</English>
+		<French>"Nous avons peur de vos ennemis !"</French>
+		<German>"Wir f&#252;rchten Eure Feinde!"</German>
+		<Italian>"I tuoi nemici ci fanno paura!"</Italian>
+		<Spanish>"Tememos a vuestros enemigos."</Spanish>
+		<Portuguese>"We are afraid of your enemies!"</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_LOW_STABILITY</Tag>
+		<English>"We are afraid our nation is not stable enough."</English>
+		<French>"We are afraid our nation is not stable enough."</French>
+		<German>"We are afraid our nation is not stable enough."</German>
+		<Italian>"We are afraid our nation is not stable enough."</Italian>
+		<Spanish>"We are afraid our nation is not stable enough."</Spanish>
+		<Portuguese>"We are afraid our nation is not stable enough."</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DENIAL_TOO_FAR_CITY</Tag>
+		<English>"It's too far from our territory."</English>
+		<French>"It's too far from our territory."</French>
+		<German>"It's too far from our territory."</German>
+		<Italian>"It's too far from our territory."</Italian>
+		<Spanish>"It's too far from our territory."</Spanish>
+		<Portuguese>"It's too far from our territory."</Portuguese>
+	</TEXT>
 </Civ4GameText>

@@ -3174,7 +3174,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE01</Tag>
-		<English>Kievan' Rus</English>
+		<English>Kievan Rus'</English>
 		<French>Rus' de Kiev</French>
 		<German>Kiewer Rus</German>
 		<Italian>Rus' di Kiev</Italian>
@@ -3183,7 +3183,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE02</Tag>
-		<English>Kievan' Rus</English>
+		<English>Kievan Rus'</English>
 		<French>Rus' de Kiev</French>
 		<German>Kiewer Rus</German>
 		<Italian>Rus' di Kiev</Italian>
@@ -3219,12 +3219,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE06</Tag>
-		<English>Kingdom of Rus</English>
-		<French>Kingdom of Rus</French>
-		<German>Kingdom of Rus</German>
-		<Italian>Kingdom of Rus</Italian>
-		<Spanish>Kingdom of Rus</Spanish>
-		<Portuguese>Kingdom of Rus</Portuguese>
+		<English>Kingdom of Rus'</English>
+		<French>Kingdom of Rus'</French>
+		<German>Kingdom of Rus'</German>
+		<Italian>Kingdom of Rus'</Italian>
+		<Spanish>Kingdom of Rus'</Spanish>
+		<Portuguese>Kingdom of Rus'</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_KIE07</Tag>

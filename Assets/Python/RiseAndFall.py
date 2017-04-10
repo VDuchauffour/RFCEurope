@@ -576,22 +576,23 @@ class RiseAndFall:
 
 		self.assignGold(utils.getScenario())
 
+
 	def assignGold(self, iScenario):
 		for iPlayer in range(con.iNumPlayers):
 			gc.getPlayer(iPlayer).changeGold(con.tStartingGold[iScenario][iPlayer])
 
 
-	### 3Miro Province Related Functions ###
 	def onCityBuilt(self, iPlayer, pCity):
 		tCity = (pCity.getX(), pCity.getY())
 		x, y = tCity
 		self.pm.onCityBuilt (iPlayer, pCity.getX(), pCity.getY())
 		# Absinthe: We can add free buildings for new cities here
 		#			Note that it will add the building every time a city is founded on the plot, not just on the first time
-		# 			 Venice,   Augsburg, Porto,    Prague,   Riga      Perekop
+		# 			Venice (56, 35), Augsburg (55, 41), Porto (23, 31), Prague (60, 44), Riga (74, 58), Perekop (87, 36)
+		#			London (41, 52), Novgorod (80, 62) currently has preplaced fort on the map instead
 		if tCity in [(56, 35), (55, 41), (23, 31), (60, 44), (74, 58), (87, 36)]:
 			pCity.setHasRealBuilding( utils.getUniqueBuilding(iPlayer, xml.iWalls), True )
-		elif tCity == (75, 53): #Vilnius - important for AI Lithuania against Prussia
+		elif tCity == (75, 53): # Vilnius - important for AI Lithuania against Prussia
 			if not gc.getPlayer(iLithuania).isHuman():
 				pCity.setHasRealBuilding( utils.getUniqueBuilding(iPlayer, xml.iWalls), True )
 
@@ -771,12 +772,26 @@ class RiseAndFall:
 
 
 	def checkPlayerTurn(self, iGameTurn, iPlayer):
-		# Absinthe: leader switching for up to 4 leaders
-		# Merijn: upto infinite now
+		# Absinthe: leader switching
+		# Merijn: upto infinite leaders now
 		if len(tLeaders[iPlayer]) > 1:
 			for tLeader in reversed(tLateLeaders[iPlayer]):
 				if iGameTurn >= tLeader[1]:
 					self.switchLateLeaders(iPlayer, tLeader)
+
+		# Absinthe: potential leader switching on anarchy
+		#switch leader on first anarchy if early leader is different from primary one, and in a late game anarchy period to a late leader
+		#if (len(tLeaders[iPlayer]) > 1):
+		#	if (tEarlyLeaders[iPlayer] != tLeaders[iPlayer][0]):
+		#		if (iGameTurn > con.tBirth[iPlayer]+3 and iGameTurn < con.tBirth[iPlayer]+50):
+		#			if (gc.getPlayer(iPlayer).getAnarchyTurns() != 0):
+		#				gc.getPlayer(iPlayer).setLeader(tLeaders[iPlayer][0])
+		#				print ("leader early switch:", tLeaders[iPlayer][0], "in civ", iPlayer)
+		#	elif (iGameTurn >= tLateLeaders[iPlayer][1]):
+		#		if (tLateLeaders[iPlayer][0] != tLeaders[iPlayer][0]):
+		#			if (gc.getPlayer(iPlayer).getAnarchyTurns() != 0):
+		#				gc.getPlayer(iPlayer).setLeader(tLateLeaders[iPlayer][0])
+		#				print ("leader late switch:", tLateLeaders[iPlayer][0], "in civ", iPlayer)
 
 		# 3Miro: English cheat, the AI is utterly incompetent when it has to launch an invasion on an island
 		#			if in 1300AD Dublin is still Barbarian, it will flip to England
@@ -1188,15 +1203,18 @@ class RiseAndFall:
 
 		lCityList = self.getRebelCities()
 		lSuppressList = self.getRebelSuppress()
+		bSuppressed = True
 		iHuman = utils.getHumanID()
-		# Absinthe: what's the point of bSuppressed and the various player options in the popup if we always set it to false here?
+
+		# Absinthe: if any of the AI civs didn't manage to suppress it, there is resurrection
 		for iCiv in range( iNumMajorPlayers ):
 			if iCiv != iHuman and lSuppressList[iCiv] == 0:
-				print ("bSuppressed", True)
-				return
-
+				bSuppressed = False
+		# Absinthe: if the human player didn't choose any suppress options (so it has 0, 2 or 4 in the lSuppressList), there is resurrection
 		if lSuppressList[iHuman] in [0, 2, 4]:
-			print ("bSuppressed", True)
+			bSuppressed = False
+		# Absinthe: if neither of the above happened, so everyone managed to suppress it, no resurrection
+		if bSuppressed:
 			return
 
 		pDeadCiv = gc.getPlayer(iDeadCiv)
@@ -1225,6 +1243,16 @@ class RiseAndFall:
 						print ("leader switch after resurrection", pDeadCiv.getLeader(), tLeaderCiv[iLeader])
 						pDeadCiv.setLeader(tLeaderCiv[iLeader])
 					break
+		# Absinthe: old code for leader-change on respawn
+		#if (len(tLeaders[iDeadCiv]) > 1):
+		#	iLen = len(tLeaders[iDeadCiv])
+		#	iRnd = gc.getGame().getSorenRandNum(iLen, 'odds')
+		#	for k in range(iLen):
+		#		iLeader = (iRnd + k) % iLen
+		#		if (pDeadCiv.getLeader() != tLeaders[iDeadCiv][iLeader]):
+		#			print ("leader switch after resurrection", pDeadCiv.getLeader(), tLeaders[iDeadCiv][iLeader])
+		#			pDeadCiv.setLeader(tLeaders[iDeadCiv][iLeader])
+		#			break
 
 		for iCiv in range(iNumPlayers):
 			if iCiv != iDeadCiv:
@@ -1366,7 +1394,7 @@ class RiseAndFall:
 
 
 	def moveBackCapital(self, iCiv):
-		cityList = utils.getCityList(iPlayer)
+		cityList = utils.getCityList(iCiv)
 		for tPlot in tNewCapitals[iCiv]:
 			plot = gc.getMap().plot( tPlot[0], tPlot[1] )
 			if plot.isCity():
@@ -1970,7 +1998,7 @@ class RiseAndFall:
 		if not plotList:
 			plotList = utils.squareSearch( self.getTempTopLeft(), self.getTempBottomRight(), utils.innerSpawn, [self.getOldCivFlip(), self.getNewCivFlip()] )
 		if not plotList:
-			plotList = utils.squareSearch( self.getTempTopLeft(), self.getTempBottomRight(), utils.innerInvasion, [self.getOldCivFlip(), self.getNewCivFlip()] )
+			plotList = utils.squareSearch( self.getTempTopLeft(), self.getTempBottomRight(), utils.forcedInvasion, [self.getOldCivFlip(), self.getNewCivFlip()] )
 		if plotList:
 			tPlot = utils.getRandomEntry(plotList)
 			if turnsLeft == iBetrayalPeriod:
@@ -2337,23 +2365,23 @@ class RiseAndFall:
 
 	def create1200ADstartingUnits( self ):
 		iHuman = utils.getHumanID()
-		if con.tBirth[iHuman] > 0:
-			if iHuman not in [iByzantium, iFrankia]:
-				tStart = tCapitals[iHuman]
+		if con.tBirth[iHuman] > xml.i1200AD: # so iSweden, iPrussia, iLithuania, iAustria, iTurkey, iMoscow, iDutch
+			tStart = tCapitals[iHuman]
 
-				if iHuman == iSweden: # Denmark
-					tStart = (tCapitals[iSweden][0]-2, tCapitals[iSweden][1]+2)
-				elif iHuman == iPrussia: # Poland
-					tStart = (tCapitals[iPrussia][0]+1, tCapitals[iPrussia][1]+1)
-				elif iHuman == iLithuania: # Kiev
-					tStart = (tCapitals[iLithuania][0]-2, tCapitals[iLithuania][1])
-				elif iHuman == iAustria: # Germany and Hungary
-					tStart = (tCapitals[iAustria][0]-3, tCapitals[iAustria][1]-1)
-				elif iHuman == iTurkey: # Byzantium
-					tStart = (98, 18)
+			# Absinthe: changes in the unit positions, in order to prohibit these contacts in 1200AD
+			if iHuman == iSweden: # contact with Denmark
+				tStart = (tCapitals[iSweden][0]-2, tCapitals[iSweden][1]+2)
+			elif iHuman == iPrussia: # contact with Poland
+				tStart = (tCapitals[iPrussia][0]+1, tCapitals[iPrussia][1]+1)
+			elif iHuman == iLithuania: # contact with Kiev
+				tStart = (tCapitals[iLithuania][0]-2, tCapitals[iLithuania][1])
+			elif iHuman == iAustria: # contact with Germany and Hungary
+				tStart = (tCapitals[iAustria][0]-3, tCapitals[iAustria][1]-1)
+			elif iHuman == iTurkey: # contact with Byzantium
+				tStart = (98, 18)
 
-				utils.makeUnit(xml.iSettler, iHuman, tStart, 1)
-				utils.makeUnit(xml.iMaceman, iHuman, tStart, 1)
+			utils.makeUnit(xml.iSettler, iHuman, tStart, 1)
+			utils.makeUnit(xml.iMaceman, iHuman, tStart, 1)
 
 
 	def ottomanInvasion(self,iCiv,tPlot):
@@ -2381,15 +2409,15 @@ class RiseAndFall:
 		self.showArea(iPope)
 
 		iHuman = utils.getHumanID()
-		if con.tBirth[iHuman] > 0:
+		if con.tBirth[iHuman] > xml.i500AD: # so everyone apart from Byzantium and France
 			tStart = tCapitals[iHuman]
 
-			# Absinthe: prohibit Byzantine contact on turn 0[iHuman]
-			if iHuman == iArabia:
+			# Absinthe: changes in the unit positions, in order to prohibit these contacts in 500AD
+			if iHuman == iArabia: # contact with Byzantium
 				tStart = (tCapitals[iArabia][0], tCapitals[iArabia][1] - 10)
-			elif iHuman == iBulgaria:
+			elif iHuman == iBulgaria: # contact with Byzantium
 				tStart = (tCapitals[iBulgaria][0], tCapitals[iBulgaria][1] + 1)
-			elif iHuman == iTurkey:
+			elif iHuman == iTurkey: # contact with Byzantium
 				tStart = (97, 23)
 
 			utils.makeUnit(xml.iSettler, iHuman, tStart, 1)

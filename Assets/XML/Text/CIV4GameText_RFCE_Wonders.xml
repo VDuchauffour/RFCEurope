@@ -1067,12 +1067,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TOPKAPI_PALACE_EFFECT</Tag>
-		<English>[COLOR_BUILDING_TEXT]The Topkapi Palace[COLOR_SELECTED_TEXT] ensured that a %s1 was built instead of a %s2!</English>
-		<French>[COLOR_BUILDING_TEXT]The Topkapi Palace[COLOR_SELECTED_TEXT] ensured that a %s1 was built instead of a %s2!</French>
-		<German>[COLOR_BUILDING_TEXT]The Topkapi Palace[COLOR_SELECTED_TEXT] ensured that a %s1 was built instead of a %s2!</German>
-		<Italian>[COLOR_BUILDING_TEXT]The Topkapi Palace[COLOR_SELECTED_TEXT] ensured that a %s1 was built instead of a %s2!</Italian>
-		<Spanish>[COLOR_BUILDING_TEXT]The Topkapi Palace[COLOR_SELECTED_TEXT] ensured that a %s1 was built instead of a %s2!</Spanish>
-		<Portuguese>[COLOR_BUILDING_TEXT]The Topkapi Palace[COLOR_SELECTED_TEXT] ensured that a %s1 was built instead of a %s2!</Portuguese>
+		<English>[COLOR_BUILDING_TEXT]The Topkapi Palace[COLOR_SELECTED_TEXT] ensured that a %s1 was trained instead of a %s2!</English>
+		<French>[COLOR_BUILDING_TEXT]The Topkapi Palace[COLOR_SELECTED_TEXT] ensured that a %s1 was trained instead of a %s2!</French>
+		<German>[COLOR_BUILDING_TEXT]The Topkapi Palace[COLOR_SELECTED_TEXT] ensured that a %s1 was trained instead of a %s2!</German>
+		<Italian>[COLOR_BUILDING_TEXT]The Topkapi Palace[COLOR_SELECTED_TEXT] ensured that a %s1 was trained instead of a %s2!</Italian>
+		<Spanish>[COLOR_BUILDING_TEXT]The Topkapi Palace[COLOR_SELECTED_TEXT] ensured that a %s1 was trained instead of a %s2!</Spanish>
+		<Portuguese>[COLOR_BUILDING_TEXT]The Topkapi Palace[COLOR_SELECTED_TEXT] ensured that a %s1 was trained instead of a %s2!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEANING_TOWER_EFFECT</Tag>

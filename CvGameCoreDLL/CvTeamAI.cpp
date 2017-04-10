@@ -2231,11 +2231,14 @@ DenialTypes CvTeamAI::AI_surrenderTrade(TeamTypes eTeam, int iPowerMultiplier) c
 				return DENIAL_WORST_ENEMY;
 			}
 
-			//if (!AI_hasCitiesInPrimaryArea(eTeam) && AI_calculateAdjacentLandPlots(eTeam) == 0) //Rhye
-			if (!AI_hasCitiesInPrimaryArea(eTeam) && AI_calculateAdjacentLandPlots(eTeam) == 0 && GET_PLAYER((PlayerTypes)eTeam).getCurrentEra() <= 2) //Rhye
+			if (!AI_hasCitiesInPrimaryArea(eTeam) && AI_calculateAdjacentLandPlots(eTeam) == 0)
 			{
 				return DENIAL_TOO_FAR;
 			}
+
+			// Absinthe: maybe also add era restrictions? probably not important in RFCE
+			//if (GET_PLAYER((PlayerTypes)eTeam).getCurrentEra() <= 2)
+			//	return new DENIAL_TYPE: "I don't think our society is ready for it."
 		}
 
 		AttitudeTypes eAttitude = AI_getAttitude(eTeam, false);
@@ -2864,14 +2867,16 @@ DenialTypes CvTeamAI::AI_defensivePactTrade(TeamTypes eTeam) const
 	}
 	//Rhye - end
 
-	// 3MiroAI: Alliances
-	//Rhye - start
-	//no world alliances until industrial era (renaissance in this case)
-	if (!AI_hasCitiesInPrimaryArea(eTeam) && AI_calculateAdjacentLandPlots(eTeam) == 0 && GET_PLAYER((PlayerTypes)eTeam).getCurrentEra() <= 3)
+	// Absinthe: no alliances if no border between the civs or no shared area
+	if (!AI_hasCitiesInPrimaryArea(eTeam) && AI_calculateAdjacentLandPlots(eTeam) == 0)
 	{
 		return DENIAL_TOO_FAR;
 	}
-	//Rhye - end
+	// Absinthe: end
+
+	// Absinthe: maybe also add era restrictions? probably not important in RFCE
+	//if (GET_PLAYER((PlayerTypes)eTeam).getCurrentEra() <= 3)
+	//	return new DENIAL_TYPE: "I don't think our society is ready for it."
 
 	//Rhye - start
 	//due to easier pact trading, there's a cap of civs alliances

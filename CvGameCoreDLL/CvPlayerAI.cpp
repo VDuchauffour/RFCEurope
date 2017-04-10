@@ -2970,25 +2970,54 @@ int CvPlayerAI::AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreA
 		iValue += GC.getGameINLINE().getSorenRandNum(((pCity->getPopulation() / 2) + 1), "AI Target City Value");
 	}
 
-	// 3MiroAI: values in attacking a city no longer use Settlers Maps but Wars Maps, also ignore Barbs and Indies outside of Wars Maps
 	// Absinthe: War Maps should be a more important factor in deciding where to attack, so increased their value to 0,2,6,10,16
-	// Absinthe: Barbs and Indies outside War Maps are not totally ignored anymore, have a much decreased chance instead
-	int iWarsVale = getWarsMaps(EARTH_Y - 1 - pCity->plot()->getY_INLINE(),pCity->plot()->getX_INLINE());
-	iValue += (iWarsVale / 2);
-	if ( iWarsVale == 0 ){
+	// Absinthe: Barbs and Indies outside War Maps are not totally ignored automatically anymore, have a much decreased chance instead
+	// Absinthe: on the other hand, if a city is outside the War Map and not with an era-based distance, ignore it totally
+	int iWarsValue = getWarsMaps(EARTH_Y - 1 - pCity->plot()->getY_INLINE(),pCity->plot()->getX_INLINE());
+	iValue += (iWarsValue / 2);
+	if ( iWarsValue == 0 )
+	{
+		// Absinthe: if not on the war map, always ignore cities which are too far away from the actual territory
+		int maxDistance = 10;
+		switch (GC.getGameINLINE().getCurrentEra())
+		{
+			case 0:
+				maxDistance = 10;
+				break;
+			case 1:
+				maxDistance = 14;
+				break;
+			case 2:
+				maxDistance = 20;
+				break;
+			default:
+				maxDistance = 30;
+				break;
+		}
+		if ((pNearestCity == NULL) || (plotDistance(pCity->getX_INLINE(), pCity->getY_INLINE(), pNearestCity->getX_INLINE(), pNearestCity->getY_INLINE()) > maxDistance))
+		{
+			return 0;
+		}
+		// Absinthe: decrease iValue even if it's close enough
 		iValue = std::max( iValue - 2, 0 );
 		// Absinthe: Pope always ignores Barbs and Indies outside it's war map
-		if ( getID() == PAPAL_PLAYER ){
-			iValue = 0;
-		}else if (pCity->getOwner() >= NUM_MAJOR_PLAYERS){
+		if ( getID() == PAPAL_PLAYER )
+		{
+			return 0;
+		}
+		else if (pCity->getOwner() >= NUM_MAJOR_PLAYERS)
+		{
 			iValue /= 4; // Absinthe: much reduced chance for Barbs and Indies outside the war map
-		};
-	}else{
+		}
+	}
+	else
+	{
 		iValue += 1; // fixed bonus for tiles in the war map
-		if (pCity->getOwner() >= NUM_MAJOR_PLAYERS){
-			iValue += iWarsVale; // Absinthe: highly prioritize Indies and Barbs inside the war map
-		};
-	};
+		if (pCity->getOwner() >= NUM_MAJOR_PLAYERS)
+		{
+			iValue += iWarsValue; // Absinthe: highly prioritize Indies and Barbs inside the war map
+		}
+	}
 
 	return iValue;
 }
@@ -7994,9 +8023,34 @@ DenialTypes CvPlayerAI::AI_cityTrade(CvCity* pCity, PlayerTypes ePlayer) const
 	}
 	//Rhye - end
 
+	// Absinthe: no city trading for the Pope and from the Pope
+	if ( (getID() == PAPAL_PLAYER) || (ePlayer == PAPAL_PLAYER) )
+	{
+		return DENIAL_NO_GAIN;
+	}
+
+	// Absinthe: don't enable city trading/gifting in the first 5 turns after spawn (avoid exploit for additional units with city gifting before the flip)
+	if ( startingTurn[ePlayer] + 5 > GC.getGamePointer() ->getGameTurn() && startingTurn[ePlayer] <= GC.getGamePointer() ->getGameTurn())
+	{
+		return DENIAL_NO_GAIN;
+	}
+
 	if (pCity->getLiberationPlayer(false) == ePlayer)
 	{
 		return NO_DENIAL;
+	}
+
+	// Absinthe: AI civs don't accept cities in less than core or historic territory, if their stability is < 0
+	if (!(GET_PLAYER(ePlayer).isHuman()))
+	{
+		if (GET_PLAYER(ePlayer).getStability() < 0)
+		{
+			int iProvinceType = GET_PLAYER(ePlayer).getProvinceType( pCity ->getProvince() );
+			if ( iProvinceType < 2) // core == 4, historic == 3, potential == 2
+			{
+				return DENIAL_LOW_STABILITY;
+			}
+		}
 	}
 
 	if (!(GET_PLAYER(ePlayer).isHuman()))
@@ -8016,28 +8070,31 @@ DenialTypes CvPlayerAI::AI_cityTrade(CvCity* pCity, PlayerTypes ePlayer) const
 
 				pNearestCity = GC.getMapINLINE().findCity(pCity->getX_INLINE(), pCity->getY_INLINE(), ePlayer, NO_TEAM, true, false, NO_TEAM, NO_DIRECTION, pCity);
 
-				//Rhye - start
-				// 3Miro: map dependent distance
-				int maxDistance = 15;
-				switch (GC.getGameINLINE().getCurrentEra()) {
+				// Absinthe: era-based distance limit for AI city trades
+				int maxDistance = 10;
+				switch (GC.getGameINLINE().getCurrentEra())
+				{
 					case 0:
-						maxDistance = 15;
+						maxDistance = 10;
 						break;
 					case 1:
-						maxDistance = 30;
+						maxDistance = 14;
 						break;
 					case 2:
-						maxDistance = 45;
+						maxDistance = 20;
 						break;
 					default:
-						maxDistance = 68;
+						maxDistance = 30;
 						break;
 				}
-				//if ((pNearestCity == NULL) || (plotDistance(pCity->getX_INLINE(), pCity->getY_INLINE(), pNearestCity->getX_INLINE(), pNearestCity->getY_INLINE()) > 9))
 				if ((pNearestCity == NULL) || (plotDistance(pCity->getX_INLINE(), pCity->getY_INLINE(), pNearestCity->getX_INLINE(), pNearestCity->getY_INLINE()) > maxDistance))
-				//Rhye - end
 				{
-					return DENIAL_UNKNOWN;
+					// Absinthe: accept cities in core or historic territory, even if they are far away
+					int iProvinceType = GET_PLAYER(ePlayer).getProvinceType( pCity ->getProvince() );
+					if ( iProvinceType < 2) // core == 4, historic == 3, potential == 2
+					{
+						return DENIAL_TOO_FAR_CITY;
+					}
 				}
 			}
 		}
