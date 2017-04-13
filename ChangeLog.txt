@@ -134,6 +134,13 @@ Changes for RFCE 1.5:
 		- Later Crusades won't send back units from earlier Crusades (i.e. if they initially remained Crusaders, it should remain that way)
 		- Added option for another Crusade in the late 13th century
 		- Tuned down Defensive Crusade frequency, reduced number of generic units for normal Crusades
+		
+		- Each nation which sends units for a Crusade (apart from the leader and the Pope) receives Faith Points and Great General Points when it is over
+		- Unique Military Order units might leave for Crusade even if you decide not to participate
+		- Added 3rd, monetary contribution option for the Crusade participation decision, but only if you can afford it
+		- Added a more moderate Crusade refusal option, no more unnecessary insulting of the Pope
+		- Civs participating in Crusades have significantly bigger chance for military order company spread
+		- Further randomized the unit selection method for Crusades, also now much less Archer-type units and somewhat less Company UUs leave for Crusades (proportionally)
 
 	Terrain updates:
 		- New base terrain: Semidesert - 1 production, +1 commerce near rivers, city founding only possible near fresh water
@@ -334,7 +341,7 @@ Changes for RFCE 1.5:
 		- Feitoria replaces Lighthouse (instead of Harbor), +1 commerce on all water tiles, prebuilt in all newly founded cities after the discovery of Astronomy
 		- Consulate of the Sea replaces Lighthouse (as before, but now in it's new position), also now it enables 1 merchant specialist
 		- Venetian Arsenal available earlier, moved to Clockmaking from Optics
-		- Lowered diplomatic bonuses for sharing a religion, for almost all religions
+		- Lowered RFCE-specific diplomatic bonuses for sharing a religion, for almost all religions
 		- Civs can't get back one of their previous leaders on resurrection (would be changed to the later one anyway in a couple turns)
 		- Civs have 40% chance to remain with the leader before the collapse, 60% chance to get the next leader (chronologically)
 		- Krak des Chevaliers will add bonus stability for Castle-type buildings if they weren't present before the conquest
@@ -438,6 +445,8 @@ Changes for RFCE 1.5:
 		- Fixed minor oversight on economy stability calculations where some wonders were not recognized correctly
 		- Fixed mistake where some barbarian units outside the civ's spawn area were intentionally converted to the new civ on birth
 		- Fixed bug with Hungarian Vegvars which resulted in way too high damage on bigger enemy stacks
+		- Fixed bug which caused to leave out some units from the Crusades' selection procedure altogether, usually also resulting in some unintended unittypes sent
+		- Fixed bug which in some cases resulted in less checks for potential units for the Crusade, thus in less sent units
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

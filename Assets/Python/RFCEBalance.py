@@ -896,7 +896,7 @@ class RFCEBalance:
 		gc.setTimelineTechDateForTech( xml.iCodeOfLaws, 120 )
 		gc.setTimelineTechDateForTech( xml.iAristocracy, 135 )
 		gc.setTimelineTechDateForTech( xml.iLateenSails, 125 ) # actually this is tier 4
-		gc.setTimelineTechDateForTech( xml.iPlateArmor, 152 ) # teir 5: Late 1200s, By the 14th century, plate armour was commonly used to supplement mail.
+		gc.setTimelineTechDateForTech( xml.iPlateArmor, 152 ) # teir 5: Late 1200s, and by the 14th century, plate armour was commonly used to supplement mail - turn 150 == 1050 though!!
 		gc.setTimelineTechDateForTech( xml.iMonumentBuilding, 180 )
 		gc.setTimelineTechDateForTech( xml.iClassicalKnowledge, 175 )
 		gc.setTimelineTechDateForTech( xml.iAlchemy, xml.i1003AD )

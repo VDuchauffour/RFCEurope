@@ -33,7 +33,25 @@
 		<Portuguese>Pela minha Honra e no nome de meu Deus, eu defenderei a Terra Santa!</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_BRIBE_OUT</Tag>
+		<English>Bribe everyone involved! Err... I mean, would a small monetary contribution (%d1) to the cause suffice?</English>
+		<French>Bribe everyone involved! Err... I mean, would a small monetary contribution (%d1) to the cause suffice?</French>
+		<German>Bribe everyone involved! Err... I mean, would a small monetary contribution (%d1) to the cause suffice?</German>
+		<Italian>Bribe everyone involved! Err... I mean, would a small monetary contribution (%d1) to the cause suffice?</Italian>
+		<Spanish>Bribe everyone involved! Err... I mean, would a small monetary contribution (%d1) to the cause suffice?</Spanish>
+		<Portuguese>Bribe everyone involved! Err... I mean, would a small monetary contribution (%d1) to the cause suffice?</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CRUSADE_DENY</Tag>
+		<English>No, we can't afford to participate in the Crusade in our current situation.</English>
+		<French>No, we can't afford to participate in the Crusade in our current situation.</French>
+		<German>No, we can't afford to participate in the Crusade in our current situation.</German>
+		<Italian>No, we can't afford to participate in the Crusade in our current situation.</Italian>
+		<Spanish>No, we can't afford to participate in the Crusade in our current situation.</Spanish>
+		<Portuguese>No, we can't afford to participate in the Crusade in our current situation.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_DENY_RUDE</Tag>
 		<English>I will never play a role in this scheme of that snake of a Pope!</English>
 		<French>Je ne serais JAMAIS le pantin de ce serpent de Pape!</French>
 		<German>Ich werde mich nicht an den Machtspielchen dieses hinterlistigen Papstes beteiligen!</German>
@@ -44,11 +62,20 @@
 	<TEXT>
 		<Tag>TXT_KEY_CRUSADE_DENY_FAITH</Tag>
 		<English>Seeing that God's will is not sacred to you, your people lose faith in the Catholic cause!</English>
-		<French>Je ne serais JAMAIS le pantin de ce serpent de Pape!</French>
-		<German>Ich werde mich nicht an den Machtspielchen dieses hinterlistigen Papstes beteiligen!</German>
-		<Italian>Non sarò MAI una pedina nelle mani di quel serpente del Papa!</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>Eu NUNCA farei parte dos esquemas desta víbora de um Papa!</Portuguese>
+		<French>Seeing that God's will is not sacred to you, your people lose faith in the Catholic cause!</French>
+		<German>Seeing that God's will is not sacred to you, your people lose faith in the Catholic cause!</German>
+		<Italian>Seeing that God's will is not sacred to you, your people lose faith in the Catholic cause!</Italian>
+		<Spanish>Seeing that God's will is not sacred to you, your people lose faith in the Catholic cause!</Spanish>
+		<Portuguese>Seeing that God's will is not sacred to you, your people lose faith in the Catholic cause!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_DENY_LEAVE_ANYWAY</Tag>
+		<English>The Chivalric Orders can't agree with your decision, some soldiers are even abandoning your rule! They plan to go on the Crusade anyway!</English>
+		<French>The Chivalric Orders can't agree with your decision, some soldiers are even abandoning your rule! They plan to go on the Crusade anyway!</French>
+		<German>The Chivalric Orders can't agree with your decision, some soldiers are even abandoning your rule! They plan to go on the Crusade anyway!</German>
+		<Italian>The Chivalric Orders can't agree with your decision, some soldiers are even abandoning your rule! They plan to go on the Crusade anyway!</Italian>
+		<Spanish>The Chivalric Orders can't agree with your decision, some soldiers are even abandoning your rule! They plan to go on the Crusade anyway!</Spanish>
+		<Portuguese>The Chivalric Orders can't agree with your decision, some soldiers are even abandoning your rule! They plan to go on the Crusade anyway!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CRUSADE_VOTE_POPUP</Tag>
@@ -274,6 +301,15 @@
 		<Italian>After years of fighting to accomplish their mission, some of our Crusaders are returning home: </Italian>
 		<Spanish>After years of fighting to accomplish their mission, some of our Crusaders are returning home: </Spanish>
 		<Portuguese>After years of fighting to accomplish their mission, some of our Crusaders are returning home: </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_CRUSADERS_ARRIVED_HOME</Tag>
+		<English>Our Crusading units return home to their families, strengthening the faith throughout the nation and sharing their warfare experiences.</English>
+		<French>Our Crusading units return home to their families, strengthening the faith throughout the nation and sharing their warfare experiences.</French>
+		<German>Our Crusading units return home to their families, strengthening the faith throughout the nation and sharing their warfare experiences.</German>
+		<Italian>Our Crusading units return home to their families, strengthening the faith throughout the nation and sharing their warfare experiences.</Italian>
+		<Spanish>Our Crusading units return home to their families, strengthening the faith throughout the nation and sharing their warfare experiences.</Spanish>
+		<Portuguese>Our Crusading units return home to their families, strengthening the faith throughout the nation and sharing their warfare experiences.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CRUSADE_JERUSALEM_PILGRIMS</Tag>

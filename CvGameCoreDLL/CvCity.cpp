@@ -4588,6 +4588,7 @@ int CvCity::totalFreeSpecialists() const
 			int iNumSpecialistsPerImprovement = getImprovementFreeSpecialists((ImprovementTypes)iImprovement);
 			if (iNumSpecialistsPerImprovement > 0)
 			{
+				// Absinthe: ImprovementFreeSpecialists - we can potentially set here to add specialist only for improvements actually worked by the city
 				iCount += iNumSpecialistsPerImprovement * countNumImprovedPlots((ImprovementTypes)iImprovement);
 			}
 		}

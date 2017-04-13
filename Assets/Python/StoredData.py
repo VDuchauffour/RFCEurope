@@ -89,6 +89,7 @@ class StoredData:
 				'iCrusadeSucceeded': 0,
 				'iCrusadeToReturn': -1,
 				'lSelectedUnits': [0, 0, 0, 0, 0, 0, 0, 0], # Templar Knights, Teutonic Knights, Hospitaller Knights, Knights, Heavy Lancers, Lancers, Siege Weapons, Generic
+				'lNumUnitsSent': [0] * con.iNumPlayers, #major players only
 				'bDCEnabled': False,
 				'iDCLast': 0,
 
