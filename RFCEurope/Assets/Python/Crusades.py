@@ -11,6 +11,7 @@ import XMLConsts as xml
 import RFCEMaps as rfceMaps
 import CityNameManager
 from StoredData import sd
+import random
 
 # globals
 gc = CyGlobalContext()
@@ -82,6 +83,15 @@ class Crusades:
 
 	def getSelectedUnit( self, iUnitPlace ):
 		return sd.scriptDict['lSelectedUnits'][iUnitPlace]
+
+	def changeNumUnitsSent( self, iPlayer, iChange ):
+		sd.scriptDict['lNumUnitsSent'][iPlayer] += iChange
+
+	def setNumUnitsSent( self, iPlayer, iNewNumber ):
+		sd.scriptDict['lNumUnitsSent'][iPlayer] = iNewNumber
+
+	def getNumUnitsSent( self, iPlayer ):
+		return sd.scriptDict['lNumUnitsSent'][iPlayer]
 
 	def getActiveCrusade( self, iGameTurn ):
 		for i in range( iNumCrusades ):
@@ -192,8 +202,16 @@ class Crusades:
 		popup.launch(False)
 
 	def initVotePopup( self ):
-		self.showPopup( 7616, CyTranslator().getText("TXT_KEY_CRUSADE_INIT_POPUP", ()), CyTranslator().getText("TXT_KEY_CRUSADE_INIT", ()), \
-		(CyTranslator().getText("TXT_KEY_CRUSADE_ACCEPT", ()),CyTranslator().getText("TXT_KEY_CRUSADE_DENY", ())) )
+		iHuman = utils.getHumanID()
+		pHuman = gc.getPlayer(iHuman)
+		iActiveCrusade = self.getActiveCrusade( gc.getGame().getGameTurn() )
+		iBribe = 200 + 50 * iActiveCrusade
+		if pHuman.getGold() >= iBribe:
+			self.showPopup( 7616, CyTranslator().getText("TXT_KEY_CRUSADE_INIT_POPUP", ()), CyTranslator().getText("TXT_KEY_CRUSADE_INIT", ()), \
+			(CyTranslator().getText("TXT_KEY_CRUSADE_ACCEPT", ()), CyTranslator().getText("TXT_KEY_CRUSADE_DENY", ()), CyTranslator().getText("TXT_KEY_CRUSADE_DENY_RUDE", ()), CyTranslator().getText("TXT_KEY_CRUSADE_BRIBE_OUT", (iBribe, ))) )
+		else:
+			self.showPopup( 7616, CyTranslator().getText("TXT_KEY_CRUSADE_INIT_POPUP", ()), CyTranslator().getText("TXT_KEY_CRUSADE_INIT", ()), \
+			(CyTranslator().getText("TXT_KEY_CRUSADE_ACCEPT", ()), CyTranslator().getText("TXT_KEY_CRUSADE_DENY", ()), CyTranslator().getText("TXT_KEY_CRUSADE_DENY_RUDE", ())) )
 
 	def informLeaderPopup( self ):
 		self.showPopup( 7617, CyTranslator().getText("TXT_KEY_CRUSADE_LEADER_POPUP", ()), gc.getPlayer( self.getLeader() ).getName() + CyTranslator().getText("TXT_KEY_CRUSADE_LEAD", ()), (CyTranslator().getText("TXT_KEY_CRUSADE_OK", ()),) )
@@ -246,6 +264,9 @@ class Crusades:
 		for i in range( iNumCrusades ):
 			if self.getCrusadeInit( i ) < 0:
 				self.setCrusadeInit( i, 0 )
+		# Absinthe: reset sent unit counter after the Crusades are over (so it won't give Company benefits forever based on the last one)
+		for iPlayer in range( con.iNumPlayers ):
+			self.setNumUnitsSent( iPlayer, 0 )
 
 	def checkTurn( self, iGameTurn ):
 		#print(" 3Miro Crusades ")
@@ -295,6 +316,8 @@ class Crusades:
 				for i in range( 8 ):
 					self.setSelectedUnit( i, 0 )
 				for iPlayer in range( con.iNumPlayers ):
+					# Absinthe: first we set all civs' unit counter to 0, then send the new round of units
+					self.setNumUnitsSent( iPlayer, 0 )
 					if self.getVotingPower( iPlayer ) > 0:
 						self.sendUnits( iPlayer )
 				print( " After the units are sent: " )
@@ -336,6 +359,7 @@ class Crusades:
 				self.setLeader(-1)
 				self.returnCrusaders()
 
+
 	def checkToStart( self, iGameTurn ):
 		# if Jerusalem is Islamic or Pagan, Crusade has been initialized and it has been at least 5 turns since the last crusade and there are any Catholics, begin crusade
 		pJPlot = gc.getMap().plot( tJerusalem[0], tJerusalem[1] )
@@ -363,19 +387,48 @@ class Crusades:
 		return False
 
 	def eventApply7616( self, popupReturn ):
+		iHuman = utils.getHumanID()
 		if popupReturn.getButtonClicked() == 0:
 			self.setParticipate( True )
-			gc.getPlayer( utils.getHumanID() ).setIsCrusader( True )
-			print("  Going on a Crusade " )
-		else:
+			gc.getPlayer( iHuman ).setIsCrusader( True )
+			print("Going on a Crusade " )
+		elif popupReturn.getButtonClicked() == 1 or popupReturn.getButtonClicked() == 2:
 			self.setParticipate( False )
-			iHuman = utils.getHumanID()
 			pPlayer = gc.getPlayer( iHuman )
 			pPlayer.setIsCrusader( False )
 			pPlayer.changeFaith( - min( 5, pPlayer.getFaith() ) )
 			CyInterface().addMessage(iHuman, True, con.iDuration, CyTranslator().getText("TXT_KEY_CRUSADE_DENY_FAITH", ()), "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
 			gc.getPlayer( con.iPope ).AI_changeMemoryCount( iHuman, MemoryTypes.MEMORY_REJECTED_DEMAND, 2 )
-			#3Miro: put penalty for not going to the crusade
+			# Absinthe: some units from Chivalric Orders might leave you nevertheless
+			unitList = PyPlayer( iHuman ).getUnitList()
+			for pUnit in unitList:
+				iUnitType = pUnit.getUnitType()
+				if iUnitType in [xml.iKnightofStJohns, xml.iTemplar, xml.iTeutonic]:
+					pPlot = gc.getMap().plot( pUnit.getX(), pUnit.getY() )
+					iRandNum = gc.getGame().getSorenRandNum(100, 'roll to send Unit to Crusade')
+					if pPlot.isCity():
+						if self.getNumDefendersAtPlot( pPlot ) > 3:
+							if iRandNum < 50:
+								self.addSelectedUnit( self.unitCrusadeCategory( iUnitType ) )
+								CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_CRUSADE_DENY_LEAVE_ANYWAY", ()), "", 0, gc.getUnitInfo(iUnitType).getButton(), ColorTypes(con.iLightRed), pUnit.getX(), pUnit.getY(), True, True)
+						elif self.getNumDefendersAtPlot( pPlot ) > 1:
+							if iRandNum < 10:
+								self.addSelectedUnit( self.unitCrusadeCategory( iUnitType ) )
+								CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_CRUSADE_DENY_LEAVE_ANYWAY", ()), "", 0, gc.getUnitInfo(iUnitType).getButton(), ColorTypes(con.iLightRed), pUnit.getX(), pUnit.getY(), True, True)
+					elif iRandNum < 30:
+						self.addSelectedUnit( self.unitCrusadeCategory( iUnitType ) )
+						CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_CRUSADE_DENY_LEAVE_ANYWAY", ()), "", 0, gc.getUnitInfo(iUnitType).getButton(), ColorTypes(con.iLightRed), pUnit.getX(), pUnit.getY(), True, True)
+		# Absinthe: 3rd option, only if you have enough money to make a contribution to the Crusade instead of sending units
+		else:
+			self.setParticipate( False )
+			pPlayer = gc.getPlayer( iHuman )
+			pPlayer.setIsCrusader( False )
+			pPope = gc.getPlayer(con.iPope)
+			iActiveCrusade = self.getActiveCrusade( gc.getGame().getGameTurn() )
+			iBribe = 200 + 50 * iActiveCrusade
+			pPope.changeGold( iBribe )
+			pPlayer.changeGold( -iBribe )
+			gc.getPlayer( con.iPope ).AI_changeMemoryCount( iHuman, MemoryTypes.MEMORY_REJECTED_DEMAND, 1 )
 
 	def eventApply7618( self, popupReturn ):
 		if popupReturn.getButtonClicked() == 0:
@@ -514,8 +567,10 @@ class Crusades:
 		iCrusadersSend = 0
 		print ("iMaxToSend", iPlayer, iNumUnits, iMaxToSend)
 		if iMaxToSend > 0:
-			for i in range( iNumUnits ):
-				pUnit = pPlayer.getUnit( i )
+			# Absinthe: a randomized list of all units of the civ
+			lUnits = [pPlayer.getUnit( i ) for i in range(iNumUnits)]
+			random.shuffle(lUnits)
+			for pUnit in lUnits:
 				# Absinthe: check only for combat units and ignore naval units
 				if pUnit.baseCombatStr() > 0 and pUnit.getDomainType() != DomainTypes.DOMAIN_SEA:
 					# Absinthe: mercenaries and leaders (units with attached Great Generals) won't go
@@ -527,29 +582,30 @@ class Crusades:
 						if iCrusadeCategory < 4:
 							if pPlot.isCity():
 								if self.getNumDefendersAtPlot( pPlot ) > 3:
-									if iRandNum < 90:
+									if iRandNum < 80:
 										iCrusadersSend += 1
 										self.sendUnit( pUnit )
 								elif self.getNumDefendersAtPlot( pPlot ) > 1:
-									if iRandNum < 60:
+									if iRandNum < 40:
 										iCrusadersSend += 1
 										self.sendUnit( pUnit )
-							elif iRandNum < 90:
+							elif iRandNum < 80:
 								iCrusadersSend += 1
 								self.sendUnit( pUnit )
 						else:
 							if pPlot.isCity():
 								if self.getNumDefendersAtPlot( pPlot ) > 2:
-									if iRandNum < self.unitProbability( pUnit.getUnitType() ):
+									if iRandNum < (self.unitProbability( pUnit.getUnitType() ) - 10):
 										iCrusadersSend += 1
 										self.sendUnit( pUnit )
-							elif iRandNum < self.unitProbability( pUnit.getUnitType() ):
+							elif iRandNum < (self.unitProbability( pUnit.getUnitType() ) - 10):
 									iCrusadersSend += 1
 									self.sendUnit( pUnit )
 						if iCrusadersSend == iMaxToSend:
 							return
 			# Absinthe: extra chance for some random units, if we didn't fill the quota
 			for i in range( 15 ):
+				iNumUnits = pPlayer.getNumUnits() # we have to recalculate each time, as some units might have gone on the Crusade already
 				iRandUnit = gc.getGame().getSorenRandNum(iNumUnits, 'roll to pick Unit for Crusade')
 				pUnit = pPlayer.getUnit( iRandUnit )
 				# Absinthe: check only for combat units and ignore naval units
@@ -589,6 +645,7 @@ class Crusades:
 		iOwner = pUnit.getOwner()
 		self.addSelectedUnit( self.unitCrusadeCategory( pUnit.getUnitType() ) )
 		self.setVotingPower( iOwner, self.getVotingPower( iOwner ) + 2 )
+		self.changeNumUnitsSent( iOwner, 1 ) # Absinthe: counter for sent units per civ
 		print ("Unit was chosen for Crusade:", iOwner, pUnit.getUnitType() )
 		if iOwner == iHuman:
 			CyInterface().addMessage(iHuman, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_CRUSADE_LEAVE", ()) + " " + pUnit.getName(), "AS2D_BUILD_CHRISTIAN", 0, "", ColorTypes(con.iOrange), -1, -1, True, True)
@@ -597,9 +654,9 @@ class Crusades:
 
 	def unitProbability( self, iUnitType ):
 		if iUnitType in [xml.iArcher, xml.iCrossbowman, xml.iArbalest, xml.iGenoaBalestrieri, xml.iLongbowman, xml.iEnglishLongbowman, xml.iPortugalFootKnight]:
-			return 33
+			return 10
 		if iUnitType in [xml.iLancer, xml.iBulgarianKonnik, xml.iCordobanBerber, xml.iHeavyLancer, xml.iHungarianHuszar, xml.iArabiaGhazi, xml.iByzantineCataphract, xml.iKievDruzhina, xml.iKnight, xml.iMoscowBoyar, xml.iBurgundianPaladin]:
-			return 66
+			return 70
 		if iUnitType in [xml.iTemplar, xml.iTeutonic, xml.iKnightofStJohns, xml.iCalatravaKnight, xml.iDragonKnight]:
 			return 90
 		if iUnitType <= xml.iIslamicMissionary or iUnitType >= xml.iWorkboat: # Workers, Executives, Missionaries, Sea Units and Mercenaries do not go
@@ -1043,6 +1100,18 @@ class Crusades:
 					if iHuman == iPlayer:
 						CyInterface().addMessage(iHuman, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_CRUSADE_CRUSADERS_RETURNING_HOME", ()) + " " + pUnit.getName(), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
 
+		# benefits for the other participants on Crusade return - Faith points, GG points
+		for iCiv in range( con.iNumPlayers-1 ): # no such benefits for the Pope
+			pCiv = gc.getPlayer( iCiv )
+			if pCiv.getStateReligion() == iCatholicism:
+				iUnitNumber = self.getNumUnitsSent( iCiv )
+				if iUnitNumber > 0:
+					if iCiv != iPlayer: # not the leader
+						iHuman = utils.getHumanID()
+						if iCiv == iHuman:
+							CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_CRUSADE_CRUSADERS_ARRIVED_HOME", ()), "", 0, "", ColorTypes(con.iGreen), -1, -1, True, True)
+						pCiv.changeCombatExperience( 10 * iUnitNumber )
+						pCiv.changeFaith( 2 * iUnitNumber )
 
 	# Absinthe: called from CvRFCEventHandler.onCityAcquired
 	def success( self, iPlayer ):

@@ -1083,5 +1083,41 @@
 		<Spanish>[COLOR_BUILDING_TEXT]A Torre de Pisa[COLOR_SELECTED_TEXT] inspirou um</Spanish>
 		<Portuguese>[COLOR_BUILDING_TEXT]A Torre de Pisa[COLOR_SELECTED_TEXT] inspirou um</Portuguese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FREE_SPECIALISTS</Tag>
+		<English>[ICON_BULLET]%D1_Change Free [NUM1:Specialist:Specialists]</English>
+		<French>[ICON_BULLET]%D1_Change sp&#233;cialistes gratuits</French>
+		<German>[ICON_BULLET]%D1_Change freie Spezialisten</German>
+		<Italian>[ICON_BULLET]%D1_Change specialisti gratuiti</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change especialistas gratis</Spanish>
+		<Portuguese>[ICON_BULLET]%D1_Change especialistas gratis</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FREE_SPECIALISTS_CONT</Tag>
+		<English>[ICON_BULLET]%D1_Change Free [NUM1:Specialist:Specialists] in All Cities on this Continent</English>
+		<French>[ICON_BULLET]%D1_Change sp&#233;cialiste gratuit dans toutes les villes sur ce continent</French>
+		<German>[ICON_BULLET]%D1_Change freie(n) Spezialisten in allen St&#228;dten dieses Kontinents</German>
+		<Italian>[ICON_BULLET]%D1_Change specialisti gratuiti in tutte le citt&#224; di questo continente.</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change especialistas gratis en todas las ciudades de este continente</Spanish>
+		<Portuguese>[ICON_BULLET]%D1_Change especialistas gratis en todas las ciudades de este continente</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FREE_SPECIALISTS_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]%D1_Change Free [NUM1:Specialist:Specialists] in All Cities</English>
+		<French>[ICON_BULLET]%D1_Change sp&#233;cialistes gratuits dans toutes les villes</French>
+		<German>[ICON_BULLET]%D1_Change freie Spezialisten in allen St&#228;dten</German>
+		<Italian>[ICON_BULLET]%D1_Change specialisti gratuiti in tutt le citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change especialistas gratis en todas las ciudades </Spanish>
+		<Portuguese>[ICON_BULLET]%D1_Change especialistas gratis en todas las ciudades </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_IMPROVEMENT_FREE_SPECIALISTS</Tag>
+		<English>[ICON_BULLET]%D1_Change Free [NUM1:Specialist:Specialists] for each[SPACE]</English>
+		<French>[ICON_BULLET]%D1_Change [NUM1:Sp&#233;cialiste gratuit:Sp&#233;cialistes gratuits] par[SPACE]</French>
+		<German>[ICON_BULLET]%D1_Change [NUM1:freier Spezialist:freie Spezialisten] pro[SPACE]</German>
+		<Italian>[ICON_BULLET]%D1_Change [NUM1:specialista:specialisti] gratis per[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change [NUM1:especialista gratis:especialistas gratis] por[SPACE]</Spanish>
+		<Portuguese>[ICON_BULLET]%D1_Change [NUM1:especialista gratis:especialistas gratis] por[SPACE]</Portuguese>
+	</TEXT>
 		<!-- Misc -->
 </Civ4GameText>

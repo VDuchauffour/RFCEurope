@@ -7,11 +7,13 @@ import PyHelpers
 import Consts as con
 import XMLConsts as xml
 import RFCUtils
+import Crusades
 from StoredData import sd
 from operator import itemgetter
 
 # globals
 utils = RFCUtils.RFCUtils()
+crus = Crusades.Crusades()
 gc = CyGlobalContext()
 localText = CyTranslator()
 PyPlayer = PyHelpers.PyPlayer
@@ -67,6 +69,8 @@ class Companies:
 				if plot.isCity():
 					if gc.getPlayer(plot.getPlotCity().getOwner()).getStateReligion() == iCatholicism:
 						iMaxCompanies = tCompaniesLimit[iCompany]
+
+		# Templars are Teutons are gone after the Protestant reformation - Calatrava too?
 
 		# set the company limit
 		else:
@@ -258,7 +262,7 @@ class Companies:
 			if iProvince in [xml.iP_Brandenburg, xml.iP_Saxony]:
 				iValue += 2
 
-		# geographical requirement changes after the crusades
+		# geographical requirement changes after the Crusades
 		iGameTurn = gc.getGame().getGameTurn()
 		if iGameTurn < tCompaniesDeath[iTemplars]:
 			if iCompany in [iHospitallers, iTemplars, iTeutons]:
@@ -274,6 +278,11 @@ class Companies:
 			elif iCompany == iTeutons:
 				if iProvince == xml.iP_Transylvania:
 					iValue += 2
+
+		# bonus for civs who actively participate (with units) in the actual Crusade:
+		if crus.getNumUnitsSent(iOwner) > 0:
+			if iCompany in [iHospitallers, iTemplars, iTeutons]:
+				iValue += 2
 
 		# additional bonus for the city of Jerusalem
 		if (city.getX(), city.getY()) == con.tJerusalem:
