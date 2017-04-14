@@ -433,7 +433,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHARF_PEDIA</Tag>
-		<English>[TAB]A wharf is a landing place or pier where ships may tie up and load or unload.[PARAGRAPH:2]A wharf commonly comprises a fixed platform, often on pilings. They often serve as interim storage areas with warehouses, since the typical objective is to unload and reload vessels as quickly as possible. Where capacity is sufficient a single quay constructed along the land adjacent to the water is normally used; where there is a need for more capacity many wharves will instead be constructed projecting into the water, as with the well known collection of wharves in San Francisco. A pier, raised over the water rather than within it, is one type of wharf, commonly used for cases where the weight or volume of cargos will be low.[PARAGRAPH:2]Smaller and more modern wharves are sometimes built on flotation devices (pontoons) to keep them at the same level to the ship even during changing tides.</English>
+		<English>[TAB]A wharf is a landing place or pier where ships may tie up and load or unload. A wharf commonly comprises a fixed platform, often on pilings. They often serve as interim storage areas with warehouses, since the typical objective is to unload and reload vessels as quickly as possible. Where capacity is sufficient a single quay constructed along the land adjacent to the water is normally used; where there is a need for more capacity many wharves will instead be constructed projecting into the water, as with the well known collection of wharves in San Francisco. A pier, raised over the water rather than within it, is one type of wharf, commonly used for cases where the weight or volume of cargos will be low.[PARAGRAPH:2]Smaller and more modern wharves are sometimes built on flotation devices (pontoons) to keep them at the same level to the ship even during changing tides.</English>
 		<French>.</French>
 		<German>[TAB]Als Kai bezeichnet man einen durch Mauern befestigten Uferdamm - meist in Häfen oder an Fluss- oder Kanalufern zum Löschen und Laden von Schiffsladungen gelegen. Das Fahrwasser ist davor so tief, dass Schiffe festmachen können.[PARAGRAPH:2]Die Kaimauer ist eine lotrechte oder fast lotrechte Mauer in massiver oder Pfahlrostbauweise, welche die Belastung durch Uferkräne, Eisenbahnwagen oder gestapelte Ladung tragen kann (siehe auch Spundwand). Auf bzw. an der Kaimauer befinden sich Poller oder Ringe zum Festmachen der Schiffe. Um mehr Platz für anlegende Schiffe zu schaffen, können die Kais durch Piers und Molen ergänzt werden.[PARAGRAPH:2]An den Flussufern großer Städte haben sich die einstmals wichtigen Transportaktivitäten zu Schiff an die Stadtränder oder nach außerhalb verlagert. Der Name Kai ist für diese Uferbefestigungen jedoch erhalten geblieben. Sie dienen oft als Promenade oder Boulevard. Beispiele dafür sind der Quai d'Orsay (mit dem Außenministerium) am linken Seine-Ufer in Paris, der Bund in Shanghai oder der Franz-Josefs-Kai am stadtseitigen Ufer des Donaukanals in Wien.</German>
 		<Italian>.</Italian>
@@ -641,7 +641,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STAR_FORT</Tag>
 		<English>Star Fort</English>
-		<French>Tracé à l'Italienne</French>
+		<French>Trac&#233; &#224; l'italienne</French>
 		<German>Bollwerk</German>
 		<Italian>Fortificazione a Stella</Italian>
 		<Spanish>Estrelle Fuerte</Spanish>
@@ -862,7 +862,7 @@
 		<French>Minaret Islamique</French>
 		<German>Islamisches Minarett</German>
 		<Italian>Minareto Islamica</Italian>
-		<Spanish>Minarete islámico</Spanish>
+		<Spanish>Minarete isl&#226;mico</Spanish>
 		<Portuguese>Minarete Isl&#226;mico</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -880,7 +880,7 @@
 		<French>Madrassa Islamique</French>
 		<German>Islamische Madrasa</German>
 		<Italian>Madrassa Islamica</Italian>
-		<Spanish>Madraza isl&#225;mico</Spanish>
+		<Spanish>Madraza isl&#226;mico</Spanish>
 		<Portuguese>Madrassa Isl&#226;mica</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -898,7 +898,7 @@
 		<French>Grande Mosqu&#233;e</French>
 		<German>Islamische Gro&#223;moschee</German>
 		<Italian>Grande Moschea Islamica</Italian>
-		<Spanish>Gran Mezquita islámica</Spanish>
+		<Spanish>Gran Mezquita isl&#226;mica</Spanish>
 		<Portuguese>Gr&#227;-Mesquita Isl&#226;mica</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -934,7 +934,7 @@
 		<French>Eglise Catholique</French>
 		<German>Katholische Kirche</German>
 		<Italian>Chiesa Cattolica</Italian>
-		<Spanish>Iglesia Católica</Spanish>
+		<Spanish>Iglesia Cat&#243;lica</Spanish>
 		<Portuguese>Igreja Cat&#243;lica</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -943,7 +943,7 @@
 		<French>B&#233;froi Catholique</French>
 		<German>Katholischer Glockenturm</German>
 		<Italian>Campanile cattolico</Italian>
-		<Spanish>Campanario católico</Spanish>
+		<Spanish>Campanario cat&#243;lico</Spanish>
 		<Portuguese>Campan&#225;rio Cat&#243;lico</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -952,7 +952,7 @@
 		<French>Monast&#232;re Catholique</French>
 		<German>Katholisches Kloster</German>
 		<Italian>Monastero Cattolico</Italian>
-		<Spanish>Monasterio católico</Spanish>
+		<Spanish>Monasterio cat&#243;lico</Spanish>
 		<Portuguese>Mosteiro Cat&#243;lico</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -961,7 +961,7 @@
 		<French>Cath&#233;drale Catholique</French>
 		<German>Katholische Kathedrale</German>
 		<Italian>Cattedrale Cattolica</Italian>
-		<Spanish>Catedral católica</Spanish>
+		<Spanish>Catedral cat&#243;lica</Spanish>
 		<Portuguese>Catedral Cat&#243;lica</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -970,7 +970,7 @@
 		<French>Relique Catholique</French>
 		<German>Katholischer Reliquienschrein</German>
 		<Italian>Reliquiario Cattolico</Italian>
-		<Spanish>Relicario católico</Spanish>
+		<Spanish>Relicario cat&#243;lico</Spanish>
 		<Portuguese>Relic&#225;rio Cat&#243;lico</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -980,7 +980,7 @@
 		<German>Katholische Hochschule</German>
 		<Italian>Scuola Religiosa Cattolica</Italian>
 		<Spanish>Escuela Catedral católica</Spanish>
-		<Portuguese>Escola Católica</Portuguese>
+		<Portuguese>Escola Cat&#243;lica</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_SCRIPTORIUM</Tag>
@@ -988,8 +988,8 @@
 		<French>Scriptorium Catholique</French>
 		<German>Katholisches Skriptorium</German>
 		<Italian>Scriptorium Cattolico</Italian>
-		<Spanish>Scriptorium católico</Spanish>
-		<Portuguese>Scriptorium Católico</Portuguese>
+		<Spanish>Scriptorium cat&#243;lico</Spanish>
+		<Portuguese>Scriptorium Cat&#243;lico</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_SEMINARY</Tag>
@@ -997,8 +997,8 @@
 		<French>S&#233;minaire Catholique</French>
 		<German>Katholisches Seminar</German>
 		<Italian>Seminario Cattolico</Italian>
-		<Spanish>Seminario católico</Spanish>
-		<Portuguese>Seminário Católico</Portuguese>
+		<Spanish>Seminario cat&#243;lico</Spanish>
+		<Portuguese>Seminário Cat&#243;lico</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_TEMPLE</Tag>

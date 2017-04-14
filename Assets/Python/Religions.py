@@ -392,7 +392,7 @@ class Religions:
 						iCatholicBuilding = xml.iCatholicTemple
 						# No chance for monastery if the selected player knows the Scientific Method tech (which obsoletes monasteries), otherwise 50-50% for temple and monastery
 						teamPlayer = gc.getTeam(pPlayer.getTeam())
-						if not teamPlayer.isHasTech(xml.iScientificMethod) and gc.getGame().getSorenRandNum(100, 'random Catholic BuildingType') % 2 == 0:
+						if not teamPlayer.isHasTech(xml.iScientificMethod) and gc.getGame().getSorenRandNum(2, 'random Catholic BuildingType') == 0:
 							iCatholicBuilding = xml.iCatholicMonastery
 						self.buildInRandomCity(iChosenPlayer, iCatholicBuilding, xml.iCatholicism)
 		# Free technology

@@ -1077,6 +1077,7 @@ class Crusades:
 		iPrevGameTurn = gc.getGame().getGameTurn() - 1 # process for freeCrusaders was actually started in the previous turn, iActiveCrusade might have changed for this turn
 		iActiveCrusade = self.getActiveCrusade( iPrevGameTurn ) # Absinthe: the Crusader units are called back before the next Crusade is initialized
 		print ("iActiveCrusade on units returning", iActiveCrusade)
+		iHuman = utils.getHumanID()
 		for pUnit in unitList:
 			if pUnit.getMercID() == (-5 - iActiveCrusade): # Absinthe: so this is a Crusader Unit of the active Crusade
 				pPlot = gc.getMap().plot( pUnit.getX(), pUnit.getY() )
@@ -1096,22 +1097,20 @@ class Crusades:
 
 				if gc.getGame().getSorenRandNum(100, 'free Crusaders') < iOdds:
 					pUnit.kill( 0, -1 )
-					iHuman = utils.getHumanID()
 					if iHuman == iPlayer:
 						CyInterface().addMessage(iHuman, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_CRUSADE_CRUSADERS_RETURNING_HOME", ()) + " " + pUnit.getName(), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
 
 		# benefits for the other participants on Crusade return - Faith points, GG points
 		for iCiv in range( con.iNumPlayers-1 ): # no such benefits for the Pope
+			if iCiv == iPlayer: continue # not the leader
 			pCiv = gc.getPlayer( iCiv )
 			if pCiv.getStateReligion() == iCatholicism:
 				iUnitNumber = self.getNumUnitsSent( iCiv )
 				if iUnitNumber > 0:
-					if iCiv != iPlayer: # not the leader
-						iHuman = utils.getHumanID()
-						if iCiv == iHuman:
-							CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_CRUSADE_CRUSADERS_ARRIVED_HOME", ()), "", 0, "", ColorTypes(con.iGreen), -1, -1, True, True)
-						pCiv.changeCombatExperience( 10 * iUnitNumber )
-						pCiv.changeFaith( 2 * iUnitNumber )
+					if iCiv == iHuman:
+						CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_CRUSADE_CRUSADERS_ARRIVED_HOME", ()), "", 0, "", ColorTypes(con.iGreen), -1, -1, True, True)
+					pCiv.changeCombatExperience( 10 * iUnitNumber )
+					pCiv.changeFaith( 2 * iUnitNumber )
 
 	# Absinthe: called from CvRFCEventHandler.onCityAcquired
 	def success( self, iPlayer ):
