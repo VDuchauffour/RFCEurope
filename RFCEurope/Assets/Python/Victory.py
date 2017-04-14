@@ -280,7 +280,7 @@ class Victory:
 								if pCiv.canContact(iPlayer) and pCiv.AI_getAttitude(iPlayer) < 2 and not teamCiv.isAtWar(iPlayer):
 									teamCiv.declareWar(iPlayer, True, -1)
 									iWarCounter += 1
-									if (iWarCounter == 3):
+									if iWarCounter == 3:
 										break
 						if iWarCounter > 0:
 							CyInterface().addMessage(iPlayer, False, con.iDuration, CyTranslator().getText("TXT_KEY_VICTORY_RIVAL_CIVS", ()), "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
