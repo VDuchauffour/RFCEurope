@@ -79,6 +79,10 @@ Changes for RFCE 1.5:
 		- City size taken into account for company spread, especially for trade based companies
 		- Hanseatic League starts earlier, in 1157 (earliest remaining documentary mention), with much increased city number limit in 1356 (the first general Diet of the Hansa)
 		- Fixed issue where company resources added half as much bonuses ingame as they were set up and as they were shown in the Civilopedia before starting an actual game
+		
+		- Templars and Teutons slowly disappear after Protestantism is founded (if they are still active)
+		- Order of Calatrava is only active if Cordoba or Morocco is alive
+		- Order of the Dragon is only active if the Ottomans are alive
 
 	Plague overhaul:
 		- Improvements near a plagued city have a chance whether to reduce their level, or to reset the progress towards the next level: Towns 100%, Villages 75%, Hamlets 50%, Cottages 25%
@@ -253,10 +257,12 @@ Changes for RFCE 1.5:
 		- Revised barbarian Magyar spawn areas and numbers in the late 9th century in Central Europe (before the Hungarian spawn)
 		- Tuned down stregth of "barbarian" Teutonic Knight spawns in Livonia in the early 13th century (right before the Prussian spawn)
 		- Reduced number of Berber barbarians in North Africa (especially for Cordoba), less early barbs for AI Kiev
-		- New indy city: Perekop (as Taphros), 500 AD, starts with walls and Orthodoxy, separating Crimean peninsula from the mainland
+		- Barbarian cities spawn with more appropriate starting units
+		- New indy city: Perekop (as Or Qapi), 1250 AD, barbarian city, separating Crimean peninsula from the mainland
 		- New indy city: Halych, 1124 AD, starts with Orthodoxy, representing the western Rus principalities
 		- Alternative spawn position for indy Lubeck, one tile south of the current one (60% for the new position, 40% for the old)
-		- New indy city: Zagreb, 800 AD, early buffer zone between Hungary and Venice (also makes Venetian coastal cities' cultural expansion limited in Croatia)
+		- New indy city: Zagreb (as Sisak), 800 AD, early buffer zone between Hungary and Venice (also makes Venetian coastal cities' cultural expansion limited in Croatia)
+		- AI Hungary is much more likely to reign war on independent Croatia from the early 11th century
 
 	Civ and UHV setup:
 		- Starting civic changes: Arabia (Trade Economy), Kiev (Serfdom, Manoralism), Spain (Serfdom, Manoralism), Morocco (Trade Economy, Militarism)
@@ -320,6 +326,7 @@ Changes for RFCE 1.5:
 		- Added Dynamic Civ Names and Lakes of RFCEurope reference text files to the mod
 		- Civilopedia entries for the new companies, UUs, UBs
 		- Added help text and bonus information for the various company buildings
+		- Fixed a couple date -> gameturn conversions on the timeline
 
 	General changes:
 		- Updated the Novgorod Fur UHV and the Moscow Atlantic Access UHV to count resources only inside cultural borders
@@ -356,6 +363,15 @@ Changes for RFCE 1.5:
 		- AI civs now have separate starting stacks - usually strengthening their early expansion when the AI is spawned in an otherwise unpopulated area
 		- Culture flipped cities don't have a raze option if they are a holy city or if your cultural percentage is very high (same as with conquered cities)
 		- Naval units can no longer blockade tiles on the opposite side of an isthmus
+		- Shipbuilding needs Replaceable Parts (to avoid early free tech slingshot for Astronomy)
+		- Moved Marco Polo Embassy to Clockmaking, somewhat increased production cost
+		- Catholic State Religion is prerequisite for Notre Dame (also Orthodoxy is prereq for Theodosian Walls, not that it matters)
+		- Increased Guisarme and Pikeman bonus against both Light and Heavy Cavalry by 25%
+		- Revised all bonuses for Guisarme, Pikeman and Longbowman UUs/mercenaries/barbs
+		- Arbalestier and it's UUs also have 25% city defense, like all other archer-type units
+		- Moved Plate Armor, Alchemy and Cartography later in the tech timeline, moved Chivalry earlier
+		- Longbowman moved to Military Tradition, increased Arquebusier strength to 9
+		- Woodlands can be cleared with Blast Furnace, Lumber Mill available with Plate Armor
 
 	AI improvements:
 		- AI civs won't do a revolution in the first couple turns after birth (wait for the potential city flips, initial conquests/settling, war declarations, and whatnot)

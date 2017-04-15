@@ -21528,10 +21528,10 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NOTRE_DAME</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NOTRE_DAME</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
-			<ReligionType>NONE</ReligionType>
-			<StateReligion>NONE</StateReligion>
-			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>NONE</PrereqReligion>
+			<ReligionType>RELIGION_CATHOLICISM</ReligionType>
+			<StateReligion>RELIGION_CATHOLICISM</StateReligion>
+			<bStateReligion>1</bStateReligion>
+			<PrereqReligion>RELIGION_CATHOLICISM</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
@@ -22106,10 +22106,10 @@
 			<ArtDefineTag>ART_DEF_BUILDING_THEODOSIAN_WALLS</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
 			<HolyCity>NONE</HolyCity>
-			<ReligionType>NONE</ReligionType>
-			<StateReligion>NONE</StateReligion>
-			<bStateReligion>0</bStateReligion>
-			<PrereqReligion>NONE</PrereqReligion>
+			<ReligionType>RELIGION_ORTHODOXY</ReligionType>
+			<StateReligion>RELIGION_ORTHODOXY</StateReligion>
+			<bStateReligion>1</bStateReligion>
+			<PrereqReligion>RELIGION_ORTHODOXY</PrereqReligion>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
@@ -25580,7 +25580,7 @@
 			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>TECH_TRADING_COMPANIES</ObsoleteTech>
-			<PrereqTech>TECH_LITERATURE</PrereqTech>
+			<PrereqTech>TECH_CLOCKMAKING</PrereqTech>
 			<TechTypes/>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
@@ -25618,7 +25618,7 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<iCost>400</iCost>
+			<iCost>450</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>

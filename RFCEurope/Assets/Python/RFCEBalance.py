@@ -888,7 +888,7 @@ class RFCEBalance:
 		gc.setTimelineTechDateForTech( xml.iHerbalMedicine, 95 )
 		gc.setTimelineTechDateForTech( xml.iFeudalism, xml.i778AD ) # Feudalism
 		gc.setTimelineTechDateForTech( xml.iFarriers, 100 )
-		gc.setTimelineTechDateForTech( xml.iMapMaking, 145 )  # this is tier 5
+		gc.setTimelineTechDateForTech( xml.iMapMaking, 160 )  # this is tier 5
 		gc.setTimelineTechDateForTech( xml.iBlastFurnace, 120 )# teir 4
 		gc.setTimelineTechDateForTech( xml.iSiegeEngines, xml.i1097AD ) #trebuchets
 		gc.setTimelineTechDateForTech( xml.iGothicArchitecture, 130 ) # 12th century
@@ -896,16 +896,16 @@ class RFCEBalance:
 		gc.setTimelineTechDateForTech( xml.iCodeOfLaws, 120 )
 		gc.setTimelineTechDateForTech( xml.iAristocracy, 135 )
 		gc.setTimelineTechDateForTech( xml.iLateenSails, 125 ) # actually this is tier 4
-		gc.setTimelineTechDateForTech( xml.iPlateArmor, 152 ) # teir 5: Late 1200s, and by the 14th century, plate armour was commonly used to supplement mail - turn 150 == 1050 though!!
+		gc.setTimelineTechDateForTech( xml.iPlateArmor, 185 ) # teir 5: historically late 1200s, and by the 14th century, plate armour was commonly used to supplement mail
 		gc.setTimelineTechDateForTech( xml.iMonumentBuilding, 180 )
 		gc.setTimelineTechDateForTech( xml.iClassicalKnowledge, 175 )
-		gc.setTimelineTechDateForTech( xml.iAlchemy, xml.i1003AD )
+		gc.setTimelineTechDateForTech( xml.iAlchemy, xml.i1144AD ) # Alchemy introduced in Europe
 		gc.setTimelineTechDateForTech( xml.iCivilService, 190 ) # teir 6
 		gc.setTimelineTechDateForTech( xml.iClockmaking, 200 )
 		gc.setTimelineTechDateForTech( xml.iPhilosophy, 215 )
 		gc.setTimelineTechDateForTech( xml.iEducation, 220 )
 		gc.setTimelineTechDateForTech( xml.iGuilds, 200 )
-		gc.setTimelineTechDateForTech( xml.iChivalry, 210 )
+		gc.setTimelineTechDateForTech( xml.iChivalry, 195 )
 		gc.setTimelineTechDateForTech( xml.iOptics, 228 ) # teir 7
 		gc.setTimelineTechDateForTech( xml.iReplaceableParts, 250 )
 		gc.setTimelineTechDateForTech( xml.iPatronage, 230 )
@@ -918,7 +918,7 @@ class RFCEBalance:
 		gc.setTimelineTechDateForTech( xml.iChemistry, 280 )
 		gc.setTimelineTechDateForTech( xml.iPaper, 290 )
 		gc.setTimelineTechDateForTech( xml.iProfessionalArmy, 295 )
-		gc.setTimelineTechDateForTech( xml.iPrintingPress, xml.i1517AD ) # teir 9 turn 304
+		gc.setTimelineTechDateForTech( xml.iPrintingPress, xml.i1517AD ) # teir 9 from turn 304
 		gc.setTimelineTechDateForTech( xml.iPublicWorks, 310 )
 		gc.setTimelineTechDateForTech( xml.iMatchlock, xml.i1500AD )
 		gc.setTimelineTechDateForTech( xml.iArabicKnowledge, xml.i1491AD ) # fall of Granada
@@ -930,7 +930,7 @@ class RFCEBalance:
 		gc.setTimelineTechDateForTech( xml.iRenaissanceArt, xml.i1540AD ) # teir 11, 1541
 		gc.setTimelineTechDateForTech( xml.iNationalism, 380 )
 		gc.setTimelineTechDateForTech( xml.iLiberalism, 400 )
-		gc.setTimelineTechDateForTech( xml.iScientificMethod, xml.i1623AD ) # Galileo
+		gc.setTimelineTechDateForTech( xml.iScientificMethod, xml.i1623AD ) # Galilei
 		gc.setTimelineTechDateForTech( xml.iMilitaryTactics, 410 )
 		gc.setTimelineTechDateForTech( xml.iNavalArchitecture, 385 ) # teir 12
 		gc.setTimelineTechDateForTech( xml.iCivilEngineering, 395 )
@@ -939,7 +939,7 @@ class RFCEBalance:
 		gc.setTimelineTechDateForTech( xml.iPhysics, xml.i1687AD )
 		gc.setTimelineTechDateForTech( xml.iBiology, 440 )
 		gc.setTimelineTechDateForTech( xml.iCombinedArms, 430 )
-		gc.setTimelineTechDateForTech( xml.iTradingCompanies, xml.i1600AD ) # teir 13 TradingCompanies turn 325
+		gc.setTimelineTechDateForTech( xml.iTradingCompanies, xml.i1600AD ) # teir 13 from turn 325
 		gc.setTimelineTechDateForTech( xml.iMachineTools, 450 )
 		gc.setTimelineTechDateForTech( xml.iFreeMarket, 450 )
 		gc.setTimelineTechDateForTech( xml.iExplosives, 460 )

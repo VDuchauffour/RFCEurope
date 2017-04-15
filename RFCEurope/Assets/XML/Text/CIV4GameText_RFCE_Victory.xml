@@ -126,21 +126,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_UHV_GOAL_WON</Tag>
-		<English>Rejoice! Goal %d1 of your historical victory has been accomplished!</English>
-		<French>Rejoice! Goal %d1 of your historical victory has been accomplished!</French>
-		<German>Rejoice! Goal %d1 of your historical victory has been accomplished!</German>
-		<Italian>Rejoice! Goal %d1 of your historical victory has been accomplished!</Italian>
-		<Spanish>Rejoice! Goal %d1 of your historical victory has been accomplished!</Spanish>
-		<Portuguese>Rejoice! Goal %d1 of your historical victory has been accomplished!</Portuguese>
+		<English>Rejoice! The %s1 goal of your Historical Victory has been accomplished!</English>
+		<French>Rejoice! The %s1 goal of your Historical Victory has been accomplished!</French>
+		<German>Rejoice! The %s1 goal of your Historical Victory has been accomplished!</German>
+		<Italian>Rejoice! The %s1 goal of your Historical Victory has been accomplished!</Italian>
+		<Spanish>Rejoice! The %s1 goal of your Historical Victory has been accomplished!</Spanish>
+		<Portuguese>Rejoice! The %s1 goal of your Historical Victory has been accomplished!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_UHV_GOAL_LOST</Tag>
-		<English>Unfortunately you have failed goal %d1 of your historical victory!</English>
-		<French>Unfortunately you have failed goal %d1 of your historical victory!</French>
-		<German>Unfortunately you have failed goal %d1 of your historical victory!</German>
-		<Italian>Unfortunately you have failed goal %d1 of your historical victory!</Italian>
-		<Spanish>Unfortunately you have failed goal %d1 of your historical victory!</Spanish>
-		<Portuguese>Unfortunately you have failed goal %d1 of your historical victory!</Portuguese>
+		<English>Unfortunately you have failed the %s1 goal of your Historical Victory!</English>
+		<French>Unfortunately you have failed the %s1 goal of your Historical Victory!</French>
+		<German>Unfortunately you have failed the %s1 goal of your Historical Victory!</German>
+		<Italian>Unfortunately you have failed the %s1 goal of your Historical Victory!</Italian>
+		<Spanish>Unfortunately you have failed the %s1 goal of your Historical Victory!</Spanish>
+		<Portuguese>Unfortunately you have failed the %s1 goal of your Historical Victory!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MIN_LATITUDE</Tag>

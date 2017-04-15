@@ -1514,8 +1514,14 @@ class Victory:
 		pCiv.setUHV( iUHV, 1 )
 		pCiv.changeStabilityBase( iCathegoryExpansion, 3 )
 		if utils.getHumanID() == iCiv:
+			if iUHV == 0:
+				sText = "first"
+			elif iUHV == 1:
+				sText = "second"
+			elif iUHV == 2:
+				sText = "third"
 			popup = Popup.PyPopup()
-			popup.setBodyString(localText.getText("TXT_KEY_VICTORY_UHV_GOAL_WON", (iUHV+1,)))
+			popup.setBodyString(localText.getText("TXT_KEY_VICTORY_UHV_GOAL_WON", (sText,)))
 			popup.launch()
 
 
@@ -1523,8 +1529,14 @@ class Victory:
 		pCiv = gc.getPlayer(iCiv)
 		pCiv.setUHV( iUHV, 0 )
 		if utils.getHumanID() == iCiv:
+			if iUHV == 0:
+				sText = "first"
+			elif iUHV == 1:
+				sText = "second"
+			elif iUHV == 2:
+				sText = "third"
 			popup = Popup.PyPopup()
-			popup.setBodyString(localText.getText("TXT_KEY_VICTORY_UHV_GOAL_LOST", (iUHV+1,)))
+			popup.setBodyString(localText.getText("TXT_KEY_VICTORY_UHV_GOAL_LOST", (sText,)))
 			popup.launch()
 
 

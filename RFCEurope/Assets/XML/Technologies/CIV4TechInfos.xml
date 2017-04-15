@@ -520,7 +520,7 @@
 			<SoundMP>NONE</SoundMP>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civics_techs.dds,3,6</Button>
 		</TechInfo>
-		<TechInfo><!--ART-->
+		<TechInfo><!--RELIGIOUS_ART-->
 			<Type>TECH_ART</Type>
 			<Description>TXT_KEY_TECH_ART</Description>
 			<Civilopedia>TXT_KEY_TECH_EU_RELIGIOUS_ART_PEDIA</Civilopedia>
@@ -2882,6 +2882,7 @@
 			</OrPreReqs>
 			<AndPreReqs>
 				<PrereqTech>TECH_BANKING</PrereqTech>
+				<PrereqTech>TECH_REPLACEABLE_PARTS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_EU_SHIPBUILDING_QUOTE</Quote>
 			<Sound>NONE</Sound>
