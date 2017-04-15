@@ -1102,7 +1102,8 @@ class Crusades:
 
 		# benefits for the other participants on Crusade return - Faith points, GG points
 		for iCiv in range( con.iNumPlayers-1 ): # no such benefits for the Pope
-			if iCiv == iPlayer: continue # not the leader
+			if iCiv == iPlayer:
+				continue # the leader already got those bonuses through the Crusade itself
 			pCiv = gc.getPlayer( iCiv )
 			if pCiv.getStateReligion() == iCatholicism:
 				iUnitNumber = self.getNumUnitsSent( iCiv )

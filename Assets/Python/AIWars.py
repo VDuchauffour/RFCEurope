@@ -97,20 +97,35 @@ class AIWars:
 				utils.minorCoreWars(con.iIndependent, iGameTurn)
 
 		# Absinthe: Venice always seeks war with an Independent Ragusa - should help AI Venice significantly
-		pVenice = gc.getPlayer( con.iVenecia )
-		teamVenice = gc.getTeam( pVenice.getTeam() )
-		if pVenice.isAlive() and (iGameTurn % 9 == 2) and not pVenice.isHuman():
-			pRagusaPlot = gc.getMap().plot( 64, 28 )
-			if pRagusaPlot.isCity():
-				pRagusaCity = pRagusaPlot.getPlotCity()
-				iRagusa = pRagusaCity.getOwner()
-				if utils.isIndep( iRagusa ):
-					# Absinthe: probably better to use declareWar instead of setAtWar
-					teamVenice.declareWar(iRagusa, False, WarPlanTypes.WARPLAN_LIMITED)
-					print ("minorWars_Ragusa", "WARPLAN_LIMITED")
-					#teamVenice.setAtWar( gc.getPlayer( iRagusa ).getTeam(), True )
-					#teamRagusa = gc.getTeam( gc.getPlayer( iRagusa ).getTeam() )
-					#teamRagusa.setAtWar( pVenice.getTeam(), True )
+		if iGameTurn % 9 == 2:
+			pVenice = gc.getPlayer( con.iVenecia )
+			if pVenice.isAlive() and not pVenice.isHuman():
+				pRagusaPlot = gc.getMap().plot( 64, 28 )
+				if pRagusaPlot.isCity():
+					pRagusaCity = pRagusaPlot.getPlotCity()
+					iOwner = pRagusaCity.getOwner()
+					if utils.isIndep( iOwner ):
+						# Absinthe: probably better to use declareWar instead of setAtWar
+						teamVenice = gc.getTeam( pVenice.getTeam() )
+						teamVenice.declareWar(iOwner, False, WarPlanTypes.WARPLAN_LIMITED)
+						print ("minorWars_Ragusa", "WARPLAN_LIMITED")
+						#teamVenice.setAtWar( gc.getPlayer( iOwner ).getTeam(), True )
+						#teamRagusa = gc.getTeam( gc.getPlayer( iOwner ).getTeam() )
+						#teamRagusa.setAtWar( pVenice.getTeam(), True )
+
+		# Absinthe: Kingdom of Hungary should try to dominate Sisak/Zagreb if it's independent
+		if iGameTurn > xml.i1000AD and iGameTurn % 7 == 3:
+			pHungary = gc.getPlayer( con.iHungary )
+			if pHungary.isAlive() and not pHungary.isHuman():
+				pZagrebPlot = gc.getMap().plot( 62, 34 )
+				if pZagrebPlot.isCity():
+					pZagrebCity = pZagrebPlot.getPlotCity()
+					iOwner = pZagrebCity.getOwner()
+					if utils.isIndep( iOwner ):
+						# Absinthe: probably better to use declareWar instead of setAtWar
+						teamHungary = gc.getTeam( pHungary.getTeam() )
+						teamHungary.declareWar(iOwner, False, WarPlanTypes.WARPLAN_LIMITED)
+						print ("minorWars_Zagreb", "WARPLAN_LIMITED")
 
 		if iGameTurn == self.getNextTurnAIWar():
 

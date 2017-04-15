@@ -53,7 +53,6 @@ tNapoli = ( [ ((59, 24), "Neapolis", 40), ((60, 25), "Beneventum", 40), ((62, 24
 tRagusa = ( [ ((64, 28), "Ragusa", 100) ], iIndependent2, 1, xml.iArcher, 2, xml.iCatholicism, 0 )
 tSeville = ( [ ((27, 21), "Hispalis", 100) ], iIndependent4, 1, xml.iArcher, 2, -1, 0 )
 tPalermo = ( [ ((55, 19), "Palermo", 60), ((58, 17), "Syracuse", 40) ], iIndependent3, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
-tPerekop = ( [ ((87, 36), "Taphros", 100) ], iIndependent4, 1, xml.iArcher, 2, xml.iOrthodoxy, 0 )
 # 552 AD
 tInverness = ( [ ((37, 67), "Inbhir Nis", 50), ((37, 65), "Scaig", 50) ], iBarbarian, 1, xml.iArcher, 1, -1, 0) #reduced to town on spawn of Scotland
 # 600 AD
@@ -85,7 +84,7 @@ tCalais = ( [ ((44, 50), "Calais", 50), ((45, 50), "Dunkerque", 50)  ], iIndepen
 tNidaros = ( [ ((57, 71), "Nidaros", 100) ], iIndependent3, 1, xml.iArcher, 1, -1, 1) #Trondheim
 tUppsala = ( [ ((65, 66), "Uppsala", 100) ], iIndependent4, 1, xml.iArcher, 2, -1, 1) #reduced to town on spawn of Sweden
 tBeloozero = ( [ ((87, 65), "Beloozero", 100) ], iIndependent4, 1, xml.iCrossbowman, 1, -1, 1)
-tZagreb = ( [ ((62, 34), "Zagreb", 100) ], iIndependent3, 2, xml.iArcher, 2, -1, 0) #little anachronistic, but great for gameplay (buffer zone between Venice and Hungary)
+tZagreb = ( [ ((62, 34), "Sisak", 100) ], iIndependent, 2, xml.iArcher, 2, -1, 0) #many Slavic princes reigned from Sisak in the 9th century, great for gameplay (buffer zone between Venice and Hungary)
 # 860 AD
 #tEdinburgh = ( [ ((37, 63), "Eidyn Dun", 100) ], iBarbarian, 1, xml.iArcher, 1, -1, 0)
 # 880 AD
@@ -108,18 +107,19 @@ tYaroslavl = ( [ ((92, 61), "Yaroslavl", 100) ], iIndependent3, 1, xml.iCrossbow
 tGroningen = ( [ ((52, 54), "Groningen", 100) ], iIndependent2, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0)
 tKalmar = ( [ ((64, 60), "Kalmar", 100) ], iIndependent2, 2, xml.iCrossbowman, 1, xml.iCatholicism, 1)
 # 1060 AD
-tMus = ( [ ((99, 21), "Mus", 100) ], iBarbarian, 1, xml.iLongbowman, 2, -1, 0)
+tMus = ( [ ((99, 21), "Mus", 100) ], iBarbarian, 1, xml.iSeljukCrossbow, 2, -1, 0)
 # 1110 AD
 tGraz = ( [ ((61, 37), "Graz", 100) ], iIndependent3, 2, xml.iCrossbowman, 2, xml.iCatholicism, 0)
 # 1124 AD
 tHalych = ( [ ((77, 41), "Halych", 100) ], iIndependent2, 2, xml.iCrossbowman, 2, xml.iOrthodoxy, 0)
 # 1200 AD
 tRigaR = ( [ ((74, 58), "Riga", 100) ], iIndependent, 3, xml.iCrossbowman, 2, -1, 1) #respawn
-tSaraiBatu = ( [ ((99, 40), "Sarai Batu", 100) ], iBarbarian, 1, xml.iLongbowman, 2, -1, 0)
+tSaraiBatu = ( [ ((99, 40), "Sarai Batu", 100) ], iBarbarian, 1, xml.iMongolKeshik, 2, -1, 0)
 # 1227 AD
 tTripoliR = ( [ ((54, 8), "Tarabulus", 100) ], iBarbarian, 3, xml.iArbalest, 2, xml.iIslam, 1) #respawn
 # 1250 AD
 tAbo = ( [ ((71, 66), "Abo", 100) ], iIndependent4, 1, xml.iCrossbowman, 1, -1, 0)
+tPerekop = ( [ ((87, 36), "Or Qapi", 100) ], iBarbarian, 1, xml.iMongolKeshik, 2, -1, 0 )
 # 1320 AD
 tNizhnyNovgorod = ( [ ((97, 58), "Nizhny Novgorod", 100) ], iIndependent, 1, xml.iCrossbowman, 1, -1, 0)
 # 1392 AD
@@ -162,7 +162,7 @@ tValletta = ( [ ((57, 14), "Valletta", 100) ], iIndependent4, 1, xml.iKnightofSt
 #lStaraSich = [88,40,300,0] #1500 AD
 
 dIndependentCities = {
-xml.i500AD : [ tTangier, tBordeaux, tAlger, tBarcelona, tToulouse, tMarseilles, tNantes, tCaen, tLyon, tTunis, tYork, tLondon, tMilan, tFlorence, tTripoli, tAugsburg, tNapoli, tRagusa, tSeville, tPalermo, tPerekop],
+xml.i500AD : [ tTangier, tBordeaux, tAlger, tBarcelona, tToulouse, tMarseilles, tNantes, tCaen, tLyon, tTunis, tYork, tLondon, tMilan, tFlorence, tTripoli, tAugsburg, tNapoli, tRagusa, tSeville, tPalermo ],
 xml.i552AD : [ tInverness ],
 xml.i600AD : [ tRhodes ],
 xml.i640AD : [ tNorwich ],
@@ -184,7 +184,7 @@ xml.i1110AD : [ tGraz ],
 xml.i1124AD : [ tHalych],
 xml.i1200AD : [ tRigaR, tSaraiBatu ],
 xml.i1227AD : [ tTripoliR ],
-xml.i1250AD : [ tAbo ],
+xml.i1250AD : [ tAbo, tPerekop ],
 xml.i1320AD : [ tNizhnyNovgorod ],
 xml.i1393AD : [ tTanais ],
 xml.i1410AD : [ tReykjavik ],

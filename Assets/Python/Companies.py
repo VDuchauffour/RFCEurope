@@ -70,8 +70,6 @@ class Companies:
 					if gc.getPlayer(plot.getPlotCity().getOwner()).getStateReligion() == iCatholicism:
 						iMaxCompanies = tCompaniesLimit[iCompany]
 
-		# Templars are Teutons are gone after the Protestant reformation - Calatrava too?
-
 		# set the company limit
 		else:
 			iMaxCompanies = tCompaniesLimit[iCompany]
@@ -86,6 +84,19 @@ class Companies:
 		if iCompany == iHansa:
 			if xml.i1356AD < iGameTurn < tCompaniesDeath[iCompany]:
 				iMaxCompanies += 3
+
+		# Templars are Teutons are gone after the Protestant reformation
+		if iCompany in [iTemplars, iTeutons]:
+			if gc.getGame().isReligionFounded(xml.iProtestantism):
+				iMaxCompanies = 0
+		# Order of Calatrava is only active if Cordoba or Morocco is alive
+		if iCompany == iCalatrava:
+			if not (gc.getPlayer(con.iCordoba).isAlive() or gc.getPlayer(con.iMorocco).isAlive()):
+				iMaxCompanies = 0
+		# Order of the Dragon is only active if the Ottomans are alive
+		if iCompany == iDragon:
+			if not gc.getPlayer(con.iTurkey).isAlive():
+				iMaxCompanies = 0
 
 		# loop through all cities, check the company value for each and add the good ones to a list of tuples (city, value)
 		cityValueList = []
