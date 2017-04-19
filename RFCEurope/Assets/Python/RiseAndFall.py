@@ -772,12 +772,12 @@ class RiseAndFall:
 
 
 	def checkPlayerTurn(self, iGameTurn, iPlayer):
-		# Absinthe: leader switching
-		# Merijn: upto infinite leaders now
+		# Absinthe & Merijn: leader switching with any number of leaders
 		if len(tLeaders[iPlayer]) > 1:
 			for tLeader in reversed(tLateLeaders[iPlayer]):
 				if iGameTurn >= tLeader[1]:
 					self.switchLateLeaders(iPlayer, tLeader)
+					break
 
 		# Absinthe: potential leader switching on anarchy
 		#switch leader on first anarchy if early leader is different from primary one, and in a late game anarchy period to a late leader

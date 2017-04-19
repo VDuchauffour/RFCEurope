@@ -25581,15 +25581,17 @@
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>TECH_TRADING_COMPANIES</ObsoleteTech>
 			<PrereqTech>TECH_CLOCKMAKING</PrereqTech>
-			<TechTypes/>
+			<TechTypes>
+				<PrereqTech>TECH_LITERATURE</PrereqTech>
+			</TechTypes>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
 			<ProductionTraits/>
 			<HappinessTraits/>
 			<NoBonus>NONE</NoBonus>
 			<PowerBonus>NONE</PowerBonus>
-			<FreeBonus>BONUS_SILK</FreeBonus>
-			<iNumFreeBonuses>2</iNumFreeBonuses>
+			<FreeBonus>NONE</FreeBonus>
+			<iNumFreeBonuses>0</iNumFreeBonuses>
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
@@ -25618,7 +25620,7 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<iCost>450</iCost>
+			<iCost>400</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -25663,7 +25665,7 @@
 			<iMilitaryProductionModifier>0</iMilitaryProductionModifier>
 			<iSpaceProductionModifier>0</iSpaceProductionModifier>
 			<iGlobalSpaceProductionModifier>0</iGlobalSpaceProductionModifier>
-			<iTradeRoutes>1</iTradeRoutes>
+			<iTradeRoutes>0</iTradeRoutes>
 			<iCoastalTradeRoutes>0</iCoastalTradeRoutes>
 			<iGlobalTradeRoutes>0</iGlobalTradeRoutes>
 			<iTradeRouteModifier>0</iTradeRouteModifier>
