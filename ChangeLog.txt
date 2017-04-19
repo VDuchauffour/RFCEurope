@@ -326,7 +326,6 @@ Changes for RFCE 1.5:
 		- Added Dynamic Civ Names and Lakes of RFCEurope reference text files to the mod
 		- Civilopedia entries for the new companies, UUs, UBs
 		- Added help text and bonus information for the various company buildings
-		- Fixed a couple date -> gameturn conversions on the timeline
 
 	General changes:
 		- Updated the Novgorod Fur UHV and the Moscow Atlantic Access UHV to count resources only inside cultural borders
@@ -463,6 +462,7 @@ Changes for RFCE 1.5:
 		- Fixed bug with Hungarian Vegvars which resulted in way too high damage on bigger enemy stacks
 		- Fixed bug which caused to leave out some units from the Crusades' selection procedure altogether, usually also resulting in some unintended unittypes sent
 		- Fixed bug which in some cases resulted in less checks for potential units for the Crusade, thus in less sent units
+		- Fixed a couple date -> gameturn conversions on the timeline
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

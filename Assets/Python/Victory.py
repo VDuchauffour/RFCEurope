@@ -250,8 +250,8 @@ class Victory:
 
 		# Generic checks:
 		if not pPlayer.getUHV2of3():
-			if utils.countAchievedGoals(iPlayer) == 2:
-				#intermediate bonus
+			if utils.countAchievedGoals(iPlayer) == 2 or utils.countAchievedGoals(iPlayer) == 3: # in case the last 2 goals were achieved in the same turn
+				# intermediate bonus
 				pPlayer.setUHV2of3( True )
 				if pPlayer.getNumCities() > 0: #this check is needed, otherwise game crashes
 					capital = pPlayer.getCapitalCity()
@@ -1204,7 +1204,7 @@ class Victory:
 		elif iGameTurn == xml.i1465AD:
 			if self.isPossibleUHV(iMorocco, 1, True):
 				iGoodCities = 0
-				for city in utils.getCityList(iPlayer):
+				for city in utils.getCityList(iMorocco):
 					if city.getCulture(iMorocco) >= 5000:
 						iGoodCities += 1
 				if iGoodCities >= 3:
