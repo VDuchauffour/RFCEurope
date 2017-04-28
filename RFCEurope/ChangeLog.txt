@@ -303,6 +303,9 @@ Changes for RFCE 1.5:
 		- Improved gamefont icon for olives, cotton, apples, honey, potatoes, coffee, fur, amber, salt, sulphur
 		- New map/civilopedia icon for copper, amber, silk, sugar, corn, potato, cotton, coffee, salt, honey, marble, stone, dye, gems, wheat, olives
 		- Added art for the Pyramids as a map object, might be placed as a special terrain feature
+		- Reduced ingame size of Galleass, Gun Galley, Cog and Holk, minor tweaks in lots of other ingame unit sizes
+		- Increased Civilopedia size of Cannon, Field Artillery, Bombard, Great Bombard, War Wagon, revised size for all foot units
+		- Increased Civilopedia size for almost all naval and mounted units, now they are more or less standardized
 
 	Text updates:
 		- Updated text for some interface messages connected to the Reformation
@@ -383,6 +386,8 @@ Changes for RFCE 1.5:
 		- Work boats can only be built if there is an improvable resource in the neighboring water area (vanilla way)
 		- Nerfed bonus for Belem Tower (+1 commerce for water tiles instead of +2), Leonardo's Workshop (+30% production instead of +50%)
 		- Revised base culture bonus for many of the world wonders
+		- All unique Military Order units have a national limit of 5
+		- Templar Knights now have +10% city defence, Teutonic Knights have -10% city attack, but free Shock promotion
 
 	AI improvements:
 		- AI civs won't do a revolution in the first couple turns after birth (wait for the potential city flips, initial conquests/settling, war declarations, and whatnot)
