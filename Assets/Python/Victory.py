@@ -275,13 +275,39 @@ class Victory:
 						for iCiv in lCivs:
 							pCiv = gc.getPlayer(iCiv)
 							teamCiv = gc.getTeam(pCiv.getTeam())
-							teamOwn = gc.getTeam(pPlayer.getTeam())
-							if teamCiv != teamOwn:
-								if pCiv.canContact(iPlayer) and pCiv.AI_getAttitude(iPlayer) < 2 and not teamCiv.isAtWar(iPlayer):
-									teamCiv.declareWar(iPlayer, True, -1)
-									iWarCounter += 1
-									if iWarCounter == 3:
-										break
+							if teamCiv.canDeclareWar( pPlayer.getTeam() ):
+								# AI_getAttitude: ATTITUDE_CAUTIOUS == 2, ATTITUDE_ANNOYED == 1, ATTITUDE_FURIOUS == 0
+								if pCiv.canContact(iPlayer) and pCiv.AI_getAttitude(iPlayer) < 3 and not teamCiv.isAtWar(iPlayer):
+									iModifier = 0
+									# bigger chance for civs which hate you
+									if pCiv.AI_getAttitude(iPlayer) == 0:
+										iModifier += 3
+									elif pCiv.AI_getAttitude(iPlayer) == 1:
+										iModifier += 1
+									# bigger chance for close civs
+									PlayerCapital = gc.getPlayer(iPlayer).getCapitalCity()
+									CivCapital = gc.getPlayer(iCiv).getCapitalCity()
+									iDistance = utils.calculateDistance(CivCapital.getX(), CivCapital.getY(), PlayerCapital.getX(), PlayerCapital.getY())
+									if iDistance < 20:
+										iModifier += 2
+									elif iDistance < 40:
+										iModifier += 1
+									# bigger chance for big civs
+									if pCiv.getNumCities() > 19:
+										iModifier += 4
+									elif pCiv.getNumCities() > 14:
+										iModifier += 3
+									elif pCiv.getNumCities() > 9:
+										iModifier += 2
+									elif pCiv.getNumCities() > 4:
+										iModifier += 1
+									print ("iCiv, iModifier", iCiv, iModifier)
+									iRndnum = gc.getGame().getSorenRandNum(7, 'war chance')
+									if iRndnum + iModifier > 6:
+										teamCiv.declareWar(iPlayer, True, -1)
+										iWarCounter += 1
+										if iWarCounter == 3:
+											break
 						if iWarCounter > 0:
 							CyInterface().addMessage(iPlayer, False, con.iDuration, CyTranslator().getText("TXT_KEY_VICTORY_RIVAL_CIVS", ()), "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
 
@@ -915,7 +941,7 @@ class Victory:
 			if pNovgorod.countCultBorderBonuses(xml.iFur) >= 11:
 				self.wonUHV( iNovgorod, 1 )
 		if iGameTurn == xml.i1397AD:
-				self.expireUHV( iNovgorod, 1 )
+			self.expireUHV( iNovgorod, 1 )
 
 		# UHV 3: Have seven cities in Karelia and Vologda in 1478
 		elif iGameTurn == xml.i1478AD:
@@ -1081,7 +1107,7 @@ class Victory:
 		if iGameTurn == xml.i1296AD:
 			self.expireUHV( iScotland, 0 )
 
-		# UHV 2: Have 2500 attitude points with France by 1560 (attitude points go up every turn depending on your relations)
+		# UHV 2: Have 1500 attitude points with France by 1560 (attitude points go up every turn depending on your relations)
 		if self.isPossibleUHV(iScotland, 1, True):
 			if pFrankia.isAlive():
 				# Being at war with France gives a big penalty (and ignores all bonuses!)
@@ -1112,7 +1138,7 @@ class Victory:
 				iOldScore = pScotland.getUHVCounter(1)
 				iNewScore = iOldScore + iScore
 				pScotland.setUHVCounter(1, iNewScore)
-				if iNewScore >= 2500:
+				if iNewScore >= 1500:
 					self.wonUHV( iScotland, 1 )
 		if iGameTurn == xml.i1560AD:
 			self.expireUHV( iScotland, 1 )

@@ -785,5 +785,26 @@
 				<VarietyButton>Art/Interface/Buttons/TerrainFeatures/reefs.dds</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
+		<FeatureArtInfo>
+			<Type>ART_DEF_FEATURE_WONDER_PYRAMIDS</Type>
+			<bAnimated>0</bAnimated>
+			<bRiverArt>0</bRiverArt>
+			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
+			<LightType>LIGHT_TYPE_SUN</LightType>
+			<fScale>0.92</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<Button>Art/Interface/Buttons/TerrainFeatures/pyramid.dds</Button>
+			<FeatureVariety>
+				<FeatureArtPieces>
+					<FeatureArtPiece>
+						<ModelFile>Art/Terrain/Features/Pyramid/pyramid.nif</ModelFile>
+						<Connections></Connections>
+					</FeatureArtPiece>
+				</FeatureArtPieces>
+				<FeatureDummyNodes/>
+				<bGenerateRotations>0</bGenerateRotations>
+				<VarietyButton>Art/Interface/Buttons/TerrainFeatures/pyramid.dds</VarietyButton>
+			</FeatureVariety>
+		</FeatureArtInfo>
 	</FeatureArtInfos>
 </Civ4ArtDefines>

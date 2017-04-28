@@ -230,9 +230,7 @@ class Companies:
 		if iCompany in [iHospitallers, iTemplars, iTeutons]:
 			if iStateReligion == iCatholicism:
 				iValue += 3
-			elif iStateReligion == iOrthodoxy:
-				iValue += 1
-			elif iStateReligion == iProtestantism:
+			elif iStateReligion in [iProtestantism, iOrthodoxy]:
 				iValue -= -2
 			else:
 				return -1
@@ -534,9 +532,9 @@ class Companies:
 		# spread it out
 		iCompOwned = owner.countCorporations(iCompany)
 		if city.isHasCorporation(iCompany):
-			iValue -= iCompOwned # -1 per city if the company is already present
+			iValue -= iCompOwned # -1 per city if the company is already present here (smaller penalty in the value list)
 		else:
-			iValue -= 2 * iCompOwned # -2 if it's a possible new city
+			iValue -= 2 * iCompOwned # -2 per city if it's a possible new spread (bigger penalty in the value list)
 		if iCompOwned > 0:
 			print ("Number of companies already present in civ:", city.getName(), iCompOwned)
 

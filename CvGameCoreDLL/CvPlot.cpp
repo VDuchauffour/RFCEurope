@@ -1358,9 +1358,26 @@ bool CvPlot::isCoastalLand(int iMinWaterSize) const
 			if (pAdjacentPlot->isWater() && !(pAdjacentPlot->getFeatureType() == 0)) //(ice)
 			//Rhye - end
 			{
-				if (pAdjacentPlot->area()->getNumTiles() >= iMinWaterSize)
+				// Absinthe: hack for coastal size requirement for naval buildings and naval units
+				//			if we set -3 as iMinAreaSize in the XML, it means all sea coasts, but no lake coasts
+				if (iMinWaterSize == -3)
 				{
-					return true;
+					if (!(GC.getTerrainInfo(pAdjacentPlot->getTerrainType()).isFreshLake()) && !(GC.getTerrainInfo(pAdjacentPlot->getTerrainType()).isSalineLake()))
+					{
+						if (pAdjacentPlot->area()->getNumTiles() >= 1)
+						{
+							return true;
+						}
+					}
+				}
+				// Absinthe: end
+
+				else
+				{
+					if (pAdjacentPlot->area()->getNumTiles() >= iMinWaterSize)
+					{
+						return true;
+					}
 				}
 			}
 		}

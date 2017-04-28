@@ -1228,7 +1228,7 @@ class CvVictoryScreen:
 		#UHV2
 		sText2 += localText.getText("TXT_KEY_UHV_SCO2_HELP",()) + "\n"
 		iScore = pPlayer.getUHVCounter(1)
-		sText2 += self.getCounterString(iScore, 2500)
+		sText2 += self.getCounterString(iScore, 1500)
 		#UHV3
 		sText3 += self.getProvinceString(vic.tScotlandControl)
 		lHelpTexts = [sText1, sText2, sText3]

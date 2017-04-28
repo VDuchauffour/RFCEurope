@@ -26,25 +26,30 @@ class CvPediaTerrain:
 		self.top = main
 
 		self.X_ICON_PANE = self.top.X_PEDIA_PAGE + 50
-		self.Y_ICON_PANE = self.top.Y_PEDIA_PAGE + 45
+		self.Y_ICON_PANE = self.top.Y_PEDIA_PAGE + 30
 		self.W_ICON_PANE = 433
-		self.H_ICON_PANE = 210
+		self.H_ICON_PANE = 190
 
 		self.X_ICON = self.X_ICON_PANE + 8
-		self.Y_ICON = self.Y_ICON_PANE + 8
+		self.Y_ICON = self.Y_ICON_PANE + 20
 		self.W_ICON = 150
 		self.H_ICON = 150
 		self.ICON_SIZE = 64
 
-		self.X_STATS_PANE = self.X_ICON_PANE + 210
-		self.Y_STATS_PANE = 130 + 30
+		self.X_STATS_PANE = self.X_ICON_PANE + 200
+		self.Y_STATS_PANE = self.Y_ICON_PANE + 60
 		self.W_STATS_PANE = 950 - self.X_STATS_PANE
 		self.H_STATS_PANE = 120
 
 		self.X_SPECIAL_PANE = self.X_ICON_PANE
-		self.Y_SPECIAL_PANE = 320
+		self.Y_SPECIAL_PANE = self.Y_ICON_PANE + 200
 		self.W_SPECIAL_PANE = 950 - self.X_SPECIAL_PANE
-		self.H_SPECIAL_PANE = 350
+		self.H_SPECIAL_PANE = 150
+
+		self.X_TEXT_PANE = self.X_ICON_PANE
+		self.Y_TEXT_PANE = self.Y_ICON_PANE + 360
+		self.W_TEXT_PANE = 950 - self.X_SPECIAL_PANE
+		self.H_TEXT_PANE = 230
 
 	# Screen construction function
 	def interfaceScreen(self, iTerrain):
@@ -83,6 +88,7 @@ class CvPediaTerrain:
 
 		self.placeStats()
 		self.placeSpecial()
+		self.placeText()
 
 
 	def placeStats(self):
@@ -118,6 +124,16 @@ class CvPediaTerrain:
 		for special in splitText:
 			if len( special ) != 0:
 				screen.appendListBoxString( listName, special, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
+
+	def placeText(self):
+
+		screen = self.top.getScreen()
+
+		panelName = self.top.getNextWidgetName()
+		screen.addPanel( panelName, localText.getText("TXT_KEY_PEDIA_DESCRIPTION", ()), "", true, true, self.X_TEXT_PANE, self.Y_TEXT_PANE, self.W_TEXT_PANE, self.H_TEXT_PANE, PanelStyles.PANEL_STYLE_BLUE50 )
+
+		szText = gc.getTerrainInfo(self.iTerrain).getCivilopedia()
+		screen.attachMultilineText( panelName, "Text", szText, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 
 	def placeLinks(self):
 

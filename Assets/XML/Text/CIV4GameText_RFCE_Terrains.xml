@@ -43,12 +43,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_FRESHLAKE</Tag>
-		<English>Fresh Water Lake</English>
+		<English>Freshwater Lake</English>
 		<French>Lac salé</French>
 		<German>Salzsee</German>
 		<Italian>Lago salato</Italian>
 		<Spanish>Lago salado</Spanish>
-		<Portuguese>Fresh Water Lake</Portuguese>
+		<Portuguese>Freshwater Lake</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_WETLAND</Tag>
@@ -213,24 +213,6 @@
 		<Portuguese>Ice</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_DENSE_FOREST</Tag>
-		<English>Dense Forest</English>
-		<French>For&#234;t Dense</French>
-		<German>Dichter Wald</German>
-		<Italian>Foresta Fitta</Italian>
-		<Spanish>Bosque</Spanish>
-		<Portuguese>Floresta Densa</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FEATURE_DENSE_FOREST_PEDIA</Tag>
-		<English>[TAB]A forest, is an area with a high density of trees. There are many definitions for forest, based on the various criteria. These plant communities cover approximately 9.4% of the Earth's surface (or 30% of total land area), though they once covered much more (about 50% of total land area), in many different regions and function as habitats for organisms, hydrologic flow modulators, and soil conservers, constituting one of the most important aspects of the Earth's biosphere. Although a forest is classified primarily by trees a forest ecosystem is defined intrinsically with additional species such as fungi.</English>
-		<French>Forest</French>
-		<German>Forest</German>
-		<Italian>Forest</Italian>
-		<Spanish>Forest</Spanish>
-		<Portuguese>Forest</Portuguese>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_FEATURE_FOREST</Tag>
 		<English>Woodland</English>
 		<French>For&#234;t</French>
@@ -240,6 +222,15 @@
 		<Portuguese>Bosque</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_FEATURE_DENSE_FOREST</Tag>
+		<English>Dense Forest</English>
+		<French>For&#234;t Dense</French>
+		<German>Dichter Wald</German>
+		<Italian>Foresta Fitta</Italian>
+		<Spanish>Bosque</Spanish>
+		<Portuguese>Floresta Densa</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_FEATURE_PALM_FOREST</Tag>
 		<English>Palm Forest</English>
 		<French>Palm Forest</French>
@@ -247,6 +238,15 @@
 		<Italian>Foresta di Palme</Italian>
 		<Spanish>Palm Forest</Spanish>
 		<Portuguese>Palmeiral</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_FOREST_PEDIA</Tag>
+		<English>[TAB]A forest is an area with a high density of trees. There are many definitions for forest, based on the various criteria. These plant communities cover approximately 9.4% of the Earth's surface (or 30% of total land area), though they once covered much more (about 50% of total land area), in many different regions and function as habitats for organisms, hydrologic flow modulators, and soil conservers, constituting one of the most important aspects of the Earth's biosphere. Although a forest is classified primarily by trees a forest ecosystem is defined intrinsically with additional species such as fungi.</English>
+		<French>Forest</French>
+		<German>Forest</German>
+		<Italian>Forest</Italian>
+		<Spanish>Forest</Spanish>
+		<Portuguese>Forest</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_REEF</Tag>
@@ -283,6 +283,24 @@
 		<Italian>Islands</Italian>
 		<Spanish>Islands</Spanish>
 		<Portuguese>Islands</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_WONDER_PYRAMIDS</Tag>
+		<English>Pyramids of Giza</English>
+		<French>Pyramids of Giza</French>
+		<German>Pyramids of Giza</German>
+		<Italian>Pyramids of Giza</Italian>
+		<Spanish>Pyramids of Giza</Spanish>
+		<Portuguese>Pyramids of Giza</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATURE_WONDER_PYRAMIDS_PEDIA</Tag>
+		<English>[TAB]Remnants of a long gone age, these Pyramids are truly spectacular. They might give inspiration to your population in the neighboring cities!</English>
+		<French>[TAB]Remnants of a long gone age, these Pyramids are truly spectacular. They might give inspiration to your population in the neighboring cities!</French>
+		<German>[TAB]Remnants of a long gone age, these Pyramids are truly spectacular. They might give inspiration to your population in the neighboring cities!</German>
+		<Italian>[TAB]Remnants of a long gone age, these Pyramids are truly spectacular. They might give inspiration to your population in the neighboring cities!</Italian>
+		<Spanish>[TAB]Remnants of a long gone age, these Pyramids are truly spectacular. They might give inspiration to your population in the neighboring cities!</Spanish>
+		<Portuguese>[TAB]Remnants of a long gone age, these Pyramids are truly spectacular. They might give inspiration to your population in the neighboring cities!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_APIARY</Tag>
@@ -391,5 +409,14 @@
 		<Italian>With the removal of the forest, the source of %s1_resource has been exhausted!</Italian>
 		<Spanish>With the removal of the forest, the source of %s1_resource has been exhausted!</Spanish>
 		<Portuguese>With the removal of the forest, the source of %s1_resource has been exhausted!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_DESCRIPTION</Tag>
+		<English>Description</English>
+		<French>Description</French>
+		<German>Description</German>
+		<Italian>Description</Italian>
+		<Spanish>Description</Spanish>
+		<Portuguese>Description</Portuguese>
 	</TEXT>
 </Civ4GameText>
