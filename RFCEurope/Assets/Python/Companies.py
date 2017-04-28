@@ -231,7 +231,7 @@ class Companies:
 			if iStateReligion == iCatholicism:
 				iValue += 3
 			elif iStateReligion in [iProtestantism, iOrthodoxy]:
-				iValue -= -2
+				iValue -= 2
 			else:
 				return -1
 		elif iCompany == iDragon:
