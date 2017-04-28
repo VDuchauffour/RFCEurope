@@ -150,7 +150,7 @@ Changes for RFCE 1.5:
 		- New base terrain: Semidesert - 1 production, +1 commerce near rivers, city founding only possible near fresh water
 		- New base terrain: Salt Lake - 1 food, 3 commerce, +1 food with Harbor, +10% defence
 		- New base terrain: Fresh Water Lake - 2 food, 2 commerce, +1 food with Harbor, +10% defence
-		- New terrain feature: Islands (2 variety, green and rocky) - +1 production, +10% defence
+		- New terrain feature: Islands (2 variety, green and rocky) - +1 production, +1 commerce, +10% defence
 		- New terrain feature: Reefs - costs 4 movement points, 25% damage if naval units end their turn on it
 		- Renamed Ice base terrain to Permafrost / Permanent Snow, Ice terrain feature to Sea Ice
 		- You can no longer found cities on coastal Desert tiles, only near fresh water (same as for Semidesert)
@@ -381,6 +381,8 @@ Changes for RFCE 1.5:
 		- Basic naval buildings and naval wonders are available in all coastal cities (only near sea, not lake), even if the water area is very small
 		- Naval units and related naval buildings are only available for coastal cities near an at least size 20 water body (because of the AI)
 		- Work boats can only be built if there is an improvable resource in the neighboring water area (vanilla way)
+		- Nerfed bonus for Belem Tower (+1 commerce for water tiles instead of +2), Leonardo's Workshop (+30% production instead of +50%)
+		- Revised base culture bonus for many of the world wonders
 
 	AI improvements:
 		- AI civs won't do a revolution in the first couple turns after birth (wait for the potential city flips, initial conquests/settling, war declarations, and whatnot)
