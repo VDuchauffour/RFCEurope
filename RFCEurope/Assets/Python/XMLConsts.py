@@ -350,8 +350,8 @@ iCivicSubjugation, iCivicVassalage, iCivicImperialism, iCivicOccupation, iCivicC
 
 
 #Feature & terrain
-iNumFeatures = 11
-(iIce, iJungle, iDenseForest, iOasis, iFloodPlains, iWoodland, iFallout, iMarsh, iPalmForest, iIslands, iReef) = range(iNumFeatures)
+iNumFeatures = 12
+(iIce, iJungle, iDenseForest, iOasis, iFloodPlains, iWoodland, iFallout, iMarsh, iPalmForest, iIslands, iReef, iPyramid) = range(iNumFeatures)
 
 iNumTerrain = 14
 (iTerrainGrass, iTerrainPlains, iTerrainSemiDesert, iTerrainDesert, iTerrainWetland, iTerrainMoorland, iTerrainTundra, iTerrainSnow, iTerrainFreshLake, iTerrainSaltLake, iTerrainCoast, iTerrainOcean, iTerrainPeak, iTerrainHill) = range(iNumTerrain)

@@ -192,7 +192,6 @@ class Crusades:
 	def setDCLast( self, iLast ):
 		sd.scriptDict['iDCLast'] = iLast
 
-	''' popupID has to be a registered ID in CvRhyesCatapultEventManager.__init__!! '''
 	def showPopup(self, popupID, title, message, labels):
 		popup = Popup.PyPopup(popupID, EventContextTypes.EVENTCONTEXT_ALL)
 		popup.setHeaderString(title)
@@ -356,7 +355,6 @@ class Crusades:
 			elif iStartDate + 8 == iGameTurn:
 				iLeader = self.getLeader()
 				self.setCrusadeToReturn( iLeader )
-				self.setLeader(-1)
 				self.returnCrusaders()
 
 
@@ -821,9 +819,12 @@ class Crusades:
 		iX, iY = self.getTargetPlot()
 		pTargetCity = gc.getMap().plot( iX, iY ).getPlotCity()
 		iTargetPlayer = pTargetCity.getOwner()
+		# Absinthe: in case the Crusader civ has been destroyed
+		if not gc.getPlayer( iLeader ).isAlive():
+			self.returnCrusaders()
+			return
 		# Target city can change ownership during the voting
 		if gc.getPlayer( iTargetPlayer ).getStateReligion() == iCatholicism:
-			self.setLeader( -1 )
 			self.returnCrusaders()
 			return
 		if iTargetPlayer == iHuman:
@@ -838,6 +839,7 @@ class Crusades:
 		gc.getTeam( gc.getPlayer( iLeader ).getTeam() ).declareWar( gc.getPlayer( pTargetCity.getOwner() ).getTeam(), True, -1 )
 
 	def returnCrusaders( self ):
+		self.setLeader( -1 )
 		for i in range( con.iNumPlayers ):
 			gc.getPlayer( i ).setIsCrusader( False )
 
@@ -1074,7 +1076,7 @@ class Crusades:
 	def freeCrusaders( self, iPlayer ):
 		# the majority of Crusader units will return from the Crusade, so the Crusading civ will have harder time keeping Jerusalem and the Levant
 		unitList = PyPlayer( iPlayer ).getUnitList()
-		iPrevGameTurn = gc.getGame().getGameTurn() - 1 # process for freeCrusaders was actually started in the previous turn, iActiveCrusade might have changed for this turn
+		iPrevGameTurn = gc.getGame().getGameTurn() - 1 # process for freeCrusaders was actually started in the previous turn, iActiveCrusade might have changed for the current turn
 		iActiveCrusade = self.getActiveCrusade( iPrevGameTurn ) # Absinthe: the Crusader units are called back before the next Crusade is initialized
 		print ("iActiveCrusade on units returning", iActiveCrusade)
 		iHuman = utils.getHumanID()

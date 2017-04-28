@@ -150,7 +150,7 @@ Changes for RFCE 1.5:
 		- New base terrain: Semidesert - 1 production, +1 commerce near rivers, city founding only possible near fresh water
 		- New base terrain: Salt Lake - 1 food, 3 commerce, +1 food with Harbor, +10% defence
 		- New base terrain: Fresh Water Lake - 2 food, 2 commerce, +1 food with Harbor, +10% defence
-		- New terrain feature: Islands (2 variety, green and rocky) - +1 food, +1 production, +10% defence
+		- New terrain feature: Islands (2 variety, green and rocky) - +1 production, +10% defence
 		- New terrain feature: Reefs - costs 4 movement points, 25% damage if naval units end their turn on it
 		- Renamed Ice base terrain to Permafrost / Permanent Snow, Ice terrain feature to Sea Ice
 		- You can no longer found cities on coastal Desert tiles, only near fresh water (same as for Semidesert)
@@ -285,6 +285,7 @@ Changes for RFCE 1.5:
 		- Changed the Novgorodian 2nd UHV goal to 11 fur resources (was 12)
 		- Revised starting units for Arabia - more melee units, less horse archers
 		- Additional defensive units and in some cases additional settler(s) for AI Arabia, Bulgaria, Cordoba, Germany, Novgorod, Kiev, Hungary, Poland, Morocco, Ottomans
+		- Scottish Auld Alliance UHV goal lowered to 1500
 
 	Art updates:
 		- Historic icon/button/gamefont for the Order of Calatrava and the Order of the Dragon
@@ -301,6 +302,7 @@ Changes for RFCE 1.5:
 		- New gamefont icon for copper, timber, tea, tobacco, silk, sugar, corn, marble, stone, dye, gems, wheat
 		- Improved gamefont icon for olives, cotton, apples, honey, potatoes, coffee, fur, amber, salt, sulphur
 		- New map/civilopedia icon for copper, amber, silk, sugar, corn, potato, cotton, coffee, salt, honey, marble, stone, dye, gems, wheat, olives
+		- Added art for the Pyramids as a map object, might be placed as a special terrain feature
 
 	Text updates:
 		- Updated text for some interface messages connected to the Reformation
@@ -326,6 +328,7 @@ Changes for RFCE 1.5:
 		- Added Dynamic Civ Names and Lakes of RFCEurope reference text files to the mod
 		- Civilopedia entries for the new companies, UUs, UBs
 		- Added help text and bonus information for the various company buildings
+		- Updates in a couple names and Civilopedia texts connected to terrain features
 
 	General changes:
 		- Updated the Novgorod Fur UHV and the Moscow Atlantic Access UHV to count resources only inside cultural borders
@@ -363,14 +366,21 @@ Changes for RFCE 1.5:
 		- Culture flipped cities don't have a raze option if they are a holy city or if your cultural percentage is very high (same as with conquered cities)
 		- Naval units can no longer blockade tiles on the opposite side of an isthmus
 		- Shipbuilding needs Replaceable Parts (to avoid early free tech slingshot for Astronomy)
-		- Moved Marco Polo Embassy to Clockmaking, somewhat increased production cost
+		- Marco Polo Embassy needs Literature and Clockmaking, no silk and trade route bonus, provides extra commerce from merchant specialists
 		- Catholic State Religion is prerequisite for Notre Dame (also Orthodoxy is prereq for Theodosian Walls, not that it matters)
 		- Increased Guisarme and Pikeman bonus against both Light and Heavy Cavalry by 25%
-		- Revised all bonuses for Guisarme, Pikeman and Longbowman UUs/mercenaries/barbs
-		- Arbalestier and it's UUs also have 25% city defense, like all other archer-type units
+		- Revised all bonuses for Guisarme, Pikeman and Longbowman UUs/mercenaries/barbs, increased Arquebusier strength to 8
+		- Arbalestier and it's UUs also have 25% city defence, like all other archer-type units
+		- Longbowman requires Military Tradition and Replacable Parts, Longbowman UUs require Guilds and Chivalry
+		- Winged Hussars available with Polygonal Fort, Cuirassier strength reduced to 18
+		- Line Infantry bonus against heavy cavalry reduced to +25%
+		- Tercio available with Chemistry, strength reduced to 11, Janissary strength increased to 11
 		- Moved Plate Armor, Alchemy and Cartography later in the tech timeline, moved Chivalry earlier
-		- Longbowman moved to Military Tradition, increased Arquebusier strength to 9
 		- Woodlands can be cleared with Blast Furnace, Lumber Mill available with Plate Armor
+		- Special UHV events (golden age, triumphal arch, AI wars) also happen if the last 2 UHVs were accomplished on the same turn
+		- Basic naval buildings and naval wonders are available in all coastal cities (only near sea, not lake), even if the water area is very small
+		- Naval units and related naval buildings are only available for coastal cities near an at least size 20 water body (because of the AI)
+		- Work boats can only be built if there is an improvable resource in the neighboring water area (vanilla way)
 
 	AI improvements:
 		- AI civs won't do a revolution in the first couple turns after birth (wait for the potential city flips, initial conquests/settling, war declarations, and whatnot)
@@ -396,6 +406,7 @@ Changes for RFCE 1.5:
 		- AI civs won't accept cities in less than core or historic territory, if their stability is < 0
 		- Revised era based distance values for AI city trade calculations
 		- AI civs won't accept cities if they are too far away from their territory, unless they are in core or historic territory
+		- AI civs decision/chance for war declaration on the 2nd completed UHV is based on: distance and diplo relations between the civs, size of their nation
 
 	Technical / UI changes:
 		- No interface messages are displayed during autoplay/autorun (Crusades, RiseAndFall, Religion, Wonders, Leaders, etc.)
@@ -429,6 +440,7 @@ Changes for RFCE 1.5:
 		- Popup message for the player a couple turns before the Seljuk/Mongol/Timurid invasions
 		- Improved interface messages connected to Papal bonuses, added message for the Topkapi Palace effect
 		- Revised loading times (on the civ selection screen) in the 500AD scenario for all civs
+		- Revised both Base Terrain and Terrain Feature Civilopedia categories, added pedia description box for both
 
 	Bugfixes:
 		- Fixed strange visibility area for the Ottomans
@@ -463,6 +475,8 @@ Changes for RFCE 1.5:
 		- Fixed bug which caused to leave out some units from the Crusades' selection procedure altogether, usually also resulting in some unintended unittypes sent
 		- Fixed bug which in some cases resulted in less checks for potential units for the Crusade, thus in less sent units
 		- Fixed a couple date -> gameturn conversions on the timeline
+		- Fixed bug which made it possible for a collapsed (former) Crusade leader to declare war on the target civ
+		- Fixed bug in the special war declaration mechanics on the 2nd completed UHV where vassals could potentially declare war on their master
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -1556,7 +1570,7 @@ Changes for RFCE 1.0:
 
 	Balance:
 		- Norse got an additional Berserker on spawn
-		- Star Fort doesn't damages units in the area anymore, defense and bombard-free defense increased 25% (was 20%)
+		- Star Fort doesn't damages units in the area anymore, defence and bombard-free defence increased to 25% (was 20%)
 		- Swiss Line Infantry is available later
 		- Large (>11 cities) unstable Empires no longer collapse instantly, they first start to rapidly lose cities
 		- Fixed a bug with collapse and respawning in a different region (safeMotherland in C++)
@@ -1810,7 +1824,7 @@ Changes for Beta 13:
 		- Slightly improved Polish-Lithuanian and Polish-Hungarian relations
 		- Added defenders for the Seljuks (Arbalest and Guisarme)
 		- Removed ability of the Templar Knight to move through enemy territory
-		- All gunpowder units (except Arquebusiers) and gunpowder based siege units (bombards and more advanced ones) ignore building defenses
+		- All gunpowder units (except Arquebusiers) and gunpowder based siege units (bombards and more advanced ones) ignore building defences
 		- Austrian Kuirassier doesn't ignore building defences
 		- Added more Balkan provinces to the Hungarian Crusader map so they can call Defensive Crusades against the Ottomans
 		- Crossbows don't upgrade to Longbows and Longbows are about 10% more expensive (this should nerf the powerful Longbowman)
@@ -1821,7 +1835,7 @@ Changes for Beta 13:
 		- Temple Mount (Jewish Shrine) is pre-built in Jerusalem
 		- Leonardo's Workshop now adds Great Engineer points instead of Great Artist
 		- Increased/balanced a couple improvement build times
-		- Slightly balanced a couple terrains and features bonuses (unhealth, movement, defense)
+		- Slightly balanced a couple terrains and features bonuses (unhealth, movement, defence)
 		- Marshes (Wetlands) can be improved after the removal of Mud (Marsh)
 		- Balancing desert tiles: Oasis got a +1 food boost, but no more forest, sheep or horse on desert
 		- Increased Wall cost to 100, Pagan Shrine cost reduced to 30
@@ -1831,7 +1845,7 @@ Changes for Beta 13:
 		- Upkeep for Militarism and Imperialism is now Medium and High respectively
 		- Adjusted the Mongols so that they will hit Hungary more often and also added another invasion spot near Bulgaria
 		- Increased the power of Venice AI (in the special modifiers)
-		- Venice (city) gets a pre-build City Walls since the rivers don't provide enough defense
+		- Venice (city) gets a pre-build City Walls since the rivers don't provide enough defence
 		- Ragusa was keeping Venice down, now Venice AI is constantly at war with Ragusa and the plot of Ragusa was changed to flat-land (no defensive bonus)
 		- Adjusted many parameters in RFCEBalance due to the new map division and better AI
 
@@ -1879,7 +1893,7 @@ Changes for Beta 12:
 		- Shrine of Uppsala doesn't have to be coastal, prereq tech is Architecture, obsolete tech is Divine Right
 		- Adjusted all buildings probability to stay on conquest:
 			- All world wonders, corporations (and plague) have 100% chance to stay
-			- All national wonders, religious buildings, military buildings, stability/culture/defense giving buildings have 0% chance to stay
+			- All national wonders, religious buildings, military buildings, stability/culture/defence giving buildings have 0% chance to stay
 			- All other buildings have 66% chance to stay
 			- Exceptions: Jewish Quarter with 66% (because of the Judaism spread mechanics), Pagan Temple with 66% (to increase the probability of the Shrine of Uppsala wonder)
 		- French 1st UHV expanded with Picardy and Lorraine
@@ -1955,7 +1969,7 @@ Changes for Beta 12:
 		- New/Better ethnic unit art for Russian civs, Muslim civs
 
 	Balance:
-		- Crossbowman city defense bonus reduced to 25%. They are still better than Archers, but it makes the Arbalestier more valuable
+		- Crossbowman city defence bonus reduced to 25%. They are still better than Archers, but it makes the Arbalestier more valuable
 		- Calais no longer flips to England
 		- Lubeck no longer flips to Germany
 		- Germany gets back the second starting settler (probably for a city in Saxony)
@@ -2008,8 +2022,8 @@ Changes for Beta 11:
 		- Vinland requires North American Access
 		- NA Access is visible with Astrolabe, NA Access is placed near Iceland and is removed in 1050AD
 		- The AI is now aware of the Hungarian Stronghold ability (for city improvements only)
-		- StarFort adds special defense that applies to all unit (Gunpowder and non-Gunpowder)
-		- The special defense provided by the Star Fort cannot be broken by Catapults/Cannons
+		- StarFort adds special defence that applies to all unit (Gunpowder and non-Gunpowder)
+		- The special defence provided by the Star Fort cannot be broken by Catapults/Cannons
 		- Added more barbarians to Scotland
 		- Added some early Barbarians to the Byzantine start (the Sassanids)
 		- Mongols, Seljuks and Scots can now spawn with the cultural borders of an Empire (you cannot block them with culture)
@@ -2575,7 +2589,7 @@ Changes for Alpha 11:
 		Minor hanseatic update
 		New Hanseatic Executive
 		Belgrad moved 1 tile south
-		Musketeer: 25% vs. gun --> 25% city defense
+		Musketeer: 25% vs. gun --> 25% city defence
 		English Longbowmans are now Longbowman with Formation and Drill 1. (was Longbowman with half costs, no 50% vs. heavy infantry and heavy cavalry, with promotion.)
 		Every timber is on dense forest.
 		Slightly stronger start for Spain. Some coastal resources moved due to dumb AI not settling near enough.
@@ -2890,12 +2904,12 @@ Changes for Alpha 4:
 (released: 2009.07.04.)
 
 	Fixed a bug regarding the Cordoban UHVs
-	Removed the Longbowman city defense bonus, currently it is strong enough
+	Removed the Longbowman city defence bonus, currently it is strong enough
 	Fixed Cordoban and Genoa UHV bugs
 	Arabia can now use their coffee resource.
 	New colonies and access resources
 	Fixed a bug giving Franks and Burgundians twice the normal starting force
-	Increased the combat strength of the Norse Berserker to account for the improved defense of the Archers
+	Increased the combat strength of the Norse Berserker to account for the improved defence of the Archers
 	Map update by Jessicat, mainly Iceland (including update to the Norse UHV)
 	You no longer have to be richer than the Pope to take over a Crusade, only richer than the rest of the Catholics
 	Fixed a Dutch, Turkey and Sweden culture bug
@@ -3072,7 +3086,7 @@ Changes for Test Version 2009.05.05.:
 	Organized religion moved later to encourage monastery-building
 	Small decrease to growth rates as function of era
 	Worker speed restored to default BTS speed
-	Reduced value of city cultural defenses to promote defensive buildings
+	Reduced value of city cultural defences to promote defensive buildings
 	Added some tech descriptions in the Civilopedia from Jessiecat
 	Increased Ottoman starting units
 	Fixed bugs in Burgundy/Venice UHV
@@ -3297,7 +3311,7 @@ Changes for Test Version 2009.02.17.:
 
 	Units:
 		Restored Pinch Promotion
-		Removed Longbow city defense bonus
+		Removed Longbow city defence bonus
 		Mounted Infantry now upgrade to foot-knights (remove city-raider knights)
 		Horse Archer made weaker (strength 5)
 		Spearmen and Guisarme bonus vs. heavy cavalry raised from 50% to 75%
