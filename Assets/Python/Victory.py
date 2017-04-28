@@ -250,7 +250,7 @@ class Victory:
 
 		# Generic checks:
 		if not pPlayer.getUHV2of3():
-			if utils.countAchievedGoals(iPlayer) == 2 or utils.countAchievedGoals(iPlayer) == 3: # in case the last 2 goals were achieved in the same turn
+			if utils.countAchievedGoals(iPlayer) >= 2: # in case the last 2 goals were achieved in the same turn
 				# intermediate bonus
 				pPlayer.setUHV2of3( True )
 				if pPlayer.getNumCities() > 0: #this check is needed, otherwise game crashes

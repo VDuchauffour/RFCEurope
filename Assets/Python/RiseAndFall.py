@@ -1425,9 +1425,9 @@ class RiseAndFall:
 
 	def makeResurectionUnits( self, iPlayer, iX, iY ):
 		if iPlayer == iCordoba:
-			utils.makeUnit(xml.iSettler, iCordoba, [iX,iY], 2)
-			utils.makeUnit(xml.iCrossbowman, iCordoba, [iX,iY], 2)
-			utils.makeUnit(xml.iIslamicMissionary, iCordoba, [iX,iY], 1)
+			utils.makeUnit(xml.iSettler, iCordoba, (iX, iY), 2)
+			utils.makeUnit(xml.iCrossbowman, iCordoba, (iX, iY), 2)
+			utils.makeUnit(xml.iIslamicMissionary, iCordoba, (iX, iY), 1)
 
 
 	def convertBackCulture(self, iCiv):
