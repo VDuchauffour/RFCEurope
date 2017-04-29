@@ -138,7 +138,6 @@ Changes for RFCE 1.5:
 		- Later Crusades won't send back units from earlier Crusades (i.e. if they initially remained Crusaders, it should remain that way)
 		- Added option for another Crusade in the late 13th century
 		- Tuned down Defensive Crusade frequency, reduced number of generic units for normal Crusades
-		
 		- Each nation which sends units for a Crusade (apart from the leader and the Pope) receives Faith Points and Great General Points when it is over
 		- Unique Military Order units might leave for Crusade even if you decide not to participate
 		- Added 3rd, monetary contribution option for the Crusade participation decision, but only if you can afford it
@@ -211,38 +210,39 @@ Changes for RFCE 1.5:
 		- Revised collapse rules from bad stability for the human player, now it has a lower chance to happen generally (still very dangerous, but reaches 100% chance much slower)
 		- Reduced overall impact of unhappiness from religious civics on city instability
 		- Reduced foreign culture instability if you run the Subjugation Civic (-1 with less than 20%, 0 otherwise)
+		- Krak des Chevaliers will add bonus stability for all Castle-type buildings if they weren't present before the conquest
 		- Fixed mistake in religious stability calculations when Judaism is your State Religion
 
 	Religion changes:
-		- Switching from Paganism to State Religion/Theocracy/Organized Religion gives you a free religion choice (so no extra anarchy) right on civic change
-		- Mainly for civs who start without a religion (Bulgaria, Norse civs, Rus civs, Hungary, Lithuania), no need for the annoying double-revolution anymore
-		- AI will also use the function, the choice for a free religion is based on number of cities with the religion, on available holy cities, and on historical preference
-		
+		- Free religious revolution on Religious Civic change:
+			- Switching from Paganism to State Religion/Theocracy/Organized Religion gives you a free religion choice (so no extra anarchy) right on civic change
+			- Mainly for civs who start without a religion (Bulgaria, Norse civs, Rus civs, Hungary, Lithuania), no need for the annoying double-revolution anymore
+			- AI will also use the function, the choice for a free religion is based on number of cities with the religion, on available holy cities, and on historical preference
+		- Religion spread rules:
+			- Added special religion spread rules for a couple areas which more often than not ended up with ahistorical religions
+			- The spread is based on provinces (and indirectly on civs in the area), only checks for cities without a religion
+			- Orthodoxy: increased chance to spread in Rus territories between 850-1300AD, in Bulgaria and the Balkans between 700-1000AD
+			- Islam: greatly increased chance to spread in the Maghreb and in the southern part of the Iberian-peninsula between 700-1200AD
+			- Catholicism: increased chance to spread in southern Scandinavia between 1000-1300AD, in Hungary between 960-1200AD
+			- Increased generic Judaism spread chance slightly, especially in Central-Europe
+			- Reduced Islam spread, it will have a harder time reaching the faraway parts of the map (Scandinavia, Novgorod)
+			- Fixed bug which could mess up Judaism spread if some parts of the map were sparsely populated with cities
+		- Revised Papal bonuses:
+			- When choosing where to construct free buildings or whom to give gold the Pope considers a weighted value of both faith points and diplomatic relations
+			- You need to have Catholicism as a state religion and open borders with the Papal States to be eligible for any bonuses
+			- For gold gifts diplomatic relations matter much more, for religious buildings faith points are the deciding factor
+			- The (Catholic) owner of Jerusalem has a greatly increased chance to be selected for free Papal buildings
+			- Increased frequency of Papal gifts between the Schism and the Protestant Reformation, decreased afterwards
+			- No monasteries will be built for the chosen player after the discovery of Scientific Method (so the Pope may only build temples)
+			- Changed civ selecting method on Papal bonuses, earlier civs (with lower IDs) won't have a bigger chance anymore
+			- Gold gifts from the Pope are more randomized (well, semi-randomized)
+			- The Pope might also give free techs to the most pious civs
+			- You can only get one tech at a time, and only from techs which are known to the Pope
+			- For selecting the civ, relations with the Pope matter, but faith points are much more important
+			- The possibility for a free Papal tech is somewhat slim, but the selected civ has bigger chance if it's more techs behind
 		- The Papal States cannot trade any technologies (you can neither trade techs from the Pope, nor trade techs to him)
 		- The Pope gets all technologies automatically which is known by at least 3 Catholic civs
 		- Chance for population gain in Jerusalem if a Catholic civ owns it, with Catholicism spread if it isn't present
-	Religion spread rules:
-		- Added special religion spread rules for a couple areas which more often than not ended up with ahistorical religions
-		- The spread is based on provinces (and indirectly on civs in the area), only checks for cities without a religion
-		- Orthodoxy: increased chance to spread in Rus territories between 850-1300AD, in Bulgaria and the Balkans between 700-1000AD
-		- Islam: greatly increased chance to spread in the Maghreb and in the southern part of the Iberian-peninsula between 700-1200AD
-		- Catholicism: increased chance to spread in southern Scandinavia between 1000-1300AD, in Hungary between 960-1200AD
-		- Increased generic Judaism spread chance slightly, especially in Central-Europe
-		- Reduced Islam spread, it will have a harder time reaching the faraway parts of the map (Scandinavia, Novgorod)
-		- Fixed bug which could mess up Judaism spread if some parts of the map were sparsely populated with cities
-	Papal bonuses:
-		- When choosing where to construct free buildings or whom to give gold the Pope considers a weighted value of both faith points and diplomatic relations
-		- You need to have Catholicism as a state religion and open borders with the Papal States to be eligible for any bonuses
-		- For gold gifts diplomatic relations matter much more, for religious buildings faith points are the deciding factor
-		- The (Catholic) owner of Jerusalem has a greatly increased chance to be selected for free Papal buildings
-		- Increased frequency of Papal gifts between the Schism and the Protestant Reformation, decreased afterwards
-		- No monasteries will be built for the chosen player after the discovery of Scientific Method (so the Pope may only build temples)
-		- Changed civ selecting method on Papal bonuses, earlier civs (with lower IDs) won't have a bigger chance anymore
-		- The Pope might also give free techs to the most pious civs
-		- You can only get one tech at a time, and only from techs which are known to the Pope
-		- For selecting the civ, relations with the Pope matter, but faith points are much more important
-		- The possibility for a free Papal tech is somewhat slim, but the selected civ has bigger chance if it's more techs behind
-		- Gold gifts from the Pope are more randomized (well, semi-randomized)
 
 	Indy and barb changes:
 		- Reduced number of defender units in indy Caen, AI France should be able to conquer it more often
@@ -278,6 +278,9 @@ Changes for RFCE 1.5:
 		- Venice, Genoa and Aragon start with a Harbor in their cities
 		- Tuned down Cordoban production modifiers a bit, increased Castilian and Aragonese
 		- Increased production modifiers for AI Kiev (stays more or less the same for the human player)
+		- Reduced German respawn zone around Brandenburg, now it doesn't have an overlap with Prussia's
+		- Minor updates in the Swedish and Prussian respawn zones, to avoid overlap with Lithuania
+		- Revised respawn zone for Novgorod and Russia, better shape for both without any overlaps
 		- Kuban province changed to contested for the Ottomans, Lithuania and Suvalkija contested for Prussia
 		- The province of Calabria was added to the 3rd Aragonese UHV, the Balearic Islands are needed for the 1st Moroccan UHV instead of Tripolitania
 		- Thessaly, Morea, Crete and Cyprus provinces are also needed for the 2nd Venetian UHV (besides the city of Constantinople)
@@ -286,6 +289,27 @@ Changes for RFCE 1.5:
 		- Revised starting units for Arabia - more melee units, less horse archers
 		- Additional defensive units and in some cases additional settler(s) for AI Arabia, Bulgaria, Cordoba, Germany, Novgorod, Kiev, Hungary, Poland, Morocco, Ottomans
 		- Scottish Auld Alliance UHV goal lowered to 1500
+
+	Tech/building/unit balance:
+		- Switched early naval buildings' tech tree position: Harbor with Astrolabe, Lighthouse with Cartography
+		- Trading Post replaces Harbor (instead of Lighthouse), free Navigation 1 promotion for all naval units, +1 commerce
+		- Feitoria replaces Lighthouse (instead of Harbor), +1 commerce on all water tiles, prebuilt in all newly founded cities after the discovery of Astronomy
+		- Consulate of the Sea replaces Lighthouse (as before, but now in it's new position), also now it enables 1 merchant specialist
+		- Venetian Arsenal available earlier, moved to Clockmaking from Optics
+		- Shipbuilding needs Replaceable Parts (to avoid early free tech slingshot for Astronomy)
+		- Marco Polo's Embassy needs Literature and Clockmaking, no silk and trade route bonus, provides extra commerce from merchant specialists
+		- Catholic State Religion is prerequisite for Notre Dame (also Orthodoxy is prereq for Theodosian Walls, not that it matters)
+		- Increased Guisarme and Pikeman bonus against both Light and Heavy Cavalry by 25%
+		- Revised all bonuses for Guisarme, Pikeman and Longbowman UUs/mercenaries/barbs, increased Arquebusier strength to 8
+		- Arbalestier and it's UUs also have 25% city defence, like all other archer-type units
+		- Longbowman requires Military Tradition and Replacable Parts, Longbowman UUs require Guilds and Chivalry
+		- Winged Hussars available with Polygonal Fort, Cuirassier strength reduced to 18
+		- Line Infantry bonus against heavy cavalry reduced to +25%
+		- Tercio available with Chemistry, strength reduced to 11, Janissary strength increased to 11
+		- Moved Plate Armor, Alchemy and Cartography later in the tech timeline, moved Chivalry earlier
+		- Nerfed bonus for Belem Tower (+1 commerce for water tiles instead of +2), Leonardo's Workshop (+30% production instead of +50%)
+		- Revised base culture bonus for many of the world wonders
+		- Templar Knights now have +10% city defence, Teutonic Knights have -10% city attack, but free Shock promotion
 
 	Art updates:
 		- Historic icon/button/gamefont for the Order of Calatrava and the Order of the Dragon
@@ -306,6 +330,7 @@ Changes for RFCE 1.5:
 		- Reduced ingame size of Galleass, Gun Galley, Cog and Holk, minor tweaks in lots of other ingame unit sizes
 		- Increased Civilopedia size of Cannon, Field Artillery, Bombard, Great Bombard, War Wagon, revised size for all foot units
 		- Increased Civilopedia size for almost all naval and mounted units, now they are more or less standardized
+		- Revised Civilopedia size for all naval improvements, windmill, fort
 
 	Text updates:
 		- Updated text for some interface messages connected to the Reformation
@@ -332,6 +357,7 @@ Changes for RFCE 1.5:
 		- Civilopedia entries for the new companies, UUs, UBs
 		- Added help text and bonus information for the various company buildings
 		- Updates in a couple names and Civilopedia texts connected to terrain features
+		- Updated Civilopedia entry for Bohdan Khelmnytsky and Marfa Posadnitsa, minor formatting updates for some other leaders
 
 	General changes:
 		- Updated the Novgorod Fur UHV and the Moscow Atlantic Access UHV to count resources only inside cultural borders
@@ -348,46 +374,25 @@ Changes for RFCE 1.5:
 		- Settling on a village or town improvement results in a free granary and an additional starting population
 		- Mines get +1 commerce after researching Replaceable Parts
 		- Sulphur yields less production with mines, some of the precious resources yield 1 less commerce with mines
-		- Switched early naval buildings' tech tree position: Harbor with Astrolabe, Lighthouse with Cartography
-		- Trading Post replaces Harbor (instead of Lighthouse), free Navigation 1 promotion for all naval units, +1 commerce
-		- Feitoria replaces Lighthouse (instead of Harbor), +1 commerce on all water tiles, prebuilt in all newly founded cities after the discovery of Astronomy
-		- Consulate of the Sea replaces Lighthouse (as before, but now in it's new position), also now it enables 1 merchant specialist
-		- Venetian Arsenal available earlier, moved to Clockmaking from Optics
+		- Woodlands can be cleared with Blast Furnace, Lumber Mill available with Plate Armor
 		- Lowered RFCE-specific diplomatic bonuses for sharing a religion, for almost all religions
 		- Civs can't get back one of their previous leaders on resurrection (would be changed to the later one anyway in a couple turns)
 		- Civs have 40% chance to remain with the leader before the collapse, 60% chance to get the next leader (chronologically)
-		- Krak des Chevaliers will add bonus stability for Castle-type buildings if they weren't present before the conquest
-		- Reduced German respawn zone around Brandenburg, now it doesn't have an overlap with Prussia's
-		- Minor updates in the Swedish and Prussian respawn zones, to avoid overlap with Lithuania
-		- Revised respawn zone for Novgorod and Russia, better shape for both without any overlaps
 		- Vassals are now allowed to trade cities with their master, e.g. you can give cities to your vassal if they are willing to accept it
 		- Reduced diplomatic relation penalties with other civs from close borders
 		- Decreased normal (vanilla BtS) diplo bonuses from sharing a religion, faith points should be the dominating factor
 		- Round church no longer negates all diplo bonuses from sharing a religion, but it has increased diplo penalties against civs with the same faith
 		- If Arabia acquires a city before it founds his first one, that will become the Islamic holy city (otherwise Islam would end up without one)
-		- AI civs now have separate starting stacks - usually strengthening their early expansion when the AI is spawned in an otherwise unpopulated area
+		- AI and human starting stacks are now separate - usually strengthening the AI's early expansion when the civ is spawned in an otherwise unpopulated area
 		- Culture flipped cities don't have a raze option if they are a holy city or if your cultural percentage is very high (same as with conquered cities)
 		- Naval units can no longer blockade tiles on the opposite side of an isthmus
-		- Shipbuilding needs Replaceable Parts (to avoid early free tech slingshot for Astronomy)
-		- Marco Polo Embassy needs Literature and Clockmaking, no silk and trade route bonus, provides extra commerce from merchant specialists
-		- Catholic State Religion is prerequisite for Notre Dame (also Orthodoxy is prereq for Theodosian Walls, not that it matters)
-		- Increased Guisarme and Pikeman bonus against both Light and Heavy Cavalry by 25%
-		- Revised all bonuses for Guisarme, Pikeman and Longbowman UUs/mercenaries/barbs, increased Arquebusier strength to 8
-		- Arbalestier and it's UUs also have 25% city defence, like all other archer-type units
-		- Longbowman requires Military Tradition and Replacable Parts, Longbowman UUs require Guilds and Chivalry
-		- Winged Hussars available with Polygonal Fort, Cuirassier strength reduced to 18
-		- Line Infantry bonus against heavy cavalry reduced to +25%
-		- Tercio available with Chemistry, strength reduced to 11, Janissary strength increased to 11
-		- Moved Plate Armor, Alchemy and Cartography later in the tech timeline, moved Chivalry earlier
-		- Woodlands can be cleared with Blast Furnace, Lumber Mill available with Plate Armor
 		- Special UHV events (golden age, triumphal arch, AI wars) also happen if the last 2 UHVs were accomplished on the same turn
 		- Basic naval buildings and naval wonders are available in all coastal cities (only near sea, not lake), even if the water area is very small
 		- Naval units and related naval buildings are only available for coastal cities near an at least size 20 water body (because of the AI)
 		- Work boats can only be built if there is an improvable resource in the neighboring water area (vanilla way)
-		- Nerfed bonus for Belem Tower (+1 commerce for water tiles instead of +2), Leonardo's Workshop (+30% production instead of +50%)
-		- Revised base culture bonus for many of the world wonders
 		- All unique Military Order units have a national limit of 5
-		- Templar Knights now have +10% city defence, Teutonic Knights have -10% city attack, but free Shock promotion
+		- Base production bonus from Prime Timber reduced to +1
+		- Mines get +1 production with Steam Engines, Quarries get +1 production with Replacable Parts
 
 	AI improvements:
 		- AI civs won't do a revolution in the first couple turns after birth (wait for the potential city flips, initial conquests/settling, war declarations, and whatnot)
@@ -442,7 +447,7 @@ Changes for RFCE 1.5:
 		- Civic/religion/many other interface messages will now use the DCN name instead of the short description of the civ
 		- Revised frequency of pillaging messages, added message on pillaged roads too
 		- Incorporated useful RFCUtils from Dawn of Civilization (Credits to Leoreth)
-		- Revision of python code: More efficiency and better readability
+		- Revision of big chunks of python code, for both better efficiency and readability
 		- Popup message for the player when a UHV goal is completed or failed
 		- Popup message for the player a couple turns before the Seljuk/Mongol/Timurid invasions
 		- Improved interface messages connected to Papal bonuses, added message for the Topkapi Palace effect
@@ -481,7 +486,7 @@ Changes for RFCE 1.5:
 		- Fixed bug with Hungarian Vegvars which resulted in way too high damage on bigger enemy stacks
 		- Fixed bug which caused to leave out some units from the Crusades' selection procedure altogether, usually also resulting in some unintended unittypes sent
 		- Fixed bug which in some cases resulted in less checks for potential units for the Crusade, thus in less sent units
-		- Fixed a couple date -> gameturn conversions on the timeline
+		- Fixed a couple mistakes in the date -> gameturn conversions on the timeline
 		- Fixed bug which made it possible for a collapsed (former) Crusade leader to declare war on the target civ
 		- Fixed bug in the special war declaration mechanics on the 2nd completed UHV where vassals could potentially declare war on their master
 

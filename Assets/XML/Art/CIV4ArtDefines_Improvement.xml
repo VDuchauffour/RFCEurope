@@ -55,7 +55,7 @@
 			<Type>ART_DEF_IMPROVEMENT_FISHING_BOATS</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.8</fInterfaceScale>
 			<NIF>Art/Structures/Improvements/Nets/Nets.nif</NIF>
 			<KFM>Art/Structures/Improvements/Nets/Nets.kfm</KFM>
 			<Button>,-,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,7,7</Button>
@@ -64,7 +64,7 @@
 			<Type>ART_DEF_IMPROVEMENT_WHALING_BOATS</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.9</fInterfaceScale>
 			<NIF>Art/Structures/Improvements/Whalingboat_Ancient/Whalingboat_Ancient.nif</NIF>
 			<KFM>Art/Structures/Improvements/Whalingboat_Ancient/Whalingboat_Ancient.kfm</KFM>
 			<Button>,-,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,6,9</Button>
@@ -100,7 +100,7 @@
 			<Type>ART_DEF_IMPROVEMENT_WINDMILL</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>.66</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>1.1</fInterfaceScale>
 			<NIF>Art/Structures/Improvements/WindMill/WindMill.nif</NIF>
 			<KFM>Art/Structures/Improvements/WindMill/WindMill.kfm</KFM>
 			<Button>,-,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,5,8</Button>
@@ -208,7 +208,7 @@
 			<Type>ART_DEF_IMPROVEMENT_FORT</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.5</fScale>
-			<fInterfaceScale>1.5</fInterfaceScale>
+			<fInterfaceScale>1.8</fInterfaceScale>
 			<NIF>Art/Structures/Improvements/Fort/eu_med_fort.nif</NIF>
 			<KFM/>
 			<Button>,-,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,7,9</Button>
@@ -226,7 +226,7 @@
 			<Type>ART_DEF_IMPROVEMENT_COLONIAL_TRADE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.1</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>1.1</fInterfaceScale>
 			<NIF>Art/Units/Galleon/Galleon.nif</NIF>
 			<KFM/>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,3,3</Button>

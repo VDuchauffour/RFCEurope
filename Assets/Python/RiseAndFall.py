@@ -1751,6 +1751,7 @@ class RiseAndFall:
 			#			so if all flipped cities are outside of the core area (they are in the "exceptions"), the civ will start without it's starting units and techs
 			plotList = utils.squareSearch( tTopLeft, tBottomRight, utils.goodPlots, [] )
 			# Absinthe: add the exception plots
+			print ("lExtraPlots[iCiv]", lExtraPlots[iCiv])
 			for tPlot in lExtraPlots[iCiv]:
 				plot = gc.getMap().plot( tPlot[0], tPlot[1] )
 				if (plot.isHills() or plot.isFlatlands()) and not plot.isImpassable():
@@ -1759,8 +1760,9 @@ class RiseAndFall:
 							if plot.countTotalCulture() == 0:
 								plotList.append(tPlot)
 			rndNum = gc.getGame().getSorenRandNum(len(plotList), 'searching another free plot')
+			print ("plotList", plotList)
 			if plotList:
-				tPlot = utils.getRandomEntry(tPlot)
+				tPlot = utils.getRandomEntry(plotList)
 				self.createStartingUnits(iCiv, tPlot)
 				#utils.debugTextPopup( 'birthInForeignBorders in another location' )
 				self.assignTechs(iCiv)
@@ -1782,7 +1784,7 @@ class RiseAndFall:
 				utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iIndyCiv, True, False) #remaining independents in the region now belong to the new civ
 				utils.flipUnitsInPlots(con.lExtraPlots[iCiv], iCiv, iIndyCiv, True, False) #remaining independents in the region now belong to the new civ
 
-		if iNumHumanCitiesToConvert> 0:
+		if iNumHumanCitiesToConvert > 0:
 			self.flipPopup(iCiv, tTopLeft, tBottomRight)
 
 
