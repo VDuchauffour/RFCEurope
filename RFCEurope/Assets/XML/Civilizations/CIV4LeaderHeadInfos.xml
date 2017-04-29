@@ -7615,7 +7615,7 @@
 		<LeaderHeadInfo>
 			<Type>LEADER_MEHMED</Type>
 			<Description>TXT_KEY_LEADER_MEHMED</Description>
-			<Civilopedia>TXT_KEY_LEADER_MEHMED_II_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_LEADER_MEHMED_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_MEHMED</ArtDefineTag>
 			<iWonderConstructRand>20</iWonderConstructRand>
 			<iBaseAttitude>-1</iBaseAttitude>

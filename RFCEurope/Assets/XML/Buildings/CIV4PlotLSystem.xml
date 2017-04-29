@@ -3452,7 +3452,7 @@
 			<Rotate>+45</Rotate>
 		</ArtRef>
 		<ArtRef Name="art:Tobacco_crop">
-			<!-- when in the rough ... there's anotehr in 3x2 for farms -->
+			<!-- when in the rough ... there's another in 3x2 for farms -->
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Tobacco/Tobacco.nif::2x2_01_Tobacco_Normal</Attribute>
 			<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_LAND_WORKED,IMPROVEMENT_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_TOBACCO</Attribute>
@@ -3649,7 +3649,7 @@
 			<Rotate>+45</Rotate>
 		</ArtRef>
 		<ArtRef Name="art:Honey_crop">
-			<!-- when in the rough ... there's anotehr in 3x2 for farms -->
+			<!-- when in the rough ... there's another in 3x2 for farms -->
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Honey/flowers.nif::2x2_01_Sugar_Normal</Attribute>
 			<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_LAND_WORKED,IMPROVEMENT_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_HONEY</Attribute>
