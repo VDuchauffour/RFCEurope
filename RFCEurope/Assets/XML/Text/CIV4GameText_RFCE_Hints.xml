@@ -385,7 +385,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_43</Tag>
-		<English>If you feel you are too tired to keep playing, there's always coffee :)</English>
+		<English>If you feel you are too tired to keep playing, there's always coffee...</English>
 		<French>Si vous &#234;tes trop fatigu&#233; pour continuer, il y a toujours le caf&#233;...</French>
 		<German>Falls Ihr zu müde seid um weiterzuspielen, es gibt immer Kaffee...</German>
 		<Italian>Se siete stanchi di continuare a giocare, c'è sempre il caffè...</Italian>
@@ -394,7 +394,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_44</Tag>
-		<English>RNG can be a b*tch... so keep in mind that snacks are good in moderation :)</English>
+		<English>Keep in mind that snacks are only good in moderation.</English>
 		<French>Les en-cas sont &#224; consommer avec mod&#233;ration.</French>
 		<German>Snacks in Maßen schaden nicht!</German>
 		<Italian>Gli spuntini sono buoni con moderazione.</Italian>
@@ -565,7 +565,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_63</Tag>
-		<English>The scrolling image in the loading screen of RFCE is the Bayeux Tapestry, in case you were wondering.</English>
+		<English>The scrolling image in the loading screen of RFCE is the Bayeux Tapestry, a nearly 70 metres long and 50 centimetres tall embroidered cloth made in the 1070s, which depicts the events leading up to the Norman conquest of England.</English>
 		<French>.</French>
 		<German>Das Panoramabild im Öffnungsbildschirm von RFC Europe ist der "Teppich von Bayeux" - nur falls Ihr euch wundert.</German>
 		<Italian>.</Italian>
@@ -619,7 +619,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_69</Tag>
-		<English>Sleep is for the weak! RFCE is for the bold! Your choice...</English>
+		<English>Sleep is for the weak! RFCE is for the bold!</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -628,7 +628,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_70</Tag>
-		<English>Yeah, I can get behind this. Just load back your game, it's not that late. You will sleep tomorrow. Or next week. No prob.</English>
+		<English>Yeah, I can get behind this. Just load back your game, it's not that late. You will get some sleep tomorrow. Or next week.</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -637,7 +637,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_71</Tag>
-		<English>Your nation needs you more than ever, don't dare to leave your people alone until you reach that UHV!</English>
+		<English>Your nation needs you more than ever, don't you dare to leave your people alone until you reach that UHV!</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -655,7 +655,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_73</Tag>
-		<English>The opening image of the mod is depicting the fall of Acre in 1291 by Dominique Papety (Guillaume de Clermont defending the walls at the Siege of Acre, 1291), in case you were wondering.</English>
+		<English>RNG can be a b*tch... Get over it quickly, it will come back. Theoretically :P</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -664,7 +664,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_74</Tag>
-		<English>Under most religious civics your nation's stability highly depends on your religious unity. So try not to keep multiple religions in your cities unless you run Religious Tolerance; use those Prosecutors!</English>
+		<English>The opening image of the mod is depicting the fall of Acre in 1291: "Guillaume de Clermont defending the walls at the Siege of Acre, 1291", by Dominique Papety.</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -673,7 +673,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_75</Tag>
-		<English>If you hold down the "Shift" key while hovering over the map, you can check all civilizations' spawn zones. Same with the "Alt" key and respawn zones. Take a look before you decide where to expand!</English>
+		<English>Under most religious civics your nation's stability highly depends on your religious unity. So try not to keep multiple religions in your cities unless you run Religious Tolerance; use those Prosecutors!</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -682,7 +682,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_76</Tag>
-		<English>"To eat your fill but not apply your mind to anything all day is a problem. Are there no games to play? Even that would be smarter than doing nothing." - Confucius</English>
+		<English>If you hold down the "Shift" key while hovering over the map, you can check all civilizations' spawn zones. Same with the "Alt" key and respawn zones. Take a look before you decide where to expand!</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -691,7 +691,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_77</Tag>
-		<English>"The essence of strategy is choosing what not to do." - Michael Porter</English>
+		<English>"To eat your fill but not apply your mind to anything all day is a problem. Are there no games to play? Even that would be smarter than doing nothing." - Confucius</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -700,7 +700,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_78</Tag>
-		<English>"Never interrupt your enemy when he is making a mistake." - Napoleon Bonaparte</English>
+		<English>"The essence of strategy is choosing what not to do." - Michael Porter</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -709,7 +709,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_79</Tag>
-		<English>"I speak Spanish to God, Italian to women, French to men, and German to my horse." - Charles V</English>
+		<English>"Never interrupt your enemy when he is making a mistake." - Napoleon Bonaparte</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -718,7 +718,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_80</Tag>
-		<English>"All men can see these tactics whereby I conquer, but what none can see is the strategy out of which victory is evolved." - Sun Tzu</English>
+		<English>"I speak Spanish to God, Italian to women, French to men, and German to my horse." - Charles V</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -727,6 +727,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_81</Tag>
+		<English>"All men can see these tactics whereby I conquer, but what none can see is the strategy out of which victory is evolved." - Sun Tzu</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HINT_RFCE_82</Tag>
 		<English>"Onward, Christian soldiers, marching as to war, with the cross of Jesus going on before. Christ, the royal Master, leads against the foe; forward into battle see His banners go!" - Sabine Baring-Gould</English>
 		<French></French>
 		<German></German>

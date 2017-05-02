@@ -451,5 +451,8 @@
 		<HintInfo>
 			<Description>TXT_KEY_HINT_RFCE_81</Description>
 		</HintInfo>
+		<HintInfo>
+			<Description>TXT_KEY_HINT_RFCE_82</Description>
+		</HintInfo>
 	</HintInfos>
 </Civ4Hints>

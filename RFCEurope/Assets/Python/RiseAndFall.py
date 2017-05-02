@@ -2256,17 +2256,20 @@ class RiseAndFall:
 				utils.makeUnit(xml.iIslamicMissionary, iCiv, tPlot, 2)
 				utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
 		elif iCiv == iEngland:
-			utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
+			utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
 			utils.makeUnit(xml.iLongSwordsman, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 4)
-			utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 1)
+			utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
 			tSeaPlot = self.findSeaPlots(tPlot, 2)
 			if tSeaPlot:
 				pEngland.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
-			if not gc.getPlayer(iEngland).isHuman():
+				pEngland.initUnit(xml.iWarGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ESCORT_SEA, DirectionTypes.DIRECTION_SOUTH)
+			# additional units for the AI
+			if iCiv != iHuman:
 				utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
-				utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 1)
+				utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 1)
+				utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
 		elif iCiv == iPortugal:
 			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
@@ -2289,9 +2292,11 @@ class RiseAndFall:
 				utils.makeUnit(xml.iWorkboat, iCiv, tSeaPlot, 1 )
 		elif iCiv == iSweden:
 			utils.makeUnit(xml.iLongSwordsman, iCiv, tPlot, 3)
-			utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 2)
+			utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 1)
+			utils.makeUnit(xml.iKnight, iCiv, tPlot, 1)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
-			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 4)
+			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
+			utils.makeUnit(xml.iArbalest, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
 			tSeaPlot = self.findSeaPlots((69,65), 2)
 			if tSeaPlot:
@@ -2300,7 +2305,7 @@ class RiseAndFall:
 				pSweden.initUnit(xml.iCogge, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
 				pSweden.initUnit(xml.iCogge, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
 				utils.makeUnit(xml.iSettler,iCiv,tSeaPlot,1)
-				utils.makeUnit(xml.iCrossbowman,iCiv,tSeaPlot,1)
+				utils.makeUnit(xml.iArbalest,iCiv,tSeaPlot,1)
 		elif iCiv == iPrussia:
 			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
@@ -2324,7 +2329,7 @@ class RiseAndFall:
 		elif iCiv == iTurkey:
 			utils.makeUnit(xml.iLongbowman, iCiv, tPlot, 5)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
-			utils.makeUnit(xml.iMaceman, iCiv, tPlot, 3)
+			utils.makeUnit(xml.iMaceman, iCiv, tPlot, 4)
 			utils.makeUnit(xml.iKnight, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 4)
 			utils.makeUnit(xml.iTrebuchet, iCiv, tPlot, 2)
@@ -2340,7 +2345,14 @@ class RiseAndFall:
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
 			utils.makeUnit(xml.iMoscowBoyar, iCiv, tPlot, 5)
 			utils.makeUnit(xml.iGuisarme, iCiv, tPlot, 4)
+			utils.makeUnit(xml.iMaceman, iCiv, tPlot, 3)
 			utils.makeUnit(xml.iOrthodoxMissionary, iCiv, tPlot, 3)
+			# additional units for the AI
+			if iCiv != iHuman:
+				utils.makeUnit(xml.iMaceman, iCiv, tPlot, 2)
+				utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
+				utils.makeUnit(xml.iOrthodoxMissionary, iCiv, tPlot, 1)
+				utils.makeUnit(xml.iArbalest, iCiv, tPlot, 2)
 		elif iCiv == iDutch:
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iMusketman, iCiv, tPlot, 8)

@@ -27,62 +27,55 @@ Changes for RFCE 1.5:
 			- Knowledge of some techs give better odds for some companies (e.g. Chivalry, Plate Armor for military orders; Banking, Shipbuilding for trade companies)
 			- Military buildings will boost your chances for a military order, trade buildings for a trading/banking company
 			- Many civics have various modifiers to company spread, for example Merchant Republic, Feudal Law, Mercantilism, Religious Tolerance, Militarism
-			- Trade goods available to a city is fairly significant in spread chance, also you get bonuses to yields in a similar fashion as in vanilla BtS corps
+			- Desired trade goods available to a city is fairly significant in spread chance, especially for trade-based companies
 			- Number of trade routes is also an important factor for deciding where to spread the trading/banking companies
+			- Faith points are also taken into account for religious military orders, while city size is more important for trade based companies
 		- They have a "birth" date and some have a "death" date, and are mostly active between those (these are usually set on historic dates)
 		- All of them have a limit for the number of cities they can be active at at a given time
 		- There is competition between the cities for the companies - every few turns the company may leave some cities if there are better ones for their needs
 		- If there is a huge drop in the preference value for a company (for example on state religion change or city ownership change) it may leave the city right away
 		- There might also be competition between companies for a given city (e.g. Templars-Teutons-Hospitallers), if one is present the rest have decreased chance
 		- If a given company has already spread to some cities of a civ, it will have somewhat decreased chance for further spread in that civ's cities
-
 		- Masters/Executives can no longer spread companies, they are effectively removed from the mod
 		- Currently there are no Headquarters, all cities with the given company spread into them are considered equal - this might change later on
 		- Companies have resource preferences, and add various yield bonuses if you have access to them (based on their quantity) - as in the vanilla game
-		- Hospitaller, Templar and Teutonic Knights also give you access to the Relic resource type, which adds extra happiness to your civ
 		- Companies might have special units and/or buildings associated with them, all of which are only buildable while the company is present in the city
 		- Company costs are independent from your civ: do not cost any money when they spread to your cities, and do not cost any maintenance for being present
-		- Added various interface messages for companies spreading/leaving, both for your own cities and for foreign cities visible to you
-		- Removed unnecessary popups connected to company availability
-		- Corporations in your cities no longer add any stability penalty
+		- Company HQs redesigned as generic buildings, as an indicator for company spread - they show up in the city while the company is present
+		- These temporary company buildings can get various bonuses, which are independent from the main (vanilla-style) company bonuses
+		- Possible bonuses for the company buildings include GP points, military bonuses, small economic bonuses
 
+	Company setup:
 		- All 7 previous RFCE companies were integrated into the new system
 		- 2 new companies: the Order of the Dragon, the Order of Calatrava
-		- Hanseatic League can only spread to coastal cities
+		- Hanseatic League can only spread to coastal and riverside cities
 		- Hospitallers, Templars, Teutons and Calatrava spread Catholicism to the city when they spread there
 		- The Levant (and especially Jerusalem) has a greatly improved chance for Hospitallers, Templars and Teutons
 		- Trading/banking companies have a preference (smallish) to their historical founding provinces
 		- Hospitaller preferred region change after the Crusades, with Malta and Rhodes gaining importance
 		- Teutons preferred region change after the Crusades, with Transylvania and the lands of Prussia gaining importance
 		- Teutons are set to have a very high chance to spread to cities of the Teutonic Order (Prussia)
-		- City limit is also modified for Hospitallers and Teutons after the Crusades are over
-		- The Genoese UHV is changed to simply build 8 banks (for now)
-
-		- Mercantilism enables company spread (trading/banking companies do have a lower chance though)
+		- Maximum number of cities is also modified for Hospitallers and Teutons after the Crusades are over
+		- Mercantilism only disables company spread for the Hanseatic League, the banking companies do have a lower chance though
 		- Updated Merchant Republic civic, new trade route bonus instead of the corporation maintenance reduction
-
+		- Added various interface messages for companies spreading/leaving, both for your own cities and for foreign cities visible to you
+		- Removed unnecessary popups connected to company availability
+		- Corporations in your cities no longer add any stability penalty
 		- Added Kontor UB for the Hanseatic League: +1 trade route, +25% income from foreign trade routes
 		- Added Knight of the Dragon UU: 12 strength heavy infantry, +10% against cavalry units, may cause small collateral damage
 		- Added Calatrava Knight UU: 9 strength heavy infantry, +10% city strength, +25% attack against Swordsman and Maceman unit classes
 		- Significantly reduced cost for the original Knightly Orders' UUs and the Infirmary UB, nerfed some bonuses
-		
-		- Companies have increased penalties if they are already present in a couple cities for the given civ (try to spread them out)
-		- Rebalanced contribution from different building types for company building spread bonus calculations
-		- Decreased significance of buildings/infrastructure in a city in the overall spread value calculations
-		- More balanced bonus for company spread from number of desired resources
-		
-		- Company HQs redesigned as generic buildings, as an indicator for company spread - they show up in the city while the company is present
-		- These temporary company buildings can get various bonuses, which are independent from the main company bonuses (based on number of resources available in your city)
-		- Possible bonuses for the company buildings include GP points, military bonuses, small economic bonuses
-		- Hanseatic League can spread to riverside cities too, not only coastal ones
-		- Faith points taken into account for religious military order spread
-		- City size taken into account for company spread, especially for trade based companies
+		- Hospitaller, Templar and Teutonic Knights also give you access to the Relic resource type, which adds extra happiness to your civ
+		- Companies have increased penalties if they are already present in a couple cities of the given civ (so we try to spread them out)
+		- Contribution from different building types for company spread is distinct for each company, even the total maximum of the bonus varies
+		- Buildings/infrastructure and resources available to a city are weighted with quantity, neither will become the dominating factor so easily
+		- Company spread value from number of desired resources is more significant for the first resource of a given type
 		- Hanseatic League starts earlier, in 1157 (earliest remaining documentary mention), with much increased city number limit in 1356 (the first general Diet of the Hansa)
 		- Fixed issue where company resources added half as much bonuses ingame as they were set up and as they were shown in the Civilopedia before starting an actual game
-		
 		- Templars and Teutons slowly disappear after Protestantism is founded (if they are still active)
 		- Order of Calatrava is only active if Cordoba or Morocco is alive
 		- Order of the Dragon is only active if the Ottomans are alive
+		- All unique Military Order units have a national limit of 5
 
 	Plague overhaul:
 		- Improvements near a plagued city have a chance whether to reduce their level, or to reset the progress towards the next level: Towns 100%, Villages 75%, Hamlets 50%, Cottages 25%
@@ -200,6 +193,7 @@ Changes for RFCE 1.5:
 		- Specific interface message for the human player when there is a new mercenary in the list, but can't be hired because needs different State Religion
 		- New interface message for the human player if a merc available for him/her was hired by another player
 		- If there are mercs available in a newly acquired city's province, interface message about it to the human player
+		- Stradiot mercenary also available in the southern Italian provinces
 
 	Stability updates:
 		- Increased civic stability boost from Religious Law + Theocracy
@@ -213,7 +207,7 @@ Changes for RFCE 1.5:
 		- Krak des Chevaliers will add bonus stability for all Castle-type buildings if they weren't present before the conquest
 		- Fixed mistake in religious stability calculations when Judaism is your State Religion
 
-	Religion changes:
+	Religion updates:
 		- Free religious revolution on Religious Civic change:
 			- Switching from Paganism to State Religion/Theocracy/Organized Religion gives you a free religion choice (so no extra anarchy) right on civic change
 			- Mainly for civs who start without a religion (Bulgaria, Norse civs, Rus civs, Hungary, Lithuania), no need for the annoying double-revolution anymore
@@ -263,6 +257,7 @@ Changes for RFCE 1.5:
 		- Alternative spawn position for indy Lubeck, one tile south of the current one (60% for the new position, 40% for the old)
 		- New indy city: Zagreb (as Sisak), 800 AD, early buffer zone between Hungary and Venice (also makes Venetian coastal cities' cultural expansion limited in Croatia)
 		- AI Hungary is much more likely to reign war on independent Croatia from the early 11th century
+		- Moved spawn area for the Bani Hassan barbarians a little south of the Sous region
 
 	Civ and UHV setup:
 		- Starting civic changes: Arabia (Trade Economy), Kiev (Serfdom, Manoralism), Spain (Serfdom, Manoralism), Morocco (Trade Economy, Militarism)
@@ -276,8 +271,9 @@ Changes for RFCE 1.5:
 		- Additional starting units for the French, to be able to get more aggressive with early conquests
 		- Revised Prussian starting units - instead of Teutonic Masters, they start with more military units
 		- Venice, Genoa and Aragon start with a Harbor in their cities
+		- The Genoese 2nd UHV is changed to simply build 8 banks (for now)
 		- Tuned down Cordoban production modifiers a bit, increased Castilian and Aragonese
-		- Increased production modifiers for AI Kiev (stays more or less the same for the human player)
+		- Increased production/tech modifiers for AI Kiev and Muscovy (stays more or less the same for the human player)
 		- Reduced German respawn zone around Brandenburg, now it doesn't have an overlap with Prussia's
 		- Minor updates in the Swedish and Prussian respawn zones, to avoid overlap with Lithuania
 		- Revised respawn zone for Novgorod and Russia, better shape for both without any overlaps
@@ -285,10 +281,16 @@ Changes for RFCE 1.5:
 		- The province of Calabria was added to the 3rd Aragonese UHV, the Balearic Islands are needed for the 1st Moroccan UHV instead of Tripolitania
 		- Thessaly, Morea, Crete and Cyprus provinces are also needed for the 2nd Venetian UHV (besides the city of Constantinople)
 		- Picardy will remain historic for France even after the English spawn, Northumbria will remain contested for Norway
-		- Changed the Novgorodian 2nd UHV goal to 11 fur resources (was 12)
+		- Changed the Novgorodian 2nd UHV goal to 11 fur resources (was 12), Scottish Auld Alliance UHV goal lowered to 1500
 		- Revised starting units for Arabia - more melee units, less horse archers
 		- Additional defensive units and in some cases additional settler(s) for AI Arabia, Bulgaria, Cordoba, Germany, Novgorod, Kiev, Hungary, Poland, Morocco, Ottomans
-		- Scottish Auld Alliance UHV goal lowered to 1500
+		- Adjusted Venetian and Hungarian settler maps around Zagreb, Dalmatia and in the Balkans
+		- Adjusted settler and war maps around Halics and Perekop for all neighboring civs, Kievan settler map strengthened a little in the south
+		- Adjusted Norwegian and Swedish settler maps, Eidswoll won't be founded in all games 2NE from the Norwegian capitol
+		- Novgorod will settle it's cities with a little less overlap in the BFCs
+		- Sweden now has some Knights and Arbalests in it's starting army
+		- Added melee units for the starting army of Muscovy, the AI also starts with an additional settler and a couple more units
+		- England starts with an additional settler, missionary and war galley, the AI starts with a couple further defensive units
 
 	Tech/building/unit balance:
 		- Switched early naval buildings' tech tree position: Harbor with Astrolabe, Lighthouse with Cartography
@@ -310,6 +312,7 @@ Changes for RFCE 1.5:
 		- Nerfed bonus for Belem Tower (+1 commerce for water tiles instead of +2), Leonardo's Workshop (+30% production instead of +50%)
 		- Revised base culture bonus for many of the world wonders
 		- Templar Knights now have +10% city defence, Teutonic Knights have -10% city attack, but free Shock promotion
+		- Condottiero strength reduced to 13, Boyar now doesn't get any defensive bonuses but immune to first strikes
 
 	Art updates:
 		- Historic icon/button/gamefont for the Order of Calatrava and the Order of the Dragon
@@ -358,6 +361,7 @@ Changes for RFCE 1.5:
 		- Added help text and bonus information for the various company buildings
 		- Updates in a couple names and Civilopedia texts connected to terrain features
 		- Updated Civilopedia entry for Bohdan Khelmnytsky and Marfa Posadnitsa, minor formatting updates for some other leaders
+		- Minor city name map updates for Novgorod, Kiev, Hungary, Muscovy and the Ottomans
 
 	General changes:
 		- Updated the Novgorod Fur UHV and the Moscow Atlantic Access UHV to count resources only inside cultural borders
@@ -372,7 +376,8 @@ Changes for RFCE 1.5:
 		- Naval units cannot enter lake tiles (neither freshwater nor salt) or forts, but they can enter fjords
 		- Settling on a hamlet improvement results in a free granary in your cities
 		- Settling on a village or town improvement results in a free granary and an additional starting population
-		- Mines get +1 commerce after researching Replaceable Parts
+		- Mines get +1 production with Steam Engines and +1 commerce with Replaceable Parts, Quarries get +1 production with Replaceable Parts
+		- Base production bonus from Prime Timber reduced to +1
 		- Sulphur yields less production with mines, some of the precious resources yield 1 less commerce with mines
 		- Woodlands can be cleared with Blast Furnace, Lumber Mill available with Plate Armor
 		- Lowered RFCE-specific diplomatic bonuses for sharing a religion, for almost all religions
@@ -390,9 +395,6 @@ Changes for RFCE 1.5:
 		- Basic naval buildings and naval wonders are available in all coastal cities (only near sea, not lake), even if the water area is very small
 		- Naval units and related naval buildings are only available for coastal cities near an at least size 20 water body (because of the AI)
 		- Work boats can only be built if there is an improvable resource in the neighboring water area (vanilla way)
-		- All unique Military Order units have a national limit of 5
-		- Base production bonus from Prime Timber reduced to +1
-		- Mines get +1 production with Steam Engines, Quarries get +1 production with Replacable Parts
 
 	AI improvements:
 		- AI civs won't do a revolution in the first couple turns after birth (wait for the potential city flips, initial conquests/settling, war declarations, and whatnot)
