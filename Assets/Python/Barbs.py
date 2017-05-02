@@ -293,7 +293,7 @@ class Barbs:
 			self.spawnUnits(iBarbarian, (26, 27), (31, 32), xml.iMountedInfantry, 1, iGameTurn, 9, 5, utils.outerInvasion,  1, localText.getText("TXT_KEY_BARBARIAN_NAMES_VISIGOTHS", ()))
 			if con.iCordoba == iHuman:
 				self.spawnUnits(iBarbarian, (24, 31), (27, 34), xml.iAxeman, 1 + iHandicap, iGameTurn, 7, 0, utils.outerInvasion,  1, localText.getText("TXT_KEY_BARBARIAN_NAMES_VISIGOTHS", ()))
-				self.spawnUnits(iBarbarian, (27, 28), ( 31, 36), xml.iMountedInfantry, 1, iGameTurn, 6, 3, utils.outerInvasion,  1, localText.getText("TXT_KEY_BARBARIAN_NAMES_VISIGOTHS", ()))
+				self.spawnUnits(iBarbarian, (27, 28), (31, 36), xml.iMountedInfantry, 1, iGameTurn, 6, 3, utils.outerInvasion,  1, localText.getText("TXT_KEY_BARBARIAN_NAMES_VISIGOTHS", ()))
 
 		#Berbers in North Africa
 		if xml.i700AD <= iGameTurn < xml.i1020AD:
@@ -501,7 +501,7 @@ class Barbs:
 				self.spawnUnits(iBarbarian, (40, 10), (44, 14), xml.iBedouin, 1, iGameTurn, 11, 2, utils.outerInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BANU_HILAL", ()))
 				self.spawnUnits(iBarbarian, (44, 1), (50, 8), xml.iTouareg, 1, iGameTurn, 8, 5, utils.outerInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BANU_HILAL", ()))
 		if xml.i1640AD <= iGameTurn < xml.i1680AD:
-			self.spawnUnits( iBarbarian, (7, 2), (10, 10), xml.iBedouin, 5 + iHandicap*2, iGameTurn, 3, 1, utils.outerInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BANI_HASSAN", ()))
+			self.spawnUnits( iBarbarian, (18, 1), (22, 3), xml.iBedouin, 5 + iHandicap*2, iGameTurn, 3, 1, utils.outerInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_BANI_HASSAN", ()))
 
 		#Pre Mongols to keep Kiev busy
 		if xml.i900AD <= iGameTurn < xml.i1020AD:

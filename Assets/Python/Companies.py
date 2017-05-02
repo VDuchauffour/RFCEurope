@@ -289,9 +289,10 @@ class Companies:
 					iValue += 2
 
 		# bonus for civs who actively participate (with units) in the actual Crusade:
-		if crus.getNumUnitsSent(iOwner) > 0:
-			if iCompany in [iHospitallers, iTemplars, iTeutons]:
-				iValue += 2
+		if iOwner < iNumPlayers: # no such value for indy civs
+			if crus.getNumUnitsSent(iOwner) > 0:
+				if iCompany in [iHospitallers, iTemplars, iTeutons]:
+					iValue += 2
 
 		# additional bonus for the city of Jerusalem
 		if (city.getX(), city.getY()) == con.tJerusalem:
@@ -479,7 +480,7 @@ class Companies:
 		# resources
 		iTempValue = 0
 		bFound = False
-		for i in range(4):
+		for i in range(5):
 			iBonus = gc.getCorporationInfo(iCompany).getPrereqBonus(i)
 			if iBonus > -1:
 				if city.getNumBonuses(iBonus) > 0:

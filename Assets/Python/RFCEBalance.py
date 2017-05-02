@@ -182,7 +182,7 @@ class RFCEBalance:
 		gc.setProductionModifiersHu(iArabia,       150, 125, 150, 230 )
 		gc.setProductionModifiersAI(iBulgaria,     130, 125, 125, 250 )
 		gc.setProductionModifiersHu(iBulgaria,     150, 150, 125, 200 )
-		gc.setProductionModifiersAI(iCordoba,      170, 170, 130, 250 )
+		gc.setProductionModifiersAI(iCordoba,      180, 170, 130, 250 )
 		gc.setProductionModifiersHu(iCordoba,      200, 180, 140, 230 )
 		gc.setProductionModifiersAI(iSpain,        100, 100, 100, 120 )
 		gc.setProductionModifiersHu(iSpain,        125, 100, 100, 120 )
@@ -204,8 +204,8 @@ class RFCEBalance:
 		gc.setProductionModifiersHu(iScotland,     125, 125, 125, 125 )
 		gc.setProductionModifiersAI(iPoland,       100, 125, 130, 140 )
 		gc.setProductionModifiersHu(iPoland,       125, 150, 130, 130 )
-		gc.setProductionModifiersAI(iMoscow,        80,  80, 100, 150 )
-		gc.setProductionModifiersHu(iMoscow,       100, 100, 100, 150 )
+		gc.setProductionModifiersAI(iMoscow,        80,  80, 100, 140 )
+		gc.setProductionModifiersHu(iMoscow,       100, 100, 100, 140 )
 		gc.setProductionModifiersAI(iGenoa,        100, 100, 100, 130 )
 		gc.setProductionModifiersHu(iGenoa,        100, 100, 100, 125 )
 		gc.setProductionModifiersAI(iMorocco,      125, 125, 125, 175 )
@@ -421,7 +421,7 @@ class RFCEBalance:
 		gc.setCityClusterAI( iVenecia, 2, 3, 1 ) #14
 		gc.setCityClusterAI( iBurgundy, 2, 3, 3 ) #12
 		gc.setCityClusterAI( iGermany, 2, 3, 4 ) #11
-		gc.setCityClusterAI( iNovgorod, 1, 2, 2 ) #9
+		gc.setCityClusterAI( iNovgorod, 1, 3, 1 ) #7
 		gc.setCityClusterAI( iNorway, 1, 2, 1 ) #10
 		gc.setCityClusterAI( iKiev, 1, 3, 2 ) #6
 		gc.setCityClusterAI( iHungary, 2, 3, 3 ) #12
