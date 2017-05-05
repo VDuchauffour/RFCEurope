@@ -195,6 +195,15 @@
 		<Portuguese>Cenoura na Vara: Faça tudo que se pode, mas mantenha estas cidades leais e subjugadas</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_SUPPRESSED_RESURRECTION</Tag>
+		<English>Wonderful news! Our suppression efforts were successful, the cities remained in our hands!</English>
+		<French>Wonderful news! Our suppression efforts were successful, the cities remained in our hands!</French>
+		<German>Wonderful news! Our suppression efforts were successful, the cities remained in our hands!</German>
+		<Italian>Wonderful news! Our suppression efforts were successful, the cities remained in our hands!</Italian>
+		<Spanish>Wonderful news! Our suppression efforts were successful, the cities remained in our hands!</Spanish>
+		<Portuguese>Wonderful news! Our suppression efforts were successful, the cities remained in our hands!</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_REBELLION_TEXT</Tag>
 		<English>%s1 cities have declared their independence from us and expelled our garrisons. Shall we leave them free?</English>
 		<French>Les villes %s1 ont d&#233;clar&#233; leur ind&#233;pendance et attaquent nos garnisons. Devons-nous les laisser libres ?</French>

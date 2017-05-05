@@ -659,6 +659,18 @@ class MercenaryManager:
 					break
 
 
+	def onCityBuilt( self, iCiv, pCity ):
+		# Absinthe: if there are mercs available in the new city's province, interface message about it to the human player
+		iProvince = pCity.getProvince()
+		self.getMercLists() # load the current mercenary pool
+		#print ("self.lGlobalPool", self.lGlobalPool)
+		for lMerc in self.lGlobalPool:
+			if lMerc[4] == iProvince:
+				if iCiv == utils.getHumanID():
+					CyInterface().addMessage(iCiv, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_AVAILABLE_NEAR_NEW_CITY", (pCity.getName(),)), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
+					break
+
+
 	def onUnitPromoted( self, argsList ):
 		pUnit, iNewPromotion = argsList
 		iMerc = pUnit.getMercID()

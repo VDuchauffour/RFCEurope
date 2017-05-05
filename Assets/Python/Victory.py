@@ -276,14 +276,18 @@ class Victory:
 							pCiv = gc.getPlayer(iCiv)
 							teamCiv = gc.getTeam(pCiv.getTeam())
 							if teamCiv.canDeclareWar( pPlayer.getTeam() ):
-								# AI_getAttitude: ATTITUDE_CAUTIOUS == 2, ATTITUDE_ANNOYED == 1, ATTITUDE_FURIOUS == 0
-								if pCiv.canContact(iPlayer) and pCiv.AI_getAttitude(iPlayer) < 3 and not teamCiv.isAtWar(iPlayer):
+								# AI_getAttitude: ATTITUDE_FRIENDLY == 4, ATTITUDE_PLEASED == 3, ATTITUDE_CAUTIOUS == 2, ATTITUDE_ANNOYED == 1, ATTITUDE_FURIOUS == 0
+								if pCiv.canContact(iPlayer) and not teamCiv.isAtWar(iPlayer):
 									iModifier = 0
 									# bigger chance for civs which hate you
 									if pCiv.AI_getAttitude(iPlayer) == 0:
 										iModifier += 3
 									elif pCiv.AI_getAttitude(iPlayer) == 1:
 										iModifier += 1
+									elif pCiv.AI_getAttitude(iPlayer) == 3:
+										iModifier -= 1
+									elif pCiv.AI_getAttitude(iPlayer) == 4:
+										iModifier -= 3
 									# bigger chance for close civs
 									PlayerCapital = gc.getPlayer(iPlayer).getCapitalCity()
 									CivCapital = gc.getPlayer(iCiv).getCapitalCity()

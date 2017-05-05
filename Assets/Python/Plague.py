@@ -137,16 +137,8 @@ class Plague:
 	def startPlague( self, iPlagueCount ):
 		iWorstCiv = -1
 		iWorstHealth = 100
-		for iPlayer in range(iNumMajorPlayers):
-			pPlayer = gc.getPlayer(iPlayer)
-			if pPlayer.isAlive():
-				if self.isVulnerable(iPlayer):
-					iHealth = self.calcHealth(iPlayer) - gc.getGame().getSorenRandNum(10, 'random modifier')
-					if iHealth < iWorstHealth:
-						iWorstCiv = iPlayer
-						iWorstHealth = iHealth
 
-		# Absinthe: specific plagues:
+		# Absinthe: specific plagues
 		# Plague of Constantinople (that started at Alexandria)
 		if iPlagueCount == iConstantinople:
 			iWorstCiv = con.iByzantium
@@ -156,11 +148,23 @@ class Plague:
 		elif iPlagueCount == iBlackDeath:
 			self.setFirstPlague(False)
 			self.setBadPlague(True)
-		# All the others
+		# all the others
 		else:
 			self.setFirstPlague(False)
 			self.setBadPlague(False)
 
+		# try to find the most unhealthy civ
+		if iWorstCiv == -1:
+			for iPlayer in range(iNumMajorPlayers):
+				pPlayer = gc.getPlayer(iPlayer)
+				if pPlayer.isAlive():
+					if self.isVulnerable(iPlayer):
+						iHealth = self.calcHealth(iPlayer) - gc.getGame().getSorenRandNum(10, 'random modifier')
+						if iHealth < iWorstHealth:
+							iWorstCiv = iPlayer
+							iWorstHealth = iHealth
+
+		# choose a random civ if we didn't find it
 		if iWorstCiv == -1:
 			iWorstCiv = utils.getRandomCiv()
 
@@ -188,16 +192,21 @@ class Plague:
 
 
 	def isVulnerable(self, iPlayer):
-		# determine if vulnerable based on recent infections and the average city healthiness (also tech immunity should go here, if ever get added to the mod)
+		# Absinthe: based on recent infections and the average city healthiness (also tech immunity should go here if it's ever added to the mod)
 		if iPlayer >= iNumMajorPlayers:
 			if self.getPlagueCountdown(iPlayer) == 0:
 				return True
 		else:
 			pPlayer = gc.getPlayer(iPlayer)
 			if self.getPlagueCountdown(iPlayer) == 0:
-				iHealth = self.calcHealth( iPlayer )
-				if iHealth < 42: # won't spread at all if the average surplus health in the cities is at least 4.2
+				# Absinthe: health doesn't matter for the Black Death, everyone is vulnerable
+				bBadPlague = self.getBadPlague()
+				if bBadPlague:
 					return True
+				else:
+					iHealth = self.calcHealth( iPlayer )
+					if iHealth < 42: # won't spread at all if the average surplus health in the cities is at least 4.2
+						return True
 		return False
 
 
@@ -212,8 +221,8 @@ class Plague:
 				CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_PLAGUE_SPREAD_CITY", ()) + " " + city.getName() + " (" + gc.getPlayer(city.getOwner()).getCivilizationAdjective(0) + ")!", "AS2D_PLAGUE", 0, gc.getBuildingInfo(iPlague).getButton(), ColorTypes(con.iLime), city.getX(), city.getY(), True, True)
 			elif city != -1:
 				pCiv = gc.getPlayer(city.getOwner())
-				print ("pCiv.getCivilizationDescriptionKey()", pCiv.getCivilizationDescriptionKey())
-				print ("pCiv.getCivilizationDescription(0)", pCiv.getCivilizationDescription(0))
+				#print ("pCiv.getCivilizationDescriptionKey()", pCiv.getCivilizationDescriptionKey())
+				#print ("pCiv.getCivilizationDescription(0)", pCiv.getCivilizationDescription(0))
 				CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_PLAGUE_SPREAD_CIV", ()) + " " + pCiv.getCivilizationDescription(0) + "!", "AS2D_PLAGUE", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
 
 		# Absinthe: this is where the duration is handled for each civ

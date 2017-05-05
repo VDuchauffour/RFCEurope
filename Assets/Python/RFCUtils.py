@@ -395,6 +395,18 @@ class RFCUtils:
 		gc.getMap().plot(28, 1).setRevealed(iCiv, False, True, -1);
 		gc.getMap().plot(29, 1).setRevealed(iCiv, False, True, -1);
 
+		# Absinthe: if there are no units in the city after the flip, add a free defender
+		cityPlot = gc.getMap().plot(tCityPlot[0],tCityPlot[1])
+		if cityPlot.getNumUnits() == 0:
+			# The latest available ranged/gun class
+			RangedClass = self.getUniqueUnit(iCiv, xml.iArcher)
+			lRangedList = [xml.iLineInfantry, xml.iMusketman, xml.iLongbowman, xml.iArbalest, xml.iCrossbowman, xml.iArcher]
+			for iUnit in lRangedList:
+				if gc.getPlayer(iCiv).canTrain(self.getUniqueUnit(iCiv, iUnit), False, False):
+					RangedClass = self.getUniqueUnit(iCiv, iUnit)
+					break
+			self.makeUnit(RangedClass, iCiv, tCityPlot, 1)
+
 	def killUnitsInArea(self, tTopLeft, tBottomRight, iCiv):
 		for (x, y) in self.getPlotList(tTopLeft, tBottomRight):
 			killPlot = gc.getMap().plot(x,y)
