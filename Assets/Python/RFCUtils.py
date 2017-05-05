@@ -400,10 +400,35 @@ class RFCUtils:
 			killPlot = gc.getMap().plot(x,y)
 			iNumUnitsInAPlot = killPlot.getNumUnits()
 			if iNumUnitsInAPlot > 0:
+				iSkippedUnit = 0
 				for i in range(iNumUnitsInAPlot):
-					unit = killPlot.getUnit(0)
+					unit = killPlot.getUnit(iSkippedUnit)
 					if unit.getOwner() == iCiv:
 						unit.kill(False, con.iBarbarian)
+					else:
+						iSkippedUnit += 1
+
+	def killAllUnitsInArea(self, tTopLeft, tBottomRight):
+		for (x, y) in self.getPlotList(tTopLeft, tBottomRight):
+			killPlot = gc.getMap().plot(x,y)
+			iNumUnitsInAPlot = killPlot.getNumUnits()
+			if iNumUnitsInAPlot > 0:
+				for i in range(iNumUnitsInAPlot):
+					unit = killPlot.getUnit(0)
+					unit.kill(False, con.iBarbarian)
+
+	def killUnitsInPlots(self, lPlots, iCiv):
+		for (x, y) in lPlots:
+			killPlot = gc.getMap().plot(x,y)
+			iNumUnitsInAPlot = killPlot.getNumUnits()
+			if iNumUnitsInAPlot > 0:
+				iSkippedUnit = 0
+				for i in range(iNumUnitsInAPlot):
+					unit = killPlot.getUnit(iSkippedUnit)
+					if unit.getOwner() == iCiv:
+						unit.kill(False, con.iBarbarian)
+					else:
+						iSkippedUnit += 1
 
 	#RiseAndFall
 	# Absinthe: create units at (28, 0), in the unreachable desert area, near the autoplay plot
@@ -412,6 +437,13 @@ class RFCUtils:
 		If there are units belonging to others in that plot and the new owner is barbarian, the units aren't recreated.
 		Settlers aren't created.
 		If bSkipPlotCity is True, units in a city won't flip. This is to avoid converting barbarian units that would capture a city before the flip delay"""
+		# Absinthe: safety check, kill all units on the tempplot before the flip
+		killPlot = gc.getMap().plot(28, 0)
+		iNumUnitsInAPlot = killPlot.getNumUnits()
+		if iNumUnitsInAPlot > 0:
+			for i in range(iNumUnitsInAPlot):
+				unit = killPlot.getUnit(0)
+				unit.kill(False, con.iBarbarian)
 		for (x, y) in self.getPlotList(tTopLeft, tBottomRight):
 			killPlot = gc.getMap().plot(x,y)
 			iNumUnitsInAPlot = killPlot.getNumUnits()
@@ -463,9 +495,16 @@ class RFCUtils:
 		If there are units belonging to others in that plot and the new owner is barbarian, the units aren't recreated.
 		Settlers aren't created.
 		If bSkipPlotCity is True, units in a city won't flip. This is to avoid converting barbarian units that would capture a city before the flip delay"""
+		# Absinthe: safety check, kill all units on the tempplot before the flip
+		killPlot = gc.getMap().plot(28, 0)
+		iNumUnitsInAPlot = killPlot.getNumUnits()
+		if iNumUnitsInAPlot > 0:
+			for i in range(iNumUnitsInAPlot):
+				unit = killPlot.getUnit(0)
+				unit.kill(False, con.iBarbarian)
 		#print ("searched plots", lPlots)
 		for (x, y) in lPlots:
-			#print ("searched plots", (x, y))
+			#print ("searched plot", (x, y))
 			killPlot = gc.getMap().plot(x,y)
 			iNumUnitsInAPlot = killPlot.getNumUnits()
 			if iNumUnitsInAPlot > 0:
@@ -486,10 +525,10 @@ class RFCUtils:
 							unit.kill(False, con.iBarbarian)
 							if bKillSettlers:
 								if unit.getUnitType() > iSettler:
-									self.makeUnit(unit.getUnitType(), iNewOwner, [28, 0], 1)
+									self.makeUnit(unit.getUnitType(), iNewOwner, (28, 0), 1)
 							else:
 								if unit.getUnitType() >= iSettler: #skip animals
-									self.makeUnit(unit.getUnitType(), iNewOwner, [28, 0], 1)
+									self.makeUnit(unit.getUnitType(), iNewOwner, (28, 0), 1)
 						else:
 							j += 1
 					tempPlot = gc.getMap().plot(28, 0)

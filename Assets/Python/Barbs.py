@@ -569,19 +569,21 @@ class Barbs:
 				self.spawnUnits(iBarbarian, (94, 34), (99, 45), xml.iMongolKeshik, 2, iGameTurn, 3, 1, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
 			#Hungary
 			if con.iHungary == iHuman:
-				self.spawnUnits(iBarbarian, (70, 35), (76, 44), xml.iMongolKeshik, 4 + iHandicap, iGameTurn, 4, 2, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
+				self.spawnUnits(iBarbarian, (71, 38), (75, 40), xml.iMongolKeshik, 4 + iHandicap, iGameTurn, 4, 2, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
+				self.spawnUnits(iBarbarian, (74, 35), (77, 37), xml.iMongolKeshik, 2, iGameTurn, 4, 2, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
 			else:
-				self.spawnUnits(iBarbarian, (70, 35), (76, 44), xml.iMongolKeshik, 2, iGameTurn, 4, 2, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
+				self.spawnUnits(iBarbarian, (71, 38), (75, 40), xml.iMongolKeshik, 2, iGameTurn, 4, 2, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
+				self.spawnUnits(iBarbarian, (74, 35), (77, 37), xml.iMongolKeshik, 1, iGameTurn, 4, 2, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
 			#Poland
 			if con.iPoland == iHuman:
-				self.spawnUnits(iBarbarian, (74, 42), (81, 49), xml.iMongolKeshik, 4 + iHandicap, iGameTurn, 4, 1, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
+				self.spawnUnits(iBarbarian, (73, 43), (78, 47), xml.iMongolKeshik, 5 + iHandicap, iGameTurn, 4, 1, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
 			else:
-				self.spawnUnits(iBarbarian, (74, 42), (81, 49), xml.iMongolKeshik, 2, iGameTurn, 4, 1, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
+				self.spawnUnits(iBarbarian, (73, 43), (78, 47), xml.iMongolKeshik, 2, iGameTurn, 4, 1, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
 			#Bulgaria
 			if con.iBulgaria == iHuman:
-				self.spawnUnits(iBarbarian, (78, 32), (83, 34), xml.iMongolKeshik, 3 + iHandicap, iGameTurn, 4, 1, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
+				self.spawnUnits(iBarbarian, (79, 32), (82, 35), xml.iMongolKeshik, 3 + iHandicap, iGameTurn, 4, 1, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
 			else:
-				self.spawnUnits(iBarbarian, (78, 32), (83, 34), xml.iMongolKeshik, 2, iGameTurn, 4, 1, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
+				self.spawnUnits(iBarbarian, (79, 32), (82, 35), xml.iMongolKeshik, 2, iGameTurn, 4, 1, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
 			#Moscow area
 			self.spawnUnits( iBarbarian, (89, 46), (95, 54), xml.iMongolKeshik, 1, iGameTurn, 4, 0, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))
 			self.spawnUnits( iBarbarian, (91, 48), (97, 53), xml.iMongolKeshik, 2, iGameTurn, 6, 1, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()))

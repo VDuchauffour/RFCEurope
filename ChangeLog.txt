@@ -14,7 +14,7 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for RFCE 1.5:
-(under development)
+(released: 2017.05.05.)
 
 	Company overhaul:
 		- A Dynamic Company system is introduced to the mod! Idea from SoI (edead)
@@ -242,7 +242,8 @@ Changes for RFCE 1.5:
 		- Reduced number of defender units in indy Caen, AI France should be able to conquer it more often
 		- Tuned down the number of Seljuks spawning against human controlled Byzantium
 		- Seljuk Turcoman Horse Archer units no longer get defensive bonuses from tile features
-		- Revised NW Keshik spawns, to move the Mongol threat more on Poland and Hungary (instead of the recently spawned Prussia and Lithuania)
+		- Revised NW Keshik spawn areas, to move the Mongol threat more on Poland and Hungary (instead of the recently spawned Prussia and Lithuania)
+		- Increased barbarian Mongol unit numbers against Hungary and Poland, especially for the human player
 		- Changed barb city spawns in Ireland, not all 4 will spawn in all games, 2 is enough (already provides an early barb-island feel)
 		- Ireland, 700 AD: Hill of Tara/Dublin (100%, "Teamhair"), barbarian, population size 1, has a respawn in 988 AD
 		- Ireland, 700 AD: Downpatrick (20%, "Rath Celtair"), Rathcroghan/Sligo (30%, "Cruiachain"), Cashel/Cork (50%, "Caisel"), barbarian, population size 1
@@ -291,6 +292,7 @@ Changes for RFCE 1.5:
 		- Sweden now has some Knights and Arbalests in it's starting army
 		- Added melee units for the starting army of Muscovy, the AI also starts with an additional settler and a couple more units
 		- England starts with an additional settler, missionary and war galley, the AI starts with a couple further defensive units
+		- Revised English and Aragonese naval units' spawn position, should be a little more safe now
 
 	Tech/building/unit balance:
 		- Switched early naval buildings' tech tree position: Harbor with Astrolabe, Lighthouse with Cartography
@@ -419,10 +421,11 @@ Changes for RFCE 1.5:
 		- The AI will only choose a city as a primary target if it's in the war map or it's within an era-based distance from the civ's current territory
 		- AI civs won't accept cities in less than core or historic territory, if their stability is < 0
 		- Revised era based distance values for AI city trade calculations
+		- Revised AI trade resource values, increased it for some strategic resources
 		- AI civs won't accept cities if they are too far away from their territory, unless they are in core or historic territory
 		- AI civs decision/chance for war declaration on the 2nd completed UHV is based on: distance and diplo relations between the civs, size of their nation
 
-	Technical / UI changes:
+	Technical and UI changes:
 		- No interface messages are displayed during autoplay/autorun (Crusades, RiseAndFall, Religion, Wonders, Leaders, etc.)
 		- Turns remaining message only show up in the last 30 turns of the game (instead of 100)
 		- No permanent (flashing) victory message on the middle of the screen after you are victorious (from DoC)
@@ -491,6 +494,7 @@ Changes for RFCE 1.5:
 		- Fixed a couple mistakes in the date -> gameturn conversions on the timeline
 		- Fixed bug which made it possible for a collapsed (former) Crusade leader to declare war on the target civ
 		- Fixed bug in the special war declaration mechanics on the 2nd completed UHV where vassals could potentially declare war on their master
+		- Fixed spawn bug with unintended enemy units flipping to you in some cases, appearing in your starting stack
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -669,7 +673,7 @@ Changes for RFCE 1.4:
 		- Texts in the WorldBuilder and in the Settings Screen will now also use the mod-specific era names
 		- Added main screen notification about the Crusaders' arrival to the human player
 
-	Setup for civs and UHVs:
+	Civ and UHV setup:
 		- Sweden starts with the following civics: Feudal Monarchy, Serfdom, Manorialism
 		- Cordoban UP update: +1 food bonus for every 2 excess health, but applied in all cases (not only when the city is not starving without the bonus from health)
 		- For the 1st Cordoban UHV, Cordoba should be the biggest city alone (tie is not enough)
@@ -1499,7 +1503,7 @@ Changes for RFCE 1.1:
 		- Fixed art for La Mezquita, Pressburg Castle, All Saints' Church, Dome of the Rock, St. Sophia, Torre de Belem, Alhambra, National Gallery and Burgundian Winery
 		- Revised the size of all wonders and buildings - both ingame and in the Civilopedia
 		- Wondermovie for Kazimierz and Palacio da Pena
-		- Seperated the Wondermovies and the Colonymovies for better organization
+		- Separated the Wondermovies and the Colonymovies for better organization
 		- New button for St. Peter's Basilica, and for most of the changed/updated buildings
 		- Improved Coffee Plantation graphics (difference in art when worked, not worked etc.)
 		- New art for Tea, Honey and Slaves

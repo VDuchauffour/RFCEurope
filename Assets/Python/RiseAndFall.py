@@ -1459,6 +1459,7 @@ class RiseAndFall:
 					city.setCulture(iLoopCiv, 0, True)
 				city.setCulture(iCiv, iCivCulture + iLoopCivCulture, True)
 
+
 	def initBirth(self, iCurrentTurn, iBirthYear, iCiv):
 		iHuman = utils.getHumanID()
 		#print("iBirthYear:%d, iCurrentTurn:%d" %(iBirthYear, iCurrentTurn))
@@ -1469,17 +1470,20 @@ class RiseAndFall:
 			tBottomRight = tCoreAreasBR[iCiv]
 			tBroaderTopLeft = tBroaderAreasTL[iCiv]
 			tBroaderBottomRight = tBroaderAreasBR[iCiv]
-			if self.getFlipsDelay(iCiv) == 0: #city hasn't already been founded)
+			if self.getFlipsDelay(iCiv) == 0: #city hasn't already been founded
 
-				# Absinthe: this probably fixes a couple instances of the -1 turn autoplay bug - code adapted from SoI
+				# Absinthe: kill all foreign units on the capital plot - this probably fixes a couple instances of the -1 turn autoplay bug
 				if iCiv == iHuman:
 					killPlot = gc.getMap().plot(tCapital[0], tCapital[1])
 					iNumUnitsInAPlot = killPlot.getNumUnits()
 					if iNumUnitsInAPlot > 0:
+						iSkippedUnit = 0
 						for i in range(iNumUnitsInAPlot):
-							unit = killPlot.getUnit(i)
+							unit = killPlot.getUnit(iSkippedUnit)
 							if unit.getOwner() != iCiv:
 								unit.kill(False, iBarbarian)
+							else:
+								iSkippedUnit += 1
 
 				bDeleteEverything = False
 				if gc.getMap().plot(tCapital[0], tCapital[1]).isOwned():
@@ -1495,20 +1499,23 @@ class RiseAndFall:
 								print ("bDeleteEverything 2")
 								break
 				print ("bDeleteEverything", bDeleteEverything)
+				#print ("bDeleteTest", gc.getMap().plot(tCapital[0], tCapital[1]).isOwned())
 				if not gc.getMap().plot(tCapital[0], tCapital[1]).isOwned():
 					#if (iCiv == iNetherlands or iCiv == iPortugal): #dangerous starts
 					#	self.setDeleteMode(0, iCiv)
 					self.birthInFreeRegion(iCiv, tCapital, tTopLeft, tBottomRight)
 				elif bDeleteEverything:
+					self.setDeleteMode(0, iCiv)
+					# Absinthe: kill off units near the starting plot
+					utils.killAllUnitsInArea((tCapital[0]-1, tCapital[1]-1), (tCapital[0]+1, tCapital[1]+1))
+					# Absinthe: why do we flip units in these areas if we are under bDeleteEverything?
+					#for iLoopCiv in range(iNumTotalPlayersB): #Barbarians as well
+					#	if iCiv != iLoopCiv:
+					#		utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iLoopCiv, True, False)
+					#		utils.flipUnitsInPlots(con.lExtraPlots[iCiv], iCiv, iLoopCiv, True, False)
 					for (x, y) in utils.surroundingPlots(tCapital):
-						self.setDeleteMode(0, iCiv)
-						#print ("deleting", x, y)
 						plot = gc.getMap().plot(x, y)
 						#self.moveOutUnits(x, y, tCapital[0], tCapital[1])
-						for iLoopCiv in range(iNumTotalPlayersB): #Barbarians as well
-							if iCiv != iLoopCiv:
-								utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iLoopCiv, True, False)
-								utils.flipUnitsInPlots(con.lExtraPlots[iCiv], iCiv, iLoopCiv, True, False)
 						if plot.isCity():
 							plot.eraseAIDevelopment() #new function, similar to erase but won't delete rivers, resources and features
 						for iLoopCiv in range(iNumTotalPlayersB): #Barbarians as well
@@ -1585,19 +1592,19 @@ class RiseAndFall:
 				#plot.setOwner(-1)
 				plot.setOwner(iCiv)
 
-		# Absinthe: what's this +-11?
-		for (x, y) in utils.surroundingPlots(tCapital, 11): # must include the distance from Sogut to the Caspius
-			#print ("units", x, y, gc.getMap().plot(x, y).getNumUnits(), tCapital[0], tCapital[1])
-			if tCapital != (x, y):
-				plot = gc.getMap().plot(x, y)
-				if plot.getNumUnits() > 0 and not plot.isWater():
-					unit = plot.getUnit(0)
-					#print ("units2", x, y, plot.getNumUnits(), unit.getOwner(), iCiv)
-					if unit.getOwner() == iCiv:
-						print ("moving starting units from", x, y, "to", (tCapital[0], tCapital[1]))
-						for i in range(plot.getNumUnits()):
-							unit = plot.getUnit(0)
-							unit.setXYOld(tCapital[0], tCapital[1])
+		# Absinthe: what's this +-11? do we really want to move all flipped units in the initial turn to the starting plot??
+	#	for (x, y) in utils.surroundingPlots(tCapital, 11): # must include the distance from Sogut to the Caspius
+	#		#print ("units", x, y, gc.getMap().plot(x, y).getNumUnits(), tCapital[0], tCapital[1])
+	#		if tCapital != (x, y):
+	#			plot = gc.getMap().plot(x, y)
+	#			if plot.getNumUnits() > 0 and not plot.isWater():
+	#				unit = plot.getUnit(0)
+	#				#print ("units2", x, y, plot.getNumUnits(), unit.getOwner(), iCiv)
+	#				if unit.getOwner() == iCiv:
+	#					print ("moving starting units from", x, y, "to", (tCapital[0], tCapital[1]))
+	#					for i in range(plot.getNumUnits()):
+	#						unit = plot.getUnit(0)
+	#						unit.setXYOld(tCapital[0], tCapital[1])
 						#may intersect plot close to tCapital
 ##							for (i, j) in utils.surroundingPlots((x, y), 6):
 ##								pCurrentFar = gc.getMap().plot(i, j)
@@ -1641,6 +1648,8 @@ class RiseAndFall:
 				#gc.getMap().plot(tCapital[0], tCapital[1]).setRevealed(iCiv, False, True, -1);
 				#gc.getMap().plot(tCapital[0], tCapital[1]).setRevealed(iCiv, True, True, -1);
 
+				# Absinthe: kill off units near the starting plot
+				utils.killAllUnitsInArea((tCapital[0]-1, tCapital[1]-1), (tCapital[0]+1, tCapital[1]+1))
 				print ("starting units in", tCapital[0], tCapital[1])
 				self.createStartingUnits(iCiv, (tCapital[0], tCapital[1]))
 
@@ -1670,8 +1679,10 @@ class RiseAndFall:
 					elif tPlot in lSurroundingPlots4:
 						lPlotBarbFlip.append(tPlot)
 				utils.flipUnitsInPlots(lPlotBarbFlip, iCiv, iBarbarian, True, True) #remaining barbs in the region now belong to the new civ
+				#utils.killUnitsInPlots(lPlotBarbFlip, iBarbarian)
 				for iIndyCiv in range( con.iIndepStart, con.iIndepEnd + 1 ):
 					utils.flipUnitsInPlots(lPlotIndyFlip, iCiv, iIndyCiv, True, False) #remaining independents in the region now belong to the new civ
+					#utils.killUnitsInPlots(lPlotIndyFlip, iIndyCiv)
 				self.assignTechs(iCiv)
 				utils.setPlagueCountdown(iCiv, -con.iImmunity)
 				utils.clearPlague(iCiv)
@@ -2261,7 +2272,7 @@ class RiseAndFall:
 			utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 4)
 			utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
-			tSeaPlot = self.findSeaPlots(tPlot, 2)
+			tSeaPlot = self.findSeaPlots((43,53), 1)
 			if tSeaPlot:
 				pEngland.initUnit(xml.iGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
 				pEngland.initUnit(xml.iWarGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ESCORT_SEA, DirectionTypes.DIRECTION_SOUTH)
@@ -2283,8 +2294,9 @@ class RiseAndFall:
 			utils.makeUnit(xml.iAragonAlmogavar, iCiv, tPlot, 5)
 			utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
 			# Look for a sea plot close to the coast
-			tSeaPlot = self.findSeaPlots((39,28), 2)
+			tSeaPlot = self.findSeaPlots((42,29), 1)
 			if tSeaPlot:
+				pAragon.initUnit(xml.iWarGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ESCORT_SEA, DirectionTypes.DIRECTION_SOUTH)
 				pAragon.initUnit(xml.iWarGalley, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_ESCORT_SEA, DirectionTypes.DIRECTION_SOUTH)
 				pAragon.initUnit(xml.iCogge, tSeaPlot[0], tSeaPlot[1], UnitAITypes.UNITAI_SETTLER_SEA, DirectionTypes.DIRECTION_SOUTH)
 				utils.makeUnit(xml.iSettler,iCiv,tSeaPlot,1)
