@@ -397,7 +397,7 @@ void CvPlot::eraseCityDevelopment()
 	{
 		pCity->kill(false);
 	}
-	//erase all improvement
+	//erase all improvements
 	setImprovementType(NO_IMPROVEMENT);
 }
 //Absinthe - end
@@ -1505,6 +1505,11 @@ bool CvPlot::isFreshWater() const
 			if (pLoopPlot != NULL)
 			{
 				if (pLoopPlot->isLake() && !GC.getTerrainInfo(pLoopPlot->getTerrainType()).isSalineLake()) // Absinthe: Salt Lakes
+				{
+					return true;
+				}
+
+				if (GC.getTerrainInfo(pLoopPlot->getTerrainType()).isFreshLake()) // Absinthe: Fresh Lakes
 				{
 					return true;
 				}
