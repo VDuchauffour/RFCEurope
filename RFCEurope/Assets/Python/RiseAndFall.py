@@ -492,8 +492,13 @@ class RiseAndFall:
 		iHuman = utils.getHumanID()
 		iRebelCiv = self.getRebelCiv()
 		iChoice = popupReturn.getButtonClicked()
+		iHumanCity = 0
 		lCityList = self.getRebelCities()
-		iNumCities = len( lCityList )
+		for (x, y) in lCityList:
+			iOwner = gc.getMap().plot(x, y).getPlotCity().getOwner()
+			if iOwner == iHuman:
+				iHumanCity += 1
+
 		if iChoice == 1:
 			lList = self.getRebelSuppress()
 			lList[iHuman] = 2 # let go + war
@@ -514,16 +519,16 @@ class RiseAndFall:
 				lList[iHuman] = 4 # let go + war
 				self.setRebelSuppress( lList )
 		elif iChoice == 3:
-			iLoyalPrice = min( (10 * gc.getPlayer( iHuman ).getGold()) / 100, 50 * iNumCities )
+			iLoyalPrice = min( (10 * gc.getPlayer( iHuman ).getGold()) / 100, 50 * iHumanCity )
 			gc.getPlayer( iHuman ).setGold( gc.getPlayer( iHuman ).getGold() - iLoyalPrice )
-			if gc.getGame().getSorenRandNum(100, 'odds') < iLoyalPrice / iNumCities:
+			if gc.getGame().getSorenRandNum(100, 'odds') < iLoyalPrice / iHumanCity:
 				lList = self.getRebelSuppress()
 				lList[iHuman] = 1 # keep + no war
 				self.setRebelSuppress( lList )
 		elif iChoice == 4:
-			iLoyalPrice = min( (10 * gc.getPlayer( iHuman ).getGold()) / 100, 50 * iNumCities )
+			iLoyalPrice = min( (10 * gc.getPlayer( iHuman ).getGold()) / 100, 50 * iHumanCity )
 			gc.getPlayer( iHuman ).setGold( gc.getPlayer( iHuman ).getGold() - iLoyalPrice )
-			if gc.getGame().getSorenRandNum(100, 'odds') < iLoyalPrice / iNumCities + 40:
+			if gc.getGame().getSorenRandNum(100, 'odds') < iLoyalPrice / iHumanCity + 40:
 				lCityList = self.getRebelCities()
 				for (x, y) in lCityList:
 					pCity = gc.getMap().plot(x, y).getPlotCity()
@@ -533,7 +538,6 @@ class RiseAndFall:
 				lList = self.getRebelSuppress()
 				lList[iHuman] = 3 # keep + war
 				self.setRebelSuppress( lList )
-
 			else:
 				lList = self.getRebelSuppress()
 				lList[iHuman] = 2 # let go + war
@@ -1166,7 +1170,7 @@ class RiseAndFall:
 		lSuppressList = self.getRebelSuppress()
 		#print ("lSuppressList for iCiv", lSuppressList)
 		lCityList = self.getRebelCities()
-		lCityCount = [-1] * iNumPlayers #major players only
+		lCityCount = [0] * iNumPlayers #major players only
 
 		for (x, y) in lCityList:
 			iOwner = gc.getMap().plot(x, y).getPlotCity().getOwner()
@@ -1175,8 +1179,10 @@ class RiseAndFall:
 
 		iHuman = utils.getHumanID()
 		for iCiv in range( iNumMajorPlayers ):
-			if lCityCount[iCiv] > 0:
-				if iCiv != iHuman:
+			if iCiv != iHuman:
+				# Absinthe: have to reset the suppress values
+				lSuppressList[iCiv] = 0
+				if lCityCount[iCiv] > 0:
 					# Absinthe: for the AI there is 30% chance that the actual respawn does not happen (under these suppress situations), only some revolt in the corresponding cities
 					iActualSpawnChance = gc.getGame().getSorenRandNum(100, 'odds')
 					print ("iActualSpawnChance", iActualSpawnChance)
@@ -1192,7 +1198,6 @@ class RiseAndFall:
 
 		self.setRebelSuppress( lSuppressList )
 
-		# Possible issue here for AI civs - do we always "resurrect" the new civ, even without any cities actually selected for resurrection?
 		if lCityCount[iHuman] > 0:
 			self.rebellionPopup( iDeadCiv, lCityCount[iHuman] )
 		else:
@@ -1200,20 +1205,29 @@ class RiseAndFall:
 
 
 	def resurectCiv( self, iDeadCiv ):
-
 		lCityList = self.getRebelCities()
 		lSuppressList = self.getRebelSuppress()
 		bSuppressed = True
 		iHuman = utils.getHumanID()
+		lCityCount = [0] * iNumPlayers #major players only
+		for (x, y) in lCityList:
+			iOwner = gc.getMap().plot(x, y).getPlotCity().getOwner()
+			if iOwner < iNumMajorPlayers:
+				lCityCount[iOwner] += 1
 
 		# Absinthe: if any of the AI civs didn't manage to suppress it, there is resurrection
 		for iCiv in range( iNumMajorPlayers ):
-			if iCiv != iHuman and lSuppressList[iCiv] == 0:
+			if iCiv != iHuman and lCityCount[iCiv] > 0 and lSuppressList[iCiv] == 0:
 				bSuppressed = False
-		# Absinthe: if the human player didn't choose any suppress options (so it has 0, 2 or 4 in the lSuppressList), there is resurrection
-		if lSuppressList[iHuman] in [0, 2, 4]:
-			bSuppressed = False
+		if lCityCount[iHuman] > 0:
+			# Absinthe: if the human player didn't choose any suppress options or didn't succeed in it (so it has 0, 2 or 4 in the lSuppressList), there is resurrection
+			if lSuppressList[iHuman] in [0, 2, 4]:
+				bSuppressed = False
+			# Absinthe: if the human player managed to suppress it, message about it
+			else:
+				CyInterface().addMessage(iHuman, True, con.iDuration, CyTranslator().getText("TXT_KEY_SUPPRESSED_RESURRECTION", ()), "", 0, "", ColorTypes(con.iGreen), -1, -1, True, True)
 		# Absinthe: if neither of the above happened, so everyone managed to suppress it, no resurrection
+		print ("SuppressCheck", bSuppressed, lCityCount[iHuman])
 		if bSuppressed:
 			return
 
@@ -1715,7 +1729,7 @@ class RiseAndFall:
 				capital = gc.getPlayer(iCiv).getCapitalCity()
 				self.createStartingWorkers(iCiv, (capital.getX(), capital.getY()))
 
-			if (iNumHumanCitiesToConvert> 0):
+			if (iNumHumanCitiesToConvert > 0):
 				self.flipPopup(iCiv, tTopLeft, tBottomRight)
 
 

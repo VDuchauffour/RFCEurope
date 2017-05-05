@@ -106,6 +106,7 @@ Changes for RFCE 1.5:
 		- It's way more likely that the plague leaves smaller, less unhealthy cities than bigger ones
 		- Little shorter plague duration (on civ-level), also it spreads to a little less cities in a given turn
 		- Revised plague related health calculations, now there is a real chance to avoid or mitigate plagues if the civ is healthy enough
+		- No civ can reach immunity for the Black Death, will spread even if all your cities are very healthy
 		- Plague will be restarted only for the human player on conquering an infected city
 
 	Crusade updates:
@@ -192,7 +193,7 @@ Changes for RFCE 1.5:
 		- Fixed bug where mercenaries could appear in cities without enough culture (if there were multiple cities in the province)
 		- Specific interface message for the human player when there is a new mercenary in the list, but can't be hired because needs different State Religion
 		- New interface message for the human player if a merc available for him/her was hired by another player
-		- If there are mercs available in a newly acquired city's province, interface message about it to the human player
+		- If there are mercs available in a newly founded or newly acquired city's province, interface message about it to the human player
 		- Stradiot mercenary also available in the southern Italian provinces
 
 	Stability updates:
@@ -397,6 +398,7 @@ Changes for RFCE 1.5:
 		- Basic naval buildings and naval wonders are available in all coastal cities (only near sea, not lake), even if the water area is very small
 		- Naval units and related naval buildings are only available for coastal cities near an at least size 20 water body (because of the AI)
 		- Work boats can only be built if there is an improvable resource in the neighboring water area (vanilla way)
+		- Added a free defender unit if there were no units in the city after a flip/revolt
 
 	AI improvements:
 		- AI civs won't do a revolution in the first couple turns after birth (wait for the potential city flips, initial conquests/settling, war declarations, and whatnot)
@@ -456,6 +458,7 @@ Changes for RFCE 1.5:
 		- Popup message for the player when a UHV goal is completed or failed
 		- Popup message for the player a couple turns before the Seljuk/Mongol/Timurid invasions
 		- Improved interface messages connected to Papal bonuses, added message for the Topkapi Palace effect
+		- Message for the human player if he/she successfully suppressed some cities on a resurrection
 		- Revised loading times (on the civ selection screen) in the 500AD scenario for all civs
 		- Revised both Base Terrain and Terrain Feature Civilopedia categories, added pedia description box for both
 
@@ -495,6 +498,9 @@ Changes for RFCE 1.5:
 		- Fixed bug which made it possible for a collapsed (former) Crusade leader to declare war on the target civ
 		- Fixed bug in the special war declaration mechanics on the 2nd completed UHV where vassals could potentially declare war on their master
 		- Fixed spawn bug with unintended enemy units flipping to you in some cases, appearing in your starting stack
+		- Fixed a couple issues with unnecessary war and peace declaration messages upon civ resurrection
+		- Fixed city number calculation bug and a minor logic issue in the base resurrection mechanics
+		- Fixed "fake" AI resurrections where the game tried to bring back the new civ even if everyone managed to suppress the rebellion
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
