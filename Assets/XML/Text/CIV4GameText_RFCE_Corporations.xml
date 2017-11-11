@@ -6,6 +6,15 @@
 <!-- Game Text - RFCE Corporations -->
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
+		<Tag>TXT_KEY_CONCEPT_COMPANIES</Tag>
+		<English>Companies</English>
+		<French>Companies</French>
+		<German>Companies</German>
+		<Italian>Companies</Italian>
+		<Spanish>Companies</Spanish>
+		<Portuguese>Companies</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_KNIGHTS_HOSPITALLER</Tag>
 		<English>Knights Hospitaller</English>
 		<French>Ordre Hospitalier</French>

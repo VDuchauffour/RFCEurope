@@ -10,8 +10,8 @@
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- set to 1 if you want to disable UHV goals for AI civilizations (increases speed if they are only checked for the human player) -->
-		<!-- note that this only works when starting new games, won't affect savegames neither on enabling nor on disabling the checks -->
+		<!-- set to 1 if you want to disable UHV goal checks for AI civilizations (increases speed if they are only checked for the human player) -->
+		<!-- note that this only works when starting a new game, won't affect savegames neither on enabling nor on disabling the checks -->
 		<DefineName>NO_AI_UHV_CHECKS</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>

@@ -138,7 +138,7 @@ tVenetianControl = [ xml.iP_Epirus, xml.iP_Dalmatia, xml.iP_Verona, xml.iP_Arber
 tVenetianControlII = [ xml.iP_Thessaly, xml.iP_Morea, xml.iP_Crete, xml.iP_Cyprus ]
 tBurgundyControl = [ xml.iP_Flanders, xml.iP_Picardy, xml.iP_Provence, xml.iP_Burgundy, xml.iP_Champagne, xml.iP_Lorraine ]
 tBurgundyOutrank = [ iFrankia, iEngland, iGermany ]
-tGermanyControl = [ xml.iP_Tuscany, xml.iP_Lombardy, xml.iP_Lorraine, xml.iP_Swabia, xml.iP_Saxony, xml.iP_Bavaria, xml.iP_Franconia, xml.iP_Brandenburg, xml.iP_Holstein ]
+tGermanyControl = [ xml.iP_Tuscany, xml.iP_Liguria, xml.iP_Lombardy, xml.iP_Lorraine, xml.iP_Swabia, xml.iP_Saxony, xml.iP_Bavaria, xml.iP_Franconia, xml.iP_Brandenburg, xml.iP_Holstein ]
 tGermanyControlII = [ xml.iP_Austria, xml.iP_Flanders, xml.iP_Pomerania, xml.iP_Silesia, xml.iP_Bohemia, xml.iP_Moravia, xml.iP_Swabia, xml.iP_Saxony, xml.iP_Bavaria, xml.iP_Franconia, xml.iP_Brandenburg, xml.iP_Holstein ]
 tKievControl = [ xml.iP_Kiev, xml.iP_Podolia, xml.iP_Pereyaslavl, xml.iP_Sloboda, xml.iP_Chernigov, xml.iP_Volhynia, xml.iP_Minsk, xml.iP_Polotsk, xml.iP_Smolensk, xml.iP_Moscow, xml.iP_Murom, xml.iP_Rostov, xml.iP_Novgorod, xml.iP_Vologda ]
 tHungarynControl = [ xml.iP_Thrace, xml.iP_Moesia, xml.iP_Macedonia, xml.iP_Thessaloniki, xml.iP_Wallachia, xml.iP_Thessaly, xml.iP_Morea, xml.iP_Epirus, xml.iP_Arberia, xml.iP_Serbia, xml.iP_Banat, xml.iP_Bosnia, xml.iP_Dalmatia, xml.iP_Slavonia ]
@@ -275,6 +275,9 @@ class Victory:
 						for iCiv in lCivs:
 							pCiv = gc.getPlayer(iCiv)
 							teamCiv = gc.getTeam(pCiv.getTeam())
+							# skip civ if it's vassal (safety check for own vassals, want to look for the master for other vassals)
+							if teamCiv.isAVassal():
+								continue
 							if teamCiv.canDeclareWar( pPlayer.getTeam() ):
 								# AI_getAttitude: ATTITUDE_FRIENDLY == 4, ATTITUDE_PLEASED == 3, ATTITUDE_CAUTIOUS == 2, ATTITUDE_ANNOYED == 1, ATTITUDE_FURIOUS == 0
 								if pCiv.canContact(iPlayer) and not teamCiv.isAtWar(iPlayer):
@@ -910,7 +913,7 @@ class Victory:
 		# Old UHVs: Have most Catholic FPs in 1077 (Walk to Canossa)
 		#			Have 3 vassals
 
-		# UHV 1: Control Lorraine, Swabia, Saxony, Bavaria, Franconia, Brandenburg, Holstein, Lombardy and Tuscany in 1167
+		# UHV 1: Control Lorraine, Swabia, Saxony, Bavaria, Franconia, Brandenburg, Holstein, Lombardy, Liguria and Tuscany in 1167
 		if iGameTurn == xml.i1167AD:
 			if self.isPossibleUHV(iGermany, 0, True):
 				if self.checkProvincesStates(iGermany, tGermanyControl):
@@ -1111,15 +1114,15 @@ class Victory:
 		if iGameTurn == xml.i1296AD:
 			self.expireUHV( iScotland, 0 )
 
-		# UHV 2: Have 1500 attitude points with France by 1560 (attitude points go up every turn depending on your relations)
+		# UHV 2: Have 1500 attitude points with France by 1560 (attitude points are added every turn depending on your relations)
 		if self.isPossibleUHV(iScotland, 1, True):
 			if pFrankia.isAlive():
-				# Being at war with France gives a big penalty (and ignores all bonuses!)
+				# Being at war with France gives a big penalty (and ignores most bonuses!)
 				if teamScotland.isAtWar(iFrankia):
 					iScore = -10
 				else:
-					# -2 for Furious -1 for Annoyed 0 for Cautious 1 for Pleased 2 for Friendly
-					iScore = pFrankia.AI_getAttitude(iScotland) - 2
+					# -1 for Furious 0 for Annoyed 1 for Cautious 2 for Pleased 3 for Friendly
+					iScore = pFrankia.AI_getAttitude(iScotland) - 1
 					# Agreements
 					if teamFrankia.isOpenBorders(iScotland):
 						iScore+=1
@@ -1129,16 +1132,21 @@ class Victory:
 					iTrades = 0
 					iTrades += pScotland.getNumTradeBonusImports(iFrankia)
 					iTrades += pFrankia.getNumTradeBonusImports(iScotland)
-					iScore += iTrades/3
+					iScore += iTrades/2
 					# Common Wars
 					for iEnemy in xrange(iNumPlayers):
 						if iEnemy in [iScotland, iFrankia]:
 							continue
 						if teamFrankia.isAtWar(iEnemy) and teamScotland.isAtWar(iEnemy):
 							iScore+=2
-				# Different religion from France also gives a penalty
-				if pScotland.getStateReligion() != pFrankia.getStateReligion():
-					iScore -= 3
+				# Different religion from France also gives a penalty, same religion gives a bonus (but only if both have a state religion)
+				iScotStateReligion = pScotland.getStateReligion()
+				iFraStateReligion = pFrankia.getStateReligion()
+				if (iScotStateReligion != -1 and iFraStateReligion != -1):
+					if iScotStateReligion != iFraStateReligion:
+						iScore -= 3
+					elif iScotStateReligion == iFraStateReligion:
+						iScore += 1
 				iOldScore = pScotland.getUHVCounter(1)
 				iNewScore = iOldScore + iScore
 				pScotland.setUHVCounter(1, iNewScore)

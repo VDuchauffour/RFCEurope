@@ -478,12 +478,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GER1</Tag>
-		<English>[COLOR_YELLOW]The Holy Roman Empire:[COLOR_REVERT] Control Lorraine, Swabia, Saxony, Bavaria, Franconia, Brandenburg, Holstein, Lombardy and Tuscany in 1167AD.</English>
-		<French>[COLOR_YELLOW]The Holy Roman Empire:[COLOR_REVERT] Control Lorraine, Swabia, Saxony, Bavaria, Franconia, Brandenburg, Holstein, Lombardy and Tuscany in 1167AD.</French>
-		<German>[COLOR_YELLOW]Das Heilige Römische Reich:[COLOR_REVERT] Kontrolliert 1167 n.Chr. Lothringen, Schwaben, Sachsen, Bayern, Franken, Brandenburg, Holstein, Lombardei und Toskana.</German>
-		<Italian>[COLOR_YELLOW]Il Sacro Romano Impero:[COLOR_REVERT] Controlla le province di Lorena, Svevia, Sassonia, Baviera, Franconia, Brandeburgo, Holstein, Lombardia e Toscana nel 1167AD.</Italian>
-		<Spanish>[COLOR_YELLOW]The Holy Roman Empire:[COLOR_REVERT] Control Lorraine, Swabia, Saxony, Bavaria, Franconia, Brandenburg, Holstein, Lombardy and Tuscany in 1167AD.</Spanish>
-		<Portuguese>[COLOR_YELLOW]O Sacro Império Romano:[COLOR_REVERT] Controle Lorena, Suábia, Saxônia, Baviera, Francônia, Brandemburgo, Holstein, Lombardia e Toscana em 1167DC..</Portuguese>
+		<English>[COLOR_YELLOW]The Holy Roman Empire:[COLOR_REVERT] Control Lorraine, Swabia, Saxony, Bavaria, Franconia, Brandenburg, Holstein, Lombardy, Liguria and Tuscany in 1167AD.</English>
+		<French>[COLOR_YELLOW]The Holy Roman Empire:[COLOR_REVERT] Control Lorraine, Swabia, Saxony, Bavaria, Franconia, Brandenburg, Holstein, Lombardy, Liguria and Tuscany in 1167AD.</French>
+		<German>[COLOR_YELLOW]Das Heilige Römische Reich:[COLOR_REVERT] Kontrolliert 1167 n.Chr. Lothringen, Schwaben, Sachsen, Bayern, Franken, Brandenburg, Holstein, Lombardei, Liguria und Toskana.</German>
+		<Italian>[COLOR_YELLOW]Il Sacro Romano Impero:[COLOR_REVERT] Controlla le province di Lorena, Svevia, Sassonia, Baviera, Franconia, Brandeburgo, Holstein, Lombardia, Liguria e Toscana nel 1167AD.</Italian>
+		<Spanish>[COLOR_YELLOW]The Holy Roman Empire:[COLOR_REVERT] Control Lorraine, Swabia, Saxony, Bavaria, Franconia, Brandenburg, Holstein, Lombardy, Liguria and Tuscany in 1167AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]O Sacro Império Romano:[COLOR_REVERT] Controle Lorena, Suábia, Saxônia, Baviera, Francônia, Brandemburgo, Holstein, Lombardia, Liguria e Toscana em 1167DC..</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GER2</Tag>
@@ -569,11 +569,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GEN2</Tag>
 		<English>[COLOR_YELLOW]The Bank of Europe:[COLOR_REVERT] Build 8 Banks in your cities.</English>
-		<French>[COLOR_YELLOW]The Bank of Europe:[COLOR_REVERT] Fonder 2 Soci&#233;t&#233;s Commerciale et construire 8 Banques.</French>
-		<German>[COLOR_YELLOW]Die Bank von Europa:[COLOR_REVERT] Gründet 2 Gesellschaften und baut 8 Banken.</German>
-		<Italian>[COLOR_YELLOW]La Banca d'Europa:[COLOR_REVERT] Fonda 2 Corporazioni e costruisci 8 Banche.</Italian>
-		<Spanish>[COLOR_YELLOW]The Bank of Europe:[COLOR_REVERT] Found 2 Corporations and build 8 Banks</Spanish>
-		<Portuguese>[COLOR_YELLOW]O Banco da Europa:[COLOR_REVERT] Funde 2 Corporações e construa 8 Bancos</Portuguese>
+		<French>[COLOR_YELLOW]The Bank of Europe:[COLOR_REVERT] Construire 8 Banques.</French>
+		<German>[COLOR_YELLOW]Die Bank von Europa:[COLOR_REVERT] Baut 8 Banken.</German>
+		<Italian>[COLOR_YELLOW]La Banca d'Europa:[COLOR_REVERT] Costruisci 8 Banche.</Italian>
+		<Spanish>[COLOR_YELLOW]The Bank of Europe:[COLOR_REVERT] Build 8 Banks</Spanish>
+		<Portuguese>[COLOR_YELLOW]O Banco da Europa:[COLOR_REVERT] Construa 8 Bancos</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_GEN3</Tag>
@@ -1217,12 +1217,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SCO2_HELP</Tag>
-		<English>You get points per turn for good relations (between -2 and 2), open borders (1), defensive pact (2), imports (1/3 per resource), exports (1/3 per resource), common wars (2 per war)</English>
-		<French>You get points per turn for good relations (between -2 and 2), open borders (1), defensive pact (2), imports (1/3 per resource), exports (1/3 per resource), common wars (2 per war)</French>
-		<German>You get points per turn for good relations (between -2 and 2), open borders (1), defensive pact (2), imports (1/3 per resource), exports (1/3 per resource), common wars (2 per war)</German>
-		<Italian>You get points per turn for good relations (between -2 and 2), open borders (1), defensive pact (2), imports (1/3 per resource), exports (1/3 per resource), common wars (2 per war)</Italian>
-		<Spanish>You get points per turn for good relations (between -2 and 2), open borders (1), defensive pact (2), imports (1/3 per resource), exports (1/3 per resource), common wars (2 per war)</Spanish>
-		<Portuguese>You get points per turn for good relations (between -2 and 2), open borders (1), defensive pact (2), imports (1/3 per resource), exports (1/3 per resource), common wars (2 per war)</Portuguese>
+		<English>You get points per turn for good relations (max 3), open borders (1), defensive pact (2), sharing a religion (1), imports (1/2 per resource), exports (1/2 per resource), common wars (2 per war). Bad relations, war with France, or having a different State Religion will seriously hurt your progress!</English>
+		<French>You get points per turn for good relations (max 3), open borders (1), defensive pact (2), sharing a religion (1), imports (1/2 per resource), exports (1/2 per resource), common wars (2 per war). Bad relations, war with France, or having a different State Religion will seriously hurt your progress!</French>
+		<German>You get points per turn for good relations (max 3), open borders (1), defensive pact (2), sharing a religion (1), imports (1/2 per resource), exports (1/2 per resource), common wars (2 per war). Bad relations, war with France, or having a different State Religion will seriously hurt your progress!</German>
+		<Italian>You get points per turn for good relations (max 3), open borders (1), defensive pact (2), sharing a religion (1), imports (1/2 per resource), exports (1/2 per resource), common wars (2 per war). Bad relations, war with France, or having a different State Religion will seriously hurt your progress!</Italian>
+		<Spanish>You get points per turn for good relations (max 3), open borders (1), defensive pact (2), sharing a religion (1), imports (1/2 per resource), exports (1/2 per resource), common wars (2 per war). Bad relations, war with France, or having a different State Religion will seriously hurt your progress!</Spanish>
+		<Portuguese>You get points per turn for good relations (max 3), open borders (1), defensive pact (2), sharing a religion (1), imports (1/2 per resource), exports (1/2 per resource), common wars (2 per war). Bad relations, war with France, or having a different State Religion will seriously hurt your progress!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_CONTROLLER_OF</Tag>

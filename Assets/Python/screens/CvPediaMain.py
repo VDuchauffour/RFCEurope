@@ -37,7 +37,6 @@ import CvPediaHistory
 import CvPediaProject
 import CvPediaReligion
 import CvPediaCorporation
-
 #import UnitUpgradesGraph	  #[MOD] UnitUpgrades  #Rhye
 
 # globals
@@ -172,7 +171,7 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 			CivilopediaPageTypes.CIVILOPEDIA_PAGE_CIVIC	: self.placeCivics,
 			CivilopediaPageTypes.CIVILOPEDIA_PAGE_PROJECT	: self.placeProjects,
 			CivilopediaPageTypes.CIVILOPEDIA_PAGE_CONCEPT	: self.placeConcepts,
- 			CivilopediaPageTypes.CIVILOPEDIA_PAGE_HINTS	: self.placeHints,
+			CivilopediaPageTypes.CIVILOPEDIA_PAGE_HINTS	: self.placeHints,
 
 			#---------------------- [MOD] UnitUpgrades -----------------------------
 #			CivilopediaPageTypes.CIVILOPEDIA_PAGE_HINTS + 1 : self.placeUpgrades, #Rhye
@@ -188,26 +187,10 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 		# Create a hash (well, a list of lists)
 		# Items are: Original List Order (& therefore Pedia Page Index), New page order, graphic
 		# Painful, but I see no other way.
-		self.linkList = [	[0,0,"TECH"],
+		self.linkList = [
+					[0,0,"TECH"],
 					[1,1,"UNITS"],
 					[2,9,"UNITS"],
-					#Rhye - start
-##					[3,18,"UNITS"],
-##					[4,10,"UNITS"],
-##					[5,2,"BUILDINGS"],
-##					[6,3,"BUILDINGS"],
-##					[7,15,"BUILDINGS"],
-##					[8,4,"TERRAINS"],
-##					[9,5,"TERRAINS"],
-##					[10,6,"TERRAINS"],
-##					[11,7,"TERRAINS"],
-##					[12,11,"CIVS"],
-##					[13,12,"CIVS"],
-##					[14,13,"CIVS"],
-##					[15,14,"CIVS"],
-##					[16,8,"SPECIALISTS"],
-##					[17,16,"HINTS"],
-##					[18,17,"HINTS"],
 					[3,10,"UNITS"],
 					[4,2,"BUILDINGS"],
 					[5,3,"BUILDINGS"],
@@ -218,12 +201,12 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 					[10,7,"TERRAINS"],
 					[11,11,"CIVS"],
 					[12,12,"CIVS"],
-					[13,13,"RELIGIONS"],
-					[14,14,"CORPS"],
-					[15,8,"SPECIALISTS"],
-					[16,15,"HINTS"],
+					[13,15,"CIVS"],
+					[14,13,"RELIGIONS"],
+					[15,14,"CORPS"],
+					[16,8,"SPECIALISTS"],
 					[17,17,"HINTS"],
-					#Rhye - end
+					[18,18,"HINTS"],
 					]
 
 		self.linkListGraphics = {
@@ -262,7 +245,7 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 		self.szCategoryCiv = localText.getText("TXT_KEY_PEDIA_CATEGORY_CIV", ())
 		self.szCategoryLeader = localText.getText("TXT_KEY_PEDIA_CATEGORY_LEADER", ())
 		self.szCategoryReligion = localText.getText("TXT_KEY_PEDIA_CATEGORY_RELIGION", ())
-		self.szCategoryCorporation = localText.getText("TXT_KEY_CONCEPT_CORPORATIONS", ())
+		self.szCategoryCorporation = localText.getText("TXT_KEY_CONCEPT_COMPANIES", ())
 		self.szCategoryCivic = localText.getText("TXT_KEY_PEDIA_CATEGORY_CIVIC", ())
 		self.szCategoryProject = localText.getText("TXT_KEY_PEDIA_CATEGORY_PROJECT", ())
 		self.szCategoryConcept = localText.getText("TXT_KEY_PEDIA_CATEGORY_CONCEPT", ())
@@ -290,7 +273,7 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 					self.szCategoryCivic,
 					self.szCategoryProject,
 					self.szCategoryConcept,
-					self.szCategoryHints, #Rhye
+					self.szCategoryHints,
 #					self.szCategoryUpgrades,		# [MOD] UnitUpgrades
 					]
 
@@ -535,7 +518,6 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 			#Rhye - end
 
 
-
 	def placeConcepts(self):
 
 		tList = self.getSortedList( gc.getNumConceptInfos(), gc.getConceptInfo )
@@ -553,8 +535,8 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 
 
 	def placeHints(self):
-		screen = self.getScreen()
 
+		screen = self.getScreen()
 		screen.deleteWidget("PediaSubList")
 
 		# Lay down some Blooo
@@ -809,7 +791,6 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 		for i in range(iNumWidgets):
 			screen.deleteWidget(self.getNextWidgetName())
 		self.nWidgetCount = 0
-
 
 
 	# Will handle the input for this screen...

@@ -195,7 +195,7 @@ tPolandPot2Norm = [xml.iP_Pomerania,xml.iP_Silesia,xml.iP_Suvalkija]
 
 tGenoaCore = [xml.iP_Liguria]
 tGenoaNorm = [xml.iP_Corsica,xml.iP_Sardinia]
-tGenoaOuter = [xml.iP_Ifriqiya,xml.iP_Constantinople,xml.iP_Crete,xml.iP_Cyprus,xml.iP_Morea]
+tGenoaOuter = [xml.iP_Constantinople,xml.iP_Crete,xml.iP_Cyprus,xml.iP_Morea,xml.iP_Armeniakon,xml.iP_Paphlagonia,xml.iP_Thrakesion]
 tGenoaPot2Core = []
 tGenoaPot2Norm = [xml.iP_Sicily,xml.iP_Malta,xml.iP_Lombardy,xml.iP_Tuscany,xml.iP_Rhodes,xml.iP_Crimea]
 
