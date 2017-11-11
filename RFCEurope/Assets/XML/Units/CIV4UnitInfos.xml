@@ -24944,11 +24944,11 @@
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_HEAVY_CAVALRY</UnitCombatType>
-					<iUnitCombatMod>30</iUnitCombatMod>
+					<iUnitCombatMod>10</iUnitCombatMod>
 				</UnitCombatMod>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_LIGHT_CAVALRY</UnitCombatType>
-					<iUnitCombatMod>30</iUnitCombatMod>
+					<iUnitCombatMod>20</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<UnitCombatCollateralImmunes/>

@@ -223,17 +223,15 @@
 		<English>[H1]Odds and Ends[\H1][PARAGRAPH:1]
 - There are many new terrain types, check the terrain section.
 - Many new resources, check the resource section.
-- Shrines are capped at +20
-- Corporations will consume a maximum of 12 resources.
-- Tech costs increase as you grow
-- There is only one speed due to scripted events</English>
+- Shrines are capped at +20 gold.
+- Tech costs increase as you grow.
+- There is only one speed due to scripted events.</English>
 		<French>[H1]Pr&#233;cisions[\H1]
 [PARAGRAPH:2]
 - La plupart des unit&#233;s ne peuvent ni traverser les jungles ni les d&#233;fricher avant la d&#233;couverte de la biologie.
 - Le marais est une nouvelle case impossible &#224; am&#233;nager.
 - Une nouvelle ressource de luxe, le coton, a &#233;t&#233; ajout&#233;e.
 - Le revenu des sanctuaires est limit&#233; &#224; 20 pi&#232;ces d'or par tour.
-- Les soci&#233;t&#233;s commerciales consomment 12 ressources au maximum.
 - Le co&#251;t des technologies augmente &#224; mesure que vous vous d&#233;veloppez.
 - Les bombes atomiques font bien plus de d&#233;g&#226;ts. Ce sont maintenant des armes mortelles.
 - Il n'y a qu'une seule vitesse de jeu en raison des &#233;v&#233;nements script&#233;s.</French>
@@ -243,7 +241,6 @@
 - Das Moor ist eine neue Gel&#228;ndeart, die nicht entfernt werden kann.
 - Mit der Baumwolle wurde ein neues Luxusgut erg&#228;nzt.
 - Schreine sind auf +20 GPR begrenzt.
-- Kapitalgesellschaften verwerten maximal 12 Ressourcen.
 - Technologiekosten steigen mit dem Zivilisationswachstum an.
 - Atomraketen verursachen mehr Schaden und stellen jetzt t&#246;dliche Waffen dar.
 - Aufgrund der vorbestimmten Ereignisse steht nur eine Geschwindigkeitseinstellung zur Verf&#252;gung.</German>
@@ -253,7 +250,6 @@
 - La palude &#232; una nuova casella e non pu&#242; essere bonificata.
 - &#200; stata aggiunta una nuova materia di lusso, il cotone.
 - I santuari sono limitati a un massimo di +20 OPT.
-- Le corporazioni consumeranno un massimo di 12 risorse.
 - A mano a mano che cresci le tecnologie costano di pi&#249;.
 - Le bombe nucleari fanno molti pi&#249; danni e sono un'arma mortale.
 - C'&#232; una sola velocit&#224;, per via degli eventi programmati.</Italian>
@@ -261,7 +257,6 @@
 - Existen nuevos tipos de terreno; consulta la secci&#243;n terrenos para m&#225;s detalles.
 - Nuevos recursos: consulta la secci&#243;n recursos para m&#225;s detalles.
 - Los santuarios no producen m&#225;s de 20 [ICON_GOLD] por turno.
-- Las corporaciones consumir&#225;n un m&#225;ximo de 12 recursos.
 - Los costes de tecnolog&#237;a aumentan conforme aumenta el n&#250;mero de ciudades que controlas.
 - Como consecuencia de los sucesos programados, solo existe una velocidad.</Spanish>
 		<Portuguese>[H1]Demais Aspectos[\H1]
@@ -269,7 +264,6 @@
 - Há alguns novos tipos de terreno, consulte a secção de terrenos.
 - Novos recursos, consulte a secção de recursos.
 - Santuários são limitados a 20 gold/turno.
-- Corporations consumirão um máximo de 12 recursos.
 - Custo de tecnologia aumenta quando você cresce seu número de cidades.
 - Só há uma velocidade devido a eventos pré-determinados.</Portuguese>
 	</TEXT>
@@ -577,15 +571,15 @@ Or you get a minor bonus to your stability in case you successfully complete one
 
 [BOLD]Cities[\BOLD]
 [TAB]Entering a war: -1
-[TAB]Building a [LINK=BUILDING_COURTHOUSE]courthouse[\LINK]: +1
+[TAB]Building a [LINK=BUILDING_COURTHOUSE]Courthouse[\LINK]: +1
 [TAB]After AI collapse date: -1 stability every 4 turns up to a total of -15 stability
 
 [BOLD]Civics[\BOLD]
-[TAB]Building a [LINK=BUILDING_NIGHT_WATCH]nightwatch[\LINK]: +1
+[TAB]Building a [LINK=BUILDING_NIGHT_WATCH]Nightwatch[\LINK]: +1
 [TAB]Being in anarchy: 0, -1 or -2 for each turn, based on city number (0 for Prussia)
 
 [BOLD]Expansion[\BOLD]
-[TAB]Building a [LINK=BUILDING_CASTLE]castle[\LINK]: +1
+[TAB]Building a [LINK=BUILDING_CASTLE]Castle[\LINK]: +1
 [TAB]Founding a city
 [TAB][TAB]in a core province: +1
 [TAB][TAB]in a contested province: -1
@@ -604,8 +598,7 @@ Or you get a minor bonus to your stability in case you successfully complete one
 [TAB]Building a colony: -2 (-1 with Colonialism)
 
 [BOLD]Economy[\BOLD]
-[TAB]Building a [LINK=BUILDING_MANOR_HOUSE]manor house[\LINK]: +1
-[TAB]Founding a corporation: -2
+[TAB]Building a [LINK=BUILDING_MANOR_HOUSE]Manor House[\LINK]: +1
 [TAB]Researching certain techs: -1
 [TAB][TAB](Feudalism, Guilds, Machinery, Aristocracy, Nationalism,
 [TAB][TAB]Civil Service, Gunpowder, Professional Army, Economics)
@@ -779,7 +772,6 @@ Por ejemplo, en el evento de la reforma: Si eligen permanecer como cat&#243;lico
 
 [BOLD]Econom&#237;a[\BOLD]
 [TAB]Construir una [LINK=BUILDING_MANOR_HOUSE]casa solariega[\LINK] (solar): +1
-[TAB]Fundar una corporaci&#243;n: -2
 [TAB]Desarrollar ciertas tecnolog&#237;as: -1
 [TAB][TAB](Feudalismo, gremios, maquinaria, Aristocracia, Nacionalismo,
 [TAB][TAB]servicio civil, p&#243;lvora, ejercito profesional, econom&#237;a)
@@ -923,7 +915,6 @@ construir uma colônia enquanto usar a civic Colonialismo +1
 
 [BOLD]Economy[\BOLD]
 construir um Solar +1
-fundar uma corporação -2
 desenvolver certas tecnologias -1
 (Feudalismo, Corporações de Of&#237;cio, Pólvora, Exércitos Profissionalizados, Nacionalismo, Serviço Civil, Economia, Maquinaria, Aristocracia)
 

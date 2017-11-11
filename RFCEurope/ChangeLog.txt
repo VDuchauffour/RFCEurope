@@ -13,6 +13,31 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Changes for RFCE 1.6:
+
+	- Separated the amount of additional units on war declaration during civ birth, more for the AI, less for the human player
+	- Added all loading screen hints as a new category in the Civilopedia
+	- Morocco and Novgorod will settle their cities within a little more distance to existing cities
+	- Removed forced (vanilla RFC) soundtrack as the first song on game start
+	- Renamed Corporations into Companies in all remaining places
+	- Removed/updated outdated information about Corporations in the stability guide
+	- Various text fixes and updates in the Civilopedia
+	- Fixed bug where your own vassals could potentially declare war on you on 2nd completed UHV
+	- Other civs' vassals can't declare war on you on 2nd completed UHV (want to keep looking for the master civs)
+	- Tweaked values for the Scottish Auld Alliance UHV: good diplo relations and resource trade add more points, sharing a religion is even more important
+	- Added Liguria to the 2nd German UHV (The Holy Roman Empire)
+	- Ifriqiya is foreign, Thrakesion, Armeniakon and Paphlagonia are contested provinces for Genoa
+	- AI Poland starts with more and better defensive units
+	- Revised starting units for Spain - a couple additional units for the AI, less offensive units for the human player
+	- Human Cordoba starts with a couple horse archers instead of some of it's defensive units, so they can raid further north rather than sit and wait for Spain
+	- Turkopole mercenaries can be hired by Orthodox nations too, increased their number in the region
+	- Varangian Guards and Tagmatas disappear earlier than before, revised their frequency, can't be hired with Islam state religion
+	- Reduced Mamluk Cavalry bonus to +20% against Light Cavalry and +10% against Heavy Cavalry units
+	- Increased starting stability for Venice, slightly decreased it for AI Ottomans
+	- The Ottomans get extra stability on the conquest of Constantinople - "You managed to secure the very core of the once wonderful empire, now your people believe you are clearly destined to dominate the world!"
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Changes for RFCE 1.5:
 (released: 2017.05.05.)
 
@@ -374,7 +399,7 @@ Changes for RFCE 1.5:
 		- Culture in cities is now also taken into account when choosing the city for secession (not the amount, but your cultural percentage, so the nationality of the population there)
 		- So cities with low own culture has more chance to be chosen if there is a secession - my intention with this is to add more chance for your recently acquired cities
 		- Reduced unit chance to stay with the original civ on city secession
-		- Bonuses on small islands without a city are also connected to the trade network if both their improvement and a road are built on the plot
+		- Resources on small islands without a city (but in your territory) are now also connected to the trade network if both their improvement and a road are built on the plot
 		- Enabled coast tiles in a diagonal position from actual seas to become normal coast tiles instead of lakes, representing fjords
 		- Naval units cannot enter lake tiles (neither freshwater nor salt) or forts, but they can enter fjords
 		- Settling on a hamlet improvement results in a free granary in your cities
@@ -1179,7 +1204,7 @@ Changes for RFCE 1.3:
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for RFCE 1.2:
-(no release, SVN only)
+(no separate release, SVN only)
 
 	Stability improvements:
 		- Province stability levels:
@@ -2612,7 +2637,7 @@ Changes for Alpha 11:
 		Settlermaps and warmaps minor updates.
 		Minor hanseatic update
 		New Hanseatic Executive
-		Belgrad moved 1 tile south
+		Belgrade moved 1 tile south
 		Musketeer: 25% vs. gun --> 25% city defence
 		English Longbowmans are now Longbowman with Formation and Drill 1. (was Longbowman with half costs, no 50% vs. heavy infantry and heavy cavalry, with promotion.)
 		Every timber is on dense forest.
@@ -3375,15 +3400,54 @@ Changes for Test Version 2009.02.03.:
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-The first initial test version of RFCE (basically unplayable) appeared at 2008.08.15.
+Changes for Test Version 2008.11.17.:
+
+	Fixed the Hungarian UHVs, now the Free Religion registers and the control territory only counts for Europe.
+	Fixed the Genoa starting Tech bug.
+	Added workers for most civs (except Byzantium).
+	Added diplomacy bonus to Cordoba and the Arabs, that way they are more likely to OB and trade, otherwise with everyone hating them they will have very low Economical Stability.
+	I believe noone can vassalize within 20 turns of spawn. Report if nations still vassalize too easily.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Changes for Test Version 2008.11.15.::
+
+	Norse UHV now requires only ocean tiles to be explored. We should add some ocean tiles to the Mediterranean and the Black Sea.
+	Arabian UP: now temples and state religion spreads to all cities, founded or conquered.
+	Whenever a religion is founded, the holy shrine is build in the holy city (Great Prophets are no longer needed for that function).
+	Many UHVs added, those would be buggy, so please report problems.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Changes for Test Version 2008.11.14.::
+
+	Stability is back, the Economy system has been changed and the Expansion penalties severely reduced. The AI seems to be handling it well enough. For the Economy: emphasize production, food and commerce, work only improved tiles and build Marketplaces and Forges as soon as you can. As of right now, it might be a bit too easy.
+	Hungarian Stronghold now damages units within the city's Fat Cross (not documented, however).
+	Tech Tree is updated (thanks to sedna), as well as some of the graphics.
+	Civs now have tentative starting techs, those are still under consideration.
+	Fixed the bug with cottages not growing under serfdom. Still doesn't display the right growth times, but they do grow as supposed to.
+	Fixed various UHVs that were not registering.
+	Nerfed the Arabian UP, now only State Religion and Temples spread to conquered cities.
+	Fixed a bug with the Burgundian UP, now they get only bonus in culture, not culture and gold.
+	Fixed a bug with the Spanish UP, now espionage bonus points show up in each city.
+	The Viking UHV (as is) requires that all water tiles, including the Russian lakes are revealed. Should it remain this way or should it be changed to something else?
+	Religion spread should be better now, countries tend to keep their corresponding Religions. Catholicism spreads better.
+	Fixed the bug with the independents starting at war with everyone. Now they start at peace.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+The first initial test version of RFCE appeared at 2008.08.15.
 Based on 3Miro's words:
 "Following a week long struggle with the code on all levels, I came up with a test version which we can actually run.
 One can now start the damn thing, select the Byzantines and play. There are no other main RFCE civs present and one cannot even build a settler."
 
-There were a lot of early test versions in the first 4-5 months, but those were still very rudimentary, slowly adding the initial civs with all the necessary things.
-Most RFC mechanics were adapted, and a base for many important RFCE specific stuff appeared as well: Crusades, Reformation, Techs, Colonies, etc.
-I couldn't find any log about these early changes, but it's probably not that relevant.
-By the end of 2008 everything started to get into shape, and we have a complete changelog since 2009 January.
+There were a lot of early "test versions" in the first 4-5 months, but those were still very rudimentary, slowly adding the initial civs with all the necessary things.
+I could only find some of the logs about these early changes, but they are probably not that relevant.
+Slowly most RFC mechanics were adapted, and a base for many important RFCE specific stuff appeared as well: Crusades, Reformation, Civics, Techs, Colonies, etc.
+By the end of 2008 everything started to get into shape, and we have a complete changelog since January 2009.
+The first alpha version was released in June 2009, which can be considered the first playable version of RFCE.
 
 Obviously the mod evolved a lot since, basically everything was improved/revised/changed/optimized in the last years, most of them multiple times.
 Also a lot of new additions were made, including entirely new civs and mechanics, and the mod is still in an active development.

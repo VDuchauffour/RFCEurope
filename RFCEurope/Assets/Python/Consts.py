@@ -525,7 +525,7 @@ tStabilityBonusAI = (
 4, #Arabia
 3, #Bulgaria
 2, #Cordoba
-4, #Venice
+6, #Venice
 0, #Burgundy
 0, #Germany
 3, #Novgorod
@@ -545,7 +545,7 @@ tStabilityBonusAI = (
 3, #Prussia
 0, #Lithuania
 4, #Austria
-10, #Turkey
+8, #Turkey
 0, #Moscow
 0, #Dutch
 )

@@ -603,6 +603,7 @@ class RiseAndFall:
 
 	def onCityAcquired(self, owner, iPlayer, city, bConquest, bTrade):
 		self.pm.onCityAcquired(owner, iPlayer, city, bConquest, bTrade)
+		# Constantinople -> Istanbul
 		if iPlayer == iTurkey:
 			cityList = utils.getCityList(iPlayer)
 			if (city.getX(), city.getY()) == tCapitals[iByzantium]: # Constantinople (81,24)
@@ -612,6 +613,10 @@ class RiseAndFall:
 				city.setHasRealBuilding(xml.iPalace, True)
 				if pTurkey.getStateReligion() == xml.iIslam:
 					city.setHasReligion(xml.iIslam, True, True, False)
+				# some stability boost and flavour message
+				pTurkey.changeStabilityBase( con.iCathegoryExpansion, 6 )
+				if utils.getHumanID() == iPlayer:
+					CyInterface().addMessage(iPlayer, True, con.iDuration, CyTranslator().getText("TXT_KEY_GLORY_ON_CONQUEST", ()), "", 0, "", ColorTypes(con.iGreen), -1, -1, True, True)
 
 			# Absinthe: Edirne becomes capital if conquered before Constantinople
 			else:
@@ -1079,7 +1084,7 @@ class RiseAndFall:
 
 			print ("SECESSION", gc.getPlayer(iPlayer).getCivilizationAdjective(0), sCityName, "Stability:", iStability)
 			# Absinthe: loosing a city to secession/revolt gives a small boost to stability, to avoid a city-revolting chain reaction
-			pPlayer.changeStabilityBase( con.iCathegoryExpansion, 2 )
+			pPlayer.changeStabilityBase( con.iCathegoryExpansion, 1 )
 			# Absinthe: AI declares war on the indy city right away
 			teamPlayer = gc.getTeam( pPlayer.getTeam() )
 			teamPlayer.declareWar(iNewCiv, False, WarPlanTypes.WARPLAN_LIMITED)
@@ -2058,58 +2063,115 @@ class RiseAndFall:
 
 	def createAdditionalUnits( self, iCiv, tPlot ):
 		# additional starting units if someone declares war on the civ during birth
-		if iCiv == iArabia:
-			utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 4)
-		elif iCiv == iBulgaria:
-			utils.makeUnit(xml.iBulgarianKonnik, iCiv, tPlot, 2)
-		elif iCiv == iCordoba:
-			utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
-		elif iCiv == iVenecia:
-			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
-		elif iCiv == iBurgundy:
-			utils.makeUnit(xml.iLancer, iCiv, tPlot, 2)
-		elif iCiv == iGermany:
-			utils.makeUnit(xml.iLancer, iCiv, tPlot, 2)
-		elif iCiv == iNovgorod:
-			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
-		elif iCiv == iNorway:
-			utils.makeUnit(xml.iVikingBeserker, iCiv, tPlot, 4)
-		elif iCiv == iKiev:
-			utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 3)
-		elif iCiv == iHungary:
-			utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 4)
-		elif iCiv == iSpain:
-			utils.makeUnit(xml.iLancer, iCiv, tPlot, 2)
-		elif iCiv == iDenmark:
-			utils.makeUnit(xml.iDenmarkHuskarl, iCiv, tPlot, 3)
-		elif iCiv == iScotland:
-			utils.makeUnit(xml.iAxeman, iCiv, tPlot, 3)
-		elif iCiv == iPoland:
-			utils.makeUnit(xml.iLancer, iCiv, tPlot, 3)
-		elif iCiv == iGenoa:
-			utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 2)
-		elif iCiv == iMorocco:
-			utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 3)
-		elif iCiv == iEngland:
-			utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 3)
-		elif iCiv == iPortugal:
-			utils.makeUnit(xml.iPortugalFootKnight, iCiv, tPlot, 3)
-		elif iCiv == iAragon:
-			utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 4)
-		elif iCiv == iSweden:
-			utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 3)
-		elif iCiv == iPrussia:
-			utils.makeUnit(xml.iTeutonic, iCiv, tPlot, 3)
-		elif iCiv == iLithuania:
-			utils.makeUnit(xml.iLithuanianBajoras, iCiv, tPlot, 2)
-		elif iCiv == iAustria:
-			utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 3)
-		elif iCiv == iTurkey:
-			utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 3)
-		elif iCiv == iMoscow:
-			utils.makeUnit(xml.iMoscowBoyar, iCiv, tPlot, 2)
-		elif iCiv == iDutch:
-			utils.makeUnit(xml.iNetherlandsGrenadier, iCiv, tPlot, 2)
+		iHuman = utils.getHumanID()
+		# significant number of units for the AI
+		if iCiv != iHuman:
+			if iCiv == iArabia:
+				utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 4)
+			elif iCiv == iBulgaria:
+				utils.makeUnit(xml.iBulgarianKonnik, iCiv, tPlot, 2)
+			elif iCiv == iCordoba:
+				utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
+			elif iCiv == iVenecia:
+				utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
+			elif iCiv == iBurgundy:
+				utils.makeUnit(xml.iLancer, iCiv, tPlot, 3)
+			elif iCiv == iGermany:
+				utils.makeUnit(xml.iLancer, iCiv, tPlot, 3)
+			elif iCiv == iNovgorod:
+				utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
+			elif iCiv == iNorway:
+				utils.makeUnit(xml.iVikingBeserker, iCiv, tPlot, 3)
+			elif iCiv == iKiev:
+				utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 4)
+			elif iCiv == iHungary:
+				utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 4)
+			elif iCiv == iSpain:
+				utils.makeUnit(xml.iLancer, iCiv, tPlot, 4)
+			elif iCiv == iDenmark:
+				utils.makeUnit(xml.iDenmarkHuskarl, iCiv, tPlot, 3)
+			elif iCiv == iScotland:
+				utils.makeUnit(xml.iAxeman, iCiv, tPlot, 4)
+			elif iCiv == iPoland:
+				utils.makeUnit(xml.iLancer, iCiv, tPlot, 3)
+			elif iCiv == iGenoa:
+				utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 3)
+			elif iCiv == iMorocco:
+				utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 2)
+			elif iCiv == iEngland:
+				utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 3)
+			elif iCiv == iPortugal:
+				utils.makeUnit(xml.iPortugalFootKnight, iCiv, tPlot, 4)
+			elif iCiv == iAragon:
+				utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 4)
+			elif iCiv == iSweden:
+				utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 4)
+			elif iCiv == iPrussia:
+				utils.makeUnit(xml.iTeutonic, iCiv, tPlot, 3)
+			elif iCiv == iLithuania:
+				utils.makeUnit(xml.iLithuanianBajoras, iCiv, tPlot, 3)
+			elif iCiv == iAustria:
+				utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 4)
+			elif iCiv == iTurkey:
+				utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 3)
+			elif iCiv == iMoscow:
+				utils.makeUnit(xml.iMoscowBoyar, iCiv, tPlot, 3)
+			elif iCiv == iDutch:
+				utils.makeUnit(xml.iNetherlandsGrenadier, iCiv, tPlot, 4)
+		# less for the human player
+		else:
+			if iCiv == iArabia:
+				utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 2)
+			elif iCiv == iBulgaria:
+				utils.makeUnit(xml.iBulgarianKonnik, iCiv, tPlot, 1)
+			elif iCiv == iCordoba:
+				utils.makeUnit(xml.iAxeman, iCiv, tPlot, 1)
+			elif iCiv == iVenecia:
+				utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
+			elif iCiv == iBurgundy:
+				utils.makeUnit(xml.iLancer, iCiv, tPlot, 1)
+			elif iCiv == iGermany:
+				utils.makeUnit(xml.iLancer, iCiv, tPlot, 1)
+			elif iCiv == iNovgorod:
+				utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 1)
+			elif iCiv == iNorway:
+				utils.makeUnit(xml.iVikingBeserker, iCiv, tPlot, 1)
+			elif iCiv == iKiev:
+				utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 2)
+			elif iCiv == iHungary:
+				utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 2)
+			elif iCiv == iSpain:
+				utils.makeUnit(xml.iLancer, iCiv, tPlot, 1)
+			elif iCiv == iDenmark:
+				utils.makeUnit(xml.iDenmarkHuskarl, iCiv, tPlot, 1)
+			elif iCiv == iScotland:
+				utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
+			elif iCiv == iPoland:
+				utils.makeUnit(xml.iLancer, iCiv, tPlot, 1)
+			elif iCiv == iGenoa:
+				utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 1)
+			elif iCiv == iMorocco:
+				utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 1)
+			elif iCiv == iEngland:
+				utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 1)
+			elif iCiv == iPortugal:
+				utils.makeUnit(xml.iPortugalFootKnight, iCiv, tPlot, 1)
+			elif iCiv == iAragon:
+				utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 2)
+			elif iCiv == iSweden:
+				utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 1)
+			elif iCiv == iPrussia:
+				utils.makeUnit(xml.iTeutonic, iCiv, tPlot, 1)
+			elif iCiv == iLithuania:
+				utils.makeUnit(xml.iLithuanianBajoras, iCiv, tPlot, 1)
+			elif iCiv == iAustria:
+				utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 2)
+			elif iCiv == iTurkey:
+				utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 1)
+			elif iCiv == iMoscow:
+				utils.makeUnit(xml.iMoscowBoyar, iCiv, tPlot, 1)
+			elif iCiv == iDutch:
+				utils.makeUnit(xml.iNetherlandsGrenadier, iCiv, tPlot, 2)
 
 
 	def createStartingUnits( self, iCiv, tPlot ):
@@ -2139,7 +2201,7 @@ class RiseAndFall:
 				utils.makeUnit(xml.iSpearman, iCiv, tPlot, 2)
 				utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
 		elif iCiv == iCordoba:
-			utils.makeUnit(xml.iArcher, iCiv, tPlot, 4)
+			utils.makeUnit(xml.iArcher, iCiv, tPlot, 3)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
 			utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iIslamicMissionary, iCiv, tPlot, 3)
@@ -2147,7 +2209,11 @@ class RiseAndFall:
 			if iCiv != iHuman:
 				utils.makeUnit(xml.iArcher, iCiv, tPlot, 4)
 				utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
+				utils.makeUnit(xml.iAxeman, iCiv, tPlot, 1)
 				utils.makeUnit(xml.iIslamicMissionary, iCiv, tPlot, 2)
+			# so the human player can raid further north rather than sit and wait for Spain
+			if iCiv == iHuman:
+				utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 3)
 		elif (iCiv == iVenecia):
 			utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
@@ -2223,12 +2289,17 @@ class RiseAndFall:
 				utils.makeUnit(xml.iSpearman, iCiv, tPlot, 2)
 				utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
 		elif iCiv == iSpain:
-			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
+			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 4)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
 			utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
-			utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 3)
-			utils.makeUnit(xml.iLancer, iCiv, tPlot, 3)
+			utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 2)
+			utils.makeUnit(xml.iLancer, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iCatapult, iCiv, tPlot, 1)
+			# additional units for the AI
+			if iCiv != iHuman:
+				utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 1)
+				utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 2)
+				utils.makeUnit(xml.iLancer, iCiv, tPlot, 2)
 		elif iCiv == iDenmark:
 			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
@@ -2255,7 +2326,7 @@ class RiseAndFall:
 			utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
 			# additional units for the AI
 			if iCiv != iHuman:
-				utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
+				utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 4)
 				utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
 		elif iCiv == iGenoa:
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)

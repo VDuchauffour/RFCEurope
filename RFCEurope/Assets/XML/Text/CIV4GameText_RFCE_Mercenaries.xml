@@ -472,6 +472,15 @@
 		<Portuguese>Egyptian Mercenary</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MERC_TURKISH</Tag>
+		<English>Turkish Mercenary</English>
+		<French>Égyptienne Mercenaire</French>
+		<German>&#196;gyptischen S&#246;ldner</German>
+		<Italian>Egiziano Mercenario</Italian>
+		<Spanish>Egipto Mercenario</Spanish>
+		<Portuguese>Egyptian Mercenary</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MERC_BOHEMIAN</Tag>
 		<English>Bohemian Mercenary</English>
 		<French>Bohemian Mercenary</French>
