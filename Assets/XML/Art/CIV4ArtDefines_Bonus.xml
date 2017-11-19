@@ -12,7 +12,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Coal/Coal.nif</NIF>
 			<KFM>Art/Terrain/Resources/Coal/Coal.kfm</KFM>
-			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,4,12</Button>
+			<Button>Art/Interface/Buttons/Resources/coal.dds</Button>
 			<FontButtonIndex>1</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -40,7 +40,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Iron/Iron.nif</NIF>
 			<KFM>Art/Terrain/Resources/Iron/Iron.kfm</KFM>
-			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,6,13</Button>
+			<Button>Art/Interface/Buttons/Resources/iron.dds</Button>
 			<FontButtonIndex>4</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -114,7 +114,7 @@
 			<NIF>Art/Terrain/Resources/Walrus/Sea_Lions.nif</NIF>
 			<KFM>Art/Terrain/Resources/Walrus/Sea_Lions.kfm</KFM>
 			<SHADERNIF>Art/Terrain/Resources/Walrus/Sea_Lions_fx.nif</SHADERNIF>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,5,1</Button>
+			<Button>Art/Interface/Buttons/Resources/ivory.dds</Button>
 			<FontButtonIndex>49</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -235,7 +235,7 @@
 			<NIF>Art/Terrain/Resources/Fish/Fish.nif</NIF>
 			<KFM>Art/Terrain/Resources/Fish/Fish.kfm</KFM>
 			<SHADERNIF>Art/Terrain/Resources/Fish/Fish_FX.nif</SHADERNIF>
-			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,4,15</Button>
+			<Button>Art/Interface/Buttons/Resources/fish.dds</Button>
 			<FontButtonIndex>15</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -254,7 +254,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Rice/Rice.nif</NIF>
 			<KFM>Art/Terrain/Resources/Rice/Rice.kfm</KFM>
-			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,1,14</Button>
+			<Button>Art/Interface/Buttons/Resources/rice.dds</Button>
 			<FontButtonIndex>17</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -381,7 +381,7 @@
 			<fInterfaceScale>1.5</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/ZuluIkhanda/Ikhanda.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,2,2</Button>
+			<Button>Art/Interface/Buttons/Resources/slaves.dds</Button>
 			<FontButtonIndex>44</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -390,7 +390,7 @@
 			<fInterfaceScale>1.3</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Tea/Tea.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,8,1</Button>
+			<Button>Art/Interface/Buttons/Resources/tea.dds</Button>
 			<FontButtonIndex>45</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -399,7 +399,7 @@
 			<fInterfaceScale>1.6</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Tobacco/tobacco.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,6,1</Button>
+			<Button>Art/Interface/Buttons/Resources/tobacco.dds</Button>
 			<FontButtonIndex>46</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>

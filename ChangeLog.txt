@@ -17,7 +17,7 @@ Changes for RFCE 1.6:
 
 	- Separated the amount of additional units on war declaration during civ birth, more for the AI, less for the human player
 	- Added all loading screen hints as a new category in the Civilopedia
-	- Morocco and Novgorod will settle their cities within a little more distance to existing cities
+	- Morocco and Novgorod will settle their cities in a little more distance to existing cities
 	- Removed forced (vanilla RFC) soundtrack as the first song on game start
 	- Renamed Corporations into Companies in all remaining places
 	- Removed/updated outdated information about Corporations in the stability guide
@@ -34,7 +34,10 @@ Changes for RFCE 1.6:
 	- Varangian Guards and Tagmatas disappear earlier than before, revised their frequency, can't be hired with Islam state religion
 	- Reduced Mamluk Cavalry bonus to +20% against Light Cavalry and +10% against Heavy Cavalry units
 	- Increased starting stability for Venice, slightly decreased it for AI Ottomans
-	- The Ottomans get extra stability on the conquest of Constantinople - "You managed to secure the very core of the once wonderful empire, now your people believe you are clearly destined to dominate the world!"
+	- The Ottomans get extra stability and flavour event text on the conquest of Constantinople
+	- Ivory resource and it's art now correctly represents both Walrus and Elephant
+	- New gamefont icon for Honey, Barley, Apple, Copper, Wine, Tea, Tobacco, Marble, Ivory, Slaves, Fish, Iron, Coal
+	- New Civilopedia and map icon for Copper, Tea, Tobacco, Ivory, Rice, Fish, Iron, Coal, Slaves
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -165,15 +168,15 @@ Changes for RFCE 1.5:
 		- Further randomized the unit selection method for Crusades, also now much less Archer-type units and somewhat less Company UUs leave for Crusades (proportionally)
 
 	Terrain updates:
-		- New base terrain: Semidesert - 1 production, +1 commerce near rivers, city founding only possible near fresh water
-		- New base terrain: Salt Lake - 1 food, 3 commerce, +1 food with Harbor, +10% defence
-		- New base terrain: Fresh Water Lake - 2 food, 2 commerce, +1 food with Harbor, +10% defence
-		- New terrain feature: Islands (2 variety, green and rocky) - +1 production, +1 commerce, +10% defence
-		- New terrain feature: Reefs - costs 4 movement points, 25% damage if naval units end their turn on it
+		- New base terrain: Semidesert: 1 production, +1 commerce near rivers, city founding only possible near fresh water
+		- New base terrain: Salt Lake: 1 food, 3 commerce, +1 food with Harbor, +10% defence
+		- New base terrain: Fresh Water Lake: 2 food, 2 commerce, +1 food with Harbor, +10% defence
+		- New terrain feature: Islands (2 variety, green and rocky): +1 production, +1 commerce, +10% defence
+		- New terrain feature: Reefs: costs 4 movement points, 25% damage if naval units end their turn on it
 		- Renamed Ice base terrain to Permafrost / Permanent Snow, Ice terrain feature to Sea Ice
 		- You can no longer found cities on coastal Desert tiles, only near fresh water (same as for Semidesert)
 		- Forts are buildable on Semidesert, Tundra, Desert and Snow tiles too
-		- Semidesert, Wetland and Tundra have +25 build time modifier, Desert and Permafrost have +50%
+		- Semidesert, Wetland and Tundra have +25% build time modifier, Desert and Permafrost have +50%
 		- New button for Moorland, Dense Forest, Permanent Snow, Marsh, Tundra
 		- Cottages can be built on Moorland, Semidesert and Tundra tiles too, but fresh water doesn't enable them automatically
 		- Cottages no longer need at least 1 base food on the tile, so they can be built on most Hills
