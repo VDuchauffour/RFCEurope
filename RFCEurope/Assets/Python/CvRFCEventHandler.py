@@ -316,6 +316,12 @@ class CvRFCEventHandler:
 					self.rel.spreadReligion( tCity, xml.iCatholicism )
 				self.crusade.success( playerType )
 
+			# Absinthe: acquiring Jerusalem, with any faith (but not Paganism) -> chance to find a relic
+			#			maybe only after a specific date? maybe only if there isn't any ongoing Crusade?
+			if gc.getGame().getSorenRandNum(100, 'Relic found') < 15:
+				if pPlayer.getStateReligion() in range(xml.iNumReligions):
+					pPlayer.initUnit( xml.iHolyRelic, con.tJerusalem[0], con.tJerusalem[1], UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
+
 		# Sedna17: code for Krak des Chevaliers
 		if bConquest:
 			iNewOwner = city.getOwner()
@@ -501,7 +507,7 @@ class CvRFCEventHandler:
 		iOwner = city.getOwner()
 		self.vic.onBuildingBuilt(city.getOwner(), iBuildingType)
 		if city.getOwner() < con.iNumPlayers:
-			self.sta.onBuildingBuilt(iOwner, iBuildingType, city)
+			self.sta.onBuildingBuilt(iOwner, iBuildingType)
 		# 3Miro: Faith
 		self.rel.onBuildingBuild( iOwner, iBuildingType )
 

@@ -1317,16 +1317,6 @@
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CATHOLIC_CHAPEL</Type>
-			<LSystem>LSYSTEM_1x1</LSystem>
-			<bAnimated>1</bAnimated>
-			<fScale>1.68</fScale>
-			<fInterfaceScale>0.54</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Catholic_Belfry/christian temple.nif</NIF>
-			<KFM/>
-			<Button>,-,Art/Interface/Buttons/Buildings_Atlas.dds,8,13</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CATHOLIC_RELIQUARY</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>1</bAnimated>
 			<fScale>0.34</fScale>
@@ -1367,16 +1357,6 @@
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ORTHODOX_CHAPEL</Type>
-			<LSystem>LSYSTEM_1x1</LSystem>
-			<bAnimated>1</bAnimated>
-			<fScale>1.14</fScale>
-			<fInterfaceScale>0.56</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Orthodox_Belfry/stgregorychurch.nif</NIF>
-			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,3,5</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ORTHODOX_RELIQUARY</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>1</bAnimated>
 			<fScale>1.16</fScale>
@@ -1424,6 +1404,16 @@
 			<NIF>Art/Structures/Wonders/Hagia_Sophia/hagiasophia_minarets.nif</NIF>
 			<KFM/>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,4,6</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_RELIQUARY</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.68</fScale>
+			<fInterfaceScale>0.54</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Catholic_Belfry/christian temple.nif</NIF>
+			<KFM/>
+			<Button>,-,Art/Interface/Buttons/rfce_atlas_buildings.dds,5,6</Button>
 		</BuildingArtInfo>
 		<!-- Religious Buildings -->
 		<!-- Corporations -->

@@ -7,6 +7,15 @@
 <Civ4ArtDefines xmlns="x-schema:CIV4ArtDefinesSchema.xml">
 	<BonusArtInfos>
 		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_HEMP</Type>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Terrain/Resources/Hemp/cnq.nif</NIF>
+			<KFM>Art/Terrain/Resources/Hemp/cnq.kfm</KFM>
+			<Button>Art/Interface/Buttons/Resources/hemp.dds</Button>
+			<FontButtonIndex>0</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_COAL</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -53,6 +62,15 @@
 			<FontButtonIndex>5</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_CAMEL</Type>
+			<fScale>1.45</fScale>
+			<fInterfaceScale>0.9</fInterfaceScale>
+			<NIF>Art/Terrain/Resources/Camel/camel.nif</NIF>
+			<KFM>Art/Terrain/Resources/Deer/Deer.kfm</KFM>
+			<Button>Art/Interface/Buttons/Resources/camel.dds</Button>
+			<FontButtonIndex>6</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_STONE</Type>
 			<fScale>0.7</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -62,114 +80,13 @@
 			<FontButtonIndex>7</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_DYE</Type>
-			<fScale>1.0</fScale>
+			<Type>ART_DEF_BONUS_DATES</Type>
+			<fScale>2.1</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Terrain/Resources/Dye/Dye.nif</NIF>
-			<KFM>Art/Terrain/Resources/Dye/Dye.kfm</KFM>
-			<Button>Art/Interface/Buttons/Resources/dye.dds</Button>
-			<FontButtonIndex>20</FontButtonIndex>
-		</BonusArtInfo>
-		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_FUR</Type>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Terrain/Resources/Fur/Fur.nif</NIF>
-			<KFM>Art/Terrain/Resources/Fur/Fur.kfm</KFM>
-			<SHADERNIF>Art/Terrain/Resources/Fur/Fur_FX.nif</SHADERNIF>
-			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,1,13</Button>
-			<FontButtonIndex>21</FontButtonIndex>
-		</BonusArtInfo>
-		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_GEMS</Type>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Terrain/Resources/Gems/Gems.nif</NIF>
-			<KFM>Art/Terrain/Resources/Gems/Gems.kfm</KFM>
-			<Button>Art/Interface/Buttons/Resources/gems.dds</Button>
-			<FontButtonIndex>22</FontButtonIndex>
-		</BonusArtInfo>
-		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_GOLD</Type>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Terrain/Resources/Gold/Gold.nif</NIF>
-			<KFM>Art/Terrain/Resources/Gold/Gold.KFM</KFM>
-			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,3,13</Button>
-			<FontButtonIndex>23</FontButtonIndex>
-		</BonusArtInfo>
-		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_INCENSE</Type>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Terrain/Resources/Incense/Incense.nif</NIF>
-			<KFM>Art/Terrain/Resources/Incense/Incense.kfm</KFM>
-			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,5,13</Button>
-			<FontButtonIndex>24</FontButtonIndex>
-		</BonusArtInfo>
-		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_IVORY</Type>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Terrain/Resources/Walrus/Sea_Lions.nif</NIF>
-			<KFM>Art/Terrain/Resources/Walrus/Sea_Lions.kfm</KFM>
-			<SHADERNIF>Art/Terrain/Resources/Walrus/Sea_Lions_fx.nif</SHADERNIF>
-			<Button>Art/Interface/Buttons/Resources/ivory.dds</Button>
-			<FontButtonIndex>49</FontButtonIndex>
-		</BonusArtInfo>
-		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_SILK</Type>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>0.8</fInterfaceScale>
-			<NIF>Art/Terrain/Resources/Silk/Silk.nif</NIF>
+			<NIF>Art/Terrain/Resources/Dates/date.nif</NIF>
 			<KFM/>
-			<Button>Art/Interface/Buttons/Resources/silk.dds</Button>
-			<FontButtonIndex>26</FontButtonIndex>
-		</BonusArtInfo>
-		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_SILVER</Type>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>.8</fInterfaceScale>
-			<NIF>Art/Terrain/Resources/Silver/Silver.nif</NIF>
-			<KFM>Art/Terrain/Resources/Silver/Silver.kfm</KFM>
-			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,4,14</Button>
-			<FontButtonIndex>27</FontButtonIndex>
-		</BonusArtInfo>
-		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_SPICES</Type>
-			<fScale>0.5</fScale>
-			<fInterfaceScale>1.6</fInterfaceScale>
-			<NIF>Art/Terrain/Resources/Spices/Spices.nif</NIF>
-			<KFM>Art/Terrain/Resources/Spices/Spices.kfm</KFM>
-			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,5,14</Button>
-			<FontButtonIndex>28</FontButtonIndex>
-		</BonusArtInfo>
-		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_SUGAR</Type>
-			<fScale>0.5</fScale>
-			<fInterfaceScale>1.3</fInterfaceScale>
-			<NIF>Art/Terrain/Resources/Sugar/Sugar.nif</NIF>
-			<KFM>Art/Terrain/Resources/Sugar/Sugar.kfm</KFM>
-			<Button>Art/Interface/Buttons/Resources/sugar.dds</Button>
-			<FontButtonIndex>29</FontButtonIndex>
-		</BonusArtInfo>
-		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_WINE</Type>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Terrain/Resources/Wine/Wine.nif</NIF>
-			<KFM>Art/Terrain/Resources/Wine/Wine.kfm</KFM>
-			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,3,16</Button>
-			<FontButtonIndex>30</FontButtonIndex>
-		</BonusArtInfo>
-		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_WHALE</Type>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Terrain/Resources/Whale/Whale.nif</NIF>
-			<KFM>Art/Terrain/Resources/Whale/Whale.kfm</KFM>
-			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,1,16</Button>
-			<FontButtonIndex>31</FontButtonIndex>
+			<Button>Art/Interface/Buttons/Resources/dates.dds</Button>
+			<FontButtonIndex>8</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_BANANA</Type>
@@ -277,6 +194,124 @@
 			<FontButtonIndex>19</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_DYE</Type>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Terrain/Resources/Dye/Dye.nif</NIF>
+			<KFM>Art/Terrain/Resources/Dye/Dye.kfm</KFM>
+			<Button>Art/Interface/Buttons/Resources/dye.dds</Button>
+			<FontButtonIndex>20</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_FUR</Type>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Terrain/Resources/Fur/Fur.nif</NIF>
+			<KFM>Art/Terrain/Resources/Fur/Fur.kfm</KFM>
+			<SHADERNIF>Art/Terrain/Resources/Fur/Fur_FX.nif</SHADERNIF>
+			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,1,13</Button>
+			<FontButtonIndex>21</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_GEMS</Type>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Terrain/Resources/Gems/Gems.nif</NIF>
+			<KFM>Art/Terrain/Resources/Gems/Gems.kfm</KFM>
+			<Button>Art/Interface/Buttons/Resources/gems.dds</Button>
+			<FontButtonIndex>22</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_GOLD</Type>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Terrain/Resources/Gold/Gold.nif</NIF>
+			<KFM>Art/Terrain/Resources/Gold/Gold.KFM</KFM>
+			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,3,13</Button>
+			<FontButtonIndex>23</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_INCENSE</Type>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Terrain/Resources/Incense/Incense.nif</NIF>
+			<KFM>Art/Terrain/Resources/Incense/Incense.kfm</KFM>
+			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,5,13</Button>
+			<FontButtonIndex>24</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_OPIUM</Type>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>0.8</fInterfaceScale>
+			<NIF>Art/Terrain/Resources/Opium/Wheat.nif</NIF>
+			<KFM>Art/Terrain/Resources/Opium/Wheat.kfm</KFM>
+			<Button>Art/Interface/Buttons/Resources/opium.dds</Button>
+			<FontButtonIndex>25</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_SILK</Type>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>0.8</fInterfaceScale>
+			<NIF>Art/Terrain/Resources/Silk/Silk.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Resources/silk.dds</Button>
+			<FontButtonIndex>26</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_SILVER</Type>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>.8</fInterfaceScale>
+			<NIF>Art/Terrain/Resources/Silver/Silver.nif</NIF>
+			<KFM>Art/Terrain/Resources/Silver/Silver.kfm</KFM>
+			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,4,14</Button>
+			<FontButtonIndex>27</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_SPICES</Type>
+			<fScale>0.5</fScale>
+			<fInterfaceScale>1.6</fInterfaceScale>
+			<NIF>Art/Terrain/Resources/Spices/Spices.nif</NIF>
+			<KFM>Art/Terrain/Resources/Spices/Spices.kfm</KFM>
+			<Button>Art/Interface/Buttons/Resources/spices.dds</Button>
+			<FontButtonIndex>28</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_SUGAR</Type>
+			<fScale>0.5</fScale>
+			<fInterfaceScale>1.3</fInterfaceScale>
+			<NIF>Art/Terrain/Resources/Sugar/Sugar.nif</NIF>
+			<KFM>Art/Terrain/Resources/Sugar/Sugar.kfm</KFM>
+			<Button>Art/Interface/Buttons/Resources/sugar.dds</Button>
+			<FontButtonIndex>29</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_WINE</Type>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Terrain/Resources/Wine/Wine.nif</NIF>
+			<KFM>Art/Terrain/Resources/Wine/Wine.kfm</KFM>
+			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,3,16</Button>
+			<FontButtonIndex>30</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_WHALE</Type>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Terrain/Resources/Whale/Whale.nif</NIF>
+			<KFM>Art/Terrain/Resources/Whale/Whale.kfm</KFM>
+			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,1,16</Button>
+			<FontButtonIndex>31</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_CITRUS</Type>
+			<fScale>0.8</fScale>
+			<fInterfaceScale>0.8</fInterfaceScale>
+			<NIF>Art/Terrain/Resources/Lemon/lemqes.nif</NIF>
+			<KFM>Art/Terrain/Resources/Lemon/lemqes.kfm</KFM>
+			<Button>Art/Interface/Buttons/Resources/citrus.dds</Button>
+			<FontButtonIndex>32</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_OLIVES</Type>
 			<fScale>0.5</fScale>
 			<fInterfaceScale>1.6</fInterfaceScale>
@@ -286,12 +321,12 @@
 			<FontButtonIndex>33</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_RELIC</Type>
-			<fScale>0.1</fScale>
-			<fInterfaceScale>1.6</fInterfaceScale>
-			<NIF>Art/Terrain/Resources/Oil/Oil.nif</NIF>
-			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_terrain.dds,4,2</Button>
+			<Type>ART_DEF_BONUS_COCOA</Type>
+			<fScale>0.7</fScale>
+			<fInterfaceScale>1.5</fInterfaceScale>
+			<NIF>Art/Terrain/Resources/Cocoa/spices.nif</NIF>
+			<KFM>Art/Terrain/Resources/Cocoa/spices.kfm</KFM>
+			<Button>Art/Interface/Buttons/Resources/cocoa.dds</Button>
 			<FontButtonIndex>34</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
@@ -419,6 +454,16 @@
 			<KFM/>
 			<Button>Art/Interface/Buttons/Resources/amber.dds</Button>
 			<FontButtonIndex>48</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_IVORY</Type>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Terrain/Resources/Walrus/Sea_Lions.nif</NIF>
+			<KFM>Art/Terrain/Resources/Walrus/Sea_Lions.kfm</KFM>
+			<SHADERNIF>Art/Terrain/Resources/Walrus/Sea_Lions_fx.nif</SHADERNIF>
+			<Button>Art/Interface/Buttons/Resources/ivory.dds</Button>
+			<FontButtonIndex>49</FontButtonIndex>
 		</BonusArtInfo>
 	</BonusArtInfos>
 </Civ4ArtDefines>

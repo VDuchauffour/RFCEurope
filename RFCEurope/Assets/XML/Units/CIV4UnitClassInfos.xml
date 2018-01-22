@@ -554,10 +554,19 @@
 			<Type>UNITCLASS_PROSECUTOR</Type>
 			<Description>TXT_KEY_UNIT_PROSECUTOR</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>3</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_PROSECUTOR</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>UNITCLASS_RELIC</Type>
+			<Description>TXT_KEY_UNIT_RELIC</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>UNIT_RELIC</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_PROPHET</Type>

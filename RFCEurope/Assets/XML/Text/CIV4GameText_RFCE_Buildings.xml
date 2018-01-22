@@ -965,15 +965,6 @@
 		<Portuguese>Catedral Cat&#243;lica</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CATHOLIC_RELIQUARY</Tag>
-		<English>Catholic Reliquary</English>
-		<French>Relique Catholique</French>
-		<German>Katholischer Reliquienschrein</German>
-		<Italian>Reliquiario Cattolico</Italian>
-		<Spanish>Relicario cat&#243;lico</Spanish>
-		<Portuguese>Relic&#225;rio Cat&#243;lico</Portuguese>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_SCHOOL</Tag>
 		<English>Catholic Cathedral School</English>
 		<French>Grande Ecole Catholique</French>
@@ -1035,15 +1026,6 @@
 		<Italian>Cattedrale Ortodossa</Italian>
 		<Spanish>Catedral ortodoxa</Spanish>
 		<Portuguese>Catedral Ortodoxa</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ORTHODOX_RELIQUARY</Tag>
-		<English>Orthodox Reliquary</English>
-		<French>Relique Orthodoxe</French>
-		<German>Orthodoxer Reliquienschrein</German>
-		<Italian>Reliquario Ortodosso</Italian>
-		<Spanish>Relicario ortodoxo</Spanish>
-		<Portuguese>Relicário Ortodoxo</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORTHODOX_SCHOOL</Tag>
@@ -1127,6 +1109,33 @@
 		<Portuguese>Seminário Protestante</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RELIQUARY</Tag>
+		<English>Reliquary</English>
+		<French>Reliquaire</French>
+		<German>Reliquienschrein</German>
+		<Italian>Reliquiario</Italian>
+		<Spanish>Relicario</Spanish>
+		<Portuguese>Relic&#225;rio</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RELIQUARY_PEDIA</Tag>
+		<English>[TAB]A reliquary is a container for relics. These may be the physical remains of saints, such as bones, pieces of clothing, or some object associated with saints or other religious figures.</English>
+		<French>.</French>
+		<German>[TAB]Eine Reliquie (lateinisch Überbleibsel) ist ein Gegenstand religiöser Verehrung, besonders ein Körperteil oder Teil des persönlichen Besitzes eines Heiligen. Eine Sonderform sind Berührungsreliquien, also Gegenstände wie Kleidungsstoffe, mit denen der Heilige in Berührung kam oder gekommen sein soll.[PARAGRAPH:2]Reliquien finden sich in allen Hauptreligionen, vor allem aber im Christentum, im Shinto (vgl. shintai) und im Buddhismus (vgl. Sarira). Als der erleuchtete Buddha hochbetagt starb, wurden nach der buddhistischen Überlieferung seine sterblichen Überreste eingeäschert. Seine Asche, Knochen und Zähne teilten sich mehrere Kleinkönige Nordindiens. Über den Reliquien wurden Hügelgräber errichtet, die im Laufe der Zeit immer aufwändiger kultisch ausgestaltet wurden. Auch im schiitischen Islam gibt es Reliquienverehrung an den Gräbern von Heiligen.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RELIQUARY_HELP</Tag>
+		<English>[ICON_BULLET]+1 Stability</English>
+		<French>Reliquaire</French>
+		<German>Reliquienschrein</German>
+		<Italian>Reliquiario</Italian>
+		<Spanish>Relicario</Spanish>
+		<Portuguese>Relic&#225;rio</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHRISTIAN_TEMPLE_PEDIA</Tag>
 		<English>[TAB]A temple is a building or structure whose primary purpose is to facilitate the meeting of a church. Originally, Jewish Christians met in synagogues, such as the Cenacle, and in one another's homes. As Christianity grew and became more accepted by governments, rooms and, eventually, entire buildings were set aside for the explicit purpose of Christian worship.[PARAGRAPH:2]Traditional church buildings are often in the shape of a cross and frequently have a tower or dome. More modern church buildings have a variety of architectural styles and layouts; many buildings that were designed for other purposes have now been converted for church use, and, similarly, many original church buildings have been put to other uses.</English>
 		<French>.</French>
@@ -1158,15 +1167,6 @@
 		<English>[TAB]A cathedral is a church housing the seat of a bishop. Cathedrals were built in the largest towns and cities, to act as centers of religious study and worship. In addition to their religious significance, cathedrals acted as the center of social and cultural activity in the town. They brought great pride, stability, and tradition to the citizens of the community.</English>
 		<French>.</French>
 		<German>[TAB]Eine Kathedrale, genauer Kathedralkirche, ist das Kirchengebäude eines katholischen, anglikanischen, altkatholischen, evangelischen oder orthodoxen Bischofssitzes.[PARAGRAPH:2]Die Verwendung der Bezeichnung ecclesia cathedralis taucht erstmalig 516 auf dem Konzil von Tarragona auf, welches allerdings nicht zur Reihe der ökumenischen Konzile gehört. Daneben nannte man Bischofskirchen auch ecclesia maior "große Kirche", in einigen Sprachen heute noch Standardbezeichnung für Kathedralen. Der Papst hat in Rom fünf cathedrae inne, in den dortigen Basilicae maiores, davon in der Lateranbasilika als Bischof von Rom.</German>
-		<Italian>.</Italian>
-		<Spanish>.</Spanish>
-		<Portuguese>.</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CHRISTIAN_RELIQUARY_PEDIA</Tag>
-		<English>[TAB]A reliquary is a container for relics. These may be the physical remains of saints, such as bones, pieces of clothing, or some object associated with saints or other religious figures.</English>
-		<French>.</French>
-		<German>[TAB]Eine Reliquie (lateinisch Überbleibsel) ist ein Gegenstand religiöser Verehrung, besonders ein Körperteil oder Teil des persönlichen Besitzes eines Heiligen. Eine Sonderform sind Berührungsreliquien, also Gegenstände wie Kleidungsstoffe, mit denen der Heilige in Berührung kam oder gekommen sein soll.[PARAGRAPH:2]Reliquien finden sich in allen Hauptreligionen, vor allem aber im Christentum, im Shinto (vgl. shintai) und im Buddhismus (vgl. Sarira). Als der erleuchtete Buddha hochbetagt starb, wurden nach der buddhistischen Überlieferung seine sterblichen Überreste eingeäschert. Seine Asche, Knochen und Zähne teilten sich mehrere Kleinkönige Nordindiens. Über den Reliquien wurden Hügelgräber errichtet, die im Laufe der Zeit immer aufwändiger kultisch ausgestaltet wurden. Auch im schiitischen Islam gibt es Reliquienverehrung an den Gräbern von Heiligen.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>

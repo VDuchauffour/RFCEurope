@@ -706,18 +706,6 @@
 			<DefaultBuilding>BUILDING_CATHOLIC_CHAPEL</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- CATHOLIC_RELIQUARY -->
-			<Type>BUILDINGCLASS_CATHOLIC_RELIQUARY</Type>
-			<Description>TXT_KEY_BUILDING_CATHOLIC_RELIQUARY</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<iExtraPlayerInstances>0</iExtraPlayerInstances>
-			<bNoLimit>0</bNoLimit>
-			<bMonument>1</bMonument>
-			<DefaultBuilding>BUILDING_CATHOLIC_RELIQUARY</DefaultBuilding>
-			<VictoryThresholds/>
-		</BuildingClassInfo>
 		<BuildingClassInfo><!-- CATHOLIC_MONASTERY -->
 			<Type>BUILDINGCLASS_CATHOLIC_MONASTERY</Type>
 			<Description>TXT_KEY_BUILDING_CATHOLIC_MONASTERY</Description>
@@ -790,18 +778,6 @@
 			<DefaultBuilding>BUILDING_ORTHODOX_CHAPEL</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- ORTHODOX_RELIQUARY -->
-			<Type>BUILDINGCLASS_ORTHODOX_RELIQUARY</Type>
-			<Description>TXT_KEY_BUILDING_ORTHODOX_RELIQUARY</Description>
-			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
-			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
-			<iExtraPlayerInstances>0</iExtraPlayerInstances>
-			<bNoLimit>0</bNoLimit>
-			<bMonument>1</bMonument>
-			<DefaultBuilding>BUILDING_ORTHODOX_RELIQUARY</DefaultBuilding>
-			<VictoryThresholds/>
-		</BuildingClassInfo>
 		<BuildingClassInfo><!-- ORTHODOX_MONASTERY -->
 			<Type>BUILDINGCLASS_ORTHODOX_MONASTERY</Type>
 			<Description>TXT_KEY_BUILDING_ORTHODOX_MONASTERY</Description>
@@ -836,6 +812,18 @@
 			<bNoLimit>0</bNoLimit>
 			<bMonument>0</bMonument>
 			<DefaultBuilding>BUILDING_ORTHODOX_SHRINE</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+		<BuildingClassInfo><!-- RELIQUARY -->
+			<Type>BUILDINGCLASS_RELIQUARY</Type>
+			<Description>TXT_KEY_BUILDING_RELIQUARY</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>1</bMonument>
+			<DefaultBuilding>BUILDING_RELIQUARY</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
 		<!--******************* RELIGIOUS BUILDINGS END *******************-->

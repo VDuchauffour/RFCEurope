@@ -250,7 +250,7 @@ iNumTechsFuture = 1
 
 #Units: initialize unit variables to unit indices from XML
 
-iNumUnits = 128
+iNumUnits = 129
 (iSettler, iWorker, iCatholicMissionary, iOrthodoxMissionary, iProtestantMissionary, iIslamicMissionary, iArcher, iCrossbowman, iArbalest, iGenoaBalestrieri,
 iLongbowman, iEnglishLongbowman, iSpearman, iGuisarme, iAragonAlmogavar, iScotlandSheltron, iPikeman, iHolyRomanLandsknecht, iAxeman, iVikingBeserker,
 iSwordsman, iDenmarkHuskarl, iLongSwordsman, iMaceman, iPortugalFootKnight, iLithuanianBajoras, iNovgorodUshkuinik, iGrenadier, iNetherlandsGrenadier, iArquebusier,
@@ -259,11 +259,11 @@ iPistolier, iHussar, iPrussiaDeathsHeadHussar, iLancer, iBulgarianKonnik, iCordo
 iKievDruzhina, iKnight, iMoscowBoyar, iBurgundianPaladin, iCuirassier, iAustrianKurassier, iPolishWingedHussar, iTemplar, iTeutonic, iKnightofStJohns,
 iDragonKnight, iCalatravaKnight, iCatapult, iTrebuchet, iBombard, iTurkeyGreatBombard, iCannon, iFieldArtillery, iWorkboat, iGalley,
 iCogge, iHolk, iGalleon, iWarGalley, iGunGalley, iVeniceGalleas, iCarrack, iFrigate, iCaravel, iPrivateer,
-iSpy, iProsecutor, iProphet, iArtist, iScientist, iMerchant, iEngineer, iGreatGeneral, iGreatSpy, iMongolKeshik,
-iSeljukLancer, iJanissary, iTagmata, iCorsair, iHighlander, iWelshLongbowman, iCondottieri, iSwissPikeman, iVarangianGuard, iHackapell,
-iReiter, iZaporozhianCossack, iDonCossack, iDoppelsoldner, iIrishBrigade, iStradiot, iWaardgelder, iNaffatun, iTurkopoles, iWalloonGuard,
-iSwissGun, iLipkaTatar, iHighlanderGun, iZanji, iTouareg, iNubianLongbowman, iBedouin, iTurcomanHorseArcher, iMamlukHeavyCavalry, iSouthSlavVlastela,
-iBohemianWarWagon, iLombardHeavyFootman, iSteppeHorseArcher, iCrimeanTatarRider, iSeljukCrossbow, iSeljukSwordsman, iSeljukFootman, iSeljukGuisarme) = range(iNumUnits)
+iSpy, iProsecutor, iHolyRelic, iProphet, iArtist, iScientist, iMerchant, iEngineer, iGreatGeneral, iGreatSpy,
+iMongolKeshik, iSeljukLancer, iJanissary, iTagmata, iCorsair, iHighlander, iWelshLongbowman, iCondottieri, iSwissPikeman, iVarangianGuard,
+iHackapell, iReiter, iZaporozhianCossack, iDonCossack, iDoppelsoldner, iIrishBrigade, iStradiot, iWaardgelder, iNaffatun, iTurkopoles,
+iWalloonGuard, iSwissGun, iLipkaTatar, iHighlanderGun, iZanji, iTouareg, iNubianLongbowman, iBedouin, iTurcomanHorseArcher, iMamlukHeavyCavalry,
+iSouthSlavVlastela, iBohemianWarWagon, iLombardHeavyFootman, iSteppeHorseArcher, iCrimeanTatarRider, iSeljukCrossbow, iSeljukSwordsman, iSeljukFootman, iSeljukGuisarme) = range(iNumUnits)
 
 #From the CIV4UnitClassInfos.xml
 iProsecutorClass = 53
@@ -277,17 +277,18 @@ iTouareg, iTurcomanHorseArcher, iWelshLongbowman]
 
 #Bonuses: initialize bonus variables to bonus IDs from WBSinulAi
 
-iNumBonus = 48
-(iRelic, iCoal, iCopper, iHorse, iIron, iMarble, iStone, iBanana, iClam, iCorn,
+iNumBonus = 53
+(iHemp, iCoal, iCopper, iHorse, iIron, iMarble, iStone, iBanana, iClam, iCorn,
 iCow, iCrab, iDeer, iFish, iPig, iRice, iSheep, iWheat, iDye, iFur,
 iGems, iGold, iIncense, iIvory, iSilk, iSilver, iSpices, iSugar, iWine, iWhale,
 iCotton, iApple, iBarley, iHoney, iPotato, iSalt, iSulphur, iTimber, iCoffee, iSlaves,
-iTea, iTobacco, iOlives, iAccess, iNorthAccess, iSouthAccess, iAsiaAccess, iAmber) = range(iNumBonus)
+iTea, iTobacco, iOlives, iAccess, iNorthAccess, iSouthAccess, iAsiaAccess, iAmber, iCitrus, iDates,
+iCamels, iCocoa, iOpium) = range(iNumBonus)
 
 
 #Buildings
 
-iNumBuildings = 155 # Should equal iPlague
+iNumBuildings = 154 # Should equal iPlague
 (iPalace, iSummerPalace, iHeroicEpic, iNationalEpic, iNationalTheatre, iNationalGallery, iNationalUniversity, iRoyalDungeon, iRoyalAcademy, iStarFort,
 iWalls, iMoroccoKasbah, iCastle, iMoscowKremlin, iHungarianStronghold, iSpanishCitadel, iBarracks, iArcheryRange, iStable, iBulgarianStan,
 iGranary, iCordobanNoria, iPolishFolwark, iSmokehouse, iScotlandShieling, iAqueduct, iOttomanHammam, iHarbor, iVikingTradingPost, iLighthouse,
@@ -297,13 +298,13 @@ iArabicCaravan, iBrewery, iBurgundianWinery, iJeweler, iWeaver, iTannery, iInn, 
 iBank, iGenoaBank, iEnglishRoyalExchange, iManorHouse, iFrenchChateau, iCourthouse, iKievVeche, iHolyRomanRathaus, iLithuanianVoivodeship, iDungeon,
 iNightWatch, iSwedishTennant, iLevee, iNetherlandsDike, iPaganShrine, iJewishQuarter, iJewishShrine, iProtestantTemple, iProtestantSchool, iProtestantCathedral,
 iProtestantChapel, iProtestantSeminary, iProtestantShrine, iIslamicTemple, iIslamicChapel, iIslamicCathedral, iIslamicSchool, iIslamicMadrassa, iIslamicShrine, iCatholicTemple,
-iCatholicCathedral, iCatholicChapel, iCatholicReliquary, iCatholicMonastery, iCatholicSeminary, iCatholicShrine, iOrthodoxTemple, iOrthodoxCathedral, iOrthodoxChapel, iOrthodoxReliquary,
-iOrthodoxMonastery, iOrthodoxSeminary, iOrthodoxShrine, iInfirmary, iKontor, iCorporation1, iCorporation2, iCorporation3, iCorporation4, iCorporation5,
-iCorporation6, iCorporation7, iCorporation8, iCorporation9, iVersailles, iNotreDame, iLeaningTower, iSistineChapel, iTheodosianWalls, iTopkapiPalace,
-iShrineOfUppsala, iAlhambra, iKrakDesChevaliers, iSanMarco, iLaMezquita, iStBasil, iMagnaCarta, iSophiaKiev, iDomeRock, iBrandenburgGate,
-iPalacioDaPena, iMonasteryOfCluny, iRoundChurch, iLeonardosWorkshop, iGardensAlAndalus, iMagellansVoyage, iMarcoPolo, iEscorial, iKazimierz, iBelemTower,
-iGoldenBull, iKalmarCastle, iPalaisPapes, iTombKhal, iStephansdom, iBibliothecaCorviniana, iFontainebleau, iImperialDiet, iBeurs, iCopernicus,
-iSanGiorgio, iWestminster, iPressburg, iLanterna, iTriumphalArch) = range(iNumBuildings)
+iCatholicCathedral, iCatholicChapel, iCatholicMonastery, iCatholicSeminary, iCatholicShrine, iOrthodoxTemple, iOrthodoxCathedral, iOrthodoxChapel, iOrthodoxMonastery, iOrthodoxSeminary,
+iOrthodoxShrine, iReliquary, iInfirmary, iKontor, iCorporation1, iCorporation2, iCorporation3, iCorporation4, iCorporation5, iCorporation6,
+iCorporation7, iCorporation8, iCorporation9, iVersailles, iNotreDame, iLeaningTower, iSistineChapel, iTheodosianWalls, iTopkapiPalace, iShrineOfUppsala,
+iAlhambra, iKrakDesChevaliers, iSanMarco, iLaMezquita, iStBasil, iMagnaCarta, iSophiaKiev, iDomeRock, iBrandenburgGate, iPalacioDaPena,
+iMonasteryOfCluny, iRoundChurch, iLeonardosWorkshop, iGardensAlAndalus, iMagellansVoyage, iMarcoPolo, iEscorial, iKazimierz, iBelemTower, iGoldenBull,
+iKalmarCastle, iPalaisPapes, iTombKhal, iStephansdom, iBibliothecaCorviniana, iFontainebleau, iImperialDiet, iBeurs, iCopernicus, iSanGiorgio,
+iWestminster, iPressburg, iLanterna, iTriumphalArch) = range(iNumBuildings)
 
 iGreatPalace = iSummerPalace
 iPlague = iNumBuildings
