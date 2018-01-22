@@ -15,6 +15,15 @@
 		<Portuguese>Companies</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CORPORATION_SCREEN_TITLE</Tag>
+		<English>Company Advisor</English>
+		<French>Conseiller commercial</French>
+		<German>Unternehmensberater</German>
+		<Italian>Consigliere corporativo</Italian>
+		<Spanish>Consejero de corporaci&#243;n</Spanish>
+		<Portuguese>Company Advisor</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_KNIGHTS_HOSPITALLER</Tag>
 		<English>Knights Hospitaller</English>
 		<French>Ordre Hospitalier</French>

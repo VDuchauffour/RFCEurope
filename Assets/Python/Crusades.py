@@ -645,6 +645,9 @@ class Crusades:
 		self.setVotingPower( iOwner, self.getVotingPower( iOwner ) + 2 )
 		self.changeNumUnitsSent( iOwner, 1 ) # Absinthe: counter for sent units per civ
 		print ("Unit was chosen for Crusade:", iOwner, pUnit.getUnitType() )
+		# Absinthe: faith point boost for each sent unit (might get some more on successful Crusade):
+		pCiv = gc.getPlayer( iOwner )
+		pCiv.changeFaith( 1 )
 		if iOwner == iHuman:
 			CyInterface().addMessage(iHuman, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_CRUSADE_LEAVE", ()) + " " + pUnit.getName(), "AS2D_BUILD_CHRISTIAN", 0, "", ColorTypes(con.iOrange), -1, -1, True, True)
 		pUnit.kill( 0, -1 )
@@ -1086,7 +1089,7 @@ class Crusades:
 				iOdds = 80
 				iCrusadeCategory = self.unitCrusadeCategory( pUnit.getUnitType() )
 				if iCrusadeCategory < 3:
-					continue # Knight Orders don't return
+					continue # Knightly Orders don't return
 				elif iCrusadeCategory == 7:
 					iOdds = 50 # leave some defenders
 				if pPlot.isCity():
@@ -1102,18 +1105,54 @@ class Crusades:
 					if iHuman == iPlayer:
 						CyInterface().addMessage(iHuman, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_CRUSADE_CRUSADERS_RETURNING_HOME", ()) + " " + pUnit.getName(), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
 
-		# benefits for the other participants on Crusade return - Faith points, GG points
+		# benefits for the other participants on Crusade return - Faith points, GG points, Relics
 		for iCiv in range( con.iNumPlayers-1 ): # no such benefits for the Pope
-			if iCiv == iPlayer:
-				continue # the leader already got those bonuses through the Crusade itself
 			pCiv = gc.getPlayer( iCiv )
-			if pCiv.getStateReligion() == iCatholicism:
+			if pCiv.getStateReligion() == iCatholicism and pCiv.isAlive():
 				iUnitNumber = self.getNumUnitsSent( iCiv )
 				if iUnitNumber > 0:
-					if iCiv == iHuman:
-						CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_CRUSADE_CRUSADERS_ARRIVED_HOME", ()), "", 0, "", ColorTypes(con.iGreen), -1, -1, True, True)
-					pCiv.changeCombatExperience( 10 * iUnitNumber )
-					pCiv.changeFaith( 2 * iUnitNumber )
+					# the leader already got exp points through the Crusade itself
+					if iCiv == iPlayer:
+						# if Jerusalem is held by a Christian civ (maybe some cities in the Levant should be enough) (maybe there should be a unit in the Levant from this Crusade)
+						pCity = gc.getMap().plot(tJerusalem[0], tJerusalem[1]).getPlotCity()
+						pPlayer = gc.getPlayer( pCity.getOwner() )
+						if pPlayer.getStateReligion() == iCatholicism:
+							pCiv.changeFaith( 1 * iUnitNumber )
+							# add relics in the capital
+							capital = pCiv.getCapitalCity()
+							iCapitalX = capital.getX()
+							iCapitalY = capital.getY()
+							pCiv.initUnit( xml.iHolyRelic, iCapitalX, iCapitalY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
+							print ("Relic created for Crusade leader:", capital.getName())
+							if iUnitNumber > 3:
+								pCiv.initUnit( xml.iHolyRelic, iCapitalX, iCapitalY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
+								print ("Relic created for Crusade leader:", capital.getName())
+							if iUnitNumber > 9:
+								pCiv.initUnit( xml.iHolyRelic, iCapitalX, iCapitalY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
+								print ("Relic created for Crusade leader:", capital.getName())
+					# all other civs get experience points as well
+					else:
+						if iCiv == iHuman:
+							CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_CRUSADE_CRUSADERS_ARRIVED_HOME", ()), "", 0, "", ColorTypes(con.iGreen), -1, -1, True, True)
+						pCiv.changeCombatExperience( 12 * iUnitNumber )
+						# if Jerusalem is held by a Christian civ (maybe some cities in the Levant should be enough) (maybe there should be a unit in the Levant from this Crusade)
+						pCity = gc.getMap().plot(tJerusalem[0], tJerusalem[1]).getPlotCity()
+						pPlayer = gc.getPlayer( pCity.getOwner() )
+						if pPlayer.getStateReligion() == iCatholicism:
+							pCiv.changeFaith( 1 * iUnitNumber )
+							# add relics in the capital
+							capital = pCiv.getCapitalCity()
+							iCapitalX = capital.getX()
+							iCapitalY = capital.getY()
+							pCiv.initUnit( xml.iHolyRelic, iCapitalX, iCapitalY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
+							print ("Relic created:", capital.getName())
+							if iUnitNumber > 4:
+								pCiv.initUnit( xml.iHolyRelic, iCapitalX, iCapitalY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
+								print ("Relic created:", capital.getName())
+							if iUnitNumber > 11:
+								pCiv.initUnit( xml.iHolyRelic, iCapitalX, iCapitalY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
+								print ("Relic created:", capital.getName())
+
 
 	# Absinthe: called from CvRFCEventHandler.onCityAcquired
 	def success( self, iPlayer ):

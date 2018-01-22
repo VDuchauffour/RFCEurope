@@ -1049,6 +1049,33 @@
 		<Portuguese>Remove religião estrangeira</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ACTION_SHOW_CORPORATION_SCREEN</Tag>
+		<English>Company Advisor</English>
+		<French>Conseiller des soci&#233;t&#233;s commerciales</French>
+		<German>Unternehmensberater</German>
+		<Italian>Consigliere corporativo</Italian>
+		<Spanish>Consejero de corporaci&#243;n</Spanish>
+		<Portuguese>Company Advisor</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_SHOW_CIVICS_SCREEN</Tag>
+		<English>Civics Advisor</English>
+		<French>Changer de doctrine</French>
+		<German>Staatsformen &#228;ndern</German>
+		<Italian>Cambia forme di governo</Italian>
+		<Spanish>Cambiar de principios</Spanish>
+		<Portuguese>Civics Advisor</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_SHOW_RELIGION_SCREEN</Tag>
+		<English>Religion Advisor</English>
+		<French>Ecran de Religion</French>
+		<German>Religion wechseln</German>
+		<Italian>Conversione alla religione</Italian>
+		<Spanish>Convertirse a una religi&#243;n</Spanish>
+		<Portuguese>Religion Advisor</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_FINANCIAL_ADVISOR_MERCENARY_MAINTENANCE</Tag>
 		<English>Mercenary Maintenance</English>
 		<French>Co&#251;t d'entretien des mercenaires</French>

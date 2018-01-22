@@ -288,7 +288,7 @@ class Companies:
 				if iProvince == xml.iP_Transylvania:
 					iValue += 2
 
-		# bonus for civs who actively participate (with units) in the actual Crusade:
+		# bonus for civs whom actively participate (with units) in the actual Crusade:
 		if iOwner < iNumPlayers: # no such value for indy civs
 			if crus.getNumUnitsSent(iOwner) > 0:
 				if iCompany in [iHospitallers, iTemplars, iTeutons]:

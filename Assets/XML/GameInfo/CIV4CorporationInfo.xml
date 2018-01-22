@@ -27,7 +27,7 @@
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 			</HeadquarterCommerces>
-			<BonusProduced>BONUS_RELIC</BonusProduced>
+			<BonusProduced>NONE</BonusProduced>
 			<CommercesProduced>
 				<iCommerceProduced>0</iCommerceProduced>
 				<iCommerceProduced>0</iCommerceProduced>
@@ -53,18 +53,18 @@
 			<iSpreadCost>0</iSpreadCost>
 			<iMaintenance>0</iMaintenance>
 			<PrereqBonuses>
-				<BonusType>BONUS_WHEAT</BonusType>
 				<BonusType>BONUS_HORSE</BonusType>
-				<BonusType>BONUS_IRON</BonusType>
 				<BonusType>BONUS_DYE</BonusType>
+				<BonusType>BONUS_IRON</BonusType>
 				<BonusType>BONUS_WINE</BonusType>
+				<BonusType>BONUS_WHEAT</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 			</HeadquarterCommerces>
-			<BonusProduced>BONUS_RELIC</BonusProduced>
+			<BonusProduced>NONE</BonusProduced>
 			<CommercesProduced>
 				<iCommerceProduced>0</iCommerceProduced>
 				<iCommerceProduced>66</iCommerceProduced>
@@ -91,17 +91,17 @@
 			<iMaintenance>0</iMaintenance>
 			<PrereqBonuses>
 				<BonusType>BONUS_HORSE</BonusType>
-				<BonusType>BONUS_BARLEY</BonusType>
+				<BonusType>BONUS_IRON</BonusType>
 				<BonusType>BONUS_AMBER</BonusType>
 				<BonusType>BONUS_SALT</BonusType>
-				<BonusType>BONUS_IRON</BonusType>
+				<BonusType>BONUS_BARLEY</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 			</HeadquarterCommerces>
-			<BonusProduced>BONUS_RELIC</BonusProduced>
+			<BonusProduced>NONE</BonusProduced>
 			<CommercesProduced>
 				<iCommerceProduced>0</iCommerceProduced>
 				<iCommerceProduced>0</iCommerceProduced>
@@ -271,10 +271,10 @@
 			<iSpreadCost>0</iSpreadCost>
 			<iMaintenance>0</iMaintenance>
 			<PrereqBonuses>
-				<BonusType>BONUS_WHEAT</BonusType>
-				<BonusType>BONUS_WINE</BonusType>
-				<BonusType>BONUS_HONEY</BonusType>
 				<BonusType>BONUS_IRON</BonusType>
+				<BonusType>BONUS_WINE</BonusType>
+				<BonusType>BONUS_WHEAT</BonusType>
+				<BonusType>BONUS_HONEY</BonusType>
 				<BonusType>BONUS_SULPHUR</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
@@ -308,9 +308,9 @@
 			<iSpreadCost>0</iSpreadCost>
 			<iMaintenance>0</iMaintenance>
 			<PrereqBonuses>
+				<BonusType>BONUS_SUGAR</BonusType>
 				<BonusType>BONUS_SHEEP</BonusType>
 				<BonusType>BONUS_WINE</BonusType>
-				<BonusType>BONUS_SUGAR</BonusType>
 				<BonusType>BONUS_IRON</BonusType>
 				<BonusType>BONUS_OLIVES</BonusType>
 			</PrereqBonuses>

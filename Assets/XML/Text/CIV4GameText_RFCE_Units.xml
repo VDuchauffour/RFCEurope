@@ -122,6 +122,33 @@
 		</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_RELIC</Tag>
+		<English>Relic</English>
+		<French>Relique</French>
+		<German>Relikt</German>
+		<Italian>Reliquia</Italian>
+		<Spanish>Reliquia</Spanish>
+		<Portuguese>Rel&#237;quia</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_RELIC_PEDIA</Tag>
+		<English>Relics of the true faith. All true faiths.[NEWLINE][NEWLINE]Relics may be the physical remains of saints, such as bones, pieces of clothing, or some object associated with saints or other religious figures.[NEWLINE][NEWLINE]A relic is an object or a personal item of religious significance, carefully preserved with an air of veneration as a tangible memorial. Relics are an important aspect of some forms of Buddhism, Christianity, Hinduism, Shamanism, and many other religions.[PARAGRAPH:2]The word relic comes from the Latin reliquiae, meaning "remains". A reliquary is a shrine that houses one or more relics.</English>
+		<French>Relic</French>
+		<German>[TAB]Ein Relikt ist ein Objekt oder ein pers&#246;nlicher Gegenstand von religi&#246;ser Bedeutung, der aus tiefer Verehrung als ein greifbares Denkmal des Glaubens aufbewahrt wird. Relikte sind ein wichtiger Aspekt einiger Formen des Buddhismus, Hinduismus, Schamanismus, des Christentums und anderer Religionen.[PARAGRAPH:2]Das Word "Relikt" kommt vom lateinischen "reliquiae", was "&#252;berreste" bedeutet. Ein "Reliquiar" ist ein Schrein, der eines oder mehrere Relikte beherbergt.</German>
+		<Italian>Relic</Italian>
+		<Spanish>Relic</Spanish>
+		<Portuguese>[TAB]Uma rel&#237;quia &#233; um objeto ou item pessoal de valor religioso, cuidadosamente guardado com uma ar de venera&#231;&#227;o como um memorial tang&#237;vel. Rel&#237;quias s&#227;o um importante aspecto de algumas formas de Budismo, Cristianismo, Hindu&#237;smo, Xamanismo e diversas outras religi&#245;es.[PARAGRAPH:2] A palavra rel&#237;quia vem do Latim reliquiae, significando &quot;restos&quot;. Um relic&#225;rio &#233; um santu&#225;rio que guarda uma ou mais rel&#237;quias.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_RELIC_HELP</Tag>
+		<English>These special items can be obtained by participating in Crusades, or by capturing them from other civilizations!</English>
+		<French>Relic</French>
+		<German>Relic</German>
+		<Italian>Relic</Italian>
+		<Spanish>Relic</Spanish>
+		<Portuguese>Relic</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPEARMAN</Tag>
 		<English>Spearman</English>
 		<French>Lancier</French>

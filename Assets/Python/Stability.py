@@ -352,7 +352,7 @@ class Stability:
 		pass
 
 
-	def onBuildingBuilt(self, iPlayer, iBuilding, city):
+	def onBuildingBuilt(self, iPlayer, iBuilding):
 		# 3Miro: some buildings give and others take stability
 		pPlayer = gc.getPlayer( iPlayer )
 		if iBuilding == utils.getUniqueBuilding(iPlayer, xml.iManorHouse):
@@ -374,6 +374,9 @@ class Stability:
 		elif iBuilding == xml.iPalace:
 			pPlayer.changeStabilityBase( iCathegoryExpansion, -2 )
 			pPlayer.setStabilitySwing( pPlayer.getStabilitySwing() -5  )
+			self.recalcEpansion( iPlayer )
+		elif iBuilding == xml.iReliquary:
+			pPlayer.changeStabilityBase( iCathegoryExpansion, 1 )
 			self.recalcEpansion( iPlayer )
 
 

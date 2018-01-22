@@ -2795,6 +2795,13 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
+			<SoundID>SND_BUILD_RELIC</SoundID>
+			<Filename>Sounds/Units/RelicActivate</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
 			<SoundID>SND_BUILD_PYRAMID</SoundID>
 			<Filename>Sounds/Buildings/Pyramid</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>

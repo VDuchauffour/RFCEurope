@@ -35,9 +35,21 @@ Changes for RFCE 1.6:
 	- Reduced Mamluk Cavalry bonus to +20% against Light Cavalry and +10% against Heavy Cavalry units
 	- Increased starting stability for Venice, slightly decreased it for AI Ottomans
 	- The Ottomans get extra stability and flavour event text on the conquest of Constantinople
-	- Ivory resource and it's art now correctly represents both Walrus and Elephant
-	- New gamefont icon for Honey, Barley, Apple, Copper, Wine, Tea, Tobacco, Marble, Ivory, Slaves, Fish, Iron, Coal
-	- New Civilopedia and map icon for Copper, Tea, Tobacco, Ivory, Rice, Fish, Iron, Coal, Slaves
+	- Ivory resource and it's art now correctly represent both Walrus and Elephant
+	- New gamefont icon for Honey, Barley, Apple, Copper, Wine, Tea, Tobacco, Marble, Ivory, Slaves, Fish, Iron, Coal, Spices
+	- New Civilopedia and map icon for Copper, Tea, Tobacco, Ivory, Rice, Fish, Iron, Coal, Slaves, Salt, Wheat, Spices
+	- Removed different religion-specific Reliquary buildings, added a non-buildable generic one: +1 happiness, +2 commerce, +2 culture, +1 stability
+	- All participants of a successful Crusade get one or more movable relic units, which can be settled in cities to Reliquary building
+	- Reliquary buildings have some chance to be destroyed on ownership change (they have 66% conquest probability)
+	- Tweaked other bonuses for Crusades as well, made them more significant for simple participants
+	- Sending a unit on a Crusade increases faith points right away, additional boost to your faith if Jerusalem is conquered
+	- All participants get experience points when the Crusade is over (for each sent unit), no matter if the Crusade was successful or not
+	- When Jerusalem changes ownership between major players, some new relics might be found (fairly low chance)
+	- Temple Mount (preplaced in Jerusalem) no longer adds a Relic resource, got back gold bonus from religion instead
+	- Knightly Order companies no longer give relic in any form
+	- Renamed/updated a couple names and texts related to various advisor screens (e.g. Corporation Advisor -> Company Advisor)
+	- Removed all remnants of the Relic, Uranium, Oil, Football/Sports Event, Aluminium, and separate Elephant resources (gamefont, xml, etc.)
+	- New resources: Citrus, Dates, Camels, Cocoa, Hemp, Opium
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
