@@ -317,10 +317,12 @@ class CvRFCEventHandler:
 				self.crusade.success( playerType )
 
 			# Absinthe: acquiring Jerusalem, with any faith (but not Paganism) -> chance to find a relic
-			#			maybe only after a specific date? maybe only if there isn't any ongoing Crusade?
+			#			maybe only after a specific date? maybe only if there isn't any ongoing Crusades?
 			if gc.getGame().getSorenRandNum(100, 'Relic found') < 15:
-				if pPlayer.getStateReligion() in range(xml.iNumReligions):
-					pPlayer.initUnit( xml.iHolyRelic, con.tJerusalem[0], con.tJerusalem[1], UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
+				# for major players only
+				if ( playerType < iNumMajorPlayers ):
+					if pPlayer.getStateReligion() in range(xml.iNumReligions):
+						pPlayer.initUnit( xml.iHolyRelic, con.tJerusalem[0], con.tJerusalem[1], UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
 
 		# Sedna17: code for Krak des Chevaliers
 		if bConquest:
