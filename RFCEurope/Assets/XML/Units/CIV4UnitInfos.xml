@@ -11821,7 +11821,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<FreePromotions>
 				<FreePromotion>
-					<PromotionType>PROMOTION_SHOCK</PromotionType>
+					<PromotionType>PROMOTION_AMBUSH</PromotionType>
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
@@ -13390,7 +13390,7 @@
 			<iInterceptionProbability>0</iInterceptionProbability>
 			<iEvasionProbability>0</iEvasionProbability>
 			<iWithdrawalProb>0</iWithdrawalProb>
-			<iCollateralDamage>10</iCollateralDamage>
+			<iCollateralDamage>20</iCollateralDamage>
 			<iCollateralDamageLimit>30</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>3</iCollateralDamageMaxUnits>
 			<iCityAttack>0</iCityAttack>
@@ -22926,9 +22926,9 @@
 			<iInterceptionProbability>0</iInterceptionProbability>
 			<iEvasionProbability>0</iEvasionProbability>
 			<iWithdrawalProb>0</iWithdrawalProb>
-			<iCollateralDamage>10</iCollateralDamage>
-			<iCollateralDamageLimit>30</iCollateralDamageLimit>
-			<iCollateralDamageMaxUnits>3</iCollateralDamageMaxUnits>
+			<iCollateralDamage>50</iCollateralDamage>
+			<iCollateralDamageLimit>50</iCollateralDamageLimit>
+			<iCollateralDamageMaxUnits>4</iCollateralDamageMaxUnits>
 			<iCityAttack>0</iCityAttack>
 			<iCityDefense>50</iCityDefense>
 			<iAnimalCombat>0</iAnimalCombat>
@@ -23713,8 +23713,8 @@
 			<iInterceptionProbability>0</iInterceptionProbability>
 			<iEvasionProbability>0</iEvasionProbability>
 			<iWithdrawalProb>50</iWithdrawalProb>
-			<iCollateralDamage>80</iCollateralDamage>
-			<iCollateralDamageLimit>50</iCollateralDamageLimit>
+			<iCollateralDamage>20</iCollateralDamage>
+			<iCollateralDamageLimit>30</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>2</iCollateralDamageMaxUnits>
 			<iCityAttack>-10</iCityAttack>
 			<iCityDefense>0</iCityDefense>
@@ -23760,7 +23760,12 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<FreePromotions/>
+			<FreePromotions>
+				<FreePromotion>
+					<PromotionType>PROMOTION_MOBILITY</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+			</FreePromotions>
 			<LeaderPromotion>NONE</LeaderPromotion>
 			<iLeaderExperience>0</iLeaderExperience>
 			<bSpreadBySword>0</bSpreadBySword>

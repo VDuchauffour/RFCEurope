@@ -1,7 +1,7 @@
 
 
 Continued my lake census on the map of RFCE.
-Note that in RFCE lakes are part of provinces, not handled as separate provinces/regions as in SoI.
+Note that in RFCE lakes are part of provinces, they are not handled as separate provinces/regions as in SoI.
 Collected them together here, this is what I have currently:
 
 Lough Neagh, Ireland, 392 km2 - 1 tile

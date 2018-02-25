@@ -1203,7 +1203,7 @@
 			<fInterfaceScale>0.56</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Protestant_Belfry/Belfry.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,8,5</Button>
+			<Button>Art/Interface/Buttons/Buildings/protestant_belfry.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PROTESTANT_CATHEDRAL</Type>
@@ -1323,7 +1323,7 @@
 			<fInterfaceScale>0.52</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Catholic_Reliquary/ts_e_church.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,6,2</Button>
+			<Button>Art/Interface/Buttons/Buildings/catholic_belfry.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CATHOLIC_SEMINARY</Type>
@@ -1363,7 +1363,7 @@
 			<fInterfaceScale>0.48</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Orthodox_Reliquary/orthodoxtemple.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,4,5</Button>
+			<Button>Art/Interface/Buttons/Buildings/orthodox_belfry.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ORTHODOX_SEMINARY</Type>

@@ -841,6 +841,7 @@ class Religions:
 	def reformationReformCity(self, pCity, iCiv):
 		iFaith = 0
 		iPopBonus = 0
+		iAIBonus = 0
 		pPlayer = gc.getPlayer(iCiv)
 		# bigger cities have more chance for a new religion to spread
 		if pCity.getPopulation() > 11:
@@ -851,11 +852,15 @@ class Religions:
 			iPopBonus = 10
 		elif pCity.getPopulation() > 2:
 			iPopBonus = 5
-		# civ-specific, between 3 and 27
+		# civ-specific modifier, between 3 and 27
 		iCivRef = (lReformationMatrix[pCity.getOwner()] / 10) * 3
+		# AI bonus
+		if utils.getHumanID() == iCiv:
+			iAIBonus = 10
 
-		# spread the religion: range goes from 53-73% (Catholicism-lovers) to 77-97% (Protestantism-lovers), based on lReformationMatrix
-		if gc.getGame().getSorenRandNum(100, 'Religion spread to City') < 50 + iCivRef + iPopBonus:
+		# spread the religion: range goes from 48-68% (Catholicism-lovers) to 72-92% (Protestantism-lovers), based on lReformationMatrix
+		#						+10% extra bonus for the AI
+		if gc.getGame().getSorenRandNum(100, 'Religion spread to City') < 45 + iCivRef + iPopBonus + iAIBonus:
 			pCity.setHasReligion(xml.iProtestantism, True, True, False)
 			iFaith += 1
 			iChance = 55 + iCivRef
@@ -873,8 +878,6 @@ class Religions:
 				iFaith += 1
 			if pCity.hasBuilding(xml.iCatholicCathedral) and gc.getGame().getSorenRandNum(100, 'Reformation of a City') < iChance:
 				pCity.setHasRealBuilding(xml.iCatholicCathedral, False)
-				if pCity.hasBuilding(xml.iCatholicReliquary):
-					pCity.setHasRealBuilding(xml.iCatholicReliquary, False) # remove Reliquary since it is connected to the Cathedral
 				pCity.setHasRealBuilding(xml.iProtestantCathedral, True)
 				iFaith += 2
 
@@ -925,8 +928,6 @@ class Religions:
 				pCity.setHasRealBuilding(xml.iProtestantSeminary, True)
 			if pCity.hasBuilding(xml.iCatholicCathedral) and gc.getGame().getSorenRandNum(100, 'Reformation of a City') < iChance:
 				pCity.setHasRealBuilding(xml.iCatholicCathedral, False)
-				if pCity.hasBuilding(xml.iCatholicReliquary):
-					pCity.setHasRealBuilding(xml.iCatholicReliquary, False) # remove Reliquary since it is connected to the Cathedral
 				pCity.setHasRealBuilding(xml.iProtestantCathedral, True)
 
 			# remove Catholicism if there are no religious buildings left, and there are no catholic wonders in the city

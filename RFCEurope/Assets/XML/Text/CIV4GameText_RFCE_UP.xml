@@ -331,12 +331,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_POR2</Tag>
-		<English>Colonial Projects are 40% cheaper to build, free Feitoria in your newly founded cities after the discovery of Astronomy.</English>
-		<French>Les projets coloniaux coûte 40%% moins cher &#224; produire</French>
-		<German>40% reduzierte Kosten für Kolonien</German>
-		<Italian>I Progetti Coloniali vengono costruiti il 40% più velocemente</Italian>
+		<English>Colonial Projects are 30% cheaper to build, free Feitoria in your newly founded cities after the discovery of Astronomy.</English>
+		<French>Les projets coloniaux coûte 30%% moins cher &#224; produire</French>
+		<German>30% reduzierte Kosten für Kolonien</German>
+		<Italian>I Progetti Coloniali vengono costruiti il 30% più velocemente</Italian>
 		<Spanish>.</Spanish>
-		<Portuguese>Projetos Coloniais são 40% mais baratos</Portuguese>
+		<Portuguese>Projetos Coloniais são 30% mais baratos</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_AUS</Tag>

@@ -455,7 +455,7 @@ class RiseAndFall:
 
 		elif popupReturn.getButtonClicked() == 1: # 2nd button
 			print ("Flip disagreed")
-			CyInterface().addMessage(iHuman, True, con.iDuration, CyTranslator().getText("TXT_KEY_FLIP_REFUSED", ()), "", 0, "", ColorTypes(con.iGreen), -1, -1, True, True)
+			CyInterface().addMessage(iHuman, True, con.iDuration, CyTranslator().getText("TXT_KEY_FLIP_REFUSED", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
 
 
 			if humanCityList:
@@ -2042,7 +2042,7 @@ class RiseAndFall:
 	def unitsBetrayal( self, iNewOwner, iOldOwner, tTopLeft, tBottomRight, tPlot ):
 		#print ("iNewOwner", iNewOwner, "iOldOwner", iOldOwner, "tPlot", tPlot)
 		if gc.getPlayer(self.getOldCivFlip()).isHuman():
-			CyInterface().addMessage(self.getOldCivFlip(), False, con.iDuration, CyTranslator().getText("TXT_KEY_FLIP_BETRAYAL", ()), "", 0, "", ColorTypes(con.iGreen), -1, -1, True, True)
+			CyInterface().addMessage(self.getOldCivFlip(), False, con.iDuration, CyTranslator().getText("TXT_KEY_FLIP_BETRAYAL", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
 		elif gc.getPlayer(self.getNewCivFlip()).isHuman():
 			CyInterface().addMessage(self.getNewCivFlip(), False, con.iDuration, CyTranslator().getText("TXT_KEY_FLIP_BETRAYAL_NEW", ()), "", 0, "", ColorTypes(con.iGreen), -1, -1, True, True)
 		for (x, y) in utils.getPlotList(tTopLeft, tBottomRight):
