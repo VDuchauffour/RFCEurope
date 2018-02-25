@@ -269,8 +269,8 @@ class RFCEBalance:
 		gc.setSupportModifiersHu(iScotland,      10, 100,  75,  40, 100 )
 		gc.setSupportModifiersAI(iPoland,        10, 100,  70,  25, 100 )
 		gc.setSupportModifiersHu(iPoland,        10, 100,  70,  25, 100 )
-		gc.setSupportModifiersAI(iMoscow,        10, 100,  50,  25, 100 ) # sync with UP
-		gc.setSupportModifiersHu(iMoscow,        10, 100,  50,  25, 100 ) # sync with UP
+		gc.setSupportModifiersAI(iMoscow,        10, 100,  40,  20, 100 ) # sync with UP
+		gc.setSupportModifiersHu(iMoscow,        10, 100,  40,  20, 100 ) # sync with UP
 		gc.setSupportModifiersAI(iGenoa,         10, 100,  50,  25, 100 )
 		gc.setSupportModifiersHu(iGenoa,         10, 100,  50,  25, 100 )
 		gc.setSupportModifiersAI(iMorocco,       10, 100,  50,  25, 100 )
@@ -607,8 +607,8 @@ class RFCEBalance:
 		gc.setUP( iLithuania, iUP_PaganCulture, 200 )
 		gc.setUP( iLithuania, iUP_PaganHappy, 1 )
 
-		gc.setSupportModifiersAI(iMoscow, 10, 100, 25, 12, 100 )
-		gc.setSupportModifiersHu(iMoscow, 10, 100, 25, 12, 100 )
+		gc.setSupportModifiersAI(iMoscow, 10, 100, 20, 10, 100 ) # sync with preset values
+		gc.setSupportModifiersHu(iMoscow, 10, 100, 20, 10, 100 ) # sync with preset values
 		gc.setUP( iMoscow, iUP_EndlessLand, 50 )
 
 		gc.setUP( iGenoa, iUP_Mercenaries, 1 ) # Absinthe: this actually has no effect, it is implemented in Mercenaries.py entirely
@@ -616,8 +616,8 @@ class RFCEBalance:
 		gc.setUP( iEngland, iUP_ImprovementBonus, 1 * 100000 + xml.iImprovementWorkshop * 1000 + 10 + 1 )
 
 		# Speed up East/West India Trading Companies and all Colonies
-		gc.setUP( iPortugal, iUP_Discovery, (xml.iNumNotColonies-2) * 1000000 + (xml.iNumTotalColonies-1) * 1000 + 40 );
-		gc.setUP( iPortugal, iUP_StabilitySettler, 1 ) # hidden part of the UP
+		gc.setUP( iPortugal, iUP_Discovery, (xml.iNumNotColonies-2) * 1000000 + (xml.iNumTotalColonies-1) * 1000 + 30 );
+		gc.setUP( iPortugal, iUP_StabilitySettler, 1 ) # "hidden" part of the UP
 
 		for i in range( iNumTotalPlayers ):
 			if ( not i == iAustria ):
@@ -644,7 +644,7 @@ class RFCEBalance:
 
 		gc.setUP( iDutch, iUP_TradeRoutes, 2 )
 		gc.setUP( iDutch, iUP_Pious, 2 ) # 3Miro: "hidden" buff to the Dutch FP, otherwise they have too little piety (not enough cities)
-		gc.setUP( iDutch, iUP_Discovery, (xml.iNumNotColonies-2) * 1000000 + (xml.iNumTotalColonies-1) * 1000 + 30 ); # hidden part of the UP
+		gc.setUP( iDutch, iUP_Discovery, (xml.iNumNotColonies-2) * 1000000 + (xml.iNumTotalColonies-1) * 1000 + 30 ); # "hidden" part of the UP
 
 		gc.setUP( iPope, iUP_Emperor, 1 )
 

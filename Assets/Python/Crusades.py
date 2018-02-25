@@ -409,13 +409,16 @@ class Crusades:
 							if iRandNum < 50:
 								self.addSelectedUnit( self.unitCrusadeCategory( iUnitType ) )
 								CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_CRUSADE_DENY_LEAVE_ANYWAY", ()), "", 0, gc.getUnitInfo(iUnitType).getButton(), ColorTypes(con.iLightRed), pUnit.getX(), pUnit.getY(), True, True)
+								pUnit.kill( 0, -1 )
 						elif self.getNumDefendersAtPlot( pPlot ) > 1:
 							if iRandNum < 10:
 								self.addSelectedUnit( self.unitCrusadeCategory( iUnitType ) )
 								CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_CRUSADE_DENY_LEAVE_ANYWAY", ()), "", 0, gc.getUnitInfo(iUnitType).getButton(), ColorTypes(con.iLightRed), pUnit.getX(), pUnit.getY(), True, True)
+								pUnit.kill( 0, -1 )
 					elif iRandNum < 30:
 						self.addSelectedUnit( self.unitCrusadeCategory( iUnitType ) )
 						CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_CRUSADE_DENY_LEAVE_ANYWAY", ()), "", 0, gc.getUnitInfo(iUnitType).getButton(), ColorTypes(con.iLightRed), pUnit.getX(), pUnit.getY(), True, True)
+						pUnit.kill( 0, -1 )
 		# Absinthe: 3rd option, only if you have enough money to make a contribution to the Crusade instead of sending units
 		else:
 			self.setParticipate( False )

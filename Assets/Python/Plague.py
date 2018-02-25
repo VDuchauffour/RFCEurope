@@ -456,9 +456,35 @@ class Plague:
 					random.shuffle(lNotInfectedCities)
 					for targetCity in lNotInfectedCities:
 						if [city for city in lInfectedCities if targetCity.isConnectedTo(city) and utils.calculateDistance(targetCity.getX(), targetCity.getY(), city.getX(), city.getY()) <= 10]:
-							self.infectCity(targetCity)
+							if not targetCity.hasBuilding(iPlague): # might have changed since the beginning of the function
+								self.infectCity(targetCity)
+								iInfections += 1
+								if iInfections >= iNumSpreads:
+									break
+
+		# if there are no cities with plague (gifted away, razed on conquest), but the civ itself has plague
+		# there is a chance that it will spread to some of your cities
+		# the civ would be immune otherwise, basically
+		if len(lInfectedCities) == 0:
+			if self.getPlagueCountdown(iPlayer) > 2: # don't spread in the last turns, when preStopPlague is active
+				iTotalCities = pPlayer.getNumCities()
+				if iTotalCities > 21:
+					iMaxNumInfections = 4
+				elif iTotalCities > 14:
+					iMaxNumInfections = 3
+				elif iTotalCities > 7:
+					iMaxNumInfections = 2
+				else:
+					iMaxNumInfections = 1
+				iInfections = 0
+				lAllCities = [city for city in utils.getCityList(iPlayer)]
+				random.shuffle(lAllCities)
+				for city in lAllCities:
+					if not city.hasBuilding(iPlague):
+						if gc.getGame().getSorenRandNum(10, 'roll') < 2:
+							self.infectCity(city)
 							iInfections += 1
-							if iInfections >= iNumSpreads:
+							if iInfections >= iMaxNumInfections:
 								break
 
 
@@ -492,9 +518,13 @@ class Plague:
 			city.setHasRealBuilding(iPlague, False)
 
 
-
 	def onCityAcquired(self, iOldOwner, iNewOwner, city):
 		if city.hasBuilding(iPlague):
+			# Absinthe: the Plague of Justinian shouldn't spread to Italy and France, even if it was as deadly as the Black Death
+			if city.getOwner() in [con.iFrankia, con.iPope] and gc.getGame().getGameTurn() <= xml.i632AD:
+				city.setHasRealBuilding(iPlague, False)
+				return
+
 			# only if it's not a recently born civ
 			if gc.getGame().getGameTurn() > con.tBirth[iNewOwner] + iImmunity:
 				# reinfect the human player if conquering plagued cities
@@ -503,16 +533,20 @@ class Plague:
 					if self.getPlagueCountdown(iNewOwner) <= 0:
 						self.spreadPlague(iNewOwner, -1)
 						for cityNear in utils.getCityList(iNewOwner):
-							if utils.calculateDistance(city.getX(), city.getY(), cityNear.getX(), cityNear.getY()) <= 3:
-								self.infectCity(cityNear)
+							if not cityNear.isHasRealBuilding(iPlague):
+								if utils.calculateDistance(city.getX(), city.getY(), cityNear.getX(), cityNear.getY()) <= 3:
+									if gc.getGame().getSorenRandNum(10, 'roll') < 5:
+										self.infectCity(cityNear)
 				# no reinfect for the AI, only infect
 				else:
 					 # if > 0 do nothing, if < 0 keep immunity and remove plague from the city, if == 0 start the plague
 					if self.getPlagueCountdown(iNewOwner) == 0:
 						self.spreadPlague(iNewOwner, -1)
 						for cityNear in utils.getCityList(iNewOwner):
-							if utils.calculateDistance(city.getX(), city.getY(), cityNear.getX(), cityNear.getY()) <= 3:
-								self.infectCity(cityNear)
+							if not cityNear.isHasRealBuilding(iPlague):
+								if utils.calculateDistance(city.getX(), city.getY(), cityNear.getX(), cityNear.getY()) <= 3:
+									if gc.getGame().getSorenRandNum(10, 'roll') < 5:
+										self.infectCity(cityNear)
 					elif self.getPlagueCountdown(iNewOwner) < 0:
 						city.setHasRealBuilding(iPlague, False)
 			else:

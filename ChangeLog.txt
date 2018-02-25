@@ -50,6 +50,21 @@ Changes for RFCE 1.6:
 	- Renamed/updated a couple names and texts related to various advisor screens (e.g. Corporation Advisor -> Company Advisor)
 	- Removed all remnants of the Relic, Uranium, Oil, Football/Sports Event, Aluminium, and separate Elephant resources (gamefont, xml, etc.)
 	- New resources: Citrus, Dates, Camels, Cocoa, Hemp, Opium
+	- Fixed a couple bugs with the protestantism and reliquary systems used together
+	- Adjusted Protestantism spread rate on Reformation when a civ is converting to the new religion
+	- Naffatun units now cause collateral damage on attack, as originally intended
+	- Lipka Tatars will cause less collateral damage, free Mobility promotion
+	- Boyars have a free Ambush promotion instead of Shock
+	- New icons for the Catholic, Orthodox and Protestant Belfries
+	- Fixed mistake in the Portuguese dynamic civ names
+	- Reduced Portuguese UP to 30% bonus production speed for colonies (from 40%)
+	- Fixed syncronization issue in the Muscovian UP, slightly increased it's maintenance reduction effect
+	- Plague can spread to some of your close cities right away on conquering an infected city
+	- Fixed mistake with the French and Papal immunity on the first plague
+	- Fixed bug with plague spread, getting rid of your infected city (raze, gift) won't grant immunity from the given plague
+	- Fixed bug where plague could spread to the same city twice
+	- Fixed bug where some of your Chivalric Knights did not leave for the Crusade, but appeared as a Crusader unit
+	- Changed the color of some messages related to the Rise and Fall mechanics from green to red
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
