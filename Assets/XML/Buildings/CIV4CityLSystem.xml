@@ -2363,6 +2363,24 @@
 			<Rotate>-45</Rotate>
 			<Scale>1.0</Scale>
 		</ArtRef>
+		<ArtRef Name="building:LSYSTEM_GRAND_ARSENAL">
+			<Attribute Class="Scalar">bNoWaterTest:1</Attribute>
+			<!-- this bypasses water testing -->
+			<Attribute Class="Scalar">szSpecialLayout:Coast</Attribute>
+			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
+			<Attribute Class="Scalar">bUseCostAligner:1</Attribute>
+			<Attribute Class="Scalar">fAlignerBoxSize:10</Attribute>
+			<Attribute Class="Scalar">fPushX:0</Attribute>
+			<!-- To debug the placement of the alignpoints, set next line to 0.0 -->
+			<Attribute Class="Scalar">fAlignerOverride:-1.0</Attribute>
+			<Attribute Class="ScalarList">lAlignerPointsX: -5, -5, -5, -5, -5, -3, -3, -3, -3, -3, -1, -1, -1, -1, -1, 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 5, 5, 5, 5, 5</Attribute>
+			<Attribute Class="ScalarList">lAlignerPointsY: -6, -3, 0, 3, 6, -6, -3, 0, 3, 6, -6, -3, 0, 3, 6, -6, -3, 0, 3, 6, -6, -3, 0, 3, 6, -6, -3, 0, 3, 6</Attribute>
+			<Attribute Class="ScalarList">lAlignerPointsWet: 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1</Attribute>
+			<Attribute Class="ScalarList">lAlignerPointsWeight: 1, 2, 3, 2, 1, 2, 4, 6, 4, 2, 3, 6, 9, 6, 3, 3, 6, 9, 6, 3, 2, 4, 6, 4, 2, 1, 2, 3, 2, 1</Attribute>
+			<Attribute Class="Scalar">bForceWaterHeight:1</Attribute>
+			<Rotate>-45</Rotate>
+			<Scale>1.6</Scale>
+		</ArtRef>
 	</LNode>
 	<!-- *************************************************************************** -->
 	<!-- ******************* How big are the nonleaf nodes?      ******************* -->

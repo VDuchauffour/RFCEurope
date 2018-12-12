@@ -19,7 +19,7 @@
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iCost>500</iCost>
 			<iNukeInterception>0</iNukeInterception>
-			<iTechShare>2</iTechShare>
+			<iTechShare>3</iTechShare>
 			<EveryoneSpecialUnit>NONE</EveryoneSpecialUnit>
 			<EveryoneSpecialBuilding>NONE</EveryoneSpecialBuilding>
 			<bSpaceship>0</bSpaceship>

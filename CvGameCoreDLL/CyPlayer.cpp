@@ -2436,10 +2436,12 @@ int CyPlayer::getStability(){
 int CyPlayer::getWarPeaceChange(){
 	return m_pPlayer ->getWarPeaceChange();
 };
-int CyPlayer::getNumColonies(){
+int CyPlayer::getNumColonies()
+{
 	return m_pPlayer ->getNumColonies();
 };
-void CyPlayer::setNumColonies( int iNewValue ){
+void CyPlayer::setNumColonies( int iNewValue )
+{
 	m_pPlayer ->setNumColonies( iNewValue );
 };
 int CyPlayer::getPicklefreeParameter( int iParam ){

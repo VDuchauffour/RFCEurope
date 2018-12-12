@@ -232,6 +232,7 @@ void CvPlayer::init(PlayerTypes eID)
 		changeFreeUnitsPopulationPercent(GC.getDefineINT("INITIAL_FREE_UNITS_POPULATION_PERCENT"));
 		changeFreeMilitaryUnitsPopulationPercent(GC.getDefineINT("INITIAL_FREE_MILITARY_UNITS_POPULATION_PERCENT"));
 		changeGoldPerUnit(GC.getDefineINT("INITIAL_GOLD_PER_UNIT"));
+		changeGoldPerMilitaryUnit(GC.getDefineINT("INITIAL_GOLD_PER_MILITARY_UNIT"));
 		changeTradeRoutes(GC.getDefineINT("INITIAL_TRADE_ROUTES"));
 		changeStateReligionHappiness(GC.getDefineINT("INITIAL_STATE_RELIGION_HAPPINESS"));
 		changeNonStateReligionHappiness(GC.getDefineINT("INITIAL_NON_STATE_RELIGION_HAPPINESS"));
@@ -3859,7 +3860,7 @@ bool CvPlayer::canContact(PlayerTypes ePlayer) const
 		return false;
 	}
 
-	// 3MiroPapal: (not Working) I got it and I think this should stay as is
+	// 3MiroPapal: I think this should stay as is
 	if ( (ePlayer == PAPAL_PLAYER) && ( getStateReligion() == PAPAL_RELIGION ) ){
 		return true;
 	};
@@ -6049,6 +6050,35 @@ bool CvPlayer::canMaintain(ProcessTypes eProcess, bool bContinue) const
 		return false;
 	}
 
+	// Absinthe: obsolete tech for processes
+	//if (GC.getProcessInfo(eProcess).getObsoleteTech() > -1)
+	if (GC.getProcessInfo(eProcess).getObsoleteTech() != NO_TECH)
+	{
+		if (GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getProcessInfo(eProcess).getObsoleteTech())))
+		{
+			return false;
+		}
+	}
+
+	// Absinthe: Wonders: Palazzo San Giorgio wonder effect
+	if (eProcess == (ProcessTypes)GC.getInfoTypeForString("PROCESS_WEALTH_EXTRA"))
+	{
+		if (getBuildingClassCount((BuildingClassTypes)GC.getInfoTypeForString("BUILDINGCLASS_SAN_GIORGIO")) == 1)
+		{
+			return true;
+		}
+		return false;
+	}
+	if (eProcess == (ProcessTypes)GC.getInfoTypeForString("PROCESS_WEALTH_2") || eProcess == (ProcessTypes)GC.getInfoTypeForString("PROCESS_WEALTH_3"))
+	{
+		if (getBuildingClassCount((BuildingClassTypes)GC.getInfoTypeForString("BUILDINGCLASS_SAN_GIORGIO")) == 1)
+		{
+			return false;
+		}
+		return true;
+	}
+	// Absinthe: Wonders: Palazzo San Giorgio wonder effect
+
 	return true;
 }
 
@@ -6480,7 +6510,7 @@ int CvPlayer::getBuildingClassPrereqBuilding(BuildingTypes eBuilding, BuildingCl
 
 	int iPrereqs = kBuilding.getPrereqNumOfBuildingClass(ePrereqBuildingClass);
 
-	// dont bother with the rest of the calcs if we have no prereqs
+	// don't bother with the rest of the calcs if we have no prereqs
 	if (iPrereqs < 1)
 	{
 		return 0;
@@ -6490,6 +6520,17 @@ int CvPlayer::getBuildingClassPrereqBuilding(BuildingTypes eBuilding, BuildingCl
 
 	iPrereqs *= std::max(0, (GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getBuildingClassPrereqModifier() + 100));
 	iPrereqs /= 100;
+
+	// Absinthe: Wonders: The Duomo wonder effect
+	if (kBuilding.getSpecialBuildingType() == GC.getInfoTypeForString("SPECIALBUILDING_CATHEDRAL"))
+	{
+		if (getBuildingClassCount((BuildingClassTypes)GC.getInfoTypeForString("BUILDINGCLASS_THE_DUOMO")) == 1)
+		{
+			//iPrereqs -= 1;
+			iPrereqs = std::max(0, iPrereqs - 1);
+		}
+	}
+	// Absinthe: Wonders: The Duomo
 
 	if (!isLimitedWonderClass(eBuildingClass))
 	{
@@ -6877,10 +6918,19 @@ int CvPlayer::calculateUnitCost(int& iFreeUnits, int& iFreeMilitaryUnits, int& i
 	iSupport = 0;
 
 	iBaseUnitCost = iPaidUnits * getGoldPerUnit();
-	iMilitaryCost = iPaidMilitaryUnits * getGoldPerMilitaryUnit();
+	// Absinthe: military unit cost setting is halved, so we can set multiples of 0.5 (not only integers)
+	iMilitaryCost = iPaidMilitaryUnits * getGoldPerMilitaryUnit() / 2;
 	iExtraCost = getExtraUnitCost();
 
 	iSupport = iMilitaryCost + iBaseUnitCost + iExtraCost;
+
+	// Absinthe: Wonders: St. Basil wonder effect
+	if (getBuildingClassCount((BuildingClassTypes)GC.getInfoTypeForString("BUILDINGCLASS_ST_BASIL")) == 1)
+	{
+		iSupport *= 7;
+		iSupport /= 10;
+	}
+	// Absinthe: Wonders: St. Basil
 
 	//Rhye - start
 	//iSupport *= GC.getHandicapInfo(getHandicapType()).getUnitCostPercent();
@@ -6976,7 +7026,20 @@ int CvPlayer::calculatePreInflatedCosts() const
 	long lResult;
 	gDLL->getPythonIFace()->callFunction(PYGameModule, "getExtraCost", argsList.makeFunctionArgs(), &lResult);
 
-	return (calculateUnitCost() + calculateUnitSupply() + getTotalMaintenance() + getCivicUpkeep() + (int)lResult);
+	// Absinthe: add mercenary upkeep - the pickle free parameter with id=2 is the mercenary cost per turn, calculation is the same as in python
+	CvPlayer& player = GET_PLAYER(getID());
+	//GC.getGameINLINE().getActivePlayer()
+	int iMercenaryMaintenanceCost = (int)((player.getPicklefreeParameter( 2 ) + 99) / 100);
+
+	// Absinthe: add colony upkeep
+	int iColonyNumber = getNumColonies();
+	int iColonyUpkeep = 0;
+	if (iColonyNumber > 0)
+	{
+		iColonyUpkeep = (int)((iColonyNumber * iColonyNumber * 0.5 + iColonyNumber * 0.5) * 3 + 7);
+	}
+
+	return (calculateUnitCost() + calculateUnitSupply() + getTotalMaintenance() + getCivicUpkeep() + iMercenaryMaintenanceCost + iColonyUpkeep + (int)lResult);
 }
 
 
@@ -9714,7 +9777,18 @@ void CvPlayer::changeExtraHappiness(int iChange)
 
 int CvPlayer::getBuildingHappiness() const
 {
-	return m_iBuildingHappiness;
+	int iBuildingCivicHappiness = 0;
+	// Absinthe: Wonders: Westminster Abbey
+	if (getBuildingClassCount((BuildingClassTypes)GC.getInfoTypeForString("BUILDINGCLASS_WESTMINSTER")) == 1)
+	{
+		// Divine Monarchy is the 3rd civic - should add civics as enums
+		if (hasCivic((CivicTypes)2) == 1)
+		{
+			iBuildingCivicHappiness += 1;
+		}
+	}
+	// Absinthe: Wonders: Westminster Abbey
+	return m_iBuildingHappiness + iBuildingCivicHappiness;
 }
 
 
@@ -10623,7 +10697,7 @@ void CvPlayer::setAlive(bool bNewValue)
 
 					for (iI = 0; iI < MAX_PLAYERS; iI++)
 					{
-						if (GET_PLAYER((PlayerTypes)iI).isAlive())
+						if (GET_PLAYER((PlayerTypes)iI).isAlive() && (GC.getGameINLINE().getGameTurn() >= startingTurn[GC.getGameINLINE().getActivePlayer()])) // Absinthe: no civ destroyed message during autoplay
 						{
 							gDLL->getInterfaceIFace()->addHumanMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CIVDESTROYED", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"));
 						}
@@ -11563,7 +11637,22 @@ int CvPlayer::getFreeCityCommerce(CommerceTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex is expected to be within maximum bounds (invalid Index)");
-	return m_aiFreeCityCommerce[eIndex];
+	// Absinthe: UP_PER_CITY_COMMERCE: yield bonuses should be applied here, so the overall value is properly shown and applied everywhere
+	//									getFreeCityCommerce also counts the civ-specific UP_PER_CITY_COMMERCE bonuses
+	int iCommerceValue = m_aiFreeCityCommerce[eIndex];
+	int iUPC = UniquePowers[getID() * UP_TOTAL_NUM + UP_PER_CITY_COMMERCE];
+	if ( iUPC > -1 ){
+		if ( eIndex == COMMERCE_GOLD ){ // May or May not work for Gold
+			iCommerceValue += (iUPC / 1000000) % 100;
+		}else if ( eIndex == COMMERCE_RESEARCH ){
+			iCommerceValue += (iUPC / 10000) % 100;
+		}else if ( eIndex == COMMERCE_CULTURE ){
+			iCommerceValue += (iUPC / 100) % 100;
+		}else if ( eIndex == COMMERCE_ESPIONAGE ){
+			iCommerceValue += iUPC % 100;
+		}
+	}
+	return iCommerceValue;
 }
 
 
@@ -11669,20 +11758,6 @@ int CvPlayer::getCommerceRate(CommerceTypes eIndex) const
 			iRate = 0;
 		}
 	}
-
-	// 3MiroUP: Commerce, the city screen only shows the commerce per city, this should actually add it
-	//GC.getGameINLINE().logMsg(" Checking getCommerceRate() player %d  %d ",getID(),iRate); // 3Miro
-	int iUPC = UniquePowers[getID() * UP_TOTAL_NUM + UP_PER_CITY_COMMERCE];
-	if ( iUPC > -1 ){
-		if ( eIndex == COMMERCE_GOLD ){ // May or May not work for Gold
-			iRate += 100*((iUPC / 1000000) %100) * getNumCities();
-		}else if ( eIndex == COMMERCE_RESEARCH ){
-			iRate += 100*((iUPC / 10000) %100) * getNumCities();
-		}else if ( eIndex == COMMERCE_ESPIONAGE ){
-			iRate += 100*(iUPC % 100) * getNumCities();
-		};
-		//GC.getGameINLINE().logMsg(" Added Something  %d",iRate); // 3Miro
-	};
 
 	return iRate / 100;
 }
@@ -12701,6 +12776,14 @@ int CvPlayer::getCivicUpkeep(CivicTypes* paeCivics, bool bIgnoreAnarchy) const
 	{
 		iTotalUpkeep += getSingleCivicUpkeep(paeCivics[iI], bIgnoreAnarchy);
 	}
+
+	// Absinthe: Wonders: Golden Bull wonder effect
+	if (getBuildingClassCount((BuildingClassTypes)GC.getInfoTypeForString("BUILDINGCLASS_GOLDEN_BULL")) == 1)
+	{
+		iTotalUpkeep *= 7;
+		iTotalUpkeep /= 10;
+	}
+	// Absinthe: Wonders: Golden Bull
 
 	return iTotalUpkeep;
 }
@@ -16749,6 +16832,7 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange)
 	changeWarWearinessModifier(GC.getCivicInfo(eCivic).getWarWearinessModifier() * iChange);
 	changeFreeSpecialist(GC.getCivicInfo(eCivic).getFreeSpecialist() * iChange);
 	changeTradeRoutes(GC.getCivicInfo(eCivic).getTradeRoutes() * iChange);
+	changeCoastalTradeRoutes(GC.getCivicInfo(eCivic).getCoastalTradeRoutes() * iChange); // Absinthe: coastal trade routes
 	changeNoForeignTradeCount(GC.getCivicInfo(eCivic).isNoForeignTrade() * iChange);
 	changeNoCorporationsCount(GC.getCivicInfo(eCivic).isNoCorporations() * iChange);
 	changeNoForeignCorporationsCount(GC.getCivicInfo(eCivic).isNoForeignCorporations() * iChange);
@@ -16991,6 +17075,7 @@ void CvPlayer::reinit( PlayerTypes eID, LeaderHeadTypes prevLeader, bool doReset
 			changeFreeUnitsPopulationPercent(GC.getDefineINT("INITIAL_FREE_UNITS_POPULATION_PERCENT"));
 			changeFreeMilitaryUnitsPopulationPercent(GC.getDefineINT("INITIAL_FREE_MILITARY_UNITS_POPULATION_PERCENT"));
 			changeGoldPerUnit(GC.getDefineINT("INITIAL_GOLD_PER_UNIT"));
+			changeGoldPerMilitaryUnit(GC.getDefineINT("INITIAL_GOLD_PER_MILITARY_UNIT"));
 			changeTradeRoutes(GC.getDefineINT("INITIAL_TRADE_ROUTES"));
 			changeStateReligionHappiness(GC.getDefineINT("INITIAL_STATE_RELIGION_HAPPINESS"));
 			changeNonStateReligionHappiness(GC.getDefineINT("INITIAL_NON_STATE_RELIGION_HAPPINESS"));
@@ -23725,10 +23810,12 @@ int CvPlayer::getWarPeaceChange(){
 		return 0;
 	};
 };
-int CvPlayer::getNumColonies(){
+int CvPlayer::getNumColonies() const
+{
 	return m_iNumColonies;
 };
-void CvPlayer::setNumColonies( int iNewValue ){
+void CvPlayer::setNumColonies( int iNewValue )
+{
 	m_iNumColonies = iNewValue;
 };
 int CvPlayer::getPicklefreeParameter( int iParam ){

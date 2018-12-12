@@ -5486,6 +5486,7 @@ bool CvUnit::spread(ReligionTypes eReligion)
 {
 	CvCity* pCity;
 	CvWString szBuffer;
+	int iSpreadBase;
 	int iSpreadProb;
 
 	if (!canSpread(plot(), eReligion))
@@ -5497,16 +5498,40 @@ bool CvUnit::spread(ReligionTypes eReligion)
 
 	if (pCity != NULL)
 	{
-		iSpreadProb = m_pUnitInfo->getReligionSpreads(eReligion);
+		iSpreadBase = m_pUnitInfo->getReligionSpreads(eReligion);
 
+		// Absinthe: higher chance if the city owner has the religious tolerance UP
+		if ( (UniquePowers[pCity->getOwnerINLINE() * UP_TOTAL_NUM + UP_RELIGIOUS_TOLERANCE] > -1) )
+		{
+			iSpreadBase += 20;
+		}
+
+		// If it's for a foreign city
 		if (pCity->getTeam() != getTeam())
 		{
-			iSpreadProb /= 2;
+			iSpreadBase -= 20;
 		}
 
 		bool bSuccess;
 
-		iSpreadProb += (((GC.getNumReligionInfos() - pCity->getReligionCount()) * (100 - iSpreadProb)) / GC.getNumReligionInfos());
+		//iSpreadProb += (((GC.getNumReligionInfos() - pCity->getReligionCount()) * (100 - iSpreadProb)) / GC.getNumReligionInfos());
+
+		// Values with iReligionSpread = 30 in the XML
+		// With UP in own city: 100, 80, 60, 40, 20, 0
+		// With UP in foreign city: 60, 48, 36, 24, 12, 0
+		// Without UP in own city: 80, 64, 48, 32, 16, 0
+		// Without UP in UP city: 80, 64, 48, 32, 16, 0
+		// Without UP in other foreign city: 60, 48, 36, 24, 12, 0
+		//iSpreadProb = (((GC.getNumReligionInfos() - pCity->getReligionCount()) * (50 + iSpreadBase)) / GC.getNumReligionInfos());
+
+		// alternatively:
+		// Values with iReligionSpread = 50 in the XML
+		// With UP in own city: 100, 84, 68, 52, 36, 20
+		// With UP in foreign city: 60, 52, 44, 36, 28, 20
+		// Without UP in own city: 80, 68, 56, 44, 32, 20
+		// Without UP in UP city: 80, 68, 56, 44, 32, 20
+		// Without UP in other foreign city: 60, 52, 44, 36, 28, 20
+		iSpreadProb = 30 + (((GC.getNumReligionInfos() - pCity->getReligionCount()) * iSpreadBase) / GC.getNumReligionInfos());
 
 		if (GC.getGameINLINE().getSorenRandNum(100, "Unit Spread Religion") < iSpreadProb)
 		{
@@ -5851,6 +5876,13 @@ int CvUnit::getDiscoverResearch(TechTypes eTech) const
 
 	iResearch *= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getUnitDiscoverPercent();
 	iResearch /= 100;
+
+	// Absinthe: Wonders: Uraniborg wonder effect
+	if (GET_PLAYER(getOwnerINLINE()).getBuildingClassCount((BuildingClassTypes)GC.getInfoTypeForString("BUILDINGCLASS_URANIBORG")) == 1)
+	{
+		iResearch *= 3;
+	}
+	// Absinthe: Wonders: Uraniborg end
 
     if (eTech != NO_TECH)
     {

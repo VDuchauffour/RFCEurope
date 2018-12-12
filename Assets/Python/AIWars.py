@@ -239,18 +239,21 @@ class AIWars:
 
 	def checkGrid(self, iCiv):
 		pCiv = gc.getPlayer(iCiv)
-		tCiv = gc.getTeam(pCiv.getTeam())
+		pTeam = gc.getTeam(pCiv.getTeam())
 		lTargetCivs = [0] * iNumTotalPlayers #clean it, sometimes it takes old values in memory
 
 		#set alive civs to 1 to differentiate them from dead civs
 		for iLoopPlayer in range(iNumTotalPlayers):
 			if iLoopPlayer == iCiv: continue
-			if tCiv.isAtWar(iLoopPlayer): #if already at war with iCiv then it remains 0
+			if pTeam.isAtWar(iLoopPlayer): #if already at war with iCiv then it remains 0
 				continue
+			pLoopPlayer = gc.getPlayer(iLoopPlayer)
+			iLoopTeam = pLoopPlayer.getTeam()
+			pLoopTeam = gc.getTeam(iLoopTeam)
 			if iLoopPlayer < iNumPlayers: #if master or vassal of iCiv then it remains 0
-				if gc.getTeam(gc.getPlayer(iLoopPlayer).getTeam()).isVassal(iCiv) or tCiv.isVassal(iLoopPlayer):
+				if pLoopTeam.isVassal(iCiv) or pTeam.isVassal(iLoopPlayer):
 					continue
-			if gc.getPlayer(iLoopPlayer).isAlive() and tCiv.isHasMet(iLoopPlayer):
+			if pLoopPlayer.isAlive() and pTeam.isHasMet(iLoopTeam):
 				lTargetCivs[iLoopPlayer] = 1
 
 		for (i, j) in utils.getWorldPlotsList():
@@ -309,19 +312,19 @@ class AIWars:
 					lTargetCivs[iLoopCiv] /= attitude
 
 			#if already at war
-			if not tCiv.isAtWar(iLoopCiv):
+			if not pTeam.isAtWar(iLoopCiv):
 				#consider peace counter
-				iCounter = min(7, max(1, tCiv.AI_getAtPeaceCounter(iLoopCiv)))
+				iCounter = min(7, max(1, pTeam.AI_getAtPeaceCounter(iLoopCiv)))
 				if iCounter <= 7:
 					lTargetCivs[iLoopCiv] *= 20 + 10*iCounter
 					lTargetCivs[iLoopCiv] /= 100
 
 			#if under pact
-			if tCiv.isDefensivePact(iLoopCiv):
+			if pTeam.isDefensivePact(iLoopCiv):
 				lTargetCivs[iLoopCiv] /= 4
 			#if friend of a friend
 ##			for jLoopCiv in range( iNumTotalPlayers ):
-##				if (tCiv.isDefensivePact(jLoopCiv) and gc.getTeam(gc.getPlayer(iLoopCiv).getTeam()).isDefensivePact(jLoopCiv)):
+##				if (pTeam.isDefensivePact(jLoopCiv) and gc.getTeam(gc.getPlayer(iLoopCiv).getTeam()).isDefensivePact(jLoopCiv)):
 ##					lTargetCivs[iLoopCiv] /= 2
 
 		#print(lTargetCivs)

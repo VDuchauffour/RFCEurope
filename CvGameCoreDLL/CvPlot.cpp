@@ -6694,6 +6694,86 @@ int CvPlot::calculateImprovementYieldChange(ImprovementTypes eImprovement, Yield
 				}
 			}
 		}
+		// Absinthe: England: UP_IMPROVEMENT_BONUS
+		int iUPW2 = UniquePowers[((int)ePlayer) * UP_TOTAL_NUM + UP_IMPROVEMENT_BONUS_2];
+		if (iUPW2 / 100000 == 1)
+		{
+			if ( eImprovement == (iUPW2 / 1000) % 100 )
+			{
+				if ( eYield == YIELD_COMMERCE )
+				{
+					iYield += iUPW2 % 10;
+				}
+				else if ( eYield == YIELD_PRODUCTION )
+				{
+					iYield += (iUPW2 / 10) % 10;
+				}
+				else if ( eYield == YIELD_FOOD )
+				{
+					iYield += (iUPW2 / 100) % 10;
+				}
+			}
+		}
+		// Absinthe: England: UP_IMPROVEMENT_BONUS
+		int iUPW3 = UniquePowers[((int)ePlayer) * UP_TOTAL_NUM + UP_IMPROVEMENT_BONUS_3];
+		if (iUPW3 / 100000 == 1)
+		{
+			if ( eImprovement == (iUPW3 / 1000) % 100 )
+			{
+				if ( eYield == YIELD_COMMERCE )
+				{
+					iYield += iUPW3 % 10;
+				}
+				else if ( eYield == YIELD_PRODUCTION )
+				{
+					iYield += (iUPW3 / 10) % 10;
+				}
+				else if ( eYield == YIELD_FOOD )
+				{
+					iYield += (iUPW3 / 100) % 10;
+				}
+			}
+		}
+		// Absinthe: England: UP_IMPROVEMENT_BONUS
+		int iUPW4 = UniquePowers[((int)ePlayer) * UP_TOTAL_NUM + UP_IMPROVEMENT_BONUS_4];
+		if (iUPW4 / 100000 == 1)
+		{
+			if ( eImprovement == (iUPW4 / 1000) % 100 )
+			{
+				if ( eYield == YIELD_COMMERCE )
+				{
+					iYield += iUPW4 % 10;
+				}
+				else if ( eYield == YIELD_PRODUCTION )
+				{
+					iYield += (iUPW4 / 10) % 10;
+				}
+				else if ( eYield == YIELD_FOOD )
+				{
+					iYield += (iUPW4 / 100) % 10;
+				}
+			}
+		}
+		// Absinthe: England: UP_IMPROVEMENT_BONUS
+		int iUPW5 = UniquePowers[((int)ePlayer) * UP_TOTAL_NUM + UP_IMPROVEMENT_BONUS_5];
+		if (iUPW5 / 100000 == 1)
+		{
+			if ( eImprovement == (iUPW5 / 1000) % 100 )
+			{
+				if ( eYield == YIELD_COMMERCE )
+				{
+					iYield += iUPW5 % 10;
+				}
+				else if ( eYield == YIELD_PRODUCTION )
+				{
+					iYield += (iUPW5 / 10) % 10;
+				}
+				else if ( eYield == YIELD_FOOD )
+				{
+					iYield += (iUPW5 / 100) % 10;
+				}
+			}
+		}
 	}
 
 /*************************************************************************************************/

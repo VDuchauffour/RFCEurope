@@ -168,15 +168,6 @@
 		<Portuguese>Oasis</Portuguese>
 	</TEXT>	
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_FALLOUT_PEDIA</Tag>
-		<English>[TAB]Fallout is the residual radioactive material propelled into the upper atmosphere following a nuclear blast or a nuclear reaction conducted in an unshielded facility, so called because it "falls out" of the sky after the explosion and shock wave have passed. It commonly refers to the radioactive dust and ash created when a nuclear weapon explodes, but this dust can also be originated in a damaged nuclear plant. This radioactive dust, consisting of material either directly vaporized by a nuclear blast or charged by exposure, is a highly dangerous kind of radioactive contamination. It can lead to the contamination of aquifers or soil and devastate the affected ecosystems years after the initial exposure.</English>
-		<French>Fallout</French>
-		<German>Fallout</German>
-		<Italian>Fallout</Italian>
-		<Spanish>Fallout</Spanish>
-		<Portuguese>Fallout</Portuguese>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_FEATURE_MARSH</Tag>
 		<English>Marsh</English>
 		<French>Marécage</French>
@@ -295,7 +286,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_WONDER_PYRAMIDS_PEDIA</Tag>
-		<English>[TAB]Remnants of a long gone age, these Pyramids are truly spectacular. They might give inspiration to your population in the neighboring cities!</English>
+		<English>[TAB]Remnants of a long gone age, the Great Pyramids are truly spectacular. They might give inspiration to your population in the neighboring cities!</English>
 		<French>[TAB]Remnants of a long gone age, these Pyramids are truly spectacular. They might give inspiration to your population in the neighboring cities!</French>
 		<German>[TAB]Remnants of a long gone age, these Pyramids are truly spectacular. They might give inspiration to your population in the neighboring cities!</German>
 		<Italian>[TAB]Remnants of a long gone age, these Pyramids are truly spectacular. They might give inspiration to your population in the neighboring cities!</Italian>

@@ -45,7 +45,9 @@ class CvGameUtils:
 
 	def getExtraCost(self, argsList):
 		ePlayer = argsList[0]
-		return 0
+		pPlayer = gc.getPlayer(ePlayer)
+		iExtraCost = 0
+		return iExtraCost
 
 
 	def createBarbarianCities(self):
@@ -571,8 +573,23 @@ class CvGameUtils:
 		pPlayer = gc.getPlayer(iPlayer)
 		pCity = pPlayer.getCity(iCityID)
 
-		iCostMod = -1 # Any value > 0 will be used
+		iCostMod = -1 # Any value > 1 will be used
+		iDiscount = 0
 
+		# Absinthe: Borgund Stave Church start
+		if pPlayer.countNumBuildings(xml.iBorgundStaveChurch) > 0:
+			if xml.iPaganShrine <= iBuilding <= xml.iReliquary:
+				iDiscount += 40
+		# Absinthe: Borgund Stave Church end
+
+		# Absinthe: Blue Mosque start
+		if pPlayer.countNumBuildings(xml.iBlueMosque) > 0:
+			if pPlayer.getCapitalCity().getNumActiveBuilding(iBuilding) and not pCity.isCapital():
+				iDiscount += 20
+		# Absinthe: Blue Mosque end
+
+		if iDiscount > 0:
+			iCostMod = 100 - iDiscount
 		return iCostMod
 
 

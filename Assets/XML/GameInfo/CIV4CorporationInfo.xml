@@ -31,7 +31,7 @@
 			<CommercesProduced>
 				<iCommerceProduced>0</iCommerceProduced>
 				<iCommerceProduced>0</iCommerceProduced>
-				<iCommerceProduced>66</iCommerceProduced>
+				<iCommerceProduced>67</iCommerceProduced>
 			</CommercesProduced>
 			<YieldsProduced>
 				<iYieldProduced>0</iYieldProduced>
@@ -67,7 +67,7 @@
 			<BonusProduced>NONE</BonusProduced>
 			<CommercesProduced>
 				<iCommerceProduced>0</iCommerceProduced>
-				<iCommerceProduced>66</iCommerceProduced>
+				<iCommerceProduced>67</iCommerceProduced>
 				<iCommerceProduced>0</iCommerceProduced>
 			</CommercesProduced>
 			<YieldsProduced>
@@ -108,7 +108,7 @@
 			</CommercesProduced>
 			<YieldsProduced>
 				<iYieldProduced>0</iYieldProduced>
-				<iYieldProduced>66</iYieldProduced>
+				<iYieldProduced>67</iYieldProduced>
 			</YieldsProduced>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,1,7</Button>
 			<MovieFile>NONE</MovieFile>
@@ -140,10 +140,10 @@
 			<CommercesProduced>
 				<iCommerceProduced>0</iCommerceProduced>
 				<iCommerceProduced>0</iCommerceProduced>
-				<iCommerceProduced>0</iCommerceProduced>
+				<iCommerceProduced>34</iCommerceProduced>
 			</CommercesProduced>
 			<YieldsProduced>
-				<iYieldProduced>50</iYieldProduced>
+				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>100</iYieldProduced>
 			</YieldsProduced>
@@ -176,7 +176,7 @@
 			<BonusProduced>NONE</BonusProduced>
 			<CommercesProduced>
 				<iCommerceProduced>100</iCommerceProduced>
-				<iCommerceProduced>66</iCommerceProduced>
+				<iCommerceProduced>67</iCommerceProduced>
 			</CommercesProduced>
 			<YieldsProduced>
 				<iYieldProduced>0</iYieldProduced>
@@ -217,7 +217,7 @@
 			</CommercesProduced>
 			<YieldsProduced>
 				<iYieldProduced>0</iYieldProduced>
-				<iYieldProduced>66</iYieldProduced>
+				<iYieldProduced>67</iYieldProduced>
 			</YieldsProduced>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,6,7</Button>
 			<MovieFile>NONE</MovieFile>
@@ -250,13 +250,13 @@
 				<iCommerceProduced>100</iCommerceProduced>
 				<iCommerceProduced>0</iCommerceProduced>
 				<iCommerceProduced>0</iCommerceProduced>
-				<iCommerceProduced>66</iCommerceProduced>
+				<iCommerceProduced>67</iCommerceProduced>
 			</CommercesProduced>
 			<YieldsProduced>
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldsProduced>
-			<Button>Art/Interface/Buttons/Corporations/Grimaldi.dds</Button>
+			<Button>Art/Interface/Buttons/Companies/Grimaldi.dds</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>
 			<Sound>AS2D_BUILD_BANK</Sound>
@@ -286,14 +286,14 @@
 			<CommercesProduced>
 				<iCommerceProduced>0</iCommerceProduced>
 				<iCommerceProduced>0</iCommerceProduced>
-				<iCommerceProduced>66</iCommerceProduced>
+				<iCommerceProduced>50</iCommerceProduced>
 				<iCommerceProduced>0</iCommerceProduced>
 			</CommercesProduced>
 			<YieldsProduced>
 				<iYieldProduced>0</iYieldProduced>
-				<iYieldProduced>50</iYieldProduced>
+				<iYieldProduced>34</iYieldProduced>
 			</YieldsProduced>
-			<Button>Art/Interface/Buttons/Corporations/Dragon.dds</Button>
+			<Button>Art/Interface/Buttons/Companies/Dragon.dds</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>
 			<Sound>AS2D_BUILD_BARRACKS</Sound>
@@ -324,13 +324,13 @@
 				<iCommerceProduced>0</iCommerceProduced>
 				<iCommerceProduced>0</iCommerceProduced>
 				<iCommerceProduced>0</iCommerceProduced>
-				<iCommerceProduced>66</iCommerceProduced>
+				<iCommerceProduced>50</iCommerceProduced>
 			</CommercesProduced>
 			<YieldsProduced>
 				<iYieldProduced>0</iYieldProduced>
-				<iYieldProduced>50</iYieldProduced>
+				<iYieldProduced>34</iYieldProduced>
 			</YieldsProduced>
-			<Button>Art/Interface/Buttons/Corporations/Calatrava.dds</Button>
+			<Button>Art/Interface/Buttons/Companies/Calatrava.dds</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>
 			<Sound>AS2D_BUILD_BARRACKS</Sound>

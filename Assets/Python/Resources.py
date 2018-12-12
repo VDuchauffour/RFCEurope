@@ -53,7 +53,9 @@ class Resources:
 
 	def checkTurn(self, iGameTurn):
 		# Absinthe: note that all actions are taken place in the end of the turn, so actually the resources will appear/disappear for the next turn
-		if iGameTurn == xml.i1000AD:
+		if iGameTurn == xml.i552AD:
+			self.createResource(80, 24, xml.iSilk) #Silk near Constantinople
+		elif iGameTurn == xml.i1000AD:
 			self.createResource(36, 24, xml.iRice) #Rice in Iberia
 			self.createResource(86,  2, xml.iRice) #Rice in the Middle East
 		elif iGameTurn == (xml.i1066AD + 1):

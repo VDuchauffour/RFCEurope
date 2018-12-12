@@ -1031,13 +1031,40 @@
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HAPPY_CIV_SPECIFIC_UP</Tag>
+		<English>+%d1_Change[ICON_HAPPY]: "Our nation is the best!"</English>
+		<French>+%d1_Change[ICON_HAPPY]: "Our nation is the best!"</French>
+		<German>+%d1_Change[ICON_HAPPY]: "Our nation is the best!"</German>
+		<Italian>+%d1_Change[ICON_HAPPY]: "Our nation is the best!"</Italian>
+		<Spanish>+%d1_Change[ICON_HAPPY]: "Our nation is the best!"</Spanish>
+		<Portuguese>+%d1_Change[ICON_HAPPY]: "Our nation is the best!"</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_FREE_CITY_COMMERCE</Tag>
+		<English>[ICON_BULLET]%D1%F2 civ specific bonus</English>
+		<French>[ICON_BULLET]%D1%F2 en raison du libre &#233;change</French>
+		<German>[ICON_BULLET]%D1%F2 freie Wirtschaft</German>
+		<Italian>[ICON_BULLET]%D1%F2 commercio libero</Italian>
+		<Spanish>[ICON_BULLET]%D1 %F2 comercio libre</Spanish>
+		<Portuguese>[ICON_BULLET]%D1 %F2 comercio libre</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_PAGAN_CULTURE</Tag>
+		<English>[ICON_BULLET]%D1%F2 pagan culture</English>
+		<French>[ICON_BULLET]%D1%F2 pagan culture</French>
+		<German>[ICON_BULLET]%D1%F2 pagan culture</German>
+		<Italian>[ICON_BULLET]%D1%F2 pagan culture</Italian>
+		<Spanish>[ICON_BULLET]%D1 %F2 pagan culture</Spanish>
+		<Portuguese>[ICON_BULLET]%D1 %F2 pagan culture</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_BONUS_COMMERCE</Tag>
-		<English>[ICON_BULLET]%D1% %F2from Resources</English>
-		<French>[ICON_BULLET]%D1% %F2en resources &#233;change</French>
-		<German>[ICON_BULLET]%D1% %F2durch Ressourcen</German>
-		<Italian>[ICON_BULLET]%D1% %F2dalle Risorse</Italian>
-		<Spanish>[ICON_BULLET]%D1% %F2resources</Spanish>
-		<Portuguese>[ICON_BULLET]%D1% %F2de Recursos</Portuguese>
+		<English>[ICON_BULLET]%D1%%%F2 from Resources</English>
+		<French>[ICON_BULLET]%D1%%%F2 en resources &#233;change</French>
+		<German>[ICON_BULLET]%D1%%%F2 durch Ressourcen</German>
+		<Italian>[ICON_BULLET]%D1%%%F2 dalle Risorse</Italian>
+		<Spanish>[ICON_BULLET]%D1%% %F2 resources</Spanish>
+		<Portuguese>[ICON_BULLET]%D1%% %F2 de Recursos</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CLEANSE_RELIGION_MOUSE_OVER</Tag>
@@ -1085,6 +1112,24 @@
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ECON_AMOUNT_MONEY_MERCENARY_MAINTENANCE</Tag>
+		<English>The Amount of Money Spent on Mercenary Maintenance</English>
+		<French>The Amount of Money Spent on Mercenary Maintenance</French>
+		<German>The Amount of Money Spent on Mercenary Maintenance</German>
+		<Italian>The Amount of Money Spent on Mercenary Maintenance</Italian>
+		<Spanish>The Amount of Money Spent on Mercenary Maintenance</Spanish>
+		<Portuguese>The Amount of Money Spent on Mercenary Maintenance</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCE_ADVISOR_MERCENARY_MAINTENANCE_COST</Tag>
+		<English>[NEWLINE]%d1[ICON_GOLD]: Mercenary maintenance[NEWLINE]------------------------[NEWLINE]TOTAL MERCENARY MAINTENANCE: %d2[ICON_GOLD]</English>
+		<French>[NEWLINE]%d1[ICON_GOLD]: Mercenary maintenance[NEWLINE]------------------------[NEWLINE]TOTAL MERCENARY MAINTENANCE: %d2[ICON_GOLD]</French>
+		<German>[NEWLINE]%d1[ICON_GOLD]: Mercenary maintenance[NEWLINE]------------------------[NEWLINE]TOTAL MERCENARY MAINTENANCE: %d2[ICON_GOLD]</German>
+		<Italian>[NEWLINE]%d1[ICON_GOLD]: Mercenary maintenance[NEWLINE]------------------------[NEWLINE]TOTAL MERCENARY MAINTENANCE: %d2[ICON_GOLD]</Italian>
+		<Spanish>[NEWLINE]%d1[ICON_GOLD]: Mercenary maintenance[NEWLINE]------------------------[NEWLINE]TOTAL MERCENARY MAINTENANCE: %d2[ICON_GOLD]</Spanish>
+		<Portuguese>[NEWLINE]%d1[ICON_GOLD]: Mercenary maintenance[NEWLINE]------------------------[NEWLINE]TOTAL MERCENARY MAINTENANCE: %d2[ICON_GOLD]</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_FINANCIAL_ADVISOR_COLONY_UPKEEP</Tag>
 		<English>Colony Upkeep</English>
 		<French>Colony Upkeep</French>
@@ -1094,31 +1139,193 @@
 		<Portuguese>Colony Upkeep</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ECON_AMOUNT_COLONY_UPKEEP</Tag>
+		<Tag>TXT_KEY_ECON_AMOUNT_MONEY_COLONY_UPKEEP</Tag>
 		<English>The Amount of Money Spent on Colony Maintenance</English>
-		<French>Colony Upkeep</French>
-		<German>Colony Upkeep</German>
-		<Italian>Colony Upkeep</Italian>
-		<Spanish>Colony Upkeep</Spanish>
-		<Portuguese>Colony Upkeep</Portuguese>
+		<French>The Amount of Money Spent on Colony Maintenance</French>
+		<German>The Amount of Money Spent on Colony Maintenance</German>
+		<Italian>The Amount of Money Spent on Colony Maintenance</Italian>
+		<Spanish>The Amount of Money Spent on Colony Maintenance</Spanish>
+		<Portuguese>The Amount of Money Spent on Colony Maintenance</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_COLONY_UPKEEP_COST</Tag>
-		<English>%s1[NEWLINE]------------------------[NEWLINE]TOTAL COLONY UPKEEP: %d2[ICON_GOLD]</English>
-		<French>%s1[NEWLINE]------------------------[NEWLINE]TOTAL COLONY UPKEEP: %d2 [ICON_GOLD]</French>
-		<German>%s1[NEWLINE]------------------------[NEWLINE]TOTAL COLONY UPKEEP: %d2[ICON_GOLD]</German>
-		<Italian>%s1[NEWLINE]------------------------[NEWLINE]TOTAL COLONY UPKEEP: %d2[ICON_GOLD]</Italian>
-		<Spanish>%s1[NEWLINE]------------------------[NEWLINE]TOTAL COLONY UPKEEP: %d2 [ICON_GOLD]</Spanish>
-		<Portuguese>%s1[NEWLINE]------------------------[NEWLINE]TOTAL COLONY UPKEEP: %d2 [ICON_GOLD]</Portuguese>
+		<English>[NEWLINE]%d1[ICON_GOLD]: Upkeep of %d2 colonies[NEWLINE]------------------------[NEWLINE]TOTAL COLONY UPKEEP: %d3[ICON_GOLD]</English>
+		<French>[NEWLINE]%d1[ICON_GOLD]: Upkeep of %d2 colonies[NEWLINE]------------------------[NEWLINE]TOTAL COLONY UPKEEP: %d3[ICON_GOLD]</French>
+		<German>[NEWLINE]%d1[ICON_GOLD]: Upkeep of %d2 colonies[NEWLINE]------------------------[NEWLINE]TOTAL COLONY UPKEEP: %d3[ICON_GOLD]</German>
+		<Italian>[NEWLINE]%d1[ICON_GOLD]: Upkeep of %d2 colonies[NEWLINE]------------------------[NEWLINE]TOTAL COLONY UPKEEP: %d3[ICON_GOLD]</Italian>
+		<Spanish>[NEWLINE]%d1[ICON_GOLD]: Upkeep of %d2 colonies[NEWLINE]------------------------[NEWLINE]TOTAL COLONY UPKEEP: %d3[ICON_GOLD]</Spanish>
+		<Portuguese>[NEWLINE]%d1[ICON_GOLD]: Upkeep of %d2 colonies[NEWLINE]------------------------[NEWLINE]TOTAL COLONY UPKEEP: %d3[ICON_GOLD]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_CITY_MAINT_COST</Tag>
-		<English>[NEWLINE]%d1[ICON_GOLD]: Distance Maintenance[NEWLINE]%d2[ICON_GOLD]: Number of Cities Maintenance[NEWLINE]%d3[ICON_GOLD]: Extra Expenses from Oversea Cities[NEWLINE]%d4[ICON_GOLD]: Company Payments[NEWLINE]------------------------[NEWLINE]------------------------[NEWLINE]TOTAL CITY MAINTENANCE COST: %d5[ICON_GOLD]</English>
-		<French>[NEWLINE]%d1[ICON_GOLD] : entretien li&#233; &#224; la distance[NEWLINE]%d2[ICON_GOLD] : entretien li&#233; au nombre de villes[NEWLINE]%d3[ICON_GOLD] : d&#233;penses des colonies[NEWLINE]%d4[ICON_GOLD] : paiements des soci&#233;t&#233;s commerciales[NEWLINE]------------------------[NEWLINE]------------------------[NEWLINE]CO&#219;T D'ENTRETIEN TOTAL DES VILLES : %d5[ICON_GOLD]</French>
-		<German>[NEWLINE]%d1[ICON_GOLD]: Unterhalt f&#252;r entfernte St&#228;dte[NEWLINE]%d2[ICON_GOLD]: Anzahl der unterhaltspflichtigen St&#228;dte[NEWLINE]%d3[ICON_GOLD]: Kolonialausgaben[NEWLINE]%d4[ICON_GOLD]: Zahlungen f&#252;r Kapitalgesellschaften[NEWLINE]------------------------[NEWLINE]------------------------[NEWLINE]STADTUNTERHALTSKOSTEN GESAMT: %d5[ICON_GOLD]</German>
-		<Italian>[NEWLINE]%d1[ICON_GOLD]: Distanza Mantenimento[NEWLINE]%d2[ICON_GOLD]: Numero di citt&#224; Mantenimento[NEWLINE]%d3[ICON_GOLD]: Spese per le colonie[NEWLINE]%d4[ICON_GOLD]: Pagamenti corporativi[NEWLINE]------------------------[NEWLINE]------------------------[NEWLINE]COSTO TOTALE MANTENIMENTO CITT&#192;: %d5[ICON_GOLD]</Italian>
-		<Spanish>[NEWLINE]%d1 [ICON_GOLD]: mantenimiento por lejan&#237;a[NEWLINE]%d2 [ICON_GOLD]: mantenimiento por cantidad de ciudades[NEWLINE]%d3[ICON_GOLD]: gastos de la colonia[NEWLINE]%d4 [ICON_GOLD]: pagos a la corporaci&#243;n[NEWLINE]------------------------[NEWLINE]------------------------[NEWLINE]COSTE TOTAL MANTENIMIENTO CIUDAD: %d5 [ICON_GOLD]</Spanish>
+		<English>[NEWLINE]%d1[ICON_GOLD]: Distance Maintenance[NEWLINE]%d2[ICON_GOLD]: Number of Cities Maintenance[NEWLINE]%d3[ICON_GOLD]: Extra Expenses from Oversea Cities[NEWLINE]%d4[ICON_GOLD]: Company Payments[NEWLINE]------------------------[NEWLINE]TOTAL CITY MAINTENANCE COST: %d5[ICON_GOLD]</English>
+		<French>[NEWLINE]%d1[ICON_GOLD] : entretien li&#233; &#224; la distance[NEWLINE]%d2[ICON_GOLD] : entretien li&#233; au nombre de villes[NEWLINE]%d3[ICON_GOLD] : d&#233;penses des colonies[NEWLINE]%d4[ICON_GOLD] : paiements des soci&#233;t&#233;s commerciales[NEWLINE]------------------------[NEWLINE]CO&#219;T D'ENTRETIEN TOTAL DES VILLES : %d5[ICON_GOLD]</French>
+		<German>[NEWLINE]%d1[ICON_GOLD]: Unterhalt f&#252;r entfernte St&#228;dte[NEWLINE]%d2[ICON_GOLD]: Anzahl der unterhaltspflichtigen St&#228;dte[NEWLINE]%d3[ICON_GOLD]: Kolonialausgaben[NEWLINE]%d4[ICON_GOLD]: Zahlungen f&#252;r Kapitalgesellschaften[NEWLINE]------------------------[NEWLINE]STADTUNTERHALTSKOSTEN GESAMT: %d5[ICON_GOLD]</German>
+		<Italian>[NEWLINE]%d1[ICON_GOLD]: Distanza Mantenimento[NEWLINE]%d2[ICON_GOLD]: Numero di citt&#224; Mantenimento[NEWLINE]%d3[ICON_GOLD]: Spese per le colonie[NEWLINE]%d4[ICON_GOLD]: Pagamenti corporativi[NEWLINE]------------------------[NEWLINE]COSTO TOTALE MANTENIMENTO CITT&#192;: %d5[ICON_GOLD]</Italian>
+		<Spanish>[NEWLINE]%d1 [ICON_GOLD]: mantenimiento por lejan&#237;a[NEWLINE]%d2 [ICON_GOLD]: mantenimiento por cantidad de ciudades[NEWLINE]%d3[ICON_GOLD]: gastos de la colonia[NEWLINE]%d4 [ICON_GOLD]: pagos a la corporaci&#243;n[NEWLINE]------------------------[NEWLINE]COSTE TOTAL MANTENIMIENTO CIUDAD: %d5 [ICON_GOLD]</Spanish>
 		<Portuguese></Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FINANCE_ADVISOR_UNIT_COST_BASIL</Tag>
+		<English>[NEWLINE]%d1[ICON_GOLD]: St. Basil's Cathedral unit cost reduction</English>
+		<French>[NEWLINE]%d1[ICON_GOLD]: St. Basil's Cathedral unit cost reduction</French>
+		<German>[NEWLINE]%d1[ICON_GOLD]: St. Basil's Cathedral unit cost reduction</German>
+		<Italian>[NEWLINE]%d1[ICON_GOLD]: St. Basil's Cathedral unit cost reduction</Italian>
+		<Spanish>[NEWLINE]%d1[ICON_GOLD]: St. Basil's Cathedral unit cost reduction</Spanish>
+		<Portuguese>[NEWLINE]%d1[ICON_GOLD]: St. Basil's Cathedral unit cost reduction</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROCESS_WEALTH</Tag>
+		<English>Wealth (33%)</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROCESS_WEALTH_2</Tag>
+		<English>Wealth (50%)</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROCESS_WEALTH_3</Tag>
+		<English>Wealth (67%)</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROCESS_WEALTH_EXTRA</Tag>
+		<English>Wealth (San Giorgio)</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROCESS_WEALTH_STRATEGY</Tag>
+		<English>Focusing on wealth turns production into commerce within that particular city.</English>
+		<French>Si vous favorisez la richesse, la production est transform&#233;e en commerce dans cette ville.</French>
+		<German>Konzentrieren Sie sich auf den Wohlstand, tritt in der jeweiligen Stadt die Wirtschaft an die Stelle der Produktion.</German>
+		<Italian>Concentrandoti sulla ricchezza, trasformerai la produzione in commercio in una determinata citt&#224;.</Italian>
+		<Spanish>Al centrarse en la riqueza, la producci&#243;n se convierte en comercio en esa ciudad en concreto.</Spanish>
+		<Portuguese>Al centrarse en la riqueza, la producci&#243;n se convierte en comercio en esa ciudad en concreto.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROCESS_RESEARCH</Tag>
+		<English>Research (33%)</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROCESS_RESEARCH_2</Tag>
+		<English>Research (50%)</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROCESS_RESEARCH_3</Tag>
+		<English>Research (67%)</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROCESS_RESEARCH_STRATEGY</Tag>
+		<English>Focusing on research converts production into research within that particular city.</English>
+		<French>Si vous favorisez la recherche, la production est transform&#233;e en recherche dans cette ville.</French>
+		<German>Konzentrieren Sie sich auf die Forschung, tritt in der jeweiligen Stadt die Forschung an die Stelle der Produktion.</German>
+		<Italian>Concentrandoti sulla ricerca, trasformerai la produzione in ricerca in una determinata citt&#224;.</Italian>
+		<Spanish>Al centrarse en la investigaci&#243;n, la producci&#243;n se convierte en investigaci&#243;n en esa ciudad en concreto.</Spanish>
+		<Portuguese>Al centrarse en la investigaci&#243;n, la producci&#243;n se convierte en investigaci&#243;n en esa ciudad en concreto.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROCESS_CULTURE</Tag>
+		<English>Culture (33%)</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROCESS_CULTURE_2</Tag>
+		<English>Culture (50%)</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROCESS_CULTURE_3</Tag>
+		<English>Culture (67%)</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROCESS_CULTURE_STRATEGY</Tag>
+		<English>Focusing on culture converts production into culture within that particular city.</English>
+		<French>Si vous favorisez la culture, la production est transform&#233;e en culture dans cette ville.</French>
+		<German>Konzentrieren Sie sich auf die Kultur, tritt in der jeweiligen Stadt die Kultur an die Stelle der Produktion.</German>
+		<Italian>Concentrandoti sulla cultura, trasformerai la produzione in cultura in una determinata citt&#224;.</Italian>
+		<Spanish>Al centrarse en la cultura, la producci&#243;n se convierte en cultura en esa ciudad en concreto.</Spanish>
+		<Portuguese>Al centrarse en la cultura, la producci&#243;n se convierte en cultura en esa ciudad en concreto.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROCESS_ESPIONAGE</Tag>
+		<English>Espionage (33%)</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROCESS_ESPIONAGE_2</Tag>
+		<English>Espionage (50%)</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROCESS_ESPIONAGE_3</Tag>
+		<English>Espionage (67%)</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROCESS_ESPIONAGE_STRATEGY</Tag>
+		<English>Focusing on espionage converts production into espionage within that particular city.</English>
+		<French>Si vous favorisez la culture, la production est transform&#233;e en culture dans cette ville.</French>
+		<German>Konzentrieren Sie sich auf die Kultur, tritt in der jeweiligen Stadt die Kultur an die Stelle der Produktion.</German>
+		<Italian>Concentrandoti sulla cultura, trasformerai la produzione in cultura in una determinata citt&#224;.</Italian>
+		<Spanish>Al centrarse en la cultura, la producci&#243;n se convierte en cultura en esa ciudad en concreto.</Spanish>
+		<Portuguese>Al centrarse en la cultura, la producci&#243;n se convierte en cultura en esa ciudad en concreto.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_IMP_DESTROYED</Tag>

@@ -158,7 +158,11 @@ class CvFinanceAdvisor:
 		goldFromCivs = player.getGoldPerTurn()
 
 		# Colony Upkeep
-		iColonyUpkeep = int((0.5*player.getNumColonies()*player.getNumColonies()+0.5*player.getNumColonies())*6)
+		# 1 -> 10, 2 -> 16, 3 -> 25, 4 -> 37, 5 -> 52, 6 -> 70, 7 -> 91, 8 -> 115, 9 -> 142, 10 -> 172
+		iColonyNumber = player.getNumColonies()
+		iColonyUpkeep = 0
+		if iColonyNumber > 0:
+			iColonyUpkeep = int((0.5 * iColonyNumber * iColonyNumber + 0.5 * iColonyNumber) * 3 + 7)
 
 		# Mercenary Upkeep
 		#totalMercenaryMaintenanceCost = objMercenaryUtils.getPlayerMercenaryMaintenanceCost(self.iActiveLeader)
@@ -333,10 +337,10 @@ class CvFinanceAdvisor:
 		screen.setLabel(self.getNextWidgetName(), "Background", u"<font=3>" + unicode(totalUnitSupply) + "</font>", CvUtil.FONT_RIGHT_JUSTIFY, self.X_EXPENSES + self.PANE_WIDTH - self.TEXT_MARGIN, yLocation + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_HELP_FINANCE_AWAY_SUPPLY, self.iActiveLeader, 1)
 		iExpenses += totalUnitSupply
 
-		# Mercenary Upkeep
+		# Absinthe: Mercenary Upkeep
 		yLocation += self.Y_SPACING
-		screen.setLabel(self.getNextWidgetName(), "Background", u"<font=3>" + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_MERCENARY_MAINTENANCE", ()) + "</font>", CvUtil.FONT_LEFT_JUSTIFY, self.X_EXPENSES + self.TEXT_MARGIN, yLocation + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, self.iActiveLeader, 1)
-		screen.setLabel(self.getNextWidgetName(), "Background", u"<font=3>" + unicode(totalMercenaryMaintenanceCost) + "</font>", CvUtil.FONT_RIGHT_JUSTIFY, self.X_EXPENSES + self.PANE_WIDTH - self.TEXT_MARGIN, yLocation + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, self.iActiveLeader, 1)
+		screen.setLabel(self.getNextWidgetName(), "Background", u"<font=3>" + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_MERCENARY_MAINTENANCE", ()) + "</font>", CvUtil.FONT_LEFT_JUSTIFY, self.X_EXPENSES + self.TEXT_MARGIN, yLocation + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_HELP_FINANCE_MERCENARY_MAINTENANCE, self.iActiveLeader, 1)
+		screen.setLabel(self.getNextWidgetName(), "Background", u"<font=3>" + unicode(totalMercenaryMaintenanceCost) + "</font>", CvUtil.FONT_RIGHT_JUSTIFY, self.X_EXPENSES + self.PANE_WIDTH - self.TEXT_MARGIN, yLocation + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_HELP_FINANCE_MERCENARY_MAINTENANCE, self.iActiveLeader, 1)
 		iExpenses += totalMercenaryMaintenanceCost
 
 		yLocation += self.Y_SPACING
@@ -344,10 +348,10 @@ class CvFinanceAdvisor:
 		screen.setLabel(self.getNextWidgetName(), "Background", u"<font=3>" + unicode(totalMaintenance) + "</font>", CvUtil.FONT_RIGHT_JUSTIFY, self.X_EXPENSES + self.PANE_WIDTH - self.TEXT_MARGIN, yLocation + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_HELP_FINANCE_CITY_MAINT, self.iActiveLeader, 1)
 		iExpenses += totalMaintenance
 
-		# Colony Upkeep
+		# Absinthe: Colony Upkeep
 		yLocation += self.Y_SPACING
-		screen.setLabel(self.getNextWidgetName(), "Background", u"<font=3>" + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_COLONY_UPKEEP", ()) + "</font>", CvUtil.FONT_LEFT_JUSTIFY, self.X_EXPENSES + self.TEXT_MARGIN, yLocation + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, self.iActiveLeader, 1)
-		screen.setLabel(self.getNextWidgetName(), "Background", u"<font=3>" + unicode(iColonyUpkeep) + "</font>", CvUtil.FONT_RIGHT_JUSTIFY, self.X_EXPENSES + self.PANE_WIDTH - self.TEXT_MARGIN, yLocation + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, self.iActiveLeader, 1)
+		screen.setLabel(self.getNextWidgetName(), "Background", u"<font=3>" + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_COLONY_UPKEEP", ()) + "</font>", CvUtil.FONT_LEFT_JUSTIFY, self.X_EXPENSES + self.TEXT_MARGIN, yLocation + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_HELP_FINANCE_COLONY_UPKEEP, self.iActiveLeader, 1)
+		screen.setLabel(self.getNextWidgetName(), "Background", u"<font=3>" + unicode(iColonyUpkeep) + "</font>", CvUtil.FONT_RIGHT_JUSTIFY, self.X_EXPENSES + self.PANE_WIDTH - self.TEXT_MARGIN, yLocation + self.TEXT_MARGIN, self.Z_CONTROLS + self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_HELP_FINANCE_COLONY_UPKEEP, self.iActiveLeader, 1)
 		iExpenses += iColonyUpkeep
 
 		yLocation += self.Y_SPACING

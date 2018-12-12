@@ -238,6 +238,15 @@
 		<Portuguese>There are available mercenaries in the province of %s1!</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MERC_AVAILABLE_IN_PROVINCE_OF_NEW_CITY</Tag>
+		<English>There are available mercenaries for hire in %s1!</English>
+		<French>There are available mercenaries for hire in %s1!</French>
+		<German>There are available mercenaries for hire in %s1!</German>
+		<Italian>There are available mercenaries for hire in %s1!</Italian>
+		<Spanish>There are available mercenaries for hire in %s1!</Spanish>
+		<Portuguese>There are available mercenaries for hire in %s1!</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MERC_NEW_MERC_MOVING</Tag>
 		<English>Mercenaries got tired of waiting for a contract and have left to seek their fortune elsewhere.</English>
 		<French>Mercenaries got tired of waiting for a contract and have left to seek their fortune elsewhere.</French>

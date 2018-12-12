@@ -43,12 +43,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_FREE_BONUS_RESOURCE2</Tag>
-		<English>[SPACE] [LINK=literal]%s1_Bonus[\LINK] </English>
-		<French>[SPACE] [LINK=literal]%s1_Bonus[\LINK] </French>
-		<German>[SPACE] [LINK=literal]%s1_Bonus[\LINK] </German>
-		<Italian>[SPACE] [LINK=literal]%s1_Bonus[\LINK] </Italian>
-		<Spanish>[SPACE] [LINK=literal]%s1_Bonus[\LINK] </Spanish>
-		<Portuguese>[SPACE] [LINK=literal]%s1_Bonus[\LINK] </Portuguese>
+		<English>[SPACE][LINK=literal]%s1_Bonus[\LINK] </English>
+		<French>[SPACE][LINK=literal]%s1_Bonus[\LINK] </French>
+		<German>[SPACE][LINK=literal]%s1_Bonus[\LINK] </German>
+		<Italian>[SPACE][LINK=literal]%s1_Bonus[\LINK] </Italian>
+		<Spanish>[SPACE][LINK=literal]%s1_Bonus[\LINK] </Spanish>
+		<Portuguese>[SPACE][LINK=literal]%s1_Bonus[\LINK] </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROJECT_COLONY_GOLDEN_AGE</Tag>
+		<English>The great wealth acquired from our new colony results in a Golden Age!</English>
+		<French>The great wealth acquired from our new colony results in a Golden Age!</French>
+		<German>The great wealth acquired from our new colony results in a Golden Age!</German>
+		<Italian>The great wealth acquired from our new colony results in a Golden Age!</Italian>
+		<Spanish>The great wealth acquired from our new colony results in a Golden Age!</Spanish>
+		<Portuguese>The great wealth acquired from our new colony results in a Golden Age!</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_TRADING_COMPANY</Tag>

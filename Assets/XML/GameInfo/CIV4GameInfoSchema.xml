@@ -95,6 +95,7 @@
 	<ElementType name="Strategy" content="textOnly"/>
 	<ElementType name="Civilopedia" content="textOnly"/>
 	<ElementType name="TechPrereq" content="textOnly"/>
+	<ElementType name="ObsoleteTech" content="textOnly"/>
 	<ElementType name="iProductionToCommerceModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="ProductionToCommerceModifiers" content="eltOnly">
 		<element type="iProductionToCommerceModifier" maxOccurs="*"/>
@@ -106,6 +107,7 @@
 		<element type="Description"/>
 		<element type="Strategy"/>
 		<element type="TechPrereq"/>
+		<element type="ObsoleteTech" minOccurs="0"/>
 		<element type="ProductionToCommerceModifiers"/>
 		<element type="Button"/>
 	</ElementType>
@@ -115,6 +117,7 @@
 	<ElementType name="iMinVoters" content="textOnly" dt:type="int"/>
 	<ElementType name="iStateReligionVotePercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iTradeRoutes" content="textOnly" dt:type="int"/>
+	<ElementType name="iCoastalTradeRoutes" content="textOnly" dt:type="int"/>
 	<ElementType name="bSecretaryGeneral" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bVictory" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bFreeTrade" content="textOnly" dt:type="boolean"/>
@@ -682,6 +685,7 @@
 	<ElementType name="iStateReligionFreeExperience" content="textOnly" dt:type="int"/>
 	<!-- RFCE - start -->
 	<ElementType name="bStabilityBadForBigEmpire" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bOnlyForMaritimeEmpire" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bStabilityVassalBonus" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bStabilityFoundBonus" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bStabilityConquestBonus" content="textOnly" dt:type="boolean"/>
@@ -816,6 +820,7 @@
 		<element type="iWarWearinessModifier"/>
 		<element type="iFreeSpecialist"/>
 		<element type="iTradeRoutes"/>
+		<element type="iCoastalTradeRoutes"/>
 		<element type="bNoForeignTrade"/>
 		<element type="bNoCorporations"/>
 		<element type="bNoForeignCorporations"/>
@@ -829,6 +834,7 @@
 		<element type="iStateReligionFreeExperience"/>
 		<!-- RFCE - start -->
 		<element type="bStabilityBadForBigEmpire"/>
+		<element type="bOnlyForMaritimeEmpire"/>
 		<element type="bStabilityVassalBonus"/>
 		<element type="bStabilityFoundBonus"/>
 		<element type="bStabilityConquestBonus"/>

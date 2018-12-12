@@ -285,10 +285,11 @@ class CvMainInterface:
 		screen.setStyle( "InterfaceTopRight", "Panel_Game_HudTR_Style" )
 		screen.hide( "InterfaceTopRight" )
 
-		iBtnWidth	= 28
+		iBtnWidth = 28
 		iBtnAdvance = 25
+		iBtnX = 24
 		iBtnY = 27
-		iBtnX = 27
+
 
 		# Turn log Button
 		screen.setImageButton( "TurnLogButton", "", iBtnX, iBtnY - 2, iBtnWidth, iBtnWidth, WidgetTypes.WIDGET_ACTION, gc.getControlInfo(ControlTypes.CONTROL_TURN_LOG).getActionInfoIndex(), -1 )
@@ -298,8 +299,9 @@ class CvMainInterface:
 		# < Mercenaries Start >
 		iBtnX += iBtnAdvance
 		# Set the mercenary manager button in the interface
-		screen.setImageButton( "MercenaryManagerButton", ArtFileMgr.getInterfaceArtInfo("INTERFACE_MERCENARIES_MANAGER").getPath(), iBtnX, iBtnY - 1, iBtnWidth, iBtnWidth, WidgetTypes.WIDGET_ACTION, gc.getControlInfo(ControlTypes.CONTROL_MERCENARIES_MANAGER).getActionInfoIndex(), -1 )
-		#screen.setImageButton( "MercenaryManagerButton", ArtFileMgr.getInterfaceArtInfo("INTERFACE_MERCENARIES_MANAGER").getPath(), iBtnX, iBtnY - 2, iBtnWidth, iBtnWidth, WidgetTypes.WIDGET_ACTION, -1, -1 )
+		#screen.setImageButton( "MercenaryManagerButton", ArtFileMgr.getInterfaceArtInfo("INTERFACE_MERCENARIES_MANAGER").getPath(), iBtnX, iBtnY - 1, iBtnWidth, iBtnWidth, WidgetTypes.WIDGET_ACTION, gc.getControlInfo(ControlTypes.CONTROL_MERCENARIES_MANAGER).getActionInfoIndex(), -1 )
+		screen.setImageButton( "MercenaryManagerButton", "", iBtnX, iBtnY - 2, iBtnWidth, iBtnWidth, WidgetTypes.WIDGET_ACTION, gc.getControlInfo(ControlTypes.CONTROL_MERCENARIES_MANAGER).getActionInfoIndex(), -1 )
+		screen.setStyle( "MercenaryManagerButton", "Button_HUDMercenary_Style" )
 		# Hide the mercenary manager button
 		screen.hide( "MercenaryManagerButton" )
 		# < Mercenaries End >
@@ -347,6 +349,11 @@ class CvMainInterface:
 		screen.hide( "CorporationAdvisorButton" )
 
 		iBtnX += iBtnAdvance
+		screen.setImageButton( "EspionageAdvisorButton", "", iBtnX, iBtnY, iBtnWidth, iBtnWidth, WidgetTypes.WIDGET_ACTION, gc.getControlInfo(ControlTypes.CONTROL_ESPIONAGE_SCREEN).getActionInfoIndex(), -1 )
+		screen.setStyle( "EspionageAdvisorButton", "Button_HUDAdvisorEspionage_Style" )
+		screen.hide( "EspionageAdvisorButton" )
+
+		iBtnX += iBtnAdvance
 		screen.setImageButton( "VictoryAdvisorButton", "", iBtnX, iBtnY, iBtnWidth, iBtnWidth, WidgetTypes.WIDGET_ACTION, gc.getControlInfo(ControlTypes.CONTROL_VICTORY_SCREEN).getActionInfoIndex(), -1 )
 		screen.setStyle( "VictoryAdvisorButton", "Button_HUDAdvisorVictory_Style" )
 		screen.hide( "VictoryAdvisorButton" )
@@ -355,11 +362,6 @@ class CvMainInterface:
 		screen.setImageButton( "InfoAdvisorButton", "", iBtnX, iBtnY, iBtnWidth, iBtnWidth, WidgetTypes.WIDGET_ACTION, gc.getControlInfo(ControlTypes.CONTROL_INFO).getActionInfoIndex(), -1 )
 		screen.setStyle( "InfoAdvisorButton", "Button_HUDAdvisorRecord_Style" )
 		screen.hide( "InfoAdvisorButton" )
-
-		iBtnX += iBtnAdvance
-		screen.setImageButton( "EspionageAdvisorButton", "", iBtnX, iBtnY, iBtnWidth, iBtnWidth, WidgetTypes.WIDGET_ACTION, gc.getControlInfo(ControlTypes.CONTROL_ESPIONAGE_SCREEN).getActionInfoIndex(), -1 )
-		screen.setStyle( "EspionageAdvisorButton", "Button_HUDAdvisorEspionage_Style" )
-		screen.hide( "EspionageAdvisorButton" )
 
 		# City Tabs
 		iBtnX = xResolution - 324
@@ -972,17 +974,9 @@ class CvMainInterface:
 			screen.show( "InterfaceTopRight" )
 			screen.show( "TurnLogButton" )
 			# < Mercenaries Start >
-			# Show the mercenary manager button if the player has at least one city and they are in the
-			# correct era.
-			#if(gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
+			# Show the mercenary manager button if the player has at least one city
 			if(gc.getActivePlayer().getNumCities() > 0 ):
-				#Rhye - start
-				#screen.show( "MercenaryManagerButton" )
-				# 3Miro
-				#teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
-				#if (not teamPlayer.isHasTech(con.iNationalism)):
 				screen.show( "MercenaryManagerButton" )
-				#Rhye - end
 			# < Mercenaries End >
 			screen.show( "EspionageAdvisorButton" )
 			screen.show( "DomesticAdvisorButton" )
@@ -997,16 +991,9 @@ class CvMainInterface:
 			screen.show( "InfoAdvisorButton" )
 			screen.moveToFront( "TurnLogButton" )
 			# < Mercenaries Start >
-			# move the mercenary manager button to the front if the player has at least one city and they are in the
-			# correct era.
-			#if(gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
+			# Move the mercenary manager button to the front if the player has at least one city
 			if(gc.getActivePlayer().getNumCities() > 0 ):
-				#Rhye - start
-				#screen.moveToFront( "MercenaryManagerButton" )
-				#teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
-				#if (not teamPlayer.isHasTech(con.iNationalism)):
 				screen.moveToFront( "MercenaryManagerButton" )
-				#Rhye - end
 			# < Mercenaries End >
 			screen.moveToFront( "EspionageAdvisorButton" )
 			screen.moveToFront( "DomesticAdvisorButton" )
@@ -1056,16 +1043,9 @@ class CvMainInterface:
 			screen.show( "InterfaceTopRight" )
 			screen.show( "TurnLogButton" )
 			# < Mercenaries Start >
-			# Show the mercenary manager button if the player has at least one city and they are in the
-			# correct era.
-			#if(gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
+			# Show the mercenary manager button if the player has at least one city
 			if(gc.getActivePlayer().getNumCities() > 0 ):
-				#Rhye - start
-				#screen.show( "MercenaryManagerButton" )
-				#teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
-				#if (not teamPlayer.isHasTech(con.iNationalism)):
 				screen.show( "MercenaryManagerButton" )
-				#Rhye - end
 			# < Mercenaries End >
 			screen.show( "EspionageAdvisorButton" )
 			screen.show( "DomesticAdvisorButton" )
@@ -1080,16 +1060,9 @@ class CvMainInterface:
 			screen.show( "InfoAdvisorButton" )
 			screen.moveToFront( "TurnLogButton" )
 			# < Mercenaries Start >
-			# Move the mercenary manager button to the front if the player has at least one city and they are in the
-			# correct era.
-			#if(gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
+			# Move the mercenary manager button to the front if the player has at least one city
 			if(gc.getActivePlayer().getNumCities() > 0 ):
-				#Rhye - start
-				#screen.moveToFront( "MercenaryManagerButton" )
-				#teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
-				#if (not teamPlayer.isHasTech(con.iNationalism)):
 				screen.moveToFront( "MercenaryManagerButton" )
-				#Rhye - end
 			# < Mercenaries End >
 			screen.moveToFront( "EspionageAdvisorButton" )
 			screen.moveToFront( "DomesticAdvisorButton" )
@@ -1114,16 +1087,9 @@ class CvMainInterface:
 			screen.show( "InterfaceTopRight" )
 			screen.show( "TurnLogButton" )
 			# < Mercenaries Start >
-			# Show the mercenary manager button if the player has at least one city and they are in the
-			# correct era.
-			#if(gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
+			# Show the mercenary manager button if the player has at least one city
 			if(gc.getActivePlayer().getNumCities() > 0 ):
-				#Rhye - start
-				#screen.show( "MercenaryManagerButton" )
-				#teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
-				#if (not teamPlayer.isHasTech(con.iNationalism)):
 				screen.show( "MercenaryManagerButton" )
-				#Rhye - end
 			# < Mercenaries End >
 			screen.show( "EspionageAdvisorButton" )
 			screen.show( "DomesticAdvisorButton" )
@@ -1138,16 +1104,9 @@ class CvMainInterface:
 			screen.show( "InfoAdvisorButton" )
 			screen.moveToFront( "TurnLogButton" )
 			# < Mercenaries Start >
-			# Move the mercenary manager button to the front if the player has at least one city and they are in the
-			# correct era.
-			#if(gc.getActivePlayer().getNumCities() > 0 and gc.getActivePlayer().getCurrentEra() >= g_iStartingEra):
+			# Move the mercenary manager button to the front if the player has at least one city
 			if(gc.getActivePlayer().getNumCities() > 0 ):
-				#Rhye - start
-				#screen.moveToFront( "MercenaryManagerButton" )
-				#teamPlayer = gc.getTeam(gc.getActivePlayer().getTeam())
-				#if (not teamPlayer.isHasTech(con.iNationalism)):
 				screen.moveToFront( "MercenaryManagerButton" )
-				#Rhye - end
 			# < Mercenaries End >
 			screen.moveToFront( "EspionageAdvisorButton" )
 			screen.moveToFront( "DomesticAdvisorButton" )
@@ -1325,7 +1284,7 @@ class CvMainInterface:
 
 		return 0
 
-	# This will update the flag widget for SP hotseat and dbeugging
+	# This will update the flag widget for SP hotseat and debugging
 	def updateFlag( self ):
 
 		if ( CyInterface().getShowInterface() != InterfaceVisibility.INTERFACE_HIDE_ALL and CyInterface().getShowInterface() != InterfaceVisibility.INTERFACE_MINIMAP_ONLY and CyInterface().getShowInterface() != InterfaceVisibility.INTERFACE_ADVANCED_START ):
@@ -2068,9 +2027,8 @@ class CvMainInterface:
 					screen.hide( "JanissaryXPButton" )
 					screen.hide( "JanissaryXPText" )
 
-				# 3Miro: Show UHV info on the screen
+				# Show UHV info on the screen
 				if ( ePlayer == con.iBurgundy ):
-					#iBurgundyCulture = utils.getBurgundyCulture()
 					iBurgundyCulture = pPlayer.getUHVCounter( 0 )
 					# Absinthe: only display UHV counter until the UHV date
 					if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (xml.i1336AD + 2) ):
@@ -2086,7 +2044,6 @@ class CvMainInterface:
 						screen.hide( "UHVText" )
 
 				elif ( ePlayer == con.iLithuania ):
-					#iLithuaniaCulture = utils.getLithuaniaCulture()
 					iLithuaniaCulture = pPlayer.getUHVCounter( 0 )
 					# Absinthe: only display UHV counter until the UHV date
 					if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (xml.i1386AD + 2) ):
@@ -2102,10 +2059,9 @@ class CvMainInterface:
 						screen.hide( "UHVText" )
 
 				elif ( ePlayer == con.iArabia ):
-					#iIslamInfluence = utils.getArabianInfluence()
 					iIslamInfluence = gc.getGame().calculateReligionPercent( xml.iIslam )
 					# HHG: only display UHV counter as long as the UHV is undefined
-					if ( not CyInterface().isCityScreenUp() and pPlayer.getUHV( 2 ) == -1 ):
+					if ( pPlayer.getUHV( 2 ) == -1 and not CyInterface().isCityScreenUp() ):
 						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
 						szUHVText = ": " + localText.getText("TXT_KEY_UHV_ISLAM",()) + (" (%i) " %iIslamInfluence )
 						screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -2118,12 +2074,11 @@ class CvMainInterface:
 						screen.hide( "UHVText" )
 
 				elif ( ePlayer == con.iNorway ):
-					#iNorseRaized = utils.getNorseRazed()
-					iNorwayRaized = pPlayer.getUHVCounter( 2 )
+					iNorwayRazed = pPlayer.getUHVCounter( 2 )
 					# Absinthe: only display UHV counter until the UHV date
 					if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (xml.i1066AD + 2) ):
 						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
-						szUHVText = ": " + localText.getText("TXT_KEY_UHV_VIKING",()) + (" (%i) " %iNorwayRaized )
+						szUHVText = ": " + localText.getText("TXT_KEY_UHV_VIKING",()) + (" (%i) " %iNorwayRazed )
 						screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 						screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 						screen.show("UHVButton")
@@ -2134,7 +2089,6 @@ class CvMainInterface:
 						screen.hide( "UHVText" )
 
 				elif ( ePlayer == con.iKiev ):
-					#iKievFood = utils.getKievFood()
 					iKievFood = pPlayer.getUHVCounter( 2 )
 					# Absinthe: only display UHV counter until the UHV date
 					if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (xml.i1300AD + 2) ):
@@ -2153,11 +2107,14 @@ class CvMainInterface:
 					if ( gc.getTeam( pPlayer.getTeam() ).isHasTech( xml.iAstronomy ) ):
 						if ( ePlayer == con.iFrankia or ePlayer == con.iPortugal or ePlayer == con.iDenmark ):
 							iColonies = pPlayer.getUHVCounter( 2 )
+							iUHVState = pPlayer.getUHV( 2 )
 						elif ( ePlayer == con.iEngland or ePlayer == con.iSpain or ePlayer == con.iDutch ):
 							iColonies = pPlayer.getUHVCounter( 1 )
+							iUHVState = pPlayer.getUHV( 1 )
 					else:
 						iColonies = -1
-					if ( not CyInterface().isCityScreenUp() and iColonies > -1 ):
+					# Absinthe: only display UHV counter as long as the UHV is undefined
+					if ( not CyInterface().isCityScreenUp() and iColonies > -1 and iUHVState == -1 ):
 						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
 						szUHVText = ": " + localText.getText("TXT_KEY_UHV_COLONIES",()) + (" (%i) " %iColonies )
 						screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -2186,8 +2143,8 @@ class CvMainInterface:
 
 				elif ( ePlayer == con.iScotland ):
 					iScotlandFrench = pPlayer.getUHVCounter( 1 )
-					# Absinthe: only display UHV counter until the UHV date
-					if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (xml.i1560AD + 2) ):
+					# Absinthe: only display UHV counter as long as the UHV is undefined
+					if ( pPlayer.getUHV( 1 ) == -1 and not CyInterface().isCityScreenUp() ):
 						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
 						szUHVText = ": " + localText.getText("TXT_KEY_UHV_FRENCH",()) + (" (%i) " %iScotlandFrench )
 						screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -2199,25 +2156,25 @@ class CvMainInterface:
 						screen.hide( "UHVButton" )
 						screen.hide( "UHVText" )
 
-				#Absinthe: different UHV used currently
-				#elif ( ePlayer == con.iAragon ):
-				#	iAragonShips = pPlayer.getNumShips()
-				#	if ( not CyInterface().isCityScreenUp() ):
-				#		szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
-				#		szUHVText = ": " + localText.getText("TXT_KEY_UHV_SHIPS",()) + (" (%i) " %iAragonShips )
-				#		screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-				#		screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-				#		screen.show("UHVButton")
-				#		screen.show("UHVText")
-				#		iCount += 1
-				#	else:
-				#		screen.hide( "UHVButton" )
-				#		screen.hide( "UHVText" )
+				elif ( ePlayer == con.iAragon ):
+					iAragonCargoShips = utils.getCargoShips(con.iAragon)
+					# Absinthe: only display UHV counter until the UHV date
+					if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (xml.i1444AD + 2) ):
+						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
+						szUHVText = ": " + localText.getText("TXT_KEY_UHV_TRADE_SHIPS",()) + (" (%i) " %iAragonCargoShips )
+						screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+						screen.setLabel("UHVText", "Background", szUHVText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+						screen.show("UHVButton")
+						screen.show("UHVText")
+						iCount += 1
+					else:
+						screen.hide( "UHVButton" )
+						screen.hide( "UHVText" )
 
 				elif ( ePlayer == con.iSweden ):
 					iSwedenRazed = pPlayer.getUHVCounter(1)
-					# Absinthe: only display UHV counter until the UHV date
-					if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (xml.i1660AD + 2) ):
+					# Absinthe: only display UHV counter as long as the UHV is undefined
+					if ( pPlayer.getUHV( 1 ) == -1 and not CyInterface().isCityScreenUp() ):
 						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
 						szUHVText = ": " + localText.getText("TXT_KEY_UHV_RAZED",()) + (" (%i) " %iSwedenRazed )
 						screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -2238,7 +2195,8 @@ class CvMainInterface:
 						iPrussiaGP += pCapital.getFreeSpecialistCount(iType)
 					if iPrussiaGP < 0:
 						iPrussiaGP = 0
-					if ( pPlayer.getUHV(1) == -1 and not CyInterface().isCityScreenUp() ):
+					# Absinthe: only display UHV counter as long as the UHV is undefined
+					if ( pPlayer.getUHV( 2 ) == -1 and not CyInterface().isCityScreenUp() ):
 						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
 						szUHVText = ": " + localText.getText("TXT_KEY_UHV_GREAT_PEOPLE",()) + (" (%i) " %iPrussiaGP )
 						screen.setLabel("UHVButton", "Background", szUHVButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -3699,7 +3657,7 @@ class CvMainInterface:
 
 		screen.addCheckBoxGFC( "ScoresVisible", "", "", 0, 0, 28, 28, WidgetTypes.WIDGET_ACTION, gc.getControlInfo(ControlTypes.CONTROL_SCORES).getActionInfoIndex(), -1, ButtonStyles.BUTTON_STYLE_LABEL )
 		screen.setStyle( "ScoresVisible", "Button_HUDBtnRank_Style" )
-		screen.setState( "ScoresVisible", True )
+		screen.setState( "ScoresVisible", False )
 		screen.hide( "ScoresVisible" )
 
 		screen.addCheckBoxGFC( "ResourceIcons", "", "", 0, 0, 28, 28, WidgetTypes.WIDGET_ACTION, gc.getControlInfo(ControlTypes.CONTROL_RESOURCE_ALL).getActionInfoIndex(), -1, ButtonStyles.BUTTON_STYLE_LABEL )
@@ -3722,7 +3680,7 @@ class CvMainInterface:
 	def handleInput (self, inputClass):
 		# < Mercenaries Start >
 		# Handle the case where the "Mercenary Manager" button is pressed.
-		if(inputClass.getFunctionName() == "MercenaryManagerButton"):
+		if (inputClass.getFunctionName() == "MercenaryManagerButton"):
 			mercenaryManager.interfaceScreen()
 		# < Mercenaries End >
 

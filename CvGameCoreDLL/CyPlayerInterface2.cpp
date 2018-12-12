@@ -69,7 +69,7 @@ void CyPlayerPythonInterface2(python::class_<CyPlayer>& x)
 		.def("getWarPeaceChange", &CyPlayer::getWarPeaceChange, "int ( )")
 
 		// 3MiroColonies
-		.def("getNumColonies", &CyPlayer::getNumColonies, "int ( )")
+		.def("getNumColonies", &CyPlayer::getNumColonies, "int ()")
 		.def("setNumColonies", &CyPlayer::setNumColonies, "void ( int )")
 
 		.def("getPicklefreeParameter", &CyPlayer::getPicklefreeParameter, "int ( int )")

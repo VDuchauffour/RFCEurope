@@ -90,6 +90,7 @@ class Companies:
 			if gc.getGame().isReligionFounded(xml.iProtestantism):
 				iMaxCompanies = 0
 		# Order of Calatrava is only active if Cordoba or Morocco is alive
+		# TODO: Only if Cordoba is alive, or Morocco has some territories in Europe?
 		if iCompany == iCalatrava:
 			if not (gc.getPlayer(con.iCordoba).isAlive() or gc.getPlayer(con.iMorocco).isAlive()):
 				iMaxCompanies = 0
@@ -177,7 +178,15 @@ class Companies:
 						self.announceHuman(iCompany, city, True)
 
 
-	def onCityAcquired(self, city):
+	def onBuildingBuilt(self, iPlayer, iBuilding):
+
+		# Galata Tower ownership
+		pPlayer = gc.getPlayer( iPlayer )
+		if iBuilding == xml.iGalataTower:
+			pPlayer.setPicklefreeParameter( con.iIsHasGalataTower, 1 )
+
+
+	def onCityAcquired(self, iOldOwner, iNewOwner, city):
 
 		for iCompany in range(iNumCompanies):
 			if city.isHasCorporation(iCompany):
@@ -189,10 +198,28 @@ class Companies:
 					# interface message for the human player
 					self.announceHuman(iCompany, city, True)
 
+		# Galata Tower ownership
+		pOldOwner = gc.getPlayer( iOldOwner )
+		pNewOwner = gc.getPlayer( iNewOwner )
+		if city.isHasBuilding(xml.iGalataTower):
+			pNewOwner.setPicklefreeParameter( con.iIsHasGalataTower, 1 )
+			pOldOwner.setPicklefreeParameter( con.iIsHasGalataTower, 0 )
+
+
+	def onCityRazed(self, iOldOwner, iPlayer, city):
+
+		# Galata Tower ownership
+		pOldOwner = gc.getPlayer( iOldOwner )
+		pPlayer = gc.getPlayer( iPlayer )
+		if city.isHasBuilding(xml.iGalataTower):
+			pPlayer.setPicklefreeParameter( con.iIsHasGalataTower, 0 )
+			pOldOwner.setPicklefreeParameter( con.iIsHasGalataTower, 0 )
+
 
 	def announceHuman(self, iCompany, city, bRemove = False):
 		iHuman = utils.getHumanID()
-		if not utils.isActive(iHuman) or not city.isRevealed(iHuman, False):
+		iHumanTeam = gc.getPlayer(iHuman).getTeam()
+		if not utils.isActive(iHuman) or not city.isRevealed(iHumanTeam, False):
 			return
 
 		sCityName = city.getName()
@@ -224,6 +251,13 @@ class Companies:
 				iValue += 5
 			elif ownerTeam.isAtWar(con.iPrussia):
 				return -1
+
+		# Genoese UP
+		if iOwner == con.iGenoa:
+			iValue += 1
+			# extra bonus for banking companies
+			if iCompany in [iMedici, iAugsburg, iStGeorge]:
+				iValue += 1
 
 		# state religion requirements
 		iStateReligion = owner.getStateReligion()
@@ -343,6 +377,12 @@ class Companies:
 			elif city.getPopulation() > 3:
 				iValue += 1
 
+		# Galata Tower bonus: 2 for all cities, additional 2 for the wonder's city
+		if owner.getPicklefreeParameter( con.iIsHasGalataTower ) == 1:
+			iValue += 2
+			if city.isHasBuilding(xml.iGalataTower):
+				iValue += 2
+
 		# various building bonuses, trade route bonus
 		iBuildCounter = 0 # building bonus counter: we don't want buildings to be the deciding factor in company spread
 		if iCompany in [iHospitallers, iTemplars, iTeutons]:
@@ -438,8 +478,10 @@ class Companies:
 			elif iCompany == iHansa:
 				iValue += 2
 		elif owner.getCivics(3) == xml.iCivicGuilds:
-			if iCompany in [iHospitallers, iTemplars, iTeutons, iHansa, iDragon, iCalatrava]:
+			if iCompany in [iHospitallers, iTemplars, iTeutons, iMedici, iAugsburg, iStGeorge, iDragon, iCalatrava]:
 				iValue += 1
+			elif iCompany == iHansa:
+				iValue += 2
 		elif owner.getCivics(3) == xml.iCivicMercantilism:
 			if iCompany == iHansa:
 				return -1
@@ -528,14 +570,15 @@ class Companies:
 				iValue /= 2
 
 		# threshold
-		if iValue < 3: return -1
+		if iValue < 3:
+			return -1
 
 		# spread it out
 		iCompOwned = owner.countCorporations(iCompany)
 		if city.isHasCorporation(iCompany):
 			iValue -= iCompOwned # -1 per city if the company is already present here (smaller penalty in the value list)
 		else:
-			iValue -= 2 * iCompOwned # -2 per city if it's a possible new spread (bigger penalty in the value list)
+			iValue -= (5 * iCompOwned / 2) # -2,5 per city if it's a possible new spread (bigger penalty in the value list)
 		if iCompOwned > 0:
 			print ("Number of companies already present in civ:", city.getName(), iCompOwned)
 

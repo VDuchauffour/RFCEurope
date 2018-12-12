@@ -5387,6 +5387,7 @@ m_iLargestCityHappiness(0),
 m_iWarWearinessModifier(0),
 m_iFreeSpecialist(0),
 m_iTradeRoutes(0),
+m_iCoastalTradeRoutes(0), // Absinthe: coastal trade routes
 m_iTechPrereq(NO_TECH),
 m_iCivicPercentAnger(0),
 m_iMaxConscript(0),
@@ -5405,6 +5406,7 @@ m_bNoForeignCorporations(false),
 m_bStateReligion(false),
 m_bNoNonStateReligionSpread(false),
 m_bStabilityBadForBigEmpire(false), // Absinthe: AI civic modifier, bad with many cities
+m_bOnlyForMaritimeEmpire(false), // Absinthe: AI civic modifier, only with coastal cities
 m_bStabilityVassalBonus(false), //Rhye 6th
 m_bStabilityFoundBonus(false), //Rhye 6th
 m_bStabilityConquestBonus(false), //Rhye 6th
@@ -5597,6 +5599,12 @@ int CvCivicInfo::getTradeRoutes() const
 	return m_iTradeRoutes;
 }
 
+// Absinthe: coastal trade routes
+int CvCivicInfo::getCoastalTradeRoutes() const
+{
+	return m_iCoastalTradeRoutes;
+}
+
 int CvCivicInfo::getTechPrereq() const
 {
 	return m_iTechPrereq;
@@ -5686,6 +5694,13 @@ bool CvCivicInfo::isNoNonStateReligionSpread() const
 bool CvCivicInfo::isStabilityBadForBigEmpire() const
 {
 	return m_bStabilityBadForBigEmpire;
+}
+// Absinthe: end
+
+// Absinthe: AI civic modifier, only with coastal cities
+bool CvCivicInfo::isForMaritimeEmpire() const
+{
+	return m_bOnlyForMaritimeEmpire;
 }
 // Absinthe: end
 
@@ -5894,6 +5909,7 @@ void CvCivicInfo::read(FDataStreamBase* stream)
 	stream->Read(&m_iWarWearinessModifier);
 	stream->Read(&m_iFreeSpecialist);
 	stream->Read(&m_iTradeRoutes);
+	stream->Read(&m_iCoastalTradeRoutes); // Absinthe: coastal trade routes
 	stream->Read(&m_iTechPrereq);
 	stream->Read(&m_iCivicPercentAnger);
 	stream->Read(&m_iMaxConscript);
@@ -5913,6 +5929,7 @@ void CvCivicInfo::read(FDataStreamBase* stream)
 	stream->Read(&m_bStateReligion);
 	stream->Read(&m_bNoNonStateReligionSpread);
 	stream->Read(&m_bStabilityBadForBigEmpire); // Absinthe: AI civic modifier, bad with many cities
+	stream->Read(&m_bOnlyForMaritimeEmpire); // Absinthe: AI civic modifier, only with coastal cities
 	stream->Read(&m_bStabilityVassalBonus); //Rhye 6th
 	stream->Read(&m_bStabilityFoundBonus); //Rhye 6th
 	stream->Read(&m_bStabilityConquestBonus); //Rhye 6th
@@ -6025,6 +6042,7 @@ void CvCivicInfo::write(FDataStreamBase* stream)
 	stream->Write(m_iWarWearinessModifier);
 	stream->Write(m_iFreeSpecialist);
 	stream->Write(m_iTradeRoutes);
+	stream->Write(m_iCoastalTradeRoutes); // Absinthe: coastal trade routes
 	stream->Write(m_iTechPrereq);
 	stream->Write(m_iCivicPercentAnger);
 	stream->Write(m_iMaxConscript);
@@ -6044,6 +6062,7 @@ void CvCivicInfo::write(FDataStreamBase* stream)
 	stream->Write(m_bStateReligion);
 	stream->Write(m_bNoNonStateReligionSpread);
 	stream->Write(m_bStabilityBadForBigEmpire); // Absinthe: AI civic modifier, bad with many cities
+	stream->Write(m_bOnlyForMaritimeEmpire); // Absinthe: AI civic modifier, only with coastal cities
 	stream->Write(m_bStabilityVassalBonus); //Rhye 6th
 	stream->Write(m_bStabilityFoundBonus); //Rhye 6th
 	stream->Write(m_bStabilityConquestBonus); //Rhye 6th
@@ -6128,6 +6147,7 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetChildXmlValByName(&m_iWarWearinessModifier, "iWarWearinessModifier");
 	pXML->GetChildXmlValByName(&m_iFreeSpecialist, "iFreeSpecialist");
 	pXML->GetChildXmlValByName(&m_iTradeRoutes, "iTradeRoutes");
+	pXML->GetChildXmlValByName(&m_iCoastalTradeRoutes, "iCoastalTradeRoutes"); // Absinthe: coastal trade routes
 	pXML->GetChildXmlValByName(&m_bNoForeignTrade, "bNoForeignTrade");
 	pXML->GetChildXmlValByName(&m_bNoCorporations, "bNoCorporations");
 	pXML->GetChildXmlValByName(&m_bNoForeignCorporations, "bNoForeignCorporations");
@@ -6135,6 +6155,7 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetChildXmlValByName(&m_bStateReligion, "bStateReligion");
 	pXML->GetChildXmlValByName(&m_bNoNonStateReligionSpread, "bNoNonStateReligionSpread");
 	pXML->GetChildXmlValByName(&m_bStabilityBadForBigEmpire, "bStabilityBadForBigEmpire"); // Absinthe: AI civic modifier, bad with many cities
+	pXML->GetChildXmlValByName(&m_bOnlyForMaritimeEmpire, "bOnlyForMaritimeEmpire"); // Absinthe: AI civic modifier, only with coastal cities
 	pXML->GetChildXmlValByName(&m_bStabilityVassalBonus, "bStabilityVassalBonus"); //Rhye 6th
 	pXML->GetChildXmlValByName(&m_bStabilityFoundBonus, "bStabilityFoundBonus"); //Rhye 6th
 	pXML->GetChildXmlValByName(&m_bStabilityConquestBonus, "bStabilityConquestBonus"); //Rhye 6th
@@ -15806,6 +15827,7 @@ bool CvSeaLevelInfo::read(CvXMLLoadUtility* pXML)
 //------------------------------------------------------------------------------------------------------
 CvProcessInfo::CvProcessInfo() :
 m_iTechPrereq(NO_TECH),
+m_iObsoleteTech(NO_TECH), // Absinthe: obsolete tech for processes
 m_paiProductionToCommerceModifier(NULL)
 {
 }
@@ -15825,6 +15847,11 @@ CvProcessInfo::~CvProcessInfo()
 int CvProcessInfo::getTechPrereq() const
 {
 	return m_iTechPrereq;
+}
+// Absinthe: obsolete tech for processes
+int CvProcessInfo::getObsoleteTech() const
+{
+	return m_iObsoleteTech;
 }
 
 // Arrays
@@ -15846,6 +15873,10 @@ bool CvProcessInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetChildXmlValByName(szTextVal, "TechPrereq");
 	m_iTechPrereq = pXML->FindInInfoClass(szTextVal);
+
+	// Absinthe: obsolete tech for processes
+	pXML->GetChildXmlValByName(szTextVal, "ObsoleteTech");
+	m_iObsoleteTech = pXML->FindInInfoClass(szTextVal);
 
 	if (gDLL->getXMLIFace()->SetToChildByTagName(pXML->GetXML(),"ProductionToCommerceModifiers"))
 	{

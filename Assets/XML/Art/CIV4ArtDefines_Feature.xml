@@ -526,27 +526,6 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_FALLOUT</Type>
-			<bAnimated>1</bAnimated>
-			<bRiverArt>0</bRiverArt>
-			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
-			<LightType>LIGHT_TYPE_SUN</LightType>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<Button>,-,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,1,3</Button>
-			<FeatureVariety>
-				<FeatureArtPieces>
-					<FeatureArtPiece>
-						<ModelFile>Art/Effects/cities_irradiated/fx_cities_iradiated.nif</ModelFile>
-						<Connections></Connections>
-					</FeatureArtPiece>
-				</FeatureArtPieces>
-				<FeatureDummyNodes/>
-				<bGenerateRotations>0</bGenerateRotations>
-				<VarietyButton>Art/Interface/Buttons/TerrainFeatures/Fallout.dds</VarietyButton>
-			</FeatureVariety>
-		</FeatureArtInfo>
-		<FeatureArtInfo>
 			<Type>ART_DEF_FEATURE_MARSH</Type>
 			<bAnimated>0</bAnimated>
 			<bRiverArt>0</bRiverArt>

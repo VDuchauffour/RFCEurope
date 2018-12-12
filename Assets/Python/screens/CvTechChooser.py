@@ -5,11 +5,11 @@ import CvUtil
 import ScreenInput
 import CvScreenEnums
 import CvScreensInterface
-import Consts as con #Rhye
+import Consts as con
 import XMLConsts as xml
 
 PIXEL_INCREMENT = 7
-BOX_INCREMENT_WIDTH = 27 # Used to be 33 #Should be a multiple of 3...
+BOX_INCREMENT_WIDTH = 33 #Should be a multiple of 3...
 BOX_INCREMENT_HEIGHT = 9 #Should be a multiple of 3...
 BOX_INCREMENT_Y_SPACING = 6 #Should be a multiple of 3...
 BOX_INCREMENT_X_SPACING = 9 #Should be a multiple of 3...
@@ -113,7 +113,7 @@ class CvTechChooser:
 		szText = szText + u"</font>"
 		screen.setLabel( "TechTitleHeader", "Background", szText, CvUtil.FONT_CENTER_JUSTIFY, 502, 8, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
-		# Make the scrollable area for the city list...
+		# Make the scrollable area for the tech list...
 		screen.addScrollPanel( "TechList", u"", 0, 64, 1024, 626, PanelStyles.PANEL_STYLE_EXTERNAL )
 		screen.setActivation( "TechList", ActivationTypes.ACTIVATE_NORMAL )
 		screen.hide( "TechList" )
@@ -260,7 +260,7 @@ class CvTechChooser:
 			j = 0
 			k = 0
 
-			# Obsolete Monastaries...
+			# Obsolete Monasteries...
 			for j in range (gc.getNumSpecialBuildingInfos()):
 				if (gc.getSpecialBuildingInfo(j).getObsoleteTech() == i):
 					# Add obsolete picture here...
@@ -548,7 +548,7 @@ class CvTechChooser:
 			j = 0
 			k = 0
 
-			# Special buildings like monasteries...
+			# Special buildings like monasteries
 			for j in range( gc.getNumSpecialBuildingInfos() ):
 				if (gc.getSpecialBuildingInfo(j).getTechPrereq() == i):
 					szSpecialBuilding = "SpecialBuildingButton" + str( ( i * 1000 ) + j )

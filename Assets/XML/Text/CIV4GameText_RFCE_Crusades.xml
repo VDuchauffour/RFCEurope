@@ -312,6 +312,15 @@
 		<Portuguese>Our Crusading units return home to their families, strengthening the faith throughout the nation and sharing their warfare experiences.</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CRUSADE_NEW_RELIC</Tag>
+		<English>Your armies have returned with some Holy Relics from the last Crusade!</English>
+		<French>Your armies have returned with some Holy Relics from the last Crusade!</French>
+		<German>Your armies have returned with some Holy Relics from the last Crusade!</German>
+		<Italian>Your armies have returned with some Holy Relics from the last Crusade!</Italian>
+		<Spanish>Your armies have returned with some Holy Relics from the last Crusade!</Spanish>
+		<Portuguese>Your armies have returned with some Holy Relics from the last Crusade!</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CRUSADE_JERUSALEM_PILGRIMS</Tag>
 		<English>Christian pilgrims are filling the roads of Jerusalem!</English>
 		<French>Christian pilgrims are filling the roads of Jerusalem!</French>

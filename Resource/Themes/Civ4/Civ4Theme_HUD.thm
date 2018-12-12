@@ -64,6 +64,7 @@ Button_HUDGlobeTrade_Style
 Button_HUDZoom_Style
 
 Button_HUDLog_Style
+Button_HUDMercenary_Style
 
 Button_HUDJump_Style
 Button_HUDJumpUnit_Style
@@ -875,7 +876,7 @@ with GFC_Control_Button
 		map GFC_Control										=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
 	}
 
-	//HUD Advisor Button - Religious
+	//HUD Advisor Button - Companies
 	style SF_CtrlTheme_Civ4_Control_Button_HUDAdvisorCorporation_Style
 	{
 
@@ -1107,6 +1108,26 @@ with GFC_Control_Button
 			.Disable				= GBitmap("Civ4/HUD/HUD_log.tga", HVGrid, 1, 5, 0, 2);
 			.Toggle					= GBitmap("Civ4/HUD/HUD_log.tga", HVGrid, 1, 5, 0, 3);
 			.ToggleRollover			= GBitmap("Civ4/HUD/HUD_log.tga", HVGrid, 1, 5, 0, 4);
+			.TogglePress			= .Toggle;
+			.ToggleDisable			= .Disable;
+		}
+
+		map GFC_CtrlTheme_Bitmap_Control_Button				=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+		map GFC_Control										=	SF_CtrlTheme_Civ4_Control_Button_HUDSmall_Style;
+	}
+
+	//HUD Mercenary Manager Button
+	style SF_CtrlTheme_Civ4_Control_Button_HUDMercenary_Style
+	{
+
+		with GFC_Control_Button_Image
+		{
+			.Default				= GBitmap("Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 3, 0);
+			.Rollover				= GBitmap("Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 3, 1);
+			.Press					= .Default;
+			.Disable				= GBitmap("Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 3, 2);
+			.Toggle					= GBitmap("Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 3, 3);
+			.ToggleRollover			= GBitmap("Civ4/HUD/HUD_BTS_icons.tga", HVGrid, 5, 5, 3, 4);
 			.TogglePress			= .Toggle;
 			.ToggleDisable			= .Disable;
 		}

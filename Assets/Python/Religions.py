@@ -42,7 +42,9 @@ tCatholicBuildings = [ xml.iCatholicTemple, xml.iCatholicMonastery, xml.iCatholi
 tOrthodoxBuildings = [ xml.iOrthodoxTemple, xml.iOrthodoxMonastery, xml.iOrthodoxCathedral ]
 tProtestantBuildings = [ xml.iProtestantTemple, xml.iProtestantSchool, xml.iProtestantCathedral ]
 tIslamicBuildings = [ xml.iIslamicTemple, xml.iIslamicCathedral, xml.iIslamicMadrassa ]
-tReligiousWonders = [ xml.iMonasteryOfCluny, xml.iImperialDiet, xml.iKrakDesChevaliers, xml.iNotreDame, xml.iPalaisPapes, xml.iStBasil, xml.iSophiaKiev, xml.iDomeRock, xml.iRoundChurch, xml.iWestminster ]
+tReligiousWonders = [	xml.iMonasteryOfCluny, xml.iWestminster, xml.iKrakDesChevaliers, xml.iNotreDame, xml.iPalaisPapes, xml.iStBasil, xml.iSophiaKiev, xml.iStCatherineMonastery, \
+						xml.iSistineChapel, xml.iJasnaGora, xml.iMontSaintMichel, xml.iBoyanaChurch, xml.iFlorenceDuomo, xml.iBorgundStaveChurch, xml.iDomeRock, xml.iThomaskirche, \
+						xml.iBlueMosque, xml.iSelimiyeMosque, xml.iMosqueOfKairouan, xml.iKoutoubiaMosque, xml.iLaMezquita, xml.iSanMarco, xml.iStephansdom, xml.iRoundChurch ]
 
 
 ### Reformation Begin ###
@@ -316,6 +318,10 @@ class Religions:
 			pPlayer = gc.getPlayer( i )
 			if pPlayer.getProsecutionCount() > 0:
 				pPlayer.changeProsecutionCount( -1 )
+			# Religious Law means a bigger decrease in persecution points
+			if pPlayer.getCivics(1) == xml.iCivicReligiousLaw:
+				if pPlayer.getProsecutionCount() > 0:
+					pPlayer.changeProsecutionCount( -1 )
 
 		# Absinthe: Resettle Jewish refugees
 		iRefugies = gc.getMinorReligionRefugies()
@@ -461,7 +467,7 @@ class Religions:
 		else:
 			pPlayer.changeFaith( -1 )
 
-	def onBuildingBuild(seld, iPlayer, iBuilding ):
+	def onBuildingBuilt(seld, iPlayer, iBuilding ):
 		pPlayer = gc.getPlayer( iPlayer )
 		iStateReligion = pPlayer.getStateReligion()
 		if iStateReligion != -1:
@@ -469,24 +475,40 @@ class Religions:
 				pPlayer.changeFaith( 1 )
 				if iBuilding == xml.iCatholicCathedral:
 					pPlayer.changeFaith( 3 )
+				if pPlayer.countNumBuildings(xml.iPalaisPapes) > 0:
+					pPlayer.changeFaith( 1 )
 			elif iStateReligion == xml.iOrthodoxy and iBuilding in tOrthodoxBuildings:
 				pPlayer.changeFaith( 1 )
 				if iBuilding == xml.iOrthodoxCathedral:
 					pPlayer.changeFaith( 3 )
+				if pPlayer.countNumBuildings(xml.iPalaisPapes) > 0:
+					pPlayer.changeFaith( 1 )
 			elif iStateReligion == xml.iIslam and iBuilding in tIslamicBuildings:
 				pPlayer.changeFaith( 1 )
 				if iBuilding == xml.iIslamicCathedral:
 					pPlayer.changeFaith( 3 )
+				if pPlayer.countNumBuildings(xml.iPalaisPapes) > 0:
+					pPlayer.changeFaith( 1 )
 			elif iStateReligion == xml.iProtestantism and iBuilding in tProtestantBuildings:
 				pPlayer.changeFaith( 1 )
 				if iBuilding == xml.iProtestantCathedral:
 					pPlayer.changeFaith( 3 )
-			elif iStateReligion == xml.iJudaism and iBuilding == xml.iJewishQuarter:
+				if pPlayer.countNumBuildings(xml.iPalaisPapes) > 0:
+					pPlayer.changeFaith( 1 )
+			elif iStateReligion == xml.iJudaism and iBuilding in [xml.iJewishQuarter, xml.iKazimierz]:
 				pPlayer.changeFaith( 1 )
 				if iBuilding == xml.iKazimierz:
-					pPlayer.changeFaith( 5 )
+					pPlayer.changeFaith( 3 )
+				if pPlayer.countNumBuildings(xml.iPalaisPapes) > 0:
+					pPlayer.changeFaith( 1 )
+			# Absinthe: Wonders: Mont Saint-Michel wonder effect
+			if utils.getBaseBuilding(iBuilding) in [xml.iWalls, xml.iCastle]:
+				if pPlayer.countNumBuildings(xml.iMontSaintMichel) > 0:
+					pPlayer.changeFaith( 1 )
 		if iBuilding in tReligiousWonders:
-			pPlayer.changeFaith( 6 )
+			pPlayer.changeFaith( 4 )
+			if pPlayer.countNumBuildings(xml.iPalaisPapes) > 0:
+				pPlayer.changeFaith( 1 )
 		if iStateReligion != xml.iJudaism and iBuilding == xml.iKazimierz:
 			pPlayer.changeFaith( - min( 1, pPlayer.getFaith() ) )
 			# Kazimierz tries to spread Judaism to a couple new cities

@@ -98,6 +98,9 @@ class StoredData:
 				'lLastTurnAlive': [0] * con.iNumPlayers, #major players only
 				'lLastRespawnTurn': [0] * con.iNumPlayers, #major players only
 
+				# Absinthe: Event Turn Randomization
+				'lEventRandomness': [0] * 10,
+
 				# 3Miro: Minor Nations
 				'lNextMinorRevolt': [-1, -1, -1, -1, -1, -1, -1],
 				'lRevoltinNationRevoltIndex': [-1, -1, -1, -1, -1, -1, -1],

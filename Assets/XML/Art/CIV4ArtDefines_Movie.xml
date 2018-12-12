@@ -82,16 +82,32 @@
 			<Path>Art/Movies/Wonders/Diet.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_FONTAINEBLEAU</Type>
-			<Path>Art/Movies/Wonders/Fontainebleau.dds</Path>
+			<Type>ART_DEF_MOVIE_STEPHANSDOM</Type>
+			<Path>Art/Movies/Wonders/Stephansdom.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_BIBLIOTHECA_CORVINIANA</Type>
 			<Path>Art/Movies/Wonders/Bibliotheca.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_STEPHANSDOM</Type>
-			<Path>Art/Movies/Wonders/Stephansdom.dds</Path>
+			<Type>ART_DEF_MOVIE_LOUVRE</Type>
+			<Path>Art/Movies/Wonders/Louvre.bik</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_PETERHOF_PALACE</Type>
+			<Path>Art/Movies/Wonders/Peterhof_Palace.bik</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_URANIBORG</Type>
+			<Path>Art/Movies/Wonders/Uraniborg.bik</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_THOMASKIRCHE</Type>
+			<Path>Art/Movies/Wonders/Thomaskirche.bik</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_FONTAINEBLEAU</Type>
+			<Path>Art/Movies/Wonders/Fontainebleau.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SAN_MARCO</Type>
@@ -182,8 +198,80 @@
 			<Path>Art/Movies/Wonders/TopkapiPalace.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_JASNA_GORA</Type>
+			<Path>Art/Movies/Wonders/Jasna_Gora.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SHRINE_OF_UPPSALA</Type>
 			<Path>Art/Movies/Wonders/Asen_Shrine.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SAMOGITIAN_ALKAS</Type>
+			<Path>Art/Movies/Wonders/samogitian_alkas.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GEDIMINAS_TOWER</Type>
+			<Path>Art/Movies/Wonders/Gediminas_Tower.bik</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GRAND_ARSENAL</Type>
+			<Path>Art/Movies/Wonders/VenetianArsenal.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GALATA_TOWER</Type>
+			<Path>Art/Movies/Wonders/Galata_Tower.bik</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_KIZIL_KULE</Type>
+			<Path>Art/Movies/Wonders/Kizil_Kule.bik</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MONT_SAINT_MICHEL</Type>
+			<Path>Art/Movies/Wonders/Mont_Saint-Michel.bik</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BOYANA_CHURCH</Type>
+			<Path>Art/Movies/Wonders/boyana_church.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_TORRE_DEL_ORO</Type>
+			<Path>Art/Movies/Wonders/Torre_del_Oro.bik</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_THE_DUOMO</Type>
+			<Path>Art/Movies/Wonders/The_Duomo.bik</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BORGUND_STAVE_CHURCH</Type>
+			<Path>Art/Movies/Wonders/Borgund_Stave_Church.bik</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_BLUE_MOSQUE</Type>
+			<Path>Art/Movies/Wonders/blue_mosque.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SELIMIYE_MOSQUE</Type>
+			<Path>Art/Movies/Wonders/selimiye_mosque.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_AL_AZHAR_UNIVERSITY</Type>
+			<Path>Art/Movies/Wonders/al-azhar_university.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_MOSQUE_OF_KAIROUAN</Type>
+			<Path>Art/Movies/Wonders/great_mosque_of_kairouan.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_KOUTOUBIA_MOSQUE</Type>
+			<Path>Art/Movies/Wonders/koutoubia_mosque.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_SAINT_CATHERINE_MONASTERY</Type>
+			<Path>Art/Movies/Wonders/saint_catherines_monastery.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GREAT_LIGHTHOUSE</Type>
+			<Path>Art/Movies/Wonders/GreatLighthouse.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ALHAMBRA</Type>

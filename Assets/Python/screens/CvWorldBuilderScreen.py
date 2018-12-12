@@ -3134,7 +3134,7 @@ class RevealMode(Mode):
 		if (not pPlot.isRevealed(iTeam, False)):
 			CyEngine().fillAreaBorderPlotAlt(pPlot.getX(), pPlot.getY(), AreaBorderLayers.AREA_BORDER_LAYER_REVEALED_PLOTS, "COLOR_BLACK", 1.0)
 
-	def revealPlot(self, pPlot,bReveal):
+	def revealPlot(self, pPlot, bReveal):
 		iTeam = self.iPlayer
 		if bReveal or (not pPlot.isVisible(iTeam, False)):
 			pPlot.setRevealed(iTeam, bReveal, False, -1)

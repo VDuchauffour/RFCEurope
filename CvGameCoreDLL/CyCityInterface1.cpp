@@ -324,6 +324,11 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("setBaseYieldRate", &CyCity::setBaseYieldRate, "int (int /*YieldTypes*/, int iNewValue) - sets the base rate for YieldType")
 		.def("changeBaseYieldRate", &CyCity::changeBaseYieldRate, "int (int /*YieldTypes*/, int iChange) - changes the base rate for YieldType")
 
+		// Absinthe: exposed to python
+		.def("changeBonusYieldRateModifier", &CyCity::changeBonusYieldRateModifier, "int (int /*YieldTypes*/, int iChange) - changes the bonus (resource) yield rate for YieldType")
+		.def("changeBonusCommerceRateModifier", &CyCity::changeBonusCommerceRateModifier, "int (int /*CommerceTypes*/, int iChange) - changes the bonus (resource) commerce rate for CommerceType")
+		.def("changeCommerceRateModifier", &CyCity::changeCommerceRateModifier, "int (int /*CommerceTypes*/, int iChange) - changes the general (building) commerce rate for CommerceType")
+
 		.def("getBaseYieldRateModifier", &CyCity::getBaseYieldRateModifier)
 		.def("getYieldRate", &CyCity::getYieldRate, "int (int /*YieldTypes*/) - total value of YieldType")
 		.def("getYieldRateModifier", &CyCity::getYieldRateModifier, "int (int /*YieldTypes*/) - yield rate modifier for YieldType")

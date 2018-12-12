@@ -1096,6 +1096,18 @@
 			<DefaultBuilding>BUILDING_TOPKAPI_PALACE</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
+		<BuildingClassInfo><!-- JASNA_GORA -->
+			<Type>BUILDINGCLASS_JASNA_GORA</Type>
+			<Description>TXT_KEY_BUILDING_JASNA_GORA</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_JASNA_GORA</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
 		<BuildingClassInfo><!-- SHRINE_OF_UPPSALA -->
 			<Type>BUILDINGCLASS_SHRINE_OF_UPPSALA</Type>
 			<Description>TXT_KEY_BUILDING_SHRINE_OF_UPPSALA</Description>
@@ -1106,6 +1118,210 @@
 			<bNoLimit>0</bNoLimit>
 			<bMonument>0</bMonument>
 			<DefaultBuilding>BUILDING_SHRINE_OF_UPPSALA</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+		<BuildingClassInfo><!-- SAMOGITIAN_ALKAS -->
+			<Type>BUILDINGCLASS_SAMOGITIAN_ALKAS</Type>
+			<Description>TXT_KEY_BUILDING_SAMOGITIAN_ALKAS</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_SAMOGITIAN_ALKAS</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+		<BuildingClassInfo><!-- GEDIMINAS_TOWER -->
+			<Type>BUILDINGCLASS_GEDIMINAS_TOWER</Type>
+			<Description>TXT_KEY_BUILDING_GEDIMINAS_TOWER</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_GEDIMINAS_TOWER</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+		<BuildingClassInfo><!-- GRAND_ARSENAL -->
+			<Type>BUILDINGCLASS_GRAND_ARSENAL</Type>
+			<Description>TXT_KEY_BUILDING_GRAND_ARSENAL</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_GRAND_ARSENAL</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+		<BuildingClassInfo><!-- GALATA_TOWER -->
+			<Type>BUILDINGCLASS_GALATA_TOWER</Type>
+			<Description>TXT_KEY_BUILDING_GALATA_TOWER</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_GALATA_TOWER</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+		<BuildingClassInfo><!-- KIZIL_KULE -->
+			<Type>BUILDINGCLASS_KIZIL_KULE</Type>
+			<Description>TXT_KEY_BUILDING_KIZIL_KULE</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_KIZIL_KULE</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+		<BuildingClassInfo><!-- MONT_SAINT_MICHEL -->
+			<Type>BUILDINGCLASS_MONT_SAINT_MICHEL</Type>
+			<Description>TXT_KEY_BUILDING_MONT_SAINT_MICHEL</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_MONT_SAINT_MICHEL</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+		<BuildingClassInfo><!-- BOYANA_CHURCH -->
+			<Type>BUILDINGCLASS_BOYANA_CHURCH</Type>
+			<Description>TXT_KEY_BUILDING_BOYANA_CHURCH</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_BOYANA_CHURCH</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+		<BuildingClassInfo><!-- TORRE_DEL_ORO -->
+			<Type>BUILDINGCLASS_TORRE_DEL_ORO</Type>
+			<Description>TXT_KEY_BUILDING_TORRE_DEL_ORO</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_TORRE_DEL_ORO</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+		<BuildingClassInfo><!-- THE_DUOMO -->
+			<Type>BUILDINGCLASS_THE_DUOMO</Type>
+			<Description>TXT_KEY_BUILDING_THE_DUOMO</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_THE_DUOMO</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+		<BuildingClassInfo><!-- BORGUND_STAVE_CHURCH -->
+			<Type>BUILDINGCLASS_BORGUND_STAVE_CHURCH</Type>
+			<Description>TXT_KEY_BUILDING_BORGUND_STAVE_CHURCH</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_BORGUND_STAVE_CHURCH</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+		<BuildingClassInfo><!-- BLUE_MOSQUE -->
+			<Type>BUILDINGCLASS_BLUE_MOSQUE</Type>
+			<Description>TXT_KEY_BUILDING_BLUE_MOSQUE</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_BLUE_MOSQUE</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+		<BuildingClassInfo><!-- SELIMIYE_MOSQUE -->
+			<Type>BUILDINGCLASS_SELIMIYE_MOSQUE</Type>
+			<Description>TXT_KEY_BUILDING_SELIMIYE_MOSQUE</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_SELIMIYE_MOSQUE</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+		<BuildingClassInfo><!-- AL_AZHAR_UNIVERSITY -->
+			<Type>BUILDINGCLASS_AL_AZHAR_UNIVERSITY</Type>
+			<Description>TXT_KEY_BUILDING_AL_AZHAR_UNIVERSITY</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_AL_AZHAR_UNIVERSITY</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+		<BuildingClassInfo><!-- MOSQUE_OF_KAIROUAN -->
+			<Type>BUILDINGCLASS_MOSQUE_OF_KAIROUAN</Type>
+			<Description>TXT_KEY_BUILDING_MOSQUE_OF_KAIROUAN</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_MOSQUE_OF_KAIROUAN</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+		<BuildingClassInfo><!-- KOUTOUBIA_MOSQUE -->
+			<Type>BUILDINGCLASS_KOUTOUBIA_MOSQUE</Type>
+			<Description>TXT_KEY_BUILDING_KOUTOUBIA_MOSQUE</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_KOUTOUBIA_MOSQUE</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+		<BuildingClassInfo><!-- SAINT_CATHERINE_MONASTERY -->
+			<Type>BUILDINGCLASS_SAINT_CATHERINE_MONASTERY</Type>
+			<Description>TXT_KEY_BUILDING_SAINT_CATHERINE_MONASTERY</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_SAINT_CATHERINE_MONASTERY</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+		<BuildingClassInfo><!-- GREAT_LIGHTHOUSE -->
+			<Type>BUILDINGCLASS_GREAT_LIGHTHOUSE</Type>
+			<Description>TXT_KEY_BUILDING_GREAT_LIGHTHOUSE</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_GREAT_LIGHTHOUSE</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
 		<BuildingClassInfo><!-- ALHAMBRA -->
@@ -1228,7 +1444,7 @@
 			<DefaultBuilding>BUILDING_MARCO_POLO</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
-		<BuildingClassInfo><!-- ESCORIAL -->
+		<BuildingClassInfo><!-- EL_ESCORIAL -->
 			<Type>BUILDINGCLASS_ESCORIAL</Type>
 			<Description>TXT_KEY_BUILDING_ESCORIAL</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -1334,6 +1550,54 @@
 			<bNoLimit>0</bNoLimit>
 			<bMonument>0</bMonument>
 			<DefaultBuilding>BUILDING_BIBLIOTHECA_CORVINIANA</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+		<BuildingClassInfo><!-- LOUVRE -->
+			<Type>BUILDINGCLASS_LOUVRE</Type>
+			<Description>TXT_KEY_BUILDING_LOUVRE</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_LOUVRE</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+		<BuildingClassInfo><!-- PETERHOF_PALACE -->
+			<Type>BUILDINGCLASS_PETERHOF_PALACE</Type>
+			<Description>TXT_KEY_BUILDING_PETERHOF_PALACE</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_PETERHOF_PALACE</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+		<BuildingClassInfo><!-- URANIBORG -->
+			<Type>BUILDINGCLASS_URANIBORG</Type>
+			<Description>TXT_KEY_BUILDING_URANIBORG</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_URANIBORG</DefaultBuilding>
+			<VictoryThresholds/>
+		</BuildingClassInfo>
+		<BuildingClassInfo><!-- THOMASKIRCHE -->
+			<Type>BUILDINGCLASS_THOMASKIRCHE</Type>
+			<Description>TXT_KEY_BUILDING_THOMASKIRCHE</Description>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>0</iExtraPlayerInstances>
+			<bNoLimit>0</bNoLimit>
+			<bMonument>0</bMonument>
+			<DefaultBuilding>BUILDING_THOMASKIRCHE</DefaultBuilding>
 			<VictoryThresholds/>
 		</BuildingClassInfo>
 		<BuildingClassInfo><!-- FONTAINEBLEAU -->

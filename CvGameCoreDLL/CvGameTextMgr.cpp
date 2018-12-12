@@ -4251,7 +4251,14 @@ void CvGameTextMgr::parseSpecialistHelp(CvWStringBuffer &szHelpString, Specialis
 		if (GC.getSpecialistInfo(eSpecialist).getExperience() > 0)
 		{
 			szHelpString.append(NEWLINE);
-			szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_EXPERIENCE", GC.getSpecialistInfo(eSpecialist).getExperience()));
+			// Absinthe: Wonders: Brandenburg Gate wonder effect
+			// note that this adds exp to all specialists which yields experience - but in RFCE only great generals have that bonus
+			int iExtraExperience = GC.getSpecialistInfo(eSpecialist).getExperience();
+			if (GET_PLAYER((pCity != NULL) ? pCity->getOwnerINLINE() : GC.getGameINLINE().getActivePlayer()).getBuildingClassCount((BuildingClassTypes)GC.getInfoTypeForString("BUILDINGCLASS_BRANDENBURG_GATE")) == 1)
+			{
+				iExtraExperience += 2;
+			}
+			szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_EXPERIENCE", iExtraExperience));
 		}
 
 		if (GC.getSpecialistInfo(eSpecialist).getGreatPeopleRateChange() != 0)
@@ -4313,7 +4320,14 @@ void CvGameTextMgr::parseFreeSpecialistHelp(CvWStringBuffer &szHelpString, const
 				{
 					szHelpString.append(L", ");
 				}
-				szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_EXPERIENCE_SHORT", iNumSpecialists * GC.getSpecialistInfo(eSpecialist).getExperience()));
+				// Absinthe: Wonders: Brandenburg Gate wonder effect
+				// note that this adds exp to all specialists which yields experience - but in RFCE only great generals have that bonus
+				int iExtraExperience = GC.getSpecialistInfo(eSpecialist).getExperience();
+				if (GET_PLAYER(kCity.getOwnerINLINE()).getBuildingClassCount((BuildingClassTypes)GC.getInfoTypeForString("BUILDINGCLASS_BRANDENBURG_GATE")) == 1)
+				{
+					iExtraExperience += 2;
+				}
+				szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_EXPERIENCE_SHORT", iNumSpecialists * iExtraExperience));
 			}
 		}
 	}
@@ -4938,6 +4952,13 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	{
 		szHelpText.append(NEWLINE);
 		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_TRADE_ROUTES", GC.getCivicInfo(eCivic).getTradeRoutes()));
+	}
+
+	//	Absinthe: Foreign Trade routes
+	if (GC.getCivicInfo(eCivic).getCoastalTradeRoutes() != 0)
+	{
+		szHelpText.append(NEWLINE);
+		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_COASTAL_TRADE_ROUTES", GC.getCivicInfo(eCivic).getCoastalTradeRoutes()));
 	}
 
 	//	No Foreign Trade
@@ -6941,6 +6962,11 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, BuildingTypes eBu
 			{
 				aiCommerces[iI] = kBuilding.getCommerceChange(iI);
 				aiCommerces[iI] += kBuilding.getObsoleteSafeCommerceChange(iI);
+				// Absinthe: show commerce changes for not yet built buildings too
+				if (NULL != pCity)
+				{
+					aiCommerces[iI] += pCity->getBuildingCommerceChange((BuildingClassTypes)kBuilding.getBuildingClassType(), (CommerceTypes)iI);
+				}
 			}
 		}
 		setCommerceChangeHelp(szBuffer, L", ", L"", L"", aiCommerces, false, false);
@@ -7510,7 +7536,8 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, BuildingTypes eBu
 
 	setCommerceChangeHelp(szBuffer, L"", L"", gDLL->getText("TXT_KEY_BUILDING_PER_SPECIALIST_ALL_CITIES").c_str(), kBuilding.getSpecialistExtraCommerceArray());
 
-	if (ePlayer != NO_PLAYER && GET_PLAYER(ePlayer).getStateReligion() != NO_RELIGION)
+	// Absinthe: display correct religion icon (only when the required religion is the same as the state religion)
+	if (ePlayer != NO_PLAYER && GET_PLAYER(ePlayer).getStateReligion() != NO_RELIGION && GET_PLAYER(ePlayer).getStateReligion() == kBuilding.getStateReligion())
 	{
 		szTempBuffer = gDLL->getText("TXT_KEY_BUILDING_FROM_ALL_REL_BUILDINGS", GC.getReligionInfo(GET_PLAYER(ePlayer).getStateReligion()).getChar());
 	}
@@ -7756,7 +7783,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, BuildingTypes eBu
 	};
 	if ( kBuilding.isVassalUU() ){
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_VASSAL_UU"));
+			szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_VASSAL_UU"));
 	};
 	if ( kBuilding.isAllowIrrigation() ){
 			szBuffer.append(NEWLINE);
@@ -7764,7 +7791,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, BuildingTypes eBu
 	};
 	if ( kBuilding.getBombardImmuneDefense() > 0 ){
 			szBuffer.append(NEWLINE);
-			szBuffer.append( gDLL->getText("TXT_KEY_BOMBARD_IMMUNE_DEFENSE", kBuilding.getBombardImmuneDefense() ) );
+			szBuffer.append( gDLL->getText("TXT_KEY_BUILDING_BOMBARD_IMMUNE_DEFENSE", kBuilding.getBombardImmuneDefense() ) );
 	};
 	if ( kBuilding.getStateReligionCulture() > 0 ){
 		szBuffer.append(NEWLINE);
@@ -7785,17 +7812,17 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, BuildingTypes eBu
 	};
 
 	// 3MiroCivic: Building - Civic combo
-			int iCivic;
-			int iBuildingClass = kBuilding.getBuildingClassType();
-			for( iCivic = 0; iCivic < GC.getNumCivicInfos(); iCivic++ ){
-				CvCivicInfo &pCivicInfo = GC.getCivicInfo( (CivicTypes) iCivic );
-				if ( (pCivicInfo.getBuildingCivicComboGold() != 0) && (pCivicInfo.getBuildingCivicComboBuilding() == iBuildingClass) ){
-					//
-					szBuffer.append(NEWLINE);
-					szBuffer.append( gDLL->getText("TXT_KEY_CIVIC_BUILDING_COMBO_BUILDING_INFO1", pCivicInfo.getBuildingCivicComboGold() ) );
-					szBuffer.append( gDLL->getText("TXT_KEY_CIVIC_BUILDING_COMBO_BUILDING_INFO2", pCivicInfo.getTextKeyWide() ) );
-				};
-			};
+	int iCivic;
+	int iBuildingClass = kBuilding.getBuildingClassType();
+	for ( iCivic = 0; iCivic < GC.getNumCivicInfos(); iCivic++ ){
+		CvCivicInfo &pCivicInfo = GC.getCivicInfo( (CivicTypes) iCivic );
+		if ( (pCivicInfo.getBuildingCivicComboGold() != 0) && (pCivicInfo.getBuildingCivicComboBuilding() == iBuildingClass) ){
+			//
+			szBuffer.append(NEWLINE);
+			szBuffer.append( gDLL->getText("TXT_KEY_CIVIC_BUILDING_COMBO_BUILDING_INFO1", pCivicInfo.getBuildingCivicComboGold() ) );
+			szBuffer.append( gDLL->getText("TXT_KEY_CIVIC_BUILDING_COMBO_BUILDING_INFO2", pCivicInfo.getTextKeyWide() ) );
+		};
+	};
 	// 3MiroBuildings: end
 
 	bFirst = true;
@@ -8195,19 +8222,27 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		// Absinthe: display civic requirements
 		if (kBuilding.getPrereqCivic() != -1)
 		{
-			if (NULL != pCity && NO_PLAYER != ePlayer && !GET_PLAYER(ePlayer).hasCivic((CivicTypes)kBuilding.getPrereqCivic()))
+			if (NO_PLAYER == ePlayer || !GET_PLAYER(ePlayer).hasCivic((CivicTypes)kBuilding.getPrereqCivic()))
 			{
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_CIVIC", GC.getCivicInfo((CivicTypes)kBuilding.getPrereqCivic()).getText()));
 			}
 		}
 
+		// Absinthe: display state religion requirements
 		if (kBuilding.isStateReligion())
 		{
-			if (NULL == pCity || NO_PLAYER == ePlayer || NO_RELIGION == GET_PLAYER(ePlayer).getStateReligion() || !pCity->isHasReligion(GET_PLAYER(ePlayer).getStateReligion()))
+			// if no chosen civ (main menu Civilopedia) or no/different State Religion
+			if (NO_PLAYER == ePlayer || NO_RELIGION == GET_PLAYER(ePlayer).getStateReligion() || GET_PLAYER(ePlayer).getStateReligion() != kBuilding.getStateReligion())
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES_STATE_RELIGION"));
+				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STATE_RELIGION", GC.getReligionInfo((ReligionTypes)kBuilding.getStateReligion()).getChar()));
+			}
+			// otherwise if no chosen city (ingame Civilopedia) or required religion not present in city 
+			else if (NULL == pCity || !pCity->isHasReligion(GET_PLAYER(ePlayer).getStateReligion()))
+			{
+				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_RELIGION_IN_CITY", GC.getReligionInfo((ReligionTypes)kBuilding.getStateReligion()).getChar()));
 			}
 		}
 
@@ -9207,6 +9242,15 @@ void CvGameTextMgr::setHappyHelp(CvWStringBuffer &szBuffer, CvCity& city)
 		{
 			iTotalHappy += iHappy;
 			szBuffer.append(gDLL->getText("TXT_KEY_HAPPY_MILITARY_PRESENCE", iHappy));
+			szBuffer.append(NEWLINE);
+		}
+
+		// Absinthe: new happiness modifier
+		iHappy = city.getUniquePowerHappiness();
+		if (iHappy > 0)
+		{
+			iTotalHappy += iHappy;
+			szBuffer.append(gDLL->getText("TXT_KEY_HAPPY_CIV_SPECIFIC_UP", iHappy));
 			szBuffer.append(NEWLINE);
 		}
 
@@ -11624,7 +11668,7 @@ void CvGameTextMgr::buildFinanceUnitCostString(CvWStringBuffer& szBuffer, Player
 	int iBaseUnitCost = 0;
 	int iExtraCost = 0;
 	int iCost = player.calculateUnitCost(iFreeUnits, iFreeMilitaryUnits, iPaidUnits, iPaidMilitaryUnits, iBaseUnitCost, iMilitaryCost, iExtraCost);
-	int iHandicap = iCost-iBaseUnitCost-iMilitaryCost-iExtraCost;
+	int iHandicap = iCost - iBaseUnitCost - iMilitaryCost - iExtraCost;
 
 	szBuffer.append(NEWLINE);
 	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_COST", iPaidUnits, iFreeUnits, iBaseUnitCost));
@@ -11636,6 +11680,14 @@ void CvGameTextMgr::buildFinanceUnitCostString(CvWStringBuffer& szBuffer, Player
 	if (iExtraCost != 0)
 	{
 		szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_COST_3", iExtraCost));
+	}
+	// Absinthe: Wonders: St. Basil wonder effect
+	if (player.getBuildingClassCount((BuildingClassTypes)GC.getInfoTypeForString("BUILDINGCLASS_ST_BASIL")) == 1)
+	{
+		int iUnitCost = iBaseUnitCost + iMilitaryCost + iExtraCost;
+		int iBasilEffect = iUnitCost * 7 / 10 - iUnitCost;
+		iHandicap -= iBasilEffect;
+		szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_COST_BASIL", iBasilEffect));
 	}
 	if (iHandicap != 0)
 	{
@@ -11695,6 +11747,43 @@ void CvGameTextMgr::buildFinanceCityMaintString(CvWStringBuffer& szBuffer, Playe
 	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_CITY_MAINT_COST", iDistanceMaint, iNumCityMaint, iColonyMaint, iCorporationMaint, player.getTotalMaintenance()));
 }
 
+// Absinthe: mercenary upkeep
+void CvGameTextMgr::buildFinanceMercenaryMaintenanceString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer)
+{
+	if (NO_PLAYER == ePlayer)
+	{
+		return;
+	}
+	CvPlayer& player = GET_PLAYER(ePlayer);
+
+	// the pickle free parameter with id=2 is the mercenary cost per turn, calculation is the same as in python
+	int iMercenaryMaintenanceCost = (int)((player.getPicklefreeParameter( 2 ) + 99) / 100);
+
+	szBuffer.append(NEWLINE);
+	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_MERCENARY_MAINTENANCE_COST", iMercenaryMaintenanceCost, iMercenaryMaintenanceCost));
+}
+
+// Absinthe: colony upkeep
+void CvGameTextMgr::buildFinanceColonyUpkeepString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer)
+{
+	if (NO_PLAYER == ePlayer)
+	{
+		return;
+	}
+	CvPlayer& player = GET_PLAYER(ePlayer);
+
+	// colony upkeep calculation is the same as in python
+	int iColonyNumber = player.getNumColonies();
+	int iColonyUpkeep = 0;
+	if (iColonyNumber > 0)
+	{
+		iColonyUpkeep = (int)((iColonyNumber * iColonyNumber * 0.5 + iColonyNumber * 0.5) * 3 + 7);
+	}
+
+	szBuffer.append(NEWLINE);
+	szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_COLONY_UPKEEP_COST", iColonyUpkeep, iColonyNumber, iColonyUpkeep));
+}
+
 void CvGameTextMgr::buildFinanceCivicUpkeepString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer)
 {
 	if (NO_PLAYER == ePlayer)
@@ -11703,15 +11792,25 @@ void CvGameTextMgr::buildFinanceCivicUpkeepString(CvWStringBuffer& szBuffer, Pla
 	}
 	CvPlayer& player = GET_PLAYER(ePlayer);
 	CvWString szCivicOptionCosts;
+	int iCivicCostBySingleCivics = 0;
 	for (int iI = 0; iI < GC.getNumCivicOptionInfos(); ++iI)
 	{
 		CivicTypes eCivic = player.getCivics((CivicOptionTypes)iI);
 		if (NO_CIVIC != eCivic)
 		{
 			CvWString szTemp;
-			szTemp.Format(L"%d%c: %s", player.getSingleCivicUpkeep(eCivic), GC.getCommerceInfo(COMMERCE_GOLD).getChar(),  GC.getCivicInfo(eCivic).getDescription());
+			szTemp.Format(L"%d%c: %s", player.getSingleCivicUpkeep(eCivic), GC.getCommerceInfo(COMMERCE_GOLD).getChar(), GC.getCivicInfo(eCivic).getDescription());
 			szCivicOptionCosts += NEWLINE + szTemp;
+			iCivicCostBySingleCivics += player.getSingleCivicUpkeep(eCivic);
 		}
+	}
+	// Absinthe: Wonders: Golden Bull wonder effect
+	if (player.getBuildingClassCount((BuildingClassTypes)GC.getInfoTypeForString("BUILDINGCLASS_GOLDEN_BULL")) == 1)
+	{
+		int iGoldenBullEffect = player.getCivicUpkeep() - iCivicCostBySingleCivics;
+		CvWString szTemp;
+		szTemp.Format(L"%d%c: Golden Bull civic cost reduction", iGoldenBullEffect, GC.getCommerceInfo(COMMERCE_GOLD).getChar());
+		szCivicOptionCosts += NEWLINE + szTemp;
 	}
 
 	szBuffer.append(NEWLINE);
@@ -12220,6 +12319,7 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 		iBaseCommerceRate += 100 * iBuildingCommerce;
 	}
 
+	// Absinthe: also counts the bonus commerce from UP_PER_CITY_COMMERCE
 	int iFreeCityCommerce = owner.getFreeCityCommerce(eCommerceType);
 	if (0 != iFreeCityCommerce)
 	{
@@ -12228,15 +12328,22 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 		iBaseCommerceRate += 100 * iFreeCityCommerce;
 	}
 
-	//BCM:Added 26.9.09
-	int iBonusCommerce = city.getBonusCommerceRateModifier(eCommerceType);
-	if (0 != iBonusCommerce)
-	{
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_BONUS_COMMERCE", iBonusCommerce, info.getChar()));
-		szBuffer.append(NEWLINE);
-		iBaseCommerceRate += iBaseCommerceRate * iBonusCommerce/100;
+	// Absinthe: Pagan culture from buildings and UP
+	if ((eCommerceType == COMMERCE_CULTURE) && (owner.getStateReligion() == NO_RELIGION)){
+		int iPaganCultureBuildingCiv = 100 * owner.getPaganCulture();
+		int iPaganCultureBuildingCity = 100 * city.getPaganCulture();
+		int iPaganCultureSum = iPaganCultureBuildingCiv + iPaganCultureBuildingCity;
+		// UP_PAGAN_CULTURE
+		int iUPC = UniquePowers[city.getOwnerINLINE() * UP_TOTAL_NUM + UP_PAGAN_CULTURE];
+		if (iUPC > -1){
+			iPaganCultureSum += iUPC;
+		}
+		if (0 != iPaganCultureSum){
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PAGAN_CULTURE", iPaganCultureSum / 100, info.getChar()));
+			szBuffer.append(NEWLINE);
+			iBaseCommerceRate += iPaganCultureSum;
+		}
 	}
-	//BCM:End
 
 	FAssertMsg(city.getBaseCommerceRateTimes100(eCommerceType) == iBaseCommerceRate, "Base Commerce rate does not agree with actual value");
 
@@ -12275,6 +12382,21 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 			}
 		}
 	}
+	// Absinthe: Wonders: Notre Dame wonder effect
+	if (owner.getBuildingClassCount((BuildingClassTypes)GC.getInfoTypeForString("BUILDINGCLASS_NOTRE_DAME")) == 1)
+	{
+		if (eCommerceType == COMMERCE_CULTURE)
+		{
+			if (owner.getStateReligion() != NO_RELIGION)
+			{
+				if (city.isHasReligion(owner.getStateReligion()))
+				{
+					iBuildingMod += 20;
+				}
+			}
+		}
+	}
+	// Absinthe: Wonders: Notre Dame end
 	if (0 != iBuildingMod)
 	{
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_BUILDINGS", iBuildingMod, info.getChar()));
@@ -12282,6 +12404,16 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 		iModifier += iBuildingMod;
 	}
 
+	// Absinthe: this was also in the wrong place -> moved to be a real modifier, so no part of it is multiplied twice
+	//BCM:Added 26.9.09
+	int iBonusCommerce = city.getBonusCommerceRateModifier(eCommerceType);
+	if (0 != iBonusCommerce)
+	{
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_BONUS_COMMERCE", iBonusCommerce, info.getChar()));
+		szBuffer.append(NEWLINE);
+		iModifier += iBonusCommerce;
+	}
+	//BCM:End
 
 	// Trait
 	for (int i = 0; i < GC.getNumTraitInfos(); i++)

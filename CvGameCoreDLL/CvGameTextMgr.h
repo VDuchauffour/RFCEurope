@@ -173,6 +173,8 @@ public:
 	DllExport void buildFinanceUnitCostString(CvWStringBuffer& szDetails, PlayerTypes ePlayer);
 	DllExport void buildFinanceAwaySupplyString(CvWStringBuffer& szDetails, PlayerTypes ePlayer);
 	DllExport void buildFinanceCityMaintString(CvWStringBuffer& szDetails, PlayerTypes ePlayer);
+	DllExport void buildFinanceMercenaryMaintenanceString(CvWStringBuffer& szDetails, PlayerTypes ePlayer); // Absinthe: mercenary upkeep
+	DllExport void buildFinanceColonyUpkeepString(CvWStringBuffer& szDetails, PlayerTypes ePlayer); // Absinthe: colony upkeep
 	DllExport void buildFinanceCivicUpkeepString(CvWStringBuffer& szDetails, PlayerTypes ePlayer);
 	DllExport void buildFinanceForeignIncomeString(CvWStringBuffer& szDetails, PlayerTypes ePlayer);
 

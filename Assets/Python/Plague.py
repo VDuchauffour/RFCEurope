@@ -216,8 +216,9 @@ class Plague:
 
 		# Absinthe: message about the spread
 		iHuman = utils.getHumanID()
+		iHumanTeam = gc.getPlayer(iHuman).getTeam()
 		if gc.getPlayer(iHuman).canContact(iPlayer) and iHuman != iPlayer:
-			if city != -1 and city.isRevealed(iHuman, False):
+			if city != -1 and city.isRevealed(iHumanTeam, False):
 				CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_PLAGUE_SPREAD_CITY", ()) + " " + city.getName() + " (" + gc.getPlayer(city.getOwner()).getCivilizationAdjective(0) + ")!", "AS2D_PLAGUE", 0, gc.getBuildingInfo(iPlague).getButton(), ColorTypes(con.iLime), city.getX(), city.getY(), True, True)
 			elif city != -1:
 				pCiv = gc.getPlayer(city.getOwner())

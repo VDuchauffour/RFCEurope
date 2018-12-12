@@ -616,15 +616,15 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 									*/
 										{
 											//GC.getGameINLINE().logMsg("playerAI AI_doTurnUnitsPost HERE 9 %d", getID()); // 3Miro
-										pLoopUnit->kill(false);
-										bKilled = true;
-										pLastUpgradePlot = NULL;
+											pLoopUnit->kill(false);
+											bKilled = true;
+											pLastUpgradePlot = NULL;
+										}
 									}
 								}
 							}
 						}
 					}
-				}
 				}
 				if (!bKilled)
 				{
@@ -2972,34 +2972,38 @@ int CvPlayerAI::AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreA
 
 	// Absinthe: War Maps should be a more important factor in deciding where to attack, so increased their value to 0,2,6,10,16
 	// Absinthe: Barbs and Indies outside War Maps are not totally ignored automatically anymore, have a much decreased chance instead
-	// Absinthe: on the other hand, if a city is outside the War Map and not with an era-based distance, ignore it totally
+	// Absinthe: on the other hand, if a city is outside the War Map and not within an era-based distance, ignore it totally
 	int iWarsValue = getWarsMaps(EARTH_Y - 1 - pCity->plot()->getY_INLINE(),pCity->plot()->getX_INLINE());
 	iValue += (iWarsValue / 2);
 	if ( iWarsValue == 0 )
 	{
 		// Absinthe: if not on the war map, always ignore cities which are too far away from the actual territory
-		int maxDistance = 10;
+		int maxDistance = 8;
 		switch (GC.getGameINLINE().getCurrentEra())
 		{
 			case 0:
-				maxDistance = 10;
+				maxDistance = 8;
 				break;
 			case 1:
-				maxDistance = 14;
+				maxDistance = 12;
 				break;
 			case 2:
-				maxDistance = 20;
+				maxDistance = 16;
 				break;
 			default:
-				maxDistance = 30;
+				maxDistance = 20;
 				break;
+		}
+		if (GET_TEAM(getTeam()).isAVassal())
+		{
+			maxDistance /= 2;
 		}
 		if ((pNearestCity == NULL) || (plotDistance(pCity->getX_INLINE(), pCity->getY_INLINE(), pNearestCity->getX_INLINE(), pNearestCity->getY_INLINE()) > maxDistance))
 		{
 			return 0;
 		}
-		// Absinthe: decrease iValue even if it's close enough
-		iValue = std::max( iValue - 2, 0 );
+		// Absinthe: decrease iValue even if it's close enough (city should be low priority)
+		iValue = std::max( iValue - 4, 0 );
 		// Absinthe: Pope always ignores Barbs and Indies outside it's war map
 		if ( getID() == PAPAL_PLAYER )
 		{
@@ -3008,6 +3012,11 @@ int CvPlayerAI::AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreA
 		else if (pCity->getOwner() >= NUM_MAJOR_PLAYERS)
 		{
 			iValue /= 4; // Absinthe: much reduced chance for Barbs and Indies outside the war map
+		}
+		// Absinthe: vassal civs should have a much decreased chance for all cities outside their war maps
+		if (GET_TEAM(getTeam()).isAVassal())
+		{
+			iValue /= 4;
 		}
 	}
 	else
@@ -7460,7 +7469,7 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus) const
 		if (iCoastalCityCount > 0)
 		{
 			int iLoop;
-				for (CvCity* pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+			for (CvCity* pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
 			{
 				if (pLoopCity->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
 				{
@@ -10492,7 +10501,19 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 	}
 	// Absinthe: end
 
-	// Absinthe: if an AI civ has a civic as their UP, it should almost always want it (Venice - Merchant Republic, Novgorod - Bureaucracy, Prussia - Theocracy)
+	// Absinthe: AI civic modifier, only with coastal cities - mainly meant for the Merchant Republic civic
+	if (kCivic.isForMaritimeEmpire())
+	{
+		// can only take the civic if at least 50% of their cities are coastal
+		// Venice has additional benefits to the Merchant Republic civic, so it should want it in all cases - but no real issue since it should only have coastal cities
+		if (getNumCities() > 2 * countNumCoastalCities())
+		{
+			return 0;
+		}
+	}
+	// Absinthe: end
+
+	// Absinthe: if an AI civ has a civic as their UP, it should almost always want it (Byzantium - Imperialism, Venice - Merchant Republic, Novgorod - Bureaucracy, Prussia - Theocracy)
 	int iUPC = UniquePowers[getID() * UP_TOTAL_NUM + UP_ENABLE_CIVIC];
 	if ( iUPC > -1 )
 	{

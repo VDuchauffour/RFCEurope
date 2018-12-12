@@ -540,6 +540,9 @@ enum WidgetTypes					// Exposed to Python
 	WIDGET_GLOBELAYER,
 	WIDGET_GLOBELAYER_OPTION,
 	WIDGET_GLOBELAYER_TOGGLE,
+	// Absinthe: new widgets have to be at the end, because the close screen is handled in the EXE which use a hardcoded value instead of the DLL's values
+	WIDGET_HELP_FINANCE_MERCENARY_MAINTENANCE, // Absinthe: mercenary upkeep
+	WIDGET_HELP_FINANCE_COLONY_UPKEEP, // Absinthe: colony upkeep
 
 #ifdef _USRDLL
 	NUM_WIDGET_TYPES

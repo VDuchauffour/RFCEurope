@@ -28,6 +28,7 @@ BeginTeam
 	Tech=TECH_THEOLOGY
 	Tech=TECH_CHAIN_MAIL
 	Tech=TECH_MONASTICISM
+	Tech=TECH_ART
 	Tech=TECH_MUSIC
 	Tech=TECH_HERBAL_MEDICINE
 	Tech=TECH_LITERATURE
@@ -142,7 +143,7 @@ BeginPlayer
 	CivType=CIVILIZATION_BYZANTIUM
 	PlayableCiv=1
 	StateReligion=RELIGION_ORTHODOXY
-	CivicOption=CIVICOPTION_LEGAL, Civic=CIVIC_RELIGIOUS_LAW
+	CivicOption=CIVICOPTION_EXPANSION, Civic=CIVIC_IMPERIALISM
 	Handicap=HANDICAP_PRINCE
 EndPlayer
 BeginPlayer
@@ -8930,7 +8931,7 @@ EndPlot
 BeginPlot
 	x=23,y=7
 	RouteType=ROUTE_ROAD
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -10259,7 +10260,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=30
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -10267,7 +10268,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
@@ -10667,7 +10668,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	RouteType=ROUTE_ROAD
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -17824,7 +17825,6 @@ BeginPlot
 	x=45,y=14
 	RiverNSDirection=0
 	isWOfRiver
-	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -18233,6 +18233,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=14
+	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -18619,6 +18620,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=13
+	BonusType=BONUS_SALT
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -18629,7 +18631,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=15
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
@@ -19036,13 +19038,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=48,y=14
-	BonusType=BONUS_SALT
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=48,y=15
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22848,13 +22849,13 @@ BeginPlot
 	x=57,y=17
 	BonusType=BONUS_OLIVES
 	FeatureType=FEATURE_PALM_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=57,y=18
 	BonusType=BONUS_MARBLE
-	TerrainType=TERRAIN_PLAINS
+	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
@@ -24813,6 +24814,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=62
+	BonusType=BONUS_STONE
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -29328,7 +29330,6 @@ BeginPlot
 		CityPopulation=3
 		BuildingType=BUILDING_WALLS
 		BuildingType=BUILDING_GRANARY
-		BuildingType=BUILDING_LIGHTHOUSE
 		BuildingType=BUILDING_HARBOR
 		BuildingType=BUILDING_MARKET
 		BuildingType=BUILDING_COURTHOUSE
@@ -29764,6 +29765,7 @@ BeginPlot
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_LIGHTHOUSE
 		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_MARKET
 		BuildingType=BUILDING_COURTHOUSE
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		ReligionType=RELIGION_ORTHODOXY
@@ -30387,6 +30389,7 @@ BeginPlot
 	x=74,y=46
 	isNOfRiver
 	RiverWEDirection=3
+	BonusType=BONUS_DEER
 	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -30805,6 +30808,7 @@ BeginPlot
 	x=75,y=44
 	isNOfRiver
 	RiverWEDirection=1
+	BonusType=BONUS_STONE
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
@@ -31986,8 +31990,8 @@ BeginPlot
 		CityName=Smyrna
 		CityPopulation=2
 		BuildingType=BUILDING_GRANARY
-		BuildingType=BUILDING_LIGHTHOUSE
 		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_MARKET
 		ReligionType=RELIGION_ORTHODOXY
 		Player0Culture=10
 	EndCity
@@ -32930,6 +32934,7 @@ BeginPlot
 	x=80,y=25
 	BonusType=BONUS_IRON
 	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -33407,7 +33412,6 @@ BeginPlot
 		CityPopulation=5
 		BuildingType=BUILDING_PALACE
 		BuildingType=BUILDING_WALLS
-		BuildingType=BUILDING_CASTLE
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_LIGHTHOUSE
 		BuildingType=BUILDING_HARBOR
@@ -33426,20 +33430,6 @@ BeginPlot
 	x=81,y=25
 	TerrainType=TERRAIN_COAST
 	PlotType=3
-	BeginUnit
-		UnitType=UNIT_WAR_GALLEY, UnitOwner=0
-		Damage=0
-		Level=1, Experience=0
-		FacingDirection=4
-		UnitAIType=UNITAI_ATTACK_SEA
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_WAR_GALLEY, UnitOwner=0
-		Damage=0
-		Level=1, Experience=0
-		FacingDirection=4
-		UnitAIType=UNITAI_ATTACK_SEA
-	EndUnit
 	BeginUnit
 		UnitType=UNIT_GALLEY, UnitOwner=0
 		Damage=0
@@ -33670,20 +33660,20 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=81,y=61
-	FeatureType=FEATURE_MARSH, FeatureVariety=2
-	TerrainType=TERRAIN_WETLAND
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=81,y=62
-	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=1
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=81,y=63
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
-	TerrainType=TERRAIN_GRASS
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -34230,6 +34220,7 @@ BeginPlot
 		BuildingType=BUILDING_MARKET
 		BuildingType=BUILDING_COURTHOUSE
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
+		BuildingType=BUILDING_GREAT_LIGHTHOUSE
 		ReligionType=RELIGION_ORTHODOXY
 		Player0Culture=50
 	EndCity
@@ -34580,7 +34571,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=83,y=60
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	FeatureType=FEATURE_DENSE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -38747,6 +38738,7 @@ BeginPlot
 		BuildingType=BUILDING_WALLS
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_COURTHOUSE
+		BuildingType=BUILDING_MARKET
 		BuildingType=BUILDING_JEWISH_SHRINE
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
@@ -38793,8 +38785,8 @@ BeginPlot
 		CityName=Tyros
 		CityPopulation=2
 		BuildingType=BUILDING_GRANARY
-		BuildingType=BUILDING_LIGHTHOUSE
 		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_MARKET
 		BuildingType=BUILDING_COURTHOUSE
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		ReligionType=RELIGION_ORTHODOXY
@@ -39307,6 +39299,7 @@ BeginPlot
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_LIGHTHOUSE
 		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_MARKET
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		BuildingType=BUILDING_ORTHODOX_MONASTERY
 		ReligionType=RELIGION_ORTHODOXY

@@ -337,6 +337,11 @@ public:
 	void setBaseYieldRate(int /*YieldTypes*/ eIndex, int iNewValue);
 	void changeBaseYieldRate(int /*YieldTypes*/ eIndex, int iNewValue);
 
+	// Absinthe: exposed to python
+	void changeBonusYieldRateModifier(int /*YieldTypes*/ eIndex, int iNewValue);
+	void changeBonusCommerceRateModifier(int /*CommerceTypes*/ eIndex, int iNewValue);
+	void changeCommerceRateModifier(int /*CommerceTypes*/ eIndex, int iNewValue);
+
 	int getBaseYieldRateModifier(int /*YieldTypes*/ eIndex, int iExtra);
 	int getYieldRate(int /*YieldTypes*/ eIndex);
 	int getYieldRateModifier(int /*YieldTypes*/ eIndex);

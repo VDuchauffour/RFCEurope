@@ -1537,6 +1537,27 @@ void CyCity::changeBaseYieldRate(int /*YieldTypes*/ eIndex, int iNewValue)
 		m_pCity->changeBaseYieldRate((YieldTypes)eIndex, iNewValue);
 }
 
+// Absinthe: exposed to python
+void CyCity::changeBonusYieldRateModifier(int /*YieldTypes*/ eIndex, int iNewValue)
+{
+	if (m_pCity)
+		m_pCity->changeBonusYieldRateModifier((YieldTypes)eIndex, iNewValue);
+}
+
+// Absinthe: exposed to python
+void CyCity::changeBonusCommerceRateModifier(int /*CommerceTypes*/ eIndex, int iNewValue)
+{
+	if (m_pCity)
+		m_pCity->changeBonusCommerceRateModifier((CommerceTypes)eIndex, iNewValue);
+}
+
+// Absinthe: exposed to python
+void CyCity::changeCommerceRateModifier(int /*CommerceTypes*/ eIndex, int iNewValue)
+{
+	if (m_pCity)
+		m_pCity->changeCommerceRateModifier((CommerceTypes)eIndex, iNewValue);
+}
+
 int CyCity::getBaseYieldRateModifier(int /*YieldTypes*/ eIndex, int iExtra)
 {
 	return m_pCity ? m_pCity->getBaseYieldRateModifier((YieldTypes)eIndex, iExtra) : -1;

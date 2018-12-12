@@ -2657,8 +2657,9 @@ bool CvGame::isSoundtrackOverride(CvString& strSoundtrack) const
 {
 	if (GC.getDefineINT("VICTORY_SOUNDTRACK_AVAILABLE") != 0)
 	{
-		// Absinthe: victory soundtrack should not be looped in extended game state
-		if (/*getGameState() == GAMESTATE_EXTENDED ||*/ getGameState() == GAMESTATE_OVER)
+		// Absinthe: victory/defeat soundtrack should not be looped in extended game state
+		// if (getGameState() == GAMESTATE_EXTENDED || getGameState() == GAMESTATE_OVER)
+		if (getGameState() == GAMESTATE_OVER)
 		{
 			if (getWinner() == getActiveTeam())
 			{

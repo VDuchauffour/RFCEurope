@@ -35,14 +35,14 @@ teamBarbarian = gc.getTeam(pBarbarian.getTeam())
 # 500 AD
 tTangier = ( [ ((27, 16), "Tangier", 100) ], iIndependent2, 1, xml.iCordobanBerber, 2, -1, 0 )
 tBordeaux = ( [ ((37, 38), "Burdigala", 100) ], iBarbarian, 2, xml.iArcher, 0, -1, 0 )
-tAlger = ( [ ((40, 16), "Alger", 100) ], iIndependent3, 1, xml.iArcher, 1, -1, 0 )
+tAlger = ( [ ((40, 16), "Alger", 60), ((34, 13), "Tlemcen", 40) ], iIndependent3, 1, xml.iArcher, 1, xml.iCatholicism, 0 )
 tBarcelona = ( [ ((40, 28), "Barcino", 100) ], iIndependent2, 1, xml.iArcher, 1, -1, 0 )
 tToulouse = ( [ ((41, 34), "Tolosa", 30), ((40, 34), "Tolosa", 30), ((42, 32), "Narbo", 40) ], iBarbarian, 1, xml.iArcher, 0, -1, 0 )
 tMarseilles = ( [ ((46, 32), "Massilia", 50), ((46, 33), "Aquae Sextiae", 50) ], iIndependent, 1, xml.iArcher, 1, xml.iCatholicism, 0 )
 tNantes = ( [ ((36, 43), "Naoned", 50), ((35, 43), "Gwened", 30), ((37, 44), "Roazhon", 20) ], iIndependent2, 1, xml.iArcher, 1, -1, 0 )
 tCaen = ( [ ((40, 47), "Caen", 100) ], iIndependent4, 2, xml.iArcher, 1, xml.iCatholicism, 1 )
 tLyon = ( [ ((46, 37), "Lyon", 100) ], iIndependent3, 2, xml.iArcher, 2, xml.iCatholicism, 1 )
-tTunis = ( [ ((49, 17), "Tunis", 100) ], iIndependent4, 1, xml.iArcher, 1, -1, 0 )
+tTunis = ( [ ((49, 17), "Tunis", 100) ], iIndependent4, 2, xml.iArcher, 1, -1, 0 )
 tYork = ( [ ((39, 59), "Eboracum", 100) ], iIndependent4, 1, xml.iArcher, 2, -1, 1 )
 tLondon = ( [ ((41, 52), "Londinium", 100) ], iIndependent, 2, xml.iArcher, 2, xml.iCatholicism, 0 )
 tMilan = ( [ ((52, 37), "Mediolanum", 100) ], iIndependent, 2, xml.iArcher, 2, xml.iCatholicism, 0 )
@@ -52,13 +52,15 @@ tAugsburg = ( [ ((55, 41), "Augsburg", 100) ], iIndependent3, 1, xml.iArcher, 2,
 tNapoli = ( [ ((59, 24), "Neapolis", 40), ((60, 25), "Beneventum", 40), ((62, 24), "Tarentum", 20) ], iIndependent, 2, xml.iArcher, 1, -1, 0 )
 tRagusa = ( [ ((64, 28), "Ragusa", 100) ], iIndependent2, 1, xml.iArcher, 2, xml.iCatholicism, 0 )
 tSeville = ( [ ((27, 21), "Hispalis", 100) ], iIndependent4, 1, xml.iArcher, 2, -1, 0 )
-tPalermo = ( [ ((55, 19), "Palermo", 60), ((58, 17), "Syracuse", 40) ], iIndependent3, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
+tPalermo = ( [ ((55, 19), "Palermo", 60), ((58, 17), "Syracuse", 40) ], iIndependent3, 2, xml.iArcher, 1, xml.iCatholicism, 1 )
 # 552 AD
 tInverness = ( [ ((37, 67), "Inbhir Nis", 50), ((37, 65), "Scaig", 50) ], iBarbarian, 1, xml.iArcher, 1, -1, 0) #reduced to town on spawn of Scotland
 # 600 AD
 tRhodes = ( [ ((80, 13), "Rhodes", 100) ], iIndependent2, 1, xml.iArcher, 1, xml.iOrthodoxy, 0 )
 # 640 AD
 tNorwich = ( [ ((43, 55), "Norwich", 100) ], iIndependent3, 1, xml.iArcher, 1, -1, 1 ) #reduced to town on spawn of England
+# 670 AD
+tKairouan = ( [ ((48, 14), "Kairouan", 100) ], iIndependent2, 1, xml.iArcher, 1, xml.iIslam, 0 )
 # 680 AD
 tToledo = ( [ ((30, 27), "Toledo", 100) ], iBarbarian, 1, xml.iArcher, 1, xml.iCatholicism, 1 )
 tLeicester = ( [ ((39, 56), "Ligeraceaster", 100) ], iIndependent, 1, xml.iArcher, 1, -1, 0 ) #reduced to town on spawn of England
@@ -77,7 +79,7 @@ tRaska = ( [ ((68, 28), "Ras", 100) ], iIndependent2, 1, xml.iArcher, 2, -1, 1)
 tFez = ( [ ((29, 12), "Fes", 100) ], iIndependent4, 1, xml.iCrossbowman, 2, -1, 1)
 # 800 AD
 tMilanR = ( [ ((52, 37), "Milano", 100) ], iIndependent, 4, xml.iArcher, 2, xml.iCatholicism, 0) #respawn, in case it was razed
-#tFlorenceR = ( [ ((54, 32), "Firenze", 100) ], iIndependent2, 4, xml.iArcher, 2, xml.iCatholicism, 0 ) #respawn
+#tFlorenceR = ( [ ((54, 32), "Firenze", 100) ], iIndependent2, 4, xml.iArcher, 2, xml.iCatholicism, 0 ) #respawn, doesn't work with the multiple options in 500AD
 tPrague = ( [ ((60, 44), "Praha", 100) ], iIndependent, 1, xml.iCrossbowman, 2, xml.iCatholicism, 1)
 tKursk = ( [ ((90, 48), "Kursk", 100) ], iIndependent4, 1, xml.iArcher, 2, -1, 0)
 tCalais = ( [ ((44, 50), "Calais", 50), ((45, 50), "Dunkerque", 50)  ], iIndependent3, 1, xml.iCrossbowman, 2, -1, 0)
@@ -85,6 +87,8 @@ tNidaros = ( [ ((57, 71), "Nidaros", 100) ], iIndependent3, 1, xml.iArcher, 1, -
 tUppsala = ( [ ((65, 66), "Uppsala", 100) ], iIndependent4, 1, xml.iArcher, 2, -1, 1) #reduced to town on spawn of Sweden
 tBeloozero = ( [ ((87, 65), "Beloozero", 100) ], iIndependent4, 1, xml.iCrossbowman, 1, -1, 1)
 tZagreb = ( [ ((62, 34), "Sisak", 100) ], iIndependent, 2, xml.iArcher, 2, -1, 0) #many Slavic princes reigned from Sisak in the 9th century, great for gameplay (buffer zone between Venice and Hungary)
+# 850 AD
+tBrennabor = ( [ ((59, 50), "Brennabor", 50), ((60, 50), "Brennabor", 50) ], iBarbarian, 1, xml.iArcher, 2, -1, 0) #Brandenburg or Berlin
 # 860 AD
 #tEdinburgh = ( [ ((37, 63), "Eidyn Dun", 100) ], iBarbarian, 1, xml.iArcher, 1, -1, 0)
 # 880 AD
@@ -94,6 +98,7 @@ tTvanksta = ( [ ((69, 53), "Tvanksta", 100) ], iIndependent4, 1, xml.iCrossbowma
 tKrakow = ( [ ((68, 44), "Krakow", 100) ], iIndependent3, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0)
 tRiga = ( [ ((74, 58), "Riga", 100) ], iIndependent, 2, xml.iCrossbowman, 2, -1, 1) #maybe call it Duna in the early pediod (Duna is the name of a sheltered natural harbor near Riga)
 tWales = ( [ ((36, 54), "Caerdydd", 50), ((35, 57), "Aberffraw", 50) ], iBarbarian, 1, xml.iArcher, 1, -1, 1 ) #Cardiff and Caernarfon
+tVisby = ( [ ((67, 60), "Visby", 100) ], iIndependent2, 1, xml.iCrossbowman, 1, -1, 0) #used to spawn in 1393 in the old system
 # 911 AD
 tCaenR = ( [ ((40, 47), "Caen", 100) ], iIndependent2, 1,  xml.iCrossbowman, 2, xml.iCatholicism, 0) #respawn, on the establishment of the Duchy of Normandy
 # 960 AD
@@ -107,14 +112,14 @@ tYaroslavl = ( [ ((92, 61), "Yaroslavl", 100) ], iIndependent3, 1, xml.iCrossbow
 tGroningen = ( [ ((52, 54), "Groningen", 100) ], iIndependent2, 1, xml.iCrossbowman, 2, xml.iCatholicism, 0)
 tKalmar = ( [ ((64, 60), "Kalmar", 100) ], iIndependent2, 2, xml.iCrossbowman, 1, xml.iCatholicism, 1)
 # 1060 AD
-tMus = ( [ ((99, 21), "Mus", 100) ], iBarbarian, 1, xml.iSeljukCrossbow, 2, -1, 0)
+#tMus = ( [ ((99, 21), "Mus", 100) ], iBarbarian, 1, xml.iSeljukCrossbow, 2, -1, 0) #out of the map, not that important to represent the Seljuk/Timurid invasions this way
 # 1110 AD
 tGraz = ( [ ((61, 37), "Graz", 100) ], iIndependent3, 2, xml.iCrossbowman, 2, xml.iCatholicism, 0)
 # 1124 AD
 tHalych = ( [ ((77, 41), "Halych", 100) ], iIndependent2, 2, xml.iCrossbowman, 2, xml.iOrthodoxy, 0)
 # 1200 AD
 tRigaR = ( [ ((74, 58), "Riga", 100) ], iIndependent, 3, xml.iCrossbowman, 2, -1, 1) #respawn
-tSaraiBatu = ( [ ((99, 40), "Sarai Batu", 100) ], iBarbarian, 1, xml.iMongolKeshik, 2, -1, 0)
+#tSaraiBatu = ( [ ((99, 40), "Sarai Batu", 100) ], iBarbarian, 1, xml.iMongolKeshik, 2, -1, 0) #out of the map, not that important to represent the Mongol invasions this way
 # 1227 AD
 tTripoliR = ( [ ((54, 8), "Tarabulus", 100) ], iBarbarian, 3, xml.iArbalest, 2, xml.iIslam, 1) #respawn
 # 1250 AD
@@ -125,7 +130,7 @@ tNizhnyNovgorod = ( [ ((97, 58), "Nizhny Novgorod", 100) ], iIndependent, 1, xml
 # 1392 AD
 tTanais = ( [ ((96, 38), "Tana", 100) ], iBarbarian, 1, xml.iLongbowman, 2, xml.iIslam, 0)
 # 1410 AD
-tReykjavik = ( [ ((2, 70), "Reykjavik", 100) ], iIndependent, 1, xml.iVikingBeserker, 2, -1, 0)
+tReykjavik = ( [ ((2, 70), "Reykjavik", 100) ], iIndependent, 1, xml.iVikingBerserker, 2, -1, 0)
 # 1530 AD
 tValletta = ( [ ((57, 14), "Valletta", 100) ], iIndependent4, 1, xml.iKnightofStJohns, 3, xml.iCatholicism, 0)
 
@@ -136,7 +141,6 @@ tValletta = ( [ ((57, 14), "Valletta", 100) ], iIndependent4, 1, xml.iKnightofSt
 #lCatania = [58,18,0,0] #500 AD
 #lBeograd = [68,30,0,0] #500 AD
 #lRavenna = [55,33,0,0] #500 AD
-#lKairouan = [49,14,0,0] #500 AD
 #lZaragoza = [36,29,45,0] #680 AD
 #lBulgar = [97,60,45,0] #680 AD
 #lLeon = [27,32,50,0] # 700 AD
@@ -152,13 +156,12 @@ tValletta = ( [ ((57, 14), "Valletta", 100) ], iIndependent4, 1, xml.iKnightofSt
 #lMunster = [52,50,150,0] #1050 AD
 #lMarrakesh = [24,7,157,0] #1071 AD
 #lLjubljana = [60,36,173,1] #1120 AD
-#lKolyvan = [74,63,200,0] #1200 AD
+#lKolyvan = [74,63,200,0] #1200 AD, Tallin/Reval
 #lPinsk = [77,48,210,0] #1230 AD
 #lSamara = [97,54,240,0] #1320 AD
 #lMemel = [70,55,240,0] #1320 AD, Klaipeda
 #lVologda = [91,64,240,0] #1320 AD
 #lTver = [88,60,240,0] #1320 AD
-#lVisby = [67,60,264,0] #1393 AD
 #lStaraSich = [88,40,300,0] #1500 AD
 
 dIndependentCities = {
@@ -166,23 +169,24 @@ xml.i500AD : [ tTangier, tBordeaux, tAlger, tBarcelona, tToulouse, tMarseilles, 
 xml.i552AD : [ tInverness ],
 xml.i600AD : [ tRhodes ],
 xml.i640AD : [ tNorwich ],
+xml.i670AD : [ tKairouan ],
 xml.i680AD : [ tToledo, tLeicester ],
 xml.i700AD : [ tValencia, tPamplona, tLubeck, tPorto, tDublin, tDownpatrick ],
 xml.i760AD : [ tTonsberg ],
 xml.i768AD : [ tRaska ],
 xml.i780AD : [ tFez ],
 xml.i800AD : [ tMilanR, tPrague, tKursk, tCalais, tNidaros, tUppsala, tBeloozero, tZagreb ],
+xml.i850AD : [ tBrennabor ],
 xml.i880AD : [ tApulum ],
-xml.i900AD : [ tTvanksta, tKrakow, tRiga, tWales ],
+xml.i900AD : [ tTvanksta, tKrakow, tRiga, tWales, tVisby ],
 xml.i911AD : [ tCaenR ],
 xml.i960AD : [ tMinsk, tSmolensk ],
 xml.i988AD : [ tDublinR ],
 xml.i1010AD : [ tYaroslavl ],
 xml.i1050AD : [ tGroningen, tKalmar ],
-xml.i1060AD : [ tMus ],
 xml.i1110AD : [ tGraz ],
-xml.i1124AD : [ tHalych],
-xml.i1200AD : [ tRigaR, tSaraiBatu ],
+xml.i1124AD : [ tHalych ],
+xml.i1200AD : [ tRigaR ],
 xml.i1227AD : [ tTripoliR ],
 xml.i1250AD : [ tAbo, tPerekop ],
 xml.i1320AD : [ tNizhnyNovgorod ],
@@ -390,13 +394,13 @@ class Barbs:
 			pass
 		elif xml.i780AD <= iGameTurn < xml.i1000AD:
 			if con.iFrankia == iHuman:
-				self.spawnVikings(iBarbarian, (37, 48), (50, 54), xml.iVikingBeserker, 2, iGameTurn, 8 ,0, utils.outerSeaSpawn, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_VIKINGS", ()))
+				self.spawnVikings(iBarbarian, (37, 48), (50, 54), xml.iVikingBerserker, 2, iGameTurn, 8 ,0, utils.outerSeaSpawn, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_VIKINGS", ()))
 			else:
-				self.spawnVikings(iBarbarian, (37, 48), (50, 54), xml.iVikingBeserker, 1, iGameTurn, 8, 0, utils.outerSeaSpawn, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_VIKINGS", ()))
+				self.spawnVikings(iBarbarian, (37, 48), (50, 54), xml.iVikingBerserker, 1, iGameTurn, 8, 0, utils.outerSeaSpawn, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_VIKINGS", ()))
 
 		#Swedish Crusades
 		elif xml.i1150AD <= iGameTurn < xml.i1210AD:
-			self.spawnVikings(iBarbarian, (71, 62), (76, 65), xml.iVikingBeserker, 2, iGameTurn, 6, 1, utils.outerSeaSpawn, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_SWEDES", ()))
+			self.spawnVikings(iBarbarian, (71, 62), (76, 65), xml.iVikingBerserker, 2, iGameTurn, 6, 1, utils.outerSeaSpawn, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_SWEDES", ()))
 
 		#Chudes in Finland and Estonia
 		if xml.i864AD <= iGameTurn < xml.i1150AD:
@@ -597,14 +601,15 @@ class Barbs:
 			self.spawnUnits(iBarbarian, (85, 47), (99, 57), xml.iMongolKeshik, 2, iGameTurn, 7, 0, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_TIMURIDS", ()))
 			#Anatolia
 			if con.iTurkey == iHuman:
-				self.spawnUnits(iBarbarian, (87, 17), (96, 24), xml.iMongolKeshik, 3 + iHandicap, iGameTurn, 4, 0, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_TIMURIDS", ()))
-				self.spawnUnits(iBarbarian, (94, 18), (99, 26), xml.iMongolKeshik, 4 + iHandicap, iGameTurn, 5, 1, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_TIMURIDS", ()))
+				self.spawnUnits(iBarbarian, (87, 17), (96, 24), xml.iMongolKeshik, 4 + iHandicap, iGameTurn, 4, 0, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_TIMURIDS", ()))
+				self.spawnUnits(iBarbarian, (94, 18), (99, 26), xml.iMongolKeshik, 6 + iHandicap, iGameTurn, 5, 1, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_TIMURIDS", ()))
+				self.spawnUnits(iBarbarian, (89, 17), (97, 22), xml.iMongolKeshik, 3 + iHandicap, iGameTurn, 4, 2, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_TIMURIDS", ()))
 			else:
 				self.spawnUnits(iBarbarian, (87, 17), (96, 24), xml.iMongolKeshik, 2, iGameTurn, 4, 0, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_TIMURIDS", ()))
 				self.spawnUnits(iBarbarian, (94, 18), (99, 26), xml.iMongolKeshik, 3, iGameTurn, 5, 1, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_TIMURIDS", ()))
 			#Arabia
 			if con.iArabia == iHuman:
-				self.spawnUnits(iBarbarian, (96, 9), (99, 15), xml.iMongolKeshik, 3 + iHandicap, iGameTurn, 4, 1, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_TIMURIDS", ()))
+				self.spawnUnits(iBarbarian, (96, 9), (99, 15), xml.iMongolKeshik, 5 + iHandicap, iGameTurn, 4, 1, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_TIMURIDS", ()))
 			else:
 				self.spawnUnits(iBarbarian, (96, 9), (99, 15), xml.iMongolKeshik, 2, iGameTurn, 4, 1, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_TIMURIDS", ()))
 

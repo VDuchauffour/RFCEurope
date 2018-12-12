@@ -7,22 +7,31 @@
 <Civ4GameText xmlns="http://www.firaxis.com">
 		<!-- Unique Buildings -->
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_VENICE_ARSENAL</Tag>
-		<English>Arsenal</English>
-		<French>Arsenale</French>
-		<German>Arsenal</German>
-		<Italian>Arsenale</Italian>
-		<Spanish>Arsenal</Spanish>
-		<Portuguese>Arsenal</Portuguese>
+		<Tag>TXT_KEY_BUILDING_VENICE_NAVAL_BASE</Tag>
+		<English>Naval Base</English>
+		<French>Naval Base</French>
+		<German>Naval Base</German>
+		<Italian>Naval Base</Italian>
+		<Spanish>Naval Base</Spanish>
+		<Portuguese>Naval Base</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_VENICE_ARSENAL_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_VENICE_NAVAL_BASE_PEDIA</Tag>
 		<English>[TAB]The Venetian Arsenal is a shipyard and naval depot that played a leading role in Venetian empire-building. It was one of the most important areas of Venice, lying in the Castello sestiere.[PARAGRAPH:2]The Byzantine-style establishment may have existed as early as the 8th century, though the present structure is usually said to have been begun in 1104, although there is no evidence for such a precise date. It definitely existed by the early thirteenth century and is mentioned in Dante's Inferno. The name probably comes from Arabic Dar al Sina'a ("Dockyard") and the concept was clearly Islamic as much as Byzantine.[PARAGRAPH:2]Initially the state dockyard worked merely to maintain naval ships built privately, but in 1320 the Arsenal Nuovo was built, much larger than the original. It enabled all the state's navy and the larger merchant ships to be both constructed and maintained in one place. The Arsenal incidentally became an important centre for rope manufacture, while housing for the arsenal workers grew up outside its walls.[PARAGRAPH:2]Venice developed methods of mass-producing warships in the Arsenal, including the frame-first system to replace the Roman hull-first practice. The new system was much faster and required less wood. At the peak of its efficiency in the early 16th century, the Arsenal employed some 16,000 people who apparently were able to produce nearly one ship each day, and could fit out, arm, and provision a newly-built galley with standardized parts on a production-line basis not seen again until the Industrial Revolution.</English>
 		<French>.</French>
 		<German>[TAB]Arsenal ist der Name der Schiffswerft, des Zeughauses und der Flottenbasis der ehemaligen Republik Venedig.[PARAGRAPH:2]Der Bau des Arsenals wurde unter dem Dogen Ordelaf Falier ab 1104 begonnen. Das Grundstück bestand aus zwei sumpfigen Inseln im Stadtteil Castello. Diese Werft, die als größter Produktionsbetrieb Europas vor dem Zeitalter der Industrialisierung betrachtet werden kann, wurde zum Vorbild für andere Marinearsenale in Europa. Das Gebiet umfasst heute 32 Hektar, ein Zehntel des historischen Zentrums von Venedig.Im Zuge des Aufstiegs Venedigs zur europäischen Seemacht wurde das Arsenal mehrmals erweitert: im Jahre 1325 durch das Arsenale nuovo, 1475 durch das Arsenale nuovissimo. 1539 wurde das Becken für die Galeassen fertiggestellt, die bis zu 1.000 Bruttoregistertonnen und eine Besatzung von 400 Mann hatten.[PARAGRAPH:2]Das Arsenal enthielt neben den Schiffsbecken, den Schreinereien, den Kalfateranlagen und einer langen Seilhalle, in der die Schiffstaue gedreht wurden, auch Erz- und Gießhütten sowie Pulverlager und das Waffendepot, was eine strenge Überwachung der Belegschaft durch die venezianische Sicherheitspolizei nötig machte. Das Arsenal arbeitete außerordentlich effizient. Bereits Im 14. Jahrhundert erfolgte die Produktion der Galeeren in streng rationalisierten Arbeitsabläufen. Jedes Handelsschiff war so konstruiert, dass es in kürzester Zeit zu einem Kriegsschiff umgebaut werden konnte.[PARAGRAPH:2]Die Bestandteile für die Galeeren waren genormt, wurden vorgefertigt und im Depot gelagert, so dass in kürzester Zeit 25 Schiffe einsatzfertig gemacht werden konnten. Im Krieg gegen die Türken wurden im Arsenal im Jahre 1570 innerhalb von zwei Wochen 100 Galeeren gebaut. Im Arsenal konnten bis zu 30.000 Leute arbeiten.[PARAGRAPH:2]Diese Effizienz war nur durch eine straffe Organisation möglich. Leiter des Arsenals (capo supremo) war ein Angehöriger des Adelsstandes. Die Aufsicht ausübenden Abteilungsleiter, oder auch patroni dell´ Arsenale genannt, wohnten in drei palazetti, die Paradiso, Purgatorio (Fegefeuer) und Inferno (Hölle) hießen. Jede Abteilung hatte eine Vielzahl von Handwerkern wie Schiffszimmerleute, Pecher (Kalfaterer), Mastenkonstrukteure, Segelmacher, Schmiede, Gießereiarbeiter sowie Verantwortliche für das Schießpulver und die Bewaffnung zur Verfügung. Abteilungsleiter und Angehörige von Spezialberufen wurden fürstlich entlohnt, um ein eventuelles Abwandern zur feindlichen Konkurrenz zu verhindern. Auch wurde den Arbeitern Wohnraum zur Verfügung gestellt und zwar in der sogenannten Marinaressa, einem Gebäudekomplex der zwischen der Via Garibaldi und der Riva dei Sette Martiri liegt.[PARAGRAPH:2]Das Holz zum Bau der Schiffe kam entweder aus Istrien oder dem Cadore.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_VENICE_NAVAL_BASE_HELP</Tag>
+		<English>[ICON_BULLET]+2 Stability</English>
+		<French>[ICON_BULLET]+2 Stabilit&#233;</French>
+		<German>[ICON_BULLET]+2 Stabilität</German>
+		<Italian>[ICON_BULLET]+2 Stabilità</Italian>
+		<Spanish>[ICON_BULLET]+2 Stability</Spanish>
+		<Portuguese>[ICON_BULLET]+2 Estabilidade;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BULGARIAN_STAN</Tag>
@@ -1255,7 +1264,34 @@
 		<Portuguese>[ICON_BULLET]Danifica unidades inimigas na área</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BOMBARD_IMMUNE_DEFENSE</Tag>
+		<Tag>TXT_KEY_BUILDING_DEFENSE_MOD</Tag>
+		<English>[ICON_BULLET]+%d1_Mod%% Defense (Except vs. Gunpowder-based Units)</English>
+		<French>[ICON_BULLET]%d1_Mod%% en d&#233;fense (sauf contre les unit&#233;s avec armes &#224; feu)</French>
+		<German>[ICON_BULLET]%d1_Mod%% Verteidigung (au&#223;er gegen Schie&#223;pulver-Einheiten)</German>
+		<Italian>[ICON_BULLET]%d1_Mod%% alla difesa (tranne contro le armi da fuoco)</Italian>
+		<Spanish>[ICON_BULLET]%d1_Mod%% a la defensa (excepto contra unidades con armas de p&#243;lvora)</Spanish>
+		<Portuguese>[ICON_BULLET]%d1_Mod%% a la defensa (excepto contra unidades con armas de p&#243;lvora)</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DEFENSE_MOD_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]+%d1_Mod%% Defense in All Cities</English>
+		<French>[ICON_BULLET]%d1_Mod%% en d&#233;fense dans toutes les villes</French>
+		<German>[ICON_BULLET]%d1_Mod%% Verteidigung in allen St&#228;dten</German>
+		<Italian>[ICON_BULLET]%d1_Mod%% alla difesa in tutte le citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]%d1_Mod%% a la defensa en todas las ciudades</Spanish>
+		<Portuguese>[ICON_BULLET]%d1_Mod%% a la defensa en todas las ciudades</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BOMBARD_DEFENSE_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Damage to Defenses from Bombardment (Except vs. Gunpowder-based Units)</English>
+		<French>[ICON_BULLET]%D1_Mod%% D&#233;g&#226;ts inflig&#233;s aux d&#233;fenses apr&#232;s un bombardement (sauf contre les unit&#233;s &#224; poudre)</French>
+		<German>[ICON_BULLET]%D1_Mod%% Bombardierungsschaden gegen Defensivanlagen (außer gegen Schießpulver-Einheiten)</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% di danni alle difese a causa del bombardamento (tranne contro unit&#224; che utilizzano la povere da sparo)</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% de daño a las defensas por cañoneo (excepto contra unidades con armas de pólvora)</Spanish>
+		<Portuguese>[ICON_BULLET]%D1_Mod%% de daño a las defensas por cañoneo (excepto contra unidades con armas de pólvora)</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BOMBARD_IMMUNE_DEFENSE</Tag>
 		<English>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</English>
 		<French>[ICON_BULLET]%D1_Mod% Defense (Cannot be Broken by Bombardment)</French>
 		<German>[ICON_BULLET]%D1_Mod% Verteidigung (kann durch Bombardierung nicht durchbrochen werden)</German>
@@ -1325,6 +1361,42 @@
 		<Italian>[COLOR_WARNING_TEXT]Requires [LINK=literal]%s1[\LINK][COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requires [LINK=literal]%s1[\LINK][COLOR_REVERT]</Spanish>
 		<Portuguese>[COLOR_WARNING_TEXT]Requires [LINK=literal]%s1[\LINK][COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_REQUIRES_STATE_RELIGION</Tag>
+		<English>[COLOR_WARNING_TEXT]Requires %F1_RelIcon as State Religion[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]La religion d'Etat doit &#234;tre pr&#233;sente dans cette ville[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Staatsreligion muss in der Stadt vorhanden sein[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]deve essere presente la religione di stato in citt&#224;[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]La religi&#243;n oficial ha de estar presente en la ciudad[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WARNING_TEXT]La religi&#243;n oficial ha de estar presente en la ciudad[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_REQUIRES_RELIGION_IN_CITY</Tag>
+		<English>[COLOR_WARNING_TEXT]Requires %F1_RelIcon in the city[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]La religion d'Etat doit &#234;tre pr&#233;sente dans cette ville[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Staatsreligion muss in der Stadt vorhanden sein[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]deve essere presente la religione di stato in citt&#224;[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]La religi&#243;n oficial ha de estar presente en la ciudad[COLOR_REVERT]</Spanish>
+		<Portuguese>[COLOR_WARNING_TEXT]La religi&#243;n oficial ha de estar presente en la ciudad[COLOR_REVERT]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ALL_CITIES</Tag>
+		<English>[SPACE]in All Cities</English>
+		<French>[SPACE]Toutes les villes</French>
+		<German>[SPACE]Alle St&#228;dte</German>
+		<Italian>[SPACE]Tutte le citt&#224;</Italian>
+		<Spanish>[SPACE]Todas las ciudades</Spanish>
+		<Portuguese>[SPACE]Todas las ciudades</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ALL_CITIES_THIS_CONTINENT</Tag>
+		<English>[SPACE]in All Cities This Continent</English>
+		<French>[SPACE]Toutes les villes sur ce continent</French>
+		<German>[SPACE]Alle St&#228;dte auf diesem Kontinent</German>
+		<Italian>[SPACE]Tutte le citt&#224; in questo continente</Italian>
+		<Spanish>[SPACE]Todas las ciudades de este continente</Spanish>
+		<Portuguese>[SPACE]Todas las ciudades de este continente</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTEREST_RATE</Tag>

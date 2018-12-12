@@ -171,6 +171,7 @@ void CyInfoPythonInterface3()
 	// CvProcessInfos
 	python::class_<CvProcessInfo, python::bases<CvInfoBase> >("CvProcessInfo")
 		.def("getTechPrereq", &CvProcessInfo::getTechPrereq, "int ()")
+		.def("getObsoleteTech", &CvProcessInfo::getObsoleteTech, "int ()") // Absinthe: obsolete tech for processes
 
 		// Arrays
 

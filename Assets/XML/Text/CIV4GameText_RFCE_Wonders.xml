@@ -145,7 +145,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STEPHANSDOM_HELP</Tag>
-		<English>[ICON_BULLET]+2 stability points for running a Monarchy</English>
+		<English>[ICON_BULLET]+2 stability points for running a Monarchy[NEWLINE][ICON_BULLET]Can build Hamlets instead of Cottages</English>
 		<French>[ICON_BULLET]+2 points de stabilit&#233; pour l'utilisation de la Monarchie</French>
 		<German>[ICON_BULLET]+2 Stabilit&#228;t mit einer monarchischen Staatsform</German>
 		<Italian>[ICON_BULLET]+2 Punti Stabilità per l'utilizzo di una Monarchia</Italian>
@@ -178,6 +178,42 @@
 		<Italian>[ICON_BULLET]Nessuna penalità in punti stabilità per scarsa economia</Italian>
 		<Spanish>[ICON_BULLET]No stability penalty for bad economy</Spanish>
 		<Portuguese>[ICON_BULLET]Sem penalidade na estabilidade por uma economia deficitária</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SISTINE_CHAPEL</Tag>
+		<English>The Sistine Chapel</English>
+		<French>Chapelle Sixtine</French>
+		<German>Sixtinische Kapelle</German>
+		<Italian>La Cappella Sistina</Italian>
+		<Spanish>la Capilla Sixtina</Spanish>
+		<Portuguese>la Capilla Sixtina</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SISTINE_CHAPEL_PEDIA</Tag>
+		<English>[TAB]The beauty of Rome's Sistine Chapel has long served as a testament to the mixture of strong religious beliefs and the love of art shared by the people of Renaissance Europe. Michelangelo devoted four years to painting the mural that adorns the ceiling, a work depicting events in the book of Genesis and other Biblical stories. Few visitors to the Sistine Chapel have failed to be moved by the artist's dedication to his subject, or his feeling for the nature of human struggle, suffering, and spiritual triumph.</English>
+		<French>[TAB]La beaut&#233; de la chapelle Sixtine &#224; Rome a longtemps servi &#224; prouver qu'&#224; la Renaissance, les populations d'Europe &#233;taient anim&#233;es de fortes convictions religieuses tout en &#233;prouvant un grand amour de l'art. Michel-Ange a pass&#233; quatre ann&#233;es &#224; r&#233;aliser les peintures murales qui couvrent le plafond, l'une repr&#233;sentant le livre de la Gen&#232;se et l'autre des sc&#232;nes bibliques. Rares sont les visiteurs de la chapelle Sixtine qui n'ont pas &#233;t&#233; touch&#233;s par le d&#233;vouement de l'artiste pour son sujet ou par sa sensibilit&#233; &#224; la nature de la lutte, de la souffrance et du triomphe spirituel de l'homme.</French>
+		<German>[TAB]Die Sch&#246;nheit der Sixtinischen Kapelle in Rom diente lange Zeit als Beispiel f&#252;r die Verflechtung starken religi&#246;sen Glaubens mit der Liebe zur Kunst, die von den europ&#228;ischen V&#246;lkern w&#228;hrend der Renaissance empfunden wurde. Michelangelo widmete sich vier Jahre lang dem Malen eines Deckengem&#228;ldes, einer Arbeit, die Szenen aus dem Buch Genesis und anderen biblischen Geschichten zeigt. Nur wenige Besucher der Sixtinischen Kapelle sind nicht von der Hingabe des K&#252;nstlers zu seinem Thema oder seinem Empfinden im Hinblick auf die Natur des menschlichen Kampfes, Leidens und spirituellen Triumphs ber&#252;hrt.</German>
+		<Italian>[TAB]La straordinaria bellezza della cappella Sistina a Roma rappresenta per molti il compendio della forte commistione di sentimento religioso e amore per l'arte che caratterizz&#242; il Rinascimento europeo. Michelangelo dedic&#242; quattro anni agli affreschi che ne adornano la volta, rappresentandovi scene tratte dal libro della Genesi e altri episodi biblici. Sono ben pochi coloro che, visitando la cappella Sistina, rimangono insensibili alla dedizione dell'artista alla sua opera, che esprime tutta la tribolazione, la sofferenza e il trionfo spirituale dell'uomo.</Italian>
+		<Spanish>[TAB]La belleza de la Capilla Sixtina lleva mucho tiempo sirviendo de testimonio de la mezcla de firmes creencias religiosas y amor al arte compartida por la gente de la Europa renacentista. Miguel &#193;ngel dedic&#243; cuatro a&#241;os a pintar el mural que adorna el techo, una obra que representa acontecimientos del libro del G&#233;nesis y otros relatos b&#237;blicos. Pocos visitantes de la Capilla Sixtina se han quedado impasibles ante la dedicaci&#243;n del artista hacia su tema, o ante su sensibilidad hacia la naturaleza de la lucha, el sufrimiento y el triunfo espiritual humano.</Spanish>
+		<Portuguese>[TAB]La belleza de la Capilla Sixtina lleva mucho tiempo sirviendo de testimonio de la mezcla de firmes creencias religiosas y amor al arte compartida por la gente de la Europa renacentista. Miguel &#193;ngel dedic&#243; cuatro a&#241;os a pintar el mural que adorna el techo, una obra que representa acontecimientos del libro del G&#233;nesis y otros relatos b&#237;blicos. Pocos visitantes de la Capilla Sixtina se han quedado impasibles ante la dedicaci&#243;n del artista hacia su tema, o ante su sensibilidad hacia la naturaleza de la lucha, el sufrimiento y el triunfo espiritual humano.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SISTINE_CHAPEL_STRATEGY</Tag>
+		<English>The [COLOR_BUILDING_TEXT]Sistine Chapel[COLOR_REVERT] increases the culture bonus provided by religious buildings. The [COLOR_BUILDING_TEXT]Sistine Chapel[COLOR_REVERT] has a very high cultural value, and it increases its city's odds of generating a [COLOR_UNIT_TEXT]Great Artist[COLOR_REVERT].</English>
+		<French>Avec la [COLOR_BUILDING_TEXT]Chapelle Sixtine[COLOR_REVERT], tous les sp&#233;cialistes de chaque ville g&#233;n&#232;rent de la culture. La [COLOR_BUILDING_TEXT]Chapelle Sixtine[COLOR_REVERT] a un tr&#232;s fort potentiel culturel et augmente les chances d'apparition d'un [COLOR_UNIT_TEXT]artiste illustre[COLOR_REVERT].</French>
+		<German>Haben Sie die [COLOR_BUILDING_TEXT]Sixtinische Kapelle[COLOR_REVERT], erzeugen alle Spezialisten in Ihren St&#228;dten Kultur. Aufgrund des hohen kulturellen Werts der [COLOR_BUILDING_TEXT]Sixtinischen Kapelle[COLOR_REVERT] erh&#246;ht diese die Chancen einer Stadt, einen [COLOR_UNIT_TEXT]Gro&#223;en K&#252;nstler[COLOR_REVERT] hervorzubringen.</German>
+		<Italian>La [COLOR_BUILDING_TEXT]Cappella Sistina[COLOR_REVERT] concede a ogni specialista una produzione di cultura. La [COLOR_BUILDING_TEXT]Cappella Sistina[COLOR_REVERT] ha un alto valore culturale e aumenta la probabilit&#224; di generare un [COLOR_UNIT_TEXT]Grande Artista[COLOR_REVERT].</Italian>
+		<Spanish>La [COLOR_BUILDING_TEXT]Capilla Sixtina[COLOR_REVERT] hace que todos los especialistas de todas las ciudades generen cultura. Tambi&#233;n tiene un valor cultural y aumenta las probabilidades de que en su ciudad se genere un [COLOR_UNIT_TEXT]Gran artista[COLOR_REVERT].</Spanish>
+		<Portuguese>La [COLOR_BUILDING_TEXT]Capilla Sixtina[COLOR_REVERT] hace que todos los especialistas de todas las ciudades generen cultura. Tambi&#233;n tiene un valor cultural y aumenta las probabilidades de que en su ciudad se genere un [COLOR_UNIT_TEXT]Gran artista[COLOR_REVERT].</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SISTINE_CHAPEL_HELP</Tag>
+		<English>[ICON_BULLET]+1 Free Artist in cities with World Wonders</English>
+		<French>[ICON_BULLET]+1 Free Artist in cities with World Wonders</French>
+		<German>[ICON_BULLET]+1 Free Artist in cities with World Wonders</German>
+		<Italian>[ICON_BULLET]+1 Free Artist in cities with World Wonders</Italian>
+		<Spanish>[ICON_BULLET]+1 Free Artist in cities with World Wonders</Spanish>
+		<Portuguese>[ICON_BULLET]+1 Free Artist in cities with World Wonders</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS</Tag>
@@ -253,12 +289,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHRINE_OF_UPPSALA_HELP</Tag>
-		<English>[ICON_BULLET]Requires [LINK=literal]Paganism[\LINK]</English>
-		<French>[ICON_BULLET]Requires [LINK=literal]Paganism[\LINK]</French>
-		<German>[ICON_BULLET]Requires [LINK=literal]Paganism[\LINK]</German>
-		<Italian>[ICON_BULLET]Requires [LINK=literal]Paganism[\LINK]</Italian>
-		<Spanish>[ICON_BULLET]Requires [LINK=literal]Paganism[\LINK]</Spanish>
-		<Portuguese>[ICON_BULLET]Requires [LINK=literal]Paganism[\LINK]</Portuguese>
+		<English>[ICON_BULLET]+3 stability points with [LINK=literal]Paganism[\LINK]</English>
+		<French>[ICON_BULLET]+3 stability points with [LINK=literal]Paganism[\LINK]</French>
+		<German>[ICON_BULLET]+3 stability points with [LINK=literal]Paganism[\LINK]</German>
+		<Italian>[ICON_BULLET]+3 stability points with [LINK=literal]Paganism[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]+3 stability points with [LINK=literal]Paganism[\LINK]</Spanish>
+		<Portuguese>[ICON_BULLET]+3 stability points with [LINK=literal]Paganism[\LINK]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROUND_CHURCH</Tag>
@@ -324,6 +360,15 @@
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MAGNA_CARTA_HELP</Tag>
+		<English>[ICON_BULLET]No stability penalty for otherwise unstable civic combinations[NEWLINE][ICON_BULLET]+2[ICON_CULTURE] from Courthouse in all cities</English>
+		<French>[ICON_BULLET]No stability penalty for unstable civic combinations[NEWLINE][ICON_BULLET]+2[ICON_CULTURE] from Courthouse in all cities</French>
+		<German>[ICON_BULLET]No stability penalty for unstable civic combinations[NEWLINE][ICON_BULLET]+2[ICON_CULTURE] from Courthouse in all cities</German>
+		<Italian>[ICON_BULLET]No stability penalty for unstable civic combinations[NEWLINE][ICON_BULLET]+2[ICON_CULTURE] from Courthouse in all cities</Italian>
+		<Spanish>[ICON_BULLET]No stability penalty for unstable civic combinations[NEWLINE][ICON_BULLET]+2[ICON_CULTURE] from Courthouse in all cities</Spanish>
+		<Portuguese>[ICON_BULLET]No stability penalty for unstable civic combinations[NEWLINE][ICON_BULLET]+2[ICON_CULTURE] from Courthouse in all cities</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOLDEN_BULL</Tag>
 		<English>Golden Bull</English>
 		<French>Bulle d'Or</French>
@@ -340,6 +385,15 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GOLDEN_BULL_HELP</Tag>
+		<English>[ICON_BULLET]Reduces civic maintenance by 30%</English>
+		<French>[ICON_BULLET]Reduces civic maintenance by 30%</French>
+		<German>[ICON_BULLET]Reduces civic maintenance by 30%</German>
+		<Italian>[ICON_BULLET]Reduces civic maintenance by 30%</Italian>
+		<Spanish>[ICON_BULLET]Reduces civic maintenance by 30%</Spanish>
+		<Portuguese>[ICON_BULLET]Reduces civic maintenance by 30%</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ALHAMBRA</Tag>
@@ -378,6 +432,15 @@
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ST_BASIL_HELP</Tag>
+		<English>[ICON_BULLET]Reduces unit upkeep by 30%</English>
+		<French>[ICON_BULLET]-33% unit upkeep cost</French>
+		<German>[ICON_BULLET]-33% unit upkeep cost</German>
+		<Italian>[ICON_BULLET]-33% unit upkeep cost</Italian>
+		<Spanish>[ICON_BULLET]-33% unit upkeep cost</Spanish>
+		<Portuguese>[ICON_BULLET]-33% unit upkeep cost</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAN_MARCO</Tag>
 		<English>San Marco Basilica</English>
 		<French>Basilique St Marc</French>
@@ -412,6 +475,15 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BRANDENBURG_GATE_HELP</Tag>
+		<English>[ICON_BULLET]+2 experience points from settled Great Generals in all cities</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOME_ROCK</Tag>
@@ -540,6 +612,15 @@
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MAGELLANS_VOYAGE_HELP</Tag>
+		<English>[ICON_BULLET]+2 movement points for all Naval Units</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEONARDOS_WORKSHOP</Tag>
 		<English>Leonardo's Inventions</English>
 		<French>Les Inventions de Leonard</French>
@@ -604,12 +685,48 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALAIS_PAPES_PEDIA</Tag>
-		<English>[TAB]The Palais des Papes is a historical palace in Avignon, southern France, one of the largest and most important medieval Gothic buildings in Europe.[PARAGRAPH:2]Avignon became the residence of the Popes in 1309, when the Gascon Bertrand de Goth, as Pope Clement V, unwilling to face the violent chaos of Rome after his election (1305), moved the Papal Curia to Avignon, a period known as the Avignon Papacy. Clement lived as a guest in the Dominican monastery at Avignon, and his successor Pope John XXII set up a magnificent establishment there, but the reconstruction of the old bishops' palace was begun in earnest by Pope Benedict XII (1334-42) and continued by his successors to 1364. The site, on a natural rocky outcrop at the northern edge of Avignon, overlooking the river Rhône, was that of the old episcopal palace of the bishops of Avignon. The Palais was built in two principal phases with two distinct segments, known as the Palais Vieux (Old Palace) and Palais Neuf (New Palace). By the time of its completion, it occupied an area of 11,000 m² (2.6 acres). The building was enormously expensive, consuming much of the papacy's income during its construction.[PARAGRAPH:2]The Palais Vieux was constructed by the architect Pierre Poisson of Mirepoix at the instruction of Pope Benedict XII. The austere Benedict had the old/new episcopal palace razed and replaced with a much larger building centreed on a cloister, heavily fortified against attackers. Its four wings are flanked with high towers.[PARAGRAPH:2]Under Popes Clement VI, Innocent VI and Urban V, the building was expanded to form what is now known as the Palais Neuf. Jean de Louvres was commissioned by Clement VI to build a new tower and adjoining buildings, including a 52 m long Grand Chapel to serve as the location for papal acts of worship. Two more towers were built under Innocent VI. Urban V completed the main courtyard (known as the Court d'Honneur) with further buildings enclosing it. The interior of the building was sumptuously decorated with frescos, tapestries, paintings, sculptures and wooden ceilings.[PARAGRAPH:2]The popes departed Avignon in 1377, returning to Rome, but this prompted the Papal Schism during which time the antipopes Clement VII and Benedict XIII made Avignon their home until 1408. The latter was imprisoned in the Palais for ten years after being besieged when in 1398 Geoffrey Boucicaut led an army of occupation. The building remained in the hands of antipapal forces for some years - it was besieged from 1410 to 1411 - but was returned to the authority of papal legates in 1433.[PARAGRAPH:2]Although the Palais remained under papal control (along with the surrounding city and Comtat Venaissin) for over 350 years afterwards, it gradually deteriorated despite a restoration in 1516. When the French Revolution broke out in 1789 it was already in a bad state when it was seized and sacked by revolutionary forces. In 1791 it became the scene of a massacre of counter-revolutionaries, whose bodies were thrown into the Tour des Latrines in the Palais Vieux.[PARAGRAPH:2]The Palais was subsequently taken over by the Napoleonic French state for use as a military barracks and prison. Although it was further damaged by the military occupation, especially under the anti-clerical Third Republic, when the remaining interior woodwork was cleared away for use of the structure as a stables - the frescos were covered over and largely destroyed - ironically this ensured the shell of the building's physical survival. It was only vacated in 1906, when it became a national museum. It has been under virtually constant restoration ever since.[PARAGRAPH:2]The majority of the Palais is now open to the public; it also houses a large convention centre and the archives of the département of Vaucluse.</English>
+		<English>[TAB]The Palais des Papes is a historical palace in Avignon, southern France, one of the largest and most important medieval Gothic buildings in Europe.[PARAGRAPH:2]Avignon became the residence of the Popes in 1309, when the Gascon Bertrand de Goth, as Pope Clement V, unwilling to face the violent chaos of Rome after his election (1305), moved the Papal Curia to Avignon, a period known as the Avignon Papacy. Clement lived as a guest in the Dominican monastery at Avignon, and his successor Pope John XXII set up a magnificent establishment there, but the reconstruction of the old bishops' palace was begun in earnest by Pope Benedict XII (1334-42) and continued by his successors to 1364. The site, on a natural rocky outcrop at the northern edge of Avignon, overlooking the river Rhône, was that of the old episcopal palace of the bishops of Avignon. The Palais was built in two principal phases with two distinct segments, known as the Palais Vieux (Old Palace) and Palais Neuf (New Palace). By the time of its completion, it occupied an area of 11,000 m2 (2.6 acres). The building was enormously expensive, consuming much of the papacy's income during its construction.[PARAGRAPH:2]The Palais Vieux was constructed by the architect Pierre Poisson of Mirepoix at the instruction of Pope Benedict XII. The austere Benedict had the old/new episcopal palace razed and replaced with a much larger building centreed on a cloister, heavily fortified against attackers. Its four wings are flanked with high towers.[PARAGRAPH:2]Under Popes Clement VI, Innocent VI and Urban V, the building was expanded to form what is now known as the Palais Neuf. Jean de Louvres was commissioned by Clement VI to build a new tower and adjoining buildings, including a 52 m long Grand Chapel to serve as the location for papal acts of worship. Two more towers were built under Innocent VI. Urban V completed the main courtyard (known as the Court d'Honneur) with further buildings enclosing it. The interior of the building was sumptuously decorated with frescos, tapestries, paintings, sculptures and wooden ceilings.[PARAGRAPH:2]The popes departed Avignon in 1377, returning to Rome, but this prompted the Papal Schism during which time the antipopes Clement VII and Benedict XIII made Avignon their home until 1408. The latter was imprisoned in the Palais for ten years after being besieged when in 1398 Geoffrey Boucicaut led an army of occupation. The building remained in the hands of antipapal forces for some years - it was besieged from 1410 to 1411 - but was returned to the authority of papal legates in 1433.[PARAGRAPH:2]Although the Palais remained under papal control (along with the surrounding city and Comtat Venaissin) for over 350 years afterwards, it gradually deteriorated despite a restoration in 1516. When the French Revolution broke out in 1789 it was already in a bad state when it was seized and sacked by revolutionary forces. In 1791 it became the scene of a massacre of counter-revolutionaries, whose bodies were thrown into the Tour des Latrines in the Palais Vieux.[PARAGRAPH:2]The Palais was subsequently taken over by the Napoleonic French state for use as a military barracks and prison. Although it was further damaged by the military occupation, especially under the anti-clerical Third Republic, when the remaining interior woodwork was cleared away for use of the structure as a stables - the frescos were covered over and largely destroyed - ironically this ensured the shell of the building's physical survival. It was only vacated in 1906, when it became a national museum. It has been under virtually constant restoration ever since.[PARAGRAPH:2]The majority of the Palais is now open to the public; it also houses a large convention centre and the archives of the département of Vaucluse.</English>
 		<French>.</French>
 		<German>[TAB]Der Papstpalast zu Avignon (frz. Palais des Papes) war zwischen 1335 und 1430 die Residenz verschiedener Päpste und Gegenpäpste.[PARAGRAPH:2]Avignon ist als alte Papststadt bekannt. 1309 siedelte sich der Papst Clemens V. hier an (Avignonesisches Papsttum). Sechs weitere Päpste und fünf Gegenpäpste haben nach ihm in Avignon residiert.[PARAGRAPH:2]1304 war Papst Benedikt XI. nach kurzem Pontifikat gestorben und der französische König Philipp der Schöne wollte aus dem Papsttum ein persönliches Machtinstrument machen. Der französische Einfluss im Kardinalskollegium war damals sehr groß und so wurde 1305 der Erzbischof von Bordeaux als Papst Clemens V. gewählt, der zu seiner Konsekration, also zu seiner liturgischen Weihe erst gar nicht in Rom erschien, sondern in Frankreich blieb und in Lyon geweiht wurde. Auf der Suche nach einer würdigen Residenz wählte man kurz darauf Avignon, das gleichsam auf kirchlichem Gebiet lag, und machte es zur "größten Baustelle des Jahrhunderts".[PARAGRAPH:2]Clemens V. residierte jedoch nur vorübergehend in Avignon und wohnte im Kloster der Dominikaner. Sein Nachfolger, Papst Johannes XXII. richtete sich im bischöflichen Palast ein, den er ausbauen und vergrößern ließ. Dieser Palast stand an einem Hang südlich der Kathedrale Notre-Dame-des-Doms.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PALAIS_PAPES_HELP</Tag>
+		<English>[ICON_BULLET]Additional Faith from all State Religion buildings</English>
+		<French>[ICON_BULLET]Additional Faith from all State Religion buildings</French>
+		<German>[ICON_BULLET]Additional Faith from all State Religion buildings</German>
+		<Italian>[ICON_BULLET]Additional Faith from all State Religion buildings</Italian>
+		<Spanish>[ICON_BULLET]Additional Faith from all State Religion buildings</Spanish>
+		<Portuguese>[ICON_BULLET]Additional Faith from all State Religion buildings</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NOTRE_DAME</Tag>
+		<English>Notre Dame</English>
+		<French>Notre-Dame</French>
+		<German>Notre Dame</German>
+		<Italian>Notre Dame</Italian>
+		<Spanish>Notre Dame</Spanish>
+		<Portuguese>Notre Dame</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NOTRE_DAME_PEDIA</Tag>
+		<English>[TAB]Notre Dame is a mighty cathedral standing on the "Ile de la Citie," an island in the Seine River in Paris, France. Built on the site of an older church, which was in turn built on the site of a Roman temple to Jupiter, Notre Dame is a magnificent example of gothic architecture and one of the greatest buildings standing. Construction of Notre Dame began in 1163 and took almost two centuries to complete. [PARAGRAPH:2]Notre Dame is a massive stone building of square towers, flying buttresses, and tall spires. The exterior of the building is decorated with delicate ribbons of arches and statues of saints and kings. The roofline of the building is festooned with gargoyles. The interior of the cathedral is a long, narrow space with columns lining each side, supporting two beautiful raised galleries. Brilliant stained glass windows shine gently down on the main altar, which contains a beautiful statue of the Virgin Mary, the cathedral's patron, holding the body of Jesus. [PARAGRAPH:2]The cathedral has suffered many periods of neglect over the years. During the French Revolution, many of Notre Dame's treasures were stolen and the building was used as a warehouse. In the early 1800s, the cathedral was in such a state of disrepair that the city planners contemplated tearing it down. In fact, Victor Hugo wrote "The Hunchback of Notre Dame" in part to raise awareness of the cathedral's plight. In 1871, during the short-lived Paris Commune, Notre Dame was almost set on fire. [PARAGRAPH:2]Fortunately the cathedral survived it all, and has now been largely restored to its original grandeur.</English>
+		<French>[TAB]Notre-Dame est une splendide cath&#233;drale b&#226;tie sur l'"Ile de la Cit&#233;", sur la Seine, &#224; Paris. Construite &#224; l'emplacement d'une ancienne &#233;glise, elle-m&#234;me &#233;difi&#233;e &#224; l'emplacement d'un temple romain consacr&#233; &#224; Jupiter, Notre-Dame est un magnifique exemple d'architecture gothique et l'un des plus beaux b&#226;timents encore debout. La construction de Notre-Dame commence en 1163 et s'ach&#232;ve pr&#232;s de deux si&#232;cles plus tard. [PARAGRAPH:2]Notre-Dame est un &#233;difice de pierres impressionnant compos&#233; de deux tours carr&#233;es, d'arcs-boutants et d'une fl&#232;che &#233;lev&#233;e. L'ext&#233;rieur du b&#226;timent est d&#233;cor&#233; de fines bandes d'arches et de statues de saints et de rois et des gargouilles ornent la partie inf&#233;rieure des pans de toits. A l'int&#233;rieur, la cath&#233;drale est constitu&#233;e de cinq nefs longues et &#233;troites s&#233;par&#233;es par des rang&#233;es de colonnes qui supportent deux magnifiques galeries sur&#233;lev&#233;es. De sublimes vitraux laissent passer la lumi&#232;re qui illumine doucement l'autel principal o&#249; se trouve une statue de la vierge Marie, la patronne de la cath&#233;drale, tenant J&#233;sus dans ses bras. [PARAGRAPH:2]A plusieurs reprises, la cath&#233;drale a connu des ann&#233;es de d&#233;saffection. Pendant la R&#233;volution fran&#231;aise, de nombreux tr&#233;sors de Notre-Dame furent vol&#233;s et le b&#226;timent servit d'entrep&#244;t. Au d&#233;but des ann&#233;es 1800, la cath&#233;drale &#233;tait dans un tel &#233;tat de d&#233;labrement que les urbanistes envisag&#232;rent de la raser. Victor Hugo &#233;crivit alors "Notre-Dame de Paris" afin de faire prendre conscience de l'&#233;tat catastrophique dans lequel se trouvait la cath&#233;drale. En 1871, pendant la br&#232;ve Commune de Paris, Notre-Dame &#233;chappa de peu &#224; un incendie. [PARAGRAPH:2]Fort heureusement, la cath&#233;drale surv&#233;cut &#224; toutes ces &#233;preuves et a aujourd'hui retrouv&#233;, gr&#226;ce &#224; des travaux de r&#233;novation, son caract&#232;re grandiose d'origine.</French>
+		<German>[TAB]Notre Dame ist eine pr&#228;chtige Kathedrale auf der "Ile de la Citi&#233;" in Paris. Sie wurde auf den Fundamenten einer &#228;lteren Kirche &#252;ber den Ruinen eines r&#246;mischen Jupitertempels errichtet. Notre Dame ist als beeindruckendes Beispiel gotischer Architektur eines der gr&#246;&#223;ten erhaltenen gotischen Geb&#228;ude der Welt. Der Bau begann im Jahr 1163 und dauerte knapp 200 Jahre. [PARAGRAPH:2]Notre Dame ist ein gewaltiges Steingeb&#228;ude mit rechteckigen T&#252;rmen und Strebeb&#246;gen. Die Fassade der Kathedrale ist mit pittoresken B&#246;gen und Statuen von K&#246;nigen und Heiligen verziert. Das Dach ist ber&#252;hmt f&#252;r seine unz&#228;hligen Gargylen. Das Innere der Kathedrale besteht aus einem langen, mit S&#228;ulen eingefassten, Hauptschiff und zwei erh&#246;hten Galerien. Die strahlenden Buntglasfenster der Apsis blicken auf den Hauptaltar mit einer Statue der Jungfrau Maria (die Schutzherrin der Kirche) herab.[PARAGRAPH:2]Notre Dame hat bereits viel erlebt. W&#228;hrend der Franz&#246;sischen Revolution wurde die Kathedrale gepl&#252;ndert und als Lager genutzt. Anfang des 19. Jahrhunderts erwogen die Stadtv&#228;ter sogar den Abriss der Kathedrale. Victor Hugo schrieb den "Gl&#246;ckner von Notre Dame" nicht zuletzt, um auf den schlechten Zustand der Kathedrale aufmerksam zu machen. 1871 w&#228;re Notre Dame schlie&#223;lich beinahe einem Brand zum Opfer gefallen.[PARAGRAPH:2]Inzwischen wurde Notre Dame weitgehend restauriert und erstrahlt wieder in altem Glanz.</German>
+		<Italian>[TAB]Notre Dame &#232; una imponente cattedrale che si trova a "Ile de la Citie," un'isolotto sul fiume Senna a Parigi, in Francia. Edificata nel posto ove un tempo sorgeva un'altra chiesa, a sua volta costruita su un tempio Romano dedicato a Giove, Notre Dame &#232; un magnifico esempio di architettura gotica e uno delle opere pi&#249; meravigliose dell'uomo ancora esistenti. La costruzione di Notre Dame inizi&#242; nel 1163 e ci vollero almeno due secoli per completarla. [PARAGRAPH:2]Notre Dame &#232; un massiccio edificio di pietra con torri quadrate, archi rampanti e guglie altissime. La facciata esterna dell'edificio &#232; decorata con archi raffinati e statue di re e santi mentre i cornicioni pullulano di gargoyle. L'interno della cattedrale &#232; un lungo e stretto spazio occupato da colonne allineate su ciascuna parte, che supportano due splendide gallerie sopraelevate. I vetri colorati delle finestre riflettono con dolcezza la luce sull'altare principale che contiene una statua della Vergine Maria, la patrona della cattedrale, impegnata a sorreggere Ges&#249;. [PARAGRAPH:2]Nel corso dei secoli, la cattedrale ha vissuto dei momenti di trascuratezza e, durante la Rivoluzione Francese, molti dei tesori di Notre Dame vennero rubati e l'edificio adibito a magazzino. All'inizio dell'800, la cattedrale versava in uno stato di abbandono tale che i governatori dell'epoca pensarono addirittura di abbatterla: infatti, Victor Hugo scrisse "Il gobbo di Notre Dame" anche per sollevare la questione; nel 1871, la cattedrale fu quasi completamente incendiata. [PARAGRAPH:2]Ma fortunatamente l'edificio &#232; sopravvissuto a tutto e attualmente &#232; stato ristrutturato per riportarlo alla sua bellezza originale.</Italian>
+		<Spanish>[TAB]Notre Dame es una imponente catedral que se alza en la &#206;le de la Cit&#233;, una isla en el r&#237;o Sena, en Par&#237;s, Francia. Construida en el terreno que ocupaba una antigua iglesia, que a su vez se construy&#243; sobre un templo al dios romano J&#250;piter, Notre Dame es una muestra magn&#237;fica de la arquitectura g&#243;tica y uno de los edificios m&#225;s grandes nunca construidos. La construcci&#243;n de Notre Dame empez&#243; en 1163 y llev&#243; casi dos siglos terminarla. [PARAGRAPH:2]Se trata de un enorme edificio de piedra de torres cuadradas, arbotantes y altos chapiteles. El exterior del edificio est&#225; decorado con delicadas arcadas y estatuas de santos y reyes. La balaustrada del techo est&#225; adornada con g&#225;rgolas. El interior de la catedral es un espacio largo y estrecho con columnas alineadas a ambos lados que aguantan dos deambulatorios. Las vidrieras de colores proyectan una luz tenue sobre el altar principal, que contiene una estatua de la Virgen Mar&#237;a, la patrona de la catedral, sosteniendo el cuerpo de Jes&#250;s muerto. [PARAGRAPH:2]La catedral ha sufrido varios periodos de abandono con los a&#241;os. Durante la Revoluci&#243;n Francesa, se robaron muchos de sus tesoros y el edificio se us&#243; como almac&#233;n. A principios del s. XIX, la catedral se encontraba en tal estado de ruina que los urbanistas pensaron en derruirla. De hecho, V&#237;ctor Hugo escribi&#243; "El Jorobado de Notre Dame" en parte para crear conciencia sobre la dif&#237;cil situaci&#243;n que atravesaba la catedral. En 1871, durante la breve Comuna de Par&#237;s, casi fue pasto de las llamas. [PARAGRAPH:2]Por suerte, sobrevivi&#243; a todo ello y ahora ha sido restaurada hasta devolverla a su grandeza original.</Spanish>
+		<Portuguese>[TAB]Notre Dame es una imponente catedral que se alza en la &#206;le de la Cit&#233;, una isla en el r&#237;o Sena, en Par&#237;s, Francia. Construida en el terreno que ocupaba una antigua iglesia, que a su vez se construy&#243; sobre un templo al dios romano J&#250;piter, Notre Dame es una muestra magn&#237;fica de la arquitectura g&#243;tica y uno de los edificios m&#225;s grandes nunca construidos. La construcci&#243;n de Notre Dame empez&#243; en 1163 y llev&#243; casi dos siglos terminarla. [PARAGRAPH:2]Se trata de un enorme edificio de piedra de torres cuadradas, arbotantes y altos chapiteles. El exterior del edificio est&#225; decorado con delicadas arcadas y estatuas de santos y reyes. La balaustrada del techo est&#225; adornada con g&#225;rgolas. El interior de la catedral es un espacio largo y estrecho con columnas alineadas a ambos lados que aguantan dos deambulatorios. Las vidrieras de colores proyectan una luz tenue sobre el altar principal, que contiene una estatua de la Virgen Mar&#237;a, la patrona de la catedral, sosteniendo el cuerpo de Jes&#250;s muerto. [PARAGRAPH:2]La catedral ha sufrido varios periodos de abandono con los a&#241;os. Durante la Revoluci&#243;n Francesa, se robaron muchos de sus tesoros y el edificio se us&#243; como almac&#233;n. A principios del s. XIX, la catedral se encontraba en tal estado de ruina que los urbanistas pensaron en derruirla. De hecho, V&#237;ctor Hugo escribi&#243; "El Jorobado de Notre Dame" en parte para crear conciencia sobre la dif&#237;cil situaci&#243;n que atravesaba la catedral. En 1871, durante la breve Comuna de Par&#237;s, casi fue pasto de las llamas. [PARAGRAPH:2]Por suerte, sobrevivi&#243; a todo ello y ahora ha sido restaurada hasta devolverla a su grandeza original.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NOTRE_DAME_HELP</Tag>
+		<English>[ICON_BULLET]+20% culture in all cities with State Religion</English>
+		<French>Notre-Dame</French>
+		<German>Notre Dame</German>
+		<Italian>Notre Dame</Italian>
+		<Spanish>Notre Dame</Spanish>
+		<Portuguese>Notre Dame</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BELEM_TOWER</Tag>
@@ -646,6 +763,15 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KALMAR_CASTLE_HELP</Tag>
+		<English>[ICON_BULLET]Improves diplomatic relations with all historic neighbours</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEANING_TOWER</Tag>
@@ -702,6 +828,114 @@
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIBLIOTHECA_CORVINIANA_HELP</Tag>
+		<English>[ICON_BULLET]Grants 2 technologies, chosen randomly from techs already known by other civilizations</English>
+		<French>Bibliotheca Corviniana</French>
+		<German>Bibliotheca Corviniana</German>
+		<Italian>Biblioteca Corviniana</Italian>
+		<Spanish>Biblioteca Corviniana</Spanish>
+		<Portuguese>Biblioteca Corviniana</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LOUVRE</Tag>
+		<English>Louvre</English>
+		<French>Louvre</French>
+		<German>Louvre</German>
+		<Italian>Louvre</Italian>
+		<Spanish>Louvre</Spanish>
+		<Portuguese>Louvre</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LOUVRE_PEDIA</Tag>
+		<English>[TAB]The Louvre is a large and incredibly ornate palace in Paris, France. It was originally built as the Louvre castle in the late 12th to 13th century under Philip II. Remnants of the fortress are visible in the basement of the palace. Due to the urban expansion of the city, the fortress eventually lost its defensive function and, in 1546, was converted by Francis I into the main residence of the French Kings. For the next two and a half centuries the Louvre served as the home to many of France's kings, most of whom added to the already-huge structure.[PARAGRAPH:2]During the 17th century Kings Louis XIII and Louis XIV and their advisors Cardinals Richelieu and Mazarin began acquiring an extensive art collection which was kept at the Louvre. In 1682 the Royal court moved to Versailles, leaving the Louvre primarily as a place to display the royal collection, including, from 1692, a collection of ancient Greek and Roman sculpture. In 1793 the Revolutionary government opened the palace to the public, and it has remained a public museum ever since. Not surprisingly, it is considered to have the finest collection of pre-modern French paintings in the world.[PARAGRAPH:2]Today the Louvre is the world's largest art museum and a historic monument in Paris, France. A central landmark of the city, it is located on the Right Bank of the Seine in the city's 1st arrondissement (district or ward). Approximately 38,000 objects from prehistory to the 21st century are exhibited over an area of 72,735 square metres (782,910 square feet). In 2017, the Louvre was the world's most visited art museum, receiving 8.1 million visitors.</English>
+		<French>[TAB]The Louvre is a large and incredibly ornate palace in Paris, France. Originally constructed in the 15th century on the site of an even older castle, for the next two and a half centuries the Louvre served as the home to many of France's kings, most of whom added to the already-huge structure. During the 17th century Kings Louis XIII and Louis XIV and their advisors Cardinals Richelieu and Mazarin began acquiring an extensive art collection which was kept at the Louvre. In 1682 the Royal court moved to Versailles, and in 1783 the Revolutionary government opened the palace to the public. It has remained a public museum ever since. Not surprisingly, it is considered to have the finest collection of pre-modern French paintings in the world.</French>
+		<German>[TAB]The Louvre is a large and incredibly ornate palace in Paris, France. Originally constructed in the 15th century on the site of an even older castle, for the next two and a half centuries the Louvre served as the home to many of France's kings, most of whom added to the already-huge structure. During the 17th century Kings Louis XIII and Louis XIV and their advisors Cardinals Richelieu and Mazarin began acquiring an extensive art collection which was kept at the Louvre. In 1682 the Royal court moved to Versailles, and in 1783 the Revolutionary government opened the palace to the public. It has remained a public museum ever since. Not surprisingly, it is considered to have the finest collection of pre-modern French paintings in the world.</German>
+		<Italian>[TAB]The Louvre is a large and incredibly ornate palace in Paris, France. Originally constructed in the 15th century on the site of an even older castle, for the next two and a half centuries the Louvre served as the home to many of France's kings, most of whom added to the already-huge structure. During the 17th century Kings Louis XIII and Louis XIV and their advisors Cardinals Richelieu and Mazarin began acquiring an extensive art collection which was kept at the Louvre. In 1682 the Royal court moved to Versailles, and in 1783 the Revolutionary government opened the palace to the public. It has remained a public museum ever since. Not surprisingly, it is considered to have the finest collection of pre-modern French paintings in the world.</Italian>
+		<Spanish>[TAB]The Louvre is a large and incredibly ornate palace in Paris, France. Originally constructed in the 15th century on the site of an even older castle, for the next two and a half centuries the Louvre served as the home to many of France's kings, most of whom added to the already-huge structure. During the 17th century Kings Louis XIII and Louis XIV and their advisors Cardinals Richelieu and Mazarin began acquiring an extensive art collection which was kept at the Louvre. In 1682 the Royal court moved to Versailles, and in 1783 the Revolutionary government opened the palace to the public. It has remained a public museum ever since. Not surprisingly, it is considered to have the finest collection of pre-modern French paintings in the world.</Spanish>
+		<Portuguese>[TAB]The Louvre is a large and incredibly ornate palace in Paris, France. Originally constructed in the 15th century on the site of an even older castle, for the next two and a half centuries the Louvre served as the home to many of France's kings, most of whom added to the already-huge structure. During the 17th century Kings Louis XIII and Louis XIV and their advisors Cardinals Richelieu and Mazarin began acquiring an extensive art collection which was kept at the Louvre. In 1682 the Royal court moved to Versailles, and in 1783 the Revolutionary government opened the palace to the public. It has remained a public museum ever since. Not surprisingly, it is considered to have the finest collection of pre-modern French paintings in the world.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LOUVRE_HELP</Tag>
+		<English>[ICON_BULLET]Culture boost in all cities when a Great Person is born</English>
+		<French>[ICON_BULLET]Culture boost in all cities when a Great Person is born</French>
+		<German>[ICON_BULLET]Culture boost in all cities when a Great Person is born</German>
+		<Italian>[ICON_BULLET]Culture boost in all cities when a Great Person is born</Italian>
+		<Spanish>[ICON_BULLET]Culture boost in all cities when a Great Person is born</Spanish>
+		<Portuguese>[ICON_BULLET]Culture boost in all cities when a Great Person is born</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PETERHOF_PALACE</Tag>
+		<English>Peterhof Palace</English>
+		<French>Peterhof Palace</French>
+		<German>Peterhof Palace</German>
+		<Italian>Peterhof Palace</Italian>
+		<Spanish>Peterhof Palace</Spanish>
+		<Portuguese>Peterhof Palace</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PETERHOF_PALACE_PEDIA</Tag>
+		<English>[TAB]The Peterhof Palace is a series of palaces and gardens located in Saint Petersburg, Russia, laid out on the orders of Peter the Great. These Palaces and gardens are sometimes referred as the "Russian Versailles". The palace-ensemble along with the city centre is recognised as a UNESCO World Heritage Site.[PARAGRAPH:2]Peter the Great first mentions the Peterhof site in his journal in 1705, during the Great Northern War, as a good place to construct a landing for use in travelling to and from the island fortress of Kronstadt. And in 1714, Peter began construction of the Monplaisir ("my pleasure") Palace based on his own sketches of the palace that he wanted close to the shoreline. This was Peter's Summer Palace that he would use on his way coming and going from Europe through the harbour at Kronstadt. On the walls of this seacoast palace hung hundreds of paintings that Peter brought from Europe and allowed to weather Russian winters without heat together with the dampness of being so close to the sea. And in the seaward corner of his Monplaisir Palace, Peter made his Maritime Study from which he could see Kronstadt Island to the left and St. Petersburg to the right. Later, he expanded his plans to include a vaster royal chateau of palaces and gardens further inland, on the model of Versailles. Each of the tsars after Peter expanded on the inland palaces and gardens of Peterhof, but the major contributions by Peter the Great were completed by 1725. Peter had also entertained plans of a similar palace at Strelna, a short way to the east, but these plans were abandoned.</English>
+		<French>[TAB]The Peterhof Palace is a series of palaces and gardens located in Saint Petersburg, Russia, laid out on the orders of Peter the Great. These Palaces and gardens are sometimes referred as the "Russian Versailles". The palace-ensemble along with the city centre is recognised as a UNESCO World Heritage Site.[PARAGRAPH:2]Peter the Great first mentions the Peterhof site in his journal in 1705, during the Great Northern War, as a good place to construct a landing for use in travelling to and from the island fortress of Kronstadt. And in 1714, Peter began construction of the Monplaisir ("my pleasure") Palace based on his own sketches of the palace that he wanted close to the shoreline. This was Peter's Summer Palace that he would use on his way coming and going from Europe through the harbour at Kronstadt. On the walls of this seacoast palace hung hundreds of paintings that Peter brought from Europe and allowed to weather Russian winters without heat together with the dampness of being so close to the sea. And in the seaward corner of his Monplaisir Palace, Peter made his Maritime Study from which he could see Kronstadt Island to the left and St. Petersburg to the right. Later, he expanded his plans to include a vaster royal chateau of palaces and gardens further inland, on the model of Versailles. Each of the tsars after Peter expanded on the inland palaces and gardens of Peterhof, but the major contributions by Peter the Great were completed by 1725. Peter had also entertained plans of a similar palace at Strelna, a short way to the east, but these plans were abandoned.</French>
+		<German>[TAB]The Peterhof Palace is a series of palaces and gardens located in Saint Petersburg, Russia, laid out on the orders of Peter the Great. These Palaces and gardens are sometimes referred as the "Russian Versailles". The palace-ensemble along with the city centre is recognised as a UNESCO World Heritage Site.[PARAGRAPH:2]Peter the Great first mentions the Peterhof site in his journal in 1705, during the Great Northern War, as a good place to construct a landing for use in travelling to and from the island fortress of Kronstadt. And in 1714, Peter began construction of the Monplaisir ("my pleasure") Palace based on his own sketches of the palace that he wanted close to the shoreline. This was Peter's Summer Palace that he would use on his way coming and going from Europe through the harbour at Kronstadt. On the walls of this seacoast palace hung hundreds of paintings that Peter brought from Europe and allowed to weather Russian winters without heat together with the dampness of being so close to the sea. And in the seaward corner of his Monplaisir Palace, Peter made his Maritime Study from which he could see Kronstadt Island to the left and St. Petersburg to the right. Later, he expanded his plans to include a vaster royal chateau of palaces and gardens further inland, on the model of Versailles. Each of the tsars after Peter expanded on the inland palaces and gardens of Peterhof, but the major contributions by Peter the Great were completed by 1725. Peter had also entertained plans of a similar palace at Strelna, a short way to the east, but these plans were abandoned.</German>
+		<Italian>[TAB]The Peterhof Palace is a series of palaces and gardens located in Saint Petersburg, Russia, laid out on the orders of Peter the Great. These Palaces and gardens are sometimes referred as the "Russian Versailles". The palace-ensemble along with the city centre is recognised as a UNESCO World Heritage Site.[PARAGRAPH:2]Peter the Great first mentions the Peterhof site in his journal in 1705, during the Great Northern War, as a good place to construct a landing for use in travelling to and from the island fortress of Kronstadt. And in 1714, Peter began construction of the Monplaisir ("my pleasure") Palace based on his own sketches of the palace that he wanted close to the shoreline. This was Peter's Summer Palace that he would use on his way coming and going from Europe through the harbour at Kronstadt. On the walls of this seacoast palace hung hundreds of paintings that Peter brought from Europe and allowed to weather Russian winters without heat together with the dampness of being so close to the sea. And in the seaward corner of his Monplaisir Palace, Peter made his Maritime Study from which he could see Kronstadt Island to the left and St. Petersburg to the right. Later, he expanded his plans to include a vaster royal chateau of palaces and gardens further inland, on the model of Versailles. Each of the tsars after Peter expanded on the inland palaces and gardens of Peterhof, but the major contributions by Peter the Great were completed by 1725. Peter had also entertained plans of a similar palace at Strelna, a short way to the east, but these plans were abandoned.</Italian>
+		<Spanish>[TAB]The Peterhof Palace is a series of palaces and gardens located in Saint Petersburg, Russia, laid out on the orders of Peter the Great. These Palaces and gardens are sometimes referred as the "Russian Versailles". The palace-ensemble along with the city centre is recognised as a UNESCO World Heritage Site.[PARAGRAPH:2]Peter the Great first mentions the Peterhof site in his journal in 1705, during the Great Northern War, as a good place to construct a landing for use in travelling to and from the island fortress of Kronstadt. And in 1714, Peter began construction of the Monplaisir ("my pleasure") Palace based on his own sketches of the palace that he wanted close to the shoreline. This was Peter's Summer Palace that he would use on his way coming and going from Europe through the harbour at Kronstadt. On the walls of this seacoast palace hung hundreds of paintings that Peter brought from Europe and allowed to weather Russian winters without heat together with the dampness of being so close to the sea. And in the seaward corner of his Monplaisir Palace, Peter made his Maritime Study from which he could see Kronstadt Island to the left and St. Petersburg to the right. Later, he expanded his plans to include a vaster royal chateau of palaces and gardens further inland, on the model of Versailles. Each of the tsars after Peter expanded on the inland palaces and gardens of Peterhof, but the major contributions by Peter the Great were completed by 1725. Peter had also entertained plans of a similar palace at Strelna, a short way to the east, but these plans were abandoned.</Spanish>
+		<Portuguese>[TAB]The Peterhof Palace is a series of palaces and gardens located in Saint Petersburg, Russia, laid out on the orders of Peter the Great. These Palaces and gardens are sometimes referred as the "Russian Versailles". The palace-ensemble along with the city centre is recognised as a UNESCO World Heritage Site.[PARAGRAPH:2]Peter the Great first mentions the Peterhof site in his journal in 1705, during the Great Northern War, as a good place to construct a landing for use in travelling to and from the island fortress of Kronstadt. And in 1714, Peter began construction of the Monplaisir ("my pleasure") Palace based on his own sketches of the palace that he wanted close to the shoreline. This was Peter's Summer Palace that he would use on his way coming and going from Europe through the harbour at Kronstadt. On the walls of this seacoast palace hung hundreds of paintings that Peter brought from Europe and allowed to weather Russian winters without heat together with the dampness of being so close to the sea. And in the seaward corner of his Monplaisir Palace, Peter made his Maritime Study from which he could see Kronstadt Island to the left and St. Petersburg to the right. Later, he expanded his plans to include a vaster royal chateau of palaces and gardens further inland, on the model of Versailles. Each of the tsars after Peter expanded on the inland palaces and gardens of Peterhof, but the major contributions by Peter the Great were completed by 1725. Peter had also entertained plans of a similar palace at Strelna, a short way to the east, but these plans were abandoned.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PETERHOF_PALACE_HELP</Tag>
+		<English>[ICON_BULLET]Chance for a free specialist of the same type when a Great Person is born</English>
+		<French>[ICON_BULLET]Chance for a free specialist of the same type when a Great Person is born</French>
+		<German>[ICON_BULLET]Chance for a free specialist of the same type when a Great Person is born</German>
+		<Italian>[ICON_BULLET]Chance for a free specialist of the same type when a Great Person is born</Italian>
+		<Spanish>[ICON_BULLET]Chance for a free specialist of the same type when a Great Person is born</Spanish>
+		<Portuguese>[ICON_BULLET]Chance for a free specialist of the same type when a Great Person is born</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_URANIBORG</Tag>
+		<English>Uraniborg</English>
+		<French>Uraniborg</French>
+		<German>Uraniborg</German>
+		<Italian>Uraniborg</Italian>
+		<Spanish>Uraniborg</Spanish>
+		<Portuguese>Uraniborg</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_URANIBORG_PEDIA</Tag>
+		<English>[TAB]Uraniborg (Danish: Uranienborg, Swedish: Uraniborg) was a Danish astronomical observatory and alchemy laboratory established and operated by Tycho Brahe. It was built between 1576 and 1580 on Hven, an island in the Oresund between Zealand and Scania (which was part of Denmark at the time), under the sponsorship of King Frederic II of Denmark (1534-1588). The building was dedicated to Urania, the Muse of Astronomy, and it was named Uraniborg, "The Castle of Urania." It was the first time in Europe that a building was erected especially for the purpose of astronomical observations.[PARAGRAPH:2]Tycho Brahe was one of the most important observational astronomers until the invention of the telescope in 1608. His castle observatory was, at the end of the 16th century, an impressive advanced research centre, both for studying astronomy and in respect of the innovative precise instruments.[PARAGRAPH:2]The observatory measured 16m x 16m, with a 19m tower and two small round towers to the north and south of 6m diameter (with cone shaped roof), with galleries around for the instruments. Inside the observatory was a large mural quadrant affixed to a north-south wall, which was used to measure the altitude of stars as they passed the meridian. The engraving of the mural quadrant from Brahe's book Astronomiae instauratae mechanica (1598) shows very well the ongoing work in the observatory. The observatory is in the middle of a strongly geometrical Renaissance garden; in addition Tycho had a printing office and a water mill for making paper.</English>
+		<French>Uraniborg</French>
+		<German>Uraniborg</German>
+		<Italian>Uraniborg</Italian>
+		<Spanish>Uraniborg</Spanish>
+		<Portuguese>Uraniborg</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_URANIBORG_HELP</Tag>
+		<English>[ICON_BULLET]+200% science from great people discoveries</English>
+		<French>[ICON_BULLET]+200% science from great people discoveries</French>
+		<German>[ICON_BULLET]+200% science from great people discoveries</German>
+		<Italian>[ICON_BULLET]+200% science from great people discoveries</Italian>
+		<Spanish>[ICON_BULLET]+200% science from great people discoveries</Spanish>
+		<Portuguese>[ICON_BULLET]+200% science from great people discoveries</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_THOMASKIRCHE</Tag>
+		<English>Thomaskirche</English>
+		<French>Thomaskirche</French>
+		<German>Thomaskirche</German>
+		<Italian>Thomaskirche</Italian>
+		<Spanish>Thomaskirche</Spanish>
+		<Portuguese>Thomaskirche</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_THOMASKIRCHE_PEDIA</Tag>
+		<English>[TAB]St. Thomas Church (German: Thomaskirche) is a Lutheran church in Leipzig, Germany. It is associated with a number of well-known composers such as Richard Wagner and Felix Mendelssohn Bartholdy, but mostly with Johann Sebastian Bach who worked here as a Kapellmeister (music director) from 1723 until his death in 1750. Today, the church also holds his remains. The Thomaskirche was one of the earlier adopters of the Reformation, Martin Luther preached here in 1539.[PARAGRAPH:2]The choir of the Thomaskirche, the Thomanerchor, was founded in 1212 and is one of the oldest and most famous boys' choirs in Germany. It is headed by the Thomaskantor, an office that has been held by many well-known composers and musicians. Bach held the title Thomaskantor too from 1723 until 1750.[PARAGRAPH:2]Few composers were more prolific or beloved than Johann Sebastian Bach. Bach, the most well-known member of a gifted family of German musicians, was perhaps the finest composer of the baroque style of music. In his time, he wrote numerous choral and orchestral pieces. During his lifetime, he was renowned as an organist and music director of St. Thomas' Church in Leipzig, and many of his compositions were religious in nature. After his death, Bach's music gained worldwide appreciation.</English>
+		<French>[TAB]Few composers were more prolific or beloved than Johann Sebastian Bach. Bach, the most well-known member of a gifted family of German musicians, was perhaps the finest composer of the baroque style of music. In his time, he wrote numerous choral and orchestral pieces. During his lifetime, he was renowned as an organist and music director of St. Thomas' Church in Leipzig, and many of his compositions were religious in nature. After his death, Bach's music gained worldwide appreciation.</French>
+		<German>[TAB]Few composers were more prolific or beloved than Johann Sebastian Bach. Bach, the most well-known member of a gifted family of German musicians, was perhaps the finest composer of the baroque style of music. In his time, he wrote numerous choral and orchestral pieces. During his lifetime, he was renowned as an organist and music director of St. Thomas' Church in Leipzig, and many of his compositions were religious in nature. After his death, Bach's music gained worldwide appreciation.</German>
+		<Italian>[TAB]Few composers were more prolific or beloved than Johann Sebastian Bach. Bach, the most well-known member of a gifted family of German musicians, was perhaps the finest composer of the baroque style of music. In his time, he wrote numerous choral and orchestral pieces. During his lifetime, he was renowned as an organist and music director of St. Thomas' Church in Leipzig, and many of his compositions were religious in nature. After his death, Bach's music gained worldwide appreciation.</Italian>
+		<Spanish>[TAB]Few composers were more prolific or beloved than Johann Sebastian Bach. Bach, the most well-known member of a gifted family of German musicians, was perhaps the finest composer of the baroque style of music. In his time, he wrote numerous choral and orchestral pieces. During his lifetime, he was renowned as an organist and music director of St. Thomas' Church in Leipzig, and many of his compositions were religious in nature. After his death, Bach's music gained worldwide appreciation.</Spanish>
+		<Portuguese>[TAB]Few composers were more prolific or beloved than Johann Sebastian Bach. Bach, the most well-known member of a gifted family of German musicians, was perhaps the finest composer of the baroque style of music. In his time, he wrote numerous choral and orchestral pieces. During his lifetime, he was renowned as an organist and music director of St. Thomas' Church in Leipzig, and many of his compositions were religious in nature. After his death, Bach's music gained worldwide appreciation.</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FONTAINEBLEAU</Tag>
 		<English>Chateau de Fontainebleau</English>
 		<French>Chateau de Fontainebleau</French>
@@ -736,6 +970,15 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_IMPERIAL_DIET_HELP</Tag>
+		<English>[ICON_BULLET]Adds a minor Golden Age when acquiring a new vassal state</English>
+		<French>Diète Fédérale</French>
+		<German>Reichstag</German>
+		<Italian>Dieta Imperiale</Italian>
+		<Spanish>Dieta Imperial</Spanish>
+		<Portuguese>Dieta Imperial</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COPERNICUS</Tag>
@@ -774,6 +1017,15 @@
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SAN_GIORGIO_HELP</Tag>
+		<English>[ICON_BULLET]Can build gold more efficiently</English>
+		<French>[ICON_BULLET]Can build gold more efficiently</French>
+		<German>[ICON_BULLET]Can build gold more efficiently</German>
+		<Italian>[ICON_BULLET]Can build gold more efficiently</Italian>
+		<Spanish>[ICON_BULLET]Can build gold more efficiently</Spanish>
+		<Portuguese>[ICON_BULLET]Can build gold more efficiently</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BEURS</Tag>
 		<English>Amsterdam Beurs</English>
 		<French>Sac d'Amsterdam</French>
@@ -808,6 +1060,15 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WESTMINSTER_HELP</Tag>
+		<English>[ICON_BULLET]+1 happiness in all cities under [LINK=literal]Divine Monarchy[\LINK][NEWLINE][ICON_BULLET]Grants stability based on the Faith of your civilization</English>
+		<French>Westminster Abbey</French>
+		<German>Westminster Abbey</German>
+		<Italian>Westminster Abbey</Italian>
+		<Spanish>Westminster Abbey</Spanish>
+		<Portuguese>Westminster Abbey</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VERSAILLES</Tag>
@@ -856,12 +1117,39 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOPKAPI_PALACE_PEDIA</Tag>
-		<English>[TAB]The Topkapi Palace is a palace in Istanbul, Turkey, which was the official and primary residence in the city of the Ottoman Sultans, from 1465 to 1853. The palace was a setting for state occasions and royal entertainments and is a major tourist attraction today. The name directly translates as "Cannongate Palace", from the palace being named after a nearby, now lost gate.[PARAGRAPH:2]The initial construction started in 1459, ordered by Sultan Mehmed II, the conqueror of Byzantine Constantinople. The palace is a complex made up of four main courtyards and many smaller buildings. At the height of its existence as a royal residence, the palace was home to as many as 4,000 people, formerly covering a larger area with a long shoreline. The complex has been expanded over the centuries, with many renovations such as after the 1509 earthquake and 1665 fire.[PARAGRAPH:2]Topkapi Palace gradually lost its importance at the end of the 17th century, as the Sultans preferred to spend more time in their new palaces along the Bosporus. In 1853, Sultan Abd&#252;l Mecid I decided to move the court to the newly built Dolmabah&#231;e Palace, the first European-style palace in the city. Some functions, such as the imperial treasury, the library, mosque and mint, were retained though.[PARAGRAPH:2]After the end of the Ottoman Empire in 1921, Topkapi Palace was transformed by government decree on April 3, 1924 into a museum of the imperial era. The Topkapi Palace Museum is under the administration of the Ministry of Culture and Tourism. The palace complex has hundreds of rooms and chambers, but only the most important are accessible to the public today. The complex is guarded by officials of the ministry as well as armed guards of the Turkish military. The palace is full of examples of Ottoman architecture and also contains large collections of porcelain, robes, weapons, shields, armor, Ottoman miniatures, Islamic calligraphic manuscripts and murals, as well as a display of Ottoman treasure and jewelry.[PARAGRAPH:2]Topkapi Palace is among those monuments belonging to the "Historic Areas of Istanbul", which became a UNESCO World Heritage Site in 1985, and is described in Criterion iv as "the best example(s) of ensembles of palaces of the Ottoman period."</English>
+		<English>[TAB]The Topkapi Palace is a palace in Istanbul, Turkey, which was the official and primary residence in the city of the Ottoman Sultans, from 1465 to 1853. The palace was a setting for state occasions and royal entertainments and is a major tourist attraction today. The name directly translates as "Cannongate Palace", from the palace being named after a nearby, now lost gate.[PARAGRAPH:2]The initial construction started in 1459, ordered by Sultan Mehmed II, the conqueror of Byzantine Constantinople. The palace is a complex made up of four main courtyards and many smaller buildings. At the height of its existence as a royal residence, the palace was home to as many as 4,000 people, formerly covering a larger area with a long shoreline. The complex has been expanded over the centuries, with many renovations such as after the 1509 earthquake and 1665 fire.[PARAGRAPH:2]Topkapi Palace gradually lost its importance at the end of the 17th century, as the Sultans preferred to spend more time in their new palaces along the Bosporus. In 1853, Sultan Abd&#252;l Mecid I decided to move the court to the newly built Dolmabah&#231;e Palace, the first European-style palace in the city. Some functions, such as the imperial treasury, the library, mosque and mint, were retained though.[PARAGRAPH:2]After the end of the Ottoman Empire in 1921, Topkapi Palace was transformed by government decree on April 3, 1924 into a museum of the imperial era. The Topkapi Palace Museum is under the administration of the Ministry of Culture and Tourism. The palace complex has hundreds of rooms and chambers, but only the most important are accessible to the public today. The complex is guarded by officials of the ministry as well as armed guards of the Turkish military. The palace is full of examples of Ottoman architecture and also contains large collections of porcelain, robes, weapons, shields, armor, Ottoman miniatures, Islamic calligraphic manuscripts and mural decorations, as well as a display of accumulated Ottoman treasures and jewelry.[PARAGRAPH:2]Topkapi Palace is among those monuments belonging to the "Historic Areas of Istanbul", which became a UNESCO World Heritage Site in 1985, and is described in Criterion iv as "the best example(s) of ensembles of palaces of the Ottoman period."</English>
 		<French>.</French>
 		<German>[TAB]Der Topkapi-Palast (im Deutschen auch Topkapi-Serail, wörtlich "Kanonentor-Palast") in Istanbul war jahrhundertelang der Wohn- und Regierungssitz der Sultane sowie das Verwaltungszentrum des Osmanischen Reiches.[PARAGRAPH:2]Mit dem Bau wurde kurz nach der Eroberung Konstantinopels (1453) durch Sultan Mehmed II. begonnen. Zunächst ordnete er die Errichtung des Palastes auf dem heutigen Beyazitplatz (Beyazit Meydani) an, entschied sich dann aber für die heute Sarayburnu genannte Landspitze zwischen Goldenem Horn und Marmarameer. Dabei wurden Teile des byzantinischen Mangana-Palastes überbaut. Ihr heutiges Aussehen erhielt die Anlage durch umfangreiche Renovierungen und Erweiterungen bis zum Anfang des 18. Jahrhunderts. Seit Mehmed II. residierten alle osmanischen Herrscher im Topkapi-Palast, bis Sultan Abdülmecid I. im Jahre 1856 das neue Dolmabahçe Sarayi auf der anderen Seite des Goldenen Horns am Ufer des Bosporus bezog. Beide Paläste sind heute Museen.[PARAGRAPH:2]Der Palast besteht nicht aus einem einzelnen, sondern getreu der türkischen Tradition aus mehreren Gebäuden in einem großen Garten. Mit einer Fläche von über 69 Hektar und bis zu 5000 Bewohnern war der Palast eine eigene Stadt. Man nannte ihn anfangs Saray-i Cedîd-i Âmire oder Yeni Saray /,Neuer Palast', bevor sich im 18. Jahrhundert der Name Topkapi Sarayi durchsetzte, der sich von der palasteigenen Kanonengießerei ableitete.[PARAGRAPH:2]Der Palast ist in vier Höfe unterteilt, die jeweils durch eigene Tore erreicht werden. Mit seiner Lage auf einer Landspitze bietet er eine beispiellose Panoramasicht auf Istanbul, den Bosporus und das Goldene Horn.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_JASNA_GORA</Tag>
+		<English>Jasna Góra</English>
+		<French>Jasna Góra</French>
+		<German>Jasna Góra</German>
+		<Italian>Jasna Góra</Italian>
+		<Spanish>Jasna Góra</Spanish>
+		<Portuguese>Jasna Góra</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_JASNA_GORA_PEDIA</Tag>
+		<English>[TAB]The Jasna Góra Monastery in Czestochowa, Poland is the most famous shrine to the Virgin Mary in Poland and the country's greatest place of pilgrimage - for many its spiritual capital. The image of Black Madonna of Czestochowa, to which miraculous powers are attributed, is Jasna Góra's most precious treasure. Founded in 1382 by Pauline monks who came from Hungary at the invitation of Wladyslaw, Duke of Opole.[PARAGRAPH:2]The monastery has been a pilgrimage destination for hundreds of years, and it contains the most important icon of the Virgin Mary in this part of Europe. The icon, depicting the Mother of God with the Christ Child, is known as the Black Madonna of Czestochowa or Our Lady of Czestochowa, which is widely venerated and credited with many miracles.[PARAGRAPH:2]Among these, it is credited with miraculously saving the Jasna Góra monastery during a siege that took place at the time of The Deluge, a 17th century Swedish invasion. Although this event was of little military importance, the event stimulated the Polish resistance. The Poles could not immediately change the course of the war but after an alliance with the Crimean Khanate they repulsed the Swedes. Shortly thereafter, in the cathedral of Lwów, on April 1, 1656, Jan Kazimierz, the King of Poland, solemnly pronounced his vow to consecrate the country to the protection of the Mother of God and proclaimed Her the Patron and Queen of the lands in his kingdom.</English>
+		<French>.</French>
+		<German>.</German>
+		<Italian>.</Italian>
+		<Spanish>.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_JASNA_GORA_HELP</Tag>
+		<English>[ICON_BULLET]+2[ICON_CULTURE] from Temples in all cities</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LANTERNA</Tag>
@@ -880,6 +1168,447 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GRAND_ARSENAL</Tag>
+		<English>Grand Arsenal</English>
+		<French>Not translated.</French>
+		<German>Gro&#223;e Arsenal</German>
+		<Italian>Not translated.</Italian>
+		<Spanish>Not translated.</Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GRAND_ARSENAL_PEDIA</Tag>
+		<English>[TAB] The Venetian Arsenal (Italian: Arsenale di Venezia) is a shipyard and naval depot that played a leading role in Venetian empire-building. It was one of the most important areas of Venice, lying in the Castello sestiere.[PARAGRAPH:2]The Byzantine-style establishment may have existed as early as the eighth century, though the present structure is usually said to have been begun in 1104 during the reign of Ordelafo Faliero, although there is no evidence for such a precise date. It definitely existed by the early thirteenth century and is mentioned in Dante's Inferno. The name probably comes from Arabic Dar al Sina_a ("Dockyard") and the concept was clearly Islamic as much as Byzantine.[PARAGRAPH:2]Initially the state dockyard worked merely to maintain naval ships built privately, but in 1320 the Arsenal Nuovo was built, much larger than the original. It enabled all the state's navy and the larger merchant ships to be both constructed and maintained in one place. The Arsenal incidentally became an important centre for rope manufacture, while housing for the arsenal workers grew up outside its walls.[PARAGRAPH:2]Venice developed methods of mass-producing warships in the Arsenal, including the frame-first system to replace the Roman hull-first practice. The new system was much faster and required less wood. At the peak of its efficiency in the early sixteenth century, the Arsenal employed some 16,000 people who apparently were able to produce nearly one ship each day, and could fit out, arm, and provision a newly-built galley with standardized parts on a production-line basis not seen again until the Industrial Revolution.[PARAGRAPH:2]The staff of the Arsenal also developed new firearms at an early date, beginning with bombards in the 1370s and numerous small arms against the Genoese a few years later. Improvements in handguns led to their muzzle velocity (and therefore their ability to penetrate armor) exceeding that of the crossbow. The Venetian condottieri leader, Bartolomeo Colleoni, is usually given credit as being the first to mount the Arsenal's new lighter-weight artillery on mobile carriages for field use.[PARAGRAPH:2]The Arsenal's main gate, the Porta Magna, was built in about 1460 and was the first Classical revival structure to be built in Venice. It was perhaps built by Antonio Gambello from a design by Jacopo Bellini. Two lions taken from Greece situated beside it were added in 1687. One of the lions, known as the Piraeus Lion, is notable for having been defaced with lengthy runic inscriptions carved in the eleventh century by Scandinavian mercenary soldiers.[PARAGRAPH:2]The Arsenal Novissimo was begun in 1473. It enabled the creation of a system similar to an assembly line, in which hulls were constructed in the newer areas of the Arsenal before being fitted out in the old Arsenal.[PARAGRAPH:2]In the late sixteenth century, the Arsenal's designers experimented with larger ships as platforms for heavy naval guns. The most impressive was the galleass, already used at Lepanto, and developed from the old merchanting "great galley". It was huge, with sails as well as oars, and was virtually a floating fortress, with guns mounted on wheeled carriages along the sides in the modern fashion. It was slow and unwieldy in battle, however, and few were ever built. The galleon, also developed at the Arsenal, was an armed sailing ship, a slimmer version of the merchant "round ship". It was useful in major naval battles, but not in the small bays and off the frequent lee shores of the Dalmatian coast.[PARAGRAPH:2]Significant parts of the Arsenal were destroyed under Napoleonic rule, and later rebuilt to enable the Arsenal's present use as a naval base. It is also used as a research centre, an exhibition venue during the Venice Biennale and is home to a historic boat preservation centre. (Wikipedia)</English>
+		<French>[TAB] Not translated. </French>
+		<German>[TAB] The Venetian Arsenal (Italian: Arsenale di Venezia) is a shipyard and naval depot that played a leading role in Venetian empire-building. It was one of the most important areas of Venice, lying in the Castello sestiere.[PARAGRAPH:2]The Byzantine-style establishment may have existed as early as the eighth century, though the present structure is usually said to have been begun in 1104 during the reign of Ordelafo Faliero, although there is no evidence for such a precise date. It definitely existed by the early thirteenth century and is mentioned in Dante's Inferno. The name probably comes from Arabic Dar al Sina_a ("Dockyard") and the concept was clearly Islamic as much as Byzantine.[PARAGRAPH:2]Initially the state dockyard worked merely to maintain naval ships built privately, but in 1320 the Arsenal Nuovo was built, much larger than the original. It enabled all the state's navy and the larger merchant ships to be both constructed and maintained in one place. The Arsenal incidentally became an important centre for rope manufacture, while housing for the arsenal workers grew up outside its walls.[PARAGRAPH:2]Venice developed methods of mass-producing warships in the Arsenal, including the frame-first system to replace the Roman hull-first practice. The new system was much faster and required less wood. At the peak of its efficiency in the early sixteenth century, the Arsenal employed some 16,000 people who apparently were able to produce nearly one ship each day, and could fit out, arm, and provision a newly-built galley with standardized parts on a production-line basis not seen again until the Industrial Revolution.[PARAGRAPH:2]The staff of the Arsenal also developed new firearms at an early date, beginning with bombards in the 1370s and numerous small arms against the Genoese a few years later. Improvements in handguns led to their muzzle velocity (and therefore their ability to penetrate armor) exceeding that of the crossbow. The Venetian condottieri leader, Bartolomeo Colleoni, is usually given credit as being the first to mount the Arsenal's new lighter-weight artillery on mobile carriages for field use.[PARAGRAPH:2]The Arsenal's main gate, the Porta Magna, was built in about 1460 and was the first Classical revival structure to be built in Venice. It was perhaps built by Antonio Gambello from a design by Jacopo Bellini. Two lions taken from Greece situated beside it were added in 1687. One of the lions, known as the Piraeus Lion, is notable for having been defaced with lengthy runic inscriptions carved in the eleventh century by Scandinavian mercenary soldiers.[PARAGRAPH:2]The Arsenal Novissimo was begun in 1473. It enabled the creation of a system similar to an assembly line, in which hulls were constructed in the newer areas of the Arsenal before being fitted out in the old Arsenal.[PARAGRAPH:2]In the late sixteenth century, the Arsenal's designers experimented with larger ships as platforms for heavy naval guns. The most impressive was the galleass, already used at Lepanto, and developed from the old merchanting "great galley". It was huge, with sails as well as oars, and was virtually a floating fortress, with guns mounted on wheeled carriages along the sides in the modern fashion. It was slow and unwieldy in battle, however, and few were ever built. The galleon, also developed at the Arsenal, was an armed sailing ship, a slimmer version of the merchant "round ship". It was useful in major naval battles, but not in the small bays and off the frequent lee shores of the Dalmatian coast.[PARAGRAPH:2]Significant parts of the Arsenal were destroyed under Napoleonic rule, and later rebuilt to enable the Arsenal's present use as a naval base. It is also used as a research centre, an exhibition venue during the Venice Biennale and is home to a historic boat preservation centre. (Wikipedia)</German>
+		<Italian>[TAB] Not translated. </Italian>
+		<Spanish>[TAB] Not translated. </Spanish>
+		<Portuguese>.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GRAND_ARSENAL_STRATEGY</Tag>
+		<English>The [COLOR_BUILDING_TEXT]Grand Arsenal[COLOR_REVERT] is a powerful tool to build a strong navy in a short time.</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GRAND_ARSENAL_HELP</Tag>
+		<English>[ICON_BULLET]3 heavily promoted Galleass units appear in your city</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GALATA_TOWER</Tag>
+		<English>Galata Tower</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GALATA_TOWER_PEDIA</Tag>
+		<English>[TAB]The Galata Tower (Galata Kulesi in Turkish), called Christea Turris (the Tower of Christ in Latin) by the Genoese, is a medieval stone tower in the Galata district of Istanbul, Turkey, just to the north of the Golden Horn. One of the city's most striking landmarks, it is a high, cone-capped cylinder that dominates the skyline and affords a panoramic vista of Old Istanbul and its environment.[PARAGRAPH:2]The tower was built as Christea Turris (Tower of Christ) in 1348 during an expansion of the Genoese colony in Constantinople. It was the apex of the fortifications surrounding the Genoese citadel of Galata. The current tower should not be confused with the old Tower of Galata, an original Byzantine tower named Megalos Pyrgos (English: Great Tower) which controlled the northern end of the massive sea chain that closed the entrance to the Golden Horn. That tower was on a different site and was largely destroyed in 1203, during the Fourth Crusade of 1202 - 1204.</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GALATA_TOWER_HELP</Tag>
+		<English>[ICON_BULLET]Increases spread chance of Trading Companies in all your cities</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KIZIL_KULE</Tag>
+		<English>Kizil Kule</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KIZIL_KULE_PEDIA</Tag>
+		<English>[TAB]The Kizil Kule (Red Tower) is a historical tower in the Turkish city of Alanya. The building is considered to be the symbol of the city, and is even used on the city's flag.[PARAGRAPH:2]Construction of the building began in the early reign of the Anatolian Seljuq Sultan Ala ad-Din Kay Qubadh I and was completed in 1226. The sultan brought the accomplished architect Ebu Ali Reha from Aleppo, Syria to Alanya to complete the building. The octagonal red brick tower protects the Tersane (shipyard) which dates from 1221.[PARAGRAPH:2]The name derives from the more red color brick he used in its construction. The building itself is 33 m high and 12.5 m wide. It remains one of the finest examples of medieval military architecture, and is the best preserved Seljuk building in the city. Like many buildings in the city, the Tower flies a Turkish Flag from its crenelations.</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KIZIL_KULE_HELP</Tag>
+		<English>[ICON_BULLET]+2[ICON_COMMERCE] from Harbor in all cities[NEWLINE][ICON_BULLET]+25% Defense in All Coastal Cities</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GEDIMINAS_TOWER</Tag>
+		<English>Gediminas' Tower</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GEDIMINAS_TOWER_PEDIA</Tag>
+		<English>[TAB]The Vilnius Castle Complex is a group of cultural and historic structures on the left bank of the Neris River, near its confluence with the Vilnia River. The buildings, which evolved between the 10th and 18th centuries, were one of Lithuania's major defensive structures. One part of the castle complex, which was built on a hilltop, is known as the Upper Castle, while Gediminas' Tower is the only remaining part of the Upper Castle.[PARAGRAPH:2]The first fortifications were built of wood, and since about the 13th century the hilltop has been surrounded by stone walls with towers. During the rule of Gediminas, Vilnius was designated as the capital city; in 1323, the castle was improved and expanded.[PARAGRAPH:2]Pagan Lithuania waged war with the Christian Orders for more than two centuries. The Orders were seeking to conquer Lithuania, stating that their motivation was the conversion of pagan Lithuanians to Catholicism. As Vilnius evolved into one of the most important cities in the state, it became a primary military target. The Castle Complex was attacked by the Teutonic Order in 1365, 1375, 1377, 1383, 1390, 1392, 1394 and 1402, but was never completely taken.[PARAGRAPH:2]After a major fire in 1419, Vytautas initiated a reconstruction of the Upper Castle, along with the fortification of other buildings in the complex (in Gothic style), and it served an important role in the following centuries.[PARAGRAPH:2]After the 16th century, the Upper Castle was not maintained, and it suffered from neglect. It was used as a fortress for the last time during the invasion of the Russians in 1655, when for the first time in Lithuanian history, a foreign army captured the entire complex. Even though the Polish-Lithuanian army managed to recapture Vilnius and the castles six years later, the Upper Castle stood abandoned and was not reconstructed afterwards.[PARAGRAPH:2]Today, the remaining Gediminas' Tower is a major state and historic symbol of the city of Vilnius and of the nation itself. It is depicted on the national currency, the litas, and is mentioned in numerous Lithuanian patriotic poems and folk songs. The Flag of Lithuania was re-hoisted atop the tower on October 7, 1988, during the independence movement that was finalized by the Act of the Re-Establishment of the State of Lithuania on March 11, 1990. A reconstruction of the Royal Palace of Lithuania was completed in 2009, and is located near the base of the hill upon which Gediminas' Tower stands.</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GEDIMINAS_TOWER_HELP</Tag>
+		<English>[ICON_BULLET]Restores some of the city defenses on Combat Victory</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TORRE_DEL_ORO</Tag>
+		<English>Torre del Oro</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TORRE_DEL_ORO_PEDIA</Tag>
+		<English>[TAB]The Torre del Oro (English: "Gold Tower") is a dodecagonal military watchtower in Seville, southern Spain, built by the Almohad dynasty in order to control access to Seville via the Guadalquivir river.[PARAGRAPH:2]Constructed in the first third of the 13th century, the tower served as a prison during the Middle Ages and as a secure enclosure for the protection of precious metals periodically brought by the fleet of the Indies, another possible origin for the tower's name.[PARAGRAPH:2]It is one of two anchor points for a large chain that would have been able to block the river. The other anchor-point has since been demolished or disappeared, possibly from collapsing during the 1755 Lisbon Earthquake. The chain was used in the city's defense against the Castilian fleet under Ram¨®n de Bonifaz in 1248 Reconquista. Bonifaz broke the river defenses and isolated Seville from Triana. The besieged Muslim city soon surrendered to the Christian forces.</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TORRE_DEL_ORO_HELP</Tag>
+		<English>[ICON_BULLET]Chance for a minor Golden Age on Colony completion</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_THE_DUOMO</Tag>
+		<English>The Duomo</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_THE_DUOMO_PEDIA</Tag>
+		<English>[TAB]The Basilica di Santa Maria del Fiore (English: Basilica of Saint Mary of the Flower) is the main church of Florence, Italy. The Duomo, as it is ordinarily called, was begun in 1296 in the Gothic style to the design of Arnolfo di Cambio and completed structurally in 1436 with the dome engineered by Filippo Brunelleschi. The exterior of the basilica is faced with polychrome marble panels in various shades of green and pink bordered by white and has an elaborate 19th century Gothic Revival facade by Emilio De Fabris.[PARAGRAPH:2]The cathedral complex, located in Piazza del Duomo, includes the Baptistery and Giotto's Campanile. The three buildings are part of the UNESCO World Heritage Site covering the historic centre of Florence and are a major attraction to tourists visiting the region of Tuscany. The basilica is one of Italy's largest churches, and until development of new structural materials in the modern era, the dome was the largest in the world. It remains the largest brick dome ever constructed.</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_THE_DUOMO_HELP</Tag>
+		<English>[ICON_BULLET]Fewer Temples are required for building Cathedrals (-1 per Cathedral)</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MONT_SAINT_MICHEL</Tag>
+		<English>Mont Saint-Michel</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MONT_SAINT_MICHEL_PEDIA</Tag>
+		<English>[TAB]Mont Saint-Michel is a rocky tidal island and a commune in Normandy, France. It is located approximately one kilometre off the country's north-western coast, at the mouth of the Couesnon River near Avranches. The population of the island is 41, as of 2006. The island has been a strategic point holding fortifications since ancient times, and since the 8th century AD it became the seat of the Saint-Michel monastery, from which it draws the name. The Mont-Saint-Michel and its bay are part of the UNESCO list of World Heritage Sites. More than 3,000,000 people visit it each year.[PARAGRAPH:2]Mont Saint-Michel was used in the 6th and 7th centuries as an Armorican stronghold of Romano-Breton culture and power, until it was ransacked by the Franks, thus ending the trans-channel culture that had stood since the departure of the Romans in AD 460. Before the construction of the first monastic establishment in the 8th century, the island was called "monte tombe". According to legend, the Archangel Michael appeared to St. Aubert, bishop of Avranches, in 708 and instructed him to build a church on the rocky islet. Aubert repeatedly ignored the angel's instruction, until Michael burned a hole in the bishop's skull with his finger.</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MONT_SAINT_MICHEL_HELP</Tag>
+		<English>[ICON_BULLET]Building Walls and Castles increases Faith in your civilization</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BOYANA_CHURCH</Tag>
+		<English>Boyana Church</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BOYANA_CHURCH_PEDIA</Tag>
+		<English>[TAB]The Boyana Church is a medieval Bulgarian Orthodox church situated on the outskirts of Sofia. In 1979, the building was added to the UNESCO World Heritage List. The east wing of the two-storey church was originally constructed in the late 10th or early 11th century, then the central wing was added in the 13th century under the Second Bulgarian Empire, the whole building being finished with a further expansion to the west in the middle of the 19th century. A total of 89 scenes with 240 human images are depicted on the walls of the church.[PARAGRAPH:2]Besides the first layer of 11th-12th-century frescoes, of which only fragments are preserved, and the famous second layer of murals from 1259, the church also has a smaller number of later frescoes from the 14th and 16th-17th centuries, as well as from 1882. The church owes its world fame mainly to its frescoes from 1259. They form a second layer over the paintings from earlier centuries and represent one of the most complete and well-preserved monuments of medieval art in the Balkans.[PARAGRAPH:2]Eighteen scenes in the narthex depict the life of Saint Nicholas. The painter here drew certain aspects of contemporary lifestyle. In The Miracle at Sea, the ship and the sailors' hats recall the Venetian fleet. The portraits of the patrons of the church - Sebastocrator Kaloyan and his wife Dessislava, as well as those of Bulgarian tsar Constantine Tikh and Tsaritsa Irina, are thought to be among the most impressive and lifelike frescoes in the church, and are located on the north wall of the church.</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BOYANA_CHURCH_HELP</Tag>
+		<English>[ICON_BULLET]Doubles faith points from the "Write great work of Theology" action of Great Theologians</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SAMOGITIAN_ALKAS</Tag>
+		<English>Samogitian Alkas</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SAMOGITIAN_ALKAS_PEDIA</Tag>
+		<English>[TAB]The Samogitian Alkas is a pagan sanctuary located at the hills near Sventoji (in the vicinity of Palanga). It's origin is a 14th century astronomical observatory site, which was installed on the top of Mount Birute. The site was restored in 1988.[PARAGRAPH:2]During the restoration of the pagan sanctuary, wooden columns carved by folk artists were put up in the Samogitian Sanctuary and each of the columns symbolizes the names of mythological gods and goddesses of the Balts: Perkunas (Thunder), Ausrine (Morning star the Venus), Zemyna (Goddess of Earth Vitality), Austeja (Goddess of Bees), Ondenis (Water God), Patrimpas (God of plants and Spring), Patulas (Unger earth God), Velnias (God of Dead Souls), Leda (Mother of Gods and heavenly bodies), Saule (the Sun) and Menulis (the Moon). When the sun goes down to the sea, these columns help to determine pagan calendar holidays.[PARAGRAPH:2]Now pagan feasts connected to the holidays are celebrated here, while pagan ceremonies and rituals in the honour of amber are still organised at the site.</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BORGUND_STAVE_CHURCH</Tag>
+		<English>Borgund Stave Church</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BORGUND_STAVE_CHURCH_PEDIA</Tag>
+		<English>[TAB]Borgund Stave Church is a stave church located in Borgund, Norway. It is classified as a triple nave stave church of the so-called Sogn-type. This is also the best preserved of Norway's 28 extant stave churches.[PARAGRAPH:2]Borgund was built sometime between 1180 and 1250 CE with later additions and restorations. Its walls are formed by vertical wooden boards, or staves, hence the name "stave church". The four corner posts were connected to one another by ground sills, resting on a stone foundation. The rest of the staves then rise from the ground sills, each stave notched and grooved along the sides so that they lock into one another, forming a sturdy wall.</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BORGUND_STAVE_CHURCH_STRATEGY</Tag>
+		<English>The [COLOR_BUILDING_TEXT]Borgund Stave Church[COLOR_REVERT] allows the player to build religious buildings at a reduced cost.</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BORGUND_STAVE_CHURCH_HELP</Tag>
+		<English>[ICON_BULLET]Production cost of Religious buildings is reduced by 40% in all cities</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BLUE_MOSQUE</Tag>
+		<English>Blue Mosque</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BLUE_MOSQUE_PEDIA</Tag>
+		<English>[TAB]The Sultan Ahmed Mosque is a historical mosque in Istanbul, the largest city in Turkey and the capital of the Ottoman Empire from 1453 to 1923. The mosque is popularly known as the Blue Mosque: Hand-painted blue tiles adorn the mosque's interior walls, and at night the mosque is bathed in blue as lights frame the mosque's five main domes, six minarets and eight secondary domes. It was built between 1609 and 1616, during the rule of Ahmed I. Like many other mosques, it also comprises a tomb of the founder, a madrasah and a hospice.[PARAGRAPH:2]The design of the Sultan Ahmed Mosque is the culmination of two centuries of both Ottoman mosque and Byzantine church development. It incorporates some Byzantine elements of the neighboring Hagia Sophia with traditional Islamic architecture and is considered to be the last great mosque of the classical period. The architect has ably synthesized the ideas of his master Mimar Sinan, aiming for overwhelming size, majesty and splendour.[PARAGRAPH:2]At its lower levels and at every pier, the interior of the mosque is lined with more than 20,000 handmade ceramic tiles, made at Iznik (the ancient Nicaea) in more than fifty different tulip designs. At gallery level their design becomes flamboyant with representations of flowers, fruit and cypresses, while there are more than 200 stained glass windows in the mosque. The upper levels of the interior are dominated by blue paint.</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BLUE_MOSQUE_HELP</Tag>
+		<English>[ICON_BULLET]-20% production cost in all cities for buildings present in the capital city</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SELIMIYE_MOSQUE</Tag>
+		<English>Selimiye Mosque</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SELIMIYE_MOSQUE_PEDIA</Tag>
+		<English>[TAB]The Selimiye Mosque (Turkish: Selimiye Camii) is an Ottoman imperial mosque, which is located in the city of Edirne, Turkey. The mosque was commissioned by Sultan Selim II, and was built by architect Mimar Sinan between 1569 and 1575. It was considered by Sinan to be his masterpiece and is one of the highest achievements of Islamic architecture.[PARAGRAPH:2]Selimiye Mosque was built at the peak of Ottoman military and cultural power. As the empire started to grow, the emperor had found an immediate urge to centralize the city. Sinan was asked to help to construct the Selimiye Mosque, making the mosque distinctive and served the purpose of centralizing the city. In this mosque he employed an octagonal supporting system that is created through eight pillars incised in a square shell of walls. The four semi domes at the corners of the square behind the arches that spring from the pillars, are intermediary sections between the huge encompassing dome (31.25 metres diameter with spherical profile) and the walls. The beauty resulting from the conformity of geometric shapes engulfed in each other was the culmination of Sinan's lifelong search for a unified interior space.[PARAGRAPH:2]The interior of the mosque received great recognitions from its clean, spare lines in the structure itself. With the monumental exteriors proclaiming the wealth and power of the Ottoman Empire, the plain symmetrical interiors reminded the sultans should always provide a humble and faithful heart in order to connect and communicate with God. To enter, it was to forget the power, determination, wealth and technical mastery of the Ottoman Empire. Lights were seeped through multitude of tiny windows, and the interchanging of the weak light and dark was interpreted as the insignificance of humanity. The Selimiye did not only amaze the public with the extravagant symmetrical exterior, it had also astonished the people with the plain symmetrical interior for it had summarized all Ottoman architectural thinking in one simple pure form.</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SELIMIYE_MOSQUE_HELP</Tag>
+		<English>[ICON_BULLET]+100% Experience Points for new units during Golden Ages (in all cities)</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AL_AZHAR_UNIVERSITY</Tag>
+		<English>Al-Azhar University</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AL_AZHAR_UNIVERSITY_PEDIA</Tag>
+		<English>[TAB]Al-Azhar University ("the (honorable) Azhar University") is a university in Cairo, Egypt. Associated with Al-Azhar Mosque in Islamic Cairo, it is Egypt's oldest degree-granting university and is renowned as "Sunni Islam's most prestigious university".[PARAGRAPH:2]Founded in 970 or 972 as a centre of Islamic learning, it is one of the relics of the Isma'ili Shia Fatimid dynasty era of Egypt. Its students studied the Qur'an and Islamic law in detail, along with logic, grammar, rhetoric, and how to calculate the phases of the moon. It was one of the first universities in the world, and the only one in the Arabic world to survive as a modern university including secular subjects in the curriculum. Today it is the chief centre of Arabic literature and Islamic learning in the world.[PARAGRAPH:2]Studies began at Al-Azhar in the month of Ramadan, 975. The Jami'ah (Madrasa) had faculties in Islamic law and jurisprudence, Arabic grammar, Islamic astronomy, Islamic philosophy, and logic. The Fatimids gave attention to the philosophical studies at the time when rulers in other countries declared those who were engaged in philosophical pursuits as apostates and heretics. The Greek thought found a warm reception with the Fatimids who expanded the boundaries of such studies. They paid much attention to philosophy and gave support to everyone who was known for being engaged in the study of any branch of philosophy. The Fatimid Caliph invited many scholars from nearby countries and paid much attention to college books on various branches of knowledge and in gathering the finest writing on various subjects and this in order to encourage scholars and to uphold the cause of knowledge. Most of these books were destroyed by Saladin though, when he converted Al-Azhar to a Shafi'ite Sunni center of learning.[PARAGRAPH:2]In 1961 additional non-religious subjects were added to its curriculum: a wide range of secular faculties were added for the first time, such as business, economics, science, pharmacy, medicine, engineering and agriculture. In addition to higher education, Al-Azhar oversees a national network of schools with approximately two million students. As of 1996, over 4000 teaching institutes in Egypt were affiliated with the University.[PARAGRAPH:2]Its library is considered second in importance in Egypt only to the Egyptian National Library and Archives. In May 2005, Al-Azhar launched a project to eventually publish online access to the library's entire rare manuscripts collection, comprising about seven million pages of material.</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AL_AZHAR_UNIVERSITY_STRATEGY</Tag>
+		<English>The [COLOR_BUILDING_TEXT]Al-Azhar University[COLOR_REVERT] increases research progress for all religious technologies, effectively reducing the cost required to complete them.</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AL_AZHAR_UNIVERSITY_HELP</Tag>
+		<English>[ICON_BULLET]-20%[ICON_RESEARCH] cost for Religious Technologies</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MOSQUE_OF_KAIROUAN</Tag>
+		<English>Great Mosque of Kairouan</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MOSQUE_OF_KAIROUAN_PEDIA</Tag>
+		<English>[TAB]The Great Mosque of Kairouan, also known as the Mosque of Uqba, is a mosque in Tunisia, situated in the UNESCO World Heritage town of Kairouan.[PARAGRAPH:2]Established by the Arab general Uqba ibn Nafi in 670 AD at the founding of the city of Kairouan, the mosque is spread over a surface area of 9,000 square metres and it is one of the oldest places of worship in the Islamic world, as well as a model for all later mosques in the Maghreb. The Great Mosque of Kairouan is one of the most impressive and largest Islamic monuments in North Africa; its perimeter is almost equal to 405 metres (1,328 feet). This space contains a hypostyle prayer hall, a marble-paved courtyard and a square minaret. In addition to its spiritual prestige, the Mosque of Uqba is one of the masterpieces of Islamic architecture, notable among other things for the first Islamic use of the horseshoe arch.[PARAGRAPH:2]Under the Aghlabids (9th century), huge works gave the mosque its present aspect. The fame of the Mosque of Uqba and of the other holy sites at Kairouan helped the city to develop and repopulate increasingly. The university, consisting of scholars who taught in the mosque, was a centre of education both in Islamic thought and in the secular sciences. Its role can be compared to that of the University of Paris in the Middle Ages. With the decline of the city of Kairouan from the mid-11th century (The Banu Hilal tribes so utterly destroyed Kairouan in 1057 that it never regained its former importance and their influx was a major factor in the spread of nomadism in areas where agriculture had previously been dominant), the centre of intellectual thought moved to the University of Ez-Zitouna in Tunis and other major cities in the Maghreb.</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KOUTOUBIA_MOSQUE</Tag>
+		<English>Koutoubia Mosque</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KOUTOUBIA_MOSQUE_PEDIA</Tag>
+		<English>[TAB]The Koutoubia Mosque or Kutubiyya Mosque is the largest mosque in Marrakesh, Morocco, located in the southwest medina quarter of Marrakesh. The mosque is ornamented with curved windows, a band of ceramic inlay, pointed merlons, and decorative arches; it has a large plaza with gardens, and is floodlit at night. The minaret, 77 metres (253 ft) in height, includes a spire and orbs. It was completed under the reign of the Berber Almohad Caliph Yaqub al-Mansur (1184 to 1199), and has inspired other buildings such as the Giralda of Seville and the Hassan Tower of Rabat.[PARAGRAPH:2]The city of Marrakesh was captured by the Almohads after the death of the Almoravid leader Ali ibn Yusuf in 1147. The Almohads did not want any trace of religious monuments built by the Almoravids, their staunch enemies, as they considered them heretics. Abd-al-Mu'min, who won the territory, was responsible for building the first Koutoubiya mosque on the grounds of the former palace of Ali ibn Yusuf in the southwest quarter of the medina. This first mosque was started between 1147 and 1154 and completed in 1157.[PARAGRAPH:2]A second mosque was built under the Almohad Caliph Yaqub al-Mansur, as it was realized halfway through construction that the initial mosque's mihrab (prayer niche) was misaligned and not oriented towards Mecca. In some opinions the second mosque was already undergoing construction when the first mosque was completed. The second mosque was built identical to the first except for its orientation. The layout, architectural designs, inscriptions, dimensions and materials used for construction were all the same. The minaret plan and design remained the same in both buildings. It was completed by the 1190s, though reported completion dates vary between 1190 and 1199. The first mosque eventually deteriorated. It is apparent that the second mosque was not built as an alternative to the first one, as the two mosques shared the same site for 30 years before the first mosque became derelict. Funnily, while in the first mosque the orientation of the mihrab was 5 degrees out of alignment with respect to the direction towards Mecca, in the second mosque the orientation was 10 degrees off, thus actually further out of alignment with Mecca than the first mosque.[PARAGRAPH:2]The Koutoubia Mosque and tower constitute the oldest and most complete structure of the Almohad period. The mosque was followed by two other structures built on the same pattern, the Tour Hassan in Rabat and the Giralda in Seville, Spain. This structure thus became the forerunner of Moroccan-Andalusian architecture. Non-Muslims are not allowed inside the mosque; however, they are permitted to visit the Tin Mal Mosque, built on the lines of Koutoubia Mosque.[PARAGRAPH:2]The mosque is made of red stone, formerly plastered, and has six rooms in succession, one above the other. It was designed so as to prevent anyone gazing in from the minaret to the harems of the king. Even in the modern day, such restrictions are enforced by blocking Google Earth access to Moroccans.</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KOUTOUBIA_MOSQUE_HELP</Tag>
+		<English>[ICON_BULLET]+4 stability points with [LINK=literal]Religious Law[\LINK]</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SAINT_CATHERINE_MONASTERY</Tag>
+		<English>St. Catherine's Monastery</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SAINT_CATHERINE_MONASTERY_PEDIA</Tag>
+		<English>[TAB]Built between 548 and 565, Saint Catherine's Monastery is one of the oldest working Christian monasteries in the world. It lies on the Sinai Peninsula, at the mouth of a gorge at the foot of Mount Sinai, near the town of Saint Catherine, Egypt. The monastery is controlled by the autonomous Church of Sinai, part of the wider Eastern Orthodox Church, and is a UNESCO World Heritage Site.[PARAGRAPH:2]The site contains the world's oldest continually operating library, possessing many unique books including the Syriac Sinaiticus and, until 1859, the Codex Sinaiticus (a manuscript dating from the 4th Century, at the time the oldest almost completely preserved manuscript of the Bible). The monastery library preserves the second largest collection of early codices and manuscripts in the world, outnumbered only by the Vatican Library. It contains Greek, Arabic, Armenian, Coptic, Hebrew, Georgian, Aramaic and Caucasian Albanian texts.[PARAGRAPH:2]According to tradition, Catherine of Alexandria was a Christian martyr sentenced to death on the breaking wheel. When this failed to kill her, she was beheaded, and angels took her remains to Mount Sinai. Around the year 800, monks from the Sinai Monastery found her remains.[PARAGRAPH:1]Although it is commonly known as Saint Catherine's, the monastery's full official name is the Sacred Monastery of the God-Trodden Mount Sinai. The patronal feast of the monastery is the Feast of the Transfiguration. The monastery has become a favorite site of pilgrimage.</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SAINT_CATHERINE_MONASTERY_HELP</Tag>
+		<English>[ICON_BULLET]Provides 2 Holy Relics</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
 	</TEXT>
 		<!-- World Wonders -->
 		<!-- National Wonders -->
@@ -1057,7 +1786,7 @@
 		<Portuguese>[ICON_BULLET]Não gera infelicidade por lutar contra irmãos em fé, penalidade diplomática com nações que têm a mesma religião estatal</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VASSAL_UU</Tag>
+		<Tag>TXT_KEY_BUILDING_VASSAL_UU</Tag>
 		<English>[ICON_BULLET]Train a Vassal's Unique Unit</English>
 		<French>[ICON_BULLET]Entraîne les UU de vos vassaux</French>
 		<German>[ICON_BULLET]Erlaubt die Spezialeinheit der Vasallen zu trainieren</German>
@@ -1066,22 +1795,58 @@
 		<Portuguese>[ICON_BULLET]Treina uma Unidade Única de um Vassalo</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TOPKAPI_PALACE_EFFECT</Tag>
-		<English>[COLOR_BUILDING_TEXT]The Topkapi Palace[COLOR_SELECTED_TEXT] ensured that a %s1 was trained instead of a %s2!</English>
-		<French>[COLOR_BUILDING_TEXT]The Topkapi Palace[COLOR_SELECTED_TEXT] ensured that a %s1 was trained instead of a %s2!</French>
-		<German>[COLOR_BUILDING_TEXT]The Topkapi Palace[COLOR_SELECTED_TEXT] ensured that a %s1 was trained instead of a %s2!</German>
-		<Italian>[COLOR_BUILDING_TEXT]The Topkapi Palace[COLOR_SELECTED_TEXT] ensured that a %s1 was trained instead of a %s2!</Italian>
-		<Spanish>[COLOR_BUILDING_TEXT]The Topkapi Palace[COLOR_SELECTED_TEXT] ensured that a %s1 was trained instead of a %s2!</Spanish>
-		<Portuguese>[COLOR_BUILDING_TEXT]The Topkapi Palace[COLOR_SELECTED_TEXT] ensured that a %s1 was trained instead of a %s2!</Portuguese>
+		<Tag>TXT_KEY_BUILDING_TOPKAPI_PALACE_EFFECT</Tag>
+		<English>The [COLOR_BUILDING_TEXT]Topkapi Palace[COLOR_REVERT] ensured that a [COLOR_SELECTED_TEXT]%s1[COLOR_REVERT] was trained instead of a %s2!</English>
+		<French>The [COLOR_BUILDING_TEXT]Topkapi Palace[COLOR_REVERT] ensured that a %s1 was trained instead of a %s2!</French>
+		<German>The [COLOR_BUILDING_TEXT]Topkapi Palace[COLOR_REVERT] ensured that a %s1 was trained instead of a %s2!</German>
+		<Italian>The [COLOR_BUILDING_TEXT]Topkapi Palace[COLOR_REVERT] ensured that a %s1 was trained instead of a %s2!</Italian>
+		<Spanish>The [COLOR_BUILDING_TEXT]Topkapi Palace[COLOR_REVERT] ensured that a %s1 was trained instead of a %s2!</Spanish>
+		<Portuguese>The [COLOR_BUILDING_TEXT]Topkapi Palace[COLOR_REVERT] ensured that a %s1 was trained instead of a %s2!</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_LEANING_TOWER_EFFECT</Tag>
-		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a</English>
-		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_SELECTED_TEXT] has inspired a</French>
-		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_SELECTED_TEXT] inspirierte einen</German>
-		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_SELECTED_TEXT] ha ispirato un</Italian>
-		<Spanish>[COLOR_BUILDING_TEXT]A Torre de Pisa[COLOR_SELECTED_TEXT] inspirou um</Spanish>
-		<Portuguese>[COLOR_BUILDING_TEXT]A Torre de Pisa[COLOR_SELECTED_TEXT] inspirou um</Portuguese>
+		<Tag>TXT_KEY_BUILDING_BIBLIOTHECA_CORVINIANA_EFFECT</Tag>
+		<English>Thanks to the [COLOR_BUILDING_TEXT]Bibliotheca Corviniana[COLOR_REVERT], we have found out the secrets of [COLOR_SELECTED_TEXT]%s1![COLOR_REVERT]</English>
+		<French>Thanks to the [COLOR_BUILDING_TEXT]Bibliotheca Corviniana[COLOR_REVERT], we have found out the secrets of %s1!</French>
+		<German>Thanks to the [COLOR_BUILDING_TEXT]Bibliotheca Corviniana[COLOR_REVERT], we have found out the secrets of %s1!</German>
+		<Italian>Thanks to the [COLOR_BUILDING_TEXT]Bibliotheca Corviniana[COLOR_REVERT], we have found out the secrets of %s1!</Italian>
+		<Spanish>Thanks to the [COLOR_BUILDING_TEXT]Bibliotheca Corviniana[COLOR_REVERT], we have found out the secrets of %s1!</Spanish>
+		<Portuguese>Thanks to the [COLOR_BUILDING_TEXT]Bibliotheca Corviniana[COLOR_REVERT], we have found out the secrets of %s1!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SAINT_CATHERINE_MONASTERY_EFFECT</Tag>
+		<English>Your monks have found Holy Relics on the blessed grounds of the [COLOR_BUILDING_TEXT]St. Catherine Monastery![COLOR_REVERT]</English>
+		<French>Your monks have found Holy Relics on these blessed grounds!</French>
+		<German>Your monks have found Holy Relics on these blessed grounds!</German>
+		<Italian>Your monks have found Holy Relics on these blessed grounds!</Italian>
+		<Spanish>Your monks have found Holy Relics on these blessed grounds!</Spanish>
+		<Portuguese>Your monks have found Holy Relics on these blessed grounds!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_IMPERIAL_DIET_EFFECT</Tag>
+		<English>The [COLOR_BUILDING_TEXT]Imperial Diet[COLOR_REVERT] ensures a Golden Age for our newly acquired vassal!</English>
+		<French>The [COLOR_BUILDING_TEXT]Imperial Diet[COLOR_REVERT] ensures a Golden Age for our newly acquired vassal!</French>
+		<German>The [COLOR_BUILDING_TEXT]Imperial Diet[COLOR_REVERT] ensures a Golden Age for our newly acquired vassal!</German>
+		<Italian>The [COLOR_BUILDING_TEXT]Imperial Diet[COLOR_REVERT] ensures a Golden Age for our newly acquired vassal!</Italian>
+		<Spanish>The [COLOR_BUILDING_TEXT]Imperial Diet[COLOR_REVERT] ensures a Golden Age for our newly acquired vassal!</Spanish>
+		<Portuguese>The [COLOR_BUILDING_TEXT]Imperial Diet[COLOR_REVERT] ensures a Golden Age for our newly acquired vassal!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LEANING_TOWER_EFFECT</Tag>
+		<English>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_REVERT] has inspired a</English>
+		<French>[COLOR_BUILDING_TEXT]The Leaning Tower[COLOR_REVERT] has inspired a</French>
+		<German>[COLOR_BUILDING_TEXT]Der Schiefe Turm[COLOR_REVERT] inspirierte einen</German>
+		<Italian>[COLOR_BUILDING_TEXT]La Torre Pendente[COLOR_REVERT] ha ispirato un</Italian>
+		<Spanish>[COLOR_BUILDING_TEXT]A Torre de Pisa[COLOR_REVERT] inspirou um</Spanish>
+		<Portuguese>[COLOR_BUILDING_TEXT]A Torre de Pisa[COLOR_REVERT] inspirou um</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GREAT_LIGHTHOUSE_REMOVED</Tag>
+		<English>The Great Lighthouse was destroyed by an earthquake!</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FREE_SPECIALISTS</Tag>
@@ -1112,7 +1877,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IMPROVEMENT_FREE_SPECIALISTS</Tag>
-		<English>[ICON_BULLET]%D1_Change Free [NUM1:Specialist:Specialists] for each[SPACE]</English>
+		<English>[ICON_BULLET]%D1_Change Free [NUM1:Specialist:Specialists] for each worked[SPACE]</English>
 		<French>[ICON_BULLET]%D1_Change [NUM1:Sp&#233;cialiste gratuit:Sp&#233;cialistes gratuits] par[SPACE]</French>
 		<German>[ICON_BULLET]%D1_Change [NUM1:freier Spezialist:freie Spezialisten] pro[SPACE]</German>
 		<Italian>[ICON_BULLET]%D1_Change [NUM1:specialista:specialisti] gratis per[SPACE]</Italian>

@@ -14,7 +14,7 @@
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
 			<bValid>1</bValid>
 			<ProductionTraits/>
-			<Button>Art/Interface/Buttons/Buildings/Temple.dds</Button>
+			<Button>Art/Interface/Buttons/Buildings/generic_temple.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_CATHEDRAL</Type>
@@ -34,7 +34,7 @@
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
 			<bValid>1</bValid>
 			<ProductionTraits/>
-			<Button>Art/Interface/Buttons/Buildings/Monastery_Christian.dds</Button>
+			<Button>Art/Interface/Buttons/Buildings/generic_monastery.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_SEMINARY</Type>
@@ -56,7 +56,7 @@
 			<ProductionTraits/>
 			<Button>,-,Art/Interface/Buttons/rfce_atlas_buildings.dds,6,6</Button>
 		</SpecialBuildingInfo>
-		<SpecialBuildingInfo> <!-- Minaret also counts as a Chapel -->
+		<SpecialBuildingInfo> <!-- Minaret also counts as a Chapel/Belfry -->
 			<Type>SPECIALBUILDING_CHAPEL</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_CHAPEL</Description>
 			<ObsoleteTech>NONE</ObsoleteTech>
@@ -64,7 +64,7 @@
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
 			<bValid>1</bValid>
 			<ProductionTraits/>
-			<Button>,-,Art/Interface/Buttons/rfce_atlas_buildings.dds,2,2</Button>
+			<Button>Art/Interface/Buttons/Buildings/generic_belfry.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_RELIQUARY</Type>

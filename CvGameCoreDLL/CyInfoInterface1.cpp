@@ -396,6 +396,7 @@ void CyInfoPythonInterface1()
 		.def("getWarWearinessModifier", &CvCivicInfo::getWarWearinessModifier, "int ()")
 		.def("getFreeSpecialist", &CvCivicInfo::getFreeSpecialist, "int ()")
 		.def("getTradeRoutes", &CvCivicInfo::getTradeRoutes, "int ()")
+		.def("getCoastalTradeRoutes", &CvCivicInfo::getCoastalTradeRoutes, "int ()") // Absinthe: coastal trade routes
 		.def("getTechPrereq", &CvCivicInfo::getTechPrereq, "int ()")
 		.def("getCivicPercentAnger", &CvCivicInfo::getCivicPercentAnger, "int ()")
 		.def("getMaxConscript", &CvCivicInfo::getMaxConscript, "int ()")

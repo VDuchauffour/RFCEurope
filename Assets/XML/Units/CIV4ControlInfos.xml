@@ -71,9 +71,9 @@
 			<Type>CONTROL_SELECTCAPITAL</Type>
 			<Description>TXT_KEY_ACTION_SELECT_CAPITAL</Description>
 			<Help/>
-			<HotKey>KB_F10</HotKey>
+			<HotKey>KB_H</HotKey>
 			<bAltDown>0</bAltDown>
-			<bShiftDown>0</bShiftDown>
+			<bShiftDown>1</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<HotKeyAlt/>
@@ -357,9 +357,9 @@
 			<Description>TXT_KEY_ACTION_UNIT_ICONS</Description>
 			<Help>TXT_KEY_GLOBELAYER_UNITS</Help>
 			<HotKey>KB_U</HotKey>
-			<bAltDown>1</bAltDown>
+			<bAltDown>0</bAltDown>
 			<bShiftDown>0</bShiftDown>
-			<bCtrlDown>0</bCtrlDown>
+			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<HotKeyAlt/>
 			<bAltDownAlt>0</bAltDownAlt>
@@ -386,10 +386,10 @@
 			<Type>CONTROL_SCORES</Type>
 			<Description>TXT_KEY_ACTION_SCORES</Description>
 			<Help>TXT_KEY_ACTION_SCORES_HELP</Help>
-			<HotKey></HotKey>
+			<HotKey>KB_E</HotKey>
 			<bAltDown>0</bAltDown>
 			<bShiftDown>0</bShiftDown>
-			<bCtrlDown>0</bCtrlDown>
+			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<HotKeyAlt/>
 			<bAltDownAlt>0</bAltDownAlt>
@@ -567,7 +567,6 @@
 			<Description>TXT_KEY_ACTION_FLYING_CAMERA</Description>
 			<Help/>
 			<HotKey>KB_F</HotKey>
-			<!-- Rhye -->
 			<bAltDown>0</bAltDown>
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>1</bCtrlDown>
@@ -642,9 +641,9 @@
 			<Type>CONTROL_CORPORATION_SCREEN</Type>
 			<Description>TXT_KEY_ACTION_SHOW_CORPORATION_SCREEN</Description>
 			<Help/>
-			<HotKey>KB_F7</HotKey>
+			<HotKey>KB_F8</HotKey>
 			<bAltDown>0</bAltDown>
-			<bShiftDown>1</bShiftDown>
+			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<HotKeyAlt/>
@@ -792,7 +791,7 @@
 			<Type>CONTROL_VICTORY_SCREEN</Type>
 			<Description>TXT_KEY_VICTORY_SCREEN_TITLE</Description>
 			<Help/>
-			<HotKey>KB_F8</HotKey>
+			<HotKey>KB_F10</HotKey>
 			<bAltDown>0</bAltDown>
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
@@ -807,7 +806,7 @@
 			<Type>CONTROL_INFO</Type>
 			<Description>TXT_KEY_INFO_SCREEN</Description>
 			<Help/>
-			<HotKey>KB_F9</HotKey>
+			<HotKey>KB_F11</HotKey>
 			<bAltDown>0</bAltDown>
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
@@ -822,10 +821,10 @@
 			<Type>CONTROL_GLOBE_VIEW</Type>
 			<Description>TXT_KEY_GLOBE_VIEW</Description>
 			<Help/>
-			<HotKey>KB_F11</HotKey>
+			<HotKey>KB_G</HotKey>
 			<bAltDown>0</bAltDown>
 			<bShiftDown>0</bShiftDown>
-			<bCtrlDown>0</bCtrlDown>
+			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<HotKeyAlt/>
 			<bAltDownAlt>0</bAltDownAlt>
@@ -927,10 +926,10 @@
 			<Type>CONTROL_ESPIONAGE_SCREEN</Type>
 			<Description>TXT_KEY_ESPIONAGE_SCREEN</Description>
 			<Help/>
-			<HotKey>KB_E</HotKey>
+			<HotKey>KB_F9</HotKey>
 			<bAltDown>0</bAltDown>
 			<bShiftDown>0</bShiftDown>
-			<bCtrlDown>1</bCtrlDown>
+			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<HotKeyAlt/>
 			<bAltDownAlt>0</bAltDownAlt>
@@ -979,10 +978,10 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<HotKeyAlt>KB_K</HotKeyAlt>
+			<HotKeyAlt/>
 			<bAltDownAlt>0</bAltDownAlt>
 			<bShiftDownAlt>0</bShiftDownAlt>
-			<bCtrlDownAlt>1</bCtrlDownAlt>
+			<bCtrlDownAlt>0</bCtrlDownAlt>
 			<iHotKeyPriorityAlt>0</iHotKeyPriorityAlt>
 		</ControlInfo>
 	</ControlInfos>

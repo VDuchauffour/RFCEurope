@@ -181,6 +181,7 @@ public:
 	int getDefyResolutionPercentAnger(int iExtra = 0) const;
 	int getWarWearinessPercentAnger() const;																// Exposed to Python
 	int getLargestCityHappiness() const;																		// Exposed to Python
+	int getUniquePowerHappiness() const;																		// Exposed to Python
 	int getVassalHappiness() const;																		// Exposed to Python
 	int getVassalUnhappiness() const;																		// Exposed to Python
 	int unhappyLevel(int iExtra = 0) const;																	// Exposed to Python
@@ -573,7 +574,7 @@ public:
 	void setOriginalOwner(PlayerTypes eNewValue);
 
 	CultureLevelTypes getCultureLevel() const;														// Exposed to Python
-	 int getCultureThreshold() const;																	// Exposed to Python
+	int getCultureThreshold() const;																	// Exposed to Python
 	static int getCultureThreshold(CultureLevelTypes eLevel);
 	void setCultureLevel(CultureLevelTypes eNewValue, bool bUpdatePlotGroups);
 	void updateCultureLevel(bool bUpdatePlotGroups);
@@ -586,7 +587,7 @@ public:
 
 	int getBaseYieldRate(YieldTypes eIndex) const;															// Exposed to Python
 	int getBaseYieldRateModifier(YieldTypes eIndex, int iExtra = 0) const;			// Exposed to Python
-	 int getYieldRate(YieldTypes eIndex) const;												// Exposed to Python
+	int getYieldRate(YieldTypes eIndex) const;												// Exposed to Python
 	void setBaseYieldRate(YieldTypes eIndex, int iNewValue);												// Exposed to Python
 	void changeBaseYieldRate(YieldTypes eIndex, int iChange);												// Exposed to Python
 
