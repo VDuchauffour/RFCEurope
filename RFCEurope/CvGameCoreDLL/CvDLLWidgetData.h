@@ -174,6 +174,8 @@ public:
 	void parseFinanceUnitCost(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 	void parseFinanceAwaySupply(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 	void parseFinanceCityMaint(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseFinanceMercenaryMaintenance(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer); // Absinthe: mercenary upkeep
+	void parseFinanceColonyUpkeep(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer); // Absinthe: colony upkeep
 	void parseFinanceCivicUpkeep(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 	void parseFinanceForeignIncome(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 	void parseFinanceInflatedCosts(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);

@@ -3221,28 +3221,16 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 	{
 		if ((iFocusFlags == 0) || (iValue > 0) || (iPass == 0))
 		{
-		    
-		    if ((iFocusFlags & BUILDINGFOCUS_WORLDWONDER) || (iPass > 0))
-		    {
-		        if (isWorldWonderClass(eBuildingClass))
-		        {
-                    if (aiYieldRank[YIELD_PRODUCTION] <= 3)
-                    {
+			if ((iFocusFlags & BUILDINGFOCUS_WORLDWONDER) || (iPass > 0))
+			{
+				if (isWorldWonderClass(eBuildingClass))
+				{
+					if (aiYieldRank[YIELD_PRODUCTION] <= 3)
+					{
 						iValue++;
-                    }
-		        }
-		    }
-
-			// 3Miro: Building Civic combo
-			/*if ( (iCivicBuildingCommerse1 > -1) && (eBuilding == (BuildingTypes)(iCivicBuildingCommerse1 % 1000) )  && (GET_PLAYER(getOwnerINLINE()).isCivic((CivicTypes)((iCivicBuildingCommerse1/1000)%100))) ){
-				iValue += ((iCivicBuildingCommerse1 / 100000) %10) + ((iCivicBuildingCommerse1 / 1000000) %10) + ((iCivicBuildingCommerse1 / 10000000) %10) + ((iCivicBuildingCommerse1 / 100000000) %10);
-			};
-			if ( (iCivicBuildingCommerse2 > -1) && (eBuilding == (BuildingTypes)(iCivicBuildingCommerse2 % 1000) )  && (GET_PLAYER(getOwnerINLINE()).isCivic((CivicTypes)((iCivicBuildingCommerse2/1000)%100))) ){
-				iValue += ((iCivicBuildingCommerse2 / 100000) %10) + ((iCivicBuildingCommerse2 / 1000000) %10) + ((iCivicBuildingCommerse2 / 10000000) %10) + ((iCivicBuildingCommerse2 / 100000000) %10);
-			};
-			if ( (iCivicBuildingCommerse3 > -1) && (eBuilding == (BuildingTypes)(iCivicBuildingCommerse3 % 1000) )  && (GET_PLAYER(getOwnerINLINE()).isCivic((CivicTypes)((iCivicBuildingCommerse3/1000)%100))) ){
-				iValue += ((iCivicBuildingCommerse3 / 100000) %10) + ((iCivicBuildingCommerse3 / 1000000) %10) + ((iCivicBuildingCommerse3 / 10000000) %10) + ((iCivicBuildingCommerse3 / 100000000) %10);
-			};*/
+					}
+				}
+			}
 
 			// 3MiroCivicAI: Building Civic gold combo
 			int iCivic;			
@@ -3257,7 +3245,7 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 				};
 			};
 			// 3MiroCivic: end
-		    
+
 			if ((iFocusFlags & BUILDINGFOCUS_DEFENSE) || (iPass > 0))
 			{
 				if (!bAreaAlone)
@@ -7576,7 +7564,7 @@ int CvCityAI::AI_yieldValue(short* piYields, short* piCommerceYields, bool bAvoi
 	for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 	{
 		int iModifier = getTotalCommerceRateModifier((CommerceTypes)iJ);
-				    
+		
 		int iCommerceTimes100 = aiYields[YIELD_COMMERCE] * GET_PLAYER(getOwnerINLINE()).getCommercePercent((CommerceTypes)iJ);
 		if (piCommerceYields != NULL)
 		{

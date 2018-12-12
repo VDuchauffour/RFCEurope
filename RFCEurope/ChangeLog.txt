@@ -66,6 +66,267 @@ Changes for RFCE 1.6:
 	- Fixed bug where some of your Chivalric Knights did not leave for the Crusade, but appeared as a Crusader unit
 	- Changed the color of some messages related to the Rise and Fall mechanics from green to red
 
+	New wonders:
+	- New wonder: Jasna Gora - +8 culture, +20% defence (cannot be broken by bombardment), +2 culture from temple in all cities, free March promotion for units, +2 GPP (Great Artist)
+	- New wonder: Samogitian Alkas - +6 culture (some of it stays without Paganism too), +1 culture for each city if you don't have a state religion, +2 science, +1 GPP (Great Scholar)
+	- New wonder: Gediminas Tower - +4 culture, +30% defence, restores some of the city defences on combat victory in the city, +2 GPP (Great Engineer)
+	- New wonder: Grand Arsenal - +2 culture, +4 xp and +100% production speed for naval units, +3 heavily promoted Gun Galley / Galleass units appear in the city, +2 GPP (Great Engineer)
+	- New wonder: Galata Tower - +4 culture, +1 trade route, increases chance for company spread in all your cities, +2 GPP (Great Merchant)
+	- New wonder: The Doumo - +10 culture, 1 fewer temple required to build Cathedrals, +2 GPP (Great Theologian)
+	- New wonder: Great Mosque of Kairouan - +8 culture, +1 free priest, +1 free scholar, +50% science, +2 GPP (Great Scholar)
+	- New wonder: Al-Azhar University - +8 culture, -20% cost for religious technologies, +2 GPP (Great Scholar)
+	- New wonder: Koutoubia Mosque - +6 culture, +4 stability with the Religious Law civic, +2 GPP (Great Theologian)
+	- New wonder: Thomaskirche (J.S. Bach's Cathedral) - +10 culture, +1 happiness in all cities, +2 culture for each specialist in all cities, +2 GPP (Great Artist)
+	- New wonder: Louvre - +10 culture, +1 commerce from artists in all cities, culture boost in all cities when a GP is born, +2 GPP (Great Artist)
+	- New wonder: Great Lighthouse - +4 culture, preplaced in Alexandria, removed a couple centuries later, +100% trade route yield, +1 GPP (Great Merchant)
+	- New wonder: Borgund Stave Church - +6 culture, -40% build cost for religious buildings in all cities, +2 GPP (Great Theologian)
+	- New wonder: Boyana Church - +8 culture, double faith from Great Theologians, +2 GPP (Great Theologian)
+	- New wonder: Torre del Oro - +4 culture, chance for a small (2-3 turns) Golden Age on colony completion, +2 GPP (Great Merchant)
+	- New wonder: Mont Saint-Michel - +8 culture, faith from Walls and Castles, heals units +10%, +50% defence, +2 GPP (Great Engineer)
+	- New wonder: Saint Catherine's Monastery - +6 culture, spreads Orthodoxy, provides 2 relics, +2 GPP (Great Theologian)
+	- New wonder: Blue Mosque - +8 culture, reduces war weariness in all cities, -20% build cost for buildings present in the capital city, +2 GPP (Great Engineer)
+	- New wonder: Selimiye Mosque - +8 culture, city acts as a government center, +100% xp for new units during golden ages, +1 commerce from engineers in all cities, +2 GPP (Great Engineer)
+	- New wonder: Kizil Kule - +2 culture, +2 commerce from harbor in all cities, +25% defence in all coastal cities, +2 GPP (Great Spy)
+	- New wonder: Uraniborg - +4 culture, +200% science from great people discoveries, +1 free scholar, +2 GPP (Great Scholar)
+	- New wonder: Peterhof Palace - +10 culture, chance for a free specialist of the same type when a GP is born, +2 GPP (Great Artist)
+
+	Redesigned wonders:
+	- Redesigned wonder: Shrine of Uppsala - +6 culture (some of it stays without Paganism too), +1 happiness, +3 stability with Paganism, +1 GPP (Great Artist)
+	- Redesigned wonder: San Marco Basilica - +8 culture, +2 trade routes, +100% foreign trade route yield, +2 GPP (Great Merchant)
+	- Redesigned wonder: Golden Bull - +6 culture, -30% civic maintenance, +2 GPP (Great Spy)
+	- Redesigned wonder: Imperial Diet - +4 culture, short Golden Age for acquiring a vassal, +2 GPP (Great Spy)
+	- Redesigned wonder: Palazzo San Giorgio - +8 culture, can build gold more efficiently in all cities, +2 GPP (Great Merchant)
+	- Redesigned wonder: Notre Dame - +10 culture, reduced to +1 happiness in all cities, +20% culture in all state religion cities, +2 GPP (Great Artist)
+	- Redesigned wonder: Kalmar Castle - +4 culture, +1 free spy, improves diplomatic relations with all historic neighbours, +2 GPP (Great Spy)
+	- Redesigned wonder: Sistine Chapel - +10 culture, +1 culture from state religion buildings, +1 free artist in cities with world wonders, +2 GPP (Great Artist)
+	- Redesigned wonder: Tomb of al-Walid - +6 culture, +100% war weariness for enemies, +50% great general generation rate, +2 GPP (Great Artist)
+	- Redesigned wonder: Stephansdom - +8 culture, removed war weariness reduction, builds hamlets instead of cottages, +2 GPP (Great Theologian)
+	- Redesigned wonder: Brandenburg Gate - +4 culture, -33% hurry production cost, +2 xp from settled great generals in all cities, +2 GPP (Great Spy)
+	- Redesigned wonder: Palais des Papes - +10 culture, +2 happiness, removed extra defence, extra faith from all state religion buildings, +2 GPP (Great Theologian)
+	- Redesigned wonder: Magellan's Voyage - +2 culture, +1 trade route for all coastal cities, +2 movement points for all naval units, +2 GPP (Great Merchant)
+	- Redesigned wonder: Bibliotheca Corviniana - +8 culture, grants 2 random technologies from techs already known by other civs, +25% science, +2 GPP (Great Scholar)
+	- Redesigned wonder: St. Basil Cathedral - +8 culture, +1 espionage from state religion buildings, -30% unit upkeep cost, +2 GPP (Great Spy)
+	- Redesigned wonder: Copernicus Observatory - +2 culture, only adds free specialists for towns worked by the city, +25% science, +2 GPP (Great Scholar)
+	- Redesigned wonder: Westminster Abbey - +8 culture, +1 happiness per city in divine monarchy, additional stability based on your civs faith, +2 GPP (Great Theologian)
+	- Redesigned wonder: Magna Carta - +6 culture, +2 culture from courthouse in all cities, no stability penalty for unstable civic combinations, +2 GPP (Great Spy)
+
+	Wonder balance/art:
+	- Versailles generates Great Spy (was Merchant), Topkapi Palace generates Great Spy (was Merchant), Theodosian Walls generates Great Engineer (was Theologian)
+	- Pressburg Castle bonus increased to 100% great general emergence inside cultural borders
+	- Kalmar Castle production bonus from stone halved, added bonus from marble
+	- L'Encyclopedie adds all techs known by at least 3 civs instead of 2
+	- Imperial Diet requires 12 cities, acts as a government center (like Summer Palace and Palais des Papes)
+	- Removed "unlocking all civics in a category" abilities from all wonders
+	- Kizil Kule and Torre del Oro are not coastal by default (building art reasons), they both require a Harbor instead
+	- Westminster Abbey, Stephansdom and San Marco Basilica require Catholicism as a state religion
+	- La Mezquita and Tomb of al-Walid require Islam as a state religion
+	- Alhambra and Gardens of Al-Andalus do not need Islam directly, but Arabic Knowledge is still a prereq
+	- Revised base culture bonuses for all wonders, added additional specialist places for many of them
+	- Added a couple new resource bonuses for wonders, modified many previous ones
+	- Revised tech prereqs and production costs for all wonders
+	- Updated wonder preferences (both old and new) for all civs
+	- Adjusted size of buildings and wonders in both the Civilopedia and ingame
+	- New art and icon for Hagia Sophia: now represents the Byzantine period (without minarets)
+	- New icon for St. Peter's Basilica, generic Monastery, generic Temple, generic Belfry, Mercenaries
+	- New button for Kalmar Castle, Pressburg Castle, Royal Dungeon, Leonardo's Workshop
+	- New building art for Islamic Madrassa, House of Wisdom
+
+	UHVs:
+	- Novgorod 1st UHV: needs Vologda, Rostov and Osterland provinces too
+	- Novgorod 3rd UHV: The Republic of Russia: Control the province of Moscow or have Muscovy as a vassal in 1478 AD (annexation of Novgorod)
+	- Hungary 1st UHV: Instead of biggest state in 1490 AD, control Austria, Carinthia, Moravia, Silesia, Bohemia, Dalmatia, Bosnia, Banat, Wallachia and Moldova
+	- Hungary 2nd UHV: previous 1st and 2nd UHV switched, deadline moved to a later date, to 1541 (conquest of Buda)
+	- Lithuania 1st UHV: The Last Pagan State: increased to 2500 culture
+	- Lithuania 2nd UHV: The Grand Duchy: Control the most territory in Europe in 1430 AD (death of Vytautas)
+	- Lithuania 3rd UHV: Collapse or Vassalize Muscovy, Novgorod and Prussia by 1795 AD (final partition of PLC)
+	- Polish 2nd UHV: changed date from 1600 AD to 1569 AD (Union of Lublin)
+	- Morocco 1st UHV: moved deadline later, to 1248 AD (fall of Seville)
+	- Burgundy 1st UHV: culture goal increased to 12000
+	- Moscow 2nd UHV: land percentage goal increased to 25%
+	- Ottoman 1st UHV: previous 1st and 2nd UHV merged, with the later deadline
+	- Ottoman 2nd UHV: Ottoman Superiority: Construct the Topkapi Palace, the Blue Mosque, the Selimiye Mosque and the Tomb of Al-Walid by 1616 AD (completion of the Blue Mosque)
+	- Ottoman 3rd UHV: Buda and Krakow also needed, along with Wien
+	- Byzantium 1st UHV: Justinian's Ambitions: have at least 6 cities in Italy + Dalmatia, Tripolitania, Ifriqiya in 632 AD
+	- Byzantium 3rd UHV: The Second Rome: previous 1st UHV condition added here
+	- Genoa 1st UHV: moved to an earlier date, to 1400 AD, added Thrakesion (Smyrna and Chios) and Cyprus
+	- Genoa 2nd UHV: previous 2nd and 3rd UHV switched, moved deadline earlier, to 1566 AD (loss of Chios)
+	- Genoa 3rd UHV: ensure that Bank of St. George is only spread to your cities in 1625 AD (end of Genoese banking golden age)
+	- Arabia 1st UHV: moved to an earlier date, to 850 AD, added Cyrenaica, Tripolitania, Ifriqiya, Sicily and Crete
+	- Arabia 2nd UHV: control Egypt and the Levant with being the most advanced civ in 1291 AD (more researched techs than any other civ)
+	- Aragon 2nd UHV: new aspect: have at least 30 trade ships (ships with at least one cargo space)
+	- Fixed issue where mainscreen UHV counters displayed the same static value after the deadline, they are removed upon UHV completion
+	- Some mainscreen UHV counters now shown and calculated even after the UHV is completed, until the UHV date (e.g. the ones ideal for UHV challenges)
+	- UHV update: Norway & Burgundy UHVs do not show score for unknown (or unborn) civs
+	- Fixed bug with the Prussian mainscreen UHV counter
+	- Updated the timeline of the mod, synchronized all UHV dates
+
+	UPs:
+	- Byzantium UP: new aspect: can use the Imperialism civic without the given tech
+	- Polish UP: new aspect: religions are more easy to spread
+	- Ottoman UP: gain additional Janissary units when conquering cities with foreign religions in them
+	- English UP: cottages, hamlets, villages, towns get +1 hammers, workshops get +1 commerce
+	- Genoese UP: new aspect: increased spread chance for companies
+	- Scottish UP: new aspect: forts give +2 extra commerce
+	- Scottish UP: only cities with at least 20% own culture count - both places
+	- Scottish UP: interface message for the human player when an UP-triggered unit appears
+	- Aragonese UP: tile yields will be displayed right away, not on the next turn
+	- Aragonese UP bugfix: yields correctly reset for old capitals (both on conquest, and on flip, secession and capital move too)
+	- Aragonese UP bugfix: yields will be correctly set for the new capital (won't get a huge negative modifier)
+	- Scottish UP bugfix: will trigger for all players, but only on city conquest
+	- Burgundy, Hungary and Lithuania UP: new, proper/unique happiness modifier (and improved happiness tooltip) for civs with the Happy UPs
+	- Burgundy, Spain and Lithuania UP: free yields from the UPs are now properly shown in the city tooltips
+	- Fixed bug where the free yields from UPs were not eligible for modifiers at all
+	- Fixed bug where some of the UP-related free yields where not applied/calculated correctly on the main screen overall counters
+	- Revised UP texts, various fixes and wording improvements
+
+	GUI/UI improvements:
+	- Added new, proper mercenary screen button (in the style of vanilla subscreen buttons), revised positioning
+	- Fixed shortcut for the mercenary manager subscreen
+	- Revised order of main screen subscreens, improved layout+positioning
+	- Revised existing mainscreen shortcuts, added a couple new ones
+	- Increased tech effect/bonus slots to 8 on the tech tree
+	- Fixed bonuses panel under the Buildings/Wonders section of the Civilopedia, now properly shows all elements with a scrollable interface
+	- Fixed effects panel under the Civics section of the Civilopedia, now properly shows all elements with a scrollable interface
+	- Added missing interface widgets for the colony and mercenary expenses in the Financial Advisor
+	- Improvements on the civics and city maintenance widgets in the Financial Advisor
+	- Fixed civic requirement info for buildings
+	- Fixed religion display for some special building attributes/abilities
+	- Better clarification for required religion/state religion/religion in the city dependencies
+	- Fixed a couple minor civilopedia text mistakes (e.g. muscovy != muscowy, double spaces in a couple places, etc.)
+	- Removed fallout from the mod (not even displayed anymore)
+	- No civ destroyed message during autoplay, even if it was a vanilla-style destroy message (e.g. last city conquered)
+	- Added mercenary notifications when a city flips to you, now it should really cover everything
+	- Added coordinate reference for many messages, also unique reference icons for some of them
+	- Revised timing (and delay) for many interface messages - mostly mercenary-related
+	- Added interface messages for various Relic-related events
+	- Corrected yield and commerce values on the ingame building help texts, when modified by wonders or other buildings
+	- Corrected ingame building help texts connected to the various defense enhancing wonder/building effects
+	- Fixed messed up widget logic within the victory screen (e.g. UHV victories remained visible even when the settings tab was active)
+	- Adjusted victory screen panels, so one more line fits in all three UHV help texts
+	- Wording updates and fixes in the victory screen help texts
+	- Minor updates on the subscreens and layout of the religion screen
+	- Small text and position fixes in the religion screen info texts
+	- Improvements on various mainscreen wonder help texts
+	- Fixed issue with the Victory help texts not always showing the correct status of the civs in the ConquerOrVassalize UHVs
+	- Pagan culture from buildings (both for the given city bonus and the all cities bonus) is now properly shown in the city tooltips
+	- Improved order of the mercenary cost calculations, now there is no delay in the subtraction (shown in the beginning of the next turn)
+
+	Bugfixes:
+	- Fixed bug with player respawns, it did not trigger in all intended situations
+	- Fixed bug where respawns in the human player's cities were mistakenly avoided in some cases
+	- Fixed bug (crash) connected to Relic spawns in/on unknown cities - reported by Swarbs
+	- Fixed issue where a civ's alive status was not updated right away on collapses and respawns in some cases (only on the beginning of the next turn)
+	- Fixed bug in the AIWars function connected to maintaining the status of civs
+	- Fixed bug where commerce modifiers from resources were not properly updated
+	- Fixed bug where the Escorial and Stephansdom stability effects could potentially remain active after the city was razed
+	- Fixed bug where in some cases only 2 independent factions were handled instead of all 4 of them
+	- Fixed bug where Kazimierz didn't give any faith points, even if Judaism was your state religion
+	- Fixed annoying bug with duplicated names in the xml variable initialization, which resulted in some mysterious bugs/issues before
+	- Fixed bug with inflation not being applied to all aspects of the total costs
+	- Fixed bug (python error) connected to mercenary notifications
+	- Fixed bug with mercenary maintenance being subtracted twice under some circumstances
+	- Fixed bug where the pagan culture (both for the given city bonus and the all cities bonus) were not eligible for modifiers at all
+	- Fixed bug where the pagan culture (both for the given city bonus and the all cities bonus) were not applied correctly on the main screen overall counters
+	- Fixed calculation bug with the resource-based commerce modifiers
+	- Fixed a bug in vanilla civilopedia texts related to building effect for all cities
+	- Fixed bug in the autoplay function
+	- Fixed bug with revealed plot/city tiles not correctly checked for the given team
+	- Fixed bug related to colony costs: it was shown correctly on all ingame screens, but not applied correctly in the background calculations
+	- Fixed overall cost calculation bug on the mercenary screen
+	- Fixed a couple bugs related to wonder availability in cities: being present vs. being active
+	- Fixed bug where vassals could lead Crusades against their master
+	- Fixed bug where civs could potentially redeclare war against civs they already have war with (both in Crusades and in Rise-and-Fall situations)
+	- Fixed multiple bugs where civs would have a forced war declaration where they couldn't normally declare war (both Crusades and Rise-and-Fall situations)
+	- Fixed bug with civ selection for deviated Crusades (in some cases it resulted in no Crusade instead of a deviated one)
+	- Fixed bug on resurrection where civs declared war on the new civ based on decisions/setup of earlier resurrections
+
+	Setup/balance:
+	- New UB for Venice: Naval Base (Manor House) - only in coastal cities, +2 stability, free Amphibious Promotion for new units, requires Harbor, Lateen Sails, obsoletes with Astronomy
+	- Decreased AI stability bonus for Venice
+	- Drydock +xp bonus for naval units reduced to 2
+	- Byzantine conqueror army arrives near south Italy in ~520AD, led by Belisarius
+	- Human-played Byzantium starts somewhat more stable
+	- Rebalanced independent starting cities spawn attributes in Southern Italy and North Africa
+	- Revised Byzantine starting armies (e.g. removed War Galleys), added road for the Iron near Constantinople
+	- Revised Byzantine starting buildings - no more initial Castle in Constantinople, fewer initial Lighthouses but more Markets in the empire
+	- Byzantium, Arabia, Cordoba, Venice, Spain, Scotland, Genoa starts with religious art
+	- Hungary starts without monasticism and religious art, Norway without monasticism
+	- Added Stone in Sweden (Kalmar Castle) and Amber near Uppsala (Shrine of Uppsala)
+	- Revised resource distribution in the area of Poland, added Stone between Poland and Kiev
+	- Made southern Sicily (Syracuse), the Marrakesh area and central Tunisia more fertile
+	- Better starting situation for Novgorod and Leon, the capital area is somewhat more productive and fertile
+	- Silk resource appears in Thrace around 550AD, disappears if Constantinople is conquered
+	- Added invader event directly against Constantinople, representing the Viking's (Rus) invasion of 868
+	- Minor updates in the German/Austrian/Prussian and French/Burgundian city name maps
+	- Added Kairouan as an indy city, spawns in 670AD, reduced to a town in 1057AD, starts with Islam
+	- Added Tlemcen as an alternative indy city spawn for Algiers in 500AD, 40% chance, starts with Catholicism
+	- Added Brennabor as an indy city, spawns in 850AD, 2 alternative positions with 50-50% chance (on conquest becomes either Brandenburg or Berlin)
+	- Added Visby as an indy city, spawns in 900AD
+	- Removed Mus and Sarai Batu spawns (no need to represent the Seljuk/Timurid and Mongol invasions with barb cities outside the map)
+	- Increased Timurid threat against human Ottomans
+	- Adjusted and revised deadlines for all companies
+	- Hanseatic League company bonus nerfed: +1 commerce and 0,34 culture per resource
+	- Kontor (Hanseatic League UB) additional bonus: +10% food with Fish, +10% food with Salt
+	- Hanseatic League (with it's automatic 'building') also adds +2 experience for ships
+	- Nerfed bonuses for Calatrava and Dragon Orders
+	- Increased Kasbah defenses to be on par with Walls
+	- Removed additional unhealthiness from Konets
+	- Burgundy starts with 2 population in their cities, revised balance modifiers (some nerfed, some buffed)
+	- Increased unit and building production modifiers for Scotland, Norway, Poland and Novgorod
+	- Various Russian and Hungarian balance modifiers nerfed
+
+	General rule/balance:
+	- Now all directly religion-related wonders give faith points upon completion (even if they do not need a state religion ingame)
+	- Faith point bonus from wonders reduced to 4 from 6
+	- Reduced base faith point bonus from Great Theologians
+	- Reduced overall colony cost, while still semi-exponential, won't hurt as much with more colonies as previously
+	- Original build processes reduced to 33% efficiency (and some of them moved to a different tech), added 2 improvements to all types (with 50% and 67% efficiency):
+		Build Wealth line: Alchemy - Banking - Economics
+		Build Research line: Education - Chemistry - Scientific Method
+		Build Culture line: Literature - Patronage - Renaissance Art
+	- Added full espionage line to the build processes:
+		Build Espionage: Code of Laws - Divine Right - Nationalism
+	- Respawned civs start as slightly more stable
+	- Getting a Relic is not given, there is a chance between 60-90%
+	- Decreased chance for successful persecution if there are religious buildings of the given religion in the city
+	- Added base extra unit cost for military units, 0.5 gold per turn (which is additional to the base 1 gold per turn for all units)
+	- Decreased number of free units (based on population in your civ), in both categories (all units and military units)
+	- Decreased base religion spread chance/rate for all religions (missionary spread)
+	- It is now significantly (and increasingly) harder to spread a religion if there are already established religions in the city
+	- Made it much harder to spread religions to foreign cities compared to own cities
+	- Increased company negative spread modifiers for being in multiple cities of the same civ (so they can spread out more)
+	- Reduced culture bomb action of Great Artists to +2000
+	- Improved AIs' starting settlers on ships chances to settle ASAP
+	- Unified culture production rule on conquest for all wonders
+	- Decreased civs general willingness to target far-away independent cities
+	- Vassal civs are set to never target indy and barb cities outside their war maps
+	- Rearranged and reviewed flow (through start dates) of civ-specific modifiers
+	- Religious buildings and religious wonders in the city have smaller impact on persecution chances
+	- Population in the city also modifies religious persecution chances
+
+	Civics:
+	- Feudal Monarchy: increased number of free units, also adds free military units
+	- Divine Monarchy: extra happiness in the largest cities instead of happiness per military unit
+	- Merchant Republic: can't be taken by AI civs if less than 50% of their cities are coastal
+	- Merchant Republic: increased to +50% gold in capital, removed +25% gold in other cities
+	- Merchant Republic: +50% yield from trade routes, +1 trade routes in coastal cities instead of all cities
+	- Merchant Republic: +1/2 upkeep cost for military units, reduced to +50% war weariness
+	- Feudal Law: military units are produced with food instead of the +20% production bonus (trade off between production and growth)
+	- Feudal Law: increases maintenance cost from distance to palace instead of decreasing it, +50% Great General emergence rate
+	- Religious Law: doubles the reduction rate of persecution points (thus shortens the duration of religious instability), removed +2 culture from specialists
+	- Common Law: instead of +100% culture, +100% great people rate
+	- Tribalism: -50% great people growth rate
+	- Free Peasantry: reduced to +50% work speed for workers
+	- Apprenticeship: removed unlimited artist, scholar, merchant
+	- Free Labor: reduced to +1 free specialist, +10% hammers in all cities
+	- Decentralization: +50% for both city-related maintenance costs
+	- Manorialism: +25% for both city-related maintenance costs (still pretty decentralized)
+	- Trade Economy: unlimited merchant moved here from Apprenticeship, +10% gold in all cities, unstable with Serfdom
+	- Guilds: reduced to +1 beakers per specialist, companies have more chance to spread, +2 gold for guild hall
+	- Mercantilism: +50% yield from trade routes, unstable with Merchant Republic
+	- Improvements and fixes in the civic help texts
+	- Revised upkeeps in all civic categories
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for RFCE 1.5:
@@ -317,9 +578,9 @@ Changes for RFCE 1.5:
 		- Moved spawn area for the Bani Hassan barbarians a little south of the Sous region
 
 	Civ and UHV setup:
-		- Starting civic changes: Arabia (Trade Economy), Kiev (Serfdom, Manoralism), Spain (Serfdom, Manoralism), Morocco (Trade Economy, Militarism)
-		- Starting civic changes: Genoa (Feudal Monarchy, Serfdom, Manoralism, Vassalage), England (Vassalage), Portugal (Serfdom, Manoralism, Vassalage)
-		- Starting civic changes: Aragon (Serfdom, Manoralism, Vassalage), Sweden (Feudal Law, Vassalage), Prussia (Militarism), Austria (Vassalage)
+		- Starting civic changes: Arabia (Trade Economy), Kiev (Serfdom, Manorialism), Spain (Serfdom, Manorialism), Morocco (Trade Economy, Militarism)
+		- Starting civic changes: Genoa (Feudal Monarchy, Serfdom, Manorialism, Vassalage), England (Vassalage), Portugal (Serfdom, Manorialism, Vassalage)
+		- Starting civic changes: Aragon (Serfdom, Manorialism, Vassalage), Sweden (Feudal Law, Vassalage), Prussia (Militarism), Austria (Vassalage)
 		- Starting civic changes: Ottomans (Apprenticeship, Guilds, Militarism), Moscow (Feudal Monarchy, Feudal Law, Vassalage), Dutch (Colonialism)
 		- Novgorod starts without the Feudalism tech, thus in the Despotism civic (similarly to Kiev)
 		- Venice starts without the Vassalage and Code of Laws techs, Germany without Machinery, Burgundy with Aristocracy

@@ -12,9 +12,10 @@ import RFCUtils
 from StoredData import sd
 
 # globals
-gc = CyGlobalContext()
-PyPlayer = PyHelpers.PyPlayer
 utils = RFCUtils.RFCUtils()
+gc = CyGlobalContext()
+ArtFileMgr = CyArtFileMgr()
+PyPlayer = PyHelpers.PyPlayer
 
 iMercCostPerTurn = con.iMercCostPerTurn
 
@@ -485,12 +486,12 @@ class MercenaryManager:
 			for lMerc in self.lGlobalPool:
 				#iNewProv = lMercList[lMerc[0]][4][gc.getGame().getSorenRandNum( len(lMercList[lMerc[0]][4]), 'pick available province') ]
 				#if ( ( not ( lMerc[4] in lHumanProvinces ) ) and ( iNewProv in lHumanProvinces ) ):
-					#CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
+					#CyInterface().addMessage(iHuman, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
 				#lMerc[4] = iNewProv
 				if gc.getGame().getSorenRandNum( 100, 'mercs leaving the global pool') < lMercList[lMerc[0]][6]/2: #tied to the appear odds, which currently only functions as delay, maybe something else would be better here
 					self.lGlobalPool.remove( lMerc )
 					if lMerc[4] in lHumanProvinces:
-						CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_MOVING",()), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
+						CyInterface().addMessage(iHuman, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_MOVING",()), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
 					iMercsLeft += 1
 					if iMercsLeft > 1:
 						# don't let too many mercs leave the pool
@@ -544,7 +545,7 @@ class MercenaryManager:
 			if iStateReligion in lMercList[iMerc][5]:
 				szProvName = "TXT_KEY_PROVINCE_NAME_%i" %iCurrentProvince
 				szCurrentProvince = CyTranslator().getText(szProvName,())
-				CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()) + " " + szCurrentProvince + CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_RELIGION",()), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
+				CyInterface().addMessage(iHuman, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()) + " " + szCurrentProvince + CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_RELIGION",()), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
 			else:
 				# Absinthe: normal message
 				for city in utils.getCityList(iHuman):
@@ -552,14 +553,14 @@ class MercenaryManager:
 						if city.getCultureLevel() >= 2:
 							szProvName = "TXT_KEY_PROVINCE_NAME_%i" %iCurrentProvince
 							szCurrentProvince = CyTranslator().getText(szProvName,())
-							CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()) + " " + szCurrentProvince + "!", "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
+							CyInterface().addMessage(iHuman, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()) + " " + szCurrentProvince + "!", "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
 							ProvMessage = True
 							break
 				# Absinthe: different message if the player doesn't have enough culture in the province
 				if not ProvMessage:
 					szProvName = "TXT_KEY_PROVINCE_NAME_%i" %iCurrentProvince
 					szCurrentProvince = CyTranslator().getText(szProvName,())
-					CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()) + " " + szCurrentProvince + CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_CULTURE",()), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
+					CyInterface().addMessage(iHuman, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()) + " " + szCurrentProvince + CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_CULTURE",()), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
 
 		# add the merc, keep the merc index, costs and promotions
 		self.lGlobalPool.append( [iMerc, lPromotions, iPurchaseCost, iUpkeepCost, iCurrentProvince] )
@@ -611,12 +612,11 @@ class MercenaryManager:
 					# not enough gold to pay the mercs, they will randomly desert you
 					self.desertMercs( iPlayer )
 
-				pPlayer.setGold(pPlayer.getGold()-(pPlayer.getPicklefreeParameter( iMercCostPerTurn )+99)/100 )
+				# Absinthe: added the subtraction directly in the inflated cost calculations in the .dll, so this is now redundant
+				#pPlayer.setGold(pPlayer.getGold()-(pPlayer.getPicklefreeParameter( iMercCostPerTurn )+99)/100 )
 				# TODO: AI
 				if iPlayer != iHuman:
 					self.processMercAI( iPlayer )
-
-			#playerList[i].setGold(playerList[i].getGold()-(playerList[i].getPicklefreeParameter( iMercCostPerTurn )+99)/100 )
 
 		self.rendomizeMercProvinces( iGameTurn ) # some mercs may leave
 
@@ -636,7 +636,7 @@ class MercenaryManager:
 	def desertMercs( self, iPlayer ):
 		pPlayer = gc.getPlayer( iPlayer )
 		if iPlayer == utils.getHumanID():
-			CyInterface().addMessage(iPlayer, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_DESERTERS",()), "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
+			CyInterface().addMessage(iPlayer, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_DESERTERS",()), "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
 
 		while True:
 			lHiredMercs = [unit for unit in PyPlayer( iPlayer ).getUnitList() if unit.getMercID() > -1]
@@ -657,7 +657,7 @@ class MercenaryManager:
 		for lMerc in self.lGlobalPool:
 			if lMerc[4] == iProvince:
 				if iCiv == utils.getHumanID():
-					CyInterface().addMessage(iCiv, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_AVAILABLE_NEAR_NEW_CITY", (pCity.getName(),)), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
+					CyInterface().addMessage(iCiv, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_AVAILABLE_NEAR_NEW_CITY", (pCity.getName(),)), "", 0, ArtFileMgr.getInterfaceArtInfo("INTERFACE_MERCENARY_ICON").getPath(), ColorTypes(con.iLime), pCity.getX(), pCity.getY(), True, True)
 					break
 
 
@@ -669,7 +669,7 @@ class MercenaryManager:
 		for lMerc in self.lGlobalPool:
 			if lMerc[4] == iProvince:
 				if iCiv == utils.getHumanID():
-					CyInterface().addMessage(iCiv, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_AVAILABLE_NEAR_NEW_CITY", (pCity.getName(),)), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
+					CyInterface().addMessage(iCiv, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_AVAILABLE_NEAR_NEW_CITY", (pCity.getName(),)), "", 0, ArtFileMgr.getInterfaceArtInfo("INTERFACE_MERCENARY_ICON").getPath(), ColorTypes(con.iLime), pCity.getX(), pCity.getY(), True, True)
 					break
 
 
@@ -1025,7 +1025,7 @@ class GlobalMercenaryUtils:
 			if lMerc[4] in lHumanProvList:
 				szProvName = "TXT_KEY_PROVINCE_NAME_%i" %lMerc[4]
 				szCurrentProvince = CyTranslator().getText(szProvName,())
-				CyInterface().addMessage(iHuman, True, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_HIRED_BY_SOMEONE", (szCurrentProvince,)), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
+				CyInterface().addMessage(iHuman, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_HIRED_BY_SOMEONE", (szCurrentProvince,)), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
 
 		# make the unit:
 		pUnit = pPlayer.initUnit( lMercList[lMerc[0]][0], iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )

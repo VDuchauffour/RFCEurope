@@ -1322,7 +1322,7 @@ public:
 	CvCivicInfo();
 	virtual ~CvCivicInfo();
 
-	int getCivicOptionType() const;				// Exposed to Python					
+	int getCivicOptionType() const;				// Exposed to Python
 	int getAnarchyLength() const;				// Exposed to Python
 	int getUpkeep() const;				// Exposed to Python
 	int getAIWeight() const;				// Exposed to Python
@@ -1349,6 +1349,7 @@ public:
 	int getWarWearinessModifier() const;					// Exposed to Python
 	int getFreeSpecialist() const;				// Exposed to Python
 	int getTradeRoutes() const;				// Exposed to Python
+	int getCoastalTradeRoutes() const;				// Absinthe: coastal trade routes - Exposed to Python
 	int getTechPrereq() const;				// Exposed to Python
 	int getCivicPercentAnger() const;				// Exposed to Python
 	int getMaxConscript() const;				// Exposed to Python
@@ -1368,6 +1369,7 @@ public:
 	bool isStateReligion() const;				// Exposed to Python
 	bool isNoNonStateReligionSpread() const;				// Exposed to Python
 	bool isStabilityBadForBigEmpire() const;				// Absinthe: AI civic modifier, bad with many cities
+	bool isForMaritimeEmpire() const;				// Absinthe: AI civic modifier, only with coastal cities
 	bool isStabilityVassalBonus() const;				//Rhye 6th
 	bool isStabilityFoundBonus() const;				//Rhye 6th
 	bool isStabilityConquestBonus() const;				//Rhye 6th
@@ -1448,6 +1450,7 @@ protected:
 	int m_iWarWearinessModifier;
 	int m_iFreeSpecialist;
 	int m_iTradeRoutes;												
+	int m_iCoastalTradeRoutes; // Absinthe: coastal trade routes
 	int m_iTechPrereq;												
 	int m_iCivicPercentAnger;									
 	int m_iMaxConscript;											
@@ -1467,6 +1470,7 @@ protected:
 	bool m_bStateReligion;
 	bool m_bNoNonStateReligionSpread;
 	bool m_bStabilityBadForBigEmpire; // Absinthe: AI civic modifier, bad with many cities
+	bool m_bOnlyForMaritimeEmpire; // Absinthe: AI civic modifier, only with coastal cities
 	bool m_bStabilityVassalBonus; //Rhye 6th
 	bool m_bStabilityFoundBonus; //Rhye 6th
 	bool m_bStabilityConquestBonus; //Rhye 6th
@@ -3986,6 +3990,8 @@ public:
 	virtual ~CvProcessInfo();
 
 	int getTechPrereq() const;				// Exposed to Python
+	// Absinthe: obsolete tech for processes
+	int getObsoleteTech() const;				// Exposed to Python
 
 	// Arrays
 
@@ -3997,6 +4003,7 @@ public:
 protected:
 
 	int m_iTechPrereq;
+	int m_iObsoleteTech; // Absinthe: obsolete tech for processes
 
 	// Arrays
 

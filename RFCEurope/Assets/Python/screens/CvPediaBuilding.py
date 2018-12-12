@@ -46,7 +46,7 @@ class CvPediaBuilding:
 		self.X_STATS_PANE = self.X_BUILDING_PANE + 110
 		self.Y_STATS_PANE = self.Y_BUILDING_PANE + 17
 		self.W_STATS_PANE = 190
-		self.H_STATS_PANE = 110
+		self.H_STATS_PANE = 90
 
 		self.X_ICON = self.X_BUILDING_PANE + 8
 		self.Y_ICON = self.Y_BUILDING_PANE + 8
@@ -60,7 +60,7 @@ class CvPediaBuilding:
 		self.H_PREREQ_PANE = 110
 
 		self.X_SPECIAL_PANE = self.X_BUILDING_PANE
-		self.Y_SPECIAL_PANE = self.Y_PREREQ_PANE+self.H_PREREQ_PANE
+		self.Y_SPECIAL_PANE = self.Y_PREREQ_PANE + self.H_PREREQ_PANE
 		self.W_SPECIAL_PANE = 1000 - self.X_SPECIAL_PANE
 		self.H_SPECIAL_PANE = 190
 

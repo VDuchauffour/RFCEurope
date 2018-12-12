@@ -32,8 +32,8 @@ class CvReligionScreen:
 		self.DEBUG_DROPDOWN_ID =  "ReligionDropdownWidget"
 		self.AREA1_ID =  "ReligionAreaWidget1"
 		self.AREA2_ID =  "ReligionAreaWidget2"
-		self.FAITH_AREA_ID =  "FaithAreaWidget" # 3MiroFaith
-		self.FAITH_EFFECT_AREA_ID =  "FaithEffectAreaWidget" # 3MiroFaith
+		self.FAITH_AREA_ID =  "FaithAreaWidget"
+		self.FAITH_EFFECT_AREA_ID =  "FaithEffectAreaWidget"
 		self.BACKGROUND_ID = "ReligionBackground"
 		self.RELIGION_PANEL_ID = "ReligionPanel"
 		self.RELIGION_ANARCHY_WIDGET = "ReligionAnarchyWidget"
@@ -73,29 +73,25 @@ class CvReligionScreen:
 		self.Y_RELIGION_NAME = 58
 
 		self.X_RELIGION_AREA = 45
-		self.Y_RELIGION_AREA = 84
+		self.Y_RELIGION_AREA = 70
 		self.W_RELIGION_AREA = 934
 		self.H_RELIGION_AREA = 175
 
 		self.X_CITY1_AREA = 45
 		self.X_CITY2_AREA = 522
-		self.Y_CITY_AREA = 282
+		self.Y_CITY_AREA = 260
 		self.W_CITY_AREA = 457
-		# 3MiroFaith: Begin
-		#self.H_CITY_AREA = 395
-		self.H_CITY_AREA = 295
+		self.H_CITY_AREA = 310
 
 		self.X_FAITH_AREA = 45
-		self.Y_FAITH_AREA = 597
-		#self.W_FAITH_AREA = 934
+		self.Y_FAITH_AREA = 585
 		self.W_FAITH_AREA = 457
-		self.H_FAITH_AREA = 100
+		self.H_FAITH_AREA = 116
 
 		self.X_FAITH_EFFECT_AREA = 522
-		self.Y_FAITH_EFFECT_AREA = 597
+		self.Y_FAITH_EFFECT_AREA = 585
 		self.W_FAITH_EFFECT_AREA = 457
-		self.H_FAITH_EFFECT_AREA = 100
-		# 3MiroFaith: End
+		self.H_FAITH_EFFECT_AREA = 116
 
 		self.X_CITY = 10
 		self.DY_CITY = 38
@@ -160,9 +156,10 @@ class CvReligionScreen:
 		# Draw Religion info
 		self.drawReligionInfo()
 
+		# Draw City info
 		self.drawCityInfo(self.iReligionSelected)
 
-		#3MiroFaith
+		# Draw Faith info
 		self.drawFaithInfo()
 
 	# Draws the religion buttons and information
@@ -384,7 +381,6 @@ class CvReligionScreen:
 
 
 	def drawFaithInfo( self ):
-		#3MiroFaith: the entire subroutine
 		if (not self.bScreenUp):
 			return
 
@@ -394,16 +390,14 @@ class CvReligionScreen:
 		szFaithArea = self.FAITH_AREA_ID
 		screen.addPanel(self.FAITH_AREA_ID, "", "", True, True, self.X_FAITH_AREA, self.Y_FAITH_AREA, self.W_FAITH_AREA, self.H_FAITH_AREA, PanelStyles.PANEL_STYLE_MAIN)
 
-		sString = localText.getText("TXT_KEY_FAITH_POINTS",()) + (" %i " %pPlayer.getFaith() )
+		sString = localText.getText("TXT_KEY_FAITH_POINTS",()) + (": %i " %pPlayer.getFaith() )
 
-		screen.setLabelAt( "", szFaithArea, sString, CvUtil.FONT_LEFT_JUSTIFY, 20, 30, 100, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+		screen.setLabelAt( "", szFaithArea, u"<font=3>" + sString + u"</font>", CvUtil.FONT_LEFT_JUSTIFY, 16, 13, 100, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
-		#iProsecutionCount = utils.getProsecutionCount( self.iActivePlayer )
-		#iProsecutionCount = gc.getProsecutionCount( self.iActivePlayer )
 		iProsecutionCount = pPlayer.getProsecutionCount()
-		sString = localText.getText("TXT_KEY_FAITH_PROSECUTION_COUNT",()) + (" %i " %iProsecutionCount )
+		sString = localText.getText("TXT_KEY_FAITH_PROSECUTION_COUNT",()) + (": %i " %iProsecutionCount )
 
-		screen.setLabelAt( "", szFaithArea, sString, CvUtil.FONT_LEFT_JUSTIFY, 20, 50, 100, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+		screen.setLabelAt( "", szFaithArea, u"<font=3>" + sString + u"</font>", CvUtil.FONT_LEFT_JUSTIFY, 16, 35, 100, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		szFaithEffectArea = self.FAITH_EFFECT_AREA_ID
 		screen.addPanel(self.FAITH_EFFECT_AREA_ID, "", "", True, True, self.X_FAITH_EFFECT_AREA, self.Y_FAITH_EFFECT_AREA, self.W_FAITH_EFFECT_AREA, self.H_FAITH_EFFECT_AREA, PanelStyles.PANEL_STYLE_MAIN)
@@ -427,17 +421,15 @@ class CvReligionScreen:
 		if ( pPlayer.isFaithBenefit( con.iFP_Production ) ):
 			sString = localText.getText("TXT_KEY_FAITH_PRODUCTION",()) + (" -%i percent " %pPlayer.getFaithBenefit(con.iFP_Production) )
 			szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
-		if ( pPlayer.isFaithBenefit( con.iFP_Displomacy ) ):
-			sString = localText.getText("TXT_KEY_FAITH_DIPLOMACY",()) + (" +%i " %pPlayer.getFaithBenefit(con.iFP_Displomacy) )
+		if ( pPlayer.isFaithBenefit( con.iFP_Diplomacy ) ):
+			sString = localText.getText("TXT_KEY_FAITH_DIPLOMACY",()) + (" +%i " %pPlayer.getFaithBenefit(con.iFP_Diplomacy) )
 			szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
 		if ( iProsecutionCount > 0 ):
 			iProsecutionInstability = (iProsecutionCount + 2) / 3
 			sString = localText.getText("TXT_KEY_FAITH_PROSECUTION_INSTABILITY",()) + (" -%i " %iProsecutionInstability )
-			szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
+			szFaithBenefits += u"<font=3>" + sString + u"</font>"
 
-		screen.addMultilineText("Child" + self.FAITH_EFFECT_AREA_ID, szFaithBenefits, self.X_FAITH_EFFECT_AREA+7, self.Y_FAITH_EFFECT_AREA+10, self.W_FAITH_EFFECT_AREA-10, self.H_FAITH_EFFECT_AREA-10, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-
-		#screen.setLabelAt("", szArea, localText.getText("TXT_KEY_RELIGION_SCREEN_INFLUENCE", ()), CvUtil.FONT_LEFT_JUSTIFY, self.LEFT_EDGE_TEXT, self.Y_INFLUENCE, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+		screen.addMultilineText("Child" + self.FAITH_EFFECT_AREA_ID, szFaithBenefits, self.X_FAITH_EFFECT_AREA+12, self.Y_FAITH_EFFECT_AREA+12, self.W_FAITH_EFFECT_AREA-20, self.H_FAITH_EFFECT_AREA-20, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 
 
 	def getReligionButtonName(self, iReligion):

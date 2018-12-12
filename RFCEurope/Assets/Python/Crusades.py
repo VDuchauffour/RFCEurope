@@ -767,7 +767,6 @@ class Crusades:
 		else:
 			self.setRichestCatholic( -1 )
 
-
 	def decideDeviateHuman( self ):
 		self.deviateHumanPopup()
 
@@ -777,30 +776,45 @@ class Crusades:
 		if iRichest in [con.iVenecia, con.iGenoa]:
 			pByzantium = gc.getPlayer( con.iByzantium )
 			if pByzantium.isAlive():
-				# Only if Byzantium holds Constantinople and not a vassal
-				pConstantinoplePlot = gc.getMap().plot( 81, 24 ) # tCapitals[con.iByzantium]
-				pConstantinopleCity = pConstantinoplePlot.getPlotCity()
-				iConstantinopleOwner = pConstantinopleCity.getOwner()
-				bIsNotAVassal = not utils.isAVassal(con.iByzantium)
-				if iConstantinopleOwner == con.iByzantium and bIsNotAVassal:
-					self.crusadeStolenAI( iRichest, con.iByzantium )
-					bStolen = True
+				# Only if the potential attacker is not vassal of the target
+				iTeamByzantium = pByzantium.getTeam()
+				pRichest = gc.getPlayer( con.iRichest )
+				pTeamRichest = gc.getTeam( pRichest.getTeam() )
+				if not pTeamRichest.isVassal( iTeamByzantium ):
+					# Only if Byzantium holds Constantinople and not a vassal
+					pConstantinoplePlot = gc.getMap().plot( 81, 24 ) # tCapitals[con.iByzantium]
+					pConstantinopleCity = pConstantinoplePlot.getPlotCity()
+					iConstantinopleOwner = pConstantinopleCity.getOwner()
+					bIsNotAVassal = not utils.isAVassal(con.iByzantium)
+					if iConstantinopleOwner == con.iByzantium and bIsNotAVassal:
+						self.crusadeStolenAI( iRichest, con.iByzantium )
+						bStolen = True
 		elif iRichest in [con.iSpain, con.iPortugal, con.iAragon]:
 			pCordoba = gc.getPlayer( con.iCordoba )
 			if pCordoba.isAlive():
-				# Only if Cordoba is Muslim and not a vassal
-				bIsNotAVassal = not utils.isAVassal(con.iCordoba)
-				if pCordoba.getStateReligion() == xml.iIslam and bIsNotAVassal:
-					self.crusadeStolenAI( iRichest, con.iCordoba )
-					bStolen = True
+				# Only if the potential attacker is not vassal of the target
+				iTeamCordoba = pCordoba.getTeam()
+				pRichest = gc.getPlayer( con.iRichest )
+				pTeamRichest = gc.getTeam( pRichest.getTeam() )
+				if not pTeamRichest.isVassal( iTeamCordoba ):
+					# Only if Cordoba is Muslim and not a vassal
+					bIsNotAVassal = not utils.isAVassal(con.iCordoba)
+					if pCordoba.getStateReligion() == xml.iIslam and bIsNotAVassal:
+						self.crusadeStolenAI( iRichest, con.iCordoba )
+						bStolen = True
 		elif iRichest in [con.iHungary, con.iPoland, con.iAustria]:
 			pTurkey = gc.getPlayer( con.iTurkey )
 			if pTurkey.isAlive():
-				# Only if the Ottomans are Muslim and not a vassal
-				bIsNotAVassal = not utils.isAVassal(con.iTurkey)
-				if pTurkey.getStateReligion() == xml.iIslam and bIsNotAVassal:
-					self.crusadeStolenAI( iRichest, con.iTurkey )
-					bStolen = True
+				# Only if the potential attacker is not vassal of the target
+				iTeamTurkey = pTurkey.getTeam()
+				pRichest = gc.getPlayer( con.iRichest )
+				pTeamRichest = gc.getTeam( pRichest.getTeam() )
+				if not pTeamRichest.isVassal( iTeamTurkey ):
+					# Only if the Ottomans are Muslim and not a vassal
+					bIsNotAVassal = not utils.isAVassal(con.iTurkey)
+					if pTurkey.getStateReligion() == xml.iIslam and bIsNotAVassal:
+						self.crusadeStolenAI( iRichest, con.iTurkey )
+						bStolen = True
 		if not bStolen:
 			self.setTarget( tJerusalem[0], tJerusalem[1] )
 
@@ -833,6 +847,10 @@ class Crusades:
 		if gc.getPlayer( iTargetPlayer ).getStateReligion() == iCatholicism:
 			self.returnCrusaders()
 			return
+		# Absinthe: do not Crusade against themselves
+		if iTargetPlayer == iLeader:
+			self.returnCrusaders()
+			return
 		if iTargetPlayer == iHuman:
 			self.underCrusadeAttackPopup( pTargetCity.getName(), iLeader )
 		elif utils.isActive(iHuman):
@@ -842,7 +860,16 @@ class Crusades:
 			sText = CyTranslator().getText("TXT_KEY_CRUSADE_START", (gc.getPlayer(iLeader).getCivilizationAdjectiveKey(), gc.getPlayer(iLeader).getName(), gc.getPlayer(iTargetPlayer).getCivilizationAdjectiveKey(), sCityName))
 			CyInterface().addMessage(iHuman, False, con.iDuration/2, sText, "", 0, "", ColorTypes(con.iLightRed), -1, -1, True, True)
 
-		gc.getTeam( gc.getPlayer( iLeader ).getTeam() ).declareWar( gc.getPlayer( pTargetCity.getOwner() ).getTeam(), True, -1 )
+		# Absinthe: proper war declaration checks
+		teamLeader = gc.getTeam(gc.getPlayer(iLeader).getTeam())
+		iTeamTarget = gc.getPlayer(iTargetPlayer).getTeam()
+		if not teamLeader.isAtWar( iTeamTarget ):
+			if teamLeader.canDeclareWar( iTeamTarget ):
+				teamLeader.declareWar(iTeamTarget, True, -1)
+			else:
+				# we cannot declare war to the current owner of the target city
+				self.returnCrusaders()
+				return
 
 	def returnCrusaders( self ):
 		self.setLeader( -1 )
@@ -1126,13 +1153,17 @@ class Crusades:
 							iCapitalX = capital.getX()
 							iCapitalY = capital.getY()
 							pCiv.initUnit( xml.iHolyRelic, iCapitalX, iCapitalY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
+							if iCiv == iHuman:
+								CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_CRUSADE_NEW_RELIC", ()), "AS2D_UNIT_BUILD_UNIQUE_UNIT", 0, gc.getUnitInfo(xml.iHolyRelic).getButton(), ColorTypes(con.iGreen), iCapitalX, iCapitalY, True, True)
 							print ("Relic created for Crusade leader:", capital.getName())
 							if iUnitNumber > 3:
-								pCiv.initUnit( xml.iHolyRelic, iCapitalX, iCapitalY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
-								print ("Relic created for Crusade leader:", capital.getName())
+								if gc.getGame().getSorenRandNum(5,'RelicChance') < 4: # 80% chance
+									pCiv.initUnit( xml.iHolyRelic, iCapitalX, iCapitalY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
+									print ("Relic created for Crusade leader:", capital.getName())
 							if iUnitNumber > 9:
-								pCiv.initUnit( xml.iHolyRelic, iCapitalX, iCapitalY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
-								print ("Relic created for Crusade leader:", capital.getName())
+								if gc.getGame().getSorenRandNum(5,'RelicChance') < 4: # 80% chance
+									pCiv.initUnit( xml.iHolyRelic, iCapitalX, iCapitalY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
+									print ("Relic created for Crusade leader:", capital.getName())
 					# all other civs get experience points as well
 					else:
 						if iCiv == iHuman:
@@ -1147,14 +1178,21 @@ class Crusades:
 							capital = pCiv.getCapitalCity()
 							iCapitalX = capital.getX()
 							iCapitalY = capital.getY()
-							pCiv.initUnit( xml.iHolyRelic, iCapitalX, iCapitalY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
-							print ("Relic created:", capital.getName())
-							if iUnitNumber > 4:
-								pCiv.initUnit( xml.iHolyRelic, iCapitalX, iCapitalY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
-								print ("Relic created:", capital.getName())
-							if iUnitNumber > 11:
-								pCiv.initUnit( xml.iHolyRelic, iCapitalX, iCapitalY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
-								print ("Relic created:", capital.getName())
+							# safety check, game crashes if it wants to create a unit in a non-existing city 
+							if capital.getName():
+								if gc.getGame().getSorenRandNum(5,'RelicChance') < 4: # 80% chance
+									pCiv.initUnit( xml.iHolyRelic, iCapitalX, iCapitalY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
+									if iCiv == iHuman:
+										CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_CRUSADE_NEW_RELIC", ()), "AS2D_UNIT_BUILD_UNIQUE_UNIT", 0, gc.getUnitInfo(xml.iHolyRelic).getButton(), ColorTypes(con.iGreen), iCapitalX, iCapitalY, True, True)
+									print ("Relic created:", capital.getName())
+								if iUnitNumber > 3:
+									if gc.getGame().getSorenRandNum(5,'RelicChance') < 3: # 60% chance
+										pCiv.initUnit( xml.iHolyRelic, iCapitalX, iCapitalY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
+										print ("Relic created:", capital.getName())
+								if iUnitNumber > 9:
+									if gc.getGame().getSorenRandNum(5,'RelicChance') < 3: # 60% chance
+										pCiv.initUnit( xml.iHolyRelic, iCapitalX, iCapitalY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
+										print ("Relic created:", capital.getName())
 
 
 	# Absinthe: called from CvRFCEventHandler.onCityAcquired

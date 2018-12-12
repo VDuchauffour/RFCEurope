@@ -49,7 +49,7 @@ class UniquePowers:
 
 
 	# Absinthe: Ottoman UP
-	def janissaryUP(self, iPlayer ):
+	def janissaryDraftUP(self, iPlayer):
 		pPlayer = gc.getPlayer( iPlayer )
 		iStateReligion = pPlayer.getStateReligion()
 
@@ -81,6 +81,23 @@ class UniquePowers:
 				print(" New Janissary in ",pCity.getName() )
 		else:
 			pPlayer.setPicklefreeParameter( iJanissaryPoints, iOldPoints + iNewPoints )
+
+	def janissaryConquestUP(self, iPlayer, city):
+		pPlayer = gc.getPlayer( iPlayer )
+		iStateReligion = pPlayer.getStateReligion()
+		iIsHasForeignReligion = 0
+		for iReligion in range( xml.iNumReligions ):
+			if iReligion != iStateReligion and city.isHasReligion( iReligion ):
+				iIsHasForeignReligion = 1
+				break
+
+		if iIsHasForeignReligion:
+			iX = city.getX()
+			iY = city.getY()
+			utils.makeUnit( xml.iJanissary, iPlayer, (iX, iY), 1 )
+			if iPlayer == utils.getHumanID():
+				CyInterface().addMessage(iPlayer, False, con.iDuration, CyTranslator().getText("TXT_KEY_UNIT_NEW_JANISSARY", ()) + " " + city.getName() + "!", "AS2D_UNIT_BUILD_UNIQUE_UNIT", 0, gc.getUnitInfo(xml.iJanissary).getButton(), ColorTypes(con.iGreen), iX, iY, True, True)
+				print(" New Janissary in ",city.getName() )
 
 
 	# Absinthe: Danish UP
@@ -134,31 +151,45 @@ class UniquePowers:
 	# Absinthe: Aragonese UP
 	def confederationUP(self, iPlayer):
 		pPlayer = gc.getPlayer(iPlayer)
-		# Only recalculate if we have a different number of cities from last turn.
-		if pPlayer.getNumCities() == pPlayer.getUHVCounter(1):
-			return
-		pPlayer.setUHVCounter(1, pPlayer.getNumCities())
-
-		#print("Recalc Province Commerce UP")
-		cityProvinces = []
 		capital = pPlayer.getCapitalCity()
 		iCapitalX = capital.getX()
 		iCapitalY = capital.getY()
+
+		# Collect all provinces
+		cityProvinces = []
 		for city in utils.getCityList(iPlayer):
 			pProvince = city.getProvince()
 			cityProvinces.append(pProvince)
-		# How many unique provinces?
+		# Calculate unique provinces
 		uniqueProvinces = set(cityProvinces)
 		iProvinces = len(uniqueProvinces)
-		#print("Unique provinces", iProvinces)
-		#print("Capital at",iCapitalX,iCapitalY)
-		# Kludge: the UHV counter is a storage of sorts
+
+		# Do not recalculate if we have the same number of provinces as in the last check, and the capital has not changed
+		if (iProvinces == pPlayer.getUHVCounter(1) and pPlayer.getUHVCounter(2) == 100*iCapitalX + iCapitalY):
+			return
+
+		# Store the province number for the next check
+		pPlayer.setUHVCounter(1, iProvinces)
+
+		# On capital change, reset yield for the previous capital's tile, also reset the commerce counter
+		if (pPlayer.getUHVCounter(2) != 100*iCapitalX + iCapitalY):
+			iOldCapitalX = pPlayer.getUHVCounter(2) / 100
+			iOldCapitalY = pPlayer.getUHVCounter(2) % 100
+			iProvinceCommerceLastBonus = pPlayer.getUHVCounter(0)
+			gc.getGame().setPlotExtraYield( iOldCapitalX, iOldCapitalY, 2, -iProvinceCommerceLastBonus)
+			# If there was a capital change, the discount should be 0 for the new capital's tile
+			pPlayer.setUHVCounter(0, 0)
+			# New capital's coordinates are stored for the next check
+			pPlayer.setUHVCounter(2, 100*iCapitalX + iCapitalY)
+
+		# Update tile yield for the capital's plot
 		iProvinceCommerceLastBonus = pPlayer.getUHVCounter(0)
-		iProvinceCommerceNextBonus = iProvinces * 2 # <- This number is the amount of extra commerce per province
 		gc.getGame().setPlotExtraYield( iCapitalX, iCapitalY, 2, -iProvinceCommerceLastBonus)
 		#print("Capital commerce reduced by", iProvinceCommerceLastBonus)
+		iProvinceCommerceNextBonus = iProvinces * 2 # <- This number is the amount of extra commerce per province
 		gc.getGame().setPlotExtraYield( iCapitalX, iCapitalY, 2, iProvinceCommerceNextBonus)
 		#print("Capital commerce increased by", iProvinceCommerceNextBonus)
+		# Tile yield is stored for the next check
 		pPlayer.setUHVCounter(0, iProvinceCommerceNextBonus )
 
 
@@ -185,10 +216,18 @@ class UniquePowers:
 
 		print("Making ", RangedClass, " and ", PolearmClass)
 		for city in utils.getCityList(iPlayer):
-			tPlot = (city.getX(), city.getY())
-			if gc.getGame().getSorenRandNum(2,'DefiancyType') == 1:
-				utils.makeUnit(RangedClass, iPlayer, tPlot, 1)
-			else:
-				utils.makeUnit(PolearmClass, iPlayer, tPlot, 1)
-			print("In city: ", tPlot)
+			# only in cities with at least 20% Scottish culture
+			iTotalCulture = city.countTotalCultureTimes100()
+			if iTotalCulture == 0 or (city.getCulture(iPlayer) * 10000) / iTotalCulture > 20:
+				iX = city.getX()
+				iY = city.getY()
+				tPlot = (iX, iY)
+				if gc.getGame().getSorenRandNum(2,'DefiancyType') == 1:
+					utils.makeUnit(RangedClass, iPlayer, tPlot, 1)
+				else:
+					utils.makeUnit(PolearmClass, iPlayer, tPlot, 1)
+				print("In city: ", tPlot)
+				# interface message for the human player
+				if iPlayer == utils.getHumanID():
+					CyInterface().addMessage(iPlayer, False, con.iDuration, CyTranslator().getText("TXT_KEY_UNIT_NEW_DEFENDER", ()) + " " + city.getName() + "!", "AS2D_UNIT_BUILD_UNIQUE_UNIT", 0, "", ColorTypes(con.iGreen), iX, iY, True, True)
 

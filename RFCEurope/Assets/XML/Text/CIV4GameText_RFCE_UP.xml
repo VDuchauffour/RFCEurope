@@ -25,7 +25,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_BYZ2</Tag>
-		<English>The core of the Empire cannot collapse due to instability.</English>
+		<English>The Imperialism civic is unlocked by default, the core of the Empire cannot collapse due to instability.</English>
 		<French>Le coeur de l'Empire ne peut pas s'effondrer &#224; cause de l'instabilit&#233;</French>
 		<German>Der Kern des Reiches kann nicht wegen Instabilit&#228;t kollabieren</German>
 		<Italian>Il fulcro dell'Impero non può collassare per instabilità</Italian>
@@ -97,7 +97,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ARA2</Tag>
-		<English>If your State Religion is a major religion, it spreads to each newly acquired (founded, conquered, flipped) city and a free Temple is built there.</English>
+		<English>If your State Religion is a major religion, it spreads to each newly acquired city and a free Temple is built there.</English>
 		<French>La religion d'Etat se r&#233;pand dans chaque ville avec un temple</French>
 		<German>Verbreitung der Staatsreligion und Errichtung eines Tempels in jeder gegründeten, eroberten oder übergelaufenen Stadt</German>
 		<Italian>La Religione Ufficiale si diffonde in ogni città aquisita, ed un tempio viene costruito automaticamente</Italian>
@@ -115,7 +115,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_COR2</Tag>
-		<English>All units start with Medic I promotion, excess health in your cities contribute to their growth.</English>
+		<English>All units start with the Medic I promotion, excess health in your cities contribute to their growth.</English>
 		<French>Chaque unit&#233; commence avec la promotion Infirmier I</French>
 		<German>Alle Einheiten starten mit der Beförderung Sanit&#228;ter I</German>
 		<Italian>Tutte le unità iniziano con la promozione Medico I</Italian>
@@ -151,7 +151,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_NOR2</Tag>
-		<English>All naval units can enter ocean tiles and trade is possible through them, less stability penalty for razing cities.</English>
+		<English>All naval units can enter ocean tiles, trade is possible through oceans by default, less stability penalty for razing cities.</English>
 		<French>Toutes les unit&#233;s navales peuvent entrer dans l'oc&#233;an</French>
 		<German>Alle Marineeinheiten k&#246;nnen den Ozean befahren</German>
 		<Italian>Tutte le unità navali possono passare sulle caselle oceaniche</Italian>
@@ -169,11 +169,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_VEN2</Tag>
-		<English>Starts with Merchant Republic, less stability penalty for having too many cities in a Merchant Republic.</English>
+		<English>The Merchant Republic civic is unlocked by default, Merchant Republic's too many cities stability penalty is decreased.</English>
 		<French>Commence avec la Republique Marchande</French>
 		<German>Beginnt mit Handelsrepublik</German>
 		<Italian>All'avvio è abilitata Repubblica Mercantile</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>Starts with Merchant Republic, less stability penalty for having too many cities in a Merchant Republic.</Spanish>
 		<Portuguese>Começa como República Mercante</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -259,7 +259,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_POL2</Tag>
-		<English>No unhappiness or instability from non-state religions.</English>
+		<English>No unhappiness or instability from non-state religions. Religions spread more easily to your cities.</English>
 		<French>No unhappiness or instability from non-state religions</French>
 		<German>Keine Unzufriedenheit oder Instabilität durch nicht-Staatsreligionen</German>
 		<Italian>Nessuna infelicità o instabilità dalle religioni non-ufficiali</Italian>
@@ -277,7 +277,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_MOS2</Tag>
-		<English>50% decrease in all maintenance cost associated with the number of your cities.</English>
+		<English>50% decrease in all maintenance costs associated with the number of your cities.</English>
 		<French>-50% de coût de maintenance pour le nombre de villes</French>
 		<German>50% reduzierte Unterhaltskosten für die Anzahl an Städten</German>
 		<Italian>-50% costo di mantenimento per il numero delle città</Italian>
@@ -295,7 +295,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_GEN2</Tag>
-		<English>All Mercenary costs are halved.</English>
+		<English>All mercenary costs are halved, companies are more likely to spread to your cities.</English>
 		<French>Coût des Mercenaires divis&#233; par 2</French>
 		<German>Halbierte Söldernkosten</German>
 		<Italian>Dimezza il costo dei Mercenari</Italian>
@@ -313,7 +313,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ENG2</Tag>
-		<English>Workshops give +1[ICON_PRODUCTION] and +1[ICON_COMMERCE].</English>
+		<English>Cottages, Hamlets, Villages and Towns give +1[ICON_PRODUCTION], Workshops give +1[ICON_COMMERCE].</English>
 		<French>Atelier ont +1[ICON_PRODUCTION] and +1[ICON_COMMERCE]</French>
 		<German>Werkstätten ergeben +1[ICON_PRODUCTION] and +1[ICON_COMMERCE]</German>
 		<Italian>Le Botteghe danno +1[ICON_PRODUCTION] and +1[ICON_COMMERCE]</Italian>
@@ -385,7 +385,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_SWE2</Tag>
-		<English>All units start with Formation promotion.</English>
+		<English>All units start with the Formation promotion.</English>
 		<French>Toute les unit&#233;s commence avec la promotion Formation</French>
 		<German>Alle Einheiten starten mit der Beförderung Formation</German>
 		<Italian>Tutte le unità cominciano con la promozione Formazione</Italian>
@@ -439,7 +439,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_PRU2</Tag>
-		<English>Starts with Theocracy and no stability penalties from anarchy.</English>
+		<English>The Theocracy civic is unlocked by default, no stability penalties from anarchy.</English>
 		<French>Starts with Theocracy and no stability penalties from anarchy.</French>
 		<German>Starts with Theocracy and no stability penalties from anarchy.</German>
 		<Italian>Starts with Theocracy and no stability penalties from anarchy.</Italian>
@@ -457,7 +457,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_NOV2</Tag>
-		<English>Starts with Bureaucracy, less stability penalty for having too many cities in a bureaucratic government.</English>
+		<English>The Bureaucracy civic is unlocked by default, Bureaucracy's too many cities stability penalty is decreased.</English>
 		<French>Starts with Bureaucracy, less stability penalty for having too many cities in a bureaucratic government.</French>
 		<German>Starts with Bureaucracy, less stability penalty for having too many cities in a bureaucratic government.</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#239;&#191;&#189;</Italian>
@@ -475,12 +475,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_SCO2</Tag>
-		<English>When one of your cities is conquered by a non-barbarian civilization, all your other cities get free defenders. Lower stability hit from losing a city.</English>
-		<French>When one of your cities is conquered by a non-barbarian civilization, all your other cities get free defenders. Lower stability hit from losing a city.</French>
-		<German>When one of your cities is conquered by a non-barbarian civilization, all your other cities get free defenders. Lower stability hit from losing a city.</German>
-		<Italian>When one of your cities is conquered by a non-barbarian civilization, all your other cities get free defenders. Lower stability hit from losing a city.</Italian>
-		<Spanish>When one of your cities is conquered by a non-barbarian civilization, all your other cities get free defenders. Lower stability hit from losing a city.</Spanish>
-		<Portuguese>When one of your cities is conquered by a non-barbarian civilization, all your other cities get free defenders. Lower stability hit from losing a city.</Portuguese>
+		<English>When one of your cities with a significant Scottish population is conquered, all your other Scottish cities get free defenders. Lower stability hit from losing a city. Forts add +2[ICON_COMMERCE].</English>
+		<French>When one of your cities with a significant Scottish population is conquered, all your other Scottish cities get free defenders. Lower stability hit from losing a city. Forts add +2[ICON_COMMERCE].</French>
+		<German>When one of your cities with a significant Scottish population is conquered, all your other Scottish cities get free defenders. Lower stability hit from losing a city. Forts add +2[ICON_COMMERCE].</German>
+		<Italian>When one of your cities with a significant Scottish population is conquered, all your other Scottish cities get free defenders. Lower stability hit from losing a city. Forts add +2[ICON_COMMERCE].</Italian>
+		<Spanish>When one of your cities with a significant Scottish population is conquered, all your other Scottish cities get free defenders. Lower stability hit from losing a city. Forts add +2[ICON_COMMERCE].</Spanish>
+		<Portuguese>When one of your cities with a significant Scottish population is conquered, all your other Scottish cities get free defenders. Lower stability hit from losing a city. Forts add +2[ICON_COMMERCE].</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ARG</Tag>
@@ -562,5 +562,23 @@
 		<Italian>You got %d1_Gold gold income from the Sound Toll.</Italian>
 		<Spanish>You got %d1_Gold gold income from the Sound Toll.</Spanish>
 		<Portuguese>You got %d1_Gold gold income from the Sound Toll.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NEW_JANISSARY</Tag>
+		<English>A new Janissary unit reports for service in</English>
+		<French>A new Janissary unit reports for service in</French>
+		<German>A new Janissary unit reports for service in</German>
+		<Italian>A new Janissary unit reports for service in</Italian>
+		<Spanish>A new Janissary unit reports for service in</Spanish>
+		<Portuguese>A new Janissary unit reports for service in</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NEW_DEFENDER</Tag>
+		<English>Your proud nation comes to your aid, a new military unit forms in</English>
+		<French>Your proud nation comes to your aid, a new military unit forms in</French>
+		<German>Your proud nation comes to your aid, a new military unit forms in</German>
+		<Italian>Your proud nation comes to your aid, a new military unit forms in</Italian>
+		<Spanish>Your proud nation comes to your aid, a new military unit forms in</Spanish>
+		<Portuguese>Your proud nation comes to your aid, a new military unit forms in</Portuguese>
 	</TEXT>
 </Civ4GameText>

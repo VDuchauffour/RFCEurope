@@ -47,7 +47,7 @@
 	</Define>
 	<Define>
 		<DefineName>NUKE_FEATURE</DefineName>
-		<DefineTextVal>FEATURE_FALLOUT</DefineTextVal>
+		<DefineTextVal>FEATURE_MARSH</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>GLOBAL_WARMING_TERRAIN</DefineName>
@@ -547,14 +547,19 @@
 	</Define>
 	<Define>
 		<DefineName>INITIAL_FREE_UNITS_POPULATION_PERCENT</DefineName>
-		<iDefineIntVal>24</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>INITIAL_FREE_MILITARY_UNITS_POPULATION_PERCENT</DefineName>
 		<iDefineIntVal>12</iDefineIntVal>
 	</Define>
 	<Define>
+		<DefineName>INITIAL_FREE_MILITARY_UNITS_POPULATION_PERCENT</DefineName>
+		<iDefineIntVal>8</iDefineIntVal>
+	</Define>
+	<Define>
 		<DefineName>INITIAL_GOLD_PER_UNIT</DefineName>
+		<iDefineIntVal>1</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>INITIAL_GOLD_PER_MILITARY_UNIT</DefineName>
+		<!-- there is a 0,5 multiplier, so 1 means 1/2 -->
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
@@ -1429,7 +1434,7 @@
 		<DefineName>MIN_WATER_SIZE_FOR_OCEAN</DefineName>
 		<iDefineIntVal>10</iDefineIntVal>
 	</Define>
-	<Define> <!-- Merijn: This causes the annoying CTD -->
+	<Define>
 		<DefineName>MIN_CITY_ATTACK_MODIFIER_FOR_SIEGE_TOWER</DefineName>
 		<iDefineIntVal>10</iDefineIntVal>
 	</Define>

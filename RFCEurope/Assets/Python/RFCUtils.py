@@ -12,6 +12,7 @@ from StoredData import sd
 
 # globals
 gc = CyGlobalContext()
+ArtFileMgr = CyArtFileMgr()
 localText = CyTranslator() #Absinthe
 PyPlayer = PyHelpers.PyPlayer
 
@@ -137,37 +138,6 @@ class RFCUtils:
 				iCol += 1
 		return tCol[iCol]
 
-	# 3Miro: BEGIN Utilities for the extra UHV info
-	def getBurgundyCulture( self ):
-		return 0
-		#if ( sd.scriptDict['lGoals'][con.iBurgundy][1] == -1 ):
-		#	return sd.scriptDict['iBurgundyCulture']
-		#else:
-		#	return -1
-
-	def getArabianInfluence( self ):
-		return 0
-		#if ( sd.scriptDict['lGoals'][con.iArabia][1] == -1 ):
-		#	return gc.getGame().calculateReligionPercent( xml.iIslam )
-		#else:
-		#	return -1
-
-	def getNorseRazed( self ):
-		return 0
-		#if ( sd.scriptDict['lGoals'][con.iNorse][1] == -1 ):
-		#	return sd.scriptDict['iNorseRazed']
-		#else:
-		#	return -1
-
-	def getKievFood( self ):
-		return 0
-		#if ( sd.scriptDict['lGoals'][con.iKiev][0] == -1 ):
-		#	return sd.scriptDict['iKievFood']
-		#else:
-		#	return -1
-	# 3Miro: END Utilities
-
-
 	#Plague, UP
 	def getRandomCity(self, iPlayer):
 		cityList =  self.getCityList(iPlayer)
@@ -185,7 +155,7 @@ class RFCUtils:
 			if not gc.getPlayer(unit.getOwner()).isHuman():
 				return False
 		iUnitType = unit.getUnitType()
-		if xml.iProphet <= iUnitType <= xml.iGreatSpy:
+		if xml.iGreatProphet <= iUnitType <= xml.iGreatSpy:
 			return False
 		return True
 
@@ -335,7 +305,7 @@ class RFCUtils:
 			bSafeUnit = False
 			if unit.getOwner() == iOldOwner:
 				# Absinthe: # no civilian units will flip on city secession
-				lNoFlip = [xml.iSettler, xml.iProphet, xml.iArtist, xml.iScientist, xml.iMerchant, xml.iEngineer, xml.iGreatGeneral, xml.iGreatSpy]
+				lNoFlip = [xml.iSettler, xml.iGreatProphet, xml.iGreatArtist, xml.iGreatScientist, xml.iGreatMerchant, xml.iGreatEngineer, xml.iGreatGeneral, xml.iGreatSpy]
 				for i in range( 0, len(lNoFlip) ):
 					if lNoFlip[i] == unitType:
 						bSafeUnit = True
@@ -461,7 +431,7 @@ class RFCUtils:
 			iNumUnitsInAPlot = killPlot.getNumUnits()
 			if iNumUnitsInAPlot > 0:
 				bRevealedZero = False
-				if gc.getMap().plot(28, 0).isRevealed(iNewOwner, False):
+				if gc.getMap().plot(28, 0).isRevealed(gc.getPlayer(iNewOwner).getTeam(), False):
 					bRevealedZero = True
 				#print ("killplot", x, y)
 				if bSkipPlotCity and killPlot.isCity():
@@ -521,7 +491,7 @@ class RFCUtils:
 			iNumUnitsInAPlot = killPlot.getNumUnits()
 			if iNumUnitsInAPlot > 0:
 				bRevealedZero = False
-				if gc.getMap().plot(28, 0).isRevealed(iNewOwner, False):
+				if gc.getMap().plot(28, 0).isRevealed(gc.getPlayer(iNewOwner).getTeam(), False):
 					bRevealedZero = True
 				#print ("killplot", x, y)
 				if bSkipPlotCity and killPlot.isCity():
@@ -585,6 +555,17 @@ class RFCUtils:
 						pNewOwner.acquireCity(city, True, False)
 					else: #trade
 						pNewOwner.acquireCity(city, False, True)
+					# Absinthe: if there are mercs available in the new city's province, interface message about it to the human player
+					lGlobalPool = sd.scriptDict['lMercGlobalPool']
+					iProvince = city.getProvince()
+					for lMerc in lGlobalPool:
+						if lMerc[4] == iProvince:
+							if iNewOwner == self.getHumanID():
+								szProvName = "TXT_KEY_PROVINCE_NAME_%i" %lMerc[4]
+								szCurrentProvince = CyTranslator().getText(szProvName,())
+								CyInterface().addMessage(iNewOwner, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_AVAILABLE_IN_PROVINCE_OF_NEW_CITY", (szCurrentProvince,)), "", 0, ArtFileMgr.getInterfaceArtInfo("INTERFACE_MERCENARY_ICON").getPath(), ColorTypes(con.iLime), city.getX(), city.getY(), True, True)
+								#CyInterface().addMessage(iNewOwner, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_AVAILABLE_NEAR_NEW_CITY", (city.getName(),)), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
+								break
 					return True
 		return False
 
@@ -801,6 +782,8 @@ class RFCUtils:
 
 		self.resetUHV(iCiv)
 		self.setLastTurnAlive(iCiv, gc.getGame().getGameTurn())
+		# Absinthe: alive status should be updated right on collapse - may result in crashes if it only updates on the beginning of the next turn
+		gc.getPlayer( iCiv ).setAlive( False )
 		# Absinthe: respawn status
 		if gc.getPlayer( iCiv ).getRespawnedAlive():
 			gc.getPlayer( iCiv ).setRespawnedAlive( False )
@@ -820,7 +803,9 @@ class RFCUtils:
 				#gc.getTeam(gc.getPlayer(iCiv).getTeam()).declareWar(iNewCiv1, False, -1) #too dangerous?
 				#gc.getTeam(gc.getPlayer(iCiv).getTeam()).declareWar(iNewCiv2, False, -1)
 				for i in range( con.iIndepStart, con.iIndepEnd + 1 ):
-					gc.getTeam(gc.getPlayer(iCiv).getTeam()).declareWar(i, False, -1)
+					teamMinor = gc.getTeam(gc.getPlayer(i).getTeam())
+					if not teamMinor.isAtWar(iCiv):
+						gc.getTeam(gc.getPlayer(iCiv).getTeam()).declareWar(i, False, -1)
 				continue
 			#assign to neighbours first
 			bNeighbour = False
@@ -879,11 +864,14 @@ class RFCUtils:
 			#self.flipUnitsInArea((0,0), (123,67), iNewCiv1, iCiv, False, True) #causes a bug: if a unit was inside another city's civ, when it becomes independent or barbarian, may raze it
 			self.killUnitsInArea((0, 0), (con.iMapMaxX, con.iMapMaxY), iCiv)
 			self.resetUHV(iCiv)
-		self.setLastTurnAlive(iCiv, gc.getGame().getGameTurn())
-		# Absinthe: respawn status
-		#print ("getRespawnedAlive", gc.getPlayer( iCiv ).getRespawnedAlive())
-		if gc.getPlayer( iCiv ).getRespawnedAlive():
-			gc.getPlayer( iCiv ).setRespawnedAlive( False )
+
+			self.setLastTurnAlive(iCiv, gc.getGame().getGameTurn())
+			# Absinthe: alive status should be updated right on collapse - may result in crashes if it only updates on the beginning of the next turn
+			gc.getPlayer( iCiv ).setAlive( False )
+			# Absinthe: respawn status
+			#print ("getRespawnedAlive", gc.getPlayer( iCiv ).getRespawnedAlive())
+			if gc.getPlayer( iCiv ).getRespawnedAlive():
+				gc.getPlayer( iCiv ).setRespawnedAlive( False )
 
 
 	def resetUHV(self, iPlayer):
@@ -1119,28 +1107,34 @@ class RFCUtils:
 		# count the number of religious buildings and wonders (for the chance)
 		if iReligion > -1:
 			lReligionBuilding = []
-			lReligionWonder = 0
+			iReligionWonder = 0
 			for iBuilding in xrange(gc.getNumBuildingInfos()):
 				if city.getNumRealBuilding(iBuilding):
 					BuildingInfo = gc.getBuildingInfo(iBuilding)
 					if BuildingInfo.getPrereqReligion() == iReligion:
 						lReligionBuilding.append(iBuilding)
 						if isWorldWonderClass(BuildingInfo.getBuildingClassType()) or isNationalWonderClass(BuildingInfo.getBuildingClassType()):
-							lReligionWonder += 1
+							iReligionWonder += 1
 		else:
 			return False	# when there is no available religion to purge
 
-		# base chance to work: about 50-90, based on faith:
-		## iChance = 60 + max(-10, min(30, pPlayer.getFaith()/3))
-		iChance = 55 + pPlayer.getFaith()/3
+		# base chance to work: about 50-80%, based on faith:
+		iChance = 50 + pPlayer.getFaith() / 3
 		# lower chance for purging any religion from Jerusalem:
 		if (iPlotX, iPlotY) == con.tJerusalem:
 			iChance -= 25
 		# lower chance if the city has the chosen religion's buildings/wonders:
-		iChance -= (len(lReligionBuilding) * 8 + lReligionWonder * 17)		# the wonders have an extra chance reduction (in addition to the first reduction)
+		iChance -= (len(lReligionBuilding) * 5 + iReligionWonder * 10)		# the wonders have an extra chance reduction (in addition to the first reduction)
 		# bonus for the AI:
 		if self.getHumanID() != iOwner:
 			iChance += 15
+		# population modifier:
+		if city.getPopulation() > 11:
+			iChance -= 12
+		elif city.getPopulation() > 7:
+			iChance -= 8
+		elif city.getPopulation() > 3:
+			iChance -= 4
 
 		if gc.getGame().getSorenRandNum(100, "purge chance") < iChance:
 		# on successful persecution:
@@ -1235,7 +1229,11 @@ class RFCUtils:
 	def saint( self, iOwner, iUnitID ):
 		# 3Miro: kill the Saint :), just make it so he cannot be used for other purposes
 		pPlayer = gc.getPlayer( iOwner )
-		pPlayer.changeFaith( con.iSaintBenefit )
+		# Absinthe: Wonders: Boyana Church wonder effect
+		if pPlayer.countNumBuildings(xml.iBoyanaChurch) > 0:
+			pPlayer.changeFaith( con.iSaintBenefit * 3 / 2 + 2 )
+		else:
+			pPlayer.changeFaith( con.iSaintBenefit )
 		pUnit = pPlayer.getUnit(iUnitID)
 		pUnit.kill(0, -1)
 
@@ -1499,7 +1497,40 @@ class RFCUtils:
 		return gc.getUnitClassInfo(gc.getUnitInfo(iUnit).getUnitClassType()).getDefaultUnitIndex()
 
 	def getUniqueBuilding(self, iPlayer, iBuilding):
-		return gc.getCivilizationInfo(gc.getPlayer(iPlayer).getCivilizationType()).getCivilizationBuildings(gc.getBuildingInfo(iBuilding).getBuildingClassType())
+		pPlayer = gc.getPlayer(iPlayer)
+		return gc.getCivilizationInfo(pPlayer.getCivilizationType()).getCivilizationBuildings(gc.getBuildingInfo(iBuilding).getBuildingClassType())
+
+	def getBaseBuilding(self, iBuilding):
+		return gc.getBuildingClassInfo(gc.getBuildingInfo(iBuilding).getBuildingClassType()).getDefaultBuildingIndex()
+
+	def getMostAdvancedCiv(self):
+		iBestCiv = -1
+		iMostTechs = 0
+		for iPlayer in xrange(iNumMajorPlayers-1):
+			pPlayer = gc.getPlayer(iPlayer)
+			if pPlayer.isAlive():
+				iTeam = pPlayer.getTeam()
+				pTeam = gc.getTeam(iTeam)
+				iTechNumber = 0
+				for iTech in xrange(gc.getNumTechInfos()):
+					if pTeam.isHasTech(iTech):
+						iTechNumber += 1
+				if iTechNumber > iMostTechs:
+					iBestCiv = iPlayer
+					iMostTechs = iTechNumber
+				# we aim for the single most advanced civ
+				elif iTechNumber == iMostTechs:
+					iBestCiv = -1
+		return iBestCiv
+
+	def getCargoShips(self, iPlayer):
+		iCargoShips = 0
+		unitList = PyPlayer(iPlayer).getUnitList()
+		for unit in unitList:
+			iCargoSpace = unit.cargoSpace()
+			if iCargoSpace > 0:
+				iCargoShips += 1
+		return iCargoShips
 
 	def getPlotList(self, tTL, tBR, tExceptions=()):
 		return [(x, y) for x in range(tTL[0], tBR[0]+1) for y in range(tTL[1], tBR[1]+1) if 0 <= x < con.iMapMaxX and 0 <= y < con.iMapMaxY and (x, y) not in tExceptions]

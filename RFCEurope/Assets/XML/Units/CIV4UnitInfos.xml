@@ -1745,7 +1745,7 @@
 			<ReligionSpreads>
 				<ReligionSpread>
 					<ReligionType>RELIGION_CATHOLICISM</ReligionType>
-					<iReligionSpread>40</iReligionSpread>
+					<iReligionSpread>50</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
 			<CorporationSpreads/>
@@ -1919,7 +1919,7 @@
 			<ReligionSpreads>
 				<ReligionSpread>
 					<ReligionType>RELIGION_ORTHODOXY</ReligionType>
-					<iReligionSpread>40</iReligionSpread>
+					<iReligionSpread>50</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
 			<CorporationSpreads/>
@@ -2093,7 +2093,7 @@
 			<ReligionSpreads>
 				<ReligionSpread>
 					<ReligionType>RELIGION_PROTESTANTISM</ReligionType>
-					<iReligionSpread>40</iReligionSpread>
+					<iReligionSpread>50</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
 			<CorporationSpreads/>
@@ -2267,7 +2267,7 @@
 			<ReligionSpreads>
 				<ReligionSpread>
 					<ReligionType>RELIGION_ISLAM</ReligionType>
-					<iReligionSpread>40</iReligionSpread>
+					<iReligionSpread>50</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
 			<CorporationSpreads/>
@@ -17996,7 +17996,7 @@
 			<iHurryMultiplier>0</iHurryMultiplier>
 			<iBaseTrade>0</iBaseTrade>
 			<iTradeMultiplier>0</iTradeMultiplier>
-			<iGreatWorkCulture>4000</iGreatWorkCulture>
+			<iGreatWorkCulture>2000</iGreatWorkCulture>
 			<iEspionagePoints>0</iEspionagePoints>
 			<TerrainImpassables/>
 			<FeatureImpassables>

@@ -4,14 +4,16 @@
 #				#Important event						#Spawn						#UHV
 i500AD = 0
 i508AD = 2
+i520AD = 5
 i540AD = 10		# Gothic wars: Ravenna reconquered
 i552AD = 13
 i568AD = 17
 i600AD = 25		# Stirrup in the beginning of the 7th century
-i632AD = 33												# Spawn of Arabia
+i632AD = 33												# Spawn of Arabia			# Byzantium UHV 1
 i635AD = 34
 i640AD = 35
 i660AD = 40
+i670AD = 43
 i680AD = 45												# Spawn of Bulgaria
 i700AD = 50
 i711AD = 53												# Spawn of Cordoba
@@ -28,6 +30,7 @@ i810AD = 78												# Spawn of Venice
 i840AD = 85																			# France UHV 1
 i843AD = 86		# Treaty of Verdun						# Spawn of Burgundy
 i844AD = 86
+i850AD = 88		# Greatest extent of the Abbasid Caliphate							# Arabia UHV 1
 i852AD = 88
 i856AD = 89												# Spawn of Germany
 i860AD = 90
@@ -46,7 +49,7 @@ i920AD = 107	# Kievan Rus - Pecheneg Wars
 i925AD = 108
 i936AD = 112											# Spawn of Denmark
 i940AD = 113
-i955AD = 118	# Basil defeats the Arabs											# Arab UHV 1
+i955AD = 118	# Basil defeats the Arabs
 i960AD = 120											# Spawn of Scotland
 i961AD = 120																		# Cordoba UHV 1
 i962AD = 121	# HRE founded
@@ -63,11 +66,12 @@ i1009AD =136
 i1010AD =137
 i1016AD =139	# Muslims are defeated in Sardinia		# Spawn of Genoa
 i1020AD =140
-i1025AD =142	# Death of Basil II													# Byzantium UHV 1
+i1025AD =142	# Death of Basil II
 i1032AD =144
 i1040AD =147											# Spawn of Morocco
 i1050AD =150																		# Denmark UHV 1
 i1053AD =151
+i1057AD =152
 i1060AD =153	# First Crusade gets called
 i1061AD =154
 i1064AD =155	# Seljuk invasions begin
@@ -108,22 +112,23 @@ i1212AD =204
 i1217AD =206	# Fifth Crusade 1217-1221
 i1219AD =206
 i1224AD =208											# Spawn of Prussia
-i1227AD =209																		# Morocco UHV 1
+i1227AD =209
 i1229AD =210	# Sixth Crusade 1228-1229
 i1230AD =210
 i1236AD =212	# Mongol invasions						# Spawn of Lithuania
 i1240AD =213	# Second Swedish "Crusade"
 i1242AD =214	# Battle on the Ice
-i1248AD =216	# Seventh Crusade 1248-1254
+i1248AD =216	# Seventh Crusade 1248-1254, Fall of Cordoban Seville				# Morocco UHV 1
 i1250AD =217																		# Kiev UHV 1
 i1259AD =220																		# Bulgaria UHV 2
 i1263AD =221
+i1269AD =223
 i1271AD =224	# Eighth and Ninth Crusade 1270-1272
 i1281AD =227
 i1282AD =227	# Rise of the Habsburgs					# Spawn of Austria			# Byzantium UHV 2, Aragon UHV 1
 i1284AD =228	# Aragonese Crusade (1284-1285)										# Novgorod UHV 1
 i1288AD =230	# End of the fist wave of Mongols									# Kiev UHV 2
-i1291AD =230																		# Arab UHV 2, France UHV 2
+i1291AD =230																		# Arabia UHV 2, France UHV 2
 i1293AD =231	# Third Swedish "Crusade"
 i1296AD =232																		# Scotland UHV 1
 i1297AD =232
@@ -149,53 +154,58 @@ i1386AD =262																		# Lithuania UHV 1
 i1393AD =264
 i1396AD =265	# Battle of Nicopolis												# Bulgaria UHV 3
 i1397AD =266	# Kalmar Union														# Novgorod UHV 2
+i1400AD =267																		# Genoa UHV 1
 i1401AD =267
 i1410AD =270	# Battle of Grunwald												# Prussia UHV 1
 i1419AD =273
+i1430AD =277	# Death of Vytatutas (Lithuania greatest extent)					# Lithuania UHV 2
 i1431AD =277
 i1441AD =280
-i1444AD =281	# Battle of Varna, Hunyadi's Balkan Campaign						# Hungary UHV 1, Aragon UHV 2
+i1444AD =281	# Battle of Varna, Hunyadi's Balkan Campaign						# Aragon UHV 2
 i1449AD =283
 i1452AD =284	# End of the Hundred Years war										# English UHV 1
-i1453AD =284	# Conquest of Constantinople										# Byzantium UHV 3, Ottoman UHV 1
+i1453AD =284	# Conquest of Constantinople										# Byzantium UHV 3
 i1461AD =287
 i1465AD =288																		# Morocco UHV 2
 i1470AD =290
 i1473AD =291																		# Burgundy UHV 3
 i1474AD =291																		# Aragon UHV 3
-i1478AD =293																		# Novgorod UHV 3
-i1482AD =294																		# Moscow  UHV 1
-i1490AD =297																		# Hungary UHV 2
+i1478AD =293	# Annexation of Novgorod											# Novgorod UHV 3
+i1482AD =294																		# Moscow UHV 1
+i1490AD =297																		# Hungary UHV 1
 i1491AD =297
 i1492AD =297																		# Cordoba UHV 3, Spain UHV 1
 i1494AD =298
 i1500AD =300																		# Poland UHV 1 (start)
 i1514AD =307	# Copernicus
-i1517AD =308	# Printing Press													# Ottoman UHV 2
+i1517AD =308	# Printing Press													# Ottoman UHV 1
 i1520AD =310																		# Poland UHV 1 (end)
 i1523AD =311																		# Denmark UHV 2
 i1525AD =312
 i1526AD =313	# Battle of Mohács, Ottoman invasion of Hungary
 i1530AD =315
 i1540AD =320
+i1541AD =321	# Buda is lost to the Ottomans										# Hungary UHV 2
 i1542AD =321
 i1544AD =322
 i1560AD =330																		# Scotland UHV 2
-i1566AD =333																		# Genoa UHV 1
-i1569AD =334	# Union of Lublin													# Lithuania UHV 2
+i1566AD =333	# Loss of Chios and the Genoese trade routes						# Genoa UHV 3
+i1569AD =334	# Union of Lublin													# Poland UHV 2
 i1570AD =335
 i1571AD =336
 i1578AD =339																		# Morocco UHV 3
 i1580AD =340
 i1581AD =340											# Spawn of the Dutch
 i1588AD =344																		# Spain UHV 2
-i1600AD =350																		# Poland UHV 2
+i1600AD =350
+i1616AD =358																		# Ottoman UHV 2
 i1617AD =358																		# Austria UHV 1
 i1618AD =359	# Brandenburg-Prussia, Start of Thirty Years War
 i1620AD =360
 i1623AD =361	# Galileo
+i1625AD =362
 i1631AD =365
-i1640AD =370																		# Genoa UHV 3, Portugal UHV 2
+i1640AD =370																		# Portugal UHV 2
 i1648AD =374	# End of Thirty Years War											# Germany UHV 3, Spain UHV 3
 i1650AD =375																		# Prussia UHV 2 (start)
 i1660AD =380																		# Sweden UHV 2
@@ -212,7 +222,7 @@ i1730AD =430
 i1750AD =450																		# Dutch UHV 1, Sweden UHV 3
 i1763AD =463																		# Prussia UHV 2 (end)
 i1780AD =480																		# Austria UHV 3
-i1795AD =495	# Partition of Poland
+i1795AD =495	# Partition of Poland												# Lithuania UHV 3
 i1800AD =500	# Industrial Era
 
 
@@ -252,14 +262,14 @@ iNumTechsFuture = 1
 
 iNumUnits = 129
 (iSettler, iWorker, iCatholicMissionary, iOrthodoxMissionary, iProtestantMissionary, iIslamicMissionary, iArcher, iCrossbowman, iArbalest, iGenoaBalestrieri,
-iLongbowman, iEnglishLongbowman, iSpearman, iGuisarme, iAragonAlmogavar, iScotlandSheltron, iPikeman, iHolyRomanLandsknecht, iAxeman, iVikingBeserker,
+iLongbowman, iEnglishLongbowman, iSpearman, iGuisarme, iAragonAlmogavar, iScotlandSheltron, iPikeman, iHolyRomanLandsknecht, iAxeman, iVikingBerserker,
 iSwordsman, iDenmarkHuskarl, iLongSwordsman, iMaceman, iPortugalFootKnight, iLithuanianBajoras, iNovgorodUshkuinik, iGrenadier, iNetherlandsGrenadier, iArquebusier,
 iMusketman, iSwedishKarolin, iSpanishTercio, iFrenchMusketeer, iMoroccoBlackGuard, iLineInfantry, iDragoon, iScout, iMountedInfantry, iHorseArcher,
 iPistolier, iHussar, iPrussiaDeathsHeadHussar, iLancer, iBulgarianKonnik, iCordobanBerber, iHeavyLancer, iHungarianHuszar, iArabiaGhazi, iByzantineCataphract,
 iKievDruzhina, iKnight, iMoscowBoyar, iBurgundianPaladin, iCuirassier, iAustrianKurassier, iPolishWingedHussar, iTemplar, iTeutonic, iKnightofStJohns,
 iDragonKnight, iCalatravaKnight, iCatapult, iTrebuchet, iBombard, iTurkeyGreatBombard, iCannon, iFieldArtillery, iWorkboat, iGalley,
 iCogge, iHolk, iGalleon, iWarGalley, iGunGalley, iVeniceGalleas, iCarrack, iFrigate, iCaravel, iPrivateer,
-iSpy, iProsecutor, iHolyRelic, iProphet, iArtist, iScientist, iMerchant, iEngineer, iGreatGeneral, iGreatSpy,
+iSpy, iProsecutor, iHolyRelic, iGreatProphet, iGreatArtist, iGreatScientist, iGreatMerchant, iGreatEngineer, iGreatGeneral, iGreatSpy,
 iMongolKeshik, iSeljukLancer, iJanissary, iTagmata, iCorsair, iHighlander, iWelshLongbowman, iCondottieri, iSwissPikeman, iVarangianGuard,
 iHackapell, iReiter, iZaporozhianCossack, iDonCossack, iDoppelsoldner, iIrishBrigade, iStradiot, iWaardgelder, iNaffatun, iTurkopoles,
 iWalloonGuard, iSwissGun, iLipkaTatar, iHighlanderGun, iZanji, iTouareg, iNubianLongbowman, iBedouin, iTurcomanHorseArcher, iMamlukHeavyCavalry,
@@ -288,23 +298,25 @@ iCamels, iCocoa, iOpium) = range(iNumBonus)
 
 #Buildings
 
-iNumBuildings = 154 # Should equal iPlague
+iNumBuildings = 176 # Should equal iPlague
 (iPalace, iSummerPalace, iHeroicEpic, iNationalEpic, iNationalTheatre, iNationalGallery, iNationalUniversity, iRoyalDungeon, iRoyalAcademy, iStarFort,
 iWalls, iMoroccoKasbah, iCastle, iMoscowKremlin, iHungarianStronghold, iSpanishCitadel, iBarracks, iArcheryRange, iStable, iBulgarianStan,
 iGranary, iCordobanNoria, iPolishFolwark, iSmokehouse, iScotlandShieling, iAqueduct, iOttomanHammam, iHarbor, iVikingTradingPost, iLighthouse,
-iPortugalFeitoria, iAragonSeaport, iWharf, iCustomHouse, iDrydock, iVeniceArsenal, iForge, iGuildHall, iNovgorodKonets, iTextileMill,
-iUniversity, iObservatory, iPrussiaPublicSchool, iDenmarkResearchInstitute, iApothecary, iHospital, iTheatre, iByzantineHippodrome, iAustrianOperaHouse, iMarket,
-iArabicCaravan, iBrewery, iBurgundianWinery, iJeweler, iWeaver, iTannery, iInn, iCoffeeHouse, iLuxuryStore, iWarehouse,
-iBank, iGenoaBank, iEnglishRoyalExchange, iManorHouse, iFrenchChateau, iCourthouse, iKievVeche, iHolyRomanRathaus, iLithuanianVoivodeship, iDungeon,
+iPortugalFeitoria, iAragonSeaport, iWharf, iCustomHouse, iDrydock, iForge, iGuildHall, iNovgorodKonets, iTextileMill, iUniversity,
+iObservatory, iPrussiaPublicSchool, iDenmarkResearchInstitute, iApothecary, iHospital, iTheatre, iByzantineHippodrome, iAustrianOperaHouse, iMarket, iArabicCaravan,
+iBrewery, iBurgundianWinery, iJeweler, iWeaver, iTannery, iInn, iCoffeeHouse, iLuxuryStore, iWarehouse, iBank,
+iGenoaBank, iEnglishRoyalExchange, iManorHouse, iFrenchChateau, iVeniceNavalBase, iCourthouse, iKievVeche, iHolyRomanRathaus, iLithuanianVoivodeship, iDungeon,
 iNightWatch, iSwedishTennant, iLevee, iNetherlandsDike, iPaganShrine, iJewishQuarter, iJewishShrine, iProtestantTemple, iProtestantSchool, iProtestantCathedral,
 iProtestantChapel, iProtestantSeminary, iProtestantShrine, iIslamicTemple, iIslamicChapel, iIslamicCathedral, iIslamicSchool, iIslamicMadrassa, iIslamicShrine, iCatholicTemple,
 iCatholicCathedral, iCatholicChapel, iCatholicMonastery, iCatholicSeminary, iCatholicShrine, iOrthodoxTemple, iOrthodoxCathedral, iOrthodoxChapel, iOrthodoxMonastery, iOrthodoxSeminary,
 iOrthodoxShrine, iReliquary, iInfirmary, iKontor, iCorporation1, iCorporation2, iCorporation3, iCorporation4, iCorporation5, iCorporation6,
-iCorporation7, iCorporation8, iCorporation9, iVersailles, iNotreDame, iLeaningTower, iSistineChapel, iTheodosianWalls, iTopkapiPalace, iShrineOfUppsala,
-iAlhambra, iKrakDesChevaliers, iSanMarco, iLaMezquita, iStBasil, iMagnaCarta, iSophiaKiev, iDomeRock, iBrandenburgGate, iPalacioDaPena,
-iMonasteryOfCluny, iRoundChurch, iLeonardosWorkshop, iGardensAlAndalus, iMagellansVoyage, iMarcoPolo, iEscorial, iKazimierz, iBelemTower, iGoldenBull,
-iKalmarCastle, iPalaisPapes, iTombKhal, iStephansdom, iBibliothecaCorviniana, iFontainebleau, iImperialDiet, iBeurs, iCopernicus, iSanGiorgio,
-iWestminster, iPressburg, iLanterna, iTriumphalArch) = range(iNumBuildings)
+iCorporation7, iCorporation8, iCorporation9, iVersailles, iNotreDame, iLeaningTower, iSistineChapel, iTheodosianWalls, iTopkapiPalace, iJasnaGora,
+iShrineOfUppsala, iSamogitianAlkas, iGediminasTower, iGrandArsenal, iGalataTower, iKizilKule, iMontSaintMichel, iBoyanaChurch, iTorreDelOro, iFlorenceDuomo,
+iBorgundStaveChurch, iBlueMosque, iSelimiyeMosque, iAlAzhar, iMosqueOfKairouan, iKoutoubiaMosque, iStCatherineMonastery, iGreatLighthouse, iAlhambra, iKrakDesChevaliers,
+iSanMarco, iLaMezquita, iStBasil, iMagnaCarta, iSophiaKiev, iDomeRock, iBrandenburgGate, iPalacioDaPena, iMonasteryOfCluny, iRoundChurch,
+iLeonardosWorkshop, iGardensAlAndalus, iMagellansVoyage, iMarcoPolo, iEscorial, iKazimierz, iBelemTower, iGoldenBull, iKalmarCastle, iPalaisPapes,
+iTombAlWalid, iStephansdom, iBibliothecaCorviniana, iLouvre, iPeterhofPalace, iUraniborg, iThomaskirche, iFontainebleau, iImperialDiet, iBeurs,
+iCopernicus, iSanGiorgio, iWestminster, iPressburg, iLanterna, iTriumphalArch) = range(iNumBuildings)
 
 iGreatPalace = iSummerPalace
 iPlague = iNumBuildings
@@ -325,7 +337,8 @@ iNumTotalColonies = iNumProjects
 #Specialists
 iNumSpecialists = 14
 (iCitizen, iSpecialistPriest, iSpecialistArtist, iSpecialistScientist, iSpecialistMerchant, iSpecialistEngineer, iSpecialistSpy,
-iGreatProphet, iGreatArtist, iGreatScientist, iGreatMerchant, iGreatEngineer, iGreatGeneral, iSpecialistGreatSpy) = range(iNumSpecialists)
+iSpecialistGreatProphet, iSpecialistGreatArtist, iSpecialistGreatScientist, iSpecialistGreatMerchant, iSpecialistGreatEngineer,
+iSpecialistGreatGeneral, iSpecialistGreatSpy) = range(iNumSpecialists)
 
 #Eras
 
@@ -335,9 +348,10 @@ iNumEras = 4
 
 #Improvements
 iNumImprovements = 25
-(iImprovementLandWorked, iImprovementWaterWorked, iImprovementCityRuins, iImprovementGoodyHut, iImprovementFarm, iImprovementFishingBoats, iImprovementWhalingBoats, iImprovementMine, iImprovementWorkshop, iImprovementLumbermill,
-iImprovementWindmill, iImprovementWatermill, iImprovementPlantation, iImprovementQuarry, iImprovementPasture, iImprovementCamp, iImprovementColonialTrade, iImprovementWinery, iImprovementCottage, iImprovementHamlet,
-iImprovementVillage, iImprovementTown, iImprovementFort, iImprovementForestPreserve, iImprovementApiary) = range(iNumImprovements)
+(iImprovementLandWorked, iImprovementWaterWorked, iImprovementCityRuins, iImprovementGoodyHut, iImprovementFarm, iImprovementFishingBoats, iImprovementWhalingBoats,
+iImprovementMine, iImprovementWorkshop, iImprovementLumbermill, iImprovementWindmill, iImprovementWatermill, iImprovementPlantation, iImprovementQuarry,
+iImprovementPasture, iImprovementCamp, iImprovementColonialTrade, iImprovementWinery, iImprovementCottage, iImprovementHamlet, iImprovementVillage,
+iImprovementTown, iImprovementFort, iImprovementForestPreserve, iImprovementApiary) = range(iNumImprovements)
 
 
 #Civics
@@ -351,8 +365,8 @@ iCivicSubjugation, iCivicVassalage, iCivicImperialism, iCivicOccupation, iCivicC
 
 
 #Feature & terrain
-iNumFeatures = 12
-(iIce, iJungle, iDenseForest, iOasis, iFloodPlains, iWoodland, iFallout, iMarsh, iPalmForest, iIslands, iReef, iPyramid) = range(iNumFeatures)
+iNumFeatures = 11
+(iIce, iJungle, iDenseForest, iOasis, iFloodPlains, iWoodland, iMarsh, iPalmForest, iIslands, iReef, iPyramid) = range(iNumFeatures)
 
 iNumTerrain = 14
 (iTerrainGrass, iTerrainPlains, iTerrainSemiDesert, iTerrainDesert, iTerrainWetland, iTerrainMoorland, iTerrainTundra, iTerrainSnow, iTerrainFreshLake, iTerrainSaltLake, iTerrainCoast, iTerrainOcean, iTerrainPeak, iTerrainHill) = range(iNumTerrain)
@@ -470,7 +484,7 @@ iNumCompanies = 9
 #Dates:		1096	1096	1096	1157	1397	1487	1407	1408	1164
 #			n/a		1312	n/a		1669	1499	n/a		1805	n/a		1838
 tCompaniesBirth = (165, 165, 165, 186, 266, 295, 269, 269, 188)
-tCompaniesDeath = (500, 237, 500, 385, 300, 500, 500, 500, 500) # maybe add a couple extra turns for Templars and Medici?
+tCompaniesDeath = (999, 237, 999, 385, 300, 999, 999, 999, 999) # maybe add a couple extra turns for Templars and Medici?
 tCompaniesLimit = (3, 4, 3, 3, 4, 4, 3, 5, 5) # note that we have a modified limit for Hospitallers and Teutons after the Crusades
 
 # Companies will only settle in their preferred regions

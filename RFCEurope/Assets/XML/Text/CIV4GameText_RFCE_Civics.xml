@@ -197,7 +197,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MERCHANT_REPUBLIC_HELP</Tag>
-		<English>[ICON_BULLET]Stable with Common Law, Free Peasantry, Free Labor, Trade Economy[NEWLINE][ICON_BULLET]Stable when controlling less than 5 cities[NEWLINE][ICON_BULLET]Unstable with Feudal Law, Imperialism[NEWLINE][ICON_BULLET]Unstable when controlling more than 5 cities</English>
+		<English>[ICON_BULLET]Stable with Common Law, Free Peasantry, Free Labor, Trade Economy[NEWLINE][ICON_BULLET]Stable when controlling less than 5 cities[NEWLINE][ICON_BULLET]Unstable with Feudal Law, Imperialism, Mercantilism[NEWLINE][ICON_BULLET]Unstable when controlling more than 5 cities</English>
 		<French>.</French>
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Gewohnheitsrecht, Bauernbefreiung, Gewerbefreiheit, Marktwirtschaft, Weniger als 5 Städten[COLOR_REVERT], Instabil mit [COLOR_RED]Lehnswesen, Mehr als 5 Städten[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Comune, Contadini Liberi, Libertà Lavorativa, Economia di Mercato, Meno di 5 città[COLOR_REVERT], Instabile con [COLOR_RED]Legge Feudale, più di 5 città[COLOR_REVERT]</Italian>
@@ -343,7 +343,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_RELIGIOUS_LAW_HELP</Tag>
-		<English>[ICON_BULLET]Stable with Divine Monarchy, Theocracy[NEWLINE][ICON_BULLET]Unstable with Paganism, Religious Tolerance</English>
+		<English>[ICON_BULLET]Doubles the reduction rate of persecution points (thus shortens the duration of religious instability)[NEWLINE][ICON_BULLET]Stable with Divine Monarchy, Theocracy[NEWLINE][ICON_BULLET]Unstable with Paganism, Religious Tolerance</English>
 		<French>.</French>
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Göttlicher Monarchie, Theokratie[COLOR_REVERT], Instabil mit [COLOR_RED]Heidentum, Religionsfreiheit[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Monarchia Divina, Teocrazia[COLOR_REVERT], instabile con [COLOR_RED]Paganesimo, Libertà Religiosa[COLOR_REVERT]</Italian>
@@ -453,7 +453,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_SERFDOM_HELP</Tag>
-		<English>[ICON_BULLET]Stable with Feudal Law, Manorialism[NEWLINE][ICON_BULLET]Unstable with Common Law</English>
+		<English>[ICON_BULLET]Stable with Feudal Law, Manorialism[NEWLINE][ICON_BULLET]Unstable with Common Law, Trade Economy</English>
 		<French>.</French>
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Lehnswesen, Grundherrschaft[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stabile con [COLOR_GREEN]Legge Feudale, Manorialismo[COLOR_REVERT]</Italian>
@@ -671,7 +671,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_TRADE_ECONOMY_HELP</Tag>
-		<English>[ICON_BULLET]Stable with Merchant Republic</English>
+		<English>[ICON_BULLET]Stable with Merchant Republic[NEWLINE][ICON_BULLET]Unstable with Serfdom</English>
 		<French>.</French>
 		<German>[ICON_BULLET]Stabil mit [COLOR_GREEN]Handelsrepublik[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Stable with [COLOR_GREEN]Repubblica Mercantile[COLOR_REVERT]</Italian>
@@ -704,6 +704,15 @@
 		<Italian>Nessuna strategia.</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>Todos os seus especialistas contribuem mais para seu desenvolvimento científico</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_GUILDS_HELP</Tag>
+		<English>[ICON_BULLET]Companies have more chance to spread[NEWLINE][ICON_BULLET]Stable with Apprenticeship</English>
+		<French>[ICON_BULLET]Companies have more chance to spread</French>
+		<German>[ICON_BULLET]Companies have more chance to spread</German>
+		<Italian>[ICON_BULLET]Companies have more chance to spread</Italian>
+		<Spanish>[ICON_BULLET]Companies have more chance to spread</Spanish>
+		<Portuguese>[ICON_BULLET]Companies have more chance to spread</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_GUILDS_HELP</Tag>
@@ -743,7 +752,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MERCANTILISM_HELP</Tag>
-		<English>[ICON_BULLET]Companies have less chance to spread</English>
+		<English>[ICON_BULLET]Companies have less chance to spread[NEWLINE][ICON_BULLET]Unstable with Merchant Republic</English>
 		<French>[ICON_BULLET]Companies have less chance to spread</French>
 		<German>[ICON_BULLET]Companies have less chance to spread</German>
 		<Italian>[ICON_BULLET]Companies have less chance to spread</Italian>
@@ -790,7 +799,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_PAGANISM_HELP</Tag>
-		<English>[ICON_BULLET]Unstable with Divine Monarchy, Religious Law[NEWLINE][ICON_BULLET]Enables [LINK=literal]Pagan Shrine[\LINK], [LINK=literal]The Shrine of Uppsala[\LINK]</English>
+		<English>[ICON_BULLET]Enables [LINK=literal]Pagan Shrine[\LINK], [LINK=literal]The Shrine of Uppsala[\LINK], [LINK=literal]Samogitian Shrine[\LINK], [LINK=literal]Gediminas Tower[\LINK][NEWLINE][ICON_BULLET]Unstable with Divine Monarchy, Religious Law</English>
 		<French>[ICON_BULLET]Unstable with Divine Monarchy, Religious Law[NEWLINE][ICON_BULLET]Enables [LINK=literal]Pagan Shrine[\LINK], [LINK=literal]The Shrine of Uppsala[\LINK]</French>
 		<German>[ICON_BULLET]Instabil mit [COLOR_RED]Göttliche Monarchie, Kirchenrecht[COLOR_REVERT][ICON_BULLET]Enables [LINK=literal]Pagan Shrine[\LINK], [LINK=literal]The Shrine of Uppsala[\LINK]</German>
 		<Italian>[ICON_BULLET]Instabile con [COLOR_RED]Monarchia Divina, Legge Religiosa[COLOR_REVERT][ICON_BULLET]Enables [LINK=literal]Pagan Shrine[\LINK], [LINK=literal]The Shrine of Uppsala[\LINK]</Italian>
@@ -1163,11 +1172,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_ALLOW_NON_STATE_RELIGION_BUILDINGS</Tag>
-		<English>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</English>
-		<French>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</French>
+		<English>[ICON_BULLET]Allows construction of non-State Religion Buildings and Wonders</English>
+		<French>[ICON_BULLET]Allows construction of non-State Religion Buildings and Wonders</French>
 		<German>[ICON_BULLET]Erlaubt den Bau von Nicht-Staatsreligion Gebäuden und Wundern</German>
 		<Italian>[ICON_BULLET]Permette la costruzione di Meraviglie ed Edifici di Religioni non-Ufficiali</Italian>
-		<Spanish>[ICON_BULLET]Allows contruction of non-State Religion Buildings and Wonders</Spanish>
+		<Spanish>[ICON_BULLET]Allows construction of non-State Religion Buildings and Wonders</Spanish>
 		<Portuguese>[ICON_BULLET]Permite a produção de Construções e Maravilhas de outras religiões</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -1205,6 +1214,15 @@
 		<Italian>[ICON_BULLET]%D1_Mod% from Civics</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod% from Civics</Spanish>
 		<Portuguese>[ICON_BULLET]%D1_Mod% por Regimes</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_COASTAL_TRADE_ROUTES</Tag>
+		<English>[ICON_BULLET]%D1_Change Coastal Trade Routes ([ICON_TRADE]) per City</English>
+		<French>[ICON_BULLET]%D1_Change routes commerciales par ville</French>
+		<German>[ICON_BULLET]%D1_Change Handelswege ([ICON_TRADE]) pro Stadt</German>
+		<Italian>[ICON_BULLET]%D1_Change rotte commerciali ([ICON_TRADE]) per citt&#224;</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change rutas comerciales ([ICON_TRADE]) por ciudad</Spanish>
+		<Portuguese>[ICON_BULLET]%D1_Change rutas comerciales ([ICON_TRADE]) por ciudad</Portuguese>
 	</TEXT>
 	<!-- Used in the dll -->
 	<!-- Currently unused in RFCE

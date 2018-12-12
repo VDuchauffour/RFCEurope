@@ -124,10 +124,11 @@ teamIndependent2 = gc.getTeam(pIndependent2.getTeam())
 teamBarbarian = gc.getTeam(pBarbarian.getTeam())
 
 # ------------------- NEW UHV CONDITIONS
-tByzantumControl = [ xml.iP_Colonea, xml.iP_Antiochia, xml.iP_Charsianon, xml.iP_Cilicia, xml.iP_Armeniakon, xml.iP_Anatolikon, xml.iP_Paphlagonia, xml.iP_Thrakesion, xml.iP_Opsikion, xml.iP_Constantinople, xml.iP_Thrace, xml.iP_Thessaloniki, xml.iP_Moesia, xml.iP_Macedonia, xml.iP_Serbia, xml.iP_Arberia, xml.iP_Epirus, xml.iP_Thessaly, xml.iP_Morea ]
+tByzantiumControl = [ xml.iP_Calabria, xml.iP_Apulia, xml.iP_Dalmatia, xml.iP_Verona, xml.iP_Lombardy, xml.iP_Liguria, xml.iP_Tuscany, xml.iP_Latium, xml.iP_Corsica, xml.iP_Sardinia, xml.iP_Sicily, xml.iP_Tripolitania, xml.iP_Ifriqiya ]
+tByzantiumControlII = [ xml.iP_Colonea, xml.iP_Antiochia, xml.iP_Charsianon, xml.iP_Cilicia, xml.iP_Armeniakon, xml.iP_Anatolikon, xml.iP_Paphlagonia, xml.iP_Thrakesion, xml.iP_Opsikion, xml.iP_Constantinople, xml.iP_Thrace, xml.iP_Thessaloniki, xml.iP_Moesia, xml.iP_Macedonia, xml.iP_Serbia, xml.iP_Arberia, xml.iP_Epirus, xml.iP_Thessaly, xml.iP_Morea ]
 tFrankControl = [ xml.iP_Swabia, xml.iP_Saxony, xml.iP_Lorraine, xml.iP_IleDeFrance, xml.iP_Normandy, xml.iP_Picardy, xml.iP_Aquitania, xml.iP_Provence, xml.iP_Burgundy, xml.iP_Orleans, xml.iP_Champagne, xml.iP_Catalonia, xml.iP_Lombardy, xml.iP_Tuscany ]
-tArabiaControlI = [ xml.iP_Egypt, xml.iP_Antiochia, xml.iP_Syria, xml.iP_Lebanon, xml.iP_Arabia, xml.iP_Jerusalem ]
-tArabiaControlII = [ xml.iP_Oran, xml.iP_Algiers, xml.iP_Ifriqiya, xml.iP_Cyrenaica, xml.iP_Tripolitania, xml.iP_Egypt, xml.iP_Antiochia, xml.iP_Syria, xml.iP_Lebanon, xml.iP_Arabia, xml.iP_Jerusalem]
+tArabiaControlI = [ xml.iP_Arabia, xml.iP_Jerusalem, xml.iP_Syria, xml.iP_Lebanon, xml.iP_Antiochia, xml.iP_Egypt, xml.iP_Cyrenaica, xml.iP_Tripolitania, xml.iP_Ifriqiya, xml.iP_Sicily, xml.iP_Crete ]
+tArabiaControlII = [ xml.iP_Arabia, xml.iP_Jerusalem, xml.iP_Syria, xml.iP_Lebanon, xml.iP_Antiochia, xml.iP_Egypt ]
 tBulgariaControl = [ xml.iP_Constantinople, xml.iP_Thessaloniki, xml.iP_Serbia, xml.iP_Thrace, xml.iP_Macedonia, xml.iP_Moesia, xml.iP_Arberia ]
 tCordobaWonders = [ xml.iAlhambra, xml.iLaMezquita, xml.iGardensAlAndalus ]
 tCordobaIslamize = [ xml.iP_GaliciaSpain, xml.iP_Castile, xml.iP_Leon, xml.iP_Lusitania, xml.iP_Catalonia, xml.iP_Aragon, xml.iP_Navarre, xml.iP_Valencia, xml.iP_LaMancha, xml.iP_Andalusia ]
@@ -141,24 +142,25 @@ tBurgundyOutrank = [ iFrankia, iEngland, iGermany ]
 tGermanyControl = [ xml.iP_Tuscany, xml.iP_Liguria, xml.iP_Lombardy, xml.iP_Lorraine, xml.iP_Swabia, xml.iP_Saxony, xml.iP_Bavaria, xml.iP_Franconia, xml.iP_Brandenburg, xml.iP_Holstein ]
 tGermanyControlII = [ xml.iP_Austria, xml.iP_Flanders, xml.iP_Pomerania, xml.iP_Silesia, xml.iP_Bohemia, xml.iP_Moravia, xml.iP_Swabia, xml.iP_Saxony, xml.iP_Bavaria, xml.iP_Franconia, xml.iP_Brandenburg, xml.iP_Holstein ]
 tKievControl = [ xml.iP_Kiev, xml.iP_Podolia, xml.iP_Pereyaslavl, xml.iP_Sloboda, xml.iP_Chernigov, xml.iP_Volhynia, xml.iP_Minsk, xml.iP_Polotsk, xml.iP_Smolensk, xml.iP_Moscow, xml.iP_Murom, xml.iP_Rostov, xml.iP_Novgorod, xml.iP_Vologda ]
-tHungarynControl = [ xml.iP_Thrace, xml.iP_Moesia, xml.iP_Macedonia, xml.iP_Thessaloniki, xml.iP_Wallachia, xml.iP_Thessaly, xml.iP_Morea, xml.iP_Epirus, xml.iP_Arberia, xml.iP_Serbia, xml.iP_Banat, xml.iP_Bosnia, xml.iP_Dalmatia, xml.iP_Slavonia ]
+tHungaryControl = [ xml.iP_Austria, xml.iP_Carinthia, xml.iP_Moravia, xml.iP_Silesia, xml.iP_Bohemia, xml.iP_Dalmatia, xml.iP_Bosnia, xml.iP_Banat, xml.iP_Wallachia, xml.iP_Moldova ]
+tHungaryControlII = [ xml.iP_Thrace, xml.iP_Moesia, xml.iP_Macedonia, xml.iP_Thessaloniki, xml.iP_Wallachia, xml.iP_Thessaly, xml.iP_Morea, xml.iP_Epirus, xml.iP_Arberia, xml.iP_Serbia, xml.iP_Banat, xml.iP_Bosnia, xml.iP_Dalmatia, xml.iP_Slavonia ]
 tSpainConvert = [ xml.iP_GaliciaSpain, xml.iP_Castile, xml.iP_Leon, xml.iP_Lusitania, xml.iP_Catalonia, xml.iP_Aragon, xml.iP_Navarre, xml.iP_Valencia, xml.iP_LaMancha, xml.iP_Andalusia ]
 tPolishControl = [ xml.iP_Bohemia, xml.iP_Moravia, xml.iP_UpperHungary, xml.iP_Prussia, xml.iP_Lithuania, xml.iP_Livonia, xml.iP_Polotsk, xml.iP_Minsk, xml.iP_Volhynia, xml.iP_Podolia, xml.iP_Moldova, xml.iP_Kiev ]
-tGenoaControl = [ xml.iP_Sardinia, xml.iP_Corsica, xml.iP_Crete, xml.iP_Rhodes, xml.iP_Crimea ]
+tGenoaControl = [ xml.iP_Corsica, xml.iP_Sardinia, xml.iP_Crete, xml.iP_Rhodes, xml.iP_Thrakesion, xml.iP_Cyprus, xml.iP_Crimea ]
 tEnglandControl = [ xml.iP_Aquitania, xml.iP_London, xml.iP_Wales, xml.iP_Wessex, xml.iP_Scotland, xml.iP_EastAnglia, xml.iP_Mercia, xml.iP_Northumbria, xml.iP_Ireland, xml.iP_Normandy, xml.iP_Bretagne, xml.iP_IleDeFrance, xml.iP_Orleans, xml.iP_Picardy ]
 tPortugalControlI = [ xml.iP_Azores, xml.iP_Canaries, xml.iP_Madeira ]
 tPortugalControlII = [ xml.iP_Morocco, xml.iP_Tetouan, xml.iP_Oran ]
 #tLithuaniaControl = [ xml.iP_Lithuania, xml.iP_GreaterPoland, xml.iP_LesserPoland, xml.iP_Pomerania, xml.iP_Masovia, xml.iP_Brest, xml.iP_Suvalkija, xml.iP_Livonia, xml.iP_Novgorod, xml.iP_Smolensk, xml.iP_Polotsk, xml.iP_Minsk, xml.iP_Chernigov, xml.iP_Pereyaslavl, xml.iP_Kiev, xml.iP_GaliciaPoland, xml.iP_Sloboda ]
 tAustriaControl = [ xml.iP_Hungary, xml.iP_UpperHungary, xml.iP_Austria, xml.iP_Carinthia, xml.iP_Bavaria, xml.iP_Transylvania, xml.iP_Pannonia, xml.iP_Moravia, xml.iP_Silesia, xml.iP_Bohemia ]
-tOttomanControlI = [ xml.iP_Serbia, xml.iP_Bosnia, xml.iP_Banat, xml.iP_Macedonia, xml.iP_Thrace, xml.iP_Moesia, xml.iP_Constantinople, xml.iP_Arberia, xml.iP_Epirus, xml.iP_Thessaloniki, xml.iP_Thessaly, xml.iP_Morea ]
-tOttomanControlII = [ xml.iP_Colonea, xml.iP_Antiochia, xml.iP_Charsianon, xml.iP_Cilicia, xml.iP_Armeniakon, xml.iP_Anatolikon, xml.iP_Paphlagonia, xml.iP_Thrakesion, xml.iP_Opsikion, xml.iP_Syria, xml.iP_Lebanon, xml.iP_Jerusalem, xml.iP_Egypt ]
-tOttomanControlIII = [ xml.iP_Austria ]
+tOttomanControlI = [ xml.iP_Serbia, xml.iP_Bosnia, xml.iP_Banat, xml.iP_Macedonia, xml.iP_Thrace, xml.iP_Moesia, xml.iP_Constantinople, xml.iP_Arberia, xml.iP_Epirus, xml.iP_Thessaloniki, xml.iP_Thessaly, xml.iP_Morea, xml.iP_Colonea, xml.iP_Antiochia, xml.iP_Charsianon, xml.iP_Cilicia, xml.iP_Armeniakon, xml.iP_Anatolikon, xml.iP_Paphlagonia, xml.iP_Thrakesion, xml.iP_Opsikion, xml.iP_Syria, xml.iP_Lebanon, xml.iP_Jerusalem, xml.iP_Egypt ]
+tOttomanWonders = [ xml.iTopkapiPalace, xml.iBlueMosque, xml.iSelimiyeMosque, xml.iTombAlWalid ]
+tOttomanControlII = [ xml.iP_Austria, xml.iP_Pannonia, xml.iP_LesserPoland ]
 tMoscowControl = [ xml.iP_Donets, xml.iP_Kuban, xml.iP_Zaporizhia, xml.iP_Sloboda, xml.iP_Kiev, xml.iP_Moldova, xml.iP_Crimea, xml.iP_Pereyaslavl, xml.iP_Chernigov, xml.iP_Simbirsk, xml.iP_NizhnyNovgorod, xml.iP_Vologda, xml.iP_Rostov, xml.iP_Novgorod, xml.iP_Karelia, xml.iP_Smolensk, xml.iP_Polotsk, xml.iP_Minsk, xml.iP_Volhynia, xml.iP_Podolia, xml.iP_Moscow, xml.iP_Murom ]
 #tSwedenControlI = [ xml.iP_Gotaland, xml.iP_Svealand, xml.iP_Norrland, xml.iP_Skaneland, xml.iP_Gotland, xml.iP_Osterland ]
 #tSwedenControlII = [ xml.iP_Saxony, xml.iP_Brandenburg, xml.iP_Holstein, xml.iP_Pomerania, xml.iP_Prussia, xml.iP_GreaterPoland, xml.iP_Masovia, xml.iP_Suvalkija, xml.iP_Lithuania, xml.iP_Livonia, xml.iP_Estonia, xml.iP_Smolensk, xml.iP_Polotsk, xml.iP_Minsk, xml.iP_Murom, xml.iP_Chernigov, xml.iP_Moscow, xml.iP_Novgorod, xml.iP_Rostov ]
 tSwedenControl = [ xml.iP_Norrland, xml.iP_Osterland, xml.iP_Karelia]
-tNovgorodControl = [ xml.iP_Novgorod, xml.iP_Karelia, xml.iP_Estonia, xml.iP_Livonia, ]
-tNovgorodControlII = [ xml.iP_Karelia, xml.iP_Vologda ]
+tNovgorodControl = [ xml.iP_Novgorod, xml.iP_Karelia, xml.iP_Estonia, xml.iP_Livonia, xml.iP_Rostov, xml.iP_Vologda, xml.iP_Osterland ]
+#tNovgorodControlII = [ xml.iP_Karelia, xml.iP_Vologda ]
 tMoroccoControl = [ xml.iP_Morocco, xml.iP_Marrakesh, xml.iP_Fez, xml.iP_Tetouan, xml.iP_Oran, xml.iP_Algiers, xml.iP_Ifriqiya, xml.iP_Andalusia, xml.iP_Valencia, xml.iP_Balears ]
 tAragonControlI = [ xml.iP_Catalonia, xml.iP_Valencia, xml.iP_Balears, xml.iP_Sicily ]
 tAragonControlII = [ xml.iP_Catalonia, xml.iP_Valencia, xml.iP_Aragon, xml.iP_Balears, xml.iP_Corsica, xml.iP_Sardinia, xml.iP_Sicily, xml.iP_Calabria, xml.iP_Apulia, xml.iP_Provence, xml.iP_Thessaly ]
@@ -311,7 +313,7 @@ class Victory:
 									print ("iCiv, iModifier", iCiv, iModifier)
 									iRndnum = gc.getGame().getSorenRandNum(7, 'war chance')
 									if iRndnum + iModifier > 6:
-										teamCiv.declareWar(iPlayer, True, -1)
+										teamCiv.declareWar(pPlayer.getTeam(), True, -1)
 										iWarCounter += 1
 										if iWarCounter == 3:
 											break
@@ -371,7 +373,7 @@ class Victory:
 					self.lostUHV( iPortugal, 1 )
 
 		# Norway UHV 1: Going Viking
-		elif iNewOwner == iNorway:
+		elif iNewOwner == iNorway and iGameTurn < xml.i1066AD + 2:
 			pNorway.setUHVCounter( 2, pNorway.getUHVCounter( 2 ) + city.getPopulation() )
 			# Absinthe: city is already reduced by 1 on city conquest, so city.getPopulation() is one less than the original size (unless it was already 1)
 			if bConquest: # note that if the size was 1 originally you get one extra point this way, but that's probably not a big issue
@@ -391,7 +393,7 @@ class Victory:
 					if iCathCath >= 3 and iOrthCath >= 2 and iProtCath >= 2 and iJewishQu >= 2:
 						self.wonUHV( iPoland, 2 )
 
-		# Prussia UHV 2: Conquer two cities from each of Austria, Muscowy, Germany, Sweden, France and Spain between 1650 and 1763, if they are still alive
+		# Prussia UHV 2: Conquer two cities from each of Austria, Muscovy, Germany, Sweden, France and Spain between 1650 and 1763, if they are still alive
 		elif iNewOwner == iPrussia:
 			if self.isPossibleUHV(iNewOwner, 1, False):
 				if owner in tPrussiaDefeat and xml.i1650AD <= iGameTurn <= xml.i1763AD:
@@ -430,7 +432,7 @@ class Victory:
 
 	def onPillageImprovement( self, iPillager, iVictim, iImprovement, iRoute, iX, iY ):
 		# Norway UHV 1: Going Viking
-		if iPillager == iNorway and iRoute == -1:
+		if iPillager == iNorway and iRoute == -1 and gc.getGame().getGameTurn() < xml.i1066AD + 2:
 			if gc.getMap().plot( iX, iY ).getOwner() != iNorway:
 				pNorway.setUHVCounter( 2, pNorway.getUHVCounter( 2 ) + 1 )
 
@@ -440,7 +442,7 @@ class Victory:
 		cLosingUnit = PyHelpers.PyInfo.UnitInfo(pLosingUnit.getUnitType())
 
 		# Norway UHV 1: Going Viking
-		if pWinningUnit.getOwner() == iNorway:
+		if pWinningUnit.getOwner() == iNorway and gc.getGame().getGameTurn() < xml.i1066AD + 2:
 			if cLosingUnit.getDomainType() == DomainTypes.DOMAIN_SEA:
 				# Absinthe: only 1 Viking point for Work Boats
 				#print ("viking", pLosingUnit.getUnitType())
@@ -510,16 +512,6 @@ class Victory:
 					iCounter = iJewishQu + 100 * iProtCath + 1000 * iOrthCath + 10000 * iCathCath
 					pPoland.setUHVCounter( 2, iCounter )
 
-		# Genoa UHV 2: Build 8 Banks
-		elif iPlayer == iGenoa:
-			if self.isPossibleUHV(iPlayer, 1, False):
-				if iBuilding == xml.iGenoaBank:
-					iBanks = pGenoa.getUHVCounter( 1 )
-					iBanks += 1
-					if iBanks >= 8:
-						self.wonUHV( iGenoa, 1 )
-					pGenoa.setUHVCounter( 1, iBanks )
-
 		# Cordoba UHV 2: Build the Alhambra, the Gardens of Al-Andalus, and La Mezquita by 1309
 		if iBuilding in tCordobaWonders:
 			if self.isPossibleUHV(iCordoba, 1, False):
@@ -531,10 +523,21 @@ class Victory:
 				else:
 					self.lostUHV( iCordoba, 1 )
 
+		# Ottoman UHV 2: Construct the Topkapi Palace, the Blue Mosque, the Selimiye Mosque and the Tomb of Al-Walid by 1616
+		if iBuilding in tOttomanWonders:
+			if self.isPossibleUHV(iTurkey, 1, False):
+				if iPlayer == iTurkey:
+					iWondersBuilt = pTurkey.getUHVCounter( 1 )
+					pTurkey.setUHVCounter( 1, iWondersBuilt + 1 )
+					if iWondersBuilt == 3: # so we already had 3 wonders
+						self.wonUHV( iTurkey, 1 )
+				else:
+					self.lostUHV( iTurkey, 1 )
+
 
 	def onProjectBuilt(self, iPlayer, iProject):
 		bColony = self.isProjectAColony( iProject )
-		# Absinthe: note that getProjectCount (thus getNumRealColonies too) won't count the latest project/colony (which is currently buing built) if called from this function
+		# Absinthe: note that getProjectCount (thus getNumRealColonies too) won't count the latest project/colony (which was currently built) if called from this function
 		#			way more straightforward, and also faster to use the UHVCounters for the UHV checks
 
 		# Venice UHV 3: Be the first to build a Colony from the Age of Discovery (Vinland is from the Viking Age)
@@ -654,11 +657,13 @@ class Victory:
 
 	def checkByzantium( self, iGameTurn ):
 
-		# UHV 1: Make Constantinople the largest and most cultured city in 1025
-		if iGameTurn == xml.i1025AD:
+		# UHV 1: Own at least 6 cities in Calabria, Apulia, Dalmatia, Verona, Lombardy, Liguria, Tuscany, Latium, Corsica, Sardinia, Sicily, Tripolitania and Ifriqiya provinces in 632
+		if iGameTurn == xml.i632AD:
 			if self.isPossibleUHV(iByzantium, 0, True):
-				x, y = con.tCapitals[iByzantium]
-				if gc.isLargestCity( x, y ) and gc.isTopCultureCity( x, y ) and gc.getMap().plot( x, y ).getPlotCity().getOwner() == iByzantium:
+				iNumCities = 0
+				for iProv in tByzantiumControl:
+					iNumCities += pByzantium.getProvinceCityCount( iProv )
+				if iNumCities >= 6:
 					self.wonUHV( iByzantium, 0 )
 				else:
 					self.lostUHV( iByzantium, 0 )
@@ -666,14 +671,15 @@ class Victory:
 		# UHV 2: Control Constantinople, Thrace, Thessaloniki, Moesia, Macedonia, Serbia, Arberia, Epirus, Thessaly, Morea, Colonea, Antiochia, Charsianon, Cilicia, Armeniakon, Anatolikon, Paphlagonia, Thrakesion and Opsikion in 1282
 		elif iGameTurn == xml.i1282AD:
 			if self.isPossibleUHV(iByzantium, 1, True):
-				if self.checkProvincesStates(iByzantium, tByzantumControl):
+				if self.checkProvincesStates(iByzantium, tByzantiumControlII):
 					self.wonUHV( iByzantium, 1 )
 				else:
 					self.lostUHV( iByzantium, 1 )
 
-		# UHV 3: Be the richest empire in the world in 1453
+		# UHV 3: Make Constantinople the largest and most cultured city while being the richest empire in the world in 1453
 		elif iGameTurn == xml.i1453AD:
 			if self.isPossibleUHV(iByzantium, 2, True):
+				x, y = con.tCapitals[iByzantium]
 				iGold = pByzantium.getGold()
 				bMost = True
 				for iCiv in range( iNumPlayers ):
@@ -681,7 +687,7 @@ class Victory:
 						if gc.getPlayer(iCiv).getGold() > iGold:
 							bMost = False
 							break
-				if bMost:
+				if gc.isLargestCity( x, y ) and gc.isTopCultureCity( x, y ) and gc.getMap().plot( x, y ).getPlotCity().getOwner() == iByzantium and bMost:
 					self.wonUHV( iByzantium, 2 )
 				else:
 					self.lostUHV( iByzantium, 2 )
@@ -714,18 +720,19 @@ class Victory:
 
 	def checkArabia( self, iGameTurn ):
 
-		# UHV 1: Control all territories from Egypt to Asia Minor in 955
-		if iGameTurn == xml.i955AD:
+		# UHV 1: Control all territories from Tunisia to Asia Minor in 850
+		if iGameTurn == xml.i850AD:
 			if self.isPossibleUHV(iArabia, 0, True):
 				if self.checkProvincesStates(iArabia, tArabiaControlI):
 					self.wonUHV( iArabia, 0 )
 				else:
 					self.lostUHV( iArabia, 0 )
 
-		# UHV 2: Control all territories from Oran to Asia Minor in 1291
+		# UHV 2: Control the Levant and Egypt in 1291AD while being the most advanced civilization
 		elif iGameTurn == xml.i1291AD:
 			if self.isPossibleUHV(iArabia, 1, True):
-				if self.checkProvincesStates(iArabia, tArabiaControlII):
+				iMostAdvancedCiv = utils.getMostAdvancedCiv()
+				if self.checkProvincesStates(iArabia, tArabiaControlII) and iMostAdvancedCiv == iArabia:
 					self.wonUHV( iArabia, 1 )
 				else:
 					self.lostUHV( iArabia, 1 )
@@ -876,11 +883,13 @@ class Victory:
 
 	def checkBurgundy( self, iGameTurn ):
 
-		# UHV 1: Produce 10,000 culture points by 1336
-		if self.isPossibleUHV(iBurgundy, 0, True):
+		# UHV 1: Produce 12,000 culture points in your cities by 1336
+		# The counter should be updated until the deadline for the challenge UHVs, even after UHV completion
+		if iGameTurn < xml.i1336AD + 2:
 			iCulture = pBurgundy.getUHVCounter( 0 ) + pBurgundy.countCultureProduced()
 			pBurgundy.setUHVCounter( 0, iCulture )
-			if iCulture >= 10000:
+		if self.isPossibleUHV(iBurgundy, 0, True):
+			if iCulture >= 12000:
 				self.wonUHV( iBurgundy, 0 )
 		if iGameTurn == xml.i1336AD:
 			self.expireUHV( iBurgundy, 0 )
@@ -935,7 +944,7 @@ class Victory:
 
 	def checkNovgorod( self, iGameTurn ):
 
-		# UHV 1: Control Novgorod, Karelia, Estonia and Livonia in 1284
+		# UHV 1: Control Novgorod, Karelia, Estonia, Livonia, Rostov, Vologda and Osterland in 1284
 		if iGameTurn == xml.i1284AD:
 			if self.isPossibleUHV(iNovgorod, 0, True):
 				if self.checkProvincesStates(iNovgorod, tNovgorodControl):
@@ -950,13 +959,12 @@ class Victory:
 		if iGameTurn == xml.i1397AD:
 			self.expireUHV( iNovgorod, 1 )
 
-		# UHV 3: Have seven cities in Karelia and Vologda in 1478
-		elif iGameTurn == xml.i1478AD:
+		# UHV 3: Control the province of Moscow or have Muscovy as a vassal in 1478
+		if iGameTurn == xml.i1478AD:
 			if self.isPossibleUHV(iNovgorod, 2, True):
-				iNumCities = 0
-				for iProv in tNovgorodControlII:
-					iNumCities += pNovgorod.getProvinceCityCount( iProv )
-				if iNumCities >= 7:
+				if pNovgorod.getProvinceCurrentState( xml.iP_Moscow ) >= con.iProvinceConquer:
+					self.wonUHV( iNovgorod, 2 )
+				elif pMoscow.isAlive() and teamMoscow.isVassal( teamNovgorod.getID() ):
 					self.wonUHV( iNovgorod, 2 )
 				else:
 					self.lostUHV( iNovgorod, 2 )
@@ -982,9 +990,11 @@ class Victory:
 					self.lostUHV( iKiev, 1 )
 
 		# UHV 3: Produce 25000 food by 1300
-		if self.isPossibleUHV(iKiev, 2, True):
+		# The counter should be updated until the deadline for the challenge UHVs, even after UHV completion
+		if iGameTurn < xml.i1300AD + 2:
 			iFood = pKiev.getUHVCounter( 2 ) + pKiev.calculateTotalYield(YieldTypes.YIELD_FOOD)
 			pKiev.setUHVCounter( 2, iFood )
+		if self.isPossibleUHV(iKiev, 2, True):
 			if iFood > 25000:
 				self.wonUHV( iKiev, 2 )
 		if iGameTurn == xml.i1300AD:
@@ -993,32 +1003,24 @@ class Victory:
 
 	def checkHungary( self, iGameTurn ):
 
-		# UHV 1: Allow no Ottoman cities in Europe in 1444
-		if iGameTurn == xml.i1444AD:
+		# UHV 1: Control Austria, Carinthia, Moravia, Silesia, Bohemia, Dalmatia, Bosnia, Banat, Wallachia and Moldova in 1490
+		if iGameTurn == xml.i1490AD:
 			if self.isPossibleUHV(iHungary, 0, True):
-				bClean = True
-				if pTurkey.isAlive():
-					for iProv in tHungarynControl:
-						if pTurkey.getProvinceCityCount( iProv ) > 0:
-							bClean = False
-							break
-				if bClean:
+				if self.checkProvincesStates(iHungary, tHungaryControl):
 					self.wonUHV( iHungary, 0 )
 				else:
 					self.lostUHV( iHungary, 0 )
 
-		# UHV 2: Control the most territory in Europe in 1490
-		elif iGameTurn == xml.i1490AD:
+		# UHV 2: Allow no Ottoman cities in Europe in 1541
+		elif iGameTurn == xml.i1541AD:
 			if self.isPossibleUHV(iHungary, 1, True):
-				bMost = True
-				iCount = self.getTerritoryPercentEurope(iHungary)
-				for iOtherPlayer in range(con.iNumPlayers):
-					if not gc.getPlayer(iOtherPlayer).isAlive() or iOtherPlayer == iHungary: continue
-					iOtherCount = self.getTerritoryPercentEurope(iOtherPlayer)
-					if iOtherCount >= iCount:
-						bMost = False
-						break
-				if bMost:
+				bClean = True
+				if pTurkey.isAlive():
+					for iProv in tHungaryControlII:
+						if pTurkey.getProvinceCityCount( iProv ) > 0:
+							bClean = False
+							break
+				if bClean:
 					self.wonUHV( iHungary, 1 )
 				else:
 					self.lostUHV( iHungary, 1 )
@@ -1108,7 +1110,7 @@ class Victory:
 		if self.isPossibleUHV(iScotland, 0, True):
 			iForts = pScotland.getImprovementCount( xml.iImprovementFort )
 			iCastles = pScotland.countNumBuildings( xml.iCastle )
-			print("Forts:",iForts,"Castles:",iCastles)
+			#print("Forts:",iForts,"Castles:",iCastles)
 			if iForts >= 10 and iCastles >= 4:
 				self.wonUHV( iScotland, 0 )
 		if iGameTurn == xml.i1296AD:
@@ -1183,8 +1185,8 @@ class Victory:
 		if iGameTurn == xml.i1520AD+1:
 			self.expireUHV( iPoland, 0 )
 
-		# UHV 2: Own at least 12 cities in the given provinces in 1600
-		elif iGameTurn == xml.i1600AD:
+		# UHV 2: Own at least 12 cities in the given provinces in 1569
+		elif iGameTurn == xml.i1569AD:
 			if self.isPossibleUHV(iPoland, 1, True):
 				iNumCities = 0
 				for iProv in tPolishControl:
@@ -1200,21 +1202,18 @@ class Victory:
 
 	def checkGenoa( self, iGameTurn ):
 
-		# UHV 1: Control Corsica, Sardinia, Crete, Rhodes and Crimea in 1566
-		if iGameTurn == xml.i1566AD:
+		# UHV 1: Control Corsica, Sardinia, Crete, Rhodes, Thrakesion, Cyprus and Crimea in 1400
+		if iGameTurn == xml.i1400AD:
 			if self.isPossibleUHV(iGenoa, 0, True):
 				if self.checkProvincesStates(iGenoa, tGenoaControl):
 					self.wonUHV( iGenoa, 0 )
 				else:
 					self.lostUHV( iGenoa, 0 )
 
-		# UHV 2: Build 8 Banks
-		# Controlled in the onBuildingBuilt function
-
-		# UHV 3: Have the largest total amount of commerce from foreign Trade Route Exports and Imports in 1640
-		elif iGameTurn == xml.i1640AD:
-			if self.isPossibleUHV(iGenoa, 2, True):
-				iGenoaTrade = iImports = pGenoa.calculateTotalImports(YieldTypes.YIELD_COMMERCE) + pGenoa.calculateTotalExports(YieldTypes.YIELD_COMMERCE)
+		# UHV 2: Have the largest total amount of commerce from foreign Trade Route Exports and Imports in 1566
+		elif iGameTurn == xml.i1566AD:
+			if self.isPossibleUHV(iGenoa, 1, True):
+				iGenoaTrade = pGenoa.calculateTotalImports(YieldTypes.YIELD_COMMERCE) + pGenoa.calculateTotalExports(YieldTypes.YIELD_COMMERCE)
 				bLargest = True
 				for iPlayer in range( iNumMajorPlayers ):
 					if iPlayer != iGenoa:
@@ -1223,6 +1222,19 @@ class Victory:
 							bLargest = False
 							break
 				if bLargest:
+					self.wonUHV( iGenoa, 1 )
+				else:
+					self.lostUHV( iGenoa, 1 )
+
+		# UHV 3: Have 8 Banks and own all Bank of St. George cities in 1625
+		elif iGameTurn == xml.i1625AD:
+			if self.isPossibleUHV(iGenoa, 2, True):
+				iBanks = 0
+				for city in utils.getCityList(iGenoa):
+					if city.getNumRealBuilding(xml.iBank) > 0:
+						iBanks += 1
+				iCompanyCities = pGenoa.countCorporations(xml.iStGeorge)
+				if iBanks >= 8 and iCompanyCities == xml.tCompaniesLimit[xml.iStGeorge]:
 					self.wonUHV( iGenoa, 2 )
 				else:
 					self.lostUHV( iGenoa, 2 )
@@ -1230,8 +1242,8 @@ class Victory:
 
 	def checkMorocco( self, iGameTurn ):
 
-		# UHV 1: Control Morocco, Marrakesh, Fez, Tetouan, Oran, Algiers, Ifriqiya, Andalusia, Valencia and the Balearic Islands in 1227
-		if iGameTurn == xml.i1227AD:
+		# UHV 1: Control Morocco, Marrakesh, Fez, Tetouan, Oran, Algiers, Ifriqiya, Andalusia, Valencia and the Balearic Islands in 1248
+		if iGameTurn == xml.i1248AD:
 			if self.isPossibleUHV(iMorocco, 0, True):
 				if self.checkProvincesStates(iMorocco, tMoroccoControl):
 					self.wonUHV( iMorocco, 0 )
@@ -1309,12 +1321,13 @@ class Victory:
 				else:
 					self.lostUHV( iAragon, 0 )
 
-		# UHV 2: Have 12 Consulates of the Sea in 1444
+		# UHV 2: Have 12 Consulates of the Sea and 30 Trade Ships (ships with at least one cargo space) in 1444
 		elif iGameTurn == xml.i1444AD:
 			if self.isPossibleUHV(iAragon, 1, True):
 				iPorts = pAragon.countNumBuildings(xml.iAragonSeaport)
-				print("Ports:",iPorts)
-				if iPorts >= 12:
+				iCargoShips = utils.getCargoShips(con.iAragon)
+				#print("Ports:",iPorts)
+				if iPorts >= 12 and iCargoShips >= 30:
 					self.wonUHV( iAragon, 1 )
 				else:
 					self.lostUHV( iAragon, 1 )
@@ -1338,7 +1351,7 @@ class Victory:
 				else:
 					self.lostUHV( iPrussia, 0 )
 
-		# UHV 2: Conquer two cities from each of Austria, Muscowy, Germany, Sweden, France and Spain between 1650 and 1763, if they are still alive
+		# UHV 2: Conquer two cities from each of Austria, Muscovy, Germany, Sweden, France and Spain between 1650 and 1763, if they are still alive
 		# Controlled in the onCityAcquired function
 		if iGameTurn > xml.i1763AD:
 			self.expireUHV( iPrussia, 1 )
@@ -1357,31 +1370,51 @@ class Victory:
 
 	def checkLithuania( self, iGameTurn ):
 
-		# UHV 1: Accumulate 2000 Culture points without declaring a state religion before 1386
+		# UHV 1: Accumulate 2500 Culture points without declaring a state religion before 1386
+		# The counter should be updated until the deadline for the challenge UHVs, even after UHV completion
+		if iGameTurn < xml.i1386AD + 2:
+			iCulture = pLithuania.getUHVCounter( 0 ) + pLithuania.countCultureProduced()
+			pLithuania.setUHVCounter( 0, iCulture )
 		if self.isPossibleUHV(iLithuania, 0, True):
 			if pLithuania.getStateReligion() != -1:
 				self.lostUHV( iLithuania, 0 )
-			iCulture = pLithuania.getUHVCounter( 0 ) + pLithuania.countCultureProduced()
-			pLithuania.setUHVCounter( 0, iCulture )
-			if iCulture >= 2000:
+			if iCulture >= 2500:
 				self.wonUHV( iLithuania, 0 )
 		if iGameTurn == xml.i1386AD:
 			self.expireUHV( iLithuania, 0 )
 
-		# UHV 2: Have at least 18 cities in 1569
-		elif iGameTurn == xml.i1569AD:
+		# UHV 2: Control the most territory in Europe in 1430
+		elif iGameTurn == xml.i1430AD:
 			if self.isPossibleUHV(iLithuania, 1, True):
-				if pLithuania.getNumCities() >= 18:
+				bMost = True
+				iCount = self.getTerritoryPercentEurope(iLithuania)
+				for iOtherPlayer in range(iNumPlayers):
+					if not gc.getPlayer(iOtherPlayer).isAlive() or iOtherPlayer == iLithuania:
+						continue
+					iOtherCount = self.getTerritoryPercentEurope(iOtherPlayer)
+					if iOtherCount >= iCount:
+						bMost = False
+						break
+				if bMost:
 					self.wonUHV( iLithuania, 1 )
 				else:
 					self.lostUHV( iLithuania, 1 )
 
-		# UHV 3: Conquer the province of Moscow or vassalize Muscovy
-		if self.isPossibleUHV(iLithuania, 2, True):
-			if pMoscow.isAlive() and teamMoscow.isVassal( teamLithuania.getID() ):
-				self.wonUHV( iLithuania, 2 )
-			elif iGameTurn > xml.i1401AD and pLithuania.getProvinceCurrentState( xml.iP_Moscow ) >= con.iProvinceConquer:
-				self.wonUHV( iLithuania, 2 )
+		# UHV 3: Destroy or Vassalize Muscovy, Novgorod and Prussia by 1795
+		if xml.i1380AD <= iGameTurn <= xml.i1795AD:
+			if self.isPossibleUHV(iLithuania, 2, True):
+				bConq = True
+				if pMoscow.isAlive() and not teamMoscow.isVassal( teamLithuania.getID() ):
+					bConq = False
+				elif pNovgorod.isAlive() and not teamNovgorod.isVassal( teamLithuania.getID() ):
+					bConq = False
+				elif pPrussia.isAlive() and not teamPrussia.isVassal( teamLithuania.getID() ):
+					bConq = False
+
+				if bConq:
+					self.wonUHV( iLithuania, 2 )
+		if iGameTurn == xml.i1795AD + 1:
+			self.expireUHV( iLithuania, 2 )
 
 
 	def checkAustria( self, iGameTurn ):
@@ -1402,7 +1435,7 @@ class Victory:
 					if iPlayer == iAustria: continue
 					pPlayer = gc.getPlayer( iPlayer )
 					if pPlayer.isAlive():
-						if gc.getTeam( pPlayer.getTeam() ).isVassal( iAustria ):
+						if gc.getTeam( pPlayer.getTeam() ).isVassal( teamAustria.getID() ):
 							iCount += 1
 				if iCount >= 3:
 					self.wonUHV( iAustria, 1 )
@@ -1420,25 +1453,22 @@ class Victory:
 
 	def checkTurkey( self, iGameTurn ):
 
-		# UHV 1: Control the Balkans in 1453
-		if iGameTurn == xml.i1453AD:
+		# UHV 1: Control Constantinople, the Balkans, Anatolia, the Levant and Egypt in 1517
+		if iGameTurn == xml.i1517AD:
 			if self.isPossibleUHV(iTurkey, 0, True):
 				if self.checkProvincesStates(iTurkey, tOttomanControlI):
 					self.wonUHV( iTurkey, 0 )
 				else:
 					self.lostUHV( iTurkey, 0 )
 
-		# UHV 2: Control Anatolia, the Levant and Egypt in 1517
-		elif iGameTurn == xml.i1517AD:
-			if self.isPossibleUHV(iTurkey, 1, True):
-				if self.checkProvincesStates(iTurkey, tOttomanControlII):
-					self.wonUHV( iTurkey, 1 )
-				else:
-					self.lostUHV( iTurkey, 1 )
+		# UHV 2: Construct the Topkapi Palace, the Blue Mosque, the Selimiye Mosque and the Tomb of Al-Walid by 1616
+		# Controlled in the onBuildingBuilt function
+		elif iGameTurn == xml.i1616AD:
+			self.expireUHV( iTurkey, 1 )
 
-		# UHV 3: Conquer Austria by 1683
+		# UHV 3: Conquer Austria, Pannonia and Lesser Poland by 1683
 		if self.isPossibleUHV(iTurkey, 2, True):
-			if self.checkProvincesStates(iTurkey, tOttomanControlIII):
+			if self.checkProvincesStates(iTurkey, tOttomanControlII):
 				self.wonUHV( iTurkey, 2 )
 		if iGameTurn == xml.i1683AD:
 			self.expireUHV( iTurkey, 2 )
@@ -1467,7 +1497,7 @@ class Victory:
 				landPercent = (RussianLand * 100.0) / totalLand
 			else:
 				landPercent = 0.0
-			if landPercent >= 20:
+			if landPercent >= 25:
 				self.wonUHV( iMoscow, 1 )
 
 		# UHV 3: Get into warm waters
@@ -1516,7 +1546,7 @@ class Victory:
 			pPlot = gc.getMap().plot( con.tCapitals[iDutch][0], con.tCapitals[iDutch][1])
 			if pPlot.isCity():
 				city = pPlot.getPlotCity()
-				if city.getFreeSpecialistCount(xml.iGreatMerchant) >= 5 and city.getOwner() == iDutch:
+				if city.getFreeSpecialistCount(xml.iSpecialistGreatMerchant) >= 5 and city.getOwner() == iDutch:
 					self.wonUHV( iDutch, 0 )
 		if iGameTurn == xml.i1750AD:
 			self.expireUHV( iDutch, 0 )

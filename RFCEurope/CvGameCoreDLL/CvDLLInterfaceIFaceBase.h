@@ -81,7 +81,7 @@ public:
 	virtual void addMessage(PlayerTypes ePlayer, bool bForce, int iLength, CvWString szString, LPCTSTR pszSound = NULL,
 		InterfaceMessageTypes eType = MESSAGE_TYPE_INFO, LPCSTR pszIcon = NULL, ColorTypes eFlashColor = NO_COLOR,
 		int iFlashX = -1, int iFlashY = -1, bool bShowOffScreenArrows = false, bool bShowOnScreenArrows = false) = 0;
-	// Absinthe: K-Mod - block messages from being send to AI players. (because the game doesn't ever clear AI messages)
+	// Absinthe: K-Mod - block messages from being sent to AI players. (because the game doesn't ever clear AI messages)
 	// Absinthe: Added this in almost all places in the .dll instead of the original addMessage
 	inline void addHumanMessage(PlayerTypes ePlayer, bool bForce, int iLength, CvWString szString, LPCTSTR pszSound = NULL,
 		InterfaceMessageTypes eType = MESSAGE_TYPE_INFO, LPCSTR pszIcon = NULL, ColorTypes eFlashColor = NO_COLOR,

@@ -1136,7 +1136,7 @@ public:
 	int getWarPeaceChange(); // war peace change since last time it was called
 
 	// 3MiroProjects: count the number of colonies here
-	int getNumColonies();
+	int getNumColonies() const;
 	void setNumColonies( int iNewValue );
 
 	// 3Miro: pickle free

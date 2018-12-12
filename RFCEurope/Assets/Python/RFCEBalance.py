@@ -8,33 +8,33 @@ import RFCEMaps as rfcemaps
 gc = CyGlobalContext()	# LOQ
 
 
-iBurgundy = con.iBurgundy
 iByzantium = con.iByzantium
 iFrankia = con.iFrankia
 iArabia = con.iArabia
 iBulgaria = con.iBulgaria
 iCordoba = con.iCordoba
-iSpain = con.iSpain
-iNorway = con.iNorway
-iDenmark = con.iDenmark
 iVenecia = con.iVenecia
+iBurgundy = con.iBurgundy
+iGermany = con.iGermany
 iNovgorod = con.iNovgorod
+iNorway = con.iNorway
 iKiev = con.iKiev
 iHungary = con.iHungary
-iGermany = con.iGermany
+iSpain = con.iSpain
+iDenmark = con.iDenmark
 iScotland = con.iScotland
 iPoland = con.iPoland
-iPrussia = con.iPrussia
-iLithuania = con.iLithuania
-iMoscow = con.iMoscow
 iGenoa = con.iGenoa
 iMorocco = con.iMorocco
 iEngland = con.iEngland
 iPortugal = con.iPortugal
 iAragon = con.iAragon
+iSweden = con.iSweden
+iPrussia = con.iPrussia
+iLithuania = con.iLithuania
 iAustria = con.iAustria
 iTurkey = con.iTurkey
-iSweden = con.iSweden
+iMoscow = con.iMoscow
 iDutch = con.iDutch
 iPope = con.iPope
 iNumPlayers = con.iNumPlayers
@@ -79,6 +79,11 @@ iUP_Janissary = con.iUP_Janissary
 iUP_HealthFood = con.iUP_HealthFood
 iUP_TerrainBonus = con.iUP_TerrainBonus
 iUP_FeatureBonus = con.iUP_FeatureBonus
+iUP_ImprovementBonus2 = con.iUP_ImprovementBonus2
+iUP_ImprovementBonus3 = con.iUP_ImprovementBonus3
+iUP_ImprovementBonus4 = con.iUP_ImprovementBonus4
+iUP_ImprovementBonus5 = con.iUP_ImprovementBonus5
+#iUP_SoundToll = con.iUP_SoundToll
 #iUP_NoAnarchyInstability = con.iUP_NoAnarchyInstability
 #iUP_ProvinceCommerce = con.iUP_ProvinceCommerce
 #iUP_Defiance = con.iUP_Defiance
@@ -89,7 +94,7 @@ iFP_Growth = con.iFP_Growth
 iFP_Units = con.iFP_Units
 iFP_Science = con.iFP_Science
 iFP_Production = con.iFP_Production
-iFP_Displomacy = con.iFP_Displomacy
+iFP_Diplomacy = con.iFP_Diplomacy
 
 class RFCEBalance:
 
@@ -105,8 +110,6 @@ class RFCEBalance:
 		# defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100, 100, 1 )
 		# 3Miro: ABOUT CULTURE notice the culture modifier is different from the others, it modifies the culture output as opposed to the culture threshhold
 		# 	50 means less culture, 200 means more culture. This is applied to Culture output of 10 or more.
-		gc.setGrowthModifiersAI(iBurgundy,     100, 100, 100, 100, 100, 1 )
-		gc.setGrowthModifiersHu(iBurgundy,     100, 100, 100, 100, 100, 1 )
 		gc.setGrowthModifiersAI(iByzantium,    200, 100, 200, 100, 100, 2 )
 		gc.setGrowthModifiersHu(iByzantium,    150, 100, 200, 100, 100, 2 )
 		gc.setGrowthModifiersAI(iFrankia,      110, 100, 110, 100, 100, 1 )
@@ -117,28 +120,28 @@ class RFCEBalance:
 		gc.setGrowthModifiersHu(iBulgaria,     125, 100, 100, 100, 100, 1 )
 		gc.setGrowthModifiersAI(iCordoba,      150, 100, 100, 100, 100, 1 )
 		gc.setGrowthModifiersHu(iCordoba,      150, 100, 100, 100, 100, 1 )
-		gc.setGrowthModifiersAI(iSpain,        125, 100, 100, 100, 100, 2 )
-		gc.setGrowthModifiersHu(iSpain,        125, 100, 100, 100, 100, 2 )
-		gc.setGrowthModifiersAI(iNorway,       100, 100, 100, 100, 100, 2 )
-		gc.setGrowthModifiersHu(iNorway,       100, 100, 100, 100, 100, 2 )
-		gc.setGrowthModifiersAI(iDenmark,      100, 100, 100, 100, 100, 2 )
-		gc.setGrowthModifiersHu(iDenmark,      100, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiersAI(iVenecia,      125, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiersHu(iVenecia,      125, 100, 100, 100, 100, 2 )
+		gc.setGrowthModifiersAI(iBurgundy,     100, 100, 100, 100, 100, 2 )
+		gc.setGrowthModifiersHu(iBurgundy,     100, 100, 100, 100, 100, 2 )
+		gc.setGrowthModifiersAI(iGermany,      125, 100, 100, 100, 100, 2 )
+		gc.setGrowthModifiersHu(iGermany,      125, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiersAI(iNovgorod,     100, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiersHu(iNovgorod,     100, 100, 100, 100, 100, 2 )
+		gc.setGrowthModifiersAI(iNorway,       100, 100, 100, 100, 100, 2 )
+		gc.setGrowthModifiersHu(iNorway,       100, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiersAI(iKiev,         150, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiersHu(iKiev,         150, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiersAI(iHungary,      125, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiersHu(iHungary,      125, 100, 100, 100, 100, 2 )
-		gc.setGrowthModifiersAI(iGermany,      125, 100, 100, 100, 100, 2 )
-		gc.setGrowthModifiersHu(iGermany,      125, 100, 100, 100, 100, 2 )
+		gc.setGrowthModifiersAI(iSpain,        125, 100, 100, 100, 100, 2 )
+		gc.setGrowthModifiersHu(iSpain,        125, 100, 100, 100, 100, 2 )
+		gc.setGrowthModifiersAI(iDenmark,      100, 100, 100, 100, 100, 2 )
+		gc.setGrowthModifiersHu(iDenmark,      100, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiersAI(iScotland,     100, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiersHu(iScotland,     100, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiersAI(iPoland,       125, 100, 100, 100, 100, 2 )
 		gc.setGrowthModifiersHu(iPoland,       125, 100, 100, 100, 100, 2 )
-		gc.setGrowthModifiersAI(iMoscow,       100, 100, 100, 100, 100, 3 )
-		gc.setGrowthModifiersHu(iMoscow,       100, 100, 100, 100, 100, 3 )
 		gc.setGrowthModifiersAI(iGenoa,        100, 100, 100, 100, 100, 3 )
 		gc.setGrowthModifiersHu(iGenoa,        100, 100, 100, 100, 100, 3 )
 		gc.setGrowthModifiersAI(iMorocco,      100, 100, 100, 100, 100, 3 )
@@ -149,6 +152,8 @@ class RFCEBalance:
 		gc.setGrowthModifiersHu(iPortugal,     100, 150, 100, 100, 100, 3 )
 		gc.setGrowthModifiersAI(iAragon,       100, 150, 100, 100, 100, 3 )
 		gc.setGrowthModifiersHu(iAragon,       100, 150, 100, 100, 100, 3 )
+		gc.setGrowthModifiersAI(iSweden,       100, 100, 100, 100, 100, 3 )
+		gc.setGrowthModifiersHu(iSweden,       100, 100, 100, 100, 100, 3 )
 		gc.setGrowthModifiersAI(iPrussia,      100, 100, 100, 100, 100, 3 )
 		gc.setGrowthModifiersHu(iPrussia,      100, 100, 100, 100, 100, 3 )
 		gc.setGrowthModifiersAI(iLithuania,    100, 100, 100, 100, 100, 3 )
@@ -157,8 +162,8 @@ class RFCEBalance:
 		gc.setGrowthModifiersHu(iAustria,      100, 150, 100, 100, 100, 3 )
 		gc.setGrowthModifiersAI(iTurkey,       100, 150, 100, 100, 100, 3 )
 		gc.setGrowthModifiersHu(iTurkey,       100, 150, 100, 100, 100, 3 )
-		gc.setGrowthModifiersAI(iSweden,       100, 100, 100, 100, 100, 3 )
-		gc.setGrowthModifiersHu(iSweden,       100, 100, 100, 100, 100, 3 )
+		gc.setGrowthModifiersAI(iMoscow,       100, 100, 100, 100, 100, 3 )
+		gc.setGrowthModifiersHu(iMoscow,       100, 100, 100, 100, 100, 3 )
 		gc.setGrowthModifiersAI(iDutch,        100, 200,  60, 100,  50, 4 )
 		gc.setGrowthModifiersHu(iDutch,        100, 200,  60, 100,  50, 4 )
 		gc.setGrowthModifiersAI(iPope,         150, 100, 100,  50, 100, 1 )
@@ -172,8 +177,6 @@ class RFCEBalance:
 		#void setProductionModifiers( int iCiv, int iUnits, int iBuildings, int iWonders, int iResearch );
 		# defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100 )
 		# 3Miro: at 100 research cost, the cost is exactly as in the XML files, the cost in general is however increased for all civs
-		gc.setProductionModifiersAI(iBurgundy,     130, 120, 120, 150 )
-		gc.setProductionModifiersHu(iBurgundy,     150, 120, 120, 150 )
 		gc.setProductionModifiersAI(iByzantium,    200, 200, 200, 350 )
 		gc.setProductionModifiersHu(iByzantium,    200, 150, 200, 350 )
 		gc.setProductionModifiersAI(iFrankia,      140, 120, 125, 150 )
@@ -184,38 +187,40 @@ class RFCEBalance:
 		gc.setProductionModifiersHu(iBulgaria,     150, 150, 125, 200 )
 		gc.setProductionModifiersAI(iCordoba,      180, 170, 130, 250 )
 		gc.setProductionModifiersHu(iCordoba,      200, 180, 140, 230 )
-		gc.setProductionModifiersAI(iSpain,        100, 100, 100, 120 )
-		gc.setProductionModifiersHu(iSpain,        125, 100, 100, 120 )
-		gc.setProductionModifiersAI(iNorway,       150, 150, 125, 130 )
-		gc.setProductionModifiersHu(iNorway,       125, 125, 100, 140 )
-		gc.setProductionModifiersAI(iDenmark,      100, 100, 100, 110 )
-		gc.setProductionModifiersHu(iDenmark,      100, 100, 100, 120 )
 		gc.setProductionModifiersAI(iVenecia,      100, 100, 100, 135 )
 		gc.setProductionModifiersHu(iVenecia,      100, 100, 100, 125 )
-		gc.setProductionModifiersAI(iNovgorod,     150, 140, 125, 150 )
-		gc.setProductionModifiersHu(iNovgorod,     150, 125, 125, 150 )
-		gc.setProductionModifiersAI(iKiev,         100, 120, 100, 140 )
-		gc.setProductionModifiersHu(iKiev,         125, 150, 125, 150 )
-		gc.setProductionModifiersAI(iHungary,      100, 100, 100, 140 )
-		gc.setProductionModifiersHu(iHungary,      125, 125, 100, 130 )
+		gc.setProductionModifiersAI(iBurgundy,     130, 120, 120, 150 )
+		gc.setProductionModifiersHu(iBurgundy,     150, 120, 120, 150 )
 		gc.setProductionModifiersAI(iGermany,      120, 120, 100, 140 )
 		gc.setProductionModifiersHu(iGermany,      140, 140, 125, 130 )
-		gc.setProductionModifiersAI(iScotland,     125, 125, 125, 125 )
-		gc.setProductionModifiersHu(iScotland,     125, 125, 125, 125 )
-		gc.setProductionModifiersAI(iPoland,       100, 125, 130, 140 )
-		gc.setProductionModifiersHu(iPoland,       125, 150, 130, 130 )
-		gc.setProductionModifiersAI(iMoscow,        80,  80, 100, 140 )
-		gc.setProductionModifiersHu(iMoscow,       100, 100, 100, 140 )
+		gc.setProductionModifiersAI(iNovgorod,     120, 120, 120, 150 )
+		gc.setProductionModifiersHu(iNovgorod,     125, 125, 125, 150 )
+		gc.setProductionModifiersAI(iNorway,       125, 125, 125, 130 )
+		gc.setProductionModifiersHu(iNorway,       125, 125, 100, 140 )
+		gc.setProductionModifiersAI(iKiev,         100, 120, 100, 140 )
+		gc.setProductionModifiersHu(iKiev,         125, 150, 125, 150 )
+		gc.setProductionModifiersAI(iHungary,      120, 120, 100, 150 )
+		gc.setProductionModifiersHu(iHungary,      125, 125, 100, 130 )
+		gc.setProductionModifiersAI(iSpain,        100, 100, 100, 120 )
+		gc.setProductionModifiersHu(iSpain,        125, 100, 100, 120 )
+		gc.setProductionModifiersAI(iDenmark,      100, 100, 100, 110 )
+		gc.setProductionModifiersHu(iDenmark,      100, 100, 100, 120 )
+		gc.setProductionModifiersAI(iScotland,     100, 100, 100, 125 )
+		gc.setProductionModifiersHu(iScotland,     110, 110, 110, 125 )
+		gc.setProductionModifiersAI(iPoland,       100, 120, 120, 140 )
+		gc.setProductionModifiersHu(iPoland,       120, 120, 120, 130 )
 		gc.setProductionModifiersAI(iGenoa,        100, 100, 100, 130 )
 		gc.setProductionModifiersHu(iGenoa,        100, 100, 100, 125 )
-		gc.setProductionModifiersAI(iMorocco,      125, 125, 125, 175 )
-		gc.setProductionModifiersHu(iMorocco,      125, 125, 125, 175 )
+		gc.setProductionModifiersAI(iMorocco,      120, 120, 120, 175 )
+		gc.setProductionModifiersHu(iMorocco,      120, 120, 120, 175 )
 		gc.setProductionModifiersAI(iEngland,       80,  80, 100, 120 )
 		gc.setProductionModifiersHu(iEngland,      100, 100, 100, 110 )
 		gc.setProductionModifiersAI(iPortugal,      70,  90, 100, 100 )
 		gc.setProductionModifiersHu(iPortugal,      80,  90, 100,  90 )
 		gc.setProductionModifiersAI(iAragon,        75,  90, 100, 125 )
 		gc.setProductionModifiersHu(iAragon,        80, 100, 100, 125 )
+		gc.setProductionModifiersAI(iSweden,        80,  80, 100, 100 )
+		gc.setProductionModifiersHu(iSweden,        80,  80, 100, 100 )
 		gc.setProductionModifiersAI(iPrussia,       60,  80, 120,  90 )
 		gc.setProductionModifiersHu(iPrussia,       75,  80, 120, 100 )
 		gc.setProductionModifiersAI(iLithuania,     70, 100, 110, 110 )
@@ -224,53 +229,51 @@ class RFCEBalance:
 		gc.setProductionModifiersHu(iAustria,       75,  75, 100,  70 )
 		gc.setProductionModifiersAI(iTurkey,        60,  75, 100, 120 )
 		gc.setProductionModifiersHu(iTurkey,        75,  75, 100, 110 )
-		gc.setProductionModifiersAI(iSweden,        80,  80, 100, 100 )
-		gc.setProductionModifiersHu(iSweden,        80,  80, 100, 100 )
+		gc.setProductionModifiersAI(iMoscow,        80,  80, 100, 140 )
+		gc.setProductionModifiersHu(iMoscow,       110, 110, 100, 140 )
 		gc.setProductionModifiersAI(iDutch,         80,  50,  50,  50 )
 		gc.setProductionModifiersHu(iDutch,         90,  50,  60,  40 )
 		gc.setProductionModifiersAI(iPope,         300, 200, 100, 350 )
 		gc.setProductionModifiersAI(iIndependent,  170, 100, 400, 200 ) #The peaceful ones
-		gc.setProductionModifiersAI(iIndependent2, 170, 100, 400, 200 )
+		gc.setProductionModifiersAI(iIndependent2, 170, 100, 400, 200 ) #The peaceful ones
 		gc.setProductionModifiersAI(iIndependent3, 125, 100, 600, 300 ) #The warlike ones
-		gc.setProductionModifiersAI(iIndependent4, 125, 100, 600, 300 )
+		gc.setProductionModifiersAI(iIndependent4, 125, 100, 600, 300 ) #The warlike ones
 		gc.setProductionModifiersAI(iBarbarian,    125, 100, 900, 350 )
 
 		#void setSupportModifiers( int iCiv, int iInflation, int iUnits, int iCityDist, int iCityNum, int iCivic );
 		# defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100, 100 )
-		gc.setSupportModifiersAI(iBurgundy,      10, 150,  60,  40, 100 )
-		gc.setSupportModifiersHu(iBurgundy,      10, 150,  60,  40, 100 )
-		gc.setSupportModifiersAI(iByzantium,     60, 150, 100,  75, 120 )
+		gc.setSupportModifiersAI(iByzantium,     60, 150,  80,  50, 120 )
 		gc.setSupportModifiersHu(iByzantium,     60, 150,  80,  50, 120 )
 		gc.setSupportModifiersAI(iFrankia,       30, 120,  80,  35, 100 )
 		gc.setSupportModifiersHu(iFrankia,       30, 120,  80,  35, 100 )
-		gc.setSupportModifiersAI(iArabia,        30, 150,  70,  15, 120 )
-		gc.setSupportModifiersHu(iArabia,        30, 150,  70,  15, 120 )
-		gc.setSupportModifiersAI(iBulgaria,      40, 150,  80,  50, 120 )
+		gc.setSupportModifiersAI(iArabia,        30, 150,  70,  20, 120 )
+		gc.setSupportModifiersHu(iArabia,        30, 150,  70,  20, 120 )
+		gc.setSupportModifiersAI(iBulgaria,      40, 150,  70,  40, 120 )
 		gc.setSupportModifiersHu(iBulgaria,      40, 150,  70,  40, 120 )
 		gc.setSupportModifiersAI(iCordoba,       50, 150,  70,  50, 120 )
 		gc.setSupportModifiersHu(iCordoba,       50, 150,  70,  50, 120 )
-		gc.setSupportModifiersAI(iSpain,         10, 100,  50,  25, 100 )
-		gc.setSupportModifiersHu(iSpain,         10, 100,  50,  25, 100 )
-		gc.setSupportModifiersAI(iNorway,        10, 100,  50,  25, 100 )
-		gc.setSupportModifiersHu(iNorway,        10, 100,  50,  25, 100 )
-		gc.setSupportModifiersAI(iDenmark,       10, 100,  50,  25, 100 )
-		gc.setSupportModifiersHu(iDenmark,       10, 100,  50,  25, 100 )
 		gc.setSupportModifiersAI(iVenecia,       10, 100,  50,  25, 100 )
 		gc.setSupportModifiersHu(iVenecia,       10, 100,  50,  25, 100 )
+		gc.setSupportModifiersAI(iBurgundy,      20, 120,  60,  25, 100 )
+		gc.setSupportModifiersHu(iBurgundy,      20, 120,  60,  25, 100 )
+		gc.setSupportModifiersAI(iGermany,       20, 100,  70,  25, 100 )
+		gc.setSupportModifiersHu(iGermany,       20, 100,  70,  25, 100 )
 		gc.setSupportModifiersAI(iNovgorod,      10, 150,  50,  25, 100 )
 		gc.setSupportModifiersHu(iNovgorod,      10, 150,  50,  25, 100 )
+		gc.setSupportModifiersAI(iNorway,        10, 100,  50,  25, 100 )
+		gc.setSupportModifiersHu(iNorway,        10, 100,  50,  25, 100 )
 		gc.setSupportModifiersAI(iKiev,          10, 100,  50,  25, 100 )
 		gc.setSupportModifiersHu(iKiev,          10, 100,  50,  25, 100 )
 		gc.setSupportModifiersAI(iHungary,       20, 100,  60,  25, 100 )
 		gc.setSupportModifiersHu(iHungary,       20, 100,  60,  25, 100 )
-		gc.setSupportModifiersAI(iGermany,       20, 100,  70,  25, 100 )
-		gc.setSupportModifiersHu(iGermany,       20, 100,  70,  25, 100 )
-		gc.setSupportModifiersAI(iScotland,      10, 100,  75,  40, 100 )
-		gc.setSupportModifiersHu(iScotland,      10, 100,  75,  40, 100 )
+		gc.setSupportModifiersAI(iSpain,         10, 100,  50,  25, 100 )
+		gc.setSupportModifiersHu(iSpain,         10, 100,  50,  25, 100 )
+		gc.setSupportModifiersAI(iDenmark,       10, 100,  50,  25, 100 )
+		gc.setSupportModifiersHu(iDenmark,       10, 100,  50,  25, 100 )
+		gc.setSupportModifiersAI(iScotland,      10, 100,  75,  25, 100 )
+		gc.setSupportModifiersHu(iScotland,      10, 100,  75,  25, 100 )
 		gc.setSupportModifiersAI(iPoland,        10, 100,  70,  25, 100 )
 		gc.setSupportModifiersHu(iPoland,        10, 100,  70,  25, 100 )
-		gc.setSupportModifiersAI(iMoscow,        10, 100,  40,  20, 100 ) # sync with UP
-		gc.setSupportModifiersHu(iMoscow,        10, 100,  40,  20, 100 ) # sync with UP
 		gc.setSupportModifiersAI(iGenoa,         10, 100,  50,  25, 100 )
 		gc.setSupportModifiersHu(iGenoa,         10, 100,  50,  25, 100 )
 		gc.setSupportModifiersAI(iMorocco,       10, 100,  50,  25, 100 )
@@ -281,18 +284,20 @@ class RFCEBalance:
 		gc.setSupportModifiersHu(iPortugal,      10, 100,  50,  25, 100 )
 		gc.setSupportModifiersAI(iAragon,        10, 100,  50,  25, 100 )
 		gc.setSupportModifiersHu(iAragon,        10, 100,  50,  25, 100 )
-		gc.setSupportModifiersAI(iPrussia,       10,  85,  50,  40, 100 )
-		gc.setSupportModifiersHu(iPrussia,       10,  85,  50,  40, 100 )
+		gc.setSupportModifiersAI(iSweden,        10,  75,  50,  25, 100 )
+		gc.setSupportModifiersHu(iSweden,        10,  75,  50,  25, 100 )
+		gc.setSupportModifiersAI(iPrussia,       10,  85,  50,  25, 100 )
+		gc.setSupportModifiersHu(iPrussia,       10,  85,  50,  25, 100 )
 		gc.setSupportModifiersAI(iLithuania,     10,  85,  50,  25, 100 )
 		gc.setSupportModifiersHu(iLithuania,     10,  85,  50,  25, 100 )
 		gc.setSupportModifiersAI(iAustria,       10,  65,  50,  25,  80 )
 		gc.setSupportModifiersHu(iAustria,       10,  65,  50,  25,  80 )
 		gc.setSupportModifiersAI(iTurkey,        30,  60,  50,  20, 100 )
 		gc.setSupportModifiersHu(iTurkey,        30,  60,  50,  20, 100 )
-		gc.setSupportModifiersAI(iSweden,        10,  75,  50,  25, 100 )
-		gc.setSupportModifiersHu(iSweden,        10,  75,  50,  25, 100 )
-		gc.setSupportModifiersAI(iDutch,         10,  60,  50,  50, 100 )
-		gc.setSupportModifiersHu(iDutch,         10,  60,  50,  50, 100 )
+		gc.setSupportModifiersAI(iMoscow,        10, 100,  40,  20, 100 ) # sync with UP
+		gc.setSupportModifiersHu(iMoscow,        10, 100,  40,  20, 100 ) # sync with UP
+		gc.setSupportModifiersAI(iDutch,         10,  60,  50,  25, 100 )
+		gc.setSupportModifiersHu(iDutch,         10,  60,  50,  25, 100 )
 		gc.setSupportModifiersAI(iPope,          10, 200,  50,  25, 100 )
 		gc.setSupportModifiersAI(iIndependent,   10, 100,  10,  20, 100 )
 		gc.setSupportModifiersAI(iIndependent2,  10, 100,  10,  20, 100 )
@@ -558,7 +563,7 @@ class RFCEBalance:
 		# iUP_PromotionI, iParameter = the bonus promotion
 		# iUP_PromotionII, iParameter = the bonus promotion
 		# iUP_Inquisition, iParameter is not used
-		# iUP_CanEnterTerrain, iParameter is the terrain to enter
+		# iUP_CanEnterTerrain, iParameter is the terrain to enter, NOTE: also enables trade through the given terrain type
 		# iUP_Discovery, iParameter = ColonyStart * 1000000 + ColonyEnd * 1000 + iModifier modifies the cost associated with all projects (iCost *= iModifier; iCost /= 100 )
 		# iUP_EndlessLand, iParameter = percent change (i.e. upkeep *= iParameter, upkeep /= 100 )
 		# iUP_ForeignSea, use iParameter = 1
@@ -573,6 +578,7 @@ class RFCEBalance:
 		gc.setUP( iBurgundy, iUP_PerCityCommerce, 200)
 
 		gc.setUP( iByzantium, iUP_Emperor, 1 )
+		gc.setUP( iByzantium, iUP_EnableCivic, xml.iCivicImperialism )
 
 		gc.setUP( iFrankia, iUP_LandStability, 1 )
 
@@ -590,7 +596,7 @@ class RFCEBalance:
 		gc.setUP( iSpain, iUP_PerCityCommerce, 2 )
 
 		gc.setUP( iNorway, iUP_CanEnterTerrain, xml.iTerrainOcean )
-		gc.setUP( iNorway, iUP_StabilitySettler, 1 ) # hidden part of the UP
+		gc.setUP( iNorway, iUP_StabilitySettler, 1 ) # "hidden" part of the UP
 
 		gc.setUP( iVenecia, iUP_EnableCivic, xml.iCivicMerchantRepublic )
 		#gc.setUP( iVenecia, iUP_ForeignSea, 1 )
@@ -613,7 +619,13 @@ class RFCEBalance:
 
 		gc.setUP( iGenoa, iUP_Mercenaries, 1 ) # Absinthe: this actually has no effect, it is implemented in Mercenaries.py entirely
 
-		gc.setUP( iEngland, iUP_ImprovementBonus, 1 * 100000 + xml.iImprovementWorkshop * 1000 + 10 + 1 )
+		gc.setUP( iScotland, iUP_ImprovementBonus, 1 * 100000 + xml.iImprovementFort * 1000 + 2 )
+
+		gc.setUP( iEngland, iUP_ImprovementBonus, 1 * 100000 + xml.iImprovementWorkshop * 1000 + 1 )
+		gc.setUP( iEngland, iUP_ImprovementBonus2, 1 * 100000 + xml.iImprovementCottage * 1000 + 10 )
+		gc.setUP( iEngland, iUP_ImprovementBonus3, 1 * 100000 + xml.iImprovementHamlet * 1000 + 10 )
+		gc.setUP( iEngland, iUP_ImprovementBonus4, 1 * 100000 + xml.iImprovementVillage * 1000 + 10 )
+		gc.setUP( iEngland, iUP_ImprovementBonus5, 1 * 100000 + xml.iImprovementTown * 1000 + 10 )
 
 		# Speed up East/West India Trading Companies and all Colonies
 		gc.setUP( iPortugal, iUP_Discovery, (xml.iNumNotColonies-2) * 1000000 + (xml.iNumTotalColonies-1) * 1000 + 30 );
@@ -685,22 +697,22 @@ class RFCEBalance:
 		#		iProductionNeeded /= 100
 		#		iParameter = 200, means 2% faster production per Faith Point, iParameter = 50 means .5% faster production per FP
 		#		Counts for Wonders and Projects
-		#iFP_Displomacy: iAttitude += iParameter * num_FaithPoints / 100
+		#iFP_Diplomacy: iAttitude += iParameter * num_FaithPoints / 100
 		#		i.e. 1 Faith Point = iParameter percent of an attitude point
 
-		gc.setReligionBenefit( xml.iOrthodoxy, con.iFP_Stability, 10, 100 )
-		gc.setReligionBenefit( xml.iOrthodoxy, con.iFP_Civic, 50, 100 )
+		gc.setReligionBenefit( xml.iOrthodoxy, iFP_Stability, 10, 100 )
+		gc.setReligionBenefit( xml.iOrthodoxy, iFP_Civic, 50, 100 )
 
-		gc.setReligionBenefit( xml.iIslam, con.iFP_Growth, 50, 100 )
-		gc.setReligionBenefit( xml.iIslam, con.iFP_Units, 50, 100 )
+		gc.setReligionBenefit( xml.iIslam, iFP_Growth, 50, 100 )
+		gc.setReligionBenefit( xml.iIslam, iFP_Units, 50, 100 )
 
-		gc.setReligionBenefit( xml.iProtestantism, con.iFP_Science, 30, 100 )
-		gc.setReligionBenefit( xml.iProtestantism, con.iFP_Production, 30, 100 )
+		gc.setReligionBenefit( xml.iProtestantism, iFP_Science, 30, 100 )
+		gc.setReligionBenefit( xml.iProtestantism, iFP_Production, 30, 100 )
 
-		gc.setReligionBenefit( xml.iCatholicism, con.iFP_Displomacy, 6, 100 )
-		gc.setReligionBenefit( xml.iIslam, con.iFP_Displomacy, 5, 100 )
-		gc.setReligionBenefit( xml.iProtestantism, con.iFP_Displomacy, 4, 100 )
-		gc.setReligionBenefit( xml.iOrthodoxy, con.iFP_Displomacy, 3, 100 )
+		gc.setReligionBenefit( xml.iCatholicism, iFP_Diplomacy, 6, 100 )
+		gc.setReligionBenefit( xml.iIslam, iFP_Diplomacy, 5, 100 )
+		gc.setReligionBenefit( xml.iProtestantism, iFP_Diplomacy, 4, 100 )
+		gc.setReligionBenefit( xml.iOrthodoxy, iFP_Diplomacy, 3, 100 )
 
 		# a land tile that is normally impassable but the desired player can pass through it
 		#gc.setStrategicTile( iVenecia, 56, 35 )
@@ -709,17 +721,27 @@ class RFCEBalance:
 		# use values -10 for very unlikely, 0 for default neutral and positive for desirable
 		# values less than -10 might not work, above 10 should be fine
 
-		gc.setBuildingPref( iBurgundy, xml.iMonasteryOfCluny, 20 )
-
-		gc.setBuildingPref( iByzantium, xml.iRoundChurch, -3 )
-		gc.setBuildingPref( iByzantium, xml.iGoldenBull, -3 )
+		gc.setBuildingPref( iByzantium, xml.iStCatherineMonastery, 15 )
+		gc.setBuildingPref( iByzantium, xml.iBoyanaChurch, 2 )
+		gc.setBuildingPref( iByzantium, xml.iRoundChurch, 2 )
+		gc.setBuildingPref( iByzantium, xml.iSophiaKiev, 5 )
 
 		gc.setBuildingPref( iFrankia, xml.iNotreDame, 20 )
-		gc.setBuildingPref( iFrankia, xml.iVersailles, 10 )
+		gc.setBuildingPref( iFrankia, xml.iVersailles, 20 )
 		gc.setBuildingPref( iFrankia, xml.iFontainebleau, 10 )
+		gc.setBuildingPref( iFrankia, xml.iMonasteryOfCluny, 10 )
+		gc.setBuildingPref( iFrankia, xml.iMontSaintMichel, 10 )
+		gc.setBuildingPref( iFrankia, xml.iPalaisPapes, 5 )
+		gc.setBuildingPref( iFrankia, xml.iLouvre, 20 )
 
-		gc.setBuildingPref( iArabia, xml.iDomeRock, 10 )
-		gc.setBuildingPref( iArabia, xml.iTombKhal, 20 )
+		gc.setBuildingPref( iArabia, xml.iDomeRock, 15 )
+		gc.setBuildingPref( iArabia, xml.iTombAlWalid, 20 )
+		gc.setBuildingPref( iArabia, xml.iAlAzhar, 20 )
+		gc.setBuildingPref( iArabia, xml.iMosqueOfKairouan, 10 )
+		gc.setBuildingPref( iArabia, xml.iKoutoubiaMosque, 5 )
+		gc.setBuildingPref( iArabia, xml.iGardensAlAndalus, 5 )
+		gc.setBuildingPref( iArabia, xml.iLaMezquita, 5 )
+		gc.setBuildingPref( iArabia, xml.iAlhambra, 5 )
 		gc.setBuildingPref( iArabia, xml.iNotreDame, -5 )
 		gc.setBuildingPref( iArabia, xml.iStephansdom, -5 )
 		gc.setBuildingPref( iArabia, xml.iSistineChapel, -5 )
@@ -729,11 +751,17 @@ class RFCEBalance:
 		gc.setBuildingPref( iArabia, xml.iCopernicus, -3 )
 
 		gc.setBuildingPref( iBulgaria, xml.iRoundChurch, 20 )
+		gc.setBuildingPref( iBulgaria, xml.iBoyanaChurch, 20 )
+		gc.setBuildingPref( iBulgaria, xml.iStCatherineMonastery, 5 )
+		gc.setBuildingPref( iBulgaria, xml.iSophiaKiev, 5 )
 
 		gc.setBuildingPref( iCordoba, xml.iGardensAlAndalus, 20 )
 		gc.setBuildingPref( iCordoba, xml.iLaMezquita, 20 )
 		gc.setBuildingPref( iCordoba, xml.iAlhambra, 20 )
 		gc.setBuildingPref( iCordoba, xml.iDomeRock, 10 )
+		gc.setBuildingPref( iCordoba, xml.iAlAzhar, 5 )
+		gc.setBuildingPref( iCordoba, xml.iMosqueOfKairouan, 10 )
+		gc.setBuildingPref( iCordoba, xml.iKoutoubiaMosque, 5 )
 		gc.setBuildingPref( iCordoba, xml.iNotreDame, -5 )
 		gc.setBuildingPref( iCordoba, xml.iStephansdom, -5 )
 		gc.setBuildingPref( iCordoba, xml.iSistineChapel, -5 )
@@ -741,60 +769,164 @@ class RFCEBalance:
 		gc.setBuildingPref( iCordoba, xml.iLeaningTower, -3 )
 		gc.setBuildingPref( iCordoba, xml.iGoldenBull, -3 )
 
-		gc.setBuildingPref( iSpain, xml.iEscorial, 20 )
-		gc.setBuildingPref( iSpain, xml.iMagellansVoyage, 10 )
-
-		gc.setBuildingPref( iNorway, xml.iShrineOfUppsala, 20 )
-
-		gc.setBuildingPref( iDenmark, xml.iKalmarCastle, 10 )
-
 		gc.setBuildingPref( iVenecia, xml.iMarcoPolo, 15 )
-		gc.setBuildingPref( iVenecia, xml.iSanMarco, 15 )
+		gc.setBuildingPref( iVenecia, xml.iSanMarco, 20 )
 		gc.setBuildingPref( iVenecia, xml.iLanterna, 10 )
 		gc.setBuildingPref( iVenecia, xml.iLeonardosWorkshop, 5 )
 		gc.setBuildingPref( iVenecia, xml.iLeaningTower, 5 )
+		gc.setBuildingPref( iVenecia, xml.iGrandArsenal, 20 )
+		gc.setBuildingPref( iVenecia, xml.iGalataTower, 10 )
+		gc.setBuildingPref( iVenecia, xml.iFlorenceDuomo, 10 )
+		gc.setBuildingPref( iVenecia, xml.iSanGiorgio, 5 )
 
-		gc.setBuildingPref( iKiev, xml.iSophiaKiev, 20 )
-
-		gc.setBuildingPref( iHungary, xml.iPressburg, 20 )
-		gc.setBuildingPref( iHungary, xml.iGoldenBull, 20 )
-		gc.setBuildingPref( iHungary, xml.iBibliothecaCorviniana, 15 )
-		gc.setBuildingPref( iHungary, xml.iKazimierz, 10 )
-
-		gc.setBuildingPref( iPrussia, xml.iBrandenburgGate, 20 )
+		gc.setBuildingPref( iBurgundy, xml.iMonasteryOfCluny, 20 )
+		gc.setBuildingPref( iBurgundy, xml.iNotreDame, 10 )
+		gc.setBuildingPref( iBurgundy, xml.iVersailles, 10 )
+		gc.setBuildingPref( iBurgundy, xml.iMontSaintMichel, 10 )
+		gc.setBuildingPref( iBurgundy, xml.iFontainebleau, 5 )
+		gc.setBuildingPref( iBurgundy, xml.iPalaisPapes, 5 )
+		gc.setBuildingPref( iBurgundy, xml.iLouvre, 10 )
 
 		gc.setBuildingPref( iGermany, xml.iBrandenburgGate, 10 )
 		gc.setBuildingPref( iGermany, xml.iImperialDiet, 20 )
 		gc.setBuildingPref( iGermany, xml.iCopernicus, 5 )
+		gc.setBuildingPref( iGermany, xml.iGoldenBull, 10 )
+		gc.setBuildingPref( iGermany, xml.iMonasteryOfCluny, 5 )
+		gc.setBuildingPref( iGermany, xml.iUraniborg, 5 )
+		gc.setBuildingPref( iGermany, xml.iThomaskirche, 20 )
+
+		gc.setBuildingPref( iNovgorod, xml.iStBasil, 10 )
+		gc.setBuildingPref( iNovgorod, xml.iSophiaKiev, 10 )
+		gc.setBuildingPref( iNovgorod, xml.iRoundChurch, 5 )
+		gc.setBuildingPref( iNovgorod, xml.iBoyanaChurch, 5 )
+		gc.setBuildingPref( iNovgorod, xml.iBorgundStaveChurch, 5 )
+		gc.setBuildingPref( iNovgorod, xml.iPeterhofPalace, 15 )
+
+		gc.setBuildingPref( iNorway, xml.iShrineOfUppsala, 20 )
+		gc.setBuildingPref( iNorway, xml.iSamogitianAlkas, 5 )
+		gc.setBuildingPref( iNorway, xml.iBorgundStaveChurch, 15 )
+		gc.setBuildingPref( iNorway, xml.iUraniborg, 10 )
+		gc.setBuildingPref( iNorway, xml.iKalmarCastle, 5 )
+
+		gc.setBuildingPref( iKiev, xml.iSophiaKiev, 20 )
+		gc.setBuildingPref( iKiev, xml.iStBasil, 5 )
+		gc.setBuildingPref( iKiev, xml.iRoundChurch, 5 )
+		gc.setBuildingPref( iKiev, xml.iBoyanaChurch, 5 )
+		gc.setBuildingPref( iKiev, xml.iPeterhofPalace, 10 )
+
+		gc.setBuildingPref( iHungary, xml.iPressburg, 20 )
+		gc.setBuildingPref( iHungary, xml.iGoldenBull, 20 )
+		gc.setBuildingPref( iHungary, xml.iBibliothecaCorviniana, 20 )
+		gc.setBuildingPref( iHungary, xml.iKazimierz, 10 )
+		gc.setBuildingPref( iHungary, xml.iCopernicus, 5 )
+		gc.setBuildingPref( iHungary, xml.iStephansdom, 5 )
+
+		gc.setBuildingPref( iSpain, xml.iEscorial, 20 )
+		gc.setBuildingPref( iSpain, xml.iMagellansVoyage, 10 )
+		gc.setBuildingPref( iSpain, xml.iTorreDelOro, 20 )
+		gc.setBuildingPref( iSpain, xml.iBelemTower, 10 )
+
+		gc.setBuildingPref( iDenmark, xml.iKalmarCastle, 10 )
+		gc.setBuildingPref( iDenmark, xml.iShrineOfUppsala, 20 )
+		gc.setBuildingPref( iDenmark, xml.iSamogitianAlkas, 5 )
+		gc.setBuildingPref( iDenmark, xml.iBorgundStaveChurch, 15 )
+		gc.setBuildingPref( iDenmark, xml.iUraniborg, 20 )
+
+		gc.setBuildingPref( iScotland, xml.iMagnaCarta, 10 )
+		gc.setBuildingPref( iScotland, xml.iWestminster, 10 )
+		gc.setBuildingPref( iScotland, xml.iMonasteryOfCluny, 5 )
+		gc.setBuildingPref( iScotland, xml.iBorgundStaveChurch, 5 )
+		gc.setBuildingPref( iScotland, xml.iMontSaintMichel, 5 )
 
 		gc.setBuildingPref( iPoland, xml.iPressburg, 10 )
 		gc.setBuildingPref( iPoland, xml.iCopernicus, 10 )
 		gc.setBuildingPref( iPoland, xml.iGoldenBull, 5 )
 		gc.setBuildingPref( iPoland, xml.iKazimierz, 15 )
-
-		gc.setBuildingPref( iMoscow, xml.iStBasil, 20 )
+		gc.setBuildingPref( iPoland, xml.iJasnaGora, 20 )
+		gc.setBuildingPref( iPoland, xml.iBrandenburgGate, 5 )
 
 		gc.setBuildingPref( iGenoa, xml.iSanGiorgio, 20 )
 		gc.setBuildingPref( iGenoa, xml.iLanterna, 20 )
 		gc.setBuildingPref( iGenoa, xml.iLeonardosWorkshop, 5 )
 		gc.setBuildingPref( iGenoa, xml.iLeaningTower, 5 )
+		gc.setBuildingPref( iGenoa, xml.iSanMarco, 5 )
+		gc.setBuildingPref( iGenoa, xml.iMarcoPolo, 5 )
+		gc.setBuildingPref( iGenoa, xml.iGrandArsenal, 10 )
+		gc.setBuildingPref( iGenoa, xml.iGalataTower, 20 )
+		gc.setBuildingPref( iGenoa, xml.iFlorenceDuomo, 10 )
+
+		gc.setBuildingPref( iMorocco, xml.iGardensAlAndalus, 10 )
+		gc.setBuildingPref( iMorocco, xml.iLaMezquita, 10 )
+		gc.setBuildingPref( iMorocco, xml.iAlhambra, 10 )
+		gc.setBuildingPref( iMorocco, xml.iDomeRock, 10 )
+		gc.setBuildingPref( iMorocco, xml.iAlAzhar, 5 )
+		gc.setBuildingPref( iMorocco, xml.iMosqueOfKairouan, 10 )
+		gc.setBuildingPref( iMorocco, xml.iKoutoubiaMosque, 20 )
+		gc.setBuildingPref( iMorocco, xml.iNotreDame, -5 )
+		gc.setBuildingPref( iMorocco, xml.iStephansdom, -5 )
+		gc.setBuildingPref( iMorocco, xml.iSistineChapel, -5 )
+		gc.setBuildingPref( iMorocco, xml.iKrakDesChevaliers, -5 )
+		gc.setBuildingPref( iMorocco, xml.iLeaningTower, -3 )
+		gc.setBuildingPref( iMorocco, xml.iGoldenBull, -3 )
 
 		gc.setBuildingPref( iEngland, xml.iMagnaCarta, 20 )
-		gc.setBuildingPref( iEngland, xml.iWestminster, 10 )
+		gc.setBuildingPref( iEngland, xml.iWestminster, 20 )
+		gc.setBuildingPref( iEngland, xml.iMonasteryOfCluny, 5 )
+		gc.setBuildingPref( iEngland, xml.iUraniborg, 5 )
+		gc.setBuildingPref( iEngland, xml.iTorreDelOro, 5 )
+		gc.setBuildingPref( iEngland, xml.iBelemTower, 5 )
 
 		gc.setBuildingPref( iPortugal, xml.iBelemTower, 20 )
 		gc.setBuildingPref( iPortugal, xml.iPalacioDaPena, 20 )
+		gc.setBuildingPref( iPortugal, xml.iMagellansVoyage, 20 )
+		gc.setBuildingPref( iPortugal, xml.iTorreDelOro, 10 )
+
+		gc.setBuildingPref( iAragon, xml.iMagellansVoyage, 10 )
+		gc.setBuildingPref( iAragon, xml.iTorreDelOro, 10 )
+		gc.setBuildingPref( iAragon, xml.iEscorial, 5 )
+		gc.setBuildingPref( iAragon, xml.iBelemTower, 10 )
+
+		gc.setBuildingPref( iSweden, xml.iKalmarCastle, 20 )
+		gc.setBuildingPref( iSweden, xml.iShrineOfUppsala, 5 )
+		gc.setBuildingPref( iSweden, xml.iBorgundStaveChurch, 15 )
+		gc.setBuildingPref( iSweden, xml.iUraniborg, 10 )
+
+		gc.setBuildingPref( iPrussia, xml.iBrandenburgGate, 20 )
+		gc.setBuildingPref( iPrussia, xml.iThomaskirche, 10 )
+		gc.setBuildingPref( iPrussia, xml.iCopernicus, 5 )
+		gc.setBuildingPref( iPrussia, xml.iPressburg, 5 )
+
+		gc.setBuildingPref( iLithuania, xml.iSamogitianAlkas, 20 )
+		gc.setBuildingPref( iLithuania, xml.iGediminasTower, 20 )
+		gc.setBuildingPref( iLithuania, xml.iBorgundStaveChurch, 5 )
 
 		gc.setBuildingPref( iAustria, xml.iStephansdom, 20 )
+		gc.setBuildingPref( iAustria, xml.iThomaskirche, 15 )
+		gc.setBuildingPref( iAustria, xml.iCopernicus, 5 )
+		gc.setBuildingPref( iAustria, xml.iGoldenBull, 5 )
+		gc.setBuildingPref( iAustria, xml.iPressburg, 5 )
 		gc.setBuildingPref( iAustria, xml.iAustrianOperaHouse, 10 )
 
 		gc.setBuildingPref( iTurkey, xml.iTopkapiPalace, 20 )
+		gc.setBuildingPref( iTurkey, xml.iBlueMosque, 20 )
+		gc.setBuildingPref( iTurkey, xml.iSelimiyeMosque, 20 )
+		gc.setBuildingPref( iTurkey, xml.iTombAlWalid, 10 )
+		gc.setBuildingPref( iTurkey, xml.iKizilKule, 10 )
+		gc.setBuildingPref( iTurkey, xml.iAlAzhar, 5 )
 
-		gc.setBuildingPref( iSweden, xml.iKalmarCastle, 20 )
+		gc.setBuildingPref( iMoscow, xml.iStBasil, 20 )
+		gc.setBuildingPref( iMoscow, xml.iPeterhofPalace, 20 )
+		gc.setBuildingPref( iMoscow, xml.iSophiaKiev, 5 )
 
 		gc.setBuildingPref( iDutch, xml.iBeurs, 20 )
+		gc.setBuildingPref( iDutch, xml.iUraniborg, 5 )
+		gc.setBuildingPref( iDutch, xml.iThomaskirche, 5 )
 
 		gc.setBuildingPref( iPope, xml.iSistineChapel, 20 )
+		gc.setBuildingPref( iPope, xml.iPalaisPapes, 10 )
+		gc.setBuildingPref( iPope, xml.iLeaningTower, 5 )
+		gc.setBuildingPref( iPope, xml.iFlorenceDuomo, 5 )
+		gc.setBuildingPref( iPope, xml.iLeonardosWorkshop, 5 )
 
 		# 3Miro: set the Jews as the minor Religion
 		gc.setMinorReligion( xml.iJudaism )
@@ -998,7 +1130,7 @@ class RFCEBalance:
 				gc.addNormalException( iCiv, con.tNormalAreasSubtract[iCiv][iEx][0], con.tNormalAreasSubtract[iCiv][iEx][1] )
 
 		gc.setProsecutorReligions( xml.iProsecutor, xml.iProsecutorClass )
-		gc.setSaintParameters( xml.iProphet, con.iSaintBenefit, 20, 40 ) # try to amass at least 20 and don't bother above 40 points
+		gc.setSaintParameters( xml.iGreatProphet, con.iSaintBenefit, 20, 40 ) # try to amass at least 20 and don't bother above 40 points
 		gc.setIndependnets( con.iIndepStart, con.iIndepEnd, iBarbarian )
 		gc.setPapalPlayer( iPope, xml.iCatholicism )
 

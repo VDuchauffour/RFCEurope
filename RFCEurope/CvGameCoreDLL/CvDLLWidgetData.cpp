@@ -424,6 +424,16 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 		parseFinanceCityMaint(widgetDataStruct, szBuffer);
 		break;
 
+	// Absinthe: mercenary upkeep
+	case WIDGET_HELP_FINANCE_MERCENARY_MAINTENANCE:
+		parseFinanceMercenaryMaintenance(widgetDataStruct, szBuffer);
+		break;
+
+	// Absinthe: colony upkeep
+	case WIDGET_HELP_FINANCE_COLONY_UPKEEP:
+		parseFinanceColonyUpkeep(widgetDataStruct, szBuffer);
+		break;
+
 	case WIDGET_HELP_FINANCE_CIVIC_UPKEEP:
 		parseFinanceCivicUpkeep(widgetDataStruct, szBuffer);
 		break;
@@ -881,6 +891,8 @@ bool CvDLLWidgetData::executeAction( CvWidgetDataStruct &widgetDataStruct )
 	case WIDGET_HELP_FINANCE_UNIT_COST:
 	case WIDGET_HELP_FINANCE_AWAY_SUPPLY:
 	case WIDGET_HELP_FINANCE_CITY_MAINT:
+	case WIDGET_HELP_FINANCE_MERCENARY_MAINTENANCE: // Absinthe: mercenary upkeep
+	case WIDGET_HELP_FINANCE_COLONY_UPKEEP: // Absinthe: colony upkeep
 	case WIDGET_HELP_FINANCE_CIVIC_UPKEEP:
 	case WIDGET_HELP_FINANCE_FOREIGN_INCOME:
 	case WIDGET_HELP_FINANCE_INFLATED_COSTS:
@@ -4293,6 +4305,28 @@ void CvDLLWidgetData::parseFinanceCityMaint(CvWidgetDataStruct &widgetDataStruct
 	if (widgetDataStruct.m_iData2 > 0)
 	{
 		GAMETEXT.buildFinanceCityMaintString(szBuffer, (PlayerTypes)widgetDataStruct.m_iData1);
+	}
+}
+
+// Absinthe: mercenary upkeep
+void CvDLLWidgetData::parseFinanceMercenaryMaintenance(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
+{
+//	szBuffer = "The amount of money spent on Mercenaries";
+	szBuffer.assign(gDLL->getText("TXT_KEY_ECON_AMOUNT_MONEY_MERCENARY_MAINTENANCE"));
+	if (widgetDataStruct.m_iData2 > 0)
+	{
+		GAMETEXT.buildFinanceMercenaryMaintenanceString(szBuffer, (PlayerTypes)widgetDataStruct.m_iData1);
+	}
+}
+
+// Absinthe: colony upkeep
+void CvDLLWidgetData::parseFinanceColonyUpkeep(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
+{
+//	szBuffer = "The amount of money spent on Colonies";
+	szBuffer.assign(gDLL->getText("TXT_KEY_ECON_AMOUNT_MONEY_COLONY_UPKEEP"));
+	if (widgetDataStruct.m_iData2 > 0)
+	{
+		GAMETEXT.buildFinanceColonyUpkeepString(szBuffer, (PlayerTypes)widgetDataStruct.m_iData1);
 	}
 }
 

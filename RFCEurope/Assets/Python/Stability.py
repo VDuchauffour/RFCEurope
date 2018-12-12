@@ -31,7 +31,6 @@ iCathegoryCities = con.iCathegoryCities
 iCathegoryCivics = con.iCathegoryCivics
 iCathegoryEconomy = con.iCathegoryEconomy
 iCathegoryExpansion = con.iCathegoryExpansion
-tCapitals = con.tCapitals
 tStabilityPenalty = ( -5, -2, 0, 0, 0 ) # province type: unstable, border, potential, historic, core
 
 class Stability:
@@ -108,6 +107,10 @@ class Stability:
 
 		# Absinthe: update Byzantine stability on the start of the game
 		if utils.getScenario() == con.i500ADScenario:
+			# small stability boost for the human player for the first UHV
+			if con.iByzantium == utils.getHumanID():
+				pByzantium = gc.getPlayer( con.iByzantium )
+				pByzantium.changeStabilityBase( iCathegoryExpansion, 4 )
 			self.recalcEpansion(con.iByzantium)
 
 	def checkTurn(self, iGameTurn):
@@ -263,6 +266,15 @@ class Stability:
 		if city.hasBuilding(xml.iStephansdom):
 			pConq.setPicklefreeParameter( con.iIsHasStephansdom, 1 )
 			pOwner.setPicklefreeParameter( con.iIsHasStephansdom, 0 )
+		if city.hasBuilding(xml.iShrineOfUppsala):
+			pConq.setPicklefreeParameter( con.iIsHasUppsalaShrine, 1 )
+			pOwner.setPicklefreeParameter( con.iIsHasUppsalaShrine, 0 )
+		if city.hasBuilding(xml.iKoutoubiaMosque):
+			pConq.setPicklefreeParameter( con.iIsHasKoutoubiaMosque, 1 )
+			pOwner.setPicklefreeParameter( con.iIsHasKoutoubiaMosque, 0 )
+		if city.hasBuilding(xml.iMagnaCarta):
+			pConq.setPicklefreeParameter( con.iIsHasMagnaCarta, 1 )
+			pOwner.setPicklefreeParameter( con.iIsHasMagnaCarta, 0 )
 
 		self.recalcCivicCombos(playerType)
 		self.recalcCivicCombos(iOwner)
@@ -305,18 +317,27 @@ class Stability:
 
 
 	def onCityRazed(self, iOwner, iPlayer, city):
-		#Sedna17: Not sure what difference between iOwner and iPlayer is here
-		#3Miro: iOwner owns the city (victim) and I think iPlayer is the one razing the city
+		# Sedna17: Not sure what difference between iOwner and iPlayer is here
+		# 3Miro: iOwner owns the city (victim) and I think iPlayer is the one razing the city
 		#		On second thought, if iOwner (the previous owner) doesn't have enough culture, then iOwner == playerType
-		#AbsintheRed: iPlayer is the one razing city, iOwner is the previous owner of the city (apart from iPlayer)
+		# AbsintheRed: iPlayer is the one razing city, iOwner is the previous owner of the city (right before iPlayer)
 		pPlayer = gc.getPlayer( iPlayer )
 		pOwner = gc.getPlayer( iOwner )
 		if city.hasBuilding(xml.iEscorial):
-			pPlayer.setPicklefreeParameter( con.iIsHasEscorial, 1 )
+			pPlayer.setPicklefreeParameter( con.iIsHasEscorial, 0 )
 			pOwner.setPicklefreeParameter( con.iIsHasEscorial, 0 )
 		if city.hasBuilding(xml.iStephansdom):
-			pPlayer.setPicklefreeParameter( con.iIsHasStephansdom, 1 )
+			pPlayer.setPicklefreeParameter( con.iIsHasStephansdom, 0 )
 			pOwner.setPicklefreeParameter( con.iIsHasStephansdom, 0 )
+		if city.hasBuilding(xml.iShrineOfUppsala):
+			pPlayer.setPicklefreeParameter( con.iIsHasUppsalaShrine, 0 )
+			pOwner.setPicklefreeParameter( con.iIsHasUppsalaShrine, 0 )
+		if city.hasBuilding(xml.iKoutoubiaMosque):
+			pPlayer.setPicklefreeParameter( con.iIsHasKoutoubiaMosque, 0 )
+			pOwner.setPicklefreeParameter( con.iIsHasKoutoubiaMosque, 0 )
+		if city.hasBuilding(xml.iMagnaCarta):
+			pPlayer.setPicklefreeParameter( con.iIsHasMagnaCarta, 0 )
+			pOwner.setPicklefreeParameter( con.iIsHasMagnaCarta, 0 )
 		self.recalcCivicCombos(iPlayer)
 		self.recalcCivicCombos(iOwner)
 
@@ -357,6 +378,9 @@ class Stability:
 		pPlayer = gc.getPlayer( iPlayer )
 		if iBuilding == utils.getUniqueBuilding(iPlayer, xml.iManorHouse):
 			pPlayer.changeStabilityBase( iCathegoryEconomy, 1 )
+			# Naval base adds an additional stability point
+			if iBuilding == xml.iVeniceNavalBase:
+				pPlayer.changeStabilityBase( iCathegoryEconomy, 1 )
 			self.recalcEconomy( iPlayer )
 		elif iBuilding == utils.getUniqueBuilding(iPlayer, xml.iCastle):
 			pPlayer.changeStabilityBase( iCathegoryExpansion, 1 )
@@ -371,6 +395,12 @@ class Stability:
 			pPlayer.setPicklefreeParameter( con.iIsHasEscorial, 1 )
 		elif iBuilding == xml.iStephansdom:
 			pPlayer.setPicklefreeParameter( con.iIsHasStephansdom, 1 )
+		elif iBuilding == xml.iShrineOfUppsala:
+			pPlayer.setPicklefreeParameter( con.iIsHasUppsalaShrine, 1 )
+		elif iBuilding == xml.iKoutoubiaMosque:
+			pPlayer.setPicklefreeParameter( con.iIsHasKoutoubiaMosque, 1 )
+		elif iBuilding == xml.iMagnaCarta:
+			pPlayer.setPicklefreeParameter( con.iIsHasMagnaCarta, 1 )
 		elif iBuilding == xml.iPalace:
 			pPlayer.changeStabilityBase( iCathegoryExpansion, -2 )
 			pPlayer.setStabilitySwing( pPlayer.getStabilitySwing() -5  )
@@ -597,6 +627,11 @@ class Stability:
 		print (" City Stability for: ",iPlayer," Categories: ",iHappyStability,iHealthStability,iHurryStability,iMilitaryStability,iWarWStability,iReligionStability,iCultureStability)
 		if pPlayer.getGoldenAgeTurns() > 0:
 			iCityStability += 8
+		# Absinthe: Westminster Abbey faith-stability effect
+		if pPlayer.countNumBuildings(xml.iWestminster) > 0:
+			if pPlayer.getCivics(0) == xml.iCivicDivineMonarchy:
+				iFaith = pPlayer.getFaith()
+				iCityStability += iFaith / 20
 
 		pPlayer.setStabilityVary( iCathegoryCities, iCityStability)
 
@@ -617,12 +652,22 @@ class Stability:
 		iCivicCombo = 0
 		# Calculate the combinations
 		for lCombination in lCombinations:
-			iCivicCombo += self.getCivicCombinationStability(lCombination[0], lCombination[1])
+			iComboValue = self.getCivicCombinationStability(lCombination[0], lCombination[1])
+			if iComboValue < 0 and pPlayer.getPicklefreeParameter( con.iIsHasMagnaCarta ) == 1:
+				iComboValue = 0
+			iCivicCombo += iComboValue
 
 		if pPlayer.getPicklefreeParameter( con.iIsHasStephansdom ) == 1:
-			#if (self.getHasStephansdom(iPlayer) == 1):
 			if iCivicGovernment in [xml.iCivicFeudalMonarchy, xml.iCivicDivineMonarchy, xml.iCivicLimitedMonarchy]:
 				iCivicCombo +=2
+
+		if pPlayer.getPicklefreeParameter( con.iIsHasUppsalaShrine ) == 1:
+			if iCivicReligion == xml.iCivicPaganism:
+				iCivicCombo +=3
+
+		if pPlayer.getPicklefreeParameter( con.iIsHasKoutoubiaMosque ) == 1:
+			if iCivicLegal == xml.iCivicReligiousLaw:
+				iCivicCombo +=4
 
 		if iCivicLegal == xml.iCivicBureaucracy: #Bureaucracy city cap
 			if iPlayer == con.iNovgorod and pPlayer.getNumCities() > 6: #the penalties are halved for Novgorod
@@ -652,6 +697,7 @@ class Stability:
 			if xml.iCivicFeudalLaw in lCivics: return -3
 			if xml.iCivicTradeEconomy in lCivics: return 4
 			if xml.iCivicImperialism in lCivics: return -2
+			if xml.iCivicMercantilism in lCivics: return -4
 
 		if xml.iCivicDivineMonarchy in lCivics: #Divine Monarchy should have an appropriate religious civic
 			if xml.iCivicPaganism in lCivics: return -4
@@ -675,6 +721,7 @@ class Stability:
 		if xml.iCivicSerfdom in lCivics:
 			if xml.iCivicManorialism in lCivics: return 2
 			if xml.iCivicCommonLaw in lCivics: return -3
+			if xml.iCivicTradeEconomy in lCivics: return -3
 
 		if xml.iCivicReligiousLaw in lCivics:
 			if xml.iCivicPaganism in lCivics: return -5

@@ -1454,7 +1454,13 @@ int CvCity::countNumImprovedPlots(ImprovementTypes eImprovement, bool bPotential
 					if (pLoopPlot->getImprovementType() == eImprovement ||
 						(bPotential && pLoopPlot->canHaveImprovement(eImprovement, getTeam())))
 					{
-						++iCount;
+						// Absinthe: Wonders: Copernicus' Observatory wonder effect
+						// Absinthe: only actually worked improvements should count
+						if (pLoopPlot->isBeingWorked())
+						{
+							++iCount;
+						}
+					//	++iCount;
 					}
 				}
 				else if (pLoopPlot->getImprovementType() != NO_IMPROVEMENT)
@@ -3727,7 +3733,10 @@ int CvCity::getBonusCommerceRateModifier(CommerceTypes eIndex, BonusTypes eBonus
 
 	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		iModifier += getNumActiveBuilding((BuildingTypes)iI) * GC.getBuildingInfo((BuildingTypes) iI).getBonusCommerceModifier(eBonus, eIndex);
+		if (GC.getBuildingInfo((BuildingTypes) iI).getBonusCommerceModifier(eBonus, eIndex) != 0)
+		{
+			iModifier += getNumActiveBuilding((BuildingTypes)iI) * GC.getBuildingInfo((BuildingTypes) iI).getBonusCommerceModifier(eBonus, eIndex);
+		}
 	}
 
 	return iModifier;
@@ -3851,7 +3860,7 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 			chnageBombImmuneDefense(iChange * GC.getBuildingInfo(eBuilding).getBombardImmuneDefense());
 		};
 		if ( GC.getBuildingInfo(eBuilding).getPaganCulturePerCity() > 0 ){
-			GET_PLAYER(getOwnerINLINE()).setPaganCulture( GET_PLAYER(getOwnerINLINE()).getPaganCulture() + iChange*GC.getBuildingInfo(eBuilding).getPaganCulturePerCity() );
+			GET_PLAYER(getOwnerINLINE()).setPaganCulture( GET_PLAYER(getOwnerINLINE()).getPaganCulture() + iChange * GC.getBuildingInfo(eBuilding).getPaganCulturePerCity() );
 		};
 		if ( GC.getBuildingInfo(eBuilding).getPaganCulture() > 0 ){
 			setPaganCulture( getPaganCulture() + iChange * GC.getBuildingInfo(eBuilding).getPaganCulture() );
@@ -4434,6 +4443,23 @@ int CvCity::getLargestCityHappiness() const
 	return 0;
 }
 
+// Absinthe: new happiness modifier
+int CvCity::getUniquePowerHappiness() const
+{
+	int iHappy = 0;
+	// Absinthe: UP_HAPPINESS and UP_PAGAN_HAPPY
+	int iUPH  = UniquePowers[getOwnerINLINE() * UP_TOTAL_NUM + UP_HAPPINESS];
+	if ( iUPH > -1 ){
+		iHappy += iUPH;
+	}
+	iUPH = UniquePowers[getOwnerINLINE() * UP_TOTAL_NUM + UP_PAGAN_HAPPY];
+	if ( (iUPH > -1) && (GET_PLAYER(getOwner()).getStateReligion() == NO_RELIGION) ){
+		iHappy += iUPH;
+	}
+
+	return iHappy;
+}
+
 int CvCity::getVassalHappiness() const
 {
 	int iHappy = 0;
@@ -4448,14 +4474,6 @@ int CvCity::getVassalHappiness() const
 			}
 		}
 	}
-
-	// 3MiroUP: Culture, adds happiness
-	//if ( (UniquePowers[getOwnerINLINE()][UP_CULTURE] == 1) || (UniquePowers[getOwnerINLINE()][UP_GOLDEN_LIBERTY] == 1) ) iHappy += 1;
-	int iUPH  = UniquePowers[getOwnerINLINE()*UP_TOTAL_NUM + UP_HAPPINESS];
-	if ( iUPH > -1 ) iHappy += iUPH;
-
-	iUPH = UniquePowers[getOwnerINLINE()*UP_TOTAL_NUM + UP_PAGAN_HAPPY];
-	if ( (iUPH > -1) && (GET_PLAYER(getOwner()).getStateReligion() == NO_RELIGION) ) iHappy += iUPH;
 
 	return iHappy;
 }
@@ -4548,6 +4566,7 @@ int CvCity::happyLevel() const
 	iHappiness += std::max(0, GET_PLAYER(getOwnerINLINE()).getBuildingHappiness());
 	iHappiness += std::max(0, (getExtraHappiness() + GET_PLAYER(getOwnerINLINE()).getExtraHappiness()));
 	iHappiness += std::max(0, GC.getHandicapInfo(getHandicapType()).getHappyBonus());
+	iHappiness += std::max(0, getUniquePowerHappiness()); // Absinthe: new happiness modifier
 	iHappiness += std::max(0, getVassalHappiness());
 
 	if (getHappinessTimer() > 0)
@@ -4588,7 +4607,7 @@ int CvCity::totalFreeSpecialists() const
 			int iNumSpecialistsPerImprovement = getImprovementFreeSpecialists((ImprovementTypes)iImprovement);
 			if (iNumSpecialistsPerImprovement > 0)
 			{
-				// Absinthe: ImprovementFreeSpecialists - we can potentially set here to add specialist only for improvements actually worked by the city
+				// Absinthe: ImprovementFreeSpecialists - we can potentially set in the countNumImprovedPlots to add the specialist only for improvements actually worked by the city
 				iCount += iNumSpecialistsPerImprovement * countNumImprovedPlots((ImprovementTypes)iImprovement);
 			}
 		}
@@ -7323,7 +7342,17 @@ int CvCity::getNaturalDefense() const
 
 int CvCity::getTotalDefense(bool bIgnoreBuilding) const
 {
-	return (std::max(((bIgnoreBuilding) ? 0 : getBuildingDefense()), getNaturalDefense()) + GET_PLAYER(getOwnerINLINE()).getCityDefenseModifier());
+	// Absinthe: Wonders: Kizil Kule wonder effect
+	int iCoastalDefence = 0;
+	if (GET_PLAYER(getOwnerINLINE()).getBuildingClassCount((BuildingClassTypes)GC.getInfoTypeForString("BUILDINGCLASS_KIZIL_KULE")) == 1)
+	{
+		if (isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
+		{
+			iCoastalDefence = 25;
+		}
+	}
+	// Absinthe: Wonders: Kizil Kule end
+	return (std::max(((bIgnoreBuilding) ? 0 : getBuildingDefense()), getNaturalDefense()) + GET_PLAYER(getOwnerINLINE()).getCityDefenseModifier() + iCoastalDefence);
 }
 
 
@@ -8145,10 +8174,21 @@ void CvCity::changeBonusCommerceRateModifier(CommerceTypes eIndex, int iChange)
 
 		GET_PLAYER(getOwnerINLINE()).invalidateCommerceRankCache(eIndex);
 
-		if (eIndex == YIELD_COMMERCE)
+		// Absinthe: bugfix - yield_commerce is the general commerce, we have commerce types here
+		//if (eIndex == YIELD_COMMERCE)
+		//{
+		//	updateCommerce();
+		//}
+		int iI;
+		for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 		{
-			updateCommerce();
+			if (eIndex == iI)
+			{
+				updateCommerce(eIndex);
+			}
 		}
+		// Absinthe: alternatively, we could always update all other commerce types - is it better?
+		//updateCommerce();
 
 		AI_setAssignWorkDirty(true);
 
@@ -8348,60 +8388,7 @@ int CvCity::getCommerceRateTimes100(CommerceTypes eIndex) const
 	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
 
 	int iRate = m_aiCommerceRate[eIndex];
-	// 3MiroUP: Culture
-	//if ( (eIndex == COMMERCE_CULTURE)&&(UniquePowers[getOwnerINLINE()][UP_CULTURE] == 1) ) iRate += 200;
-	//if ( (eIndex == COMMERCE_ESPIONAGE)&&(UniquePowers[getOwnerINLINE()][UP_INQUISITION] == 1) ) iRate += 200;
-	int iUPC = UniquePowers[getOwnerINLINE() * UP_TOTAL_NUM + UP_PER_CITY_COMMERCE];
-	if ( iUPC > -1 ){
-		if ( eIndex == COMMERCE_GOLD ){ // May or May not work for Gold
-			iRate += 100 * ((iUPC / 1000000) %100);
-		}else if ( eIndex == COMMERCE_RESEARCH ){
-			iRate += 100 * ((iUPC / 10000) %100);
-		}else if ( eIndex == COMMERCE_CULTURE ){
-			iRate += 100 * ((iUPC / 100) %100);
-		}else if ( eIndex == COMMERCE_ESPIONAGE ){
-			iRate += 100 *  (iUPC % 100);
-		};
-	};
-	iUPC = UniquePowers[getOwnerINLINE() * UP_TOTAL_NUM + UP_COMMERCE_PERCENT];
-	if ( iUPC > -1 ){
-		if ( eIndex == COMMERCE_GOLD ){ // May or May not work for Gold
-			iRate *= 100 + ((iUPC / 1000000) %100);
-		}else if ( eIndex == COMMERCE_RESEARCH ){
-			iRate *= 100 + ((iUPC / 10000) %100);
-		}else if ( eIndex == COMMERCE_CULTURE ){
-			iRate *= 100 + ((iUPC / 100) %100);
-		}else if ( eIndex == COMMERCE_ESPIONAGE ){
-			iRate *= 100 + (iUPC % 100);
-		};
-		iRate /= 100;
-	};
-	// 3MiroUP: pagan
-	iUPC = UniquePowers[getOwnerINLINE() * UP_TOTAL_NUM + UP_PAGAN_CULTURE];
-	if ( (iUPC > -1) && (eIndex == COMMERCE_CULTURE) && (GET_PLAYER(getOwnerINLINE()).getStateReligion() == NO_RELIGION)  ){
-		iRate += iUPC;
-	};
-	if ( (eIndex == COMMERCE_CULTURE) && (GET_PLAYER(getOwnerINLINE()).getStateReligion() == NO_RELIGION)  ){
-		iRate += 100*GET_PLAYER(getOwnerINLINE()).getPaganCulture(); // 3MiroBuilding: the pagan culture per city building
-		iRate += 100*getPaganCulture(); // 3MiroBuilding: the pagan culture building for this city
-	};
-	// 3Miro: Building Civic combo
-	// this goes to the Commerce per Building, together with the Holy Shrines
-	//if ( iCivicBuildingCommerse > -1 ){
-	//	GC.getGameINLINE().logMsg(" Bigger than -1 %d %d ",(iCivicBuildingCommerse % 1000),((iCivicBuildingCommerse/1000)%100) );
-	//	if ( (hasBuilding( (BuildingTypes)(iCivicBuildingCommerse % 1000) )) && (GET_PLAYER(getOwnerINLINE()).isCivic((CivicTypes)((iCivicBuildingCommerse/1000)%100))) ){
-	//		GC.getGameINLINE().logMsg(" Combo ");
-	//		if ( eIndex == COMMERCE_GOLD ){
-	//			iRate += 100 * ((iCivicBuildingCommerse / 100000) %10);
-	//		}else if ( eIndex == COMMERCE_RESEARCH ){
-	//			iRate += 100 * ((iCivicBuildingCommerse / 1000000) %10);
-	//		}else if ( eIndex == COMMERCE_CULTURE ){
-	//			iRate += 100 * ((iCivicBuildingCommerse / 10000000) %10);
-	//		}else if ( eIndex == COMMERCE_ESPIONAGE ){
-	//			iRate += 100 * ((iCivicBuildingCommerse / 100000000) %10);
-	//		};
-	//	};
-	//};
+
 	if (GC.getGameINLINE().isOption(GAMEOPTION_NO_ESPIONAGE))
 	{
 		if (eIndex == COMMERCE_CULTURE)
@@ -8446,6 +8433,35 @@ int CvCity::getBaseCommerceRateTimes100(CommerceTypes eIndex) const
 
 	iBaseCommerceRate += 100 * ((getSpecialistPopulation() + getNumGreatPeople()) * GET_PLAYER(getOwnerINLINE()).getSpecialistExtraCommerce(eIndex));
 	iBaseCommerceRate += 100 * (getBuildingCommerce(eIndex) + getSpecialistCommerce(eIndex) + getReligionCommerce(eIndex) + getCorporationCommerce(eIndex) + GET_PLAYER(getOwnerINLINE()).getFreeCityCommerce(eIndex));
+
+	// Absinthe: Pagan culture from buildings and UP on the main screen counter
+	//				yield bonuses should be applied here, so the overall value is properly shown and applied everywhere
+	// Absinthe: UP_PAGAN_CULTURE
+	int iUPC = UniquePowers[getOwnerINLINE() * UP_TOTAL_NUM + UP_PAGAN_CULTURE];
+	if ( (iUPC > -1) && (eIndex == COMMERCE_CULTURE) && (GET_PLAYER(getOwnerINLINE()).getStateReligion() == NO_RELIGION) ){
+		iBaseCommerceRate += iUPC;
+	}
+	// Absinthe: Pagan culture from buildings
+	if ( (eIndex == COMMERCE_CULTURE) && (GET_PLAYER(getOwnerINLINE()).getStateReligion() == NO_RELIGION) ){
+		iBaseCommerceRate += 100 * GET_PLAYER(getOwnerINLINE()).getPaganCulture(); // sum of building bonuses of pagan culture for each city in your civ
+		iBaseCommerceRate += 100 * getPaganCulture(); // sum of building bonuses of pagan culture in the given city
+	}
+
+	// Absinthe: if ever used, should be here (and the display part in the CvGameTextMgr.cpp, similarly to the UP_PAGAN_CULTURE above)
+	// 3MiroUP: UP_COMMERCE_PERCENT
+	//iUPC = UniquePowers[getOwnerINLINE() * UP_TOTAL_NUM + UP_COMMERCE_PERCENT];
+	//if ( iUPC > -1 ){
+	//	if ( eIndex == COMMERCE_GOLD ){ // May or May not work for Gold
+	//		iBaseCommerceRate *= 100 + ((iUPC / 1000000) % 100);
+	//	}else if ( eIndex == COMMERCE_RESEARCH ){
+	//		iBaseCommerceRate *= 100 + ((iUPC / 10000) % 100);
+	//	}else if ( eIndex == COMMERCE_CULTURE ){
+	//		iBaseCommerceRate *= 100 + ((iUPC / 100) % 100);
+	//	}else if ( eIndex == COMMERCE_ESPIONAGE ){
+	//		iBaseCommerceRate *= 100 + (iUPC % 100);
+	//	}
+	//	iBaseCommerceRate /= 100;
+	//}
 
 	return iBaseCommerceRate;
 }
@@ -8550,52 +8566,6 @@ int CvCity::getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eB
 
 	if (getNumBuilding(eBuilding) > 0)
 	{
-		// 3Miro: Civic + Building combo, tested only for Gold
-		/*if ( iCivicBuildingCommerse1 > -1 ){
-			//GC.getGameINLINE().logMsg(" New Bigger than -1 %d %d ",(iCivicBuildingCommerse % 1000),((iCivicBuildingCommerse/1000)%100) );
-			if ( (eBuilding == (BuildingTypes)(iCivicBuildingCommerse1 % 1000) ) && (GET_PLAYER(getOwnerINLINE()).isCivic((CivicTypes)((iCivicBuildingCommerse1/1000)%100))) ){
-				//GC.getGameINLINE().logMsg(" Combo ");
-				if ( eIndex == COMMERCE_GOLD ){
-					iCommerce += ((iCivicBuildingCommerse1 / 100000) %10);
-				}else if ( eIndex == COMMERCE_RESEARCH ){
-					iCommerce += ((iCivicBuildingCommerse1 / 1000000) %10);
-				}else if ( eIndex == COMMERCE_CULTURE ){
-					iCommerce += ((iCivicBuildingCommerse1 / 10000000) %10);
-				}else if ( eIndex == COMMERCE_ESPIONAGE ){
-					iCommerce += ((iCivicBuildingCommerse1 / 100000000) %10);
-				};
-			};
-		};
-		if ( iCivicBuildingCommerse2 > -1 ){
-			//GC.getGameINLINE().logMsg(" New Bigger than -1 %d %d ",(iCivicBuildingCommerse % 1000),((iCivicBuildingCommerse/1000)%100) );
-			if ( (eBuilding == (BuildingTypes)(iCivicBuildingCommerse2 % 1000) ) && (GET_PLAYER(getOwnerINLINE()).isCivic((CivicTypes)((iCivicBuildingCommerse2/1000)%100))) ){
-				//GC.getGameINLINE().logMsg(" Combo ");
-				if ( eIndex == COMMERCE_GOLD ){
-					iCommerce += ((iCivicBuildingCommerse2 / 100000) %10);
-				}else if ( eIndex == COMMERCE_RESEARCH ){
-					iCommerce += ((iCivicBuildingCommerse2 / 1000000) %10);
-				}else if ( eIndex == COMMERCE_CULTURE ){
-					iCommerce += ((iCivicBuildingCommerse2 / 10000000) %10);
-				}else if ( eIndex == COMMERCE_ESPIONAGE ){
-					iCommerce += ((iCivicBuildingCommerse2 / 100000000) %10);
-				};
-			};
-		};
-		if ( iCivicBuildingCommerse3 > -1 ){
-			//GC.getGameINLINE().logMsg(" New Bigger than -1 %d %d ",(iCivicBuildingCommerse % 1000),((iCivicBuildingCommerse/1000)%100) );
-			if ( (eBuilding == (BuildingTypes)(iCivicBuildingCommerse3 % 1000) ) && (GET_PLAYER(getOwnerINLINE()).isCivic((CivicTypes)((iCivicBuildingCommerse3/1000)%100))) ){
-				//GC.getGameINLINE().logMsg(" Combo ");
-				if ( eIndex == COMMERCE_GOLD ){
-					iCommerce += ((iCivicBuildingCommerse3 / 100000) %10);
-				}else if ( eIndex == COMMERCE_RESEARCH ){
-					iCommerce += ((iCivicBuildingCommerse3 / 1000000) %10);
-				}else if ( eIndex == COMMERCE_CULTURE ){
-					iCommerce += ((iCivicBuildingCommerse3 / 10000000) %10);
-				}else if ( eIndex == COMMERCE_ESPIONAGE ){
-					iCommerce += ((iCivicBuildingCommerse3 / 100000000) %10);
-				};
-			};
-		};*/
 		CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
 		// 3MiroCivic: Civic Building combo
@@ -9023,7 +8993,26 @@ int CvCity::getCommerceRateModifier(CommerceTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
 	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
-	return m_aiCommerceRateModifier[eIndex];
+	
+	int iModifier = m_aiCommerceRateModifier[eIndex];
+	
+	// Absinthe: Wonders: Notre Dame wonder effect
+	if (GET_PLAYER(getOwnerINLINE()).getBuildingClassCount((BuildingClassTypes)GC.getInfoTypeForString("BUILDINGCLASS_NOTRE_DAME")) == 1)
+	{
+		if (eIndex == COMMERCE_CULTURE)
+		{
+			if (GET_PLAYER(getOwnerINLINE()).getStateReligion() != NO_RELIGION)
+			{
+				if (isHasReligion(GET_PLAYER(getOwnerINLINE()).getStateReligion()))
+				{
+					iModifier += 20;
+				}
+			}
+		}
+	}
+	// Absinthe: Wonders: Notre Dame end
+	
+	return iModifier;
 }
 
 
@@ -11871,8 +11860,9 @@ void CvCity::doCulture()
 	//Rhye - start switch
 	//changeCultureTimes100(getOwnerINLINE(), getCommerceRateTimes100(COMMERCE_CULTURE), false, true);
 	// 3Miro: modify culture
-	if 	(getCommerceRate(COMMERCE_CULTURE) <=4)
+	if (getCommerceRate(COMMERCE_CULTURE) <=4){
 		changeCultureTimes100(getOwnerINLINE(), getCommerceRateTimes100(COMMERCE_CULTURE), false, true);
+	}
 	else {
 		// 3Miro: do culture modifiers if culture bonus is more than 4
 		if ( GET_PLAYER(getOwnerINLINE() ).isHuman() ){

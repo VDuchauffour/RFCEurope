@@ -50,7 +50,7 @@
 	</Define>
 	<Define>
 		<DefineName>USE_GET_BUILDING_COST_MOD_CALLBACK</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>USE_GET_CITY_FOUND_VALUE_CALLBACK</DefineName>

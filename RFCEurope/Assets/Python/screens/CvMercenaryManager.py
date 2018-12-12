@@ -511,6 +511,11 @@ class CvMercenaryManager:
 		#totalMercenaryCost = objMercenaryUtils.getPlayerMercenaryMaintenanceCost(iPlayer)
 		totalMercenaryCost = (pPlayer.getPicklefreeParameter( con.iMercCostPerTurn ) + 99) / 100
 		#totalMercenaryContractIncome = (pPlayer.getPlayerMercenaryContractIncome(iPlayer) + 99) / 100
+		# Colony Upkeep
+		iColonyNumber = pPlayer.getNumColonies()
+		iColonyUpkeep = 0
+		if iColonyNumber > 0:
+			iColonyUpkeep = int((0.5 * iColonyNumber * iColonyNumber + 0.5 * iColonyNumber) * 3 + 7)
 		goldCommerce = pPlayer.getCommerceRate(CommerceTypes.COMMERCE_GOLD)
 		gold = pPlayer.getGold()
 
@@ -527,7 +532,7 @@ class CvMercenaryManager:
 
 		iInflation = totalInflatedCosts - totalPreInflatedCosts
 
-		iExpenses = totalUnitCost + totalUnitSupply + totalMaintenance + totalCivicUpkeep + iInflation + totalMercenaryCost
+		iExpenses = totalUnitCost + totalUnitSupply + totalMaintenance + totalCivicUpkeep + iInflation + totalMercenaryCost + iColonyUpkeep
 
 		if (goldFromCivs < 0):
 			iExpenses -= goldFromCivs

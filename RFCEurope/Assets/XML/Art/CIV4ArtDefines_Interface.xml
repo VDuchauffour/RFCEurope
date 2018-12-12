@@ -1252,11 +1252,14 @@
 			<Type>SCREEN_UN_BG</Type>
 			<Path>Art/Interface/Screens/Reward/UN_BG.dds</Path>
 		</InterfaceArtInfo>
-		<!-- Rhye -->
-		<!-- Mercenaries Start -->
+		<!-- Absinthe Mercenaries Start -->
 		<InterfaceArtInfo>
 			<Type>INTERFACE_MERCENARIES_MANAGER</Type>
-			<Path>Art/Interface/Mainscreen/MercenariesManager.dds</Path>
+			<Path>Art/Interface/MainScreen/MercenariesManager.dds</Path>
+		</InterfaceArtInfo>
+		<InterfaceArtInfo>
+			<Type>INTERFACE_MERCENARY_ICON</Type>
+			<Path>Art/Interface/Buttons/Companies/Mercenary.dds</Path>
 		</InterfaceArtInfo>
 		<!-- Mercenaries End -->
 		<!-- 3Miro Prosecution -->
@@ -1268,6 +1271,7 @@
 			<Type>INTERFACE_SAINT</Type>
 			<Path>,Art/Interface/Buttons/Buildings/Temple_Jewish.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,1,3</Path>
 		</InterfaceArtInfo>
+		<!-- Prosecution End -->
 		<InterfaceArtInfo>
 			<Type>SCROLL_UP_ARROW</Type>
 			<Path>Art/Interface/Buttons/up_arrow.dds</Path>

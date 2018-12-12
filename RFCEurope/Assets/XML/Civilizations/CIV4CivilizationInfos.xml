@@ -985,7 +985,7 @@
 			<DisableTechs/>
 			<InitialCivics>
 				<CivicType>CIVIC_DESPOTISM</CivicType>
-				<CivicType>CIVIC_TRIBAL_LAW</CivicType>
+				<CivicType>CIVIC_RELIGIOUS_LAW</CivicType>
 				<CivicType>CIVIC_TRIBALISM</CivicType>
 				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
 				<CivicType>CIVIC_STATE_RELIGION</CivicType>
@@ -5140,8 +5140,8 @@
 			</Cities>
 			<Buildings>
 				<Building>
-					<BuildingClassType>BUILDINGCLASS_DRYDOCK</BuildingClassType>
-					<BuildingType>BUILDING_VENICE_ARSENAL</BuildingType>
+					<BuildingClassType>BUILDINGCLASS_MANOR_HOUSE</BuildingClassType>
+					<BuildingType>BUILDING_VENICE_NAVAL_BASE</BuildingType>
 				</Building>
 			</Buildings>
 			<Units>

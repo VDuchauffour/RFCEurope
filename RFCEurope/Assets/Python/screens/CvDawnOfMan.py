@@ -197,6 +197,7 @@ class CvDawnOfMan:
 ##Rhye - end
 
 	def onClose(self):
+		# Absinthe: do not play the initial RFC song on start - might even lead to sound selection issues
 		#CyInterface().DoSoundtrack("AS2D_RFC") #Rhye
 		CyInterface().setSoundSelectionReady(true)
 		return 0
