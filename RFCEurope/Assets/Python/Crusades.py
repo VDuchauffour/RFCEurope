@@ -778,7 +778,7 @@ class Crusades:
 			if pByzantium.isAlive():
 				# Only if the potential attacker is not vassal of the target
 				iTeamByzantium = pByzantium.getTeam()
-				pRichest = gc.getPlayer( con.iRichest )
+				pRichest = gc.getPlayer( iRichest )
 				pTeamRichest = gc.getTeam( pRichest.getTeam() )
 				if not pTeamRichest.isVassal( iTeamByzantium ):
 					# Only if Byzantium holds Constantinople and not a vassal
@@ -794,7 +794,7 @@ class Crusades:
 			if pCordoba.isAlive():
 				# Only if the potential attacker is not vassal of the target
 				iTeamCordoba = pCordoba.getTeam()
-				pRichest = gc.getPlayer( con.iRichest )
+				pRichest = gc.getPlayer( iRichest )
 				pTeamRichest = gc.getTeam( pRichest.getTeam() )
 				if not pTeamRichest.isVassal( iTeamCordoba ):
 					# Only if Cordoba is Muslim and not a vassal
@@ -807,7 +807,7 @@ class Crusades:
 			if pTurkey.isAlive():
 				# Only if the potential attacker is not vassal of the target
 				iTeamTurkey = pTurkey.getTeam()
-				pRichest = gc.getPlayer( con.iRichest )
+				pRichest = gc.getPlayer( iRichest )
 				pTeamRichest = gc.getTeam( pRichest.getTeam() )
 				if not pTeamRichest.isVassal( iTeamTurkey ):
 					# Only if the Ottomans are Muslim and not a vassal

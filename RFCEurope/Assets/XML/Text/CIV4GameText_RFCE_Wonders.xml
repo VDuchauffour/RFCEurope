@@ -361,7 +361,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGNA_CARTA_HELP</Tag>
-		<English>[ICON_BULLET]No stability penalty for otherwise unstable civic combinations[NEWLINE][ICON_BULLET]+2[ICON_CULTURE] from Courthouse in all cities</English>
+		<English>[ICON_BULLET]No stability penalty for otherwise unstable civic combinations[NEWLINE][ICON_BULLET]+2[ICON_CULTURE] from [LINK=literal]Courthouse[\LINK] in all cities</English>
 		<French>[ICON_BULLET]No stability penalty for unstable civic combinations[NEWLINE][ICON_BULLET]+2[ICON_CULTURE] from Courthouse in all cities</French>
 		<German>[ICON_BULLET]No stability penalty for unstable civic combinations[NEWLINE][ICON_BULLET]+2[ICON_CULTURE] from Courthouse in all cities</German>
 		<Italian>[ICON_BULLET]No stability penalty for unstable civic combinations[NEWLINE][ICON_BULLET]+2[ICON_CULTURE] from Courthouse in all cities</Italian>
@@ -910,7 +910,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_URANIBORG_HELP</Tag>
-		<English>[ICON_BULLET]+200% science from great people discoveries</English>
+		<English>[ICON_BULLET]+200% science from Great Person discoveries</English>
 		<French>[ICON_BULLET]+200% science from great people discoveries</French>
 		<German>[ICON_BULLET]+200% science from great people discoveries</German>
 		<Italian>[ICON_BULLET]+200% science from great people discoveries</Italian>
@@ -1252,7 +1252,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KIZIL_KULE_HELP</Tag>
-		<English>[ICON_BULLET]+2[ICON_COMMERCE] from Harbor in all cities[NEWLINE][ICON_BULLET]+25% Defense in All Coastal Cities</English>
+		<English>[ICON_BULLET]+2[ICON_COMMERCE] from [LINK=literal]Harbor[\LINK] in all cities[NEWLINE][ICON_BULLET]+25% Defense in All Coastal Cities</English>
 		<French> Not translated. </French>
 		<German> Not translated. </German>
 		<Italian> Not translated. </Italian>
@@ -1406,6 +1406,15 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAMOGITIAN_ALKAS_PEDIA</Tag>
 		<English>[TAB]The Samogitian Alkas is a pagan sanctuary located at the hills near Sventoji (in the vicinity of Palanga). It's origin is a 14th century astronomical observatory site, which was installed on the top of Mount Birute. The site was restored in 1988.[PARAGRAPH:2]During the restoration of the pagan sanctuary, wooden columns carved by folk artists were put up in the Samogitian Sanctuary and each of the columns symbolizes the names of mythological gods and goddesses of the Balts: Perkunas (Thunder), Ausrine (Morning star the Venus), Zemyna (Goddess of Earth Vitality), Austeja (Goddess of Bees), Ondenis (Water God), Patrimpas (God of plants and Spring), Patulas (Unger earth God), Velnias (God of Dead Souls), Leda (Mother of Gods and heavenly bodies), Saule (the Sun) and Menulis (the Moon). When the sun goes down to the sea, these columns help to determine pagan calendar holidays.[PARAGRAPH:2]Now pagan feasts connected to the holidays are celebrated here, while pagan ceremonies and rituals in the honour of amber are still organised at the site.</English>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SAMOGITIAN_ALKAS_HELP</Tag>
+		<English>[ICON_BULLET]+2[ICON_RESEARCH] from [LINK=literal]Pagan Shrine[\LINK] in all cities</English>
 		<French> Not translated. </French>
 		<German> Not translated. </German>
 		<Italian> Not translated. </Italian>
