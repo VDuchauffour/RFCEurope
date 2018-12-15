@@ -68,7 +68,7 @@ Changes for RFCE 1.6:
 
 	New wonders:
 	- New wonder: Jasna Gora - +8 culture, +20% defence (cannot be broken by bombardment), +2 culture from temple in all cities, free March promotion for units, +2 GPP (Great Artist)
-	- New wonder: Samogitian Alkas - +6 culture (some of it stays without Paganism too), +1 culture for each city if you don't have a state religion, +2 science, +1 GPP (Great Scholar)
+	- New wonder: Samogitian Alkas - +6 culture (some of it stays without Paganism too), +1 culture in all cities if you don't have a state religion, +2 science from Pagan Shrine in all cities, +1 GPP (Great Scholar)
 	- New wonder: Gediminas Tower - +4 culture, +30% defence, restores some of the city defences on combat victory in the city, +2 GPP (Great Engineer)
 	- New wonder: Grand Arsenal - +2 culture, +4 xp and +100% production speed for naval units, +3 heavily promoted Gun Galley / Galleass units appear in the city, +2 GPP (Great Engineer)
 	- New wonder: Galata Tower - +4 culture, +1 trade route, increases chance for company spread in all your cities, +2 GPP (Great Merchant)

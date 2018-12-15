@@ -22727,6 +22727,7 @@
 			<Description>TXT_KEY_BUILDING_SAMOGITIAN_ALKAS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SAMOGITIAN_ALKAS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SAMOGITIAN_ALKAS_STRATEGY</Strategy>
+			<Help>TXT_KEY_BUILDING_SAMOGITIAN_ALKAS_HELP</Help>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SAMOGITIAN_ALKAS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SAMOGITIAN_ALKAS</MovieDefineTag>
@@ -22845,11 +22846,7 @@
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>2</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceChanges>
+			<CommerceChanges/>
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -23562,7 +23559,7 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<iCost>400</iCost>
+			<iCost>450</iCost>
 			<iHurryCostModifier>0</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -24493,8 +24490,10 @@
 			<FreeStartEra>NONE</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>NONE</ObsoleteTech>
-			<PrereqTech>TECH_LATEEN_SAILS</PrereqTech>
-			<TechTypes/>
+			<PrereqTech>TECH_PLATE_ARMOR</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_MONUMENT_BUILDING</PrereqTech>
+			</TechTypes>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
 			<ProductionTraits/>
@@ -24625,7 +24624,7 @@
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_TIMBER</BonusType>
-					<iProductonModifier>100</iProductonModifier>
+					<iProductonModifier>50</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<UnitCombatFreeExperiences/>

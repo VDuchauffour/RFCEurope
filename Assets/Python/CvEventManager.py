@@ -735,6 +735,12 @@ class CvEventManager:
 				city.setBuildingYieldChange(gc.getInfoTypeForString("BUILDINGCLASS_HARBOR"), YieldTypes.YIELD_COMMERCE, 2)
 		# Absinthe: Kizil Kule end
 
+		# Absinthe: Samogitian Alkas start
+		if iBuildingType == xml.iSamogitianAlkas:
+			for city in utils.getCityList(iPlayer):
+				city.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_PAGAN_SHRINE"), CommerceTypes.COMMERCE_RESEARCH, 2)
+		# Absinthe: Samogitian Alkas end
+
 		# Absinthe: Magna Carta start
 		if iBuildingType == xml.iMagnaCarta:
 			for city in utils.getCityList(iPlayer):
@@ -1183,6 +1189,11 @@ class CvEventManager:
 			city.setBuildingYieldChange(gc.getInfoTypeForString("BUILDINGCLASS_HARBOR"), YieldTypes.YIELD_COMMERCE, 2)
 		# Absinthe: Kizil Kule end
 
+		# Absinthe: Samogitian Alkas start
+		if pPlayer.countNumBuildings(xml.iSamogitianAlkas) > 0:
+			city.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_PAGAN_SHRINE"), CommerceTypes.COMMERCE_RESEARCH, 2)
+		# Absinthe: Samogitian Alkas end
+
 		# Absinthe: Magna Carta start
 		if pPlayer.countNumBuildings(xml.iMagnaCarta) > 0:
 			city.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_COURTHOUSE"), CommerceTypes.COMMERCE_CULTURE, 2)
@@ -1238,6 +1249,12 @@ class CvEventManager:
 			for loopCity in utils.getCityList(iPlayer):
 				loopCity.setBuildingYieldChange(gc.getInfoTypeForString("BUILDINGCLASS_HARBOR"), YieldTypes.YIELD_COMMERCE, 0)
 		# Absinthe: Kizil Kule end
+
+		# Absinthe: Samogitian Alkas start
+		if city.getNumActiveBuilding(xml.iSamogitianAlkas):
+			for loopCity in utils.getCityList(iPlayer):
+				loopCity.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_PAGAN_SHRINE"), CommerceTypes.COMMERCE_RESEARCH, 0)
+		# Absinthe: Samogitian Alkas end
 
 		# Absinthe: Magna Carta start
 		if city.getNumActiveBuilding(xml.iMagnaCarta):
@@ -1355,6 +1372,18 @@ class CvEventManager:
 		elif pNewOwner.countNumBuildings(xml.iKizilKule) > 0:
 			pCity.setBuildingYieldChange(gc.getInfoTypeForString("BUILDINGCLASS_HARBOR"), YieldTypes.YIELD_COMMERCE, 2)
 		# Absinthe: Kizil Kule end
+
+		# Absinthe: Samogitian Alkas start
+		if pCity.getNumActiveBuilding(xml.iSamogitianAlkas):
+			for loopCity in utils.getCityList(iPreviousOwner):
+				loopCity.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_PAGAN_SHRINE"), CommerceTypes.COMMERCE_RESEARCH, 0)
+			for loopCity in utils.getCityList(iNewOwner):
+				loopCity.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_PAGAN_SHRINE"), CommerceTypes.COMMERCE_RESEARCH, 2)
+		elif pPreviousOwner.countNumBuildings(xml.iSamogitianAlkas) > 0:
+			pCity.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_PAGAN_SHRINE"), CommerceTypes.COMMERCE_RESEARCH, 0)
+		elif pNewOwner.countNumBuildings(xml.iSamogitianAlkas) > 0:
+			pCity.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_PAGAN_SHRINE"), CommerceTypes.COMMERCE_RESEARCH, 2)
+		# Absinthe: Samogitian Alkas end
 
 		# Absinthe: Magna Carta start
 		if pCity.getNumActiveBuilding(xml.iMagnaCarta):
