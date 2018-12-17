@@ -4644,7 +4644,9 @@ int CvPlot::getUpgradeTimeLeft(ImprovementTypes eImprovement, PlayerTypes ePlaye
 
 	if (ePlayer == NO_PLAYER)
 	{
-		return iUpgradeLeft;
+		// Absinthe: bugfix
+		//return iUpgradeLeft;
+		return iUpgradeLeft/100;
 	}
 
 	//Rhye - start switch
@@ -4652,7 +4654,6 @@ int CvPlot::getUpgradeTimeLeft(ImprovementTypes eImprovement, PlayerTypes ePlaye
 	//iUpgradeLeft *= workerModifier[ePlayer];
 	//iUpgradeLeft /= 100;
 	//Rhye - end switch
-	// 3Miro: Cottage growth bug
 
 	iUpgradeRate = GET_PLAYER(ePlayer).getImprovementUpgradeRate();
 

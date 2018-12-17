@@ -42,6 +42,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -222,6 +223,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -421,6 +423,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -611,6 +614,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -801,6 +805,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -996,6 +1001,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -1177,6 +1183,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -1375,6 +1382,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -1565,6 +1573,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -1754,6 +1763,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -1926,6 +1936,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -2103,6 +2114,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -2285,6 +2297,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -2476,6 +2489,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -2680,6 +2694,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -2875,6 +2890,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -3074,6 +3090,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -3251,6 +3268,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -3433,6 +3451,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -3614,6 +3633,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -3795,6 +3815,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -3976,6 +3997,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -4161,6 +4183,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -4344,6 +4367,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -4530,6 +4554,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -4725,6 +4750,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -4898,6 +4924,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -5070,6 +5097,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -5244,6 +5272,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>PROMOTION_NAVIGATION1</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -5422,6 +5451,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -5612,6 +5642,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -5806,6 +5837,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>PROMOTION_CARGO</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -6001,6 +6033,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -6177,6 +6210,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -6354,6 +6388,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -6541,6 +6576,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -6744,6 +6780,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -6932,6 +6969,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -7124,6 +7162,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -7301,6 +7340,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -7489,6 +7529,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -7669,6 +7710,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -7849,6 +7891,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -8034,6 +8077,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -8206,6 +8250,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -8383,6 +8428,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -8577,6 +8623,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -8766,6 +8813,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -8964,6 +9012,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -9143,6 +9192,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -9322,6 +9372,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -9506,6 +9557,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -9705,6 +9757,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -9899,6 +9952,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -10113,6 +10167,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -10308,6 +10363,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -10501,6 +10557,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -10695,6 +10752,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -10918,6 +10976,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -11160,6 +11219,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -11334,6 +11394,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -11513,6 +11574,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -11688,6 +11750,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -11865,6 +11928,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -12049,6 +12113,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>PROMOTION_AMPHIBIOUS</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -12231,6 +12296,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -12418,6 +12484,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -12605,6 +12672,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -12792,6 +12860,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -12984,6 +13053,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -13181,6 +13251,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -13368,6 +13439,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -13559,6 +13631,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -13734,6 +13807,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -13914,6 +13988,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -14087,6 +14162,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -14270,6 +14346,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -14464,6 +14541,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -14645,6 +14723,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -14834,6 +14913,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -15030,6 +15110,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -15215,6 +15296,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -15398,6 +15480,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -15592,6 +15675,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -15773,6 +15857,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -15958,6 +16043,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -16154,6 +16240,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -16334,6 +16421,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -16526,6 +16614,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -16720,6 +16809,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -16901,6 +16991,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -17097,6 +17188,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -17286,6 +17378,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -17474,6 +17567,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -17657,6 +17751,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -17851,6 +17946,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -18032,6 +18128,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -18228,6 +18325,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -18417,6 +18515,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -18605,6 +18704,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -18788,6 +18888,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -18983,6 +19084,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -19163,6 +19265,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -19335,6 +19438,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -19532,6 +19636,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -19719,6 +19824,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -19910,6 +20016,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -20101,6 +20208,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -20293,6 +20401,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -20477,6 +20586,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -20661,6 +20771,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -20845,6 +20956,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -21031,6 +21143,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -21213,6 +21326,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -21408,6 +21522,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -21600,6 +21715,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -21790,6 +21906,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -21983,6 +22100,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -22176,6 +22294,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -22371,6 +22490,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>PROMOTION_MARCH</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -22562,6 +22682,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -22758,6 +22879,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -22949,6 +23071,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -23134,6 +23257,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -23344,6 +23468,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -23534,6 +23659,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -23731,6 +23857,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -23918,6 +24045,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -24108,6 +24236,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -24308,6 +24437,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -24505,6 +24635,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -24697,6 +24828,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -24884,6 +25016,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -25078,6 +25211,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -25267,6 +25401,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -25464,6 +25599,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -25654,6 +25790,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>TERRAIN_DESERT</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -25679,7 +25816,7 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<iCost>250</iCost>
+			<iCost>200</iCost>
 			<iHurryCostModifier>0</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -25853,6 +25990,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -26044,6 +26182,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -26229,6 +26368,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -26417,6 +26557,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -26610,6 +26751,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -26802,6 +26944,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -26997,6 +27140,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -27185,6 +27329,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -27382,6 +27527,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -27577,6 +27723,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -27775,6 +27922,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -27954,6 +28102,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -28151,6 +28300,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -28348,6 +28498,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -28562,6 +28713,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -28754,6 +28906,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -28950,6 +29103,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -29154,6 +29308,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -29346,6 +29501,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -29547,6 +29703,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -29751,6 +29908,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -29941,6 +30099,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -30144,6 +30303,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -30340,6 +30500,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -30530,6 +30691,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -30722,6 +30884,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -30915,6 +31078,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -31119,6 +31283,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -31314,6 +31479,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -31503,6 +31669,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -31696,6 +31863,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -31897,6 +32065,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -32083,6 +32252,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -32301,6 +32471,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -32499,6 +32670,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -32699,6 +32871,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -32893,6 +33066,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption/>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -33091,6 +33265,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -33279,6 +33454,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
@@ -33463,6 +33639,7 @@
 			<FreeBuilding>NONE</FreeBuilding>
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
+			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>

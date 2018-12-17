@@ -3605,20 +3605,46 @@ int CvPlayer::countCultBorderBonuses(BonusTypes eBonus) const
 {
 	PROFILE("CvPlayer::countCultBorderBonuses");
 	CvPlot* pLoopPlot;
+	ImprovementTypes eImprovement;
+	BuildTypes eBuild;
 	int iCount;
-	int iI;
 	iCount = 0;
 
 	// count all bonuses if on an owned tile
-	for (iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+	for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
 	{
 		pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
 
-		if ((pLoopPlot->getOwnerINLINE() == getID()))
+		if (pLoopPlot->getOwnerINLINE() == getID())
 		{
 			if (pLoopPlot->getBonusType(getTeam()) == eBonus)
 			{
-				iCount++;
+				eImprovement = pLoopPlot->getImprovementType();
+				if (eImprovement != NO_IMPROVEMENT)
+				{
+					// count the bonus, if it's improved with the corresponding improvement
+					for (int iJ = 0; iJ < GC.getNumBuildInfos(); iJ++)
+					{
+						eBuild = ((BuildTypes)iJ);
+						if (GC.getBuildInfo(eBuild).getImprovement() == eImprovement)
+						{
+							if (GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(eBonus))
+							{
+								iCount++;
+							}
+						}
+					}
+					// also count the bonus, if it's improved by a fort
+					if (GC.getImprovementInfo(eImprovement).isActsAsCity())
+					{
+						iCount++;
+					}
+				}
+				// also count the bonus, if it's inside a city
+				if (pLoopPlot->isCity())
+				{
+					iCount++;
+				}
 			}
 		}
 	}

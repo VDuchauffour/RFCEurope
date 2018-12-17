@@ -707,7 +707,7 @@
 			<BonusTypeStructs>
 				<BonusTypeStruct>
 					<BonusType>BONUS_TIMBER</BonusType>
-					<bBonusMakesValid>0</bBonusMakesValid>
+					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>0</iDiscoverRand>
 					<YieldChanges>

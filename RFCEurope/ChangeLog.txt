@@ -83,7 +83,7 @@ Changes for RFCE 1.6:
 	- New wonder: Boyana Church - +8 culture, double faith from Great Theologians, +2 GPP (Great Theologian)
 	- New wonder: Torre del Oro - +4 culture, chance for a small (2-3 turns) Golden Age on colony completion, +2 GPP (Great Merchant)
 	- New wonder: Mont Saint-Michel - +8 culture, faith from Walls and Castles, heals units +10%, +50% defence, +2 GPP (Great Engineer)
-	- New wonder: Saint Catherine's Monastery - +6 culture, spreads Orthodoxy, provides 2 relics, +2 GPP (Great Theologian)
+	- New wonder: Saint Catherine's Monastery - +6 culture, spreads Orthodoxy, needs desert in the BFC, provides 2 relics, +2 GPP (Great Theologian)
 	- New wonder: Blue Mosque - +8 culture, reduces war weariness in all cities, -20% build cost for buildings present in the capital city, +2 GPP (Great Engineer)
 	- New wonder: Selimiye Mosque - +8 culture, city acts as a government center, +100% xp for new units during golden ages, +1 commerce from engineers in all cities, +2 GPP (Great Engineer)
 	- New wonder: Kizil Kule - +2 culture, +2 commerce from harbor in all cities, +25% defence in all coastal cities, +2 GPP (Great Spy)
@@ -156,6 +156,7 @@ Changes for RFCE 1.6:
 	- Aragon 2nd UHV: new aspect: have at least 30 trade ships (ships with at least one cargo space)
 	- Fixed issue where mainscreen UHV counters displayed the same static value after the deadline, they are removed upon UHV completion
 	- Some mainscreen UHV counters now shown and calculated even after the UHV is completed, until the UHV date (e.g. the ones ideal for UHV challenges)
+	- Improved method for resource calculation inside borders (Novgorod and Muscovy UHV), now only improved resources count
 	- UHV update: Norway & Burgundy UHVs do not show score for unknown (or unborn) civs
 	- Fixed bug with the Prussian mainscreen UHV counter
 	- Updated the timeline of the mod, synchronized all UHV dates
@@ -239,6 +240,8 @@ Changes for RFCE 1.6:
 	- Fixed multiple bugs where civs would have a forced war declaration where they couldn't normally declare war (both Crusades and Rise-and-Fall situations)
 	- Fixed bug with civ selection for deviated Crusades (in some cases it resulted in no Crusade instead of a deviated one)
 	- Fixed bug on resurrection where civs declared war on the new civ based on decisions/setup of earlier resurrections
+	- Fixed inconsistency connected to Lumbermill availability on Timber resources
+	- Fixed bug with UI display on the map for cottages, hamlets and villages (worked turns needed till the improvement upgrade) when they are outside cultural borders
 
 	Setup/balance:
 	- New UB for Venice: Naval Base (Manor House) - only in coastal cities, +2 stability, free Amphibious Promotion for new units, requires Harbor, Lateen Sails, obsoletes with Astronomy
@@ -274,6 +277,7 @@ Changes for RFCE 1.6:
 	- Burgundy starts with 2 population in their cities, revised balance modifiers (some nerfed, some buffed)
 	- Increased unit and building production modifiers for Scotland, Norway, Poland and Novgorod
 	- Various Russian and Hungarian balance modifiers nerfed
+	- Huge improvements on the Novgorodian, Kievan and Russian city name maps - by caphyre
 
 	General rule/balance:
 	- Now all directly religion-related wonders give faith points upon completion (even if they do not need a state religion ingame)

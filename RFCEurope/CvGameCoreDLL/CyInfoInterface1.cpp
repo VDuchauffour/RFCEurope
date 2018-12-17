@@ -515,6 +515,7 @@ void CyInfoPythonInterface1()
 		.def("getGlobalReligionCommerce", &CvBuildingInfo::getGlobalReligionCommerce, "int ()")
 		.def("getGlobalCorporationCommerce", &CvBuildingInfo::getGlobalCorporationCommerce, "int ()")
 		.def("getPrereqAndBonus", &CvBuildingInfo::getPrereqAndBonus, "int ()")
+		.def("getTerrainTypeNeededInBFC", &CvBuildingInfo::getTerrainTypeNeededInBFC, "int ()") // Absinthe
 		.def("getGreatPeopleUnitClass", &CvBuildingInfo::getGreatPeopleUnitClass, "int ()")
 		.def("getGreatPeopleRateChange", &CvBuildingInfo::getGreatPeopleRateChange, "int ()")
 		.def("getConquestProbability", &CvBuildingInfo::getConquestProbability, "int ()")

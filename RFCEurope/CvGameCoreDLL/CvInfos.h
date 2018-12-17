@@ -1664,6 +1664,7 @@ public:
 	int getGlobalReligionCommerce() const;				// Exposed to Python
 	int getGlobalCorporationCommerce() const;				// Exposed to Python
 	int getPrereqAndBonus() const;				// Exposed to Python
+	int getTerrainTypeNeededInBFC() const;				// Absinthe, Exposed to Python
 	int getGreatPeopleUnitClass() const;				// Exposed to Python
 	int getGreatPeopleRateChange() const;				// Exposed to Python
 	int getConquestProbability() const;				// Exposed to Python
@@ -1892,6 +1893,7 @@ protected:
 	int m_iGlobalReligionCommerce;
 	int m_iGlobalCorporationCommerce;
 	int m_iPrereqAndBonus;							
+	int m_iTerrainTypeNeededInBFC; // Absinthe
 	int m_iGreatPeopleUnitClass;					
 	int m_iGreatPeopleRateChange;				
 	int m_iConquestProbability;						

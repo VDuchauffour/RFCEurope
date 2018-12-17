@@ -1399,6 +1399,15 @@
 		<Portuguese>[SPACE]Todas las ciudades de este continente</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TERRAIN_NEEDED</Tag>
+		<English>[ICON_BULLET]Requires %s1_TerrFeatType in the vicinity of the city</English>
+		<French>[ICON_BULLET]Capacit&#233; de mouvement doubl&#233;e sur : %s1_TerrFeatType</French>
+		<German>[ICON_BULLET]Doppelte Fortbewegung in folgendem Gel&#228;nde: %s1_TerrFeatType</German>
+		<Italian>[ICON_BULLET]Movimento raddoppiato nelle caselle di %s1_TerrFeatType</Italian>
+		<Spanish>[ICON_BULLET]Movimiento doble en %s1:2_TerrFeatType</Spanish>
+		<Portuguese>[ICON_BULLET]Movimiento doble en %s1:2_TerrFeatType</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_INTEREST_RATE</Tag>
 		<English>[ICON_BULLET]%D1_Mod % interest added to your [ICON_GOLD] at the beginning of every turn</English>
 		<French>[ICON_BULLET]%D1_Mod % interest added to your [ICON_GOLD] at the beginning of every turn</French>

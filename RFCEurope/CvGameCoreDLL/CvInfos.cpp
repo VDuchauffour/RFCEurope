@@ -6654,6 +6654,7 @@ m_iFoundsCorporation(NO_CORPORATION),
 m_iGlobalReligionCommerce(0),
 m_iGlobalCorporationCommerce(0),
 m_iPrereqAndBonus(NO_BONUS),
+m_iTerrainTypeNeededInBFC(NO_TERRAIN), // Absinthe
 m_iGreatPeopleUnitClass(NO_UNITCLASS),
 m_iGreatPeopleRateChange(0),
 m_iConquestProbability(0),
@@ -7169,6 +7170,12 @@ int CvBuildingInfo::getGlobalCorporationCommerce() const
 int CvBuildingInfo::getPrereqAndBonus() const
 {
 	return m_iPrereqAndBonus;
+}
+
+// Absinthe
+int CvBuildingInfo::getTerrainTypeNeededInBFC() const
+{
+	return m_iTerrainTypeNeededInBFC;
 }
 
 int CvBuildingInfo::getGreatPeopleUnitClass() const
@@ -7913,6 +7920,7 @@ void CvBuildingInfo::read(FDataStreamBase* stream)
 	stream->Read(&m_iGlobalReligionCommerce);
 	stream->Read(&m_iGlobalCorporationCommerce);
 	stream->Read(&m_iPrereqAndBonus);
+	stream->Read(&m_iTerrainTypeNeededInBFC); // Absinthe
 	stream->Read(&m_iGreatPeopleUnitClass);
 	stream->Read(&m_iGreatPeopleRateChange);
 	stream->Read(&m_iConquestProbability);
@@ -8249,6 +8257,7 @@ void CvBuildingInfo::write(FDataStreamBase* stream)
 	stream->Write(m_iGlobalReligionCommerce);
 	stream->Write(m_iGlobalCorporationCommerce);
 	stream->Write(m_iPrereqAndBonus);
+	stream->Write(m_iTerrainTypeNeededInBFC); // Absinthe
 	stream->Write(m_iGreatPeopleUnitClass);
 	stream->Write(m_iGreatPeopleRateChange);
 	stream->Write(m_iConquestProbability);
@@ -8537,6 +8546,10 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetChildXmlValByName(szTextVal, "CivicOption");
 	m_iCivicOption = pXML->FindInInfoClass(szTextVal);
+
+	// Absinthe
+	pXML->GetChildXmlValByName(szTextVal, "TerrainTypeNeededInBFC");
+	m_iTerrainTypeNeededInBFC = pXML->FindInInfoClass(szTextVal);
 
 	pXML->GetChildXmlValByName(szTextVal, "GreatPeopleUnitClass");
 	m_iGreatPeopleUnitClass = pXML->FindInInfoClass(szTextVal);
