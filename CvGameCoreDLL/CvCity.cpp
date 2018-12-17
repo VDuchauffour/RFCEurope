@@ -2009,6 +2009,29 @@ bool CvCity::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestVis
 		}
 	}
 
+	// Absinthe: terrain type needed in BFC
+	if (GC.getBuildingInfo(eBuilding).getTerrainTypeNeededInBFC() != NO_TERRAIN)
+	{
+		CvPlot* pLoopPlot;
+		int bIsHasTerrainInBFC = 0;
+		for (iI = 0; iI < NUM_CITY_PLOTS; iI++)
+		{
+			pLoopPlot = getCityIndexPlot(iI);
+			if (pLoopPlot != NULL)
+			{
+				if (pLoopPlot->getTerrainType() == GC.getBuildingInfo(eBuilding).getTerrainTypeNeededInBFC())
+				{
+					bIsHasTerrainInBFC = 1;
+				}
+			}
+		}
+		if (bIsHasTerrainInBFC == 0)
+		{
+			return false;
+		}
+	}
+	// Absinthe: terrain type needed in BFC
+
 	//Rhye - start (embassy)
 	// 3Miro: when can build embassy
 	/*if (eBuilding >= NUM_BUILDINGS_PLAGUE)

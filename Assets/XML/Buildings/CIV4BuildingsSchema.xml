@@ -184,6 +184,7 @@
 	<ElementType name="fVisibilityPriority" content="textOnly"/>
 	<ElementType name="FreePromotion" content="textOnly"/>
 	<ElementType name="CivicOption" content="textOnly"/>
+	<ElementType name="TerrainTypeNeededInBFC" content="textOnly"/>
 	<ElementType name="GreatPeopleUnitClass" content="textOnly"/>
 	<ElementType name="iGreatPeopleRateChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iHurryAngerModifier" content="textOnly" dt:type="int"/>
@@ -438,6 +439,7 @@
 		<element type="FreeBuilding"/>
 		<element type="FreePromotion"/>
 		<element type="CivicOption"/>
+		<element type="TerrainTypeNeededInBFC"/>
 		<element type="GreatPeopleUnitClass"/>
 		<element type="iGreatPeopleRateChange"/>
 		<element type="iHurryAngerModifier"/>

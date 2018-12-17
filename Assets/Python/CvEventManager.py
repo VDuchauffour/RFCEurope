@@ -495,9 +495,12 @@ class CvEventManager:
 		# Absinthe: Stephansdom start
 		if iImprovement == xml.iImprovementCottage:
 			pPlot = CyMap().plot(iX, iY)
-			pPlayer = gc.getPlayer(pPlot.getOwner())
-			if pPlayer.countNumBuildings(xml.iStephansdom) > 0:
-				pPlot.setImprovementType(xml.iImprovementHamlet)
+			iOwner = pPlot.getOwner()
+			# if there is an owner
+			if iOwner >= 0:
+				pOwner = gc.getPlayer(iOwner)
+				if pOwner.countNumBuildings(xml.iStephansdom) > 0:
+					pPlot.setImprovementType(xml.iImprovementHamlet)
 		# Absinthe: Stephansdom end
 		if (not self.__LOG_IMPROVEMENT):
 			return

@@ -7070,6 +7070,13 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, BuildingTypes eBu
 		}
 	}
 
+	// Absinthe: terrain type needed in BFC
+	if (kBuilding.getTerrainTypeNeededInBFC() != NO_TERRAIN)
+	{
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_TERRAIN_NEEDED", GC.getTerrainInfo((TerrainTypes)kBuilding.getTerrainTypeNeededInBFC()).getTextKeyWide()));
+	}
+
 	if (kBuilding.getGlobalReligionCommerce() != NO_RELIGION)
 	{
 		szFirstBuffer = gDLL->getText("TXT_KEY_BUILDING_PER_CITY_WITH", GC.getReligionInfo((ReligionTypes) kBuilding.getGlobalReligionCommerce()).getChar());
