@@ -631,12 +631,10 @@ class CvRFCEventHandler:
 				popup = Popup.PyPopup()
 				popup.setBodyString(localText.getText("TXT_KEY_EVENT_VIKING_CONQUERERS_RUMOURS", ()))
 				popup.launch()
-				TXT_KEY_EVENT_BARBARIAN_INVASION_END
 
 		if iGameTurn == xml.i860AD + sd.scriptDict['lEventRandomness'][iByzantiumVikingAttack]:
 			if utils.getHumanID() == con.iByzantium:
-				self.barb.spawnUnits(iBarbarian, (80, 25), (80, 25), xml.iVikingBerserker, 4, iGameTurn, 1, 0, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_VIKINGS", ()))
-				self.barb.spawnUnits(iBarbarian, (80, 25), (80, 25), xml.iDenmarkHuskarl, 3, iGameTurn, 1, 0, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_VIKINGS", ()))
+				self.barb.spawnMultiTypeUnits(iBarbarian, (80, 24), (80, 25), [xml.iVikingBerserker, xml.iDenmarkHuskarl], [4, 3], iGameTurn, 1, 0, utils.forcedInvasion, 1, localText.getText("TXT_KEY_BARBARIAN_NAMES_VIKINGS", ()))
 				CyInterface().addMessage(iByzantium, False, con.iDuration, CyTranslator().getText("TXT_KEY_EVENT_VIKING_CONQUERERS_ARRIVE", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
 
 		# Absinthe: Message for the human player about the Schism

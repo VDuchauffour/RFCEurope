@@ -25891,7 +25891,10 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<CommerceModifiers/>
-			<GlobalCommerceModifiers/>
+			<GlobalCommerceModifiers>
+				<iCommerce>0</iCommerce>
+				<iCommerce>10</iCommerce>
+			</GlobalCommerceModifiers>
 			<SpecialistExtraCommerces/>
 			<StateReligionCommerces/>
 			<CommerceHappinesses/>

@@ -349,7 +349,7 @@ class Crusades:
 			elif iStartDate + 5 == iGameTurn:
 				if not self.anyParticipate():
 					return
-				print( " Arrival " )
+				print( " Crusade: Arrival " )
 				self.crusadeArrival( iActiveCrusade )
 
 			elif iStartDate + 8 == iGameTurn:
@@ -771,6 +771,7 @@ class Crusades:
 		self.deviateHumanPopup()
 
 	def decideDeviateAI( self ):
+		print( " Crusade: Deviate Crusade start " )
 		iRichest = self.getRichestCatholic()
 		bStolen = False
 		if iRichest in [con.iVenecia, con.iGenoa]:
@@ -785,10 +786,12 @@ class Crusades:
 					pConstantinoplePlot = gc.getMap().plot( 81, 24 ) # tCapitals[con.iByzantium]
 					pConstantinopleCity = pConstantinoplePlot.getPlotCity()
 					iConstantinopleOwner = pConstantinopleCity.getOwner()
+					# should check if Constantinople is their capital city to be fully correct, but we can assume that's the case
 					bIsNotAVassal = not utils.isAVassal(con.iByzantium)
 					if iConstantinopleOwner == con.iByzantium and bIsNotAVassal:
 						self.crusadeStolenAI( iRichest, con.iByzantium )
 						bStolen = True
+						print( " Crusade: Deviate Crusade stolen " )
 		elif iRichest in [con.iSpain, con.iPortugal, con.iAragon]:
 			pCordoba = gc.getPlayer( con.iCordoba )
 			if pCordoba.isAlive():
@@ -802,6 +805,7 @@ class Crusades:
 					if pCordoba.getStateReligion() == xml.iIslam and bIsNotAVassal:
 						self.crusadeStolenAI( iRichest, con.iCordoba )
 						bStolen = True
+						print( " Crusade: Deviate Crusade stolen " )
 		elif iRichest in [con.iHungary, con.iPoland, con.iAustria]:
 			pTurkey = gc.getPlayer( con.iTurkey )
 			if pTurkey.isAlive():
@@ -815,8 +819,10 @@ class Crusades:
 					if pTurkey.getStateReligion() == xml.iIslam and bIsNotAVassal:
 						self.crusadeStolenAI( iRichest, con.iTurkey )
 						bStolen = True
+						print( " Crusade: Deviate Crusade stolen " )
 		if not bStolen:
 			self.setTarget( tJerusalem[0], tJerusalem[1] )
+			print( " Crusade: Deviate Crusade remains normal " )
 
 		self.startCrusade()
 
@@ -864,11 +870,15 @@ class Crusades:
 		teamLeader = gc.getTeam(gc.getPlayer(iLeader).getTeam())
 		iTeamTarget = gc.getPlayer(iTargetPlayer).getTeam()
 		if not teamLeader.isAtWar( iTeamTarget ):
+			# Absinthe: add contact if they did not meet before
+			if not teamLeader.isHasMet(iTeamTarget):
+				teamLeader.meet(iTeamTarget, False)
 			if teamLeader.canDeclareWar( iTeamTarget ):
 				teamLeader.declareWar(iTeamTarget, True, -1)
 			else:
 				# we cannot declare war to the current owner of the target city
 				self.returnCrusaders()
+				print( " Crusade: cannot start, not possible to declare war " )
 				return
 
 	def returnCrusaders( self ):
@@ -883,8 +893,10 @@ class Crusades:
 
 		# if the leader has been destroyed, cancel the Crusade
 		iLeader = self.getLeader()
+		print( " Crusade: leaderciv ", iLeader )
 		if iLeader == -1 or not gc.getPlayer( iLeader ).isAlive():
 			self.returnCrusaders()
+			print( " Crusade: cancelled, leader civ collapsed " )
 			return
 
 		# if the target is Jerusalem, and in the mean time it has been captured by an Orthodox or Catholic player (or the owner of Jerusalem converted to a Christian religion), cancel the Crusade
@@ -895,6 +907,7 @@ class Crusades:
 				if iVictim < con.iNumMajorPlayers:
 					iReligion = gc.getPlayer( iVictim ).getStateReligion()
 					if iReligion in [iCatholicism, iOrthodoxy]:
+						print( " Crusade: cancelled, target religion changed to Christianity " )
 						return
 
 		# if not at war with the owner of the city, declare war
@@ -905,11 +918,15 @@ class Crusades:
 				teamLeader = gc.getTeam( gc.getPlayer(iLeader).getTeam() )
 				iTeamVictim = gc.getPlayer(iVictim).getTeam()
 				if not teamLeader.isAtWar( iTeamVictim ):
+					# Absinthe: add contact if they did not meet before
+					if not teamLeader.isHasMet(iTeamVictim):
+						teamLeader.meet(iTeamVictim, False)
 					if teamLeader.canDeclareWar( iTeamVictim ):
 						teamLeader.declareWar(iTeamVictim, False, -1)
 					else:
 						# we cannot declare war to the current owner of the target city
 						self.returnCrusaders()
+						print( " Crusade: cancelled, not possible to declare war " )
 						return
 
 		lFreeLandPlots = []
@@ -988,7 +1005,11 @@ class Crusades:
 		# if the target is Jerusalem
 		if (iTX, iTY) == tJerusalem:
 			iRougeModifier = 100
-			if teamLeader.isHasTech( xml.iChivalry ):
+			# human player should always face powerful units when defending Jerusalem
+			iHuman = utils.getHumanID()
+			pPlot = gc.getMap().plot( tJerusalem[0], tJerusalem[1] )
+			iVictim = pPlot.getPlotCity().getOwner()
+			if teamLeader.isHasTech( xml.iChivalry ) or iVictim == iHuman:
 				self.makeUnit( xml.iBurgundianPaladin, iLeader, iActiveCrusade, tPlot, 1 )
 				self.makeUnit( xml.iTemplar, iLeader, iActiveCrusade, tPlot, 1 )
 				self.makeUnit( xml.iTeutonic, iLeader, iActiveCrusade, tPlot, 1 )
@@ -1048,15 +1069,15 @@ class Crusades:
 			if iActiveCrusade == 0:
 				iRougeModifier *= 11 / 10
 			elif iActiveCrusade == 1:
-				iRougeModifier *= 6 / 5
+				iRougeModifier *= 5 / 5
 			elif iActiveCrusade == 2:
-				iRougeModifier *= 7 / 5
+				iRougeModifier *= 6 / 5
 			elif iActiveCrusade == 3:
-				iRougeModifier *= 8 / 5
+				iRougeModifier *= 7 / 5
 			elif iActiveCrusade == 4:
-				iRougeModifier *= 9 / 5
+				iRougeModifier *= 8 / 5
 			else:
-				iRougeModifier *= 10 / 5
+				iRougeModifier *= 8 / 5
 
 		if self.getSelectedUnit( 0 ) > 0:
 			self.makeUnit( xml.iTemplar, iLeader, iActiveCrusade, tPlot, self.getSelectedUnit( 0 ) * 100 / iRougeModifier )

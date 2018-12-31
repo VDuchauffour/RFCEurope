@@ -127,7 +127,7 @@ teamBarbarian = gc.getTeam(pBarbarian.getTeam())
 tByzantiumControl = [ xml.iP_Calabria, xml.iP_Apulia, xml.iP_Dalmatia, xml.iP_Verona, xml.iP_Lombardy, xml.iP_Liguria, xml.iP_Tuscany, xml.iP_Latium, xml.iP_Corsica, xml.iP_Sardinia, xml.iP_Sicily, xml.iP_Tripolitania, xml.iP_Ifriqiya ]
 tByzantiumControlII = [ xml.iP_Colonea, xml.iP_Antiochia, xml.iP_Charsianon, xml.iP_Cilicia, xml.iP_Armeniakon, xml.iP_Anatolikon, xml.iP_Paphlagonia, xml.iP_Thrakesion, xml.iP_Opsikion, xml.iP_Constantinople, xml.iP_Thrace, xml.iP_Thessaloniki, xml.iP_Moesia, xml.iP_Macedonia, xml.iP_Serbia, xml.iP_Arberia, xml.iP_Epirus, xml.iP_Thessaly, xml.iP_Morea ]
 tFrankControl = [ xml.iP_Swabia, xml.iP_Saxony, xml.iP_Lorraine, xml.iP_IleDeFrance, xml.iP_Normandy, xml.iP_Picardy, xml.iP_Aquitania, xml.iP_Provence, xml.iP_Burgundy, xml.iP_Orleans, xml.iP_Champagne, xml.iP_Catalonia, xml.iP_Lombardy, xml.iP_Tuscany ]
-tArabiaControlI = [ xml.iP_Arabia, xml.iP_Jerusalem, xml.iP_Syria, xml.iP_Lebanon, xml.iP_Antiochia, xml.iP_Egypt, xml.iP_Cyrenaica, xml.iP_Tripolitania, xml.iP_Ifriqiya, xml.iP_Sicily, xml.iP_Crete ]
+tArabiaControlI = [ xml.iP_Arabia, xml.iP_Jerusalem, xml.iP_Syria, xml.iP_Lebanon, xml.iP_Antiochia, xml.iP_Egypt, xml.iP_Cyrenaica, xml.iP_Tripolitania, xml.iP_Ifriqiya, xml.iP_Sicily, xml.iP_Crete, xml.iP_Cyprus ]
 tArabiaControlII = [ xml.iP_Arabia, xml.iP_Jerusalem, xml.iP_Syria, xml.iP_Lebanon, xml.iP_Antiochia, xml.iP_Egypt ]
 tBulgariaControl = [ xml.iP_Constantinople, xml.iP_Thessaloniki, xml.iP_Serbia, xml.iP_Thrace, xml.iP_Macedonia, xml.iP_Moesia, xml.iP_Arberia ]
 tCordobaWonders = [ xml.iAlhambra, xml.iLaMezquita, xml.iGardensAlAndalus ]
@@ -1231,7 +1231,7 @@ class Victory:
 			if self.isPossibleUHV(iGenoa, 2, True):
 				iBanks = 0
 				for city in utils.getCityList(iGenoa):
-					if city.getNumRealBuilding(xml.iBank) > 0:
+					if city.getNumRealBuilding(xml.iBank) > 0 or city.getNumRealBuilding(xml.iGenoaBank) > 0 or city.getNumRealBuilding(xml.iEnglishRoyalExchange) > 0:
 						iBanks += 1
 				iCompanyCities = pGenoa.countCorporations(xml.iStGeorge)
 				if iBanks >= 8 and iCompanyCities == xml.tCompaniesLimit[xml.iStGeorge]:
