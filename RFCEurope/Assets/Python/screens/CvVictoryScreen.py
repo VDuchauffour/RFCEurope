@@ -1294,7 +1294,7 @@ class CvVictoryScreen:
 		#UHV3
 		iBankCount = 0
 		for city in utils.getCityList(iPlayer):
-			if city.getNumRealBuilding(xml.iBank) > 0:
+			if city.getNumRealBuilding(xml.iBank) > 0 or city.getNumRealBuilding(xml.iGenoaBank) > 0 or city.getNumRealBuilding(xml.iEnglishRoyalExchange) > 0:
 				iBankCount += 1
 		iCompanyCities = pPlayer.countCorporations(xml.iStGeorge)
 		sText3 += localText.getText("TXT_KEY_UHV_BANKS",()) + ": " + self.determineColor(iBankCount >= 8, str(iBankCount))

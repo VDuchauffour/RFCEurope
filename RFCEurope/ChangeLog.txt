@@ -23,12 +23,11 @@ Changes for RFCE 1.6:
 	- Removed/updated outdated information about Corporations in the stability guide
 	- Various text fixes and updates in the Civilopedia
 	- Fixed bug where your own vassals could potentially declare war on you on 2nd completed UHV
-	- Other civs' vassals can't declare war on you on 2nd completed UHV (want to keep looking for the master civs)
-	- Tweaked values for the Scottish Auld Alliance UHV: good diplo relations and resource trade add more points, sharing a religion is even more important
-	- Added Liguria to the 2nd German UHV (The Holy Roman Empire)
+	- Other civs' vassals can't be chosen for declaring war on you on the 2nd completed UHV (want to keep looking for strong/master civs)
 	- Ifriqiya is foreign, Thrakesion, Armeniakon and Paphlagonia are contested provinces for Genoa
 	- AI Poland starts with more and better defensive units
 	- Revised starting units for Spain - a couple additional units for the AI, less offensive units for the human player
+	- Increased number of starting Horse Archers for Arabia (starts with even more than it had before the relevant changes in version 1.5)
 	- Human Cordoba starts with a couple horse archers instead of some of it's defensive units, so they can raid further north rather than sit and wait for Spain
 	- Turkopole mercenaries can be hired by Orthodox nations too, increased their number in the region
 	- Varangian Guards and Tagmatas disappear earlier than before, revised their frequency, can't be hired with Islam state religion
@@ -50,7 +49,7 @@ Changes for RFCE 1.6:
 	- Renamed/updated a couple names and texts related to various advisor screens (e.g. Corporation Advisor -> Company Advisor)
 	- Removed all remnants of the Relic, Uranium, Oil, Football/Sports Event, Aluminium, and separate Elephant resources (gamefont, xml, etc.)
 	- New resources: Citrus, Dates, Camels, Cocoa, Hemp, Opium
-	- Fixed a couple bugs with the protestantism and reliquary systems used together
+	- Fixed a couple bugs with the Protestantism and Relic/Reliquary mechanics used together
 	- Adjusted Protestantism spread rate on Reformation when a civ is converting to the new religion
 	- Naffatun units now cause collateral damage on attack, as originally intended
 	- Lipka Tatars will cause less collateral damage, free Mobility promotion
@@ -83,7 +82,7 @@ Changes for RFCE 1.6:
 	- New wonder: Boyana Church - +8 culture, double faith from Great Theologians, +2 GPP (Great Theologian)
 	- New wonder: Torre del Oro - +4 culture, chance for a small (2-3 turns) Golden Age on colony completion, +2 GPP (Great Merchant)
 	- New wonder: Mont Saint-Michel - +8 culture, faith from Walls and Castles, heals units +10%, +50% defence, +2 GPP (Great Engineer)
-	- New wonder: Saint Catherine's Monastery - +6 culture, spreads Orthodoxy, needs desert in the BFC, provides 2 relics, +2 GPP (Great Theologian)
+	- New wonder: Saint Catherine's Monastery - +6 culture, spreads Orthodoxy, +10% science in all cities, needs desert in the BFC, provides 2 relics, +2 GPP (Great Theologian)
 	- New wonder: Blue Mosque - +8 culture, reduces war weariness in all cities, -20% build cost for buildings present in the capital city, +2 GPP (Great Engineer)
 	- New wonder: Selimiye Mosque - +8 culture, city acts as a government center, +100% xp for new units during golden ages, +1 commerce from engineers in all cities, +2 GPP (Great Engineer)
 	- New wonder: Kizil Kule - +2 culture, +2 commerce from harbor in all cities, +25% defence in all coastal cities, +2 GPP (Great Spy)
@@ -127,8 +126,8 @@ Changes for RFCE 1.6:
 	- Updated wonder preferences (both old and new) for all civs
 	- Adjusted size of buildings and wonders in both the Civilopedia and ingame
 	- New art and icon for Hagia Sophia: now represents the Byzantine period (without minarets)
-	- New icon for St. Peter's Basilica, generic Monastery, generic Temple, generic Belfry, Mercenaries
-	- New button for Kalmar Castle, Pressburg Castle, Royal Dungeon, Leonardo's Workshop
+	- New icon for generic Monastery, generic Temple, generic Belfry, Catholic Belfry, Mercenaries, Royal Dungeon
+	- New button for St. Peter's Basilica, Kalmar Castle, Pressburg Castle, Leonardo's Workshop, Dome of the Rock, Topkapi Palace
 	- New building art for Islamic Madrassa, House of Wisdom
 
 	UHVs:
@@ -150,15 +149,18 @@ Changes for RFCE 1.6:
 	- Byzantium 3rd UHV: The Second Rome: previous 1st UHV condition added here
 	- Genoa 1st UHV: moved to an earlier date, to 1400 AD, added Thrakesion (Smyrna and Chios) and Cyprus
 	- Genoa 2nd UHV: previous 2nd and 3rd UHV switched, moved deadline earlier, to 1566 AD (loss of Chios)
-	- Genoa 3rd UHV: ensure that Bank of St. George is only spread to your cities in 1625 AD (end of Genoese banking golden age)
-	- Arabia 1st UHV: moved to an earlier date, to 850 AD, added Cyrenaica, Tripolitania, Ifriqiya, Sicily and Crete
+	- Genoa 3rd UHV: new aspect: ensure that Bank of St. George is only spread to your cities in 1625 AD (end of Genoese banking golden age)
+	- Arabia 1st UHV: moved to an earlier date, to 850 AD, added Cyrenaica, Tripolitania, Ifriqiya, Sicily, Crete and Cyprus
 	- Arabia 2nd UHV: control Egypt and the Levant with being the most advanced civ in 1291 AD (more researched techs than any other civ)
 	- Aragon 2nd UHV: new aspect: have at least 30 trade ships (ships with at least one cargo space)
+	- German 2nd UHV: The Holy Roman Empire: province of Liguria is also needed
+	- Scottish Auld Alliance UHV: tweaked values, good diplo relations and resource trade add more points, sharing a religion is even more important
 	- Fixed issue where mainscreen UHV counters displayed the same static value after the deadline, they are removed upon UHV completion
 	- Some mainscreen UHV counters now shown and calculated even after the UHV is completed, until the UHV date (e.g. the ones ideal for UHV challenges)
 	- Improved method for resource calculation inside borders (Novgorod and Muscovy UHV), now only improved resources count
-	- UHV update: Norway & Burgundy UHVs do not show score for unknown (or unborn) civs
+	- Norway & Burgundy UHVs do not show score for unknown (or unborn) civs
 	- Fixed bug with the Prussian mainscreen UHV counter
+	- Fixed bug where Bank UBs were not accounted for the Genoese Banking UHV
 	- Updated the timeline of the mod, synchronized all UHV dates
 
 	UPs:
@@ -236,6 +238,7 @@ Changes for RFCE 1.6:
 	- Fixed overall cost calculation bug on the mercenary screen
 	- Fixed a couple bugs related to wonder availability in cities: being present vs. being active
 	- Fixed bug where vassals could lead Crusades against their master
+	- Fixed critical bug with Crusades: some of them didn't actually happen/arrive at all, if there were no initial contact between the leader and the target
 	- Fixed bug where civs could potentially redeclare war against civs they already have war with (both in Crusades and in Rise-and-Fall situations)
 	- Fixed multiple bugs where civs would have a forced war declaration where they couldn't normally declare war (both Crusades and Rise-and-Fall situations)
 	- Fixed bug with civ selection for deviated Crusades (in some cases it resulted in no Crusade instead of a deviated one)
@@ -252,8 +255,9 @@ Changes for RFCE 1.6:
 	- Rebalanced independent starting cities spawn attributes in Southern Italy and North Africa
 	- Revised Byzantine starting armies (e.g. removed War Galleys), added road for the Iron near Constantinople
 	- Revised Byzantine starting buildings - no more initial Castle in Constantinople, fewer initial Lighthouses but more Markets in the empire
-	- Byzantium, Arabia, Cordoba, Venice, Spain, Scotland, Genoa starts with religious art
-	- Hungary starts without monasticism and religious art, Norway without monasticism
+	- Improved initial Byzantine economic situation (more starting gold and bigger population)
+	- Byzantium, Arabia, Cordoba, Venice, Spain, Scotland, Genoa starts with Religious Art
+	- Byzantium starts with Manorialism, Hungary starts without Monasticism and Religious Art, Norway without Monasticism
 	- Added Stone in Sweden (Kalmar Castle) and Amber near Uppsala (Shrine of Uppsala)
 	- Revised resource distribution in the area of Poland, added Stone between Poland and Kiev
 	- Made southern Sicily (Syracuse), the Marrakesh area and central Tunisia more fertile
@@ -261,6 +265,7 @@ Changes for RFCE 1.6:
 	- Silk resource appears in Thrace around 550AD, disappears if Constantinople is conquered
 	- Added invader event directly against Constantinople, representing the Viking's (Rus) invasion of 868
 	- Minor updates in the German/Austrian/Prussian and French/Burgundian city name maps
+	- Huge improvements on the Novgorodian, Kievan and Russian city name maps - by caphyre
 	- Added Kairouan as an indy city, spawns in 670AD, reduced to a town in 1057AD, starts with Islam
 	- Added Tlemcen as an alternative indy city spawn for Algiers in 500AD, 40% chance, starts with Catholicism
 	- Added Brennabor as an indy city, spawns in 850AD, 2 alternative positions with 50-50% chance (on conquest becomes either Brandenburg or Berlin)
@@ -277,7 +282,6 @@ Changes for RFCE 1.6:
 	- Burgundy starts with 2 population in their cities, revised balance modifiers (some nerfed, some buffed)
 	- Increased unit and building production modifiers for Scotland, Norway, Poland and Novgorod
 	- Various Russian and Hungarian balance modifiers nerfed
-	- Huge improvements on the Novgorodian, Kievan and Russian city name maps - by caphyre
 
 	General rule/balance:
 	- Now all directly religion-related wonders give faith points upon completion (even if they do not need a state religion ingame)
@@ -307,6 +311,7 @@ Changes for RFCE 1.6:
 	- Rearranged and reviewed flow (through start dates) of civ-specific modifiers
 	- Religious buildings and religious wonders in the city have smaller impact on persecution chances
 	- Population in the city also modifies religious persecution chances
+	- Increased strength of Crusader armies against human defenders
 
 	Civics:
 	- Feudal Monarchy: increased number of free units, also adds free military units
@@ -319,12 +324,12 @@ Changes for RFCE 1.6:
 	- Feudal Law: increases maintenance cost from distance to palace instead of decreasing it, +50% Great General emergence rate
 	- Religious Law: doubles the reduction rate of persecution points (thus shortens the duration of religious instability), removed +2 culture from specialists
 	- Common Law: instead of +100% culture, +100% great people rate
-	- Tribalism: -50% great people growth rate
+	- Tribalism: -33% great people growth rate
 	- Free Peasantry: reduced to +50% work speed for workers
 	- Apprenticeship: removed unlimited artist, scholar, merchant
 	- Free Labor: reduced to +1 free specialist, +10% hammers in all cities
-	- Decentralization: +50% for both city-related maintenance costs
-	- Manorialism: +25% for both city-related maintenance costs (still pretty decentralized)
+	- Decentralization: +25% for both city-related maintenance costs
+	- Manorialism: +25% for both city-related maintenance costs (still decentralized, but with bonuses)
 	- Trade Economy: unlimited merchant moved here from Apprenticeship, +10% gold in all cities, unstable with Serfdom
 	- Guilds: reduced to +1 beakers per specialist, companies have more chance to spread, +2 gold for guild hall
 	- Mercantilism: +50% yield from trade routes, unstable with Merchant Republic
@@ -470,7 +475,7 @@ Changes for RFCE 1.5:
 		- Forts are buildable on Semidesert, Tundra, Desert and Snow tiles too
 		- Semidesert, Wetland and Tundra have +25% build time modifier, Desert and Permafrost have +50%
 		- New button for Moorland, Dense Forest, Permanent Snow, Marsh, Tundra
-		- Cottages can be built on Moorland, Semidesert and Tundra tiles too, but fresh water doesn't enable them automatically
+		- Cottages can be built on Moorland, Semidesert and Tundra tiles too, but fresh water doesn't enable them automatically on all terrains
 		- Cottages no longer need at least 1 base food on the tile, so they can be built on most Hills
 
 	Map updates:

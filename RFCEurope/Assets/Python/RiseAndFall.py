@@ -2200,7 +2200,7 @@ class RiseAndFall:
 		if iCiv == iArabia:
 			utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
-			utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 2)
+			utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 7)
 			utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iSpearman, iCiv, tPlot, 2)
 			# additional units for the AI

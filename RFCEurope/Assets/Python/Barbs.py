@@ -692,6 +692,16 @@ class Barbs:
 					self.makeUnit(iUnitType, iCiv, tPlot, iNumUnits, iForceAttack, szName)
 
 
+	def spawnMultiTypeUnits(self, iCiv, tTopLeft, tBottomRight, lUnitTypes, lNumUnits, iTurn, iPeriod, iRest, function, iForceAttack, szName):
+		if (iTurn % iPeriod) == iRest:
+			plotList = utils.squareSearch( tTopLeft, tBottomRight, function, [] )
+			if plotList:
+				tPlot = utils.getRandomEntry(plotList)
+				if tPlot:
+					for iUnitType, iNumUnits in zip(lUnitTypes, lNumUnits):
+						self.makeUnit(iUnitType, iCiv, tPlot, iNumUnits, iForceAttack, szName)
+
+
 	#This is just a clone of spawnUnits but attempting to put a boat under them
 	def spawnVikings(self, iCiv, tTopLeft, tBottomRight, iUnitType, iNumUnits, iTurn, iPeriod, iRest, function, iForceAttack, szName):
 		if (iTurn % iPeriod) == iRest:

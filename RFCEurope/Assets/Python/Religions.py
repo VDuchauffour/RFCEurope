@@ -175,6 +175,7 @@ class Religions:
 #####################################
 
 	def setup(self):
+		gc.getPlayer(con.iByzantium).changeFaith( 10 )
 		gc.getPlayer(con.iTurkey).changeFaith( 20 )
 		self.setSeed()
 

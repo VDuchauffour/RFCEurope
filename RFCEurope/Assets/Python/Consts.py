@@ -354,8 +354,8 @@ tStartingWorkers = (
 
 tStartingGold = ((
 # 500 AD
-1000, #Byzantium
-50, #France
+1200, #Byzantium
+100, #France
 200, #Arabia
 100, #Bulgaria
 200, #Cordoba

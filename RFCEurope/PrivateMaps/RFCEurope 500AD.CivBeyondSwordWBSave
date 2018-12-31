@@ -25,6 +25,7 @@ BeginTeam
 	Tech=TECH_CALENDAR
 	Tech=TECH_ARCHITECTURE
 	Tech=TECH_BRONZE_CASTING
+	Tech=TECH_MANORIALISM
 	Tech=TECH_THEOLOGY
 	Tech=TECH_CHAIN_MAIL
 	Tech=TECH_MONASTICISM
@@ -29758,10 +29759,17 @@ BeginPlot
 		FacingDirection=4
 		UnitAIType=UNITAI_CITY_DEFENSE
 	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER, UnitOwner=0
+		Damage=0
+		Level=1, Experience=0
+		FacingDirection=4
+		UnitAIType=UNITAI_WORKER
+	EndUnit
 	BeginCity
 		CityOwner=0
 		CityName=Athinai
-		CityPopulation=3
+		CityPopulation=4
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_LIGHTHOUSE
 		BuildingType=BUILDING_HARBOR
@@ -31152,6 +31160,7 @@ BeginPlot
 		CityName=Hadrianopolis
 		CityPopulation=2
 		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_MARKET
 		BuildingType=BUILDING_COURTHOUSE
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		ReligionType=RELIGION_ORTHODOXY
@@ -31988,7 +31997,7 @@ BeginPlot
 	BeginCity
 		CityOwner=0
 		CityName=Smyrna
-		CityPopulation=2
+		CityPopulation=3
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_HARBOR
 		BuildingType=BUILDING_MARKET
@@ -38356,10 +38365,17 @@ BeginPlot
 		FacingDirection=4
 		UnitAIType=UNITAI_CITY_DEFENSE
 	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER, UnitOwner=0
+		Damage=0
+		Level=1, Experience=0
+		FacingDirection=4
+		UnitAIType=UNITAI_WORKER
+	EndUnit
 	BeginCity
 		CityOwner=0
 		CityName=Caesarea
-		CityPopulation=1
+		CityPopulation=2
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		ReligionType=RELIGION_ORTHODOXY
@@ -38783,7 +38799,7 @@ BeginPlot
 	BeginCity
 		CityOwner=0
 		CityName=Tyros
-		CityPopulation=2
+		CityPopulation=3
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_HARBOR
 		BuildingType=BUILDING_MARKET

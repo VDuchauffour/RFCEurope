@@ -64,7 +64,7 @@
 			<TechPrereqAnyone>NONE</TechPrereqAnyone>
 			<bValid>1</bValid>
 			<ProductionTraits/>
-			<Button>Art/Interface/Buttons/Buildings/generic_belfry.dds</Button>
+			<Button>Art/Interface/Buttons/Buildings/generic_belfry_v2.dds</Button>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_RELIQUARY</Type>
