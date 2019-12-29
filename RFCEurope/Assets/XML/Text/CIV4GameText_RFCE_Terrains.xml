@@ -77,7 +77,7 @@
 		<Spanish>Grasslands</Spanish>
 		<Portuguese>Grasslands</Portuguese>
 	</TEXT>
-    <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_PLAINS_PEDIA</Tag>
 		<English>[TAB]Plains are a big flat areas of land with little to no forestation, and often characterized by a semi-arid continental climate. Steppes and prairies are varieties of plains.</English>
 		<French>Plains</French>
@@ -86,7 +86,7 @@
 		<Spanish>Plains</Spanish>
 		<Portuguese>Plains</Portuguese>
 	</TEXT>
-    <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_DESERT_PEDIA</Tag>
 		<English>[TAB]A desert is a landscape or region that receives an extremely low amount of precipitation, less than enough to support growth of most plants. Deserts are often composed of sand and rocky surfaces. Sand dunes called ergs and stony surfaces called hamada compose a minority of desert surfaces. Exposures of rocky terrain are typical, and reflect minimal soil development and sparseness of vegetation. Deserts take up about 20% of the Earth's land surface.</English>
 		<French>Desert</French>
@@ -95,7 +95,7 @@
 		<Spanish>Desert</Spanish>
 		<Portuguese>Desert</Portuguese>
 	</TEXT>
-    <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TUNDRA_PEDIA</Tag>
 		<English>[TAB]Tundra is a terrain where the tree growth is hindered by low temperatures, short growing seasons, and sometimes permafrost subsoil. Vegetation is sparse and composed of dwarf shrubs, sedges and grasses, mosses, and lichens. Scattered trees grow in some tundra. The boundary between tundra and forest is known as the tree line.</English>
 		<French>Tundra</French>
@@ -113,7 +113,7 @@
 		<Spanish>Mountain</Spanish>
 		<Portuguese>Mountain</Portuguese>
 	</TEXT>
-    <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_HILL_PEDIA</Tag>
 		<English>[TAB]A hill is a landform that extends above the surrounding terrain, with or without a distinct summit. Hills may form through a number of geomorphic phenomena: faulting, erosion of larger landforms such as mountains, and the deposition of sediment by glaciers. The distinction between a hill and a mountain is unclear and largely subjective, but a hill is generally somewhat lower and less steep than a mountain.</English>
 		<French>Hill</French>
@@ -122,7 +122,7 @@
 		<Spanish>Hill</Spanish>
 		<Portuguese>Hill</Portuguese>
 	</TEXT>
-    <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_COAST_PEDIA</Tag>
 		<English>[TAB]The coastline is where the land meets the sea or ocean. A precise line that can be called a coastline cannot be determined due to the dynamic nature of tides. The term "coastal zone" can be used instead, which is a spatial zone where interaction of the sea and land processes occurs.</English>
 		<French>Coast</French>
@@ -131,7 +131,7 @@
 		<Spanish>Coast</Spanish>
 		<Portuguese>Coast</Portuguese>
 	</TEXT>
-    <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_OCEAN_PEDIA</Tag>
 		<English>[TAB]An ocean is a major body of saline water, and a principal component of the hydrosphere. Approximately 71% of the Earth's surface is covered by ocean, a continuous body of water that is customarily divided into several principal oceans and smaller seas.</English>
 		<French>Ocean</French>
@@ -139,6 +139,60 @@
 		<Italian>Ocean</Italian>
 		<Spanish>Ocean</Spanish>
 		<Portuguese>Ocean</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_FRESHLAKE_PEDIA</Tag>
+		<English>[TAB]A lake is an area filled with water, localized in a basin, surrounded by land, apart from any river or other outlet that serves to feed or drain the lake. Lakes lie on land and are not part of the ocean, and therefore are distinct from lagoons, and are also larger and deeper than ponds, though there are no official or scientific definitions. Lakes can be contrasted with rivers or streams, which are usually flowing. Most lakes are fed and drained by rivers and streams.</English>
+		<French>Freshwater Lake</French>
+		<German>Freshwater Lake</German>
+		<Italian>Freshwater Lake</Italian>
+		<Spanish>Freshwater Lake</Spanish>
+		<Portuguese>Freshwater Lake</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_SALTLAKE_PEDIA</Tag>
+		<English>[TAB]A salt lake or saline lake is a landlocked body of water that has a concentration of salts (typically sodium chloride) and other dissolved minerals significantly higher than most lakes (often defined as at least three grams of salt per litre). In some cases, salt lakes have a higher concentration of salt than sea water; such lakes can also be termed hypersaline lakes. An alkalic salt lake that has a high content of carbonate is sometimes termed a soda lake.</English>
+		<French>Salt Lake</French>
+		<German>Salt Lake</German>
+		<Italian>Salt Lake</Italian>
+		<Spanish>Salt Lake</Spanish>
+		<Portuguese>Salt Lake</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_MOORLAND_PEDIA</Tag>
+		<English>[TAB]Moorland or moor is a type of habitat found in upland areas in temperate grasslands, savannas, and shrublands and montane grasslands and shrublands biomes, characterised by low-growing vegetation on acidic soils. Moorland, nowadays, generally means uncultivated hill land (such as Dartmoor in South West England). It is closely related to heath, but generally, moor refers to highland and high rainfall zones whereas heath refers to lowland zones which are more likely to be the result of human activity. Moorland also bears a relationship to tundra, with their boundary constantly shifting with climatic change.</English>
+		<French>Moorland</French>
+		<German>Moorland</German>
+		<Italian>Moorland</Italian>
+		<Spanish>Moorland</Spanish>
+		<Portuguese>Moorland</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_SNOW_PEDIA</Tag>
+		<English>[TAB]Snow is precipitation that forms when water vapor freezes. Because snow is so reflective, it plays an important role in regulating climate: it reflects incoming sunlight back into space, cooling the planet. Snow also supports life. Melting of seasonal snow (as well as glaciers) provides water for drinking and irrigating crops in many parts of the world. In some areas the terrain is almost always snow-covered, and the entire soil is permafrost.</English>
+		<French>Permanent Snow</French>
+		<German>Permanent Snow</German>
+		<Italian>Permanent Snow</Italian>
+		<Spanish>Permanent Snow</Spanish>
+		<Portuguese>Permanent Snow</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_SEMIDESERT_PEDIA</Tag>
+		<English>[TAB]Semidesert is an arid or semiarid area that has some of the characteristics of a desert (characterized by sparse vegetation). It has greater annual precipitation than deserts, but still below potential evapotranspiration. It is often located between a desert and a grassland or woodland.</English>
+		<French>Semidesert</French>
+		<German>Semidesert</German>
+		<Italian>Semidesert</Italian>
+		<Spanish>Semidesert</Spanish>
+		<Portuguese>Semidesert</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_WETLAND_PEDIA</Tag>
+		<English>[TAB]A wetland is a distinct ecosystem that is flooded by water, either permanently or seasonally, where oxygen-free processes prevail. The primary factor that distinguishes wetlands from other land forms or water bodies is the characteristic vegetation of aquatic plants, adapted to the unique hydric soil. Wetlands play a number of functions, including water purification, water storage, processing of carbon and other nutrients, stabilization of shorelines, and support of plants and animals. Wetlands are also considered the most biologically diverse of all ecosystems, serving as home to a wide range of plant and animal life.</English>
+		<French>Wetland</French>
+		<German>Wetland</German>
+		<Italian>Wetland</Italian>
+		<Spanish>Wetland</Spanish>
+		<Portuguese>Wetland</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_JUNGLE_PEDIA</Tag>
@@ -166,7 +220,7 @@
 		<Italian>Oasis</Italian>
 		<Spanish>Oasis</Spanish>
 		<Portuguese>Oasis</Portuguese>
-	</TEXT>	
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_MARSH</Tag>
 		<English>Marsh</English>
@@ -193,8 +247,8 @@
 		<Italian>Sea Ice</Italian>
 		<Spanish>Sea Ice</Spanish>
 		<Portuguese>Sea Ice</Portuguese>
-	</TEXT>	
-    <TEXT>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_FEATURE_ICE_PEDIA</Tag>
 		<English>[TAB]Ice sheets are masses of glacial ice that cover land in Earth's polar regions. They currently exist in just Antarctica and Greenland and hold over 90% of all fresh water on Earth. Even larger ice sheets existed in the geological past, covering much of Europe and the Americas.</English>
 		<French>Ice</French>

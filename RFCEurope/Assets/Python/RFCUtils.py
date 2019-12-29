@@ -861,7 +861,8 @@ class RFCUtils:
 				iCounter += 1
 				self.flipUnitsInArea((iX-1, iY-1), (iX+1, iY+1), iNewCiv, iCiv, False, True)
 		if not bAssignOneCity:
-			#self.flipUnitsInArea((0,0), (123,67), iNewCiv1, iCiv, False, True) #causes a bug: if a unit was inside another city's civ, when it becomes independent or barbarian, may raze it
+			# flipping units may cause a bug: if a unit is inside another civ's city when it becomes independent or barbarian, may raze it
+			#self.flipUnitsInArea((0,0), (con.iMapMaxX, con.iMapMaxY), iNewCiv1, iCiv, False, True)
 			self.killUnitsInArea((0, 0), (con.iMapMaxX, con.iMapMaxY), iCiv)
 			self.resetUHV(iCiv)
 
@@ -913,7 +914,7 @@ class RFCUtils:
 
 
 	def squareSearch( self, tTopLeft, tBottomRight, function, argsList ): #by LOQ
-		"""Searches all tile in the square from tTopLeft to tBottomRight and calls function for every tile, passing argsList."""
+		"""Searches all tiles in the square from tTopLeft to tBottomRight and calls function for every tile, passing argsList."""
 		tPaintedList = []
 		for tPlot in self.getPlotList(tTopLeft, tBottomRight):
 			bPaintPlot = function(tPlot, argsList)
@@ -1079,7 +1080,7 @@ class RFCUtils:
 	#Absinthe: end
 
 	#Absinthe: persecution
-	def prosecute( self, iPlotX, iPlotY, iUnitID, iReligion=None ):
+	def prosecute( self, iPlotX, iPlotY, iUnitID, iReligion=-1 ):
 		"""Removes one religion from the city and handles the consequences."""
 
 		if gc.getMap().plot(iPlotX, iPlotY).isCity():
@@ -1097,12 +1098,14 @@ class RFCUtils:
 			return False
 
 		# determine the target religion, if not supplied by the popup decision (for the AI)
-		if not iReligion:
+		print("Persecution intended religion", iReligion)
+		if iReligion == -1:
 			for iReligion in con.tPersecutionOrder[iStateReligion]:
 				if not city.isHolyCityByType(iReligion): # spare holy cities
 					if city.isHasReligion(iReligion):
-						# so this will be remain the iReligion for further calculations
+						# so this will be the iReligion for further calculations
 						break
+		print("Persecution chosen religion", iReligion)
 
 		# count the number of religious buildings and wonders (for the chance)
 		if iReligion > -1:
@@ -1122,12 +1125,14 @@ class RFCUtils:
 		iChance = 50 + pPlayer.getFaith() / 3
 		# lower chance for purging any religion from Jerusalem:
 		if (iPlotX, iPlotY) == con.tJerusalem:
-			iChance -= 25
+			iChance -= 24
 		# lower chance if the city has the chosen religion's buildings/wonders:
-		iChance -= (len(lReligionBuilding) * 5 + iReligionWonder * 10)		# the wonders have an extra chance reduction (in addition to the first reduction)
+		iBuildingChanceReduction = min(24, len(lReligionBuilding) * 4)
+		iBuildingChanceReduction += iReligionWonder * 12	# the wonders have an extra chance reduction (in addition to the building reduction)
+		iChance -= iBuildingChanceReduction
 		# bonus for the AI:
 		if self.getHumanID() != iOwner:
-			iChance += 15
+			iChance += 16
 		# population modifier:
 		if city.getPopulation() > 11:
 			iChance -= 12
@@ -1253,7 +1258,7 @@ class RFCUtils:
 		if tPlot:
 			plot = gc.getMap().plot( tPlot[0], tPlot[1] )
 			if not plot.getPlotCity().isNone():
-				plot.getPlotCity().setHasReligion(iReligion, 1, 0, 0) # puts the religion into this city
+				plot.getPlotCity().setHasReligion(iReligion, 1, 0, 0)	# puts the religion into this city
 				return True
 			else:
 				return False

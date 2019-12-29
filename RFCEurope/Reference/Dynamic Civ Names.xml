@@ -107,7 +107,7 @@ At least 5 ok or unstable provinces: Frankish Empire
 After 987 (turn 129): Kingdom of France
 After 843 (turn 86): Kingdom of West Francia
 Default: Kingdom of the Franks
-Initial: Burgundian Peoples
+Initial: Frankish Peoples
 
 <Burgundy>
 Vassal of Byzantium: Exarchate of Burgundia
@@ -199,8 +199,9 @@ Islam State Religion: Emirate of Cordoba
 Any Christian State Religion: Kingdom of Andalusia
 Default: Duchy of Andalusia
 Initial: Andalusian Peoples
+Initial: Umayyad Refugees
 
-<Tunesia> respawn of Cordoba
+<Tunisia> respawn of Cordoba
 Vassal of Byzantium: Exarchate of Africa
 Vassal of France/Burgundy: Duchy of Tunisia
 Vassal of Arabia/Morocco: Emirate of Ifriqiya
@@ -361,7 +362,7 @@ Vassal of France/Burgundy: Duchy of Sicily
 Vassal of Arabia/Cordoba/Morocco: Emirate of Siqilliyya
 Vassal of Castile/Portugal, at least 3 provinces: Council of Sicily
 Vassal of Castile/Portugal: County of Sicily
-Vassal of Norway/Denmark/Sweden: Jarldom of Sicily
+Vassal of Norway/Denmark/Sweden: Jarldom of Sikileyjar
 Vassal of Venice/Genoa: Colony of Sicily
 Vassal of Novgorod/Kiev: Principality of Sicily
 Vassal of Muscovy: Guberniya of Sicily
@@ -582,9 +583,9 @@ Vassal of Byzantium: Exarchate of Britannia
 Vassal of France/Burgundy: Duchy of La Manche
 Vassal of Arabia/Cordoba/Morocco: Emirate of Ingeltra
 Vassal of Castile/Aragon: Viceroyalty of England
-Vassal of Denmark: Jarldom of the Danelaw
 Vassal of Norway, controls London province: Jarldom of England
 Vassal of Norway: Jarldom of Jórvík
+Vassal of Denmark: Jarldom of the Danelaw
 Vassal of Sweden: Jarldom of England
 Vassal of Venice/Genoa: Colony of England
 Vassal of Novgorod/Kiev: Principality of England
@@ -641,7 +642,7 @@ After 1281 (turn 227): Kingdom of Scotland
 Default: Kingdom of Alba
 Initial: Scottish Peoples
 
-<Dutch>
+<Holland>
 Vassal of Byzantium: Exarchate of Batavia
 Vassal of France: County of Flanders
 Vassal of Burgundy: Burgundian Netherlands
@@ -668,5 +669,105 @@ Merchant Republic civic: Republic of the Seven United Netherlands
 Islam State Religion: Sultanate of the Netherlands
 Controls Flanders: United Kingdom of the Netherlands
 Default: Kingdom of the Netherlands
+Initial: Dutch Peoples
 Initial: Batavian Peoples
+
+<Germany>
+Vassal of Byzantium: Exarchate of Germania
+Vassal of France/Burgundy: Duchy of Alsace
+Vassal of Arabia/Cordoba/Morocco: Emirate of Almaniya
+Vassal of Castile/Aragon: Viceroyalty of Germany
+Vassal of Norway: Jarldom of Germany
+Vassal of Denmark: Duchy of Holstein
+Vassal of Sweden: Duchy of Bremen-Verden
+Vassal of Venice/Genoa: Colony of Germany
+Vassal of Novgorod/Kiev: Principality of Germany
+Vassal of Muscovy: Guberniya of Germany
+Vassal of Prussia: March of Brandenburg
+Vassal of England: Duchy of Brunswick-Lüneburg
+Vassal of Scotland: Mormaerdom of Germany
+Vassal of Hungary: Banate of Germany
+Vassal of Austria: Kingdom of Germany
+Vassal of Ottomans: Eyalet of Almanya
+Vassal of Poland/Lithuania: Voivodeship of Germany
+Vassal of Bulgaria: Zhupa of Germany
+Generic Vassal: Province of Germany
+
+Merchant Republic civic, Islam State Religion: Islamic Republic of Germany
+Merchant Republic civic, controls Pomerania: Hanseatic League
+Merchant Republic civic: Republic of Germany
+Islam State Religion: Sultanate of Germany
+After 962 (turn 121), at least 7 provinces: Holy Roman Empire
+After 911 (turn 103): Kingdom of Germany
+Default: Kingdom of East Francia
+Initial: Germanic Peoples
+
+<Austria>
+Vassal of Byzantium: Exarchate of Noricum
+Vassal of France/Burgundy: Duchy of Austria
+Vassal of Arabia/Cordoba/Morocco: Emirate of an-Nimsa
+Vassal of Castile/Aragon: Viceroyalty of Austria
+Vassal of Norway/Denmark/Sweden: Jarldom of Austria
+Vassal of Venice/Genoa: Colony of Austria
+Vassal of Novgorod/Kiev: Principality of Austria
+Vassal of Muscovy: Guberniya of Austria
+Vassal of Germany/Prussia: March of Austria
+Vassal of England: Earldom of Austria
+Vassal of Scotland: Mormaerdom of Austria
+Vassal of Hungary: Banate of Austria
+Vassal of Ottomans: Eyalet of Avusturya
+Vassal of Poland/Lithuania: Voivodeship of Austria
+Vassal of Bulgaria: Zhupa of Austria
+Generic Vassal: Province of Austria
+
+Merchant Republic civic, Islam State Religion: Islamic Republic of Austria
+Merchant Republic civic: Republic of Austria
+Islam State Religion: Habsburg Sultanate
+Has Germany as Vassal: Holy Roman Empire
+At least 3 unstable provinces: Habsburg Empire
+At least 7 provinces: Habsburg Empire
+After 1453 (turn 285): Archduchy of Austria
+At least 5 provinces: Archduchy of Austria
+Default: Duchy of Austria
+Initial: South German Peoples
+
+<Prussia>
+Vassal of Byzantium: Exarchate of Aestia
+Vassal of France/Burgundy: Duchy of Prussia
+Vassal of Arabia/Cordoba/Morocco: Emirate of Brusya
+Vassal of Castile/Aragon: Viceroyalty of Prussia
+Vassal of Denmark/Sweden, controls Pomerania: Duchy of Pomerania
+Vassal of Denmark, controls Estonia: Duchy of Estonia
+Vassal of Sweden, controls Livonia: Duchy of Livonia
+Vassal of Norway/Denmark/Sweden: Jarldom of Prussia
+Vassal of Venice/Genoa: Colony of Prussia
+Vassal of Novgorod/Kiev: Principality of Prussia
+Vassal of Muscovy, controls Livonia: Guberniya of Livonia
+Vassal of Muscovy: Guberniya of Prussia
+Vassal of Germany, controls Brandenburg: March of Brandenburg
+Vassal of Germany: March of Prussia
+Vassal of England: Earldom of Prussia
+Vassal of Scotland: Mormaerdom of Prussia
+Vassal of Hungary: Banate of Prussia
+Vassal of Austria, controls Brandenburg: March of Lusatia
+Vassal of Austria: Habsburg Prussia
+Vassal of Ottomans: Eyalet of Prusya
+Vassal of Poland: Royal Prussia
+Vassal of Lithuania, controls Livonia: Duchy of Livonia
+Vassal of Lithuania: Duchy of Scalovia
+Vassal of Bulgaria: Zhupa of Prussia
+Generic Vassal: Province of Prussia
+
+Merchant Republic civic, Islam State Religion: Islamic Republic of Prussia
+Merchant Republic civic: Republic of Prussia
+Islam State Religion: Sultanate of Prussia
+Catholic State Religion, Theocracy civic, controls Prussia: Teutonic Order
+Catholic State Religion, Theocracy civic, controls Livonia: Livonian Order
+Catholic State Religion, Theocracy civic: Teutonic Order
+Controls Brandenburg, at least 5 provinces: Kingdom of Prussia
+Controls Brandenburg: Duchy of Brandenburg-Prussia
+Controls Pomerania: Duchy of Prussia
+Default: Duchy of Prussia
+Initial: Teutonic Knights
+
 

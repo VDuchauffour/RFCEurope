@@ -52,7 +52,7 @@ class CvPediaUnit:
 		self.H_UNIT_ANIMATION = self.H_UNIT_PANE - 8
 		self.X_ROTATION_UNIT_ANIMATION = -20
 		self.Z_ROTATION_UNIT_ANIMATION = 30
-		self.SCALE_ANIMATION = 0.7
+		self.SCALE_ANIMATION = 0.82
 
 		self.X_PREREQ_PANE = self.X_UNIT_PANE
 		self.Y_PREREQ_PANE = self.Y_UNIT_PANE + self.H_UNIT_PANE + 5

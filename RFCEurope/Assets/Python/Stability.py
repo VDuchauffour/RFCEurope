@@ -487,14 +487,14 @@ class Stability:
 
 	def collapseCivilWar(self, iPlayer, iStability):
 		pPlayer = gc.getPlayer(iPlayer)
-		if iPlayer != utils.getHumanID():
-			print ("COLLAPSE: CIVIL WAR", gc.getPlayer(iPlayer).getCivilizationAdjective(0), "Stability:", iStability)
-			if gc.getPlayer(utils.getHumanID()).canContact(iPlayer):
-				CyInterface().addMessage(utils.getHumanID(), False, con.iDuration, gc.getPlayer(iPlayer).getCivilizationDescription(0) + " " + CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
+		iHuman = utils.getHumanID()
+		print ("COLLAPSE: CIVIL WAR", pPlayer.getCivilizationAdjective(0), "Stability:", iStability)
+		if iPlayer != iHuman:
+			if gc.getPlayer(iHuman).canContact(iPlayer):
+				CyInterface().addMessage(iHuman, False, con.iDuration, pPlayer.getCivilizationDescription(0) + " " + CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_STABILITY", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
 			utils.killAndFragmentCiv(iPlayer, False, False)
 		elif pPlayer.getNumCities() > 1:
-			print ("COLLAPSE: CIVIL WAR", gc.getPlayer(iPlayer).getCivilizationAdjective(0), "Stability:", iStability)
-			CyInterface().addMessage(iPlayer, True, con.iDuration, CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_HUMAN", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
+			CyInterface().addMessage(iPlayer, True, con.iDuration, CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_STABILITY_HUMAN", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
 			utils.killAndFragmentCiv(iPlayer, False, True)
 			self.zeroStability( iPlayer )
 
@@ -629,9 +629,10 @@ class Stability:
 			iCityStability += 8
 		# Absinthe: Westminster Abbey faith-stability effect
 		if pPlayer.countNumBuildings(xml.iWestminster) > 0:
-			if pPlayer.getCivics(0) == xml.iCivicDivineMonarchy:
-				iFaith = pPlayer.getFaith()
-				iCityStability += iFaith / 20
+			# would be better, if the stability bonus was also only applied for Divine Monarchy?
+			#if pPlayer.getCivics(0) == xml.iCivicDivineMonarchy:
+			iFaith = pPlayer.getFaith()
+			iCityStability += iFaith / 20
 
 		pPlayer.setStabilityVary( iCathegoryCities, iCityStability)
 

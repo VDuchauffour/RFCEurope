@@ -140,6 +140,7 @@ class AIWars:
 			#skip if already in a world war
 			#print ("AIWars iTargetCiv missing", iCiv)
 			iCiv, iTargetCiv = self.pickCivs()
+			print ("AIWars chosen civs: iCiv, iTargetCiv", iCiv, iTargetCiv)
 			if 0 <= iTargetCiv <= iNumTotalPlayers:
 				if iTargetCiv != con.iPope and iCiv != con.iPope and iCiv != iTargetCiv:
 					self.initWar(iCiv, iTargetCiv, iGameTurn, iMaxInterval, iMinInterval)
@@ -148,7 +149,7 @@ class AIWars:
 				print ("AIWars iTargetCiv missing again", iCiv)
 
 			#make sure we don't miss this
-			print("Skipping AIWar")
+			print ("Skipping AIWar")
 			self.setNextTurnAIWar(iGameTurn + iMinInterval + gc.getGame().getSorenRandNum(iMaxInterval-iMinInterval, 'random turn'))
 
 

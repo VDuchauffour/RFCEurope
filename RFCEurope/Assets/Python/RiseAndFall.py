@@ -940,10 +940,14 @@ class RiseAndFall:
 					# Absinthe: if more than one third is captured, the civ collapses
 					if iLostCities*2 > iNumCities+1 and iNumCities > 0:
 						print ("COLLAPSE BARBS", gc.getPlayer(iCiv).getCivilizationAdjective(0))
+						iHuman = utils.getHumanID()
 						if not pCiv.isHuman():
-							utils.killAndFragmentCiv(iCiv, False, False)
+							if gc.getPlayer(iHuman).canContact(iCiv):
+								CyInterface().addMessage(iHuman, False, con.iDuration, pCiv.getCivilizationDescription(0) + " " + CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_BARBS", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
+							utils.killAndFragmentCiv(iCiv, True, False)
 						elif pCiv.getNumCities() > 1:
-							utils.killAndFragmentCiv(iCiv, False, True)
+							CyInterface().addMessage(iCiv, True, con.iDuration, CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_BARBS_HUMAN", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
+							utils.killAndFragmentCiv(iCiv, True, True)
 
 		# Absinthe: another instance of cities revolting, but only in case of very bad stability
 		iRndnum = gc.getGame().getSorenRandNum(iNumPlayers, 'starting count')
@@ -976,9 +980,13 @@ class RiseAndFall:
 					# Absinthe: pass for small civs, we have bad stability collapses and collapseMotherland anyway, which is better suited for the collapse of those
 					if lNumCitiesLastTime[iCiv] > 2 and iNumCitiesCurrently * 2 <= lNumCitiesLastTime[iCiv]:
 						print ("COLLAPSE GENERIC", pCiv.getCivilizationAdjective(0), iNumCitiesCurrently * 2, "<=", lNumCitiesLastTime[iCiv])
+						iHuman = utils.getHumanID()
 						if not pCiv.isHuman():
+							if gc.getPlayer(iHuman).canContact(iCiv):
+								CyInterface().addMessage(iHuman, False, con.iDuration, pCiv.getCivilizationDescription(0) + " " + CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_DECLINE", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
 							utils.killAndFragmentCiv(iCiv, False, False)
 						elif pCiv.getNumCities() > 1:
+							CyInterface().addMessage(iCiv, True, con.iDuration, CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_DECLINE_HUMAN", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
 							utils.killAndFragmentCiv(iCiv, False, True)
 
 
@@ -995,10 +1003,14 @@ class RiseAndFall:
 					if iCiv in [con.iCordoba, con.iAragon] and pCiv.getRespawnedAlive():
 						continue
 					if not gc.safeMotherland( iCiv ):
-						print ("COLLAPSE MOTHERLAND", gc.getPlayer(iCiv).getCivilizationAdjective(0))
+						print ("COLLAPSE MOTHERLAND", pCiv.getCivilizationAdjective(0))
+						iHuman = utils.getHumanID()
 						if not pCiv.isHuman():
+							if gc.getPlayer(iHuman).canContact(iCiv):
+								CyInterface().addMessage(iHuman, False, con.iDuration, pCiv.getCivilizationDescription(0) + " " + CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_MOTHERLAND", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
 							utils.killAndFragmentCiv(iCiv, False, False)
 						elif pCiv.getNumCities() > 1:
+							CyInterface().addMessage(iCiv, True, con.iDuration, CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_MOTHERLAND_HUMAN", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
 							utils.killAndFragmentCiv(iCiv, False, True)
 
 
@@ -1499,7 +1511,7 @@ class RiseAndFall:
 	def initBirth(self, iCurrentTurn, iBirthYear, iCiv):
 		iHuman = utils.getHumanID()
 		#print("iBirthYear:%d, iCurrentTurn:%d" %(iBirthYear, iCurrentTurn))
-		#print("getSpawnDelay:%d, getFlipsDelay:%d" %(self.getSpawnDelay(iCiv), self.getFlipsDelay(iCiv)))
+		print ("Spawn for civ:%d, turn:%d, getSpawnDelay:%d, getFlipsDelay:%d" %(iCiv, iCurrentTurn, self.getSpawnDelay(iCiv), self.getFlipsDelay(iCiv)))
 		if iCurrentTurn == iBirthYear-1 + self.getSpawnDelay(iCiv) + self.getFlipsDelay(iCiv):
 			tCapital = tCapitals[iCiv]
 			tTopLeft = tCoreAreasTL[iCiv]
@@ -1508,7 +1520,7 @@ class RiseAndFall:
 			tBroaderBottomRight = tBroaderAreasBR[iCiv]
 			if self.getFlipsDelay(iCiv) == 0: #city hasn't already been founded
 
-				# Absinthe: kill all foreign units on the capital plot - this probably fixes a couple instances of the -1 turn autoplay bug
+				# Absinthe: for the human player, kill all foreign units on the capital plot - this probably fixes a couple instances of the -1 turn autoplay bug
 				if iCiv == iHuman:
 					killPlot = gc.getMap().plot(tCapital[0], tCapital[1])
 					iNumUnitsInAPlot = killPlot.getNumUnits()
@@ -1521,6 +1533,7 @@ class RiseAndFall:
 							else:
 								iSkippedUnit += 1
 
+				# Absinthe: if the plot is owned by a civ, bDeleteEverything becomes true unless there is a human city in the 1+8 neighbour plots.
 				bDeleteEverything = False
 				if gc.getMap().plot(tCapital[0], tCapital[1]).isOwned():
 					if iCiv == iHuman or not gc.getPlayer(iHuman).isAlive():
@@ -1535,7 +1548,7 @@ class RiseAndFall:
 								print ("bDeleteEverything 2")
 								break
 				print ("bDeleteEverything", bDeleteEverything)
-				#print ("bDeleteTest", gc.getMap().plot(tCapital[0], tCapital[1]).isOwned())
+
 				if not gc.getMap().plot(tCapital[0], tCapital[1]).isOwned():
 					#if (iCiv == iNetherlands or iCiv == iPortugal): #dangerous starts
 					#	self.setDeleteMode(0, iCiv)
@@ -1650,7 +1663,6 @@ class RiseAndFall:
 
 	def birthInFreeRegion(self, iCiv, tCapital, tTopLeft, tBottomRight):
 		startingPlot = gc.getMap().plot( tCapital[0], tCapital[1] )
-		#self.convertSurroundingPlotCulture(iCiv, tTopLeft, tBottomRight)
 		if self.getFlipsDelay(iCiv) == 0:
 			iFlipsDelay = self.getFlipsDelay(iCiv) + 2
 			print ("Entering birthInFreeRegion")
@@ -1702,7 +1714,7 @@ class RiseAndFall:
 
 				# Absinthe: there was another mistake here with barbarian and indy unit flips... 
 				#			we don't simply want to check an area based on distance from capital, as it might lead out from the actual spawn area
-				#			so we check plots which are in the core area, and in 4 distance for barb units, 2 distance for indies
+				#			so we only check plots which are in the core area: in 4 distance for barb units, 2 distance for indies
 				lPlotBarbFlip = []
 				lPlotIndyFlip = []
 				# if inside the core rectangle and extra plots, and in 4 (barb) or 2 (indy) distance from the starting plot, append to barb or indy flip zone
@@ -1715,11 +1727,17 @@ class RiseAndFall:
 						lPlotBarbFlip.append(tPlot)
 					elif tPlot in lSurroundingPlots4:
 						lPlotBarbFlip.append(tPlot)
-				utils.flipUnitsInPlots(lPlotBarbFlip, iCiv, iBarbarian, True, True) #remaining barbs in the region now belong to the new civ
-				#utils.killUnitsInPlots(lPlotBarbFlip, iBarbarian)
+				# remaining barbs in the region: killed for the human player, flipped for the AI
+				if iCiv == utils.getHumanID():
+					utils.killUnitsInPlots(lPlotBarbFlip, iBarbarian)
+				else:
+					utils.flipUnitsInPlots(lPlotBarbFlip, iCiv, iBarbarian, True, True)
 				for iIndyCiv in range( con.iIndepStart, con.iIndepEnd + 1 ):
-					utils.flipUnitsInPlots(lPlotIndyFlip, iCiv, iIndyCiv, True, False) #remaining independents in the region now belong to the new civ
-					#utils.killUnitsInPlots(lPlotIndyFlip, iIndyCiv)
+					# remaining independents in the region: killed for the human player, flipped for the AI
+					if iCiv == utils.getHumanID():
+						utils.killUnitsInPlots(lPlotIndyFlip, iIndyCiv)
+					else:
+						utils.flipUnitsInPlots(lPlotIndyFlip, iCiv, iIndyCiv, True, False)
 				self.assignTechs(iCiv)
 				utils.setPlagueCountdown(iCiv, -con.iImmunity)
 				utils.clearPlague(iCiv)
@@ -1729,11 +1747,13 @@ class RiseAndFall:
 		else: #starting units have already been placed, now the second part
 			iNumAICitiesConverted, iNumHumanCitiesToConvert = self.convertSurroundingCities(iCiv, tTopLeft, tBottomRight)
 			self.convertSurroundingPlotCulture(iCiv, tTopLeft, tBottomRight)
-			utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iBarbarian, False, True) #remaining barbs in the region now belong to the new civ
-			utils.flipUnitsInPlots(lExtraPlots[iCiv], iCiv, iBarbarian, False, True) #remaining barbs in the region now belong to the new civ
+			if iCiv != utils.getHumanID():
+				utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iBarbarian, False, True) #remaining barbs in the region now belong to the new civ
+				utils.flipUnitsInPlots(lExtraPlots[iCiv], iCiv, iBarbarian, False, True) #remaining barbs in the region now belong to the new civ
 			for iIndyCiv in range( con.iIndepStart, con.iIndepEnd + 1 ):
-				utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iIndyCiv, False, False) #remaining independents in the region now belong to the new civ
-				utils.flipUnitsInPlots(lExtraPlots[iCiv], iCiv, iIndyCiv, False, False) #remaining independents in the region now belong to the new civ
+				if iCiv != utils.getHumanID():
+					utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iIndyCiv, False, False) #remaining independents in the region now belong to the new civ
+					utils.flipUnitsInPlots(lExtraPlots[iCiv], iCiv, iIndyCiv, False, False) #remaining independents in the region now belong to the new civ
 			print ("utils.flipUnitsInArea()")
 			#cover plots revealed by the catapult
 			plotZero = gc.getMap().plot( 32, 0 ) #sync with rfcebalance module
@@ -1768,11 +1788,11 @@ class RiseAndFall:
 		#now starting units must be placed
 		if iNumAICitiesConverted > 0:
 			#utils.debugTextPopup( 'iConverted OK for placing units' )
-			# Absinthe: there is an issue that core area are not calculated correctly for flips, as the additional tiles in lExtraPlots are not checked here
+			# Absinthe: there is an issue that core area is not calculated correctly for flips, as the additional tiles in lExtraPlots are not checked here
 			#			so if all flipped cities are outside of the core area (they are in the "exceptions"), the civ will start without it's starting units and techs
 			print ("tTopLeft, tBottomRight", tTopLeft, tBottomRight)
 			plotList = utils.squareSearch( tTopLeft, tBottomRight, utils.ownedCityPlots, iCiv )
-			print ("plotList", plotList)
+			#print ("plotList", plotList)
 			# Absinthe: add the exception plots
 			for tPlot in lExtraPlots[iCiv]:
 				plot = gc.getMap().plot( tPlot[0], tPlot[1] )
@@ -1795,7 +1815,7 @@ class RiseAndFall:
 				utils.flipUnitsInPlots(con.lExtraPlots[iCiv], iCiv, iIndyCiv, False, False) #remaining independents in the region now belong to the new civ
 
 		else: #search another place
-			# Absinthe: there is an issue that core area are not calculated correctly for flips, as the additional tiles in lExtraPlots are not checked here
+			# Absinthe: there is an issue that core area is not calculated correctly for flips, as the additional tiles in lExtraPlots are not checked here
 			#			so if all flipped cities are outside of the core area (they are in the "exceptions"), the civ will start without it's starting units and techs
 			plotList = utils.squareSearch( tTopLeft, tBottomRight, utils.goodPlots, [] )
 			# Absinthe: add the exception plots
@@ -2384,6 +2404,7 @@ class RiseAndFall:
 				utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
 				utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 1)
 				utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
+				utils.makeUnit(xml.iLongSwordsman, iCiv, tPlot, 2)
 		elif iCiv == iPortugal:
 			utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
 			utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)

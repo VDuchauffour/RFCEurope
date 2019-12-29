@@ -107,7 +107,7 @@ class CvPediaBuilding:
 		screen.addPanel(self.top.getNextWidgetName(), "", "", false, false, self.X_ICON, self.Y_ICON, self.W_ICON, self.H_ICON, PanelStyles.PANEL_STYLE_MAIN)
 		screen.addDDSGFC(self.top.getNextWidgetName(), gc.getBuildingInfo(self.iBuilding).getButton(), self.X_ICON + self.W_ICON/2 - self.ICON_SIZE/2, self.Y_ICON + self.H_ICON/2 - self.ICON_SIZE/2, self.ICON_SIZE, self.ICON_SIZE, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
-		# Unit animation
+		# Building animation
 		screen.addBuildingGraphicGFC(self.top.getNextWidgetName(), self.iBuilding, self.X_BUILDING_ANIMATION, self.Y_BUILDING_ANIMATION, self.W_BUILDING_ANIMATION, self.H_BUILDING_ANIMATION, WidgetTypes.WIDGET_GENERAL, -1, -1, self.X_ROTATION_BUILDING_ANIMATION, self.Z_ROTATION_BUILDING_ANIMATION, self.SCALE_ANIMATION, True)
 
 		self.placeStats()
@@ -339,14 +339,10 @@ class CvPediaBuilding:
 		iCount = 0
 		for iBuilding in range(gc.getNumBuildingInfos()): #Rhye
 			if (self.getBuildingType(iBuilding) == bWonder and not gc.getBuildingInfo(iBuilding).isGraphicalOnly()):
-				#Rhye - start
-				#listBuildings.append(iBuilding)
-				#iCount += 1
 				# 3Miro: Plague not appear as building
 				if (iBuilding != xml.iPlague):
 					listBuildings.append(iBuilding)
 					iCount += 1
-				#Rhye - end
 
 		listSorted = [(0,0)] * iCount
 		iI = 0

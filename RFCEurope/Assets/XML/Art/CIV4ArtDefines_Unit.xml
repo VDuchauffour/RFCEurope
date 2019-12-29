@@ -356,7 +356,7 @@
 			<Type>ART_DEF_UNIT_MERCHANT</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,3,4</Button>
 			<fScale>0.46</fScale>
-			<fInterfaceScale>0.9</fInterfaceScale>
+			<fInterfaceScale>0.88</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/GreatPeople/Merchant/GreatMerchantAncient.nif</NIF>
@@ -500,7 +500,7 @@
 			<Type>ART_DEF_UNIT_ISLAMIC_MISSIONARY</Type>
 			<Button>Art/Interface/Buttons/Units/missionary_muslim.dds</Button>
 			<fScale>0.46</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.96</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Religion_Islamic_Missionary/Islamic_missionary.nif</NIF>
@@ -524,7 +524,7 @@
 			<Type>ART_DEF_UNIT_CATHOLIC_MISSIONARY</Type>
 			<Button>Art/Interface/Buttons/Units/missionary_catholic.dds</Button>
 			<fScale>0.4</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.94</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Missionary/Catholic/ChristianMissionary.nif</NIF>
@@ -548,7 +548,7 @@
 			<Type>ART_DEF_UNIT_ORTHODOX_MISSIONARY</Type>
 			<Button>Art/Interface/Buttons/Units/missionary_orthodox.dds</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>0.96</fInterfaceScale>
+			<fInterfaceScale>0.94</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Religion_Orthodox_Missionary/OrthodoxPriest.nif</NIF>
@@ -572,7 +572,7 @@
 			<Type>ART_DEF_UNIT_PROTESTANT_MISSIONARY</Type>
 			<Button>Art/Interface/Buttons/Units/missionary_protestant.dds</Button>
 			<fScale>0.4</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.94</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Missionary/Protestant/ChristianMissionary.nif</NIF>
@@ -652,7 +652,7 @@
 			<Type>ART_DEF_UNIT_WORKBOAT</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,4,9</Button>
 			<fScale>0.18</fScale>
-			<fInterfaceScale>1.08</fInterfaceScale>
+			<fInterfaceScale>1.1</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Workboat_Ancient/Workboat_Ancient.nif</NIF>
@@ -689,7 +689,7 @@
 			<Type>ART_DEF_UNIT_GALLEY</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,3,9</Button>
 			<fScale>0.18</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>0.96</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Galley/Galley.nif</NIF>
@@ -728,7 +728,7 @@
 			<Type>ART_DEF_UNIT_WAR_GALLEY</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,7,5</Button>
 			<fScale>0.13</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>0.96</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/wargalley/wargalley.nif</NIF>
@@ -767,7 +767,7 @@
 			<Type>ART_DEF_UNIT_COGGE</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,4,4</Button>
 			<fScale>0.22</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>0.96</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Cogge/EE2_Cogge.nif</NIF>
@@ -806,7 +806,7 @@
 			<Type>ART_DEF_UNIT_HOLK</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,5,4</Button>
 			<fScale>0.16</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>0.96</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Holk/EE2_Holk.nif</NIF>
@@ -845,7 +845,7 @@
 			<Type>ART_DEF_UNIT_GUN_GALLEY</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,8,4</Button>
 			<fScale>0.12</fScale>
-			<fInterfaceScale>0.9</fInterfaceScale>
+			<fInterfaceScale>0.78</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/GunGalley/galley.nif</NIF>
@@ -884,7 +884,7 @@
 			<Type>ART_DEF_UNIT_CARAVEL</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,1,9</Button>
 			<fScale>0.24</fScale>
-			<fInterfaceScale>0.9</fInterfaceScale>
+			<fInterfaceScale>0.76</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Caravel/Caravel.nif</NIF>
@@ -923,7 +923,7 @@
 			<Type>ART_DEF_UNIT_CARRACK</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,3,4</Button>
 			<fScale>0.20</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.86</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Carrack/EE2_Carrack.nif</NIF>
@@ -962,7 +962,7 @@
 			<Type>ART_DEF_UNIT_GALLEON</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,5,9</Button>
 			<fScale>0.2</fScale>
-			<fInterfaceScale>0.8</fInterfaceScale>
+			<fInterfaceScale>0.66</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Galleon/Galleon.nif</NIF>
@@ -1001,7 +1001,7 @@
 			<Type>ART_DEF_UNIT_PRIVATEER</Type>
 			<Button>,-,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,11</Button>
 			<fScale>0.2</fScale>
-			<fInterfaceScale>0.9</fInterfaceScale>
+			<fInterfaceScale>0.82</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Privateer/Privateer.nif</NIF>
@@ -1040,7 +1040,7 @@
 			<Type>ART_DEF_UNIT_FRIGATE</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,2,9</Button>
 			<fScale>0.24</fScale>
-			<fInterfaceScale>0.8</fInterfaceScale>
+			<fInterfaceScale>0.66</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Frigate/Frigate.nif</NIF>
@@ -1172,7 +1172,7 @@
 			<Type>ART_DEF_UNIT_LONG_SWORDSMAN</Type>
 			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,2,2</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.06</fInterfaceScale>
+			<fInterfaceScale>1.1</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Charlemagne_HeavySwordsman/HeavySwordsman.nif</NIF>
@@ -1316,7 +1316,7 @@
 			<Type>ART_DEF_UNIT_ARCHER_GERMAN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,6,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/German Archer/Archer_Chinese_FX_2.nif</NIF>
@@ -1340,7 +1340,7 @@
 			<Type>ART_DEF_UNIT_ARCHER_GERMAN_2</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,6,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/German Archer/Archer_Chinese_FX.nif</NIF>
@@ -1364,7 +1364,7 @@
 			<Type>ART_DEF_UNIT_ARCHER_GERMAN_3</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,6,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/German Archer/Archer_Chinese_FX_3.nif</NIF>
@@ -1532,7 +1532,7 @@
 			<Type>ART_DEF_UNIT_HORSEMAN_GERMAN</Type>
 			<Button>,-,Art/Interface/Buttons/Warlords_Atlas_1.dds,3,9</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Horseman_German/scout.nif</NIF>
@@ -1556,7 +1556,7 @@
 			<Type>ART_DEF_UNIT_HORSE_ARCHER</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,7</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/HorseArcher/HorseArcher.nif</NIF>
@@ -1580,7 +1580,7 @@
 			<Type>ART_DEF_UNIT_MOUNTED_INFANTRY</Type>
 			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,3,1</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Charlemagne_MountedInfantry/MountedInfantry.nif</NIF>
@@ -1604,7 +1604,7 @@
 			<Type>ART_DEF_UNIT_LANCER</Type>
 			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,1,1</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Charlemagne_LightCavalry/LightCavalry.nif</NIF>
@@ -1628,7 +1628,7 @@
 			<Type>ART_DEF_UNIT_HEAVY_LANCER</Type>
 			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,2,1</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.08</fInterfaceScale>
+			<fInterfaceScale>1.02</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Charlemagne_HeavyCavalry/HeavyCavalry.nif</NIF>
@@ -1652,7 +1652,7 @@
 			<Type>ART_DEF_UNIT_KNIGHT</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,8,1</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Knight/Knight.nif</NIF>
@@ -1676,7 +1676,7 @@
 			<Type>ART_DEF_UNIT_PISTOLIER</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,6,6</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Pistolier/pistolier.nif</NIF>
@@ -1700,7 +1700,7 @@
 			<Type>ART_DEF_UNIT_CUIRASSIER</Type>
 			<Button>,-,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,3,11</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Cuirassier/Cuirassier.nif</NIF>
@@ -1724,7 +1724,7 @@
 			<Type>ART_DEF_UNIT_HUSSAR</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,6,5</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Hussar/hussar.nif</NIF>
@@ -1748,7 +1748,7 @@
 			<Type>ART_DEF_UNIT_DRAGOON</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,8,3</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.12</fInterfaceScale>
+			<fInterfaceScale>1.06</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/NapoleonicDragoons/cavalry.nif</NIF>
@@ -1772,7 +1772,7 @@
 			<Type>ART_DEF_UNIT_CATAPULT</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,8</Button>
 			<fScale>0.65</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.02</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Catapult/Catapult.nif</NIF>
@@ -1806,7 +1806,7 @@
 			<Type>ART_DEF_UNIT_TREBUCHET</Type>
 			<Button>,-,Art/Interface/Buttons/Warlords_Atlas_1.dds,6,7</Button>
 			<fScale>0.40</fScale>
-			<fInterfaceScale>0.8</fInterfaceScale>
+			<fInterfaceScale>0.76</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Trebuchet/Trebuchet.nif</NIF>
@@ -1841,7 +1841,7 @@
 			<Type>ART_DEF_UNIT_BOMBARD</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,8,1</Button>
 			<fScale>0.40</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.96</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Bombard/BombardB.nif</NIF>
@@ -1873,7 +1873,7 @@
 			<Type>ART_DEF_UNIT_CANNON</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,2,4</Button>
 			<fScale>0.53</fScale>
-			<fInterfaceScale>1.2</fInterfaceScale>
+			<fInterfaceScale>1.12</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/EarlyCannon/cannon.nif</NIF>
@@ -1905,7 +1905,7 @@
 			<Type>ART_DEF_UNIT_FIELD_ARTILLERY</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,6,8</Button>
 			<fScale>0.53</fScale>
-			<fInterfaceScale>1.2</fInterfaceScale>
+			<fInterfaceScale>1.12</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Cannon/Cannon.nif</NIF>
@@ -2203,7 +2203,7 @@
 			<Type>ART_DEF_UNIT_ARCHER_HUNGARIAN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,6,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Hungarian/hungarian archer/Archer_Magyar.nif</NIF>
@@ -2443,7 +2443,7 @@
 			<Type>ART_DEF_UNIT_CANNON_HUNGARIAN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,2,4</Button>
 			<fScale>0.57</fScale>
-			<fInterfaceScale>1.2</fInterfaceScale>
+			<fInterfaceScale>1.12</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Hungarian/hungarian cannon/cannon_fx.nif</NIF>
@@ -2475,7 +2475,7 @@
 			<Type>ART_DEF_UNIT_HORSE_ARCHER_HUNGARIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,7</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.15</fInterfaceScale>
+			<fInterfaceScale>1.1</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Hungarian/hungarian horse archer/HungaryHorsearcherfinal.nif</NIF>
@@ -2499,7 +2499,7 @@
 			<Type>ART_DEF_UNIT_KNIGHT_HUNGARIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,8,1</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.08</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Hungarian/hungarian knight/heavycavalry.nif</NIF>
@@ -2523,7 +2523,7 @@
 			<Type>ART_DEF_UNIT_HUSSAR_CAVALRY_HUNGARIAN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,2,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.06</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Hungarian/hungarian hussar cavalry/hussar.nif</NIF>
@@ -2549,7 +2549,7 @@
 			<Type>ART_DEF_UNIT_ARCHER_BYZANTINE</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,6,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Byzantine/Byzantine Archer/ByzantineArchers.nif</NIF>
@@ -2789,7 +2789,7 @@
 			<Type>ART_DEF_UNIT_HORSEMAN_BYZANTINE</Type>
 			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,1,1</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Byzantine/Byzantine Horseman/ByzantineHorsemanUnarmoredHorse.nif</NIF>
@@ -2813,7 +2813,7 @@
 			<Type>ART_DEF_UNIT_CUIRASSIER_BYZANTINE</Type>
 			<Button>,-,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,3,11</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Byzantine/Byzantine Cuirassier/Cuirassier.nif</NIF>
@@ -2837,7 +2837,7 @@
 			<Type>ART_DEF_UNIT_DROMON_BYZANTINE</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,7,5</Button>
 			<fScale>0.13</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>0.96</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Byzantine/Dromon/wargalley.nif</NIF>
@@ -2876,7 +2876,7 @@
 			<Type>ART_DEF_UNIT_PRONOIAR</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,8,1</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Byzantine/Byzantine Cataphract/ByzantineCataphract.nif</NIF>
@@ -2974,7 +2974,7 @@
 			<Type>ART_DEF_UNIT_ARCHER_VIKING</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,6,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Norse/Viking Archer/VikingArcher.nif</NIF>
@@ -3046,7 +3046,7 @@
 			<Type>ART_DEF_UNIT_HORSEMAN_VIKING</Type>
 			<Button>,-,Art/Interface/Buttons/Warlords_Atlas_1.dds,3,9</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.08</fInterfaceScale>
+			<fInterfaceScale>1.02</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Norse/Viking Horseman/VikingHorsemanFINAL.nif</NIF>
@@ -3070,7 +3070,7 @@
 			<Type>ART_DEF_UNIT_KNIGHT_VIKING</Type>
 			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,1,1</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.08</fInterfaceScale>
+			<fInterfaceScale>1.02</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Norse/viking heavy cavalry/vikingheavycavalryunarmoredhorse.nif</NIF>
@@ -3216,7 +3216,7 @@
 			<Type>ART_DEF_UNIT_HORSEMAN_EURASIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Warlords_Atlas_1.dds,3,9</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.05</fInterfaceScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Horseman_Eurasian/Horseman_Eurasian.nif</NIF>
@@ -3240,7 +3240,7 @@
 			<Type>ART_DEF_UNIT_ARCHER_RUSSIAN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,6,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Russian/Russian Archer/archer.nif</NIF>
@@ -3576,7 +3576,7 @@
 			<Type>ART_DEF_UNIT_MERCHANT_RUSSIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,3,4</Button>
 			<fScale>0.46</fScale>
-			<fInterfaceScale>0.9</fInterfaceScale>
+			<fInterfaceScale>0.88</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Russian/Rus Great Merchant/RusGreatMerchant.nif</NIF>
@@ -3624,7 +3624,7 @@
 			<Type>ART_DEF_UNIT_CANNON_RUSSIAN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,2,4</Button>
 			<fScale>0.53</fScale>
-			<fInterfaceScale>1.2</fInterfaceScale>
+			<fInterfaceScale>1.12</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Russian/Rus Cannon/Pre-PetrineCannon.nif</NIF>
@@ -3656,7 +3656,7 @@
 			<Type>ART_DEF_UNIT_CUIRASSIER_RUSSIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,3,11</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Russian/Rus Cuirassier/PrePetrineCuirassier.nif</NIF>
@@ -3680,7 +3680,7 @@
 			<Type>ART_DEF_UNIT_HORSE_ARCHER_RUSSIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,7</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Russian/Rus Horse Archer/PrePetrineHorsearcherPaddedArmorRed.nif</NIF>
@@ -3827,7 +3827,7 @@
 			<Type>ART_DEF_UNIT_ARCHER_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,4,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Arab/Arabian Archer/EarlyIslamicArcher.nif</NIF>
@@ -4067,7 +4067,7 @@
 			<Type>ART_DEF_UNIT_HORSEMAN_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Warlords_Atlas_1.dds,3,9</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/UU_Arabia_Ghazi/Horseman.nif</NIF>
@@ -4091,7 +4091,7 @@
 			<Type>ART_DEF_UNIT_HORSE_ARCHER_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,7</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Arab/Arab Horse Archer/arabhorsearcher.nif</NIF>
@@ -4115,7 +4115,7 @@
 			<Type>ART_DEF_UNIT_LANCER_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,1,1</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.08</fInterfaceScale>
+			<fInterfaceScale>1.02</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Arab/Arab Heavy Cavalry/Knight.nif</NIF>
@@ -4139,7 +4139,7 @@
 			<Type>ART_DEF_UNIT_HEAVY_CAVALRY_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,2,1</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Knight_Middle_East/Knight_Middle_East.nif</NIF>
@@ -4163,7 +4163,7 @@
 			<Type>ART_DEF_UNIT_ANSAR_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,8,1</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.08</fInterfaceScale>
+			<fInterfaceScale>1.02</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Arab/Arab Ansar/Knight.nif</NIF>
@@ -4187,7 +4187,7 @@
 			<Type>ART_DEF_UNIT_CAVALRY_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,6,6</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.12</fInterfaceScale>
+			<fInterfaceScale>1.06</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Arab/Arabian Cavalry/cavalry.nif</NIF>
@@ -4259,7 +4259,7 @@
 			<Type>ART_DEF_UNIT_CANNON_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,6,8</Button>
 			<fScale>0.53</fScale>
-			<fInterfaceScale>1.32</fInterfaceScale>
+			<fInterfaceScale>1.24</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Arab/Arabian Cannon/cannon.nif</NIF>
@@ -4291,7 +4291,7 @@
 			<Type>ART_DEF_UNIT_CUIRASSIER_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,3,11</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Arab/Arabian Cuirassier/Arab_Cuirassier.nif</NIF>
@@ -4387,7 +4387,7 @@
 			<Type>ART_DEF_UNIT_MERCHANT_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,3,4</Button>
 			<fScale>0.46</fScale>
-			<fInterfaceScale>0.9</fInterfaceScale>
+			<fInterfaceScale>0.88</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/artstyle_arab/Muslim GreatPeople/Merchant/GreatMerchantAncient.nif</NIF>
@@ -4533,7 +4533,7 @@
 			<Type>ART_DEF_UNIT_ARCHER_OTTOMAN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,6,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Ottoman/Ottoman Archer/Archer_Eurasian.nif</NIF>
@@ -4725,7 +4725,7 @@
 			<Type>ART_DEF_UNIT_HORSEMAN_OTTOMAN</Type>
 			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,1,1</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Ottoman/Ottoman Horseman/Horseman.nif</NIF>
@@ -4749,7 +4749,7 @@
 			<Type>ART_DEF_UNIT_QIZILBASH_HORSE_ARCHER</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,7</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.15</fInterfaceScale>
+			<fInterfaceScale>1.1</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Ottoman/Qizilbash HorseArcher/qizilbashhorsearcher.nif</NIF>
@@ -4773,7 +4773,7 @@
 			<Type>ART_DEF_UNIT_QIZILBASH_HORSEMAN</Type>
 			<Button>,-,Art/Interface/Buttons/Warlords_Atlas_1.dds,3,9</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Ottoman/Qizilbash Horseman/qizilbashhorse.nif</NIF>
@@ -4797,7 +4797,7 @@
 			<Type>ART_DEF_UNIT_KNIGHT_OTTOMAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,8,1</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.05</fInterfaceScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Ottoman/Ottoman Knight/knight.nif</NIF>
@@ -4821,7 +4821,7 @@
 			<Type>ART_DEF_UNIT_HEAVY_CAVALRY_OTTOMAN</Type>
 			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,2,1</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.05</fInterfaceScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Ottoman/Turk_Shock_Cavalry/Knight.nif</NIF>
@@ -4845,7 +4845,7 @@
 			<Type>ART_DEF_UNIT_CAVALRY_OTTOMAN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,6,5</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Ottoman/Ottoman Cavalry/cavalry.nif</NIF>
@@ -4893,7 +4893,7 @@
 			<Type>ART_DEF_UNIT_CANNON_OTTOMAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,6,8</Button>
 			<fScale>0.53</fScale>
-			<fInterfaceScale>1.28</fInterfaceScale>
+			<fInterfaceScale>1.2</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Ottoman/Ottoman Cannon/cannon.nif</NIF>
@@ -4951,7 +4951,7 @@
 			<Type>ART_DEF_UNIT_HUNGARIAN_HUSZAR</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,1,1</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.05</fInterfaceScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/UU_Hungarian_Huszar/HungarianHussarUnarmoredFINALXX.nif</NIF>
@@ -5007,7 +5007,7 @@
 			<Type>ART_DEF_UNIT_VENICE_GALLEAS</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,4,7</Button>
 			<fScale>0.28</fScale>
-			<fInterfaceScale>0.9</fInterfaceScale>
+			<fInterfaceScale>0.78</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/UU_Venice_Galleass/EE2_Galleas.nif</NIF>
@@ -5370,7 +5370,7 @@
 			<Type>ART_DEF_UNIT_PRUSSIA_DEATHS_HEAD_HUSSAR</Type>
 			<Button>Art/Interface/Buttons/Units/Prussia_DHHussar.dds</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/UU_Prussia_Totenkopfhusar/hussar.nif</NIF>
@@ -5396,7 +5396,7 @@
 			<Type>ART_DEF_UNIT_BULGARIAN_KONNIK</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,8,5</Button>
 			<fScale>0.43</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/UU_Bulgarian_Konnik/MongelKeshik.nif</NIF>
@@ -5420,7 +5420,7 @@
 			<Type>ART_DEF_UNIT_MOSCOW_BOYAR</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,8,2</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.08</fInterfaceScale>
+			<fInterfaceScale>1.02</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/UU_Moscow_Boyar/companion_cavalry.nif</NIF>
@@ -5444,7 +5444,7 @@
 			<Type>ART_DEF_UNIT_KIEV_DRUZHINA</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,1,4</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.05</fInterfaceScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/UU_Kiev_Druzhina/KievanRusGAHeavyCavalry.nif</NIF>
@@ -5468,7 +5468,7 @@
 			<Type>ART_DEF_UNIT_POLISH_WINGED_HUSSAR</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,7,7</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.08</fInterfaceScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/UU_Polish_Winged_Hussar/HeavyCavalry.nif</NIF>
@@ -5492,7 +5492,7 @@
 			<Type>ART_DEF_UNIT_BURGUNDIAN_PALADIN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,4,6</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/UU_Burgundian_Paladin/Knight.nif</NIF>
@@ -5516,7 +5516,7 @@
 			<Type>ART_DEF_UNIT_BYZANTINE_CATAPHRACT</Type>
 			<Button>,-,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,2,10</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Unique_Byzantine_Cataphract/Unique_Byzantine_Cataphract.nif</NIF>
@@ -5540,7 +5540,7 @@
 			<Type>ART_DEF_UNIT_AUSTRIAN_KURASSIER</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,8,7</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/UU_Austrian_Kurassier/cuirassierru.nif</NIF>
@@ -5564,7 +5564,7 @@
 			<Type>ART_DEF_UNIT_ARABIA_GHAZI</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,2,5</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/UU_Arabia_Ghazi/Horseman.nif</NIF>
@@ -5638,7 +5638,7 @@
 			<Type>ART_DEF_UNIT_CORDOBAN_BERBER_CAVALRY</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,7,3</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.08</fInterfaceScale>
+			<fInterfaceScale>1.02</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/UU_Cordoban_Berber_Cavalry/Numidian_Cavalry.nif</NIF>
@@ -5712,7 +5712,7 @@
 			<Type>ART_DEF_UNIT_TEMPLAR</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,5,3</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.05</fInterfaceScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Spec_Templar_Knight/mtemplar_heavy.nif</NIF>
@@ -5736,7 +5736,7 @@
 			<Type>ART_DEF_UNIT_TEUTONIC</Type>
 			<Button>Art/Interface/Buttons/Units/crusader_teutonic.dds</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.05</fInterfaceScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Spec_Teutonic_Knight/HeavyCavalry.nif</NIF>
@@ -5860,7 +5860,7 @@
 			<Type>ART_DEF_UNIT_CONDOTTIERI</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_mercs.dds,3,1</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.08</fInterfaceScale>
+			<fInterfaceScale>1.02</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Mercenaries/Condottieri/HeavyCavalry.nif</NIF>
@@ -5938,7 +5938,7 @@
 			<Type>ART_DEF_UNIT_HACKAPELL</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_mercs.dds,6,1</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Mercenaries/Hakkapeliitta/Conquistador.nif</NIF>
@@ -5964,7 +5964,7 @@
 			<Type>ART_DEF_UNIT_REITER</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_mercs.dds,1,2</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Mercenaries/Black_Rider/pistolier.nif</NIF>
@@ -6016,7 +6016,7 @@
 			<Type>ART_DEF_UNIT_DON_COSSACK</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_mercs.dds,4,1</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.12</fInterfaceScale>
+			<fInterfaceScale>1.08</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Mercenaries/Don_Cossack/CossackDonBlackCoat.nif</NIF>
@@ -6042,7 +6042,7 @@
 			<Type>ART_DEF_UNIT_DON_COSSACK1</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_mercs.dds,4,1</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.06</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Mercenaries/Don_Cossack/CossackDonBrownCoat.nif</NIF>
@@ -6068,7 +6068,7 @@
 			<Type>ART_DEF_UNIT_DON_COSSACK2</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_mercs.dds,4,1</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.06</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Mercenaries/Don_Cossack/CossackDonYellowCoat.nif</NIF>
@@ -6146,7 +6146,7 @@
 			<Type>ART_DEF_UNIT_STRADIOT</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_mercs.dds,2,2</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.05</fInterfaceScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Mercenaries/Stradiot/lightcavalry.nif</NIF>
@@ -6172,7 +6172,7 @@
 			<Type>ART_DEF_UNIT_WAARDGELDER</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_mercs.dds,6,2</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.05</fInterfaceScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Mercenaries/Waardgelder/LightCavalry.nif</NIF>
@@ -6224,7 +6224,7 @@
 			<Type>ART_DEF_UNIT_TURKOPOLES</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_mercs.dds,4,2</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.15</fInterfaceScale>
+			<fInterfaceScale>1.1</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Mercenaries/Turkopoles/HorseArcher.nif</NIF>
@@ -6276,7 +6276,7 @@
 			<Type>ART_DEF_UNIT_LIPKA_TATAR</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_mercs.dds,2,3</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.05</fInterfaceScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Mercenaries/Lipka_Tatar/VladimirSuzdalHeavyCavalryTallHelmet.nif</NIF>
@@ -6380,7 +6380,7 @@
 			<Type>ART_DEF_UNIT_TOUAREG</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_mercs.dds,6,3</Button>
 			<fScale>0.39</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.86</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Mercenaries/Touareg_Camel_Lancer/CamelLancer.nif</NIF>
@@ -6484,7 +6484,7 @@
 			<Type>ART_DEF_UNIT_MAMLUK_CAVALRY</Type>
 			<Button>Art/Interface/Buttons/Units/Mamluk_Heavy_Cavalry.dds</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.08</fInterfaceScale>
+			<fInterfaceScale>1.02</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Mercenaries/Mamluk_Heavy_Cavalry/MamlukHeavyCavalry.nif</NIF>
@@ -6508,7 +6508,7 @@
 			<Type>ART_DEF_UNIT_SOUTH_SLAV_VLASTELA</Type>
 			<Button>Art/Interface/Buttons/Units/South_Slav_Vlastela.dds</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.05</fInterfaceScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Mercenaries/South_Slav_Vlastela/romanhvycavalry.nif</NIF>
@@ -6532,7 +6532,7 @@
 			<Type>ART_DEF_UNIT_BOHEMIAN_WAR_WAGON</Type>
 			<Button>Art/Interface/Buttons/Units/Bohemian_War_Wagon.dds</Button>
 			<fScale>0.40</fScale>
-			<fInterfaceScale>1.2</fInterfaceScale>
+			<fInterfaceScale>1.1</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Mercenaries/Bohemian_War_Wagon/warwagon.nif</NIF>
@@ -6580,7 +6580,7 @@
 			<Type>ART_DEF_UNIT_CRIMEAN_TATAR_RIDER</Type>
 			<Button>Art/Interface/Buttons/Units/Steppe_Horse_Archer.dds</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.08</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Mercenaries/Crimean_Tatar_Rider/qizilbashhorsearcher.nif</NIF>
@@ -6606,7 +6606,7 @@
 			<Type>ART_DEF_UNIT_MONGOL_KESHIK</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,5,2</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Unique/Mongol/Keshik/MongelKeshik.nif</NIF>
@@ -6632,7 +6632,7 @@
 			<Type>ART_DEF_UNIT_SELJUK_LANCER</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,7,1</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.08</fInterfaceScale>
+			<fInterfaceScale>1.02</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Barbarian/Seljuk_Heavy_Cavalry/TurkishSeljukHeavyCavalry.nif</NIF>
@@ -6749,7 +6749,7 @@
 			<Type>ART_DEF_UNIT_TURCOMAN_HORSE_ARCHER</Type>
 			<Button>Art/Interface/Buttons/Units/Turcoman_Horse_Archer.dds</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.15</fInterfaceScale>
+			<fInterfaceScale>1.1</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Barbarian/Seljuk_Horsearcher/SeljukHorsearcherFancyDress.nif</NIF>
@@ -6773,7 +6773,7 @@
 			<Type>ART_DEF_UNIT_STEPPE_HORSE_ARCHER</Type>
 			<Button>Art/Interface/Buttons/Units/Steppe_Horse_Archer.dds</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.15</fInterfaceScale>
+			<fInterfaceScale>1.1</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Barbarian/Steppe_Horsearcher/KipchakHorsearcher.nif</NIF>
@@ -6797,7 +6797,7 @@
 			<Type>ART_DEF_UNIT_BEDOUIN</Type>
 			<Button>,Art/Interface/Buttons/Units/CamelArcher.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,5,8</Button>
 			<fScale>0.39</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.86</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Unique/Arabia/CamelArcher/ArabiaCamelArcher.nif</NIF>
@@ -6821,7 +6821,7 @@
 			<Type>ART_DEF_UNIT_CORSAIR</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,5,7</Button>
 			<fScale>0.2</fScale>
-			<fInterfaceScale>0.9</fInterfaceScale>
+			<fInterfaceScale>0.78</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Barbarian/Corsair/xebec.nif</NIF>
@@ -6861,7 +6861,7 @@
 			<Type>ART_DEF_UNIT_SIEGE_TOWER</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,8</Button>
 			<fScale>0.20</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.9</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Siege_Tower/Siege_Tower.nif</NIF>

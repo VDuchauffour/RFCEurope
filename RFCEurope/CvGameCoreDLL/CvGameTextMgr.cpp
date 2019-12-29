@@ -4254,9 +4254,12 @@ void CvGameTextMgr::parseSpecialistHelp(CvWStringBuffer &szHelpString, Specialis
 			// Absinthe: Wonders: Brandenburg Gate wonder effect
 			// note that this adds exp to all specialists which yields experience - but in RFCE only great generals have that bonus
 			int iExtraExperience = GC.getSpecialistInfo(eSpecialist).getExperience();
-			if (GET_PLAYER((pCity != NULL) ? pCity->getOwnerINLINE() : GC.getGameINLINE().getActivePlayer()).getBuildingClassCount((BuildingClassTypes)GC.getInfoTypeForString("BUILDINGCLASS_BRANDENBURG_GATE")) == 1)
+			if (GC.getGameINLINE().getActivePlayer() != NO_PLAYER)
 			{
-				iExtraExperience += 2;
+				if (GET_PLAYER((pCity != NULL) ? pCity->getOwnerINLINE() : GC.getGameINLINE().getActivePlayer()).getBuildingClassCount((BuildingClassTypes)GC.getInfoTypeForString("BUILDINGCLASS_BRANDENBURG_GATE")) == 1)
+				{
+					iExtraExperience += 2;
+				}
 			}
 			szHelpString.append(gDLL->getText("TXT_KEY_SPECIALIST_EXPERIENCE", iExtraExperience));
 		}
@@ -7575,18 +7578,49 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, BuildingTypes eBu
 		setYieldChangeHelp(szBuffer, L"", L"", szFirstBuffer, kBuilding.getSpecialistYieldChangeArray(iI));
 	}
 
-	for (iI = 0; iI < GC.getNumBonusInfos(); ++iI)
+	// Absinthe: group similar yield bonuses for resources
+	int iJ;
+	for (iJ = 0; iJ < NUM_YIELD_TYPES; ++iJ)
 	{
-		szFirstBuffer = gDLL->getText("TXT_KEY_BUILDING_WITH_BONUS", GC.getBonusInfo((BonusTypes) iI).getTextKeyWide());
-		setYieldChangeHelp(szBuffer, L"", L"", szFirstBuffer, kBuilding.getBonusYieldModifierArray(iI), true);
+		iLast = 0;
+		for (iI = 0; iI < GC.getNumBonusInfos(); ++iI)
+		{
+			if (kBuilding.getBonusYieldModifierArray(iI)[iJ] != 0)
+			{
+				szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDING_WITH_BONUS_GROUPED", kBuilding.getBonusYieldModifierArray(iI)[iJ], L"%", GC.getYieldInfo((YieldTypes)iJ).getChar()).c_str());
+				szTempBuffer.Format(L"<link=literal>%s</link>", GC.getBonusInfo((BonusTypes)iI).getDescription());
+				setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", (kBuilding.getBonusYieldModifierArray(iI)[iJ] != iLast));
+				iLast = kBuilding.getBonusYieldModifierArray(iI)[iJ];
+			}
+		}
 	}
+	//for (iI = 0; iI < GC.getNumBonusInfos(); ++iI)
+	//{
+	//	szFirstBuffer = gDLL->getText("TXT_KEY_BUILDING_WITH_BONUS", GC.getBonusInfo((BonusTypes) iI).getTextKeyWide());
+	//	setYieldChangeHelp(szBuffer, L"", L"", szFirstBuffer, kBuilding.getBonusYieldModifierArray(iI), true);
+	//}
 
-	//BCM: Added 21.9.09
-	for (iI = 0; iI < GC.getNumBonusInfos(); ++iI)
+	// Absinthe: group similar commerce bonuses for resources
+	for (iJ = 0; iJ < NUM_COMMERCE_TYPES; ++iJ)
 	{
-		szFirstBuffer = gDLL->getText("TXT_KEY_BUILDING_WITH_BONUS", GC.getBonusInfo((BonusTypes) iI).getTextKeyWide());
-		setCommerceChangeHelp(szBuffer, L"", L"", szFirstBuffer, kBuilding.getBonusCommerceModifierArray(iI), true);
+		iLast = 0;
+		for (iI = 0; iI < GC.getNumBonusInfos(); ++iI)
+		{
+			if (kBuilding.getBonusCommerceModifierArray(iI)[iJ] != 0)
+			{
+				szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDING_WITH_BONUS_GROUPED", kBuilding.getBonusCommerceModifierArray(iI)[iJ], L"%", GC.getCommerceInfo((CommerceTypes)iJ).getChar()).c_str());
+				szTempBuffer.Format(L"<link=literal>%s</link>", GC.getBonusInfo((BonusTypes)iI).getDescription());
+				setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", (kBuilding.getBonusCommerceModifierArray(iI)[iJ] != iLast));
+				iLast = kBuilding.getBonusCommerceModifierArray(iI)[iJ];
+			}
+		}
 	}
+	//BCM: Added 21.9.09
+	//for (iI = 0; iI < GC.getNumBonusInfos(); ++iI)
+	//{
+	//	szFirstBuffer = gDLL->getText("TXT_KEY_BUILDING_WITH_BONUS", GC.getBonusInfo((BonusTypes) iI).getTextKeyWide());
+	//	setCommerceChangeHelp(szBuffer, L"", L"", szFirstBuffer, kBuilding.getBonusCommerceModifierArray(iI), true);
+	//}
 	//BCM: End
 
 	for (iI = 0; iI < GC.getNumReligionInfos(); ++iI)
