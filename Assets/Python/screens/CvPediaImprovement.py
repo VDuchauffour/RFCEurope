@@ -12,6 +12,7 @@ import CvUtil
 import ScreenInput
 import CvScreenEnums
 import string
+import XMLConsts as xml
 
 # globals
 gc = CyGlobalContext()
@@ -98,7 +99,7 @@ class CvPediaImprovement:
 		screen.addDDSGFC(self.top.getNextWidgetName(), gc.getImprovementInfo(self.iImprovement).getButton(),
 			self.X_ICON + self.W_ICON/2 - self.ICON_SIZE/2, self.Y_ICON + self.H_ICON/2 - self.ICON_SIZE/2, self.ICON_SIZE, self.ICON_SIZE, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
-		# Bonus animation
+		# Improvement animation
 		if (self.top.animations):
 			screen.addImprovementGraphicGFC(self.top.getNextWidgetName(), self.iImprovement, self.X_IMPROVENEMT_ANIMATION, self.Y_IMPROVENEMT_ANIMATION, self.W_IMPROVENEMT_ANIMATION, self.H_IMPROVENEMT_ANIMATION, WidgetTypes.WIDGET_GENERAL, -1, -1, self.X_ROTATION_IMPROVENEMT_ANIMATION, self.Z_ROTATION_IMPROVENEMT_ANIMATION, self.SCALE_ANIMATION, True)
 
@@ -238,6 +239,23 @@ class CvPediaImprovement:
 
 		self.top.placeLinks()
 		self.top.placeImprovements()
+
+	def getImprovementSortedList(self):
+		' returned a list of infos sorted alphabetically '
+		improvementList = []
+		iCount = 0
+		for iImprovement in range(gc.getNumImprovementInfos()):
+			# Absinthe: Unused improvements do not appear in the Civilopedia.
+			if (iImprovement != xml.iImprovementGoodyHut and iImprovement != xml.iImprovementForestPreserve):
+				improvementList.append(iImprovement)
+				iCount += 1
+
+		listSorted = [(0,0)] * iCount
+		iI = 0
+		for iImprovement in improvementList:
+			listSorted[iI] = (gc.getImprovementInfo(iImprovement).getDescription(), iImprovement)
+			iI += 1
+		return listSorted
 
 
 	# Will handle the input for this screen...

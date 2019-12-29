@@ -1008,7 +1008,11 @@ class Religions:
 		"""Persecution popup event."""
 		iPlotX, iPlotY, iUnitID = utils.getPersecutionData()
 		religionList = utils.getPersecutionReligions()
-		utils.prosecute(iPlotX, iPlotY, iUnitID, religionList[popupReturn.getButtonClicked()])
+		iChosenButton = popupReturn.getButtonClicked()
+		iChosenReligion = religionList[iChosenButton]
+		print("Persecution iChosenButton:", iChosenButton)
+		print("Persecution iChosenReligion:", iChosenReligion)
+		utils.prosecute(iPlotX, iPlotY, iUnitID, iChosenReligion)
 
 	def doCounterReformationYes( self, iPlayer ):
 		print(" Counter Reformation Yes",iPlayer)

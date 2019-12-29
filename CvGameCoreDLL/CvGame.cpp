@@ -9853,6 +9853,7 @@ int CvGame::countCitiesLostTo( int iCiv, int iNewOwner ){
 bool CvGame::safeMotherland( int iCiv ){
 	int x,y;
 	CvPlot *iPlot;
+	// Absinthe: Check whether there are any own cities in the core area - base rectangle.
 	for ( x=CoreAreasRect[iCiv][0]; x<=CoreAreasRect[iCiv][2]; x++ ){
 		for ( y=CoreAreasRect[iCiv][1]; y<=CoreAreasRect[iCiv][3]; y++ ){
 			iPlot = GC.getMapINLINE().plot(x,y);
@@ -9861,6 +9862,17 @@ bool CvGame::safeMotherland( int iCiv ){
 			};
 		};
 	};
+	// Absinthe: Check whether there are any own cities in the core area - cities in extra tiles also count.
+	for ( int i=0; i<CoreAreasMinusCount[iCiv]; i++ ){
+		x = CoreAreasMinus[iCiv][2*i];
+		y = CoreAreasMinus[iCiv][2*i+1];
+		iPlot = GC.getMapINLINE().plot(x,y);
+		if ( (iPlot ->isCity()) && (iPlot ->getPlotCity() ->getOwner() == iCiv) ){
+			return true;
+		};
+	};
+	
+	// Absinthe: Check if there are more own cities than foreign cities in the normal area - base rectangle.
 	int iCitiesOwned=0, iCitiesLost=0;
 	for ( x=NormalAreasRect[iCiv][0]; x<=NormalAreasRect[iCiv][2]; x++ ){
 		for ( y=NormalAreasRect[iCiv][1]; y<=NormalAreasRect[iCiv][3]; y++ ){
@@ -9874,6 +9886,20 @@ bool CvGame::safeMotherland( int iCiv ){
 			};
 		};
 	};
+	// Absinthe: Check if there are more own cities than foreign cities in the normal area - cities in extra tiles are subtracted.
+	for ( int i=0; i<NormalAreasMinusCount[iCiv]; i++ ){
+		x = NormalAreasMinus[iCiv][2*i];
+		y = NormalAreasMinus[iCiv][2*i+1];
+		iPlot = GC.getMapINLINE().plot(x,y);
+		if ( iPlot ->isCity() ){
+			if ( iPlot ->getPlotCity() ->getOwner() == iCiv ){
+				iCitiesOwned--;
+			}else{
+				iCitiesLost--;
+			};
+		};
+	};
+	// Absinthe: Civ is only safe, if there are more own cities than foreign cities.
 	if ( iCitiesOwned > iCitiesLost ) return true;
 	//if ( (GET_PLAYER((PlayerTypes)iCiv).getRespawnedAlive()) && (iCitiesOwned > 0) ) return true;
 	//if ( (GET_PLAYER((PlayerTypes)iCiv).getEverRespawned()) && (iCitiesOwned > 0) ) return true;

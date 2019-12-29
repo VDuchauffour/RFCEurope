@@ -40,14 +40,14 @@
 					<FeatureStruct>
 						<FeatureType>FEATURE_FOREST</FeatureType>
 						<PrereqTech>TECH_BLAST_FURNACE</PrereqTech>
-						<iTime>400</iTime>
+						<iTime>600</iTime>
 						<iProduction>30</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
 					<FeatureStruct>
 						<FeatureType>FEATURE_DENSE_FOREST</FeatureType>
 						<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
-						<iTime>600</iTime>
+						<iTime>900</iTime>
 						<iProduction>45</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
@@ -74,14 +74,14 @@
 					<FeatureStruct>
 						<FeatureType>FEATURE_FOREST</FeatureType>
 						<PrereqTech>TECH_BLAST_FURNACE</PrereqTech>
-						<iTime>400</iTime>
+						<iTime>600</iTime>
 						<iProduction>30</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
 					<FeatureStruct>
 						<FeatureType>FEATURE_DENSE_FOREST</FeatureType>
 						<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
-						<iTime>600</iTime>
+						<iTime>900</iTime>
 						<iProduction>45</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
@@ -108,14 +108,14 @@
 					<FeatureStruct>
 						<FeatureType>FEATURE_FOREST</FeatureType>
 						<PrereqTech>TECH_BLAST_FURNACE</PrereqTech>
-						<iTime>400</iTime>
+						<iTime>600</iTime>
 						<iProduction>30</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
 					<FeatureStruct>
 						<FeatureType>FEATURE_DENSE_FOREST</FeatureType>
 						<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
-						<iTime>600</iTime>
+						<iTime>900</iTime>
 						<iProduction>45</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
@@ -161,14 +161,14 @@
 					<FeatureStruct>
 						<FeatureType>FEATURE_FOREST</FeatureType>
 						<PrereqTech>TECH_BLAST_FURNACE</PrereqTech>
-						<iTime>400</iTime>
+						<iTime>600</iTime>
 						<iProduction>30</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
 					<FeatureStruct>
 						<FeatureType>FEATURE_DENSE_FOREST</FeatureType>
 						<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
-						<iTime>600</iTime>
+						<iTime>900</iTime>
 						<iProduction>45</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
@@ -195,14 +195,14 @@
 					<FeatureStruct>
 						<FeatureType>FEATURE_FOREST</FeatureType>
 						<PrereqTech>TECH_BLAST_FURNACE</PrereqTech>
-						<iTime>400</iTime>
+						<iTime>600</iTime>
 						<iProduction>30</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
 					<FeatureStruct>
 						<FeatureType>FEATURE_DENSE_FOREST</FeatureType>
 						<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
-						<iTime>600</iTime>
+						<iTime>900</iTime>
 						<iProduction>45</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
@@ -229,14 +229,14 @@
 					<FeatureStruct>
 						<FeatureType>FEATURE_FOREST</FeatureType>
 						<PrereqTech>TECH_BLAST_FURNACE</PrereqTech>
-						<iTime>400</iTime>
+						<iTime>600</iTime>
 						<iProduction>30</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
 					<FeatureStruct>
 						<FeatureType>FEATURE_DENSE_FOREST</FeatureType>
 						<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
-						<iTime>600</iTime>
+						<iTime>900</iTime>
 						<iProduction>45</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
@@ -263,14 +263,14 @@
 					<FeatureStruct>
 						<FeatureType>FEATURE_FOREST</FeatureType>
 						<PrereqTech>TECH_BLAST_FURNACE</PrereqTech>
-						<iTime>400</iTime>
+						<iTime>600</iTime>
 						<iProduction>30</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
 					<FeatureStruct>
 						<FeatureType>FEATURE_DENSE_FOREST</FeatureType>
 						<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
-						<iTime>600</iTime>
+						<iTime>900</iTime>
 						<iProduction>45</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
@@ -297,14 +297,14 @@
 					<FeatureStruct>
 						<FeatureType>FEATURE_FOREST</FeatureType>
 						<PrereqTech>TECH_BLAST_FURNACE</PrereqTech>
-						<iTime>400</iTime>
+						<iTime>600</iTime>
 						<iProduction>30</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
 					<FeatureStruct>
 						<FeatureType>FEATURE_DENSE_FOREST</FeatureType>
 						<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
-						<iTime>600</iTime>
+						<iTime>900</iTime>
 						<iProduction>45</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
@@ -350,14 +350,14 @@
 					<FeatureStruct>
 						<FeatureType>FEATURE_FOREST</FeatureType>
 						<PrereqTech>TECH_BLAST_FURNACE</PrereqTech>
-						<iTime>400</iTime>
+						<iTime>600</iTime>
 						<iProduction>30</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
 					<FeatureStruct>
 						<FeatureType>FEATURE_DENSE_FOREST</FeatureType>
 						<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
-						<iTime>600</iTime>
+						<iTime>900</iTime>
 						<iProduction>45</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
@@ -403,14 +403,14 @@
 					<FeatureStruct>
 						<FeatureType>FEATURE_FOREST</FeatureType>
 						<PrereqTech>TECH_BLAST_FURNACE</PrereqTech>
-						<iTime>400</iTime>
+						<iTime>600</iTime>
 						<iProduction>30</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
 					<FeatureStruct>
 						<FeatureType>FEATURE_DENSE_FOREST</FeatureType>
 						<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
-						<iTime>600</iTime>
+						<iTime>900</iTime>
 						<iProduction>45</iProduction>
 						<bRemove>1</bRemove>
 					</FeatureStruct>
@@ -456,7 +456,7 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_DENSE_FOREST</FeatureType>
 					<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
-					<iTime>600</iTime>
+					<iTime>900</iTime>
 					<iProduction>45</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
@@ -483,7 +483,7 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<PrereqTech>TECH_BLAST_FURNACE</PrereqTech>
-					<iTime>400</iTime>
+					<iTime>600</iTime>
 					<iProduction>30</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>

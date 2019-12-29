@@ -252,12 +252,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS02</Tag>
-		<English>Habsburg Empire</English>
-		<French>Empire Habsbourg</French>
-		<German>Habsburger Reich</German>
-		<Italian>Impero Asburgico</Italian>
+		<English>Duchy of Austria</English>
+		<French>Duché d'Autriche</French>
+		<German>Herzogtum Österreich</German>
+		<Italian>Ducato d'Austria</Italian>
 		<Spanish></Spanish>
-		<Portuguese>Império Habsburgo</Portuguese>
+		<Portuguese>Ducado da Áustria</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS03</Tag>
@@ -288,12 +288,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS06</Tag>
-		<English>Placeholder Error</English>
-		<French>Placeholder Error</French>
-		<German>Placeholder Error</German>
-		<Italian>Placeholder Error</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Placeholder Error</Portuguese>
+		<English>Holy Roman Empire</English>
+		<French>Holy Roman Empirer</French>
+		<German>Holy Roman Empire</German>
+		<Italian>Holy Roman Empire</Italian>
+		<Spanish>Holy Roman Empire</Spanish>
+		<Portuguese>Holy Roman Empire</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS07</Tag>
@@ -306,7 +306,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS08</Tag>
-		<English>Islamic Habsburg Sultanate</English>
+		<English>Habsburg Sultanate</English>
 		<French>Sultanat Islamique Habsbourg</French>
 		<German>Islamisches Sultanat Habsburg</German>
 		<Italian>Sultanato Islamico Asburgico</Italian>
@@ -324,7 +324,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS10</Tag>
-		<English>Exarchate of Austria</English>
+		<English>Exarchate of Noricum</English>
 		<French>Exarchat d'Autriche</French>
 		<German>Exarchat Österreich</German>
 		<Italian>Esarcato d'Austria</Italian>
@@ -333,7 +333,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS11</Tag>
-		<English>French Archduchy of Austria</English>
+		<English>Duchy of Austria</English>
 		<French>Archiduché Fran&#201;ais d'Autriche</French>
 		<German>Französisches Erzherzogtum Österreich</German>
 		<Italian>Arciducato Francese d'Austria</Italian>
@@ -342,7 +342,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS12</Tag>
-		<English>Emirate of Austria</English>
+		<English>Emirate of an-Nimsa</English>
 		<French>Emirat d'Autriche</French>
 		<German>Emirat Österreich</German>
 		<Italian>Emirato d'Austria</Italian>
@@ -351,7 +351,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS13</Tag>
-		<English>Junior Habsburg Lands</English>
+		<English>Viceroyalty of Austria</English>
 		<French>Lands d'Habsbourg</French>
 		<German>Junior Habsburger Lande</German>
 		<Italian>Terre Asburgiche</Italian>
@@ -360,7 +360,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS14</Tag>
-		<English>Norse Austria</English>
+		<English>Jarldom of Austria</English>
 		<French>Autriche Nordique</French>
 		<German>Nordisch-Österreich</German>
 		<Italian>Austria Vichinga</Italian>
@@ -369,7 +369,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS15</Tag>
-		<English>Venetian Austria</English>
+		<English>Colony of Austria</English>
 		<French>Autriche V&#233;nitienne</French>
 		<German>Venezianisch-Österreich</German>
 		<Italian>Austria Veneziana</Italian>
@@ -378,15 +378,24 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS16</Tag>
-		<English>Russian Austria</English>
-		<French>Autriche Russe</French>
-		<German>Russisch-Österreich</German>
-		<Italian>Austria Russa</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Áustria Russa</Portuguese>
+		<English>Principality of Austria</English>
+		<French>Principality of Austria</French>
+		<German>Principality of Austria</German>
+		<Italian>Principality of Austria</Italian>
+		<Spanish>Principality of Austria</Spanish>
+		<Portuguese>Principality of Austria</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_AUS17</Tag>
+		<English>March of Austria</English>
+		<French>March of Austria</French>
+		<German>March of Austria</German>
+		<Italian>March of Austria</Italian>
+		<Spanish>March of Austria</Spanish>
+		<Portuguese>March of Austria</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_AUS17_2</Tag>
 		<English>German Ostmark</English>
 		<French>Grande Allemagne du Sud</French>
 		<German>Großdeutsches Reich Süd</German>
@@ -395,16 +404,7 @@
 		<Portuguese>Marca Austríaca</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DN_AUS18</Tag>
-		<English>Counties of Austria</English>
-		<French>Comt&#233;s d'Autriche</French>
-		<German>Grafschaften Österreichs</German>
-		<Italian>Contee d'Austria</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Condados da Áustria</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DN_AUS19</Tag>
+		<Tag>TXT_KEY_DN_AUS17_3</Tag>
 		<English>Upper and Lower Austria</English>
 		<French>Autriche Intérieure et Antérieure.</French>
 		<German>Ober- und Unterösterreich </German>
@@ -413,8 +413,26 @@
 		<Portuguese>Alta e Baixa Áustria</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_DN_AUS18</Tag>
+		<English>Earldom of Austria</English>
+		<French>Comt&#233;s d'Autriche</French>
+		<German>Grafschaften Österreichs</German>
+		<Italian>Contee d'Austria</Italian>
+		<Spanish></Spanish>
+		<Portuguese>Condados da Áustria</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_AUS19</Tag>
+		<English>Mormaerdom of Austria</English>
+		<French>Comt&#233;s d'Autriche</French>
+		<German>Grafschaften Österreichs</German>
+		<Italian>Contee d'Austria</Italian>
+		<Spanish></Spanish>
+		<Portuguese>Condados da Áustria</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_DN_AUS20</Tag>
-		<English>Principality of Avusturya</English>
+		<English>Eyalet of Avusturya</English>
 		<French>Principaut&#233; d'Avusturya</French>
 		<German>Fürstentum Avusturya</German>
 		<Italian>Principato di Avusturya</Italian>
@@ -429,6 +447,42 @@
 		<Italian>Provincia d'Austria</Italian>
 		<Spanish></Spanish>
 		<Portuguese>Província da Áustria</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_AUS22</Tag>
+		<English>Guberniya of Austria</English>
+		<French>Autriche Russe</French>
+		<German>Russisch-Österreich</German>
+		<Italian>Austria Russa</Italian>
+		<Spanish></Spanish>
+		<Portuguese>Áustria Russa</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_AUS23</Tag>
+		<English>Banate of Austria</English>
+		<French>Banate of Austria</French>
+		<German>Banate of Austria</German>
+		<Italian>Banate of Austria</Italian>
+		<Spanish>Banate of Austria</Spanish>
+		<Portuguese>Banate of Austria</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_AUS24</Tag>
+		<English>Voivodeship of Austria</English>
+		<French>Voivodeship of Austria</French>
+		<German>Voivodeship of Austria</German>
+		<Italian>Voivodeship of Austria</Italian>
+		<Spanish>Voivodeship of Austria</Spanish>
+		<Portuguese>Voivodeship of Austria</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_AUS25</Tag>
+		<English>Zhupa of Austria</English>
+		<French>Zhupa of Austria</French>
+		<German>Zhupa of Austria</German>
+		<Italian>Zhupa of Austria</Italian>
+		<Spanish>Zhupa of Austria</Spanish>
+		<Portuguese>Zhupa of Austria</Portuguese>
 	</TEXT>
 	<!-- Austria -->
 	<!-- Bulgaria -->
@@ -1722,6 +1776,15 @@
 	<!-- Dutch -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_DUT00</Tag>
+		<English>Dutch Peoples</English>
+		<French>Dutch Peoples</French>
+		<German>Dutch Peoples</German>
+		<Italian>Dutch Peoples</Italian>
+		<Spanish>Dutch Peoples</Spanish>
+		<Portuguese>Dutch Peoples</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_DUT00_2</Tag>
 		<English>Batavian Peoples</English>
 		<French>Peuplade Batave</French>
 		<German>Batavische Völker</German>
@@ -2756,7 +2819,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER01</Tag>
-		<English>Kingdom of Germany</English>
+		<English>Kingdom of East Francia</English>
 		<French>Royaume de Germanie</French>
 		<German>Deutsches Königreich</German>
 		<Italian>Regno di Germania</Italian>
@@ -2801,12 +2864,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER06</Tag>
-		<English>Placeholder Error</English>
-		<French>Placeholder Error</French>
-		<German>Placeholder Error</German>
-		<Italian>Placeholder Error</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Placeholder Error</Portuguese>
+		<English>Hanseatic League</English>
+		<French>Hanseatic League</French>
+		<German>Hanseatic League</German>
+		<Italian>Hanseatic League</Italian>
+		<Spanish>Hanseatic League</Spanish>
+		<Portuguese>Hanseatic League</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER07</Tag>
@@ -2846,6 +2909,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER11</Tag>
+		<English>Duchy of Alsace</English>
+		<French>Duchy of Alsace</French>
+		<German>Duchy of Alsace</German>
+		<Italian>Duchy of Alsace</Italian>
+		<Spanish>Duchy of Alsace</Spanish>
+		<Portuguese>Duchy of Alsace</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER11_2</Tag>
 		<English>Duchy of the Rhine</English>
 		<French>Duch&#233; du Rhin</French>
 		<German>Herzogtum am Rhein</German>
@@ -2855,7 +2927,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER12</Tag>
-		<English>Emirate of Germany</English>
+		<English>Emirate of Almaniya</English>
 		<French>Emirat de Germanie</French>
 		<German>Emirat Germania</German>
 		<Italian>Emirato di Germania</Italian>
@@ -2864,7 +2936,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER13</Tag>
-		<English>Spanish Kingdom of Germany</English>
+		<English>Viceroyalty of Germany</English>
 		<French>Royaume Espagnol de Germanie</French>
 		<German>Spanisches Königreich Deutschland</German>
 		<Italian>Regno Spagnolo di Germania</Italian>
@@ -2873,7 +2945,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER14</Tag>
-		<English>Greater Denmark</English>
+		<English>Duchy of Holstein</English>
 		<French>Grand Danemark</French>
 		<German>Groß-Dänemark</German>
 		<Italian>Grande Danimarca</Italian>
@@ -2882,7 +2954,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER15</Tag>
-		<English>Venetian Germany</English>
+		<English>Colony of Germany</English>
 		<French>Germanie V&#233;nitienne</French>
 		<German>Venezianisch-Deutschland</German>
 		<Italian>Germania Veneziana</Italian>
@@ -2891,16 +2963,25 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER16</Tag>
-		<English>Russian Germany</English>
-		<French>Germanie Russe</French>
-		<German>Russisch-Deutschland</German>
-		<Italian>Germania Russa</Italian>
-		<Spanish></Spanish>
-		<Portuguese>Alemanha Russa</Portuguese>
+		<English>Principality of Germany</English>
+		<French>Principality of Germany</French>
+		<German>Principality of Germany</German>
+		<Italian>Principality of Germany</Italian>
+		<Spanish>Principality of Germany</Spanish>
+		<Portuguese>Principality of Germany</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER17</Tag>
+		<English>March of Brandenburg</English>
+		<French>March of Brandenburg</French>
+		<German>March of Brandenburg</German>
+		<Italian>March of Brandenburg</Italian>
+		<Spanish>March of Brandenburg</Spanish>
+		<Portuguese>March of Brandenburg</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER18</Tag>
-		<English>German Counties</English>
+		<English>Duchy of Brunswick-Lüneburg</English>
 		<French>Comt&#233;es de Germanie</French>
 		<German>Deutsche Grafschaften</German>
 		<Italian>Contea di Germania</Italian>
@@ -2909,7 +2990,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER19</Tag>
-		<English>Northern Great Germany</English>
+		<English>Kingdom of Germany</English>
 		<French>Grande Germanie du Nord</French>
 		<German>Großdeutsches Reich Nord</German>
 		<Italian>Grande Germania del Nord</Italian>
@@ -2918,7 +2999,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_GER20</Tag>
-		<English>Principality of Almanya</English>
+		<English>Eyalet of Almanya</English>
 		<French>Principaut&#233; d'Almanya</French>
 		<German>Fürstentum Almanya</German>
 		<Italian>Principato di Almanya</Italian>
@@ -2933,6 +3014,69 @@
 		<Italian>Provincia di Germania</Italian>
 		<Spanish>Provincia de Germania</Spanish>
 		<Portuguese>Província da Alemanha</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER22</Tag>
+		<English>Jarldom of Germany</English>
+		<French>Jarldom of Germany</French>
+		<German>Jarldom of Germany</German>
+		<Italian>Jarldom of Germany</Italian>
+		<Spanish>Jarldom of Germany</Spanish>
+		<Portuguese>Jarldom of Germany</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER23</Tag>
+		<English>Duchy of Bremen-Verden</English>
+		<French>Duchy of Bremen-Verden</French>
+		<German>Duchy of Bremen-Verden</German>
+		<Italian>Duchy of Bremen-Verden</Italian>
+		<Spanish>Duchy of Bremen-Verden</Spanish>
+		<Portuguese>Duchy of Bremen-Verden</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER24</Tag>
+		<English>Guberniya of Germany</English>
+		<French>Guberniya of Germany</French>
+		<German>Guberniya of Germany</German>
+		<Italian>Guberniya of Germany</Italian>
+		<Spanish>Guberniya of Germany</Spanish>
+		<Portuguese>Guberniya of Germany</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER25</Tag>
+		<English>Mormaerdom of Germany</English>
+		<French>Mormaerdom of Germany</French>
+		<German>Mormaerdom of Germany</German>
+		<Italian>Mormaerdom of Germany</Italian>
+		<Spanish>Mormaerdom of Germany</Spanish>
+		<Portuguese>Mormaerdom of Germany</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER26</Tag>
+		<English>Banate of Germany</English>
+		<French>Banate of Germany</French>
+		<German>Banate of Germany</German>
+		<Italian>Banate of Germany</Italian>
+		<Spanish>Banate of Germany</Spanish>
+		<Portuguese>Banate of Germany</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER27</Tag>
+		<English>Voivodeship of Germany</English>
+		<French>Voivodeship of Germany</French>
+		<German>Voivodeship of Germany</German>
+		<Italian>Voivodeship of Germany</Italian>
+		<Spanish>Voivodeship of Germany</Spanish>
+		<Portuguese>Voivodeship of Germany</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_GER28</Tag>
+		<English>Zhupa of Germany</English>
+		<French>Zhupa of Germany</French>
+		<German>Zhupa of Germany</German>
+		<Italian>Zhupa of Germany</Italian>
+		<Spanish>Zhupa of Germany</Spanish>
+		<Portuguese>Zhupa of Germany</Portuguese>
 	</TEXT>
 	<!-- Germany -->
 	<!-- Hungary -->
@@ -5952,39 +6096,39 @@
 	<!-- Prussia -->
 	<TEXT>
 		<Tag>TXT_KEY_DN_PRU00</Tag>
-		<English>Prussian Peoples</English>
-		<French>Prussian Peoples</French>
-		<German>Prussian Peoples</German>
-		<Italian>Prussian Peoples</Italian>
-		<Spanish>Prussian Peoples</Spanish>
-		<Portuguese></Portuguese>
+		<English>Teutonic Knights</English>
+		<French>Teutonic Knights</French>
+		<German>Teutonic Knights</German>
+		<Italian>Teutonic Knights</Italian>
+		<Spanish>Teutonic Knights</Spanish>
+		<Portuguese>Teutonic Knights</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_PRU01</Tag>
 		<English>Duchy of Prussia</English>
 		<French>Duchy of Prussia</French>
 		<German>Duchy of Prussia</German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-		<Portuguese></Portuguese>
+		<Italian>Duchy of Prussia</Italian>
+		<Spanish>Duchy of Prussia</Spanish>
+		<Portuguese>Duchy of Prussia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_PRU02</Tag>
-		<English>Duchy of Prussia</English>
-		<French>Duchy of Prussia</French>
-		<German>Duchy of Prussia</German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-		<Portuguese></Portuguese>
+		<English>Kingdom of Prussia</English>
+		<French>Kingdom of Prussia</French>
+		<German>Kingdom of Prussia</German>
+		<Italian>Kingdom of Prussia</Italian>
+		<Spanish>Kingdom of Prussia</Spanish>
+		<Portuguese>Kingdom of Prussia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_PRU03</Tag>
-		<English>Duchy of Prussia</English>
-		<French>Duchy of Prussia</French>
-		<German>Duchy of Prussia</German>
-		<Italian>Duchy of Prussia</Italian>
-		<Spanish>Duchy of Prussia</Spanish>
-		<Portuguese></Portuguese>
+		<English>Duchy of Brandenburg-Prussia</English>
+		<French>Duchy of Brandenburg-Prussia</French>
+		<German>Duchy of Brandenburg-Prussia</German>
+		<Italian>Duchy of Brandenburg-Prussia</Italian>
+		<Spanish>Duchy of Brandenburg-Prussia</Spanish>
+		<Portuguese>Duchy of Brandenburg-Prussia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_PRU04</Tag>
@@ -5993,34 +6137,34 @@
 		<German>Duchy of Prussia</German>
 		<Italian>Duchy of Prussia</Italian>
 		<Spanish>Duchy of Prussia</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Duchy of Prussia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_PRU05</Tag>
 		<English>Republic of Prussia</English>
 		<French>Republic of Prussia</French>
 		<German>Republic of Prussia</German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-		<Portuguese></Portuguese>
+		<Italian>Republic of Prussia</Italian>
+		<Spanish>Republic of Prussia</Spanish>
+		<Portuguese>Republic of Prussia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_PRU06</Tag>
-		<English>Placeholder Error</English>
-		<French>Placeholder Error</French>
-		<German>Placeholder Error</German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-		<Portuguese></Portuguese>
+		<English>Teutonic Order</English>
+		<French>Teutonic Order</French>
+		<German>Teutonic Order</German>
+		<Italian>Teutonic Order</Italian>
+		<Spanish>Teutonic Order</Spanish>
+		<Portuguese>Teutonic Order</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_PRU07</Tag>
-		<English>Placeholder Error</English>
-		<French>Placeholder Error</French>
-		<German>Placeholder Error</German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-		<Portuguese></Portuguese>
+		<English>Livonian Order</English>
+		<French>Livonian Order</French>
+		<German>Livonian Order</German>
+		<Italian>Livonian Order</Italian>
+		<Spanish>Livonian Order</Spanish>
+		<Portuguese>Livonian Order</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_PRU08</Tag>
@@ -6029,7 +6173,7 @@
 		<German>Sultanate of Prussia</German>
 		<Italian>Sultanate of Prussia</Italian>
 		<Spanish>Sultanate of Prussia</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Sultanate of Prussia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_PRU09</Tag>
@@ -6038,106 +6182,106 @@
 		<German>Islamic Republic of Prussia</German>
 		<Italian>Islamic Republic of Prussia</Italian>
 		<Spanish>Islamic Republic of Prussia</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Islamic Republic of Prussia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_PRU10</Tag>
-		<English>Exarchate of Prussia</English>
-		<French>Exarchate of Prussia</French>
-		<German>Exarchate of Prussia</German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-		<Portuguese></Portuguese>
+		<English>Exarchate of Aestia</English>
+		<French>Exarchate of Aestia</French>
+		<German>Exarchate of Aestia</German>
+		<Italian>Exarchate of Aestia</Italian>
+		<Spanish>Exarchate of Aestia</Spanish>
+		<Portuguese>Exarchate of Aestia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_PRU11</Tag>
-		<English>Royal Prussia</English>
-		<French>Royal Prussia</French>
-		<German>Royal Prussia</German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-		<Portuguese></Portuguese>
+		<English>Duchy of Prussia</English>
+		<French>Duchy of Prussia</French>
+		<German>Duchy of Prussia</German>
+		<Italian>Duchy of Prussia</Italian>
+		<Spanish>Duchy of Prussia</Spanish>
+		<Portuguese>Duchy of Prussia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_PRU12</Tag>
-		<English>Emirate of Prussia</English>
-		<French>Emirate of Prussia</French>
-		<German>Emirate of Prussia</German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-		<Portuguese></Portuguese>
+		<English>Emirate of Brusya</English>
+		<French>Emirate of Brusya</French>
+		<German>Emirate of Brusya</German>
+		<Italian>Emirate of Brusya</Italian>
+		<Spanish>Emirate of Brusya</Spanish>
+		<Portuguese>Emirate of Brusya</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_PRU13</Tag>
-		<English>Spanish Kingdom of Prussia</English>
-		<French>Spanish Kingdom of Prussia</French>
-		<German>Spanish Kingdom of Prussia</German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-		<Portuguese></Portuguese>
+		<English>Viceroyalty of Prussia</English>
+		<French>Viceroyalty of Prussia</French>
+		<German>Viceroyalty of Prussia</German>
+		<Italian>Viceroyalty of Prussia</Italian>
+		<Spanish>Viceroyalty of Prussia</Spanish>
+		<Portuguese>Viceroyalty of Prussia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_PRU14</Tag>
-		<English>Province of Livonia</English>
-		<French>Province of Livonia</French>
-		<German>Province of Livonia</German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-		<Portuguese></Portuguese>
+		<English>Jarldom of Prussia</English>
+		<French>Jarldom of Prussia</French>
+		<German>Jarldom of Prussia</German>
+		<Italian>Jarldom of Prussia</Italian>
+		<Spanish>Jarldom of Prussia</Spanish>
+		<Portuguese>Jarldom of Prussia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_PRU15</Tag>
-		<English>Venetian Prussia</English>
-		<French>Venetian Prussia</French>
-		<German>Venetian Prussia</German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-		<Portuguese></Portuguese>
+		<English>Colony of Prussia</English>
+		<French>Colony of Prussia</French>
+		<German>Colony of Prussia</German>
+		<Italian>Colony of Prussia</Italian>
+		<Spanish>Colony of Prussia</Spanish>
+		<Portuguese>Colony of Prussia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_PRU16</Tag>
-		<English>Baltic Governorate</English>
-		<French>Baltic Governorate</French>
-		<German>Baltic Governorate</German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-		<Portuguese></Portuguese>
+		<English>Principality of Prussia</English>
+		<French>Principality of Prussia</French>
+		<German>Principality of Prussia</German>
+		<Italian>Principality of Prussia</Italian>
+		<Spanish>Principality of Prussia</Spanish>
+		<Portuguese>Principality of Prussia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_PRU17</Tag>
-		<English>Royal Prussia</English>
-		<French>Royal Prussia</French>
-		<German>Royal Prussia</German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-		<Portuguese></Portuguese>
+		<English>March of Prussia</English>
+		<French>March of Prussia</French>
+		<German>March of Prussia</German>
+		<Italian>March of Prussia</Italian>
+		<Spanish>March of Prussia</Spanish>
+		<Portuguese>March of Prussia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_PRU18</Tag>
-		<English>Counties of Prussia</English>
-		<French>Counties of Prussia</French>
-		<German>Counties of Prussia</German>
-		<Italian>Counties of Prussia</Italian>
-		<Spanish>Counties of Prussia</Spanish>
-		<Portuguese></Portuguese>
+		<English>Earldom of Prussia</English>
+		<French>Earldom of Prussia</French>
+		<German>Earldom of Prussia</German>
+		<Italian>Earldom of Prussia</Italian>
+		<Spanish>Earldom of Prussia</Spanish>
+		<Portuguese>Earldom of Prussia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_PRU19</Tag>
-		<English>Eastern Great Germany</English>
-		<French>Eastern Great Germany</French>
-		<German>Eastern Great Germany</German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-		<Portuguese></Portuguese>
+		<English>Habsburg Prussia</English>
+		<French>Habsburg Prussia</French>
+		<German>Habsburg Prussia</German>
+		<Italian>Habsburg Prussia</Italian>
+		<Spanish>Habsburg Prussia</Spanish>
+		<Portuguese>Habsburg Prussia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_PRU20</Tag>
-		<English>Principality of Prusya</English>
-		<French>Principality of Prusya</French>
-		<German>Principality of Prusya</German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-		<Portuguese></Portuguese>
+		<English>Eyalet of Prusya</English>
+		<French>Eyalet of Prusya</French>
+		<German>Eyalet of Prusya</German>
+		<Italian>Eyalet of Prusya</Italian>
+		<Spanish>Eyalet of Prusya</Spanish>
+		<Portuguese>Eyalet of Prusya</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_PRU21</Tag>
@@ -6146,43 +6290,124 @@
 		<German>Province of Prussia</German>
 		<Italian>Province of Prussia</Italian>
 		<Spanish>Province of Prussia</Spanish>
-		<Portuguese></Portuguese>
+		<Portuguese>Province of Prussia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_PRU22</Tag>
-		<English>Teutonic Order</English>
-		<French>Teutonic Order</French>
-		<German>Teutonic Order</German>
-		<Italian>Teutonic Order</Italian>
-		<Spanish>Teutonic Order</Spanish>
-		<Portuguese></Portuguese>
+		<English>Duchy of Pomerania</English>
+		<French>Duchy of Pomerania</French>
+		<German>Duchy of Pomerania</German>
+		<Italian>Duchy of Pomerania</Italian>
+		<Spanish>Duchy of Pomerania</Spanish>
+		<Portuguese>Duchy of Pomerania</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_PRU23</Tag>
-		<English>Brandenburg-Prussia</English>
-		<French>Brandenburg-Prussia</French>
-		<German>Brandenburg-Prussia</German>
-		<Italian>Brandenburg-Prussia</Italian>
-		<Spanish>Brandenburg-Prussia</Spanish>
-		<Portuguese></Portuguese>
+		<English>Duchy of Estonia</English>
+		<French>Duchy of Estonia</French>
+		<German>Duchy of Estonia</German>
+		<Italian>Duchy of Estonia</Italian>
+		<Spanish>Duchy of Estonia</Spanish>
+		<Portuguese>Duchy of Estonia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_PRU24</Tag>
-		<English>Kingdom of Prussia</English>
-		<French>Kingdom of Prussia</French>
-		<German>Kingdom of Prussia</German>
-		<Italian>Kingdom of Prussia</Italian>
-		<Spanish>Kingdom of Prussia</Spanish>
-		<Portuguese></Portuguese>
+		<English>Duchy of Livonia</English>
+		<French>Duchy of Livonia</French>
+		<German>Duchy of Livonia</German>
+		<Italian>Duchy of Livonia</Italian>
+		<Spanish>Duchy of Livonia</Spanish>
+		<Portuguese>Duchy of Livonia</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_PRU25</Tag>
-		<English>Livonian Order</English>
-		<French>Livonian Order</French>
-		<German>Livonian Order</German>
-		<Italian>Livonian Order</Italian>
-		<Spanish>Livonian Order</Spanish>
-		<Portuguese></Portuguese>
+		<English>Guberniya of Livonia</English>
+		<French>Guberniya of Livonia</French>
+		<German>Guberniya of Livonia</German>
+		<Italian>Guberniya of Livonia</Italian>
+		<Spanish>Guberniya of Livonia</Spanish>
+		<Portuguese>Guberniya of Livonia</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_PRU26</Tag>
+		<English>Guberniya of Prussia</English>
+		<French>Guberniya of Prussia</French>
+		<German>Guberniya of Prussia</German>
+		<Italian>Guberniya of Prussia</Italian>
+		<Spanish>Guberniya of Prussia</Spanish>
+		<Portuguese>Guberniya of Prussia</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_PRU27</Tag>
+		<English>March of Brandenburg</English>
+		<French>March of Brandenburg</French>
+		<German>March of Brandenburg</German>
+		<Italian>March of Brandenburg</Italian>
+		<Spanish>March of Brandenburg</Spanish>
+		<Portuguese>March of Brandenburg</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_PRU28</Tag>
+		<English>Mormaerdom of Prussia</English>
+		<French>Mormaerdom of Prussia</French>
+		<German>Mormaerdom of Prussia</German>
+		<Italian>Mormaerdom of Prussia</Italian>
+		<Spanish>Mormaerdom of Prussia</Spanish>
+		<Portuguese>Mormaerdom of Prussia</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_PRU29</Tag>
+		<English>Banate of Prussia</English>
+		<French>Banate of Prussia</French>
+		<German>Banate of Prussia</German>
+		<Italian>Banate of Prussia</Italian>
+		<Spanish>Banate of Prussia</Spanish>
+		<Portuguese>Banate of Prussia</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_PRU30</Tag>
+		<English>March of Lusatia</English>
+		<French>March of Lusatia</French>
+		<German>March of Lusatia</German>
+		<Italian>March of Lusatia</Italian>
+		<Spanish>March of Lusatia</Spanish>
+		<Portuguese>March of Lusatia</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_PRU31</Tag>
+		<English>Royal Prussia</English>
+		<French>Royal Prussia</French>
+		<German>Royal Prussia</German>
+		<Italian>Royal Prussia</Italian>
+		<Spanish>Royal Prussia</Spanish>
+		<Portuguese>Royal Prussia</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_PRU32</Tag>
+		<English>Duchy of Livonia</English>
+		<French>Duchy of Livonia</French>
+		<German>Duchy of Livonia</German>
+		<Italian>Duchy of Livonia</Italian>
+		<Spanish>Duchy of Livonia</Spanish>
+		<Portuguese>Duchy of Livonia</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_PRU33</Tag>
+		<English>Duchy of Scalovia</English>
+		<French>Duchy of Scalovia</French>
+		<German>Duchy of Scalovia</German>
+		<Italian>Duchy of Scalovia</Italian>
+		<Spanish>Duchy of Scalovia</Spanish>
+		<Portuguese>Duchy of Scalovia</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DN_PRU34</Tag>
+		<English>Zhupa of Prussia</English>
+		<French>Zhupa of Prussia</French>
+		<German>Zhupa of Prussia</German>
+		<Italian>Zhupa of Prussia</Italian>
+		<Spanish>Zhupa of Prussia</Spanish>
+		<Portuguese>Zhupa of Prussia</Portuguese>
 	</TEXT>
 	<!-- Prussia -->
 	<!-- Aragon -->
@@ -6541,9 +6766,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DN_SIC14</Tag>
-		<English>Jarldom of Sicily</English>
-		<French>Jarldom of Sicily</French>
-		<German>Jarldom of Sicily</German>
+		<English>Jarldom of Sikileyjar</English>
+		<French>Jarldom of Sikileyjar</French>
+		<German>Jarldom of Sikileyjar</German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 		<Portuguese></Portuguese>

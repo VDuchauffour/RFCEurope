@@ -708,7 +708,7 @@ class CvEventManager:
 				if not pTeam.isHasTech(iTech):
 					if gc.getTechInfo(iTech).getAdvisorType() == gc.getInfoTypeForString("ADVISOR_RELIGION"):
 						research_cost = pTeam.getResearchCost(iTech)
-						pTeam.changeResearchProgress(iTech, min(research_cost - pTeam.getResearchProgress(iTech), research_cost / 5), iPlayer)
+						pTeam.changeResearchProgress(iTech, min(research_cost - pTeam.getResearchProgress(iTech), research_cost / 2), iPlayer)
 		# Absinthe: Al-Azhar University end
 
 		# Absinthe: Sistine Chapel start
@@ -726,10 +726,10 @@ class CvEventManager:
 		# Absinthe: Jasna Gora start
 		if iBuildingType == xml.iJasnaGora:
 			for city in utils.getCityList(iPlayer):
-				city.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_CATHOLIC_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 2)
-				city.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_ORTHODOX_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 2)
-				city.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_PROTESTANT_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 2)
-				city.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_ISLAMIC_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 2)
+				city.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_CATHOLIC_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 1)
+				city.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_ORTHODOX_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 1)
+				city.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_PROTESTANT_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 1)
+				city.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_ISLAMIC_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 1)
 		# Absinthe: Jasna Gora end
 
 		# Absinthe: Kizil Kule start
@@ -1181,10 +1181,10 @@ class CvEventManager:
 
 		# Absinthe: Jasna Gora start
 		if pPlayer.countNumBuildings(xml.iJasnaGora) > 0:
-			city.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_CATHOLIC_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 2)
-			city.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_ORTHODOX_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 2)
-			city.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_PROTESTANT_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 2)
-			city.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_ISLAMIC_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 2)
+			city.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_CATHOLIC_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 1)
+			city.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_ORTHODOX_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 1)
+			city.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_PROTESTANT_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 1)
+			city.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_ISLAMIC_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 1)
 		# Absinthe: Jasna Gora end
 
 		# Absinthe: Kizil Kule start
@@ -1348,20 +1348,20 @@ class CvEventManager:
 				loopCity.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_PROTESTANT_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 0)
 				loopCity.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_ISLAMIC_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 0)
 			for loopCity in utils.getCityList(iNewOwner):
-				loopCity.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_CATHOLIC_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 2)
-				loopCity.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_ORTHODOX_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 2)
-				loopCity.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_PROTESTANT_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 2)
-				loopCity.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_ISLAMIC_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 2)
+				loopCity.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_CATHOLIC_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 1)
+				loopCity.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_ORTHODOX_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 1)
+				loopCity.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_PROTESTANT_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 1)
+				loopCity.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_ISLAMIC_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 1)
 		elif pPreviousOwner.countNumBuildings(xml.iJasnaGora) > 0:
 			pCity.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_CATHOLIC_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 0)
 			pCity.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_ORTHODOX_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 0)
 			pCity.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_PROTESTANT_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 0)
 			pCity.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_ISLAMIC_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 0)
 		elif pNewOwner.countNumBuildings(xml.iJasnaGora) > 0:
-			pCity.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_CATHOLIC_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 2)
-			pCity.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_ORTHODOX_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 2)
-			pCity.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_PROTESTANT_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 2)
-			pCity.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_ISLAMIC_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 2)
+			pCity.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_CATHOLIC_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 1)
+			pCity.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_ORTHODOX_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 1)
+			pCity.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_PROTESTANT_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 1)
+			pCity.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_ISLAMIC_TEMPLE"), CommerceTypes.COMMERCE_CULTURE, 1)
 		# Absinthe: Jasna Gora end
 
 		# Absinthe: Kizil Kule start

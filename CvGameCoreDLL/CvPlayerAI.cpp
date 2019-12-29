@@ -10496,7 +10496,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 		// Venice has additional benefits to the Merchant Republic civic, so it should want it in all cases - but no real issue since it also should stay fairly small
 		if (getNumCities() > 4)
 		{
-			iValue -= ((getNumCities() - 4) * 10);
+			iValue -= ((getNumCities() - 4) * 15);
 		}
 	}
 	// Absinthe: end
@@ -10504,9 +10504,14 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 	// Absinthe: AI civic modifier, only with coastal cities - mainly meant for the Merchant Republic civic
 	if (kCivic.isForMaritimeEmpire())
 	{
+		// Pope should ignore civics which are meant for maritime empires
+		if (getID() == PAPAL_PLAYER)
+		{
+			return 0;
+		}
 		// can only take the civic if at least 50% of their cities are coastal
 		// Venice has additional benefits to the Merchant Republic civic, so it should want it in all cases - but no real issue since it should only have coastal cities
-		if (getNumCities() > 2 * countNumCoastalCities())
+		if (2 * getNumCities() >= 3 * countNumCoastalCities())
 		{
 			return 0;
 		}
@@ -10581,11 +10586,11 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 
 		if ((iI == COMMERCE_CULTURE) && bCultureVictory2)
 		{
-		    iTempValue *= 2;
-		    if (bCultureVictory3)
-		    {
-		        iTempValue *= 2;
-		    }
+			iTempValue *= 2;
+			if (bCultureVictory3)
+			{
+				iTempValue *= 2;
+			}
 		}
 		iTempValue /= 100;
 

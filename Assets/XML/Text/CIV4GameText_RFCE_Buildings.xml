@@ -1409,12 +1409,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTEREST_RATE</Tag>
-		<English>[ICON_BULLET]%D1_Mod % interest added to your [ICON_GOLD] at the beginning of every turn</English>
-		<French>[ICON_BULLET]%D1_Mod % interest added to your [ICON_GOLD] at the beginning of every turn</French>
-		<German>[ICON_BULLET]%D1_Mod % Zins wird ihrem [ICON_GOLD] zu Beginn jeder Runde hinzugefügt</German>
+		<English>[ICON_BULLET]%D1_Mod% interest added to your [ICON_GOLD] at the beginning of every turn</English>
+		<French>[ICON_BULLET]%D1_Mod% interest added to your [ICON_GOLD] at the beginning of every turn</French>
+		<German>[ICON_BULLET]%D1_Mod% Zins wird ihrem [ICON_GOLD] zu Beginn jeder Runde hinzugefügt</German>
 		<Italian>[ICON_BULLET]%D1_Mod % di interessi aggiunti al tuo [ICON_GOLD] all'inizio di ogni turno</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod % interest added to your [ICON_GOLD] at the beginning of every turn</Spanish>
 		<Portuguese>[ICON_BULLET]%D1_Mod % de juro adicionado ao [ICON_GOLD] no começo de cada turno</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WITH_BONUS_GROUPED</Tag>
+		<English>[ICON_BULLET]%D1_Change%s2_percent%F3_Yield with[SPACE]</English>
+		<French>[ICON_BULLET]%D1_Change%s2_percent%F3_Yield en raison de [SPACE]</French>
+		<German>[ICON_BULLET]%D1_Change%s2_percent%F3_Yield durch[SPACE]</German>
+		<Italian>[ICON_BULLET]%D1_Change%s2_percent %F3_Yield da[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%s2_percent %F3_Yield por[SPACE]</Spanish>
+		<Portuguese>[ICON_BULLET]%D1_Change%s2_percent %F3_Yield por[SPACE]</Portuguese>
 	</TEXT>
 		<!-- Other -->
 </Civ4GameText>

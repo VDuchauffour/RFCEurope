@@ -1142,7 +1142,7 @@ class CvMainInterface:
 					if ( bHandled == False ):
 						eOrderNodeType = CyInterface().getOrderNodeType(i)
 						if (eOrderNodeType  == OrderTypes.ORDER_TRAIN ):
-							screen.addUnitGraphicGFC( "InterfaceUnitModel", CyInterface().getOrderNodeData1(i), 175, yResolution - 138, 123, 132, WidgetTypes.WIDGET_HELP_SELECTED, 0, -1,  -20, 30, 1, False )
+							screen.addUnitGraphicGFC( "InterfaceUnitModel", CyInterface().getOrderNodeData1(i), 175, yResolution - 138, 123, 132, WidgetTypes.WIDGET_HELP_SELECTED, 0, -1,  -20, 30, 0.9, False )
 							bHandled = True
 						elif ( eOrderNodeType == OrderTypes.ORDER_CONSTRUCT ):
 							screen.addBuildingGraphicGFC( "InterfaceUnitModel", CyInterface().getOrderNodeData1(i), 175, yResolution - 138, 123, 132, WidgetTypes.WIDGET_HELP_SELECTED, 0, -1,  -20, 30, 0.8, False )
@@ -1165,7 +1165,7 @@ class CvMainInterface:
 				screen.moveToFront("SelectedCityText")
 
 			elif ( CyInterface().getHeadSelectedUnit() ):
-				screen.addUnitGraphicGFC( "InterfaceUnitModel", CyInterface().getHeadSelectedUnit().getUnitType(), 175, yResolution - 138, 123, 132, WidgetTypes.WIDGET_UNIT_MODEL, CyInterface().getHeadSelectedUnit().getUnitType(), -1,  -20, 30, 1, False )
+				screen.addUnitGraphicGFC( "InterfaceUnitModel", CyInterface().getHeadSelectedUnit().getUnitType(), 175, yResolution - 138, 123, 132, WidgetTypes.WIDGET_UNIT_MODEL, CyInterface().getHeadSelectedUnit().getUnitType(), -1,  -20, 30, 0.9, False )
 				screen.moveToFront("SelectedUnitText")
 			else:
 				screen.hide( "InterfaceUnitModel" )

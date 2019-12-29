@@ -658,6 +658,7 @@ class CvMercenaryManager:
 				dummy, iMerc  = szUniqueInternalName.split("MercID")
 				#iMerc = int( iMerc )
 				iMerc = self.strToNum( iMerc )
+				print ("Find mercenary: ", iMerc)
 
 				# Convert the unit ID string back into a number
 				#unitID = self.alphaToNumber(unitID)
@@ -673,13 +674,15 @@ class CvMercenaryManager:
 				unitList = PyPlayer( iPlayer ).getUnitList()
 				for pUnit in unitList:
 					if ( pUnit.getMercID() == iMerc ):
+						print ("Mercenary found: ", iMerc, pUnit.getX(), pUnit.getY())
 						pMercUnit = pUnit
 						break
 
-				# If the unit is not set to None then look at them and select
-				# them.
+				# If the unit is not set to None then look at them and select them.
 				if(pMercUnit != None):
-					CyCamera().LookAtUnit(pMercUnit)
+					#CyCamera().LookAtUnit(pMercUnit)
+					pPlot = gc.getMap().plot(pMercUnit.getX(), pMercUnit.getY())
+					CyCamera().JustLookAtPlot(pPlot)
 					if(not CyGame().isNetworkMultiPlayer()):
 						CyInterface().selectUnit(pMercUnit, True, False, False)
 
@@ -901,7 +904,7 @@ class CvMercenaryManager:
 		self.screenWidgetData[MERCENARY_ANIMATION_HEIGHT] = 200
 		self.screenWidgetData[MERCENARY_ANIMATION_ROTATION_X] = -20
 		self.screenWidgetData[MERCENARY_ANIMATION_ROTATION_Z] = 30
-		self.screenWidgetData[MERCENARY_ANIMATION_SCALE] = 1.0
+		self.screenWidgetData[MERCENARY_ANIMATION_SCALE] = 0.84
 
 		self.screenWidgetData[MERCENARY_INFORMATION_PROMOTION_PANEL_X] = self.screenWidgetData[MERCENARY_INFORMATION_TEXT_BACKGROUND_PANEL_X]
 		self.screenWidgetData[MERCENARY_INFORMATION_PROMOTION_PANEL_Y] = self.screenWidgetData[MERCENARY_ANIMATION_Y] + self.screenWidgetData[MERCENARY_ANIMATION_HEIGHT] + self.screenWidgetData[BORDER_WIDTH]

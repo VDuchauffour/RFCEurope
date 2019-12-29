@@ -11112,7 +11112,15 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
-					<BonusType>BONUS_TEA</BonusType>
+					<BonusType>BONUS_AMBER</BonusType>
+					<YieldModifiers>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>5</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
+					<BonusType>BONUS_DYE</BonusType>
 					<YieldModifiers>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -11136,6 +11144,22 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
+					<BonusType>BONUS_WINE</BonusType>
+					<YieldModifiers>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>5</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
+					<BonusType>BONUS_TIMBER</BonusType>
+					<YieldModifiers>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>5</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
 					<BonusType>BONUS_SHEEP</BonusType>
 					<YieldModifiers>
 						<iYield>0</iYield>
@@ -11152,7 +11176,15 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
-					<BonusType>BONUS_RICE</BonusType>
+					<BonusType>BONUS_COPPER</BonusType>
+					<YieldModifiers>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>5</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
+					<BonusType>BONUS_FUR</BonusType>
 					<YieldModifiers>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -21432,13 +21464,13 @@
 			<StateReligionCommerces/>
 			<CommerceHappinesses/>
 			<ReligionChanges/>
-			<SpecialistCounts/>
-			<FreeSpecialistCounts>
-				<FreeSpecialistCount>
+			<SpecialistCounts>
+				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SPY</SpecialistType>
-					<iFreeSpecialistCount>1</iFreeSpecialistCount>
-				</FreeSpecialistCount>
-			</FreeSpecialistCounts>
+					<iSpecialistCount>2</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
+			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners>
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
@@ -21717,7 +21749,7 @@
 			<CivicOption>NONE</CivicOption>
 			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
-			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
+			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
 			<bBorderObstacle>0</bBorderObstacle>
 			<bTeamShare>1</bTeamShare>
@@ -22684,7 +22716,7 @@
 			<CivicOption>NONE</CivicOption>
 			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
-			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
+			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
 			<bBorderObstacle>0</bBorderObstacle>
 			<bTeamShare>1</bTeamShare>
@@ -22881,7 +22913,7 @@
 			<CivicOption>NONE</CivicOption>
 			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
-			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
+			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
 			<bBorderObstacle>0</bBorderObstacle>
 			<bTeamShare>1</bTeamShare>
@@ -23647,7 +23679,9 @@
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>NONE</ObsoleteTech>
 			<PrereqTech>TECH_MAP_MAKING</PrereqTech>
-			<TechTypes/>
+			<TechTypes>
+				<PrereqTech>TECH_ARABIC_KNOWLEDGE</PrereqTech>
+			</TechTypes>
 			<Bonus>NONE</Bonus>
 			<PrereqBonuses/>
 			<ProductionTraits/>
@@ -24146,7 +24180,11 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<CommerceModifiers/>
-			<GlobalCommerceModifiers/>
+			<GlobalCommerceModifiers>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>10</iCommerce>
+			</GlobalCommerceModifiers>
 			<SpecialistExtraCommerces/>
 			<StateReligionCommerces/>
 			<CommerceHappinesses/>
@@ -26064,7 +26102,7 @@
 			<iMilitaryProductionModifier>0</iMilitaryProductionModifier>
 			<iSpaceProductionModifier>0</iSpaceProductionModifier>
 			<iGlobalSpaceProductionModifier>0</iGlobalSpaceProductionModifier>
-			<iTradeRoutes>0</iTradeRoutes>
+			<iTradeRoutes>1</iTradeRoutes>
 			<iCoastalTradeRoutes>0</iCoastalTradeRoutes>
 			<iGlobalTradeRoutes>0</iGlobalTradeRoutes>
 			<iTradeRouteModifier>100</iTradeRouteModifier>
@@ -27249,7 +27287,12 @@
 			<StateReligionCommerces/>
 			<CommerceHappinesses/>
 			<ReligionChanges/>
-			<SpecialistCounts/>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_SPY</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners>
@@ -28214,13 +28257,17 @@
 			</StateReligionCommerces>
 			<CommerceHappinesses/>
 			<ReligionChanges/>
-			<SpecialistCounts/>
-			<FreeSpecialistCounts>
-				<FreeSpecialistCount>
+			<SpecialistCounts>
+				<SpecialistCount>
 					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>
-					<iFreeSpecialistCount>1</iFreeSpecialistCount>
-				</FreeSpecialistCount>
-			</FreeSpecialistCounts>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
+			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners>
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
@@ -28404,10 +28451,7 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<CommerceModifiers/>
-			<GlobalCommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
-			</GlobalCommerceModifiers>
+			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
 			<StateReligionCommerces/>
 			<CommerceHappinesses/>
@@ -28418,7 +28462,12 @@
 					<iSpecialistCount>2</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<FreeSpecialistCounts/>
+			<FreeSpecialistCounts>
+				<FreeSpecialistCount>
+					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>
+					<iFreeSpecialistCount>1</iFreeSpecialistCount>
+				</FreeSpecialistCount>
+			</FreeSpecialistCounts>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners>
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
@@ -29506,7 +29555,7 @@
 			<CivicOption>NONE</CivicOption>
 			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
 			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
-			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
+			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
 			<bBorderObstacle>0</bBorderObstacle>
 			<bTeamShare>1</bTeamShare>
@@ -29604,7 +29653,9 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceModifiers/>
+			<CommerceModifiers>
+				<iCommerce>25</iCommerce>
+			</CommerceModifiers>
 			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
 			<StateReligionCommerces/>
@@ -29822,12 +29873,7 @@
 					<iSpecialistCount>2</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<FreeSpecialistCounts>
-				<FreeSpecialistCount>
-					<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
-					<iFreeSpecialistCount>1</iFreeSpecialistCount>
-				</FreeSpecialistCount>
-			</FreeSpecialistCounts>
+			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners>
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
@@ -30017,7 +30063,12 @@
 			<StateReligionCommerces/>
 			<CommerceHappinesses/>
 			<ReligionChanges/>
-			<SpecialistCounts/>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_SPY</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners>
@@ -32377,30 +32428,8 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
-			<BonusHealthChanges>
-				<BonusHealthChange>
-					<BonusType>BONUS_SUGAR</BonusType>
-					<iHealthChange>2</iHealthChange>
-				</BonusHealthChange>
-				<BonusHealthChange>
-					<BonusType>BONUS_SPICES</BonusType>
-					<iHealthChange>2</iHealthChange>
-				</BonusHealthChange>
-			</BonusHealthChanges>
-			<BonusHappinessChanges>
-				<BonusHappinessChange>
-					<BonusType>BONUS_TEA</BonusType>
-					<iHappinessChange>1</iHappinessChange>
-				</BonusHappinessChange>
-				<BonusHappinessChange>
-					<BonusType>BONUS_TOBACCO</BonusType>
-					<iHappinessChange>1</iHappinessChange>
-				</BonusHappinessChange>
-				<BonusHappinessChange>
-					<BonusType>BONUS_COFFEE</BonusType>
-					<iHappinessChange>1</iHappinessChange>
-				</BonusHappinessChange>
-			</BonusHappinessChanges>
+			<BonusHealthChanges/>
+			<BonusHappinessChanges/>
 			<BonusProductionModifiers/>
 			<UnitCombatFreeExperiences/>
 			<DomainFreeExperiences/>
@@ -32414,7 +32443,80 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
-			<BonusYieldModifiers/>
+			<BonusYieldModifiers>
+				<BonusYieldModifier>
+					<BonusType>BONUS_SPICES</BonusType>
+					<YieldModifiers>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>10</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
+					<BonusType>BONUS_SUGAR</BonusType>
+					<YieldModifiers>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>10</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
+					<BonusType>BONUS_BANANA</BonusType>
+					<YieldModifiers>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>10</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
+					<BonusType>BONUS_GEMS</BonusType>
+					<YieldModifiers>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>10</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
+					<BonusType>BONUS_SILK</BonusType>
+					<YieldModifiers>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>10</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
+					<BonusType>BONUS_IVORY</BonusType>
+					<YieldModifiers>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>10</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
+					<BonusType>BONUS_TEA</BonusType>
+					<YieldModifiers>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>10</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
+					<BonusType>BONUS_COFFEE</BonusType>
+					<YieldModifiers>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>10</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
+					<BonusType>BONUS_TOBACCO</BonusType>
+					<YieldModifiers>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>10</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+			</BonusYieldModifiers>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
@@ -33377,7 +33479,12 @@
 			<StateReligionCommerces/>
 			<CommerceHappinesses/>
 			<ReligionChanges/>
-			<SpecialistCounts/>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
 			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners>

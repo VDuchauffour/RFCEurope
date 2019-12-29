@@ -232,7 +232,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_26</Tag>
-		<English>In Rhye's and Fall of Civilization and RFC Europe, movement through ocean tiles costs &#189; a movement point.</English>
+		<English>In Rhye's and Fall of Civilization and RFC Europe, movement through ocean tiles costs 1/2 movement point.</English>
 		<French>Dans Rhye's and Fall of Civilization, les d&#233;placements sur les cases d'oc&#233;an co&#233;tent &#189; point de mouvement.</French>
 		<German>In Rhye's and Fall of Civilization und RFC Europe kostet die Fortbewegung auf Ozean-Geländefeldern &#189; Fortbewegungspunkt.</German>
 		<Italian>In Rhye's and Fall il movimento nelle caselle oceaniche costa &#233; punto movimento.</Italian>
@@ -367,7 +367,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_41</Tag>
-		<English>Moorland is a new type of terrain with limited ability to be worked.</English>
+		<English>Moorland is a new type of terrain in RFC Europe, with limited ability to be worked on.</English>
 		<French></French>
 		<German>Das Moor ist eine neue Geländeform mit begrenzter Bearbeitungsmöglichkeit.</German>
 		<Italian></Italian>
@@ -466,7 +466,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_52</Tag>
-		<English>Golden Ages have an additional benefit in RFCE (compared to vanilla RFC): there is no anarchy when you change your civics.</English>
+		<English>Golden Ages have an additional benefit in RFC Europe (compared to vanilla RFC): there is no anarchy when you change your civics.</English>
 		<French>.</French>
 		<German>Goldene Zeitalter haben in RFC Europe (verglichen mit RFC) einen zusätzlichen Vorteil: Ihr könnt die Gesellschaftsformen ohne Anarchie wechseln.</German>
 		<Italian>.</Italian>
@@ -493,7 +493,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_55</Tag>
-		<English>You cannot prosecute a religion from cities where this religion is tied to one or more wonders/shrines. So if you play with Spain and want to win by UHVs, don't feel bad if you raze cities with such wonders.</English>
+		<English>It's usually very hard to prosecute a religion from cities where one or more wonders/shrines are tied to this religion. So if you play with Spain and want to win by UHVs, don't feel bad if you raze cities with such wonders.</English>
 		<French>.</French>
 		<German>Ihr könnt keine Religion aus einer Stadt verbannen sofern diese Religion an ein oder mehrere Wunder/Schreine gebunden ist. Falls Ihr also mit Spanien spielt und durch UHV gewinnen wollt, habt keine Hemmungen Städte mit solchen Gebäuden niederzureißen.</German>
 		<Italian>.</Italian>
@@ -646,7 +646,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_72</Tag>
-		<English>You know you shouldn't continue playing. Yeah, I'm talking to you, no more "just one more turn". Seriously, stop... you have work to do!</English>
+		<English>You know you shouldn't continue playing... Yeah, I'm talking to you! No more "just one more turn".[NEWLINE][NEWLINE]Seriously, stop... you have more important things to do!</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -655,7 +655,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_73</Tag>
-		<English>RNG can be a b*tch... Get over it quickly, it will come back. Theoretically :P</English>
+		<English>RNG can be a b*tch... Get over it quickly, it will come back. Theoretically...</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>

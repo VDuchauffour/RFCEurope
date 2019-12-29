@@ -78,7 +78,61 @@
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_STABILITY_CIVILWAR_HUMAN</Tag>
+		<Tag>TXT_KEY_STABILITY_CIVILWAR_BARBS_HUMAN</Tag>
+		<English>Barbarians have taken over huge swaths of your former territory, your empire is descending into civil war!</English>
+		<French>Votre empire entre en guerre civile !</French>
+		<German>Euer Reich steht vor einem B&#252;rgerkrieg!</German>
+		<Italian>Il tuo impero sta per cadere nella guerra civile!</Italian>
+		<Spanish>&#161;Tu imperio est&#225; sufriendo una guerra civil!</Spanish>
+		<Portuguese>Seu império estourou em Guerra Civil!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_CIVILWAR_BARBS</Tag>
+		<English>is descending into civil war, because of barbarian activity!</English>
+		<French>entre en guerre civile !</French>
+		<German>steht vor einem B&#252;rgerkrieg!</German>
+		<Italian>sta cadendo nella guerra civile!</Italian>
+		<Spanish>est&#225; sufriendo una guerra civil.</Spanish>
+		<Portuguese>estourou em Guerra Civil.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_CIVILWAR_DECLINE_HUMAN</Tag>
+		<English>The rapid decline in your territory has dreadful consequences, your empire is descending into civil war!</English>
+		<French>Votre empire entre en guerre civile !</French>
+		<German>Euer Reich steht vor einem B&#252;rgerkrieg!</German>
+		<Italian>Il tuo impero sta per cadere nella guerra civile!</Italian>
+		<Spanish>&#161;Tu imperio est&#225; sufriendo una guerra civil!</Spanish>
+		<Portuguese>Seu império estourou em Guerra Civil!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_CIVILWAR_DECLINE</Tag>
+		<English>is descending into civil war, because of recent territory losses!</English>
+		<French>entre en guerre civile !</French>
+		<German>steht vor einem B&#252;rgerkrieg!</German>
+		<Italian>sta cadendo nella guerra civile!</Italian>
+		<Spanish>est&#225; sufriendo una guerra civil.</Spanish>
+		<Portuguese>estourou em Guerra Civil.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_CIVILWAR_MOTHERLAND_HUMAN</Tag>
+		<English>As it was completely pushed out of its core area, your empire is descending into civil war!</English>
+		<French>Votre empire entre en guerre civile !</French>
+		<German>Euer Reich steht vor einem B&#252;rgerkrieg!</German>
+		<Italian>Il tuo impero sta per cadere nella guerra civile!</Italian>
+		<Spanish>&#161;Tu imperio est&#225; sufriendo una guerra civil!</Spanish>
+		<Portuguese>Seu império estourou em Guerra Civil!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_CIVILWAR_MOTHERLAND</Tag>
+		<English>is descending into civil war, because of homesickness!</English>
+		<French>entre en guerre civile !</French>
+		<German>steht vor einem B&#252;rgerkrieg!</German>
+		<Italian>sta cadendo nella guerra civile!</Italian>
+		<Spanish>est&#225; sufriendo una guerra civil.</Spanish>
+		<Portuguese>estourou em Guerra Civil.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STABILITY_CIVILWAR_STABILITY_HUMAN</Tag>
 		<English>Your empire is descending into civil war!</English>
 		<French>Votre empire entre en guerre civile !</French>
 		<German>Euer Reich steht vor einem B&#252;rgerkrieg!</German>
@@ -87,7 +141,7 @@
 		<Portuguese>Seu império estourou em Guerra Civil!</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_STABILITY_CIVILWAR</Tag>
+		<Tag>TXT_KEY_STABILITY_CIVILWAR_STABILITY</Tag>
 		<English>is descending into civil war!</English>
 		<French>entre en guerre civile !</French>
 		<German>steht vor einem B&#252;rgerkrieg!</German>

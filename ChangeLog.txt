@@ -66,7 +66,7 @@ Changes for RFCE 1.6:
 	- Changed the color of some messages related to the Rise and Fall mechanics from green to red
 
 	New wonders:
-	- New wonder: Jasna Gora - +8 culture, +20% defence (cannot be broken by bombardment), +2 culture from temple in all cities, free March promotion for units, +2 GPP (Great Artist)
+	- New wonder: Jasna Gora - +8 culture, +20% defence (cannot be broken by bombardment), +2 culture from temples in all cities, free March promotion for units, +2 GPP (Great Artist)
 	- New wonder: Samogitian Alkas - +6 culture (some of it stays without Paganism too), +1 culture in all cities if you don't have a state religion, +2 science from Pagan Shrine in all cities, +1 GPP (Great Scholar)
 	- New wonder: Gediminas Tower - +4 culture, +30% defence, restores some of the city defences on combat victory in the city, +2 GPP (Great Engineer)
 	- New wonder: Grand Arsenal - +2 culture, +4 xp and +100% production speed for naval units, +3 heavily promoted Gun Galley / Galleass units appear in the city, +2 GPP (Great Engineer)
@@ -106,7 +106,7 @@ Changes for RFCE 1.6:
 	- Redesigned wonder: Bibliotheca Corviniana - +8 culture, grants 2 random technologies from techs already known by other civs, +25% science, +2 GPP (Great Scholar)
 	- Redesigned wonder: St. Basil Cathedral - +8 culture, +1 espionage from state religion buildings, -30% unit upkeep cost, +2 GPP (Great Spy)
 	- Redesigned wonder: Copernicus Observatory - +2 culture, only adds free specialists for towns worked by the city, +25% science, +2 GPP (Great Scholar)
-	- Redesigned wonder: Westminster Abbey - +8 culture, +1 happiness per city in divine monarchy, additional stability based on your civs faith, +2 GPP (Great Theologian)
+	- Redesigned wonder: Westminster Abbey - +8 culture, +1 happiness per city in divine monarchy, additional stability based on your civ's faith, +2 GPP (Great Theologian)
 	- Redesigned wonder: Magna Carta - +6 culture, +2 culture from courthouse in all cities, no stability penalty for unstable civic combinations, +2 GPP (Great Spy)
 
 	Wonder balance/art:
@@ -175,7 +175,7 @@ Changes for RFCE 1.6:
 	- Aragonese UP: tile yields will be displayed right away, not on the next turn
 	- Aragonese UP bugfix: yields correctly reset for old capitals (both on conquest, and on flip, secession and capital move too)
 	- Aragonese UP bugfix: yields will be correctly set for the new capital (won't get a huge negative modifier)
-	- Scottish UP bugfix: will trigger for all players, but only on city conquest
+	- Scottish UP bugfix: will trigger for/against all players, but only on city conquest
 	- Burgundy, Hungary and Lithuania UP: new, proper/unique happiness modifier (and improved happiness tooltip) for civs with the Happy UPs
 	- Burgundy, Spain and Lithuania UP: free yields from the UPs are now properly shown in the city tooltips
 	- Fixed bug where the free yields from UPs were not eligible for modifiers at all
@@ -737,7 +737,7 @@ Changes for RFCE 1.5:
 		- Revised AI persecution values and religions for all civs, improved AI logic when and what to purge
 		- An AI city may become target for persecution if it has a religion the civ wants to purge, and it doesn't have a wonder associated with that religion
 		- AI civs will try to build more defender units for escorting settlers
-		- Fixed serious vanilla BtS bug which messed up AI value calculations for training missionaries in their cities, resulting in way fewer missionaries in RFCE than intended
+		- Fixed serious vanilla BtS bug which messed up AI value calculations for training missionaries in their cities, resulting in way less missionaries in RFCE than intended
 		- As a result of the above, and some further improvements and adjustments, the AI will build and use both missionaries and persecutors more often
 		- Increased religion flavor for most AI leaders, resulting in more efforts to spread/build in their state religion
 		- AI civs will only spread religion to other civs if it's their current state religion or they do not have a state religion

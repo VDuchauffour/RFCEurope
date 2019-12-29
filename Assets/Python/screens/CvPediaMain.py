@@ -362,17 +362,15 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 
 	def placeBuildings(self):
 
-		tList = self.pediaBuildingScreen.getBuildingSortedList(false)
-
 		#tList = self.getSortedList( gc.getNumBuildingInfos(), gc.getBuildingInfo )
+		tList = self.pediaBuildingScreen.getBuildingSortedList(false)
 		self.displayTopics(tList, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, gc.getBuildingInfo)
 
 
 	def placeWonders(self):
 
-		tList = self.pediaBuildingScreen.getBuildingSortedList(true)
-
 		#tList = self.getSortedList( gc.getNumBuildingInfos(), gc.getBuildingInfo )
+		tList = self.pediaBuildingScreen.getBuildingSortedList(true)
 		self.displayTopics(tList, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, gc.getBuildingInfo)
 
 
@@ -384,7 +382,8 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 
 	def placeImprovements(self):
 
-		tList = self.getSortedList( gc.getNumImprovementInfos(), gc.getImprovementInfo )
+		#tList = self.getSortedList( gc.getNumImprovementInfos(), gc.getImprovementInfo )
+		tList = self.pediaImprovement.getImprovementSortedList()
 		self.displayTopics(tList, WidgetTypes.WIDGET_PEDIA_JUMP_TO_IMPROVEMENT, gc.getImprovementInfo)
 
 

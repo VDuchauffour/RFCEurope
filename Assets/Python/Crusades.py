@@ -404,6 +404,9 @@ class Crusades:
 				if iUnitType in [xml.iKnightofStJohns, xml.iTemplar, xml.iTeutonic]:
 					pPlot = gc.getMap().plot( pUnit.getX(), pUnit.getY() )
 					iRandNum = gc.getGame().getSorenRandNum(100, 'roll to send Unit to Crusade')
+					# Absinthe: less chance for units currently on ships
+					if pUnit.isCargo():
+						iRandNum -= 10
 					if pPlot.isCity():
 						if self.getNumDefendersAtPlot( pPlot ) > 3:
 							if iRandNum < 50:
@@ -546,14 +549,12 @@ class Crusades:
 
 	def setCrusaders( self ):
 		iHuman = utils.getHumanID()
-		#teamJerusalem = gc.getTeam( gc.getPlayer( gc.getMap().plot( tJerusalem[0], tJerusalem[1] ).getPlotCity().getOwner() ).getTeam() )
 		for iPlayer in range( con.iNumPlayers ):
 			if not iPlayer == iHuman and self.getVotingPower( iPlayer ) > 0:
 				gc.getPlayer( iPlayer ).setIsCrusader( True )
 
 
 	def sendUnits( self, iPlayer ):
-		#iHuman = utils.getHumanID()
 		pPlayer = gc.getPlayer( iPlayer )
 		iNumUnits = pPlayer.getNumUnits()
 		if con.tBirth[iPlayer] + 10 > gc.getGame().getGameTurn(): # in the first 10 turns
@@ -561,7 +562,7 @@ class Crusades:
 				iMaxToSend = 0
 			else:
 				iMaxToSend = 1
-		elif con.tBirth[iPlayer] + 25 > gc.getGame().getGameTurn(): # between turn 10-25
+		elif con.tBirth[iPlayer] + 25 > gc.getGame().getGameTurn(): # between turn 11-25
 			iMaxToSend = min( 10, max( 1, (5*iNumUnits) / 50 ) )
 		else:
 			iMaxToSend = min( 10, max( 1, (5*iNumUnits) / 35 ) ) # after turn 25
@@ -590,18 +591,32 @@ class Crusades:
 									if iRandNum < 40:
 										iCrusadersSend += 1
 										self.sendUnit( pUnit )
-							elif iRandNum < 80:
-								iCrusadersSend += 1
-								self.sendUnit( pUnit )
+							else:
+								# Absinthe: much less chance for units currently on ships
+								if pUnit.isCargo():
+									if iRandNum < 40:
+										iCrusadersSend += 1
+										self.sendUnit( pUnit )
+								else:
+									if iRandNum < 80:
+										iCrusadersSend += 1
+										self.sendUnit( pUnit )
 						else:
 							if pPlot.isCity():
 								if self.getNumDefendersAtPlot( pPlot ) > 2:
 									if iRandNum < (self.unitProbability( pUnit.getUnitType() ) - 10):
 										iCrusadersSend += 1
 										self.sendUnit( pUnit )
-							elif iRandNum < (self.unitProbability( pUnit.getUnitType() ) - 10):
-									iCrusadersSend += 1
-									self.sendUnit( pUnit )
+							else:
+								# Absinthe: much less chance for units currently on ships
+								if pUnit.isCargo():
+									if iRandNum < (self.unitProbability( pUnit.getUnitType() ) - 10) / 2:
+										iCrusadersSend += 1
+										self.sendUnit( pUnit )
+								else:
+									if iRandNum < (self.unitProbability( pUnit.getUnitType() ) - 10):
+										iCrusadersSend += 1
+										self.sendUnit( pUnit )
 						if iCrusadersSend == iMaxToSend:
 							return
 			# Absinthe: extra chance for some random units, if we didn't fill the quota
@@ -620,9 +635,15 @@ class Crusades:
 									iCrusadersSend += 1
 									self.sendUnit( pUnit )
 						else:
-							if gc.getGame().getSorenRandNum(100, 'roll to send Unit to Crusade') < self.unitProbability( pUnit.getUnitType() ):
-								iCrusadersSend += 1
-								self.sendUnit( pUnit )
+							# Absinthe: much less chance for units currently on ships
+							if pUnit.isCargo():
+								if gc.getGame().getSorenRandNum(100, 'roll to send Unit to Crusade') < self.unitProbability( pUnit.getUnitType() / 2 ):
+									iCrusadersSend += 1
+									self.sendUnit( pUnit )
+							else:
+								if gc.getGame().getSorenRandNum(100, 'roll to send Unit to Crusade') < self.unitProbability( pUnit.getUnitType() ):
+									iCrusadersSend += 1
+									self.sendUnit( pUnit )
 						if iCrusadersSend == iMaxToSend:
 							return
 

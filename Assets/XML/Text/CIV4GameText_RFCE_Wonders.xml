@@ -17,7 +17,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CATHOLIC_SHRINE_PEDIA</Tag>
-		<English>[TAB]St. Peter's Basilica, located in Vatican City, Italy, is the home of the Pope and the heart of the Catholic Church. Having only been occupied by the Pope since the breakup of the Papal State in 1871, the current St. Peter's Basilica is a relatively new addition to the Church's assets. Sitting adjacent to the iconic St. Peter's Square, the Palace acts as the administrative center for all business of the Catholic Church. Further, it is from here that the Pope issues decrees which affect Catholics throughout the world. And with nearly one in six people on Earth prescribing to Catholicism, this means the St. Peter's Basilica is the headquarters for one of the most influential organizations on the planet.[PARAGRAPH:2]While the palace's importance as a world administrative center cannot be doubted, the St. Peter's Basilica also houses one of the most famous art collections on Earth. Contained within the walls of the St. Peter's Basilica is the Vatican Museum, which displays the works of master artisans Caravaggio, Raphael and Da Vinci. Michelangelo's famous Sistine Chapel is also a part of the St. Peter's Basilica.</English>
+		<English>[TAB]While the current St. Peter's Basilica is relatively new, that's not the first home of the Pope (and the heart of the Catholic Church) in Vatican City, Italy. Old St. Peter's Basilica was the building that stood, from the 4th to 16th centuries, where the new St. Peter's Basilica stands today. Construction of the basilica, built over the historical site of the Circus of Nero, began during the reign of Emperor Constantine I. The name "old St. Peter's Basilica" has been used since the construction of the current basilica to distinguish the two buildings.[PARAGRAPH:2]Construction began by orders of the Roman Emperor Constantine I between 318 and 322, and took about 40 years to complete. Over the next twelve centuries, the church gradually gained importance, eventually becoming a major place of pilgrimage in Rome. Papal coronations were held at the basilica, and in 800, Charlemagne was crowned emperor of the Holy Roman Empire there.[PARAGRAPH:2]By the 15th century the church was falling into ruin. Discussions on repairing parts of the structure commenced upon the pope's return from Avignon. Two people involved in this reconstruction were Leon Battista Alberti and Bernardo Rossellino, who improved the apse and partially added a multi-story benediction loggia to the atrium facade, on which construction continued intermittently until the new basilica was begun.[PARAGRAPH:2]The current St. Peter's Basilica, having only been occupied by the Pope since the breakup of the Papal State in 1871, is a relatively new addition to the Church's assets. Sitting adjacent to the iconic St. Peter's Square, the Palace acts as the administrative center for all business of the Catholic Church. Further, it is from here that the Pope issues decrees which affect Catholics throughout the world. And with nearly one in six people on Earth prescribing to Catholicism, this means the St. Peter's Basilica is the headquarters for one of the most influential organizations on the planet.[PARAGRAPH:2]While the palace's importance as a world administrative center cannot be doubted, the St. Peter's Basilica also houses one of the most famous art collections on Earth. Contained within the walls of the St. Peter's Basilica is the Vatican Museum, which displays the works of master artisans Caravaggio, Raphael and Da Vinci, among countless others.</English>
 		<French>.</French>
 		<German>[TAB]Sankt Peter im Vatikan in Rom, im deutschen Sprachraum meist Petersdom genannt (auch: Basilika St. Peter; Petersbasilika, Vatikanische Basilika oder Templum Vaticanum) ist die größte der Papstbasiliken in Rom, nicht aber die Kathedrale des Bischofs von Rom, dies ist die Lateranbasilika. Ihre volle Bezeichnung lautet Basilica Papale di San Pietro in Vaticano[1], lateinisch: Basilica Sancti Petri in Vaticano. Der Petersdom ist das Zentrum des unabhängigen Staats der Vatikanstadt.[PARAGRAPH:2]Den Vorgängerbau, auch Alt-St. Peter genannt, ließ Konstantin der Große um 324 als Grabeskirche über dem vermuteten Grab des Apostels Simon Petrus errichten, dem sie geweiht ist. Diese und der Petersdom waren seit Mitte des 5. Jahrhunderts die Patriarchalbasilika des Lateinischen Patriarchen von Konstantinopel (Amt 2006 niedergelegt).[PARAGRAPH:2]Der Petersdom fasst 20.000 Menschen und ist mit einer überbauten Fläche von 15.160 m² eines der größten Kirchengebäude der Welt.</German>
 		<Italian>.</Italian>
@@ -208,12 +208,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SISTINE_CHAPEL_HELP</Tag>
-		<English>[ICON_BULLET]+1 Free Artist in cities with World Wonders</English>
-		<French>[ICON_BULLET]+1 Free Artist in cities with World Wonders</French>
-		<German>[ICON_BULLET]+1 Free Artist in cities with World Wonders</German>
-		<Italian>[ICON_BULLET]+1 Free Artist in cities with World Wonders</Italian>
-		<Spanish>[ICON_BULLET]+1 Free Artist in cities with World Wonders</Spanish>
-		<Portuguese>[ICON_BULLET]+1 Free Artist in cities with World Wonders</Portuguese>
+		<English>[ICON_BULLET]+1 Free [LINK=literal]Artist[\LINK] in cities with World Wonders</English>
+		<French>[ICON_BULLET]+1 Free [LINK=literal]Artist[\LINK] in cities with World Wonders</French>
+		<German>[ICON_BULLET]+1 Free [LINK=literal]Artist[\LINK] in cities with World Wonders</German>
+		<Italian>[ICON_BULLET]+1 Free [LINK=literal]Artist[\LINK] in cities with World Wonders</Italian>
+		<Spanish>[ICON_BULLET]+1 Free [LINK=literal]Artist[\LINK] in cities with World Wonders</Spanish>
+		<Portuguese>[ICON_BULLET]+1 Free [LINK=literal]Artist[\LINK] in cities with World Wonders</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS</Tag>
@@ -235,7 +235,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS_HELP</Tag>
-		<English>[ICON_BULLET]Free walls and castle in every conquered city</English>
+		<English>[ICON_BULLET]Free [LINK=literal]Walls[\LINK] and [LINK=literal]Castle[\LINK] in every conquered city</English>
 		<French>[ICON_BULLET]Rempart et Chateau dans chaque ville conquite</French>
 		<German>[ICON_BULLET]Freie Gebäude [COLOR_BUILDING_TEXT]Stadtmauern[COLOR_REVERT] und [COLOR_BUILDING_TEXT]Burg[COLOR_REVERT] in jeder eroberten Stadt</German>
 		<Italian>[ICON_BULLET]Mura e Castello gratuiti in ogni città conquistata</Italian>
@@ -352,7 +352,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGNA_CARTA_PEDIA</Tag>
-		<English>[TAB]Magna Carta, also called Magna Carta Libertatum (the Great Charter of Freedoms), is an English legal charter, originally issued in the year 1215. It was written in Latin and is known by its Latin name. The usual English translation of Magna Carta is Great Charter.[PARAGRAPH:2]Magna Carta required King John of England to proclaim certain rights (pertaining to freemen), respect certain legal procedures, and accept that his will could be bound by the law. It explicitly protected certain rights of the King's subjects, whether free or fettered - and implicitly supported what became the writ of habeas corpus, allowing appeal against unlawful imprisonment.[PARAGRAPH:2]Magna Carta was arguably the most significant early influence on the extensive historical process that led to the rule of constitutional law today in the English speaking world. Magna Carta influenced the development of the common law and many constitutional documents, including the United States Constitution. Many clauses were renewed throughout the Middle Ages, and continued to be renewed as late as the 18th century. By the second half of the 19th century, however, most clauses in their original form had been repealed from English law.[PARAGRAPH:2]Magna Carta was the first document forced onto an English King by a group of his subjects (the barons) in an attempt to limit his powers by law and protect their privileges. It was preceded by the 1100 Charter of Liberties in which King Henry I voluntarily stated that his own powers were under the law.[PARAGRAPH:2]In practice, Magna Carta in the medieval period mostly did not limit the power of Kings; but by the time of the English Civil War it had become an important symbol for those who wished to show that the King was bound by the law.[PARAGRAPH:2]Magna Carta is normally understood to refer to a single document, that of 1215. Various amended versions of Magna Carta appeared in subsequent years however, and it is the 1297 version which remains on the statute books of England and Wales.</English>
+		<English>[TAB]Magna Carta, also called Magna Carta Libertatum (the Great Charter of Freedoms), is an English legal charter, originally issued in the year 1215. It was written in Latin and is known by its Latin name. The usual English translation of Magna Carta is Great Charter.[PARAGRAPH:2]Magna Carta required King John of England to proclaim certain rights (pertaining to freemen), respect certain legal procedures, and accept that his will could be bound by the law. It explicitly protected certain rights of the King's subjects, whether free or fettered - and implicitly supported what became the writ of habeas corpus, allowing appeal against unlawful imprisonment.[PARAGRAPH:2]Magna Carta was arguably the most significant early influence on the extensive historical process that led to the rule of constitutional law today in the English speaking world. Magna Carta influenced the development of the common law and many constitutional documents, including the United States Constitution. Many clauses were renewed throughout the Middle Ages, and continued to be renewed as late as the 18th century. By the second half of the 19th century, however, most clauses in their original form had been repealed from English law.[PARAGRAPH:2]Magna Carta was the first document forced onto an English King by a group of his subjects (the barons) in an attempt to limit his powers by law and protect their privileges. It was preceded by the 1100 Charter of Liberties in which King Henry I voluntarily stated that his own powers were under the law.[PARAGRAPH:2]The charter was an important part of the extensive historical process that led to the rule of constitutional law in the English speaking world, and it was Magna Carta (rather than other early concessions by the monarch) which survived to become a "sacred text". In practice, Magna Carta in the medieval period mostly did not limit the power of Kings; but by the time of the English Civil War it had become an important symbol for those who wished to show that the King was bound by the law.[PARAGRAPH:2]Magna Carta is normally understood to refer to a single document, that of 1215. Various amended versions of Magna Carta appeared in subsequent years however, and it is the 1297 version (The Great Charter of the Liberties of England, and of the Liberties of the Forest) which remains on the statute books of England and Wales.</English>
 		<French>.</French>
 		<German>[TAB]Die meist nur kurz als Magna Carta (auch: Magna Charta) bezeichnete Magna Charta Libertatum - auf Deutsch etwa: "großer Freibrief" - ist eine von König Johann Ohneland zu Runnymede in England am 15. Juni 1215 unterzeichnete Vereinbarung mit dem revoltierenden englischen Adel. Sie gilt als die wichtigste Quelle des englischen Verfassungsrechts. Ein bedeutender Teil der Magna Charta ist eine wörtliche Kopie der Charter of Liberties Heinrichs I., welche dem englischen Adel seine Rechte gewährte. Die Magna Charta verbriefte grundlegende politische Freiheiten des Adels gegenüber dem englischen König, dessen Land seinerzeit Lehen des Papstes Innozenz III. war. Der Kirche wurde die Unabhängigkeit von der Krone garantiert. Das Dokument wurde vom König nur auf erheblichen Druck der Barone angenommen.</German>
 		<Italian>.</Italian>
@@ -721,7 +721,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NOTRE_DAME_HELP</Tag>
-		<English>[ICON_BULLET]+20% culture in all cities with State Religion</English>
+		<English>[ICON_BULLET]+20%[ICON_CULTURE] in all cities with State Religion</English>
 		<French>Notre-Dame</French>
 		<German>Notre Dame</German>
 		<Italian>Notre Dame</Italian>
@@ -1063,7 +1063,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WESTMINSTER_HELP</Tag>
-		<English>[ICON_BULLET]+1 happiness in all cities under [LINK=literal]Divine Monarchy[\LINK][NEWLINE][ICON_BULLET]Grants stability based on the Faith of your civilization</English>
+		<English>[ICON_BULLET]Grants stability based on the Faith of your civilization[NEWLINE][ICON_BULLET]+1 happiness in all cities under [LINK=literal]Divine Monarchy[\LINK]</English>
 		<French>Westminster Abbey</French>
 		<German>Westminster Abbey</German>
 		<Italian>Westminster Abbey</Italian>
@@ -1144,7 +1144,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JASNA_GORA_HELP</Tag>
-		<English>[ICON_BULLET]+2[ICON_CULTURE] from Temples in all cities</English>
+		<English>[ICON_BULLET]+1[ICON_CULTURE] from all Temples in all cities</English>
 		<French> Not translated. </French>
 		<German> Not translated. </German>
 		<Italian> Not translated. </Italian>
@@ -1360,7 +1360,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MONT_SAINT_MICHEL_HELP</Tag>
-		<English>[ICON_BULLET]Building Walls and Castles increases Faith in your civilization</English>
+		<English>[ICON_BULLET]Building [LINK=literal]Walls[\LINK] and [LINK=literal]Castle[\LINK] increases Faith in your civilization</English>
 		<French> Not translated. </French>
 		<German> Not translated. </German>
 		<Italian> Not translated. </Italian>
@@ -1540,7 +1540,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AL_AZHAR_UNIVERSITY_HELP</Tag>
-		<English>[ICON_BULLET]-20%[ICON_RESEARCH] cost for Religious Technologies</English>
+		<English>[ICON_BULLET]-50%[ICON_RESEARCH] cost for Religious Technologies</English>
 		<French> Not translated. </French>
 		<German> Not translated. </German>
 		<Italian> Not translated. </Italian>
@@ -1787,7 +1787,7 @@
 		<!-- Misc -->
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BROTHERS_AT_WAR</Tag>
-		<English>[ICON_BULLET]No unhappiness from fighting against brothers in faith, but small diplomatic penalty with nations who share your state religion</English>
+		<English>[ICON_BULLET]No unhappiness in your population from fighting against brothers in faith, but small diplomatic penalty with nations who share your state religion</English>
 		<French>[ICON_BULLET]Pas de m&#233;contement pour les guerres contre les fr&#232;res de foi</French>
 		<German>[ICON_BULLET]Keine [ICON_UNHAPPY] beim Kampf gegen Glaubensbrüder [ICON_RELIGION]; Diplomatiemalus gegen Nationen der gleichen Religion</German>
 		<Italian>[ICON_BULLET]Nessuna infelicità per la guerra contro i fratelli di fede. Penalità diplomatica verso le nazioni con la stessa religione</Italian>
