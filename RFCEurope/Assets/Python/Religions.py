@@ -834,6 +834,14 @@ class Religions:
 			if city.isHasReligion(xml.iCatholicism):
 				iFaith += self.reformationReformCity(city, iCiv )
 
+		# disband catholic missionaries of the AI civs on reformation
+		if iCiv != utils.getHumanID():
+			unitList = PyPlayer( iCiv ).getUnitList()
+			for pUnit in unitList:
+				iUnitType = pUnit.getUnitType()
+				if iUnitType == xml.iCatholicMissionary:
+					pUnit.kill( 0, -1 )
+
 		pPlayer = gc.getPlayer(iCiv)
 		#iStateReligion = pPlayer.getStateReligion()
 		#if (pPlayer.getStateReligion() == xml.iCatholicism):
@@ -985,8 +993,8 @@ class Religions:
 
 	def doCounterReformationHuman( self, iPlayer ):
 		pPlayer = gc.getPlayer( iPlayer )
-		szMessageYes = CyTranslator().getText("TXT_KEY_COUNTER_REFORMATION_MESSAGE_YES_1", ()) + "+%d " %(max( 1, pPlayer.getNumCities() / 3 )) + CyTranslator().getText("TXT_KEY_COUNTER_REFORMATION_MESSAGE_YES_2", ())
-		szMessageNo = CyTranslator().getText("TXT_KEY_COUNTER_REFORMATION_MESSAGE_NO_1", ()) + "+%d " %(max( 1, pPlayer.getNumCities() / 3 )) + CyTranslator().getText("TXT_KEY_COUNTER_REFORMATION_MESSAGE_NO_2", ())
+		szMessageYes = CyTranslator().getText("TXT_KEY_COUNTER_REFORMATION_MESSAGE_YES_1", ()) + " +%d " %(max( 1, pPlayer.getNumCities() / 3 )) + CyTranslator().getText("TXT_KEY_COUNTER_REFORMATION_MESSAGE_YES_2", ())
+		szMessageNo = CyTranslator().getText("TXT_KEY_COUNTER_REFORMATION_MESSAGE_NO_1", ()) + " +%d " %(max( 1, pPlayer.getNumCities() / 3 )) + CyTranslator().getText("TXT_KEY_COUNTER_REFORMATION_MESSAGE_NO_2", ())
 		self.showCounterPopup(7626, CyTranslator().getText("TXT_KEY_COUNTER_REFORMATION_TITLE", ()), CyTranslator().getText("TXT_KEY_COUNTER_REFORMATION_MESSAGE",()), (szMessageYes, szMessageNo))
 
 	def showCounterPopup(self, popupID, title, message, labels):

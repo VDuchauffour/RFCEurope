@@ -148,6 +148,15 @@
 		<Portuguese>.</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_MERCENARY_HELP</Tag>
+		<English>[ICON_BULLET]Used to mark a Mercenary Unit</English>
+		<French>[ICON_BULLET]Used to mark a Mercenary Unit</French>
+		<German>[ICON_BULLET]Used to mark a Mercenary Unit</German>
+		<Italian>[ICON_BULLET]Used to mark a Mercenary Unit</Italian>
+		<Spanish>[ICON_BULLET]Used to mark a Mercenary Unit</Spanish>
+		<Portuguese>[ICON_BULLET]Used to mark a Mercenary Unit</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MERCENARIES_DISABLED</Tag>
 		<English>Nationalism has changed the conception of armies: Mercenaries no longer fit in!</English>
 		<French>Le Nationalisme a chang&#233; la conception des arm&#233;es: les mercenaires ne sont plus utilis&#233;s !</French>

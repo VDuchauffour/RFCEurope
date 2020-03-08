@@ -474,10 +474,15 @@ void CvSelectionGroup::pushMission(MissionTypes eMission, int iData1, int iData2
 	mission.iPushTurn = GC.getGameINLINE().getGameTurn();
 
 	//GC.getGameINLINE().logMsg(" push_mission Here 4 "); // 3Miro
-	AI_setMissionAI(eMissionAI, pMissionAIPlot, pMissionAIUnit);
+	// Absinthe: K-Mod. Do not set the AI mission type if this is just a "follow" command!
+	// Absinthe: This might cause units to forget their mission AI type. (Thus cause general confusion in the AI.)
+	//AI_setMissionAI(eMissionAI, pMissionAIPlot, pMissionAIUnit);
+	if (canAllMove())
+		AI_setMissionAI(eMissionAI, pMissionAIPlot, pMissionAIUnit);
 	//GC.getGameINLINE().logMsg(" push_mission Here 4.1 "); // 3Miro
 
-	insertAtEndMissionQueue(mission, !bAppend);
+	//insertAtEndMissionQueue(mission, !bAppend);
+	insertAtEndMissionQueue(mission, !bAppend || AI_isControlled()); // Absinthe: K-Mod (AI commands should execute immediately)
 
 	//GC.getGameINLINE().logMsg(" push_mission Here 5 "); // 3Miro
 	if (bManual)

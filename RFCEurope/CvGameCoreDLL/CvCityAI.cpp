@@ -1337,7 +1337,7 @@ void CvCityAI::AI_chooseProduction()
 	
 	
 	if ((iAreaBestFoundValue > iMinFoundValue) || (iWaterAreaBestFoundValue > iMinFoundValue))
-	{		
+	{
 		if (pWaterArea != NULL)
 		{
 			int iTotalCities = kPlayer.getNumCities();
@@ -2703,6 +2703,12 @@ BuildingTypes CvCityAI::AI_bestBuildingThreshold(int iFocusFlags, int iMaxTurns,
 						if (canConstruct(eLoopBuilding))
 						{
 							iValue = AI_buildingValueThreshold(eLoopBuilding, iFocusFlags, iMinThreshold);
+							// Absinthe: Building preferences - added for the civ-specific building of the given buildingclass
+							iValue += buildingPrefs[ getOwnerINLINE() * NUM_BUILDINGS + eLoopBuilding ];
+							if ( iValue < 0 )
+							{
+								iValue = 0;
+							}
 
 							if (GC.getBuildingInfo(eLoopBuilding).getFreeBuildingClass() != NO_BUILDINGCLASS)
 							{
@@ -2723,7 +2729,6 @@ BuildingTypes CvCityAI::AI_bestBuildingThreshold(int iFocusFlags, int iMaxTurns,
 									}
 								}
 							}
-
 
 							if (iValue > 0)
 							{
@@ -2747,306 +2752,6 @@ BuildingTypes CvCityAI::AI_bestBuildingThreshold(int iFocusFlags, int iMaxTurns,
 											iTempValue *= 2;
 										}
 										iValue += iTempValue;
-									//Rhye - start switch (wonders)
-
-									iTempValue = 10;
-
-									// 3Miro: How likely is the AI to build something
-									/*switch (getOwnerINLINE())
-									{
-									case EGYPT:
-										if (iI == PYRAMID) iTempValue *= 4;
-										else if (iI == GREATLIBRARY) iTempValue *= 3; 
-										else if (iI == GREATLIGHTHOUSE) iTempValue *= 3;
-										else if (iI == STONEHENGE) iTempValue /= 2;
-										else {
-											iTempValue *= 2;
-											iTempValue /= 3;
-											}
-										break;
-									case INDIA:
-										if (iI == ANGKORWAT) iTempValue *= 2;
-										else if (iI == PARTHENON) iTempValue /= 3;
-										else if (iI == ZEUS) iTempValue /= 2;
-										else if (iI == TAJMAHAL) iTempValue *= 3;
-										else if (iI == PAYA) iTempValue *= 2;
-										else {
-											iTempValue *= 2;
-											iTempValue /= 3;
-											}
-										break;
-									case CHINA:
-										if (iI == FORBIDDENPALACE) iTempValue *= 4; 
-										else if (iI == GREATWALL) iTempValue *= 8; 
-										else if (iI == GREATDAM) iTempValue *= 2; 
-										else if (iI == HANGINGGARDEN) iTempValue /= 3;
-										else if (iI == APOSTOLIC) iTempValue /= 2;
-									case BABYLONIA:
-										if (iI == HANGINGGARDEN) iTempValue *= 5; 
-										else if (iI == SPIRALMINARET) iTempValue *= 2; 
-										else if (iI == GREATWALL) iTempValue /= 4;
-										if (iI == MAUSOLLOS) {
-														iTempValue *= 3; 
-														iTempValue /= 2; 
-										}
-									case GREECE:
-										if (iI == GREATLIBRARY) {
-														iTempValue *= 3; 
-														iTempValue /= 2; 
-										}
-										else if (iI == COLOSSUS) iTempValue *= 3;
-										else if (iI == ORACLE) iTempValue *= 3;
-										else if (iI == PARTHENON) iTempValue *= 3;
-										else if (iI == ARTEMIS) iTempValue *= 3;
-										else if (iI == ZEUS) iTempValue *= 3;
-										else if (iI == HAGIASOPHIA) iTempValue *= 2;
-										else if (iI == OLYMPICPARK) iTempValue *= 2;
-										else if (iI == APOSTOLIC) iTempValue *= 2;
-										else {
-											iTempValue *= 2;
-											iTempValue /= 3;
-											}
-										break;
-									case PERSIA:
-										if (iI == HANGINGGARDEN) {
-														iTempValue *= 3; 
-														iTempValue /= 2; 
-										}
-										if (iI == COLOSSUS) {
-														iTempValue *= 3; 
-														iTempValue /= 2; 
-										}
-										if (iI == ORACLE) {
-														iTempValue *= 3; 
-														iTempValue /= 2; 
-										}
-										else if (iI == MAUSOLLOS) iTempValue *= 3;
-										break;
-									case CARTHAGE:
-										if (iI == GREATLIGHTHOUSE) {
-														iTempValue *= 3; 
-														iTempValue /= 2; 
-										}
-										else if (iI == COLOSSUS) {
-														iTempValue *= 3; 
-														iTempValue /= 2; 
-										}
-										else if (iI == APOSTOLIC) iTempValue /= 2;
-										break;
-									case ROME:
-										if (iI == PARTHENON) {
-														iTempValue *= 3; 
-														iTempValue /= 2; 
-										}
-										else if (iI == ARTEMIS) {
-														iTempValue *= 3; 
-														iTempValue /= 2; 
-										}
-										else if (iI == ZEUS) {
-														iTempValue *= 3; 
-														iTempValue /= 2; 
-										}
-										else if (iI == FLAVIANAMPHITHEATRE) iTempValue *= 3;
-										else if (iI == SISTINECHAPEL) iTempValue *= 3;
-										else if (iI == LEANINGTOWER) iTempValue *= 3;
-										else if (iI == APOSTOLIC) iTempValue *= 4;
-										else if (iI == GREATLIGHTHOUSE) iTempValue *= 2;
-										else {
-											iTempValue *= 3;
-											iTempValue /= 4;
-											}
-										break;
-									case JAPAN:
-										if (iI == GREATWALL) iTempValue /= 10; 
-										else if (iI == APOSTOLIC) iTempValue /= 2;
-										break;
-									case ETHIOPIA:
-										break;
-									case MAYA:
-										if (iI == CHICHENITZA) iTempValue *= 4; 
-										break;
-									case VIKING:
-										if (iI == CHANNELTUNNEL) {
-														iTempValue *= 3; 
-														iTempValue /= 2; 
-										}
-										else if (iI == APOSTOLIC) iTempValue *= 2;
-										break;
-									case ARABIA:
-										if (iI == HAGIASOPHIA) iTempValue *= 2;
-										else if (iI == SPIRALMINARET) iTempValue *= 3;
-										else {
-											iTempValue *= 2;
-											iTempValue /= 3;
-											}
-									break;
-									case KHMER:
-										if (iI == ANGKORWAT) iTempValue *= 3;
-										else if (iI == PAYA) iTempValue *= 3;
-										else if (iI == TAJMAHAL) iTempValue *= 2;
-										else if (iI == MOAI) {
-											iTempValue *= 3; 
-											iTempValue /= 2; 
-										}
-										else {
-											iTempValue *= 2;
-											iTempValue /= 3;
-											}
-										break;
-									case SPAIN:
-										if (iI == NOTREDAME) {
-														iTempValue *= 3; 
-														iTempValue /= 2; 
-										}
-										else if (iI == CRISTO) iTempValue *= 2; 
-										else if (iI == WEMBLEY) iTempValue *= 2; 
-										else if (iI == APOSTOLIC) iTempValue *= 2;
-										break;
-									case FRANCE:
-										if (iI == NOTREDAME) iTempValue *= 2;
-										else if (iI == EIFFELTOWER) iTempValue *= 3;
-										else if (iI == STATUEOFLIBERTY) iTempValue *= 2; 
-										else if (iI == CHANNELTUNNEL) iTempValue *= 3;
-										else if (iI == APOSTOLIC) iTempValue *= 2;
-										else {
-											iTempValue *= 3;
-											iTempValue /= 4;
-										}
-										break;
-									case ENGLAND:
-										if (iI == STONEHENGE) { 
-														iTempValue *= 3; 
-														iTempValue /= 2; 
-										}
-										/*else if (iI == GRACELAND) { 
-														iTempValue *= 3; 
-														iTempValue /= 2; 
-										}*/
-										/*else if (iI == TRADINGCOMPANY) iTempValue *= 2; 
-										else if (iI == NATIONALGALLERY) iTempValue *= 2; 
-										else if (iI == WEMBLEY) iTempValue *= 3; 
-										//else if (iI == GLOBETHEATRE) iTempValue *= 2; 
-										else if (iI == CHANNELTUNNEL) iTempValue *= 3; 
-										//else if (iI == SCOTLANDYARD) iTempValue *= 2; 
-										else if (iI == APOSTOLIC) iTempValue *= 2;
-										else {
-											iTempValue *= 3;
-											iTempValue /= 4;
-										}
-										break;
-									case GERMANY:
-										if (iI == NOTREDAME) { //Notre Dame
-														iTempValue *= 3; 
-														iTempValue /= 2; 
-										}
-										if (iI == IRONWORKS) { //Iron Works
-														iTempValue *= 3; 
-														iTempValue /= 2; 
-										}
-										else if (iI == WEMBLEY) iTempValue *= 2; 
-										else if (iI == APOSTOLIC) iTempValue *= 2;
-										break;
-									case RUSSIA:
-										if (iI == KREMLIN) iTempValue *= 2;
-										//else if (iI == HERMITAGE) iTempValue *= 2; 
-										else if (iI == APOSTOLIC) iTempValue *= 2;
-										else {
-											iTempValue *= 3;
-											iTempValue /= 4;
-										}
-										break;
-									case NETHERLANDS:
-										if (iI == NOTREDAME) { //Notre Dame
-														iTempValue *= 3; 
-														iTempValue /= 2; 
-										}
-										else if (iI == TRADINGCOMPANY) iTempValue *= 3; 
-										else if (iI == NATIONALGALLERY) iTempValue *= 3; 
-										else if (iI == WEMBLEY) iTempValue *= 3; 
-										else if (iI == CHANNELTUNNEL) iTempValue *= 2; 
-										else if (iI == APOSTOLIC) iTempValue *= 2;
-										else {
-											iTempValue *= 3;
-											iTempValue /= 4;
-										}
-										break;
-									case MALI:
-										if (iI == SANKORE)	iTempValue *= 4; 
-										break;
-									case TURKEY:
-										if (iI == HAGIASOPHIA)	iTempValue *= 4; 
-										break;
-									case PORTUGAL:
-										if (iI == NOTREDAME) {
-														iTempValue *= 3; 
-														iTempValue /= 2; 
-										}
-										else if (iI == CRISTO) iTempValue *= 4; 
-										else if (iI == WEMBLEY) iTempValue *= 2; 
-										else if (iI == APOSTOLIC) iTempValue *= 2;
-										break;
-									case INCA:
-										if (iI == CHICHENITZA) iTempValue *= 2; 
-										break;
-									case MONGOLIA:
-										break;
-									case AZTEC:
-										if (iI == CHICHENITZA) iTempValue *= 3; 
-										break;
-									case AMERICA:
-										if (iI == STATUEOFLIBERTY) iTempValue *= 2;
-										//else if (iI == BROADWAY) iTempValue *= 2;
-										else if (iI == GRACELAND) iTempValue *= 2;
-										else if (iI == HOLLYWOOD) iTempValue *= 3; 
-										else if (iI == PENTAGON) iTempValue *= 3; 
-										else if (iI == UNITEDNATIONS) iTempValue *= 2; 
-										//else if (iI == 71) iTempValue *= 2; //West Point
-										else if (iI == MTRUSHMORE) iTempValue *= 3;
-										else {
-											iTempValue *= 3;
-											iTempValue /= 4;
-										}
-										break;
-									case CELTIA:
-										if (iI == STONEHENGE) iTempValue *= 4; 
-										break;
-									default:
-										if (iI == STONEHENGE) iTempValue *= 2;
-										if (iI == MOAI) iTempValue *= 5;
-										break;
-									}*/
-
-									/*if (getOwnerINLINE() >= VIKING) //since it is now enabled for Medieval civs too
-										if (iI == GREATWALL) iTempValue /= 12; 
-
-
-									if (iI == CHICHENITZA) //for the UHV
-										if (getOwnerINLINE() != MAYA) {
-											if (!GET_PLAYER((PlayerTypes)MAYA).isAlive()) 
-												iTempValue /= 3;
-											else iTempValue /= 2;
-										}
-
-									if (iI == NOTREDAME) //for the UHV
-										if (getOwnerINLINE() != FRANCE) {
-											if (!GET_PLAYER((PlayerTypes)FRANCE).isAlive()) 
-												iTempValue /= 3;
-											else { iTempValue *= 2; iTempValue /= 3; }
-										}
-
-									if (iI == STATUEOFLIBERTY) //for the UHV
-										if (getOwnerINLINE() != AMERICA) {
-											if (!GET_PLAYER((PlayerTypes)AMERICA).isAlive()) 
-												iTempValue /= 3;
-											else iTempValue /= 2;
-										}
-
-									*/
-									//iValue += (iTempValue - 10);
-									//Rhye - end switch
-										// 3MiroAI: Building preferences - wonders
-										iValue += buildingPrefs[ getOwnerINLINE() * NUM_BUILDINGS + iI ];
-										if ( iValue < 0 ){ iValue = 0; }
 									}
 								}
 
@@ -3233,7 +2938,7 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 			}
 
 			// 3MiroCivicAI: Building Civic gold combo
-			int iCivic;			
+			int iCivic;
 			int iBuildingClass = kBuilding.getBuildingClassType();
 			for( iCivic = 0; iCivic < GC.getNumCivicInfos(); iCivic++ ){
 				CvCivicInfo &pCivicInfo = GC.getCivicInfo( (CivicTypes) iCivic );
@@ -3876,6 +3581,10 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 					{
 					    iTempValue += kBuilding.getSeaPlotYieldChange(iI) * AI_buildingSpecialYieldChangeValue(eBuilding, (YieldTypes)iI);
 					}
+					if (kBuilding.getCoastalPlotYieldChange(iI) > 0)
+					{
+						iTempValue += (kBuilding.getCoastalPlotYieldChange(iI) * 3 * 4);
+					}
 					if (kBuilding.getRiverPlotYieldChange(iI) > 0)
 					{
 						iTempValue += (kBuilding.getRiverPlotYieldChange(iI) * countNumRiverPlots() * 4);
@@ -3952,6 +3661,11 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 					    }
 					}
 
+					if (kBuilding.getCoastalPlotYieldChange(YIELD_FOOD) > 0)
+					{
+						iValue += (kBuilding.getCoastalPlotYieldChange(YIELD_FOOD) * 3 * 4);
+					}
+
 					if (kBuilding.getRiverPlotYieldChange(YIELD_FOOD) > 0)
 					{
 						iValue += (kBuilding.getRiverPlotYieldChange(YIELD_FOOD) * countNumRiverPlots() * 4);
@@ -3969,6 +3683,10 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 						{
 					    	iTempValue += kBuilding.getSeaPlotYieldChange(YIELD_PRODUCTION) * iNumWaterPlots;
 						}
+					}
+					if (kBuilding.getCoastalPlotYieldChange(YIELD_PRODUCTION) > 0)
+					{
+						iTempValue += (kBuilding.getCoastalPlotYieldChange(YIELD_PRODUCTION) * 3 * 4);
 					}
 					if (kBuilding.getRiverPlotYieldChange(YIELD_PRODUCTION) > 0)
 					{
@@ -4025,11 +3743,20 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 
 					iTempValue += (kBuilding.getCommerceChange(iI) * 4);
 					iTempValue += (kBuilding.getObsoleteSafeCommerceChange(iI) * 4);
+
 					// 3Miro: State Religion Culture
 					if ( (iI == COMMERCE_CULTURE) && ( kBuilding.getStateReligionCulture() > 0 ) && ( GET_PLAYER(getOwner()).getStateReligion() == kBuilding.getReligionType() )  ){
 						iTempValue += kBuilding.getStateReligionCulture();
 					};
 					// 3Miro: End
+
+					// Absinthe: specialist commerce change
+					for (iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
+					{
+						iTempValue += ((kBuilding.getSpecialistCommerceChange(iJ, iI) * kOwner.getTotalPopulation()) / 5);
+					}
+					// Absinthe: specialist commerce change
+
 					iTempValue *= 100 + kBuilding.getCommerceModifier(iI);
 					//BCM:Added 27.9.09
 					for (iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
@@ -4043,7 +3770,7 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 					{
 					    if (bCulturalVictory1)
 					    {
-					        iTempValue *= 2;					        
+					        iTempValue *= 2;
 					    }
 					}
 
@@ -4167,7 +3894,7 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 										if (kOwner.AI_corporationValue((CorporationTypes)iCorp, this) > iCorpValue)
 										{
 											iCorpValue = -1;
-											break;											
+											break;
 										}
 										else
 										{
@@ -4194,7 +3921,7 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 							if (iGoldValue > 0)
 							{
 								iGoldValue += 2 + (iNumCities / 4); 
-								iGoldValue += std::min(iGoldValue, getBuildingCommerce(COMMERCE_GOLD) / 2) / 2;							
+								iGoldValue += std::min(iGoldValue, getBuildingCommerce(COMMERCE_GOLD) / 2) / 2;
 							}
 							iGoldValue *= 2;
 							iGoldValue *= getTotalCommerceRateModifier(COMMERCE_GOLD);
@@ -4525,139 +4252,6 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 //			}
 //		}
 //	}
-	
-	//Rhye - start (embassy)
-	// 3Miro: value of the building
-	/*if (eBuilding >= NUM_BUILDINGS_PLAGUE)
-	{
-		int iOtherCiv = (int)eBuilding - NUM_BUILDINGS_PLAGUE;
-		iValue += 5; //from 3 to 7 (max=35) //change to 4 in vanilla and warlords as there is no espionage points there
-
-		//Rhye - start switch
-		// 3Miro
-		if (!GET_PLAYER(getOwnerINLINE()).isHuman())
-			switch (getOwnerINLINE())
-			{
-				case EGYPT:
-					iValue -= 1;
-					break;
-				case INDIA:
-					break;
-				case CHINA:
-					break;
-				case BABYLONIA:
-					break;
-				case GREECE:
-					iValue += 1;
-					break;
-				case PERSIA:	
-					break;
-				case CARTHAGE:
-					iValue += 1;
-					break;
-				case ROME:
-					iValue += 1;
-					break;
-				case JAPAN:
-					iValue -= 2;
-					break;
-				case ETHIOPIA:
-					break;
-				case MAYA:
-					iValue -= 1;
-					break;
-				case VIKING:
-					break;
-				case KHMER:
-					break;
-				case ARABIA:	
-					iValue += 2;
-					break;
-				case FRANCE:
-					iValue += 2;
-					break;
-				case SPAIN:
-					iValue += 1;
-					break;
-				case ENGLAND:	
-					iValue += 2;
-					break;
-				case GERMANY:
-					iValue += 1;
-					break;
-				case RUSSIA:				
-					iValue += 1;
-					break;
-				case NETHERLANDS:
-					iValue += 2;
-					break;
-				case MALI:
-					break;
-				case PORTUGAL:
-					iValue += 2;
-					break;
-				case INCA:
-					iValue -= 1;
-					break;
-				case MONGOLIA:
-					iValue -= 1;
-					break;
-				case AZTEC:
-					iValue -= 1;
-					break;
-				case TURKEY:
-					iValue -= 1;
-					break;
-				case AMERICA:
-					iValue += 1;
-					break;
-				default:
-					iValue = 0;
-					break;
-			}*/
-		//Rhye - end
-
-
-		// 3Miro: bad comment, still part of embassies
-		//iValue *= borders[(int)getOwnerINLINE()][iOtherCiv];
-		//if (GET_PLAYER((PlayerTypes)(iOtherCiv)).isHuman())
-		//	iValue /= 3;
-				
-		//holy city - they can see our cities
-		/*CvCity* pLoopCity;
-		CvPlot* pLoopCityPlot;
-		int iLoop;
-		bool bHoly = false;
-		for (pLoopCity = GET_PLAYER(getOwnerINLINE()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwnerINLINE()).nextCity(&iLoop))
-		{
-			pLoopCityPlot = GC.getMapINLINE().plotSorenINLINE(pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE());
-			if (pLoopCityPlot->isVisible((TeamTypes)iOtherCiv, false))
-			{
-				iValue /= 3;
-				bHoly = true;
-				break;
-			}
-		}
-		
-		//holy city - we can see their cities
-		if (bHoly == false) {
-			CvCity* pLoopOtherCity;
-			CvPlot* pLoopOtherCityPlot;
-			int iLoop2;
-			for (pLoopOtherCity = GET_PLAYER((PlayerTypes)iOtherCiv).firstCity(&iLoop2); pLoopOtherCity != NULL; pLoopOtherCity = GET_PLAYER((PlayerTypes)iOtherCiv).nextCity(&iLoop2))
-			{
-				pLoopOtherCityPlot = GC.getMapINLINE().plotSorenINLINE(pLoopOtherCity->getX_INLINE(), pLoopOtherCity->getY_INLINE());
-				if (pLoopOtherCityPlot->isVisible(getTeam(), false))
-				{
-					iValue /= 2;
-					break;
-				}
-			}
-		}
-
-	}*/
-	// 3Miro Rhye ends here!!!!
-	//Rhye - end
 	
 //	// tech path method commented out, it would be more accurate if we want to be so.
 //	//int iObsoleteTechPathLength = 0;
@@ -6248,7 +5842,7 @@ void CvCityAI::AI_doHurry(bool bForce)
 
 			if (eProductionBuilding != NO_BUILDING)
 			{
-				if (GC.getBuildingInfo(eProductionBuilding).getSeaPlotYieldChange(YIELD_FOOD) > 0 || GC.getBuildingInfo(eProductionBuilding).getRiverPlotYieldChange(YIELD_FOOD) > 0)
+				if (GC.getBuildingInfo(eProductionBuilding).getSeaPlotYieldChange(YIELD_FOOD) > 0 || GC.getBuildingInfo(eProductionBuilding).getCoastalPlotYieldChange(YIELD_FOOD) > 0 || GC.getBuildingInfo(eProductionBuilding).getRiverPlotYieldChange(YIELD_FOOD) > 0)
 				{
 					
 					iMinTurns = std::min(iMinTurns, 10);

@@ -79,10 +79,10 @@
 #define UP_HEALTH_FOOD			(26)
 #define UP_TERRAIN_BONUS		(27)
 #define UP_FEATURE_BONUS		(28)
-#define UP_STABILITY_1			(29) // stability is handled in Python so make those generic
-#define UP_STABILITY_2			(30)
-#define UP_STABILITY_3			(31)
-#define UP_STABILITY_4			(32)
+#define UP_STABILITY_1			(29) // stability is handled in Python so make these generic
+#define UP_STABILITY_2			(30) // stability is handled in Python so make these generic
+#define UP_STABILITY_3			(31) // stability is handled in Python so make these generic
+#define UP_STABILITY_4			(32) // stability is handled in Python so make these generic
 #define UP_JANISSARY			(33)
 #define UP_IMPROVEMENT_BONUS_2	(34)
 #define UP_IMPROVEMENT_BONUS_3	(35)

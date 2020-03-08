@@ -1515,6 +1515,11 @@ int CyCity::getSeaPlotYield(int /*YieldTypes*/ eIndex)
 	return m_pCity ? m_pCity->getSeaPlotYield((YieldTypes) eIndex) : -1;
 }
 
+int CyCity::getCoastalPlotYield(int /*YieldTypes*/ eIndex)
+{
+	return m_pCity ? m_pCity->getCoastalPlotYield((YieldTypes) eIndex) : -1;
+}
+
 int CyCity::getRiverPlotYield(int /*YieldTypes*/ eIndex)
 {
 	return m_pCity ? m_pCity->getRiverPlotYield((YieldTypes) eIndex) : -1;

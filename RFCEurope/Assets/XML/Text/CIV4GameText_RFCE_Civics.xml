@@ -707,7 +707,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_GUILDS_HELP</Tag>
-		<English>[ICON_BULLET]Companies have more chance to spread[NEWLINE][ICON_BULLET]Stable with Apprenticeship</English>
+		<English>[ICON_BULLET]Companies have more chance to spread[NEWLINE][ICON_BULLET]Enables [LINK=literal]Guild Hall[\LINK][NEWLINE][ICON_BULLET]Stable with Apprenticeship</English>
 		<French>[ICON_BULLET]Companies have more chance to spread</French>
 		<German>[ICON_BULLET]Companies have more chance to spread</German>
 		<Italian>[ICON_BULLET]Companies have more chance to spread</Italian>
@@ -799,7 +799,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_PAGANISM_HELP</Tag>
-		<English>[ICON_BULLET]Enables [LINK=literal]Pagan Shrine[\LINK], [LINK=literal]The Shrine of Uppsala[\LINK], [LINK=literal]Samogitian Shrine[\LINK], [LINK=literal]Gediminas Tower[\LINK][NEWLINE][ICON_BULLET]Unstable with Divine Monarchy, Religious Law</English>
+		<English>[ICON_BULLET]Enables [LINK=literal]Pagan Shrine[\LINK], [LINK=literal]The Shrine of Uppsala[\LINK], [LINK=literal]Samogitian Alkas[\LINK], [LINK=literal]Gediminas' Tower[\LINK][NEWLINE][ICON_BULLET]Unstable with Divine Monarchy, Religious Law</English>
 		<French>[ICON_BULLET]Unstable with Divine Monarchy, Religious Law[NEWLINE][ICON_BULLET]Enables [LINK=literal]Pagan Shrine[\LINK], [LINK=literal]The Shrine of Uppsala[\LINK]</French>
 		<German>[ICON_BULLET]Instabil mit [COLOR_RED]Göttliche Monarchie, Kirchenrecht[COLOR_REVERT][ICON_BULLET]Enables [LINK=literal]Pagan Shrine[\LINK], [LINK=literal]The Shrine of Uppsala[\LINK]</German>
 		<Italian>[ICON_BULLET]Instabile con [COLOR_RED]Monarchia Divina, Legge Religiosa[COLOR_REVERT][ICON_BULLET]Enables [LINK=literal]Pagan Shrine[\LINK], [LINK=literal]The Shrine of Uppsala[\LINK]</Italian>

@@ -7532,6 +7532,8 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, BuildingTypes eBu
 
 	setYieldChangeHelp(szBuffer, gDLL->getText("TXT_KEY_BUILDING_WATER_PLOTS").c_str(), L": ", L"", kBuilding.getSeaPlotYieldChangeArray());
 
+	setYieldChangeHelp(szBuffer, gDLL->getText("TXT_KEY_BUILDING_COASTAL_PLOTS").c_str(), L": ", L"", kBuilding.getCoastalPlotYieldChangeArray());
+
 	setYieldChangeHelp(szBuffer, gDLL->getText("TXT_KEY_BUILDING_RIVER_PLOTS").c_str(), L": ", L"", kBuilding.getRiverPlotYieldChangeArray());
 
 	setYieldChangeHelp(szBuffer, gDLL->getText("TXT_KEY_BUILDING_WATER_PLOTS_ALL_CITIES").c_str(), L": ", L"", kBuilding.getGlobalSeaPlotYieldChangeArray());
@@ -7576,6 +7578,13 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, BuildingTypes eBu
 	{
 		szFirstBuffer = gDLL->getText("TXT_KEY_BUILDING_FROM_IN_ALL_CITIES", GC.getSpecialistInfo((SpecialistTypes) iI).getTextKeyWide());
 		setYieldChangeHelp(szBuffer, L"", L"", szFirstBuffer, kBuilding.getSpecialistYieldChangeArray(iI));
+	}
+
+	// Absinthe: specialist commerce change
+	for (iI = 0; iI < GC.getNumSpecialistInfos(); ++iI)
+	{
+		szFirstBuffer = gDLL->getText("TXT_KEY_BUILDING_FROM_IN_ALL_CITIES", GC.getSpecialistInfo((SpecialistTypes) iI).getTextKeyWide());
+		setCommerceChangeHelp(szBuffer, L"", L"", szFirstBuffer, kBuilding.getSpecialistCommerceChangeArray(iI));
 	}
 
 	// Absinthe: group similar yield bonuses for resources
@@ -11726,7 +11735,7 @@ void CvGameTextMgr::buildFinanceUnitCostString(CvWStringBuffer& szBuffer, Player
 	if (player.getBuildingClassCount((BuildingClassTypes)GC.getInfoTypeForString("BUILDINGCLASS_ST_BASIL")) == 1)
 	{
 		int iUnitCost = iBaseUnitCost + iMilitaryCost + iExtraCost;
-		int iBasilEffect = iUnitCost * 7 / 10 - iUnitCost;
+		int iBasilEffect = iUnitCost * 4 / 5 - iUnitCost;
 		iHandicap -= iBasilEffect;
 		szBuffer.append(gDLL->getText("TXT_KEY_FINANCE_ADVISOR_UNIT_COST_BASIL", iBasilEffect));
 	}

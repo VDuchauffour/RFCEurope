@@ -128,6 +128,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>10000.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges>
@@ -168,6 +169,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -309,6 +311,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -359,6 +362,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -509,6 +513,7 @@
 			<iPower>8</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -554,6 +559,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -700,6 +706,7 @@
 			<iPower>8</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -745,6 +752,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -891,6 +899,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -941,6 +950,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -1087,6 +1097,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -1123,6 +1134,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -1269,6 +1281,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -1322,6 +1335,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -1438,7 +1452,7 @@
 			<iAreaFreeSpecialist>0</iAreaFreeSpecialist>
 			<iGlobalFreeSpecialist>0</iGlobalFreeSpecialist>
 			<iMaintenanceModifier>0</iMaintenanceModifier>
-			<iWarWearinessModifier>-25</iWarWearinessModifier>
+			<iWarWearinessModifier>-75</iWarWearinessModifier>
 			<iGlobalWarWearinessModifier>0</iGlobalWarWearinessModifier>
 			<iEnemyWarWearinessModifier>0</iEnemyWarWearinessModifier>
 			<iHealRateChange>0</iHealRateChange>
@@ -1468,6 +1482,7 @@
 			<iPower>8</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -1513,6 +1528,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 				<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -1574,7 +1590,7 @@
 			<FreePromotion>NONE</FreePromotion>
 			<CivicOption>NONE</CivicOption>
 			<TerrainTypeNeededInBFC>NONE</TerrainTypeNeededInBFC>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
 			<bBorderObstacle>0</bBorderObstacle>
@@ -1659,6 +1675,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -1666,7 +1683,7 @@
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>4</iCommerce>
+				<iCommerce>6</iCommerce>
 			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
@@ -1679,12 +1696,13 @@
 			<StateReligionCommerces/>
 			<CommerceHappinesses/>
 			<ReligionChanges/>
-			<SpecialistCounts/>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
+					<iSpecialistCount>2</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
 			<FreeSpecialistCounts>
-				<FreeSpecialistCount>
-					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
-					<iFreeSpecialistCount>1</iFreeSpecialistCount>
-				</FreeSpecialistCount>
 				<FreeSpecialistCount>
 					<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
@@ -1703,6 +1721,15 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges>
+				<SpecialistCommerceChange>
+					<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>1</iCommerce>
+					</CommerceChanges>
+				</SpecialistCommerceChange>
+			</SpecialistCommerceChanges>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -1849,6 +1876,7 @@
 			<iPower>3</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -1876,6 +1904,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -2022,6 +2051,7 @@
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -2054,6 +2084,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -2200,6 +2231,7 @@
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges>
@@ -2236,6 +2268,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -2383,6 +2416,7 @@
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -2428,6 +2462,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -2575,6 +2610,7 @@
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -2625,6 +2661,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -2780,6 +2817,7 @@
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -2825,6 +2863,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -2976,6 +3015,7 @@
 			<iPower>3</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -3026,6 +3066,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -3176,6 +3217,7 @@
 			<iPower>3</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -3208,6 +3250,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -3354,6 +3397,7 @@
 			<iPower>3</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -3391,6 +3435,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -3537,6 +3582,7 @@
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -3573,6 +3619,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -3719,6 +3766,7 @@
 			<iPower>4</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -3755,6 +3803,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -3901,6 +3950,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -3937,6 +3987,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -4057,7 +4108,7 @@
 			<iGlobalWarWearinessModifier>0</iGlobalWarWearinessModifier>
 			<iEnemyWarWearinessModifier>0</iEnemyWarWearinessModifier>
 			<iHealRateChange>0</iHealRateChange>
-			<iHealth>1</iHealth>
+			<iHealth>2</iHealth>
 			<iAreaHealth>0</iAreaHealth>
 			<iGlobalHealth>0</iGlobalHealth>
 			<iHappiness>0</iHappiness>
@@ -4083,11 +4134,12 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>2</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 			<YieldModifiers/>
 			<CommerceChanges/>
@@ -4123,6 +4175,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -4269,6 +4322,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges>
@@ -4307,6 +4361,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -4453,6 +4508,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -4494,6 +4550,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -4640,6 +4697,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -4690,6 +4748,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -4837,6 +4896,7 @@
 			<fVisibilityPriority>10240000.0</fVisibilityPriority>
 			<!-- this building wants to be super-important so that it gets placed first -->
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -4864,6 +4924,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -5010,6 +5071,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -5037,6 +5099,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -5185,6 +5248,7 @@
 			<SeaPlotYieldChanges>
 				<iYield>1</iYield>
 			</SeaPlotYieldChanges>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -5212,6 +5276,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -5360,6 +5425,7 @@
 			<SeaPlotYieldChanges>
 				<iYield>1</iYield>
 			</SeaPlotYieldChanges>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges>
@@ -5391,6 +5457,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -5537,6 +5604,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -5582,6 +5650,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -5732,6 +5801,7 @@
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</SeaPlotYieldChanges>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -5777,6 +5847,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -5923,6 +5994,7 @@
 			<iPower>1</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -5973,6 +6045,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -6059,7 +6132,7 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<iCost>160</iCost>
+			<iCost>120</iCost>
 			<iHurryCostModifier>0</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -6119,6 +6192,7 @@
 			<iPower>1</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -6150,6 +6224,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -6296,6 +6371,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -6328,6 +6404,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -6474,6 +6551,7 @@
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -6516,6 +6594,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -6540,7 +6619,7 @@
 			<iPaganCulturePerCity>0</iPaganCulturePerCity>
 			<iInterestPerTurn>0</iInterestPerTurn>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Forge -->
+		<BuildingInfo> <!-- Blacksmith -->
 			<BuildingClass>BUILDINGCLASS_FORGE</BuildingClass>
 			<Type>BUILDING_FORGE</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -6662,6 +6741,7 @@
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -6698,26 +6778,20 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_COPPER</BonusType>
 					<YieldModifiers>
 						<iYield>0</iYield>
-						<iYield>5</iYield>
+						<iYield>10</iYield>
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
 					<BonusType>BONUS_IRON</BonusType>
 					<YieldModifiers>
 						<iYield>0</iYield>
-						<iYield>5</iYield>
-					</YieldModifiers>
-				</BonusYieldModifier>
-				<BonusYieldModifier>
-					<BonusType>BONUS_COAL</BonusType>
-					<YieldModifiers>
-						<iYield>0</iYield>
-						<iYield>5</iYield>
+						<iYield>10</iYield>
 					</YieldModifiers>
 				</BonusYieldModifier>
 			</BonusYieldModifiers>
@@ -6759,6 +6833,7 @@
 			<StateReligion>NONE</StateReligion>
 			<bStateReligion>0</bStateReligion>
 			<PrereqReligion>NONE</PrereqReligion>
+			<PrereqCivic>CIVIC_GUILDS</PrereqCivic>
 			<PrereqCorporation>NONE</PrereqCorporation>
 			<FoundsCorporation>NONE</FoundsCorporation>
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
@@ -6806,7 +6881,7 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<iCost>150</iCost>
+			<iCost>100</iCost>
 			<iHurryCostModifier>0</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -6840,7 +6915,7 @@
 			<iGlobalWarWearinessModifier>0</iGlobalWarWearinessModifier>
 			<iEnemyWarWearinessModifier>0</iEnemyWarWearinessModifier>
 			<iHealRateChange>0</iHealRateChange>
-			<iHealth>-1</iHealth>
+			<iHealth>0</iHealth>
 			<iAreaHealth>0</iAreaHealth>
 			<iGlobalHealth>0</iGlobalHealth>
 			<iHappiness>0</iHappiness>
@@ -6866,15 +6941,26 @@
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
-			<YieldChanges/>
-			<YieldModifiers/>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</YieldChanges>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>10</iYield>
+			</YieldModifiers>
 			<PowerYieldModifiers/>
-			<CommerceChanges/>
+			<CommerceChanges>
+				<iCommerce>2</iCommerce>
+			</CommerceChanges>
 			<ObsoleteSafeCommerceChanges/>
 			<CommerceChangeDoubleTimes/>
-			<CommerceModifiers/>
+			<CommerceModifiers>
+				<iCommerce>10</iCommerce>
+			</CommerceModifiers>
 			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
 			<StateReligionCommerces/>
@@ -6890,12 +6976,7 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<FreeSpecialistCounts>
-				<FreeSpecialistCount>
-					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
-					<iFreeSpecialistCount>1</iFreeSpecialistCount>
-				</FreeSpecialistCount>
-			</FreeSpecialistCounts>
+			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners/>
 			<ConstructSound>AS2D_BUILD_GUILDHALL</ConstructSound>
@@ -6909,6 +6990,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -6995,7 +7077,7 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<iCost>150</iCost>
+			<iCost>100</iCost>
 			<iHurryCostModifier>0</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -7029,7 +7111,7 @@
 			<iGlobalWarWearinessModifier>0</iGlobalWarWearinessModifier>
 			<iEnemyWarWearinessModifier>0</iEnemyWarWearinessModifier>
 			<iHealRateChange>0</iHealRateChange>
-			<iHealth>-1</iHealth>
+			<iHealth>0</iHealth>
 			<iAreaHealth>0</iAreaHealth>
 			<iGlobalHealth>0</iGlobalHealth>
 			<iHappiness>0</iHappiness>
@@ -7055,15 +7137,26 @@
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
-			<YieldChanges/>
-			<YieldModifiers/>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</YieldChanges>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>20</iYield>
+			</YieldModifiers>
 			<PowerYieldModifiers/>
-			<CommerceChanges/>
+			<CommerceChanges>
+				<iCommerce>2</iCommerce>
+			</CommerceChanges>
 			<ObsoleteSafeCommerceChanges/>
 			<CommerceChangeDoubleTimes/>
-			<CommerceModifiers/>
+			<CommerceModifiers>
+				<iCommerce>20</iCommerce>
+			</CommerceModifiers>
 			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
 			<StateReligionCommerces/>
@@ -7079,16 +7172,7 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<FreeSpecialistCounts>
-				<FreeSpecialistCount>
-					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
-					<iFreeSpecialistCount>1</iFreeSpecialistCount>
-				</FreeSpecialistCount>
-				<FreeSpecialistCount>
-					<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
-					<iFreeSpecialistCount>1</iFreeSpecialistCount>
-				</FreeSpecialistCount>
-			</FreeSpecialistCounts>
+			<FreeSpecialistCounts/>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners/>
 			<ConstructSound>AS2D_BUILD_FACTORY</ConstructSound>
@@ -7102,6 +7186,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -7248,6 +7333,7 @@
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -7280,6 +7366,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -7426,6 +7513,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -7469,6 +7557,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -7615,6 +7704,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -7650,6 +7740,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -7796,6 +7887,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -7831,6 +7923,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -7977,6 +8070,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -8017,6 +8111,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -8163,6 +8258,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -8190,6 +8286,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -8336,6 +8433,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -8368,6 +8466,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -8514,6 +8613,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -8563,6 +8663,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -8709,6 +8810,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -8730,7 +8832,7 @@
 			<CommerceHappinesses>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>20</iCommerce>
+				<iCommerce>10</iCommerce>
 			</CommerceHappinesses>
 			<ReligionChanges/>
 			<SpecialistCounts/>
@@ -8746,13 +8848,23 @@
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
 			<BonusProductionModifiers/>
-			<UnitCombatFreeExperiences/>
+			<UnitCombatFreeExperiences>
+				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_LIGHT_CAVALRY</UnitCombatType>
+					<iExperience>2</iExperience>
+				</UnitCombatFreeExperience>
+				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_HEAVY_CAVALRY</UnitCombatType>
+					<iExperience>2</iExperience>
+				</UnitCombatFreeExperience>
+			</UnitCombatFreeExperiences>
 			<DomainFreeExperiences/>
 			<DomainProductionModifiers/>
 			<BuildingHappinessChanges/>
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -8899,6 +9011,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -8952,6 +9065,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -9098,6 +9212,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -9132,6 +9247,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -9156,7 +9272,7 @@
 			<iPaganCulturePerCity>0</iPaganCulturePerCity>
 			<iInterestPerTurn>0</iInterestPerTurn>
 		</BuildingInfo>
-		<BuildingInfo> <!-- Arabian Caravan House -->
+		<BuildingInfo> <!-- Arabian Caravan House / Bazaar -->
 			<BuildingClass>BUILDINGCLASS_MARKET</BuildingClass>
 			<Type>BUILDING_ARABIC_CARAVAN</Type>
 			<SpecialBuildingType>NONE</SpecialBuildingType>
@@ -9278,6 +9394,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -9312,6 +9429,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -9458,6 +9576,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -9497,6 +9616,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -9643,6 +9763,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -9693,6 +9814,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -9783,7 +9905,7 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<iCost>125</iCost>
+			<iCost>180</iCost>
 			<iHurryCostModifier>0</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -9843,6 +9965,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -9874,10 +9997,6 @@
 					<BonusType>BONUS_GEMS</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
-				<BonusHappinessChange>
-					<BonusType>BONUS_IVORY</BonusType>
-					<iHappinessChange>1</iHappinessChange>
-				</BonusHappinessChange>
 			</BonusHappinessChanges>
 			<BonusProductionModifiers/>
 			<UnitCombatFreeExperiences/>
@@ -9887,11 +10006,12 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_WEAVER</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_FORGE</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -10038,6 +10158,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -10070,6 +10191,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
@@ -10083,7 +10205,7 @@
 				<BonusCommerceModifier>
 					<BonusType>BONUS_FUR</BonusType>
 					<CommerceModifiers>
-						<iCommerce>10</iCommerce>
+						<iCommerce>5</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
@@ -10097,15 +10219,13 @@
 				<BonusCommerceModifier>
 					<BonusType>BONUS_SHEEP</BonusType>
 					<CommerceModifiers>
-						<iCommerce>10</iCommerce>
+						<iCommerce>5</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_COTTON</BonusType>
 					<CommerceModifiers>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>10</iCommerce>
+						<iCommerce>5</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
@@ -10193,7 +10313,7 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<iCost>150</iCost>
+			<iCost>120</iCost>
 			<iHurryCostModifier>0</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -10253,6 +10373,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -10281,6 +10402,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_DEER</BonusType>
@@ -10298,6 +10420,13 @@
 				</BonusYieldModifier>
 				<BonusYieldModifier>
 					<BonusType>BONUS_COW</BonusType>
+					<YieldModifiers>
+						<iYield>0</iYield>
+						<iYield>5</iYield>
+					</YieldModifiers>
+				</BonusYieldModifier>
+				<BonusYieldModifier>
+					<BonusType>BONUS_SHEEP</BonusType>
 					<YieldModifiers>
 						<iYield>0</iYield>
 						<iYield>5</iYield>
@@ -10449,6 +10578,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -10493,6 +10623,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -10613,7 +10744,7 @@
 			<iAreaFreeSpecialist>0</iAreaFreeSpecialist>
 			<iGlobalFreeSpecialist>0</iGlobalFreeSpecialist>
 			<iMaintenanceModifier>0</iMaintenanceModifier>
-			<iWarWearinessModifier>+25</iWarWearinessModifier>
+			<iWarWearinessModifier>20</iWarWearinessModifier>
 			<iGlobalWarWearinessModifier>0</iGlobalWarWearinessModifier>
 			<iEnemyWarWearinessModifier>0</iEnemyWarWearinessModifier>
 			<iHealRateChange>0</iHealRateChange>
@@ -10643,6 +10774,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -10662,10 +10794,6 @@
 			<ConstructSound>AS2D_BUILD_INN</ConstructSound>
 			<BonusHealthChanges/>
 			<BonusHappinessChanges>
-				<BonusHappinessChange>
-					<BonusType>BONUS_SUGAR</BonusType>
-					<iHappinessChange>1</iHappinessChange>
-				</BonusHappinessChange>
 				<BonusHappinessChange>
 					<BonusType>BONUS_TEA</BonusType>
 					<iHappinessChange>1</iHappinessChange>
@@ -10692,6 +10820,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -10778,7 +10907,7 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<iCost>250</iCost>
+			<iCost>200</iCost>
 			<iHurryCostModifier>0</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -10838,13 +10967,16 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
 			<CommerceChanges/>
 			<ObsoleteSafeCommerceChanges/>
 			<CommerceChangeDoubleTimes/>
-			<CommerceModifiers/>
+			<CommerceModifiers>
+				<iCommerce>20</iCommerce>
+			</CommerceModifiers>
 			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
 			<StateReligionCommerces/>
@@ -10875,6 +11007,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
@@ -10894,7 +11027,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_SILK</BonusType>
+					<BonusType>BONUS_AMBER</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -10910,7 +11043,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_DYE</BonusType>
+					<BonusType>BONUS_MARBLE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -11002,7 +11135,7 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<iCost>250</iCost>
+			<iCost>180</iCost>
 			<iHurryCostModifier>0</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -11062,6 +11195,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -11094,6 +11228,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_SALT</BonusType>
@@ -11337,6 +11472,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -11366,6 +11502,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -11512,6 +11649,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -11546,6 +11684,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -11692,6 +11831,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -11699,7 +11839,7 @@
 			<ObsoleteSafeCommerceChanges/>
 			<CommerceChangeDoubleTimes/>
 			<CommerceModifiers>
-				<iCommerce>65</iCommerce>
+				<iCommerce>75</iCommerce>
 			</CommerceModifiers>
 			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -11721,6 +11861,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -11868,6 +12009,7 @@
 			<iPower>1</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -11899,6 +12041,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -12046,6 +12189,7 @@
 			<iPower>1</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges>
@@ -12080,6 +12224,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -12231,9 +12376,14 @@
 			<iPower>1</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
-			<YieldChanges/>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</YieldChanges>
 			<CommerceChanges/>
 			<ObsoleteSafeCommerceChanges/>
 			<CommerceChangeDoubleTimes>
@@ -12267,6 +12417,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -12383,7 +12534,7 @@
 			<iFreeSpecialist>0</iFreeSpecialist>
 			<iAreaFreeSpecialist>0</iAreaFreeSpecialist>
 			<iGlobalFreeSpecialist>0</iGlobalFreeSpecialist>
-			<iMaintenanceModifier>-50</iMaintenanceModifier>
+			<iMaintenanceModifier>-40</iMaintenanceModifier>
 			<iWarWearinessModifier>0</iWarWearinessModifier>
 			<iGlobalWarWearinessModifier>0</iGlobalWarWearinessModifier>
 			<iEnemyWarWearinessModifier>0</iEnemyWarWearinessModifier>
@@ -12414,6 +12565,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -12451,6 +12603,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -12571,7 +12724,7 @@
 			<iFreeSpecialist>0</iFreeSpecialist>
 			<iAreaFreeSpecialist>0</iAreaFreeSpecialist>
 			<iGlobalFreeSpecialist>0</iGlobalFreeSpecialist>
-			<iMaintenanceModifier>-50</iMaintenanceModifier>
+			<iMaintenanceModifier>-40</iMaintenanceModifier>
 			<iWarWearinessModifier>0</iWarWearinessModifier>
 			<iGlobalWarWearinessModifier>0</iGlobalWarWearinessModifier>
 			<iEnemyWarWearinessModifier>0</iEnemyWarWearinessModifier>
@@ -12602,6 +12755,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -12639,6 +12793,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -12759,7 +12914,7 @@
 			<iFreeSpecialist>0</iFreeSpecialist>
 			<iAreaFreeSpecialist>0</iAreaFreeSpecialist>
 			<iGlobalFreeSpecialist>0</iGlobalFreeSpecialist>
-			<iMaintenanceModifier>-65</iMaintenanceModifier>
+			<iMaintenanceModifier>-70</iMaintenanceModifier>
 			<iWarWearinessModifier>0</iWarWearinessModifier>
 			<iGlobalWarWearinessModifier>0</iGlobalWarWearinessModifier>
 			<iEnemyWarWearinessModifier>0</iEnemyWarWearinessModifier>
@@ -12790,6 +12945,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -12797,7 +12953,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>2</iCommerce>
+				<iCommerce>4</iCommerce>
 			</CommerceChanges>
 			<ObsoleteSafeCommerceChanges/>
 			<CommerceChangeDoubleTimes/>
@@ -12827,6 +12983,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -12947,7 +13104,7 @@
 			<iFreeSpecialist>0</iFreeSpecialist>
 			<iAreaFreeSpecialist>0</iAreaFreeSpecialist>
 			<iGlobalFreeSpecialist>0</iGlobalFreeSpecialist>
-			<iMaintenanceModifier>-50</iMaintenanceModifier>
+			<iMaintenanceModifier>-40</iMaintenanceModifier>
 			<iWarWearinessModifier>0</iWarWearinessModifier>
 			<iGlobalWarWearinessModifier>0</iGlobalWarWearinessModifier>
 			<iEnemyWarWearinessModifier>0</iEnemyWarWearinessModifier>
@@ -12978,6 +13135,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -13020,6 +13178,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -13171,6 +13330,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -13218,6 +13378,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -13369,6 +13530,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -13406,6 +13568,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -13557,6 +13720,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -13599,6 +13763,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -13689,7 +13854,7 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<iCost>180</iCost>
+			<iCost>150</iCost>
 			<iHurryCostModifier>0</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -13749,6 +13914,7 @@
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
@@ -13779,6 +13945,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -13865,7 +14032,7 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<iCost>180</iCost>
+			<iCost>150</iCost>
 			<iHurryCostModifier>0</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -13924,10 +14091,11 @@
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<SeaPlotYieldChanges>
+			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
-			</SeaPlotYieldChanges>
+			</CoastalPlotYieldChanges>
 			<RiverPlotYieldChanges>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
@@ -13958,6 +14126,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -13989,7 +14158,6 @@
 			<Description>TXT_KEY_BUILDING_PAGAN_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PAGAN_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PAGAN_SHRINE_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_PAGAN_SHRINE_HELP</Help>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PAGAN_SHRINE</ArtDefineTag>
 			<MovieDefineTag>NONE</MovieDefineTag>
@@ -14106,6 +14274,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -14133,6 +14302,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -14280,6 +14450,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -14318,6 +14489,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -14464,6 +14636,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -14513,6 +14686,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -14659,6 +14833,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -14695,6 +14870,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -14841,6 +15017,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -14881,6 +15058,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -15031,6 +15209,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -15082,6 +15261,7 @@
 			</PrereqBuildingClasses>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -15168,7 +15348,7 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<iCost>100</iCost>
+			<iCost>60</iCost>
 			<iHurryCostModifier>0</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -15228,6 +15408,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -15237,7 +15418,7 @@
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>25</iCommerce>
+				<iCommerce>10</iCommerce>
 			</CommerceModifiers>
 			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -15268,6 +15449,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -15414,6 +15596,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -15448,6 +15631,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -15598,6 +15782,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -15647,6 +15832,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -15793,6 +15979,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -15829,6 +16016,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -15915,7 +16103,7 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<iCost>100</iCost>
+			<iCost>60</iCost>
 			<iHurryCostModifier>0</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -15975,6 +16163,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -15984,7 +16173,7 @@
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>25</iCommerce>
+				<iCommerce>10</iCommerce>
 			</CommerceModifiers>
 			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -16015,6 +16204,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -16161,6 +16351,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -16212,6 +16403,7 @@
 			</PrereqBuildingClasses>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -16358,6 +16550,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -16393,6 +16586,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -16539,6 +16733,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -16582,6 +16777,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -16732,6 +16928,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -16781,6 +16978,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -16927,6 +17125,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -16963,6 +17162,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -17109,6 +17309,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -17160,6 +17361,7 @@
 			</PrereqBuildingClasses>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -17246,7 +17448,7 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<iCost>100</iCost>
+			<iCost>60</iCost>
 			<iHurryCostModifier>0</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -17306,6 +17508,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -17315,7 +17518,7 @@
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>25</iCommerce>
+				<iCommerce>10</iCommerce>
 			</CommerceModifiers>
 			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -17346,6 +17549,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -17496,6 +17700,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -17539,6 +17744,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -17685,6 +17891,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -17719,6 +17926,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -17869,6 +18077,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -17918,6 +18127,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -18064,6 +18274,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -18100,6 +18311,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -18246,6 +18458,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -18297,6 +18510,7 @@
 			</PrereqBuildingClasses>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -18383,7 +18597,7 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<iCost>100</iCost>
+			<iCost>60</iCost>
 			<iHurryCostModifier>0</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -18443,6 +18657,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -18452,7 +18667,7 @@
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>25</iCommerce>
+				<iCommerce>10</iCommerce>
 			</CommerceModifiers>
 			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -18483,6 +18698,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -18633,6 +18849,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -18676,6 +18893,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -18822,6 +19040,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -18856,6 +19075,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -19006,6 +19226,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -19055,6 +19276,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -19182,7 +19404,7 @@
 			<iHappiness>1</iHappiness>
 			<iAreaHappiness>0</iAreaHappiness>
 			<iGlobalHappiness>0</iGlobalHappiness>
-			<iStateReligionHappiness>1</iStateReligionHappiness>
+			<iStateReligionHappiness>0</iStateReligionHappiness>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
 			<iMilitaryProductionModifier>0</iMilitaryProductionModifier>
 			<iSpaceProductionModifier>0</iSpaceProductionModifier>
@@ -19202,6 +19424,7 @@
 			<iPower>1</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges>
@@ -19237,6 +19460,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -19383,6 +19607,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -19410,6 +19635,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -19556,6 +19782,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -19584,6 +19811,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_FISH</BonusType>
@@ -19754,6 +19982,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -19791,6 +20020,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -19942,6 +20172,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -19983,6 +20214,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -20134,6 +20366,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -20175,6 +20408,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -20326,6 +20560,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -20368,6 +20603,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -20519,6 +20755,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -20553,6 +20790,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -20704,6 +20942,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -20738,6 +20977,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -20889,6 +21129,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -20923,6 +21164,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -21074,6 +21316,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -21110,6 +21353,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -21261,6 +21505,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -21298,6 +21543,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -21444,6 +21690,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -21493,6 +21740,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -21617,9 +21865,9 @@
 			<iHealth>0</iHealth>
 			<iAreaHealth>0</iAreaHealth>
 			<iGlobalHealth>0</iGlobalHealth>
-			<iHappiness>0</iHappiness>
+			<iHappiness>2</iHappiness>
 			<iAreaHappiness>0</iAreaHappiness>
-			<iGlobalHappiness>1</iGlobalHappiness>
+			<iGlobalHappiness>0</iGlobalHappiness>
 			<iStateReligionHappiness>0</iStateReligionHappiness>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
 			<iMilitaryProductionModifier>0</iMilitaryProductionModifier>
@@ -21640,6 +21888,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -21684,6 +21933,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -21833,6 +22083,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -21877,6 +22128,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -22004,7 +22256,7 @@
 			<iHappiness>0</iHappiness>
 			<iAreaHappiness>0</iAreaHappiness>
 			<iGlobalHappiness>0</iGlobalHappiness>
-			<iStateReligionHappiness>0</iStateReligionHappiness>
+			<iStateReligionHappiness>2</iStateReligionHappiness>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
 			<iMilitaryProductionModifier>0</iMilitaryProductionModifier>
 			<iSpaceProductionModifier>0</iSpaceProductionModifier>
@@ -22024,6 +22276,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -22041,11 +22294,7 @@
 			<CommerceModifiers/>
 			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
-			<StateReligionCommerces>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</StateReligionCommerces>
+			<StateReligionCommerces/>
 			<CommerceHappinesses/>
 			<ReligionChanges/>
 			<SpecialistCounts/>
@@ -22072,6 +22321,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -22218,6 +22468,7 @@
 			<iPower>8</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -22262,6 +22513,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -22412,6 +22664,7 @@
 			<iPower>10</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -22461,6 +22714,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -22608,6 +22862,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -22652,6 +22907,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -22800,6 +23056,7 @@
 			<iPower>10</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -22849,6 +23106,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -22997,6 +23255,7 @@
 			<iPower>10</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -23041,6 +23300,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -23189,6 +23449,7 @@
 			<iPower>4</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -23228,6 +23489,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -23375,6 +23637,7 @@
 			<iPower>6</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -23439,6 +23702,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -23586,6 +23850,7 @@
 			<iPower>4</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -23630,6 +23895,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -23779,6 +24045,7 @@
 			<iPower>4</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -23828,6 +24095,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -23977,6 +24245,7 @@
 			<iPower>6</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -24016,6 +24285,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -24165,6 +24435,7 @@
 			<iPower>4</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -24180,13 +24451,13 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<CommerceModifiers/>
-			<GlobalCommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
-			</GlobalCommerceModifiers>
+			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
-			<StateReligionCommerces/>
+			<StateReligionCommerces>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
+			</StateReligionCommerces>
 			<CommerceHappinesses/>
 			<ReligionChanges/>
 			<SpecialistCounts>
@@ -24213,6 +24484,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -24360,6 +24632,7 @@
 			<iPower>6</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -24414,6 +24687,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -24561,6 +24835,7 @@
 			<iPower>4</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -24606,10 +24881,28 @@
 			<UnitCombatFreeExperiences/>
 			<DomainFreeExperiences/>
 			<DomainProductionModifiers/>
-			<BuildingHappinessChanges/>
+			<BuildingHappinessChanges>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDINGCLASS_CATHOLIC_CATHEDRAL</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDINGCLASS_ORTHODOX_CATHEDRAL</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDINGCLASS_PROTESTANT_CATHEDRAL</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDINGCLASS_ISLAMIC_CATHEDRAL</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
+			</BuildingHappinessChanges>
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -24759,6 +25052,7 @@
 			<iPower>8</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -24803,6 +25097,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -24952,6 +25247,7 @@
 			<iPower>4</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -24991,6 +25287,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -25140,6 +25437,7 @@
 			<iPower>4</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -25178,16 +25476,17 @@
 			<BuildingHappinessChanges/>
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
-			<SpecialistYieldChanges>
-				<SpecialistYieldChange>
+			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges>
+				<SpecialistCommerceChange>
 					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</YieldChanges>
-				</SpecialistYieldChange>
-			</SpecialistYieldChanges>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>1</iCommerce>
+					</CommerceChanges>
+				</SpecialistCommerceChange>
+			</SpecialistCommerceChanges>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -25335,6 +25634,7 @@
 			<iPower>4</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -25379,6 +25679,15 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges>
+				<SpecialistCommerceChange>
+					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>1</iCommerce>
+					</CommerceChanges>
+				</SpecialistCommerceChange>
+			</SpecialistCommerceChanges>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -25525,6 +25834,7 @@
 			<iPower>4</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -25548,12 +25858,17 @@
 			<StateReligionCommerces/>
 			<CommerceHappinesses/>
 			<ReligionChanges/>
-			<SpecialistCounts/>
-			<FreeSpecialistCounts>
-				<FreeSpecialistCount>
+			<SpecialistCounts>
+				<SpecialistCount>
 					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>
-					<iFreeSpecialistCount>1</iFreeSpecialistCount>
-				</FreeSpecialistCount>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
+			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
 					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
@@ -25576,6 +25891,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -25723,6 +26039,7 @@
 			<iPower>4</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -25749,7 +26066,12 @@
 					<iSpecialistCount>2</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<FreeSpecialistCounts/>
+			<FreeSpecialistCounts>
+				<FreeSpecialistCount>
+					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>
+					<iFreeSpecialistCount>1</iFreeSpecialistCount>
+				</FreeSpecialistCount>
+			</FreeSpecialistCounts>
 			<CommerceFlexibles/>
 			<CommerceChangeOriginalOwners>
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
@@ -25767,6 +26089,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -25914,6 +26237,7 @@
 			<iPower>4</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -25971,6 +26295,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -26057,7 +26382,7 @@
 			<bPrereqReligion>0</bPrereqReligion>
 			<bCenterInCity>0</bCenterInCity>
 			<iAIWeight>0</iAIWeight>
-			<iCost>600</iCost>
+			<iCost>300</iCost>
 			<iHurryCostModifier>0</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -26117,6 +26442,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -26161,6 +26487,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -26309,6 +26636,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -26353,6 +26681,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -26495,6 +26824,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -26539,6 +26869,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -26669,7 +27000,7 @@
 			<iMilitaryProductionModifier>0</iMilitaryProductionModifier>
 			<iSpaceProductionModifier>0</iSpaceProductionModifier>
 			<iGlobalSpaceProductionModifier>0</iGlobalSpaceProductionModifier>
-			<iTradeRoutes>2</iTradeRoutes>
+			<iTradeRoutes>1</iTradeRoutes>
 			<iCoastalTradeRoutes>0</iCoastalTradeRoutes>
 			<iGlobalTradeRoutes>0</iGlobalTradeRoutes>
 			<iTradeRouteModifier>0</iTradeRouteModifier>
@@ -26684,6 +27015,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -26728,6 +27060,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -26878,6 +27211,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -26924,6 +27258,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -27071,6 +27406,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -27125,6 +27461,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -27267,6 +27604,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -27316,6 +27654,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -27461,6 +27800,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -27509,10 +27849,12 @@
 					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>
 					<YieldChanges>
 						<iYield>0</iYield>
+						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</YieldChanges>
 				</SpecialistYieldChange>
 			</SpecialistYieldChanges>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -27659,6 +28001,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -27708,6 +28051,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -27855,6 +28199,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -27904,6 +28249,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -28054,6 +28400,7 @@
 			<iPower>10</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -28093,6 +28440,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -28234,10 +28582,16 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
-			<CommerceChanges/>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>4</iCommerce>
+			</CommerceChanges>
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -28290,6 +28644,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -28436,6 +28791,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -28490,6 +28846,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -28636,13 +28993,11 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
-			<YieldModifiers>
-				<iYield>0</iYield>
-				<iYield>30</iYield>
-			</YieldModifiers>
+			<YieldModifiers/>
 			<PowerYieldModifiers/>
 			<CommerceChanges/>
 			<ObsoleteSafeCommerceChanges>
@@ -28655,7 +29010,11 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceModifiers/>
+			<CommerceModifiers>
+				<iCommerce>0</iCommerce>
+				<iCommerce>20</iCommerce>
+				<iCommerce>20</iCommerce>
+			</CommerceModifiers>
 			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
 			<StateReligionCommerces/>
@@ -28663,10 +29022,6 @@
 			<ReligionChanges/>
 			<SpecialistCounts/>
 			<FreeSpecialistCounts>
-				<FreeSpecialistCount>
-					<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
-					<iFreeSpecialistCount>1</iFreeSpecialistCount>
-				</FreeSpecialistCount>
 				<FreeSpecialistCount>
 					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
@@ -28694,6 +29049,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -28851,6 +29207,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -28895,6 +29252,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -29044,6 +29402,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -29093,6 +29452,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -29226,7 +29586,7 @@
 			<iMilitaryProductionModifier>0</iMilitaryProductionModifier>
 			<iSpaceProductionModifier>0</iSpaceProductionModifier>
 			<iGlobalSpaceProductionModifier>0</iGlobalSpaceProductionModifier>
-			<iTradeRoutes>0</iTradeRoutes>
+			<iTradeRoutes>1</iTradeRoutes>
 			<iCoastalTradeRoutes>0</iCoastalTradeRoutes>
 			<iGlobalTradeRoutes>0</iGlobalTradeRoutes>
 			<iTradeRouteModifier>0</iTradeRouteModifier>
@@ -29241,6 +29601,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -29289,16 +29650,17 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<SpecialistYieldChanges>
-				<SpecialistYieldChange>
+			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges>
+				<SpecialistCommerceChange>
 					<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</YieldChanges>
-				</SpecialistYieldChange>
-			</SpecialistYieldChanges>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>1</iCommerce>
+					</CommerceChanges>
+				</SpecialistCommerceChange>
+			</SpecialistCommerceChanges>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -29446,6 +29808,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -29492,6 +29855,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -29639,6 +30003,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -29695,6 +30060,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -29847,6 +30213,7 @@
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</SeaPlotYieldChanges>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -29896,6 +30263,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -30043,6 +30411,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -30057,7 +30426,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceModifiers/>
+			<CommerceModifiers>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>25</iCommerce>
+			</CommerceModifiers>
 			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
 			<StateReligionCommerces/>
@@ -30092,6 +30466,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -30239,6 +30614,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -30292,6 +30668,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -30443,6 +30820,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -30492,6 +30870,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -30640,6 +31019,7 @@
 			<iPower>4</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -30684,6 +31064,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -30831,6 +31212,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -30875,6 +31257,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -31024,6 +31407,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -31071,6 +31455,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -31218,6 +31603,7 @@
 			<iPower>4</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -31266,16 +31652,15 @@
 			<BuildingHappinessChanges/>
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
-			<SpecialistYieldChanges>
-				<SpecialistYieldChange>
+			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges>
+				<SpecialistCommerceChange>
 					<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</YieldChanges>
-				</SpecialistYieldChange>
-			</SpecialistYieldChanges>
+					<CommerceChanges>
+						<iCommerce>1</iCommerce>
+					</CommerceChanges>
+				</SpecialistCommerceChange>
+			</SpecialistCommerceChanges>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -31423,6 +31808,7 @@
 			<iPower>6</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -31472,6 +31858,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -31619,6 +32006,7 @@
 			<iPower>4</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -31663,6 +32051,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -31809,6 +32198,7 @@
 			<iPower>6</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -31828,7 +32218,7 @@
 			<SpecialistExtraCommerces>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>2</iCommerce>
+				<iCommerce>1</iCommerce>
 			</SpecialistExtraCommerces>
 			<StateReligionCommerces/>
 			<CommerceHappinesses/>
@@ -31857,6 +32247,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -32003,6 +32394,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -32058,6 +32450,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -32205,6 +32598,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -32249,6 +32643,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -32392,6 +32787,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -32407,7 +32803,7 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<CommerceModifiers>
-				<iCommerce>100</iCommerce>
+				<iCommerce>50</iCommerce>
 			</CommerceModifiers>
 			<GlobalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -32443,6 +32839,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_SPICES</BonusType>
@@ -32662,6 +33059,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -32709,6 +33107,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists>
@@ -32861,6 +33260,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -32915,6 +33315,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -33062,6 +33463,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -33116,6 +33518,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -33257,6 +33660,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -33306,6 +33710,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -33459,6 +33864,7 @@
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</SeaPlotYieldChanges>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -33503,6 +33909,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -33650,6 +34057,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -33689,6 +34097,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>
@@ -33835,6 +34244,7 @@
 			<iPower>0</iPower>
 			<fVisibilityPriority>10.0</fVisibilityPriority>
 			<SeaPlotYieldChanges/>
+			<CoastalPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<GlobalSeaPlotYieldChanges/>
 			<YieldChanges/>
@@ -33862,6 +34272,7 @@
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
 			<SpecialistYieldChanges/>
+			<SpecialistCommerceChanges/>
 			<BonusYieldModifiers/>
 			<BonusCommerceModifiers/>
 			<ImprovementFreeSpecialists/>

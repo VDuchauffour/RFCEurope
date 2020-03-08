@@ -374,10 +374,10 @@ class Victory:
 
 		# Norway UHV 1: Going Viking
 		elif iNewOwner == iNorway and iGameTurn < xml.i1066AD + 2:
-			pNorway.setUHVCounter( 2, pNorway.getUHVCounter( 2 ) + city.getPopulation() )
+			pNorway.setUHVCounter( 0, pNorway.getUHVCounter( 0 ) + city.getPopulation() )
 			# Absinthe: city is already reduced by 1 on city conquest, so city.getPopulation() is one less than the original size (unless it was already 1)
 			if bConquest: # note that if the size was 1 originally you get one extra point this way, but that's probably not a big issue
-				pNorway.setUHVCounter( 2, pNorway.getUHVCounter( 2 ) + 1 )
+				pNorway.setUHVCounter( 0, pNorway.getUHVCounter( 0 ) + 1 )
 
 		# Poland UHV 3: Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and have at least 2 Jewish Quarters in your cities
 		elif iNewOwner == iPoland:
@@ -424,7 +424,7 @@ class Victory:
 		if iPlayer == iSweden:
 			if self.isPossibleUHV(iPlayer, 1, False):
 				if pSweden.getStateReligion() == xml.iProtestantism and city.isHasReligion(xml.iCatholicism):
-					iRazed = pSweden.getUHVCounter(1)+1
+					iRazed = pSweden.getUHVCounter( 1 ) + 1
 					pSweden.setUHVCounter(1, iRazed)
 					if iRazed >= 5:
 						self.wonUHV( iSweden, 1 )
@@ -434,7 +434,7 @@ class Victory:
 		# Norway UHV 1: Going Viking
 		if iPillager == iNorway and iRoute == -1 and gc.getGame().getGameTurn() < xml.i1066AD + 2:
 			if gc.getMap().plot( iX, iY ).getOwner() != iNorway:
-				pNorway.setUHVCounter( 2, pNorway.getUHVCounter( 2 ) + 1 )
+				pNorway.setUHVCounter( 0, pNorway.getUHVCounter( 0 ) + 1 )
 
 
 	def onCombatResult(self, argsList):
@@ -447,9 +447,9 @@ class Victory:
 				# Absinthe: only 1 Viking point for Work Boats
 				#print ("viking", pLosingUnit.getUnitType())
 				if pLosingUnit.getUnitType() != xml.iWorkboat:
-					pNorway.setUHVCounter( 2, pNorway.getUHVCounter( 2 ) + 2 )
+					pNorway.setUHVCounter( 0, pNorway.getUHVCounter( 0 ) + 2 )
 				else:
-					pNorway.setUHVCounter( 2, pNorway.getUHVCounter( 2 ) + 1 )
+					pNorway.setUHVCounter( 0, pNorway.getUHVCounter( 0 ) + 1 )
 
 
 	def onTechAcquired(self, iTech, iPlayer):
@@ -518,7 +518,7 @@ class Victory:
 				if iPlayer == iCordoba:
 					iWondersBuilt = pCordoba.getUHVCounter( 1 )
 					pCordoba.setUHVCounter( 1, iWondersBuilt + 1 )
-					if iWondersBuilt == 2: # so we already had 2 wonders
+					if iWondersBuilt == 2: # so we already had 2 wonders, and this is the 3rd one
 						self.wonUHV( iCordoba, 1 )
 				else:
 					self.lostUHV( iCordoba, 1 )
@@ -529,7 +529,7 @@ class Victory:
 				if iPlayer == iTurkey:
 					iWondersBuilt = pTurkey.getUHVCounter( 1 )
 					pTurkey.setUHVCounter( 1, iWondersBuilt + 1 )
-					if iWondersBuilt == 3: # so we already had 3 wonders
+					if iWondersBuilt == 3: # so we already had 3 wonders, and this is the 4th one
 						self.wonUHV( iTurkey, 1 )
 				else:
 					self.lostUHV( iTurkey, 1 )
@@ -810,7 +810,7 @@ class Victory:
 		# UHV 1: Gain 100 Viking points and build Vinland by 1066
 		# Viking points counted in the onCityAcquired, onPillageImprovement and onCombatResult functions
 		if self.isPossibleUHV(iNorway, 0, True):
-			if pNorway.getUHVCounter( 2 ) >= 100 and teamNorway.getProjectCount(xml.iColVinland) >= 1: # It's still counter 2, for the sake of convenience and confusion
+			if pNorway.getUHVCounter( 0 ) >= 100 and teamNorway.getProjectCount(xml.iColVinland) >= 1:
 				self.wonUHV( iNorway, 0 )
 		if iGameTurn == xml.i1066AD:
 			self.expireUHV( iNorway, 0 )
@@ -888,9 +888,9 @@ class Victory:
 		if iGameTurn < xml.i1336AD + 2:
 			iCulture = pBurgundy.getUHVCounter( 0 ) + pBurgundy.countCultureProduced()
 			pBurgundy.setUHVCounter( 0, iCulture )
-		if self.isPossibleUHV(iBurgundy, 0, True):
-			if iCulture >= 12000:
-				self.wonUHV( iBurgundy, 0 )
+			if self.isPossibleUHV(iBurgundy, 0, True):
+				if iCulture >= 12000:
+					self.wonUHV( iBurgundy, 0 )
 		if iGameTurn == xml.i1336AD:
 			self.expireUHV( iBurgundy, 0 )
 
@@ -974,7 +974,7 @@ class Victory:
 
 		# UHV 1: Build 2 Orthodox cathedrals and 8 Orthodox monasteries by 1250
 		# Controlled in the onBuildingBuilt function
-		if iGameTurn == xml.i1250AD+1:
+		if iGameTurn == xml.i1250AD + 1:
 			self.expireUHV( iKiev, 0 )
 
 		# UHV 2: Control 10 provinces out of Kiev, Podolia, Pereyaslavl, Sloboda, Chernigov, Volhynia, Minsk, Polotsk, Smolensk, Moscow, Murom, Rostov, Novgorod and Vologda in 1288
@@ -994,9 +994,9 @@ class Victory:
 		if iGameTurn < xml.i1300AD + 2:
 			iFood = pKiev.getUHVCounter( 2 ) + pKiev.calculateTotalYield(YieldTypes.YIELD_FOOD)
 			pKiev.setUHVCounter( 2, iFood )
-		if self.isPossibleUHV(iKiev, 2, True):
-			if iFood > 25000:
-				self.wonUHV( iKiev, 2 )
+			if self.isPossibleUHV(iKiev, 2, True):
+				if iFood > 25000:
+					self.wonUHV( iKiev, 2 )
 		if iGameTurn == xml.i1300AD:
 			self.expireUHV( iKiev, 2 )
 
@@ -1027,8 +1027,8 @@ class Victory:
 
 		# UHV 3: Be the first to adopt Free Religion
 		if self.isPossibleUHV(iHungary, 2, True):
-			iCivic = pHungary.getCivics(4)
-			if iCivic == xml.iCivicFreeReligion:
+			iReligiousCivic = pHungary.getCivics(4)
+			if iReligiousCivic == xml.iCivicFreeReligion:
 				self.wonUHV( iHungary, 2 )
 			else:
 				for iPlayer in range( iNumMajorPlayers ):
@@ -1182,7 +1182,7 @@ class Victory:
 						break
 				if bFood:
 					self.wonUHV( iPoland, 0 )
-		if iGameTurn == xml.i1520AD+1:
+		if iGameTurn == xml.i1520AD + 1:
 			self.expireUHV( iPoland, 0 )
 
 		# UHV 2: Own at least 12 cities in the given provinces in 1569
@@ -1275,7 +1275,7 @@ class Victory:
 
 				if bConq:
 					self.wonUHV( iMorocco, 2 )
-		if iGameTurn == xml.i1578AD+1:
+		if iGameTurn == xml.i1578AD + 1:
 			self.expireUHV( iMorocco, 2 )
 
 
@@ -1353,7 +1353,7 @@ class Victory:
 
 		# UHV 2: Conquer two cities from each of Austria, Muscovy, Germany, Sweden, France and Spain between 1650 and 1763, if they are still alive
 		# Controlled in the onCityAcquired function
-		if iGameTurn > xml.i1763AD:
+		if iGameTurn == xml.i1763AD + 1:
 			self.expireUHV( iPrussia, 1 )
 
 		# UHV 3: Settle a total of 15 Great People in your capital
@@ -1362,7 +1362,7 @@ class Victory:
 			iGPStart = gc.getInfoTypeForString("SPECIALIST_GREAT_PRIEST")
 			iGPEnd = gc.getInfoTypeForString("SPECIALIST_GREAT_SPY")
 			iGPeople = 0
-			for iType in range(iGPStart, iGPEnd+1):
+			for iType in range(iGPStart, iGPEnd + 1):
 				iGPeople += pCapital.getFreeSpecialistCount(iType)
 			if iGPeople >= 15:
 				self.wonUHV( iPrussia, 2 )
@@ -1375,11 +1375,12 @@ class Victory:
 		if iGameTurn < xml.i1386AD + 2:
 			iCulture = pLithuania.getUHVCounter( 0 ) + pLithuania.countCultureProduced()
 			pLithuania.setUHVCounter( 0, iCulture )
-		if self.isPossibleUHV(iLithuania, 0, True):
-			if pLithuania.getStateReligion() != -1:
-				self.lostUHV( iLithuania, 0 )
-			if iCulture >= 2500:
-				self.wonUHV( iLithuania, 0 )
+			if self.isPossibleUHV(iLithuania, 0, True):
+				if pLithuania.getStateReligion() != -1:
+					self.lostUHV( iLithuania, 0 )
+				else:
+					if iCulture >= 2500:
+						self.wonUHV( iLithuania, 0 )
 		if iGameTurn == xml.i1386AD:
 			self.expireUHV( iLithuania, 0 )
 
@@ -1489,7 +1490,7 @@ class Victory:
 				else:
 					self.lostUHV( iMoscow, 0 )
 
-		# UHV 2: Control at least 20% of Europe
+		# UHV 2: Control at least 25% of Europe
 		if self.isPossibleUHV(iMoscow, 1, True):
 			totalLand = gc.getMap().getLandPlots()
 			RussianLand = pMoscow.getTotalLand()
@@ -1614,7 +1615,7 @@ class Victory:
 			pPlayer.setUHV( i, 0 )
 
 
-	def SwitchUHV(self, iNewCiv, iOldCiv):
+	def switchUHV(self, iNewCiv, iOldCiv):
 		pPlayer = gc.getPlayer(iNewCiv)
 		for i in range(3):
 			pPlayer.setUHV( i, -1 )
@@ -1635,7 +1636,10 @@ class Victory:
 
 
 	def expireUHV(self, iCiv, iUHV):
-		if self.isPossibleUHV(iCiv, iUHV, True):
+		# UHVs have to expire on the given deadline, even if the civ is not alive currently (would be an issue on respawns otherwise)
+		#if self.isPossibleUHV(iCiv, iUHV, True):
+		pCiv = gc.getPlayer(iCiv)
+		if pCiv.getUHV(iUHV) == -1:
 			self.lostUHV(iCiv, iUHV)
 
 

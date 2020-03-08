@@ -331,6 +331,7 @@ public:
 	int /*CultureLevelTypes*/ getCultureLevel();
 	int getCultureThreshold();
 	int getSeaPlotYield(int /*YieldTypes*/ eIndex);
+	int getCoastalPlotYield(int /*YieldTypes*/ eIndex);
 	int getRiverPlotYield(int /*YieldTypes*/ eIndex);
 
 	int getBaseYieldRate(int /*YieldTypes*/ eIndex);

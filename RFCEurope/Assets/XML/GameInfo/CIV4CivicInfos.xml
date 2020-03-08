@@ -1561,8 +1561,8 @@
 			<bStabilityConquestBonus>0</bStabilityConquestBonus>
 			<bStabilityCommerceBonus>0</bStabilityCommerceBonus>
 			<bAllowNonStateReligionBuildings>0</bAllowNonStateReligionBuildings>
-			<iCivicGoldBuildingClass>BUILDINGCLASS_GUILD_HALL</iCivicGoldBuildingClass>
-			<iCivicGoldGoldAmount>2</iCivicGoldGoldAmount>
+			<iCivicGoldBuildingClass>NONE</iCivicGoldBuildingClass>
+			<iCivicGoldGoldAmount>0</iCivicGoldGoldAmount>
 			<iUnitProductionBoost>0</iUnitProductionBoost>
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>

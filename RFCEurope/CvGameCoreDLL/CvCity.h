@@ -582,6 +582,9 @@ public:
 	int getSeaPlotYield(YieldTypes eIndex) const;																// Exposed to Python
 	void changeSeaPlotYield(YieldTypes eIndex, int iChange);
 
+	int getCoastalPlotYield(YieldTypes eIndex) const;																// Exposed to Python
+	void changeCoastalPlotYield(YieldTypes eIndex, int iChange);
+
 	int getRiverPlotYield(YieldTypes eIndex) const;																// Exposed to Python
 	void changeRiverPlotYield(YieldTypes eIndex, int iChange);
 
@@ -618,6 +621,13 @@ public:
 	int getExtraSpecialistYield(YieldTypes eIndex, SpecialistTypes eSpecialist) const;					// Exposed to Python
 	void updateExtraSpecialistYield(YieldTypes eYield);
 	void updateExtraSpecialistYield();
+
+	// Absinthe: specialist commerce change
+	int getExtraSpecialistCommerceByType(CommerceTypes eIndex) const;																				// Exposed to Python
+	int getExtraSpecialistCommerceByType(CommerceTypes eIndex, SpecialistTypes eSpecialist) const;					// Exposed to Python
+	void updateExtraSpecialistCommerceByType(CommerceTypes eCommerce);
+	void updateExtraSpecialistCommerceByType();
+	// Absinthe: specialist commerce change
 
 	 int getCommerceRate(CommerceTypes eIndex) const;									// Exposed to Python
 	int getCommerceRateTimes100(CommerceTypes eIndex) const;									// Exposed to Python
@@ -1083,6 +1093,7 @@ protected:
 	CultureLevelTypes m_eCultureLevel;
 
 	int* m_aiSeaPlotYield;
+	int* m_aiCoastalPlotYield;
 	int* m_aiRiverPlotYield;
 	int* m_aiBaseYieldRate;
 	int* m_aiYieldRateModifier;
@@ -1094,6 +1105,8 @@ protected:
 	int* m_aiTradeYield;
 	int* m_aiCorporationYield;
 	int* m_aiExtraSpecialistYield;
+	// Absinthe: specialist commerce change
+	int* m_aiExtraSpecialistCommerceByType;
 	int* m_aiCommerceRate;
 	int* m_aiProductionToCommerceModifier;
 	int* m_aiBuildingCommerce;

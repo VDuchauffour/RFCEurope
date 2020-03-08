@@ -4,8 +4,10 @@ from CvPythonExtensions import *
 import Consts as con
 import XMLConsts as xml
 import RFCEMaps as rfcemaps
+import RFCUtils
 
 gc = CyGlobalContext()	# LOQ
+utils = RFCUtils.RFCUtils()
 
 
 iByzantium = con.iByzantium
@@ -54,7 +56,7 @@ iUP_ReligiousTolerance = con.iUP_ReligiousTolerance
 iUP_CulturalTolerance = con.iUP_CulturalTolerance
 iUP_CommercePercent = con.iUP_CommercePercent
 iUP_UnitProduction = con.iUP_UnitProduction
-iUP_EnableCivic = con.iUP_EnableCivic
+iUP_EnableCivics = con.iUP_EnableCivics
 iUP_TradeRoutes = con.iUP_TradeRoutes
 iUP_ImprovementBonus = con.iUP_ImprovementBonus
 iUP_PromotionI = con.iUP_PromotionI
@@ -108,7 +110,7 @@ class RFCEBalance:
 		#void setGrowthModifiers( int iCiv, int iPop, int iCult, int iGP, int iWorker, int iHealth, int iInitPop );
 		# iInitPop is the initial population in a city, also can use gc.setInitialPopulation( iCiv, iInitPop ) to change a single civ
 		# defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100, 100, 1 )
-		# 3Miro: ABOUT CULTURE notice the culture modifier is different from the others, it modifies the culture output as opposed to the culture threshhold
+		# 3Miro: ABOUT CULTURE notice the culture modifier is different from the others, it modifies the culture output as opposed to the culture threshold
 		# 	50 means less culture, 200 means more culture. This is applied to Culture output of 10 or more.
 		gc.setGrowthModifiersAI(iByzantium,    200, 100, 200, 100, 100, 2 )
 		gc.setGrowthModifiersHu(iByzantium,    150, 100, 200, 100, 100, 2 )
@@ -242,68 +244,70 @@ class RFCEBalance:
 
 		#void setSupportModifiers( int iCiv, int iInflation, int iUnits, int iCityDist, int iCityNum, int iCivic );
 		# defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100, 100 )
-		gc.setSupportModifiersAI(iByzantium,     60, 150,  80,  50, 120 )
-		gc.setSupportModifiersHu(iByzantium,     60, 150,  80,  50, 120 )
-		gc.setSupportModifiersAI(iFrankia,       30, 120,  80,  35, 100 )
-		gc.setSupportModifiersHu(iFrankia,       30, 120,  80,  35, 100 )
-		gc.setSupportModifiersAI(iArabia,        30, 150,  70,  20, 120 )
-		gc.setSupportModifiersHu(iArabia,        30, 150,  70,  20, 120 )
-		gc.setSupportModifiersAI(iBulgaria,      40, 150,  70,  40, 120 )
-		gc.setSupportModifiersHu(iBulgaria,      40, 150,  70,  40, 120 )
-		gc.setSupportModifiersAI(iCordoba,       50, 150,  70,  50, 120 )
-		gc.setSupportModifiersHu(iCordoba,       50, 150,  70,  50, 120 )
-		gc.setSupportModifiersAI(iVenecia,       10, 100,  50,  25, 100 )
-		gc.setSupportModifiersHu(iVenecia,       10, 100,  50,  25, 100 )
-		gc.setSupportModifiersAI(iBurgundy,      20, 120,  60,  25, 100 )
-		gc.setSupportModifiersHu(iBurgundy,      20, 120,  60,  25, 100 )
-		gc.setSupportModifiersAI(iGermany,       20, 100,  70,  25, 100 )
-		gc.setSupportModifiersHu(iGermany,       20, 100,  70,  25, 100 )
-		gc.setSupportModifiersAI(iNovgorod,      10, 150,  50,  25, 100 )
-		gc.setSupportModifiersHu(iNovgorod,      10, 150,  50,  25, 100 )
-		gc.setSupportModifiersAI(iNorway,        10, 100,  50,  25, 100 )
-		gc.setSupportModifiersHu(iNorway,        10, 100,  50,  25, 100 )
-		gc.setSupportModifiersAI(iKiev,          10, 100,  50,  25, 100 )
-		gc.setSupportModifiersHu(iKiev,          10, 100,  50,  25, 100 )
-		gc.setSupportModifiersAI(iHungary,       20, 100,  60,  25, 100 )
-		gc.setSupportModifiersHu(iHungary,       20, 100,  60,  25, 100 )
-		gc.setSupportModifiersAI(iSpain,         10, 100,  50,  25, 100 )
-		gc.setSupportModifiersHu(iSpain,         10, 100,  50,  25, 100 )
-		gc.setSupportModifiersAI(iDenmark,       10, 100,  50,  25, 100 )
-		gc.setSupportModifiersHu(iDenmark,       10, 100,  50,  25, 100 )
-		gc.setSupportModifiersAI(iScotland,      10, 100,  75,  25, 100 )
-		gc.setSupportModifiersHu(iScotland,      10, 100,  75,  25, 100 )
-		gc.setSupportModifiersAI(iPoland,        10, 100,  70,  25, 100 )
-		gc.setSupportModifiersHu(iPoland,        10, 100,  70,  25, 100 )
-		gc.setSupportModifiersAI(iGenoa,         10, 100,  50,  25, 100 )
-		gc.setSupportModifiersHu(iGenoa,         10, 100,  50,  25, 100 )
-		gc.setSupportModifiersAI(iMorocco,       10, 100,  50,  25, 100 )
-		gc.setSupportModifiersHu(iMorocco,       10, 100,  50,  25, 100 )
-		gc.setSupportModifiersAI(iEngland,       10, 100,  50,  25, 100 )
-		gc.setSupportModifiersHu(iEngland,       10, 100,  50,  25, 100 )
-		gc.setSupportModifiersAI(iPortugal,      10, 100,  50,  25, 100 )
-		gc.setSupportModifiersHu(iPortugal,      10, 100,  50,  25, 100 )
-		gc.setSupportModifiersAI(iAragon,        10, 100,  50,  25, 100 )
-		gc.setSupportModifiersHu(iAragon,        10, 100,  50,  25, 100 )
-		gc.setSupportModifiersAI(iSweden,        10,  75,  50,  25, 100 )
-		gc.setSupportModifiersHu(iSweden,        10,  75,  50,  25, 100 )
-		gc.setSupportModifiersAI(iPrussia,       10,  85,  50,  25, 100 )
-		gc.setSupportModifiersHu(iPrussia,       10,  85,  50,  25, 100 )
-		gc.setSupportModifiersAI(iLithuania,     10,  85,  50,  25, 100 )
-		gc.setSupportModifiersHu(iLithuania,     10,  85,  50,  25, 100 )
-		gc.setSupportModifiersAI(iAustria,       10,  75,  50,  25,  80 )
-		gc.setSupportModifiersHu(iAustria,       10,  75,  50,  25,  80 )
-		gc.setSupportModifiersAI(iTurkey,        30,  60,  50,  20, 100 )
-		gc.setSupportModifiersHu(iTurkey,        30,  60,  50,  20, 100 )
-		gc.setSupportModifiersAI(iMoscow,        10, 100,  40,  20, 100 ) # sync with UP
-		gc.setSupportModifiersHu(iMoscow,        10, 100,  40,  20, 100 ) # sync with UP
-		gc.setSupportModifiersAI(iDutch,         10,  60,  50,  25, 100 )
-		gc.setSupportModifiersHu(iDutch,         10,  60,  50,  25, 100 )
-		gc.setSupportModifiersAI(iPope,          10, 200,  50,  25, 100 )
+		# note that iCityNum also gets an additional modifier based on population in the city
+		# note that the base for inflation is modified by turn number (among many other things)
+		gc.setSupportModifiersAI(iByzantium,     50, 150,  70,  50, 120 )
+		gc.setSupportModifiersHu(iByzantium,     50, 150,  70,  50, 120 )
+		gc.setSupportModifiersAI(iFrankia,       30, 120,  70,  50, 100 )
+		gc.setSupportModifiersHu(iFrankia,       30, 120,  70,  50, 100 )
+		gc.setSupportModifiersAI(iArabia,        30, 150,  70,  40, 120 )
+		gc.setSupportModifiersHu(iArabia,        30, 150,  70,  40, 120 )
+		gc.setSupportModifiersAI(iBulgaria,      40, 150,  80,  50, 120 )
+		gc.setSupportModifiersHu(iBulgaria,      40, 150,  80,  50, 120 )
+		gc.setSupportModifiersAI(iCordoba,       40, 150,  70,  40, 120 )
+		gc.setSupportModifiersHu(iCordoba,       40, 150,  70,  40, 120 )
+		gc.setSupportModifiersAI(iVenecia,       20, 100,  60,  50, 100 )
+		gc.setSupportModifiersHu(iVenecia,       20, 100,  60,  50, 100 )
+		gc.setSupportModifiersAI(iBurgundy,      30, 120,  70,  40, 100 )
+		gc.setSupportModifiersHu(iBurgundy,      30, 120,  70,  40, 100 )
+		gc.setSupportModifiersAI(iGermany,       20, 100,  70,  40, 100 )
+		gc.setSupportModifiersHu(iGermany,       20, 100,  70,  40, 100 )
+		gc.setSupportModifiersAI(iNovgorod,      30, 120,  70,  40, 100 )
+		gc.setSupportModifiersHu(iNovgorod,      30, 120,  70,  40, 100 )
+		gc.setSupportModifiersAI(iNorway,        20, 100,  60,  40, 100 )
+		gc.setSupportModifiersHu(iNorway,        20, 100,  60,  40, 100 )
+		gc.setSupportModifiersAI(iKiev,          30, 120,  60,  40, 100 )
+		gc.setSupportModifiersHu(iKiev,          30, 120,  60,  40, 100 )
+		gc.setSupportModifiersAI(iHungary,       25, 100,  70,  40, 100 )
+		gc.setSupportModifiersHu(iHungary,       25, 100,  70,  40, 100 )
+		gc.setSupportModifiersAI(iSpain,         20, 100,  60,  40, 100 )
+		gc.setSupportModifiersHu(iSpain,         20, 100,  60,  40, 100 )
+		gc.setSupportModifiersAI(iDenmark,       20, 100,  80,  50, 100 )
+		gc.setSupportModifiersHu(iDenmark,       20, 100,  80,  50, 100 )
+		gc.setSupportModifiersAI(iScotland,      25, 100,  80,  50, 100 )
+		gc.setSupportModifiersHu(iScotland,      25, 100,  80,  50, 100 )
+		gc.setSupportModifiersAI(iPoland,        25, 100,  70,  40, 100 )
+		gc.setSupportModifiersHu(iPoland,        25, 100,  70,  40, 100 )
+		gc.setSupportModifiersAI(iGenoa,         20, 100,  60,  50, 100 )
+		gc.setSupportModifiersHu(iGenoa,         20, 100,  60,  50, 100 )
+		gc.setSupportModifiersAI(iMorocco,       25, 100,  60,  40, 100 )
+		gc.setSupportModifiersHu(iMorocco,       25, 100,  60,  40, 100 )
+		gc.setSupportModifiersAI(iEngland,       20, 100,  60,  40, 100 )
+		gc.setSupportModifiersHu(iEngland,       20, 100,  60,  40, 100 )
+		gc.setSupportModifiersAI(iPortugal,      20, 100,  70,  50, 100 )
+		gc.setSupportModifiersHu(iPortugal,      20, 100,  70,  50, 100 )
+		gc.setSupportModifiersAI(iAragon,        25, 100,  70,  40, 100 )
+		gc.setSupportModifiersHu(iAragon,        25, 100,  70,  40, 100 )
+		gc.setSupportModifiersAI(iSweden,        20,  90,  70,  40, 100 )
+		gc.setSupportModifiersHu(iSweden,        20,  90,  70,  40, 100 )
+		gc.setSupportModifiersAI(iPrussia,       20,  90,  70,  40, 100 )
+		gc.setSupportModifiersHu(iPrussia,       20,  90,  70,  40, 100 )
+		gc.setSupportModifiersAI(iLithuania,     25, 100,  70,  40, 100 )
+		gc.setSupportModifiersHu(iLithuania,     25, 100,  70,  40, 100 )
+		gc.setSupportModifiersAI(iAustria,       20,  80,  80,  40, 100 )
+		gc.setSupportModifiersHu(iAustria,       20,  80,  80,  40, 100 )
+		gc.setSupportModifiersAI(iTurkey,        30, 100,  60,  40, 100 )
+		gc.setSupportModifiersHu(iTurkey,        30, 100,  60,  40, 100 )
+		gc.setSupportModifiersAI(iMoscow,        25, 100,  70,  40, 100 ) # note that the city maintenance values are further modified by their UP
+		gc.setSupportModifiersHu(iMoscow,        25, 100,  70,  40, 100 ) # note that the city maintenance values are further modified by their UP
+		gc.setSupportModifiersAI(iDutch,         20,  70,  80,  50, 100 )
+		gc.setSupportModifiersHu(iDutch,         20,  70,  80,  50, 100 )
+		gc.setSupportModifiersAI(iPope,          20, 150,  80,  50, 100 )
 		gc.setSupportModifiersAI(iIndependent,   10, 100,  10,  20, 100 )
 		gc.setSupportModifiersAI(iIndependent2,  10, 100,  10,  20, 100 )
 		gc.setSupportModifiersAI(iIndependent3,  10, 100,  10,  20, 100 )
 		gc.setSupportModifiersAI(iIndependent4,  10, 100,  10,  20, 100 )
-		gc.setSupportModifiersAI(iBarbarian,     10, 250,  10, 100, 100 )
+		gc.setSupportModifiersAI(iBarbarian,     10, 250,  10,  20, 100 )
 
 
 		#3Miro: setGrowthTreshold(iCiv,iVal), for each civ, a value in percent. How much food is needed for the next growth level.
@@ -558,7 +562,7 @@ class RFCEBalance:
 		# iUP_Conscription, iParameter = percent of foreign culture needed to draft + 100 * max number of units to draft per turn
 		# iUP_NoResistance, iParameter = 0 for no resistance or iParameter = k for resistance turns = resistance turns / k
 		# iUP_UnitProduction, iParameter = iRequiredTech * 100 + Percent ( 75% for 25% faster unit building)
-		# iUP_EnableCivic, iParameter = Civic5 * 100000000 + Civic4 * 1000000 + Civic3 * 10000 + Civic2 * 100 + Civic1, NOTE: also need to enable this in the WB, civic indexed by 0 is always available, civic5 cannot be bigger than 20
+		# iUP_EnableCivics, iParameter = Civic5 * 100000000 + Civic4 * 1000000 + Civic3 * 10000 + Civic2 * 100 + Civic1, NOTE: also need to enable this in the WB, civic indexed by 0 is always available, civic5 cannot be bigger than 20
 		# iUP_TradeRoutes, iParameter = number of extra trade routes, NOTE: this must be synchronized with GlobalDefines.xml: max trade routes
 		# iUP_PromotionI, iParameter = the bonus promotion
 		# iUP_PromotionII, iParameter = the bonus promotion
@@ -566,9 +570,9 @@ class RFCEBalance:
 		# iUP_CanEnterTerrain, iParameter is the terrain to enter, NOTE: also enables trade through the given terrain type
 		# iUP_Discovery, iParameter = ColonyStart * 1000000 + ColonyEnd * 1000 + iModifier modifies the cost associated with all projects (iCost *= iModifier; iCost /= 100 )
 		# iUP_EndlessLand, iParameter = percent change (i.e. upkeep *= iParameter, upkeep /= 100 )
-		# iUP_ForeignSea, use iParameter = 1
+		# iUP_ForeignSea, use iParameter = 1 to activate
 		# iUP_Pious, whenever changeFaith( x ) is called, x is multiplied by iParameter
-		# iUP_HealthFood, use iParameter = 1 to activate
+		# iUP_HealthFood, iParameter = percentage, what ratio of the city's excess health should be converted into food
 		# iUP_TerrainBonus, iParameter = iActivate * 100000 (1 to be active) + iTerrain * 1000 + iFoodBonus * 100 + iProductionBonus * 10 + iCommerceBonus (bonuses are limited to 0-9)
 		# iUP_FeatureBonus, iParameter = iActivate * 100000 (1 to be active) + iFeature * 1000 + iFoodBonus * 100 + iProductionBonus * 10 + iCommerceBonus (bonuses are limited to 0-9)
 		# iUP_ImprovementBonus, iParameter = iActivate * 100000 (1 to be active) + iImprovement * 1000 + iFoodBonus * 100 + iProductionBonus * 10 + iCommerceBonus (bonuses are limited to 0-9)
@@ -578,7 +582,7 @@ class RFCEBalance:
 		gc.setUP( iBurgundy, iUP_PerCityCommerce, 200)
 
 		gc.setUP( iByzantium, iUP_Emperor, 1 )
-		gc.setUP( iByzantium, iUP_EnableCivic, xml.iCivicImperialism )
+		gc.setUP( iByzantium, iUP_EnableCivics, xml.iCivicImperialism )
 
 		gc.setUP( iFrankia, iUP_LandStability, 1 )
 
@@ -587,7 +591,7 @@ class RFCEBalance:
 		gc.setUP( iBulgaria, iUP_NoResistance, 0 )
 
 		gc.setUP( iCordoba, iUP_PromotionI, xml.iPromotionMedic1 )
-		gc.setUP( iCordoba, iUP_HealthFood, 1 )
+		gc.setUP( iCordoba, iUP_HealthFood, 50 )
 
 		gc.setUP( iMorocco, iUP_TerrainBonus, 1 * 100000 + xml.iTerrainDesert * 1000 + 10 + 1 )
 		gc.setUP( iMorocco, iUP_FeatureBonus, 1 * 100000 + xml.iOasis * 1000 + 100 + 1 )
@@ -598,7 +602,7 @@ class RFCEBalance:
 		gc.setUP( iNorway, iUP_CanEnterTerrain, xml.iTerrainOcean )
 		gc.setUP( iNorway, iUP_StabilitySettler, 1 ) # "hidden" part of the UP
 
-		gc.setUP( iVenecia, iUP_EnableCivic, xml.iCivicMerchantRepublic )
+		gc.setUP( iVenecia, iUP_EnableCivics, xml.iCivicMerchantRepublic )
 		#gc.setUP( iVenecia, iUP_ForeignSea, 1 )
 
 		gc.setUP( iKiev, iUP_CityTileYield, 1 * 1000 + 100 * 2 )
@@ -642,9 +646,9 @@ class RFCEBalance:
 
 		gc.setUP( iSweden, iUP_PromotionI, xml.iPromotionFormation )
 
-		gc.setUP( iNovgorod, iUP_EnableCivic, xml.iCivicBureaucracy )
+		gc.setUP( iNovgorod, iUP_EnableCivics, xml.iCivicBureaucracy )
 
-		gc.setUP( iPrussia, iUP_EnableCivic, xml.iCivicTheocracy )
+		gc.setUP( iPrussia, iUP_EnableCivics, xml.iCivicTheocracy )
 		# Absinthe: handled in python currently
 		#gc.setUP( iPrussia, iUP_NoAnarchyInstability, 1 )
 
@@ -720,6 +724,30 @@ class RFCEBalance:
 		# set AI modifiers for preferred buildings
 		# use values -10 for very unlikely, 0 for default neutral and positive for desirable
 		# values less than -10 might not work, above 10 should be fine
+
+		# the utils.getUniqueBuilding function does not work, probably the util functions are not yet usable when these initial values are set
+		# but in the .dll these values are only used for the civ-specific building of the given buildingclass, so we can these add redundantly
+		for iPlayer in range( iNumPlayers ):
+			# walls, kasbah
+			gc.setBuildingPref( iPlayer, xml.iWalls, 5 )
+			gc.setBuildingPref( iPlayer, xml.iMoroccoKasbah, 5 )
+			# castle, stronghold, citadel, kremlin
+			gc.setBuildingPref( iPlayer, xml.iCastle, 7 )
+			gc.setBuildingPref( iPlayer, xml.iMoscowKremlin, 7 )
+			gc.setBuildingPref( iPlayer, xml.iHungarianStronghold, 7 )
+			gc.setBuildingPref( iPlayer, xml.iSpanishCitadel, 7 )
+			# manor house, chateau, naval base
+			gc.setBuildingPref( iPlayer, xml.iManorHouse, 5 )
+			gc.setBuildingPref( iPlayer, xml.iFrenchChateau, 5 )
+			gc.setBuildingPref( iPlayer, xml.iVeniceNavalBase, 5 )
+			# courthouse, rathaus, veche, voivodeship
+			gc.setBuildingPref( iPlayer, xml.iCourthouse, 5 )
+			gc.setBuildingPref( iPlayer, xml.iKievVeche, 5 )
+			gc.setBuildingPref( iPlayer, xml.iHolyRomanRathaus, 5 )
+			gc.setBuildingPref( iPlayer, xml.iLithuanianVoivodeship, 5 )
+			# nightwatch, soldattorp
+			gc.setBuildingPref( iPlayer, xml.iNightWatch, 3 )
+			gc.setBuildingPref( iPlayer, xml.iSwedishTennant, 3 )
 
 		gc.setBuildingPref( iByzantium, xml.iStCatherineMonastery, 15 )
 		gc.setBuildingPref( iByzantium, xml.iBoyanaChurch, 2 )

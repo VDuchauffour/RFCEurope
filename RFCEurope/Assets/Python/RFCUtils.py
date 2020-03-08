@@ -1035,9 +1035,9 @@ class RFCUtils:
 				#print(" 3Miro: has the city: ",iCiv)
 				if plot.getOwner() == iCiv:
 					#print(" 3Miro: collapse immune ",iCiv)
-					return true
+					return True
 		#print(" 3Miro: not immune ",iCiv)
-		return false
+		return False
 
 	def collapseImmuneCity( self, iCiv, x, y ):
 		#3MiroUP: Emperor
@@ -1047,9 +1047,9 @@ class RFCUtils:
 				if plot.getOwner() == iCiv:
 					if (x >= con.tCoreAreasTL[iCiv][0]) and (x <= con.tCoreAreasBR[iCiv][0]) and (y >= con.tCoreAreasTL[iCiv][1]) and (y <= con.tCoreAreasBR[iCiv][1]):
 						#print(" 3Miro: collapse immune ",iCiv,x,y)
-						return true
+						return True
 		#print(" 3Miro: collapse not immune ",iCiv,x,y)
-		return false
+		return False
 
 	#Absinthe: chooseable persecution popup
 	def showPersecutionPopup(self):

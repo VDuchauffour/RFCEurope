@@ -193,6 +193,9 @@
 	<ElementType name="SeaPlotYieldChanges" content="eltOnly">
 		<element type="iYield" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
+	<ElementType name="CoastalPlotYieldChanges" content="eltOnly">
+		<element type="iYield" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
 	<ElementType name="RiverPlotYieldChanges" content="eltOnly">
 		<element type="iYield" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
@@ -353,6 +356,13 @@
 	</ElementType>
 	<ElementType name="SpecialistYieldChanges" content="eltOnly">
 		<element type="SpecialistYieldChange" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="SpecialistCommerceChange" content="eltOnly">
+		<element type="SpecialistType"/>
+		<element type="CommerceChanges"/>
+	</ElementType>
+	<ElementType name="SpecialistCommerceChanges" content="eltOnly">
+		<element type="SpecialistCommerceChange" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="BonusYieldModifier" content="eltOnly">
 		<element type="BonusType"/>
@@ -525,6 +535,7 @@
 		<element type="iPower"/>
 		<element type="fVisibilityPriority"/>
 		<element type="SeaPlotYieldChanges"/>
+		<element type="CoastalPlotYieldChanges"/>
 		<element type="RiverPlotYieldChanges"/>
 		<element type="GlobalSeaPlotYieldChanges"/>
 		<element type="YieldChanges"/>
@@ -556,6 +567,7 @@
 		<element type="PrereqBuildingClasses"/>
 		<element type="BuildingClassNeededs"/>
 		<element type="SpecialistYieldChanges"/>
+		<element type="SpecialistCommerceChanges"/>
 		<element type="BonusYieldModifiers"/>
 		<!-- BCM: Added 21.9.09 -->
 		<element type="BonusCommerceModifiers" minOccurs="0"/>

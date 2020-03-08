@@ -366,7 +366,7 @@
 			<fInterfaceScale>0.54</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Uppsala_Shrine/AsenShrine.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,5,5</Button>
+			<Button>Art/Interface/Buttons/Wonders/shrine_of_uppsala_btn_v2.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SAMOGITIAN_ALKAS</Type>
@@ -576,7 +576,7 @@
 			<fInterfaceScale>0.52</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Golden_Bull/HumanBank.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,6,3</Button>
+			<Button>Art/Interface/Buttons/Wonders/golden_bull_btn.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PALACIO_DA_PENA</Type>
@@ -646,7 +646,7 @@
 			<fInterfaceScale>0.6</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Bibliotheca_Corviniana/Senate.nif</NIF>
 			<KFM/>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,1,5</Button>
+			<Button>Art/Interface/Buttons/Wonders/bibliotheca_corviniana_btn.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_LOUVRE</Type>

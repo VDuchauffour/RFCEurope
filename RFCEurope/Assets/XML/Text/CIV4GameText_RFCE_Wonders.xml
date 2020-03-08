@@ -172,7 +172,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ESCORIAL_HELP</Tag>
-		<English>[ICON_BULLET]No stability penalty for bad economy</English>
+		<English>[ICON_BULLET]No stability penalty for having a weak economy</English>
 		<French>[ICON_BULLET]Pas p&#233;nalit&#233; pour une mauvaise &#233;conomie</French>
 		<German>[ICON_BULLET]Kein Stabilitätsmalus wegen schlechter Wirschaftslage</German>
 		<Italian>[ICON_BULLET]Nessuna penalità in punti stabilità per scarsa economia</Italian>
@@ -388,12 +388,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOLDEN_BULL_HELP</Tag>
-		<English>[ICON_BULLET]Reduces civic maintenance by 30%</English>
-		<French>[ICON_BULLET]Reduces civic maintenance by 30%</French>
-		<German>[ICON_BULLET]Reduces civic maintenance by 30%</German>
-		<Italian>[ICON_BULLET]Reduces civic maintenance by 30%</Italian>
-		<Spanish>[ICON_BULLET]Reduces civic maintenance by 30%</Spanish>
-		<Portuguese>[ICON_BULLET]Reduces civic maintenance by 30%</Portuguese>
+		<English>[ICON_BULLET]Reduces civic maintenance by 20%</English>
+		<French>[ICON_BULLET]Reduces civic maintenance by 20%</French>
+		<German>[ICON_BULLET]Reduces civic maintenance by 20%</German>
+		<Italian>[ICON_BULLET]Reduces civic maintenance by 20%</Italian>
+		<Spanish>[ICON_BULLET]Reduces civic maintenance by 20%</Spanish>
+		<Portuguese>[ICON_BULLET]Reduces civic maintenance by 20%</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ALHAMBRA</Tag>
@@ -433,12 +433,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ST_BASIL_HELP</Tag>
-		<English>[ICON_BULLET]Reduces unit upkeep by 30%</English>
-		<French>[ICON_BULLET]-33% unit upkeep cost</French>
-		<German>[ICON_BULLET]-33% unit upkeep cost</German>
-		<Italian>[ICON_BULLET]-33% unit upkeep cost</Italian>
-		<Spanish>[ICON_BULLET]-33% unit upkeep cost</Spanish>
-		<Portuguese>[ICON_BULLET]-33% unit upkeep cost</Portuguese>
+		<English>[ICON_BULLET]Reduces unit upkeep by 20%</English>
+		<French>[ICON_BULLET]Reduces unit upkeep by 20%</French>
+		<German>[ICON_BULLET]Reduces unit upkeep by 20%</German>
+		<Italian>[ICON_BULLET]Reduces unit upkeep by 20%</Italian>
+		<Spanish>[ICON_BULLET]Reduces unit upkeep by 20%</Spanish>
+		<Portuguese>[ICON_BULLET]Reduces unit upkeep by 20%</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAN_MARCO</Tag>
@@ -667,7 +667,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARCO_POLO_PEDIA</Tag>
-		<English>[TAB]Marco Polo (1254-1324) was a Venetian trader and explorer who, together with his father Niccolo and his uncle Maffeo, was one of the first Westerners to travel the Silk Road to China (which he called Cathay) and visited the Great Khan of the Mongol Empire, Kublai Khan (grandson of Genghis Khan). His travels are written down in Il Milione ("The Million" or The Travels of Marco Polo).[PARAGRAPH:2]Although the Polos were by no means the first Europeans to reach China overland, thanks to Marco's book their trip was the first to be widely known, and the best-documented until then. Marco Polo's description of the Far East and its riches inspired Christopher Columbus's decision to try to reach those lands by a western route. A heavily annotated copy of Polo's book was among the belongings of Columbus.</English>
+		<English>[TAB]Marco Polo (1254-1324) was a Venetian trader, writer and explorer who, together with his father Niccolo and his uncle Maffeo, embarked on an epic journey to Asia in 1271, exploring many places along the Silk Road until they reached China (which he called Cathay). They were received by the royal court of the Great Khan of the Mongol Empire, Kublai Khan (grandson of Genghis Khan), who was impressed by Marco's intelligence and humility.[PARAGRAPH:2]Marco was appointed to serve as Khan's foreign emissary to India and Burma, and he was sent on many diplomatic missions throughout the empire. As part of this appointment, Marco also traveled extensively inside China, living in the emperor's lands for 17 years and seeing many things that had previously been unknown to Europeans. He returned to Venice after 24 years, while on the start of their journey he was only 17 years old.[PARAGRAPH:2]His travels are written down in Il Milione ("The Million"), which is also called "The Travels of Marco Polo". This book was the only source of reliable information on such exotic locales as Siam, Japan, Java, Tibet, and India that existed in Medieval Europe.[PARAGRAPH:2]Although the Polos were by no means the first Europeans to reach China overland, thanks to Marco's book their trip was the first to be widely known, and the best-documented until then. Marco Polo's description of the Far East and its riches inspired Christopher Columbus's decision to try to reach those lands by a western route. A heavily annotated copy of Polo's book was among the belongings of Columbus.</English>
 		<French>.</French>
 		<German>[TAB]Über Marco Polo selbst ist nur wenig überliefert, aber immerhin gibt es rund 150 Handschriften seines Reiseberichtes. Der Schotte Henry Yule konnte allein schon achtundsiebzig Manuskripte nachweisen. Davon sind 41 in Lateinisch, 21 in Italienisch, zehn in Französisch und vier in Deutsch verfasst. Es wird von vielen Forschern angenommen, dass Polo seine Erlebnisse nicht eigenhändig selbst im Gefängnis aufschrieb, sondern höchstens über Notizen verfügte, die er dem Rustichello da Pisa diktierte. Die vergleichenden Forschungen führten zu dem Ergebnis, dass ein Manuskript in altfranzösischer Sprache eine sehr große Nähe zur Urfassung hat. Damit ist das französische Manuskript gemeint, das die Geographische Gesellschaft zu Paris im Jahre 1824 veröffentlichte und das seitdem als der "Geographische Text" bezeichnet wird. Von weiterem besonderen Interesse für die Forscher sind in dieser Hinsicht auch ein franko-italienischer Text und das lateinische "Zelada-Manuskript", die beide ebenfalls als der Urfassung sehr nahe stehend betrachtet werden. Darüber, dass von diesen drei frühesten Manuskripten eines der Originalfassung am allernächsten steht, gibt es bislang keine Einigkeit.[PARAGRAPH:2]Nach Ansicht von Barbara Wehr, Professorin für Französische und Italienische Sprachwissenschaft der Johannes Gutenberg-Universität Mainz, muss die bislang vorherrschende Auffassung, Marco Polo habe seinen Reisebericht dem Rustichello da Pisa diktiert und die Sprache des Urtexts sei Altfranzösisch, möglicherweise korrigiert werden. Ihrer Ansicht nach gibt es mit der lateinischen Fassung von Francesco Pipino da Bologna einen Strang der Textüberlieferung, der keinerlei Spuren der französischen Version von Rustichello da Pisa aufweist. Sie schließt daraus, dass Rustichello da Pisa sich erst nachträglich in die Textüberlieferung eingemischt hat und dass es einen Urtext gab, der direkt aus der Feder Marco Polos stammte und auf Altvenezianisch verfasst war.</German>
 		<Italian>.</Italian>
@@ -722,11 +722,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NOTRE_DAME_HELP</Tag>
 		<English>[ICON_BULLET]+20%[ICON_CULTURE] in all cities with State Religion</English>
-		<French>Notre-Dame</French>
-		<German>Notre Dame</German>
-		<Italian>Notre Dame</Italian>
-		<Spanish>Notre Dame</Spanish>
-		<Portuguese>Notre Dame</Portuguese>
+		<French> Not translated. </French>
+		<German> Not translated. </German>
+		<Italian> Not translated. </Italian>
+		<Spanish> Not translated. </Spanish>
+		<Portuguese> Not translated. </Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BELEM_TOWER</Tag>
@@ -910,7 +910,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_URANIBORG_HELP</Tag>
-		<English>[ICON_BULLET]+200% science from Great Person discoveries</English>
+		<English>[ICON_BULLET]+200% science from Great People discoveries</English>
 		<French>[ICON_BULLET]+200% science from great people discoveries</French>
 		<German>[ICON_BULLET]+200% science from great people discoveries</German>
 		<Italian>[ICON_BULLET]+200% science from great people discoveries</Italian>
@@ -1270,7 +1270,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GEDIMINAS_TOWER_PEDIA</Tag>
-		<English>[TAB]The Vilnius Castle Complex is a group of cultural and historic structures on the left bank of the Neris River, near its confluence with the Vilnia River. The buildings, which evolved between the 10th and 18th centuries, were one of Lithuania's major defensive structures. One part of the castle complex, which was built on a hilltop, is known as the Upper Castle, while Gediminas' Tower is the only remaining part of the Upper Castle.[PARAGRAPH:2]The first fortifications were built of wood, and since about the 13th century the hilltop has been surrounded by stone walls with towers. During the rule of Gediminas, Vilnius was designated as the capital city; in 1323, the castle was improved and expanded.[PARAGRAPH:2]Pagan Lithuania waged war with the Christian Orders for more than two centuries. The Orders were seeking to conquer Lithuania, stating that their motivation was the conversion of pagan Lithuanians to Catholicism. As Vilnius evolved into one of the most important cities in the state, it became a primary military target. The Castle Complex was attacked by the Teutonic Order in 1365, 1375, 1377, 1383, 1390, 1392, 1394 and 1402, but was never completely taken.[PARAGRAPH:2]After a major fire in 1419, Vytautas initiated a reconstruction of the Upper Castle, along with the fortification of other buildings in the complex (in Gothic style), and it served an important role in the following centuries.[PARAGRAPH:2]After the 16th century, the Upper Castle was not maintained, and it suffered from neglect. It was used as a fortress for the last time during the invasion of the Russians in 1655, when for the first time in Lithuanian history, a foreign army captured the entire complex. Even though the Polish-Lithuanian army managed to recapture Vilnius and the castles six years later, the Upper Castle stood abandoned and was not reconstructed afterwards.[PARAGRAPH:2]Today, the remaining Gediminas' Tower is a major state and historic symbol of the city of Vilnius and of the nation itself. It is depicted on the national currency, the litas, and is mentioned in numerous Lithuanian patriotic poems and folk songs. The Flag of Lithuania was re-hoisted atop the tower on October 7, 1988, during the independence movement that was finalized by the Act of the Re-Establishment of the State of Lithuania on March 11, 1990. A reconstruction of the Royal Palace of Lithuania was completed in 2009, and is located near the base of the hill upon which Gediminas' Tower stands.</English>
+		<English>[TAB]The Vilnius Castle Complex is a group of cultural and historic structures on the left bank of the Neris River, near its confluence with the Vilnia River. The buildings, which evolved between the 10th and 18th centuries, were one of Lithuania's major defensive structures. One part of the castle complex, which was built on a hilltop, is known as the Upper Castle, while Gediminas' Tower is the only remaining part of the Upper Castle.[PARAGRAPH:2]The first fortifications were built of wood, and since about the 13th century the hilltop has been surrounded by stone walls with towers. During the rule of Gediminas, Vilnius was designated as the capital city; in 1323, the castle was improved and expanded. The first brick castle was completed in 1409 by Grand Duke Vytautas.[PARAGRAPH:2]Pagan Lithuania waged war with the Christian Orders for more than two centuries. The Orders were seeking to conquer Lithuania, stating that their motivation was the conversion of pagan Lithuanians to Catholicism. As Vilnius evolved into one of the most important cities in the state, it became a primary military target. The Castle Complex was attacked by the Teutonic Order in 1365, 1375, 1377, 1383, 1390, 1392, 1394 and 1402, but was never completely taken.[PARAGRAPH:2]After a major fire in 1419, Vytautas initiated a reconstruction of the Upper Castle, along with the fortification of other buildings in the complex (in Gothic style), and it served an important role in the following centuries.[PARAGRAPH:2]After the 16th century, the Upper Castle was not maintained, and it suffered from neglect. It was used as a fortress for the last time during the invasion of the Russians in 1655, when for the first time in Lithuanian history, a foreign army captured the entire complex. Even though the Polish-Lithuanian army managed to recapture Vilnius and the castles six years later, the Upper Castle stood abandoned and was not reconstructed afterwards.[PARAGRAPH:2]Today, the remaining Gediminas' Tower is a major state and historic symbol of the city of Vilnius and of the nation itself. It is depicted on the national currency, the litas, and is mentioned in numerous Lithuanian patriotic poems and folk songs. The Flag of Lithuania was re-hoisted atop the tower on October 7, 1988, during the independence movement that was finalized by the Act of the Re-Establishment of the State of Lithuania on March 11, 1990. A reconstruction of the Royal Palace of Lithuania was completed in 2009, and is located near the base of the hill upon which Gediminas' Tower stands.</English>
 		<French> Not translated. </French>
 		<German> Not translated. </German>
 		<Italian> Not translated. </Italian>
@@ -1297,7 +1297,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TORRE_DEL_ORO_PEDIA</Tag>
-		<English>[TAB]The Torre del Oro (English: "Gold Tower") is a dodecagonal military watchtower in Seville, southern Spain, built by the Almohad dynasty in order to control access to Seville via the Guadalquivir river.[PARAGRAPH:2]Constructed in the first third of the 13th century, the tower served as a prison during the Middle Ages and as a secure enclosure for the protection of precious metals periodically brought by the fleet of the Indies, another possible origin for the tower's name.[PARAGRAPH:2]It is one of two anchor points for a large chain that would have been able to block the river. The other anchor-point has since been demolished or disappeared, possibly from collapsing during the 1755 Lisbon Earthquake. The chain was used in the city's defense against the Castilian fleet under Ram¨®n de Bonifaz in 1248 Reconquista. Bonifaz broke the river defenses and isolated Seville from Triana. The besieged Muslim city soon surrendered to the Christian forces.</English>
+		<English>[TAB]The Torre del Oro (English: "Gold Tower") is a dodecagonal military watchtower in Seville, southern Spain, built by the Almohad dynasty in order to control access to Seville via the Guadalquivir river.[PARAGRAPH:2]Constructed in the first third of the 13th century, the tower served as a prison during the Middle Ages and as a secure enclosure for the protection of precious metals periodically brought by the fleet of the Indies, another possible origin for the tower's name.[PARAGRAPH:2]It is one of two anchor points for a large chain that would have been able to block the river. The other anchor-point has since been demolished or disappeared, possibly from collapsing during the 1755 Lisbon Earthquake. The chain was used in the city's defense against the Castilian fleet under Ramon de Bonifaz in 1248 Reconquista. Bonifaz broke the river defenses and isolated Seville from Triana. The besieged Muslim city soon surrendered to the Christian forces.</English>
 		<French> Not translated. </French>
 		<German> Not translated. </German>
 		<Italian> Not translated. </Italian>

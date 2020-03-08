@@ -422,6 +422,8 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("setCombatExperience", &CyPlayer::setCombatExperience, "void (int) - Combat experience used to produce Warlords")
 
 		.def("getSpecialistExtraYield", &CyPlayer::getSpecialistExtraYield, "int (int /*SpecialistTypes*/ eIndex1, int /*YieldTypes*/ eIndex2)")
+		// Absinthe: specialist commerce change
+		.def("getSpecialistExtraCommerceByType", &CyPlayer::getSpecialistExtraCommerceByType, "int (int /*SpecialistTypes*/ eIndex1, int /*CommerceTypes*/ eIndex2)")
 
 		.def("findPathLength", &CyPlayer::findPathLength, "int (int (TechTypes) eTech, bool bCost)")
 

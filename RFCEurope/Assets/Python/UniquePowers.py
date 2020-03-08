@@ -66,7 +66,8 @@ class UniquePowers:
 		if pPlayer.isHuman():
 			iNextJanissary = 300
 
-		if ( iOldPoints + iNewPoints > iNextJanissary ):
+		iTotalPoints = iOldPoints + iNewPoints
+		while ( iTotalPoints >= iNextJanissary ):
 			#tCity = religion.selectRandomCityCiv(iPlayer)
 			#utils.makeUnit( xml.iJanissary, iPlayer, tCity, 1 )
 			pCity = utils.getRandomCity(iPlayer) # The Janissary unit appears in a random city - should it be the capital instead?
@@ -77,10 +78,10 @@ class UniquePowers:
 				# interface message for the human player
 				if iPlayer == utils.getHumanID():
 					CyInterface().addMessage(iPlayer, False, con.iDuration, CyTranslator().getText("TXT_KEY_UNIT_NEW_JANISSARY", ()) + " " + pCity.getName() + "!", "AS2D_UNIT_BUILD_UNIQUE_UNIT", 0, gc.getUnitInfo(xml.iJanissary).getButton(), ColorTypes(con.iGreen), iX, iY, True, True)
-				pPlayer.setPicklefreeParameter( iJanissaryPoints, 0 )
 				print(" New Janissary in ",pCity.getName() )
-		else:
-			pPlayer.setPicklefreeParameter( iJanissaryPoints, iOldPoints + iNewPoints )
+				iTotalPoints -= iNextJanissary
+
+		pPlayer.setPicklefreeParameter( iJanissaryPoints, iTotalPoints )
 
 	def janissaryConquestUP(self, iPlayer, city):
 		pPlayer = gc.getPlayer( iPlayer )
@@ -164,6 +165,7 @@ class UniquePowers:
 		uniqueProvinces = set(cityProvinces)
 		iProvinces = len(uniqueProvinces)
 
+		# Note that Aragon do not use any of its UHV counters, so we can safely use them here
 		# Do not recalculate if we have the same number of provinces as in the last check, and the capital has not changed
 		if (iProvinces == pPlayer.getUHVCounter(1) and pPlayer.getUHVCounter(2) == 100*iCapitalX + iCapitalY):
 			return
