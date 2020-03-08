@@ -1092,7 +1092,7 @@ class CvVictoryScreen:
 		sText1, sText2, sText3 = self.getEmptyTexts()
 		#UHV1
 		sText1 += localText.getText("TXT_KEY_UHV_NOR1_HELP",()) + "\n"
-		iCount = pPlayer.getUHVCounter( 2 )
+		iCount = pPlayer.getUHVCounter( 0 )
 		sText1 += self.getCounterString(iCount, 100)
 		sText1 += "\n" + localText.getText("TXT_KEY_PROJECT_VINLAND",()) + ": " + self.determineColor(gc.getTeam(iPlayer).getProjectCount(xml.iColVinland) >= 1, localText.getText("TXT_KEY_UHV_EXPLORED",()), localText.getText("TXT_KEY_UHV_NOT_EXPLORED",()))
 		#UHV2
@@ -1655,17 +1655,27 @@ class CvVictoryScreen:
 		sAdjective = str(gc.getReligionInfo(iReligion).getAdjectiveKey())
 		sStringSpread = localText.getText(sAdjective,()) + ":"
 		sStringMiss = localText.getText("TXT_KEY_UHV_NOT_YET",()) + ":"
+		sStringNoCities = "Without major cities:"
 		pActivePlayer = gc.getPlayer(self.iActivePlayer)
 		for iProv in tProvsToCheck:
 			sProvName = "TXT_KEY_PROVINCE_NAME_%i" %iProv
 			sProvName = localText.getText(sProvName,())
-			if iFunction == 1 and pActivePlayer.provinceIsSpreadReligion( iProv, iReligion ):
-				sStringSpread = sStringSpread + "  " + u"<color=0,255,0>%s</color>" %(sProvName)
-			elif iFunction == 2 and pActivePlayer.provinceIsConvertReligion( iProv, iReligion ):
-				sStringSpread = sStringSpread + "  " + u"<color=0,255,0>%s</color>" %(sProvName)
+			bProvinceHasCity = 0
+			for iPlayer in range( con.iNumTotalPlayersB ):
+				pPlayer = gc.getPlayer(iPlayer)
+				if pPlayer.getProvinceCityCount( iProv ) > 0:
+					bProvinceHasCity = 1
+					break
+			if not bProvinceHasCity:
+				sStringNoCities = sStringNoCities + "  " + u"<color=0,255,0>%s</color>" %(sProvName)
 			else:
-				sStringMiss = sStringMiss + "  " + u"<color=208,0,0>%s</color>" %(sProvName)
-		sString = sStringSpread + "\n" + sStringMiss
+				if iFunction == 1 and pActivePlayer.provinceIsSpreadReligion( iProv, iReligion ):
+					sStringSpread = sStringSpread + "  " + u"<color=0,255,0>%s</color>" %(sProvName)
+				elif iFunction == 2 and pActivePlayer.provinceIsConvertReligion( iProv, iReligion ):
+					sStringSpread = sStringSpread + "  " + u"<color=0,255,0>%s</color>" %(sProvName)
+				else:
+					sStringMiss = sStringMiss + "  " + u"<color=208,0,0>%s</color>" %(sProvName)
+		sString = sStringSpread + "\n" + sStringMiss + "\n" + sStringNoCities
 		return sString
 
 	def getCounterString(self, iCounter, iRequired, bInverse = False, bRound = False):

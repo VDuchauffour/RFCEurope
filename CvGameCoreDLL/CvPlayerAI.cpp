@@ -605,7 +605,8 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 									if ((pLoopUnit->getDomainType() != DOMAIN_LAND) || pLoopUnit->plot()->plotCount(PUF_isMilitaryHappiness, -1, -1, getID()) > 1)
 									{
 										//if ((calculateUnitCost() > 0) && (AI_getPlotDanger( pLoopUnit->plot(), 2, false) == 0))
-										if ((calculateUnitCost() > 0) && (AI_getAnyPlotDanger( pLoopUnit->plot(), 2, false)))
+										//if ((calculateUnitCost() > 0) && (AI_getAnyPlotDanger( pLoopUnit->plot(), 2, false)))
+										if ((calculateUnitCost() > 0) && (!AI_getAnyPlotDanger( pLoopUnit->plot(), 2, false))) // Absinthe: SoI bugfix
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/									// 3Miro Original
@@ -9722,7 +9723,7 @@ int CvPlayerAI::AI_missionaryValue(CvArea* pArea, ReligionTypes eReligion, Playe
 	{
 		iSpreadInternalValue += 1000;
 	}
-	// Absinthe: AI should never want to spread non-state religion in it's own cities
+	// Absinthe: the AI should never want to spread non-state religion in it's own cities - so do not train such missionaries
 	/*else
 	{
 		iSpreadInternalValue += (500 * getHasReligionCount(eReligion)) / std::max(1, getNumCities());
@@ -14819,7 +14820,7 @@ bool CvPlayerAI::AI_disbandUnit(int iExpThreshold, bool bObsolete)
 		return false;
 	}
 
-	// Absinthe: prevent AI units from being disbanded for 20 turns after spawn - idea from DoC
+	// Absinthe: prevent AI units from being disbanded for 20 turns after spawn - idea from SoI
 	if (getID() < NUM_MAJOR_PLAYERS && GC.getGame().getGameTurn() < startingTurn[getID()] + 20)
 	{
 		return false;

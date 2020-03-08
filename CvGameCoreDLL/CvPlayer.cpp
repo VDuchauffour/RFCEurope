@@ -85,6 +85,8 @@ CvPlayer::CvPlayer()
 	m_paeCivics = NULL;
 
 	m_ppaaiSpecialistExtraYield = NULL;
+	// Absinthe: specialist commerce change
+	m_ppaaiSpecialistExtraCommerceByType = NULL;
 	m_ppaaiImprovementYieldChange = NULL;
 
 	//Rhye (jdog) - start ---------------------
@@ -380,6 +382,17 @@ void CvPlayer::uninit()
 		}
 		SAFE_DELETE_ARRAY(m_ppaaiSpecialistExtraYield);
 	}
+
+	// Absinthe: specialist commerce change
+	if (m_ppaaiSpecialistExtraCommerceByType != NULL)
+	{
+		for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
+		{
+			SAFE_DELETE_ARRAY(m_ppaaiSpecialistExtraCommerceByType[iI]);
+		}
+		SAFE_DELETE_ARRAY(m_ppaaiSpecialistExtraCommerceByType);
+	}
+	// Absinthe: specialist commerce change
 
 	if (m_ppaaiImprovementYieldChange != NULL)
 	{
@@ -771,6 +784,20 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 				m_ppaaiSpecialistExtraYield[iI][iJ] = 0;
 			}
 		}
+
+		// Absinthe: specialist commerce change
+		FAssertMsg(0 < GC.getNumSpecialistInfos(), "GC.getNumSpecialistInfos() is not greater than zero but it is used to allocate memory in CvPlayer::reset");
+		FAssertMsg(m_ppaaiSpecialistExtraCommerceByType==NULL, "about to leak memory, CvPlayer::m_ppaaiSpecialistExtraCommerceByType");
+		m_ppaaiSpecialistExtraCommerceByType = new int*[GC.getNumSpecialistInfos()];
+		for (iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
+		{
+			m_ppaaiSpecialistExtraCommerceByType[iI] = new int[NUM_COMMERCE_TYPES];
+			for (iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
+			{
+				m_ppaaiSpecialistExtraCommerceByType[iI][iJ] = 0;
+			}
+		}
+		// Absinthe: specialist commerce change
 
 		FAssertMsg(m_ppaaiImprovementYieldChange==NULL, "about to leak memory, CvPlayer::m_ppaaiImprovementYieldChange");
 		m_ppaaiImprovementYieldChange = new int*[GC.getNumImprovementInfos()];
@@ -1802,18 +1829,50 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 		if (iTeamCulturePercent < GC.getDefineINT("OCCUPATION_CULTURE_PERCENT_THRESHOLD"))
 		{
-			// Absinthe: Bulgarian UP: No resistance in conquered cities
+			// Absinthe: reduced resistance on city conquest: already gets reduced values compared to population (based on culture percent for example), but some further decrease for RFCE:
+			// Absinthe: so it results in 1 turn of revolt with iReducedOccupationTimer of 1-2, 2 turns with 3-4, 3 turns with 5-6, 4 turns with 7-8, 5 turns with 9+
+			// Absinthe: this more or less corresponds to: 1 turn with 1-2 population, 2 turns with 3-5 population, 3 turns with 6-9 population, 4 turns with 10-14 population, 5 turns with 15+ population
+			int iReducedOccupationTimer = ((GC.getDefineINT("BASE_OCCUPATION_TURNS") + ((pNewCity->getPopulation() * GC.getDefineINT("OCCUPATION_TURNS_POPULATION_PERCENT")) / 100)) * (100 - iTeamCulturePercent)) / 100;
+			if (iReducedOccupationTimer > 8)
+			{
+				iReducedOccupationTimer = 5;
+			}
+			else if (iReducedOccupationTimer > 6)
+			{
+				iReducedOccupationTimer = 4;
+			}
+			else if (iReducedOccupationTimer > 4)
+			{
+				iReducedOccupationTimer = 3;
+			}
+			else if (iReducedOccupationTimer > 2)
+			{
+				iReducedOccupationTimer = 2;
+			}
+			else if (iReducedOccupationTimer > 0)
+			{
+				iReducedOccupationTimer = 1;
+			}
+
+			// Absinthe: UP resistance - no resistance in conquered cities
 			int iUPR = UniquePowers[getID() * UP_TOTAL_NUM + UP_NO_RESISTANCE];
-			if (  iUPR < 0 )
-				// Absinthe: reduced resistance on city conquest
-				pNewCity->changeOccupationTimer(((GC.getDefineINT("BASE_OCCUPATION_TURNS") + ((pNewCity->getPopulation() * GC.getDefineINT("OCCUPATION_TURNS_POPULATION_PERCENT")) / 100)) * (100 - iTeamCulturePercent)) / 100 * 2 / 3);
+			if ( iUPR < 0 )
+			{
+				pNewCity->changeOccupationTimer(iReducedOccupationTimer);
+			}
+			else if ( iUPR == 0 )
+			{
+				// Absinthe: UP resistance: reduces resistance to 0
+				// Absinthe: note that there is no need to directly set the occupation timer to 0 in most situations, since this timer is for the given player
+				// Absinthe: setOccupationTimer might be still safer to use - maybe it is possible that the civ already had revolt in the city somehow (conquered and reconquered during cultural revolt?)
+				//pNewCity->changeOccupationTimer(0);
+				pNewCity->setOccupationTimer(0);
+			}
 			else
-				if ( iUPR == 0 ){
-					pNewCity->changeOccupationTimer(0);
-				}else{
-					// Absinthe: reduced resistance on city conquest
-					pNewCity->changeOccupationTimer( ( ((GC.getDefineINT("BASE_OCCUPATION_TURNS") + ((pNewCity->getPopulation() * GC.getDefineINT("OCCUPATION_TURNS_POPULATION_PERCENT")) / 100)) * (100 - iTeamCulturePercent)) / 100 * 2 / 3 ) / iUPR );
-				};
+			{
+				// Absinthe: UP reduces resistance to x / iUPR
+				pNewCity->changeOccupationTimer(iReducedOccupationTimer / iUPR);
+			}
 		}
 
 		GC.getMapINLINE().verifyUnitValidPlot();
@@ -3095,6 +3154,20 @@ void CvPlayer::updateExtraSpecialistYield()
 		pLoopCity->updateExtraSpecialistYield();
 	}
 }
+
+
+// Absinthe: specialist commerce change
+void CvPlayer::updateExtraSpecialistCommerceByType()
+{
+	CvCity* pLoopCity;
+	int iLoop;
+
+	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	{
+		pLoopCity->updateExtraSpecialistCommerceByType();
+	}
+}
+// Absinthe: specialist commerce change
 
 
 void CvPlayer::updateCommerce(CommerceTypes eCommerce)
@@ -6677,6 +6750,16 @@ void CvPlayer::processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pAr
 			changeSpecialistExtraYield(((SpecialistTypes)iI), ((YieldTypes)iJ), (GC.getBuildingInfo(eBuilding).getSpecialistYieldChange(iI, iJ) * iChange));
 		}
 	}
+	
+	// Absinthe: specialist commerce change
+	for (iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
+	{
+		for (iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
+		{
+			changeSpecialistExtraCommerceByType(((SpecialistTypes)iI), ((CommerceTypes)iJ), (GC.getBuildingInfo(eBuilding).getSpecialistCommerceChange(iI, iJ) * iChange));
+		}
+	}
+	// Absinthe: specialist commerce change
 }
 
 
@@ -6773,12 +6856,13 @@ RouteTypes CvPlayer::getBestRoute(CvPlot* pPlot) const
 
 int CvPlayer::getImprovementUpgradeRate() const
 {
-	// 3Miro: Cottage growth bug
 	int iRate;
 
-	iRate = 100; // XXX
+	// Absinthe: bugfix: allow negative bonus to work properly; related changes are in CvPlot::getUpgradeTimeLeft
+	iRate = 100;
 
-	iRate *= std::max(0, (getImprovementUpgradeRateModifier() + 100));
+	//iRate *= std::max(0, (getImprovementUpgradeRateModifier() + 100));
+	iRate *= std::max(1, (getImprovementUpgradeRateModifier() + 100));
 	iRate /= 100;
 
 	return iRate;
@@ -6953,8 +7037,8 @@ int CvPlayer::calculateUnitCost(int& iFreeUnits, int& iFreeMilitaryUnits, int& i
 	// Absinthe: Wonders: St. Basil wonder effect
 	if (getBuildingClassCount((BuildingClassTypes)GC.getInfoTypeForString("BUILDINGCLASS_ST_BASIL")) == 1)
 	{
-		iSupport *= 7;
-		iSupport /= 10;
+		iSupport *= 4;
+		iSupport /= 5;
 	}
 	// Absinthe: Wonders: St. Basil
 
@@ -8605,7 +8689,9 @@ int CvPlayer::specialistYield(SpecialistTypes eSpecialist, YieldTypes eYield) co
 
 int CvPlayer::specialistCommerce(SpecialistTypes eSpecialist, CommerceTypes eCommerce) const
 {
-	return (GC.getSpecialistInfo(eSpecialist).getCommerceChange(eCommerce) + getSpecialistExtraCommerce(eCommerce));
+	// Absinthe: specialist commerce change
+	//return (GC.getSpecialistInfo(eSpecialist).getCommerceChange(eCommerce) + getSpecialistExtraCommerce(eCommerce));
+	return (GC.getSpecialistInfo(eSpecialist).getCommerceChange(eCommerce) + getSpecialistExtraCommerce(eCommerce) + getSpecialistExtraCommerceByType(eSpecialist, eCommerce));
 }
 
 
@@ -12743,16 +12829,17 @@ int CvPlayer::getSingleCivicUpkeep(CivicTypes eCivic, bool bIgnoreAnarchy) const
 	iUpkeep = 0;
 
 	iUpkeep += ((std::max(0, (getTotalPopulation() + GC.getDefineINT("UPKEEP_POPULATION_OFFSET") - GC.getCivicInfo(eCivic).getCivicOptionType())) * GC.getUpkeepInfo((UpkeepTypes)(GC.getCivicInfo(eCivic).getUpkeep())).getPopulationPercent()) / 100);
-	// 3MiroUP: endless land
+	// Absinthe: UP endless land - city-related civic costs are reduced
 	//iUpkeep += ((std::max(0, (getNumCities() + GC.getDefineINT("UPKEEP_CITY_OFFSET") + GC.getCivicInfo(eCivic).getCivicOptionType() - (GC.getNumCivicOptionInfos() / 2))) * GC.getUpkeepInfo((UpkeepTypes)(GC.getCivicInfo(eCivic).getUpkeep())).getCityPercent()) / 100);
 	int iCityContrib = ((std::max(0, (getNumCities() + GC.getDefineINT("UPKEEP_CITY_OFFSET") + GC.getCivicInfo(eCivic).getCivicOptionType() - (GC.getNumCivicOptionInfos() / 2))) * GC.getUpkeepInfo((UpkeepTypes)(GC.getCivicInfo(eCivic).getUpkeep())).getCityPercent()) / 100);
 	int iUPEL = UniquePowers[getID()* UP_TOTAL_NUM + UP_ENDLESS_LAND];
-	if ( iUPEL > 0 ){
+	if ( iUPEL > 0 )
+	{
 		iCityContrib *= iUPEL;
 		iCityContrib /= 100;
-	};
+	}
 	iUpkeep += iCityContrib;
-	// 3MiroUP: end of the endless land (code)
+	// Absinthe: UP endless land - end
 
 	iUpkeep *= std::max(0, (getUpkeepModifier() + 100));
 	iUpkeep /= 100;
@@ -12806,8 +12893,8 @@ int CvPlayer::getCivicUpkeep(CivicTypes* paeCivics, bool bIgnoreAnarchy) const
 	// Absinthe: Wonders: Golden Bull wonder effect
 	if (getBuildingClassCount((BuildingClassTypes)GC.getInfoTypeForString("BUILDINGCLASS_GOLDEN_BULL")) == 1)
 	{
-		iTotalUpkeep *= 7;
-		iTotalUpkeep /= 10;
+		iTotalUpkeep *= 4;
+		iTotalUpkeep /= 5;
 	}
 	// Absinthe: Wonders: Golden Bull
 
@@ -12944,6 +13031,37 @@ void CvPlayer::changeSpecialistExtraYield(SpecialistTypes eIndex1, YieldTypes eI
 		AI_makeAssignWorkDirty();
 	}
 }
+
+
+// Absinthe: specialist commerce change
+int CvPlayer::getSpecialistExtraCommerceByType(SpecialistTypes eIndex1, CommerceTypes eIndex2) const
+{
+	FAssertMsg(eIndex1 >= 0, "eIndex1 expected to be >= 0");
+	FAssertMsg(eIndex1 < GC.getNumSpecialistInfos(), "eIndex1 expected to be < GC.getNumSpecialistInfos()");
+	FAssertMsg(eIndex2 >= 0, "eIndex2 expected to be >= 0");
+	FAssertMsg(eIndex2 < NUM_COMMERCE_TYPES, "eIndex2 expected to be < NUM_COMMERCE_TYPES");
+	return m_ppaaiSpecialistExtraCommerceByType[eIndex1][eIndex2];
+}
+
+
+void CvPlayer::changeSpecialistExtraCommerceByType(SpecialistTypes eIndex1, CommerceTypes eIndex2, int iChange)
+{
+	FAssertMsg(eIndex1 >= 0, "eIndex1 expected to be >= 0");
+	FAssertMsg(eIndex1 < GC.getNumSpecialistInfos(), "eIndex1 expected to be < GC.getNumSpecialistInfos()");
+	FAssertMsg(eIndex2 >= 0, "eIndex2 expected to be >= 0");
+	FAssertMsg(eIndex2 < NUM_COMMERCE_TYPES, "eIndex2 expected to be < NUM_COMMERCE_TYPES");
+
+	if (iChange != 0)
+	{
+		m_ppaaiSpecialistExtraCommerceByType[eIndex1][eIndex2] = (m_ppaaiSpecialistExtraCommerceByType[eIndex1][eIndex2] + iChange);
+		FAssert(getSpecialistExtraCommerceByType(eIndex1, eIndex2) >= 0);
+
+		updateExtraSpecialistCommerceByType();
+
+		AI_makeAssignWorkDirty();
+	}
+}
+// Absinthe: specialist commerce change
 
 
 int CvPlayer::getImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2) const
@@ -17331,6 +17449,13 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		pStream->Read(NUM_YIELD_TYPES, m_ppaaiSpecialistExtraYield[iI]);
 	}
 
+	// Absinthe: specialist commerce change
+	for (iI=0;iI<GC.getNumSpecialistInfos();iI++)
+	{
+		pStream->Read(NUM_COMMERCE_TYPES, m_ppaaiSpecialistExtraCommerceByType[iI]);
+	}
+	// Absinthe: specialist commerce change
+
 	for (iI=0;iI<GC.getNumImprovementInfos();iI++)
 	{
 		pStream->Read(NUM_YIELD_TYPES, m_ppaaiImprovementYieldChange[iI]);
@@ -17828,6 +17953,13 @@ void CvPlayer::write(FDataStreamBase* pStream)
 	{
 		pStream->Write(NUM_YIELD_TYPES, m_ppaaiSpecialistExtraYield[iI]);
 	}
+
+	// Absinthe: specialist commerce change
+	for (iI=0;iI<GC.getNumSpecialistInfos();iI++)
+	{
+		pStream->Write(NUM_COMMERCE_TYPES, m_ppaaiSpecialistExtraCommerceByType[iI]);
+	}
+	// Absinthe: specialist commerce change
 
 	for (iI=0;iI<GC.getNumImprovementInfos();iI++)
 	{

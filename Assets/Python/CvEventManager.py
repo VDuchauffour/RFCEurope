@@ -1278,7 +1278,13 @@ class CvEventManager:
 			if ConquerPlayer.isHuman() or (utils.isActive(iHuman) and (HumanTeam.isHasMet(ConquerTeam) or HumanTeam.isHasMet(PreviousTeam))):
 				iX = city.getX()
 				iY = city.getY()
+				# Absinthe: collect all wonders, including shrines (even though cities with shrines can't be destroyed in the mod)
+				lAllWonders = []
 				for iWonder in range(xml.iBeginWonders, xml.iEndWonders):
+					lAllWonders.append(iWonder)
+				for iWonder in [xml.iCatholicShrine, xml.iOrthodoxShrine, xml.iIslamicShrine, xml.iProtestantShrine]:
+					lAllWonders.append(iWonder)
+				for iWonder in lAllWonders:
 					if city.getNumBuilding(iWonder) > 0:
 						sWonderName = gc.getBuildingInfo(iWonder).getDescription()
 						if ConquerPlayer.isHuman():
@@ -1289,7 +1295,7 @@ class CvEventManager:
 						elif HumanTeam.isHasMet(PreviousTeam):
 							PreviousName = PreviousPlayer.getCivilizationDescriptionKey()
 							CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_DESTROYED_3", (PreviousName, sWonderName)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(iWonder).getButton(), ColorTypes(con.iLightRed), iX, iY, True, True)
-		# Absinthe - wonder destroyed message end
+		# Absinthe: wonder destroyed message end
 
 		# Absinthe: Partisans! - not used currently
 		#if city.getPopulation > 1 and iOwner != -1 and iPlayer != -1:
@@ -1417,7 +1423,13 @@ class CvEventManager:
 			if ConquerPlayer.isHuman() or (utils.isActive(iHuman) and (HumanTeam.isHasMet(ConquerTeam) or HumanTeam.isHasMet(PreviousTeam))):
 				iX = pCity.getX()
 				iY = pCity.getY()
+				# Absinthe: collect all wonders, including shrines
+				lAllWonders = []
 				for iWonder in range(xml.iBeginWonders, xml.iEndWonders):
+					lAllWonders.append(iWonder)
+				for iWonder in [xml.iCatholicShrine, xml.iOrthodoxShrine, xml.iIslamicShrine, xml.iProtestantShrine]:
+					lAllWonders.append(iWonder)
+				for iWonder in lAllWonders:
 					if pCity.getNumBuilding(iWonder) > 0:
 						sWonderName = gc.getBuildingInfo(iWonder).getDescription()
 						if ConquerPlayer.isHuman():
@@ -1428,7 +1440,7 @@ class CvEventManager:
 						elif HumanTeam.isHasMet(PreviousTeam):
 							PreviousName = PreviousPlayer.getCivilizationDescriptionKey()
 							CyInterface().addMessage(iHuman, False, con.iDuration, CyTranslator().getText("TXT_KEY_MISC_WONDER_CAPTURED_3", (PreviousName, sWonderName)), "", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, gc.getBuildingInfo(iWonder).getButton(), ColorTypes(con.iCyan), iX, iY, True, True)
-		# Absinthe - wonder captured message end
+		# Absinthe: wonder captured message end
 
 		CvUtil.pyPrint('City Acquired and Kept Event: %s' %(pCity.getName()))
 		CvUtil.pyPrint('NewOwner: %s, PreviousOwner: %s' %(PyPlayer(pCity.getOwner()).getCivilizationName(), PyPlayer(pCity.getPreviousOwner()).getCivilizationName()))

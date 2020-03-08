@@ -25,11 +25,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_BYZ2</Tag>
-		<English>The Imperialism civic is unlocked by default, the core of the Empire cannot collapse due to instability.</English>
+		<English>The Imperialism civic is unlocked by default. The core of the Empire cannot collapse and cities in your core territories won't revolt against your rule, while you hold your historic capital.</English>
 		<French>Le coeur de l'Empire ne peut pas s'effondrer &#224; cause de l'instabilit&#233;</French>
 		<German>Der Kern des Reiches kann nicht wegen Instabilit&#228;t kollabieren</German>
 		<Italian>Il fulcro dell'Impero non può collassare per instabilità</Italian>
-		<Spanish>.</Spanish>
+		<Spanish>The Imperialism civic is unlocked by default. The core of the Empire cannot collapse and cities in your core territories won't revolt against your rule, if you manage to hold on to your historic capital.</Spanish>
 		<Portuguese>O centro do Império não pode colapsar por instabilidade</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -115,7 +115,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_COR2</Tag>
-		<English>All units start with the Medic I promotion, excess health in your cities contribute to their growth.</English>
+		<English>All units start with the Medic I promotion, excess health in your cities contribute to their growth (with a 2:1 health to food ratio).</English>
 		<French>Chaque unit&#233; commence avec la promotion Infirmier I</French>
 		<German>Alle Einheiten starten mit der Beförderung Sanit&#228;ter I</German>
 		<Italian>Tutte le unità iniziano con la promozione Medico I</Italian>
@@ -133,7 +133,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_SPN2</Tag>
-		<English>Less stability penalty from Religious Persecution and +2 Espionage Points per city.</English>
+		<English>Less stability penalty from Religious Persecution and +2 [ICON_ESPIONAGE] per city.</English>
 		<French>Pas de p&#233;nalit&#233;s pour les Pers&#233;cuteur et +2XP par ville</French>
 		<German>Kein Stabilitätsmalus durch Inquisition und +2[ICON_ESPIONAGE] pro Stadt</German>
 		<Italian>Nessuna penalità in punti stabilità per le Persecuzioni Religiose e +2XP in ogni città</Italian>
@@ -187,7 +187,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_KIE2</Tag>
-		<English>Your cities yield 2 extra [ICON_FOOD].</English>
+		<English>Your cities yield +2[ICON_FOOD].</English>
 		<French>+2 [ICON_FOOD] par ville</French>
 		<German>+2 [ICON_FOOD] in jeder Stadt</German>
 		<Italian>+2 [ICON_FOOD] Extra per città</Italian>
@@ -205,7 +205,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_LIT2</Tag>
-		<English>+2[ICON_CULTURE] and +1[ICON_HAPPY] in cities without state religion.</English>
+		<English>+2[ICON_CULTURE] and +1[ICON_HAPPY] in your cities, if you do not have a state religion.</English>
 		<French>+2[ICON_CULTURE] and +1[ICON_HAPPY] in cities without state religion</French>
 		<German>+2[ICON_CULTURE] und +1[ICON_HAPPY] in jeder Stadt ohne Staatsreligion</German>
 		<Italian>+2[ICON_CULTURE] e +1[ICON_HAPPY] per ogni città senza Religione Ufficiale</Italian>
@@ -277,7 +277,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_MOS2</Tag>
-		<English>50% decrease in all maintenance costs associated with the number of your cities.</English>
+		<English>50% decrease in all city maintenance costs from both number of cities and city distance, and also in all civic costs associated with cities.</English>
 		<French>-50% de coût de maintenance pour le nombre de villes</French>
 		<German>50% reduzierte Unterhaltskosten für die Anzahl an Städten</German>
 		<Italian>-50% costo di mantenimento per il numero delle città</Italian>
@@ -313,7 +313,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ENG2</Tag>
-		<English>Cottages, Hamlets, Villages and Towns give +1[ICON_PRODUCTION], Workshops give +1[ICON_COMMERCE].</English>
+		<English>Cottages, Hamlets, Villages and Towns produce +1[ICON_PRODUCTION], Workshops produce +1[ICON_COMMERCE].</English>
 		<French>Atelier ont +1[ICON_PRODUCTION] and +1[ICON_COMMERCE]</French>
 		<German>Werkstätten ergeben +1[ICON_PRODUCTION] and +1[ICON_COMMERCE]</German>
 		<Italian>Le Botteghe danno +1[ICON_PRODUCTION] and +1[ICON_COMMERCE]</Italian>
@@ -367,7 +367,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_TUR2</Tag>
-		<English>Your cities have less stability penalties and generate Janissary units with foreign religions in them.</English>
+		<English>Less stability penalty from non-state religions, your cities generate Janissary units if they have foreign religions in them.</English>
 		<French>Every turn you generate Janissary points for foreign religion in your cities, this gives you free units every few turns</French>
 		<German>Fremde Religionen erzeugen in jeder Runde Janitscharen-Punkte in euren Städten, dadurch erhaltet ihr alle paar Runden freie Einheiten</German>
 		<Italian>Ogni turno generi punti Giannizzeri per le religioni straniere nelle tue città, che ti forniscono dei Giannizzeri ogni tanto</Italian>
@@ -421,7 +421,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_DEN2</Tag>
-		<English>You get 2 gold per turn for every foreign coastal city in the Baltic.</English>
+		<English>+2 gold per turn for every foreign coastal city in the Baltic.</English>
 		<French>You get 2 gold per turn for every foreign coastal city in the Baltic.</French>
 		<German>You get 2 gold per turn for every foreign coastal city in the Baltic.</German>
 		<Italian>You get 2 gold per turn for every foreign coastal city in the Baltic.</Italian>

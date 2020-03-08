@@ -157,7 +157,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_GOLDEN_AGE</Tag>
-		<English>Golden Age in RFCE</English>
+		<English>Golden Ages</English>
 		<French>Golden Age</French>
 		<German>Goldenes Zeitalter</German>
 		<Italian>Golden Age</Italian>
@@ -202,7 +202,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_MERCENARIES_PEDIA</Tag>
-		<English>[H1]Mercenaries[\H1][PARAGRAPH:2]Mercenaries are soldiers who fight primarily for private gain, usually with little regard for ideological, national, political, or moral considerations. However, when the term is used to refer to a soldier in a regular national army, it is usually considered an insult.[PARAGRAPH:2]Mercenaries have seen regular deployment in battle since the time of Ancient Egypt and Carthage, up through the 16th century, including the famous Swiss Guard and the Landsknechts. In the game, Mercenaries can be hired only until the discovery of Nationalism, which changed the conception of armies and caused a rapid decline in Mercenary usage.[PARAGRAPH:2]The Mercenary screen can be accessed by clicking the small axe icon in the upper left of the screen. Here you can hire foreign units for your wars. Mercenaries are tied to provinces, and they appear in a random city of the given province, on the same turn you hire them.</English>
+		<English>[H1]Mercenaries[\H1][PARAGRAPH:2]Mercenaries are soldiers who fight primarily for private gain, usually with little regard for ideological, national, political, or moral considerations. However, when the term is used to refer to a soldier in a regular national army, it is usually considered an insult.[PARAGRAPH:2]Mercenaries have seen regular deployment in battle since the time of Ancient Egypt and Carthage, up through the 16th century, including the famous Swiss Guard and the Landsknechts. In the game, Mercenaries can be hired only until the discovery of Nationalism, which changed the conception of armies and caused a rapid decline in Mercenary usage.[PARAGRAPH:2]The Mercenary screen can be accessed by clicking the small axe icon in the upper left of the screen. Here you can hire foreign units for your wars. Many of these units are not available otherwise and have significant bonuses over regular units, so they can be very helpful. Additionally, all mercenaries slightly reduce the chance a city will revolt or secede (medieval rulers trusted mercenaries more than their own troops, who had ties to the local populace).[PARAGRAPH:2]Mercenaries are tied to provinces, and they appear in a random city of the given province, on the same turn you hire them. They can be tied to one or more religions too, so some mercenaries might not be willing to serve anyone with your state religion! Also, at least a minimal cultural establishment is required in the province, before you can hire mercenaries there. You can also hire naval mercenaries in RFCE, if you have a coastal city in the province in which they are available.</English>
 		<French>[H1]Mercenaires[\H1][PARAGRAPH:2]Les mercenaires sont des soldats qui se battent avant tout pour leur profit personnel, et n'ont que peu de consid&#233;rations id&#233;ologiques, territoriales, politiques ou morales. Lorsque ce terme est utilis&#233; pour un soldat d'une arm&#233;e r&#233;guli&#232;re, c'est en g&#233;n&#233;ral insultant.[PARAGRAPH:2]Les mercenaires ont souvent &#233;t&#233; employ&#233;s depuis l'&#233;poque de l'Egypte ancienne et de Carthage, jusqu'au 16e si&#232;cle, avec les c&#233;l&#232;bres Gardes Suisses et les Lansquenets. Vous pouvez recruter des mercenaires jusqu'&#224; la d&#233;couverte du nationalisme, qui modifie la conception des arm&#233;es et entra&#238;ne un rapide d&#233;clin de l'utilisation des mercenaires.[PARAGRAPH:2]</French>
 		<German>[H1]S&#246;ldner[\H1][PARAGRAPH:2]S&#246;ldner sind K&#228;mpfer, die meist ohne jede R&#252;cksicht auf ideologische, patriotische, politische oder moralische &#220;berlegungen in erster Linie ihre pers&#246;nlichen Interessen verfolgen. Manchmal wird der Begriff auch als Bezeichnung f&#252;r Soldaten verwendet, die in einer regul&#228;ren nationalen Armee ihren Dienst verrichten, in diesem Fall ist er jedoch in aller Regel als Beleidigung zu verstehen.[PARAGRAPH:2]Der Einsatz von S&#246;ldnern in der Schlacht war seit der Zeit des antiken &#196;gyptens und Karthagos bis ins 16. Jahrhundert, beispielsweise mit der Schweizergarde und den Landsknechten, weit verbreitet. Im Spiel k&#246;nnen S&#246;ldner bis zur Entdeckung des "Nationalismus" angeheuert werden, der das Prinzip des strukturellen Aufbaus einer Armee so stark ver&#228;nderte, dass er das Ende des S&#246;ldnertums einl&#228;utete.[PARAGRAPH:2]</German>
 		<Italian>[H1]Mercenari[\H1][PARAGRAPH:2]I mercenari sono soldati che combattono principalmente per un tornaconto privato, di solito senza considerazioni di ordine ideologico, nazionale, politico o morale. Per&#242; quando il termine viene utilizzato riferendosi a un soldato di un regolare esercito nazionale, &#232; considerato un insulto.[PARAGRAPH:2]I mercenari sono stati impiegati in battaglia fin dai tempi dell'antico Egitto e di Cartagine fino al sedicesimo secolo, e tra l'altro includono i famosi Lanzichenecchi e la Guardia Svizzera. Nel gioco i mercenari possono essere assoldati solo fino alla scoperta del nazionalismo, che ha rivoluzionato la concezione degli eserciti e ha causato un rapido declino nell'utilizzo di truppe a pagamento.[PARAGRAPH:2]</Italian>
@@ -221,8 +221,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ODDS_PEDIA</Tag>
 		<English>[H1]Odds and Ends[\H1][PARAGRAPH:1]
+- Everything on the map is considered to be one continent.
+- All wonder effects cover the entire map. (So all of your cities.)
+- All cities automatically have geographically and historically accurate names associated with them.
 - There are many new terrain types, check the terrain section.
-- Many new resources, check the resource section.
+- RFCE has a great number of new resources, check the resource section.
 - Shrines are capped at +20 gold.
 - Tech costs increase as you grow.
 - There is only one speed due to scripted events.</English>
@@ -460,7 +463,7 @@
 - Defensive Crusades cost faith points
 - Faith points can be regained by conquering the other player's cities and converting them to Catholicism[NEWLINE]
 [H2]Crusades and non-Catholic Religions[\H2][PARAGRAPH:1]If you are an Islamic player, prepare for the Crusaders. Whether you are fighting against the Reconquista, defending Jerusalem or conquering Hungary, Crusaders will come to visit you. Meet them accordingly. Strong Islamic faith would help you build more units and successfully fight off the Crusaders.
-[PARAGRAPH:1]Judaism is not meant to be anyone's state religion, however, it as vulnerable to Crusades as Islam.
+[PARAGRAPH:1]Judaism is not meant to be anyone's state religion, however, it is as vulnerable to Crusades as Islam.
 [PARAGRAPH:1]Orthodox players are generally immune to Crusades, but beware of Balduin I, VI and IX (all numbers refer to the same person). Crusaders can always get greedy and attack you for purely economical reasons.
 [PARAGRAPH:1]Reformation stops the Crusades for the Holy Land, however, if you are at war with a Catholic nation, you may still suffer from a defensive Crusade.[NEWLINE]</English>
 		<French></French>
@@ -528,37 +531,40 @@ Há dois tipos de Cruzadas: Para a Terra Santa cujo foco é capturar Jerusalém e a
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_STABILITY_GUIDE_PEDIA</Tag>
-		<English>[H1]RFCE stability guide:[\H1]
+		<English>[H1]Stability Guide:[\H1]
 
 [BOLD]The F2 Screen[\BOLD]
-On the F2-screen you can see the four main stability categories: cities, civics, economy, expansion and a special fifth category called swing. 
+On the F2-screen you can see the four main stability categories: cities, civics, economy, expansion and a special fifth category called swing.
 The main categories have two values: the one on the left side is the sum of all permanent modifiers and the one on the right side is a value that is calculated every turn.
 The swing category has only one value and represents effects that last only a few turns. Most of the time this value should be zero.
 
-All values are summed up and give the total stability or simply the stability (The value that can be seen on the main screen). This is the only value that matters in the end.
+All values are summed up and give the total stability or simply the 'stability' of your civilization (the value that can be seen on the main screen). This is the only value that matters in the end.
 
-[BOLD]The two ways how stability is calculated[\BOLD]
+[BOLD]Two types of stability calculations[\BOLD]
 There are two ways in which stability is calculated: event based and state based.
-You can say the state based modifiers look at what you have (eg. total number of cities) and the event based look on how you got there (eg. if you found a city yourself or if you conquer one).
+You can say the state based modifiers look at what you have (e.g. total number of cities) and the event based look on how you got there (e.g. if you found a city yourself or if you conquer one).
 
 [BOLD]State based modifiers[\BOLD]
-The state based modifiers have to be updated once in a while. This is usually done every turn or every three turns or when it is obvious that the state has changed (eg. founding a city will change the total number of cities and therefore triggers a recalculation). Because they only look at the current state they can be recalculated from scratch every time. Previous values don't have to be remembered. That means if an error occures, this error can not accumulate over several calculations and the total effect of one modifier can easily be limited.
-The effects of state-based modifiers are hard to track because all effects are calculated at once.
+The state based modifiers have to be updated once in a while. This is usually done every turn or every three turns or when it is obvious that the state has changed (e.g. founding a city will change the total number of cities and therefore triggers a recalculation). Because they only look at the current state they can be recalculated from scratch every time. Previous values don't have to be remembered or stored. That means if an error occures, this error can not accumulate over several calculations and the total effect of one modifier can easily be limited.
+The effects of specific state-based modifiers are hard to track because all effects are calculated at once.
 
 [BOLD]Event based modifiers[\BOLD]
-The event based modifiers on the other hand can not be calculated from the scratch every time and therefore have to be remembered. This is done by storing a single number for each category. It holds the sum of all modifiers that have been triggered so far. That means those modifiers are permanent and cumulative. And that means also that errors can accumulate. And because only a single number is stored it is impossible to say how often a certain event has occured and therefore it is impossible to limit the total effect of a single modifier.
-The effect of event-based modifiers can easily be seen. Just found, conquer or raze a city and look on the F2-screen how the corresponding value has changed. Sometimes more then one event is triggered at once (eg. razing a city triggers also conquering a city)
+The event based modifiers on the other hand can not be calculated from scratch every time and therefore have to be remembered. This is done by storing a single number for each category. It holds the sum of all modifiers that have been triggered so far. That means those modifiers are permanent and cumulative. That also means that errors can accumulate. Also, because only a single number is stored it is impossible to say how often a certain event has occured and therefore it is impossible to limit the total effect of a single modifier.
+The effect of event-based modifiers can easily be seen. Just found, conquer or raze a city and look on the F2-screen how the corresponding value has changed. Note that sometimes more than one event is triggered at once (e.g. razing a city also triggers conquering a city).
 
 [BOLD]Useful tips[\BOLD]
-The swing category has only event based modifiers, sometimes with rather big values.
-On the other hand it's value gets halved every turn, so it rapidly converges to zero.
+The swing category only has event based modifiers, sometimes with rather big values.
+On the other hand its value gets halved every turn, so it rapidly converges to zero.
 
 Note that one of the big permanent changes in stability happens when some of your provinces change to worse status.
 In most cases this happens when a new civ is born in or near your territory (the first example is the Arab spawn for Byzantium).
 
+Changing your state religion might mean a huge hit on your stability, if you have a great number of cities with (soon to be) foreign religions in them.
+Civic changes can also result in very significant changes in your stability, especially for big empires.
+
 Various special events and historic mechanisms can also effect your stability.
 For example on the reformation event: If you choose to stay catholic, you miss on the economic and scientific benefits of switching to protestantism, but the counter-reformation might bring some stability to your realm.
-Or you get a minor bonus to your stability in case you successfully complete one of your UHVs.
+You also get a minor bonus to your stability in case you successfully complete one of your UHVs.
 
 [H1]List of event based stability modifiers:[\H1](all permanent, apart from the swing stability)
 
@@ -572,6 +578,7 @@ Or you get a minor bonus to your stability in case you successfully complete one
 [BOLD]Cities[\BOLD]
 [TAB]Entering a war: -1
 [TAB]Building a [LINK=BUILDING_COURTHOUSE]Courthouse[\LINK]: +1
+[TAB]Building a [LINK=BUILDING_RELIQUARY]Reliquary[\LINK]: +1
 [TAB]After AI collapse date: -1 stability every 4 turns up to a total of -15 stability
 
 [BOLD]Civics[\BOLD]
@@ -593,7 +600,7 @@ Or you get a minor bonus to your stability in case you successfully complete one
 [TAB][TAB]with a population of 10+: -3
 [TAB][TAB]Norwegian UP: one less instability for each raze
 [TAB]Losing a city in a core or historic province: -3 (-2 for Scotland)
-[TAB]Losing the capitol city: -10 (-20 for Byzantium, -5 for Scotland)
+[TAB]Losing the capital city: -10 (-20 for Byzantium, -5 for Scotland)
 [TAB]Moving the palace: -2
 [TAB]Building a colony: -2 (-1 with Colonialism)
 
@@ -613,7 +620,7 @@ Or you get a minor bonus to your stability in case you successfully complete one
 [TAB]Conquering a city in a core or historic province: +3
 [TAB]Losing a city in a core or historic province: -4 (-2 for Scotland)
 [TAB]Losing a city in a border of foreign province: -2 (-1 for Scotland)
-[TAB]Losing the capitol city: -10 (-20 for Byzantium, -5 for Scotland)
+[TAB]Losing the capital city: -10 (-20 for Byzantium, -5 for Scotland)
 
 [H1]List of state based stability modifiers:[\H1](dynamic, calculated each turn)
 
@@ -626,7 +633,8 @@ Or you get a minor bonus to your stability in case you successfully complete one
 [TAB][TAB]so -1 with 1-3 points, -2 with 4-6 points, -3 with 7-9 points, etc.
 [TAB][TAB]a successful purge adds 8 points to the persecution counter (4 for Spain)
 [TAB][TAB]an unsuccessful purge adds 4 points to the persecution counter (2 for Spain)
-[TAB][TAB]the persecution counter goes down with 1 point in each turn
+[TAB][TAB]the persecution counter goes down with 1 point in each turn by default
+[TAB][TAB]the persecution counter goes down with 2 points with the Religious Law civic
 [TAB]For each city that
 [TAB][TAB]is unhealthy: -1
 [TAB][TAB]is unhappy (has at least one angry population): -2
@@ -646,56 +654,64 @@ Or you get a minor bonus to your stability in case you successfully complete one
 [TAB]While in a golden age: +8
 
 [BOLD]Civics[\BOLD]
+[TAB]With the [LINK=BUILDING_MAGNA_CARTA]Magna Carta[\LINK] wonder:
+[TAB][TAB]No stability penalty for unstable civic combinations
 [TAB]Feudal Monarchy with
 [TAB][TAB]the [LINK=BUILDING_STEPHANSDOM]Stephansdom[\LINK] wonder: +2
 [TAB][TAB]Feudal Law: +3
 [TAB]Divine Monarchy with
-[TAB][TAB]the Stephansdom wonder: +2
+[TAB][TAB]the [LINK=BUILDING_STEPHANSDOM]Stephansdom[\LINK] wonder: +2
+[TAB][TAB]Religious Law: +2
 [TAB][TAB]Paganism: -4
 [TAB][TAB]State Religion: +2
 [TAB][TAB]Theocracy: +3
 [TAB][TAB]Organized Religion: +4
 [TAB][TAB]Religious Tolerance: -3
-[TAB][TAB]Religious Law: +2
 [TAB]Constitutional Monarchy with
-[TAB][TAB]the Stephansdom wonder: +2
+[TAB][TAB]the [LINK=BUILDING_STEPHANSDOM]Stephansdom[\LINK] wonder: +2
 [TAB][TAB]Common Law: +3
 [TAB][TAB]Free Peasantry: +2
 [TAB][TAB]Free Labor: +2
 [TAB]Merchant Republic with
 [TAB][TAB]Feudal Law: -3
-[TAB][TAB]Trade Economy: +4
 [TAB][TAB]Common Law: +3
 [TAB][TAB]Free Peasantry: +2
 [TAB][TAB]Free Labor: +2
+[TAB][TAB]Trade Economy: +4
+[TAB][TAB]Mercantilism: -4
 [TAB][TAB]Imperialism: -2
 [TAB]Merchant Republic with k cities: 5-k (0 with 5 cities)
 [TAB][TAB]the penalties are halved for Venice ((5-k)/2, if k>5)
 [TAB]Feudal Law with
 [TAB][TAB]Serfdom: +3
-[TAB][TAB]Manorialism: +2
 [TAB][TAB]Free Peasantry: -4
+[TAB][TAB]Manorialism: +2
 [TAB][TAB]Vassalage: +2
 [TAB]Bureaucracy with k cities: 6-k (0 with 6 cities)
 [TAB][TAB]the penalties are halved for Novgorod ((6-k)/2, if k>6)
-[TAB]Serfdom with
-[TAB][TAB]Manorialism: +2
-[TAB][TAB]Common Law: -3
 [TAB]Religious Law with
 [TAB][TAB]Paganism: -5
 [TAB][TAB]Theocracy: +5
 [TAB][TAB]Religious Tolerance: -3
 [TAB]Common Law with
+[TAB][TAB]Serfdom: -3
 [TAB][TAB]Free Labor: +3
 [TAB][TAB]Theocracy: -4
+[TAB]Serfdom with
+[TAB][TAB]Manorialism: +2
+[TAB][TAB]Trade Economy: -3
 [TAB]Apprenticeship with
 [TAB][TAB]Guilds: +3
+[TAB]Paganism with
+[TAB][TAB]the [LINK=BUILDING_SHRINE_OF_UPPSALA]Shrine of Uppsala[\LINK] wonder: +3
+[TAB]Religious Law with
+[TAB][TAB]the [LINK=BUILDING_KOUTOUBIA_MOSQUE]Koutoubia Mosque[\LINK] wonder: +4
 
 [BOLD]Expansion[\BOLD]
 [TAB]For each own city
 [TAB][TAB]in a foreign province: -5 (-4 with Imperialism)
 [TAB][TAB]in a border province: -2 (-1 with Imperialism)
-[TAB][TAB]French UP: additional +1 for each city in a border or foreign province
+[TAB][TAB]French UP: one less instability for each city in a border or foreign province
 [TAB]For each foreign city
 [TAB][TAB]in a core province: -3 (0 with Militarism)
 [TAB][TAB]in a normal province: -1 (0 with Militarism)
@@ -705,13 +721,16 @@ Or you get a minor bonus to your stability in case you successfully complete one
 [TAB][TAB]So 0 for less than 7 cities, -1 with 7 and 8 cities, -2 with 9 and 10 cities
 [TAB][TAB]-3 with 11 and 12 cities, -4 with 13 and 14 cities, -5 with 15 city
 [TAB][TAB]-1 for each city after the 15th, -2 for each city after the 31th
-[TAB][TAB]The Ottomans and Muscovy get five cities for free
+[TAB][TAB]The penalty is calculated with k-5 cities for the Ottomans and Muscovy
 
 [BOLD]Economy[\BOLD]
+[TAB]The sum of two main economic components:
 [TAB]Industrial Stability in your empire: between -3 and +3
 [TAB][TAB]Based on agriculture, production and industrial development
 [TAB]Financial Stability in your empire: between -4 and +4
-[TAB][TAB]Based on finances, inflation, trade and economic development</English>
+[TAB][TAB]Based on finances, inflation, trade and economic development
+[TAB]With the [LINK=BUILDING_ESCORIAL]El Escorial[\LINK] wonder:
+[TAB][TAB]No stability penalty from Industrial and Financial Stability</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>

@@ -35,6 +35,7 @@
 CvCity::CvCity()
 {
 	m_aiSeaPlotYield = new int[NUM_YIELD_TYPES];
+	m_aiCoastalPlotYield = new int[NUM_YIELD_TYPES];
 	m_aiRiverPlotYield = new int[NUM_YIELD_TYPES];
 	m_aiBaseYieldRate = new int[NUM_YIELD_TYPES];
 	m_aiYieldRateModifier = new int[NUM_YIELD_TYPES];
@@ -46,6 +47,8 @@ CvCity::CvCity()
 	m_aiTradeYield = new int[NUM_YIELD_TYPES];
 	m_aiCorporationYield = new int[NUM_YIELD_TYPES];
 	m_aiExtraSpecialistYield = new int[NUM_YIELD_TYPES];
+	// Absinthe: specialist commerce change
+	m_aiExtraSpecialistCommerceByType = new int[NUM_COMMERCE_TYPES];
 	m_aiCommerceRate = new int[NUM_COMMERCE_TYPES];
 	m_aiProductionToCommerceModifier = new int[NUM_COMMERCE_TYPES];
 	m_aiBuildingCommerce = new int[NUM_COMMERCE_TYPES];
@@ -122,6 +125,7 @@ CvCity::~CvCity()
 	SAFE_DELETE_ARRAY(m_abCommerceRankValid);
 
 	SAFE_DELETE_ARRAY(m_aiSeaPlotYield);
+	SAFE_DELETE_ARRAY(m_aiCoastalPlotYield);
 	SAFE_DELETE_ARRAY(m_aiRiverPlotYield);
 	SAFE_DELETE_ARRAY(m_aiBaseYieldRate);
 	SAFE_DELETE_ARRAY(m_aiYieldRateModifier);
@@ -133,6 +137,8 @@ CvCity::~CvCity()
 	SAFE_DELETE_ARRAY(m_aiTradeYield);
 	SAFE_DELETE_ARRAY(m_aiCorporationYield);
 	SAFE_DELETE_ARRAY(m_aiExtraSpecialistYield);
+	// Absinthe: specialist commerce change
+	SAFE_DELETE_ARRAY(m_aiExtraSpecialistCommerceByType);
 	SAFE_DELETE_ARRAY(m_aiCommerceRate);
 	SAFE_DELETE_ARRAY(m_aiProductionToCommerceModifier);
 	SAFE_DELETE_ARRAY(m_aiBuildingCommerce);
@@ -523,6 +529,7 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	for (iI = 0; iI < NUM_YIELD_TYPES; iI++)
 	{
 		m_aiSeaPlotYield[iI] = 0;
+		m_aiCoastalPlotYield[iI] = 0;
 		m_aiRiverPlotYield[iI] = 0;
 		m_aiBaseYieldRate[iI] = 0;
 		m_aiYieldRateModifier[iI] = 0;
@@ -546,6 +553,8 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		//BCM:Added 26.9.09
 		m_aiBonusCommerceRateModifier[iI] = 0;
 		//BCM:End
+		// Absinthe: specialist commerce change
+		m_aiExtraSpecialistCommerceByType[iI] = 0;
 	}
 
 	for (iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
@@ -3940,6 +3949,7 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 		for (iI = 0; iI < NUM_YIELD_TYPES; iI++)
 		{
 			changeSeaPlotYield(((YieldTypes)iI), (GC.getBuildingInfo(eBuilding).getSeaPlotYieldChange(iI) * iChange));
+			changeCoastalPlotYield(((YieldTypes)iI), (GC.getBuildingInfo(eBuilding).getCoastalPlotYieldChange(iI) * iChange));
 			changeRiverPlotYield(((YieldTypes)iI), (GC.getBuildingInfo(eBuilding).getRiverPlotYieldChange(iI) * iChange));
 			changeBaseYieldRate(((YieldTypes)iI), ((GC.getBuildingInfo(eBuilding).getYieldChange(iI) + getBuildingYieldChange((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType(), (YieldTypes)iI))* iChange));
 			changeYieldRateModifier(((YieldTypes)iI), (GC.getBuildingInfo(eBuilding).getYieldModifier(iI) * iChange));
@@ -4112,6 +4122,8 @@ void CvCity::processSpecialist(SpecialistTypes eSpecialist, int iChange)
 	}
 
 	updateExtraSpecialistYield();
+	// Absinthe: specialist commerce change
+	updateExtraSpecialistCommerceByType();
 
 	changeSpecialistFreeExperience(GC.getSpecialistInfo(eSpecialist).getExperience() * iChange);
 }
@@ -5446,6 +5458,7 @@ long CvCity::getRealPopulation() const
 	//return (((long)(pow((float)getPopulation(), 2.8f))) * 1000);
 	// 3Miro: purely aesthetic choice of population sizes
 	float fPop = (float) getPopulation();
+	// Absinthe: 3000, 7000, 12000, 18000, 25000, 33000, 42000, 52000, 63000, 75000, 88000, 102000, etc.
 	//return (long)(  (pow( fPop, 1.7f) +  3* fPop)  * 1000);
 	return (long) ( ( fPop * fPop / 2.0 + 2.5 * fPop ) * 1000 );
 }
@@ -7410,43 +7423,8 @@ void CvCity::setOccupationTimer(int iNewValue)
 {
 	bool bOldOccupation;
 
-	// Absinthe: moved revolt reduction to CvPlayer::acquireCity, so it only affects city conquests
-	/*// Absinthe: revolt changes: already gets reduced values compared to population (based on culture percent for example), but some further decrease for RFCE:
-	// so it results in 1 turn of revolt with iNewValue of 1-2, 2 turns with 3-4, 3 turns with 5-6, 4 turns with 7-8, 5 turns with 9+
-	// this more or less corresponds to: 1 turn with 1-2 population, 2 turns with 3-5 population, 3 turns with 6-9 population, 4 turns with 10-14 population, 5 turns with 15+ population
-	if (iNewValue > 8)
-	{
-		iNewValue = 5;
-	}
-	else
-	{
-		if (iNewValue > 6)
-		{
-			iNewValue = 4;
-		}
-		else
-		{
-			if (iNewValue > 4)
-			{
-				iNewValue = 3;
-			}
-			else
-			{
-				if (iNewValue > 2)
-				{
-					iNewValue = 2;
-				}
-				else
-				{
-					if (iNewValue > 0)
-					{
-						iNewValue = 1;
-					}
-				}
-			}
-		}
-	}
-	// Absinthe: end*/
+	// Absinthe: moved conquest revolt reduction to CvPlayer::acquireCity, while cultural revolts are reduced separately (in CvPlot::doCulture())
+	// Absinthe: reduction should not affect the rest (espionage missions, traded cities, event based revolts, minor civ revolts from python)
 
 	if (getOccupationTimer() != iNewValue)
 	{
@@ -7952,6 +7930,29 @@ void CvCity::changeSeaPlotYield(YieldTypes eIndex, int iChange)
 }
 
 
+int CvCity::getCoastalPlotYield(YieldTypes eIndex) const
+{
+	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
+	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
+	return m_aiCoastalPlotYield[eIndex];
+}
+
+
+void CvCity::changeCoastalPlotYield(YieldTypes eIndex, int iChange)
+{
+	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
+	FAssertMsg(eIndex < NUM_YIELD_TYPES, "eIndex expected to be < NUM_YIELD_TYPES");
+
+	if (iChange != 0)
+	{
+		m_aiCoastalPlotYield[eIndex] += iChange;
+		FAssert(getCoastalPlotYield(eIndex) >= 0);
+
+		updateYield();
+	}
+}
+
+
 int CvCity::getRiverPlotYield(YieldTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
@@ -8023,14 +8024,13 @@ int CvCity::getYieldRate(YieldTypes eIndex) const
 
 	// Absinthe: Cordoba: UP_HEALTH_FOOD: positive health contributes to city growth
 	int iUPHF = UniquePowers[getOwnerINLINE() * UP_TOTAL_NUM + UP_HEALTH_FOOD];
-	if (iUPHF == 1 && eIndex == YIELD_FOOD && !isFoodProduction())
+	if (iUPHF > -1 && eIndex == YIELD_FOOD && !isFoodProduction())
 	{
-		// Absinthe: UP update: lowered rate to 1/2, but always applied with positive health
+		// Absinthe: UP update: percentage can be set in python, and it is always applied with positive health
 		if (goodHealth() - badHealth() > 0)
 		//if (iYieldRateTimes100 - foodConsumption() * 100 >= 0 && goodHealth() - badHealth() > 0)
 		{
-			iYieldRateTimes100 += 50 * (goodHealth() - badHealth());
-			//iYieldRateTimes100 += 100 * (goodHealth() - badHealth());
+			iYieldRateTimes100 += iUPHF * (goodHealth() - badHealth());
 		}
 	}
 
@@ -8398,6 +8398,65 @@ void CvCity::updateExtraSpecialistYield()
 		updateExtraSpecialistYield((YieldTypes)iI);
 	}
 }
+
+
+// Absinthe: specialist commerce change
+int CvCity::getExtraSpecialistCommerceByType(CommerceTypes eIndex) const
+{
+	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
+	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
+	return m_aiExtraSpecialistCommerceByType[eIndex];
+}
+
+
+int CvCity::getExtraSpecialistCommerceByType(CommerceTypes eIndex, SpecialistTypes eSpecialist) const
+{
+	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
+	FAssertMsg(eIndex < NUM_COMMERCE_TYPES, "eIndex expected to be < NUM_COMMERCE_TYPES");
+	FAssertMsg(eSpecialist >= 0, "eSpecialist expected to be >= 0");
+	FAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "GC.getNumSpecialistInfos expected to be >= 0");
+	return ((getSpecialistCount(eSpecialist) + getFreeSpecialistCount(eSpecialist)) * GET_PLAYER(getOwnerINLINE()).getSpecialistExtraCommerceByType(eSpecialist, eIndex));
+}
+
+
+void CvCity::updateExtraSpecialistCommerceByType(CommerceTypes eCommerce)
+{
+	int iOldCommerce;
+	int iNewCommerce;
+	int iI;
+
+	FAssertMsg(eCommerce >= 0, "eCommerce expected to be >= 0");
+	FAssertMsg(eCommerce < NUM_COMMERCE_TYPES, "eCommerce expected to be < NUM_COMMERCE_TYPES");
+
+	iOldCommerce = getExtraSpecialistCommerceByType(eCommerce);
+
+	iNewCommerce = 0;
+
+	for (iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
+	{
+		iNewCommerce += getExtraSpecialistCommerceByType(eCommerce, ((SpecialistTypes)iI));
+	}
+
+	if (iOldCommerce != iNewCommerce)
+	{
+		m_aiExtraSpecialistCommerceByType[eCommerce] = iNewCommerce;
+		FAssert(getExtraSpecialistCommerceByType(eCommerce) >= 0);
+
+		changeSpecialistCommerce(eCommerce, (iNewCommerce - iOldCommerce));
+	}
+}
+
+
+void CvCity::updateExtraSpecialistCommerceByType()
+{
+	int iI;
+
+	for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+	{
+		updateExtraSpecialistCommerceByType((CommerceTypes)iI);
+	}
+}
+// Absinthe: specialist commerce change
 
 
 int CvCity::getCommerceRate(CommerceTypes eIndex) const
@@ -12572,6 +12631,7 @@ void CvCity::read(FDataStreamBase* pStream)
 	pStream->Read((int*)&m_eCultureLevel);
 
 	pStream->Read(NUM_YIELD_TYPES, m_aiSeaPlotYield);
+	pStream->Read(NUM_YIELD_TYPES, m_aiCoastalPlotYield);
 	pStream->Read(NUM_YIELD_TYPES, m_aiRiverPlotYield);
 	pStream->Read(NUM_YIELD_TYPES, m_aiBaseYieldRate);
 	pStream->Read(NUM_YIELD_TYPES, m_aiYieldRateModifier);
@@ -12583,6 +12643,8 @@ void CvCity::read(FDataStreamBase* pStream)
 	pStream->Read(NUM_YIELD_TYPES, m_aiTradeYield);
 	pStream->Read(NUM_YIELD_TYPES, m_aiCorporationYield);
 	pStream->Read(NUM_YIELD_TYPES, m_aiExtraSpecialistYield);
+	// Absinthe: specialist commerce change
+	pStream->Read(NUM_COMMERCE_TYPES, m_aiExtraSpecialistCommerceByType);
 	pStream->Read(NUM_COMMERCE_TYPES, m_aiCommerceRate);
 	pStream->Read(NUM_COMMERCE_TYPES, m_aiProductionToCommerceModifier);
 	pStream->Read(NUM_COMMERCE_TYPES, m_aiBuildingCommerce);
@@ -12818,6 +12880,7 @@ void CvCity::write(FDataStreamBase* pStream)
 	pStream->Write(m_eCultureLevel);
 
 	pStream->Write(NUM_YIELD_TYPES, m_aiSeaPlotYield);
+	pStream->Write(NUM_YIELD_TYPES, m_aiCoastalPlotYield);
 	pStream->Write(NUM_YIELD_TYPES, m_aiRiverPlotYield);
 	pStream->Write(NUM_YIELD_TYPES, m_aiBaseYieldRate);
 	pStream->Write(NUM_YIELD_TYPES, m_aiYieldRateModifier);
@@ -12829,6 +12892,8 @@ void CvCity::write(FDataStreamBase* pStream)
 	pStream->Write(NUM_YIELD_TYPES, m_aiTradeYield);
 	pStream->Write(NUM_YIELD_TYPES, m_aiCorporationYield);
 	pStream->Write(NUM_YIELD_TYPES, m_aiExtraSpecialistYield);
+	// Absinthe: specialist commerce change
+	pStream->Write(NUM_COMMERCE_TYPES, m_aiExtraSpecialistCommerceByType);
 	pStream->Write(NUM_COMMERCE_TYPES, m_aiCommerceRate);
 	pStream->Write(NUM_COMMERCE_TYPES, m_aiProductionToCommerceModifier);
 	pStream->Write(NUM_COMMERCE_TYPES, m_aiBuildingCommerce);

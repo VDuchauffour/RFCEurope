@@ -1731,6 +1731,8 @@ public:
 	int* getGlobalYieldModifierArray() const;
 	int getSeaPlotYieldChange(int i) const;				// Exposed to Python
 	int* getSeaPlotYieldChangeArray() const;
+	int getCoastalPlotYieldChange(int i) const;				// Exposed to Python
+	int* getCoastalPlotYieldChangeArray() const;
 	int getRiverPlotYieldChange(int i) const;				// Exposed to Python
 	int* getRiverPlotYieldChangeArray() const;
 	int getGlobalSeaPlotYieldChange(int i) const;				// Exposed to Python
@@ -1774,6 +1776,11 @@ public:
 
 	int getSpecialistYieldChange(int i, int j) const;			// Exposed to Python
 	int* getSpecialistYieldChangeArray(int i) const;
+
+	// Absinthe: specialist commerce change
+	int getSpecialistCommerceChange(int i, int j) const;			// Exposed to Python
+	int* getSpecialistCommerceChangeArray(int i) const;
+	// Absinthe: specialist commerce change
 
 	int getBonusYieldModifier(int i, int j) const;				// Exposed to Python
 	int* getBonusYieldModifierArray(int i) const;
@@ -1949,6 +1956,7 @@ protected:
 	int* m_piProductionTraits;
 	int* m_piHappinessTraits;
 	int* m_piSeaPlotYieldChange;
+	int* m_piCoastalPlotYieldChange;
 	int* m_piRiverPlotYieldChange;
 	int* m_piGlobalSeaPlotYieldChange;
 	int* m_piYieldChange;
@@ -1983,6 +1991,8 @@ protected:
 	bool* m_pbBuildingClassNeededInCity;
 
 	int** m_ppaiSpecialistYieldChange;
+	// Absinthe: specialist commerce change
+	int** m_ppaiSpecialistCommerceChange;
 	int** m_ppaiBonusYieldModifier;
 	//BCM: Added 21.9.09
 	int** m_ppaiBonusCommerceModifier;

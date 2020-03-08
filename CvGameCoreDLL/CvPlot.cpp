@@ -581,16 +581,16 @@ void CvPlot::doImprovementUpgrade()
 {
 	if (getImprovementType() != NO_IMPROVEMENT)
 	{
-		ImprovementTypes eImprovementUpdrade = (ImprovementTypes)GC.getImprovementInfo(getImprovementType()).getImprovementUpgrade();
-		if (eImprovementUpdrade != NO_IMPROVEMENT)
+		ImprovementTypes eImprovementUpgrade = (ImprovementTypes)GC.getImprovementInfo(getImprovementType()).getImprovementUpgrade();
+		if (eImprovementUpgrade != NO_IMPROVEMENT)
 		{
-			if (isBeingWorked() || GC.getImprovementInfo(eImprovementUpdrade).isOutsideBorders())
+			if (isBeingWorked() || GC.getImprovementInfo(eImprovementUpgrade).isOutsideBorders())
 			{
 				changeUpgradeProgress(GET_PLAYER(getOwnerINLINE()).getImprovementUpgradeRate());
 
 				if (getUpgradeProgress() >= GC.getGameINLINE().getImprovementUpgradeTime(getImprovementType()))
 				{
-					setImprovementType(eImprovementUpdrade);
+					setImprovementType(eImprovementUpgrade);
 				}
 			}
 		}
@@ -1677,6 +1677,34 @@ bool CvPlot::isRiverSide() const
 			if (isRiverCrossing(directionXY(this, pLoopPlot)))
 			{
 				return true;
+			}
+		}
+	}
+
+	return false;
+}
+
+
+// Absinthe: true for all water bodies, which have a direct coastline on at least one side
+bool CvPlot::isLandSideWater() const
+{
+	CvPlot* pLoopPlot;
+	int iI;
+
+	// all water bodies, thus ocean tiles and lakes are also included
+	if (isWater())
+	{
+		for (iI = 0; iI < NUM_CARDINALDIRECTION_TYPES; ++iI)
+		{
+			pLoopPlot = plotCardinalDirection(getX_INLINE(), getY_INLINE(), ((CardinalDirectionTypes)iI));
+
+			if (pLoopPlot != NULL)
+			{
+				// if at least one of the directly neighbouring tiles is a passable land tile
+				if (!pLoopPlot->isWater() && !isImpassable())
+				{
+					return true;
+				}
 			}
 		}
 	}
@@ -4649,17 +4677,13 @@ int CvPlot::getUpgradeTimeLeft(ImprovementTypes eImprovement, PlayerTypes ePlaye
 		return iUpgradeLeft/100;
 	}
 
-	//Rhye - start switch
-	// 3Miro: Worker times
-	//iUpgradeLeft *= workerModifier[ePlayer];
-	//iUpgradeLeft /= 100;
-	//Rhye - end switch
-
 	iUpgradeRate = GET_PLAYER(ePlayer).getImprovementUpgradeRate();
 
 	if (iUpgradeRate == 0)
 	{
-		return iUpgradeLeft;
+		// Absinthe: bugfix
+		//return iUpgradeLeft;
+		return iUpgradeLeft/100;
 	}
 
 	iTurnsLeft = (iUpgradeLeft / iUpgradeRate);
@@ -6984,7 +7008,10 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 			}
 		}
 
-		if (isRiver())
+		// Absinthe: Levee and Wharf affect only flat riverside tiles (no hills, no tiles which only have a corner connection to rivers)
+		// Absinthe: Levee and Wharf are the only buildings with getRiverPlotYield, thus can be changed here, with the general rule
+		//if (isRiver())
+		if (isRiverSide() && isFlatlands())
 		{
 			if (!isImpassable())
 			{
@@ -6996,6 +7023,21 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 					{
 						iYield += pWorkingCity->getRiverPlotYield(eYield);
 					}
+				}
+			}
+		}
+
+		// Absinthe: Dike sea bonus - the general rule cannot be changed, since the current effect of getSeaPlotYield is used for a lot of buildings
+		// Absinthe: so the Dike bonus is added separately, as a new and unique bonus
+		if (isLandSideWater())
+		{
+			pWorkingCity = getWorkingCity();
+
+			if (NULL != pWorkingCity)
+			{
+				if (!bDisplay || pWorkingCity->isRevealed(GC.getGameINLINE().getActiveTeam(), false))
+				{
+					iYield += pWorkingCity->getCoastalPlotYield(eYield);
 				}
 			}
 		}
@@ -9512,7 +9554,9 @@ void CvPlot::doCulture()
 							else
 							{
 								pCity->changeNumRevolts(eCulturalOwner, 1);
-								pCity->changeOccupationTimer(GC.getDefineINT("BASE_REVOLT_OCCUPATION_TURNS") + ((iCityStrength * GC.getDefineINT("REVOLT_OCCUPATION_TURNS_PERCENT")) / 100));
+								// Absinthe: reduced resistance on cultural revolt
+								//pCity->changeOccupationTimer(GC.getDefineINT("BASE_REVOLT_OCCUPATION_TURNS") + ((iCityStrength * GC.getDefineINT("REVOLT_OCCUPATION_TURNS_PERCENT")) / 100));
+								pCity->changeOccupationTimer(GC.getDefineINT("BASE_REVOLT_OCCUPATION_TURNS") + ((iCityStrength * GC.getDefineINT("REVOLT_OCCUPATION_TURNS_PERCENT")) / 150));
 
 								// XXX announce for all seen cities?
 								szBuffer = gDLL->getText("TXT_KEY_MISC_REVOLT_IN_CITY", GET_PLAYER(eCulturalOwner).getCivilizationAdjective(), pCity->getNameKey());
@@ -10355,6 +10399,17 @@ int CvPlot::calculateMaxYield(YieldTypes eYield) const
 		{
 			CvBuildingInfo& building = GC.getBuildingInfo((BuildingTypes)iBuilding);
 			iBuildingYield = std::max(building.getSeaPlotYieldChange(eYield) + building.getGlobalSeaPlotYieldChange(eYield), iBuildingYield);
+		}
+		iMaxYield += iBuildingYield;
+	}
+
+	if (isLandSideWater())
+	{
+		int iBuildingYield = 0;
+		for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); iBuilding++)
+		{
+			CvBuildingInfo& building = GC.getBuildingInfo((BuildingTypes)iBuilding);
+			iBuildingYield = std::max(building.getCoastalPlotYieldChange(eYield), iBuildingYield);
 		}
 		iMaxYield += iBuildingYield;
 	}

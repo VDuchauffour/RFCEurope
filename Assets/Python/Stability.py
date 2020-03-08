@@ -137,7 +137,7 @@ class Stability:
 				#self.setLastRecordedStabilityStuff(4, utils.getParExpansion(iHuman))
 				#self.setLastRecordedStabilityStuff(5, utils.getParDiplomacy(iHuman))
 
-		# Absinthe: testing AI stability levels
+		# Absinthe: logging AI stability levels
 		if (iGameTurn % 9 == 2):
 			for iPlayer in range(iNumMajorPlayers-1):
 				pPlayer = gc.getPlayer(iPlayer)
@@ -374,13 +374,12 @@ class Stability:
 
 
 	def onBuildingBuilt(self, iPlayer, iBuilding):
-		# 3Miro: some buildings give and others take stability
 		pPlayer = gc.getPlayer( iPlayer )
 		if iBuilding == utils.getUniqueBuilding(iPlayer, xml.iManorHouse):
 			pPlayer.changeStabilityBase( iCathegoryEconomy, 1 )
-			# Naval base adds an additional stability point
-			if iBuilding == xml.iVeniceNavalBase:
-				pPlayer.changeStabilityBase( iCathegoryEconomy, 1 )
+			## Naval base adds an additional stability point
+			#if iBuilding == xml.iVeniceNavalBase:
+			#	pPlayer.changeStabilityBase( iCathegoryEconomy, 1 )
 			self.recalcEconomy( iPlayer )
 		elif iBuilding == utils.getUniqueBuilding(iPlayer, xml.iCastle):
 			pPlayer.changeStabilityBase( iCathegoryExpansion, 1 )
@@ -454,7 +453,8 @@ class Stability:
 					# Absinthe: human player with very bad stability should have a much bigger chance for collapse
 					if iStability < -14 and iPlayer == utils.getHumanID():
 						if gc.getGame().getSorenRandNum(100, 'human collapse') < 0 - 2 * iStability: #30 chance with -15, 50% with -25, 70% with -35, 100% with -50 or less
-							self.collapseCivilWar(iPlayer, iStability)
+							if not utils.collapseImmune(iPlayer):
+								self.collapseCivilWar(iPlayer, iStability)
 						else: # when won't collapse, secession should always happen
 							rnf.revoltCity( iPlayer, False )
 					# Absinthe: if stability is less than -3, there is a chance that the secession/revolt or collapse mechanics start
@@ -694,44 +694,50 @@ class Stability:
 	def getCivicCombinationStability(self, iCivic0, iCivic1):
 		lCivics = set([iCivic0, iCivic1])
 
-		if xml.iCivicMerchantRepublic in lCivics:
-			if xml.iCivicFeudalLaw in lCivics: return -3
-			if xml.iCivicTradeEconomy in lCivics: return 4
-			if xml.iCivicImperialism in lCivics: return -2
-			if xml.iCivicMercantilism in lCivics: return -4
+		if xml.iCivicFeudalMonarchy in lCivics:
+			if xml.iCivicFeudalLaw in lCivics: return 3
 
 		if xml.iCivicDivineMonarchy in lCivics: #Divine Monarchy should have an appropriate religious civic
+			if xml.iCivicReligiousLaw in lCivics: return 2
 			if xml.iCivicPaganism in lCivics: return -4
-			if xml.iCivicTheocracy in lCivics: return 3
 			if xml.iCivicStateReligion in lCivics: return 2
+			if xml.iCivicTheocracy in lCivics: return 3
 			if xml.iCivicOrganizedReligion in lCivics: return 4
 			if xml.iCivicFreeReligion in lCivics: return -3
-			if xml.iCivicReligiousLaw in lCivics: return 2
 
-		if set([xml.iCivicLimitedMonarchy, xml.iCivicMerchantRepublic]) & lCivics: #Constitutional Monarchy and Republic both like enlightened civics
+		if xml.iCivicLimitedMonarchy in lCivics: #Constitutional Monarchy and Republic both like enlightened civics
 			if xml.iCivicCommonLaw in lCivics: return 3
-			if set([xml.iCivicFreePeasantry, xml.iCivicFreeLabor]) & lCivics: return 2
+			if xml.iCivicFreePeasantry in lCivics: return 2
+			if xml.iCivicFreeLabor in lCivics: return 2
+
+		if xml.iCivicMerchantRepublic in lCivics: #Constitutional Monarchy and Republic both like enlightened civics
+			if xml.iCivicFeudalLaw in lCivics: return -3
+			if xml.iCivicCommonLaw in lCivics: return 3
+			if xml.iCivicFreePeasantry in lCivics: return 2
+			if xml.iCivicFreeLabor in lCivics: return 2
+			if xml.iCivicTradeEconomy in lCivics: return 4
+			if xml.iCivicMercantilism in lCivics: return -4
+			if xml.iCivicImperialism in lCivics: return -2
 
 		if xml.iCivicFeudalLaw in lCivics:
 			if xml.iCivicSerfdom in lCivics: return 3
 			if xml.iCivicFreePeasantry in lCivics: return -4
 			if xml.iCivicManorialism in lCivics: return 2
-			if xml.iCivicFeudalMonarchy in lCivics: return 3
 			if xml.iCivicVassalage in lCivics: return 2
-
-		if xml.iCivicSerfdom in lCivics:
-			if xml.iCivicManorialism in lCivics: return 2
-			if xml.iCivicCommonLaw in lCivics: return -3
-			if xml.iCivicTradeEconomy in lCivics: return -3
 
 		if xml.iCivicReligiousLaw in lCivics:
 			if xml.iCivicPaganism in lCivics: return -5
-			if xml.iCivicFreeReligion in lCivics: return -3
 			if xml.iCivicTheocracy in lCivics:  return 5
+			if xml.iCivicFreeReligion in lCivics: return -3
 
 		if xml.iCivicCommonLaw in lCivics:
+			if xml.iCivicSerfdom in lCivics: return -3
 			if xml.iCivicFreeLabor in lCivics: return 3
 			if xml.iCivicTheocracy in lCivics: return -4
+
+		if xml.iCivicSerfdom in lCivics:
+			if xml.iCivicManorialism in lCivics: return 2
+			if xml.iCivicTradeEconomy in lCivics: return -3
 
 		if xml.iCivicApprenticeship in lCivics:
 			if xml.iCivicGuilds in lCivics: return 3
@@ -743,30 +749,32 @@ class Stability:
 		iPopNum = pPlayer.getTotalPopulation()
 		iImports = pPlayer.calculateTotalImports(YieldTypes.YIELD_COMMERCE)
 		iExports = pPlayer.calculateTotalExports(YieldTypes.YIELD_COMMERCE)
-		if iPlayer == con.iCordoba:
-			iImports /= 2
-			iExports /= 2
+		# Absinthe: removed - why was Cordoba penalized in the first place?
+		#if iPlayer == con.iCordoba:
+		#	iImports /= 2
+		#	iExports /= 2
 
 		iFinances = pPlayer.getFinancialPower()
 		iInflation = pPlayer.calculateInflatedCosts()
 		iProduction = pPlayer.calculateTotalYield(YieldTypes.YIELD_PRODUCTION)
-		if iPlayer == con.iVenecia:
-			iProduction += iPopNum # offset their weak production
+		# Absinthe: removed - Venice no longer has that weak production
+		#if iPlayer == con.iVenecia:
+		#	iProduction += iPopNum # offset their weak production
 		iAgriculture = pPlayer.calculateTotalYield(YieldTypes.YIELD_FOOD)
 
 		iLargeCities = 0
-		iProductionPenalty = 0
 		for pCity in utils.getCityList(iPlayer):
-			if pCity.isProductionUnit():
-				iUnit = pCity.getProductionUnit()
-				if iUnit < xml.iWorker or iUnit > xml.iIslamicMissionary:
-					iProductionPenalty -= 1
-			elif pCity.isProductionBuilding():
-				iBuilding = pCity.getProductionBuilding()
-				if utils.isWonder(iBuilding): #+2 per wonder
-					iProductionPenalty -= 2
-			else:
-				iProductionPenalty -= 2
+			# Absinthe: production penalty removed - was a mistake to add a city-based modifier to the financial stability which is based on average per population
+			#if pCity.isProductionUnit():
+			#	iUnit = pCity.getProductionUnit()
+			#	if iUnit < xml.iWorker or iUnit > xml.iIslamicMissionary:
+			#		iProductionPenalty -= 1
+			#elif pCity.isProductionBuilding():
+			#	iBuilding = pCity.getProductionBuilding()
+			#	if utils.isWonder(iBuilding):
+			#		iProductionPenalty -= 2
+			#else:
+			#	iProductionPenalty -= 2
 			iCityPop = pCity.getPopulation()
 			if iCityPop > 10: # large cities should have production bonus buildings, drop by 10 percent
 				iProduction -= pCity.getYieldRate(YieldTypes.YIELD_PRODUCTION) / 10
@@ -774,13 +782,14 @@ class Stability:
 
 		iNumCities = pPlayer.getNumCities()
 		if iNumCities > 0:
-			iFinances = (iFinances * ( 100 - 20 * iLargeCities / iNumCities ) ) / 100
-			iProductionPenalty = min( iProductionPenalty + iNumCities / 3, 0 )
-			if pPlayer.getPicklefreeParameter( con.iIsHasEscorial ) == 1: # remove the production penalty, otherwise it will be OP
-				iProductionPenalty = max( iProductionPenalty, 0 )
-			iIndustrialStability = min( max( 2 * ( 2 * iAgriculture + iProduction ) / iPopNum - 13, -3 ), 3 )
-			iFinancialPowerPerCity = ( iFinances - iInflation + iImports + iExports ) / iNumCities
-			iFinancialStability = min( max( ( iFinances - iInflation + iImports + iExports )/iPopNum + iProductionPenalty,  -4 ), 4 )
+			iIndustrialStability = min( max( 2 * ( 2 * iAgriculture + iProduction ) / iPopNum - 14, -3 ), 3 ) # this is 0 if the average yield per population is a little more than 2 food and 2 production (with bonuses)
+			if pPlayer.getPicklefreeParameter( con.iIsHasEscorial ) == 1: # El Escorial no economic instability effect
+				iIndustrialStability = max( iIndustrialStability, 0 )
+			iFinances = iFinances * ( 100 - 20 * iLargeCities / iNumCities ) / 100 # between 80% and 100%, based on the number of large cities
+			iFinancialStability = min( max( ( iFinances - iInflation + iImports + iExports ) / iPopNum - 6,  -4 ), 4 ) # this is 0 if the average financial power per population is around 6
+			#iFinancialPowerPerCity = ( iFinances - iInflation + iImports + iExports ) / iNumCities
+			if pPlayer.getPicklefreeParameter( con.iIsHasEscorial ) == 1: # El Escorial no economic instability effect
+				iFinancialStability = max( iFinancialStability, 0 )
 			pPlayer.setStabilityVary( iCathegoryEconomy, iFinancialStability + iIndustrialStability )
 		else:
 			pPlayer.setStabilityVary( iCathegoryEconomy, 0 )

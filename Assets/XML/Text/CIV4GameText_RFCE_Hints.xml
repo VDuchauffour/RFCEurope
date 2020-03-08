@@ -439,9 +439,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_49</Tag>
-		<English>You can easily keep track of the progress of your UHVs in the Victory Screen (F8).</English>
+		<English>You can easily keep track of the progress of your UHVs in the Victory Screen (F10).</English>
 		<French>.</French>
-		<German>Ihr könnt den Forschritt der einzigartigen historischen Siegbedingungen (UHV) leicht im Siegbildschirm (F8) mitverfolgen.</German>
+		<German>Ihr könnt den Forschritt der einzigartigen historischen Siegbedingungen (UHV) leicht im Siegbildschirm (F10) mitverfolgen.</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
@@ -502,9 +502,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_56</Tag>
-		<English>Check out the progress on the colonies as the game advances in the new Colony Information Screen. You can easily find out which colonies are already completed, and what parts of the world is still waiting for you. It's under the 5th tab in the Info Screen (F9).</English>
+		<English>Check out the progress on the colonies as the game advances in the new Colony Information Screen. You can easily find out which colonies are already completed, and what parts of the world is still waiting for you. It's under the 5th tab in the Info Screen (F11).</English>
 		<French>.</French>
-		<German>Beobachtet den Fortschritt der Kolonien auf dem neuen Kolonieinformationsbildschirm. Ihr könnt sehr einfach ersehen, welche Kolonien bereits erstellt wurden und welche Teile der Welt immer noch auf Euch warten. Der Bildschirm befindet sich im 5. Tab im Informationsbildschirm (F9).</German>
+		<German>Beobachtet den Fortschritt der Kolonien auf dem neuen Kolonieinformationsbildschirm. Ihr könnt sehr einfach ersehen, welche Kolonien bereits erstellt wurden und welche Teile der Welt immer noch auf Euch warten. Der Bildschirm befindet sich im 5. Tab im Informationsbildschirm (F11).</German>
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
@@ -574,7 +574,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_RFCE_64</Tag>
-		<English>Be sure to check out the Colony Screen - you can find it in the Info Screen (F9) - and follow the progress of European dominance throughout the World!</English>
+		<English>Be sure to check out the Colony Screen - you can find it in the Info Screen (F11) - and follow the progress of European dominance throughout the World!</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>

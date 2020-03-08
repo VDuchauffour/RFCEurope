@@ -4719,7 +4719,7 @@
 				<CivicType>CIVIC_DESPOTISM</CivicType>
 				<CivicType>CIVIC_RELIGIOUS_LAW</CivicType>
 				<CivicType>CIVIC_TRIBALISM</CivicType>
-				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
+				<CivicType>CIVIC_TRADE_ECONOMY</CivicType>
 				<CivicType>CIVIC_THEOCRACY</CivicType>
 				<CivicType>CIVIC_SUBJUGATION</CivicType>
 			</InitialCivics>
@@ -8314,7 +8314,7 @@
 				<CivicType>CIVIC_TRIBALISM</CivicType>
 				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
 				<CivicType>CIVIC_PAGANISM</CivicType>
-				<CivicType>CIVIC_SUBJUGATION</CivicType>
+				<CivicType>CIVIC_OCCUPATION</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -11627,7 +11627,7 @@
 				<CivicType>CIVIC_TRIBALISM</CivicType>
 				<CivicType>CIVIC_DECENTRALIZATION</CivicType>
 				<CivicType>CIVIC_PAGANISM</CivicType>
-				<CivicType>CIVIC_SUBJUGATION</CivicType>
+				<CivicType>CIVIC_OCCUPATION</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -18874,7 +18874,7 @@
 			<DisableTechs/>
 			<InitialCivics>
 				<CivicType>CIVIC_FEUDAL_MONARCHY</CivicType>
-				<CivicType>CIVIC_FEUDAL_LAW</CivicType>
+				<CivicType>CIVIC_RELIGIOUS_LAW</CivicType>
 				<CivicType>CIVIC_SERFDOM</CivicType>
 				<CivicType>CIVIC_MANORIALISM</CivicType>
 				<CivicType>CIVIC_THEOCRACY</CivicType>

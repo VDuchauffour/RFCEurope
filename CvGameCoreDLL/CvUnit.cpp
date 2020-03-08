@@ -6650,6 +6650,13 @@ bool CvUnit::canPromote(PromotionTypes ePromotion, int iLeaderUnitId) const
 
 	if (GC.getPromotionInfo(ePromotion).isLeader())
 	{
+		// Absinthe: great generals can't lead mercenary units
+		if ( (iMercPromotion > -1) && (isHasPromotion((PromotionTypes)iMercPromotion)) )
+		{
+			return false;
+		}
+		// Absinthe: end
+		
 		if (iLeaderUnitId >= 0)
 		{
 			CvUnit* pWarlord = GET_PLAYER(getOwnerINLINE()).getUnit(iLeaderUnitId);

@@ -84,10 +84,10 @@ bool CvUnitAI::AI_update()
 	{
 		CyUnit* pyUnit = new CyUnit(this);
 		CyArgsList argsList;
-		argsList.add(gDLL->getPythonIFace()->makePythonObject(pyUnit));	// pass in unit class
+		argsList.add(gDLL->getPythonIFace()->makePythonObject(pyUnit)); // pass in unit class
 		long lResult=0;
 		gDLL->getPythonIFace()->callFunction(PYGameModule, "AI_unitUpdate", argsList.makeFunctionArgs(), &lResult);
-		delete pyUnit;	// python fxn must not hold on to this pointer
+		delete pyUnit; // python fxn must not hold on to this pointer
 		if (lResult == 1)
 		{
 			return false;

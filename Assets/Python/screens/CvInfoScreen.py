@@ -368,8 +368,8 @@ class CvInfoScreen:
 		#Sedna17 start
 		self.TEXT_COLONIES =u"<font=3>" + localText.getText("Colonies", ()).upper() + u"</font>"
 		self.TEXT_COLONIES_YELLOW =u"<font=3>" + localText.getColorText("Colonies", (), gc.getInfoTypeForString("COLOR_YELLOW")).upper() + u"</font>"
-
 		#Sedna17 end
+
 		self.TEXT_GRAPH_YELLOW = u"<font=3>" + localText.getColorText("TXT_KEY_INFO_GRAPH", (), gc.getInfoTypeForString("COLOR_YELLOW")).upper() + u"</font>"
 		self.TEXT_DEMOGRAPHICS_YELLOW = u"<font=3>" + localText.getColorText("TXT_KEY_DEMO_SCREEN_TITLE", (), gc.getInfoTypeForString("COLOR_YELLOW")).upper() + u"</font>"
 		self.TEXT_TOP_CITIES_YELLOW = u"<font=3>" + localText.getColorText("TXT_KEY_WONDERS_SCREEN_TOP_CITIES_TEXT", (), gc.getInfoTypeForString("COLOR_YELLOW")).upper() + u"</font>"
@@ -966,9 +966,10 @@ class CvInfoScreen:
 		iSoldiers = pPlayer.getNumMilitaryUnits() * 3000		#Absinthe
 		iLandArea = pPlayer.getTotalLand() * 2300
 		iPopulation = pPlayer.getRealPopulation()
-		#Absinthe
-		iTotalPopulation = (int(((iPopulation * (7 - (((CyGame().getGameTurn()) * 4) / 500 ))) + (pPlayer.getNumUnits() * 4000))/ 5000) + 6) * 5000		#Era multiplier ranges from 7 to 4, slightly decreasing each turn. Result rounded to 5000
-		#Absinthe end
+		# Absinthe: Era multiplier for both city and land based rural population, slightly increasing each turn. Result rounded to 5000
+		iTotalPopulation = (int(((iPopulation * (300 + ((CyGame().getGameTurn() * 2) / 5))) / 100 + (iLandArea * (250 + ((CyGame().getGameTurn() * 2) / 5))) / 100 + (pPlayer.getNumUnits() * 4000)) / 5000) + 6) * 5000
+		#iTotalPopulation = (int(((iPopulation * (7 - (((CyGame().getGameTurn()) * 4) / 500 ))) + (pPlayer.getNumUnits() * 4000))/ 5000) + 6) * 5000
+		# Absinthe: end
 		if (pPlayer.calculateTotalCityHappiness() > 0):
 			iHappiness = int((1.0 * pPlayer.calculateTotalCityHappiness()) / (pPlayer.calculateTotalCityHappiness() + pPlayer.calculateTotalCityUnhappiness()) * 100)
 		else:
@@ -1043,12 +1044,12 @@ class CvInfoScreen:
 		iExportsGameWorst	= 0
 		fImpExpRatioGameWorst	= 1000000.0
 
-		# Loop through all players to determine Rank and relative Strength
-		#for iPlayerLoop in range(gc.getMAX_PLAYERS()): #Rhye
-		for iPlayerLoop in range(con.iNumMajorPlayers): #Rhye
+		# Absinthe: Loop through all major players to determine Rank and relative Strength
+		# Absinthe: Papal States are not included in the statistics (not a rival in the strict sense)
+		for iPlayerLoop in range(con.iNumMajorPlayers - 1):
 
-			#if (gc.getPlayer(iPlayerLoop).isAlive() and not gc.getPlayer(iPlayerLoop).isBarbarian()): #Rhye
-			if (gc.getPlayer(iPlayerLoop).isAlive() and not gc.getPlayer(iPlayerLoop).isBarbarian() and not gc.getPlayer(iPlayerLoop).isMinorCiv()): #Rhye
+			# Absinthe: probably the isAlive check would be enough, but we have the barbarian and minor civ checks anyway
+			if (gc.getPlayer(iPlayerLoop).isAlive() and not gc.getPlayer(iPlayerLoop).isBarbarian() and not gc.getPlayer(iPlayerLoop).isMinorCiv()):
 
 				iNumActivePlayers += 1
 
@@ -1060,7 +1061,8 @@ class CvInfoScreen:
 				aiGroupSoldiers.append(pCurrPlayer.getNumMilitaryUnits() * 3000)		#Absinthe
 				aiGroupLandArea.append(pCurrPlayer.getTotalLand() * 2300)
 				aiGroupPopulation.append(pCurrPlayer.getRealPopulation())
-				aiGroupTotalPopulation.append((int(((pCurrPlayer.getRealPopulation() * (7 - (((CyGame().getGameTurn()) * 4) / 500 ))) + (pCurrPlayer.getNumUnits() * 4000))/ 5000) + 6) * 5000)		#Absinthe
+				# Absinthe: Era multiplier for both city and land based rural population, slightly increasing each turn. Result rounded to 5000
+				aiGroupTotalPopulation.append((int(((pCurrPlayer.getRealPopulation() * (300 + ((CyGame().getGameTurn() * 2) / 5))) / 100 + ((pCurrPlayer.getTotalLand() * 2300) * (250 + ((CyGame().getGameTurn() * 2) / 5))) / 100 + (pCurrPlayer.getNumUnits() * 4000)) / 5000) + 6) * 5000)
 				if (pCurrPlayer.calculateTotalCityHappiness() > 0):
 					aiGroupHappiness.append(int((1.0 * pCurrPlayer.calculateTotalCityHappiness()) / (pCurrPlayer.calculateTotalCityHappiness() + pCurrPlayer.calculateTotalCityUnhappiness()) * 100))
 				else:

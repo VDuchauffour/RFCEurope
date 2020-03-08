@@ -113,6 +113,8 @@ public:
 	void updateFeatureHappiness();
 	void updateReligionHappiness();
 	void updateExtraSpecialistYield();
+	// Absinthe: specialist commerce change
+	void updateExtraSpecialistCommerceByType();
 	void updateCommerce(CommerceTypes eCommerce);
 	void updateCommerce();
 	void updateBuildingCommerce();
@@ -812,6 +814,9 @@ public:
 
 	int getSpecialistExtraYield(SpecialistTypes eIndex1, YieldTypes eIndex2) const;										// Exposed to Python
 	void changeSpecialistExtraYield(SpecialistTypes eIndex1, YieldTypes eIndex2, int iChange);
+	// Absinthe: specialist commerce change
+	int getSpecialistExtraCommerceByType(SpecialistTypes eIndex1, CommerceTypes eIndex2) const;										// Exposed to Python
+	void changeSpecialistExtraCommerceByType(SpecialistTypes eIndex1, CommerceTypes eIndex2, int iChange);
 
 	int getImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2) const;								// Exposed to Python
 	void changeImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2, int iChange);
@@ -1417,6 +1422,8 @@ protected:
 	CivicTypes* m_paeCivics;
 
 	int** m_ppaaiSpecialistExtraYield;
+	// Absinthe: specialist commerce change
+	int** m_ppaaiSpecialistExtraCommerceByType;
 	int** m_ppaaiImprovementYieldChange;
 
 	CLinkList<int> m_groupCycle;

@@ -101,6 +101,7 @@ public:
 	DllExport bool isRiverMask() const;
 	DllExport bool isRiverCrossingFlowClockwise(DirectionTypes eDirection) const;
 	bool isRiverSide() const;																																		// Exposed to Python
+	bool isLandSideWater() const; // Absinthe
 	bool isRiver() const;																																				// Exposed to Python
 	bool isRiverConnection(DirectionTypes eDirection) const;																		// Exposed to Python
 

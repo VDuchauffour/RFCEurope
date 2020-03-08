@@ -2016,7 +2016,7 @@ class CvMainInterface:
 				# 3Miro: Janissary Points
 				if not CyInterface().isCityScreenUp() and ePlayer == con.iTurkey:
 					eJanissaryXPButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.STRENGTH_CHAR))
-					eJanissaryXPText = ": " + unicode(gc.getPlayer(ePlayer).getPicklefreeParameter( con.iJanissaryPoints ) ) + "/300"
+					eJanissaryXPText = ": Janissary (" + unicode(gc.getPlayer(ePlayer).getPicklefreeParameter( con.iJanissaryPoints ) ) + "/300)"
 					screen.setLabel( "JanissaryXPButton", "Background", eJanissaryXPButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 					screen.setLabel( "JanissaryXPText", "Background", eJanissaryXPText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 					screen.setHitTest( "JanissaryXPButton", HitTestTypes.HITTEST_NOHIT )
@@ -2074,7 +2074,7 @@ class CvMainInterface:
 						screen.hide( "UHVText" )
 
 				elif ( ePlayer == con.iNorway ):
-					iNorwayRazed = pPlayer.getUHVCounter( 2 )
+					iNorwayRazed = pPlayer.getUHVCounter( 0 )
 					# Absinthe: only display UHV counter until the UHV date
 					if ( not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (xml.i1066AD + 2) ):
 						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
@@ -2172,7 +2172,7 @@ class CvMainInterface:
 						screen.hide( "UHVText" )
 
 				elif ( ePlayer == con.iSweden ):
-					iSwedenRazed = pPlayer.getUHVCounter(1)
+					iSwedenRazed = pPlayer.getUHVCounter( 1 )
 					# Absinthe: only display UHV counter as long as the UHV is undefined
 					if ( pPlayer.getUHV( 1 ) == -1 and not CyInterface().isCityScreenUp() ):
 						szUHVButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))

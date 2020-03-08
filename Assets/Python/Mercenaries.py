@@ -410,14 +410,14 @@ lMercList = [
 		]
 
 ### A few Parameters for Mercs only:
-# Promotions and their odds, higher promotions have very low probability, leader-tied promotions, commando and navigation don't appear
+# Promotions and their odds, advanced promotions have very low probability, leader-tied promotions, commando, navigation and cargo capacity don't appear
 # combat 1 - 5, cover (vs archer), shock (vs heavy infantry), pinch, formation (vs heavy horse), charge (vs siege), ambush (vs light cav), feint (vs polearm), amphibious, march (movement heal), medic 1-2,
 # guerilla (hill defense) 1-3, woodsman 1-3, city raider 1-3, garrison 1-3, drill 1-4, barrage (collateral) 1-3, accuracy (more bombard), flanking (vs siege) 1-2, sentry (vision), mobility (movement),
 # navigation 1-2, cargo, leader, leadership (more XP), tactic (withdraw), commando (enemy roads), combat 6, morale (movement), medic 3, merc
-lPromotionOdds = [ 100, 80, 40, 10,  5, 50, 50, 40, 60, 40, 20, 50, 20, 10, 40, 20, 80, 50, 30, 80, 50, 30, 80, 40, 10, 60, 30, 10, 60, 40, 10,  5, 60, 40, 10, 60, 50, 30, 20, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+lPromotionOdds = [ 100, 80, 40, 10,  5, 50, 50, 40, 60, 40, 20, 50, 20, 10, 30, 20, 50, 30, 10, 50, 30, 10, 80, 40, 10, 60, 30, 10, 60, 40, 10,  5, 60, 40, 10, 60, 50, 30, 20, 40,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 0, 0 ]
 # The way promotions would affect the cost of the mercenary (percentage wise)
-lPromotionCost = [  10, 15, 30, 30, 40, 20, 20, 20, 20, 20, 20, 20, 30, 40, 20, 30, 15, 20, 30, 15, 20, 30, 20, 30, 50, 20, 30, 50, 10, 20, 40, 50, 10, 10, 10, 20, 10, 10, 10, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
-iNumTotalPromotions = 40 # without navigation 1-2, cargo, commando and leader-tied promotions - those are unnecessary here (unavailable for all mercs anyway)
+lPromotionCost = [  15, 20, 25, 30, 35, 25, 25, 25, 25, 25, 25, 25, 35, 50, 30, 40, 15, 20, 30, 15, 20, 30, 20, 30, 40, 20, 30, 40, 15, 20, 25, 30, 10, 15, 20, 20, 20, 25, 10, 25, 20, 25, 10, 80, 60, 50, 50, 40, 40, 50, 0, 0 ]
+iNumTotalMercPromotions = 40 # without navigation 1-2, cargo, commando and leader-tied promotions - those are unnecessary here (unavailable as base promotions for all mercs)
 iNumPromotionsSoftCap = 3 # can get more promotions if you get a high promotion (i.e. combat 5), but overall it should be unlikely
 iNumPromotionIterations = 4 # how many attemps shall we make to add promotion (the bigger the number, the more likely it is for a unit to have at least iNumPromotionsSoftCap promotions)
 
@@ -518,19 +518,25 @@ class MercenaryManager:
 	def addNewMerc( self, iMerc ):
 		# this processes the available promotions
 		lMercInfo = lMercList[iMerc]
+		iMercType = lMercInfo[0]
 
 		# get the promotions
 		iNumPromotions = 0
 		lPromotions = []
 		iIterations = 0 # limit the number of iterations so we can have mercs with only a few promotions
 		while ( iNumPromotions < iNumPromotionsSoftCap and iIterations < iNumPromotionIterations):
-			iPromotion = gc.getGame().getSorenRandNum( iNumTotalPromotions, 'merc get promotion')
-			if isPromotionValid(iPromotion, lMercInfo[0], False):
+			iPromotion = gc.getGame().getSorenRandNum( iNumTotalMercPromotions, 'merc get promotion')
+			if isPromotionValid(iPromotion, iMercType, False):
 				if iPromotion not in lPromotions and gc.getGame().getSorenRandNum( 100, 'merc set promotion') < lPromotionOdds[iPromotion]:
 					lPromotions.append(iPromotion)
 					lPromotions = self.setPrereqConsistentPromotions( lPromotions )
 					iNumPromotions = len( lPromotions )
 			iIterations += 1
+		# add the default (free) promotions for the given unit type
+		for iPromotion in range(xml.iNumPromotions - 1): # merc promotion is added separately
+			if gc.getUnitInfo(iMercType).getFreePromotions(iPromotion):
+				if iPromotion not in lPromotions:
+					lPromotions.append(iPromotion)
 
 		(iPurchaseCost, iUpkeepCost) = self.GMU.getCost( iMerc, lPromotions )
 		iCurrentProvince = lMercInfo[4][gc.getGame().getSorenRandNum( len(lMercInfo[4]), 'available province') ]
@@ -682,7 +688,8 @@ class MercenaryManager:
 			CyInterface().setDirty(InterfaceDirtyBits.GameData_DIRTY_BIT, True)
 
 			lPromotionList = []
-			for iPromotion in range(iNumTotalPromotions):
+			# almost all promotions are available through experience, so this is not only for the otherwise used iNumTotalMercPromotions
+			for iPromotion in range(xml.iNumPromotions - 1): # merc promotion is added separately
 				if pUnit.isHasPromotion( iPromotion ):
 					lPromotionList.append( iPromotion )
 			if iNewPromotion not in lPromotionList:
@@ -930,16 +937,16 @@ class GlobalMercenaryUtils:
 		pPlayer = gc.getPlayer( iPlayer )
 		lMercs = [unit for unit in PyPlayer( iPlayer ).getUnitList() if unit.getMercID() > -1]
 
-		iTotoalUpkeep = 0
+		iTotalUpkeep = 0
 		for pUnit in lMercs:
-			#iTotoalUpkeep += self.getModifiedCostPerPlayer( pUnit.getMercUpkeep(), iPlayer )
-			iTotoalUpkeep += pUnit.getMercUpkeep()
+			#iTotalUpkeep += self.getModifiedCostPerPlayer( pUnit.getMercUpkeep(), iPlayer )
+			iTotalUpkeep += pUnit.getMercUpkeep()
 
 		iSavedUpkeep = pPlayer.getPicklefreeParameter( iMercCostPerTurn )
-		if iSavedUpkeep != iTotoalUpkeep:
-			#print(" ERROR IN MERCS: saved upkeep: ",iSavedUpkeep," actual: ",iTotoalUpkeep )
+		if iSavedUpkeep != iTotalUpkeep:
+			#print(" ERROR IN MERCS: saved upkeep: ",iSavedUpkeep," actual: ",iTotalUpkeep )
 			#print(" ------- Making sane ------- ")
-			pPlayer.setPicklefreeParameter( iMercCostPerTurn, iTotoalUpkeep )
+			pPlayer.setPicklefreeParameter( iMercCostPerTurn, iTotalUpkeep )
 			return False
 		return True
 
@@ -949,15 +956,18 @@ class GlobalMercenaryUtils:
 		lMercInfo = lMercList[iMerc]
 
 		# compute cost
-		iBaseCost = (80 * gc.getUnitInfo( lMercInfo[0] ).getProductionCost()) / 100
+		iBaseCost = 30 + (85 * gc.getUnitInfo(lMercInfo[0]).getProductionCost()) / 100 # note that this is the base production cost (between 30 and 200), without the civ-specific modifiers
 		iPercentage = 0
 		for iPromotion in lPromotions:
 			iPercentage += lPromotionCost[iPromotion]
-		iPurchaseCost = ( iBaseCost * ( 100 + iPercentage ) ) / 100
+		iPromotionModifier = 100 + (iPercentage * 3) / 5 # in percentage
+		iPurchaseCost = (iBaseCost * iPromotionModifier) / 100
 
-		# 1 gold of upkeep for 60 hammers cost, minimum 1 gold, maximum 4 gold
-		iUpkeepCost = max( 100, min( (100*gc.getUnitInfo( lMercInfo[0] ).getProductionCost())/60, 400 ) )
-		iUpkeepCost = iUpkeepCost + 3*iPercentage # 1 gold for 1/3 increase of cost due to promotions
+		# 1 gold of upkeep for each 55 hammers in the unit's production cost
+		# the minimum amount is 1,4 gold, the maximum is 4,5 gold for the base upkeep
+		iUpkeepBaseCost = 85 + max( 55, min( (100 * gc.getUnitInfo( lMercInfo[0] ).getProductionCost()) / 55, 365 ) ) # note that this is the base production cost (between 30 and 200), without the civ-specific modifiers
+		iUpkeepPromotionModifier = 100 + (iPercentage * 2) / 5 # in percentage
+		iUpkeepCost = (iUpkeepBaseCost * iUpkeepPromotionModifier) / 100
 
 		return (iPurchaseCost, iUpkeepCost)
 

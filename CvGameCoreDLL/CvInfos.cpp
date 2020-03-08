@@ -6701,6 +6701,7 @@ m_piPrereqOrBonuses(NULL),
 m_piProductionTraits(NULL),
 m_piHappinessTraits(NULL),
 m_piSeaPlotYieldChange(NULL),
+m_piCoastalPlotYieldChange(NULL),
 m_piRiverPlotYieldChange(NULL),
 m_piGlobalSeaPlotYieldChange(NULL),
 m_piYieldChange(NULL),
@@ -6733,6 +6734,8 @@ m_pbCommerceFlexible(NULL),
 m_pbCommerceChangeOriginalOwner(NULL),
 m_pbBuildingClassNeededInCity(NULL),
 m_ppaiSpecialistYieldChange(NULL),
+// Absinthe: specialist commerce change
+m_ppaiSpecialistCommerceChange(NULL),
 m_ppaiBonusYieldModifier(NULL),
 //BCM: Added 21.9.09
 m_ppaiBonusCommerceModifier(NULL)
@@ -6754,6 +6757,7 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_piProductionTraits);
 	SAFE_DELETE_ARRAY(m_piHappinessTraits);
 	SAFE_DELETE_ARRAY(m_piSeaPlotYieldChange);
+	SAFE_DELETE_ARRAY(m_piCoastalPlotYieldChange);
 	SAFE_DELETE_ARRAY(m_piRiverPlotYieldChange);
 	SAFE_DELETE_ARRAY(m_piGlobalSeaPlotYieldChange);
 	SAFE_DELETE_ARRAY(m_piYieldChange);
@@ -6794,6 +6798,16 @@ CvBuildingInfo::~CvBuildingInfo()
 		}
 		SAFE_DELETE_ARRAY(m_ppaiSpecialistYieldChange);
 	}
+	// Absinthe: specialist commerce change
+	if (m_ppaiSpecialistCommerceChange != NULL)
+	{
+		for(int i=0;i<GC.getNumSpecialistInfos();i++)
+		{
+			SAFE_DELETE_ARRAY(m_ppaiSpecialistCommerceChange[i]);
+		}
+		SAFE_DELETE_ARRAY(m_ppaiSpecialistCommerceChange);
+	}
+	// Absinthe: specialist commerce change
 
 	if (m_ppaiBonusYieldModifier != NULL)
 	{
@@ -7492,6 +7506,18 @@ int* CvBuildingInfo::getSeaPlotYieldChangeArray() const
 	return m_piSeaPlotYieldChange;
 }
 
+int CvBuildingInfo::getCoastalPlotYieldChange(int i) const
+{
+	FAssertMsg(i < NUM_YIELD_TYPES, "Index out of bounds");
+	FAssertMsg(i > -1, "Index out of bounds");
+	return m_piCoastalPlotYieldChange ? m_piCoastalPlotYieldChange[i] : -1;
+}
+
+int* CvBuildingInfo::getCoastalPlotYieldChangeArray() const
+{
+	return m_piCoastalPlotYieldChange;
+}
+
 int CvBuildingInfo::getRiverPlotYieldChange(int i) const
 {
 	FAssertMsg(i < NUM_YIELD_TYPES, "Index out of bounds");
@@ -7758,6 +7784,24 @@ int* CvBuildingInfo::getSpecialistYieldChangeArray(int i) const
 	return m_ppaiSpecialistYieldChange[i];
 }
 
+// Absinthe: specialist commerce change
+int CvBuildingInfo::getSpecialistCommerceChange(int i, int j) const
+{
+	FAssertMsg(i < GC.getNumSpecialistInfos(), "Index out of bounds");
+	FAssertMsg(i > -1, "Index out of bounds");
+	FAssertMsg(j < NUM_COMMERCE_TYPES, "Index out of bounds");
+	FAssertMsg(j > -1, "Index out of bounds");
+	return m_ppaiSpecialistCommerceChange ? m_ppaiSpecialistCommerceChange[i][j] : -1;
+}
+
+int* CvBuildingInfo::getSpecialistCommerceChangeArray(int i) const
+{
+	FAssertMsg(i < GC.getNumSpecialistInfos(), "Index out of bounds");
+	FAssertMsg(i > -1, "Index out of bounds");
+	return m_ppaiSpecialistCommerceChange[i];
+}
+// Absinthe: specialist commerce change
+
 int CvBuildingInfo::getBonusYieldModifier(int i, int j) const
 {
 	FAssertMsg(i < GC.getNumBonusInfos(), "Index out of bounds");
@@ -8000,6 +8044,10 @@ void CvBuildingInfo::read(FDataStreamBase* stream)
 	m_piSeaPlotYieldChange = new int[NUM_YIELD_TYPES];
 	stream->Read(NUM_YIELD_TYPES, m_piSeaPlotYieldChange);
 
+	SAFE_DELETE_ARRAY(m_piCoastalPlotYieldChange);
+	m_piCoastalPlotYieldChange = new int[NUM_YIELD_TYPES];
+	stream->Read(NUM_YIELD_TYPES, m_piCoastalPlotYieldChange);
+
 	SAFE_DELETE_ARRAY(m_piRiverPlotYieldChange);
 	m_piRiverPlotYieldChange = new int[NUM_YIELD_TYPES];
 	stream->Read(NUM_YIELD_TYPES, m_piRiverPlotYieldChange);
@@ -8140,6 +8188,24 @@ void CvBuildingInfo::read(FDataStreamBase* stream)
 		m_ppaiSpecialistYieldChange[i]  = new int[NUM_YIELD_TYPES];
 		stream->Read(NUM_YIELD_TYPES, m_ppaiSpecialistYieldChange[i]);
 	}
+
+	// Absinthe: specialist commerce change
+	if (m_ppaiSpecialistCommerceChange != NULL)
+	{
+		for(i=0;i<GC.getNumSpecialistInfos();i++)
+		{
+			SAFE_DELETE_ARRAY(m_ppaiSpecialistCommerceChange[i]);
+		}
+		SAFE_DELETE_ARRAY(m_ppaiSpecialistCommerceChange);
+	}
+
+	m_ppaiSpecialistCommerceChange = new int*[GC.getNumSpecialistInfos()];
+	for(i=0;i<GC.getNumSpecialistInfos();i++)
+	{
+		m_ppaiSpecialistCommerceChange[i]  = new int[NUM_COMMERCE_TYPES];
+		stream->Read(NUM_COMMERCE_TYPES, m_ppaiSpecialistCommerceChange[i]);
+	}
+	// Absinthe: specialist commerce change
 
 	if (m_ppaiBonusYieldModifier != NULL)
 	{
@@ -8322,6 +8388,7 @@ void CvBuildingInfo::write(FDataStreamBase* stream)
 	stream->Write(GC.getNumTraitInfos(), m_piProductionTraits);
 	stream->Write(GC.getNumTraitInfos(), m_piHappinessTraits);
 	stream->Write(NUM_YIELD_TYPES, m_piSeaPlotYieldChange);
+	stream->Write(NUM_YIELD_TYPES, m_piCoastalPlotYieldChange);
 	stream->Write(NUM_YIELD_TYPES, m_piRiverPlotYieldChange);
 	stream->Write(NUM_YIELD_TYPES, m_piGlobalSeaPlotYieldChange);
 	stream->Write(NUM_YIELD_TYPES, m_piYieldChange);
@@ -8360,6 +8427,12 @@ void CvBuildingInfo::write(FDataStreamBase* stream)
 	{
 		stream->Write(NUM_YIELD_TYPES, m_ppaiSpecialistYieldChange[i]);
 	}
+	// Absinthe: specialist commerce change
+	for(i=0;i<GC.getNumSpecialistInfos();i++)
+	{
+		stream->Write(NUM_COMMERCE_TYPES, m_ppaiSpecialistCommerceChange[i]);
+	}
+	// Absinthe: specialist commerce change
 
 	for(i=0;i<GC.getNumBonusInfos();i++)
 	{
@@ -8668,6 +8741,18 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	}
 
 	// if we can set the current xml node to it's next sibling
+	if (gDLL->getXMLIFace()->SetToChildByTagName(pXML->GetXML(),"CoastalPlotYieldChanges"))
+	{
+		// call the function that sets the yield change variable
+		pXML->SetYields(&m_piCoastalPlotYieldChange);
+		gDLL->getXMLIFace()->SetToParent(pXML->GetXML());
+	}
+	else
+	{
+		pXML->InitList(&m_piCoastalPlotYieldChange, NUM_YIELD_TYPES);
+	}
+
+	// if we can set the current xml node to it's next sibling
 	if (gDLL->getXMLIFace()->SetToChildByTagName(pXML->GetXML(),"RiverPlotYieldChanges"))
 	{
 		// call the function that sets the yield change variable
@@ -8911,6 +8996,48 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 		// set the current xml node to it's parent node
 		gDLL->getXMLIFace()->SetToParent(pXML->GetXML());
 	}
+	// Absinthe: specialist commerce change
+	pXML->Init2DIntList(&m_ppaiSpecialistCommerceChange, GC.getNumSpecialistInfos(), NUM_COMMERCE_TYPES);
+	if (gDLL->getXMLIFace()->SetToChildByTagName(pXML->GetXML(),"SpecialistCommerceChanges"))
+	{
+		iNumChildren = gDLL->getXMLIFace()->GetNumChildren(pXML->GetXML());
+
+		if (gDLL->getXMLIFace()->SetToChildByTagName(pXML->GetXML(),"SpecialistCommerceChange"))
+		{
+			for(j=0;j<iNumChildren;j++)
+			{
+				pXML->GetChildXmlValByName(szTextVal, "SpecialistType");
+				k = pXML->FindInInfoClass(szTextVal);
+				if (k > -1)
+				{
+					// delete the array since it will be reallocated
+					SAFE_DELETE_ARRAY(m_ppaiSpecialistCommerceChange[k]);
+					if (gDLL->getXMLIFace()->SetToChildByTagName(pXML->GetXML(),"CommerceChanges"))
+					{
+						// call the function that sets the commerce change variable
+						pXML->SetCommerce(&m_ppaiSpecialistCommerceChange[k]);
+						gDLL->getXMLIFace()->SetToParent(pXML->GetXML());
+					}
+					else
+					{
+						pXML->InitList(&m_ppaiSpecialistCommerceChange[k], NUM_COMMERCE_TYPES);
+					}
+				}
+
+				if (!gDLL->getXMLIFace()->NextSibling(pXML->GetXML()))
+				{
+					break;
+				}
+			}
+
+			// set the current xml node to it's parent node
+			gDLL->getXMLIFace()->SetToParent(pXML->GetXML());
+		}
+
+		// set the current xml node to it's parent node
+		gDLL->getXMLIFace()->SetToParent(pXML->GetXML());
+	}
+	// Absinthe: specialist commerce change
 
 	pXML->Init2DIntList(&m_ppaiBonusYieldModifier, GC.getNumBonusInfos(), NUM_YIELD_TYPES);
 	if (gDLL->getXMLIFace()->SetToChildByTagName(pXML->GetXML(),"BonusYieldModifiers"))
@@ -10769,7 +10896,6 @@ int CvHandicapInfo::getDistanceMaintenancePercent() const
 	return m_iDistanceMaintenancePercent;
 }
 
-//Rhye - start switch
 int CvHandicapInfo::getDistanceMaintenancePercentByID(PlayerTypes pl) const
 {
 	int result = m_iDistanceMaintenancePercent;
@@ -10778,21 +10904,22 @@ int CvHandicapInfo::getDistanceMaintenancePercentByID(PlayerTypes pl) const
 	result *= (GET_PLAYER(pl).isHuman()) ? cityDistanceSupportHu[pl] : cityDistanceSupportAI[pl];
 	result /= 100;
 
-	// 3MiroUP: Endless Land
-	/*if ( UniquePowers[pl][UP_ENDLESS_LAND] == 1 ){
-		result *= 50;
+	// Absinthe: UP endless land - city distance based maintenance costs are reduced
+	int iUPEL = UniquePowers[pl * UP_TOTAL_NUM + UP_ENDLESS_LAND];
+	if ( iUPEL > 0 )
+	{
+		result *= iUPEL;
 		result /= 100;
-	};*/
+	}
+
 	return result;
 }
-//Rhye - end
 
 int CvHandicapInfo::getNumCitiesMaintenancePercent() const
 {
 	return m_iNumCitiesMaintenancePercent;
 }
 
-//Rhye - start switch
 int CvHandicapInfo::getNumCitiesMaintenancePercentByID(PlayerTypes pl) const
 {
 	int result = m_iNumCitiesMaintenancePercent;
@@ -10800,13 +10927,17 @@ int CvHandicapInfo::getNumCitiesMaintenancePercentByID(PlayerTypes pl) const
 	// 3Miro: modify the number of cities support cost
 	result *= ( GET_PLAYER(pl).isHuman() ) ? cityNumberSupportHu[pl] : cityNumberSupportAI[pl];
 	result /= 100;
-	/*if ( UniquePowers[pl][UP_ENDLESS_LAND] == 1){
-		result *= 50;
+
+	// Absinthe: UP endless land - city number based maintenance costs are reduced
+	int iUPEL = UniquePowers[pl * UP_TOTAL_NUM + UP_ENDLESS_LAND];
+	if ( iUPEL > 0 )
+	{
+		result *= iUPEL;
 		result /= 100;
-	};*/
+	}
+
 	return result;
 }
-//Rhye - end
 
 int CvHandicapInfo::getMaxNumCitiesMaintenance() const
 {

@@ -26,12 +26,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VENICE_NAVAL_BASE_HELP</Tag>
-		<English>[ICON_BULLET]+2 Stability</English>
-		<French>[ICON_BULLET]+2 Stabilit&#233;</French>
-		<German>[ICON_BULLET]+2 Stabilität</German>
-		<Italian>[ICON_BULLET]+2 Stabilità</Italian>
-		<Spanish>[ICON_BULLET]+2 Stability</Spanish>
-		<Portuguese>[ICON_BULLET]+2 Estabilidade;</Portuguese>
+		<English>[ICON_BULLET]+1 Stability</English>
+		<French>[ICON_BULLET]+ Stabilit&#233;</French>
+		<German>[ICON_BULLET]+1 Stabilität</German>
+		<Italian>[ICON_BULLET]+1 Stabilità</Italian>
+		<Spanish>[ICON_BULLET]+1 Stability</Spanish>
+		<Portuguese>[ICON_BULLET]+1 Estabilidade;</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BULGARIAN_STAN</Tag>
@@ -296,7 +296,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DENMARK_RESEARCH_INSTITUTE_PEDIA</Tag>
-		<English>[TAB]A Research Institute is a establishment dedicated to science and research. Although the term often implies natural science research, there are also many research institutes in the social sciences as well, especially for sociological and historical research purposes.[PARAGRAPH:2]In the early medieval period, the several astronomic observatories in the Arab world served this purpose. A famous example is the 9th century Baghdad observatory built during the time of the Abbasid caliph al-Ma'mun, though the most famous were the 13th-century Maragheh observatory and the 15th-century Ulugh Beg Observatory. On Europe, the earliest recorded instance of a research institute would be Uraniborgn complex on the island of Hven(Denmark) of the 16th century, an astronomical laboratory set up to make highly accurate measurements of the stars led by Tycho Brahe.[PARAGRAPH:2]The Scientific Revolution brought an increase in the number and scope of such places. In France Louis XIV founded the Académie royale des sciences in 1666 to foster research, while in London the Royal Society was founded. On 28 January 1724 Peter the Great established an educational-research institute to be built in his newly created imperial capital, St Petersburg. His plan combined provisions for linguistic, philosophical and scientific instruction with a separate academy in which graduates could pursue further scientific researchm, unique for allowing to conduct scientific research within the structure of a university.</English>
+		<English>[TAB]A Research Institute is a establishment dedicated to science and research. Although the term often implies natural science research, there are also many research institutes in the social sciences as well, especially for sociological and historical research purposes.[PARAGRAPH:2]In the early medieval period, the several astronomic observatories in the Arab world served this purpose. A famous example is the 9th century Baghdad observatory built during the time of the Abbasid caliph al-Ma'mun, though the most famous were the 13th-century Maragheh observatory and the 15th-century Ulugh Beg Observatory. On Europe, the earliest recorded instance of a research institute would be the Uraniborg complex on the island of Hven (Denmark) in the 16th century, an astronomical laboratory set up to make highly accurate measurements of the stars led by Tycho Brahe.[PARAGRAPH:2]The Scientific Revolution brought an increase in the number and scope of such places. In France Louis XIV founded the Académie royale des sciences in 1666 to foster research, while in London the Royal Society was founded. On 28 January 1724 Peter the Great established an educational-research institute to be built in his newly created imperial capital, St Petersburg. His plan combined provisions for linguistic, philosophical and scientific instruction with a separate academy in which graduates could pursue further scientific research, unique for allowing to conduct scientific research within the structure of a university.</English>
 		<French>.</French>
 		<German></German>
 		<Italian>.</Italian>
@@ -393,8 +393,121 @@
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BYZANTINE_HIPPODROME</Tag>
+		<English>Hippodrome</English>
+		<French>
+			<Text>Hippodrome:Hippodromes</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</French>
+		<German>
+			<Text>Hippodrom</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ippodromo:Ippodromi</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Hip&#243;dromo:Hip&#243;dromos</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Portuguese>
+			<Text>Hip&#243;dromo:Hip&#243;dromos</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BYZANTINE_HIPPODROME_PEDIA</Tag>
+		<English>[TAB]The Hippodrome of Constantinople (literally "Horse Path" in Greek) was constructed in 203 AD by the Emperor Septimius Severus. The building was a massive venue for chariot races. While the art of charioteering saw great advances in the Hippodrome - the first four-horse races were held here - much of the venue's renown would stem from its involvement in one of the most terrible massacres in Byzantine history. During the Nika Revolts, a brutal uprising between rival racing factions, nearly 30000 rioters were slain by Byzantine troops within the Hippodrome.</English>
+		<French>[TAB]L'hippodrome de Constantinople (litt&#233;ralement "Chemin du cheval" en grec) fut construit en 203 ap. J.C. par l'empereur Septime S&#233;v&#232;re. Ce b&#226;timent est un immense lieu consacr&#233; aux courses de chars. Tandis que la conduite des chars connut de grandes avanc&#233;es dans cet Hippodrome - c'est ici qu'eurent lieu les premi&#232;res courses &#224; quatre chevaux - une grande partie de la c&#233;l&#233;brit&#233; de ce lieu est due &#224; son r&#244;le dans l'un des plus terribles massacres de l'histoire byzantine. Pendant l'insurrection Nika, r&#233;volte brutale qui opposa deux factions rivales, presque 30 000 insurg&#233;s furent tu&#233;s par les troupes byzantines &#224; l'int&#233;rieur de l'hippodrome.</French>
+		<German>[TAB]Das Hippodrom von Konstantinopel (w&#246;rtlich: griechisch "Pferdepfad") wurde 203 n. Chr. von Kaiser Septimius Severus errichtet. Das Geb&#228;ude war ein gewaltiger Veranstaltungsplatz f&#252;r Wagenrennen. Obwohl die Kunst des Wagenlenkens im Hippodrom gro&#223;e Fortschritte machte - hier wurden die ersten Viersp&#228;nnerrennen abgehalten - stammt viel von seiner Ber&#252;hmtheit aus seiner Verwicklung in eines der schrecklichsten Massaker der byzantinischen Geschichte. W&#228;hrend des Nika-Aufstands, einer brutalen Revolte rivalisierender Parteien, wurden nahezu 30.000 Aufst&#228;ndische im Hippodrom von byzantinischen Truppen get&#246;tet.</German>
+		<Italian>[TAB]L'Ippodromo di Costantinopoli (letteralmente "luogo dove corrono di cavalli", in greco) fu costruito nel 203 d.C. dall'imperatore Settimio Severo. L'edificio era una gigantesca sede per le corse coi carri. Mentre l'arte della corsa coi carri fece grandi passi avanti nell'Ippodromo (vi si tennero le prime corse con carri a quattro cavalli), gran parte della fama di questo luogo nacque dal suo coinvolgimento in uno dei pi&#249; terribili massacri della storia bizantina. Durante la Rivolta di Nika, una brutale lotta tra fazioni rivali, quasi 30.000 riottosi vennero uccisi dalle truppe bizantine all'interno dell'ippodromo.</Italian>
+		<Spanish>[TAB]El hip&#243;dromo (en griego "camino de los caballos") de Constantinopla fue erigido en el a&#241;o 203 d. C. por el emperador Septimo Severo. Era un colosal escenario en el que se celebraban carreras de carros. Aunque las carreras vivieron grandes avances en el hip&#243;dromo (se llegaron a celebrar carreras de cuatro caballos), parte de su fama derivar&#237;a de su relaci&#243;n con una de las m&#225;s terribles masacres de la historia de Bizancio. Durante la revuelta de Nika, un brutal levantamiento entre facciones rivales, casi 30.000 personas fueron asesinadas en el interior del hip&#243;dromo por las tropas bizantinas.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NETHERLANDS_DIKE</Tag>
+		<English>Dike</English>
+		<French>
+			<Text>Digue:Digues</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</French>
+		<German>
+			<Text>Deich</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Diga:Dighe</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Dijk:Dijken</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Portuguese>
+			<Text>Dijk:Dijken</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NETHERLANDS_DIKE_PEDIA</Tag>
+		<English>[TAB]Dikes are walls of earth or stone, used to entrap or hold back water. Often built as a protection against flooding, the dike has come to characterize the Netherlands, with significant portions of the country actually lying below sea level. Dikes, while a necessity for the country's continued survival (and independence from foreign towel imports), were occasionally used as a clever tactic for self-defense. During the Siege of Leiden in the midst of the Eighty Years War, Dutch leader Willem van Oranje's men cut the dykes around the city, flooding the positions of the opposing Spanish and driving the invaders back before the sea.</English>
+		<French>[TAB]Les digues sont des murs de terre ou de pierre, utilis&#233;s pour contenir ou retenir l'eau. Servant souvent de protection contre les inondations, la digue est un b&#226;timent caract&#233;ristique des Pays-Bas, o&#249; une grande partie des terres se situent en dessous du niveau de la mer. Les digues sont n&#233;cessaires &#224; la survie du pays, et &#224; son ind&#233;pendance vis-&#224;-vis des imports de serviettes et serpilli&#232;res &#233;trang&#232;res et ont m&#234;me parfois &#233;t&#233; utilis&#233;es pour la d&#233;fense nationale. Durant le si&#232;ge de Leyde, au milieu de la Guerre de quatre-vingts ans, les hommes de Guillaume d'Orange ouvrirent les digues autour de la ville, inondant les positions des ennemis espagnols et repoussant les envahisseurs vers la mer.</French>
+		<German>[TAB]Deiche sind Erd- oder Steinw&#228;lle, die eindringendes Wasser auffangen oder zur&#252;ckhalten. Der Deich, oft als Schutz gegen &#220;berflutung errichtet, ist mittlerweile zu einem Markenzeichen der Niederlande geworden, da bedeutende Teile des Landes unter dem Meeresspiegel liegen. Deiche, die zwar eine Notwendigkeit f&#252;r die weitere Existenz des Landes (und die Unabh&#228;ngigkeit von internationalen Tuchimporten) waren, wurden gelegentlich f&#252;r kluge Selbstverteidigungstaktiken genutzt. W&#228;hrend der Belagerung von Leyden w&#228;hrend des Achtzigj&#228;hrigen Krieges lie&#223; der holl&#228;ndische Anf&#252;hrer Wilhelm von Oranien die um die Stadt herum liegenden Deiche durchbrechen, so dass die Stellungen der Spanier &#252;berflutet und die Angreifer vom hereindr&#228;ngenden Meer zur&#252;ckgetrieben wurden.</German>
+		<Italian>[TAB]Le dighe sono muri di terra o pietra usati per bloccare o arginare le acque. Spesso vengono costruite con una protezione contro le inondazioni e sono diventate una caratteristica dei Paesi Bassi, gran parte dei quali &#232; sotto il livello del mare. Le dighe, pur essendo una necessit&#224; per la sopravvivenza del Paese sono state di quando in quando usate come tattica di autodifesa. Durante l'Assedio di Leiden, nel mezzo della Guerra degli 80 anni, gli uomini del leader olandese Guglielmo d'Orange distrussero le dighe attorno alla citt&#224;, inondando le posizioni degli spagnoli e usando il mare per cacciare gli invasori.</Italian>
+		<Spanish>[TAB]Los dijken son muros de tierra o piedra que se utilizan para represar o contener las aguas Construidos a menudo como protecci&#243;n frente a las inundaciones, los dijken han acabado por convertirse en el s&#237;mbolo de Holanda, gran parte de cuyo territorio se encuentra bajo el nivel del mar. Los dijken, adem&#225;s de necesarios para garantizar la supervivencia del pa&#237;s (y su independencia frente a la importaci&#243;n de textiles extranjeros), se utilizaron en ocasiones como elemento defensivo. En la Guerra de los Ochenta A&#241;os, durante el asedio de Leiden, los hombres de Guillermo de Orange abrieron los diques de los alrededores de la ciudad. El agua invadi&#243; las posiciones espa&#241;olas y los oblig&#243; a retroceder.</Spanish>
+		<Portuguese>[TAB]Los dijken son muros de tierra o piedra que se utilizan para represar o contener las aguas Construidos a menudo como protecci&#243;n frente a las inundaciones, los dijken han acabado por convertirse en el s&#237;mbolo de Holanda, gran parte de cuyo territorio se encuentra bajo el nivel del mar. Los dijken, adem&#225;s de necesarios para garantizar la supervivencia del pa&#237;s (y su independencia frente a la importaci&#243;n de textiles extranjeros), se utilizaron en ocasiones como elemento defensivo. En la Guerra de los Ochenta A&#241;os, durante el asedio de Leiden, los hombres de Guillermo de Orange abrieron los diques de los alrededores de la ciudad. El agua invadi&#243; las posiciones espa&#241;olas y los oblig&#243; a retroceder.</Portuguese>
+	</TEXT>
 		<!-- Unique Buildings -->
 		<!-- General Buildings -->
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LEVEE</Tag>
+		<English>Levee</English>
+		<French>
+			<Text>Lev&#233;e:Lev&#233;es</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</French>
+		<German>
+			<Text>Wasserschutzwall</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Argine:Argini</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Dique:Diques</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Portuguese>
+			<Text>Dique:Diques</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LEVEE_PEDIA</Tag>
+		<English>[TAB]The earliest human civilizations all grew up along the banks of rivers. Yet when rains grew heavy, the Nile, Indus, Tigris or Yangtze became a danger to those on their shores. The Levee, also known as a dam, is a wall of earth or stone, constructed to hold back encroaching waters. The ancient Egyptians were among some of the most sophisticated levee builders, channeling the Nile in order to provide water for cities and crops. Today levees provide hydroelectric power to populations throughout the world.</English>
+		<French>[TAB]Les plus anciennes civilisations humaines se sont toutes d&#233;velopp&#233;es au bord des fleuves. Mais quand les pluies se faisaient trop abondantes, le Nil, l'Indus, le Tigre ou le Yang Ts&#233; devenaient un danger pour les citoyens habitant sur les rives. La lev&#233;e, aussi connue sous le nom de barrage, est un mur de terre ou de pierre, construit pour contenir les eaux des mers ou des fleuves. Les premiers Egyptiens construisirent des lev&#233;es extr&#234;mement sophistiqu&#233;es, canalisant le Nil afin de fournir de l'eau aux villes et aux cultures. Aujourd'hui, les lev&#233;es fournissent de l'&#233;lectricit&#233; &#224; des millions de personnes &#224; travers le monde.</French>
+		<German>[TAB]Die &#228;ltesten menschlichen Zivilisationen entstanden entlang von Flussl&#228;ufen. Der Wasserschutzwall, oder "Damm", ist ein Wall aus Erde oder Stein, der gebaut wird, um eindringendes Wasser aufzuhalten. Die alten &#196;gypter geh&#246;rten zu den fortschrittlichsten Dammbauern und leiteten den Nil in ein Kanalsystem, um St&#228;dte und &#196;cker mit Wasser zu versorgen. Heutige Wasserschutzw&#228;lle sorgen in der ganzen Welt f&#252;r mit Wasserkraft erzeugten elektrischen Strom.</German>
+		<Italian>[TAB]Tutte le prime civilt&#224; umane nacquero lungo le rive di fiumi. Per&#242; quando con le forti piogge, il Nilo, il Gange, il Tigri o lo Yangtze divennero un pericolo per quelli che vivevano sulla riva. L'Argine &#232; un muro di terra o pietra costruito per tenere sotto controllo le acque. Gli antichi egizi furono tra i pi&#249; avanzati costruttori di argini e incanalarono il Nilo per portare l'acqua alle citt&#224; e ai campi. Al giorno d'oggi argini e dighe forniscono energia idroelettrica alla popolazione di tutto il mondo.</Italian>
+		<Spanish>[TAB]Todas las civilizaciones primitivas nacieron en las orillas de los r&#237;os. Sin embargo, cuando llegaban las estaciones de lluvias, el Nilo, el Indo, el Tigris o el Yangtz&#233; se convert&#237;an en un peligro para quienes viv&#237;an en sus riberas. El dique, conocido tambi&#233;n como presa, es un muro de tierra o piedra que se levanta para contener las aguas. Los diques construidos por los antiguos egipcios alcanzaron una gran sofisticaci&#243;n, y lograron canalizar las crecidas del Nilo para proporcionar agua a las ciudades y los campos. Las presas de nuestros d&#237;as suministran energ&#237;a hidroel&#233;ctrica a todas las regiones del mundo.</Spanish>
+		<Portuguese>[TAB]Todas las civilizaciones primitivas nacieron en las orillas de los r&#237;os. Sin embargo, cuando llegaban las estaciones de lluvias, el Nilo, el Indo, el Tigris o el Yangtz&#233; se convert&#237;an en un peligro para quienes viv&#237;an en sus riberas. El dique, conocido tambi&#233;n como presa, es un muro de tierra o piedra que se levanta para contener las aguas. Los diques construidos por los antiguos egipcios alcanzaron una gran sofisticaci&#243;n, y lograron canalizar las crecidas del Nilo para proporcionar agua a las ciudades y los campos. Las presas de nuestros d&#237;as suministran energ&#237;a hidroel&#233;ctrica a todas las regiones del mundo.</Portuguese>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DUNGEON</Tag>
 		<English>Dungeon</English>
@@ -810,15 +923,6 @@
 		<Italian>.</Italian>
 		<Spanish>.</Spanish>
 		<Portuguese>.</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PAGAN_SHRINE_HELP</Tag>
-		<English>[ICON_BULLET]Requires [LINK=literal]Paganism[\LINK]</English>
-		<French>[ICON_BULLET]Requires [LINK=literal]Paganism[\LINK]</French>
-		<German>[ICON_BULLET]Requires [LINK=literal]Paganism[\LINK]</German>
-		<Italian>[ICON_BULLET]Requires [LINK=literal]Paganism[\LINK]</Italian>
-		<Spanish>[ICON_BULLET]Requires [LINK=literal]Paganism[\LINK]</Spanish>
-		<Portuguese>[ICON_BULLET]Requires [LINK=literal]Paganism[\LINK]</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JEWISH_QUARTER</Tag>
@@ -1255,6 +1359,15 @@
 		<Portuguese>[ICON_BULLET]+1 Estabilidade;</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MAINT_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Maintenance Cost</English>
+		<French>[ICON_BULLET][LINK=CONCEPT_MAINTENANCE]Entretien[\LINK] %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% [LINK=CONCEPT_MAINTENANCE]Unterhalt[\LINK]</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% di [LINK=CONCEPT_MAINTENANCE]mantenimento[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% al [LINK=CONCEPT_MAINTENANCE]mantenimiento[\LINK]</Spanish>
+		<Portuguese>[ICON_BULLET]%D1_Mod%% al [LINK=CONCEPT_MAINTENANCE]mantenimiento[\LINK]</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DAMAGE_ABILITY</Tag>
 		<English>[ICON_BULLET]Damages enemy units in your nearby territory</English>
 		<French>[ICON_BULLET]Damages enemy units in your nearby territory</French>
@@ -1400,7 +1513,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAIN_NEEDED</Tag>
-		<English>[ICON_BULLET]Requires %s1_TerrFeatType in the vicinity of the city</English>
+		<English>[ICON_BULLET]Requires [LINK=literal]%s1_TerrFeatType[\LINK] in the vicinity of the city</English>
 		<French>[ICON_BULLET]Capacit&#233; de mouvement doubl&#233;e sur : %s1_TerrFeatType</French>
 		<German>[ICON_BULLET]Doppelte Fortbewegung in folgendem Gel&#228;nde: %s1_TerrFeatType</German>
 		<Italian>[ICON_BULLET]Movimento raddoppiato nelle caselle di %s1_TerrFeatType</Italian>
@@ -1424,6 +1537,24 @@
 		<Italian>[ICON_BULLET]%D1_Change%s2_percent %F3_Yield da[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change%s2_percent %F3_Yield por[SPACE]</Spanish>
 		<Portuguese>[ICON_BULLET]%D1_Change%s2_percent %F3_Yield por[SPACE]</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RIVER_PLOTS</Tag>
+		<English>Riverside Tiles</English>
+		<French>Cases rivi&#232;res</French>
+		<German>Fluss-Gel&#228;ndefelder</German>
+		<Italian>Caselle di fiume</Italian>
+		<Spanish>Casillas de r&#237;o</Spanish>
+		<Portuguese>Casillas de r&#237;o</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_COASTAL_PLOTS</Tag>
+		<English>Inshore Coast Tiles</English>
+		<French>Cases rivi&#232;res</French>
+		<German>Fluss-Gel&#228;ndefelder</German>
+		<Italian>Caselle di fiume</Italian>
+		<Spanish>Casillas de r&#237;o</Spanish>
+		<Portuguese>Casillas de r&#237;o</Portuguese>
 	</TEXT>
 		<!-- Other -->
 </Civ4GameText>

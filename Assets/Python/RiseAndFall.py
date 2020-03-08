@@ -356,7 +356,7 @@ class RiseAndFall:
 		if popupReturn.getButtonClicked() == 0: # 1st button
 			iOldHandicap = gc.getActivePlayer().getHandicapType()
 			iNewCiv = self.getNewCiv()
-			vic.SwitchUHV(iNewCiv, utils.getHumanID())
+			vic.switchUHV(iNewCiv, utils.getHumanID())
 			gc.getActivePlayer().setHandicapType(gc.getPlayer(iNewCiv).getHandicapType())
 			gc.getGame().setActivePlayer(iNewCiv, False)
 			gc.getPlayer(iNewCiv).setHandicapType(iOldHandicap)
@@ -736,6 +736,8 @@ class RiseAndFall:
 			self.collapseMotherland(iGameTurn)
 		if iGameTurn > 20 and iGameTurn % 3 == 1:
 			self.secession(iGameTurn)
+		if iGameTurn > 20 and iGameTurn % 7 == 3:
+			self.secessionCloseCollapse(iGameTurn)
 
 		# Resurrection of civs:
 		# This is one place to control the frequency of resurrection; will not be called with high iNumDeadCivs
@@ -949,20 +951,6 @@ class RiseAndFall:
 							CyInterface().addMessage(iCiv, True, con.iDuration, CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_BARBS_HUMAN", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
 							utils.killAndFragmentCiv(iCiv, True, True)
 
-		# Absinthe: another instance of cities revolting, but only in case of very bad stability
-		iRndnum = gc.getGame().getSorenRandNum(iNumPlayers, 'starting count')
-		for j in range(iNumPlayers):
-			iPlayer = (j + iRndnum) % iNumPlayers
-			pPlayer = gc.getPlayer(iPlayer)
-			iRespawnTurn = utils.getLastRespawnTurn( iPlayer )
-			if pPlayer.isAlive() and iGameTurn >= con.tBirth[iPlayer] + 20 and iGameTurn >= iRespawnTurn + 10:
-				iStability = pPlayer.getStability()
-				if pPlayer.getStability() < -15 and not utils.collapseImmune(iPlayer) and pPlayer.getNumCities() > 10: #civil war
-					self.revoltCity( iPlayer, False )
-					self.revoltCity( iPlayer, False )
-					self.revoltCity( iPlayer, True )
-					self.revoltCity( iPlayer, True )
-
 
 	def collapseGeneric(self, iGameTurn):
 		# Absinthe: collapses if number of cities is less than half than some turns ago
@@ -1017,6 +1005,7 @@ class RiseAndFall:
 	def secession(self, iGameTurn):
 		# Absinthe: if stability is negative there is a chance for a random city to declare it's independence, checked every 3 turns
 		iRndnum = gc.getGame().getSorenRandNum(iNumPlayers, 'starting count')
+		iSecessionNumber = 0
 		for j in range(iNumPlayers):
 			iPlayer = (j + iRndnum) % iNumPlayers
 			pPlayer = gc.getPlayer(iPlayer)
@@ -1024,16 +1013,38 @@ class RiseAndFall:
 			iRespawnTurn = utils.getLastRespawnTurn( iPlayer )
 			if pPlayer.isAlive() and iGameTurn >= con.tBirth[iPlayer] + 15 and iGameTurn >= iRespawnTurn + 10:
 				iStability = pPlayer.getStability()
-				if gc.getGame().getSorenRandNum(10, 'do the check for city secession') < -iStability: # x/10 chance with -x stability
+				if gc.getGame().getSorenRandNum(10, 'do the check for city secession') < (-2 - iStability): #10% at -3, increasing by 10% with each point (100% with -12 or less)
 					self.revoltCity( iPlayer, False )
-					return # max 1 secession per turn
+					iSecessionNumber += 1
+					if iSecessionNumber > 2:
+						return # max 3 secession per turn
+					continue # max 1 secession for each civ
+
+
+	def secessionCloseCollapse(self, iGameTurn):
+		# Absinthe: another instance of secession, now with possibility for multiple cities revolting for the same civ
+		# Absinthe: this can only happen with very bad stability, in case of fairly big empires
+		iRndnum = gc.getGame().getSorenRandNum(iNumPlayers, 'starting count')
+		for j in range(iNumPlayers):
+			iPlayer = (j + iRndnum) % iNumPlayers
+			pPlayer = gc.getPlayer(iPlayer)
+			iRespawnTurn = utils.getLastRespawnTurn( iPlayer )
+			if pPlayer.isAlive() and iGameTurn >= con.tBirth[iPlayer] + 20 and iGameTurn >= iRespawnTurn + 10:
+				iStability = pPlayer.getStability()
+				if iStability < -15 and pPlayer.getNumCities() > 10: # so the civ is close to a civil war
+					self.revoltCity( iPlayer, False )
+					self.revoltCity( iPlayer, False )
+					self.revoltCity( iPlayer, True )
+					self.revoltCity( iPlayer, True )
+					return # max for 1 civ at a turn
 
 
 	def revoltCity( self, iPlayer, bForce ):
 		pPlayer = gc.getPlayer(iPlayer)
 		iStability = pPlayer.getStability()
 
-		cityList = []
+		cityListInCore = []
+		cityListInNotCore = []
 		for city in utils.getCityList(iPlayer):
 			tCity = (city.getX(), city.getY())
 			x, y = tCity
@@ -1045,60 +1056,93 @@ class RiseAndFall:
 					capital = gc.getPlayer(iPlayer).getCapitalCity()
 					iDistance = utils.calculateDistance(x, y, capital.getX(), capital.getY())
 					if iDistance > 3:
-						bCollapseImmuneCity = utils.collapseImmuneCity(iPlayer, x, y)
+						# Absinthe: Byzantine UP: cities in normal and core provinces won't go to the list
+						#bCollapseImmuneCity = utils.collapseImmuneCity(iPlayer, x, y)
+						bCollapseImmune = utils.collapseImmune(iPlayer)
 						iProvType = pPlayer.getProvinceType( city.getProvince() )
-						# Absinthe: if forced revolt, all cities go into the list by default
-						#			angry population, bad health, untolerated religion, no military garrison can add the city to the list a couple more times (per type)
-						#			if the city is in a contested province, the city is added a couple more times by default, if in a foreign province, a lot more times
+						# Absinthe: if forced revolt, all cities go into the list by default (apart from the Byzantine UP and the special ones above)
 						if bForce:
-							cityList.append(city)
-						# Absinthe: Byzantine UP: cities in normal and core provinces won't go on the list
+							if iProvType >= con.iProvincePotential:
+								if not bCollapseImmune:
+									cityListInCore.append(city)
+							else:
+								cityListInNotCore.append(city)
+						# Absinthe: angry population, bad health, untolerated religion, no military garrison can add the city to the list a couple more times (per type)
+						#			if the city is in a contested province, the city is added a couple more times by default, if in a foreign province, a lot more times
+						# Absinthe: bigger chance to choose the city if unhappy
 						if city.angryPopulation(0) > 0:
-							# Absinthe: bigger chance to choose the city if unhappy
-							if not bCollapseImmuneCity:
-								for i in range(2):
-									cityList.append(city)
-							elif iProvType < con.iProvincePotential:
+							if iProvType >= con.iProvincePotential:
+								if not bCollapseImmune:
+									for i in range(2):
+										cityListInCore.append(city)
+							else:
 								for i in range(4):
-									cityList.append(city)
+									cityListInNotCore.append(city)
+						# Absinthe: health issues do not cause city secession in core provinces for anyone
+						#			also less chance from unhealth for cities in contested and foreign provinces
 						if city.goodHealth() - city.badHealth(False) < -1:
-							# Absinthe: health issues do not cause city secession in core provinces for anyone
-							#			also less chance from unhealth for cities in contested and foreign provinces
 							if iProvType < con.iProvincePotential:
-								cityList.append(city)
+								cityListInNotCore.append(city)
+						# Absinthe: also not a cause for secession in core provinces, no need to punish the player this much (and especially the AI) for using the civic
 						if city.getReligionBadHappiness() < 0:
-							# Absinthe: also not a cause for secession in core provinces, no need to punish the player this much (and especially the AI) for using the civic
 							if iProvType < con.iProvincePotential:
 								for i in range(2):
-									cityList.append(city)
+									cityListInNotCore.append(city)
+						# Absinthe: no defensive units in the city increase chance
 						if city.getNoMilitaryPercentAnger() > 0:
-							if not bCollapseImmuneCity:
-								cityList.append(city)
-							elif iProvType < con.iProvincePotential:
+							if iProvType >= con.iProvincePotential:
+								if not bCollapseImmune:
+									cityListInCore.append(city)
+							else:
 								for i in range(2):
-									cityList.append(city)
-						# Absinthe: also add the city if it has less than 30% own culture (and the civ doesn't have the Cultural Tolerance UP)
-						if city.countTotalCultureTimes100() > 0 and (city.getCulture(iPlayer) * 10000 / city.countTotalCultureTimes100()) < 30 and not gc.hasUP( iPlayer, con.iUP_CulturalTolerance ):
-							if not bCollapseImmuneCity:
+									cityListInNotCore.append(city)
+						# Absinthe: also add core cities if they have less than 40% own culture (and the civ doesn't have the Cultural Tolerance UP)
+						if iProvType >= con.iProvincePotential:
+							if not bCollapseImmune and not gc.hasUP( iPlayer, con.iUP_CulturalTolerance ):
+								if city.countTotalCultureTimes100() > 0 and (city.getCulture(iPlayer) * 10000 / city.countTotalCultureTimes100()) < 40:
+									cityListInCore.append(city)
+								elif city.countTotalCultureTimes100() > 0 and (city.getCulture(iPlayer) * 10000 / city.countTotalCultureTimes100()) < 20:
+									for i in range(2):
+										cityListInCore.append(city)
+						# Absinthe: cities in outer and unstable provinces have chance by default, the number of times they are added is modified by the civ's own culture in the city
+						elif iProvType == con.iProvinceOuter:
+							if city.countTotalCultureTimes100() > 0 and (city.getCulture(iPlayer) * 10000 / city.countTotalCultureTimes100()) > 80:
+								cityListInNotCore.append(city)
+							elif city.countTotalCultureTimes100() > 0 and (city.getCulture(iPlayer) * 10000 / city.countTotalCultureTimes100()) > 60:
 								for i in range(2):
-									cityList.append(city)
-							elif iProvType < con.iProvincePotential:
+									cityListInNotCore.append(city)
+							elif city.countTotalCultureTimes100() > 0 and (city.getCulture(iPlayer) * 10000 / city.countTotalCultureTimes100()) > 40:
 								for i in range(3):
-									cityList.append(city)
-						if iProvType == con.iProvinceOuter:
-							for i in range(2):
-								cityList.append(city)
+									cityListInNotCore.append(city)
+							else:
+								for i in range(4):
+									cityListInNotCore.append(city)
 						elif iProvType == con.iProvinceNone:
-							for i in range(7):
-								cityList.append(city)
+							if city.countTotalCultureTimes100() > 0 and (city.getCulture(iPlayer) * 10000 / city.countTotalCultureTimes100()) > 80:
+								for i in range(3):
+									cityListInNotCore.append(city)
+							elif city.countTotalCultureTimes100() > 0 and (city.getCulture(iPlayer) * 10000 / city.countTotalCultureTimes100()) > 60:
+								for i in range(5):
+									cityListInNotCore.append(city)
+							elif city.countTotalCultureTimes100() > 0 and (city.getCulture(iPlayer) * 10000 / city.countTotalCultureTimes100()) > 40:
+								for i in range(7):
+									cityListInNotCore.append(city)
+							else:
+								for i in range(9):
+									cityListInNotCore.append(city)
 
-		if cityList:
+		if cityListInNotCore or cityListInCore:
+			# Absinthe: we only choose among the core cities if there are no non-core ones
+			# Absinthe: each city can appear multiple times in both lists
+			if cityListInNotCore:
+				splittingCity = utils.getRandomEntry(cityListInNotCore)
+			else:
+				splittingCity = utils.getRandomEntry(cityListInCore)
+
 			# Absinthe: city goes to random independent
 			iRndNum = gc.getGame().getSorenRandNum( con.iIndepEnd - con.iIndepStart + 1, 'random independent')
 			iIndy = con.iIndepStart + iRndNum
 
-			# Absinthe: choosing one city from the list (where each city can appear multiple times)
-			splittingCity = utils.getRandomEntry(cityList)
 			tCity = (splittingCity.getX(), splittingCity.getY())
 			sCityName = splittingCity.getName()
 			if iPlayer == utils.getHumanID():

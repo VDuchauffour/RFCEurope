@@ -22,11 +22,6 @@
 			<Civilopedia>TXT_KEY_CONCEPT_UP_UHV_PEDIA</Civilopedia>
 		</ConceptInfo>
 		<ConceptInfo>
-			<Type>CONCEPT_CONTINENTS</Type>
-			<Description>TXT_KEY_CONCEPT_CONTINENTS</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_CONTINENTS_PEDIA</Civilopedia>
-		</ConceptInfo>
-		<ConceptInfo>
 			<Type>CONCEPT_STABILITY</Type>
 			<Description>TXT_KEY_CONCEPT_STABILITY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_STABILITY_PEDIA</Civilopedia>

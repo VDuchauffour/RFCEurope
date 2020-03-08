@@ -1891,6 +1891,13 @@ int CyPlayer::getSpecialistExtraYield(int /*SpecialistTypes*/ eIndex1, int /*Yie
 	return m_pPlayer ? m_pPlayer->getSpecialistExtraYield((SpecialistTypes) eIndex1, (YieldTypes) eIndex2) : -1;
 }
 
+// Absinthe: specialist commerce change
+int CyPlayer::getSpecialistExtraCommerceByType(int /*SpecialistTypes*/ eIndex1, int /*CommerceTypes*/ eIndex2)
+{
+	return m_pPlayer ? m_pPlayer->getSpecialistExtraCommerceByType((SpecialistTypes) eIndex1, (CommerceTypes) eIndex2) : -1;
+}
+// Absinthe: specialist commerce change
+
 int CyPlayer::findPathLength(int /*TechTypes*/ eTech, bool bCost)
 {
 	return m_pPlayer ? m_pPlayer->findPathLength((TechTypes)eTech, bCost) : -1;

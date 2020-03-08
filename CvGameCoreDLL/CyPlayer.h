@@ -438,6 +438,8 @@ public:
 	void setCombatExperience(int iExperience);
 
 	int getSpecialistExtraYield(int /*SpecialistTypes*/ eIndex1, int /*YieldTypes*/ eIndex2);
+	// Absinthe: specialist commerce change
+	int getSpecialistExtraCommerceByType(int /*SpecialistTypes*/ eIndex1, int /*CommerceTypes*/ eIndex2);
 
 	int findPathLength(int /*TechTypes*/ eTech, bool bCost);
 

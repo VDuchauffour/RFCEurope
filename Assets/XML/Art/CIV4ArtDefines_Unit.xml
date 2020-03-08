@@ -11,7 +11,7 @@
 			<Type>ART_DEF_UNIT_SETTLER_EUROPEAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,2,5</Button>
 			<fScale>0.46</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.95</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Settler_European/Settler_European_Male.nif</NIF>
@@ -35,7 +35,7 @@
 			<Type>ART_DEF_UNIT_SETTLER_FEMALE_EUROPEAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,2,5</Button>
 			<fScale>0.47</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.95</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Settler_European/Settler_European_Female.nif</NIF>
@@ -59,7 +59,7 @@
 			<Type>ART_DEF_UNIT_SETTLER_CHILD_EUROPEAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,2,5</Button>
 			<fScale>0.47</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.95</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Settler_European/Settler_European_Child.nif</NIF>
@@ -84,7 +84,7 @@
 			<Type>ART_DEF_UNIT_WORKER_EUROPEAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,3,5</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.99</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Worker_European/Worker_European.nif</NIF>
@@ -284,7 +284,7 @@
 			<Type>ART_DEF_UNIT_PROPHET</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,5,1</Button>
 			<fScale>0.46</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.95</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/GreatPeople/Prophet/GreatProphet.nif</NIF>
@@ -308,7 +308,7 @@
 			<Type>ART_DEF_UNIT_ARTIST</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,2,4</Button>
 			<fScale>0.46</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.95</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/GreatPeople/Artist/GreatArtist.nif</NIF>
@@ -380,7 +380,7 @@
 			<Type>ART_DEF_UNIT_ENGINEER</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,2,8</Button>
 			<fScale>0.46</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.96</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/GreatPeople/Engineer/Engineer.nif</NIF>
@@ -404,7 +404,7 @@
 			<Type>ART_DEF_UNIT_WARLORD_ANCIENT</Type>
 			<Button>,-,Art/Interface/Buttons/Warlords_Atlas_1.dds,5,10</Button>
 			<fScale>0.46</fScale>
-			<fInterfaceScale>1.06</fInterfaceScale>
+			<fInterfaceScale>0.96</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Warlord_Ancient/Warlord_Ancient.nif</NIF>
@@ -428,7 +428,7 @@
 			<Type>ART_DEF_UNIT_WARLORD_MEDIEVAL</Type>
 			<Button>,-,Art/Interface/Buttons/Warlords_Atlas_1.dds,5,10</Button>
 			<fScale>0.46</fScale>
-			<fInterfaceScale>1.06</fInterfaceScale>
+			<fInterfaceScale>0.96</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Warlord_MiddleAge/Warlord_MiddleAge.nif</NIF>
@@ -452,7 +452,7 @@
 			<Type>ART_DEF_UNIT_ANCIENT_GREAT_SPY</Type>
 			<Button>,-,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,15</Button>
 			<fScale>0.46</fScale>
-			<fInterfaceScale>1.06</fInterfaceScale>
+			<fInterfaceScale>0.99</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Great_Spy_Ancient/Great_Spy_Ancient.nif</NIF>
@@ -476,7 +476,7 @@
 			<Type>ART_DEF_UNIT_ANCIENT_SPY</Type>
 			<Button>,-,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,14</Button>
 			<fScale>0.46</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.95</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/AncientSpy/AncientSpy.nif</NIF>
@@ -500,7 +500,7 @@
 			<Type>ART_DEF_UNIT_ISLAMIC_MISSIONARY</Type>
 			<Button>Art/Interface/Buttons/Units/missionary_muslim.dds</Button>
 			<fScale>0.46</fScale>
-			<fInterfaceScale>0.96</fInterfaceScale>
+			<fInterfaceScale>0.95</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Religion_Islamic_Missionary/Islamic_missionary.nif</NIF>
@@ -524,7 +524,7 @@
 			<Type>ART_DEF_UNIT_CATHOLIC_MISSIONARY</Type>
 			<Button>Art/Interface/Buttons/Units/missionary_catholic.dds</Button>
 			<fScale>0.4</fScale>
-			<fInterfaceScale>0.94</fInterfaceScale>
+			<fInterfaceScale>0.98</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Missionary/Catholic/ChristianMissionary.nif</NIF>
@@ -548,7 +548,7 @@
 			<Type>ART_DEF_UNIT_ORTHODOX_MISSIONARY</Type>
 			<Button>Art/Interface/Buttons/Units/missionary_orthodox.dds</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>0.94</fInterfaceScale>
+			<fInterfaceScale>0.93</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Religion_Orthodox_Missionary/OrthodoxPriest.nif</NIF>
@@ -572,7 +572,7 @@
 			<Type>ART_DEF_UNIT_PROTESTANT_MISSIONARY</Type>
 			<Button>Art/Interface/Buttons/Units/missionary_protestant.dds</Button>
 			<fScale>0.4</fScale>
-			<fInterfaceScale>0.94</fInterfaceScale>
+			<fInterfaceScale>0.98</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Missionary/Protestant/ChristianMissionary.nif</NIF>
@@ -596,7 +596,7 @@
 			<Type>ART_DEF_UNIT_PROSECUTOR</Type>
 			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,3,2</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.91</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Religion_Inquisitor/Inquisitor_fx.nif</NIF>
@@ -1172,7 +1172,7 @@
 			<Type>ART_DEF_UNIT_LONG_SWORDSMAN</Type>
 			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,2,2</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.08</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Charlemagne_HeavySwordsman/HeavySwordsman.nif</NIF>
@@ -1196,7 +1196,7 @@
 			<Type>ART_DEF_UNIT_MACEMAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,1,2</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.96</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Maceman/Maceman.nif</NIF>
@@ -1244,7 +1244,7 @@
 			<Type>ART_DEF_UNIT_GUISARME</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,4,5</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.06</fInterfaceScale>
+			<fInterfaceScale>1.05</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Guisarme/HeavySpearman.nif</NIF>
@@ -1268,7 +1268,7 @@
 			<Type>ART_DEF_UNIT_PIKEMAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,1</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.99</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/swissguard/pikeman_pike.nif</NIF>
@@ -1316,7 +1316,7 @@
 			<Type>ART_DEF_UNIT_ARCHER_GERMAN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,6,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.04</fInterfaceScale>
+			<fInterfaceScale>1.01</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/German Archer/Archer_Chinese_FX_2.nif</NIF>
@@ -1340,7 +1340,7 @@
 			<Type>ART_DEF_UNIT_ARCHER_GERMAN_2</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,6,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.04</fInterfaceScale>
+			<fInterfaceScale>1.01</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/German Archer/Archer_Chinese_FX.nif</NIF>
@@ -1364,7 +1364,7 @@
 			<Type>ART_DEF_UNIT_ARCHER_GERMAN_3</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,6,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.04</fInterfaceScale>
+			<fInterfaceScale>1.01</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/German Archer/Archer_Chinese_FX_3.nif</NIF>
@@ -1388,7 +1388,7 @@
 			<Type>ART_DEF_UNIT_CROSSBOWMAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,4,8</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.05</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Crossbowman/Crossbowman.nif</NIF>
@@ -1484,7 +1484,7 @@
 			<Type>ART_DEF_UNIT_MUSKETMAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,6,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.98</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Musketman/Musketman.nif</NIF>
@@ -1508,7 +1508,7 @@
 			<Type>ART_DEF_UNIT_LINE_INFANTRY</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,5,4</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.98</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Musketman_TC/redcoat.nif</NIF>
@@ -1839,7 +1839,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_BOMBARD</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,8,1</Button>
+			<Button>Art/Interface/Buttons/Units/bombard.dds</Button>
 			<fScale>0.40</fScale>
 			<fInterfaceScale>0.96</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
@@ -1939,7 +1939,7 @@
 			<Type>ART_DEF_UNIT_SETTLER_MALE_HUNGARIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,2,5</Button>
 			<fScale>0.46</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.97</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Hungarian/hungarian settler male/mongol_settler_b.nif</NIF>
@@ -1963,7 +1963,7 @@
 			<Type>ART_DEF_UNIT_SETTLER_FEMALE_EARLY_HUNGARIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,2,5</Button>
 			<fScale>0.47</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.97</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Hungarian/hungarian settler female early/settler_female.nif</NIF>
@@ -1987,7 +1987,7 @@
 			<Type>ART_DEF_UNIT_SETTLER_FEMALE_EARLY_2_HUNGARIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,2,5</Button>
 			<fScale>0.47</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.97</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Hungarian/hungarian settler female early 2/settler_female.nif</NIF>
@@ -2011,7 +2011,7 @@
 			<Type>ART_DEF_UNIT_SETTLER_FEMALE_LATE_HUNGARIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,2,5</Button>
 			<fScale>0.47</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.97</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Hungarian/hungarian settler female late/settler_female_fx.nif</NIF>
@@ -2035,7 +2035,7 @@
 			<Type>ART_DEF_UNIT_SETTLER_WITH_HORSE_HUNGARIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,2,5</Button>
 			<fScale>0.43</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.97</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Hungarian/hungarian settler with horse/mongol_settler_horseman.nif</NIF>
@@ -2107,7 +2107,7 @@
 			<Type>ART_DEF_UNIT_WORKER_EARLY_HUNGARIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,3,5</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.98</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Hungarian/hungarian worker early/MagyarWorker.nif</NIF>
@@ -2131,7 +2131,7 @@
 			<Type>ART_DEF_UNIT_WORKER_LATE_HUNGARIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,3,5</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.98</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Hungarian/hungarian worker late/HungarianWorker.nif</NIF>
@@ -2155,7 +2155,7 @@
 			<Type>ART_DEF_UNIT_WARLORD_EARLY_HUNGARIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Warlords_Atlas_1.dds,5,10</Button>
 			<fScale>0.46</fScale>
-			<fInterfaceScale>1.06</fInterfaceScale>
+			<fInterfaceScale>0.96</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Hungarian/hungarian warlord early/warlord_ancient.nif</NIF>
@@ -2179,7 +2179,7 @@
 			<Type>ART_DEF_UNIT_WARLORD_LATE_HUNGARIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Warlords_Atlas_1.dds,5,10</Button>
 			<fScale>0.46</fScale>
-			<fInterfaceScale>1.06</fInterfaceScale>
+			<fInterfaceScale>0.96</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Hungarian/hungarian warlord late/warlord_ancient.nif</NIF>
@@ -2203,7 +2203,7 @@
 			<Type>ART_DEF_UNIT_ARCHER_HUNGARIAN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,6,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.04</fInterfaceScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Hungarian/hungarian archer/Archer_Magyar.nif</NIF>
@@ -2227,7 +2227,7 @@
 			<Type>ART_DEF_UNIT_ARBALESTIER_HUNGARIAN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,5,6</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>1.01</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Hungarian/hungarian arbalest/hungariancrossbowman.nif</NIF>
@@ -2251,7 +2251,7 @@
 			<Type>ART_DEF_UNIT_LONGBOWMAN_HUNGARIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,8,7</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.97</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Hungarian/hungarian longbowman/hungarianlongbowman.nif</NIF>
@@ -2275,7 +2275,7 @@
 			<Type>ART_DEF_UNIT_AXEMAN_HUNGARIAN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,5,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.98</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Hungarian/hungarian axeman/HungaryAxeman.nif</NIF>
@@ -2299,7 +2299,7 @@
 			<Type>ART_DEF_UNIT_SWORDSMAN_HUNGARIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,1,2</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.99</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Hungarian/hungarian swordsman/HungarySwordsmannewfinal.nif</NIF>
@@ -2323,7 +2323,7 @@
 			<Type>ART_DEF_UNIT_MACEMAN_HUNGARIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,1,2</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.96</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Hungarian/hungarian maceman/HungaryHvyFootman.nif</NIF>
@@ -2347,7 +2347,7 @@
 			<Type>ART_DEF_UNIT_SPEARMAN_HUNGARIAN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,3,6</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.98</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Hungarian/hungarian spearman/HungarySpearman.nif</NIF>
@@ -2371,7 +2371,7 @@
 			<Type>ART_DEF_UNIT_PIKEMAN_HUNGARIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.96</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Hungarian/hungarian pikeman/HungaryPikeman.nif</NIF>
@@ -2395,7 +2395,7 @@
 			<Type>ART_DEF_UNIT_MUSKETMAN_HUNGARIAN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,4,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.99</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Hungarian/hungarian musketman/HungarianMusketman.nif</NIF>
@@ -2419,7 +2419,7 @@
 			<Type>ART_DEF_UNIT_GRENADIER_HUNGARIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,6</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.95</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Hungarian/hungarian grenadier/grenadier.nif</NIF>
@@ -2549,7 +2549,7 @@
 			<Type>ART_DEF_UNIT_ARCHER_BYZANTINE</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,6,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.04</fInterfaceScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Byzantine/Byzantine Archer/ByzantineArchers.nif</NIF>
@@ -2573,7 +2573,7 @@
 			<Type>ART_DEF_UNIT_SPEARMAN_BYZANTINE</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,3,6</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.99</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Byzantine/Byzantine Spearman/ByzantineSpearmen.nif</NIF>
@@ -2621,7 +2621,7 @@
 			<Type>ART_DEF_UNIT_SWORDSMAN_BYZANTINE</Type>
 			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,1,2</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.99</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Byzantine/Byzantine Swordsman/ByzantineSwordsman.nif</NIF>
@@ -2693,7 +2693,7 @@
 			<Type>ART_DEF_UNIT_CROSSBOWMAN_BYZANTINE</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,4,8</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.02</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Byzantine/Byzantine Crossbowman/ByzantineCrossbowman.nif</NIF>
@@ -2714,10 +2714,10 @@
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_PIKEMAN_BYZANTINE</Type>
+			<Type>ART_DEF_UNIT_GUISARME_BYZANTINE</Type>
 			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,6,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.97</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Byzantine/Byzantine Pikeman/ByzantinePikeman.nif</NIF>
@@ -2738,7 +2738,7 @@
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_MUSKETMAN_BYZANTINE</Type>
+			<Type>ART_DEF_UNIT_ARQUEBUSIER_BYZANTINE</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,4,1</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -2765,7 +2765,7 @@
 			<Type>ART_DEF_UNIT_HEAVY_SWORDSMAN_BYZANTINE</Type>
 			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,2,2</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.98</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Byzantine/Byzantine Heavyfootman/ByzantineHeavyFootman.nif</NIF>
@@ -2786,7 +2786,7 @@
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_HORSEMAN_BYZANTINE</Type>
+			<Type>ART_DEF_UNIT_LANCER_BYZANTINE</Type>
 			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,1,1</Button>
 			<fScale>0.42</fScale>
 			<fInterfaceScale>1.04</fInterfaceScale>
@@ -2873,7 +2873,7 @@
 			<ActionSound>AS3D_UN_OCEAN_END1</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_PRONOIAR</Type>
+			<Type>ART_DEF_UNIT_KNIGHT_BYZANTINE</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,8,1</Button>
 			<fScale>0.42</fScale>
 			<fInterfaceScale>1.04</fInterfaceScale>
@@ -2902,7 +2902,7 @@
 			<Type>ART_DEF_UNIT_SWORDSMAN_VIKING</Type>
 			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,1,2</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.99</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Norse/Viking Age Swordsman/VikingAgeSwordsmanfinal.nif</NIF>
@@ -2926,7 +2926,7 @@
 			<Type>ART_DEF_UNIT_SPEARMAN_VIKING</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,3,6</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.99</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Norse/Viking Age Spearman/VikingAgeSpearmanfinal.nif</NIF>
@@ -2947,10 +2947,10 @@
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_PIKEMAN_VIKING</Type>
+			<Type>ART_DEF_UNIT_GUISARME_VIKING</Type>
 			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,6,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.98</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Norse/Viking Pikeman/VikingPikemanfinal.nif</NIF>
@@ -2974,7 +2974,7 @@
 			<Type>ART_DEF_UNIT_ARCHER_VIKING</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,6,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.04</fInterfaceScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Norse/Viking Archer/VikingArcher.nif</NIF>
@@ -2998,7 +2998,7 @@
 			<Type>ART_DEF_UNIT_LONGBOWMAN_VIKING</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,8,7</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.95</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Norse/Viking Longbowman/VikingLongbowman.nif</NIF>
@@ -3022,7 +3022,7 @@
 			<Type>ART_DEF_UNIT_CROSSBOWMAN_VIKING</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,4,8</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.06</fInterfaceScale>
+			<fInterfaceScale>1.01</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Norse/Viking Crossbowman/VikingCrossbowmanfinal.nif</NIF>
@@ -3067,7 +3067,7 @@
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_KNIGHT_VIKING</Type>
+			<Type>ART_DEF_UNIT_LANCER_VIKING</Type>
 			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,1,1</Button>
 			<fScale>0.42</fScale>
 			<fInterfaceScale>1.02</fInterfaceScale>
@@ -3094,7 +3094,7 @@
 			<Type>ART_DEF_UNIT_HEAVY_FOOTMAN_VIKING</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,1,2</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.98</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Norse/Viking Heavyfootman/VikingHeavyfootman.nif</NIF>
@@ -3142,7 +3142,7 @@
 			<Type>ART_DEF_UNIT_GRENADIER_SWEDISH</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,6</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.99</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Norse/swedish grenadier/grenadier.nif</NIF>
@@ -3163,10 +3163,10 @@
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_MUSKETMAN_SWEDISH</Type>
+			<Type>ART_DEF_UNIT_ARQUEBUSIER_SWEDISH</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,6,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.99</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Norse/Swedish Musketman/SwedishMusketmanNEW.nif</NIF>
@@ -3192,7 +3192,7 @@
 			<Type>ART_DEF_UNIT_WORKER_SLAVIC</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,3,5</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.98</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Russian/Rus Worker/RusPostMongolianWorker.nif</NIF>
@@ -3213,7 +3213,7 @@
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_HORSEMAN_EURASIAN</Type>
+			<Type>ART_DEF_UNIT_HORSEMAN_RUSSIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Warlords_Atlas_1.dds,3,9</Button>
 			<fScale>0.42</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -3240,7 +3240,7 @@
 			<Type>ART_DEF_UNIT_ARCHER_RUSSIAN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,6,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.04</fInterfaceScale>
+			<fInterfaceScale>1.01</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Russian/Russian Archer/archer.nif</NIF>
@@ -3264,7 +3264,7 @@
 			<Type>ART_DEF_UNIT_CROSSBOWMAN_RUSSIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,4,8</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.06</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Russian/Russian Crossbowman/crossbowman.nif</NIF>
@@ -3312,7 +3312,7 @@
 			<Type>ART_DEF_UNIT_AXEMAN_RUSSIAN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,5,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>1.01</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Russian/Russian Axeman/Unique_Sumerian_Vulture_FX.nif</NIF>
@@ -3336,7 +3336,7 @@
 			<Type>ART_DEF_UNIT_AXEMAN_RUSSIAN_2</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,5,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>1.01</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Russian/Russian Axeman/Unique_Sumerian_Vulture_FX_2.nif</NIF>
@@ -3360,7 +3360,7 @@
 			<Type>ART_DEF_UNIT_AXEMAN_RUSSIAN_3</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,5,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>1.01</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Russian/Russian Axeman/Unique_Sumerian_Vulture_FX_3.nif</NIF>
@@ -3456,7 +3456,7 @@
 			<Type>ART_DEF_UNIT_HEAVY_SPEARMAN_RUSSIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,6,1</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Russian/Russian Heavy Spearman/HeavySpearman.nif</NIF>
@@ -3480,7 +3480,7 @@
 			<Type>ART_DEF_UNIT_PIKEMAN_RUSSIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.98</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Russian/Rus Pikeman/PrePetrinePikeman.nif</NIF>
@@ -3504,7 +3504,7 @@
 			<Type>ART_DEF_UNIT_STRELETS</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,8,6</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.95</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Russian/Rus Musketman/StreltsyBlueCap.nif</NIF>
@@ -3528,7 +3528,7 @@
 			<Type>ART_DEF_UNIT_GRENADIER_RUSSIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,6</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.96</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Russian/Russian Grenadier/grenadier.nif</NIF>
@@ -3552,7 +3552,7 @@
 			<Type>ART_DEF_UNIT_GENERAL_RUSSIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Warlords_Atlas_1.dds,5,10</Button>
 			<fScale>0.46</fScale>
-			<fInterfaceScale>1.06</fInterfaceScale>
+			<fInterfaceScale>0.96</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Russian/Russian Great General/Svyatoslav.nif</NIF>
@@ -3600,7 +3600,7 @@
 			<Type>ART_DEF_UNIT_ARQUEBUSIER_RUSSIAN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,3,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>0.96</fInterfaceScale>
+			<fInterfaceScale>0.95</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Russian/Rus Arquebusier/PrePetrineHandgunnerUnArmored.nif</NIF>
@@ -3706,7 +3706,7 @@
 			<Type>ART_DEF_UNIT_SETTLER_MALE_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,2,5</Button>
 			<fScale>0.46</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.97</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Arab/Arabian Settler/arabian_settler_male.nif</NIF>
@@ -3730,7 +3730,7 @@
 			<Type>ART_DEF_UNIT_SETTLER_FEMALE_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,2,5</Button>
 			<fScale>0.47</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.97</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Arab/Arabian Settler/arabian_settler_female.nif</NIF>
@@ -3754,7 +3754,7 @@
 			<Type>ART_DEF_UNIT_SETTLER_CHILD_MIDDLE_EAST</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,2,5</Button>
 			<fScale>0.47</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.97</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Settler_Middle_East/Settler_Middle_East_Child.nif</NIF>
@@ -3776,7 +3776,7 @@
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_CAMEL_PACK</Type>
+			<Type>ART_DEF_UNIT_CAMEL_PACK_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,5,5</Button>
 			<fScale>0.42</fScale>
 			<fInterfaceScale>0.9</fInterfaceScale>
@@ -3803,7 +3803,7 @@
 			<Type>ART_DEF_UNIT_WORKER_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,3,5</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.99</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Arab/Arabic Muslim Worker/ArabicMuslimWorker.nif</NIF>
@@ -3827,7 +3827,7 @@
 			<Type>ART_DEF_UNIT_ARCHER_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,4,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.04</fInterfaceScale>
+			<fInterfaceScale>1.01</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Arab/Arabian Archer/EarlyIslamicArcher.nif</NIF>
@@ -3851,7 +3851,7 @@
 			<Type>ART_DEF_UNIT_CROSSBOWMAN_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,4,8</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.05</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Arab/Arabian Crossbowman/Crossbowman.nif</NIF>
@@ -3875,7 +3875,7 @@
 			<Type>ART_DEF_UNIT_ARBALESTIER_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,5,6</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.05</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Arab/Arabian Arbalestier/UmayyadCrossbowman.nif</NIF>
@@ -3899,7 +3899,7 @@
 			<Type>ART_DEF_UNIT_LONGBOWMAN_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,8,7</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>1.02</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Arab/Arabian Longbowman/Bowman.nif</NIF>
@@ -3923,7 +3923,7 @@
 			<Type>ART_DEF_UNIT_SPEARMAN_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,3,6</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.99</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Arab/Arabian Spearman/spearman.nif</NIF>
@@ -3971,7 +3971,7 @@
 			<Type>ART_DEF_UNIT_PIKEMAN_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.97</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Arab/Pikeman_Arabia/pikeman.nif</NIF>
@@ -3995,7 +3995,7 @@
 			<Type>ART_DEF_UNIT_AXEMAN_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,3,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>1.01</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Arab/Arabian Axeman/Axeman.nif</NIF>
@@ -4019,7 +4019,7 @@
 			<Type>ART_DEF_UNIT_SWORDSMAN_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,1,2</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>1.02</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Arab/Arabian Swordsman/EarlyIslamicSwordsman.nif</NIF>
@@ -4043,7 +4043,7 @@
 			<Type>ART_DEF_UNIT_HEAVY_SWORDSMAN_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,2,2</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>1.02</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Arab/Arabian Heavy Swordsman/HeavySwordsman.nif</NIF>
@@ -4136,10 +4136,10 @@
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_HEAVY_CAVALRY_ARABIAN</Type>
+			<Type>ART_DEF_UNIT_HEAVY_LANCER_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,2,1</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.04</fInterfaceScale>
+			<fInterfaceScale>1.02</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Knight_Middle_East/Knight_Middle_East.nif</NIF>
@@ -4160,7 +4160,7 @@
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_ANSAR_ARABIAN</Type>
+			<Type>ART_DEF_UNIT_ANSAR_KNIGHT_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,8,1</Button>
 			<fScale>0.42</fScale>
 			<fInterfaceScale>1.02</fInterfaceScale>
@@ -4184,7 +4184,7 @@
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_CAVALRY_ARABIAN</Type>
+			<Type>ART_DEF_UNIT_PISTOLIER_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,6,6</Button>
 			<fScale>0.42</fScale>
 			<fInterfaceScale>1.06</fInterfaceScale>
@@ -4235,7 +4235,7 @@
 			<Type>ART_DEF_UNIT_GRENADIER_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,6</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.99</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Arab/Arabian Grenadier/aragr.nif</NIF>
@@ -4315,7 +4315,7 @@
 			<Type>ART_DEF_UNIT_PROPHET_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,5,1</Button>
 			<fScale>0.46</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.97</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/artstyle_arab/Muslim GreatPeople/Prophet/GreatProphet.nif</NIF>
@@ -4339,7 +4339,7 @@
 			<Type>ART_DEF_UNIT_ARTIST_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,2,4</Button>
 			<fScale>0.46</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.98</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/artstyle_arab/Muslim GreatPeople/Artist/GreatArtist.nif</NIF>
@@ -4363,7 +4363,7 @@
 			<Type>ART_DEF_UNIT_SCIENTIST_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,1,4</Button>
 			<fScale>0.46</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.99</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/artstyle_arab/Muslim GreatPeople/Scientist/GreatScientistAncient.nif</NIF>
@@ -4411,7 +4411,7 @@
 			<Type>ART_DEF_UNIT_ENGINEER_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,2,8</Button>
 			<fScale>0.46</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.97</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/artstyle_arab/Muslim GreatPeople/Engineer/Engineer.nif</NIF>
@@ -4435,7 +4435,7 @@
 			<Type>ART_DEF_UNIT_GREAT_SPY_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,12</Button>
 			<fScale>0.46</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>0.98</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/artstyle_arab/Muslim GreatPeople/Great Spy/Great_Spy_Ancient.nif</NIF>
@@ -4459,7 +4459,7 @@
 			<Type>ART_DEF_UNIT_GREAT_GENERAL_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Warlords_Atlas_1.dds,5,10</Button>
 			<fScale>0.46</fScale>
-			<fInterfaceScale>1.06</fInterfaceScale>
+			<fInterfaceScale>0.96</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Arab/Mutawakkil/MutawakkilwCape.nif</NIF>
@@ -4480,10 +4480,10 @@
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_MACEMAN_MIDDLE_EAST</Type>
+			<Type>ART_DEF_UNIT_MACEMAN_ARABIAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,1,2</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.97</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Arab/Arabian Maceman/UmayyadMaceman.nif</NIF>
@@ -4506,7 +4506,7 @@
 		<!-- ARTSTYLE_ARABIAN -->
 		<!-- ARTSTYLE_OTTOMAN -->
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_HORSE_PACK</Type>
+			<Type>ART_DEF_UNIT_HORSE_PACK_OTTOMAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,5,5</Button>
 			<fScale>0.42</fScale>
 			<fInterfaceScale>0.9</fInterfaceScale>
@@ -4533,7 +4533,7 @@
 			<Type>ART_DEF_UNIT_ARCHER_OTTOMAN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,6,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.04</fInterfaceScale>
+			<fInterfaceScale>1.02</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Ottoman/Ottoman Archer/Archer_Eurasian.nif</NIF>
@@ -4557,7 +4557,7 @@
 			<Type>ART_DEF_UNIT_CROSSBOWMAN_OTTOMAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,4,8</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Ottoman/Ottoman Crossbowman/crossbowman.nif</NIF>
@@ -4581,7 +4581,7 @@
 			<Type>ART_DEF_UNIT_LONGBOWMAN_OTTOMAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,8,7</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.98</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Ottoman/Ottoman Longbowman/longbowman.nif</NIF>
@@ -4602,10 +4602,10 @@
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_SPEARMAN_BLUE_OTTOMAN</Type>
+			<Type>ART_DEF_UNIT_SPEARMAN_OTTOMAN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,3,6</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.98</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Ottoman/Ottoman Spearman/spearman3.nif</NIF>
@@ -4629,7 +4629,7 @@
 			<Type>ART_DEF_UNIT_PIKEMAN_OTTOMAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.95</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Ottoman/Qizilbash Pikeman/qizilbashpikeman.nif</NIF>
@@ -4653,7 +4653,7 @@
 			<Type>ART_DEF_UNIT_AXEMAN_OTTOMAN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,5,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>1.03</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Ottoman/Ottoman Axeman/Axeman.nif</NIF>
@@ -4722,7 +4722,7 @@
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_HORSEMAN_OTTOMAN</Type>
+			<Type>ART_DEF_UNIT_LANCER_OTTOMAN</Type>
 			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,1,1</Button>
 			<fScale>0.42</fScale>
 			<fInterfaceScale>1.04</fInterfaceScale>
@@ -4818,7 +4818,7 @@
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_HEAVY_CAVALRY_OTTOMAN</Type>
+			<Type>ART_DEF_UNIT_HEAVY_LANCER_OTTOMAN</Type>
 			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,2,1</Button>
 			<fScale>0.42</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -4842,7 +4842,7 @@
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_CAVALRY_OTTOMAN</Type>
+			<Type>ART_DEF_UNIT_HUSSAR_CAVALRY_OTTOMAN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,6,5</Button>
 			<fScale>0.42</fScale>
 			<fInterfaceScale>1.04</fInterfaceScale>
@@ -4869,7 +4869,7 @@
 			<Type>ART_DEF_UNIT_GRENADIER_OTTOMAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,7,6</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.97</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Ottoman/Ottoman Grenadier/grenadier.nif</NIF>
@@ -4893,7 +4893,7 @@
 			<Type>ART_DEF_UNIT_CANNON_OTTOMAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,6,8</Button>
 			<fScale>0.53</fScale>
-			<fInterfaceScale>1.2</fInterfaceScale>
+			<fInterfaceScale>1.24</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Ottoman/Ottoman Cannon/cannon.nif</NIF>
@@ -4925,7 +4925,7 @@
 			<Type>ART_DEF_UNIT_WORKER_OTTOMAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,3,5</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.98</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Artstyle_Ottoman/Ottoman Worker/OttomanWorker.nif</NIF>
@@ -4973,7 +4973,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_OTTOMAN_GREAT_BOMBARD</Type>
-			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,3,5</Button>
+			<Button>Art/Interface/Buttons/Units/great_bombard_v2.dds</Button>
 			<fScale>0.40</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
@@ -5046,7 +5046,7 @@
 			<Type>ART_DEF_UNIT_SWEDISH_KAROLIN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,1,7</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.98</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/UU_Sweden_Karolin/musketman.nif</NIF>
@@ -5070,7 +5070,7 @@
 			<Type>ART_DEF_UNIT_SPANISH_TERCIO_PIKE</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,3,7</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>0.96</fInterfaceScale>
+			<fInterfaceScale>0.95</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/UU_Spain_Tercio_Pike/pikeman_pike.nif</NIF>
@@ -5094,7 +5094,7 @@
 			<Type>ART_DEF_UNIT_SPANISH_TERCIO_GUN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,3,7</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>0.96</fInterfaceScale>
+			<fInterfaceScale>0.95</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/UU_Spain_Tercio_Gun/Spanish_Musketeer.nif</NIF>
@@ -5118,7 +5118,7 @@
 			<Type>ART_DEF_UNIT_FRENCH_MUSKETEER</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,2,2</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.98</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Unique/French/Musketeer/Musketeer.nif</NIF>
@@ -5142,7 +5142,7 @@
 			<Type>ART_DEF_UNIT_HOLY_ROMAN_LANDSKNECHT</Type>
 			<Button>,-,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,4,10</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>1.01</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Unique_HolyRomanEmpire_Landsknecht/Unique_HolyRoman_Landsknecht.nif</NIF>
@@ -5242,7 +5242,7 @@
 			<Type>ART_DEF_UNIT_ARAGON_ALMOGAVAR</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_mercs.dds,1,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>1.01</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/UU_Aragon_Almogavar/javelineer.nif</NIF>
@@ -5320,7 +5320,7 @@
 			<Type>ART_DEF_UNIT_SCOTLAND_SHELTRON</Type>
 			<Button>Art/Interface/Buttons/Units/Scotland_Sheltron.dds</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.06</fInterfaceScale>
+			<fInterfaceScale>1.02</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/UU_Scotland_Sheltron/pikeman.nif</NIF>
@@ -5588,7 +5588,7 @@
 			<Type>ART_DEF_UNIT_PORTUGAL_FOOT_KNIGHT</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,7,6</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.06</fInterfaceScale>
+			<fInterfaceScale>1.08</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/UU_Portugal_Footman/HeavySwordsman.nif</NIF>
@@ -5612,7 +5612,7 @@
 			<Type>ART_DEF_UNIT_VIKING_BERSERKER</Type>
 			<Button>,-,Art/Interface/Buttons/Warlords_Atlas_1.dds,3,10</Button>
 			<fScale>0.5</fScale>
-			<fInterfaceScale>0.94</fInterfaceScale>
+			<fInterfaceScale>0.95</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Viking_Berserker/Berserker.nif</NIF>
@@ -5688,7 +5688,7 @@
 			<Type>ART_DEF_UNIT_OTTOMAN_JANISSARY</Type>
 			<Button>,-,Art/Interface/Buttons/Warlords_Atlas_1.dds,2,10</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.96</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/UU_Ottoman_Janissary/OttomanJanissaryBlue.nif</NIF>
@@ -5760,7 +5760,7 @@
 			<Type>ART_DEF_UNIT_KNIGHT_OF_ST_JOHNS</Type>
 			<Button>Art/Interface/Buttons/Units/crusader_stjohn.dds</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>1.01</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Spec_Stjohn_Knight/knightstemplar.nif</NIF>
@@ -5784,7 +5784,7 @@
 			<Type>ART_DEF_UNIT_DRAGON_KNIGHT</Type>
 			<Button>Art/Interface/Buttons/Units/crusader_dragon.dds</Button>
 			<fScale>0.46</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.98</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Spec_Dragon_Knight/knightstemplar_fx.nif</NIF>
@@ -5808,7 +5808,7 @@
 			<Type>ART_DEF_UNIT_CALATRAVA_KNIGHT</Type>
 			<Button>Art/Interface/Buttons/Units/crusader_calatrava.dds</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.99</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Spec_Calatrava_Knight/warrior.nif</NIF>
@@ -5886,7 +5886,7 @@
 			<Type>ART_DEF_UNIT_SWISS_PIKEMAN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_mercs.dds,3,2</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.02</fInterfaceScale>
+			<fInterfaceScale>1.01</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Mercenaries/Swiss_Guard/Unique_HolyRoman_Landsknecht.nif</NIF>
@@ -6120,7 +6120,7 @@
 			<Type>ART_DEF_UNIT_IRISH_BRIGADE</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_mercs.dds,7,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.96</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Mercenaries/Irish_Brigade/Rifleman.nif</NIF>
@@ -6198,7 +6198,7 @@
 			<Type>ART_DEF_UNIT_NAFFATUN</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_mercs.dds,8,1</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.99</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Mercenaries/Naffatun/aragr.nif</NIF>
@@ -6302,7 +6302,7 @@
 			<Type>ART_DEF_UNIT_HIGHLANDER</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_units.dds,5,5</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>1.02</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Mercenaries/Highlander/Swordsman.nif</NIF>
@@ -6354,7 +6354,7 @@
 			<Type>ART_DEF_UNIT_ZANJI</Type>
 			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_mercs.dds,4,3</Button>
 			<fScale>0.42</fScale>
-			<fInterfaceScale>1.06</fInterfaceScale>
+			<fInterfaceScale>1.05</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Mercenaries/Zanji_Spearman/BerberMiddleAgeSpearman.nif</NIF>
@@ -6578,7 +6578,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_CRIMEAN_TATAR_RIDER</Type>
-			<Button>Art/Interface/Buttons/Units/Steppe_Horse_Archer.dds</Button>
+			<Button>Art/Interface/Buttons/Units/crimean_tatar_rider.dds</Button>
 			<fScale>0.42</fScale>
 			<fInterfaceScale>1.08</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
@@ -6656,7 +6656,7 @@
 			<Type>ART_DEF_UNIT_SELJUK_CROSSBOWMAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,4,8</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
+			<fInterfaceScale>1.03</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Barbarian/Seljuk_Crossbowman/SeljukCrossbowmanNewShield.nif</NIF>
@@ -6680,7 +6680,7 @@
 			<Type>ART_DEF_UNIT_SELJUK_SWORDSMAN</Type>
 			<Button>,-,Art/Interface/Buttons/Charlemagne_Atlas.dds,1,2</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.99</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Barbarian/Seljuk_Swordsman/SeljukTurkishMedSwordsman.nif</NIF>
@@ -6701,7 +6701,7 @@
 			<Type>ART_DEF_UNIT_SELJUK_HEAVY_FOOTMAN</Type>
 			<Button>,-,Art/Interface/Buttons/Unit_Resource_Atlas.dds,1,2</Button>
 			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
+			<fInterfaceScale>0.98</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
 			<NIF>Art/Units/Barbarian/Seljuk_Heavy_Footman/TurkishHeavyFootman.nif</NIF>
