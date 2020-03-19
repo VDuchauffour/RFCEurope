@@ -277,8 +277,10 @@ public:
 	bool isEventActive(int /*EventTriggerTypes*/ eTrigger);
 	void doControl(int iControl);
 
-	// 3Miro: optimized functions for faster reach, mostly for UHVs
+	// Absinthe & 3Miro: optimized functions for faster reach, mostly for UHVs
+	int getLargestOtherCity( int x, int y );
 	bool isLargestCity( int x, int y ); // returns true if the x,y plot is a city and is the largest city
+	int getTopCultureOtherCity( int x, int y );
 	bool isTopCultureCity( int x, int y ); // true if plot x,y is the most cultured city
 	int doesOwnCities( int iCiv, int BLx, int BLy, int TRx, int TRy );
 	int doesOwnOrVassalCities( int iCiv, int BLx, int BLy, int TRx, int TRy );

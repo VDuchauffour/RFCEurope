@@ -10800,6 +10800,8 @@ void CvPlayer::setAlive(bool bNewValue)
 				gDLL->closeSlot(getID());
 			}
 
+			// Absinthe: removed forced CIV DESTROYED message, the specific collapse messages handles this better
+			/*
 			if (GC.getGameINLINE().getElapsedGameTurns() > 0)
 			{
 				//if (!isBarbarian()) //Rhye
@@ -10818,6 +10820,7 @@ void CvPlayer::setAlive(bool bNewValue)
 					//GC.getGameINLINE().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT")); //Rhye
 				}
 			}
+			*/
 		}
 
 		GC.getGameINLINE().setScoreDirty(true);

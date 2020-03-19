@@ -637,6 +637,19 @@ class RiseAndFall:
 					if pTurkey.getStateReligion() == xml.iIslam: # you get Islam anyway, as a bonus
 						city.setHasReligion(xml.iIslam, True, True, False)
 
+		# Absinthe: Message for the human player, if the last city of a known civ is conquered
+		iOriginalOwner = owner
+		pOriginalOwner = gc.getPlayer(iOriginalOwner)
+		if not pOriginalOwner.isHuman():
+			iNumCities = pOriginalOwner.getNumCities()
+			if (iNumCities == 0):
+				# all collapses operate with flips, so if the last city was conquered, we are good to go (this message won't come after a collapse message)
+				if bConquest:
+					print ("CONQUEST: LAST CITY", pOriginalOwner.getCivilizationAdjective(0))
+					iHuman = utils.getHumanID()
+					if gc.getPlayer(iHuman).canContact(iOriginalOwner):
+						CyInterface().addMessage(iHuman, False, con.iDuration, pOriginalOwner.getCivilizationDescription(0) + " " + CyTranslator().getText("TXT_KEY_STABILITY_CONQUEST_LAST_CITY", ()), "", 0, "", ColorTypes(con.iRed), -1, -1, True, True)
+
 
 	def onCityRazed(self, iOwner, iPlayer, city):
 		self.pm.onCityRazed(iOwner, iPlayer, city) # Province Manager
@@ -941,7 +954,7 @@ class RiseAndFall:
 						iLostCities = max( iLostCities-(iNumCities/4), 0 )
 					# Absinthe: if more than one third is captured, the civ collapses
 					if iLostCities*2 > iNumCities+1 and iNumCities > 0:
-						print ("COLLAPSE BARBS", gc.getPlayer(iCiv).getCivilizationAdjective(0))
+						print ("COLLAPSE: BARBS", gc.getPlayer(iCiv).getCivilizationAdjective(0))
 						iHuman = utils.getHumanID()
 						if not pCiv.isHuman():
 							if gc.getPlayer(iHuman).canContact(iCiv):
@@ -967,7 +980,7 @@ class RiseAndFall:
 				if iGameTurn >= con.tBirth[iCiv] + 20 and iGameTurn >= iRespawnTurn + 10 and not utils.collapseImmune(iCiv):
 					# Absinthe: pass for small civs, we have bad stability collapses and collapseMotherland anyway, which is better suited for the collapse of those
 					if lNumCitiesLastTime[iCiv] > 2 and iNumCitiesCurrently * 2 <= lNumCitiesLastTime[iCiv]:
-						print ("COLLAPSE GENERIC", pCiv.getCivilizationAdjective(0), iNumCitiesCurrently * 2, "<=", lNumCitiesLastTime[iCiv])
+						print ("COLLAPSE: GENERIC", pCiv.getCivilizationAdjective(0), iNumCitiesCurrently * 2, "<=", lNumCitiesLastTime[iCiv])
 						iHuman = utils.getHumanID()
 						if not pCiv.isHuman():
 							if gc.getPlayer(iHuman).canContact(iCiv):
@@ -991,7 +1004,7 @@ class RiseAndFall:
 					if iCiv in [con.iCordoba, con.iAragon] and pCiv.getRespawnedAlive():
 						continue
 					if not gc.safeMotherland( iCiv ):
-						print ("COLLAPSE MOTHERLAND", pCiv.getCivilizationAdjective(0))
+						print ("COLLAPSE: MOTHERLAND", pCiv.getCivilizationAdjective(0))
 						iHuman = utils.getHumanID()
 						if not pCiv.isHuman():
 							if gc.getPlayer(iHuman).canContact(iCiv):

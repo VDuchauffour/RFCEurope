@@ -3249,6 +3249,7 @@ int CvGame::calculateReligionPercent(ReligionTypes eReligion) const
 			{
 				if (pLoopCity->isHasReligion(eReligion))
 				{
+					// Absinthe: probably for small population cities - e.g. 1 pop, 2 religions
 					iCount += ((pLoopCity->getPopulation() + (pLoopCity->getReligionCount() / 2)) / pLoopCity->getReligionCount());
 				}
 			}
@@ -9682,15 +9683,42 @@ bool CvGame::pythonIsBonusIgnoreLatitudes() const
 }
 
 
+// Absinthe: get the largest city (beside the one given as the input, which is needed in equal population situations), and passing the coordinates and population as an int
+// Absinthe: efficiency is not a factor here, as this will only be called for the human player on the Victory screen, on demand
+// Absinthe: note, that it returns the data for the first city among the best ones (in case there are more with equal size)
+int CvGame::getLargestOtherCity( int x, int y )
+{
+	int iBiggestCityPopulation = 0;
+	int iBiggestCityData = -1;
+	int iPlayer, iLoop;
+	CvCity *pCity;
+	for ( iPlayer = 0; iPlayer < NUM_ALL_PLAYERS; iPlayer++ )
+	{
+		for ( pCity = GET_PLAYER((PlayerTypes)iPlayer).firstCity(&iLoop); pCity != NULL; pCity = GET_PLAYER((PlayerTypes)iPlayer).nextCity(&iLoop) )
+		{
+			if ( x != pCity ->getX() || y != pCity ->getY() )
+			{
+				if ( pCity ->getPopulation() > iBiggestCityPopulation )
+				{
+					iBiggestCityPopulation = pCity ->getPopulation();
+					// population is max 2 digits, y coordinate is max 2 digits, x coordinate is not restricted
+					iBiggestCityData = 10000 * pCity ->getX() + 100 * pCity ->getY() + iBiggestCityPopulation;
+				}
+			}
+		}
+	}
+	return iBiggestCityData;
+}
+
 bool CvGame::isLargestCity( int x, int y ){
 	if ( GC.getMapINLINE().plot(x,y) -> isCity() ){
 		int iPopulation = GC.getMapINLINE().plot(x,y) ->getPlotCity() ->getPopulation();
-		int iCityOwner = GC.getMapINLINE().plot(x,y) ->getPlotCity() ->getOwner();
+		//int iCityOwner = GC.getMapINLINE().plot(x,y) ->getPlotCity() ->getOwner();
 		int iPlayer, iLoop;
 		CvCity *pCity;
 		for ( iPlayer = 0; iPlayer < NUM_ALL_PLAYERS; iPlayer++ ){
-			if ( iCityOwner != iPlayer ){
-				for ( pCity = GET_PLAYER((PlayerTypes)iPlayer).firstCity(&iLoop); pCity != NULL; pCity = GET_PLAYER((PlayerTypes)iPlayer).nextCity(&iLoop) ){
+			for ( pCity = GET_PLAYER((PlayerTypes)iPlayer).firstCity(&iLoop); pCity != NULL; pCity = GET_PLAYER((PlayerTypes)iPlayer).nextCity(&iLoop) ){
+				if ( x != pCity ->getX() || y != pCity ->getY() ){
 					if ( pCity ->getPopulation() >= iPopulation ){
 						return false;
 					};
@@ -9702,6 +9730,33 @@ bool CvGame::isLargestCity( int x, int y ){
 	return false;
 };
 
+// Absinthe: get the top culture city (beside the one given as the input, which is needed in equal culture situations), and passing the coordinates and culture as an int
+// Absinthe: efficiency is not a factor here, as this will only be called for the human player on the Victory screen, on demand
+// Absinthe: note, that it returns the data for the first city among the best ones (in case there are more with equal culture)
+int CvGame::getTopCultureOtherCity( int x, int y )
+{
+	int iBestCityCulture = -1;
+	int iBestCityData = -1;
+	int iPlayer, iLoop;
+	CvCity *pCity;
+	for ( iPlayer = 0; iPlayer < NUM_ALL_PLAYERS; iPlayer++ )
+	{
+		for ( pCity = GET_PLAYER((PlayerTypes)iPlayer).firstCity(&iLoop); pCity != NULL; pCity = GET_PLAYER((PlayerTypes)iPlayer).nextCity(&iLoop) )
+		{
+			if ( x != pCity ->getX() || y != pCity ->getY() )
+			{
+				if ( pCity ->getCulture( pCity ->getOwner() ) > iBestCityCulture )
+				{
+					iBestCityCulture = pCity ->getCulture( pCity ->getOwner() );
+					// x coordinate is max 3 digits, y coordinate is max 2 digits, culture is not restricted
+					iBestCityData = 100000 * iBestCityCulture + 100 * pCity ->getX() + pCity ->getY();
+				}
+			}
+		}
+	}
+	return iBestCityData;
+}
+
 bool CvGame::isTopCultureCity( int x, int y ){
 	if ( GC.getMapINLINE().plot(x,y) -> isCity() ){
 		//int iCulture = GC.getMapINLINE().plot(x,y) ->getPlotCity() ->countTotalCultureTimes100();
@@ -9710,9 +9765,11 @@ bool CvGame::isTopCultureCity( int x, int y ){
 		CvCity *pCity;
 		for ( iPlayer = 0; iPlayer < NUM_ALL_PLAYERS; iPlayer++ ){
 			for ( pCity = GET_PLAYER((PlayerTypes)iPlayer).firstCity(&iLoop); pCity != NULL; pCity = GET_PLAYER((PlayerTypes)iPlayer).nextCity(&iLoop) ){
-				if ( pCity ->getCulture( pCity ->getOwner() ) > iCulture ){
-					//logMsg("better city is: %d %d ",pCity ->getX(),pCity ->getY());
-					return false;
+				if ( x != pCity ->getX() || y != pCity ->getY() ){
+					if ( pCity ->getCulture( pCity ->getOwner() ) >= iCulture ){
+						//logMsg("better city is: %d %d ",pCity ->getX(),pCity ->getY());
+						return false;
+					};
 				};
 			};
 		};

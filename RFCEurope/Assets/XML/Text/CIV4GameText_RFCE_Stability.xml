@@ -78,6 +78,15 @@
 		<Portuguese></Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_STABILITY_CONQUEST_LAST_CITY</Tag>
+		<English>has lost its last city, thus all of its influence!</English>
+		<French>has lost all of its influence!</French>
+		<German>has lost all of its influence!</German>
+		<Italian>has lost all of its influence!</Italian>
+		<Spanish>has lost all of its influence!</Spanish>
+		<Portuguese>has lost all of its influence!</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_STABILITY_CIVILWAR_BARBS_HUMAN</Tag>
 		<English>Barbarians have taken over huge swaths of your former territory, your empire is descending into civil war!</English>
 		<French>Votre empire entre en guerre civile !</French>
@@ -124,7 +133,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STABILITY_CIVILWAR_MOTHERLAND</Tag>
-		<English>is descending into civil war, because of homesickness!</English>
+		<English>is descending into civil war, because of losing it's homeland!</English>
 		<French>entre en guerre civile !</French>
 		<German>steht vor einem B&#252;rgerkrieg!</German>
 		<Italian>sta cadendo nella guerra civile!</Italian>

@@ -52,7 +52,9 @@ void CyGlobalContextPythonInterface5(python::class_<CyGlobalContext>& x)
 
 
 		// UHV optimizations
+		.def("getLargestOtherCity", &CyGlobalContext::getLargestOtherCity, "int (int x, int y)") // Absinthe
 		.def("isLargestCity", &CyGlobalContext::isLargestCity, "bool (int x, int y)") // 3Miro
+		.def("getTopCultureOtherCity", &CyGlobalContext::getTopCultureOtherCity, "int (int x, int y)") // Absinthe
 		.def("isTopCultureCity", &CyGlobalContext::isTopCultureCity, "bool (int x, int y)") // 3Miro
 		.def("doesOwnCities", &CyGlobalContext::doesOwnCities, "int (int iCiv, int BLx, int BLy, int TRx, int TRy )") // 3Miro
 		.def("doesOwnOrVassalCities", &CyGlobalContext::doesOwnOrVassalCities, "int (int iCiv, int BLx, int BLy, int TRx, int TRy )") // 3Miro
@@ -69,7 +71,8 @@ void CyGlobalContextPythonInterface5(python::class_<CyGlobalContext>& x)
 		.def("addNormalException", &CyGlobalContext::addNormalException, "void (int iCiv, int x, int y)") // 3Miro
 
 		// Absinthe: unused in RFCE
-	/*	// stability sweep
+		/*
+		// stability sweep
 		.def("calcLastOwned", &CyGlobalContext::calcLastOwned, "void ()") // 3Miro
 		.def("getlOwnedPlots", &CyGlobalContext::getlOwnedPlots, "int (int iCiv )") // 3Miro
 		.def("getlOwnedCities", &CyGlobalContext::getlOwnedCities, "int (int iCiv )") // 3Miro
@@ -77,7 +80,7 @@ void CyGlobalContextPythonInterface5(python::class_<CyGlobalContext>& x)
 		.def("cityStabilityExpansion", &CyGlobalContext::cityStabilityExpansion, "int (int iPlayer, int iFCity)") // 3Miro
 		.def("cityStabilityPenalty", &CyGlobalContext::cityStabilityPenalty, "int ( int iPlayer, int iAnger, int iHealth, int iReligion, int iLarge, int iHurry, int iNoMilitary, int iWarW, int iFReligion, int iFCulture, int iPerCityCap )") // 3Miro
 		.def("damageFromBuilding", &CyGlobalContext::damageFromBuilding, "void (int iPlayer, int iBuilding, int iFoeDamage, int iBarbDamage ))") // 3Miro
-	*/
+		*/
 
 		// prosecution consts
 		//.def("getProsecutionCount", &CyGlobalContext::getProsecutionCount, "int (int iCiv )") // 3Miro

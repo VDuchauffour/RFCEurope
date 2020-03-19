@@ -551,13 +551,15 @@ public:
 
 	DllExport void handleDiplomacySetAIComment(DiploCommentTypes eComment) const;
 
-	// 3Miro: optimized search functions mostly for UHVs, Exposed to Python
-	bool isLargestCity( int x, int y );// true if plot x,y is the largest city
+	// Absinthe & 3Miro: optimized search functions mostly for UHVs, Exposed to Python
+	int getLargestOtherCity( int x, int y );
+	bool isLargestCity( int x, int y ); // true if plot x,y is the largest city
+	int getTopCultureOtherCity( int x, int y );
 	bool isTopCultureCity( int x, int y ); // true if plot x,y is the most cultured city
 	int doesOwnCities( int iCiv, int BLx, int BLy, int TRx, int TRy ); 
-		//returns 0 if there is city in the rect not owned by iCiv
-		//       10 if there are no cities in the rect
-		//       11 if there are cities and all are owned by iCiv
+		// returns 0 if there is city in the rect not owned by iCiv
+		//        10 if there are no cities in the rect
+		//        11 if there are cities and all are owned by iCiv
 	int doesOwnOrVassalCities( int iCiv, int BLx, int BLy, int TRx, int TRy );
 		// same return, except allows for cities to be owned by a Vassal of iCiv
 	bool doesHaveOtherReligion( int BLx, int BLy, int TRx, int TRy, int AllowR );
