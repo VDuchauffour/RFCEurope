@@ -287,10 +287,10 @@ class CvRFCEventHandler:
 
 		# Absinthe: Ottoman UP
 		if gc.hasUP( playerType, con.iUP_Janissary ):
-			self.up.janissaryConquestUP( playerType, city )
+			self.up.janissaryNewCityUP( playerType, city, bConquest )
 
 		# Absinthe: Scottish UP
-		#			for all players (including indies and barbs), but only on conquest
+		#			against all players (including indies and barbs), but only on conquest
 		if owner == iScotland and bConquest: # playerType < con.iNumTotalPlayersB
 			# only in cities with at least 20% Scottish culture
 			iTotalCulture = city.countTotalCultureTimes100()
@@ -320,7 +320,7 @@ class CvRFCEventHandler:
 				if iCiv in Religions.lReformationNeighbours[iDutch] and self.rel.getReformationHitMatrix(iCiv) == 0:
 					self.rel.setReformationHitMatrix(iCiv, 1)
 
-		# Absinthe: Spread some culture of the conqueror civ to the occupied city
+		# Absinthe: Spread some culture to the newly acquired city - this is for nearby indy cities, so should be applied in all cases (conquest, flip, trade)
 		if ( playerType < iNumMajorPlayers ):
 			utils.spreadMajorCulture( playerType, city.getX(), city.getY() )
 
@@ -368,7 +368,7 @@ class CvRFCEventHandler:
 		#			city.setHasRealBuilding((iNationalWonder), False)
 
 		self.pla.onCityAcquired(owner, playerType, city) #Plague
-		self.vic.onCityAcquired(owner, playerType, city, bConquest) #Victory
+		self.vic.onCityAcquired(owner, playerType, city, bConquest, bTrade) #Victory
 		self.company.onCityAcquired(owner, playerType, city)
 
 		# Remove Silk resource near Constantinople if it is conquered

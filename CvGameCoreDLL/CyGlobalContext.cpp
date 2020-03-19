@@ -940,8 +940,16 @@ void CyGlobalContext::setSettlersMap( int iCiv, int y, int x, int iVal ){
 	settlersMaps[ iCiv * SETTLER_OFFSET + EARTH_X *y + x ] = iVal;
 };
 
+int CyGlobalContext::getLargestOtherCity( int x, int y ){
+	return getCyGame() ->getLargestOtherCity( x, y );
+};
+
 bool CyGlobalContext::isLargestCity( int x, int y ){
 	return getCyGame() ->isLargestCity( x, y );
+};
+
+int CyGlobalContext::getTopCultureOtherCity( int x, int y ){
+	return getCyGame() ->getTopCultureOtherCity( x, y );
 };
 
 bool CyGlobalContext::isTopCultureCity( int x, int y ){

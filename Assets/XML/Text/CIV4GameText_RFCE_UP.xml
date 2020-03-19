@@ -367,7 +367,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_TUR2</Tag>
-		<English>Less stability penalty from non-state religions, your cities generate Janissary units if they have foreign religions in them.</English>
+		<English>Less stability penalty from non-state religions. Janissary Units are recruited for your service for free, their generation rate is based on the infidel populace in your cities. Newly conquered cities highly contribute to the generation of the next Janissary.</English>
 		<French>Every turn you generate Janissary points for foreign religion in your cities, this gives you free units every few turns</French>
 		<German>Fremde Religionen erzeugen in jeder Runde Janitscharen-Punkte in euren Städten, dadurch erhaltet ihr alle paar Runden freie Einheiten</German>
 		<Italian>Ogni turno generi punti Giannizzeri per le religioni straniere nelle tue città, che ti forniscono dei Giannizzeri ogni tanto</Italian>
@@ -421,7 +421,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_DEN2</Tag>
-		<English>+2 gold per turn for every foreign coastal city in the Baltic.</English>
+		<English>+2 gold per turn for every foreign city on the coast of the Baltic Sea.</English>
 		<French>You get 2 gold per turn for every foreign coastal city in the Baltic.</French>
 		<German>You get 2 gold per turn for every foreign coastal city in the Baltic.</German>
 		<Italian>You get 2 gold per turn for every foreign coastal city in the Baltic.</Italian>

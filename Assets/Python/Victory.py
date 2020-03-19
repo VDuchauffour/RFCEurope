@@ -352,32 +352,61 @@ class Victory:
 				self.lostUHV( iGermany, 1 )
 
 
-	def onCityAcquired(self, owner, iNewOwner, city, bConquest):
+	def onCityAcquired(self, owner, iNewOwner, city, bConquest, bTrade):
 		if not gc.getGame().isVictoryValid(7): # Victory 7 == historical
 			return
 
 		iPlayer = owner
 		iGameTurn = gc.getGame().getGameTurn()
 
-		# Bulgaria UHV 3: Do not lose a city to barbarians (Mongols), Byzantines, or Ottomans before 1396
+		# Bulgaria UHV 3: Do not lose a city to Barbarians, Mongols, Byzantines, or Ottomans before 1396
 		if iPlayer == iBulgaria:
 			if self.isPossibleUHV(iPlayer, 2, False):
 				if iGameTurn <= xml.i1396AD:
-					if iNewOwner in [iBarbarian, iTurkey, iByzantium]:
-						self.lostUHV( iBulgaria, 2 )
+					if iNewOwner in [iBarbarian, iByzantium, iTurkey]:
+						# conquered and flipped cities always count
+						# for traded cities, there should be a distinction between traded in peace (gift) and traded in ending a war (peace negotiations)
+						# instead of that, we check if the civ is at peace when the trade happens
+						#TODO#BUG# unfortunately the trade deal just ending a war is taken into account as a peace deal - maybe check if there was a war in this turn, or the last couple turns?
+						if not bTrade:
+							self.lostUHV( iBulgaria, 2 )
+						else:
+							bIsAtWar = False
+							for iCiv in [iByzantium, iTurkey]:
+								pCiv = gc.getPlayer(iCiv)
+								if pCiv.isAlive():
+									if teamBulgaria.isAtWar(iCiv):
+										bIsAtWar = True
+							if bIsAtWar:
+								self.lostUHV( iBulgaria, 2 )
 
 		# Portugal UHV 2: Do not lose a city before 1640
 		elif iPlayer == iPortugal:
 			if self.isPossibleUHV(iPlayer, 1, False):
-				if bConquest:
+				# conquered and flipped cities always count
+				# for traded cities, there should be a distinction between traded in peace (gift) and traded in ending a war (peace negotiations)
+				# instead of that, we check if the civ is at peace when the trade happens
+				#TODO#BUG# unfortunately the trade deal just ending a war is taken into account as a peace deal - maybe check if there was a war in this turn, or the last couple turns?
+				if not bTrade:
 					self.lostUHV( iPortugal, 1 )
+				else:
+					bIsAtWar = False
+					for iCiv in range( iNumPlayers ):
+						pCiv = gc.getPlayer(iCiv)
+						if pCiv.isAlive():
+							if teamBulgaria.isAtWar(iCiv):
+								bIsAtWar = True
+					if bIsAtWar:
+						self.lostUHV( iPortugal, 1 )
 
 		# Norway UHV 1: Going Viking
 		elif iNewOwner == iNorway and iGameTurn < xml.i1066AD + 2:
-			pNorway.setUHVCounter( 0, pNorway.getUHVCounter( 0 ) + city.getPopulation() )
 			# Absinthe: city is already reduced by 1 on city conquest, so city.getPopulation() is one less than the original size (unless it was already 1)
-			if bConquest: # note that if the size was 1 originally you get one extra point this way, but that's probably not a big issue
-				pNorway.setUHVCounter( 0, pNorway.getUHVCounter( 0 ) + 1 )
+			if bConquest:
+				if city.getPopulation() > 1:
+					pNorway.setUHVCounter( 0, pNorway.getUHVCounter( 0 ) + city.getPopulation() + 1 )
+				else:
+					pNorway.setUHVCounter( 0, pNorway.getUHVCounter( 0 ) + city.getPopulation() )
 
 		# Poland UHV 3: Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and have at least 2 Jewish Quarters in your cities
 		elif iNewOwner == iPoland:
@@ -761,7 +790,7 @@ class Victory:
 		if iGameTurn == xml.i1259AD:
 			self.expireUHV( iBulgaria, 1 )
 
-		# UHV 3: Do not lose a city to barbarians (Mongols), Byzantines, or Ottomans before 1396
+		# UHV 3: Do not lose a city to Barbarians, Mongols, Byzantines, or Ottomans before 1396
 		# Controlled in the onCityAcquired function
 		elif iGameTurn == xml.i1396AD:
 			if self.isPossibleUHV(iBulgaria, 2, True):
@@ -807,7 +836,7 @@ class Victory:
 		#	else:
 		#		self.lostUHV( iNorway, 0 )
 
-		# UHV 1: Gain 100 Viking points and build Vinland by 1066
+		# UHV 1: Gain 100 Viking Points and build Vinland by 1066
 		# Viking points counted in the onCityAcquired, onPillageImprovement and onCombatResult functions
 		if self.isPossibleUHV(iNorway, 0, True):
 			if pNorway.getUHVCounter( 0 ) >= 100 and teamNorway.getProjectCount(xml.iColVinland) >= 1:
@@ -877,7 +906,8 @@ class Victory:
 		if iGameTurn == xml.i1204AD:
 			self.expireUHV( iVenecia, 1 )
 
-		# UHV 3: Be the first to build a Colony from the Age of Discovery (Vinland is from the Viking Age)
+		# UHV 3: Be the first to build a Colony from the Age of Discovery
+		# UHV 3: Vinland is from the Viking Age, all other Colonies are from the Age of Discovery
 		# handled in the onProjectBuilt function
 
 
@@ -1052,7 +1082,7 @@ class Victory:
 				else:
 					self.lostUHV( iSpain, 0 )
 
-		# UHV 2: Have more Colonies than any other nation in 1588 (while having at least 3)
+		# UHV 2: Have more Colonies than any other nation in 1588, while having at least 3
 		elif iGameTurn == xml.i1588AD:
 			if self.isPossibleUHV(iSpain, 1, True):
 				bMost = True
@@ -1067,7 +1097,7 @@ class Victory:
 				else:
 					self.lostUHV( iSpain, 1 )
 
-		# UHV 3: Ensure that the Catholic nations have more population and more land than any other religion in 1648
+		# UHV 3: Ensure that Catholic nations have more population and more land than any other religion in 1648
 		elif iGameTurn == xml.i1648AD:
 			if self.isPossibleUHV(iSpain, 2, True):
 				if pSpain.getStateReligion() != xml.iCatholicism:
@@ -1084,6 +1114,22 @@ class Victory:
 						else:
 							lLand[ 5 ] += pPlayer.getTotalLand()
 							lPop[ 5 ] += pPlayer.getTotalPopulation()
+					# The Barbarian civ counts as Pagan, Independent cities are included separately, based on the religion of the population
+					pBarbarian = gc.getPlayer( con.iBarbarian )
+					lLand[ 5 ] += pBarbarian.getTotalLand()
+					lPop[ 5 ] += pBarbarian.getTotalPopulation()
+					for iIndyCiv in [con.iIndependent, con.iIndependent2, con.iIndependent3, con.iIndependent4]:
+						for pCity in utils.getCityList( iIndyCiv ):
+							pIndyCiv = gc.getPlayer( iIndyCiv )
+							iAverageCityLand = pIndyCiv.getTotalLand() / pIndyCiv.getNumCities()
+							if pCity.getReligionCount() == 0:
+								lLand[ 5 ] += iAverageCityLand
+								lPop[ 5 ] += pCity.getPopulation()
+							else:
+								for iReligion in range( xml.iNumReligions ):
+									if pCity.isHasReligion( iReligion ):
+										lLand[ iReligion ] += iAverageCityLand / pCity.getReligionCount()
+										lPop[ iReligion ] += pCity.getPopulation() / pCity.getReligionCount()
 
 					iCathLand = lLand[ xml.iCatholicism ]
 					iCathPop  = lPop[ xml.iCatholicism ]
@@ -1091,10 +1137,10 @@ class Victory:
 					bWon = True
 					for iReligion in range( xml.iNumReligions + 1 ):
 						if iReligion != xml.iCatholicism:
-							if lLand[ iReligion ] > iCathLand:
+							if lLand[ iReligion ] >= iCathLand:
 								bWon = False
 								break
-							if lPop[ iReligion ] > iCathPop:
+							if lPop[ iReligion ] >= iCathPop:
 								bWon = False
 								break
 
@@ -1116,7 +1162,7 @@ class Victory:
 		if iGameTurn == xml.i1296AD:
 			self.expireUHV( iScotland, 0 )
 
-		# UHV 2: Have 1500 attitude points with France by 1560 (attitude points are added every turn depending on your relations)
+		# UHV 2: Have 1500 Attitude Points with France by 1560 (Attitude Points are added every turn depending on your relations)
 		if self.isPossibleUHV(iScotland, 1, True):
 			if pFrankia.isAlive():
 				# Being at war with France gives a big penalty (and ignores most bonuses!)
@@ -1211,6 +1257,7 @@ class Victory:
 					self.lostUHV( iGenoa, 0 )
 
 		# UHV 2: Have the largest total amount of commerce from foreign Trade Route Exports and Imports in 1566
+		# UHV 2: Export is based on your cities' trade routes with foreign cities, import is based on foreign cities' trade routes with your cities
 		elif iGameTurn == xml.i1566AD:
 			if self.isPossibleUHV(iGenoa, 1, True):
 				iGenoaTrade = pGenoa.calculateTotalImports(YieldTypes.YIELD_COMMERCE) + pGenoa.calculateTotalExports(YieldTypes.YIELD_COMMERCE)
@@ -1321,7 +1368,8 @@ class Victory:
 				else:
 					self.lostUHV( iAragon, 0 )
 
-		# UHV 2: Have 12 Consulates of the Sea and 30 Trade Ships (ships with at least one cargo space) in 1444
+		# UHV 2: Have 12 Consulates of the Sea and 30 Trade Ships in 1444
+		# UHV 2: Ships with at least one cargo space count as Trade Ships
 		elif iGameTurn == xml.i1444AD:
 			if self.isPossibleUHV(iAragon, 1, True):
 				iPorts = pAragon.countNumBuildings(xml.iAragonSeaport)
@@ -1357,6 +1405,7 @@ class Victory:
 			self.expireUHV( iPrussia, 1 )
 
 		# UHV 3: Settle a total of 15 Great People in your capital
+		# UHV 3: Great People can be settled in any combination, Great Generals included
 		if self.isPossibleUHV(iPrussia, 2, True):
 			pCapital = pPrussia.getCapitalCity()
 			iGPStart = gc.getInfoTypeForString("SPECIALIST_GREAT_PRIEST")
@@ -1477,7 +1526,7 @@ class Victory:
 
 	def checkMoscow( self, iGameTurn ):
 
-		# UHV 1: Free Eastern Europe from the Mongols
+		# UHV 1: Free Eastern Europe from the Mongols (Make sure there are no Mongol (or any other Barbarian) cities in Russia and Ukraine in 1482)
 		if iGameTurn == xml.i1482AD:
 			if self.isPossibleUHV(iMoscow, 0, True):
 				bClean = True
@@ -1501,7 +1550,7 @@ class Victory:
 			if landPercent >= 25:
 				self.wonUHV( iMoscow, 1 )
 
-		# UHV 3: Get into warm waters
+		# UHV 3: Get into warm waters (Conquer Constantinople or control an Atlantic Access resource)
 		if self.isPossibleUHV(iMoscow, 2, True):
 			if pMoscow.countCultBorderBonuses( xml.iAccess ) > 0:
 				self.wonUHV( iMoscow, 2 )
@@ -1531,7 +1580,7 @@ class Victory:
 		elif iGameTurn == xml.i1660AD:
 			self.expireUHV( iSweden, 1 )
 
-		# UHV 3: Control every coastal city on the Baltic in 1750
+		# UHV 3: Control every coastal city on the Baltic Sea in 1750
 		elif iGameTurn == xml.i1750AD:
 			if self.isPossibleUHV(iSweden, 2, True):
 				if up.getNumForeignCitiesOnBaltic(iSweden, True) > 0:

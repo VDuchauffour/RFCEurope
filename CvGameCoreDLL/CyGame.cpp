@@ -1187,9 +1187,17 @@ void CyGame::doControl(int iControl)
 
 
 
-// 3MiroOpt
+// Absinthe & 3Miro optimizations
+int CyGame::getLargestOtherCity( int x, int y ){
+	return m_pGame ->getLargestOtherCity( x, y );
+};
+
 bool CyGame::isLargestCity( int x, int y ){
 	return m_pGame -> isLargestCity( x, y );
+};
+
+int CyGame::getTopCultureOtherCity( int x, int y ){
+	return m_pGame ->getTopCultureOtherCity( x, y );
 };
 
 bool CyGame::isTopCultureCity( int x, int y ){

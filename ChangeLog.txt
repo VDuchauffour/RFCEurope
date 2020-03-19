@@ -14,7 +14,7 @@ You can find more details in the Manual and Reference folders in the mod. A copy
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for RFCE 1.6 and 1.7:
-(1.6: no separate release, relevant SVN revision (r1278) became available in december 2018)
+(1.6: relevant SVN revision (r1278) became available in december 2018)
 (1.7: released: N/A)
 
 	New wonders:
@@ -136,6 +136,17 @@ Changes for RFCE 1.6 and 1.7:
 		- Aragon 2nd UHV: new aspect: have at least 30 trade ships (ships with at least one cargo space)
 		- German 2nd UHV: The Holy Roman Empire: province of Liguria is also needed
 		- Scottish Auld Alliance UHV: tweaked values, good diplo relations and resource trade add more points, sharing a religion is even more important
+		- Norwegian 1st UHV: Flipped and traded cities no longer give Viking Points, only conquered ones
+		- Norwegian 1st UHV: Fixed issue where you got an extra Viking Point on conquering size 1 cities
+		- Spanish 3rd UHV: Barbarians count as Pagans, Independent cities are included separately, with land and population divided between the religions present in the city.
+		- Cordoban 1st and Byzantine 3rd UHV: Added information about the best competitor cities (name and size/culture)
+		- Bulgarian 3rd and Portuguese 2nd UHV: Now flipped away cities always count as lost, also cities which are traded away, unless the trade happens while you are at peace
+		- Fixed bug with the Spanish 3rd UHV, the religion with the biggest land and population was not selected well in some rare situations
+		- Fixed bug with the biggest city UHVs, where it was not a problem if one of your own cities were bigger than your capital (Cordoban and Byzantine UHVs)
+		- Fixed minor mistake with the best culture city UHV, where it was enough if you had the highest culture in a tie (Byzantine UHV)
+		- Introduced specific UHV help texts on the victory screen, for clarification/specification, with distinct color
+		- Converted parts of the UHV descriptions of Venice, Aragon, Norway, Scotland, Prussia into UHV help texts
+		- Added new UHV specifications as UHV help texts for Spain, Genoa, Novgorod, Moscow, Bulgaria, Portugal
 		- Fixed issue where mainscreen UHV counters displayed the same static value after the deadline, they are removed upon UHV completion
 		- Some mainscreen UHV counters now shown and calculated even after the UHV is completed, until the UHV date (e.g. the ones ideal for UHV challenges)
 		- Improved method for resource calculation inside borders (Novgorod and Muscovy UHV), now only improved resources count
@@ -145,11 +156,15 @@ Changes for RFCE 1.6 and 1.7:
 		- Fixed minor mistake with the Kievan and Lithuanian UHV counters on UHV checks
 		- Fixed mistake where Bank UBs were not accounted for the Genoese Banking UHV
 		- Updated the timeline of the mod, synchronized all UHV dates
+		- Minor improvements in the UHV descriptions for a couple civs (Bulgaria, Spain, Poland, Sweden, Norway, Scotland, Moscow)
+		- Various text improvements in the UHV helpers/counters on the victory screen (Hungary, Muscovy, Sweden, Spain, Venice, Germany, Bulgaria)
+		- Improved layout for UHV helpers/counters with % in them (on the Victory Screen), also for competition-type UHV counters
 
 	UPs:
 		- Byzantium UP: new aspect: can use the Imperialism civic without the given tech
 		- Polish UP: new aspect: religions are more easy to spread
-		- Ottoman UP: gain additional Janissary units when conquering cities with foreign religions in them
+		- Ottoman UP: you gain a significant amount of Janissary Points when conquering cities with foreign religions in them
+		- Ottoman UP: also adds Janissary Points when acquiring cities through trade or flip (although much less points than for conquest)
 		- Ottoman UP: overflow is stored for the next unit on Janissary generation; it's possible to generate more Janissaries in a turn (in extreme situations)
 		- English UP: cottages, hamlets, villages, towns get +1 hammers, workshops get +1 commerce
 		- Genoese UP: new aspect: increased spread chance for companies
@@ -165,7 +180,7 @@ Changes for RFCE 1.6 and 1.7:
 		- Burgundy, Spain and Lithuania UP: free yields from the UPs are now properly shown in the city tooltips
 		- Fixed bug where the free yields from UPs were not eligible for modifiers at all
 		- Fixed bug where some of the UP-related free yields where not applied/calculated correctly on the main screen overall counters
-		- Revised UP texts, various fixes and wording improvements
+		- Revised UP texts, various extensions, fixes and wording improvements
 		- Reduced Portuguese UP to 30% bonus production speed for colonies (from 40%)
 		- Fixed syncronization issue in the Muscovian UP, slightly increased it's maintenance reduction effect
 		- Revised all UPs coded in the dll, improving efficiency and usability (e.g. for Cordoba and Muscovy)
@@ -299,6 +314,9 @@ Changes for RFCE 1.6 and 1.7:
 		- Fixed issue with the Victory help texts not always showing the correct status of the civs in the ConquerOrVassalize UHVs
 		- Pagan culture from buildings (both for the given city bonus and the all cities bonus) is now properly shown in the city tooltips
 		- "Wonder captured"-type messages were added for Shrines too
+		- Changed dark red color texts on the Victory Screen to a little lighter red, to have better visibility
+		- Removed the "The xyz Civilization has been destroyed!!!" messages, which were redundant right after the collapse message
+		- Added message for the human player, when a known civ loses its last city by conquest
 
 	Mercenaries:
 		- Added new, proper mercenary screen button (in the style of vanilla subscreen buttons), revised positioning
@@ -1644,7 +1662,7 @@ Changes for RFCE 1.3:
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Changes for RFCE 1.2:
-(no separate release, relevant SVN revision (r1086) became available in july 2013)
+(relevant SVN revision (r1086) became available in july 2013)
 
 	Stability improvements:
 		- Province stability levels:

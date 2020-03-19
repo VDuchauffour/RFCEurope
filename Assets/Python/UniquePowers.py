@@ -83,15 +83,23 @@ class UniquePowers:
 
 		pPlayer.setPicklefreeParameter( iJanissaryPoints, iTotalPoints )
 
-	def janissaryConquestUP(self, iPlayer, city):
+	def janissaryNewCityUP(self, iPlayer, city, bConquest):
 		pPlayer = gc.getPlayer( iPlayer )
 		iStateReligion = pPlayer.getStateReligion()
-		iIsHasForeignReligion = 0
 		for iReligion in range( xml.iNumReligions ):
 			if iReligion != iStateReligion and city.isHasReligion( iReligion ):
-				iIsHasForeignReligion = 1
+				iCityPopulation = city.getPopulation()
+				# more janissary points on conquest, less on flip and trade
+				if bConquest:
+					iJanissaryPoint = iCityPopulation * 9
+				else:
+					iJanissaryPoint = iCityPopulation * 4
+				iOldPoints = pPlayer.getPicklefreeParameter( iJanissaryPoints )
+				pPlayer.setPicklefreeParameter( iJanissaryPoints, iOldPoints + iJanissaryPoint )
 				break
 
+		# removed free janissary, probably too powerful to add a new janissary unit right on conquest
+		iIsHasForeignReligion = 0
 		if iIsHasForeignReligion:
 			iX = city.getX()
 			iY = city.getY()

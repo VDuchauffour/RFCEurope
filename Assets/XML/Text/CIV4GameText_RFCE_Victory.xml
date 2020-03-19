@@ -198,7 +198,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BUL3</Tag>
-		<English>[COLOR_YELLOW]Not Even the Birds Can Fly Through:[COLOR_REVERT] Do not lose a city to barbarians (Mongols), Byzantines, or Ottomans before 1396AD.</English>
+		<English>[COLOR_YELLOW]Not Even the Birds Can Fly Through:[COLOR_REVERT] Do not lose a city to Barbarians, Mongols, Byzantines, or Ottomans before 1396AD.</English>
 		<French>[COLOR_YELLOW]Not Even the Birds Can Fly Through:[COLOR_REVERT] Ne perdre aucune ville par les Mongoles, les Byzantins ou les Ottomans avant 1396 ap.JC.</French>
 		<German>[COLOR_YELLOW]Nicht Einmal Vögel Können es Durchqueren:[COLOR_REVERT] Verliert vor 1396 n.Chr. keine Stadt an die Barbaren (Mongolen), die Byzantiner oder Osmanen.</German>
 		<Italian>[COLOR_YELLOW]Neanche gli uccelli possono attraversare le nostre mura:[COLOR_REVERT] Non farti conquistare nessuna città da Mongoli (Barbari), Bizantini o Ottomani prima del 1396AD.</Italian>
@@ -324,7 +324,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SPN2</Tag>
-		<English>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Have more Colonies than any other nation in 1588AD (while having at least 3).</English>
+		<English>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Have more Colonies than any other nation in 1588AD, while having at least 3.</English>
 		<French>[COLOR_YELLOW]The Spanish Armada:[COLOR_REVERT] Have most Colonies in 1588AD (while having at least 3).</French>
 		<German>[COLOR_YELLOW]Die Spanische Armada:[COLOR_REVERT] Besitzt 1588 n.Chr. die meisten Kolonien.</German>
 		<Italian>[COLOR_YELLOW]L'Invincibile Armada:[COLOR_REVERT] Devi avere più colonie di tutti nel 1588AD.</Italian>
@@ -333,7 +333,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SPN3</Tag>
-		<English>[COLOR_YELLOW]Defender of Catholic Europe:[COLOR_REVERT] Ensure that the Catholic nations have more population and more land than any other religion in 1648AD.</English>
+		<English>[COLOR_YELLOW]Defender of Catholic Europe:[COLOR_REVERT] Ensure that Catholic nations have more population and more land than any other religion in 1648AD.</English>
 		<French>[COLOR_YELLOW]Defender of Catholic Europe:[COLOR_REVERT] Ensure that the Catholic nations have more population and more land than any other religion in 1648AD.</French>
 		<German>[COLOR_YELLOW]Verteidiger des katholischen Europas:[COLOR_REVERT] Stellt sicher dass 1648 n.Chr. die katholischen Nationen eine größere Bevölkerung und mehr Land besitzen als irgendeine andere Religion.</German>
 		<Italian>[COLOR_YELLOW]Difensore dell'Europa Cattolica:[COLOR_REVERT] Assicurati che le nazioni Cattoliche abbiano più popolazione e più territorio complessivi di ogni altra religione nel 1648AD.</Italian>
@@ -388,11 +388,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_VEN3</Tag>
-		<English>[COLOR_YELLOW]Domination of the World Ocean:[COLOR_REVERT] Be the first to build a Colony from the Age of Discovery. (Vinland is from the Viking Age.)</English>
-		<French>[COLOR_YELLOW]Domination of the World Ocean:[COLOR_REVERT] Be the first to build a Colony from the Discovery Era. (Vinland is from the Viking Age.)</French>
+		<English>[COLOR_YELLOW]Domination of the World Ocean:[COLOR_REVERT] Be the first to build a Colony from the Age of Discovery.</English>
+		<French>[COLOR_YELLOW]Domination of the World Ocean:[COLOR_REVERT] Be the first to build a colony from the Discovery Era.</French>
 		<German>[COLOR_YELLOW]Dominanz der Weltmeere:[COLOR_REVERT] Errichtet als erste Zivilisation eine Kolonie.</German>
 		<Italian>[COLOR_YELLOW]Dominio sugli Oceani:[COLOR_REVERT] Devi essere il primo a costruire un Progetto Coloniale.</Italian>
-		<Spanish>[COLOR_YELLOW]Domination of the World Ocean:[COLOR_REVERT] Be the first to build a Colony from the Discovery Era. (Vinland is from the Viking Age.)</Spanish>
+		<Spanish>[COLOR_YELLOW]Domination of the World Ocean:[COLOR_REVERT] Be the first to build a colony from the Discovery Era.</Spanish>
 		<Portuguese>[COLOR_YELLOW]Dominação do Oceano Mundial:[COLOR_REVERT] Seja o primeiro a construir um Projeto Colonial.</Portuguese>
 	</TEXT>
 	<TEXT>
@@ -505,7 +505,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_POL1</Tag>
-		<English>[COLOR_YELLOW]The Granary of Europe:[COLOR_REVERT] Produce the most food at least one year between 1500AD and 1520AD.</English>
+		<English>[COLOR_YELLOW]The Granary of Europe:[COLOR_REVERT] Produce the most food in at least one year between 1500AD and 1520AD.</English>
 		<French>[COLOR_YELLOW]The Granary of Europe:[COLOR_REVERT] Produce the most food at least one year between 1500 and 1520 AD.</French>
 		<German>[COLOR_YELLOW]Die Kornkammer Europas:[COLOR_REVERT] Produziert zwischen 1500 und 1520 n.Chr. mindestens ein Jahr lang die meiste Nahrung.</German>
 		<Italian>[COLOR_YELLOW]Il Granaio d'Europa:[COLOR_REVERT] Devi produrre la maggior quantità di cibo in almeno un turno tra il 1500 e 1520 AD.</Italian>
@@ -532,7 +532,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_MOS1</Tag>
-		<English>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] Make sure there are no Mongol (Barbarian) cities in Russia and Ukraine in 1482AD.</English>
+		<English>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] Make sure there are no Mongol (or any other Barbarian) cities in Russia and Ukraine in 1482AD.</English>
 		<French>[COLOR_YELLOW]The Homeland:[COLOR_REVERT] Make sure there are no Mongol (Barbarian) cities in Russia and Ukraine in 1482AD.</French>
 		<German>[COLOR_YELLOW]Das Vaterland:[COLOR_REVERT] Sorgt dafür dass 1482 n.Chr. keine mongolischen (barbarischen) Städte in Russland und der Ukraine sind.</German>
 		<Italian>[COLOR_YELLOW]La Patria:[COLOR_REVERT] Assicurati che non ci siano città Mongole (Barbare) nelle Russia e Ucraina nel 1482AD.</Italian>
@@ -767,16 +767,16 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SWE3</Tag>
-		<English>[COLOR_YELLOW]Dominium Maris Baltici:[COLOR_REVERT] Control every coastal city on the Baltic in 1750AD.</English>
-		<French>[COLOR_YELLOW]Dominium Maris Baltici:[COLOR_REVERT] Control every coastal city on the Baltic in 1750AD.</French>
-		<German>[COLOR_YELLOW]Dominium Maris Baltici:[COLOR_REVERT] Control every coastal city on the Baltic in 1750AD.</German>
-		<Italian>[COLOR_YELLOW]Dominium Maris Baltici:[COLOR_REVERT] Control every coastal city on the Baltic in 1750AD.</Italian>
-		<Spanish>[COLOR_YELLOW]Dominium Maris Baltici:[COLOR_REVERT] Control every coastal city on the Baltic in 1750AD.</Spanish>
-		<Portuguese>[COLOR_YELLOW]Dominium Maris Baltici:[COLOR_REVERT] Control every coastal city on the Baltic in 1750AD.</Portuguese>
+		<English>[COLOR_YELLOW]Dominium Maris Baltici:[COLOR_REVERT] Control every coastal city on the Baltic Sea in 1750AD.</English>
+		<French>[COLOR_YELLOW]Dominium Maris Baltici:[COLOR_REVERT] Control every coastal city on the Baltic Sea in 1750AD.</French>
+		<German>[COLOR_YELLOW]Dominium Maris Baltici:[COLOR_REVERT] Control every coastal city on the Baltic Sea in 1750AD.</German>
+		<Italian>[COLOR_YELLOW]Dominium Maris Baltici:[COLOR_REVERT] Control every coastal city on the Baltic Sea in 1750AD.</Italian>
+		<Spanish>[COLOR_YELLOW]Dominium Maris Baltici:[COLOR_REVERT] Control every coastal city on the Baltic Sea in 1750AD.</Spanish>
+		<Portuguese>[COLOR_YELLOW]Dominium Maris Baltici:[COLOR_REVERT] Control every coastal city on the Baltic Sea in 1750AD.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOR1</Tag>
-		<English>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 100 Viking points and build Vinland by 1066AD.</English>
+		<English>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 100 Viking Points and build Vinland by 1066AD.</English>
 		<French>[COLOR_YELLOW]Vikings:[COLOR_REVERT] Gain 100 Viking points and build Vinland by 1066AD.</French>
 		<German>[COLOR_YELLOW]Wikinger:[COLOR_REVERT] Erzielt bis 1066 n.Chr. 100 Wikingerpunkte.</German>
 		<Italian>[COLOR_YELLOW]Vichinghi:[COLOR_REVERT] Ottieni 100 punti Vichinghi entro il 1066AD.</Italian>
@@ -875,7 +875,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_PRU3</Tag>
-		<English>[COLOR_YELLOW]Enlightened Despotism:[COLOR_REVERT] Settle a total of 15 Great People in any combination, including Great Generals, in your capital.</English>
+		<English>[COLOR_YELLOW]Enlightened Despotism:[COLOR_REVERT] Settle a total of 15 Great People in your capital.</English>
 		<French>[COLOR_YELLOW]Enlightened Despotism:[COLOR_REVERT] Settle a total of 15 Great People in any combination, including Great Generals, in your capital.</French>
 		<German>[COLOR_YELLOW]Enlightened Despotism:[COLOR_REVERT] Settle a total of 15 Great People in any combination, including Great Generals, in your capital.</German>
 		<Italian>[COLOR_YELLOW]Enlightened Despotism:[COLOR_REVERT] Settle a total of 15 Great People in any combination, including Great Generals, in your capital.</Italian>
@@ -893,7 +893,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SCO2</Tag>
-		<English>[COLOR_YELLOW]The Auld Alliance:[COLOR_REVERT] Have 1500 Attitude points with France by 1560AD.</English>
+		<English>[COLOR_YELLOW]The Auld Alliance:[COLOR_REVERT] Have 1500 Attitude Points with France by 1560AD.</English>
 		<French>[COLOR_YELLOW]The Auld Alliance:[COLOR_REVERT] Have 1500 Attitude points with France by 1560AD.</French>
 		<German>[COLOR_YELLOW]The Auld Alliance:[COLOR_REVERT] Have 1500 Attitude points with France by 1560AD.</German>
 		<Italian>[COLOR_YELLOW]The Auld Alliance:[COLOR_REVERT] Have 1500 Attitude points with France by 1560AD.</Italian>
@@ -920,7 +920,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_ARG2</Tag>
-		<English>[COLOR_YELLOW]Thalassocracy:[COLOR_REVERT] Have 12 Consulates of the Sea and 30 Trade Ships (ships with at least one cargo space) in 1444AD.</English>
+		<English>[COLOR_YELLOW]Thalassocracy:[COLOR_REVERT] Have 12 Consulates of the Sea and 30 Trade Ships in 1444AD.</English>
 		<French>[COLOR_YELLOW]Thalassocracy:[COLOR_REVERT] Have 12 Consulates of the Sea in 1444AD.</French>
 		<German>[COLOR_YELLOW]Thalassocracy:[COLOR_REVERT] Have 12 Consulates of the Sea in 1444AD.</German>
 		<Italian>[COLOR_YELLOW]Thalassocracy:[COLOR_REVERT] Have 12 Consulates of the Sea in 1444AD.</Italian>
@@ -1127,16 +1127,16 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BALTIC_CITIES</Tag>
-		<English>foreign cities on the Baltic.</English>
-		<French>foreign cities on the Baltic.</French>
-		<German>foreign cities on the Baltic.</German>
-		<Italian>foreign cities on the Baltic.</Italian>
-		<Spanish>foreign cities on the Baltic.</Spanish>
-		<Portuguese>foreign cities on the Baltic.</Portuguese>
+		<English>foreign cities on the coast of the Baltic Sea</English>
+		<French>foreign cities on the coast of the Baltic Sea</French>
+		<German>foreign cities on the coast of the Baltic Sea</German>
+		<Italian>foreign cities on the coast of the Baltic Sea</Italian>
+		<Spanish>foreign cities on the coast of the Baltic Sea</Spanish>
+		<Portuguese>foreign cities on the coast of the Baltic Sea</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_MOST_POPULATION</Tag>
-		<English>Most Population: </English>
+		<English>Religion with the biggest population (total population in the nations following it):</English>
 		<French>Most Population: </French>
 		<German>Größte Bevölkerung: </German>
 		<Italian>Maggiore Popolazione: </Italian>
@@ -1145,7 +1145,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_MOST_LAND</Tag>
-		<English>Most Land: </English>
+		<English>Religion with the most land (total land of the nations following it):</English>
 		<French>Most Land: </French>
 		<German>Größtes Land: </German>
 		<Italian>Maggiore Territorio: </Italian>
@@ -1154,7 +1154,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_PAGAN</Tag>
-		<English>Pagan</English>
+		<English>Paganism</English>
 		<French>Pagan</French>
 		<German>Heide</German>
 		<Italian>Pagano</Italian>
@@ -1189,7 +1189,7 @@
 		<Portuguese>Cidades sob controle: </Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UHV_MOR2_HELP</Tag>
+		<Tag>TXT_KEY_UHV_CITIES_HIGH_CULTURE</Tag>
 		<English>Cities with the highest culture:</English>
 		<French>Cities with the highest culture:</French>
 		<German>Cities with the highest culture:</German>
@@ -1198,22 +1198,103 @@
 		<Portuguese>Cities with the highest culture:</Portuguese>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UHV_ARG2_HELP</Tag>
+		<English>Ships with at least one cargo space count as Trade Ships.</English>
+		<French>Ships with at least one cargo space count as Trade Ships.</French>
+		<German>Ships with at least one cargo space count as Trade Ships.</German>
+		<Italian>Ships with at least one cargo space count as Trade Ships.</Italian>
+		<Spanish>Ships with at least one cargo space count as Trade Ships.</Spanish>
+		<Portuguese>Ships with at least one cargo space count as Trade Ships.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_VEN3_HELP</Tag>
+		<English>Vinland is from the Viking Age, all other Colonies are from the Age of Discovery.</English>
+		<French>Vinland is from the Viking Age, all other Colonies are from the Age of Discovery.</French>
+		<German>Vinland is from the Viking Age, all other Colonies are from the Age of Discovery.</German>
+		<Italian>Vinland is from the Viking Age, all other Colonies are from the Age of Discovery.</Italian>
+		<Spanish>Vinland is from the Viking Age, all other Colonies are from the Age of Discovery.</Spanish>
+		<Portuguese>Vinland is from the Viking Age, all other Colonies are from the Age of Discovery.</Portuguese>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UHV_NOR1_HELP</Tag>
-		<English>You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+2pt).</English>
-		<French>You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+2pt).</French>
-		<German>Punkte erhaltet ihr durch Stadteroberungen (+1pt pro Bevölkerung), Plündern von Verbesserungen (+1pt) und Versenken von Schiffen (+2pt).</German>
-		<Italian>Guadagni punti conquistando città (+1pt per abitante), distruggendo miglioramenti (+1pt) e affondando navi (+2pt).</Italian>
-		<Spanish>You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+2pt).</Spanish>
-		<Portuguese>Você ganha pontos por conquistar cidades (+1pt por população), pilhagem de melhorias (+1pt) e afundando navios (+2pt).</Portuguese>
+		<English>You gain Viking Points from conquering cities (+1 point per population), pillaging improvements (+1 point) and sinking ships (+2 points).</English>
+		<French>You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+2pts).</French>
+		<German>Punkte erhaltet ihr durch Stadteroberungen (+1pt pro Bevölkerung), Plündern von Verbesserungen (+1pt) und Versenken von Schiffen (+2pts).</German>
+		<Italian>Guadagni punti conquistando città (+1pt per abitante), distruggendo miglioramenti (+1pt) e affondando navi (+2pts).</Italian>
+		<Spanish>You gain points from conquering cities (+1pt per population), pillaging improvements (+1pt) and sinking ships (+2pts).</Spanish>
+		<Portuguese>Você ganha pontos por conquistar cidades (+1pt por população), pilhagem de melhorias (+1pt) e afundando navios (+2pts).</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_SCO2_HELP</Tag>
-		<English>You get points per turn for good relations (max 3), open borders (1), defensive pact (2), sharing a religion (1), imports (1/2 per resource), exports (1/2 per resource), common wars (2 per war). Bad relations, war with France, or having a different State Religion will seriously hurt your progress!</English>
+		<English>You gain Attitude Points in each turn for good relations (max 3), open borders (1), defensive pact (2), sharing a religion (1), imports and exports (1/2 per resource), common wars (2 per war). Bad relations, war with France, or having a different State Religion will seriously hurt your progress!</English>
 		<French>You get points per turn for good relations (max 3), open borders (1), defensive pact (2), sharing a religion (1), imports (1/2 per resource), exports (1/2 per resource), common wars (2 per war). Bad relations, war with France, or having a different State Religion will seriously hurt your progress!</French>
 		<German>You get points per turn for good relations (max 3), open borders (1), defensive pact (2), sharing a religion (1), imports (1/2 per resource), exports (1/2 per resource), common wars (2 per war). Bad relations, war with France, or having a different State Religion will seriously hurt your progress!</German>
 		<Italian>You get points per turn for good relations (max 3), open borders (1), defensive pact (2), sharing a religion (1), imports (1/2 per resource), exports (1/2 per resource), common wars (2 per war). Bad relations, war with France, or having a different State Religion will seriously hurt your progress!</Italian>
 		<Spanish>You get points per turn for good relations (max 3), open borders (1), defensive pact (2), sharing a religion (1), imports (1/2 per resource), exports (1/2 per resource), common wars (2 per war). Bad relations, war with France, or having a different State Religion will seriously hurt your progress!</Spanish>
 		<Portuguese>You get points per turn for good relations (max 3), open borders (1), defensive pact (2), sharing a religion (1), imports (1/2 per resource), exports (1/2 per resource), common wars (2 per war). Bad relations, war with France, or having a different State Religion will seriously hurt your progress!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_NOV2_HELP</Tag>
+		<English>Controlled resource means that it is improved and inside your cultural borders. Keep in mind that cities and forts also improve resources.</English>
+		<French>Resources need to be improved and inside your cultural borders.</French>
+		<German>Controlled means improved fur resources, inside your cultural borders.</German>
+		<Italian>Controlled means improved fur resources, inside your cultural borders.</Italian>
+		<Spanish>Controlled means improved fur resources, inside your cultural borders.</Spanish>
+		<Portuguese>Controlled means improved fur resources, inside your cultural borders.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_MOS3_HELP</Tag>
+		<English>Controlled resource means that it is improved and inside your cultural borders.</English>
+		<French>Resources need to be improved and inside your cultural borders.</French>
+		<German>Controlled means improved resources inside your cultural borders.</German>
+		<Italian>Controlled means improved resources inside your cultural borders.</Italian>
+		<Spanish>Controlled means improved resources inside your cultural borders.</Spanish>
+		<Portuguese>Controlled means improved resources inside your cultural borders.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_GEN2_HELP</Tag>
+		<English>Export is based on your cities' trade routes with foreign cities, import is based on foreign cities' trade routes with your cities.</English>
+		<French>Export is based on your cities' trade routes with foreign cities, import is based on foreign cities' trade routes with your cities.</French>
+		<German>Export is based on foreign trade routes in your cities, import is based on foreign cities' trade routes towards your cities.</German>
+		<Italian>Export is based on foreign trade routes in your cities, import is based on foreign cities' trade routes towards your cities.</Italian>
+		<Spanish>Export is based on foreign trade routes in your cities, import is based on foreign cities' trade routes towards your cities.</Spanish>
+		<Portuguese>Export is based on foreign trade routes in your cities, import is based on foreign cities' trade routes towards your cities.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_SPN3_HELP</Tag>
+		<English>Barbarians count as Pagans. Independent cities are included separately, with land and population divided between the religions present in the city.</English>
+		<French>Barbarians count as Pagans. Independent cities are included separately, split between the religions present in the city.</French>
+		<German>Barbarians count as Pagans, Independents are included separately.</German>
+		<Italian>Barbarians count as Pagans, Independents are included separately.</Italian>
+		<Spanish>Barbarians count as Pagans, Independents are included separately.</Spanish>
+		<Portuguese>Barbarians count as Pagans, Independents are included separately.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_PRU3_HELP</Tag>
+		<English>All types of Great People count, including Great Generals. They can be settled in any combination.</English>
+		<French>All types of Great People count, including Great Generals, and they can be settled in any combination.</French>
+		<German>Great Generals count too, and Great People can be settled in any combination.</German>
+		<Italian>Great People can be settled in any combination, Great Generals included.</Italian>
+		<Spanish>Great People can be settled in any combination, Great Generals included.</Spanish>
+		<Portuguese>Great People can be settled in any combination, Great Generals included.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_BUL3_HELP</Tag>
+		<English>Apart from conquered and flipped cities, traded cities also count as lost, unless the trade happens while you are at peace with these major civs.</English>
+		<French>Conquered and flipped cities are always lost. Traded cities also count as lost, unless the trade happened while you were at peace.</French>
+		<German>Apart from conquered and flipped cities, traded cities also count as lost, unless the trade happened while you were at peace.</German>
+		<Italian>All cities count as lost, unless a city is traded away while you are at peace.</Italian>
+		<Spanish>All cities count as lost, unless a city is traded away while you are at peace.</Spanish>
+		<Portuguese>All cities count as lost, unless a city is traded away while you are at peace.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_POR2_HELP</Tag>
+		<English>Apart from conquered and flipped cities, traded cities also count as lost, unless the trade happens while you are at peace with all major civs.</English>
+		<French>Conquered and flipped cities are always lost. Traded cities also count as lost, unless the trade happened while you were at peace.</French>
+		<German>Apart from conquered and flipped cities, traded cities also count as lost, unless the trade happened while you were at peace.</German>
+		<Italian>All cities count as lost, unless a city is traded away while you are at peace.</Italian>
+		<Spanish>All cities count as lost, unless a city is traded away while you are at peace.</Spanish>
+		<Portuguese>All cities count as lost, unless a city is traded away while you are at peace.</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_CONTROLLER_OF</Tag>
@@ -1298,7 +1379,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NO_CITIES_LOST</Tag>
-		<English>No cities lost</English>
+		<English>No cities have been lost</English>
 		<French>No cities lost</French>
 		<German>No cities lost</German>
 		<Italian>No cities lost</Italian>
@@ -1307,12 +1388,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NO_COLONIES_YET</Tag>
-		<English>No colonies build yet</English>
-		<French>No colonies build yet</French>
-		<German>No colonies build yet</German>
-		<Italian>No colonies build yet</Italian>
-		<Spanish>No colonies build yet</Spanish>
-		<Portuguese>No colonies build yet</Portuguese>
+		<English>No colonies have been built yet</English>
+		<French>No colonies have been built yet</French>
+		<German>No colonies have been built yet</German>
+		<Italian>No colonies have been built yet</Italian>
+		<Spanish>No colonies have been built yet</Spanish>
+		<Portuguese>No colonies have been built yet</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_LOWER_SCORE</Tag>
@@ -1343,30 +1424,30 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOT_FOUND_YET</Tag>
-		<English>is not found yet</English>
-		<French>is not found yet</French>
-		<German>is not found yet</German>
-		<Italian>is not found yet</Italian>
-		<Spanish>is not found yet</Spanish>
-		<Portuguese>is not found yet</Portuguese>
+		<English>is not founded yet</English>
+		<French>is not founded yet</French>
+		<German>is not founded yet</German>
+		<Italian>is not founded yet</Italian>
+		<Spanish>is not founded yet</Spanish>
+		<Portuguese>is not founded yet</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_PRESENT</Tag>
-		<English>is present in</English>
-		<French>is present in</French>
-		<German>is present in</German>
-		<Italian>is present in</Italian>
-		<Spanish>is present in</Spanish>
-		<Portuguese>is present in</Portuguese>
+		<English>are present in</English>
+		<French>are present in</French>
+		<German>are present in</German>
+		<Italian>are present in</Italian>
+		<Spanish>are present in</Spanish>
+		<Portuguese>are present in</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_NOT_PRESENT</Tag>
-		<English>is not present in</English>
-		<French>is not present in</French>
-		<German>is not present in</German>
-		<Italian>is not present in</Italian>
-		<Spanish>is not present in</Spanish>
-		<Portuguese>is not present in</Portuguese>
+		<English>are not present in</English>
+		<French>are not present in</French>
+		<German>are not present in</German>
+		<Italian>are not present in</Italian>
+		<Spanish>are not present in</Spanish>
+		<Portuguese>are not present in</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_CONTROL_TERRITORY</Tag>
@@ -1538,6 +1619,15 @@
 		<Italian>Current import and export</Italian>
 		<Spanish>Current import and export</Spanish>
 		<Portuguese>Current import and export</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UHV_SATISFY</Tag>
+		<English>Criteria fulfilled</English>
+		<French>Criteria fulfilled</French>
+		<German>Criteria fulfilled</German>
+		<Italian>Criteria fulfilled</Italian>
+		<Spanish>Criteria fulfilled</Spanish>
+		<Portuguese>Criteria fulfilled</Portuguese>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UHV_BEST</Tag>

@@ -350,8 +350,10 @@ public:
 
 	void setPapalPlayer( int iCiv, int iReligion );
 
-	// 3Miro: UHV optimizations exposed to Python
+	// Absinthe & 3Miro: UHV optimizations exposed to Python
+	int getLargestOtherCity( int x, int y );
 	bool isLargestCity( int x, int y );
+	int getTopCultureOtherCity( int x, int y );
 	bool isTopCultureCity( int x, int y );
 	int doesOwnCities( int iCiv, int BLx, int BLy, int TRx, int TRy );
 	int doesOwnOrVassalCities( int iCiv, int BLx, int BLy, int TRx, int TRy );
