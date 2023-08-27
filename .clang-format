@@ -1,0 +1,8 @@
+# Taken from https://github.com/callym/CvGameCoreDLL
+---
+BasedOnStyle: Microsoft
+Standard: c++03
+BreakBeforeBraces: Attach
+IndentWidth: 2
+SortIncludes: Never
+ReflowComments: false
