@@ -35,4 +35,104 @@
 		<DefineName>ENABLE_RESPAWN_AREA_DISPLAY</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
+	<!-- All of the following options can take four values: 0, 1, 2 or 3. -->
+	<!--  0 = Not displayed 			-->
+	<!--  1 = Displayed in View A only 		-->
+	<!--  2 = Displayed in View B only		-->
+	<!--  3 = Displayed in both View A and View B 	-->
+	<Define>
+		<DefineName>ACO_Option_ShowSurvivalOdds</DefineName>
+		<iDefineIntVal>3</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>ACO_Option_AttackerHPbars</DefineName>
+		<iDefineIntVal>2</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>ACO_Option_DefenderHPbars</DefineName>
+		<iDefineIntVal>2</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>ACO_Option_BasicInfo</DefineName>
+		<iDefineIntVal>3</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>ACO_Option_XPRangeDisplay</DefineName>
+		<iDefineIntVal>2</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>ACO_Option_ShowAverageHP</DefineName>
+		<iDefineIntVal>2</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>ACO_Option_ShowUnharmedOdds</DefineName>
+		<iDefineIntVal>2</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>ACO_Option_ShowUnroundedXP</DefineName>
+		<iDefineIntVal>0</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>ACO_Option_ShowSHIFT</DefineName>
+		<iDefineIntVal>1</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>ACO_Option_ShowAttackerHelp</DefineName>
+		<iDefineIntVal>0</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>ACO_Option_ShowDefenderHelp</DefineName>
+		<iDefineIntVal>3</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>ACO_Option_DefenseModifiers</DefineName>
+		<iDefineIntVal>3</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>ACO_Option_TotalDefenseModifier</DefineName>
+		<iDefineIntVal>2</iDefineIntVal>
+	</Define>
+	<!-- All of the following options can take 0 or 1. -->
+	<!--  0 = enabled 	-->
+	<!--  1 = not enabled 	-->
+	<Define>
+		<DefineName>ACO_enabled</DefineName>
+		<iDefineIntVal>1</iDefineIntVal>
+		<!-- 0 (disabled) or 1 (enabled) -->
+	</Define>
+	<Define>
+		<DefineName>ACO_DebugMode</DefineName>
+		<iDefineIntVal>0</iDefineIntVal>
+		<!-- 0 (disabled) or 1 (enabled) -->
+		<!-- Change this to 1 to see how the average HP values are calculated-->
+	</Define>
+	<Define>
+		<DefineName>ACO_ForceOriginalOdds</DefineName>
+		<iDefineIntVal>0</iDefineIntVal>
+		<!-- 0 (disabled) or 1 (enabled) -->
+		<!-- Change this 1 to if you would like to check ACO's odds against the original game's. -->
+	</Define>
+	<Define>
+		<DefineName>ACO_SwapViews</DefineName>
+		<iDefineIntVal>0</iDefineIntVal>
+		<!-- 0 (disabled) or 1 (enabled) -->
+		<!-- This is primarily for easier screenshot taking. -->
+	</Define>
+	<Define>
+		<DefineName>ACO_BarCondensing</DefineName>
+		<iDefineIntVal>1</iDefineIntVal>
+		<!-- 0 (disabled) or 1 (enabled) -->
+		<!-- Condensing multiple HP insignificant bars into one is a standard feature, but can be disabled here if desired. -->
+	</Define>
+	<Define>
+		<DefineName>ACO_IgnoreBarbFreeWins</DefineName>
+		<iDefineIntVal>0</iDefineIntVal>
+		<!-- 0 (disabled) or 1 (enabled) -->
+		<!-- This determines whether ACO will show you the biased odds due to barb free wins. -->
+	</Define>
+	<Define>
+		<DefineName>ACO_WhoOwnsModifiers</DefineName>
+		<iDefineIntVal>0</iDefineIntVal>
+		<!-- 0 (disabled) or 1 (enabled) -->
+	</Define>
 </Civ4Defines>
