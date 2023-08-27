@@ -1,0 +1,17 @@
+# Taken from https://github.com/dguenms/Dawn-of-Civilization/
+
+**/CIV4ArtDefines_Misc.xml
+Resource/
+CvGameCoreDLL/temp_files/
+CvGameCoreDLL/_UpgradeReport_Files/
+CvGameCoreDLL/.vs/
+Release/
+Final_Release/
+Debug/
+Assert/
+Profile/
+UpgradeLog.XML
+**/*.opensdf
+**/*.sdf
+**/*.suo
+**/*.fpk
