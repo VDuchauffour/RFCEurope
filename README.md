@@ -10,9 +10,10 @@ More information about the original mod can be found on the [CivFanatics forum](
 
 ## ️⚙️ Installation
 
-Clone this repository into your mod folder (`Beyond the Sword/Mods/`). You can also download a zip archive in the [release section](https://github.com/VDuchauffour/RFCEurope/releases)).
+Clone this repository into your mod folder (`Beyond the Sword/Mods/`).
+You can also download a zip archive in the [release section](https://github.com/VDuchauffour/RFCEurope/releases).
 
-You can still get access SVN revisions using the `original` branch.
+You can still access SVN revisions using the `original` branch of the repository.
 
 ## ⛏️ Development
 
