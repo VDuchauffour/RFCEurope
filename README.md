@@ -4,7 +4,8 @@ This repository contains a fork of the mod `RFCEurope` for Civilization IV: Beyo
 
 This fork enhances the original mod with the following changes:
 
-- added Advanced Combat Odds mod (v2.01)
+- add Advanced Combat Odds mod (v2.01)
+- add Blue Marble mod (v4.50)
 
 More information about the original mod can be found on the [CivFanatics forum](https://forums.civfanatics.com/forums/rhyes-and-fall-europe.386/).
 

@@ -48,3 +48,6 @@
 *.xls binary
 *.ods binary
 *.docx binary
+
+*.fpk binary
+*.FPK binary
