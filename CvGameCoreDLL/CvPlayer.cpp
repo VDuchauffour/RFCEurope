@@ -6750,7 +6750,7 @@ void CvPlayer::processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pAr
 			changeSpecialistExtraYield(((SpecialistTypes)iI), ((YieldTypes)iJ), (GC.getBuildingInfo(eBuilding).getSpecialistYieldChange(iI, iJ) * iChange));
 		}
 	}
-	
+
 	// Absinthe: specialist commerce change
 	for (iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
@@ -11387,6 +11387,21 @@ void CvPlayer::setCurrentEra(EraTypes eNewValue)
 	}
 }
 
+EraTypes CvPlayer::getSoundtrackEra()
+{
+	ReligionTypes eStateReligion = getStateReligion();
+	EraTypes eCurrentEra = getCurrentEra();
+
+	if (eStateReligion == ISLAM)
+	{
+		if (eCurrentEra == (EraTypes)ERA_ANCIENT || eCurrentEra == (EraTypes)ERA_CLASSICAL || eCurrentEra == (EraTypes)ERA_MEDIEVAL)
+		{
+			return (EraTypes)ERA_MEDIEVAL_ISLAMIC;
+		}
+	}
+
+	return eCurrentEra;
+}
 
 ReligionTypes CvPlayer::getLastStateReligion() const
 {

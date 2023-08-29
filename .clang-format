@@ -2,7 +2,7 @@
 ---
 BasedOnStyle: Microsoft
 Standard: c++03
-BreakBeforeBraces: Attach
+BreakBeforeBraces: Allman
 IndentWidth: 2
 SortIncludes: Never
 ReflowComments: false

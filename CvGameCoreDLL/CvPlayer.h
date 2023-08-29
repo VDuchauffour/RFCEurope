@@ -659,6 +659,7 @@ public:
 	LeaderHeadTypes getPersonalityType() const;																												// Exposed to Python
 	void setPersonalityType(LeaderHeadTypes eNewValue);																					// Exposed to Python
 
+  EraTypes getSoundtrackEra();
 	DllExport EraTypes getCurrentEra() const;																										// Exposed to Python
 	void setCurrentEra(EraTypes eNewValue);
 
