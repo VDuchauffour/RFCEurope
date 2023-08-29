@@ -342,6 +342,10 @@
 			<iSoundtrackSpace>200</iSoundtrackSpace>
 			<bFirstSoundtrackFirst>0</bFirstSoundtrackFirst>
 			<EraInfoSoundtracks>
+				<EraInfoSoundtrack>AS2D_SONG_CIV_III_ANC_MID_EAST</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_SONG_CIV_III_MID_AFRICA</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_SONG_CIV_III_MOD_MID_EAST</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_SONG_CONQUESTS_MID_EAST</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_SONG_MIDDLE_EAST_1</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_SONG_MIDDLE_EAST_2</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_SONG_MIDDLE_EAST_3</EraInfoSoundtrack>
