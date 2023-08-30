@@ -16,7 +16,7 @@ Changes for RFCE enhancements:
 
 v1.6.1: This first release enhanced the mod with the following changes.
 
-- Update the project with all compiling dependencies and the Nothingale Makefile
+- Update the project with all compiling dependencies and the Nightinggale Makefile
 - Update graphics with Blue Marble (v4.50), including its base terrain and its waiting cursor
 - Remove from the 1200AD map the term "TEST"
 - Add the Advanced Combat Odds mod (v2.01) (see https://forums.civfanatics.com/threads/pieceofminds-advanced-combat-odds.310415/)
