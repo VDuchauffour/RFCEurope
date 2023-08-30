@@ -1965,6 +1965,7 @@ void CvGame::doControl(ControlTypes eControl)
 
 	// Absinthe: stability overlay start
 	case CONTROL_STABILITY_OVERLAY:
+    gDLL->getInterfaceIFace()->toggleScoresVisible();
 		gDLL->getPythonIFace()->callFunction(PYScreensModule, "toggleStabilityOverlay");
 		break;
 	// Absinthe: end
