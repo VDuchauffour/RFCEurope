@@ -10,6 +10,19 @@ Please post your thoughts in our forum at http://forums.civfanatics.com/forumdis
 
 You can find more details in the Manual and Reference folders in the mod. A copy of the manual is also available at http://rfceurope.sourceforge.net/
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Changes for RFCE enhancements:
+
+v1.6.1: This first release enhanced the mod with the following changes.
+
+- Update the project with all compiling dependencies and the Nothingale Makefile
+- Update graphics with Blue Marble (v4.50), including its base terrain and its waiting cursor
+- Remove from the 1200AD map the term "TEST"
+- Add the Advanced Combat Odds mod (v2.01) (see https://forums.civfanatics.com/threads/pieceofminds-advanced-combat-odds.310415/)
+- Add middle east soundtracks from RFC DoC soundtrack module. Played when player's state religion is Islam and era is the middle age (i.e. not the Renaissance)
+- Automatically hide the scoreboard when the stability overlay is toggle
+- Apply a commit from the Taurus mod to prevent a loud sound when a stack of units is promoted or a war is declared to several player (see https://github.com/f1rpo/Taurus/commit/822aa7161bbf497ea4db712ec7367e125af913f1)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -413,7 +426,7 @@ Changes for RFCE 1.6 and 1.7:
 		- Fixed mistake with the French and Papal immunity on the first plague
 		- Removed all remnants of the Relic, Uranium, Oil, Football/Sports Event, Aluminium, and separate Elephant resources (gamefont, xml, etc.)
 		- New resources: Citrus, Dates, Camels, Cocoa, Hemp, Opium
-		
+
 		- Stability giving buildings and walls are higher priority for the AI
 		- Fixed mistake in AI wonder priority calculations, they were applied to the wrong building in some cases
 		- When accepting the reformation, all catholic missionaries are disbanded (to help the AI)
@@ -1622,7 +1635,7 @@ Changes for RFCE 1.3:
 		- New background for Margaret, Alexander Nevsky, Gustav Vasa, George III, Rurik, Otto I
 		- New background for Basil II, Michael VIII Palaiologos, Philip Augustus, Ismail ibn Sharif
 		- Optimizations in various BG files, removed some unnecessary art files
-		- Optimizations in the unit art files, removed some no longer used units 
+		- Optimizations in the unit art files, removed some no longer used units
 		- More than 15 megabyte less art data from the BG and unit optimizations
 		- Revised all unit artstyles, rearranged the unit art file system
 		- Fixed art for Pressburg Castle, Dome of the Rock, Westminster Abbey, Cordoban Noria, Bulgarian Stan
