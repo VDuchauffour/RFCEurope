@@ -6656,7 +6656,7 @@ bool CvUnit::canPromote(PromotionTypes ePromotion, int iLeaderUnitId) const
 			return false;
 		}
 		// Absinthe: end
-		
+
 		if (iLeaderUnitId >= 0)
 		{
 			CvUnit* pWarlord = GET_PLAYER(getOwnerINLINE()).getUnit(iLeaderUnitId);
@@ -6685,6 +6685,7 @@ void CvUnit::promote(PromotionTypes ePromotion, int iLeaderUnitId)
 		return;
 	}
 
+	bool bPlaySound = true; // trs.sound-once
 	if (iLeaderUnitId >= 0)
 	{
 		CvUnit* pWarlord = GET_PLAYER(getOwnerINLINE()).getUnit(iLeaderUnitId);
@@ -6701,6 +6702,26 @@ void CvUnit::promote(PromotionTypes ePromotion, int iLeaderUnitId)
 			reloadEntity();
 		}
 	}
+	// <trs.sound-once> (from AdvCiv)
+	else if (IsSelected())
+	{
+		int iSelectedCanPromote = 0;
+		for (CLLNode<IDInfo>* pNode = gDLL->getInterfaceIFace()->headSelectionListNode();
+			pNode != NULL; pNode = gDLL->getInterfaceIFace()->nextSelectionListNode(pNode))
+		{
+			CvUnit const* pUnit = ::getUnit(pNode->m_data);
+			if (pUnit != NULL && pUnit->canPromote(ePromotion, iLeaderUnitId))
+			{
+				iSelectedCanPromote++;
+				// Play sound only for the last promoted unit in a selected stack
+				if (iSelectedCanPromote > 1)
+				{
+					bPlaySound = false;
+					break;
+				}
+			}
+		}
+	} // </trs.sound-once>
 
 	if (!GC.getPromotionInfo(ePromotion).isLeader())
 	{
@@ -6714,7 +6735,8 @@ void CvUnit::promote(PromotionTypes ePromotion, int iLeaderUnitId)
 
 	if (IsSelected())
 	{
-		gDLL->getInterfaceIFace()->playGeneralSound(GC.getPromotionInfo(ePromotion).getSound());
+		if (bPlaySound) // trs.sound-once
+			gDLL->getInterfaceIFace()->playGeneralSound(GC.getPromotionInfo(ePromotion).getSound());
 
 		gDLL->getInterfaceIFace()->setDirty(UnitInfo_DIRTY_BIT, true);
 	}
