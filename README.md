@@ -9,6 +9,7 @@ This fork enhances the original mod with minor changes and the following changes
 - add [RFC DoC soundtrack](https://github.com/dguenms/DoC-Soundtrack/) for middle east civilizations
 
 More information about the original mod can be found on the [CivFanatics forum](https://forums.civfanatics.com/forums/rhyes-and-fall-europe.386/).
+
 Check the file [`ChangeLog.txt`](https://github.com/VDuchauffour/RFCEurope/blob/main/ChangeLog.txt) for all modifications.
 
 ## ️⚙️ Installation
