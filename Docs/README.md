@@ -1,4 +1,4 @@
-## About this folder
+# Overview
 
 This folder contains the following elements:
 
@@ -6,7 +6,7 @@ This folder contains the following elements:
 - python scripts can be found in the folder `Tools`
 - maps are located in the folder `Maps`
 
-## Generate maps
+## How to generate maps
 
 The Python scripts `./Tools/WB2BMP.py` parse a `WBSave` and generate differents maps.
 
