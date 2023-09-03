@@ -1,4 +1,15 @@
-feature: ['features/*', 'feature/*', 'feat/*', 'features-*', 'feature-*', 'feat-*']
-fix: ['fixes/*', 'fix/*']
-chore: ['chore/*']
-dependencies: ['update/*']
+enhancement:
+  - "features/*"
+  - "feature/*"
+  - "feat/*"
+  - "features-*"
+  - "feature-*"
+  - "feat-*"
+bug:
+  - "fixes/*"
+  - fix/*"
+chore:
+  - "chore/*"
+  - "update/*"
+dependencies:
+  - "update/*"
