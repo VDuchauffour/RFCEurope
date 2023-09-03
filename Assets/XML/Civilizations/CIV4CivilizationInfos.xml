@@ -13360,7 +13360,7 @@
 			<SituationCulture>TXT_KEY_3STARS</SituationCulture>
 			<SituationGrowth>TXT_KEY_2STARS</SituationGrowth>
 			<SituationStart>TXT_KEY_2STARS</SituationStart>
-			<DCNConditions>	
+			<DCNConditions>
 				<DCNCondition>
 					<DCNConditionCivic>NONE</DCNConditionCivic>
 					<DCNConditionOrCivic1>NONE</DCNConditionOrCivic1>
@@ -15676,7 +15676,7 @@
 					<DCNName>TXT_KEY_DN_POR00</DCNName>
 				</DCNCondition>
 			</DCNConditions>
-			<DefaultPlayerColor>PLAYERCOLOR_BLUE</DefaultPlayerColor>
+			<DefaultPlayerColor>PLAYERCOLOR_DARK_DARK_GREEN</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_PORTUGAL</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_IBERIA</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
