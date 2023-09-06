@@ -50,9 +50,6 @@ iAragon, iSweden, iPrussia, iLithuania, iAustria, iTurkey, iMoscow, iDutch, iPop
 iNumMajorPlayers = iNumPlayers
 iNumActivePlayers = iNumPlayers
 
-iVenice = iVenecia
-iFrance = iFrankia
-
 iIndependent = iNumPlayers
 iIndependent2 = iNumPlayers+1
 iIndependent3 = iNumPlayers+2
@@ -966,7 +963,7 @@ lInitialContacts = ((
 [ iNorway, iGermany ], # Denmark
 [ iFrankia, iNorway ], # Scotland
 [ iGermany, iHungary ], # Poland
-[ iBurgundy, iByzantium, iVenice, iPope ], # Genoa
+[ iBurgundy, iByzantium, iVenecia, iPope ], # Genoa
 [ iArabia, iSpain, iCordoba ], # Morocco
 [ iFrankia, iDenmark, iScotland, iNorway ], # England
 [ iSpain, iCordoba ], # Portugal
@@ -974,7 +971,7 @@ lInitialContacts = ((
 [ iDenmark, iNorway, iNovgorod ], # Sweden
 [ iGermany, iPoland, iNovgorod ], # Prussia
 [ iPoland, iKiev, iNovgorod, iPrussia ], # Lithuania
-[ iGermany, iVenice, iPoland, iHungary ], # Austria
+[ iGermany, iVenecia, iPoland, iHungary ], # Austria
 [ iByzantium, iArabia ], # Turkey
 [ iKiev, iNovgorod, iLithuania ], # Moscow
 [ iEngland, iSpain, iFrankia, iGermany, iDenmark, iNorway ], # Dutch
@@ -982,23 +979,23 @@ lInitialContacts = ((
 ),
 #1200 AD
 (
-[ iVenice, iGenoa, iHungary, iPope, iBulgaria, iArabia, iKiev, iNovgorod ], # Byzantium
+[ iVenecia, iGenoa, iHungary, iPope, iBulgaria, iArabia, iKiev, iNovgorod ], # Byzantium
 [ iScotland, iEngland, iNorway, iAragon, iSpain, iGermany ], # France
 [ iByzantium, iMorocco ], # Arabia
-[ iByzantium, iKiev, iNovgorod, iVenice, iHungary ], # Bulgaria
+[ iByzantium, iKiev, iNovgorod, iVenecia, iHungary ], # Bulgaria
 [  ], # Cordoba
 [ iGenoa, iByzantium, iHungary, iPope ], # Venice
 [  ], # Burgundy
-[ iNorway, iFrankia, iDenmark, iEngland, iPoland, iHungary, iVenice, iGenoa, iPope ], # Germany
+[ iNorway, iFrankia, iDenmark, iEngland, iPoland, iHungary, iVenecia, iGenoa, iPope ], # Germany
 [ iKiev, iPoland, iBulgaria, iByzantium ], # Novgorod
 [ iDenmark, iEngland, iScotland, iFrankia ], # Norway
 [ iNovgorod, iByzantium, iHungary, iBulgaria ], # Kiev
-[ iVenice, iGermany, iPoland, iBulgaria, iByzantium, iKiev, iPope ], # Hungary
+[ iVenecia, iGermany, iPoland, iBulgaria, iByzantium, iKiev, iPope ], # Hungary
 [ iPortugal, iAragon, iMorocco, iFrankia, iPope ], # Spain
 [ iNorway, iGermany, iFrankia, iEngland, iPoland ], # Denmark
 [ iNorway, iDenmark, iEngland, iFrankia ], # Scotland
 [ iGermany, iHungary, iDenmark, iKiev, iNovgorod ], # Poland
-[ iByzantium, iFrankia, iVenice, iGermany, iPope ], # Genoa
+[ iByzantium, iFrankia, iVenecia, iGermany, iPope ], # Genoa
 [ iArabia, iPortugal, iSpain, iAragon ], # Morocco
 [ iScotland, iFrankia, iDenmark, iNorway, iPope ], # England
 [ iSpain, iMorocco, iPope, iAragon ], # Portugal
@@ -1007,7 +1004,7 @@ lInitialContacts = ((
 [ iPoland, iGermany, iDenmark, iNorway, iNovgorod ], # Sweden
 [ iGermany, iPoland, iNovgorod ], # Prussia
 [ iPoland, iKiev, iPrussia ], # Lithuania
-[ iGermany, iVenice, iPoland, iHungary ], # Austria
+[ iGermany, iVenecia, iPoland, iHungary ], # Austria
 [ iByzantium, iHungary, iArabia ], # Turkey
 [ iKiev, iNovgorod, iSweden, iLithuania ], # Moscow
 [ iEngland, iSpain, iFrankia, iGermany, iDenmark, iNorway, iSweden ], # Dutch
@@ -1381,7 +1378,7 @@ home_positions_xy = [
 (614,212), #iArabia
 (567,166), #iBulgaria
 (455,195), #iCordoba
-(518,157), #iVenice
+(518,157), #iVenecia
 (490,160), #iBurgundy
 (510,140), #iGermany
 (580,103), #iNovgorod
