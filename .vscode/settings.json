@@ -1,0 +1,13 @@
+{
+  "editor.formatOnSave": true,
+  "python.analysis.diagnosticMode": "openFilesOnly",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": false
+    }
+  },
+  "ruff.organizeImports": false,
+  "black-formatter.importStrategy": "fromEnvironment"
+}

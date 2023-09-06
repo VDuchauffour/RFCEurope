@@ -1,2 +1,42 @@
 [tool.black]
+line-length = 99
 target-version = ["py27"]
+extend-exclude = """
+Assets/Python/constants/RFCEMaps.py
+"""
+
+[tool.ruff]
+select = [
+  # pycodestyle
+  "E",
+  # pyflakes
+  "F",
+]
+ignore = [
+  "E501",
+  "F403", # star imports are okay
+  "F405", # star imports are okay
+]
+extend-exclude = ["Docs/Tools/*.py"]
+target-version = "py37"
+
+[tool.pyright]
+executionEnvironments = [
+  { pythonVersion = "2.4", root = "Assets/Python", extraPaths = [
+    # Folders of the project
+    "Assets/Python/constants",
+    "Assets/Python/EntryPoints",
+    "Assets/Python/pyWB",
+    "Assets/Python/screens",
+    # Folders from Sid Meier's Civilization IV Beyond the Sword/Assets/Python
+    "../../../Assets/Python",
+    "../../../Assets/Python/PitBoss",
+    "../../../Assets/Python/pyHelper",
+    "../../../Assets/Python/pyUnit",
+    "../../../Assets/Python/pyWB",
+    "../../../Assets/Python/System",
+  ] },
+]
+stubPath = "Assets/Python/.stubs"
+reportMissingModuleSource = false
+typeCheckingMode = "off"
