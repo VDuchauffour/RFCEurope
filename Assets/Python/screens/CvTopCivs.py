@@ -118,19 +118,19 @@ class CvTopCivs:
 
 		# Main
 		szMainPanel = "TopCivsMainPanel"
-		self.screen.addPanel( szMainPanel, "", "", true, true,
+		self.screen.addPanel( szMainPanel, "", "", True, True,
 			self.X_MAIN_PANEL, self.Y_MAIN_PANEL, self.W_MAIN_PANEL, self.H_MAIN_PANEL, PanelStyles.PANEL_STYLE_MAIN )
 
 		# Top
 		szHeaderPanel = "TopCivsHeaderPanel"
 		szHeaderText = ""#gc.getLeaderHeadInfo(self.player.getLeaderType()).getDescription() + "\n-" + self.player.getCivilizationDescription(0) + "-"
-		self.screen.addPanel( szHeaderPanel, szHeaderText, "", true, true,
+		self.screen.addPanel( szHeaderPanel, szHeaderText, "", True, True,
 			self.X_HEADER_PANEL, self.Y_HEADER_PANEL, self.W_HEADER_PANEL, self.H_HEADER_PANEL, PanelStyles.PANEL_STYLE_DAWNBOTTOM )
 
 		# Bottom
 		szTextPanel = "TopCivsTextPanel"
 		szHeaderText = ""#self.Text_Title
-		self.screen.addPanel( szTextPanel, szHeaderText, "", true, true, self.X_TEXT_PANEL, self.Y_TEXT_PANEL, self.W_TEXT_PANEL, self.H_TEXT_PANEL, PanelStyles.PANEL_STYLE_DAWNTOP )
+		self.screen.addPanel( szTextPanel, szHeaderText, "", True, True, self.X_TEXT_PANEL, self.Y_TEXT_PANEL, self.W_TEXT_PANEL, self.H_TEXT_PANEL, PanelStyles.PANEL_STYLE_DAWNTOP )
 		self.screen.setButtonGFC("Exit", self.EXIT_TEXT, "", self.X_EXIT,self.Y_EXIT, self.W_EXIT, self.H_EXIT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1, ButtonStyles.BUTTON_STYLE_STANDARD )
 
 		# Title Text

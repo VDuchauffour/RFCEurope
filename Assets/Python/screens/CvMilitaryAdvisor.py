@@ -150,11 +150,11 @@ class CvMilitaryAdvisor:
 
 		self.drawCombatExperience()
 
-		self.refresh(true)
+		self.refresh(True)
 
 	def drawCombatExperience(self):
 
-		if (gc.getPlayer(self.iActivePlayer).greatPeopleThreshold(true) > 0):
+		if (gc.getPlayer(self.iActivePlayer).greatPeopleThreshold(True) > 0):
 
 			iExperience = gc.getPlayer(self.iActivePlayer).getCombatExperience()
 
@@ -164,7 +164,7 @@ class CvMilitaryAdvisor:
 			screen.setStackedBarColors(self.GREAT_GENERAL_BAR_ID, InfoBarTypes.INFOBAR_RATE, gc.getInfoTypeForString("COLOR_GREAT_PEOPLE_RATE"))
 			screen.setStackedBarColors(self.GREAT_GENERAL_BAR_ID, InfoBarTypes.INFOBAR_RATE_EXTRA, gc.getInfoTypeForString("COLOR_EMPTY"))
 			screen.setStackedBarColors(self.GREAT_GENERAL_BAR_ID, InfoBarTypes.INFOBAR_EMPTY, gc.getInfoTypeForString("COLOR_EMPTY"))
-			screen.setBarPercentage(self.GREAT_GENERAL_BAR_ID, InfoBarTypes.INFOBAR_STORED, float(iExperience) / float(gc.getPlayer(self.iActivePlayer).greatPeopleThreshold(true)))
+			screen.setBarPercentage(self.GREAT_GENERAL_BAR_ID, InfoBarTypes.INFOBAR_STORED, float(iExperience) / float(gc.getPlayer(self.iActivePlayer).greatPeopleThreshold(True)))
 			screen.setLabel(self.GREAT_GENERAL_LABEL_ID, "", localText.getText("TXT_KEY_MISC_COMBAT_EXPERIENCE", ()), CvUtil.FONT_CENTER_JUSTIFY, self.X_GREAT_GENERAL_BAR + self.W_GREAT_GENERAL_BAR/2, self.Y_GREAT_GENERAL_BAR + 6, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_HELP_GREAT_GENERAL, -1, -1)
 
 
@@ -246,7 +246,7 @@ class CvMilitaryAdvisor:
 			self.selectedGroupList.remove(iSelected)
 		else:
 			self.selectedGroupList.append(iSelected)
-		self.refreshUnitSelection(false)
+		self.refreshUnitSelection(False)
 
 	def refreshSelectedUnit(self, iPlayer, iUnitId):
 		selectedUnit = (iPlayer, iUnitId)
@@ -254,7 +254,7 @@ class CvMilitaryAdvisor:
 			self.selectedUnitList.remove(selectedUnit)
 		else:
 			self.selectedUnitList.append(selectedUnit)
-		self.refreshUnitSelection(false)
+		self.refreshUnitSelection(False)
 
 	def refreshUnitSelection(self, bReload):
 		screen = self.getScreen()
@@ -348,7 +348,7 @@ class CvMilitaryAdvisor:
 				for loopUnit in self.unitsList[iUnit][2]:
 
 					if (self.bUnitDetails):
-						szDescription = CyGameTextMgr().getSpecificUnitHelp(loopUnit, true, false)
+						szDescription = CyGameTextMgr().getSpecificUnitHelp(loopUnit, True, False)
 
 						listMatches = re.findall("<.*?color.*?>", szDescription)
 						for szMatch in listMatches:

@@ -1601,7 +1601,7 @@ tJerusalem = ( 93, 5 )
 # Province Status
 iProvinceOwn = 5      # own every tile
 iProvinceConquer = 4  # own every city (capture or settle) or own every tile
-iProvinceDominate = 3 # 2*sum of population + owned tiles is more for you than the sum total of everyone else (true if conquer is true)
+iProvinceDominate = 3 # 2*sum of population + owned tiles is more for you than the sum total of everyone else (True if conquer is True)
 iProvinceLost = 2     # you have no cities and others have cities in it
 
 # ProvinceTypes

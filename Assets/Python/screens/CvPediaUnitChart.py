@@ -67,12 +67,12 @@ class CvPediaUnitChart:
 		screen = self.top.getScreen()
 
 		panelName = self.top.getNextWidgetName()
-		screen.addPanel( panelName, "", "", true, true,
+		screen.addPanel( panelName, "", "", True, True,
 			self.X_UNITS, self.Y_UNITS, self.W_UNITS, self.H_UNITS, PanelStyles.PANEL_STYLE_BLUE50 )
 
 		iMargin = 40
 		panelName2 = self.top.getNextWidgetName()
-		screen.addPanel( panelName2, "", "", true, true,
+		screen.addPanel( panelName2, "", "", True, True,
 			self.X_UNITS + iMargin, self.Y_UNITS + iMargin, self.W_UNITS - (iMargin * 2), self.H_UNITS - (iMargin * 2), PanelStyles.PANEL_STYLE_BLUE50 )
 		szTable = self.top.getNextWidgetName()
 		screen.addTableControlGFC(szTable, 4,

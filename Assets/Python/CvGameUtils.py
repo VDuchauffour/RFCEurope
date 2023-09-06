@@ -558,7 +558,7 @@ class CvGameUtils:
 
 	def canPickPlot(self, argsList):
 		pPlot = argsList[0]
-		return true
+		return True
 
 
 	def getUnitCostMod(self, argsList):

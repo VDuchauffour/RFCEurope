@@ -84,7 +84,7 @@ class CvPediaLeader:
 
 		# Leaderhead
 		leaderPanelWidget = self.top.getNextWidgetName()
-		screen.addPanel( leaderPanelWidget, "", "", true, true,
+		screen.addPanel( leaderPanelWidget, "", "", True, True,
 			self.X_LEADERHEAD_PANE, self.Y_LEADERHEAD_PANE, self.W_LEADERHEAD_PANE, self.H_LEADERHEAD_PANE, PanelStyles.PANEL_STYLE_BLUE50 )
 		self.leaderWidget = self.top.getNextWidgetName()
 		screen.addLeaderheadGFC(self.leaderWidget, self.iLeader, AttitudeTypes.ATTITUDE_PLEASED,
@@ -107,7 +107,7 @@ class CvPediaLeader:
 		screen = self.top.getScreen()
 
 		panelName = self.top.getNextWidgetName()
-		screen.addPanel( panelName, localText.getText("TXT_KEY_PEDIA_TRAITS", ()), "", true, false,
+		screen.addPanel( panelName, localText.getText("TXT_KEY_PEDIA_TRAITS", ()), "", True, False,
 			self.X_TRAITS, self.Y_TRAITS, self.W_TRAITS, self.H_TRAITS, PanelStyles.PANEL_STYLE_BLUE50 )
 
 		listName = self.top.getNextWidgetName()
@@ -119,7 +119,7 @@ class CvPediaLeader:
 		screen = self.top.getScreen()
 
 		panelName = self.top.getNextWidgetName()
-		screen.addPanel( panelName, localText.getText("TXT_KEY_PEDIA_FAV_CIVIC", ()), "", true, true,
+		screen.addPanel( panelName, localText.getText("TXT_KEY_PEDIA_FAV_CIVIC", ()), "", True, True,
 			self.X_CIVIC, self.Y_CIVIC, self.W_CIVIC, self.H_CIVIC, PanelStyles.PANEL_STYLE_BLUE50 )
 
 		listName = self.top.getNextWidgetName()
@@ -135,7 +135,7 @@ class CvPediaLeader:
 		screen = self.top.getScreen()
 
 		panelName = self.top.getNextWidgetName()
-		screen.addPanel( panelName, "", "", true, true,
+		screen.addPanel( panelName, "", "", True, True,
 			self.X_HISTORY, self.Y_HISTORY, self.W_HISTORY, self.H_HISTORY, PanelStyles.PANEL_STYLE_BLUE50 )
 
 		historyTextName = self.top.getNextWidgetName()

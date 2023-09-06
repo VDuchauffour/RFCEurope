@@ -1416,12 +1416,12 @@ class RiseAndFall:
 				bAtWar = False #AI won't vassalise if another owner has declared war; on the other hand, it won't declare war if another one has vassalised
 				if iOwner != iHuman and iOwner not in ownersList and iOwner != iDeadCiv and lSuppressList[iOwner] == 0: #declare war or peace only once - the 3rd condition is obvious but "vassal of themselves" was happening
 					rndNum = gc.getGame().getSorenRandNum(100, 'odds')
-					if rndNum >= tAIStopBirthThreshold[iOwner] and not bOwnerHumanVassal and not bAlreadyVassal: #if bOwnerHumanVassal is true, it will skip to the 3rd condition, as bOwnerVassal is true as well
+					if rndNum >= tAIStopBirthThreshold[iOwner] and not bOwnerHumanVassal and not bAlreadyVassal: #if bOwnerHumanVassal is True, it will skip to the 3rd condition, as bOwnerVassal is True as well
 						if not teamOwner.isAtWar( iDeadCiv ):
 							teamOwner.declareWar(iDeadCiv, False, -1)
 						bAtWar = True
 					# Absinthe: do we really want to auto-vassal them on respawn? why?
-					#			set it to 0 from 60 temporarily (so it's never true), as a quick fix until the mechanics are revised
+					#			set it to 0 from 60 temporarily (so it's never True), as a quick fix until the mechanics are revised
 					elif (rndNum <= 0 - (tAIStopBirthThreshold[iOwner]/2)):
 						if teamOwner.isAtWar( iDeadCiv ):
 							teamOwner.makePeace(iDeadCiv)
@@ -1590,7 +1590,7 @@ class RiseAndFall:
 							else:
 								iSkippedUnit += 1
 
-				# Absinthe: if the plot is owned by a civ, bDeleteEverything becomes true unless there is a human city in the 1+8 neighbour plots.
+				# Absinthe: if the plot is owned by a civ, bDeleteEverything becomes True unless there is a human city in the 1+8 neighbour plots.
 				bDeleteEverything = False
 				if gc.getMap().plot(tCapital[0], tCapital[1]).isOwned():
 					if iCiv == iHuman or not gc.getPlayer(iHuman).isAlive():
@@ -2027,7 +2027,7 @@ class RiseAndFall:
 		pass
 
 
-	def getSpecialRespawn( self, iGameTurn ): #Absinthe: only the first civ for which it is true is returned, so the order of the civs is very important here
+	def getSpecialRespawn( self, iGameTurn ): #Absinthe: only the first civ for which it is True is returned, so the order of the civs is very important here
 		if self.canSpecialRespawn(iFrankia, iGameTurn, 12):
 			# France united in it's modern borders, start of the Bourbon royal line
 			if xml.i1588AD < iGameTurn < xml.i1700AD and iGameTurn % 5 == 3:

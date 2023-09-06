@@ -446,7 +446,7 @@ def WorldBuilderOnAdvancedStartBrushSelected(argsList):
 	if (iTab == worldBuilderScreen.m_iASTechTabID):
 		showTechChooser()
 	elif (iTab == worldBuilderScreen.m_iASCityTabID and iList == worldBuilderScreen.m_iASAutomateListID):
-		CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_AUTOMATE, worldBuilderScreen.m_iCurrentPlayer, -1, -1, -1, true)
+		CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_AUTOMATE, worldBuilderScreen.m_iCurrentPlayer, -1, -1, -1, True)
 
 	if (worldBuilderScreen.setCurrentAdvancedStartIndex(iIndex)):
 		if (worldBuilderScreen.setCurrentAdvancedStartList(iList)):
@@ -717,7 +717,7 @@ def forceScreenUpdate (argsList):
 
 	# Tech chooser update (forced from net message)
 	if ( argsList[0] == TECH_CHOOSER ):
-		techChooser.updateTechRecords(false)
+		techChooser.updateTechRecords(False)
 	# Main interface Screen
 	elif ( argsList[0] == MAIN_INTERFACE ):
 		mainInterface.updateScreen()
@@ -742,7 +742,7 @@ def forceScreenRedraw (argsList):
 	elif ( argsList[0] == WORLDBUILDER_DIPLOMACY_SCREEN ):
 		worldBuilderDiplomacyScreen.redraw()
 	elif ( argsList[0] == TECH_CHOOSER ):
-		techChooser.updateTechRecords(true)
+		techChooser.updateTechRecords(True)
 
 
 def minimapClicked (argsList):

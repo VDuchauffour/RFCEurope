@@ -39,8 +39,8 @@ class CvTechChooser:
 
 		# Advanced Start
 		self.m_iSelectedTech = -1
-		self.m_bSelectedTechDirty = false
-		self.m_bTechRecordsDirty = false
+		self.m_bSelectedTechDirty = False
+		self.m_bTechRecordsDirty = False
 
 	def hideScreen (self):
 
@@ -75,7 +75,7 @@ class CvTechChooser:
 			screen.hide( "CivDropDown" )
 
 		if ( screen.isPersistent() and self.iCivSelected == gc.getGame().getActivePlayer()):
-			self.updateTechRecords(false)
+			self.updateTechRecords(False)
 			return
 
 		self.nWidgetCount = 0
@@ -86,7 +86,7 @@ class CvTechChooser:
 		# Advanced Start
 		if (gc.getPlayer(self.iCivSelected).getAdvancedStartPoints() >= 0):
 
-			self.m_bSelectedTechDirty = true
+			self.m_bSelectedTechDirty = True
 
 			self.X_ADD_TECH_BUTTON = 10
 			self.Y_ADD_TECH_BUTTON = 731
@@ -832,7 +832,7 @@ class CvTechChooser:
 			screen = CyGInterfaceScreen( "TechChooser", CvScreenEnums.TECH_CHOOSER )
 			iIndex = screen.getSelectedPullDownID("CivDropDown")
 			self.iCivSelected = screen.getPullDownData("CivDropDown", iIndex)
-			self.updateTechRecords(false)
+			self.updateTechRecords(False)
 
 	# Will handle the input for this screen...
 	def handleInput (self, inputClass):
@@ -847,10 +847,10 @@ class CvTechChooser:
 
 			# Add tech button
 			if (inputClass.getFunctionName() == "AddTechButton"):
-				if (pPlayer.getAdvancedStartTechCost(self.m_iSelectedTech, true) != -1):
-					CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_TECH, self.iCivSelected, -1, -1, self.m_iSelectedTech, true)	#Action, Player, X, Y, Data, bAdd
-					self.m_bTechRecordsDirty = true
-					self.m_bSelectedTechDirty = true
+				if (pPlayer.getAdvancedStartTechCost(self.m_iSelectedTech, True) != -1):
+					CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_TECH, self.iCivSelected, -1, -1, self.m_iSelectedTech, True)	#Action, Player, X, Y, Data, bAdd
+					self.m_bTechRecordsDirty = True
+					self.m_bSelectedTechDirty = True
 
 			# Tech clicked on
 			elif (inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED):
@@ -888,15 +888,15 @@ class CvTechChooser:
 	def update(self, fDelta):
 
 		if (CyInterface().isDirty(InterfaceDirtyBits.Advanced_Start_DIRTY_BIT)):
-			CyInterface().setDirty(InterfaceDirtyBits.Advanced_Start_DIRTY_BIT, false)
+			CyInterface().setDirty(InterfaceDirtyBits.Advanced_Start_DIRTY_BIT, False)
 
 			if (self.m_bSelectedTechDirty):
-				self.m_bSelectedTechDirty = false
+				self.m_bSelectedTechDirty = False
 				self.updateSelectedTech()
 
 			if (self.m_bTechRecordsDirty):
-				self.m_bTechRecordsDirty = false
-				self.updateTechRecords(true)
+				self.m_bTechRecordsDirty = False
+				self.updateTechRecords(True)
 
 			if (gc.getPlayer(self.iCivSelected).getAdvancedStartPoints() < 0):
 				# hide the screen
@@ -918,7 +918,7 @@ class CvTechChooser:
 
 		if (self.m_iSelectedTech != -1):
 			szName = gc.getTechInfo(self.m_iSelectedTech).getDescription()
-			iCost = gc.getPlayer(CyGame().getActivePlayer()).getAdvancedStartTechCost(self.m_iSelectedTech, true)
+			iCost = gc.getPlayer(CyGame().getActivePlayer()).getAdvancedStartTechCost(self.m_iSelectedTech, True)
 
 		if iCost > 0:
 			szText = u"<font=4>" + localText.getText("TXT_KEY_WB_AS_SELECTED_TECH_COST", (iCost, pPlayer.getAdvancedStartPoints())) + u"</font>"
@@ -932,7 +932,7 @@ class CvTechChooser:
 		screen.setLabel( "SelectedTechLabel", "Background", szText, CvUtil.FONT_LEFT_JUSTIFY, self.X_ADVANCED_START_TEXT + 250, self.Y_ADD_TECH_BUTTON + 3, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
 		# Want to add
-		if (pPlayer.getAdvancedStartTechCost(self.m_iSelectedTech, true) != -1):
+		if (pPlayer.getAdvancedStartTechCost(self.m_iSelectedTech, True) != -1):
 			screen.show("AddTechButton")
 		else:
 			screen.hide("AddTechButton")
@@ -940,7 +940,7 @@ class CvTechChooser:
 	def onClose(self):
 		pPlayer = gc.getPlayer(self.iCivSelected)
 		if (pPlayer.getAdvancedStartPoints() >= 0):
-			CyInterface().setDirty(InterfaceDirtyBits.Advanced_Start_DIRTY_BIT, true)
+			CyInterface().setDirty(InterfaceDirtyBits.Advanced_Start_DIRTY_BIT, True)
 		return 0
 
 class TechChooserMaps:

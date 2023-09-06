@@ -328,7 +328,7 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 		self.panelName = self.getNextWidgetName()
 		# I can't just disable this panel.
 		# Just 0 size it.
-		screen.addPanel(self.panelName, "", "", true, true,
+		screen.addPanel(self.panelName, "", "", True, True,
 			self.X_PEDIA_PAGE, self.Y_PEDIA_PAGE, 0, self.H_PEDIA_PAGE, PanelStyles.PANEL_STYLE_MAIN)
 
 
@@ -363,14 +363,14 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 	def placeBuildings(self):
 
 		#tList = self.getSortedList( gc.getNumBuildingInfos(), gc.getBuildingInfo )
-		tList = self.pediaBuildingScreen.getBuildingSortedList(false)
+		tList = self.pediaBuildingScreen.getBuildingSortedList(False)
 		self.displayTopics(tList, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, gc.getBuildingInfo)
 
 
 	def placeWonders(self):
 
 		#tList = self.getSortedList( gc.getNumBuildingInfos(), gc.getBuildingInfo )
-		tList = self.pediaBuildingScreen.getBuildingSortedList(true)
+		tList = self.pediaBuildingScreen.getBuildingSortedList(True)
 		self.displayTopics(tList, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, gc.getBuildingInfo)
 
 
@@ -540,7 +540,7 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 
 		# Lay down some Blooo
 		#self.blooPanelName = self.getNextWidgetName()
-		#screen.addPanel(self.blooPanelName, "", "", true, true,
+		#screen.addPanel(self.blooPanelName, "", "", True, True,
 		#	self.X_ITEMS_PANE, self.Y_ITEMS_PANE, self.W_ITEMS_PANE + self.W_PEDIA_PAGE-4, self.H_PEDIA_PAGE, PanelStyles.PANEL_STYLE_MAIN)
 
 		self.szHints = self.getNextWidgetName()

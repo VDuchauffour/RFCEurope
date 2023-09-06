@@ -67,13 +67,13 @@ class CvDomesticAdvisor:
 		screen.addPanel( "DomesticAdvisorBG", u"", u"", True, False, 0, 0, self.nScreenWidth, self.nScreenHeight, PanelStyles.PANEL_STYLE_MAIN )
 		screen.setText("DomesticExit", "Background", localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper(), CvUtil.FONT_RIGHT_JUSTIFY, self.nScreenWidth - 25, self.nScreenHeight - 45, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
 
-		bCanLiberate = false
-		(loopCity, iter) = player.firstCity(false)
+		bCanLiberate = False
+		(loopCity, iter) = player.firstCity(False)
 		while(loopCity):
-			if loopCity.getLiberationPlayer(false) != -1:
-				bCanLiberate = true
+			if loopCity.getLiberationPlayer(False) != -1:
+				bCanLiberate = True
 				break
-			(loopCity, iter) = player.nextCity(iter, false)
+			(loopCity, iter) = player.nextCity(iter, False)
 		
 		if (bCanLiberate or gc.getPlayer(gc.getGame().getActivePlayer()).canSplitEmpire()):
 			screen.setImageButton( "DomesticSplit", "", self.nScreenWidth - 110, self.nScreenHeight - 45, 28, 28, WidgetTypes.WIDGET_ACTION, gc.getControlInfo(ControlTypes.CONTROL_FREE_COLONY).getActionInfoIndex(), -1 )
@@ -161,14 +161,14 @@ class CvDomesticAdvisor:
 
 		# Loop through the cities
 		i = 0
-		(pLoopCity, iter) = player.firstCity(false)
+		(pLoopCity, iter) = player.firstCity(False)
 		while(pLoopCity):
 			screen.appendTableRow( "CityListBackground" )
 			if (pLoopCity.getName() in self.listSelectedCities):
 				screen.selectRow( "CityListBackground", i, True )
 			self.updateTable(pLoopCity, i)
 			i += 1
-			(pLoopCity, iter) = player.nextCity(iter, false)
+			(pLoopCity, iter) = player.nextCity(iter, False)
 		
 		self.drawHeaders()
 		
@@ -178,7 +178,7 @@ class CvDomesticAdvisor:
 		
 		self.updateAppropriateCitySelection()
 		
-		CyInterface().setDirty(InterfaceDirtyBits.Domestic_Advisor_DIRTY_BIT, true)
+		CyInterface().setDirty(InterfaceDirtyBits.Domestic_Advisor_DIRTY_BIT, True)
 
 	def updateTable(self, pLoopCity, i):
 
@@ -230,7 +230,7 @@ class CvDomesticAdvisor:
 		screen.setTableInt( "CityListBackground", 4, i, szText, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
 
 		# Food status...
-		iNetFood = pLoopCity.foodDifference(true)
+		iNetFood = pLoopCity.foodDifference(True)
 		szText = unicode(iNetFood)
 		if iNetFood > 0:
 			szText = localText.getText("TXT_KEY_COLOR_POSITIVE", ()) + szText + localText.getText("TXT_KEY_COLOR_REVERT", ())
@@ -271,7 +271,7 @@ class CvDomesticAdvisor:
 		iGreatPersonRate = pLoopCity.getGreatPeopleRate()
 		szGreatPerson = unicode(iGreatPersonRate)
 		if iGreatPersonRate > 0:
-			iGPPLeft = gc.getPlayer(gc.getGame().getActivePlayer()).greatPeopleThreshold(false) - pLoopCity.getGreatPeopleProgress()
+			iGPPLeft = gc.getPlayer(gc.getGame().getActivePlayer()).greatPeopleThreshold(False) - pLoopCity.getGreatPeopleProgress()
 			if iGPPLeft > 0:
 				iTurnsLeft = iGPPLeft / pLoopCity.getGreatPeopleRate()
 				if iTurnsLeft * pLoopCity.getGreatPeopleRate() <  iGPPLeft:
@@ -287,7 +287,7 @@ class CvDomesticAdvisor:
 		screen.setTableText( "CityListBackground", 15, i, pLoopCity.getProductionName() + " (" + str(pLoopCity.getGeneralProductionTurnsLeft()) + ")", "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
 
 		# Liberation
-		if pLoopCity.getLiberationPlayer(false) != -1:			
+		if pLoopCity.getLiberationPlayer(False) != -1:			
 			screen.setTableText( "CityListBackground", 16, i, "<font=2>" + (u"%c" % CyGame().getSymbolID(FontSymbols.OCCUPATION_CHAR)) + "</font>", "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
 		
 		
@@ -367,7 +367,7 @@ class CvDomesticAdvisor:
 				screen = CyGInterfaceScreen( "DomesticAdvisor", CvScreenEnums.DOMESTIC_ADVISOR )
 				screen.hideScreen()
 				
-				CyInterface().selectCity(gc.getPlayer(inputClass.getData1()).getCity(inputClass.getData2()), true);
+				CyInterface().selectCity(gc.getPlayer(inputClass.getData1()).getCity(inputClass.getData2()), True);
 				
 				popupInfo = CyPopupInfo()
 				popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
@@ -400,11 +400,11 @@ class CvDomesticAdvisor:
 			player = gc.getPlayer(CyGame().getActivePlayer())
 
 			i = 0
-			(pLoopCity, iter) = player.firstCity(false)
+			(pLoopCity, iter) = player.firstCity(False)
 			while(pLoopCity):
 				self.updateTable(pLoopCity, i)
 				i += 1
-				(pLoopCity, iter) = player.nextCity(iter, false)
+				(pLoopCity, iter) = player.nextCity(iter, False)
 			
 			self.updateSpecialists()
 		

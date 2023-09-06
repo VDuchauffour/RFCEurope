@@ -196,7 +196,7 @@ class CvEventManager:
 		self.origArgsList = argsList	# point to original
 		tag = argsList[0]				# event type string
 		idx = len(argsList)-6
-		bDummy = false
+		bDummy = False
 		self.bDbg, bDummy, self.bAlt, self.bCtrl, self.bShift, self.bAllowCheats = argsList[idx:]
 		ret = 0
 		#print("Event with tag: ",tag)
@@ -367,7 +367,7 @@ class CvEventManager:
 					popupInfo.setText(u"showDawnOfMan")
 					popupInfo.addPopup(iPlayer)
 		else:
-			CyInterface().setSoundSelectionReady(true)
+			CyInterface().setSoundSelectionReady(True)
 
 		if gc.getGame().isPbem():
 			for iPlayer in range(gc.getMAX_PLAYERS()):
@@ -375,7 +375,7 @@ class CvEventManager:
 				if (player.isAlive() and player.isHuman()):
 					popupInfo = CyPopupInfo()
 					popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_DETAILS)
-					popupInfo.setOption1(true)
+					popupInfo.setOption1(True)
 					popupInfo.addPopup(iPlayer)
 
 		CvAdvisorUtils.resetNoLiberateCities()
@@ -983,9 +983,9 @@ class CvEventManager:
 				for loopCity in utils.getCityList(iPlayer):
 					# bigger boost for the GP city and the Louvre city
 					if loopCity.getNumActiveBuilding(xml.iLouvre) or pCity == loopCity:
-						loopCity.changeCulture(iPlayer, min(300, loopCity.getCultureThreshold() / 5), true)
+						loopCity.changeCulture(iPlayer, min(300, loopCity.getCultureThreshold() / 5), True)
 					else:
-						loopCity.changeCulture(iPlayer, min(100, loopCity.getCultureThreshold() / 10), true)
+						loopCity.changeCulture(iPlayer, min(100, loopCity.getCultureThreshold() / 10), True)
 			# Absinthe: Louvre end
 
 			# Absinthe: Peterhof Palace start
@@ -1305,7 +1305,7 @@ class CvEventManager:
 		#			if gc.getNumEventTriggerInfos() > 0: # prevents mods that don't have events from getting an error
 		#				iEvent = CvUtil.findInfoTypeNum(gc.getEventTriggerInfo, gc.getNumEventTriggerInfos(),'EVENTTRIGGER_PARTISANS')
 		#				if iEvent != -1 and gc.getGame().isEventActive(iEvent) and owner.getEventTriggerWeight(iEvent) < 0:
-		#					triggerData = owner.initTriggeredData(iEvent, true, -1, city.getX(), city.getY(), iPlayer, city.getID(), -1, -1, -1, -1)
+		#					triggerData = owner.initTriggeredData(iEvent, True, -1, city.getX(), city.getY(), iPlayer, city.getID(), -1, -1, -1, -1)
 		# Absinthe: end
 
 	def onCityAcquired(self, argsList):

@@ -88,15 +88,15 @@ PyPlayer = PyHelpers.PyPlayer
 PyGame = PyHelpers.PyGame()
 PyInfo = PyHelpers.PyInfo
 
-# Set g_bGameTurnMercenaryCreation to true if mercenary creation should happen during the
-# onBeginGameTurn method, false if it should happen during the onBeginPlayerTurn method
-# Default value is true
-g_bGameTurnMercenaryCreation = true
+# Set g_bGameTurnMercenaryCreation to True if mercenary creation should happen during the
+# onBeginGameTurn method, False if it should happen during the onBeginPlayerTurn method
+# Default value is True
+g_bGameTurnMercenaryCreation = True
 
-# Set g_bDisplayMercenaryManagerOnBeginPlayerTurn to true if the "Mercenary Manager"
+# Set g_bDisplayMercenaryManagerOnBeginPlayerTurn to True if the "Mercenary Manager"
 # screen should be displayed at the beginning of every player turn.
-# Default value is false
-g_bDisplayMercenaryManagerOnBeginPlayerTurn = false
+# Default value is False
+g_bDisplayMercenaryManagerOnBeginPlayerTurn = False
 
 # This value also controls the "Mercenary Manager" button and when it should be displayed.
 # Default value is "ERA_ANCIENT"
@@ -105,12 +105,12 @@ g_bDisplayMercenaryManagerOnBeginPlayerTurn = false
 g_iStartingEra = 0
 #Rhye - end
 
-# Change this to false if mercenaries should be removed from the global mercenary pool
-# at the beginning of the game turn. When set to true a number of mercenaries will
+# Change this to False if mercenaries should be removed from the global mercenary pool
+# at the beginning of the game turn. When set to True a number of mercenaries will
 # wander away from the global mercenary pool. This is another variable used to control
 # the load time for the "Mercenary Manager" screen.
-# Default valus is true
-g_bWanderlustMercenaries = true
+# Default valus is True
+g_bWanderlustMercenaries = True
 
 # Change this to increase the max number of mercenaries that may wander away from the
 # global mercenary pool.
@@ -120,12 +120,12 @@ g_iWanderlustMercenariesMaximum = 7 #Rhye
 # Default valus is 0
 g_iWanderlustMercenariesMinimum = 2 #Rhye
 
-# Change this to false to supress the mercenary messages.
-# Default value is true
-g_bDisplayMercenaryMessages = false #Rhye
+# Change this to False to supress the mercenary messages.
+# Default value is True
+g_bDisplayMercenaryMessages = False #Rhye
 
-# Set to true to print out debug messages in the logs
-g_bDebug = true
+# Set to True to print out debug messages in the logs
+g_bDebug = True
 
 # Default valus is 1
 g_bUpdatePeriod = 5 #Rhye
@@ -217,12 +217,12 @@ class CvRFCEventHandler:
 ##		# If we actually were able to open the "Mercenaries Mod Config.ini" file then read in the values.
 ##		# otherwise we'll keep the default values that were set at the top of this file.
 ##		if(config != None):
-##			g_bGameTurnMercenaryCreation = config.getboolean("Mercenaries Mod", "Game Turn Mercenary Creation", true)
-##			g_bDisplayMercenaryManagerOnBeginPlayerTurn = config.getboolean("Mercenaries Mod", "Display Mercenary Manager On Begin Player Turn", false)
+##			g_bGameTurnMercenaryCreation = config.getboolean("Mercenaries Mod", "Game Turn Mercenary Creation", True)
+##			g_bDisplayMercenaryManagerOnBeginPlayerTurn = config.getboolean("Mercenaries Mod", "Display Mercenary Manager On Begin Player Turn", False)
 ##			g_iStartingEra = gc.getInfoTypeForString(config.get("Mercenaries Mod","Starting Era","ERA_ANCIENT"))
-##			g_bWanderlustMercenaries = config.getboolean("Mercenaries Mod", "Wanderlust Mercenaries", true)
+##			g_bWanderlustMercenaries = config.getboolean("Mercenaries Mod", "Wanderlust Mercenaries", True)
 ##			g_iWanderlustMercenariesMaximum = config.getint("Mercenaries Mod","Wanderlust Mercenaries Maximum", 5)
-##			g_bDisplayMercenaryMessages = config.getboolean("Mercenaries Mod", "Display Mercenary Messages", true)
+##			g_bDisplayMercenaryMessages = config.getboolean("Mercenaries Mod", "Display Mercenary Messages", True)
 		#Rhye - end comment
 
 

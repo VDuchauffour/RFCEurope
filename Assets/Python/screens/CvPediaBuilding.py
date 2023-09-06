@@ -25,7 +25,7 @@ class CvPediaBuilding:
 
 	def __init__(self, main):
 		self.iBuilding = -1
-		self.bLastBuildingType = false
+		self.bLastBuildingType = False
 		self.top = main
 
 		self.BUTTON_SIZE = 46
@@ -104,7 +104,7 @@ class CvPediaBuilding:
 		screen.addPanel( self.top.getNextWidgetName(), "", "", False, False, self.X_BUILDING_PANE, self.Y_BUILDING_PANE, self.W_BUILDING_PANE, self.H_BUILDING_PANE, PanelStyles.PANEL_STYLE_BLUE50)
 
 		# Icon
-		screen.addPanel(self.top.getNextWidgetName(), "", "", false, false, self.X_ICON, self.Y_ICON, self.W_ICON, self.H_ICON, PanelStyles.PANEL_STYLE_MAIN)
+		screen.addPanel(self.top.getNextWidgetName(), "", "", False, False, self.X_ICON, self.Y_ICON, self.W_ICON, self.H_ICON, PanelStyles.PANEL_STYLE_MAIN)
 		screen.addDDSGFC(self.top.getNextWidgetName(), gc.getBuildingInfo(self.iBuilding).getButton(), self.X_ICON + self.W_ICON/2 - self.ICON_SIZE/2, self.Y_ICON + self.H_ICON/2 - self.ICON_SIZE/2, self.ICON_SIZE, self.ICON_SIZE, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
 		# Building animation
@@ -226,7 +226,7 @@ class CvPediaBuilding:
 		screen = self.top.getScreen()
 
 		panelName = self.top.getNextWidgetName()
-		screen.addPanel( panelName, localText.getText("TXT_KEY_PEDIA_REQUIRES", ()), "", false, true,
+		screen.addPanel( panelName, localText.getText("TXT_KEY_PEDIA_REQUIRES", ()), "", False, True,
 				 self.X_PREREQ_PANE, self.Y_PREREQ_PANE, self.W_PREREQ_PANE, self.H_PREREQ_PANE, PanelStyles.PANEL_STYLE_BLUE50 )
 
 		screen.attachLabel(panelName, "", "  ")
@@ -247,7 +247,7 @@ class CvPediaBuilding:
 				screen.attachImageButton( panelName, "", gc.getBonusInfo(iPrereq).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BONUS, iPrereq, -1, False )
 
 		iCorporation = gc.getBuildingInfo(self.iBuilding).getFoundsCorporation()
-		bFirst = true
+		bFirst = True
 		if (iCorporation >= 0):
 			for k in range(gc.getNUM_CORPORATION_PREREQ_BONUSES()):
 				iPrereq = gc.getCorporationInfo(iCorporation).getPrereqBonus(k)
@@ -255,7 +255,7 @@ class CvPediaBuilding:
 					if not bFirst:
 						screen.attachLabel(panelName, "", localText.getText("TXT_KEY_OR", ()))
 					else:
-						bFirst = false
+						bFirst = False
 					screen.attachImageButton( panelName, "", gc.getBonusInfo(iPrereq).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BONUS, iPrereq, -1, False )
 
 		# add religion button
@@ -274,7 +274,7 @@ class CvPediaBuilding:
 		screen = self.top.getScreen()
 
 		panelName = self.top.getNextWidgetName()
-		screen.addPanel( panelName, localText.getText("TXT_KEY_PEDIA_SPECIAL_ABILITIES", ()), "", true, false,
+		screen.addPanel( panelName, localText.getText("TXT_KEY_PEDIA_SPECIAL_ABILITIES", ()), "", True, False,
 				 self.X_SPECIAL_PANE, self.Y_SPECIAL_PANE, self.W_SPECIAL_PANE, self.H_SPECIAL_PANE, PanelStyles.PANEL_STYLE_BLUE50 )
 
 		listName = self.top.getNextWidgetName()
@@ -323,16 +323,16 @@ class CvPediaBuilding:
 
 	def getBuildingType(self, iBuilding):
 		if (isWorldWonderClass(gc.getBuildingInfo(iBuilding).getBuildingClassType())):
-			return true
+			return True
 
 		if (isTeamWonderClass(gc.getBuildingInfo(iBuilding).getBuildingClassType())):
-			return true
+			return True
 
 		if (isNationalWonderClass(gc.getBuildingInfo(iBuilding).getBuildingClassType())): #Rhye - should be changed to move embassies to regular buildings
-			return true
+			return True
 
 		# Regular building
-		return false
+		return False
 
 	def getBuildingSortedList(self, bWonder):
 		listBuildings = []
