@@ -7,9 +7,16 @@ enhancement:
   - "feat-*"
 bug:
   - "fixes/*"
-  - fix/*"
+  - "fix/*"
+  - "fixes-*"
+  - "fix-*"
+  - "bugs-*"
+  - "bug-*"
 chore:
   - "chore/*"
+  - "chore-*"
   - "update/*"
+  - "update-*"
 dependencies:
   - "update/*"
+  - "update-*"
