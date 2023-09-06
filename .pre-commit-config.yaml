@@ -30,13 +30,13 @@ repos:
           - mdformat-black
           - mdformat-shfmt
   # Formatter for c and cpp files
-  # - repo: https://github.com/pocc/pre-commit-hooks
-  #   rev: v1.3.5
-  #   hooks:
-  #     - id: clang-format
-  #       args: [ --style=InheritParentConfig, -i, --no-diff ]
-  #       types_or: [ c++, c ]
-  #       exclude: "(CvGameCoreDLL/bin|CvGameCoreDLL/Boost-1.32.0|CvGameCoreDLL/Python24)/.*"
+  - repo: https://github.com/pocc/pre-commit-hooks
+    rev: v1.3.5
+    hooks:
+      - id: clang-format
+        args: [ --style=InheritParentConfig, -i, --no-diff ]
+        types_or: [ c++, c ]
+        exclude: "(CvGameCoreDLL/bin|CvGameCoreDLL/Boost-1.32.0|CvGameCoreDLL/Python24)/.*"
   # Formatter for python files
   - repo: https://github.com/psf/black
     rev: 21.12b0
