@@ -413,25 +413,25 @@ def endTurnFeats(iPlayer):
 			for iI in range(gc.getNumBuildingInfos()):
 				eCorporation = gc.getBuildingInfo(iI).getFoundsCorporation()
 				if eCorporation != -1 and not gc.getGame().isCorporationFounded(eCorporation):
-					bValid = true
+					bValid = True
 					eTeam = gc.getPlayer(iPlayer).getTeam()
 					if not gc.getTeam(eTeam).isHasTech(gc.getBuildingInfo(iI).getPrereqAndTech()):
-						bValid = false
+						bValid = False
 					if bValid:
 						for iPrereq in range(gc.getDefineINT("NUM_BUILDING_AND_TECH_PREREQS")):
 							if not gc.getTeam(eTeam).isHasTech(gc.getBuildingInfo(iI).getPrereqAndTechs(iPrereq)):
-								bValid = false
+								bValid = False
 								break
 					if bValid:
 						gc.getPlayer(iPlayer).setFeatAccomplished(FeatTypes.FEAT_CORPORATION_ENABLED, True)
 
 						szBonusList = u""
-						bFirst = true
+						bFirst = True
 						for iPrereq in range(gc.getDefineINT("NUM_CORPORATION_PREREQ_BONUSES")):
 							eBonus = gc.getCorporationInfo(eCorporation).getPrereqBonus(iPrereq)
 							if eBonus != -1:
 								if bFirst:
-									bFirst = false
+									bFirst = False
 								else:
 									szBonusList += localText.getText("TXT_KEY_OR", ())
 								szBonusList += gc.getBonusInfo(eBonus).getDescription()
@@ -471,7 +471,7 @@ def cityAdvise(pCity, iPlayer):
 
 		if (gc.getGame().getGameTurn() % 40 == pCity.getGameTurnFounded() % 40):
 			if (not pCity.getID() in g_listNoLiberateCities):
-				eLiberationPlayer = pCity.getLiberationPlayer(false)
+				eLiberationPlayer = pCity.getLiberationPlayer(False)
 				if (eLiberationPlayer != -1):
 					popupInfo = CyPopupInfo()
 					popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON)

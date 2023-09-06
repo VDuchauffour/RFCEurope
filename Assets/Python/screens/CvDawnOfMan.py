@@ -81,30 +81,30 @@ class CvDawnOfMan:
 		screen.showScreen(PopupStates.POPUPSTATE_QUEUED, False)
 		screen.showWindowBackground( False )
 		screen.setDimensions(screen.centerX(self.X_SCREEN), screen.centerY(self.Y_SCREEN), self.W_SCREEN, self.H_SCREEN)
-		screen.enableWorldSounds( false )
+		screen.enableWorldSounds( False )
 
 		# Create panels
 
 		# Main
 		szMainPanel = "DawnOfManMainPanel"
-		screen.addPanel( szMainPanel, "", "", true, true,
+		screen.addPanel( szMainPanel, "", "", True, True,
 			self.X_MAIN_PANEL, self.Y_MAIN_PANEL, self.W_MAIN_PANEL, self.H_MAIN_PANEL, PanelStyles.PANEL_STYLE_MAIN )
 ##Rhye - begin
 ##		# Top
 ##		szHeaderPanel = "DawnOfManHeaderPanel"
-##		screen.addPanel( szHeaderPanel, "", "", true, false,
+##		screen.addPanel( szHeaderPanel, "", "", True, False,
 ##			self.X_HEADER_PANEL, self.Y_HEADER_PANEL, self.W_HEADER_PANEL, self.H_HEADER_PANEL, PanelStyles.PANEL_STYLE_DAWNTOP )
 ##Rhye - end
 		# Bottom
 		szTextPanel = "DawnOfManTextPanel"
-		screen.addPanel( szTextPanel, "", "", true, true,
+		screen.addPanel( szTextPanel, "", "", True, True,
 			self.X_TEXT_PANEL, self.Y_TEXT_PANEL, self.W_TEXT_PANEL, self.H_TEXT_PANEL, PanelStyles.PANEL_STYLE_DAWNBOTTOM )
 
 		# Add contents
 ##Rhye - begin
 ##		# Leaderhead graphic
 ##		szLeaderPanel = "DawnOfManLeaderPanel"
-##		screen.addPanel( szLeaderPanel, "", "", true, false,
+##		screen.addPanel( szLeaderPanel, "", "", True, False,
 ##			self.X_LEADER_ICON - 3, self.Y_LEADER_ICON - 5, self.W_LEADER_ICON + 6, self.H_LEADER_ICON + 8, PanelStyles.PANEL_STYLE_DAWNTOP )
 ##		screen.addLeaderheadGFC("LeaderHead", self.player.getLeaderType(), AttitudeTypes.ATTITUDE_PLEASED,
 ##			self.X_LEADER_ICON + 5, self.Y_LEADER_ICON + 5, self.W_LEADER_ICON - 10, self.H_LEADER_ICON - 10, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -199,6 +199,6 @@ class CvDawnOfMan:
 	def onClose(self):
 		# Absinthe: do not play the initial RFC song on start - might even lead to sound selection issues
 		#CyInterface().DoSoundtrack("AS2D_RFC") #Rhye
-		CyInterface().setSoundSelectionReady(true)
+		CyInterface().setSoundSelectionReady(True)
 		return 0
 

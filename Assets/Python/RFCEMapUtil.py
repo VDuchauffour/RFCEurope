@@ -246,8 +246,8 @@ class RFCEMapManager:
 
 	def isInRectangle(self, xy, BL, TR):
 		if(xy[0] < BL[0] or xy[0] > TR[0] or xy[1] < BL[1] or xy[1] > TR[1]):
-			return false
-		return true
+			return False
+		return True
 
 	def getValue( self, iPlayer, pPlot, aMap):
 		return aMap[iPlayer][self.swapY(pPlot.getY())][pPlot.getX()]

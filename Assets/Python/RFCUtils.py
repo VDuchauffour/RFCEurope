@@ -895,7 +895,7 @@ class RFCUtils:
 
 
 	def isActive(self, iPlayer):
-		"""Returns true if the player is spawned and alive."""
+		"""Returns True if the player is spawned and alive."""
 		if gc.getPlayer(iPlayer).getNumCities() < 1: return False
 		if not gc.getPlayer(iPlayer).isAlive: return False
 		iGameTurn = gc.getGame().getGameTurn()

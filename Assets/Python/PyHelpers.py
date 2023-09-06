@@ -253,11 +253,11 @@ class PyPlayer:
 	def getUnitList(self):
 		' UnitList - All of the players alive units '
 		lUnit = []
-		(loopUnit, iter) = self.player.firstUnit(false)
+		(loopUnit, iter) = self.player.firstUnit(False)
 		while( loopUnit ):
 			if ( not loopUnit.isDead() ): #is the unit alive and valid?
 				lUnit.append(loopUnit) #add unit instance to list
-			(loopUnit, iter) = self.player.nextUnit(iter, false)
+			(loopUnit, iter) = self.player.nextUnit(iter, False)
 		return lUnit
 
 	def getNumUnits(self):
@@ -311,13 +311,13 @@ class PyPlayer:
 	def getCityList(self):
 		' PyCitylist - list of PyCity player owns '
 		lCity = []
-		(loopCity, iter) = self.player.firstCity(false)
+		(loopCity, iter) = self.player.firstCity(False)
 		while(loopCity):
 			cityOwner = loopCity.getOwner()
 			if ( not loopCity.isNone() and loopCity.getOwner() == self.getID() ): #only valid cities
 				city = PyCity( self.getID(), loopCity.getID() )
 				lCity.append(city)
-			(loopCity, iter) = self.player.nextCity(iter, false)
+			(loopCity, iter) = self.player.nextCity(iter, False)
 		return lCity
 
 	def getNumCities(self):
@@ -439,7 +439,7 @@ class PyCity:
 
 	def setName(self, newName):
 		"none - Set Cities Name"
-		return self.city.setName(newName, false)
+		return self.city.setName(newName, False)
 
 	def getPopulation(self):
 		"int - City Population"
@@ -669,7 +669,7 @@ class PyCity:
 		engine = CyEngine()
 		plot = self.plot()
 		if plot:
-			engine.LookAt(plot.getPoint(), true)
+			engine.LookAt(plot.getPoint(), True)
 
 	def setNumRealBuildingIdx(self, buildingIdx, iNum):
 		"none - Add or Remove (bAdd) by buildingIdx"
@@ -717,7 +717,7 @@ class PyCity:
 		return self.city.getReligionInfluence(iReligion)
 
 	def isRevealed(self, iTeam):
-		return self.city.isRevealed(iTeam, false)
+		return self.city.isRevealed(iTeam, False)
 
 	def isConnectedToCapital(self, iPlayer):
 		return self.city.isConnectedToCapital(iPlayer)

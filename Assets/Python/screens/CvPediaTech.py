@@ -100,7 +100,7 @@ class CvPediaTech(CvPediaScreen.CvPediaScreen):
 		screen.addPanel( self.top.getNextWidgetName(), "", "", False, False, self.X_TECH_PANE, self.Y_TECH_PANE, self.W_TECH_PANE, self.H_TECH_PANE, PanelStyles.PANEL_STYLE_BLUE50)
 
 		# Icon
-		screen.addPanel(self.top.getNextWidgetName(), "", "", false, false, self.X_ICON, self.Y_ICON, self.W_ICON, self.H_ICON, PanelStyles.PANEL_STYLE_MAIN)
+		screen.addPanel(self.top.getNextWidgetName(), "", "", False, False, self.X_ICON, self.Y_ICON, self.W_ICON, self.H_ICON, PanelStyles.PANEL_STYLE_MAIN)
 		screen.addDDSGFC(self.top.getNextWidgetName(), gc.getTechInfo(self.iTech).getButton(), self.X_ICON + self.W_ICON/2 - self.ICON_SIZE/2, self.Y_ICON + self.H_ICON/2 - self.ICON_SIZE/2, self.ICON_SIZE, self.ICON_SIZE, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
 		szCostId = self.top.getNextWidgetName()
@@ -138,7 +138,7 @@ class CvPediaTech(CvPediaScreen.CvPediaScreen):
 		szLeadsTo = localText.getText("TXT_KEY_PEDIA_LEADS_TO", ())
 
 		panelName = self.top.getNextWidgetName()
-		screen.addPanel(panelName, szLeadsTo, "", false, true, self.X_LEADS_TO_PANE, self.Y_LEADS_TO_PANE, self.W_LEADS_TO_PANE, self.H_LEADS_TO_PANE, PanelStyles.PANEL_STYLE_BLUE50 )
+		screen.addPanel(panelName, szLeadsTo, "", False, True, self.X_LEADS_TO_PANE, self.Y_LEADS_TO_PANE, self.W_LEADS_TO_PANE, self.H_LEADS_TO_PANE, PanelStyles.PANEL_STYLE_BLUE50 )
 
 		screen.attachLabel(panelName, "", "  ")
 
@@ -160,7 +160,7 @@ class CvPediaTech(CvPediaScreen.CvPediaScreen):
 		szRequires = localText.getText("TXT_KEY_PEDIA_REQUIRES", ())
 
 		panelName = self.top.getNextWidgetName()
-		screen.addPanel( panelName, szRequires, "", false, true, self.X_PREREQ_PANE, self.Y_PREREQ_PANE, self.W_PREREQ_PANE, self.H_PREREQ_PANE, PanelStyles.PANEL_STYLE_BLUE50 )
+		screen.addPanel( panelName, szRequires, "", False, True, self.X_PREREQ_PANE, self.Y_PREREQ_PANE, self.W_PREREQ_PANE, self.H_PREREQ_PANE, PanelStyles.PANEL_STYLE_BLUE50 )
 
 		screen.attachLabel(panelName, "", "  ")
 
@@ -214,7 +214,7 @@ class CvPediaTech(CvPediaScreen.CvPediaScreen):
 
 		screen = self.top.getScreen()
 		panelName = self.top.getNextWidgetName()
-		screen.addPanel( panelName, localText.getText("TXT_KEY_PEDIA_UNITS_ENABLED", ()), "", false, true, self.X_UNIT_PANE, self.Y_UNIT_PANE, self.W_UNIT_PANE, self.H_UNIT_PANE, PanelStyles.PANEL_STYLE_BLUE50 )
+		screen.addPanel( panelName, localText.getText("TXT_KEY_PEDIA_UNITS_ENABLED", ()), "", False, True, self.X_UNIT_PANE, self.Y_UNIT_PANE, self.W_UNIT_PANE, self.H_UNIT_PANE, PanelStyles.PANEL_STYLE_BLUE50 )
 
 		screen.attachLabel(panelName, "", "  ")
 
@@ -231,7 +231,7 @@ class CvPediaTech(CvPediaScreen.CvPediaScreen):
 		screen = self.top.getScreen()
 
 		panelName = self.top.getNextWidgetName()
-		screen.addPanel( panelName, localText.getText("TXT_KEY_PEDIA_BUILDINGS_ENABLED", ()), "", false, true, self.X_BUILDING_PANE, self.Y_BUILDING_PANE, self.W_BUILDING_PANE, self.H_BUILDING_PANE, PanelStyles.PANEL_STYLE_BLUE50 )
+		screen.addPanel( panelName, localText.getText("TXT_KEY_PEDIA_BUILDINGS_ENABLED", ()), "", False, True, self.X_BUILDING_PANE, self.Y_BUILDING_PANE, self.W_BUILDING_PANE, self.H_BUILDING_PANE, PanelStyles.PANEL_STYLE_BLUE50 )
 
 		screen.attachLabel(panelName, "", "  ")
 
@@ -251,7 +251,7 @@ class CvPediaTech(CvPediaScreen.CvPediaScreen):
 		screen = self.top.getScreen()
 
 		panelName = self.top.getNextWidgetName()
-		screen.addPanel( panelName, localText.getText("TXT_KEY_PEDIA_SPECIAL_ABILITIES", ()), "", true, false, self.X_SPECIAL_PANE, self.Y_SPECIAL_PANE, self.W_SPECIAL_PANE, self.H_SPECIAL_PANE, PanelStyles.PANEL_STYLE_BLUE50 )
+		screen.addPanel( panelName, localText.getText("TXT_KEY_PEDIA_SPECIAL_ABILITIES", ()), "", True, False, self.X_SPECIAL_PANE, self.Y_SPECIAL_PANE, self.W_SPECIAL_PANE, self.H_SPECIAL_PANE, PanelStyles.PANEL_STYLE_BLUE50 )
 
 		listName = self.top.getNextWidgetName()
 
@@ -263,7 +263,7 @@ class CvPediaTech(CvPediaScreen.CvPediaScreen):
 		screen = self.top.getScreen()
 
 		panelName = self.top.getNextWidgetName()
-		screen.addPanel(panelName, "", "", true, true, self.X_QUOTE_PANE, self.Y_QUOTE_PANE, self.W_QUOTE_PANE, self.H_QUOTE_PANE, PanelStyles.PANEL_STYLE_BLUE50)
+		screen.addPanel(panelName, "", "", True, True, self.X_QUOTE_PANE, self.Y_QUOTE_PANE, self.W_QUOTE_PANE, self.H_QUOTE_PANE, PanelStyles.PANEL_STYLE_BLUE50)
 
 		szQuote = gc.getTechInfo(self.iTech).getQuote()
 		szQuote += u"\n\n" + gc.getTechInfo(self.iTech).getCivilopedia()

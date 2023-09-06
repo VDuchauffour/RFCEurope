@@ -204,7 +204,7 @@ class CvDebugTools:
 		for i in range(gc.getNumEraInfos()):
 			popup.addButton(gc.getEraInfo(i).getDescription())
 
-		popup.launch(true, PopupStates.POPUPSTATE_IMMEDIATE)
+		popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 	def applyTechCheat( self, argsList ):
 		'Apply Tech Cheat'
@@ -252,10 +252,10 @@ class CvDebugTools:
 		if g_bDebugMode == 0:
 			return
 		for i in range(gc.getMAX_PLAYERS()):
-			(unit, iter) = gc.getPlayer(i).firstUnit(false)
+			(unit, iter) = gc.getPlayer(i).firstUnit(False)
 			while (unit):
 				unit.setMoves(0)
-				(unit, iter) = gc.getPlayer(i).nextUnit(iter, false)
+				(unit, iter) = gc.getPlayer(i).nextUnit(iter, False)
 
 	def allUnits( self ):
 		self.putOneOfEveryUnit();
@@ -305,7 +305,7 @@ class CvDebugTools:
 			if (szMovieFile != None and len(szMovieFile) > 0):
 				popup.addPullDownString( gc.getProjectInfo(i).getDescription(), gc.getNumBuildingInfos() + i )
 
-		popup.launch(true, PopupStates.POPUPSTATE_IMMEDIATE)
+		popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 	def applyWonderMovie( self, argsList ):
 		'Apply Wonder Movie'

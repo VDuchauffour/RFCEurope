@@ -33,27 +33,27 @@ localText = CyTranslator()
 GMU = Mercenaries.GlobalMercenaryUtils()
 lMercList = Mercenaries.lMercList
 
-# Change this to true if hiring mercenaries should only be allowed if one or more of
+# Change this to True if hiring mercenaries should only be allowed if one or more of
 # a player's civilization contains one or more of the buildings specified in the
 # "Mercenary Starting Location" option. Oh did I forget to mention, if the "Mercenary
 # Starting Location" option isn't set to a list of buildings players won't be able to
 # hire any mercenaries.
-# Default value is false
-g_bRequireStartingLocationContainBuildings = false
+# Default value is False
+g_bRequireStartingLocationContainBuildings = False
 
-# Change this to true to delay the return of contracted out units to player's cities
+# Change this to True to delay the return of contracted out units to player's cities
 # by the amount indicated in "Unit Return Delay Amount". The value set to "Consume Unit
-# Moves On Return" will be treated as if set to false if "Delay Mercenary Placement" is
-# set to true.
-# Default value is true
-g_bDelayUnitReturn = true
+# Moves On Return" will be treated as if set to False if "Delay Mercenary Placement" is
+# set to True.
+# Default value is True
+g_bDelayUnitReturn = True
 
-# Change this to false to allow contracting out units outside of cities.
-# Default value is true
-g_bRequireCityUnitContractCreation = true
+# Change this to False to allow contracting out units outside of cities.
+# Default value is True
+g_bRequireCityUnitContractCreation = True
 
-# Set to true to print out debug messages in the logs
-g_bDebug = false
+# Set to True to print out debug messages in the logs
+g_bDebug = False
 
 class CvMercenaryManager:
 	"Mercenary Manager"
@@ -97,7 +97,7 @@ class CvMercenaryManager:
 		screen.hideScreen()
 
 
-	# Returns true if the screen is active, false otherwise.
+	# Returns True if the screen is active, False otherwise.
 	def isActive(self):
 		return self.getScreen().isActive()
 
@@ -371,7 +371,7 @@ class CvMercenaryManager:
 		lMerc[1].sort()
 		for iPromotion in lMerc[1]:
 			pPromotionInfo = gc.getPromotionInfo(iPromotion)
-			screen.appendMultiListButton( MERCENARY_INFORMATION_PROMOTION_LIST_CONTROL_ID, pPromotionInfo.getButton(), 0, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION, gc.getInfoTypeForString(pPromotionInfo.getType()), -1, false )
+			screen.appendMultiListButton( MERCENARY_INFORMATION_PROMOTION_LIST_CONTROL_ID, pPromotionInfo.getButton(), 0, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION, gc.getInfoTypeForString(pPromotionInfo.getType()), -1, False )
 
 		screen.addUnitGraphicGFC(MERCENARIES_UNIT_GRAPHIC, lMercList[lMerc[0]][0], self.screenWidgetData[MERCENARY_ANIMATION_X], self.screenWidgetData[MERCENARY_ANIMATION_Y], self.screenWidgetData[MERCENARY_ANIMATION_WIDTH], self.screenWidgetData[MERCENARY_ANIMATION_HEIGHT], WidgetTypes.WIDGET_GENERAL, -1, -1, self.screenWidgetData[MERCENARY_ANIMATION_ROTATION_X], self.screenWidgetData[MERCENARY_ANIMATION_ROTATION_Z], self.screenWidgetData[MERCENARY_ANIMATION_SCALE], True)
 

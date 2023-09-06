@@ -266,7 +266,7 @@ class AIWars:
 						iValue /= 3
 					lTargetCivs[iOwner] += iValue
 
-		#contacts do not disappear in RFCE, so if isHasMet was true they do have a contact
+		#contacts do not disappear in RFCE, so if isHasMet was True they do have a contact
 		#for k in range( iNumPlayers ):
 		#	if not pCiv.canContact(k):
 		#		lTargetCivs[k] /= 8

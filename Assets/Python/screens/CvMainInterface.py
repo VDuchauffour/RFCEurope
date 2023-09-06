@@ -126,9 +126,9 @@ mercenaryManager = CvMercenaryManager.CvMercenaryManager(CvScreenEnums.MERCENARY
 g_iStartingEra = 0
 #Rhye - end
 
-# Change this to false to allow contracting out units outside of cities.
-# Default value is true
-g_bRequireCityUnitContractCreation = true
+# Change this to False to allow contracting out units outside of cities.
+# Default value is True
+g_bRequireCityUnitContractCreation = True
 
 # < Mercenaries End >
 
@@ -138,7 +138,7 @@ class CvMainInterface:
 	#m_iNumPlotListButtons = (CyGInterfaceScreen( "MainInterface", CvScreenEnums.MAIN_INTERFACE ).getXResolution() - (iMultiListXL+iMultiListXR) - 68) / 34 #Rhye (bugfix)
 	m_iNumPlotListButtons = 800 #Rhye (bugfix)
 	# < Mercenaries Start >
-	repainting = false
+	repainting = False
 	# < Mercenaries End   >
 
 	def numPlotListButtons(self):
@@ -166,7 +166,7 @@ class CvMainInterface:
 		global g_iStartingEra
 		global g_bRequireCityUnitContractCreation
 
-		self.repainting=false
+		self.repainting=False
 		# < Mercenaries End >
 
 		if ( CyGame().isPitbossHost() ):
@@ -203,7 +203,7 @@ class CvMainInterface:
 ##		# otherwise we'll keep the default values that were set at the top of this file.
 ##		if(config != None):
 ##			g_iStartingEra = gc.getInfoTypeForString(config.get("Mercenaries Mod","Starting Era","ERA_ANCIENT"))
-##			g_bRequireCityUnitContractCreation = config.getboolean("Mercenaries Mod", "Require City Unit Contract Creation", true)
+##			g_bRequireCityUnitContractCreation = config.getboolean("Mercenaries Mod", "Require City Unit Contract Creation", True)
 		#Rhye - end comment
 
 		# < Mercenaries End >
@@ -1133,7 +1133,7 @@ class CvMainInterface:
 		yResolution = screen.getYResolution()
 
 		bHandled = False
-		if ( CyInterface().shouldDisplayUnitModel() and CyEngine().isGlobeviewUp() == false and CyInterface().getShowInterface() != InterfaceVisibility.INTERFACE_HIDE_ALL ):
+		if ( CyInterface().shouldDisplayUnitModel() and CyEngine().isGlobeviewUp() == False and CyInterface().getShowInterface() != InterfaceVisibility.INTERFACE_HIDE_ALL ):
 			if ( CyInterface().isCitySelection() ):
 
 				iOrders = CyInterface().getNumOrdersQueued()
@@ -1788,7 +1788,7 @@ class CvMainInterface:
 								szName = "FreeSpecialist" + str(iCount)
 								screen.setImageButton( szName, gc.getSpecialistInfo(i).getTexture(), (xResolution - 74  - (26 * iCount)), yResolution - 206, 24, 24, WidgetTypes.WIDGET_FREE_CITIZEN, i, 1 )
 								screen.show( szName )
-								bHandled = true
+								bHandled = True
 							iCount += 1
 
 				else:
@@ -1798,7 +1798,7 @@ class CvMainInterface:
 								szName = "FreeSpecialist" + str(iCount)
 								screen.setImageButton( szName, gc.getSpecialistInfo(i).getTexture(), (xResolution - 74  - (26 * iCount)), yResolution - 206, 24, 24, WidgetTypes.WIDGET_FREE_CITIZEN, i, -1 )
 								screen.show( szName )
-								bHandled = true
+								bHandled = True
 
 							iCount = iCount + 1
 
@@ -2002,7 +2002,7 @@ class CvMainInterface:
 				# edead: Great General Points
 				if not CyInterface().isCityScreenUp() and gc.getPlayer(ePlayer).getCombatExperience() > 0:
 					eCombatXPButton = u"<font=2>%c</font>" %(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 11)
-					eCombatXPText = ": " + unicode(gc.getPlayer(ePlayer).getCombatExperience()) + "/" + unicode(gc.getPlayer(ePlayer).greatPeopleThreshold(true))
+					eCombatXPText = ": " + unicode(gc.getPlayer(ePlayer).getCombatExperience()) + "/" + unicode(gc.getPlayer(ePlayer).greatPeopleThreshold(True))
 					screen.setLabel( "CombatXPButton", "Background", eCombatXPButton, CvUtil.FONT_RIGHT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 					screen.setLabel( "CombatXPText", "Background", eCombatXPText, CvUtil.FONT_LEFT_JUSTIFY, 31, 50 + (iCount * 19), -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 					screen.setHitTest( "CombatXPButton", HitTestTypes.HITTEST_NOHIT )
@@ -2931,12 +2931,12 @@ class CvMainInterface:
 					screen.setHitTest( "GreatPeopleText", HitTestTypes.HITTEST_NOHIT )
 					screen.show( "GreatPeopleText" )
 
-					iFirst = float(pHeadSelectedCity.getGreatPeopleProgress()) / float( gc.getPlayer( pHeadSelectedCity.getOwner() ).greatPeopleThreshold(false) )
+					iFirst = float(pHeadSelectedCity.getGreatPeopleProgress()) / float( gc.getPlayer( pHeadSelectedCity.getOwner() ).greatPeopleThreshold(False) )
 					screen.setBarPercentage( "GreatPeopleBar", InfoBarTypes.INFOBAR_STORED, iFirst )
 					if ( iFirst == 1 ):
-						screen.setBarPercentage( "GreatPeopleBar", InfoBarTypes.INFOBAR_RATE, ( float(pHeadSelectedCity.getGreatPeopleRate()) / float( gc.getPlayer( pHeadSelectedCity.getOwner() ).greatPeopleThreshold(false) ) ) )
+						screen.setBarPercentage( "GreatPeopleBar", InfoBarTypes.INFOBAR_RATE, ( float(pHeadSelectedCity.getGreatPeopleRate()) / float( gc.getPlayer( pHeadSelectedCity.getOwner() ).greatPeopleThreshold(False) ) ) )
 					else:
-						screen.setBarPercentage( "GreatPeopleBar", InfoBarTypes.INFOBAR_RATE, ( ( float(pHeadSelectedCity.getGreatPeopleRate()) / float( gc.getPlayer( pHeadSelectedCity.getOwner() ).greatPeopleThreshold(false) ) ) ) / ( 1 - iFirst ) )
+						screen.setBarPercentage( "GreatPeopleBar", InfoBarTypes.INFOBAR_RATE, ( ( float(pHeadSelectedCity.getGreatPeopleRate()) / float( gc.getPlayer( pHeadSelectedCity.getOwner() ).greatPeopleThreshold(False) ) ) ) / ( 1 - iFirst ) )
 					screen.show( "GreatPeopleBar" )
 
 				iFirst = float(pHeadSelectedCity.getCultureTimes100(pHeadSelectedCity.getOwner())) / float(100 * pHeadSelectedCity.getCultureThreshold())
@@ -3231,7 +3231,7 @@ class CvMainInterface:
 		iBtnHeight = 18 #Rhye (22)
 
 		if ((CyInterface().getShowInterface() != InterfaceVisibility.INTERFACE_HIDE_ALL and CyInterface().getShowInterface() != InterfaceVisibility.INTERFACE_MINIMAP_ONLY)):
-			if (CyInterface().isScoresVisible() and not CyInterface().isCityScreenUp() and CyEngine().isGlobeviewUp() == false):
+			if (CyInterface().isScoresVisible() and not CyInterface().isCityScreenUp() and CyEngine().isGlobeviewUp() == False):
 
 				i = gc.getMAX_CIV_TEAMS() - 1
 				while (i > -1):
@@ -3274,7 +3274,7 @@ class CvMainInterface:
 												szBuffer = szBuffer + "("  + localText.getColorText("TXT_KEY_CONCEPT_WAR", (), gc.getInfoTypeForString("COLOR_RED")).upper() + ") "
 
 										#Rhye - techs moved here
-										bEspionageCanSeeResearch = false
+										bEspionageCanSeeResearch = False
 										for iMissionLoop in range(gc.getNumEspionageMissionInfos()):
 											if (gc.getEspionageMissionInfo(iMissionLoop).isSeeResearch()):
 												bEspionageCanSeeResearch = gc.getPlayer(gc.getGame().getActivePlayer()).canDoEspionageMission(iMissionLoop, ePlayer, CyMap().plot(-1,-1), -1)
@@ -3746,7 +3746,7 @@ class CvMainInterface:
 		iFastestPerson = 10000000
 		iGPTurns = 0
 		pPlayer = gc.getPlayer(gc.getGame().getActivePlayer())
-		iGPNext = pPlayer.greatPeopleThreshold(false)
+		iGPNext = pPlayer.greatPeopleThreshold(False)
 		pFastestCity = CyInterface().getHeadSelectedCity()
 
 		for icity in range(pPlayer.getNumCities()):

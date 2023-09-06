@@ -85,7 +85,7 @@ class CvPediaCivilization:
 		# Icon
 		screen.addPanel( self.top.getNextWidgetName(), "", "", False, False,
 			self.X_MAIN_PANE, self.Y_MAIN_PANE, self.W_MAIN_PANE, self.H_MAIN_PANE, PanelStyles.PANEL_STYLE_BLUE50)
-		screen.addPanel(self.top.getNextWidgetName(), "", "", false, false,
+		screen.addPanel(self.top.getNextWidgetName(), "", "", False, False,
 			self.X_ICON, self.Y_ICON, self.W_ICON, self.H_ICON, PanelStyles.PANEL_STYLE_MAIN)
 		screen.addDDSGFC(self.top.getNextWidgetName(), ArtFileMgr.getCivilizationArtInfo(gc.getCivilizationInfo(self.iCivilization).getArtDefineTag()).getButton(),
 			self.X_ICON + self.W_ICON/2 - self.ICON_SIZE/2, self.Y_ICON + self.H_ICON/2 - self.ICON_SIZE/2, self.ICON_SIZE, self.ICON_SIZE, WidgetTypes.WIDGET_GENERAL, -1, -1 )
@@ -103,7 +103,7 @@ class CvPediaCivilization:
 
 		#Rhye - comment
 ##		panelName = self.top.getNextWidgetName()
-##		screen.addPanel( panelName, localText.getText("TXT_KEY_FREE_TECHS", ()), "", false, true,
+##		screen.addPanel( panelName, localText.getText("TXT_KEY_FREE_TECHS", ()), "", False, True,
 ##				 self.X_TECH, self.Y_TECH, self.W_TECH, self.H_TECH, PanelStyles.PANEL_STYLE_BLUE50 )
 ##		screen.attachLabel(panelName, "", "  ")
 ##		for iTech in range(gc.getNumTechInfos()):
@@ -112,7 +112,7 @@ class CvPediaCivilization:
 
 		#Rhye - start
 		panelName = self.top.getNextWidgetName()
-		screen.addPanel( panelName, "", "", true, true, self.X_TECH, self.Y_TECH - 4, self.W_LEADER, self.Y_TEXT - self.Y_TECH + 4, PanelStyles.PANEL_STYLE_BLUE50 )
+		screen.addPanel( panelName, "", "", True, True, self.X_TECH, self.Y_TECH - 4, self.W_LEADER, self.Y_TEXT - self.Y_TECH + 4, PanelStyles.PANEL_STYLE_BLUE50 )
 		szText = CyGameTextMgr().parseCivInfos(self.iCivilization, True)
 		screen.attachMultilineText( panelName, "", szText, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
 		#Rhye - end
@@ -124,7 +124,7 @@ class CvPediaCivilization:
 		screen = self.top.getScreen()
 		#Rhye - comment
 ##		panelName = self.top.getNextWidgetName()
-##		screen.addPanel( panelName, localText.getText("TXT_KEY_FREE_UNITS", ()), "", false, true,
+##		screen.addPanel( panelName, localText.getText("TXT_KEY_FREE_UNITS", ()), "", False, True,
 ##				 self.X_UNIT, self.Y_UNIT, self.W_UNIT, self.H_UNIT, PanelStyles.PANEL_STYLE_BLUE50 )
 ##		screen.attachLabel(panelName, "", "  ")
 ##
@@ -139,7 +139,7 @@ class CvPediaCivilization:
 		screen = self.top.getScreen()
 		#Rhye - comment
 ##		panelName = self.top.getNextWidgetName()
-##		screen.addPanel( panelName, localText.getText("TXT_KEY_CONCEPT_LEADERS", ()), "", false, true,
+##		screen.addPanel( panelName, localText.getText("TXT_KEY_CONCEPT_LEADERS", ()), "", False, True,
 ##				 self.X_LEADER, self.Y_LEADER, self.W_LEADER, self.H_LEADER, PanelStyles.PANEL_STYLE_BLUE50 )
 ##		screen.attachLabel(panelName, "", "  ")
 ##
@@ -153,7 +153,7 @@ class CvPediaCivilization:
 		screen = self.top.getScreen()
 
 		panelName = self.top.getNextWidgetName()
-		screen.addPanel( panelName, "", "", true, true, self.X_TEXT, self.Y_TEXT, self.W_TEXT, self.H_TEXT, PanelStyles.PANEL_STYLE_BLUE50 )
+		screen.addPanel( panelName, "", "", True, True, self.X_TEXT, self.Y_TEXT, self.W_TEXT, self.H_TEXT, PanelStyles.PANEL_STYLE_BLUE50 )
 
 		szText = gc.getCivilizationInfo(self.iCivilization).getCivilopedia()
 		screen.attachMultilineText( panelName, "Text", szText, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)

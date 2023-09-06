@@ -194,7 +194,7 @@ class CvInfoScreen:
 		self.Y_ROW_9 = self.Y_ROW_8 + self.H_TEXT + self.Y_TEXT_BUFFER
 		self.Y_ROW_10 = self.Y_ROW_9 + self.H_TEXT + self.Y_TEXT_BUFFER
 
-		self.bAbleToShowAllPlayers = false
+		self.bAbleToShowAllPlayers = False
 		self.iShowingPlayer = -1
 		self.aiDropdownPlayerIDs = []
 
@@ -469,7 +469,7 @@ class CvInfoScreen:
 								0,
 								0]
 
-#		self.bShowAllPlayers = false
+#		self.bShowAllPlayers = False
 		self.graphEnd		= CyGame().getGameTurn() - 1
 		self.graphZoom		= self.graphEnd - CyGame().getStartTurn()
 		self.iShowingPlayer = -1
@@ -679,7 +679,7 @@ class CvInfoScreen:
 		self.Y_LEGEND = self.Y_GRAPH + self.H_GRAPH - self.H_LEGEND
 
 		self.LEGEND_PANEL_ID = self.getNextWidgetName()
-		screen.addPanel( self.LEGEND_PANEL_ID, "", "", true, true
+		screen.addPanel( self.LEGEND_PANEL_ID, "", "", True, True
 				, self.X_LEGEND, self.Y_LEGEND, self.W_LEGEND, self.H_LEGEND
 				, PanelStyles.PANEL_STYLE_IN
 				)
@@ -1134,85 +1134,85 @@ class CvInfoScreen:
 
 		# Lists of player values are ordered from highest first to lowest, so determine Rank, Strength and World Average
 
-		bEconomyFound = false
-		bIndustryFound = false
-		bAgricultureFound = false
-		bMilitaryFound = false
-		bSoldiersFound = false		#Absinthe
-		bLandAreaFound = false
-		bPopulationFound = false
-		bTotalPopulationFound = false		#Absinthe
-		bHappinessFound = false
-		bHealthFound = false
-		bImpExpRatioFound = false
+		bEconomyFound = False
+		bIndustryFound = False
+		bAgricultureFound = False
+		bMilitaryFound = False
+		bSoldiersFound = False		#Absinthe
+		bLandAreaFound = False
+		bPopulationFound = False
+		bTotalPopulationFound = False		#Absinthe
+		bHappinessFound = False
+		bHealthFound = False
+		bImpExpRatioFound = False
 
 		for i in range(len(aiGroupEconomy)):
 
-			if (iEconomy == aiGroupEconomy[i] and bEconomyFound == false):
+			if (iEconomy == aiGroupEconomy[i] and bEconomyFound == False):
 				iEconomyRank = i + 1
-				bEconomyFound = true
+				bEconomyFound = True
 			else:
 				fEconomyGameAverage += aiGroupEconomy[i]
 
-			if (iIndustry == aiGroupIndustry[i] and bIndustryFound == false):
+			if (iIndustry == aiGroupIndustry[i] and bIndustryFound == False):
 				iIndustryRank = i + 1
-				bIndustryFound = true
+				bIndustryFound = True
 			else:
 				fIndustryGameAverage += aiGroupIndustry[i]
 
-			if (iAgriculture == aiGroupAgriculture[i] and bAgricultureFound == false):
+			if (iAgriculture == aiGroupAgriculture[i] and bAgricultureFound == False):
 				iAgricultureRank = i + 1
-				bAgricultureFound = true
+				bAgricultureFound = True
 			else:
 				fAgricultureGameAverage += aiGroupAgriculture[i]
 
-			if (fMilitary == aiGroupMilitary[i] and bMilitaryFound == false):
+			if (fMilitary == aiGroupMilitary[i] and bMilitaryFound == False):
 				iMilitaryRank = i + 1
-				bMilitaryFound = true
+				bMilitaryFound = True
 			else:
 				fMilitaryGameAverage += aiGroupMilitary[i]
 
 			#Absinthe
-			if (iSoldiers == aiGroupSoldiers[i] and bSoldiersFound == false):
+			if (iSoldiers == aiGroupSoldiers[i] and bSoldiersFound == False):
 				iSoldiersRank = i + 1
-				bSoldiersFound = true
+				bSoldiersFound = True
 			else:
 				fSoldiersGameAverage += aiGroupSoldiers[i]
 
-			if (iLandArea == aiGroupLandArea[i] and bLandAreaFound == false):
+			if (iLandArea == aiGroupLandArea[i] and bLandAreaFound == False):
 				iLandAreaRank = i + 1
-				bLandAreaFound = true
+				bLandAreaFound = True
 			else:
 				fLandAreaGameAverage += aiGroupLandArea[i]
 
-			if (iPopulation == aiGroupPopulation[i] and bPopulationFound == false):
+			if (iPopulation == aiGroupPopulation[i] and bPopulationFound == False):
 				iPopulationRank = i + 1
-				bPopulationFound = true
+				bPopulationFound = True
 			else:
 				fPopulationGameAverage += aiGroupPopulation[i]
 
 			#Absinthe
-			if (iTotalPopulation == aiGroupTotalPopulation[i] and bTotalPopulationFound == false):
+			if (iTotalPopulation == aiGroupTotalPopulation[i] and bTotalPopulationFound == False):
 				iTotalPopulationRank = i + 1
-				bTotalPopulationFound = true
+				bTotalPopulationFound = True
 			else:
 				fTotalPopulationGameAverage += aiGroupTotalPopulation[i]
 
-			if (iHappiness == aiGroupHappiness[i] and bHappinessFound == false):
+			if (iHappiness == aiGroupHappiness[i] and bHappinessFound == False):
 				iHappinessRank = i + 1
-				bHappinessFound = true
+				bHappinessFound = True
 			else:
 				fHappinessGameAverage += aiGroupHappiness[i]
 
-			if (iHealth == aiGroupHealth[i] and bHealthFound == false):
+			if (iHealth == aiGroupHealth[i] and bHealthFound == False):
 				iHealthRank = i + 1
-				bHealthFound = true
+				bHealthFound = True
 			else:
 				fHealthGameAverage += aiGroupHealth[i]
 
-			if (fImpExpRatio == afGroupImpExpRatio[i] and bImpExpRatioFound == false):
+			if (fImpExpRatio == afGroupImpExpRatio[i] and bImpExpRatioFound == False):
 				iImpExpRatioRank = i + 1
-				bImpExpRatioFound = true
+				bImpExpRatioFound = True
 			else:
 				fImportsGameAverage += aiGroupImports[i]
 				fExportsGameAverage += aiGroupImports[i]
@@ -1287,7 +1287,7 @@ class CvInfoScreen:
 
 		# Create Table
 		szTable = self.getNextWidgetName()
-		screen.addTableControlGFC(szTable, 6, self.X_CHART, self.Y_CHART, self.W_CHART, self.H_CHART, true, true, 32,32, TableStyles.TABLE_STYLE_STANDARD)
+		screen.addTableControlGFC(szTable, 6, self.X_CHART, self.Y_CHART, self.W_CHART, self.H_CHART, True, True, 32,32, TableStyles.TABLE_STYLE_STANDARD)
 		screen.setTableColumnHeader(szTable, 0, self.TEXT_DEMOGRAPHICS_SMALL, 224) # Total graph width is 430
 		screen.setTableColumnHeader(szTable, 1, self.TEXT_VALUE, 155)
 		screen.setTableColumnHeader(szTable, 2, self.TEXT_BEST, 155)
@@ -1400,7 +1400,7 @@ class CvInfoScreen:
 
 		# Background Panes
 		self.szLeftPaneWidget = self.getNextWidgetName()
-		screen.addPanel( self.szLeftPaneWidget, "", "", true, true,
+		screen.addPanel( self.szLeftPaneWidget, "", "", True, True,
 			self.X_LEFT_PANE, self.Y_LEFT_PANE, self.W_LEFT_PANE, self.H_LEFT_PANE, PanelStyles.PANEL_STYLE_MAIN )#PanelStyles.PANEL_STYLE_DAWNTOP )
 
 		self.drawTopCities()
@@ -1420,7 +1420,7 @@ class CvInfoScreen:
 		for iWidgetLoop in range(self.iNumCities):
 
 			szTextPanel = self.getNextWidgetName()
-			screen.addPanel( szTextPanel, "", "", false, true,
+			screen.addPanel( szTextPanel, "", "", False, True,
 				self.X_COL_1_CITIES_DESC, self.Y_ROWS_CITIES[iWidgetLoop] + self.Y_CITIES_DESC_BUFFER, self.W_CITIES_DESC, self.H_CITIES_DESC, PanelStyles.PANEL_STYLE_DAWNTOP )
 			self.szCityNameWidgets.append(self.getNextWidgetName())
 #			szProjectDesc = u"<font=3b>" + pProjectInfo.getDescription().upper() + u"</font>"
@@ -1441,8 +1441,8 @@ class CvInfoScreen:
 
 			self.szCityAnimWidgets.append(self.getNextWidgetName())
 
-			if (pCity.isRevealed(gc.getGame().getActiveTeam(), false)):
-				screen.addPlotGraphicGFC(self.szCityAnimWidgets[iWidgetLoop], self.X_CITY_ANIMATION, self.Y_ROWS_CITIES[iWidgetLoop] + self.Y_CITY_ANIMATION_BUFFER - self.H_CITY_ANIMATION / 2, self.W_CITY_ANIMATION, self.H_CITY_ANIMATION, pPlot, iDistance, false, WidgetTypes.WIDGET_GENERAL, -1, -1)
+			if (pCity.isRevealed(gc.getGame().getActiveTeam(), False)):
+				screen.addPlotGraphicGFC(self.szCityAnimWidgets[iWidgetLoop], self.X_CITY_ANIMATION, self.Y_ROWS_CITIES[iWidgetLoop] + self.Y_CITY_ANIMATION_BUFFER - self.H_CITY_ANIMATION / 2, self.W_CITY_ANIMATION, self.H_CITY_ANIMATION, pPlot, iDistance, False, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		# Draw Wonder icons
 		self.drawCityWonderIcons();
@@ -1493,7 +1493,7 @@ class CvInfoScreen:
 			#iScollAreaY = (self.Y_CITIES_BUFFER * iCityLoop) + 90 + self.Y_CITIES_WONDER_BUFFER
 
 			szIconPanel = self.szCityWonderScrollArea[iCityLoop]
-			screen.addPanel( szIconPanel, "", "", false, true,
+			screen.addPanel( szIconPanel, "", "", False, True,
 				self.X_COL_1_CITIES_DESC, self.Y_ROWS_CITIES[iCityLoop] + self.Y_CITIES_WONDER_BUFFER + self.Y_CITIES_DESC_BUFFER, self.W_CITIES_DESC, self.H_CITIES_DESC, PanelStyles.PANEL_STYLE_DAWNTOP )
 
 			# Now place the wonder buttons
@@ -1626,7 +1626,7 @@ class CvInfoScreen:
 		screen = self.getScreen()
 
 		self.szRightPaneWidget = self.getNextWidgetName()
-		screen.addPanel( self.szRightPaneWidget, "", "", true, true,
+		screen.addPanel( self.szRightPaneWidget, "", "", True, True,
 			self.X_RIGHT_PANE, self.Y_RIGHT_PANE, self.W_RIGHT_PANE, self.H_RIGHT_PANE, PanelStyles.PANEL_STYLE_MAIN )#PanelStyles.PANEL_STYLE_DAWNTOP )
 
 		self.drawWondersDropdownBox()
@@ -1645,21 +1645,21 @@ class CvInfoScreen:
 		screen.addDropDownBoxGFC(self.szWondersDropdownWidget, self.X_DROPDOWN, self.Y_DROPDOWN, self.W_DROPDOWN, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 
 		if (self.szWonderDisplayMode == "World Wonders"):
-			bDefault = true
+			bDefault = True
 		else:
-			bDefault = false
+			bDefault = False
 		screen.addPullDownString(self.szWondersDropdownWidget, localText.getText("TXT_KEY_TOP_CITIES_SCREEN_WORLD_WONDERS", ()), 0, 0, bDefault )
 
 		if (self.szWonderDisplayMode == "National Wonders"):
-			bDefault = true
+			bDefault = True
 		else:
-			bDefault = false
+			bDefault = False
 		screen.addPullDownString(self.szWondersDropdownWidget, localText.getText("TXT_KEY_TOP_CITIES_SCREEN_NATIONAL_WONDERS", ()), 1, 1, bDefault )
 
 		if (self.szWonderDisplayMode == "Projects"):
-			bDefault = true
+			bDefault = True
 		else:
-			bDefault = false
+			bDefault = False
 		screen.addPullDownString(self.szWondersDropdownWidget, localText.getText("TXT_KEY_PEDIA_CATEGORY_PROJECT", ()), 2, 2, bDefault )
 
 		return
@@ -1763,7 +1763,7 @@ class CvInfoScreen:
 
 		# Stats Panel
 		panelName = self.getNextWidgetName()
-		screen.addPanel( panelName, "", "", true, true, self.X_STATS_PANE, self.Y_STATS_PANE, self.W_STATS_PANE, self.H_STATS_PANE, PanelStyles.PANEL_STYLE_IN )
+		screen.addPanel( panelName, "", "", True, True, self.X_STATS_PANE, self.Y_STATS_PANE, self.W_STATS_PANE, self.H_STATS_PANE, PanelStyles.PANEL_STYLE_IN )
 
 ############################################### DISPLAY SINGLE WONDER ###############################################
 
@@ -1847,7 +1847,7 @@ class CvInfoScreen:
 				screen.setText(self.szSpecialTitleWidget, "", szSpecialTitle, CvUtil.FONT_LEFT_JUSTIFY, self.X_SPECIAL_TITLE, self.Y_SPECIAL_TITLE, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 				panelName = self.getNextWidgetName()
-				screen.addPanel( panelName, "", "", true, true, self.X_SPECIAL_PANE, self.Y_SPECIAL_PANE, self.W_SPECIAL_PANE, self.H_SPECIAL_PANE, PanelStyles.PANEL_STYLE_IN)
+				screen.addPanel( panelName, "", "", True, True, self.X_SPECIAL_PANE, self.Y_SPECIAL_PANE, self.W_SPECIAL_PANE, self.H_SPECIAL_PANE, PanelStyles.PANEL_STYLE_IN)
 
 				listName = self.getNextWidgetName()
 				screen.attachListBoxGFC( panelName, listName, "", TableStyles.TABLE_STYLE_EMPTY )
@@ -1954,7 +1954,7 @@ class CvInfoScreen:
 				screen.setText(self.szSpecialTitleWidget, "", szSpecialTitle, CvUtil.FONT_LEFT_JUSTIFY, self.X_SPECIAL_TITLE, self.Y_SPECIAL_TITLE, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 				panelName = self.getNextWidgetName()
-				screen.addPanel( panelName, "", "", true, true, self.X_SPECIAL_PANE, self.Y_SPECIAL_PANE, self.W_SPECIAL_PANE, self.H_SPECIAL_PANE, PanelStyles.PANEL_STYLE_IN)
+				screen.addPanel( panelName, "", "", True, True, self.X_SPECIAL_PANE, self.Y_SPECIAL_PANE, self.W_SPECIAL_PANE, self.H_SPECIAL_PANE, PanelStyles.PANEL_STYLE_IN)
 
 				listName = self.getNextWidgetName()
 				screen.attachListBoxGFC( panelName, listName, "", TableStyles.TABLE_STYLE_EMPTY )
@@ -1992,7 +1992,7 @@ class CvInfoScreen:
 					# Check to see if active player can see this city
 					# Absinthe: this is disabled, instead a check later with isRevealed: able to see the city name if we have ever saw the city
 					#szCityName = ""
-					#if (pCityPlot.isActiveVisible(false)):
+					#if (pCityPlot.isActiveVisible(False)):
 					#	szCityName = pCity.getName()
 
 					# Loop through projects to find any under construction

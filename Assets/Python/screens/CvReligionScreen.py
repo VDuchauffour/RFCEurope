@@ -218,7 +218,7 @@ class CvReligionScreen:
 						else:
 							szFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_1200AD", ())
 					else:
-						szFounded = CyGameTextMgr().getTimeStr(gc.getGame().getReligionGameTurnFounded(i), false)
+						szFounded = CyGameTextMgr().getTimeStr(gc.getGame().getReligionGameTurnFounded(i), False)
 				else:
 					if (year <= utils.getScenarioStartYear()):
 						szFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_ERA", ())
