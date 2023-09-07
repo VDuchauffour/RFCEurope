@@ -50,13 +50,13 @@ import CvMercenaryManager
 
 # < Mercenaries Mod End >
 
-g_bIsScreenActive = -1
 
 # Rhye - start
 import Consts as con
 import RFCUtils
 
 utils = RFCUtils.RFCUtils()
+g_bIsScreenActive = -1
 
 
 def getStability(argsList):

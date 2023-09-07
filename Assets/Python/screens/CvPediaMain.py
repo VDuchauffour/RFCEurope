@@ -14,9 +14,6 @@ import CvUtil
 
 import XMLConsts as xml
 
-PyPlayer = PyHelpers.PyPlayer
-PyCity = PyHelpers.PyCity
-
 import CvScreenEnums
 import CvPediaScreen  # base class
 import CvPediaTech
@@ -43,6 +40,8 @@ import CvPediaCorporation
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
 localText = CyTranslator()
+PyPlayer = PyHelpers.PyPlayer
+PyCity = PyHelpers.PyCity
 
 
 class CvPediaMain(CvPediaScreen.CvPediaScreen):
