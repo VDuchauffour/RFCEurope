@@ -695,52 +695,82 @@ class Stability:
 		lCivics = set([iCivic0, iCivic1])
 
 		if xml.iCivicFeudalMonarchy in lCivics:
-			if xml.iCivicFeudalLaw in lCivics: return 3
+			if xml.iCivicFeudalLaw in lCivics:
+				return 3
 
 		if xml.iCivicDivineMonarchy in lCivics: #Divine Monarchy should have an appropriate religious civic
-			if xml.iCivicReligiousLaw in lCivics: return 2
-			if xml.iCivicPaganism in lCivics: return -4
-			if xml.iCivicStateReligion in lCivics: return 2
-			if xml.iCivicTheocracy in lCivics: return 3
-			if xml.iCivicOrganizedReligion in lCivics: return 4
-			if xml.iCivicFreeReligion in lCivics: return -3
+			if xml.iCivicReligiousLaw in lCivics:
+				return 2
+			if xml.iCivicPaganism in lCivics:
+				return -4
+			if xml.iCivicStateReligion in lCivics:
+				return 2
+			if xml.iCivicTheocracy in lCivics:
+				return 3
+			if xml.iCivicOrganizedReligion in lCivics:
+				return 4
+			if xml.iCivicFreeReligion in lCivics:
+				return -3
 
 		if xml.iCivicLimitedMonarchy in lCivics: #Constitutional Monarchy and Republic both like enlightened civics
-			if xml.iCivicCommonLaw in lCivics: return 3
-			if xml.iCivicFreePeasantry in lCivics: return 2
-			if xml.iCivicFreeLabor in lCivics: return 2
+			if xml.iCivicCommonLaw in lCivics:
+				return 3
+			if xml.iCivicFreePeasantry in lCivics:
+				return 2
+			if xml.iCivicFreeLabor in lCivics:
+				return 2
 
 		if xml.iCivicMerchantRepublic in lCivics: #Constitutional Monarchy and Republic both like enlightened civics
-			if xml.iCivicFeudalLaw in lCivics: return -3
-			if xml.iCivicCommonLaw in lCivics: return 3
-			if xml.iCivicFreePeasantry in lCivics: return 2
-			if xml.iCivicFreeLabor in lCivics: return 2
-			if xml.iCivicTradeEconomy in lCivics: return 4
-			if xml.iCivicMercantilism in lCivics: return -4
-			if xml.iCivicImperialism in lCivics: return -2
+			if xml.iCivicFeudalLaw in lCivics:
+				return -3
+			if xml.iCivicCommonLaw in lCivics:
+				return 3
+			if xml.iCivicFreePeasantry in lCivics:
+				return 2
+			if xml.iCivicFreeLabor in lCivics:
+				return 2
+			if xml.iCivicTradeEconomy in lCivics:
+				return 4
+			if xml.iCivicMercantilism in lCivics:
+				return -4
+			if xml.iCivicImperialism in lCivics:
+				return -2
 
 		if xml.iCivicFeudalLaw in lCivics:
-			if xml.iCivicSerfdom in lCivics: return 3
-			if xml.iCivicFreePeasantry in lCivics: return -4
-			if xml.iCivicManorialism in lCivics: return 2
-			if xml.iCivicVassalage in lCivics: return 2
+			if xml.iCivicSerfdom in lCivics:
+				return 3
+			if xml.iCivicFreePeasantry in lCivics:
+				return -4
+			if xml.iCivicManorialism in lCivics:
+				return 2
+			if xml.iCivicVassalage in lCivics:
+				return 2
 
 		if xml.iCivicReligiousLaw in lCivics:
-			if xml.iCivicPaganism in lCivics: return -5
-			if xml.iCivicTheocracy in lCivics:  return 5
-			if xml.iCivicFreeReligion in lCivics: return -3
+			if xml.iCivicPaganism in lCivics:
+				return -5
+			if xml.iCivicTheocracy in lCivics:
+				return 5
+			if xml.iCivicFreeReligion in lCivics:
+				return -3
 
 		if xml.iCivicCommonLaw in lCivics:
-			if xml.iCivicSerfdom in lCivics: return -3
-			if xml.iCivicFreeLabor in lCivics: return 3
-			if xml.iCivicTheocracy in lCivics: return -4
+			if xml.iCivicSerfdom in lCivics:
+				return -3
+			if xml.iCivicFreeLabor in lCivics:
+				return 3
+			if xml.iCivicTheocracy in lCivics:
+				return -4
 
 		if xml.iCivicSerfdom in lCivics:
-			if xml.iCivicManorialism in lCivics: return 2
-			if xml.iCivicTradeEconomy in lCivics: return -3
+			if xml.iCivicManorialism in lCivics:
+				return 2
+			if xml.iCivicTradeEconomy in lCivics:
+				return -3
 
 		if xml.iCivicApprenticeship in lCivics:
-			if xml.iCivicGuilds in lCivics: return 3
+			if xml.iCivicGuilds in lCivics:
+				return 3
 
 		return 0
 
@@ -840,4 +870,3 @@ class Stability:
 	#		if ( not pPlayer.isHuman() ):
 	#			iExpStability += 4
 		pPlayer.setStabilityVary( iCathegoryExpansion, iExpStability )
-

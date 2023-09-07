@@ -1176,7 +1176,8 @@ class CvVictoryScreen:
 		iOtherColonies = 0
 		iColonyPlayer = -1
 		for iCiv in range( con.iNumPlayers ):
-			if iCiv == iPlayer: continue
+			if iCiv == iPlayer:
+				continue
 			if ( gc.getPlayer( iCiv ).isAlive() ):
 				iTempNumColonies = vic.Victory().getNumRealColonies(iCiv)
 				if (iTempNumColonies > iOtherColonies):
@@ -1280,7 +1281,8 @@ class CvVictoryScreen:
 		iOtherFood = 0
 		iFoodPlayer = -1
 		for iLoopPlayer in range( con.iNumMajorPlayers ):
-			if iLoopPlayer == iPlayer: continue
+			if iLoopPlayer == iPlayer:
+				continue
 			pLoopPlayer = gc.getPlayer(iLoopPlayer)
 			if pLoopPlayer.isAlive():
 				iTempFood = pLoopPlayer.calculateTotalYield(YieldTypes.YIELD_FOOD)
@@ -1330,9 +1332,11 @@ class CvVictoryScreen:
 		iOtherTrade = 0
 		iBiggestTrader = -1
 		for iLoopPlayer in range( con.iNumPlayers ):
-			if iLoopPlayer == iPlayer: continue
+			if iLoopPlayer == iPlayer:
+				continue
 			pLoopPlayer = gc.getPlayer( iLoopPlayer )
-			if not pLoopPlayer.isAlive(): continue
+			if not pLoopPlayer.isAlive():
+				continue
 			iTrade = pLoopPlayer.calculateTotalImports(YieldTypes.YIELD_COMMERCE) + pLoopPlayer.calculateTotalExports(YieldTypes.YIELD_COMMERCE)
 			if ( iTrade > iOtherTrade ):
 				iOtherTrade = iTrade
@@ -1483,7 +1487,8 @@ class CvVictoryScreen:
 		iOtherCount = 0
 		iMostPlayer = -1
 		for iLoopPlayer in range( con.iNumMajorPlayers ):
-			if iLoopPlayer == iPlayer: continue
+			if iLoopPlayer == iPlayer:
+				continue
 			pLoopPlayer = gc.getPlayer(iLoopPlayer)
 			if pLoopPlayer.isAlive():
 				iTempCount = vic.Victory().getTerritoryPercentEurope(iLoopPlayer)
@@ -1838,7 +1843,8 @@ class CvVictoryScreen:
 		iGold = 0
 		iRichestPlayer = -1
 		for iCiv in range( con.iNumPlayers ):
-			if iCiv == self.iActivePlayer: continue
+			if iCiv == self.iActivePlayer:
+				continue
 			if ( gc.getPlayer( iCiv ).isAlive() ):
 				if (gc.getPlayer(iCiv).getGold() > iGold):
 					iGold = gc.getPlayer(iCiv).getGold()

@@ -896,10 +896,13 @@ class RFCUtils:
 
 	def isActive(self, iPlayer):
 		"""Returns True if the player is spawned and alive."""
-		if gc.getPlayer(iPlayer).getNumCities() < 1: return False
-		if not gc.getPlayer(iPlayer).isAlive: return False
+		if gc.getPlayer(iPlayer).getNumCities() < 1:
+			return False
+		if not gc.getPlayer(iPlayer).isAlive:
+			return False
 		iGameTurn = gc.getGame().getGameTurn()
-		if iGameTurn < con.tBirth[iPlayer]: return False
+		if iGameTurn < con.tBirth[iPlayer]:
+			return False
 		return True
 
 
@@ -1483,7 +1486,8 @@ class RFCUtils:
 	#Absinthe: end
 
 	def getScenario(self):
-		if gc.getPlayer(con.iBurgundy).isPlayable(): return con.i500ADScenario
+		if gc.getPlayer(con.iBurgundy).isPlayable():
+			return con.i500ADScenario
 		return con.i1200ADScenario
 
 	def getScenarioStartYear(self):
@@ -1545,11 +1549,13 @@ class RFCUtils:
 		return [(i , j) for i in range(x-iRadius, x+iRadius+1) for j in range(y-iRadius, y+iRadius+1) if 0 <= i < con.iMapMaxX and 0 <= j < con.iMapMaxY and not filter((i, j))]
 
 	def getCityList(self, iCiv):
-		if iCiv is None: return []
+		if iCiv is None:
+			return []
 		return [pCity.GetCy() for pCity in PyPlayer(iCiv).getCityList()]
 
 	def getRandomEntry(self, list):
-		if not list: return False
+		if not list:
+			return False
 		return list[gc.getGame().getSorenRandNum(len(list), 'Random entry')]
 
 	def isWonder(self, iBuilding):
@@ -1559,7 +1565,8 @@ class RFCUtils:
 		return [(x, y) for x in range(con.iMapMaxX) for y in range(con.iMapMaxY)]
 
 	def getRandomByWeight(self, lList):
-		if not lList: return -1
+		if not lList:
+			return -1
 		iTemp = 0
 		iRand = gc.getGame().getSorenRandNum(sum(x[1] for x in lList), 'Random entry')
 		for (iPlayer, iValue) in lList:
