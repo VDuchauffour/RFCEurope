@@ -664,7 +664,7 @@ class CvUnitDesc:
 		self.level = -1
 		self.experience = -1
 		self.promotionType = []
-		self.facingDirection = DirectionTypes.NO_DIRECTION;
+		self.facingDirection = DirectionTypes.NO_DIRECTION
 		self.isSleep = False
 		self.isIntercept = False
 		self.isPatrol = False
@@ -695,7 +695,7 @@ class CvUnitDesc:
 				if(self.leaderUnitType != None):
 					leaderUnitTypeNum = CvUtil.findInfoTypeNum(gc.getUnitInfo, gc.getNumUnitInfos(), self.leaderUnitType)
 					if leaderUnitTypeNum >= 0:
-						unit.setLeaderUnitType(leaderUnitTypeNum);
+						unit.setLeaderUnitType(leaderUnitTypeNum)
 
 				#other properties
 				if self.damage != 0:
@@ -1878,4 +1878,3 @@ class CvWBDesc:
 	def writeRFCEMaps(self, sFileName):
 		sFileName = sFileName + "RFCEMaps.py"
 		RFCEMapUtil.MapExporter.saveTo(sFileName)
-

@@ -502,7 +502,7 @@ class CvInfoScreen:
 	# Screen construction function
 	def showScreen(self, iTurn, iTabID, iEndGame):
 
-		self.initText();
+		self.initText()
 
 		self.iStartTurn = 0
 		for iI in range(gc.getGameSpeedInfo(gc.getGame().getGameSpeedType()).getNumTurnIncrements()):
@@ -1445,7 +1445,7 @@ class CvInfoScreen:
 				screen.addPlotGraphicGFC(self.szCityAnimWidgets[iWidgetLoop], self.X_CITY_ANIMATION, self.Y_ROWS_CITIES[iWidgetLoop] + self.Y_CITY_ANIMATION_BUFFER - self.H_CITY_ANIMATION / 2, self.W_CITY_ANIMATION, self.H_CITY_ANIMATION, pPlot, iDistance, False, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		# Draw Wonder icons
-		self.drawCityWonderIcons();
+		self.drawCityWonderIcons()
 
 		return
 

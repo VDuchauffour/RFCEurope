@@ -126,7 +126,7 @@ class CvVictoryScreen:
 		screen = self.getScreen()
 		if screen.isActive():
 			return
-		screen.setRenderInterfaceOnly(True);
+		screen.setRenderInterfaceOnly(True)
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 
 		self.iActivePlayer = CyGame().getActivePlayer()
@@ -1630,7 +1630,7 @@ class CvVictoryScreen:
 
 	def getMultiProvinceString(self, lVictories):
 		iGameTurn = gc.getGame().getGameTurn()
-		sString = "" 
+		sString = ""
 		for iGoal in range(len(lVictories)):
 			if iGoal > 0:
 				sString += "\n\n"

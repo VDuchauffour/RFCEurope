@@ -441,7 +441,7 @@ def WorldBuilderGetHighlightPlot(argsList):
 	return worldBuilderScreen.getHighlightPlot(argsList)
 
 def WorldBuilderOnAdvancedStartBrushSelected(argsList):
-	iList,iIndex,iTab = argsList;
+	iList,iIndex,iTab = argsList
 	print("WB Advanced Start brush selected, iList=%d, iIndex=%d, type=%d" %(iList,iIndex,iTab))
 	if (iTab == worldBuilderScreen.m_iASTechTabID):
 		showTechChooser()
@@ -454,14 +454,14 @@ def WorldBuilderOnAdvancedStartBrushSelected(argsList):
 	return 0
 
 def WorldBuilderOnNormalPlayerBrushSelected(argsList):
-	iList,iIndex,iTab = argsList;
+	iList,iIndex,iTab = argsList
 	print("WB brush selected, iList=%d, iIndex=%d, type=%d" %(iList,iIndex,iTab))
 	if (worldBuilderScreen.setCurrentNormalPlayerIndex(iIndex)):
 		return 1
 	return 0
 
 def WorldBuilderOnNormalMapBrushSelected(argsList):
-	iList,iIndex,iTab = argsList;
+	iList,iIndex,iTab = argsList
 	print("WB brush selected, iList=%d, iIndex=%d, type=%d" %(iList,iIndex,iTab))
 	if (worldBuilderScreen.setCurrentNormalMapIndex(iIndex)):
 		if (worldBuilderScreen.setCurrentNormalMapList(iList)):
@@ -469,31 +469,31 @@ def WorldBuilderOnNormalMapBrushSelected(argsList):
 	return 0
 
 def WorldBuilderOnWBEditBrushSelected(argsList):
-	iList,iIndex,iTab = argsList;
+	iList,iIndex,iTab = argsList
 	if (worldBuilderScreen.setEditButtonClicked(iIndex)):
 		return 1
 	return 0
 
 def WorldBuilderOnWBEditReligionSelected(argsList):
-	iList,iIndex,iTab = argsList;
+	iList,iIndex,iTab = argsList
 	if (worldBuilderScreen.setEditReligionSelected(iIndex)):
 		return 1
 	return 0
 
 def WorldBuilderOnWBEditHolyCitySelected(argsList):
-	iList,iIndex,iTab = argsList;
+	iList,iIndex,iTab = argsList
 	if (worldBuilderScreen.setEditHolyCitySelected(iIndex)):
 		return 1
 	return 0
 
 def WorldBuilderOnWBEditCorporationSelected(argsList):
-	iList,iIndex,iTab = argsList;
+	iList,iIndex,iTab = argsList
 	if (worldBuilderScreen.setEditCorporationSelected(iIndex)):
 		return 1
 	return 0
 
 def WorldBuilderOnWBEditHeadquartersSelected(argsList):
-	iList,iIndex,iTab = argsList;
+	iList,iIndex,iTab = argsList
 	if (worldBuilderScreen.setEditHeadquartersSelected(iIndex)):
 		return 1
 	return 0
@@ -978,4 +978,3 @@ HandleNavigationMap = {
 
 					# add new screens here
 					}
-

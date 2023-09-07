@@ -358,12 +358,12 @@ class RFCUtils:
 				#print("  3Miro Unit Type and Owner ",unit.getUnitType(),"  ",unit.getOwner() )
 				unit.setXYOld(tCityPlot[0],tCityPlot[1])
 		#cover revealed plots
-		gc.getMap().plot(27, 0).setRevealed(iCiv, False, True, -1);
-		gc.getMap().plot(28, 0).setRevealed(iCiv, False, True, -1);
-		gc.getMap().plot(29, 0).setRevealed(iCiv, False, True, -1);
-		gc.getMap().plot(27, 1).setRevealed(iCiv, False, True, -1);
-		gc.getMap().plot(28, 1).setRevealed(iCiv, False, True, -1);
-		gc.getMap().plot(29, 1).setRevealed(iCiv, False, True, -1);
+		gc.getMap().plot(27, 0).setRevealed(iCiv, False, True, -1)
+		gc.getMap().plot(28, 0).setRevealed(iCiv, False, True, -1)
+		gc.getMap().plot(29, 0).setRevealed(iCiv, False, True, -1)
+		gc.getMap().plot(27, 1).setRevealed(iCiv, False, True, -1)
+		gc.getMap().plot(28, 1).setRevealed(iCiv, False, True, -1)
+		gc.getMap().plot(29, 1).setRevealed(iCiv, False, True, -1)
 
 		# Absinthe: if there are no units in the city after the flip, add a free defender
 		cityPlot = gc.getMap().plot(tCityPlot[0],tCityPlot[1])
@@ -522,12 +522,12 @@ class RFCUtils:
 							unit.setXYOld(x,y)
 						iCiv = iNewOwner
 						if  not bRevealedZero:
-							gc.getMap().plot(27, 0).setRevealed(iCiv, False, True, -1);
-							gc.getMap().plot(28, 0).setRevealed(iCiv, False, True, -1);
-							gc.getMap().plot(29, 0).setRevealed(iCiv, False, True, -1);
-							gc.getMap().plot(27, 1).setRevealed(iCiv, False, True, -1);
-							gc.getMap().plot(28, 1).setRevealed(iCiv, False, True, -1);
-							gc.getMap().plot(29, 1).setRevealed(iCiv, False, True, -1);
+							gc.getMap().plot(27, 0).setRevealed(iCiv, False, True, -1)
+							gc.getMap().plot(28, 0).setRevealed(iCiv, False, True, -1)
+							gc.getMap().plot(29, 0).setRevealed(iCiv, False, True, -1)
+							gc.getMap().plot(27, 1).setRevealed(iCiv, False, True, -1)
+							gc.getMap().plot(28, 1).setRevealed(iCiv, False, True, -1)
+							gc.getMap().plot(29, 1).setRevealed(iCiv, False, True, -1)
 
 
 	#RiseAndFall
@@ -1221,8 +1221,8 @@ class RFCUtils:
 				pPlayer.changeProsecutionCount( 4 )
 
 		# start a small revolt
-		city.changeCultureUpdateTimer(1);
-		city.changeOccupationTimer(1);
+		city.changeCultureUpdateTimer(1)
+		city.changeOccupationTimer(1)
 
 		# consume the inquisitor
 		pUnit.kill(0, -1)
@@ -1346,7 +1346,7 @@ class RFCUtils:
 				iMaxTextWidth = iTextWidth
 
 		# panel for the Globe View type civ choice:
-		iCurY -= iGlobeLayerOptionHeight;
+		iCurY -= iGlobeLayerOptionHeight
 		iPanelWidth = iMaxTextWidth + 16
 		iPanelHeight = iY - iCurY
 		iPanelX = xResolution - 14 - iPanelWidth

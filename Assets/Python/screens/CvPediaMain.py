@@ -279,7 +279,7 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 
 		# Create a new screen
 		screen = self.getScreen()
-		screen.setRenderInterfaceOnly(True);
+		screen.setRenderInterfaceOnly(True)
 		screen.setScreenGroup(1)
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 
@@ -458,7 +458,7 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 		screen = self.getScreen()
 
 		nColumns = 1
-		screen.addTableControlGFC(self.SUBLIST_ID, nColumns, self.X_ITEMS_PANE, self.Y_ITEMS_PANE, self.W_ITEMS_PANE, self.H_ITEMS_PANE, False, False, 16, 16, TableStyles.TABLE_STYLE_STANDARD);
+		screen.addTableControlGFC(self.SUBLIST_ID, nColumns, self.X_ITEMS_PANE, self.Y_ITEMS_PANE, self.W_ITEMS_PANE, self.H_ITEMS_PANE, False, False, 16, 16, TableStyles.TABLE_STYLE_STANDARD)
 		screen.enableSelect(self.SUBLIST_ID, True)
 		screen.setStyle(self.SUBLIST_ID, "Table_StandardCiv_Style")
 
@@ -831,4 +831,3 @@ class CvPediaMain( CvPediaScreen.CvPediaScreen ):
 			return self.pediaHistorical.handleInput(inputClass)
 
 		return 0
-

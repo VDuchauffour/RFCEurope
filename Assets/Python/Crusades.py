@@ -57,7 +57,7 @@ tDefensiveCrusadeMap = [
 [], #Moscow
 [], #Dutch
 [] #Papal States
-];
+]
 
 
 class Crusades:
@@ -1220,7 +1220,7 @@ class Crusades:
 							capital = pCiv.getCapitalCity()
 							iCapitalX = capital.getX()
 							iCapitalY = capital.getY()
-							# safety check, game crashes if it wants to create a unit in a non-existing city 
+							# safety check, game crashes if it wants to create a unit in a non-existing city
 							if capital.getName():
 								if gc.getGame().getSorenRandNum(5,'RelicChance') < 4: # 80% chance
 									pCiv.initUnit( xml.iHolyRelic, iCapitalX, iCapitalY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
