@@ -752,7 +752,7 @@ class CvTechChooser:
             k = 0
 
             # Map Trading
-            if gc.getTechInfo(i).isMapTrading() == True:
+            if gc.getTechInfo(i).isMapTrading() is True:
                 szMapTradeButton = "MapTrade" + str(i)
                 screen.addDDSGFCAt(
                     szMapTradeButton,
@@ -1144,7 +1144,7 @@ class CvTechChooser:
                 bFound = False
                 for k in range(YieldTypes.NUM_YIELD_TYPES):
                     if gc.getImprovementInfo(j).getTechYieldChanges(i, k):
-                        if bFound == False:
+                        if bFound is False:
                             szYieldChange = "YieldChangeButton" + str((i * 1000) + j)
                             screen.addDDSGFCAt(
                                 szYieldChange,

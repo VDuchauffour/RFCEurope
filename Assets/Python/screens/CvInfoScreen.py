@@ -1882,69 +1882,69 @@ class CvInfoScreen:
 
         for i in range(len(aiGroupEconomy)):
 
-            if iEconomy == aiGroupEconomy[i] and bEconomyFound == False:
+            if iEconomy == aiGroupEconomy[i] and bEconomyFound is False:
                 iEconomyRank = i + 1
                 bEconomyFound = True
             else:
                 fEconomyGameAverage += aiGroupEconomy[i]
 
-            if iIndustry == aiGroupIndustry[i] and bIndustryFound == False:
+            if iIndustry == aiGroupIndustry[i] and bIndustryFound is False:
                 iIndustryRank = i + 1
                 bIndustryFound = True
             else:
                 fIndustryGameAverage += aiGroupIndustry[i]
 
-            if iAgriculture == aiGroupAgriculture[i] and bAgricultureFound == False:
+            if iAgriculture == aiGroupAgriculture[i] and bAgricultureFound is False:
                 iAgricultureRank = i + 1
                 bAgricultureFound = True
             else:
                 fAgricultureGameAverage += aiGroupAgriculture[i]
 
-            if fMilitary == aiGroupMilitary[i] and bMilitaryFound == False:
+            if fMilitary == aiGroupMilitary[i] and bMilitaryFound is False:
                 iMilitaryRank = i + 1
                 bMilitaryFound = True
             else:
                 fMilitaryGameAverage += aiGroupMilitary[i]
 
             # Absinthe
-            if iSoldiers == aiGroupSoldiers[i] and bSoldiersFound == False:
+            if iSoldiers == aiGroupSoldiers[i] and bSoldiersFound is False:
                 iSoldiersRank = i + 1
                 bSoldiersFound = True
             else:
                 fSoldiersGameAverage += aiGroupSoldiers[i]
 
-            if iLandArea == aiGroupLandArea[i] and bLandAreaFound == False:
+            if iLandArea == aiGroupLandArea[i] and bLandAreaFound is False:
                 iLandAreaRank = i + 1
                 bLandAreaFound = True
             else:
                 fLandAreaGameAverage += aiGroupLandArea[i]
 
-            if iPopulation == aiGroupPopulation[i] and bPopulationFound == False:
+            if iPopulation == aiGroupPopulation[i] and bPopulationFound is False:
                 iPopulationRank = i + 1
                 bPopulationFound = True
             else:
                 fPopulationGameAverage += aiGroupPopulation[i]
 
             # Absinthe
-            if iTotalPopulation == aiGroupTotalPopulation[i] and bTotalPopulationFound == False:
+            if iTotalPopulation == aiGroupTotalPopulation[i] and bTotalPopulationFound is False:
                 iTotalPopulationRank = i + 1
                 bTotalPopulationFound = True
             else:
                 fTotalPopulationGameAverage += aiGroupTotalPopulation[i]
 
-            if iHappiness == aiGroupHappiness[i] and bHappinessFound == False:
+            if iHappiness == aiGroupHappiness[i] and bHappinessFound is False:
                 iHappinessRank = i + 1
                 bHappinessFound = True
             else:
                 fHappinessGameAverage += aiGroupHappiness[i]
 
-            if iHealth == aiGroupHealth[i] and bHealthFound == False:
+            if iHealth == aiGroupHealth[i] and bHealthFound is False:
                 iHealthRank = i + 1
                 bHealthFound = True
             else:
                 fHealthGameAverage += aiGroupHealth[i]
 
-            if fImpExpRatio == afGroupImpExpRatio[i] and bImpExpRatioFound == False:
+            if fImpExpRatio == afGroupImpExpRatio[i] and bImpExpRatioFound is False:
                 iImpExpRatioRank = i + 1
                 bImpExpRatioFound = True
             else:

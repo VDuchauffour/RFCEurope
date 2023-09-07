@@ -1236,7 +1236,7 @@ class CvEspionageAdvisor:
         return 0
 
     def update(self, fDelta):
-        if CyInterface().isDirty(InterfaceDirtyBits.Espionage_Advisor_DIRTY_BIT) == True:
+        if CyInterface().isDirty(InterfaceDirtyBits.Espionage_Advisor_DIRTY_BIT) is True:
             CyInterface().setDirty(InterfaceDirtyBits.Espionage_Advisor_DIRTY_BIT, False)
             self.refreshScreen()
         return

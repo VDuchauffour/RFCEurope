@@ -1603,60 +1603,60 @@ class CvMainInterface:
         screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
 
         # Check Dirty Bits, see what we need to redraw...
-        if CyInterface().isDirty(InterfaceDirtyBits.PercentButtons_DIRTY_BIT) == True:
+        if CyInterface().isDirty(InterfaceDirtyBits.PercentButtons_DIRTY_BIT) is True:
             # Percent Buttons
             self.updatePercentButtons()
             CyInterface().setDirty(InterfaceDirtyBits.PercentButtons_DIRTY_BIT, False)
-        if CyInterface().isDirty(InterfaceDirtyBits.Flag_DIRTY_BIT) == True:
+        if CyInterface().isDirty(InterfaceDirtyBits.Flag_DIRTY_BIT) is True:
             # Percent Buttons
             self.updateFlag()
             CyInterface().setDirty(InterfaceDirtyBits.Flag_DIRTY_BIT, False)
-        if CyInterface().isDirty(InterfaceDirtyBits.MiscButtons_DIRTY_BIT) == True:
+        if CyInterface().isDirty(InterfaceDirtyBits.MiscButtons_DIRTY_BIT) is True:
             # Miscellaneous buttons (civics screen, etc)
             self.updateMiscButtons()
             CyInterface().setDirty(InterfaceDirtyBits.MiscButtons_DIRTY_BIT, False)
-        if CyInterface().isDirty(InterfaceDirtyBits.InfoPane_DIRTY_BIT) == True:
+        if CyInterface().isDirty(InterfaceDirtyBits.InfoPane_DIRTY_BIT) is True:
             # Info Pane Dirty Bit
             # This must come before updatePlotListButtons so that the entity widget appears in front of the stats
             self.updateInfoPaneStrings()
             CyInterface().setDirty(InterfaceDirtyBits.InfoPane_DIRTY_BIT, False)
-        if CyInterface().isDirty(InterfaceDirtyBits.PlotListButtons_DIRTY_BIT) == True:
+        if CyInterface().isDirty(InterfaceDirtyBits.PlotListButtons_DIRTY_BIT) is True:
             # Plot List Buttons Dirty
             self.updatePlotListButtons()
             CyInterface().setDirty(InterfaceDirtyBits.PlotListButtons_DIRTY_BIT, False)
-        if CyInterface().isDirty(InterfaceDirtyBits.SelectionButtons_DIRTY_BIT) == True:
+        if CyInterface().isDirty(InterfaceDirtyBits.SelectionButtons_DIRTY_BIT) is True:
             # Selection Buttons Dirty
             self.updateSelectionButtons()
             CyInterface().setDirty(InterfaceDirtyBits.SelectionButtons_DIRTY_BIT, False)
-        if CyInterface().isDirty(InterfaceDirtyBits.ResearchButtons_DIRTY_BIT) == True:
+        if CyInterface().isDirty(InterfaceDirtyBits.ResearchButtons_DIRTY_BIT) is True:
             # Research Buttons Dirty
             self.updateResearchButtons()
             CyInterface().setDirty(InterfaceDirtyBits.ResearchButtons_DIRTY_BIT, False)
-        if CyInterface().isDirty(InterfaceDirtyBits.CitizenButtons_DIRTY_BIT) == True:
+        if CyInterface().isDirty(InterfaceDirtyBits.CitizenButtons_DIRTY_BIT) is True:
             # Citizen Buttons Dirty
             self.updateCitizenButtons()
             CyInterface().setDirty(InterfaceDirtyBits.CitizenButtons_DIRTY_BIT, False)
-        if CyInterface().isDirty(InterfaceDirtyBits.GameData_DIRTY_BIT) == True:
+        if CyInterface().isDirty(InterfaceDirtyBits.GameData_DIRTY_BIT) is True:
             # Game Data Strings Dirty
             self.updateGameDataStrings()
             CyInterface().setDirty(InterfaceDirtyBits.GameData_DIRTY_BIT, False)
-        if CyInterface().isDirty(InterfaceDirtyBits.Help_DIRTY_BIT) == True:
+        if CyInterface().isDirty(InterfaceDirtyBits.Help_DIRTY_BIT) is True:
             # Help Dirty bit
             self.updateHelpStrings()
             CyInterface().setDirty(InterfaceDirtyBits.Help_DIRTY_BIT, False)
-        if CyInterface().isDirty(InterfaceDirtyBits.CityScreen_DIRTY_BIT) == True:
+        if CyInterface().isDirty(InterfaceDirtyBits.CityScreen_DIRTY_BIT) is True:
             # Selection Data Dirty Bit
             self.updateCityScreen()
             CyInterface().setDirty(InterfaceDirtyBits.Domestic_Advisor_DIRTY_BIT, True)
             CyInterface().setDirty(InterfaceDirtyBits.CityScreen_DIRTY_BIT, False)
         if (
-            CyInterface().isDirty(InterfaceDirtyBits.Score_DIRTY_BIT) == True
+            CyInterface().isDirty(InterfaceDirtyBits.Score_DIRTY_BIT) is True
             or CyInterface().checkFlashUpdate()
         ):
             # Scores!
             self.updateScoreStrings()
             CyInterface().setDirty(InterfaceDirtyBits.Score_DIRTY_BIT, False)
-        if CyInterface().isDirty(InterfaceDirtyBits.GlobeInfo_DIRTY_BIT) == True:
+        if CyInterface().isDirty(InterfaceDirtyBits.GlobeInfo_DIRTY_BIT) is True:
             # Globeview and Globelayer buttons
             CyInterface().setDirty(InterfaceDirtyBits.GlobeInfo_DIRTY_BIT, False)
             self.updateGlobeviewButtons()
@@ -2024,7 +2024,7 @@ class CvMainInterface:
         bHandled = False
         if (
             CyInterface().shouldDisplayUnitModel()
-            and CyEngine().isGlobeviewUp() == False
+            and CyEngine().isGlobeviewUp() is False
             and CyInterface().getShowInterface() != InterfaceVisibility.INTERFACE_HIDE_ALL
         ):
             if CyInterface().isCitySelection():
@@ -2032,7 +2032,7 @@ class CvMainInterface:
                 iOrders = CyInterface().getNumOrdersQueued()
 
                 for i in range(iOrders):
-                    if bHandled == False:
+                    if bHandled is False:
                         eOrderNodeType = CyInterface().getOrderNodeType(i)
                         if eOrderNodeType == OrderTypes.ORDER_TRAIN:
                             screen.addUnitGraphicGFC(
@@ -2144,7 +2144,7 @@ class CvMainInterface:
         if (
             pPlot
             and CyInterface().getShowInterface() != InterfaceVisibility.INTERFACE_HIDE_ALL
-            and CyEngine().isGlobeviewUp() == False
+            and CyEngine().isGlobeviewUp() is False
         ):
 
             iVisibleUnits = CyInterface().getNumVisibleUnits()
@@ -4939,7 +4939,7 @@ class CvMainInterface:
                                 iHealth = pHeadSelectedCity.getBuildingHealth(i)
 
                                 if iHealth != 0:
-                                    if bFirst == False:
+                                    if bFirst is False:
                                         szRightBuffer = szRightBuffer + ", "
                                     else:
                                         bFirst = False
@@ -4960,7 +4960,7 @@ class CvMainInterface:
                                 iHappiness = pHeadSelectedCity.getBuildingHappiness(i)
 
                                 if iHappiness != 0:
-                                    if bFirst == False:
+                                    if bFirst is False:
                                         szRightBuffer = szRightBuffer + ", "
                                     else:
                                         bFirst = False
@@ -4988,7 +4988,7 @@ class CvMainInterface:
                                     )
 
                                     if iYield != 0:
-                                        if bFirst == False:
+                                        if bFirst is False:
                                             szRightBuffer = szRightBuffer + ", "
                                         else:
                                             bFirst = False
@@ -5014,7 +5014,7 @@ class CvMainInterface:
                                 ) / pHeadSelectedCity.getNumBuilding(i)
 
                                 if iCommerce != 0:
-                                    if bFirst == False:
+                                    if bFirst is False:
                                         szRightBuffer = szRightBuffer + ", "
                                     else:
                                         bFirst = False
@@ -5206,7 +5206,7 @@ class CvMainInterface:
 
                             bHandled = True
 
-                        if iHealth != 0 and bHandled == False:
+                        if iHealth != 0 and bHandled is False:
                             if iHealth > 0:
                                 szTempBuffer = u"<font=1>+%d%c</font>" % (
                                     iHealth,
@@ -6317,7 +6317,7 @@ class CvMainInterface:
             if (
                 CyInterface().isScoresVisible()
                 and not CyInterface().isCityScreenUp()
-                and CyEngine().isGlobeviewUp() == False
+                and CyEngine().isGlobeviewUp() is False
             ):
 
                 i = gc.getMAX_CIV_TEAMS() - 1

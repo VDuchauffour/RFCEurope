@@ -797,7 +797,7 @@ class CvDomesticAdvisor:
                 self.listSelectedCities.append(screen.getTableText("CityListBackground", 2, i))
 
     def update(self, fDelta):
-        if CyInterface().isDirty(InterfaceDirtyBits.Domestic_Advisor_DIRTY_BIT) == True:
+        if CyInterface().isDirty(InterfaceDirtyBits.Domestic_Advisor_DIRTY_BIT) is True:
             CyInterface().setDirty(InterfaceDirtyBits.Domestic_Advisor_DIRTY_BIT, False)
 
             screen = CyGInterfaceScreen("DomesticAdvisor", CvScreenEnums.DOMESTIC_ADVISOR)

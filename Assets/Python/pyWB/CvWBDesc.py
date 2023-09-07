@@ -1365,7 +1365,7 @@ class CvPlotDesc:
                         f.write("\tTeamReveal=")
                         bFirstReveal = False
                     f.write("%d," % (iTeamLoop))
-        if bFirstReveal == False:
+        if bFirstReveal is False:
             f.write("\n")  # terminate reveal line
 
         f.write("EndPlot\n")
@@ -1374,7 +1374,7 @@ class CvPlotDesc:
         "read in a plot desc"
         self.__init__()
         parser = CvWBParser()
-        if parser.findNextToken(f, "BeginPlot") == False:
+        if parser.findNextToken(f, "BeginPlot") is False:
             return False  # no more plots
         while True:
             nextLine = parser.getNextLine(f)
@@ -1530,7 +1530,7 @@ class CvMapDesc:
         "read map data"
         self.__init__()
         parser = CvWBParser()
-        if parser.findNextToken(f, "BeginMap") == False:
+        if parser.findNextToken(f, "BeginMap") is False:
             print("can't find map")
             return
         while True:
@@ -1630,7 +1630,7 @@ class CvSignDesc:
         "read sign data"
         self.__init__()
         parser = CvWBParser()
-        if parser.findNextToken(f, "BeginSign") == False:
+        if parser.findNextToken(f, "BeginSign") is False:
             print("can't find sign")
             return
         while True:
@@ -2000,7 +2000,7 @@ class CvWBDesc:
         for i in range(gc.getMAX_CIV_TEAMS()):
             print("reading team %d" % (i))
             teamsDesc = CvTeamDesc()
-            if teamsDesc.read(f) == False:  # read team info
+            if teamsDesc.read(f) is False:  # read team info
                 f.seek(filePos)  # abort and backup
                 break
             self.teamsDesc.append(teamsDesc)
@@ -2019,7 +2019,7 @@ class CvWBDesc:
         self.plotDesc = []
         for i in range(self.mapDesc.numPlotsWritten):
             pDesc = CvPlotDesc()
-            if pDesc.read(f) == True:
+            if pDesc.read(f) is True:
                 self.plotDesc.append(pDesc)
             else:
                 break
@@ -2028,7 +2028,7 @@ class CvWBDesc:
         self.signDesc = []
         for i in range(self.mapDesc.numSignsWritten):
             pDesc = CvSignDesc()
-            if pDesc.read(f) == True:
+            if pDesc.read(f) is True:
                 self.signDesc.append(pDesc)
             else:
                 break

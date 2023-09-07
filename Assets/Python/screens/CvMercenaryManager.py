@@ -702,7 +702,7 @@ class CvMercenaryManager:
                 if city.getProvince() == lMerc[4] and city.getCultureLevel() >= 2:
                     bCulturedEnough = True
                     break
-            if bCulturedEnough == False:
+            if bCulturedEnough is False:
                 szProvinces = (
                     szProvinces
                     + "\n"
@@ -721,7 +721,7 @@ class CvMercenaryManager:
                     if city.getProvince() == lMerc[4] and city.isCoastal(1):
                         bHasCoastalCity = True
                         break
-            if bHasCoastalCity == False:
+            if bHasCoastalCity is False:
                 szProvinces = (
                     szProvinces
                     + "\n"

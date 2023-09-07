@@ -1697,7 +1697,7 @@ class CvForeignAdvisor:
         return 0
 
     def update(self, fDelta):
-        if CyInterface().isDirty(InterfaceDirtyBits.Foreign_Screen_DIRTY_BIT) == True:
+        if CyInterface().isDirty(InterfaceDirtyBits.Foreign_Screen_DIRTY_BIT) is True:
             CyInterface().setDirty(InterfaceDirtyBits.Foreign_Screen_DIRTY_BIT, False)
             self.drawContents(False)
         return
