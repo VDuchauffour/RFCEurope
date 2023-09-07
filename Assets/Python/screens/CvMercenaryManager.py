@@ -151,7 +151,7 @@ class CvMercenaryManager:
             mercenaryName = CyTranslator().getText(lMercList[iMerc][1], ())
 
             # Absinthe: religion and culture will be checked on the hire button, so the mercs appear on the list even if you can't hire them
-            if not (lMerc[4] in lProvList):  # we have no matching provinces, skip
+            if lMerc[4] not in lProvList:  # we have no matching provinces, skip
                 continue
 
             # screen needs unique internal names

@@ -20,7 +20,6 @@ import Consts as con
 import XMLConsts as xml
 import RFCUtils
 
-import CvScreenEnums  # Mercenaries
 import Victory
 import Stability
 import Plague

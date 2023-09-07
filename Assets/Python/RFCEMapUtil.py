@@ -724,7 +724,7 @@ class RFCEMapExporter:
             if i < iLength - 1:
                 file.write(",")
 
-            if not lineCommentFunc is None:
+            if lineCommentFunc is not None:
                 file.write(lineCommentFunc(i))
         return
 
