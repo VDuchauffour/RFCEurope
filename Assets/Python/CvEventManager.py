@@ -40,7 +40,7 @@ class CvEventManager:
 
     def __init__(self):
         #################### ON EVENT MAP ######################
-        # print "EVENTMANAGER INIT"
+        # print("EVENTMANAGER INIT")
         # print(" init_event manager, this time ")
         # 3Miro: add balancing calls here
 

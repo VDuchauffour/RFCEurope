@@ -3729,7 +3729,7 @@ class RiseAndFall:
     def hitNeighboursStability(self, iCiv):
         # 3Miro: Stability on Spawn
         if len(con.lOlderNeighbours[iCiv]) > 0:
-            # 	print "Got inside hitStability!!!"
+            # 	print("Got inside hitStability!!!")
             bHuman = False
             # for iLoop in con.lOlderNeighbours[iCiv]:
             # if (gc.getPlayer(iLoop).isAlive()):

@@ -282,9 +282,9 @@ class CvVictoryScreen:
 					for j in range(gc.getNumVoteInfos()):
 						print j
 						if gc.getVoteInfo(j).isVoteSourceType(i):
-							print "votesource"
+							print("votesource")
 							if gc.getVoteInfo(j).isSecretaryGeneral():
-								print "secgen"
+								print("secgen")
 								iSecretaryGeneralVote = j
 								break
 				print iSecretaryGeneralVote

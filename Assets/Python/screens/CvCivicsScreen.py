@@ -260,7 +260,7 @@ class CvCivicsScreen:
         sName = "CivicIcon" + str(iCategory)
         # print gc.getCivicInfo(iCivic).getText()
         sButton = gc.getCivicInfo(iCivic).getButton()
-        # print "Button works"
+        # print("Button works")
         screen.setImageButton(
             sName,
             sButton,
