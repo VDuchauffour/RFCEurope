@@ -1992,7 +1992,8 @@ class CvInfoScreen:
             fImportsGameAverage = (1.0 * fImportsGameAverage) / (iNumActivePlayers - 1)
             fExportsGameAverage = (1.0 * fExportsGameAverage) / (iNumActivePlayers - 1)
 
-            ix = lambda x: iff(x == 1, 1, 0)
+            def ix(x):
+                return iff(x == 1, 1, 0)
 
             iEconomyGameBest = aiGroupEconomy[ix(iEconomyRank)]
             iIndustryGameBest = aiGroupIndustry[ix(iIndustryRank)]
@@ -2005,9 +2006,8 @@ class CvInfoScreen:
             iHappinessGameBest = aiGroupHappiness[ix(iHappinessRank)]
             iHealthGameBest = aiGroupHealth[ix(iHealthRank)]
 
-            ix = lambda x: iff(
-                x == iNumActivePlayers, iNumActivePlayers - 2, iNumActivePlayers - 1
-            )
+            def ix(x):
+                return iff(x == iNumActivePlayers, iNumActivePlayers - 2, iNumActivePlayers - 1)
 
             iEconomyGameWorst = aiGroupEconomy[ix(iEconomyRank)]
             iIndustryGameWorst = aiGroupIndustry[ix(iIndustryRank)]
