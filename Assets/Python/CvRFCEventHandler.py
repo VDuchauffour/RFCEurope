@@ -20,7 +20,6 @@ import Consts as con
 import XMLConsts as xml
 import RFCUtils
 
-utils = RFCUtils.RFCUtils()
 import CvScreenEnums  # Mercenaries
 import Victory
 import Stability
@@ -34,6 +33,7 @@ import RFCEMaps as rfcemaps
 
 gc = CyGlobalContext()
 localText = CyTranslator()  # Absinthe
+utils = RFCUtils.RFCUtils()
 # iBetrayalCheaters = 15
 
 # Civ constants

@@ -5,13 +5,14 @@ import CvUtil
 import CvScreenEnums
 import Consts as con
 
+
+import RFCUtils  # Rhye
+import Stability  # Absinthe
+
 # Mercenary Upkeep
 # import MercenaryUtils
 iMercCostPerTurn = con.iMercCostPerTurn
 # objMercenaryUtils = MercenaryUtils.MercenaryUtils()
-
-import RFCUtils  # Rhye
-import Stability  # Absinthe
 
 utils = RFCUtils.RFCUtils()  # Rhye
 stab = Stability.Stability()  # Absinthe

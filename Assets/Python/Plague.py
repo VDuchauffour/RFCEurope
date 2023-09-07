@@ -6,13 +6,13 @@ import Consts as con
 import XMLConsts as xml
 import RFCUtils
 
-utils = RFCUtils.RFCUtils()
 from StoredData import sd
 import random
 
 # globals
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer
+utils = RFCUtils.RFCUtils()
 
 iNumPlayers = con.iNumPlayers
 iNumMajorPlayers = con.iNumMajorPlayers
