@@ -2206,11 +2206,11 @@ class MercenaryManager:
             for iPromotion in lPromotions:
                 pPromotionInfo = gc.getPromotionInfo(iPromotion)
                 iPrereq = pPromotionInfo.getPrereqOrPromotion1()
-                if iPrereq != -1 and not iPrereq in lPromotions:
+                if iPrereq != -1 and iPrereq not in lPromotions:
                     lPromotions.append(iPrereq)
                     bPass = False
                 iPrereq = pPromotionInfo.getPrereqOrPromotion2()
-                if iPrereq != -1 and not iPrereq in lPromotions:
+                if iPrereq != -1 and iPrereq not in lPromotions:
                     lPromotions.append(iPrereq)
                     bPass = False
         return lPromotions

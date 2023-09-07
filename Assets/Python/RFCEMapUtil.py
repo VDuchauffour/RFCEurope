@@ -438,7 +438,7 @@ class RFCEMapVisualizer:
         plotY = TR[1]
         for iX in range(TR[0] - BL[0] + 1):
             for iY in range(TR[1] - BL[1] + 1):
-                if not (plotX + iX, plotY - iY) in exceptions:
+                if (plotX + iX, plotY - iY) not in exceptions:
                     pPlot = map.plot(plotX + iX, plotY - iY)
                     if not pPlot.isNone():
                         CyEngine().fillAreaBorderPlotAlt(

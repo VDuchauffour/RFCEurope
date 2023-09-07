@@ -5033,13 +5033,13 @@ def getHostileTakeoverListResources(corporation, player):
         if plot.getOwner() == player.getID():
             iBonus = plot.getBonusType(player.getTeam())
             if iBonus != -1:
-                if not iBonus in listHave:
+                if iBonus not in listHave:
                     listHave.append(iBonus)
     listNeed = []
     for i in range(gc.getNUM_CORPORATION_PREREQ_BONUSES()):
         iBonus = corporation.getPrereqBonus(i)
         if iBonus != -1:
-            if not iBonus in listHave:
+            if iBonus not in listHave:
                 listNeed.append(iBonus)
     return listNeed
 
