@@ -2,7 +2,6 @@
 # Created by 3Miro, revised and improved by AbsintheRed
 
 from CvPythonExtensions import *
-import CvUtil
 import PyHelpers
 import Popup
 import RFCUtils

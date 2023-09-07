@@ -4,12 +4,9 @@
 # Thanks to "Ulf 'ulfn' Norell" from Apolyton for his additions relating to the graph section of this screen
 
 from CvPythonExtensions import *
-import CvScreenEnums
 import CvUtil
-import ScreenInput
 
 import string
-import time
 
 import Consts as con  # Rhye
 import XMLConsts as xml

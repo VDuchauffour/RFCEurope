@@ -7,10 +7,7 @@
 
 from CvPythonExtensions import *
 import CvUtil
-import ScreenInput
-import time
 import PyHelpers
-import Popup as PyPopup
 
 # import MercenaryUtils
 import Mercenaries
@@ -19,7 +16,6 @@ import XMLConsts as xml
 
 # from sets import Set
 # import CvConfigParser #Rhye
-import math
 from CvMercenaryScreensEnums import *
 
 PyPlayer = PyHelpers.PyPlayer
