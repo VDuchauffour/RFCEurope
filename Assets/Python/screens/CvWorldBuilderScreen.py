@@ -3,10 +3,8 @@
 from CvPythonExtensions import *
 import CvUtil
 import CvScreensInterface
-import ScreenInput
 import CvEventInterface
 import CvScreenEnums
-import time
 import Popup as PyPopup
 
 # Caliom RFCE imports

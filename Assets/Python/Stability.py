@@ -1,9 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Stability
 
 from CvPythonExtensions import *
-import CvUtil
 import PyHelpers
-import Popup
 
 # import cPickle as pickle
 import Consts as con

@@ -11,7 +11,6 @@ from CvPythonExtensions import *
 import PyHelpers
 import string
 import CvUtil
-import ScreenInput
 
 import XMLConsts as xml
 

@@ -3,7 +3,6 @@
 import CvMainInterface
 import CvDomesticAdvisor
 import CvTechChooser
-import CvForeignAdvisor
 import CvExoticForeignAdvisor
 import CvMilitaryAdvisor
 import CvFinanceAdvisor
@@ -31,19 +30,16 @@ import CvEraMovieScreen
 import CvSpaceShipScreen
 
 import CvPediaMain
-import CvPediaHistory
 
 import CvWorldBuilderScreen
 import CvWorldBuilderDiplomacyScreen
 
-import CvDebugTools
 import CvDebugInfoScreen
 
 # import CvDiplomacy
 
 import CvUtil
 import CvEventInterface
-import CvPopupInterface
 import CvScreenUtilsInterface
 import ScreenInput as PyScreenInput
 from CvScreenEnums import *

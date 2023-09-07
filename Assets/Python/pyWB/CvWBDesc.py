@@ -9,7 +9,6 @@
 
 from CvPythonExtensions import *
 import os
-import sys
 import CvUtil
 from array import *
 
