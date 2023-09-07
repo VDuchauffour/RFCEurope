@@ -287,7 +287,7 @@ class CvWorldBuilderScreen:
 	def getHighlightPlot (self, argsList):
 
 		if (self.currentMode != None and not self.currentMode.isHighlightPlot()):
-			 return []
+			return []
 
 		self.refreshASItemCost()
 
