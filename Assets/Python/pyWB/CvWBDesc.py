@@ -35,7 +35,7 @@ class CvWBParser:
 
     def getTokens(self, line):
         "return a list of (comma separated) tokens from the line. Strip whitespace on each token"
-        if line == None:
+        if line is None:
             return list()
         toks = line.split(",")
         toksOut = list()
@@ -742,10 +742,10 @@ class CvUnitDesc:
                     unitTypeNum, self.plotX, self.plotY, UnitAITypes(eUnitAI), self.facingDirection
                 )
             if unit:
-                if self.szName != None:
+                if self.szName is not None:
                     unit.setName(self.szName)
                 # leader unit type
-                if self.leaderUnitType != None:
+                if self.leaderUnitType is not None:
                     leaderUnitTypeNum = CvUtil.findInfoTypeNum(
                         gc.getUnitInfo, gc.getNumUnitInfos(), self.leaderUnitType
                     )
@@ -924,7 +924,7 @@ class CvCityDesc:
         if player:
             self.city = player.initCity(self.plotX, self.plotY)
 
-        if self.name != None:
+        if self.name is not None:
             self.city.setName(self.name, False)
 
         if self.population:

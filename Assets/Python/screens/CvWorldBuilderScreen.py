@@ -128,7 +128,7 @@ class CvWorldBuilderScreen:
         # This is the main interface screen, create it as such
 
         # Caliom begin
-        if self.currentMode != None:
+        if self.currentMode is not None:
             self.currentMode.activate()
             return
         # Caliom end
@@ -203,7 +203,7 @@ class CvWorldBuilderScreen:
 
     def killScreen(self):
         # Caliom begin
-        if self.currentMode != None:
+        if self.currentMode is not None:
             self.currentMode.deactivate()
             self.currentMode = None
         # Caliom end
@@ -235,7 +235,7 @@ class CvWorldBuilderScreen:
                 return 1
         elif inputClass.getNotifyCode() == NotifyCode.NOTIFY_LISTBOX_ITEM_SELECTED:
 
-            if self.currentMode != None:
+            if self.currentMode is not None:
                 screen = CyGInterfaceScreen(
                     "WorldBuilderScreen", CvScreenEnums.WORLDBUILDER_SCREEN
                 )
@@ -258,7 +258,7 @@ class CvWorldBuilderScreen:
 
     def mouseOverPlot(self, argsList):
 
-        if self.currentMode != None:
+        if self.currentMode is not None:
             self.m_pCurrentPlot = CyInterface().getMouseOverPlot()
 
             self.currentMode.mouseOverPlot(self.m_pCurrentPlot, argsList)
@@ -293,7 +293,7 @@ class CvWorldBuilderScreen:
 
     def getHighlightPlot(self, argsList):
 
-        if self.currentMode != None and not self.currentMode.isHighlightPlot():
+        if self.currentMode is not None and not self.currentMode.isHighlightPlot():
             return []
 
         self.refreshASItemCost()
@@ -320,7 +320,7 @@ class CvWorldBuilderScreen:
         bShift, bCtrl, bAlt = argsList
         self.m_bLeftMouseDown = True
 
-        if self.currentMode != None:
+        if self.currentMode is not None:
             self.currentMode.leftMouseDown(self.m_pCurrentPlot, argsList)
             return
 
@@ -353,7 +353,7 @@ class CvWorldBuilderScreen:
     def rightMouseDown(self, argsList):
         self.m_bRightMouseDown = True
 
-        if self.currentMode != None:
+        if self.currentMode is not None:
             self.currentMode.rightMouseDown(self.m_pCurrentPlot, argsList)
             return
 
@@ -375,12 +375,12 @@ class CvWorldBuilderScreen:
         return 1
 
     def rightMouseUp(self):
-        if self.currentMode != None:
+        if self.currentMode is not None:
             self.currentMode.rightMouseUp(self.m_pCurrentPlot)
         return
 
     def leftMouseUp(self):
-        if self.currentMode != None:
+        if self.currentMode is not None:
             self.currentMode.leftMouseUp(self.m_pCurrentPlot)
         return
 
@@ -407,19 +407,19 @@ class CvWorldBuilderScreen:
         return
 
     def setMode(self, mode):
-        if self.currentMode != None:
+        if self.currentMode is not None:
             self.currentMode.deactivate()
 
         self.currentMode = mode
 
-        if self.currentMode != None:
+        if self.currentMode is not None:
             self.currentMode.activate()
         return
 
     # Will update the screen (every 250 MS)
     def updateScreen(self):
 
-        if self.currentMode != None:
+        if self.currentMode is not None:
             self.currentMode.updateScreen(self.m_pCurrentPlot)
             return 0
 
@@ -1169,7 +1169,7 @@ class CvWorldBuilderScreen:
                         cityName = MapManager.getCityName(
                             self.m_iCurrentPlayer, self.m_pCurrentPlot
                         )
-                        if cityName != None:
+                        if cityName is not None:
                             city = gc.getMap().plot(iX, iY).getPlotCity()
                             city.setName(unicode(cityName, "latin-1"), False)
         elif (self.m_bNormalMap) and (
@@ -3056,7 +3056,7 @@ class CvWorldBuilderScreen:
 
     def refreshSideMenu(self):
 
-        if self.currentMode != None:
+        if self.currentMode is not None:
             return
 
         screen = CyGInterfaceScreen("WorldBuilderScreen", CvScreenEnums.WORLDBUILDER_SCREEN)
@@ -3882,7 +3882,7 @@ class RevealMode(Mode):
                         self.revealPlot(pPlot, True)
                     self.selectedPlots.add(coords)
         elif self.isCoreArea() or self.isNormalArea():
-            if self.selectedPlot == None:
+            if self.selectedPlot is None:
                 self.selectedPlot = (pPlot.getX(), pPlot.getY())
                 self.highlightRectangleBrush(self.selectedPlot, self.selectedPlot)
             else:
@@ -4193,7 +4193,7 @@ class RevealMode(Mode):
 
     def getBrushPlots(self, pPlot):
         plots = list()
-        if pPlot != None and not pPlot.isNone():
+        if pPlot is not None and not pPlot.isNone():
             iLowerLeftX = pPlot.getX() - self.iBrushSize + 1
             iLowerLeftY = pPlot.getY() - self.iBrushSize + 1
             iRectangleWidth = 2 * self.iBrushSize - 1
@@ -4242,9 +4242,9 @@ class RevealMode(Mode):
         return
 
     def highlightBrush(self, pPlot=None):
-        if pPlot == None:
+        if pPlot is None:
             pPlot = CyInterface().getMouseOverPlot()
-        if pPlot != None and not pPlot == 0 and not pPlot.isNone():
+        if pPlot is not None and not pPlot == 0 and not pPlot.isNone():
             CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_WORLD_BUILDER)
             for pBrushPlot in self.getBrushPlots(pPlot):
                 CyEngine().fillAreaBorderPlotAlt(
@@ -4607,7 +4607,7 @@ class LandmarkMode(Mode):
         iPlayer, pPlot = userData
 
         cityName = MapManager.getCityName(iPlayer, pPlot)
-        if cityName == None:
+        if cityName is None:
             cityName = ""
         else:
             cityName = unicode(cityName, "latin-1")
@@ -4620,14 +4620,14 @@ class LandmarkMode(Mode):
             if i != iPlayer:
                 name = MapManager.getCityName(i, pPlot)
                 civ = gc.getPlayer(i).getCivilizationShortDescription(0)
-                if name != None:
+                if name is not None:
                     cityNames.append((unicode(name, "latin-1"), civ))
         # uncomment for city names in alphabetic order
         # cityNames.sort()
         # generic city name, always on last place
         if (Consts.iNumMajorPlayers) != iPlayer:
             name = MapManager.getCityName((Consts.iNumMajorPlayers), pPlot)
-            if name != None:
+            if name is not None:
                 cityNames.append((unicode(name, "latin-1"), "GENERIC NAME"))
 
         cityHeader = cityName
@@ -4682,7 +4682,7 @@ class LandmarkMode(Mode):
         return
 
     def backupLandmarks(self):
-        if self.landmarks == None:
+        if self.landmarks is None:
             self.landmarks = []
             for i in range(CyEngine().getNumSigns()):
                 sign = CyEngine().getSignByIndex(i)
@@ -4695,14 +4695,14 @@ class LandmarkMode(Mode):
         return
 
     def checkRestoreLandmarks(self):
-        if self.landmarks != None:
+        if self.landmarks is not None:
             length = len(self.landmarks)
             if length > 0:
                 self.restoreLandmarksPopupBegin(length)
         return
 
     def restoreLandmarks(self):
-        if self.landmarks != None:
+        if self.landmarks is not None:
             for i in range(len(self.landmarks)):
                 pPlot, caption = self.landmarks[i]
                 CyEngine().addLandmark(pPlot, caption)

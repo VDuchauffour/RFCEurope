@@ -1280,7 +1280,7 @@ class CvMercenaryManager:
                         break
 
                 # If the unit is not set to None then look at them and select them.
-                if pMercUnit != None:
+                if pMercUnit is not None:
                     # CyCamera().LookAtUnit(pMercUnit)
                     pPlot = gc.getMap().plot(pMercUnit.getX(), pMercUnit.getY())
                     CyCamera().JustLookAtPlot(pPlot)
