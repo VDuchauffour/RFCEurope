@@ -313,7 +313,7 @@ class CvDebugTools:
         popup.createPullDown()
         for i in range(gc.getNumBuildingInfos()):
             szMovieFile = gc.getBuildingInfo(i).getMovie()
-            if szMovieFile != None and len(szMovieFile) > 0:
+            if szMovieFile is not None and len(szMovieFile) > 0:
                 popup.addPullDownString(gc.getBuildingInfo(i).getDescription(), i)
 
         for i in range(gc.getNumProjectInfos()):
@@ -321,7 +321,7 @@ class CvDebugTools:
             szArtDef = gc.getProjectInfo(i).getMovieArtDef()
             if len(szArtDef) > 0:
                 szMovieFile = CyArtFileMgr().getMovieArtInfo(szArtDef).getPath()
-            if szMovieFile != None and len(szMovieFile) > 0:
+            if szMovieFile is not None and len(szMovieFile) > 0:
                 popup.addPullDownString(
                     gc.getProjectInfo(i).getDescription(), gc.getNumBuildingInfos() + i
                 )

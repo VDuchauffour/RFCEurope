@@ -170,7 +170,7 @@ class RFCEMapManager:
         return None
 
     def setCityName(self, iPlayer, pPlot, sName):
-        if sName == None or sName == "":
+        if sName is None or sName == "":
             sName = cityNameMapDefault
         self.setStringValue(iPlayer, pPlot, self.cityNameMap, sName)
 
@@ -390,7 +390,7 @@ class RFCEMapVisualizer:
     def showCityName(self, pPlot):
         if not pPlot.isNone():
             name = self.mapManager.getCityName(self.iPlayer, pPlot)
-            if name != None:
+            if name is not None:
                 CyEngine().addLandmark(pPlot, name)
                 # CyEngine().addSign(pPlot, utils.getHumanID(), name)
 

@@ -2000,7 +2000,7 @@ class RiseAndFall:
                 if loopValue > iMaxValue:
                     iMaxValue = loopValue
                     bestCity = loopCity
-            if bestCity != None:
+            if bestCity is not None:
                 for loopCity in cityList:
                     if loopCity != bestCity:
                         loopCity.setHasRealBuilding((xml.iPalace), False)

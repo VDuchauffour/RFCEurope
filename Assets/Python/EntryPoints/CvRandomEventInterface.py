@@ -249,7 +249,7 @@ def expireHolyMountain1(argsList):
     kTriggeredData = argsList[1]
 
     plot = gc.getMap().plot(kTriggeredData.iPlotX, kTriggeredData.iPlotY)
-    if plot == None:
+    if plot is None:
         return True
 
     if plot.getOwner() != kTriggeredData.ePlayer and plot.getOwner() != -1:
@@ -266,11 +266,11 @@ def canTriggerHolyMountainDone(argsList):
 
     kOrigTriggeredData = player.getEventOccured(trigger.getPrereqEvent(0))
 
-    if kOrigTriggeredData == None:
+    if kOrigTriggeredData is None:
         return False
 
     plot = gc.getMap().plot(kOrigTriggeredData.iPlotX, kOrigTriggeredData.iPlotY)
-    if plot == None:
+    if plot is None:
         return False
 
     if plot.getOwner() != kTriggeredData.ePlayer:
@@ -287,7 +287,7 @@ def canTriggerHolyMountainRevealed(argsList):
 
     kOrigTriggeredData = player.getEventOccured(trigger.getPrereqEvent(0))
 
-    if kOrigTriggeredData == None:
+    if kOrigTriggeredData is None:
         return False
 
     iNumPoints = 0
@@ -320,7 +320,7 @@ def canTriggerHolyMountainRevealed(argsList):
         return False
 
     plot = gc.getMap().plot(kOrigTriggeredData.iPlotX, kOrigTriggeredData.iPlotY)
-    if plot == None:
+    if plot is None:
         return False
 
     plot.setRevealed(player.getTeam(), True, True, -1)
@@ -1167,7 +1167,7 @@ def canTriggerDustbowlCont(argsList):
 
     kOrigTriggeredData = player.getEventOccured(trigger.getPrereqEvent(0))
 
-    if kOrigTriggeredData == None:
+    if kOrigTriggeredData is None:
         return False
 
     iFarmType = CvUtil.findInfoTypeNum(
@@ -1194,7 +1194,7 @@ def canTriggerDustbowlCont(argsList):
                 iBestValue = iValue
                 bestPlot = plot
 
-    if bestPlot != None:
+    if bestPlot is not None:
         kActualTriggeredDataObject = player.getEventTriggered(kTriggeredData.iId)
         kActualTriggeredDataObject.iPlotX = bestPlot.getX()
         kActualTriggeredDataObject.iPlotY = bestPlot.getY()
@@ -1247,7 +1247,7 @@ def canApplySaltpeter(argsList):
     player = gc.getPlayer(kTriggeredData.ePlayer)
 
     plot = gc.getMap().plot(kTriggeredData.iPlotX, kTriggeredData.iPlotY)
-    if plot == None:
+    if plot is None:
         return False
 
     iWoodland = CvUtil.findInfoTypeNum(
@@ -1280,7 +1280,7 @@ def applySaltpeter(argsList):
     player = gc.getPlayer(kTriggeredData.ePlayer)
 
     plot = gc.getMap().plot(kTriggeredData.iPlotX, kTriggeredData.iPlotY)
-    if plot == None:
+    if plot is None:
         return
 
     iWoodland = CvUtil.findInfoTypeNum(
@@ -1907,7 +1907,7 @@ def canTriggerModernOlympics(argsList):
 
     kOrigTriggeredData = player.getEventOccured(trigger.getPrereqEvent(0))
 
-    if kOrigTriggeredData == None:
+    if kOrigTriggeredData is None:
         return False
 
     kActualTriggeredDataObject = player.getEventTriggered(kTriggeredData.iId)
@@ -2117,13 +2117,13 @@ def applyFreedomConcert2(argsList):
                             eventCity.getX(), eventCity.getY(), loopCity.getX(), loopCity.getY()
                         )
 
-                        if iDistance < iBestDistance or bestCity == None:
+                        if iDistance < iBestDistance or bestCity is None:
                             bestCity = loopCity
                             iBestDistance = iDistance
 
                 (loopCity, iter) = player.nextCity(iter, False)
 
-            if bestCity != None:
+            if bestCity is not None:
                 bestCity.setHasReligion(iReligion, True, True, True)
 
 
@@ -3535,7 +3535,7 @@ def expireMasterBlacksmith1(argsList):
     kTriggeredData = argsList[1]
     player = gc.getPlayer(kTriggeredData.ePlayer)
     city = player.getCity(kTriggeredData.iCityId)
-    if city == None or city.getOwner() != kTriggeredData.ePlayer:
+    if city is None or city.getOwner() != kTriggeredData.ePlayer:
         return True
 
     return False
@@ -3559,7 +3559,7 @@ def canTriggerMasterBlacksmithDone(argsList):
     kOrigTriggeredData = player.getEventOccured(trigger.getPrereqEvent(0))
 
     city = player.getCity(kOrigTriggeredData.iCityId)
-    if city == None or city.getOwner() != kTriggeredData.ePlayer:
+    if city is None or city.getOwner() != kTriggeredData.ePlayer:
         return False
 
     kActualTriggeredDataObject = player.getEventTriggered(kTriggeredData.iId)
@@ -3576,7 +3576,7 @@ def canApplyMasterBlacksmithDone1(argsList):
     iBonus = CvUtil.findInfoTypeNum(gc.getBonusInfo, gc.getNumBonusInfos(), "BONUS_COPPER")
     city = player.getCity(kTriggeredData.iCityId)
 
-    if city == None:
+    if city is None:
         return False
 
     map = gc.getMap()
@@ -3590,7 +3590,7 @@ def canApplyMasterBlacksmithDone1(argsList):
                 iBestValue = iValue
                 bestPlot = plot
 
-    if bestPlot == None:
+    if bestPlot is None:
         return False
 
     kActualTriggeredDataObject = player.getEventTriggered(kTriggeredData.iId)
@@ -4135,7 +4135,7 @@ def getHelpPartisans1(argsList):
     capital = player.getCapitalCity()
     plot = gc.getMap().plot(kTriggeredData.iPlotX, kTriggeredData.iPlotY)
 
-    if None != capital and not capital.isNone():
+    if None is not capital and not capital.isNone():
         iNumUnits = getNumPartisanUnits(plot, kTriggeredData.ePlayer)
         szUnit = gc.getUnitInfo(capital.getConscriptUnit()).getTextKey()
 
@@ -4158,7 +4158,7 @@ def canApplyPartisans1(argsList):
             loopPlot = gc.getMap().plot(
                 kTriggeredData.iPlotX + i - 1, kTriggeredData.iPlotY + j - 1
             )
-            if None != loopPlot and not loopPlot.isNone():
+            if None is not loopPlot and not loopPlot.isNone():
                 if not (
                     loopPlot.isVisibleEnemyUnit(kTriggeredData.ePlayer)
                     or loopPlot.isWater()
@@ -4176,7 +4176,7 @@ def applyPartisans1(argsList):
     capital = player.getCapitalCity()
     plot = gc.getMap().plot(kTriggeredData.iPlotX, kTriggeredData.iPlotY)
 
-    if None != capital and not capital.isNone():
+    if None is not capital and not capital.isNone():
         iNumUnits = getNumPartisanUnits(plot, kTriggeredData.ePlayer)
 
         listPlots = []
@@ -4185,7 +4185,7 @@ def applyPartisans1(argsList):
                 loopPlot = gc.getMap().plot(
                     kTriggeredData.iPlotX + i - 1, kTriggeredData.iPlotY + j - 1
                 )
-                if None != loopPlot and not loopPlot.isNone() and (i != 1 or j != 1):
+                if None is not loopPlot and not loopPlot.isNone() and (i != 1 or j != 1):
                     if not (
                         loopPlot.isVisibleEnemyUnit(kTriggeredData.ePlayer)
                         or loopPlot.isWater()
@@ -4212,7 +4212,7 @@ def getHelpPartisans2(argsList):
     capital = player.getCapitalCity()
     plot = gc.getMap().plot(kTriggeredData.iPlotX, kTriggeredData.iPlotY)
 
-    if None != capital and not capital.isNone():
+    if None is not capital and not capital.isNone():
         iNumUnits = max(1, getNumPartisanUnits(plot, kTriggeredData.ePlayer) / 2)
         szUnit = gc.getUnitInfo(capital.getConscriptUnit()).getTextKey()
 
@@ -4239,7 +4239,7 @@ def applyPartisans2(argsList):
     capital = player.getCapitalCity()
     plot = gc.getMap().plot(kTriggeredData.iPlotX, kTriggeredData.iPlotY)
 
-    if None != capital and not capital.isNone():
+    if None is not capital and not capital.isNone():
         iNumUnits = max(1, getNumPartisanUnits(plot, kTriggeredData.ePlayer) / 2)
         for i in range(iNumUnits):
             player.initUnit(
@@ -4869,7 +4869,7 @@ def canTriggerCorporateExpansion(argsList):
     player = gc.getPlayer(kTriggeredData.ePlayer)
 
     city = gc.getGame().getHeadquarters(kTriggeredData.eCorporation)
-    if None == city or city.isNone():
+    if None is city or city.isNone():
         return False
 
     # Hack to remember the number of cities you already have with the Corporation
@@ -4900,7 +4900,7 @@ def expireCorporateExpansion1(argsList):
     player = gc.getPlayer(kTriggeredData.ePlayer)
 
     city = player.getCity(kTriggeredData.iCityId)
-    if None == city or city.isNone():
+    if None is city or city.isNone():
         return True
 
     return False
@@ -4963,7 +4963,7 @@ def applyCorporateExpansionDone1(argsList):
     player = gc.getPlayer(kTriggeredData.ePlayer)
 
     city = player.getCity(kTriggeredData.iCityId)
-    if None != city and not city.isNone():
+    if None is not city and not city.isNone():
         city.setBuildingCommerceChange(
             gc.getBuildingInfo(kTriggeredData.eBuilding).getBuildingClassType(),
             CommerceTypes.COMMERCE_GOLD,
@@ -4985,7 +4985,7 @@ def canTriggerHostileTakeover(argsList):
         return False
 
     city = gc.getGame().getHeadquarters(kTriggeredData.eCorporation)
-    if None == city or city.isNone():
+    if None is city or city.isNone():
         return False
 
     # Hack to remember the number of cities you already have with the Corporation
@@ -5019,7 +5019,7 @@ def expireHostileTakeover1(argsList):
     player = gc.getPlayer(kTriggeredData.ePlayer)
 
     city = player.getCity(kTriggeredData.iCityId)
-    if None == city or city.isNone():
+    if None is city or city.isNone():
         return True
 
     return False
@@ -5113,7 +5113,7 @@ def applyHostileTakeoverDone1(argsList):
     player = gc.getPlayer(kTriggeredData.ePlayer)
 
     city = player.getCity(kTriggeredData.iCityId)
-    if None != city and not city.isNone():
+    if None is not city and not city.isNone():
         city.setBuildingCommerceChange(
             gc.getBuildingInfo(kTriggeredData.eBuilding).getBuildingClassType(),
             CommerceTypes.COMMERCE_GOLD,
