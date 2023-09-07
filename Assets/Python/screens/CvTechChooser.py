@@ -2,10 +2,7 @@
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
 import CvUtil
-import ScreenInput
 import CvScreenEnums
-import CvScreensInterface
-import Consts as con
 import XMLConsts as xml
 
 PIXEL_INCREMENT = 7

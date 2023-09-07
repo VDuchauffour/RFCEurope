@@ -4,7 +4,6 @@
 from CvPythonExtensions import *
 from PyHelpers import PyPlayer
 import CvUtil
-import ScreenInput
 import CvScreenEnums
 import Consts as con  # Rhye
 

@@ -2,7 +2,6 @@
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
 import CvUtil
-import ScreenInput
 import CvScreenEnums
 import math
 

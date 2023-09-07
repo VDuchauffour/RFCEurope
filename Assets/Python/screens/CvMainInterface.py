@@ -2,10 +2,7 @@
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
 import CvUtil
-import ScreenInput
 import CvScreenEnums
-import CvEventInterface
-import time
 
 import Consts as con  # Rhye
 import XMLConsts as xml

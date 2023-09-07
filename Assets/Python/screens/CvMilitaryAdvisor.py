@@ -2,11 +2,8 @@
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
 import CvUtil
-import ScreenInput
-import time
 import PyHelpers
 import re
-import Consts as con  # Rhye
 
 PyPlayer = PyHelpers.PyPlayer
 PyInfo = PyHelpers.PyInfo

@@ -3,7 +3,6 @@
 from CvPythonExtensions import *
 import PyHelpers
 import CvUtil
-import ScreenInput
 import CvScreenEnums
 
 PyPlayer = PyHelpers.PyPlayer

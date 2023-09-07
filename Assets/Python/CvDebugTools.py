@@ -6,7 +6,6 @@
 import CvUtil
 import PyHelpers
 import Popup as PyPopup
-import CvScreenEnums
 from CvPythonExtensions import *
 
 PyPlayer = PyHelpers.PyPlayer

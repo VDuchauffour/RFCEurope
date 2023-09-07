@@ -1,10 +1,8 @@
 # Rhye's and Fall of Civilization: Europe - Main RFC mechanics
 
 from CvPythonExtensions import *
-import CvUtil
 import PyHelpers  # LOQ
 import Popup
-import CvTranslator
 import RFCUtils
 import ProvinceManager  # manage provinces here to link to spawn/rebirth
 import Consts as con
@@ -2407,10 +2405,14 @@ class RiseAndFall:
                 plot = gc.getMap().plot(tPlot[0], tPlot[1])
                 if (plot.isHills() or plot.isFlatlands()) and not plot.isImpassable():
                     if not plot.isUnit():
-                        if plot.getTerrainType() not in [
-                            xml.iTerrainDesert,
-                            xml.iTerrainTundra,
-                        ] and plot.getFeatureType() not in [xml.iMarsh, xml.iJungle]:
+                        if (
+                            plot.getTerrainType()
+                            not in [
+                                xml.iTerrainDesert,
+                                xml.iTerrainTundra,
+                            ]
+                            and plot.getFeatureType() not in [xml.iMarsh, xml.iJungle]
+                        ):
                             if plot.countTotalCulture() == 0:
                                 plotList.append(tPlot)
             rndNum = gc.getGame().getSorenRandNum(len(plotList), "searching another free plot")
