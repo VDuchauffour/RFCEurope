@@ -3,7 +3,7 @@
 from CvPythonExtensions import *
 import CvUtil
 import CvScreenEnums #Absinthe
-import RFCEMaps #Absinthe
+import RFCEMaps 
 import PyHelpers
 import Popup #Absinthe
 import Consts

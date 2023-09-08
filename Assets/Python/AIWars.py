@@ -5,7 +5,7 @@ import PyHelpers  # LOQ
 import Consts
 import XMLConsts as xml
 import RFCUtils
-import RFCEMaps as rfcemaps
+import RFCEMaps
 from StoredData import sd
 
 # globals
@@ -22,7 +22,6 @@ iMaxIntervalLate = 60
 iThreshold = 100
 iMinValue = 30
 
-tWarsMap = rfcemaps.tWarsMaps
 
 
 class AIWars:
@@ -270,7 +269,7 @@ class AIWars:
             iOwner = gc.getMap().plot(i, j).getOwner()
             if 0 <= iOwner < Consts.iNumTotalPlayers and iOwner != iCiv:
                 if lTargetCivs[iOwner] > 0:
-                    iValue = tWarsMap[iCiv][Consts.iMapMaxY - 1 - j][i]
+                    iValue = RFCEMaps.tWarsMap[iCiv][Consts.iMapMaxY - 1 - j][i]
                     if iOwner in [
                         Consts.iIndependent,
                         Consts.iIndependent2,

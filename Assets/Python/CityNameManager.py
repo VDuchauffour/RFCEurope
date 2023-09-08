@@ -3,14 +3,12 @@
 from CvPythonExtensions import *
 import PyHelpers
 import Consts
-import RFCEMaps as rfcemaps
+import RFCEMaps 
 
 # globals
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer
 
-# city coordinates
-tCityMap = rfcemaps.tCityMap
 
 
 class CityNameManager:
@@ -19,7 +17,7 @@ class CityNameManager:
         iOwner = city.getOwner()
         if iOwner < Consts.iNumMajorPlayers:
             # print(" City Name ",iOwner,Consts.iMapMaxY-1-city.getY(),city.getX()) #Sedna17 Needed to throw an extra -1 in the Y coordinate to get things to line up right. I love zero-indexing.
-            cityName = tCityMap[iOwner][Consts.iMapMaxY - 1 - city.getY()][city.getX()]
+            cityName = RFCEMaps.tCityMap[iOwner][Consts.iMapMaxY - 1 - city.getY()][city.getX()]
             # print(" City Name ",cityName)
             if cityName != "-1":
                 city.setName(unicode(cityName, "latin-1"), False)
@@ -29,14 +27,14 @@ class CityNameManager:
 
         # sName = city.getName()
         if iNewOwner < Consts.iNumMajorPlayers:
-            cityName = tCityMap[iNewOwner][Consts.iMapMaxY - 1 - city.getY()][city.getX()]
+            cityName = RFCEMaps.tCityMap[iNewOwner][Consts.iMapMaxY - 1 - city.getY()][city.getX()]
             if cityName != "-1":
                 city.setName(unicode(cityName, "latin-1"), False)
 
     def lookupName(self, city, iPlayer):
         """Looks up a city name in another player's map"""
         if iPlayer < Consts.iNumMajorPlayers:
-            cityName = tCityMap[iPlayer][Consts.iMapMaxY - 1 - city.getY()][city.getX()]
+            cityName = RFCEMaps.tCityMap[iPlayer][Consts.iMapMaxY - 1 - city.getY()][city.getX()]
             if cityName == "-1":
                 return "Unknown"
             else:

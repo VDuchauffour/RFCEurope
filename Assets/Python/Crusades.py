@@ -7,7 +7,7 @@ import Popup
 import RFCUtils
 import Consts
 import XMLConsts as xml
-import RFCEMaps as rfceMaps
+import RFCEMaps 
 import CityNameManager
 from StoredData import sd
 import random
@@ -21,7 +21,6 @@ cnm = CityNameManager.CityNameManager()
 iCatholicism = xml.iCatholicism
 iOrthodoxy = xml.iOrthodoxy
 
-ProvMap = rfceMaps.tProvinceMap
 
 # Can call DC to aid Catholics, if at war with Non-Catholic and Non-Orthodox player, who isn't vassal of Catholic or Orthodox player and has at least one city in the provinces listed here
 tDefensiveCrusadeMap = [
@@ -1925,7 +1924,7 @@ class Crusades:
                 if self.isOrMasterChristian(iEnemy):
                     continue
                 for pCity in utils.getCityList(iEnemy):
-                    if ProvMap[pCity.getY()][pCity.getX()] in tPlayerDCMap:
+                    if RFCEMaps.ProvMap[pCity.getY()][pCity.getX()] in tPlayerDCMap:
                         return True
         return False
 

@@ -19,7 +19,7 @@ import CvTopCivs
 import CvAdvisorUtils
 import Consts
 import XMLConsts as xml
-import RFCEMaps as rfcemaps
+import RFCEMaps 
 import RFCUtils
 import RFCEBalance
 import random
@@ -2355,7 +2355,7 @@ class CvEventManager:
         if bRename:
             popup.createEditBox(city.getName())
         else:
-            szName = rfcemaps.tCityMap[city.getOwner()][Consts.iMapMaxY - 1 - city.getY()][
+            szName = RFCEMaps.tCityMap[city.getOwner()][Consts.iMapMaxY - 1 - city.getY()][
                 city.getX()
             ]
             if szName == "-1":

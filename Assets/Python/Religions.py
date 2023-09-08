@@ -6,7 +6,7 @@ import Popup
 import Consts
 import XMLConsts as xml
 import RFCUtils
-import RFCEMaps as rfcemaps
+import RFCEMaps 
 from StoredData import sd
 
 # globals
@@ -200,7 +200,7 @@ lReformationNeighbours = [
 
 
 ### Regions to spread religion ###
-tProvinceMap = rfcemaps.tProvinceMap
+tProvinceMap = RFCEMaps.tProvinceMap
 tSpain = [
     xml.iP_Leon,
     xml.iP_GaliciaSpain,

@@ -7,7 +7,7 @@ import PyHelpers
 import Consts
 import XMLConsts as xml
 import RFCUtils
-import RFCEMaps as rfcemaps
+import RFCEMaps 
 import RiseAndFall
 import ProvinceManager
 
@@ -47,7 +47,7 @@ class Stability:
                 iOldStab = pPlayer.getStability()
 
                 # Province stability
-                iProv = rfcemaps.tProvinceMap[pCity.getY()][pCity.getX()]
+                iProv = RFCEMaps.tProvinceMap[pCity.getY()][pCity.getX()]
                 iProvinceType = pPlayer.getProvinceType(iProv)
                 if iProvinceType == Consts.iProvinceCore:
                     pPlayer.changeStabilityBase(Consts.iCathegoryExpansion, 1)
@@ -287,7 +287,7 @@ class Stability:
         # 				self.setStability(iPlayer, (self.getStability(iPlayer) + lContinentModifier[j]))
 
     def onCityBuilt(self, iPlayer, x, y):
-        iProv = rfcemaps.tProvinceMap[y][x]
+        iProv = RFCEMaps.tProvinceMap[y][x]
         pPlayer = gc.getPlayer(iPlayer)
         # Absinthe: +1 for core, -1 for contested, -2 for foreign provinces
         iProvinceType = pPlayer.getProvinceType(iProv)

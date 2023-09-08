@@ -3,7 +3,7 @@
 from CvPythonExtensions import *
 import Consts
 import XMLConsts as xml
-import RFCEMaps as rfcemaps
+import RFCEMaps 
 import RFCUtils
 
 gc = CyGlobalContext()  # LOQ
@@ -1084,16 +1084,16 @@ class RFCEBalance:
         for i in range(Consts.iNumPlayers):
             for y in range(Consts.iMapMaxY):
                 for x in range(Consts.iMapMaxX):
-                    gc.setSettlersMap(i, y, x, rfcemaps.tSettlersMaps[i][y][x])
-                    gc.setWarsMap(i, y, x, rfcemaps.tWarsMaps[i][y][x])
+                    gc.setSettlersMap(i, y, x, RFCEMaps.tSettlersMaps[i][y][x])
+                    gc.setWarsMap(i, y, x, RFCEMaps.tWarsMaps[i][y][x])
 
         for y in range(Consts.iMapMaxY):
             for x in range(Consts.iMapMaxX):
-                if rfcemaps.tProvinceMap[y][x] > -1:
+                if RFCEMaps.tProvinceMap[y][x] > -1:
                     # "no province" of ocean is settled different than -1, set only non-negative values,
                     # the C++ map is initialized to "no-province" by setSizeNPlayers(...)
                     # "no-province" is returned as -1 via the Cy interface
-                    gc.setProvince(x, y, rfcemaps.tProvinceMap[y][x])
+                    gc.setProvince(x, y, RFCEMaps.tProvinceMap[y][x])
         gc.createProvinceCrossreferenceList()  # make sure to call this AFTER setting all the Province entries
 
         gc.setProvinceTypeNumber(

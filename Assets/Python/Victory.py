@@ -5,7 +5,7 @@ import Consts
 import XMLConsts as xml
 import RFCUtils
 import UniquePowers
-import RFCEMaps as rfcemaps
+import RFCEMaps 
 from StoredData import sd
 import random
 
@@ -1046,7 +1046,7 @@ class Victory:
             plot = gc.getMap().plot(x, y)
             if plot.isWater():
                 continue
-            iProvinceID = rfcemaps.tProvinceMap[y][x]
+            iProvinceID = RFCEMaps.tProvinceMap[y][x]
             if iProvinceID in xml.lNotEurope:
                 continue
             iTotal += 1

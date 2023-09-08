@@ -3,7 +3,7 @@
 from CvPythonExtensions import *
 import Consts
 import XMLConsts as xml
-import RFCEMaps as rfcemaps
+import RFCEMaps 
 import RFCUtils  # Absinthe
 import PyHelpers  # Absinthe
 
@@ -744,7 +744,7 @@ class ProvinceManager:
         if iPlayer >= Consts.iNumPlayers - 1:  # Pope, indies, barbs
             return
         pPlayer = gc.getPlayer(iPlayer)
-        iProv = rfcemaps.tProvinceMap[y][x]
+        iProv = RFCEMaps.tProvinceMap[y][x]
         if pPlayer.getProvinceType(iProv) == Consts.iProvincePotential:
             if iProv in self.tPot2NormProvinces[iPlayer]:
                 pPlayer.setProvinceType(iProv, Consts.iProvinceNatural)
