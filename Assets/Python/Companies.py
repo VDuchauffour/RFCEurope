@@ -3,7 +3,7 @@
 
 from CvPythonExtensions import *
 import PyHelpers
-import Consts as con
+import Consts
 import XMLConsts as xml
 import RFCUtils
 import Crusades
@@ -16,8 +16,6 @@ gc = CyGlobalContext()
 localText = CyTranslator()
 PyPlayer = PyHelpers.PyPlayer
 
-iNumPlayers = con.iNumPlayers
-iNumTotalPlayers = con.iNumTotalPlayers
 iNumCompanies = xml.iNumCompanies
 iHospitallers = xml.iHospitallers
 iTemplars = xml.iTemplars
@@ -54,7 +52,7 @@ class Companies:
     def setup(self):
 
         # update companies at the beginning of the 1200AD scenario:
-        if utils.getScenario() == con.i1200ADScenario:
+        if utils.getScenario() == Consts.i1200ADScenario:
             iGameTurn = xml.i1200AD
             for iCompany in range(xml.iNumCompanies):
                 if iGameTurn > tCompaniesBirth[iCompany] and iGameTurn < tCompaniesDeath[iCompany]:
@@ -74,7 +72,7 @@ class Companies:
             iMaxCompanies = 0
             # do not dissolve the Templars while Jerusalem is under Catholic control
             if iCompany == iTemplars:
-                plot = gc.getMap().plot(con.tJerusalem[0], con.tJerusalem[1])
+                plot = gc.getMap().plot(Consts.tJerusalem[0], Consts.tJerusalem[1])
                 if plot.isCity():
                     if (
                         gc.getPlayer(plot.getPlotCity().getOwner()).getStateReligion()
@@ -104,16 +102,18 @@ class Companies:
         # Order of Calatrava is only active if Cordoba or Morocco is alive
         # TODO: Only if Cordoba is alive, or Morocco has some territories in Europe?
         if iCompany == iCalatrava:
-            if not (gc.getPlayer(con.iCordoba).isAlive() or gc.getPlayer(con.iMorocco).isAlive()):
+            if not (
+                gc.getPlayer(Consts.iCordoba).isAlive() or gc.getPlayer(Consts.iMorocco).isAlive()
+            ):
                 iMaxCompanies = 0
         # Order of the Dragon is only active if the Ottomans are alive
         if iCompany == iDragon:
-            if not gc.getPlayer(con.iTurkey).isAlive():
+            if not gc.getPlayer(Consts.iTurkey).isAlive():
                 iMaxCompanies = 0
 
         # loop through all cities, check the company value for each and add the good ones to a list of tuples (city, value)
         cityValueList = []
-        for iPlayer in range(iNumPlayers):
+        for iPlayer in range(Consts.iNumPlayers):
             for city in utils.getCityList(iPlayer):
                 iValue = self.getCityValue(city, iCompany)
                 if iValue > 0:
@@ -140,7 +140,7 @@ class Companies:
 
         # count the number of companies
         iCompanyCount = 0
-        for iLoopPlayer in range(iNumPlayers):
+        for iLoopPlayer in range(Consts.iNumPlayers):
             if gc.getPlayer(
                 iLoopPlayer
             ).isAlive:  # should we check for indy/barb cities? isMinorCiv() isBarbarian()
@@ -201,7 +201,7 @@ class Companies:
         # Galata Tower ownership
         pPlayer = gc.getPlayer(iPlayer)
         if iBuilding == xml.iGalataTower:
-            pPlayer.setPicklefreeParameter(con.iIsHasGalataTower, 1)
+            pPlayer.setPicklefreeParameter(Consts.iIsHasGalataTower, 1)
 
     def onCityAcquired(self, iOldOwner, iNewOwner, city):
 
@@ -219,8 +219,8 @@ class Companies:
         pOldOwner = gc.getPlayer(iOldOwner)
         pNewOwner = gc.getPlayer(iNewOwner)
         if city.isHasBuilding(xml.iGalataTower):
-            pNewOwner.setPicklefreeParameter(con.iIsHasGalataTower, 1)
-            pOldOwner.setPicklefreeParameter(con.iIsHasGalataTower, 0)
+            pNewOwner.setPicklefreeParameter(Consts.iIsHasGalataTower, 1)
+            pOldOwner.setPicklefreeParameter(Consts.iIsHasGalataTower, 0)
 
     def onCityRazed(self, iOldOwner, iPlayer, city):
 
@@ -228,8 +228,8 @@ class Companies:
         pOldOwner = gc.getPlayer(iOldOwner)
         pPlayer = gc.getPlayer(iPlayer)
         if city.isHasBuilding(xml.iGalataTower):
-            pPlayer.setPicklefreeParameter(con.iIsHasGalataTower, 0)
-            pOldOwner.setPicklefreeParameter(con.iIsHasGalataTower, 0)
+            pPlayer.setPicklefreeParameter(Consts.iIsHasGalataTower, 0)
+            pOldOwner.setPicklefreeParameter(Consts.iIsHasGalataTower, 0)
 
     def announceHuman(self, iCompany, city, bRemove=False):
         iHuman = utils.getHumanID()
@@ -253,12 +253,12 @@ class Companies:
         CyInterface().addMessage(
             iHuman,
             False,
-            con.iDuration,
+            Consts.iDuration,
             sText,
             gc.getCorporationInfo(iCompany).getSound(),
             InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
             gc.getCorporationInfo(iCompany).getButton(),
-            ColorTypes(con.iWhite),
+            ColorTypes(Consts.iWhite),
             iX,
             iY,
             True,
@@ -280,13 +280,13 @@ class Companies:
 
         # spread the Teutons to Teutonic Order cities and don't spread if the owner civ is at war with the Teutons
         if iCompany == iTeutons:
-            if iOwner == con.iPrussia:
+            if iOwner == Consts.iPrussia:
                 iValue += 5
-            elif ownerTeam.isAtWar(con.iPrussia):
+            elif ownerTeam.isAtWar(Consts.iPrussia):
                 return -1
 
         # Genoese UP
-        if iOwner == con.iGenoa:
+        if iOwner == Consts.iGenoa:
             iValue += 1
             # extra bonus for banking companies
             if iCompany in [iMedici, iAugsburg, iStGeorge]:
@@ -356,13 +356,13 @@ class Companies:
                     iValue += 2
 
         # bonus for civs whom actively participate (with units) in the actual Crusade:
-        if iOwner < iNumPlayers:  # no such value for indy civs
+        if iOwner < Consts.iNumPlayers:  # no such value for indy civs
             if crus.getNumUnitsSent(iOwner) > 0:
                 if iCompany in [iHospitallers, iTemplars, iTeutons]:
                     iValue += 2
 
         # additional bonus for the city of Jerusalem
-        if (city.getX(), city.getY()) == con.tJerusalem:
+        if (city.getX(), city.getY()) == Consts.tJerusalem:
             if iCompany in [iHospitallers, iTemplars, iTeutons]:
                 iValue += 3
 
@@ -413,7 +413,7 @@ class Companies:
                 iValue += 1
 
         # Galata Tower bonus: 2 for all cities, additional 2 for the wonder's city
-        if owner.getPicklefreeParameter(con.iIsHasGalataTower) == 1:
+        if owner.getPicklefreeParameter(Consts.iIsHasGalataTower) == 1:
             iValue += 2
             if city.isHasBuilding(xml.iGalataTower):
                 iValue += 2
@@ -700,7 +700,7 @@ class Companies:
         # adds the company to the best iNumber cities
         cityValueList = []
         iCompaniesAdded = 0
-        for iPlayer in range(iNumPlayers):
+        for iPlayer in range(Consts.iNumPlayers):
             for city in utils.getCityList(iPlayer):
                 iValue = self.getCityValue(city, iCompany)
                 if iValue > 0:

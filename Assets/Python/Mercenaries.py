@@ -5,7 +5,7 @@ from CvPythonExtensions import *
 import PyHelpers
 
 # import cPickle as pickle
-import Consts as con
+import Consts
 import XMLConsts as xml
 import RFCUtils
 from StoredData import sd
@@ -16,7 +16,6 @@ gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
 PyPlayer = PyHelpers.PyPlayer
 
-iMercCostPerTurn = con.iMercCostPerTurn
 
 # list of all available mercs, unit type, text key name, start turn, end turn, provinces, blocked by religions, odds
 # note that the province list is treated as a set (only iProvince in list or Set(list) are ever called)
@@ -2172,7 +2171,7 @@ class MercenaryManager:
             for lMerc in self.lGlobalPool:
                 # iNewProv = lMercList[lMerc[0]][4][gc.getGame().getSorenRandNum( len(lMercList[lMerc[0]][4]), 'pick available province') ]
                 # if ( ( not ( lMerc[4] in lHumanProvinces ) ) and ( iNewProv in lHumanProvinces ) ):
-                # CyInterface().addMessage(iHuman, False, con.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()), "", 0, "", ColorTypes(con.iLime), -1, -1, True, True)
+                # CyInterface().addMessage(iHuman, False, Consts.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()), "", 0, "", ColorTypes(Consts.iLime), -1, -1, True, True)
                 # lMerc[4] = iNewProv
                 if (
                     gc.getGame().getSorenRandNum(100, "mercs leaving the global pool")
@@ -2183,12 +2182,12 @@ class MercenaryManager:
                         CyInterface().addMessage(
                             iHuman,
                             False,
-                            con.iDuration / 2,
+                            Consts.iDuration / 2,
                             CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_MOVING", ()),
                             "",
                             0,
                             "",
-                            ColorTypes(con.iLime),
+                            ColorTypes(Consts.iLime),
                             -1,
                             -1,
                             True,
@@ -2264,7 +2263,7 @@ class MercenaryManager:
                 CyInterface().addMessage(
                     iHuman,
                     False,
-                    con.iDuration / 2,
+                    Consts.iDuration / 2,
                     CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE", ())
                     + " "
                     + szCurrentProvince
@@ -2272,7 +2271,7 @@ class MercenaryManager:
                     "",
                     0,
                     "",
-                    ColorTypes(con.iLime),
+                    ColorTypes(Consts.iLime),
                     -1,
                     -1,
                     True,
@@ -2288,7 +2287,7 @@ class MercenaryManager:
                             CyInterface().addMessage(
                                 iHuman,
                                 False,
-                                con.iDuration / 2,
+                                Consts.iDuration / 2,
                                 CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE", ())
                                 + " "
                                 + szCurrentProvince
@@ -2296,7 +2295,7 @@ class MercenaryManager:
                                 "",
                                 0,
                                 "",
-                                ColorTypes(con.iLime),
+                                ColorTypes(Consts.iLime),
                                 -1,
                                 -1,
                                 True,
@@ -2311,7 +2310,7 @@ class MercenaryManager:
                     CyInterface().addMessage(
                         iHuman,
                         False,
-                        con.iDuration / 2,
+                        Consts.iDuration / 2,
                         CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE", ())
                         + " "
                         + szCurrentProvince
@@ -2319,7 +2318,7 @@ class MercenaryManager:
                         "",
                         0,
                         "",
-                        ColorTypes(con.iLime),
+                        ColorTypes(Consts.iLime),
                         -1,
                         -1,
                         True,
@@ -2378,13 +2377,13 @@ class MercenaryManager:
         # 	print( "3Miro Merc Pool: ", iGameTurn, lMerc)
 
         # Go through each of the players and deduct their mercenary maintenance amount from their gold (round up)
-        for iPlayer in range(con.iNumPlayers - 1):  # minus the Pope
+        for iPlayer in range(Consts.iNumPlayers - 1):  # minus the Pope
             pPlayer = gc.getPlayer(iPlayer)
             if pPlayer.isAlive():
                 if (
                     pPlayer.getCommercePercent(CommerceTypes.COMMERCE_GOLD) == 100
                     and pPlayer.getGold()
-                    < (pPlayer.getPicklefreeParameter(iMercCostPerTurn) + 99) / 100
+                    < (pPlayer.getPicklefreeParameter(Consts.iMercCostPerTurn) + 99) / 100
                 ):
                     # not enough gold to pay the mercs, they will randomly desert you
                     self.desertMercs(iPlayer)
@@ -2407,7 +2406,7 @@ class MercenaryManager:
 
         self.setMercLists()  # save the potentially modified merc list (this allows for pickle read/write only once per turn)
 
-        # self.GMU.hireMerc( self.lGlobalPool[0], con.iFrankia )
+        # self.GMU.hireMerc( self.lGlobalPool[0], Consts.iFrankia )
 
     def desertMercs(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
@@ -2415,12 +2414,12 @@ class MercenaryManager:
             CyInterface().addMessage(
                 iPlayer,
                 False,
-                con.iDuration / 2,
+                Consts.iDuration / 2,
                 CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_DESERTERS", ()),
                 "",
                 0,
                 "",
-                ColorTypes(con.iLightRed),
+                ColorTypes(Consts.iLightRed),
                 -1,
                 -1,
                 True,
@@ -2438,7 +2437,7 @@ class MercenaryManager:
                 )
                 bLoop = (
                     pPlayer.getGold()
-                    < (pPlayer.getPicklefreeParameter(iMercCostPerTurn) + 99) / 100
+                    < (pPlayer.getPicklefreeParameter(Consts.iMercCostPerTurn) + 99) / 100
                 )
             else:
                 # if the player has no mercs, then stop the loop
@@ -2455,14 +2454,14 @@ class MercenaryManager:
                     CyInterface().addMessage(
                         iCiv,
                         False,
-                        con.iDuration / 2,
+                        Consts.iDuration / 2,
                         CyTranslator().getText(
                             "TXT_KEY_MERC_AVAILABLE_NEAR_NEW_CITY", (pCity.getName(),)
                         ),
                         "",
                         0,
                         ArtFileMgr.getInterfaceArtInfo("INTERFACE_MERCENARY_ICON").getPath(),
-                        ColorTypes(con.iLime),
+                        ColorTypes(Consts.iLime),
                         pCity.getX(),
                         pCity.getY(),
                         True,
@@ -2481,14 +2480,14 @@ class MercenaryManager:
                     CyInterface().addMessage(
                         iCiv,
                         False,
-                        con.iDuration / 2,
+                        Consts.iDuration / 2,
                         CyTranslator().getText(
                             "TXT_KEY_MERC_AVAILABLE_NEAR_NEW_CITY", (pCity.getName(),)
                         ),
                         "",
                         0,
                         ArtFileMgr.getInterfaceArtInfo("INTERFACE_MERCENARY_ICON").getPath(),
-                        ColorTypes(con.iLime),
+                        ColorTypes(Consts.iLime),
                         pCity.getX(),
                         pCity.getY(),
                         True,
@@ -2522,8 +2521,13 @@ class MercenaryManager:
 
             pPlayer = gc.getPlayer(iOwner)
             pPlayer.setPicklefreeParameter(
-                iMercCostPerTurn,
-                max(0, pPlayer.getPicklefreeParameter(iMercCostPerTurn) - iOldUpkeep + iNewUpkeep),
+                Consts.iMercCostPerTurn,
+                max(
+                    0,
+                    pPlayer.getPicklefreeParameter(Consts.iMercCostPerTurn)
+                    - iOldUpkeep
+                    + iNewUpkeep,
+                ),
             )
             # self.GMU.playerMakeUpkeepSane( iOwner )
 
@@ -2540,8 +2544,12 @@ class MercenaryManager:
             # unit is gone
             pPlayer = gc.getPlayer(pUnit.getOwner())
             pPlayer.setPicklefreeParameter(
-                iMercCostPerTurn,
-                max(0, pPlayer.getPicklefreeParameter(iMercCostPerTurn) - pUnit.getMercUpkeep()),
+                Consts.iMercCostPerTurn,
+                max(
+                    0,
+                    pPlayer.getPicklefreeParameter(Consts.iMercCostPerTurn)
+                    - pUnit.getMercUpkeep(),
+                ),
             )
 
             lHiredByList = self.GMU.getMercHiredBy()
@@ -2574,8 +2582,12 @@ class MercenaryManager:
             # unit is gone
             pPlayer = gc.getPlayer(iPlayer)
             pPlayer.setPicklefreeParameter(
-                iMercCostPerTurn,
-                max(0, pPlayer.getPicklefreeParameter(iMercCostPerTurn) - pUnit.getMercUpkeep()),
+                Consts.iMercCostPerTurn,
+                max(
+                    0,
+                    pPlayer.getPicklefreeParameter(Consts.iMercCostPerTurn)
+                    - pUnit.getMercUpkeep(),
+                ),
             )
 
             # remove the merc (presumably disbanded here)
@@ -2584,17 +2596,17 @@ class MercenaryManager:
 
     def processMercAI(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
-        if pPlayer.isHuman() or pPlayer.isBarbarian() or iPlayer == con.iPope:
+        if pPlayer.isHuman() or pPlayer.isBarbarian() or iPlayer == Consts.iPope:
             return
 
         # print(" MercAI for ",pPlayer.getID())
         iWarValue = 0  # compute the total number of wars being fought at the moment
 
         teamPlayer = gc.getTeam(pPlayer.getTeam())
-        for iOponent in range(con.iNumTotalPlayers):
+        for iOponent in range(Consts.iNumTotalPlayers):
             if teamPlayer.isAtWar(gc.getPlayer(iOponent).getTeam()):
                 iWarValue += 1
-                if iOponent <= con.iPope:
+                if iOponent <= Consts.iPope:
                     iWarValue += 3
 
         # decide to hire or fire mercs
@@ -2605,7 +2617,7 @@ class MercenaryManager:
         bFire = False
 
         iGold = pPlayer.getGold()
-        iUpkeep = pPlayer.getPicklefreeParameter(iMercCostPerTurn)
+        iUpkeep = pPlayer.getPicklefreeParameter(Consts.iMercCostPerTurn)
 
         if 100 * iGold < iUpkeep:
             # can't afford mercs, fire someone
@@ -2623,8 +2635,10 @@ class MercenaryManager:
             # make sure we can affort the mercs that we keep
             # print(" Merc Upkeep: ",pPlayer.getPicklefreeParameter( iMercCostPerTurn )," Gold ",pPlayer.getGold() )
             while pPlayer.getPicklefreeParameter(
-                iMercCostPerTurn
-            ) > 0 and 100 * pPlayer.getGold() < pPlayer.getPicklefreeParameter(iMercCostPerTurn):
+                Consts.iMercCostPerTurn
+            ) > 0 and 100 * pPlayer.getGold() < pPlayer.getPicklefreeParameter(
+                Consts.iMercCostPerTurn
+            ):
                 # print(" Merc Upkeep: ",pPlayer.getPicklefreeParameter( iMercCostPerTurn )," Gold ",pPlayer.getGold() )
                 self.GMU.playerMakeUpkeepSane(pPlayer.getID())
                 self.FireMercAI(iPlayer)
@@ -2632,7 +2646,7 @@ class MercenaryManager:
 
         if iWarValue > 0:
             # we have to be at war to hire
-            iOdds = con.tHire[iPlayer]
+            iOdds = Consts.tHire[iPlayer]
             if iWarValue < 2:
                 iOdds *= 2  # small wars are hardly worth the trouble
             elif iWarValue > 4:  # large war
@@ -2764,11 +2778,11 @@ class GlobalMercenaryUtils:
             # iTotalUpkeep += self.getModifiedCostPerPlayer( pUnit.getMercUpkeep(), iPlayer )
             iTotalUpkeep += pUnit.getMercUpkeep()
 
-        iSavedUpkeep = pPlayer.getPicklefreeParameter(iMercCostPerTurn)
+        iSavedUpkeep = pPlayer.getPicklefreeParameter(Consts.iMercCostPerTurn)
         if iSavedUpkeep != iTotalUpkeep:
             # print(" ERROR IN MERCS: saved upkeep: ",iSavedUpkeep," actual: ",iTotalUpkeep )
             # print(" ------- Making sane ------- ")
-            pPlayer.setPicklefreeParameter(iMercCostPerTurn, iTotalUpkeep)
+            pPlayer.setPicklefreeParameter(Consts.iMercCostPerTurn, iTotalUpkeep)
             return False
         return True
 
@@ -2843,7 +2857,8 @@ class GlobalMercenaryUtils:
         # do the Gold
         pPlayer.setGold(pPlayer.getGold() - iCost)
         pPlayer.setPicklefreeParameter(
-            iMercCostPerTurn, pPlayer.getPicklefreeParameter(iMercCostPerTurn) + iUpkeep
+            Consts.iMercCostPerTurn,
+            pPlayer.getPicklefreeParameter(Consts.iMercCostPerTurn) + iUpkeep,
         )
 
         # remove the merc from the global pool and set the "hired by" index
@@ -2863,12 +2878,12 @@ class GlobalMercenaryUtils:
                 CyInterface().addMessage(
                     iHuman,
                     False,
-                    con.iDuration / 2,
+                    Consts.iDuration / 2,
                     CyTranslator().getText("TXT_KEY_MERC_HIRED_BY_SOMEONE", (szCurrentProvince,)),
                     "",
                     0,
                     "",
-                    ColorTypes(con.iLime),
+                    ColorTypes(Consts.iLime),
                     -1,
                     -1,
                     True,
@@ -2914,7 +2929,8 @@ class GlobalMercenaryUtils:
         # lower the upkeep
         pPlayer = gc.getPlayer(pMerc.getOwner())
         pPlayer.setPicklefreeParameter(
-            iMercCostPerTurn, max(0, pPlayer.getPicklefreeParameter(iMercCostPerTurn) - iUpkeep)
+            Consts.iMercCostPerTurn,
+            max(0, pPlayer.getPicklefreeParameter(Consts.iMercCostPerTurn) - iUpkeep),
         )
 
         pMerc.kill(0, -1)

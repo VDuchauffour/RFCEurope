@@ -12,7 +12,7 @@
 import CvUtil
 from CvPythonExtensions import *
 
-import Consts as con  # Rhye
+import Consts
 
 gc = CyGlobalContext()
 localText = CyTranslator()
@@ -2226,18 +2226,18 @@ def canTriggerGreatMediator(argsList):
 
     # Rhye - start
     if (
-        player.getID() == con.iIndependent
-        or player.getID() == con.iIndependent2
-        or player.getID() == con.iIndependent3
-        or player.getID() == con.iIndependent4
+        player.getID() == Consts.iIndependent
+        or player.getID() == Consts.iIndependent2
+        or player.getID() == Consts.iIndependent3
+        or player.getID() == Consts.iIndependent4
     ):
         return False
 
     if (
-        destPlayer.getID() == con.iIndependent
-        or destPlayer.getID() == con.iIndependent2
-        or destPlayer.getID() == con.iIndependent3
-        or destPlayer.getID() == con.iIndependent4
+        destPlayer.getID() == Consts.iIndependent
+        or destPlayer.getID() == Consts.iIndependent2
+        or destPlayer.getID() == Consts.iIndependent3
+        or destPlayer.getID() == Consts.iIndependent4
     ):
         return False
     # Rhye - end

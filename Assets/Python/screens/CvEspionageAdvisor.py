@@ -5,7 +5,7 @@ from CvPythonExtensions import *
 from PyHelpers import PyPlayer
 import CvUtil
 import CvScreenEnums
-import Consts as con  # Rhye
+import Consts
 
 # globals
 gc = CyGlobalContext()
@@ -218,7 +218,7 @@ class CvEspionageAdvisor:
             pPlayer = gc.getPlayer(iLoop)
             # if (pPlayer.getTeam() != pActivePlayer.getTeam() and not pPlayer.isBarbarian()): #Rhye
             if (
-                pPlayer.getTeam() != pActivePlayer.getTeam() and iLoop < con.iNumActivePlayers
+                pPlayer.getTeam() != pActivePlayer.getTeam() and iLoop < Consts.iNumActivePlayers
             ):  # Rhye
                 if pPlayer.isAlive():
                     if pActiveTeam.isHasMet(pPlayer.getTeam()):

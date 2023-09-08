@@ -17,7 +17,7 @@ import Popup as PyPopup
 import CvCameraControls
 import CvTopCivs
 import CvAdvisorUtils
-import Consts as con
+import Consts
 import XMLConsts as xml
 import RFCEMaps as rfcemaps
 import RFCUtils
@@ -662,7 +662,7 @@ class CvEventManager:
                         CyInterface().addMessage(
                             iOwner,
                             False,
-                            con.iDuration,
+                            Consts.iDuration,
                             (
                                 CyTranslator().getText(
                                     "TXT_KEY_NO_FOREST_NO_RESOURCE",
@@ -672,7 +672,7 @@ class CvEventManager:
                             "AS2D_DISCOVERBONUS",
                             InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                             gc.getBonusInfo(iBonusType).getButton(),
-                            ColorTypes(con.iLime),
+                            ColorTypes(Consts.iLime),
                             pPlot.getX(),
                             pPlot.getY(),
                             True,
@@ -721,12 +721,12 @@ class CvEventManager:
                 CyInterface().addMessage(
                     utils.getHumanID(),
                     False,
-                    con.iDuration,
+                    Consts.iDuration,
                     szText,
                     "",
                     InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                     "",
-                    ColorTypes(con.iLightBlue),
+                    ColorTypes(Consts.iLightBlue),
                     -1,
                     -1,
                     True,
@@ -746,7 +746,7 @@ class CvEventManager:
 
             # techs known by the other civs
             lOthersKnownTechs = []
-            for iLoopPlayer in range(con.iNumPlayers):
+            for iLoopPlayer in range(Consts.iNumPlayers):
                 pLoopPlayer = gc.getPlayer(iLoopPlayer)
                 iLoopTeam = pLoopPlayer.getTeam()
                 pLoopTeam = gc.getTeam(iLoopTeam)
@@ -783,12 +783,12 @@ class CvEventManager:
                         CyInterface().addMessage(
                             iPlayer,
                             True,
-                            con.iDuration,
+                            Consts.iDuration,
                             sText,
                             "",
                             0,
                             "",
-                            ColorTypes(con.iLightBlue),
+                            ColorTypes(Consts.iLightBlue),
                             -1,
                             -1,
                             True,
@@ -816,12 +816,12 @@ class CvEventManager:
                         CyInterface().addMessage(
                             iPlayer,
                             True,
-                            con.iDuration,
+                            Consts.iDuration,
                             sText,
                             "",
                             0,
                             "",
-                            ColorTypes(con.iLightBlue),
+                            ColorTypes(Consts.iLightBlue),
                             -1,
                             -1,
                             True,
@@ -836,12 +836,12 @@ class CvEventManager:
                         CyInterface().addMessage(
                             iPlayer,
                             True,
-                            con.iDuration,
+                            Consts.iDuration,
                             sText,
                             "",
                             0,
                             "",
-                            ColorTypes(con.iLightBlue),
+                            ColorTypes(Consts.iLightBlue),
                             -1,
                             -1,
                             True,
@@ -851,7 +851,7 @@ class CvEventManager:
 
         # Absinthe: Kalmar Castle start
         if iBuildingType == xml.iKalmarCastle:
-            for iNeighbour in con.lNeighbours[iPlayer]:
+            for iNeighbour in Consts.lNeighbours[iPlayer]:
                 pNeighbour = gc.getPlayer(iNeighbour)
                 print("iNeighbour", iNeighbour)
                 if pNeighbour.isAlive() and iPlayer != iNeighbour:
@@ -906,14 +906,14 @@ class CvEventManager:
                 CyInterface().addMessage(
                     iPlayer,
                     False,
-                    con.iDuration,
+                    Consts.iDuration,
                     CyTranslator().getText(
                         "TXT_KEY_BUILDING_SAINT_CATHERINE_MONASTERY_EFFECT", ()
                     ),
                     "",
                     0,
                     "",
-                    ColorTypes(con.iLightBlue),
+                    ColorTypes(Consts.iLightBlue),
                     -1,
                     -1,
                     True,
@@ -1060,12 +1060,12 @@ class CvEventManager:
                         CyInterface().addMessage(
                             iPlayer,
                             False,
-                            con.iDuration,
+                            Consts.iDuration,
                             CyTranslator().getText("TXT_KEY_PROJECT_COLONY_GOLDEN_AGE", ()),
                             "",
                             0,
                             "",
-                            ColorTypes(con.iGreen),
+                            ColorTypes(Consts.iGreen),
                             -1,
                             -1,
                             True,
@@ -1135,7 +1135,7 @@ class CvEventManager:
         if pTeam.isTrainVassalUU():
             l_vassalUU = []
             iDefaultUnit = utils.getBaseUnit(iUnitType)
-            for iLoopPlayer in range(con.iNumPlayers):
+            for iLoopPlayer in range(Consts.iNumPlayers):
                 pLoopPlayer = gc.getPlayer(iLoopPlayer)
                 if pLoopPlayer.isAlive():
                     if gc.getTeam(pLoopPlayer.getTeam()).isVassal(iTeam):
@@ -1171,12 +1171,12 @@ class CvEventManager:
                         CyInterface().addMessage(
                             iHuman,
                             False,
-                            con.iDuration,
+                            Consts.iDuration,
                             szText,
                             "",
                             InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                             gc.getUnitInfo(iUnit).getButton(),
-                            ColorTypes(con.iLightBlue),
+                            ColorTypes(Consts.iLightBlue),
                             city.getX(),
                             city.getY(),
                             True,
@@ -1814,14 +1814,14 @@ class CvEventManager:
                             CyInterface().addMessage(
                                 iHuman,
                                 False,
-                                con.iDuration,
+                                Consts.iDuration,
                                 CyTranslator().getText(
                                     "TXT_KEY_MISC_WONDER_DESTROYED_1", (sWonderName,)
                                 ),
                                 "",
                                 InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                                 gc.getBuildingInfo(iWonder).getButton(),
-                                ColorTypes(con.iLightRed),
+                                ColorTypes(Consts.iLightRed),
                                 iX,
                                 iY,
                                 True,
@@ -1832,14 +1832,14 @@ class CvEventManager:
                             CyInterface().addMessage(
                                 iHuman,
                                 False,
-                                con.iDuration,
+                                Consts.iDuration,
                                 CyTranslator().getText(
                                     "TXT_KEY_MISC_WONDER_DESTROYED_2", (ConquerName, sWonderName)
                                 ),
                                 "",
                                 InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                                 gc.getBuildingInfo(iWonder).getButton(),
-                                ColorTypes(con.iLightRed),
+                                ColorTypes(Consts.iLightRed),
                                 iX,
                                 iY,
                                 True,
@@ -1850,14 +1850,14 @@ class CvEventManager:
                             CyInterface().addMessage(
                                 iHuman,
                                 False,
-                                con.iDuration,
+                                Consts.iDuration,
                                 CyTranslator().getText(
                                     "TXT_KEY_MISC_WONDER_DESTROYED_3", (PreviousName, sWonderName)
                                 ),
                                 "",
                                 InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                                 gc.getBuildingInfo(iWonder).getButton(),
-                                ColorTypes(con.iLightRed),
+                                ColorTypes(Consts.iLightRed),
                                 iX,
                                 iY,
                                 True,
@@ -2135,14 +2135,14 @@ class CvEventManager:
                             CyInterface().addMessage(
                                 iHuman,
                                 False,
-                                con.iDuration,
+                                Consts.iDuration,
                                 CyTranslator().getText(
                                     "TXT_KEY_MISC_WONDER_CAPTURED_1", (sWonderName,)
                                 ),
                                 "",
                                 InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                                 gc.getBuildingInfo(iWonder).getButton(),
-                                ColorTypes(con.iBlue),
+                                ColorTypes(Consts.iBlue),
                                 iX,
                                 iY,
                                 True,
@@ -2153,14 +2153,14 @@ class CvEventManager:
                             CyInterface().addMessage(
                                 iHuman,
                                 False,
-                                con.iDuration,
+                                Consts.iDuration,
                                 CyTranslator().getText(
                                     "TXT_KEY_MISC_WONDER_CAPTURED_2", (ConquerName, sWonderName)
                                 ),
                                 "",
                                 InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                                 gc.getBuildingInfo(iWonder).getButton(),
-                                ColorTypes(con.iCyan),
+                                ColorTypes(Consts.iCyan),
                                 iX,
                                 iY,
                                 True,
@@ -2171,14 +2171,14 @@ class CvEventManager:
                             CyInterface().addMessage(
                                 iHuman,
                                 False,
-                                con.iDuration,
+                                Consts.iDuration,
                                 CyTranslator().getText(
                                     "TXT_KEY_MISC_WONDER_CAPTURED_3", (PreviousName, sWonderName)
                                 ),
                                 "",
                                 InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                                 gc.getBuildingInfo(iWonder).getButton(),
-                                ColorTypes(con.iCyan),
+                                ColorTypes(Consts.iCyan),
                                 iX,
                                 iY,
                                 True,
@@ -2274,7 +2274,7 @@ class CvEventManager:
         if bVassal:
             # Absinthe: Imperial Diet start
             MasterTeam = gc.getTeam(iMaster)
-            for iPlayer in range(con.iNumPlayers):
+            for iPlayer in range(Consts.iNumPlayers):
                 pPlayer = gc.getPlayer(iPlayer)
                 if (
                     pPlayer.getTeam() == iMaster
@@ -2285,12 +2285,12 @@ class CvEventManager:
                         CyInterface().addMessage(
                             iPlayer,
                             False,
-                            con.iDuration,
+                            Consts.iDuration,
                             CyTranslator().getText("TXT_KEY_BUILDING_IMPERIAL_DIET_EFFECT", ()),
                             "",
                             0,
                             "",
-                            ColorTypes(con.iLightBlue),
+                            ColorTypes(Consts.iLightBlue),
                             -1,
                             -1,
                             True,
@@ -2355,7 +2355,7 @@ class CvEventManager:
         if bRename:
             popup.createEditBox(city.getName())
         else:
-            szName = rfcemaps.tCityMap[city.getOwner()][con.iMapMaxY - 1 - city.getY()][
+            szName = rfcemaps.tCityMap[city.getOwner()][Consts.iMapMaxY - 1 - city.getY()][
                 city.getX()
             ]
             if szName == "-1":

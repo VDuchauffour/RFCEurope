@@ -4,7 +4,7 @@ from CvPythonExtensions import *
 import PyHelpers
 import CvUtil
 import CvScreenEnums
-import Consts as con
+import Consts
 import XMLConsts as xml
 import RFCUtils
 
@@ -370,7 +370,7 @@ class CvReligionScreen:
                 # Absinthe: foundation text, based on the knowledge of Calendar, whether the foundation was before or after the Scenario start date, and the corresponding era
                 if tPlayer.isHasTech(xml.iCalendar):
                     if year <= utils.getScenarioStartYear():
-                        if utils.getScenario() == con.i500ADScenario:
+                        if utils.getScenario() == Consts.i500ADScenario:
                             szFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_500AD", ())
                         else:
                             szFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_1200AD", ())
@@ -827,39 +827,39 @@ class CvReligionScreen:
         )
 
         szFaithBenefits = u""
-        if pPlayer.isFaithBenefit(con.iFP_Stability):
+        if pPlayer.isFaithBenefit(Consts.iFP_Stability):
             sString = localText.getText("TXT_KEY_FAITH_STABILITY", ()) + (
-                " +%i " % pPlayer.getFaithBenefit(con.iFP_Stability)
+                " +%i " % pPlayer.getFaithBenefit(Consts.iFP_Stability)
             )
             szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
-        if pPlayer.isFaithBenefit(con.iFP_Civic):
+        if pPlayer.isFaithBenefit(Consts.iFP_Civic):
             sString = localText.getText("TXT_KEY_FAITH_CIVIC", ()) + (
-                " -%i percent " % pPlayer.getFaithBenefit(con.iFP_Civic)
+                " -%i percent " % pPlayer.getFaithBenefit(Consts.iFP_Civic)
             )
             szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
-        if pPlayer.isFaithBenefit(con.iFP_Growth):
+        if pPlayer.isFaithBenefit(Consts.iFP_Growth):
             sString = localText.getText("TXT_KEY_FAITH_GROWTH", ()) + (
-                " +%i percent " % pPlayer.getFaithBenefit(con.iFP_Growth)
+                " +%i percent " % pPlayer.getFaithBenefit(Consts.iFP_Growth)
             )
             szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
-        if pPlayer.isFaithBenefit(con.iFP_Units):
+        if pPlayer.isFaithBenefit(Consts.iFP_Units):
             sString = localText.getText("TXT_KEY_FAITH_UNITS", ()) + (
-                " -%i percent " % pPlayer.getFaithBenefit(con.iFP_Units)
+                " -%i percent " % pPlayer.getFaithBenefit(Consts.iFP_Units)
             )
             szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
-        if pPlayer.isFaithBenefit(con.iFP_Science):
+        if pPlayer.isFaithBenefit(Consts.iFP_Science):
             sString = localText.getText("TXT_KEY_FAITH_SCIENCE", ()) + (
-                " -%i percent " % pPlayer.getFaithBenefit(con.iFP_Science)
+                " -%i percent " % pPlayer.getFaithBenefit(Consts.iFP_Science)
             )
             szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
-        if pPlayer.isFaithBenefit(con.iFP_Production):
+        if pPlayer.isFaithBenefit(Consts.iFP_Production):
             sString = localText.getText("TXT_KEY_FAITH_PRODUCTION", ()) + (
-                " -%i percent " % pPlayer.getFaithBenefit(con.iFP_Production)
+                " -%i percent " % pPlayer.getFaithBenefit(Consts.iFP_Production)
             )
             szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
-        if pPlayer.isFaithBenefit(con.iFP_Diplomacy):
+        if pPlayer.isFaithBenefit(Consts.iFP_Diplomacy):
             sString = localText.getText("TXT_KEY_FAITH_DIPLOMACY", ()) + (
-                " +%i " % pPlayer.getFaithBenefit(con.iFP_Diplomacy)
+                " +%i " % pPlayer.getFaithBenefit(Consts.iFP_Diplomacy)
             )
             szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
         if iProsecutionCount > 0:

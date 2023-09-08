@@ -7,7 +7,7 @@ from CvPythonExtensions import *
 import CvScreenEnums
 import RFCEMaps
 import RFCUtils
-import Consts as con
+import Consts
 
 
 gc = CyGlobalContext()
@@ -20,9 +20,7 @@ engine = CyEngine()
 # iMapMaxY = map.getGridHeight()
 # iMapMaxX = map.getGridWidth()
 # iNumPlots = map.numPlots()
-iMapMaxX = con.iMapMaxX
-iMapMaxY = con.iMapMaxY
-iNumPlots = iMapMaxX * iMapMaxY
+iNumPlots = Consts.iMapMaxX * Consts.iMapMaxY
 
 # Reserved AreaBorderLayers: 100 - 260(100 to iAreaBorderLayerProvinceOffset+iNumProvinces)
 iNumProvinces = 150
@@ -89,12 +87,12 @@ class RFCEMapManager:
             self.settlerMap = self.convertMap(RFCEMaps.tSettlersMaps)
             self.warMap = self.convertMap(RFCEMaps.tWarsMaps)
             self.cityNameMap = self.convertMap(RFCEMaps.tCityMap)
-            self.coreAreasBL = self.convertArray(con.tCoreAreasTL)
-            self.coreAreasTR = self.convertArray(con.tCoreAreasBR)
-            self.coreAreasAdditionalPlots = con.lExtraPlots
-            self.normalAreasBL = self.convertArray(con.tNormalAreasTL)
-            self.normalAreasTR = self.convertArray(con.tNormalAreasBR)
-            self.normalAreasSubtractedPlots = self.convertNestedArray(con.tNormalAreasSubtract)
+            self.coreAreasBL = self.convertArray(Consts.tCoreAreasTL)
+            self.coreAreasTR = self.convertArray(Consts.tCoreAreasBR)
+            self.coreAreasAdditionalPlots = Consts.lExtraPlots
+            self.normalAreasBL = self.convertArray(Consts.tNormalAreasTL)
+            self.normalAreasTR = self.convertArray(Consts.tNormalAreasBR)
+            self.normalAreasSubtractedPlots = self.convertNestedArray(Consts.tNormalAreasSubtract)
 
             self.mapsInitiated = True
 
@@ -102,14 +100,14 @@ class RFCEMapManager:
         length = len(aMap)
         aList = [None] * length
         for i in range(length):
-            aList[i] = [None] * iMapMaxY
-            for j in range(iMapMaxY):
+            aList[i] = [None] * Consts.iMapMaxY
+            for j in range(Consts.iMapMaxY):
                 aList[i][j] = list(aMap[i][j])
         return aList
 
     def convertProvinceMap(self, aMap):
-        aList = [None] * iMapMaxY
-        for i in range(iMapMaxY):
+        aList = [None] * Consts.iMapMaxY
+        for i in range(Consts.iMapMaxY):
             aList[i] = list(aMap[i])
         return aList
 
@@ -299,7 +297,7 @@ class RFCEMapManager:
         return 0
 
     def swapY(self, iY):
-        return iMapMaxY - iY - 1
+        return Consts.iMapMaxY - iY - 1
 
 
 class RFCEMapVisualizer:
@@ -339,8 +337,8 @@ class RFCEMapVisualizer:
 
     def showSettlerMap(self):
         self.resetMinimap(True)
-        for i in range(iMapMaxX):
-            for j in range(iMapMaxY):
+        for i in range(Consts.iMapMaxX):
+            for j in range(Consts.iMapMaxY):
                 pPlot = map.plot(i, j)
                 if not pPlot.isNone():
                     iValue = self.mapManager.getSettlerValue(self.iPlayer, pPlot)
@@ -361,8 +359,8 @@ class RFCEMapVisualizer:
 
     def showWarMap(self):
         self.resetMinimap(True)
-        for i in range(iMapMaxX):
-            for j in range(iMapMaxY):
+        for i in range(Consts.iMapMaxX):
+            for j in range(Consts.iMapMaxY):
                 pPlot = map.plot(i, j)
                 if not pPlot.isNone():
                     iValue = self.mapManager.getWarValue(self.iPlayer, pPlot)
@@ -382,8 +380,8 @@ class RFCEMapVisualizer:
                 CyEngine().clearAreaBorderPlots(shade[2])
 
     def showCityNames(self):
-        for i in range(iMapMaxX):
-            for j in range(iMapMaxY):
+        for i in range(Consts.iMapMaxX):
+            for j in range(Consts.iMapMaxY):
                 pPlot = map.plot(i, j)
                 self.showCityName(pPlot)
 
@@ -526,8 +524,8 @@ class RFCEMapVisualizer:
         self.hideNormalArea()
 
     def removeLandMarks(self):
-        for i in range(iMapMaxX):
-            for j in range(iMapMaxY):
+        for i in range(Consts.iMapMaxX):
+            for j in range(Consts.iMapMaxY):
                 pPlot = map.plot(i, j)
                 if not pPlot.isNone():
                     CyEngine().removeLandmark(pPlot)
@@ -550,8 +548,8 @@ class RFCEMapVisualizer:
         mainScreen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
         mainScreen.minimapClearAllFlashingTiles()
         if clearAll:
-            for i in range(iMapMaxX):
-                for j in range(iMapMaxY):
+            for i in range(Consts.iMapMaxX):
+                for j in range(Consts.iMapMaxY):
                     pPlot = map.plot(i, j)
                     if not pPlot.isNone():
                         mainScreen.setMinimapColor(
@@ -680,11 +678,11 @@ class RFCEMapExporter:
             file.write("\n(")
             for iX in range(len(aMap[iY])):
                 sstr = sFormat % aMap[iY][iX]
-                if iX < iMapMaxX - 1:
+                if iX < Consts.iMapMaxX - 1:
                     sstr += ","
                 file.write(sstr)
             file.write(")")
-            if iY < iMapMaxY - 1:
+            if iY < Consts.iMapMaxY - 1:
                 file.write(",")
         return
 

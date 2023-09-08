@@ -707,7 +707,7 @@ class CvMilitaryAdvisor:
                 gc.getTeam(player.getTeam()).isHasMet(gc.getPlayer(self.iActivePlayer).getTeam())
                 or gc.getGame().isDebugMode()
             ):
-                # if (player.isAlive() and player.getID() != con.iIndependent and player.getID() != con.iIndependent2 and (gc.getTeam(player.getTeam()).isHasMet(gc.getPlayer(self.iActivePlayer).getTeam()) or gc.getGame().isDebugMode())):
+                # if (player.isAlive() and player.getID() != Consts.iIndependent and player.getID() != Consts.iIndependent2 and (gc.getTeam(player.getTeam()).isHasMet(gc.getPlayer(self.iActivePlayer).getTeam()) or gc.getGame().isDebugMode())):
                 listLeaders.append(iLoopPlayer)
 
         iNumLeaders = len(listLeaders)

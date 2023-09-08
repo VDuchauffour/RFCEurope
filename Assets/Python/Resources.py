@@ -3,7 +3,7 @@
 
 from CvPythonExtensions import *
 import PyHelpers
-import Consts as con
+import Consts
 import XMLConsts as xml
 
 # globals
@@ -50,12 +50,12 @@ class Resources:
                     CyInterface().addMessage(
                         iOwner,
                         False,
-                        con.iDuration,
+                        Consts.iDuration,
                         szText,
                         "AS2D_DISCOVERBONUS",
                         InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                         gc.getBonusInfo(iBonus).getButton(),
-                        ColorTypes(con.iLime),
+                        ColorTypes(Consts.iLime),
                         iX,
                         iY,
                         True,

@@ -3,7 +3,7 @@
 from CvPythonExtensions import *
 import PyHelpers
 import Popup
-import Consts as con
+import Consts
 import XMLConsts as xml
 import RFCUtils
 import RFCEMaps as rfcemaps
@@ -15,18 +15,8 @@ localText = CyTranslator()  # Absinthe
 PyPlayer = PyHelpers.PyPlayer
 utils = RFCUtils.RFCUtils()
 
-### Constants ###
-
-iNumPlayers = con.iNumPlayers
-iNumTotalPlayers = con.iNumTotalPlayers
-iBarbarian = con.iBarbarian
-iIndependent = con.iIndependent
-iIndependent2 = con.iIndependent2
-
-# initialise religion variables to religion indices from XML
 
 # initialise coordinates
-
 tToledo = (30, 27)
 tAugsburg = (55, 41)
 tSpainTL = (25, 20)
@@ -110,61 +100,101 @@ lReformationMatrix = [
 
 # Reformation neighbours spread reformation choice to each other
 lReformationNeighbours = [
-    [con.iArabia, con.iBulgaria, con.iTurkey],  # Byzantium
+    [Consts.iArabia, Consts.iBulgaria, Consts.iTurkey],  # Byzantium
     [
-        con.iBurgundy,
-        con.iSpain,
-        con.iGermany,
-        con.iGenoa,
-        con.iEngland,
-        con.iDutch,
-        con.iScotland,
+        Consts.iBurgundy,
+        Consts.iSpain,
+        Consts.iGermany,
+        Consts.iGenoa,
+        Consts.iEngland,
+        Consts.iDutch,
+        Consts.iScotland,
     ],  # France
-    [con.iByzantium, con.iCordoba, con.iTurkey],  # Arabia
-    [con.iByzantium, con.iKiev, con.iHungary, con.iTurkey],  # Bulgaria
-    [con.iArabia, con.iSpain, con.iPortugal, con.iAragon, con.iMorocco],  # Cordoba
-    [con.iGenoa, con.iGermany, con.iAustria, con.iHungary, con.iPope],  # Venice
-    [con.iFrankia, con.iGermany, con.iGenoa, con.iDutch],  # Burgundy
+    [Consts.iByzantium, Consts.iCordoba, Consts.iTurkey],  # Arabia
+    [Consts.iByzantium, Consts.iKiev, Consts.iHungary, Consts.iTurkey],  # Bulgaria
+    [Consts.iArabia, Consts.iSpain, Consts.iPortugal, Consts.iAragon, Consts.iMorocco],  # Cordoba
+    [Consts.iGenoa, Consts.iGermany, Consts.iAustria, Consts.iHungary, Consts.iPope],  # Venice
+    [Consts.iFrankia, Consts.iGermany, Consts.iGenoa, Consts.iDutch],  # Burgundy
     [
-        con.iBurgundy,
-        con.iFrankia,
-        con.iDenmark,
-        con.iVenecia,
-        con.iHungary,
-        con.iPoland,
-        con.iGenoa,
-        con.iAustria,
-        con.iDutch,
+        Consts.iBurgundy,
+        Consts.iFrankia,
+        Consts.iDenmark,
+        Consts.iVenecia,
+        Consts.iHungary,
+        Consts.iPoland,
+        Consts.iGenoa,
+        Consts.iAustria,
+        Consts.iDutch,
     ],  # Germany
-    [con.iSweden, con.iHungary, con.iPoland, con.iMoscow, con.iLithuania, con.iKiev],  # Novgorod
-    [con.iDenmark, con.iSweden],  # Norway
-    [con.iBulgaria, con.iHungary, con.iPoland, con.iMoscow, con.iLithuania, con.iNovgorod],  # Kiev
     [
-        con.iBulgaria,
-        con.iVenecia,
-        con.iKiev,
-        con.iGermany,
-        con.iPoland,
-        con.iAustria,
-        con.iTurkey,
+        Consts.iSweden,
+        Consts.iHungary,
+        Consts.iPoland,
+        Consts.iMoscow,
+        Consts.iLithuania,
+        Consts.iKiev,
+    ],  # Novgorod
+    [Consts.iDenmark, Consts.iSweden],  # Norway
+    [
+        Consts.iBulgaria,
+        Consts.iHungary,
+        Consts.iPoland,
+        Consts.iMoscow,
+        Consts.iLithuania,
+        Consts.iNovgorod,
+    ],  # Kiev
+    [
+        Consts.iBulgaria,
+        Consts.iVenecia,
+        Consts.iKiev,
+        Consts.iGermany,
+        Consts.iPoland,
+        Consts.iAustria,
+        Consts.iTurkey,
     ],  # Hungary
-    [con.iFrankia, con.iCordoba, con.iPortugal, con.iAragon],  # Spain
-    [con.iNorway, con.iSweden, con.iGermany],  # Denmark
-    [con.iFrankia, con.iDutch, con.iEngland],  # Scotland
-    [con.iKiev, con.iHungary, con.iGermany, con.iMoscow, con.iAustria, con.iLithuania],  # Poland
-    [con.iBurgundy, con.iFrankia, con.iVenecia, con.iGermany, con.iPope, con.iAragon],  # Genoa
-    [con.iArabia, con.iSpain, con.iPortugal, con.iAragon, con.iCordoba],  # Morocco
-    [con.iFrankia, con.iDutch, con.iScotland],  # England
-    [con.iSpain, con.iCordoba, con.iAragon],  # Portugal
-    [con.iSpain, con.iCordoba, con.iPortugal, con.iFrankia, con.iGenoa],  # Aragon
-    [con.iNorway, con.iDenmark, con.iMoscow, con.iNovgorod],  # Sweden
-    [con.iGermany, con.iLithuania, con.iMoscow, con.iAustria, con.iPoland],  # Prussia
-    [con.iKiev, con.iMoscow, con.iPrussia, con.iNovgorod, con.iPoland],  # Lithuania
-    [con.iVenecia, con.iHungary, con.iGermany, con.iPoland],  # Austria
-    [con.iByzantium, con.iArabia, con.iBulgaria, con.iHungary],  # Turkey
-    [con.iKiev, con.iPoland, con.iSweden, con.iLithuania, con.iNovgorod],  # Moscow
-    [con.iBurgundy, con.iFrankia, con.iGermany, con.iEngland, con.iScotland],  # Dutch
-    [con.iVenecia, con.iGenoa],  # Pope
+    [Consts.iFrankia, Consts.iCordoba, Consts.iPortugal, Consts.iAragon],  # Spain
+    [Consts.iNorway, Consts.iSweden, Consts.iGermany],  # Denmark
+    [Consts.iFrankia, Consts.iDutch, Consts.iEngland],  # Scotland
+    [
+        Consts.iKiev,
+        Consts.iHungary,
+        Consts.iGermany,
+        Consts.iMoscow,
+        Consts.iAustria,
+        Consts.iLithuania,
+    ],  # Poland
+    [
+        Consts.iBurgundy,
+        Consts.iFrankia,
+        Consts.iVenecia,
+        Consts.iGermany,
+        Consts.iPope,
+        Consts.iAragon,
+    ],  # Genoa
+    [Consts.iArabia, Consts.iSpain, Consts.iPortugal, Consts.iAragon, Consts.iCordoba],  # Morocco
+    [Consts.iFrankia, Consts.iDutch, Consts.iScotland],  # England
+    [Consts.iSpain, Consts.iCordoba, Consts.iAragon],  # Portugal
+    [Consts.iSpain, Consts.iCordoba, Consts.iPortugal, Consts.iFrankia, Consts.iGenoa],  # Aragon
+    [Consts.iNorway, Consts.iDenmark, Consts.iMoscow, Consts.iNovgorod],  # Sweden
+    [
+        Consts.iGermany,
+        Consts.iLithuania,
+        Consts.iMoscow,
+        Consts.iAustria,
+        Consts.iPoland,
+    ],  # Prussia
+    [Consts.iKiev, Consts.iMoscow, Consts.iPrussia, Consts.iNovgorod, Consts.iPoland],  # Lithuania
+    [Consts.iVenecia, Consts.iHungary, Consts.iGermany, Consts.iPoland],  # Austria
+    [Consts.iByzantium, Consts.iArabia, Consts.iBulgaria, Consts.iHungary],  # Turkey
+    [Consts.iKiev, Consts.iPoland, Consts.iSweden, Consts.iLithuania, Consts.iNovgorod],  # Moscow
+    [
+        Consts.iBurgundy,
+        Consts.iFrankia,
+        Consts.iGermany,
+        Consts.iEngland,
+        Consts.iScotland,
+    ],  # Dutch
+    [Consts.iVenecia, Consts.iGenoa],  # Pope
 ]
 ### Reformation End ###
 
@@ -306,8 +336,8 @@ class Religions:
     #####################################
 
     def setup(self):
-        gc.getPlayer(con.iByzantium).changeFaith(10)
-        gc.getPlayer(con.iTurkey).changeFaith(20)
+        gc.getPlayer(Consts.iByzantium).changeFaith(10)
+        gc.getPlayer(Consts.iTurkey).changeFaith(20)
         self.setSeed()
 
     def checkTurn(self, iGameTurn):
@@ -448,7 +478,7 @@ class Religions:
                     print("special religion spread: iCatholicism in tSouthScandinavia", tCity)
 
         # Absinthe: Persecution cooldown
-        for i in range(con.iNumPlayers):
+        for i in range(Consts.iNumPlayers):
             pPlayer = gc.getPlayer(i)
             if pPlayer.getProsecutionCount() > 0:
                 pPlayer.changeProsecutionCount(-1)
@@ -467,7 +497,7 @@ class Religions:
         lCatholicCivs = self.getCatholicCivs(
             True
         )  # all Catholic civs with open borders with the Pope
-        pPope = gc.getPlayer(con.iPope)
+        pPope = gc.getPlayer(Consts.iPope)
         teamPope = gc.getTeam(pPope.getTeam())
         # Gold gift
         if iGameTurn >= xml.i752AD:
@@ -512,12 +542,12 @@ class Religions:
                                 CyInterface().addMessage(
                                     iPlayer,
                                     False,
-                                    con.iDuration,
+                                    Consts.iDuration,
                                     sText,
                                     "",
                                     0,
                                     "",
-                                    ColorTypes(con.iBlue),
+                                    ColorTypes(Consts.iBlue),
                                     -1,
                                     -1,
                                     True,
@@ -540,7 +570,7 @@ class Religions:
                     lWeightValues = []
                     iJerusalemOwner = (
                         gc.getMap()
-                        .plot(con.tJerusalem[0], con.tJerusalem[1])
+                        .plot(Consts.tJerusalem[0], Consts.tJerusalem[1])
                         .getPlotCity()
                         .getOwner()
                     )
@@ -610,12 +640,12 @@ class Religions:
                                         CyInterface().addMessage(
                                             iChosenPlayer,
                                             True,
-                                            con.iDuration,
+                                            Consts.iDuration,
                                             sText,
                                             "",
                                             0,
                                             "",
-                                            ColorTypes(con.iBlue),
+                                            ColorTypes(Consts.iBlue),
                                             -1,
                                             -1,
                                             True,
@@ -629,7 +659,7 @@ class Religions:
             lCatholicCivs = self.getCatholicCivs(
                 False
             )  # all Catholic civs, open borders with the Pope doesn't matter here
-            pPope = gc.getPlayer(con.iPope)
+            pPope = gc.getPlayer(Consts.iPope)
             teamPope = gc.getTeam(pPope.getTeam())
             for iTech in range(xml.iNumTechs):
                 if not teamPope.isHasTech(iTech):
@@ -640,7 +670,7 @@ class Religions:
                         if teamPlayer.isHasTech(iTech):
                             iTechCounter += 1
                             if iTechCounter >= 3:
-                                teamPope.setHasTech(iTech, True, con.iPope, False, True)
+                                teamPope.setHasTech(iTech, True, Consts.iPope, False, True)
                                 print("Pope got tech", iTech)
                                 break
 
@@ -725,7 +755,7 @@ class Religions:
     def selectRandomCityAll(self):
         "selects a random city from the whole map"
         cityList = []
-        for iPlayer in range(con.iNumTotalPlayersB):
+        for iPlayer in range(Consts.iNumTotalPlayersB):
             cityList.extend(utils.getCityList(iPlayer))
         if cityList:
             city = utils.getRandomEntry(cityList)
@@ -744,7 +774,7 @@ class Religions:
     def selectRandomCityProvince(self, tProvinces):  # currently unused
         "selects a random city in a given province/region"
         cityList = []
-        for iPlayer in range(con.iNumTotalPlayersB):
+        for iPlayer in range(Consts.iNumTotalPlayersB):
             if not gc.getPlayer(iPlayer).isAlive():
                 continue
             for city in utils.getCityList(iPlayer):
@@ -773,7 +803,7 @@ class Religions:
         for (x, y) in utils.getPlotList(tTopLeft, tTopRight):
             pCurrent = gc.getMap().plot(x, y)
             if pCurrent.isCity():
-                for iPlayer in range(con.iNumTotalPlayersB):
+                for iPlayer in range(Consts.iNumTotalPlayersB):
                     if not gc.getPlayer(iPlayer).isAlive():
                         continue
                     if pCurrent.getPlotCity().getOwner() == iPlayer:
@@ -801,7 +831,7 @@ class Religions:
         "selects a random city with a given religion"
         if gc.getGame().isReligionFounded(iReligion):
             cityList = []
-            for iPlayer in range(iNumPlayers):
+            for iPlayer in range(Consts.iNumPlayers):
                 if not gc.getPlayer(iPlayer).isAlive():
                     continue
                 for city in utils.getCityList(iPlayer):
@@ -827,7 +857,7 @@ class Religions:
 
     def selectRandomCityRegion(self, tProvinces, iReligionToSpread, bNoSpreadWithReligion=False):
         cityList = []
-        for iPlayer in range(con.iNumTotalPlayersB):
+        for iPlayer in range(Consts.iNumTotalPlayersB):
             if not gc.getPlayer(iPlayer).isAlive():
                 continue
             for city in utils.getCityList(iPlayer):
@@ -881,12 +911,12 @@ class Religions:
                 CyInterface().addMessage(
                     iPlayer,
                     False,
-                    con.iDuration,
+                    Consts.iDuration,
                     sText,
                     "",
                     0,
                     gc.getBuildingInfo(iBuilding).getButton(),
-                    ColorTypes(con.iBlue),
+                    ColorTypes(Consts.iBlue),
                     city.getX(),
                     city.getY(),
                     True,
@@ -923,7 +953,7 @@ class Religions:
                     # no popup if no available religions
                     if religionList:
                         self.showFreeRevolutionPopup(iPlayer, religionList)
-                elif iPlayer < (con.iNumPlayers - 1):
+                elif iPlayer < (Consts.iNumPlayers - 1):
                     iBestReligionPoint = 0
                     iBestReligion = xml.iCatholicism
                     # loop through all religions
@@ -940,13 +970,13 @@ class Religions:
                             "tReligionSpreadFactor",
                             iPlayer,
                             iReligion,
-                            con.tReligionSpreadFactor[iPlayer][iReligion],
+                            Consts.tReligionSpreadFactor[iPlayer][iReligion],
                         )
-                        if con.tReligionSpreadFactor[iPlayer][iReligion] < 60:
+                        if Consts.tReligionSpreadFactor[iPlayer][iReligion] < 60:
                             iReligionPoint = (iReligionPoint * 5) / 10
-                        elif con.tReligionSpreadFactor[iPlayer][iReligion] < 100:
+                        elif Consts.tReligionSpreadFactor[iPlayer][iReligion] < 100:
                             iReligionPoint = (iReligionPoint * 8) / 10
-                        elif con.tReligionSpreadFactor[iPlayer][iReligion] > 200:
+                        elif Consts.tReligionSpreadFactor[iPlayer][iReligion] > 200:
                             iReligionPoint = (iReligionPoint * 12) / 10
                         # update if better
                         if iReligionPoint > iBestReligionPoint:
@@ -1034,20 +1064,22 @@ class Religions:
                     )
                     self.setReformationActive(True)
                     self.reformationchoice(iPlayer)
-                    self.reformationOther(con.iIndependent)
-                    self.reformationOther(con.iIndependent2)
-                    self.reformationOther(con.iIndependent3)
-                    self.reformationOther(con.iIndependent4)
-                    self.reformationOther(con.iBarbarian)
+                    self.reformationOther(Consts.iIndependent)
+                    self.reformationOther(Consts.iIndependent2)
+                    self.reformationOther(Consts.iIndependent3)
+                    self.reformationOther(Consts.iIndependent4)
+                    self.reformationOther(Consts.iBarbarian)
                     self.setReformationHitMatrix(iPlayer, 2)
-                    for iCiv in range(iNumPlayers):
+                    for iCiv in range(Consts.iNumPlayers):
                         if (
                             iCiv in lReformationNeighbours[iPlayer]
                         ) and self.getReformationHitMatrix(iCiv) == 0:
                             self.setReformationHitMatrix(iCiv, 1)
 
     def reformationArrayChoice(self):
-        lCivs = [iCiv for iCiv in range(iNumPlayers) if self.getReformationHitMatrix(iCiv) == 1]
+        lCivs = [
+            iCiv for iCiv in range(Consts.iNumPlayers) if self.getReformationHitMatrix(iCiv) == 1
+        ]
         iCiv = utils.getRandomEntry(lCivs)
         # print( " Chosen civ:", iCiv )
         pPlayer = gc.getPlayer(iCiv)
@@ -1058,21 +1090,21 @@ class Religions:
             self.reformationOther(iCiv)
         # 	print( "Not catholic and alive choice", iCiv )
         self.setReformationHitMatrix(iCiv, 2)
-        for iNextCiv in range(iNumPlayers):
+        for iNextCiv in range(Consts.iNumPlayers):
             if (
                 iNextCiv in lReformationNeighbours[iCiv]
                 and self.getReformationHitMatrix(iNextCiv) == 0
             ):
                 self.setReformationHitMatrix(iNextCiv, 1)
-        print(self.getReformationHitMatrixAll(), 2 * iNumPlayers)
-        if sum(self.getReformationHitMatrixAll()) == 2 * iNumPlayers:
+        print(self.getReformationHitMatrixAll(), 2 * Consts.iNumPlayers)
+        if sum(self.getReformationHitMatrixAll()) == 2 * Consts.iNumPlayers:
             self.setReformationActive(False)
             self.setCounterReformationActive(
                 True
             )  # after all players have been hit by the Reformation
 
     def reformationchoice(self, iCiv):
-        if iCiv == con.iPope:
+        if iCiv == Consts.iPope:
             return  # Absinthe: totally exclude the Pope from the Reformation
 
         if gc.getPlayer(iCiv).getStateReligion() == xml.iProtestantism:
@@ -1128,14 +1160,14 @@ class Religions:
                         CyInterface().addMessage(
                             utils.getHumanID(),
                             False,
-                            con.iDuration,
+                            Consts.iDuration,
                             CyTranslator().getText(
                                 "TXT_KEY_REFORMATION_RELIGION_STILL_SPREAD", (CityName,)
                             ),
                             "",
                             InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                             "",
-                            ColorTypes(con.iWhite),
+                            ColorTypes(Consts.iWhite),
                             -1,
                             -1,
                             True,
@@ -1237,14 +1269,14 @@ class Religions:
                         CyInterface().addMessage(
                             utils.getHumanID(),
                             False,
-                            con.iDuration,
+                            Consts.iDuration,
                             CyTranslator().getText(
                                 "TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_1", (CityName,)
                             ),
                             "",
                             InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                             "",
-                            ColorTypes(con.iWhite),
+                            ColorTypes(Consts.iWhite),
                             -1,
                             -1,
                             True,
@@ -1326,14 +1358,14 @@ class Religions:
                             CyInterface().addMessage(
                                 utils.getHumanID(),
                                 False,
-                                con.iDuration,
+                                Consts.iDuration,
                                 CyTranslator().getText(
                                     "TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_2", (CityName,)
                                 ),
                                 "",
                                 InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                                 "",
-                                ColorTypes(con.iWhite),
+                                ColorTypes(Consts.iWhite),
                                 -1,
                                 -1,
                                 True,
@@ -1343,14 +1375,14 @@ class Religions:
                             CyInterface().addMessage(
                                 utils.getHumanID(),
                                 False,
-                                con.iDuration,
+                                Consts.iDuration,
                                 CyTranslator().getText(
                                     "TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_3", (CityName,)
                                 ),
                                 "",
                                 InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                                 "",
-                                ColorTypes(con.iWhite),
+                                ColorTypes(Consts.iWhite),
                                 -1,
                                 -1,
                                 True,
@@ -1359,7 +1391,7 @@ class Religions:
 
     def doCounterReformation(self):
         print(" Counter Reformation ")
-        for iPlayer in range(con.iPope - 1):
+        for iPlayer in range(Consts.iPope - 1):
             pPlayer = gc.getPlayer(iPlayer)
             if pPlayer.isAlive() and pPlayer.getStateReligion() == xml.iCatholicism:
                 if pPlayer.isHuman():
@@ -1465,16 +1497,16 @@ class Religions:
 
     def doCounterReformationNo(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
-        pPlayer.changeStabilityBase(con.iCathegoryCities, max(1, pPlayer.getNumCities() / 3))
+        pPlayer.changeStabilityBase(Consts.iCathegoryCities, max(1, pPlayer.getNumCities() / 3))
 
     ### End Reformation ###
 
     def resettleRefugies(self):
-        intolerance = [-1] * con.iNumTotalPlayersB
-        for iPlayer in range(con.iNumTotalPlayersB):
+        intolerance = [-1] * Consts.iNumTotalPlayersB
+        for iPlayer in range(Consts.iNumTotalPlayersB):
             pPlayer = gc.getPlayer(iPlayer)
             if pPlayer.isAlive():
-                if iPlayer < con.iPope:
+                if iPlayer < Consts.iPope:
                     # add a random element
                     intolerance[iPlayer] += gc.getGame().getSorenRandNum(
                         100, "roll to randomize the migration of refugies"
@@ -1489,19 +1521,19 @@ class Religions:
                         intolerance[iPlayer] += 50
                     elif iRCivic == xml.iCivicFreeReligion:
                         intolerance[iPlayer] = max(0, intolerance[iPlayer] - 30)
-                if iPlayer > con.iPope:
+                if iPlayer > Consts.iPope:
                     intolerance[iPlayer] += gc.getGame().getSorenRandNum(
                         100, "roll to randomize the migration of refugies"
                     )
         # once we have the list of potential nations
         iCandidate1 = 0
-        for iPlayer in range(con.iNumTotalPlayersB):
+        for iPlayer in range(Consts.iNumTotalPlayersB):
             if intolerance[iPlayer] > -1 and intolerance[iPlayer] < intolerance[iCandidate1]:
                 iCandidate1 = iPlayer
         iCandidate2 = 0
         if iCandidate2 == iCandidate1:
             iCandidate2 = 1
-        for iPlayer in range(con.iNumTotalPlayersB):
+        for iPlayer in range(Consts.iNumTotalPlayersB):
             if (
                 intolerance[iPlayer] > -1
                 and iPlayer != iCandidate1
@@ -1545,14 +1577,14 @@ class Religions:
             self.spreadReligion(tCity, xml.iJudaism)
 
     def set1200Faith(self):
-        for iPlayer in range(con.iNumPlayers):
+        for iPlayer in range(Consts.iNumPlayers):
             pPlayer = gc.getPlayer(iPlayer)
-            pPlayer.setFaith(con.t1200ADFaith[iPlayer])
+            pPlayer.setFaith(Consts.t1200ADFaith[iPlayer])
 
     def getCatholicCivs(self, bOpenBorders=False):
-        teamPope = gc.getTeam(gc.getPlayer(con.iPope).getTeam())
+        teamPope = gc.getTeam(gc.getPlayer(Consts.iPope).getTeam())
         lCatholicCivs = []
-        for iPlayer in range(iNumPlayers - 1):  # Do not include the Pope
+        for iPlayer in range(Consts.iNumPlayers - 1):  # Do not include the Pope
             pPlayer = gc.getPlayer(iPlayer)
             if pPlayer.getStateReligion() == xml.iCatholicism:
                 if bOpenBorders and not teamPope.isOpenBorders(pPlayer.getTeam()):

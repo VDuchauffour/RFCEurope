@@ -582,7 +582,7 @@ class CvPediaBuilding:
 
         # Rhye - start
         # 3Miro: embassies
-        # if (self.iBuilding >= con.iNumBuildingsPlague):
+        # if (self.iBuilding >= Consts.iNumBuildingsPlague):
         # 	szSpecialText = localText.getText("TXT_KEY_BUILDING_EMBASSY_EP", ())
         # 	szSpecialText += "\n"
         # 	szSpecialText += localText.getText("TXT_KEY_BUILDING_EMBASSY_ABILITY", ())

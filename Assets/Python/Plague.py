@@ -2,7 +2,7 @@
 
 from CvPythonExtensions import *
 import PyHelpers
-import Consts as con
+import Consts
 import XMLConsts as xml
 import RFCUtils
 
@@ -14,20 +14,12 @@ gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer
 utils = RFCUtils.RFCUtils()
 
-iNumPlayers = con.iNumPlayers
-iNumMajorPlayers = con.iNumMajorPlayers
-iIndependent = con.iIndependent
-iIndependent2 = con.iIndependent2
-iNumTotalPlayers = con.iNumTotalPlayers
-iBarbarian = con.iBarbarian
-iNumTotalPlayersB = con.iNumTotalPlayersB
 
 iPlague = xml.iPlague
 
 # Absinthe: Black Death is more severe, while the Plague of Justinian is less severe than the others plagues
 iBaseHumanDuration = 10
 iBaseAIDuration = 6
-iImmunity = con.iImmunity
 iNumPlagues = 5
 iConstantinople = 0
 iBlackDeath = 1
@@ -69,8 +61,8 @@ class Plague:
 
     def setup(self):
 
-        for i in range(iNumMajorPlayers):
-            self.setPlagueCountdown(i, -iImmunity)
+        for i in range(Consts.iNumMajorPlayers):
+            self.setPlagueCountdown(i, -Consts.iImmunity)
 
         # Sedna17: Set number of GenericPlagues in StoredData
         # 3Miro: Plague 0 strikes France too hard, make it less random and force it to pick Byzantium as starting land
@@ -94,7 +86,7 @@ class Plague:
 
     def checkTurn(self, iGameTurn):
 
-        for iPlayer in range(iNumTotalPlayersB):
+        for iPlayer in range(Consts.iNumTotalPlayersB):
             if gc.getPlayer(iPlayer).isAlive():
                 if self.getPlagueCountdown(iPlayer) > 0:
                     self.setPlagueCountdown(iPlayer, self.getPlagueCountdown(iPlayer) - 1)
@@ -118,7 +110,7 @@ class Plague:
                 bFirstPlague = self.getFirstPlague()
                 if not bFirstPlague:
                     iInfectedCounter = 0
-                    for iPlayer in range(iNumTotalPlayersB):
+                    for iPlayer in range(Consts.iNumTotalPlayersB):
                         if (
                             gc.getPlayer(iPlayer).isAlive()
                             and self.getPlagueCountdown(iPlayer) > 0
@@ -128,7 +120,7 @@ class Plague:
                         self.startPlague(iPlague)
 
     def checkPlayerTurn(self, iGameTurn, iPlayer):
-        if iPlayer < iNumTotalPlayersB:
+        if iPlayer < Consts.iNumTotalPlayersB:
             if self.getPlagueCountdown(iPlayer) > 0:
                 self.processPlague(iPlayer)
 
@@ -139,7 +131,7 @@ class Plague:
         # Absinthe: specific plagues
         # Plague of Constantinople (that started at Alexandria)
         if iPlagueCount == iConstantinople:
-            iWorstCiv = con.iByzantium
+            iWorstCiv = Consts.iByzantium
             self.setFirstPlague(True)
             self.setBadPlague(False)
         # Black Death in the 14th century
@@ -153,7 +145,7 @@ class Plague:
 
         # try to find the most unhealthy civ
         if iWorstCiv == -1:
-            for iPlayer in range(iNumMajorPlayers):
+            for iPlayer in range(Consts.iNumMajorPlayers):
                 pPlayer = gc.getPlayer(iPlayer)
                 if pPlayer.isAlive():
                     if self.isVulnerable(iPlayer):
@@ -194,7 +186,7 @@ class Plague:
 
     def isVulnerable(self, iPlayer):
         # Absinthe: based on recent infections and the average city healthiness (also tech immunity should go here if it's ever added to the mod)
-        if iPlayer >= iNumMajorPlayers:
+        if iPlayer >= Consts.iNumMajorPlayers:
             if self.getPlagueCountdown(iPlayer) == 0:
                 return True
         else:
@@ -214,7 +206,7 @@ class Plague:
 
     def spreadPlague(self, iPlayer, city):
         # Absinthe: the Plague of Justinian shouldn't spread to Italy and France, even if it was as deadly as the Black Death
-        if iPlayer in [con.iFrankia, con.iPope] and gc.getGame().getGameTurn() <= xml.i632AD:
+        if iPlayer in [Consts.iFrankia, Consts.iPope] and gc.getGame().getGameTurn() <= xml.i632AD:
             return
 
         # Absinthe: message about the spread
@@ -225,7 +217,7 @@ class Plague:
                 CyInterface().addMessage(
                     iHuman,
                     True,
-                    con.iDuration / 2,
+                    Consts.iDuration / 2,
                     CyTranslator().getText("TXT_KEY_PLAGUE_SPREAD_CITY", ())
                     + " "
                     + city.getName()
@@ -235,7 +227,7 @@ class Plague:
                     "AS2D_PLAGUE",
                     0,
                     gc.getBuildingInfo(iPlague).getButton(),
-                    ColorTypes(con.iLime),
+                    ColorTypes(Consts.iLime),
                     city.getX(),
                     city.getY(),
                     True,
@@ -248,7 +240,7 @@ class Plague:
                 CyInterface().addMessage(
                     iHuman,
                     True,
-                    con.iDuration / 2,
+                    Consts.iDuration / 2,
                     CyTranslator().getText("TXT_KEY_PLAGUE_SPREAD_CIV", ())
                     + " "
                     + pCiv.getCivilizationDescription(0)
@@ -256,7 +248,7 @@ class Plague:
                     "AS2D_PLAGUE",
                     0,
                     "",
-                    ColorTypes(con.iLime),
+                    ColorTypes(Consts.iLime),
                     -1,
                     -1,
                     True,
@@ -285,7 +277,7 @@ class Plague:
     def infectCity(self, city):
         # Absinthe: the Plague of Justinian shouldn't spread to Italy and France, even if it was as deadly as the Black Death
         if (
-            city.getOwner() in [con.iFrankia, con.iPope]
+            city.getOwner() in [Consts.iFrankia, Consts.iPope]
             and gc.getGame().getGameTurn() <= xml.i632AD
         ):
             return
@@ -298,7 +290,7 @@ class Plague:
             CyInterface().addMessage(
                 city.getOwner(),
                 True,
-                con.iDuration / 2,
+                Consts.iDuration / 2,
                 CyTranslator().getText("TXT_KEY_PLAGUE_SPREAD_CITY", ())
                 + " "
                 + city.getName()
@@ -306,7 +298,7 @@ class Plague:
                 "AS2D_PLAGUE",
                 0,
                 gc.getBuildingInfo(iPlague).getButton(),
-                ColorTypes(con.iLime),
+                ColorTypes(Consts.iLime),
                 x,
                 y,
                 True,
@@ -392,7 +384,7 @@ class Plague:
                                     - 3 * unit.baseCombatStr() / 7,
                                 ),
                             ),
-                            iBarbarian,
+                            Consts.iBarbarian,
                         )
                     else:
                         if unit.baseCombatStr() > 0:
@@ -422,12 +414,12 @@ class Plague:
                             iUnitDamage = max(iUnitDamage, unit.getDamage() + iCivilDamage)
                         # kill the unit if necessary
                         if iUnitDamage >= 100:
-                            unit.kill(False, iBarbarian)
+                            unit.kill(False, Consts.iBarbarian)
                             if unit.getOwner() == iHuman:
                                 CyInterface().addMessage(
                                     iHuman,
                                     False,
-                                    con.iDuration / 2,
+                                    Consts.iDuration / 2,
                                     CyTranslator().getText(
                                         "TXT_KEY_PLAGUE_PROCESS_UNIT", (unit.getName(),)
                                     )
@@ -437,14 +429,14 @@ class Plague:
                                     "AS2D_PLAGUE",
                                     0,
                                     gc.getBuildingInfo(iPlague).getButton(),
-                                    ColorTypes(con.iLime),
+                                    ColorTypes(Consts.iLime),
                                     plot.getX(),
                                     plot.getY(),
                                     True,
                                     True,
                                 )
                         else:
-                            unit.setDamage(iUnitDamage, iBarbarian)
+                            unit.setDamage(iUnitDamage, Consts.iBarbarian)
                         # if we have many units in the same plot, decrease the damage for every other unit
                         iDamage *= 7
                         iDamage /= 8
@@ -489,7 +481,7 @@ class Plague:
                         CyInterface().addMessage(
                             iHuman,
                             False,
-                            con.iDuration / 2,
+                            Consts.iDuration / 2,
                             CyTranslator().getText(
                                 "TXT_KEY_PLAGUE_PROCESS_CITY", (city.getName(),)
                             )
@@ -499,7 +491,7 @@ class Plague:
                             "AS2D_PLAGUE",
                             0,
                             gc.getBuildingInfo(iPlague).getButton(),
-                            ColorTypes(con.iLime),
+                            ColorTypes(Consts.iLime),
                             city.getX(),
                             city.getY(),
                             True,
@@ -509,7 +501,7 @@ class Plague:
             # infect vassals
             if self.getPlagueCountdown(iPlayer) > 2:  # don't spread in the last turns
                 if city.isCapital():
-                    for iLoopCiv in range(iNumMajorPlayers):
+                    for iLoopCiv in range(Consts.iNumMajorPlayers):
                         if gc.getTeam(pPlayer.getTeam()).isVassal(iLoopCiv) or gc.getTeam(
                             gc.getPlayer(iLoopCiv).getTeam()
                         ).isVassal(iPlayer):
@@ -675,7 +667,7 @@ class Plague:
                     iRemoveModifier += 5  # less chance for each city which already quit
 
     def stopPlague(self, iPlayer):
-        self.setPlagueCountdown(iPlayer, -iImmunity)
+        self.setPlagueCountdown(iPlayer, -Consts.iImmunity)
         for city in utils.getCityList(iPlayer):
             city.setHasRealBuilding(iPlague, False)
 
@@ -683,14 +675,14 @@ class Plague:
         if city.hasBuilding(iPlague):
             # Absinthe: the Plague of Justinian shouldn't spread to Italy and France, even if it was as deadly as the Black Death
             if (
-                city.getOwner() in [con.iFrankia, con.iPope]
+                city.getOwner() in [Consts.iFrankia, Consts.iPope]
                 and gc.getGame().getGameTurn() <= xml.i632AD
             ):
                 city.setHasRealBuilding(iPlague, False)
                 return
 
             # only if it's not a recently born civ
-            if gc.getGame().getGameTurn() > con.tBirth[iNewOwner] + iImmunity:
+            if gc.getGame().getGameTurn() > Consts.tBirth[iNewOwner] + Consts.iImmunity:
                 # reinfect the human player if conquering plagued cities
                 if iNewOwner == utils.getHumanID():
                     # if > 0 do nothing, if < 0 skip immunity and restart the plague, if == 0 start the plague

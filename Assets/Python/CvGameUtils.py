@@ -7,7 +7,7 @@ import CvUtil
 from CvPythonExtensions import *
 import PyHelpers  # Absinthe
 import XMLConsts as xml  # Absinthe
-import Consts as con  # Absinthe
+import Consts
 import RFCUtils
 import Stability  # Absinthe
 
@@ -252,10 +252,10 @@ class CvGameUtils:
     # Absinthe: Inquisitor AI, this is also called from the .dll, CvCityAI::AI_chooseUnit
     def isHasPurgeTarget(self, iCiv, bReportCity):
         iStateReligion = gc.getPlayer(iCiv).getStateReligion()
-        iTolerance = con.tReligiousTolerance[iCiv]
+        iTolerance = Consts.tReligiousTolerance[iCiv]
         apCityList = PyPlayer(iCiv).getCityList()
         # Checks whether the AI controls a city with a target religion that is not the State Religion, not a Holy City, and doesn't have religious wonders in it
-        for iReligion in con.tPersecutionOrder[iStateReligion]:
+        for iReligion in Consts.tPersecutionOrder[iStateReligion]:
             bCanPurge = False
             # If the civ's tolerance > 70 it won't purge any religions
             # If > 50 (but < 70) it will only purge Islam with a Christian State Religion, and all Christian Religions with Islam as State Religion
@@ -671,7 +671,7 @@ class CvGameUtils:
         iNumCities = pPlayer.getNumCities()
 
         # anarchy instability should appear right on revolution / converting, not one turn later
-        if iPlayer != con.iPrussia:  # Prussian UP
+        if iPlayer != Consts.iPrussia:  # Prussian UP
             if pPlayer.isHuman():
                 # anarchy swing instability
                 pPlayer.setStabilitySwing(pPlayer.getStabilitySwing() - 8)
@@ -680,7 +680,7 @@ class CvGameUtils:
                 )  # the value doesn't really matter, but has to remain > 0 after the first StabSwingAnarchy check of sta.updateBaseStability
                 # anarchy base instability
                 pPlayer.changeStabilityBase(
-                    con.iCathegoryCivics, min(0, max(-2, (-iNumCities + 4) / 7))
+                    Consts.iCathegoryCivics, min(0, max(-2, (-iNumCities + 4) / 7))
                 )  # 0 with 1-4 cities, -1 with 5-11 cities, -2 with at least 12 cities
 
             else:
@@ -691,7 +691,7 @@ class CvGameUtils:
                 )  # the value doesn't really matter, but has to remain > 0 after the first StabSwingAnarchy check of sta.updateBaseStability
                 # anarchy base instability
                 pPlayer.changeStabilityBase(
-                    con.iCathegoryCivics, min(0, max(-1, (-iNumCities + 6) / 7))
+                    Consts.iCathegoryCivics, min(0, max(-1, (-iNumCities + 6) / 7))
                 )  # reduced for the AI: 0 with 1-6 cities, -1 with at least 7
 
         lResult = 1

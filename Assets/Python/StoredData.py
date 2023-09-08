@@ -3,7 +3,7 @@
 from CvPythonExtensions import *
 import PyHelpers
 import cPickle as pickle  # LOQ 2005-10-12
-import Consts as con
+import Consts
 
 # globals
 gc = CyGlobalContext()
@@ -16,11 +16,11 @@ class StoredData:
 
     def load(self):
         """Loads and unpickles script data"""
-        self.scriptDict.update(pickle.loads(gc.getPlayer(con.iBarbarian).getScriptData()))
+        self.scriptDict.update(pickle.loads(gc.getPlayer(Consts.iBarbarian).getScriptData()))
 
     def save(self):
         """Pickles and saves script data"""
-        gc.getPlayer(con.iBarbarian).setScriptData(pickle.dumps(self.scriptDict))
+        gc.getPlayer(Consts.iBarbarian).setScriptData(pickle.dumps(self.scriptDict))
 
     def setup(self):
         """Initialise the global script data dictionary for usage."""
@@ -36,19 +36,19 @@ class StoredData:
             "iSpawnWar": 0,  # if 1, add units and declare war. If >=2, do nothing
             "bAlreadySwitched": False,
             "lColonistsAlreadyGiven": [0]
-            * con.iNumPlayers,  # major players only, currently unused
-            "lNumCities": [0] * con.iNumPlayers,  # major players only
-            "lSpawnDelay": [0] * con.iNumPlayers,  # major players only
-            "lFlipsDelay": [0] * con.iNumPlayers,  # major players only
+            * Consts.iNumPlayers,  # major players only, currently unused
+            "lNumCities": [0] * Consts.iNumPlayers,  # major players only
+            "lSpawnDelay": [0] * Consts.iNumPlayers,  # major players only
+            "lFlipsDelay": [0] * Consts.iNumPlayers,  # major players only
             "iBetrayalTurns": 0,
-            "lLatestRebellionTurn": [0 for i in range(con.iNumPlayers)],  # major players only
+            "lLatestRebellionTurn": [0 for i in range(Consts.iNumPlayers)],  # major players only
             "iRebelCiv": 0,
             "lRebelCities": [],  # 3Miro: store the rebelling cities
-            "lRebelSuppress": [0] * con.iNumPlayers,  # major players only
+            "lRebelSuppress": [0] * Consts.iNumPlayers,  # major players only
             "lExileData": [-1, -1, -1, -1, -1],
             "tTempFlippingCity": -1,
             "lCheatersCheck": [0, -1],
-            "lBirthTurnModifier": [0] * con.iNumPlayers,  # major players only, currently unused
+            "lBirthTurnModifier": [0] * Consts.iNumPlayers,  # major players only, currently unused
             "lDeleteMode": [
                 -1,
                 -1,
@@ -59,7 +59,7 @@ class StoredData:
             "lReligionFounded": [-1, -1, -1, -1, -1],
             # Absinthe: Reformation
             "bReformationActive": False,
-            "lReformationHitMatrix": [0] * con.iNumPlayers,  # major players only
+            "lReformationHitMatrix": [0] * Consts.iNumPlayers,  # major players only
             "bCounterReformationActive": False,
             # Absinthe: Persecution
             "lPersecutionData": [-1, -1, -1],
@@ -101,20 +101,20 @@ class StoredData:
             "iNextTurnAIWar": -1,
             # Absinthe: Plagues
             "lPlagueCountdown": [0]
-            * con.iNumTotalPlayersB,  # total players B (major + indy + barbarian)
+            * Consts.iNumTotalPlayersB,  # total players B (major + indy + barbarian)
             "lGenericPlagueDates": [-1, -1, -1, -1, -1],
             "bBadPlague": False,
             "bFirstPlague": False,
             # Crusades
-            "lCrusadeInit": [-2] * con.iNumCrusades,
+            "lCrusadeInit": [-2] * Consts.iNumCrusades,
             "bParticipate": False,
-            "lVotingPower": [0] * con.iNumPlayers,  # major players only
+            "lVotingPower": [0] * Consts.iNumPlayers,  # major players only
             "iFavorite": 0,
             "iPowerful": 0,
             "iLeader": 0,
             "lVotesGathered": [0, 0],
             "iRichestCatholic": 0,
-            "lDeviateTargets": [False] * con.iNumPlayers,  # major players only
+            "lDeviateTargets": [False] * Consts.iNumPlayers,  # major players only
             "tTarget": (0, 0),
             "iCrusadePower": 0,
             "iCrusadeSucceeded": 0,
@@ -129,13 +129,14 @@ class StoredData:
                 0,
                 0,
             ],  # Templar Knights, Teutonic Knights, Hospitaller Knights, Knights, Heavy Lancers, Lancers, Siege Weapons, Generic
-            "lNumUnitsSent": [0] * con.iNumPlayers,  # major players only
+            "lNumUnitsSent": [0] * Consts.iNumPlayers,  # major players only
             "bDCEnabled": False,
             "iDCLast": 0,
             # Absinthe: Respawns
-            "lSpecialRespawnTurn": [0] * con.iNumPlayers,  # major players only, currently unused
-            "lLastTurnAlive": [0] * con.iNumPlayers,  # major players only
-            "lLastRespawnTurn": [0] * con.iNumPlayers,  # major players only
+            "lSpecialRespawnTurn": [0]
+            * Consts.iNumPlayers,  # major players only, currently unused
+            "lLastTurnAlive": [0] * Consts.iNumPlayers,  # major players only
+            "lLastRespawnTurn": [0] * Consts.iNumPlayers,  # major players only
             # Absinthe: Event Turn Randomization
             "lEventRandomness": [0] * 10,
             # 3Miro: Minor Nations

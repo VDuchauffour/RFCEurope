@@ -2,7 +2,7 @@
 
 from CvPythonExtensions import *
 import PyHelpers  # LOQ
-import Consts as con
+import Consts
 import XMLConsts as xml
 import RFCUtils
 import RFCEMaps as rfcemaps
@@ -21,12 +21,6 @@ iMinIntervalLate = 40
 iMaxIntervalLate = 60
 iThreshold = 100
 iMinValue = 30
-iNumPlayers = con.iNumMajorPlayers
-iIndependent = con.iIndependent
-iIndependent2 = con.iIndependent2
-iIndependent3 = con.iIndependent3
-iIndependent4 = con.iIndependent4
-iNumTotalPlayers = con.iNumTotalPlayers
 
 tWarsMap = rfcemaps.tWarsMaps
 
@@ -56,47 +50,47 @@ class AIWars:
         if iGameTurn > 20:
             # Absinthe: automatically turn peace on between independent cities and all the major civs
             if iGameTurn % 20 == 4:
-                utils.restorePeaceHuman(con.iIndependent2)
+                utils.restorePeaceHuman(Consts.iIndependent2)
             elif iGameTurn % 20 == 9:
-                utils.restorePeaceHuman(con.iIndependent)
+                utils.restorePeaceHuman(Consts.iIndependent)
             elif iGameTurn % 20 == 14:
-                utils.restorePeaceHuman(con.iIndependent3)
+                utils.restorePeaceHuman(Consts.iIndependent3)
             elif iGameTurn % 20 == 19:
-                utils.restorePeaceHuman(con.iIndependent4)
+                utils.restorePeaceHuman(Consts.iIndependent4)
 
             if iGameTurn % 36 == 0:
-                utils.restorePeaceAI(con.iIndependent, False)
+                utils.restorePeaceAI(Consts.iIndependent, False)
             elif iGameTurn % 36 == 9:
-                utils.restorePeaceAI(con.iIndependent2, False)
+                utils.restorePeaceAI(Consts.iIndependent2, False)
             elif iGameTurn % 36 == 18:
-                utils.restorePeaceAI(con.iIndependent3, False)
+                utils.restorePeaceAI(Consts.iIndependent3, False)
             elif iGameTurn % 36 == 27:
-                utils.restorePeaceAI(con.iIndependent4, False)
+                utils.restorePeaceAI(Consts.iIndependent4, False)
 
             # Absinthe: automatically turn war on between independent cities and some AI major civs
             elif iGameTurn % 36 == 2:  # on the 2nd turn after restorePeaceAI()
-                utils.minorWars(con.iIndependent, iGameTurn)
+                utils.minorWars(Consts.iIndependent, iGameTurn)
             elif iGameTurn % 36 == 11:  # on the 2nd turn after restorePeaceAI()
-                utils.minorWars(con.iIndependent2, iGameTurn)
+                utils.minorWars(Consts.iIndependent2, iGameTurn)
             elif iGameTurn % 36 == 20:  # on the 2nd turn after restorePeaceAI()
-                utils.minorWars(con.iIndependent3, iGameTurn)
+                utils.minorWars(Consts.iIndependent3, iGameTurn)
             elif iGameTurn % 36 == 29:  # on the 2nd turn after restorePeaceAI()
-                utils.minorWars(con.iIndependent4, iGameTurn)
+                utils.minorWars(Consts.iIndependent4, iGameTurn)
 
             # Absinthe: declare war sooner / more frequently if there is an Indy city inside the core area
             # 			so the AI will declare war much sooner after an indy city appeared in it's core
             if iGameTurn % 12 == 1:
-                utils.minorCoreWars(con.iIndependent4, iGameTurn)
+                utils.minorCoreWars(Consts.iIndependent4, iGameTurn)
             elif iGameTurn % 12 == 4:
-                utils.minorCoreWars(con.iIndependent3, iGameTurn)
+                utils.minorCoreWars(Consts.iIndependent3, iGameTurn)
             elif iGameTurn % 12 == 7:
-                utils.minorCoreWars(con.iIndependent2, iGameTurn)
+                utils.minorCoreWars(Consts.iIndependent2, iGameTurn)
             elif iGameTurn % 12 == 10:
-                utils.minorCoreWars(con.iIndependent, iGameTurn)
+                utils.minorCoreWars(Consts.iIndependent, iGameTurn)
 
         # Absinthe: Venice always seeks war with an Independent Ragusa - should help AI Venice significantly
         if iGameTurn % 9 == 2:
-            pVenice = gc.getPlayer(con.iVenecia)
+            pVenice = gc.getPlayer(Consts.iVenecia)
             if pVenice.isAlive() and not pVenice.isHuman():
                 pRagusaPlot = gc.getMap().plot(64, 28)
                 if pRagusaPlot.isCity():
@@ -113,7 +107,7 @@ class AIWars:
 
         # Absinthe: Kingdom of Hungary should try to dominate Sisak/Zagreb if it's independent
         if iGameTurn > xml.i1000AD and iGameTurn % 7 == 3:
-            pHungary = gc.getPlayer(con.iHungary)
+            pHungary = gc.getPlayer(Consts.iHungary)
             if pHungary.isAlive() and not pHungary.isHuman():
                 pZagrebPlot = gc.getMap().plot(62, 34)
                 if pZagrebPlot.isCity():
@@ -139,8 +133,8 @@ class AIWars:
             # print ("AIWars iTargetCiv missing", iCiv)
             iCiv, iTargetCiv = self.pickCivs()
             print("AIWars chosen civs: iCiv, iTargetCiv", iCiv, iTargetCiv)
-            if 0 <= iTargetCiv <= iNumTotalPlayers:
-                if iTargetCiv != con.iPope and iCiv != con.iPope and iCiv != iTargetCiv:
+            if 0 <= iTargetCiv <= Consts.iNumTotalPlayers:
+                if iTargetCiv != Consts.iPope and iCiv != Consts.iPope and iCiv != iTargetCiv:
                     self.initWar(iCiv, iTargetCiv, iGameTurn, iMaxInterval, iMinInterval)
                     return
             else:
@@ -158,7 +152,7 @@ class AIWars:
         iCiv = -1
         iTargetCiv = -1
         iCiv = self.chooseAttackingPlayer()
-        if 0 <= iCiv <= iNumPlayers:
+        if 0 <= iCiv <= Consts.iNumMajorPlayers:
             iTargetCiv = self.checkGrid(iCiv)
             return (iCiv, iTargetCiv)
         else:
@@ -190,19 +184,19 @@ class AIWars:
     ##	def initArray(self):
     ##		for k in range( iNumPlayers ):
     ##			grid = []
-    ##			for j in range( con.iMapMaxY ):
+    ##			for j in range( Consts.iMapMaxY ):
     ##				line = []
-    ##				for i in range( con.iMapMaxX ):
-    ##					line.append( gc.getPlayer(iCiv).getSettlersMaps( con.iMapMaxY-j-1, i ) )
+    ##				for i in range( Consts.iMapMaxX ):
+    ##					line.append( gc.getPlayer(iCiv).getSettlersMaps( Consts.iMapMaxY-j-1, i ) )
     ##				grid.append( line )
     ##			self.lSettlersMap.append( grid )
     ##		print self.lSettlersMap
 
     def chooseAttackingPlayer(self):
         # finding max teams ever alive (countCivTeamsEverAlive() doesn't work as late human starting civ gets killed every turn)
-        iMaxCivs = iNumPlayers
-        for i in range(iNumPlayers):
-            j = iNumPlayers - 1 - i
+        iMaxCivs = Consts.iNumMajorPlayers
+        for i in range(Consts.iNumMajorPlayers):
+            j = Consts.iNumMajorPlayers - 1 - i
             if gc.getPlayer(j).isAlive():
                 iMaxCivs = j
                 break
@@ -229,7 +223,7 @@ class AIWars:
                         # check if a world war is already in place:
                         iNumAlreadyWar = 0
                         tLoopCiv = gc.getTeam(gc.getPlayer(iLoopCiv).getTeam())
-                        for kLoopCiv in range(iNumPlayers):
+                        for kLoopCiv in range(Consts.iNumMajorPlayers):
                             if tLoopCiv.isAtWar(kLoopCiv):
                                 iNumAlreadyWar += 1
                         if iNumAlreadyWar >= 4:
@@ -251,10 +245,12 @@ class AIWars:
     def checkGrid(self, iCiv):
         pCiv = gc.getPlayer(iCiv)
         pTeam = gc.getTeam(pCiv.getTeam())
-        lTargetCivs = [0] * iNumTotalPlayers  # clean it, sometimes it takes old values in memory
+        lTargetCivs = [
+            0
+        ] * Consts.iNumTotalPlayers  # clean it, sometimes it takes old values in memory
 
         # set alive civs to 1 to differentiate them from dead civs
-        for iLoopPlayer in range(iNumTotalPlayers):
+        for iLoopPlayer in range(Consts.iNumTotalPlayers):
             if iLoopPlayer == iCiv:
                 continue
             if pTeam.isAtWar(iLoopPlayer):  # if already at war with iCiv then it remains 0
@@ -262,7 +258,9 @@ class AIWars:
             pLoopPlayer = gc.getPlayer(iLoopPlayer)
             iLoopTeam = pLoopPlayer.getTeam()
             pLoopTeam = gc.getTeam(iLoopTeam)
-            if iLoopPlayer < iNumPlayers:  # if master or vassal of iCiv then it remains 0
+            if (
+                iLoopPlayer < Consts.iNumMajorPlayers
+            ):  # if master or vassal of iCiv then it remains 0
                 if pLoopTeam.isVassal(iCiv) or pTeam.isVassal(iLoopPlayer):
                     continue
             if pLoopPlayer.isAlive() and pTeam.isHasMet(iLoopTeam):
@@ -270,10 +268,15 @@ class AIWars:
 
         for (i, j) in utils.getWorldPlotsList():
             iOwner = gc.getMap().plot(i, j).getOwner()
-            if 0 <= iOwner < iNumTotalPlayers and iOwner != iCiv:
+            if 0 <= iOwner < Consts.iNumTotalPlayers and iOwner != iCiv:
                 if lTargetCivs[iOwner] > 0:
-                    iValue = tWarsMap[iCiv][con.iMapMaxY - 1 - j][i]
-                    if iOwner in [iIndependent, iIndependent2, iIndependent3, iIndependent4]:
+                    iValue = tWarsMap[iCiv][Consts.iMapMaxY - 1 - j][i]
+                    if iOwner in [
+                        Consts.iIndependent,
+                        Consts.iIndependent2,
+                        Consts.iIndependent3,
+                        Consts.iIndependent4,
+                    ]:
                         iValue /= 3
                     lTargetCivs[iOwner] += iValue
 
@@ -288,7 +291,7 @@ class AIWars:
         iMaxTempValue = max(lTargetCivs)
         # print(iMaxTempValue)
         if iMaxTempValue > 0:
-            for k in range(iNumTotalPlayers):
+            for k in range(Consts.iNumTotalPlayers):
                 if lTargetCivs[k] > 0:
                     # lTargetCivs[k] *= 500 #non va!
                     # lTargetCivs[k] / iMaxTempValue
@@ -296,7 +299,7 @@ class AIWars:
 
         # print(lTargetCivs)
 
-        for iLoopCiv in range(iNumTotalPlayers):
+        for iLoopCiv in range(Consts.iNumTotalPlayers):
             if iLoopCiv == iCiv:
                 continue
 
@@ -316,7 +319,7 @@ class AIWars:
             if (
                 utils.getPlagueCountdown(iLoopCiv) > 0
                 or utils.getPlagueCountdown(iLoopCiv) < -10
-                and not gc.getGame().getGameTurn() <= con.tBirth[iLoopCiv] + 20
+                and not gc.getGame().getGameTurn() <= Consts.tBirth[iLoopCiv] + 20
             ):
                 lTargetCivs[iLoopCiv] *= 3
                 lTargetCivs[iLoopCiv] /= 2

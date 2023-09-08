@@ -3,7 +3,7 @@
 from CvPythonExtensions import *
 import CvUtil
 import PyHelpers
-import Consts as con
+import Consts
 import XMLConsts as xml
 import RFCUtils
 import Victory as vic
@@ -2175,7 +2175,7 @@ class CvVictoryScreen:
                 # if (iLoopVC == 7):
                 # for i in range(3):
                 # iRow = screen.appendTableRow(szTable)
-                # screen.setTableText(szTable, 0, iRow, localText.getText(con.tGoals[self.iActivePlayer][i], ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+                # screen.setTableText(szTable, 0, iRow, localText.getText(Consts.tGoals[self.iActivePlayer][i], ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                 # screen.setTableText(szTable, 2, iRow, localText.getText("TXT_KEY_VICTORY_SCREEN_ACCOMPLISHED", ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                 # if (utils.getGoal(self.iActivePlayer, i) == 1):
                 # screen.setTableText(szTable, 3, iRow, localText.getText("TXT_KEY_VICTORY_SCREEN_YES", ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
@@ -2284,34 +2284,34 @@ class CvVictoryScreen:
 
     def getCivHelpsTexts(self):
         dCivs = {
-            con.iByzantium: self.getByzantiumText(),
-            con.iFrankia: self.getFrankiaText(),
-            con.iArabia: self.getArabiaText(),
-            con.iBulgaria: self.getBulgariaText(),
-            con.iCordoba: self.getCordobaText(),
-            con.iVenecia: self.getVeneciaText(),
-            con.iBurgundy: self.getBurgundyText(),
-            con.iGermany: self.getGermanyText(),
-            con.iNovgorod: self.getNovgorodText(),
-            con.iNorway: self.getNorwayText(),
-            con.iKiev: self.getKievText(),
-            con.iHungary: self.getHungaryText(),
-            con.iSpain: self.getSpainText(),
-            con.iDenmark: self.getDenmarkText(),
-            con.iScotland: self.getScotlandText(),
-            con.iPoland: self.getPolandText(),
-            con.iGenoa: self.getGenoaText(),
-            con.iMorocco: self.getMoroccoText(),
-            con.iEngland: self.getEnglandText(),
-            con.iPortugal: self.getPortugalText(),
-            con.iAragon: self.getAragonText(),
-            con.iSweden: self.getSwedenText(),
-            con.iPrussia: self.getPrussiaText(),
-            con.iLithuania: self.getLithuaniaText(),
-            con.iAustria: self.getAustriaText(),
-            con.iTurkey: self.getTurkeyText(),
-            con.iMoscow: self.getMoscowText(),
-            con.iDutch: self.getDutchText(),
+            Consts.iByzantium: self.getByzantiumText(),
+            Consts.iFrankia: self.getFrankiaText(),
+            Consts.iArabia: self.getArabiaText(),
+            Consts.iBulgaria: self.getBulgariaText(),
+            Consts.iCordoba: self.getCordobaText(),
+            Consts.iVenecia: self.getVeneciaText(),
+            Consts.iBurgundy: self.getBurgundyText(),
+            Consts.iGermany: self.getGermanyText(),
+            Consts.iNovgorod: self.getNovgorodText(),
+            Consts.iNorway: self.getNorwayText(),
+            Consts.iKiev: self.getKievText(),
+            Consts.iHungary: self.getHungaryText(),
+            Consts.iSpain: self.getSpainText(),
+            Consts.iDenmark: self.getDenmarkText(),
+            Consts.iScotland: self.getScotlandText(),
+            Consts.iPoland: self.getPolandText(),
+            Consts.iGenoa: self.getGenoaText(),
+            Consts.iMorocco: self.getMoroccoText(),
+            Consts.iEngland: self.getEnglandText(),
+            Consts.iPortugal: self.getPortugalText(),
+            Consts.iAragon: self.getAragonText(),
+            Consts.iSweden: self.getSwedenText(),
+            Consts.iPrussia: self.getPrussiaText(),
+            Consts.iLithuania: self.getLithuaniaText(),
+            Consts.iAustria: self.getAustriaText(),
+            Consts.iTurkey: self.getTurkeyText(),
+            Consts.iMoscow: self.getMoscowText(),
+            Consts.iDutch: self.getDutchText(),
         }
         lHelpTexts = dCivs[self.iActivePlayer]
         return lHelpTexts
@@ -2333,7 +2333,7 @@ class CvVictoryScreen:
         # UHV2
         sText2 += self.getProvinceString(vic.tByzantiumControlII)
         # UHV3
-        tConstantinople = con.tCapitals[iPlayer]
+        tConstantinople = Consts.tCapitals[iPlayer]
         pConstantinople = gc.getMap().plot(tConstantinople[0], tConstantinople[1]).getPlotCity()
         sConstantinopleName = localText.getText("TXT_KEY_CITY_NAME_CONSTANTINOPLE", ())
         if self.checkCity(tConstantinople, iPlayer, sConstantinopleName) == -1:
@@ -2401,7 +2401,7 @@ class CvVictoryScreen:
         # UHV1
         sText1 += self.getProvinceString(vic.tFrankControl)
         # UHV2
-        tPlot = con.tJerusalem
+        tPlot = Consts.tJerusalem
         sText2 += self.checkCity(
             tPlot, iPlayer, localText.getText("TXT_KEY_UHV_JERUSALEM", ()), True
         )
@@ -2481,7 +2481,7 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        tCordoba = con.tCapitals[iPlayer]
+        tCordoba = Consts.tCapitals[iPlayer]
         pCordoba = gc.getMap().plot(tCordoba[0], tCordoba[1]).getPlotCity()
         sCordobaName = localText.getText("TXT_KEY_CITY_NAME_CORDOBA", ())
         if self.checkCity(tCordoba, iPlayer, sCordobaName) == -1:
@@ -2522,7 +2522,7 @@ class CvVictoryScreen:
         # UHV1
         sText1 += self.getProvinceString(vic.tVenetianControl)
         # UHV2
-        tConstantinople = con.tCapitals[con.iByzantium]
+        tConstantinople = Consts.tCapitals[Consts.iByzantium]
         sText2 += self.checkCity(
             tConstantinople,
             iPlayer,
@@ -2597,7 +2597,7 @@ class CvVictoryScreen:
         iNumFurs = pPlayer.countCultBorderBonuses(xml.iFur)
         sText2 += self.getCounterString(iNumFurs, 11)
         # UHV3
-        sText3 += self.ConquerOrVassal([[con.iMoscow, xml.iP_Moscow]])
+        sText3 += self.ConquerOrVassal([[Consts.iMoscow, xml.iP_Moscow]])
         lHelpTexts = [sText1, sText2, sText3]
         return lHelpTexts
 
@@ -2659,7 +2659,7 @@ class CvVictoryScreen:
         sText1 += self.getProvinceString(vic.tHungaryControl)
         # UHV2
         sEnemyString = "The Ottomans"
-        sText2 += self.getNotCivProvinceString(con.iTurkey, sEnemyString, vic.tHungaryControlII)
+        sText2 += self.getNotCivProvinceString(Consts.iTurkey, sEnemyString, vic.tHungaryControlII)
         # UHV3
         iGoal = pPlayer.getUHV(2)
         sText3 += self.determineColor(
@@ -2678,7 +2678,7 @@ class CvVictoryScreen:
         iSpainColonies = vic.Victory().getNumRealColonies(iPlayer)
         iOtherColonies = 0
         iColonyPlayer = -1
-        for iCiv in range(con.iNumPlayers):
+        for iCiv in range(Consts.iNumPlayers):
             if iCiv == iPlayer:
                 continue
             if gc.getPlayer(iCiv).isAlive():
@@ -2701,7 +2701,7 @@ class CvVictoryScreen:
         )
         lLand = [0, 0, 0, 0, 0, 0]  # Prot, Islam, Cath, Orth, Jew, Pagan
         lPop = [0, 0, 0, 0, 0, 0]
-        for iLoopPlayer in range(con.iNumPlayers):
+        for iLoopPlayer in range(Consts.iNumPlayers):
             pLoopPlayer = gc.getPlayer(iLoopPlayer)
             iStateReligion = pLoopPlayer.getStateReligion()
             if iStateReligion > -1:
@@ -2711,14 +2711,14 @@ class CvVictoryScreen:
                 lLand[5] += pLoopPlayer.getTotalLand()
                 lPop[5] += pLoopPlayer.getTotalPopulation()
         # The Barbarian civ counts as Pagan, Independent cities are included separately, based on the religion of the population
-        pBarbarian = gc.getPlayer(con.iBarbarian)
+        pBarbarian = gc.getPlayer(Consts.iBarbarian)
         lLand[5] += pBarbarian.getTotalLand()
         lPop[5] += pBarbarian.getTotalPopulation()
         for iIndyCiv in [
-            con.iIndependent,
-            con.iIndependent2,
-            con.iIndependent3,
-            con.iIndependent4,
+            Consts.iIndependent,
+            Consts.iIndependent2,
+            Consts.iIndependent3,
+            Consts.iIndependent4,
         ]:
             for pCity in utils.getCityList(iIndyCiv):
                 pIndyCiv = gc.getPlayer(iIndyCiv)
@@ -2784,8 +2784,8 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        iScotlandFort = gc.getPlayer(con.iScotland).getImprovementCount(xml.iImprovementFort)
-        iScotlandCastle = gc.getPlayer(con.iScotland).countNumBuildings(xml.iCastle)
+        iScotlandFort = gc.getPlayer(Consts.iScotland).getImprovementCount(xml.iImprovementFort)
+        iScotlandCastle = gc.getPlayer(Consts.iScotland).countNumBuildings(xml.iCastle)
         sScotlandFort = localText.getText("TXT_KEY_IMPROVEMENT_FORT", ()) + ": "
         sScotlandCastle = localText.getText("TXT_KEY_BUILDING_CASTLE", ()) + ": "
         sText1 += sScotlandFort + self.determineColor(iScotlandFort >= 10, str(iScotlandFort))
@@ -2819,7 +2819,7 @@ class CvVictoryScreen:
         iPolandFood = pPlayer.calculateTotalYield(YieldTypes.YIELD_FOOD)
         iOtherFood = 0
         iFoodPlayer = -1
-        for iLoopPlayer in range(con.iNumMajorPlayers):
+        for iLoopPlayer in range(Consts.iNumMajorPlayers):
             if iLoopPlayer == iPlayer:
                 continue
             pLoopPlayer = gc.getPlayer(iLoopPlayer)
@@ -2882,7 +2882,7 @@ class CvVictoryScreen:
         ) + pPlayer.calculateTotalExports(YieldTypes.YIELD_COMMERCE)
         iOtherTrade = 0
         iBiggestTrader = -1
-        for iLoopPlayer in range(con.iNumPlayers):
+        for iLoopPlayer in range(Consts.iNumPlayers):
             if iLoopPlayer == iPlayer:
                 continue
             pLoopPlayer = gc.getPlayer(iLoopPlayer)
@@ -2946,7 +2946,7 @@ class CvVictoryScreen:
                     + self.determineColor(ourBestCities[i][0] >= 5000, ourBestCities[i][0])
                 )
         # UHV3
-        sText3 += self.CollapseOrVassal([con.iSpain, con.iPortugal, con.iAragon])
+        sText3 += self.CollapseOrVassal([Consts.iSpain, Consts.iPortugal, Consts.iAragon])
         lHelpTexts = [sText1, sText2, sText3]
         return lHelpTexts
 
@@ -3017,7 +3017,7 @@ class CvVictoryScreen:
             + u"<font=1>\n\n</font>"
         )
         iSeaports = pPlayer.countNumBuildings(xml.iAragonSeaport)
-        iCargoShips = utils.getCargoShips(con.iAragon)
+        iCargoShips = utils.getCargoShips(Consts.iAragon)
         sText2 += (
             localText.getText("TXT_KEY_UHV_CURRENTLY", ())
             + ": "
@@ -3063,7 +3063,7 @@ class CvVictoryScreen:
         sText1 += self.getProvinceString(vic.tPrussiaControlI)
         # UHV2
         if gc.getGame().getGameTurn() >= xml.i1650AD:
-            iConqRaw = gc.getPlayer(con.iPrussia).getUHVCounter(1)
+            iConqRaw = gc.getPlayer(Consts.iPrussia).getUHVCounter(1)
             for iI in range(len(vic.tPrussiaDefeat)):
                 iNumConq = (iConqRaw / pow(10, iI)) % 10
                 pVictim = gc.getPlayer(vic.tPrussiaDefeat[iI])
@@ -3114,7 +3114,7 @@ class CvVictoryScreen:
         iCount, iTotal = vic.Victory().getTerritoryPercentEurope(iPlayer, True)
         iOtherCount = 0
         iMostPlayer = -1
-        for iLoopPlayer in range(con.iNumMajorPlayers):
+        for iLoopPlayer in range(Consts.iNumMajorPlayers):
             if iLoopPlayer == iPlayer:
                 continue
             pLoopPlayer = gc.getPlayer(iLoopPlayer)
@@ -3134,7 +3134,7 @@ class CvVictoryScreen:
         sText = localText.getText("TXT_KEY_UHV_CONTROL_TERRITORY", ())
         sText2 += self.getLandCompetition(landPercent, otherlandPercent, iMostPlayer, sText)
         # UHV3
-        sText3 += self.CollapseOrVassal([con.iMoscow, con.iNovgorod, con.iPrussia])
+        sText3 += self.CollapseOrVassal([Consts.iMoscow, Consts.iNovgorod, Consts.iPrussia])
         lHelpTexts = [sText1, sText2, sText3]
         return lHelpTexts
 
@@ -3146,7 +3146,7 @@ class CvVictoryScreen:
         sText1 += self.getProvinceString(vic.tAustriaControl)
         # UHV2
         iCount = 0
-        for iLoopPlayer in range(con.iNumMajorPlayers):
+        for iLoopPlayer in range(Consts.iNumMajorPlayers):
             pLoopPlayer = gc.getPlayer(iLoopPlayer)
             if iLoopPlayer != iPlayer and pLoopPlayer.isAlive():
                 if gc.getTeam(pLoopPlayer.getTeam()).isVassal(iPlayer):
@@ -3183,7 +3183,7 @@ class CvVictoryScreen:
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
         sEnemyString = "Barbarians"
-        sText1 += self.getNotCivProvinceString(con.iBarbarian, sEnemyString, vic.tMoscowControl)
+        sText1 += self.getNotCivProvinceString(Consts.iBarbarian, sEnemyString, vic.tMoscowControl)
         # UHV2
         totalLand = gc.getMap().getLandPlots()
         RussianLand = pPlayer.getTotalLand()
@@ -3202,7 +3202,7 @@ class CvVictoryScreen:
         )
         bColor = False
         iNumAccess = pPlayer.countCultBorderBonuses(xml.iAccess)
-        tConstantinople = con.tCapitals[con.iByzantium]
+        tConstantinople = Consts.tCapitals[Consts.iByzantium]
         iConstantinopleOwner = (
             gc.getMap().plot(tConstantinople[0], tConstantinople[1]).getPlotCity().getOwner()
         )
@@ -3216,7 +3216,7 @@ class CvVictoryScreen:
         if (
             self.checkCity(
                 tConstantinople,
-                con.iMoscow,
+                Consts.iMoscow,
                 localText.getText("TXT_KEY_CITY_NAME_CONSTANTINOPLE", ()),
                 True,
                 True,
@@ -3234,7 +3234,7 @@ class CvVictoryScreen:
         else:
             sText3 += self.checkCity(
                 tConstantinople,
-                con.iMoscow,
+                Consts.iMoscow,
                 localText.getText("TXT_KEY_CITY_NAME_CONSTANTINOPLE", ()),
                 True,
                 True,
@@ -3247,7 +3247,7 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        tAmsterdam = con.tCapitals[iPlayer]
+        tAmsterdam = Consts.tCapitals[iPlayer]
         pPlot = gc.getMap().plot(tAmsterdam[0], tAmsterdam[1])
         if (
             self.checkCity(
@@ -3416,7 +3416,7 @@ class CvVictoryScreen:
             sProvName = localText.getText(sProvName, ())
             # localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),())
             iHave = pActivePlayer.getProvinceCurrentState(iProv)
-            if iHave < con.iProvinceConquer:
+            if iHave < Consts.iProvinceConquer:
                 sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (sProvName)
             else:
                 sStringConqTemp += "  " + u"<color=0,255,0>%s</color>" % (sProvName)
@@ -3492,7 +3492,7 @@ class CvVictoryScreen:
             sProvName = "TXT_KEY_PROVINCE_NAME_%i" % iProv
             sProvName = localText.getText(sProvName, ())
             bProvinceHasCity = 0
-            for iPlayer in range(con.iNumTotalPlayersB):
+            for iPlayer in range(Consts.iNumTotalPlayersB):
                 pPlayer = gc.getPlayer(iPlayer)
                 if pPlayer.getProvinceCityCount(iProv) > 0:
                     bProvinceHasCity = 1
@@ -3594,7 +3594,7 @@ class CvVictoryScreen:
             pTestPlayer = gc.getPlayer(iLoopPlayer)
             sCivShortName = str(pTestPlayer.getCivilizationShortDescriptionKey())
             # unknown: if not yet born, or alive but no contact
-            if iGameTurn <= con.tBirth[iLoopPlayer] or (
+            if iGameTurn <= Consts.tBirth[iLoopPlayer] or (
                 not gc.getPlayer(self.iActivePlayer).canContact(iLoopPlayer)
                 and pTestPlayer.isAlive()
             ):
@@ -3623,7 +3623,7 @@ class CvVictoryScreen:
             sCivShortName = str(pEnemy.getCivilizationShortDescriptionKey())
             if (
                 pEnemy.isAlive() and not teamEnemy.isVassal(teamOwn.getID())
-            ) or iGameTurn <= con.tBirth[iEnemy]:
+            ) or iGameTurn <= Consts.tBirth[iEnemy]:
                 sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (
                     localText.getText(sCivShortName, ())
                 )
@@ -3646,13 +3646,13 @@ class CvVictoryScreen:
             pEnemy = gc.getPlayer(iEnemyCiv)
             teamEnemy = gc.getTeam(iEnemyCiv)
             sCivShortName = str(pEnemy.getCivilizationShortDescriptionKey())
-            if iGameTurn <= con.tBirth[iEnemyCiv]:
+            if iGameTurn <= Consts.tBirth[iEnemyCiv]:
                 sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (
                     localText.getText(sCivShortName, ())
                 )
             elif (
                 not pEnemy.isAlive()
-                and pActivePlayer.getProvinceCurrentState(iEnemyProvince) < con.iProvinceConquer
+                and pActivePlayer.getProvinceCurrentState(iEnemyProvince) < Consts.iProvinceConquer
             ):
                 sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (
                     localText.getText(sCivShortName, ())
@@ -3660,7 +3660,7 @@ class CvVictoryScreen:
             elif (
                 pEnemy.isAlive()
                 and not teamEnemy.isVassal(teamOwn.getID())
-                and pActivePlayer.getProvinceCurrentState(iEnemyProvince) < con.iProvinceConquer
+                and pActivePlayer.getProvinceCurrentState(iEnemyProvince) < Consts.iProvinceConquer
             ):
                 sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (
                     localText.getText(sCivShortName, ())
@@ -3677,7 +3677,7 @@ class CvVictoryScreen:
         iPlayerGold = pPlayer.getGold()
         iGold = 0
         iRichestPlayer = -1
-        for iCiv in range(con.iNumPlayers):
+        for iCiv in range(Consts.iNumPlayers):
             if iCiv == self.iActivePlayer:
                 continue
             if gc.getPlayer(iCiv).isAlive():

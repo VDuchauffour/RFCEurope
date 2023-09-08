@@ -4,7 +4,7 @@ from CvPythonExtensions import *
 import PyHelpers
 
 # import cPickle as pickle
-import Consts as con
+import Consts
 import XMLConsts as xml
 import Religions
 import RFCUtils
@@ -14,8 +14,6 @@ gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer
 utils = RFCUtils.RFCUtils()
 religion = Religions.Religions()
-
-iJanissaryPoints = con.iJanissaryPoints
 
 
 class UniquePowers:
@@ -57,7 +55,7 @@ class UniquePowers:
                     iNewPoints += city.getPopulation()
                     break
 
-        iOldPoints = pPlayer.getPicklefreeParameter(iJanissaryPoints)
+        iOldPoints = pPlayer.getPicklefreeParameter(Consts.iJanissaryPoints)
 
         iNextJanissary = 200
         if pPlayer.isHuman():
@@ -79,7 +77,7 @@ class UniquePowers:
                     CyInterface().addMessage(
                         iPlayer,
                         False,
-                        con.iDuration,
+                        Consts.iDuration,
                         CyTranslator().getText("TXT_KEY_UNIT_NEW_JANISSARY", ())
                         + " "
                         + pCity.getName()
@@ -87,7 +85,7 @@ class UniquePowers:
                         "AS2D_UNIT_BUILD_UNIQUE_UNIT",
                         0,
                         gc.getUnitInfo(xml.iJanissary).getButton(),
-                        ColorTypes(con.iGreen),
+                        ColorTypes(Consts.iGreen),
                         iX,
                         iY,
                         True,
@@ -96,7 +94,7 @@ class UniquePowers:
                 print(" New Janissary in ", pCity.getName())
                 iTotalPoints -= iNextJanissary
 
-        pPlayer.setPicklefreeParameter(iJanissaryPoints, iTotalPoints)
+        pPlayer.setPicklefreeParameter(Consts.iJanissaryPoints, iTotalPoints)
 
     def janissaryNewCityUP(self, iPlayer, city, bConquest):
         pPlayer = gc.getPlayer(iPlayer)
@@ -109,8 +107,10 @@ class UniquePowers:
                     iJanissaryPoint = iCityPopulation * 9
                 else:
                     iJanissaryPoint = iCityPopulation * 4
-                iOldPoints = pPlayer.getPicklefreeParameter(iJanissaryPoints)
-                pPlayer.setPicklefreeParameter(iJanissaryPoints, iOldPoints + iJanissaryPoint)
+                iOldPoints = pPlayer.getPicklefreeParameter(Consts.iJanissaryPoints)
+                pPlayer.setPicklefreeParameter(
+                    Consts.iJanissaryPoints, iOldPoints + iJanissaryPoint
+                )
                 break
 
         # removed free janissary, probably too powerful to add a new janissary unit right on conquest
@@ -123,7 +123,7 @@ class UniquePowers:
                 CyInterface().addMessage(
                     iPlayer,
                     False,
-                    con.iDuration,
+                    Consts.iDuration,
                     CyTranslator().getText("TXT_KEY_UNIT_NEW_JANISSARY", ())
                     + " "
                     + city.getName()
@@ -131,7 +131,7 @@ class UniquePowers:
                     "AS2D_UNIT_BUILD_UNIQUE_UNIT",
                     0,
                     gc.getUnitInfo(xml.iJanissary).getButton(),
-                    ColorTypes(con.iGreen),
+                    ColorTypes(Consts.iGreen),
                     iX,
                     iY,
                     True,
@@ -164,12 +164,12 @@ class UniquePowers:
         CyInterface().addMessage(
             iPlayer,
             False,
-            con.iDuration / 2,
+            Consts.iDuration / 2,
             CyTranslator().getText("TXT_KEY_UP_SOUND_TOLL", (iGold,)),
             "",
             0,
             "",
-            ColorTypes(con.iGreen),
+            ColorTypes(Consts.iGreen),
             -1,
             -1,
             True,
@@ -302,7 +302,7 @@ class UniquePowers:
                     CyInterface().addMessage(
                         iPlayer,
                         False,
-                        con.iDuration,
+                        Consts.iDuration,
                         CyTranslator().getText("TXT_KEY_UNIT_NEW_DEFENDER", ())
                         + " "
                         + city.getName()
@@ -310,7 +310,7 @@ class UniquePowers:
                         "AS2D_UNIT_BUILD_UNIQUE_UNIT",
                         0,
                         "",
-                        ColorTypes(con.iGreen),
+                        ColorTypes(Consts.iGreen),
                         iX,
                         iY,
                         True,

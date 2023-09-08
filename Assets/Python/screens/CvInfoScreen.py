@@ -8,7 +8,7 @@ import CvUtil
 
 import string
 
-import Consts as con  # Rhye
+import Consts
 import XMLConsts as xml
 import RFCUtils
 
@@ -1735,7 +1735,7 @@ class CvInfoScreen:
 
         # Absinthe: Loop through all major players to determine Rank and relative Strength
         # Absinthe: Papal States are not included in the statistics (not a rival in the strict sense)
-        for iPlayerLoop in range(con.iNumMajorPlayers - 1):
+        for iPlayerLoop in range(Consts.iNumMajorPlayers - 1):
 
             # Absinthe: probably the isAlive check would be enough, but we have the barbarian and minor civ checks anyway
             if (
@@ -3173,7 +3173,7 @@ class CvInfoScreen:
                 # Absinthe: top5 city foundation text
                 if tActivePlayer.isHasTech(xml.iCalendar):
                     if iTurnYear <= utils.getScenarioStartYear():
-                        if utils.getScenario() == con.i500ADScenario:
+                        if utils.getScenario() == Consts.i500ADScenario:
                             szTurnFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_500AD", ())
                         else:
                             szTurnFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_1200AD", ())
@@ -4630,7 +4630,7 @@ class CvInfoScreen:
 
         self.aaColoniesBuilt = []
         self.iNumColonies = 0
-        hxy = con.home_positions_xy
+        hxy = Consts.home_positions_xy
         # Loop through players to determine Projects and place flags in Europe
         for iPlayerLoop in range(gc.getMAX_PLAYERS()):
 
@@ -4669,7 +4669,7 @@ class CvInfoScreen:
                             self.aaColoniesBuilt.append([iProjectLoop, iPlayerLoop])
                             self.iNumColonies += 1
 
-        cxy = con.colony_positions_xy
+        cxy = Consts.colony_positions_xy
         # Loop through to place flags first (so flags are all "under" the colony dots)
         for i in range(xml.iNumNotColonies, xml.iNumTotalColonies):
             builtcount = 0

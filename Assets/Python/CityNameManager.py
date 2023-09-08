@@ -2,7 +2,7 @@
 
 from CvPythonExtensions import *
 import PyHelpers
-import Consts as con
+import Consts
 import RFCEMaps as rfcemaps
 
 # globals
@@ -17,9 +17,9 @@ class CityNameManager:
     def assignName(self, city):
         """Names a city depending on its plot"""
         iOwner = city.getOwner()
-        if iOwner < con.iNumMajorPlayers:
-            # print(" City Name ",iOwner,con.iMapMaxY-1-city.getY(),city.getX()) #Sedna17 Needed to throw an extra -1 in the Y coordinate to get things to line up right. I love zero-indexing.
-            cityName = tCityMap[iOwner][con.iMapMaxY - 1 - city.getY()][city.getX()]
+        if iOwner < Consts.iNumMajorPlayers:
+            # print(" City Name ",iOwner,Consts.iMapMaxY-1-city.getY(),city.getX()) #Sedna17 Needed to throw an extra -1 in the Y coordinate to get things to line up right. I love zero-indexing.
+            cityName = tCityMap[iOwner][Consts.iMapMaxY - 1 - city.getY()][city.getX()]
             # print(" City Name ",cityName)
             if cityName != "-1":
                 city.setName(unicode(cityName, "latin-1"), False)
@@ -28,15 +28,15 @@ class CityNameManager:
         """Renames a city depending on its owner"""
 
         # sName = city.getName()
-        if iNewOwner < con.iNumMajorPlayers:
-            cityName = tCityMap[iNewOwner][con.iMapMaxY - 1 - city.getY()][city.getX()]
+        if iNewOwner < Consts.iNumMajorPlayers:
+            cityName = tCityMap[iNewOwner][Consts.iMapMaxY - 1 - city.getY()][city.getX()]
             if cityName != "-1":
                 city.setName(unicode(cityName, "latin-1"), False)
 
     def lookupName(self, city, iPlayer):
         """Looks up a city name in another player's map"""
-        if iPlayer < con.iNumMajorPlayers:
-            cityName = tCityMap[iPlayer][con.iMapMaxY - 1 - city.getY()][city.getX()]
+        if iPlayer < Consts.iNumMajorPlayers:
+            cityName = tCityMap[iPlayer][Consts.iMapMaxY - 1 - city.getY()][city.getX()]
             if cityName == "-1":
                 return "Unknown"
             else:
