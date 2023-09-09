@@ -32,5 +32,5 @@ pre-commit install
 To interact with all existing Python modules, use the following command to populate the `PYTHONPATH` of your Python interpreter (relative to the project root):
 
 ```shell
-source ./export-paths.sh
+export PYTHONPATH=$(./export-paths.sh)
 ```
