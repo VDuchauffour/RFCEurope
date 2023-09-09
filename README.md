@@ -28,3 +28,9 @@ To ensure that you follow the development workflow, please setup the pre-commit 
 ```shell
 pre-commit install
 ```
+
+To interact with all existing Python modules, use the following command to populate the `PYTHONPATH` of your Python interpreter (relative to the project root):
+
+```shell
+source ./export-paths.sh
+```
