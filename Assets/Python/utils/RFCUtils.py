@@ -169,7 +169,7 @@ class RFCUtils:
 	#AIWars
 	def restorePeaceAI(self, iMinorCiv, bOpenBorders):
 		teamMinor = gc.getTeam(gc.getPlayer(iMinorCiv).getTeam())
-		for iActiveCiv in range( Consts.iNumActivePlayers ):
+		for iActiveCiv in range( Consts.iNumMajorPlayers ):
 			if gc.getPlayer(iActiveCiv).isAlive() and not gc.getPlayer(iActiveCiv).isHuman():
 				if teamMinor.isAtWar(iActiveCiv):
 					bActiveUnitsInIndependentTerritory = self.checkUnitsInEnemyTerritory(iActiveCiv, iMinorCiv)
@@ -182,7 +182,7 @@ class RFCUtils:
 	#AIWars
 	def restorePeaceHuman(self, iMinorCiv):
 		teamMinor = gc.getTeam(gc.getPlayer(iMinorCiv).getTeam())
-		for iActiveCiv in range( Consts.iNumActivePlayers ):
+		for iActiveCiv in range( Consts.iNumMajorPlayers ):
 			if gc.getPlayer(iActiveCiv).isHuman():
 				if gc.getPlayer(iActiveCiv).isAlive():
 					if teamMinor.isAtWar(iActiveCiv):
@@ -198,7 +198,7 @@ class RFCUtils:
 		for city in self.getCityList(iMinorCiv):
 			x = city.getX()
 			y = city.getY()
-			for iActiveCiv in range( Consts.iNumActivePlayers ):
+			for iActiveCiv in range( Consts.iNumMajorPlayers ):
 				if gc.getPlayer(iActiveCiv).isAlive() and not gc.getPlayer(iActiveCiv).isHuman() and not iActiveCiv == Consts.iPope:
 					if not teamMinor.isAtWar(iActiveCiv):
 						if iGameTurn > Consts.tBirth[iActiveCiv] + 20:
@@ -229,7 +229,7 @@ class RFCUtils:
 		for city in self.getCityList(iMinorCiv):
 			x = city.getX()
 			y = city.getY()
-			for iActiveCiv in range( Consts.iNumActivePlayers ):
+			for iActiveCiv in range( Consts.iNumMajorPlayers ):
 				if gc.getPlayer(iActiveCiv).isAlive() and not gc.getPlayer(iActiveCiv).isHuman() and not iActiveCiv == Consts.iPope:
 					# Absinthe: do not want to force the AI into these wars with WARPLAN_TOTAL too early
 					if iGameTurn > Consts.tBirth[iActiveCiv] + 40:
@@ -332,7 +332,7 @@ class RFCUtils:
 			unitType = unit.getUnitType()
 			if unit.getOwner() == iOldOwner:
 				unit.kill(False, Consts.iBarbarian)
-				if iNewOwner < Consts.iNumActivePlayers or unitType > xml.iSettler: # Absinthe: major players can even flip settlers (spawn/respawn mechanics)
+				if iNewOwner < Consts.iNumMajorPlayers or unitType > xml.iSettler: # Absinthe: major players can even flip settlers (spawn/respawn mechanics)
 					self.makeUnit(unitType, iNewOwner, (28, 0), 1)
 			# Absinthe: skip unit if from another player
 			else:

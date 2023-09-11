@@ -418,7 +418,7 @@ class CvRFCEventHandler:
         self.rnf.onCityBuilt(iOwner, city)
         tCity = (city.getX(), city.getY())
 
-        if iOwner < Consts.iNumActivePlayers:
+        if iOwner < Consts.iNumMajorPlayers:
             self.cnm.assignName(city)
 
         # Absinthe: merc notifications, after the city is named
@@ -431,8 +431,8 @@ class CvRFCEventHandler:
 
         # Rhye - delete culture of barbs and minor civs to prevent weird unhappiness
         pCurrent = gc.getMap().plot(city.getX(), city.getY())
-        for i in range(Consts.iNumTotalPlayers - Consts.iNumActivePlayers):
-            iMinorCiv = i + Consts.iNumActivePlayers
+        for i in range(Consts.iNumTotalPlayers - Consts.iNumMajorPlayers):
+            iMinorCiv = i + Consts.iNumMajorPlayers
             pCurrent.setCulture(iMinorCiv, 0, True)
         pCurrent.setCulture(Consts.iBarbarian, 0, True)
 

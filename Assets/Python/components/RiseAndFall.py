@@ -705,7 +705,7 @@ class RiseAndFall:
                         )
 
     def setEarlyLeaders(self):
-        for iPlayer in range(Consts.iNumActivePlayers):
+        for iPlayer in range(Consts.iNumMajorPlayers):
             if Consts.tEarlyLeaders[iPlayer] != Consts.tLeaders[iPlayer][0]:
                 if not gc.getPlayer(iPlayer).isHuman():
                     gc.getPlayer(iPlayer).setLeader(Consts.tEarlyLeaders[iPlayer])
@@ -1114,7 +1114,7 @@ class RiseAndFall:
     def collapseGeneric(self, iGameTurn):
         # Absinthe: collapses if number of cities is less than half than some turns ago
         lNumCitiesLastTime = Consts.l0ArrayMajor
-        for iCiv in range(Consts.iNumActivePlayers):
+        for iCiv in range(Consts.iNumMajorPlayers):
             pCiv = gc.getPlayer(iCiv)
             teamCiv = gc.getTeam(pCiv.getTeam())
             if pCiv.isAlive():
@@ -1546,7 +1546,7 @@ class RiseAndFall:
                         print("Considering city at: (x,y) ", x, y)
                         iOwner = city.getOwner()
                         if (
-                            iOwner >= Consts.iNumActivePlayers
+                            iOwner >= Consts.iNumMajorPlayers
                         ):  # if (iOwner == iBarbarian or iOwner == iIndependent or iOwner == iIndependent2): #remove in vanilla
                             cityList.append(tPlot)
                             # print (iDeadCiv, plot.getPlotCity().getName(), plot.getPlotCity().getOwner(), "1", cityList)

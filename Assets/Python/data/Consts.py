@@ -48,7 +48,6 @@ iKiev, iHungary, iSpain, iDenmark, iScotland, iPoland, iGenoa, iMorocco, iEnglan
 iAragon, iSweden, iPrussia, iLithuania, iAustria, iTurkey, iMoscow, iDutch, iPope) = range(iNumPlayers)
 
 iNumMajorPlayers = iNumPlayers
-iNumActivePlayers = iNumPlayers
 
 iIndependent = iNumPlayers
 iIndependent2 = iNumPlayers+1
