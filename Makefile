@@ -39,4 +39,5 @@ lint:
 
 # test the package
 test: clean-test
-	pytest -vv
+	python Tests/test_imports.py -v
+	python Tests/test_base_structures.py -v

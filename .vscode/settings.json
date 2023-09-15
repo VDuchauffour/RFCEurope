@@ -9,5 +9,22 @@
     }
   },
   "ruff.organizeImports": false,
-  "black-formatter.importStrategy": "fromEnvironment"
+  "black-formatter.importStrategy": "fromEnvironment",
+  "python.analysis.extraPaths": [
+    "~/.pyenv/versions",
+    "./Assets/Python",
+    "./Assets/Python/data",
+    "./Assets/Python/utils",
+    "./Assets/Python/components",
+    "./Assets/Python/EntryPoints",
+    "./Assets/Python/pyWB",
+    "./Assets/Python/screens",
+    "../../Assets/Python)",
+    "../../Assets/Python/EntryPoints)",
+    "../../Assets/Python/pyWB)",
+    "../../Assets/Python/Screens)",
+    "../../Assets/Python/pyUnit)",
+    "../../Assets/Python/pyHelper)",
+    "../../Assets/Python/PitBoss)"
+  ]
 }

@@ -1,3 +1,5 @@
+# coding: utf-8
+
 # fmt: off
 # Settler Maps
 tSettlersMaps = (

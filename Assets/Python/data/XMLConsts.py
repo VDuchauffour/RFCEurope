@@ -1,3 +1,5 @@
+# coding: utf-8
+
 # Rhye's and Fall of Civilization: Europe - XML Constants (separated the Consts.py file, as it got crowded)
 
 # Timeline of the mod, all important years to be references by year as opposed to hard-to-follow turn numbers
