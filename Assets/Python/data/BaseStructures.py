@@ -1,35 +1,10 @@
 from copy import copy
 
-from Enum import Enum, IntEnum
+from Enum import Enum
+from Errors import NotACallableError, OutputTypeError
 
 
-class NotACallableError(ValueError):
-    """Raised when `var` is not a function."""
-
-    def __init__(self, var):
-        self.var = var
-
-    def __str__(self):
-        return "`func` must be a callable, received %s" % type(self.var)
-
-
-class OutputTypeError(RuntimeError):
-    """Raised when the `output_type` of an object is not correct."""
-
-    def __init__(self, obj_classname, expected_output_type, received_output_type):
-        self.obj_classname = obj_classname
-        self.expected_output_type = expected_output_type
-        self.received_output_type = received_output_type
-
-    def __str__(self):
-        return "%s must be an `%s`, received %s" % (
-            self.obj_classname,
-            self.expected_output_type,
-            self.received_output_type,
-        )
-
-
-class OutputType(IntEnum):
+class OutputType(Enum):
     SINGLE = 0
     MULTIPLE = 1
 
@@ -97,7 +72,7 @@ class DataMapper(dict):
             raise NotACallableError(func)
 
         if self.output_type != OutputType.MULTIPLE:
-            raise OutputTypeError(self.__class__.__name__, OutputType.MULTIPLE, self.output_type)
+            raise OutputTypeError(OutputType.MULTIPLE, self.output_type)
 
         obj = copy(self)
         for key, value in obj.items():
