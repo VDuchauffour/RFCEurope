@@ -16,7 +16,7 @@ class NotTypeExpectedError(TypeError):
         self.received = received
 
     def __str__(self):
-        return "Must be an %s, received %s" % (
+        return "Must be a %s, received %s" % (
             self.expected,
             self.received,
         )
