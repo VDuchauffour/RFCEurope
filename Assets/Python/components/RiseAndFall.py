@@ -11,6 +11,7 @@ import Religions
 import Victory
 from StoredData import sd
 import Crusades
+from MiscData import WORLD_WIDTH, WORLD_HEIGHT
 
 
 ################
@@ -1857,7 +1858,7 @@ class RiseAndFall:
         # 				indX = indepCity.getX()
         # 				indY = indepCity.getY()
         # 				tCitySpot = ( indX, indY );
-        # 				if gc.getPlayer(iDeadCiv).getSettlersMaps( Consts.iMapMaxY-indY-1, indX ) >= 90:
+        # 				if gc.getPlayer(iDeadCiv).getSettlersMaps( WORLD_HEIGHT-indY-1, indX ) >= 90:
         # 					if tCitySpot not in lCityList and indepCity not in colonyList:
         # 						colonyList.append(indepCity)
         # if colonyList:

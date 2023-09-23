@@ -7,6 +7,7 @@ import XMLConsts as xml
 import RFCUtils
 import RFCEMaps
 from StoredData import sd
+from MiscData import WORLD_WIDTH, WORLD_HEIGHT
 
 # globals
 gc = CyGlobalContext()
@@ -21,7 +22,6 @@ iMinIntervalLate = 40
 iMaxIntervalLate = 60
 iThreshold = 100
 iMinValue = 30
-
 
 
 class AIWars:
@@ -183,10 +183,10 @@ class AIWars:
     ##	def initArray(self):
     ##		for k in range( iNumPlayers ):
     ##			grid = []
-    ##			for j in range( Consts.iMapMaxY ):
+    ##			for j in range( WORLD_HEIGHT ):
     ##				line = []
-    ##				for i in range( Consts.iMapMaxX ):
-    ##					line.append( gc.getPlayer(iCiv).getSettlersMaps( Consts.iMapMaxY-j-1, i ) )
+    ##				for i in range( WORLD_WIDTH ):
+    ##					line.append( gc.getPlayer(iCiv).getSettlersMaps( WORLD_HEIGHT-j-1, i ) )
     ##				grid.append( line )
     ##			self.lSettlersMap.append( grid )
     ##		print self.lSettlersMap
@@ -269,7 +269,7 @@ class AIWars:
             iOwner = gc.getMap().plot(i, j).getOwner()
             if 0 <= iOwner < Consts.iNumTotalPlayers and iOwner != iCiv:
                 if lTargetCivs[iOwner] > 0:
-                    iValue = RFCEMaps.tWarsMap[iCiv][Consts.iMapMaxY - 1 - j][i]
+                    iValue = RFCEMaps.tWarsMap[iCiv][WORLD_HEIGHT - 1 - j][i]
                     if iOwner in [
                         Consts.iIndependent,
                         Consts.iIndependent2,

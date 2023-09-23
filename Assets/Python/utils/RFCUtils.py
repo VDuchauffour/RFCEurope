@@ -3,12 +3,13 @@
 from CvPythonExtensions import *
 import CvUtil
 import CvScreenEnums #Absinthe
-import RFCEMaps 
+import RFCEMaps
 import PyHelpers
 import Popup #Absinthe
 import Consts
 import XMLConsts as xml
 from StoredData import sd
+from MiscData import WORLD_WIDTH, WORLD_HEIGHT
 
 # globals
 gc = CyGlobalContext()
@@ -204,23 +205,23 @@ class RFCUtils:
 						if iGameTurn > Consts.tBirth[iActiveCiv] + 20:
 							# Absinthe: probably better to use war maps instead of settler maps, but let the AI concentrate on it's core area first
 							#			maybe we should use both settler and war maps? distance calculations would be great, but use too much iterations
-							#if (gc.getPlayer(iActiveCiv).getSettlersMaps( Consts.iMapMaxY-y-1, x ) >= 90 or gc.getPlayer(iActiveCiv).getSettlersMaps( Consts.iMapMaxY-y-1, x ) == -1):
-							#if (gc.getPlayer(iActiveCiv).getWarsMaps( Consts.iMapMaxY-y-1, x ) >= 2):
+							#if (gc.getPlayer(iActiveCiv).getSettlersMaps( WORLD_HEIGHT-y-1, x ) >= 90 or gc.getPlayer(iActiveCiv).getSettlersMaps( WORLD_HEIGHT-y-1, x ) == -1):
+							#if (gc.getPlayer(iActiveCiv).getWarsMaps( WORLD_HEIGHT-y-1, x ) >= 2):
 							iRndNum = gc.getGame().getSorenRandNum( 10, 'random warmap chance')
 							teamActive = gc.getTeam(gc.getPlayer(iActiveCiv).getTeam())
-							iWarValue = gc.getPlayer(iActiveCiv).getWarsMaps( Consts.iMapMaxY-y-1, x )
+							iWarValue = gc.getPlayer(iActiveCiv).getWarsMaps( WORLD_HEIGHT-y-1, x )
 							if iWarValue >= 10:
 								# 100% chance for cities with high war map value
 								teamActive.declareWar(iMinorCiv, False, WarPlanTypes.WARPLAN_LIMITED)
-								print ("minorWars", city.getName(), gc.getPlayer(iActiveCiv).getCivilizationAdjective(0), gc.getPlayer(iActiveCiv).getSettlersMaps( Consts.iMapMaxY-y-1, x ), gc.getPlayer(iActiveCiv).getWarsMaps( Consts.iMapMaxY-y-1, x ), "WARPLAN_LIMITED")
+								print ("minorWars", city.getName(), gc.getPlayer(iActiveCiv).getCivilizationAdjective(0), gc.getPlayer(iActiveCiv).getSettlersMaps( WORLD_HEIGHT-y-1, x ), gc.getPlayer(iActiveCiv).getWarsMaps( WORLD_HEIGHT-y-1, x ), "WARPLAN_LIMITED")
 							elif iWarValue >= 6:
 								if iRndNum < 7: # 70% chance for cities with medium war map value
 									teamActive.declareWar(iMinorCiv, False, WarPlanTypes.WARPLAN_LIMITED)
-									print ("minorWars", city.getName(), gc.getPlayer(iActiveCiv).getCivilizationAdjective(0), gc.getPlayer(iActiveCiv).getSettlersMaps( Consts.iMapMaxY-y-1, x ), gc.getPlayer(iActiveCiv).getWarsMaps( Consts.iMapMaxY-y-1, x ), "WARPLAN_LIMITED")
+									print ("minorWars", city.getName(), gc.getPlayer(iActiveCiv).getCivilizationAdjective(0), gc.getPlayer(iActiveCiv).getSettlersMaps( WORLD_HEIGHT-y-1, x ), gc.getPlayer(iActiveCiv).getWarsMaps( WORLD_HEIGHT-y-1, x ), "WARPLAN_LIMITED")
 							elif iWarValue >= 2:
 								if iRndNum < 3: # 30% chance for cities with low war map value
 									teamActive.declareWar(iMinorCiv, False, WarPlanTypes.WARPLAN_LIMITED)
-									print ("minorWars", city.getName(), gc.getPlayer(iActiveCiv).getCivilizationAdjective(0), gc.getPlayer(iActiveCiv).getSettlersMaps( Consts.iMapMaxY-y-1, x ), gc.getPlayer(iActiveCiv).getWarsMaps( Consts.iMapMaxY-y-1, x ), "WARPLAN_LIMITED")
+									print ("minorWars", city.getName(), gc.getPlayer(iActiveCiv).getCivilizationAdjective(0), gc.getPlayer(iActiveCiv).getSettlersMaps( WORLD_HEIGHT-y-1, x ), gc.getPlayer(iActiveCiv).getWarsMaps( WORLD_HEIGHT-y-1, x ), "WARPLAN_LIMITED")
 
 	#AIWars
 	# Absinthe: declare war sooner / more frequently if an Indy city has huge value on the civ's war map
@@ -234,10 +235,10 @@ class RFCUtils:
 					# Absinthe: do not want to force the AI into these wars with WARPLAN_TOTAL too early
 					if iGameTurn > Consts.tBirth[iActiveCiv] + 40:
 						if not teamMinor.isAtWar(iActiveCiv):
-							if gc.getPlayer(iActiveCiv).getWarsMaps( Consts.iMapMaxY-y-1, x ) == 16:
+							if gc.getPlayer(iActiveCiv).getWarsMaps( WORLD_HEIGHT-y-1, x ) == 16:
 								teamActive = gc.getTeam(gc.getPlayer(iActiveCiv).getTeam())
 								teamActive.declareWar(iMinorCiv, False, WarPlanTypes.WARPLAN_TOTAL)
-								print ("minorWars", city.getName(), gc.getPlayer(iActiveCiv).getCivilizationAdjective(0), gc.getPlayer(iActiveCiv).getSettlersMaps( Consts.iMapMaxY-y-1, x ), gc.getPlayer(iActiveCiv).getWarsMaps( Consts.iMapMaxY-y-1, x ), "WARPLAN_TOTAL")
+								print ("minorWars", city.getName(), gc.getPlayer(iActiveCiv).getCivilizationAdjective(0), gc.getPlayer(iActiveCiv).getSettlersMaps( WORLD_HEIGHT-y-1, x ), gc.getPlayer(iActiveCiv).getWarsMaps( WORLD_HEIGHT-y-1, x ), "WARPLAN_TOTAL")
 
 	#RiseAndFall, Stability
 	def calculateDistance(self, x1, y1, x2, y2):
@@ -260,7 +261,7 @@ class RFCUtils:
 	#RiseAndFall, Religions, UniquePowers
 	def makeUnit(self, iUnit, iPlayer, tCoords, iNum): #by LOQ
 		'Makes iNum units for player iPlayer of the type iUnit at tCoords.'
-		#if ( tCoords[0] < 0 or tCoords[0] >= Consts.iMapMaxX or tCoords[1] < 0 or tCoords[1] >= Consts.iMapMaxY ):
+		#if ( tCoords[0] < 0 or tCoords[0] >= WORLD_WIDTH or tCoords[1] < 0 or tCoords[1] >= WORLD_HEIGHT ):
 		#	print(" MAKING UNIT OFF THE FACE OF EUROPE: ",tCoords )
 		pPlayer = gc.getPlayer(iPlayer)
 		for i in range(iNum):
@@ -656,9 +657,9 @@ class RFCUtils:
 				if city.getPreviousOwner() >= Consts.iNumMajorPlayers:
 					iMinor = city.getPreviousOwner()
 					iDen = 25
-					if gc.getPlayer(iMajorCiv).getSettlersMaps( Consts.iMapMaxY-y-1, x ) >= 400:
+					if gc.getPlayer(iMajorCiv).getSettlersMaps( WORLD_HEIGHT-y-1, x ) >= 400:
 						iDen = 10
-					elif gc.getPlayer(iMajorCiv).getSettlersMaps( Consts.iMapMaxY-y-1, x ) >= 150:
+					elif gc.getPlayer(iMajorCiv).getSettlersMaps( WORLD_HEIGHT-y-1, x ) >= 150:
 						iDen = 15
 
 					# Absinthe: changeCulture instead of setCulture, otherwise previous culture will be lost
@@ -771,7 +772,7 @@ class RFCUtils:
 			self.cultureManager(tCoords, 50, iNewCiv, iCiv, False, False, False)
 			self.flipCity(tCoords, 0, 0, iNewCiv, [iCiv]) #by trade because by conquest may raze the city
 			#city.setHasRealBuilding(Consts.iPlague, False) #buggy
-		self.flipUnitsInArea([0,0], [Consts.iMapMaxX,Consts.iMapMaxY], iNewCiv, iCiv, False, True)
+		self.flipUnitsInArea([0,0], [WORLD_WIDTH,WORLD_HEIGHT], iNewCiv, iCiv, False, True)
 
 		self.resetUHV(iCiv)
 		self.setLastTurnAlive(iCiv, gc.getGame().getGameTurn())
@@ -855,8 +856,8 @@ class RFCUtils:
 				self.flipUnitsInArea((iX-1, iY-1), (iX+1, iY+1), iNewCiv, iCiv, False, True)
 		if not bAssignOneCity:
 			# flipping units may cause a bug: if a unit is inside another civ's city when it becomes independent or barbarian, may raze it
-			#self.flipUnitsInArea((0,0), (Consts.iMapMaxX, Consts.iMapMaxY), iNewCiv1, iCiv, False, True)
-			self.killUnitsInArea((0, 0), (Consts.iMapMaxX, Consts.iMapMaxY), iCiv)
+			#self.flipUnitsInArea((0,0), (WORLD_WIDTH, WORLD_HEIGHT), iNewCiv1, iCiv, False, True)
+			self.killUnitsInArea((0, 0), (WORLD_WIDTH, WORLD_HEIGHT), iCiv)
 			self.resetUHV(iCiv)
 
 			self.setLastTurnAlive(iCiv, gc.getGame().getGameTurn())
@@ -1535,11 +1536,11 @@ class RFCUtils:
 		return iCargoShips
 
 	def getPlotList(self, tTL, tBR, tExceptions=()):
-		return [(x, y) for x in range(tTL[0], tBR[0]+1) for y in range(tTL[1], tBR[1]+1) if 0 <= x < Consts.iMapMaxX and 0 <= y < Consts.iMapMaxY and (x, y) not in tExceptions]
+		return [(x, y) for x in range(tTL[0], tBR[0]+1) for y in range(tTL[1], tBR[1]+1) if 0 <= x < WORLD_WIDTH and 0 <= y < WORLD_HEIGHT and (x, y) not in tExceptions]
 
 	def surroundingPlots(self, tPlot, iRadius=1, filter=lambda (x, y): False):
 		x, y = tPlot
-		return [(i , j) for i in range(x-iRadius, x+iRadius+1) for j in range(y-iRadius, y+iRadius+1) if 0 <= i < Consts.iMapMaxX and 0 <= j < Consts.iMapMaxY and not filter((i, j))]
+		return [(i , j) for i in range(x-iRadius, x+iRadius+1) for j in range(y-iRadius, y+iRadius+1) if 0 <= i < WORLD_WIDTH and 0 <= j < WORLD_HEIGHT and not filter((i, j))]
 
 	def getCityList(self, iCiv):
 		if iCiv is None:
@@ -1555,7 +1556,7 @@ class RFCUtils:
 		return xml.iBeginWonders <= iBuilding <= xml.iEndWonders
 
 	def getWorldPlotsList(self):
-		return [(x, y) for x in range(Consts.iMapMaxX) for y in range(Consts.iMapMaxY)]
+		return [(x, y) for x in range(WORLD_WIDTH) for y in range(WORLD_HEIGHT)]
 
 	def getRandomByWeight(self, lList):
 		if not lList:

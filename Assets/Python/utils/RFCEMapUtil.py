@@ -8,6 +8,7 @@ import CvScreenEnums
 import RFCEMaps
 import RFCUtils
 import Consts
+from MiscData import WORLD_WIDTH, WORLD_HEIGHT
 
 
 gc = CyGlobalContext()
@@ -20,7 +21,7 @@ engine = CyEngine()
 # iMapMaxY = map.getGridHeight()
 # iMapMaxX = map.getGridWidth()
 # iNumPlots = map.numPlots()
-iNumPlots = Consts.iMapMaxX * Consts.iMapMaxY
+iNumPlots = WORLD_WIDTH * WORLD_HEIGHT
 
 # Reserved AreaBorderLayers: 100 - 260(100 to iAreaBorderLayerProvinceOffset+iNumProvinces)
 iNumProvinces = 150
@@ -100,14 +101,14 @@ class RFCEMapManager:
         length = len(aMap)
         aList = [None] * length
         for i in range(length):
-            aList[i] = [None] * Consts.iMapMaxY
-            for j in range(Consts.iMapMaxY):
+            aList[i] = [None] * WORLD_HEIGHT
+            for j in range(WORLD_HEIGHT):
                 aList[i][j] = list(aMap[i][j])
         return aList
 
     def convertProvinceMap(self, aMap):
-        aList = [None] * Consts.iMapMaxY
-        for i in range(Consts.iMapMaxY):
+        aList = [None] * WORLD_HEIGHT
+        for i in range(WORLD_HEIGHT):
             aList[i] = list(aMap[i])
         return aList
 
@@ -297,7 +298,7 @@ class RFCEMapManager:
         return 0
 
     def swapY(self, iY):
-        return Consts.iMapMaxY - iY - 1
+        return WORLD_HEIGHT - iY - 1
 
 
 class RFCEMapVisualizer:
@@ -337,8 +338,8 @@ class RFCEMapVisualizer:
 
     def showSettlerMap(self):
         self.resetMinimap(True)
-        for i in range(Consts.iMapMaxX):
-            for j in range(Consts.iMapMaxY):
+        for i in range(WORLD_WIDTH):
+            for j in range(WORLD_HEIGHT):
                 pPlot = map.plot(i, j)
                 if not pPlot.isNone():
                     iValue = self.mapManager.getSettlerValue(self.iPlayer, pPlot)
@@ -359,8 +360,8 @@ class RFCEMapVisualizer:
 
     def showWarMap(self):
         self.resetMinimap(True)
-        for i in range(Consts.iMapMaxX):
-            for j in range(Consts.iMapMaxY):
+        for i in range(WORLD_WIDTH):
+            for j in range(WORLD_HEIGHT):
                 pPlot = map.plot(i, j)
                 if not pPlot.isNone():
                     iValue = self.mapManager.getWarValue(self.iPlayer, pPlot)
@@ -380,8 +381,8 @@ class RFCEMapVisualizer:
                 CyEngine().clearAreaBorderPlots(shade[2])
 
     def showCityNames(self):
-        for i in range(Consts.iMapMaxX):
-            for j in range(Consts.iMapMaxY):
+        for i in range(WORLD_WIDTH):
+            for j in range(WORLD_HEIGHT):
                 pPlot = map.plot(i, j)
                 self.showCityName(pPlot)
 
@@ -524,8 +525,8 @@ class RFCEMapVisualizer:
         self.hideNormalArea()
 
     def removeLandMarks(self):
-        for i in range(Consts.iMapMaxX):
-            for j in range(Consts.iMapMaxY):
+        for i in range(WORLD_WIDTH):
+            for j in range(WORLD_HEIGHT):
                 pPlot = map.plot(i, j)
                 if not pPlot.isNone():
                     CyEngine().removeLandmark(pPlot)
@@ -548,8 +549,8 @@ class RFCEMapVisualizer:
         mainScreen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
         mainScreen.minimapClearAllFlashingTiles()
         if clearAll:
-            for i in range(Consts.iMapMaxX):
-                for j in range(Consts.iMapMaxY):
+            for i in range(WORLD_WIDTH):
+                for j in range(WORLD_HEIGHT):
                     pPlot = map.plot(i, j)
                     if not pPlot.isNone():
                         mainScreen.setMinimapColor(
@@ -678,11 +679,11 @@ class RFCEMapExporter:
             file.write("\n(")
             for iX in range(len(aMap[iY])):
                 sstr = sFormat % aMap[iY][iX]
-                if iX < Consts.iMapMaxX - 1:
+                if iX < WORLD_WIDTH - 1:
                     sstr += ","
                 file.write(sstr)
             file.write(")")
-            if iY < Consts.iMapMaxY - 1:
+            if iY < WORLD_HEIGHT - 1:
                 file.write(",")
         return
 

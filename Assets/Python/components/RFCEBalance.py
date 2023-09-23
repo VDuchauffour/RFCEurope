@@ -3,8 +3,9 @@
 from CvPythonExtensions import *
 import Consts
 import XMLConsts as xml
-import RFCEMaps 
+import RFCEMaps
 import RFCUtils
+from MiscData import WORLD_WIDTH, WORLD_HEIGHT
 
 gc = CyGlobalContext()  # LOQ
 utils = RFCUtils.RFCUtils()
@@ -1073,8 +1074,8 @@ class RFCEBalance:
     def preMapsNSizes(self):
         # settlersMaps, DO NOT CHANGE THIS CODE
         gc.setSizeNPlayers(
-            Consts.iMapMaxX,
-            Consts.iMapMaxY,
+            WORLD_WIDTH,
+            WORLD_HEIGHT,
             Consts.iNumPlayers,
             Consts.iNumTotalPlayers,
             xml.iNumTechs,
@@ -1082,13 +1083,13 @@ class RFCEBalance:
             xml.iNumReligions,
         )
         for i in range(Consts.iNumPlayers):
-            for y in range(Consts.iMapMaxY):
-                for x in range(Consts.iMapMaxX):
+            for y in range(WORLD_HEIGHT):
+                for x in range(WORLD_WIDTH):
                     gc.setSettlersMap(i, y, x, RFCEMaps.tSettlersMaps[i][y][x])
                     gc.setWarsMap(i, y, x, RFCEMaps.tWarsMaps[i][y][x])
 
-        for y in range(Consts.iMapMaxY):
-            for x in range(Consts.iMapMaxX):
+        for y in range(WORLD_HEIGHT):
+            for x in range(WORLD_WIDTH):
                 if RFCEMaps.tProvinceMap[y][x] > -1:
                     # "no province" of ocean is settled different than -1, set only non-negative values,
                     # the C++ map is initialized to "no-province" by setSizeNPlayers(...)
