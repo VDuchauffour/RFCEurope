@@ -174,6 +174,11 @@ class _TestEnum(Enum):
     B = 1
 
 
+class _TestEnum2(Enum):
+    A = 0
+    B = 1
+
+
 class TestEnumDataMapper(unittest.TestCase):
     def setUp(self):
         self.data = EnumDataMapper({_TestEnum.A: "0"})
@@ -260,6 +265,24 @@ class TestEnumDataMapper(unittest.TestCase):
         self.assertEqual(self.data.filter(lambda x: x != "0"), EnumDataMapper({}))
         self.assertEqual(self.data_multiple.filter(lambda x: "3" in x), EnumDataMapper({}))
 
+    def test_sort(self):
+        self.assertEqual(
+            EnumDataMapper({_TestEnum.B: "0", _TestEnum.A: "0"}).sort(),
+            EnumDataMapper({_TestEnum.A: "0", _TestEnum.B: "0"}),
+        )
+        self.assertEqual(
+            EnumDataMapper({_TestEnum.B: "0", _TestEnum2.A: "0"}).sort(),
+            EnumDataMapper({_TestEnum.B: "0", _TestEnum2.A: "0"}),
+        )
+        self.assertEqual(
+            EnumDataMapper({_TestEnum.B: ["0", "1"], _TestEnum.A: ["0", "1"]}).sort(),
+            EnumDataMapper({_TestEnum.A: ["0", "1"], _TestEnum.B: ["0", "1"]}),
+        )
+        self.assertEqual(
+            EnumDataMapper({_TestEnum.B: ["0", "1"], _TestEnum2.A: ["0", "1"]}).sort(),
+            EnumDataMapper({_TestEnum.B: ["0", "1"], _TestEnum2.A: ["0", "1"]}),
+        )
+
 
 class _TestEnumDataMapper(EnumDataMapper):
     BASE_CLASS = _TestEnum
@@ -306,15 +329,9 @@ class TestInheritEnumDataMapper(unittest.TestCase):
             self.data_multiple[0] = ["0", "1"]
 
         def _wrong_setitem_other_enum():
-            class _TestEnum2(Enum):
-                A = 0
-
             self.data[_TestEnum2.A] = "0"
 
         def _wrong_setitem_other_enum_multiple():
-            class _TestEnum2(Enum):
-                A = 0
-
             self.data_multiple[_TestEnum2.A] = "0"
 
         self.data[_TestEnum.A] = "0"
@@ -365,6 +382,16 @@ class TestInheritEnumDataMapper(unittest.TestCase):
         self.assertRaises(NotACallableError, _wrong_callable)
         self.assertEqual(self.data.filter(lambda x: x != "0"), _TestEnumDataMapper({}))
         self.assertEqual(self.data_multiple.filter(lambda x: "3" in x), _TestEnumDataMapper({}))
+
+    def test_sort(self):
+        self.assertEqual(
+            _TestEnumDataMapper({_TestEnum.B: "0", _TestEnum.A: "0"}).sort(),
+            _TestEnumDataMapper({_TestEnum.A: "0", _TestEnum.B: "0"}),
+        )
+        self.assertEqual(
+            _TestEnumDataMapper({_TestEnum.B: ["0", "1"], _TestEnum.A: ["0", "1"]}).sort(),
+            _TestEnumDataMapper({_TestEnum.A: ["0", "1"], _TestEnum.B: ["0", "1"]}),
+        )
 
 
 if __name__ == "__main__":

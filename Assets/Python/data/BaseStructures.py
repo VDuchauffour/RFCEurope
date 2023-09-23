@@ -111,3 +111,10 @@ class EnumDataMapper(DataMapper):
                     _value = [value]
                 obj[obj.BASE_CLASS[key]] = _value
         return obj
+
+    def sort(self):
+        """Sort the mapper with the inner order of its `BASE_CLASS` enum. If multiple enums are present, sorting makes no changes."""
+        obj = copy(self)  # type: ignore
+        for m in obj.BASE_CLASS._member_names_:
+            obj[obj.BASE_CLASS[m]] = obj[obj.BASE_CLASS[m]]
+        return obj
