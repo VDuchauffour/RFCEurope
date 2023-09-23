@@ -10,13 +10,13 @@ This folder contains the following elements:
 
 The Python scripts `./Tools/WB2BMP.py` parse a `WBSave` and generate differents maps.
 
-This scipts need at least Python >= 3.9 and the dependency `Pillow`.
+This script need at least Python >= 3.9 and the dependency `Pillow`.
 
 Exemple of usage:
 
 ```python
-pip instll Pillow
-python Tools/map_renderer.py -f ../PrivateMaps/RFCEurope\ 1200AD.CivBeyondSwordWBSave -d Maps/
+pip install Pillow
+python Docs/Tools/map_renderer.py -f ./PrivateMaps/RFCEurope\ 1200AD.CivBeyondSwordWBSave -d Docs/Maps
 ```
 
 Here the full help message of the script.

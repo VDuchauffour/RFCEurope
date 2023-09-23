@@ -1,29 +1,21 @@
+from __future__ import annotations
 import argparse
 import re
 from dataclasses import dataclass
-from itertools import product
 from pathlib import Path
 from random import randint
 
 from PIL import Image, ImageOps
 
-from constants import (
-    broader_areas_br,
-    broader_areas_tl,
-    core_areas_br,
-    core_areas_tl,
-    extra_plots,
-    name_civ,
-    normal_areas_br,
-    normal_areas_substract,
-    normal_areas_tl,
-)
+from LocationsData import CIV_CORE_AREA, CIV_BROADER_AREA, CIV_NORMAL_AREA
+from CoreTypes import Civ
 
 DEFAULT_COLORS = {
-    "peak": (84, 84, 84),
+    "base": (255, 140, 0),  # (0, 128, 0),
+    "peak": (128, 0, 0),
     "hill": (163, 125, 34),
-    "ocean": (0, 0, 128),
-    "coast": (0, 0, 255),
+    "ocean": (128, 255, 255),  # (0, 0, 128),
+    "coast": (128, 255, 255),  # (0, 0, 255),
     "river": (0, 140, 255),
     "grass": (0, 155, 55),
     "desert": (255, 255, 168),
@@ -70,21 +62,15 @@ class CivIVMap:
 
     @property
     def all_features(self):
-        return list(
-            filter(lambda x: x is not None, set(plot.feature for plot in self.plots))
-        )
+        return list(filter(lambda x: x is not None, set(plot.feature for plot in self.plots)))
 
     @property
     def all_terrains(self):
-        return list(
-            filter(lambda x: x is not None, set(plot.terrain for plot in self.plots))
-        )
+        return list(filter(lambda x: x is not None, set(plot.terrain for plot in self.plots)))
 
     @property
     def all_bonuses(self):
-        return list(
-            filter(lambda x: x is not None, set(plot.bonus for plot in self.plots))
-        )
+        return list(filter(lambda x: x is not None, set(plot.bonus for plot in self.plots)))
 
 
 @dataclass
@@ -96,7 +82,7 @@ class ElementColor:
 class ColorsPicker:
     def __init__(self, map: CivIVMap):
         self.items = map.all_features + map.all_terrains + map.all_bonuses
-        self.items += ["peak", "hill", "river"]
+        self.items += ["peak", "hill", "river", "base"]
         self.colors = self.init_colors()
 
     @staticmethod
@@ -166,12 +152,12 @@ class MapRenderer:
         self.colors = ColorsPicker(map).colors
         self.output_format = output_format
         self.upscale_factor = upscale_factor
-        self.base_img = Image.new("RGB", (self.map.width, self.map.height), (0, 128, 0))
+        self.base_img = Image.new(
+            "RGB", (self.map.width, self.map.height), self.get_colors("base")
+        )
 
     @staticmethod
-    def draw(
-        img: Image.Image, plots: list[Plot], color: tuple[int, int, int]
-    ) -> Image.Image:
+    def draw(img: Image.Image, plots: list[Plot], color: tuple[int, int, int]) -> Image.Image:
         for plot in plots:
             img.putpixel((plot.x, plot.y), color)
         return img
@@ -188,9 +174,7 @@ class MapRenderer:
         self, img: Image.Image, condition: str, patterns: list[str]
     ) -> Image.Image:
         for pattern in patterns:
-            plots = [
-                plot for plot in self.map.plots if getattr(plot, condition) == pattern
-            ]
+            plots = [plot for plot in self.map.plots if getattr(plot, condition) == pattern]
             img = MapRenderer.draw(img, plots, self.get_colors(pattern))
         return img
 
@@ -254,87 +238,25 @@ class MapRenderer:
         img = self.upscale_map(img)
         self.save_drawing(img, output_path, "bonuses_map")
 
+    def normalize_plot(self, plots):
+        _plots = []
+        for plot in plots:
+            _plots.append(Plot(plot[0], self.map.height - plot[1] - 1, "", "", "", "", ""))
+        return _plots
+
     def draw_spawning_map(self, output_path: str):
-        assert (
-            len(name_civ)
-            == len(core_areas_tl)
-            == len(core_areas_br)
-            == len(extra_plots)
-            == len(normal_areas_tl)
-            == len(normal_areas_br)
-            == len(broader_areas_tl)
-            == len(broader_areas_br)
-        )
-        core_areas_ = [
-            (bl[0], self.map.height - tr[1], tr[0], self.map.height - bl[1])
-            for bl, tr in zip(core_areas_tl, core_areas_br)
-        ]
-        core_areas = []
-        for i, country_area in enumerate(core_areas_):
-            areas = list(
-                product(
-                    range(country_area[0], country_area[2]),
-                    range(country_area[1], country_area[3]),
-                )
-            )
-            core_areas.append(
-                list(map(lambda p: Plot(p[0], p[1], "", "", "", "", ""), areas))
-            )
-            for plot in extra_plots[i]:
-                try:
-                    core_areas += Plot(plot[i][0], plot[i][1], "", "", "", "", "")
-                except:
-                    pass
-        normal_areas_ = [
-            (bl[0], self.map.height - tr[1], tr[0], self.map.height - bl[1])
-            for bl, tr in zip(normal_areas_tl, normal_areas_br)
-        ]
-        normal_areas = []
-        for i, country_area in enumerate(normal_areas_):
-            areas = list(
-                product(
-                    range(country_area[0], country_area[2]),
-                    range(country_area[1], country_area[3]),
-                )
-            )
-            areas = [
-                area
-                for area in areas
-                for s in normal_areas_substract[i]
-                if area[0] != s[0] and area[1] != s[1]
-            ]
-            # l = [for s in normal_areas_substract[i]]
-            # if s[0] != x and s[1] != y
-
-            normal_areas.append(
-                list(map(lambda p: Plot(p[0], p[1], "", "", "", "", ""), areas))
-            )
-
-        broader_areas_ = [
-            (bl[0], self.map.height - tr[1], tr[0], self.map.height - bl[1])
-            for bl, tr in zip(broader_areas_tl, broader_areas_br)
-        ]
-        broader_areas = []
-        for i, country_area in enumerate(broader_areas_):
-            areas = list(
-                product(
-                    range(country_area[0], country_area[2]),
-                    range(country_area[1], country_area[3]),
-                )
-            )
-            broader_areas.append(
-                list(map(lambda p: Plot(p[0], p[1], "", "", "", "", ""), areas))
-            )
-        for i, country in enumerate(name_civ):
-            img = self.base_img.copy()
-            img = ImageOps.flip(img)
-            img = self.draw(img, broader_areas[i], (230, 0, 200))
-            img = self.draw(img, normal_areas[i], (200, 230, 0))
-            img = self.draw(img, core_areas[i], (0, 200, 230))
-            img = ImageOps.flip(img)
-            img = self.apply_water(img)
-            img = self.upscale_map(img)
-            self.save_drawing(img, output_path + "/spawning_areas", f"{country}_map")
+        for i, civ in enumerate(Civ):
+            if civ < 29:
+                img = self.base_img.copy()
+                img = ImageOps.flip(img)
+                img = self.draw(img, self.normalize_plot(CIV_BROADER_AREA[civ]), (255, 255, 0))
+                img = self.draw(img, self.normalize_plot(CIV_NORMAL_AREA[civ]), (0, 255, 0))
+                img = self.draw(img, self.normalize_plot(CIV_CORE_AREA[civ]), (0, 100, 0))
+                img = ImageOps.flip(img)
+                img = self.apply_water(img)
+                img = self.draw_plot_properties(img, "is_peak")
+                img = self.upscale_map(img)
+                self.save_drawing(img, output_path + "/spawning_areas", f"{civ.name}_map")
 
     def run(
         self,
@@ -360,9 +282,7 @@ class MapRenderer:
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "-f", "--file", action="store", type=str, help="WBSave to convert."
-    )
+    parser.add_argument("-f", "--file", action="store", type=str, help="WBSave to convert.")
     parser.add_argument(
         "-d", "--destination", action="store", type=str, help="Destination folder."
     )
