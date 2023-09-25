@@ -916,7 +916,7 @@ class Area(Enum):
     EXCEPTION_TILES = 3
 
 
-class AreaTypes(Enum):
+class AreaTypes(IntEnum):
     CORE = 0
     NORMAL = 1
     BROADER = 2
