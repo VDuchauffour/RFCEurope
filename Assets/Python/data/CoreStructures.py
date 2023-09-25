@@ -247,6 +247,11 @@ class Civilization(object):
         return gc.getTeam(self.id)
 
 
+def get_civ_by_id(id):
+    """Return a Civ member by its index."""
+    return Civ[Civ._member_names_[id]]
+
+
 class Civilizations(list):
     """A simple class to handle a set of civilizations."""
 
