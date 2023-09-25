@@ -13,8 +13,16 @@ from CoreTypes import (
     Area,
 )
 from BaseStructures import EnumDataMapper
-from CoreStructures import ScenarioDataMapper, Tile, CivDataMapper, TilesFactory, merge_tiles
-from MiscData import WORLD_WIDTH, WORLD_HEIGHT
+from CoreStructures import (
+    ScenarioDataMapper,
+    Tile,
+    CivDataMapper,
+    TilesFactory,
+    concat_tiles,
+    normalize_tiles,
+    parse_area_dict,
+)
+from MiscData import WORLD_HEIGHT, WORLD_WIDTH
 
 
 JERUSALEM = Tile((93, 5))
@@ -400,150 +408,158 @@ COLONY_LOCATIONS = EnumDataMapper(
 
 LAKE_LOCATIONS = EnumDataMapper(
     {
-        Lake.LOUGH_NEAGH: [Tile((32, 61))],
-        Lake.LAKE_BALATON: [Tile((64, 36))],
+        Lake.LOUGH_NEAGH: [(32, 61)],
+        Lake.LAKE_BALATON: [(64, 36)],
         Lake.DEAD_SEA: [
-            Tile((94, 4)),
-            Tile((94, 5)),
+            (94, 4),
+            (94, 5),
         ],
-        Lake.SEA_OF_GALILEE: [Tile((95, 8))],
+        Lake.SEA_OF_GALILEE: [(95, 8)],
         Lake.LAKE_TUZ: [
-            Tile((88, 19)),
-            Tile((89, 19)),
+            (88, 19),
+            (89, 19),
         ],
-        Lake.LAKE_EGIRDIR: [Tile((85, 18))],
-        Lake.LAKE_BEYSEHIR: [Tile((86, 17))],
-        Lake.LAKE_GARDA: [Tile((54, 37))],
-        Lake.LAKE_GENEVA: [Tile((49, 39))],
-        Lake.LAKE_CONSTANCE: [Tile((53, 40))],
-        Lake.LAKE_SKADAR: [Tile((66, 27))],
-        Lake.LAKE_OHRID: [Tile((69, 23))],
-        Lake.LAKE_SNIARDWY: [Tile((71, 52))],
+        Lake.LAKE_EGIRDIR: [(85, 18)],
+        Lake.LAKE_BEYSEHIR: [(86, 17)],
+        Lake.LAKE_GARDA: [(54, 37)],
+        Lake.LAKE_GENEVA: [(49, 39)],
+        Lake.LAKE_CONSTANCE: [(53, 40)],
+        Lake.LAKE_SKADAR: [(66, 27)],
+        Lake.LAKE_OHRID: [(69, 23)],
+        Lake.LAKE_SNIARDWY: [(71, 52)],
         Lake.LAKE_VATTERN: [
-            Tile((62, 62)),
-            Tile((62, 63)),
+            (62, 62),
+            (62, 63),
         ],
         Lake.LAKE_VANERN: [
-            Tile((60, 64)),
-            Tile((61, 64)),
-            Tile((61, 65)),
+            (60, 64),
+            (61, 64),
+            (61, 65),
         ],
         Lake.LAKE_MALAREN: [
-            Tile((64, 64)),
-            Tile((65, 64)),
+            (64, 64),
+            (65, 64),
         ],
-        Lake.LAKE_STORSJON: [Tile((62, 71))],
+        Lake.LAKE_STORSJON: [(62, 71)],
         Lake.LAKE_PEIPUS: [
-            Tile((77, 60)),
-            Tile((77, 61)),
-            Tile((77, 62)),
+            (77, 60),
+            (77, 61),
+            (77, 62),
         ],
-        Lake.LAKE_ILMEN: [Tile((80, 61))],
+        Lake.LAKE_ILMEN: [(80, 61)],
         Lake.LAKE_LADOGA: [
-            Tile((79, 67)),
-            Tile((79, 68)),
-            Tile((80, 65)),
-            Tile((80, 66)),
-            Tile((80, 67)),
-            Tile((80, 68)),
-            Tile((80, 69)),
-            Tile((81, 66)),
-            Tile((81, 67)),
-            Tile((81, 68)),
+            (79, 67),
+            (79, 68),
+            (80, 65),
+            (80, 66),
+            (80, 67),
+            (80, 68),
+            (80, 69),
+            (81, 66),
+            (81, 67),
+            (81, 68),
         ],
         Lake.LAKE_ONEGA: [
-            Tile((84, 69)),
-            Tile((84, 70)),
-            Tile((85, 68)),
-            Tile((85, 69)),
-            Tile((85, 70)),
+            (84, 69),
+            (84, 70),
+            (85, 68),
+            (85, 69),
+            (85, 70),
         ],
-        Lake.LAKE_BELOYE: [Tile((87, 66))],
+        Lake.LAKE_BELOYE: [(87, 66)],
         Lake.LAKE_SAIMAA: [
-            Tile((77, 68)),
-            Tile((77, 69)),
-            Tile((78, 70)),
+            (77, 68),
+            (77, 69),
+            (78, 70),
         ],
         Lake.LAKE_PAIJANNE: [
-            Tile((74, 68)),
-            Tile((74, 69)),
+            (74, 68),
+            (74, 69),
         ],
-        Lake.LAKE_VYGOZERO: [Tile((85, 72))],
-        Lake.LAKE_SEGOZERO: [Tile((83, 72))],
-        Lake.LAKE_KALLAVESI: [Tile((76, 71))],
-        Lake.LAKE_KEITELE: [Tile((74, 71))],
-        Lake.LAKE_PIELINEN: [Tile((78, 72))],
-        Lake.LAKE_NASIJARVI: [Tile((72, 68))],
-        Lake.LIMFJORDEN: [Tile((55, 59))],
-        Lake.TRONDHEIMFJORDEN: [Tile((58, 71))],
+        Lake.LAKE_VYGOZERO: [(85, 72)],
+        Lake.LAKE_SEGOZERO: [(83, 72)],
+        Lake.LAKE_KALLAVESI: [(76, 71)],
+        Lake.LAKE_KEITELE: [(74, 71)],
+        Lake.LAKE_PIELINEN: [(78, 72)],
+        Lake.LAKE_NASIJARVI: [(72, 68)],
+        Lake.LIMFJORDEN: [(55, 59)],
+        Lake.TRONDHEIMFJORDEN: [(58, 71)],
     }
+).applymap(lambda x: Tile(x))
+
+CIV_CAPITAL_LOCATIONS = (
+    CivDataMapper(
+        {
+            Civ.BYZANTIUM: (81, 24),  # Constantinople
+            Civ.FRANCE: (44, 46),  # Paris
+            Civ.ARABIA: (97, 10),  # Damascus
+            Civ.BULGARIA: (78, 29),  # Preslav
+            Civ.CORDOBA: (30, 23),  # Cordoba
+            Civ.VENECIA: (56, 35),  # Venice
+            Civ.BURGUNDY: (47, 41),  # Dijon
+            Civ.GERMANY: (53, 46),  # Frankfurt
+            Civ.NOVGOROD: (80, 62),  # Novgorod
+            Civ.NORWAY: (57, 65),  # Tonsberg
+            Civ.KIEV: (83, 45),  # Kiev
+            Civ.HUNGARY: (66, 37),  # Buda
+            Civ.CASTILLE: (27, 32),  # Leon
+            Civ.DENMARK: (59, 57),  # Roskilde / Kobenhavn
+            Civ.SCOTLAND: (37, 63),  # Edinburgh
+            Civ.POLAND: (65, 49),  # Poznan
+            Civ.GENOA: (50, 34),  # Genoa
+            Civ.MOROCCO: (24, 7),  # Marrakesh
+            Civ.ENGLAND: (41, 52),  # London
+            Civ.PORTUGAL: (21, 25),  # Lisboa
+            Civ.ARAGON: (36, 29),  # Zaragoza
+            Civ.SWEDEN: (66, 64),  # Stockholm
+            Civ.PRUSSIA: (69, 53),  # Königsberg
+            Civ.LITHUANIA: (75, 53),  # Vilnus
+            Civ.AUSTRIA: (62, 40),  # Wien
+            Civ.OTTOMAN: (78, 22),  # Gallipoli
+            Civ.MOSCOW: (91, 56),  # Moscow
+            Civ.DUTCH: (49, 52),  # Amsterdam
+            Civ.POPE: (56, 27),  # Rome
+        }
+    )
+    .apply(lambda x: Tile(x))
+    .fill_missing_members(None)
 )
 
-CIV_CAPITAL_LOCATIONS = CivDataMapper(
-    {
-        Civ.BYZANTIUM: Tile((81, 24)),  # Constantinople
-        Civ.FRANCE: Tile((44, 46)),  # Paris
-        Civ.ARABIA: Tile((97, 10)),  # Damascus
-        Civ.BULGARIA: Tile((78, 29)),  # Preslav
-        Civ.CORDOBA: Tile((30, 23)),  # Cordoba
-        Civ.VENECIA: Tile((56, 35)),  # Venice
-        Civ.BURGUNDY: Tile((47, 41)),  # Dijon
-        Civ.GERMANY: Tile((53, 46)),  # Frankfurt
-        Civ.NOVGOROD: Tile((80, 62)),  # Novgorod
-        Civ.NORWAY: Tile((57, 65)),  # Tonsberg
-        Civ.KIEV: Tile((83, 45)),  # Kiev
-        Civ.HUNGARY: Tile((66, 37)),  # Buda
-        Civ.CASTILLE: Tile((27, 32)),  # Leon
-        Civ.DENMARK: Tile((59, 57)),  # Roskilde / Kobenhavn
-        Civ.SCOTLAND: Tile((37, 63)),  # Edinburgh
-        Civ.POLAND: Tile((65, 49)),  # Poznan
-        Civ.GENOA: Tile((50, 34)),  # Genoa
-        Civ.MOROCCO: Tile((24, 7)),  # Marrakesh
-        Civ.ENGLAND: Tile((41, 52)),  # London
-        Civ.PORTUGAL: Tile((21, 25)),  # Lisboa
-        Civ.ARAGON: Tile((36, 29)),  # Zaragoza
-        Civ.SWEDEN: Tile((66, 64)),  # Stockholm
-        Civ.PRUSSIA: Tile((69, 53)),  # Königsberg
-        Civ.LITHUANIA: Tile((75, 53)),  # Vilnus
-        Civ.AUSTRIA: Tile((62, 40)),  # Wien
-        Civ.OTTOMAN: Tile((78, 22)),  # Gallipoli
-        Civ.MOSCOW: Tile((91, 56)),  # Moscow
-        Civ.DUTCH: Tile((49, 52)),  # Amsterdam
-        Civ.POPE: Tile((56, 27)),  # Rome
-    }
-).fill_missing_members(None)
-
 # Used for respawning
-CIV_NEW_CAPITAL_LOCATIONS = CivDataMapper(
-    {
-        Civ.ARABIA: [
-            Tile((83, 3)),
-            Tile((84, 3)),
-            Tile((84, 4)),
-        ],  # Alexandria
-        Civ.CORDOBA: [
-            Tile((48, 16)),
-            Tile((50, 18)),
-        ],  # Tunis
-        Civ.GERMANY: [Tile((57, 41))],  # Munich
-        Civ.NORWAY: [Tile((59, 64))],  # Oslo
-        Civ.KIEV: [Tile((88, 40))],  # Stara Sich
-        Civ.CASTILLE: [
-            Tile((30, 27)),
-            Tile((31, 27)),
-            Tile((31, 28)),
-            Tile((32, 28)),
-        ],  # Toledo or Madrid
-        Civ.MOROCCO: [Tile((25, 13))],  # Rabat
-        Civ.ARAGON: [Tile((59, 24))],  # Naples
-        Civ.PRUSSIA: [
-            Tile((60, 48)),
-            Tile((61, 48)),
-            Tile((61, 49)),
-            Tile((62, 48)),
-        ],  # Berlin
-    }
-).fill_missing_members(None)
+CIV_NEW_CAPITAL_LOCATIONS = (
+    CivDataMapper(
+        {
+            Civ.ARABIA: [
+                (83, 3),
+                (84, 3),
+                (84, 4),
+            ],  # Alexandria
+            Civ.CORDOBA: [
+                (48, 16),
+                (50, 18),
+            ],  # Tunis
+            Civ.GERMANY: [(57, 41)],  # Munich
+            Civ.NORWAY: [(59, 64)],  # Oslo
+            Civ.KIEV: [(88, 40)],  # Stara Sich
+            Civ.CASTILLE: [
+                (30, 27),
+                (31, 27),
+                (31, 28),
+                (32, 28),
+            ],  # Toledo or Madrid
+            Civ.MOROCCO: [(25, 13)],  # Rabat
+            Civ.ARAGON: [(59, 24)],  # Naples
+            Civ.PRUSSIA: [
+                (60, 48),
+                (61, 48),
+                (61, 49),
+                (62, 48),
+            ],  # Berlin
+        }
+    )
+    .applymap(lambda x: Tile(x))
+    .fill_missing_members(None)
+)
 
 CIV_NEIGHBOURS = CivDataMapper(
     {
@@ -826,317 +842,318 @@ CIV_CORE_AREA = (
     CivDataMapper(
         {
             Civ.BYZANTIUM: {
-                Area.TILE_MIN: Tile((66, 14)),
-                Area.TILE_MAX: Tile((84, 26)),
+                Area.TILE_MIN: (66, 14),
+                Area.TILE_MAX: (84, 26),
             },
             Civ.FRANCE: {
-                Area.TILE_MIN: Tile((42, 43)),
-                Area.TILE_MAX: Tile((46, 48)),
+                Area.TILE_MIN: (42, 43),
+                Area.TILE_MAX: (46, 48),
             },
             Civ.ARABIA: {
-                Area.TILE_MIN: Tile((92, 0)),
-                Area.TILE_MAX: Tile((99, 12)),
+                Area.TILE_MIN: (92, 0),
+                Area.TILE_MAX: (99, 12),
             },
             Civ.BULGARIA: {
-                Area.TILE_MIN: Tile((74, 27)),
-                Area.TILE_MAX: Tile((80, 30)),
+                Area.TILE_MIN: (74, 27),
+                Area.TILE_MAX: (80, 30),
             },
             Civ.CORDOBA: {
-                Area.TILE_MIN: Tile((24, 19)),
-                Area.TILE_MAX: Tile((37, 28)),
+                Area.TILE_MIN: (24, 19),
+                Area.TILE_MAX: (37, 28),
                 Area.ADDITIONAL_TILES: [
-                    Tile((26, 15)),
-                    Tile((26, 16)),
-                    Tile((26, 17)),
-                    Tile((26, 18)),
-                    Tile((27, 15)),
-                    Tile((27, 16)),
-                    Tile((27, 17)),
-                    Tile((27, 18)),
-                    Tile((28, 15)),
-                    Tile((28, 16)),
-                    Tile((28, 17)),
-                    Tile((28, 18)),
-                    Tile((29, 15)),
-                    Tile((29, 16)),
-                    Tile((29, 17)),
-                    Tile((29, 18)),
+                    (26, 15),
+                    (26, 16),
+                    (26, 17),
+                    (26, 18),
+                    (27, 15),
+                    (27, 16),
+                    (27, 17),
+                    (27, 18),
+                    (28, 15),
+                    (28, 16),
+                    (28, 17),
+                    (28, 18),
+                    (29, 15),
+                    (29, 16),
+                    (29, 17),
+                    (29, 18),
                 ],
             },
             Civ.VENECIA: {
-                Area.TILE_MIN: Tile((55, 33)),
-                Area.TILE_MAX: Tile((59, 36)),
+                Area.TILE_MIN: (55, 33),
+                Area.TILE_MAX: (59, 36),
                 Area.ADDITIONAL_TILES: [
-                    Tile((60, 33)),
-                    Tile((60, 34)),
-                    Tile((60, 35)),
+                    (60, 33),
+                    (60, 34),
+                    (60, 35),
                 ],
             },
             Civ.BURGUNDY: {
-                Area.TILE_MIN: Tile((44, 32)),
-                Area.TILE_MAX: Tile((48, 42)),
+                Area.TILE_MIN: (44, 32),
+                Area.TILE_MAX: (48, 42),
                 Area.ADDITIONAL_TILES: [
-                    Tile((49, 39)),
-                    Tile((49, 40)),
-                    Tile((49, 41)),
-                    Tile((49, 42)),
+                    (49, 39),
+                    (49, 40),
+                    (49, 41),
+                    (49, 42),
                 ],
             },
             Civ.GERMANY: {
-                Area.TILE_MIN: Tile((51, 40)),
-                Area.TILE_MAX: Tile((58, 50)),
+                Area.TILE_MIN: (51, 40),
+                Area.TILE_MAX: (58, 50),
             },
             Civ.NOVGOROD: {
-                Area.TILE_MIN: Tile((79, 59)),
-                Area.TILE_MAX: Tile((82, 69)),
+                Area.TILE_MIN: (79, 59),
+                Area.TILE_MAX: (82, 69),
                 Area.ADDITIONAL_TILES: [
-                    Tile((78, 59)),
-                    Tile((78, 60)),
+                    (78, 59),
+                    (78, 60),
                 ],
             },
             Civ.NORWAY: {
-                Area.TILE_MIN: Tile((53, 63)),
-                Area.TILE_MAX: Tile((59, 72)),
+                Area.TILE_MIN: (53, 63),
+                Area.TILE_MAX: (59, 72),
             },
             Civ.KIEV: {
-                Area.TILE_MIN: Tile((79, 42)),
-                Area.TILE_MAX: Tile((88, 50)),
+                Area.TILE_MIN: (79, 42),
+                Area.TILE_MAX: (88, 50),
             },
             Civ.HUNGARY: {
-                Area.TILE_MIN: Tile((64, 33)),
-                Area.TILE_MAX: Tile((73, 39)),
+                Area.TILE_MIN: (64, 33),
+                Area.TILE_MAX: (73, 39),
             },
             Civ.CASTILLE: {
-                Area.TILE_MIN: Tile((25, 30)),
-                Area.TILE_MAX: Tile((32, 36)),
+                Area.TILE_MIN: (25, 30),
+                Area.TILE_MAX: (32, 36),
             },
             Civ.DENMARK: {
-                Area.TILE_MIN: Tile((54, 55)),
-                Area.TILE_MAX: Tile((64, 61)),
+                Area.TILE_MIN: (54, 55),
+                Area.TILE_MAX: (64, 61),
             },
             Civ.SCOTLAND: {
-                Area.TILE_MIN: Tile((35, 62)),
-                Area.TILE_MAX: Tile((39, 68)),
+                Area.TILE_MIN: (35, 62),
+                Area.TILE_MAX: (39, 68),
                 Area.ADDITIONAL_TILES: [
-                    Tile((37, 69)),
-                    Tile((38, 69)),
+                    (37, 69),
+                    (38, 69),
                 ],
             },
             Civ.POLAND: {
-                Area.TILE_MIN: Tile((64, 43)),
-                Area.TILE_MAX: Tile((70, 50)),
+                Area.TILE_MIN: (64, 43),
+                Area.TILE_MAX: (70, 50),
                 Area.ADDITIONAL_TILES: [
-                    Tile((63, 46)),
-                    Tile((63, 47)),
-                    Tile((63, 48)),
-                    Tile((63, 49)),
-                    Tile((63, 50)),
+                    (63, 46),
+                    (63, 47),
+                    (63, 48),
+                    (63, 49),
+                    (63, 50),
                 ],
             },
             Civ.GENOA: {
-                Area.TILE_MIN: Tile((49, 27)),
-                Area.TILE_MAX: Tile((52, 35)),
+                Area.TILE_MIN: (49, 27),
+                Area.TILE_MAX: (52, 35),
             },
             Civ.MOROCCO: {
-                Area.TILE_MIN: Tile((18, 3)),
-                Area.TILE_MAX: Tile((31, 16)),
+                Area.TILE_MIN: (18, 3),
+                Area.TILE_MAX: (31, 16),
             },
             Civ.ENGLAND: {
-                Area.TILE_MIN: Tile((37, 48)),
-                Area.TILE_MAX: Tile((43, 60)),
+                Area.TILE_MIN: (37, 48),
+                Area.TILE_MAX: (43, 60),
                 Area.ADDITIONAL_TILES: [
-                    Tile((37, 46)),
-                    Tile((37, 47)),
-                    Tile((38, 46)),
-                    Tile((38, 47)),
-                    Tile((39, 46)),
-                    Tile((39, 47)),
-                    Tile((40, 46)),
-                    Tile((40, 47)),
-                    Tile((41, 46)),
-                    Tile((41, 47)),
-                    Tile((42, 47)),
+                    (37, 46),
+                    (37, 47),
+                    (38, 46),
+                    (38, 47),
+                    (39, 46),
+                    (39, 47),
+                    (40, 46),
+                    (40, 47),
+                    (41, 46),
+                    (41, 47),
+                    (42, 47),
                 ],
             },
             Civ.PORTUGAL: {
-                Area.TILE_MIN: Tile((21, 24)),
-                Area.TILE_MAX: Tile((24, 32)),
+                Area.TILE_MIN: (21, 24),
+                Area.TILE_MAX: (24, 32),
                 Area.ADDITIONAL_TILES: [
-                    Tile((25, 27)),
-                    Tile((25, 28)),
-                    Tile((25, 29)),
-                    Tile((25, 30)),
-                    Tile((25, 31)),
+                    (25, 27),
+                    (25, 28),
+                    (25, 29),
+                    (25, 30),
+                    (25, 31),
                 ],
             },
             Civ.ARAGON: {
-                Area.TILE_MIN: Tile((35, 26)),
-                Area.TILE_MAX: Tile((42, 31)),
+                Area.TILE_MIN: (35, 26),
+                Area.TILE_MAX: (42, 31),
                 Area.ADDITIONAL_TILES: [
-                    Tile((40, 23)),
-                    Tile((42, 23)),
-                    Tile((42, 24)),
-                    Tile((44, 24)),
+                    (40, 23),
+                    (42, 23),
+                    (42, 24),
+                    (44, 24),
                 ],
             },
             Civ.SWEDEN: {
-                Area.TILE_MIN: Tile((61, 60)),
-                Area.TILE_MAX: Tile((65, 70)),
+                Area.TILE_MIN: (61, 60),
+                Area.TILE_MAX: (65, 70),
                 Area.ADDITIONAL_TILES: [
-                    Tile((60, 61)),
-                    Tile((60, 62)),
-                    Tile((60, 63)),
-                    Tile((61, 71)),
-                    Tile((62, 71)),
-                    Tile((62, 72)),
-                    Tile((63, 71)),
-                    Tile((63, 72)),
-                    Tile((64, 71)),
-                    Tile((64, 72)),
-                    Tile((65, 71)),
-                    Tile((65, 72)),
-                    Tile((66, 64)),
-                    Tile((66, 65)),
-                    Tile((66, 66)),
-                    Tile((66, 72)),
-                    Tile((68, 65)),
-                    Tile((70, 67)),
-                    Tile((70, 68)),
-                    Tile((71, 66)),
-                    Tile((71, 67)),
-                    Tile((71, 68)),
-                    Tile((72, 65)),
-                    Tile((72, 66)),
-                    Tile((72, 67)),
+                    (60, 61),
+                    (60, 62),
+                    (60, 63),
+                    (61, 71),
+                    (62, 71),
+                    (62, 72),
+                    (63, 71),
+                    (63, 72),
+                    (64, 71),
+                    (64, 72),
+                    (65, 71),
+                    (65, 72),
+                    (66, 64),
+                    (66, 65),
+                    (66, 66),
+                    (66, 72),
+                    (68, 65),
+                    (70, 67),
+                    (70, 68),
+                    (71, 66),
+                    (71, 67),
+                    (71, 68),
+                    (72, 65),
+                    (72, 66),
+                    (72, 67),
                 ],
             },
             Civ.PRUSSIA: {
-                Area.TILE_MIN: Tile((70, 52)),
-                Area.TILE_MAX: Tile((71, 58)),
+                Area.TILE_MIN: (70, 52),
+                Area.TILE_MAX: (71, 58),
                 Area.ADDITIONAL_TILES: [
-                    Tile((68, 51)),
-                    Tile((68, 52)),
-                    Tile((68, 53)),
-                    Tile((69, 51)),
-                    Tile((69, 52)),
-                    Tile((69, 53)),
-                    Tile((70, 51)),
-                    Tile((71, 59)),
-                    Tile((72, 57)),
-                    Tile((72, 58)),
-                    Tile((73, 57)),
-                    Tile((73, 58)),
-                    Tile((74, 57)),
-                    Tile((74, 58)),
-                    Tile((74, 59)),
-                    Tile((74, 60)),
-                    Tile((75, 57)),
-                    Tile((75, 58)),
-                    Tile((75, 59)),
-                    Tile((75, 60)),
-                    Tile((76, 58)),
-                    Tile((76, 59)),
-                    Tile((76, 60)),
+                    (68, 51),
+                    (68, 52),
+                    (68, 53),
+                    (69, 51),
+                    (69, 52),
+                    (69, 53),
+                    (70, 51),
+                    (71, 59),
+                    (72, 57),
+                    (72, 58),
+                    (73, 57),
+                    (73, 58),
+                    (74, 57),
+                    (74, 58),
+                    (74, 59),
+                    (74, 60),
+                    (75, 57),
+                    (75, 58),
+                    (75, 59),
+                    (75, 60),
+                    (76, 58),
+                    (76, 59),
+                    (76, 60),
                 ],
             },
             Civ.LITHUANIA: {
-                Area.TILE_MIN: Tile((72, 51)),
-                Area.TILE_MAX: Tile((80, 56)),
+                Area.TILE_MIN: (72, 51),
+                Area.TILE_MAX: (80, 56),
                 Area.ADDITIONAL_TILES: [
-                    Tile((76, 57)),
-                    Tile((77, 57)),
-                    Tile((78, 57)),
-                    Tile((79, 57)),
-                    Tile((80, 57)),
+                    (76, 57),
+                    (77, 57),
+                    (78, 57),
+                    (79, 57),
+                    (80, 57),
                 ],
             },
             Civ.AUSTRIA: {
-                Area.TILE_MIN: Tile((59, 37)),
-                Area.TILE_MAX: Tile((62, 44)),
+                Area.TILE_MIN: (59, 37),
+                Area.TILE_MAX: (62, 44),
                 Area.ADDITIONAL_TILES: [
-                    Tile((60, 36)),
-                    Tile((61, 36)),
+                    (60, 36),
+                    (61, 36),
                 ],
             },
             Civ.OTTOMAN: {
-                Area.TILE_MIN: Tile((76, 16)),
-                Area.TILE_MAX: Tile((84, 22)),
+                Area.TILE_MIN: (76, 16),
+                Area.TILE_MAX: (84, 22),
                 Area.ADDITIONAL_TILES: [
-                    Tile((76, 23)),
-                    Tile((77, 23)),
-                    Tile((78, 23)),
-                    Tile((79, 23)),
+                    (76, 23),
+                    (77, 23),
+                    (78, 23),
+                    (79, 23),
                 ],
             },
             Civ.MOSCOW: {
-                Area.TILE_MIN: Tile((84, 53)),
-                Area.TILE_MAX: Tile((97, 59)),
+                Area.TILE_MIN: (84, 53),
+                Area.TILE_MAX: (97, 59),
                 Area.ADDITIONAL_TILES: [
-                    Tile((83, 53)),
-                    Tile((83, 54)),
-                    Tile((83, 55)),
-                    Tile((83, 56)),
-                    Tile((83, 57)),
-                    Tile((87, 60)),
-                    Tile((88, 60)),
-                    Tile((89, 60)),
-                    Tile((90, 60)),
-                    Tile((91, 60)),
-                    Tile((92, 60)),
-                    Tile((93, 60)),
-                    Tile((94, 60)),
-                    Tile((95, 60)),
-                    Tile((96, 60)),
-                    Tile((97, 60)),
-                    Tile((88, 61)),
-                    Tile((89, 61)),
-                    Tile((90, 61)),
-                    Tile((91, 61)),
-                    Tile((92, 61)),
-                    Tile((93, 61)),
-                    Tile((94, 61)),
-                    Tile((95, 61)),
-                    Tile((96, 61)),
-                    Tile((97, 61)),
-                    Tile((88, 62)),
-                    Tile((89, 62)),
-                    Tile((90, 62)),
-                    Tile((91, 62)),
-                    Tile((92, 62)),
-                    Tile((93, 62)),
-                    Tile((94, 62)),
-                    Tile((95, 62)),
-                    Tile((96, 62)),
-                    Tile((97, 62)),
-                    Tile((88, 63)),
-                    Tile((89, 63)),
-                    Tile((90, 63)),
-                    Tile((91, 63)),
-                    Tile((92, 63)),
-                    Tile((93, 63)),
-                    Tile((94, 63)),
-                    Tile((95, 63)),
-                    Tile((96, 63)),
-                    Tile((97, 63)),
+                    (83, 53),
+                    (83, 54),
+                    (83, 55),
+                    (83, 56),
+                    (83, 57),
+                    (87, 60),
+                    (88, 60),
+                    (89, 60),
+                    (90, 60),
+                    (91, 60),
+                    (92, 60),
+                    (93, 60),
+                    (94, 60),
+                    (95, 60),
+                    (96, 60),
+                    (97, 60),
+                    (88, 61),
+                    (89, 61),
+                    (90, 61),
+                    (91, 61),
+                    (92, 61),
+                    (93, 61),
+                    (94, 61),
+                    (95, 61),
+                    (96, 61),
+                    (97, 61),
+                    (88, 62),
+                    (89, 62),
+                    (90, 62),
+                    (91, 62),
+                    (92, 62),
+                    (93, 62),
+                    (94, 62),
+                    (95, 62),
+                    (96, 62),
+                    (97, 62),
+                    (88, 63),
+                    (89, 63),
+                    (90, 63),
+                    (91, 63),
+                    (92, 63),
+                    (93, 63),
+                    (94, 63),
+                    (95, 63),
+                    (96, 63),
+                    (97, 63),
                 ],
             },
             Civ.DUTCH: {
-                Area.TILE_MIN: Tile((46, 50)),
-                Area.TILE_MAX: Tile((52, 55)),
+                Area.TILE_MIN: (46, 50),
+                Area.TILE_MAX: (52, 55),
                 Area.ADDITIONAL_TILES: [
-                    Tile((46, 49)),
-                    Tile((47, 49)),
-                    Tile((48, 49)),
-                    Tile((49, 49)),
-                    Tile((50, 49)),
+                    (46, 49),
+                    (47, 49),
+                    (48, 49),
+                    (49, 49),
+                    (50, 49),
                 ],
             },
             Civ.POPE: {
-                Area.TILE_MIN: Tile((54, 25)),
-                Area.TILE_MAX: Tile((58, 29)),
+                Area.TILE_MIN: (54, 25),
+                Area.TILE_MAX: (58, 29),
             },
         }
     )
+    .apply(lambda d: parse_area_dict(d))
     .apply(
         lambda area: (
             TilesFactory(WORLD_WIDTH, WORLD_HEIGHT)
@@ -1146,8 +1163,9 @@ CIV_CORE_AREA = (
             )
             .extend(area.get(Area.ADDITIONAL_TILES))
             .substract(area.get(Area.EXCEPTION_TILES))
+            .attach_area(AreaTypes.CORE)
             .normalize()
-            .data
+            .get_results()
         )
     )
     .fill_missing_members(None)
@@ -1157,432 +1175,433 @@ CIV_NORMAL_AREA = (
     CivDataMapper(
         {
             Civ.BYZANTIUM: {
-                Area.TILE_MIN: Tile((66, 13)),
-                Area.TILE_MAX: Tile((75, 24)),
+                Area.TILE_MIN: (66, 13),
+                Area.TILE_MAX: (75, 24),
             },
             Civ.FRANCE: {
-                Area.TILE_MIN: Tile((33, 32)),
-                Area.TILE_MAX: Tile((44, 46)),
+                Area.TILE_MIN: (33, 32),
+                Area.TILE_MAX: (44, 46),
                 Area.EXCEPTION_TILES: [
-                    Tile((33, 32)),
-                    Tile((33, 33)),
-                    Tile((33, 34)),
-                    Tile((33, 35)),
-                    Tile((33, 36)),
-                    Tile((34, 32)),
-                    Tile((34, 33)),
-                    Tile((34, 34)),
-                    Tile((34, 35)),
-                    Tile((35, 32)),
-                    Tile((35, 33)),
-                    Tile((35, 34)),
-                    Tile((36, 32)),
-                    Tile((36, 33)),
-                    Tile((37, 32)),
-                    Tile((38, 32)),
+                    (33, 32),
+                    (33, 33),
+                    (33, 34),
+                    (33, 35),
+                    (33, 36),
+                    (34, 32),
+                    (34, 33),
+                    (34, 34),
+                    (34, 35),
+                    (35, 32),
+                    (35, 33),
+                    (35, 34),
+                    (36, 32),
+                    (36, 33),
+                    (37, 32),
+                    (38, 32),
                 ],
             },
             Civ.ARABIA: {
-                Area.TILE_MIN: Tile((53, 0)),
-                Area.TILE_MAX: Tile((99, 11)),
+                Area.TILE_MIN: (53, 0),
+                Area.TILE_MAX: (99, 11),
                 Area.EXCEPTION_TILES: [
-                    Tile((73, 10)),
-                    Tile((74, 10)),
-                    Tile((75, 10)),
-                    Tile((76, 10)),
-                    Tile((87, 10)),
-                    Tile((87, 11)),
-                    Tile((88, 10)),
-                    Tile((88, 11)),
-                    Tile((89, 11)),
+                    (73, 10),
+                    (74, 10),
+                    (75, 10),
+                    (76, 10),
+                    (87, 10),
+                    (87, 11),
+                    (88, 10),
+                    (88, 11),
+                    (89, 11),
                 ],
             },
             Civ.BULGARIA: {
-                Area.TILE_MIN: Tile((72, 27)),
-                Area.TILE_MAX: Tile((80, 31)),
+                Area.TILE_MIN: (72, 27),
+                Area.TILE_MAX: (80, 31),
             },
             Civ.CORDOBA: {
-                Area.TILE_MIN: Tile((43, 8)),
-                Area.TILE_MAX: Tile((52, 19)),
+                Area.TILE_MIN: (43, 8),
+                Area.TILE_MAX: (52, 19),
             },
             Civ.VENECIA: {
-                Area.TILE_MIN: Tile((54, 32)),
-                Area.TILE_MAX: Tile((60, 37)),
+                Area.TILE_MIN: (54, 32),
+                Area.TILE_MAX: (60, 37),
                 Area.EXCEPTION_TILES: [
-                    Tile((54, 32)),
-                    Tile((54, 33)),
-                    Tile((54, 34)),
-                    Tile((55, 32)),
-                    Tile((55, 33)),
-                    Tile((55, 34)),
-                    Tile((56, 32)),
-                    Tile((56, 33)),
-                    Tile((56, 34)),
-                    Tile((57, 32)),
-                    Tile((57, 33)),
-                    Tile((58, 32)),
-                    Tile((59, 37)),
-                    Tile((60, 36)),
-                    Tile((60, 37)),
+                    (54, 32),
+                    (54, 33),
+                    (54, 34),
+                    (55, 32),
+                    (55, 33),
+                    (55, 34),
+                    (56, 32),
+                    (56, 33),
+                    (56, 34),
+                    (57, 32),
+                    (57, 33),
+                    (58, 32),
+                    (59, 37),
+                    (60, 36),
+                    (60, 37),
                 ],
             },
             Civ.BURGUNDY: {
-                Area.TILE_MIN: Tile((45, 32)),
-                Area.TILE_MAX: Tile((49, 43)),
+                Area.TILE_MIN: (45, 32),
+                Area.TILE_MAX: (49, 43),
                 Area.EXCEPTION_TILES: [
-                    Tile((49, 32)),
-                    Tile((49, 33)),
-                    Tile((49, 34)),
-                    Tile((49, 35)),
-                    Tile((49, 36)),
+                    (49, 32),
+                    (49, 33),
+                    (49, 34),
+                    (49, 35),
+                    (49, 36),
                 ],
             },
             Civ.GERMANY: {
-                Area.TILE_MIN: Tile((51, 43)),
-                Area.TILE_MAX: Tile((61, 54)),
+                Area.TILE_MIN: (51, 43),
+                Area.TILE_MAX: (61, 54),
                 Area.EXCEPTION_TILES: [
-                    Tile((51, 51)),
-                    Tile((51, 52)),
-                    Tile((51, 53)),
-                    Tile((51, 54)),
-                    Tile((52, 51)),
-                    Tile((52, 52)),
-                    Tile((52, 53)),
-                    Tile((52, 54)),
-                    Tile((59, 48)),
-                    Tile((59, 49)),
-                    Tile((59, 50)),
-                    Tile((59, 51)),
-                    Tile((59, 52)),
-                    Tile((59, 53)),
-                    Tile((59, 54)),
-                    Tile((60, 48)),
-                    Tile((60, 49)),
-                    Tile((60, 50)),
-                    Tile((60, 51)),
-                    Tile((60, 52)),
-                    Tile((60, 53)),
-                    Tile((60, 54)),
-                    Tile((61, 48)),
-                    Tile((61, 49)),
-                    Tile((61, 50)),
-                    Tile((61, 51)),
-                    Tile((61, 52)),
-                    Tile((61, 53)),
-                    Tile((61, 54)),
+                    (51, 51),
+                    (51, 52),
+                    (51, 53),
+                    (51, 54),
+                    (52, 51),
+                    (52, 52),
+                    (52, 53),
+                    (52, 54),
+                    (59, 48),
+                    (59, 49),
+                    (59, 50),
+                    (59, 51),
+                    (59, 52),
+                    (59, 53),
+                    (59, 54),
+                    (60, 48),
+                    (60, 49),
+                    (60, 50),
+                    (60, 51),
+                    (60, 52),
+                    (60, 53),
+                    (60, 54),
+                    (61, 48),
+                    (61, 49),
+                    (61, 50),
+                    (61, 51),
+                    (61, 52),
+                    (61, 53),
+                    (61, 54),
                 ],
             },
             Civ.NOVGOROD: {
-                Area.TILE_MIN: Tile((77, 59)),
-                Area.TILE_MAX: Tile((88, 72)),
+                Area.TILE_MIN: (77, 59),
+                Area.TILE_MAX: (88, 72),
                 Area.EXCEPTION_TILES: [
-                    Tile((84, 59)),
-                    Tile((84, 60)),
-                    Tile((85, 59)),
-                    Tile((85, 60)),
-                    Tile((85, 61)),
-                    Tile((86, 59)),
-                    Tile((86, 60)),
-                    Tile((86, 61)),
-                    Tile((86, 62)),
-                    Tile((87, 59)),
-                    Tile((87, 60)),
-                    Tile((87, 61)),
-                    Tile((87, 62)),
-                    Tile((88, 59)),
-                    Tile((88, 60)),
-                    Tile((88, 61)),
-                    Tile((88, 62)),
+                    (84, 59),
+                    (84, 60),
+                    (85, 59),
+                    (85, 60),
+                    (85, 61),
+                    (86, 59),
+                    (86, 60),
+                    (86, 61),
+                    (86, 62),
+                    (87, 59),
+                    (87, 60),
+                    (87, 61),
+                    (87, 62),
+                    (88, 59),
+                    (88, 60),
+                    (88, 61),
+                    (88, 62),
                 ],
             },
             Civ.NORWAY: {
-                Area.TILE_MIN: Tile((53, 63)),
-                Area.TILE_MAX: Tile((58, 72)),
+                Area.TILE_MIN: (53, 63),
+                Area.TILE_MAX: (58, 72),
             },
             Civ.KIEV: {
-                Area.TILE_MIN: Tile((78, 41)),
-                Area.TILE_MAX: Tile((91, 50)),
+                Area.TILE_MIN: (78, 41),
+                Area.TILE_MAX: (91, 50),
                 Area.EXCEPTION_TILES: [
-                    Tile((87, 41)),
-                    Tile((88, 41)),
-                    Tile((89, 41)),
-                    Tile((90, 41)),
-                    Tile((91, 41)),
+                    (87, 41),
+                    (88, 41),
+                    (89, 41),
+                    (90, 41),
+                    (91, 41),
                 ],
             },
             Civ.HUNGARY: {
-                Area.TILE_MIN: Tile((63, 32)),
-                Area.TILE_MAX: Tile((77, 41)),
+                Area.TILE_MIN: (63, 32),
+                Area.TILE_MAX: (77, 41),
                 Area.EXCEPTION_TILES: [
-                    Tile((63, 32)),
-                    Tile((63, 39)),
-                    Tile((63, 40)),
-                    Tile((63, 41)),
-                    Tile((64, 41)),
-                    Tile((72, 32)),
-                    Tile((73, 32)),
-                    Tile((74, 32)),
-                    Tile((75, 32)),
-                    Tile((75, 41)),
-                    Tile((76, 32)),
-                    Tile((76, 40)),
-                    Tile((76, 41)),
-                    Tile((77, 32)),
-                    Tile((77, 39)),
-                    Tile((77, 40)),
-                    Tile((77, 41)),
+                    (63, 32),
+                    (63, 39),
+                    (63, 40),
+                    (63, 41),
+                    (64, 41),
+                    (72, 32),
+                    (73, 32),
+                    (74, 32),
+                    (75, 32),
+                    (75, 41),
+                    (76, 32),
+                    (76, 40),
+                    (76, 41),
+                    (77, 32),
+                    (77, 39),
+                    (77, 40),
+                    (77, 41),
                 ],
             },
             Civ.CASTILLE: {
-                Area.TILE_MIN: Tile((25, 26)),
-                Area.TILE_MAX: Tile((34, 36)),
+                Area.TILE_MIN: (25, 26),
+                Area.TILE_MAX: (34, 36),
                 Area.EXCEPTION_TILES: [
-                    Tile((25, 26)),
-                    Tile((25, 27)),
-                    Tile((25, 28)),
-                    Tile((25, 29)),
-                    Tile((25, 30)),
-                    Tile((25, 31)),
-                    Tile((34, 36)),
+                    (25, 26),
+                    (25, 27),
+                    (25, 28),
+                    (25, 29),
+                    (25, 30),
+                    (25, 31),
+                    (34, 36),
                 ],
             },
             Civ.DENMARK: {
-                Area.TILE_MIN: Tile((54, 55)),
-                Area.TILE_MAX: Tile((59, 61)),
+                Area.TILE_MIN: (54, 55),
+                Area.TILE_MAX: (59, 61),
             },
             Civ.SCOTLAND: {
-                Area.TILE_MIN: Tile((34, 63)),
-                Area.TILE_MAX: Tile((39, 69)),
+                Area.TILE_MIN: (34, 63),
+                Area.TILE_MAX: (39, 69),
                 Area.EXCEPTION_TILES: [
-                    Tile((34, 69)),
+                    (34, 69),
                 ],
             },
             Civ.POLAND: {
-                Area.TILE_MIN: Tile((63, 43)),
-                Area.TILE_MAX: Tile((77, 50)),
+                Area.TILE_MIN: (63, 43),
+                Area.TILE_MAX: (77, 50),
                 Area.EXCEPTION_TILES: [
-                    Tile((63, 43)),
-                    Tile((63, 44)),
-                    Tile((63, 45)),
-                    Tile((64, 43)),
-                    Tile((64, 44)),
-                    Tile((65, 43)),
+                    (63, 43),
+                    (63, 44),
+                    (63, 45),
+                    (64, 43),
+                    (64, 44),
+                    (65, 43),
                 ],
             },
             Civ.GENOA: {
-                Area.TILE_MIN: Tile((49, 22)),
-                Area.TILE_MAX: Tile((52, 36)),
+                Area.TILE_MIN: (49, 22),
+                Area.TILE_MAX: (52, 36),
             },
             Civ.MOROCCO: {
-                Area.TILE_MIN: Tile((18, 3)),
-                Area.TILE_MAX: Tile((27, 13)),
+                Area.TILE_MIN: (18, 3),
+                Area.TILE_MAX: (27, 13),
             },
             Civ.ENGLAND: {
-                Area.TILE_MIN: Tile((32, 50)),
-                Area.TILE_MAX: Tile((43, 62)),
+                Area.TILE_MIN: (32, 50),
+                Area.TILE_MAX: (43, 62),
                 Area.EXCEPTION_TILES: [
-                    Tile((32, 55)),
-                    Tile((32, 56)),
-                    Tile((32, 57)),
-                    Tile((32, 58)),
-                    Tile((32, 59)),
-                    Tile((32, 60)),
-                    Tile((32, 61)),
-                    Tile((32, 62)),
-                    Tile((33, 56)),
-                    Tile((33, 57)),
-                    Tile((33, 58)),
-                    Tile((33, 59)),
-                    Tile((33, 60)),
-                    Tile((33, 61)),
-                    Tile((33, 62)),
+                    (32, 55),
+                    (32, 56),
+                    (32, 57),
+                    (32, 58),
+                    (32, 59),
+                    (32, 60),
+                    (32, 61),
+                    (32, 62),
+                    (33, 56),
+                    (33, 57),
+                    (33, 58),
+                    (33, 59),
+                    (33, 60),
+                    (33, 61),
+                    (33, 62),
                 ],
             },
             Civ.PORTUGAL: {
-                Area.TILE_MIN: Tile((21, 21)),
-                Area.TILE_MAX: Tile((25, 32)),
+                Area.TILE_MIN: (21, 21),
+                Area.TILE_MAX: (25, 32),
                 Area.EXCEPTION_TILES: [
-                    Tile((25, 21)),
-                    Tile((25, 22)),
-                    Tile((25, 23)),
-                    Tile((25, 24)),
-                    Tile((25, 25)),
-                    Tile((25, 26)),
-                    Tile((25, 32)),
+                    (25, 21),
+                    (25, 22),
+                    (25, 23),
+                    (25, 24),
+                    (25, 25),
+                    (25, 26),
+                    (25, 32),
                 ],
             },
             Civ.ARAGON: {
-                Area.TILE_MIN: Tile((54, 16)),
-                Area.TILE_MAX: Tile((64, 26)),
+                Area.TILE_MIN: (54, 16),
+                Area.TILE_MAX: (64, 26),
             },
             Civ.SWEDEN: {
-                Area.TILE_MIN: Tile((60, 59)),
-                Area.TILE_MAX: Tile((75, 72)),
+                Area.TILE_MIN: (60, 59),
+                Area.TILE_MAX: (75, 72),
                 Area.EXCEPTION_TILES: [
-                    Tile((60, 59)),
-                    Tile((60, 60)),
-                    Tile((60, 61)),
-                    Tile((60, 70)),
-                    Tile((60, 71)),
-                    Tile((60, 72)),
-                    Tile((61, 59)),
-                    Tile((61, 60)),
-                    Tile((61, 72)),
-                    Tile((70, 59)),
-                    Tile((70, 60)),
-                    Tile((70, 61)),
-                    Tile((71, 59)),
-                    Tile((71, 60)),
-                    Tile((71, 61)),
-                    Tile((72, 59)),
-                    Tile((72, 60)),
-                    Tile((72, 61)),
-                    Tile((73, 59)),
-                    Tile((73, 60)),
-                    Tile((73, 61)),
-                    Tile((73, 62)),
-                    Tile((74, 59)),
-                    Tile((74, 60)),
-                    Tile((74, 61)),
-                    Tile((74, 62)),
-                    Tile((74, 63)),
-                    Tile((75, 59)),
-                    Tile((75, 60)),
-                    Tile((75, 61)),
-                    Tile((75, 62)),
-                    Tile((75, 63)),
+                    (60, 59),
+                    (60, 60),
+                    (60, 61),
+                    (60, 70),
+                    (60, 71),
+                    (60, 72),
+                    (61, 59),
+                    (61, 60),
+                    (61, 72),
+                    (70, 59),
+                    (70, 60),
+                    (70, 61),
+                    (71, 59),
+                    (71, 60),
+                    (71, 61),
+                    (72, 59),
+                    (72, 60),
+                    (72, 61),
+                    (73, 59),
+                    (73, 60),
+                    (73, 61),
+                    (73, 62),
+                    (74, 59),
+                    (74, 60),
+                    (74, 61),
+                    (74, 62),
+                    (74, 63),
+                    (75, 59),
+                    (75, 60),
+                    (75, 61),
+                    (75, 62),
+                    (75, 63),
                 ],
             },
             Civ.PRUSSIA: {
-                Area.TILE_MIN: Tile((59, 48)),
-                Area.TILE_MAX: Tile((71, 55)),
+                Area.TILE_MIN: (59, 48),
+                Area.TILE_MAX: (71, 55),
                 Area.EXCEPTION_TILES: [
-                    Tile((59, 55)),
-                    Tile((60, 55)),
-                    Tile((61, 55)),
-                    Tile((63, 48)),
-                    Tile((63, 49)),
-                    Tile((63, 50)),
-                    Tile((64, 48)),
-                    Tile((64, 49)),
-                    Tile((64, 50)),
-                    Tile((65, 48)),
-                    Tile((65, 49)),
-                    Tile((65, 50)),
-                    Tile((66, 48)),
-                    Tile((66, 49)),
-                    Tile((66, 50)),
-                    Tile((67, 48)),
-                    Tile((67, 49)),
-                    Tile((67, 50)),
-                    Tile((68, 48)),
-                    Tile((68, 49)),
-                    Tile((68, 50)),
-                    Tile((69, 48)),
-                    Tile((69, 49)),
-                    Tile((69, 50)),
-                    Tile((70, 48)),
-                    Tile((70, 49)),
-                    Tile((70, 50)),
-                    Tile((71, 48)),
-                    Tile((71, 49)),
-                    Tile((71, 50)),
-                    Tile((71, 55)),
+                    (59, 55),
+                    (60, 55),
+                    (61, 55),
+                    (63, 48),
+                    (63, 49),
+                    (63, 50),
+                    (64, 48),
+                    (64, 49),
+                    (64, 50),
+                    (65, 48),
+                    (65, 49),
+                    (65, 50),
+                    (66, 48),
+                    (66, 49),
+                    (66, 50),
+                    (67, 48),
+                    (67, 49),
+                    (67, 50),
+                    (68, 48),
+                    (68, 49),
+                    (68, 50),
+                    (69, 48),
+                    (69, 49),
+                    (69, 50),
+                    (70, 48),
+                    (70, 49),
+                    (70, 50),
+                    (71, 48),
+                    (71, 49),
+                    (71, 50),
+                    (71, 55),
                 ],
             },
             Civ.LITHUANIA: {
-                Area.TILE_MIN: Tile((70, 51)),
-                Area.TILE_MAX: Tile((77, 63)),
+                Area.TILE_MIN: (70, 51),
+                Area.TILE_MAX: (77, 63),
                 Area.EXCEPTION_TILES: [
-                    Tile((70, 51)),
-                    Tile((70, 52)),
-                    Tile((70, 53)),
-                    Tile((70, 54)),
-                    Tile((70, 55)),
-                    Tile((70, 59)),
-                    Tile((70, 60)),
-                    Tile((70, 61)),
-                    Tile((70, 62)),
-                    Tile((70, 63)),
-                    Tile((71, 51)),
-                    Tile((71, 52)),
-                    Tile((71, 53)),
-                    Tile((71, 54)),
-                    Tile((71, 60)),
-                    Tile((71, 61)),
-                    Tile((71, 62)),
-                    Tile((71, 63)),
-                    Tile((72, 51)),
-                    Tile((72, 60)),
-                    Tile((72, 61)),
-                    Tile((72, 62)),
-                    Tile((72, 63)),
-                    Tile((73, 63)),
-                    Tile((77, 59)),
-                    Tile((77, 60)),
-                    Tile((77, 61)),
-                    Tile((77, 62)),
-                    Tile((77, 63)),
+                    (70, 51),
+                    (70, 52),
+                    (70, 53),
+                    (70, 54),
+                    (70, 55),
+                    (70, 59),
+                    (70, 60),
+                    (70, 61),
+                    (70, 62),
+                    (70, 63),
+                    (71, 51),
+                    (71, 52),
+                    (71, 53),
+                    (71, 54),
+                    (71, 60),
+                    (71, 61),
+                    (71, 62),
+                    (71, 63),
+                    (72, 51),
+                    (72, 60),
+                    (72, 61),
+                    (72, 62),
+                    (72, 63),
+                    (73, 63),
+                    (77, 59),
+                    (77, 60),
+                    (77, 61),
+                    (77, 62),
+                    (77, 63),
                 ],
             },
             Civ.AUSTRIA: {
-                Area.TILE_MIN: Tile((57, 36)),
-                Area.TILE_MAX: Tile((63, 42)),
+                Area.TILE_MIN: (57, 36),
+                Area.TILE_MAX: (63, 42),
                 Area.EXCEPTION_TILES: [
-                    Tile((57, 36)),
-                    Tile((57, 37)),
-                    Tile((58, 36)),
-                    Tile((58, 37)),
-                    Tile((59, 36)),
-                    Tile((63, 36)),
-                    Tile((63, 37)),
-                    Tile((63, 38)),
+                    (57, 36),
+                    (57, 37),
+                    (58, 36),
+                    (58, 37),
+                    (59, 36),
+                    (63, 36),
+                    (63, 37),
+                    (63, 38),
                 ],
             },
             Civ.OTTOMAN: {
-                Area.TILE_MIN: Tile((76, 14)),
-                Area.TILE_MAX: Tile((98, 27)),
+                Area.TILE_MIN: (76, 14),
+                Area.TILE_MAX: (98, 27),
                 Area.EXCEPTION_TILES: [
-                    Tile((76, 27)),
-                    Tile((77, 27)),
-                    Tile((78, 27)),
-                    Tile((79, 27)),
-                    Tile((80, 27)),
+                    (76, 27),
+                    (77, 27),
+                    (78, 27),
+                    (79, 27),
+                    (80, 27),
                 ],
             },
             Civ.MOSCOW: {
-                Area.TILE_MIN: Tile((83, 51)),
-                Area.TILE_MAX: Tile((98, 63)),
+                Area.TILE_MIN: (83, 51),
+                Area.TILE_MAX: (98, 63),
                 Area.EXCEPTION_TILES: [
-                    Tile((83, 59)),
-                    Tile((83, 60)),
-                    Tile((83, 61)),
-                    Tile((83, 62)),
-                    Tile((83, 63)),
-                    Tile((84, 61)),
-                    Tile((84, 62)),
-                    Tile((84, 63)),
-                    Tile((85, 62)),
-                    Tile((85, 63)),
-                    Tile((86, 63)),
-                    Tile((87, 63)),
-                    Tile((88, 63)),
+                    (83, 59),
+                    (83, 60),
+                    (83, 61),
+                    (83, 62),
+                    (83, 63),
+                    (84, 61),
+                    (84, 62),
+                    (84, 63),
+                    (85, 62),
+                    (85, 63),
+                    (86, 63),
+                    (87, 63),
+                    (88, 63),
                 ],
             },
             Civ.DUTCH: {
-                Area.TILE_MIN: Tile((47, 50)),
-                Area.TILE_MAX: Tile((52, 54)),
+                Area.TILE_MIN: (47, 50),
+                Area.TILE_MAX: (52, 54),
                 Area.EXCEPTION_TILES: [
-                    Tile((51, 50)),
-                    Tile((52, 50)),
+                    (51, 50),
+                    (52, 50),
                 ],
             },
             Civ.POPE: {
-                Area.TILE_MIN: Tile((54, 25)),
-                Area.TILE_MAX: Tile((58, 29)),
+                Area.TILE_MIN: (54, 25),
+                Area.TILE_MAX: (58, 29),
             },
         }
     )
+    .apply(lambda d: parse_area_dict(d))
     .apply(
         lambda area: (
             TilesFactory(WORLD_WIDTH, WORLD_HEIGHT)
@@ -1592,8 +1611,9 @@ CIV_NORMAL_AREA = (
             )
             .extend(area.get(Area.ADDITIONAL_TILES))
             .substract(area.get(Area.EXCEPTION_TILES))
+            .attach_area(AreaTypes.NORMAL)
             .normalize()
-            .data
+            .get_results()
         )
     )
     .fill_missing_members(None)
@@ -1603,123 +1623,124 @@ CIV_BROADER_AREA = (
     CivDataMapper(
         {
             Civ.BYZANTIUM: {
-                Area.TILE_MIN: Tile((68, 14)),
-                Area.TILE_MAX: Tile((83, 27)),
+                Area.TILE_MIN: (68, 14),
+                Area.TILE_MAX: (83, 27),
             },
             Civ.FRANCE: {
-                Area.TILE_MIN: Tile((39, 41)),
-                Area.TILE_MAX: Tile((49, 51)),
+                Area.TILE_MIN: (39, 41),
+                Area.TILE_MAX: (49, 51),
             },
             Civ.ARABIA: {
-                Area.TILE_MIN: Tile((92, 7)),
-                Area.TILE_MAX: Tile((99, 15)),
+                Area.TILE_MIN: (92, 7),
+                Area.TILE_MAX: (99, 15),
             },
             Civ.BULGARIA: {
-                Area.TILE_MIN: Tile((71, 28)),
-                Area.TILE_MAX: Tile((80, 31)),
+                Area.TILE_MIN: (71, 28),
+                Area.TILE_MAX: (80, 31),
             },
             Civ.CORDOBA: {
-                Area.TILE_MIN: Tile((24, 23)),
-                Area.TILE_MAX: Tile((34, 33)),
+                Area.TILE_MIN: (24, 23),
+                Area.TILE_MAX: (34, 33),
             },
             Civ.VENECIA: {
-                Area.TILE_MIN: Tile((52, 29)),
-                Area.TILE_MAX: Tile((62, 39)),
+                Area.TILE_MIN: (52, 29),
+                Area.TILE_MAX: (62, 39),
             },
             Civ.BURGUNDY: {
-                Area.TILE_MIN: Tile((42, 36)),
-                Area.TILE_MAX: Tile((52, 46)),
+                Area.TILE_MIN: (42, 36),
+                Area.TILE_MAX: (52, 46),
             },
             Civ.GERMANY: {
-                Area.TILE_MIN: Tile((49, 41)),
-                Area.TILE_MAX: Tile((58, 51)),
+                Area.TILE_MIN: (49, 41),
+                Area.TILE_MAX: (58, 51),
             },
             Civ.NOVGOROD: {
-                Area.TILE_MIN: Tile((77, 59)),
-                Area.TILE_MAX: Tile((89, 72)),
+                Area.TILE_MIN: (77, 59),
+                Area.TILE_MAX: (89, 72),
             },
             Civ.NORWAY: {
-                Area.TILE_MIN: Tile((53, 63)),
-                Area.TILE_MAX: Tile((61, 72)),
+                Area.TILE_MIN: (53, 63),
+                Area.TILE_MAX: (61, 72),
             },
             Civ.KIEV: {
-                Area.TILE_MIN: Tile((81, 37)),
-                Area.TILE_MAX: Tile((91, 47)),
+                Area.TILE_MIN: (81, 37),
+                Area.TILE_MAX: (91, 47),
             },
             Civ.HUNGARY: {
-                Area.TILE_MIN: Tile((64, 27)),
-                Area.TILE_MAX: Tile((74, 37)),
+                Area.TILE_MIN: (64, 27),
+                Area.TILE_MAX: (74, 37),
             },
             Civ.CASTILLE: {
-                Area.TILE_MIN: Tile((23, 31)),
-                Area.TILE_MAX: Tile((33, 41)),
+                Area.TILE_MIN: (23, 31),
+                Area.TILE_MAX: (33, 41),
             },
             Civ.DENMARK: {
-                Area.TILE_MIN: Tile((55, 55)),
-                Area.TILE_MAX: Tile((59, 60)),
+                Area.TILE_MIN: (55, 55),
+                Area.TILE_MAX: (59, 60),
             },
             Civ.SCOTLAND: {
-                Area.TILE_MIN: Tile((31, 57)),
-                Area.TILE_MAX: Tile((45, 69)),
+                Area.TILE_MIN: (31, 57),
+                Area.TILE_MAX: (45, 69),
             },
             Civ.POLAND: {
-                Area.TILE_MIN: Tile((64, 42)),
-                Area.TILE_MAX: Tile((74, 52)),
+                Area.TILE_MIN: (64, 42),
+                Area.TILE_MAX: (74, 52),
             },
             Civ.GENOA: {
-                Area.TILE_MIN: Tile((45, 29)),
-                Area.TILE_MAX: Tile((55, 39)),
+                Area.TILE_MIN: (45, 29),
+                Area.TILE_MAX: (55, 39),
             },
             Civ.MOROCCO: {
-                Area.TILE_MIN: Tile((11, 2)),
-                Area.TILE_MAX: Tile((29, 27)),
+                Area.TILE_MIN: (11, 2),
+                Area.TILE_MAX: (29, 27),
             },
             Civ.ENGLAND: {
-                Area.TILE_MIN: Tile((38, 49)),
-                Area.TILE_MAX: Tile((48, 59)),
+                Area.TILE_MIN: (38, 49),
+                Area.TILE_MAX: (48, 59),
             },
             Civ.PORTUGAL: {
-                Area.TILE_MIN: Tile((17, 27)),
-                Area.TILE_MAX: Tile((27, 37)),
+                Area.TILE_MIN: (17, 27),
+                Area.TILE_MAX: (27, 37),
             },
             Civ.ARAGON: {
-                Area.TILE_MIN: Tile((33, 25)),
-                Area.TILE_MAX: Tile((43, 34)),
+                Area.TILE_MIN: (33, 25),
+                Area.TILE_MAX: (43, 34),
             },
             Civ.SWEDEN: {
-                Area.TILE_MIN: Tile((60, 58)),
-                Area.TILE_MAX: Tile((77, 72)),
+                Area.TILE_MIN: (60, 58),
+                Area.TILE_MAX: (77, 72),
             },
             Civ.PRUSSIA: {
-                Area.TILE_MIN: Tile((59, 49)),
-                Area.TILE_MAX: Tile((72, 55)),
+                Area.TILE_MIN: (59, 49),
+                Area.TILE_MAX: (72, 55),
             },
             Civ.LITHUANIA: {
-                Area.TILE_MIN: Tile((68, 45)),
-                Area.TILE_MAX: Tile((82, 64)),
+                Area.TILE_MIN: (68, 45),
+                Area.TILE_MAX: (82, 64),
             },
             Civ.AUSTRIA: {
-                Area.TILE_MIN: Tile((56, 35)),
-                Area.TILE_MAX: Tile((66, 45)),
+                Area.TILE_MIN: (56, 35),
+                Area.TILE_MAX: (66, 45),
             },
             Civ.OTTOMAN: {
-                Area.TILE_MIN: Tile((83, 17)),
-                Area.TILE_MAX: Tile((93, 27)),
+                Area.TILE_MIN: (83, 17),
+                Area.TILE_MAX: (93, 27),
             },
             Civ.MOSCOW: {
-                Area.TILE_MIN: Tile((83, 51)),
-                Area.TILE_MAX: Tile((93, 61)),
+                Area.TILE_MIN: (83, 51),
+                Area.TILE_MAX: (93, 61),
             },
             Civ.DUTCH: {
-                Area.TILE_MIN: Tile((44, 47)),
-                Area.TILE_MAX: Tile((54, 57)),
+                Area.TILE_MIN: (44, 47),
+                Area.TILE_MAX: (54, 57),
             },
             Civ.POPE: {
-                Area.TILE_MIN: Tile((54, 25)),
-                Area.TILE_MAX: Tile((58, 29)),
+                Area.TILE_MIN: (54, 25),
+                Area.TILE_MAX: (58, 29),
             },
         }
     )
+    .apply(lambda d: parse_area_dict(d))
     .apply(
         lambda area: (
             TilesFactory(WORLD_WIDTH, WORLD_HEIGHT)
@@ -1729,22 +1750,26 @@ CIV_BROADER_AREA = (
             )
             .extend(area.get(Area.ADDITIONAL_TILES))
             .substract(area.get(Area.EXCEPTION_TILES))
+            .attach_area(AreaTypes.BROADER)
             .normalize()
-            .data
+            .get_results()
         )
     )
     .fill_missing_members(None)
 )
 
 CIV_AREAS = CivDataMapper(
-    {
-        civ: {
-            AreaTypes.CORE: CIV_CORE_AREA[civ],
-            AreaTypes.NORMAL: CIV_NORMAL_AREA[civ],
-            AreaTypes.BROADER: CIV_BROADER_AREA[civ],
-        }
+    dict(
+        (
+            civ,
+            {
+                AreaTypes.CORE: CIV_CORE_AREA[civ],
+                AreaTypes.NORMAL: CIV_NORMAL_AREA[civ],
+                AreaTypes.BROADER: CIV_BROADER_AREA[civ],
+            },
+        )
         for civ in Civ
-    }
+    )
 )
 
 CIV_VISIBLE_AREA_500AD = (
@@ -1752,324 +1777,325 @@ CIV_VISIBLE_AREA_500AD = (
         {
             Civ.BYZANTIUM: [
                 {
-                    Area.TILE_MIN: Tile((64, 0)),
-                    Area.TILE_MAX: Tile((99, 34)),
+                    Area.TILE_MIN: (64, 0),
+                    Area.TILE_MAX: (99, 34),
                 },
                 {
-                    Area.TILE_MIN: Tile((49, 1)),
-                    Area.TILE_MAX: Tile((63, 38)),
+                    Area.TILE_MIN: (49, 1),
+                    Area.TILE_MAX: (63, 38),
                 },
                 {
-                    Area.TILE_MIN: Tile((24, 13)),
-                    Area.TILE_MAX: Tile((48, 36)),
+                    Area.TILE_MIN: (24, 13),
+                    Area.TILE_MAX: (48, 36),
                 },
             ],
             Civ.FRANCE: [
                 {
-                    Area.TILE_MIN: Tile((35, 31)),
-                    Area.TILE_MAX: Tile((52, 51)),
+                    Area.TILE_MIN: (35, 31),
+                    Area.TILE_MAX: (52, 51),
                 },
                 {
-                    Area.TILE_MIN: Tile((49, 26)),
-                    Area.TILE_MAX: Tile((59, 38)),
+                    Area.TILE_MIN: (49, 26),
+                    Area.TILE_MAX: (59, 38),
                 },
             ],
             Civ.ARABIA: [
                 {
-                    Area.TILE_MIN: Tile((79, 0)),
-                    Area.TILE_MAX: Tile((89, 6)),
+                    Area.TILE_MIN: (79, 0),
+                    Area.TILE_MAX: (89, 6),
                 },
                 {
-                    Area.TILE_MIN: Tile((90, 0)),
-                    Area.TILE_MAX: Tile((99, 22)),
+                    Area.TILE_MIN: (90, 0),
+                    Area.TILE_MAX: (99, 22),
                 },
             ],
             Civ.BULGARIA: [
                 {
-                    Area.TILE_MIN: Tile((69, 23)),
-                    Area.TILE_MAX: Tile((81, 32)),
+                    Area.TILE_MIN: (69, 23),
+                    Area.TILE_MAX: (81, 32),
                 },
                 {
-                    Area.TILE_MIN: Tile((78, 31)),
-                    Area.TILE_MAX: Tile((99, 41)),
+                    Area.TILE_MIN: (78, 31),
+                    Area.TILE_MAX: (99, 41),
                 },
             ],
             Civ.CORDOBA: [
                 {
-                    Area.TILE_MIN: Tile((18, 13)),
-                    Area.TILE_MAX: Tile((39, 33)),
+                    Area.TILE_MIN: (18, 13),
+                    Area.TILE_MAX: (39, 33),
                 },
                 {
-                    Area.TILE_MIN: Tile((40, 0)),
-                    Area.TILE_MAX: Tile((59, 20)),
+                    Area.TILE_MIN: (40, 0),
+                    Area.TILE_MAX: (59, 20),
                 },
                 {
-                    Area.TILE_MIN: Tile((60, 0)),
-                    Area.TILE_MAX: Tile((95, 7)),
+                    Area.TILE_MIN: (60, 0),
+                    Area.TILE_MAX: (95, 7),
                 },
             ],
             Civ.VENECIA: [
                 {
-                    Area.TILE_MIN: Tile((47, 14)),
-                    Area.TILE_MAX: Tile((59, 38)),
+                    Area.TILE_MIN: (47, 14),
+                    Area.TILE_MAX: (59, 38),
                 },
                 {
-                    Area.TILE_MIN: Tile((60, 18)),
-                    Area.TILE_MAX: Tile((63, 35)),
+                    Area.TILE_MIN: (60, 18),
+                    Area.TILE_MAX: (63, 35),
                 },
                 {
-                    Area.TILE_MIN: Tile((64, 18)),
-                    Area.TILE_MAX: Tile((68, 29)),
+                    Area.TILE_MIN: (64, 18),
+                    Area.TILE_MAX: (68, 29),
                 },
             ],
             Civ.BURGUNDY: [
                 {
-                    Area.TILE_MIN: Tile((43, 31)),
-                    Area.TILE_MAX: Tile((53, 53)),
+                    Area.TILE_MIN: (43, 31),
+                    Area.TILE_MAX: (53, 53),
                 },
             ],
             Civ.GERMANY: [
                 {
-                    Area.TILE_MIN: Tile((44, 31)),
-                    Area.TILE_MAX: Tile((46, 52)),
+                    Area.TILE_MIN: (44, 31),
+                    Area.TILE_MAX: (46, 52),
                 },
                 {
-                    Area.TILE_MIN: Tile((47, 27)),
-                    Area.TILE_MAX: Tile((61, 55)),
+                    Area.TILE_MIN: (47, 27),
+                    Area.TILE_MAX: (61, 55),
                 },
                 {
-                    Area.TILE_MIN: Tile((62, 50)),
-                    Area.TILE_MAX: Tile((70, 55)),
+                    Area.TILE_MIN: (62, 50),
+                    Area.TILE_MAX: (70, 55),
                 },
             ],
             Civ.NOVGOROD: [
                 {
-                    Area.TILE_MIN: Tile((72, 55)),
-                    Area.TILE_MAX: Tile((90, 72)),
+                    Area.TILE_MIN: (72, 55),
+                    Area.TILE_MAX: (90, 72),
                 },
                 {
-                    Area.TILE_MIN: Tile((79, 41)),
-                    Area.TILE_MAX: Tile((88, 54)),
+                    Area.TILE_MIN: (79, 41),
+                    Area.TILE_MAX: (88, 54),
                 },
             ],
             Civ.NORWAY: [
                 {
-                    Area.TILE_MIN: Tile((49, 52)),
-                    Area.TILE_MAX: Tile((71, 72)),
+                    Area.TILE_MIN: (49, 52),
+                    Area.TILE_MAX: (71, 72),
                 },
                 {
-                    Area.TILE_MIN: Tile((30, 56)),
-                    Area.TILE_MAX: Tile((48, 72)),
+                    Area.TILE_MIN: (30, 56),
+                    Area.TILE_MAX: (48, 72),
                 },
             ],
             Civ.KIEV: [
                 {
-                    Area.TILE_MIN: Tile((77, 24)),
-                    Area.TILE_MAX: Tile((82, 40)),
+                    Area.TILE_MIN: (77, 24),
+                    Area.TILE_MAX: (82, 40),
                 },
                 {
-                    Area.TILE_MIN: Tile((83, 33)),
-                    Area.TILE_MAX: Tile((88, 46)),
+                    Area.TILE_MIN: (83, 33),
+                    Area.TILE_MAX: (88, 46),
                 },
                 {
-                    Area.TILE_MIN: Tile((77, 39)),
-                    Area.TILE_MAX: Tile((91, 56)),
+                    Area.TILE_MIN: (77, 39),
+                    Area.TILE_MAX: (91, 56),
                 },
             ],
             Civ.HUNGARY: [
                 {
-                    Area.TILE_MIN: Tile((59, 30)),
-                    Area.TILE_MAX: Tile((82, 42)),
+                    Area.TILE_MIN: (59, 30),
+                    Area.TILE_MAX: (82, 42),
                 },
                 {
-                    Area.TILE_MIN: Tile((83, 36)),
-                    Area.TILE_MAX: Tile((92, 42)),
+                    Area.TILE_MIN: (83, 36),
+                    Area.TILE_MAX: (92, 42),
                 },
             ],
             Civ.CASTILLE: [
                 {
-                    Area.TILE_MIN: Tile((22, 25)),
-                    Area.TILE_MAX: Tile((35, 38)),
+                    Area.TILE_MIN: (22, 25),
+                    Area.TILE_MAX: (35, 38),
                 },
                 {
-                    Area.TILE_MIN: Tile((36, 25)),
-                    Area.TILE_MAX: Tile((43, 40)),
+                    Area.TILE_MIN: (36, 25),
+                    Area.TILE_MAX: (43, 40),
                 },
             ],
             Civ.DENMARK: [
                 {
-                    Area.TILE_MIN: Tile((34, 46)),
-                    Area.TILE_MAX: Tile((49, 72)),
+                    Area.TILE_MIN: (34, 46),
+                    Area.TILE_MAX: (49, 72),
                 },
                 {
-                    Area.TILE_MIN: Tile((50, 50)),
-                    Area.TILE_MAX: Tile((71, 72)),
+                    Area.TILE_MIN: (50, 50),
+                    Area.TILE_MAX: (71, 72),
                 },
                 {
-                    Area.TILE_MIN: Tile((72, 57)),
-                    Area.TILE_MAX: Tile((78, 64)),
+                    Area.TILE_MIN: (72, 57),
+                    Area.TILE_MAX: (78, 64),
                 },
             ],
             Civ.SCOTLAND: [
                 {
-                    Area.TILE_MIN: Tile((30, 51)),
-                    Area.TILE_MAX: Tile((46, 72)),
+                    Area.TILE_MIN: (30, 51),
+                    Area.TILE_MAX: (46, 72),
                 },
                 {
-                    Area.TILE_MIN: Tile((35, 46)),
-                    Area.TILE_MAX: Tile((46, 50)),
+                    Area.TILE_MIN: (35, 46),
+                    Area.TILE_MAX: (46, 50),
                 },
             ],
             Civ.POLAND: [
                 {
-                    Area.TILE_MIN: Tile((60, 40)),
-                    Area.TILE_MAX: Tile((74, 55)),
+                    Area.TILE_MIN: (60, 40),
+                    Area.TILE_MAX: (74, 55),
                 },
                 {
-                    Area.TILE_MIN: Tile((75, 40)),
-                    Area.TILE_MAX: Tile((79, 48)),
+                    Area.TILE_MIN: (75, 40),
+                    Area.TILE_MAX: (79, 48),
                 },
             ],
             Civ.GENOA: [
                 {
-                    Area.TILE_MIN: Tile((39, 20)),
-                    Area.TILE_MAX: Tile((60, 38)),
+                    Area.TILE_MIN: (39, 20),
+                    Area.TILE_MAX: (60, 38),
                 },
                 {
-                    Area.TILE_MIN: Tile((47, 14)),
-                    Area.TILE_MAX: Tile((63, 32)),
+                    Area.TILE_MIN: (47, 14),
+                    Area.TILE_MAX: (63, 32),
                 },
                 {
-                    Area.TILE_MIN: Tile((64, 16)),
-                    Area.TILE_MAX: Tile((67, 29)),
+                    Area.TILE_MIN: (64, 16),
+                    Area.TILE_MAX: (67, 29),
                 },
             ],
             Civ.MOROCCO: [
                 {
-                    Area.TILE_MIN: Tile((12, 2)),
-                    Area.TILE_MAX: Tile((42, 31)),
+                    Area.TILE_MIN: (12, 2),
+                    Area.TILE_MAX: (42, 31),
                 },
                 {
-                    Area.TILE_MIN: Tile((43, 10)),
-                    Area.TILE_MAX: Tile((53, 20)),
+                    Area.TILE_MIN: (43, 10),
+                    Area.TILE_MAX: (53, 20),
                 },
             ],
             Civ.ENGLAND: [
                 {
-                    Area.TILE_MIN: Tile((31, 49)),
-                    Area.TILE_MAX: Tile((45, 64)),
+                    Area.TILE_MIN: (31, 49),
+                    Area.TILE_MAX: (45, 64),
                 },
                 {
-                    Area.TILE_MIN: Tile((37, 46)),
-                    Area.TILE_MAX: Tile((45, 48)),
+                    Area.TILE_MIN: (37, 46),
+                    Area.TILE_MAX: (45, 48),
                 },
             ],
             Civ.PORTUGAL: [
                 {
-                    Area.TILE_MIN: Tile((18, 22)),
-                    Area.TILE_MAX: Tile((34, 39)),
+                    Area.TILE_MIN: (18, 22),
+                    Area.TILE_MAX: (34, 39),
                 },
             ],
             Civ.ARAGON: [
                 {
-                    Area.TILE_MIN: Tile((19, 23)),
-                    Area.TILE_MAX: Tile((56, 40)),
+                    Area.TILE_MIN: (19, 23),
+                    Area.TILE_MAX: (56, 40),
                 },
                 {
-                    Area.TILE_MIN: Tile((25, 21)),
-                    Area.TILE_MAX: Tile((45, 22)),
+                    Area.TILE_MIN: (25, 21),
+                    Area.TILE_MAX: (45, 22),
                 },
                 {
-                    Area.TILE_MIN: Tile((46, 14)),
-                    Area.TILE_MAX: Tile((63, 28)),
+                    Area.TILE_MIN: (46, 14),
+                    Area.TILE_MAX: (63, 28),
                 },
             ],
             Civ.SWEDEN: [
                 {
-                    Area.TILE_MIN: Tile((39, 52)),
-                    Area.TILE_MAX: Tile((82, 66)),
+                    Area.TILE_MIN: (39, 52),
+                    Area.TILE_MAX: (82, 66),
                 },
                 {
-                    Area.TILE_MIN: Tile((34, 61)),
-                    Area.TILE_MAX: Tile((71, 72)),
+                    Area.TILE_MIN: (34, 61),
+                    Area.TILE_MAX: (71, 72),
                 },
             ],
             Civ.PRUSSIA: [
                 {
-                    Area.TILE_MIN: Tile((51, 43)),
-                    Area.TILE_MAX: Tile((73, 56)),
+                    Area.TILE_MIN: (51, 43),
+                    Area.TILE_MAX: (73, 56),
                 },
                 {
-                    Area.TILE_MIN: Tile((66, 57)),
-                    Area.TILE_MAX: Tile((82, 62)),
+                    Area.TILE_MIN: (66, 57),
+                    Area.TILE_MAX: (82, 62),
                 },
                 {
-                    Area.TILE_MIN: Tile((69, 63)),
-                    Area.TILE_MAX: Tile((79, 66)),
+                    Area.TILE_MIN: (69, 63),
+                    Area.TILE_MAX: (79, 66),
                 },
             ],
             Civ.LITHUANIA: [
                 {
-                    Area.TILE_MIN: Tile((67, 46)),
-                    Area.TILE_MAX: Tile((76, 55)),
+                    Area.TILE_MIN: (67, 46),
+                    Area.TILE_MAX: (76, 55),
                 },
                 {
-                    Area.TILE_MIN: Tile((73, 44)),
-                    Area.TILE_MAX: Tile((81, 58)),
+                    Area.TILE_MIN: (73, 44),
+                    Area.TILE_MAX: (81, 58),
                 },
             ],
             Civ.AUSTRIA: [
                 {
-                    Area.TILE_MIN: Tile((49, 27)),
-                    Area.TILE_MAX: Tile((61, 55)),
+                    Area.TILE_MIN: (49, 27),
+                    Area.TILE_MAX: (61, 55),
                 },
                 {
-                    Area.TILE_MIN: Tile((62, 34)),
-                    Area.TILE_MAX: Tile((67, 46)),
+                    Area.TILE_MIN: (62, 34),
+                    Area.TILE_MAX: (67, 46),
                 },
             ],
             Civ.OTTOMAN: [
                 {
-                    Area.TILE_MIN: Tile((75, 13)),
-                    Area.TILE_MAX: Tile((99, 27)),
+                    Area.TILE_MIN: (75, 13),
+                    Area.TILE_MAX: (99, 27),
                 },
                 {
-                    Area.TILE_MIN: Tile((92, 4)),
-                    Area.TILE_MAX: Tile((99, 12)),
+                    Area.TILE_MIN: (92, 4),
+                    Area.TILE_MAX: (99, 12),
                 },
             ],
             Civ.MOSCOW: [
                 {
-                    Area.TILE_MIN: Tile((77, 42)),
-                    Area.TILE_MAX: Tile((99, 51)),
+                    Area.TILE_MIN: (77, 42),
+                    Area.TILE_MAX: (99, 51),
                 },
                 {
-                    Area.TILE_MIN: Tile((74, 52)),
-                    Area.TILE_MAX: Tile((99, 67)),
+                    Area.TILE_MIN: (74, 52),
+                    Area.TILE_MAX: (99, 67),
                 },
             ],
             Civ.DUTCH: [
                 {
-                    Area.TILE_MIN: Tile((40, 45)),
-                    Area.TILE_MAX: Tile((65, 57)),
+                    Area.TILE_MIN: (40, 45),
+                    Area.TILE_MAX: (65, 57),
                 },
                 {
-                    Area.TILE_MIN: Tile((49, 58)),
-                    Area.TILE_MAX: Tile((67, 66)),
+                    Area.TILE_MIN: (49, 58),
+                    Area.TILE_MAX: (67, 66),
                 },
                 {
-                    Area.TILE_MIN: Tile((46, 39)),
-                    Area.TILE_MAX: Tile((63, 44)),
+                    Area.TILE_MIN: (46, 39),
+                    Area.TILE_MAX: (63, 44),
                 },
             ],
             Civ.POPE: [
                 {
-                    Area.TILE_MIN: Tile((39, 12)),
-                    Area.TILE_MAX: Tile((73, 44)),
+                    Area.TILE_MIN: (39, 12),
+                    Area.TILE_MAX: (73, 44),
                 },
             ],
         }
     )
+    .applymap(lambda d: parse_area_dict(d))
     .applymap(
         lambda areas: (
             TilesFactory(WORLD_WIDTH, WORLD_HEIGHT)
@@ -2077,11 +2103,11 @@ CIV_VISIBLE_AREA_500AD = (
                 areas[Area.TILE_MIN],
                 areas[Area.TILE_MAX],
             )
-            .normalize()
-            .data
+            .get_results()
         )
     )
-    .apply(lambda tiles: merge_tiles(*tiles))
+    .apply(lambda tiles: concat_tiles(*tiles))
+    # .apply(lambda tile: normalize_tiles(tile))
 )
 
 CIV_VISIBLE_AREA_1200AD = (
@@ -2089,332 +2115,333 @@ CIV_VISIBLE_AREA_1200AD = (
         {
             Civ.BYZANTIUM: [
                 {
-                    Area.TILE_MIN: Tile((64, 0)),
-                    Area.TILE_MAX: Tile((99, 34)),
+                    Area.TILE_MIN: (64, 0),
+                    Area.TILE_MAX: (99, 34),
                 },
                 {
-                    Area.TILE_MIN: Tile((49, 1)),
-                    Area.TILE_MAX: Tile((63, 38)),
+                    Area.TILE_MIN: (49, 1),
+                    Area.TILE_MAX: (63, 38),
                 },
                 {
-                    Area.TILE_MIN: Tile((24, 13)),
-                    Area.TILE_MAX: Tile((48, 36)),
+                    Area.TILE_MIN: (24, 13),
+                    Area.TILE_MAX: (48, 36),
                 },
             ],
             Civ.FRANCE: [
                 {
-                    Area.TILE_MIN: Tile((30, 26)),
-                    Area.TILE_MAX: Tile((59, 54)),
+                    Area.TILE_MIN: (30, 26),
+                    Area.TILE_MAX: (59, 54),
                 },
                 {
-                    Area.TILE_MIN: Tile((35, 55)),
-                    Area.TILE_MAX: Tile((40, 70)),
+                    Area.TILE_MIN: (35, 55),
+                    Area.TILE_MAX: (40, 70),
                 },
             ],
             Civ.ARABIA: [
                 {
-                    Area.TILE_MIN: Tile((26, 20)),
-                    Area.TILE_MAX: Tile((35, 23)),
+                    Area.TILE_MIN: (26, 20),
+                    Area.TILE_MAX: (35, 23),
                 },
                 {
-                    Area.TILE_MIN: Tile((22, 5)),
-                    Area.TILE_MAX: Tile((27, 19)),
+                    Area.TILE_MIN: (22, 5),
+                    Area.TILE_MAX: (27, 19),
                 },
                 {
-                    Area.TILE_MIN: Tile((28, 9)),
-                    Area.TILE_MAX: Tile((53, 19)),
+                    Area.TILE_MIN: (28, 9),
+                    Area.TILE_MAX: (53, 19),
                 },
                 {
-                    Area.TILE_MIN: Tile((47, 0)),
-                    Area.TILE_MAX: Tile((85, 8)),
+                    Area.TILE_MIN: (47, 0),
+                    Area.TILE_MAX: (85, 8),
                 },
                 {
-                    Area.TILE_MIN: Tile((86, 0)),
-                    Area.TILE_MAX: Tile((99, 20)),
+                    Area.TILE_MIN: (86, 0),
+                    Area.TILE_MAX: (99, 20),
                 },
             ],
             Civ.BULGARIA: [
                 {
-                    Area.TILE_MIN: Tile((65, 12)),
-                    Area.TILE_MAX: Tile((83, 38)),
+                    Area.TILE_MIN: (65, 12),
+                    Area.TILE_MAX: (83, 38),
                 },
                 {
-                    Area.TILE_MIN: Tile((78, 31)),
-                    Area.TILE_MAX: Tile((99, 41)),
+                    Area.TILE_MIN: (78, 31),
+                    Area.TILE_MAX: (99, 41),
                 },
             ],
             Civ.CORDOBA: [
                 {
-                    Area.TILE_MIN: Tile((18, 13)),
-                    Area.TILE_MAX: Tile((39, 33)),
+                    Area.TILE_MIN: (18, 13),
+                    Area.TILE_MAX: (39, 33),
                 },
                 {
-                    Area.TILE_MIN: Tile((40, 0)),
-                    Area.TILE_MAX: Tile((59, 20)),
+                    Area.TILE_MIN: (40, 0),
+                    Area.TILE_MAX: (59, 20),
                 },
                 {
-                    Area.TILE_MIN: Tile((60, 0)),
-                    Area.TILE_MAX: Tile((95, 7)),
+                    Area.TILE_MIN: (60, 0),
+                    Area.TILE_MAX: (95, 7),
                 },
             ],
             Civ.VENECIA: [
                 {
-                    Area.TILE_MIN: Tile((46, 14)),
-                    Area.TILE_MAX: Tile((70, 41)),
+                    Area.TILE_MIN: (46, 14),
+                    Area.TILE_MAX: (70, 41),
                 },
                 {
-                    Area.TILE_MIN: Tile((49, 7)),
-                    Area.TILE_MAX: Tile((82, 25)),
+                    Area.TILE_MIN: (49, 7),
+                    Area.TILE_MAX: (82, 25),
                 },
                 {
-                    Area.TILE_MIN: Tile((83, 7)),
-                    Area.TILE_MAX: Tile((91, 13)),
+                    Area.TILE_MIN: (83, 7),
+                    Area.TILE_MAX: (91, 13),
                 },
             ],
             Civ.BURGUNDY: [
                 {
-                    Area.TILE_MIN: Tile((43, 31)),
-                    Area.TILE_MAX: Tile((53, 53)),
+                    Area.TILE_MIN: (43, 31),
+                    Area.TILE_MAX: (53, 53),
                 },
             ],
             Civ.GERMANY: [
                 {
-                    Area.TILE_MIN: Tile((41, 31)),
-                    Area.TILE_MAX: Tile((61, 58)),
+                    Area.TILE_MIN: (41, 31),
+                    Area.TILE_MAX: (61, 58),
                 },
                 {
-                    Area.TILE_MIN: Tile((47, 27)),
-                    Area.TILE_MAX: Tile((61, 30)),
+                    Area.TILE_MIN: (47, 27),
+                    Area.TILE_MAX: (61, 30),
                 },
                 {
-                    Area.TILE_MIN: Tile((62, 34)),
-                    Area.TILE_MAX: Tile((70, 55)),
+                    Area.TILE_MIN: (62, 34),
+                    Area.TILE_MAX: (70, 55),
                 },
                 {
-                    Area.TILE_MIN: Tile((55, 22)),
-                    Area.TILE_MAX: Tile((61, 26)),
+                    Area.TILE_MIN: (55, 22),
+                    Area.TILE_MAX: (61, 26),
                 },
             ],
             Civ.NOVGOROD: [
                 {
-                    Area.TILE_MIN: Tile((72, 55)),
-                    Area.TILE_MAX: Tile((90, 72)),
+                    Area.TILE_MIN: (72, 55),
+                    Area.TILE_MAX: (90, 72),
                 },
                 {
-                    Area.TILE_MIN: Tile((79, 41)),
-                    Area.TILE_MAX: Tile((88, 54)),
+                    Area.TILE_MIN: (79, 41),
+                    Area.TILE_MAX: (88, 54),
                 },
                 {
-                    Area.TILE_MIN: Tile((91, 60)),
-                    Area.TILE_MAX: Tile((99, 72)),
+                    Area.TILE_MIN: (91, 60),
+                    Area.TILE_MAX: (99, 72),
                 },
             ],
             Civ.NORWAY: [
                 {
-                    Area.TILE_MIN: Tile((30, 52)),
-                    Area.TILE_MAX: Tile((71, 72)),
+                    Area.TILE_MIN: (30, 52),
+                    Area.TILE_MAX: (71, 72),
                 },
                 {
-                    Area.TILE_MIN: Tile((0, 67)),
-                    Area.TILE_MAX: Tile((29, 72)),
+                    Area.TILE_MIN: (0, 67),
+                    Area.TILE_MAX: (29, 72),
                 },
             ],
             Civ.KIEV: [
                 {
-                    Area.TILE_MIN: Tile((75, 42)),
-                    Area.TILE_MAX: Tile((94, 62)),
+                    Area.TILE_MIN: (75, 42),
+                    Area.TILE_MAX: (94, 62),
                 },
                 {
-                    Area.TILE_MIN: Tile((77, 31)),
-                    Area.TILE_MAX: Tile((94, 41)),
+                    Area.TILE_MIN: (77, 31),
+                    Area.TILE_MAX: (94, 41),
                 },
                 {
-                    Area.TILE_MIN: Tile((77, 24)),
-                    Area.TILE_MAX: Tile((82, 40)),
+                    Area.TILE_MIN: (77, 24),
+                    Area.TILE_MAX: (82, 40),
                 },
             ],
             Civ.HUNGARY: [
                 {
-                    Area.TILE_MIN: Tile((56, 27)),
-                    Area.TILE_MAX: Tile((82, 45)),
+                    Area.TILE_MIN: (56, 27),
+                    Area.TILE_MAX: (82, 45),
                 },
                 {
-                    Area.TILE_MIN: Tile((83, 31)),
-                    Area.TILE_MAX: Tile((92, 42)),
+                    Area.TILE_MIN: (83, 31),
+                    Area.TILE_MAX: (92, 42),
                 },
                 {
-                    Area.TILE_MIN: Tile((65, 12)),
-                    Area.TILE_MAX: Tile((82, 26)),
+                    Area.TILE_MIN: (65, 12),
+                    Area.TILE_MAX: (82, 26),
                 },
             ],
             Civ.CASTILLE: [
                 {
-                    Area.TILE_MIN: Tile((20, 17)),
-                    Area.TILE_MAX: Tile((56, 40)),
+                    Area.TILE_MIN: (20, 17),
+                    Area.TILE_MAX: (56, 40),
                 },
             ],
             Civ.DENMARK: [
                 {
-                    Area.TILE_MIN: Tile((34, 46)),
-                    Area.TILE_MAX: Tile((71, 72)),
+                    Area.TILE_MIN: (34, 46),
+                    Area.TILE_MAX: (71, 72),
                 },
                 {
-                    Area.TILE_MIN: Tile((72, 57)),
-                    Area.TILE_MAX: Tile((78, 72)),
+                    Area.TILE_MIN: (72, 57),
+                    Area.TILE_MAX: (78, 72),
                 },
             ],
             Civ.SCOTLAND: [
                 {
-                    Area.TILE_MIN: Tile((30, 43)),
-                    Area.TILE_MAX: Tile((46, 72)),
+                    Area.TILE_MIN: (30, 43),
+                    Area.TILE_MAX: (46, 72),
                 },
             ],
             Civ.POLAND: [
                 {
-                    Area.TILE_MIN: Tile((60, 37)),
-                    Area.TILE_MAX: Tile((79, 60)),
+                    Area.TILE_MIN: (60, 37),
+                    Area.TILE_MAX: (79, 60),
                 },
             ],
             Civ.GENOA: [
                 {
-                    Area.TILE_MIN: Tile((39, 15)),
-                    Area.TILE_MAX: Tile((60, 39)),
+                    Area.TILE_MIN: (39, 15),
+                    Area.TILE_MAX: (60, 39),
                 },
                 {
-                    Area.TILE_MIN: Tile((47, 9)),
-                    Area.TILE_MAX: Tile((82, 25)),
+                    Area.TILE_MIN: (47, 9),
+                    Area.TILE_MAX: (82, 25),
                 },
                 {
-                    Area.TILE_MIN: Tile((61, 26)),
-                    Area.TILE_MAX: Tile((67, 32)),
+                    Area.TILE_MIN: (61, 26),
+                    Area.TILE_MAX: (67, 32),
                 },
             ],
             Civ.MOROCCO: [
                 {
-                    Area.TILE_MIN: Tile((12, 2)),
-                    Area.TILE_MAX: Tile((42, 31)),
+                    Area.TILE_MIN: (12, 2),
+                    Area.TILE_MAX: (42, 31),
                 },
                 {
-                    Area.TILE_MIN: Tile((43, 2)),
-                    Area.TILE_MAX: Tile((53, 20)),
+                    Area.TILE_MIN: (43, 2),
+                    Area.TILE_MAX: (53, 20),
                 },
             ],
             Civ.ENGLAND: [
                 {
-                    Area.TILE_MIN: Tile((26, 54)),
-                    Area.TILE_MAX: Tile((46, 64)),
+                    Area.TILE_MIN: (26, 54),
+                    Area.TILE_MAX: (46, 64),
                 },
                 {
-                    Area.TILE_MIN: Tile((31, 34)),
-                    Area.TILE_MAX: Tile((46, 53)),
+                    Area.TILE_MIN: (31, 34),
+                    Area.TILE_MAX: (46, 53),
                 },
             ],
             Civ.PORTUGAL: [
                 {
-                    Area.TILE_MIN: Tile((18, 17)),
-                    Area.TILE_MAX: Tile((34, 39)),
+                    Area.TILE_MIN: (18, 17),
+                    Area.TILE_MAX: (34, 39),
                 },
             ],
             Civ.ARAGON: [
                 {
-                    Area.TILE_MIN: Tile((19, 29)),
-                    Area.TILE_MAX: Tile((56, 40)),
+                    Area.TILE_MIN: (19, 29),
+                    Area.TILE_MAX: (56, 40),
                 },
                 {
-                    Area.TILE_MIN: Tile((19, 21)),
-                    Area.TILE_MAX: Tile((34, 28)),
+                    Area.TILE_MIN: (19, 21),
+                    Area.TILE_MAX: (34, 28),
                 },
                 {
-                    Area.TILE_MIN: Tile((35, 14)),
-                    Area.TILE_MAX: Tile((63, 28)),
+                    Area.TILE_MIN: (35, 14),
+                    Area.TILE_MAX: (63, 28),
                 },
             ],
             Civ.SWEDEN: [
                 {
-                    Area.TILE_MIN: Tile((39, 52)),
-                    Area.TILE_MAX: Tile((82, 66)),
+                    Area.TILE_MIN: (39, 52),
+                    Area.TILE_MAX: (82, 66),
                 },
                 {
-                    Area.TILE_MIN: Tile((34, 61)),
-                    Area.TILE_MAX: Tile((71, 72)),
+                    Area.TILE_MIN: (34, 61),
+                    Area.TILE_MAX: (71, 72),
                 },
             ],
             Civ.PRUSSIA: [
                 {
-                    Area.TILE_MIN: Tile((51, 43)),
-                    Area.TILE_MAX: Tile((73, 56)),
+                    Area.TILE_MIN: (51, 43),
+                    Area.TILE_MAX: (73, 56),
                 },
                 {
-                    Area.TILE_MIN: Tile((66, 57)),
-                    Area.TILE_MAX: Tile((82, 62)),
+                    Area.TILE_MIN: (66, 57),
+                    Area.TILE_MAX: (82, 62),
                 },
                 {
-                    Area.TILE_MIN: Tile((69, 63)),
-                    Area.TILE_MAX: Tile((79, 66)),
+                    Area.TILE_MIN: (69, 63),
+                    Area.TILE_MAX: (79, 66),
                 },
             ],
             Civ.LITHUANIA: [
                 {
-                    Area.TILE_MIN: Tile((67, 46)),
-                    Area.TILE_MAX: Tile((76, 55)),
+                    Area.TILE_MIN: (67, 46),
+                    Area.TILE_MAX: (76, 55),
                 },
                 {
-                    Area.TILE_MIN: Tile((73, 44)),
-                    Area.TILE_MAX: Tile((81, 58)),
+                    Area.TILE_MIN: (73, 44),
+                    Area.TILE_MAX: (81, 58),
                 },
             ],
             Civ.AUSTRIA: [
                 {
-                    Area.TILE_MIN: Tile((49, 27)),
-                    Area.TILE_MAX: Tile((61, 55)),
+                    Area.TILE_MIN: (49, 27),
+                    Area.TILE_MAX: (61, 55),
                 },
                 {
-                    Area.TILE_MIN: Tile((62, 34)),
-                    Area.TILE_MAX: Tile((67, 46)),
+                    Area.TILE_MIN: (62, 34),
+                    Area.TILE_MAX: (67, 46),
                 },
             ],
             Civ.OTTOMAN: [
                 {
-                    Area.TILE_MIN: Tile((75, 13)),
-                    Area.TILE_MAX: Tile((99, 27)),
+                    Area.TILE_MIN: (75, 13),
+                    Area.TILE_MAX: (99, 27),
                 },
                 {
-                    Area.TILE_MIN: Tile((92, 4)),
-                    Area.TILE_MAX: Tile((99, 12)),
+                    Area.TILE_MIN: (92, 4),
+                    Area.TILE_MAX: (99, 12),
                 },
             ],
             Civ.MOSCOW: [
                 {
-                    Area.TILE_MIN: Tile((77, 42)),
-                    Area.TILE_MAX: Tile((99, 51)),
+                    Area.TILE_MIN: (77, 42),
+                    Area.TILE_MAX: (99, 51),
                 },
                 {
-                    Area.TILE_MIN: Tile((74, 52)),
-                    Area.TILE_MAX: Tile((99, 67)),
+                    Area.TILE_MIN: (74, 52),
+                    Area.TILE_MAX: (99, 67),
                 },
             ],
             Civ.DUTCH: [
                 {
-                    Area.TILE_MIN: Tile((40, 45)),
-                    Area.TILE_MAX: Tile((65, 57)),
+                    Area.TILE_MIN: (40, 45),
+                    Area.TILE_MAX: (65, 57),
                 },
                 {
-                    Area.TILE_MIN: Tile((49, 58)),
-                    Area.TILE_MAX: Tile((67, 66)),
+                    Area.TILE_MIN: (49, 58),
+                    Area.TILE_MAX: (67, 66),
                 },
                 {
-                    Area.TILE_MIN: Tile((46, 39)),
-                    Area.TILE_MAX: Tile((63, 44)),
+                    Area.TILE_MIN: (46, 39),
+                    Area.TILE_MAX: (63, 44),
                 },
             ],
             Civ.POPE: [
                 {
-                    Area.TILE_MIN: Tile((39, 12)),
-                    Area.TILE_MAX: Tile((73, 44)),
+                    Area.TILE_MIN: (39, 12),
+                    Area.TILE_MAX: (73, 44),
                 },
             ],
         }
     )
+    .applymap(lambda d: parse_area_dict(d))
     .applymap(
         lambda areas: (
             TilesFactory(WORLD_WIDTH, WORLD_HEIGHT)
@@ -2422,13 +2449,11 @@ CIV_VISIBLE_AREA_1200AD = (
                 areas[Area.TILE_MIN],
                 areas[Area.TILE_MAX],
             )
-            .extend(areas.get(Area.ADDITIONAL_TILES))
-            .substract(areas.get(Area.EXCEPTION_TILES))
-            .normalize()
-            .data
+            .get_results()
         )
     )
-    .apply(lambda tiles: merge_tiles(*tiles))
+    .apply(lambda tiles: concat_tiles(*tiles))
+    # .apply(lambda tile: normalize_tiles(tile))
 )
 
 CIV_VISIBLE_AREA = ScenarioDataMapper(
