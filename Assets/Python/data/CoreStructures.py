@@ -1,5 +1,3 @@
-from copy import copy
-
 from CoreTypes import Area, AreaTypes, Civ, Scenario
 from BaseStructures import EnumDataMapper
 from Errors import NotACallableError, NotTypeExpectedError
@@ -267,6 +265,3 @@ class Civilizations(list):
     def get_minors(self):
         """Return minor civilizations, i.e. minor and not playable."""
         return self.filter(lambda c: c.properties.is_minor and not c.properties.is_playable)
-
-
-# TODO faire base class pour list, cf entity/location

@@ -19,7 +19,6 @@ from CoreStructures import (
     CivDataMapper,
     TilesFactory,
     concat_tiles,
-    normalize_tiles,
     parse_area_dict,
 )
 from MiscData import WORLD_HEIGHT, WORLD_WIDTH
