@@ -9,43 +9,13 @@ from CoreTypes import (
 )
 from CoreStructures import (
     CivDataMapper,
+    Civilization,
+    CivilizationProperties,
+    Civilizations,
     ScenarioDataMapper,
 )
 from TimelineData import DateTurn
 
-CIV_PROPERTIES = CivDataMapper(
-    {
-        Civ.POPE: {
-            CivilizationProperty.IS_PLAYABLE: False,
-            CivilizationProperty.IS_MINOR: False,
-        },
-        Civ.INDEPENDENT: {
-            CivilizationProperty.IS_PLAYABLE: False,
-            CivilizationProperty.IS_MINOR: True,
-        },
-        Civ.INDEPENDENT_2: {
-            CivilizationProperty.IS_PLAYABLE: False,
-            CivilizationProperty.IS_MINOR: True,
-        },
-        Civ.INDEPENDENT_3: {
-            CivilizationProperty.IS_PLAYABLE: True,
-            CivilizationProperty.IS_MINOR: True,
-        },
-        Civ.INDEPENDENT_4: {
-            CivilizationProperty.IS_PLAYABLE: True,
-            CivilizationProperty.IS_MINOR: True,
-        },
-        Civ.BARBARIAN: {
-            CivilizationProperty.IS_PLAYABLE: True,
-            CivilizationProperty.IS_MINOR: True,
-        },
-    }
-).fill_missing_members(
-    {
-        CivilizationProperty.IS_PLAYABLE: True,
-        CivilizationProperty.IS_MINOR: False,
-    }
-)
 
 CIV_STARTING_SITUATION_500AD = CivDataMapper(
     {
@@ -1503,3 +1473,48 @@ CIV_LEADERS = CivDataMapper(
         },
     }
 ).fill_missing_members(None)
+
+
+CIV_PROPERTIES = (
+    CivDataMapper(
+        {
+            Civ.POPE: {
+                CivilizationProperty.IS_PLAYABLE: False,
+                CivilizationProperty.IS_MINOR: False,
+            },
+            Civ.INDEPENDENT: {
+                CivilizationProperty.IS_PLAYABLE: False,
+                CivilizationProperty.IS_MINOR: True,
+            },
+            Civ.INDEPENDENT_2: {
+                CivilizationProperty.IS_PLAYABLE: False,
+                CivilizationProperty.IS_MINOR: True,
+            },
+            Civ.INDEPENDENT_3: {
+                CivilizationProperty.IS_PLAYABLE: False,
+                CivilizationProperty.IS_MINOR: True,
+            },
+            Civ.INDEPENDENT_4: {
+                CivilizationProperty.IS_PLAYABLE: False,
+                CivilizationProperty.IS_MINOR: True,
+            },
+            Civ.BARBARIAN: {
+                CivilizationProperty.IS_PLAYABLE: False,
+                CivilizationProperty.IS_MINOR: True,
+            },
+        }
+    )
+    .fill_missing_members(
+        {
+            CivilizationProperty.IS_PLAYABLE: True,
+            CivilizationProperty.IS_MINOR: False,
+        }
+    )
+    .apply(
+        lambda properties: CivilizationProperties(
+            **dict((k.name.lower(), v) for k, v in properties.items())
+        )
+    )
+)
+
+CIVILIZATIONS = Civilizations(*[Civilization(c, p) for c, p in CIV_PROPERTIES.sort().items()])
