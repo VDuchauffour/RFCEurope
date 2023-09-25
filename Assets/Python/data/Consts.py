@@ -34,39 +34,6 @@ iIndepStart = iIndependent # creates the block of independent civs
 iIndepEnd = iIndependent4
 
 
-#for stability hit on spawn
-lOlderNeighbours = [
-[], #Byzantium
-[], #Frankia
-[iByzantium], #Arabia
-[iByzantium], #Bulgaria
-[], #Cordoba
-[], #Venice
-[], #Burgundy
-[], #Germany
-[], #Novgorod
-[], #Norway
-[iBulgaria], #Kiev
-[iBulgaria], #Hungary
-[iCordoba], #Spain
-[iGermany], #Denmark
-[], #Scotland
-[iGermany,iKiev], #Poland
-[iVenecia,iGermany,iCordoba], #Genoa
-[iCordoba], #Morocco
-[iFrankia,iScotland], #England
-[iSpain,iCordoba], #Portugal
-[iSpain], #Aragon
-[iNorway,iDenmark,iNovgorod], #Sweden
-[iPoland], #Prussia
-[iPrussia,iNovgorod], #Lithuania
-[iGermany,iHungary,iVenecia,iGenoa], #Austria
-[iByzantium,iBulgaria,iArabia], #Turkey
-[iKiev,iPoland,iLithuania,iNovgorod], #Moscow
-[iGermany,iFrankia], #Dutch
-[] #Pope
-]
-
 # civ birth dates
 tBirth = (
 #Historic date		#Civ			#Actual spawn ingame		#Historic reference

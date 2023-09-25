@@ -2,6 +2,8 @@
 
 from CvPythonExtensions import *
 from CivilizationsData import CIVILIZATIONS
+from CoreStructures import get_civ_by_id
+from LocationsData import CIV_OLDER_NEIGHBOURS
 import PyHelpers  # LOQ
 import Popup
 import RFCUtils
@@ -3702,8 +3704,8 @@ class RiseAndFall:
 
     def hitNeighboursStability(self, iCiv):
         # 3Miro: Stability on Spawn
-        if len(Consts.lOlderNeighbours[iCiv]) > 0:
-            # 	print("Got inside hitStability!!!")
+        neighbours = CIV_OLDER_NEIGHBOURS[get_civ_by_id(iCiv)]
+        if neighbours is not None:
             bHuman = False
             # for iLoop in Consts.lOlderNeighbours[iCiv]:
             # if (gc.getPlayer(iLoop).isAlive()):
