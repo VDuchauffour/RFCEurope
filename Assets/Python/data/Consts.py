@@ -6,41 +6,6 @@ import XMLConsts as xml
 # globals
 gc = CyGlobalContext()
 
-# 3Miro: map size entered here
-iMapMaxX = 100
-iMapMaxY = 73
-
-#### Chronological order
-# Byzantium   i500AD
-# France      i500AD
-# Arabia      i632AD
-# Bulgaria    i680AD
-# Cordoba     i711AD
-# Venice      i810AD
-# Burgundy    i843AD
-# Germany     i856AD
-# Novgorod    i864AD
-# Norway      i872AD
-# Kiev        i882AD
-# Hungary     i895AD
-# Spain       i910AD
-# Denmark     i936AD
-# Scotland    i960AD
-# Poland      i966AD
-# Genoa       i1016AD
-# Morocco     i1040AD
-# England     i1066AD
-# Portugal    i1139AD
-# Aragon      i1164AD
-# Sweden      i1210AD
-# Prussia     i1224AD
-# Lithuania   i1236AD
-# Austria     i1282AD
-# Turkey      i1356AD
-# Moscow      i1380AD
-# Dutch       i1581AD
-# Pope - keep him last
-
 # initialize player variables to player IDs from WBS (this is the only part of the XML that will stay here):
 iNumPlayers = 29
 (iByzantium, iFrankia, iArabia, iBulgaria, iCordoba, iVenecia, iBurgundy, iGermany, iNovgorod, iNorway,
@@ -68,80 +33,6 @@ teamAragon, teamSweden, teamPrussia, teamLithuania, teamAustria, teamTurkey, tea
 iIndepStart = iIndependent # creates the block of independent civs
 iIndepEnd = iIndependent4
 
-l0ArrayMajor = [0 for i in range(iNumPlayers)]			# temp counter for the number of cities for each player, used in RiseAndFall.py
-l0ArrayTotal = [0 for i in range(iNumTotalPlayers)]		# currently unused
-lm1Array = [-1 for i in range(iNumTotalPlayers)]		# currently unused
-
-#for Congresses and Victory
-lCivGroups = [[iByzantium,iBulgaria,iNovgorod,iKiev,iLithuania,iMoscow],		#Eastern
-		[iBurgundy,iHungary,iGermany,iPoland,iPrussia,iAustria],				#Central
-		[iFrankia,iSpain,iEngland,iPortugal,iDutch,iAragon,iScotland],			#Atlantic
-		[iArabia,iCordoba,iMorocco,iTurkey],									#Islamic
-		[iGenoa,iVenecia,iPope],												#Italian
-		[iNorway,iDenmark,iSweden]] 											#Scandinavian
-
-lCivStabilityGroups = [[iByzantium,iBulgaria,iNovgorod,iKiev,iLithuania,iMoscow],		#Eastern
-			[iBurgundy,iHungary,iGermany,iPoland,iPrussia,iAustria],					#Central
-			[iFrankia,iSpain,iEngland,iPortugal,iDutch,iAragon,iScotland],				#Atlantic
-			[iArabia,iCordoba,iMorocco,iTurkey],										#Islamic
-			[iGenoa,iVenecia,iPope],													#Italian
-			[iNorway,iDenmark,iSweden]] 												#Scandinavian
-
-lCivBioOldWorld = [iByzantium, iBulgaria, iBurgundy, iArabia, iFrankia, iScotland, iSpain, iCordoba, iNorway, iDenmark, iVenecia, iNovgorod, iKiev, iHungary, \
-			iGermany, iPoland, iMoscow, iGenoa, iMorocco, iEngland, iPortugal, iAragon, iPrussia, iLithuania, iAustria, iTurkey, iSweden, iDutch, iPope, \
-			iIndependent, iIndependent2, iIndependent3, iIndependent4, iBarbarian]
-
-lCivBioNewWorld = []
-
-#for messages
-iDuration = 14
-iWhite = 0
-iRed = 7
-iGreen = 8
-iBlue = 9
-iLightBlue = 10
-iYellow = 11
-iDarkPink = 12
-iLightRed = 20
-iPurple = 25
-iCyan = 44
-iBrown = 55
-iOrange = 88
-iTan = 90
-iLime = 100
-
-#neighbours
-lNeighbours = [
-[iBulgaria,iArabia,iTurkey],		#Byzantium
-[iBurgundy,iEngland,iScotland,iAragon],		#Frankia
-[iByzantium,iTurkey],				#Arabia
-[iByzantium,iHungary,iKiev],		#Bulgaria
-[iSpain,iPortugal,iAragon,iMorocco],		#Cordoba
-[iGenoa,iGermany,iAustria,iHungary,iPope],		#Venice
-[iFrankia,iGenoa,iDutch,iGermany],				#Burgundy
-[iBurgundy,iDutch,iAustria,iPrussia,iVenecia,iGenoa,iPoland,iHungary,iDenmark],		#Germany
-[iKiev,iMoscow,iPoland,iLithuania,iPrussia,iSweden],		#Novgorod
-[iDenmark,iScotland,iSweden],			#Norway
-[iBulgaria,iMoscow,iPoland,iLithuania,iNovgorod],		#Kiev
-[iBulgaria,iVenecia,iPoland,iGermany,iAustria],			#Hungary
-[iCordoba,iPortugal,iAragon,iMorocco],		#Spain
-[iSweden,iNorway,iGermany],			#Denmark
-[iEngland,iFrankia,iDutch,iNorway],		#Scotland
-[iGermany,iAustria,iHungary,iKiev,iMoscow,iLithuania,iPrussia,iNovgorod],			#Poland
-[iGermany,iVenecia,iBurgundy,iPope],	#Genoa
-[iSpain,iPortugal,iCordoba],	#Morocco
-[iFrankia,iDutch,iScotland],			#England
-[iSpain,iCordoba,iMorocco],			#Portugal
-[iNorway,iDenmark,iPrussia,iNovgorod],		#Sweden
-[iCordoba,iSpain,iFrankia],		#Aragon
-[iGermany,iPoland,iLithuania,iNovgorod,iSweden],		#Prussia
-[iKiev,iPoland,iNovgorod,iPrussia,iMoscow],		#Lithuania
-[iGermany,iHungary,iPoland,iVenecia],	#Austria
-[iByzantium,iArabia],			#Turkey
-[iKiev,iNovgorod,iPoland,iLithuania],		#Moscow
-[iGermany,iEngland,iBurgundy,iScotland],		#Dutch
-[iVenecia, iGenoa]			#Pope
-]
 
 #for stability hit on spawn
 lOlderNeighbours = [

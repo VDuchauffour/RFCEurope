@@ -9,6 +9,8 @@ import XMLConsts as xml
 import Religions
 import RFCUtils
 
+from MiscData import MessageData
+
 # globals
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer
@@ -77,7 +79,7 @@ class UniquePowers:
                     CyInterface().addMessage(
                         iPlayer,
                         False,
-                        Consts.iDuration,
+                        MessageData.DURATION,
                         CyTranslator().getText("TXT_KEY_UNIT_NEW_JANISSARY", ())
                         + " "
                         + pCity.getName()
@@ -85,7 +87,7 @@ class UniquePowers:
                         "AS2D_UNIT_BUILD_UNIQUE_UNIT",
                         0,
                         gc.getUnitInfo(xml.iJanissary).getButton(),
-                        ColorTypes(Consts.iGreen),
+                        ColorTypes(MessageData.GREEN),
                         iX,
                         iY,
                         True,
@@ -123,7 +125,7 @@ class UniquePowers:
                 CyInterface().addMessage(
                     iPlayer,
                     False,
-                    Consts.iDuration,
+                    MessageData.DURATION,
                     CyTranslator().getText("TXT_KEY_UNIT_NEW_JANISSARY", ())
                     + " "
                     + city.getName()
@@ -131,7 +133,7 @@ class UniquePowers:
                     "AS2D_UNIT_BUILD_UNIQUE_UNIT",
                     0,
                     gc.getUnitInfo(xml.iJanissary).getButton(),
-                    ColorTypes(Consts.iGreen),
+                    ColorTypes(MessageData.GREEN),
                     iX,
                     iY,
                     True,
@@ -164,12 +166,12 @@ class UniquePowers:
         CyInterface().addMessage(
             iPlayer,
             False,
-            Consts.iDuration / 2,
+            MessageData.DURATION / 2,
             CyTranslator().getText("TXT_KEY_UP_SOUND_TOLL", (iGold,)),
             "",
             0,
             "",
-            ColorTypes(Consts.iGreen),
+            ColorTypes(MessageData.GREEN),
             -1,
             -1,
             True,
@@ -302,7 +304,7 @@ class UniquePowers:
                     CyInterface().addMessage(
                         iPlayer,
                         False,
-                        Consts.iDuration,
+                        MessageData.DURATION,
                         CyTranslator().getText("TXT_KEY_UNIT_NEW_DEFENDER", ())
                         + " "
                         + city.getName()
@@ -310,7 +312,7 @@ class UniquePowers:
                         "AS2D_UNIT_BUILD_UNIQUE_UNIT",
                         0,
                         "",
-                        ColorTypes(Consts.iGreen),
+                        ColorTypes(MessageData.GREEN),
                         iX,
                         iY,
                         True,

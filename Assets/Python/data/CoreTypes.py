@@ -52,25 +52,6 @@ class CivGroup(Enum):
     SCANDINAVIAN = 5
 
 
-# Used for messages
-class MessageData(Enum):
-    DURATION = 14
-    WHITE = 0
-    RED = 7
-    GREEN = 8
-    BLUE = 9
-    LIGHTBLUE = 10
-    YELLOW = 11
-    DARKPINK = 12
-    LIGHTRED = 20
-    PURPLE = 25
-    CYAN = 44
-    BROWN = 55
-    ORANGE = 88
-    TAN = 90
-    LIME = 100
-
-
 class Scenario(Enum):
     i500AD = 0
     i1200AD = 1

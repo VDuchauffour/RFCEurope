@@ -9,6 +9,8 @@ import RFCUtils
 import Crusades
 from operator import itemgetter
 
+from MiscData import MessageData
+
 # globals
 utils = RFCUtils.RFCUtils()
 crus = Crusades.Crusades()
@@ -253,12 +255,12 @@ class Companies:
         CyInterface().addMessage(
             iHuman,
             False,
-            Consts.iDuration,
+            MessageData.DURATION,
             sText,
             gc.getCorporationInfo(iCompany).getSound(),
             InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
             gc.getCorporationInfo(iCompany).getButton(),
-            ColorTypes(Consts.iWhite),
+            ColorTypes(MessageData.WHITE),
             iX,
             iY,
             True,

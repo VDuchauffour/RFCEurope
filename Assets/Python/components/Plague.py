@@ -9,6 +9,8 @@ import RFCUtils
 from StoredData import sd
 import random
 
+from MiscData import MessageData
+
 # globals
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer
@@ -217,7 +219,7 @@ class Plague:
                 CyInterface().addMessage(
                     iHuman,
                     True,
-                    Consts.iDuration / 2,
+                    MessageData.DURATION / 2,
                     CyTranslator().getText("TXT_KEY_PLAGUE_SPREAD_CITY", ())
                     + " "
                     + city.getName()
@@ -227,7 +229,7 @@ class Plague:
                     "AS2D_PLAGUE",
                     0,
                     gc.getBuildingInfo(iPlague).getButton(),
-                    ColorTypes(Consts.iLime),
+                    ColorTypes(MessageData.LIME),
                     city.getX(),
                     city.getY(),
                     True,
@@ -240,7 +242,7 @@ class Plague:
                 CyInterface().addMessage(
                     iHuman,
                     True,
-                    Consts.iDuration / 2,
+                    MessageData.DURATION / 2,
                     CyTranslator().getText("TXT_KEY_PLAGUE_SPREAD_CIV", ())
                     + " "
                     + pCiv.getCivilizationDescription(0)
@@ -248,7 +250,7 @@ class Plague:
                     "AS2D_PLAGUE",
                     0,
                     "",
-                    ColorTypes(Consts.iLime),
+                    ColorTypes(MessageData.LIME),
                     -1,
                     -1,
                     True,
@@ -290,7 +292,7 @@ class Plague:
             CyInterface().addMessage(
                 city.getOwner(),
                 True,
-                Consts.iDuration / 2,
+                MessageData.DURATION / 2,
                 CyTranslator().getText("TXT_KEY_PLAGUE_SPREAD_CITY", ())
                 + " "
                 + city.getName()
@@ -298,7 +300,7 @@ class Plague:
                 "AS2D_PLAGUE",
                 0,
                 gc.getBuildingInfo(iPlague).getButton(),
-                ColorTypes(Consts.iLime),
+                ColorTypes(MessageData.LIME),
                 x,
                 y,
                 True,
@@ -419,7 +421,7 @@ class Plague:
                                 CyInterface().addMessage(
                                     iHuman,
                                     False,
-                                    Consts.iDuration / 2,
+                                    MessageData.DURATION / 2,
                                     CyTranslator().getText(
                                         "TXT_KEY_PLAGUE_PROCESS_UNIT", (unit.getName(),)
                                     )
@@ -429,7 +431,7 @@ class Plague:
                                     "AS2D_PLAGUE",
                                     0,
                                     gc.getBuildingInfo(iPlague).getButton(),
-                                    ColorTypes(Consts.iLime),
+                                    ColorTypes(MessageData.LIME),
                                     plot.getX(),
                                     plot.getY(),
                                     True,
@@ -481,7 +483,7 @@ class Plague:
                         CyInterface().addMessage(
                             iHuman,
                             False,
-                            Consts.iDuration / 2,
+                            MessageData.DURATION / 2,
                             CyTranslator().getText(
                                 "TXT_KEY_PLAGUE_PROCESS_CITY", (city.getName(),)
                             )
@@ -491,7 +493,7 @@ class Plague:
                             "AS2D_PLAGUE",
                             0,
                             gc.getBuildingInfo(iPlague).getButton(),
-                            ColorTypes(Consts.iLime),
+                            ColorTypes(MessageData.LIME),
                             city.getX(),
                             city.getY(),
                             True,

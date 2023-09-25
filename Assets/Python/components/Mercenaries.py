@@ -10,6 +10,8 @@ import XMLConsts as xml
 import RFCUtils
 from StoredData import sd
 
+from MiscData import MessageData
+
 # globals
 utils = RFCUtils.RFCUtils()
 gc = CyGlobalContext()
@@ -2171,7 +2173,7 @@ class MercenaryManager:
             for lMerc in self.lGlobalPool:
                 # iNewProv = lMercList[lMerc[0]][4][gc.getGame().getSorenRandNum( len(lMercList[lMerc[0]][4]), 'pick available province') ]
                 # if ( ( not ( lMerc[4] in lHumanProvinces ) ) and ( iNewProv in lHumanProvinces ) ):
-                # CyInterface().addMessage(iHuman, False, Consts.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()), "", 0, "", ColorTypes(Consts.iLime), -1, -1, True, True)
+                # CyInterface().addMessage(iHuman, False, MessageData.DURATION/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()), "", 0, "", ColorTypes(MessageData.LIME), -1, -1, True, True)
                 # lMerc[4] = iNewProv
                 if (
                     gc.getGame().getSorenRandNum(100, "mercs leaving the global pool")
@@ -2182,12 +2184,12 @@ class MercenaryManager:
                         CyInterface().addMessage(
                             iHuman,
                             False,
-                            Consts.iDuration / 2,
+                            MessageData.DURATION / 2,
                             CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_MOVING", ()),
                             "",
                             0,
                             "",
-                            ColorTypes(Consts.iLime),
+                            ColorTypes(MessageData.LIME),
                             -1,
                             -1,
                             True,
@@ -2263,7 +2265,7 @@ class MercenaryManager:
                 CyInterface().addMessage(
                     iHuman,
                     False,
-                    Consts.iDuration / 2,
+                    MessageData.DURATION / 2,
                     CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE", ())
                     + " "
                     + szCurrentProvince
@@ -2271,7 +2273,7 @@ class MercenaryManager:
                     "",
                     0,
                     "",
-                    ColorTypes(Consts.iLime),
+                    ColorTypes(MessageData.LIME),
                     -1,
                     -1,
                     True,
@@ -2287,7 +2289,7 @@ class MercenaryManager:
                             CyInterface().addMessage(
                                 iHuman,
                                 False,
-                                Consts.iDuration / 2,
+                                MessageData.DURATION / 2,
                                 CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE", ())
                                 + " "
                                 + szCurrentProvince
@@ -2295,7 +2297,7 @@ class MercenaryManager:
                                 "",
                                 0,
                                 "",
-                                ColorTypes(Consts.iLime),
+                                ColorTypes(MessageData.LIME),
                                 -1,
                                 -1,
                                 True,
@@ -2310,7 +2312,7 @@ class MercenaryManager:
                     CyInterface().addMessage(
                         iHuman,
                         False,
-                        Consts.iDuration / 2,
+                        MessageData.DURATION / 2,
                         CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE", ())
                         + " "
                         + szCurrentProvince
@@ -2318,7 +2320,7 @@ class MercenaryManager:
                         "",
                         0,
                         "",
-                        ColorTypes(Consts.iLime),
+                        ColorTypes(MessageData.LIME),
                         -1,
                         -1,
                         True,
@@ -2414,12 +2416,12 @@ class MercenaryManager:
             CyInterface().addMessage(
                 iPlayer,
                 False,
-                Consts.iDuration / 2,
+                MessageData.DURATION / 2,
                 CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_DESERTERS", ()),
                 "",
                 0,
                 "",
-                ColorTypes(Consts.iLightRed),
+                ColorTypes(MessageData.LIGHT_RED),
                 -1,
                 -1,
                 True,
@@ -2454,14 +2456,14 @@ class MercenaryManager:
                     CyInterface().addMessage(
                         iCiv,
                         False,
-                        Consts.iDuration / 2,
+                        MessageData.DURATION / 2,
                         CyTranslator().getText(
                             "TXT_KEY_MERC_AVAILABLE_NEAR_NEW_CITY", (pCity.getName(),)
                         ),
                         "",
                         0,
                         ArtFileMgr.getInterfaceArtInfo("INTERFACE_MERCENARY_ICON").getPath(),
-                        ColorTypes(Consts.iLime),
+                        ColorTypes(MessageData.LIME),
                         pCity.getX(),
                         pCity.getY(),
                         True,
@@ -2480,14 +2482,14 @@ class MercenaryManager:
                     CyInterface().addMessage(
                         iCiv,
                         False,
-                        Consts.iDuration / 2,
+                        MessageData.DURATION / 2,
                         CyTranslator().getText(
                             "TXT_KEY_MERC_AVAILABLE_NEAR_NEW_CITY", (pCity.getName(),)
                         ),
                         "",
                         0,
                         ArtFileMgr.getInterfaceArtInfo("INTERFACE_MERCENARY_ICON").getPath(),
-                        ColorTypes(Consts.iLime),
+                        ColorTypes(MessageData.LIME),
                         pCity.getX(),
                         pCity.getY(),
                         True,
@@ -2878,12 +2880,12 @@ class GlobalMercenaryUtils:
                 CyInterface().addMessage(
                     iHuman,
                     False,
-                    Consts.iDuration / 2,
+                    MessageData.DURATION / 2,
                     CyTranslator().getText("TXT_KEY_MERC_HIRED_BY_SOMEONE", (szCurrentProvince,)),
                     "",
                     0,
                     "",
-                    ColorTypes(Consts.iLime),
+                    ColorTypes(MessageData.LIME),
                     -1,
                     -1,
                     True,

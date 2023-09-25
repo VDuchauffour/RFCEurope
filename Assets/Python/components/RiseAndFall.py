@@ -12,12 +12,8 @@ import Religions
 import Victory
 from StoredData import sd
 import Crusades
-from MiscData import WORLD_WIDTH, WORLD_HEIGHT
+from MiscData import WORLD_WIDTH, WORLD_HEIGHT, MessageData
 
-
-################
-### Globals ###
-##############
 
 gc = CyGlobalContext()  # LOQ
 PyPlayer = PyHelpers.PyPlayer  # LOQ
@@ -368,12 +364,12 @@ class RiseAndFall:
             CyInterface().addMessage(
                 iHuman,
                 True,
-                Consts.iDuration,
+                MessageData.DURATION,
                 CyTranslator().getText("TXT_KEY_FLIP_AGREED", ()),
                 "",
                 0,
                 "",
-                ColorTypes(Consts.iGreen),
+                ColorTypes(MessageData.GREEN),
                 -1,
                 -1,
                 True,
@@ -422,12 +418,12 @@ class RiseAndFall:
             CyInterface().addMessage(
                 iHuman,
                 True,
-                Consts.iDuration,
+                MessageData.DURATION,
                 CyTranslator().getText("TXT_KEY_FLIP_REFUSED", ()),
                 "",
                 0,
                 "",
-                ColorTypes(Consts.iRed),
+                ColorTypes(MessageData.RED),
                 -1,
                 -1,
                 True,
@@ -609,12 +605,12 @@ class RiseAndFall:
                     CyInterface().addMessage(
                         iPlayer,
                         True,
-                        Consts.iDuration,
+                        MessageData.DURATION,
                         CyTranslator().getText("TXT_KEY_GLORY_ON_CONQUEST", ()),
                         "",
                         0,
                         "",
-                        ColorTypes(Consts.iGreen),
+                        ColorTypes(MessageData.GREEN),
                         -1,
                         -1,
                         True,
@@ -656,14 +652,14 @@ class RiseAndFall:
                         CyInterface().addMessage(
                             iHuman,
                             False,
-                            Consts.iDuration,
+                            MessageData.DURATION,
                             pOriginalOwner.getCivilizationDescription(0)
                             + " "
                             + CyTranslator().getText("TXT_KEY_STABILITY_CONQUEST_LAST_CITY", ()),
                             "",
                             0,
                             "",
-                            ColorTypes(Consts.iRed),
+                            ColorTypes(MessageData.RED),
                             -1,
                             -1,
                             True,
@@ -860,12 +856,12 @@ class RiseAndFall:
             CyInterface().addMessage(
                 pPlot.getPlotCity().getOwner(),
                 False,
-                Consts.iDuration,
+                MessageData.DURATION,
                 msgString,
                 "",
                 0,
                 "",
-                ColorTypes(Consts.iOrange),
+                ColorTypes(MessageData.ORANGE),
                 tPlot[0],
                 tPlot[1],
                 True,
@@ -966,7 +962,7 @@ class RiseAndFall:
                 CyInterface().addMessage(
                     iHuman,
                     False,
-                    Consts.iDuration / 2,
+                    MessageData.DURATION / 2,
                     CyTranslator().getText(
                         "TXT_KEY_LEADER_SWITCH",
                         (
@@ -977,7 +973,7 @@ class RiseAndFall:
                     "",
                     InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                     "",
-                    ColorTypes(Consts.iPurple),
+                    ColorTypes(MessageData.PURPLE),
                     -1,
                     -1,
                     True,
@@ -1078,7 +1074,7 @@ class RiseAndFall:
                                 CyInterface().addMessage(
                                     iHuman,
                                     False,
-                                    Consts.iDuration,
+                                    MessageData.DURATION,
                                     pCiv.getCivilizationDescription(0)
                                     + " "
                                     + CyTranslator().getText(
@@ -1087,7 +1083,7 @@ class RiseAndFall:
                                     "",
                                     0,
                                     "",
-                                    ColorTypes(Consts.iRed),
+                                    ColorTypes(MessageData.RED),
                                     -1,
                                     -1,
                                     True,
@@ -1098,14 +1094,14 @@ class RiseAndFall:
                             CyInterface().addMessage(
                                 iCiv,
                                 True,
-                                Consts.iDuration,
+                                MessageData.DURATION,
                                 CyTranslator().getText(
                                     "TXT_KEY_STABILITY_CIVILWAR_BARBS_HUMAN", ()
                                 ),
                                 "",
                                 0,
                                 "",
-                                ColorTypes(Consts.iRed),
+                                ColorTypes(MessageData.RED),
                                 -1,
                                 -1,
                                 True,
@@ -1148,7 +1144,7 @@ class RiseAndFall:
                                 CyInterface().addMessage(
                                     iHuman,
                                     False,
-                                    Consts.iDuration,
+                                    MessageData.DURATION,
                                     pCiv.getCivilizationDescription(0)
                                     + " "
                                     + CyTranslator().getText(
@@ -1157,7 +1153,7 @@ class RiseAndFall:
                                     "",
                                     0,
                                     "",
-                                    ColorTypes(Consts.iRed),
+                                    ColorTypes(MessageData.RED),
                                     -1,
                                     -1,
                                     True,
@@ -1168,14 +1164,14 @@ class RiseAndFall:
                             CyInterface().addMessage(
                                 iCiv,
                                 True,
-                                Consts.iDuration,
+                                MessageData.DURATION,
                                 CyTranslator().getText(
                                     "TXT_KEY_STABILITY_CIVILWAR_DECLINE_HUMAN", ()
                                 ),
                                 "",
                                 0,
                                 "",
-                                ColorTypes(Consts.iRed),
+                                ColorTypes(MessageData.RED),
                                 -1,
                                 -1,
                                 True,
@@ -1207,7 +1203,7 @@ class RiseAndFall:
                                 CyInterface().addMessage(
                                     iHuman,
                                     False,
-                                    Consts.iDuration,
+                                    MessageData.DURATION,
                                     pCiv.getCivilizationDescription(0)
                                     + " "
                                     + CyTranslator().getText(
@@ -1216,7 +1212,7 @@ class RiseAndFall:
                                     "",
                                     0,
                                     "",
-                                    ColorTypes(Consts.iRed),
+                                    ColorTypes(MessageData.RED),
                                     -1,
                                     -1,
                                     True,
@@ -1227,14 +1223,14 @@ class RiseAndFall:
                             CyInterface().addMessage(
                                 iCiv,
                                 True,
-                                Consts.iDuration,
+                                MessageData.DURATION,
                                 CyTranslator().getText(
                                     "TXT_KEY_STABILITY_CIVILWAR_MOTHERLAND_HUMAN", ()
                                 ),
                                 "",
                                 0,
                                 "",
-                                ColorTypes(Consts.iRed),
+                                ColorTypes(MessageData.RED),
                                 -1,
                                 -1,
                                 True,
@@ -1471,12 +1467,12 @@ class RiseAndFall:
                 CyInterface().addMessage(
                     iPlayer,
                     True,
-                    Consts.iDuration,
+                    MessageData.DURATION,
                     sCityName + " " + CyTranslator().getText("TXT_KEY_STABILITY_SECESSION", ()),
                     "",
                     0,
                     "",
-                    ColorTypes(Consts.iOrange),
+                    ColorTypes(MessageData.ORANGE),
                     -1,
                     -1,
                     True,
@@ -1664,12 +1660,12 @@ class RiseAndFall:
                 CyInterface().addMessage(
                     iHuman,
                     True,
-                    Consts.iDuration,
+                    MessageData.DURATION,
                     CyTranslator().getText("TXT_KEY_SUPPRESSED_RESURRECTION", ()),
                     "",
                     0,
                     "",
-                    ColorTypes(Consts.iGreen),
+                    ColorTypes(MessageData.GREEN),
                     -1,
                     -1,
                     True,
@@ -1877,7 +1873,7 @@ class RiseAndFall:
             CyInterface().addMessage(
                 iHuman,
                 True,
-                Consts.iDuration,
+                MessageData.DURATION,
                 (
                     CyTranslator().getText(
                         "TXT_KEY_INDEPENDENCE_TEXT", (pDeadCiv.getCivilizationAdjectiveKey(),)
@@ -1886,7 +1882,7 @@ class RiseAndFall:
                 "",
                 0,
                 "",
-                ColorTypes(Consts.iDarkPink),
+                ColorTypes(MessageData.DARK_PINK),
                 -1,
                 -1,
                 True,
@@ -2521,12 +2517,12 @@ class RiseAndFall:
                 CyInterface().addMessage(
                     iCiv,
                     True,
-                    Consts.iDuration,
+                    MessageData.DURATION,
                     CyTranslator().getText("TXT_KEY_FLIP_TO_US", ()),
                     "",
                     0,
                     "",
-                    ColorTypes(Consts.iGreen),
+                    ColorTypes(MessageData.GREEN),
                     -1,
                     -1,
                     True,
@@ -2702,12 +2698,12 @@ class RiseAndFall:
             CyInterface().addMessage(
                 self.getOldCivFlip(),
                 False,
-                Consts.iDuration,
+                MessageData.DURATION,
                 CyTranslator().getText("TXT_KEY_FLIP_BETRAYAL", ()),
                 "",
                 0,
                 "",
-                ColorTypes(Consts.iRed),
+                ColorTypes(MessageData.RED),
                 -1,
                 -1,
                 True,
@@ -2717,12 +2713,12 @@ class RiseAndFall:
             CyInterface().addMessage(
                 self.getNewCivFlip(),
                 False,
-                Consts.iDuration,
+                MessageData.DURATION,
                 CyTranslator().getText("TXT_KEY_FLIP_BETRAYAL_NEW", ()),
                 "",
                 0,
                 "",
-                ColorTypes(Consts.iGreen),
+                ColorTypes(MessageData.GREEN),
                 -1,
                 -1,
                 True,

@@ -6,6 +6,8 @@ import PyHelpers
 import Consts
 import XMLConsts as xml
 
+from MiscData import MessageData
+
 # globals
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer
@@ -50,12 +52,12 @@ class Resources:
                     CyInterface().addMessage(
                         iOwner,
                         False,
-                        Consts.iDuration,
+                        MessageData.DURATION,
                         szText,
                         "AS2D_DISCOVERBONUS",
                         InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                         gc.getBonusInfo(iBonus).getButton(),
-                        ColorTypes(Consts.iLime),
+                        ColorTypes(MessageData.LIME),
                         iX,
                         iY,
                         True,

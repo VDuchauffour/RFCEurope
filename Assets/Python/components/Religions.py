@@ -6,8 +6,10 @@ import Popup
 import Consts
 import XMLConsts as xml
 import RFCUtils
-import RFCEMaps 
+import RFCEMaps
 from StoredData import sd
+
+from MiscData import MessageData
 
 # globals
 gc = CyGlobalContext()
@@ -542,12 +544,12 @@ class Religions:
                                 CyInterface().addMessage(
                                     iPlayer,
                                     False,
-                                    Consts.iDuration,
+                                    MessageData.DURATION,
                                     sText,
                                     "",
                                     0,
                                     "",
-                                    ColorTypes(Consts.iBlue),
+                                    ColorTypes(MessageData.BLUE),
                                     -1,
                                     -1,
                                     True,
@@ -640,12 +642,12 @@ class Religions:
                                         CyInterface().addMessage(
                                             iChosenPlayer,
                                             True,
-                                            Consts.iDuration,
+                                            MessageData.DURATION,
                                             sText,
                                             "",
                                             0,
                                             "",
-                                            ColorTypes(Consts.iBlue),
+                                            ColorTypes(MessageData.BLUE),
                                             -1,
                                             -1,
                                             True,
@@ -911,12 +913,12 @@ class Religions:
                 CyInterface().addMessage(
                     iPlayer,
                     False,
-                    Consts.iDuration,
+                    MessageData.DURATION,
                     sText,
                     "",
                     0,
                     gc.getBuildingInfo(iBuilding).getButton(),
-                    ColorTypes(Consts.iBlue),
+                    ColorTypes(MessageData.BLUE),
                     city.getX(),
                     city.getY(),
                     True,
@@ -1160,14 +1162,14 @@ class Religions:
                         CyInterface().addMessage(
                             utils.getHumanID(),
                             False,
-                            Consts.iDuration,
+                            MessageData.DURATION,
                             CyTranslator().getText(
                                 "TXT_KEY_REFORMATION_RELIGION_STILL_SPREAD", (CityName,)
                             ),
                             "",
                             InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                             "",
-                            ColorTypes(Consts.iWhite),
+                            ColorTypes(MessageData.WHITE),
                             -1,
                             -1,
                             True,
@@ -1269,14 +1271,14 @@ class Religions:
                         CyInterface().addMessage(
                             utils.getHumanID(),
                             False,
-                            Consts.iDuration,
+                            MessageData.DURATION,
                             CyTranslator().getText(
                                 "TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_1", (CityName,)
                             ),
                             "",
                             InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                             "",
-                            ColorTypes(Consts.iWhite),
+                            ColorTypes(MessageData.WHITE),
                             -1,
                             -1,
                             True,
@@ -1358,14 +1360,14 @@ class Religions:
                             CyInterface().addMessage(
                                 utils.getHumanID(),
                                 False,
-                                Consts.iDuration,
+                                MessageData.DURATION,
                                 CyTranslator().getText(
                                     "TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_2", (CityName,)
                                 ),
                                 "",
                                 InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                                 "",
-                                ColorTypes(Consts.iWhite),
+                                ColorTypes(MessageData.WHITE),
                                 -1,
                                 -1,
                                 True,
@@ -1375,14 +1377,14 @@ class Religions:
                             CyInterface().addMessage(
                                 utils.getHumanID(),
                                 False,
-                                Consts.iDuration,
+                                MessageData.DURATION,
                                 CyTranslator().getText(
                                     "TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_3", (CityName,)
                                 ),
                                 "",
                                 InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                                 "",
-                                ColorTypes(Consts.iWhite),
+                                ColorTypes(MessageData.WHITE),
                                 -1,
                                 -1,
                                 True,

@@ -23,7 +23,9 @@ import RFCEMaps
 import RFCUtils
 import RFCEBalance
 import random
-from MiscData import WORLD_WIDTH, WORLD_HEIGHT
+from MiscData import WORLD_WIDTH, WORLD_HEIGHT, MessageData
+from CivilizationsData import CIVILIZATIONS
+from LocationsData import CIV_NEIGHBOURS
 
 utils = RFCUtils.RFCUtils()
 balance = RFCEBalance.RFCEBalance()
@@ -663,7 +665,7 @@ class CvEventManager:
                         CyInterface().addMessage(
                             iOwner,
                             False,
-                            Consts.iDuration,
+                            MessageData.DURATION,
                             (
                                 CyTranslator().getText(
                                     "TXT_KEY_NO_FOREST_NO_RESOURCE",
@@ -673,7 +675,7 @@ class CvEventManager:
                             "AS2D_DISCOVERBONUS",
                             InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                             gc.getBonusInfo(iBonusType).getButton(),
-                            ColorTypes(Consts.iLime),
+                            ColorTypes(MessageData.LIME),
                             pPlot.getX(),
                             pPlot.getY(),
                             True,
@@ -722,12 +724,12 @@ class CvEventManager:
                 CyInterface().addMessage(
                     utils.getHumanID(),
                     False,
-                    Consts.iDuration,
+                    MessageData.DURATION,
                     szText,
                     "",
                     InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                     "",
-                    ColorTypes(Consts.iLightBlue),
+                    ColorTypes(MessageData.LIGHT_BLUE),
                     -1,
                     -1,
                     True,
@@ -784,12 +786,12 @@ class CvEventManager:
                         CyInterface().addMessage(
                             iPlayer,
                             True,
-                            Consts.iDuration,
+                            MessageData.DURATION,
                             sText,
                             "",
                             0,
                             "",
-                            ColorTypes(Consts.iLightBlue),
+                            ColorTypes(MessageData.LIGHT_BLUE),
                             -1,
                             -1,
                             True,
@@ -817,12 +819,12 @@ class CvEventManager:
                         CyInterface().addMessage(
                             iPlayer,
                             True,
-                            Consts.iDuration,
+                            MessageData.DURATION,
                             sText,
                             "",
                             0,
                             "",
-                            ColorTypes(Consts.iLightBlue),
+                            ColorTypes(MessageData.LIGHT_BLUE),
                             -1,
                             -1,
                             True,
@@ -837,12 +839,12 @@ class CvEventManager:
                         CyInterface().addMessage(
                             iPlayer,
                             True,
-                            Consts.iDuration,
+                            MessageData.DURATION,
                             sText,
                             "",
                             0,
                             "",
-                            ColorTypes(Consts.iLightBlue),
+                            ColorTypes(MessageData.LIGHT_BLUE),
                             -1,
                             -1,
                             True,
@@ -852,7 +854,8 @@ class CvEventManager:
 
         # Absinthe: Kalmar Castle start
         if iBuildingType == xml.iKalmarCastle:
-            for iNeighbour in Consts.lNeighbours[iPlayer]:
+            for neighbour in CIV_NEIGHBOURS[CIVILIZATIONS[iPlayer].key]:
+                iNeighbour = neighbour.value
                 pNeighbour = gc.getPlayer(iNeighbour)
                 print("iNeighbour", iNeighbour)
                 if pNeighbour.isAlive() and iPlayer != iNeighbour:
@@ -907,14 +910,14 @@ class CvEventManager:
                 CyInterface().addMessage(
                     iPlayer,
                     False,
-                    Consts.iDuration,
+                    MessageData.DURATION,
                     CyTranslator().getText(
                         "TXT_KEY_BUILDING_SAINT_CATHERINE_MONASTERY_EFFECT", ()
                     ),
                     "",
                     0,
                     "",
-                    ColorTypes(Consts.iLightBlue),
+                    ColorTypes(MessageData.LIGHT_BLUE),
                     -1,
                     -1,
                     True,
@@ -1061,12 +1064,12 @@ class CvEventManager:
                         CyInterface().addMessage(
                             iPlayer,
                             False,
-                            Consts.iDuration,
+                            MessageData.DURATION,
                             CyTranslator().getText("TXT_KEY_PROJECT_COLONY_GOLDEN_AGE", ()),
                             "",
                             0,
                             "",
-                            ColorTypes(Consts.iGreen),
+                            ColorTypes(MessageData.GREEN),
                             -1,
                             -1,
                             True,
@@ -1172,12 +1175,12 @@ class CvEventManager:
                         CyInterface().addMessage(
                             iHuman,
                             False,
-                            Consts.iDuration,
+                            MessageData.DURATION,
                             szText,
                             "",
                             InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                             gc.getUnitInfo(iUnit).getButton(),
-                            ColorTypes(Consts.iLightBlue),
+                            ColorTypes(MessageData.LIGHT_BLUE),
                             city.getX(),
                             city.getY(),
                             True,
@@ -1815,14 +1818,14 @@ class CvEventManager:
                             CyInterface().addMessage(
                                 iHuman,
                                 False,
-                                Consts.iDuration,
+                                MessageData.DURATION,
                                 CyTranslator().getText(
                                     "TXT_KEY_MISC_WONDER_DESTROYED_1", (sWonderName,)
                                 ),
                                 "",
                                 InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                                 gc.getBuildingInfo(iWonder).getButton(),
-                                ColorTypes(Consts.iLightRed),
+                                ColorTypes(MessageData.LIGHT_RED),
                                 iX,
                                 iY,
                                 True,
@@ -1833,14 +1836,14 @@ class CvEventManager:
                             CyInterface().addMessage(
                                 iHuman,
                                 False,
-                                Consts.iDuration,
+                                MessageData.DURATION,
                                 CyTranslator().getText(
                                     "TXT_KEY_MISC_WONDER_DESTROYED_2", (ConquerName, sWonderName)
                                 ),
                                 "",
                                 InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                                 gc.getBuildingInfo(iWonder).getButton(),
-                                ColorTypes(Consts.iLightRed),
+                                ColorTypes(MessageData.LIGHT_RED),
                                 iX,
                                 iY,
                                 True,
@@ -1851,14 +1854,14 @@ class CvEventManager:
                             CyInterface().addMessage(
                                 iHuman,
                                 False,
-                                Consts.iDuration,
+                                MessageData.DURATION,
                                 CyTranslator().getText(
                                     "TXT_KEY_MISC_WONDER_DESTROYED_3", (PreviousName, sWonderName)
                                 ),
                                 "",
                                 InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                                 gc.getBuildingInfo(iWonder).getButton(),
-                                ColorTypes(Consts.iLightRed),
+                                ColorTypes(MessageData.LIGHT_RED),
                                 iX,
                                 iY,
                                 True,
@@ -2136,14 +2139,14 @@ class CvEventManager:
                             CyInterface().addMessage(
                                 iHuman,
                                 False,
-                                Consts.iDuration,
+                                MessageData.DURATION,
                                 CyTranslator().getText(
                                     "TXT_KEY_MISC_WONDER_CAPTURED_1", (sWonderName,)
                                 ),
                                 "",
                                 InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                                 gc.getBuildingInfo(iWonder).getButton(),
-                                ColorTypes(Consts.iBlue),
+                                ColorTypes(MessageData.BLUE),
                                 iX,
                                 iY,
                                 True,
@@ -2154,14 +2157,14 @@ class CvEventManager:
                             CyInterface().addMessage(
                                 iHuman,
                                 False,
-                                Consts.iDuration,
+                                MessageData.DURATION,
                                 CyTranslator().getText(
                                     "TXT_KEY_MISC_WONDER_CAPTURED_2", (ConquerName, sWonderName)
                                 ),
                                 "",
                                 InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                                 gc.getBuildingInfo(iWonder).getButton(),
-                                ColorTypes(Consts.iCyan),
+                                ColorTypes(MessageData.CYAN),
                                 iX,
                                 iY,
                                 True,
@@ -2172,14 +2175,14 @@ class CvEventManager:
                             CyInterface().addMessage(
                                 iHuman,
                                 False,
-                                Consts.iDuration,
+                                MessageData.DURATION,
                                 CyTranslator().getText(
                                     "TXT_KEY_MISC_WONDER_CAPTURED_3", (PreviousName, sWonderName)
                                 ),
                                 "",
                                 InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                                 gc.getBuildingInfo(iWonder).getButton(),
-                                ColorTypes(Consts.iCyan),
+                                ColorTypes(MessageData.CYAN),
                                 iX,
                                 iY,
                                 True,
@@ -2286,12 +2289,12 @@ class CvEventManager:
                         CyInterface().addMessage(
                             iPlayer,
                             False,
-                            Consts.iDuration,
+                            MessageData.DURATION,
                             CyTranslator().getText("TXT_KEY_BUILDING_IMPERIAL_DIET_EFFECT", ()),
                             "",
                             0,
                             "",
-                            ColorTypes(Consts.iLightBlue),
+                            ColorTypes(MessageData.LIGHT_BLUE),
                             -1,
                             -1,
                             True,

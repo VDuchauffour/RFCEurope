@@ -10,6 +10,24 @@ GREAT_PROPHET_FAITH_POINT_BONUS = 8
 NUM_CRUSADES = 6
 PROSECUTOR_UNITCLASS = 53
 
+# Used for messages
+class MessageData(object):
+    DURATION = 14
+    WHITE = 0
+    RED = 7
+    GREEN = 8
+    BLUE = 9
+    LIGHT_BLUE = 10
+    YELLOW = 11
+    DARK_PINK = 12
+    LIGHT_RED = 20
+    PURPLE = 25
+    CYAN = 44
+    BROWN = 55
+    ORANGE = 88
+    TAN = 90
+    LIME = 100
+
 
 MERCENARY_ONLY_UNITS = [
     Unit.CONDOTTIERI,

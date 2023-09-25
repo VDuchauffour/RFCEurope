@@ -5,6 +5,8 @@ from CivilizationsData import CIVILIZATIONS
 from LocationsData import CIV_GROUPS
 import PyHelpers
 
+from MiscData import MessageData
+
 # import cPickle as pickle
 import Consts
 import XMLConsts as xml
@@ -593,14 +595,14 @@ class Stability:
                 CyInterface().addMessage(
                     iHuman,
                     False,
-                    Consts.iDuration,
+                    MessageData.DURATION,
                     pPlayer.getCivilizationDescription(0)
                     + " "
                     + CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_STABILITY", ()),
                     "",
                     0,
                     "",
-                    ColorTypes(Consts.iRed),
+                    ColorTypes(MessageData.RED),
                     -1,
                     -1,
                     True,
@@ -611,12 +613,12 @@ class Stability:
             CyInterface().addMessage(
                 iPlayer,
                 True,
-                Consts.iDuration,
+                MessageData.DURATION,
                 CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_STABILITY_HUMAN", ()),
                 "",
                 0,
                 "",
-                ColorTypes(Consts.iRed),
+                ColorTypes(MessageData.RED),
                 -1,
                 -1,
                 True,

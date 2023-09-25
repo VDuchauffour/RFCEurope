@@ -7,10 +7,12 @@ import Popup
 import RFCUtils
 import Consts
 import XMLConsts as xml
-import RFCEMaps 
+import RFCEMaps
 import CityNameManager
 from StoredData import sd
 import random
+
+from MiscData import MessageData
 
 # globals
 gc = CyGlobalContext()
@@ -603,12 +605,12 @@ class Crusades:
             CyInterface().addMessage(
                 iHuman,
                 True,
-                Consts.iDuration,
+                MessageData.DURATION,
                 CyTranslator().getText("TXT_KEY_CRUSADE_DENY_FAITH", ()),
                 "",
                 0,
                 "",
-                ColorTypes(Consts.iLightRed),
+                ColorTypes(MessageData.LIGHT_RED),
                 -1,
                 -1,
                 True,
@@ -634,14 +636,14 @@ class Crusades:
                                 CyInterface().addMessage(
                                     iHuman,
                                     False,
-                                    Consts.iDuration,
+                                    MessageData.DURATION,
                                     CyTranslator().getText(
                                         "TXT_KEY_CRUSADE_DENY_LEAVE_ANYWAY", ()
                                     ),
                                     "",
                                     0,
                                     gc.getUnitInfo(iUnitType).getButton(),
-                                    ColorTypes(Consts.iLightRed),
+                                    ColorTypes(MessageData.LIGHT_RED),
                                     pUnit.getX(),
                                     pUnit.getY(),
                                     True,
@@ -654,14 +656,14 @@ class Crusades:
                                 CyInterface().addMessage(
                                     iHuman,
                                     False,
-                                    Consts.iDuration,
+                                    MessageData.DURATION,
                                     CyTranslator().getText(
                                         "TXT_KEY_CRUSADE_DENY_LEAVE_ANYWAY", ()
                                     ),
                                     "",
                                     0,
                                     gc.getUnitInfo(iUnitType).getButton(),
-                                    ColorTypes(Consts.iLightRed),
+                                    ColorTypes(MessageData.LIGHT_RED),
                                     pUnit.getX(),
                                     pUnit.getY(),
                                     True,
@@ -673,12 +675,12 @@ class Crusades:
                         CyInterface().addMessage(
                             iHuman,
                             False,
-                            Consts.iDuration,
+                            MessageData.DURATION,
                             CyTranslator().getText("TXT_KEY_CRUSADE_DENY_LEAVE_ANYWAY", ()),
                             "",
                             0,
                             gc.getUnitInfo(iUnitType).getButton(),
-                            ColorTypes(Consts.iLightRed),
+                            ColorTypes(MessageData.LIGHT_RED),
                             pUnit.getX(),
                             pUnit.getY(),
                             True,
@@ -750,12 +752,12 @@ class Crusades:
                 CyInterface().addMessage(
                     iHuman,
                     True,
-                    Consts.iDuration / 2,
+                    MessageData.DURATION / 2,
                     CyTranslator().getText("TXT_KEY_CRUSADE_CALLED", ()),
                     "",
                     0,
                     "",
-                    ColorTypes(Consts.iLightRed),
+                    ColorTypes(MessageData.LIGHT_RED),
                     -1,
                     -1,
                     True,
@@ -981,12 +983,12 @@ class Crusades:
             CyInterface().addMessage(
                 iHuman,
                 False,
-                Consts.iDuration / 2,
+                MessageData.DURATION / 2,
                 CyTranslator().getText("TXT_KEY_CRUSADE_LEAVE", ()) + " " + pUnit.getName(),
                 "AS2D_BUILD_CHRISTIAN",
                 0,
                 "",
-                ColorTypes(Consts.iOrange),
+                ColorTypes(MessageData.ORANGE),
                 -1,
                 -1,
                 True,
@@ -1066,13 +1068,13 @@ class Crusades:
                 CyInterface().addMessage(
                     iHuman,
                     True,
-                    Consts.iDuration / 2,
+                    MessageData.DURATION / 2,
                     gc.getPlayer(self.getLeader()).getName()
                     + CyTranslator().getText("TXT_KEY_CRUSADE_LEAD", ()),
                     "",
                     0,
                     "",
-                    ColorTypes(Consts.iLightRed),
+                    ColorTypes(MessageData.LIGHT_RED),
                     -1,
                     -1,
                     True,
@@ -1128,13 +1130,13 @@ class Crusades:
             CyInterface().addMessage(
                 utils.getHumanID(),
                 True,
-                Consts.iDuration / 2,
+                MessageData.DURATION / 2,
                 gc.getPlayer(self.getLeader()).getName()
                 + CyTranslator().getText("TXT_KEY_CRUSADE_LEAD", ()),
                 "",
                 0,
                 "",
-                ColorTypes(Consts.iLightRed),
+                ColorTypes(MessageData.LIGHT_RED),
                 -1,
                 -1,
                 True,
@@ -1235,12 +1237,12 @@ class Crusades:
             CyInterface().addMessage(
                 iHuman,
                 False,
-                Consts.iDuration / 2,
+                MessageData.DURATION / 2,
                 pLeader.getName() + CyTranslator().getText("TXT_KEY_CRUSADE_DEVIATED", ()),
                 "",
                 0,
                 "",
-                ColorTypes(Consts.iLightRed),
+                ColorTypes(MessageData.LIGHT_RED),
                 -1,
                 -1,
                 True,
@@ -1289,12 +1291,12 @@ class Crusades:
             CyInterface().addMessage(
                 iHuman,
                 False,
-                Consts.iDuration / 2,
+                MessageData.DURATION / 2,
                 sText,
                 "",
                 0,
                 "",
-                ColorTypes(Consts.iLightRed),
+                ColorTypes(MessageData.LIGHT_RED),
                 -1,
                 -1,
                 True,
@@ -1413,12 +1415,12 @@ class Crusades:
                 CyInterface().addMessage(
                     utils.getHumanID(),
                     False,
-                    Consts.iDuration,
+                    MessageData.DURATION,
                     CyTranslator().getText("TXT_KEY_CRUSADE_ARRIVAL", (sCityName,)) + "!",
                     "",
                     0,
                     "",
-                    ColorTypes(Consts.iGreen),
+                    ColorTypes(MessageData.GREEN),
                     iChosenX,
                     iChosenY,
                     True,
@@ -1654,14 +1656,14 @@ class Crusades:
                         CyInterface().addMessage(
                             iHuman,
                             False,
-                            Consts.iDuration / 2,
+                            MessageData.DURATION / 2,
                             CyTranslator().getText("TXT_KEY_CRUSADE_CRUSADERS_RETURNING_HOME", ())
                             + " "
                             + pUnit.getName(),
                             "",
                             0,
                             "",
-                            ColorTypes(Consts.iLime),
+                            ColorTypes(MessageData.LIME),
                             -1,
                             -1,
                             True,
@@ -1700,12 +1702,12 @@ class Crusades:
                                 CyInterface().addMessage(
                                     iHuman,
                                     False,
-                                    Consts.iDuration,
+                                    MessageData.DURATION,
                                     CyTranslator().getText("TXT_KEY_CRUSADE_NEW_RELIC", ()),
                                     "AS2D_UNIT_BUILD_UNIQUE_UNIT",
                                     0,
                                     gc.getUnitInfo(xml.iHolyRelic).getButton(),
-                                    ColorTypes(Consts.iGreen),
+                                    ColorTypes(MessageData.GREEN),
                                     iCapitalX,
                                     iCapitalY,
                                     True,
@@ -1742,14 +1744,14 @@ class Crusades:
                             CyInterface().addMessage(
                                 iHuman,
                                 False,
-                                Consts.iDuration,
+                                MessageData.DURATION,
                                 CyTranslator().getText(
                                     "TXT_KEY_CRUSADE_CRUSADERS_ARRIVED_HOME", ()
                                 ),
                                 "",
                                 0,
                                 "",
-                                ColorTypes(Consts.iGreen),
+                                ColorTypes(MessageData.GREEN),
                                 -1,
                                 -1,
                                 True,
@@ -1785,14 +1787,14 @@ class Crusades:
                                         CyInterface().addMessage(
                                             iHuman,
                                             False,
-                                            Consts.iDuration,
+                                            MessageData.DURATION,
                                             CyTranslator().getText(
                                                 "TXT_KEY_CRUSADE_NEW_RELIC", ()
                                             ),
                                             "AS2D_UNIT_BUILD_UNIQUE_UNIT",
                                             0,
                                             gc.getUnitInfo(xml.iHolyRelic).getButton(),
-                                            ColorTypes(Consts.iGreen),
+                                            ColorTypes(MessageData.GREEN),
                                             iCapitalX,
                                             iCapitalY,
                                             True,
@@ -1851,12 +1853,12 @@ class Crusades:
                             CyInterface().addMessage(
                                 iPlayer,
                                 False,
-                                Consts.iDuration / 2,
+                                MessageData.DURATION / 2,
                                 CyTranslator().getText("TXT_KEY_CRUSADE_JERUSALEM_PILGRIMS", ()),
                                 "",
                                 0,
                                 "",
-                                ColorTypes(Consts.iGreen),
+                                ColorTypes(MessageData.GREEN),
                                 pCity.getX(),
                                 pCity.getY(),
                                 True,
@@ -1957,12 +1959,12 @@ class Crusades:
                 CyInterface().addMessage(
                     iHuman,
                     True,
-                    Consts.iDuration / 2,
+                    MessageData.DURATION / 2,
                     sText,
                     "",
                     0,
                     "",
-                    ColorTypes(Consts.iLightRed),
+                    ColorTypes(MessageData.LIGHT_RED),
                     -1,
                     -1,
                     True,
@@ -2005,12 +2007,12 @@ class Crusades:
             CyInterface().addMessage(
                 iPlayer,
                 False,
-                Consts.iDuration,
+                MessageData.DURATION,
                 CyTranslator().getText("TXT_KEY_CRUSADE_DEFENSIVE_HUMAN_MESSAGE", ()),
                 "",
                 0,
                 "",
-                ColorTypes(Consts.iGreen),
+                ColorTypes(MessageData.GREEN),
                 iX,
                 iY,
                 True,

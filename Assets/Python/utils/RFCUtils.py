@@ -9,7 +9,7 @@ import Popup #Absinthe
 import Consts
 import XMLConsts as xml
 from StoredData import sd
-from MiscData import WORLD_WIDTH, WORLD_HEIGHT
+from MiscData import WORLD_WIDTH, WORLD_HEIGHT, MessageData
 
 # globals
 gc = CyGlobalContext()
@@ -557,8 +557,8 @@ class RFCUtils:
 							if iNewOwner == self.getHumanID():
 								szProvName = "TXT_KEY_PROVINCE_NAME_%i" %lMerc[4]
 								szCurrentProvince = CyTranslator().getText(szProvName,())
-								CyInterface().addMessage(iNewOwner, False, Consts.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_AVAILABLE_IN_PROVINCE_OF_NEW_CITY", (szCurrentProvince,)), "", 0, ArtFileMgr.getInterfaceArtInfo("INTERFACE_MERCENARY_ICON").getPath(), ColorTypes(Consts.iLime), city.getX(), city.getY(), True, True)
-								#CyInterface().addMessage(iNewOwner, False, Consts.iDuration/2, CyTranslator().getText("TXT_KEY_MERC_AVAILABLE_NEAR_NEW_CITY", (city.getName(),)), "", 0, "", ColorTypes(Consts.iLime), -1, -1, True, True)
+								CyInterface().addMessage(iNewOwner, False, MessageData.DURATION/2, CyTranslator().getText("TXT_KEY_MERC_AVAILABLE_IN_PROVINCE_OF_NEW_CITY", (szCurrentProvince,)), "", 0, ArtFileMgr.getInterfaceArtInfo("INTERFACE_MERCENARY_ICON").getPath(), ColorTypes(MessageData.LIME), city.getX(), city.getY(), True, True)
+								#CyInterface().addMessage(iNewOwner, False, MessageData.DURATION/2, CyTranslator().getText("TXT_KEY_MERC_AVAILABLE_NEAR_NEW_CITY", (city.getName(),)), "", 0, "", ColorTypes(MessageData.LIME), -1, -1, True, True)
 								break
 					return True
 		return False
@@ -1182,7 +1182,7 @@ class RFCUtils:
 			#gc.setMinorReligionRefugies( 0 )
 
 			# interface message for the player
-			CyInterface().addMessage(iOwner, False, Consts.iDuration, localText.getText("TXT_KEY_MESSAGE_INQUISITION", (city.getName(), gc.getReligionInfo(iReligion).getDescription(), iLoot)), "AS2D_PLAGUE", InterfaceMessageTypes.MESSAGE_TYPE_INFO, pUnit.getButton(), ColorTypes(Consts.iGreen), iPlotX, iPlotY, True, True)
+			CyInterface().addMessage(iOwner, False, MessageData.DURATION, localText.getText("TXT_KEY_MESSAGE_INQUISITION", (city.getName(), gc.getReligionInfo(iReligion).getDescription(), iLoot)), "AS2D_PLAGUE", InterfaceMessageTypes.MESSAGE_TYPE_INFO, pUnit.getButton(), ColorTypes(MessageData.GREEN), iPlotX, iPlotY, True, True)
 
 			# Jews may spread to another random city
 			if iReligion == xml.iJudaism:
@@ -1191,9 +1191,9 @@ class RFCUtils:
 					self.spreadJews(tCity, xml.iJudaism)
 					pSpreadCity = gc.getMap().plot(tCity[0], tCity[1]).getPlotCity()
 					if pSpreadCity.getOwner() == iOwner:
-						CyInterface().addMessage(iOwner, False, Consts.iDuration, localText.getText("TXT_KEY_MESSAGE_JEWISH_MOVE_OWN_CITY", (city.getName(), pSpreadCity.getName())), "AS2D_PLAGUE", InterfaceMessageTypes.MESSAGE_TYPE_INFO, pUnit.getButton(), ColorTypes(Consts.iGreen), iPlotX, iPlotY, True, True)
+						CyInterface().addMessage(iOwner, False, MessageData.DURATION, localText.getText("TXT_KEY_MESSAGE_JEWISH_MOVE_OWN_CITY", (city.getName(), pSpreadCity.getName())), "AS2D_PLAGUE", InterfaceMessageTypes.MESSAGE_TYPE_INFO, pUnit.getButton(), ColorTypes(MessageData.GREEN), iPlotX, iPlotY, True, True)
 					else:
-						CyInterface().addMessage(iOwner, False, Consts.iDuration, localText.getText("TXT_KEY_MESSAGE_JEWISH_MOVE", (city.getName(), )), "AS2D_PLAGUE", InterfaceMessageTypes.MESSAGE_TYPE_INFO, pUnit.getButton(), ColorTypes(Consts.iGreen), iPlotX, iPlotY, True, True)
+						CyInterface().addMessage(iOwner, False, MessageData.DURATION, localText.getText("TXT_KEY_MESSAGE_JEWISH_MOVE", (city.getName(), )), "AS2D_PLAGUE", InterfaceMessageTypes.MESSAGE_TYPE_INFO, pUnit.getButton(), ColorTypes(MessageData.GREEN), iPlotX, iPlotY, True, True)
 
 			# persecution countdown for the civ (causes indirect instability - stability.recalcCity)
 			if gc.hasUP(iOwner,Consts.iUP_Inquisition): # Spanish UP
@@ -1209,7 +1209,7 @@ class RFCUtils:
 
 		else: # on failed persecution:
 			print ("Unsuccessful persecution for civ:", iOwner, iReligion, (iPlotX, iPlotY), city.getName())
-			CyInterface().addMessage(iOwner, False, Consts.iDuration, localText.getText("TXT_KEY_MESSAGE_INQUISITION_FAIL", (city.getName(), )), "AS2D_SABOTAGE", InterfaceMessageTypes.MESSAGE_TYPE_INFO, pUnit.getButton(), ColorTypes(Consts.iRed), iPlotX, iPlotY, True, True)
+			CyInterface().addMessage(iOwner, False, MessageData.DURATION, localText.getText("TXT_KEY_MESSAGE_INQUISITION_FAIL", (city.getName(), )), "AS2D_SABOTAGE", InterfaceMessageTypes.MESSAGE_TYPE_INFO, pUnit.getButton(), ColorTypes(MessageData.RED), iPlotX, iPlotY, True, True)
 
 			# persecution countdown for the civ (causes indirect instability - stability.recalcCity)
 			if gc.hasUP(iOwner,Consts.iUP_Inquisition): # Spanish UP

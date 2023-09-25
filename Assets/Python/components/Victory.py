@@ -5,9 +5,11 @@ import Consts
 import XMLConsts as xml
 import RFCUtils
 import UniquePowers
-import RFCEMaps 
+import RFCEMaps
 from StoredData import sd
 import random
+
+from MiscData import MessageData
 
 # Globals
 utils = RFCUtils.RFCUtils()
@@ -579,12 +581,12 @@ class Victory:
                         CyInterface().addMessage(
                             iPlayer,
                             False,
-                            Consts.iDuration,
+                            MessageData.DURATION,
                             CyTranslator().getText("TXT_KEY_VICTORY_INTERMEDIATE", ()),
                             "",
                             0,
                             "",
-                            ColorTypes(Consts.iPurple),
+                            ColorTypes(MessageData.PURPLE),
                             -1,
                             -1,
                             True,
@@ -659,12 +661,12 @@ class Victory:
                             CyInterface().addMessage(
                                 iPlayer,
                                 False,
-                                Consts.iDuration,
+                                MessageData.DURATION,
                                 CyTranslator().getText("TXT_KEY_VICTORY_RIVAL_CIVS", ()),
                                 "",
                                 0,
                                 "",
-                                ColorTypes(Consts.iLightRed),
+                                ColorTypes(MessageData.LIGHT_RED),
                                 -1,
                                 -1,
                                 True,

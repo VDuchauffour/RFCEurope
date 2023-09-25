@@ -8,6 +8,8 @@ import Consts
 import XMLConsts as xml
 from StoredData import sd
 
+from MiscData import MessageData
+
 # globals
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer  # LOQ
@@ -3507,14 +3509,14 @@ class Barbs:
                 CyInterface().addMessage(
                     iPlayer,
                     False,
-                    Consts.iDuration,
+                    MessageData.DURATION,
                     CyTranslator().getText(
                         "TXT_KEY_MINOR_NATION_REVOLT_SUPRESSED", (pCity.getName(),)
                     ),
                     "",
                     0,
                     "",
-                    ColorTypes(Consts.iBlue),
+                    ColorTypes(MessageData.BLUE),
                     -1,
                     -1,
                     True,
@@ -3552,7 +3554,7 @@ class Barbs:
                 CyInterface().addMessage(
                     iPlayer,
                     False,
-                    Consts.iDuration,
+                    MessageData.DURATION,
                     CyTranslator().getText(
                         "TXT_KEY_MINOR_NATION_REVOLT_SUCCEEDED",
                         (
@@ -3563,7 +3565,7 @@ class Barbs:
                     "",
                     0,
                     "",
-                    ColorTypes(Consts.iOrange),
+                    ColorTypes(MessageData.ORANGE),
                     -1,
                     -1,
                     True,

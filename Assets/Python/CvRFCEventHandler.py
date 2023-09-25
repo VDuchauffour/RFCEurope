@@ -28,7 +28,9 @@ import Companies
 import DataLoader
 import ProvinceManager
 import Mercenaries
-import RFCEMaps 
+import RFCEMaps
+
+from MiscData import MessageData
 
 gc = CyGlobalContext()
 localText = CyTranslator()  # Absinthe
@@ -314,12 +316,12 @@ class CvRFCEventHandler:
                     CyInterface().addMessage(
                         utils.getHumanID(),
                         True,
-                        Consts.iDuration,
+                        MessageData.DURATION,
                         CyTranslator().getText("TXT_KEY_CRUSADE_JERUSALEM_SAFE", (CityName,)),
                         "",
                         0,
                         "",
-                        ColorTypes(Consts.iGreen),
+                        ColorTypes(MessageData.GREEN),
                         -1,
                         -1,
                         True,
@@ -662,12 +664,12 @@ class CvRFCEventHandler:
                 CyInterface().addMessage(
                     Consts.iByzantium,
                     False,
-                    Consts.iDuration,
+                    MessageData.DURATION,
                     CyTranslator().getText("TXT_KEY_EVENT_VIKING_CONQUERERS_ARRIVE", ()),
                     "",
                     0,
                     "",
-                    ColorTypes(Consts.iRed),
+                    ColorTypes(MessageData.RED),
                     -1,
                     -1,
                     True,
@@ -682,12 +684,12 @@ class CvRFCEventHandler:
                 CyInterface().addMessage(
                     iHuman,
                     False,
-                    Consts.iDuration,
+                    MessageData.DURATION,
                     sText,
                     "",
                     0,
                     "",
-                    ColorTypes(Consts.iDarkPink),
+                    ColorTypes(MessageData.DARK_PINK),
                     -1,
                     -1,
                     True,
@@ -713,14 +715,14 @@ class CvRFCEventHandler:
                         CyInterface().addMessage(
                             iPlayer,
                             False,
-                            Consts.iDuration,
+                            MessageData.DURATION,
                             CyTranslator().getText(
                                 "TXT_KEY_BUILDING_GREAT_LIGHTHOUSE_REMOVED", ()
                             ),
                             "",
                             0,
                             "",
-                            ColorTypes(Consts.iRed),
+                            ColorTypes(MessageData.RED),
                             -1,
                             -1,
                             True,
