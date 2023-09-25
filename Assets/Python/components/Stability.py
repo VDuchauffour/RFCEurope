@@ -1,13 +1,15 @@
 # Rhye's and Fall of Civilization: Europe - Stability
 
 from CvPythonExtensions import *
+from CivilizationsData import CIVILIZATIONS
+from LocationsData import CIV_GROUPS
 import PyHelpers
 
 # import cPickle as pickle
 import Consts
 import XMLConsts as xml
 import RFCUtils
-import RFCEMaps 
+import RFCEMaps
 import RiseAndFall
 import ProvinceManager
 
@@ -278,13 +280,16 @@ class Stability:
 
     def continentsNormalization(self, iGameTurn):  # Sedna17
         pass
-        # lContinentModifier = [-1, -1, 0, -2, 0, 0] #Eastern, Central, Atlantic, Islamic, Italian, Norse, see Consts.py
-        # for iPlayer in range(iNumPlayers):
-        # 	if (gc.getPlayer(iPlayer).isAlive()):
-        # 		for j in range(len(Consts.lCivStabilityGroups)):
-        # 			if (iPlayer in Consts.lCivStabilityGroups[j]):
-        # 				self.setParameter(iPlayer, iParExpansionE, True, lContinentModifier[j])
-        # 				self.setStability(iPlayer, (self.getStability(iPlayer) + lContinentModifier[j]))
+        # lContinentModifier = [-1, -1, 0, -2, 0, 0]
+        # for civ in CIVILIZATIONS.get_majors():
+        #     if gc.getPlayer(civ.id).isAlive():
+        #         for group_key, group_civs in CIV_GROUPS.items():
+        #             if civ.key in group_civs:
+        #                 self.setParameter(civ.id, 12, True, lContinentModifier[group_key.value])
+        #                 self.setStability(
+        #                     civ.id,
+        #                     (self.getStability(civ.id) + lContinentModifier[group_key.value]),
+        #                 )
 
     def onCityBuilt(self, iPlayer, x, y):
         iProv = RFCEMaps.tProvinceMap[y][x]

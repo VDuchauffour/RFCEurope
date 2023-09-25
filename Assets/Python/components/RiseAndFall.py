@@ -1,6 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Main RFC mechanics
 
 from CvPythonExtensions import *
+from CivilizationsData import CIVILIZATIONS
 import PyHelpers  # LOQ
 import Popup
 import RFCUtils
@@ -1114,7 +1115,7 @@ class RiseAndFall:
 
     def collapseGeneric(self, iGameTurn):
         # Absinthe: collapses if number of cities is less than half than some turns ago
-        lNumCitiesLastTime = Consts.l0ArrayMajor
+        lNumCitiesLastTime = [0 for _ in range(len(CIVILIZATIONS.get_majors()))]
         for iCiv in range(Consts.iNumMajorPlayers):
             pCiv = gc.getPlayer(iCiv)
             teamCiv = gc.getTeam(pCiv.getTeam())
