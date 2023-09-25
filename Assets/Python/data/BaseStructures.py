@@ -105,10 +105,10 @@ class EnumDataMapper(DataMapper):
         obj = copy(self)  # type: ignore
         for key in self.BASE_CLASS._member_names_:
             if obj.BASE_CLASS[key] not in obj.keys():
-                if obj.output_type == OutputType.SINGLE:
-                    _value = value
-                else:
+                if obj.output_type == OutputType.MULTIPLE and value is not None:
                     _value = [value]
+                else:
+                    _value = value
                 obj[obj.BASE_CLASS[key]] = _value
         return obj
 
