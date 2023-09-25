@@ -220,17 +220,25 @@ class Civilization(object):
     """A simple class to handle a civilization."""
 
     def __init__(self, id, properties):
-        if not isinstance(id, (int, Civ)):
-            raise NotTypeExpectedError((int, Civ), type(id))
-        self.id = int(id)
+        if not isinstance(id, Civ):
+            raise NotTypeExpectedError(Civ, type(id))
+        self._id = id
         self.properties = properties
 
     @property
-    def civ_name(self):
-        return Civ._member_names_[self.id]
+    def id(self):
+        return self._id.value  # type: ignore
+
+    @property
+    def key(self):
+        return self._id
+
+    @property
+    def name(self):
+        return self._id.name  # type: ignore
 
     def __repr__(self):
-        return self.__class__.__name__ + "(" + str(Civ[self.civ_name]) + ")"
+        return self.__class__.__name__ + "(" + str(Civ[self.name]) + ")"
 
     def get_player(self):
         return gc.getPlayer(self.id)
