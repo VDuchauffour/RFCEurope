@@ -6,6 +6,8 @@ import XMLConsts as xml
 import RFCEMaps
 import RFCUtils
 from MiscData import WORLD_WIDTH, WORLD_HEIGHT
+from TimelineData import CIV_BIRTHDATE
+from CoreStructures import get_civ_by_id
 
 gc = CyGlobalContext()  # LOQ
 utils = RFCUtils.RFCUtils()
@@ -1110,7 +1112,7 @@ class RFCEBalance:
 
         # birth turns for the players, do not change this loop
         for i in range(Consts.iNumTotalPlayers):
-            gc.setStartingTurn(i, Consts.tBirth[i])
+            gc.setStartingTurn(i, CIV_BIRTHDATE[get_civ_by_id(i)])
 
     def postAreas(self):
         # 3Miro: DO NOT CHANGE THIS CODE

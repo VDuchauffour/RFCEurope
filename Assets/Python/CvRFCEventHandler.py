@@ -31,6 +31,8 @@ import Mercenaries
 import RFCEMaps
 
 from MiscData import MessageData
+from TimelineData import CIV_BIRTHDATE
+from CoreStructures import get_civ_by_id
 
 gc = CyGlobalContext()
 localText = CyTranslator()  # Absinthe
@@ -990,7 +992,7 @@ class CvRFCEventHandler:
 
         if (
             gc.getPlayer(iPlayer).isAlive()
-            and gc.getGame().getGameTurn() > Consts.tBirth[iPlayer]
+            and gc.getGame().getGameTurn() > CIV_BIRTHDATE[get_civ_by_id(iPlayer)]
             and iPlayer < Consts.iNumPlayers
         ):
             self.rel.onTechAcquired(argsList[0], argsList[2])
@@ -1006,8 +1008,8 @@ class CvRFCEventHandler:
         DataLoader.setup()  # Absinthe: also needed on loading saved games
         # pass
 
-        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(Consts.iNationalism)) and gc.getGame().getGameTurn() >= Consts.tBirth[utils.getHumanID()]): #Rhye
-        # if (gc.getGame().getGameTurn() >= Consts.tBirth[utils.getHumanID()]):
+        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(Consts.iNationalism)) and gc.getGame().getGameTurn() >= CIV_BIRTHDATE[get_civ_by_id(utils.getHumanID())]): #Rhye
+        # if (gc.getGame().getGameTurn() >= CIV_BIRTHDATE[get_civ_by_id(utils.getHumanID())]):
 
         # global objMercenaryUtils
 
@@ -1020,8 +1022,8 @@ class CvRFCEventHandler:
 
         self.mercs.onUnitPromoted(argsList)
 
-        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(Consts.iNationalism)) and gc.getGame().getGameTurn() >= Consts.tBirth[utils.getHumanID()]): #Rhye
-        # if (gc.getGame().getGameTurn() >= Consts.tBirth[utils.getHumanID()]):
+        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(Consts.iNationalism)) and gc.getGame().getGameTurn() >= CIV_BIRTHDATE[get_civ_by_id(utils.getHumanID())]): #Rhye
+        # if (gc.getGame().getGameTurn() >= CIV_BIRTHDATE[get_civ_by_id(utils.getHumanID())]):
         # 	pUnit, iPromotion = argsList
         # 	player = PyPlayer(pUnit.getOwner())
         #
@@ -1034,8 +1036,8 @@ class CvRFCEventHandler:
 
         self.mercs.onUnitKilled(argsList)
 
-        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(Consts.iNationalism)) and gc.getGame().getGameTurn() >= Consts.tBirth[utils.getHumanID()]): #Rhye
-        # if (gc.getGame().getGameTurn() >= Consts.tBirth[utils.getHumanID()]):
+        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(Consts.iNationalism)) and gc.getGame().getGameTurn() >= CIV_BIRTHDATE[get_civ_by_id(utils.getHumanID())]): #Rhye
+        # if (gc.getGame().getGameTurn() >= CIV_BIRTHDATE[get_civ_by_id(utils.getHumanID())]):
 
         # unit, iAttacker = argsList
 
@@ -1061,7 +1063,7 @@ class CvRFCEventHandler:
         "keypress handler - return 1 if the event was consumed"
 
         iHuman = utils.getHumanID()
-        if gc.getGame().getGameTurn() >= Consts.tBirth[iHuman]:
+        if gc.getGame().getGameTurn() >= CIV_BIRTHDATE[get_civ_by_id(iHuman)]:
 
             eventType, key, mx, my, px, py = argsList
 

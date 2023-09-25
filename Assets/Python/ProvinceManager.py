@@ -3,10 +3,12 @@
 from CvPythonExtensions import *
 import Consts
 import XMLConsts as xml
-import RFCEMaps 
+import RFCEMaps
 import RFCUtils  # Absinthe
 import PyHelpers  # Absinthe
 
+from TimelineData import CIV_BIRTHDATE
+from CoreStructures import get_civ_by_id
 
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer  # Absinthe
@@ -714,7 +716,7 @@ class ProvinceManager:
         # update provinces for the 1200 AD Scenario
         if utils.getScenario() == Consts.i1200ADScenario:
             for iPlayer in range(Consts.iNumPlayers - 1):
-                if Consts.tBirth[iPlayer] < xml.i1200AD:
+                if CIV_BIRTHDATE[get_civ_by_id(iPlayer)] < xml.i1200AD:
                     self.onSpawn(iPlayer)
 
     def checkTurn(self, iGameTurn):

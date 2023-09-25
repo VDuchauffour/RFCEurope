@@ -13,6 +13,8 @@ from StoredData import sd
 import random
 
 from MiscData import MessageData
+from TimelineData import CIV_BIRTHDATE
+from CoreStructures import get_civ_by_id
 
 # globals
 gc = CyGlobalContext()
@@ -745,7 +747,7 @@ class Crusades:
     def doParticipation(self, iGameTurn):
         iHuman = utils.getHumanID()
         # print(" 3Miro Crusades doPart", iHuman, iGameTurn )
-        if Consts.tBirth[iHuman] < iGameTurn:
+        if CIV_BIRTHDATE[get_civ_by_id(iHuman)] < iGameTurn:
             pHuman = gc.getPlayer(iHuman)
             if pHuman.getStateReligion() != iCatholicism:
                 self.setParticipate(False)
@@ -812,7 +814,7 @@ class Crusades:
         for iPlayer in range(Consts.iNumPlayers):
             pPlayer = gc.getPlayer(iPlayer)
             if (
-                Consts.tBirth[iPlayer] > iGameTurn
+                CIV_BIRTHDATE[get_civ_by_id(iPlayer)] > iGameTurn
                 or not pPlayer.isAlive()
                 or pPlayer.getStateReligion() != iCatholicism
                 or gc.getTeam(pPlayer.getTeam()).isVassal(iTmJerusalem)
@@ -847,12 +849,16 @@ class Crusades:
     def sendUnits(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
         iNumUnits = pPlayer.getNumUnits()
-        if Consts.tBirth[iPlayer] + 10 > gc.getGame().getGameTurn():  # in the first 10 turns
+        if (
+            CIV_BIRTHDATE[get_civ_by_id(iPlayer)] + 10 > gc.getGame().getGameTurn()
+        ):  # in the first 10 turns
             if iNumUnits < 10:
                 iMaxToSend = 0
             else:
                 iMaxToSend = 1
-        elif Consts.tBirth[iPlayer] + 25 > gc.getGame().getGameTurn():  # between turn 11-25
+        elif (
+            CIV_BIRTHDATE[get_civ_by_id(iPlayer)] + 25 > gc.getGame().getGameTurn()
+        ):  # between turn 11-25
             iMaxToSend = min(10, max(1, (5 * iNumUnits) / 50))
         else:
             iMaxToSend = min(10, max(1, (5 * iNumUnits) / 35))  # after turn 25
@@ -1909,7 +1915,7 @@ class Crusades:
         teamPlayer = gc.getTeam(pPlayer.getTeam())
         # only born, flipped and living Catholics can DC
         if (
-            (iGameTurn < Consts.tBirth[iPlayer] + 5)
+            (iGameTurn < CIV_BIRTHDATE[get_civ_by_id(iPlayer)] + 5)
             or not pPlayer.isAlive()
             or pPlayer.getStateReligion() != iCatholicism
         ):
@@ -1922,7 +1928,10 @@ class Crusades:
         # Can DC if at war with a non-catholic/orthodox enemy, enemy is not a vassal of a catholic/orthodox civ and has a city in the DC map
         for iEnemy in range(Consts.iNumPlayers - 1):  # exclude the Pope
             pEnemy = gc.getPlayer(iEnemy)
-            if teamPlayer.isAtWar(pEnemy.getTeam()) and Consts.tBirth[iEnemy] + 10 < iGameTurn:
+            if (
+                teamPlayer.isAtWar(pEnemy.getTeam())
+                and CIV_BIRTHDATE[get_civ_by_id(iEnemy)] + 10 < iGameTurn
+            ):
                 if self.isOrMasterChristian(iEnemy):
                     continue
                 for pCity in utils.getCityList(iEnemy):

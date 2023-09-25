@@ -4,6 +4,9 @@ from CvPythonExtensions import *
 import CvUtil
 import CvScreenEnums
 
+from TimelineData import CIV_BIRTHDATE
+from CoreStructures import get_civ_by_id
+
 import Consts
 import XMLConsts as xml
 import RFCUtils  # Rhye
@@ -3341,7 +3344,7 @@ class CvMainInterface:
                 iCount += 1
                 if (
                     not CyInterface().isCityScreenUp()
-                    and CyGame().getGameTurn() >= Consts.tBirth[ePlayer]
+                    and CyGame().getGameTurn() >= CIV_BIRTHDATE[get_civ_by_id(ePlayer)]
                 ):
                     # iStability = utils.getStability(ePlayer)
                     iStability = pPlayer.getStability()
@@ -6552,7 +6555,8 @@ class CvMainInterface:
                                         # Rhye - start
                                         if (
                                             not gc.getTeam(eTeam).isAlive()
-                                            and gc.getGame().getGameTurn() >= Consts.tBirth[eTeam]
+                                            and gc.getGame().getGameTurn()
+                                            >= CIV_BIRTHDATE[get_civ_by_id(eTeam)]
                                         ):
                                             szBuffer = szBuffer + " -"
                                         else:

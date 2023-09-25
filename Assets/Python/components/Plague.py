@@ -10,6 +10,8 @@ from StoredData import sd
 import random
 
 from MiscData import MessageData
+from TimelineData import CIV_BIRTHDATE
+from CoreStructures import get_civ_by_id
 
 # globals
 gc = CyGlobalContext()
@@ -684,7 +686,10 @@ class Plague:
                 return
 
             # only if it's not a recently born civ
-            if gc.getGame().getGameTurn() > Consts.tBirth[iNewOwner] + Consts.iImmunity:
+            if (
+                gc.getGame().getGameTurn()
+                > CIV_BIRTHDATE[get_civ_by_id(iNewOwner)] + Consts.iImmunity
+            ):
                 # reinfect the human player if conquering plagued cities
                 if iNewOwner == utils.getHumanID():
                     # if > 0 do nothing, if < 0 skip immunity and restart the plague, if == 0 start the plague

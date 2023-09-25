@@ -11,6 +11,9 @@ import XMLConsts as xml
 from StoredData import sd
 from MiscData import WORLD_WIDTH, WORLD_HEIGHT, MessageData
 
+from TimelineData import CIV_BIRTHDATE
+from CoreStructures import get_civ_by_id
+
 # globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
@@ -202,7 +205,7 @@ class RFCUtils:
 			for iActiveCiv in range( Consts.iNumMajorPlayers ):
 				if gc.getPlayer(iActiveCiv).isAlive() and not gc.getPlayer(iActiveCiv).isHuman() and not iActiveCiv == Consts.iPope:
 					if not teamMinor.isAtWar(iActiveCiv):
-						if iGameTurn > Consts.tBirth[iActiveCiv] + 20:
+						if iGameTurn > CIV_BIRTHDATE[get_civ_by_id(iActiveCiv)] + 20:
 							# Absinthe: probably better to use war maps instead of settler maps, but let the AI concentrate on it's core area first
 							#			maybe we should use both settler and war maps? distance calculations would be great, but use too much iterations
 							#if (gc.getPlayer(iActiveCiv).getSettlersMaps( WORLD_HEIGHT-y-1, x ) >= 90 or gc.getPlayer(iActiveCiv).getSettlersMaps( WORLD_HEIGHT-y-1, x ) == -1):
@@ -233,7 +236,7 @@ class RFCUtils:
 			for iActiveCiv in range( Consts.iNumMajorPlayers ):
 				if gc.getPlayer(iActiveCiv).isAlive() and not gc.getPlayer(iActiveCiv).isHuman() and not iActiveCiv == Consts.iPope:
 					# Absinthe: do not want to force the AI into these wars with WARPLAN_TOTAL too early
-					if iGameTurn > Consts.tBirth[iActiveCiv] + 40:
+					if iGameTurn > CIV_BIRTHDATE[get_civ_by_id(iActiveCiv)] + 40:
 						if not teamMinor.isAtWar(iActiveCiv):
 							if gc.getPlayer(iActiveCiv).getWarsMaps( WORLD_HEIGHT-y-1, x ) == 16:
 								teamActive = gc.getTeam(gc.getPlayer(iActiveCiv).getTeam())
@@ -895,7 +898,7 @@ class RFCUtils:
 		if not gc.getPlayer(iPlayer).isAlive:
 			return False
 		iGameTurn = gc.getGame().getGameTurn()
-		if iGameTurn < Consts.tBirth[iPlayer]:
+		if iGameTurn < CIV_BIRTHDATE[get_civ_by_id(iPlayer)]:
 			return False
 		return True
 

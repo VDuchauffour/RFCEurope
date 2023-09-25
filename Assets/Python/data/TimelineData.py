@@ -3,13 +3,13 @@
 from BaseStructures import EnumDataMapper
 from CoreStructures import CivDataMapper
 from CoreTypes import Civ, Company
-from Enum import IntEnum
 
 # TODO switch to years with convert from trun
+# TODO fix company dates
 
 # Timeline of the mod, all important years to be references by year as opposed to hard-to-follow turn numbers
 # Important event Spawn UHV
-class DateTurn(IntEnum):
+class DateTurn:
     i500AD = 0
     i508AD = 2
     i520AD = 5

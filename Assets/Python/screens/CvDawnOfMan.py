@@ -6,6 +6,8 @@ import Consts
 import CvUtil
 from CvPythonExtensions import *
 import RFCUtils
+from TimelineData import CIV_BIRTHDATE
+from CoreStructures import get_civ_by_id
 
 ArtFileMgr = CyArtFileMgr()
 localText = CyTranslator()
@@ -186,7 +188,7 @@ class CvDawnOfMan:
         year = Consts.tYear[CyGame().getActiveTeam()][0] + CyTranslator().getText(
             Consts.tYear[CyGame().getActiveTeam()][1], ()
         )
-        if Consts.tBirth[CyGame().getActiveTeam()] < utils.getScenarioStartTurn():
+        if CIV_BIRTHDATE[get_civ_by_id(CyGame().getActiveTeam())] < utils.getScenarioStartTurn():
             if utils.getScenario() == Consts.i1200ADScenario:
                 textKey = "TXT_KEY_DAWN_OF_MAN_TEXT_%d_1200" % (CyGame().getActiveTeam())
         else:
@@ -266,12 +268,11 @@ class CvDawnOfMan:
     def update(self, fDelta):
 
         ##Rhye - begin
-        # 3Miro: tBirth?
-        # if (Consts.tBirth[CyGame().getActiveTeam()] == 0 or \
+        # if (CIV_BIRTHDATE[get_civ_by_id(CyGame().getActiveTeam())] == 0 or \
         # 	(not gc.getPlayer(0).isPlayable() and CyGame().getActiveTeam() <= Consts.iArabia)):  #late start condition
         # MiroTest = CyGame().getActiveTeam()
         # print( "3Miro Test",MiroTest )
-        if Consts.tBirth[CyGame().getActiveTeam()] <= utils.getScenarioStartTurn():
+        if CIV_BIRTHDATE[get_civ_by_id(CyGame().getActiveTeam())] <= utils.getScenarioStartTurn():
             screen = CyGInterfaceScreen("CvLoadingScreen", self.iScreenID)
             screen.setBarPercentage("ProgressBar", InfoBarTypes.INFOBAR_STORED, 1)
             screen.setLabel(
@@ -291,7 +292,7 @@ class CvDawnOfMan:
         else:
             iGameTurn = CyGame().getGameTurn()
 
-            iNumAutoPlayTurns = Consts.tBirth[CyGame().getActiveTeam()]
+            iNumAutoPlayTurns = CIV_BIRTHDATE[get_civ_by_id(CyGame().getActiveTeam())]
             iNumTurnsRemaining = iNumAutoPlayTurns - iGameTurn
 
             # if (iNumTurnsRemaining != self.iTurnsRemaining):

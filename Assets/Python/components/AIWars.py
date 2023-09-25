@@ -8,6 +8,8 @@ import RFCUtils
 import RFCEMaps
 from StoredData import sd
 from MiscData import WORLD_WIDTH, WORLD_HEIGHT
+from TimelineData import CIV_BIRTHDATE
+from CoreStructures import get_civ_by_id
 
 # globals
 gc = CyGlobalContext()
@@ -318,7 +320,7 @@ class AIWars:
             if (
                 utils.getPlagueCountdown(iLoopCiv) > 0
                 or utils.getPlagueCountdown(iLoopCiv) < -10
-                and not gc.getGame().getGameTurn() <= Consts.tBirth[iLoopCiv] + 20
+                and not gc.getGame().getGameTurn() <= CIV_BIRTHDATE[get_civ_by_id(iLoopCiv)] + 20
             ):
                 lTargetCivs[iLoopCiv] *= 3
                 lTargetCivs[iLoopCiv] /= 2

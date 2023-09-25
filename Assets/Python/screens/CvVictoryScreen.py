@@ -9,6 +9,9 @@ import RFCUtils
 import Victory as vic
 import UniquePowers
 
+from TimelineData import CIV_BIRTHDATE
+from CoreStructures import get_civ_by_id
+
 PyPlayer = PyHelpers.PyPlayer
 
 # globals
@@ -3594,7 +3597,7 @@ class CvVictoryScreen:
             pTestPlayer = gc.getPlayer(iLoopPlayer)
             sCivShortName = str(pTestPlayer.getCivilizationShortDescriptionKey())
             # unknown: if not yet born, or alive but no contact
-            if iGameTurn <= Consts.tBirth[iLoopPlayer] or (
+            if iGameTurn <= CIV_BIRTHDATE[get_civ_by_id(iLoopPlayer)] or (
                 not gc.getPlayer(self.iActivePlayer).canContact(iLoopPlayer)
                 and pTestPlayer.isAlive()
             ):
@@ -3623,7 +3626,7 @@ class CvVictoryScreen:
             sCivShortName = str(pEnemy.getCivilizationShortDescriptionKey())
             if (
                 pEnemy.isAlive() and not teamEnemy.isVassal(teamOwn.getID())
-            ) or iGameTurn <= Consts.tBirth[iEnemy]:
+            ) or iGameTurn <= CIV_BIRTHDATE[get_civ_by_id(iEnemy)]:
                 sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (
                     localText.getText(sCivShortName, ())
                 )
@@ -3646,7 +3649,7 @@ class CvVictoryScreen:
             pEnemy = gc.getPlayer(iEnemyCiv)
             teamEnemy = gc.getTeam(iEnemyCiv)
             sCivShortName = str(pEnemy.getCivilizationShortDescriptionKey())
-            if iGameTurn <= Consts.tBirth[iEnemyCiv]:
+            if iGameTurn <= CIV_BIRTHDATE[get_civ_by_id(iEnemyCiv)]:
                 sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (
                     localText.getText(sCivShortName, ())
                 )
