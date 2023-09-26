@@ -156,7 +156,7 @@ class EnumMeta(type):
         # cannot be mixed with other types (int, float, etc.) if it has an
         # inherited __new__ unless a new __new__ is defined (or the resulting
         # class will fail).
-        if type(classdict) is dict:
+        if type(classdict) is dict:  # noqa: E721
             original_dict = classdict
             classdict = _EnumDict()
             for k, v in original_dict.items():
