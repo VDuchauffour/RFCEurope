@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -U pip
-          pip install black==21.12b0 click==8.0 ruff
+          pip install black==21.12b0 click==8.0 ruff==0.0.287
       - name: Run linting
         run: |
           make lint
