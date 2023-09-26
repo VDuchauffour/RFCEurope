@@ -37,6 +37,11 @@ repos:
         args: [ --style=InheritParentConfig, -i, --no-diff ]
         types_or: [ c++, c ]
         exclude: "(CvGameCoreDLL/bin|CvGameCoreDLL/Boost-1.32.0|CvGameCoreDLL/Python24)/.*"
+  # An extremely fast Python linter, written in Rust
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: "v0.0.287"
+    hooks:
+      - id: ruff
   # Formatter for python files
   - repo: https://github.com/psf/black
     rev: 21.12b0
