@@ -33,8 +33,6 @@ teamAragon, teamSweden, teamPrussia, teamLithuania, teamAustria, teamTurkey, tea
 iIndepStart = iIndependent # creates the block of independent civs
 iIndepEnd = iIndependent4
 
-(i500ADScenario, i1200ADScenario) = range(2)
-
 tYear = ( #For the Dawn of Man starting screen
 ("500", "TXT_KEY_AD"),
 ("500", "TXT_KEY_AD"),

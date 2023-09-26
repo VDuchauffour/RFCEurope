@@ -15,7 +15,9 @@ import Religions
 import Victory
 from StoredData import sd
 import Crusades
+
 from MiscData import WORLD_WIDTH, WORLD_HEIGHT, MessageData
+from CoreTypes import Scenario
 
 
 gc = CyGlobalContext()  # LOQ
@@ -548,12 +550,12 @@ class RiseAndFall:
         self.setupRespawnTurns()
 
         iHuman = utils.getHumanID()
-        if utils.getScenario() == Consts.i500ADScenario:
+        if utils.getScenario() == Scenario.i500AD.value:  # type: ignore
             self.create500ADstartingUnits()
         else:
             self.create1200ADstartingUnits()
             for iCiv in range(Consts.iAragon + 1):
-                self.showArea(iCiv, Consts.i1200ADScenario)
+                self.showArea(iCiv, Scenario.i1200AD)
                 self.assign1200ADtechs(
                     iCiv
                 )  # Temporarily all civs get the same starting techs as Aragon
@@ -3728,7 +3730,7 @@ class RiseAndFall:
         for (iX, iY) in utils.getPlotList((iXs, iYs), (iXe, iYe)):
             gc.getMap().plot(iX, iY).setRevealed(gc.getPlayer(iCiv).getTeam(), True, False, -1)
 
-    def showArea(self, iCiv, iScenario=Consts.i500ADScenario):
+    def showArea(self, iCiv, iScenario=Scenario.i500AD):
         # print(" Visible for: ",iCiv )
         for iI in range(len(Consts.tVisible[iScenario][iCiv])):
             self.showRect(iCiv, Consts.tVisible[iScenario][iCiv][iI])

@@ -10,6 +10,7 @@ import Crusades
 from operator import itemgetter
 
 from MiscData import MessageData
+from CoreTypes import Scenario
 
 # globals
 utils = RFCUtils.RFCUtils()
@@ -54,7 +55,7 @@ class Companies:
     def setup(self):
 
         # update companies at the beginning of the 1200AD scenario:
-        if utils.getScenario() == Consts.i1200ADScenario:
+        if utils.getScenario() == Scenario.i1200AD.value:  # type: ignore
             iGameTurn = xml.i1200AD
             for iCompany in range(xml.iNumCompanies):
                 if iGameTurn > tCompaniesBirth[iCompany] and iGameTurn < tCompaniesDeath[iCompany]:

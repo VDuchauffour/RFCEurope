@@ -6,6 +6,7 @@ import PyHelpers
 from CoreStructures import get_civ_by_id
 from TimelineData import CIV_BIRTHDATE, CIV_COLLAPSE_DATE
 from MiscData import MessageData
+from CoreTypes import Scenario
 
 # import cPickle as pickle
 import Consts
@@ -133,7 +134,7 @@ class Stability:
                     )
 
         # Absinthe: update Byzantine stability on the start of the game
-        if utils.getScenario() == Consts.i500ADScenario:
+        if utils.getScenario() == Scenario.i500AD.value:  # type: ignore
             # small stability boost for the human player for the first UHV
             if Consts.iByzantium == utils.getHumanID():
                 pByzantium = gc.getPlayer(Consts.iByzantium)

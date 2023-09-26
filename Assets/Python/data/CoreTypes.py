@@ -52,7 +52,7 @@ class CivGroup(Enum):
     SCANDINAVIAN = 5
 
 
-class Scenario(Enum):
+class Scenario(IntEnum):
     i500AD = 0
     i1200AD = 1
 

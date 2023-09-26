@@ -1,6 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Utilities
 
 from CvPythonExtensions import *
+from CoreTypes import Scenario
 import CvUtil
 import CvScreenEnums #Absinthe
 import RFCEMaps
@@ -1484,8 +1485,8 @@ class RFCUtils:
 
 	def getScenario(self):
 		if gc.getPlayer(Consts.iBurgundy).isPlayable():
-			return Consts.i500ADScenario
-		return Consts.i1200ADScenario
+			return Scenario.i500AD.value  # type: ignore
+		return Scenario.i1200AD.value  # type: ignore
 
 	def getScenarioStartYear(self):
 		lStartYears = [500, 1200]

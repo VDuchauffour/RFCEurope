@@ -9,6 +9,7 @@ import PyHelpers  # Absinthe
 
 from TimelineData import CIV_BIRTHDATE
 from CoreStructures import get_civ_by_id
+from CoreTypes import Scenario
 
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer  # Absinthe
@@ -714,7 +715,7 @@ class ProvinceManager:
             for iProv in self.tPot2NormProvinces[iPlayer]:
                 pPlayer.setProvinceType(iProv, Consts.iProvincePotential)
         # update provinces for the 1200 AD Scenario
-        if utils.getScenario() == Consts.i1200ADScenario:
+        if utils.getScenario() == Scenario.i1200AD.value:  # type: ignore
             for iPlayer in range(Consts.iNumPlayers - 1):
                 if CIV_BIRTHDATE[get_civ_by_id(iPlayer)] < xml.i1200AD:
                     self.onSpawn(iPlayer)

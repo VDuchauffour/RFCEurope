@@ -6,6 +6,8 @@ import Consts
 import CvUtil
 from CvPythonExtensions import *
 import RFCUtils
+
+from CoreTypes import Scenario
 from TimelineData import CIV_BIRTHDATE
 from CoreStructures import get_civ_by_id
 
@@ -189,7 +191,7 @@ class CvDawnOfMan:
             Consts.tYear[CyGame().getActiveTeam()][1], ()
         )
         if CIV_BIRTHDATE[get_civ_by_id(CyGame().getActiveTeam())] < utils.getScenarioStartTurn():
-            if utils.getScenario() == Consts.i1200ADScenario:
+            if utils.getScenario() == Scenario.i1200AD.value:  # type: ignore
                 textKey = "TXT_KEY_DAWN_OF_MAN_TEXT_%d_1200" % (CyGame().getActiveTeam())
         else:
             textKey = "TXT_KEY_DAWN_OF_MAN_TEXT_%d" % (CyGame().getActiveTeam())
