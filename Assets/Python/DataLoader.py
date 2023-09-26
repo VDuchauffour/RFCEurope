@@ -2,7 +2,7 @@
 # Implemented by AbsintheRed, based on SoI
 
 from CvPythonExtensions import *
-import RFCEMaps 
+import RFCEMaps
 import Consts
 
 gc = CyGlobalContext()

@@ -174,10 +174,13 @@ class CvPediaTech(CvPediaScreen.CvPediaScreen):
                 "TXT_KEY_PEDIA_COST", (gc.getTechInfo(iTech).getResearchCost(),)
             ) + u"%c" % (gc.getCommerceInfo(CommerceTypes.COMMERCE_RESEARCH).getChar())
         else:
-            szCostText = localText.getText(
-                "TXT_KEY_PEDIA_COST",
-                (gc.getTeam(gc.getGame().getActiveTeam()).getResearchCost(iTech),),
-            ) + u"%c" % (gc.getCommerceInfo(CommerceTypes.COMMERCE_RESEARCH).getChar())
+            szCostText = (
+                localText.getText(
+                    "TXT_KEY_PEDIA_COST",
+                    (gc.getTeam(gc.getGame().getActiveTeam()).getResearchCost(iTech),),
+                )
+                + u"%c" % (gc.getCommerceInfo(CommerceTypes.COMMERCE_RESEARCH).getChar())
+            )
         screen.setLabel(
             szCostId,
             "Background",
