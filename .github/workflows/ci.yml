@@ -24,7 +24,7 @@ jobs:
       - name: Run tests
         run: |
           pip install -U pip
-          pip install black ruff
+          pip install black==21.12b0 click==8.0 ruff
           make lint
 
   tests:
