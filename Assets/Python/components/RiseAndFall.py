@@ -14,7 +14,7 @@ import Victory
 from StoredData import sd
 import Crusades
 
-from MiscData import WORLD_WIDTH, WORLD_HEIGHT, MessageData
+from MiscData import MessageData
 from CoreTypes import Civ, Scenario
 
 

@@ -23,7 +23,7 @@ import RFCEMaps
 import RFCUtils
 import RFCEBalance
 import random
-from MiscData import WORLD_WIDTH, WORLD_HEIGHT, MessageData
+from MiscData import WORLD_HEIGHT, MessageData
 from CivilizationsData import CIVILIZATIONS
 from LocationsData import CIV_NEIGHBOURS
 

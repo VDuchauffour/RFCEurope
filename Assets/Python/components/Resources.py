@@ -3,7 +3,6 @@
 
 from CvPythonExtensions import *
 import PyHelpers
-import Consts
 import XMLConsts as xml
 
 from MiscData import MessageData

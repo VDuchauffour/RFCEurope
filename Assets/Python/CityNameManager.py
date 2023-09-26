@@ -4,7 +4,7 @@ from CvPythonExtensions import *
 import PyHelpers
 import Consts
 import RFCEMaps
-from MiscData import WORLD_WIDTH, WORLD_HEIGHT
+from MiscData import WORLD_HEIGHT
 
 # globals
 gc = CyGlobalContext()

@@ -7,7 +7,7 @@ import XMLConsts as xml
 import RFCUtils
 import RFCEMaps
 from StoredData import sd
-from MiscData import WORLD_WIDTH, WORLD_HEIGHT
+from MiscData import WORLD_HEIGHT
 from TimelineData import CIV_BIRTHDATE
 from CoreStructures import get_civ_by_id
 
