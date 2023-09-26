@@ -53,11 +53,11 @@ class CvWBParser:
     def findTokenValue(self, toks, item):
         "Search for a token of the form item=value in the list of toks, and return value, or -1 if not found"
         for tok in toks:
-            l = tok.split("=")
-            if item == l[0]:
-                if len(l) == 1:
+            _l = tok.split("=")
+            if item == _l[0]:
+                if len(_l) == 1:
                     return item
-                return l[1]
+                return _l[1]
         return -1  # failed
 
     def getNextLine(self, f):
