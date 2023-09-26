@@ -33,38 +33,6 @@ teamAragon, teamSweden, teamPrussia, teamLithuania, teamAustria, teamTurkey, tea
 iIndepStart = iIndependent # creates the block of independent civs
 iIndepEnd = iIndependent4
 
-tYear = ( #For the Dawn of Man starting screen
-("500", "TXT_KEY_AD"),
-("500", "TXT_KEY_AD"),
-("632", "TXT_KEY_AD"),
-("680", "TXT_KEY_AD"),
-("711", "TXT_KEY_AD"),
-("810", "TXT_KEY_AD"),
-("843", "TXT_KEY_AD"),
-("856", "TXT_KEY_AD"),
-("864", "TXT_KEY_AD"),
-("872", "TXT_KEY_AD"),
-("880", "TXT_KEY_AD"),
-("895", "TXT_KEY_AD"),
-("910", "TXT_KEY_AD"),
-("936", "TXT_KEY_AD"),
-("960", "TXT_KEY_AD"),
-("966", "TXT_KEY_AD"),
-("1016", "TXT_KEY_AD"),
-("1040", "TXT_KEY_AD"),
-("1066", "TXT_KEY_AD"),
-("1139", "TXT_KEY_AD"),
-("1164", "TXT_KEY_AD"),
-("1210", "TXT_KEY_AD"),
-("1224", "TXT_KEY_AD"),
-("1236", "TXT_KEY_AD"),
-("1282", "TXT_KEY_AD"),
-("1356", "TXT_KEY_AD"),
-("1380", "TXT_KEY_AD"),
-("1581", "TXT_KEY_AD"),
-("500", "TXT_KEY_AD")
-)
-
 # starting locations coordinates
 tCapitals = (
 (81, 24), #Constantinople, Byzantium

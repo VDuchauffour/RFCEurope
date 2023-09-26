@@ -2,9 +2,9 @@
 ## Copyright Firaxis Games 2005
 
 import math  # Rhye
-import Consts
 import CvUtil
 from CvPythonExtensions import *
+from MiscData import CIV_DAWN_OF_MAN_VALUES
 import RFCUtils
 
 from CoreTypes import Scenario
@@ -187,8 +187,8 @@ class CvDawnOfMan:
         pActivePlayer = gc.getPlayer(CyGame().getActivePlayer())
 
         # Absinthe: civ-specific Dawn of Man screen - idea from SoI
-        year = Consts.tYear[CyGame().getActiveTeam()][0] + CyTranslator().getText(
-            Consts.tYear[CyGame().getActiveTeam()][1], ()
+        year = CIV_DAWN_OF_MAN_VALUES[get_civ_by_id(CyGame().getActiveTeam())][0] + CyTranslator().getText(
+            CIV_DAWN_OF_MAN_VALUES[get_civ_by_id(CyGame().getActiveTeam())][1], ()
         )
         if CIV_BIRTHDATE[get_civ_by_id(CyGame().getActiveTeam())] < utils.getScenarioStartTurn():
             if utils.getScenario() == Scenario.i1200AD.value:  # type: ignore
