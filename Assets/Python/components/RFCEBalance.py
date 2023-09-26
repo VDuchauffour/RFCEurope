@@ -1,11 +1,11 @@
-# Rhye's and Fall of Civilization: Europe - Balancing modifiers are placed here
-
 from CvPythonExtensions import *
 import Consts
+from CoreTypes import Civ
 import XMLConsts as xml
 import RFCEMaps
 import RFCUtils
 from MiscData import WORLD_WIDTH, WORLD_HEIGHT
+from LocationsData import CIV_CAPITAL_LOCATIONS
 from TimelineData import CIV_BIRTHDATE
 from CoreStructures import get_civ_by_id
 
@@ -927,11 +927,7 @@ class RFCEBalance:
 
         # 3Miro: Psycho AI cheat, this will make Ottoman AI think it can win battles vs Constantinople at 90/100 rate
         # 	it will also actually boost the Ottoman's odds (actually lower the defenders chance by 20 percent), but only when attacking Constantinople
-        gc.setPsychoAICheat(
-            Consts.iTurkey,
-            Consts.tCapitals[Consts.iByzantium][0],
-            Consts.tCapitals[Consts.iByzantium][1],
-        )  # Constantinople (81, 24)
+        gc.setPsychoAICheat(Consts.iTurkey, *CIV_CAPITAL_LOCATIONS[Civ.BYZANTIUM].to_tuple())
 
         # 3Miro: be very careful here, this can really mess the AI
         # 	setHistoricalEnemyAICheat( iAttacker, iDefender, 10 ) gives the attacker +10% bonus, when attacked units belong to the defender

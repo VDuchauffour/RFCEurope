@@ -12,9 +12,11 @@ import CityNameManager
 from StoredData import sd
 import random
 
+from CoreTypes import Civ
 from MiscData import MessageData
 from TimelineData import CIV_BIRTHDATE
 from CoreStructures import get_civ_by_id
+from LocationsData import CIV_CAPITAL_LOCATIONS
 
 # globals
 gc = CyGlobalContext()
@@ -1192,7 +1194,9 @@ class Crusades:
                 pTeamRichest = gc.getTeam(pRichest.getTeam())
                 if not pTeamRichest.isVassal(iTeamByzantium):
                     # Only if Byzantium holds Constantinople and not a vassal
-                    pConstantinoplePlot = gc.getMap().plot(81, 24)  # tCapitals[Consts.iByzantium]
+                    pConstantinoplePlot = gc.getMap().plot(
+                        *CIV_CAPITAL_LOCATIONS[Civ.BYZANTIUM].to_tuple()
+                    )
                     pConstantinopleCity = pConstantinoplePlot.getPlotCity()
                     iConstantinopleOwner = pConstantinopleCity.getOwner()
                     # should check if Constantinople is their capital city to be fully correct, but we can assume that's the case

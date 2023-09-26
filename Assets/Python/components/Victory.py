@@ -1,4 +1,6 @@
 from CvPythonExtensions import *
+from CoreTypes import Civ
+from LocationsData import CIV_CAPITAL_LOCATIONS
 import PyHelpers
 import Popup
 import Consts
@@ -1082,7 +1084,7 @@ class Victory:
         # UHV 3: Make Constantinople the largest and most cultured city while being the richest empire in the world in 1453
         elif iGameTurn == xml.i1453AD:
             if self.isPossibleUHV(Consts.iByzantium, 2, True):
-                x, y = Consts.tCapitals[Consts.iByzantium]
+                x, y = CIV_CAPITAL_LOCATIONS[Civ.BYZATIUM].to_tuple()
                 iGold = pByzantium.getGold()
                 bMost = True
                 for iCiv in range(Consts.iNumPlayers):
@@ -1180,7 +1182,7 @@ class Victory:
         # UHV 1: Make Cordoba the largest city in the world in 961
         if iGameTurn == xml.i961AD:
             if self.isPossibleUHV(Consts.iCordoba, 0, True):
-                x, y = Consts.tCapitals[Consts.iCordoba]
+                x, y = CIV_CAPITAL_LOCATIONS[Civ.CORDOBA].to_tuple()
                 if (
                     gc.isLargestCity(x, y)
                     and gc.getMap().plot(x, y).getPlotCity().getOwner() == Consts.iCordoba
@@ -1948,9 +1950,7 @@ class Victory:
                 self.wonUHV(Consts.iMoscow, 2)
             elif (
                 gc.getMap()
-                .plot(
-                    Consts.tCapitals[Consts.iByzantium][0], Consts.tCapitals[Consts.iByzantium][1]
-                )
+                .plot(*CIV_CAPITAL_LOCATIONS[Civ.BYZANTIUM].to_tuple())
                 .getPlotCity()
                 .getOwner()
                 == Consts.iMoscow
@@ -1991,9 +1991,7 @@ class Victory:
 
         # UHV 1: Settle 5 Great Merchants in Amsterdam by 1750
         if self.isPossibleUHV(Consts.iDutch, 0, True):
-            pPlot = gc.getMap().plot(
-                Consts.tCapitals[Consts.iDutch][0], Consts.tCapitals[Consts.iDutch][1]
-            )
+            pPlot = gc.getMap().plot(*CIV_CAPITAL_LOCATIONS[Civ.DUTCH].to_tuple())
             if pPlot.isCity():
                 city = pPlot.getPlotCity()
                 if (

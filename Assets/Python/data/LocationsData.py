@@ -24,6 +24,7 @@ from CoreStructures import (
 from MiscData import WORLD_HEIGHT, WORLD_WIDTH
 
 
+# TODO: add an enum for significant cities and add coords here
 JERUSALEM = Tile((93, 5))
 
 

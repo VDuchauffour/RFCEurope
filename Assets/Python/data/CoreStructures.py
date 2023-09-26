@@ -43,6 +43,9 @@ class Tile(object):
     def areas(self):
         return self._keys["areas"]
 
+    def to_tuple(self):
+        return (self.x, self.y)
+
     def set_area(self, area):
         if not isinstance(area, AreaTypes):
             raise NotTypeExpectedError(AreaTypes, type(area))

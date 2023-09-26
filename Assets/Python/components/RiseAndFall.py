@@ -1,14 +1,12 @@
-# Rhye's and Fall of Civilization: Europe - Main RFC mechanics
-
 from CvPythonExtensions import *
 from CivilizationsData import CIVILIZATIONS
 from CoreStructures import get_civ_by_id
-from LocationsData import CIV_OLDER_NEIGHBOURS
+from LocationsData import CIV_CAPITAL_LOCATIONS, CIV_OLDER_NEIGHBOURS
 from TimelineData import CIV_BIRTHDATE
 import PyHelpers  # LOQ
 import Popup
 import RFCUtils
-import ProvinceManager  # manage provinces here to link to spawn/rebirth
+import ProvinceManager
 import Consts
 import XMLConsts as xml
 import Religions
@@ -17,7 +15,7 @@ from StoredData import sd
 import Crusades
 
 from MiscData import WORLD_WIDTH, WORLD_HEIGHT, MessageData
-from CoreTypes import Scenario
+from CoreTypes import Civ, Scenario
 
 
 gc = CyGlobalContext()  # LOQ
@@ -595,9 +593,7 @@ class RiseAndFall:
         # Constantinople -> Istanbul
         if iPlayer == Consts.iTurkey:
             cityList = utils.getCityList(iPlayer)
-            if (city.getX(), city.getY()) == Consts.tCapitals[
-                Consts.iByzantium
-            ]:  # Constantinople (81,24)
+            if (city.getX(), city.getY()) == CIV_CAPITAL_LOCATIONS[Civ.BYZANTIUM].to_tuple():
                 for loopCity in cityList:
                     if loopCity != city:
                         loopCity.setHasRealBuilding((xml.iPalace), False)
@@ -627,8 +623,7 @@ class RiseAndFall:
                 if (city.getX(), city.getY()) == (76, 25):
                     bHasIstanbul = False
                     IstanbulPlot = gc.getMap().plot(
-                        Consts.tCapitals[Consts.iByzantium][0],
-                        Consts.tCapitals[Consts.iByzantium][1],
+                        *CIV_CAPITAL_LOCATIONS[Civ.BYZANTIUM].to_tuple()
                     )
                     if IstanbulPlot.isCity():
                         if IstanbulPlot.getPlotCity().getOwner() == iPlayer:
@@ -1310,7 +1305,7 @@ class RiseAndFall:
             if (
                 not city.isWeLoveTheKingDay()
                 and not city.isCapital()
-                and tCity != Consts.tCapitals[iPlayer]
+                and tCity != CIV_CAPITAL_LOCATIONS[get_civ_by_id(iPlayer)].to_tuple()
             ):
                 if pPlayer.getNumCities() > 0:  # this check is needed, otherwise game crashes
                     capital = gc.getPlayer(iPlayer).getCapitalCity()
@@ -1574,7 +1569,8 @@ class RiseAndFall:
                                     if (
                                         not city.isWeLoveTheKingDay()
                                         and not city.isCapital()
-                                        and tPlot != Consts.tCapitals[iOwner]
+                                        and tPlot
+                                        != CIV_CAPITAL_LOCATIONS[get_civ_by_id(iOwner)].to_tuple()
                                     ):
                                         if (
                                             gc.getPlayer(iOwner).getNumCities() > 0
@@ -1598,7 +1594,12 @@ class RiseAndFall:
                                                 cityList.append(tPlot)
                                                 # print (iDeadCiv, plot.getPlotCity().getName(), plot.getPlotCity().getOwner(), "3", cityList)
                                 if not bSpecialRespawn and iOwnerStability < 10:
-                                    if tPlot == Consts.tCapitals[iDeadCiv]:
+                                    if (
+                                        tPlot
+                                        == CIV_CAPITAL_LOCATIONS[
+                                            get_civ_by_id(iDeadCiv)
+                                        ].to_tuple()
+                                    ):
                                         if tPlot not in cityList:
                                             cityList.append(tPlot)
                 if len(cityList) >= iMinNumCities:
@@ -2010,7 +2011,7 @@ class RiseAndFall:
             % (iCiv, iCurrentTurn, self.getSpawnDelay(iCiv), self.getFlipsDelay(iCiv))
         )
         if iCurrentTurn == iBirthYear - 1 + self.getSpawnDelay(iCiv) + self.getFlipsDelay(iCiv):
-            tCapital = Consts.tCapitals[iCiv]
+            tCapital = CIV_CAPITAL_LOCATIONS[get_civ_by_id(iCiv)].to_tuple()
             tTopLeft = Consts.tCoreAreasTL[iCiv]
             tBottomRight = Consts.tCoreAreasBR[iCiv]
             tBroaderTopLeft = Consts.tBroaderAreasTL[iCiv]
@@ -2119,7 +2120,7 @@ class RiseAndFall:
     def deleteMode(self, iCurrentPlayer):
         iCiv = self.getDeleteMode(0)
         print("deleteMode after", iCurrentPlayer)
-        tCapital = Consts.tCapitals[iCiv]
+        tCapital = CIV_CAPITAL_LOCATIONS[get_civ_by_id(iCiv)].to_tuple()
         if iCurrentPlayer == iCiv:
             for (x, y) in utils.surroundingPlots(tCapital, 2):
                 plot = gc.getMap().plot(x, y)
@@ -2501,7 +2502,10 @@ class RiseAndFall:
                                             )
                                         else:
                                             self.createAdditionalUnits(
-                                                iCiv, Consts.tCapitals[iCiv]
+                                                iCiv,
+                                                CIV_CAPITAL_LOCATIONS[
+                                                    get_civ_by_id(iCiv)
+                                                ].to_tuple(),
                                             )
 
                 if iCultureChange > 0:
@@ -3281,30 +3285,30 @@ class RiseAndFall:
         if (
             CIV_BIRTHDATE[get_civ_by_id(iHuman)] > xml.i1200AD
         ):  # so iSweden, iPrussia, iLithuania, iAustria, iTurkey, iMoscow, iDutch
-            tStart = Consts.tCapitals[iHuman]
+            tStart = CIV_CAPITAL_LOCATIONS[get_civ_by_id(iHuman)].to_tuple()
 
             # Absinthe: changes in the unit positions, in order to prohibit these contacts in 1200AD
-            if iHuman == Consts.iSweden:  # contact with Denmark
+            if iHuman == Civ.SWEDEN:  # contact with Denmark
                 tStart = (
-                    Consts.tCapitals[Consts.iSweden][0] - 2,
-                    Consts.tCapitals[Consts.iSweden][1] + 2,
+                    CIV_CAPITAL_LOCATIONS[Civ.SWEDEN].x - 2,
+                    CIV_CAPITAL_LOCATIONS[Civ.SWEDEN].y + 2,
                 )
-            elif iHuman == Consts.iPrussia:  # contact with Poland
+            elif iHuman == Civ.PRUSSIA:  # contact with Poland
                 tStart = (
-                    Consts.tCapitals[Consts.iPrussia][0] + 1,
-                    Consts.tCapitals[Consts.iPrussia][1] + 1,
+                    CIV_CAPITAL_LOCATIONS[Civ.PRUSSIA].x + 1,
+                    CIV_CAPITAL_LOCATIONS[Civ.PRUSSIA].y + 1,
                 )
-            elif iHuman == Consts.iLithuania:  # contact with Kiev
+            elif iHuman == Civ.LITHUANIA:  # contact with Kiev
                 tStart = (
-                    Consts.tCapitals[Consts.iLithuania][0] - 2,
-                    Consts.tCapitals[Consts.iLithuania][1],
+                    CIV_CAPITAL_LOCATIONS[Civ.LITHUANIA].x - 2,
+                    CIV_CAPITAL_LOCATIONS[Civ.LITHUANIA].y,
                 )
-            elif iHuman == Consts.iAustria:  # contact with Germany and Hungary
+            elif iHuman == Civ.AUSTRIA:  # contact with Germany and Hungary
                 tStart = (
-                    Consts.tCapitals[Consts.iAustria][0] - 3,
-                    Consts.tCapitals[Consts.iAustria][1] - 1,
+                    CIV_CAPITAL_LOCATIONS[Civ.AUSTRIA].x - 3,
+                    CIV_CAPITAL_LOCATIONS[Civ.AUSTRIA].y - 1,
                 )
-            elif iHuman == Consts.iTurkey:  # contact with Byzantium
+            elif iHuman == Civ.OTTOMAN:  # contact with Byzantium
                 tStart = (98, 18)
 
             utils.makeUnit(xml.iSettler, iHuman, tStart, 1)
@@ -3321,13 +3325,13 @@ class RiseAndFall:
     def create500ADstartingUnits(self):
         # 3Miro: units on start (note Spearman might become an upgraded defender, tech dependent)
 
-        utils.makeUnit(xml.iSettler, Consts.iFrankia, Consts.tCapitals[Consts.iFrankia], 3)
-        utils.makeUnit(xml.iArcher, Consts.iFrankia, Consts.tCapitals[Consts.iFrankia], 4)
-        utils.makeUnit(xml.iAxeman, Consts.iFrankia, Consts.tCapitals[Consts.iFrankia], 5)
-        utils.makeUnit(xml.iScout, Consts.iFrankia, Consts.tCapitals[Consts.iFrankia], 1)
-        utils.makeUnit(xml.iWorker, Consts.iFrankia, Consts.tCapitals[Consts.iFrankia], 2)
+        utils.makeUnit(xml.iSettler, Civ.FRANCE, CIV_CAPITAL_LOCATIONS[Civ.FRANCE].to_tuple(), 3)
+        utils.makeUnit(xml.iArcher, Civ.FRANCE, CIV_CAPITAL_LOCATIONS[Civ.FRANCE].to_tuple(), 4)
+        utils.makeUnit(xml.iAxeman, Civ.FRANCE, CIV_CAPITAL_LOCATIONS[Civ.FRANCE].to_tuple(), 5)
+        utils.makeUnit(xml.iScout, Civ.FRANCE, CIV_CAPITAL_LOCATIONS[Civ.FRANCE].to_tuple(), 1)
+        utils.makeUnit(xml.iWorker, Civ.FRANCE, CIV_CAPITAL_LOCATIONS[Civ.FRANCE].to_tuple(), 2)
         utils.makeUnit(
-            xml.iCatholicMissionary, Consts.iFrankia, Consts.tCapitals[Consts.iFrankia], 2
+            xml.iCatholicMissionary, Civ.FRANCE, CIV_CAPITAL_LOCATIONS[Civ.FRANCE].to_tuple(), 2
         )
 
         self.showArea(Consts.iByzantium)
@@ -3339,18 +3343,18 @@ class RiseAndFall:
         if (
             CIV_BIRTHDATE[get_civ_by_id(iHuman)] > xml.i500AD
         ):  # so everyone apart from Byzantium and France
-            tStart = Consts.tCapitals[iHuman]
+            tStart = CIV_CAPITAL_LOCATIONS[get_civ_by_id(iHuman)].to_tuple()
 
             # Absinthe: changes in the unit positions, in order to prohibit these contacts in 500AD
             if iHuman == Consts.iArabia:  # contact with Byzantium
                 tStart = (
-                    Consts.tCapitals[Consts.iArabia][0],
-                    Consts.tCapitals[Consts.iArabia][1] - 10,
+                    CIV_CAPITAL_LOCATIONS[Civ.ARABIA].x,
+                    CIV_CAPITAL_LOCATIONS[Civ.ARABIA].y - 10,
                 )
             elif iHuman == Consts.iBulgaria:  # contact with Byzantium
                 tStart = (
-                    Consts.tCapitals[Consts.iBulgaria][0],
-                    Consts.tCapitals[Consts.iBulgaria][1] + 1,
+                    CIV_CAPITAL_LOCATIONS[Civ.BULGARIA].x,
+                    CIV_CAPITAL_LOCATIONS[Civ.BULGARIA].y + 1,
                 )
             elif iHuman == Consts.iTurkey:  # contact with Byzantium
                 tStart = (97, 23)

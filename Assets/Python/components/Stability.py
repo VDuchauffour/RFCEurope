@@ -1,6 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Stability
 
 from CvPythonExtensions import *
+from LocationsData import CIV_CAPITAL_LOCATIONS
 import PyHelpers
 
 from CoreStructures import get_civ_by_id
@@ -361,8 +362,7 @@ class Stability:
 
         if (
             iOwner < Consts.iNumPlayers
-            and city.getX() == Consts.tCapitals[iOwner][0]
-            and city.getY() == Consts.tCapitals[iOwner][1]
+            and (city.getX(), city.getY()) == CIV_CAPITAL_LOCATIONS[get_civ_by_id(iOwner)].to_tuple()
         ):
             if iOwner == Consts.iScotland:  # Scotland UP part 2
                 pOwner.changeStabilityBase(Consts.iCathegoryExpansion, -5)

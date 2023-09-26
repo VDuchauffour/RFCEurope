@@ -1,7 +1,9 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
+from CoreTypes import Civ
 import CvUtil
+from LocationsData import CIV_CAPITAL_LOCATIONS
 import PyHelpers
 import Consts
 import XMLConsts as xml
@@ -2336,7 +2338,7 @@ class CvVictoryScreen:
         # UHV2
         sText2 += self.getProvinceString(vic.tByzantiumControlII)
         # UHV3
-        tConstantinople = Consts.tCapitals[iPlayer]
+        tConstantinople = CIV_CAPITAL_LOCATIONS[get_civ_by_id(iPlayer)].to_tuple()
         pConstantinople = gc.getMap().plot(tConstantinople[0], tConstantinople[1]).getPlotCity()
         sConstantinopleName = localText.getText("TXT_KEY_CITY_NAME_CONSTANTINOPLE", ())
         if self.checkCity(tConstantinople, iPlayer, sConstantinopleName) == -1:
@@ -2484,7 +2486,7 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        tCordoba = Consts.tCapitals[iPlayer]
+        tCordoba = CIV_CAPITAL_LOCATIONS[get_civ_by_id(iPlayer)].to_tuple()
         pCordoba = gc.getMap().plot(tCordoba[0], tCordoba[1]).getPlotCity()
         sCordobaName = localText.getText("TXT_KEY_CITY_NAME_CORDOBA", ())
         if self.checkCity(tCordoba, iPlayer, sCordobaName) == -1:
@@ -2525,7 +2527,7 @@ class CvVictoryScreen:
         # UHV1
         sText1 += self.getProvinceString(vic.tVenetianControl)
         # UHV2
-        tConstantinople = Consts.tCapitals[Consts.iByzantium]
+        tConstantinople = CIV_CAPITAL_LOCATIONS[Civ.BYZANTIUM].to_tuple()
         sText2 += self.checkCity(
             tConstantinople,
             iPlayer,
@@ -3205,7 +3207,7 @@ class CvVictoryScreen:
         )
         bColor = False
         iNumAccess = pPlayer.countCultBorderBonuses(xml.iAccess)
-        tConstantinople = Consts.tCapitals[Consts.iByzantium]
+        tConstantinople = CIV_CAPITAL_LOCATIONS[Civ.BYZANTIUM].to_tuple()
         iConstantinopleOwner = (
             gc.getMap().plot(tConstantinople[0], tConstantinople[1]).getPlotCity().getOwner()
         )
@@ -3250,7 +3252,7 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        tAmsterdam = Consts.tCapitals[iPlayer]
+        tAmsterdam = CIV_CAPITAL_LOCATIONS[get_civ_by_id(iPlayer)].to_tuple()
         pPlot = gc.getMap().plot(tAmsterdam[0], tAmsterdam[1])
         if (
             self.checkCity(

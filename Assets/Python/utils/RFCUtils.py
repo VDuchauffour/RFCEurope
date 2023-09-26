@@ -3,7 +3,8 @@
 from CvPythonExtensions import *
 from CoreTypes import Scenario
 import CvUtil
-import CvScreenEnums #Absinthe
+import CvScreenEnums
+from LocationsData import CIV_CAPITAL_LOCATIONS
 import RFCEMaps
 import PyHelpers
 import Popup #Absinthe
@@ -1031,7 +1032,7 @@ class RFCUtils:
 		#3MiroUP: Emperor
 		if gc.hasUP(iCiv,Consts.iUP_Emperor):
 			#print(" 3Miro: has the power: ",iCiv)
-			plot = gc.getMap().plot( Consts.tCapitals[iCiv][0], Consts.tCapitals[iCiv][1])
+			plot = gc.getMap().plot(*CIV_CAPITAL_LOCATIONS[get_civ_by_id(iCiv)].to_tuple())
 			if plot.isCity():
 				#print(" 3Miro: has the city: ",iCiv)
 				if plot.getOwner() == iCiv:
@@ -1043,7 +1044,7 @@ class RFCUtils:
 	def collapseImmuneCity( self, iCiv, x, y ):
 		#3MiroUP: Emperor
 		if gc.hasUP(iCiv, Consts.iUP_Emperor):
-			plot = gc.getMap().plot( Consts.tCapitals[iCiv][0], Consts.tCapitals[iCiv][1])
+			plot = gc.getMap().plot(*CIV_CAPITAL_LOCATIONS[get_civ_by_id(iCiv)].to_tuple())
 			if plot.isCity():
 				if plot.getOwner() == iCiv:
 					if (x >= Consts.tCoreAreasTL[iCiv][0]) and (x <= Consts.tCoreAreasBR[iCiv][0]) and (y >= Consts.tCoreAreasTL[iCiv][1]) and (y <= Consts.tCoreAreasBR[iCiv][1]):

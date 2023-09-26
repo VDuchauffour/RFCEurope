@@ -33,38 +33,6 @@ teamAragon, teamSweden, teamPrussia, teamLithuania, teamAustria, teamTurkey, tea
 iIndepStart = iIndependent # creates the block of independent civs
 iIndepEnd = iIndependent4
 
-# starting locations coordinates
-tCapitals = (
-(81, 24), #Constantinople, Byzantium
-(44, 46), #Paris, France
-(97, 10), #Damascus, Arabia
-(78, 29), #Preslav, Bulgaria
-(30, 23), #Cordoba, Cordoba
-(56, 35), #Venice, Venezia
-(47, 41), #Dijon, Burgundy
-(53, 46), #Frankfurt, Germany
-(80, 62), #Novgorod, Novgorod
-(57, 65), #Tonsberg, Norway
-(83, 45), #Kiev, Kiev
-(66, 37), #Buda, Hungary
-(27, 32), #Leon, Spain
-(59, 57), #Roskilde, Denmark
-(37, 63), #Edinburgh, Scotland
-(65, 49), #Poznan, Poland
-(50, 34), #Genoa, Genoa
-(24, 7 ), #Marrakesh, Morocco
-(41, 52), #London, England
-(21, 25), #Lisboa, Portugal
-(36, 29), #Zaragoza, Aragon
-(66, 64), #Stockholm, Sweden
-(69, 53), #Königsberg, Prussia
-(75, 53), #Vilnius, Lithuania
-(62, 40), #Wien, Austria
-(78, 22), #Gallipoli, Ottomans		was Bursa originally (81, 22), but it's too close to Constantinople
-(91, 56), #Moscow, Moscow
-(49, 52), #Amsterdam, Dutch
-(56, 27)  #Rome, Pope
-)
 
 tStartingWorkers = (
 0, #Byzantium
