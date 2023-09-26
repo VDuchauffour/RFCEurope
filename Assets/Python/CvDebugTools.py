@@ -231,7 +231,7 @@ class CvDebugTools:
 
         try:
             goldChange = int(popupReturn.getEditBoxString(0))
-        except:
+        except:  # noqa: E722
             return 0
 
         if goldChange:
