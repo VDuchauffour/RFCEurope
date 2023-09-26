@@ -36,7 +36,7 @@ jobs:
       - name: Install Python 2.4
         uses: gabrielfalcao/pyenv-action@v11
         with:
-          default: "2.4"
+          default: "2.4.6"
           command: pip install -U pip
       - name: Run tests
         run: |
