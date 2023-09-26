@@ -18,13 +18,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install Python 2.4
-        run: |
-          curl -LO https://www.python.org/ftp/python/2.4/Python-2.4.tar.bz2
-          bzcat Python-2.4.tar.bz2 | tar -xf -
-          cd Python-2.4
-          ./configure
-          make
-          make install
+        uses: gabrielfalcao/pyenv-action@v11
+        with:
+          default: "2.4"
+          command: pip install -U pip
       - name: Run tests
         run: |
           make test
