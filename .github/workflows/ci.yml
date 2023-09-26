@@ -21,10 +21,12 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: "3.9"
-      - name: Run tests
+      - name: Install dependencies
         run: |
           pip install -U pip
           pip install black==21.12b0 click==8.0 ruff
+      - name: Run linting
+        run: |
           make lint
 
   tests:
@@ -37,7 +39,8 @@ jobs:
         uses: gabrielfalcao/pyenv-action@v11
         with:
           default: "2.4.6"
-          command: pip install -U pip
+          command: |
+            pyenv version
       - name: Run tests
         run: |
           make test
