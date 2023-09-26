@@ -226,11 +226,11 @@ class CvRFCEventHandler:
         # Absinthe: rename cities on the 1200AD scenario - the WB file cannot handle special chars and long names properly
         # 			some of the cities intentionally have different names though (compared to the CNM), for example some Kievan cities
         # 			thus it's only set for Hungary for now, we can add more civs/cities later on if there are naming issues
-        if utils.getScenario() == Scenario.i1200AD.value:  # type: ignore
+        if utils.getScenario() == Scenario.i1200AD:
             for city in utils.getCityList(Consts.iHungary):
                 self.cnm.renameCities(city, Consts.iHungary)
         # Absinthe: for all civs:
-        # if utils.getScenario() == Scenario.i1200AD.value:  # type: ignore
+        # if utils.getScenario() == Scenario.i1200AD:
         # 	for iPlayer in range(Consts.iNumPlayers - 1):
         # 		for city in utils.getCityList(iPlayer):
         # 			self.cnm.renameCities(city, iPlayer)
@@ -383,7 +383,7 @@ class CvRFCEventHandler:
             self.res.removeResource(80, 24)
 
         # Remove horse resource near Hadrianople in 1200 AD scenario if someone captures Hadrianople or Constantinople
-        if utils.getScenario() == Scenario.i1200AD.value:  # type: ignore
+        if utils.getScenario() == Scenario.i1200AD:
             if tCity == (76, 25) or tCity == (81, 24):
                 self.res.removeResource(77, 24)
 

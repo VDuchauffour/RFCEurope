@@ -1486,8 +1486,8 @@ class RFCUtils:
 
 	def getScenario(self):
 		if gc.getPlayer(Consts.iBurgundy).isPlayable():
-			return Scenario.i500AD.value  # type: ignore
-		return Scenario.i1200AD.value  # type: ignore
+			return Scenario.i500AD
+		return Scenario.i1200AD
 
 	def getScenarioStartYear(self):
 		lStartYears = [500, 1200]

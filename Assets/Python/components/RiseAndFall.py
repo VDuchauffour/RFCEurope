@@ -548,7 +548,7 @@ class RiseAndFall:
         self.setupRespawnTurns()
 
         iHuman = utils.getHumanID()
-        if utils.getScenario() == Scenario.i500AD.value:  # type: ignore
+        if utils.getScenario() == Scenario.i500AD:
             self.create500ADstartingUnits()
         else:
             self.create1200ADstartingUnits()

@@ -3175,7 +3175,7 @@ class CvInfoScreen:
                 # Absinthe: top5 city foundation text
                 if tActivePlayer.isHasTech(xml.iCalendar):
                     if iTurnYear <= utils.getScenarioStartYear():
-                        if utils.getScenario() == Scenario.i500AD.value:  # type: ignore
+                        if utils.getScenario() == Scenario.i500AD:
                             szTurnFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_500AD", ())
                         else:
                             szTurnFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_1200AD", ())

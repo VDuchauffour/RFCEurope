@@ -55,7 +55,7 @@ class Companies:
     def setup(self):
 
         # update companies at the beginning of the 1200AD scenario:
-        if utils.getScenario() == Scenario.i1200AD.value:  # type: ignore
+        if utils.getScenario() == Scenario.i1200AD:
             iGameTurn = xml.i1200AD
             for iCompany in range(xml.iNumCompanies):
                 if iGameTurn > tCompaniesBirth[iCompany] and iGameTurn < tCompaniesDeath[iCompany]:

@@ -187,11 +187,13 @@ class CvDawnOfMan:
         pActivePlayer = gc.getPlayer(CyGame().getActivePlayer())
 
         # Absinthe: civ-specific Dawn of Man screen - idea from SoI
-        year = CIV_DAWN_OF_MAN_VALUES[get_civ_by_id(CyGame().getActiveTeam())][0] + CyTranslator().getText(
+        year = CIV_DAWN_OF_MAN_VALUES[get_civ_by_id(CyGame().getActiveTeam())][
+            0
+        ] + CyTranslator().getText(
             CIV_DAWN_OF_MAN_VALUES[get_civ_by_id(CyGame().getActiveTeam())][1], ()
         )
         if CIV_BIRTHDATE[get_civ_by_id(CyGame().getActiveTeam())] < utils.getScenarioStartTurn():
-            if utils.getScenario() == Scenario.i1200AD.value:  # type: ignore
+            if utils.getScenario() == Scenario.i1200AD:
                 textKey = "TXT_KEY_DAWN_OF_MAN_TEXT_%d_1200" % (CyGame().getActiveTeam())
         else:
             textKey = "TXT_KEY_DAWN_OF_MAN_TEXT_%d" % (CyGame().getActiveTeam())

@@ -371,7 +371,7 @@ class CvReligionScreen:
                 # Absinthe: foundation text, based on the knowledge of Calendar, whether the foundation was before or after the Scenario start date, and the corresponding era
                 if tPlayer.isHasTech(xml.iCalendar):
                     if year <= utils.getScenarioStartYear():
-                        if utils.getScenario() == Scenario.i500AD.value:  # type: ignore
+                        if utils.getScenario() == Scenario.i500AD:
                             szFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_500AD", ())
                         else:
                             szFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_1200AD", ())

@@ -135,7 +135,7 @@ class Stability:
                     )
 
         # Absinthe: update Byzantine stability on the start of the game
-        if utils.getScenario() == Scenario.i500AD.value:  # type: ignore
+        if utils.getScenario() == Scenario.i500AD:
             # small stability boost for the human player for the first UHV
             if Consts.iByzantium == utils.getHumanID():
                 pByzantium = gc.getPlayer(Consts.iByzantium)
@@ -362,7 +362,8 @@ class Stability:
 
         if (
             iOwner < Consts.iNumPlayers
-            and (city.getX(), city.getY()) == CIV_CAPITAL_LOCATIONS[get_civ_by_id(iOwner)].to_tuple()
+            and (city.getX(), city.getY())
+            == CIV_CAPITAL_LOCATIONS[get_civ_by_id(iOwner)].to_tuple()
         ):
             if iOwner == Consts.iScotland:  # Scotland UP part 2
                 pOwner.changeStabilityBase(Consts.iCathegoryExpansion, -5)
