@@ -2,9 +2,26 @@
 
 set -e
 
+LOCAL_ONLY=false
+
+usage() {
+	echo "Usage: $0 [-l]" 1>&2
+	exit 1
+}
+while getopts ':l' OPTION; do
+	case "$OPTION" in
+	l)
+		LOCAL_ONLY=true
+		;;
+	*)
+		usage
+		;;
+	esac
+done
+
 SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
 
-PATHS=(
+LOCAL_PATHS=(
 	"$(readlink -f "$SCRIPT_DIR"/Assets/Python)"
 	"$(readlink -f "$SCRIPT_DIR"/Assets/Python/data)"
 	"$(readlink -f "$SCRIPT_DIR"/Assets/Python/utils)"
@@ -12,6 +29,8 @@ PATHS=(
 	"$(readlink -f "$SCRIPT_DIR"/Assets/Python/EntryPoints)"
 	"$(readlink -f "$SCRIPT_DIR"/Assets/Python/pyWB)"
 	"$(readlink -f "$SCRIPT_DIR"/Assets/Python/screens)"
+)
+EXTERNAL_PATHS=(
 	"$(readlink -f "$SCRIPT_DIR"/../../Assets/Python)"
 	"$(readlink -f "$SCRIPT_DIR"/../../Assets/Python/EntryPoints)"
 	"$(readlink -f "$SCRIPT_DIR"/../../Assets/Python/pyWB)"
@@ -19,11 +38,24 @@ PATHS=(
 	"$(readlink -f "$SCRIPT_DIR"/../../Assets/Python/pyUnit)"
 	"$(readlink -f "$SCRIPT_DIR"/../../Assets/Python/pyHelper)"
 	"$(readlink -f "$SCRIPT_DIR"/../../Assets/Python/PitBoss)"
+)
+CURRENT_PYTHONPATHS=(
 	"$PYTHONPATH"
 )
 
-for path in "${PATHS[@]}"; do
-	PYTHONPATH="$PYTHONPATH:$path"
-done
+fill_paths() {
+	PATHS=("$@")
+	for path in "${PATHS[@]}"; do
+		_PYTHONPATH="$_PYTHONPATH:$path"
+	done
+}
 
-echo "$PYTHONPATH"
+fill_paths "${LOCAL_PATHS[@]}"
+
+if [[ $LOCAL_ONLY == false ]]; then
+	fill_paths "${EXTERNAL_PATHS[@]}"
+fi
+
+fill_paths "${CURRENT_PYTHONPATHS[@]}"
+
+echo "$_PYTHONPATH"
