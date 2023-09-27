@@ -5,7 +5,8 @@ from CoreStructures import CivDataMapper
 from CoreTypes import Civ, Company
 
 # TODO switch to years with convert from trun
-# TODO fix company dates
+# TODO fix company birth dates
+# TODO change  behavior in order to replace default values like 999 with None
 
 # Timeline of the mod, all important years to be references by year as opposed to hard-to-follow turn numbers
 # Important event Spawn UHV
@@ -286,7 +287,7 @@ CIV_COLLAPSE_DATE = CivDataMapper(
         Civ.ARAGON: DateTurn.i1474AD,
         Civ.LITHUANIA: DateTurn.i1569AD,
     }
-).fill_missing_members(None)
+).fill_missing_members(999)
 
 CIV_RESPAWNING_DATE = CivDataMapper(
     {
@@ -310,7 +311,7 @@ CIV_RESPAWNING_DATE = CivDataMapper(
         Civ.AUSTRIA: DateTurn.i1526AD,
         Civ.OTTOMAN: DateTurn.i1482AD,
     }
-).fill_missing_members(None)
+).fill_missing_members(999)
 
 COMPANY_BIRTHDATE = EnumDataMapper(
     {
@@ -334,4 +335,4 @@ COMPANY_DEATHDATE = EnumDataMapper(
         Company.ST_GEORGE: DateTurn.i1800AD,
         Company.CALATRAVA: DateTurn.i1800AD,
     }
-).fill_missing_members(None)
+).fill_missing_members(999)
