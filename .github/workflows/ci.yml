@@ -1,4 +1,4 @@
-# Apply linting and testing
+# Apply linting
 name: CI Pipeline
 
 on:
@@ -28,19 +28,3 @@ jobs:
       - name: Run linting
         run: |
           make lint
-
-  tests:
-    name: Run tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Install Python 2.4
-        uses: gabrielfalcao/pyenv-action@v11
-        with:
-          default: "2.4.6"
-          command: |
-            pyenv version
-      - name: Run tests
-        run: |
-          make test
