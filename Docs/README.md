@@ -6,6 +6,14 @@ This folder contains the following elements:
 - python scripts can be found in the folder `Tools`
 - maps are located in the folder `Maps`
 
+## Spawning maps
+
+The colors on the spawning maps show the following stability areas:
+
+- dark green: core area
+- light green: historically stable area
+- yellow: potentially stable area
+
 ## How to generate maps
 
 The Python scripts `./Tools/WB2BMP.py` parse a `WBSave` and generate differents maps.
