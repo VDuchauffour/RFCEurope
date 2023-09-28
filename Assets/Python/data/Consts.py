@@ -33,39 +33,6 @@ teamAragon, teamSweden, teamPrussia, teamLithuania, teamAustria, teamTurkey, tea
 iIndepStart = iIndependent # creates the block of independent civs
 iIndepEnd = iIndependent4
 
-
-tStartingWorkers = (
-0, #Byzantium
-0, #France
-1, #Arabia
-1, #Bulgaria
-2, #Cordoba
-2, #Venice
-2, #Burgundy
-3, #Germany
-2, #Novgorod
-2, #Norway
-3, #Kiev
-3, #Hungary
-3, #Spain
-3, #Denmark
-3, #Scotland
-3, #Poland
-3, #Genoa
-3, #Morocco
-3, #England
-3, #Portugal
-3, #Aragon
-3, #Sweden
-3, #Prussia
-3, #Lithuania
-4, #Austria
-4, #Turkey
-4, #Moscow
-4, #Dutch
-0  #Papal
-)
-
 tStartingGold = ((
 # 500 AD
 1200, #Byzantium

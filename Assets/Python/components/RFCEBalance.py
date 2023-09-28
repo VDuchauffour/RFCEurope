@@ -1,9 +1,10 @@
 from CvPythonExtensions import *
 import Consts
-from CoreTypes import Civ
+from CoreTypes import Civ, StartingSituation
 import XMLConsts as xml
 import RFCEMaps
 import RFCUtils
+from CivilizationsData import CIV_STARTING_SITUATION
 from MiscData import WORLD_WIDTH, WORLD_HEIGHT
 from LocationsData import CIV_CAPITAL_LOCATIONS
 from TimelineData import CIV_BIRTHDATE
@@ -1151,5 +1152,9 @@ class RFCEBalance:
         gc.setMercPromotion(xml.iPromotionMerc)
 
         for iCiv in range(Consts.iNumPlayers):
-            # print( "  sw: ",iCiv )
-            gc.setStartingWorkers(iCiv, Consts.tStartingWorkers[iCiv])
+            gc.setStartingWorkers(
+                iCiv,
+                CIV_STARTING_SITUATION[utils.getScenario()][get_civ_by_id(iCiv)][
+                    StartingSituation.WORKERS
+                ],
+            )

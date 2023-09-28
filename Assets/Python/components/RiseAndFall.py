@@ -1,8 +1,4 @@
 from CvPythonExtensions import *
-from CivilizationsData import CIVILIZATIONS
-from CoreStructures import get_civ_by_id
-from LocationsData import CIV_CAPITAL_LOCATIONS, CIV_OLDER_NEIGHBOURS
-from TimelineData import CIV_BIRTHDATE
 import PyHelpers  # LOQ
 import Popup
 import RFCUtils
@@ -15,8 +11,11 @@ from StoredData import sd
 import Crusades
 
 from MiscData import MessageData
-from CoreTypes import Civ, Scenario
-
+from CoreTypes import Civ, Scenario, StartingSituation
+from CivilizationsData import CIV_STARTING_SITUATION, CIVILIZATIONS
+from CoreStructures import get_civ_by_id
+from LocationsData import CIV_CAPITAL_LOCATIONS, CIV_OLDER_NEIGHBOURS
+from TimelineData import CIV_BIRTHDATE
 
 gc = CyGlobalContext()  # LOQ
 PyPlayer = PyHelpers.PyPlayer  # LOQ
@@ -3275,7 +3274,14 @@ class RiseAndFall:
         # 3Miro: get the workers
         # Sedna17: Cleaned the code
         print("Making starting workers")
-        utils.makeUnit(xml.iWorker, iCiv, tPlot, Consts.tStartingWorkers[iCiv])
+        utils.makeUnit(
+            xml.iWorker,
+            iCiv,
+            tPlot,
+            CIV_STARTING_SITUATION[utils.getScenario()][get_civ_by_id(iCiv)][
+                StartingSituation.WORKERS
+            ],
+        )
         # Absinthe: second Ottoman spawn stack may stay, although they now spawn in Gallipoli in the first place (one plot SE)
         if iCiv == Consts.iTurkey:
             self.ottomanInvasion(iCiv, (77, 23))
