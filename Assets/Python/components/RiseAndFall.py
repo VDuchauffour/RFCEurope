@@ -12,7 +12,7 @@ import Crusades
 
 from MiscData import MessageData
 from CoreTypes import Civ, Scenario, StartingSituation
-from CivilizationsData import CIV_INITIAL_CONTACTS, CIV_STARTING_SITUATION, CIVILIZATIONS
+from CivilizationsData import CIV_AI_STOP_BIRTH_THRESHOLD, CIV_INITIAL_CONTACTS, CIV_STARTING_SITUATION, CIVILIZATIONS
 from CoreStructures import get_civ_by_id
 from LocationsData import CIV_CAPITAL_LOCATIONS, CIV_NEW_CAPITAL_LOCATIONS, CIV_OLDER_NEIGHBOURS
 from TimelineData import CIV_BIRTHDATE
@@ -1813,7 +1813,7 @@ class RiseAndFall:
                 ):  # declare war or peace only once - the 3rd condition is obvious but "vassal of themselves" was happening
                     rndNum = gc.getGame().getSorenRandNum(100, "odds")
                     if (
-                        rndNum >= Consts.tAIStopBirthThreshold[iOwner]
+                        rndNum >= CIV_AI_STOP_BIRTH_THRESHOLD[get_civ_by_id(iOwner)]
                         and not bOwnerHumanVassal
                         and not bAlreadyVassal
                     ):  # if bOwnerHumanVassal is True, it will skip to the 3rd condition, as bOwnerVassal is True as well
@@ -1822,7 +1822,7 @@ class RiseAndFall:
                         bAtWar = True
                     # Absinthe: do we really want to auto-vassal them on respawn? why?
                     # 			set it to 0 from 60 temporarily (so it's never True), as a quick fix until the mechanics are revised
-                    elif rndNum <= 0 - (Consts.tAIStopBirthThreshold[iOwner] / 2):
+                    elif rndNum <= 0 - (CIV_AI_STOP_BIRTH_THRESHOLD[get_civ_by_id(iOwner)] / 2):
                         if teamOwner.isAtWar(iDeadCiv):
                             teamOwner.makePeace(iDeadCiv)
                         if (
@@ -2472,7 +2472,7 @@ class RiseAndFall:
                             if (
                                 iOwner > -1
                                 and iOwner < Consts.iNumMajorPlayers
-                                and rndNum >= Consts.tAIStopBirthThreshold[iOwner]
+                                and rndNum >= CIV_AI_STOP_BIRTH_THRESHOLD[get_civ_by_id(iOwner)]
                             ):
                                 print(
                                     iOwner,
@@ -2481,7 +2481,7 @@ class RiseAndFall:
                                     "rndNum:",
                                     rndNum,
                                     "threshold:",
-                                    Consts.tAIStopBirthThreshold[iOwner],
+                                    CIV_AI_STOP_BIRTH_THRESHOLD[get_civ_by_id(iOwner)],
                                 )
                                 pOwner = gc.getPlayer(iOwner)
                                 if not gc.getTeam(pOwner.getTeam()).isAtWar(iCiv):
