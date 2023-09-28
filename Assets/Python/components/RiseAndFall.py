@@ -12,7 +12,7 @@ import Crusades
 
 from MiscData import MessageData
 from CoreTypes import Civ, Scenario, StartingSituation
-from CivilizationsData import CIV_STARTING_SITUATION, CIVILIZATIONS
+from CivilizationsData import CIV_INITIAL_CONTACTS, CIV_STARTING_SITUATION, CIVILIZATIONS
 from CoreStructures import get_civ_by_id
 from LocationsData import CIV_CAPITAL_LOCATIONS, CIV_NEW_CAPITAL_LOCATIONS, CIV_OLDER_NEIGHBOURS
 from TimelineData import CIV_BIRTHDATE
@@ -3756,8 +3756,8 @@ class RiseAndFall:
     def initContact(self, iCiv, bMeet=True):
         pCiv = gc.getPlayer(iCiv)
         teamCiv = gc.getTeam(pCiv.getTeam())
-        for iOtherPlayer in Consts.lInitialContacts[utils.getScenario()][iCiv]:
-            pOtherPlayer = gc.getPlayer(iOtherPlayer)
+        for contact in CIV_INITIAL_CONTACTS[utils.getScenario()][get_civ_by_id(iCiv)]:
+            pOtherPlayer = gc.getPlayer(contact)
             tOtherPlayer = pOtherPlayer.getTeam()
             if pOtherPlayer.isAlive() and not teamCiv.isHasMet(tOtherPlayer):
                 teamCiv.meet(tOtherPlayer, bMeet)
