@@ -21,7 +21,7 @@ from CivilizationsData import (
 )
 from CoreStructures import get_civ_by_id
 from LocationsData import CIV_CAPITAL_LOCATIONS, CIV_NEW_CAPITAL_LOCATIONS, CIV_OLDER_NEIGHBOURS
-from TimelineData import CIV_BIRTHDATE
+from TimelineData import CIV_BIRTHDATE, CIV_RESPAWNING_DATE
 
 gc = CyGlobalContext()  # LOQ
 PyPlayer = PyHelpers.PyPlayer  # LOQ
@@ -684,7 +684,7 @@ class RiseAndFall:
         for iCiv in range(Consts.iNumMajorPlayers):
             self.setSpecialRespawnTurn(
                 iCiv,
-                Consts.tRespawnTime[iCiv]
+                CIV_RESPAWNING_DATE[get_civ_by_id(iCiv)]
                 + (gc.getGame().getSorenRandNum(21, "BirthTurnModifier") - 10)
                 + (gc.getGame().getSorenRandNum(21, "BirthTurnModifier2") - 10),
             )  # bell-curve-like spawns within +/- 10 turns of desired turn (3Miro: Uniform, not a bell-curve)

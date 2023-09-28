@@ -426,41 +426,6 @@ tWarAtSpawn = ((
 ( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Dut
 ))
 
-#Sedna17 Respawn: These dates are the most likely times for each civ to have its special opportunity to respawn
-#Absinthe: These are saved in the StoredData, but the values are not used. RiseAndFall.py / getSpecialRespawn is used instead.
-tRespawnTime = (
-999, #Byzantium -- no special respawn
-350, #Frankia 1600 -- France united to modern borders + start of Bourbon royal line
-190, #Arabia 1170 -- Ayyubid dynasty from Egypt to cause problems for Crusaders
-195, #Bulgaria 1185 -- Second Bulgarian empire
-215, #Cordoba 1229 (give or take, it is semi-random anyway) 3Miro: we use Cordoba player to respawn as Hafsid in Tunisia
-999, #Venezia -- no special respawn
-245, #Burgundy 1335 -- so they can participate in 100 years war and act as Valois Duchy of Burgundy
-999, #Germany -- no special respawn
-999, #Novgorod -- no special respawn
-999, #Norway -- no special respawn
-374, #Kiev 1648 -- Khmelnytsky Uprising
-393, #Hungary 1686 -- reconquest of Buda from the Ottomans
-290, #Spain 1467 -- Union of Castile/Aragon and ready for colonies
-253, #Denmark 1360 -- Valdemar Atterdag reunites Denmark
-232, #Scotland 1296 -- First war of independence
-270, #Poland 1410 -- battle of Grunwald
-999, #Genoa -- no special respawn
-365, #Morocco -- Alaouite dynasty
-380, #England 1660 -- Restoration of Monarchy (also leading up to Scottish Union)
-267, #Portugal 1400 -- Make sure Portugal is around for colonies
-301, #Aragon 1504 -- Kingdom of Sicily
-311, #Sweden 1523 -- Gustav Vasa
-359, #Prussia 1618 -- Brandenburg-Prussia
-999, #Lithuania -- no special respawn
-313, #Austria 1526 -- Battle of Mohacs, start of Habsburg influence in NW Hungary
-294, #Turkey 1482 -- End of Mehmed II conquest.
-999, #Moscow -- no special respawn
-999, #Dutch -- no special respawn
-999  #Pope -- no special respawn
-)
-
-
 #Congresses. # 3Miro: there is no congress, maybe I should remove this
 tPatienceThreshold = (
 30, #Byzantium
