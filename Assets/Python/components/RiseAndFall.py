@@ -557,7 +557,7 @@ class RiseAndFall:
                     iCiv
                 )  # Temporarily all civs get the same starting techs as Aragon
                 self.initContact(iCiv, False)
-            rel.set1200Faith()
+            rel.setStartingFaith()
             self.setDiplo1200AD()
             self.LeaningTowerGP()
             rel.spread1200ADJews()  # Spread Jews to some random cities

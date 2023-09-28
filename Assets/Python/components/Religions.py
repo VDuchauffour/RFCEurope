@@ -1580,9 +1580,11 @@ class Religions:
         if tCity:
             self.spreadReligion(tCity, xml.iJudaism)
 
-    def set1200Faith(self):
+    def setStartingFaith(self):
         for civ in CIVILIZATIONS:
-            civ.get_player().setFaith(CIV_STARTING_SITUATION[utils.getScenario()][StartingSituation.FAITH])
+            civ.get_player().setFaith(
+                CIV_STARTING_SITUATION[utils.getScenario()][StartingSituation.FAITH]
+            )
 
     def getCatholicCivs(self, bOpenBorders=False):
         teamPope = gc.getTeam(gc.getPlayer(Consts.iPope).getTeam())
