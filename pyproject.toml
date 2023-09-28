@@ -40,6 +40,8 @@ executionEnvironments = [
     "../../Assets/Python/pyUnit",
     "../../Assets/Python/pyHelper",
     "../../Assets/Python/PitBoss",
+    # Folders from Sid Meier's Civilization IV Beyond the Sword/Assets/Python
+    "../../../Assets/Python/pyHelper",
   ] },
 ]
 stubPath = "Assets/Python/.stubs"
