@@ -426,39 +426,6 @@ tWarAtSpawn = ((
 ( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Dut
 ))
 
-#Congresses. # 3Miro: there is no congress, maybe I should remove this
-tPatienceThreshold = (
-30, #Byzantium
-30, #Frankia
-30, #Arabia
-30, #Bulgaria
-30, #Cordoba
-30, #Venezia
-30, #Burgundy
-30, #Germany
-30, #Novgorod
-30, #Norway
-30, #Kiev
-30, #Hungary
-30, #Spain
-30, #Denmark
-30, #Scotland
-30, #Poland
-30, #Genoa
-30, #Morocco
-30, #England
-30, #Portugal
-30, #Aragon
-30, #Sweden
-30, #Prussia
-30, #Lithuania
-30, #Austria
-30, #Turkey
-30, #Moscow
-30  #Dutch
-)
-
-
 # religion spread modifiers:
 tReligionSpreadFactor = ( # PROT, ISL, CATH, ORTH, JUD
 (100,  50,  70, 150,  10), #Byzantium
