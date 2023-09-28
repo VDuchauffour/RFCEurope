@@ -1,6 +1,8 @@
 # Rhye's and Fall of Civilization: Europe - Religions management
 
 from CvPythonExtensions import *
+from CivilizationsData import CIV_STARTING_SITUATION, CIVILIZATIONS
+from CoreTypes import StartingSituation
 import PyHelpers
 import Popup
 import Consts
@@ -1579,9 +1581,8 @@ class Religions:
             self.spreadReligion(tCity, xml.iJudaism)
 
     def set1200Faith(self):
-        for iPlayer in range(Consts.iNumPlayers):
-            pPlayer = gc.getPlayer(iPlayer)
-            pPlayer.setFaith(Consts.t1200ADFaith[iPlayer])
+        for civ in CIVILIZATIONS:
+            civ.get_player().setFaith(CIV_STARTING_SITUATION[utils.getScenario()][StartingSituation.FAITH])
 
     def getCatholicCivs(self, bOpenBorders=False):
         teamPope = gc.getTeam(gc.getPlayer(Consts.iPope).getTeam())

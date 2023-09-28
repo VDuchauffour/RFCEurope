@@ -33,38 +33,6 @@ teamAragon, teamSweden, teamPrussia, teamLithuania, teamAustria, teamTurkey, tea
 iIndepStart = iIndependent # creates the block of independent civs
 iIndepEnd = iIndependent4
 
-t1200ADFaith = (
-40, #Byzantium
-30, #France
-50, #Arabia
-50, #Bulgaria
-0, #Cordoba
-25, #Venice
-0, #Burgundy
-30, #Germany
-25, #Novgorod
-0, #Norway
-20, #Kiev
-25, #Hungary
-35, #Spain
-20, #Denmark
-20, #Scotland
-30, #Poland
-25, #Genoa
-35, #Morocco
-20, #England
-20, #Portugal
-10, #Aragon
-0, #Sweden
-0, #Prussia
-0, #Lithuania
-0, #Austria
-0, #Turkey
-0, #Moscow
-0, #Dutch
-0  #Papal
-)
-
 #for minor civs
 tReserveCapitals = (
 (),
