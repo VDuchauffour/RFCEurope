@@ -12,7 +12,13 @@ import Crusades
 
 from MiscData import MessageData
 from CoreTypes import Civ, Scenario, StartingSituation
-from CivilizationsData import CIV_AI_STOP_BIRTH_THRESHOLD, CIV_INITIAL_CONTACTS, CIV_STARTING_SITUATION, CIVILIZATIONS
+from CivilizationsData import (
+    CIV_AI_STOP_BIRTH_THRESHOLD,
+    CIV_INITIAL_CONTACTS,
+    CIV_RESPAWNING_THRESHOLD,
+    CIV_STARTING_SITUATION,
+    CIVILIZATIONS,
+)
 from CoreStructures import get_civ_by_id
 from LocationsData import CIV_CAPITAL_LOCATIONS, CIV_NEW_CAPITAL_LOCATIONS, CIV_OLDER_NEIGHBOURS
 from TimelineData import CIV_BIRTHDATE
@@ -1606,8 +1612,8 @@ class RiseAndFall:
                 if len(cityList) >= iMinNumCities:
                     if bSpecialRespawn or (
                         gc.getGame().getSorenRandNum(100, "roll")
-                        < Consts.tResurrectionProb[iDeadCiv]
-                    ):  # If special, always happens
+                        < CIV_RESPAWNING_THRESHOLD[get_civ_by_id(iDeadCiv)]
+                    ):
                         self.setRebelCities(cityList)
                         self.setRebelCiv(iDeadCiv)  # for popup and CollapseCapitals()
                         return iDeadCiv

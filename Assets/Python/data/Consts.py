@@ -426,39 +426,6 @@ tWarAtSpawn = ((
 ( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Dut
 ))
 
-#RiseAndFall. This is one place to tune frequency of resurrections.
-tResurrectionProb = (
-30, #Byzantium
-80, #Frankia
-60, #Arabia
-30, #Bulgaria
-20, #Cordoba
-40, #Venezia
-20, #Burgundy
-70, #Germany
-20, #Novgorod
-50, #Norway
-30, #Kiev
-60, #Hungary
-80, #Spain
-70, #Denmark
-40, #Scotland
-60, #Poland
-30, #Genoa
-60, #Morocco
-70, #England
-60, #Portugal
-20, #Aragon
-70, #Sweden
-50, #Prussia
-50, #Lithuania
-70, #Austria
-70, #Turkey
-80, #Moscow
-60, #Dutch
-90  #Pope
-)
-
 #Sedna17 Respawn: These dates are the most likely times for each civ to have its special opportunity to respawn
 #Absinthe: These are saved in the StoredData, but the values are not used. RiseAndFall.py / getSpecialRespawn is used instead.
 tRespawnTime = (
