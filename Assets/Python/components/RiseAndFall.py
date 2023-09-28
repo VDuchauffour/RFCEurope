@@ -567,11 +567,13 @@ class RiseAndFall:
             )  # Temporarily all civs get the same starting techs as Aragon
             cru.do1200ADCrusades()
 
-        self.assignGold(utils.getScenario())
+        self.assignGold()
 
-    def assignGold(self, iScenario):
-        for iPlayer in range(Consts.iNumPlayers):
-            gc.getPlayer(iPlayer).changeGold(Consts.tStartingGold[iScenario][iPlayer])
+    def assignGold(self):
+        for civ in CIVILIZATIONS:
+            gc.getPlayer(civ.id).changeGold(
+                CIV_STARTING_SITUATION[utils.getScenario()][get_civ_by_id(civ.id)]
+            )
 
     def onCityBuilt(self, iPlayer, pCity):
         tCity = (pCity.getX(), pCity.getY())

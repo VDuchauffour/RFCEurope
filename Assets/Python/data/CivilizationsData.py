@@ -1474,7 +1474,6 @@ CIV_LEADERS = CivDataMapper(
     }
 ).fill_missing_members(None)
 
-
 CIV_PROPERTIES = (
     CivDataMapper(
         {
