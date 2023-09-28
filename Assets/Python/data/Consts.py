@@ -33,43 +33,6 @@ teamAragon, teamSweden, teamPrussia, teamLithuania, teamAustria, teamTurkey, tea
 iIndepStart = iIndependent # creates the block of independent civs
 iIndepEnd = iIndependent4
 
-#for minor civs
-tReserveCapitals = (
-(),
-(),
-(),
-(),
-(),
-(),
-(),
-(),
-(),
-(),
-(),
-(),
-(),
-(),
-(),
-(),
-(),
-(),
-(),
-(),
-(),
-(),
-(),
-(),
-(),
-(),
-(),
-(),
-(),
-(),
-(),
-(),
-(),
-)
-
 tNewCapitals = (  #for RiseAndFall
 ((81, 24),(81, 24)), #Byzantium: Constantinople
 ((44, 46),(44, 46)), #France: Paris
