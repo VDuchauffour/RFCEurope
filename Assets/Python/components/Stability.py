@@ -1,9 +1,10 @@
 # Rhye's and Fall of Civilization: Europe - Stability
 
 from CvPythonExtensions import *
-from LocationsData import CIV_CAPITAL_LOCATIONS
 import PyHelpers
 
+from CivilizationsData import CIV_STABILITY_AI_BONUS
+from LocationsData import CIV_CAPITAL_LOCATIONS
 from CoreStructures import get_civ_by_id
 from TimelineData import CIV_BIRTHDATE, CIV_COLLAPSE_DATE
 from MiscData import MessageData
@@ -125,13 +126,13 @@ class Stability:
             pPlayer = gc.getPlayer(iPlayer)
             if iPlayer != utils.getHumanID():
                 pPlayer.changeStabilityBase(
-                    Consts.iCathegoryExpansion, Consts.tStabilityBonusAI[iPlayer]
+                    Consts.iCathegoryExpansion, CIV_STABILITY_AI_BONUS[get_civ_by_id(iPlayer)]
                 )
-                if Consts.tStabilityBonusAI[iPlayer] != 0:
+                if CIV_STABILITY_AI_BONUS[get_civ_by_id(iPlayer)] != 0:
                     print(
                         "AI bonus stability:",
                         pPlayer.getCivilizationDescription(0),
-                        Consts.tStabilityBonusAI[iPlayer],
+                        CIV_STABILITY_AI_BONUS[get_civ_by_id(iPlayer)],
                     )
 
         # Absinthe: update Byzantine stability on the start of the game

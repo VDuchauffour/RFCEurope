@@ -33,42 +33,6 @@ teamAragon, teamSweden, teamPrussia, teamLithuania, teamAustria, teamTurkey, tea
 iIndepStart = iIndependent # creates the block of independent civs
 iIndepEnd = iIndependent4
 
-tStabilityBonusAI = (
-0, #Byzantium
-4, #France
-4, #Arabia
-3, #Bulgaria
-2, #Cordoba
-3, #Venice
-0, #Burgundy
-0, #Germany
-3, #Novgorod
-0, #Norway
-6, #Kiev
-2, #Hungary
-0, #Spain
-0, #Denmark
-0, #Scotland
-0, #Poland
-2, #Genoa
-0, #Morocco
-0, #England
-0, #Portugal
-4, #Aragon
-0, #Sweden
-3, #Prussia
-0, #Lithuania
-4, #Austria
-8, #Turkey
-0, #Moscow
-0, #Dutch
-)
-
-
-# 3Miro: tCoreArea, tNormalArea and tBroaderArea are misleading, TL is not TopLeft and BR is not BottomRight (unless the grid starts from 0,0 at TL and counts down as positive y direction)
-#	TL is actually BottomLeft and BR is TopRight
-#	Many functions reference those and there are search algorithms that I do not want to change, so leave this with the comment on how to be used
-
 #CoreAreas: Core Area is initial spawn location, no longer relevant for stability.
 tCoreAreasTL = (
 (66,14),   #Byzantium
