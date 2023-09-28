@@ -426,45 +426,6 @@ tWarAtSpawn = ((
 ( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Dut
 ))
 
-#Mercenaries. Higher number = less likely to hire
-tHire = (
-10, #Byzantium
-30, #Frankia
-50, #Arabia
-10, #Bulgaria
-50, #Cordoba
-30, #Venezia
-10, #Burgundy
-70, #Germany
-30, #Novgorod
-60, #Norway
-40, #Kiev
-10, #Hungary
-40, #Spain
-30, #Denmark
-50, #Scotland
-60, #Poland
-30, #Genoa
-40, #Morocco
-70, #England
-40, #Portugal
-30, #Aragon
-30, #Sweden
-50, #Prussia
-20, #Lithuania
-20, #Austria
-80, #Turkey
-60, #Moscow
-30, #Dutch
-80, #Pope
-50, #Indep1
-50, #Indep2
-50, #Indep3
-50, #Indep4
-50  #Barb
-)
-
-
 #AIWars
 tAggressionLevel = (
 1, #Byzantium

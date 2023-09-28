@@ -2,6 +2,8 @@
 # Written mostly by 3Miro
 
 from CvPythonExtensions import *
+from CivilizationsData import CIV_HIRE_MERCENARY_THRESHOLD
+from CoreStructures import get_civ_by_id
 import PyHelpers
 
 # import cPickle as pickle
@@ -2648,7 +2650,7 @@ class MercenaryManager:
 
         if iWarValue > 0:
             # we have to be at war to hire
-            iOdds = Consts.tHire[iPlayer]
+            iOdds = CIV_HIRE_MERCENARY_THRESHOLD[get_civ_by_id(iPlayer)]
             if iWarValue < 2:
                 iOdds *= 2  # small wars are hardly worth the trouble
             elif iWarValue > 4:  # large war
