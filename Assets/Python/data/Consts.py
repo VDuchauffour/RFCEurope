@@ -33,39 +33,6 @@ teamAragon, teamSweden, teamPrussia, teamLithuania, teamAustria, teamTurkey, tea
 iIndepStart = iIndependent # creates the block of independent civs
 iIndepEnd = iIndependent4
 
-tNewCapitals = (  #for RiseAndFall
-((81, 24),(81, 24)), #Byzantium: Constantinople
-((44, 46),(44, 46)), #France: Paris
-((83, 3),(84, 3),(84, 4)), #Arabia: Damascus --> Alexandria (best Egyptian city)
-((78, 29),(78, 29)), #Bulgaria: Preslav
-((48, 16),(50, 18)), #Cordoba: Cordoba --> Hafsids at Tunis
-((56, 35),(56, 35)), #Venezia: Venice
-((47, 41),(47, 41)), #Burgundy: Dijon
-((57, 41),(57, 41)), #Germany: Frankfurt --> Munich (Bavaria respawn)
-((80, 62),(80, 62)), #Novgorod: Novgorod
-((59, 64),(59, 64)), #Norway: Tonsberg --> Oslo
-((88, 40),(88, 40)), #Kiev: Kiev --> Stara Sich (Cossack respawn)
-((66, 37),(66, 37)), #Hungary: Buda
-((30, 27),(31, 27),(31, 28),(32, 28)), #Spain: Leon --> Toledo or Madrid
-((59, 57),(59, 57)), #Denmark: Roskilde/Kobenhavn
-((37, 63),(37, 63)), #Scotland: Edinburgh
-((65, 49),(65, 49)), #Poland: Poznan
-((50, 34),(50, 34)), #Genoa: Genoa
-((25, 13),(25, 13)), #Morocco: Marrakesh --> Rabat
-((41, 52),(41, 52)), #England: London
-((21, 25),(21, 25)), #Portugal: Lisboa
-((59, 24),(59, 24)), #Aragon: Zaragoza --> Naples
-((66, 64),(66, 64)), #Sweden: Stockholm
-((60, 48),(61, 48),(61, 49),(62, 48)), #Prussia: Königsberg --> Berlin
-((75, 53),(75, 53)), #Lithuania: Vilnius
-((62, 40),(62, 40)), #Austria: Wien
-((78, 22),(78, 22)), #Turkey: Gallipoli
-((91, 56),(91, 56)), #Moscow: Moscow
-((49, 52),(49, 52)), #Dutch: Amsterdam
-((56, 27),(56, 27))  #Pope: Rome
-)
-
-
 tStabilityBonusAI = (
 0, #Byzantium
 4, #France

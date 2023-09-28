@@ -14,7 +14,7 @@ from MiscData import MessageData
 from CoreTypes import Civ, Scenario, StartingSituation
 from CivilizationsData import CIV_STARTING_SITUATION, CIVILIZATIONS
 from CoreStructures import get_civ_by_id
-from LocationsData import CIV_CAPITAL_LOCATIONS, CIV_OLDER_NEIGHBOURS
+from LocationsData import CIV_CAPITAL_LOCATIONS, CIV_NEW_CAPITAL_LOCATIONS, CIV_OLDER_NEIGHBOURS
 from TimelineData import CIV_BIRTHDATE
 
 gc = CyGlobalContext()  # LOQ
@@ -1936,8 +1936,12 @@ class RiseAndFall:
 
     def moveBackCapital(self, iCiv):
         cityList = utils.getCityList(iCiv)
-        for tPlot in Consts.tNewCapitals[iCiv]:
-            plot = gc.getMap().plot(tPlot[0], tPlot[1])
+        tiles = CIV_NEW_CAPITAL_LOCATIONS[get_civ_by_id(iCiv)]
+        if tiles is None:
+            tiles = [CIV_CAPITAL_LOCATIONS[get_civ_by_id(iCiv)]]
+
+        for tile in tiles:
+            plot = gc.getMap().plot(*tile.to_tuple())
             if plot.isCity():
                 newCapital = plot.getPlotCity()
                 if newCapital.getOwner() == iCiv:
