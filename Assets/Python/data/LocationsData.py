@@ -836,7 +836,7 @@ CIV_HOME_LOCATIONS = CivDataMapper(
         Civ.MOSCOW: (595, 110),
         Civ.DUTCH: (492, 131),
     }
-).fill_missing_members(None)
+)
 
 CIV_CORE_AREA = (
     CivDataMapper(

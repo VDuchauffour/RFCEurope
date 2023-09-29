@@ -4,11 +4,13 @@
 # Thanks to "Ulf 'ulfn' Norell" from Apolyton for his additions relating to the graph section of this screen
 
 from CvPythonExtensions import *
+from CoreStructures import get_civ_by_id
 import CvUtil
 
 import string
 
 import Consts
+from LocationsData import CIV_HOME_LOCATIONS
 import XMLConsts as xml
 import RFCUtils
 
@@ -4632,7 +4634,6 @@ class CvInfoScreen:
 
         self.aaColoniesBuilt = []
         self.iNumColonies = 0
-        hxy = Consts.home_positions_xy
         # Loop through players to determine Projects and place flags in Europe
         for iPlayerLoop in range(gc.getMAX_PLAYERS()):
 
@@ -4653,8 +4654,8 @@ class CvInfoScreen:
                     try:
                         screen.addFlagWidgetGFC(
                             self.home_flag,
-                            hxy[iPlayerLoop][0] - 40,
-                            hxy[iPlayerLoop][1] - 20,
+                            CIV_HOME_LOCATIONS[get_civ_by_id(iPlayerLoop)][0] - 40,
+                            CIV_HOME_LOCATIONS[get_civ_by_id(iPlayerLoop)][1] - 20,
                             80,
                             80,
                             iPlayerLoop,

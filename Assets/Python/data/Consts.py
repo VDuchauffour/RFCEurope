@@ -426,38 +426,6 @@ tWarAtSpawn = ((
 ( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Dut
 ))
 
-#Positions on the Colony map for "home" original flags
-home_positions_xy = [
-(578,179), #iByzantium
-(480,152), #iFrankia
-(614,212), #iArabia
-(567,166), #iBulgaria
-(455,195), #iCordoba
-(518,157), #iVenecia
-(490,160), #iBurgundy
-(510,140), #iGermany
-(580,103), #iNovgorod
-(509,102), #iNorway
-(590,140), #iKiev
-(550,155), #iHungary
-(460,180), #iSpain
-(515,118), #iDenmark
-(466,115), #iScotland
-(540,130), #iPoland
-(503,165), #iGenoa
-(444,228), #iMorocco
-(473,132), #iEngland
-(441,190), #iPortugal
-(470,182), #iAragon
-(531, 92), #iSweden
-(545,131), #iPrussia
-(556,119), #iLithuania
-(535,150), #iAustria
-(590,195), #iTurkey
-(595,110), #iMoscow
-(492,131), #iDutch
-]
-
 #Positions on the Colony map where to display colonies
 colony_positions_xy=[
 (0,0), #Dummy slots for non-colony projects
