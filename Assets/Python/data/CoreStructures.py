@@ -1,4 +1,4 @@
-from CoreTypes import Area, AreaTypes, Civ, Scenario
+from CoreTypes import Area, AreaTypes, Civ, Religion, Scenario
 from BaseStructures import EnumDataMapper
 from Errors import NotACallableError, NotTypeExpectedError
 
@@ -250,9 +250,19 @@ class Civilization(object):
         return gc.getTeam(self.id)
 
 
+def get_enum_by_id(enum, id):
+    """Return a enum member by its index."""
+    return enum[enum._member_names_[id]]
+
+
 def get_civ_by_id(id):
     """Return a Civ member by its index."""
-    return Civ[Civ._member_names_[id]]
+    return get_enum_by_id(Civ, id)
+
+
+def get_religion_by_id(id):
+    """Return a Religion member by its index."""
+    return get_enum_by_id(Religion, id)
 
 
 class Civilizations(list):

@@ -1,7 +1,8 @@
 # Rhye's and Fall of Civilization: Europe - Religions management
 
 from CvPythonExtensions import *
-from CivilizationsData import CIV_STARTING_SITUATION, CIVILIZATIONS
+from CivilizationsData import CIV_RELIGION_SPEADING_THRESHOLD, CIV_STARTING_SITUATION, CIVILIZATIONS
+from CoreStructures import get_civ_by_id, get_religion_by_id
 from CoreTypes import StartingSituation
 import PyHelpers
 import Popup
@@ -969,18 +970,18 @@ class Religions:
                                 iReligionPoint += 10
                             if city.isHolyCityByType(iReligion):
                                 iReligionPoint += 1000
-                        # historical flavor based on religion spread factor
+                        spread_factor = CIV_RELIGION_SPEADING_THRESHOLD[get_civ_by_id(iPlayer)][get_religion_by_id(iReligion)]
                         print(
-                            "tReligionSpreadFactor",
+                            "CIV_RELIGION_SPEADING_THRESHOLD",
                             iPlayer,
                             iReligion,
-                            Consts.tReligionSpreadFactor[iPlayer][iReligion],
+                            spread_factor
                         )
-                        if Consts.tReligionSpreadFactor[iPlayer][iReligion] < 60:
+                        if spread_factor < 60:
                             iReligionPoint = (iReligionPoint * 5) / 10
-                        elif Consts.tReligionSpreadFactor[iPlayer][iReligion] < 100:
+                        elif spread_factor < 100:
                             iReligionPoint = (iReligionPoint * 8) / 10
-                        elif Consts.tReligionSpreadFactor[iPlayer][iReligion] > 200:
+                        elif spread_factor > 200:
                             iReligionPoint = (iReligionPoint * 12) / 10
                         # update if better
                         if iReligionPoint > iBestReligionPoint:

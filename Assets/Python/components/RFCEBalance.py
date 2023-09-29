@@ -4,11 +4,11 @@ from CoreTypes import Civ, StartingSituation
 import XMLConsts as xml
 import RFCEMaps
 import RFCUtils
-from CivilizationsData import CIV_STARTING_SITUATION
+from CivilizationsData import CIV_STARTING_SITUATION, CIV_RELIGION_SPEADING_THRESHOLD
 from MiscData import WORLD_WIDTH, WORLD_HEIGHT
 from LocationsData import CIV_CAPITAL_LOCATIONS
 from TimelineData import CIV_BIRTHDATE
-from CoreStructures import get_civ_by_id
+from CoreStructures import get_civ_by_id, get_religion_by_id
 
 gc = CyGlobalContext()  # LOQ
 utils = RFCUtils.RFCUtils()
@@ -633,7 +633,11 @@ class RFCEBalance:
         # set religious spread factors
         for iCiv in range(Consts.iNumTotalPlayers + 1):  # include barbs
             for iRel in range(xml.iNumReligions):
-                gc.setReligionSpread(iCiv, iRel, Consts.tReligionSpreadFactor[iCiv][iRel])
+                gc.setReligionSpread(
+                    iCiv,
+                    iRel,
+                    CIV_RELIGION_SPEADING_THRESHOLD[get_civ_by_id(iCiv)][get_religion_by_id(iRel)],
+                )
 
         # set the religions and year of the great schism
         gc.setSchism(xml.iCatholicism, xml.iOrthodoxy, xml.i1053AD)

@@ -426,45 +426,6 @@ tWarAtSpawn = ((
 ( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Dut
 ))
 
-# religion spread modifiers:
-tReligionSpreadFactor = ( # PROT, ISL, CATH, ORTH, JUD
-(100,  50,  70, 150,  10), #Byzantium
-(150,  20, 250,  70,  10), #France
-( 20, 350,  50,  10,  10), #Arabia
-( 80,  50,  80, 400,  10), #Bulgaria
-( 50, 250,  80,  20,  10), #Cordoba
-( 90,  50, 200,  30,  10), #Venezia
-(150,  20, 150,  70,  10), #Burgundy
-(450,  20, 250,  20,  10), #Germany
-( 60,  40,  60, 500,  10), #Novgorod
-(250,  50, 150,  80,  10), #Norway
-( 90,  60,  90, 400,  10), #Kiev
-(250,  60, 200,  80,  10), #Hungary
-(100,  20, 200,  20,  10), #Spain
-(250,  50, 180,  80,  10), #Denmark
-(450,  20, 100,  20,  10), #Scotland
-(200,  60, 450, 200,  10), #Poland
-(190,  50, 250,  30,  10), #Genoa
-( 50, 250,  70,  20,  10), #Morocco
-(450,  20, 100,  20,  10), #England
-(200,  80, 250,  20,  10), #Portugal
-(150,  80, 250,  20,  10), #Aragon
-(450,  20, 200,  50,  10), #Sweden
-(450,  20, 250,  20,  10), #Prussia
-( 80,  80,  80,  80,  10), #Lithuania
-(200,  20, 250,  20,  10), #Austria
-( 20, 350,  80,  80,  10), #Turkey
-(100,  20, 100, 250,  10), #Moscow
-(550,  20,  90,  20,  10), #Dutch
-( 10,  20, 500,  10,  10), #Pope
-(250, 100, 100, 100,  10), #Indy1
-(250, 100, 100, 100,  10), #Indy2
-(250, 100, 100, 100,  10), #Indy3
-(250, 100, 100, 100,  10), #Indy4
-( 20,  20,  20,  20,  10)  #Barb
-)
-
-
 # The AI will persecute religions in this order, depending on its own state religion (one row per religion)
 tPersecutionOrder = (
 	(xml.iCatholicism, xml.iIslam, xml.iOrthodoxy, xml.iJudaism),			# Protestantism
