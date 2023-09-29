@@ -480,7 +480,7 @@ CIV_INITIAL_CONTACTS_500AD = CivDataMapper(
             Civ.NORWAY,
         ],
     }
-).fill_missing_members(None)
+)
 
 CIV_INITIAL_CONTACTS_1200AD = CivDataMapper(
     {
@@ -661,7 +661,7 @@ CIV_INITIAL_CONTACTS_1200AD = CivDataMapper(
             Civ.SWEDEN,
         ],
     }
-).fill_missing_members(None)
+)
 
 CIV_INITIAL_CONTACTS = ScenarioDataMapper(
     {

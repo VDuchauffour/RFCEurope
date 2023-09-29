@@ -288,14 +288,14 @@ class CvGameUtils:
             if bCanPurge:
                 for pCity in apCityList:
                     if pCity.GetCy().isHasReligion(
-                        iReligion
-                    ) and not pCity.GetCy().isHolyCityByType(iReligion):
+                        iReligion.value
+                    ) and not pCity.GetCy().isHolyCityByType(iReligion.value):
                         # do not purge religions with an associated wonder in the city
                         bWonder = False
                         for iBuilding in xrange(gc.getNumBuildingInfos()):  # type: ignore
                             if pCity.GetCy().getNumRealBuilding(iBuilding):
                                 BuildingInfo = gc.getBuildingInfo(iBuilding)
-                                if BuildingInfo.getPrereqReligion() == iReligion:
+                                if BuildingInfo.getPrereqReligion() == iReligion.value:
                                     if isWorldWonderClass(
                                         BuildingInfo.getBuildingClassType()
                                     ) or isNationalWonderClass(

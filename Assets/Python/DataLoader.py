@@ -50,4 +50,4 @@ def setup():
         for location in locations:
             plot = map.plot(*location.to_tuple())
             if plot:
-                plot.setLakeNameID(name)
+                plot.setLakeNameID(name.value)
