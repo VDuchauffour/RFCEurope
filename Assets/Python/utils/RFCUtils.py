@@ -1,7 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Utilities
 
 from CvPythonExtensions import *
-from CoreTypes import Scenario
+from CoreTypes import Religion, Scenario
 import CvUtil
 import CvScreenEnums
 from LocationsData import CIV_CAPITAL_LOCATIONS
@@ -11,10 +11,10 @@ import Popup  # Absinthe
 import Consts
 import XMLConsts as xml
 from StoredData import sd
-from MiscData import WORLD_WIDTH, WORLD_HEIGHT, MessageData
+from MiscData import RELIGION_PERSECUTION_ORDER, WORLD_WIDTH, WORLD_HEIGHT, MessageData
 
 from TimelineData import CIV_BIRTHDATE
-from CoreStructures import get_civ_by_id
+from CoreStructures import get_civ_by_id, get_religion_by_id
 
 # globals
 gc = CyGlobalContext()
@@ -1301,7 +1301,7 @@ class RFCUtils:
         # determine the target religion, if not supplied by the popup decision (for the AI)
         print("Persecution intended religion", iReligion)
         if iReligion == -1:
-            for iReligion in Consts.tPersecutionOrder[iStateReligion]:
+            for iReligion in RELIGION_PERSECUTION_ORDER[get_religion_by_id(iStateReligion)]:
                 if not city.isHolyCityByType(iReligion):  # spare holy cities
                     if city.isHasReligion(iReligion):
                         # so this will be the iReligion for further calculations
@@ -1312,7 +1312,7 @@ class RFCUtils:
         if iReligion > -1:
             lReligionBuilding = []
             iReligionWonder = 0
-            for iBuilding in xrange(gc.getNumBuildingInfos()):
+            for iBuilding in xrange(gc.getNumBuildingInfos()):  # type: ignore
                 if city.getNumRealBuilding(iBuilding):
                     BuildingInfo = gc.getBuildingInfo(iBuilding)
                     if BuildingInfo.getPrereqReligion() == iReligion:
@@ -1363,7 +1363,7 @@ class RFCUtils:
             for i in range(len(lReligionBuilding)):
                 city.setNumRealBuilding(lReligionBuilding[i], 0)
                 iLoot += iLootModifier
-            if iReligion == xml.iJudaism:
+            if iReligion == Religion.JUDAISM:
                 iLoot = iLoot * 3 / 2
 
             # kill / expel some population
@@ -1415,11 +1415,11 @@ class RFCUtils:
             )
 
             # Jews may spread to another random city
-            if iReligion == xml.iJudaism:
+            if iReligion == Religion.JUDAISM:
                 if gc.getGame().getSorenRandNum(100, "Judaism spread chance") < 80:
                     tCity = self.selectRandomCity()
-                    self.spreadJews(tCity, xml.iJudaism)
-                    pSpreadCity = gc.getMap().plot(tCity[0], tCity[1]).getPlotCity()
+                    self.spreadJews(tCity, Religion.JUDAISM)
+                    pSpreadCity = gc.getMap().plot(*tCity).getPlotCity()
                     if pSpreadCity.getOwner() == iOwner:
                         CyInterface().addMessage(
                             iOwner,

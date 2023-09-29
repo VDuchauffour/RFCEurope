@@ -3,8 +3,11 @@
 ##
 ## Implementation of miscellaneous game functions
 
+from CoreStructures import get_religion_by_id
+from CoreTypes import Religion
 import CvUtil
 from CvPythonExtensions import *
+from MiscData import RELIGION_PERSECUTION_ORDER
 import PyHelpers  # Absinthe
 import XMLConsts as xml  # Absinthe
 import Consts
@@ -255,25 +258,29 @@ class CvGameUtils:
         iTolerance = Consts.tReligiousTolerance[iCiv]
         apCityList = PyPlayer(iCiv).getCityList()
         # Checks whether the AI controls a city with a target religion that is not the State Religion, not a Holy City, and doesn't have religious wonders in it
-        for iReligion in Consts.tPersecutionOrder[iStateReligion]:
+        for iReligion in RELIGION_PERSECUTION_ORDER[get_religion_by_id(iStateReligion)]:
             bCanPurge = False
             # If the civ's tolerance > 70 it won't purge any religions
             # If > 50 (but < 70) it will only purge Islam with a Christian State Religion, and all Christian Religions with Islam as State Religion
             # If > 30 (but < 50) it will also purge Judaism
             # If < 30 it will purge all but the State Religion (so the other 2 Christian Religions as well)
-            if iTolerance < 70:
-                if iReligion == xml.iIslam:
-                    bCanPurge = True
-                elif (
-                    iReligion == xml.iCatholicism
-                    or iReligion == xml.iOrthodoxy
-                    or iReligion == xml.iProtestantism
-                ):
-                    if iStateReligion == xml.iIslam:
-                        bCanPurge = True
-            if not bCanPurge and iTolerance < 50:
-                if iReligion == xml.iJudaism:
-                    bCanPurge = True
+            if iTolerance < 70 and (
+                iReligion == Religion.ISLAM
+                or (
+                    iStateReligion == Religion.ISLAM
+                    and iReligion
+                    in [
+                        Religion.CATHOLICISM,
+                        Religion.ORTHODOXY,
+                        Religion.PROTESTANTISM,
+                    ]
+                )
+            ):
+                bCanPurge = True
+
+            if not bCanPurge and iTolerance < 50 and iReligion == Religion.JUDAISM:
+                bCanPurge = True
+
             if not bCanPurge and iTolerance < 30:
                 bCanPurge = True
 
@@ -284,7 +291,7 @@ class CvGameUtils:
                     ) and not pCity.GetCy().isHolyCityByType(iReligion):
                         # do not purge religions with an associated wonder in the city
                         bWonder = False
-                        for iBuilding in xrange(gc.getNumBuildingInfos()):
+                        for iBuilding in xrange(gc.getNumBuildingInfos()):  # type: ignore
                             if pCity.GetCy().getNumRealBuilding(iBuilding):
                                 BuildingInfo = gc.getBuildingInfo(iBuilding)
                                 if BuildingInfo.getPrereqReligion() == iReligion:

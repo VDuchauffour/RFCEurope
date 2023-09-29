@@ -426,15 +426,6 @@ tWarAtSpawn = ((
 ( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Dut
 ))
 
-# The AI will persecute religions in this order, depending on its own state religion (one row per religion)
-tPersecutionOrder = (
-	(xml.iCatholicism, xml.iIslam, xml.iOrthodoxy, xml.iJudaism),			# Protestantism
-	(xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism, xml.iJudaism),	# Islam
-	(xml.iIslam, xml.iProtestantism, xml.iJudaism, xml.iOrthodoxy),			# Catholicism
-	(xml.iIslam, xml.iJudaism, xml.iCatholicism, xml.iProtestantism),		# Orthodoxy
-	(xml.iIslam, xml.iProtestantism, xml.iOrthodoxy, xml.iCatholicism),		# Judaism
-)
-
 
 # 100 and 80: don't purge any religions; 60: purge islam if christian, and all christian religions if muslim; 40: also judaism; 20: all but state religion
 tReligiousTolerance = (
