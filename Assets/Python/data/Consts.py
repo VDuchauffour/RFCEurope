@@ -426,23 +426,6 @@ tWarAtSpawn = ((
 ( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Dut
 ))
 
-#Absinthe: old stability system, not used currently
-#Stability Parameters
-iParCities3 = 0
-iParCitiesE = 1
-iParCivics3 = 2
-iParCivics1 = 3
-iParCivicsE = 4
-iParDiplomacy3 = 5
-iParDiplomacyE = 6
-iParEconomy3 = 7
-iParEconomy1 = 8
-iParEconomyE = 9
-iParExpansion3 = 10
-iParExpansion1 = 11
-iParExpansionE = 12
-iNumStabilityParameters = 13
-
 
 #Plague
 iImmunity = 20
