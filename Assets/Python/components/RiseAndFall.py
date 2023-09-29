@@ -577,9 +577,9 @@ class RiseAndFall:
 
     def assignGold(self):
         for civ in CIVILIZATIONS:
-            gc.getPlayer(civ.id).changeGold(
-                CIV_STARTING_SITUATION[utils.getScenario()][get_civ_by_id(civ.id)]
-            )
+            civ_starting_situation = CIV_STARTING_SITUATION[utils.getScenario()][civ.key]
+            if civ_starting_situation:
+                civ.get_player().changeGold(civ_starting_situation[StartingSituation.GOLD])
 
     def onCityBuilt(self, iPlayer, pCity):
         tCity = (pCity.getX(), pCity.getY())
@@ -3764,10 +3764,11 @@ class RiseAndFall:
         pCiv = gc.getPlayer(iCiv)
         teamCiv = gc.getTeam(pCiv.getTeam())
         for contact in CIV_INITIAL_CONTACTS[utils.getScenario()][get_civ_by_id(iCiv)]:
-            pOtherPlayer = gc.getPlayer(contact)
-            tOtherPlayer = pOtherPlayer.getTeam()
-            if pOtherPlayer.isAlive() and not teamCiv.isHasMet(tOtherPlayer):
-                teamCiv.meet(tOtherPlayer, bMeet)
+            if contact:
+                pOtherPlayer = gc.getPlayer(contact.value)
+                tOtherPlayer = pOtherPlayer.getTeam()
+                if pOtherPlayer.isAlive() and not teamCiv.isHasMet(tOtherPlayer):
+                    teamCiv.meet(tOtherPlayer, bMeet)
 
     def LeaningTowerGP(self):
         iGP = gc.getGame().getSorenRandNum(7, "starting count")

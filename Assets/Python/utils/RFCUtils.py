@@ -1302,8 +1302,8 @@ class RFCUtils:
         print("Persecution intended religion", iReligion)
         if iReligion == -1:
             for iReligion in RELIGION_PERSECUTION_ORDER[get_religion_by_id(iStateReligion)]:
-                if not city.isHolyCityByType(iReligion):  # spare holy cities
-                    if city.isHasReligion(iReligion):
+                if not city.isHolyCityByType(iReligion.value):  # spare holy cities
+                    if city.isHasReligion(iReligion.value):
                         # so this will be the iReligion for further calculations
                         break
         print("Persecution chosen religion", iReligion)

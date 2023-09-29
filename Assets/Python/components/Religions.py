@@ -1,7 +1,11 @@
 # Rhye's and Fall of Civilization: Europe - Religions management
 
 from CvPythonExtensions import *
-from CivilizationsData import CIV_RELIGION_SPEADING_THRESHOLD, CIV_STARTING_SITUATION, CIVILIZATIONS
+from CivilizationsData import (
+    CIV_RELIGION_SPEADING_THRESHOLD,
+    CIV_STARTING_SITUATION,
+    CIVILIZATIONS,
+)
 from CoreStructures import get_civ_by_id, get_religion_by_id
 from CoreTypes import StartingSituation
 import PyHelpers
@@ -970,13 +974,10 @@ class Religions:
                                 iReligionPoint += 10
                             if city.isHolyCityByType(iReligion):
                                 iReligionPoint += 1000
-                        spread_factor = CIV_RELIGION_SPEADING_THRESHOLD[get_civ_by_id(iPlayer)][get_religion_by_id(iReligion)]
-                        print(
-                            "CIV_RELIGION_SPEADING_THRESHOLD",
-                            iPlayer,
-                            iReligion,
-                            spread_factor
-                        )
+                        spread_factor = CIV_RELIGION_SPEADING_THRESHOLD[get_civ_by_id(iPlayer)][
+                            get_religion_by_id(iReligion)
+                        ]
+                        print("CIV_RELIGION_SPEADING_THRESHOLD", iPlayer, iReligion, spread_factor)
                         if spread_factor < 60:
                             iReligionPoint = (iReligionPoint * 5) / 10
                         elif spread_factor < 100:
@@ -1583,9 +1584,9 @@ class Religions:
 
     def setStartingFaith(self):
         for civ in CIVILIZATIONS:
-            civ.get_player().setFaith(
-                CIV_STARTING_SITUATION[utils.getScenario()][StartingSituation.FAITH]
-            )
+            civ_starting_situation = CIV_STARTING_SITUATION[utils.getScenario()][civ.key]
+            if civ_starting_situation:
+                civ.get_player().setFaith(civ_starting_situation[StartingSituation.FAITH])
 
     def getCatholicCivs(self, bOpenBorders=False):
         teamPope = gc.getTeam(gc.getPlayer(Consts.iPope).getTeam())
