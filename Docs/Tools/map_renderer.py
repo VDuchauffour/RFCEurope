@@ -241,7 +241,7 @@ class MapRenderer:
     def normalize_plot(self, plots):
         _plots = []
         for plot in plots:
-            _plots.append(Plot(plot[0], self.map.height - plot[1] - 1, "", "", "", "", ""))
+            _plots.append(Plot(plot.x, self.map.height - plot.y - 1, "", "", "", "", ""))
         return _plots
 
     def draw_spawning_map(self, output_path: str):
