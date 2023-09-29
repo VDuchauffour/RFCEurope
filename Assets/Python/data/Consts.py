@@ -426,46 +426,6 @@ tWarAtSpawn = ((
 ( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Dut
 ))
 
-
-# 100 and 80: don't purge any religions; 60: purge islam if christian, and all christian religions if muslim; 40: also judaism; 20: all but state religion
-tReligiousTolerance = (
-60, #Byzantium
-40, #Frankia
-60, #Arabia
-40, #Bulgaria
-80, #Cordoba
-40, #Venezia
-20, #Burgundy
-20, #Germany
-60, #Novgorod
-60, #Norway
-40, #Kiev
-60, #Hungary
-20, #Spain
-60, #Denmark
-40, #Scotland
-80, #Poland
-20, #Genoa
-60, #Morocco
-40, #England
-40, #Portugal
-60, #Aragon
-60, #Sweden
-20, #Prussia
-80, #Lithuania
-20, #Austria
-80, #Turkey
-40, #Moscow
-40, #Dutch
-20, #Pope
-100, #Indy1
-100, #Indy2
-100, #Indy3
-100, #Indy4
-100, #Barbarian
-)
-
-
 #Absinthe: old stability system, not used currently
 #Stability Parameters
 iParCities3 = 0
