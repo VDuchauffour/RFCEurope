@@ -9,7 +9,7 @@ import RFCUtils
 from StoredData import sd
 import random
 
-from MiscData import MessageData
+from MiscData import PLAGUE_IMMUNITY, MessageData
 from TimelineData import CIV_BIRTHDATE
 from CoreStructures import get_civ_by_id
 
@@ -66,7 +66,7 @@ class Plague:
     def setup(self):
 
         for i in range(Consts.iNumMajorPlayers):
-            self.setPlagueCountdown(i, -Consts.iImmunity)
+            self.setPlagueCountdown(i, -PLAGUE_IMMUNITY)
 
         # Sedna17: Set number of GenericPlagues in StoredData
         # 3Miro: Plague 0 strikes France too hard, make it less random and force it to pick Byzantium as starting land
@@ -671,7 +671,7 @@ class Plague:
                     iRemoveModifier += 5  # less chance for each city which already quit
 
     def stopPlague(self, iPlayer):
-        self.setPlagueCountdown(iPlayer, -Consts.iImmunity)
+        self.setPlagueCountdown(iPlayer, -PLAGUE_IMMUNITY)
         for city in utils.getCityList(iPlayer):
             city.setHasRealBuilding(iPlague, False)
 
@@ -688,7 +688,7 @@ class Plague:
             # only if it's not a recently born civ
             if (
                 gc.getGame().getGameTurn()
-                > CIV_BIRTHDATE[get_civ_by_id(iNewOwner)] + Consts.iImmunity
+                > CIV_BIRTHDATE[get_civ_by_id(iNewOwner)] + PLAGUE_IMMUNITY
             ):
                 # reinfect the human player if conquering plagued cities
                 if iNewOwner == utils.getHumanID():

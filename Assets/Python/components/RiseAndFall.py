@@ -10,7 +10,7 @@ import Victory
 from StoredData import sd
 import Crusades
 
-from MiscData import MessageData
+from MiscData import PLAGUE_IMMUNITY, MessageData
 from CoreTypes import Civ, Scenario, StartingSituation
 from CivilizationsData import (
     CIV_AI_STOP_BIRTH_THRESHOLD,
@@ -2265,7 +2265,7 @@ class RiseAndFall:
                     else:
                         utils.flipUnitsInPlots(lPlotIndyFlip, iCiv, iIndyCiv, True, False)
                 self.assignTechs(iCiv)
-                utils.setPlagueCountdown(iCiv, -Consts.iImmunity)
+                utils.setPlagueCountdown(iCiv, -PLAGUE_IMMUNITY)
                 utils.clearPlague(iCiv)
                 self.setFlipsDelay(iCiv, iFlipsDelay)  # save
 
@@ -2351,7 +2351,7 @@ class RiseAndFall:
                 self.createStartingUnits(iCiv, tPlot)
                 # utils.debugTextPopup( 'birthInForeignBorders after a flip' )
                 self.assignTechs(iCiv)
-                utils.setPlagueCountdown(iCiv, -Consts.iImmunity)
+                utils.setPlagueCountdown(iCiv, -PLAGUE_IMMUNITY)
                 utils.clearPlague(iCiv)
                 # gc.getPlayer(iCiv).changeAnarchyTurns(1)
             utils.flipUnitsInArea(
@@ -2395,7 +2395,7 @@ class RiseAndFall:
                 self.createStartingUnits(iCiv, tPlot)
                 # utils.debugTextPopup( 'birthInForeignBorders in another location' )
                 self.assignTechs(iCiv)
-                utils.setPlagueCountdown(iCiv, -Consts.iImmunity)
+                utils.setPlagueCountdown(iCiv, -PLAGUE_IMMUNITY)
                 utils.clearPlague(iCiv)
             else:
                 plotList = utils.squareSearch(
@@ -2407,7 +2407,7 @@ class RiseAndFall:
                     self.createStartingWorkers(iCiv, tPlot)
                     # utils.debugTextPopup( 'birthInForeignBorders in a broader area' )
                     self.assignTechs(iCiv)
-                    utils.setPlagueCountdown(iCiv, -Consts.iImmunity)
+                    utils.setPlagueCountdown(iCiv, -PLAGUE_IMMUNITY)
                     utils.clearPlague(iCiv)
             utils.flipUnitsInArea(
                 tTopLeft, tBottomRight, iCiv, Consts.iBarbarian, True, True

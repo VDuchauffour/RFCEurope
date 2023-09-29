@@ -426,11 +426,6 @@ tWarAtSpawn = ((
 ( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Dut
 ))
 
-
-#Plague
-iImmunity = 20
-
-
 #Lake name IDs (the actual names are in the corresponding GameText file, based on the ID we set here)
 #More information about them in the Lakes of RFCEurope text file in the Reference folder
 lLakeNameIDs = [
