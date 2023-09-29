@@ -1946,6 +1946,7 @@ class RiseAndFall:
         if tiles is None:
             tiles = [CIV_CAPITAL_LOCATIONS[get_civ_by_id(iCiv)]]
 
+        # TODO: remove for/else implementation
         for tile in tiles:
             plot = gc.getMap().plot(*tile.to_tuple())
             if plot.isCity():
