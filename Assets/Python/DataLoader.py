@@ -4,6 +4,7 @@
 from CvPythonExtensions import *
 import RFCEMaps
 import Consts
+from LocationsData import LAKE_LOCATIONS
 
 gc = CyGlobalContext()
 
@@ -45,10 +46,8 @@ def setup():
             if plot:
                 plot.setLakeNameID(-1)
     # then we add the ID to the actual lake tiles
-    for i in range(len(Consts.lLakeNameIDs)):
-        x = Consts.lLakeNameIDs[i][0]
-        y = Consts.lLakeNameIDs[i][1]
-        iLakeNameID = Consts.lLakeNameIDs[i][2]
-        plot = map.plot(x, y)
-        if plot:
-            plot.setLakeNameID(iLakeNameID)
+    for name, locations in LAKE_LOCATIONS.items():
+        for location in locations:
+            plot = map.plot(*location.to_tuple())
+            if plot:
+                plot.setLakeNameID(name)

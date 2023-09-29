@@ -426,44 +426,6 @@ tWarAtSpawn = ((
 ( 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, ), #Dut
 ))
 
-#Lake name IDs (the actual names are in the corresponding GameText file, based on the ID we set here)
-#More information about them in the Lakes of RFCEurope text file in the Reference folder
-lLakeNameIDs = [
-(32, 61,  0), #Lough Neagh
-(64, 36,  1), (65, 36,  1), #Lake Balaton
-(94,  4,  2), (94,  5,  2), #Dead Sea
-(95,  8,  3), #Sea of Galilee
-(88, 19,  4), (89, 19,  4), #Lake Tuz
-(85, 18,  5), #Lake Egirdir
-(86, 17,  6), #Lake Beysehir
-(54, 37,  7), #Lake Garda
-(49, 39,  8), #Lake Geneva
-(53, 40,  9), #Lake Constance (Bodensee)
-(66, 27, 10), #Lake Scutari (Lake Skadar)
-(69, 23, 11), #Lake Ohrid (with Lake Prespa)
-(71, 52, 12), #Lake Sniardwy (Spirdingsee)
-(62, 62, 13), (62, 63, 13), #Lake Vättern
-(60, 64, 14), (61, 64, 14), (61, 65, 14), #Lake Vänern
-(64, 64, 15), (65, 64, 15), #Lake Mälaren (with Lake Hjälmaren)
-(62, 71, 16), #Lake Storsjön
-(77, 60, 17), (77, 61, 17), (77, 62, 17), #Lake Peipus
-(80, 61, 18), #Lake Ilmen
-(79, 67, 19), (79, 68, 19), (80, 65, 19), (80, 66, 19), (80, 67, 19), (80, 68, 19), (80, 69, 19), (81, 66, 19), (81, 67, 19), (81, 68, 19), #Lake Ladoga
-(84, 69, 20), (84, 70, 20), (85, 68, 20), (85, 69, 20), (85, 70, 20), #Lake Onega
-(87, 66, 21), #Lake Beloye
-(77, 68, 22), (77, 69, 22), (78, 70, 22), #Lake Saimaa
-(74, 68, 23), (74, 69, 23), #Lake Päijänne
-(85, 72, 24), #Lake Vygozero
-(83, 72, 25), #Lake Segozero
-(76, 71, 26), #Lake Kallavesi (with Lake Suvasvesi and other smaller lakes in the area)
-(74, 71, 27), #Lake Keitele (with many smaller lakes in the area)
-(78, 72, 28), #Lake Pielinen
-(72, 68, 29), #Lake Näsijärvi (with many smaller lakes in the area)
-(55, 59, 30), #Limfjord (Limfjorden)
-(58, 71, 31), #Trondheim Fjord (Trondheimsfjorden)
-]
-
-
 #Positions on the Colony map for "home" original flags
 home_positions_xy = [
 (578,179), #iByzantium
