@@ -209,10 +209,11 @@ class TilesFactory:
         return self
 
 
-class CivilizationProperties(object):
+class CivilizationAttributes(object):
+    """A class to handle civilization attibutes from CivDataMapper."""
+
     def __init__(self, **properties):
-        for property in properties.items():
-            name, value = property
+        for name, value in properties.items():
             setattr(self, name, value)
 
     def __repr__(self):
@@ -222,11 +223,12 @@ class CivilizationProperties(object):
 class Civilization(object):
     """A simple class to handle a civilization."""
 
-    def __init__(self, id, properties):
+    def __init__(self, id, **kwargs):
         if not isinstance(id, Civ):
             raise NotTypeExpectedError(Civ, type(id))
         self._id = id
-        self.properties = properties
+        for name, value in kwargs.items():
+            setattr(self, name, value)
 
     @property
     def id(self):
@@ -291,3 +293,22 @@ class Civilizations(list):
     def get_minors(self):
         """Return minor civilizations, i.e. minor and not playable."""
         return self.filter(lambda c: c.properties.is_minor and not c.properties.is_playable)
+
+
+class CivilizationsFactory(object):
+    """A factory to generate `Civilizations` from CivDataMapper."""
+
+    def __init__(self):
+        self._attachments = {}
+
+    def attach(self, name, data):
+        if isinstance(name, str) and isinstance(data, CivDataMapper):
+            self._attachments[name] = data
+        return self
+
+    def collect(self):
+        civs = []
+        for civ in Civ:
+            attachments = dict((k, v[civ]) for k, v in self._attachments.items())
+            civs.append(Civilization(civ, **attachments))
+        return Civilizations(*civs)
