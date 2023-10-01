@@ -280,7 +280,8 @@ class Civilizations(list):
         """Filter civilization when function returns `True`."""
         if not callable(func):
             raise NotACallableError(func)
-        return [civ for civ in self if func(civ)]
+        civs = [civ for civ in self if func(civ)]
+        return self.__class__(*civs)
 
     def get_main(self):
         """Return main civilizations, i.e. not minor and playable."""
