@@ -1527,7 +1527,7 @@ CIV_PROPERTIES = (
 # TODO add all remaining CivDataMapper and use RFCUtils getScenario
 CIVILIZATIONS = (
     CivilizationsFactory()
-    .attach("properties", CIV_PROPERTIES.sort())
-    .attach("leaders", CIV_LEADERS.sort())
+    .attach("properties", CIV_PROPERTIES)
+    .attach("leaders", CIV_LEADERS)
     .collect()
 )
