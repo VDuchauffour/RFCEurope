@@ -11,7 +11,7 @@ from StoredData import sd
 import Crusades
 
 from MiscData import PLAGUE_IMMUNITY, MessageData
-from CoreTypes import Civ, Scenario, StartingSituation, ProvinceTypes
+from CoreTypes import Civ, Scenario, StartingSituation, ProvinceTypes, UniquePower
 from CivilizationsData import (
     CIV_AI_STOP_BIRTH_THRESHOLD,
     CIV_INITIAL_CONTACTS,
