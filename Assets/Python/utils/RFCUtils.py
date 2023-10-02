@@ -11,7 +11,13 @@ import Popup  # Absinthe
 import Consts
 import XMLConsts as xml
 from StoredData import sd
-from MiscData import RELIGION_PERSECUTION_ORDER, WORLD_WIDTH, WORLD_HEIGHT, MessageData
+from MiscData import (
+    GREAT_PROPHET_FAITH_POINT_BONUS,
+    RELIGION_PERSECUTION_ORDER,
+    WORLD_WIDTH,
+    WORLD_HEIGHT,
+    MessageData,
+)
 
 from TimelineData import CIV_BIRTHDATE
 from CoreStructures import get_civ_by_id, get_religion_by_id
@@ -1455,7 +1461,9 @@ class RFCUtils:
                         )
 
             # persecution countdown for the civ (causes indirect instability - stability.recalcCity)
-            if gc.hasUP(iOwner, UniquePower.LESS_INSTABILITY_WITH_RELIGIOUS_PROSECUTION.value):  # Spanish UP
+            if gc.hasUP(
+                iOwner, UniquePower.LESS_INSTABILITY_WITH_RELIGIOUS_PROSECUTION.value
+            ):  # Spanish UP
                 pPlayer.changeProsecutionCount(4)
             else:
                 # self.setProsecutionCount( iOwner, self.getProsecutionCount( iOwner ) + 10 )
@@ -1490,7 +1498,9 @@ class RFCUtils:
             )
 
             # persecution countdown for the civ (causes indirect instability - stability.recalcCity)
-            if gc.hasUP(iOwner, UniquePower.LESS_INSTABILITY_WITH_RELIGIOUS_PROSECUTION.value):  # Spanish UP
+            if gc.hasUP(
+                iOwner, UniquePower.LESS_INSTABILITY_WITH_RELIGIOUS_PROSECUTION.value
+            ):  # Spanish UP
                 pPlayer.changeProsecutionCount(2)
             else:
                 pPlayer.changeProsecutionCount(4)
@@ -1511,9 +1521,9 @@ class RFCUtils:
         pPlayer = gc.getPlayer(iOwner)
         # Absinthe: Wonders: Boyana Church wonder effect
         if pPlayer.countNumBuildings(xml.iBoyanaChurch) > 0:
-            pPlayer.changeFaith(Consts.iSaintBenefit * 3 / 2 + 2)
+            pPlayer.changeFaith(GREAT_PROPHET_FAITH_POINT_BONUS * 3 / 2 + 2)
         else:
-            pPlayer.changeFaith(Consts.iSaintBenefit)
+            pPlayer.changeFaith(GREAT_PROPHET_FAITH_POINT_BONUS)
         pUnit = pPlayer.getUnit(iUnitID)
         pUnit.kill(0, -1)
 

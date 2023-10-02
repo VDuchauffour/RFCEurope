@@ -5,7 +5,7 @@ import XMLConsts as xml
 import RFCEMaps
 import RFCUtils
 from CivilizationsData import CIV_STARTING_SITUATION, CIV_RELIGION_SPEADING_THRESHOLD
-from MiscData import WORLD_WIDTH, WORLD_HEIGHT
+from MiscData import WORLD_WIDTH, WORLD_HEIGHT, GREAT_PROPHET_FAITH_POINT_BONUS
 from LocationsData import CIV_CAPITAL_LOCATIONS
 from TimelineData import CIV_BIRTHDATE
 from CoreStructures import get_civ_by_id, get_religion_by_id
@@ -508,7 +508,9 @@ class RFCEBalance:
 
         gc.setUP(Consts.iBulgaria, UniquePower.NO_RESISTANCE.value, 0)
 
-        gc.setUP(Consts.iCordoba, UniquePower.PROMOTION_FOR_ALL_VALID_UNITS.value, xml.iPromotionMedic1)
+        gc.setUP(
+            Consts.iCordoba, UniquePower.PROMOTION_FOR_ALL_VALID_UNITS.value, xml.iPromotionMedic1
+        )
         gc.setUP(Consts.iCordoba, UniquePower.GROWTH_CITY_WITH_HEALTH_EXCESS.value, 50)
 
         gc.setUP(
@@ -517,14 +519,18 @@ class RFCEBalance:
             1 * 100000 + xml.iTerrainDesert * 1000 + 10 + 1,
         )
         gc.setUP(
-            Consts.iMorocco, UniquePower.FEATURE_BONUS.value, 1 * 100000 + xml.iOasis * 1000 + 100 + 1
+            Consts.iMorocco,
+            UniquePower.FEATURE_BONUS.value,
+            1 * 100000 + xml.iOasis * 1000 + 100 + 1,
         )
 
         gc.setUP(Consts.iSpain, UniquePower.LESS_INSTABILITY_WITH_RELIGIOUS_PROSECUTION.value, 1)
         gc.setUP(Consts.iSpain, UniquePower.PER_CITY_COMMERCE_BONUS.value, 2)
 
         gc.setUP(Consts.iNorway, UniquePower.CAN_ENTER_TERRAIN.value, xml.iTerrainOcean)
-        gc.setUP(Consts.iNorway, UniquePower.STABILITY_BONUS_FOUNDING.value, 1)  # "hidden" part of the UP
+        gc.setUP(
+            Consts.iNorway, UniquePower.STABILITY_BONUS_FOUNDING.value, 1
+        )  # "hidden" part of the UP
 
         gc.setUP(Consts.iVenecia, UniquePower.PRE_ACCESS_CIVICS.value, xml.iCivicMerchantRepublic)
         # gc.setUP( iVenecia, UniquePower.ALLOW_SHIPS_IN_FOREIGN_SEA.value, 1 )
@@ -534,7 +540,9 @@ class RFCEBalance:
         gc.setUP(Consts.iHungary, UniquePower.HAPPINESS_BONUS.value, 1)
         gc.setUP(Consts.iHungary, UniquePower.NO_UNHAPPINESS_WITH_FOREIGN_CULTURE.value, 0)
 
-        gc.setUP(Consts.iGermany, UniquePower.FASTER_UNIT_PRODUCTION.value, xml.iGunpowder * 100 + 75)
+        gc.setUP(
+            Consts.iGermany, UniquePower.FASTER_UNIT_PRODUCTION.value, xml.iGunpowder * 100 + 75
+        )
 
         gc.setUP(Consts.iPoland, UniquePower.NO_INSTABILITY_WITH_FOREIGN_RELIGION.value, 0)
 
@@ -587,7 +595,9 @@ class RFCEBalance:
             UniquePower.LOWER_COST_FOR_PROJECTS.value,
             (xml.iNumNotColonies - 2) * 1000000 + (xml.iNumTotalColonies - 1) * 1000 + 30,
         )
-        gc.setUP(Consts.iPortugal, UniquePower.STABILITY_BONUS_FOUNDING.value, 1)  # "hidden" part of the UP
+        gc.setUP(
+            Consts.iPortugal, UniquePower.STABILITY_BONUS_FOUNDING.value, 1
+        )  # "hidden" part of the UP
 
         for i in range(Consts.iNumTotalPlayers):
             if not i == Consts.iAustria:
@@ -598,7 +608,11 @@ class RFCEBalance:
         # gc.setUP( iTurkey, UniquePower.CONSCRIPTION.value, 1 )
         gc.setUP(Consts.iTurkey, UniquePower.FREE_UNITS_WITH_FOREIGN_RELIGIONS.value, 1)
 
-        gc.setUP(Consts.iSweden, UniquePower.PROMOTION_FOR_ALL_VALID_UNITS.value, xml.iPromotionFormation)
+        gc.setUP(
+            Consts.iSweden,
+            UniquePower.PROMOTION_FOR_ALL_VALID_UNITS.value,
+            xml.iPromotionFormation,
+        )
 
         gc.setUP(Consts.iNovgorod, UniquePower.PRE_ACCESS_CIVICS.value, xml.iCivicBureaucracy)
 
@@ -668,19 +682,37 @@ class RFCEBalance:
         # iFP_Diplomacy: iAttitude += iParameter * num_FaithPoints / 100
         # 		i.e. 1 Faith Point = iParameter percent of an attitude point
 
-        gc.setReligionBenefit(xml.iOrthodoxy, FaithPointBonusCategory.BOOST_STABILITY.value, 10, 100)
-        gc.setReligionBenefit(xml.iOrthodoxy, FaithPointBonusCategory.REDUCE_CIVIC_UPKEEP.value, 50, 100)
+        gc.setReligionBenefit(
+            xml.iOrthodoxy, FaithPointBonusCategory.BOOST_STABILITY.value, 10, 100
+        )
+        gc.setReligionBenefit(
+            xml.iOrthodoxy, FaithPointBonusCategory.REDUCE_CIVIC_UPKEEP.value, 50, 100
+        )
 
-        gc.setReligionBenefit(xml.iIslam, FaithPointBonusCategory.FASTER_POPULATION_GROWTH.value, 50, 100)
-        gc.setReligionBenefit(xml.iIslam, FaithPointBonusCategory.REDUCING_COST_UNITS.value, 50, 100)
+        gc.setReligionBenefit(
+            xml.iIslam, FaithPointBonusCategory.FASTER_POPULATION_GROWTH.value, 50, 100
+        )
+        gc.setReligionBenefit(
+            xml.iIslam, FaithPointBonusCategory.REDUCING_COST_UNITS.value, 50, 100
+        )
 
-        gc.setReligionBenefit(xml.iProtestantism, FaithPointBonusCategory.REDUCING_TECH_COST.value, 30, 100)
-        gc.setReligionBenefit(xml.iProtestantism, FaithPointBonusCategory.REDUCING_WONDER_COST.value, 30, 100)
+        gc.setReligionBenefit(
+            xml.iProtestantism, FaithPointBonusCategory.REDUCING_TECH_COST.value, 30, 100
+        )
+        gc.setReligionBenefit(
+            xml.iProtestantism, FaithPointBonusCategory.REDUCING_WONDER_COST.value, 30, 100
+        )
 
-        gc.setReligionBenefit(xml.iCatholicism, FaithPointBonusCategory.BOOST_DIPLOMACY.value, 6, 100)
+        gc.setReligionBenefit(
+            xml.iCatholicism, FaithPointBonusCategory.BOOST_DIPLOMACY.value, 6, 100
+        )
         gc.setReligionBenefit(xml.iIslam, FaithPointBonusCategory.BOOST_DIPLOMACY.value, 5, 100)
-        gc.setReligionBenefit(xml.iProtestantism, FaithPointBonusCategory.BOOST_DIPLOMACY.value, 4, 100)
-        gc.setReligionBenefit(xml.iOrthodoxy, FaithPointBonusCategory.BOOST_DIPLOMACY.value, 3, 100)
+        gc.setReligionBenefit(
+            xml.iProtestantism, FaithPointBonusCategory.BOOST_DIPLOMACY.value, 4, 100
+        )
+        gc.setReligionBenefit(
+            xml.iOrthodoxy, FaithPointBonusCategory.BOOST_DIPLOMACY.value, 3, 100
+        )
 
         # a land tile that is normally impassable but the desired player can pass through it
         # gc.setStrategicTile( iVenecia, 56, 35 )
@@ -1145,7 +1177,7 @@ class RFCEBalance:
 
         gc.setProsecutorReligions(xml.iProsecutor, xml.iProsecutorClass)
         gc.setSaintParameters(
-            xml.iGreatProphet, Consts.iSaintBenefit, 20, 40
+            xml.iGreatProphet, GREAT_PROPHET_FAITH_POINT_BONUS, 20, 40
         )  # try to amass at least 20 and don't bother above 40 points
         gc.setIndependnets(Consts.iIndepStart, Consts.iIndepEnd, Consts.iBarbarian)
         gc.setPapalPlayer(Consts.iPope, xml.iCatholicism)
