@@ -455,53 +455,6 @@ colony_positions_xy=[
 (960,320), #Philippines
 ]
 
-# Absinthe: UP initialization
-
-iUP_Happiness = 0					# happiness bonus
-iUP_PerCityCommerce = 1				# commerce bonus per city
-iUP_CityTileYield = 2				# yield bonus on the city tile
-iUP_ReligiousTolerance = 3			# no instability from foreign religion
-iUP_CulturalTolerance = 4			# no unhappiness from foreign culture
-iUP_CommercePercent = 5				# global bonus to specific type of commerce - currently unused
-iUP_UnitProduction = 6				# after specific tech, faster unit production
-iUP_EnableCivics = 7				# always enable some civics (also use the WB)
-iUP_TradeRoutes = 8					# add some trade routes (sync with GlobalDefines.xml for max trade routes)
-iUP_ImprovementBonus = 9			# change the yield of a specific improvement
-iUP_PromotionI = 10					# give a promotion to all units for which it is valid
-iUP_PromotionII = 11				# give a promotion to all units regardless if it is valid - currently unused
-iUP_CanEnterTerrain = 12			# all units can enter the specified terrain type
-iUP_NoResistance = 13				# no resistance in conquered cities
-iUP_Conscription = 14				# can draft from cities with foreign culture - currently unused
-iUP_Inquisition = 15				# less instability from religious prosecution
-iUP_Emperor = 16					# no collapse/civil war and no city secession in core+normal areas, if you hold your historic capital (Python only)
-iUP_Faith = 17						# state religion spreads to newly acquired cities (found/trade/conquest) with a temple (Python only)
-iUP_Mercenaries = 18				# halves the cost of mercenaries (Python only)
-iUP_LandStability = 19				# less stability penalty from owning unstable land (Python only)
-iUP_Discovery = 20					# lower cost for the specified projects
-iUP_EndlessLand = 21				# lower city maintenance costs from both number of cities and city distance, also lower civic costs associated with cities
-iUP_ForeignSea = 22					# allows ships to enter foreign sea territory - currently unused (this is allowed by default for all civs' all naval units)
-iUP_Pious = 23						# increase the gain (and loss) of Faith Points
-iUP_PaganCulture = 24				# give bonus to culture if no state religion is present
-iUP_PaganHappy = 25					# give bonus to happiness if no state religion is present
-iUP_HealthFood = 26					# positive health contributes to city growth
-iUP_TerrainBonus = 27				# add bonus to one or more types of yield for a specific terrain
-iUP_FeatureBonus = 28				# add bonus to one or more types of yield for a specific feature
-iUP_StabilityConquestBoost = 29		# if stability is < 0, then get +1 stability on Conquest - currently unused
-iUP_StabilitySettler = 30			# don't lose stability from founding cities in Contested (border/outer/ok) and Foreign (unstable) Provinces - currently unused
-iUP_StabilityPlaceholder1 = 31		# currently unused
-iUP_StabilityPlaceholder2 = 32		# currently unused
-iUP_Janissary = 33					# free units for foreign religions (Python only)
-iUP_ImprovementBonus2 = 34			# change the yield of a specific improvement - in order to have bonuses for multiple improvements
-iUP_ImprovementBonus3 = 35			# change the yield of a specific improvement - in order to have bonuses for multiple improvements
-iUP_ImprovementBonus4 = 36			# change the yield of a specific improvement - in order to have bonuses for multiple improvements
-iUP_ImprovementBonus5 = 37			# change the yield of a specific improvement - in order to have bonuses for multiple improvements
-# the following are entirely in python, not even added in the .dll as enums (CvRhyes.h)
-iUP_SoundToll = 38					# gold for coastal cities in a region if the entry strait is controlled (Python only)
-iUP_NoAnarchyInstability = 39		# no anarchy instability on civic or religion change (Python only)
-iUP_ProvinceCommerce = 40			# extra commerce in capital for each controlled province (Python only)
-iUP_Defiance = 41					# extra units in all cities when a city is lost (Python only)
-
-
 iFP_Stability = 0		# stability bonus
 iFP_Civic = 1			# lower civic upkeep
 iFP_Growth = 2			# faster population growth

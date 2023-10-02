@@ -1,6 +1,6 @@
 from CvPythonExtensions import *
 import Consts
-from CoreTypes import Civ, StartingSituation
+from CoreTypes import Civ, StartingSituation, UniquePower
 import XMLConsts as xml
 import RFCEMaps
 import RFCUtils
@@ -496,133 +496,133 @@ class RFCEBalance:
         # iUP_ImprovementBonus, iParameter = iActivate * 100000 (1 to be active) + iImprovement * 1000 + iFoodBonus * 100 + iProductionBonus * 10 + iCommerceBonus (bonuses are limited to 0-9)
         # iUP_CityTileYield, iParameter = iActivate * 1000 (1 to be active) + iFoodBonus * 100 + iProductionBonus * 10 + iCommerceBonus, (bonuses are limited to 0-9)
 
-        gc.setUP(Consts.iBurgundy, Consts.iUP_Happiness, 1)
-        gc.setUP(Consts.iBurgundy, Consts.iUP_PerCityCommerce, 200)
+        gc.setUP(Consts.iBurgundy, UniquePower.HAPPINESS_BONUS.value, 1)
+        gc.setUP(Consts.iBurgundy, UniquePower.PER_CITY_COMMERCE_BONUS.value, 200)
 
-        gc.setUP(Consts.iByzantium, Consts.iUP_Emperor, 1)
-        gc.setUP(Consts.iByzantium, Consts.iUP_EnableCivics, xml.iCivicImperialism)
+        gc.setUP(Consts.iByzantium, UniquePower.NO_COLLAPSE_IN_CORE_AND_NORMAL_AREAS.value, 1)
+        gc.setUP(Consts.iByzantium, UniquePower.PRE_ACCESS_CIVICS.value, xml.iCivicImperialism)
 
-        gc.setUP(Consts.iFrankia, Consts.iUP_LandStability, 1)
+        gc.setUP(Consts.iFrankia, UniquePower.LESS_INSTABILITY_WITH_FOREIGN_LAND.value, 1)
 
-        gc.setUP(Consts.iArabia, Consts.iUP_Faith, 1)
+        gc.setUP(Consts.iArabia, UniquePower.SPREAD_STATE_RELIGION_TO_NEW_CITIES.value, 1)
 
-        gc.setUP(Consts.iBulgaria, Consts.iUP_NoResistance, 0)
+        gc.setUP(Consts.iBulgaria, UniquePower.NO_RESISTANCE.value, 0)
 
-        gc.setUP(Consts.iCordoba, Consts.iUP_PromotionI, xml.iPromotionMedic1)
-        gc.setUP(Consts.iCordoba, Consts.iUP_HealthFood, 50)
+        gc.setUP(Consts.iCordoba, UniquePower.PROMOTION_FOR_ALL_VALID_UNITS.value, xml.iPromotionMedic1)
+        gc.setUP(Consts.iCordoba, UniquePower.GROWTH_CITY_WITH_HEALTH_EXCESS.value, 50)
 
         gc.setUP(
             Consts.iMorocco,
-            Consts.iUP_TerrainBonus,
+            UniquePower.TERRAIN_BONUS.value,
             1 * 100000 + xml.iTerrainDesert * 1000 + 10 + 1,
         )
         gc.setUP(
-            Consts.iMorocco, Consts.iUP_FeatureBonus, 1 * 100000 + xml.iOasis * 1000 + 100 + 1
+            Consts.iMorocco, UniquePower.FEATURE_BONUS.value, 1 * 100000 + xml.iOasis * 1000 + 100 + 1
         )
 
-        gc.setUP(Consts.iSpain, Consts.iUP_Inquisition, 1)
-        gc.setUP(Consts.iSpain, Consts.iUP_PerCityCommerce, 2)
+        gc.setUP(Consts.iSpain, UniquePower.LESS_INSTABILITY_WITH_RELIGIOUS_PROSECUTION.value, 1)
+        gc.setUP(Consts.iSpain, UniquePower.PER_CITY_COMMERCE_BONUS.value, 2)
 
-        gc.setUP(Consts.iNorway, Consts.iUP_CanEnterTerrain, xml.iTerrainOcean)
-        gc.setUP(Consts.iNorway, Consts.iUP_StabilitySettler, 1)  # "hidden" part of the UP
+        gc.setUP(Consts.iNorway, UniquePower.CAN_ENTER_TERRAIN.value, xml.iTerrainOcean)
+        gc.setUP(Consts.iNorway, UniquePower.STABILITY_BONUS_FOUNDING.value, 1)  # "hidden" part of the UP
 
-        gc.setUP(Consts.iVenecia, Consts.iUP_EnableCivics, xml.iCivicMerchantRepublic)
-        # gc.setUP( iVenecia, iUP_ForeignSea, 1 )
+        gc.setUP(Consts.iVenecia, UniquePower.PRE_ACCESS_CIVICS.value, xml.iCivicMerchantRepublic)
+        # gc.setUP( iVenecia, UniquePower.ALLOW_SHIPS_IN_FOREIGN_SEA.value, 1 )
 
-        gc.setUP(Consts.iKiev, Consts.iUP_CityTileYield, 1 * 1000 + 100 * 2)
+        gc.setUP(Consts.iKiev, UniquePower.CITY_TILE_YIELD_BONUS.value, 1 * 1000 + 100 * 2)
 
-        gc.setUP(Consts.iHungary, Consts.iUP_Happiness, 1)
-        gc.setUP(Consts.iHungary, Consts.iUP_CulturalTolerance, 0)
+        gc.setUP(Consts.iHungary, UniquePower.HAPPINESS_BONUS.value, 1)
+        gc.setUP(Consts.iHungary, UniquePower.NO_UNHAPPINESS_WITH_FOREIGN_CULTURE.value, 0)
 
-        gc.setUP(Consts.iGermany, Consts.iUP_UnitProduction, xml.iGunpowder * 100 + 75)
+        gc.setUP(Consts.iGermany, UniquePower.FASTER_UNIT_PRODUCTION.value, xml.iGunpowder * 100 + 75)
 
-        gc.setUP(Consts.iPoland, Consts.iUP_ReligiousTolerance, 0)
+        gc.setUP(Consts.iPoland, UniquePower.NO_INSTABILITY_WITH_FOREIGN_RELIGION.value, 0)
 
-        gc.setUP(Consts.iLithuania, Consts.iUP_PaganCulture, 200)
-        gc.setUP(Consts.iLithuania, Consts.iUP_PaganHappy, 1)
+        gc.setUP(Consts.iLithuania, UniquePower.CULTURE_BONUS_WITH_NO_STATE_RELIGION.value, 200)
+        gc.setUP(Consts.iLithuania, UniquePower.HAPPINESS_BONUS_WITH_NO_STATE_RELIGION.value, 1)
 
         gc.setSupportModifiersAI(Consts.iMoscow, 10, 100, 20, 10, 100)  # sync with preset values
         gc.setSupportModifiersHu(Consts.iMoscow, 10, 100, 20, 10, 100)  # sync with preset values
-        gc.setUP(Consts.iMoscow, Consts.iUP_EndlessLand, 50)
+        gc.setUP(Consts.iMoscow, UniquePower.LOWER_CITY_MAINTENANCE_COST.value, 50)
 
         gc.setUP(
-            Consts.iGenoa, Consts.iUP_Mercenaries, 1
+            Consts.iGenoa, UniquePower.HALVE_COST_OF_MERCENARIES.value, 1
         )  # Absinthe: this actually has no effect, it is implemented in Mercenaries.py entirely
 
         gc.setUP(
             Consts.iScotland,
-            Consts.iUP_ImprovementBonus,
+            UniquePower.IMPROVEMENT_BONUS.value,
             1 * 100000 + xml.iImprovementFort * 1000 + 2,
         )
 
         gc.setUP(
             Consts.iEngland,
-            Consts.iUP_ImprovementBonus,
+            UniquePower.IMPROVEMENT_BONUS.value,
             1 * 100000 + xml.iImprovementWorkshop * 1000 + 1,
         )
         gc.setUP(
             Consts.iEngland,
-            Consts.iUP_ImprovementBonus2,
+            UniquePower.IMPROVEMENT_BONUS_2.value,
             1 * 100000 + xml.iImprovementCottage * 1000 + 10,
         )
         gc.setUP(
             Consts.iEngland,
-            Consts.iUP_ImprovementBonus3,
+            UniquePower.IMPROVEMENT_BONUS_3.value,
             1 * 100000 + xml.iImprovementHamlet * 1000 + 10,
         )
         gc.setUP(
             Consts.iEngland,
-            Consts.iUP_ImprovementBonus4,
+            UniquePower.IMPROVEMENT_BONUS_4.value,
             1 * 100000 + xml.iImprovementVillage * 1000 + 10,
         )
         gc.setUP(
             Consts.iEngland,
-            Consts.iUP_ImprovementBonus5,
+            UniquePower.IMPROVEMENT_BONUS_5.value,
             1 * 100000 + xml.iImprovementTown * 1000 + 10,
         )
 
         # Speed up East/West India Trading Companies and all Colonies
         gc.setUP(
             Consts.iPortugal,
-            Consts.iUP_Discovery,
+            UniquePower.LOWER_COST_FOR_PROJECTS.value,
             (xml.iNumNotColonies - 2) * 1000000 + (xml.iNumTotalColonies - 1) * 1000 + 30,
         )
-        gc.setUP(Consts.iPortugal, Consts.iUP_StabilitySettler, 1)  # "hidden" part of the UP
+        gc.setUP(Consts.iPortugal, UniquePower.STABILITY_BONUS_FOUNDING.value, 1)  # "hidden" part of the UP
 
         for i in range(Consts.iNumTotalPlayers):
             if not i == Consts.iAustria:
                 gc.setDiplomacyModifiers(i, Consts.iAustria, +4)
-        gc.setUP(Consts.iAustria, Consts.iUP_PerCityCommerce, 200)
+        gc.setUP(Consts.iAustria, UniquePower.PER_CITY_COMMERCE_BONUS.value, 200)
 
-        # gc.setUP( iTurkey, iUP_Conscription, 330 )
-        # gc.setUP( iTurkey, iUP_Conscription, 1 )
-        gc.setUP(Consts.iTurkey, Consts.iUP_Janissary, 1)
+        # gc.setUP( iTurkey, UniquePower.CONSCRIPTION.value, 330 )
+        # gc.setUP( iTurkey, UniquePower.CONSCRIPTION.value, 1 )
+        gc.setUP(Consts.iTurkey, UniquePower.FREE_UNITS_WITH_FOREIGN_RELIGIONS.value, 1)
 
-        gc.setUP(Consts.iSweden, Consts.iUP_PromotionI, xml.iPromotionFormation)
+        gc.setUP(Consts.iSweden, UniquePower.PROMOTION_FOR_ALL_VALID_UNITS.value, xml.iPromotionFormation)
 
-        gc.setUP(Consts.iNovgorod, Consts.iUP_EnableCivics, xml.iCivicBureaucracy)
+        gc.setUP(Consts.iNovgorod, UniquePower.PRE_ACCESS_CIVICS.value, xml.iCivicBureaucracy)
 
-        gc.setUP(Consts.iPrussia, Consts.iUP_EnableCivics, xml.iCivicTheocracy)
+        gc.setUP(Consts.iPrussia, UniquePower.PRE_ACCESS_CIVICS.value, xml.iCivicTheocracy)
         # Absinthe: handled in python currently
-        # gc.setUP( iPrussia, iUP_NoAnarchyInstability, 1 )
-
-        # Absinthe: handled in python currently
-        # gc.setUP( iAragon, iUP_ProvinceCommerce, 0 )
+        # gc.setUP( iPrussia, UniquePower.NO_INSTABILITY_WITH_CIVIC_AND_STATE_RELIGION_CHANGE.value, 1 )
 
         # Absinthe: handled in python currently
-        # gc.setUP( iScotland, iUP_Defiance, 1 )
+        # gc.setUP( iAragon, UniquePower.EXTRA_COMMERCE_BONUS.value, 0 )
 
-        gc.setUP(Consts.iDutch, Consts.iUP_TradeRoutes, 2)
+        # Absinthe: handled in python currently
+        # gc.setUP( iScotland, UniquePower.EXTRA_UNITS_WHEN_LOSING_CITY.value, 1 )
+
+        gc.setUP(Consts.iDutch, UniquePower.EXTRA_TRADE_ROUTES.value, 2)
         gc.setUP(
-            Consts.iDutch, Consts.iUP_Pious, 2
+            Consts.iDutch, UniquePower.IMPROVE_GAIN_FAITH_POINTS.value, 2
         )  # 3Miro: "hidden" buff to the Dutch FP, otherwise they have too little piety (not enough cities)
         gc.setUP(
             Consts.iDutch,
-            Consts.iUP_Discovery,
+            UniquePower.LOWER_COST_FOR_PROJECTS.value,
             (xml.iNumNotColonies - 2) * 1000000 + (xml.iNumTotalColonies - 1) * 1000 + 30,
         )  # "hidden" part of the UP
 
-        gc.setUP(Consts.iPope, Consts.iUP_Emperor, 1)
+        gc.setUP(Consts.iPope, UniquePower.NO_COLLAPSE_IN_CORE_AND_NORMAL_AREAS.value, 1)
 
         # GlobalWarming
         gc.setGlobalWarming(False)

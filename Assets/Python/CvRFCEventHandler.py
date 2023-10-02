@@ -33,7 +33,7 @@ import RFCEMaps
 from MiscData import MessageData
 from TimelineData import CIV_BIRTHDATE
 from CoreStructures import get_civ_by_id
-from CoreTypes import Scenario
+from CoreTypes import Scenario, UniquePower
 
 gc = CyGlobalContext()
 localText = CyTranslator()  # Absinthe
@@ -258,11 +258,11 @@ class CvRFCEventHandler:
             gc.getGame().getHolyCity(xml.iIslam).setNumRealBuilding(xml.iIslamicShrine, 1)
 
         # 3Miro: Arab UP
-        if gc.hasUP(playerType, Consts.iUP_Faith):
+        if gc.hasUP(playerType, UniquePower.SPREAD_STATE_RELIGION_TO_NEW_CITIES.value):
             self.up.faithUP(playerType, city)
 
         # Absinthe: Ottoman UP
-        if gc.hasUP(playerType, Consts.iUP_Janissary):
+        if gc.hasUP(playerType, UniquePower.FREE_UNITS_WITH_FOREIGN_RELIGIONS.value):
             self.up.janissaryNewCityUP(playerType, city, bConquest)
 
         # Absinthe: Scottish UP
@@ -489,7 +489,7 @@ class CvRFCEventHandler:
         city.setFood(city.growthThreshold() / 5)
 
         # 3MiroUP: spread religion on city foundation
-        if gc.hasUP(iOwner, Consts.iUP_Faith):
+        if gc.hasUP(iOwner, UniquePower.SPREAD_STATE_RELIGION_TO_NEW_CITIES.value):
             self.up.faithUP(iOwner, city)
 
         # Absinthe: If Protestantism has not been founded by the time the Dutch spawn, then the Dutch should found it with their first city
@@ -897,7 +897,7 @@ class CvRFCEventHandler:
             self.up.confederationUP(iPlayer)
 
         # Ottoman UP
-        if gc.hasUP(iPlayer, Consts.iUP_Janissary):
+        if gc.hasUP(iPlayer, UniquePower.FREE_UNITS_WITH_FOREIGN_RELIGIONS.value):
             self.up.janissaryDraftUP(iPlayer)
 
         self.pla.checkPlayerTurn(iGameTurn, iPlayer)

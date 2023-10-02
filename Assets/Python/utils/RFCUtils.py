@@ -1216,7 +1216,7 @@ class RFCUtils:
 
     def collapseImmune(self, iCiv):
         # 3MiroUP: Emperor
-        if gc.hasUP(iCiv, Consts.iUP_Emperor):
+        if gc.hasUP(iCiv, UniquePower.NO_COLLAPSE_IN_CORE_AND_NORMAL_AREAS.value):
             # print(" 3Miro: has the power: ",iCiv)
             plot = gc.getMap().plot(*CIV_CAPITAL_LOCATIONS[get_civ_by_id(iCiv)].to_tuple())
             if plot.isCity():
@@ -1229,7 +1229,7 @@ class RFCUtils:
 
     def collapseImmuneCity(self, iCiv, x, y):
         # 3MiroUP: Emperor
-        if gc.hasUP(iCiv, Consts.iUP_Emperor):
+        if gc.hasUP(iCiv, UniquePower.NO_COLLAPSE_IN_CORE_AND_NORMAL_AREAS.value):
             plot = gc.getMap().plot(*CIV_CAPITAL_LOCATIONS[get_civ_by_id(iCiv)].to_tuple())
             if plot.isCity():
                 if plot.getOwner() == iCiv:
@@ -1455,7 +1455,7 @@ class RFCUtils:
                         )
 
             # persecution countdown for the civ (causes indirect instability - stability.recalcCity)
-            if gc.hasUP(iOwner, Consts.iUP_Inquisition):  # Spanish UP
+            if gc.hasUP(iOwner, UniquePower.LESS_INSTABILITY_WITH_RELIGIOUS_PROSECUTION.value):  # Spanish UP
                 pPlayer.changeProsecutionCount(4)
             else:
                 # self.setProsecutionCount( iOwner, self.getProsecutionCount( iOwner ) + 10 )
@@ -1490,7 +1490,7 @@ class RFCUtils:
             )
 
             # persecution countdown for the civ (causes indirect instability - stability.recalcCity)
-            if gc.hasUP(iOwner, Consts.iUP_Inquisition):  # Spanish UP
+            if gc.hasUP(iOwner, UniquePower.LESS_INSTABILITY_WITH_RELIGIOUS_PROSECUTION.value):  # Spanish UP
                 pPlayer.changeProsecutionCount(2)
             else:
                 pPlayer.changeProsecutionCount(4)

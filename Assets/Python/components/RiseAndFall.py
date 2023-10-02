@@ -1345,7 +1345,7 @@ class RiseAndFall:
                         # Absinthe: also add core cities if they have less than 40% own culture (and the civ doesn't have the Cultural Tolerance UP)
                         if iProvType >= Consts.iProvincePotential:
                             if not bCollapseImmune and not gc.hasUP(
-                                iPlayer, Consts.iUP_CulturalTolerance
+                                iPlayer, UniquePower.NO_UNHAPPINESS_WITH_FOREIGN_CULTURE.value
                             ):
                                 if (
                                     city.countTotalCultureTimes100() > 0

@@ -59,7 +59,7 @@ class Stability:
                 if iProvinceType == Consts.iProvinceCore:
                     pPlayer.changeStabilityBase(Consts.iCathegoryExpansion, 1)
                 elif not gc.hasUP(
-                    iPlayer, Consts.iUP_StabilitySettler
+                    iPlayer, UniquePower.STABILITY_BONUS_FOUNDING.value
                 ):  # no instability with the Settler UP
                     if iProvinceType == Consts.iProvinceOuter:
                         pPlayer.changeStabilityBase(Consts.iCathegoryExpansion, -1)
@@ -151,7 +151,7 @@ class Stability:
         # if (iGameTurn % 6 == 0): #3 is too short to detect any change; must be a multiple of 3 anyway
         # gc.calcLastOwned() # Compute the RFC arrays (getlOwnedPlots,getlOwnedCities) in C instead
         # for iLoopCiv in range(iNumPlayers):
-        # if ( gc.hasUP(iLoopCiv, Consts.iUP_LandStability) ): #French UP
+        # if ( gc.hasUP(iLoopCiv, UniquePower.LESS_INSTABILITY_WITH_FOREIGN_LAND.value) ): #French UP
         # self.setOwnedPlotsLastTurn(iLoopCiv, 0)
         # else:
         # self.setOwnedPlotsLastTurn(iLoopCiv, gc.getlOwnedPlots(iLoopCiv))
@@ -304,7 +304,7 @@ class Stability:
         if iProvinceType == Consts.iProvinceCore:
             pPlayer.changeStabilityBase(Consts.iCathegoryExpansion, 1)
         elif not gc.hasUP(
-            iPlayer, Consts.iUP_StabilitySettler
+            iPlayer, UniquePower.STABILITY_BONUS_FOUNDING.value
         ):  # no instability with the Settler UP
             if iProvinceType == Consts.iProvinceOuter:
                 pPlayer.changeStabilityBase(Consts.iCathegoryExpansion, -1)
@@ -370,7 +370,7 @@ class Stability:
                 pOwner.changeStabilityBase(Consts.iCathegoryExpansion, -5)
                 pOwner.setStabilitySwing(pOwner.getStabilitySwing() - 5)
             elif gc.hasUP(
-                iOwner, Consts.iUP_Emperor
+                iOwner, UniquePower.NO_COLLAPSE_IN_CORE_AND_NORMAL_AREAS.value
             ):  # If Byzantium loses Constantinople, they should lose all non-core cities
                 pOwner.changeStabilityBase(Consts.iCathegoryExpansion, -20)
                 pOwner.setStabilitySwing(pOwner.getStabilitySwing() - 20)
@@ -714,7 +714,7 @@ class Stability:
             # Absinthe: This is the "We desire religious freedom!" unhappiness, from civics - currently from the Religious Law civic
             # 			also it is a negative counter with the current civic setup, so getReligionBadHappiness() == -1 with one non-state religion in the city
             if pCity.getReligionBadHappiness() < 0:
-                if not gc.hasUP(iPlayer, Consts.iUP_ReligiousTolerance):  # Polish UP
+                if not gc.hasUP(iPlayer, UniquePower.NO_INSTABILITY_WITH_FOREIGN_RELIGION.value):  # Polish UP
                     iCivicReligionInstability += 1
             if pCity.getHurryAngerModifier() > 0:
                 iHurryStability -= 1
@@ -729,7 +729,7 @@ class Stability:
             if (
                 iCivic4 != xml.iCivicFreeReligion
             ):  # Religious Tolerance negates stability penalties from non-state religions
-                if not gc.hasUP(iPlayer, Consts.iUP_ReligiousTolerance):  # Polish UP
+                if not gc.hasUP(iPlayer, UniquePower.NO_INSTABILITY_WITH_FOREIGN_RELIGION.value):  # Polish UP
                     if pCity.getNumForeignReligions() > 0:
                         # only calculate if Judaism is not the State Religion
                         if pPlayer.getStateReligion() != xml.iJudaism:
@@ -739,7 +739,7 @@ class Stability:
                         elif (
                             iPlayer == Consts.iTurkey
                         ):  # Janissary UP - not necessarily a historical aspect of it, but important for gameplay
-                            # elif ( gc.hasUP( iPlayer, Consts.iUP_Janissary )):
+                            # elif ( gc.hasUP( iPlayer, UniquePower.FREE_UNITS_WITH_FOREIGN_RELIGIONS.value )):
                             iReligionStability -= 1
                         else:
                             iReligionStability -= 2
@@ -761,7 +761,7 @@ class Stability:
             if (
                 (iTotalCulture > 0)
                 and ((pCity.getCulture(iPlayer) * 10000) / iTotalCulture < 40)
-                and not gc.hasUP(iPlayer, Consts.iUP_CulturalTolerance)
+                and not gc.hasUP(iPlayer, UniquePower.NO_UNHAPPINESS_WITH_FOREIGN_CULTURE.value)
             ):
                 # Absinthe: 1 less instability with the Vassalage Civic, so only -1 with less than 20%, 0 otherwise
                 if iCivic5 != xml.iCivicSubjugation:
@@ -1065,7 +1065,7 @@ class Stability:
         pPlayer = gc.getPlayer(iPlayer)
         iExpStability = 0
         iCivic5 = pPlayer.getCivics(5)
-        bIsUPLandStability = gc.hasUP(iPlayer, Consts.iUP_LandStability)
+        bIsUPLandStability = gc.hasUP(iPlayer, UniquePower.LESS_INSTABILITY_WITH_FOREIGN_LAND.value)
         iCivicBonus = 0
         iUPBonus = 0
         for pCity in utils.getCityList(iPlayer):
