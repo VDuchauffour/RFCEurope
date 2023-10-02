@@ -11,7 +11,14 @@ from StoredData import sd
 import Crusades
 
 from MiscData import PLAGUE_IMMUNITY, MessageData
-from CoreTypes import Civ, Scenario, StartingSituation, ProvinceTypes, UniquePower
+from CoreTypes import (
+    Civ,
+    Scenario,
+    StartingSituation,
+    ProvinceTypes,
+    UniquePower,
+    StabilityCategory,
+)
 from CivilizationsData import (
     CIV_AI_STOP_BIRTH_THRESHOLD,
     CIV_INITIAL_CONTACTS,
@@ -608,7 +615,7 @@ class RiseAndFall:
                 if pTurkey.getStateReligion() == xml.iIslam:
                     city.setHasReligion(xml.iIslam, True, True, False)
                 # some stability boost and flavour message
-                pTurkey.changeStabilityBase(Consts.iCathegoryExpansion, 6)
+                pTurkey.changeStabilityBase(StabilityCategory.EXPANSION.value, 6)
                 if utils.getHumanID() == iPlayer:
                     CyInterface().addMessage(
                         iPlayer,
@@ -1490,7 +1497,7 @@ class RiseAndFall:
                 iStability,
             )
             # Absinthe: loosing a city to secession/revolt gives a small boost to stability, to avoid a city-revolting chain reaction
-            pPlayer.changeStabilityBase(Consts.iCathegoryExpansion, 1)
+            pPlayer.changeStabilityBase(StabilityCategory.EXPANSION.value, 1)
             # Absinthe: AI declares war on the indy city right away
             teamPlayer = gc.getTeam(pPlayer.getTeam())
             iTeamIndy = gc.getPlayer(iIndy).getTeam()
@@ -1901,18 +1908,22 @@ class RiseAndFall:
 
         # Absinthe: the new civs start as slightly stable
         pDeadCiv.changeStabilityBase(
-            Consts.iCathegoryCities, -pDeadCiv.getStabilityBase(Consts.iCathegoryCities)
+            StabilityCategory.CITIES.value,
+            -pDeadCiv.getStabilityBase(StabilityCategory.CITIES.value),
         )
         pDeadCiv.changeStabilityBase(
-            Consts.iCathegoryCivics, -pDeadCiv.getStabilityBase(Consts.iCathegoryCivics)
+            StabilityCategory.CIVICS.value,
+            -pDeadCiv.getStabilityBase(StabilityCategory.CIVICS.value),
         )
         pDeadCiv.changeStabilityBase(
-            Consts.iCathegoryEconomy, -pDeadCiv.getStabilityBase(Consts.iCathegoryEconomy)
+            StabilityCategory.ECONOMY.value,
+            -pDeadCiv.getStabilityBase(StabilityCategory.ECONOMY.value),
         )
         pDeadCiv.changeStabilityBase(
-            Consts.iCathegoryExpansion, -pDeadCiv.getStabilityBase(Consts.iCathegoryExpansion)
+            StabilityCategory.EXPANSION.value,
+            -pDeadCiv.getStabilityBase(StabilityCategory.EXPANSION.value),
         )
-        pDeadCiv.changeStabilityBase(Consts.iCathegoryExpansion, 5)
+        pDeadCiv.changeStabilityBase(StabilityCategory.EXPANSION.value, 5)
 
         # Absinthe: refresh dynamic civ name for the new civ
         pDeadCiv.processCivNames()

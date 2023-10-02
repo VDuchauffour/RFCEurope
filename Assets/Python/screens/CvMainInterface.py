@@ -1,6 +1,7 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
+from CoreTypes import SpecialParameter
 import CvUtil
 import CvScreenEnums
 
@@ -3593,7 +3594,7 @@ class CvMainInterface:
                     eJanissaryXPText = (
                         ": Janissary ("
                         + unicode(
-                            gc.getPlayer(ePlayer).getPicklefreeParameter(Consts.iJanissaryPoints)
+                            gc.getPlayer(ePlayer).getPicklefreeParameter(SpecialParameter.JANISSARY_POINTS.value)
                         )
                         + "/300)"
                     )

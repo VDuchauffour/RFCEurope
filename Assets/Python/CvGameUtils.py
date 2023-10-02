@@ -5,7 +5,7 @@
 
 from CivilizationsData import CIV_RELIGIOUS_TOLERANCE
 from CoreStructures import get_civ_by_id, get_religion_by_id
-from CoreTypes import Religion
+from CoreTypes import Religion, StabilityCategory
 import CvUtil
 from CvPythonExtensions import *
 from MiscData import RELIGION_PERSECUTION_ORDER
@@ -688,7 +688,7 @@ class CvGameUtils:
                 )  # the value doesn't really matter, but has to remain > 0 after the first StabSwingAnarchy check of sta.updateBaseStability
                 # anarchy base instability
                 pPlayer.changeStabilityBase(
-                    Consts.iCathegoryCivics, min(0, max(-2, (-iNumCities + 4) / 7))
+                    StabilityCategory.CIVICS.value, min(0, max(-2, (-iNumCities + 4) / 7))
                 )  # 0 with 1-4 cities, -1 with 5-11 cities, -2 with at least 12 cities
 
             else:
@@ -699,7 +699,7 @@ class CvGameUtils:
                 )  # the value doesn't really matter, but has to remain > 0 after the first StabSwingAnarchy check of sta.updateBaseStability
                 # anarchy base instability
                 pPlayer.changeStabilityBase(
-                    Consts.iCathegoryCivics, min(0, max(-1, (-iNumCities + 6) / 7))
+                    StabilityCategory.CIVICS.value, min(0, max(-1, (-iNumCities + 6) / 7))
                 )  # reduced for the AI: 0 with 1-6 cities, -1 with at least 7
 
         lResult = 1

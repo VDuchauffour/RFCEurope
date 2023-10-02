@@ -1,5 +1,5 @@
 from CvPythonExtensions import *
-from CoreTypes import City, Civ, ProvinceStatus
+from CoreTypes import City, Civ, ProvinceStatus, StabilityCategory
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
 import PyHelpers
 import Popup
@@ -491,8 +491,6 @@ tDenmarkControlIII = [
 
 # tHugeHungaryControl = ( 0, 23, 99, 72 )
 totalLand = gc.getMap().getLandPlots()
-
-iCathegoryExpansion = Consts.iCathegoryExpansion
 
 
 class Victory:
@@ -2030,7 +2028,7 @@ class Victory:
     def wonUHV(self, iCiv, iUHV):
         pCiv = gc.getPlayer(iCiv)
         pCiv.setUHV(iUHV, 1)
-        pCiv.changeStabilityBase(iCathegoryExpansion, 3)
+        pCiv.changeStabilityBase(StabilityCategory.EXPANSION.value, 3)
         if utils.getHumanID() == iCiv:
             if iUHV == 0:
                 sText = "first"

@@ -882,7 +882,7 @@ class StabilityCategory(Enum):
 class SpecialParameter(Enum):
     HAS_STEPHANSDOM = 0
     HAS_ESCORIAL = 1
-    MERCENARY_COST_PER_TUN = 2
+    MERCENARY_COST_PER_TURN = 2
     JANISSARY_POINTS = 3
     HAS_UPPSALA_SHRINE = 4
     HAS_KOUTOUBIA_MOSQUE = 5

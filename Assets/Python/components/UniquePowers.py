@@ -1,10 +1,10 @@
 # Rhye's and Fall of Civilization: Europe - Unique Powers (only a couple of them is here, most are handled in the .dll)
 
 from CvPythonExtensions import *
+from CoreTypes import SpecialParameter
 import PyHelpers
 
 # import cPickle as pickle
-import Consts
 import XMLConsts as xml
 import Religions
 import RFCUtils
@@ -57,7 +57,7 @@ class UniquePowers:
                     iNewPoints += city.getPopulation()
                     break
 
-        iOldPoints = pPlayer.getPicklefreeParameter(Consts.iJanissaryPoints)
+        iOldPoints = pPlayer.getPicklefreeParameter(SpecialParameter.JANISSARY_POINTS.value)
 
         iNextJanissary = 200
         if pPlayer.isHuman():
@@ -96,7 +96,7 @@ class UniquePowers:
                 print(" New Janissary in ", pCity.getName())
                 iTotalPoints -= iNextJanissary
 
-        pPlayer.setPicklefreeParameter(Consts.iJanissaryPoints, iTotalPoints)
+        pPlayer.setPicklefreeParameter(SpecialParameter.JANISSARY_POINTS.value, iTotalPoints)
 
     def janissaryNewCityUP(self, iPlayer, city, bConquest):
         pPlayer = gc.getPlayer(iPlayer)
@@ -109,9 +109,9 @@ class UniquePowers:
                     iJanissaryPoint = iCityPopulation * 9
                 else:
                     iJanissaryPoint = iCityPopulation * 4
-                iOldPoints = pPlayer.getPicklefreeParameter(Consts.iJanissaryPoints)
+                iOldPoints = pPlayer.getPicklefreeParameter(SpecialParameter.JANISSARY_POINTS.value)
                 pPlayer.setPicklefreeParameter(
-                    Consts.iJanissaryPoints, iOldPoints + iJanissaryPoint
+                    SpecialParameter.JANISSARY_POINTS.value, iOldPoints + iJanissaryPoint
                 )
                 break
 

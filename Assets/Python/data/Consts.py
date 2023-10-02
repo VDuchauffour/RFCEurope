@@ -455,18 +455,3 @@ colony_positions_xy=[
 (960,320), #Philippines
 ]
 
-# special parameters 10 per player (picklefree)
-iIsHasStephansdom     = 0 # Stability parameter in Python
-iIsHasEscorial        = 1 # Stability parameter in Python
-iMercCostPerTurn      = 2 # Mercenaries
-iJanissaryPoints      = 3 # Janissary points
-iIsHasUppsalaShrine   = 4 # Stability parameter in Python
-iIsHasKoutoubiaMosque = 5 # Stability parameter in Python
-iIsHasMagnaCarta      = 6 # Stability parameter in Python
-iIsHasGalataTower     = 7 # Company parameter in Python
-
-# Stability categories
-iCathegoryCities = 0
-iCathegoryCivics = 1
-iCathegoryEconomy = 2
-iCathegoryExpansion = 3

@@ -6,12 +6,12 @@
 # 3Miro: we take the merc screen as it looks well. However, the rest of the mechanics have been changed mostly to remove unnecessary features that slow down things
 
 from CvPythonExtensions import *
+from CoreTypes import SpecialParameter
 import CvUtil
 import PyHelpers
 
 # import MercenaryUtils
 import Mercenaries
-import Consts
 import XMLConsts as xml
 
 # from sets import Set
@@ -766,7 +766,7 @@ class CvMercenaryManager:
         strCost = u"%s %c: %1.2f" % (
             "Mercenary Maintenance",
             gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar(),
-            0.01 * pPlayer.getPicklefreeParameter(Consts.iMercCostPerTurn),
+            0.01 * pPlayer.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN.value),
         )
 
         # Get the players current gold text
@@ -1076,7 +1076,7 @@ class CvMercenaryManager:
         totalPreInflatedCosts = pPlayer.calculatePreInflatedCosts()
         totalInflatedCosts = pPlayer.calculateInflatedCosts()
         # totalMercenaryCost = objMercenaryUtils.getPlayerMercenaryMaintenanceCost(iPlayer)
-        totalMercenaryCost = (pPlayer.getPicklefreeParameter(Consts.iMercCostPerTurn) + 99) / 100
+        totalMercenaryCost = (pPlayer.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN.value) + 99) / 100
         # totalMercenaryContractIncome = (pPlayer.getPlayerMercenaryContractIncome(iPlayer) + 99) / 100
         # Colony Upkeep
         iColonyNumber = pPlayer.getNumColonies()

@@ -7,7 +7,7 @@ from CivilizationsData import (
     CIVILIZATIONS,
 )
 from CoreStructures import get_civ_by_id, get_religion_by_id
-from CoreTypes import City, StartingSituation
+from CoreTypes import City, StartingSituation, StabilityCategory
 from LocationsData import CITIES
 import PyHelpers
 import Popup
@@ -1504,7 +1504,9 @@ class Religions:
 
     def doCounterReformationNo(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
-        pPlayer.changeStabilityBase(Consts.iCathegoryCities, max(1, pPlayer.getNumCities() / 3))
+        pPlayer.changeStabilityBase(
+            StabilityCategory.CITIES.value, max(1, pPlayer.getNumCities() / 3)
+        )
 
     ### End Reformation ###
 

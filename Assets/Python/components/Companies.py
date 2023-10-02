@@ -11,7 +11,7 @@ import Crusades
 from operator import itemgetter
 
 from MiscData import MessageData
-from CoreTypes import City, Scenario
+from CoreTypes import City, Scenario, SpecialParameter
 
 # globals
 utils = RFCUtils.RFCUtils()
@@ -205,7 +205,7 @@ class Companies:
         # Galata Tower ownership
         pPlayer = gc.getPlayer(iPlayer)
         if iBuilding == xml.iGalataTower:
-            pPlayer.setPicklefreeParameter(Consts.iIsHasGalataTower, 1)
+            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER.value, 1)
 
     def onCityAcquired(self, iOldOwner, iNewOwner, city):
 
@@ -223,8 +223,8 @@ class Companies:
         pOldOwner = gc.getPlayer(iOldOwner)
         pNewOwner = gc.getPlayer(iNewOwner)
         if city.isHasBuilding(xml.iGalataTower):
-            pNewOwner.setPicklefreeParameter(Consts.iIsHasGalataTower, 1)
-            pOldOwner.setPicklefreeParameter(Consts.iIsHasGalataTower, 0)
+            pNewOwner.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER.value, 1)
+            pOldOwner.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER.value, 0)
 
     def onCityRazed(self, iOldOwner, iPlayer, city):
 
@@ -232,8 +232,8 @@ class Companies:
         pOldOwner = gc.getPlayer(iOldOwner)
         pPlayer = gc.getPlayer(iPlayer)
         if city.isHasBuilding(xml.iGalataTower):
-            pPlayer.setPicklefreeParameter(Consts.iIsHasGalataTower, 0)
-            pOldOwner.setPicklefreeParameter(Consts.iIsHasGalataTower, 0)
+            pPlayer.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER.value, 0)
+            pOldOwner.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER.value, 0)
 
     def announceHuman(self, iCompany, city, bRemove=False):
         iHuman = utils.getHumanID()
@@ -417,7 +417,7 @@ class Companies:
                 iValue += 1
 
         # Galata Tower bonus: 2 for all cities, additional 2 for the wonder's city
-        if owner.getPicklefreeParameter(Consts.iIsHasGalataTower) == 1:
+        if owner.getPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER.value) == 1:
             iValue += 2
             if city.isHasBuilding(xml.iGalataTower):
                 iValue += 2

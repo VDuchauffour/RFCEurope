@@ -33,7 +33,7 @@ import RFCEMaps
 from MiscData import MessageData
 from TimelineData import CIV_BIRTHDATE
 from CoreStructures import get_civ_by_id
-from CoreTypes import City, Scenario, UniquePower
+from CoreTypes import City, Scenario, UniquePower, StabilityCategory
 from LocationsData import CITIES
 
 gc = CyGlobalContext()
@@ -365,7 +365,7 @@ class CvRFCEventHandler:
                     or city.isHasBuilding(xml.iCastle)
                 ):
                     city.setHasRealBuilding(utils.getUniqueBuilding(iNewOwner, xml.iCastle), True)
-                    pNewOwner.changeStabilityBase(Consts.iCathegoryExpansion, 1)
+                    pNewOwner.changeStabilityBase(StabilityCategory.EXPANSION.value, 1)
         # Sedna17, end
 
         # 3Miro: National wonders and city acquire by trade

@@ -1,9 +1,9 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
+from CoreTypes import SpecialParameter, StabilityCategory
 import CvUtil
 import CvScreenEnums
-import Consts
 
 
 import RFCUtils  # Rhye
@@ -230,7 +230,7 @@ class CvFinanceAdvisor:
         # Mercenary Upkeep
         # totalMercenaryMaintenanceCost = objMercenaryUtils.getPlayerMercenaryMaintenanceCost(self.iActiveLeader)
         totalMercenaryMaintenanceCost = (
-            player.getPicklefreeParameter(Consts.iMercCostPerTurn) + 99
+            player.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN.value) + 99
         ) / 100
 
         szTreasuryPanel = self.getNextWidgetName()
@@ -407,9 +407,9 @@ class CvFinanceAdvisor:
             -1,
             -1,
         )
-        iParameter1 = player.getStabilityVary(Consts.iCathegoryCities) + player.getStabilityBase(
-            Consts.iCathegoryCities
-        )
+        iParameter1 = player.getStabilityVary(
+            StabilityCategory.CITIES.value
+        ) + player.getStabilityBase(StabilityCategory.CITIES.value)
         if iParameter1 <= -6:
             self.printStars(
                 ePlayer,
@@ -493,9 +493,9 @@ class CvFinanceAdvisor:
             -1,
             -1,
         )
-        iParameter2 = player.getStabilityVary(Consts.iCathegoryCivics) + player.getStabilityBase(
-            Consts.iCathegoryCivics
-        )
+        iParameter2 = player.getStabilityVary(
+            StabilityCategory.CIVICS.value
+        ) + player.getStabilityBase(StabilityCategory.CIVICS.value)
         if iParameter2 <= -6:
             self.printStars(
                 ePlayer,
@@ -579,9 +579,9 @@ class CvFinanceAdvisor:
             -1,
             -1,
         )
-        iParameter3 = player.getStabilityVary(Consts.iCathegoryEconomy) + player.getStabilityBase(
-            Consts.iCathegoryEconomy
-        )
+        iParameter3 = player.getStabilityVary(
+            StabilityCategory.ECONOMY.value
+        ) + player.getStabilityBase(StabilityCategory.ECONOMY.value)
         if iParameter3 <= -7:
             self.printStars(
                 ePlayer,
@@ -666,8 +666,8 @@ class CvFinanceAdvisor:
             -1,
         )
         iParameter4 = player.getStabilityVary(
-            Consts.iCathegoryExpansion
-        ) + player.getStabilityBase(Consts.iCathegoryExpansion)
+            StabilityCategory.EXPANSION.value
+        ) + player.getStabilityBase(StabilityCategory.EXPANSION.value)
         if iParameter4 <= -8:
             self.printStars(
                 ePlayer,
@@ -1374,25 +1374,25 @@ class CvFinanceAdvisor:
         pPlayer = gc.getPlayer(ePlayer)
         if pPlayer.isHuman():
             # sString = utils.getParString( ePlayer, iCathegory )
-            if iCathegory == Consts.iCathegoryCities:
+            if iCathegory == StabilityCategory.CITIES.value:
                 sString = "%i | %i" % (
-                    pPlayer.getStabilityBase(Consts.iCathegoryCities),
-                    pPlayer.getStabilityVary(Consts.iCathegoryCities),
+                    pPlayer.getStabilityBase(StabilityCategory.CITIES.value),
+                    pPlayer.getStabilityVary(StabilityCategory.CITIES.value),
                 )
-            elif iCathegory == Consts.iCathegoryCivics:
+            elif iCathegory == StabilityCategory.CIVICS.value:
                 sString = "%i | %i" % (
-                    pPlayer.getStabilityBase(Consts.iCathegoryCivics),
-                    pPlayer.getStabilityVary(Consts.iCathegoryCivics),
+                    pPlayer.getStabilityBase(StabilityCategory.CIVICS.value),
+                    pPlayer.getStabilityVary(StabilityCategory.CIVICS.value),
                 )
-            elif iCathegory == Consts.iCathegoryEconomy:
+            elif iCathegory == StabilityCategory.ECONOMY.value:
                 sString = "%i | %i" % (
-                    pPlayer.getStabilityBase(Consts.iCathegoryEconomy),
-                    pPlayer.getStabilityVary(Consts.iCathegoryEconomy),
+                    pPlayer.getStabilityBase(StabilityCategory.ECONOMY.value),
+                    pPlayer.getStabilityVary(StabilityCategory.ECONOMY.value),
                 )
-            elif iCathegory == Consts.iCathegoryExpansion:
+            elif iCathegory == StabilityCategory.EXPANSION.value:
                 sString = "%i | %i" % (
-                    pPlayer.getStabilityBase(Consts.iCathegoryExpansion),
-                    pPlayer.getStabilityVary(Consts.iCathegoryExpansion),
+                    pPlayer.getStabilityBase(StabilityCategory.EXPANSION.value),
+                    pPlayer.getStabilityVary(StabilityCategory.EXPANSION.value),
                 )
             else:
                 sString = "%i" % (pPlayer.getStabilitySwing())
