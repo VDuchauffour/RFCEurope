@@ -1126,3 +1126,7 @@ class Lake(Enum):
     LAKE_NASIJARVI = 29
     LIMFJORDEN = 30
     TRONDHEIMFJORDEN = 31
+
+
+class City(Enum):
+    JERUSALEM = 0

@@ -1,12 +1,12 @@
 from CvPythonExtensions import *
 import Consts
-from CoreTypes import Civ, StartingSituation, UniquePower, FaithPointBonusCategory
+from CoreTypes import City, Civ, StartingSituation, UniquePower, FaithPointBonusCategory
 import XMLConsts as xml
 import RFCEMaps
 import RFCUtils
 from CivilizationsData import CIV_STARTING_SITUATION, CIV_RELIGION_SPEADING_THRESHOLD
 from MiscData import WORLD_WIDTH, WORLD_HEIGHT, GREAT_PROPHET_FAITH_POINT_BONUS
-from LocationsData import CIV_CAPITAL_LOCATIONS
+from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
 from TimelineData import CIV_BIRTHDATE
 from CoreStructures import get_civ_by_id, get_religion_by_id
 
@@ -656,7 +656,7 @@ class RFCEBalance:
         # set the religions and year of the great schism
         gc.setSchism(xml.iCatholicism, xml.iOrthodoxy, xml.i1053AD)
 
-        gc.setHoliestCity(Consts.tJerusalem[0], Consts.tJerusalem[1])
+        gc.setHoliestCity(*CITIES[City.JERUSALEM].to_tuple())
 
         # 3Miro: Faith Points benefits
         # gc.setReligionBenefit( iReligion, iFP_(whatever it is), iParameter, iCap )

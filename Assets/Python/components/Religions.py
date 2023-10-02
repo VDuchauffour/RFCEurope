@@ -7,7 +7,8 @@ from CivilizationsData import (
     CIVILIZATIONS,
 )
 from CoreStructures import get_civ_by_id, get_religion_by_id
-from CoreTypes import StartingSituation
+from CoreTypes import City, StartingSituation
+from LocationsData import CITIES
 import PyHelpers
 import Popup
 import Consts
@@ -579,7 +580,7 @@ class Religions:
                     lWeightValues = []
                     iJerusalemOwner = (
                         gc.getMap()
-                        .plot(Consts.tJerusalem[0], Consts.tJerusalem[1])
+                        .plot(*CITIES[City.JERUSALEM].to_tuple())
                         .getPlotCity()
                         .getOwner()
                     )

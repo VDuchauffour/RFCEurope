@@ -2,6 +2,7 @@
 # Implemented by AbsintheRed, based on the wonderful idea of embryodead
 
 from CvPythonExtensions import *
+from LocationsData import CITIES
 import PyHelpers
 import Consts
 import XMLConsts as xml
@@ -10,7 +11,7 @@ import Crusades
 from operator import itemgetter
 
 from MiscData import MessageData
-from CoreTypes import Scenario
+from CoreTypes import City, Scenario
 
 # globals
 utils = RFCUtils.RFCUtils()
@@ -75,7 +76,7 @@ class Companies:
             iMaxCompanies = 0
             # do not dissolve the Templars while Jerusalem is under Catholic control
             if iCompany == iTemplars:
-                plot = gc.getMap().plot(Consts.tJerusalem[0], Consts.tJerusalem[1])
+                plot = gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple())
                 if plot.isCity():
                     if (
                         gc.getPlayer(plot.getPlotCity().getOwner()).getStateReligion()
@@ -365,7 +366,7 @@ class Companies:
                     iValue += 2
 
         # additional bonus for the city of Jerusalem
-        if (city.getX(), city.getY()) == Consts.tJerusalem:
+        if (city.getX(), city.getY()) == CITIES[City.JERUSALEM].to_tuple():
             if iCompany in [iHospitallers, iTemplars, iTeutons]:
                 iValue += 3
 

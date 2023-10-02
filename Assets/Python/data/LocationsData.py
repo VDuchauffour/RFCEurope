@@ -2,6 +2,7 @@
 
 from CoreTypes import (
     AreaTypes,
+    City,
     Civ,
     CivGroup,
     Colony,
@@ -24,9 +25,11 @@ from CoreStructures import (
 from MiscData import WORLD_HEIGHT, WORLD_WIDTH
 
 
-# TODO: add an enum for significant cities and add coords here
-JERUSALEM = Tile((93, 5))
-
+CITIES = EnumDataMapper(
+    {
+        City.JERUSALEM: (93, 5),
+    }
+).apply(lambda x: Tile(x))
 
 REGIONS = EnumDataMapper(
     {

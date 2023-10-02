@@ -33,7 +33,8 @@ import RFCEMaps
 from MiscData import MessageData
 from TimelineData import CIV_BIRTHDATE
 from CoreStructures import get_civ_by_id
-from CoreTypes import Scenario, UniquePower
+from CoreTypes import City, Scenario, UniquePower
+from LocationsData import CITIES
 
 gc = CyGlobalContext()
 localText = CyTranslator()  # Absinthe
@@ -310,7 +311,7 @@ class CvRFCEventHandler:
         self.sta.onCityAcquired(owner, playerType, city, bConquest, bTrade)
 
         # 3Miro: Jerusalem's Golden Age Incentive
-        if tCity == Consts.tJerusalem:
+        if tCity == CITIES[City.JERUSALEM].to_tuple():
             pPlayer = gc.getPlayer(playerType)
             if pPlayer.getStateReligion() == xml.iCatholicism:
                 # Absinthe: interface message for the player
@@ -343,8 +344,8 @@ class CvRFCEventHandler:
                     if pPlayer.getStateReligion() in range(xml.iNumReligions):
                         pPlayer.initUnit(
                             xml.iHolyRelic,
-                            Consts.tJerusalem[0],
-                            Consts.tJerusalem[1],
+                            CITIES[City.JERUSALEM].x,
+                            CITIES[City.JERUSALEM].y,
                             UnitAITypes.NO_UNITAI,
                             DirectionTypes.DIRECTION_SOUTH,
                         )

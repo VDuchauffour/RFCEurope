@@ -1,6 +1,6 @@
 from CvPythonExtensions import *
-from CoreTypes import Civ
-from LocationsData import CIV_CAPITAL_LOCATIONS
+from CoreTypes import City, Civ
+from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
 import PyHelpers
 import Popup
 import Consts
@@ -1114,7 +1114,7 @@ class Victory:
         # UHV 2: Control Jerusalem in 1291
         elif iGameTurn == xml.i1291AD:
             if self.isPossibleUHV(Consts.iFrankia, 1, True):
-                pJPlot = gc.getMap().plot(Consts.tJerusalem[0], Consts.tJerusalem[1])
+                pJPlot = gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple())
                 if pJPlot.isCity():
                     if pJPlot.getPlotCity().getOwner() == Consts.iFrankia:
                         self.wonUHV(Consts.iFrankia, 1)

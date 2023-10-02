@@ -1,9 +1,9 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
-from CoreTypes import Civ
+from CoreTypes import City, Civ
 import CvUtil
-from LocationsData import CIV_CAPITAL_LOCATIONS
+from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
 import PyHelpers
 import Consts
 import XMLConsts as xml
@@ -2406,7 +2406,7 @@ class CvVictoryScreen:
         # UHV1
         sText1 += self.getProvinceString(vic.tFrankControl)
         # UHV2
-        tPlot = Consts.tJerusalem
+        tPlot = CITIES[City.JERUSALEM].to_tuple()
         sText2 += self.checkCity(
             tPlot, iPlayer, localText.getText("TXT_KEY_UHV_JERUSALEM", ()), True
         )

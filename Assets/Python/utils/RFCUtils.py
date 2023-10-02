@@ -1,10 +1,10 @@
 # Rhye's and Fall of Civilization: Europe - Utilities
 
 from CvPythonExtensions import *
-from CoreTypes import Religion, Scenario
+from CoreTypes import City, Religion, Scenario
 import CvUtil
 import CvScreenEnums
-from LocationsData import CIV_CAPITAL_LOCATIONS
+from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
 import RFCEMaps
 import PyHelpers
 import Popup  # Absinthe
@@ -1333,7 +1333,7 @@ class RFCUtils:
         # base chance to work: about 50-80%, based on faith:
         iChance = 50 + pPlayer.getFaith() / 3
         # lower chance for purging any religion from Jerusalem:
-        if (iPlotX, iPlotY) == Consts.tJerusalem:
+        if (iPlotX, iPlotY) == CITIES[City.JERUSALEM].to_tuple():
             iChance -= 24
         # lower chance if the city has the chosen religion's buildings/wonders:
         iBuildingChanceReduction = min(24, len(lReligionBuilding) * 4)

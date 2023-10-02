@@ -454,7 +454,6 @@ colony_positions_xy=[
 (110,220), #Louisiana
 (960,320), #Philippines
 ]
-tJerusalem = ( 93, 5 )
 
 # Province Status
 iProvinceOwn = 5      # own every tile
