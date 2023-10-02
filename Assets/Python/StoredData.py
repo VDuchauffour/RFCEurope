@@ -4,6 +4,7 @@ from CvPythonExtensions import *
 import PyHelpers
 import cPickle as pickle  # LOQ 2005-10-12
 import Consts
+from MiscData import NUM_CRUSADES
 
 # globals
 gc = CyGlobalContext()
@@ -106,7 +107,7 @@ class StoredData:
             "bBadPlague": False,
             "bFirstPlague": False,
             # Crusades
-            "lCrusadeInit": [-2] * Consts.iNumCrusades,
+            "lCrusadeInit": [-2] * NUM_CRUSADES,
             "bParticipate": False,
             "lVotingPower": [0] * Consts.iNumPlayers,  # major players only
             "iFavorite": 0,

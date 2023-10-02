@@ -13,7 +13,7 @@ from StoredData import sd
 import random
 
 from CoreTypes import Civ
-from MiscData import MessageData
+from MiscData import MessageData, NUM_CRUSADES
 from TimelineData import CIV_BIRTHDATE
 from CoreStructures import get_civ_by_id
 from LocationsData import CIV_CAPITAL_LOCATIONS
@@ -186,7 +186,7 @@ class Crusades:
         return sd.scriptDict["lNumUnitsSent"][iPlayer]
 
     def getActiveCrusade(self, iGameTurn):
-        for i in range(Consts.iNumCrusades):
+        for i in range(NUM_CRUSADES):
             iInit = sd.scriptDict["lCrusadeInit"][i]
             if iInit > -1 and iInit + 9 > iGameTurn:
                 return i
@@ -447,7 +447,7 @@ class Crusades:
         )
 
     def endCrusades(self):
-        for i in range(Consts.iNumCrusades):
+        for i in range(NUM_CRUSADES):
             if self.getCrusadeInit(i) < 0:
                 self.setCrusadeInit(i, 0)
         # Absinthe: reset sent unit counter after the Crusades are over (so it won't give Company benefits forever based on the last one)
@@ -567,7 +567,7 @@ class Crusades:
     def checkToStart(self, iGameTurn):
         # if Jerusalem is Islamic or Pagan, Crusade has been initialized and it has been at least 5 turns since the last crusade and there are any Catholics, begin crusade
         pJPlot = gc.getMap().plot(Consts.tJerusalem[0], Consts.tJerusalem[1])
-        for i in range(Consts.iNumCrusades):  # check the Crusades
+        for i in range(NUM_CRUSADES):  # check the Crusades
             if self.getCrusadeInit(i) == -1:  # if this one is to start
                 if (
                     pJPlot.isCity() and self.anyCatholic()

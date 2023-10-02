@@ -454,8 +454,6 @@ colony_positions_xy=[
 (110,220), #Louisiana
 (960,320), #Philippines
 ]
-# Crusade section / Towns
-iNumCrusades = 6
 tJerusalem = ( 93, 5 )
 
 # Province Status
