@@ -1,6 +1,6 @@
 from CvPythonExtensions import *
 import Consts
-from CoreTypes import Civ, StartingSituation, UniquePower
+from CoreTypes import Civ, StartingSituation, UniquePower, FaithPointBonusCategory
 import XMLConsts as xml
 import RFCEMaps
 import RFCUtils
@@ -668,19 +668,19 @@ class RFCEBalance:
         # iFP_Diplomacy: iAttitude += iParameter * num_FaithPoints / 100
         # 		i.e. 1 Faith Point = iParameter percent of an attitude point
 
-        gc.setReligionBenefit(xml.iOrthodoxy, Consts.iFP_Stability, 10, 100)
-        gc.setReligionBenefit(xml.iOrthodoxy, Consts.iFP_Civic, 50, 100)
+        gc.setReligionBenefit(xml.iOrthodoxy, FaithPointBonusCategory.BOOST_STABILITY.value, 10, 100)
+        gc.setReligionBenefit(xml.iOrthodoxy, FaithPointBonusCategory.REDUCE_CIVIC_UPKEEP.value, 50, 100)
 
-        gc.setReligionBenefit(xml.iIslam, Consts.iFP_Growth, 50, 100)
-        gc.setReligionBenefit(xml.iIslam, Consts.iFP_Units, 50, 100)
+        gc.setReligionBenefit(xml.iIslam, FaithPointBonusCategory.FASTER_POPULATION_GROWTH.value, 50, 100)
+        gc.setReligionBenefit(xml.iIslam, FaithPointBonusCategory.REDUCING_COST_UNITS.value, 50, 100)
 
-        gc.setReligionBenefit(xml.iProtestantism, Consts.iFP_Science, 30, 100)
-        gc.setReligionBenefit(xml.iProtestantism, Consts.iFP_Production, 30, 100)
+        gc.setReligionBenefit(xml.iProtestantism, FaithPointBonusCategory.REDUCING_TECH_COST.value, 30, 100)
+        gc.setReligionBenefit(xml.iProtestantism, FaithPointBonusCategory.REDUCING_WONDER_COST.value, 30, 100)
 
-        gc.setReligionBenefit(xml.iCatholicism, Consts.iFP_Diplomacy, 6, 100)
-        gc.setReligionBenefit(xml.iIslam, Consts.iFP_Diplomacy, 5, 100)
-        gc.setReligionBenefit(xml.iProtestantism, Consts.iFP_Diplomacy, 4, 100)
-        gc.setReligionBenefit(xml.iOrthodoxy, Consts.iFP_Diplomacy, 3, 100)
+        gc.setReligionBenefit(xml.iCatholicism, FaithPointBonusCategory.BOOST_DIPLOMACY.value, 6, 100)
+        gc.setReligionBenefit(xml.iIslam, FaithPointBonusCategory.BOOST_DIPLOMACY.value, 5, 100)
+        gc.setReligionBenefit(xml.iProtestantism, FaithPointBonusCategory.BOOST_DIPLOMACY.value, 4, 100)
+        gc.setReligionBenefit(xml.iOrthodoxy, FaithPointBonusCategory.BOOST_DIPLOMACY.value, 3, 100)
 
         # a land tile that is normally impassable but the desired player can pass through it
         # gc.setStrategicTile( iVenecia, 56, 35 )

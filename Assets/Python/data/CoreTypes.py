@@ -865,7 +865,7 @@ class UniquePower(Enum):
 class FaithPointBonusCategory(Enum):
     BOOST_STABILITY = 0
     REDUCE_CIVIC_UPKEEP = 1
-    FASTER_POP_GROWTH = 2
+    FASTER_POPULATION_GROWTH = 2
     REDUCING_COST_UNITS = 3
     REDUCING_TECH_COST = 4
     REDUCING_WONDER_COST = 5

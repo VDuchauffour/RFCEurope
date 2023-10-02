@@ -8,7 +8,7 @@ from LocationsData import CIV_CAPITAL_LOCATIONS
 from CoreStructures import get_civ_by_id
 from TimelineData import CIV_BIRTHDATE, CIV_COLLAPSE_DATE
 from MiscData import MessageData
-from CoreTypes import Scenario
+from CoreTypes import Scenario, FaithPointBonusCategory
 
 # import cPickle as pickle
 import Consts
@@ -714,7 +714,9 @@ class Stability:
             # Absinthe: This is the "We desire religious freedom!" unhappiness, from civics - currently from the Religious Law civic
             # 			also it is a negative counter with the current civic setup, so getReligionBadHappiness() == -1 with one non-state religion in the city
             if pCity.getReligionBadHappiness() < 0:
-                if not gc.hasUP(iPlayer, UniquePower.NO_INSTABILITY_WITH_FOREIGN_RELIGION.value):  # Polish UP
+                if not gc.hasUP(
+                    iPlayer, UniquePower.NO_INSTABILITY_WITH_FOREIGN_RELIGION.value
+                ):  # Polish UP
                     iCivicReligionInstability += 1
             if pCity.getHurryAngerModifier() > 0:
                 iHurryStability -= 1
@@ -729,7 +731,9 @@ class Stability:
             if (
                 iCivic4 != xml.iCivicFreeReligion
             ):  # Religious Tolerance negates stability penalties from non-state religions
-                if not gc.hasUP(iPlayer, UniquePower.NO_INSTABILITY_WITH_FOREIGN_RELIGION.value):  # Polish UP
+                if not gc.hasUP(
+                    iPlayer, UniquePower.NO_INSTABILITY_WITH_FOREIGN_RELIGION.value
+                ):  # Polish UP
                     if pCity.getNumForeignReligions() > 0:
                         # only calculate if Judaism is not the State Religion
                         if pPlayer.getStateReligion() != xml.iJudaism:
@@ -814,7 +818,7 @@ class Stability:
                 iMilitaryStability + iWarWStability / 3, -3
             )  # AI is also bad at handling war weariness
             iCityStability = min(max(iCityStability, -10), 8)
-        iCityStability += pPlayer.getFaithBenefit(Consts.iFP_Stability)
+        iCityStability += pPlayer.getFaithBenefit(FaithPointBonusCategory.BOOST_STABILITY.value)
         print(
             " City Stability for: ",
             iPlayer,
@@ -1065,7 +1069,9 @@ class Stability:
         pPlayer = gc.getPlayer(iPlayer)
         iExpStability = 0
         iCivic5 = pPlayer.getCivics(5)
-        bIsUPLandStability = gc.hasUP(iPlayer, UniquePower.LESS_INSTABILITY_WITH_FOREIGN_LAND.value)
+        bIsUPLandStability = gc.hasUP(
+            iPlayer, UniquePower.LESS_INSTABILITY_WITH_FOREIGN_LAND.value
+        )
         iCivicBonus = 0
         iUPBonus = 0
         for pCity in utils.getCityList(iPlayer):

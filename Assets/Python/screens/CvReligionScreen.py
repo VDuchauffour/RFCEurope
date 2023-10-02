@@ -4,10 +4,9 @@ from CvPythonExtensions import *
 import PyHelpers
 import CvUtil
 import CvScreenEnums
-import Consts
 import XMLConsts as xml
 import RFCUtils
-from CoreTypes import Scenario
+from CoreTypes import Scenario, FaithPointBonusCategory
 
 utils = RFCUtils.RFCUtils()
 PyPlayer = PyHelpers.PyPlayer
@@ -828,39 +827,39 @@ class CvReligionScreen:
         )
 
         szFaithBenefits = u""
-        if pPlayer.isFaithBenefit(Consts.iFP_Stability):
+        if pPlayer.isFaithBenefit(FaithPointBonusCategory.BOOST_STABILITY.value):
             sString = localText.getText("TXT_KEY_FAITH_STABILITY", ()) + (
-                " +%i " % pPlayer.getFaithBenefit(Consts.iFP_Stability)
+                " +%i " % pPlayer.getFaithBenefit(FaithPointBonusCategory.BOOST_STABILITY.value)
             )
             szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
-        if pPlayer.isFaithBenefit(Consts.iFP_Civic):
+        if pPlayer.isFaithBenefit(FaithPointBonusCategory.REDUCE_CIVIC_UPKEEP.value):
             sString = localText.getText("TXT_KEY_FAITH_CIVIC", ()) + (
-                " -%i percent " % pPlayer.getFaithBenefit(Consts.iFP_Civic)
+                " -%i percent " % pPlayer.getFaithBenefit(FaithPointBonusCategory.REDUCE_CIVIC_UPKEEP.value)
             )
             szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
-        if pPlayer.isFaithBenefit(Consts.iFP_Growth):
+        if pPlayer.isFaithBenefit(FaithPointBonusCategory.FASTER_POPULATION_GROWTH.value):
             sString = localText.getText("TXT_KEY_FAITH_GROWTH", ()) + (
-                " +%i percent " % pPlayer.getFaithBenefit(Consts.iFP_Growth)
+                " +%i percent " % pPlayer.getFaithBenefit(FaithPointBonusCategory.FASTER_POPULATION_GROWTH.value)
             )
             szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
-        if pPlayer.isFaithBenefit(Consts.iFP_Units):
+        if pPlayer.isFaithBenefit(FaithPointBonusCategory.REDUCING_COST_UNITS.value):
             sString = localText.getText("TXT_KEY_FAITH_UNITS", ()) + (
-                " -%i percent " % pPlayer.getFaithBenefit(Consts.iFP_Units)
+                " -%i percent " % pPlayer.getFaithBenefit(FaithPointBonusCategory.REDUCING_COST_UNITS.value)
             )
             szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
-        if pPlayer.isFaithBenefit(Consts.iFP_Science):
+        if pPlayer.isFaithBenefit(FaithPointBonusCategory.REDUCING_TECH_COST.value):
             sString = localText.getText("TXT_KEY_FAITH_SCIENCE", ()) + (
-                " -%i percent " % pPlayer.getFaithBenefit(Consts.iFP_Science)
+                " -%i percent " % pPlayer.getFaithBenefit(FaithPointBonusCategory.REDUCING_TECH_COST.value)
             )
             szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
-        if pPlayer.isFaithBenefit(Consts.iFP_Production):
+        if pPlayer.isFaithBenefit(FaithPointBonusCategory.REDUCING_WONDER_COST.value):
             sString = localText.getText("TXT_KEY_FAITH_PRODUCTION", ()) + (
-                " -%i percent " % pPlayer.getFaithBenefit(Consts.iFP_Production)
+                " -%i percent " % pPlayer.getFaithBenefit(FaithPointBonusCategory.REDUCING_WONDER_COST.value)
             )
             szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
-        if pPlayer.isFaithBenefit(Consts.iFP_Diplomacy):
+        if pPlayer.isFaithBenefit(FaithPointBonusCategory.BOOST_DIPLOMACY.value):
             sString = localText.getText("TXT_KEY_FAITH_DIPLOMACY", ()) + (
-                " +%i " % pPlayer.getFaithBenefit(Consts.iFP_Diplomacy)
+                " +%i " % pPlayer.getFaithBenefit(FaithPointBonusCategory.BOOST_DIPLOMACY.value)
             )
             szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
         if iProsecutionCount > 0:
