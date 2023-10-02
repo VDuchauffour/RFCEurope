@@ -1,7 +1,7 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
-from CoreTypes import City, Civ
+from CoreTypes import City, Civ, ProvinceStatus
 import CvUtil
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
 import PyHelpers
@@ -3421,7 +3421,7 @@ class CvVictoryScreen:
             sProvName = localText.getText(sProvName, ())
             # localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),())
             iHave = pActivePlayer.getProvinceCurrentState(iProv)
-            if iHave < Consts.iProvinceConquer:
+            if iHave < ProvinceStatus.CONQUER:
                 sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (sProvName)
             else:
                 sStringConqTemp += "  " + u"<color=0,255,0>%s</color>" % (sProvName)
@@ -3657,7 +3657,7 @@ class CvVictoryScreen:
                 )
             elif (
                 not pEnemy.isAlive()
-                and pActivePlayer.getProvinceCurrentState(iEnemyProvince) < Consts.iProvinceConquer
+                and pActivePlayer.getProvinceCurrentState(iEnemyProvince) < ProvinceStatus.CONQUER
             ):
                 sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (
                     localText.getText(sCivShortName, ())
@@ -3665,7 +3665,7 @@ class CvVictoryScreen:
             elif (
                 pEnemy.isAlive()
                 and not teamEnemy.isVassal(teamOwn.getID())
-                and pActivePlayer.getProvinceCurrentState(iEnemyProvince) < Consts.iProvinceConquer
+                and pActivePlayer.getProvinceCurrentState(iEnemyProvince) < ProvinceStatus.CONQUER
             ):
                 sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (
                     localText.getText(sCivShortName, ())

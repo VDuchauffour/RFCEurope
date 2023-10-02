@@ -21,6 +21,7 @@ from MiscData import (
 
 from TimelineData import CIV_BIRTHDATE
 from CoreStructures import get_civ_by_id, get_religion_by_id
+from CoreTypes import ProvinceTypes
 
 # globals
 gc = CyGlobalContext()
@@ -1808,13 +1809,13 @@ class RFCUtils:
 
         pPlayer = gc.getPlayer(iCiv)
         iProvType = pPlayer.getProvinceType(iProvince)
-        if iProvType == Consts.iProvinceCore:
+        if iProvType == ProvinceTypes.CORE:
             return 4  # core
-        elif iProvType == Consts.iProvinceNatural:
+        elif iProvType == ProvinceTypes.NATURAL:
             return 3  # natural/historical
-        elif iProvType == Consts.iProvincePotential:
+        elif iProvType == ProvinceTypes.POTENTIAL:
             return 2  # potential
-        elif iProvType == Consts.iProvinceOuter:
+        elif iProvType == ProvinceTypes.OUTER:
             return 1  # border/contested
         else:
             return 0  # unstable

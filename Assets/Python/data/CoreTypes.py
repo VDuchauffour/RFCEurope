@@ -903,7 +903,7 @@ class AreaTypes(IntEnum):
     BROADER = 2
 
 
-class ProvinceTypes(Enum):
+class ProvinceTypes: # TODO(IntEnum):
     NONE = 0
     OUTER = 1
     POTENTIAL = 2
@@ -911,7 +911,7 @@ class ProvinceTypes(Enum):
     CORE = 4
 
 
-class ProvinceStatus(Enum):
+class ProvinceStatus: # TODO (IntEnum):
     LOST = 2
     DOMINATE = 3
     CONQUER = 4

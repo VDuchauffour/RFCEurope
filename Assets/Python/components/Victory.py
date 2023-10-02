@@ -1,5 +1,5 @@
 from CvPythonExtensions import *
-from CoreTypes import City, Civ
+from CoreTypes import City, Civ, ProvinceStatus
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
 import PyHelpers
 import Popup
@@ -1283,7 +1283,7 @@ class Victory:
 
         # UHV 2: Conquer Constantinople, Thessaly, Morea, Crete and Cyprus by 1204
         if self.isPossibleUHV(Consts.iVenecia, 1, True):
-            if pVenecia.getProvinceCurrentState(xml.iP_Constantinople) >= Consts.iProvinceConquer:
+            if pVenecia.getProvinceCurrentState(xml.iP_Constantinople) >= ProvinceStatus.CONQUER:
                 if self.checkProvincesStates(Consts.iVenecia, tVenetianControlII):
                     self.wonUHV(Consts.iVenecia, 1)
         if iGameTurn == xml.i1204AD:
@@ -1372,7 +1372,7 @@ class Victory:
         # UHV 3: Control the province of Moscow or have Muscovy as a vassal in 1478
         if iGameTurn == xml.i1478AD:
             if self.isPossibleUHV(Consts.iNovgorod, 2, True):
-                if pNovgorod.getProvinceCurrentState(xml.iP_Moscow) >= Consts.iProvinceConquer:
+                if pNovgorod.getProvinceCurrentState(xml.iP_Moscow) >= ProvinceStatus.CONQUER:
                     self.wonUHV(Consts.iNovgorod, 2)
                 elif pMoscow.isAlive() and teamMoscow.isVassal(teamNovgorod.getID()):
                     self.wonUHV(Consts.iNovgorod, 2)
@@ -1391,7 +1391,7 @@ class Victory:
             if self.isPossibleUHV(Consts.iKiev, 1, True):
                 iConq = 0
                 for iProv in tKievControl:
-                    if pKiev.getProvinceCurrentState(iProv) >= Consts.iProvinceConquer:
+                    if pKiev.getProvinceCurrentState(iProv) >= ProvinceStatus.CONQUER:
                         iConq += 1
                 if iConq >= 10:
                     self.wonUHV(Consts.iKiev, 1)
@@ -2023,7 +2023,7 @@ class Victory:
     def checkProvincesStates(self, iPlayer, tProvinces):
         pPlayer = gc.getPlayer(iPlayer)
         for iProv in tProvinces:
-            if pPlayer.getProvinceCurrentState(iProv) < Consts.iProvinceConquer:
+            if pPlayer.getProvinceCurrentState(iProv) < ProvinceStatus.CONQUER:
                 return False
         return True
 

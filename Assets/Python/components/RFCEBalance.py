@@ -1,6 +1,6 @@
 from CvPythonExtensions import *
 import Consts
-from CoreTypes import City, Civ, StartingSituation, UniquePower, FaithPointBonusCategory
+from CoreTypes import City, Civ, ProvinceTypes, StartingSituation, UniquePower, FaithPointBonusCategory
 import XMLConsts as xml
 import RFCEMaps
 import RFCUtils
@@ -991,15 +991,15 @@ class RFCEBalance:
         # 	if the third parameter is -1: cannot Vassalize, 0: has to satisfy a condition (default), 1 can Vassalize without conditions
         # 	the condition is that either one of the players needs to have a city in a province that the other players considers >= the last parameter
         # 	the default for the last parameter is 0, we should call this at least once to set the parameter (it is the same for all players)
-        gc.setVassalagaeCondition(Consts.iCordoba, Consts.iArabia, 1, Consts.iProvinceOuter)
-        gc.setVassalagaeCondition(Consts.iArabia, Consts.iCordoba, 1, Consts.iProvinceOuter)
+        gc.setVassalagaeCondition(Consts.iCordoba, Consts.iArabia, 1, ProvinceTypes.OUTER)
+        gc.setVassalagaeCondition(Consts.iArabia, Consts.iCordoba, 1, ProvinceTypes.OUTER)
 
         # How much culture should we get into a province of this type, ignore the war and settler values (0,0)
-        gc.setProvinceTypeParams(Consts.iProvinceNone, 0, 0, 1, 3)  # 1/3 culture
-        gc.setProvinceTypeParams(Consts.iProvinceOuter, 0, 0, 1, 1)  # no change to culture
-        gc.setProvinceTypeParams(Consts.iProvincePotential, 0, 0, 1, 1)  # same as outer culture
-        gc.setProvinceTypeParams(Consts.iProvinceNatural, 0, 0, 2, 1)  # double-culture
-        gc.setProvinceTypeParams(Consts.iProvinceCore, 0, 0, 3, 1)  # triple-culture
+        gc.setProvinceTypeParams(ProvinceTypes.NONE, 0, 0, 1, 3)  # 1/3 culture
+        gc.setProvinceTypeParams(ProvinceTypes.OUTER, 0, 0, 1, 1)  # no change to culture
+        gc.setProvinceTypeParams(ProvinceTypes.POTENTIAL, 0, 0, 1, 1)  # same as outer culture
+        gc.setProvinceTypeParams(ProvinceTypes.NATURAL, 0, 0, 2, 1)  # double-culture
+        gc.setProvinceTypeParams(ProvinceTypes.CORE, 0, 0, 3, 1)  # triple-culture
 
         # block foundation of Protestantism except by a Catholic player
         gc.setParentSchismReligions(xml.iCatholicism, xml.iProtestantism)
@@ -1133,7 +1133,7 @@ class RFCEBalance:
         gc.createProvinceCrossreferenceList()  # make sure to call this AFTER setting all the Province entries
 
         gc.setProvinceTypeNumber(
-            Consts.iNumProvinceTypes
+           len(ProvinceTypes)
         )  # set the Number of Provinces, call this before you set any AI or culture modifiers
 
         ## Absinthe: disabled, was only needed for the AI regions

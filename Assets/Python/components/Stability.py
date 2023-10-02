@@ -8,7 +8,7 @@ from LocationsData import CIV_CAPITAL_LOCATIONS
 from CoreStructures import get_civ_by_id
 from TimelineData import CIV_BIRTHDATE, CIV_COLLAPSE_DATE
 from MiscData import MessageData
-from CoreTypes import Scenario, FaithPointBonusCategory
+from CoreTypes import Scenario, FaithPointBonusCategory, ProvinceTypes
 
 # import cPickle as pickle
 import Consts
@@ -56,14 +56,14 @@ class Stability:
                 # Province stability
                 iProv = RFCEMaps.tProvinceMap[pCity.getY()][pCity.getX()]
                 iProvinceType = pPlayer.getProvinceType(iProv)
-                if iProvinceType == Consts.iProvinceCore:
+                if iProvinceType == ProvinceTypes.CORE:
                     pPlayer.changeStabilityBase(Consts.iCathegoryExpansion, 1)
                 elif not gc.hasUP(
                     iPlayer, UniquePower.STABILITY_BONUS_FOUNDING.value
                 ):  # no instability with the Settler UP
-                    if iProvinceType == Consts.iProvinceOuter:
+                    if iProvinceType == ProvinceTypes.OUTER:
                         pPlayer.changeStabilityBase(Consts.iCathegoryExpansion, -1)
-                    elif iProvinceType == Consts.iProvinceNone:
+                    elif iProvinceType == ProvinceTypes.NONE:
                         pPlayer.changeStabilityBase(Consts.iCathegoryExpansion, -2)
 
                 # Building stability: only a chance for these, as all the permanent negative stability modifiers are missing up to the start
@@ -301,14 +301,14 @@ class Stability:
         pPlayer = gc.getPlayer(iPlayer)
         # Absinthe: +1 for core, -1 for contested, -2 for foreign provinces
         iProvinceType = pPlayer.getProvinceType(iProv)
-        if iProvinceType == Consts.iProvinceCore:
+        if iProvinceType == ProvinceTypes.CORE:
             pPlayer.changeStabilityBase(Consts.iCathegoryExpansion, 1)
         elif not gc.hasUP(
             iPlayer, UniquePower.STABILITY_BONUS_FOUNDING.value
         ):  # no instability with the Settler UP
-            if iProvinceType == Consts.iProvinceOuter:
+            if iProvinceType == ProvinceTypes.OUTER:
                 pPlayer.changeStabilityBase(Consts.iCathegoryExpansion, -1)
-            elif iProvinceType == Consts.iProvinceNone:
+            elif iProvinceType == ProvinceTypes.NONE:
                 pPlayer.changeStabilityBase(Consts.iCathegoryExpansion, -2)
         if pPlayer.getNumCities() < 5:  # early boost to small civs
             pPlayer.changeStabilityBase(Consts.iCathegoryExpansion, 1)
@@ -341,20 +341,20 @@ class Stability:
         iProvOwnerType = pOwner.getProvinceType(iProv)
         iProvConqType = pConq.getProvinceType(iProv)
 
-        if iProvOwnerType >= Consts.iProvinceNatural:
+        if iProvOwnerType >= ProvinceTypes.NATURAL:
             if iOwner == Consts.iScotland:  # Scotland UP part 2
                 pOwner.changeStabilityBase(Consts.iCathegoryExpansion, -2)
                 pOwner.setStabilitySwing(pOwner.getStabilitySwing() - 2)
             else:
                 pOwner.changeStabilityBase(Consts.iCathegoryExpansion, -3)
                 pOwner.setStabilitySwing(pOwner.getStabilitySwing() - 4)
-        elif iProvOwnerType < Consts.iProvinceNatural:
+        elif iProvOwnerType < ProvinceTypes.NATURAL:
             if iOwner == Consts.iScotland:  # Scotland UP part 2
                 pOwner.setStabilitySwing(pOwner.getStabilitySwing() - 1)
             else:
                 pOwner.setStabilitySwing(pOwner.getStabilitySwing() - 2)
 
-        if iProvConqType >= Consts.iProvinceNatural:
+        if iProvConqType >= ProvinceTypes.NATURAL:
             pConq.changeStabilityBase(Consts.iCathegoryExpansion, 1)
             pConq.setStabilitySwing(pConq.getStabilitySwing() + 3)
 
@@ -1087,7 +1087,7 @@ class Stability:
             )
 
             iExpStability += tStabilityPenalty[iProvType]
-            if iProvType <= Consts.iProvinceOuter:
+            if iProvType <= ProvinceTypes.OUTER:
                 if iCivic5 == xml.iCivicImperialism:  # Imperialism
                     iCivicBonus += 1
                 if bIsUPLandStability:  # French UP
@@ -1096,10 +1096,10 @@ class Stability:
         iExpStability += iUPBonus  # French UP
         if pPlayer.getCivics(5) != xml.iCivicOccupation:
             iExpStability -= 3 * pPlayer.getForeignCitiesInMyProvinceType(
-                Consts.iProvinceCore
+                ProvinceTypes.CORE
             )  # -3 stability for each foreign/enemy city in your core provinces, without the Militarism civic
             iExpStability -= 1 * pPlayer.getForeignCitiesInMyProvinceType(
-                Consts.iProvinceNatural
+                ProvinceTypes.NATURAL
             )  # -1 stability for each foreign/enemy city in your natural provinces, without the Militarism civic
         if pPlayer.getMaster() > -1:
             iExpStability += 8

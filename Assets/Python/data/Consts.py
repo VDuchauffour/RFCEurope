@@ -455,20 +455,6 @@ colony_positions_xy=[
 (960,320), #Philippines
 ]
 
-# Province Status
-iProvinceOwn = 5      # own every tile
-iProvinceConquer = 4  # own every city (capture or settle) or own every tile
-iProvinceDominate = 3 # 2*sum of population + owned tiles is more for you than the sum total of everyone else (True if conquer is True)
-iProvinceLost = 2     # you have no cities and others have cities in it
-
-# ProvinceTypes
-iProvinceNone      = 0 # this is the default, use it for everything too far away to be considered
-iProvinceOuter     = 1 # small stability hit on owning
-iProvincePotential = 2 # changes to Core or Natural as soon as conquered - only to Natural currently
-iProvinceNatural   = 3 # stable, small penalty for not conquering it
-iProvinceCore      = 4 # stable, large penalty for not conquering it
-iNumProvinceTypes  = 5
-
 # special parameters 10 per player (picklefree)
 iIsHasStephansdom     = 0 # Stability parameter in Python
 iIsHasEscorial        = 1 # Stability parameter in Python

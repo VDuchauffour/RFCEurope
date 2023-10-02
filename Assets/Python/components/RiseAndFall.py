@@ -11,7 +11,7 @@ from StoredData import sd
 import Crusades
 
 from MiscData import PLAGUE_IMMUNITY, MessageData
-from CoreTypes import Civ, Scenario, StartingSituation
+from CoreTypes import Civ, Scenario, StartingSituation, ProvinceTypes
 from CivilizationsData import (
     CIV_AI_STOP_BIRTH_THRESHOLD,
     CIV_INITIAL_CONTACTS,
@@ -1308,7 +1308,7 @@ class RiseAndFall:
                         iProvType = pPlayer.getProvinceType(city.getProvince())
                         # Absinthe: if forced revolt, all cities go into the list by default (apart from the Byzantine UP and the special ones above)
                         if bForce:
-                            if iProvType >= Consts.iProvincePotential:
+                            if iProvType >= ProvinceTypes.POTENTIAL:
                                 if not bCollapseImmune:
                                     cityListInCore.append(city)
                             else:
@@ -1317,7 +1317,7 @@ class RiseAndFall:
                         # 			if the city is in a contested province, the city is added a couple more times by default, if in a foreign province, a lot more times
                         # Absinthe: bigger chance to choose the city if unhappy
                         if city.angryPopulation(0) > 0:
-                            if iProvType >= Consts.iProvincePotential:
+                            if iProvType >= ProvinceTypes.POTENTIAL:
                                 if not bCollapseImmune:
                                     for i in range(2):
                                         cityListInCore.append(city)
@@ -1327,23 +1327,23 @@ class RiseAndFall:
                         # Absinthe: health issues do not cause city secession in core provinces for anyone
                         # 			also less chance from unhealth for cities in contested and foreign provinces
                         if city.goodHealth() - city.badHealth(False) < -1:
-                            if iProvType < Consts.iProvincePotential:
+                            if iProvType < ProvinceTypes.POTENTIAL:
                                 cityListInNotCore.append(city)
                         # Absinthe: also not a cause for secession in core provinces, no need to punish the player this much (and especially the AI) for using the civic
                         if city.getReligionBadHappiness() < 0:
-                            if iProvType < Consts.iProvincePotential:
+                            if iProvType < ProvinceTypes.POTENTIAL:
                                 for i in range(2):
                                     cityListInNotCore.append(city)
                         # Absinthe: no defensive units in the city increase chance
                         if city.getNoMilitaryPercentAnger() > 0:
-                            if iProvType >= Consts.iProvincePotential:
+                            if iProvType >= ProvinceTypes.POTENTIAL:
                                 if not bCollapseImmune:
                                     cityListInCore.append(city)
                             else:
                                 for i in range(2):
                                     cityListInNotCore.append(city)
                         # Absinthe: also add core cities if they have less than 40% own culture (and the civ doesn't have the Cultural Tolerance UP)
-                        if iProvType >= Consts.iProvincePotential:
+                        if iProvType >= ProvinceTypes.POTENTIAL:
                             if not bCollapseImmune and not gc.hasUP(
                                 iPlayer, UniquePower.NO_UNHAPPINESS_WITH_FOREIGN_CULTURE.value
                             ):
@@ -1369,7 +1369,7 @@ class RiseAndFall:
                                     for i in range(2):
                                         cityListInCore.append(city)
                         # Absinthe: cities in outer and unstable provinces have chance by default, the number of times they are added is modified by the civ's own culture in the city
-                        elif iProvType == Consts.iProvinceOuter:
+                        elif iProvType == ProvinceTypes.OUTER:
                             if (
                                 city.countTotalCultureTimes100() > 0
                                 and (
@@ -1405,7 +1405,7 @@ class RiseAndFall:
                             else:
                                 for i in range(4):
                                     cityListInNotCore.append(city)
-                        elif iProvType == Consts.iProvinceNone:
+                        elif iProvType == ProvinceTypes.NONE:
                             if (
                                 city.countTotalCultureTimes100() > 0
                                 and (
