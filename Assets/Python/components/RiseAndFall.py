@@ -712,13 +712,11 @@ class RiseAndFall:
                         )
 
     def setEarlyLeaders(self):
-        for iPlayer in range(Consts.iNumMajorPlayers):
-            if Consts.tEarlyLeaders[iPlayer] != Consts.tLeaders[iPlayer][0]:
-                if not gc.getPlayer(iPlayer).isHuman():
-                    gc.getPlayer(iPlayer).setLeader(Consts.tEarlyLeaders[iPlayer])
-                    print(
-                        "leader starting switch:", Consts.tEarlyLeaders[iPlayer], "in civ", iPlayer
-                    )
+        for civ in CIVILIZATIONS.get_majors():
+            if civ.leaders.early != civ.leaders.primary and not civ.get_player().isHuman():
+                leader = civ.leaders.early
+                civ.get_player().setLeader(leader.value)
+                print("leader starting switch:", leader.value, "in civ", civ.id)
 
     def setWarOnSpawn(self):
         # Absinthe: setting the initial wars on gamestart
@@ -883,25 +881,12 @@ class RiseAndFall:
 
     def checkPlayerTurn(self, iGameTurn, iPlayer):
         # Absinthe & Merijn: leader switching with any number of leaders
-        if len(Consts.tLeaders[iPlayer]) > 1:
-            for tLeader in reversed(Consts.tLateLeaders[iPlayer]):
+        late_leaders = CIVILIZATIONS[iPlayer].leaders.late
+        if late_leaders:
+            for tLeader in reversed(late_leaders):
                 if iGameTurn >= tLeader[1]:
                     self.switchLateLeaders(iPlayer, tLeader)
                     break
-
-        # Absinthe: potential leader switching on anarchy
-        # switch leader on first anarchy if early leader is different from primary one, and in a late game anarchy period to a late leader
-        # if (len(tLeaders[iPlayer]) > 1):
-        # 	if (tEarlyLeaders[iPlayer] != tLeaders[iPlayer][0]):
-        # 		if (iGameTurn > CIV_BIRTHDATE[get_civ_by_id(iPlayer)]+3 and iGameTurn < CIV_BIRTHDATE[get_civ_by_id(iPlayer)]+50):
-        # 			if (gc.getPlayer(iPlayer).getAnarchyTurns() != 0):
-        # 				gc.getPlayer(iPlayer).setLeader(tLeaders[iPlayer][0])
-        # 				print ("leader early switch:", tLeaders[iPlayer][0], "in civ", iPlayer)
-        # 	elif (iGameTurn >= tLateLeaders[iPlayer][1]):
-        # 		if (tLateLeaders[iPlayer][0] != tLeaders[iPlayer][0]):
-        # 			if (gc.getPlayer(iPlayer).getAnarchyTurns() != 0):
-        # 				gc.getPlayer(iPlayer).setLeader(tLateLeaders[iPlayer][0])
-        # 				print ("leader late switch:", tLateLeaders[iPlayer][0], "in civ", iPlayer)
 
         # 3Miro: English cheat, the AI is utterly incompetent when it has to launch an invasion on an island
         # 			if in 1300AD Dublin is still Barbarian, it will flip to England
@@ -958,8 +943,7 @@ class RiseAndFall:
             or utils.getStability(iPlayer) <= -10
             or gc.getGame().getSorenRandNum(100, "die roll") < iThreshold
         ):
-            gc.getPlayer(iPlayer).setLeader(iLeader)
-            # print ("leader late switch:", tLateLeaders[iPlayer][iLeaderIndex], "in civ", iPlayer)
+            gc.getPlayer(iPlayer).setLeader(iLeader.value)
 
             # Absinthe: message about the leader switch for the human player
             iHuman = utils.getHumanID()
@@ -1715,20 +1699,20 @@ class RiseAndFall:
 
         # Absinthe: we shouldn't get a previous leader on respawn - would be changed to a newer one in a couple turns anyway
         # 			instead we have a random chance to remain with the leader before the collapse, or to switch to the next one
-        tLeaderCiv = Consts.tLeaders[iDeadCiv]
-        if len(tLeaderCiv) > 1:
-            for iLeader in range(
-                len(tLeaderCiv) - 1
-            ):  # no change if we are already at the last leader
-                if pDeadCiv.getLeader() == tLeaderCiv[iLeader]:
+        leaders = CIVILIZATIONS[iDeadCiv].leaders.late
+        if leaders:
+            # no change if we are already at the last leader
+            # for iLeader in range(len(tLeaderCiv) - 1):
+            for leader in leaders[:-1]:
+                if pDeadCiv.getLeader() == leader[0].value:
                     iRnd = gc.getGame().getSorenRandNum(5, "odds")
                     if iRnd > 1:  # 60% chance for the next leader
                         print(
                             "leader switch after resurrection",
                             pDeadCiv.getLeader(),
-                            tLeaderCiv[iLeader],
+                            leader[0].value,
                         )
-                        pDeadCiv.setLeader(tLeaderCiv[iLeader])
+                        pDeadCiv.setLeader(leader[0].value)
                     break
         # Absinthe: old code for leader-change on respawn
         # if (len(tLeaders[iDeadCiv]) > 1):
