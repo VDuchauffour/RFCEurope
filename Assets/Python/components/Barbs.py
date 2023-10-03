@@ -1,6 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Barbarian units and cities
 
 from CvPythonExtensions import *
+from CoreTypes import Civ
 import PyHelpers  # LOQ
 import Popup
 import RFCUtils
@@ -17,7 +18,7 @@ utils = RFCUtils.RFCUtils()
 localText = CyTranslator()
 
 
-pBarbarian = gc.getPlayer(Consts.iBarbarian)
+pBarbarian = gc.getPlayer(Civ.BARBARIAN.value)
 teamBarbarian = gc.getTeam(pBarbarian.getTeam())
 
 
@@ -28,21 +29,29 @@ teamBarbarian = gc.getTeam(pBarbarian.getTeam())
 # 		Barbarian cities start with 2 additional defender units
 # 		Walls (and other buildings) can be added with the onCityBuilt function, in RiseAndFall.py
 # 500 AD
-tTangier = ([((27, 16), "Tangier", 100)], Consts.iIndependent2, 1, xml.iCordobanBerber, 2, -1, 0)
-tBordeaux = ([((37, 38), "Burdigala", 100)], Consts.iBarbarian, 2, xml.iArcher, 0, -1, 0)
+tTangier = (
+    [((27, 16), "Tangier", 100)],
+    Civ.INDEPENDENT_2.value,
+    1,
+    xml.iCordobanBerber,
+    2,
+    -1,
+    0,
+)
+tBordeaux = ([((37, 38), "Burdigala", 100)], Civ.BARBARIAN.value, 2, xml.iArcher, 0, -1, 0)
 tAlger = (
     [((40, 16), "Alger", 60), ((34, 13), "Tlemcen", 40)],
-    Consts.iIndependent3,
+    Civ.INDEPENDENT_3.value,
     1,
     xml.iArcher,
     1,
     xml.iCatholicism,
     0,
 )
-tBarcelona = ([((40, 28), "Barcino", 100)], Consts.iIndependent2, 1, xml.iArcher, 1, -1, 0)
+tBarcelona = ([((40, 28), "Barcino", 100)], Civ.INDEPENDENT_2.value, 1, xml.iArcher, 1, -1, 0)
 tToulouse = (
     [((41, 34), "Tolosa", 30), ((40, 34), "Tolosa", 30), ((42, 32), "Narbo", 40)],
-    Consts.iBarbarian,
+    Civ.BARBARIAN.value,
     1,
     xml.iArcher,
     0,
@@ -51,7 +60,7 @@ tToulouse = (
 )
 tMarseilles = (
     [((46, 32), "Massilia", 50), ((46, 33), "Aquae Sextiae", 50)],
-    Consts.iIndependent,
+    Civ.INDEPENDENT.value,
     1,
     xml.iArcher,
     1,
@@ -60,20 +69,36 @@ tMarseilles = (
 )
 tNantes = (
     [((36, 43), "Naoned", 50), ((35, 43), "Gwened", 30), ((37, 44), "Roazhon", 20)],
-    Consts.iIndependent2,
+    Civ.INDEPENDENT_2.value,
     1,
     xml.iArcher,
     1,
     -1,
     0,
 )
-tCaen = ([((40, 47), "Caen", 100)], Consts.iIndependent4, 2, xml.iArcher, 1, xml.iCatholicism, 1)
-tLyon = ([((46, 37), "Lyon", 100)], Consts.iIndependent3, 2, xml.iArcher, 2, xml.iCatholicism, 1)
-tTunis = ([((49, 17), "Tunis", 100)], Consts.iIndependent4, 2, xml.iArcher, 1, -1, 0)
-tYork = ([((39, 59), "Eboracum", 100)], Consts.iIndependent4, 1, xml.iArcher, 2, -1, 1)
+tCaen = (
+    [((40, 47), "Caen", 100)],
+    Civ.INDEPENDENT_4.value,
+    2,
+    xml.iArcher,
+    1,
+    xml.iCatholicism,
+    1,
+)
+tLyon = (
+    [((46, 37), "Lyon", 100)],
+    Civ.INDEPENDENT_3.value,
+    2,
+    xml.iArcher,
+    2,
+    xml.iCatholicism,
+    1,
+)
+tTunis = ([((49, 17), "Tunis", 100)], Civ.INDEPENDENT_4.value, 2, xml.iArcher, 1, -1, 0)
+tYork = ([((39, 59), "Eboracum", 100)], Civ.INDEPENDENT_4.value, 1, xml.iArcher, 2, -1, 1)
 tLondon = (
     [((41, 52), "Londinium", 100)],
-    Consts.iIndependent,
+    Civ.INDEPENDENT.value,
     2,
     xml.iArcher,
     2,
@@ -82,7 +107,7 @@ tLondon = (
 )
 tMilan = (
     [((52, 37), "Mediolanum", 100)],
-    Consts.iIndependent,
+    Civ.INDEPENDENT.value,
     2,
     xml.iArcher,
     2,
@@ -91,18 +116,18 @@ tMilan = (
 )
 tFlorence = (
     [((54, 32), "Florentia", 40), ((53, 32), "Pisae", 40), ((57, 31), "Ankon", 20)],
-    Consts.iIndependent2,
+    Civ.INDEPENDENT_2.value,
     2,
     xml.iArcher,
     2,
     xml.iCatholicism,
     0,
 )
-tTripoli = ([((54, 8), "Tripoli", 100)], Consts.iBarbarian, 1, xml.iArcher, 1, -1, 0)
-tAugsburg = ([((55, 41), "Augsburg", 100)], Consts.iIndependent3, 1, xml.iArcher, 2, -1, 0)
+tTripoli = ([((54, 8), "Tripoli", 100)], Civ.BARBARIAN.value, 1, xml.iArcher, 1, -1, 0)
+tAugsburg = ([((55, 41), "Augsburg", 100)], Civ.INDEPENDENT_3.value, 1, xml.iArcher, 2, -1, 0)
 tNapoli = (
     [((59, 24), "Neapolis", 40), ((60, 25), "Beneventum", 40), ((62, 24), "Tarentum", 20)],
-    Consts.iIndependent,
+    Civ.INDEPENDENT.value,
     2,
     xml.iArcher,
     1,
@@ -111,17 +136,17 @@ tNapoli = (
 )
 tRagusa = (
     [((64, 28), "Ragusa", 100)],
-    Consts.iIndependent2,
+    Civ.INDEPENDENT_2.value,
     1,
     xml.iArcher,
     2,
     xml.iCatholicism,
     0,
 )
-tSeville = ([((27, 21), "Hispalis", 100)], Consts.iIndependent4, 1, xml.iArcher, 2, -1, 0)
+tSeville = ([((27, 21), "Hispalis", 100)], Civ.INDEPENDENT_4.value, 1, xml.iArcher, 2, -1, 0)
 tPalermo = (
     [((55, 19), "Palermo", 60), ((58, 17), "Syracuse", 40)],
-    Consts.iIndependent3,
+    Civ.INDEPENDENT_3.value,
     2,
     xml.iArcher,
     1,
@@ -131,7 +156,7 @@ tPalermo = (
 # 552 AD
 tInverness = (
     [((37, 67), "Inbhir Nis", 50), ((37, 65), "Scaig", 50)],
-    Consts.iBarbarian,
+    Civ.BARBARIAN.value,
     1,
     xml.iArcher,
     1,
@@ -139,11 +164,19 @@ tInverness = (
     0,
 )  # reduced to town on spawn of Scotland
 # 600 AD
-tRhodes = ([((80, 13), "Rhodes", 100)], Consts.iIndependent2, 1, xml.iArcher, 1, xml.iOrthodoxy, 0)
+tRhodes = (
+    [((80, 13), "Rhodes", 100)],
+    Civ.INDEPENDENT_2.value,
+    1,
+    xml.iArcher,
+    1,
+    xml.iOrthodoxy,
+    0,
+)
 # 640 AD
 tNorwich = (
     [((43, 55), "Norwich", 100)],
-    Consts.iIndependent3,
+    Civ.INDEPENDENT_3.value,
     1,
     xml.iArcher,
     1,
@@ -151,12 +184,28 @@ tNorwich = (
     1,
 )  # reduced to town on spawn of England
 # 670 AD
-tKairouan = ([((48, 14), "Kairouan", 100)], Consts.iIndependent2, 1, xml.iArcher, 1, xml.iIslam, 0)
+tKairouan = (
+    [((48, 14), "Kairouan", 100)],
+    Civ.INDEPENDENT_2.value,
+    1,
+    xml.iArcher,
+    1,
+    xml.iIslam,
+    0,
+)
 # 680 AD
-tToledo = ([((30, 27), "Toledo", 100)], Consts.iBarbarian, 1, xml.iArcher, 1, xml.iCatholicism, 1)
+tToledo = (
+    [((30, 27), "Toledo", 100)],
+    Civ.BARBARIAN.value,
+    1,
+    xml.iArcher,
+    1,
+    xml.iCatholicism,
+    1,
+)
 tLeicester = (
     [((39, 56), "Ligeraceaster", 100)],
-    Consts.iIndependent,
+    Civ.INDEPENDENT.value,
     1,
     xml.iArcher,
     1,
@@ -166,7 +215,7 @@ tLeicester = (
 # 700 AD
 tValencia = (
     [((36, 25), "Valencia", 100)],
-    Consts.iIndependent,
+    Civ.INDEPENDENT.value,
     1,
     xml.iArcher,
     1,
@@ -175,7 +224,7 @@ tValencia = (
 )
 tPamplona = (
     [((35, 32), "Pamplona", 70), ((34, 33), "Pamplona", 30)],
-    Consts.iIndependent4,
+    Civ.INDEPENDENT_4.value,
     1,
     xml.iCrossbowman,
     2,
@@ -184,7 +233,7 @@ tPamplona = (
 )
 tLubeck = (
     [((57, 54), "Liubice", 40), ((57, 53), "Liubice", 60)],
-    Consts.iIndependent2,
+    Civ.INDEPENDENT_2.value,
     1,
     xml.iArcher,
     2,
@@ -193,7 +242,7 @@ tLubeck = (
 )
 tPorto = (
     [((23, 31), "Portucale", 100)],
-    Consts.iIndependent3,
+    Civ.INDEPENDENT_3.value,
     1,
     xml.iCrossbowman,
     2,
@@ -202,7 +251,7 @@ tPorto = (
 )
 tDublin = (
     [((32, 58), "Teamhair", 100)],
-    Consts.iBarbarian,
+    Civ.BARBARIAN.value,
     1,
     xml.iSpearman,
     1,
@@ -211,7 +260,7 @@ tDublin = (
 )  # Hill of Tara, later becomes Dublin
 tDownpatrick = (
     [((33, 61), "Rath Celtair", 20), ((29, 60), "Cruiachain", 30), ((29, 56), "Caisel", 50)],
-    Consts.iBarbarian,
+    Civ.BARBARIAN.value,
     1,
     xml.iArcher,
     0,
@@ -219,15 +268,15 @@ tDownpatrick = (
     1,
 )  # Cruiachain = Rathcroghan, later becomes Sligo; Caisel = Cashel, later becomes Cork
 # 760 AD
-tTonsberg = ([((57, 65), "Tonsberg", 100)], Consts.iIndependent3, 1, xml.iArcher, 2, -1, 0)
+tTonsberg = ([((57, 65), "Tonsberg", 100)], Civ.INDEPENDENT_3.value, 1, xml.iArcher, 2, -1, 0)
 # 768 AD
-tRaska = ([((68, 28), "Ras", 100)], Consts.iIndependent2, 1, xml.iArcher, 2, -1, 1)
+tRaska = ([((68, 28), "Ras", 100)], Civ.INDEPENDENT_2.value, 1, xml.iArcher, 2, -1, 1)
 # 780 AD
-tFez = ([((29, 12), "Fes", 100)], Consts.iIndependent4, 1, xml.iCrossbowman, 2, -1, 1)
+tFez = ([((29, 12), "Fes", 100)], Civ.INDEPENDENT_4.value, 1, xml.iCrossbowman, 2, -1, 1)
 # 800 AD
 tMilanR = (
     [((52, 37), "Milano", 100)],
-    Consts.iIndependent,
+    Civ.INDEPENDENT.value,
     4,
     xml.iArcher,
     2,
@@ -237,17 +286,17 @@ tMilanR = (
 # tFlorenceR = ( [ ((54, 32), "Firenze", 100) ], iIndependent2, 4, xml.iArcher, 2, xml.iCatholicism, 0 ) #respawn, doesn't work with the multiple options in 500AD
 tPrague = (
     [((60, 44), "Praha", 100)],
-    Consts.iIndependent,
+    Civ.INDEPENDENT.value,
     1,
     xml.iCrossbowman,
     2,
     xml.iCatholicism,
     1,
 )
-tKursk = ([((90, 48), "Kursk", 100)], Consts.iIndependent4, 1, xml.iArcher, 2, -1, 0)
+tKursk = ([((90, 48), "Kursk", 100)], Civ.INDEPENDENT_4.value, 1, xml.iArcher, 2, -1, 0)
 tCalais = (
     [((44, 50), "Calais", 50), ((45, 50), "Dunkerque", 50)],
-    Consts.iIndependent3,
+    Civ.INDEPENDENT_3.value,
     1,
     xml.iCrossbowman,
     2,
@@ -256,7 +305,7 @@ tCalais = (
 )
 tNidaros = (
     [((57, 71), "Nidaros", 100)],
-    Consts.iIndependent3,
+    Civ.INDEPENDENT_3.value,
     1,
     xml.iArcher,
     1,
@@ -265,17 +314,25 @@ tNidaros = (
 )  # Trondheim
 tUppsala = (
     [((65, 66), "Uppsala", 100)],
-    Consts.iIndependent4,
+    Civ.INDEPENDENT_4.value,
     1,
     xml.iArcher,
     2,
     -1,
     1,
 )  # reduced to town on spawn of Sweden
-tBeloozero = ([((87, 65), "Beloozero", 100)], Consts.iIndependent4, 1, xml.iCrossbowman, 1, -1, 1)
+tBeloozero = (
+    [((87, 65), "Beloozero", 100)],
+    Civ.INDEPENDENT_4.value,
+    1,
+    xml.iCrossbowman,
+    1,
+    -1,
+    1,
+)
 tZagreb = (
     [((62, 34), "Sisak", 100)],
-    Consts.iIndependent,
+    Civ.INDEPENDENT.value,
     2,
     xml.iArcher,
     2,
@@ -285,7 +342,7 @@ tZagreb = (
 # 850 AD
 tBrennabor = (
     [((59, 50), "Brennabor", 50), ((60, 50), "Brennabor", 50)],
-    Consts.iBarbarian,
+    Civ.BARBARIAN.value,
     1,
     xml.iArcher,
     2,
@@ -297,7 +354,7 @@ tBrennabor = (
 # 880 AD
 tApulum = (
     [((73, 35), "Belograd", 80), ((73, 37), "Napoca", 20)],
-    Consts.iIndependent,
+    Civ.INDEPENDENT.value,
     1,
     xml.iArcher,
     2,
@@ -307,7 +364,7 @@ tApulum = (
 # 900 AD
 tTvanksta = (
     [((69, 53), "Tvanksta", 100)],
-    Consts.iIndependent4,
+    Civ.INDEPENDENT_4.value,
     1,
     xml.iCrossbowman,
     2,
@@ -316,7 +373,7 @@ tTvanksta = (
 )  # Königsberg
 tKrakow = (
     [((68, 44), "Krakow", 100)],
-    Consts.iIndependent3,
+    Civ.INDEPENDENT_3.value,
     1,
     xml.iCrossbowman,
     2,
@@ -325,7 +382,7 @@ tKrakow = (
 )
 tRiga = (
     [((74, 58), "Riga", 100)],
-    Consts.iIndependent,
+    Civ.INDEPENDENT.value,
     2,
     xml.iCrossbowman,
     2,
@@ -334,7 +391,7 @@ tRiga = (
 )  # maybe call it Duna in the early pediod (Duna is the name of a sheltered natural harbor near Riga)
 tWales = (
     [((36, 54), "Caerdydd", 50), ((35, 57), "Aberffraw", 50)],
-    Consts.iBarbarian,
+    Civ.BARBARIAN.value,
     1,
     xml.iArcher,
     1,
@@ -343,7 +400,7 @@ tWales = (
 )  # Cardiff and Caernarfon
 tVisby = (
     [((67, 60), "Visby", 100)],
-    Consts.iIndependent2,
+    Civ.INDEPENDENT_2.value,
     1,
     xml.iCrossbowman,
     1,
@@ -353,7 +410,7 @@ tVisby = (
 # 911 AD
 tCaenR = (
     [((40, 47), "Caen", 100)],
-    Consts.iIndependent2,
+    Civ.INDEPENDENT_2.value,
     1,
     xml.iCrossbowman,
     2,
@@ -361,12 +418,12 @@ tCaenR = (
     0,
 )  # respawn, on the establishment of the Duchy of Normandy
 # 960 AD
-tMinsk = ([((79, 52), "Minsk", 100)], Consts.iIndependent3, 1, xml.iCrossbowman, 2, -1, 0)
-tSmolensk = ([((84, 55), "Smolensk", 100)], Consts.iIndependent4, 1, xml.iCrossbowman, 1, -1, 0)
+tMinsk = ([((79, 52), "Minsk", 100)], Civ.INDEPENDENT_3.value, 1, xml.iCrossbowman, 2, -1, 0)
+tSmolensk = ([((84, 55), "Smolensk", 100)], Civ.INDEPENDENT_4.value, 1, xml.iCrossbowman, 1, -1, 0)
 # 988 AD
 tDublinR = (
     [((32, 58), "Dubh Linn", 100)],
-    Consts.iBarbarian,
+    Civ.BARBARIAN.value,
     1,
     xml.iCrossbowman,
     1,
@@ -374,11 +431,19 @@ tDublinR = (
     1,
 )  # respawn, on the traditional Irish foundation date of Dublin
 # 1010 AD
-tYaroslavl = ([((92, 61), "Yaroslavl", 100)], Consts.iIndependent3, 1, xml.iCrossbowman, 1, -1, 0)
+tYaroslavl = (
+    [((92, 61), "Yaroslavl", 100)],
+    Civ.INDEPENDENT_3.value,
+    1,
+    xml.iCrossbowman,
+    1,
+    -1,
+    0,
+)
 # 1050 AD
 tGroningen = (
     [((52, 54), "Groningen", 100)],
-    Consts.iIndependent2,
+    Civ.INDEPENDENT_2.value,
     1,
     xml.iCrossbowman,
     2,
@@ -387,7 +452,7 @@ tGroningen = (
 )
 tKalmar = (
     [((64, 60), "Kalmar", 100)],
-    Consts.iIndependent2,
+    Civ.INDEPENDENT_2.value,
     2,
     xml.iCrossbowman,
     1,
@@ -399,7 +464,7 @@ tKalmar = (
 # 1110 AD
 tGraz = (
     [((61, 37), "Graz", 100)],
-    Consts.iIndependent3,
+    Civ.INDEPENDENT_3.value,
     2,
     xml.iCrossbowman,
     2,
@@ -409,7 +474,7 @@ tGraz = (
 # 1124 AD
 tHalych = (
     [((77, 41), "Halych", 100)],
-    Consts.iIndependent2,
+    Civ.INDEPENDENT_2.value,
     2,
     xml.iCrossbowman,
     2,
@@ -417,12 +482,20 @@ tHalych = (
     0,
 )
 # 1200 AD
-tRigaR = ([((74, 58), "Riga", 100)], Consts.iIndependent, 3, xml.iCrossbowman, 2, -1, 1)  # respawn
+tRigaR = (
+    [((74, 58), "Riga", 100)],
+    Civ.INDEPENDENT.value,
+    3,
+    xml.iCrossbowman,
+    2,
+    -1,
+    1,
+)  # respawn
 # tSaraiBatu = ( [ ((99, 40), "Sarai Batu", 100) ], iBarbarian, 1, xml.iMongolKeshik, 2, -1, 0) #out of the map, not that important to represent the Mongol invasions this way
 # 1227 AD
 tTripoliR = (
     [((54, 8), "Tarabulus", 100)],
-    Consts.iBarbarian,
+    Civ.BARBARIAN.value,
     3,
     xml.iArbalest,
     2,
@@ -430,12 +503,12 @@ tTripoliR = (
     1,
 )  # respawn
 # 1250 AD
-tAbo = ([((71, 66), "Abo", 100)], Consts.iIndependent4, 1, xml.iCrossbowman, 1, -1, 0)
-tPerekop = ([((87, 36), "Or Qapi", 100)], Consts.iBarbarian, 1, xml.iMongolKeshik, 2, -1, 0)
+tAbo = ([((71, 66), "Abo", 100)], Civ.INDEPENDENT_4.value, 1, xml.iCrossbowman, 1, -1, 0)
+tPerekop = ([((87, 36), "Or Qapi", 100)], Civ.BARBARIAN.value, 1, xml.iMongolKeshik, 2, -1, 0)
 # 1320 AD
 tNizhnyNovgorod = (
     [((97, 58), "Nizhny Novgorod", 100)],
-    Consts.iIndependent,
+    Civ.INDEPENDENT.value,
     1,
     xml.iCrossbowman,
     1,
@@ -443,11 +516,11 @@ tNizhnyNovgorod = (
     0,
 )
 # 1392 AD
-tTanais = ([((96, 38), "Tana", 100)], Consts.iBarbarian, 1, xml.iLongbowman, 2, xml.iIslam, 0)
+tTanais = ([((96, 38), "Tana", 100)], Civ.BARBARIAN.value, 1, xml.iLongbowman, 2, xml.iIslam, 0)
 # 1410 AD
 tReykjavik = (
     [((2, 70), "Reykjavik", 100)],
-    Consts.iIndependent,
+    Civ.INDEPENDENT.value,
     1,
     xml.iVikingBerserker,
     2,
@@ -457,7 +530,7 @@ tReykjavik = (
 # 1530 AD
 tValletta = (
     [((57, 14), "Valletta", 100)],
-    Consts.iIndependent4,
+    Civ.INDEPENDENT_4.value,
     1,
     xml.iKnightofStJohns,
     3,
@@ -571,7 +644,7 @@ lMinorNations = [
     ],
     [
         xml.iP_Scotland,
-        [Consts.iScotland],
+        [Civ.SCOTLAND.value],
         [],
         [xml.i1297AD, xml.i1569AD, xml.i1715AD],
         [20, 10, 20],
@@ -581,7 +654,7 @@ lMinorNations = [
     ],
     [
         xml.iP_Catalonia,
-        [Consts.iAragon],
+        [Civ.ARAGON.value],
         [],
         [xml.i1164AD + 10, xml.i1640AD],
         [20, 10],
@@ -591,7 +664,7 @@ lMinorNations = [
     ],
     [
         xml.iP_Jerusalem,
-        [Consts.iArabia, Consts.iTurkey, Consts.iByzantium],
+        [Civ.ARABIA.value, Civ.OTTOMAN.value, Civ.BYZANTIUM.value],
         [
             xml.iIslam,
         ],
@@ -621,7 +694,7 @@ lMinorNations = [
     ],
     [
         xml.iP_Syria,
-        [Consts.iArabia, Consts.iTurkey, Consts.iByzantium],
+        [Civ.ARABIA.value, Civ.OTTOMAN.value, Civ.BYZANTIUM.value],
         [
             xml.iIslam,
         ],
@@ -661,7 +734,7 @@ lMinorNations = [
     ],
     [
         xml.iP_Fez,
-        [Consts.iMorocco],
+        [Civ.MOROCCO.value],
         [],
         [xml.i1473AD],
         [30],
@@ -735,7 +808,7 @@ class Barbs:
         # Mediterranean Pirates (Light before 1500, then heavy for rest of game)
         if xml.i960AD <= iGameTurn < xml.i1401AD:
             self.spawnPirate(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (9, 15),
                 (55, 33),
                 xml.iWarGalley,
@@ -751,7 +824,7 @@ class Barbs:
             )
         elif iGameTurn >= xml.i1401AD:
             self.spawnPirate(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (9, 15),
                 (55, 33),
                 xml.iCorsair,
@@ -767,7 +840,7 @@ class Barbs:
             )
             # extra Corsairs around Tunisia
             self.spawnPirate(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (42, 15),
                 (54, 23),
                 xml.iCorsair,
@@ -783,7 +856,7 @@ class Barbs:
             )
         if xml.i1200AD <= iGameTurn < xml.i1500AD:
             self.spawnPirate(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (9, 15),
                 (55, 33),
                 xml.iCogge,
@@ -799,7 +872,7 @@ class Barbs:
             )
         elif iGameTurn >= xml.i1500AD:
             self.spawnPirate(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (9, 15),
                 (55, 33),
                 xml.iGalleon,
@@ -817,7 +890,7 @@ class Barbs:
         # Germanic Barbarians throughout Western Europe (France, Germany)
         if iGameTurn < xml.i600AD:
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (43, 42),
                 (50, 50),
                 xml.iAxeman,
@@ -829,9 +902,9 @@ class Barbs:
                 1,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()),
             )
-            if Consts.iFrankia == iHuman:
+            if Civ.FRANCE.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (42, 40),
                     (56, 48),
                     xml.iAxeman,
@@ -844,7 +917,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (45, 45),
                     (60, 55),
                     xml.iSpearman,
@@ -858,7 +931,7 @@ class Barbs:
                 )
         elif xml.i600AD <= iGameTurn < xml.i800AD:
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (43, 42),
                 (50, 50),
                 xml.iAxeman,
@@ -871,7 +944,7 @@ class Barbs:
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()),
             )
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (42, 40),
                 (56, 48),
                 xml.iAxeman,
@@ -883,9 +956,9 @@ class Barbs:
                 1,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()),
             )
-            if Consts.iFrankia == iHuman:
+            if Civ.FRANCE.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (43, 42),
                     (50, 50),
                     xml.iAxeman,
@@ -898,7 +971,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (45, 45),
                     (60, 55),
                     xml.iSpearman,
@@ -911,7 +984,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (46, 48),
                     (62, 55),
                     xml.iAxeman,
@@ -927,7 +1000,7 @@ class Barbs:
         # Longobards in Italy
         if xml.i632AD <= iGameTurn <= xml.i800AD:
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (49, 33),
                 (53, 36),
                 xml.iAxeman,
@@ -940,7 +1013,7 @@ class Barbs:
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_LONGOBARDS", ()),
             )
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (49, 33),
                 (53, 36),
                 xml.iSpearman,
@@ -956,7 +1029,7 @@ class Barbs:
         # Visigoths in Iberia
         if xml.i712AD <= iGameTurn <= xml.i892AD:
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (22, 21),
                 (26, 25),
                 xml.iAxeman,
@@ -969,7 +1042,7 @@ class Barbs:
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_VISIGOTHS", ()),
             )
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (23, 23),
                 (27, 28),
                 xml.iSpearman,
@@ -982,7 +1055,7 @@ class Barbs:
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_VISIGOTHS", ()),
             )
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (26, 27),
                 (31, 32),
                 xml.iMountedInfantry,
@@ -994,9 +1067,9 @@ class Barbs:
                 1,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_VISIGOTHS", ()),
             )
-            if Consts.iCordoba == iHuman:
+            if Civ.CORDOBA.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (24, 31),
                     (27, 34),
                     xml.iAxeman,
@@ -1009,7 +1082,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_VISIGOTHS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (27, 28),
                     (31, 36),
                     xml.iMountedInfantry,
@@ -1026,7 +1099,7 @@ class Barbs:
         if xml.i700AD <= iGameTurn < xml.i1020AD:
             # Tunesia
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (28, 10),
                 (35, 14),
                 xml.iHorseArcher,
@@ -1039,9 +1112,9 @@ class Barbs:
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_BERBERS", ()),
             )
             # Morocco
-            if Consts.iCordoba == iHuman:
+            if Civ.CORDOBA.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (21, 3),
                     (27, 12),
                     xml.iHorseArcher,
@@ -1054,7 +1127,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_BERBERS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (22, 3),
                     (27, 10),
                     xml.iAxeman,
@@ -1067,7 +1140,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_BERBERS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (23, 3),
                     (27, 8),
                     xml.iSpearman,
@@ -1081,7 +1154,7 @@ class Barbs:
                 )
             else:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (22, 3),
                     (27, 10),
                     xml.iAxeman,
@@ -1094,7 +1167,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_BERBERS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (23, 3),
                     (27, 8),
                     xml.iSpearman,
@@ -1110,7 +1183,7 @@ class Barbs:
         # Avars in the Carpathian Basin
         if xml.i632AD <= iGameTurn < xml.i800AD:
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (60, 30),
                 (75, 40),
                 xml.iHorseArcher,
@@ -1122,9 +1195,9 @@ class Barbs:
                 1,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_AVARS", ()),
             )
-            if Consts.iBulgaria == iHuman:
+            if Civ.BULGARIA.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (66, 26),
                     (73, 29),
                     xml.iHorseArcher,
@@ -1141,7 +1214,7 @@ class Barbs:
         if iGameTurn < xml.i640AD:
             # Pre-Bulgarian Slavs in the Balkans
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (68, 18),
                 (78, 28),
                 xml.iAxeman,
@@ -1153,9 +1226,9 @@ class Barbs:
                 1,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SOUTHERN_SLAVS", ()),
             )
-            if Consts.iByzantium == iHuman:
+            if Civ.BYZANTIUM.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (64, 21),
                     (75, 25),
                     xml.iAxeman,
@@ -1168,7 +1241,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SOUTHERN_SLAVS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (68, 18),
                     (78, 28),
                     xml.iSpearman,
@@ -1182,7 +1255,7 @@ class Barbs:
                 )
             # Sassanids in Anatolia
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (90, 15),
                 (99, 28),
                 xml.iLancer,
@@ -1195,7 +1268,7 @@ class Barbs:
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SASSANIDS", ()),
             )
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (94, 19),
                 (98, 26),
                 xml.iLancer,
@@ -1207,9 +1280,9 @@ class Barbs:
                 1,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SASSANIDS", ()),
             )
-            if Consts.iByzantium == iHuman:
+            if Civ.BYZANTIUM.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (90, 15),
                     (99, 28),
                     xml.iLancer,
@@ -1222,7 +1295,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SASSANIDS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (94, 19),
                     (98, 26),
                     xml.iLancer,
@@ -1237,7 +1310,7 @@ class Barbs:
         # Barbs in NW Greece
         if iGameTurn < xml.i720AD:
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (66, 21),
                 (69, 28),
                 xml.iAxeman,
@@ -1249,9 +1322,9 @@ class Barbs:
                 1,
                 "",
             )
-            if Consts.iByzantium == iHuman:
+            if Civ.BYZANTIUM.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (66, 21),
                     (69, 28),
                     xml.iSpearman,
@@ -1266,9 +1339,9 @@ class Barbs:
 
         # Serbs in the Southern Balkans
         if xml.i1025AD <= iGameTurn < xml.i1282AD:
-            if Consts.iByzantium == iHuman:
+            if Civ.BYZANTIUM.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (67, 24),
                     (73, 28),
                     xml.iAxeman,
@@ -1281,7 +1354,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SERBS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (67, 24),
                     (73, 28),
                     xml.iLancer,
@@ -1294,7 +1367,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SERBS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (69, 25),
                     (71, 29),
                     xml.iSwordsman,
@@ -1308,7 +1381,7 @@ class Barbs:
                 )
             else:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (67, 24),
                     (73, 28),
                     xml.iAxeman,
@@ -1324,7 +1397,7 @@ class Barbs:
         # Khazars
         if xml.i660AD <= iGameTurn < xml.i864AD:
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (88, 31),
                 (99, 40),
                 xml.iAxeman,
@@ -1337,9 +1410,9 @@ class Barbs:
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_KHAZARS", ()),
             )
         elif xml.i864AD <= iGameTurn < xml.i920AD:
-            if Consts.iKiev == iHuman:
+            if Civ.KIEV.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (88, 31),
                     (99, 40),
                     xml.iAxeman,
@@ -1352,7 +1425,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_KHAZARS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (88, 31),
                     (99, 40),
                     xml.iSpearman,
@@ -1366,7 +1439,7 @@ class Barbs:
                 )
             else:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (88, 31),
                     (99, 40),
                     xml.iAxeman,
@@ -1383,7 +1456,7 @@ class Barbs:
         if xml.i920AD <= iGameTurn < xml.i1040AD:
             # in the Rus
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (89, 34),
                 (97, 40),
                 xml.iSteppeHorseArcher,
@@ -1395,9 +1468,9 @@ class Barbs:
                 1,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_PECHENEGS", ()),
             )
-            if Consts.iKiev == iHuman:
+            if Civ.KIEV.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (91, 35),
                     (99, 44),
                     xml.iSteppeHorseArcher,
@@ -1411,7 +1484,7 @@ class Barbs:
                 )
             # in Hungary
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (66, 35),
                 (75, 42),
                 xml.iSteppeHorseArcher,
@@ -1423,9 +1496,9 @@ class Barbs:
                 1,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_PECHENEGS", ()),
             )
-            if Consts.iHungary == iHuman:
+            if Civ.HUNGARY.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (66, 35),
                     (75, 42),
                     xml.iSteppeHorseArcher,
@@ -1438,9 +1511,9 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_PECHENEGS", ()),
                 )
             # in Bulgaria
-            elif Consts.iBulgaria == iHuman:
+            elif Civ.BULGARIA.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (77, 31),
                     (79, 33),
                     xml.iSteppeHorseArcher,
@@ -1456,9 +1529,9 @@ class Barbs:
         # Cumans and Kipchaks
         elif xml.i1040AD <= iGameTurn < xml.i1200AD:
             # in the Rus
-            if Consts.iKiev == iHuman:
+            if Civ.KIEV.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (89, 34),
                     (99, 40),
                     xml.iSteppeHorseArcher,
@@ -1471,7 +1544,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_CUMANS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (90, 33),
                     (97, 44),
                     xml.iSteppeHorseArcher,
@@ -1485,7 +1558,7 @@ class Barbs:
                 )
             else:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (89, 34),
                     (99, 40),
                     xml.iSteppeHorseArcher,
@@ -1498,7 +1571,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_CUMANS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (90, 33),
                     (97, 44),
                     xml.iSteppeHorseArcher,
@@ -1512,7 +1585,7 @@ class Barbs:
                 )
             # in Hungary
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (64, 33),
                 (77, 43),
                 xml.iSteppeHorseArcher,
@@ -1524,9 +1597,9 @@ class Barbs:
                 1,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_CUMANS", ()),
             )
-            if Consts.iHungary == iHuman:
+            if Civ.HUNGARY.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (64, 33),
                     (77, 43),
                     xml.iSteppeHorseArcher,
@@ -1539,7 +1612,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_CUMANS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (66, 35),
                     (75, 42),
                     xml.iSteppeHorseArcher,
@@ -1552,9 +1625,9 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_KIPCHAKS", ()),
                 )
             # in Bulgaria
-            if Consts.iBulgaria == iHuman:
+            if Civ.BULGARIA.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (78, 32),
                     (80, 34),
                     xml.iSteppeHorseArcher,
@@ -1567,7 +1640,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_CUMANS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (78, 32),
                     (80, 34),
                     xml.iSteppeHorseArcher,
@@ -1581,12 +1654,12 @@ class Barbs:
                 )
 
         # Vikings on ships
-        if Consts.iNorway == iHuman:  # Humans can properly go viking without help
+        if Civ.NORWAY.value == iHuman:  # Humans can properly go viking without help
             pass
         elif xml.i780AD <= iGameTurn < xml.i1000AD:
-            if Consts.iFrankia == iHuman:
+            if Civ.FRANCE.value == iHuman:
                 self.spawnVikings(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (37, 48),
                     (50, 54),
                     xml.iVikingBerserker,
@@ -1600,7 +1673,7 @@ class Barbs:
                 )
             else:
                 self.spawnVikings(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (37, 48),
                     (50, 54),
                     xml.iVikingBerserker,
@@ -1616,7 +1689,7 @@ class Barbs:
         # Swedish Crusades
         elif xml.i1150AD <= iGameTurn < xml.i1210AD:
             self.spawnVikings(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (71, 62),
                 (76, 65),
                 xml.iVikingBerserker,
@@ -1632,7 +1705,7 @@ class Barbs:
         # Chudes in Finland and Estonia
         if xml.i864AD <= iGameTurn < xml.i1150AD:
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (72, 67),
                 (81, 72),
                 xml.iAxeman,
@@ -1645,7 +1718,7 @@ class Barbs:
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_CHUDES", ()),
             )
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (74, 60),
                 (76, 63),
                 xml.iAxeman,
@@ -1660,10 +1733,10 @@ class Barbs:
 
         # Livonian Order as barbs in the area before the Prussian spawn, but only if Prussia is AI (no need for potentially gained extra units for the human player)
         # Also pre-Lithanian barbs for human Prussia a couple turns before the Lithuanian spawn
-        if Consts.iPrussia == iHuman:
+        if Civ.PRUSSIA.value == iHuman:
             if xml.i1224AD <= iGameTurn < xml.i1236AD:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (73, 56),
                     (76, 61),
                     xml.iAxeman,
@@ -1676,7 +1749,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_BALTICS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (72, 54),
                     (75, 59),
                     xml.iAxeman,
@@ -1689,7 +1762,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_BALTICS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (73, 56),
                     (76, 61),
                     xml.iHorseArcher,
@@ -1703,7 +1776,7 @@ class Barbs:
                 )
         elif xml.i1200AD <= iGameTurn < xml.i1224AD:
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (73, 57),
                 (76, 61),
                 xml.iTeutonic,
@@ -1716,7 +1789,7 @@ class Barbs:
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SWORD_BRETHEN", ()),
             )
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (73, 57),
                 (76, 61),
                 xml.iSwordsman,
@@ -1732,7 +1805,7 @@ class Barbs:
         # Couple melee barb units in Ireland:
         if xml.i800AD <= iGameTurn < xml.i900AD:
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (28, 56),
                 (33, 62),
                 xml.iAxeman,
@@ -1747,9 +1820,9 @@ class Barbs:
 
         # Anglo-Saxons before the Danish 1st UHV (Conquer England)
         elif xml.i970AD <= iGameTurn < xml.i1050AD:
-            if Consts.iDenmark == iHuman:
+            if Civ.DENMARK.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (36, 53),
                     (41, 59),
                     xml.iAxeman,
@@ -1762,7 +1835,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_ANGLO_SAXONS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (33, 48),
                     (38, 54),
                     xml.iAxeman,
@@ -1775,7 +1848,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_ANGLO_SAXONS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (33, 48),
                     (38, 54),
                     xml.iSwordsman,
@@ -1789,7 +1862,7 @@ class Barbs:
                 )
             else:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (33, 48),
                     (38, 54),
                     xml.iAxeman,
@@ -1803,11 +1876,11 @@ class Barbs:
                 )
 
         # Scots to keep England busy, but only if Scotland is dead
-        if not gc.getPlayer(Consts.iScotland).isAlive():
+        if not gc.getPlayer(Civ.SCOTLAND.value).isAlive():
             if xml.i1060AD <= iGameTurn < xml.i1320AD:
-                if Consts.iEngland == iHuman:
+                if Civ.ENGLAND.value == iHuman:
                     self.spawnUnits(
-                        Consts.iBarbarian,
+                        Civ.BARBARIAN.value,
                         (39, 62),
                         (44, 66),
                         xml.iHighlander,
@@ -1821,7 +1894,7 @@ class Barbs:
                     )
                 else:
                     self.spawnUnits(
-                        Consts.iBarbarian,
+                        Civ.BARBARIAN.value,
                         (39, 62),
                         (44, 66),
                         xml.iHighlander,
@@ -1834,9 +1907,9 @@ class Barbs:
                         localText.getText("TXT_KEY_BARBARIAN_NAMES_SCOTS", ()),
                     )
             elif xml.i1320AD <= iGameTurn < xml.i1500AD:
-                if Consts.iEngland == iHuman:
+                if Civ.ENGLAND.value == iHuman:
                     self.spawnUnits(
-                        Consts.iBarbarian,
+                        Civ.BARBARIAN.value,
                         (39, 62),
                         (44, 66),
                         xml.iHighlander,
@@ -1849,7 +1922,7 @@ class Barbs:
                         localText.getText("TXT_KEY_BARBARIAN_NAMES_SCOTS", ()),
                     )
                     self.spawnUnits(
-                        Consts.iBarbarian,
+                        Civ.BARBARIAN.value,
                         (39, 64),
                         (44, 67),
                         xml.iHighlander,
@@ -1863,7 +1936,7 @@ class Barbs:
                     )
                 else:
                     self.spawnUnits(
-                        Consts.iBarbarian,
+                        Civ.BARBARIAN.value,
                         (39, 64),
                         (44, 67),
                         xml.iHighlander,
@@ -1878,9 +1951,9 @@ class Barbs:
 
         # Welsh in Britain
         if xml.i1060AD <= iGameTurn < xml.i1160AD:
-            if Consts.iEngland == iHuman:
+            if Civ.ENGLAND.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (37, 53),
                     (39, 57),
                     xml.iWelshLongbowman,
@@ -1894,7 +1967,7 @@ class Barbs:
                 )
             else:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (37, 53),
                     (39, 57),
                     xml.iWelshLongbowman,
@@ -1907,9 +1980,9 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_WELSH", ()),
                 )
         elif xml.i1160AD <= iGameTurn < xml.i1452AD:
-            if Consts.iEngland == iHuman:
+            if Civ.ENGLAND.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (37, 53),
                     (39, 57),
                     xml.iWelshLongbowman,
@@ -1923,7 +1996,7 @@ class Barbs:
                 )
             else:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (37, 53),
                     (39, 57),
                     xml.iWelshLongbowman,
@@ -1939,7 +2012,7 @@ class Barbs:
         # Magyars (preceeding Hungary)
         if xml.i840AD <= iGameTurn < xml.i892AD:
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (54, 38),
                 (61, 45),
                 xml.iHorseArcher,
@@ -1952,7 +2025,7 @@ class Barbs:
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_MAGYARS", ()),
             )
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (66, 26),
                 (73, 29),
                 xml.iHorseArcher,
@@ -1964,9 +2037,9 @@ class Barbs:
                 1,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_MAGYARS", ()),
             )
-            if Consts.iBulgaria == iHuman:
+            if Civ.BULGARIA.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (77, 31),
                     (80, 34),
                     xml.iHorseArcher,
@@ -1978,9 +2051,9 @@ class Barbs:
                     1,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_MAGYARS", ()),
                 )
-            elif Consts.iGermany == iHuman:
+            elif Civ.GERMANY.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (54, 38),
                     (61, 45),
                     xml.iHorseArcher,
@@ -1995,9 +2068,9 @@ class Barbs:
 
         # Wends in NE Germany
         if xml.i860AD <= iGameTurn < xml.i1053AD:
-            if Consts.iGermany == iHuman:
+            if Civ.GERMANY.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (55, 49),
                     (60, 56),
                     xml.iAxeman,
@@ -2011,7 +2084,7 @@ class Barbs:
                 )
             else:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (55, 49),
                     (60, 56),
                     xml.iAxeman,
@@ -2026,9 +2099,9 @@ class Barbs:
 
         # Great Slav Rising in 983AD
         if (xml.i983AD - 1) <= iGameTurn < (xml.i983AD + 1):
-            if Consts.iGermany == iHuman:
+            if Civ.GERMANY.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (53, 48),
                     (59, 55),
                     xml.iAxeman,
@@ -2041,7 +2114,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_WENDS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (53, 48),
                     (59, 55),
                     xml.iSpearman,
@@ -2054,7 +2127,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_WENDS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (53, 48),
                     (59, 55),
                     xml.iSwordsman,
@@ -2068,7 +2141,7 @@ class Barbs:
                 )
             else:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (53, 48),
                     (59, 55),
                     xml.iAxeman,
@@ -2081,7 +2154,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_WENDS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (53, 48),
                     (59, 55),
                     xml.iSpearman,
@@ -2096,9 +2169,9 @@ class Barbs:
 
         # Barbs in the middle east
         if xml.i700AD <= iGameTurn <= xml.i1300AD:
-            if not gc.getTeam(gc.getPlayer(Consts.iArabia).getTeam()).isHasTech(xml.iFarriers):
+            if not gc.getTeam(gc.getPlayer(Civ.ARABIA.value).getTeam()).isHasTech(xml.iFarriers):
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (94, 0),
                     (99, 3),
                     xml.iHorseArcher,
@@ -2110,9 +2183,9 @@ class Barbs:
                     1,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()),
                 )
-                if gc.getPlayer(Consts.iArabia).isHuman():
+                if gc.getPlayer(Civ.ARABIA.value).isHuman():
                     self.spawnUnits(
-                        Consts.iBarbarian,
+                        Civ.BARBARIAN.value,
                         (94, 0),
                         (99, 3),
                         xml.iHorseArcher,
@@ -2125,7 +2198,7 @@ class Barbs:
                         localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()),
                     )
                     self.spawnUnits(
-                        Consts.iBarbarian,
+                        Civ.BARBARIAN.value,
                         (92, 1),
                         (98, 4),
                         xml.iHorseArcher,
@@ -2139,7 +2212,7 @@ class Barbs:
                     )
             else:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (94, 0),
                     (99, 3),
                     xml.iBedouin,
@@ -2151,9 +2224,9 @@ class Barbs:
                     1,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()),
                 )
-                if gc.getPlayer(Consts.iArabia).isHuman():
+                if gc.getPlayer(Civ.ARABIA.value).isHuman():
                     self.spawnUnits(
-                        Consts.iBarbarian,
+                        Civ.BARBARIAN.value,
                         (94, 0),
                         (99, 3),
                         xml.iBedouin,
@@ -2166,7 +2239,7 @@ class Barbs:
                         localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()),
                     )
                     self.spawnUnits(
-                        Consts.iBarbarian,
+                        Civ.BARBARIAN.value,
                         (95, 1),
                         (98, 5),
                         xml.iBedouin,
@@ -2181,9 +2254,9 @@ class Barbs:
 
         # Banu Hilal and Bani Hassan, in Morocco and Tunesia
         if xml.i1040AD <= iGameTurn < xml.i1229AD:
-            if Consts.iMorocco == iHuman:
+            if Civ.MOROCCO.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (40, 10),
                     (44, 14),
                     xml.iBedouin,
@@ -2196,7 +2269,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_BANU_HILAL", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (44, 1),
                     (50, 8),
                     xml.iTouareg,
@@ -2210,7 +2283,7 @@ class Barbs:
                 )
             else:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (40, 10),
                     (44, 14),
                     xml.iBedouin,
@@ -2223,7 +2296,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_BANU_HILAL", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (44, 1),
                     (50, 8),
                     xml.iTouareg,
@@ -2237,7 +2310,7 @@ class Barbs:
                 )
         if xml.i1640AD <= iGameTurn < xml.i1680AD:
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (18, 1),
                 (22, 3),
                 xml.iBedouin,
@@ -2253,7 +2326,7 @@ class Barbs:
         # Pre Mongols to keep Kiev busy
         if xml.i900AD <= iGameTurn < xml.i1020AD:
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (93, 35),
                 (99, 44),
                 xml.iHorseArcher,
@@ -2267,7 +2340,7 @@ class Barbs:
             )
         elif xml.i1020AD <= iGameTurn < xml.i1236AD:
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (93, 35),
                 (99, 44),
                 xml.iHorseArcher,
@@ -2279,9 +2352,9 @@ class Barbs:
                 1,
                 "",
             )
-            if Consts.iKiev == iHuman:
+            if Civ.KIEV.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (94, 32),
                     (97, 39),
                     xml.iHorseArcher,
@@ -2297,7 +2370,7 @@ class Barbs:
         # Barbs in Anatolia pre Seljuks (but after Sassanids)
         if xml.i700AD <= iGameTurn < xml.i1050AD:
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (97, 20),
                 (99, 26),
                 xml.iHorseArcher,
@@ -2310,7 +2383,7 @@ class Barbs:
                 "",
             )
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (95, 20),
                 (99, 24),
                 xml.iAxeman,
@@ -2323,7 +2396,7 @@ class Barbs:
                 "",
             )
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (95, 22),
                 (97, 26),
                 xml.iSpearman,
@@ -2335,9 +2408,9 @@ class Barbs:
                 1,
                 "",
             )
-            if Consts.iByzantium == iHuman:
+            if Civ.BYZANTIUM.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (97, 20),
                     (99, 26),
                     xml.iHorseArcher,
@@ -2350,7 +2423,7 @@ class Barbs:
                     "",
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (95, 20),
                     (99, 24),
                     xml.iAxeman,
@@ -2363,7 +2436,7 @@ class Barbs:
                     "",
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (95, 20),
                     (99, 24),
                     xml.iHorseArcher,
@@ -2376,7 +2449,7 @@ class Barbs:
                     "",
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (95, 22),
                     (97, 26),
                     xml.iSpearman,
@@ -2389,7 +2462,7 @@ class Barbs:
                     "",
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (95, 22),
                     (97, 26),
                     xml.iHorseArcher,
@@ -2405,7 +2478,7 @@ class Barbs:
         # Seljuks
         if xml.i1064AD <= iGameTurn < xml.i1094AD:
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (90, 21),
                 (99, 28),
                 xml.iSeljukLancer,
@@ -2418,7 +2491,7 @@ class Barbs:
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
             )
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (90, 21),
                 (99, 28),
                 xml.iTurcomanHorseArcher,
@@ -2431,7 +2504,7 @@ class Barbs:
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
             )
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (90, 21),
                 (99, 28),
                 xml.iSeljukCrossbow,
@@ -2444,7 +2517,7 @@ class Barbs:
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
             )
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (90, 21),
                 (99, 28),
                 xml.iSeljukSwordsman,
@@ -2457,7 +2530,7 @@ class Barbs:
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
             )
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (92, 20),
                 (99, 25),
                 xml.iSeljukLancer,
@@ -2470,7 +2543,7 @@ class Barbs:
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
             )
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (92, 20),
                 (99, 25),
                 xml.iTurcomanHorseArcher,
@@ -2483,7 +2556,7 @@ class Barbs:
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
             )
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (92, 20),
                 (99, 25),
                 xml.iSeljukGuisarme,
@@ -2496,7 +2569,7 @@ class Barbs:
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
             )
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (92, 20),
                 (99, 25),
                 xml.iSeljukFootman,
@@ -2509,7 +2582,7 @@ class Barbs:
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
             )
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (95, 8),
                 (99, 12),
                 xml.iSeljukLancer,
@@ -2522,7 +2595,7 @@ class Barbs:
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
             )
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (95, 8),
                 (99, 12),
                 xml.iSeljukCrossbow,
@@ -2534,9 +2607,9 @@ class Barbs:
                 1,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
             )
-            if Consts.iByzantium == iHuman:
+            if Civ.BYZANTIUM.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (90, 21),
                     (99, 28),
                     xml.iSeljukLancer,
@@ -2549,7 +2622,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (90, 21),
                     (99, 28),
                     xml.iTurcomanHorseArcher,
@@ -2562,7 +2635,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (90, 21),
                     (99, 28),
                     xml.iSeljukCrossbow,
@@ -2575,7 +2648,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (90, 21),
                     (99, 28),
                     xml.iSeljukGuisarme,
@@ -2588,7 +2661,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (90, 21),
                     (99, 28),
                     xml.iSeljukFootman,
@@ -2601,7 +2674,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (92, 20),
                     (99, 25),
                     xml.iSeljukLancer,
@@ -2614,7 +2687,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (92, 20),
                     (99, 25),
                     xml.iTurcomanHorseArcher,
@@ -2627,7 +2700,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (92, 20),
                     (99, 25),
                     xml.iSeljukGuisarme,
@@ -2640,7 +2713,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (92, 20),
                     (99, 25),
                     xml.iSeljukCrossbow,
@@ -2653,7 +2726,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (92, 20),
                     (99, 25),
                     xml.iSeljukSwordsman,
@@ -2665,9 +2738,9 @@ class Barbs:
                     1,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
                 )
-            elif Consts.iArabia == iHuman:
+            elif Civ.ARABIA.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (95, 8),
                     (99, 12),
                     xml.iSeljukLancer,
@@ -2680,7 +2753,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (95, 8),
                     (99, 12),
                     xml.iTurcomanHorseArcher,
@@ -2693,7 +2766,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (95, 8),
                     (99, 12),
                     xml.iSeljukGuisarme,
@@ -2708,9 +2781,9 @@ class Barbs:
 
         # Danishmends
         if xml.i1077AD <= iGameTurn < xml.i1147AD:
-            if Consts.iByzantium == iHuman:
+            if Civ.BYZANTIUM.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (93, 20),
                     (99, 22),
                     xml.iTurcomanHorseArcher,
@@ -2724,7 +2797,7 @@ class Barbs:
                 )
             else:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (93, 20),
                     (99, 22),
                     xml.iTurcomanHorseArcher,
@@ -2740,9 +2813,9 @@ class Barbs:
         # Mongols
         if xml.i1236AD <= iGameTurn < xml.i1288AD:
             # Kiev
-            if Consts.iKiev == iHuman:
+            if Civ.KIEV.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (93, 32),
                     (99, 42),
                     xml.iMongolKeshik,
@@ -2755,7 +2828,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (94, 34),
                     (99, 45),
                     xml.iMongolKeshik,
@@ -2769,7 +2842,7 @@ class Barbs:
                 )
             else:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (93, 32),
                     (99, 42),
                     xml.iMongolKeshik,
@@ -2782,7 +2855,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (94, 34),
                     (99, 45),
                     xml.iMongolKeshik,
@@ -2795,9 +2868,9 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()),
                 )
             # Hungary
-            if Consts.iHungary == iHuman:
+            if Civ.HUNGARY.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (71, 38),
                     (75, 40),
                     xml.iMongolKeshik,
@@ -2810,7 +2883,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (74, 35),
                     (77, 37),
                     xml.iMongolKeshik,
@@ -2824,7 +2897,7 @@ class Barbs:
                 )
             else:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (71, 38),
                     (75, 40),
                     xml.iMongolKeshik,
@@ -2837,7 +2910,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (74, 35),
                     (77, 37),
                     xml.iMongolKeshik,
@@ -2850,9 +2923,9 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()),
                 )
             # Poland
-            if Consts.iPoland == iHuman:
+            if Civ.POLAND.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (73, 43),
                     (78, 47),
                     xml.iMongolKeshik,
@@ -2866,7 +2939,7 @@ class Barbs:
                 )
             else:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (73, 43),
                     (78, 47),
                     xml.iMongolKeshik,
@@ -2879,9 +2952,9 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()),
                 )
             # Bulgaria
-            if Consts.iBulgaria == iHuman:
+            if Civ.BULGARIA.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (79, 32),
                     (82, 35),
                     xml.iMongolKeshik,
@@ -2895,7 +2968,7 @@ class Barbs:
                 )
             else:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (79, 32),
                     (82, 35),
                     xml.iMongolKeshik,
@@ -2909,7 +2982,7 @@ class Barbs:
                 )
             # Moscow area
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (89, 46),
                 (95, 54),
                 xml.iMongolKeshik,
@@ -2922,7 +2995,7 @@ class Barbs:
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()),
             )
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (91, 48),
                 (97, 53),
                 xml.iMongolKeshik,
@@ -2936,7 +3009,7 @@ class Barbs:
             )
             # Middle East
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (94, 20),
                 (99, 26),
                 xml.iMongolKeshik,
@@ -2949,7 +3022,7 @@ class Barbs:
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()),
             )
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (92, 21),
                 (97, 25),
                 xml.iMongolKeshik,
@@ -2968,7 +3041,7 @@ class Barbs:
         ):  # Timur started his first western campaigns in 1380AD
             # Eastern Europe
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (85, 47),
                 (99, 57),
                 xml.iMongolKeshik,
@@ -2981,9 +3054,9 @@ class Barbs:
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_TIMURIDS", ()),
             )
             # Anatolia
-            if Consts.iTurkey == iHuman:
+            if Civ.OTTOMAN.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (87, 17),
                     (96, 24),
                     xml.iMongolKeshik,
@@ -2996,7 +3069,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_TIMURIDS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (94, 18),
                     (99, 26),
                     xml.iMongolKeshik,
@@ -3009,7 +3082,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_TIMURIDS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (89, 17),
                     (97, 22),
                     xml.iMongolKeshik,
@@ -3023,7 +3096,7 @@ class Barbs:
                 )
             else:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (87, 17),
                     (96, 24),
                     xml.iMongolKeshik,
@@ -3036,7 +3109,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_TIMURIDS", ()),
                 )
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (94, 18),
                     (99, 26),
                     xml.iMongolKeshik,
@@ -3049,9 +3122,9 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_TIMURIDS", ()),
                 )
             # Arabia
-            if Consts.iArabia == iHuman:
+            if Civ.ARABIA.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (96, 9),
                     (99, 15),
                     xml.iMongolKeshik,
@@ -3065,7 +3138,7 @@ class Barbs:
                 )
             else:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (96, 9),
                     (99, 15),
                     xml.iMongolKeshik,
@@ -3081,7 +3154,7 @@ class Barbs:
         # Nogais
         if xml.i1500AD <= iGameTurn <= xml.i1600AD:
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (93, 38),
                 (99, 54),
                 xml.iHorseArcher,
@@ -3093,9 +3166,9 @@ class Barbs:
                 1,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_NOGAIS", ()),
             )
-            if Consts.iMoscow == iHuman:
+            if Civ.MOSCOW.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (93, 38),
                     (99, 54),
                     xml.iHorseArcher,
@@ -3111,7 +3184,7 @@ class Barbs:
         # Kalmyks
         elif xml.i1600AD <= iGameTurn <= xml.i1715AD:
             self.spawnUnits(
-                Consts.iBarbarian,
+                Civ.BARBARIAN.value,
                 (93, 38),
                 (99, 54),
                 xml.iMongolKeshik,
@@ -3123,9 +3196,9 @@ class Barbs:
                 1,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_KALMYKS", ()),
             )
-            if Consts.iMoscow == iHuman:
+            if Civ.MOSCOW.value == iHuman:
                 self.spawnUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (93, 38),
                     (99, 54),
                     xml.iMongolKeshik,
@@ -3183,7 +3256,7 @@ class Barbs:
 
         # checks if the plot already belongs to someone
         if cityPlot.isOwned():
-            if cityPlot.getOwner() != Consts.iBarbarian:
+            if cityPlot.getOwner() != Civ.BARBARIAN.value:
                 return False
 
         # checks the surroundings for cities
@@ -3300,7 +3373,7 @@ class Barbs:
                 unit = killPlot.getUnit(
                     0
                 )  # killPlot.getUnit(0) instead of killPlot.getUnit(i) because killing units changes the indices
-                unit.kill(False, Consts.iBarbarian)
+                unit.kill(False, Civ.BARBARIAN.value)
 
     def onImprovementDestroyed(self, iX, iY):
         print("Barb improvement destroyed")
@@ -3316,7 +3389,7 @@ class Barbs:
         else:
             iBarbUnit = xml.iSpearman
         self.spawnUnits(
-            Consts.iBarbarian,
+            Civ.BARBARIAN.value,
             (iX - 1, iY - 1),
             (iX + 1, iY + 1),
             iBarbUnit,
@@ -3367,7 +3440,7 @@ class Barbs:
                 iY = gc.getProvinceY(iProvince, iI)
                 if gc.getMap().plot(iX, iY).isCity():
                     iOwner = gc.getMap().plot(iX, iY).getPlotCity().getOwner()
-                    if -1 < iOwner < Consts.iPope:  # pope doesn't count here
+                    if -1 < iOwner < Civ.POPE.value:  # pope doesn't count here
                         if (
                             iOwner not in lNation[1]
                             and gc.getPlayer(iOwner).getStateReligion() not in lNation[2]
@@ -3433,10 +3506,10 @@ class Barbs:
         else:
             # revolt succeeded
             lIndependents = [
-                Consts.iIndependent,
-                Consts.iIndependent2,
-                Consts.iIndependent3,
-                Consts.iIndependent4,
+                Civ.INDEPENDENT.value,
+                Civ.INDEPENDENT_2.value,
+                Civ.INDEPENDENT_3.value,
+                Civ.INDEPENDENT_4.value,
             ]
             iNewCiv = utils.getRandomEntry(lIndependents)
             for iI in range(len(cityList)):
@@ -3541,10 +3614,10 @@ class Barbs:
         else:
             # revolt succeeded
             lIndependents = [
-                Consts.iIndependent,
-                Consts.iIndependent2,
-                Consts.iIndependent3,
-                Consts.iIndependent4,
+                Civ.INDEPENDENT.value,
+                Civ.INDEPENDENT_2.value,
+                Civ.INDEPENDENT_3.value,
+                Civ.INDEPENDENT_4.value,
             ]
             iNewCiv = utils.getRandomEntry(lIndependents)
             for iI in range(len(cityList)):
@@ -3687,11 +3760,11 @@ class Barbs:
             pPlot = gc.getMap().plot(tPlot[0], tPlot[1])
             iN = pPlot.getNumUnits()
             for i in range(iN):
-                pPlot.getUnit(0).kill(False, Consts.iBarbarian)
+                pPlot.getUnit(0).kill(False, Civ.BARBARIAN.value)
         else:
             return
 
-        pBarb = gc.getPlayer(Consts.iBarbarian)
+        pBarb = gc.getPlayer(Civ.BARBARIAN.value)
         for iI in range(iCount):
             pUnit = pBarb.initUnit(
                 iUnit,

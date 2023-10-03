@@ -7,7 +7,7 @@ from CivilizationsData import (
     CIVILIZATIONS,
 )
 from CoreStructures import get_civ_by_id, get_religion_by_id
-from CoreTypes import City, StartingSituation, StabilityCategory
+from CoreTypes import Civ, City, StartingSituation, StabilityCategory
 from LocationsData import CITIES
 import PyHelpers
 import Popup
@@ -110,101 +110,137 @@ lReformationMatrix = [
 
 # Reformation neighbours spread reformation choice to each other
 lReformationNeighbours = [
-    [Consts.iArabia, Consts.iBulgaria, Consts.iTurkey],  # Byzantium
+    [Civ.ARABIA.value, Civ.BULGARIA.value, Civ.OTTOMAN.value],  # Byzantium
     [
-        Consts.iBurgundy,
-        Consts.iSpain,
-        Consts.iGermany,
-        Consts.iGenoa,
-        Consts.iEngland,
-        Consts.iDutch,
-        Consts.iScotland,
+        Civ.BURGUNDY.value,
+        Civ.CASTILLE.value,
+        Civ.GERMANY.value,
+        Civ.GENOA.value,
+        Civ.ENGLAND.value,
+        Civ.DUTCH.value,
+        Civ.SCOTLAND.value,
     ],  # France
-    [Consts.iByzantium, Consts.iCordoba, Consts.iTurkey],  # Arabia
-    [Consts.iByzantium, Consts.iKiev, Consts.iHungary, Consts.iTurkey],  # Bulgaria
-    [Consts.iArabia, Consts.iSpain, Consts.iPortugal, Consts.iAragon, Consts.iMorocco],  # Cordoba
-    [Consts.iGenoa, Consts.iGermany, Consts.iAustria, Consts.iHungary, Consts.iPope],  # Venice
-    [Consts.iFrankia, Consts.iGermany, Consts.iGenoa, Consts.iDutch],  # Burgundy
+    [Civ.BYZANTIUM.value, Civ.CORDOBA.value, Civ.OTTOMAN.value],  # Arabia
+    [Civ.BYZANTIUM.value, Civ.KIEV.value, Civ.HUNGARY.value, Civ.OTTOMAN.value],  # Bulgaria
     [
-        Consts.iBurgundy,
-        Consts.iFrankia,
-        Consts.iDenmark,
-        Consts.iVenecia,
-        Consts.iHungary,
-        Consts.iPoland,
-        Consts.iGenoa,
-        Consts.iAustria,
-        Consts.iDutch,
+        Civ.ARABIA.value,
+        Civ.CASTILLE.value,
+        Civ.PORTUGAL.value,
+        Civ.ARAGON.value,
+        Civ.MOROCCO.value,
+    ],  # Cordoba
+    [
+        Civ.GENOA.value,
+        Civ.GERMANY.value,
+        Civ.AUSTRIA.value,
+        Civ.HUNGARY.value,
+        Civ.POPE.value,
+    ],  # Venice
+    [Civ.FRANCE.value, Civ.GERMANY.value, Civ.GENOA.value, Civ.DUTCH.value],  # Burgundy
+    [
+        Civ.BURGUNDY.value,
+        Civ.FRANCE.value,
+        Civ.DENMARK.value,
+        Civ.VENECIA.value,
+        Civ.HUNGARY.value,
+        Civ.POLAND.value,
+        Civ.GENOA.value,
+        Civ.AUSTRIA.value,
+        Civ.DUTCH.value,
     ],  # Germany
     [
-        Consts.iSweden,
-        Consts.iHungary,
-        Consts.iPoland,
-        Consts.iMoscow,
-        Consts.iLithuania,
-        Consts.iKiev,
+        Civ.SWEDEN.value,
+        Civ.HUNGARY.value,
+        Civ.POLAND.value,
+        Civ.MOSCOW.value,
+        Civ.LITHUANIA.value,
+        Civ.KIEV.value,
     ],  # Novgorod
-    [Consts.iDenmark, Consts.iSweden],  # Norway
+    [Civ.DENMARK.value, Civ.SWEDEN.value],  # Norway
     [
-        Consts.iBulgaria,
-        Consts.iHungary,
-        Consts.iPoland,
-        Consts.iMoscow,
-        Consts.iLithuania,
-        Consts.iNovgorod,
+        Civ.BULGARIA.value,
+        Civ.HUNGARY.value,
+        Civ.POLAND.value,
+        Civ.MOSCOW.value,
+        Civ.LITHUANIA.value,
+        Civ.NOVGOROD.value,
     ],  # Kiev
     [
-        Consts.iBulgaria,
-        Consts.iVenecia,
-        Consts.iKiev,
-        Consts.iGermany,
-        Consts.iPoland,
-        Consts.iAustria,
-        Consts.iTurkey,
+        Civ.BULGARIA.value,
+        Civ.VENECIA.value,
+        Civ.KIEV.value,
+        Civ.GERMANY.value,
+        Civ.POLAND.value,
+        Civ.AUSTRIA.value,
+        Civ.OTTOMAN.value,
     ],  # Hungary
-    [Consts.iFrankia, Consts.iCordoba, Consts.iPortugal, Consts.iAragon],  # Spain
-    [Consts.iNorway, Consts.iSweden, Consts.iGermany],  # Denmark
-    [Consts.iFrankia, Consts.iDutch, Consts.iEngland],  # Scotland
+    [Civ.FRANCE.value, Civ.CORDOBA.value, Civ.PORTUGAL.value, Civ.ARAGON.value],  # Spain
+    [Civ.NORWAY.value, Civ.SWEDEN.value, Civ.GERMANY.value],  # Denmark
+    [Civ.FRANCE.value, Civ.DUTCH.value, Civ.ENGLAND.value],  # Scotland
     [
-        Consts.iKiev,
-        Consts.iHungary,
-        Consts.iGermany,
-        Consts.iMoscow,
-        Consts.iAustria,
-        Consts.iLithuania,
+        Civ.KIEV.value,
+        Civ.HUNGARY.value,
+        Civ.GERMANY.value,
+        Civ.MOSCOW.value,
+        Civ.AUSTRIA.value,
+        Civ.LITHUANIA.value,
     ],  # Poland
     [
-        Consts.iBurgundy,
-        Consts.iFrankia,
-        Consts.iVenecia,
-        Consts.iGermany,
-        Consts.iPope,
-        Consts.iAragon,
+        Civ.BURGUNDY.value,
+        Civ.FRANCE.value,
+        Civ.VENECIA.value,
+        Civ.GERMANY.value,
+        Civ.POPE.value,
+        Civ.ARAGON.value,
     ],  # Genoa
-    [Consts.iArabia, Consts.iSpain, Consts.iPortugal, Consts.iAragon, Consts.iCordoba],  # Morocco
-    [Consts.iFrankia, Consts.iDutch, Consts.iScotland],  # England
-    [Consts.iSpain, Consts.iCordoba, Consts.iAragon],  # Portugal
-    [Consts.iSpain, Consts.iCordoba, Consts.iPortugal, Consts.iFrankia, Consts.iGenoa],  # Aragon
-    [Consts.iNorway, Consts.iDenmark, Consts.iMoscow, Consts.iNovgorod],  # Sweden
     [
-        Consts.iGermany,
-        Consts.iLithuania,
-        Consts.iMoscow,
-        Consts.iAustria,
-        Consts.iPoland,
+        Civ.ARABIA.value,
+        Civ.CASTILLE.value,
+        Civ.PORTUGAL.value,
+        Civ.ARAGON.value,
+        Civ.CORDOBA.value,
+    ],  # Morocco
+    [Civ.FRANCE.value, Civ.DUTCH.value, Civ.SCOTLAND.value],  # England
+    [Civ.CASTILLE.value, Civ.CORDOBA.value, Civ.ARAGON.value],  # Portugal
+    [
+        Civ.CASTILLE.value,
+        Civ.CORDOBA.value,
+        Civ.PORTUGAL.value,
+        Civ.FRANCE.value,
+        Civ.GENOA.value,
+    ],  # Aragon
+    [Civ.NORWAY.value, Civ.DENMARK.value, Civ.MOSCOW.value, Civ.NOVGOROD.value],  # Sweden
+    [
+        Civ.GERMANY.value,
+        Civ.LITHUANIA.value,
+        Civ.MOSCOW.value,
+        Civ.AUSTRIA.value,
+        Civ.POLAND.value,
     ],  # Prussia
-    [Consts.iKiev, Consts.iMoscow, Consts.iPrussia, Consts.iNovgorod, Consts.iPoland],  # Lithuania
-    [Consts.iVenecia, Consts.iHungary, Consts.iGermany, Consts.iPoland],  # Austria
-    [Consts.iByzantium, Consts.iArabia, Consts.iBulgaria, Consts.iHungary],  # Turkey
-    [Consts.iKiev, Consts.iPoland, Consts.iSweden, Consts.iLithuania, Consts.iNovgorod],  # Moscow
     [
-        Consts.iBurgundy,
-        Consts.iFrankia,
-        Consts.iGermany,
-        Consts.iEngland,
-        Consts.iScotland,
+        Civ.KIEV.value,
+        Civ.MOSCOW.value,
+        Civ.PRUSSIA.value,
+        Civ.NOVGOROD.value,
+        Civ.POLAND.value,
+    ],  # Lithuania
+    [Civ.VENECIA.value, Civ.HUNGARY.value, Civ.GERMANY.value, Civ.POLAND.value],  # Austria
+    [Civ.BYZANTIUM.value, Civ.ARABIA.value, Civ.BULGARIA.value, Civ.HUNGARY.value],  # Turkey
+    [
+        Civ.KIEV.value,
+        Civ.POLAND.value,
+        Civ.SWEDEN.value,
+        Civ.LITHUANIA.value,
+        Civ.NOVGOROD.value,
+    ],  # Moscow
+    [
+        Civ.BURGUNDY.value,
+        Civ.FRANCE.value,
+        Civ.GERMANY.value,
+        Civ.ENGLAND.value,
+        Civ.SCOTLAND.value,
     ],  # Dutch
-    [Consts.iVenecia, Consts.iGenoa],  # Pope
+    [Civ.VENECIA.value, Civ.GENOA.value],  # Pope
 ]
 ### Reformation End ###
 
@@ -346,8 +382,8 @@ class Religions:
     #####################################
 
     def setup(self):
-        gc.getPlayer(Consts.iByzantium).changeFaith(10)
-        gc.getPlayer(Consts.iTurkey).changeFaith(20)
+        gc.getPlayer(Civ.BYZANTIUM.value).changeFaith(10)
+        gc.getPlayer(Civ.OTTOMAN.value).changeFaith(20)
         self.setSeed()
 
     def checkTurn(self, iGameTurn):
@@ -507,7 +543,7 @@ class Religions:
         lCatholicCivs = self.getCatholicCivs(
             True
         )  # all Catholic civs with open borders with the Pope
-        pPope = gc.getPlayer(Consts.iPope)
+        pPope = gc.getPlayer(Civ.POPE.value)
         teamPope = gc.getTeam(pPope.getTeam())
         # Gold gift
         if iGameTurn >= xml.i752AD:
@@ -669,7 +705,7 @@ class Religions:
             lCatholicCivs = self.getCatholicCivs(
                 False
             )  # all Catholic civs, open borders with the Pope doesn't matter here
-            pPope = gc.getPlayer(Consts.iPope)
+            pPope = gc.getPlayer(Civ.POPE.value)
             teamPope = gc.getTeam(pPope.getTeam())
             for iTech in range(xml.iNumTechs):
                 if not teamPope.isHasTech(iTech):
@@ -680,7 +716,7 @@ class Religions:
                         if teamPlayer.isHasTech(iTech):
                             iTechCounter += 1
                             if iTechCounter >= 3:
-                                teamPope.setHasTech(iTech, True, Consts.iPope, False, True)
+                                teamPope.setHasTech(iTech, True, Civ.POPE.value, False, True)
                                 print("Pope got tech", iTech)
                                 break
 
@@ -1071,11 +1107,11 @@ class Religions:
                     )
                     self.setReformationActive(True)
                     self.reformationchoice(iPlayer)
-                    self.reformationOther(Consts.iIndependent)
-                    self.reformationOther(Consts.iIndependent2)
-                    self.reformationOther(Consts.iIndependent3)
-                    self.reformationOther(Consts.iIndependent4)
-                    self.reformationOther(Consts.iBarbarian)
+                    self.reformationOther(Civ.INDEPENDENT.value)
+                    self.reformationOther(Civ.INDEPENDENT_2.value)
+                    self.reformationOther(Civ.INDEPENDENT_3.value)
+                    self.reformationOther(Civ.INDEPENDENT_4.value)
+                    self.reformationOther(Civ.BARBARIAN.value)
                     self.setReformationHitMatrix(iPlayer, 2)
                     for iCiv in range(Consts.iNumPlayers):
                         if (
@@ -1111,7 +1147,7 @@ class Religions:
             )  # after all players have been hit by the Reformation
 
     def reformationchoice(self, iCiv):
-        if iCiv == Consts.iPope:
+        if iCiv == Civ.POPE.value:
             return  # Absinthe: totally exclude the Pope from the Reformation
 
         if gc.getPlayer(iCiv).getStateReligion() == xml.iProtestantism:
@@ -1398,7 +1434,7 @@ class Religions:
 
     def doCounterReformation(self):
         print(" Counter Reformation ")
-        for iPlayer in range(Consts.iPope - 1):
+        for iPlayer in range(Civ.POPE.value - 1):
             pPlayer = gc.getPlayer(iPlayer)
             if pPlayer.isAlive() and pPlayer.getStateReligion() == xml.iCatholicism:
                 if pPlayer.isHuman():
@@ -1515,7 +1551,7 @@ class Religions:
         for iPlayer in range(Consts.iNumTotalPlayersB):
             pPlayer = gc.getPlayer(iPlayer)
             if pPlayer.isAlive():
-                if iPlayer < Consts.iPope:
+                if iPlayer < Civ.POPE.value:
                     # add a random element
                     intolerance[iPlayer] += gc.getGame().getSorenRandNum(
                         100, "roll to randomize the migration of refugies"
@@ -1530,7 +1566,7 @@ class Religions:
                         intolerance[iPlayer] += 50
                     elif iRCivic == xml.iCivicFreeReligion:
                         intolerance[iPlayer] = max(0, intolerance[iPlayer] - 30)
-                if iPlayer > Consts.iPope:
+                if iPlayer > Civ.POPE.value:
                     intolerance[iPlayer] += gc.getGame().getSorenRandNum(
                         100, "roll to randomize the migration of refugies"
                     )
@@ -1592,7 +1628,7 @@ class Religions:
                 civ.get_player().setFaith(civ_starting_situation[StartingSituation.FAITH])
 
     def getCatholicCivs(self, bOpenBorders=False):
-        teamPope = gc.getTeam(gc.getPlayer(Consts.iPope).getTeam())
+        teamPope = gc.getTeam(gc.getPlayer(Civ.POPE.value).getTeam())
         lCatholicCivs = []
         for iPlayer in range(Consts.iNumPlayers - 1):  # Do not include the Pope
             pPlayer = gc.getPlayer(iPlayer)

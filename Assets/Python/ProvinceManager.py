@@ -9,42 +9,42 @@ import PyHelpers  # Absinthe
 
 from TimelineData import CIV_BIRTHDATE
 from CoreStructures import get_civ_by_id
-from CoreTypes import Scenario, ProvinceTypes
+from CoreTypes import Civ, Scenario, ProvinceTypes
 
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer  # Absinthe
 utils = RFCUtils.RFCUtils()  # Absinthe
 
-
-pBurgundy = gc.getPlayer(Consts.iBurgundy)
-pByzantium = gc.getPlayer(Consts.iByzantium)
-pFrankia = gc.getPlayer(Consts.iFrankia)
-pArabia = gc.getPlayer(Consts.iArabia)
-pBulgaria = gc.getPlayer(Consts.iBulgaria)
-pCordoba = gc.getPlayer(Consts.iCordoba)
-pSpain = gc.getPlayer(Consts.iSpain)
-pNorway = gc.getPlayer(Consts.iNorway)
-pDenmark = gc.getPlayer(Consts.iDenmark)
-pVenecia = gc.getPlayer(Consts.iVenecia)
-pNovgorod = gc.getPlayer(Consts.iNovgorod)
-pKiev = gc.getPlayer(Consts.iKiev)
-pHungary = gc.getPlayer(Consts.iHungary)
-pGermany = gc.getPlayer(Consts.iGermany)
-pScotland = gc.getPlayer(Consts.iScotland)
-pPoland = gc.getPlayer(Consts.iPoland)
-pMoscow = gc.getPlayer(Consts.iMoscow)
-pGenoa = gc.getPlayer(Consts.iGenoa)
-pMorocco = gc.getPlayer(Consts.iMorocco)
-pEngland = gc.getPlayer(Consts.iEngland)
-pPortugal = gc.getPlayer(Consts.iPortugal)
-pAragon = gc.getPlayer(Consts.iAragon)
-pPrussia = gc.getPlayer(Consts.iPrussia)
-pLithuania = gc.getPlayer(Consts.iLithuania)
-pAustria = gc.getPlayer(Consts.iAustria)
-pTurkey = gc.getPlayer(Consts.iTurkey)
-pSweden = gc.getPlayer(Consts.iSweden)
-pDutch = gc.getPlayer(Consts.iDutch)
-pPope = gc.getPlayer(Consts.iPope)
+# TODO clean this
+pBurgundy = gc.getPlayer(Civ.BURGUNDY.value)
+pByzantium = gc.getPlayer(Civ.BYZANTIUM.value)
+pFrankia = gc.getPlayer(Civ.FRANCE.value)
+pArabia = gc.getPlayer(Civ.ARABIA.value)
+pBulgaria = gc.getPlayer(Civ.BULGARIA.value)
+pCordoba = gc.getPlayer(Civ.CORDOBA.value)
+pSpain = gc.getPlayer(Civ.CASTILLE.value)
+pNorway = gc.getPlayer(Civ.NORWAY.value)
+pDenmark = gc.getPlayer(Civ.DENMARK.value)
+pVenecia = gc.getPlayer(Civ.VENECIA.value)
+pNovgorod = gc.getPlayer(Civ.NOVGOROD.value)
+pKiev = gc.getPlayer(Civ.KIEV.value)
+pHungary = gc.getPlayer(Civ.HUNGARY.value)
+pGermany = gc.getPlayer(Civ.GERMANY.value)
+pScotland = gc.getPlayer(Civ.SCOTLAND.value)
+pPoland = gc.getPlayer(Civ.POLAND.value)
+pMoscow = gc.getPlayer(Civ.MOSCOW.value)
+pGenoa = gc.getPlayer(Civ.GENOA.value)
+pMorocco = gc.getPlayer(Civ.MOROCCO.value)
+pEngland = gc.getPlayer(Civ.ENGLAND.value)
+pPortugal = gc.getPlayer(Civ.PORTUGAL.value)
+pAragon = gc.getPlayer(Civ.ARAGON.value)
+pPrussia = gc.getPlayer(Civ.PRUSSIA.value)
+pLithuania = gc.getPlayer(Civ.LITHUANIA.value)
+pAustria = gc.getPlayer(Civ.AUSTRIA.value)
+pTurkey = gc.getPlayer(Civ.OTTOMAN.value)
+pSweden = gc.getPlayer(Civ.SWEDEN.value)
+pDutch = gc.getPlayer(Civ.DUTCH.value)
+pPope = gc.getPlayer(Civ.POPE.value)
 
 
 ############ Lists of all the provinces for each Civ ###################
@@ -546,158 +546,158 @@ tDutchPot2Norm = []
 class ProvinceManager:
     def __init__(self):
         self.tCoreProvinces = {
-            Consts.iByzantium: tByzantiumCore,
-            Consts.iFrankia: tFranceCore,
-            Consts.iArabia: tArabiaCore,
-            Consts.iBulgaria: tBulgariaCore,
-            Consts.iCordoba: tCordobaCore,
-            Consts.iVenecia: tVeniceCore,
-            Consts.iBurgundy: tBurgundyCore,
-            Consts.iGermany: tGermanyCore,
-            Consts.iNovgorod: tNovgorodCore,
-            Consts.iNorway: tNorwayCore,
-            Consts.iKiev: tKievCore,
-            Consts.iHungary: tHungaryCore,
-            Consts.iSpain: tSpainCore,
-            Consts.iDenmark: tDenmarkCore,
-            Consts.iScotland: tScotlandCore,
-            Consts.iPoland: tPolandCore,
-            Consts.iGenoa: tGenoaCore,
-            Consts.iMorocco: tMoroccoCore,
-            Consts.iEngland: tEnglandCore,
-            Consts.iPortugal: tPortugalCore,
-            Consts.iAragon: tAragonCore,
-            Consts.iSweden: tSwedenCore,
-            Consts.iPrussia: tPrussiaCore,
-            Consts.iLithuania: tLithuaniaCore,
-            Consts.iAustria: tAustriaCore,
-            Consts.iTurkey: tTurkeyCore,
-            Consts.iMoscow: tMoscowCore,
-            Consts.iDutch: tDutchCore,
+            Civ.BYZANTIUM.value: tByzantiumCore,
+            Civ.FRANCE.value: tFranceCore,
+            Civ.ARABIA.value: tArabiaCore,
+            Civ.BULGARIA.value: tBulgariaCore,
+            Civ.CORDOBA.value: tCordobaCore,
+            Civ.VENECIA.value: tVeniceCore,
+            Civ.BURGUNDY.value: tBurgundyCore,
+            Civ.GERMANY.value: tGermanyCore,
+            Civ.NOVGOROD.value: tNovgorodCore,
+            Civ.NORWAY.value: tNorwayCore,
+            Civ.KIEV.value: tKievCore,
+            Civ.HUNGARY.value: tHungaryCore,
+            Civ.CASTILLE.value: tSpainCore,
+            Civ.DENMARK.value: tDenmarkCore,
+            Civ.SCOTLAND.value: tScotlandCore,
+            Civ.POLAND.value: tPolandCore,
+            Civ.GENOA.value: tGenoaCore,
+            Civ.MOROCCO.value: tMoroccoCore,
+            Civ.ENGLAND.value: tEnglandCore,
+            Civ.PORTUGAL.value: tPortugalCore,
+            Civ.ARAGON.value: tAragonCore,
+            Civ.SWEDEN.value: tSwedenCore,
+            Civ.PRUSSIA.value: tPrussiaCore,
+            Civ.LITHUANIA.value: tLithuaniaCore,
+            Civ.AUSTRIA.value: tAustriaCore,
+            Civ.OTTOMAN.value: tTurkeyCore,
+            Civ.MOSCOW.value: tMoscowCore,
+            Civ.DUTCH.value: tDutchCore,
         }
 
         self.tNormProvinces = {
-            Consts.iByzantium: tByzantiumNorm,
-            Consts.iFrankia: tFranceNorm,
-            Consts.iArabia: tArabiaNorm,
-            Consts.iBulgaria: tBulgariaNorm,
-            Consts.iCordoba: tCordobaNorm,
-            Consts.iVenecia: tVeniceNorm,
-            Consts.iBurgundy: tBurgundyNorm,
-            Consts.iGermany: tGermanyNorm,
-            Consts.iNovgorod: tNovgorodNorm,
-            Consts.iNorway: tNorwayNorm,
-            Consts.iKiev: tKievNorm,
-            Consts.iHungary: tHungaryNorm,
-            Consts.iSpain: tSpainNorm,
-            Consts.iDenmark: tDenmarkNorm,
-            Consts.iScotland: tScotlandNorm,
-            Consts.iPoland: tPolandNorm,
-            Consts.iGenoa: tGenoaNorm,
-            Consts.iMorocco: tMoroccoNorm,
-            Consts.iEngland: tEnglandNorm,
-            Consts.iPortugal: tPortugalNorm,
-            Consts.iAragon: tAragonNorm,
-            Consts.iSweden: tSwedenNorm,
-            Consts.iPrussia: tPrussiaNorm,
-            Consts.iLithuania: tLithuaniaNorm,
-            Consts.iAustria: tAustriaNorm,
-            Consts.iTurkey: tTurkeyNorm,
-            Consts.iMoscow: tMoscowNorm,
-            Consts.iDutch: tDutchNorm,
+            Civ.BYZANTIUM.value: tByzantiumNorm,
+            Civ.FRANCE.value: tFranceNorm,
+            Civ.ARABIA.value: tArabiaNorm,
+            Civ.BULGARIA.value: tBulgariaNorm,
+            Civ.CORDOBA.value: tCordobaNorm,
+            Civ.VENECIA.value: tVeniceNorm,
+            Civ.BURGUNDY.value: tBurgundyNorm,
+            Civ.GERMANY.value: tGermanyNorm,
+            Civ.NOVGOROD.value: tNovgorodNorm,
+            Civ.NORWAY.value: tNorwayNorm,
+            Civ.KIEV.value: tKievNorm,
+            Civ.HUNGARY.value: tHungaryNorm,
+            Civ.CASTILLE.value: tSpainNorm,
+            Civ.DENMARK.value: tDenmarkNorm,
+            Civ.SCOTLAND.value: tScotlandNorm,
+            Civ.POLAND.value: tPolandNorm,
+            Civ.GENOA.value: tGenoaNorm,
+            Civ.MOROCCO.value: tMoroccoNorm,
+            Civ.ENGLAND.value: tEnglandNorm,
+            Civ.PORTUGAL.value: tPortugalNorm,
+            Civ.ARAGON.value: tAragonNorm,
+            Civ.SWEDEN.value: tSwedenNorm,
+            Civ.PRUSSIA.value: tPrussiaNorm,
+            Civ.LITHUANIA.value: tLithuaniaNorm,
+            Civ.AUSTRIA.value: tAustriaNorm,
+            Civ.OTTOMAN.value: tTurkeyNorm,
+            Civ.MOSCOW.value: tMoscowNorm,
+            Civ.DUTCH.value: tDutchNorm,
         }
 
         self.tOuterProvinces = {
-            Consts.iByzantium: tByzantiumOuter,
-            Consts.iFrankia: tFranceOuter,
-            Consts.iArabia: tArabiaOuter,
-            Consts.iBulgaria: tBulgariaOuter,
-            Consts.iCordoba: tCordobaOuter,
-            Consts.iVenecia: tVeniceOuter,
-            Consts.iBurgundy: tBurgundyOuter,
-            Consts.iGermany: tGermanyOuter,
-            Consts.iNovgorod: tNovgorodOuter,
-            Consts.iNorway: tNorwayOuter,
-            Consts.iKiev: tKievOuter,
-            Consts.iHungary: tHungaryOuter,
-            Consts.iSpain: tSpainOuter,
-            Consts.iDenmark: tDenmarkOuter,
-            Consts.iScotland: tScotlandOuter,
-            Consts.iPoland: tPolandOuter,
-            Consts.iGenoa: tGenoaOuter,
-            Consts.iMorocco: tMoroccoOuter,
-            Consts.iEngland: tEnglandOuter,
-            Consts.iPortugal: tPortugalOuter,
-            Consts.iAragon: tAragonOuter,
-            Consts.iSweden: tSwedenOuter,
-            Consts.iPrussia: tPrussiaOuter,
-            Consts.iLithuania: tLithuaniaOuter,
-            Consts.iAustria: tAustriaOuter,
-            Consts.iTurkey: tTurkeyOuter,
-            Consts.iMoscow: tMoscowOuter,
-            Consts.iDutch: tDutchOuter,
+            Civ.BYZANTIUM.value: tByzantiumOuter,
+            Civ.FRANCE.value: tFranceOuter,
+            Civ.ARABIA.value: tArabiaOuter,
+            Civ.BULGARIA.value: tBulgariaOuter,
+            Civ.CORDOBA.value: tCordobaOuter,
+            Civ.VENECIA.value: tVeniceOuter,
+            Civ.BURGUNDY.value: tBurgundyOuter,
+            Civ.GERMANY.value: tGermanyOuter,
+            Civ.NOVGOROD.value: tNovgorodOuter,
+            Civ.NORWAY.value: tNorwayOuter,
+            Civ.KIEV.value: tKievOuter,
+            Civ.HUNGARY.value: tHungaryOuter,
+            Civ.CASTILLE.value: tSpainOuter,
+            Civ.DENMARK.value: tDenmarkOuter,
+            Civ.SCOTLAND.value: tScotlandOuter,
+            Civ.POLAND.value: tPolandOuter,
+            Civ.GENOA.value: tGenoaOuter,
+            Civ.MOROCCO.value: tMoroccoOuter,
+            Civ.ENGLAND.value: tEnglandOuter,
+            Civ.PORTUGAL.value: tPortugalOuter,
+            Civ.ARAGON.value: tAragonOuter,
+            Civ.SWEDEN.value: tSwedenOuter,
+            Civ.PRUSSIA.value: tPrussiaOuter,
+            Civ.LITHUANIA.value: tLithuaniaOuter,
+            Civ.AUSTRIA.value: tAustriaOuter,
+            Civ.OTTOMAN.value: tTurkeyOuter,
+            Civ.MOSCOW.value: tMoscowOuter,
+            Civ.DUTCH.value: tDutchOuter,
         }
 
         self.tPot2CoreProvinces = {
-            Consts.iByzantium: tByzantiumPot2Core,
-            Consts.iFrankia: tFrancePot2Core,
-            Consts.iArabia: tArabiaPot2Core,
-            Consts.iBulgaria: tBulgariaPot2Core,
-            Consts.iCordoba: tCordobaPot2Core,
-            Consts.iVenecia: tVenicePot2Core,
-            Consts.iBurgundy: tBurgundyPot2Core,
-            Consts.iGermany: tGermanyPot2Core,
-            Consts.iNovgorod: tNovgorodPot2Core,
-            Consts.iNorway: tNorwayPot2Core,
-            Consts.iKiev: tKievPot2Core,
-            Consts.iHungary: tHungaryPot2Core,
-            Consts.iSpain: tSpainPot2Core,
-            Consts.iDenmark: tDenmarkPot2Core,
-            Consts.iScotland: tScotlandPot2Core,
-            Consts.iPoland: tPolandPot2Core,
-            Consts.iGenoa: tGenoaPot2Core,
-            Consts.iMorocco: tMoroccoPot2Core,
-            Consts.iEngland: tEnglandPot2Core,
-            Consts.iPortugal: tPortugalPot2Core,
-            Consts.iAragon: tAragonPot2Core,
-            Consts.iSweden: tSwedenPot2Core,
-            Consts.iPrussia: tPrussiaPot2Core,
-            Consts.iLithuania: tLithuaniaPot2Core,
-            Consts.iAustria: tAustriaPot2Core,
-            Consts.iTurkey: tTurkeyPot2Core,
-            Consts.iMoscow: tMoscowPot2Core,
-            Consts.iDutch: tDutchPot2Core,
+            Civ.BYZANTIUM.value: tByzantiumPot2Core,
+            Civ.FRANCE.value: tFrancePot2Core,
+            Civ.ARABIA.value: tArabiaPot2Core,
+            Civ.BULGARIA.value: tBulgariaPot2Core,
+            Civ.CORDOBA.value: tCordobaPot2Core,
+            Civ.VENECIA.value: tVenicePot2Core,
+            Civ.BURGUNDY.value: tBurgundyPot2Core,
+            Civ.GERMANY.value: tGermanyPot2Core,
+            Civ.NOVGOROD.value: tNovgorodPot2Core,
+            Civ.NORWAY.value: tNorwayPot2Core,
+            Civ.KIEV.value: tKievPot2Core,
+            Civ.HUNGARY.value: tHungaryPot2Core,
+            Civ.CASTILLE.value: tSpainPot2Core,
+            Civ.DENMARK.value: tDenmarkPot2Core,
+            Civ.SCOTLAND.value: tScotlandPot2Core,
+            Civ.POLAND.value: tPolandPot2Core,
+            Civ.GENOA.value: tGenoaPot2Core,
+            Civ.MOROCCO.value: tMoroccoPot2Core,
+            Civ.ENGLAND.value: tEnglandPot2Core,
+            Civ.PORTUGAL.value: tPortugalPot2Core,
+            Civ.ARAGON.value: tAragonPot2Core,
+            Civ.SWEDEN.value: tSwedenPot2Core,
+            Civ.PRUSSIA.value: tPrussiaPot2Core,
+            Civ.LITHUANIA.value: tLithuaniaPot2Core,
+            Civ.AUSTRIA.value: tAustriaPot2Core,
+            Civ.OTTOMAN.value: tTurkeyPot2Core,
+            Civ.MOSCOW.value: tMoscowPot2Core,
+            Civ.DUTCH.value: tDutchPot2Core,
         }
 
         self.tPot2NormProvinces = {
-            Consts.iByzantium: tByzantiumPot2Norm,
-            Consts.iFrankia: tFrancePot2Norm,
-            Consts.iArabia: tArabiaPot2Norm,
-            Consts.iBulgaria: tBulgariaPot2Norm,
-            Consts.iCordoba: tCordobaPot2Norm,
-            Consts.iVenecia: tVenicePot2Norm,
-            Consts.iBurgundy: tBurgundyPot2Norm,
-            Consts.iGermany: tGermanyPot2Norm,
-            Consts.iNovgorod: tNovgorodPot2Norm,
-            Consts.iNorway: tNorwayPot2Norm,
-            Consts.iKiev: tKievPot2Norm,
-            Consts.iHungary: tHungaryPot2Norm,
-            Consts.iSpain: tSpainPot2Norm,
-            Consts.iDenmark: tDenmarkPot2Norm,
-            Consts.iScotland: tScotlandPot2Norm,
-            Consts.iPoland: tPolandPot2Norm,
-            Consts.iGenoa: tGenoaPot2Norm,
-            Consts.iMorocco: tMoroccoPot2Norm,
-            Consts.iEngland: tEnglandPot2Norm,
-            Consts.iPortugal: tPortugalPot2Norm,
-            Consts.iAragon: tAragonPot2Norm,
-            Consts.iSweden: tSwedenPot2Norm,
-            Consts.iPrussia: tPrussiaPot2Norm,
-            Consts.iLithuania: tLithuaniaPot2Norm,
-            Consts.iAustria: tAustriaPot2Norm,
-            Consts.iTurkey: tTurkeyPot2Norm,
-            Consts.iMoscow: tMoscowPot2Norm,
-            Consts.iDutch: tDutchPot2Norm,
+            Civ.BYZANTIUM.value: tByzantiumPot2Norm,
+            Civ.FRANCE.value: tFrancePot2Norm,
+            Civ.ARABIA.value: tArabiaPot2Norm,
+            Civ.BULGARIA.value: tBulgariaPot2Norm,
+            Civ.CORDOBA.value: tCordobaPot2Norm,
+            Civ.VENECIA.value: tVenicePot2Norm,
+            Civ.BURGUNDY.value: tBurgundyPot2Norm,
+            Civ.GERMANY.value: tGermanyPot2Norm,
+            Civ.NOVGOROD.value: tNovgorodPot2Norm,
+            Civ.NORWAY.value: tNorwayPot2Norm,
+            Civ.KIEV.value: tKievPot2Norm,
+            Civ.HUNGARY.value: tHungaryPot2Norm,
+            Civ.CASTILLE.value: tSpainPot2Norm,
+            Civ.DENMARK.value: tDenmarkPot2Norm,
+            Civ.SCOTLAND.value: tScotlandPot2Norm,
+            Civ.POLAND.value: tPolandPot2Norm,
+            Civ.GENOA.value: tGenoaPot2Norm,
+            Civ.MOROCCO.value: tMoroccoPot2Norm,
+            Civ.ENGLAND.value: tEnglandPot2Norm,
+            Civ.PORTUGAL.value: tPortugalPot2Norm,
+            Civ.ARAGON.value: tAragonPot2Norm,
+            Civ.SWEDEN.value: tSwedenPot2Norm,
+            Civ.PRUSSIA.value: tPrussiaPot2Norm,
+            Civ.LITHUANIA.value: tLithuaniaPot2Norm,
+            Civ.AUSTRIA.value: tAustriaPot2Norm,
+            Civ.OTTOMAN.value: tTurkeyPot2Norm,
+            Civ.MOSCOW.value: tMoscowPot2Norm,
+            Civ.DUTCH.value: tDutchPot2Norm,
         }
 
     def setup(self):
@@ -807,7 +807,7 @@ class ProvinceManager:
         # Absinthe: special respawn conditions
         # if ( iPlayer == iArabia ):
         # 	self.resetProvinces(iPlayer)
-        if iPlayer == Consts.iCordoba:
+        if iPlayer == Civ.CORDOBA.value:
             for iProv in range(xml.iP_MaxNumberOfProvinces):
                 pCordoba.setProvinceType(iProv, ProvinceTypes.NONE)
             pCordoba.setProvinceType(xml.iP_Ifriqiya, ProvinceTypes.CORE)
@@ -836,7 +836,7 @@ class ProvinceManager:
 
     def onSpawn(self, iPlayer):
         # when a new nations spawns, old nations in the region should lose some of their provinces
-        if iPlayer == Consts.iArabia:
+        if iPlayer == Civ.ARABIA.value:
             pByzantium.setProvinceType(xml.iP_Cyrenaica, ProvinceTypes.OUTER)
             pByzantium.setProvinceType(xml.iP_Tripolitania, ProvinceTypes.OUTER)
             pByzantium.setProvinceType(xml.iP_Ifriqiya, ProvinceTypes.OUTER)
@@ -849,11 +849,11 @@ class ProvinceManager:
             pByzantium.setProvinceType(xml.iP_Cilicia, ProvinceTypes.NATURAL)
             pByzantium.setProvinceType(xml.iP_Charsianon, ProvinceTypes.NATURAL)
             pByzantium.setProvinceType(xml.iP_Colonea, ProvinceTypes.NATURAL)
-        elif iPlayer == Consts.iBulgaria:
+        elif iPlayer == Civ.BULGARIA.value:
             pByzantium.setProvinceType(xml.iP_Serbia, ProvinceTypes.OUTER)
             pByzantium.setProvinceType(xml.iP_Moesia, ProvinceTypes.OUTER)
             pByzantium.setProvinceType(xml.iP_Thrace, ProvinceTypes.NATURAL)
-        elif iPlayer == Consts.iVenecia:
+        elif iPlayer == Civ.VENECIA.value:
             pByzantium.setProvinceType(xml.iP_Dalmatia, ProvinceTypes.NONE)
             pByzantium.setProvinceType(xml.iP_Bosnia, ProvinceTypes.NONE)
             pByzantium.setProvinceType(xml.iP_Slavonia, ProvinceTypes.NONE)
@@ -864,27 +864,27 @@ class ProvinceManager:
             pByzantium.setProvinceType(xml.iP_Corsica, ProvinceTypes.NONE)
             pByzantium.setProvinceType(xml.iP_Sardinia, ProvinceTypes.NONE)
             pByzantium.setProvinceType(xml.iP_Latium, ProvinceTypes.NONE)
-        elif iPlayer == Consts.iBurgundy:
+        elif iPlayer == Civ.BURGUNDY.value:
             # these areas flip to Burgundy, so resetting them to Potential won't cause any issues
             pFrankia.setProvinceType(xml.iP_Provence, ProvinceTypes.POTENTIAL)
             pFrankia.setProvinceType(xml.iP_Burgundy, ProvinceTypes.POTENTIAL)
-        elif iPlayer == Consts.iGermany:
+        elif iPlayer == Civ.GERMANY.value:
             pFrankia.setProvinceType(xml.iP_Lorraine, ProvinceTypes.OUTER)
             pFrankia.setProvinceType(xml.iP_Bavaria, ProvinceTypes.NONE)
             pFrankia.setProvinceType(xml.iP_Franconia, ProvinceTypes.NONE)
             pFrankia.setProvinceType(xml.iP_Saxony, ProvinceTypes.NONE)
             pFrankia.setProvinceType(xml.iP_Netherlands, ProvinceTypes.NONE)
-        elif iPlayer == Consts.iHungary:
+        elif iPlayer == Civ.HUNGARY.value:
             pBulgaria.setProvinceType(xml.iP_Banat, ProvinceTypes.NONE)
             pBulgaria.setProvinceType(xml.iP_Wallachia, ProvinceTypes.OUTER)
-        elif iPlayer == Consts.iSpain:
+        elif iPlayer == Civ.CASTILLE.value:
             pCordoba.setProvinceType(xml.iP_LaMancha, ProvinceTypes.NATURAL)
-        elif iPlayer == Consts.iMorocco:
+        elif iPlayer == Civ.MOROCCO.value:
             pCordoba.setProvinceType(xml.iP_Morocco, ProvinceTypes.NONE)
             pCordoba.setProvinceType(xml.iP_Marrakesh, ProvinceTypes.NONE)
             pCordoba.setProvinceType(xml.iP_Fez, ProvinceTypes.OUTER)
             pCordoba.setProvinceType(xml.iP_Tetouan, ProvinceTypes.OUTER)
-        elif iPlayer == Consts.iEngland:
+        elif iPlayer == Civ.ENGLAND.value:
             pFrankia.setProvinceType(
                 xml.iP_Normandy, ProvinceTypes.POTENTIAL
             )  # it flips to England, so resetting them to Potential won't cause any issues
@@ -894,7 +894,7 @@ class ProvinceManager:
             pDenmark.setProvinceType(xml.iP_Mercia, ProvinceTypes.NONE)
             pDenmark.setProvinceType(xml.iP_EastAnglia, ProvinceTypes.NONE)
             pDenmark.setProvinceType(xml.iP_London, ProvinceTypes.NONE)
-        elif iPlayer == Consts.iAragon:
+        elif iPlayer == Civ.ARAGON.value:
             pByzantium.setProvinceType(xml.iP_Apulia, ProvinceTypes.OUTER)
             pByzantium.setProvinceType(xml.iP_Calabria, ProvinceTypes.OUTER)
             pByzantium.setProvinceType(xml.iP_Sicily, ProvinceTypes.OUTER)
@@ -903,12 +903,12 @@ class ProvinceManager:
             pCordoba.setProvinceType(xml.iP_Catalonia, ProvinceTypes.OUTER)
             pCordoba.setProvinceType(xml.iP_Valencia, ProvinceTypes.NATURAL)
             pCordoba.setProvinceType(xml.iP_Balears, ProvinceTypes.OUTER)
-        elif iPlayer == Consts.iSweden:
+        elif iPlayer == Civ.SWEDEN.value:
             pNorway.setProvinceType(xml.iP_Svealand, ProvinceTypes.NONE)
             pDenmark.setProvinceType(xml.iP_Gotaland, ProvinceTypes.NONE)
             pDenmark.setProvinceType(xml.iP_Svealand, ProvinceTypes.NONE)
             pNovgorod.setProvinceType(xml.iP_Osterland, ProvinceTypes.OUTER)
-        elif iPlayer == Consts.iAustria:
+        elif iPlayer == Civ.AUSTRIA.value:
             pHungary.setProvinceType(xml.iP_Carinthia, ProvinceTypes.OUTER)
             pHungary.setProvinceType(xml.iP_Austria, ProvinceTypes.OUTER)
             pHungary.setProvinceType(xml.iP_Moravia, ProvinceTypes.OUTER)
@@ -917,7 +917,7 @@ class ProvinceManager:
             pGermany.setProvinceType(xml.iP_Bohemia, ProvinceTypes.OUTER)
             pSpain.setProvinceType(xml.iP_Netherlands, ProvinceTypes.OUTER)
             pSpain.setProvinceType(xml.iP_Flanders, ProvinceTypes.OUTER)
-        elif iPlayer == Consts.iTurkey:
+        elif iPlayer == Civ.OTTOMAN.value:
             pByzantium.setProvinceType(xml.iP_Antiochia, ProvinceTypes.OUTER)
             pByzantium.setProvinceType(xml.iP_Cilicia, ProvinceTypes.OUTER)
             pByzantium.setProvinceType(xml.iP_Charsianon, ProvinceTypes.OUTER)
@@ -931,10 +931,10 @@ class ProvinceManager:
             pHungary.setProvinceType(xml.iP_Dalmatia, ProvinceTypes.OUTER)
             pHungary.setProvinceType(xml.iP_Bosnia, ProvinceTypes.OUTER)
             pHungary.setProvinceType(xml.iP_Banat, ProvinceTypes.OUTER)
-        elif iPlayer == Consts.iMoscow:
+        elif iPlayer == Civ.MOSCOW.value:
             pNovgorod.setProvinceType(xml.iP_Rostov, ProvinceTypes.OUTER)
             pNovgorod.setProvinceType(xml.iP_Smolensk, ProvinceTypes.NONE)
-        elif iPlayer == Consts.iDutch:
+        elif iPlayer == Civ.DUTCH.value:
             pSpain.setProvinceType(xml.iP_Netherlands, ProvinceTypes.NONE)
             pSpain.setProvinceType(xml.iP_Flanders, ProvinceTypes.NONE)
             pAustria.setProvinceType(xml.iP_Netherlands, ProvinceTypes.NONE)

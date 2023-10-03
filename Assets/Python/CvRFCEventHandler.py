@@ -33,7 +33,7 @@ import RFCEMaps
 from MiscData import MessageData
 from TimelineData import CIV_BIRTHDATE
 from CoreStructures import get_civ_by_id
-from CoreTypes import City, Scenario, UniquePower, StabilityCategory
+from CoreTypes import Civ, City, Scenario, UniquePower, StabilityCategory
 from LocationsData import CITIES
 
 gc = CyGlobalContext()
@@ -228,8 +228,8 @@ class CvRFCEventHandler:
         # 			some of the cities intentionally have different names though (compared to the CNM), for example some Kievan cities
         # 			thus it's only set for Hungary for now, we can add more civs/cities later on if there are naming issues
         if utils.getScenario() == Scenario.i1200AD:
-            for city in utils.getCityList(Consts.iHungary):
-                self.cnm.renameCities(city, Consts.iHungary)
+            for city in utils.getCityList(Civ.HUNGARY.value):
+                self.cnm.renameCities(city, Civ.HUNGARY.value)
         # Absinthe: for all civs:
         # if utils.getScenario() == Scenario.i1200AD:
         # 	for iPlayer in range(Consts.iNumPlayers - 1):
@@ -253,9 +253,9 @@ class CvRFCEventHandler:
         tCity = (city.getX(), city.getY())
 
         # Absinthe: If Arabia doesn't found it's first city, but acquires it with a different method (conquest, flip, trade), it should found Islam there (otherwise no holy city at all)
-        if playerType == Consts.iArabia and not gc.getGame().isReligionFounded(xml.iIslam):
+        if playerType == Civ.ARABIA.value and not gc.getGame().isReligionFounded(xml.iIslam):
             # has to be done before the Arab UP is triggered
-            gc.getPlayer(Consts.iArabia).foundReligion(xml.iIslam, xml.iIslam, False)
+            gc.getPlayer(Civ.ARABIA.value).foundReligion(xml.iIslam, xml.iIslam, False)
             gc.getGame().getHolyCity(xml.iIslam).setNumRealBuilding(xml.iIslamicShrine, 1)
 
         # 3Miro: Arab UP
@@ -268,7 +268,7 @@ class CvRFCEventHandler:
 
         # Absinthe: Scottish UP
         # 			against all players (including indies and barbs), but only on conquest
-        if owner == Consts.iScotland and bConquest:  # playerType < Consts.iNumTotalPlayersB
+        if owner == Civ.SCOTLAND.value and bConquest:  # playerType < Consts.iNumTotalPlayersB
             # only in cities with at least 20% Scottish culture
             iTotalCulture = city.countTotalCultureTimes100()
             if iTotalCulture == 0 or (city.getCulture(owner) * 10000) / iTotalCulture > 20:
@@ -276,30 +276,32 @@ class CvRFCEventHandler:
 
         # Absinthe: Aragonese UP
         # 			UP tile yields should be recalculated right away, in case the capital was conquered, or province number changed
-        if owner == Consts.iAragon:
+        if owner == Civ.ARAGON.value:
             self.up.confederationUP(owner)
-        if playerType == Consts.iAragon:
+        if playerType == Civ.ARAGON.value:
             self.up.confederationUP(playerType)
 
         # Absinthe: If Protestantism has not been founded by the time the Dutch spawn, then the Dutch should found it with their first city
-        if playerType == Consts.iDutch and not gc.getGame().isReligionFounded(xml.iProtestantism):
-            gc.getPlayer(Consts.iDutch).foundReligion(
+        if playerType == Civ.DUTCH.value and not gc.getGame().isReligionFounded(
+            xml.iProtestantism
+        ):
+            gc.getPlayer(Civ.DUTCH.value).foundReligion(
                 xml.iProtestantism, xml.iProtestantism, False
             )
             gc.getGame().getHolyCity(xml.iProtestantism).setNumRealBuilding(
                 xml.iProtestantShrine, 1
             )
             self.rel.setReformationActive(True)
-            self.rel.reformationchoice(Consts.iDutch)
-            self.rel.reformationOther(Consts.iIndependent)
-            self.rel.reformationOther(Consts.iIndependent2)
-            self.rel.reformationOther(Consts.iIndependent3)
-            self.rel.reformationOther(Consts.iIndependent4)
-            self.rel.reformationOther(Consts.iBarbarian)
-            self.rel.setReformationHitMatrix(Consts.iDutch, 2)
+            self.rel.reformationchoice(Civ.DUTCH.value)
+            self.rel.reformationOther(Civ.INDEPENDENT.value)
+            self.rel.reformationOther(Civ.INDEPENDENT_2.value)
+            self.rel.reformationOther(Civ.INDEPENDENT_3.value)
+            self.rel.reformationOther(Civ.INDEPENDENT_4.value)
+            self.rel.reformationOther(Civ.BARBARIAN.value)
+            self.rel.setReformationHitMatrix(Civ.DUTCH.value, 2)
             for iCiv in range(Consts.iNumPlayers):
                 if (
-                    iCiv in Religions.lReformationNeighbours[Consts.iDutch]
+                    iCiv in Religions.lReformationNeighbours[Civ.DUTCH.value]
                     and self.rel.getReformationHitMatrix(iCiv) == 0
                 ):
                     self.rel.setReformationHitMatrix(iCiv, 1)
@@ -412,7 +414,7 @@ class CvRFCEventHandler:
 
         # Absinthe: Aragonese UP
         # 			UP tile yields should be recalculated if your new city is razed
-        if iPlayer == Consts.iAragon:
+        if iPlayer == Civ.ARAGON.value:
             self.up.confederationUP(iPlayer)
 
     def onCityBuilt(self, argsList):
@@ -432,7 +434,7 @@ class CvRFCEventHandler:
 
         # Absinthe: Aragonese UP
         # 			UP tile yields should be recalculated on city foundation
-        if iOwner == Consts.iAragon:
+        if iOwner == Civ.ARAGON.value:
             self.up.confederationUP(iOwner)
 
         # Rhye - delete culture of barbs and minor civs to prevent weird unhappiness
@@ -440,15 +442,17 @@ class CvRFCEventHandler:
         for i in range(Consts.iNumTotalPlayers - Consts.iNumMajorPlayers):
             iMinorCiv = i + Consts.iNumMajorPlayers
             pCurrent.setCulture(iMinorCiv, 0, True)
-        pCurrent.setCulture(Consts.iBarbarian, 0, True)
+        pCurrent.setCulture(Civ.BARBARIAN.value, 0, True)
 
         if iOwner < Consts.iNumMajorPlayers:
             utils.spreadMajorCulture(iOwner, city.getX(), city.getY())
 
-            if iOwner == Consts.iPortugal:
+            if iOwner == Civ.PORTUGAL.value:
                 self.vic.onCityBuilt(city, iOwner)  # needed in Victory.py
 
-                if gc.getTeam(gc.getPlayer(Consts.iPortugal).getTeam()).isHasTech(xml.iAstronomy):
+                if gc.getTeam(gc.getPlayer(Civ.PORTUGAL.value).getTeam()).isHasTech(
+                    xml.iAstronomy
+                ):
                     city.setHasRealBuilding(xml.iPortugalFeitoria, True)
 
         # Absinthe: Free buildings if city is built on a tile improvement
@@ -494,24 +498,24 @@ class CvRFCEventHandler:
             self.up.faithUP(iOwner, city)
 
         # Absinthe: If Protestantism has not been founded by the time the Dutch spawn, then the Dutch should found it with their first city
-        if iOwner == Consts.iDutch and not gc.getGame().isReligionFounded(xml.iProtestantism):
-            gc.getPlayer(Consts.iDutch).foundReligion(
+        if iOwner == Civ.DUTCH.value and not gc.getGame().isReligionFounded(xml.iProtestantism):
+            gc.getPlayer(Civ.DUTCH.value).foundReligion(
                 xml.iProtestantism, xml.iProtestantism, False
             )
             gc.getGame().getHolyCity(xml.iProtestantism).setNumRealBuilding(
                 xml.iProtestantShrine, 1
             )
             self.rel.setReformationActive(True)
-            self.rel.reformationchoice(Consts.iDutch)
-            self.rel.reformationOther(Consts.iIndependent)
-            self.rel.reformationOther(Consts.iIndependent2)
-            self.rel.reformationOther(Consts.iIndependent3)
-            self.rel.reformationOther(Consts.iIndependent4)
-            self.rel.reformationOther(Consts.iBarbarian)
-            self.rel.setReformationHitMatrix(Consts.iDutch, 2)
+            self.rel.reformationchoice(Civ.DUTCH.value)
+            self.rel.reformationOther(Civ.INDEPENDENT.value)
+            self.rel.reformationOther(Civ.INDEPENDENT_2.value)
+            self.rel.reformationOther(Civ.INDEPENDENT_3.value)
+            self.rel.reformationOther(Civ.INDEPENDENT_4.value)
+            self.rel.reformationOther(Civ.BARBARIAN.value)
+            self.rel.setReformationHitMatrix(Civ.DUTCH.value, 2)
             for iCiv in range(Consts.iNumPlayers):
                 if (
-                    iCiv in Religions.lReformationNeighbours[Consts.iDutch]
+                    iCiv in Religions.lReformationNeighbours[Civ.DUTCH.value]
                     and self.rel.getReformationHitMatrix(iCiv) == 0
                 ):
                     self.rel.setReformationHitMatrix(iCiv, 1)
@@ -572,7 +576,7 @@ class CvRFCEventHandler:
 
         # Absinthe: Aragonese UP
         # UP tile yields should be recalculated right away if a new Palace was built
-        if iOwner == Consts.iAragon and iBuildingType == xml.iPalace:
+        if iOwner == Civ.ARAGON.value and iBuildingType == xml.iPalace:
             self.up.confederationUP(iOwner)
 
     def onProjectBuilt(self, argsList):
@@ -605,11 +609,11 @@ class CvRFCEventHandler:
 
         # Absinthe tests
         # if iGameTurn == xml.i508AD:
-        # 	for city in utils.getCityList(Consts.iFrankia):
+        # 	for city in utils.getCityList(Civ.FRANCE.value):
         # 		plot = gc.getMap().plot(city.getX(),city.getY())
         # 		print ('provincetest', plot.getProvinceID (), city.getName())
 
-        # 	unitList = PyPlayer(Consts.iFrankia).getUnitList()
+        # 	unitList = PyPlayer(Civ.FRANCE.value).getUnitList()
         # 	for unit in unitList:
         # 		iCargoSpace = unit.cargoSpace()
         # 		print ("iCargoSpace", iCargoSpace)
@@ -627,7 +631,7 @@ class CvRFCEventHandler:
         # 		print ("leaderName7", leaderName7)
         # 		print ("LeaderType", LeaderType)
 
-        # for city in utils.getCityList(Consts.iHungary):
+        # for city in utils.getCityList(Civ.HUNGARY.value):
         # 	city.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_GRANARY"), CommerceTypes.COMMERCE_GOLD, 2)
         # 	city.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_CASTLE"), CommerceTypes.COMMERCE_GOLD, 12)
         # 	city.setBuildingYieldChange(gc.getInfoTypeForString("BUILDINGCLASS_GRANARY"), YieldTypes.YIELD_COMMERCE, 4)
@@ -643,7 +647,7 @@ class CvRFCEventHandler:
 
         # Absinthe: 868AD Viking attack on Constantinople
         if iGameTurn == xml.i860AD + sd.scriptDict["lEventRandomness"][iByzantiumVikingAttack] - 2:
-            if utils.getHumanID() == Consts.iByzantium:
+            if utils.getHumanID() == Civ.BYZANTIUM.value:
                 popup = Popup.PyPopup()
                 popup.setBodyString(
                     localText.getText("TXT_KEY_EVENT_VIKING_CONQUERERS_RUMOURS", ())
@@ -651,9 +655,9 @@ class CvRFCEventHandler:
                 popup.launch()
 
         if iGameTurn == xml.i860AD + sd.scriptDict["lEventRandomness"][iByzantiumVikingAttack]:
-            if utils.getHumanID() == Consts.iByzantium:
+            if utils.getHumanID() == Civ.BYZANTIUM.value:
                 self.barb.spawnMultiTypeUnits(
-                    Consts.iBarbarian,
+                    Civ.BARBARIAN.value,
                     (80, 24),
                     (80, 25),
                     [xml.iVikingBerserker, xml.iDenmarkHuskarl],
@@ -666,7 +670,7 @@ class CvRFCEventHandler:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_VIKINGS", ()),
                 )
                 CyInterface().addMessage(
-                    Consts.iByzantium,
+                    Civ.BYZANTIUM.value,
                     False,
                     MessageData.DURATION,
                     CyTranslator().getText("TXT_KEY_EVENT_VIKING_CONQUERERS_ARRIVE", ()),
@@ -775,8 +779,8 @@ class CvRFCEventHandler:
 
         # Absinthe: Byzantine conqueror army
         if iGameTurn == xml.i520AD:
-            if iPlayer == Consts.iByzantium:
-                pByzantium = gc.getPlayer(Consts.iByzantium)
+            if iPlayer == Civ.BYZANTIUM.value:
+                pByzantium = gc.getPlayer(Civ.BYZANTIUM.value)
                 tStartingPlot = (59, 16)
                 pByzantium.initUnit(
                     xml.iGalley,
@@ -827,9 +831,9 @@ class CvRFCEventHandler:
                         gc.getUnitInfo, gc.getNumUnitInfos(), "UNIT_GREAT_GENERAL"
                     ):
                         pUnit.setName(localText.getText("TXT_KEY_GREAT_PERSON_BELISARIUS", ()))
-                utils.makeUnit(xml.iSwordsman, Consts.iByzantium, tStartingPlot, 4)
-                utils.makeUnit(xml.iAxeman, Consts.iByzantium, tStartingPlot, 3)
-                utils.makeUnit(xml.iArcher, Consts.iByzantium, tStartingPlot, 2)
+                utils.makeUnit(xml.iSwordsman, Civ.BYZANTIUM.value, tStartingPlot, 4)
+                utils.makeUnit(xml.iAxeman, Civ.BYZANTIUM.value, tStartingPlot, 3)
+                utils.makeUnit(xml.iArcher, Civ.BYZANTIUM.value, tStartingPlot, 2)
                 if iPlayer == iHuman:
                     popup = Popup.PyPopup()
                     popup.setBodyString(
@@ -841,14 +845,14 @@ class CvRFCEventHandler:
         if iPlayer == iHuman:
             # Seljuks
             if iGameTurn == xml.i1064AD - 7:
-                if iPlayer == Consts.iByzantium:
+                if iPlayer == Civ.BYZANTIUM.value:
                     popup = Popup.PyPopup()
                     popup.setBodyString(
                         localText.getText("TXT_KEY_EVENT_BARBARIAN_INVASION_START", ())
                     )
                     popup.launch()
             elif iGameTurn == xml.i1094AD + 1:
-                if iPlayer == Consts.iByzantium:
+                if iPlayer == Civ.BYZANTIUM.value:
                     popup = Popup.PyPopup()
                     sText = "Seljuk"
                     popup.setBodyString(
@@ -857,14 +861,24 @@ class CvRFCEventHandler:
                     popup.launch()
             # Mongols
             elif iGameTurn == xml.i1236AD - 7:
-                if iPlayer in [Consts.iKiev, Consts.iHungary, Consts.iPoland, Consts.iBulgaria]:
+                if iPlayer in [
+                    Civ.KIEV.value,
+                    Civ.HUNGARY.value,
+                    Civ.POLAND.value,
+                    Civ.BULGARIA.value,
+                ]:
                     popup = Popup.PyPopup()
                     popup.setBodyString(
                         localText.getText("TXT_KEY_EVENT_BARBARIAN_INVASION_START", ())
                     )
                     popup.launch()
             elif iGameTurn == xml.i1288AD + 1:
-                if iPlayer in [Consts.iKiev, Consts.iHungary, Consts.iPoland, Consts.iBulgaria]:
+                if iPlayer in [
+                    Civ.KIEV.value,
+                    Civ.HUNGARY.value,
+                    Civ.POLAND.value,
+                    Civ.BULGARIA.value,
+                ]:
                     popup = Popup.PyPopup()
                     sText = "Tatar"
                     popup.setBodyString(
@@ -873,14 +887,14 @@ class CvRFCEventHandler:
                     popup.launch()
             # Timurids
             elif iGameTurn == xml.i1380AD - 7:
-                if iPlayer in [Consts.iArabia, Consts.iTurkey, Consts.iByzantium]:
+                if iPlayer in [Civ.ARABIA.value, Civ.OTTOMAN.value, Civ.BYZANTIUM.value]:
                     popup = Popup.PyPopup()
                     popup.setBodyString(
                         localText.getText("TXT_KEY_EVENT_TIMURID_INVASION_START", ())
                     )
                     popup.launch()
             elif iGameTurn == xml.i1431AD + 1:
-                if iPlayer in [Consts.iArabia, Consts.iTurkey, Consts.iByzantium]:
+                if iPlayer in [Civ.ARABIA.value, Civ.OTTOMAN.value, Civ.BYZANTIUM.value]:
                     popup = Popup.PyPopup()
                     sText = "Timurid"
                     popup.setBodyString(
@@ -889,12 +903,12 @@ class CvRFCEventHandler:
                     popup.launch()
 
         # Absinthe: Denmark UP
-        if iPlayer == Consts.iDenmark:
+        if iPlayer == Civ.DENMARK.value:
             self.up.soundUP(iPlayer)
 
         # Absinthe: Aragonese UP
         # safety check: probably redundant, calls from onBuildingBuilt, onCityBuilt, onCityAcquired and onCityRazed should be enough
-        elif iPlayer == Consts.iAragon:
+        elif iPlayer == Civ.ARAGON.value:
             self.up.confederationUP(iPlayer)
 
         # Ottoman UP
@@ -1115,7 +1129,7 @@ class CvRFCEventHandler:
             print(
                 "SHIFT-ALT-E"
             )  # picks a dead civ so that autoplay can be started with game.AIplay xx
-            iDebugDeadCiv = Consts.iBurgundy  # always dead in 500AD
+            iDebugDeadCiv = Civ.BURGUNDY.value  # always dead in 500AD
             # 3Miro: not sure
             # gc.getTeam(gc.getPlayer(iDebugDeadCiv).getTeam()).setHasTech(Consts.iCalendar, True, iDebugDeadCiv, False, False)
             utils.makeUnit(xml.iAxeman, iDebugDeadCiv, (0, 0), 1)

@@ -2289,34 +2289,34 @@ class CvVictoryScreen:
 
     def getCivHelpsTexts(self):
         dCivs = {
-            Consts.iByzantium: self.getByzantiumText(),
-            Consts.iFrankia: self.getFrankiaText(),
-            Consts.iArabia: self.getArabiaText(),
-            Consts.iBulgaria: self.getBulgariaText(),
-            Consts.iCordoba: self.getCordobaText(),
-            Consts.iVenecia: self.getVeneciaText(),
-            Consts.iBurgundy: self.getBurgundyText(),
-            Consts.iGermany: self.getGermanyText(),
-            Consts.iNovgorod: self.getNovgorodText(),
-            Consts.iNorway: self.getNorwayText(),
-            Consts.iKiev: self.getKievText(),
-            Consts.iHungary: self.getHungaryText(),
-            Consts.iSpain: self.getSpainText(),
-            Consts.iDenmark: self.getDenmarkText(),
-            Consts.iScotland: self.getScotlandText(),
-            Consts.iPoland: self.getPolandText(),
-            Consts.iGenoa: self.getGenoaText(),
-            Consts.iMorocco: self.getMoroccoText(),
-            Consts.iEngland: self.getEnglandText(),
-            Consts.iPortugal: self.getPortugalText(),
-            Consts.iAragon: self.getAragonText(),
-            Consts.iSweden: self.getSwedenText(),
-            Consts.iPrussia: self.getPrussiaText(),
-            Consts.iLithuania: self.getLithuaniaText(),
-            Consts.iAustria: self.getAustriaText(),
-            Consts.iTurkey: self.getTurkeyText(),
-            Consts.iMoscow: self.getMoscowText(),
-            Consts.iDutch: self.getDutchText(),
+            Civ.BYZANTIUM.value: self.getByzantiumText(),
+            Civ.FRANCE.value: self.getFrankiaText(),
+            Civ.ARABIA.value: self.getArabiaText(),
+            Civ.BULGARIA.value: self.getBulgariaText(),
+            Civ.CORDOBA.value: self.getCordobaText(),
+            Civ.VENECIA.value: self.getVeneciaText(),
+            Civ.BURGUNDY.value: self.getBurgundyText(),
+            Civ.GERMANY.value: self.getGermanyText(),
+            Civ.NOVGOROD.value: self.getNovgorodText(),
+            Civ.NORWAY.value: self.getNorwayText(),
+            Civ.KIEV.value: self.getKievText(),
+            Civ.HUNGARY.value: self.getHungaryText(),
+            Civ.CASTILLE.value: self.getSpainText(),
+            Civ.DENMARK.value: self.getDenmarkText(),
+            Civ.SCOTLAND.value: self.getScotlandText(),
+            Civ.POLAND.value: self.getPolandText(),
+            Civ.GENOA.value: self.getGenoaText(),
+            Civ.MOROCCO.value: self.getMoroccoText(),
+            Civ.ENGLAND.value: self.getEnglandText(),
+            Civ.PORTUGAL.value: self.getPortugalText(),
+            Civ.ARAGON.value: self.getAragonText(),
+            Civ.SWEDEN.value: self.getSwedenText(),
+            Civ.PRUSSIA.value: self.getPrussiaText(),
+            Civ.LITHUANIA.value: self.getLithuaniaText(),
+            Civ.AUSTRIA.value: self.getAustriaText(),
+            Civ.OTTOMAN.value: self.getTurkeyText(),
+            Civ.MOSCOW.value: self.getMoscowText(),
+            Civ.DUTCH.value: self.getDutchText(),
         }
         lHelpTexts = dCivs[self.iActivePlayer]
         return lHelpTexts
@@ -2602,7 +2602,7 @@ class CvVictoryScreen:
         iNumFurs = pPlayer.countCultBorderBonuses(xml.iFur)
         sText2 += self.getCounterString(iNumFurs, 11)
         # UHV3
-        sText3 += self.ConquerOrVassal([[Consts.iMoscow, xml.iP_Moscow]])
+        sText3 += self.ConquerOrVassal([[Civ.MOSCOW.value, xml.iP_Moscow]])
         lHelpTexts = [sText1, sText2, sText3]
         return lHelpTexts
 
@@ -2664,7 +2664,9 @@ class CvVictoryScreen:
         sText1 += self.getProvinceString(vic.tHungaryControl)
         # UHV2
         sEnemyString = "The Ottomans"
-        sText2 += self.getNotCivProvinceString(Consts.iTurkey, sEnemyString, vic.tHungaryControlII)
+        sText2 += self.getNotCivProvinceString(
+            Civ.OTTOMAN.value, sEnemyString, vic.tHungaryControlII
+        )
         # UHV3
         iGoal = pPlayer.getUHV(2)
         sText3 += self.determineColor(
@@ -2716,14 +2718,14 @@ class CvVictoryScreen:
                 lLand[5] += pLoopPlayer.getTotalLand()
                 lPop[5] += pLoopPlayer.getTotalPopulation()
         # The Barbarian civ counts as Pagan, Independent cities are included separately, based on the religion of the population
-        pBarbarian = gc.getPlayer(Consts.iBarbarian)
+        pBarbarian = gc.getPlayer(Civ.BARBARIAN.value)
         lLand[5] += pBarbarian.getTotalLand()
         lPop[5] += pBarbarian.getTotalPopulation()
         for iIndyCiv in [
-            Consts.iIndependent,
-            Consts.iIndependent2,
-            Consts.iIndependent3,
-            Consts.iIndependent4,
+            Civ.INDEPENDENT.value,
+            Civ.INDEPENDENT_2.value,
+            Civ.INDEPENDENT_3.value,
+            Civ.INDEPENDENT_4.value,
         ]:
             for pCity in utils.getCityList(iIndyCiv):
                 pIndyCiv = gc.getPlayer(iIndyCiv)
@@ -2789,8 +2791,8 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        iScotlandFort = gc.getPlayer(Consts.iScotland).getImprovementCount(xml.iImprovementFort)
-        iScotlandCastle = gc.getPlayer(Consts.iScotland).countNumBuildings(xml.iCastle)
+        iScotlandFort = gc.getPlayer(Civ.SCOTLAND.value).getImprovementCount(xml.iImprovementFort)
+        iScotlandCastle = gc.getPlayer(Civ.SCOTLAND.value).countNumBuildings(xml.iCastle)
         sScotlandFort = localText.getText("TXT_KEY_IMPROVEMENT_FORT", ()) + ": "
         sScotlandCastle = localText.getText("TXT_KEY_BUILDING_CASTLE", ()) + ": "
         sText1 += sScotlandFort + self.determineColor(iScotlandFort >= 10, str(iScotlandFort))
@@ -2951,7 +2953,7 @@ class CvVictoryScreen:
                     + self.determineColor(ourBestCities[i][0] >= 5000, ourBestCities[i][0])
                 )
         # UHV3
-        sText3 += self.CollapseOrVassal([Consts.iSpain, Consts.iPortugal, Consts.iAragon])
+        sText3 += self.CollapseOrVassal([Civ.CASTILLE.value, Civ.PORTUGAL.value, Civ.ARAGON.value])
         lHelpTexts = [sText1, sText2, sText3]
         return lHelpTexts
 
@@ -3022,7 +3024,7 @@ class CvVictoryScreen:
             + u"<font=1>\n\n</font>"
         )
         iSeaports = pPlayer.countNumBuildings(xml.iAragonSeaport)
-        iCargoShips = utils.getCargoShips(Consts.iAragon)
+        iCargoShips = utils.getCargoShips(Civ.ARAGON.value)
         sText2 += (
             localText.getText("TXT_KEY_UHV_CURRENTLY", ())
             + ": "
@@ -3068,7 +3070,7 @@ class CvVictoryScreen:
         sText1 += self.getProvinceString(vic.tPrussiaControlI)
         # UHV2
         if gc.getGame().getGameTurn() >= xml.i1650AD:
-            iConqRaw = gc.getPlayer(Consts.iPrussia).getUHVCounter(1)
+            iConqRaw = gc.getPlayer(Civ.PRUSSIA.value).getUHVCounter(1)
             for iI in range(len(vic.tPrussiaDefeat)):
                 iNumConq = (iConqRaw / pow(10, iI)) % 10
                 pVictim = gc.getPlayer(vic.tPrussiaDefeat[iI])
@@ -3139,7 +3141,7 @@ class CvVictoryScreen:
         sText = localText.getText("TXT_KEY_UHV_CONTROL_TERRITORY", ())
         sText2 += self.getLandCompetition(landPercent, otherlandPercent, iMostPlayer, sText)
         # UHV3
-        sText3 += self.CollapseOrVassal([Consts.iMoscow, Consts.iNovgorod, Consts.iPrussia])
+        sText3 += self.CollapseOrVassal([Civ.MOSCOW.value, Civ.NOVGOROD.value, Civ.PRUSSIA.value])
         lHelpTexts = [sText1, sText2, sText3]
         return lHelpTexts
 
@@ -3188,7 +3190,9 @@ class CvVictoryScreen:
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
         sEnemyString = "Barbarians"
-        sText1 += self.getNotCivProvinceString(Consts.iBarbarian, sEnemyString, vic.tMoscowControl)
+        sText1 += self.getNotCivProvinceString(
+            Civ.BARBARIAN.value, sEnemyString, vic.tMoscowControl
+        )
         # UHV2
         totalLand = gc.getMap().getLandPlots()
         RussianLand = pPlayer.getTotalLand()
@@ -3221,7 +3225,7 @@ class CvVictoryScreen:
         if (
             self.checkCity(
                 tConstantinople,
-                Consts.iMoscow,
+                Civ.MOSCOW.value,
                 localText.getText("TXT_KEY_CITY_NAME_CONSTANTINOPLE", ()),
                 True,
                 True,
@@ -3239,7 +3243,7 @@ class CvVictoryScreen:
         else:
             sText3 += self.checkCity(
                 tConstantinople,
-                Consts.iMoscow,
+                Civ.MOSCOW.value,
                 localText.getText("TXT_KEY_CITY_NAME_CONSTANTINOPLE", ()),
                 True,
                 True,

@@ -1,6 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Plague
 
 from CvPythonExtensions import *
+from CoreTypes import Civ
 import PyHelpers
 import Consts
 import XMLConsts as xml
@@ -135,7 +136,7 @@ class Plague:
         # Absinthe: specific plagues
         # Plague of Constantinople (that started at Alexandria)
         if iPlagueCount == iConstantinople:
-            iWorstCiv = Consts.iByzantium
+            iWorstCiv = Civ.BYZANTIUM.value
             self.setFirstPlague(True)
             self.setBadPlague(False)
         # Black Death in the 14th century
@@ -210,7 +211,10 @@ class Plague:
 
     def spreadPlague(self, iPlayer, city):
         # Absinthe: the Plague of Justinian shouldn't spread to Italy and France, even if it was as deadly as the Black Death
-        if iPlayer in [Consts.iFrankia, Consts.iPope] and gc.getGame().getGameTurn() <= xml.i632AD:
+        if (
+            iPlayer in [Civ.FRANCE.value, Civ.POPE.value]
+            and gc.getGame().getGameTurn() <= xml.i632AD
+        ):
             return
 
         # Absinthe: message about the spread
@@ -281,7 +285,7 @@ class Plague:
     def infectCity(self, city):
         # Absinthe: the Plague of Justinian shouldn't spread to Italy and France, even if it was as deadly as the Black Death
         if (
-            city.getOwner() in [Consts.iFrankia, Consts.iPope]
+            city.getOwner() in [Civ.FRANCE.value, Civ.POPE.value]
             and gc.getGame().getGameTurn() <= xml.i632AD
         ):
             return
@@ -388,7 +392,7 @@ class Plague:
                                     - 3 * unit.baseCombatStr() / 7,
                                 ),
                             ),
-                            Consts.iBarbarian,
+                            Civ.BARBARIAN.value,
                         )
                     else:
                         if unit.baseCombatStr() > 0:
@@ -418,7 +422,7 @@ class Plague:
                             iUnitDamage = max(iUnitDamage, unit.getDamage() + iCivilDamage)
                         # kill the unit if necessary
                         if iUnitDamage >= 100:
-                            unit.kill(False, Consts.iBarbarian)
+                            unit.kill(False, Civ.BARBARIAN.value)
                             if unit.getOwner() == iHuman:
                                 CyInterface().addMessage(
                                     iHuman,
@@ -440,7 +444,7 @@ class Plague:
                                     True,
                                 )
                         else:
-                            unit.setDamage(iUnitDamage, Consts.iBarbarian)
+                            unit.setDamage(iUnitDamage, Civ.BARBARIAN.value)
                         # if we have many units in the same plot, decrease the damage for every other unit
                         iDamage *= 7
                         iDamage /= 8
@@ -679,7 +683,7 @@ class Plague:
         if city.hasBuilding(iPlague):
             # Absinthe: the Plague of Justinian shouldn't spread to Italy and France, even if it was as deadly as the Black Death
             if (
-                city.getOwner() in [Consts.iFrankia, Consts.iPope]
+                city.getOwner() in [Civ.FRANCE.value, Civ.POPE.value]
                 and gc.getGame().getGameTurn() <= xml.i632AD
             ):
                 city.setHasRealBuilding(iPlague, False)

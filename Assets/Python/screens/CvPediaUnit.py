@@ -8,9 +8,9 @@
 
 
 from CvPythonExtensions import *
+from CoreTypes import Civ
 import CvUtil
 import CvScreenEnums
-import Consts
 import XMLConsts as xml
 
 # globals
@@ -498,7 +498,7 @@ class CvPediaUnit:
             screen.attachImageButton(
                 panelName,
                 "",
-                gc.getCivilizationInfo(Consts.iBarbarian).getButton(),
+                gc.getCivilizationInfo(Civ.BARBARIAN.value).getButton(),
                 GenericButtonSizes.BUTTON_SIZE_CUSTOM,
                 WidgetTypes.WIDGET_GENERAL,
                 1920,

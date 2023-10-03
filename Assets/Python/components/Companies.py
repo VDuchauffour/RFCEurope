@@ -11,7 +11,7 @@ import Crusades
 from operator import itemgetter
 
 from MiscData import MessageData
-from CoreTypes import City, Scenario, SpecialParameter
+from CoreTypes import City, Civ, Scenario, SpecialParameter
 
 # globals
 utils = RFCUtils.RFCUtils()
@@ -107,12 +107,13 @@ class Companies:
         # TODO: Only if Cordoba is alive, or Morocco has some territories in Europe?
         if iCompany == iCalatrava:
             if not (
-                gc.getPlayer(Consts.iCordoba).isAlive() or gc.getPlayer(Consts.iMorocco).isAlive()
+                gc.getPlayer(Civ.CORDOBA.value).isAlive()
+                or gc.getPlayer(Civ.MOROCCO.value).isAlive()
             ):
                 iMaxCompanies = 0
         # Order of the Dragon is only active if the Ottomans are alive
         if iCompany == iDragon:
-            if not gc.getPlayer(Consts.iTurkey).isAlive():
+            if not gc.getPlayer(Civ.OTTOMAN.value).isAlive():
                 iMaxCompanies = 0
 
         # loop through all cities, check the company value for each and add the good ones to a list of tuples (city, value)
@@ -284,13 +285,13 @@ class Companies:
 
         # spread the Teutons to Teutonic Order cities and don't spread if the owner civ is at war with the Teutons
         if iCompany == iTeutons:
-            if iOwner == Consts.iPrussia:
+            if iOwner == Civ.PRUSSIA.value:
                 iValue += 5
-            elif ownerTeam.isAtWar(Consts.iPrussia):
+            elif ownerTeam.isAtWar(Civ.PRUSSIA.value):
                 return -1
 
         # Genoese UP
-        if iOwner == Consts.iGenoa:
+        if iOwner == Civ.GENOA.value:
             iValue += 1
             # extra bonus for banking companies
             if iCompany in [iMedici, iAugsburg, iStGeorge]:

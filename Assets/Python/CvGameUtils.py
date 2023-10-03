@@ -5,13 +5,12 @@
 
 from CivilizationsData import CIV_RELIGIOUS_TOLERANCE
 from CoreStructures import get_civ_by_id, get_religion_by_id
-from CoreTypes import Religion, StabilityCategory
+from CoreTypes import Civ, Religion, StabilityCategory
 import CvUtil
 from CvPythonExtensions import *
 from MiscData import RELIGION_PERSECUTION_ORDER
 import PyHelpers  # Absinthe
 import XMLConsts as xml  # Absinthe
-import Consts
 import RFCUtils
 import Stability  # Absinthe
 
@@ -679,7 +678,7 @@ class CvGameUtils:
         iNumCities = pPlayer.getNumCities()
 
         # anarchy instability should appear right on revolution / converting, not one turn later
-        if iPlayer != Consts.iPrussia:  # Prussian UP
+        if iPlayer != Civ.PRUSSIA.value:  # Prussian UP
             if pPlayer.isHuman():
                 # anarchy swing instability
                 pPlayer.setStabilitySwing(pPlayer.getStabilitySwing() - 8)

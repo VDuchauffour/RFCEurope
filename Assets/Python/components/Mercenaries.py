@@ -4,7 +4,7 @@
 from CvPythonExtensions import *
 from CivilizationsData import CIV_HIRE_MERCENARY_THRESHOLD
 from CoreStructures import get_civ_by_id
-from CoreTypes import SpecialParameter
+from CoreTypes import Civ, SpecialParameter
 import PyHelpers
 
 # import cPickle as pickle
@@ -2388,7 +2388,13 @@ class MercenaryManager:
                 if (
                     pPlayer.getCommercePercent(CommerceTypes.COMMERCE_GOLD) == 100
                     and pPlayer.getGold()
-                    < (pPlayer.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN.value) + 99) / 100
+                    < (
+                        pPlayer.getPicklefreeParameter(
+                            SpecialParameter.MERCENARY_COST_PER_TURN.value
+                        )
+                        + 99
+                    )
+                    / 100
                 ):
                     # not enough gold to pay the mercs, they will randomly desert you
                     self.desertMercs(iPlayer)
@@ -2411,7 +2417,7 @@ class MercenaryManager:
 
         self.setMercLists()  # save the potentially modified merc list (this allows for pickle read/write only once per turn)
 
-        # self.GMU.hireMerc( self.lGlobalPool[0], Consts.iFrankia )
+        # self.GMU.hireMerc( self.lGlobalPool[0], Civ.FRANCE.value )
 
     def desertMercs(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
@@ -2442,7 +2448,13 @@ class MercenaryManager:
                 )
                 bLoop = (
                     pPlayer.getGold()
-                    < (pPlayer.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN.value) + 99) / 100
+                    < (
+                        pPlayer.getPicklefreeParameter(
+                            SpecialParameter.MERCENARY_COST_PER_TURN.value
+                        )
+                        + 99
+                    )
+                    / 100
                 )
             else:
                 # if the player has no mercs, then stop the loop
@@ -2601,7 +2613,7 @@ class MercenaryManager:
 
     def processMercAI(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
-        if pPlayer.isHuman() or pPlayer.isBarbarian() or iPlayer == Consts.iPope:
+        if pPlayer.isHuman() or pPlayer.isBarbarian() or iPlayer == Civ.POPE.value:
             return
 
         # print(" MercAI for ",pPlayer.getID())
@@ -2611,7 +2623,7 @@ class MercenaryManager:
         for iOponent in range(Consts.iNumTotalPlayers):
             if teamPlayer.isAtWar(gc.getPlayer(iOponent).getTeam()):
                 iWarValue += 1
-                if iOponent <= Consts.iPope:
+                if iOponent <= Civ.POPE.value:
                     iWarValue += 3
 
         # decide to hire or fire mercs
@@ -2783,11 +2795,15 @@ class GlobalMercenaryUtils:
             # iTotalUpkeep += self.getModifiedCostPerPlayer( pUnit.getMercUpkeep(), iPlayer )
             iTotalUpkeep += pUnit.getMercUpkeep()
 
-        iSavedUpkeep = pPlayer.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN.value)
+        iSavedUpkeep = pPlayer.getPicklefreeParameter(
+            SpecialParameter.MERCENARY_COST_PER_TURN.value
+        )
         if iSavedUpkeep != iTotalUpkeep:
             # print(" ERROR IN MERCS: saved upkeep: ",iSavedUpkeep," actual: ",iTotalUpkeep )
             # print(" ------- Making sane ------- ")
-            pPlayer.setPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN.value, iTotalUpkeep)
+            pPlayer.setPicklefreeParameter(
+                SpecialParameter.MERCENARY_COST_PER_TURN.value, iTotalUpkeep
+            )
             return False
         return True
 
@@ -2863,7 +2879,8 @@ class GlobalMercenaryUtils:
         pPlayer.setGold(pPlayer.getGold() - iCost)
         pPlayer.setPicklefreeParameter(
             SpecialParameter.MERCENARY_COST_PER_TURN.value,
-            pPlayer.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN.value) + iUpkeep,
+            pPlayer.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN.value)
+            + iUpkeep,
         )
 
         # remove the merc from the global pool and set the "hired by" index
@@ -2935,7 +2952,11 @@ class GlobalMercenaryUtils:
         pPlayer = gc.getPlayer(pMerc.getOwner())
         pPlayer.setPicklefreeParameter(
             SpecialParameter.MERCENARY_COST_PER_TURN.value,
-            max(0, pPlayer.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN.value) - iUpkeep),
+            max(
+                0,
+                pPlayer.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN.value)
+                - iUpkeep,
+            ),
         )
 
         pMerc.kill(0, -1)

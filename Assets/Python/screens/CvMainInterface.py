@@ -1,7 +1,7 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
-from CoreTypes import SpecialParameter
+from CoreTypes import Civ, SpecialParameter
 import CvUtil
 import CvScreenEnums
 
@@ -2920,7 +2920,7 @@ class CvMainInterface:
                                             iCount = iCount + 1
                                             break
                             # Unit owner is the Pope		??? Added because of 3Miro's previous version of the code, but is this really needed here? The Pope is unplayable... does the AI need the actual button?
-                            elif pUnit.getOwner() == Consts.iPope:
+                            elif pUnit.getOwner() == Civ.POPE.value:
                                 pPlayer = gc.getPlayer(pCity.getOwner())
                                 # Make sure city has a religion which isn't this player's state religion
                                 for iReligionLoop in range(gc.getNumReligionInfos()):
@@ -3587,14 +3587,16 @@ class CvMainInterface:
                     screen.hide("CombatXPText")
 
                 # 3Miro: Janissary Points
-                if not CyInterface().isCityScreenUp() and ePlayer == Consts.iTurkey:
+                if not CyInterface().isCityScreenUp() and ePlayer == Civ.OTTOMAN.value:
                     eJanissaryXPButton = u"<font=2>%c</font>" % (
                         CyGame().getSymbolID(FontSymbols.STRENGTH_CHAR)
                     )
                     eJanissaryXPText = (
                         ": Janissary ("
                         + unicode(
-                            gc.getPlayer(ePlayer).getPicklefreeParameter(SpecialParameter.JANISSARY_POINTS.value)
+                            gc.getPlayer(ePlayer).getPicklefreeParameter(
+                                SpecialParameter.JANISSARY_POINTS.value
+                            )
                         )
                         + "/300)"
                     )
@@ -3633,7 +3635,7 @@ class CvMainInterface:
                     screen.hide("JanissaryXPText")
 
                 # Show UHV info on the screen
-                if ePlayer == Consts.iBurgundy:
+                if ePlayer == Civ.BURGUNDY.value:
                     iBurgundyCulture = pPlayer.getUHVCounter(0)
                     # Absinthe: only display UHV counter until the UHV date
                     if not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (
@@ -3680,7 +3682,7 @@ class CvMainInterface:
                         screen.hide("UHVButton")
                         screen.hide("UHVText")
 
-                elif ePlayer == Consts.iLithuania:
+                elif ePlayer == Civ.LITHUANIA.value:
                     iLithuaniaCulture = pPlayer.getUHVCounter(0)
                     # Absinthe: only display UHV counter until the UHV date
                     if not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (
@@ -3727,7 +3729,7 @@ class CvMainInterface:
                         screen.hide("UHVButton")
                         screen.hide("UHVText")
 
-                elif ePlayer == Consts.iArabia:
+                elif ePlayer == Civ.ARABIA.value:
                     iIslamInfluence = gc.getGame().calculateReligionPercent(xml.iIslam)
                     # HHG: only display UHV counter as long as the UHV is undefined
                     if pPlayer.getUHV(2) == -1 and not CyInterface().isCityScreenUp():
@@ -3772,7 +3774,7 @@ class CvMainInterface:
                         screen.hide("UHVButton")
                         screen.hide("UHVText")
 
-                elif ePlayer == Consts.iNorway:
+                elif ePlayer == Civ.NORWAY.value:
                     iNorwayRazed = pPlayer.getUHVCounter(0)
                     # Absinthe: only display UHV counter until the UHV date
                     if not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (
@@ -3819,7 +3821,7 @@ class CvMainInterface:
                         screen.hide("UHVButton")
                         screen.hide("UHVText")
 
-                elif ePlayer == Consts.iKiev:
+                elif ePlayer == Civ.KIEV.value:
                     iKievFood = pPlayer.getUHVCounter(2)
                     # Absinthe: only display UHV counter until the UHV date
                     if not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (
@@ -3867,25 +3869,25 @@ class CvMainInterface:
                         screen.hide("UHVText")
 
                 elif (
-                    ePlayer == Consts.iFrankia
-                    or ePlayer == Consts.iSpain
-                    or ePlayer == Consts.iPortugal
-                    or ePlayer == Consts.iEngland
-                    or ePlayer == Consts.iDutch
-                    or ePlayer == Consts.iDenmark
+                    ePlayer == Civ.FRANCE.value
+                    or ePlayer == Civ.CASTILLE.value
+                    or ePlayer == Civ.PORTUGAL.value
+                    or ePlayer == Civ.ENGLAND.value
+                    or ePlayer == Civ.DUTCH.value
+                    or ePlayer == Civ.DENMARK.value
                 ):
                     if gc.getTeam(pPlayer.getTeam()).isHasTech(xml.iAstronomy):
                         if (
-                            ePlayer == Consts.iFrankia
-                            or ePlayer == Consts.iPortugal
-                            or ePlayer == Consts.iDenmark
+                            ePlayer == Civ.FRANCE.value
+                            or ePlayer == Civ.PORTUGAL.value
+                            or ePlayer == Civ.DENMARK.value
                         ):
                             iColonies = pPlayer.getUHVCounter(2)
                             iUHVState = pPlayer.getUHV(2)
                         elif (
-                            ePlayer == Consts.iEngland
-                            or ePlayer == Consts.iSpain
-                            or ePlayer == Consts.iDutch
+                            ePlayer == Civ.ENGLAND.value
+                            or ePlayer == Civ.CASTILLE.value
+                            or ePlayer == Civ.DUTCH.value
                         ):
                             iColonies = pPlayer.getUHVCounter(1)
                             iUHVState = pPlayer.getUHV(1)
@@ -3934,7 +3936,7 @@ class CvMainInterface:
                         screen.hide("UHVButton")
                         screen.hide("UHVText")
 
-                elif ePlayer == Consts.iNovgorod:
+                elif ePlayer == Civ.NOVGOROD.value:
                     iNovgorodFurs = pPlayer.countCultBorderBonuses(xml.iFur)
                     # Absinthe: only display UHV counter until the UHV date
                     if not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (
@@ -3981,7 +3983,7 @@ class CvMainInterface:
                         screen.hide("UHVButton")
                         screen.hide("UHVText")
 
-                elif ePlayer == Consts.iScotland:
+                elif ePlayer == Civ.SCOTLAND.value:
                     iScotlandFrench = pPlayer.getUHVCounter(1)
                     # Absinthe: only display UHV counter as long as the UHV is undefined
                     if pPlayer.getUHV(1) == -1 and not CyInterface().isCityScreenUp():
@@ -4026,8 +4028,8 @@ class CvMainInterface:
                         screen.hide("UHVButton")
                         screen.hide("UHVText")
 
-                elif ePlayer == Consts.iAragon:
-                    iAragonCargoShips = utils.getCargoShips(Consts.iAragon)
+                elif ePlayer == Civ.ARAGON.value:
+                    iAragonCargoShips = utils.getCargoShips(Civ.ARAGON.value)
                     # Absinthe: only display UHV counter until the UHV date
                     if not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (
                         xml.i1444AD + 2
@@ -4073,7 +4075,7 @@ class CvMainInterface:
                         screen.hide("UHVButton")
                         screen.hide("UHVText")
 
-                elif ePlayer == Consts.iSweden:
+                elif ePlayer == Civ.SWEDEN.value:
                     iSwedenRazed = pPlayer.getUHVCounter(1)
                     # Absinthe: only display UHV counter as long as the UHV is undefined
                     if pPlayer.getUHV(1) == -1 and not CyInterface().isCityScreenUp():
@@ -4118,7 +4120,7 @@ class CvMainInterface:
                         screen.hide("UHVButton")
                         screen.hide("UHVText")
 
-                elif ePlayer == Consts.iPrussia:
+                elif ePlayer == Civ.PRUSSIA.value:
                     pCapital = pPlayer.getCapitalCity()
                     iGPStart = CvUtil.findInfoTypeNum(
                         gc.getSpecialistInfo, gc.getNumSpecialistInfos(), "SPECIALIST_GREAT_PRIEST"

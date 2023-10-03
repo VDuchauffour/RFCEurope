@@ -313,6 +313,7 @@ CIV_RESPAWNING_DATE = CivDataMapper(
     }
 ).fill_missing_members(999)
 
+# TODO fix dates
 COMPANY_BIRTHDATE = EnumDataMapper(
     {
         Company.HOSPITALLERS: DateTurn.i1096AD,

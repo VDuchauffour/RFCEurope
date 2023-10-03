@@ -1,6 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - AI Wars
 
 from CvPythonExtensions import *
+from CoreTypes import Civ
 import PyHelpers  # LOQ
 import Consts
 import XMLConsts as xml
@@ -51,47 +52,47 @@ class AIWars:
         if iGameTurn > 20:
             # Absinthe: automatically turn peace on between independent cities and all the major civs
             if iGameTurn % 20 == 4:
-                utils.restorePeaceHuman(Consts.iIndependent2)
+                utils.restorePeaceHuman(Civ.INDEPENDENT_2.value)
             elif iGameTurn % 20 == 9:
-                utils.restorePeaceHuman(Consts.iIndependent)
+                utils.restorePeaceHuman(Civ.INDEPENDENT.value)
             elif iGameTurn % 20 == 14:
-                utils.restorePeaceHuman(Consts.iIndependent3)
+                utils.restorePeaceHuman(Civ.INDEPENDENT_3.value)
             elif iGameTurn % 20 == 19:
-                utils.restorePeaceHuman(Consts.iIndependent4)
+                utils.restorePeaceHuman(Civ.INDEPENDENT_4.value)
 
             if iGameTurn % 36 == 0:
-                utils.restorePeaceAI(Consts.iIndependent, False)
+                utils.restorePeaceAI(Civ.INDEPENDENT.value, False)
             elif iGameTurn % 36 == 9:
-                utils.restorePeaceAI(Consts.iIndependent2, False)
+                utils.restorePeaceAI(Civ.INDEPENDENT_2.value, False)
             elif iGameTurn % 36 == 18:
-                utils.restorePeaceAI(Consts.iIndependent3, False)
+                utils.restorePeaceAI(Civ.INDEPENDENT_3.value, False)
             elif iGameTurn % 36 == 27:
-                utils.restorePeaceAI(Consts.iIndependent4, False)
+                utils.restorePeaceAI(Civ.INDEPENDENT_4.value, False)
 
             # Absinthe: automatically turn war on between independent cities and some AI major civs
             elif iGameTurn % 36 == 2:  # on the 2nd turn after restorePeaceAI()
-                utils.minorWars(Consts.iIndependent, iGameTurn)
+                utils.minorWars(Civ.INDEPENDENT.value, iGameTurn)
             elif iGameTurn % 36 == 11:  # on the 2nd turn after restorePeaceAI()
-                utils.minorWars(Consts.iIndependent2, iGameTurn)
+                utils.minorWars(Civ.INDEPENDENT_2.value, iGameTurn)
             elif iGameTurn % 36 == 20:  # on the 2nd turn after restorePeaceAI()
-                utils.minorWars(Consts.iIndependent3, iGameTurn)
+                utils.minorWars(Civ.INDEPENDENT_3.value, iGameTurn)
             elif iGameTurn % 36 == 29:  # on the 2nd turn after restorePeaceAI()
-                utils.minorWars(Consts.iIndependent4, iGameTurn)
+                utils.minorWars(Civ.INDEPENDENT_4.value, iGameTurn)
 
             # Absinthe: declare war sooner / more frequently if there is an Indy city inside the core area
             # 			so the AI will declare war much sooner after an indy city appeared in it's core
             if iGameTurn % 12 == 1:
-                utils.minorCoreWars(Consts.iIndependent4, iGameTurn)
+                utils.minorCoreWars(Civ.INDEPENDENT_4.value, iGameTurn)
             elif iGameTurn % 12 == 4:
-                utils.minorCoreWars(Consts.iIndependent3, iGameTurn)
+                utils.minorCoreWars(Civ.INDEPENDENT_3.value, iGameTurn)
             elif iGameTurn % 12 == 7:
-                utils.minorCoreWars(Consts.iIndependent2, iGameTurn)
+                utils.minorCoreWars(Civ.INDEPENDENT_2.value, iGameTurn)
             elif iGameTurn % 12 == 10:
-                utils.minorCoreWars(Consts.iIndependent, iGameTurn)
+                utils.minorCoreWars(Civ.INDEPENDENT.value, iGameTurn)
 
         # Absinthe: Venice always seeks war with an Independent Ragusa - should help AI Venice significantly
         if iGameTurn % 9 == 2:
-            pVenice = gc.getPlayer(Consts.iVenecia)
+            pVenice = gc.getPlayer(Civ.VENECIA.value)
             if pVenice.isAlive() and not pVenice.isHuman():
                 pRagusaPlot = gc.getMap().plot(64, 28)
                 if pRagusaPlot.isCity():
@@ -108,7 +109,7 @@ class AIWars:
 
         # Absinthe: Kingdom of Hungary should try to dominate Sisak/Zagreb if it's independent
         if iGameTurn > xml.i1000AD and iGameTurn % 7 == 3:
-            pHungary = gc.getPlayer(Consts.iHungary)
+            pHungary = gc.getPlayer(Civ.HUNGARY.value)
             if pHungary.isAlive() and not pHungary.isHuman():
                 pZagrebPlot = gc.getMap().plot(62, 34)
                 if pZagrebPlot.isCity():
@@ -135,7 +136,7 @@ class AIWars:
             iCiv, iTargetCiv = self.pickCivs()
             print("AIWars chosen civs: iCiv, iTargetCiv", iCiv, iTargetCiv)
             if 0 <= iTargetCiv <= Consts.iNumTotalPlayers:
-                if iTargetCiv != Consts.iPope and iCiv != Consts.iPope and iCiv != iTargetCiv:
+                if iTargetCiv != Civ.POPE.value and iCiv != Civ.POPE.value and iCiv != iTargetCiv:
                     self.initWar(iCiv, iTargetCiv, iGameTurn, iMaxInterval, iMinInterval)
                     return
             else:
@@ -273,10 +274,10 @@ class AIWars:
                 if lTargetCivs[iOwner] > 0:
                     iValue = RFCEMaps.tWarsMaps[iCiv][WORLD_HEIGHT - 1 - j][i]
                     if iOwner in [
-                        Consts.iIndependent,
-                        Consts.iIndependent2,
-                        Consts.iIndependent3,
-                        Consts.iIndependent4,
+                        Civ.INDEPENDENT.value,
+                        Civ.INDEPENDENT_2.value,
+                        Civ.INDEPENDENT_3.value,
+                        Civ.INDEPENDENT_4.value,
                     ]:
                         iValue /= 3
                     lTargetCivs[iOwner] += iValue

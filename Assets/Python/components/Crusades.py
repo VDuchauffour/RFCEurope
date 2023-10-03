@@ -354,7 +354,7 @@ class Crusades:
         )
 
     def deviateHumanPopup(self):
-        # iCost = gc.getPlayer( Consts.iPope ).getGold() / 3
+        # iCost = gc.getPlayer( Civ.POPE.value ).getGold() / 3
         iCost = gc.getPlayer(utils.getHumanID()).getGold() / 3
         sString = (
             CyTranslator().getText("TXT_KEY_CRUSADE_RICHEST", ())
@@ -390,7 +390,7 @@ class Crusades:
         for iPlayer in range(Consts.iNumPlayers):
             pPlayer = gc.getPlayer(iPlayer)
             if (
-                iPlayer == Consts.iPope
+                iPlayer == Civ.POPE.value
                 or pPlayer.getStateReligion() == iCatholicism
                 or not pPlayer.isAlive()
             ):
@@ -617,7 +617,7 @@ class Crusades:
                 True,
                 True,
             )
-            gc.getPlayer(Consts.iPope).AI_changeMemoryCount(
+            gc.getPlayer(Civ.POPE.value).AI_changeMemoryCount(
                 iHuman, MemoryTypes.MEMORY_REJECTED_DEMAND, 2
             )
             # Absinthe: some units from Chivalric Orders might leave you nevertheless
@@ -693,12 +693,12 @@ class Crusades:
             self.setParticipate(False)
             pPlayer = gc.getPlayer(iHuman)
             pPlayer.setIsCrusader(False)
-            pPope = gc.getPlayer(Consts.iPope)
+            pPope = gc.getPlayer(Civ.POPE.value)
             iActiveCrusade = self.getActiveCrusade(gc.getGame().getGameTurn())
             iBribe = 200 + 50 * iActiveCrusade
             pPope.changeGold(iBribe)
             pPlayer.changeGold(-iBribe)
-            gc.getPlayer(Consts.iPope).AI_changeMemoryCount(
+            gc.getPlayer(Civ.POPE.value).AI_changeMemoryCount(
                 iHuman, MemoryTypes.MEMORY_REJECTED_DEMAND, 1
             )
 
@@ -778,12 +778,12 @@ class Crusades:
         for i in range(Consts.iNumPlayers - 1):
             if self.getVotingPower(i) > 0:
                 if bFound:
-                    iNFavor = gc.getRelationTowards(Consts.iPope, i)
+                    iNFavor = gc.getRelationTowards(Civ.POPE.value, i)
                     if iNFavor > iFavor:
                         iNFavor = iFavor
                         iFavorite = i
                 else:
-                    iFavor = gc.getRelationTowards(Consts.iPope, i)
+                    iFavor = gc.getRelationTowards(Civ.POPE.value, i)
                     iFavorite = i
                     bFound = True
         self.setFavorite(iFavorite)
@@ -830,7 +830,7 @@ class Crusades:
             self.setVotingPower(iHuman, 0)
 
         # The Pope has more votes (Rome is small anyway)
-        self.setVotingPower(Consts.iPope, self.getVotingPower(Consts.iPope) * (5 / 4))
+        self.setVotingPower(Civ.POPE.value, self.getVotingPower(Civ.POPE.value) * (5 / 4))
 
         iPower = 0
         for iPlayer in range(Consts.iNumPlayers):
@@ -1160,7 +1160,7 @@ class Crusades:
 
         iRichest = -1
         iMoney = 0
-        # iPopeMoney = gc.getPlayer( Consts.iPope ).getGold()
+        # iPopeMoney = gc.getPlayer( Civ.POPE.value ).getGold()
         for i in range(Consts.iNumPlayers - 1):
             if self.getVotingPower(i) > 0:
                 pPlayer = gc.getPlayer(i)
@@ -1170,7 +1170,7 @@ class Crusades:
                     iRichest = i
                     iMoney = iPlayerMoney
 
-        if iRichest != Consts.iPope:
+        if iRichest != Civ.POPE.value:
             self.setRichestCatholic(iRichest)
         else:
             self.setRichestCatholic(-1)
@@ -1182,8 +1182,8 @@ class Crusades:
         print(" Crusade: Deviate Crusade start ")
         iRichest = self.getRichestCatholic()
         bStolen = False
-        if iRichest in [Consts.iVenecia, Consts.iGenoa]:
-            pByzantium = gc.getPlayer(Consts.iByzantium)
+        if iRichest in [Civ.VENECIA.value, Civ.GENOA.value]:
+            pByzantium = gc.getPlayer(Civ.BYZANTIUM.value)
             if pByzantium.isAlive():
                 # Only if the potential attacker is not vassal of the target
                 iTeamByzantium = pByzantium.getTeam()
@@ -1197,13 +1197,13 @@ class Crusades:
                     pConstantinopleCity = pConstantinoplePlot.getPlotCity()
                     iConstantinopleOwner = pConstantinopleCity.getOwner()
                     # should check if Constantinople is their capital city to be fully correct, but we can assume that's the case
-                    bIsNotAVassal = not utils.isAVassal(Consts.iByzantium)
-                    if iConstantinopleOwner == Consts.iByzantium and bIsNotAVassal:
-                        self.crusadeStolenAI(iRichest, Consts.iByzantium)
+                    bIsNotAVassal = not utils.isAVassal(Civ.BYZANTIUM.value)
+                    if iConstantinopleOwner == Civ.BYZANTIUM.value and bIsNotAVassal:
+                        self.crusadeStolenAI(iRichest, Civ.BYZANTIUM.value)
                         bStolen = True
                         print(" Crusade: Deviate Crusade stolen ")
-        elif iRichest in [Consts.iSpain, Consts.iPortugal, Consts.iAragon]:
-            pCordoba = gc.getPlayer(Consts.iCordoba)
+        elif iRichest in [Civ.CASTILLE.value, Civ.PORTUGAL.value, Civ.ARAGON.value]:
+            pCordoba = gc.getPlayer(Civ.CORDOBA.value)
             if pCordoba.isAlive():
                 # Only if the potential attacker is not vassal of the target
                 iTeamCordoba = pCordoba.getTeam()
@@ -1211,13 +1211,13 @@ class Crusades:
                 pTeamRichest = gc.getTeam(pRichest.getTeam())
                 if not pTeamRichest.isVassal(iTeamCordoba):
                     # Only if Cordoba is Muslim and not a vassal
-                    bIsNotAVassal = not utils.isAVassal(Consts.iCordoba)
+                    bIsNotAVassal = not utils.isAVassal(Civ.CORDOBA.value)
                     if pCordoba.getStateReligion() == xml.iIslam and bIsNotAVassal:
-                        self.crusadeStolenAI(iRichest, Consts.iCordoba)
+                        self.crusadeStolenAI(iRichest, Civ.CORDOBA.value)
                         bStolen = True
                         print(" Crusade: Deviate Crusade stolen ")
-        elif iRichest in [Consts.iHungary, Consts.iPoland, Consts.iAustria]:
-            pTurkey = gc.getPlayer(Consts.iTurkey)
+        elif iRichest in [Civ.HUNGARY.value, Civ.POLAND.value, Civ.AUSTRIA.value]:
+            pTurkey = gc.getPlayer(Civ.OTTOMAN.value)
             if pTurkey.isAlive():
                 # Only if the potential attacker is not vassal of the target
                 iTeamTurkey = pTurkey.getTeam()
@@ -1225,9 +1225,9 @@ class Crusades:
                 pTeamRichest = gc.getTeam(pRichest.getTeam())
                 if not pTeamRichest.isVassal(iTeamTurkey):
                     # Only if the Ottomans are Muslim and not a vassal
-                    bIsNotAVassal = not utils.isAVassal(Consts.iTurkey)
+                    bIsNotAVassal = not utils.isAVassal(Civ.OTTOMAN.value)
                     if pTurkey.getStateReligion() == xml.iIslam and bIsNotAVassal:
-                        self.crusadeStolenAI(iRichest, Consts.iTurkey)
+                        self.crusadeStolenAI(iRichest, Civ.OTTOMAN.value)
                         bStolen = True
                         print(" Crusade: Deviate Crusade stolen ")
         if not bStolen:
@@ -1255,8 +1255,8 @@ class Crusades:
                 True,
                 True,
             )
-        # pLeader.setGold( pLeader.getGold() - gc.getPlayer( Consts.iPope ).getGold() / 3 )
-        # pLeader.setGold( gc.getPlayer( Consts.iPope ).getGold() / 4 )
+        # pLeader.setGold( pLeader.getGold() - gc.getPlayer( Civ.POPE.value ).getGold() / 3 )
+        # pLeader.setGold( gc.getPlayer( Civ.POPE.value ).getGold() / 4 )
         pLeader.setGold(2 * pLeader.getGold() / 3)
         pTarget = gc.getPlayer(iNewTarget).getCapitalCity()
         self.setTarget(pTarget.getX(), pTarget.getY())
@@ -1283,7 +1283,7 @@ class Crusades:
         if iTargetPlayer == iHuman:
             self.underCrusadeAttackPopup(pTargetCity.getName(), iLeader)
         elif utils.isActive(iHuman):
-            sCityName = cnm.lookupName(pTargetCity, Consts.iPope)
+            sCityName = cnm.lookupName(pTargetCity, Civ.POPE.value)
             if sCityName == "Unknown":
                 sCityName = cnm.lookupName(pTargetCity, iLeader)
             sText = CyTranslator().getText(
@@ -1407,7 +1407,7 @@ class Crusades:
                         iChosenY = tLandPlot[1]
             pPlot = gc.getMap().plot(iChosenX, iChosenY)
             for i in range(pPlot.getNumUnits()):
-                pPlot.getUnit(0).kill(False, Consts.iBarbarian)
+                pPlot.getUnit(0).kill(False, Civ.BARBARIAN.value)
 
         print("Made Units on:", iChosenX, iChosenY, iLeader)
 
@@ -1416,7 +1416,7 @@ class Crusades:
             self.crusadeMakeUnits((iChosenX, iChosenY), iActiveCrusade)
             if utils.getHumanID() == iLeader:
                 pTargetCity = gc.getMap().plot(iTX, iTY).getPlotCity()
-                sCityName = cnm.lookupName(pTargetCity, Consts.iPope)
+                sCityName = cnm.lookupName(pTargetCity, Civ.POPE.value)
                 if sCityName == "Unknown":
                     sCityName = cnm.lookupName(pTargetCity, iLeader)
                 CyInterface().addMessage(
@@ -1574,7 +1574,7 @@ class Crusades:
             )
         if self.getSelectedUnit(3) > 0:
             iKnightNumber = self.getSelectedUnit(3) * 100 / iRougeModifier
-            if iLeader == Consts.iBurgundy:
+            if iLeader == Civ.BURGUNDY.value:
                 for i in range(0, iKnightNumber):
                     if (
                         gc.getGame().getSorenRandNum(10, "chance for Paladin") >= 5
@@ -1592,7 +1592,7 @@ class Crusades:
                         self.makeUnit(xml.iKnight, iLeader, iActiveCrusade, tPlot, 1)
         if self.getSelectedUnit(4) > 0:
             iLightCavNumber = self.getSelectedUnit(4) * 100 / iRougeModifier
-            if iLeader == Consts.iHungary:
+            if iLeader == Civ.HUNGARY.value:
                 for i in range(0, iLightCavNumber):
                     if (
                         gc.getGame().getSorenRandNum(10, "chance for Huszar") >= 5
@@ -1883,7 +1883,7 @@ class Crusades:
         ]  # exclude the Pope
         if lPotentials:
             # print(" Oh, Holy Father, someone needs help! " )
-            pPope = gc.getPlayer(Consts.iPope)
+            pPope = gc.getPlayer(Civ.POPE.value)
             lWeightValues = []
             for iPlayer in lPotentials:
                 iCatholicFaith = 0
@@ -1914,7 +1914,7 @@ class Crusades:
         ):
             return False
         # need to have open borders with the Pope
-        if not teamPlayer.isOpenBorders(gc.getPlayer(Consts.iPope).getTeam()):
+        if not teamPlayer.isOpenBorders(gc.getPlayer(Civ.POPE.value).getTeam()):
             return False
 
         tPlayerDCMap = tDefensiveCrusadeMap[iPlayer]

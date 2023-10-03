@@ -1,7 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Utilities
 
 from CvPythonExtensions import *
-from CoreTypes import City, Religion, Scenario
+from CoreTypes import City, Civ, Religion, Scenario
 import CvUtil
 import CvScreenEnums
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
@@ -226,7 +226,7 @@ class RFCUtils:
                 if (
                     gc.getPlayer(iActiveCiv).isAlive()
                     and not gc.getPlayer(iActiveCiv).isHuman()
-                    and not iActiveCiv == Consts.iPope
+                    and not iActiveCiv == Civ.POPE.value
                 ):
                     if not teamMinor.isAtWar(iActiveCiv):
                         if iGameTurn > CIV_BIRTHDATE[get_civ_by_id(iActiveCiv)] + 20:
@@ -300,7 +300,7 @@ class RFCUtils:
                 if (
                     gc.getPlayer(iActiveCiv).isAlive()
                     and not gc.getPlayer(iActiveCiv).isHuman()
-                    and not iActiveCiv == Consts.iPope
+                    and not iActiveCiv == Civ.POPE.value
                 ):
                     # Absinthe: do not want to force the AI into these wars with WARPLAN_TOTAL too early
                     if iGameTurn > CIV_BIRTHDATE[get_civ_by_id(iActiveCiv)] + 40:
@@ -410,7 +410,7 @@ class RFCUtils:
                     # 			the first unit from the old owner should always defect though
                     k += 1
                     if k < 2 or gc.getGame().getSorenRandNum(10, "Convert Unit") < 6:
-                        unit.kill(False, Consts.iBarbarian)
+                        unit.kill(False, Civ.BARBARIAN.value)
                         self.makeUnit(unitType, iNewOwner, [28, 0], 1)
                     # Absinthe: skip unit if it won't defect, so it will move out of the city territory
                     else:
@@ -434,7 +434,7 @@ class RFCUtils:
             unit = plotCity.getUnit(j)
             unitType = unit.getUnitType()
             if unit.getOwner() == iOldOwner:
-                unit.kill(False, Consts.iBarbarian)
+                unit.kill(False, Civ.BARBARIAN.value)
                 if (
                     iNewOwner < Consts.iNumMajorPlayers or unitType > xml.iSettler
                 ):  # Absinthe: major players can even flip settlers (spawn/respawn mechanics)
@@ -491,7 +491,7 @@ class RFCUtils:
                 for i in range(iNumUnitsInAPlot):
                     unit = killPlot.getUnit(iSkippedUnit)
                     if unit.getOwner() == iCiv:
-                        unit.kill(False, Consts.iBarbarian)
+                        unit.kill(False, Civ.BARBARIAN.value)
                     else:
                         iSkippedUnit += 1
 
@@ -502,7 +502,7 @@ class RFCUtils:
             if iNumUnitsInAPlot > 0:
                 for i in range(iNumUnitsInAPlot):
                     unit = killPlot.getUnit(0)
-                    unit.kill(False, Consts.iBarbarian)
+                    unit.kill(False, Civ.BARBARIAN.value)
 
     def killUnitsInPlots(self, lPlots, iCiv):
         for (x, y) in lPlots:
@@ -513,7 +513,7 @@ class RFCUtils:
                 for i in range(iNumUnitsInAPlot):
                     unit = killPlot.getUnit(iSkippedUnit)
                     if unit.getOwner() == iCiv:
-                        unit.kill(False, Consts.iBarbarian)
+                        unit.kill(False, Civ.BARBARIAN.value)
                     else:
                         iSkippedUnit += 1
 
@@ -532,7 +532,7 @@ class RFCUtils:
         if iNumUnitsInAPlot > 0:
             for i in range(iNumUnitsInAPlot):
                 unit = killPlot.getUnit(0)
-                unit.kill(False, Consts.iBarbarian)
+                unit.kill(False, Civ.BARBARIAN.value)
         for (x, y) in self.getPlotList(tTopLeft, tBottomRight):
             killPlot = gc.getMap().plot(x, y)
             iNumUnitsInAPlot = killPlot.getNumUnits()
@@ -551,7 +551,7 @@ class RFCUtils:
                         unit = killPlot.getUnit(j)
                         # print ("killplot", x, y, unit.getUnitType(), unit.getOwner(), "j", j)
                         if unit.getOwner() == iOldOwner:
-                            unit.kill(False, Consts.iBarbarian)
+                            unit.kill(False, Civ.BARBARIAN.value)
                             if bKillSettlers:
                                 if unit.getUnitType() > iSettler:
                                     self.makeUnit(unit.getUnitType(), iNewOwner, (28, 0), 1)
@@ -589,7 +589,7 @@ class RFCUtils:
         if iNumUnitsInAPlot > 0:
             for i in range(iNumUnitsInAPlot):
                 unit = killPlot.getUnit(0)
-                unit.kill(False, Consts.iBarbarian)
+                unit.kill(False, Civ.BARBARIAN.value)
         # print ("searched plots", lPlots)
         for (x, y) in lPlots:
             # print ("searched plot", (x, y))
@@ -610,7 +610,7 @@ class RFCUtils:
                         unit = killPlot.getUnit(j)
                         # print ("killplot", x, y, unit.getUnitType(), unit.getOwner(), "j", j)
                         if unit.getOwner() == iOldOwner:
-                            unit.kill(False, Consts.iBarbarian)
+                            unit.kill(False, Civ.BARBARIAN.value)
                             if bKillSettlers:
                                 if unit.getUnitType() > iSettler:
                                     self.makeUnit(unit.getUnitType(), iNewOwner, (28, 0), 1)
@@ -719,8 +719,8 @@ class RFCUtils:
             # 	print ("iCurrentCityCultureOldOwner", iCurrentCityCulture*(100-iCulturePercent)/100)
             # 	print ("iCurrentCityCultureNewOwner", iCurrentCityCulture*iCulturePercent/100)
 
-            if iNewOwner != Consts.iBarbarian:
-                city.setCulture(Consts.iBarbarian, 0, True)
+            if iNewOwner != Civ.BARBARIAN.value:
+                city.setCulture(Civ.BARBARIAN.value, 0, True)
 
             # Absinthe: changeCulture instead of setCulture for the new civ, so previously acquired culture won't disappear
             # 			for the old civ some of the culture is lost when the city is conquered
@@ -739,11 +739,11 @@ class RFCUtils:
         # halve barbarian culture in a broader area
         if bBarbarian2x2Decay or bBarbarian2x2Conversion:
             lMinors = [
-                Consts.iBarbarian,
-                Consts.iIndependent,
-                Consts.iIndependent2,
-                Consts.iIndependent3,
-                Consts.iIndependent4,
+                Civ.BARBARIAN.value,
+                Civ.INDEPENDENT.value,
+                Civ.INDEPENDENT_2.value,
+                Civ.INDEPENDENT_3.value,
+                Civ.INDEPENDENT_4.value,
             ]
             if iNewOwner not in lMinors:
                 for (x, y) in self.surroundingPlots(tCityPlot, 2):
@@ -990,9 +990,9 @@ class RFCUtils:
                             / (
                                 pCurrent.getCulture(iLoopCiv)
                                 + pCurrent.getCulture(iCiv)
-                                + pCurrent.getCulture(Consts.iBarbarian)
-                                + pCurrent.getCulture(Consts.iIndependent)
-                                + pCurrent.getCulture(Consts.iIndependent2)
+                                + pCurrent.getCulture(Civ.BARBARIAN.value)
+                                + pCurrent.getCulture(Civ.INDEPENDENT.value)
+                                + pCurrent.getCulture(Civ.INDEPENDENT_2.value)
                             )
                             >= 5
                         ):  # change in vanilla
@@ -1040,7 +1040,7 @@ class RFCUtils:
                     Consts.iIndepEnd - Consts.iIndepStart + 2, "random indep"
                 )
                 if iNewCiv == Consts.iIndepEnd + 1:
-                    iNewCiv = Consts.iBarbarian
+                    iNewCiv = Civ.BARBARIAN.value
                 self.flipUnitsInCityBefore(tCoords, iNewCiv, iCiv)
                 self.setTempFlippingCity(tCoords)
                 self.cultureManager(tCoords, 50, iNewCiv, iCiv, False, False, False)
@@ -1823,7 +1823,7 @@ class RFCUtils:
     # Absinthe: end
 
     def getScenario(self):
-        if gc.getPlayer(Consts.iBurgundy).isPlayable():
+        if gc.getPlayer(Civ.BURGUNDY.value).isPlayable():
             return Scenario.i500AD
         return Scenario.i1200AD
 

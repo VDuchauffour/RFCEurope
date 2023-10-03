@@ -1,16 +1,12 @@
 # Rhye's and Fall of Civilization: Europe - Constants
 
 from CvPythonExtensions import *
-import XMLConsts as xml
 
 # globals
 gc = CyGlobalContext()
 
 # initialize player variables to player IDs from WBS (this is the only part of the XML that will stay here):
 iNumPlayers = 29
-(iByzantium, iFrankia, iArabia, iBulgaria, iCordoba, iVenecia, iBurgundy, iGermany, iNovgorod, iNorway,
-iKiev, iHungary, iSpain, iDenmark, iScotland, iPoland, iGenoa, iMorocco, iEngland, iPortugal,
-iAragon, iSweden, iPrussia, iLithuania, iAustria, iTurkey, iMoscow, iDutch, iPope) = range(iNumPlayers)
 
 iNumMajorPlayers = iNumPlayers
 

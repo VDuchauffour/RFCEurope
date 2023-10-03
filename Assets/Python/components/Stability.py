@@ -9,6 +9,7 @@ from CoreStructures import get_civ_by_id
 from TimelineData import CIV_BIRTHDATE, CIV_COLLAPSE_DATE
 from MiscData import MessageData
 from CoreTypes import (
+    Civ,
     Scenario,
     FaithPointBonusCategory,
     ProvinceTypes,
@@ -152,10 +153,10 @@ class Stability:
         # Absinthe: update Byzantine stability on the start of the game
         if utils.getScenario() == Scenario.i500AD:
             # small stability boost for the human player for the first UHV
-            if Consts.iByzantium == utils.getHumanID():
-                pByzantium = gc.getPlayer(Consts.iByzantium)
+            if Civ.BYZANTIUM.value == utils.getHumanID():
+                pByzantium = gc.getPlayer(Civ.BYZANTIUM.value)
                 pByzantium.changeStabilityBase(StabilityCategory.EXPANSION.value, 4)
-            self.recalcEpansion(Consts.iByzantium)
+            self.recalcEpansion(Civ.BYZANTIUM.value)
 
     def checkTurn(self, iGameTurn):
         # print("3Miro NewStability Check Turn")
@@ -225,7 +226,7 @@ class Stability:
             self.recalcEpansion(iPlayer)
             iNumCities = pPlayer.getNumCities()
 
-            if iPlayer != Consts.iPrussia:  # Absinthe: Prussian UP
+            if iPlayer != Civ.PRUSSIA.value:  # Absinthe: Prussian UP
                 if pPlayer.isHuman():
                     # Absinthe: anarchy base instability
                     pPlayer.changeStabilityBase(
@@ -356,14 +357,14 @@ class Stability:
         iProvConqType = pConq.getProvinceType(iProv)
 
         if iProvOwnerType >= ProvinceTypes.NATURAL:
-            if iOwner == Consts.iScotland:  # Scotland UP part 2
+            if iOwner == Civ.SCOTLAND.value:  # Scotland UP part 2
                 pOwner.changeStabilityBase(StabilityCategory.EXPANSION.value, -2)
                 pOwner.setStabilitySwing(pOwner.getStabilitySwing() - 2)
             else:
                 pOwner.changeStabilityBase(StabilityCategory.EXPANSION.value, -3)
                 pOwner.setStabilitySwing(pOwner.getStabilitySwing() - 4)
         elif iProvOwnerType < ProvinceTypes.NATURAL:
-            if iOwner == Consts.iScotland:  # Scotland UP part 2
+            if iOwner == Civ.SCOTLAND.value:  # Scotland UP part 2
                 pOwner.setStabilitySwing(pOwner.getStabilitySwing() - 1)
             else:
                 pOwner.setStabilitySwing(pOwner.getStabilitySwing() - 2)
@@ -380,7 +381,7 @@ class Stability:
             and (city.getX(), city.getY())
             == CIV_CAPITAL_LOCATIONS[get_civ_by_id(iOwner)].to_tuple()
         ):
-            if iOwner == Consts.iScotland:  # Scotland UP part 2
+            if iOwner == Civ.SCOTLAND.value:  # Scotland UP part 2
                 pOwner.changeStabilityBase(StabilityCategory.EXPANSION.value, -5)
                 pOwner.setStabilitySwing(pOwner.getStabilitySwing() - 5)
             elif gc.hasUP(
@@ -430,12 +431,12 @@ class Stability:
         elif city.getPopulation() >= 2:
             iRazeStab = 1
         # Absinthe: Norwegian UP - one less stability penalty
-        if iPlayer == Consts.iNorway:
+        if iPlayer == Civ.NORWAY.value:
             iRazeStab -= 1
         if iRazeStab > 0:
             pPlayer.changeStabilityBase(StabilityCategory.EXPANSION.value, -iRazeStab)
         # temporary, 3 for everyone but Norway
-        if iPlayer != Consts.iNorway:
+        if iPlayer != Civ.NORWAY.value:
             pPlayer.setStabilitySwing(pPlayer.getStabilitySwing() - 3)
         self.recalcEpansion(iPlayer)
 
@@ -759,7 +760,7 @@ class Stability:
                         if iCivic4 == xml.iCivicPaganism:  # Pagans are a bit more tolerant
                             iReligionStability -= 1
                         elif (
-                            iPlayer == Consts.iTurkey
+                            iPlayer == Civ.OTTOMAN.value
                         ):  # Janissary UP - not necessarily a historical aspect of it, but important for gameplay
                             # elif ( gc.hasUP( iPlayer, UniquePower.FREE_UNITS_WITH_FOREIGN_RELIGIONS.value )):
                             iReligionStability -= 1
@@ -911,7 +912,7 @@ class Stability:
 
         if iCivicLegal == xml.iCivicBureaucracy:  # Bureaucracy city cap
             if (
-                iPlayer == Consts.iNovgorod and pPlayer.getNumCities() > 6
+                iPlayer == Civ.NOVGOROD.value and pPlayer.getNumCities() > 6
             ):  # the penalties are halved for Novgorod
                 iBureaucracyCap = (6 - pPlayer.getNumCities()) / 2
             else:
@@ -922,7 +923,7 @@ class Stability:
 
         if iCivicGovernment == xml.iCivicMerchantRepublic:  # Merchant Republic city cap
             if (
-                iPlayer == Consts.iVenecia and pPlayer.getNumCities() > 5
+                iPlayer == Civ.VENECIA.value and pPlayer.getNumCities() > 5
             ):  # the penalties are halved for Venice
                 iMerchantRepublicCap = (5 - pPlayer.getNumCities()) / 2
             else:
@@ -1028,7 +1029,7 @@ class Stability:
         iImports = pPlayer.calculateTotalImports(YieldTypes.YIELD_COMMERCE)
         iExports = pPlayer.calculateTotalExports(YieldTypes.YIELD_COMMERCE)
         # Absinthe: removed - why was Cordoba penalized in the first place?
-        # if iPlayer == Consts.iCordoba:
+        # if iPlayer == Civ.CORDOBA.value:
         # 	iImports /= 2
         # 	iExports /= 2
 
@@ -1036,7 +1037,7 @@ class Stability:
         iInflation = pPlayer.calculateInflatedCosts()
         iProduction = pPlayer.calculateTotalYield(YieldTypes.YIELD_PRODUCTION)
         # Absinthe: removed - Venice no longer has that weak production
-        # if iPlayer == Consts.iVenecia:
+        # if iPlayer == Civ.VENECIA.value:
         # 	iProduction += iPopNum # offset their weak production
         iAgriculture = pPlayer.calculateTotalYield(YieldTypes.YIELD_FOOD)
 
@@ -1129,13 +1130,13 @@ class Stability:
         else:
             iExpStability += pPlayer.countVassals()
         iNumCities = pPlayer.getNumCities()
-        if iPlayer in [Consts.iTurkey, Consts.iMoscow]:  # five free cities for those two
+        if iPlayer in [Civ.OTTOMAN.value, Civ.MOSCOW.value]:  # five free cities for those two
             iNumCities = max(0, iNumCities - 5)
         iExpStability -= iNumCities * iNumCities / 40
-        # 	if ( pPlayer.getID() == Consts.iTurkey and pPlayer.getStability() < 1 and gc.getGame().getGameTurn() < xml.i1570AD ): # boost Turkey before the battle of Lepanto
+        # 	if ( pPlayer.getID() == Civ.OTTOMAN.value and pPlayer.getStability() < 1 and gc.getGame().getGameTurn() < xml.i1570AD ): # boost Turkey before the battle of Lepanto
         # 		if ( not pPlayer.isHuman() ):
         # 			iExpStability += min( 3 - pPlayer.getStability(), 6 )
-        # 	if ( pPlayer.getID() == Consts.iVenecia and pPlayer.getStability() < 1 and gc.getGame().getGameTurn() < xml.i1204AD ): # Venice has trouble early on due to its civics
+        # 	if ( pPlayer.getID() == Civ.VENECIA.value and pPlayer.getStability() < 1 and gc.getGame().getGameTurn() < xml.i1204AD ): # Venice has trouble early on due to its civics
         # 		if ( not pPlayer.isHuman() ):
         # 			iExpStability += 4
         pPlayer.setStabilityVary(StabilityCategory.EXPANSION.value, iExpStability)

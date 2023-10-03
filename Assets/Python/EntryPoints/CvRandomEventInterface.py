@@ -9,10 +9,9 @@
 #
 # No other modules should import this
 #
+from CoreTypes import Civ
 import CvUtil
 from CvPythonExtensions import *
-
-import Consts
 
 gc = CyGlobalContext()
 localText = CyTranslator()
@@ -2225,20 +2224,20 @@ def canTriggerGreatMediator(argsList):
         return False
 
     # Rhye - start
-    if (
-        player.getID() == Consts.iIndependent
-        or player.getID() == Consts.iIndependent2
-        or player.getID() == Consts.iIndependent3
-        or player.getID() == Consts.iIndependent4
-    ):
+    if player.getID() in [
+        Civ.INDEPENDENT.value,
+        Civ.INDEPENDENT_2.value,
+        Civ.INDEPENDENT_3.value,
+        Civ.INDEPENDENT_4.value,
+    ]:
         return False
 
-    if (
-        destPlayer.getID() == Consts.iIndependent
-        or destPlayer.getID() == Consts.iIndependent2
-        or destPlayer.getID() == Consts.iIndependent3
-        or destPlayer.getID() == Consts.iIndependent4
-    ):
+    if destPlayer.getID() in [
+        Civ.INDEPENDENT.value,
+        Civ.INDEPENDENT_2.value,
+        Civ.INDEPENDENT_3.value,
+        Civ.INDEPENDENT_4.value,
+    ]:
         return False
     # Rhye - end
 

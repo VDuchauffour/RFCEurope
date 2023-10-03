@@ -1,6 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Stored Data
 
 from CvPythonExtensions import *
+from CoreTypes import Civ
 import PyHelpers
 import cPickle as pickle  # LOQ 2005-10-12
 import Consts
@@ -17,11 +18,11 @@ class StoredData:
 
     def load(self):
         """Loads and unpickles script data"""
-        self.scriptDict.update(pickle.loads(gc.getPlayer(Consts.iBarbarian).getScriptData()))
+        self.scriptDict.update(pickle.loads(gc.getPlayer(Civ.BARBARIAN.value).getScriptData()))
 
     def save(self):
         """Pickles and saves script data"""
-        gc.getPlayer(Consts.iBarbarian).setScriptData(pickle.dumps(self.scriptDict))
+        gc.getPlayer(Civ.BARBARIAN.value).setScriptData(pickle.dumps(self.scriptDict))
 
     def setup(self):
         """Initialise the global script data dictionary for usage."""
