@@ -3425,7 +3425,7 @@ class CvVictoryScreen:
             sProvName = localText.getText(sProvName, ())
             # localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),())
             iHave = pActivePlayer.getProvinceCurrentState(iProv)
-            if iHave < ProvinceStatus.CONQUER:
+            if iHave < ProvinceStatus.CONQUER.value:
                 sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (sProvName)
             else:
                 sStringConqTemp += "  " + u"<color=0,255,0>%s</color>" % (sProvName)
@@ -3661,7 +3661,8 @@ class CvVictoryScreen:
                 )
             elif (
                 not pEnemy.isAlive()
-                and pActivePlayer.getProvinceCurrentState(iEnemyProvince) < ProvinceStatus.CONQUER
+                and pActivePlayer.getProvinceCurrentState(iEnemyProvince)
+                < ProvinceStatus.CONQUER.value
             ):
                 sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (
                     localText.getText(sCivShortName, ())
@@ -3669,7 +3670,8 @@ class CvVictoryScreen:
             elif (
                 pEnemy.isAlive()
                 and not teamEnemy.isVassal(teamOwn.getID())
-                and pActivePlayer.getProvinceCurrentState(iEnemyProvince) < ProvinceStatus.CONQUER
+                and pActivePlayer.getProvinceCurrentState(iEnemyProvince)
+                < ProvinceStatus.CONQUER.value
             ):
                 sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (
                     localText.getText(sCivShortName, ())

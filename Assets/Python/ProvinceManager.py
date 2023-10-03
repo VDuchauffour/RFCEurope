@@ -705,15 +705,15 @@ class ProvinceManager:
         for iPlayer in range(Consts.iNumPlayers - 1):  # this discounts the Pope
             pPlayer = gc.getPlayer(iPlayer)
             for iProv in self.tCoreProvinces[iPlayer]:
-                pPlayer.setProvinceType(iProv, ProvinceTypes.CORE)
+                pPlayer.setProvinceType(iProv, ProvinceTypes.CORE.value)
             for iProv in self.tNormProvinces[iPlayer]:
-                pPlayer.setProvinceType(iProv, ProvinceTypes.NATURAL)
+                pPlayer.setProvinceType(iProv, ProvinceTypes.NATURAL.value)
             for iProv in self.tOuterProvinces[iPlayer]:
-                pPlayer.setProvinceType(iProv, ProvinceTypes.OUTER)
+                pPlayer.setProvinceType(iProv, ProvinceTypes.OUTER.value)
             for iProv in self.tPot2CoreProvinces[iPlayer]:
-                pPlayer.setProvinceType(iProv, ProvinceTypes.POTENTIAL)
+                pPlayer.setProvinceType(iProv, ProvinceTypes.POTENTIAL.value)
             for iProv in self.tPot2NormProvinces[iPlayer]:
-                pPlayer.setProvinceType(iProv, ProvinceTypes.POTENTIAL)
+                pPlayer.setProvinceType(iProv, ProvinceTypes.POTENTIAL.value)
         # update provinces for the 1200 AD Scenario
         if utils.getScenario() == Scenario.i1200AD:
             for iPlayer in range(Consts.iNumPlayers - 1):
@@ -723,24 +723,24 @@ class ProvinceManager:
     def checkTurn(self, iGameTurn):
         # Norse provinces switch back to unstable after the fall of the Norman Kingdom of Sicily
         if iGameTurn == xml.i1194AD + 1:
-            pNorway.setProvinceType(xml.iP_Apulia, ProvinceTypes.NONE)
-            pNorway.setProvinceType(xml.iP_Calabria, ProvinceTypes.NONE)
-            pNorway.setProvinceType(xml.iP_Sicily, ProvinceTypes.NONE)
-            pNorway.setProvinceType(xml.iP_Malta, ProvinceTypes.NONE)
-            pDenmark.setProvinceType(xml.iP_Apulia, ProvinceTypes.NONE)
-            pDenmark.setProvinceType(xml.iP_Calabria, ProvinceTypes.NONE)
-            pDenmark.setProvinceType(xml.iP_Sicily, ProvinceTypes.NONE)
-            pDenmark.setProvinceType(xml.iP_Malta, ProvinceTypes.NONE)
+            pNorway.setProvinceType(xml.iP_Apulia, ProvinceTypes.NONE.value)
+            pNorway.setProvinceType(xml.iP_Calabria, ProvinceTypes.NONE.value)
+            pNorway.setProvinceType(xml.iP_Sicily, ProvinceTypes.NONE.value)
+            pNorway.setProvinceType(xml.iP_Malta, ProvinceTypes.NONE.value)
+            pDenmark.setProvinceType(xml.iP_Apulia, ProvinceTypes.NONE.value)
+            pDenmark.setProvinceType(xml.iP_Calabria, ProvinceTypes.NONE.value)
+            pDenmark.setProvinceType(xml.iP_Sicily, ProvinceTypes.NONE.value)
+            pDenmark.setProvinceType(xml.iP_Malta, ProvinceTypes.NONE.value)
         # Prussia direction change
         elif iGameTurn == xml.i1618AD:
-            pPrussia.setProvinceType(xml.iP_Estonia, ProvinceTypes.NONE)
-            pPrussia.setProvinceType(xml.iP_Lithuania, ProvinceTypes.NONE)
-            pPrussia.setProvinceType(xml.iP_Suvalkija, ProvinceTypes.NONE)
-            pPrussia.setProvinceType(xml.iP_Livonia, ProvinceTypes.OUTER)
-            pPrussia.setProvinceType(xml.iP_Pomerania, ProvinceTypes.NATURAL)
-            pPrussia.setProvinceType(xml.iP_Brandenburg, ProvinceTypes.NATURAL)
-            pPrussia.setProvinceType(xml.iP_Silesia, ProvinceTypes.POTENTIAL)
-            pPrussia.setProvinceType(xml.iP_GreaterPoland, ProvinceTypes.OUTER)
+            pPrussia.setProvinceType(xml.iP_Estonia, ProvinceTypes.NONE.value)
+            pPrussia.setProvinceType(xml.iP_Lithuania, ProvinceTypes.NONE.value)
+            pPrussia.setProvinceType(xml.iP_Suvalkija, ProvinceTypes.NONE.value)
+            pPrussia.setProvinceType(xml.iP_Livonia, ProvinceTypes.OUTER.value)
+            pPrussia.setProvinceType(xml.iP_Pomerania, ProvinceTypes.NATURAL.value)
+            pPrussia.setProvinceType(xml.iP_Brandenburg, ProvinceTypes.NATURAL.value)
+            pPrussia.setProvinceType(xml.iP_Silesia, ProvinceTypes.POTENTIAL.value)
+            pPrussia.setProvinceType(xml.iP_GreaterPoland, ProvinceTypes.OUTER.value)
             print("Yes! Prussia can into Germany!")
 
     def onCityBuilt(self, iPlayer, x, y):
@@ -748,16 +748,16 @@ class ProvinceManager:
             return
         pPlayer = gc.getPlayer(iPlayer)
         iProv = RFCEMaps.tProvinceMap[y][x]
-        if pPlayer.getProvinceType(iProv) == ProvinceTypes.POTENTIAL:
+        if pPlayer.getProvinceType(iProv) == ProvinceTypes.POTENTIAL.value:
             if iProv in self.tPot2NormProvinces[iPlayer]:
-                pPlayer.setProvinceType(iProv, ProvinceTypes.NATURAL)
+                pPlayer.setProvinceType(iProv, ProvinceTypes.NATURAL.value)
                 utils.refreshStabilityOverlay()  # refresh the stability overlay
             elif iProv in self.tPot2CoreProvinces[iPlayer]:
-                pPlayer.setProvinceType(iProv, ProvinceTypes.CORE)
+                pPlayer.setProvinceType(iProv, ProvinceTypes.CORE.value)
                 utils.refreshStabilityOverlay()  # refresh the stability overlay
             # Absinthe: bug if we tie potential only to the preset status of provinces
             else:  # also update if it was changed to be a potential province later in the game
-                pPlayer.setProvinceType(iProv, ProvinceTypes.NATURAL)
+                pPlayer.setProvinceType(iProv, ProvinceTypes.NATURAL.value)
                 utils.refreshStabilityOverlay()  # refresh the stability overlay
 
     def onCityAcquired(self, owner, iPlayer, city, bConquest, bTrade):
@@ -765,16 +765,16 @@ class ProvinceManager:
             return
         pPlayer = gc.getPlayer(iPlayer)
         iProv = city.getProvince()
-        if pPlayer.getProvinceType(iProv) == ProvinceTypes.POTENTIAL:
+        if pPlayer.getProvinceType(iProv) == ProvinceTypes.POTENTIAL.value:
             if iProv in self.tPot2NormProvinces[iPlayer]:
-                pPlayer.setProvinceType(iProv, ProvinceTypes.NATURAL)
+                pPlayer.setProvinceType(iProv, ProvinceTypes.NATURAL.value)
                 utils.refreshStabilityOverlay()  # refresh the stability overlay
             elif iProv in self.tPot2CoreProvinces[iPlayer]:
-                pPlayer.setProvinceType(iProv, ProvinceTypes.CORE)
+                pPlayer.setProvinceType(iProv, ProvinceTypes.CORE.value)
                 utils.refreshStabilityOverlay()  # refresh the stability overlay
             # Absinthe: bug if we tie potential only to the preset status of provinces
             else:  # also update if it was changed to be a potential province later in the game
-                pPlayer.setProvinceType(iProv, ProvinceTypes.NATURAL)
+                pPlayer.setProvinceType(iProv, ProvinceTypes.NATURAL.value)
                 utils.refreshStabilityOverlay()  # refresh the stability overlay
 
     def onCityRazed(self, iOwner, iPlayer, city):
@@ -784,160 +784,160 @@ class ProvinceManager:
         pPlayer = gc.getPlayer(iPlayer)
         for city in utils.getCityList(iPlayer):
             iProv = city.getProvince()
-            if pPlayer.getProvinceType(iProv) == ProvinceTypes.POTENTIAL:
+            if pPlayer.getProvinceType(iProv) == ProvinceTypes.POTENTIAL.value:
                 if iProv in self.tPot2NormProvinces[iPlayer]:
-                    pPlayer.setProvinceType(iProv, ProvinceTypes.NATURAL)
+                    pPlayer.setProvinceType(iProv, ProvinceTypes.NATURAL.value)
                 elif iProv in self.tPot2CoreProvinces[iPlayer]:
-                    pPlayer.setProvinceType(iProv, ProvinceTypes.CORE)
+                    pPlayer.setProvinceType(iProv, ProvinceTypes.CORE.value)
                 # Absinthe: bug if we tie potential only to the preset status of provinces
                 else:  # also update if it was changed to be a potential province later in the game
-                    pPlayer.setProvinceType(iProv, ProvinceTypes.NATURAL)
+                    pPlayer.setProvinceType(iProv, ProvinceTypes.NATURAL.value)
         utils.refreshStabilityOverlay()  # refresh the stability overlay
 
     def onRespawn(self, iPlayer):
         # Absinthe: reset the original potential provinces, but only if they wasn't changed to something entirely different later on
         pPlayer = gc.getPlayer(iPlayer)
         for iProv in self.tPot2CoreProvinces[iPlayer]:
-            if pPlayer.getProvinceType(iProv) == ProvinceTypes.CORE:
-                pPlayer.setProvinceType(iProv, ProvinceTypes.POTENTIAL)
+            if pPlayer.getProvinceType(iProv) == ProvinceTypes.CORE.value:
+                pPlayer.setProvinceType(iProv, ProvinceTypes.POTENTIAL.value)
         for iProv in self.tPot2NormProvinces[iPlayer]:
-            if pPlayer.getProvinceType(iProv) == ProvinceTypes.NATURAL:
-                pPlayer.setProvinceType(iProv, ProvinceTypes.POTENTIAL)
+            if pPlayer.getProvinceType(iProv) == ProvinceTypes.NATURAL.value:
+                pPlayer.setProvinceType(iProv, ProvinceTypes.POTENTIAL.value)
 
         # Absinthe: special respawn conditions
         # if ( iPlayer == iArabia ):
         # 	self.resetProvinces(iPlayer)
         if iPlayer == Civ.CORDOBA.value:
             for iProv in range(xml.iP_MaxNumberOfProvinces):
-                pCordoba.setProvinceType(iProv, ProvinceTypes.NONE)
-            pCordoba.setProvinceType(xml.iP_Ifriqiya, ProvinceTypes.CORE)
-            pCordoba.setProvinceType(xml.iP_Algiers, ProvinceTypes.NATURAL)
-            pCordoba.setProvinceType(xml.iP_Oran, ProvinceTypes.OUTER)
-            pCordoba.setProvinceType(xml.iP_Tripolitania, ProvinceTypes.OUTER)
-            pCordoba.setProvinceType(xml.iP_Tetouan, ProvinceTypes.OUTER)
-            pCordoba.setProvinceType(xml.iP_Morocco, ProvinceTypes.OUTER)
-            pCordoba.setProvinceType(xml.iP_Fez, ProvinceTypes.OUTER)
+                pCordoba.setProvinceType(iProv, ProvinceTypes.NONE.value)
+            pCordoba.setProvinceType(xml.iP_Ifriqiya, ProvinceTypes.CORE.value)
+            pCordoba.setProvinceType(xml.iP_Algiers, ProvinceTypes.NATURAL.value)
+            pCordoba.setProvinceType(xml.iP_Oran, ProvinceTypes.OUTER.value)
+            pCordoba.setProvinceType(xml.iP_Tripolitania, ProvinceTypes.OUTER.value)
+            pCordoba.setProvinceType(xml.iP_Tetouan, ProvinceTypes.OUTER.value)
+            pCordoba.setProvinceType(xml.iP_Morocco, ProvinceTypes.OUTER.value)
+            pCordoba.setProvinceType(xml.iP_Fez, ProvinceTypes.OUTER.value)
 
     def resetProvinces(self, iPlayer):
         # Absinthe: keep in mind that this will reset all to the initial status, so won't take later province changes into account
         pPlayer = gc.getPlayer(iPlayer)
         for iProv in range(xml.iP_MaxNumberOfProvinces):
-            pPlayer.setProvinceType(iProv, ProvinceTypes.NONE)
+            pPlayer.setProvinceType(iProv, ProvinceTypes.NONE.value)
         for iProv in self.tCoreProvinces[iPlayer]:
-            pPlayer.setProvinceType(iProv, ProvinceTypes.CORE)
+            pPlayer.setProvinceType(iProv, ProvinceTypes.CORE.value)
         for iProv in self.tNormProvinces[iPlayer]:
-            pPlayer.setProvinceType(iProv, ProvinceTypes.NATURAL)
+            pPlayer.setProvinceType(iProv, ProvinceTypes.NATURAL.value)
         for iProv in self.tOuterProvinces[iPlayer]:
-            pPlayer.setProvinceType(iProv, ProvinceTypes.OUTER)
+            pPlayer.setProvinceType(iProv, ProvinceTypes.OUTER.value)
         for iProv in self.tPot2CoreProvinces[iPlayer]:
-            pPlayer.setProvinceType(iProv, ProvinceTypes.POTENTIAL)
+            pPlayer.setProvinceType(iProv, ProvinceTypes.POTENTIAL.value)
         for iProv in self.tPot2NormProvinces[iPlayer]:
-            pPlayer.setProvinceType(iProv, ProvinceTypes.POTENTIAL)
+            pPlayer.setProvinceType(iProv, ProvinceTypes.POTENTIAL.value)
 
     def onSpawn(self, iPlayer):
         # when a new nations spawns, old nations in the region should lose some of their provinces
         if iPlayer == Civ.ARABIA.value:
-            pByzantium.setProvinceType(xml.iP_Cyrenaica, ProvinceTypes.OUTER)
-            pByzantium.setProvinceType(xml.iP_Tripolitania, ProvinceTypes.OUTER)
-            pByzantium.setProvinceType(xml.iP_Ifriqiya, ProvinceTypes.OUTER)
-            pByzantium.setProvinceType(xml.iP_Egypt, ProvinceTypes.OUTER)
-            pByzantium.setProvinceType(xml.iP_Arabia, ProvinceTypes.NONE)
-            pByzantium.setProvinceType(xml.iP_Syria, ProvinceTypes.OUTER)
-            pByzantium.setProvinceType(xml.iP_Lebanon, ProvinceTypes.OUTER)
-            pByzantium.setProvinceType(xml.iP_Jerusalem, ProvinceTypes.OUTER)
-            pByzantium.setProvinceType(xml.iP_Antiochia, ProvinceTypes.NATURAL)
-            pByzantium.setProvinceType(xml.iP_Cilicia, ProvinceTypes.NATURAL)
-            pByzantium.setProvinceType(xml.iP_Charsianon, ProvinceTypes.NATURAL)
-            pByzantium.setProvinceType(xml.iP_Colonea, ProvinceTypes.NATURAL)
+            pByzantium.setProvinceType(xml.iP_Cyrenaica, ProvinceTypes.OUTER.value)
+            pByzantium.setProvinceType(xml.iP_Tripolitania, ProvinceTypes.OUTER.value)
+            pByzantium.setProvinceType(xml.iP_Ifriqiya, ProvinceTypes.OUTER.value)
+            pByzantium.setProvinceType(xml.iP_Egypt, ProvinceTypes.OUTER.value)
+            pByzantium.setProvinceType(xml.iP_Arabia, ProvinceTypes.NONE.value)
+            pByzantium.setProvinceType(xml.iP_Syria, ProvinceTypes.OUTER.value)
+            pByzantium.setProvinceType(xml.iP_Lebanon, ProvinceTypes.OUTER.value)
+            pByzantium.setProvinceType(xml.iP_Jerusalem, ProvinceTypes.OUTER.value)
+            pByzantium.setProvinceType(xml.iP_Antiochia, ProvinceTypes.NATURAL.value)
+            pByzantium.setProvinceType(xml.iP_Cilicia, ProvinceTypes.NATURAL.value)
+            pByzantium.setProvinceType(xml.iP_Charsianon, ProvinceTypes.NATURAL.value)
+            pByzantium.setProvinceType(xml.iP_Colonea, ProvinceTypes.NATURAL.value)
         elif iPlayer == Civ.BULGARIA.value:
-            pByzantium.setProvinceType(xml.iP_Serbia, ProvinceTypes.OUTER)
-            pByzantium.setProvinceType(xml.iP_Moesia, ProvinceTypes.OUTER)
-            pByzantium.setProvinceType(xml.iP_Thrace, ProvinceTypes.NATURAL)
+            pByzantium.setProvinceType(xml.iP_Serbia, ProvinceTypes.OUTER.value)
+            pByzantium.setProvinceType(xml.iP_Moesia, ProvinceTypes.OUTER.value)
+            pByzantium.setProvinceType(xml.iP_Thrace, ProvinceTypes.NATURAL.value)
         elif iPlayer == Civ.VENECIA.value:
-            pByzantium.setProvinceType(xml.iP_Dalmatia, ProvinceTypes.NONE)
-            pByzantium.setProvinceType(xml.iP_Bosnia, ProvinceTypes.NONE)
-            pByzantium.setProvinceType(xml.iP_Slavonia, ProvinceTypes.NONE)
-            pByzantium.setProvinceType(xml.iP_Verona, ProvinceTypes.NONE)
-            pByzantium.setProvinceType(xml.iP_Tuscany, ProvinceTypes.NONE)
-            pByzantium.setProvinceType(xml.iP_Lombardy, ProvinceTypes.NONE)
-            pByzantium.setProvinceType(xml.iP_Liguria, ProvinceTypes.NONE)
-            pByzantium.setProvinceType(xml.iP_Corsica, ProvinceTypes.NONE)
-            pByzantium.setProvinceType(xml.iP_Sardinia, ProvinceTypes.NONE)
-            pByzantium.setProvinceType(xml.iP_Latium, ProvinceTypes.NONE)
+            pByzantium.setProvinceType(xml.iP_Dalmatia, ProvinceTypes.NONE.value)
+            pByzantium.setProvinceType(xml.iP_Bosnia, ProvinceTypes.NONE.value)
+            pByzantium.setProvinceType(xml.iP_Slavonia, ProvinceTypes.NONE.value)
+            pByzantium.setProvinceType(xml.iP_Verona, ProvinceTypes.NONE.value)
+            pByzantium.setProvinceType(xml.iP_Tuscany, ProvinceTypes.NONE.value)
+            pByzantium.setProvinceType(xml.iP_Lombardy, ProvinceTypes.NONE.value)
+            pByzantium.setProvinceType(xml.iP_Liguria, ProvinceTypes.NONE.value)
+            pByzantium.setProvinceType(xml.iP_Corsica, ProvinceTypes.NONE.value)
+            pByzantium.setProvinceType(xml.iP_Sardinia, ProvinceTypes.NONE.value)
+            pByzantium.setProvinceType(xml.iP_Latium, ProvinceTypes.NONE.value)
         elif iPlayer == Civ.BURGUNDY.value:
             # these areas flip to Burgundy, so resetting them to Potential won't cause any issues
-            pFrankia.setProvinceType(xml.iP_Provence, ProvinceTypes.POTENTIAL)
-            pFrankia.setProvinceType(xml.iP_Burgundy, ProvinceTypes.POTENTIAL)
+            pFrankia.setProvinceType(xml.iP_Provence, ProvinceTypes.POTENTIAL.value)
+            pFrankia.setProvinceType(xml.iP_Burgundy, ProvinceTypes.POTENTIAL.value)
         elif iPlayer == Civ.GERMANY.value:
-            pFrankia.setProvinceType(xml.iP_Lorraine, ProvinceTypes.OUTER)
-            pFrankia.setProvinceType(xml.iP_Bavaria, ProvinceTypes.NONE)
-            pFrankia.setProvinceType(xml.iP_Franconia, ProvinceTypes.NONE)
-            pFrankia.setProvinceType(xml.iP_Saxony, ProvinceTypes.NONE)
-            pFrankia.setProvinceType(xml.iP_Netherlands, ProvinceTypes.NONE)
+            pFrankia.setProvinceType(xml.iP_Lorraine, ProvinceTypes.OUTER.value)
+            pFrankia.setProvinceType(xml.iP_Bavaria, ProvinceTypes.NONE.value)
+            pFrankia.setProvinceType(xml.iP_Franconia, ProvinceTypes.NONE.value)
+            pFrankia.setProvinceType(xml.iP_Saxony, ProvinceTypes.NONE.value)
+            pFrankia.setProvinceType(xml.iP_Netherlands, ProvinceTypes.NONE.value)
         elif iPlayer == Civ.HUNGARY.value:
-            pBulgaria.setProvinceType(xml.iP_Banat, ProvinceTypes.NONE)
-            pBulgaria.setProvinceType(xml.iP_Wallachia, ProvinceTypes.OUTER)
+            pBulgaria.setProvinceType(xml.iP_Banat, ProvinceTypes.NONE.value)
+            pBulgaria.setProvinceType(xml.iP_Wallachia, ProvinceTypes.OUTER.value)
         elif iPlayer == Civ.CASTILLE.value:
-            pCordoba.setProvinceType(xml.iP_LaMancha, ProvinceTypes.NATURAL)
+            pCordoba.setProvinceType(xml.iP_LaMancha, ProvinceTypes.NATURAL.value)
         elif iPlayer == Civ.MOROCCO.value:
-            pCordoba.setProvinceType(xml.iP_Morocco, ProvinceTypes.NONE)
-            pCordoba.setProvinceType(xml.iP_Marrakesh, ProvinceTypes.NONE)
-            pCordoba.setProvinceType(xml.iP_Fez, ProvinceTypes.OUTER)
-            pCordoba.setProvinceType(xml.iP_Tetouan, ProvinceTypes.OUTER)
+            pCordoba.setProvinceType(xml.iP_Morocco, ProvinceTypes.NONE.value)
+            pCordoba.setProvinceType(xml.iP_Marrakesh, ProvinceTypes.NONE.value)
+            pCordoba.setProvinceType(xml.iP_Fez, ProvinceTypes.OUTER.value)
+            pCordoba.setProvinceType(xml.iP_Tetouan, ProvinceTypes.OUTER.value)
         elif iPlayer == Civ.ENGLAND.value:
             pFrankia.setProvinceType(
-                xml.iP_Normandy, ProvinceTypes.POTENTIAL
+                xml.iP_Normandy, ProvinceTypes.POTENTIAL.value
             )  # it flips to England, so resetting them to Potential won't cause any issues
-            pScotland.setProvinceType(xml.iP_Northumbria, ProvinceTypes.OUTER)
-            pScotland.setProvinceType(xml.iP_Mercia, ProvinceTypes.NONE)
-            pDenmark.setProvinceType(xml.iP_Northumbria, ProvinceTypes.NONE)
-            pDenmark.setProvinceType(xml.iP_Mercia, ProvinceTypes.NONE)
-            pDenmark.setProvinceType(xml.iP_EastAnglia, ProvinceTypes.NONE)
-            pDenmark.setProvinceType(xml.iP_London, ProvinceTypes.NONE)
+            pScotland.setProvinceType(xml.iP_Northumbria, ProvinceTypes.OUTER.value)
+            pScotland.setProvinceType(xml.iP_Mercia, ProvinceTypes.NONE.value)
+            pDenmark.setProvinceType(xml.iP_Northumbria, ProvinceTypes.NONE.value)
+            pDenmark.setProvinceType(xml.iP_Mercia, ProvinceTypes.NONE.value)
+            pDenmark.setProvinceType(xml.iP_EastAnglia, ProvinceTypes.NONE.value)
+            pDenmark.setProvinceType(xml.iP_London, ProvinceTypes.NONE.value)
         elif iPlayer == Civ.ARAGON.value:
-            pByzantium.setProvinceType(xml.iP_Apulia, ProvinceTypes.OUTER)
-            pByzantium.setProvinceType(xml.iP_Calabria, ProvinceTypes.OUTER)
-            pByzantium.setProvinceType(xml.iP_Sicily, ProvinceTypes.OUTER)
-            pByzantium.setProvinceType(xml.iP_Malta, ProvinceTypes.OUTER)
-            pCordoba.setProvinceType(xml.iP_Aragon, ProvinceTypes.OUTER)
-            pCordoba.setProvinceType(xml.iP_Catalonia, ProvinceTypes.OUTER)
-            pCordoba.setProvinceType(xml.iP_Valencia, ProvinceTypes.NATURAL)
-            pCordoba.setProvinceType(xml.iP_Balears, ProvinceTypes.OUTER)
+            pByzantium.setProvinceType(xml.iP_Apulia, ProvinceTypes.OUTER.value)
+            pByzantium.setProvinceType(xml.iP_Calabria, ProvinceTypes.OUTER.value)
+            pByzantium.setProvinceType(xml.iP_Sicily, ProvinceTypes.OUTER.value)
+            pByzantium.setProvinceType(xml.iP_Malta, ProvinceTypes.OUTER.value)
+            pCordoba.setProvinceType(xml.iP_Aragon, ProvinceTypes.OUTER.value)
+            pCordoba.setProvinceType(xml.iP_Catalonia, ProvinceTypes.OUTER.value)
+            pCordoba.setProvinceType(xml.iP_Valencia, ProvinceTypes.NATURAL.value)
+            pCordoba.setProvinceType(xml.iP_Balears, ProvinceTypes.OUTER.value)
         elif iPlayer == Civ.SWEDEN.value:
-            pNorway.setProvinceType(xml.iP_Svealand, ProvinceTypes.NONE)
-            pDenmark.setProvinceType(xml.iP_Gotaland, ProvinceTypes.NONE)
-            pDenmark.setProvinceType(xml.iP_Svealand, ProvinceTypes.NONE)
-            pNovgorod.setProvinceType(xml.iP_Osterland, ProvinceTypes.OUTER)
+            pNorway.setProvinceType(xml.iP_Svealand, ProvinceTypes.NONE.value)
+            pDenmark.setProvinceType(xml.iP_Gotaland, ProvinceTypes.NONE.value)
+            pDenmark.setProvinceType(xml.iP_Svealand, ProvinceTypes.NONE.value)
+            pNovgorod.setProvinceType(xml.iP_Osterland, ProvinceTypes.OUTER.value)
         elif iPlayer == Civ.AUSTRIA.value:
-            pHungary.setProvinceType(xml.iP_Carinthia, ProvinceTypes.OUTER)
-            pHungary.setProvinceType(xml.iP_Austria, ProvinceTypes.OUTER)
-            pHungary.setProvinceType(xml.iP_Moravia, ProvinceTypes.OUTER)
-            pHungary.setProvinceType(xml.iP_Bavaria, ProvinceTypes.NONE)
-            pGermany.setProvinceType(xml.iP_Bavaria, ProvinceTypes.OUTER)
-            pGermany.setProvinceType(xml.iP_Bohemia, ProvinceTypes.OUTER)
-            pSpain.setProvinceType(xml.iP_Netherlands, ProvinceTypes.OUTER)
-            pSpain.setProvinceType(xml.iP_Flanders, ProvinceTypes.OUTER)
+            pHungary.setProvinceType(xml.iP_Carinthia, ProvinceTypes.OUTER.value)
+            pHungary.setProvinceType(xml.iP_Austria, ProvinceTypes.OUTER.value)
+            pHungary.setProvinceType(xml.iP_Moravia, ProvinceTypes.OUTER.value)
+            pHungary.setProvinceType(xml.iP_Bavaria, ProvinceTypes.NONE.value)
+            pGermany.setProvinceType(xml.iP_Bavaria, ProvinceTypes.OUTER.value)
+            pGermany.setProvinceType(xml.iP_Bohemia, ProvinceTypes.OUTER.value)
+            pSpain.setProvinceType(xml.iP_Netherlands, ProvinceTypes.OUTER.value)
+            pSpain.setProvinceType(xml.iP_Flanders, ProvinceTypes.OUTER.value)
         elif iPlayer == Civ.OTTOMAN.value:
-            pByzantium.setProvinceType(xml.iP_Antiochia, ProvinceTypes.OUTER)
-            pByzantium.setProvinceType(xml.iP_Cilicia, ProvinceTypes.OUTER)
-            pByzantium.setProvinceType(xml.iP_Charsianon, ProvinceTypes.OUTER)
-            pByzantium.setProvinceType(xml.iP_Colonea, ProvinceTypes.OUTER)
-            pByzantium.setProvinceType(xml.iP_Armeniakon, ProvinceTypes.OUTER)
-            pByzantium.setProvinceType(xml.iP_Cyprus, ProvinceTypes.OUTER)
-            pByzantium.setProvinceType(xml.iP_Anatolikon, ProvinceTypes.NATURAL)
-            pByzantium.setProvinceType(xml.iP_Opsikion, ProvinceTypes.NATURAL)
-            pByzantium.setProvinceType(xml.iP_Thrakesion, ProvinceTypes.NATURAL)
-            pByzantium.setProvinceType(xml.iP_Paphlagonia, ProvinceTypes.NATURAL)
-            pHungary.setProvinceType(xml.iP_Dalmatia, ProvinceTypes.OUTER)
-            pHungary.setProvinceType(xml.iP_Bosnia, ProvinceTypes.OUTER)
-            pHungary.setProvinceType(xml.iP_Banat, ProvinceTypes.OUTER)
+            pByzantium.setProvinceType(xml.iP_Antiochia, ProvinceTypes.OUTER.value)
+            pByzantium.setProvinceType(xml.iP_Cilicia, ProvinceTypes.OUTER.value)
+            pByzantium.setProvinceType(xml.iP_Charsianon, ProvinceTypes.OUTER.value)
+            pByzantium.setProvinceType(xml.iP_Colonea, ProvinceTypes.OUTER.value)
+            pByzantium.setProvinceType(xml.iP_Armeniakon, ProvinceTypes.OUTER.value)
+            pByzantium.setProvinceType(xml.iP_Cyprus, ProvinceTypes.OUTER.value)
+            pByzantium.setProvinceType(xml.iP_Anatolikon, ProvinceTypes.NATURAL.value)
+            pByzantium.setProvinceType(xml.iP_Opsikion, ProvinceTypes.NATURAL.value)
+            pByzantium.setProvinceType(xml.iP_Thrakesion, ProvinceTypes.NATURAL.value)
+            pByzantium.setProvinceType(xml.iP_Paphlagonia, ProvinceTypes.NATURAL.value)
+            pHungary.setProvinceType(xml.iP_Dalmatia, ProvinceTypes.OUTER.value)
+            pHungary.setProvinceType(xml.iP_Bosnia, ProvinceTypes.OUTER.value)
+            pHungary.setProvinceType(xml.iP_Banat, ProvinceTypes.OUTER.value)
         elif iPlayer == Civ.MOSCOW.value:
-            pNovgorod.setProvinceType(xml.iP_Rostov, ProvinceTypes.OUTER)
-            pNovgorod.setProvinceType(xml.iP_Smolensk, ProvinceTypes.NONE)
+            pNovgorod.setProvinceType(xml.iP_Rostov, ProvinceTypes.OUTER.value)
+            pNovgorod.setProvinceType(xml.iP_Smolensk, ProvinceTypes.NONE.value)
         elif iPlayer == Civ.DUTCH.value:
-            pSpain.setProvinceType(xml.iP_Netherlands, ProvinceTypes.NONE)
-            pSpain.setProvinceType(xml.iP_Flanders, ProvinceTypes.NONE)
-            pAustria.setProvinceType(xml.iP_Netherlands, ProvinceTypes.NONE)
-            pAustria.setProvinceType(xml.iP_Flanders, ProvinceTypes.NONE)
+            pSpain.setProvinceType(xml.iP_Netherlands, ProvinceTypes.NONE.value)
+            pSpain.setProvinceType(xml.iP_Flanders, ProvinceTypes.NONE.value)
+            pAustria.setProvinceType(xml.iP_Netherlands, ProvinceTypes.NONE.value)
+            pAustria.setProvinceType(xml.iP_Flanders, ProvinceTypes.NONE.value)
 
         utils.refreshStabilityOverlay()  # refresh the stability overlay

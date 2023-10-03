@@ -1809,13 +1809,13 @@ class RFCUtils:
 
         pPlayer = gc.getPlayer(iCiv)
         iProvType = pPlayer.getProvinceType(iProvince)
-        if iProvType == ProvinceTypes.CORE:
+        if iProvType == ProvinceTypes.CORE.value:
             return 4  # core
-        elif iProvType == ProvinceTypes.NATURAL:
+        elif iProvType == ProvinceTypes.NATURAL.value:
             return 3  # natural/historical
-        elif iProvType == ProvinceTypes.POTENTIAL:
+        elif iProvType == ProvinceTypes.POTENTIAL.value:
             return 2  # potential
-        elif iProvType == ProvinceTypes.OUTER:
+        elif iProvType == ProvinceTypes.OUTER.value:
             return 1  # border/contested
         else:
             return 0  # unstable

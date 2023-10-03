@@ -1281,7 +1281,10 @@ class Victory:
 
         # UHV 2: Conquer Constantinople, Thessaly, Morea, Crete and Cyprus by 1204
         if self.isPossibleUHV(Civ.VENECIA.value, 1, True):
-            if pVenecia.getProvinceCurrentState(xml.iP_Constantinople) >= ProvinceStatus.CONQUER:
+            if (
+                pVenecia.getProvinceCurrentState(xml.iP_Constantinople)
+                >= ProvinceStatus.CONQUER.value
+            ):
                 if self.checkProvincesStates(Civ.VENECIA.value, tVenetianControlII):
                     self.wonUHV(Civ.VENECIA.value, 1)
         if iGameTurn == xml.i1204AD:
@@ -1370,7 +1373,10 @@ class Victory:
         # UHV 3: Control the province of Moscow or have Muscovy as a vassal in 1478
         if iGameTurn == xml.i1478AD:
             if self.isPossibleUHV(Civ.NOVGOROD.value, 2, True):
-                if pNovgorod.getProvinceCurrentState(xml.iP_Moscow) >= ProvinceStatus.CONQUER:
+                if (
+                    pNovgorod.getProvinceCurrentState(xml.iP_Moscow)
+                    >= ProvinceStatus.CONQUER.value
+                ):
                     self.wonUHV(Civ.NOVGOROD.value, 2)
                 elif pMoscow.isAlive() and teamMoscow.isVassal(teamNovgorod.getID()):
                     self.wonUHV(Civ.NOVGOROD.value, 2)
@@ -1389,7 +1395,7 @@ class Victory:
             if self.isPossibleUHV(Civ.KIEV.value, 1, True):
                 iConq = 0
                 for iProv in tKievControl:
-                    if pKiev.getProvinceCurrentState(iProv) >= ProvinceStatus.CONQUER:
+                    if pKiev.getProvinceCurrentState(iProv) >= ProvinceStatus.CONQUER.value:
                         iConq += 1
                 if iConq >= 10:
                     self.wonUHV(Civ.KIEV.value, 1)
@@ -2021,7 +2027,7 @@ class Victory:
     def checkProvincesStates(self, iPlayer, tProvinces):
         pPlayer = gc.getPlayer(iPlayer)
         for iProv in tProvinces:
-            if pPlayer.getProvinceCurrentState(iProv) < ProvinceStatus.CONQUER:
+            if pPlayer.getProvinceCurrentState(iProv) < ProvinceStatus.CONQUER.value:
                 return False
         return True
 
