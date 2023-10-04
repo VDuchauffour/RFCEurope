@@ -46,4 +46,5 @@ executionEnvironments = [
 ]
 stubPath = "Assets/Python/.stubs"
 reportMissingModuleSource = false
+reportGeneralTypeIssues = false
 typeCheckingMode = "off"
