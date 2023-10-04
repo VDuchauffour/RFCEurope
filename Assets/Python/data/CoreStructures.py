@@ -276,6 +276,9 @@ class Civilizations(list):
                 raise NotTypeExpectedError(Civilization, type(civ))
             self.append(civ)
 
+    def len(self):
+        return self.__len__()
+
     def filter(self, func):
         """Filter civilization when function returns `True`."""
         if not callable(func):
