@@ -292,8 +292,12 @@ class Civilizations(list):
         return self.filter(lambda c: not c.properties.is_minor)
 
     def get_minors(self):
-        """Return minor civilizations, i.e. minor and not playable."""
+        """Return minor civilizations, i.e. minor and not playable civs like independents and barbarian."""
         return self.filter(lambda c: c.properties.is_minor and not c.properties.is_playable)
+
+    def get_independents(self):
+        """Return independents civilizations."""
+        return self.filter(lambda c: "INDEPENDENT" in c.name)
 
 
 class CivilizationsFactory(object):
