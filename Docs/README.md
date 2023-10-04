@@ -10,8 +10,8 @@ This folder contains the following elements:
 
 The colors on the spawning maps show the following stability areas:
 
-- dark green: core area
-- light green: historically stable area
+- cyan: core area
+- green: historically stable area
 - yellow: potentially stable area
 
 ## How to generate maps

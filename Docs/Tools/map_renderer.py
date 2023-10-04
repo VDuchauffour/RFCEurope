@@ -11,11 +11,11 @@ from LocationsData import CIV_CORE_AREA, CIV_BROADER_AREA, CIV_NORMAL_AREA
 from CoreTypes import Civ
 
 DEFAULT_COLORS = {
-    "base": (255, 140, 0),  # (0, 128, 0),
-    "peak": (128, 0, 0),
-    "hill": (163, 125, 34),
-    "ocean": (128, 255, 255),  # (0, 0, 128),
-    "coast": (128, 255, 255),  # (0, 0, 255),
+    "base": (175, 175, 175),  # (0, 128, 0),
+    "peak": (34, 34, 34),
+    "hill": (70, 70, 34),  # (163, 125, 34),
+    "ocean": (50, 100, 100),  # (0, 0, 128),
+    "coast": (50, 100, 100),  # (0, 0, 255),
     "river": (0, 140, 255),
     "grass": (0, 155, 55),
     "desert": (255, 255, 168),
@@ -28,6 +28,11 @@ DEFAULT_COLORS = {
     "oasis": (192, 255, 255),
     "flood_plains": (192, 255, 0),
     "fallout": (32, 64, 0),
+}
+SPAWNING_COLORS = {
+    "core": (41, 249, 255),  # (0, 100, 0),
+    "normal": (8, 179, 69),  # (0, 255, 0),
+    "broader": (253, 184, 51),  # (255, 255, 0),
 }
 
 
@@ -249,9 +254,15 @@ class MapRenderer:
             if civ < 29:
                 img = self.base_img.copy()
                 img = ImageOps.flip(img)
-                img = self.draw(img, self.normalize_plot(CIV_BROADER_AREA[civ]), (255, 255, 0))
-                img = self.draw(img, self.normalize_plot(CIV_NORMAL_AREA[civ]), (0, 255, 0))
-                img = self.draw(img, self.normalize_plot(CIV_CORE_AREA[civ]), (0, 100, 0))
+                img = self.draw(
+                    img, self.normalize_plot(CIV_BROADER_AREA[civ]), SPAWNING_COLORS["broader"]
+                )
+                img = self.draw(
+                    img, self.normalize_plot(CIV_NORMAL_AREA[civ]), SPAWNING_COLORS["normal"]
+                )
+                img = self.draw(
+                    img, self.normalize_plot(CIV_CORE_AREA[civ]), SPAWNING_COLORS["core"]
+                )
                 img = ImageOps.flip(img)
                 img = self.apply_water(img)
                 img = self.draw_plot_properties(img, "is_peak")
