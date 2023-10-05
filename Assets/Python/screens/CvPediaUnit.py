@@ -11,7 +11,7 @@ from CvPythonExtensions import *
 from CoreTypes import Civ
 import CvUtil
 import CvScreenEnums
-from MiscData import MERCENARY_ONLY_UNITS
+from MiscData import BARBARIAN_ONLY_UNITS, MERCENARY_ONLY_UNITS
 import XMLConsts as xml
 
 # globals
@@ -495,7 +495,7 @@ class CvPediaUnit:
             )
 
         # add barb button
-        if self.iUnit in xml.lBarbsOnly:
+        if self.iUnit in BARBARIAN_ONLY_UNITS:
             screen.attachImageButton(
                 panelName,
                 "",

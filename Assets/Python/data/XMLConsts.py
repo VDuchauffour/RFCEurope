@@ -224,23 +224,6 @@ iNumUnits = 129
     iSeljukGuisarme,
 ) = range(iNumUnits)
 
-
-lBarbsOnly = [
-    iBedouin,
-    iCorsair,
-    iHighlander,
-    iMongolKeshik,
-    iSeljukCrossbow,
-    iSeljukFootman,
-    iSeljukGuisarme,
-    iSeljukLancer,
-    iSeljukSwordsman,
-    iSteppeHorseArcher,
-    iTouareg,
-    iTurcomanHorseArcher,
-    iWelshLongbowman,
-]
-
 # Bonuses: initialize bonus variables to bonus IDs from WBSinulAi
 
 iNumBonus = 53
