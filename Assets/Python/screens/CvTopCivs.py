@@ -3,11 +3,11 @@
 # Author - Jon Shafer
 # Top Civilizations screen
 
+from CivilizationsData import CIVILIZATIONS
 import PyHelpers
 import CvUtil
 import CvScreenEnums
 import random
-import Consts
 from CvPythonExtensions import *
 
 PyPlayer = PyHelpers.PyPlayer
@@ -240,9 +240,7 @@ class CvTopCivs:
         # Will eventually Store [iValue, iPlayerID]
         self.aiTopCivsValues = []
 
-        # Loop through all players except the barbs
-        # for iPlayerLoop in range(gc.getMAX_PLAYERS()-1): #Rhye
-        for iPlayerLoop in range(Consts.iNumMajorPlayers):  # Rhye
+        for iPlayerLoop in CIVILIZATIONS.majors().ids():
 
             if gc.getPlayer(iPlayerLoop).isAlive():
 

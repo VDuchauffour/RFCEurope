@@ -1,6 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Utilities
 
 from CvPythonExtensions import *
+from CivilizationsData import CIVILIZATIONS
 from CoreTypes import City, Civ, Religion, Scenario, UniquePower
 import CvUtil
 import CvScreenEnums
@@ -149,8 +150,8 @@ class RFCUtils:
         return -1
 
     def getRandomCiv(self):
-        civList = [iCiv for iCiv in range(Consts.iNumPlayers) if gc.getPlayer(iCiv).isAlive()]
-        return self.getRandomEntry(civList)
+        civs = [civ.id for civ in CIVILIZATIONS.majors() if civ.player.isAlive()]
+        return self.getRandomEntry(civs)
 
     def isMortalUnit(self, unit):
         # Absinthe: leader units, and great people won't be killed by the plague
@@ -179,7 +180,7 @@ class RFCUtils:
     # AIWars
     def restorePeaceAI(self, iMinorCiv, bOpenBorders):
         teamMinor = gc.getTeam(gc.getPlayer(iMinorCiv).getTeam())
-        for iActiveCiv in range(Consts.iNumMajorPlayers):
+        for iActiveCiv in CIVILIZATIONS.majors().ids():
             if gc.getPlayer(iActiveCiv).isAlive() and not gc.getPlayer(iActiveCiv).isHuman():
                 if teamMinor.isAtWar(iActiveCiv):
                     bActiveUnitsInIndependentTerritory = self.checkUnitsInEnemyTerritory(
@@ -199,7 +200,7 @@ class RFCUtils:
     # AIWars
     def restorePeaceHuman(self, iMinorCiv):
         teamMinor = gc.getTeam(gc.getPlayer(iMinorCiv).getTeam())
-        for iActiveCiv in range(Consts.iNumMajorPlayers):
+        for iActiveCiv in CIVILIZATIONS.majors().ids():
             if gc.getPlayer(iActiveCiv).isHuman():
                 if gc.getPlayer(iActiveCiv).isAlive():
                     if teamMinor.isAtWar(iActiveCiv):
@@ -222,7 +223,7 @@ class RFCUtils:
         for city in self.getCityList(iMinorCiv):
             x = city.getX()
             y = city.getY()
-            for iActiveCiv in range(Consts.iNumMajorPlayers):
+            for iActiveCiv in CIVILIZATIONS.majors().ids():
                 if (
                     gc.getPlayer(iActiveCiv).isAlive()
                     and not gc.getPlayer(iActiveCiv).isHuman()
@@ -296,7 +297,7 @@ class RFCUtils:
         for city in self.getCityList(iMinorCiv):
             x = city.getX()
             y = city.getY()
-            for iActiveCiv in range(Consts.iNumMajorPlayers):
+            for iActiveCiv in CIVILIZATIONS.majors().ids():
                 if (
                     gc.getPlayer(iActiveCiv).isAlive()
                     and not gc.getPlayer(iActiveCiv).isHuman()
@@ -436,7 +437,7 @@ class RFCUtils:
             if unit.getOwner() == iOldOwner:
                 unit.kill(False, Civ.BARBARIAN.value)
                 if (
-                    iNewOwner < Consts.iNumMajorPlayers or unitType > xml.iSettler
+                    iNewOwner < CIVILIZATIONS.majors().len() or unitType > xml.iSettler
                 ):  # Absinthe: major players can even flip settlers (spawn/respawn mechanics)
                     self.makeUnit(unitType, iNewOwner, (28, 0), 1)
             # Absinthe: skip unit if from another player
@@ -790,7 +791,7 @@ class RFCUtils:
                 )
 
             # cut other players culture
-            ##				for iCiv in range(iNumPlayers):
+            ##				for iCiv in CIVILIZATIONS.majors().ids():
             ##					if (iCiv != iNewOwner and iCiv != iOldOwner):
             ##						iPlotCulture = gc.getMap().plot(x, y).getCulture(iCiv)
             ##						if (iPlotCulture > 0):
@@ -813,7 +814,7 @@ class RFCUtils:
             if pCurrent.isCity():
                 city = pCurrent.getPlotCity()
                 # print ("city.getPreviousOwner", city.getPreviousOwner())
-                if city.getPreviousOwner() >= Consts.iNumMajorPlayers:
+                if city.getPreviousOwner() >= CIVILIZATIONS.majors().len():
                     iMinor = city.getPreviousOwner()
                     iDen = 25
                     if gc.getPlayer(iMajorCiv).getSettlersMaps(WORLD_HEIGHT - y - 1, x) >= 400:
@@ -838,15 +839,13 @@ class RFCUtils:
             city = pCurrent.getPlotCity()
             iCivCulture = city.getCulture(iCiv)
             iLoopCivCulture = 0
-            for iLoopCiv in range(Consts.iNumTotalPlayers):
-                if iLoopCiv != iCiv:
-                    iLoopCivCulture += city.getCulture(iLoopCiv)
-                    city.setCulture(
-                        iLoopCiv, city.getCulture(iLoopCiv) * (100 - iPercent) / 100, True
-                    )
+            for civ in CIVILIZATIONS.drop(Civ.BARBARIAN).ids():
+                if civ != iCiv:
+                    iLoopCivCulture += city.getCulture(civ)
+                    city.setCulture(civ, city.getCulture(civ) * (100 - iPercent) / 100, True)
             city.setCulture(iCiv, iCivCulture + iLoopCivCulture, True)
 
-        ##		for iLoopCiv in range(iNumTotalPlayers):
+        ##		for iLoopCiv in CIVILIZATIONS.drop(Civ.BARBARIAN).ids():
         ##			if (iLoopCiv != iCiv):
         ##				iLoopCivCulture = pCurrent.getCulture(iLoopCiv)
         ##				iCivCulture = pCurrent.getCulture(iCiv)
@@ -854,12 +853,10 @@ class RFCUtils:
         ##				pCurrent.setCulture(iCiv, iCivCulture + iLoopCivCulture*iPercent/100, True)
         iCivCulture = pCurrent.getCulture(iCiv)
         iLoopCivCulture = 0
-        for iLoopCiv in range(Consts.iNumTotalPlayers):
-            if iLoopCiv != iCiv:
-                iLoopCivCulture += pCurrent.getCulture(iLoopCiv)
-                pCurrent.setCulture(
-                    iLoopCiv, pCurrent.getCulture(iLoopCiv) * (100 - iPercent) / 100, True
-                )
+        for civ in CIVILIZATIONS.drop(Civ.BARBARIAN).ids():
+            if civ != iCiv:
+                iLoopCivCulture += pCurrent.getCulture(civ)
+                pCurrent.setCulture(civ, pCurrent.getCulture(civ) * (100 - iPercent) / 100, True)
         pCurrent.setCulture(iCiv, iCivCulture + iLoopCivCulture, True)
         if bOwner:
             pCurrent.setOwner(iCiv)
@@ -968,16 +965,16 @@ class RFCUtils:
                 iNumLoyalCities += 1
                 # gc.getTeam(gc.getPlayer(iCiv).getTeam()).declareWar(iNewCiv1, False, -1) #too dangerous?
                 # gc.getTeam(gc.getPlayer(iCiv).getTeam()).declareWar(iNewCiv2, False, -1)
-                for i in range(Consts.iIndepStart, Consts.iIndepEnd + 1):
+                for i in CIVILIZATIONS.independents().ids():
                     teamMinor = gc.getTeam(gc.getPlayer(i).getTeam())
                     if not teamMinor.isAtWar(iCiv):
                         gc.getTeam(gc.getPlayer(iCiv).getTeam()).declareWar(i, False, -1)
                 continue
             # assign to neighbours first
             bNeighbour = False
-            iRndnum = gc.getGame().getSorenRandNum(Consts.iNumPlayers, "starting count")
-            for j in range(Consts.iNumPlayers):  # only major players
-                iLoopCiv = (j + iRndnum) % Consts.iNumPlayers
+            iRndnum = gc.getGame().getSorenRandNum(CIVILIZATIONS.majors().len(), "starting count")
+            for j in CIVILIZATIONS.majors().ids():
+                iLoopCiv = (j + iRndnum) % CIVILIZATIONS.majors().len()
                 if (
                     gc.getPlayer(iLoopCiv).isAlive()
                     and iLoopCiv != iCiv
@@ -1015,8 +1012,11 @@ class RFCUtils:
                 # 	iNewCiv = iNewCiv1
                 # elif (iCounter % 2 == 1):
                 # 	iNewCiv = iNewCiv2
-                iNewCiv = Consts.iIndepStart + gc.getGame().getSorenRandNum(
-                    Consts.iIndepEnd - Consts.iIndepStart + 1, "random indep"
+                iNewCiv = min(CIVILIZATIONS.independents().ids()) + gc.getGame().getSorenRandNum(
+                    max(CIVILIZATIONS.independents().ids())
+                    - min(CIVILIZATIONS.independents().ids())
+                    + 1,
+                    "randomIndep",
                 )
                 self.flipUnitsInCityBefore(tCoords, iNewCiv, iCiv)
                 self.setTempFlippingCity(tCoords)
@@ -1036,10 +1036,13 @@ class RFCUtils:
                 # 	iNewCiv = iNewCiv2
                 # elif (iCounter % 3 == 2):
                 # 	iNewCiv = iNewCiv3
-                iNewCiv = Consts.iIndepStart + gc.getGame().getSorenRandNum(
-                    Consts.iIndepEnd - Consts.iIndepStart + 2, "random indep"
+                iNewCiv = min(CIVILIZATIONS.independents().ids()) + gc.getGame().getSorenRandNum(
+                    max(CIVILIZATIONS.independents().ids())
+                    - min(CIVILIZATIONS.independents().ids())
+                    + 2,
+                    "randomIndep",
                 )
-                if iNewCiv == Consts.iIndepEnd + 1:
+                if iNewCiv == max(CIVILIZATIONS.independents().ids()) + 1:
                     iNewCiv = Civ.BARBARIAN.value
                 self.flipUnitsInCityBefore(tCoords, iNewCiv, iCiv)
                 self.setTempFlippingCity(tCoords)
@@ -1066,7 +1069,7 @@ class RFCUtils:
                 gc.getPlayer(iCiv).setRespawnedAlive(False)
 
     def resetUHV(self, iPlayer):
-        if iPlayer < Consts.iNumMajorPlayers:
+        if iPlayer < CIVILIZATIONS.majors().len():
             pPlayer = gc.getPlayer(iPlayer)
             for i in range(3):
                 if pPlayer.getUHV(i) == -1:
@@ -1085,7 +1088,7 @@ class RFCUtils:
         """Returns True if the player is spawned and alive."""
         if gc.getPlayer(iPlayer).getNumCities() < 1:
             return False
-        if not gc.getPlayer(iPlayer).isAlive:
+        if not gc.getPlayer(iPlayer).isAlive():
             return False
         iGameTurn = gc.getGame().getGameTurn()
         if iGameTurn < CIV_BIRTHDATE[get_civ_by_id(iPlayer)]:
@@ -1096,7 +1099,7 @@ class RFCUtils:
     def getMaster(self, iCiv):
         team = gc.getTeam(gc.getPlayer(iCiv).getTeam())
         if team.isAVassal():
-            for iMaster in range(Consts.iNumTotalPlayers):
+            for iMaster in CIVILIZATIONS.drop(Civ.BARBARIAN).ids():
                 if team.isVassal(iMaster):
                     return iMaster
         return -1
@@ -1391,7 +1394,7 @@ class RFCUtils:
             pPlayer.changeFaith(1)
 
             # apply diplomatic penalty
-            for iLoopPlayer in range(Consts.iNumPlayers):
+            for iLoopPlayer in CIVILIZATIONS.majors().ids():
                 pLoopPlayer = gc.getPlayer(iLoopPlayer)
                 if pLoopPlayer.isAlive() and iLoopPlayer != iOwner:
                     if pLoopPlayer.getStateReligion() == iReligion:
@@ -1530,9 +1533,7 @@ class RFCUtils:
 
     def selectRandomCity(self):
         cityList = []
-        for iPlayer in range(
-            Consts.iNumPlayers
-        ):  # current civ range is iNumPlayers, so it can only be a major player's city
+        for iPlayer in CIVILIZATIONS.majors().ids():
             if gc.getPlayer(iPlayer).isAlive():
                 cityList.extend(self.getCityList(iPlayer))
         if cityList:
@@ -1553,7 +1554,7 @@ class RFCUtils:
         return False
 
     def isIndep(self, iCiv):
-        if iCiv >= Consts.iIndepStart and iCiv <= Consts.iIndepEnd:
+        if iCiv in CIVILIZATIONS.independents().ids():
             return True
         return False
 
@@ -1580,7 +1581,7 @@ class RFCUtils:
             )
             # remove the selectable civs and the selection box
             screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
-            for i in range(Consts.iNumMajorPlayers - 1):
+            for i in CIVILIZATIONS.main().ids():
                 szName = "StabilityOverlayCiv" + str(i)
                 screen.hide(szName)
             screen.hide("ScoreBackground")
@@ -1617,7 +1618,7 @@ class RFCUtils:
         iY = yResolution - iGlobeLayerOptionsY_Regular
         iCurY = iY
         iMaxTextWidth = -1
-        for iCiv in range(Consts.iNumMajorPlayers - 1):  # all major civs except the Papal States
+        for iCiv in CIVILIZATIONS.main().ids():
             szDropdownName = str("StabilityOverlayCiv") + str(iCiv)
             szCaption = gc.getPlayer(iCiv).getCivilizationShortDescription(0)
             if iCiv == self.getHumanID():
@@ -1754,7 +1755,7 @@ class RFCUtils:
         iY = yResolution - iGlobeLayerOptionsY_Regular
         iCurY = iY
         iMaxTextWidth = -1
-        for iCiv in range(Consts.iNumMajorPlayers - 1):  # all major civs except the Papal States
+        for iCiv in CIVILIZATIONS.main().ids():
             szDropdownName = str("StabilityOverlayCiv") + str(iCiv)
             szCaption = gc.getPlayer(iCiv).getCivilizationShortDescription(0)
             if iCiv == iSelectedCivID:
@@ -1858,7 +1859,7 @@ class RFCUtils:
     def getMostAdvancedCiv(self):
         iBestCiv = -1
         iMostTechs = 0
-        for iPlayer in xrange(Consts.iNumMajorPlayers - 1):
+        for iPlayer in CIVILIZATIONS.main().ids():
             pPlayer = gc.getPlayer(iPlayer)
             if pPlayer.isAlive():
                 iTeam = pPlayer.getTeam()

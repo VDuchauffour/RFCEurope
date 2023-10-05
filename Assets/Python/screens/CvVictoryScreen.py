@@ -1,11 +1,11 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
+from CivilizationsData import CIVILIZATIONS
 from CoreTypes import City, Civ, ProvinceStatus
 import CvUtil
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
 import PyHelpers
-import Consts
 import XMLConsts as xml
 import RFCUtils
 import Victory as vic
@@ -2685,7 +2685,7 @@ class CvVictoryScreen:
         iSpainColonies = vic.Victory().getNumRealColonies(iPlayer)
         iOtherColonies = 0
         iColonyPlayer = -1
-        for iCiv in range(Consts.iNumPlayers):
+        for iCiv in CIVILIZATIONS.majors().ids():
             if iCiv == iPlayer:
                 continue
             if gc.getPlayer(iCiv).isAlive():
@@ -2708,7 +2708,7 @@ class CvVictoryScreen:
         )
         lLand = [0, 0, 0, 0, 0, 0]  # Prot, Islam, Cath, Orth, Jew, Pagan
         lPop = [0, 0, 0, 0, 0, 0]
-        for iLoopPlayer in range(Consts.iNumPlayers):
+        for iLoopPlayer in CIVILIZATIONS.majors().ids():
             pLoopPlayer = gc.getPlayer(iLoopPlayer)
             iStateReligion = pLoopPlayer.getStateReligion()
             if iStateReligion > -1:
@@ -2826,7 +2826,7 @@ class CvVictoryScreen:
         iPolandFood = pPlayer.calculateTotalYield(YieldTypes.YIELD_FOOD)
         iOtherFood = 0
         iFoodPlayer = -1
-        for iLoopPlayer in range(Consts.iNumMajorPlayers):
+        for iLoopPlayer in CIVILIZATIONS.majors().ids():
             if iLoopPlayer == iPlayer:
                 continue
             pLoopPlayer = gc.getPlayer(iLoopPlayer)
@@ -2889,7 +2889,7 @@ class CvVictoryScreen:
         ) + pPlayer.calculateTotalExports(YieldTypes.YIELD_COMMERCE)
         iOtherTrade = 0
         iBiggestTrader = -1
-        for iLoopPlayer in range(Consts.iNumPlayers):
+        for iLoopPlayer in CIVILIZATIONS.majors().ids():
             if iLoopPlayer == iPlayer:
                 continue
             pLoopPlayer = gc.getPlayer(iLoopPlayer)
@@ -3121,7 +3121,7 @@ class CvVictoryScreen:
         iCount, iTotal = vic.Victory().getTerritoryPercentEurope(iPlayer, True)
         iOtherCount = 0
         iMostPlayer = -1
-        for iLoopPlayer in range(Consts.iNumMajorPlayers):
+        for iLoopPlayer in CIVILIZATIONS.majors().ids():
             if iLoopPlayer == iPlayer:
                 continue
             pLoopPlayer = gc.getPlayer(iLoopPlayer)
@@ -3153,7 +3153,7 @@ class CvVictoryScreen:
         sText1 += self.getProvinceString(vic.tAustriaControl)
         # UHV2
         iCount = 0
-        for iLoopPlayer in range(Consts.iNumMajorPlayers):
+        for iLoopPlayer in CIVILIZATIONS.majors().ids():
             pLoopPlayer = gc.getPlayer(iLoopPlayer)
             if iLoopPlayer != iPlayer and pLoopPlayer.isAlive():
                 if gc.getTeam(pLoopPlayer.getTeam()).isVassal(iPlayer):
@@ -3501,9 +3501,8 @@ class CvVictoryScreen:
             sProvName = "TXT_KEY_PROVINCE_NAME_%i" % iProv
             sProvName = localText.getText(sProvName, ())
             bProvinceHasCity = 0
-            for iPlayer in range(Consts.iNumTotalPlayersB):
-                pPlayer = gc.getPlayer(iPlayer)
-                if pPlayer.getProvinceCityCount(iProv) > 0:
+            for civ in CIVILIZATIONS:
+                if civ.player.getProvinceCityCount(iProv) > 0:
                     bProvinceHasCity = 1
                     break
             if not bProvinceHasCity:
@@ -3688,7 +3687,7 @@ class CvVictoryScreen:
         iPlayerGold = pPlayer.getGold()
         iGold = 0
         iRichestPlayer = -1
-        for iCiv in range(Consts.iNumPlayers):
+        for iCiv in CIVILIZATIONS.majors().ids():
             if iCiv == self.iActivePlayer:
                 continue
             if gc.getPlayer(iCiv).isAlive():

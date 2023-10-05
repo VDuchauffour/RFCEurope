@@ -17,7 +17,6 @@ import Popup as PyPopup
 import CvCameraControls
 import CvTopCivs
 import CvAdvisorUtils
-import Consts
 import XMLConsts as xml
 import RFCEMaps
 import RFCUtils
@@ -749,7 +748,7 @@ class CvEventManager:
 
             # techs known by the other civs
             lOthersKnownTechs = []
-            for iLoopPlayer in range(Consts.iNumPlayers):
+            for iLoopPlayer in CIVILIZATIONS.majors().ids():
                 pLoopPlayer = gc.getPlayer(iLoopPlayer)
                 iLoopTeam = pLoopPlayer.getTeam()
                 pLoopTeam = gc.getTeam(iLoopTeam)
@@ -1139,7 +1138,7 @@ class CvEventManager:
         if pTeam.isTrainVassalUU():
             l_vassalUU = []
             iDefaultUnit = utils.getBaseUnit(iUnitType)
-            for iLoopPlayer in range(Consts.iNumPlayers):
+            for iLoopPlayer in CIVILIZATIONS.majors().ids():
                 pLoopPlayer = gc.getPlayer(iLoopPlayer)
                 if pLoopPlayer.isAlive():
                     if gc.getTeam(pLoopPlayer.getTeam()).isVassal(iTeam):
@@ -2278,7 +2277,7 @@ class CvEventManager:
         if bVassal:
             # Absinthe: Imperial Diet start
             MasterTeam = gc.getTeam(iMaster)
-            for iPlayer in range(Consts.iNumPlayers):
+            for iPlayer in CIVILIZATIONS.majors().ids():
                 pPlayer = gc.getPlayer(iPlayer)
                 if (
                     pPlayer.getTeam() == iMaster

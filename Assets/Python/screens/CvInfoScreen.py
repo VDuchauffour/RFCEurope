@@ -4,6 +4,7 @@
 # Thanks to "Ulf 'ulfn' Norell" from Apolyton for his additions relating to the graph section of this screen
 
 from CvPythonExtensions import *
+from CivilizationsData import CIVILIZATIONS
 from CoreStructures import get_civ_by_id
 import CvUtil
 
@@ -1739,7 +1740,7 @@ class CvInfoScreen:
 
         # Absinthe: Loop through all major players to determine Rank and relative Strength
         # Absinthe: Papal States are not included in the statistics (not a rival in the strict sense)
-        for iPlayerLoop in range(Consts.iNumMajorPlayers - 1):
+        for iPlayerLoop in CIVILIZATIONS.main().ids():
 
             # Absinthe: probably the isAlive check would be enough, but we have the barbarian and minor civ checks anyway
             if (

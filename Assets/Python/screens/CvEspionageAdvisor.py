@@ -2,10 +2,10 @@
 ## Copyright Firaxis Games 2005
 ## Improvements to this screen by Almightix - thanks
 from CvPythonExtensions import *
+from CivilizationsData import CIVILIZATIONS
 from PyHelpers import PyPlayer
 import CvUtil
 import CvScreenEnums
-import Consts
 
 # globals
 gc = CyGlobalContext()
@@ -218,7 +218,8 @@ class CvEspionageAdvisor:
             pPlayer = gc.getPlayer(iLoop)
             # if (pPlayer.getTeam() != pActivePlayer.getTeam() and not pPlayer.isBarbarian()): #Rhye
             if (
-                pPlayer.getTeam() != pActivePlayer.getTeam() and iLoop < Consts.iNumMajorPlayers
+                pPlayer.getTeam() != pActivePlayer.getTeam()
+                and iLoop < CIVILIZATIONS.majors().len()
             ):  # Rhye
                 if pPlayer.isAlive():
                     if pActiveTeam.isHasMet(pPlayer.getTeam()):

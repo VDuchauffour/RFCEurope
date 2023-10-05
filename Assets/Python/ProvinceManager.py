@@ -1,14 +1,13 @@
 # RFC Europe - Province manager
 
 from CvPythonExtensions import *
-import Consts
+from CivilizationsData import CIVILIZATIONS
 import XMLConsts as xml
 import RFCEMaps
 import RFCUtils  # Absinthe
 import PyHelpers  # Absinthe
 
 from TimelineData import CIV_BIRTHDATE
-from CoreStructures import get_civ_by_id
 from CoreTypes import Civ, Scenario, ProvinceTypes
 
 gc = CyGlobalContext()
@@ -702,23 +701,22 @@ class ProvinceManager:
 
     def setup(self):
         # set the initial situation for all players
-        for iPlayer in range(Consts.iNumPlayers - 1):  # this discounts the Pope
-            pPlayer = gc.getPlayer(iPlayer)
-            for iProv in self.tCoreProvinces[iPlayer]:
-                pPlayer.setProvinceType(iProv, ProvinceTypes.CORE.value)
-            for iProv in self.tNormProvinces[iPlayer]:
-                pPlayer.setProvinceType(iProv, ProvinceTypes.NATURAL.value)
-            for iProv in self.tOuterProvinces[iPlayer]:
-                pPlayer.setProvinceType(iProv, ProvinceTypes.OUTER.value)
-            for iProv in self.tPot2CoreProvinces[iPlayer]:
-                pPlayer.setProvinceType(iProv, ProvinceTypes.POTENTIAL.value)
-            for iProv in self.tPot2NormProvinces[iPlayer]:
-                pPlayer.setProvinceType(iProv, ProvinceTypes.POTENTIAL.value)
+        for civ in CIVILIZATIONS.main():
+            for iProv in self.tCoreProvinces[civ.id]:
+                civ.player.setProvinceType(iProv, ProvinceTypes.CORE.value)
+            for iProv in self.tNormProvinces[civ.id]:
+                civ.player.setProvinceType(iProv, ProvinceTypes.NATURAL.value)
+            for iProv in self.tOuterProvinces[civ.id]:
+                civ.player.setProvinceType(iProv, ProvinceTypes.OUTER.value)
+            for iProv in self.tPot2CoreProvinces[civ.id]:
+                civ.player.setProvinceType(iProv, ProvinceTypes.POTENTIAL.value)
+            for iProv in self.tPot2NormProvinces[civ.id]:
+                civ.player.setProvinceType(iProv, ProvinceTypes.POTENTIAL.value)
         # update provinces for the 1200 AD Scenario
         if utils.getScenario() == Scenario.i1200AD:
-            for iPlayer in range(Consts.iNumPlayers - 1):
-                if CIV_BIRTHDATE[get_civ_by_id(iPlayer)] < xml.i1200AD:
-                    self.onSpawn(iPlayer)
+            for civ in CIVILIZATIONS.main():
+                if CIV_BIRTHDATE[civ.id] < xml.i1200AD:
+                    self.onSpawn(civ.id)
 
     def checkTurn(self, iGameTurn):
         # Norse provinces switch back to unstable after the fall of the Norman Kingdom of Sicily
@@ -744,7 +742,7 @@ class ProvinceManager:
             print("Yes! Prussia can into Germany!")
 
     def onCityBuilt(self, iPlayer, x, y):
-        if iPlayer >= Consts.iNumPlayers - 1:  # Pope, indies, barbs
+        if iPlayer >= CIVILIZATIONS.main().len():
             return
         pPlayer = gc.getPlayer(iPlayer)
         iProv = RFCEMaps.tProvinceMap[y][x]
@@ -761,7 +759,7 @@ class ProvinceManager:
                 utils.refreshStabilityOverlay()  # refresh the stability overlay
 
     def onCityAcquired(self, owner, iPlayer, city, bConquest, bTrade):
-        if iPlayer >= Consts.iNumPlayers - 1:  # Pope, indies, barbs
+        if iPlayer >= CIVILIZATIONS.main().len():
             return
         pPlayer = gc.getPlayer(iPlayer)
         iProv = city.getProvince()

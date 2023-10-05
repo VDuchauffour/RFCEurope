@@ -5,19 +5,6 @@ from CvPythonExtensions import *
 # globals
 gc = CyGlobalContext()
 
-# initialize player variables to player IDs from WBS (this is the only part of the XML that will stay here):
-iNumPlayers = 29
-
-iNumMajorPlayers = iNumPlayers
-
-iIndependent = iNumPlayers
-iIndependent2 = iNumPlayers+1
-iIndependent3 = iNumPlayers+2
-iIndependent4 = iNumPlayers+3
-iNumTotalPlayers = iNumPlayers+4
-iBarbarian = iNumPlayers+4
-iNumTotalPlayersB = iBarbarian+1
-
 (pByzantium, pFrankia, pArabia, pBulgaria, pCordoba, pVenecia, pBurgundy, pGermany, pNovgorod, pNorway,
 pKiev, pHungary, pSpain, pDenmark, pScotland, pPoland, pGenoa, pMorocco, pEngland, pPortugal,
 pAragon, pSweden, pPrussia, pLithuania, pAustria, pTurkey, pMoscow, pDutch, pPope) = [gc.getPlayer(i) for i in range(iNumPlayers)]
@@ -25,9 +12,6 @@ pAragon, pSweden, pPrussia, pLithuania, pAustria, pTurkey, pMoscow, pDutch, pPop
 (teamByzantium, teamFrankia, teamArabia, teamBulgaria, teamCordoba, teamVenecia, teamBurgundy, teamGermany, teamNovgorod, teamNorway,
 teamKiev, teamHungary, teamSpain, teamDenmark, teamScotland, teamPoland, teamGenoa, teamMorocco, teamEngland, teamPortugal,
 teamAragon, teamSweden, teamPrussia, teamLithuania, teamAustria, teamTurkey, teamMoscow, teamDutch, teamPope) = [gc.getTeam(i) for i in range(iNumPlayers)]
-
-iIndepStart = iIndependent # creates the block of independent civs
-iIndepEnd = iIndependent4
 
 #CoreAreas: Core Area is initial spawn location, no longer relevant for stability.
 tCoreAreasTL = (

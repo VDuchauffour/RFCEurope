@@ -1,6 +1,7 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
+from CivilizationsData import CIVILIZATIONS
 from CoreTypes import Civ, SpecialParameter
 import CvUtil
 import CvScreenEnums
@@ -8,7 +9,6 @@ import CvScreenEnums
 from TimelineData import CIV_BIRTHDATE
 from CoreStructures import get_civ_by_id
 
-import Consts
 import XMLConsts as xml
 import RFCUtils  # Rhye
 
@@ -6572,7 +6572,7 @@ class CvMainInterface:
                                         # szTempBuffer = u"%d" %(utils.countAchievedGoals(ePlayer)) #white
                                         # szBuffer = szBuffer + " (" + szTempBuffer + "/3)" #white
                                         if gc.getPlayer(ePlayer).isAlive():
-                                            if ePlayer < Consts.iNumMajorPlayers:
+                                            if ePlayer < CIVILIZATIONS.majors().len():
                                                 szTempBuffer = u"<color=%s>%d/3</color>" % (
                                                     utils.getGoalsColor(ePlayer),
                                                     utils.countAchievedGoals(ePlayer),
@@ -6583,7 +6583,7 @@ class CvMainInterface:
                                         # Rhye - start stability
                                         if gc.getPlayer(ePlayer).isAlive():
                                             if (
-                                                ePlayer < Consts.iNumMajorPlayers
+                                                ePlayer < CIVILIZATIONS.majors().len()
                                             ):  # in case byzantium is major
                                                 # iStability = utils.getStability(ePlayer)
                                                 iStability = gc.getPlayer(ePlayer).getStability()

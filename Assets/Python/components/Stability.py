@@ -3,7 +3,7 @@
 from CvPythonExtensions import *
 import PyHelpers
 
-from CivilizationsData import CIV_STABILITY_AI_BONUS
+from CivilizationsData import CIV_STABILITY_AI_BONUS, CIVILIZATIONS
 from LocationsData import CIV_CAPITAL_LOCATIONS
 from CoreStructures import get_civ_by_id
 from TimelineData import CIV_BIRTHDATE, CIV_COLLAPSE_DATE
@@ -19,7 +19,6 @@ from CoreTypes import (
 )
 
 # import cPickle as pickle
-import Consts
 import XMLConsts as xml
 import RFCUtils
 import RFCEMaps
@@ -39,7 +38,7 @@ tStabilityPenalty = (-5, -2, 0, 0, 0)  # province type: unstable, border, potent
 
 class Stability:
     def setup(self):  # Sets starting stability
-        for iPlayer in range(Consts.iNumMajorPlayers):
+        for iPlayer in CIVILIZATIONS.majors().ids():
             pPlayer = gc.getPlayer(iPlayer)
             for iCath in range(4):
                 pPlayer.changeStabilityBase(iCath, -pPlayer.getStabilityBase(iCath))
@@ -57,7 +56,7 @@ class Stability:
             )
 
         # Absinthe: Stability is accounted properly for stuff preplaced in the scenario file - from RFCE++
-        for iPlayer in range(Consts.iNumMajorPlayers):
+        for iPlayer in CIVILIZATIONS.majors().ids():
             pPlayer = gc.getPlayer(iPlayer)
             teamPlayer = gc.getTeam(pPlayer.getTeam())
             iCounter = 0
@@ -136,7 +135,7 @@ class Stability:
 
         # Absinthe: AI stability bonus - for civs that have a hard time at the beginning
         # 			for example France, Arabia, Bulgaria, Cordoba, Ottomans
-        for iPlayer in range(Consts.iNumMajorPlayers - 1):  # no Pope, Indies, or Barbs
+        for iPlayer in CIVILIZATIONS.main().ids():
             pPlayer = gc.getPlayer(iPlayer)
             if iPlayer != utils.getHumanID():
                 pPlayer.changeStabilityBase(
@@ -165,7 +164,7 @@ class Stability:
         # 	self.continentsNormalization(iGameTurn)
         # if (iGameTurn % 6 == 0): #3 is too short to detect any change; must be a multiple of 3 anyway
         # gc.calcLastOwned() # Compute the RFC arrays (getlOwnedPlots,getlOwnedCities) in C instead
-        # for iLoopCiv in range(iNumPlayers):
+        # for iLoopCiv in CIVILIZATIONS.majors().ids():
         # if ( gc.hasUP(iLoopCiv, UniquePower.LESS_INSTABILITY_WITH_FOREIGN_LAND.value) ): #French UP
         # self.setOwnedPlotsLastTurn(iLoopCiv, 0)
         # else:
@@ -184,7 +183,7 @@ class Stability:
 
         # Absinthe: logging AI stability levels
         if iGameTurn % 9 == 2:
-            for iPlayer in range(Consts.iNumMajorPlayers - 1):
+            for iPlayer in CIVILIZATIONS.main().ids():
                 pPlayer = gc.getPlayer(iPlayer)
                 if pPlayer.getStability() != 0:
                     print(
@@ -301,7 +300,7 @@ class Stability:
     def continentsNormalization(self, iGameTurn):  # Sedna17
         pass
         # lContinentModifier = [-1, -1, 0, -2, 0, 0]
-        # for civ in CIVILIZATIONS.get_majors():
+        # for civ in CIVILIZATIONS.majors():
         #     if gc.getPlayer(civ.id).isAlive():
         #         for group_key, group_civs in CIV_GROUPS.items():
         #             if civ.key in group_civs:
@@ -377,7 +376,7 @@ class Stability:
             pConq.changeStabilityBase(StabilityCategory.EXPANSION.value, 1)
 
         if (
-            iOwner < Consts.iNumPlayers
+            iOwner < CIVILIZATIONS.majors().len()
             and (city.getX(), city.getY())
             == CIV_CAPITAL_LOCATIONS[get_civ_by_id(iOwner)].to_tuple()
         ):
@@ -516,10 +515,10 @@ class Stability:
     def onReligionSpread(self, iReligion, iPlayer):
         pass
         # Sedna17: Religions seemed to be subtracted and re-inserted into cities, which makes this a bad idea.
-        # if (iPlayer < iNumPlayers):
+        # if (iPlayer < CIVILIZATIONS.majors().len()):
         # 	pPlayer = gc.getPlayer(iPlayer)
         # 	if (pPlayer.getStateReligion() != iReligion):
-        # 		for iLoopCiv in range(iNumPlayers):
+        # 		for iLoopCiv in CIVILIZATIONS.majors().ids():
         # 			if (gc.getTeam(pPlayer.getTeam()).isAtWar(iLoopCiv)):
         # 				if (gc.getPlayer(iLoopCiv).getStateReligion() == iReligion):
         # 					self.setStability(iPlayer, self.getStability(iPlayer) - 1 )
@@ -529,7 +528,7 @@ class Stability:
 
     def checkImplosion(self, iGameTurn):
         if iGameTurn > 14 and iGameTurn % 6 == 3:
-            for iPlayer in range(Consts.iNumPlayers - 1):
+            for iPlayer in CIVILIZATIONS.main().ids():
                 pPlayer = gc.getPlayer(iPlayer)
                 # Absinthe: no city secession for 15 turns after spawn, for 10 turns after respawn
                 iRespawnTurn = utils.getLastRespawnTurn(iPlayer)

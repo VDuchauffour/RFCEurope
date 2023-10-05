@@ -3,7 +3,7 @@
 
 from CvPythonExtensions import *
 import RFCEMaps
-import Consts
+from CivilizationsData import CIVILIZATIONS
 from LocationsData import LAKE_LOCATIONS
 
 gc = CyGlobalContext()
@@ -24,19 +24,19 @@ def setup():
                 # print ('ProvinceID', x, y, plot.getProvinceID)
 
     # City name maps
-    for iLoopPlayer in range(
-        Consts.iNumPlayers - 1
-    ):  # currently neither the papal nor the default maps are added
-        if len(RFCEMaps.tCityMap) > iLoopPlayer:
-            for y in range(len(RFCEMaps.tCityMap[iLoopPlayer])):
-                for x in range(len(RFCEMaps.tCityMap[iLoopPlayer][y])):
+    for (
+        civ
+    ) in CIVILIZATIONS.main().ids():  # currently neither the papal nor the default maps are added
+        if len(RFCEMaps.tCityMap) > civ:
+            for y in range(len(RFCEMaps.tCityMap[civ])):
+                for x in range(len(RFCEMaps.tCityMap[civ][y])):
                     plot = map.plot(
-                        x, len(RFCEMaps.tCityMap[iLoopPlayer]) - 1 - y
+                        x, len(RFCEMaps.tCityMap[civ]) - 1 - y
                     )  # because Civ4 maps are reversed on Y-axis
                     if plot:
-                        sName = RFCEMaps.tCityMap[iLoopPlayer][y][x]
+                        sName = RFCEMaps.tCityMap[civ][y][x]
                         # Set the value in CvPlot instance
-                        plot.setCityNameMap(iLoopPlayer, sName)
+                        plot.setCityNameMap(civ, sName)
 
     # Lake name IDs
     # first set all plots to -1

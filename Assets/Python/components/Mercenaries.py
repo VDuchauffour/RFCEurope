@@ -2,13 +2,12 @@
 # Written mostly by 3Miro
 
 from CvPythonExtensions import *
-from CivilizationsData import CIV_HIRE_MERCENARY_THRESHOLD
+from CivilizationsData import CIV_HIRE_MERCENARY_THRESHOLD, CIVILIZATIONS
 from CoreStructures import get_civ_by_id
 from CoreTypes import Civ, SpecialParameter
 import PyHelpers
 
 # import cPickle as pickle
-import Consts
 import XMLConsts as xml
 import RFCUtils
 from StoredData import sd
@@ -2382,7 +2381,7 @@ class MercenaryManager:
         # 	print( "3Miro Merc Pool: ", iGameTurn, lMerc)
 
         # Go through each of the players and deduct their mercenary maintenance amount from their gold (round up)
-        for iPlayer in range(Consts.iNumPlayers - 1):  # minus the Pope
+        for iPlayer in CIVILIZATIONS.main().ids():
             pPlayer = gc.getPlayer(iPlayer)
             if pPlayer.isAlive():
                 if (
@@ -2620,7 +2619,7 @@ class MercenaryManager:
         iWarValue = 0  # compute the total number of wars being fought at the moment
 
         teamPlayer = gc.getTeam(pPlayer.getTeam())
-        for iOponent in range(Consts.iNumTotalPlayers):
+        for iOponent in CIVILIZATIONS.drop(Civ.BARBARIAN).ids():
             if teamPlayer.isAtWar(gc.getPlayer(iOponent).getTeam()):
                 iWarValue += 1
                 if iOponent <= Civ.POPE.value:

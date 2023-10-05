@@ -5,10 +5,10 @@ from CoreTypes import Civ
 import PyHelpers  # LOQ
 import Popup
 import RFCUtils
-import Consts
 import XMLConsts as xml
 from StoredData import sd
 
+from CivilizationsData import CIVILIZATIONS
 from MiscData import MessageData
 
 # globals
@@ -283,7 +283,7 @@ tMilanR = (
     xml.iCatholicism,
     0,
 )  # respawn, in case it was razed
-# tFlorenceR = ( [ ((54, 32), "Firenze", 100) ], iIndependent2, 4, xml.iArcher, 2, xml.iCatholicism, 0 ) #respawn, doesn't work with the multiple options in 500AD
+# tFlorenceR = ( [ ((54, 32), "Firenze", 100) ], Civ.INDEPENDENT_2.value, 4, xml.iArcher, 2, xml.iCatholicism, 0 ) #respawn, doesn't work with the multiple options in 500AD
 tPrague = (
     [((60, 44), "Praha", 100)],
     Civ.INDEPENDENT.value,
@@ -350,7 +350,7 @@ tBrennabor = (
     0,
 )  # Brandenburg or Berlin
 # 860 AD
-# tEdinburgh = ( [ ((37, 63), "Eidyn Dun", 100) ], iBarbarian, 1, xml.iArcher, 1, -1, 0)
+# tEdinburgh = ( [ ((37, 63), "Eidyn Dun", 100) ], Civ.BARBARIAN.value, 1, xml.iArcher, 1, -1, 0)
 # 880 AD
 tApulum = (
     [((73, 35), "Belograd", 80), ((73, 37), "Napoca", 20)],
@@ -460,7 +460,7 @@ tKalmar = (
     1,
 )
 # 1060 AD
-# tMus = ( [ ((99, 21), "Mus", 100) ], iBarbarian, 1, xml.iSeljukCrossbow, 2, -1, 0) #out of the map, not that important to represent the Seljuk/Timurid invasions this way
+# tMus = ( [ ((99, 21), "Mus", 100) ], Civ.BARBARIAN.value, 1, xml.iSeljukCrossbow, 2, -1, 0) #out of the map, not that important to represent the Seljuk/Timurid invasions this way
 # 1110 AD
 tGraz = (
     [((61, 37), "Graz", 100)],
@@ -491,7 +491,7 @@ tRigaR = (
     -1,
     1,
 )  # respawn
-# tSaraiBatu = ( [ ((99, 40), "Sarai Batu", 100) ], iBarbarian, 1, xml.iMongolKeshik, 2, -1, 0) #out of the map, not that important to represent the Mongol invasions this way
+# tSaraiBatu = ( [ ((99, 40), "Sarai Batu", 100) ], Civ.BARBARIAN.value, 1, xml.iMongolKeshik, 2, -1, 0) #out of the map, not that important to represent the Mongol invasions this way
 # 1227 AD
 tTripoliR = (
     [((54, 8), "Tarabulus", 100)],
@@ -3433,7 +3433,7 @@ class Barbs:
                     iRevoltIndex = lRevolts.index(iRevoltDate)
                     break
             # loop over all the province tiles to find the cities revolting
-            lPlayersOwning = [0] * (Consts.iNumPlayers - 1)
+            lPlayersOwning = [0] * CIVILIZATIONS.main().len()
             iProvince = lNation[0]
             for iI in range(gc.getNumProvinceTiles(iProvince)):
                 iX = gc.getProvinceX(iProvince, iI)
@@ -3447,7 +3447,7 @@ class Barbs:
                         ):
                             lPlayersOwning[iOwner] += 1
 
-            for iPlayer in range(Consts.iNumPlayers - 1):
+            for iPlayer in CIVILIZATIONS.main().ids():
                 if lPlayersOwning[iPlayer] > 0:
                     if utils.getHumanID() == iPlayer:
                         self.doRevoltHuman(iPlayer, iGameTurn, lNation, iRevoltIndex)

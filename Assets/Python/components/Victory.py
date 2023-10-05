@@ -1,9 +1,9 @@
 from CvPythonExtensions import *
+from CivilizationsData import CIVILIZATIONS
 from CoreTypes import City, Civ, ProvinceStatus, StabilityCategory
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
 import PyHelpers
 import Popup
-import Consts
 import XMLConsts as xml
 import RFCUtils
 import UniquePowers
@@ -535,7 +535,7 @@ class Victory:
         bIgnoreAI = gc.getDefineINT("NO_AI_UHV_CHECKS") == 1
         self.setIgnoreAI(bIgnoreAI)
         if bIgnoreAI:
-            for iPlayer in range(Consts.iNumPlayers):
+            for iPlayer in CIVILIZATIONS.majors().ids():
                 if utils.getHumanID() != iPlayer:
                     self.setAllUHVFailed(iPlayer)
 
@@ -561,7 +561,7 @@ class Victory:
             return
         if not pPlayer.isAlive():
             return
-        if iPlayer >= Consts.iNumMajorPlayers - 1:  # don't count the Pope
+        if iPlayer >= CIVILIZATIONS.main().len():
             return
 
         self.switchConditionsPerCiv[iPlayer](iGameTurn)
@@ -592,7 +592,7 @@ class Victory:
                             True,
                             True,
                         )
-                        for iCiv in range(Consts.iNumPlayers):
+                        for iCiv in CIVILIZATIONS.majors().ids():
                             if iCiv != iPlayer:
                                 pCiv = gc.getPlayer(iCiv)
                                 if pCiv.isAlive():
@@ -603,7 +603,7 @@ class Victory:
                         # Absinthe: maximum 3 of your rivals declare war on you
                         lCivs = [
                             iCiv
-                            for iCiv in range(Consts.iNumPlayers - 1)
+                            for iCiv in CIVILIZATIONS.main().ids()
                             if iCiv != iPlayer and gc.getPlayer(iCiv).isAlive()
                         ]
                         iWarCounter = 0
@@ -741,7 +741,7 @@ class Victory:
                     self.lostUHV(Civ.PORTUGAL.value, 1)
                 else:
                     bIsAtWar = False
-                    for iCiv in range(Consts.iNumPlayers):
+                    for iCiv in CIVILIZATIONS.majors().ids():
                         pCiv = gc.getPlayer(iCiv)
                         if pCiv.isAlive():
                             if teamBulgaria.isAtWar(iCiv):
@@ -1085,7 +1085,7 @@ class Victory:
                 x, y = CIV_CAPITAL_LOCATIONS[Civ.BYZATIUM].to_tuple()
                 iGold = pByzantium.getGold()
                 bMost = True
-                for iCiv in range(Consts.iNumPlayers):
+                for iCiv in CIVILIZATIONS.majors().ids():
                     if iCiv != Civ.BYZANTIUM.value and gc.getPlayer(iCiv).isAlive():
                         if gc.getPlayer(iCiv).getGold() > iGold:
                             bMost = False
@@ -1443,7 +1443,7 @@ class Victory:
             if iReligiousCivic == xml.iCivicFreeReligion:
                 self.wonUHV(Civ.HUNGARY.value, 2)
             else:
-                for iPlayer in range(Consts.iNumMajorPlayers):
+                for iPlayer in CIVILIZATIONS.majors().ids():
                     pPlayer = gc.getPlayer(iPlayer)
                     if pPlayer.isAlive() and pPlayer.getCivics(4) == xml.iCivicFreeReligion:
                         self.lostUHV(Civ.HUNGARY.value, 2)
@@ -1468,7 +1468,7 @@ class Victory:
             if self.isPossibleUHV(Civ.CASTILLE.value, 1, True):
                 bMost = True
                 iSpainColonies = self.getNumRealColonies(Civ.CASTILLE.value)
-                for iPlayer in range(Consts.iNumPlayers):
+                for iPlayer in CIVILIZATIONS.majors().ids():
                     if iPlayer != Civ.CASTILLE.value:
                         pPlayer = gc.getPlayer(iPlayer)
                         if (
@@ -1489,7 +1489,7 @@ class Victory:
                 else:
                     lLand = [0, 0, 0, 0, 0, 0]  # Prot, Islam, Cath, Orth, Jew, Pagan
                     lPop = [0, 0, 0, 0, 0, 0]
-                    for iPlayer in range(Consts.iNumPlayers):
+                    for iPlayer in CIVILIZATIONS.majors().ids():
                         pPlayer = gc.getPlayer(iPlayer)
                         iStateReligion = pPlayer.getStateReligion()
                         if iStateReligion > -1:
@@ -1574,7 +1574,7 @@ class Victory:
                     iTrades += pFrankia.getNumTradeBonusImports(Civ.SCOTLAND.value)
                     iScore += iTrades / 2
                     # Common Wars
-                    for iEnemy in xrange(Consts.iNumPlayers):
+                    for iEnemy in CIVILIZATIONS.majors().ids():
                         if iEnemy in [Civ.SCOTLAND.value, Civ.FRANCE.value]:
                             continue
                         if teamFrankia.isAtWar(iEnemy) and teamScotland.isAtWar(iEnemy):
@@ -1613,7 +1613,7 @@ class Victory:
             if self.isPossibleUHV(Civ.POLAND.value, 0, True):
                 iAgriculturePolish = pPoland.calculateTotalYield(YieldTypes.YIELD_FOOD)
                 bFood = True
-                for iPlayer in range(Consts.iNumMajorPlayers):
+                for iPlayer in CIVILIZATIONS.majors().ids():
                     if (
                         gc.getPlayer(iPlayer).calculateTotalYield(YieldTypes.YIELD_FOOD)
                         > iAgriculturePolish
@@ -1657,7 +1657,7 @@ class Victory:
                     YieldTypes.YIELD_COMMERCE
                 ) + pGenoa.calculateTotalExports(YieldTypes.YIELD_COMMERCE)
                 bLargest = True
-                for iPlayer in range(Consts.iNumMajorPlayers):
+                for iPlayer in CIVILIZATIONS.majors().ids():
                     if iPlayer != Civ.GENOA.value:
                         pPlayer = gc.getPlayer(iPlayer)
                         if (
@@ -1835,7 +1835,7 @@ class Victory:
             if self.isPossibleUHV(Civ.LITHUANIA.value, 1, True):
                 bMost = True
                 iCount = self.getTerritoryPercentEurope(Civ.LITHUANIA.value)
-                for iOtherPlayer in range(Consts.iNumPlayers):
+                for iOtherPlayer in CIVILIZATIONS.majors().ids():
                     if (
                         not gc.getPlayer(iOtherPlayer).isAlive()
                         or iOtherPlayer == Civ.LITHUANIA.value
@@ -1880,7 +1880,7 @@ class Victory:
         elif iGameTurn == xml.i1700AD:
             if self.isPossibleUHV(Civ.AUSTRIA.value, 1, True):
                 iCount = 0
-                for iPlayer in range(Consts.iNumMajorPlayers):
+                for iPlayer in CIVILIZATIONS.majors().ids():
                     if iPlayer == Civ.AUSTRIA.value:
                         continue
                     pPlayer = gc.getPlayer(iPlayer)
@@ -2013,7 +2013,7 @@ class Victory:
         if self.isPossibleUHV(Civ.DUTCH.value, 2, True):
             iGold = pDutch.getGold()
             bMost = True
-            for iCiv in range(Consts.iNumPlayers):
+            for iCiv in CIVILIZATIONS.majors().ids():
                 if iCiv == Civ.DUTCH.value:
                     continue
                 pPlayer = gc.getPlayer(iCiv)

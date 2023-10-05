@@ -245,10 +245,12 @@ class Civilization(object):
     def __repr__(self):
         return self.__class__.__name__ + "(" + str(Civ[self.name]) + ")"
 
-    def get_player(self):
+    @property
+    def player(self):
         return gc.getPlayer(self.id)
 
-    def get_team(self):
+    @property
+    def team(self):
         return gc.getTeam(self.id)
 
 
@@ -279,6 +281,10 @@ class Civilizations(list):
     def len(self):
         return self.__len__()
 
+    def ids(self):
+        """Return a list of identifiers."""
+        return [civ.id for civ in self]
+
     def filter(self, func):
         """Filter civilization when function returns `True`."""
         if not callable(func):
@@ -286,21 +292,35 @@ class Civilizations(list):
         civs = [civ for civ in self if func(civ)]
         return self.__class__(*civs)
 
-    def get_main(self):
+    def drop(self, *civs):
+        """Return the object without `civs` given its keys, i.e. the relevant `Civ` member."""
+        return self.filter(lambda c: c.key not in civs)
+
+    def get(self, *civs):
+        """Return the object with only `civs` given its keys, i.e. the relevant `Civ` member."""
+        return self.filter(lambda c: c.key in civs)
+
+    def main(self):
         """Return main civilizations, i.e. not minor and playable."""
         return self.filter(lambda c: c.properties.is_playable and not c.properties.is_minor)
 
-    def get_majors(self):
+    def majors(self):
         """Return major civilizations, i.e. not minor ones (all playable and non-playable civs like The Pope)."""
         return self.filter(lambda c: not c.properties.is_minor)
 
-    def get_minors(self):
+    def minors(self):
         """Return minor civilizations, i.e. minor and not playable civs like independents and barbarian."""
         return self.filter(lambda c: c.properties.is_minor and not c.properties.is_playable)
 
-    def get_independents(self):
+    def independents(self):
         """Return independents civilizations."""
         return self.filter(lambda c: "INDEPENDENT" in c.name)
+
+    def barbarian(self):
+        """Return the barbarian civilization."""
+        return self.get(Civ.BARBARIAN)[0]
+
+    # TODO add func for any, all, where cf https://github.com/dguenms/Dawn-of-Civilization/blob/a305e7846d085d6edf1e9c472e8dfceee1c07dd4/Assets/Python/Core.py#L1683
 
 
 class CivilizationsFactory(object):

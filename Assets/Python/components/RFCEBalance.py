@@ -11,7 +11,11 @@ from CoreTypes import (
 import XMLConsts as xml
 import RFCEMaps
 import RFCUtils
-from CivilizationsData import CIV_STARTING_SITUATION, CIV_RELIGION_SPEADING_THRESHOLD
+from CivilizationsData import (
+    CIV_STARTING_SITUATION,
+    CIV_RELIGION_SPEADING_THRESHOLD,
+    CIVILIZATIONS,
+)
 from MiscData import WORLD_WIDTH, WORLD_HEIGHT, GREAT_PROPHET_FAITH_POINT_BONUS
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
 from TimelineData import CIV_BIRTHDATE
@@ -618,7 +622,7 @@ class RFCEBalance:
             Civ.PORTUGAL.value, UniquePower.STABILITY_BONUS_FOUNDING.value, 1
         )  # "hidden" part of the UP
 
-        for i in range(Consts.iNumTotalPlayers):
+        for i in CIVILIZATIONS.drop(Civ.BARBARIAN).ids():
             if not i == Civ.AUSTRIA.value:
                 gc.setDiplomacyModifiers(i, Civ.AUSTRIA.value, +4)
         gc.setUP(Civ.AUSTRIA.value, UniquePower.PER_CITY_COMMERCE_BONUS.value, 200)
@@ -664,12 +668,12 @@ class RFCEBalance:
         gc.setFastTerrain(xml.iTerrainOcean)
 
         # set religious spread factors
-        for iCiv in range(Consts.iNumTotalPlayers + 1):  # include barbs
+        for civ in CIVILIZATIONS:
             for iRel in range(xml.iNumReligions):
                 gc.setReligionSpread(
-                    iCiv,
+                    civ.id,
                     iRel,
-                    CIV_RELIGION_SPEADING_THRESHOLD[get_civ_by_id(iCiv)][get_religion_by_id(iRel)],
+                    CIV_RELIGION_SPEADING_THRESHOLD[civ.key][get_religion_by_id(iRel)],
                 )
 
         # set the religions and year of the great schism
@@ -742,7 +746,7 @@ class RFCEBalance:
 
         # the utils.getUniqueBuilding function does not work, probably the util functions are not yet usable when these initial values are set
         # but in the .dll these values are only used for the civ-specific building of the given buildingclass, so we can these add redundantly
-        for iPlayer in range(Consts.iNumPlayers):
+        for iPlayer in CIVILIZATIONS.majors().ids():
             # walls, kasbah
             gc.setBuildingPref(iPlayer, xml.iWalls, 5)
             gc.setBuildingPref(iPlayer, xml.iMoroccoKasbah, 5)
@@ -1136,13 +1140,13 @@ class RFCEBalance:
         gc.setSizeNPlayers(
             WORLD_WIDTH,
             WORLD_HEIGHT,
-            Consts.iNumPlayers,
-            Consts.iNumTotalPlayers,
+            CIVILIZATIONS.majors().len(),
+            CIVILIZATIONS.drop(Civ.BARBARIAN).len(),
             xml.iNumTechs,
             xml.iNumBuildingsPlague,
             xml.iNumReligions,
         )
-        for i in range(Consts.iNumPlayers):
+        for i in CIVILIZATIONS.majors().ids():
             for y in range(WORLD_HEIGHT):
                 for x in range(WORLD_WIDTH):
                     gc.setSettlersMap(i, y, x, RFCEMaps.tSettlersMaps[i][y][x])
@@ -1169,13 +1173,13 @@ class RFCEBalance:
         # 		gc.setProvinceToRegion( iProvince, iIndex )
 
         # birth turns for the players, do not change this loop
-        for i in range(Consts.iNumTotalPlayers):
+        for i in CIVILIZATIONS.drop(Civ.BARBARIAN).ids():
             gc.setStartingTurn(i, CIV_BIRTHDATE[get_civ_by_id(i)])
 
     def postAreas(self):
         # 3Miro: DO NOT CHANGE THIS CODE
         # this adds the Core and Normal Areas from Consts.py into C++. There is Dynamical Memory involved, so don't change this
-        for iCiv in range(Consts.iNumPlayers):
+        for iCiv in CIVILIZATIONS.majors().ids():
             iCBLx = Consts.tCoreAreasTL[iCiv][0]
             iCBLy = Consts.tCoreAreasTL[iCiv][1]
             iCTRx = Consts.tCoreAreasBR[iCiv][0]
@@ -1204,7 +1208,11 @@ class RFCEBalance:
         gc.setSaintParameters(
             xml.iGreatProphet, GREAT_PROPHET_FAITH_POINT_BONUS, 20, 40
         )  # try to amass at least 20 and don't bother above 40 points
-        gc.setIndependnets(Consts.iIndepStart, Consts.iIndepEnd, Civ.BARBARIAN.value)
+        gc.setIndependnets(
+            min(CIVILIZATIONS.independents().ids()),
+            max(CIVILIZATIONS.independents().ids()),
+            Civ.BARBARIAN.value,
+        )
         gc.setPapalPlayer(Civ.POPE.value, xml.iCatholicism)
 
         gc.setAutorunHack(xml.iCatapult, 32, 0)  # Autorun hack, sync with RNF module
@@ -1212,7 +1220,7 @@ class RFCEBalance:
         # 3MiroMercs: set the merc promotion
         gc.setMercPromotion(xml.iPromotionMerc)
 
-        for iCiv in range(Consts.iNumPlayers):
+        for iCiv in CIVILIZATIONS.majors().ids():
             gc.setStartingWorkers(
                 iCiv,
                 CIV_STARTING_SITUATION[utils.getScenario()][get_civ_by_id(iCiv)][

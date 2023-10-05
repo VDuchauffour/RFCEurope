@@ -1,6 +1,7 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
+from CivilizationsData import CIVILIZATIONS
 import CvUtil
 import CvScreensInterface
 import CvEventInterface
@@ -9,7 +10,6 @@ import Popup as PyPopup
 
 # Caliom RFCE imports
 import RFCEMapUtil
-import Consts
 
 # Caliom globals
 CITY_NAME_POPUP_EVENT_ID = RFCEMapUtil.getNewEventID()
@@ -1162,7 +1162,7 @@ class CvWorldBuilderScreen:
                     # Absinthe: correct CNM name for new cities in the WB
                     print("WB City placed for:", self.m_iCurrentPlayer)
                     if (
-                        self.m_iCurrentPlayer < Consts.iNumMajorPlayers
+                        self.m_iCurrentPlayer < CIVILIZATIONS.majors().len()
                     ):  # indy and barb civs don't have a city name map
                         cityName = MapManager.getCityName(
                             self.m_iCurrentPlayer, self.m_pCurrentPlot
@@ -4068,7 +4068,7 @@ class RevealMode(Mode):
                 -1,
                 FontTypes.GAME_FONT,
             )
-            for i in range(Consts.iNumMajorPlayers):
+            for i in CIVILIZATIONS.majors().ids():
                 screen.addPullDownString(
                     szDropdownName, gc.getPlayer(i).getName(), i, i, i == self.iPlayer
                 )
@@ -4519,7 +4519,7 @@ class LandmarkMode(Mode):
                 FontTypes.GAME_FONT,
             )
 
-            for i in range(Consts.iNumMajorPlayers):
+            for i in CIVILIZATIONS.majors().ids():
                 if gc.getPlayer(i).isEverAlive():
                     screen.addPullDownString(
                         szDropdownName,
@@ -4531,9 +4531,9 @@ class LandmarkMode(Mode):
             screen.addPullDownString(
                 szDropdownName,
                 "Generic map",
-                (Consts.iNumMajorPlayers),
-                (Consts.iNumMajorPlayers),
-                self.iPlayer == (Consts.iNumMajorPlayers),
+                (CIVILIZATIONS.majors().len()),
+                (CIVILIZATIONS.majors().len()),
+                self.iPlayer == CIVILIZATIONS.majors().len(),
             )
             iBarb = gc.getBARBARIAN_PLAYER()
             screen.addPullDownString(
@@ -4614,7 +4614,7 @@ class LandmarkMode(Mode):
 
         cityNames = []
         # all major civs' city names, in civ order
-        for i in range(Consts.iNumMajorPlayers):
+        for i in CIVILIZATIONS.majors().ids():
             if i != iPlayer:
                 name = MapManager.getCityName(i, pPlot)
                 civ = gc.getPlayer(i).getCivilizationShortDescription(0)
@@ -4623,15 +4623,15 @@ class LandmarkMode(Mode):
         # uncomment for city names in alphabetic order
         # cityNames.sort()
         # generic city name, always on last place
-        if (Consts.iNumMajorPlayers) != iPlayer:
-            name = MapManager.getCityName((Consts.iNumMajorPlayers), pPlot)
+        if CIVILIZATIONS.majors().len() != iPlayer:
+            name = MapManager.getCityName(CIVILIZATIONS.majors().len(), pPlot)
             if name is not None:
                 cityNames.append((unicode(name, "latin-1"), "GENERIC NAME"))
 
         cityHeader = cityName
         if cityHeader == "":
             cityHeader = "New City"
-        if iPlayer == Consts.iNumMajorPlayers:
+        if iPlayer == CIVILIZATIONS.majors().len():
             sHeaderText = "%s - %s" % (cityHeader, "Generic Name")
         else:
             sHeaderText = "%s - %s" % (

@@ -1,9 +1,9 @@
 # Rhye's and Fall of Civilization: Europe - Plague
 
 from CvPythonExtensions import *
+from CivilizationsData import CIVILIZATIONS
 from CoreTypes import Civ
 import PyHelpers
-import Consts
 import XMLConsts as xml
 import RFCUtils
 
@@ -66,7 +66,7 @@ class Plague:
 
     def setup(self):
 
-        for i in range(Consts.iNumMajorPlayers):
+        for i in CIVILIZATIONS.majors().ids():
             self.setPlagueCountdown(i, -PLAGUE_IMMUNITY)
 
         # Sedna17: Set number of GenericPlagues in StoredData
@@ -91,7 +91,7 @@ class Plague:
 
     def checkTurn(self, iGameTurn):
 
-        for iPlayer in range(Consts.iNumTotalPlayersB):
+        for iPlayer in CIVILIZATIONS.ids():
             if gc.getPlayer(iPlayer).isAlive():
                 if self.getPlagueCountdown(iPlayer) > 0:
                     self.setPlagueCountdown(iPlayer, self.getPlagueCountdown(iPlayer) - 1)
@@ -115,7 +115,7 @@ class Plague:
                 bFirstPlague = self.getFirstPlague()
                 if not bFirstPlague:
                     iInfectedCounter = 0
-                    for iPlayer in range(Consts.iNumTotalPlayersB):
+                    for iPlayer in CIVILIZATIONS.ids():
                         if (
                             gc.getPlayer(iPlayer).isAlive()
                             and self.getPlagueCountdown(iPlayer) > 0
@@ -125,7 +125,7 @@ class Plague:
                         self.startPlague(iPlague)
 
     def checkPlayerTurn(self, iGameTurn, iPlayer):
-        if iPlayer < Consts.iNumTotalPlayersB:
+        if iPlayer < CIVILIZATIONS.len():
             if self.getPlagueCountdown(iPlayer) > 0:
                 self.processPlague(iPlayer)
 
@@ -150,7 +150,7 @@ class Plague:
 
         # try to find the most unhealthy civ
         if iWorstCiv == -1:
-            for iPlayer in range(Consts.iNumMajorPlayers):
+            for iPlayer in CIVILIZATIONS.majors().ids():
                 pPlayer = gc.getPlayer(iPlayer)
                 if pPlayer.isAlive():
                     if self.isVulnerable(iPlayer):
@@ -191,7 +191,7 @@ class Plague:
 
     def isVulnerable(self, iPlayer):
         # Absinthe: based on recent infections and the average city healthiness (also tech immunity should go here if it's ever added to the mod)
-        if iPlayer >= Consts.iNumMajorPlayers:
+        if iPlayer >= CIVILIZATIONS.majors().len():
             if self.getPlagueCountdown(iPlayer) == 0:
                 return True
         else:
@@ -509,7 +509,7 @@ class Plague:
             # infect vassals
             if self.getPlagueCountdown(iPlayer) > 2:  # don't spread in the last turns
                 if city.isCapital():
-                    for iLoopCiv in range(Consts.iNumMajorPlayers):
+                    for iLoopCiv in CIVILIZATIONS.majors().ids():
                         if gc.getTeam(pPlayer.getTeam()).isVassal(iLoopCiv) or gc.getTeam(
                             gc.getPlayer(iLoopCiv).getTeam()
                         ).isVassal(iPlayer):

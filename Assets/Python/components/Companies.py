@@ -2,9 +2,9 @@
 # Implemented by AbsintheRed, based on the wonderful idea of embryodead
 
 from CvPythonExtensions import *
+from CivilizationsData import CIVILIZATIONS
 from LocationsData import CITIES
 import PyHelpers
-import Consts
 import XMLConsts as xml
 import RFCUtils
 import Crusades
@@ -118,7 +118,7 @@ class Companies:
 
         # loop through all cities, check the company value for each and add the good ones to a list of tuples (city, value)
         cityValueList = []
-        for iPlayer in range(Consts.iNumPlayers):
+        for iPlayer in CIVILIZATIONS.majors().ids():
             for city in utils.getCityList(iPlayer):
                 iValue = self.getCityValue(city, iCompany)
                 if iValue > 0:
@@ -145,11 +145,9 @@ class Companies:
 
         # count the number of companies
         iCompanyCount = 0
-        for iLoopPlayer in range(Consts.iNumPlayers):
-            if gc.getPlayer(
-                iLoopPlayer
-            ).isAlive:  # should we check for indy/barb cities? isMinorCiv() isBarbarian()
-                iCompanyCount += gc.getPlayer(iLoopPlayer).countCorporations(iCompany)
+        for civ in CIVILIZATIONS.majors():
+            if civ.player.isAlive():
+                iCompanyCount += civ.player.countCorporations(iCompany)
 
         # spread the company
         for i in range(len(cityValueList)):
@@ -361,7 +359,7 @@ class Companies:
                     iValue += 2
 
         # bonus for civs whom actively participate (with units) in the actual Crusade:
-        if iOwner < Consts.iNumPlayers:  # no such value for indy civs
+        if iOwner < CIVILIZATIONS.majors().len():
             if crus.getNumUnitsSent(iOwner) > 0:
                 if iCompany in [iHospitallers, iTemplars, iTeutons]:
                     iValue += 2
@@ -705,7 +703,7 @@ class Companies:
         # adds the company to the best iNumber cities
         cityValueList = []
         iCompaniesAdded = 0
-        for iPlayer in range(Consts.iNumPlayers):
+        for iPlayer in CIVILIZATIONS.majors().ids():
             for city in utils.getCityList(iPlayer):
                 iValue = self.getCityValue(city, iCompany)
                 if iValue > 0:

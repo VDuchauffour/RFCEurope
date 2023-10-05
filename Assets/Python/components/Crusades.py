@@ -2,10 +2,10 @@
 # Created by 3Miro, revised and improved by AbsintheRed
 
 from CvPythonExtensions import *
+from CivilizationsData import CIVILIZATIONS
 import PyHelpers
 import Popup
 import RFCUtils
-import Consts
 import XMLConsts as xml
 import RFCEMaps
 import CityNameManager
@@ -387,7 +387,7 @@ class Crusades:
             ).getCivilizationAdjective(0)
             + ")"
         )
-        for iPlayer in range(Consts.iNumPlayers):
+        for iPlayer in CIVILIZATIONS.majors().ids():
             pPlayer = gc.getPlayer(iPlayer)
             if (
                 iPlayer == Civ.POPE.value
@@ -417,7 +417,7 @@ class Crusades:
         # 		sName = pCity.getName()
         # 		pPlayer = gc.getPlayer( iOwner )
         # 		iReligion = pPlayer.getStateReligion()
-        # 		if (iOwner < Consts.iNumPlayers and iReligion == xml.iIslam):
+        # 		if (iOwner < CIVILIZATIONS.majors().len() and iReligion == xml.iIslam):
         # 			self.setIsTarget( iOwner, True )
         # 			lTargetList.append( sName + " (" + pPlayer.getCivilizationAdjective(0) + ")" )
         self.showPopup(
@@ -448,7 +448,7 @@ class Crusades:
             if self.getCrusadeInit(i) < 0:
                 self.setCrusadeInit(i, 0)
         # Absinthe: reset sent unit counter after the Crusades are over (so it won't give Company benefits forever based on the last one)
-        for iPlayer in range(Consts.iNumPlayers):
+        for iPlayer in CIVILIZATIONS.majors().ids():
             self.setNumUnitsSent(iPlayer, 0)
 
     def checkTurn(self, iGameTurn):
@@ -518,7 +518,7 @@ class Crusades:
                 self.setCrusaders()
                 for i in range(8):
                     self.setSelectedUnit(i, 0)
-                for iPlayer in range(Consts.iNumPlayers):
+                for iPlayer in CIVILIZATIONS.majors().ids():
                     # Absinthe: first we set all civs' unit counter to 0, then send the new round of units
                     self.setNumUnitsSent(iPlayer, 0)
                     if self.getVotingPower(iPlayer) > 0:
@@ -581,13 +581,13 @@ class Crusades:
                         print("Crusade Starting Turn ", iGameTurn)
 
     def anyCatholic(self):
-        for i in range(Consts.iNumPlayers - 1):
-            if gc.getPlayer(i).getStateReligion() == iCatholicism:
+        for civ in CIVILIZATIONS.main():
+            if civ.player.getStateReligion() == iCatholicism:
                 return True
         return False
 
     def anyParticipate(self):
-        for i in range(Consts.iNumPlayers - 1):
+        for i in CIVILIZATIONS.main().ids():
             if self.getVotingPower(i) > 0:
                 return True
         return False
@@ -733,7 +733,7 @@ class Crusades:
             return
         iTargets = 0
         # print(" 3Miro Deviate Crusade: ",iDecision )
-        for i in range(Consts.iNumPlayers):
+        for i in CIVILIZATIONS.majors().ids():
             if self.getIsTarget(i):
                 iTargets += 1
             if iTargets == iDecision:
@@ -775,7 +775,7 @@ class Crusades:
         bFound = False
         iFavorite = 0
         iFavor = 0
-        for i in range(Consts.iNumPlayers - 1):
+        for i in CIVILIZATIONS.main().ids():
             if self.getVotingPower(i) > 0:
                 if bFound:
                     iNFavor = gc.getRelationTowards(Civ.POPE.value, i)
@@ -791,7 +791,7 @@ class Crusades:
         iPowerful = iFavorite
         iPower = self.getVotingPower(iPowerful)
 
-        for i in range(Consts.iNumPlayers - 1):
+        for i in CIVILIZATIONS.main().ids():
             if self.getVotingPower(i) > iPower or (
                 iPowerful == iFavorite and self.getVotingPower(i) > 0
             ):
@@ -799,7 +799,7 @@ class Crusades:
                 iPower = self.getVotingPower(iPowerful)
 
         print(" Candidates ", iFavorite, iPowerful)
-        for i in range(Consts.iNumPlayers):
+        for i in CIVILIZATIONS.majors().ids():
             print(" Civ voting power is: ", i, self.getVotingPower(i))
         if iPowerful == iFavorite:
             self.setPowerful(-1)
@@ -810,7 +810,7 @@ class Crusades:
         iTmJerusalem = gc.getPlayer(
             gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple()).getPlotCity().getOwner()
         ).getTeam()
-        for iPlayer in range(Consts.iNumPlayers):
+        for iPlayer in CIVILIZATIONS.majors().ids():
             pPlayer = gc.getPlayer(iPlayer)
             if (
                 CIV_BIRTHDATE[get_civ_by_id(iPlayer)] > iGameTurn
@@ -833,7 +833,7 @@ class Crusades:
         self.setVotingPower(Civ.POPE.value, self.getVotingPower(Civ.POPE.value) * (5 / 4))
 
         iPower = 0
-        for iPlayer in range(Consts.iNumPlayers):
+        for iPlayer in CIVILIZATIONS.majors().ids():
             iPower += self.getVotingPower(iPlayer)
 
         self.setCrusadePower(iPower)
@@ -841,7 +841,7 @@ class Crusades:
 
     def setCrusaders(self):
         iHuman = utils.getHumanID()
-        for iPlayer in range(Consts.iNumPlayers):
+        for iPlayer in CIVILIZATIONS.majors().ids():
             if not iPlayer == iHuman and self.getVotingPower(iPlayer) > 0:
                 gc.getPlayer(iPlayer).setIsCrusader(True)
 
@@ -1100,7 +1100,7 @@ class Crusades:
 
         # print( " AI Voting for self", iFavorVotes, iPowerVotes )
 
-        for iPlayer in range(Consts.iNumPlayers):
+        for iPlayer in CIVILIZATIONS.majors().ids():
             if iPlayer == iHuman or iPlayer == iFavorite or iPlayer == iPowerful:
                 continue
             iVotes = self.getVotingPower(iPlayer)
@@ -1161,7 +1161,7 @@ class Crusades:
         iRichest = -1
         iMoney = 0
         # iPopeMoney = gc.getPlayer( Civ.POPE.value ).getGold()
-        for i in range(Consts.iNumPlayers - 1):
+        for i in CIVILIZATIONS.main().ids():
             if self.getVotingPower(i) > 0:
                 pPlayer = gc.getPlayer(i)
                 iPlayerMoney = pPlayer.getGold()
@@ -1327,7 +1327,7 @@ class Crusades:
 
     def returnCrusaders(self):
         self.setLeader(-1)
-        for i in range(Consts.iNumPlayers):
+        for i in CIVILIZATIONS.majors().ids():
             gc.getPlayer(i).setIsCrusader(False)
 
     def crusadeArrival(self, iActiveCrusade):
@@ -1348,7 +1348,7 @@ class Crusades:
             pPlot = gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple())
             if pPlot.isCity():
                 iVictim = pPlot.getPlotCity().getOwner()
-                if iVictim < Consts.iNumMajorPlayers:
+                if iVictim < CIVILIZATIONS.majors().len():
                     iReligion = gc.getPlayer(iVictim).getStateReligion()
                     if iReligion in [iCatholicism, iOrthodoxy]:
                         print(" Crusade: cancelled, target religion changed to Christianity ")
@@ -1678,7 +1678,7 @@ class Crusades:
                         )
 
         # benefits for the other participants on Crusade return - Faith points, GG points, Relics
-        for iCiv in range(Consts.iNumPlayers - 1):  # no such benefits for the Pope
+        for iCiv in CIVILIZATIONS.main().ids():
             pCiv = gc.getPlayer(iCiv)
             if pCiv.getStateReligion() == iCatholicism and pCiv.isAlive():
                 iUnitNumber = self.getNumUnitsSent(iCiv)
@@ -1879,8 +1879,8 @@ class Crusades:
             return
         # print(" DC Check")
         lPotentials = [
-            iPlayer for iPlayer in range(Consts.iNumPlayers - 1) if self.canDC(iPlayer, iGameTurn)
-        ]  # exclude the Pope
+            iPlayer for iPlayer in CIVILIZATIONS.main().ids() if self.canDC(iPlayer, iGameTurn)
+        ]
         if lPotentials:
             # print(" Oh, Holy Father, someone needs help! " )
             pPope = gc.getPlayer(Civ.POPE.value)
@@ -1919,7 +1919,7 @@ class Crusades:
 
         tPlayerDCMap = tDefensiveCrusadeMap[iPlayer]
         # Can DC if at war with a non-catholic/orthodox enemy, enemy is not a vassal of a catholic/orthodox civ and has a city in the DC map
-        for iEnemy in range(Consts.iNumPlayers - 1):  # exclude the Pope
+        for iEnemy in range(CIVILIZATIONS.main().len()):
             pEnemy = gc.getPlayer(iEnemy)
             if (
                 teamPlayer.isAtWar(pEnemy.getTeam())
