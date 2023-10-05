@@ -224,9 +224,6 @@ iNumUnits = 129
     iSeljukGuisarme,
 ) = range(iNumUnits)
 
-# From the CIV4UnitClassInfos.xml
-iProsecutorClass = 53
-
 lMercsOnly = [
     iCondottieri,
     iReiter,

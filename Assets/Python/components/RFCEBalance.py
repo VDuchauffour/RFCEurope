@@ -16,7 +16,12 @@ from CivilizationsData import (
     CIV_RELIGION_SPEADING_THRESHOLD,
     CIVILIZATIONS,
 )
-from MiscData import WORLD_WIDTH, WORLD_HEIGHT, GREAT_PROPHET_FAITH_POINT_BONUS
+from MiscData import (
+    WORLD_WIDTH,
+    WORLD_HEIGHT,
+    GREAT_PROPHET_FAITH_POINT_BONUS,
+    PROSECUTOR_UNITCLASS,
+)
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
 from TimelineData import CIV_BIRTHDATE, DateTurn
 from CoreStructures import get_civ_by_id, get_religion_by_id
@@ -1213,7 +1218,7 @@ class RFCEBalance:
                     Consts.tNormalAreasSubtract[iCiv][iEx][1],
                 )
 
-        gc.setProsecutorReligions(xml.iProsecutor, xml.iProsecutorClass)
+        gc.setProsecutorReligions(xml.iProsecutor, PROSECUTOR_UNITCLASS)
         gc.setSaintParameters(
             xml.iGreatProphet, GREAT_PROPHET_FAITH_POINT_BONUS, 20, 40
         )  # try to amass at least 20 and don't bother above 40 points
