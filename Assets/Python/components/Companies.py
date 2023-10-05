@@ -12,7 +12,7 @@ from operator import itemgetter
 
 from TimelineData import DateTurn
 from MiscData import MessageData
-from CoreTypes import City, Civ, Scenario, SpecialParameter, Religion
+from CoreTypes import Building, City, Civ, Scenario, SpecialParameter, Religion
 
 # globals
 utils = RFCUtils.RFCUtils()
@@ -515,7 +515,7 @@ class Companies:
             # wonders should be handled separately
             if city.getNumRealBuilding(xml.iPalace) > 0:
                 iValue += 1
-            if city.getNumRealBuilding(xml.iSummerPalace) > 0:
+            if city.getNumRealBuilding(Building.SUMMER_PALACE.value) > 0:
                 iValue += 1
             # bonus from trade routes
             iValue += max(0, city.getTradeRoutes() - 1)

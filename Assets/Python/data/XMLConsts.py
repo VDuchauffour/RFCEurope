@@ -466,7 +466,6 @@ iNumBuildings = 176
     iTriumphalArch,
 ) = range(iNumBuildings)
 
-iGreatPalace = iSummerPalace
 
 iBeginWonders = iVersailles
 iEndWonders = iLanterna
