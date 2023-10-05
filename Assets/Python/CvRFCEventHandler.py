@@ -32,7 +32,7 @@ import Mercenaries
 import RFCEMaps
 
 from MiscData import MessageData
-from TimelineData import CIV_BIRTHDATE
+from TimelineData import CIV_BIRTHDATE, DateTurn
 from CoreStructures import get_civ_by_id
 from CoreTypes import Civ, City, Scenario, UniquePower, StabilityCategory
 from LocationsData import CITIES
@@ -607,7 +607,7 @@ class CvRFCEventHandler:
         iGameTurn = argsList[0]
 
         # Absinthe tests
-        # if iGameTurn == xml.i508AD:
+        # if iGameTurn == DateTurn.i508AD:
         # 	for city in utils.getCityList(Civ.FRANCE.value):
         # 		plot = gc.getMap().plot(city.getX(),city.getY())
         # 		print ('provincetest', plot.getProvinceID (), city.getName())
@@ -645,7 +645,7 @@ class CvRFCEventHandler:
         # 		print ("cityname at y height", x, plot.getCityNameMap(11))
 
         # Absinthe: 868AD Viking attack on Constantinople
-        if iGameTurn == xml.i860AD + sd.scriptDict["lEventRandomness"][iByzantiumVikingAttack] - 2:
+        if iGameTurn == DateTurn.i860AD + sd.scriptDict["lEventRandomness"][iByzantiumVikingAttack] - 2:
             if utils.getHumanID() == Civ.BYZANTIUM.value:
                 popup = Popup.PyPopup()
                 popup.setBodyString(
@@ -653,7 +653,7 @@ class CvRFCEventHandler:
                 )
                 popup.launch()
 
-        if iGameTurn == xml.i860AD + sd.scriptDict["lEventRandomness"][iByzantiumVikingAttack]:
+        if iGameTurn == DateTurn.i860AD + sd.scriptDict["lEventRandomness"][iByzantiumVikingAttack]:
             if utils.getHumanID() == Civ.BYZANTIUM.value:
                 self.barb.spawnMultiTypeUnits(
                     Civ.BARBARIAN.value,
@@ -684,7 +684,7 @@ class CvRFCEventHandler:
                 )
 
         # Absinthe: Message for the human player about the Schism
-        elif iGameTurn == xml.i1053AD:
+        elif iGameTurn == DateTurn.i1053AD:
             iHuman = utils.getHumanID()
             if utils.isActive(iHuman):
                 sText = CyTranslator().getText("TXT_KEY_GREAT_SCHISM", ())
@@ -706,7 +706,7 @@ class CvRFCEventHandler:
         # Absinthe: Remove the Great Lighthouse, message for the human player if the city is visible
         elif (
             iGameTurn
-            == xml.i1323AD - 40 + sd.scriptDict["lEventRandomness"][iLighthouseEarthQuake]
+            == DateTurn.i1323AD - 40 + sd.scriptDict["lEventRandomness"][iLighthouseEarthQuake]
         ):
             for iPlayer in CIVILIZATIONS.drop(Civ.BARBARIAN).ids():
                 bFound = 0
@@ -777,7 +777,7 @@ class CvRFCEventHandler:
         # 			gc.getPlayer(iDCNPlayer).processCivNames()
 
         # Absinthe: Byzantine conqueror army
-        if iGameTurn == xml.i520AD:
+        if iGameTurn == DateTurn.i520AD:
             if iPlayer == Civ.BYZANTIUM.value:
                 pByzantium = gc.getPlayer(Civ.BYZANTIUM.value)
                 tStartingPlot = (59, 16)
@@ -843,14 +843,14 @@ class CvRFCEventHandler:
         # Absinthe: popup message a couple turns before the Seljuk/Mongol/Timurid invasions
         if iPlayer == iHuman:
             # Seljuks
-            if iGameTurn == xml.i1064AD - 7:
+            if iGameTurn == DateTurn.i1064AD - 7:
                 if iPlayer == Civ.BYZANTIUM.value:
                     popup = Popup.PyPopup()
                     popup.setBodyString(
                         localText.getText("TXT_KEY_EVENT_BARBARIAN_INVASION_START", ())
                     )
                     popup.launch()
-            elif iGameTurn == xml.i1094AD + 1:
+            elif iGameTurn == DateTurn.i1094AD + 1:
                 if iPlayer == Civ.BYZANTIUM.value:
                     popup = Popup.PyPopup()
                     sText = "Seljuk"
@@ -859,7 +859,7 @@ class CvRFCEventHandler:
                     )
                     popup.launch()
             # Mongols
-            elif iGameTurn == xml.i1236AD - 7:
+            elif iGameTurn == DateTurn.i1236AD - 7:
                 if iPlayer in [
                     Civ.KIEV.value,
                     Civ.HUNGARY.value,
@@ -871,7 +871,7 @@ class CvRFCEventHandler:
                         localText.getText("TXT_KEY_EVENT_BARBARIAN_INVASION_START", ())
                     )
                     popup.launch()
-            elif iGameTurn == xml.i1288AD + 1:
+            elif iGameTurn == DateTurn.i1288AD + 1:
                 if iPlayer in [
                     Civ.KIEV.value,
                     Civ.HUNGARY.value,
@@ -885,14 +885,14 @@ class CvRFCEventHandler:
                     )
                     popup.launch()
             # Timurids
-            elif iGameTurn == xml.i1380AD - 7:
+            elif iGameTurn == DateTurn.i1380AD - 7:
                 if iPlayer in [Civ.ARABIA.value, Civ.OTTOMAN.value, Civ.BYZANTIUM.value]:
                     popup = Popup.PyPopup()
                     popup.setBodyString(
                         localText.getText("TXT_KEY_EVENT_TIMURID_INVASION_START", ())
                     )
                     popup.launch()
-            elif iGameTurn == xml.i1431AD + 1:
+            elif iGameTurn == DateTurn.i1431AD + 1:
                 if iPlayer in [Civ.ARABIA.value, Civ.OTTOMAN.value, Civ.BYZANTIUM.value]:
                     popup = Popup.PyPopup()
                     sText = "Timurid"

@@ -11,7 +11,7 @@ from StoredData import sd
 import random
 
 from MiscData import PLAGUE_IMMUNITY, MessageData
-from TimelineData import CIV_BIRTHDATE
+from TimelineData import CIV_BIRTHDATE, DateTurn
 from CoreStructures import get_civ_by_id
 
 # globals
@@ -213,7 +213,7 @@ class Plague:
         # Absinthe: the Plague of Justinian shouldn't spread to Italy and France, even if it was as deadly as the Black Death
         if (
             iPlayer in [Civ.FRANCE.value, Civ.POPE.value]
-            and gc.getGame().getGameTurn() <= xml.i632AD
+            and gc.getGame().getGameTurn() <= DateTurn.i632AD
         ):
             return
 
@@ -286,7 +286,7 @@ class Plague:
         # Absinthe: the Plague of Justinian shouldn't spread to Italy and France, even if it was as deadly as the Black Death
         if (
             city.getOwner() in [Civ.FRANCE.value, Civ.POPE.value]
-            and gc.getGame().getGameTurn() <= xml.i632AD
+            and gc.getGame().getGameTurn() <= DateTurn.i632AD
         ):
             return
 
@@ -684,7 +684,7 @@ class Plague:
             # Absinthe: the Plague of Justinian shouldn't spread to Italy and France, even if it was as deadly as the Black Death
             if (
                 city.getOwner() in [Civ.FRANCE.value, Civ.POPE.value]
-                and gc.getGame().getGameTurn() <= xml.i632AD
+                and gc.getGame().getGameTurn() <= DateTurn.i632AD
             ):
                 city.setHasRealBuilding(iPlague, False)
                 return

@@ -14,7 +14,7 @@ import random
 
 from CoreTypes import City, Civ
 from MiscData import MessageData, NUM_CRUSADES
-from TimelineData import CIV_BIRTHDATE
+from TimelineData import CIV_BIRTHDATE, DateTurn
 from CoreStructures import get_civ_by_id
 from LocationsData import CIV_CAPITAL_LOCATIONS, CITIES
 
@@ -460,41 +460,41 @@ class Crusades:
             self.setCrusadeToReturn(-1)
 
         # Absinthe: crusade date - 5 means the exact time for the arrival
-        if iGameTurn == (xml.i1096AD - 5):  # First Crusade arrives in 1096AD
+        if iGameTurn == (DateTurn.i1096AD - 5):  # First Crusade arrives in 1096AD
             self.setCrusadeInit(0, -1)  # turn 160
         elif (
-            iGameTurn >= (xml.i1147AD - 7)
+            iGameTurn >= (DateTurn.i1147AD - 7)
             and self.getCrusadeInit(0) > 0
             and self.getCrusadeInit(1) == -2
         ):  # Crusade of 1147AD, little earlier (need to be more than 9 turns between crusades)
             self.setCrusadeInit(1, -1)  # turn 176
         elif (
-            iGameTurn >= (xml.i1187AD - 8)
+            iGameTurn >= (DateTurn.i1187AD - 8)
             and self.getCrusadeInit(1) > 0
             and self.getCrusadeInit(2) == -2
         ):  # Crusade of 1187AD, little earlier (need to be more than 9 turns between crusades)
             self.setCrusadeInit(2, -1)  # turn 187
         elif (
-            iGameTurn >= (xml.i1202AD - 4)
+            iGameTurn >= (DateTurn.i1202AD - 4)
             and self.getCrusadeInit(2) > 0
             and self.getCrusadeInit(3) == -2
         ):  # Crusade of 1202AD, little later (need to be more than 9 turns between crusades)
             self.setCrusadeInit(3, -1)  # turn 197
         elif (
-            iGameTurn >= (xml.i1229AD - 3)
+            iGameTurn >= (DateTurn.i1229AD - 3)
             and self.getCrusadeInit(3) > 0
             and self.getCrusadeInit(4) == -2
         ):  # Crusade of 1229AD, little later (need to be more than 9 turns between crusades)
             self.setCrusadeInit(4, -1)  # turn 207
         elif (
-            iGameTurn >= (xml.i1271AD - 5)
+            iGameTurn >= (DateTurn.i1271AD - 5)
             and self.getCrusadeInit(4) > 0
             and self.getCrusadeInit(5) == -2
         ):  # Crusade of 1270AD
             self.setCrusadeInit(5, -1)  # turn 219
 
         # Start of Defensive Crusades: indulgences for the Reconquista given by the Catholic Church in 1000AD
-        if iGameTurn == xml.i1000AD:
+        if iGameTurn == DateTurn.i1000AD:
             self.setDCEnabled(True)
 
         # End of Defensive Crusades: no more DCs after Protestantism is founded
@@ -2140,9 +2140,9 @@ class Crusades:
         return utils.getUniqueUnit(iPlayer, xml.iScout)
 
     def do1200ADCrusades(self):
-        self.setCrusadeInit(0, xml.i1096AD)
-        self.setCrusadeInit(1, xml.i1147AD)
-        self.setCrusadeInit(2, xml.i1187AD)
+        self.setCrusadeInit(0, DateTurn.i1096AD)
+        self.setCrusadeInit(1, DateTurn.i1147AD)
+        self.setCrusadeInit(2, DateTurn.i1187AD)
 
     def isOrMasterChristian(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)

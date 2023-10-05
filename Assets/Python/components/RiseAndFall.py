@@ -28,7 +28,7 @@ from CivilizationsData import (
 )
 from CoreStructures import get_civ_by_id
 from LocationsData import CIV_CAPITAL_LOCATIONS, CIV_NEW_CAPITAL_LOCATIONS, CIV_OLDER_NEIGHBOURS
-from TimelineData import CIV_BIRTHDATE, CIV_RESPAWNING_DATE
+from TimelineData import CIV_BIRTHDATE, CIV_RESPAWNING_DATE, DateTurn
 
 gc = CyGlobalContext()  # LOQ
 PyPlayer = PyHelpers.PyPlayer  # LOQ
@@ -847,7 +847,7 @@ class RiseAndFall:
             # Reduce Uppsala
             self.reduceCity((65, 66))
         # Absinthe: Reduce cities to town, if not owned by the human player
-        if iGameTurn == xml.i1057AD:
+        if iGameTurn == DateTurn.i1057AD:
             # Reduce Kairouan
             pPlot = gc.getMap().plot(43, 55)
             if pPlot.isCity():
@@ -897,7 +897,7 @@ class RiseAndFall:
         # 3Miro: English cheat, the AI is utterly incompetent when it has to launch an invasion on an island
         # 			if in 1300AD Dublin is still Barbarian, it will flip to England
         if (
-            iGameTurn == xml.i1300AD
+            iGameTurn == DateTurn.i1300AD
             and utils.getHumanID() != Civ.ENGLAND.value
             and iPlayer == Civ.ENGLAND.value
             and pEngland.isAlive()
@@ -919,7 +919,7 @@ class RiseAndFall:
 
         # Absinthe: Another English AI cheat, extra defenders and defensive buildings in Normandy some turns after spawn - from RFCE++
         if (
-            iGameTurn == xml.i1066AD + 3
+            iGameTurn == DateTurn.i1066AD + 3
             and utils.getHumanID() != Civ.ENGLAND.value
             and iPlayer == Civ.ENGLAND.value
             and pEngland.isAlive()
@@ -2590,72 +2590,72 @@ class RiseAndFall:
     ):  # Absinthe: only the first civ for which it is True is returned, so the order of the civs is very important here
         if self.canSpecialRespawn(Civ.FRANCE.value, iGameTurn, 12):
             # France united in it's modern borders, start of the Bourbon royal line
-            if xml.i1588AD < iGameTurn < xml.i1700AD and iGameTurn % 5 == 3:
+            if DateTurn.i1588AD < iGameTurn < DateTurn.i1700AD and iGameTurn % 5 == 3:
                 return Civ.FRANCE.value
         if self.canSpecialRespawn(Civ.ARABIA.value, iGameTurn):
             # Saladin, Ayyubid Dynasty
-            if xml.i1080AD < iGameTurn < xml.i1291AD and iGameTurn % 7 == 3:
+            if DateTurn.i1080AD < iGameTurn < DateTurn.i1291AD and iGameTurn % 7 == 3:
                 return Civ.ARABIA.value
         if self.canSpecialRespawn(Civ.BULGARIA.value, iGameTurn):
             # second Bulgarian Empire
-            if xml.i1080AD < iGameTurn < xml.i1299AD and iGameTurn % 5 == 1:
+            if DateTurn.i1080AD < iGameTurn < DateTurn.i1299AD and iGameTurn % 5 == 1:
                 return Civ.BULGARIA.value
         if self.canSpecialRespawn(Civ.CORDOBA.value, iGameTurn):
             # special respawn as the Hafsid dynasty in North Africa
-            if xml.i1229AD < iGameTurn < xml.i1540AD and iGameTurn % 5 == 3:
+            if DateTurn.i1229AD < iGameTurn < DateTurn.i1540AD and iGameTurn % 5 == 3:
                 return Civ.CORDOBA.value
         if self.canSpecialRespawn(Civ.BURGUNDY.value, iGameTurn, 20):
             # Burgundy in the 100 years war
-            if xml.i1336AD < iGameTurn < xml.i1453AD and iGameTurn % 8 == 1:
+            if DateTurn.i1336AD < iGameTurn < DateTurn.i1453AD and iGameTurn % 8 == 1:
                 return Civ.BURGUNDY.value
         if self.canSpecialRespawn(Civ.PRUSSIA.value, iGameTurn):
             # respawn as the unified Prussia
-            if iGameTurn > xml.i1618AD and iGameTurn % 3 == 1:
+            if iGameTurn > DateTurn.i1618AD and iGameTurn % 3 == 1:
                 return Civ.PRUSSIA.value
         if self.canSpecialRespawn(Civ.HUNGARY.value, iGameTurn):
             # reconquest of Buda from the Ottomans
-            if iGameTurn > xml.i1680AD and iGameTurn % 6 == 2:
+            if iGameTurn > DateTurn.i1680AD and iGameTurn % 6 == 2:
                 return Civ.HUNGARY.value
         if self.canSpecialRespawn(Civ.CASTILLE.value, iGameTurn, 25):
             # respawn as the Castile/Aragon Union
-            if xml.i1470AD < iGameTurn < xml.i1580AD and iGameTurn % 5 == 0:
+            if DateTurn.i1470AD < iGameTurn < DateTurn.i1580AD and iGameTurn % 5 == 0:
                 return Civ.CASTILLE.value
         if self.canSpecialRespawn(Civ.ENGLAND.value, iGameTurn, 12):
             # restoration of monarchy
-            if iGameTurn > xml.i1660AD and iGameTurn % 6 == 2:
+            if iGameTurn > DateTurn.i1660AD and iGameTurn % 6 == 2:
                 return Civ.ENGLAND.value
         if self.canSpecialRespawn(Civ.SCOTLAND.value, iGameTurn, 30):
-            if iGameTurn <= xml.i1600AD and iGameTurn % 6 == 3:
+            if iGameTurn <= DateTurn.i1600AD and iGameTurn % 6 == 3:
                 return Civ.SCOTLAND.value
         if self.canSpecialRespawn(Civ.PORTUGAL.value, iGameTurn):
             # respawn to be around for colonies
-            if xml.i1431AD < iGameTurn < xml.i1580AD and iGameTurn % 5 == 3:
+            if DateTurn.i1431AD < iGameTurn < DateTurn.i1580AD and iGameTurn % 5 == 3:
                 return Civ.PORTUGAL.value
         if self.canSpecialRespawn(Civ.AUSTRIA.value, iGameTurn):
             # increasing Habsburg influence in Hungary
-            if xml.i1526AD < iGameTurn < xml.i1690AD and iGameTurn % 8 == 3:
+            if DateTurn.i1526AD < iGameTurn < DateTurn.i1690AD and iGameTurn % 8 == 3:
                 return Civ.AUSTRIA.value
         if self.canSpecialRespawn(Civ.KIEV.value, iGameTurn):
             # Cossack Hetmanate
-            if xml.i1620AD < iGameTurn < xml.i1750AD and iGameTurn % 5 == 3:
+            if DateTurn.i1620AD < iGameTurn < DateTurn.i1750AD and iGameTurn % 5 == 3:
                 return Civ.KIEV.value
         if self.canSpecialRespawn(Civ.MOROCCO.value, iGameTurn):
             # Alaouite Dynasty
-            if iGameTurn > xml.i1631AD and iGameTurn % 8 == 7:
+            if iGameTurn > DateTurn.i1631AD and iGameTurn % 8 == 7:
                 return Civ.MOROCCO.value
         if self.canSpecialRespawn(Civ.ARAGON.value, iGameTurn):
             # Kingdom of Sicily
-            if iGameTurn > xml.i1700AD and iGameTurn % 8 == 7:
+            if iGameTurn > DateTurn.i1700AD and iGameTurn % 8 == 7:
                 return Civ.ARAGON.value
         if self.canSpecialRespawn(Civ.VENECIA.value, iGameTurn):
-            if xml.i1401AD < iGameTurn < xml.i1571AD and iGameTurn % 8 == 7:
+            if DateTurn.i1401AD < iGameTurn < DateTurn.i1571AD and iGameTurn % 8 == 7:
                 return Civ.VENECIA.value
         if self.canSpecialRespawn(Civ.POLAND.value, iGameTurn):
-            if xml.i1410AD < iGameTurn < xml.i1570AD and iGameTurn % 8 == 7:
+            if DateTurn.i1410AD < iGameTurn < DateTurn.i1570AD and iGameTurn % 8 == 7:
                 return Civ.POLAND.value
         if self.canSpecialRespawn(Civ.OTTOMAN.value, iGameTurn):
             # Mehmed II's conquests
-            if xml.i1453AD < iGameTurn < xml.i1514AD and iGameTurn % 6 == 3:
+            if DateTurn.i1453AD < iGameTurn < DateTurn.i1514AD and iGameTurn % 6 == 3:
                 return Civ.OTTOMAN.value
         return -1
 
@@ -3300,7 +3300,7 @@ class RiseAndFall:
     def create1200ADstartingUnits(self):
         iHuman = utils.getHumanID()
         if (
-            CIV_BIRTHDATE[get_civ_by_id(iHuman)] > xml.i1200AD
+            CIV_BIRTHDATE[get_civ_by_id(iHuman)] > DateTurn.i1200AD
         ):  # so iSweden, iPrussia, iLithuania, iAustria, iTurkey, iMoscow, iDutch
             tStart = CIV_CAPITAL_LOCATIONS[get_civ_by_id(iHuman)].to_tuple()
 
@@ -3358,7 +3358,7 @@ class RiseAndFall:
 
         iHuman = utils.getHumanID()
         if (
-            CIV_BIRTHDATE[get_civ_by_id(iHuman)] > xml.i500AD
+            CIV_BIRTHDATE[get_civ_by_id(iHuman)] > DateTurn.i500AD
         ):  # so everyone apart from Byzantium and France
             tStart = CIV_CAPITAL_LOCATIONS[get_civ_by_id(iHuman)].to_tuple()
 

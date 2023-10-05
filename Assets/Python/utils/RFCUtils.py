@@ -20,7 +20,7 @@ from MiscData import (
     MessageData,
 )
 
-from TimelineData import CIV_BIRTHDATE
+from TimelineData import CIV_BIRTHDATE, DateTurn
 from CoreStructures import get_civ_by_id, get_religion_by_id
 from CoreTypes import ProvinceTypes
 
@@ -1833,7 +1833,7 @@ class RFCUtils:
         return lStartYears[self.getScenario()]
 
     def getScenarioStartTurn(self):
-        lStartTurn = [xml.i500AD, xml.i1200AD]
+        lStartTurn = [DateTurn.i500AD, DateTurn.i1200AD]
         return lStartTurn[self.getScenario()]
 
     def getUniqueUnit(self, iPlayer, iUnit):

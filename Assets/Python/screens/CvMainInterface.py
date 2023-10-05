@@ -6,7 +6,7 @@ from CoreTypes import Civ, SpecialParameter
 import CvUtil
 import CvScreenEnums
 
-from TimelineData import CIV_BIRTHDATE
+from TimelineData import CIV_BIRTHDATE, DateTurn
 from CoreStructures import get_civ_by_id
 
 import XMLConsts as xml
@@ -3639,7 +3639,7 @@ class CvMainInterface:
                     iBurgundyCulture = pPlayer.getUHVCounter(0)
                     # Absinthe: only display UHV counter until the UHV date
                     if not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (
-                        xml.i1336AD + 2
+                        DateTurn.i1336AD + 2
                     ):
                         szUHVButton = u"<font=2>%c</font>" % (
                             CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR)
@@ -3686,7 +3686,7 @@ class CvMainInterface:
                     iLithuaniaCulture = pPlayer.getUHVCounter(0)
                     # Absinthe: only display UHV counter until the UHV date
                     if not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (
-                        xml.i1386AD + 2
+                        DateTurn.i1386AD + 2
                     ):
                         szUHVButton = u"<font=2>%c</font>" % (
                             CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR)
@@ -3778,7 +3778,7 @@ class CvMainInterface:
                     iNorwayRazed = pPlayer.getUHVCounter(0)
                     # Absinthe: only display UHV counter until the UHV date
                     if not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (
-                        xml.i1066AD + 2
+                        DateTurn.i1066AD + 2
                     ):
                         szUHVButton = u"<font=2>%c</font>" % (
                             CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR)
@@ -3825,7 +3825,7 @@ class CvMainInterface:
                     iKievFood = pPlayer.getUHVCounter(2)
                     # Absinthe: only display UHV counter until the UHV date
                     if not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (
-                        xml.i1300AD + 2
+                        DateTurn.i1300AD + 2
                     ):
                         szUHVButton = u"<font=2>%c</font>" % (
                             CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR)
@@ -3940,7 +3940,7 @@ class CvMainInterface:
                     iNovgorodFurs = pPlayer.countCultBorderBonuses(xml.iFur)
                     # Absinthe: only display UHV counter until the UHV date
                     if not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (
-                        xml.i1397AD + 2
+                        DateTurn.i1397AD + 2
                     ):
                         szUHVButton = u"<font=2>%c</font>" % (
                             CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR)
@@ -4032,7 +4032,7 @@ class CvMainInterface:
                     iAragonCargoShips = utils.getCargoShips(Civ.ARAGON.value)
                     # Absinthe: only display UHV counter until the UHV date
                     if not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (
-                        xml.i1444AD + 2
+                        DateTurn.i1444AD + 2
                     ):
                         szUHVButton = u"<font=2>%c</font>" % (
                             CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR)

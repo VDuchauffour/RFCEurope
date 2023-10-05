@@ -7,7 +7,7 @@ import RFCEMaps
 import RFCUtils  # Absinthe
 import PyHelpers  # Absinthe
 
-from TimelineData import CIV_BIRTHDATE
+from TimelineData import CIV_BIRTHDATE, DateTurn
 from CoreTypes import Civ, Scenario, ProvinceTypes
 
 gc = CyGlobalContext()
@@ -715,12 +715,12 @@ class ProvinceManager:
         # update provinces for the 1200 AD Scenario
         if utils.getScenario() == Scenario.i1200AD:
             for civ in CIVILIZATIONS.main():
-                if CIV_BIRTHDATE[civ.id] < xml.i1200AD:
+                if CIV_BIRTHDATE[civ.id] < DateTurn.i1200AD:
                     self.onSpawn(civ.id)
 
     def checkTurn(self, iGameTurn):
         # Norse provinces switch back to unstable after the fall of the Norman Kingdom of Sicily
-        if iGameTurn == xml.i1194AD + 1:
+        if iGameTurn == DateTurn.i1194AD + 1:
             pNorway.setProvinceType(xml.iP_Apulia, ProvinceTypes.NONE.value)
             pNorway.setProvinceType(xml.iP_Calabria, ProvinceTypes.NONE.value)
             pNorway.setProvinceType(xml.iP_Sicily, ProvinceTypes.NONE.value)
@@ -730,7 +730,7 @@ class ProvinceManager:
             pDenmark.setProvinceType(xml.iP_Sicily, ProvinceTypes.NONE.value)
             pDenmark.setProvinceType(xml.iP_Malta, ProvinceTypes.NONE.value)
         # Prussia direction change
-        elif iGameTurn == xml.i1618AD:
+        elif iGameTurn == DateTurn.i1618AD:
             pPrussia.setProvinceType(xml.iP_Estonia, ProvinceTypes.NONE.value)
             pPrussia.setProvinceType(xml.iP_Lithuania, ProvinceTypes.NONE.value)
             pPrussia.setProvinceType(xml.iP_Suvalkija, ProvinceTypes.NONE.value)

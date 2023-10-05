@@ -18,7 +18,7 @@ from CivilizationsData import (
 )
 from MiscData import WORLD_WIDTH, WORLD_HEIGHT, GREAT_PROPHET_FAITH_POINT_BONUS
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
-from TimelineData import CIV_BIRTHDATE
+from TimelineData import CIV_BIRTHDATE, DateTurn
 from CoreStructures import get_civ_by_id, get_religion_by_id
 
 gc = CyGlobalContext()  # LOQ
@@ -677,7 +677,7 @@ class RFCEBalance:
                 )
 
         # set the religions and year of the great schism
-        gc.setSchism(xml.iCatholicism, xml.iOrthodoxy, xml.i1053AD)
+        gc.setSchism(xml.iCatholicism, xml.iOrthodoxy, DateTurn.i1053AD)
 
         gc.setHoliestCity(*CITIES[City.JERUSALEM].to_tuple())
 
@@ -1062,7 +1062,7 @@ class RFCEBalance:
         gc.setTimelineTechDateForTech(xml.iBronzeCasting, 15)
         gc.setTimelineTechDateForTech(xml.iTheology, 10)
         gc.setTimelineTechDateForTech(xml.iManorialism, 5)
-        gc.setTimelineTechDateForTech(xml.iStirrup, xml.i600AD)
+        gc.setTimelineTechDateForTech(xml.iStirrup, DateTurn.i600AD)
         gc.setTimelineTechDateForTech(xml.iEngineering, 55)  # teir 2
         gc.setTimelineTechDateForTech(xml.iChainMail, 43)
         gc.setTimelineTechDateForTech(xml.iArt, 38)
@@ -1073,11 +1073,11 @@ class RFCEBalance:
         gc.setTimelineTechDateForTech(xml.iVaultedArches, 90)  #
         gc.setTimelineTechDateForTech(xml.iMusic, 80)
         gc.setTimelineTechDateForTech(xml.iHerbalMedicine, 95)
-        gc.setTimelineTechDateForTech(xml.iFeudalism, xml.i778AD)  # Feudalism
+        gc.setTimelineTechDateForTech(xml.iFeudalism, DateTurn.i778AD)  # Feudalism
         gc.setTimelineTechDateForTech(xml.iFarriers, 100)
         gc.setTimelineTechDateForTech(xml.iMapMaking, 160)  # this is tier 5
         gc.setTimelineTechDateForTech(xml.iBlastFurnace, 120)  # teir 4
-        gc.setTimelineTechDateForTech(xml.iSiegeEngines, xml.i1097AD)  # trebuchets
+        gc.setTimelineTechDateForTech(xml.iSiegeEngines, DateTurn.i1097AD)  # trebuchets
         gc.setTimelineTechDateForTech(xml.iGothicArchitecture, 130)  # 12th century
         gc.setTimelineTechDateForTech(xml.iLiterature, 145)
         gc.setTimelineTechDateForTech(xml.iCodeOfLaws, 120)
@@ -1088,7 +1088,7 @@ class RFCEBalance:
         )  # teir 5: historically late 1200s, and by the 14th century, plate armour was commonly used to supplement mail
         gc.setTimelineTechDateForTech(xml.iMonumentBuilding, 180)
         gc.setTimelineTechDateForTech(xml.iClassicalKnowledge, 175)
-        gc.setTimelineTechDateForTech(xml.iAlchemy, xml.i1144AD)  # Alchemy introduced in Europe
+        gc.setTimelineTechDateForTech(xml.iAlchemy, DateTurn.i1144AD)  # Alchemy introduced in Europe
         gc.setTimelineTechDateForTech(xml.iCivilService, 190)  # teir 6
         gc.setTimelineTechDateForTech(xml.iClockmaking, 200)
         gc.setTimelineTechDateForTech(xml.iPhilosophy, 215)
@@ -1098,7 +1098,7 @@ class RFCEBalance:
         gc.setTimelineTechDateForTech(xml.iOptics, 228)  # teir 7
         gc.setTimelineTechDateForTech(xml.iReplaceableParts, 250)
         gc.setTimelineTechDateForTech(xml.iPatronage, 230)
-        gc.setTimelineTechDateForTech(xml.iGunpowder, xml.i1300AD)
+        gc.setTimelineTechDateForTech(xml.iGunpowder, DateTurn.i1300AD)
         gc.setTimelineTechDateForTech(xml.iBanking, 240)
         gc.setTimelineTechDateForTech(xml.iMilitaryTradition, 260)
         gc.setTimelineTechDateForTech(xml.iShipbuilding, 275)  # teir 8
@@ -1107,33 +1107,33 @@ class RFCEBalance:
         gc.setTimelineTechDateForTech(xml.iChemistry, 280)
         gc.setTimelineTechDateForTech(xml.iPaper, 290)
         gc.setTimelineTechDateForTech(xml.iProfessionalArmy, 295)
-        gc.setTimelineTechDateForTech(xml.iPrintingPress, xml.i1517AD)  # teir 9 from turn 304
+        gc.setTimelineTechDateForTech(xml.iPrintingPress, DateTurn.i1517AD)  # teir 9 from turn 304
         gc.setTimelineTechDateForTech(xml.iPublicWorks, 310)
-        gc.setTimelineTechDateForTech(xml.iMatchlock, xml.i1500AD)
-        gc.setTimelineTechDateForTech(xml.iArabicKnowledge, xml.i1491AD)  # fall of Granada
-        gc.setTimelineTechDateForTech(xml.iAstronomy, xml.i1514AD)  # teir 10 Copernicus
-        gc.setTimelineTechDateForTech(xml.iSteamEngines, xml.i1690AD)  # first steam engine
+        gc.setTimelineTechDateForTech(xml.iMatchlock, DateTurn.i1500AD)
+        gc.setTimelineTechDateForTech(xml.iArabicKnowledge, DateTurn.i1491AD)  # fall of Granada
+        gc.setTimelineTechDateForTech(xml.iAstronomy, DateTurn.i1514AD)  # teir 10 Copernicus
+        gc.setTimelineTechDateForTech(xml.iSteamEngines, DateTurn.i1690AD)  # first steam engine
         gc.setTimelineTechDateForTech(xml.iConstitution, 375)
         gc.setTimelineTechDateForTech(xml.iPolygonalFort, 370)
         gc.setTimelineTechDateForTech(xml.iArabicMedicine, 342)
-        gc.setTimelineTechDateForTech(xml.iRenaissanceArt, xml.i1540AD)  # teir 11, 1541
+        gc.setTimelineTechDateForTech(xml.iRenaissanceArt, DateTurn.i1540AD)  # teir 11, 1541
         gc.setTimelineTechDateForTech(xml.iNationalism, 380)
         gc.setTimelineTechDateForTech(xml.iLiberalism, 400)
-        gc.setTimelineTechDateForTech(xml.iScientificMethod, xml.i1623AD)  # Galilei
+        gc.setTimelineTechDateForTech(xml.iScientificMethod, DateTurn.i1623AD)  # Galilei
         gc.setTimelineTechDateForTech(xml.iMilitaryTactics, 410)
         gc.setTimelineTechDateForTech(xml.iNavalArchitecture, 385)  # teir 12
         gc.setTimelineTechDateForTech(xml.iCivilEngineering, 395)
         gc.setTimelineTechDateForTech(xml.iRightOfMan, 460)
         gc.setTimelineTechDateForTech(xml.iEconomics, 435)
-        gc.setTimelineTechDateForTech(xml.iPhysics, xml.i1687AD)
+        gc.setTimelineTechDateForTech(xml.iPhysics, DateTurn.i1687AD)
         gc.setTimelineTechDateForTech(xml.iBiology, 440)
         gc.setTimelineTechDateForTech(xml.iCombinedArms, 430)
-        gc.setTimelineTechDateForTech(xml.iTradingCompanies, xml.i1600AD)  # teir 13 from turn 325
+        gc.setTimelineTechDateForTech(xml.iTradingCompanies, DateTurn.i1600AD)  # teir 13 from turn 325
         gc.setTimelineTechDateForTech(xml.iMachineTools, 450)
         gc.setTimelineTechDateForTech(xml.iFreeMarket, 450)
         gc.setTimelineTechDateForTech(xml.iExplosives, 460)
         gc.setTimelineTechDateForTech(xml.iMedicine, 458)
-        gc.setTimelineTechDateForTech(xml.iIndustrialTech, xml.i1800AD)
+        gc.setTimelineTechDateForTech(xml.iIndustrialTech, DateTurn.i1800AD)
 
     def preMapsNSizes(self):
         # settlersMaps, DO NOT CHANGE THIS CODE

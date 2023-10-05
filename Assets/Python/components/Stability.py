@@ -1132,10 +1132,10 @@ class Stability:
         if iPlayer in [Civ.OTTOMAN.value, Civ.MOSCOW.value]:  # five free cities for those two
             iNumCities = max(0, iNumCities - 5)
         iExpStability -= iNumCities * iNumCities / 40
-        # 	if ( pPlayer.getID() == Civ.OTTOMAN.value and pPlayer.getStability() < 1 and gc.getGame().getGameTurn() < xml.i1570AD ): # boost Turkey before the battle of Lepanto
+        # 	if ( pPlayer.getID() == Civ.OTTOMAN.value and pPlayer.getStability() < 1 and gc.getGame().getGameTurn() < DateTurn.i1570AD ): # boost Turkey before the battle of Lepanto
         # 		if ( not pPlayer.isHuman() ):
         # 			iExpStability += min( 3 - pPlayer.getStability(), 6 )
-        # 	if ( pPlayer.getID() == Civ.VENECIA.value and pPlayer.getStability() < 1 and gc.getGame().getGameTurn() < xml.i1204AD ): # Venice has trouble early on due to its civics
+        # 	if ( pPlayer.getID() == Civ.VENECIA.value and pPlayer.getStability() < 1 and gc.getGame().getGameTurn() < DateTurn.i1204AD ): # Venice has trouble early on due to its civics
         # 		if ( not pPlayer.isHuman() ):
         # 			iExpStability += 4
         pPlayer.setStabilityVary(StabilityCategory.EXPANSION.value, iExpStability)

@@ -4,12 +4,11 @@ from CvPythonExtensions import *
 from CivilizationsData import CIVILIZATIONS
 from CoreTypes import Civ
 import PyHelpers  # LOQ
-import XMLConsts as xml
 import RFCUtils
 import RFCEMaps
 from StoredData import sd
 from MiscData import WORLD_HEIGHT
-from TimelineData import CIV_BIRTHDATE
+from TimelineData import CIV_BIRTHDATE, DateTurn
 from CoreStructures import get_civ_by_id
 
 # globals
@@ -108,7 +107,7 @@ class AIWars:
                         # teamRagusa.setAtWar( pVenice.getTeam(), True )
 
         # Absinthe: Kingdom of Hungary should try to dominate Sisak/Zagreb if it's independent
-        if iGameTurn > xml.i1000AD and iGameTurn % 7 == 3:
+        if iGameTurn > DateTurn.i1000AD and iGameTurn % 7 == 3:
             pHungary = gc.getPlayer(Civ.HUNGARY.value)
             if pHungary.isAlive() and not pHungary.isHuman():
                 pZagrebPlot = gc.getMap().plot(62, 34)
@@ -124,7 +123,7 @@ class AIWars:
         if iGameTurn == self.getNextTurnAIWar():
 
             # 3Miro: how long it takes (the else from the statement goes all the way down)
-            # if (iGameTurn > xml.i1600AD): #longer periods due to globalization of contacts
+            # if (iGameTurn > DateTurn.i1600AD): #longer periods due to globalization of contacts
             # 	iMinInterval = iMinIntervalLate
             # 	iMaxInterval = iMaxIntervalLate
             # else:

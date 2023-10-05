@@ -5,6 +5,7 @@ from CoreTypes import Civ
 import PyHelpers  # LOQ
 import Popup
 import RFCUtils
+from TimelineData import DateTurn
 import XMLConsts as xml
 from StoredData import sd
 
@@ -569,7 +570,7 @@ tValletta = (
 # lStaraSich = [88,40,300,0] #1500 AD
 
 dIndependentCities = {
-    xml.i500AD: [
+    DateTurn.i500AD: [
         tTangier,
         tBordeaux,
         tAlger,
@@ -591,33 +592,33 @@ dIndependentCities = {
         tSeville,
         tPalermo,
     ],
-    xml.i552AD: [tInverness],
-    xml.i600AD: [tRhodes],
-    xml.i640AD: [tNorwich],
-    xml.i670AD: [tKairouan],
-    xml.i680AD: [tToledo, tLeicester],
-    xml.i700AD: [tValencia, tPamplona, tLubeck, tPorto, tDublin, tDownpatrick],
-    xml.i760AD: [tTonsberg],
-    xml.i768AD: [tRaska],
-    xml.i780AD: [tFez],
-    xml.i800AD: [tMilanR, tPrague, tKursk, tCalais, tNidaros, tUppsala, tBeloozero, tZagreb],
-    xml.i850AD: [tBrennabor],
-    xml.i880AD: [tApulum],
-    xml.i900AD: [tTvanksta, tKrakow, tRiga, tWales, tVisby],
-    xml.i911AD: [tCaenR],
-    xml.i960AD: [tMinsk, tSmolensk],
-    xml.i988AD: [tDublinR],
-    xml.i1010AD: [tYaroslavl],
-    xml.i1050AD: [tGroningen, tKalmar],
-    xml.i1110AD: [tGraz],
-    xml.i1124AD: [tHalych],
-    xml.i1200AD: [tRigaR],
-    xml.i1227AD: [tTripoliR],
-    xml.i1250AD: [tAbo, tPerekop],
-    xml.i1320AD: [tNizhnyNovgorod],
-    xml.i1393AD: [tTanais],
-    xml.i1410AD: [tReykjavik],
-    xml.i1530AD: [tValletta],
+    DateTurn.i552AD: [tInverness],
+    DateTurn.i600AD: [tRhodes],
+    DateTurn.i640AD: [tNorwich],
+    DateTurn.i670AD: [tKairouan],
+    DateTurn.i680AD: [tToledo, tLeicester],
+    DateTurn.i700AD: [tValencia, tPamplona, tLubeck, tPorto, tDublin, tDownpatrick],
+    DateTurn.i760AD: [tTonsberg],
+    DateTurn.i768AD: [tRaska],
+    DateTurn.i780AD: [tFez],
+    DateTurn.i800AD: [tMilanR, tPrague, tKursk, tCalais, tNidaros, tUppsala, tBeloozero, tZagreb],
+    DateTurn.i850AD: [tBrennabor],
+    DateTurn.i880AD: [tApulum],
+    DateTurn.i900AD: [tTvanksta, tKrakow, tRiga, tWales, tVisby],
+    DateTurn.i911AD: [tCaenR],
+    DateTurn.i960AD: [tMinsk, tSmolensk],
+    DateTurn.i988AD: [tDublinR],
+    DateTurn.i1010AD: [tYaroslavl],
+    DateTurn.i1050AD: [tGroningen, tKalmar],
+    DateTurn.i1110AD: [tGraz],
+    DateTurn.i1124AD: [tHalych],
+    DateTurn.i1200AD: [tRigaR],
+    DateTurn.i1227AD: [tTripoliR],
+    DateTurn.i1250AD: [tAbo, tPerekop],
+    DateTurn.i1320AD: [tNizhnyNovgorod],
+    DateTurn.i1393AD: [tTanais],
+    DateTurn.i1410AD: [tReykjavik],
+    DateTurn.i1530AD: [tValletta],
 }
 
 
@@ -636,7 +637,7 @@ lMinorNations = [
         xml.iP_Serbia,
         [],
         [],
-        [xml.i508AD, xml.i852AD, xml.i1346AD],
+        [DateTurn.i508AD, DateTurn.i852AD, DateTurn.i1346AD],
         [20, 20, 20],
         [xml.iAxeman, xml.iAxeman, xml.iLongSwordsman],
         [2, 1, 2],
@@ -646,7 +647,7 @@ lMinorNations = [
         xml.iP_Scotland,
         [Civ.SCOTLAND.value],
         [],
-        [xml.i1297AD, xml.i1569AD, xml.i1715AD],
+        [DateTurn.i1297AD, DateTurn.i1569AD, DateTurn.i1715AD],
         [20, 10, 20],
         [xml.iHighlander, xml.iMusketman, xml.iGrenadier],
         [2, 2, 2],
@@ -656,7 +657,7 @@ lMinorNations = [
         xml.iP_Catalonia,
         [Civ.ARAGON.value],
         [],
-        [xml.i1164AD + 10, xml.i1640AD],
+        [DateTurn.i1164AD + 10, DateTurn.i1640AD],
         [20, 10],
         [xml.iLongSwordsman, xml.iMusketman],
         [2, 2],
@@ -669,14 +670,14 @@ lMinorNations = [
             xml.iIslam,
         ],
         [
-            xml.i1099AD + 8,
-            xml.i1099AD + 16,
-            xml.i1099AD + 25,
-            xml.i1099AD + 33,
-            xml.i1099AD + 40,
-            xml.i1099AD + 47,
-            xml.i1099AD + 55,
-            xml.i1099AD + 65,
+            DateTurn.i1099AD + 8,
+            DateTurn.i1099AD + 16,
+            DateTurn.i1099AD + 25,
+            DateTurn.i1099AD + 33,
+            DateTurn.i1099AD + 40,
+            DateTurn.i1099AD + 47,
+            DateTurn.i1099AD + 55,
+            DateTurn.i1099AD + 65,
         ],
         [30, 30, 40, 40, 30, 30, 30, 30],
         [
@@ -699,14 +700,14 @@ lMinorNations = [
             xml.iIslam,
         ],
         [
-            xml.i1099AD + 8,
-            xml.i1099AD + 16,
-            xml.i1099AD + 25,
-            xml.i1099AD + 33,
-            xml.i1099AD + 40,
-            xml.i1099AD + 47,
-            xml.i1099AD + 55,
-            xml.i1099AD + 65,
+            DateTurn.i1099AD + 8,
+            DateTurn.i1099AD + 16,
+            DateTurn.i1099AD + 25,
+            DateTurn.i1099AD + 33,
+            DateTurn.i1099AD + 40,
+            DateTurn.i1099AD + 47,
+            DateTurn.i1099AD + 55,
+            DateTurn.i1099AD + 65,
         ],
         [30, 30, 40, 40, 30, 30, 30, 30],
         [
@@ -726,7 +727,7 @@ lMinorNations = [
         xml.iP_Oran,
         [],
         [],
-        [xml.i1236AD, xml.i1346AD, xml.i1359AD, xml.i1542AD],
+        [DateTurn.i1236AD, DateTurn.i1346AD, DateTurn.i1359AD, DateTurn.i1542AD],
         [40, 10, 10, 20],
         [xml.iKnight, xml.iHeavyLancer, xml.iHeavyLancer, xml.iMusketman],
         [2, 2, 2, 2],
@@ -736,7 +737,7 @@ lMinorNations = [
         xml.iP_Fez,
         [Civ.MOROCCO.value],
         [],
-        [xml.i1473AD],
+        [DateTurn.i1473AD],
         [30],
         [xml.iArquebusier],
         [4],
@@ -806,7 +807,7 @@ class Barbs:
         iHuman = utils.getHumanID()
 
         # Mediterranean Pirates (Light before 1500, then heavy for rest of game)
-        if xml.i960AD <= iGameTurn < xml.i1401AD:
+        if DateTurn.i960AD <= iGameTurn < DateTurn.i1401AD:
             self.spawnPirate(
                 Civ.BARBARIAN.value,
                 (9, 15),
@@ -822,7 +823,7 @@ class Barbs:
                 1,
                 "",
             )
-        elif iGameTurn >= xml.i1401AD:
+        elif iGameTurn >= DateTurn.i1401AD:
             self.spawnPirate(
                 Civ.BARBARIAN.value,
                 (9, 15),
@@ -854,7 +855,7 @@ class Barbs:
                 1,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_BARBARY_PIRATES", ()),
             )
-        if xml.i1200AD <= iGameTurn < xml.i1500AD:
+        if DateTurn.i1200AD <= iGameTurn < DateTurn.i1500AD:
             self.spawnPirate(
                 Civ.BARBARIAN.value,
                 (9, 15),
@@ -870,7 +871,7 @@ class Barbs:
                 1,
                 "",
             )
-        elif iGameTurn >= xml.i1500AD:
+        elif iGameTurn >= DateTurn.i1500AD:
             self.spawnPirate(
                 Civ.BARBARIAN.value,
                 (9, 15),
@@ -888,7 +889,7 @@ class Barbs:
             )
 
         # Germanic Barbarians throughout Western Europe (France, Germany)
-        if iGameTurn < xml.i600AD:
+        if iGameTurn < DateTurn.i600AD:
             self.spawnUnits(
                 Civ.BARBARIAN.value,
                 (43, 42),
@@ -929,7 +930,7 @@ class Barbs:
                     1,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()),
                 )
-        elif xml.i600AD <= iGameTurn < xml.i800AD:
+        elif DateTurn.i600AD <= iGameTurn < DateTurn.i800AD:
             self.spawnUnits(
                 Civ.BARBARIAN.value,
                 (43, 42),
@@ -998,7 +999,7 @@ class Barbs:
                 )
 
         # Longobards in Italy
-        if xml.i632AD <= iGameTurn <= xml.i800AD:
+        if DateTurn.i632AD <= iGameTurn <= DateTurn.i800AD:
             self.spawnUnits(
                 Civ.BARBARIAN.value,
                 (49, 33),
@@ -1027,7 +1028,7 @@ class Barbs:
             )
 
         # Visigoths in Iberia
-        if xml.i712AD <= iGameTurn <= xml.i892AD:
+        if DateTurn.i712AD <= iGameTurn <= DateTurn.i892AD:
             self.spawnUnits(
                 Civ.BARBARIAN.value,
                 (22, 21),
@@ -1096,7 +1097,7 @@ class Barbs:
                 )
 
         # Berbers in North Africa
-        if xml.i700AD <= iGameTurn < xml.i1020AD:
+        if DateTurn.i700AD <= iGameTurn < DateTurn.i1020AD:
             # Tunesia
             self.spawnUnits(
                 Civ.BARBARIAN.value,
@@ -1181,7 +1182,7 @@ class Barbs:
                 )
 
         # Avars in the Carpathian Basin
-        if xml.i632AD <= iGameTurn < xml.i800AD:
+        if DateTurn.i632AD <= iGameTurn < DateTurn.i800AD:
             self.spawnUnits(
                 Civ.BARBARIAN.value,
                 (60, 30),
@@ -1211,7 +1212,7 @@ class Barbs:
                 )
 
         # Early barbs for Byzantium:
-        if iGameTurn < xml.i640AD:
+        if iGameTurn < DateTurn.i640AD:
             # Pre-Bulgarian Slavs in the Balkans
             self.spawnUnits(
                 Civ.BARBARIAN.value,
@@ -1308,7 +1309,7 @@ class Barbs:
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SASSANIDS", ()),
                 )
         # Barbs in NW Greece
-        if iGameTurn < xml.i720AD:
+        if iGameTurn < DateTurn.i720AD:
             self.spawnUnits(
                 Civ.BARBARIAN.value,
                 (66, 21),
@@ -1338,7 +1339,7 @@ class Barbs:
                 )
 
         # Serbs in the Southern Balkans
-        if xml.i1025AD <= iGameTurn < xml.i1282AD:
+        if DateTurn.i1025AD <= iGameTurn < DateTurn.i1282AD:
             if Civ.BYZANTIUM.value == iHuman:
                 self.spawnUnits(
                     Civ.BARBARIAN.value,
@@ -1395,7 +1396,7 @@ class Barbs:
                 )
 
         # Khazars
-        if xml.i660AD <= iGameTurn < xml.i864AD:
+        if DateTurn.i660AD <= iGameTurn < DateTurn.i864AD:
             self.spawnUnits(
                 Civ.BARBARIAN.value,
                 (88, 31),
@@ -1409,7 +1410,7 @@ class Barbs:
                 1,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_KHAZARS", ()),
             )
-        elif xml.i864AD <= iGameTurn < xml.i920AD:
+        elif DateTurn.i864AD <= iGameTurn < DateTurn.i920AD:
             if Civ.KIEV.value == iHuman:
                 self.spawnUnits(
                     Civ.BARBARIAN.value,
@@ -1453,7 +1454,7 @@ class Barbs:
                 )
 
         # Pechenegs
-        if xml.i920AD <= iGameTurn < xml.i1040AD:
+        if DateTurn.i920AD <= iGameTurn < DateTurn.i1040AD:
             # in the Rus
             self.spawnUnits(
                 Civ.BARBARIAN.value,
@@ -1527,7 +1528,7 @@ class Barbs:
                 )
 
         # Cumans and Kipchaks
-        elif xml.i1040AD <= iGameTurn < xml.i1200AD:
+        elif DateTurn.i1040AD <= iGameTurn < DateTurn.i1200AD:
             # in the Rus
             if Civ.KIEV.value == iHuman:
                 self.spawnUnits(
@@ -1656,7 +1657,7 @@ class Barbs:
         # Vikings on ships
         if Civ.NORWAY.value == iHuman:  # Humans can properly go viking without help
             pass
-        elif xml.i780AD <= iGameTurn < xml.i1000AD:
+        elif DateTurn.i780AD <= iGameTurn < DateTurn.i1000AD:
             if Civ.FRANCE.value == iHuman:
                 self.spawnVikings(
                     Civ.BARBARIAN.value,
@@ -1687,7 +1688,7 @@ class Barbs:
                 )
 
         # Swedish Crusades
-        elif xml.i1150AD <= iGameTurn < xml.i1210AD:
+        elif DateTurn.i1150AD <= iGameTurn < DateTurn.i1210AD:
             self.spawnVikings(
                 Civ.BARBARIAN.value,
                 (71, 62),
@@ -1703,7 +1704,7 @@ class Barbs:
             )
 
         # Chudes in Finland and Estonia
-        if xml.i864AD <= iGameTurn < xml.i1150AD:
+        if DateTurn.i864AD <= iGameTurn < DateTurn.i1150AD:
             self.spawnUnits(
                 Civ.BARBARIAN.value,
                 (72, 67),
@@ -1734,7 +1735,7 @@ class Barbs:
         # Livonian Order as barbs in the area before the Prussian spawn, but only if Prussia is AI (no need for potentially gained extra units for the human player)
         # Also pre-Lithanian barbs for human Prussia a couple turns before the Lithuanian spawn
         if Civ.PRUSSIA.value == iHuman:
-            if xml.i1224AD <= iGameTurn < xml.i1236AD:
+            if DateTurn.i1224AD <= iGameTurn < DateTurn.i1236AD:
                 self.spawnUnits(
                     Civ.BARBARIAN.value,
                     (73, 56),
@@ -1774,7 +1775,7 @@ class Barbs:
                     1,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_BALTICS", ()),
                 )
-        elif xml.i1200AD <= iGameTurn < xml.i1224AD:
+        elif DateTurn.i1200AD <= iGameTurn < DateTurn.i1224AD:
             self.spawnUnits(
                 Civ.BARBARIAN.value,
                 (73, 57),
@@ -1803,7 +1804,7 @@ class Barbs:
             )
 
         # Couple melee barb units in Ireland:
-        if xml.i800AD <= iGameTurn < xml.i900AD:
+        if DateTurn.i800AD <= iGameTurn < DateTurn.i900AD:
             self.spawnUnits(
                 Civ.BARBARIAN.value,
                 (28, 56),
@@ -1819,7 +1820,7 @@ class Barbs:
             )
 
         # Anglo-Saxons before the Danish 1st UHV (Conquer England)
-        elif xml.i970AD <= iGameTurn < xml.i1050AD:
+        elif DateTurn.i970AD <= iGameTurn < DateTurn.i1050AD:
             if Civ.DENMARK.value == iHuman:
                 self.spawnUnits(
                     Civ.BARBARIAN.value,
@@ -1877,7 +1878,7 @@ class Barbs:
 
         # Scots to keep England busy, but only if Scotland is dead
         if not gc.getPlayer(Civ.SCOTLAND.value).isAlive():
-            if xml.i1060AD <= iGameTurn < xml.i1320AD:
+            if DateTurn.i1060AD <= iGameTurn < DateTurn.i1320AD:
                 if Civ.ENGLAND.value == iHuman:
                     self.spawnUnits(
                         Civ.BARBARIAN.value,
@@ -1906,7 +1907,7 @@ class Barbs:
                         1,
                         localText.getText("TXT_KEY_BARBARIAN_NAMES_SCOTS", ()),
                     )
-            elif xml.i1320AD <= iGameTurn < xml.i1500AD:
+            elif DateTurn.i1320AD <= iGameTurn < DateTurn.i1500AD:
                 if Civ.ENGLAND.value == iHuman:
                     self.spawnUnits(
                         Civ.BARBARIAN.value,
@@ -1950,7 +1951,7 @@ class Barbs:
                     )
 
         # Welsh in Britain
-        if xml.i1060AD <= iGameTurn < xml.i1160AD:
+        if DateTurn.i1060AD <= iGameTurn < DateTurn.i1160AD:
             if Civ.ENGLAND.value == iHuman:
                 self.spawnUnits(
                     Civ.BARBARIAN.value,
@@ -1979,7 +1980,7 @@ class Barbs:
                     1,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_WELSH", ()),
                 )
-        elif xml.i1160AD <= iGameTurn < xml.i1452AD:
+        elif DateTurn.i1160AD <= iGameTurn < DateTurn.i1452AD:
             if Civ.ENGLAND.value == iHuman:
                 self.spawnUnits(
                     Civ.BARBARIAN.value,
@@ -2010,7 +2011,7 @@ class Barbs:
                 )
 
         # Magyars (preceeding Hungary)
-        if xml.i840AD <= iGameTurn < xml.i892AD:
+        if DateTurn.i840AD <= iGameTurn < DateTurn.i892AD:
             self.spawnUnits(
                 Civ.BARBARIAN.value,
                 (54, 38),
@@ -2067,7 +2068,7 @@ class Barbs:
                 )
 
         # Wends in NE Germany
-        if xml.i860AD <= iGameTurn < xml.i1053AD:
+        if DateTurn.i860AD <= iGameTurn < DateTurn.i1053AD:
             if Civ.GERMANY.value == iHuman:
                 self.spawnUnits(
                     Civ.BARBARIAN.value,
@@ -2098,7 +2099,7 @@ class Barbs:
                 )
 
         # Great Slav Rising in 983AD
-        if (xml.i983AD - 1) <= iGameTurn < (xml.i983AD + 1):
+        if (DateTurn.i983AD - 1) <= iGameTurn < (DateTurn.i983AD + 1):
             if Civ.GERMANY.value == iHuman:
                 self.spawnUnits(
                     Civ.BARBARIAN.value,
@@ -2168,7 +2169,7 @@ class Barbs:
                 )
 
         # Barbs in the middle east
-        if xml.i700AD <= iGameTurn <= xml.i1300AD:
+        if DateTurn.i700AD <= iGameTurn <= DateTurn.i1300AD:
             if not gc.getTeam(gc.getPlayer(Civ.ARABIA.value).getTeam()).isHasTech(xml.iFarriers):
                 self.spawnUnits(
                     Civ.BARBARIAN.value,
@@ -2253,7 +2254,7 @@ class Barbs:
                     )
 
         # Banu Hilal and Bani Hassan, in Morocco and Tunesia
-        if xml.i1040AD <= iGameTurn < xml.i1229AD:
+        if DateTurn.i1040AD <= iGameTurn < DateTurn.i1229AD:
             if Civ.MOROCCO.value == iHuman:
                 self.spawnUnits(
                     Civ.BARBARIAN.value,
@@ -2308,7 +2309,7 @@ class Barbs:
                     1,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_BANU_HILAL", ()),
                 )
-        if xml.i1640AD <= iGameTurn < xml.i1680AD:
+        if DateTurn.i1640AD <= iGameTurn < DateTurn.i1680AD:
             self.spawnUnits(
                 Civ.BARBARIAN.value,
                 (18, 1),
@@ -2324,7 +2325,7 @@ class Barbs:
             )
 
         # Pre Mongols to keep Kiev busy
-        if xml.i900AD <= iGameTurn < xml.i1020AD:
+        if DateTurn.i900AD <= iGameTurn < DateTurn.i1020AD:
             self.spawnUnits(
                 Civ.BARBARIAN.value,
                 (93, 35),
@@ -2338,7 +2339,7 @@ class Barbs:
                 1,
                 "",
             )
-        elif xml.i1020AD <= iGameTurn < xml.i1236AD:
+        elif DateTurn.i1020AD <= iGameTurn < DateTurn.i1236AD:
             self.spawnUnits(
                 Civ.BARBARIAN.value,
                 (93, 35),
@@ -2368,7 +2369,7 @@ class Barbs:
                 )
 
         # Barbs in Anatolia pre Seljuks (but after Sassanids)
-        if xml.i700AD <= iGameTurn < xml.i1050AD:
+        if DateTurn.i700AD <= iGameTurn < DateTurn.i1050AD:
             self.spawnUnits(
                 Civ.BARBARIAN.value,
                 (97, 20),
@@ -2476,7 +2477,7 @@ class Barbs:
                 )
 
         # Seljuks
-        if xml.i1064AD <= iGameTurn < xml.i1094AD:
+        if DateTurn.i1064AD <= iGameTurn < DateTurn.i1094AD:
             self.spawnUnits(
                 Civ.BARBARIAN.value,
                 (90, 21),
@@ -2780,7 +2781,7 @@ class Barbs:
                 )
 
         # Danishmends
-        if xml.i1077AD <= iGameTurn < xml.i1147AD:
+        if DateTurn.i1077AD <= iGameTurn < DateTurn.i1147AD:
             if Civ.BYZANTIUM.value == iHuman:
                 self.spawnUnits(
                     Civ.BARBARIAN.value,
@@ -2811,7 +2812,7 @@ class Barbs:
                 )
 
         # Mongols
-        if xml.i1236AD <= iGameTurn < xml.i1288AD:
+        if DateTurn.i1236AD <= iGameTurn < DateTurn.i1288AD:
             # Kiev
             if Civ.KIEV.value == iHuman:
                 self.spawnUnits(
@@ -3037,7 +3038,7 @@ class Barbs:
 
         # Timurids, Tamerlane's conquests (aka Mongols, the return!)
         if (
-            xml.i1380AD <= iGameTurn <= xml.i1431AD
+            DateTurn.i1380AD <= iGameTurn <= DateTurn.i1431AD
         ):  # Timur started his first western campaigns in 1380AD
             # Eastern Europe
             self.spawnUnits(
@@ -3152,7 +3153,7 @@ class Barbs:
                 )
 
         # Nogais
-        if xml.i1500AD <= iGameTurn <= xml.i1600AD:
+        if DateTurn.i1500AD <= iGameTurn <= DateTurn.i1600AD:
             self.spawnUnits(
                 Civ.BARBARIAN.value,
                 (93, 38),
@@ -3182,7 +3183,7 @@ class Barbs:
                 )
 
         # Kalmyks
-        elif xml.i1600AD <= iGameTurn <= xml.i1715AD:
+        elif DateTurn.i1600AD <= iGameTurn <= DateTurn.i1715AD:
             self.spawnUnits(
                 Civ.BARBARIAN.value,
                 (93, 38),
@@ -3380,11 +3381,11 @@ class Barbs:
         # getHandicapType: Viceroy=0, Monarch=1, Emperor=2)
         iHandicap = gc.getGame().getHandicapType()
         iTurn = gc.getGame().getGameTurn()
-        if iTurn > xml.i1500AD:
+        if iTurn > DateTurn.i1500AD:
             iBarbUnit = xml.iMusketman
-        elif iTurn > xml.i1284AD:
+        elif iTurn > DateTurn.i1284AD:
             iBarbUnit = xml.iArquebusier
-        elif iTurn > xml.i840AD:
+        elif iTurn > DateTurn.i840AD:
             iBarbUnit = xml.iHorseArcher
         else:
             iBarbUnit = xml.iSpearman

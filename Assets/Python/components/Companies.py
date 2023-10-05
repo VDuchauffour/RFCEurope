@@ -10,6 +10,7 @@ import RFCUtils
 import Crusades
 from operator import itemgetter
 
+from TimelineData import DateTurn
 from MiscData import MessageData
 from CoreTypes import City, Civ, Scenario, SpecialParameter
 
@@ -57,7 +58,7 @@ class Companies:
 
         # update companies at the beginning of the 1200AD scenario:
         if utils.getScenario() == Scenario.i1200AD:
-            iGameTurn = xml.i1200AD
+            iGameTurn = DateTurn.i1200AD
             for iCompany in range(xml.iNumCompanies):
                 if iGameTurn > tCompaniesBirth[iCompany] and iGameTurn < tCompaniesDeath[iCompany]:
                     self.addCompany(iCompany, 2)
@@ -96,7 +97,7 @@ class Companies:
                 iMaxCompanies += 2
         # increased limit for Hansa after their first general Diet in 1356
         if iCompany == iHansa:
-            if xml.i1356AD < iGameTurn < tCompaniesDeath[iCompany]:
+            if DateTurn.i1356AD < iGameTurn < tCompaniesDeath[iCompany]:
                 iMaxCompanies += 3
 
         # Templars are Teutons are gone after the Protestant reformation
