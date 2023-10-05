@@ -467,9 +467,6 @@ iNumBuildings = 176
 ) = range(iNumBuildings)
 
 
-iBeginWonders = iVersailles
-iEndWonders = iLanterna
-
 # Projects, Colonies
 iNumProjects = 25
 (

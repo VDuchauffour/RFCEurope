@@ -2,7 +2,7 @@
 
 from CvPythonExtensions import *
 from CivilizationsData import CIVILIZATIONS
-from CoreTypes import City, Civ, Religion, Scenario, UniquePower
+from CoreTypes import City, Civ, Religion, Scenario, UniquePower, Wonder
 import CvUtil
 import CvScreenEnums
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
@@ -1911,7 +1911,7 @@ class RFCUtils:
         return list[gc.getGame().getSorenRandNum(len(list), "Random entry")]
 
     def isWonder(self, iBuilding):
-        return xml.iBeginWonders <= iBuilding <= xml.iEndWonders
+        return iBuilding in [w.value for w in Wonder]
 
     def getWorldPlotsList(self):
         return [(x, y) for x in range(WORLD_WIDTH) for y in range(WORLD_HEIGHT)]

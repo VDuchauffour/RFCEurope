@@ -25,6 +25,7 @@ import random
 from MiscData import WORLD_HEIGHT, MessageData
 from CivilizationsData import CIVILIZATIONS
 from LocationsData import CIV_NEIGHBOURS
+from CoreTypes import Wonder
 
 utils = RFCUtils.RFCUtils()
 balance = RFCEBalance.RFCEBalance()
@@ -1800,9 +1801,7 @@ class CvEventManager:
                 iX = city.getX()
                 iY = city.getY()
                 # Absinthe: collect all wonders, including shrines (even though cities with shrines can't be destroyed in the mod)
-                lAllWonders = []
-                for iWonder in range(xml.iBeginWonders, xml.iEndWonders):
-                    lAllWonders.append(iWonder)
+                lAllWonders = [w.value for w in Wonder]
                 for iWonder in [
                     xml.iCatholicShrine,
                     xml.iOrthodoxShrine,
@@ -2121,9 +2120,7 @@ class CvEventManager:
                 iX = pCity.getX()
                 iY = pCity.getY()
                 # Absinthe: collect all wonders, including shrines
-                lAllWonders = []
-                for iWonder in range(xml.iBeginWonders, xml.iEndWonders):
-                    lAllWonders.append(iWonder)
+                lAllWonders = [w.value for w in Wonder]
                 for iWonder in [
                     xml.iCatholicShrine,
                     xml.iOrthodoxShrine,
