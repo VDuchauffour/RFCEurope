@@ -845,7 +845,7 @@ class Religions:
     def selectRandomCityArea(self, tTopLeft, tBottomRight):  # currently unused
         "selects a random city in the tTopLeft tBottomRight rectangle"
         cityList = []
-        for (x, y) in utils.getPlotList(tTopLeft, tTopRight):
+        for (x, y) in utils.getPlotList(tTopLeft, tBottomRight):
             pCurrent = gc.getMap().plot(x, y)
             if pCurrent.isCity():
                 for iPlayer in CIVILIZATIONS.ids():
@@ -862,7 +862,7 @@ class Religions:
         "selects a random city from a given civ in the tTopLeft tBottomRight rectangle"
         if gc.getPlayer(iCiv).isAlive():
             cityList = []
-            for (x, y) in utils.getPlotList(tTopLeft, tTopRight):
+            for (x, y) in utils.getPlotList(tTopLeft, tBottomRight):
                 pCurrent = gc.getMap().plot(x, y)
                 if pCurrent.isCity():
                     if pCurrent.getPlotCity().getOwner() == iCiv:
