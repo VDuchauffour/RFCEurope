@@ -300,6 +300,30 @@ class Civilizations(list):
         """Return the object with only `civs` given its keys, i.e. the relevant `Civ` member."""
         return self.filter(lambda c: c.key in civs)
 
+    def alive(self):
+        """Return alive civilizations."""
+        return self.where(lambda c: c.player.isAlive())
+
+    def dead(self):
+        """Return dead civilizations."""
+        return self.where(lambda c: c.player.isAlive())
+
+    def existing(self):
+        """Return existing civilizations."""
+        return self.where(lambda c: c.player.isExisting())
+
+    def inexisting(self):
+        """Return inexisting civilizations."""
+        return self.where(lambda c: not c.player.isExisting())
+
+    def ai(self):
+        """Return civilizations played by AI."""
+        return self.where(lambda c: not c.player.isHuman())
+
+    def human(self):
+        """Return civilization of the player."""
+        return self.where(lambda c: c.player.isHuman())
+
     def main(self):
         """Return main civilizations, i.e. not minor and playable."""
         return self.filter(lambda c: c.properties.is_playable and not c.properties.is_minor)
