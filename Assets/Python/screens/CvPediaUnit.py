@@ -11,6 +11,7 @@ from CvPythonExtensions import *
 from CoreTypes import Civ
 import CvUtil
 import CvScreenEnums
+from MiscData import MERCENARY_ONLY_UNITS
 import XMLConsts as xml
 
 # globals
@@ -481,7 +482,7 @@ class CvPediaUnit:
             )
 
         # add merc button
-        if self.iUnit in xml.lMercsOnly:
+        if self.iUnit in MERCENARY_ONLY_UNITS:
             screen.attachImageButton(
                 panelName,
                 "",

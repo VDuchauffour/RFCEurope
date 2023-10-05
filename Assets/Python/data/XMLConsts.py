@@ -224,37 +224,6 @@ iNumUnits = 129
     iSeljukGuisarme,
 ) = range(iNumUnits)
 
-lMercsOnly = [
-    iCondottieri,
-    iReiter,
-    iBohemianWarWagon,
-    iCorsair,
-    iCrimeanTatarRider,
-    iDonCossack,
-    iDoppelsoldner,
-    iHackapell,
-    iHighlander,
-    iHighlanderGun,
-    iIrishBrigade,
-    iLipkaTatar,
-    iLombardHeavyFootman,
-    iMamlukHeavyCavalry,
-    iNubianLongbowman,
-    iNaffatun,
-    iSouthSlavVlastela,
-    iStradiot,
-    iSwissPikeman,
-    iSwissGun,
-    iTagmata,
-    iTouareg,
-    iTurkopoles,
-    iVarangianGuard,
-    iWaardgelder,
-    iWalloonGuard,
-    iWelshLongbowman,
-    iZanji,
-    iZaporozhianCossack,
-]
 
 lBarbsOnly = [
     iBedouin,
