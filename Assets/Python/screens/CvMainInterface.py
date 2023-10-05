@@ -3730,7 +3730,7 @@ class CvMainInterface:
                         screen.hide("UHVText")
 
                 elif ePlayer == Civ.ARABIA.value:
-                    iIslamInfluence = gc.getGame().calculateReligionPercent(xml.iIslam)
+                    iIslamInfluence = gc.getGame().calculateReligionPercent(Religion.ISLAM.value)
                     # HHG: only display UHV counter as long as the UHV is undefined
                     if pPlayer.getUHV(2) == -1 and not CyInterface().isCityScreenUp():
                         szUHVButton = u"<font=2>%c</font>" % (

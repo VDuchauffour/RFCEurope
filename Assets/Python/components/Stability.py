@@ -754,7 +754,7 @@ class Stability:
                 ):  # Polish UP
                     if pCity.getNumForeignReligions() > 0:
                         # only calculate if Judaism is not the State Religion
-                        if pPlayer.getStateReligion() != xml.iJudaism:
+                        if pPlayer.getStateReligion() != Religion.JUDAISM.value:
                             bJewInstability = True
                         if iCivic4 == xml.iCivicPaganism:  # Pagans are a bit more tolerant
                             iReligionStability -= 1
@@ -774,7 +774,7 @@ class Stability:
             if (
                 bJewInstability
                 and pCity.hasBuilding(xml.iJewishQuarter)
-                and pCity.isHasReligion(xml.iJudaism)
+                and pCity.isHasReligion(Religion.JUDAISM.value)
             ):  # only if there are some religious penalties present in the city
                 iReligionStability += 1
 

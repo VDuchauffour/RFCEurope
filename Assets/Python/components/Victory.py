@@ -697,7 +697,7 @@ class Victory:
 
     def onReligionFounded(self, iReligion, iFounder):
         # Germany UHV 2: Start the Reformation (Found Protestantism)
-        if iReligion == xml.iProtestantism:
+        if iReligion == Religion.PROTESTANTISM.value:
             if iFounder == Civ.GERMANY.value:
                 self.wonUHV(Civ.GERMANY.value, 1)
             else:
@@ -804,8 +804,9 @@ class Victory:
         # Sweden UHV 2: Raze 5 Catholic cities while being Protestant by 1660
         if iPlayer == Civ.SWEDEN.value:
             if self.isPossibleUHV(iPlayer, 1, False):
-                if pSweden.getStateReligion() == xml.iProtestantism and city.isHasReligion(
-                    xml.iCatholicism
+                if (
+                    pSweden.getStateReligion() == Religion.PROTESTANTISM.value
+                    and city.isHasReligion(Religion.CATHOLICISM.value)
                 ):
                     iRazed = pSweden.getUHVCounter(1) + 1
                     pSweden.setUHVCounter(1, iRazed)
@@ -1149,7 +1150,7 @@ class Victory:
 
         # UHV 3: Spread Islam to at least 35% of the population of Europe
         if self.isPossibleUHV(Civ.ARABIA.value, 2, True):
-            iPerc = gc.getGame().calculateReligionPercent(xml.iIslam)
+            iPerc = gc.getGame().calculateReligionPercent(Religion.ISLAM.value)
             if iPerc >= 35:
                 self.wonUHV(Civ.ARABIA.value, 2)
 
@@ -1164,7 +1165,7 @@ class Victory:
 
         # UHV 2: Accumulate at least 100 Orthodox Faith Points by 1259
         if self.isPossibleUHV(Civ.BULGARIA.value, 1, True):
-            if pBulgaria.getStateReligion() == xml.iOrthodoxy:
+            if pBulgaria.getStateReligion() == Religion.ORTHODOXY.value:
                 if pBulgaria.getFaith() >= 100:
                     self.wonUHV(Civ.BULGARIA.value, 1)
         if iGameTurn == DateTurn.i1259AD:
@@ -1200,7 +1201,7 @@ class Victory:
             if self.isPossibleUHV(Civ.CORDOBA.value, 2, True):
                 bIslamized = True
                 for iProv in tCordobaIslamize:
-                    if not pCordoba.provinceIsSpreadReligion(iProv, xml.iIslam):
+                    if not pCordoba.provinceIsSpreadReligion(iProv, Religion.ISLAM.value):
                         bIslamized = False
                         break
                 if bIslamized:
@@ -1456,7 +1457,7 @@ class Victory:
             if self.isPossibleUHV(Civ.CASTILLE.value, 0, True):
                 bConverted = True
                 for iProv in tSpainConvert:
-                    if not pSpain.provinceIsConvertReligion(iProv, xml.iCatholicism):
+                    if not pSpain.provinceIsConvertReligion(iProv, Religion.CATHOLICISM.value):
                         bConverted = False
                         break
                 if bConverted:
@@ -1485,7 +1486,7 @@ class Victory:
         # UHV 3: Ensure that Catholic nations have more population and more land than any other religion in 1648
         elif iGameTurn == DateTurn.i1648AD:
             if self.isPossibleUHV(Civ.CASTILLE.value, 2, True):
-                if pSpain.getStateReligion() != xml.iCatholicism:
+                if pSpain.getStateReligion() != Religion.CATHOLICISM.value:
                     self.lostUHV(Civ.CASTILLE.value, 2)
                 else:
                     lLand = [0, 0, 0, 0, 0, 0]  # Prot, Islam, Cath, Orth, Jew, Pagan
@@ -1516,7 +1517,7 @@ class Victory:
                                 lLand[5] += iAverageCityLand
                                 lPop[5] += pCity.getPopulation()
                             else:
-                                for iReligion in range(xml.iNumReligions):
+                                for iReligion in range(len(Religion)):
                                     if pCity.isHasReligion(iReligion):
                                         lLand[iReligion] += (
                                             iAverageCityLand / pCity.getReligionCount()
@@ -1525,12 +1526,12 @@ class Victory:
                                             pCity.getPopulation() / pCity.getReligionCount()
                                         )
 
-                    iCathLand = lLand[xml.iCatholicism]
-                    iCathPop = lPop[xml.iCatholicism]
+                    iCathLand = lLand[Religion.CATHOLICISM.value]
+                    iCathPop = lPop[Religion.CATHOLICISM.value]
 
                     bWon = True
-                    for iReligion in range(xml.iNumReligions + 1):
-                        if iReligion != xml.iCatholicism:
+                    for iReligion in range(len(Religion) + 1):
+                        if iReligion != Religion.CATHOLICISM.value:
                             if lLand[iReligion] >= iCathLand:
                                 bWon = False
                                 break

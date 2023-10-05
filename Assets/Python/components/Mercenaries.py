@@ -123,7 +123,7 @@ lMercList = [
         170,
         300,
         xml.lRegionMiddleEast,
-        [xml.iIslam, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.ISLAM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         50,
     ],
     [
@@ -132,7 +132,7 @@ lMercList = [
         170,
         300,
         xml.lRegionMiddleEast,
-        [xml.iIslam, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.ISLAM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         50,
     ],
     [
@@ -141,7 +141,7 @@ lMercList = [
         170,
         300,
         [xml.iP_Jerusalem],
-        [xml.iIslam, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.ISLAM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         50,
     ],
     [
@@ -150,7 +150,7 @@ lMercList = [
         170,
         300,
         xml.lRegionMiddleEast,
-        [xml.iIslam, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.ISLAM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         50,
     ],
     [
@@ -159,7 +159,7 @@ lMercList = [
         170,
         300,
         xml.lRegionMiddleEast,
-        [xml.iIslam, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.ISLAM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         50,
     ],
     [
@@ -168,7 +168,7 @@ lMercList = [
         170,
         300,
         [xml.iP_Jerusalem],
-        [xml.iIslam, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.ISLAM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         50,
     ],
     [xml.iCondottieri, "TXT_KEY_MERC_ITALIAN", 217, 233, xml.lRegionItaly, [], 10],
@@ -202,7 +202,7 @@ lMercList = [
         129,
         144,
         [xml.iP_Constantinople],
-        [xml.iIslam],
+        [Religion.ISLAM.value],
         10,
     ],
     [
@@ -211,7 +211,7 @@ lMercList = [
         144,
         159,
         [xml.iP_Constantinople],
-        [xml.iIslam],
+        [Religion.ISLAM.value],
         10,
     ],
     [
@@ -220,7 +220,7 @@ lMercList = [
         159,
         174,
         [xml.iP_Constantinople],
-        [xml.iIslam],
+        [Religion.ISLAM.value],
         10,
     ],
     [
@@ -229,7 +229,7 @@ lMercList = [
         174,
         189,
         [xml.iP_Constantinople],
-        [xml.iIslam],
+        [Religion.ISLAM.value],
         10,
     ],
     [
@@ -238,7 +238,7 @@ lMercList = [
         189,
         214,
         [xml.iP_Constantinople],
-        [xml.iIslam],
+        [Religion.ISLAM.value],
         20,
     ],
     [
@@ -247,7 +247,7 @@ lMercList = [
         214,
         239,
         [xml.iP_Constantinople],
-        [xml.iIslam],
+        [Religion.ISLAM.value],
         20,
     ],
     [
@@ -928,7 +928,7 @@ lMercList = [
         160,
         170,
         xml.lRegionMiddleEast,
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         5,
     ],
     [
@@ -937,7 +937,7 @@ lMercList = [
         170,
         180,
         xml.lRegionMiddleEast,
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -946,7 +946,7 @@ lMercList = [
         180,
         190,
         xml.lRegionMiddleEast,
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -955,7 +955,7 @@ lMercList = [
         190,
         200,
         xml.lRegionMiddleEast,
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -964,7 +964,7 @@ lMercList = [
         200,
         210,
         xml.lRegionMiddleEast,
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -973,7 +973,7 @@ lMercList = [
         210,
         217,
         xml.lRegionMiddleEast,
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -982,7 +982,7 @@ lMercList = [
         175,
         190,
         xml.lRegionMiddleEast,
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         5,
     ],
     [
@@ -991,7 +991,7 @@ lMercList = [
         190,
         205,
         xml.lRegionMiddleEast,
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         5,
     ],
     [
@@ -1000,7 +1000,7 @@ lMercList = [
         160,
         170,
         xml.lRegionMiddleEast + [xml.iP_Egypt],
-        [xml.iIslam, xml.iProtestantism],
+        [Religion.ISLAM.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1009,7 +1009,7 @@ lMercList = [
         170,
         180,
         xml.lRegionMiddleEast + [xml.iP_Egypt],
-        [xml.iIslam, xml.iProtestantism],
+        [Religion.ISLAM.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1018,7 +1018,7 @@ lMercList = [
         175,
         185,
         xml.lRegionMiddleEast + [xml.iP_Egypt],
-        [xml.iIslam, xml.iProtestantism],
+        [Religion.ISLAM.value, Religion.PROTESTANTISM.value],
         30,
     ],
     [
@@ -1027,7 +1027,7 @@ lMercList = [
         180,
         190,
         xml.lRegionMiddleEast + [xml.iP_Egypt],
-        [xml.iIslam, xml.iProtestantism],
+        [Religion.ISLAM.value, Religion.PROTESTANTISM.value],
         15,
     ],
     [
@@ -1036,7 +1036,7 @@ lMercList = [
         185,
         195,
         xml.lRegionMiddleEast + [xml.iP_Egypt],
-        [xml.iIslam, xml.iProtestantism],
+        [Religion.ISLAM.value, Religion.PROTESTANTISM.value],
         30,
     ],
     [
@@ -1045,7 +1045,7 @@ lMercList = [
         190,
         200,
         xml.lRegionMiddleEast + [xml.iP_Egypt],
-        [xml.iIslam, xml.iProtestantism],
+        [Religion.ISLAM.value, Religion.PROTESTANTISM.value],
         15,
     ],
     [
@@ -1054,7 +1054,7 @@ lMercList = [
         195,
         205,
         xml.lRegionMiddleEast + [xml.iP_Egypt],
-        [xml.iIslam, xml.iProtestantism],
+        [Religion.ISLAM.value, Religion.PROTESTANTISM.value],
         30,
     ],
     [
@@ -1063,7 +1063,7 @@ lMercList = [
         200,
         210,
         xml.lRegionMiddleEast + [xml.iP_Egypt],
-        [xml.iIslam, xml.iProtestantism],
+        [Religion.ISLAM.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1072,7 +1072,7 @@ lMercList = [
         210,
         217,
         xml.lRegionMiddleEast + [xml.iP_Egypt],
-        [xml.iIslam, xml.iProtestantism],
+        [Religion.ISLAM.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1081,7 +1081,7 @@ lMercList = [
         434,
         444,
         [xml.iP_Flanders, xml.iP_Lorraine, xml.iP_Picardy],
-        [xml.iIslam, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.ISLAM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1090,7 +1090,7 @@ lMercList = [
         444,
         454,
         [xml.iP_Flanders, xml.iP_Lorraine, xml.iP_Picardy],
-        [xml.iIslam, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.ISLAM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1099,7 +1099,7 @@ lMercList = [
         454,
         464,
         [xml.iP_Flanders, xml.iP_Lorraine, xml.iP_Picardy],
-        [xml.iIslam, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.ISLAM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1108,7 +1108,7 @@ lMercList = [
         464,
         474,
         [xml.iP_Flanders, xml.iP_Lorraine, xml.iP_Picardy],
-        [xml.iIslam, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.ISLAM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         15,
     ],
     [
@@ -1117,7 +1117,7 @@ lMercList = [
         474,
         484,
         [xml.iP_Flanders, xml.iP_Lorraine, xml.iP_Picardy],
-        [xml.iIslam, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.ISLAM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         15,
     ],
     [
@@ -1126,7 +1126,7 @@ lMercList = [
         484,
         494,
         [xml.iP_Flanders, xml.iP_Lorraine, xml.iP_Picardy],
-        [xml.iIslam, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.ISLAM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         15,
     ],
     [
@@ -1135,7 +1135,7 @@ lMercList = [
         494,
         500,
         [xml.iP_Flanders, xml.iP_Lorraine, xml.iP_Picardy],
-        [xml.iIslam, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.ISLAM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         20,
     ],
     [xml.iSwissGun, "TXT_KEY_MERC_SWISS", 375, 385, xml.lRegionSwiss, [], 10],
@@ -1267,7 +1267,7 @@ lMercList = [
         42,
         57,
         xml.lRegionAfrica + [xml.iP_Egypt],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         5,
     ],
     [
@@ -1276,7 +1276,7 @@ lMercList = [
         57,
         72,
         xml.lRegionAfrica + [xml.iP_Egypt],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1285,7 +1285,7 @@ lMercList = [
         72,
         87,
         xml.lRegionAfrica + [xml.iP_Egypt],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1294,7 +1294,7 @@ lMercList = [
         87,
         102,
         xml.lRegionAfrica + [xml.iP_Egypt],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1303,7 +1303,7 @@ lMercList = [
         102,
         117,
         xml.lRegionAfrica + [xml.iP_Egypt],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1312,7 +1312,7 @@ lMercList = [
         117,
         132,
         xml.lRegionAfrica + [xml.iP_Egypt],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1321,7 +1321,7 @@ lMercList = [
         132,
         147,
         xml.lRegionAfrica + [xml.iP_Egypt],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1330,7 +1330,7 @@ lMercList = [
         147,
         162,
         xml.lRegionAfrica + [xml.iP_Egypt],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1339,7 +1339,7 @@ lMercList = [
         162,
         177,
         xml.lRegionAfrica + [xml.iP_Egypt],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1348,7 +1348,7 @@ lMercList = [
         177,
         192,
         xml.lRegionAfrica + [xml.iP_Egypt],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1357,7 +1357,7 @@ lMercList = [
         192,
         200,
         xml.lRegionAfrica + [xml.iP_Egypt],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1366,7 +1366,7 @@ lMercList = [
         50,
         65,
         [xml.iP_Morocco, xml.iP_Marrakesh, xml.iP_Tetouan, xml.iP_Oran, xml.iP_Fez],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         5,
     ],
     [
@@ -1375,7 +1375,7 @@ lMercList = [
         65,
         80,
         [xml.iP_Morocco, xml.iP_Marrakesh, xml.iP_Tetouan, xml.iP_Oran, xml.iP_Fez],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         5,
     ],
     [
@@ -1384,7 +1384,7 @@ lMercList = [
         80,
         95,
         [xml.iP_Morocco, xml.iP_Marrakesh, xml.iP_Tetouan, xml.iP_Oran, xml.iP_Fez],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1393,7 +1393,7 @@ lMercList = [
         95,
         110,
         [xml.iP_Morocco, xml.iP_Marrakesh, xml.iP_Tetouan, xml.iP_Oran, xml.iP_Fez],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1402,7 +1402,7 @@ lMercList = [
         110,
         125,
         [xml.iP_Morocco, xml.iP_Marrakesh, xml.iP_Tetouan, xml.iP_Oran, xml.iP_Fez],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1411,7 +1411,7 @@ lMercList = [
         125,
         140,
         [xml.iP_Morocco, xml.iP_Marrakesh, xml.iP_Tetouan, xml.iP_Oran, xml.iP_Fez],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1420,7 +1420,7 @@ lMercList = [
         140,
         165,
         [xml.iP_Morocco, xml.iP_Marrakesh, xml.iP_Tetouan, xml.iP_Oran, xml.iP_Fez],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1429,7 +1429,7 @@ lMercList = [
         165,
         180,
         [xml.iP_Morocco, xml.iP_Marrakesh, xml.iP_Tetouan, xml.iP_Oran, xml.iP_Fez],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1438,7 +1438,7 @@ lMercList = [
         180,
         195,
         [xml.iP_Morocco, xml.iP_Marrakesh, xml.iP_Tetouan, xml.iP_Oran, xml.iP_Fez],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1447,7 +1447,7 @@ lMercList = [
         195,
         210,
         [xml.iP_Morocco, xml.iP_Marrakesh, xml.iP_Tetouan, xml.iP_Oran, xml.iP_Fez],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1456,7 +1456,7 @@ lMercList = [
         210,
         225,
         [xml.iP_Morocco, xml.iP_Marrakesh, xml.iP_Tetouan, xml.iP_Oran, xml.iP_Fez],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1465,7 +1465,7 @@ lMercList = [
         225,
         240,
         [xml.iP_Morocco, xml.iP_Marrakesh, xml.iP_Tetouan, xml.iP_Oran, xml.iP_Fez],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1474,7 +1474,7 @@ lMercList = [
         240,
         255,
         [xml.iP_Morocco, xml.iP_Marrakesh, xml.iP_Tetouan, xml.iP_Oran, xml.iP_Fez],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1483,7 +1483,7 @@ lMercList = [
         255,
         266,
         [xml.iP_Morocco, xml.iP_Marrakesh, xml.iP_Tetouan, xml.iP_Oran, xml.iP_Fez],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         5,
     ],
     [xml.iNubianLongbowman, "TXT_KEY_MERC_NUBIAN", 37, 48, [xml.iP_Egypt], [], 5],
@@ -1638,7 +1638,7 @@ lMercList = [
         260,
         280,
         [xml.iP_Oran, xml.iP_Algiers, xml.iP_Ifriqiya, xml.iP_Cyrenaica, xml.iP_Tripolitania],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         5,
     ],
     [
@@ -1647,7 +1647,7 @@ lMercList = [
         280,
         300,
         [xml.iP_Oran, xml.iP_Algiers, xml.iP_Ifriqiya, xml.iP_Cyrenaica, xml.iP_Tripolitania],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1656,7 +1656,7 @@ lMercList = [
         300,
         320,
         [xml.iP_Oran, xml.iP_Algiers, xml.iP_Ifriqiya, xml.iP_Cyrenaica, xml.iP_Tripolitania],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1665,7 +1665,7 @@ lMercList = [
         320,
         340,
         [xml.iP_Oran, xml.iP_Algiers, xml.iP_Ifriqiya, xml.iP_Cyrenaica, xml.iP_Tripolitania],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1674,7 +1674,7 @@ lMercList = [
         340,
         360,
         [xml.iP_Oran, xml.iP_Algiers, xml.iP_Ifriqiya, xml.iP_Cyrenaica, xml.iP_Tripolitania],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1683,7 +1683,7 @@ lMercList = [
         360,
         380,
         [xml.iP_Oran, xml.iP_Algiers, xml.iP_Ifriqiya, xml.iP_Cyrenaica, xml.iP_Tripolitania],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1692,7 +1692,7 @@ lMercList = [
         380,
         400,
         [xml.iP_Oran, xml.iP_Algiers, xml.iP_Ifriqiya, xml.iP_Cyrenaica, xml.iP_Tripolitania],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1701,7 +1701,7 @@ lMercList = [
         400,
         420,
         [xml.iP_Oran, xml.iP_Algiers, xml.iP_Ifriqiya, xml.iP_Cyrenaica, xml.iP_Tripolitania],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1710,7 +1710,7 @@ lMercList = [
         420,
         440,
         [xml.iP_Oran, xml.iP_Algiers, xml.iP_Ifriqiya, xml.iP_Cyrenaica, xml.iP_Tripolitania],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         10,
     ],
     [
@@ -1719,7 +1719,7 @@ lMercList = [
         440,
         450,
         [xml.iP_Oran, xml.iP_Algiers, xml.iP_Ifriqiya, xml.iP_Cyrenaica, xml.iP_Tripolitania],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         5,
     ],
     [
@@ -1728,7 +1728,7 @@ lMercList = [
         260,
         280,
         [xml.iP_Ifriqiya],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         5,
     ],
     [
@@ -1737,7 +1737,7 @@ lMercList = [
         280,
         300,
         [xml.iP_Ifriqiya],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         5,
     ],
     [
@@ -1746,7 +1746,7 @@ lMercList = [
         300,
         320,
         [xml.iP_Ifriqiya],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         5,
     ],
     [
@@ -1755,7 +1755,7 @@ lMercList = [
         320,
         340,
         [xml.iP_Ifriqiya],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         5,
     ],
     [
@@ -1764,7 +1764,7 @@ lMercList = [
         340,
         360,
         [xml.iP_Ifriqiya],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         5,
     ],
     [
@@ -1773,7 +1773,7 @@ lMercList = [
         360,
         380,
         [xml.iP_Ifriqiya],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         5,
     ],
     [
@@ -1782,7 +1782,7 @@ lMercList = [
         380,
         400,
         [xml.iP_Ifriqiya],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         5,
     ],
     [
@@ -1791,7 +1791,7 @@ lMercList = [
         400,
         420,
         [xml.iP_Ifriqiya],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         5,
     ],
     [
@@ -1800,7 +1800,7 @@ lMercList = [
         420,
         440,
         [xml.iP_Ifriqiya],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         5,
     ],
     [
@@ -1809,7 +1809,7 @@ lMercList = [
         440,
         450,
         [xml.iP_Ifriqiya],
-        [xml.iCatholicism, xml.iOrthodoxy, xml.iProtestantism],
+        [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, Religion.PROTESTANTISM.value],
         5,
     ],
     [xml.iMamlukHeavyCavalry, "TXT_KEY_MERC_EGYPTIAN", 200, 220, [xml.iP_Egypt], [], 20],

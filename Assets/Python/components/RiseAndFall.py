@@ -612,8 +612,8 @@ class RiseAndFall:
                     if loopCity != city:
                         loopCity.setHasRealBuilding((xml.iPalace), False)
                 city.setHasRealBuilding(xml.iPalace, True)
-                if pTurkey.getStateReligion() == xml.iIslam:
-                    city.setHasReligion(xml.iIslam, True, True, False)
+                if pTurkey.getStateReligion() == Religion.ISLAM.value:
+                    city.setHasReligion(Religion.ISLAM.value, True, True, False)
                 # some stability boost and flavour message
                 pTurkey.changeStabilityBase(StabilityCategory.EXPANSION.value, 6)
                 if utils.getHumanID() == iPlayer:
@@ -648,9 +648,9 @@ class RiseAndFall:
                         )
                         city.setHasRealBuilding(xml.iPalace, True)
                     if (
-                        pTurkey.getStateReligion() == xml.iIslam
+                        pTurkey.getStateReligion() == Religion.ISLAM.value
                     ):  # you get Islam anyway, as a bonus
-                        city.setHasReligion(xml.iIslam, True, True, False)
+                        city.setHasReligion(Religion.ISLAM.value, True, True, False)
 
         # Absinthe: Message for the human player, if the last city of a known civ is conquered
         iOriginalOwner = owner

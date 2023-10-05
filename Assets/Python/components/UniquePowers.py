@@ -52,7 +52,7 @@ class UniquePowers:
 
         iNewPoints = 0
         for city in utils.getCityList(iPlayer):
-            for iReligion in range(xml.iNumReligions):
+            for iReligion in range(len(Religion)):
                 if iReligion != iStateReligion and city.isHasReligion(iReligion):
                     iNewPoints += city.getPopulation()
                     break
@@ -101,7 +101,7 @@ class UniquePowers:
     def janissaryNewCityUP(self, iPlayer, city, bConquest):
         pPlayer = gc.getPlayer(iPlayer)
         iStateReligion = pPlayer.getStateReligion()
-        for iReligion in range(xml.iNumReligions):
+        for iReligion in range(len(Religion)):
             if iReligion != iStateReligion and city.isHasReligion(iReligion):
                 iCityPopulation = city.getPopulation()
                 # more janissary points on conquest, less on flip and trade
@@ -109,7 +109,9 @@ class UniquePowers:
                     iJanissaryPoint = iCityPopulation * 9
                 else:
                     iJanissaryPoint = iCityPopulation * 4
-                iOldPoints = pPlayer.getPicklefreeParameter(SpecialParameter.JANISSARY_POINTS.value)
+                iOldPoints = pPlayer.getPicklefreeParameter(
+                    SpecialParameter.JANISSARY_POINTS.value
+                )
                 pPlayer.setPicklefreeParameter(
                     SpecialParameter.JANISSARY_POINTS.value, iOldPoints + iJanissaryPoint
                 )

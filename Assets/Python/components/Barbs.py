@@ -46,7 +46,7 @@ tAlger = (
     1,
     xml.iArcher,
     1,
-    xml.iCatholicism,
+    Religion.CATHOLICISM.value,
     0,
 )
 tBarcelona = ([((40, 28), "Barcino", 100)], Civ.INDEPENDENT_2.value, 1, xml.iArcher, 1, -1, 0)
@@ -65,7 +65,7 @@ tMarseilles = (
     1,
     xml.iArcher,
     1,
-    xml.iCatholicism,
+    Religion.CATHOLICISM.value,
     0,
 )
 tNantes = (
@@ -83,7 +83,7 @@ tCaen = (
     2,
     xml.iArcher,
     1,
-    xml.iCatholicism,
+    Religion.CATHOLICISM.value,
     1,
 )
 tLyon = (
@@ -92,7 +92,7 @@ tLyon = (
     2,
     xml.iArcher,
     2,
-    xml.iCatholicism,
+    Religion.CATHOLICISM.value,
     1,
 )
 tTunis = ([((49, 17), "Tunis", 100)], Civ.INDEPENDENT_4.value, 2, xml.iArcher, 1, -1, 0)
@@ -103,7 +103,7 @@ tLondon = (
     2,
     xml.iArcher,
     2,
-    xml.iCatholicism,
+    Religion.CATHOLICISM.value,
     0,
 )
 tMilan = (
@@ -112,7 +112,7 @@ tMilan = (
     2,
     xml.iArcher,
     2,
-    xml.iCatholicism,
+    Religion.CATHOLICISM.value,
     0,
 )
 tFlorence = (
@@ -121,7 +121,7 @@ tFlorence = (
     2,
     xml.iArcher,
     2,
-    xml.iCatholicism,
+    Religion.CATHOLICISM.value,
     0,
 )
 tTripoli = ([((54, 8), "Tripoli", 100)], Civ.BARBARIAN.value, 1, xml.iArcher, 1, -1, 0)
@@ -141,7 +141,7 @@ tRagusa = (
     1,
     xml.iArcher,
     2,
-    xml.iCatholicism,
+    Religion.CATHOLICISM.value,
     0,
 )
 tSeville = ([((27, 21), "Hispalis", 100)], Civ.INDEPENDENT_4.value, 1, xml.iArcher, 2, -1, 0)
@@ -151,7 +151,7 @@ tPalermo = (
     2,
     xml.iArcher,
     1,
-    xml.iCatholicism,
+    Religion.CATHOLICISM.value,
     1,
 )
 # 552 AD
@@ -171,7 +171,7 @@ tRhodes = (
     1,
     xml.iArcher,
     1,
-    xml.iOrthodoxy,
+    Religion.ORTHODOXY.value,
     0,
 )
 # 640 AD
@@ -191,7 +191,7 @@ tKairouan = (
     1,
     xml.iArcher,
     1,
-    xml.iIslam,
+    Religion.ISLAM.value,
     0,
 )
 # 680 AD
@@ -201,7 +201,7 @@ tToledo = (
     1,
     xml.iArcher,
     1,
-    xml.iCatholicism,
+    Religion.CATHOLICISM.value,
     1,
 )
 tLeicester = (
@@ -220,7 +220,7 @@ tValencia = (
     1,
     xml.iArcher,
     1,
-    xml.iCatholicism,
+    Religion.CATHOLICISM.value,
     1,
 )
 tPamplona = (
@@ -247,7 +247,7 @@ tPorto = (
     1,
     xml.iCrossbowman,
     2,
-    xml.iCatholicism,
+    Religion.CATHOLICISM.value,
     0,
 )
 tDublin = (
@@ -256,7 +256,7 @@ tDublin = (
     1,
     xml.iSpearman,
     1,
-    xml.iCatholicism,
+    Religion.CATHOLICISM.value,
     1,
 )  # Hill of Tara, later becomes Dublin
 tDownpatrick = (
@@ -281,17 +281,17 @@ tMilanR = (
     4,
     xml.iArcher,
     2,
-    xml.iCatholicism,
+    Religion.CATHOLICISM.value,
     0,
 )  # respawn, in case it was razed
-# tFlorenceR = ( [ ((54, 32), "Firenze", 100) ], Civ.INDEPENDENT_2.value, 4, xml.iArcher, 2, xml.iCatholicism, 0 ) #respawn, doesn't work with the multiple options in 500AD
+# tFlorenceR = ( [ ((54, 32), "Firenze", 100) ], Civ.INDEPENDENT_2.value, 4, xml.iArcher, 2, Religion.CATHOLICISM.value, 0 ) #respawn, doesn't work with the multiple options in 500AD
 tPrague = (
     [((60, 44), "Praha", 100)],
     Civ.INDEPENDENT.value,
     1,
     xml.iCrossbowman,
     2,
-    xml.iCatholicism,
+    Religion.CATHOLICISM.value,
     1,
 )
 tKursk = ([((90, 48), "Kursk", 100)], Civ.INDEPENDENT_4.value, 1, xml.iArcher, 2, -1, 0)
@@ -378,7 +378,7 @@ tKrakow = (
     1,
     xml.iCrossbowman,
     2,
-    xml.iCatholicism,
+    Religion.CATHOLICISM.value,
     0,
 )
 tRiga = (
@@ -415,7 +415,7 @@ tCaenR = (
     1,
     xml.iCrossbowman,
     2,
-    xml.iCatholicism,
+    Religion.CATHOLICISM.value,
     0,
 )  # respawn, on the establishment of the Duchy of Normandy
 # 960 AD
@@ -428,7 +428,7 @@ tDublinR = (
     1,
     xml.iCrossbowman,
     1,
-    xml.iCatholicism,
+    Religion.CATHOLICISM.value,
     1,
 )  # respawn, on the traditional Irish foundation date of Dublin
 # 1010 AD
@@ -448,7 +448,7 @@ tGroningen = (
     1,
     xml.iCrossbowman,
     2,
-    xml.iCatholicism,
+    Religion.CATHOLICISM.value,
     0,
 )
 tKalmar = (
@@ -457,7 +457,7 @@ tKalmar = (
     2,
     xml.iCrossbowman,
     1,
-    xml.iCatholicism,
+    Religion.CATHOLICISM.value,
     1,
 )
 # 1060 AD
@@ -469,7 +469,7 @@ tGraz = (
     2,
     xml.iCrossbowman,
     2,
-    xml.iCatholicism,
+    Religion.CATHOLICISM.value,
     0,
 )
 # 1124 AD
@@ -479,7 +479,7 @@ tHalych = (
     2,
     xml.iCrossbowman,
     2,
-    xml.iOrthodoxy,
+    Religion.ORTHODOXY.value,
     0,
 )
 # 1200 AD
@@ -500,7 +500,7 @@ tTripoliR = (
     3,
     xml.iArbalest,
     2,
-    xml.iIslam,
+    Religion.ISLAM.value,
     1,
 )  # respawn
 # 1250 AD
@@ -517,7 +517,15 @@ tNizhnyNovgorod = (
     0,
 )
 # 1392 AD
-tTanais = ([((96, 38), "Tana", 100)], Civ.BARBARIAN.value, 1, xml.iLongbowman, 2, xml.iIslam, 0)
+tTanais = (
+    [((96, 38), "Tana", 100)],
+    Civ.BARBARIAN.value,
+    1,
+    xml.iLongbowman,
+    2,
+    Religion.ISLAM.value,
+    0,
+)
 # 1410 AD
 tReykjavik = (
     [((2, 70), "Reykjavik", 100)],
@@ -535,7 +543,7 @@ tValletta = (
     1,
     xml.iKnightofStJohns,
     3,
-    xml.iCatholicism,
+    Religion.CATHOLICISM.value,
     0,
 )
 
@@ -667,7 +675,7 @@ lMinorNations = [
         xml.iP_Jerusalem,
         [Civ.ARABIA.value, Civ.OTTOMAN.value, Civ.BYZANTIUM.value],
         [
-            xml.iIslam,
+            Religion.ISLAM.value,
         ],
         [
             DateTurn.i1099AD + 8,
@@ -697,7 +705,7 @@ lMinorNations = [
         xml.iP_Syria,
         [Civ.ARABIA.value, Civ.OTTOMAN.value, Civ.BYZANTIUM.value],
         [
-            xml.iIslam,
+            Religion.ISLAM.value,
         ],
         [
             DateTurn.i1099AD + 8,

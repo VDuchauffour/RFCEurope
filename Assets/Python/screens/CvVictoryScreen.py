@@ -2,7 +2,7 @@
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
 from CivilizationsData import CIVILIZATIONS
-from CoreTypes import City, Civ, ProvinceStatus
+from CoreTypes import City, Civ, ProvinceStatus, Religion
 import CvUtil
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
 import PyHelpers
@@ -2443,7 +2443,7 @@ class CvVictoryScreen:
             )
         sText2 += "\n" + self.getProvinceString(vic.tArabiaControlII)
         # UHV3
-        iPerc = gc.getGame().calculateReligionPercent(xml.iIslam)
+        iPerc = gc.getGame().calculateReligionPercent(Religion.ISLAM.value)
         sPerc = str(iPerc) + "%"
         sText3 += (
             localText.getText("TXT_KEY_UHV_ISLAM", ())
@@ -2516,7 +2516,7 @@ class CvVictoryScreen:
         # UHV2
         sText2 += self.getWonderString(vic.tCordobaWonders)
         # UHV3
-        sText3 += self.getReligionProvinceString(vic.tCordobaIslamize, xml.iIslam, 1)
+        sText3 += self.getReligionProvinceString(vic.tCordobaIslamize, Religion.ISLAM.value, 1)
         lHelpTexts = [sText1, sText2, sText3]
         return lHelpTexts
 
@@ -2578,7 +2578,8 @@ class CvVictoryScreen:
         iGoal = pPlayer.getUHV(1)
         sTextGood = localText.getText("TXT_KEY_UHV_NOT_FOUND_YET", ())
         sText2 += self.determineColor(
-            iGoal != 0, gc.getReligionInfo(xml.iProtestantism).getDescription() + " " + sTextGood
+            iGoal != 0,
+            gc.getReligionInfo(Religion.PROTESTANTISM.value).getDescription() + " " + sTextGood,
         )
         # UHV3
         sText3 += self.getProvinceString(vic.tGermanyControlII)
@@ -2680,7 +2681,7 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        sText1 += self.getReligionProvinceString(vic.tSpainConvert, xml.iCatholicism, 2)
+        sText1 += self.getReligionProvinceString(vic.tSpainConvert, Religion.CATHOLICISM.value, 2)
         # UHV2
         iSpainColonies = vic.Victory().getNumRealColonies(iPlayer)
         iOtherColonies = 0
@@ -2734,15 +2735,15 @@ class CvVictoryScreen:
                     lLand[5] += iAverageCityLand
                     lPop[5] += pCity.getPopulation()
                 else:
-                    for iReligion in range(xml.iNumReligions):
+                    for iReligion in range(len(Religion)):
                         if pCity.isHasReligion(iReligion):
                             lLand[iReligion] += iAverageCityLand / pCity.getReligionCount()
                             lPop[iReligion] += pCity.getPopulation() / pCity.getReligionCount()
         # Check the biggest religion
-        iBestLand = xml.iCatholicism
-        iBestPop = xml.iCatholicism
-        for iReligion in range(xml.iNumReligions + 1):
-            if iReligion != xml.iCatholicism:
+        iBestLand = Religion.CATHOLICISM.value
+        iBestPop = Religion.CATHOLICISM.value
+        for iReligion in range(len(Religion) + 1):
+            if iReligion != Religion.CATHOLICISM.value:
                 if lLand[iReligion] >= lLand[iBestLand]:
                     iBestLand = iReligion
                 if lPop[iReligion] >= lPop[iBestPop]:
@@ -2756,7 +2757,7 @@ class CvVictoryScreen:
         sText3 += (
             localText.getText("TXT_KEY_UHV_MOST_LAND", ())
             + " "
-            + self.determineColor(iBestLand == xml.iCatholicism, sBestR)
+            + self.determineColor(iBestLand == Religion.CATHOLICISM.value, sBestR)
         )
         if iBestPop == 5:
             sBestR = localText.getText("TXT_KEY_UHV_PAGAN", ())
@@ -2768,7 +2769,7 @@ class CvVictoryScreen:
             "\n"
             + localText.getText("TXT_KEY_UHV_MOST_POPULATION", ())
             + " "
-            + self.determineColor(iBestPop == xml.iCatholicism, sBestR)
+            + self.determineColor(iBestPop == Religion.CATHOLICISM.value, sBestR)
         )
         lHelpTexts = [sText1, sText2, sText3]
         return lHelpTexts

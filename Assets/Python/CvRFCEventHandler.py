@@ -34,7 +34,7 @@ import RFCEMaps
 from MiscData import MessageData
 from TimelineData import CIV_BIRTHDATE, DateTurn
 from CoreStructures import get_civ_by_id
-from CoreTypes import Civ, City, Scenario, UniquePower, StabilityCategory
+from CoreTypes import Civ, City, Religion, Scenario, UniquePower, StabilityCategory
 from LocationsData import CITIES
 
 gc = CyGlobalContext()
@@ -254,10 +254,16 @@ class CvRFCEventHandler:
         tCity = (city.getX(), city.getY())
 
         # Absinthe: If Arabia doesn't found it's first city, but acquires it with a different method (conquest, flip, trade), it should found Islam there (otherwise no holy city at all)
-        if playerType == Civ.ARABIA.value and not gc.getGame().isReligionFounded(xml.iIslam):
+        if playerType == Civ.ARABIA.value and not gc.getGame().isReligionFounded(
+            Religion.ISLAM.value
+        ):
             # has to be done before the Arab UP is triggered
-            gc.getPlayer(Civ.ARABIA.value).foundReligion(xml.iIslam, xml.iIslam, False)
-            gc.getGame().getHolyCity(xml.iIslam).setNumRealBuilding(xml.iIslamicShrine, 1)
+            gc.getPlayer(Civ.ARABIA.value).foundReligion(
+                Religion.ISLAM.value, Religion.ISLAM.value, False
+            )
+            gc.getGame().getHolyCity(Religion.ISLAM.value).setNumRealBuilding(
+                xml.iIslamicShrine, 1
+            )
 
         # 3Miro: Arab UP
         if gc.hasUP(playerType, UniquePower.SPREAD_STATE_RELIGION_TO_NEW_CITIES.value):
@@ -284,12 +290,12 @@ class CvRFCEventHandler:
 
         # Absinthe: If Protestantism has not been founded by the time the Dutch spawn, then the Dutch should found it with their first city
         if playerType == Civ.DUTCH.value and not gc.getGame().isReligionFounded(
-            xml.iProtestantism
+            Religion.PROTESTANTISM.value
         ):
             gc.getPlayer(Civ.DUTCH.value).foundReligion(
-                xml.iProtestantism, xml.iProtestantism, False
+                Religion.PROTESTANTISM.value, Religion.PROTESTANTISM.value, False
             )
-            gc.getGame().getHolyCity(xml.iProtestantism).setNumRealBuilding(
+            gc.getGame().getHolyCity(Religion.PROTESTANTISM.value).setNumRealBuilding(
                 xml.iProtestantShrine, 1
             )
             self.rel.setReformationActive(True)
@@ -316,7 +322,7 @@ class CvRFCEventHandler:
         # 3Miro: Jerusalem's Golden Age Incentive
         if tCity == CITIES[City.JERUSALEM].to_tuple():
             pPlayer = gc.getPlayer(playerType)
-            if pPlayer.getStateReligion() == xml.iCatholicism:
+            if pPlayer.getStateReligion() == Religion.CATHOLICISM.value:
                 # Absinthe: interface message for the player
                 if pPlayer.isHuman():
                     CityName = city.getNameKey()
@@ -335,8 +341,8 @@ class CvRFCEventHandler:
                         True,
                     )
                 # Absinthe: spread Catholicism if not present already
-                if not city.isHasReligion(xml.iCatholicism):
-                    self.rel.spreadReligion(tCity, xml.iCatholicism)
+                if not city.isHasReligion(Religion.CATHOLICISM.value):
+                    self.rel.spreadReligion(tCity, Religion.CATHOLICISM.value)
                 self.crusade.success(playerType)
 
             # Absinthe: acquiring Jerusalem, with any faith (but not Paganism) -> chance to find a relic
@@ -344,7 +350,7 @@ class CvRFCEventHandler:
             if gc.getGame().getSorenRandNum(100, "Relic found") < 15:
                 # for major players only
                 if playerType < CIVILIZATIONS.majors().len():
-                    if pPlayer.getStateReligion() in range(xml.iNumReligions):
+                    if pPlayer.getStateReligion() in range(len(Religion)):
                         pPlayer.initUnit(
                             xml.iHolyRelic,
                             CITIES[City.JERUSALEM].x,
@@ -497,11 +503,13 @@ class CvRFCEventHandler:
             self.up.faithUP(iOwner, city)
 
         # Absinthe: If Protestantism has not been founded by the time the Dutch spawn, then the Dutch should found it with their first city
-        if iOwner == Civ.DUTCH.value and not gc.getGame().isReligionFounded(xml.iProtestantism):
+        if iOwner == Civ.DUTCH.value and not gc.getGame().isReligionFounded(
+            Religion.PROTESTANTISM.value
+        ):
             gc.getPlayer(Civ.DUTCH.value).foundReligion(
-                xml.iProtestantism, xml.iProtestantism, False
+                Religion.PROTESTANTISM.value, Religion.PROTESTANTISM.value, False
             )
-            gc.getGame().getHolyCity(xml.iProtestantism).setNumRealBuilding(
+            gc.getGame().getHolyCity(Religion.PROTESTANTISM.value).setNumRealBuilding(
                 xml.iProtestantShrine, 1
             )
             self.rel.setReformationActive(True)
@@ -530,21 +538,21 @@ class CvRFCEventHandler:
         "Religion Founded"
         iReligion, iFounder = argsList
 
-        if iReligion != xml.iJudaism:
+        if iReligion != Religion.JUDAISM.value:
             for city in utils.getCityList(iFounder):
                 if city.isHolyCityByType(
                     iReligion
                 ):  # Sedna: Protestant Shrine is now starting point for consistency with Religion.xml, Judaism is special
-                    if iReligion == xml.iProtestantism:
+                    if iReligion == Religion.PROTESTANTISM.value:
                         iTemple = xml.iProtestantTemple
                         iShrine = xml.iProtestantShrine
-                    elif iReligion == xml.iIslam:
+                    elif iReligion == Religion.ISLAM.value:
                         iTemple = xml.iIslamicTemple
                         iShrine = xml.iIslamicShrine
-                    elif iReligion == xml.iCatholicism:
+                    elif iReligion == Religion.CATHOLICISM.value:
                         iTemple = xml.iCatholicTemple
                         iShrine = xml.iCatholicShrine
-                    elif iReligion == xml.iOrthodoxy:
+                    elif iReligion == Religion.ORTHODOXY.value:
                         iTemple = xml.iOrthodoxTemple
                         iShrine = xml.iOrthodoxShrine
                     if not city.isHasRealBuilding(iShrine):
@@ -559,7 +567,7 @@ class CvRFCEventHandler:
             self.sta.onReligionFounded(iFounder)
 
         # 3Miro: end Crusades for the Holy Land after the Reformation
-        if iReligion == xml.iProtestantism:
+        if iReligion == Religion.PROTESTANTISM.value:
             self.crusade.endCrusades()
 
     def onBuildingBuilt(self, argsList):
@@ -645,7 +653,10 @@ class CvRFCEventHandler:
         # 		print ("cityname at y height", x, plot.getCityNameMap(11))
 
         # Absinthe: 868AD Viking attack on Constantinople
-        if iGameTurn == DateTurn.i860AD + sd.scriptDict["lEventRandomness"][iByzantiumVikingAttack] - 2:
+        if (
+            iGameTurn
+            == DateTurn.i860AD + sd.scriptDict["lEventRandomness"][iByzantiumVikingAttack] - 2
+        ):
             if utils.getHumanID() == Civ.BYZANTIUM.value:
                 popup = Popup.PyPopup()
                 popup.setBodyString(
@@ -653,7 +664,10 @@ class CvRFCEventHandler:
                 )
                 popup.launch()
 
-        if iGameTurn == DateTurn.i860AD + sd.scriptDict["lEventRandomness"][iByzantiumVikingAttack]:
+        if (
+            iGameTurn
+            == DateTurn.i860AD + sd.scriptDict["lEventRandomness"][iByzantiumVikingAttack]
+        ):
             if utils.getHumanID() == Civ.BYZANTIUM.value:
                 self.barb.spawnMultiTypeUnits(
                     Civ.BARBARIAN.value,

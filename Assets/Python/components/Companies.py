@@ -35,11 +35,6 @@ tCompaniesBirth = xml.tCompaniesBirth
 tCompaniesDeath = xml.tCompaniesDeath
 tCompaniesLimit = xml.tCompaniesLimit
 lCompanyRegions = xml.lCompanyRegions
-iCatholicism = xml.iCatholicism
-iOrthodoxy = xml.iOrthodoxy
-iProtestantism = xml.iProtestantism
-iIslam = xml.iIslam
-iJudaism = xml.iJudaism
 lCompanyBuilding = [
     xml.iCorporation1,
     xml.iCorporation2,
@@ -81,7 +76,7 @@ class Companies:
                 if plot.isCity():
                     if (
                         gc.getPlayer(plot.getPlotCity().getOwner()).getStateReligion()
-                        == iCatholicism
+                        == Religion.CATHOLICISM.value
                     ):
                         iMaxCompanies = tCompaniesLimit[iCompany]
 
@@ -102,7 +97,7 @@ class Companies:
 
         # Templars are Teutons are gone after the Protestant reformation
         if iCompany in [iTemplars, iTeutons]:
-            if gc.getGame().isReligionFounded(xml.iProtestantism):
+            if gc.getGame().isReligionFounded(Religion.PROTESTANTISM.value):
                 iMaxCompanies = 0
         # Order of Calatrava is only active if Cordoba or Morocco is alive
         # TODO: Only if Cordoba is alive, or Morocco has some territories in Europe?
@@ -168,8 +163,8 @@ class Companies:
             self.announceHuman(iCompany, city)
             # spread the religion if it wasn't present before
             if iCompany in [iHospitallers, iTemplars, iTeutons, iCalatrava]:
-                if not city.isHasReligion(iCatholicism):
-                    city.setHasReligion(iCatholicism, True, True, False)
+                if not city.isHasReligion(Religion.CATHOLICISM.value):
+                    city.setHasReligion(Religion.CATHOLICISM.value, True, True, False)
             # one change at a time, only add the highest ranked city (which didn't have the company before)
             break
 
@@ -299,26 +294,26 @@ class Companies:
         # state religion requirements
         iStateReligion = owner.getStateReligion()
         if iCompany in [iHospitallers, iTemplars, iTeutons]:
-            if iStateReligion == iCatholicism:
+            if iStateReligion == Religion.CATHOLICISM.value:
                 iValue += 3
-            elif iStateReligion in [iProtestantism, iOrthodoxy]:
+            elif iStateReligion in [Religion.PROTESTANTISM.value, Religion.ORTHODOXY.value]:
                 iValue -= 2
             else:
                 return -1
         elif iCompany == iDragon:
-            if iStateReligion == iCatholicism:
+            if iStateReligion == Religion.CATHOLICISM.value:
                 iValue += 2
-            elif iStateReligion == iOrthodoxy:
+            elif iStateReligion == Religion.ORTHODOXY.value:
                 iValue += 1
-            elif iStateReligion == iIslam:
+            elif iStateReligion == Religion.ISLAM.value:
                 return -1
         elif iCompany == iCalatrava:
-            if iStateReligion == iCatholicism:
+            if iStateReligion == Religion.CATHOLICISM.value:
                 iValue += 2
             else:
                 return -1
         else:
-            if iStateReligion == iIslam:
+            if iStateReligion == Religion.ISLAM.value:
                 return -1
 
         # geographical requirements
@@ -346,7 +341,7 @@ class Companies:
         iGameTurn = gc.getGame().getGameTurn()
         if iGameTurn < tCompaniesDeath[iTemplars]:
             if iCompany in [iHospitallers, iTemplars, iTeutons]:
-                if iStateReligion == iCatholicism:
+                if iStateReligion == Religion.CATHOLICISM.value:
                     if iProvince in [xml.iP_Antiochia, xml.iP_Lebanon, xml.iP_Jerusalem]:
                         iValue += 5
                     elif iProvince in [xml.iP_Cyprus, xml.iP_Egypt]:
@@ -382,19 +377,21 @@ class Companies:
         # bonus for religions in the city
         if iCompany in [iHansa, iMedici, iAugsburg, iStGeorge]:
             if city.isHasReligion(
-                iJudaism
+                Religion.JUDAISM.value
             ):  # not necessarily historic, but has great gameplay synergies
                 iValue += 1
         elif iCompany in [iHospitallers, iTemplars, iTeutons, iCalatrava]:
             # they have a harder time to choose a city without Catholicism, but they spread the religion there
-            if not city.isHasReligion(iCatholicism):
+            if not city.isHasReligion(Religion.CATHOLICISM.value):
                 iValue -= 1
-            if city.isHasReligion(iIslam):
+            if city.isHasReligion(Religion.ISLAM.value):
                 iValue -= 1
         elif iCompany == iDragon:
-            if city.isHasReligion(iCatholicism) or city.isHasReligion(iOrthodoxy):
+            if city.isHasReligion(Religion.CATHOLICISM.value) or city.isHasReligion(
+                Religion.ORTHODOXY.value
+            ):
                 iValue += 1
-            if city.isHasReligion(iIslam):
+            if city.isHasReligion(Religion.ISLAM.value):
                 iValue -= 1
 
         # faith points of the population

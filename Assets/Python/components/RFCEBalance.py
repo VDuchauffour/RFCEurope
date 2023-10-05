@@ -669,7 +669,7 @@ class RFCEBalance:
 
         # set religious spread factors
         for civ in CIVILIZATIONS:
-            for iRel in range(xml.iNumReligions):
+            for iRel in range(len(Religion)):
                 gc.setReligionSpread(
                     civ.id,
                     iRel,
@@ -677,7 +677,7 @@ class RFCEBalance:
                 )
 
         # set the religions and year of the great schism
-        gc.setSchism(xml.iCatholicism, xml.iOrthodoxy, DateTurn.i1053AD)
+        gc.setSchism(Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, DateTurn.i1053AD)
 
         gc.setHoliestCity(*CITIES[City.JERUSALEM].to_tuple())
 
@@ -706,35 +706,40 @@ class RFCEBalance:
         # 		i.e. 1 Faith Point = iParameter percent of an attitude point
 
         gc.setReligionBenefit(
-            xml.iOrthodoxy, FaithPointBonusCategory.BOOST_STABILITY.value, 10, 100
+            Religion.ORTHODOXY.value, FaithPointBonusCategory.BOOST_STABILITY.value, 10, 100
         )
         gc.setReligionBenefit(
-            xml.iOrthodoxy, FaithPointBonusCategory.REDUCE_CIVIC_UPKEEP.value, 50, 100
-        )
-
-        gc.setReligionBenefit(
-            xml.iIslam, FaithPointBonusCategory.FASTER_POPULATION_GROWTH.value, 50, 100
-        )
-        gc.setReligionBenefit(
-            xml.iIslam, FaithPointBonusCategory.REDUCING_COST_UNITS.value, 50, 100
+            Religion.ORTHODOXY.value, FaithPointBonusCategory.REDUCE_CIVIC_UPKEEP.value, 50, 100
         )
 
         gc.setReligionBenefit(
-            xml.iProtestantism, FaithPointBonusCategory.REDUCING_TECH_COST.value, 30, 100
+            Religion.ISLAM.value, FaithPointBonusCategory.FASTER_POPULATION_GROWTH.value, 50, 100
         )
         gc.setReligionBenefit(
-            xml.iProtestantism, FaithPointBonusCategory.REDUCING_WONDER_COST.value, 30, 100
+            Religion.ISLAM.value, FaithPointBonusCategory.REDUCING_COST_UNITS.value, 50, 100
         )
 
         gc.setReligionBenefit(
-            xml.iCatholicism, FaithPointBonusCategory.BOOST_DIPLOMACY.value, 6, 100
-        )
-        gc.setReligionBenefit(xml.iIslam, FaithPointBonusCategory.BOOST_DIPLOMACY.value, 5, 100)
-        gc.setReligionBenefit(
-            xml.iProtestantism, FaithPointBonusCategory.BOOST_DIPLOMACY.value, 4, 100
+            Religion.PROTESTANTISM.value, FaithPointBonusCategory.REDUCING_TECH_COST.value, 30, 100
         )
         gc.setReligionBenefit(
-            xml.iOrthodoxy, FaithPointBonusCategory.BOOST_DIPLOMACY.value, 3, 100
+            Religion.PROTESTANTISM.value,
+            FaithPointBonusCategory.REDUCING_WONDER_COST.value,
+            30,
+            100,
+        )
+
+        gc.setReligionBenefit(
+            Religion.CATHOLICISM.value, FaithPointBonusCategory.BOOST_DIPLOMACY.value, 6, 100
+        )
+        gc.setReligionBenefit(
+            Religion.ISLAM.value, FaithPointBonusCategory.BOOST_DIPLOMACY.value, 5, 100
+        )
+        gc.setReligionBenefit(
+            Religion.PROTESTANTISM.value, FaithPointBonusCategory.BOOST_DIPLOMACY.value, 4, 100
+        )
+        gc.setReligionBenefit(
+            Religion.ORTHODOXY.value, FaithPointBonusCategory.BOOST_DIPLOMACY.value, 3, 100
         )
 
         # a land tile that is normally impassable but the desired player can pass through it
@@ -976,7 +981,7 @@ class RFCEBalance:
         gc.setBuildingPref(Civ.POPE.value, xml.iLeonardosWorkshop, 5)
 
         # 3Miro: set the Jews as the minor Religion
-        gc.setMinorReligion(xml.iJudaism)
+        gc.setMinorReligion(Religion.JUDAISM.value)
         gc.setMinorReligionRefugies(0)
 
         # Manor House + Manorialism: iBuilding + 1000 * iCivic + 100,000 * iGold + 1,000,000 * iResearch + 10,000,000 * iCulture + 100,000,000 * iEspionage
@@ -1031,7 +1036,7 @@ class RFCEBalance:
         gc.setProvinceTypeParams(ProvinceTypes.CORE.value, 0, 0, 3, 1)  # triple-culture
 
         # block foundation of Protestantism except by a Catholic player
-        gc.setParentSchismReligions(xml.iCatholicism, xml.iProtestantism)
+        gc.setParentSchismReligions(Religion.CATHOLICISM.value, Religion.PROTESTANTISM.value)
 
         # block declaration of war against newly spawning nations for this many turns (pre-set wars are not affected)
         gc.setPaceTurnsAfterSpawn(5)
@@ -1088,7 +1093,9 @@ class RFCEBalance:
         )  # teir 5: historically late 1200s, and by the 14th century, plate armour was commonly used to supplement mail
         gc.setTimelineTechDateForTech(xml.iMonumentBuilding, 180)
         gc.setTimelineTechDateForTech(xml.iClassicalKnowledge, 175)
-        gc.setTimelineTechDateForTech(xml.iAlchemy, DateTurn.i1144AD)  # Alchemy introduced in Europe
+        gc.setTimelineTechDateForTech(
+            xml.iAlchemy, DateTurn.i1144AD
+        )  # Alchemy introduced in Europe
         gc.setTimelineTechDateForTech(xml.iCivilService, 190)  # teir 6
         gc.setTimelineTechDateForTech(xml.iClockmaking, 200)
         gc.setTimelineTechDateForTech(xml.iPhilosophy, 215)
@@ -1128,7 +1135,9 @@ class RFCEBalance:
         gc.setTimelineTechDateForTech(xml.iPhysics, DateTurn.i1687AD)
         gc.setTimelineTechDateForTech(xml.iBiology, 440)
         gc.setTimelineTechDateForTech(xml.iCombinedArms, 430)
-        gc.setTimelineTechDateForTech(xml.iTradingCompanies, DateTurn.i1600AD)  # teir 13 from turn 325
+        gc.setTimelineTechDateForTech(
+            xml.iTradingCompanies, DateTurn.i1600AD
+        )  # teir 13 from turn 325
         gc.setTimelineTechDateForTech(xml.iMachineTools, 450)
         gc.setTimelineTechDateForTech(xml.iFreeMarket, 450)
         gc.setTimelineTechDateForTech(xml.iExplosives, 460)
@@ -1144,7 +1153,7 @@ class RFCEBalance:
             CIVILIZATIONS.drop(Civ.BARBARIAN).len(),
             xml.iNumTechs,
             xml.iNumBuildingsPlague,
-            xml.iNumReligions,
+            len(Religion),
         )
         for i in CIVILIZATIONS.majors().ids():
             for y in range(WORLD_HEIGHT):
@@ -1213,7 +1222,7 @@ class RFCEBalance:
             max(CIVILIZATIONS.independents().ids()),
             Civ.BARBARIAN.value,
         )
-        gc.setPapalPlayer(Civ.POPE.value, xml.iCatholicism)
+        gc.setPapalPlayer(Civ.POPE.value, Religion.CATHOLICISM.value)
 
         gc.setAutorunHack(xml.iCatapult, 32, 0)  # Autorun hack, sync with RNF module
 

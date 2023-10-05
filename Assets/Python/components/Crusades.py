@@ -24,9 +24,6 @@ PyPlayer = PyHelpers.PyPlayer
 utils = RFCUtils.RFCUtils()
 cnm = CityNameManager.CityNameManager()
 
-iCatholicism = xml.iCatholicism
-iOrthodoxy = xml.iOrthodoxy
-
 
 # Can call DC to aid Catholics, if at war with Non-Catholic and Non-Orthodox player, who isn't vassal of Catholic or Orthodox player and has at least one city in the provinces listed here
 tDefensiveCrusadeMap = [
@@ -391,7 +388,7 @@ class Crusades:
             pPlayer = gc.getPlayer(iPlayer)
             if (
                 iPlayer == Civ.POPE.value
-                or pPlayer.getStateReligion() == iCatholicism
+                or pPlayer.getStateReligion() == Religion.CATHOLICISM.value
                 or not pPlayer.isAlive()
             ):
                 self.setIsTarget(iPlayer, False)
@@ -417,7 +414,7 @@ class Crusades:
         # 		sName = pCity.getName()
         # 		pPlayer = gc.getPlayer( iOwner )
         # 		iReligion = pPlayer.getStateReligion()
-        # 		if (iOwner < CIVILIZATIONS.majors().len() and iReligion == xml.iIslam):
+        # 		if (iOwner < CIVILIZATIONS.majors().len() and iReligion == Religion.ISLAM.value):
         # 			self.setIsTarget( iOwner, True )
         # 			lTargetList.append( sName + " (" + pPlayer.getCivilizationAdjective(0) + ")" )
         self.showPopup(
@@ -499,7 +496,7 @@ class Crusades:
 
         # End of Defensive Crusades: no more DCs after Protestantism is founded
         if self.isDCEnabled():
-            if gc.getGame().isReligionFounded(xml.iProtestantism):
+            if gc.getGame().isReligionFounded(Religion.PROTESTANTISM.value):
                 self.setDCEnabled(False)
 
         if self.isDCEnabled():
@@ -582,7 +579,7 @@ class Crusades:
 
     def anyCatholic(self):
         for civ in CIVILIZATIONS.main():
-            if civ.player.getStateReligion() == iCatholicism:
+            if civ.player.getStateReligion() == Religion.CATHOLICISM.value:
                 return True
         return False
 
@@ -748,7 +745,7 @@ class Crusades:
         # print(" 3Miro Crusades doPart", iHuman, iGameTurn )
         if CIV_BIRTHDATE[get_civ_by_id(iHuman)] < iGameTurn:
             pHuman = gc.getPlayer(iHuman)
-            if pHuman.getStateReligion() != iCatholicism:
+            if pHuman.getStateReligion() != Religion.CATHOLICISM.value:
                 self.setParticipate(False)
                 CyInterface().addMessage(
                     iHuman,
@@ -815,14 +812,14 @@ class Crusades:
             if (
                 CIV_BIRTHDATE[get_civ_by_id(iPlayer)] > iGameTurn
                 or not pPlayer.isAlive()
-                or pPlayer.getStateReligion() != iCatholicism
+                or pPlayer.getStateReligion() != Religion.CATHOLICISM.value
                 or gc.getTeam(pPlayer.getTeam()).isVassal(iTmJerusalem)
             ):
                 self.setVotingPower(iPlayer, 0)
             else:
                 # We use the (similarly named) getVotingPower from CvPlayer.cpp to determine a vote value for a given State Religion, but it's kinda strange
                 # Will leave it this way for now, but might be a good idea to improve it at some point
-                self.setVotingPower(iPlayer, pPlayer.getVotingPower(iCatholicism))
+                self.setVotingPower(iPlayer, pPlayer.getVotingPower(Religion.CATHOLICISM.value))
 
         # No votes from the human player if he/she won't participate (AI civs will always participate)
         iHuman = utils.getHumanID()
@@ -1212,7 +1209,7 @@ class Crusades:
                 if not pTeamRichest.isVassal(iTeamCordoba):
                     # Only if Cordoba is Muslim and not a vassal
                     bIsNotAVassal = not utils.isAVassal(Civ.CORDOBA.value)
-                    if pCordoba.getStateReligion() == xml.iIslam and bIsNotAVassal:
+                    if pCordoba.getStateReligion() == Religion.ISLAM.value and bIsNotAVassal:
                         self.crusadeStolenAI(iRichest, Civ.CORDOBA.value)
                         bStolen = True
                         print(" Crusade: Deviate Crusade stolen ")
@@ -1226,7 +1223,7 @@ class Crusades:
                 if not pTeamRichest.isVassal(iTeamTurkey):
                     # Only if the Ottomans are Muslim and not a vassal
                     bIsNotAVassal = not utils.isAVassal(Civ.OTTOMAN.value)
-                    if pTurkey.getStateReligion() == xml.iIslam and bIsNotAVassal:
+                    if pTurkey.getStateReligion() == Religion.ISLAM.value and bIsNotAVassal:
                         self.crusadeStolenAI(iRichest, Civ.OTTOMAN.value)
                         bStolen = True
                         print(" Crusade: Deviate Crusade stolen ")
@@ -1273,7 +1270,7 @@ class Crusades:
             self.returnCrusaders()
             return
         # Target city can change ownership during the voting
-        if gc.getPlayer(iTargetPlayer).getStateReligion() == iCatholicism:
+        if gc.getPlayer(iTargetPlayer).getStateReligion() == Religion.CATHOLICISM.value:
             self.returnCrusaders()
             return
         # Absinthe: do not Crusade against themselves
@@ -1350,7 +1347,7 @@ class Crusades:
                 iVictim = pPlot.getPlotCity().getOwner()
                 if iVictim < CIVILIZATIONS.majors().len():
                     iReligion = gc.getPlayer(iVictim).getStateReligion()
-                    if iReligion in [iCatholicism, iOrthodoxy]:
+                    if iReligion in [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value]:
                         print(" Crusade: cancelled, target religion changed to Christianity ")
                         return
 
@@ -1358,7 +1355,10 @@ class Crusades:
         pPlot = gc.getMap().plot(iTX, iTY)
         if pPlot.isCity():
             iVictim = pPlot.getPlotCity().getOwner()
-            if iVictim != iLeader and gc.getPlayer(iVictim).getStateReligion() != iCatholicism:
+            if (
+                iVictim != iLeader
+                and gc.getPlayer(iVictim).getStateReligion() != Religion.CATHOLICISM.value
+            ):
                 teamLeader = gc.getTeam(gc.getPlayer(iLeader).getTeam())
                 iTeamVictim = gc.getPlayer(iVictim).getTeam()
                 if not teamLeader.isAtWar(iTeamVictim):
@@ -1680,7 +1680,7 @@ class Crusades:
         # benefits for the other participants on Crusade return - Faith points, GG points, Relics
         for iCiv in CIVILIZATIONS.main().ids():
             pCiv = gc.getPlayer(iCiv)
-            if pCiv.getStateReligion() == iCatholicism and pCiv.isAlive():
+            if pCiv.getStateReligion() == Religion.CATHOLICISM.value and pCiv.isAlive():
                 iUnitNumber = self.getNumUnitsSent(iCiv)
                 if iUnitNumber > 0:
                     # the leader already got exp points through the Crusade itself
@@ -1688,7 +1688,7 @@ class Crusades:
                         # if Jerusalem is held by a Christian civ (maybe some cities in the Levant should be enough) (maybe there should be a unit in the Levant from this Crusade)
                         pCity = gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple()).getPlotCity()
                         pPlayer = gc.getPlayer(pCity.getOwner())
-                        if pPlayer.getStateReligion() == iCatholicism:
+                        if pPlayer.getStateReligion() == Religion.CATHOLICISM.value:
                             pCiv.changeFaith(1 * iUnitNumber)
                             # add relics in the capital
                             capital = pCiv.getCapitalCity()
@@ -1764,7 +1764,7 @@ class Crusades:
                         # if Jerusalem is held by a Christian civ (maybe some cities in the Levant should be enough) (maybe there should be a unit in the Levant from this Crusade)
                         pCity = gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple()).getPlotCity()
                         pPlayer = gc.getPlayer(pCity.getOwner())
-                        if pPlayer.getStateReligion() == iCatholicism:
+                        if pPlayer.getStateReligion() == Religion.CATHOLICISM.value:
                             pCiv.changeFaith(1 * iUnitNumber)
                             # add relics in the capital
                             capital = pCiv.getCapitalCity()
@@ -1841,7 +1841,7 @@ class Crusades:
             pCity = gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple()).getPlotCity()
             if pCity.getOwner() == iPlayer:
                 pPlayer = gc.getPlayer(iPlayer)
-                if pPlayer.getStateReligion() == iCatholicism:
+                if pPlayer.getStateReligion() == Religion.CATHOLICISM.value:
                     # possible population gain, chance based on the current size
                     iRandom = gc.getGame().getSorenRandNum(10, "random pop threshold")
                     if (
@@ -1864,8 +1864,8 @@ class Crusades:
                                 True,
                             )
                         # spread Catholicism if not present
-                        if not pCity.isHasReligion(iCatholicism):
-                            pCity.setHasReligion(iCatholicism, True, True, False)
+                        if not pCity.isHasReligion(Religion.CATHOLICISM.value):
+                            pCity.setHasReligion(Religion.CATHOLICISM.value, True, True, False)
 
     def doDC(self, iGameTurn):
         # print(" DC Check 1",iGameTurn,self.getDCLast())
@@ -1910,7 +1910,7 @@ class Crusades:
         if (
             (iGameTurn < CIV_BIRTHDATE[get_civ_by_id(iPlayer)] + 5)
             or not pPlayer.isAlive()
-            or pPlayer.getStateReligion() != iCatholicism
+            or pPlayer.getStateReligion() != Religion.CATHOLICISM.value
         ):
             return False
         # need to have open borders with the Pope
@@ -1951,7 +1951,7 @@ class Crusades:
         if utils.isActive(iHuman):
             if (
                 gc.getTeam(pHuman.getTeam()).canContact(pPlayer.getTeam())
-                or pHuman.getStateReligion() == iCatholicism
+                or pHuman.getStateReligion() == Religion.CATHOLICISM.value
             ):  # as you have contact with the Pope by default
                 sText = (
                     CyTranslator().getText("TXT_KEY_CRUSADE_DEFENSIVE_AI_MESSAGE", ())
@@ -2147,11 +2147,11 @@ class Crusades:
     def isOrMasterChristian(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
         iReligion = pPlayer.getStateReligion()
-        if iReligion in [iCatholicism, iOrthodoxy]:
+        if iReligion in [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value]:
             return True
         iMaster = utils.getMaster(iPlayer)
         if iMaster != -1:
             iMasterReligion = gc.getPlayer(iMaster).getStateReligion()
-            if iMasterReligion in [iCatholicism, iOrthodoxy]:
+            if iMasterReligion in [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value]:
                 return True
         return False

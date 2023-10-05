@@ -1,13 +1,5 @@
 # coding: utf-8
 
-# Rhye's and Fall of Civilization: Europe - XML Constants (separated the Consts.py file, as it got crowded)
-
-
-# Religions: initialize religion variables to religion indices from XML
-
-iNumReligions = 5
-(iProtestantism, iIslam, iCatholicism, iOrthodoxy, iJudaism) = range(iNumReligions)
-
 
 # Techs: initialize tech variables to unit indices from XML
 
