@@ -536,35 +536,35 @@ class Wonder(Enum):
     LANTERNA = 174
 
 
-class Colony(Enum):
-    VINLAND = 0
-    GOLD_COAST = 1
-    IVORY_COAST = 2
-    CUBA = 3
-    HISPANIOLA = 4
-    BRAZIL = 5
-    HUDSON = 6
-    VIRGINIA = 7
-    EAST_AFRICA = 8
-    CHINA = 9
-    INDIA = 10
-    EAST_INDIES = 11
-    MALAYSIA = 12
-    CAPE_TOWN = 13
-    AZTECS = 14
-    INCA = 15
-    QUEBEC = 16
-    NEW_ENGLAND = 17
-    JAMAICA = 18
-    PANAMA = 19
-    LOUISIANA = 20
-    PHILIPPINES = 21
-
-
 class Project(Enum):
     ENCYCLOPEDIE = 0
     EAST_INDIA_COMPANY = 1
     WEST_INDIA_COMPANY = 2
+
+
+class Colony(Enum):
+    VINLAND = 3
+    GOLD_COAST = 4
+    IVORY_COAST = 5
+    CUBA = 6
+    HISPANIOLA = 7
+    BRAZIL = 8
+    HUDSON = 9
+    VIRGINIA = 10
+    EAST_AFRICA = 11
+    CHINA = 12
+    INDIA = 13
+    EAST_INDIES = 14
+    MALAYSIA = 15
+    CAPE_TOWN = 16
+    AZTECS = 17
+    INCA = 18
+    QUEBEC = 19
+    NEW_ENGLAND = 20
+    JAMAICA = 21
+    PANAMA = 22
+    LOUISIANA = 23
+    PHILIPPINES = 24
 
 
 class Specialist(Enum):
