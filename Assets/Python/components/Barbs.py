@@ -1,7 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Barbarian units and cities
 
 from CvPythonExtensions import *
-from CoreTypes import Civ
+from CoreTypes import Civ, Religion
 import PyHelpers  # LOQ
 import Popup
 import RFCUtils

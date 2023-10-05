@@ -12,7 +12,7 @@ import CityNameManager
 from StoredData import sd
 import random
 
-from CoreTypes import City, Civ
+from CoreTypes import City, Civ, Religion
 from MiscData import MessageData, NUM_CRUSADES
 from TimelineData import CIV_BIRTHDATE, DateTurn
 from CoreStructures import get_civ_by_id

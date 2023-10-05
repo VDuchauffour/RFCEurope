@@ -7,7 +7,7 @@ from CivilizationsData import (
     CIVILIZATIONS,
 )
 from CoreStructures import get_civ_by_id, get_religion_by_id
-from CoreTypes import Civ, City, StartingSituation, StabilityCategory
+from CoreTypes import Civ, City, StartingSituation, StabilityCategory, Religion
 from LocationsData import CITIES
 from TimelineData import DateTurn
 import PyHelpers

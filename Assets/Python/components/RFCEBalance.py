@@ -4,6 +4,7 @@ from CoreTypes import (
     City,
     Civ,
     ProvinceTypes,
+    Religion,
     StartingSituation,
     UniquePower,
     FaithPointBonusCategory,

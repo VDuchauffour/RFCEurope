@@ -11,6 +11,7 @@ from MiscData import MessageData
 from CoreTypes import (
     Civ,
     Scenario,
+    Religion,
     FaithPointBonusCategory,
     ProvinceTypes,
     SpecialParameter,

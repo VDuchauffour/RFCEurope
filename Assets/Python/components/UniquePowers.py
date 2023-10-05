@@ -1,7 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Unique Powers (only a couple of them is here, most are handled in the .dll)
 
 from CvPythonExtensions import *
-from CoreTypes import SpecialParameter
+from CoreTypes import SpecialParameter, Religion
 import PyHelpers
 
 # import cPickle as pickle

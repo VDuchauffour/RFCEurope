@@ -1,6 +1,6 @@
 from CvPythonExtensions import *
 from CivilizationsData import CIVILIZATIONS
-from CoreTypes import City, Civ, ProvinceStatus, StabilityCategory
+from CoreTypes import City, Civ, ProvinceStatus, StabilityCategory, Religion
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
 import PyHelpers
 import Popup

@@ -14,6 +14,7 @@ from MiscData import PLAGUE_IMMUNITY, MessageData
 from CoreTypes import (
     Civ,
     Scenario,
+    Religion,
     StartingSituation,
     ProvinceTypes,
     UniquePower,

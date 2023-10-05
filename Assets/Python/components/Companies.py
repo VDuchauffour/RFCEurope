@@ -12,7 +12,7 @@ from operator import itemgetter
 
 from TimelineData import DateTurn
 from MiscData import MessageData
-from CoreTypes import City, Civ, Scenario, SpecialParameter
+from CoreTypes import City, Civ, Scenario, SpecialParameter, Religion
 
 # globals
 utils = RFCUtils.RFCUtils()

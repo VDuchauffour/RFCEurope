@@ -4,7 +4,7 @@
 from CvPythonExtensions import *
 from CivilizationsData import CIV_HIRE_MERCENARY_THRESHOLD, CIVILIZATIONS
 from CoreStructures import get_civ_by_id
-from CoreTypes import Civ, SpecialParameter
+from CoreTypes import Civ, SpecialParameter, Religion
 import PyHelpers
 
 # import cPickle as pickle
