@@ -518,11 +518,6 @@ iNumSpecialists = 14
     iSpecialistGreatSpy,
 ) = range(iNumSpecialists)
 
-# Eras
-
-iNumEras = 4
-(iAncient, iClassical, iMedieval, iRenaissance) = range(iNumEras)
-
 
 # Improvements
 iNumImprovements = 25
