@@ -3,7 +3,6 @@
 from CvPythonExtensions import *
 import CvUtil
 import CvScreenEnums
-import XMLConsts as xml
 
 PIXEL_INCREMENT = 7
 BOX_INCREMENT_WIDTH = 33  # Should be a multiple of 3...
@@ -352,8 +351,8 @@ class CvTechChooser:
                     # 	screen.addDDSGFCAt( szBuildingButton, szTechRecord, gc.getBuildingInfo(eLoopBuilding).getButton(), iX + fX, iY + Y_ROW, TEXTURE_SIZE, TEXTURE_SIZE, WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, eLoopBuilding, 1, True )
                     # 	fX += X_INCREMENT
                     if (
-                        eLoopBuilding < xml.iNumBuildingsPlague
-                        or eLoopBuilding == xml.iNumBuildingsPlague + self.iCivSelected
+                        eLoopBuilding < Plague.BUILDING_PLAGUE.value
+                        or eLoopBuilding == Plague.BUILDING_PLAGUE.value + self.iCivSelected
                     ):
                         if gc.getBuildingInfo(eLoopBuilding).getPrereqAndTech() == i:
                             szBuildingButton = "Building" + str(j)

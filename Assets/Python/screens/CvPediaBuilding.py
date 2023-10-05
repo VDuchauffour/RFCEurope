@@ -10,7 +10,6 @@
 from CvPythonExtensions import *
 import CvUtil
 import CvScreenEnums
-import XMLConsts as xml  # 3Miro
 
 # globals
 gc = CyGlobalContext()
@@ -580,13 +579,6 @@ class CvPediaBuilding:
             1:
         ]
 
-        # Rhye - start
-        # 3Miro: embassies
-        # if (self.iBuilding >= Consts.iNumBuildingsPlague):
-        # 	szSpecialText = localText.getText("TXT_KEY_BUILDING_EMBASSY_EP", ())
-        # 	szSpecialText += "\n"
-        # 	szSpecialText += localText.getText("TXT_KEY_BUILDING_EMBASSY_ABILITY", ())
-        # Rhye - end
         screen.addMultilineText(
             listName,
             szSpecialText,
@@ -668,7 +660,7 @@ class CvPediaBuilding:
                 and not gc.getBuildingInfo(iBuilding).isGraphicalOnly()
             ):
                 # 3Miro: Plague not appear as building
-                if iBuilding != xml.iPlague:
+                if iBuilding != Plague.PLAGUE.value:
                     listBuildings.append(iBuilding)
                     iCount += 1
 

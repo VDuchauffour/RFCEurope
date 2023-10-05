@@ -464,8 +464,11 @@ class Building(Enum):
     CORPORATION8 = 111
     CORPORATION9 = 112
     TRIUMPHAL_ARCH = 175
+
+
+class Plague(Enum):
     PLAGUE = 176
-    BUILDING_PLAGE = 177
+    BUILDING_PLAGUE = 177
 
 
 class Wonder(Enum):

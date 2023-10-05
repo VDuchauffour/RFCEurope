@@ -407,7 +407,7 @@ class RiseAndFall:
                     # 	if (city.getPopulation() < iEra):
                     # 		city.setPopulation(iEra) #causes an unidentifiable C++ exception
 
-                    # humanCityList[i].setHasRealBuilding(Consts.iPlague, False) #buggy
+                    # humanCityList[i].setHasRealBuilding(Plague.PLAGUE.value, False) #buggy
 
             # same code as Betrayal - done just once to make sure human player doesn't hold a stack just outside of the cities
             for (x, y) in utils.getPlotList(tTopLeft, tBottomRight):

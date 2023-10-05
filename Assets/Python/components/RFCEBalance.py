@@ -1158,7 +1158,7 @@ class RFCEBalance:
             CIVILIZATIONS.majors().len(),
             CIVILIZATIONS.drop(Civ.BARBARIAN).len(),
             xml.iNumTechs,
-            xml.iNumBuildingsPlague,
+            Plague.BUILDING_PLAGUE.value,
             len(Religion),
         )
         for i in CIVILIZATIONS.majors().ids():

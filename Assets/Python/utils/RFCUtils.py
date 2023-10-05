@@ -30,8 +30,6 @@ ArtFileMgr = CyArtFileMgr()
 localText = CyTranslator()  # Absinthe
 PyPlayer = PyHelpers.PyPlayer
 
-iSettler = xml.iSettler
-iNumBuildingsPlague = xml.iNumBuildingsPlague
 
 tCol = ("255,255,255", "200,200,200", "150,150,150", "128,128,128")
 
@@ -554,10 +552,10 @@ class RFCUtils:
                         if unit.getOwner() == iOldOwner:
                             unit.kill(False, Civ.BARBARIAN.value)
                             if bKillSettlers:
-                                if unit.getUnitType() > iSettler:
+                                if unit.getUnitType() > xml.iSettler:
                                     self.makeUnit(unit.getUnitType(), iNewOwner, (28, 0), 1)
                             else:
-                                if unit.getUnitType() >= iSettler:  # skip animals
+                                if unit.getUnitType() >= xml.iSettler:  # skip animals
                                     self.makeUnit(unit.getUnitType(), iNewOwner, (28, 0), 1)
                         else:
                             j += 1
@@ -613,10 +611,10 @@ class RFCUtils:
                         if unit.getOwner() == iOldOwner:
                             unit.kill(False, Civ.BARBARIAN.value)
                             if bKillSettlers:
-                                if unit.getUnitType() > iSettler:
+                                if unit.getUnitType() > xml.iSettler:
                                     self.makeUnit(unit.getUnitType(), iNewOwner, (28, 0), 1)
                             else:
-                                if unit.getUnitType() >= iSettler:  # skip animals
+                                if unit.getUnitType() >= xml.iSettler:  # skip animals
                                     self.makeUnit(unit.getUnitType(), iNewOwner, (28, 0), 1)
                         else:
                             j += 1
@@ -941,7 +939,7 @@ class RFCUtils:
             self.flipCity(
                 tCoords, 0, 0, iNewCiv, [iCiv]
             )  # by trade because by conquest may raze the city
-            # city.setHasRealBuilding(Consts.iPlague, False) #buggy
+            # city.setHasRealBuilding(Plague.PLAGUE.value, False) #buggy
         self.flipUnitsInArea([0, 0], [WORLD_WIDTH, WORLD_HEIGHT], iNewCiv, iCiv, False, True)
 
         self.resetUHV(iCiv)
@@ -996,7 +994,7 @@ class RFCUtils:
                             self.flipUnitsInCityBefore(tCoords, iLoopCiv, iCiv)
                             self.setTempFlippingCity(tCoords)
                             self.flipCity(tCoords, 0, 0, iLoopCiv, [iCiv])
-                            # city.setHasRealBuilding(Consts.iPlague, False) #buggy
+                            # city.setHasRealBuilding(Plague.PLAGUE.value, False) #buggy
                             # Sedna17: Possibly buggy, used to flip units in 2 radius, which could take us outside the map.
                             self.flipUnitsInArea(
                                 (iX - 1, iY - 1), (iX + 1, iY + 1), iLoopCiv, iCiv, False, True
@@ -1022,7 +1020,7 @@ class RFCUtils:
                 self.setTempFlippingCity(tCoords)
                 self.cultureManager(tCoords, 50, iNewCiv, iCiv, False, False, False)
                 self.flipCity(tCoords, 0, 0, iNewCiv, [iCiv])
-                # city.setHasRealBuilding(Consts.iPlague, False) #buggy
+                # city.setHasRealBuilding(Plague.PLAGUE.value, False) #buggy
                 self.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
                 iCounter += 1
                 self.flipUnitsInArea(
@@ -1048,7 +1046,7 @@ class RFCUtils:
                 self.setTempFlippingCity(tCoords)
                 self.cultureManager(tCoords, 50, iNewCiv, iCiv, False, False, False)
                 self.flipCity(tCoords, 0, 0, iNewCiv, [iCiv])
-                # city.setHasRealBuilding(Consts.iPlague, False) #buggy
+                # city.setHasRealBuilding(Plague.PLAGUE.value, False) #buggy
                 self.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
                 iCounter += 1
                 self.flipUnitsInArea(
@@ -1077,8 +1075,8 @@ class RFCUtils:
 
     def clearPlague(self, iCiv):
         for city in self.getCityList(iCiv):
-            if city.hasBuilding(xml.iPlague):
-                city.setHasRealBuilding(xml.iPlague, False)
+            if city.hasBuilding(Plague.PLAGUE.value):
+                city.setHasRealBuilding(Plague.PLAGUE.value, False)
 
     # AIWars
     def isAVassal(self, iCiv):

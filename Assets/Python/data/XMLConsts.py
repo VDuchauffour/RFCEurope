@@ -286,7 +286,7 @@ iNumBonus = 53
 
 # Buildings
 
-iNumBuildings = 176  # Should equal iPlague
+iNumBuildings = 176
 (
     iPalace,
     iSummerPalace,
@@ -467,8 +467,6 @@ iNumBuildings = 176  # Should equal iPlague
 ) = range(iNumBuildings)
 
 iGreatPalace = iSummerPalace
-iPlague = iNumBuildings
-iNumBuildingsPlague = iNumBuildings + 1
 
 iBeginWonders = iVersailles
 iEndWonders = iLanterna
