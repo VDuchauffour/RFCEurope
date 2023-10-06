@@ -130,7 +130,7 @@ class ItemCollection(list):
         """Return the object without `items` given its keys, i.e. the relevant enum member."""
         return self.filter(lambda x: x.key not in items)
 
-    def get(self, *items):
+    def take(self, *items):
         """Return the object with only `items` given its keys, i.e. the relevant enum member."""
         return self.filter(lambda x: x.key in items)
 
@@ -212,7 +212,7 @@ class Civilizations(ItemCollection):
 
     def barbarian(self):
         """Return the barbarian civilization."""
-        return self.get(CoreTypes.Civ.BARBARIAN)[0]
+        return self.take(CoreTypes.Civ.BARBARIAN)[0]
 
 
 class BaseFactory(object):

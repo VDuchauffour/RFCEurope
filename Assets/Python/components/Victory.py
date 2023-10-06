@@ -1085,7 +1085,7 @@ class Victory:
         # UHV 3: Make Constantinople the largest and most cultured city while being the richest empire in the world in 1453
         elif iGameTurn == DateTurn.i1453AD:
             if self.isPossibleUHV(Civ.BYZANTIUM.value, 2, True):
-                x, y = CIV_CAPITAL_LOCATIONS[Civ.BYZATIUM].to_tuple()
+                x, y = CIV_CAPITAL_LOCATIONS[Civ.BYZANTIUM].to_tuple()
                 iGold = pByzantium.getGold()
                 bMost = True
                 for iCiv in CIVILIZATIONS.majors().ids():
