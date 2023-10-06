@@ -4,6 +4,7 @@
 from CvPythonExtensions import *
 from CivilizationsData import CIVILIZATIONS
 from CoreData import COMPANIES
+from CoreStructures import get_enum_by_id
 from LocationsData import CITIES
 import PyHelpers
 import XMLConsts as xml
@@ -13,7 +14,7 @@ from operator import itemgetter
 
 from TimelineData import DateTurn
 from MiscData import MessageData
-from CoreTypes import Building, City, Civ, Company, Scenario, SpecialParameter, Religion
+from CoreTypes import Building, City, Civ, Company, Province, Scenario, SpecialParameter, Religion
 
 # globals
 utils = RFCUtils.RFCUtils()
@@ -314,8 +315,8 @@ class Companies:
         # geographical requirements
         iProvince = city.getProvince()
         if (
-            len(xml.lCompanyRegions[iCompany]) > 0
-            and iProvince not in xml.lCompanyRegions[iCompany]
+            len(COMPANIES[iCompany].region)
+            and get_enum_by_id(Province, iProvince) not in COMPANIES[iCompany].region
         ):
             return -1
         if iCompany == Company.MEDICI.value:

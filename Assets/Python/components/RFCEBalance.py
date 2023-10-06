@@ -1180,13 +1180,6 @@ class RFCEBalance:
             len(ProvinceTypes)
         )  # set the Number of Provinces, call this before you set any AI or culture modifiers
 
-        ## Absinthe: disabled, was only needed for the AI regions
-        # gc.setNumRegions( xml.iNumMapRegions )
-        # for lRegion in xml.tRegionMap:
-        # 	iIndex = xml.tRegionMap.index( lRegion )
-        # 	for iProvince in lRegion:
-        # 		gc.setProvinceToRegion( iProvince, iIndex )
-
         # birth turns for the players, do not change this loop
         for i in CIVILIZATIONS.drop(Civ.BARBARIAN).ids():
             gc.setStartingTurn(i, CIV_BIRTHDATE[get_civ_by_id(i)])
