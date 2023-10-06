@@ -15,6 +15,7 @@ from CoreTypes import (
 )
 from BaseStructures import EnumDataMapper
 from CoreStructures import (
+    CompanyDataMapper,
     ScenarioDataMapper,
     Tile,
     CivDataMapper,
@@ -225,7 +226,7 @@ REGIONS = EnumDataMapper(
     }
 )
 
-COMPANY_REGION = EnumDataMapper(
+COMPANY_REGION = CompanyDataMapper(
     {
         Company.HOSPITALLERS: [
             Province.ANTIOCHIA,

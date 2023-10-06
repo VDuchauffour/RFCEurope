@@ -1,6 +1,6 @@
 from BaseStructures import EnumDataMapper
 from CoreTypes import Civ, Company, Religion, Unit
-from CoreStructures import CivDataMapper
+from CoreStructures import CivDataMapper, CompanyDataMapper
 
 WORLD_WIDTH = 100
 WORLD_HEIGHT = 73
@@ -77,7 +77,7 @@ BARBARIAN_ONLY_UNITS = [
     Unit.WELSH_LONGBOWMAN,
 ]
 
-COMPANY_LIMIT = EnumDataMapper(
+COMPANY_LIMIT = CompanyDataMapper(
     {
         Company.HOSPITALLERS: 3,
         Company.TEMPLARS: 4,

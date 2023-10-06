@@ -1,7 +1,6 @@
 # coding: utf-8
 
-from BaseStructures import EnumDataMapper
-from CoreStructures import CivDataMapper
+from CoreStructures import CivDataMapper, CompanyDataMapper
 from CoreTypes import Civ, Company
 
 # TODO switch to years with convert from trun
@@ -314,7 +313,7 @@ CIV_RESPAWNING_DATE = CivDataMapper(
 ).fill_missing_members(999)
 
 # TODO fix dates
-COMPANY_BIRTHDATE = EnumDataMapper(
+COMPANY_BIRTHDATE = CompanyDataMapper(
     {
         Company.HOSPITALLERS: DateTurn.i1096AD,
         Company.TEMPLARS: DateTurn.i1096AD,
@@ -328,7 +327,7 @@ COMPANY_BIRTHDATE = EnumDataMapper(
     }
 )
 
-COMPANY_DEATHDATE = EnumDataMapper(
+COMPANY_DEATHDATE = CompanyDataMapper(
     {
         Company.TEMPLARS: DateTurn.i1309AD,
         Company.HANSA: DateTurn.i1670AD,

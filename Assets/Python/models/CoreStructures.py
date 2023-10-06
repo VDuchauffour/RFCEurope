@@ -1,4 +1,4 @@
-from CoreTypes import Area, AreaTypes, Civ, Religion, Scenario
+import CoreTypes
 from BaseStructures import EnumDataMapper
 from Enum import Enum
 from Errors import NotACallableError, NotTypeExpectedError
@@ -15,13 +15,19 @@ except ImportError:
 class CivDataMapper(EnumDataMapper):
     """Class to map data to Civ enum."""
 
-    BASE_CLASS = Civ
+    BASE_CLASS = CoreTypes.Civ
+
+
+class CompanyDataMapper(EnumDataMapper):
+    """Class to map data to Company enum."""
+
+    BASE_CLASS = CoreTypes.Company
 
 
 class ScenarioDataMapper(EnumDataMapper):
     """Class to map data to Scenario enum."""
 
-    BASE_CLASS = Scenario
+    BASE_CLASS = CoreTypes.Scenario
 
 
 class Attributes(dict):
@@ -88,15 +94,17 @@ class ItemCollection(list):
     def _filter(self, condition):
         if not callable(condition):
             raise NotACallableError(condition)
-        # return [item for item in self if condition(item)]
         return [condition(item) for item in self]
 
     def _compress(self, selectors):
         return (item for item, s in zip(self, selectors) if s)
 
+    def _copy(self, *items):
+        return self.__class__(*items)
+
     def filter(self, condition):
         """Filter item when `condition` is True."""
-        return self.__class__(*self._compress(self._filter(condition)))
+        return self._copy(*self._compress(self._filter(condition)))
 
     def all(self, condition):
         """Return True if `condition` is True for all items."""
@@ -126,11 +134,27 @@ class ItemCollection(list):
         """Return the object with only `items` given its keys, i.e. the relevant enum member."""
         return self.filter(lambda x: x.key in items)
 
+    def sort(self, metric, reverse=False):
+        """Return the object sorted given a `metric` function."""
+        return self._copy(*sorted(self, key=metric, reverse=reverse))
+
+
+class Company(Item):
+    """A simple class to handle a company."""
+
+    BASE_CLASS = CoreTypes.Company
+
+
+class Companies(ItemCollection):
+    """A simple class to handle a set of companies."""
+
+    BASE_CLASS = Company
+
 
 class Civilization(Item):
     """A simple class to handle a civilization."""
 
-    BASE_CLASS = Civ
+    BASE_CLASS = CoreTypes.Civ
 
     @property
     def player(self):
@@ -188,26 +212,49 @@ class Civilizations(ItemCollection):
 
     def barbarian(self):
         """Return the barbarian civilization."""
-        return self.get(Civ.BARBARIAN)[0]
+        return self.get(CoreTypes.Civ.BARBARIAN)[0]
 
 
-class CivilizationsFactory(object):
-    """A factory to generate `Civilizations` from CivDataMapper."""
+class BaseFactory(object):
+    """A base for factories."""
+
+    MEMBERS_CLASS = None
+    DATA_CLASS = None
+    ITEM_CLASS = None
+    ITEM_COLLECTION_CLASS = None
 
     def __init__(self):
         self._attachments = {}
 
     def attach(self, name, data):
-        if isinstance(name, str) and isinstance(data, CivDataMapper):
+        if isinstance(name, str) and isinstance(data, self.DATA_CLASS):
             self._attachments[name] = data
         return self
 
     def collect(self):
-        civs = []
-        for civ in Civ:
-            attachments = dict((k, v[civ]) for k, v in self._attachments.items())
-            civs.append(Civilization(civ, **attachments))
-        return Civilizations(*civs)
+        items = []
+        for member in self.MEMBERS_CLASS:
+            attachments = dict((k, v[member]) for k, v in self._attachments.items())
+            items.append(self.ITEM_CLASS(member, **attachments))
+        return self.ITEM_COLLECTION_CLASS(*items)
+
+
+class CompaniesFactory(BaseFactory):
+    """A factory to generate `Companies`."""
+
+    MEMBERS_CLASS = CoreTypes.Company
+    DATA_CLASS = CompanyDataMapper
+    ITEM_CLASS = Company
+    ITEM_COLLECTION_CLASS = Companies
+
+
+class CivilizationsFactory(BaseFactory):
+    """A factory to generate `Civilizations`."""
+
+    MEMBERS_CLASS = CoreTypes.Civ
+    DATA_CLASS = CivDataMapper
+    ITEM_CLASS = Civilization
+    ITEM_COLLECTION_CLASS = Civilizations
 
 
 class Tile(object):
@@ -234,8 +281,8 @@ class Tile(object):
         return (self.x, self.y)
 
     def set_area(self, area):
-        if not isinstance(area, AreaTypes):
-            raise NotTypeExpectedError(AreaTypes, type(area))
+        if not isinstance(area, CoreTypes.AreaTypes):
+            raise NotTypeExpectedError(CoreTypes.AreaTypes, type(area))
         self._keys["areas"].append(area)
 
     def __str__(self):
@@ -344,8 +391,8 @@ class TilesFactory:
         return self
 
     def attach_area(self, area):
-        if not isinstance(area, AreaTypes):
-            raise NotTypeExpectedError(AreaTypes, type(area))
+        if not isinstance(area, CoreTypes.AreaTypes):
+            raise NotTypeExpectedError(CoreTypes.AreaTypes, type(area))
         for tile in self._results:
             tile.set_area(area)
         return self
@@ -358,12 +405,12 @@ def get_enum_by_id(enum, id):
 
 def get_civ_by_id(id):
     """Return a Civ member by its index."""
-    return get_enum_by_id(Civ, id)
+    return get_enum_by_id(CoreTypes.Civ, id)
 
 
 def get_religion_by_id(id):
     """Return a Religion member by its index."""
-    return get_enum_by_id(Religion, id)
+    return get_enum_by_id(CoreTypes.Religion, id)
 
 
 def attribute_factory(data):
@@ -398,19 +445,19 @@ def concat_tiles(*tiles):
 
 def parse_area_dict(data):
     """Parse a dict of area properties."""
-    if data.get(Area.ADDITIONAL_TILES) is not None:
-        add_tiles = [Tile(t) for t in data[Area.ADDITIONAL_TILES]]
+    if data.get(CoreTypes.Area.ADDITIONAL_TILES) is not None:
+        add_tiles = [Tile(t) for t in data[CoreTypes.Area.ADDITIONAL_TILES]]
     else:
         add_tiles = None
 
-    if data.get(Area.EXCEPTION_TILES) is not None:
-        exception_tiles = [Tile(t) for t in data[Area.EXCEPTION_TILES]]
+    if data.get(CoreTypes.Area.EXCEPTION_TILES) is not None:
+        exception_tiles = [Tile(t) for t in data[CoreTypes.Area.EXCEPTION_TILES]]
     else:
         exception_tiles = None
 
     return {
-        Area.TILE_MIN: Tile(data[Area.TILE_MIN]),
-        Area.TILE_MAX: Tile(data[Area.TILE_MAX]),
-        Area.ADDITIONAL_TILES: add_tiles,
-        Area.EXCEPTION_TILES: exception_tiles,
+        CoreTypes.Area.TILE_MIN: Tile(data[CoreTypes.Area.TILE_MIN]),
+        CoreTypes.Area.TILE_MAX: Tile(data[CoreTypes.Area.TILE_MAX]),
+        CoreTypes.Area.ADDITIONAL_TILES: add_tiles,
+        CoreTypes.Area.EXCEPTION_TILES: exception_tiles,
     }
