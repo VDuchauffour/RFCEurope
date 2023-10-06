@@ -21,20 +21,6 @@ gc = CyGlobalContext()
 localText = CyTranslator()
 PyPlayer = PyHelpers.PyPlayer
 
-iNumCompanies = xml.iNumCompanies
-iHospitallers = xml.iHospitallers
-iTemplars = xml.iTemplars
-iTeutons = xml.iTeutons
-iHansa = xml.iHansa
-iMedici = xml.iMedici
-iAugsburg = xml.iAugsburg
-iStGeorge = xml.iStGeorge
-iDragon = xml.iDragon
-iCalatrava = xml.iCalatrava
-tCompaniesBirth = xml.tCompaniesBirth
-tCompaniesDeath = xml.tCompaniesDeath
-tCompaniesLimit = xml.tCompaniesLimit
-lCompanyRegions = xml.lCompanyRegions
 lCompanyBuilding = [
     xml.iCorporation1,
     xml.iCorporation2,
@@ -55,60 +41,63 @@ class Companies:
         if utils.getScenario() == Scenario.i1200AD:
             iGameTurn = DateTurn.i1200AD
             for iCompany in range(xml.iNumCompanies):
-                if iGameTurn > tCompaniesBirth[iCompany] and iGameTurn < tCompaniesDeath[iCompany]:
+                if (
+                    iGameTurn > xml.tCompaniesBirth[iCompany]
+                    and iGameTurn < xml.tCompaniesDeath[iCompany]
+                ):
                     self.addCompany(iCompany, 2)
 
     def checkTurn(self, iGameTurn):
 
         # check if it's not too early
-        iCompany = iGameTurn % iNumCompanies
-        if iGameTurn < tCompaniesBirth[iCompany]:
+        iCompany = iGameTurn % xml.iNumCompanies
+        if iGameTurn < xml.tCompaniesBirth[iCompany]:
             return
 
         # check if it's not too late
-        elif iGameTurn > tCompaniesDeath[iCompany] + gc.getGame().getSorenRandNum(
-            iNumCompanies, "small randomness with a couple extra turns"
+        elif iGameTurn > xml.tCompaniesDeath[iCompany] + gc.getGame().getSorenRandNum(
+            xml.iNumCompanies, "small randomness with a couple extra turns"
         ):
             iMaxCompanies = 0
             # do not dissolve the Templars while Jerusalem is under Catholic control
-            if iCompany == iTemplars:
+            if iCompany == xml.iTemplars:
                 plot = gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple())
                 if plot.isCity():
                     if (
                         gc.getPlayer(plot.getPlotCity().getOwner()).getStateReligion()
                         == Religion.CATHOLICISM.value
                     ):
-                        iMaxCompanies = tCompaniesLimit[iCompany]
+                        iMaxCompanies = xml.tCompaniesLimit[iCompany]
 
         # set the company limit
         else:
-            iMaxCompanies = tCompaniesLimit[iCompany]
+            iMaxCompanies = xml.tCompaniesLimit[iCompany]
 
         # modified limit for Hospitallers and Teutons after the Crusades
-        if iGameTurn > tCompaniesDeath[iTemplars]:
-            if iCompany == iHospitallers and iGameTurn < tCompaniesDeath[iCompany]:
+        if iGameTurn > xml.tCompaniesDeath[xml.iTemplars]:
+            if iCompany == xml.iHospitallers and iGameTurn < xml.tCompaniesDeath[iCompany]:
                 iMaxCompanies -= 1
-            elif iCompany == iTeutons and iGameTurn < tCompaniesDeath[iCompany]:
+            elif iCompany == xml.iTeutons and iGameTurn < xml.tCompaniesDeath[iCompany]:
                 iMaxCompanies += 2
         # increased limit for Hansa after their first general Diet in 1356
-        if iCompany == iHansa:
-            if DateTurn.i1356AD < iGameTurn < tCompaniesDeath[iCompany]:
+        if iCompany == xml.iHansa:
+            if DateTurn.i1356AD < iGameTurn < xml.tCompaniesDeath[iCompany]:
                 iMaxCompanies += 3
 
         # Templars are Teutons are gone after the Protestant reformation
-        if iCompany in [iTemplars, iTeutons]:
+        if iCompany in [xml.iTemplars, xml.iTeutons]:
             if gc.getGame().isReligionFounded(Religion.PROTESTANTISM.value):
                 iMaxCompanies = 0
         # Order of Calatrava is only active if Cordoba or Morocco is alive
         # TODO: Only if Cordoba is alive, or Morocco has some territories in Europe?
-        if iCompany == iCalatrava:
+        if iCompany == xml.iCalatrava:
             if not (
                 gc.getPlayer(Civ.CORDOBA.value).isAlive()
                 or gc.getPlayer(Civ.MOROCCO.value).isAlive()
             ):
                 iMaxCompanies = 0
         # Order of the Dragon is only active if the Ottomans are alive
-        if iCompany == iDragon:
+        if iCompany == xml.iDragon:
             if not gc.getPlayer(Civ.OTTOMAN.value).isAlive():
                 iMaxCompanies = 0
 
@@ -162,7 +151,7 @@ class Companies:
             # interface message for the human player
             self.announceHuman(iCompany, city)
             # spread the religion if it wasn't present before
-            if iCompany in [iHospitallers, iTemplars, iTeutons, iCalatrava]:
+            if iCompany in [xml.iHospitallers, xml.iTemplars, xml.iTeutons, xml.iCalatrava]:
                 if not city.isHasReligion(Religion.CATHOLICISM.value):
                     city.setHasReligion(Religion.CATHOLICISM.value, True, True, False)
             # one change at a time, only add the highest ranked city (which didn't have the company before)
@@ -185,7 +174,7 @@ class Companies:
         iPlayer, iNewReligion, iOldReligion = argsList
 
         for city in utils.getCityList(iPlayer):
-            for iCompany in range(iNumCompanies):
+            for iCompany in range(xml.iNumCompanies):
                 if city.isHasCorporation(iCompany):
                     if self.getCityValue(city, iCompany) < 0:
                         city.setHasCorporation(iCompany, False, True, True)
@@ -204,7 +193,7 @@ class Companies:
 
     def onCityAcquired(self, iOldOwner, iNewOwner, city):
 
-        for iCompany in range(iNumCompanies):
+        for iCompany in range(xml.iNumCompanies):
             if city.isHasCorporation(iCompany):
                 if self.getCityValue(city, iCompany) < 0:
                     city.setHasCorporation(iCompany, False, True, True)
@@ -278,7 +267,7 @@ class Companies:
         ownerTeam = gc.getTeam(owner.getTeam())
 
         # spread the Teutons to Teutonic Order cities and don't spread if the owner civ is at war with the Teutons
-        if iCompany == iTeutons:
+        if iCompany == xml.iTeutons:
             if iOwner == Civ.PRUSSIA.value:
                 iValue += 5
             elif ownerTeam.isAtWar(Civ.PRUSSIA.value):
@@ -288,26 +277,26 @@ class Companies:
         if iOwner == Civ.GENOA.value:
             iValue += 1
             # extra bonus for banking companies
-            if iCompany in [iMedici, iAugsburg, iStGeorge]:
+            if iCompany in [xml.iMedici, xml.iAugsburg, xml.iStGeorge]:
                 iValue += 1
 
         # state religion requirements
         iStateReligion = owner.getStateReligion()
-        if iCompany in [iHospitallers, iTemplars, iTeutons]:
+        if iCompany in [xml.iHospitallers, xml.iTemplars, xml.iTeutons]:
             if iStateReligion == Religion.CATHOLICISM.value:
                 iValue += 3
             elif iStateReligion in [Religion.PROTESTANTISM.value, Religion.ORTHODOXY.value]:
                 iValue -= 2
             else:
                 return -1
-        elif iCompany == iDragon:
+        elif iCompany == xml.iDragon:
             if iStateReligion == Religion.CATHOLICISM.value:
                 iValue += 2
             elif iStateReligion == Religion.ORTHODOXY.value:
                 iValue += 1
             elif iStateReligion == Religion.ISLAM.value:
                 return -1
-        elif iCompany == iCalatrava:
+        elif iCompany == xml.iCalatrava:
             if iStateReligion == Religion.CATHOLICISM.value:
                 iValue += 2
             else:
@@ -318,20 +307,23 @@ class Companies:
 
         # geographical requirements
         iProvince = city.getProvince()
-        if len(lCompanyRegions[iCompany]) > 0 and iProvince not in lCompanyRegions[iCompany]:
+        if (
+            len(xml.lCompanyRegions[iCompany]) > 0
+            and iProvince not in xml.lCompanyRegions[iCompany]
+        ):
             return -1
-        if iCompany == iMedici:
+        if iCompany == xml.iMedici:
             if iProvince == xml.iP_Tuscany:
                 iValue += 4
-        elif iCompany == iAugsburg:
+        elif iCompany == xml.iAugsburg:
             if iProvince == xml.iP_Bavaria:
                 iValue += 3
             elif iProvince == xml.iP_Swabia:
                 iValue += 2
-        elif iCompany == iStGeorge:
+        elif iCompany == xml.iStGeorge:
             if iProvince == xml.iP_Liguria:
                 iValue += 3
-        elif iCompany == iHansa:
+        elif iCompany == xml.iHansa:
             if iProvince == xml.iP_Holstein:
                 iValue += 5
             if iProvince in [xml.iP_Brandenburg, xml.iP_Saxony]:
@@ -339,54 +331,54 @@ class Companies:
 
         # geographical requirement changes after the Crusades
         iGameTurn = gc.getGame().getGameTurn()
-        if iGameTurn < tCompaniesDeath[iTemplars]:
-            if iCompany in [iHospitallers, iTemplars, iTeutons]:
+        if iGameTurn < xml.tCompaniesDeath[xml.iTemplars]:
+            if iCompany in [xml.iHospitallers, xml.iTemplars, xml.iTeutons]:
                 if iStateReligion == Religion.CATHOLICISM.value:
                     if iProvince in [xml.iP_Antiochia, xml.iP_Lebanon, xml.iP_Jerusalem]:
                         iValue += 5
                     elif iProvince in [xml.iP_Cyprus, xml.iP_Egypt]:
                         iValue += 3
         else:
-            if iCompany == iHospitallers:
+            if iCompany == xml.iHospitallers:
                 if iProvince in [xml.iP_Rhodes, xml.iP_Malta]:
                     iValue += 4
-            elif iCompany == iTeutons:
+            elif iCompany == xml.iTeutons:
                 if iProvince == xml.iP_Transylvania:
                     iValue += 2
 
         # bonus for civs whom actively participate (with units) in the actual Crusade:
         if iOwner < CIVILIZATIONS.majors().len():
             if crus.getNumUnitsSent(iOwner) > 0:
-                if iCompany in [iHospitallers, iTemplars, iTeutons]:
+                if iCompany in [xml.iHospitallers, xml.iTemplars, xml.iTeutons]:
                     iValue += 2
 
         # additional bonus for the city of Jerusalem
         if (city.getX(), city.getY()) == CITIES[City.JERUSALEM].to_tuple():
-            if iCompany in [iHospitallers, iTemplars, iTeutons]:
+            if iCompany in [xml.iHospitallers, xml.iTemplars, xml.iTeutons]:
                 iValue += 3
 
         # coastal and riverside check
-        if iCompany == iHansa:
+        if iCompany == xml.iHansa:
             if not city.isCoastal(20):  # water body with at least 20 tiles
                 if not city.plot().isRiverSide():
                     return -1
-        elif iCompany == iHospitallers:
+        elif iCompany == xml.iHospitallers:
             if city.isCoastal(20):
                 iValue += 2
 
         # bonus for religions in the city
-        if iCompany in [iHansa, iMedici, iAugsburg, iStGeorge]:
+        if iCompany in [xml.iHansa, xml.iMedici, xml.iAugsburg, xml.iStGeorge]:
             if city.isHasReligion(
                 Religion.JUDAISM.value
             ):  # not necessarily historic, but has great gameplay synergies
                 iValue += 1
-        elif iCompany in [iHospitallers, iTemplars, iTeutons, iCalatrava]:
+        elif iCompany in [xml.iHospitallers, xml.iTemplars, xml.iTeutons, xml.iCalatrava]:
             # they have a harder time to choose a city without Catholicism, but they spread the religion there
             if not city.isHasReligion(Religion.CATHOLICISM.value):
                 iValue -= 1
             if city.isHasReligion(Religion.ISLAM.value):
                 iValue -= 1
-        elif iCompany == iDragon:
+        elif iCompany == xml.iDragon:
             if city.isHasReligion(Religion.CATHOLICISM.value) or city.isHasReligion(
                 Religion.ORTHODOXY.value
             ):
@@ -395,7 +387,7 @@ class Companies:
                 iValue -= 1
 
         # faith points of the population
-        if iCompany in [iHospitallers, iTemplars, iTeutons, iCalatrava]:
+        if iCompany in [xml.iHospitallers, xml.iTemplars, xml.iTeutons, xml.iCalatrava]:
             # print ("faith points:", city.getOwner(), owner.getFaith())
             if owner.getFaith() >= 50:
                 iValue += 3
@@ -405,7 +397,7 @@ class Companies:
                 iValue += 1
 
         # city size
-        if iCompany in [iHansa, iDragon, iMedici, iAugsburg, iStGeorge]:
+        if iCompany in [xml.iHansa, xml.iDragon, xml.iMedici, xml.iAugsburg, xml.iStGeorge]:
             if city.getPopulation() > 9:
                 iValue += 3
             elif city.getPopulation() > 6:
@@ -421,7 +413,7 @@ class Companies:
 
         # various building bonuses, trade route bonus
         iBuildCounter = 0  # building bonus counter: we don't want buildings to be the deciding factor in company spread
-        if iCompany in [iHospitallers, iTemplars, iTeutons]:
+        if iCompany in [xml.iHospitallers, xml.iTemplars, xml.iTeutons]:
             iMaxPossible = 11  # building bonus counter: we don't want buildings to be the deciding factor in company spread
             if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iWalls)) > 0:
                 iBuildCounter += 1
@@ -447,16 +439,16 @@ class Companies:
             iValue += (4 * iBuildCounter) / iMaxPossible  # maximum is 4, with all buildings built
             # wonders should be handled separately
             if city.getNumRealBuilding(xml.iKrakDesChevaliers) > 0:
-                if iCompany == iHospitallers:
+                if iCompany == xml.iHospitallers:
                     iValue += 5
                 else:
                     iValue += 2
             if city.getNumRealBuilding(xml.iDomeRock) > 0:
-                if iCompany == iTemplars:
+                if iCompany == xml.iTemplars:
                     iValue += 5
                 else:
                     iValue += 2
-        elif iCompany == iCalatrava:
+        elif iCompany == xml.iCalatrava:
             iMaxPossible = 11  # building bonus counter: we don't want buildings to be the deciding factor in company spread
             if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iWalls)) > 0:
                 iBuildCounter += 1
@@ -480,7 +472,7 @@ class Companies:
             if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iStarFort)) > 0:
                 iBuildCounter += 1
             iValue += (5 * iBuildCounter) / iMaxPossible  # maximum is 5, with all buildings built
-        elif iCompany == iDragon:
+        elif iCompany == xml.iDragon:
             iMaxPossible = 9  # building bonus counter: we don't want buildings to be the deciding factor in company spread
             if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iWalls)) > 0:
                 iBuildCounter += 1
@@ -497,7 +489,7 @@ class Companies:
             if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iStarFort)) > 0:
                 iBuildCounter += 2
             iValue += (5 * iBuildCounter) / iMaxPossible  # maximum is 5, with all buildings built
-        elif iCompany in [iMedici, iAugsburg, iStGeorge]:
+        elif iCompany in [xml.iMedici, xml.iAugsburg, xml.iStGeorge]:
             iMaxPossible = 11  # building bonus counter: we don't want buildings to be the deciding factor in company spread
             if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iMarket)) > 0:
                 iBuildCounter += 1
@@ -519,7 +511,7 @@ class Companies:
                 iValue += 1
             # bonus from trade routes
             iValue += max(0, city.getTradeRoutes() - 1)
-        elif iCompany == iHansa:
+        elif iCompany == xml.iHansa:
             iMaxPossible = 16  # building bonus counter: we don't want buildings to be the deciding factor in company spread
             if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iHarbor)) > 0:
                 iBuildCounter += 2
@@ -549,67 +541,84 @@ class Companies:
 
         # civic bonuses
         if owner.getCivics(0) == xml.iCivicMerchantRepublic:
-            if iCompany in [iMedici, iStGeorge, iHospitallers]:
+            if iCompany in [xml.iMedici, xml.iStGeorge, xml.iHospitallers]:
                 iValue += 1
-            elif iCompany == iHansa:
+            elif iCompany == xml.iHansa:
                 iValue += 2
         if owner.getCivics(1) == xml.iCivicFeudalLaw:
-            if iCompany in [iHospitallers, iTemplars, iTeutons, iDragon, iCalatrava]:
+            if iCompany in [
+                xml.iHospitallers,
+                xml.iTemplars,
+                xml.iTeutons,
+                xml.iDragon,
+                xml.iCalatrava,
+            ]:
                 iValue += 2
         elif owner.getCivics(1) == xml.iCivicReligiousLaw:
-            if iCompany in [iHospitallers, iTemplars, iTeutons, iCalatrava]:
+            if iCompany in [xml.iHospitallers, xml.iTemplars, xml.iTeutons, xml.iCalatrava]:
                 iValue += 1
         if owner.getCivics(2) == xml.iCivicApprenticeship:
-            if iCompany == iHansa:
+            if iCompany == xml.iHansa:
                 iValue += 1
         if owner.getCivics(3) == xml.iCivicTradeEconomy:
-            if iCompany in [iMedici, iAugsburg, iStGeorge]:
+            if iCompany in [xml.iMedici, xml.iAugsburg, xml.iStGeorge]:
                 iValue += 1
-            elif iCompany == iHansa:
+            elif iCompany == xml.iHansa:
                 iValue += 2
         elif owner.getCivics(3) == xml.iCivicGuilds:
             if iCompany in [
-                iHospitallers,
-                iTemplars,
-                iTeutons,
-                iMedici,
-                iAugsburg,
-                iStGeorge,
-                iDragon,
-                iCalatrava,
+                xml.iHospitallers,
+                xml.iTemplars,
+                xml.iTeutons,
+                xml.iMedici,
+                xml.iAugsburg,
+                xml.iStGeorge,
+                xml.iDragon,
+                xml.iCalatrava,
             ]:
                 iValue += 1
-            elif iCompany == iHansa:
+            elif iCompany == xml.iHansa:
                 iValue += 2
         elif owner.getCivics(3) == xml.iCivicMercantilism:
-            if iCompany == iHansa:
+            if iCompany == xml.iHansa:
                 return -1
-            elif iCompany in [iMedici, iAugsburg, iStGeorge]:
+            elif iCompany in [xml.iMedici, xml.iAugsburg, xml.iStGeorge]:
                 iValue -= 2
         if owner.getCivics(4) == xml.iCivicTheocracy:
-            if iCompany in [iHospitallers, iTemplars]:
+            if iCompany in [xml.iHospitallers, xml.iTemplars]:
                 iValue += 1
-            elif iCompany == iTeutons:
+            elif iCompany == xml.iTeutons:
                 iValue += 2
         elif owner.getCivics(4) == xml.iCivicFreeReligion:
-            if iCompany in [iHospitallers, iTemplars, iTeutons, iDragon]:
+            if iCompany in [xml.iHospitallers, xml.iTemplars, xml.iTeutons, xml.iDragon]:
                 iValue -= 1
-            elif iCompany == iCalatrava:
+            elif iCompany == xml.iCalatrava:
                 iValue -= 2
         if owner.getCivics(5) == xml.iCivicOccupation:
-            if iCompany in [iHospitallers, iTemplars, iCompany, iCompany == iCalatrava]:
+            if iCompany in [
+                xml.iHospitallers,
+                xml.iTemplars,
+                iCompany,
+                iCompany == xml.iCalatrava,
+            ]:
                 iValue += 1
 
         # bonus for techs
-        if iCompany in [iHospitallers, iTemplars, iTeutons, iDragon, iCalatrava]:
+        if iCompany in [
+            xml.iHospitallers,
+            xml.iTemplars,
+            xml.iTeutons,
+            xml.iDragon,
+            xml.iCalatrava,
+        ]:
             for iTech in [xml.iChivalry, xml.iPlateArmor, xml.iGuilds, xml.iMilitaryTradition]:
                 if ownerTeam.isHasTech(iTech):
                     iValue += 1
-        elif iCompany == iHansa:
+        elif iCompany == xml.iHansa:
             for iTech in [xml.iGuilds, xml.iClockmaking, xml.iOptics, xml.iShipbuilding]:
                 if ownerTeam.isHasTech(iTech):
                     iValue += 1
-        elif iCompany in [iMedici, iStGeorge]:
+        elif iCompany in [xml.iMedici, xml.iStGeorge]:
             for iTech in [
                 xml.iBanking,
                 xml.iPaper,
@@ -619,7 +628,7 @@ class Companies:
             ]:
                 if ownerTeam.isHasTech(iTech):
                     iValue += 1
-        elif iCompany == iAugsburg:
+        elif iCompany == xml.iAugsburg:
             for iTech in [xml.iBanking, xml.iPaper, xml.iChemistry]:
                 if ownerTeam.isHasTech(iTech):
                     iValue += 1
@@ -632,7 +641,13 @@ class Companies:
             if iBonus > -1:
                 if city.getNumBonuses(iBonus) > 0:
                     bFound = True
-                    if iCompany in [iHospitallers, iTemplars, iTeutons, iDragon, iCalatrava]:
+                    if iCompany in [
+                        xml.iHospitallers,
+                        xml.iTemplars,
+                        xml.iTeutons,
+                        xml.iDragon,
+                        xml.iCalatrava,
+                    ]:
                         iTempValue += (
                             city.getNumBonuses(iBonus) + 2
                         )  # 3 for the first bonus, 1 for the rest of the same type
@@ -640,7 +655,7 @@ class Companies:
                         iTempValue += (
                             city.getNumBonuses(iBonus) + 1
                         ) * 2  # 4 for the first bonus, 2 for the rest
-        if iCompany in [iHansa, iMedici, iAugsburg, iStGeorge] and not bFound:
+        if iCompany in [xml.iHansa, xml.iMedici, xml.iAugsburg, xml.iStGeorge] and not bFound:
             return -1
         # we don't want the bonus to get too big, and dominate the selection values
         iValue += iTempValue / 4
@@ -648,35 +663,35 @@ class Companies:
         # bonus for resources in the fat cross of a city?
 
         # competition
-        if iCompany == iHospitallers:
-            if city.isHasCorporation(iTemplars):
+        if iCompany == xml.iHospitallers:
+            if city.isHasCorporation(xml.iTemplars):
                 iValue *= 2
                 iValue /= 3
-            if city.isHasCorporation(iTeutons):
+            if city.isHasCorporation(xml.iTeutons):
                 iValue *= 2
                 iValue /= 3
-        elif iCompany == iTemplars:
-            if city.isHasCorporation(iHospitallers):
+        elif iCompany == xml.iTemplars:
+            if city.isHasCorporation(xml.iHospitallers):
                 iValue *= 2
                 iValue /= 3
-            if city.isHasCorporation(iTeutons):
+            if city.isHasCorporation(xml.iTeutons):
                 iValue *= 2
                 iValue /= 3
-        elif iCompany == iTeutons:
-            if city.isHasCorporation(iTemplars):
+        elif iCompany == xml.iTeutons:
+            if city.isHasCorporation(xml.iTemplars):
                 iValue *= 2
                 iValue /= 3
-            if city.isHasCorporation(iHospitallers):
+            if city.isHasCorporation(xml.iHospitallers):
                 iValue *= 2
                 iValue /= 3
-        elif iCompany == iMedici:
-            if city.isHasCorporation(iStGeorge) or city.isHasCorporation(iAugsburg):
+        elif iCompany == xml.iMedici:
+            if city.isHasCorporation(xml.iStGeorge) or city.isHasCorporation(xml.iAugsburg):
                 iValue /= 2
-        elif iCompany == iStGeorge:
-            if city.isHasCorporation(iMedici) or city.isHasCorporation(iAugsburg):
+        elif iCompany == xml.iStGeorge:
+            if city.isHasCorporation(xml.iMedici) or city.isHasCorporation(xml.iAugsburg):
                 iValue /= 2
-        elif iCompany == iAugsburg:
-            if city.isHasCorporation(iMedici) or city.isHasCorporation(iStGeorge):
+        elif iCompany == xml.iAugsburg:
+            if city.isHasCorporation(xml.iMedici) or city.isHasCorporation(xml.iStGeorge):
                 iValue /= 2
 
         # threshold
