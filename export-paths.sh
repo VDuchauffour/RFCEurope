@@ -25,6 +25,7 @@ LOCAL_PATHS=(
 	"$(readlink -f "$SCRIPT_DIR"/Assets/Python)"
 	"$(readlink -f "$SCRIPT_DIR"/Assets/Python/data)"
 	"$(readlink -f "$SCRIPT_DIR"/Assets/Python/utils)"
+	"$(readlink -f "$SCRIPT_DIR"/Assets/Python/models)"
 	"$(readlink -f "$SCRIPT_DIR"/Assets/Python/components)"
 	"$(readlink -f "$SCRIPT_DIR"/Assets/Python/EntryPoints)"
 	"$(readlink -f "$SCRIPT_DIR"/Assets/Python/pyWB)"

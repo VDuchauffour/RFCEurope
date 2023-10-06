@@ -28,6 +28,7 @@ executionEnvironments = [
     "Assets/Python/",
     "Assets/Python/data",
     "Assets/Python/utils",
+    "Assets/Python/models",
     "Assets/Python/components",
     "Assets/Python/EntryPoints",
     "Assets/Python/pyWB",
