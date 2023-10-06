@@ -9,9 +9,9 @@ from CoreTypes import (
 )
 from CoreStructures import (
     CivDataMapper,
-    CivilizationAttributes,
     CivilizationsFactory,
     ScenarioDataMapper,
+    attribute_factory,
 )
 from TimelineData import DateTurn
 
@@ -1474,11 +1474,7 @@ CIV_LEADERS = (
             },
         }
     )
-    .apply(
-        lambda leaders: CivilizationAttributes(
-            **dict((k.name.lower(), v) for k, v in leaders.items())
-        )
-    )
+    .apply(attribute_factory)
     .fill_missing_members(None)
 )
 
@@ -1517,11 +1513,7 @@ CIV_PROPERTIES = (
             CivilizationProperty.IS_MINOR: False,
         }
     )
-    .apply(
-        lambda properties: CivilizationAttributes(
-            **dict((k.name.lower(), v) for k, v in properties.items())
-        )
-    )
+    .apply(attribute_factory)
 )
 
 # TODO add all remaining CivDataMapper and use RFCUtils getScenario

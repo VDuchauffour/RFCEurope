@@ -1,5 +1,6 @@
 from CoreTypes import Area, AreaTypes, Civ, Religion, Scenario
 from BaseStructures import EnumDataMapper
+from Enum import Enum
 from Errors import NotACallableError, NotTypeExpectedError
 
 try:
@@ -21,6 +22,192 @@ class ScenarioDataMapper(EnumDataMapper):
     """Class to map data to Scenario enum."""
 
     BASE_CLASS = Scenario
+
+
+class Attributes(dict):
+    """A class to handle attibutes from a DataMapper."""
+
+    def __init__(self, **properties):
+        for name, value in properties.items():
+            setattr(self, name, value)
+
+    def __repr__(self):
+        return self.__class__.__name__ + "(" + str(self.__dict__) + ")"
+
+
+class Item(object):
+    """A base class to handle a game item."""
+
+    BASE_CLASS = None
+
+    def __init__(self, id, **kwargs):
+        if not issubclass(self.BASE_CLASS, Enum):
+            raise NotTypeExpectedError(Enum, self.BASE_CLASS)
+
+        if not isinstance(id, self.BASE_CLASS):
+            raise NotTypeExpectedError(self.BASE_CLASS, type(id))
+
+        self._id = id
+        for name, value in kwargs.items():
+            setattr(self, name, value)
+
+    @property
+    def id(self):
+        return self._id.value  # type: ignore
+
+    @property
+    def key(self):
+        return self._id
+
+    @property
+    def name(self):
+        return self._id.name  # type: ignore
+
+    def __repr__(self):
+        return self.__class__.__name__ + "(" + str(self.BASE_CLASS[self.name]) + ")"
+
+
+class ItemCollection(list):
+    """A base class to handle a set of a specific type of `Item`."""
+
+    BASE_CLASS = None
+
+    def __init__(self, *items):
+        for item in items:
+            if not isinstance(item, self.BASE_CLASS):
+                raise NotTypeExpectedError(self.BASE_CLASS, type(item))
+            self.append(item)
+
+    def len(self):
+        return self.__len__()
+
+    def ids(self):
+        """Return a list of identifiers."""
+        return [item.id for item in self]
+
+    def _filter(self, condition):
+        if not callable(condition):
+            raise NotACallableError(condition)
+        # return [item for item in self if condition(item)]
+        return [condition(item) for item in self]
+
+    def _compress(self, selectors):
+        return (item for item, s in zip(self, selectors) if s)
+
+    def filter(self, condition):
+        """Filter item when `condition` is True."""
+        return self.__class__(*self._compress(self._filter(condition)))
+
+    def all(self, condition):
+        """Return True if `condition` is True for all items."""
+        states = self._filter(condition)
+        for state in states:
+            if not state:
+                return False
+        return True
+
+    def any(self, condition):
+        """Return True if `condition` is True for at least one items."""
+        states = self._filter(condition)
+        for state in states:
+            if state:
+                return True
+        return False
+
+    def none(self, condition):
+        """Return True if `condition` is False for all items."""
+        return not self.any(condition)
+
+    def drop(self, *items):
+        """Return the object without `items` given its keys, i.e. the relevant enum member."""
+        return self.filter(lambda x: x.key not in items)
+
+    def get(self, *items):
+        """Return the object with only `items` given its keys, i.e. the relevant enum member."""
+        return self.filter(lambda x: x.key in items)
+
+
+class Civilization(Item):
+    """A simple class to handle a civilization."""
+
+    BASE_CLASS = Civ
+
+    @property
+    def player(self):
+        return gc.getPlayer(self.id)
+
+    @property
+    def team(self):
+        return gc.getTeam(self.id)
+
+
+class Civilizations(ItemCollection):
+    """A simple class to handle a set of civilizations."""
+
+    BASE_CLASS = Civilization
+
+    def alive(self):
+        """Return alive civilizations."""
+        return self.filter(lambda c: c.player.isAlive())
+
+    def dead(self):
+        """Return dead civilizations."""
+        return self.filter(lambda c: not c.player.isAlive())
+
+    def existing(self):
+        """Return existing civilizations."""
+        return self.filter(lambda c: c.player.isExisting())
+
+    def inexisting(self):
+        """Return inexisting civilizations."""
+        return self.filter(lambda c: not c.player.isExisting())
+
+    def ai(self):
+        """Return civilizations played by AI."""
+        return self.filter(lambda c: not c.player.isHuman())
+
+    def human(self):
+        """Return civilization of the player."""
+        return self.filter(lambda c: c.player.isHuman())
+
+    def main(self):
+        """Return main civilizations, i.e. not minor and playable."""
+        return self.filter(lambda c: c.properties.is_playable and not c.properties.is_minor)
+
+    def majors(self):
+        """Return major civilizations, i.e. not minor ones (all playable and non-playable civs like The Pope)."""
+        return self.filter(lambda c: not c.properties.is_minor)
+
+    def minors(self):
+        """Return minor civilizations, i.e. minor and not playable civs like independents and barbarian."""
+        return self.filter(lambda c: c.properties.is_minor and not c.properties.is_playable)
+
+    def independents(self):
+        """Return independents civilizations."""
+        return self.filter(lambda c: "INDEPENDENT" in c.name)
+
+    def barbarian(self):
+        """Return the barbarian civilization."""
+        return self.get(Civ.BARBARIAN)[0]
+
+
+class CivilizationsFactory(object):
+    """A factory to generate `Civilizations` from CivDataMapper."""
+
+    def __init__(self):
+        self._attachments = {}
+
+    def attach(self, name, data):
+        if isinstance(name, str) and isinstance(data, CivDataMapper):
+            self._attachments[name] = data
+        return self
+
+    def collect(self):
+        civs = []
+        for civ in Civ:
+            attachments = dict((k, v[civ]) for k, v in self._attachments.items())
+            civs.append(Civilization(civ, **attachments))
+        return Civilizations(*civs)
 
 
 class Tile(object):
@@ -52,7 +239,7 @@ class Tile(object):
         self._keys["areas"].append(area)
 
     def __str__(self):
-        return str((self.x, self.y))
+        return str(self.to_tuple())
 
     def __repr__(self):
         return self.__str__()
@@ -96,26 +283,6 @@ class Tile(object):
         return False
 
 
-def parse_area_dict(data):
-    """Parse a dict of area properties."""
-    if data.get(Area.ADDITIONAL_TILES) is not None:
-        add_tiles = [Tile(t) for t in data[Area.ADDITIONAL_TILES]]
-    else:
-        add_tiles = None
-
-    if data.get(Area.EXCEPTION_TILES) is not None:
-        exception_tiles = [Tile(t) for t in data[Area.EXCEPTION_TILES]]
-    else:
-        exception_tiles = None
-
-    return {
-        Area.TILE_MIN: Tile(data[Area.TILE_MIN]),
-        Area.TILE_MAX: Tile(data[Area.TILE_MAX]),
-        Area.ADDITIONAL_TILES: add_tiles,
-        Area.EXCEPTION_TILES: exception_tiles,
-    }
-
-
 class Tiles(list):
     """Class to handle a collection of tile."""
 
@@ -130,31 +297,6 @@ class Tiles(list):
 
     def max(self):
         return max(self)
-
-
-def normalize_tiles(tiles):
-    """Merge multiple `Tiles` objects into a single one."""
-
-    _tiles = Tiles()
-    if not isinstance(tiles, Tiles):
-        raise NotTypeExpectedError(Tiles, type(tiles))
-    for tile in tiles:
-        if not isinstance(tile, Tile):
-            raise NotTypeExpectedError(Tile, type(tile))
-        if tile not in _tiles:
-            _tiles.append(tile)
-    return _tiles
-
-
-def concat_tiles(*tiles_obj):
-    """Concat multiple `Tiles` objects into a single one."""
-
-    _tiles = Tiles()
-    for obj in tiles_obj:
-        if not isinstance(obj, Tiles):
-            raise NotTypeExpectedError(Tiles, type(obj))
-        _tiles += obj
-    return _tiles
 
 
 class TilesFactory:
@@ -209,51 +351,6 @@ class TilesFactory:
         return self
 
 
-class CivilizationAttributes(object):
-    """A class to handle civilization attibutes from CivDataMapper."""
-
-    def __init__(self, **properties):
-        for name, value in properties.items():
-            setattr(self, name, value)
-
-    def __repr__(self):
-        return self.__class__.__name__ + "(" + str(self.__dict__) + ")"
-
-
-class Civilization(object):
-    """A simple class to handle a civilization."""
-
-    def __init__(self, id, **kwargs):
-        if not isinstance(id, Civ):
-            raise NotTypeExpectedError(Civ, type(id))
-        self._id = id
-        for name, value in kwargs.items():
-            setattr(self, name, value)
-
-    @property
-    def id(self):
-        return self._id.value  # type: ignore
-
-    @property
-    def key(self):
-        return self._id
-
-    @property
-    def name(self):
-        return self._id.name  # type: ignore
-
-    def __repr__(self):
-        return self.__class__.__name__ + "(" + str(Civ[self.name]) + ")"
-
-    @property
-    def player(self):
-        return gc.getPlayer(self.id)
-
-    @property
-    def team(self):
-        return gc.getTeam(self.id)
-
-
 def get_enum_by_id(enum, id):
     """Return a enum member by its index."""
     return enum[enum._member_names_[id]]
@@ -269,98 +366,51 @@ def get_religion_by_id(id):
     return get_enum_by_id(Religion, id)
 
 
-class Civilizations(list):
-    """A simple class to handle a set of civilizations."""
-
-    def __init__(self, *civs):
-        for civ in civs:
-            if not isinstance(civ, Civilization):
-                raise NotTypeExpectedError(Civilization, type(civ))
-            self.append(civ)
-
-    def len(self):
-        return self.__len__()
-
-    def ids(self):
-        """Return a list of identifiers."""
-        return [civ.id for civ in self]
-
-    def filter(self, func):
-        """Filter civilization when function returns `True`."""
-        if not callable(func):
-            raise NotACallableError(func)
-        civs = [civ for civ in self if func(civ)]
-        return self.__class__(*civs)
-
-    def drop(self, *civs):
-        """Return the object without `civs` given its keys, i.e. the relevant `Civ` member."""
-        return self.filter(lambda c: c.key not in civs)
-
-    def get(self, *civs):
-        """Return the object with only `civs` given its keys, i.e. the relevant `Civ` member."""
-        return self.filter(lambda c: c.key in civs)
-
-    def alive(self):
-        """Return alive civilizations."""
-        return self.where(lambda c: c.player.isAlive())
-
-    def dead(self):
-        """Return dead civilizations."""
-        return self.where(lambda c: c.player.isAlive())
-
-    def existing(self):
-        """Return existing civilizations."""
-        return self.where(lambda c: c.player.isExisting())
-
-    def inexisting(self):
-        """Return inexisting civilizations."""
-        return self.where(lambda c: not c.player.isExisting())
-
-    def ai(self):
-        """Return civilizations played by AI."""
-        return self.where(lambda c: not c.player.isHuman())
-
-    def human(self):
-        """Return civilization of the player."""
-        return self.where(lambda c: c.player.isHuman())
-
-    def main(self):
-        """Return main civilizations, i.e. not minor and playable."""
-        return self.filter(lambda c: c.properties.is_playable and not c.properties.is_minor)
-
-    def majors(self):
-        """Return major civilizations, i.e. not minor ones (all playable and non-playable civs like The Pope)."""
-        return self.filter(lambda c: not c.properties.is_minor)
-
-    def minors(self):
-        """Return minor civilizations, i.e. minor and not playable civs like independents and barbarian."""
-        return self.filter(lambda c: c.properties.is_minor and not c.properties.is_playable)
-
-    def independents(self):
-        """Return independents civilizations."""
-        return self.filter(lambda c: "INDEPENDENT" in c.name)
-
-    def barbarian(self):
-        """Return the barbarian civilization."""
-        return self.get(Civ.BARBARIAN)[0]
-
-    # TODO add func for any, all, where cf https://github.com/dguenms/Dawn-of-Civilization/blob/a305e7846d085d6edf1e9c472e8dfceee1c07dd4/Assets/Python/Core.py#L1683
+def attribute_factory(data):
+    """Return a `Attributes` object given Mapping with enum member as keys."""
+    return Attributes(**dict((k.name.lower(), v) for k, v in data.items()))
 
 
-class CivilizationsFactory(object):
-    """A factory to generate `Civilizations` from CivDataMapper."""
+def normalize_tiles(tiles):
+    """Merge multiple `Tiles` objects into a single one."""
 
-    def __init__(self):
-        self._attachments = {}
+    _tiles = Tiles()
+    if not isinstance(tiles, Tiles):
+        raise NotTypeExpectedError(Tiles, type(tiles))
+    for tile in tiles:
+        if not isinstance(tile, Tile):
+            raise NotTypeExpectedError(Tile, type(tile))
+        if tile not in _tiles:
+            _tiles.append(tile)
+    return _tiles
 
-    def attach(self, name, data):
-        if isinstance(name, str) and isinstance(data, CivDataMapper):
-            self._attachments[name] = data
-        return self
 
-    def collect(self):
-        civs = []
-        for civ in Civ:
-            attachments = dict((k, v[civ]) for k, v in self._attachments.items())
-            civs.append(Civilization(civ, **attachments))
-        return Civilizations(*civs)
+def concat_tiles(*tiles):
+    """Concat multiple `Tiles` objects into a single one."""
+
+    _tiles = Tiles()
+    for obj in tiles:
+        if not isinstance(obj, Tiles):
+            raise NotTypeExpectedError(Tiles, type(obj))
+        _tiles += obj
+    return _tiles
+
+
+def parse_area_dict(data):
+    """Parse a dict of area properties."""
+    if data.get(Area.ADDITIONAL_TILES) is not None:
+        add_tiles = [Tile(t) for t in data[Area.ADDITIONAL_TILES]]
+    else:
+        add_tiles = None
+
+    if data.get(Area.EXCEPTION_TILES) is not None:
+        exception_tiles = [Tile(t) for t in data[Area.EXCEPTION_TILES]]
+    else:
+        exception_tiles = None
+
+    return {
+        Area.TILE_MIN: Tile(data[Area.TILE_MIN]),
+        Area.TILE_MAX: Tile(data[Area.TILE_MAX]),
+        Area.ADDITIONAL_TILES: add_tiles,
+        Area.EXCEPTION_TILES: exception_tiles,
+    }
