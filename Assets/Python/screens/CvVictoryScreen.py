@@ -2,7 +2,8 @@
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
 from CivilizationsData import CIVILIZATIONS
-from CoreTypes import City, Civ, ProvinceStatus, Religion
+from CoreData import COMPANIES
+from CoreTypes import City, Civ, Company, ProvinceStatus, Religion
 import CvUtil
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
 import PyHelpers
@@ -2916,7 +2917,7 @@ class CvVictoryScreen:
                 or city.getNumRealBuilding(xml.iEnglishRoyalExchange) > 0
             ):
                 iBankCount += 1
-        iCompanyCities = pPlayer.countCorporations(xml.iStGeorge)
+        iCompanyCities = pPlayer.countCorporations(Company.ST_GEORGE.value)
         sText3 += (
             localText.getText("TXT_KEY_UHV_BANKS", ())
             + ": "
@@ -2927,7 +2928,7 @@ class CvVictoryScreen:
             + localText.getText("TXT_KEY_UHV_COMPANIES", ())
             + ": "
             + self.determineColor(
-                iCompanyCities == xml.tCompaniesLimit[xml.iStGeorge], str(iCompanyCities)
+                iCompanyCities == COMPANIES[Company.ST_GEORGE].limit, str(iCompanyCities)
             )
         )
         lHelpTexts = [sText1, sText2, sText3]

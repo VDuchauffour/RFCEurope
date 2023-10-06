@@ -1086,46 +1086,6 @@ lNotEurope = [
 ]
 
 
-# Companies
-
-iNumCompanies = 9
-(
-    iHospitallers,
-    iTemplars,
-    iTeutons,
-    iHansa,
-    iMedici,
-    iAugsburg,
-    iStGeorge,
-    iDragon,
-    iCalatrava,
-) = range(iNumCompanies)
-# Dates:		1096	1096	1096	1157	1397	1487	1407	1408	1164
-# 			n/a		1312	n/a		1669	1499	n/a		1805	n/a		1838
-tCompaniesBirth = (165, 165, 165, 186, 266, 295, 269, 269, 188)
-tCompaniesDeath = (
-    999,
-    237,
-    999,
-    385,
-    300,
-    999,
-    999,
-    999,
-    999,
-)  # maybe add a couple extra turns for Templars and Medici?
-tCompaniesLimit = (
-    3,
-    4,
-    3,
-    3,
-    4,
-    4,
-    3,
-    5,
-    5,
-)  # note that we have a modified limit for Hospitallers and Teutons after the Crusades
-
 # Companies will only settle in their preferred regions
 lCompanyRegions = [
     [

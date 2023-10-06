@@ -1,6 +1,7 @@
 from CvPythonExtensions import *
 from CivilizationsData import CIVILIZATIONS
-from CoreTypes import City, Civ, ProvinceStatus, StabilityCategory, Religion
+from CoreData import COMPANIES
+from CoreTypes import City, Civ, Company, ProvinceStatus, StabilityCategory, Religion
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
 import PyHelpers
 import Popup
@@ -1685,8 +1686,8 @@ class Victory:
                         or city.getNumRealBuilding(xml.iEnglishRoyalExchange) > 0
                     ):
                         iBanks += 1
-                iCompanyCities = pGenoa.countCorporations(xml.iStGeorge)
-                if iBanks >= 8 and iCompanyCities == xml.tCompaniesLimit[xml.iStGeorge]:
+                iCompanyCities = pGenoa.countCorporations(Company.ST_GEORGE.value)
+                if iBanks >= 8 and iCompanyCities == COMPANIES[Company.ST_GEORGE].limit:
                     self.wonUHV(Civ.GENOA.value, 2)
                 else:
                     self.lostUHV(Civ.GENOA.value, 2)

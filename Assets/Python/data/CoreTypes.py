@@ -43,7 +43,7 @@ class CivilizationProperty(Enum):
     IS_MINOR = 1
 
 
-class CivGroup(Enum):
+class CivGroup(IntEnum):
     EASTERN = 0
     CENTRAL = 1
     ATLANTIC = 2
@@ -63,7 +63,7 @@ class StartingSituation(Enum):
     FAITH = 2
 
 
-class Religion(Enum):
+class Religion(IntEnum):
     PROTESTANTISM = 0
     ISLAM = 1
     CATHOLICISM = 2
@@ -71,7 +71,7 @@ class Religion(Enum):
     JUDAISM = 4
 
 
-class Company(Enum):
+class Company(IntEnum):
     HOSPITALLERS = 0
     TEMPLARS = 1
     TEUTONS = 2
