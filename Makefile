@@ -38,6 +38,6 @@ lint:
 	ruff check .
 
 # test the package
-test: clean-test
+test: clean
 	python Tests/test_imports.py -v
 	python Tests/test_base_structures.py -v
