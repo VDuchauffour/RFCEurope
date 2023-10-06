@@ -3,6 +3,7 @@ import Consts
 from CoreTypes import (
     City,
     Civ,
+    Plague,
     ProvinceTypes,
     Religion,
     StartingSituation,

@@ -8,6 +8,7 @@
 
 
 from CvPythonExtensions import *
+from CoreTypes import Plague
 import CvUtil
 import CvScreenEnums
 

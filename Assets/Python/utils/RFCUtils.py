@@ -2,7 +2,7 @@
 
 from CvPythonExtensions import *
 from CivilizationsData import CIVILIZATIONS
-from CoreTypes import City, Civ, Religion, Scenario, UniquePower, Wonder
+from CoreTypes import City, Civ, Plague, Religion, Scenario, UniquePower, Wonder
 import CvUtil
 import CvScreenEnums
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
