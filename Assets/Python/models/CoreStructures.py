@@ -1,3 +1,4 @@
+import random
 import CoreTypes
 from PyUtils import all, any
 from BaseStructures import EnumDataMapper
@@ -88,32 +89,48 @@ class ItemCollection(list):
     def len(self):
         return self.__len__()
 
-    def ids(self):
-        """Return a list of identifiers."""
-        return [item.id for item in self]
+    def copy(self, *items):
+        return self.__class__(*items)
 
-    def _filter(self, condition):
+    def _apply(self, condition):
         if not callable(condition):
             raise NotACallableError(condition)
         return [condition(item) for item in self]
 
-    def _compress(self, selectors):
+    def _compress(self, selectors, negate=False):
+        if negate:
+            return (item for item, s in zip(self, selectors) if not s)
         return (item for item, s in zip(self, selectors) if s)
 
-    def _copy(self, *items):
-        return self.__class__(*items)
+    def _filter(self, condition):
+        return self._compress(self._apply(condition))
 
     def filter(self, condition):
         """Filter item when `condition` is True."""
-        return self._copy(*self._compress(self._filter(condition)))
+        return self.copy(*self._filter(condition))
+
+    def attributes(self, attribute):
+        """Return a list of item attribute."""
+        return self._apply(attribute)
+
+    def ids(self):
+        """Return a list of identifiers."""
+        return self.attributes(lambda c: c.id)
+
+    def split(self, condition):
+        """Return a tuple of 2 elements, the first corresponds to items where `condition` is True, the second not."""
+        status = self._apply(condition)
+        valid_items = self._compress(status)
+        rest_items = self._compress(status, negate=True)
+        return (self.copy(*valid_items), self.copy(*rest_items))
 
     def all(self, condition):
         """Return True if `condition` is True for all items."""
-        return all(self._filter(condition))
+        return all(self._apply(condition))
 
     def any(self, condition):
         """Return True if `condition` is True for at least one items."""
-        return any(self._filter(condition))
+        return any(self._apply(condition))
 
     def none(self, condition):
         """Return True if `condition` is False for all items."""
@@ -127,9 +144,37 @@ class ItemCollection(list):
         """Return the object with only `items` given its keys, i.e. the relevant enum member."""
         return self.filter(lambda x: x.key in items)
 
+    def limit(self, n):
+        """Return the first `n` items of the object."""
+        return self[:n]
+
     def sort(self, metric, reverse=False):
         """Return the object sorted given a `metric` function."""
-        return self._copy(*sorted(self, key=metric, reverse=reverse))
+        return self.copy(*sorted(self, key=metric, reverse=reverse))
+
+    def nlargest(self, n, metric):
+        """Return the first `n` largest item of the object given a `metric` function."""
+        return self.sort(metric, reverse=True).limit(n)
+
+    def nsmallest(self, n, metric):
+        """Return the first `n` smallest item of the object given a `metric` function."""
+        return self.sort(metric).limit(n)
+
+    def maximum(self, metric):
+        """Return the largest item of the object given a `metric` function."""
+        return self.nlargest(1, metric)
+
+    def minimum(self, metric):
+        """Return the smallest item of the object given a `metric` function."""
+        return self.nsmallest(1, metric)
+
+    def random(self):
+        """Return a single entry of the object."""
+        return self.copy(random.choice(self))
+
+    def sample(self, k):
+        """Return a sample of the object."""
+        return self.copy(*random.sample(self, k))
 
 
 class Company(Item):
@@ -156,6 +201,18 @@ class Civilization(Item):
     @property
     def team(self):
         return gc.getTeam(self.id)
+
+    @property
+    def description(self):
+        return self.player.getCivilizationShortDescription(0)
+
+    @property
+    def long_description(self):
+        return self.player.getCivilizationDescription(0)
+
+    @property
+    def adjective(self):
+        return self.player.getCivilizationAdjective(0)
 
 
 class Civilizations(ItemCollection):
