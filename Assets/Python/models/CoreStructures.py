@@ -1,4 +1,5 @@
 import CoreTypes
+from PyUtils import all, any
 from BaseStructures import EnumDataMapper
 from Enum import Enum
 from Errors import NotACallableError, NotTypeExpectedError
@@ -108,19 +109,11 @@ class ItemCollection(list):
 
     def all(self, condition):
         """Return True if `condition` is True for all items."""
-        states = self._filter(condition)
-        for state in states:
-            if not state:
-                return False
-        return True
+        return all(self._filter(condition))
 
     def any(self, condition):
         """Return True if `condition` is True for at least one items."""
-        states = self._filter(condition)
-        for state in states:
-            if state:
-                return True
-        return False
+        return any(self._filter(condition))
 
     def none(self, condition):
         """Return True if `condition` is False for all items."""
