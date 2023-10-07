@@ -715,7 +715,7 @@ class ProvinceManager:
         # update provinces for the 1200 AD Scenario
         if utils.getScenario() == Scenario.i1200AD:
             for civ in CIVILIZATIONS.main():
-                if CIV_BIRTHDATE[civ.id] < DateTurn.i1200AD:
+                if CIV_BIRTHDATE[civ.key] < DateTurn.i1200AD:
                     self.onSpawn(civ.id)
 
     def checkTurn(self, iGameTurn):
