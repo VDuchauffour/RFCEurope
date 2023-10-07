@@ -9,7 +9,7 @@ from TimelineData import DateTurn
 import XMLConsts as xml
 from StoredData import sd
 
-from CivilizationsData import CIVILIZATIONS
+from CoreData import CIVILIZATIONS
 from MiscData import MessageData
 
 # globals

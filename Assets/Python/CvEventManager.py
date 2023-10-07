@@ -23,7 +23,7 @@ import RFCUtils
 import RFCEBalance
 import random
 from MiscData import WORLD_HEIGHT, MessageData
-from CivilizationsData import CIVILIZATIONS
+from CoreData import CIVILIZATIONS
 from LocationsData import CIV_NEIGHBOURS
 from CoreTypes import Wonder
 

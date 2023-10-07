@@ -1,4 +1,5 @@
 from CvPythonExtensions import *
+from CoreData import CIVILIZATIONS
 import PyHelpers  # LOQ
 import Popup
 import RFCUtils
@@ -25,7 +26,6 @@ from CivilizationsData import (
     CIV_INITIAL_CONTACTS,
     CIV_RESPAWNING_THRESHOLD,
     CIV_STARTING_SITUATION,
-    CIVILIZATIONS,
 )
 from CoreStructures import get_civ_by_id
 from LocationsData import CIV_CAPITAL_LOCATIONS, CIV_NEW_CAPITAL_LOCATIONS, CIV_OLDER_NEIGHBOURS

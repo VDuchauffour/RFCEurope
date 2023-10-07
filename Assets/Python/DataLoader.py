@@ -3,7 +3,7 @@
 
 from CvPythonExtensions import *
 import RFCEMaps
-from CivilizationsData import CIVILIZATIONS
+from CoreData import CIVILIZATIONS
 from LocationsData import LAKE_LOCATIONS
 
 gc = CyGlobalContext()

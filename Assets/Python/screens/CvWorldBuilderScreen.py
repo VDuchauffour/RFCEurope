@@ -1,7 +1,7 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
-from CivilizationsData import CIVILIZATIONS
+from CoreData import CIVILIZATIONS
 import CvUtil
 import CvScreensInterface
 import CvEventInterface

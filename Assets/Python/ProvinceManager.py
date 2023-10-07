@@ -1,7 +1,7 @@
 # RFC Europe - Province manager
 
 from CvPythonExtensions import *
-from CivilizationsData import CIVILIZATIONS
+from CoreData import CIVILIZATIONS
 import XMLConsts as xml
 import RFCEMaps
 import RFCUtils  # Absinthe

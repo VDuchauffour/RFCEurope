@@ -1,7 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Plague
 
 from CvPythonExtensions import *
-from CivilizationsData import CIVILIZATIONS
+from CoreData import CIVILIZATIONS
 import CoreTypes
 import PyHelpers
 import XMLConsts as xml

@@ -1,7 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Event handler
 
 from CvPythonExtensions import *
-from CivilizationsData import CIVILIZATIONS
+from CoreData import CIVILIZATIONS
 import CvUtil
 import CvEventManager  # Mercenaries
 import PyHelpers

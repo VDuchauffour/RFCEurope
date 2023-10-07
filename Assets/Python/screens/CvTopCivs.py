@@ -3,7 +3,7 @@
 # Author - Jon Shafer
 # Top Civilizations screen
 
-from CivilizationsData import CIVILIZATIONS
+from CoreData import CIVILIZATIONS
 import PyHelpers
 import CvUtil
 import CvScreenEnums

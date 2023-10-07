@@ -9,7 +9,6 @@ from CoreTypes import (
 )
 from CoreStructures import (
     CivDataMapper,
-    CivilizationsFactory,
     ScenarioDataMapper,
     attribute_factory,
 )
@@ -1514,12 +1513,4 @@ CIV_PROPERTIES = (
         }
     )
     .apply(attribute_factory)
-)
-
-# TODO add all remaining CivDataMapper and use RFCUtils getScenario
-CIVILIZATIONS = (
-    CivilizationsFactory()
-    .attach("properties", CIV_PROPERTIES)
-    .attach("leaders", CIV_LEADERS)
-    .collect()
 )

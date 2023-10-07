@@ -1,5 +1,6 @@
 from CvPythonExtensions import *
 import Consts
+from CoreData import CIVILIZATIONS
 from CoreTypes import (
     City,
     Civ,
@@ -16,7 +17,6 @@ import RFCUtils
 from CivilizationsData import (
     CIV_STARTING_SITUATION,
     CIV_RELIGION_SPEADING_THRESHOLD,
-    CIVILIZATIONS,
 )
 from MiscData import (
     WORLD_WIDTH,

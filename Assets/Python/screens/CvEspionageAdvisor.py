@@ -2,7 +2,7 @@
 ## Copyright Firaxis Games 2005
 ## Improvements to this screen by Almightix - thanks
 from CvPythonExtensions import *
-from CivilizationsData import CIVILIZATIONS
+from CoreData import CIVILIZATIONS
 from PyHelpers import PyPlayer
 import CvUtil
 import CvScreenEnums

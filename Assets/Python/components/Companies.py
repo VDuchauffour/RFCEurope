@@ -2,7 +2,7 @@
 # Implemented by AbsintheRed, based on the wonderful idea of embryodead
 
 from CvPythonExtensions import *
-from CivilizationsData import CIVILIZATIONS
+from CoreData import CIVILIZATIONS
 from CoreData import COMPANIES
 from CoreStructures import get_enum_by_id
 from LocationsData import CITIES

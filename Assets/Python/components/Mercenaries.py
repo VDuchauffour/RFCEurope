@@ -2,7 +2,8 @@
 # Written mostly by 3Miro
 
 from CvPythonExtensions import *
-from CivilizationsData import CIV_HIRE_MERCENARY_THRESHOLD, CIVILIZATIONS
+from CivilizationsData import CIV_HIRE_MERCENARY_THRESHOLD
+from CoreData import CIVILIZATIONS
 from CoreStructures import get_civ_by_id
 from CoreTypes import Civ, SpecialParameter, Religion
 import PyHelpers

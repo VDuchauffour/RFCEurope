@@ -2,7 +2,7 @@
 # Created by 3Miro, revised and improved by AbsintheRed
 
 from CvPythonExtensions import *
-from CivilizationsData import CIVILIZATIONS
+from CoreData import CIVILIZATIONS
 import PyHelpers
 import Popup
 import RFCUtils

@@ -1,7 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Utilities
 
 from CvPythonExtensions import *
-from CivilizationsData import CIVILIZATIONS
+from CoreData import CIVILIZATIONS
 from CoreTypes import City, Civ, Plague, Religion, Scenario, UniquePower, Wonder
 import CvUtil
 import CvScreenEnums

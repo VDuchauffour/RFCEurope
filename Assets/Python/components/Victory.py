@@ -1,5 +1,5 @@
 from CvPythonExtensions import *
-from CivilizationsData import CIVILIZATIONS
+from CoreData import CIVILIZATIONS
 from CoreData import COMPANIES
 from CoreTypes import City, Civ, Company, ProvinceStatus, StabilityCategory, Religion
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS

@@ -4,8 +4,8 @@ from CvPythonExtensions import *
 from CivilizationsData import (
     CIV_RELIGION_SPEADING_THRESHOLD,
     CIV_STARTING_SITUATION,
-    CIVILIZATIONS,
 )
+from CoreData import CIVILIZATIONS
 from CoreStructures import get_civ_by_id, get_religion_by_id
 from CoreTypes import Civ, City, StartingSituation, StabilityCategory, Religion
 from LocationsData import CITIES

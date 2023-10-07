@@ -1,9 +1,10 @@
 # Rhye's and Fall of Civilization: Europe - Stability
 
 from CvPythonExtensions import *
+from CoreData import CIVILIZATIONS
 import PyHelpers
 
-from CivilizationsData import CIV_STABILITY_AI_BONUS, CIVILIZATIONS
+from CivilizationsData import CIV_STABILITY_AI_BONUS
 from LocationsData import CIV_CAPITAL_LOCATIONS
 from CoreStructures import get_civ_by_id
 from TimelineData import CIV_BIRTHDATE, CIV_COLLAPSE_DATE

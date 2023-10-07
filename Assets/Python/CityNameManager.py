@@ -1,7 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - City naming and renaming management
 
 from CvPythonExtensions import *
-from CivilizationsData import CIVILIZATIONS
+from CoreData import CIVILIZATIONS
 import PyHelpers
 import RFCEMaps
 from MiscData import WORLD_HEIGHT

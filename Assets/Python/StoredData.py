@@ -1,7 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Stored Data
 
 from CvPythonExtensions import *
-from CivilizationsData import CIVILIZATIONS
+from CoreData import CIVILIZATIONS
 from CoreTypes import Civ
 import PyHelpers
 import cPickle as pickle  # LOQ 2005-10-12

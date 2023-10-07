@@ -4,7 +4,7 @@
 # Thanks to "Ulf 'ulfn' Norell" from Apolyton for his additions relating to the graph section of this screen
 
 from CvPythonExtensions import *
-from CivilizationsData import CIVILIZATIONS
+from CoreData import CIVILIZATIONS
 from CoreStructures import get_civ_by_id
 import CvUtil
 
