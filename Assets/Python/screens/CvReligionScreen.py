@@ -834,27 +834,32 @@ class CvReligionScreen:
             szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
         if pPlayer.isFaithBenefit(FaithPointBonusCategory.REDUCE_CIVIC_UPKEEP.value):
             sString = localText.getText("TXT_KEY_FAITH_CIVIC", ()) + (
-                " -%i percent " % pPlayer.getFaithBenefit(FaithPointBonusCategory.REDUCE_CIVIC_UPKEEP.value)
+                " -%i percent "
+                % pPlayer.getFaithBenefit(FaithPointBonusCategory.REDUCE_CIVIC_UPKEEP.value)
             )
             szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
         if pPlayer.isFaithBenefit(FaithPointBonusCategory.FASTER_POPULATION_GROWTH.value):
             sString = localText.getText("TXT_KEY_FAITH_GROWTH", ()) + (
-                " +%i percent " % pPlayer.getFaithBenefit(FaithPointBonusCategory.FASTER_POPULATION_GROWTH.value)
+                " +%i percent "
+                % pPlayer.getFaithBenefit(FaithPointBonusCategory.FASTER_POPULATION_GROWTH.value)
             )
             szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
         if pPlayer.isFaithBenefit(FaithPointBonusCategory.REDUCING_COST_UNITS.value):
             sString = localText.getText("TXT_KEY_FAITH_UNITS", ()) + (
-                " -%i percent " % pPlayer.getFaithBenefit(FaithPointBonusCategory.REDUCING_COST_UNITS.value)
+                " -%i percent "
+                % pPlayer.getFaithBenefit(FaithPointBonusCategory.REDUCING_COST_UNITS.value)
             )
             szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
         if pPlayer.isFaithBenefit(FaithPointBonusCategory.REDUCING_TECH_COST.value):
             sString = localText.getText("TXT_KEY_FAITH_SCIENCE", ()) + (
-                " -%i percent " % pPlayer.getFaithBenefit(FaithPointBonusCategory.REDUCING_TECH_COST.value)
+                " -%i percent "
+                % pPlayer.getFaithBenefit(FaithPointBonusCategory.REDUCING_TECH_COST.value)
             )
             szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
         if pPlayer.isFaithBenefit(FaithPointBonusCategory.REDUCING_WONDER_COST.value):
             sString = localText.getText("TXT_KEY_FAITH_PRODUCTION", ()) + (
-                " -%i percent " % pPlayer.getFaithBenefit(FaithPointBonusCategory.REDUCING_WONDER_COST.value)
+                " -%i percent "
+                % pPlayer.getFaithBenefit(FaithPointBonusCategory.REDUCING_WONDER_COST.value)
             )
             szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
         if pPlayer.isFaithBenefit(FaithPointBonusCategory.BOOST_DIPLOMACY.value):

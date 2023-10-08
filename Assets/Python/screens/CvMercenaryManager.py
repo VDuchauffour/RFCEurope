@@ -1076,7 +1076,9 @@ class CvMercenaryManager:
         totalPreInflatedCosts = pPlayer.calculatePreInflatedCosts()
         totalInflatedCosts = pPlayer.calculateInflatedCosts()
         # totalMercenaryCost = objMercenaryUtils.getPlayerMercenaryMaintenanceCost(iPlayer)
-        totalMercenaryCost = (pPlayer.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN.value) + 99) / 100
+        totalMercenaryCost = (
+            pPlayer.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN.value) + 99
+        ) / 100
         # totalMercenaryContractIncome = (pPlayer.getPlayerMercenaryContractIncome(iPlayer) + 99) / 100
         # Colony Upkeep
         iColonyNumber = pPlayer.getNumColonies()
