@@ -200,7 +200,15 @@ class Civilization(Item):
 
     @property
     def team(self):
-        return gc.getTeam(self.id)
+        return gc.getTeam(self.player.getTeam())
+
+    @property
+    def player_id(self):
+        return self.player.getID()
+
+    @property
+    def team_id(self):
+        return self.team.getID()
 
     @property
     def description(self):
@@ -214,6 +222,40 @@ class Civilization(Item):
     def adjective(self):
         return self.player.getCivilizationAdjective(0)
 
+    def is_alive(self):
+        """Return True if the civilization is alive."""
+        return self.player.isAlive()
+
+    def is_human(self):
+        """Return True if the civilization is controlled by the player."""
+        return self.player.isHuman()
+
+    def state_religion(self):
+        """Return state religion of the civilization."""
+        return self.player.getStateReligion()
+
+    def has_state_religion(self):
+        """Return True if the civilization has no state religion."""
+        return self.state_religion() == -1
+
+    def is_christian(self):
+        """Return True if the civilization is christian."""
+        return self.state_religion() in (
+            CoreTypes.Religion.CATHOLICISM,
+            CoreTypes.Religion.PROTESTANTISM,
+            CoreTypes.Religion.ORTHODOXY,
+        )
+
+    def is_muslim(self):
+        """Return True if the civilization is muslim."""
+        return self.state_religion() == CoreTypes.Religion.ISLAM
+
+    def at_war(self, id):
+        """Return True if the civilization is at war with `id`."""
+        if isinstance(id, CoreTypes.Civ):
+            id = self.__class__(id)
+        return self.team.isAtWar(id.team_id)
+
 
 class Civilizations(ItemCollection):
     """A simple class to handle a set of civilizations."""
@@ -222,27 +264,19 @@ class Civilizations(ItemCollection):
 
     def alive(self):
         """Return alive civilizations."""
-        return self.filter(lambda c: c.player.isAlive())
+        return self.filter(lambda c: c.is_alive())
 
     def dead(self):
         """Return dead civilizations."""
-        return self.filter(lambda c: not c.player.isAlive())
-
-    def existing(self):
-        """Return existing civilizations."""
-        return self.filter(lambda c: c.player.isExisting())
-
-    def inexisting(self):
-        """Return inexisting civilizations."""
-        return self.filter(lambda c: not c.player.isExisting())
+        return self.filter(lambda c: not c.is_alive())
 
     def ai(self):
         """Return civilizations played by AI."""
-        return self.filter(lambda c: not c.player.isHuman())
+        return self.filter(lambda c: not c.is_human())
 
     def human(self):
         """Return civilization of the player."""
-        return self.filter(lambda c: c.player.isHuman())
+        return self.filter(lambda c: c.is_human())
 
     def main(self):
         """Return main civilizations, i.e. not minor and playable."""
@@ -263,6 +297,18 @@ class Civilizations(ItemCollection):
     def barbarian(self):
         """Return the barbarian civilization."""
         return self.take(CoreTypes.Civ.BARBARIAN)[0]
+
+    def christian(self):
+        """Retun all christian civilizations."""
+        return self.filter(lambda c: c.is_christian())
+
+    def muslim(self):
+        """Retun all islamic civilizations."""
+        return self.filter(lambda c: c.is_muslim())
+
+    def at_war(self, id):
+        """Return all civilizations that are at war with `id`."""
+        return self.filter(lambda c: c.team.isAtWar(self[id].team))
 
 
 class BaseFactory(object):
