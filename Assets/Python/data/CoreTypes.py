@@ -666,7 +666,7 @@ class Feature(Enum):
     PYRAMID = 10
 
 
-class Terain(Enum):
+class Terrain(Enum):
     GRASS = 0
     PLAINS = 1
     SEMIDESERT = 2

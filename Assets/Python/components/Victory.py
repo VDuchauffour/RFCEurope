@@ -1214,7 +1214,7 @@ class Victory:
 
         # Old UHV1: explore all water tiles
         # if ( iGameTurn == DateTurn.i1009AD and pNorway.getUHV( 0 ) == -1 ):
-        # 	if ( gc.canSeeAllTerrain( iNorway, xml.iTerrainOcean ) ):
+        # 	if ( gc.canSeeAllTerrain( iNorway, Terrain.OCEAN.value ) ):
         # 		self.wonUHV( iNorway, 0 )
         # 	else:
         # 		self.lostUHV( iNorway, 0 )

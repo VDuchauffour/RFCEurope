@@ -2,7 +2,17 @@
 
 from CvPythonExtensions import *
 from CoreData import CIVILIZATIONS
-from CoreTypes import City, Civ, Plague, Religion, Scenario, UniquePower, Wonder, Promotion
+from CoreTypes import (
+    City,
+    Civ,
+    Plague,
+    Religion,
+    Scenario,
+    UniquePower,
+    Wonder,
+    Promotion,
+    Terrain,
+)
 import CvUtil
 import CvScreenEnums
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
@@ -1133,7 +1143,7 @@ class RFCUtils:
     def outerSeaSpawn(self, tCoords, argsList):
         """Plot is valid if it's water (coast), it isn't occupied by any unit and if it isn't a civ's territory. Unit check extended to adjacent plots."""
         pCurrent = gc.getMap().plot(tCoords[0], tCoords[1])
-        if pCurrent.isWater() and pCurrent.getTerrainType() == xml.iTerrainCoast:
+        if pCurrent.isWater() and pCurrent.getTerrainType() == Terrain.COAST.value:
             if not pCurrent.isUnit():
                 if pCurrent.countTotalCulture() == 0:
                     for (x, y) in self.surroundingPlots(tCoords):
@@ -1145,7 +1155,7 @@ class RFCUtils:
     def innerSeaSpawn(self, tCoords, argsList):
         """Plot is valid if it's water (coast) and it isn't occupied by any unit. Unit check extended to adjacent plots."""
         pCurrent = gc.getMap().plot(tCoords[0], tCoords[1])
-        if pCurrent.isWater() and pCurrent.getTerrainType() == xml.iTerrainCoast:
+        if pCurrent.isWater() and pCurrent.getTerrainType() == Terrain.COAST.value:
             if not pCurrent.isUnit():
                 for (x, y) in self.surroundingPlots(tCoords):
                     if gc.getMap().plot(x, y).isUnit():
@@ -1188,8 +1198,8 @@ class RFCUtils:
                     if (
                         pCurrent.getTerrainType()
                         not in [
-                            xml.iTerrainDesert,
-                            xml.iTerrainTundra,
+                            Terrain.DESERT.value,
+                            Terrain.TUNDRA.value,
                         ]
                         and pCurrent.getFeatureType() not in [xml.iMarsh, xml.iJungle]
                     ):

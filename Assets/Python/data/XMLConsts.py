@@ -599,24 +599,6 @@ iNumFeatures = 11
     iPyramid,
 ) = range(iNumFeatures)
 
-iNumTerrain = 14
-(
-    iTerrainGrass,
-    iTerrainPlains,
-    iTerrainSemiDesert,
-    iTerrainDesert,
-    iTerrainWetland,
-    iTerrainMoorland,
-    iTerrainTundra,
-    iTerrainSnow,
-    iTerrainFreshLake,
-    iTerrainSaltLake,
-    iTerrainCoast,
-    iTerrainOcean,
-    iTerrainPeak,
-    iTerrainHill,
-) = range(iNumTerrain)
-
 
 # Leaders
 iNumLeaders = 74

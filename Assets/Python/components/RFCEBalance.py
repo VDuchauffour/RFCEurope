@@ -6,6 +6,7 @@ from CoreTypes import (
     Civ,
     Plague,
     Promotion,
+    Terrain,
     ProvinceTypes,
     Religion,
     StartingSituation,
@@ -543,7 +544,7 @@ class RFCEBalance:
         gc.setUP(
             Civ.MOROCCO.value,
             UniquePower.TERRAIN_BONUS.value,
-            1 * 100000 + xml.iTerrainDesert * 1000 + 10 + 1,
+            1 * 100000 + Terrain.DESERT.value * 1000 + 10 + 1,
         )
         gc.setUP(
             Civ.MOROCCO.value,
@@ -556,7 +557,7 @@ class RFCEBalance:
         )
         gc.setUP(Civ.CASTILLE.value, UniquePower.PER_CITY_COMMERCE_BONUS.value, 2)
 
-        gc.setUP(Civ.NORWAY.value, UniquePower.CAN_ENTER_TERRAIN.value, xml.iTerrainOcean)
+        gc.setUP(Civ.NORWAY.value, UniquePower.CAN_ENTER_TERRAIN.value, Terrain.OCEAN.value)
         gc.setUP(
             Civ.NORWAY.value, UniquePower.STABILITY_BONUS_FOUNDING.value, 1
         )  # "hidden" part of the UP
@@ -673,7 +674,7 @@ class RFCEBalance:
         gc.setGlobalWarming(False)
 
         # Set FastTerrain (i.e. double movement over ocean)
-        gc.setFastTerrain(xml.iTerrainOcean)
+        gc.setFastTerrain(Terrain.OCEAN.value)
 
         # set religious spread factors
         for civ in CIVILIZATIONS:

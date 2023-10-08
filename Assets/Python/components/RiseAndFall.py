@@ -16,6 +16,7 @@ from CoreTypes import (
     Civ,
     Scenario,
     Religion,
+    Terrain,
     StartingSituation,
     ProvinceTypes,
     UniquePower,
@@ -2380,8 +2381,8 @@ class RiseAndFall:
                         if (
                             plot.getTerrainType()
                             not in [
-                                xml.iTerrainDesert,
-                                xml.iTerrainTundra,
+                                Terrain.DESERT.value,
+                                Terrain.TUNDRA.value,
                             ]
                             and plot.getFeatureType() not in [xml.iMarsh, xml.iJungle]
                         ):
