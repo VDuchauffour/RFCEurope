@@ -26,11 +26,14 @@ class TestDataMapper(unittest.TestCase):
         self.outputs = list(
             map(lambda x: x.split("/")[-1].split(".py")[0], self.outputs.splitlines())  # type: ignore
         )
+        self.outputs = sorted(self.outputs)
 
     def test_imports(self):
-        print(self.outputs)
+        print("\n")
+        print("\n".join(o for o in self.outputs))
         for output in self.outputs:
             __import__(output)  # type: ignore
+        print("")
 
 
 if __name__ == "__main__":

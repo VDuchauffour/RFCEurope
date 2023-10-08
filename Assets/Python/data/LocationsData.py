@@ -514,7 +514,7 @@ CIV_CAPITAL_LOCATIONS = (
             Civ.PORTUGAL: (21, 25),  # Lisboa
             Civ.ARAGON: (36, 29),  # Zaragoza
             Civ.SWEDEN: (66, 64),  # Stockholm
-            Civ.PRUSSIA: (69, 53),  # Königsberg
+            Civ.PRUSSIA: (69, 53),  # Konigsberg
             Civ.LITHUANIA: (75, 53),  # Vilnus
             Civ.AUSTRIA: (62, 40),  # Wien
             Civ.OTTOMAN: (78, 22),  # Gallipoli

@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from CoreStructures import CivDataMapper, CompanyDataMapper
 from CoreTypes import Civ, Company
 
@@ -46,7 +48,7 @@ class DateTurn:
     i880AD = 95
     i882AD = 95  # Spawn of Kiev
     i892AD = 98
-    i895AD = 99  # Honfoglalás / Spawn of Hungary
+    i895AD = 99  # Honfoglalas / Spawn of Hungary
     i900AD = 100
     i910AD = 103  # Kingdom of Leon / Spawn of Spain
     i911AD = 104  # Establishment of the Duchy of Normandy
