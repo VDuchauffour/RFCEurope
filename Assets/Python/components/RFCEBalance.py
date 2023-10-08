@@ -5,6 +5,7 @@ from CoreTypes import (
     City,
     Civ,
     Plague,
+    Promotion,
     ProvinceTypes,
     Religion,
     StartingSituation,
@@ -535,7 +536,7 @@ class RFCEBalance:
         gc.setUP(
             Civ.CORDOBA.value,
             UniquePower.PROMOTION_FOR_ALL_VALID_UNITS.value,
-            xml.iPromotionMedic1,
+            Promotion.MEDIC.value,
         )
         gc.setUP(Civ.CORDOBA.value, UniquePower.GROWTH_CITY_WITH_HEALTH_EXCESS.value, 50)
 
@@ -641,7 +642,7 @@ class RFCEBalance:
         gc.setUP(
             Civ.SWEDEN.value,
             UniquePower.PROMOTION_FOR_ALL_VALID_UNITS.value,
-            xml.iPromotionFormation,
+            Promotion.FORMATION.value,
         )
 
         gc.setUP(Civ.NOVGOROD.value, UniquePower.PRE_ACCESS_CIVICS.value, xml.iCivicBureaucracy)
@@ -1227,7 +1228,7 @@ class RFCEBalance:
         gc.setAutorunHack(xml.iCatapult, 32, 0)  # Autorun hack, sync with RNF module
 
         # 3MiroMercs: set the merc promotion
-        gc.setMercPromotion(xml.iPromotionMerc)
+        gc.setMercPromotion(Promotion.MERC.value)
 
         for iCiv in CIVILIZATIONS.majors().ids():
             gc.setStartingWorkers(

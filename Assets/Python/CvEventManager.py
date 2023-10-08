@@ -25,7 +25,7 @@ import random
 from MiscData import WORLD_HEIGHT, MessageData
 from CoreData import CIVILIZATIONS
 from LocationsData import CIV_NEIGHBOURS
-from CoreTypes import Wonder
+from CoreTypes import Wonder, Promotion
 
 utils = RFCUtils.RFCUtils()
 balance = RFCEBalance.RFCEBalance()
@@ -884,9 +884,9 @@ class CvEventManager:
                 )
                 pNewUnit.setExperience(6, -1)
                 for iPromo in [
-                    xml.iPromotionCombat1,
-                    xml.iPromotionLeadership,
-                    xml.iPromotionNavigation,
+                    Promotion.COMBAT.value,
+                    Promotion.LEADER.valueship,
+                    Promotion.NAVIGATION.value,
                 ]:
                     pNewUnit.setHasPromotion(iPromo, True)
         # Absinthe: Grand Arsenal end

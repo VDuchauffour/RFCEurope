@@ -618,63 +618,6 @@ iNumTerrain = 14
 ) = range(iNumTerrain)
 
 
-# Promotions
-iNumPromotions = 51
-(
-    iPromotionCombat1,
-    iPromotionCombat2,
-    iPromotionCombat3,
-    iPromotionCombat4,
-    iPromotionCombat5,
-    iPromotionCover,
-    iPromotionShock,
-    iPromotionPinch,
-    iPromotionFormation,
-    iPromotionCharge,
-    iPromotionAmbush,
-    iPromotionFeint,
-    iPromotionAmphibious,
-    iPromotionMarch,
-    iPromotionMedic1,
-    iPromotionMedic2,
-    iPromotionGuerilla1,
-    iPromotionGuerilla2,
-    iPromotionGuerilla3,
-    iPromotionWoodsman1,
-    iPromotionWoodsman2,
-    iPromotionWoodsman3,
-    iPromotionCityRaider1,
-    iPromotionCityRaider2,
-    iPromotionCityRaider3,
-    iPromotionCityGarrison1,
-    iPromotionCityGarrison2,
-    iPromotionCityGarrison3,
-    iPromotionDrill1,
-    iPromotionDrill2,
-    iPromotionDrill3,
-    iPromotionDrill4,
-    iPromotionBarrage1,
-    iPromotionBarrage2,
-    iPromotionBarrage3,
-    iPromotionAccuracy,
-    iPromotionFlanking1,
-    iPromotionFlanking2,
-    iPromotionSentry,
-    iPromotionMobility,
-    iPromotionNavigation,
-    iPromotionNavigation2,
-    iPromotionCargo,
-    iPromotionLeader,
-    iPromotionLeadership,
-    iPromotionTactics,
-    iPromotionCommando,
-    iPromotionCombat6,
-    iPromotionMorale,
-    iPromotionMedic3,
-    iPromotionMerc,
-) = range(iNumPromotions)
-
-
 # Leaders
 iNumLeaders = 74
 (

@@ -8,11 +8,10 @@
 
 
 from CvPythonExtensions import *
-from CoreTypes import Civ
+from CoreTypes import Civ, Promotion
 import CvUtil
 import CvScreenEnums
 from MiscData import BARBARIAN_ONLY_UNITS, MERCENARY_ONLY_UNITS
-import XMLConsts as xml
 
 # globals
 gc = CyGlobalContext()
@@ -486,7 +485,7 @@ class CvPediaUnit:
             screen.attachImageButton(
                 panelName,
                 "",
-                gc.getPromotionInfo(xml.iPromotionMerc).getButton(),
+                gc.getPromotionInfo(Promotion.MERC.value).getButton(),
                 GenericButtonSizes.BUTTON_SIZE_CUSTOM,
                 WidgetTypes.WIDGET_GENERAL,
                 1919,

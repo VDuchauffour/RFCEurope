@@ -6,7 +6,7 @@
 # 3Miro: we take the merc screen as it looks well. However, the rest of the mechanics have been changed mostly to remove unnecessary features that slow down things
 
 from CvPythonExtensions import *
-from CoreTypes import SpecialParameter
+from CoreTypes import SpecialParameter, Promotion
 import CvUtil
 import PyHelpers
 
@@ -1319,8 +1319,8 @@ class CvMercenaryManager:
                     if lGlobalMercPool[iI][0] == iMerc:
                         lMerc = lGlobalMercPool[iI]
 
-                if xml.iPromotionMerc not in lMerc[1]:
-                    lMerc[1].append(xml.iPromotionMerc)
+                if Promotion.MERC.value not in lMerc[1]:
+                    lMerc[1].append(Promotion.MERC.value)
 
                 self.calculateScreenWidgetData(screen)
 
@@ -1355,8 +1355,8 @@ class CvMercenaryManager:
                     if pMerc.isHasPromotion(iPromotion):
                         lPromotionList.append(iPromotion)
 
-                if xml.iPromotionMerc not in lPromotionList:
-                    lPromotionList.append(xml.iPromotionMerc)
+                if Promotion.MERC.value not in lPromotionList:
+                    lPromotionList.append(Promotion.MERC.value)
 
                 lMerc = [iMerc, lPromotionList, 0, iUpkeepCost, -1]
 

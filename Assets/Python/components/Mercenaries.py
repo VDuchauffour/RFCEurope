@@ -5,7 +5,7 @@ from CvPythonExtensions import *
 from CivilizationsData import CIV_HIRE_MERCENARY_THRESHOLD
 from CoreData import CIVILIZATIONS
 from CoreStructures import get_civ_by_id
-from CoreTypes import Civ, SpecialParameter, Religion
+from CoreTypes import Civ, SpecialParameter, Religion, Promotion
 import PyHelpers
 
 # import cPickle as pickle
@@ -2923,8 +2923,8 @@ class GlobalMercenaryUtils:
         for iPromotion in lMerc[1]:
             pUnit.setHasPromotion(iPromotion, True)
 
-        if not pUnit.isHasPromotion(xml.iPromotionMerc):
-            pUnit.setHasPromotion(xml.iPromotionMerc, True)
+        if not pUnit.isHasPromotion(Promotion.MERC.value):
+            pUnit.setHasPromotion(Promotion.MERC.value, True)
 
         # set the MercID
         pUnit.setMercID(lMerc[0])

@@ -2,7 +2,7 @@
 
 from CvPythonExtensions import *
 from CoreData import CIVILIZATIONS
-from CoreTypes import City, Civ, Plague, Religion, Scenario, UniquePower, Wonder
+from CoreTypes import City, Civ, Plague, Religion, Scenario, UniquePower, Wonder, Promotion
 import CvUtil
 import CvScreenEnums
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
@@ -153,7 +153,7 @@ class RFCUtils:
 
     def isMortalUnit(self, unit):
         # Absinthe: leader units, and great people won't be killed by the plague
-        if unit.isHasPromotion(xml.iPromotionLeader):
+        if unit.isHasPromotion(Promotion.LEADER.value):
             if not gc.getPlayer(unit.getOwner()).isHuman():
                 return False
         iUnitType = unit.getUnitType()

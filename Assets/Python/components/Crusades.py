@@ -12,7 +12,7 @@ import CityNameManager
 from StoredData import sd
 import random
 
-from CoreTypes import City, Civ, Religion
+from CoreTypes import City, Civ, Religion, Promotion
 from MiscData import MessageData, NUM_CRUSADES
 from TimelineData import CIV_BIRTHDATE, DateTurn
 from CoreStructures import get_civ_by_id
@@ -868,8 +868,8 @@ class Crusades:
                 # Absinthe: check only for combat units and ignore naval units
                 if pUnit.baseCombatStr() > 0 and pUnit.getDomainType() != DomainTypes.DOMAIN_SEA:
                     # Absinthe: mercenaries and leaders (units with attached Great Generals) won't go
-                    if not pUnit.isHasPromotion(xml.iPromotionMerc) and not pUnit.isHasPromotion(
-                        xml.iPromotionLeader
+                    if not pUnit.isHasPromotion(Promotion.MERC.value) and not pUnit.isHasPromotion(
+                        Promotion.LEADER.value
                     ):
                         iCrusadeCategory = self.unitCrusadeCategory(pUnit.getUnitType())
                         pPlot = gc.getMap().plot(pUnit.getX(), pUnit.getY())
@@ -930,8 +930,8 @@ class Crusades:
                 # Absinthe: check only for combat units and ignore naval units
                 if pUnit.baseCombatStr() > 0 and pUnit.getDomainType() != 0:
                     # Absinthe: mercenaries and leaders (units with attached Great Generals) won't go
-                    if not pUnit.isHasPromotion(xml.iPromotionMerc) and not pUnit.isHasPromotion(
-                        xml.iPromotionLeader
+                    if not pUnit.isHasPromotion(Promotion.MERC.value) and not pUnit.isHasPromotion(
+                        Promotion.LEADER.value
                     ):
                         pPlot = gc.getMap().plot(pUnit.getX(), pUnit.getY())
                         if pPlot.isCity():
