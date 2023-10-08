@@ -1,6 +1,3 @@
-# coding: utf-8
-
-
 # Techs: initialize tech variables to unit indices from XML
 
 iNumTechs = 75

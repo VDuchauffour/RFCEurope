@@ -1,5 +1,3 @@
-# coding: utf-8
-
 from CoreStructures import CivDataMapper, CompanyDataMapper
 from CoreTypes import Civ, Company
 
