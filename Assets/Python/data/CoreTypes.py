@@ -1,4 +1,4 @@
-from Enum import Enum, IntEnum
+from Enum import IntEnum
 
 
 class Civ(IntEnum):
@@ -38,7 +38,7 @@ class Civ(IntEnum):
     BARBARIAN = 33
 
 
-class CivilizationProperty(Enum):
+class CivilizationProperty(IntEnum):
     IS_PLAYABLE = 0
     IS_MINOR = 1
 
@@ -57,7 +57,7 @@ class Scenario(IntEnum):
     i1200AD = 1
 
 
-class StartingSituation(Enum):
+class StartingSituation(IntEnum):
     WORKERS = 0
     GOLD = 1
     FAITH = 2
@@ -161,7 +161,7 @@ class Technology(IntEnum):
     INDUSTRIAL_TECH = 74
 
 
-class Unit(Enum):
+class Unit(IntEnum):
     SETTLER = 0
     WORKER = 1
     CATHOLIC_MISSIONARY = 2
@@ -293,7 +293,7 @@ class Unit(Enum):
     SELJUK_GUISARME = 128
 
 
-class Bonus(Enum):
+class Bonus(IntEnum):
     HEMP = 0
     COAL = 1
     COPPER = 2
@@ -349,7 +349,7 @@ class Bonus(Enum):
     OPIUM = 52
 
 
-class Building(Enum):
+class Building(IntEnum):
     PALACE = 0
     SUMMER_PALACE = 1
     HEROIC_EPIC = 2
@@ -466,12 +466,12 @@ class Building(Enum):
     TRIUMPHAL_ARCH = 175
 
 
-class Plague(Enum):
+class Plague(IntEnum):
     PLAGUE = 176
     BUILDING_PLAGUE = 177
 
 
-class Wonder(Enum):
+class Wonder(IntEnum):
     VERSAILLES = 113
     NOTRE_DAME = 114
     LEANING_TOWER = 115
@@ -536,13 +536,13 @@ class Wonder(Enum):
     LANTERNA = 174
 
 
-class Project(Enum):
+class Project(IntEnum):
     ENCYCLOPEDIE = 0
     EAST_INDIA_COMPANY = 1
     WEST_INDIA_COMPANY = 2
 
 
-class Colony(Enum):
+class Colony(IntEnum):
     VINLAND = 3
     GOLD_COAST = 4
     IVORY_COAST = 5
@@ -567,7 +567,7 @@ class Colony(Enum):
     PHILIPPINES = 24
 
 
-class Specialist(Enum):
+class Specialist(IntEnum):
     CITIZEN = 0
     PRIEST = 1
     ARTIST = 2
@@ -584,14 +584,14 @@ class Specialist(Enum):
     GREATSPY = 13
 
 
-class Era(Enum):
+class Era(IntEnum):
     EARLY_MIDDLE_AGE = 0
     HIGH_MIDDLE_AGE = 1
     LATE_MIDDLE_AGE = 2
     RENAISSANCE = 3
 
 
-class Improvement(Enum):
+class Improvement(IntEnum):
     LAND_WORKED = 0
     WATER_WORKED = 1
     CITY_RUINS = 2
@@ -619,7 +619,7 @@ class Improvement(Enum):
     APIARY = 24
 
 
-class Civic(Enum):
+class Civic(IntEnum):
     DESPOTISM = 0
     FEUDAL_MONARCHY = 1
     DIVINE_MONARCHY = 2
@@ -652,7 +652,7 @@ class Civic(Enum):
     COLONIALISM = 29
 
 
-class Feature(Enum):
+class Feature(IntEnum):
     ICE = 0
     JUNGLE = 1
     DENSEFOREST = 2
@@ -666,7 +666,7 @@ class Feature(Enum):
     PYRAMID = 10
 
 
-class Terrain(Enum):
+class Terrain(IntEnum):
     GRASS = 0
     PLAINS = 1
     SEMIDESERT = 2
@@ -683,7 +683,7 @@ class Terrain(Enum):
     HILL = 13
 
 
-class Promotion(Enum):
+class Promotion(IntEnum):
     COMBAT = 0
     COMBAT_2 = 1
     COMBAT_3 = 2
@@ -737,13 +737,13 @@ class Promotion(Enum):
     MERC = 50
 
 
-class LeaderType(Enum):
+class LeaderType(IntEnum):
     PRIMARY = 0
     EARLY = 1
     LATE = 2
 
 
-class Leader(Enum):
+class Leader(IntEnum):
     BARBARIAN = 0
     YAQUB_AL_MANSUR = 1
     MARIA_THERESA = 2
@@ -820,7 +820,7 @@ class Leader(Enum):
     JOHN_II = 73
 
 
-class UniquePower(Enum):
+class UniquePower(IntEnum):
     HAPPINESS_BONUS = 0
     PER_CITY_COMMERCE_BONUS = 1
     CITY_TILE_YIELD_BONUS = 2
@@ -865,7 +865,7 @@ class UniquePower(Enum):
     EXTRA_UNITS_WHEN_LOSING_CITY = 41
 
 
-class FaithPointBonusCategory(Enum):
+class FaithPointBonusCategory(IntEnum):
     BOOST_STABILITY = 0
     REDUCE_CIVIC_UPKEEP = 1
     FASTER_POPULATION_GROWTH = 2
@@ -875,14 +875,14 @@ class FaithPointBonusCategory(Enum):
     BOOST_DIPLOMACY = 6
 
 
-class StabilityCategory(Enum):
+class StabilityCategory(IntEnum):
     CITIES = 0
     CIVICS = 1
     ECONOMY = 2
     EXPANSION = 3
 
 
-class SpecialParameter(Enum):
+class SpecialParameter(IntEnum):
     HAS_STEPHANSDOM = 0
     HAS_ESCORIAL = 1
     MERCENARY_COST_PER_TURN = 2
@@ -893,7 +893,7 @@ class SpecialParameter(Enum):
     HAS_GALATA_TOWER = 7
 
 
-class Area(Enum):
+class Area(IntEnum):
     TILE_MIN = 0
     TILE_MAX = 1
     ADDITIONAL_TILES = 2
@@ -921,7 +921,7 @@ class ProvinceStatus(IntEnum):
     OWN = 5
 
 
-class Province(Enum):
+class Province(IntEnum):
     GALICIA = 0
     CASTILE = 1
     NAVARRE = 2
@@ -1074,7 +1074,7 @@ class Province(Enum):
     PICARDY = 149
 
 
-class Region(Enum):
+class Region(IntEnum):
     IBERIA = 0
     FRANCE = 1
     BURGUNDY = 2
@@ -1096,7 +1096,7 @@ class Region(Enum):
     NOT_EUROPE = 18
 
 
-class Lake(Enum):
+class Lake(IntEnum):
     LOUGH_NEAGH = 0
     LAKE_BALATON = 1
     DEAD_SEA = 2
@@ -1131,5 +1131,5 @@ class Lake(Enum):
     TRONDHEIMFJORDEN = 31
 
 
-class City(Enum):
+class City(IntEnum):
     JERUSALEM = 0
