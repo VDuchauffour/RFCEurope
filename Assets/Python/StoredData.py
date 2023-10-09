@@ -26,7 +26,6 @@ class StoredData:
 
     def setup(self):
         """Initialise the global script data dictionary for usage."""
-        # print( " 3Miro: Set The Array ",gc.getGame().getScriptData() )
 
         self.scriptDict = {
             # RiseAndFall

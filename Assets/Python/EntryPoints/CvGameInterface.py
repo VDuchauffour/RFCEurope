@@ -228,20 +228,16 @@ def isHasPurgeTarget(argsList):
     "AI has target for persecution - return 0 if no possible targets, return 1 if there are at least one"
     iCiv = argsList[0]
     bReportCity = argsList[1]
-    # print ("isHasPurgeTarget argsList", iCiv, bReportCity)
-    # CvUtil.pyPrint( "CvGameInterface.isHasPurgeTarget" )
     return gameUtils().isHasPurgeTarget(iCiv, bReportCity)
 
 
 def AI_doWar(argsList):
     "AI decides whether to make war or peace - return 0 to let AI handle it, return 1 to say that the move is handled in python"
-    # CvUtil.pyPrint( "CvGameInterface.AI_doWar" )
     return gameUtils().AI_doWar(argsList)
 
 
 def AI_doDiplo(argsList):
     "AI decides does diplomacy for the turn - return 0 to let AI handle it, return 1 to say that the move is handled in python"
-    # CvUtil.pyPrint( "CvGameInterface.AI_doDiplo" )
     return gameUtils().AI_doDiplo(argsList)
 
 
@@ -250,63 +246,51 @@ def calculateScore(argsList):
 
 
 def doHolyCity():
-    # CvUtil.pyPrint( "CvGameInterface.doHolyCity" )
     return gameUtils().doHolyCity()
 
 
 def doHolyCityTech(argsList):
-    # CvUtil.pyPrint( "CvGameInterface.doHolyCityTech" )
     return gameUtils().doHolyCityTech(argsList)
 
 
 def doGold(argsList):
-    # CvUtil.pyPrint( "CvGameInterface.doGold" )
     return gameUtils().doGold(argsList)
 
 
 def doResearch(argsList):
-    # CvUtil.pyPrint( "CvGameInterface.doResearch" )
     return gameUtils().doResearch(argsList)
 
 
 def doGoody(argsList):
-    # CvUtil.pyPrint( "CvGameInterface.doGoody" )
     return gameUtils().doGoody(argsList)
 
 
 def doGrowth(argsList):
-    # CvUtil.pyPrint( "CvGameInterface.doGrowth" )
     return gameUtils().doGrowth(argsList)
 
 
 def doProduction(argsList):
-    # CvUtil.pyPrint( "CvGameInterface.doProduction" )
     return gameUtils().doProduction(argsList)
 
 
 def doCulture(argsList):
-    # CvUtil.pyPrint( "CvGameInterface.doCulture" )
     return gameUtils().doCulture(argsList)
 
 
 def doPlotCulture(argsList):
-    # CvUtil.pyPrint( "CvGameInterface.doPlotCulture" )
     return gameUtils().doPlotCulture(argsList)
 
 
 def doReligion(argsList):
-    # CvUtil.pyPrint( "CvGameInterface.doReligion" )
     return gameUtils().doReligion(argsList)
 
 
 def doGreatPeople(argsList):
-    # CvUtil.pyPrint( "CvGameInterface.doGreatPeople" )
     return gameUtils().doGreatPeople(argsList)
 
 
 # Absinthe: not used in RFCE, we can remove it
 # def doMeltdown(argsList):
-# 	#CvUtil.pyPrint( "CvGameInterface.doMeltdown" )
 # 	return gameUtils().doMeltdown(argsList)
 
 

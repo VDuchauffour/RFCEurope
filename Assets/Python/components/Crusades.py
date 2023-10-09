@@ -449,7 +449,6 @@ class Crusades:
             self.setNumUnitsSent(iPlayer, 0)
 
     def checkTurn(self, iGameTurn):
-        # print(" 3Miro Crusades ")
         # self.informPopup()
 
         if self.getCrusadeToReturn() > -1:
@@ -520,22 +519,11 @@ class Crusades:
                     self.setNumUnitsSent(iPlayer, 0)
                     if self.getVotingPower(iPlayer) > 0:
                         self.sendUnits(iPlayer)
-                print(" After the units are sent: ")
-                print(" Crusade has Power: ", self.getCrusadePower())
-                print(" Crusade Templars: ", self.getSelectedUnit(0))
-                print(" Crusade Teutonic: ", self.getSelectedUnit(1))
-                print(" Crusade Hospitallers: ", self.getSelectedUnit(2))
-                print(" Crusade Knights: ", self.getSelectedUnit(3))
-                print(" Crusade H Lancers: ", self.getSelectedUnit(4))
-                print(" Crusade Lancers: ", self.getSelectedUnit(5))
-                print(" Crusade Siege: ", self.getSelectedUnit(6))
-                print(" Crusade Other: ", self.getSelectedUnit(7))
                 if not self.anyParticipate():
                     return
                 self.chooseCandidates(iGameTurn)
                 self.voteForCandidatesAI()
                 self.voteForCandidatesHuman()
-                # print("  Votes are: ",self.getVotesGatheredFavorite(), self.getVotesGatheredPowerful() )
 
             elif iStartDate + 2 == iGameTurn:
                 if not self.anyParticipate():
@@ -550,7 +538,6 @@ class Crusades:
             elif iStartDate + 5 == iGameTurn:
                 if not self.anyParticipate():
                     return
-                print(" Crusade: Arrival ")
                 self.crusadeArrival(iActiveCrusade)
 
             elif iStartDate + 8 == iGameTurn:
@@ -575,7 +562,6 @@ class Crusades:
                         and self.getCrusadeInit(i - 1) + 9 < iGameTurn
                     ):
                         self.setCrusadeInit(i, iGameTurn)
-                        print("Crusade Starting Turn ", iGameTurn)
 
     def anyCatholic(self):
         for civ in CIVILIZATIONS.main():
@@ -594,7 +580,6 @@ class Crusades:
         if popupReturn.getButtonClicked() == 0:
             self.setParticipate(True)
             gc.getPlayer(iHuman).setIsCrusader(True)
-            print("Going on a Crusade ")
         elif popupReturn.getButtonClicked() == 1 or popupReturn.getButtonClicked() == 2:
             self.setParticipate(False)
             pPlayer = gc.getPlayer(iHuman)
@@ -729,7 +714,6 @@ class Crusades:
             self.startCrusade()
             return
         iTargets = 0
-        # print(" 3Miro Deviate Crusade: ",iDecision )
         for i in CIVILIZATIONS.majors().ids():
             if self.getIsTarget(i):
                 iTargets += 1
@@ -742,7 +726,6 @@ class Crusades:
 
     def doParticipation(self, iGameTurn):
         iHuman = utils.getHumanID()
-        # print(" 3Miro Crusades doPart", iHuman, iGameTurn )
         if CIV_BIRTHDATE[get_civ_by_id(iHuman)] < iGameTurn:
             pHuman = gc.getPlayer(iHuman)
             if pHuman.getStateReligion() != Religion.CATHOLICISM.value:
@@ -761,9 +744,7 @@ class Crusades:
                     True,
                     True,
                 )
-                # print(" 3Miro Crusades not Catholic: " )
             else:
-                # print(" 3Miro Crusades not Vote ")
                 self.initVotePopup()
         else:
             self.setParticipate(False)
@@ -795,9 +776,6 @@ class Crusades:
                 iPowerful = i
                 iPower = self.getVotingPower(iPowerful)
 
-        print(" Candidates ", iFavorite, iPowerful)
-        for i in CIVILIZATIONS.majors().ids():
-            print(" Civ voting power is: ", i, self.getVotingPower(i))
         if iPowerful == iFavorite:
             self.setPowerful(-1)
         else:
@@ -859,7 +837,6 @@ class Crusades:
         else:
             iMaxToSend = min(10, max(1, (5 * iNumUnits) / 35))  # after turn 25
         iCrusadersSend = 0
-        print("iMaxToSend", iPlayer, iNumUnits, iMaxToSend)
         if iMaxToSend > 0:
             # Absinthe: a randomized list of all units of the civ
             lUnits = [pPlayer.getUnit(i) for i in range(iNumUnits)]
@@ -977,7 +954,6 @@ class Crusades:
         self.addSelectedUnit(self.unitCrusadeCategory(pUnit.getUnitType()))
         self.setVotingPower(iOwner, self.getVotingPower(iOwner) + 2)
         self.changeNumUnitsSent(iOwner, 1)  # Absinthe: counter for sent units per civ
-        print("Unit was chosen for Crusade:", iOwner, pUnit.getUnitType())
         # Absinthe: faith point boost for each sent unit (might get some more on successful Crusade):
         pCiv = gc.getPlayer(iOwner)
         pCiv.changeFaith(1)
@@ -1095,23 +1071,18 @@ class Crusades:
         else:
             iPowerVotes = self.getVotingPower(iPowerful)
 
-        # print( " AI Voting for self", iFavorVotes, iPowerVotes )
-
         for iPlayer in CIVILIZATIONS.majors().ids():
             if iPlayer == iHuman or iPlayer == iFavorite or iPlayer == iPowerful:
                 continue
             iVotes = self.getVotingPower(iPlayer)
             if iVotes > 0:
                 # vote AI
-                # print( " AI now voting ",i,iVotes )
                 if gc.getRelationTowards(iPlayer, iFavorite) > gc.getRelationTowards(
                     iPlayer, iPowerful
                 ):
                     iFavorVotes += iVotes
                 else:
                     iPowerVotes += iVotes
-
-        print(" AI Voting ", iFavorVotes, iPowerVotes)
 
         self.setVotesGatheredFavorite(iFavorVotes)
         self.setVotesGatheredPowerful(iPowerVotes)
@@ -1176,7 +1147,6 @@ class Crusades:
         self.deviateHumanPopup()
 
     def decideDeviateAI(self):
-        print(" Crusade: Deviate Crusade start ")
         iRichest = self.getRichestCatholic()
         bStolen = False
         if iRichest in [Civ.VENECIA.value, Civ.GENOA.value]:
@@ -1198,7 +1168,6 @@ class Crusades:
                     if iConstantinopleOwner == Civ.BYZANTIUM.value and bIsNotAVassal:
                         self.crusadeStolenAI(iRichest, Civ.BYZANTIUM.value)
                         bStolen = True
-                        print(" Crusade: Deviate Crusade stolen ")
         elif iRichest in [Civ.CASTILLE.value, Civ.PORTUGAL.value, Civ.ARAGON.value]:
             pCordoba = gc.getPlayer(Civ.CORDOBA.value)
             if pCordoba.isAlive():
@@ -1212,7 +1181,6 @@ class Crusades:
                     if pCordoba.getStateReligion() == Religion.ISLAM.value and bIsNotAVassal:
                         self.crusadeStolenAI(iRichest, Civ.CORDOBA.value)
                         bStolen = True
-                        print(" Crusade: Deviate Crusade stolen ")
         elif iRichest in [Civ.HUNGARY.value, Civ.POLAND.value, Civ.AUSTRIA.value]:
             pTurkey = gc.getPlayer(Civ.OTTOMAN.value)
             if pTurkey.isAlive():
@@ -1226,10 +1194,9 @@ class Crusades:
                     if pTurkey.getStateReligion() == Religion.ISLAM.value and bIsNotAVassal:
                         self.crusadeStolenAI(iRichest, Civ.OTTOMAN.value)
                         bStolen = True
-                        print(" Crusade: Deviate Crusade stolen ")
+
         if not bStolen:
             self.setTarget(*CITIES[City.JERUSALEM].to_tuple())
-            print(" Crusade: Deviate Crusade remains normal ")
 
         self.startCrusade()
 
@@ -1319,7 +1286,6 @@ class Crusades:
             else:
                 # we cannot declare war to the current owner of the target city
                 self.returnCrusaders()
-                print(" Crusade: cannot start, not possible to declare war ")
                 return
 
     def returnCrusaders(self):
@@ -1334,10 +1300,8 @@ class Crusades:
 
         # if the leader has been destroyed, cancel the Crusade
         iLeader = self.getLeader()
-        print(" Crusade: leaderciv ", iLeader)
         if iLeader == -1 or not gc.getPlayer(iLeader).isAlive():
             self.returnCrusaders()
-            print(" Crusade: cancelled, leader civ collapsed ")
             return
 
         # if the target is Jerusalem, and in the mean time it has been captured by an Orthodox or Catholic player (or the owner of Jerusalem converted to a Christian religion), cancel the Crusade
@@ -1348,7 +1312,6 @@ class Crusades:
                 if iVictim < CIVILIZATIONS.majors().len():
                     iReligion = gc.getPlayer(iVictim).getStateReligion()
                     if iReligion in [Religion.CATHOLICISM.value, Religion.ORTHODOXY.value]:
-                        print(" Crusade: cancelled, target religion changed to Christianity ")
                         return
 
         # if not at war with the owner of the city, declare war
@@ -1370,7 +1333,6 @@ class Crusades:
                     else:
                         # we cannot declare war to the current owner of the target city
                         self.returnCrusaders()
-                        print(" Crusade: cancelled, not possible to declare war ")
                         return
 
         lFreeLandPlots = []
@@ -1409,8 +1371,6 @@ class Crusades:
             for i in range(pPlot.getNumUnits()):
                 pPlot.getUnit(0).kill(False, Civ.BARBARIAN.value)
 
-        print("Made Units on:", iChosenX, iChosenY, iLeader)
-
         # Absinthe: if a valid plot is found, make the units and send a message about the arrival to the human player
         if (iChosenX, iChosenY) != (-1, -1):
             self.crusadeMakeUnits((iChosenX, iChosenY), iActiveCrusade)
@@ -1439,7 +1399,6 @@ class Crusades:
     def makeUnit(self, iUnit, iPlayer, iActiveCrusade, tCoords, iNum):  # by LOQ
         "Makes iNum units for player iPlayer of the type iUnit at tCoords."
         pPlayer = gc.getPlayer(iPlayer)
-        print("iActiveCrusade on units arriving", iActiveCrusade)
         for i in range(iNum):
             pUnit = pPlayer.initUnit(
                 iUnit,
@@ -1455,17 +1414,6 @@ class Crusades:
     def crusadeMakeUnits(self, tPlot, iActiveCrusade):
         iLeader = self.getLeader()
         teamLeader = gc.getTeam(gc.getPlayer(iLeader).getTeam())
-
-        print(" Crusade has Power: ", self.getCrusadePower())
-        print(" Crusade Templars: ", self.getSelectedUnit(0))
-        print(" Crusade Teutonic: ", self.getSelectedUnit(1))
-        print(" Crusade Hospitallers: ", self.getSelectedUnit(2))
-        print(" Crusade Knights: ", self.getSelectedUnit(3))
-        print(" Crusade H Lancers: ", self.getSelectedUnit(4))
-        print(" Crusade Lancers: ", self.getSelectedUnit(5))
-        print(" Crusade Siege: ", self.getSelectedUnit(6))
-        print(" Crusade Other: ", self.getSelectedUnit(7))
-
         iTX, iTY = self.getTargetPlot()
         # if the target is Jerusalem
         if (iTX, iTY) == CITIES[City.JERUSALEM].to_tuple():
@@ -1636,7 +1584,6 @@ class Crusades:
         iActiveCrusade = self.getActiveCrusade(
             iPrevGameTurn
         )  # Absinthe: the Crusader units are called back before the next Crusade is initialized
-        print("iActiveCrusade on units returning", iActiveCrusade)
         iHuman = utils.getHumanID()
         for pUnit in unitList:
             if pUnit.getMercID() == (
@@ -1716,7 +1663,6 @@ class Crusades:
                                     True,
                                     True,
                                 )
-                            print("Relic created for Crusade leader:", capital.getName())
                             if iUnitNumber > 3:
                                 if (
                                     gc.getGame().getSorenRandNum(5, "RelicChance") < 4
@@ -1728,7 +1674,6 @@ class Crusades:
                                         UnitAITypes.NO_UNITAI,
                                         DirectionTypes.DIRECTION_SOUTH,
                                     )
-                                    print("Relic created for Crusade leader:", capital.getName())
                             if iUnitNumber > 9:
                                 if (
                                     gc.getGame().getSorenRandNum(5, "RelicChance") < 4
@@ -1740,7 +1685,6 @@ class Crusades:
                                         UnitAITypes.NO_UNITAI,
                                         DirectionTypes.DIRECTION_SOUTH,
                                     )
-                                    print("Relic created for Crusade leader:", capital.getName())
                     # all other civs get experience points as well
                     else:
                         if iCiv == iHuman:
@@ -1799,7 +1743,6 @@ class Crusades:
                                             True,
                                             True,
                                         )
-                                    print("Relic created:", capital.getName())
                                 if iUnitNumber > 3:
                                     if (
                                         gc.getGame().getSorenRandNum(5, "RelicChance") < 3
@@ -1811,7 +1754,6 @@ class Crusades:
                                             UnitAITypes.NO_UNITAI,
                                             DirectionTypes.DIRECTION_SOUTH,
                                         )
-                                        print("Relic created:", capital.getName())
                                 if iUnitNumber > 9:
                                     if (
                                         gc.getGame().getSorenRandNum(5, "RelicChance") < 3
@@ -1823,7 +1765,6 @@ class Crusades:
                                             UnitAITypes.NO_UNITAI,
                                             DirectionTypes.DIRECTION_SOUTH,
                                         )
-                                        print("Relic created:", capital.getName())
 
     # Absinthe: called from CvRFCEventHandler.onCityAcquired
     def success(self, iPlayer):
@@ -1868,7 +1809,6 @@ class Crusades:
                             pCity.setHasReligion(Religion.CATHOLICISM.value, True, True, False)
 
     def doDC(self, iGameTurn):
-        # print(" DC Check 1",iGameTurn,self.getDCLast())
         if iGameTurn < self.getDCLast() + 15:  # wait 15 turns between DCs (Defensive Crusades)
             return
         if iGameTurn % 5 != gc.getGame().getSorenRandNum(
@@ -1877,12 +1817,10 @@ class Crusades:
             return
         if gc.getGame().getSorenRandNum(3, "Random entry") == 0:  # 33% chance for no DC
             return
-        # print(" DC Check")
         lPotentials = [
             iPlayer for iPlayer in CIVILIZATIONS.main().ids() if self.canDC(iPlayer, iGameTurn)
         ]
         if lPotentials:
-            # print(" Oh, Holy Father, someone needs help! " )
             pPope = gc.getPlayer(Civ.POPE.value)
             lWeightValues = []
             for iPlayer in lPotentials:
@@ -1895,7 +1833,6 @@ class Crusades:
                     lWeightValues.append((iPlayer, iCatholicFaith))
             iChosenPlayer = utils.getRandomByWeight(lWeightValues)
             if iChosenPlayer != -1:
-                # print(" DC Chosen ", iChosenPlayer)
                 if iChosenPlayer == utils.getHumanID():
                     self.callDCHuman()
                 else:
@@ -1903,7 +1840,6 @@ class Crusades:
                 self.setDCLast(iGameTurn)
 
     def canDC(self, iPlayer, iGameTurn):
-        # print(" DC Chech for player ",iPlayer,iGameTurn)
         pPlayer = gc.getPlayer(iPlayer)
         teamPlayer = gc.getTeam(pPlayer.getTeam())
         # only born, flipped and living Catholics can DC
@@ -1988,7 +1924,6 @@ class Crusades:
 
     def makeDCUnits(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
-        print(" Crusade Defensive for: ", pPlayer.getName())
         iFaith = pPlayer.getFaith()
         iBestInfantry = self.getDCBestInfantry(iPlayer)
         iBestCavalry = self.getDCBestCavalry(iPlayer)

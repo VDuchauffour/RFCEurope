@@ -52,7 +52,6 @@ class CvDebugTools:
         )
 
     def notifyInput(self, argsList):
-        # print("Python Debug Mode Notify")
         return 0
 
     def initEffectViewer(self, argsList):

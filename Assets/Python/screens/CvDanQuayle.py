@@ -189,7 +189,6 @@ class CvDanQuayle:
                 + gc.getDefineINT("SCORE_TECH_FACTOR")
             )
         ) / 100
-        # print(" 3Miro: ",iScore,iMaxScore)
         if iMaxScore > 0:
             iNormalScore = iScore / float(iMaxScore)
         else:

@@ -586,7 +586,6 @@ class Victory:
                                         iModifier += 2
                                     elif pCiv.getNumCities() > 4:
                                         iModifier += 1
-                                    print("iCiv, iModifier", iCiv, iModifier)
                                     iRndnum = gc.getGame().getSorenRandNum(7, "war chance")
                                     if iRndnum + iModifier > 6:
                                         teamCiv.declareWar(pPlayer.getTeam(), True, -1)
@@ -776,7 +775,6 @@ class Victory:
         ):
             if cLosingUnit.getDomainType() == DomainTypes.DOMAIN_SEA:
                 # Absinthe: only 1 Viking point for Work Boats
-                # print ("viking", pLosingUnit.getUnitType())
                 if pLosingUnit.getUnitType() != xml.iWorkboat:
                     CIVILIZATIONS[Civ.NORWAY].player.setUHVCounter(
                         0, CIVILIZATIONS[Civ.NORWAY].player.getUHVCounter(0) + 2
@@ -1534,7 +1532,6 @@ class Victory:
         if self.isPossibleUHV(Civ.SCOTLAND.value, 0, True):
             iForts = CIVILIZATIONS[Civ.SCOTLAND].player.getImprovementCount(xml.iImprovementFort)
             iCastles = CIVILIZATIONS[Civ.SCOTLAND].player.countNumBuildings(xml.iCastle)
-            # print("Forts:",iForts,"Castles:",iCastles)
             if iForts >= 10 and iCastles >= 4:
                 self.wonUHV(Civ.SCOTLAND.value, 0)
         if iGameTurn == DateTurn.i1296AD:
@@ -1780,7 +1777,6 @@ class Victory:
             if self.isPossibleUHV(Civ.ARAGON.value, 1, True):
                 iPorts = CIVILIZATIONS[Civ.ARAGON].player.countNumBuildings(xml.iAragonSeaport)
                 iCargoShips = utils.getCargoShips(Civ.ARAGON.value)
-                # print("Ports:",iPorts)
                 if iPorts >= 12 and iCargoShips >= 30:
                     self.wonUHV(Civ.ARAGON.value, 1)
                 else:

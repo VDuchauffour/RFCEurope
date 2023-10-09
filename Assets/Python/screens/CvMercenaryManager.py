@@ -128,7 +128,6 @@ class CvMercenaryManager:
         ## 3Miro: draw the available merc info
         # read in the available mercs
         lAvailableMercs = GMU.getMercGlobalPool()
-        print("lAvailableMercs", lAvailableMercs)
 
         # Get the ID for the current active player
         iPlayer = gc.getGame().getActivePlayer()
@@ -1180,7 +1179,6 @@ class CvMercenaryManager:
 
         for pUnit in unitList:
             if pUnit.getMercID() == iMerc:
-                # print(" 3Miro: firing: ",iMerc)
                 GMU.fireMerc(pUnit)
                 screen.deleteWidget(
                     "HiredMercID" + self.numToStr(iMerc)
@@ -1261,8 +1259,6 @@ class CvMercenaryManager:
                 dummy, iMerc = szUniqueInternalName.split("MercID")
                 # iMerc = int( iMerc )
                 iMerc = self.strToNum(iMerc)
-                print("Find mercenary: ", iMerc)
-
                 # Convert the unit ID string back into a number
                 # unitID = self.alphaToNumber(unitID)
 
@@ -1277,7 +1273,6 @@ class CvMercenaryManager:
                 unitList = PyPlayer(iPlayer).getUnitList()
                 for pUnit in unitList:
                     if pUnit.getMercID() == iMerc:
-                        print("Mercenary found: ", iMerc, pUnit.getX(), pUnit.getY())
                         pMercUnit = pUnit
                         break
 

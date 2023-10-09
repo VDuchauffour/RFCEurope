@@ -113,7 +113,6 @@ class Companies:
                     bPresent = False
                     if city.isHasCorporation(iCompany):
                         bPresent = True
-                    print("Company value:", sCityName, iCompany, iValue, bPresent)
                     cityValueList.append(
                         (city, iValue * 10 + gc.getGame().getSorenRandNum(10, "random bonus"))
                     )
@@ -123,7 +122,6 @@ class Companies:
                     city.setHasCorporation(iCompany, False, True, True)
                     city.setHasRealBuilding(lCompanyBuilding[iCompany], False)
                     sCityName = city.getName()
-                    print("Company removed: ", sCityName, iCompany, iValue)
                     # interface message for the human player
                     self.announceHuman(iCompany, city, True)
 
@@ -149,7 +147,6 @@ class Companies:
             city.setHasRealBuilding(lCompanyBuilding[iCompany], True)
             iCompanyCount += 1
             sCityName = city.getName()
-            print("Company spread: ", sCityName, iCompany, iValue)
             # interface message for the human player
             self.announceHuman(iCompany, city)
             # spread the religion if it wasn't present before
@@ -171,7 +168,6 @@ class Companies:
                     city.setHasCorporation(iCompany, False, True, True)
                     city.setHasRealBuilding(lCompanyBuilding[iCompany], False)
                     sCityName = city.getName()
-                    print("Company removed: ", sCityName, iCompany, iValue)
                     # interface message for the human player
                     self.announceHuman(iCompany, city, True)
                     # one change at a time, only add the lowest ranked city
@@ -187,7 +183,6 @@ class Companies:
                         city.setHasCorporation(iCompany, False, True, True)
                         city.setHasRealBuilding(lCompanyBuilding[iCompany], False)
                         sCityName = city.getName()
-                        print("Company removed on religion change: ", sCityName, iCompany)
                         # interface message for the human player
                         self.announceHuman(iCompany, city, True)
 
@@ -206,7 +201,6 @@ class Companies:
                     city.setHasCorporation(iCompany, False, True, True)
                     city.setHasRealBuilding(lCompanyBuilding[iCompany], False)
                     sCityName = city.getName()
-                    print("Company removed on conquest: ", sCityName, iCompany)
                     # interface message for the human player
                     self.announceHuman(iCompany, city, True)
 
@@ -422,7 +416,6 @@ class Companies:
             Company.TEUTONS.value,
             Company.CALATRAVA.value,
         ]:
-            # print ("faith points:", city.getOwner(), owner.getFaith())
             if owner.getFaith() >= 50:
                 iValue += 3
             elif owner.getFaith() >= 30:
@@ -779,8 +772,6 @@ class Companies:
             iValue -= (
                 5 * iCompOwned / 2
             )  # -2,5 per city if it's a possible new spread (bigger penalty in the value list)
-        if iCompOwned > 0:
-            print("Number of companies already present in civ:", city.getName(), iCompOwned)
 
         return iValue
 
@@ -803,7 +794,6 @@ class Companies:
             if not city.isHasCorporation(iCompany):
                 city.setHasCorporation(iCompany, True, True, True)
                 city.setHasRealBuilding(lCompanyBuilding[iCompany], True)
-                print("Company added under special circumstance:", city.getName(), iCompany)
                 iCompaniesAdded += 1
                 if iCompaniesAdded == iNumber:
                     break

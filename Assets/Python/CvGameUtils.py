@@ -305,15 +305,10 @@ class CvGameUtils:
                         if not bWonder:
                             # for the python code below, we need to pass the city too
                             if bReportCity:
-                                print(
-                                    "isHasPurgeTarget we return pCity, bReportCity:", bReportCity
-                                )
                                 return pCity
                             # for the AI function in the .dll we only need to know whether such city exist
                             else:
-                                print("isHasPurgeTarget we return True, bReportCity:", bReportCity)
                                 return True
-        print("isHasPurgeTarget we return False, bReportCity:", bReportCity)
         return False
 
     def doInquisitorCore_AI(self, pUnit):
@@ -322,10 +317,8 @@ class CvGameUtils:
         pCity = self.isHasPurgeTarget(iOwner, True)
         if pCity:
             city = pCity.GetCy()
-            print("isHasPurgeTarget pCity, city:", pCity, city)
             # if we can generate a valid path to the city
             if pUnit.generatePath(city.plot(), 0, False, None):
-                print("isHasPurgeTarget city path valid")
                 self.doInquisitorMove(pUnit, city)
                 return True
         return False
@@ -345,9 +338,6 @@ class CvGameUtils:
             )
         else:
             utils.prosecute(pCity.getX(), pCity.getY(), pUnit.getID())
-            print("AI prosecution in city", pCity.getX(), pCity.getY())
-
-    # Absinthe: end Inquisitor AI
 
     def AI_doWar(self, argsList):
         eTeam = argsList[0]
@@ -670,13 +660,10 @@ class CvGameUtils:
     # Absinthe: 1st turn anarchy instability, called form C++ CvPlayer::revolution and CvPlayer::convert
     def doAnarchyInstability(self, argsList):
         iPlayer = argsList[0]
-
-        print("1st anarchy turn for:", iPlayer)
         pPlayer = gc.getPlayer(iPlayer)
         sta.recalcCivicCombos(iPlayer)
         sta.recalcEpansion(iPlayer)
         iNumCities = pPlayer.getNumCities()
-
         # anarchy instability should appear right on revolution / converting, not one turn later
         if iPlayer != Civ.PRUSSIA.value:  # Prussian UP
             if pPlayer.isHuman():

@@ -1396,8 +1396,6 @@ class CvFinanceAdvisor:
                 )
             else:
                 sString = "%i" % (pPlayer.getStabilitySwing())
-            # sString = ""
-            # print( " 3Miro: sString ",sString )
             self.getScreen().setLabel(
                 panel,
                 "Background",

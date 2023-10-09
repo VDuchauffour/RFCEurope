@@ -1345,13 +1345,9 @@ class CvInfoScreen:
         self.updateGraphButtons()
 
     def buildScoreCache(self, scoreType):
-
         # Check if the scores have already been computed
         if self.scoreCache[scoreType]:
             return
-
-        print("Rebuilding score cache")
-
         # Get the player with the highest ID
         maxPlayer = 0
         for p in self.aiPlayersMet:
@@ -4189,12 +4185,7 @@ class CvInfoScreen:
         self.aaWondersBuilt.sort()
         self.aaWondersBuilt.reverse()
 
-    # 		print("List of wonders/projects Built:")
-    # 		print(self.aaWondersBuilt)
-
-    #############################################################################################################
-    ################################################## STATISTICS ###############################################
-    #############################################################################################################
+    # STATISTICS
 
     def drawStatsTab(self):
 
@@ -4208,7 +4199,7 @@ class CvInfoScreen:
         self.iNumUnitStatsChartRows = iNumUnits
         self.iNumBuildingStatsChartRows = iNumBuildings
 
-        ################################################### CALCULATE STATS ###################################################
+        # CALCULATE STATS
 
         iMinutesPlayed = CyGame().getMinutesPlayed()
         iHoursPlayed = iMinutesPlayed / 60
@@ -4701,8 +4692,6 @@ class CvInfoScreen:
             for colony in self.aaColoniesBuilt:
                 if i == colony[0]:
                     self.mark1 = self.getNextWidgetName()
-                    print("ColonyNum")
-                    print(str(colony[1]))
                     try:
                         screen.addDDSGFC(
                             self.mark1,
@@ -4865,9 +4854,7 @@ class CvInfoScreen:
                 self.redrawContents()
 
             iSelected = inputClass.getData()
-            # 			print("iSelected : %d" %(iSelected))
-
-            ############################### WONDERS / TOP CITIES TAB ###############################
+            # WONDERS / TOP CITIES TAB
 
             if self.iActiveTab == self.iTopCitiesID:
 

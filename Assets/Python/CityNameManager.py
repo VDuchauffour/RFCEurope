@@ -16,9 +16,7 @@ class CityNameManager:
         """Names a city depending on its plot"""
         iOwner = city.getOwner()
         if iOwner < CIVILIZATIONS.majors().len():
-            # print(" City Name ",iOwner,WORLD_HEIGHT-1-city.getY(),city.getX()) #Sedna17 Needed to throw an extra -1 in the Y coordinate to get things to line up right. I love zero-indexing.
             cityName = RFCEMaps.tCityMap[iOwner][WORLD_HEIGHT - 1 - city.getY()][city.getX()]
-            # print(" City Name ",cityName)
             if cityName != "-1":
                 city.setName(unicode(cityName, "latin-1"), False)
 

@@ -258,9 +258,7 @@ class CvCivicsScreen:
         iSpacing = 8
 
         sName = "CivicIcon" + str(iCategory)
-        # print gc.getCivicInfo(iCivic).getText()
         sButton = gc.getCivicInfo(iCivic).getButton()
-        # print("Button works")
         screen.setImageButton(
             sName,
             sButton,

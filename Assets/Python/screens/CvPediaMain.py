@@ -825,7 +825,6 @@ class CvPediaMain(CvPediaScreen.CvPediaScreen):
             self.pediaHistorical.interfaceScreen(iEntry)
 
     def back(self):
-        print("pedia back")
         if len(self.pediaHistory) > 1:
             self.pediaFuture.append(self.pediaHistory.pop())
             current = self.pediaHistory.pop()
@@ -833,7 +832,6 @@ class CvPediaMain(CvPediaScreen.CvPediaScreen):
         return 1
 
     def forward(self):
-        print("pedia fwd")
         if self.pediaFuture:
             current = self.pediaFuture.pop()
             self.pediaJump(current[0], current[1], False)
@@ -844,7 +842,6 @@ class CvPediaMain(CvPediaScreen.CvPediaScreen):
             self.pediaHistory.append((CvScreenEnums.PEDIA_MAIN, 0))
 
         current = self.pediaHistory.pop()
-
         # erase history so it doesn't grow too large during the game
         self.pediaFuture = []
         self.pediaHistory = []

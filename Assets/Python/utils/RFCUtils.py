@@ -253,49 +253,15 @@ class RFCUtils:
                                 teamActive.declareWar(
                                     iMinorCiv, False, WarPlanTypes.WARPLAN_LIMITED
                                 )
-                                print(
-                                    "minorWars",
-                                    city.getName(),
-                                    gc.getPlayer(iActiveCiv).getCivilizationAdjective(0),
-                                    gc.getPlayer(iActiveCiv).getSettlersMaps(
-                                        WORLD_HEIGHT - y - 1, x
-                                    ),
-                                    gc.getPlayer(iActiveCiv).getWarsMaps(WORLD_HEIGHT - y - 1, x),
-                                    "WARPLAN_LIMITED",
-                                )
                             elif iWarValue >= 6:
                                 if iRndNum < 7:  # 70% chance for cities with medium war map value
                                     teamActive.declareWar(
                                         iMinorCiv, False, WarPlanTypes.WARPLAN_LIMITED
                                     )
-                                    print(
-                                        "minorWars",
-                                        city.getName(),
-                                        gc.getPlayer(iActiveCiv).getCivilizationAdjective(0),
-                                        gc.getPlayer(iActiveCiv).getSettlersMaps(
-                                            WORLD_HEIGHT - y - 1, x
-                                        ),
-                                        gc.getPlayer(iActiveCiv).getWarsMaps(
-                                            WORLD_HEIGHT - y - 1, x
-                                        ),
-                                        "WARPLAN_LIMITED",
-                                    )
                             elif iWarValue >= 2:
                                 if iRndNum < 3:  # 30% chance for cities with low war map value
                                     teamActive.declareWar(
                                         iMinorCiv, False, WarPlanTypes.WARPLAN_LIMITED
-                                    )
-                                    print(
-                                        "minorWars",
-                                        city.getName(),
-                                        gc.getPlayer(iActiveCiv).getCivilizationAdjective(0),
-                                        gc.getPlayer(iActiveCiv).getSettlersMaps(
-                                            WORLD_HEIGHT - y - 1, x
-                                        ),
-                                        gc.getPlayer(iActiveCiv).getWarsMaps(
-                                            WORLD_HEIGHT - y - 1, x
-                                        ),
-                                        "WARPLAN_LIMITED",
                                     )
 
     # AIWars
@@ -317,16 +283,6 @@ class RFCUtils:
                             if gc.getPlayer(iActiveCiv).getWarsMaps(WORLD_HEIGHT - y - 1, x) == 16:
                                 teamActive = gc.getTeam(gc.getPlayer(iActiveCiv).getTeam())
                                 teamActive.declareWar(iMinorCiv, False, WarPlanTypes.WARPLAN_TOTAL)
-                                print(
-                                    "minorWars",
-                                    city.getName(),
-                                    gc.getPlayer(iActiveCiv).getCivilizationAdjective(0),
-                                    gc.getPlayer(iActiveCiv).getSettlersMaps(
-                                        WORLD_HEIGHT - y - 1, x
-                                    ),
-                                    gc.getPlayer(iActiveCiv).getWarsMaps(WORLD_HEIGHT - y - 1, x),
-                                    "WARPLAN_TOTAL",
-                                )
 
     # RiseAndFall, Stability
     def calculateDistance(self, x1, y1, x2, y2):
@@ -352,12 +308,8 @@ class RFCUtils:
     def makeUnit(self, iUnit, iPlayer, tCoords, iNum):  # by LOQ
         "Makes iNum units for player iPlayer of the type iUnit at tCoords."
         # if ( tCoords[0] < 0 or tCoords[0] >= WORLD_WIDTH or tCoords[1] < 0 or tCoords[1] >= WORLD_HEIGHT ):
-        # 	print(" MAKING UNIT OFF THE FACE OF EUROPE: ",tCoords )
         pPlayer = gc.getPlayer(iPlayer)
         for i in range(iNum):
-            # print(" 3Miro: Making units for Player: ",iPlayer)
-            # if ( player == ObjectNone ):
-            # 	print(" 3Miro: Error: ",iPlayer)
             pPlayer.initUnit(
                 iUnit,
                 tCoords[0],
@@ -434,7 +386,6 @@ class RFCUtils:
     # RiseAndFall
     # Absinthe: this is for city flips connected to spawn, collapse and respawn mechanics
     def flipUnitsInCityBefore(self, tCityPlot, iNewOwner, iOldOwner):
-        # print ("tCityPlot Before", tCityPlot)
         plotCity = gc.getMap().plot(tCityPlot[0], tCityPlot[1])
         city = plotCity.getPlotCity()
         iNumUnitsInAPlot = plotCity.getNumUnits()
@@ -455,14 +406,11 @@ class RFCUtils:
     # RiseAndFall
     def flipUnitsInCityAfter(self, tCityPlot, iCiv):
         # moves new units back in their place
-        # print ("tCityPlot After", tCityPlot)
         tempPlot = gc.getMap().plot(28, 0)
         if tempPlot.getNumUnits() != 0:
             iNumUnitsInAPlot = tempPlot.getNumUnits()
-            # print ("iNumUnitsInAPlot", iNumUnitsInAPlot)
             for i in range(iNumUnitsInAPlot):
                 unit = tempPlot.getUnit(0)
-                # print("  3Miro Unit Type and Owner ",unit.getUnitType(),"  ",unit.getOwner() )
                 unit.setXYOld(tCityPlot[0], tCityPlot[1])
         # cover revealed plots
         gc.getMap().plot(27, 0).setRevealed(iCiv, False, True, -1)
@@ -549,16 +497,12 @@ class RFCUtils:
                 bRevealedZero = False
                 if gc.getMap().plot(28, 0).isRevealed(gc.getPlayer(iNewOwner).getTeam(), False):
                     bRevealedZero = True
-                # print ("killplot", x, y)
                 if bSkipPlotCity and killPlot.isCity():
-                    # print (killPlot.isCity())
-                    # print 'do nothing'
                     pass
                 else:
                     j = 0
                     for i in range(iNumUnitsInAPlot):
                         unit = killPlot.getUnit(j)
-                        # print ("killplot", x, y, unit.getUnitType(), unit.getOwner(), "j", j)
                         if unit.getOwner() == iOldOwner:
                             unit.kill(False, Civ.BARBARIAN.value)
                             if bKillSettlers:
@@ -599,25 +543,19 @@ class RFCUtils:
             for i in range(iNumUnitsInAPlot):
                 unit = killPlot.getUnit(0)
                 unit.kill(False, Civ.BARBARIAN.value)
-        # print ("searched plots", lPlots)
         for (x, y) in lPlots:
-            # print ("searched plot", (x, y))
             killPlot = gc.getMap().plot(x, y)
             iNumUnitsInAPlot = killPlot.getNumUnits()
             if iNumUnitsInAPlot > 0:
                 bRevealedZero = False
                 if gc.getMap().plot(28, 0).isRevealed(gc.getPlayer(iNewOwner).getTeam(), False):
                     bRevealedZero = True
-                # print ("killplot", x, y)
                 if bSkipPlotCity and killPlot.isCity():
-                    # print (killPlot.isCity())
-                    # print 'do nothing'
                     pass
                 else:
                     j = 0
                     for i in range(iNumUnitsInAPlot):
                         unit = killPlot.getUnit(j)
-                        # print ("killplot", x, y, unit.getUnitType(), unit.getOwner(), "j", j)
                         if unit.getOwner() == iOldOwner:
                             unit.kill(False, Civ.BARBARIAN.value)
                             if bKillSettlers:
@@ -722,12 +660,6 @@ class RFCUtils:
         # city
         if pCity.isCity():
             iCurrentCityCulture = city.getCulture(iOldOwner)
-            # 	print ("iCulturePercent", iCulturePercent)
-            # 	print ("iCurrentCityCulture", iCurrentCityCulture)
-            # 	print ("iCurrentCityCulture2", city.getCulture(iNewOwner))
-            # 	print ("iCurrentCityCultureOldOwner", iCurrentCityCulture*(100-iCulturePercent)/100)
-            # 	print ("iCurrentCityCultureNewOwner", iCurrentCityCulture*iCulturePercent/100)
-
             if iNewOwner != Civ.BARBARIAN.value:
                 city.setCulture(Civ.BARBARIAN.value, 0, True)
 
@@ -742,8 +674,6 @@ class RFCUtils:
 
             if city.getCulture(iNewOwner) <= 10:
                 city.setCulture(iNewOwner, 10, False)
-        # 	print ("iCurrentCityCulture3", city.getCulture(iOldOwner))
-        # 	print ("iCurrentCityCulture4", city.getCulture(iNewOwner))
 
         # halve barbarian culture in a broader area
         if bBarbarian2x2Decay or bBarbarian2x2Conversion:
@@ -804,7 +734,6 @@ class RFCUtils:
             ##						iPlotCulture = gc.getMap().plot(x, y).getCulture(iCiv)
             ##						if (iPlotCulture > 0):
             ##							gc.getMap().plot(x, y).setCulture(iCiv, iPlotCulture/3, True)
-            # print (x, y, pCurrent.getCulture(iNewOwner), ">", pCurrent.getCulture(iOldOwner))
 
             if not pCurrent.isCity():
                 if bAlwaysOwnPlots:
@@ -812,7 +741,6 @@ class RFCUtils:
                 else:
                     if pCurrent.getCulture(iNewOwner) * 4 > pCurrent.getCulture(iOldOwner):
                         pCurrent.setOwner(iNewOwner)
-                # print ("NewOwner", pCurrent.getOwner())
 
     # RFCEventHandler
     def spreadMajorCulture(self, iMajorCiv, iX, iY):
@@ -821,7 +749,6 @@ class RFCUtils:
             pCurrent = gc.getMap().plot(x, y)
             if pCurrent.isCity():
                 city = pCurrent.getPlotCity()
-                # print ("city.getPreviousOwner", city.getPreviousOwner())
                 if city.getPreviousOwner() >= CIVILIZATIONS.majors().len():
                     iMinor = city.getPreviousOwner()
                     iDen = 25
@@ -832,10 +759,7 @@ class RFCUtils:
 
                     # Absinthe: changeCulture instead of setCulture, otherwise previous culture will be lost
                     iMinorCityCulture = city.getCulture(iMinor)
-                    # print ("iMinorculture", city.getCulture(iMinor) )
-                    # print ("iMajorculturebefore", city.getCulture(iMajorCiv) )
                     city.changeCulture(iMajorCiv, iMinorCityCulture / iDen, True)
-                    # print ("iMajorcultureafter", city.getCulture(iMajorCiv) )
 
                     iMinorPlotCulture = pCurrent.getCulture(iMinor)
                     pCurrent.changeCulture(iMajorCiv, iMinorPlotCulture / iDen, True)
@@ -888,7 +812,6 @@ class RFCUtils:
             for i in range(iNumUnitsInAPlot):
                 unit = plotCity.getUnit(j)
                 if unit.getDomainType() == DomainTypes.DOMAIN_LAND:
-                    # print("  3Miro 2 Unit Type and Owner ",unit.getUnitType(),"  ",unit.getOwner() )
                     unit.setXYOld(tDestination[0], tDestination[1])
                 else:
                     j = j + 1
@@ -913,7 +836,6 @@ class RFCUtils:
             for i in range(iNumUnitsInAPlot):
                 unit = plotCity.getUnit(j)
                 if unit.getDomainType() == DomainTypes.DOMAIN_SEA:
-                    # print("  3Miro 3 Unit Type and Owner ",unit.getUnitType(),"  ",unit.getOwner() )
                     unit.setXYOld(tDestination[0], tDestination[1])
                 else:
                     j = j + 1
@@ -1072,7 +994,6 @@ class RFCUtils:
             # Absinthe: alive status should be updated right on collapse - may result in crashes if it only updates on the beginning of the next turn
             gc.getPlayer(iCiv).setAlive(False)
             # Absinthe: respawn status
-            # print ("getRespawnedAlive", gc.getPlayer( iCiv ).getRespawnedAlive())
             if gc.getPlayer(iCiv).getRespawnedAlive():
                 gc.getPlayer(iCiv).setRespawnedAlive(False)
 
@@ -1235,14 +1156,10 @@ class RFCUtils:
     def collapseImmune(self, iCiv):
         # 3MiroUP: Emperor
         if gc.hasUP(iCiv, UniquePower.NO_COLLAPSE_IN_CORE_AND_NORMAL_AREAS.value):
-            # print(" 3Miro: has the power: ",iCiv)
             plot = gc.getMap().plot(*CIV_CAPITAL_LOCATIONS[get_civ_by_id(iCiv)].to_tuple())
             if plot.isCity():
-                # print(" 3Miro: has the city: ",iCiv)
                 if plot.getOwner() == iCiv:
-                    # print(" 3Miro: collapse immune ",iCiv)
                     return True
-        # print(" 3Miro: not immune ",iCiv)
         return False
 
     def collapseImmuneCity(self, iCiv, x, y):
@@ -1257,9 +1174,7 @@ class RFCUtils:
                         and (y >= Consts.tCoreAreasTL[iCiv][1])
                         and (y <= Consts.tCoreAreasBR[iCiv][1])
                     ):
-                        # print(" 3Miro: collapse immune ",iCiv,x,y)
                         return True
-        # print(" 3Miro: collapse not immune ",iCiv,x,y)
         return False
 
     # Absinthe: chooseable persecution popup
@@ -1317,14 +1232,12 @@ class RFCUtils:
             return False
 
         # determine the target religion, if not supplied by the popup decision (for the AI)
-        print("Persecution intended religion", iReligion)
         if iReligion == -1:
             for iReligion in RELIGION_PERSECUTION_ORDER[get_religion_by_id(iStateReligion)]:
                 if not city.isHolyCityByType(iReligion.value):  # spare holy cities
                     if city.isHasReligion(iReligion.value):
                         # so this will be the iReligion for further calculations
                         break
-        print("Persecution chosen religion", iReligion)
 
         # count the number of religious buildings and wonders (for the chance)
         if iReligion > -1:
@@ -1365,15 +1278,7 @@ class RFCUtils:
             iChance -= 4
 
         if gc.getGame().getSorenRandNum(100, "purge chance") < iChance:
-            # on successful persecution:
-            print(
-                "Successful persecution for civ:",
-                iOwner,
-                iReligion,
-                (iPlotX, iPlotY),
-                city.getName(),
-            )
-
+            # on successful persecution
             # remove a single non-state religion and its buildings from the city, count the loot
             iLootModifier = 3 * city.getPopulation() / city.getReligionCount()
             iLoot = 5 + iLootModifier
@@ -1486,14 +1391,8 @@ class RFCUtils:
             # "We cannot forget your cruel oppression" unhappiness from persecution
             city.changeHurryAngerTimer(city.flatHurryAngerLength())
 
-        else:  # on failed persecution:
-            print(
-                "Unsuccessful persecution for civ:",
-                iOwner,
-                iReligion,
-                (iPlotX, iPlotY),
-                city.getName(),
-            )
+        else:
+            # on failed persecution
             CyInterface().addMessage(
                 iOwner,
                 False,

@@ -637,14 +637,10 @@ class CvVictoryScreen:
                     i
                 ) and -1 != gc.getGame().getSecretaryGeneral(i):
                     for j in range(gc.getNumVoteInfos()):
-                        print(j)
                         if gc.getVoteInfo(j).isVoteSourceType(i):
-                            print("votesource")
                             if gc.getVoteInfo(j).isSecretaryGeneral():
-                                print("secgen")
                                 iSecretaryGeneralVote = j
                                 break
-                print(iSecretaryGeneralVote)
 
                 for j in range(gc.getMAX_PLAYERS()):
                     if gc.getPlayer(j).isAlive() and gc.getTeam(iActiveTeam).isHasMet(

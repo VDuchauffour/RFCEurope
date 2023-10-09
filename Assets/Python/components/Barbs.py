@@ -3242,7 +3242,6 @@ class Barbs:
                     continue
                 tCoords, sName, iPos = lVariations[iChosenCity]
                 self.foundCity(iCiv, tCoords, sName, iPop, iUnit, iNumUnits, iReligion, iWorkers)
-                print("New indy city founded: ", sName)
 
     def foundCity(
         self, iCiv, tCoords, name, iPopulation, iUnitType, iNumUnits, iReligion, iWorkers
@@ -3385,7 +3384,6 @@ class Barbs:
                 unit.kill(False, Civ.BARBARIAN.value)
 
     def onImprovementDestroyed(self, iX, iY):
-        print("Barb improvement destroyed")
         # getHandicapType: Viceroy=0, Monarch=1, Emperor=2)
         iHandicap = gc.getGame().getHandicapType()
         iTurn = gc.getGame().getGameTurn()
@@ -3423,9 +3421,7 @@ class Barbs:
                     - 3
                     + gc.getGame().getSorenRandNum(6, "roll to modify the Nations revolt odds")
                 )
-            print(" Revolt Date ", iNextRevolt)
             iNationIndex = lMinorNations.index(lNation)
-            print(" NationIndex ", iNationIndex)
             lNextMinorRevolt[iNationIndex] = iNextRevolt
 
         self.setRevolDates(lNextMinorRevolt)
@@ -3543,7 +3539,6 @@ class Barbs:
     def eventApply7627(self, popupReturn):
         iDecision = popupReturn.getButtonClicked()
         iNationIndex, iRevoltIndex = self.getNationRevoltIndex()
-        # print("Event Apply",iNationIndex, iRevoltIndex, iDecision )
         lNation = lMinorNations[iNationIndex]
         iPlayer = utils.getHumanID()
 

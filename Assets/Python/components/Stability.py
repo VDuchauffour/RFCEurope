@@ -101,13 +101,6 @@ class Stability:
                 ):
                     pPlayer.changeStabilityBase(StabilityCategory.CITIES.value, 1)
 
-                print(
-                    pCity.getName()
-                    + " contributes "
-                    + str(pPlayer.getStability() - iOldStab)
-                    + " stability."
-                )
-
             # Small boost for small civs
             if iCounter < 6:  # instead of the additional boost for the first few cities
                 pPlayer.changeStabilityBase(
@@ -129,8 +122,6 @@ class Stability:
                 if teamPlayer.isHasTech(iTech):
                     gc.getPlayer(iPlayer).changeStabilityBase(StabilityCategory.ECONOMY.value, -1)
 
-            print("Player " + str(iPlayer) + " initial stability: " + str(pPlayer.getStability()))
-
             # Absinthe: update all potential provinces at the start for all living players (needed for the scenario)
             if pPlayer.isAlive():
                 pm.updatePotential(iPlayer)
@@ -144,12 +135,6 @@ class Stability:
                     StabilityCategory.EXPANSION.value,
                     CIV_STABILITY_AI_BONUS[get_civ_by_id(iPlayer)],
                 )
-                if CIV_STABILITY_AI_BONUS[get_civ_by_id(iPlayer)] != 0:
-                    print(
-                        "AI bonus stability:",
-                        pPlayer.getCivilizationDescription(0),
-                        CIV_STABILITY_AI_BONUS[get_civ_by_id(iPlayer)],
-                    )
 
         # Absinthe: update Byzantine stability on the start of the game
         if utils.getScenario() == Scenario.i500AD:
@@ -160,7 +145,6 @@ class Stability:
             self.recalcEpansion(Civ.BYZANTIUM.value)
 
     def checkTurn(self, iGameTurn):
-        # print("3Miro NewStability Check Turn")
         # 3Miro: hidden modifier based upon the group/continent
         # if (iGameTurn % 21 == 0):
         # 	self.continentsNormalization(iGameTurn)
@@ -198,7 +182,6 @@ class Stability:
         self, iGameTurn, iPlayer
     ):  # Base stability is temporary (i.e. turn-based) stability
         # 3Miro: this is called for every player
-        # print("3Miro NewStability Update Base")
 
         pPlayer = gc.getPlayer(iPlayer)
         teamPlayer = gc.getTeam(pPlayer.getTeam())
@@ -222,7 +205,6 @@ class Stability:
         # Absinthe: anarchy timer refreshes later in the turn, so it should be reduced by 1 if we want to have it on the correct turns (if nothing else then for the human player)
         # 			but this also means that all 1st turn instability has to be added directly on the revolution / converting - CvPlayer::revolution and CvPlayer::convert
         if pPlayer.getAnarchyTurns() - 1 > 0:
-            print("at least 2nd anarchy turn for:", iPlayer)
             self.recalcCivicCombos(iPlayer)
             self.recalcEpansion(iPlayer)
             iNumCities = pPlayer.getNumCities()
@@ -525,7 +507,6 @@ class Stability:
         # 				if (gc.getPlayer(iLoopCiv).getStateReligion() == iReligion):
         # 					self.setStability(iPlayer, self.getStability(iPlayer) - 1 )
         # 					self.setParameter(iPlayer, iParCitiesE, True, -1)
-        # 					print("Stability - onReligionSpread - Target = ", iPlayer, "Cause = ", iLoopCiv, "Religion = ",iReligion)
         # 					break
 
     def checkImplosion(self, iGameTurn):
@@ -608,7 +589,6 @@ class Stability:
     def collapseCivilWar(self, iPlayer, iStability):
         pPlayer = gc.getPlayer(iPlayer)
         iHuman = utils.getHumanID()
-        print("COLLAPSE: CIVIL WAR", pPlayer.getCivilizationAdjective(0), "Stability:", iStability)
         if iPlayer != iHuman:
             if gc.getPlayer(iHuman).canContact(iPlayer):
                 CyInterface().addMessage(
@@ -672,7 +652,6 @@ class Stability:
             pPlayer.getStabilityBase(StabilityCategory.EXPANSION.value)
             + pPlayer.getStabilityVary(StabilityCategory.EXPANSION.value),
         )
-        print("                  Swing     : ", pPlayer.getStabilitySwing())
 
     def zeroStability(self, iPlayer):  # Called by Stability.CheckImplosion
         pPlayer = gc.getPlayer(iPlayer)
@@ -839,18 +818,6 @@ class Stability:
             )  # AI is also bad at handling war weariness
             iCityStability = min(max(iCityStability, -10), 8)
         iCityStability += pPlayer.getFaithBenefit(FaithPointBonusCategory.BOOST_STABILITY.value)
-        print(
-            " City Stability for: ",
-            iPlayer,
-            " Categories: ",
-            iHappyStability,
-            iHealthStability,
-            iHurryStability,
-            iMilitaryStability,
-            iWarWStability,
-            iReligionStability,
-            iCultureStability,
-        )
         if pPlayer.getGoldenAgeTurns() > 0:
             iCityStability += 8
         # Absinthe: Westminster Abbey faith-stability effect
@@ -1101,10 +1068,6 @@ class Stability:
             iProvType = pPlayer.getProvinceType(pCity.getProvince())
             iProvNum = pCity.getProvince()
             CityName = pCity.getNameKey()
-            if not (0 <= iProvType < len(tStabilityPenalty)):
-                print("ProvinceType issue, iProvType:", iProvType)
-                print("ProvinceType issue, iProvNum:", iProvNum)
-                print("ProvinceType issue, CityName:", CityName)
             assert 0 <= iProvType < len(tStabilityPenalty), (
                 "Bad ProvinceType value for CityName (%s)" % CityName
             )

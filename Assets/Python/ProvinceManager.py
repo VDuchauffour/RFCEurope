@@ -739,7 +739,6 @@ class ProvinceManager:
             pPrussia.setProvinceType(xml.iP_Brandenburg, ProvinceTypes.NATURAL.value)
             pPrussia.setProvinceType(xml.iP_Silesia, ProvinceTypes.POTENTIAL.value)
             pPrussia.setProvinceType(xml.iP_GreaterPoland, ProvinceTypes.OUTER.value)
-            print("Yes! Prussia can into Germany!")
 
     def onCityBuilt(self, iPlayer, x, y):
         if iPlayer >= CIVILIZATIONS.main().len():

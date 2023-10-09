@@ -93,7 +93,6 @@ class UniquePowers:
                         True,
                         True,
                     )
-                print(" New Janissary in ", pCity.getName())
                 iTotalPoints -= iNextJanissary
 
         pPlayer.setPicklefreeParameter(SpecialParameter.JANISSARY_POINTS.value, iTotalPoints)
@@ -141,11 +140,9 @@ class UniquePowers:
                     True,
                     True,
                 )
-                print(" New Janissary in ", city.getName())
 
     # Absinthe: Danish UP
     def soundUP(self, iPlayer):
-        print("Sound dues")
         lSoundCoords = [(60, 57), (60, 58)]
 
         # Check if we control the Sound
@@ -156,15 +153,12 @@ class UniquePowers:
                 bControlsSound = True
                 break
         if not bControlsSound:
-            print("No sound dues, sound not controlled")
             return
 
         iCities = self.getNumForeignCitiesOnBaltic(iPlayer)
 
         iGold = iCities * 2
-        print("We got %d gold." % iGold)
         gc.getPlayer(iPlayer).changeGold(iGold)
-
         CyInterface().addMessage(
             iPlayer,
             False,
@@ -192,15 +186,12 @@ class UniquePowers:
         iCities = 0
         for tRect in lBalticRects:
             for (iX, iY) in utils.getPlotList(tRect[0], tRect[1]):
-                # print(iX,iY)
                 pPlot = gc.getMap().plot(iX, iY)
                 if pPlot.isCity():
                     pCity = pPlot.getPlotCity()
-                    # print(pCity.getName() + " is a city.")
                     if pCity.isCoastal(5):
                         if not bVassal:
                             if pCity.getOwner() != iPlayer:
-                                # print(pCity.getName() + " is a foreign coastal city on the Baltic.")
                                 iCities += 1
                         else:
                             iOwner = pCity.getOwner()
@@ -251,20 +242,16 @@ class UniquePowers:
         # Update tile yield for the capital's plot
         iProvinceCommerceLastBonus = pPlayer.getUHVCounter(0)
         gc.getGame().setPlotExtraYield(iCapitalX, iCapitalY, 2, -iProvinceCommerceLastBonus)
-        # print("Capital commerce reduced by", iProvinceCommerceLastBonus)
         iProvinceCommerceNextBonus = (
             iProvinces * 2
         )  # <- This number is the amount of extra commerce per province
         gc.getGame().setPlotExtraYield(iCapitalX, iCapitalY, 2, iProvinceCommerceNextBonus)
-        # print("Capital commerce increased by", iProvinceCommerceNextBonus)
         # Tile yield is stored for the next check
         pPlayer.setUHVCounter(0, iProvinceCommerceNextBonus)
 
     # Absinthe: Scottish UP
     def defianceUP(self, iPlayer):
-        print("Defiance called")
         pPlayer = gc.getPlayer(iPlayer)
-
         # One ranged/gun class
         RangedClass = utils.getUniqueUnit(iPlayer, xml.iArcher)
         lRangedList = [
@@ -288,7 +275,6 @@ class UniquePowers:
                 PolearmClass = utils.getUniqueUnit(iPlayer, iUnit)
                 break
 
-        print("Making ", RangedClass, " and ", PolearmClass)
         for city in utils.getCityList(iPlayer):
             # only in cities with at least 20% Scottish culture
             iTotalCulture = city.countTotalCultureTimes100()
@@ -300,7 +286,6 @@ class UniquePowers:
                     utils.makeUnit(RangedClass, iPlayer, tPlot, 1)
                 else:
                     utils.makeUnit(PolearmClass, iPlayer, tPlot, 1)
-                print("In city: ", tPlot)
                 # interface message for the human player
                 if iPlayer == utils.getHumanID():
                     CyInterface().addMessage(

@@ -84,8 +84,6 @@ class Plague:
         self.setGenericPlagueDates(
             4, 440 + gc.getGame().getSorenRandNum(40, "Variation") - 30
         )  # 1740 Small Pox
-        for i in range(iNumPlagues):
-            print("plagues", self.getGenericPlagueDates(i))
 
     def checkTurn(self, iGameTurn):
 
@@ -180,7 +178,6 @@ class Plague:
         iAverageCityHealth = int(
             (10 * (iTCH - iTCU)) / iNumCities
         )  # 10x the average health actually
-        print("iAverageCityHealth", iAverageCityHealth)
         return iAverageCityHealth
         # if ( iTCH > 0 ):
         # 	return int((10.0 * iTCH) / (iTCH + iTCU)) - 5 # theoretically between 5 and -5, but almost always between -2 and +2
@@ -241,8 +238,6 @@ class Plague:
                 )
             elif city != -1:
                 pCiv = gc.getPlayer(city.getOwner())
-                # print ("pCiv.getCivilizationDescriptionKey()", pCiv.getCivilizationDescriptionKey())
-                # print ("pCiv.getCivilizationDescription(0)", pCiv.getCivilizationDescription(0))
                 CyInterface().addMessage(
                     iHuman,
                     True,
@@ -268,7 +263,6 @@ class Plague:
         iCityDuration = min(
             (gc.getPlayer(iPlayer).getNumCities() + 2) / 3, 10
         )  # between 1 and 10 from cities
-        print("plague duration iCities", iCityDuration)
         if iPlayer == iHuman:
             # Overall duration for the plague is between 4 and 12 (usually between 6-8)
             iValue = (iBaseHumanDuration + iCityDuration - iHealthDuration) / 2
@@ -277,7 +271,6 @@ class Plague:
             iValue = max(
                 ((iBaseAIDuration + iCityDuration - iHealthDuration) / 2), 4
             )  # at least 4
-        print("plague duration overall, iPlayer, iValue", iPlayer, iValue)
         self.setPlagueCountdown(iPlayer, iValue)
 
     def infectCity(self, city):

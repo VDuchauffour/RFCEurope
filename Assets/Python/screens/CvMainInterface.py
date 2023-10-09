@@ -2830,9 +2830,6 @@ class CvMainInterface:
                         )
                         screen.show("BottomButtonContainer")
 
-                        # print(" 3Miro Actions: ",i)
-                        # print(" 3Miro Actions: ",i," ",gc.getActionInfo(i).getHotKey())
-
                         if not CyInterface().canHandleAction(i, False):
                             screen.disableMultiListButton(
                                 "BottomButtonContainer", 0, iCount, gc.getActionInfo(i).getButton()
@@ -7188,7 +7185,6 @@ class CvMainInterface:
             # iUnitID = g_pSelectedUnit.getID()
 
             # utils.prosecute( iPlotX, iPlotY, iUnitID )
-            ##print( " Prosecute " )
             ## Send NetMessage to prevent OOS: will be received in the EventManager function "onModNetMessage()"
             ##CyMessageControl().sendModNetMessage(iMessageID, iPlotX, iPlotY, iOwner, iUnitID)
 
@@ -7232,7 +7228,6 @@ class CvMainInterface:
             # iUnitID = g_pSelectedUnit.getID()
 
             utils.saint(g_pSelectedUnit.getOwner(), g_pSelectedUnit.getID())
-            # print( " Becomes a Saint " )
 
         return 0
 

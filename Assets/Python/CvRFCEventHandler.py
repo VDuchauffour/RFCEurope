@@ -17,7 +17,6 @@ import Resources
 import CityNameManager
 import UniquePowers
 import AIWars
-import Consts
 import XMLConsts as xml
 import RFCUtils
 
@@ -472,8 +471,6 @@ class CvRFCEventHandler:
         iImpBeforeCityType = (CvEventManager.iImpBeforeCity / 10000) % 100
         iImpBeforeCityX = (CvEventManager.iImpBeforeCity / 100) % 100
         iImpBeforeCityY = CvEventManager.iImpBeforeCity % 100
-        # print ("new city coordinates: ", city.getX(), city.getY())
-        # print ("destroyed improvement values: ", CvEventManager.iImpBeforeCity, iImpBeforeCityType, iImpBeforeCityX, iImpBeforeCityY)
         # Absinthe: free walls if built on fort
         if (
             iImpBeforeCityType == xml.iImprovementFort
@@ -593,15 +590,12 @@ class CvRFCEventHandler:
             self.sta.onProjectBuilt(city.getOwner(), iProjectType)
 
     def onUnitPillage(self, argsList):
-        print("Improvement Destroyed")
         pUnit, iImprovement, iRoute, iOwner = argsList
         iPlotX = pUnit.getX()
         iPlotY = pUnit.getY()
         pPlot = CyMap().plot(iPlotX, iPlotY)
         if pPlot.countTotalCulture() == 0:
-            print("No culture, so barb/indy satisfied")
             if iImprovement >= xml.iImprovementCottage and iImprovement <= xml.iImprovementTown:
-                print("Improve Type Satisfied")
                 self.barb.onImprovementDestroyed(iPlotX, iPlotY)
         iVictim = pPlot.getOwner()
         if iVictim > -1 and iVictim < CIVILIZATIONS.majors().len():
@@ -618,12 +612,10 @@ class CvRFCEventHandler:
         # if iGameTurn == DateTurn.i508AD:
         # 	for city in utils.getCityList(Civ.FRANCE.value):
         # 		plot = gc.getMap().plot(city.getX(),city.getY())
-        # 		print ('provincetest', plot.getProvinceID (), city.getName())
 
         # 	unitList = PyPlayer(Civ.FRANCE.value).getUnitList()
         # 	for unit in unitList:
         # 		iCargoSpace = unit.cargoSpace()
-        # 		print ("iCargoSpace", iCargoSpace)
 
         # 	for iCiv in CIVILIZATIONS.majors().ids():
         # 		pCiv = gc.getPlayer(iCiv)
@@ -635,8 +627,6 @@ class CvRFCEventHandler:
         # 	#	leaderName6 = leaderName2.getLeaderType()
         # 		leaderName7 = pCiv.getLeaderType()
         # 		LeaderType = gc.getLeaderHeadInfo(pCiv.getLeaderType()).getType()
-        # 		print ("leaderName7", leaderName7)
-        # 		print ("LeaderType", LeaderType)
 
         # for city in utils.getCityList(Civ.HUNGARY.value):
         # 	city.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_GRANARY"), CommerceTypes.COMMERCE_GOLD, 2)
@@ -647,10 +637,8 @@ class CvRFCEventHandler:
 
         # 	for x in range(76):
         # 		plot = CyMap().plot(x, 46) # France, Paris included
-        # 		print ("cityname at y height", x, plot.getCityNameMap(1))
         # 	for x in range(76):
         # 		plot = CyMap().plot(x, 36) # Hungary, accents
-        # 		print ("cityname at y height", x, plot.getCityNameMap(11))
 
         # Absinthe: 868AD Viking attack on Constantinople
         if (
@@ -750,9 +738,6 @@ class CvRFCEventHandler:
                             True,
                         )
 
-        # print(" 3Miro: Byz Rank is: ",gc.getGame().getTeamRank(iByzantium))
-
-        print(" 3Miro onBegTurn: ", iGameTurn)
         self.barb.checkTurn(iGameTurn)
         self.rnf.checkTurn(iGameTurn)
         self.rel.checkTurn(iGameTurn)
@@ -766,19 +751,13 @@ class CvRFCEventHandler:
         self.province.checkTurn(iGameTurn)
         self.company.checkTurn(iGameTurn)
 
-        # print(" 3Miro onBegTurn out: ",iGameTurn)
-
         return 0
 
     def onBeginPlayerTurn(self, argsList):
         iGameTurn, iPlayer = argsList
         iHuman = utils.getHumanID()
-
-        print("onBeginPlayerTurn PLAYER", iPlayer)
-
         if self.rnf.getDeleteMode(0) != -1:
             self.rnf.deleteMode(iPlayer)
-
         # Absinthe: refresh Dynamic Civ Names
         if iPlayer < CIVILIZATIONS.majors().len():
             gc.getPlayer(iPlayer).processCivNames()
@@ -944,26 +923,17 @@ class CvRFCEventHandler:
 
         self.crusade.checkPlayerTurn(iGameTurn, iPlayer)
 
-        ##print ("PLAYER FINE", iPlayer)
-        ##print( " out Begin Player Turn ",iGameTurn, iPlayer )
-
     def onEndPlayerTurn(self, argsList):
+        """Called at the end of a players turn"""
         # 3Miro does not get called
         iGameTurn, iPlayer = argsList
-        # print (" 3Miro END PLAYER", iPlayer, iGameTurn)
-
-        "Called at the end of a players turn"
 
     def onEndGameTurn(self, argsList):
-        # 3Miro when everyone end their turn
         iGameTurn = argsList[0]
-        print(" 3Miro END TURN ", iGameTurn)
         self.sta.checkImplosion(iGameTurn)
-        # 3MiroMercs
         self.mercs.doMercsTurn(iGameTurn)
 
     def onReligionSpread(self, argsList):
-
         iReligion, iOwner, pSpreadCity = argsList
         self.sta.onReligionSpread(iReligion, iOwner)
         self.rel.onReligionSpread(iReligion, iOwner)
@@ -988,19 +958,12 @@ class CvRFCEventHandler:
             argsList[12],
         ]
         if iPlayer < CIVILIZATIONS.majors().len():
-            print("ChangeAllCivics civic change, player:", iPlayer)
-            print("ChangeAllCivics civic change, new civics:", lNewCivics)
-            print("ChangeAllCivics civic change, old civics:", lOldCivics)
             self.rel.onPlayerChangeAllCivics(iPlayer, lNewCivics, lOldCivics)
 
     def onPlayerChangeSingleCivic(self, argsList):
         # note that this reports all civic changes in single instances (so also reports force converts by diplomacy or with spies)
         "Civics are changed for a player"
         iPlayer, iNewCivic, iOldCivic = argsList
-        if iPlayer < CIVILIZATIONS.majors().len():
-            print("ChangeSingleCivic civic change, Player, NewCivic, OldCivic:", argsList)
-
-    # Absinthe: end
 
     def onPlayerChangeStateReligion(self, argsList):
         "Player changes his state religion"
@@ -1010,8 +973,6 @@ class CvRFCEventHandler:
             self.company.onPlayerChangeStateReligion(argsList)
 
     def onTechAcquired(self, argsList):
-
-        # print ("onTechAcquired", argsList)
         iPlayer = argsList[2]
 
         iHuman = utils.getHumanID()
@@ -1083,7 +1044,6 @@ class CvRFCEventHandler:
     def onUnitLost(self, argsList):
         "Unit Lost"
 
-        # print(" 3Miro: onUnitLost ")
         self.mercs.onUnitLost(argsList)
 
     # This method handles the key input and will bring up the mercenary manager screen if the
@@ -1126,9 +1086,6 @@ class CvRFCEventHandler:
             and theKey == int(InputTypes.KB_N)
             and self.eventManager.bAlt
         ):
-
-            print("ALT-N")
-
             # self.printEmbassyDebug()
             self.printPlotsDebug()
             # self.printStabilityDebug()
@@ -1139,9 +1096,7 @@ class CvRFCEventHandler:
             and self.eventManager.bAlt
             and self.eventManager.bShift
         ):
-            print(
-                "SHIFT-ALT-E"
-            )  # picks a dead civ so that autoplay can be started with game.AIplay xx
+            # picks a dead civ so that autoplay can be started with game.AIplay xx
             iDebugDeadCiv = Civ.BURGUNDY.value  # always dead in 500AD
             # 3Miro: not sure
             # gc.getTeam(gc.getPlayer(iDebugDeadCiv).getTeam()).setHasTech(Consts.iCalendar, True, iDebugDeadCiv, False, False)
@@ -1244,7 +1199,6 @@ class CvRFCEventHandler:
         pass
 
     def printStabilityDebug(self):
-        print("Stability")
         for iCiv in CIVILIZATIONS.majors().ids():
             if gc.getPlayer(iCiv).isAlive():
                 print(
@@ -1258,10 +1212,7 @@ class CvRFCEventHandler:
                     gc.getPlayer(iCiv).getCivics(5),
                     gc.getPlayer(iCiv).getCivilizationDescription(0),
                 )
-                for i in range(Consts.iNumStabilityParameters):
-                    print("Parameter", i, utils.getStabilityParameters(iCiv, i))
-            else:
-                print("dead", iCiv)
+
         for i in CIVILIZATIONS.majors().ids():
             print(
                 gc.getPlayer(i).getCivilizationShortDescription(0),

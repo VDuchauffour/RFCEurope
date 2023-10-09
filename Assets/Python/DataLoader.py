@@ -21,7 +21,6 @@ def setup():
             )  # no need for [iMaxY - iY - 1] inversion, the province map is upside down visually
             if plot:
                 plot.setProvinceID(RFCEMaps.tProvinceMap[y][x])
-                # print ('ProvinceID', x, y, plot.getProvinceID)
 
     # City name maps
     for (

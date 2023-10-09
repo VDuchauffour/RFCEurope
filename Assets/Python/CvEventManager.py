@@ -43,10 +43,6 @@ class CvEventManager:
 
     def __init__(self):
         #################### ON EVENT MAP ######################
-        # print("EVENTMANAGER INIT")
-        # print(" init_event manager, this time ")
-        # 3Miro: add balancing calls here
-
         balance.setBalanceParameters()
 
         self.bCtrl = False
@@ -240,7 +236,6 @@ class CvEventManager:
         bDummy = False
         self.bDbg, bDummy, self.bAlt, self.bCtrl, self.bShift, self.bAllowCheats = argsList[idx:]
         ret = 0
-        # print("Event with tag: ",tag)
         gc.getGame().logMsg("Something")
         if self.EventHandlerMap.has_key(tag):
             fxn = self.EventHandlerMap[tag]
@@ -359,9 +354,6 @@ class CvEventManager:
         "Called whenever CyMessageControl().sendModNetMessage() is called - this is all for you modders!"
 
         iData1, iData2, iData3, iData4, iData5 = argsList
-
-        print("Modder's net message!")
-
         CvUtil.pyPrint("onModNetMessage")
 
     def onInit(self, argsList):
@@ -414,8 +406,6 @@ class CvEventManager:
         gc.setNormalToPlot(
             gc.getDefineINT("ENABLE_RESPAWN_AREA_DISPLAY")
         )  # hold down the alt key, and hover over the map
-        # print ("SpawnAreaDisplay", gc.getDefineINT("ENABLE_SPAWN_AREA_DISPLAY"))
-        # print ("RespawnAreaDisplay", gc.getDefineINT("ENABLE_RESPAWN_AREA_DISPLAY"))
 
         # Rhye - Dawn of Man must appear in late starts too
         # if (gc.getGame().getGameTurnYear() == gc.getDefineINT("START_YEAR") and not gc.getGame().isOption(GameOptionTypes.GAMEOPTION_ADVANCED_START)):
@@ -445,7 +435,6 @@ class CvEventManager:
 
     def onGameEnd(self, argsList):
         "Called at the End of the game"
-        # print("Game is ending")
         return
 
     def onBeginGameTurn(self, argsList):
@@ -618,7 +607,6 @@ class CvEventManager:
         # 			Saving the improvement type and coordinates here as a global variable, and accessing later in the onCityBuilt function
         global iImpBeforeCity
         iImpBeforeCity = 10000 * iImprovement + 100 * iX + 1 * iY
-        # print ("latest destroyed improvement: ", iImprovement, iX, iY, iImpBeforeCity)
 
     def onRouteBuilt(self, argsList):
         "Route Built"
@@ -650,7 +638,6 @@ class CvEventManager:
             ):
                 iBonusType = pPlot.getBonusType(-1)
                 if iBonusType in [xml.iTimber, xml.iDeer, xml.iFur]:
-                    print("Resource disappeared on forest removal", iBonusType)
                     pPlot.setBonusType(-1)
                     # also remove corresponding improvements
                     iImprovementType = pPlot.getImprovementType()
@@ -658,7 +645,6 @@ class CvEventManager:
                         iImprovementType == xml.iImprovementCamp
                     ):  # camp is only buildable on resources, while lumbermills are removed by default on forest removal
                         pPlot.setImprovementType(-1)
-                        print("Improvement also removed", iImprovementType)
                     # Absinthe: message for the human player if it was inside it's territory
                     iOwner = pPlot.getOwner()
                     if iOwner == utils.getHumanID():
@@ -857,7 +843,6 @@ class CvEventManager:
             for neighbour in CIV_NEIGHBOURS[CIVILIZATIONS[iPlayer].key]:
                 iNeighbour = neighbour.value
                 pNeighbour = gc.getPlayer(iNeighbour)
-                print("iNeighbour", iNeighbour)
                 if pNeighbour.isAlive() and iPlayer != iNeighbour:
                     pPlayer.AI_changeAttitudeExtra(iNeighbour, 3)
                     pNeighbour.AI_changeAttitudeExtra(iPlayer, 3)
@@ -1243,7 +1228,6 @@ class CvEventManager:
 
     def onUnitLost(self, argsList):
         "Unit Lost"
-        # print("3Miro: CvEvenetManager: onUnitLost")
         unit = argsList[0]
         player = PyPlayer(unit.getOwner())
         if not self.__LOG_UNITLOST:
@@ -2307,7 +2291,6 @@ class CvEventManager:
         "sample generic event, called on each game turn slice"
         genericArgs = argsList[0][0]  # tuple of tuple of my args
         turnSlice = genericArgs[0]
-        # print ("onGameUpdate test")
 
     def onMouseEvent(self, argsList):
         "mouse handler - returns 1 if the event was consumed"
@@ -2343,7 +2326,6 @@ class CvEventManager:
     # Switch Civic
     # 		elif (pEspionageMissionInfo.getPlayerAnarchyCounter() > 0):
     # 			utils.setStability(iTargetPlayer, utils.getStability(iTargetPlayer) + 3) #anti-Whitefire
-    # 			print ("anti-Whitefire")
     # Rhye - end
 
     def __eventEditCityNameBegin(self, city, bRename):

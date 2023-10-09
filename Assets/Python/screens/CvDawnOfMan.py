@@ -275,7 +275,6 @@ class CvDawnOfMan:
         # if (CIV_BIRTHDATE[get_civ_by_id(CyGame().getActiveTeam())] == 0 or \
         # 	(not gc.getPlayer(0).isPlayable() and CyGame().getActiveTeam() <= Civ.ARABIA.value)):  #late start condition
         # MiroTest = CyGame().getActiveTeam()
-        # print( "3Miro Test",MiroTest )
         if CIV_BIRTHDATE[get_civ_by_id(CyGame().getActiveTeam())] <= utils.getScenarioStartTurn():
             screen = CyGInterfaceScreen("CvLoadingScreen", self.iScreenID)
             screen.setBarPercentage("ProgressBar", InfoBarTypes.INFOBAR_STORED, 1)

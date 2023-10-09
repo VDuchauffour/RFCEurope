@@ -689,10 +689,6 @@ class CvPlayerDesc:
                     continue
 
                 if parser.findTokenValue(toks, "EndPlayer") != -1:
-                    # print("Civics:")
-                    # print self.aaiCivics
-                    # print("Attitudes:")
-                    # print self.aaiAttitudeExtras
                     break
 
 
@@ -723,7 +719,6 @@ class CvUnitDesc:
         "after reading, this will actually apply the data"
         player = getPlayer(self.owner)
         if player:
-            # print ("unit apply %d %d" %(self.plotX, self.plotY))
             CvUtil.pyAssert(self.plotX >= 0 and self.plotY >= 0, "invalid plot coords")
             unitTypeNum = CvUtil.findInfoTypeNum(
                 gc.getUnitInfo, gc.getNumUnitInfos(), self.unitType
@@ -1223,7 +1218,6 @@ class CvPlotDesc:
 
     def apply(self):
         "after reading, this will actually apply the data"
-        # print("apply plot %d %d" %(self.iX, self.iY))
         plot = CyMap().plot(self.iX, self.iY)
         plot.setNOfRiver(self.isNOfRiver, self.riverWEDirection)
         plot.setWOfRiver(self.isWOfRiver, self.riverNSDirection)
@@ -1256,13 +1250,11 @@ class CvPlotDesc:
             plot.setScriptData(self.szScriptData)
 
     def applyUnits(self):
-        # print "--apply units"
         for u in self.unitDescs:
             u.apply()
 
     def applyCity(self):
         if self.cityDesc:
-            # print "--apply city"
             self.cityDesc.apply()
 
     def write(self, f, plot):
@@ -1387,7 +1379,6 @@ class CvPlotDesc:
             if x != -1 and y != -1:
                 self.iX = int(x)
                 self.iY = int(y)
-                # print("plot read %d %d" %(self.iX, self.iY))
                 continue
 
             v = parser.findTokenValue(toks, "Landmark")

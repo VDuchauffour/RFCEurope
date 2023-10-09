@@ -247,10 +247,6 @@ class CvTopCivs:
                 if szType == localText.getText("TXT_KEY_TOPCIVS_WEALTH", ()):
 
                     self.aiTopCivsValues.append([gc.getPlayer(iPlayerLoop).getGold(), iPlayerLoop])
-                    print(
-                        "Player %d Num Gold: %d"
-                        % (iPlayerLoop, gc.getPlayer(iPlayerLoop).getGold())
-                    )
 
                 if szType == localText.getText("TXT_KEY_TOPCIVS_POWER", ()):
 

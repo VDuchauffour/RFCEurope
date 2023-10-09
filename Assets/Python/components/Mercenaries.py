@@ -2332,10 +2332,6 @@ class MercenaryManager:
 
         # add the merc, keep the merc index, costs and promotions
         self.lGlobalPool.append([iMerc, lPromotions, iPurchaseCost, iUpkeepCost, iCurrentProvince])
-        print(
-            " 3Miro Added Merc: ",
-            [iMerc, lPromotions, iPurchaseCost, iUpkeepCost, iCurrentProvince],
-        )
 
     def processNewMercs(self, iGameTurn):
         # add new mercs to the pool
@@ -2366,20 +2362,17 @@ class MercenaryManager:
                 < lMercList[iMerc][6]
             ):
                 # adding a new merc
-                # print(" 3Miro Adding Merc to Global Pool: ",iMerc)
                 self.addNewMerc(iMerc)
 
     def doMercsTurn(self, iGameTurn):
         # this is called at the end of the game turn
         # thus the AI gets the advantage to make the Merc "decision" with the most up-to-date political data and they can get the mercs instantly
         # the Human gets the advantage to get the first pick at the available mercs
-        # print(" Begin Merc Turn ")
 
         self.getMercLists()  # load the current mercenary pool
         iHuman = gc.getGame().getActivePlayer()
 
         # for lMerc in self.lGlobalPool:
-        # 	print( "3Miro Merc Pool: ", iGameTurn, lMerc)
 
         # Go through each of the players and deduct their mercenary maintenance amount from their gold (round up)
         for iPlayer in CIVILIZATIONS.main().ids():
@@ -2464,7 +2457,6 @@ class MercenaryManager:
         # Absinthe: if there are mercs available in the new city's province, interface message about it to the human player
         iProvince = pCity.getProvince()
         self.getMercLists()  # load the current mercenary pool
-        # print ("self.lGlobalPool", self.lGlobalPool)
         for lMerc in self.lGlobalPool:
             if lMerc[4] == iProvince:
                 if iCiv == utils.getHumanID():
@@ -2490,7 +2482,6 @@ class MercenaryManager:
         # Absinthe: if there are mercs available in the new city's province, interface message about it to the human player
         iProvince = pCity.getProvince()
         self.getMercLists()  # load the current mercenary pool
-        # print ("self.lGlobalPool", self.lGlobalPool)
         for lMerc in self.lGlobalPool:
             if lMerc[4] == iProvince:
                 if iCiv == utils.getHumanID():
@@ -2516,7 +2507,6 @@ class MercenaryManager:
         pUnit, iNewPromotion = argsList
         iMerc = pUnit.getMercID()
         if iMerc > -1:
-            # print(" 3Miro: Unit promoted ",iMerc, pUnit.getOwner() )
             # redraw the main screen to update the upkeep info
             CyInterface().setDirty(InterfaceDirtyBits.GameData_DIRTY_BIT, True)
 
@@ -2554,7 +2544,6 @@ class MercenaryManager:
         iMerc = pUnit.getMercID()
 
         if iMerc > -1:
-            # print(" 3Miro: Unit killed ",iMerc, pUnit.getOwner() )
             lHiredByList = self.GMU.getMercHiredBy()
             if lHiredByList[iMerc] == -1:  # merc was fired, then don't remove permanently
                 return
@@ -2580,7 +2569,6 @@ class MercenaryManager:
         iMerc = pUnit.getMercID()
 
         if iMerc > -1:
-            # print(" 3Miro: Unit lost ",iMerc, pUnit.getOwner() )
             # is a merc, check to see if it has just been killed
             lHiredByList = self.GMU.getMercHiredBy()
             if lHiredByList[iMerc] < 0:
@@ -2593,7 +2581,6 @@ class MercenaryManager:
             # unitList = PyPlayer( iPlayer ).getUnitList()
             # for pTestUnit in unitList:
             # 	if ( pTestUnit.getMercID() == iMerc ):
-            # 		print("Returning")
             # 		return
 
             # unit is gone
@@ -2616,7 +2603,6 @@ class MercenaryManager:
         if pPlayer.isHuman() or pPlayer.isBarbarian() or iPlayer == Civ.POPE.value:
             return
 
-        # print(" MercAI for ",pPlayer.getID())
         iWarValue = 0  # compute the total number of wars being fought at the moment
 
         teamPlayer = gc.getTeam(pPlayer.getTeam())
@@ -2650,13 +2636,11 @@ class MercenaryManager:
             self.FireMercAI(iPlayer)
 
             # make sure we can affort the mercs that we keep
-            # print(" Merc Upkeep: ",pPlayer.getPicklefreeParameter( iMercCostPerTurn )," Gold ",pPlayer.getGold() )
             while pPlayer.getPicklefreeParameter(
                 SpecialParameter.MERCENARY_COST_PER_TURN.value
             ) > 0 and 100 * pPlayer.getGold() < pPlayer.getPicklefreeParameter(
                 SpecialParameter.MERCENARY_COST_PER_TURN.value
             ):
-                # print(" Merc Upkeep: ",pPlayer.getPicklefreeParameter( iMercCostPerTurn )," Gold ",pPlayer.getGold() )
                 self.GMU.playerMakeUpkeepSane(pPlayer.getID())
                 self.FireMercAI(iPlayer)
             return
@@ -2678,8 +2662,6 @@ class MercenaryManager:
         iGameTurn = gc.getGame().getGameTurn()
         pPlayer = gc.getPlayer(iPlayer)
         lMercs = [unit for unit in PyPlayer(iPlayer).getUnitList() if unit.getMercID() > -1]
-
-        # print(" Hired Mercs: ",len( lMercs ) )
 
         if lMercs:
             # we have mercs, so fire someone
@@ -2799,8 +2781,6 @@ class GlobalMercenaryUtils:
             SpecialParameter.MERCENARY_COST_PER_TURN.value
         )
         if iSavedUpkeep != iTotalUpkeep:
-            # print(" ERROR IN MERCS: saved upkeep: ",iSavedUpkeep," actual: ",iTotalUpkeep )
-            # print(" ------- Making sane ------- ")
             pPlayer.setPicklefreeParameter(
                 SpecialParameter.MERCENARY_COST_PER_TURN.value, iTotalUpkeep
             )
@@ -2844,12 +2824,8 @@ class GlobalMercenaryUtils:
         # the player would hire a merc
         lGlobalPool = self.getMercGlobalPool()
         lHiredByList = self.getMercHiredBy()
-
-        print(" 3Miro: hire Merc: ", lMerc[0], iPlayer)
-
         iCost = self.getModifiedCostPerPlayer(lMerc[2], iPlayer)
         iUpkeep = self.getModifiedCostPerPlayer(lMerc[3], iPlayer)
-
         pPlayer = gc.getPlayer(iPlayer)
         if pPlayer.getGold() < iCost:
             return
@@ -2939,8 +2915,6 @@ class GlobalMercenaryUtils:
         # get the Merc info
         iMerc = pMerc.getMercID()
         iUpkeep = pMerc.getMercUpkeep()
-        print(" 3Miro: fire Merc: ", iMerc, pMerc.getOwner())
-
         if iMerc < 0:
             return
 

@@ -101,7 +101,6 @@ class AIWars:
                         # Absinthe: probably better to use declareWar instead of setAtWar
                         teamVenice = gc.getTeam(pVenice.getTeam())
                         teamVenice.declareWar(iOwner, False, WarPlanTypes.WARPLAN_LIMITED)
-                        print("minorWars_Ragusa", "WARPLAN_LIMITED")
                         # teamVenice.setAtWar( gc.getPlayer( iOwner ).getTeam(), True )
                         # teamRagusa = gc.getTeam( gc.getPlayer( iOwner ).getTeam() )
                         # teamRagusa.setAtWar( pVenice.getTeam(), True )
@@ -118,10 +117,8 @@ class AIWars:
                         # Absinthe: probably better to use declareWar instead of setAtWar
                         teamHungary = gc.getTeam(pHungary.getTeam())
                         teamHungary.declareWar(iOwner, False, WarPlanTypes.WARPLAN_LIMITED)
-                        print("minorWars_Zagreb", "WARPLAN_LIMITED")
 
         if iGameTurn == self.getNextTurnAIWar():
-
             # 3Miro: how long it takes (the else from the statement goes all the way down)
             # if (iGameTurn > DateTurn.i1600AD): #longer periods due to globalization of contacts
             # 	iMinInterval = iMinIntervalLate
@@ -131,18 +128,11 @@ class AIWars:
             iMaxInterval = iMaxIntervalEarly
 
             # skip if already in a world war
-            # print ("AIWars iTargetCiv missing", iCiv)
             iCiv, iTargetCiv = self.pickCivs()
-            print("AIWars chosen civs: iCiv, iTargetCiv", iCiv, iTargetCiv)
             if 0 <= iTargetCiv <= CIVILIZATIONS.drop(Civ.BARBARIAN).len():
                 if iTargetCiv != Civ.POPE.value and iCiv != Civ.POPE.value and iCiv != iTargetCiv:
                     self.initWar(iCiv, iTargetCiv, iGameTurn, iMaxInterval, iMinInterval)
                     return
-            else:
-                print("AIWars iTargetCiv missing again", iCiv)
-
-            # make sure we don't miss this
-            print("Skipping AIWar")
             self.setNextTurnAIWar(
                 iGameTurn
                 + iMinInterval
@@ -157,7 +147,6 @@ class AIWars:
             iTargetCiv = self.checkGrid(iCiv)
             return (iCiv, iTargetCiv)
         else:
-            print("AIWars iCiv missing", iCiv)
             return (-1, -1)
 
     def initWar(self, iCiv, iTargetCiv, iGameTurn, iMaxInterval, iMinInterval):
@@ -170,7 +159,6 @@ class AIWars:
                 + iMinInterval
                 + gc.getGame().getSorenRandNum(iMaxInterval - iMinInterval, "random turn")
             )
-            print("Setting AIWar", iCiv, "attacking", iTargetCiv)
         # Absinthe: if not, next try will come the 1/2 of this time later
         else:
             self.setNextTurnAIWar(
@@ -180,7 +168,6 @@ class AIWars:
                     + gc.getGame().getSorenRandNum(iMaxInterval - iMinInterval, "random turn") / 2
                 )
             )
-            print("No AIWar this time, but the next try will come sooner")
 
     ##	def initArray(self):
     ##		for k in CIVILIZATIONS.majors().ids():
@@ -191,7 +178,6 @@ class AIWars:
     ##					line.append( gc.getPlayer(iCiv).getSettlersMaps( WORLD_HEIGHT-j-1, i ) )
     ##				grid.append( line )
     ##			self.lSettlersMap.append( grid )
-    ##		print self.lSettlersMap
 
     def chooseAttackingPlayer(self):
         # finding max teams ever alive (countCivTeamsEverAlive() doesn't work as late human starting civ gets killed every turn)
@@ -201,13 +187,11 @@ class AIWars:
             if gc.getPlayer(j).isAlive():
                 iMaxCivs = j
                 break
-        # print ("iMaxCivs", iMaxCivs)
 
         if gc.getGame().countCivPlayersAlive() <= 2:
             return -1
         else:
             iRndnum = gc.getGame().getSorenRandNum(iMaxCivs, "attacking civ index")
-            # print ("iRndnum", iRndnum)
             iAlreadyAttacked = -100
             iMin = 100
             iCiv = -1
@@ -235,7 +219,6 @@ class AIWars:
                         if iAlreadyAttacked < iMin:
                             iMin = iAlreadyAttacked
                             iCiv = iLoopCiv
-            # print ("attacking civ", iCiv)
             if iAlreadyAttacked != -100:
                 self.setAttackingCivsArray(iCiv, iAlreadyAttacked + 1)
                 return iCiv
@@ -284,17 +267,12 @@ class AIWars:
         # 	if not pCiv.canContact(k):
         # 		lTargetCivs[k] /= 8
 
-        # print(lTargetCivs)
-
         # normalization
         iMaxTempValue = max(lTargetCivs)
-        # print(iMaxTempValue)
         if iMaxTempValue > 0:
             for civ in CIVILIZATIONS.drop(Civ.BARBARIAN).ids():
                 if lTargetCivs[civ] > 0:
                     lTargetCivs[civ] = lTargetCivs[civ] * 500 / iMaxTempValue
-
-        # print(lTargetCivs)
 
         for iLoopCiv in CIVILIZATIONS.drop(Civ.BARBARIAN).ids():
             if iLoopCiv == iCiv:
@@ -344,14 +322,9 @@ class AIWars:
         ##				if (pTeam.isDefensivePact(jLoopCiv) and gc.getTeam(gc.getPlayer(iLoopCiv).getTeam()).isDefensivePact(jLoopCiv)):
         ##					lTargetCivs[iLoopCiv] /= 2
 
-        # print(lTargetCivs)
-
         # find max
         iMaxValue = max(lTargetCivs)
         iTargetCiv = lTargetCivs.index(iMaxValue)
-
-        # print ("maxvalue", iMaxValue)
-        # print("target civ", iTargetCiv)
 
         if iMaxValue >= iMinValue:
             return iTargetCiv
