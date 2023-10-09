@@ -3263,7 +3263,7 @@ class CvVictoryScreen:
             == -1
         ):
             iNumMerchants = pPlot.getPlotCity().getFreeSpecialistCount(
-                xml.iSpecialistGreatMerchant
+                Specialist.GREAT_MERCHANT.value
             )
             sText1 += self.getCounterString(iNumMerchants, 5)
         else:

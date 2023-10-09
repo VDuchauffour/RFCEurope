@@ -16,6 +16,7 @@ from CoreTypes import (
     Civ,
     Scenario,
     Religion,
+    Specialist,
     Terrain,
     StartingSituation,
     ProvinceTypes,
@@ -3652,7 +3653,7 @@ class RiseAndFall:
     def LeaningTowerGP(self):
         iGP = gc.getGame().getSorenRandNum(7, "starting count")
         pFlorentia = gc.getMap().plot(54, 32).getPlotCity()
-        iSpecialist = xml.iSpecialistGreatProphet + iGP
+        iSpecialist = Specialist.GREAT_PROPHET.value + iGP
         pFlorentia.setFreeSpecialistCount(iSpecialist, 1)
 
     def setDiplo1200AD(self):

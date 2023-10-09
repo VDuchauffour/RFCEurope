@@ -464,26 +464,6 @@ iNumBuildings = 176
 ) = range(iNumBuildings)
 
 
-# Specialists
-iNumSpecialists = 14
-(
-    iCitizen,
-    iSpecialistPriest,
-    iSpecialistArtist,
-    iSpecialistScientist,
-    iSpecialistMerchant,
-    iSpecialistEngineer,
-    iSpecialistSpy,
-    iSpecialistGreatProphet,
-    iSpecialistGreatArtist,
-    iSpecialistGreatScientist,
-    iSpecialistGreatMerchant,
-    iSpecialistGreatEngineer,
-    iSpecialistGreatGeneral,
-    iSpecialistGreatSpy,
-) = range(iNumSpecialists)
-
-
 # Improvements
 iNumImprovements = 25
 (

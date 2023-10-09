@@ -8,6 +8,7 @@ from CoreTypes import (
     Company,
     Project,
     ProvinceStatus,
+    Specialist,
     StabilityCategory,
     Religion,
 )
@@ -2022,7 +2023,7 @@ class Victory:
             if pPlot.isCity():
                 city = pPlot.getPlotCity()
                 if (
-                    city.getFreeSpecialistCount(xml.iSpecialistGreatMerchant) >= 5
+                    city.getFreeSpecialistCount(Specialist.GREAT_MERCHANT.value) >= 5
                     and city.getOwner() == Civ.DUTCH.value
                 ):
                     self.wonUHV(Civ.DUTCH.value, 0)
