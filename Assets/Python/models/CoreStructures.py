@@ -1,9 +1,6 @@
-import random
 import CoreTypes
-from PyUtils import all, any
-from BaseStructures import EnumDataMapper
-from Enum import Enum
-from Errors import NotACallableError, NotTypeExpectedError
+from BaseStructures import Attributes, BaseFactory, EnumDataMapper, Item, ItemCollection
+from Errors import NotTypeExpectedError
 
 try:
     from CvPythonExtensions import CyGlobalContext
@@ -14,167 +11,16 @@ except ImportError:
     gc = None
 
 
-class CivDataMapper(EnumDataMapper):
-    """Class to map data to Civ enum."""
-
-    BASE_CLASS = CoreTypes.Civ
-
-
-class CompanyDataMapper(EnumDataMapper):
-    """Class to map data to Company enum."""
-
-    BASE_CLASS = CoreTypes.Company
-
-
 class ScenarioDataMapper(EnumDataMapper):
     """Class to map data to Scenario enum."""
 
     BASE_CLASS = CoreTypes.Scenario
 
 
-class Attributes(dict):
-    """A class to handle attibutes from a DataMapper."""
+class CompanyDataMapper(EnumDataMapper):
+    """Class to map data to Company enum."""
 
-    def __init__(self, **properties):
-        for name, value in properties.items():
-            setattr(self, name, value)
-
-    def __repr__(self):
-        return self.__class__.__name__ + "(" + str(self.__dict__) + ")"
-
-
-class Item(object):
-    """A base class to handle a game item."""
-
-    BASE_CLASS = None
-
-    def __init__(self, id, **kwargs):
-        if not issubclass(self.BASE_CLASS, Enum):
-            raise NotTypeExpectedError(Enum, self.BASE_CLASS)
-
-        if not isinstance(id, self.BASE_CLASS):
-            raise NotTypeExpectedError(self.BASE_CLASS, type(id))
-
-        self._id = id
-        for name, value in kwargs.items():
-            setattr(self, name, value)
-
-    @property
-    def id(self):
-        return self._id.value  # type: ignore
-
-    @property
-    def key(self):
-        return self._id
-
-    @property
-    def name(self):
-        return self._id.name  # type: ignore
-
-    def __repr__(self):
-        return self.__class__.__name__ + "(" + str(self.BASE_CLASS[self.name]) + ")"
-
-
-class ItemCollection(list):
-    """A base class to handle a set of a specific type of `Item`."""
-
-    BASE_CLASS = None
-
-    def __init__(self, *items):
-        for item in items:
-            if not isinstance(item, self.BASE_CLASS):
-                raise NotTypeExpectedError(self.BASE_CLASS, type(item))
-            self.append(item)
-
-    def len(self):
-        return self.__len__()
-
-    def copy(self, *items):
-        return self.__class__(*items)
-
-    def _apply(self, condition):
-        if not callable(condition):
-            raise NotACallableError(condition)
-        return [condition(item) for item in self]
-
-    def _compress(self, selectors, negate=False):
-        if negate:
-            return (item for item, s in zip(self, selectors) if not s)
-        return (item for item, s in zip(self, selectors) if s)
-
-    def _filter(self, condition):
-        return self._compress(self._apply(condition))
-
-    def filter(self, condition):
-        """Filter item when `condition` is True."""
-        return self.copy(*self._filter(condition))
-
-    def attributes(self, attribute):
-        """Return a list of item attribute."""
-        return self._apply(attribute)
-
-    def ids(self):
-        """Return a list of identifiers."""
-        return self.attributes(lambda c: c.id)
-
-    def split(self, condition):
-        """Return a tuple of 2 elements, the first corresponds to items where `condition` is True, the second not."""
-        status = self._apply(condition)
-        valid_items = self._compress(status)
-        rest_items = self._compress(status, negate=True)
-        return (self.copy(*valid_items), self.copy(*rest_items))
-
-    def all(self, condition):
-        """Return True if `condition` is True for all items."""
-        return all(self._apply(condition))
-
-    def any(self, condition):
-        """Return True if `condition` is True for at least one items."""
-        return any(self._apply(condition))
-
-    def none(self, condition):
-        """Return True if `condition` is False for all items."""
-        return not self.any(condition)
-
-    def drop(self, *items):
-        """Return the object without `items` given its keys, i.e. the relevant enum member."""
-        return self.filter(lambda x: x.key not in items)
-
-    def take(self, *items):
-        """Return the object with only `items` given its keys, i.e. the relevant enum member."""
-        return self.filter(lambda x: x.key in items)
-
-    def limit(self, n):
-        """Return the first `n` items of the object."""
-        return self[:n]
-
-    def sort(self, metric, reverse=False):
-        """Return the object sorted given a `metric` function."""
-        return self.copy(*sorted(self, key=metric, reverse=reverse))
-
-    def nlargest(self, n, metric):
-        """Return the first `n` largest item of the object given a `metric` function."""
-        return self.sort(metric, reverse=True).limit(n)
-
-    def nsmallest(self, n, metric):
-        """Return the first `n` smallest item of the object given a `metric` function."""
-        return self.sort(metric).limit(n)
-
-    def maximum(self, metric):
-        """Return the largest item of the object given a `metric` function."""
-        return self.nlargest(1, metric)
-
-    def minimum(self, metric):
-        """Return the smallest item of the object given a `metric` function."""
-        return self.nsmallest(1, metric)
-
-    def random(self):
-        """Return a single entry of the object."""
-        return self.copy(random.choice(self))
-
-    def sample(self, k):
-        """Return a sample of the object."""
-        return self.copy(*random.sample(self, k))
+    BASE_CLASS = CoreTypes.Company
 
 
 class Company(Item):
@@ -187,6 +33,21 @@ class Companies(ItemCollection):
     """A simple class to handle a set of companies."""
 
     BASE_CLASS = Company
+
+
+class CompaniesFactory(BaseFactory):
+    """A factory to generate `Companies`."""
+
+    MEMBERS_CLASS = CoreTypes.Company
+    DATA_CLASS = CompanyDataMapper
+    ITEM_CLASS = Company
+    ITEM_COLLECTION_CLASS = Companies
+
+
+class CivDataMapper(EnumDataMapper):
+    """Class to map data to Civ enum."""
+
+    BASE_CLASS = CoreTypes.Civ
 
 
 class Civilization(Item):
@@ -309,39 +170,6 @@ class Civilizations(ItemCollection):
     def at_war(self, id):
         """Return all civilizations that are at war with `id`."""
         return self.filter(lambda c: c.team.isAtWar(self[id].team))
-
-
-class BaseFactory(object):
-    """A base for factories."""
-
-    MEMBERS_CLASS = None
-    DATA_CLASS = None
-    ITEM_CLASS = None
-    ITEM_COLLECTION_CLASS = None
-
-    def __init__(self):
-        self._attachments = {}
-
-    def attach(self, name, data):
-        if isinstance(name, str) and isinstance(data, self.DATA_CLASS):
-            self._attachments[name] = data
-        return self
-
-    def collect(self):
-        items = []
-        for member in self.MEMBERS_CLASS:
-            attachments = dict((k, v[member]) for k, v in self._attachments.items())
-            items.append(self.ITEM_CLASS(member, **attachments))
-        return self.ITEM_COLLECTION_CLASS(*items)
-
-
-class CompaniesFactory(BaseFactory):
-    """A factory to generate `Companies`."""
-
-    MEMBERS_CLASS = CoreTypes.Company
-    DATA_CLASS = CompanyDataMapper
-    ITEM_CLASS = Company
-    ITEM_COLLECTION_CLASS = Companies
 
 
 class CivilizationsFactory(BaseFactory):
