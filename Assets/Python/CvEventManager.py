@@ -25,7 +25,7 @@ import random
 from MiscData import WORLD_HEIGHT, MessageData
 from CoreData import CIVILIZATIONS
 from LocationsData import CIV_NEIGHBOURS
-from CoreTypes import Wonder, Promotion
+from CoreTypes import Wonder, Promotion, Project
 
 utils = RFCUtils.RFCUtils()
 balance = RFCEBalance.RFCEBalance()
@@ -1039,7 +1039,7 @@ class CvEventManager:
             popupInfo.addPopup(iPlayer)
 
         # Absinthe: Torre del Oro start
-        if iProjectType >= xml.iNumNotColonies:
+        if iProjectType >= len(Project):
             pPlayer = gc.getPlayer(iPlayer)
             if pPlayer.countNumBuildings(xml.iTorreDelOro) > 0:
                 # 70% chance for a 3 turn Golden Age

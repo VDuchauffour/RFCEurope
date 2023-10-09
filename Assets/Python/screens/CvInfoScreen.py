@@ -17,7 +17,7 @@ import RFCUtils
 
 from PyHelpers import PyPlayer
 
-from CoreTypes import Scenario
+from CoreTypes import Colony, Scenario
 
 # globals
 gc = CyGlobalContext()
@@ -4657,25 +4657,23 @@ class CvInfoScreen:
                         )
                     except IndexError:
                         pass
-                    for iProjectLoop in range(xml.iNumNotColonies, xml.iNumTotalColonies):
-
-                        for iI in range(pTeam.getProjectCount(iProjectLoop)):
-
-                            self.aaColoniesBuilt.append([iProjectLoop, iPlayerLoop])
+                    for col in Colony:
+                        for _ in range(pTeam.getProjectCount(col.value)):
+                            self.aaColoniesBuilt.append([col.value, iPlayerLoop])
                             self.iNumColonies += 1
 
         cxy = Consts.colony_positions_xy
         # Loop through to place flags first (so flags are all "under" the colony dots)
-        for i in range(xml.iNumNotColonies, xml.iNumTotalColonies):
+        for col in Colony:
             builtcount = 0
             possible = 1
             for colony in self.aaColoniesBuilt:
-                if i == colony[0]:
+                if col == colony[0]:
                     self.flag = self.getNextWidgetName()
                     screen.addFlagWidgetGFC(
                         self.flag,
-                        cxy[i][0] - 35 + 20 * builtcount,
-                        cxy[i][1] - 20,
+                        cxy[col][0] - 35 + 20 * builtcount,
+                        cxy[col][1] - 20,
                         80,
                         80,
                         colony[1],
@@ -4686,42 +4684,42 @@ class CvInfoScreen:
                     builtcount += 1
 
         # Loop through to place dots
-        for i in range(xml.iNumNotColonies, xml.iNumTotalColonies):
+        for col in Colony:
             builtcount = 0
             possible = 1
             for colony in self.aaColoniesBuilt:
-                if i == colony[0]:
+                if col == colony[0]:
                     self.mark1 = self.getNextWidgetName()
                     try:
                         screen.addDDSGFC(
                             self.mark1,
                             ArtFileMgr.getInterfaceArtInfo("MASK_" + str(colony[1])).getPath(),
-                            cxy[i][0] - 5 + 20 * builtcount,
-                            cxy[i][1] + 45,
+                            cxy[col][0] - 5 + 20 * builtcount,
+                            cxy[col][1] + 45,
                             20,
                             20,
                             WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT,
-                            i,
+                            col,
                             -1,
                         )
                     except AttributeError:
                         screen.addDDSGFC(
                             self.mark1,
                             ArtFileMgr.getInterfaceArtInfo("MASK_OTHER").getPath(),
-                            cxy[i][0] - 5 + 20 * builtcount,
-                            cxy[i][1] + 45,
+                            cxy[col][0] - 5 + 20 * builtcount,
+                            cxy[col][1] + 45,
                             20,
                             20,
                             WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT,
-                            i,
+                            col,
                             -1,
                         )
                     builtcount += 1
                     # screen.moveToFront(self.mark1)
                 # self.aaColoniesUnbuilt.append([iProjectLoop,-1,"TXT_KEY_UNKNOWN"]) #This should be something else probably
-            if i == 12:
+            if col == 12:
                 possible = 3
-            if i == 13:
+            if col == 13:
                 possible = 3
             for n in range(builtcount, possible):
                 self.mark1 = self.getNextWidgetName()
@@ -4729,12 +4727,12 @@ class CvInfoScreen:
                 screen.addDDSGFC(
                     self.mark1,
                     ArtFileMgr.getInterfaceArtInfo("MASK_BLANK").getPath(),
-                    cxy[i][0] - 5 + 25 * n,
-                    cxy[i][1] + 45,
+                    cxy[col][0] - 5 + 25 * n,
+                    cxy[col][1] + 45,
                     20,
                     20,
                     WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT,
-                    i,
+                    col,
                     -1,
                 )
 

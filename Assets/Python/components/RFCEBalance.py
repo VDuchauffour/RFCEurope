@@ -4,11 +4,13 @@ from CoreData import CIVILIZATIONS
 from CoreTypes import (
     City,
     Civ,
+    Colony,
     Plague,
     Promotion,
     Terrain,
     ProvinceTypes,
     Religion,
+    Project,
     StartingSituation,
     UniquePower,
     FaithPointBonusCategory,
@@ -625,7 +627,7 @@ class RFCEBalance:
         gc.setUP(
             Civ.PORTUGAL.value,
             UniquePower.LOWER_COST_FOR_PROJECTS.value,
-            (xml.iNumNotColonies - 2) * 1000000 + (xml.iNumTotalColonies - 1) * 1000 + 30,
+            (len(Project) - 2) * 1000000 + max(Colony) * 1000 + 30,
         )
         gc.setUP(
             Civ.PORTUGAL.value, UniquePower.STABILITY_BONUS_FOUNDING.value, 1
@@ -665,7 +667,7 @@ class RFCEBalance:
         gc.setUP(
             Civ.DUTCH.value,
             UniquePower.LOWER_COST_FOR_PROJECTS.value,
-            (xml.iNumNotColonies - 2) * 1000000 + (xml.iNumTotalColonies - 1) * 1000 + 30,
+            (len(Project) - 2) * 1000000 + max(Colony) * 1000 + 30,
         )  # "hidden" part of the UP
 
         gc.setUP(Civ.POPE.value, UniquePower.NO_COLLAPSE_IN_CORE_AND_NORMAL_AREAS.value, 1)

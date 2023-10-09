@@ -3,7 +3,7 @@
 from CvPythonExtensions import *
 from CoreData import CIVILIZATIONS
 from CoreData import COMPANIES
-from CoreTypes import City, Civ, Company, ProvinceStatus, Religion
+from CoreTypes import City, Civ, Colony, Company, Project, ProvinceStatus, Religion
 import CvUtil
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
 import PyHelpers
@@ -2623,7 +2623,7 @@ class CvVictoryScreen:
             + localText.getText("TXT_KEY_PROJECT_VINLAND", ())
             + ": "
             + self.determineColor(
-                gc.getTeam(iPlayer).getProjectCount(xml.iColVinland) >= 1,
+                gc.getTeam(iPlayer).getProjectCount(Colony.VINLAND.value) >= 1,
                 localText.getText("TXT_KEY_UHV_EXPLORED", ()),
                 localText.getText("TXT_KEY_UHV_NOT_EXPLORED", ()),
             )
@@ -3555,7 +3555,7 @@ class CvVictoryScreen:
         )
         if bTradingCompanies:
             sString += "\n" + self.getProjectsString(
-                (xml.iWestIndiaCompany, xml.iEastIndiaCompany)
+                (Project.WEST_INDIA_COMPANY.value, Project.EAST_INDIA_COMPANY.value)
             )
         return sString
 

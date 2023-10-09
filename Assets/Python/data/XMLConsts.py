@@ -464,38 +464,6 @@ iNumBuildings = 176
 ) = range(iNumBuildings)
 
 
-# Projects, Colonies
-iNumProjects = 25
-(
-    iEncyclopedie,
-    iEastIndiaCompany,
-    iWestIndiaCompany,
-    iColVinland,
-    iColGoldCoast,
-    iColIvoryCoast,
-    iColCuba,
-    iColHispaniola,
-    iColBrazil,
-    iColHudson,
-    iColVirginia,
-    iColEastAfrica,
-    iColFarEast,
-    iColIndia,
-    iColEastIndies,
-    iColMalaysia,
-    iColCapeTown,
-    iColAztec,
-    iColInca,
-    iColQuebec,
-    iColNewEngland,
-    iColJamaica,
-    iColPanama,
-    iColLouisiana,
-    iColPhillippines,
-) = range(iNumProjects)
-iNumNotColonies = 3
-iNumTotalColonies = iNumProjects
-
 # Specialists
 iNumSpecialists = 14
 (

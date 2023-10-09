@@ -11,6 +11,7 @@ from TimelineData import CIV_BIRTHDATE, CIV_COLLAPSE_DATE
 from MiscData import MessageData
 from CoreTypes import (
     Civ,
+    Project,
     Scenario,
     Religion,
     FaithPointBonusCategory,
@@ -480,7 +481,7 @@ class Stability:
     def onProjectBuilt(self, iPlayer, iProject):
         pPlayer = gc.getPlayer(iPlayer)
         iCivic5 = pPlayer.getCivics(5)
-        if iProject >= xml.iNumNotColonies:
+        if iProject >= len(Project):
             pPlayer.changeStabilityBase(
                 StabilityCategory.EXPANSION.value, -2
             )  # -2 stability for each colony

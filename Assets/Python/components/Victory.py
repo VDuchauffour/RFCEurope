@@ -1,7 +1,16 @@
 from CvPythonExtensions import *
 from CoreData import CIVILIZATIONS
 from CoreData import COMPANIES
-from CoreTypes import City, Civ, Company, ProvinceStatus, StabilityCategory, Religion
+from CoreTypes import (
+    City,
+    Civ,
+    Colony,
+    Company,
+    Project,
+    ProvinceStatus,
+    StabilityCategory,
+    Religion,
+)
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
 import PyHelpers
 import Popup
@@ -880,7 +889,7 @@ class Victory:
 
         # Venice UHV 3: Be the first to build a Colony from the Age of Discovery (Vinland is from the Viking Age)
         if self.isPossibleUHV(Civ.VENECIA.value, 2, False):
-            if iProject != xml.iColVinland:
+            if iProject != Colony.VINLAND.value:
                 if bColony:
                     if iPlayer == Civ.VENECIA.value:
                         self.wonUHV(Civ.VENECIA.value, 2)
@@ -933,14 +942,14 @@ class Victory:
                     )
                 if CIVILIZATIONS[Civ.DUTCH].player.getUHVCounter(1) >= 3:
                     iWestCompany = CIVILIZATIONS[Civ.DUTCH].team.getProjectCount(
-                        xml.iWestIndiaCompany
+                        Project.WEST_INDIA_COMPANY.value
                     )
                     iEastCompany = CIVILIZATIONS[Civ.DUTCH].team.getProjectCount(
-                        xml.iEastIndiaCompany
+                        Project.EAST_INDIA_COMPANY.value
                     )
                     # if the companies are already built previously, or currently being built (one of them is the current project)
-                    if iProject == xml.iWestIndiaCompany or iWestCompany >= 1:
-                        if iProject == xml.iEastIndiaCompany or iEastCompany >= 1:
+                    if iProject == Project.WEST_INDIA_COMPANY.value or iWestCompany >= 1:
+                        if iProject == Project.EAST_INDIA_COMPANY.value or iEastCompany >= 1:
                             self.wonUHV(Civ.DUTCH.value, 1)
 
         # Denmark UHV 3: Build 3 Colonies and complete both Trading Companies
@@ -952,14 +961,14 @@ class Victory:
                     )
                 if CIVILIZATIONS[Civ.DENMARK].player.getUHVCounter(2) >= 3:
                     iWestCompany = CIVILIZATIONS[Civ.DENMARK].team.getProjectCount(
-                        xml.iWestIndiaCompany
+                        Project.WEST_INDIA_COMPANY.value
                     )
                     iEastCompany = CIVILIZATIONS[Civ.DENMARK].team.getProjectCount(
-                        xml.iEastIndiaCompany
+                        Project.EAST_INDIA_COMPANY.value
                     )
                     # if the companies are already built previously, or currently being built (one of them is the current project)
-                    if iProject == xml.iWestIndiaCompany or iWestCompany == 1:
-                        if iProject == xml.iEastIndiaCompany or iEastCompany == 1:
+                    if iProject == Project.WEST_INDIA_COMPANY.value or iWestCompany == 1:
+                        if iProject == Project.EAST_INDIA_COMPANY.value or iEastCompany == 1:
                             self.wonUHV(Civ.DENMARK.value, 2)
 
     def getOwnedLuxes(self, pPlayer):
@@ -995,7 +1004,7 @@ class Victory:
         return iCount
 
     def isProjectAColony(self, iProject):
-        if iProject >= xml.iNumNotColonies:
+        if iProject >= len(Project):
             return True
         else:
             return False
@@ -1004,8 +1013,8 @@ class Victory:
         pPlayer = gc.getPlayer(iPlayer)
         tPlayer = gc.getTeam(pPlayer.getTeam())
         iCount = 0
-        for iProject in range(xml.iNumNotColonies, xml.iNumProjects):
-            if tPlayer.getProjectCount(iProject) > 0:
+        for col in Colony:
+            if tPlayer.getProjectCount(col.value) > 0:
                 iCount += 1
         return iCount
 
@@ -1191,7 +1200,7 @@ class Victory:
         if self.isPossibleUHV(Civ.NORWAY.value, 0, True):
             if (
                 CIVILIZATIONS[Civ.NORWAY].player.getUHVCounter(0) >= 100
-                and CIVILIZATIONS[Civ.NORWAY].team.getProjectCount(xml.iColVinland) >= 1
+                and CIVILIZATIONS[Civ.NORWAY].team.getProjectCount(Colony.VINLAND.value) >= 1
             ):
                 self.wonUHV(Civ.NORWAY.value, 0)
         if iGameTurn == DateTurn.i1066AD:
