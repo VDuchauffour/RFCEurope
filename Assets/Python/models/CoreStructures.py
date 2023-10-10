@@ -72,11 +72,11 @@ class Civilization(Item):
         return self.team.getID()
 
     @property
-    def description(self):
+    def name(self):
         return self.player.getCivilizationShortDescription(0)
 
     @property
-    def long_description(self):
+    def fullname(self):
         return self.player.getCivilizationDescription(0)
 
     @property
@@ -153,7 +153,7 @@ class Civilizations(ItemCollection):
 
     def independents(self):
         """Return independents civilizations."""
-        return self.filter(lambda c: "INDEPENDENT" in c.name)
+        return self.filter(lambda c: "INDEPENDENT" in c.id_name)
 
     def barbarian(self):
         """Return the barbarian civilization."""

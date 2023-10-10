@@ -158,11 +158,11 @@ class Item(object):
         return self._id
 
     @property
-    def name(self):
+    def id_name(self):
         return self._id.name  # type: ignore
 
     def __repr__(self):
-        return self.__class__.__name__ + "(" + str(self.BASE_CLASS[self.name]) + ")"
+        return self.__class__.__name__ + "(" + str(self.BASE_CLASS[self.id_name]) + ")"
 
 
 class ItemCollection(list):

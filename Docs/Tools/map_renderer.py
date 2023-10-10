@@ -267,7 +267,9 @@ class MapRenderer:
                 img = self.apply_water(img)
                 img = self.draw_plot_properties(img, "is_peak")
                 img = self.upscale_map(img)
-                self.save_drawing(img, output_path + "/spawning_areas", f"{civ.name}_map")
+                self.save_drawing(
+                    img, output_path + "/spawning_areas", f"{civ.id_name.lower()}_map"
+                )
 
     def run(
         self,
