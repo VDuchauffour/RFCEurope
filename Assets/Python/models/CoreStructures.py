@@ -1,5 +1,5 @@
 import CoreTypes
-from BaseStructures import Attributes, BaseFactory, EnumDataMapper, Item, ItemCollection
+from BaseStructures import BaseFactory, EnumDataMapper, Item, ItemCollection
 from Errors import NotTypeExpectedError
 
 try:
@@ -335,11 +335,6 @@ def get_civ_by_id(id):
 def get_religion_by_id(id):
     """Return a Religion member by its index."""
     return get_enum_by_id(CoreTypes.Religion, id)
-
-
-def attribute_factory(data):
-    """Return a `Attributes` object given Mapping with enum member as keys."""
-    return Attributes(**dict((k.name.lower(), v) for k, v in data.items()))
 
 
 def normalize_tiles(tiles):

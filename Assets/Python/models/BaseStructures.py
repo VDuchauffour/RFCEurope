@@ -1,9 +1,15 @@
-from copy import copy
+from copy import copy, deepcopy
 import random
 
 from Enum import Enum
 from Errors import NotACallableError, NotTypeExpectedError, OutputTypeError
-from PyUtils import all, any
+from PyUtils import (
+    all,
+    any,
+    combinations,
+    permutations,
+    product,
+)
 
 
 class OutputType(Enum):
@@ -213,13 +219,40 @@ class ItemCollection(list):
         """Filter item when `condition` is True."""
         return self.copy(*self._filter(condition))
 
-    def attributes(self, attribute):
-        """Return a list of item attribute."""
-        return self._apply(attribute)
+    @staticmethod
+    def __handle_string_args(strings):
+        if isinstance(strings, str):
+            strings = [strings]
+        if not isinstance(strings, (tuple, list)):
+            raise ValueError("`attributes` must be a list or a tuple, received %s" % type(strings))
+        return strings
+
+    def _select(self, attributes):
+        items = []
+        obj = deepcopy(self)
+        for item in obj:
+            for attr in item.__dict__.keys():
+                if not attr.startswith("_") and attr not in attributes:
+                    item.__dict__.pop(attr, None)
+            items.append(item)
+        return self.copy(*items)
+
+    def select(self, attributes):
+        """Return a dict of item attributes. `attributes` can be a callable, a single attribute or a list or a tuple of attributes."""
+        attributes = self.__handle_string_args(attributes)
+        return self._select(attributes)
+
+    def dropna(self, attributes):
+        """Return the object without those that have None as the value for the `attribute`."""
+        attributes = self.__handle_string_args(attributes)
+        obj = deepcopy(self)
+        for attribute in attributes:
+            obj = obj.filter(lambda c: getattr(c, attribute) is not None)
+        return obj
 
     def ids(self):
         """Return a list of identifiers."""
-        return self.attributes(lambda c: c.id)
+        return self._apply(lambda c: c.id)
 
     def split(self, condition):
         """Return a tuple of 2 elements, the first corresponds to items where `condition` is True, the second not."""
@@ -280,6 +313,21 @@ class ItemCollection(list):
         """Return a sample of the object."""
         return self.copy(*random.sample(self, k))
 
+    def product(self, other=None, repeat=1):
+        """Return catersian product of the object."""
+        if other is None:
+            other = self
+            print(type(other), other)
+        return product(repeat, self, other)
+
+    def permutations(self, repeat=2):
+        """Return successive `repeat` length permutations of the object."""
+        return permutations(self, repeat)
+
+    def combinations(self, repeat=2):
+        """Return `repeat` length subsequences of the object."""
+        return combinations(self, repeat)
+
 
 class BaseFactory(object):
     """A base for factories."""
@@ -300,6 +348,11 @@ class BaseFactory(object):
     def collect(self):
         items = []
         for member in self.MEMBERS_CLASS:
-            attachments = dict((k, v[member]) for k, v in self._attachments.items())
+            attachments = dict((k, v.get(member)) for k, v in self._attachments.items())
             items.append(self.ITEM_CLASS(member, **attachments))
         return self.ITEM_COLLECTION_CLASS(*items)
+
+
+def attribute_factory(data):
+    """Return a `Attributes` object given Mapping with enum member as keys."""
+    return Attributes(**dict((k.name.lower(), v) for k, v in data.items()))
