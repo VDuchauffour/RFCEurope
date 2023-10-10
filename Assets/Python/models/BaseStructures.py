@@ -182,6 +182,20 @@ class ItemCollection(list):
     def copy(self, *items):
         return self.__class__(*items)
 
+    def first(self):
+        """Return the first item of the collection."""
+        return self[0]
+
+    def last(self):
+        """Return the last item of the collection."""
+        return self[-1]
+
+    def unwrap(self):
+        """Unwrap items of the collection."""
+        if len(self) == 1:
+            return self.first()
+        return self
+
     def _apply(self, condition):
         if not callable(condition):
             raise NotACallableError(condition)

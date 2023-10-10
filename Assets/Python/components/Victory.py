@@ -1494,8 +1494,8 @@ class Victory:
                             lLand[5] += pPlayer.getTotalLand()
                             lPop[5] += pPlayer.getTotalPopulation()
                     # The Barbarian civ counts as Pagan, Independent cities are included separately, based on the religion of the population
-                    lLand[5] += CIVILIZATIONS.barbarian().player.getTotalLand()
-                    lPop[5] += CIVILIZATIONS.barbarian().player.getTotalPopulation()
+                    lLand[5] += CIVILIZATIONS.barbarian().unwrap().player.getTotalLand()
+                    lPop[5] += CIVILIZATIONS.barbarian().unwrap().player.getTotalPopulation()
                     for iIndyCiv in [
                         Civ.INDEPENDENT.value,
                         Civ.INDEPENDENT_2.value,
@@ -1953,7 +1953,7 @@ class Victory:
             if self.isPossibleUHV(Civ.MOSCOW.value, 0, True):
                 bClean = True
                 for iProv in tMoscowControl:
-                    if CIVILIZATIONS.barbarian().player.getProvinceCityCount(iProv) > 0:
+                    if CIVILIZATIONS.barbarian().unwrap().player.getProvinceCityCount(iProv) > 0:
                         bClean = False
                         break
                 if bClean:

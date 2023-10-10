@@ -157,7 +157,7 @@ class Civilizations(ItemCollection):
 
     def barbarian(self):
         """Return the barbarian civilization."""
-        return self.take(CoreTypes.Civ.BARBARIAN)[0]
+        return self.take(CoreTypes.Civ.BARBARIAN)
 
     def christian(self):
         """Retun all christian civilizations."""
