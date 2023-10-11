@@ -7,10 +7,10 @@ from CoreTypes import (
     Scenario,
     StartingSituation,
 )
+from BaseStructures import attribute_factory
 from CoreStructures import (
     CivDataMapper,
     ScenarioDataMapper,
-    attribute_factory,
 )
 from TimelineData import DateTurn
 
@@ -163,7 +163,7 @@ CIV_STARTING_SITUATION_500AD = CivDataMapper(
             StartingSituation.FAITH: 0,
         },
     }
-).fill_missing_members(None)
+)
 
 CIV_STARTING_SITUATION_1200AD = CivDataMapper(
     {
@@ -313,7 +313,7 @@ CIV_STARTING_SITUATION_1200AD = CivDataMapper(
             StartingSituation.FAITH: 0,
         },
     }
-).fill_missing_members(None)
+)
 
 CIV_STARTING_SITUATION = ScenarioDataMapper(
     {
@@ -353,7 +353,7 @@ CIV_STABILITY_AI_BONUS = CivDataMapper(
         Civ.MOSCOW: 0,
         Civ.DUTCH: 0,
     }
-).fill_missing_members(None)
+)
 
 CIV_INITIAL_CONTACTS_500AD = CivDataMapper(
     {
@@ -478,7 +478,7 @@ CIV_INITIAL_CONTACTS_500AD = CivDataMapper(
             Civ.NORWAY,
         ],
     }
-).fill_missing_members([])
+)
 
 CIV_INITIAL_CONTACTS_1200AD = CivDataMapper(
     {
@@ -659,7 +659,7 @@ CIV_INITIAL_CONTACTS_1200AD = CivDataMapper(
             Civ.SWEDEN,
         ],
     }
-).fill_missing_members([])
+)
 
 CIV_INITIAL_CONTACTS = ScenarioDataMapper(
     {
@@ -676,54 +676,54 @@ CIV_INITIAL_WARS_500AD = CivDataMapper(
                 Civ.BULGARIA: 90,
                 Civ.OTTOMAN: 90,
             }
-        ).fill_missing_members(0),
+        ),
         Civ.FRANCE: CivDataMapper(
             {
                 Civ.ENGLAND: 60,
             }
-        ).fill_missing_members(0),
+        ),
         Civ.ARABIA: CivDataMapper(
             {
                 Civ.OTTOMAN: 60,
             }
-        ).fill_missing_members(0),
+        ),
         Civ.BULGARIA: CivDataMapper(
             {
                 Civ.OTTOMAN: 70,
             }
-        ).fill_missing_members(0),
+        ),
         Civ.CORDOBA: CivDataMapper(
             {
                 Civ.CASTILLE: 90,
                 Civ.PORTUGAL: 90,
                 Civ.ARAGON: 80,
             }
-        ).fill_missing_members(0),
+        ),
         Civ.NOVGOROD: CivDataMapper(
             {
                 Civ.PRUSSIA: 80,
             }
-        ).fill_missing_members(0),
+        ),
         Civ.DENMARK: CivDataMapper(
             {
                 Civ.SWEDEN: 60,
             }
-        ).fill_missing_members(0),
+        ),
         Civ.SCOTLAND: CivDataMapper(
             {
                 Civ.ENGLAND: 60,
             }
-        ).fill_missing_members(0),
+        ),
         Civ.POLAND: CivDataMapper(
             {
                 Civ.PRUSSIA: 20,
             }
-        ).fill_missing_members(0),
+        ),
         Civ.PRUSSIA: CivDataMapper(
             {
                 Civ.LITHUANIA: 80,
             }
-        ).fill_missing_members(0),
+        ),
         Civ.OTTOMAN: CivDataMapper(
             {
                 Civ.INDEPENDENT: 50,
@@ -731,9 +731,9 @@ CIV_INITIAL_WARS_500AD = CivDataMapper(
                 Civ.INDEPENDENT_3: 50,
                 Civ.INDEPENDENT_4: 50,
             }
-        ).fill_missing_members(0),
+        ),
     }
-).fill_missing_members(CivDataMapper({}).fill_missing_members(0))
+)
 
 CIV_INITIAL_WARS_1200AD = CivDataMapper(
     {
@@ -744,13 +744,13 @@ CIV_INITIAL_WARS_1200AD = CivDataMapper(
                 Civ.VENECIA: 90,
                 Civ.OTTOMAN: 90,
             }
-        ).fill_missing_members(0),
+        ),
         Civ.FRANCE: CivDataMapper(
             {
                 Civ.ARABIA: 30,
                 Civ.ENGLAND: 90,
             }
-        ).fill_missing_members(0),
+        ),
         Civ.ARABIA: CivDataMapper(
             {
                 Civ.GERMANY: 20,
@@ -762,49 +762,49 @@ CIV_INITIAL_WARS_1200AD = CivDataMapper(
                 Civ.ARAGON: 10,
                 Civ.OTTOMAN: 60,
             }
-        ).fill_missing_members(0),
+        ),
         Civ.BULGARIA: CivDataMapper(
             {
                 Civ.OTTOMAN: 70,
             }
-        ).fill_missing_members(0),
+        ),
         Civ.CORDOBA: CivDataMapper(
             {
                 Civ.PORTUGAL: 90,
             }
-        ).fill_missing_members(0),
+        ),
         Civ.NOVGOROD: CivDataMapper(
             {
                 Civ.PRUSSIA: 80,
             }
-        ).fill_missing_members(0),
+        ),
         Civ.DENMARK: CivDataMapper(
             {
                 Civ.SWEDEN: 60,
             }
-        ).fill_missing_members(0),
+        ),
         Civ.SCOTLAND: CivDataMapper(
             {
                 Civ.ENGLAND: 60,
             }
-        ).fill_missing_members(0),
+        ),
         Civ.POLAND: CivDataMapper(
             {
                 Civ.PRUSSIA: 20,
             }
-        ).fill_missing_members(0),
+        ),
         Civ.MOROCCO: CivDataMapper(
             {
                 Civ.CASTILLE: 90,
                 Civ.PORTUGAL: 80,
                 Civ.ARAGON: 80,
             }
-        ).fill_missing_members(0),
+        ),
         Civ.PRUSSIA: CivDataMapper(
             {
                 Civ.LITHUANIA: 80,
             }
-        ).fill_missing_members(0),
+        ),
         Civ.OTTOMAN: CivDataMapper(
             {
                 Civ.INDEPENDENT: 50,
@@ -812,9 +812,9 @@ CIV_INITIAL_WARS_1200AD = CivDataMapper(
                 Civ.INDEPENDENT_3: 50,
                 Civ.INDEPENDENT_4: 50,
             }
-        ).fill_missing_members(0),
+        ),
     }
-).fill_missing_members(CivDataMapper({}).fill_missing_members(0))
+)
 
 CIV_INITIAL_WARS = ScenarioDataMapper(
     {
@@ -864,7 +864,7 @@ CIV_HIRE_MERCENARY_THRESHOLD = CivDataMapper(
 )
 
 # Not used
-CIV_AI_AGGRRESSION_LEVEL = CivDataMapper(
+CIV_AI_AGGRESSION_LEVEL = CivDataMapper(
     {
         Civ.BYZANTIUM: 1,
         Civ.FRANCE: 1,
@@ -895,7 +895,7 @@ CIV_AI_AGGRRESSION_LEVEL = CivDataMapper(
         Civ.MOSCOW: 1,
         Civ.DUTCH: 0,
     }
-).fill_missing_members(None)
+)
 
 # Used for war during rise and respawn of new civs (Higher number means less chance for war)
 CIV_AI_STOP_BIRTH_THRESHOLD = CivDataMapper(
@@ -930,7 +930,7 @@ CIV_AI_STOP_BIRTH_THRESHOLD = CivDataMapper(
         Civ.DUTCH: 80,
         Civ.POPE: 90,
     }
-).fill_missing_members(0)
+)
 
 # Used to tune frequency of resurrections.
 CIV_RESPAWNING_THRESHOLD = CivDataMapper(
@@ -965,7 +965,7 @@ CIV_RESPAWNING_THRESHOLD = CivDataMapper(
         Civ.DUTCH: 60,
         Civ.POPE: 90,
     }
-).fill_missing_members(None)
+)
 
 CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
     {
@@ -1251,231 +1251,227 @@ CIV_RELIGIOUS_TOLERANCE = CivDataMapper(
 )
 
 # Late leader: (leader, starting date, threshold, era)
-CIV_LEADERS = (
-    CivDataMapper(
-        {
-            Civ.BYZANTIUM: {
-                LeaderType.PRIMARY: Leader.JUSTINIAN,
-                LeaderType.EARLY: Leader.JUSTINIAN,
-                LeaderType.LATE: [
-                    (Leader.BASIL_II, DateTurn.i910AD, 10, 2),
-                    (Leader.PALAIOLOGOS, DateTurn.i1230AD, 5, 2),
-                ],
-            },
-            Civ.FRANCE: {
-                LeaderType.PRIMARY: Leader.CHARLEMAGNE,
-                LeaderType.EARLY: Leader.CHARLEMAGNE,
-                LeaderType.LATE: [
-                    (Leader.PHILIP_AUGUSTUS, DateTurn.i1101AD, 10, 2),
-                    (Leader.JOAN, DateTurn.i1376AD, 10, 2),
-                    (Leader.LOUIS_XIV, DateTurn.i1523AD, 25, 3),
-                ],
-            },
-            Civ.ARABIA: {
-                LeaderType.PRIMARY: Leader.ABU_BAKR,
-                LeaderType.EARLY: Leader.ABU_BAKR,
-                LeaderType.LATE: [
-                    (Leader.HARUN_AL_RASHID, DateTurn.i752AD, 25, 1),
-                    (Leader.SALADIN, DateTurn.i1160AD, 25, 2),
-                ],
-            },
-            Civ.BULGARIA: {
-                LeaderType.PRIMARY: Leader.SIMEON,
-                LeaderType.EARLY: Leader.SIMEON,
-                LeaderType.LATE: [
-                    (Leader.IVAN_ASEN, DateTurn.i1101AD, 10, 2),
-                ],
-            },
-            Civ.CORDOBA: {
-                LeaderType.PRIMARY: Leader.ABD_AR_RAHMAN,
-                LeaderType.EARLY: Leader.ABD_AR_RAHMAN,
-                LeaderType.LATE: [
-                    (Leader.MOHAMMED_IBN_NASR, DateTurn.i1202AD, 10, 2),
-                ],
-            },
-            Civ.VENECIA: {
-                LeaderType.PRIMARY: Leader.ENRICO_DANDOLO,
-                LeaderType.EARLY: Leader.ENRICO_DANDOLO,
-                LeaderType.LATE: [
-                    (Leader.ANDREA_GRITTI, DateTurn.i1259AD, 10, 2),
-                ],
-            },
-            Civ.BURGUNDY: {
-                LeaderType.PRIMARY: Leader.OTTO_WILLIAM,
-                LeaderType.EARLY: Leader.OTTO_WILLIAM,
-                LeaderType.LATE: [
-                    (Leader.BEATRICE, DateTurn.i1200AD, 10, 2),
-                    (Leader.PHILIP_THE_BOLD, DateTurn.i1356AD, 15, 2),
-                ],
-            },
-            Civ.GERMANY: {
-                LeaderType.PRIMARY: Leader.OTTO_I,
-                LeaderType.EARLY: Leader.OTTO_I,
-                LeaderType.LATE: [
-                    (Leader.BARBAROSSA, DateTurn.i1139AD, 20, 2),
-                ],
-            },
-            Civ.NOVGOROD: {
-                LeaderType.PRIMARY: Leader.RURIK,
-                LeaderType.EARLY: Leader.RURIK,
-                LeaderType.LATE: [
-                    (Leader.ALEXANDER_NEVSKY, DateTurn.i1150AD, 10, 2),
-                    (Leader.MARFA, DateTurn.i1380AD, 10, 3),
-                ],
-            },
-            Civ.NORWAY: {
-                LeaderType.PRIMARY: Leader.HARALD_HARDRADA,
-                LeaderType.EARLY: Leader.HARALD_HARDRADA,
-                LeaderType.LATE: [
-                    (Leader.HAAKON_IV, DateTurn.i1160AD, 25, 2),
-                ],
-            },
-            Civ.KIEV: {
-                LeaderType.PRIMARY: Leader.YAROSLAV,
-                LeaderType.EARLY: Leader.YAROSLAV,
-                LeaderType.LATE: [
-                    (Leader.MSTISLAV, DateTurn.i1101AD, 5, 2),
-                    (Leader.BOHDAN_KHMELNYTSKY, DateTurn.i1520AD, 10, 3),
-                ],
-            },
-            Civ.HUNGARY: {
-                LeaderType.PRIMARY: Leader.STEPHEN,
-                LeaderType.EARLY: Leader.STEPHEN,
-                LeaderType.LATE: [
-                    (Leader.BELA_III, DateTurn.i1167AD, 15, 2),
-                    (Leader.MATTHIAS, DateTurn.i1444AD, 5, 3),
-                ],
-            },
-            Civ.CASTILLE: {
-                LeaderType.PRIMARY: Leader.FERDINAND_III,
-                LeaderType.EARLY: Leader.FERDINAND_III,
-                LeaderType.LATE: [
-                    (Leader.ISABELLA, DateTurn.i1250AD, 10, 2),
-                    (Leader.PHILIP_II, DateTurn.i1520AD, 10, 3),
-                ],
-            },
-            Civ.DENMARK: {
-                LeaderType.PRIMARY: Leader.HARALD_BLUETOOTH,
-                LeaderType.EARLY: Leader.HARALD_BLUETOOTH,
-                LeaderType.LATE: [
-                    (Leader.MARGARET_I, DateTurn.i1320AD, 10, 2),
-                    (Leader.CHRISTIAN_IV, DateTurn.i1520AD, 5, 3),
-                ],
-            },
-            Civ.SCOTLAND: {
-                LeaderType.PRIMARY: Leader.ROBERT_THE_BRUCE,
-                LeaderType.EARLY: Leader.ROBERT_THE_BRUCE,
-                LeaderType.LATE: [
-                    (Leader.JAMES_IV, DateTurn.i1296AD, 10, 2),
-                ],
-            },
-            Civ.POLAND: {
-                LeaderType.PRIMARY: Leader.MIESZKO,
-                LeaderType.EARLY: Leader.MIESZKO,
-                LeaderType.LATE: [
-                    (Leader.CASIMIR, DateTurn.i1320AD, 20, 2),
-                    (Leader.SOBIESKI, DateTurn.i1570AD, 10, 3),
-                ],
-            },
-            Civ.GENOA: {
-                LeaderType.PRIMARY: Leader.EMBRIACO,
-                LeaderType.EARLY: Leader.EMBRIACO,
-                LeaderType.LATE: [
-                    (Leader.BOCCANEGRA, DateTurn.i1101AD, 10, 2),
-                ],
-            },
-            Civ.MOROCCO: {
-                LeaderType.PRIMARY: Leader.YAQUB_AL_MANSUR,
-                LeaderType.EARLY: Leader.YAQUB_AL_MANSUR,
-                LeaderType.LATE: [
-                    (Leader.ISMAIL_IBN_SHARIF, DateTurn.i1419AD, 5, 3),
-                ],
-            },
-            Civ.ENGLAND: {
-                LeaderType.PRIMARY: Leader.WILLIAM,
-                LeaderType.EARLY: Leader.WILLIAM,
-                LeaderType.LATE: [
-                    (Leader.ELIZABETH, DateTurn.i1452AD, 10, 3),
-                    (Leader.GEORGE_III, DateTurn.i1700AD, 10, 3),
-                ],
-            },
-            Civ.PORTUGAL: {
-                LeaderType.PRIMARY: Leader.AFONSO,
-                LeaderType.EARLY: Leader.AFONSO,
-                LeaderType.LATE: [
-                    (Leader.JOAO, DateTurn.i1419AD, 10, 3),
-                    (Leader.MARIA_I, DateTurn.i1700AD, 10, 3),
-                ],
-            },
-            Civ.ARAGON: {
-                LeaderType.PRIMARY: Leader.JAMES_I,
-                LeaderType.EARLY: Leader.JAMES_I,
-                LeaderType.LATE: [
-                    (Leader.JOHN_II, DateTurn.i1397AD, 15, 3),
-                ],
-            },
-            Civ.SWEDEN: {
-                LeaderType.PRIMARY: Leader.MAGNUS_LADULAS,
-                LeaderType.EARLY: Leader.MAGNUS_LADULAS,
-                LeaderType.LATE: [
-                    (Leader.GUSTAV_VASA, DateTurn.i1470AD, 20, 3),
-                    (Leader.GUSTAV_ADOLF, DateTurn.i1540AD, 25, 3),
-                    (Leader.KARL_XII, DateTurn.i1680AD, 10, 3),
-                ],
-            },
-            Civ.PRUSSIA: {
-                LeaderType.PRIMARY: Leader.HERMANN_VON_SALZA,
-                LeaderType.EARLY: Leader.HERMANN_VON_SALZA,
-                LeaderType.LATE: [
-                    (Leader.FREDERICK, DateTurn.i1580AD, 5, 3),
-                ],
-            },
-            Civ.LITHUANIA: {
-                LeaderType.PRIMARY: Leader.MINDAUGAS,
-                LeaderType.EARLY: Leader.MINDAUGAS,
-                LeaderType.LATE: [
-                    (Leader.VYTAUTAS, DateTurn.i1377AD, 10, 3),
-                ],
-            },
-            Civ.AUSTRIA: {
-                LeaderType.PRIMARY: Leader.MAXIMILIAN,
-                LeaderType.EARLY: Leader.MAXIMILIAN,
-                LeaderType.LATE: [
-                    (Leader.MARIA_THERESA, DateTurn.i1700AD, 25, 3),
-                ],
-            },
-            Civ.OTTOMAN: {
-                LeaderType.PRIMARY: Leader.MEHMED,
-                LeaderType.EARLY: Leader.MEHMED,
-                LeaderType.LATE: [
-                    (Leader.SULEIMAN, DateTurn.i1520AD, 15, 3),
-                ],
-            },
-            Civ.MOSCOW: {
-                LeaderType.PRIMARY: Leader.IVAN_IV,
-                LeaderType.EARLY: Leader.IVAN_IV,
-                LeaderType.LATE: [
-                    (Leader.PETER, DateTurn.i1570AD, 10, 3),
-                    (Leader.CATHERINE, DateTurn.i1700AD, 25, 3),
-                ],
-            },
-            Civ.DUTCH: {
-                LeaderType.PRIMARY: Leader.WILLEM_VAN_ORANJE,
-                LeaderType.EARLY: Leader.WILLEM_VAN_ORANJE,
-                LeaderType.LATE: [
-                    (Leader.JOHAN_DE_WITT, DateTurn.i1650AD, 30, 3),
-                ],
-            },
-            Civ.POPE: {
-                LeaderType.PRIMARY: Leader.THE_POPE,
-                LeaderType.EARLY: Leader.THE_POPE,
-                LeaderType.LATE: None,
-            },
-        }
-    )
-    .apply(attribute_factory)
-    .fill_missing_members(None)
-)
+CIV_LEADERS = CivDataMapper(
+    {
+        Civ.BYZANTIUM: {
+            LeaderType.PRIMARY: Leader.JUSTINIAN,
+            LeaderType.EARLY: Leader.JUSTINIAN,
+            LeaderType.LATE: [
+                (Leader.BASIL_II, DateTurn.i910AD, 10, 2),
+                (Leader.PALAIOLOGOS, DateTurn.i1230AD, 5, 2),
+            ],
+        },
+        Civ.FRANCE: {
+            LeaderType.PRIMARY: Leader.CHARLEMAGNE,
+            LeaderType.EARLY: Leader.CHARLEMAGNE,
+            LeaderType.LATE: [
+                (Leader.PHILIP_AUGUSTUS, DateTurn.i1101AD, 10, 2),
+                (Leader.JOAN, DateTurn.i1376AD, 10, 2),
+                (Leader.LOUIS_XIV, DateTurn.i1523AD, 25, 3),
+            ],
+        },
+        Civ.ARABIA: {
+            LeaderType.PRIMARY: Leader.ABU_BAKR,
+            LeaderType.EARLY: Leader.ABU_BAKR,
+            LeaderType.LATE: [
+                (Leader.HARUN_AL_RASHID, DateTurn.i752AD, 25, 1),
+                (Leader.SALADIN, DateTurn.i1160AD, 25, 2),
+            ],
+        },
+        Civ.BULGARIA: {
+            LeaderType.PRIMARY: Leader.SIMEON,
+            LeaderType.EARLY: Leader.SIMEON,
+            LeaderType.LATE: [
+                (Leader.IVAN_ASEN, DateTurn.i1101AD, 10, 2),
+            ],
+        },
+        Civ.CORDOBA: {
+            LeaderType.PRIMARY: Leader.ABD_AR_RAHMAN,
+            LeaderType.EARLY: Leader.ABD_AR_RAHMAN,
+            LeaderType.LATE: [
+                (Leader.MOHAMMED_IBN_NASR, DateTurn.i1202AD, 10, 2),
+            ],
+        },
+        Civ.VENECIA: {
+            LeaderType.PRIMARY: Leader.ENRICO_DANDOLO,
+            LeaderType.EARLY: Leader.ENRICO_DANDOLO,
+            LeaderType.LATE: [
+                (Leader.ANDREA_GRITTI, DateTurn.i1259AD, 10, 2),
+            ],
+        },
+        Civ.BURGUNDY: {
+            LeaderType.PRIMARY: Leader.OTTO_WILLIAM,
+            LeaderType.EARLY: Leader.OTTO_WILLIAM,
+            LeaderType.LATE: [
+                (Leader.BEATRICE, DateTurn.i1200AD, 10, 2),
+                (Leader.PHILIP_THE_BOLD, DateTurn.i1356AD, 15, 2),
+            ],
+        },
+        Civ.GERMANY: {
+            LeaderType.PRIMARY: Leader.OTTO_I,
+            LeaderType.EARLY: Leader.OTTO_I,
+            LeaderType.LATE: [
+                (Leader.BARBAROSSA, DateTurn.i1139AD, 20, 2),
+            ],
+        },
+        Civ.NOVGOROD: {
+            LeaderType.PRIMARY: Leader.RURIK,
+            LeaderType.EARLY: Leader.RURIK,
+            LeaderType.LATE: [
+                (Leader.ALEXANDER_NEVSKY, DateTurn.i1150AD, 10, 2),
+                (Leader.MARFA, DateTurn.i1380AD, 10, 3),
+            ],
+        },
+        Civ.NORWAY: {
+            LeaderType.PRIMARY: Leader.HARALD_HARDRADA,
+            LeaderType.EARLY: Leader.HARALD_HARDRADA,
+            LeaderType.LATE: [
+                (Leader.HAAKON_IV, DateTurn.i1160AD, 25, 2),
+            ],
+        },
+        Civ.KIEV: {
+            LeaderType.PRIMARY: Leader.YAROSLAV,
+            LeaderType.EARLY: Leader.YAROSLAV,
+            LeaderType.LATE: [
+                (Leader.MSTISLAV, DateTurn.i1101AD, 5, 2),
+                (Leader.BOHDAN_KHMELNYTSKY, DateTurn.i1520AD, 10, 3),
+            ],
+        },
+        Civ.HUNGARY: {
+            LeaderType.PRIMARY: Leader.STEPHEN,
+            LeaderType.EARLY: Leader.STEPHEN,
+            LeaderType.LATE: [
+                (Leader.BELA_III, DateTurn.i1167AD, 15, 2),
+                (Leader.MATTHIAS, DateTurn.i1444AD, 5, 3),
+            ],
+        },
+        Civ.CASTILLE: {
+            LeaderType.PRIMARY: Leader.FERDINAND_III,
+            LeaderType.EARLY: Leader.FERDINAND_III,
+            LeaderType.LATE: [
+                (Leader.ISABELLA, DateTurn.i1250AD, 10, 2),
+                (Leader.PHILIP_II, DateTurn.i1520AD, 10, 3),
+            ],
+        },
+        Civ.DENMARK: {
+            LeaderType.PRIMARY: Leader.HARALD_BLUETOOTH,
+            LeaderType.EARLY: Leader.HARALD_BLUETOOTH,
+            LeaderType.LATE: [
+                (Leader.MARGARET_I, DateTurn.i1320AD, 10, 2),
+                (Leader.CHRISTIAN_IV, DateTurn.i1520AD, 5, 3),
+            ],
+        },
+        Civ.SCOTLAND: {
+            LeaderType.PRIMARY: Leader.ROBERT_THE_BRUCE,
+            LeaderType.EARLY: Leader.ROBERT_THE_BRUCE,
+            LeaderType.LATE: [
+                (Leader.JAMES_IV, DateTurn.i1296AD, 10, 2),
+            ],
+        },
+        Civ.POLAND: {
+            LeaderType.PRIMARY: Leader.MIESZKO,
+            LeaderType.EARLY: Leader.MIESZKO,
+            LeaderType.LATE: [
+                (Leader.CASIMIR, DateTurn.i1320AD, 20, 2),
+                (Leader.SOBIESKI, DateTurn.i1570AD, 10, 3),
+            ],
+        },
+        Civ.GENOA: {
+            LeaderType.PRIMARY: Leader.EMBRIACO,
+            LeaderType.EARLY: Leader.EMBRIACO,
+            LeaderType.LATE: [
+                (Leader.BOCCANEGRA, DateTurn.i1101AD, 10, 2),
+            ],
+        },
+        Civ.MOROCCO: {
+            LeaderType.PRIMARY: Leader.YAQUB_AL_MANSUR,
+            LeaderType.EARLY: Leader.YAQUB_AL_MANSUR,
+            LeaderType.LATE: [
+                (Leader.ISMAIL_IBN_SHARIF, DateTurn.i1419AD, 5, 3),
+            ],
+        },
+        Civ.ENGLAND: {
+            LeaderType.PRIMARY: Leader.WILLIAM,
+            LeaderType.EARLY: Leader.WILLIAM,
+            LeaderType.LATE: [
+                (Leader.ELIZABETH, DateTurn.i1452AD, 10, 3),
+                (Leader.GEORGE_III, DateTurn.i1700AD, 10, 3),
+            ],
+        },
+        Civ.PORTUGAL: {
+            LeaderType.PRIMARY: Leader.AFONSO,
+            LeaderType.EARLY: Leader.AFONSO,
+            LeaderType.LATE: [
+                (Leader.JOAO, DateTurn.i1419AD, 10, 3),
+                (Leader.MARIA_I, DateTurn.i1700AD, 10, 3),
+            ],
+        },
+        Civ.ARAGON: {
+            LeaderType.PRIMARY: Leader.JAMES_I,
+            LeaderType.EARLY: Leader.JAMES_I,
+            LeaderType.LATE: [
+                (Leader.JOHN_II, DateTurn.i1397AD, 15, 3),
+            ],
+        },
+        Civ.SWEDEN: {
+            LeaderType.PRIMARY: Leader.MAGNUS_LADULAS,
+            LeaderType.EARLY: Leader.MAGNUS_LADULAS,
+            LeaderType.LATE: [
+                (Leader.GUSTAV_VASA, DateTurn.i1470AD, 20, 3),
+                (Leader.GUSTAV_ADOLF, DateTurn.i1540AD, 25, 3),
+                (Leader.KARL_XII, DateTurn.i1680AD, 10, 3),
+            ],
+        },
+        Civ.PRUSSIA: {
+            LeaderType.PRIMARY: Leader.HERMANN_VON_SALZA,
+            LeaderType.EARLY: Leader.HERMANN_VON_SALZA,
+            LeaderType.LATE: [
+                (Leader.FREDERICK, DateTurn.i1580AD, 5, 3),
+            ],
+        },
+        Civ.LITHUANIA: {
+            LeaderType.PRIMARY: Leader.MINDAUGAS,
+            LeaderType.EARLY: Leader.MINDAUGAS,
+            LeaderType.LATE: [
+                (Leader.VYTAUTAS, DateTurn.i1377AD, 10, 3),
+            ],
+        },
+        Civ.AUSTRIA: {
+            LeaderType.PRIMARY: Leader.MAXIMILIAN,
+            LeaderType.EARLY: Leader.MAXIMILIAN,
+            LeaderType.LATE: [
+                (Leader.MARIA_THERESA, DateTurn.i1700AD, 25, 3),
+            ],
+        },
+        Civ.OTTOMAN: {
+            LeaderType.PRIMARY: Leader.MEHMED,
+            LeaderType.EARLY: Leader.MEHMED,
+            LeaderType.LATE: [
+                (Leader.SULEIMAN, DateTurn.i1520AD, 15, 3),
+            ],
+        },
+        Civ.MOSCOW: {
+            LeaderType.PRIMARY: Leader.IVAN_IV,
+            LeaderType.EARLY: Leader.IVAN_IV,
+            LeaderType.LATE: [
+                (Leader.PETER, DateTurn.i1570AD, 10, 3),
+                (Leader.CATHERINE, DateTurn.i1700AD, 25, 3),
+            ],
+        },
+        Civ.DUTCH: {
+            LeaderType.PRIMARY: Leader.WILLEM_VAN_ORANJE,
+            LeaderType.EARLY: Leader.WILLEM_VAN_ORANJE,
+            LeaderType.LATE: [
+                (Leader.JOHAN_DE_WITT, DateTurn.i1650AD, 30, 3),
+            ],
+        },
+        Civ.POPE: {
+            LeaderType.PRIMARY: Leader.THE_POPE,
+            LeaderType.EARLY: Leader.THE_POPE,
+            LeaderType.LATE: None,
+        },
+    }
+).apply(attribute_factory)
 
 CIV_PROPERTIES = (
     CivDataMapper(
