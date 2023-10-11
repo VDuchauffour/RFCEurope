@@ -967,7 +967,7 @@ CIV_RESPAWNING_THRESHOLD = CivDataMapper(
     }
 ).fill_missing_members(None)
 
-CIV_RELIGION_SPEADING_THRESHOLD = CivDataMapper(
+CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
     {
         Civ.BYZANTIUM: {
             Religion.PROTESTANTISM: 100,

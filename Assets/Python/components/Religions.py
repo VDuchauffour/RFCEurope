@@ -2,7 +2,7 @@
 
 from CvPythonExtensions import *
 from CivilizationsData import (
-    CIV_RELIGION_SPEADING_THRESHOLD,
+    CIV_RELIGION_SPREADING_THRESHOLD,
     CIV_STARTING_SITUATION,
 )
 from CoreData import CIVILIZATIONS
@@ -1005,7 +1005,7 @@ class Religions:
                                 iReligionPoint += 10
                             if city.isHolyCityByType(iReligion):
                                 iReligionPoint += 1000
-                        spread_factor = CIV_RELIGION_SPEADING_THRESHOLD[get_civ_by_id(iPlayer)][
+                        spread_factor = CIV_RELIGION_SPREADING_THRESHOLD[get_civ_by_id(iPlayer)][
                             get_religion_by_id(iReligion)
                         ]
                         if spread_factor < 60:

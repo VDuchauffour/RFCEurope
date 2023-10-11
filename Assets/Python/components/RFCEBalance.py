@@ -20,7 +20,7 @@ import RFCEMaps
 import RFCUtils
 from CivilizationsData import (
     CIV_STARTING_SITUATION,
-    CIV_RELIGION_SPEADING_THRESHOLD,
+    CIV_RELIGION_SPREADING_THRESHOLD,
 )
 from MiscData import (
     WORLD_WIDTH,
@@ -684,7 +684,7 @@ class RFCEBalance:
                 gc.setReligionSpread(
                     civ.id,
                     iRel,
-                    CIV_RELIGION_SPEADING_THRESHOLD[civ.key][get_religion_by_id(iRel)],
+                    CIV_RELIGION_SPREADING_THRESHOLD[civ.key][get_religion_by_id(iRel)],
                 )
 
         # set the religions and year of the great schism
