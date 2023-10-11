@@ -131,12 +131,33 @@ class EnumDataMapper(DataMapper):
 class Attributes(dict):
     """A class to handle attibutes from a DataMapper."""
 
-    def __init__(self, **properties):
-        for name, value in properties.items():
-            setattr(self, name, value)
+    def __init__(self, *args, **kwargs):
+        super(Attributes, self).__init__(*args, **kwargs)
+        self.__dict__ = self
 
-    def __repr__(self):
-        return self.__class__.__name__ + "(" + str(self.__dict__) + ")"
+    @classmethod
+    def from_nested_dicts(cls, data):
+        """Construct nested Attributes from nested dictionaries."""
+        if isinstance(data, dict):
+            return cls(dict((key, cls.from_nested_dicts(data[key])) for key in data))
+        elif isinstance(data, list):
+            return [cls.from_nested_dicts(d) for d in data]
+        else:
+            return data
+
+    @classmethod
+    def from_nested_dicts_with_enum(cls, data):
+        """Construct nested Attributes from nested dictionaries."""
+        if isinstance(data, dict):
+            return cls(
+                dict(
+                    (key.name.lower(), cls.from_nested_dicts_with_enum(data[key])) for key in data
+                )
+            )
+        elif isinstance(data, list):
+            return [cls.from_nested_dicts_with_enum(d) for d in data]
+        else:
+            return data
 
 
 class Item(object):
@@ -339,20 +360,47 @@ class BaseFactory(object):
 
     def __init__(self):
         self._attachments = {}
+        self._keys_attachments = {}
 
-    def attach(self, name, data):
-        if isinstance(name, str) and isinstance(data, self.DATA_CLASS):
-            self._attachments[name] = data
+    def add_key(self, *keys):
+        for key in keys:
+            self._keys_attachments[key] = {}
         return self
+
+    def attach(self, name, data, key=None):
+        if isinstance(name, str) and isinstance(data, self.DATA_CLASS):
+            if key is not None:
+                self._keys_attachments[key][name] = data
+            else:
+                self._attachments[name] = data
+        return self
+
+    @staticmethod
+    def attribute_factory(data):
+        """Return a `Attributes` object given EnumDataMapper `data`."""
+        return Attributes.from_nested_dicts_with_enum(data)
+
+    def _collect_direct_keys(self, member):
+        return dict(
+            (k, self.attribute_factory(v.get(member))) for k, v in self._attachments.items()
+        )
+
+    def _collect_subkeys(self, member):
+        attachments = {}
+        for key in self._keys_attachments.keys():
+            attachments[key] = dict(
+                (name, self.attribute_factory(data.get(member)))
+                for name, data in self._keys_attachments[key].items()
+            )
+        return Attributes.from_nested_dicts(attachments)
 
     def collect(self):
         items = []
         for member in self.MEMBERS_CLASS:
-            attachments = dict((k, v.get(member)) for k, v in self._attachments.items())
+            attachments = {}
+            if self._attachments:
+                attachments.update(self._collect_direct_keys(member))
+            if self._keys_attachments:
+                attachments.update(self._collect_subkeys(member))
             items.append(self.ITEM_CLASS(member, **attachments))
         return self.ITEM_COLLECTION_CLASS(*items)
-
-
-def attribute_factory(data):
-    """Return a `Attributes` object given Mapping with enum member as keys."""
-    return Attributes(**dict((k.name.lower(), v) for k, v in data.items()))
