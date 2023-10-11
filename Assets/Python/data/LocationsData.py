@@ -1,3 +1,5 @@
+# ruff: noqa
+
 from CoreTypes import (
     AreaTypes,
     City,
@@ -23,6 +25,13 @@ from CoreStructures import (
 )
 from MiscData import WORLD_HEIGHT, WORLD_WIDTH
 
+MINOR_CIVS = (
+    Civ.INDEPENDENT,
+    Civ.INDEPENDENT_2,
+    Civ.INDEPENDENT_3,
+    Civ.INDEPENDENT_4,
+    Civ.BARBARIAN,
+)
 
 CITIES = EnumDataMapper(
     {
@@ -489,79 +498,71 @@ LAKE_LOCATIONS = EnumDataMapper(
     }
 ).applymap(lambda x: Tile(x))
 
-CIV_CAPITAL_LOCATIONS = (
-    CivDataMapper(
-        {
-            Civ.BYZANTIUM: (81, 24),  # Constantinople
-            Civ.FRANCE: (44, 46),  # Paris
-            Civ.ARABIA: (97, 10),  # Damascus
-            Civ.BULGARIA: (78, 29),  # Preslav
-            Civ.CORDOBA: (30, 23),  # Cordoba
-            Civ.VENECIA: (56, 35),  # Venice
-            Civ.BURGUNDY: (47, 41),  # Dijon
-            Civ.GERMANY: (53, 46),  # Frankfurt
-            Civ.NOVGOROD: (80, 62),  # Novgorod
-            Civ.NORWAY: (57, 65),  # Tonsberg
-            Civ.KIEV: (83, 45),  # Kiev
-            Civ.HUNGARY: (66, 37),  # Buda
-            Civ.CASTILLE: (27, 32),  # Leon
-            Civ.DENMARK: (59, 57),  # Roskilde / Kobenhavn
-            Civ.SCOTLAND: (37, 63),  # Edinburgh
-            Civ.POLAND: (65, 49),  # Poznan
-            Civ.GENOA: (50, 34),  # Genoa
-            Civ.MOROCCO: (24, 7),  # Marrakesh
-            Civ.ENGLAND: (41, 52),  # London
-            Civ.PORTUGAL: (21, 25),  # Lisboa
-            Civ.ARAGON: (36, 29),  # Zaragoza
-            Civ.SWEDEN: (66, 64),  # Stockholm
-            Civ.PRUSSIA: (69, 53),  # Konigsberg
-            Civ.LITHUANIA: (75, 53),  # Vilnus
-            Civ.AUSTRIA: (62, 40),  # Wien
-            Civ.OTTOMAN: (78, 22),  # Gallipoli
-            Civ.MOSCOW: (91, 56),  # Moscow
-            Civ.DUTCH: (49, 52),  # Amsterdam
-            Civ.POPE: (56, 27),  # Rome
-        }
-    )
-    .apply(lambda x: Tile(x))
-    .fill_missing_members(None)
-)
+CIV_CAPITAL_LOCATIONS = CivDataMapper(
+    {
+        Civ.BYZANTIUM: (81, 24),  # Constantinople
+        Civ.FRANCE: (44, 46),  # Paris
+        Civ.ARABIA: (97, 10),  # Damascus
+        Civ.BULGARIA: (78, 29),  # Preslav
+        Civ.CORDOBA: (30, 23),  # Cordoba
+        Civ.VENECIA: (56, 35),  # Venice
+        Civ.BURGUNDY: (47, 41),  # Dijon
+        Civ.GERMANY: (53, 46),  # Frankfurt
+        Civ.NOVGOROD: (80, 62),  # Novgorod
+        Civ.NORWAY: (57, 65),  # Tonsberg
+        Civ.KIEV: (83, 45),  # Kiev
+        Civ.HUNGARY: (66, 37),  # Buda
+        Civ.CASTILLE: (27, 32),  # Leon
+        Civ.DENMARK: (59, 57),  # Roskilde / Kobenhavn
+        Civ.SCOTLAND: (37, 63),  # Edinburgh
+        Civ.POLAND: (65, 49),  # Poznan
+        Civ.GENOA: (50, 34),  # Genoa
+        Civ.MOROCCO: (24, 7),  # Marrakesh
+        Civ.ENGLAND: (41, 52),  # London
+        Civ.PORTUGAL: (21, 25),  # Lisboa
+        Civ.ARAGON: (36, 29),  # Zaragoza
+        Civ.SWEDEN: (66, 64),  # Stockholm
+        Civ.PRUSSIA: (69, 53),  # Konigsberg
+        Civ.LITHUANIA: (75, 53),  # Vilnus
+        Civ.AUSTRIA: (62, 40),  # Wien
+        Civ.OTTOMAN: (78, 22),  # Gallipoli
+        Civ.MOSCOW: (91, 56),  # Moscow
+        Civ.DUTCH: (49, 52),  # Amsterdam
+        Civ.POPE: (56, 27),  # Rome
+    }
+).apply(lambda x: Tile(x))
 
 # Used for respawning
-CIV_NEW_CAPITAL_LOCATIONS = (
-    CivDataMapper(
-        {
-            Civ.ARABIA: [
-                (83, 3),
-                (84, 3),
-                (84, 4),
-            ],  # Alexandria
-            Civ.CORDOBA: [
-                (48, 16),
-                (50, 18),
-            ],  # Tunis
-            Civ.GERMANY: [(57, 41)],  # Munich
-            Civ.NORWAY: [(59, 64)],  # Oslo
-            Civ.KIEV: [(88, 40)],  # Stara Sich
-            Civ.CASTILLE: [
-                (30, 27),
-                (31, 27),
-                (31, 28),
-                (32, 28),
-            ],  # Toledo or Madrid
-            Civ.MOROCCO: [(25, 13)],  # Rabat
-            Civ.ARAGON: [(59, 24)],  # Naples
-            Civ.PRUSSIA: [
-                (60, 48),
-                (61, 48),
-                (61, 49),
-                (62, 48),
-            ],  # Berlin
-        }
-    )
-    .applymap(lambda x: Tile(x))
-    .fill_missing_members(None)
-)
+CIV_NEW_CAPITAL_LOCATIONS = CivDataMapper(
+    {
+        Civ.ARABIA: [
+            (83, 3),
+            (84, 3),
+            (84, 4),
+        ],  # Alexandria
+        Civ.CORDOBA: [
+            (48, 16),
+            (50, 18),
+        ],  # Tunis
+        Civ.GERMANY: [(57, 41)],  # Munich
+        Civ.NORWAY: [(59, 64)],  # Oslo
+        Civ.KIEV: [(88, 40)],  # Stara Sich
+        Civ.CASTILLE: [
+            (30, 27),
+            (31, 27),
+            (31, 28),
+            (32, 28),
+        ],  # Toledo or Madrid
+        Civ.MOROCCO: [(25, 13)],  # Rabat
+        Civ.ARAGON: [(59, 24)],  # Naples
+        Civ.PRUSSIA: [
+            (60, 48),
+            (61, 48),
+            (61, 49),
+            (62, 48),
+        ],  # Berlin
+    }
+).applymap(lambda x: Tile(x))
 
 CIV_NEIGHBOURS = CivDataMapper(
     {
@@ -742,7 +743,7 @@ CIV_NEIGHBOURS = CivDataMapper(
             Civ.GENOA,
         ],
     }
-).fill_missing_members(None)
+)
 
 # Used for stability on spawn
 CIV_OLDER_NEIGHBOURS = CivDataMapper(
@@ -804,7 +805,7 @@ CIV_OLDER_NEIGHBOURS = CivDataMapper(
             Civ.FRANCE,
         ],
     }
-).fill_missing_members(None)
+)
 
 # Used for the Colony panel
 CIV_HOME_LOCATIONS = CivDataMapper(
@@ -1154,23 +1155,21 @@ CIV_CORE_AREA = (
                 Area.TILE_MAX: (58, 29),
             },
         }
-    )
-    .apply(lambda d: parse_area_dict(d))
-    .apply(
-        lambda area: (
-            TilesFactory(WORLD_WIDTH, WORLD_HEIGHT)
-            .rectangle(
-                area[Area.TILE_MIN],
-                area[Area.TILE_MAX],
-            )
-            .extend(area.get(Area.ADDITIONAL_TILES))
-            .substract(area.get(Area.EXCEPTION_TILES))
-            .attach_area(AreaTypes.CORE)
-            .normalize()
-            .get_results()
-        )
-    )
-    .fill_missing_members(None)
+    ).apply(lambda d: parse_area_dict(d))
+    # .apply(
+    #     lambda area: (
+    #         TilesFactory(WORLD_WIDTH, WORLD_HEIGHT)
+    #         .rectangle(
+    #             area[Area.TILE_MIN],
+    #             area[Area.TILE_MAX],
+    #         )
+    #         .extend(area.get(Area.ADDITIONAL_TILES))
+    #         .substract(area.get(Area.EXCEPTION_TILES))
+    #         .attach_area(AreaTypes.CORE)
+    #         .normalize()
+    #         .get_results()
+    #     )
+    # )
 )
 
 CIV_NORMAL_AREA = (
@@ -1602,23 +1601,21 @@ CIV_NORMAL_AREA = (
                 Area.TILE_MAX: (58, 29),
             },
         }
-    )
-    .apply(lambda d: parse_area_dict(d))
-    .apply(
-        lambda area: (
-            TilesFactory(WORLD_WIDTH, WORLD_HEIGHT)
-            .rectangle(
-                area[Area.TILE_MIN],
-                area[Area.TILE_MAX],
-            )
-            .extend(area.get(Area.ADDITIONAL_TILES))
-            .substract(area.get(Area.EXCEPTION_TILES))
-            .attach_area(AreaTypes.NORMAL)
-            .normalize()
-            .get_results()
-        )
-    )
-    .fill_missing_members(None)
+    ).apply(lambda d: parse_area_dict(d))
+    # .apply(
+    #     lambda area: (
+    #         TilesFactory(WORLD_WIDTH, WORLD_HEIGHT)
+    #         .rectangle(
+    #             area[Area.TILE_MIN],
+    #             area[Area.TILE_MAX],
+    #         )
+    #         .extend(area.get(Area.ADDITIONAL_TILES))
+    #         .substract(area.get(Area.EXCEPTION_TILES))
+    #         .attach_area(AreaTypes.NORMAL)
+    #         .normalize()
+    #         .get_results()
+    #     )
+    # )
 )
 
 CIV_BROADER_AREA = (
@@ -1741,23 +1738,21 @@ CIV_BROADER_AREA = (
                 Area.TILE_MAX: (58, 29),
             },
         }
-    )
-    .apply(lambda d: parse_area_dict(d))
-    .apply(
-        lambda area: (
-            TilesFactory(WORLD_WIDTH, WORLD_HEIGHT)
-            .rectangle(
-                area[Area.TILE_MIN],
-                area[Area.TILE_MAX],
-            )
-            .extend(area.get(Area.ADDITIONAL_TILES))
-            .substract(area.get(Area.EXCEPTION_TILES))
-            .attach_area(AreaTypes.BROADER)
-            .normalize()
-            .get_results()
-        )
-    )
-    .fill_missing_members(None)
+    ).apply(lambda d: parse_area_dict(d))
+    # .apply(
+    #     lambda area: (
+    #         TilesFactory(WORLD_WIDTH, WORLD_HEIGHT)
+    #         .rectangle(
+    #             area[Area.TILE_MIN],
+    #             area[Area.TILE_MAX],
+    #         )
+    #         .extend(area.get(Area.ADDITIONAL_TILES))
+    #         .substract(area.get(Area.EXCEPTION_TILES))
+    #         .attach_area(AreaTypes.BROADER)
+    #         .normalize()
+    #         .get_results()
+    #     )
+    # )
 )
 
 CIV_AREAS = CivDataMapper(
@@ -1770,7 +1765,8 @@ CIV_AREAS = CivDataMapper(
                 AreaTypes.BROADER: CIV_BROADER_AREA[civ],
             },
         )
-        for civ in Civ
+        for civ in CIV_CORE_AREA.keys()
+        if civ not in MINOR_CIVS
     )
 )
 
@@ -2096,19 +2092,18 @@ CIV_VISIBLE_AREA_500AD = (
                 },
             ],
         }
-    )
-    .applymap(lambda d: parse_area_dict(d))
-    .applymap(
-        lambda areas: (
-            TilesFactory(WORLD_WIDTH, WORLD_HEIGHT)
-            .rectangle(
-                areas[Area.TILE_MIN],
-                areas[Area.TILE_MAX],
-            )
-            .get_results()
-        )
-    )
-    .apply(lambda tiles: concat_tiles(*tiles))
+    ).applymap(lambda d: parse_area_dict(d))
+    # .applymap(
+    #     lambda areas: (
+    #         TilesFactory(WORLD_WIDTH, WORLD_HEIGHT)
+    #         .rectangle(
+    #             areas[Area.TILE_MIN],
+    #             areas[Area.TILE_MAX],
+    #         )
+    #         .get_results()
+    #     )
+    # )
+    # .apply(lambda tiles: concat_tiles(*tiles))
     # .apply(lambda tile: normalize_tiles(tile))
 )
 
@@ -2442,19 +2437,18 @@ CIV_VISIBLE_AREA_1200AD = (
                 },
             ],
         }
-    )
-    .applymap(lambda d: parse_area_dict(d))
-    .applymap(
-        lambda areas: (
-            TilesFactory(WORLD_WIDTH, WORLD_HEIGHT)
-            .rectangle(
-                areas[Area.TILE_MIN],
-                areas[Area.TILE_MAX],
-            )
-            .get_results()
-        )
-    )
-    .apply(lambda tiles: concat_tiles(*tiles))
+    ).applymap(lambda d: parse_area_dict(d))
+    # .applymap(
+    #     lambda areas: (
+    #         TilesFactory(WORLD_WIDTH, WORLD_HEIGHT)
+    #         .rectangle(
+    #             areas[Area.TILE_MIN],
+    #             areas[Area.TILE_MAX],
+    #         )
+    #         .get_results()
+    #     )
+    # )
+    # .apply(lambda tiles: concat_tiles(*tiles))
     # .apply(lambda tile: normalize_tiles(tile))
 )
 

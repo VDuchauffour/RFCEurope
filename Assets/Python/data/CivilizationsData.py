@@ -7,7 +7,6 @@ from CoreTypes import (
     Scenario,
     StartingSituation,
 )
-from BaseStructures import attribute_factory
 from CoreStructures import (
     CivDataMapper,
     ScenarioDataMapper,
@@ -1471,42 +1470,38 @@ CIV_LEADERS = CivDataMapper(
             LeaderType.LATE: None,
         },
     }
-).apply(attribute_factory)
+)
 
-CIV_PROPERTIES = (
-    CivDataMapper(
-        {
-            Civ.POPE: {
-                CivilizationProperty.IS_PLAYABLE: False,
-                CivilizationProperty.IS_MINOR: False,
-            },
-            Civ.INDEPENDENT: {
-                CivilizationProperty.IS_PLAYABLE: False,
-                CivilizationProperty.IS_MINOR: True,
-            },
-            Civ.INDEPENDENT_2: {
-                CivilizationProperty.IS_PLAYABLE: False,
-                CivilizationProperty.IS_MINOR: True,
-            },
-            Civ.INDEPENDENT_3: {
-                CivilizationProperty.IS_PLAYABLE: False,
-                CivilizationProperty.IS_MINOR: True,
-            },
-            Civ.INDEPENDENT_4: {
-                CivilizationProperty.IS_PLAYABLE: False,
-                CivilizationProperty.IS_MINOR: True,
-            },
-            Civ.BARBARIAN: {
-                CivilizationProperty.IS_PLAYABLE: False,
-                CivilizationProperty.IS_MINOR: True,
-            },
-        }
-    )
-    .fill_missing_members(
-        {
-            CivilizationProperty.IS_PLAYABLE: True,
+CIV_PROPERTIES = CivDataMapper(
+    {
+        Civ.POPE: {
+            CivilizationProperty.IS_PLAYABLE: False,
             CivilizationProperty.IS_MINOR: False,
-        }
-    )
-    .apply(attribute_factory)
+        },
+        Civ.INDEPENDENT: {
+            CivilizationProperty.IS_PLAYABLE: False,
+            CivilizationProperty.IS_MINOR: True,
+        },
+        Civ.INDEPENDENT_2: {
+            CivilizationProperty.IS_PLAYABLE: False,
+            CivilizationProperty.IS_MINOR: True,
+        },
+        Civ.INDEPENDENT_3: {
+            CivilizationProperty.IS_PLAYABLE: False,
+            CivilizationProperty.IS_MINOR: True,
+        },
+        Civ.INDEPENDENT_4: {
+            CivilizationProperty.IS_PLAYABLE: False,
+            CivilizationProperty.IS_MINOR: True,
+        },
+        Civ.BARBARIAN: {
+            CivilizationProperty.IS_PLAYABLE: False,
+            CivilizationProperty.IS_MINOR: True,
+        },
+    }
+).fill_missing_members(
+    {
+        CivilizationProperty.IS_PLAYABLE: True,
+        CivilizationProperty.IS_MINOR: False,
+    }
 )
