@@ -6,6 +6,7 @@ from Errors import NotACallableError, NotTypeExpectedError, OutputTypeError
 from PyUtils import (
     all,
     any,
+    attrgetter,
     combinations,
     permutations,
     product,
@@ -191,6 +192,9 @@ class Item(object):
     def __repr__(self):
         return self.__class__.__name__ + "(" + str(self.BASE_CLASS[self.id_name]) + ")"
 
+    def copy(self, **kwargs):
+        return self.__class__(self.key, **kwargs)
+
 
 class ItemCollection(list):
     """A base class to handle a set of a specific type of `Item`."""
@@ -259,16 +263,26 @@ class ItemCollection(list):
         return self.copy(*items)
 
     def select(self, attributes):
-        """Return a dict of item attributes. `attributes` can be a callable, a single attribute or a list or a tuple of attributes."""
+        """Return the object with selected attributes of items. `attributes` can be a single attribute or a sequence of attributes. Only works with a primary key, using nested keys do not work."""
         attributes = self.__handle_string_args(attributes)
         return self._select(attributes)
 
+    @staticmethod
+    def _dropna(data, attribute):
+        """Return True if any subkey of data is not None or the value is not None."""
+        f = attrgetter(attribute)
+        attr = f(data)
+        if issubclass(attr.__class__, dict):
+            return any([v is not None for v in attr.values()])
+        else:
+            return attr is not None
+
     def dropna(self, attributes):
-        """Return the object without those that have None as the value for the `attribute`."""
+        """Return the object without those that have None as the value for the `attribute`. Work with keys, using sub-keys will apply the dropping on the primary key."""
         attributes = self.__handle_string_args(attributes)
         obj = deepcopy(self)
         for attribute in attributes:
-            obj = obj.filter(lambda c: getattr(c, attribute) is not None)
+            obj = obj.filter(lambda c: self._dropna(c, attribute))
         return obj
 
     def ids(self):

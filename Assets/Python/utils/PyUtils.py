@@ -94,3 +94,26 @@ def chance(threshold, percentage, strict=False):
 
 
 percentage_chance = partial(chance, 100)
+
+
+def resolve_attr(obj, attr):
+    for name in attr.split("."):
+        obj = getattr(obj, name)
+    return obj
+
+
+def attrgetter(*items):
+    """Return a callable object that fetches attr from its operand. If more than one attribute is requested, returns a tuple of attributes.
+    The attribute names can also contain dots."""
+    if len(items) == 1:
+        attr = items[0]
+
+        def g(obj):
+            return resolve_attr(obj, attr)
+
+    else:
+
+        def g(obj):
+            return tuple(resolve_attr(obj, attr) for attr in items)
+
+    return g
