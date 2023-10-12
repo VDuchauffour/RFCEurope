@@ -1,6 +1,7 @@
 from CvPythonExtensions import *
 import Consts
 from CoreData import CIVILIZATIONS
+from CoreFunctions import get_civ_by_id, get_religion_by_id
 from CoreTypes import (
     City,
     Civ,
@@ -30,7 +31,6 @@ from MiscData import (
 )
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
 from TimelineData import CIV_BIRTHDATE, DateTurn
-from CoreStructures import get_civ_by_id, get_religion_by_id
 
 gc = CyGlobalContext()  # LOQ
 utils = RFCUtils.RFCUtils()

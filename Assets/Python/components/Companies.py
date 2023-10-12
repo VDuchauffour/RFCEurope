@@ -4,7 +4,7 @@
 from CvPythonExtensions import *
 from CoreData import CIVILIZATIONS
 from CoreData import COMPANIES
-from CoreStructures import get_enum_by_id
+from CoreFunctions import get_enum_by_id
 from LocationsData import CITIES
 import PyHelpers
 import XMLConsts as xml

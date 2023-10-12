@@ -4,7 +4,7 @@
 ## Implementation of miscellaneous game functions
 
 from CivilizationsData import CIV_RELIGIOUS_TOLERANCE
-from CoreStructures import get_civ_by_id, get_religion_by_id
+from CoreFunctions import get_civ_by_id, get_religion_by_id
 from CoreTypes import Civ, Religion, StabilityCategory
 import CvUtil
 from CvPythonExtensions import *

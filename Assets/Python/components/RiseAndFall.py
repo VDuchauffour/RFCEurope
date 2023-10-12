@@ -29,7 +29,7 @@ from CivilizationsData import (
     CIV_RESPAWNING_THRESHOLD,
     CIV_STARTING_SITUATION,
 )
-from CoreStructures import get_civ_by_id
+from CoreFunctions import get_civ_by_id
 from LocationsData import CIV_CAPITAL_LOCATIONS, CIV_NEW_CAPITAL_LOCATIONS, CIV_OLDER_NEIGHBOURS
 from TimelineData import CIV_BIRTHDATE, CIV_RESPAWNING_DATE, DateTurn
 

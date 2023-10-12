@@ -5,7 +5,7 @@
 
 from CvPythonExtensions import *
 from CoreData import CIVILIZATIONS
-from CoreStructures import get_civ_by_id
+from CoreFunctions import get_civ_by_id
 import CvUtil
 
 import string

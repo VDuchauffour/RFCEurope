@@ -9,7 +9,7 @@ import RFCUtils
 
 from CoreTypes import Scenario
 from TimelineData import CIV_BIRTHDATE
-from CoreStructures import get_civ_by_id
+from CoreFunctions import get_civ_by_id
 
 ArtFileMgr = CyArtFileMgr()
 localText = CyTranslator()

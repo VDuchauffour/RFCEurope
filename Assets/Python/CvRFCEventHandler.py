@@ -32,7 +32,7 @@ import RFCEMaps
 
 from MiscData import MessageData
 from TimelineData import CIV_BIRTHDATE, DateTurn
-from CoreStructures import get_civ_by_id
+from CoreFunctions import get_civ_by_id
 from CoreTypes import Civ, City, Religion, Scenario, UniquePower, StabilityCategory
 from LocationsData import CITIES
 

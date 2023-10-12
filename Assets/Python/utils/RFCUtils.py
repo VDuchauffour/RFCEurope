@@ -2,6 +2,7 @@
 
 from CvPythonExtensions import *
 from CoreData import CIVILIZATIONS
+from CoreFunctions import get_civ_by_id
 from CoreTypes import (
     City,
     Civ,
@@ -31,7 +32,7 @@ from MiscData import (
 )
 
 from TimelineData import CIV_BIRTHDATE, DateTurn
-from CoreStructures import get_civ_by_id, get_religion_by_id
+from CoreFunctions import get_religion_by_id
 from CoreTypes import ProvinceTypes
 
 # globals

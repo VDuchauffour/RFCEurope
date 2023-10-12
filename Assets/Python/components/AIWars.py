@@ -9,7 +9,7 @@ import RFCEMaps
 from StoredData import sd
 from MiscData import WORLD_HEIGHT
 from TimelineData import CIV_BIRTHDATE, DateTurn
-from CoreStructures import get_civ_by_id
+from CoreFunctions import get_civ_by_id
 
 # globals
 gc = CyGlobalContext()

@@ -15,7 +15,7 @@ import random
 from CoreTypes import City, Civ, Religion, Promotion
 from MiscData import MessageData, NUM_CRUSADES
 from TimelineData import CIV_BIRTHDATE, DateTurn
-from CoreStructures import get_civ_by_id
+from CoreFunctions import get_civ_by_id
 from LocationsData import CIV_CAPITAL_LOCATIONS, CITIES
 
 # globals

@@ -6,7 +6,7 @@ import PyHelpers
 
 from CivilizationsData import CIV_STABILITY_AI_BONUS
 from LocationsData import CIV_CAPITAL_LOCATIONS
-from CoreStructures import get_civ_by_id
+from CoreFunctions import get_civ_by_id
 from TimelineData import CIV_BIRTHDATE, CIV_COLLAPSE_DATE
 from MiscData import MessageData
 from CoreTypes import (

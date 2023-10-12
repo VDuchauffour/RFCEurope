@@ -4,7 +4,7 @@
 from CvPythonExtensions import *
 from CivilizationsData import CIV_HIRE_MERCENARY_THRESHOLD
 from CoreData import CIVILIZATIONS
-from CoreStructures import get_civ_by_id
+from CoreFunctions import get_civ_by_id
 from CoreTypes import Civ, SpecialParameter, Religion, Promotion
 import PyHelpers
 

@@ -13,7 +13,7 @@ import Victory as vic
 import UniquePowers
 
 from TimelineData import CIV_BIRTHDATE, DateTurn
-from CoreStructures import get_civ_by_id
+from CoreFunctions import get_civ_by_id
 
 PyPlayer = PyHelpers.PyPlayer
 
