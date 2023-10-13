@@ -1,9 +1,10 @@
+from CoreFunctions import get_civ_by_id
 import CoreTypes
 from BaseStructures import BaseFactory, EnumDataMapper, Item, ItemCollection
 from Errors import NotTypeExpectedError
 
 try:
-    from CvPythonExtensions import CyGlobalContext
+    from CvPythonExtensions import CyGlobalContext, CyPlayer, CyTeam, CyPlot, CyCity, CyUnit
 
     gc = CyGlobalContext()
 
@@ -113,9 +114,15 @@ class Civilization(Item):
 
     def at_war(self, id):
         """Return True if the civilization is at war with `id`."""
-        if isinstance(id, CoreTypes.Civ):
-            id = self.__class__(id)
-        return self.team.isAtWar(id.team_id)
+        return self.team.isAtWar(civ(id).team)
+
+    def declare_war(self, id):
+        """Declare war with the civilization with `id`."""
+        return self.team.declareWar(civ(id).team_id, False, -1)
+
+    def make_peace(self, id):
+        """Make peace with the civilization with `id`."""
+        return self.team.makePeace(civ(id).team_id)
 
 
 class Civilizations(ItemCollection):
@@ -179,6 +186,88 @@ class CivilizationsFactory(BaseFactory):
     DATA_CLASS = CivDataMapper
     ITEM_CLASS = Civilization
     ITEM_COLLECTION_CLASS = Civilizations
+
+
+def civ(identifier=None):
+    """Return Civilization object given an identifier."""
+    if identifier is None:
+        return Civilization(get_civ_by_id(gc.getGame().getActiveCivilizationType()))
+
+    if isinstance(identifier, CoreTypes.Civ):
+        return Civilization(identifier)
+
+    if isinstance(identifier, Civilization):
+        return identifier
+
+    if isinstance(identifier, (CyPlayer, CyUnit)):
+        return Civilization(get_civ_by_id(identifier.getCivilizationType()))
+
+    if isinstance(identifier, CyPlot):
+        if not identifier.isOwned():
+            return None
+        return civ(identifier.getOwner())
+
+    return Civilization(get_civ_by_id(identifier).getCivilizationType())
+
+
+def player(identifier=None):
+    """Return CyPlayer object given an identifier."""
+    if identifier is None:
+        return gc.getActivePlayer()
+
+    if isinstance(identifier, CoreTypes.Civ):
+        civ(identifier).player
+
+    if isinstance(identifier, Civilization):
+        return identifier.player
+
+    if isinstance(identifier, int):
+        return gc.getPlayer(identifier)
+
+    if isinstance(identifier, CyPlayer):
+        return identifier
+
+    if isinstance(identifier, CyTeam):
+        return gc.getPlayer(identifier.getLeaderID())
+
+    if isinstance(identifier, (CyPlot, CyCity, CyUnit)):
+        return gc.getPlayer(identifier.getOwner())
+
+    raise NotTypeExpectedError(
+        "CyPlayer, CyTeam, CyPlot, CyCity, CyUnit, or int", type(identifier)
+    )
+
+
+def team(identifier=None):
+    """Return CyTeam object given an identifier."""
+    if identifier is None:
+        return gc.getTeam(gc.getActivePlayer().getTeam())
+
+    if isinstance(identifier, CoreTypes.Civ):
+        civ(identifier).team
+
+    if isinstance(identifier, Civilization):
+        return identifier.team
+
+    if isinstance(identifier, int):
+        return gc.getTeam(gc.getPlayer(identifier).getTeam())
+
+    if isinstance(identifier, CyTeam):
+        return identifier
+
+    if isinstance(identifier, (CyPlayer, CyUnit, CyCity, CyPlot)):
+        return gc.getTeam(identifier.getTeam())
+
+    raise NotTypeExpectedError(
+        "CyPlayer, CyTeam, CyPlot, CyCity, CyUnit, or int", type(identifier)
+    )
+
+
+def period(identifier):
+    """Return period given an identifier."""
+    if identifier >= 0:
+        return player(identifier).getPeriod()
+    return None
 
 
 class Tile(object):
