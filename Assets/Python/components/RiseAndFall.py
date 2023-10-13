@@ -734,7 +734,7 @@ class RiseAndFall:
                 for other, war_threshold in civilization.initial.wars.items():
                     if percentage_chance(war_threshold, strict=True):
                         if not civilization.at_war(other):
-                            civilization.team.setAWar(other.team, True)
+                            civilization.team.setAtWar(other.team, True)
 
     def checkTurn(self, iGameTurn):
         # Trigger betrayal mode

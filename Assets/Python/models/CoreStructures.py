@@ -114,7 +114,7 @@ class Civilization(Item):
 
     def at_war(self, id):
         """Return True if the civilization is at war with `id`."""
-        return self.team.isAtWar(civ(id).team)
+        return self.team.isAtWar(civ(id).team_id)
 
     def declare_war(self, id):
         """Declare war with the civilization with `id`."""

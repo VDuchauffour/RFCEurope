@@ -3,11 +3,10 @@
 from CvPythonExtensions import *
 from CivilizationsData import (
     CIV_RELIGION_SPREADING_THRESHOLD,
-    CIV_STARTING_SITUATION,
 )
 from CoreData import CIVILIZATIONS
 from CoreFunctions import get_civ_by_id, get_religion_by_id
-from CoreTypes import Civ, City, StartingSituation, StabilityCategory, Religion
+from CoreTypes import Civ, City, StabilityCategory, Religion
 from LocationsData import CITIES
 from TimelineData import DateTurn
 import PyHelpers
@@ -1601,10 +1600,10 @@ class Religions:
             self.spreadReligion(tCity, Religion.JUDAISM.value)
 
     def setStartingFaith(self):
-        for civ in CIVILIZATIONS:
-            civ_starting_situation = CIV_STARTING_SITUATION[utils.getScenario()][civ.key]
-            if civ_starting_situation:
-                civ.player.setFaith(civ_starting_situation[StartingSituation.FAITH])
+        for civilization in CIVILIZATIONS.dropna("initial"):
+            gold = civilization.initial.condition.faith
+            if gold:
+                civilization.player.setFaith(gold)
 
     def getCatholicCivs(self, bOpenBorders=False):
         teamPope = gc.getTeam(gc.getPlayer(Civ.POPE.value).getTeam())
