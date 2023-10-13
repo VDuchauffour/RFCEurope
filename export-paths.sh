@@ -19,7 +19,7 @@ while getopts ':l' OPTION; do
 	esac
 done
 
-SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
+SCRIPT_DIR=$(dirname "$0")
 
 LOCAL_PATHS=(
 	"$(readlink -f "$SCRIPT_DIR"/Assets/Python)"

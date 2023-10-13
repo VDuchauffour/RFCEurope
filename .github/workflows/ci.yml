@@ -44,4 +44,3 @@ jobs:
         run: |
           export PYTHONPATH=$(./export-paths.sh)
           make test
-        shell: zsh {0}
