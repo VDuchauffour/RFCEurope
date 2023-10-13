@@ -164,6 +164,8 @@ class Attributes(dict):
                 data = dict(
                     (key.name.lower(), cls.from_nested_dicts_with_enum(data[key])) for key in data
                 )
+            else:
+                data = dict((key, cls.from_nested_dicts_with_enum(data[key])) for key in data)
             return cls(data)
         elif isinstance(data, list):
             return [cls.from_nested_dicts_with_enum(d) for d in data]
@@ -273,7 +275,8 @@ class ItemCollection(list):
         return self.copy(*items)
 
     def select(self, attributes):
-        """Return the object with selected attributes of items. `attributes` can be a single attribute or a sequence of attributes. Only works with a primary key, using nested keys do not work."""
+        """Return the object with selected attributes of items. `attributes` can be a single attribute or a sequence of attributes.
+        Only works with a primary key, using nested keys do not work."""
         attributes = self.__handle_string_args(attributes)
         return self._select(attributes)
 
@@ -288,7 +291,8 @@ class ItemCollection(list):
             return attr is not None
 
     def dropna(self, attributes):
-        """Return the object without those that have None as the value for the `attribute`. Work with keys, using sub-keys will apply the dropping on the primary key."""
+        """Return the object without those that have None as the value for the `attribute`.
+        Only works with a primary key, using nested keys do not work."""
         attributes = self.__handle_string_args(attributes)
         obj = deepcopy(self)
         for attribute in attributes:

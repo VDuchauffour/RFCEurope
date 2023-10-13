@@ -118,11 +118,17 @@ class Civilization(Item):
 
     def declare_war(self, id):
         """Declare war with the civilization with `id`."""
-        return self.team.declareWar(civ(id).team_id, False, -1)
+        self.team.declareWar(civ(id).team_id, False, -1)
+
+    def set_war(self, id):
+        """Set war with the civilization with `id`.
+        Instead of `declare_war`, `set_war` don't affect diplomatic relations."""
+        self.team.setAtWar(civ(id).team_id, True)
+        team(id).setAtWar(self.team_id, True)
 
     def make_peace(self, id):
         """Make peace with the civilization with `id`."""
-        return self.team.makePeace(civ(id).team_id)
+        self.team.makePeace(civ(id).team_id)
 
 
 class Civilizations(ItemCollection):
@@ -234,7 +240,7 @@ def player(identifier=None):
         return gc.getPlayer(identifier.getOwner())
 
     raise NotTypeExpectedError(
-        "CyPlayer, CyTeam, CyPlot, CyCity, CyUnit, or int", type(identifier)
+        "CoreTypes.Civ, CyPlayer, CyTeam, CyPlot, CyCity, CyUnit, or int", type(identifier)
     )
 
 
@@ -259,7 +265,7 @@ def team(identifier=None):
         return gc.getTeam(identifier.getTeam())
 
     raise NotTypeExpectedError(
-        "CyPlayer, CyTeam, CyPlot, CyCity, CyUnit, or int", type(identifier)
+        "CoreTypes.Civ, CyPlayer, CyTeam, CyPlot, CyCity, CyUnit, or int", type(identifier)
     )
 
 

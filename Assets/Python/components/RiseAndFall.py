@@ -1,7 +1,9 @@
 from CvPythonExtensions import *
 from CoreData import CIVILIZATIONS
+from CoreStructures import team, civ
 import PyHelpers  # LOQ
 import Popup
+from PyUtils import percentage_chance
 import RFCUtils
 import ProvinceManager
 import Consts
@@ -25,7 +27,6 @@ from CoreTypes import (
 )
 from CivilizationsData import (
     CIV_AI_STOP_BIRTH_THRESHOLD,
-    CIV_INITIAL_CONTACTS,
     CIV_RESPAWNING_THRESHOLD,
     CIV_STARTING_SITUATION,
 )
@@ -583,10 +584,10 @@ class RiseAndFall:
         self.assignGold()
 
     def assignGold(self):
-        for civ in CIVILIZATIONS:
-            civ_starting_situation = CIV_STARTING_SITUATION[utils.getScenario()][civ.key]
-            if civ_starting_situation:
-                civ.player.changeGold(civ_starting_situation[StartingSituation.GOLD])
+        for civilization in CIVILIZATIONS.dropna("initial"):
+            gold = civilization.initial.condition.gold
+            if gold:
+                civilization.player.changeGold(gold)
 
     def onCityBuilt(self, iPlayer, pCity):
         tCity = (pCity.getX(), pCity.getY())
@@ -718,35 +719,22 @@ class RiseAndFall:
                         )
 
     def setEarlyLeaders(self):
-        for civ in CIVILIZATIONS.majors():
-            if civ.leaders.early != civ.leaders.primary and not civ.player.isHuman():
-                leader = civ.leaders.early
-                civ.player.setLeader(leader.value)
+        for civilization in CIVILIZATIONS.majors():
+            if (
+                civilization.leaders.early != civilization.leaders.primary
+                and not civilization.player.isHuman()
+            ):
+                leader = civilization.leaders.early
+                civilization.player.setLeader(leader.value)
 
     def setWarOnSpawn(self):
-        # Absinthe: setting the initial wars on gamestart
-        for i in CIVILIZATIONS.main().ids():
-            for j in CIVILIZATIONS.drop(Civ.BARBARIAN).ids():
-                if (
-                    Consts.tWarAtSpawn[utils.getScenario()][i][j] > 0
-                ):  # if there is a chance for war
-                    if (
-                        gc.getGame().getSorenRandNum(100, "war on spawn roll")
-                        < Consts.tWarAtSpawn[utils.getScenario()][i][j]
-                    ):
-                        # Absinthe: will use setAtWar here instead of declareWar, so it won't affect diplo relations and other stuff between major civs
-                        if not gc.getTeam(gc.getPlayer(i).getTeam()).isAtWar(
-                            gc.getPlayer(j).getTeam()
-                        ):
-                            gc.getTeam(gc.getPlayer(i).getTeam()).setAtWar(
-                                gc.getPlayer(j).getTeam(), True
-                            )
-                        if not gc.getTeam(gc.getPlayer(j).getTeam()).isAtWar(
-                            gc.getPlayer(i).getTeam()
-                        ):
-                            gc.getTeam(gc.getPlayer(j).getTeam()).setAtWar(
-                                gc.getPlayer(i).getTeam(), True
-                            )
+        # Absinthe: will use setAtWar here instead of declareWar, so it won't affect diplo relations and other stuff between major civs
+        for civilization in CIVILIZATIONS.dropna("initial"):
+            if civilization.initial.wars:
+                for other, war_threshold in civilization.initial.wars.items():
+                    if percentage_chance(war_threshold, strict=True):
+                        if not civilization.at_war(other):
+                            civilization.team.setAWar(other.team, True)
 
     def checkTurn(self, iGameTurn):
         # Trigger betrayal mode
@@ -763,9 +751,9 @@ class RiseAndFall:
                 self.setCheatersCheck(0, self.getCheatersCheck(0) - 1)
 
         if iGameTurn % 20 == 0:
-            for civ in CIVILIZATIONS.independents():
-                if civ.player.isAlive():
-                    utils.updateMinorTechs(civ.id, Civ.BARBARIAN.value)
+            for civilization in CIVILIZATIONS.independents():
+                if civilization.player.isAlive():
+                    utils.updateMinorTechs(civilization.id, Civ.BARBARIAN.value)
 
         # Absinthe: checking the spawn dates
         for iLoopCiv in CIVILIZATIONS.majors().ids():
@@ -1952,17 +1940,17 @@ class RiseAndFall:
                     pCityArea = gc.getMap().plot(ix, iy)
                     iCivCulture = pCityArea.getCulture(iCiv)
                     iLoopCivCulture = 0
-                    for civ in CIVILIZATIONS.minors().ids():
-                        iLoopCivCulture += pCityArea.getCulture(civ)
-                        pCityArea.setCulture(civ, 0, True)
+                    for civilization in CIVILIZATIONS.minors().ids():
+                        iLoopCivCulture += pCityArea.getCulture(civilization)
+                        pCityArea.setCulture(civilization, 0, True)
                     pCityArea.setCulture(iCiv, iCivCulture + iLoopCivCulture, True)
 
                 city = pCurrent.getPlotCity()
                 iCivCulture = city.getCulture(iCiv)
                 iLoopCivCulture = 0
-                for civ in CIVILIZATIONS.minors().ids():
-                    iLoopCivCulture += pCityArea.getCulture(civ)
-                    pCityArea.setCulture(civ, 0, True)
+                for civilization in CIVILIZATIONS.minors().ids():
+                    iLoopCivCulture += pCityArea.getCulture(civilization)
+                    pCityArea.setCulture(civilization, 0, True)
                 city.setCulture(iCiv, iCivCulture + iLoopCivCulture, True)
 
     def initBirth(self, iCurrentTurn, iBirthYear, iCiv):
@@ -2021,9 +2009,9 @@ class RiseAndFall:
                         # self.moveOutUnits(x, y, tCapital[0], tCapital[1])
                         if plot.isCity():
                             plot.eraseAIDevelopment()  # new function, similar to erase but won't delete rivers, resources and features
-                        for civ in CIVILIZATIONS.ids():
-                            if iCiv != civ:
-                                plot.setCulture(civ, 0, True)
+                        for civilization in CIVILIZATIONS.ids():
+                            if iCiv != civilization:
+                                plot.setCulture(civilization, 0, True)
                         # pCurrent.setCulture(iCiv,10,True)
                         plot.setOwner(-1)
                     self.birthInFreeRegion(iCiv, tCapital, tTopLeft, tBottomRight)
@@ -3641,14 +3629,21 @@ class RiseAndFall:
         # pass
 
     def initContact(self, iCiv, bMeet=True):
-        pCiv = gc.getPlayer(iCiv)
-        teamCiv = gc.getTeam(pCiv.getTeam())
-        for contact in CIV_INITIAL_CONTACTS[utils.getScenario()][get_civ_by_id(iCiv)]:
-            if contact:
-                pOtherPlayer = gc.getPlayer(contact.value)
-                tOtherPlayer = pOtherPlayer.getTeam()
-                if pOtherPlayer.isAlive() and not teamCiv.isHasMet(tOtherPlayer):
-                    teamCiv.meet(tOtherPlayer, bMeet)
+        _civ = team(iCiv)
+        contacts = CIVILIZATIONS[iCiv].initial.contact
+        if contacts:
+            for contact in contacts:
+                other = civ(contact)
+                if other.player.isAlive() and not _civ.isHasMet(other.team_id):
+                    _civ.meet(other.team_id, bMeet)
+        # pCiv = gc.getPlayer(iCiv)
+        # teamCiv = gc.getTeam(pCiv.getTeam())
+        # for contact in CIV_INITIAL_CONTACTS[utils.getScenario()][get_civ_by_id(iCiv)]:
+        #     if contact:
+        #         pOtherPlayer = gc.getPlayer(contact.value)
+        #         tOtherPlayer = pOtherPlayer.getTeam()
+        #         if pOtherPlayer.isAlive() and not teamCiv.isHasMet(tOtherPlayer):
+        #             teamCiv.meet(tOtherPlayer, bMeet)
 
     def LeaningTowerGP(self):
         iGP = gc.getGame().getSorenRandNum(7, "starting count")
