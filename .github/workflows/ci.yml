@@ -41,7 +41,7 @@ jobs:
           command: |
             pyenv version
       - name: Run tests
-        shell: zsh
         run: |
           export PYTHONPATH=$(./export-paths.sh)
           make test
+        shell: zsh {0}
