@@ -22,7 +22,7 @@ from LocationsData import (
     CIV_VISIBLE_AREA,
     COMPANY_REGION,
 )
-from MiscData import COMPANY_LIMIT
+from MiscData import CIV_DAWN_OF_MAN_VALUES, COMPANY_LIMIT
 from Scenario import get_scenario
 from TimelineData import COMPANY_BIRTHDATE, COMPANY_DEATHDATE
 
@@ -43,6 +43,7 @@ CIVILIZATIONS = (
     .attach("properties", CIV_PROPERTIES)
     .attach("leaders", CIV_LEADERS)
     .attach("hire_mercenary_threshold", CIV_HIRE_MERCENARY_THRESHOLD, key="misc")
+    .attach("dawn_of_man", CIV_DAWN_OF_MAN_VALUES, key="misc")
     .attach("condition", CIV_STARTING_SITUATION[CURRENT_SCENARIO], key="initial")
     .attach("contact", CIV_INITIAL_CONTACTS[CURRENT_SCENARIO], key="initial")
     .attach("wars", CIV_INITIAL_WARS[CURRENT_SCENARIO], key="initial")

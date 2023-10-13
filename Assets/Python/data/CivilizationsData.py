@@ -674,54 +674,64 @@ CIV_INITIAL_WARS_500AD = CivDataMapper(
                 Civ.ARABIA: 90,
                 Civ.BULGARIA: 90,
                 Civ.OTTOMAN: 90,
-            }
+            },
+            do_not_cast=True,
         ),
         Civ.FRANCE: CivDataMapper(
             {
                 Civ.ENGLAND: 60,
-            }
+            },
+            do_not_cast=True,
         ),
         Civ.ARABIA: CivDataMapper(
             {
                 Civ.OTTOMAN: 60,
-            }
+            },
+            do_not_cast=True,
         ),
         Civ.BULGARIA: CivDataMapper(
             {
                 Civ.OTTOMAN: 70,
-            }
+            },
+            do_not_cast=True,
         ),
         Civ.CORDOBA: CivDataMapper(
             {
                 Civ.CASTILLE: 90,
                 Civ.PORTUGAL: 90,
                 Civ.ARAGON: 80,
-            }
+            },
+            do_not_cast=True,
         ),
         Civ.NOVGOROD: CivDataMapper(
             {
                 Civ.PRUSSIA: 80,
-            }
+            },
+            do_not_cast=True,
         ),
         Civ.DENMARK: CivDataMapper(
             {
                 Civ.SWEDEN: 60,
-            }
+            },
+            do_not_cast=True,
         ),
         Civ.SCOTLAND: CivDataMapper(
             {
                 Civ.ENGLAND: 60,
-            }
+            },
+            do_not_cast=True,
         ),
         Civ.POLAND: CivDataMapper(
             {
                 Civ.PRUSSIA: 20,
-            }
+            },
+            do_not_cast=True,
         ),
         Civ.PRUSSIA: CivDataMapper(
             {
                 Civ.LITHUANIA: 80,
-            }
+            },
+            do_not_cast=True,
         ),
         Civ.OTTOMAN: CivDataMapper(
             {
@@ -729,7 +739,8 @@ CIV_INITIAL_WARS_500AD = CivDataMapper(
                 Civ.INDEPENDENT_2: 50,
                 Civ.INDEPENDENT_3: 50,
                 Civ.INDEPENDENT_4: 50,
-            }
+            },
+            do_not_cast=True,
         ),
     }
 )
@@ -742,13 +753,15 @@ CIV_INITIAL_WARS_1200AD = CivDataMapper(
                 Civ.BULGARIA: 70,
                 Civ.VENECIA: 90,
                 Civ.OTTOMAN: 90,
-            }
+            },
+            do_not_cast=True,
         ),
         Civ.FRANCE: CivDataMapper(
             {
                 Civ.ARABIA: 30,
                 Civ.ENGLAND: 90,
-            }
+            },
+            do_not_cast=True,
         ),
         Civ.ARABIA: CivDataMapper(
             {
@@ -760,49 +773,58 @@ CIV_INITIAL_WARS_1200AD = CivDataMapper(
                 Civ.PORTUGAL: 20,
                 Civ.ARAGON: 10,
                 Civ.OTTOMAN: 60,
-            }
+            },
+            do_not_cast=True,
         ),
         Civ.BULGARIA: CivDataMapper(
             {
                 Civ.OTTOMAN: 70,
-            }
+            },
+            do_not_cast=True,
         ),
         Civ.CORDOBA: CivDataMapper(
             {
                 Civ.PORTUGAL: 90,
-            }
+            },
+            do_not_cast=True,
         ),
         Civ.NOVGOROD: CivDataMapper(
             {
                 Civ.PRUSSIA: 80,
-            }
+            },
+            do_not_cast=True,
         ),
         Civ.DENMARK: CivDataMapper(
             {
                 Civ.SWEDEN: 60,
-            }
+            },
+            do_not_cast=True,
         ),
         Civ.SCOTLAND: CivDataMapper(
             {
                 Civ.ENGLAND: 60,
-            }
+            },
+            do_not_cast=True,
         ),
         Civ.POLAND: CivDataMapper(
             {
                 Civ.PRUSSIA: 20,
-            }
+            },
+            do_not_cast=True,
         ),
         Civ.MOROCCO: CivDataMapper(
             {
                 Civ.CASTILLE: 90,
                 Civ.PORTUGAL: 80,
                 Civ.ARAGON: 80,
-            }
+            },
+            do_not_cast=True,
         ),
         Civ.PRUSSIA: CivDataMapper(
             {
                 Civ.LITHUANIA: 80,
-            }
+            },
+            do_not_cast=True,
         ),
         Civ.OTTOMAN: CivDataMapper(
             {
@@ -810,7 +832,8 @@ CIV_INITIAL_WARS_1200AD = CivDataMapper(
                 Civ.INDEPENDENT_2: 50,
                 Civ.INDEPENDENT_3: 50,
                 Civ.INDEPENDENT_4: 50,
-            }
+            },
+            do_not_cast=True,
         ),
     }
 )

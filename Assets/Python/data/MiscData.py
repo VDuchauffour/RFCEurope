@@ -123,7 +123,7 @@ CIV_DAWN_OF_MAN_VALUES = CivDataMapper(
         Civ.DUTCH: ("1581", "TXT_KEY_AD"),
         Civ.POPE: ("500", "TXT_KEY_AD"),
     }
-).fill_missing_members(None)
+)
 
 RELIGION_PERSECUTION_ORDER = EnumDataMapper(
     {

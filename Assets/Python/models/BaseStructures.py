@@ -106,6 +106,10 @@ class EnumDataMapper(DataMapper):
 
     BASE_CLASS = Enum
 
+    def __init__(self, elements, default=None, do_not_cast=False):
+        super(EnumDataMapper, self).__init__(elements, default)
+        self.do_not_cast = do_not_cast
+
     def _check_condition(self, key):
         return issubclass(type(key), self.BASE_CLASS)
 
@@ -149,12 +153,18 @@ class Attributes(dict):
     @classmethod
     def from_nested_dicts_with_enum(cls, data):
         """Construct nested Attributes from nested dictionaries."""
-        if isinstance(data, dict):
-            return cls(
-                dict(
+        if issubclass(data.__class__, EnumDataMapper):
+            if not data.do_not_cast:
+                data = dict(
                     (key.name.lower(), cls.from_nested_dicts_with_enum(data[key])) for key in data
                 )
-            )
+            return cls(data)
+        elif isinstance(data, dict):
+            if all(isinstance(member, Enum) for member in data.keys()):
+                data = dict(
+                    (key.name.lower(), cls.from_nested_dicts_with_enum(data[key])) for key in data
+                )
+            return cls(data)
         elif isinstance(data, list):
             return [cls.from_nested_dicts_with_enum(d) for d in data]
         else:
