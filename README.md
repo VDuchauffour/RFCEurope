@@ -34,3 +34,9 @@ To interact with all existing Python modules, use the following command to popul
 ```shell
 export PYTHONPATH=$(./export-paths.sh)
 ```
+
+The Python version used by the in-game interpreter is `2.4.1`.
+
+## Acknowledgements
+
+- [Dawn of Civilization:](https://github.com/dguenms/Dawn-of-Civilization) Some data structures and project logics are taken from this excellent mod!
