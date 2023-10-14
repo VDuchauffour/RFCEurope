@@ -1,15 +1,13 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 
-import math  # Rhye
+import math
+from CoreData import CIVILIZATIONS
 import CvUtil
 from CvPythonExtensions import *
-from MiscData import CIV_DAWN_OF_MAN_VALUES
 import RFCUtils
 
 from CoreTypes import Scenario
-from TimelineData import CIV_BIRTHDATE
-from CoreFunctions import get_civ_by_id
 
 ArtFileMgr = CyArtFileMgr()
 localText = CyTranslator()
@@ -187,12 +185,9 @@ class CvDawnOfMan:
         pActivePlayer = gc.getPlayer(CyGame().getActivePlayer())
 
         # Absinthe: civ-specific Dawn of Man screen - idea from SoI
-        year = CIV_DAWN_OF_MAN_VALUES[get_civ_by_id(CyGame().getActiveTeam())][
-            0
-        ] + CyTranslator().getText(
-            CIV_DAWN_OF_MAN_VALUES[get_civ_by_id(CyGame().getActiveTeam())][1], ()
-        )
-        if CIV_BIRTHDATE[get_civ_by_id(CyGame().getActiveTeam())] < utils.getScenarioStartTurn():
+        dom_values = CIVILIZATIONS[CyGame().getActiveTeam()].misc.dawn_of_man
+        year = dom_values[0] + CyTranslator().getText(dom_values[1], ())
+        if CIVILIZATIONS[CyGame().getActiveTeam()].date.birth < utils.getScenarioStartTurn():
             if utils.getScenario() == Scenario.i1200AD:
                 textKey = "TXT_KEY_DAWN_OF_MAN_TEXT_%d_1200" % (CyGame().getActiveTeam())
         else:
@@ -272,10 +267,10 @@ class CvDawnOfMan:
     def update(self, fDelta):
 
         ##Rhye - begin
-        # if (CIV_BIRTHDATE[get_civ_by_id(CyGame().getActiveTeam())] == 0 or \
+        # if (CIVILIZATIONS[CyGame().getActiveTeam()].date.birth == 0 or \
         # 	(not gc.getPlayer(0).isPlayable() and CyGame().getActiveTeam() <= Civ.ARABIA.value)):  #late start condition
         # MiroTest = CyGame().getActiveTeam()
-        if CIV_BIRTHDATE[get_civ_by_id(CyGame().getActiveTeam())] <= utils.getScenarioStartTurn():
+        if CIVILIZATIONS[CyGame().getActiveTeam()].date.birth <= utils.getScenarioStartTurn():
             screen = CyGInterfaceScreen("CvLoadingScreen", self.iScreenID)
             screen.setBarPercentage("ProgressBar", InfoBarTypes.INFOBAR_STORED, 1)
             screen.setLabel(
@@ -295,7 +290,7 @@ class CvDawnOfMan:
         else:
             iGameTurn = CyGame().getGameTurn()
 
-            iNumAutoPlayTurns = CIV_BIRTHDATE[get_civ_by_id(CyGame().getActiveTeam())]
+            iNumAutoPlayTurns = CIVILIZATIONS[CyGame().getActiveTeam()].date.birth
             iNumTurnsRemaining = iNumAutoPlayTurns - iGameTurn
 
             # if (iNumTurnsRemaining != self.iTurnsRemaining):

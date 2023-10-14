@@ -14,9 +14,8 @@ import random
 
 from CoreTypes import City, Civ, Religion, Promotion
 from MiscData import MessageData, NUM_CRUSADES
-from TimelineData import CIV_BIRTHDATE, DateTurn
-from CoreFunctions import get_civ_by_id
-from LocationsData import CIV_CAPITAL_LOCATIONS, CITIES
+from TimelineData import DateTurn
+from LocationsData import CITIES
 
 # globals
 gc = CyGlobalContext()
@@ -726,7 +725,7 @@ class Crusades:
 
     def doParticipation(self, iGameTurn):
         iHuman = utils.getHumanID()
-        if CIV_BIRTHDATE[get_civ_by_id(iHuman)] < iGameTurn:
+        if CIVILIZATIONS[iHuman].date.birth < iGameTurn:
             pHuman = gc.getPlayer(iHuman)
             if pHuman.getStateReligion() != Religion.CATHOLICISM.value:
                 self.setParticipate(False)
@@ -788,7 +787,7 @@ class Crusades:
         for iPlayer in CIVILIZATIONS.majors().ids():
             pPlayer = gc.getPlayer(iPlayer)
             if (
-                CIV_BIRTHDATE[get_civ_by_id(iPlayer)] > iGameTurn
+                CIVILIZATIONS[iPlayer].date.birth > iGameTurn
                 or not pPlayer.isAlive()
                 or pPlayer.getStateReligion() != Religion.CATHOLICISM.value
                 or gc.getTeam(pPlayer.getTeam()).isVassal(iTmJerusalem)
@@ -824,14 +823,14 @@ class Crusades:
         pPlayer = gc.getPlayer(iPlayer)
         iNumUnits = pPlayer.getNumUnits()
         if (
-            CIV_BIRTHDATE[get_civ_by_id(iPlayer)] + 10 > gc.getGame().getGameTurn()
+            CIVILIZATIONS[iPlayer].date.birth + 10 > gc.getGame().getGameTurn()
         ):  # in the first 10 turns
             if iNumUnits < 10:
                 iMaxToSend = 0
             else:
                 iMaxToSend = 1
         elif (
-            CIV_BIRTHDATE[get_civ_by_id(iPlayer)] + 25 > gc.getGame().getGameTurn()
+            CIVILIZATIONS[iPlayer].date.birth + 25 > gc.getGame().getGameTurn()
         ):  # between turn 11-25
             iMaxToSend = min(10, max(1, (5 * iNumUnits) / 50))
         else:
@@ -1159,7 +1158,7 @@ class Crusades:
                 if not pTeamRichest.isVassal(iTeamByzantium):
                     # Only if Byzantium holds Constantinople and not a vassal
                     pConstantinoplePlot = gc.getMap().plot(
-                        *CIV_CAPITAL_LOCATIONS[Civ.BYZANTIUM].to_tuple()
+                        *CIVILIZATIONS[Civ.BYZANTIUM].location.capital.to_tuple()
                     )
                     pConstantinopleCity = pConstantinoplePlot.getPlotCity()
                     iConstantinopleOwner = pConstantinopleCity.getOwner()
@@ -1844,7 +1843,7 @@ class Crusades:
         teamPlayer = gc.getTeam(pPlayer.getTeam())
         # only born, flipped and living Catholics can DC
         if (
-            (iGameTurn < CIV_BIRTHDATE[get_civ_by_id(iPlayer)] + 5)
+            (iGameTurn < CIVILIZATIONS[iPlayer].date.birth + 5)
             or not pPlayer.isAlive()
             or pPlayer.getStateReligion() != Religion.CATHOLICISM.value
         ):
@@ -1855,11 +1854,11 @@ class Crusades:
 
         tPlayerDCMap = tDefensiveCrusadeMap[iPlayer]
         # Can DC if at war with a non-catholic/orthodox enemy, enemy is not a vassal of a catholic/orthodox civ and has a city in the DC map
-        for iEnemy in range(CIVILIZATIONS.main().len()):
+        for iEnemy in CIVILIZATIONS.main().ids():
             pEnemy = gc.getPlayer(iEnemy)
             if (
                 teamPlayer.isAtWar(pEnemy.getTeam())
-                and CIV_BIRTHDATE[get_civ_by_id(iEnemy)] + 10 < iGameTurn
+                and CIVILIZATIONS[iEnemy].date.birth + 10 < iGameTurn
             ):
                 if self.isOrMasterChristian(iEnemy):
                     continue

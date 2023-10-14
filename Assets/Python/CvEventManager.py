@@ -24,7 +24,6 @@ import RFCEBalance
 import random
 from MiscData import WORLD_HEIGHT, MessageData
 from CoreData import CIVILIZATIONS
-from LocationsData import CIV_NEIGHBOURS
 from CoreTypes import Wonder, Promotion, Project
 
 utils = RFCUtils.RFCUtils()
@@ -840,7 +839,7 @@ class CvEventManager:
 
         # Absinthe: Kalmar Castle start
         if iBuildingType == xml.iKalmarCastle:
-            for neighbour in CIV_NEIGHBOURS[CIVILIZATIONS[iPlayer].key]:
+            for neighbour in CIVILIZATIONS[iPlayer].location.neighbours:
                 iNeighbour = neighbour.value
                 pNeighbour = gc.getPlayer(iNeighbour)
                 if pNeighbour.isAlive() and iPlayer != iNeighbour:

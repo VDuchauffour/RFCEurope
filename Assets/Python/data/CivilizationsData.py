@@ -9,12 +9,13 @@ from CoreTypes import (
 )
 from CoreStructures import (
     CivDataMapper,
+    ReligionDataMapper,
     ScenarioDataMapper,
 )
 from TimelineData import DateTurn
 
 
-CIV_STARTING_SITUATION_500AD = CivDataMapper(
+CIV_INITIAL_CONDITION_500AD = CivDataMapper(
     {
         Civ.BYZANTIUM: {
             StartingSituation.WORKERS: 0,
@@ -164,7 +165,7 @@ CIV_STARTING_SITUATION_500AD = CivDataMapper(
     }
 )
 
-CIV_STARTING_SITUATION_1200AD = CivDataMapper(
+CIV_INITIAL_CONDITION_1200AD = CivDataMapper(
     {
         Civ.BYZANTIUM: {
             StartingSituation.WORKERS: 0,
@@ -314,10 +315,10 @@ CIV_STARTING_SITUATION_1200AD = CivDataMapper(
     }
 )
 
-CIV_STARTING_SITUATION = ScenarioDataMapper(
+CIV_INITIAL_CONDITION = ScenarioDataMapper(
     {
-        Scenario.i500AD: CIV_STARTING_SITUATION_500AD,
-        Scenario.i1200AD: CIV_STARTING_SITUATION_1200AD,
+        Scenario.i500AD: CIV_INITIAL_CONDITION_500AD,
+        Scenario.i1200AD: CIV_INITIAL_CONDITION_1200AD,
     }
 )
 
@@ -991,244 +992,346 @@ CIV_RESPAWNING_THRESHOLD = CivDataMapper(
 
 CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
     {
-        Civ.BYZANTIUM: {
-            Religion.PROTESTANTISM: 100,
-            Religion.ISLAM: 50,
-            Religion.CATHOLICISM: 70,
-            Religion.ORTHODOXY: 150,
-            Religion.JUDAISM: 10,
-        },
-        Civ.FRANCE: {
-            Religion.PROTESTANTISM: 150,
-            Religion.ISLAM: 20,
-            Religion.CATHOLICISM: 250,
-            Religion.ORTHODOXY: 70,
-            Religion.JUDAISM: 10,
-        },
-        Civ.ARABIA: {
-            Religion.PROTESTANTISM: 20,
-            Religion.ISLAM: 350,
-            Religion.CATHOLICISM: 50,
-            Religion.ORTHODOXY: 10,
-            Religion.JUDAISM: 10,
-        },
-        Civ.BULGARIA: {
-            Religion.PROTESTANTISM: 80,
-            Religion.ISLAM: 50,
-            Religion.CATHOLICISM: 80,
-            Religion.ORTHODOXY: 400,
-            Religion.JUDAISM: 10,
-        },
-        Civ.CORDOBA: {
-            Religion.PROTESTANTISM: 50,
-            Religion.ISLAM: 250,
-            Religion.CATHOLICISM: 80,
-            Religion.ORTHODOXY: 20,
-            Religion.JUDAISM: 10,
-        },
-        Civ.VENECIA: {
-            Religion.PROTESTANTISM: 90,
-            Religion.ISLAM: 50,
-            Religion.CATHOLICISM: 200,
-            Religion.ORTHODOXY: 30,
-            Religion.JUDAISM: 10,
-        },
-        Civ.BURGUNDY: {
-            Religion.PROTESTANTISM: 150,
-            Religion.ISLAM: 20,
-            Religion.CATHOLICISM: 150,
-            Religion.ORTHODOXY: 70,
-            Religion.JUDAISM: 10,
-        },
-        Civ.GERMANY: {
-            Religion.PROTESTANTISM: 450,
-            Religion.ISLAM: 20,
-            Religion.CATHOLICISM: 250,
-            Religion.ORTHODOXY: 20,
-            Religion.JUDAISM: 10,
-        },
-        Civ.NOVGOROD: {
-            Religion.PROTESTANTISM: 60,
-            Religion.ISLAM: 40,
-            Religion.CATHOLICISM: 60,
-            Religion.ORTHODOXY: 500,
-            Religion.JUDAISM: 10,
-        },
-        Civ.NORWAY: {
-            Religion.PROTESTANTISM: 250,
-            Religion.ISLAM: 50,
-            Religion.CATHOLICISM: 150,
-            Religion.ORTHODOXY: 80,
-            Religion.JUDAISM: 10,
-        },
-        Civ.KIEV: {
-            Religion.PROTESTANTISM: 90,
-            Religion.ISLAM: 60,
-            Religion.CATHOLICISM: 90,
-            Religion.ORTHODOXY: 400,
-            Religion.JUDAISM: 10,
-        },
-        Civ.HUNGARY: {
-            Religion.PROTESTANTISM: 250,
-            Religion.ISLAM: 60,
-            Religion.CATHOLICISM: 200,
-            Religion.ORTHODOXY: 80,
-            Religion.JUDAISM: 10,
-        },
-        Civ.CASTILLE: {
-            Religion.PROTESTANTISM: 100,
-            Religion.ISLAM: 20,
-            Religion.CATHOLICISM: 200,
-            Religion.ORTHODOXY: 20,
-            Religion.JUDAISM: 10,
-        },
-        Civ.DENMARK: {
-            Religion.PROTESTANTISM: 250,
-            Religion.ISLAM: 50,
-            Religion.CATHOLICISM: 180,
-            Religion.ORTHODOXY: 80,
-            Religion.JUDAISM: 10,
-        },
-        Civ.SCOTLAND: {
-            Religion.PROTESTANTISM: 450,
-            Religion.ISLAM: 20,
-            Religion.CATHOLICISM: 100,
-            Religion.ORTHODOXY: 20,
-            Religion.JUDAISM: 10,
-        },
-        Civ.POLAND: {
-            Religion.PROTESTANTISM: 200,
-            Religion.ISLAM: 60,
-            Religion.CATHOLICISM: 450,
-            Religion.ORTHODOXY: 200,
-            Religion.JUDAISM: 10,
-        },
-        Civ.GENOA: {
-            Religion.PROTESTANTISM: 190,
-            Religion.ISLAM: 50,
-            Religion.CATHOLICISM: 250,
-            Religion.ORTHODOXY: 30,
-            Religion.JUDAISM: 10,
-        },
-        Civ.MOROCCO: {
-            Religion.PROTESTANTISM: 50,
-            Religion.ISLAM: 250,
-            Religion.CATHOLICISM: 70,
-            Religion.ORTHODOXY: 20,
-            Religion.JUDAISM: 10,
-        },
-        Civ.ENGLAND: {
-            Religion.PROTESTANTISM: 450,
-            Religion.ISLAM: 20,
-            Religion.CATHOLICISM: 100,
-            Religion.ORTHODOXY: 20,
-            Religion.JUDAISM: 10,
-        },
-        Civ.PORTUGAL: {
-            Religion.PROTESTANTISM: 200,
-            Religion.ISLAM: 80,
-            Religion.CATHOLICISM: 250,
-            Religion.ORTHODOXY: 20,
-            Religion.JUDAISM: 10,
-        },
-        Civ.ARAGON: {
-            Religion.PROTESTANTISM: 150,
-            Religion.ISLAM: 80,
-            Religion.CATHOLICISM: 250,
-            Religion.ORTHODOXY: 20,
-            Religion.JUDAISM: 10,
-        },
-        Civ.SWEDEN: {
-            Religion.PROTESTANTISM: 450,
-            Religion.ISLAM: 20,
-            Religion.CATHOLICISM: 200,
-            Religion.ORTHODOXY: 50,
-            Religion.JUDAISM: 10,
-        },
-        Civ.PRUSSIA: {
-            Religion.PROTESTANTISM: 450,
-            Religion.ISLAM: 20,
-            Religion.CATHOLICISM: 250,
-            Religion.ORTHODOXY: 20,
-            Religion.JUDAISM: 10,
-        },
-        Civ.LITHUANIA: {
-            Religion.PROTESTANTISM: 80,
-            Religion.ISLAM: 80,
-            Religion.CATHOLICISM: 80,
-            Religion.ORTHODOXY: 80,
-            Religion.JUDAISM: 10,
-        },
-        Civ.AUSTRIA: {
-            Religion.PROTESTANTISM: 200,
-            Religion.ISLAM: 20,
-            Religion.CATHOLICISM: 250,
-            Religion.ORTHODOXY: 20,
-            Religion.JUDAISM: 10,
-        },
-        Civ.OTTOMAN: {
-            Religion.PROTESTANTISM: 20,
-            Religion.ISLAM: 350,
-            Religion.CATHOLICISM: 80,
-            Religion.ORTHODOXY: 80,
-            Religion.JUDAISM: 10,
-        },
-        Civ.MOSCOW: {
-            Religion.PROTESTANTISM: 100,
-            Religion.ISLAM: 20,
-            Religion.CATHOLICISM: 100,
-            Religion.ORTHODOXY: 250,
-            Religion.JUDAISM: 10,
-        },
-        Civ.DUTCH: {
-            Religion.PROTESTANTISM: 550,
-            Religion.ISLAM: 20,
-            Religion.CATHOLICISM: 90,
-            Religion.ORTHODOXY: 20,
-            Religion.JUDAISM: 10,
-        },
-        Civ.POPE: {
-            Religion.PROTESTANTISM: 10,
-            Religion.ISLAM: 20,
-            Religion.CATHOLICISM: 500,
-            Religion.ORTHODOXY: 10,
-            Religion.JUDAISM: 10,
-        },
-        Civ.INDEPENDENT: {
-            Religion.PROTESTANTISM: 250,
-            Religion.ISLAM: 100,
-            Religion.CATHOLICISM: 100,
-            Religion.ORTHODOXY: 100,
-            Religion.JUDAISM: 10,
-        },
-        Civ.INDEPENDENT_2: {
-            Religion.PROTESTANTISM: 250,
-            Religion.ISLAM: 100,
-            Religion.CATHOLICISM: 100,
-            Religion.ORTHODOXY: 100,
-            Religion.JUDAISM: 10,
-        },
-        Civ.INDEPENDENT_3: {
-            Religion.PROTESTANTISM: 250,
-            Religion.ISLAM: 100,
-            Religion.CATHOLICISM: 100,
-            Religion.ORTHODOXY: 100,
-            Religion.JUDAISM: 10,
-        },
-        Civ.INDEPENDENT_4: {
-            Religion.PROTESTANTISM: 250,
-            Religion.ISLAM: 100,
-            Religion.CATHOLICISM: 100,
-            Religion.ORTHODOXY: 100,
-            Religion.JUDAISM: 10,
-        },
-        Civ.BARBARIAN: {
-            Religion.PROTESTANTISM: 20,
-            Religion.ISLAM: 20,
-            Religion.CATHOLICISM: 20,
-            Religion.ORTHODOXY: 20,
-            Religion.JUDAISM: 10,
-        },
+        Civ.BYZANTIUM: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 100,
+                Religion.ISLAM: 50,
+                Religion.CATHOLICISM: 70,
+                Religion.ORTHODOXY: 150,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.FRANCE: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 150,
+                Religion.ISLAM: 20,
+                Religion.CATHOLICISM: 250,
+                Religion.ORTHODOXY: 70,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.ARABIA: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 20,
+                Religion.ISLAM: 350,
+                Religion.CATHOLICISM: 50,
+                Religion.ORTHODOXY: 10,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.BULGARIA: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 80,
+                Religion.ISLAM: 50,
+                Religion.CATHOLICISM: 80,
+                Religion.ORTHODOXY: 400,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.CORDOBA: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 50,
+                Religion.ISLAM: 250,
+                Religion.CATHOLICISM: 80,
+                Religion.ORTHODOXY: 20,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.VENECIA: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 90,
+                Religion.ISLAM: 50,
+                Religion.CATHOLICISM: 200,
+                Religion.ORTHODOXY: 30,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.BURGUNDY: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 150,
+                Religion.ISLAM: 20,
+                Religion.CATHOLICISM: 150,
+                Religion.ORTHODOXY: 70,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.GERMANY: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 450,
+                Religion.ISLAM: 20,
+                Religion.CATHOLICISM: 250,
+                Religion.ORTHODOXY: 20,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.NOVGOROD: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 60,
+                Religion.ISLAM: 40,
+                Religion.CATHOLICISM: 60,
+                Religion.ORTHODOXY: 500,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.NORWAY: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 250,
+                Religion.ISLAM: 50,
+                Religion.CATHOLICISM: 150,
+                Religion.ORTHODOXY: 80,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.KIEV: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 90,
+                Religion.ISLAM: 60,
+                Religion.CATHOLICISM: 90,
+                Religion.ORTHODOXY: 400,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.HUNGARY: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 250,
+                Religion.ISLAM: 60,
+                Religion.CATHOLICISM: 200,
+                Religion.ORTHODOXY: 80,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.CASTILLE: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 100,
+                Religion.ISLAM: 20,
+                Religion.CATHOLICISM: 200,
+                Religion.ORTHODOXY: 20,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.DENMARK: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 250,
+                Religion.ISLAM: 50,
+                Religion.CATHOLICISM: 180,
+                Religion.ORTHODOXY: 80,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.SCOTLAND: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 450,
+                Religion.ISLAM: 20,
+                Religion.CATHOLICISM: 100,
+                Religion.ORTHODOXY: 20,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.POLAND: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 200,
+                Religion.ISLAM: 60,
+                Religion.CATHOLICISM: 450,
+                Religion.ORTHODOXY: 200,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.GENOA: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 190,
+                Religion.ISLAM: 50,
+                Religion.CATHOLICISM: 250,
+                Religion.ORTHODOXY: 30,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.MOROCCO: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 50,
+                Religion.ISLAM: 250,
+                Religion.CATHOLICISM: 70,
+                Religion.ORTHODOXY: 20,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.ENGLAND: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 450,
+                Religion.ISLAM: 20,
+                Religion.CATHOLICISM: 100,
+                Religion.ORTHODOXY: 20,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.PORTUGAL: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 200,
+                Religion.ISLAM: 80,
+                Religion.CATHOLICISM: 250,
+                Religion.ORTHODOXY: 20,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.ARAGON: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 150,
+                Religion.ISLAM: 80,
+                Religion.CATHOLICISM: 250,
+                Religion.ORTHODOXY: 20,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.SWEDEN: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 450,
+                Religion.ISLAM: 20,
+                Religion.CATHOLICISM: 200,
+                Religion.ORTHODOXY: 50,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.PRUSSIA: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 450,
+                Religion.ISLAM: 20,
+                Religion.CATHOLICISM: 250,
+                Religion.ORTHODOXY: 20,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.LITHUANIA: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 80,
+                Religion.ISLAM: 80,
+                Religion.CATHOLICISM: 80,
+                Religion.ORTHODOXY: 80,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.AUSTRIA: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 200,
+                Religion.ISLAM: 20,
+                Religion.CATHOLICISM: 250,
+                Religion.ORTHODOXY: 20,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.OTTOMAN: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 20,
+                Religion.ISLAM: 350,
+                Religion.CATHOLICISM: 80,
+                Religion.ORTHODOXY: 80,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.MOSCOW: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 100,
+                Religion.ISLAM: 20,
+                Religion.CATHOLICISM: 100,
+                Religion.ORTHODOXY: 250,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.DUTCH: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 550,
+                Religion.ISLAM: 20,
+                Religion.CATHOLICISM: 90,
+                Religion.ORTHODOXY: 20,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.POPE: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 10,
+                Religion.ISLAM: 20,
+                Religion.CATHOLICISM: 500,
+                Religion.ORTHODOXY: 10,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.INDEPENDENT: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 250,
+                Religion.ISLAM: 100,
+                Religion.CATHOLICISM: 100,
+                Religion.ORTHODOXY: 100,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.INDEPENDENT_2: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 250,
+                Religion.ISLAM: 100,
+                Religion.CATHOLICISM: 100,
+                Religion.ORTHODOXY: 100,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.INDEPENDENT_3: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 250,
+                Religion.ISLAM: 100,
+                Religion.CATHOLICISM: 100,
+                Religion.ORTHODOXY: 100,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.INDEPENDENT_4: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 250,
+                Religion.ISLAM: 100,
+                Religion.CATHOLICISM: 100,
+                Religion.ORTHODOXY: 100,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
+        Civ.BARBARIAN: ReligionDataMapper(
+            {
+                Religion.PROTESTANTISM: 20,
+                Religion.ISLAM: 20,
+                Religion.CATHOLICISM: 20,
+                Religion.ORTHODOXY: 20,
+                Religion.JUDAISM: 10,
+            },
+            do_not_cast=True,
+        ),
     }
 )
 

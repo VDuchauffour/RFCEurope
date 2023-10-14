@@ -9,7 +9,7 @@ from CivilizationsData import (
     CIV_RELIGIOUS_TOLERANCE,
     CIV_RESPAWNING_THRESHOLD,
     CIV_STABILITY_AI_BONUS,
-    CIV_STARTING_SITUATION,
+    CIV_INITIAL_CONDITION,
 )
 from CoreStructures import CivilizationsFactory, CompaniesFactory
 from LocationsData import (
@@ -24,7 +24,13 @@ from LocationsData import (
 )
 from MiscData import CIV_DAWN_OF_MAN_VALUES, COMPANY_LIMIT
 from Scenario import get_scenario
-from TimelineData import COMPANY_BIRTHDATE, COMPANY_DEATHDATE
+from TimelineData import (
+    CIV_BIRTHDATE,
+    CIV_COLLAPSE_DATE,
+    CIV_RESPAWNING_DATE,
+    COMPANY_BIRTHDATE,
+    COMPANY_DEATHDATE,
+)
 
 CURRENT_SCENARIO = get_scenario()
 
@@ -39,12 +45,10 @@ COMPANIES = (
 
 CIVILIZATIONS = (
     CivilizationsFactory()
-    .add_key("initial", "religion", "location", "ai", "misc")
+    .add_key("initial", "location", "religion", "ai", "misc", "date")
     .attach("properties", CIV_PROPERTIES)
     .attach("leaders", CIV_LEADERS)
-    .attach("hire_mercenary_threshold", CIV_HIRE_MERCENARY_THRESHOLD, key="misc")
-    .attach("dawn_of_man", CIV_DAWN_OF_MAN_VALUES, key="misc")
-    .attach("condition", CIV_STARTING_SITUATION[CURRENT_SCENARIO], key="initial")
+    .attach("condition", CIV_INITIAL_CONDITION[CURRENT_SCENARIO], key="initial")
     .attach("contact", CIV_INITIAL_CONTACTS[CURRENT_SCENARIO], key="initial")
     .attach("wars", CIV_INITIAL_WARS[CURRENT_SCENARIO], key="initial")
     .attach("respawning_threshold", CIV_RESPAWNING_THRESHOLD, key="location")
@@ -59,5 +63,10 @@ CIVILIZATIONS = (
     .attach("tolerance", CIV_RELIGIOUS_TOLERANCE, key="religion")
     .attach("stop_birth_threshold", CIV_AI_STOP_BIRTH_THRESHOLD, key="ai")
     .attach("stability_bonus", CIV_STABILITY_AI_BONUS, key="ai")
+    .attach("hire_mercenary_threshold", CIV_HIRE_MERCENARY_THRESHOLD, key="misc")
+    .attach("dawn_of_man", CIV_DAWN_OF_MAN_VALUES, key="misc")
+    .attach("birth", CIV_BIRTHDATE, key="date")
+    .attach("collapse", CIV_COLLAPSE_DATE, key="date")
+    .attach("respawning", CIV_RESPAWNING_DATE, key="date")
     .collect()
 )

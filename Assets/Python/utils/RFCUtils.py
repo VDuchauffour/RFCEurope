@@ -2,7 +2,6 @@
 
 from CvPythonExtensions import *
 from CoreData import CIVILIZATIONS
-from CoreFunctions import get_civ_by_id
 from CoreTypes import (
     City,
     Civ,
@@ -16,7 +15,7 @@ from CoreTypes import (
 )
 import CvUtil
 import CvScreenEnums
-from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
+from LocationsData import CITIES
 import RFCEMaps
 import PyHelpers
 import Popup  # Absinthe
@@ -31,7 +30,7 @@ from MiscData import (
     MessageData,
 )
 
-from TimelineData import CIV_BIRTHDATE, DateTurn
+from TimelineData import DateTurn
 from CoreFunctions import get_religion_by_id
 from CoreTypes import ProvinceTypes
 
@@ -239,7 +238,7 @@ class RFCUtils:
                     and not iActiveCiv == Civ.POPE.value
                 ):
                     if not teamMinor.isAtWar(iActiveCiv):
-                        if iGameTurn > CIV_BIRTHDATE[get_civ_by_id(iActiveCiv)] + 20:
+                        if iGameTurn > CIVILIZATIONS[iActiveCiv].date.birth + 20:
                             # Absinthe: probably better to use war maps instead of settler maps, but let the AI concentrate on it's core area first
                             # 			maybe we should use both settler and war maps? distance calculations would be great, but use too much iterations
                             # if (gc.getPlayer(iActiveCiv).getSettlersMaps( WORLD_HEIGHT-y-1, x ) >= 90 or gc.getPlayer(iActiveCiv).getSettlersMaps( WORLD_HEIGHT-y-1, x ) == -1):
@@ -279,7 +278,7 @@ class RFCUtils:
                     and not iActiveCiv == Civ.POPE.value
                 ):
                     # Absinthe: do not want to force the AI into these wars with WARPLAN_TOTAL too early
-                    if iGameTurn > CIV_BIRTHDATE[get_civ_by_id(iActiveCiv)] + 40:
+                    if iGameTurn > CIVILIZATIONS[iActiveCiv].date.birth + 40:
                         if not teamMinor.isAtWar(iActiveCiv):
                             if gc.getPlayer(iActiveCiv).getWarsMaps(WORLD_HEIGHT - y - 1, x) == 16:
                                 teamActive = gc.getTeam(gc.getPlayer(iActiveCiv).getTeam())
@@ -1021,7 +1020,7 @@ class RFCUtils:
         if not gc.getPlayer(iPlayer).isAlive():
             return False
         iGameTurn = gc.getGame().getGameTurn()
-        if iGameTurn < CIV_BIRTHDATE[get_civ_by_id(iPlayer)]:
+        if iGameTurn < CIVILIZATIONS[iPlayer].date.birth:
             return False
         return True
 
@@ -1157,7 +1156,7 @@ class RFCUtils:
     def collapseImmune(self, iCiv):
         # 3MiroUP: Emperor
         if gc.hasUP(iCiv, UniquePower.NO_COLLAPSE_IN_CORE_AND_NORMAL_AREAS.value):
-            plot = gc.getMap().plot(*CIV_CAPITAL_LOCATIONS[get_civ_by_id(iCiv)].to_tuple())
+            plot = gc.getMap().plot(*CIVILIZATIONS[iCiv].location.capital.to_tuple())
             if plot.isCity():
                 if plot.getOwner() == iCiv:
                     return True
@@ -1166,7 +1165,7 @@ class RFCUtils:
     def collapseImmuneCity(self, iCiv, x, y):
         # 3MiroUP: Emperor
         if gc.hasUP(iCiv, UniquePower.NO_COLLAPSE_IN_CORE_AND_NORMAL_AREAS.value):
-            plot = gc.getMap().plot(*CIV_CAPITAL_LOCATIONS[get_civ_by_id(iCiv)].to_tuple())
+            plot = gc.getMap().plot(*CIVILIZATIONS[iCiv].location.capital.to_tuple())
             if plot.isCity():
                 if plot.getOwner() == iCiv:
                     if (

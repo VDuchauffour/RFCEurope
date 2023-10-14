@@ -1,7 +1,6 @@
 from CvPythonExtensions import *
 import Consts
 from CoreData import CIVILIZATIONS
-from CoreFunctions import get_civ_by_id, get_religion_by_id
 from CoreTypes import (
     City,
     Civ,
@@ -12,25 +11,20 @@ from CoreTypes import (
     ProvinceTypes,
     Religion,
     Project,
-    StartingSituation,
     UniquePower,
     FaithPointBonusCategory,
 )
 import XMLConsts as xml
 import RFCEMaps
 import RFCUtils
-from CivilizationsData import (
-    CIV_STARTING_SITUATION,
-    CIV_RELIGION_SPREADING_THRESHOLD,
-)
 from MiscData import (
     WORLD_WIDTH,
     WORLD_HEIGHT,
     GREAT_PROPHET_FAITH_POINT_BONUS,
     PROSECUTOR_UNITCLASS,
 )
-from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
-from TimelineData import CIV_BIRTHDATE, DateTurn
+from LocationsData import CITIES
+from TimelineData import DateTurn
 
 gc = CyGlobalContext()  # LOQ
 utils = RFCUtils.RFCUtils()
@@ -680,11 +674,11 @@ class RFCEBalance:
 
         # set religious spread factors
         for civ in CIVILIZATIONS:
-            for iRel in range(len(Religion)):
+            for religion, threshold in civ.religion.spreading_threshold.items():
                 gc.setReligionSpread(
                     civ.id,
-                    iRel,
-                    CIV_RELIGION_SPREADING_THRESHOLD[civ.key][get_religion_by_id(iRel)],
+                    religion.value,
+                    threshold,
                 )
 
         # set the religions and year of the great schism
@@ -1003,7 +997,9 @@ class RFCEBalance:
 
         # 3Miro: Psycho AI cheat, this will make Ottoman AI think it can win battles vs Constantinople at 90/100 rate
         # 	it will also actually boost the Ottoman's odds (actually lower the defenders chance by 20 percent), but only when attacking Constantinople
-        gc.setPsychoAICheat(Civ.OTTOMAN.value, *CIV_CAPITAL_LOCATIONS[Civ.BYZANTIUM].to_tuple())
+        gc.setPsychoAICheat(
+            Civ.OTTOMAN.value, *CIVILIZATIONS[Civ.BYZANTIUM].location.capital.to_tuple()
+        )
 
         # 3Miro: be very careful here, this can really mess the AI
         # 	setHistoricalEnemyAICheat( iAttacker, iDefender, 10 ) gives the attacker +10% bonus, when attacked units belong to the defender
@@ -1186,35 +1182,35 @@ class RFCEBalance:
         )  # set the Number of Provinces, call this before you set any AI or culture modifiers
 
         # birth turns for the players, do not change this loop
-        for i in CIVILIZATIONS.drop(Civ.BARBARIAN).ids():
-            gc.setStartingTurn(i, CIV_BIRTHDATE[get_civ_by_id(i)])
+        for civ in CIVILIZATIONS.drop(Civ.BARBARIAN):
+            gc.setStartingTurn(civ.id, civ.date.birth)
 
     def postAreas(self):
         # 3Miro: DO NOT CHANGE THIS CODE
         # this adds the Core and Normal Areas from Consts.py into C++. There is Dynamical Memory involved, so don't change this
-        for iCiv in CIVILIZATIONS.majors().ids():
-            iCBLx = Consts.tCoreAreasTL[iCiv][0]
-            iCBLy = Consts.tCoreAreasTL[iCiv][1]
-            iCTRx = Consts.tCoreAreasBR[iCiv][0]
-            iCTRy = Consts.tCoreAreasBR[iCiv][1]
-            iNBLx = Consts.tNormalAreasTL[iCiv][0]
-            iNBLy = Consts.tNormalAreasTL[iCiv][1]
-            iNTRx = Consts.tNormalAreasBR[iCiv][0]
-            iNTRy = Consts.tNormalAreasBR[iCiv][1]
-            iCCE = len(Consts.lExtraPlots[iCiv])
-            iCNE = len(Consts.tNormalAreasSubtract[iCiv])
+        for civ in CIVILIZATIONS.majors().ids():
+            iCBLx = Consts.tCoreAreasTL[civ][0]
+            iCBLy = Consts.tCoreAreasTL[civ][1]
+            iCTRx = Consts.tCoreAreasBR[civ][0]
+            iCTRy = Consts.tCoreAreasBR[civ][1]
+            iNBLx = Consts.tNormalAreasTL[civ][0]
+            iNBLy = Consts.tNormalAreasTL[civ][1]
+            iNTRx = Consts.tNormalAreasBR[civ][0]
+            iNTRy = Consts.tNormalAreasBR[civ][1]
+            iCCE = len(Consts.lExtraPlots[civ])
+            iCNE = len(Consts.tNormalAreasSubtract[civ])
             gc.setCoreNormal(
-                iCiv, iCBLx, iCBLy, iCTRx, iCTRy, iNBLx, iNBLy, iNTRx, iNTRy, iCCE, iCNE
+                civ, iCBLx, iCBLy, iCTRx, iCTRy, iNBLx, iNBLy, iNTRx, iNTRy, iCCE, iCNE
             )
             for iEx in range(iCCE):
                 gc.addCoreException(
-                    iCiv, Consts.lExtraPlots[iCiv][iEx][0], Consts.lExtraPlots[iCiv][iEx][1]
+                    civ, Consts.lExtraPlots[civ][iEx][0], Consts.lExtraPlots[civ][iEx][1]
                 )
             for iEx in range(iCNE):
                 gc.addNormalException(
-                    iCiv,
-                    Consts.tNormalAreasSubtract[iCiv][iEx][0],
-                    Consts.tNormalAreasSubtract[iCiv][iEx][1],
+                    civ,
+                    Consts.tNormalAreasSubtract[civ][iEx][0],
+                    Consts.tNormalAreasSubtract[civ][iEx][1],
                 )
 
         gc.setProsecutorReligions(xml.iProsecutor, PROSECUTOR_UNITCLASS)
@@ -1233,10 +1229,6 @@ class RFCEBalance:
         # 3MiroMercs: set the merc promotion
         gc.setMercPromotion(Promotion.MERC.value)
 
-        for iCiv in CIVILIZATIONS.majors().ids():
-            gc.setStartingWorkers(
-                iCiv,
-                CIV_STARTING_SITUATION[utils.getScenario()][get_civ_by_id(iCiv)][
-                    StartingSituation.WORKERS
-                ],
-            )
+        for civ in CIVILIZATIONS.majors():
+            if civ.initial.condition:
+                gc.setStartingWorkers(civ.id, civ.initial.condition.workers)

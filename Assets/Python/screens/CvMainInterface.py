@@ -6,8 +6,7 @@ from CoreTypes import Civ, SpecialParameter, Religion
 import CvUtil
 import CvScreenEnums
 
-from TimelineData import CIV_BIRTHDATE, DateTurn
-from CoreFunctions import get_civ_by_id
+from TimelineData import DateTurn
 
 import XMLConsts as xml
 import RFCUtils  # Rhye
@@ -3342,7 +3341,7 @@ class CvMainInterface:
                 iCount += 1
                 if (
                     not CyInterface().isCityScreenUp()
-                    and CyGame().getGameTurn() >= CIV_BIRTHDATE[get_civ_by_id(ePlayer)]
+                    and CyGame().getGameTurn() >= CIVILIZATIONS[ePlayer].date.birth
                 ):
                     # iStability = utils.getStability(ePlayer)
                     iStability = pPlayer.getStability()
@@ -6556,7 +6555,7 @@ class CvMainInterface:
                                         if (
                                             not gc.getTeam(eTeam).isAlive()
                                             and gc.getGame().getGameTurn()
-                                            >= CIV_BIRTHDATE[get_civ_by_id(eTeam)]
+                                            >= CIVILIZATIONS[eTeam].date.birth
                                         ):
                                             szBuffer = szBuffer + " -"
                                         else:

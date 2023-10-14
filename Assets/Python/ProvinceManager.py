@@ -7,7 +7,7 @@ import RFCEMaps
 import RFCUtils  # Absinthe
 import PyHelpers  # Absinthe
 
-from TimelineData import CIV_BIRTHDATE, DateTurn
+from TimelineData import DateTurn
 from CoreTypes import Civ, Scenario, ProvinceTypes
 
 gc = CyGlobalContext()
@@ -715,7 +715,7 @@ class ProvinceManager:
         # update provinces for the 1200 AD Scenario
         if utils.getScenario() == Scenario.i1200AD:
             for civ in CIVILIZATIONS.main():
-                if CIV_BIRTHDATE[civ.key] < DateTurn.i1200AD:
+                if civ.date.birth < DateTurn.i1200AD:
                     self.onSpawn(civ.id)
 
     def checkTurn(self, iGameTurn):

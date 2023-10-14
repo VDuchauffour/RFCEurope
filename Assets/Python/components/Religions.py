@@ -1,11 +1,8 @@
 # Rhye's and Fall of Civilization: Europe - Religions management
 
 from CvPythonExtensions import *
-from CivilizationsData import (
-    CIV_RELIGION_SPREADING_THRESHOLD,
-)
 from CoreData import CIVILIZATIONS
-from CoreFunctions import get_civ_by_id, get_religion_by_id
+from CoreFunctions import get_religion_by_id
 from CoreTypes import Civ, City, StabilityCategory, Religion
 from LocationsData import CITIES
 from TimelineData import DateTurn
@@ -1004,7 +1001,7 @@ class Religions:
                                 iReligionPoint += 10
                             if city.isHolyCityByType(iReligion):
                                 iReligionPoint += 1000
-                        spread_factor = CIV_RELIGION_SPREADING_THRESHOLD[get_civ_by_id(iPlayer)][
+                        spread_factor = CIVILIZATIONS[iPlayer].religion.spreading_threshold[
                             get_religion_by_id(iReligion)
                         ]
                         if spread_factor < 60:
@@ -1601,9 +1598,9 @@ class Religions:
 
     def setStartingFaith(self):
         for civilization in CIVILIZATIONS.dropna("initial"):
-            gold = civilization.initial.condition.faith
-            if gold:
-                civilization.player.setFaith(gold)
+            condition = civilization.initial.condition
+            if condition:
+                civilization.player.setFaith(condition.faith)
 
     def getCatholicCivs(self, bOpenBorders=False):
         teamPope = gc.getTeam(gc.getPlayer(Civ.POPE.value).getTeam())

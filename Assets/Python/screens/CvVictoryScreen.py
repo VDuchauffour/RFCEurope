@@ -5,15 +5,14 @@ from CoreData import CIVILIZATIONS
 from CoreData import COMPANIES
 from CoreTypes import City, Civ, Colony, Company, Project, ProvinceStatus, Religion
 import CvUtil
-from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
+from LocationsData import CITIES
 import PyHelpers
 import XMLConsts as xml
 import RFCUtils
 import Victory as vic
 import UniquePowers
 
-from TimelineData import CIV_BIRTHDATE, DateTurn
-from CoreFunctions import get_civ_by_id
+from TimelineData import DateTurn
 
 PyPlayer = PyHelpers.PyPlayer
 
@@ -2335,7 +2334,7 @@ class CvVictoryScreen:
         # UHV2
         sText2 += self.getProvinceString(vic.tByzantiumControlII)
         # UHV3
-        tConstantinople = CIV_CAPITAL_LOCATIONS[get_civ_by_id(iPlayer)].to_tuple()
+        tConstantinople = CIVILIZATIONS[iPlayer].location.capital.to_tuple()
         pConstantinople = gc.getMap().plot(tConstantinople[0], tConstantinople[1]).getPlotCity()
         sConstantinopleName = localText.getText("TXT_KEY_CITY_NAME_CONSTANTINOPLE", ())
         if self.checkCity(tConstantinople, iPlayer, sConstantinopleName) == -1:
@@ -2483,7 +2482,7 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        tCordoba = CIV_CAPITAL_LOCATIONS[get_civ_by_id(iPlayer)].to_tuple()
+        tCordoba = CIVILIZATIONS[iPlayer].location.capital.to_tuple()
         pCordoba = gc.getMap().plot(tCordoba[0], tCordoba[1]).getPlotCity()
         sCordobaName = localText.getText("TXT_KEY_CITY_NAME_CORDOBA", ())
         if self.checkCity(tCordoba, iPlayer, sCordobaName) == -1:
@@ -2524,7 +2523,7 @@ class CvVictoryScreen:
         # UHV1
         sText1 += self.getProvinceString(vic.tVenetianControl)
         # UHV2
-        tConstantinople = CIV_CAPITAL_LOCATIONS[Civ.BYZANTIUM].to_tuple()
+        tConstantinople = CIVILIZATIONS[Civ.BYZANTIUM].location.capital.to_tuple()
         sText2 += self.checkCity(
             tConstantinople,
             iPlayer,
@@ -3209,7 +3208,7 @@ class CvVictoryScreen:
         )
         bColor = False
         iNumAccess = pPlayer.countCultBorderBonuses(xml.iAccess)
-        tConstantinople = CIV_CAPITAL_LOCATIONS[Civ.BYZANTIUM].to_tuple()
+        tConstantinople = CIVILIZATIONS[Civ.BYZANTIUM].location.capital.to_tuple()
         iConstantinopleOwner = (
             gc.getMap().plot(tConstantinople[0], tConstantinople[1]).getPlotCity().getOwner()
         )
@@ -3254,7 +3253,7 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        tAmsterdam = CIV_CAPITAL_LOCATIONS[get_civ_by_id(iPlayer)].to_tuple()
+        tAmsterdam = CIVILIZATIONS[iPlayer].location.capital.to_tuple()
         pPlot = gc.getMap().plot(tAmsterdam[0], tAmsterdam[1])
         if (
             self.checkCity(
@@ -3600,7 +3599,7 @@ class CvVictoryScreen:
             pTestPlayer = gc.getPlayer(iLoopPlayer)
             sCivShortName = str(pTestPlayer.getCivilizationShortDescriptionKey())
             # unknown: if not yet born, or alive but no contact
-            if iGameTurn <= CIV_BIRTHDATE[get_civ_by_id(iLoopPlayer)] or (
+            if iGameTurn <= CIVILIZATIONS[iLoopPlayer].date.birth or (
                 not gc.getPlayer(self.iActivePlayer).canContact(iLoopPlayer)
                 and pTestPlayer.isAlive()
             ):
@@ -3629,7 +3628,7 @@ class CvVictoryScreen:
             sCivShortName = str(pEnemy.getCivilizationShortDescriptionKey())
             if (
                 pEnemy.isAlive() and not teamEnemy.isVassal(teamOwn.getID())
-            ) or iGameTurn <= CIV_BIRTHDATE[get_civ_by_id(iEnemy)]:
+            ) or iGameTurn <= CIVILIZATIONS[iEnemy].date.birth:
                 sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (
                     localText.getText(sCivShortName, ())
                 )
@@ -3652,7 +3651,7 @@ class CvVictoryScreen:
             pEnemy = gc.getPlayer(iEnemyCiv)
             teamEnemy = gc.getTeam(iEnemyCiv)
             sCivShortName = str(pEnemy.getCivilizationShortDescriptionKey())
-            if iGameTurn <= CIV_BIRTHDATE[get_civ_by_id(iEnemyCiv)]:
+            if iGameTurn <= CIVILIZATIONS[iEnemyCiv].date.birth:
                 sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (
                     localText.getText(sCivShortName, ())
                 )

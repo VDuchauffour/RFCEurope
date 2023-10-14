@@ -5,13 +5,11 @@
 
 from CvPythonExtensions import *
 from CoreData import CIVILIZATIONS
-from CoreFunctions import get_civ_by_id
 import CvUtil
 
 import string
 
 import Consts
-from LocationsData import CIV_HOME_LOCATIONS
 import XMLConsts as xml
 import RFCUtils
 
@@ -4644,10 +4642,11 @@ class CvInfoScreen:
                 if not pTeam.isBarbarian():
                     # Loop through projects
                     try:
+                        x, y = CIVILIZATIONS[iPlayerLoop].location.home_colony
                         screen.addFlagWidgetGFC(
                             self.home_flag,
-                            CIV_HOME_LOCATIONS[get_civ_by_id(iPlayerLoop)][0] - 40,
-                            CIV_HOME_LOCATIONS[get_civ_by_id(iPlayerLoop)][1] - 20,
+                            x - 40,
+                            y - 20,
                             80,
                             80,
                             iPlayerLoop,
