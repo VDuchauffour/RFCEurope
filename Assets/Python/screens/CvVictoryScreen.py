@@ -3,7 +3,7 @@
 from CvPythonExtensions import *
 from CoreData import CIVILIZATIONS
 from CoreData import COMPANIES
-from CoreTypes import City, Civ, Colony, Company, Project, ProvinceStatus, Religion
+from CoreTypes import City, Civ, Colony, Company, Project, ProvinceStatus, Religion, Specialist
 import CvUtil
 from LocationsData import CITIES
 import PyHelpers
