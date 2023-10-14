@@ -5,7 +5,7 @@ from CoreData import CIVILIZATIONS
 from CoreTypes import (
     City,
     Civ,
-    Plague,
+    PlagueType,
     Religion,
     Scenario,
     UniquePower,
@@ -1006,8 +1006,8 @@ class RFCUtils:
 
     def clearPlague(self, iCiv):
         for city in self.getCityList(iCiv):
-            if city.hasBuilding(Plague.PLAGUE.value):
-                city.setHasRealBuilding(Plague.PLAGUE.value, False)
+            if city.hasBuilding(PlagueType.PLAGUE.value):
+                city.setHasRealBuilding(PlagueType.PLAGUE.value, False)
 
     # AIWars
     def isAVassal(self, iCiv):

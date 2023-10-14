@@ -24,7 +24,7 @@ import RFCEBalance
 import random
 from MiscData import WORLD_HEIGHT, MessageData
 from CoreData import CIVILIZATIONS
-from CoreTypes import Wonder, Promotion, Project
+from CoreTypes import Wonder, Promotion, Project, Improvement
 
 utils = RFCUtils.RFCUtils()
 balance = RFCEBalance.RFCEBalance()
@@ -576,14 +576,14 @@ class CvEventManager:
         "Improvement Built"
         iImprovement, iX, iY = argsList
         # Absinthe: Stephansdom start
-        if iImprovement == xml.iImprovementCottage:
+        if iImprovement == Improvement.COTTAGE.value:
             pPlot = CyMap().plot(iX, iY)
             iOwner = pPlot.getOwner()
             # if there is an owner
             if iOwner >= 0:
                 pOwner = gc.getPlayer(iOwner)
                 if pOwner.countNumBuildings(xml.iStephansdom) > 0:
-                    pPlot.setImprovementType(xml.iImprovementHamlet)
+                    pPlot.setImprovementType(Improvement.HAMLET.value)
         # Absinthe: Stephansdom end
         if not self.__LOG_IMPROVEMENT:
             return
@@ -641,7 +641,7 @@ class CvEventManager:
                     # also remove corresponding improvements
                     iImprovementType = pPlot.getImprovementType()
                     if (
-                        iImprovementType == xml.iImprovementCamp
+                        iImprovementType == Improvement.CAMP.value
                     ):  # camp is only buildable on resources, while lumbermills are removed by default on forest removal
                         pPlot.setImprovementType(-1)
                     # Absinthe: message for the human player if it was inside it's territory

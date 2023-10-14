@@ -10,7 +10,7 @@
 from CvPythonExtensions import *
 import CvUtil
 import CvScreenEnums
-import XMLConsts as xml
+from CoreTypes import Improvement
 
 # globals
 gc = CyGlobalContext()
@@ -443,8 +443,8 @@ class CvPediaImprovement:
         for iImprovement in range(gc.getNumImprovementInfos()):
             # Absinthe: Unused improvements do not appear in the Civilopedia.
             if (
-                iImprovement != xml.iImprovementGoodyHut
-                and iImprovement != xml.iImprovementForestPreserve
+                iImprovement != Improvement.GOODY_HUT.value
+                and iImprovement != Improvement.FOREST_PRESERVE.value
             ):
                 improvementList.append(iImprovement)
                 iCount += 1

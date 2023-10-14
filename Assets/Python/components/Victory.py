@@ -11,6 +11,7 @@ from CoreTypes import (
     Specialist,
     StabilityCategory,
     Religion,
+    Improvement,
 )
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
 import PyHelpers
@@ -1540,7 +1541,7 @@ class Victory:
 
         # UHV 1: Have 10 Forts and 4 Castles by 1296
         if self.isPossibleUHV(Civ.SCOTLAND.value, 0, True):
-            iForts = CIVILIZATIONS[Civ.SCOTLAND].player.getImprovementCount(xml.iImprovementFort)
+            iForts = CIVILIZATIONS[Civ.SCOTLAND].player.getImprovementCount(Improvement.FORT.value)
             iCastles = CIVILIZATIONS[Civ.SCOTLAND].player.countNumBuildings(xml.iCastle)
             if iForts >= 10 and iCastles >= 4:
                 self.wonUHV(Civ.SCOTLAND.value, 0)

@@ -32,7 +32,7 @@ import RFCEMaps
 
 from MiscData import MessageData
 from TimelineData import DateTurn
-from CoreTypes import Civ, City, Religion, Scenario, UniquePower, StabilityCategory
+from CoreTypes import Civ, City, Improvement, Religion, Scenario, UniquePower, StabilityCategory
 from LocationsData import CITIES
 
 gc = CyGlobalContext()
@@ -472,18 +472,18 @@ class CvRFCEventHandler:
         iImpBeforeCityY = CvEventManager.iImpBeforeCity % 100
         # Absinthe: free walls if built on fort
         if (
-            iImpBeforeCityType == xml.iImprovementFort
+            iImpBeforeCityType == Improvement.FORT.value
             and (iImpBeforeCityX, iImpBeforeCityY) == tCity
         ):
             city.setHasRealBuilding(utils.getUniqueBuilding(iOwner, xml.iWalls), True)
         # Absinthe: free granary if built on hamlet
         if (
-            iImpBeforeCityType == xml.iImprovementHamlet
+            iImpBeforeCityType == Improvement.HAMLET.value
             and (iImpBeforeCityX, iImpBeforeCityY) == tCity
         ):
             city.setHasRealBuilding(utils.getUniqueBuilding(iOwner, xml.iGranary), True)
         # Absinthe: free granary and +1 population if built on village or town
-        if iImpBeforeCityType in [xml.iImprovementTown, xml.iImprovementVillage]:
+        if iImpBeforeCityType in [Improvement.TOWN.value, Improvement.VILLAGE.value]:
             if (iImpBeforeCityX, iImpBeforeCityY) == tCity:
                 city.changePopulation(1)
                 city.setHasRealBuilding(utils.getUniqueBuilding(iOwner, xml.iGranary), True)
@@ -594,7 +594,10 @@ class CvRFCEventHandler:
         iPlotY = pUnit.getY()
         pPlot = CyMap().plot(iPlotX, iPlotY)
         if pPlot.countTotalCulture() == 0:
-            if iImprovement >= xml.iImprovementCottage and iImprovement <= xml.iImprovementTown:
+            if (
+                iImprovement >= Improvement.COTTAGE.value
+                and iImprovement <= Improvement.TOWN.value
+            ):
                 self.barb.onImprovementDestroyed(iPlotX, iPlotY)
         iVictim = pPlot.getOwner()
         if iVictim > -1 and iVictim < CIVILIZATIONS.majors().len():

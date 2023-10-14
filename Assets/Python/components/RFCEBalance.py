@@ -5,11 +5,12 @@ from CoreTypes import (
     City,
     Civ,
     Colony,
-    Plague,
+    PlagueType,
     Promotion,
     Terrain,
     ProvinceTypes,
     Religion,
+    Improvement,
     Project,
     UniquePower,
     FaithPointBonusCategory,
@@ -588,33 +589,33 @@ class RFCEBalance:
         gc.setUP(
             Civ.SCOTLAND.value,
             UniquePower.IMPROVEMENT_BONUS.value,
-            1 * 100000 + xml.iImprovementFort * 1000 + 2,
+            1 * 100000 + Improvement.FORT.value * 1000 + 2,
         )
 
         gc.setUP(
             Civ.ENGLAND.value,
             UniquePower.IMPROVEMENT_BONUS.value,
-            1 * 100000 + xml.iImprovementWorkshop * 1000 + 1,
+            1 * 100000 + Improvement.WORKSHOP.value * 1000 + 1,
         )
         gc.setUP(
             Civ.ENGLAND.value,
             UniquePower.IMPROVEMENT_BONUS_2.value,
-            1 * 100000 + xml.iImprovementCottage * 1000 + 10,
+            1 * 100000 + Improvement.COTTAGE.value * 1000 + 10,
         )
         gc.setUP(
             Civ.ENGLAND.value,
             UniquePower.IMPROVEMENT_BONUS_3.value,
-            1 * 100000 + xml.iImprovementHamlet * 1000 + 10,
+            1 * 100000 + Improvement.HAMLET.value * 1000 + 10,
         )
         gc.setUP(
             Civ.ENGLAND.value,
             UniquePower.IMPROVEMENT_BONUS_4.value,
-            1 * 100000 + xml.iImprovementVillage * 1000 + 10,
+            1 * 100000 + Improvement.VILLAGE.value * 1000 + 10,
         )
         gc.setUP(
             Civ.ENGLAND.value,
             UniquePower.IMPROVEMENT_BONUS_5.value,
-            1 * 100000 + xml.iImprovementTown * 1000 + 10,
+            1 * 100000 + Improvement.TOWN.value * 1000 + 10,
         )
 
         # Speed up East/West India Trading Companies and all Colonies
@@ -1159,7 +1160,7 @@ class RFCEBalance:
             CIVILIZATIONS.majors().len(),
             CIVILIZATIONS.drop(Civ.BARBARIAN).len(),
             xml.iNumTechs,
-            Plague.BUILDING_PLAGUE.value,
+            PlagueType.BUILDING_PLAGUE.value,
             len(Religion),
         )
         for i in CIVILIZATIONS.majors().ids():

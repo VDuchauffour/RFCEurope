@@ -8,7 +8,7 @@
 
 
 from CvPythonExtensions import *
-from CoreTypes import Plague
+from CoreTypes import PlagueType
 import CvUtil
 import CvScreenEnums
 
@@ -661,7 +661,7 @@ class CvPediaBuilding:
                 and not gc.getBuildingInfo(iBuilding).isGraphicalOnly()
             ):
                 # 3Miro: Plague not appear as building
-                if iBuilding != Plague.PLAGUE.value:
+                if iBuilding != PlagueType.PLAGUE.value:
                     listBuildings.append(iBuilding)
                     iCount += 1
 

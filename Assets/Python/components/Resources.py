@@ -7,6 +7,7 @@ import XMLConsts as xml
 
 from MiscData import MessageData
 from TimelineData import DateTurn
+from CoreTypes import Improvement
 
 # globals
 gc = CyGlobalContext()
@@ -77,11 +78,11 @@ class Resources:
             # 			for now only adding the ones we actually use
             # 			Pasture, Camp and Colonial Trade Route cannot be built on base terrain (only with resource), so it is always safe to remove those
             # 			the question is whether we should also remove Farms and Lumbermills for example
-            if iBonusType == xml.iHorse and iImprovementType == xml.iImprovementPasture:
+            if iBonusType == xml.iHorse and iImprovementType == Improvement.PASTURE.value:
                 gc.getMap().plot(iX, iY).setImprovementType(-1)
             elif (
                 iBonusType == xml.iNorthAccess
-                and iImprovementType == xml.iImprovementColonialTrade
+                and iImprovementType == Improvement.COLONIAL_TRADE.value
             ):
                 gc.getMap().plot(iX, iY).setImprovementType(-1)
 

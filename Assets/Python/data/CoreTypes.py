@@ -466,7 +466,7 @@ class Building(IntEnum):
     TRIUMPHAL_ARCH = 175
 
 
-class Plague(IntEnum):
+class PlagueType(IntEnum):
     PLAGUE = 176
     BUILDING_PLAGUE = 177
 

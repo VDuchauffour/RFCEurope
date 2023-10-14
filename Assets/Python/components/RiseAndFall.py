@@ -20,6 +20,7 @@ from CoreTypes import (
     Religion,
     Specialist,
     Terrain,
+    Improvement,
     ProvinceTypes,
     UniquePower,
     StabilityCategory,
@@ -856,7 +857,9 @@ class RiseAndFall:
             )
 
             pPlot.eraseCityDevelopment()
-            pPlot.setImprovementType(xml.iImprovementTown)  # Improvement Town instead of the city
+            pPlot.setImprovementType(
+                Improvement.TOWN.value
+            )  # Improvement Town instead of the city
             pPlot.setRouteType(0)  # Also adding a road there
 
     def checkPlayerTurn(self, iGameTurn, iPlayer):

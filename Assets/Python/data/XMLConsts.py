@@ -463,38 +463,6 @@ iNumBuildings = 176
     iTriumphalArch,
 ) = range(iNumBuildings)
 
-
-# Improvements
-iNumImprovements = 25
-(
-    iImprovementLandWorked,
-    iImprovementWaterWorked,
-    iImprovementCityRuins,
-    iImprovementGoodyHut,
-    iImprovementFarm,
-    iImprovementFishingBoats,
-    iImprovementWhalingBoats,
-    iImprovementMine,
-    iImprovementWorkshop,
-    iImprovementLumbermill,
-    iImprovementWindmill,
-    iImprovementWatermill,
-    iImprovementPlantation,
-    iImprovementQuarry,
-    iImprovementPasture,
-    iImprovementCamp,
-    iImprovementColonialTrade,
-    iImprovementWinery,
-    iImprovementCottage,
-    iImprovementHamlet,
-    iImprovementVillage,
-    iImprovementTown,
-    iImprovementFort,
-    iImprovementForestPreserve,
-    iImprovementApiary,
-) = range(iNumImprovements)
-
-
 # Civics
 iNumCivics = 30
 (

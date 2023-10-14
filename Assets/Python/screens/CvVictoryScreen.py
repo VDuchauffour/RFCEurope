@@ -3,7 +3,17 @@
 from CvPythonExtensions import *
 from CoreData import CIVILIZATIONS
 from CoreData import COMPANIES
-from CoreTypes import City, Civ, Colony, Company, Project, ProvinceStatus, Religion, Specialist
+from CoreTypes import (
+    City,
+    Civ,
+    Colony,
+    Company,
+    Project,
+    ProvinceStatus,
+    Religion,
+    Specialist,
+    Improvement,
+)
 import CvUtil
 from LocationsData import CITIES
 import PyHelpers
@@ -2788,7 +2798,9 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        iScotlandFort = gc.getPlayer(Civ.SCOTLAND.value).getImprovementCount(xml.iImprovementFort)
+        iScotlandFort = gc.getPlayer(Civ.SCOTLAND.value).getImprovementCount(
+            Improvement.FORT.value
+        )
         iScotlandCastle = gc.getPlayer(Civ.SCOTLAND.value).countNumBuildings(xml.iCastle)
         sScotlandFort = localText.getText("TXT_KEY_IMPROVEMENT_FORT", ()) + ": "
         sScotlandCastle = localText.getText("TXT_KEY_BUILDING_CASTLE", ()) + ": "
