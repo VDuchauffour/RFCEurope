@@ -2244,9 +2244,9 @@ class MercenaryManager:
             iIterations += 1
         # add the default (free) promotions for the given unit type
         for iPromotion in range(len(Promotion) - 1):
-            if gc.getUnitInfo(iMercType).getFreePromotions(iPromotion.value):
+            if gc.getUnitInfo(iMercType).getFreePromotions(iPromotion):
                 if iPromotion not in lPromotions:
-                    lPromotions.append(iPromotion.value)
+                    lPromotions.append(iPromotion)
 
         (iPurchaseCost, iUpkeepCost) = self.GMU.getCost(iMerc, lPromotions)
         iCurrentProvince = lMercInfo[4][
@@ -2511,8 +2511,8 @@ class MercenaryManager:
             lPromotionList = []
             # almost all promotions are available through experience, so this is not only for the otherwise used iNumTotalMercPromotions
             for iPromotion in range(len(Promotion) - 1):
-                if pUnit.isHasPromotion(iPromotion.value):
-                    lPromotionList.append(iPromotion.value)
+                if pUnit.isHasPromotion(iPromotion):
+                    lPromotionList.append(iPromotion)
             if iNewPromotion not in lPromotionList:
                 lPromotionList.append(iNewPromotion)
 
