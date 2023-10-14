@@ -143,34 +143,23 @@ class Attributes(dict):
     @classmethod
     def from_nested_dicts(cls, data):
         """Construct nested Attributes from nested dictionaries."""
-        if isinstance(data, dict):
-            return cls(dict((key, cls.from_nested_dicts(data[key])) for key in data))
-        elif isinstance(data, list):
+        if isinstance(data, list):
             return [cls.from_nested_dicts(d) for d in data]
-        else:
-            return data
 
-    @classmethod
-    def from_nested_dicts_with_enum(cls, data):
-        """Construct nested Attributes from nested dictionaries."""
         if issubclass(data.__class__, EnumDataMapper):
-            if not data.do_not_cast:
-                data = dict(
-                    (key.name.lower(), cls.from_nested_dicts_with_enum(data[key])) for key in data
-                )
+            if data.do_not_cast:
+                return data
+            data = dict((key.name.lower(), cls.from_nested_dicts(data[key])) for key in data)
             return cls(data)
-        elif isinstance(data, dict):
+
+        if isinstance(data, dict):
             if all(isinstance(member, Enum) for member in data.keys()):
-                data = dict(
-                    (key.name.lower(), cls.from_nested_dicts_with_enum(data[key])) for key in data
-                )
+                data = dict((key.name.lower(), cls.from_nested_dicts(data[key])) for key in data)
             else:
-                data = dict((key, cls.from_nested_dicts_with_enum(data[key])) for key in data)
+                data = dict((key, cls.from_nested_dicts(data[key])) for key in data)
             return cls(data)
-        elif isinstance(data, list):
-            return [cls.from_nested_dicts_with_enum(d) for d in data]
-        else:
-            return data
+
+        return data
 
 
 class Item(object):
@@ -403,21 +392,16 @@ class BaseFactory(object):
                 self._attachments[name] = data
         return self
 
-    @staticmethod
-    def attribute_factory(data):
-        """Return a `Attributes` object given EnumDataMapper `data`."""
-        return Attributes.from_nested_dicts_with_enum(data)
-
     def _collect_direct_keys(self, member):
         return dict(
-            (k, self.attribute_factory(v.get(member))) for k, v in self._attachments.items()
+            (k, Attributes.from_nested_dicts(v.get(member))) for k, v in self._attachments.items()
         )
 
     def _collect_subkeys(self, member):
         attachments = {}
         for key in self._keys_attachments.keys():
             attachments[key] = dict(
-                (name, self.attribute_factory(data.get(member)))
+                (name, Attributes.from_nested_dicts(data.get(member)))
                 for name, data in self._keys_attachments[key].items()
             )
         return Attributes.from_nested_dicts(attachments)

@@ -743,7 +743,7 @@ CIV_INITIAL_WARS_500AD = CivDataMapper(
             do_not_cast=True,
         ),
     }
-)
+).fill_missing_members(CivDataMapper({}))
 
 CIV_INITIAL_WARS_1200AD = CivDataMapper(
     {
@@ -836,7 +836,7 @@ CIV_INITIAL_WARS_1200AD = CivDataMapper(
             do_not_cast=True,
         ),
     }
-)
+).fill_missing_members(CivDataMapper({}))
 
 CIV_INITIAL_WARS = ScenarioDataMapper(
     {
