@@ -65,12 +65,8 @@ class Civilization(Item):
         return team(self.id)
 
     @property
-    def player_id(self):
-        return player_id(self.id)
-
-    @property
-    def team_id(self):
-        return team_id(self.id)
+    def teamtype(self):
+        return teamtype(self.id)
 
     @property
     def name(self):
@@ -114,21 +110,21 @@ class Civilization(Item):
 
     def at_war(self, id):
         """Return True if the civilization is at war with `id`."""
-        return self.team.isAtWar(team_id(id))
+        return self.team.isAtWar(teamtype(id))
 
     def declare_war(self, id):
         """Declare war with the civilization with `id`."""
-        self.team.declareWar(team_id(id), False, -1)
+        self.team.declareWar(teamtype(id), False, -1)
 
     def set_war(self, id):
         """Set war with the civilization with `id`.
         Instead of `declare_war`, `set_war` don't affect diplomatic relations."""
-        self.team.setAtWar(team_id(id), True)
-        team(id).setAtWar(self.team_id, True)
+        self.team.setAtWar(teamtype(id), True)
+        team(id).setAtWar(self.teamtype, True)
 
     def make_peace(self, id):
         """Make peace with the civilization with `id`."""
-        self.team.makePeace(team_id(id))
+        self.team.makePeace(teamtype(id))
 
 
 class Civilizations(ItemCollection):
@@ -222,18 +218,18 @@ def player(identifier=None):
     )
 
 
-def player_id(identifier=None):
-    """Return player ID given an identifier."""
-    player(identifier).getID()
+def teamtype(identifier=None):
+    """Return team ID given an identifier."""
+    return player(identifier).getTeam()
 
 
 def team(identifier=None):
     """Return CyTeam object given an identifier."""
     if identifier is None:
-        return gc.getTeam(gc.getActivePlayer().getTeam())
+        return gc.getTeam(teamtype(identifier))
 
     if isinstance(identifier, int):
-        return gc.getTeam(gc.getPlayer(identifier).getTeam())
+        return gc.getTeam(teamtype(identifier))
 
     if isinstance(identifier, CoreTypes.Civ):
         return team(identifier.value)
@@ -250,11 +246,6 @@ def team(identifier=None):
     raise NotTypeExpectedError(
         "CoreTypes.Civ, CyPlayer, CyTeam, CyPlot, CyCity, CyUnit, or int", type(identifier)
     )
-
-
-def team_id(identifier=None):
-    """Return team ID given an identifier."""
-    team(identifier).getID()
 
 
 def civ(identifier=None):
@@ -277,7 +268,7 @@ def civ(identifier=None):
         return civ(identifier.getOwner())
 
     raise NotTypeExpectedError(
-        "CoreTypes.Civ, Civilization, CyPlayer, CyPlot, CyUnit, or int", type(identifier)
+        "CoreTypes.Civ, Civilization, CyPlayer, CyPlot or CyUnit", type(identifier)
     )
 
 

@@ -734,7 +734,7 @@ class RiseAndFall:
                 for other, war_threshold in civilization.initial.wars.items():
                     if percentage_chance(war_threshold, strict=True):
                         if not civilization.at_war(other):
-                            civilization.team.setAtWar(other.team, True)
+                            civilization.set_war(team(other))
 
     def checkTurn(self, iGameTurn):
         # Trigger betrayal mode
@@ -3634,16 +3634,8 @@ class RiseAndFall:
         if contacts:
             for contact in contacts:
                 other = civ(contact)
-                if other.player.isAlive() and not _civ.isHasMet(other.team_id):
-                    _civ.meet(other.team_id, bMeet)
-        # pCiv = gc.getPlayer(iCiv)
-        # teamCiv = gc.getTeam(pCiv.getTeam())
-        # for contact in CIV_INITIAL_CONTACTS[utils.getScenario()][get_civ_by_id(iCiv)]:
-        #     if contact:
-        #         pOtherPlayer = gc.getPlayer(contact.value)
-        #         tOtherPlayer = pOtherPlayer.getTeam()
-        #         if pOtherPlayer.isAlive() and not teamCiv.isHasMet(tOtherPlayer):
-        #             teamCiv.meet(tOtherPlayer, bMeet)
+                if other.player.isAlive() and not _civ.isHasMet(other.teamtype):
+                    _civ.meet(other.teamtype, bMeet)
 
     def LeaningTowerGP(self):
         iGP = gc.getGame().getSorenRandNum(7, "starting count")
