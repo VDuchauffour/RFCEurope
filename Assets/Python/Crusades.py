@@ -328,13 +328,25 @@ class Crusades:
         )
 
     def voteHumanPopup(self):
+        favorite_txt = (
+            gc.getPlayer(self.getFavorite()).getName()
+            + " ("
+            + gc.getPlayer(self.getFavorite()).getCivilizationShortDescription(0)
+            + ")"
+        )
+        powerful_txt = (
+            gc.getPlayer(self.getPowerful()).getName()
+            + " ("
+            + gc.getPlayer(self.getPowerful()).getCivilizationShortDescription(0)
+            + ")"
+        )
         self.showPopup(
             7618,
             CyTranslator().getText("TXT_KEY_CRUSADE_VOTE_POPUP", ()),
             CyTranslator().getText("TXT_KEY_CRUSADE_VOTE", ()),
             (
-                gc.getPlayer(self.getFavorite()).getName(),
-                gc.getPlayer(self.getPowerful()).getName(),
+                favorite_txt,
+                powerful_txt,
             ),
         )
 
