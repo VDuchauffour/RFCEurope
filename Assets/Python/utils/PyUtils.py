@@ -87,9 +87,9 @@ def chance(threshold, percentage, strict=False):
     if not 0 <= percentage <= threshold or not isinstance(percentage, int):
         raise ValueError("`percentage` must an int, received %s" % percentage)
     if strict:
-        op = operator.__le__
-    else:
         op = operator.__lt__
+    else:
+        op = operator.__le__
     return op(rand(threshold), percentage)
 
 
