@@ -1587,9 +1587,15 @@ class Victory:
                     CIVILIZATIONS[Civ.SCOTLAND].has_state_religion()
                     and CIVILIZATIONS[Civ.FRANCE].has_state_religion()
                 ):
-                    if CIVILIZATIONS[Civ.SCOTLAND] != CIVILIZATIONS[Civ.FRANCE]:
+                    if (
+                        CIVILIZATIONS[Civ.SCOTLAND].state_religion()
+                        != CIVILIZATIONS[Civ.FRANCE].state_religion()
+                    ):
                         iScore -= 3
-                    elif CIVILIZATIONS[Civ.SCOTLAND] == CIVILIZATIONS[Civ.FRANCE]:
+                    elif (
+                        CIVILIZATIONS[Civ.SCOTLAND].state_religion()
+                        == CIVILIZATIONS[Civ.FRANCE].state_religion()
+                    ):
                         iScore += 1
                 iOldScore = CIVILIZATIONS[Civ.SCOTLAND].player.getUHVCounter(1)
                 iNewScore = iOldScore + iScore
