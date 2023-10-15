@@ -6,6 +6,7 @@ from CoreTypes import (
     Civ,
     Civic,
     Colony,
+    Feature,
     PlagueType,
     Promotion,
     Terrain,
@@ -547,7 +548,7 @@ class RFCEBalance:
         gc.setUP(
             Civ.MOROCCO.value,
             UniquePower.FEATURE_BONUS.value,
-            1 * 100000 + xml.iOasis * 1000 + 100 + 1,
+            1 * 100000 + Feature.OASIS.value * 1000 + 100 + 1,
         )
 
         gc.setUP(

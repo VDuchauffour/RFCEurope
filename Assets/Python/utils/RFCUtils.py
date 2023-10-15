@@ -12,6 +12,7 @@ from CoreTypes import (
     Wonder,
     Promotion,
     Terrain,
+    Feature,
 )
 import CvUtil
 import CvScreenEnums
@@ -1046,7 +1047,7 @@ class RFCUtils:
         """Plot is valid if it's hill or flatlands, it isn't marsh or jungle, it isn't occupied by a unit or city and if it isn't a civ's territory."""
         pCurrent = gc.getMap().plot(tCoords[0], tCoords[1])
         if pCurrent.isHills() or pCurrent.isFlatlands():
-            if pCurrent.getFeatureType() not in [xml.iMarsh, xml.iJungle]:
+            if pCurrent.getFeatureType() not in [Feature.MARSH.value, Feature.JUNGLE.value]:
                 if not pCurrent.isCity() and not pCurrent.isUnit():
                     if pCurrent.countTotalCulture() == 0:
                         return True
@@ -1056,7 +1057,7 @@ class RFCUtils:
         """Plot is valid if it's hill or flatlands, it isn't marsh or jungle, and it isn't occupied by a unit or city."""
         pCurrent = gc.getMap().plot(tCoords[0], tCoords[1])
         if pCurrent.isHills() or pCurrent.isFlatlands():
-            if pCurrent.getFeatureType() not in [xml.iMarsh, xml.iJungle]:
+            if pCurrent.getFeatureType() not in [Feature.MARSH.value, Feature.JUNGLE.value]:
                 if not pCurrent.isCity() and not pCurrent.isUnit():
                     return True
         return False
@@ -1088,7 +1089,7 @@ class RFCUtils:
         """Plot is valid if it's hill or flatlands, it isn't marsh or jungle, it isn't occupied by a unit or city and if it isn't a civ's territory. Unit check extended to adjacent plots."""
         pCurrent = gc.getMap().plot(tCoords[0], tCoords[1])
         if pCurrent.isHills() or pCurrent.isFlatlands():
-            if pCurrent.getFeatureType() not in [xml.iMarsh, xml.iJungle]:
+            if pCurrent.getFeatureType() not in [Feature.MARSH.value, Feature.JUNGLE.value]:
                 if not pCurrent.isCity() and not pCurrent.isUnit():
                     if pCurrent.countTotalCulture() == 0:
                         for (x, y) in self.surroundingPlots(tCoords):
@@ -1101,7 +1102,7 @@ class RFCUtils:
         """Plot is valid if it's hill or flatlands, it isn't marsh or jungle, it isn't occupied by a unit or city and if it's in a given civ's territory. Unit check extended to adjacent plots."""
         pCurrent = gc.getMap().plot(tCoords[0], tCoords[1])
         if pCurrent.isHills() or pCurrent.isFlatlands():
-            if pCurrent.getFeatureType() not in [xml.iMarsh, xml.iJungle]:
+            if pCurrent.getFeatureType() not in [Feature.MARSH.value, Feature.JUNGLE.value]:
                 if not pCurrent.isCity() and not pCurrent.isUnit():
                     if pCurrent.getOwner() in argsList:
                         for (x, y) in self.surroundingPlots(tCoords):
@@ -1116,14 +1117,13 @@ class RFCUtils:
         if pCurrent.isHills() or pCurrent.isFlatlands():
             if not pCurrent.isImpassable():
                 if not pCurrent.isCity() and not pCurrent.isUnit():
-                    if (
-                        pCurrent.getTerrainType()
-                        not in [
-                            Terrain.DESERT.value,
-                            Terrain.TUNDRA.value,
-                        ]
-                        and pCurrent.getFeatureType() not in [xml.iMarsh, xml.iJungle]
-                    ):
+                    if pCurrent.getTerrainType() not in [
+                        Terrain.DESERT.value,
+                        Terrain.TUNDRA.value,
+                    ] and pCurrent.getFeatureType() not in [
+                        Feature.MARSH.value,
+                        Feature.JUNGLE.value,
+                    ]:
                         if pCurrent.countTotalCulture() == 0:
                             return True
         return False
@@ -1147,7 +1147,7 @@ class RFCUtils:
         """Plot is valid if it's hill or flatlands, it isn't marsh or jungle, it isn't occupied by a unit and if it is in the given civ's territory."""
         pCurrent = gc.getMap().plot(tCoords[0], tCoords[1])
         if pCurrent.isHills() or pCurrent.isFlatlands():
-            if pCurrent.getFeatureType() not in [xml.iMarsh, xml.iJungle]:
+            if pCurrent.getFeatureType() not in [Feature.MARSH.value, Feature.JUNGLE.value]:
                 if not pCurrent.isCity() and not pCurrent.isUnit():
                     if pCurrent.getOwner() == argsList:
                         return True

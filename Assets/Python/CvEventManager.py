@@ -24,7 +24,7 @@ import RFCEBalance
 import random
 from MiscData import WORLD_HEIGHT, MessageData
 from CoreData import CIVILIZATIONS
-from CoreTypes import Wonder, Promotion, Project, Improvement
+from CoreTypes import Wonder, Promotion, Project, Improvement, Feature
 
 utils = RFCUtils.RFCUtils()
 balance = RFCEBalance.RFCEBalance()
@@ -632,8 +632,8 @@ class CvEventManager:
         if pPlot.getBonusType(-1) != -1:  # only proceed if there is a bonus resource on the plot
             if (
                 iFeatureType == gc.getInfoTypeForString("FEATURE_FOREST")
-                or iFeatureType == xml.iDenseForest
-                or iFeatureType == xml.iPalmForest
+                or iFeatureType == Feature.DENSEFOREST.value
+                or iFeatureType == Feature.PALMFOREST.value
             ):
                 iBonusType = pPlot.getBonusType(-1)
                 if iBonusType in [xml.iTimber, xml.iDeer, xml.iFur]:

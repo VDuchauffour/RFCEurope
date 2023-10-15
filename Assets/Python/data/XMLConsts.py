@@ -464,23 +464,6 @@ iNumBuildings = 176
 ) = range(iNumBuildings)
 
 
-# Feature & terrain
-iNumFeatures = 11
-(
-    iIce,
-    iJungle,
-    iDenseForest,
-    iOasis,
-    iFloodPlains,
-    iWoodland,
-    iMarsh,
-    iPalmForest,
-    iIslands,
-    iReef,
-    iPyramid,
-) = range(iNumFeatures)
-
-
 # Leaders
 iNumLeaders = 74
 (

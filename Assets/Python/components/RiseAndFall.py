@@ -20,6 +20,7 @@ from CoreTypes import (
     Religion,
     Specialist,
     Terrain,
+    Feature,
     Improvement,
     ProvinceTypes,
     UniquePower,
@@ -2274,14 +2275,13 @@ class RiseAndFall:
                 plot = gc.getMap().plot(tPlot[0], tPlot[1])
                 if (plot.isHills() or plot.isFlatlands()) and not plot.isImpassable():
                     if not plot.isUnit():
-                        if (
-                            plot.getTerrainType()
-                            not in [
-                                Terrain.DESERT.value,
-                                Terrain.TUNDRA.value,
-                            ]
-                            and plot.getFeatureType() not in [xml.iMarsh, xml.iJungle]
-                        ):
+                        if plot.getTerrainType() not in [
+                            Terrain.DESERT.value,
+                            Terrain.TUNDRA.value,
+                        ] and plot.getFeatureType() not in [
+                            Feature.MARSH.value,
+                            Feature.JUNGLE.value,
+                        ]:
                             if plot.countTotalCulture() == 0:
                                 plotList.append(tPlot)
             rndNum = gc.getGame().getSorenRandNum(len(plotList), "searching another free plot")
