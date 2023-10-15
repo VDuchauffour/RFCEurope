@@ -1,6 +1,6 @@
 from CvPythonExtensions import *
 import Consts
-from CoreData import CIVILIZATIONS
+from CoreData import civilizations
 from CoreTypes import (
     City,
     Civ,
@@ -630,7 +630,7 @@ class RFCEBalance:
             Civ.PORTUGAL.value, UniquePower.STABILITY_BONUS_FOUNDING.value, 1
         )  # "hidden" part of the UP
 
-        for i in CIVILIZATIONS.drop(Civ.BARBARIAN).ids():
+        for i in civilizations().drop(Civ.BARBARIAN).ids():
             if not i == Civ.AUSTRIA.value:
                 gc.setDiplomacyModifiers(i, Civ.AUSTRIA.value, +4)
         gc.setUP(Civ.AUSTRIA.value, UniquePower.PER_CITY_COMMERCE_BONUS.value, 200)
@@ -676,7 +676,7 @@ class RFCEBalance:
         gc.setFastTerrain(Terrain.OCEAN.value)
 
         # set religious spread factors
-        for civ in CIVILIZATIONS:
+        for civ in civilizations():
             for religion, threshold in civ.religion.spreading_threshold.items():
                 gc.setReligionSpread(
                     civ.id,
@@ -759,7 +759,7 @@ class RFCEBalance:
 
         # the utils.getUniqueBuilding function does not work, probably the util functions are not yet usable when these initial values are set
         # but in the .dll these values are only used for the civ-specific building of the given buildingclass, so we can these add redundantly
-        for iPlayer in CIVILIZATIONS.majors().ids():
+        for iPlayer in civilizations().majors().ids():
             # walls, kasbah
             gc.setBuildingPref(iPlayer, xml.iWalls, 5)
             gc.setBuildingPref(iPlayer, xml.iMoroccoKasbah, 5)
@@ -1001,7 +1001,7 @@ class RFCEBalance:
         # 3Miro: Psycho AI cheat, this will make Ottoman AI think it can win battles vs Constantinople at 90/100 rate
         # 	it will also actually boost the Ottoman's odds (actually lower the defenders chance by 20 percent), but only when attacking Constantinople
         gc.setPsychoAICheat(
-            Civ.OTTOMAN.value, *CIVILIZATIONS[Civ.BYZANTIUM].location.capital.to_tuple()
+            Civ.OTTOMAN.value, *civilizations()[Civ.BYZANTIUM].location.capital.to_tuple()
         )
 
         # 3Miro: be very careful here, this can really mess the AI
@@ -1159,13 +1159,13 @@ class RFCEBalance:
         gc.setSizeNPlayers(
             WORLD_WIDTH,
             WORLD_HEIGHT,
-            CIVILIZATIONS.majors().len(),
-            CIVILIZATIONS.drop(Civ.BARBARIAN).len(),
+            civilizations().majors().len(),
+            civilizations().drop(Civ.BARBARIAN).len(),
             xml.iNumTechs,
             PlagueType.BUILDING_PLAGUE.value,
             len(Religion),
         )
-        for i in CIVILIZATIONS.majors().ids():
+        for i in civilizations().majors().ids():
             for y in range(WORLD_HEIGHT):
                 for x in range(WORLD_WIDTH):
                     gc.setSettlersMap(i, y, x, RFCEMaps.tSettlersMaps[i][y][x])
@@ -1185,13 +1185,13 @@ class RFCEBalance:
         )  # set the Number of Provinces, call this before you set any AI or culture modifiers
 
         # birth turns for the players, do not change this loop
-        for civ in CIVILIZATIONS.drop(Civ.BARBARIAN):
+        for civ in civilizations().drop(Civ.BARBARIAN):
             gc.setStartingTurn(civ.id, civ.date.birth)
 
     def postAreas(self):
         # 3Miro: DO NOT CHANGE THIS CODE
         # this adds the Core and Normal Areas from Consts.py into C++. There is Dynamical Memory involved, so don't change this
-        for civ in CIVILIZATIONS.majors().ids():
+        for civ in civilizations().majors().ids():
             iCBLx = Consts.tCoreAreasTL[civ][0]
             iCBLy = Consts.tCoreAreasTL[civ][1]
             iCTRx = Consts.tCoreAreasBR[civ][0]
@@ -1221,8 +1221,8 @@ class RFCEBalance:
             xml.iGreatProphet, GREAT_PROPHET_FAITH_POINT_BONUS, 20, 40
         )  # try to amass at least 20 and don't bother above 40 points
         gc.setIndependnets(
-            min(CIVILIZATIONS.independents().ids()),
-            max(CIVILIZATIONS.independents().ids()),
+            min(civilizations().independents().ids()),
+            max(civilizations().independents().ids()),
             Civ.BARBARIAN.value,
         )
         gc.setPapalPlayer(Civ.POPE.value, Religion.CATHOLICISM.value)
@@ -1232,6 +1232,6 @@ class RFCEBalance:
         # 3MiroMercs: set the merc promotion
         gc.setMercPromotion(Promotion.MERC.value)
 
-        for civ in CIVILIZATIONS.majors():
+        for civ in civilizations().majors():
             if civ.initial.condition:
                 gc.setStartingWorkers(civ.id, civ.initial.condition.workers)

@@ -1,7 +1,7 @@
 # RFC Europe - Province manager
 
 from CvPythonExtensions import *
-from CoreData import CIVILIZATIONS
+from CoreData import civilizations
 import XMLConsts as xml
 import RFCEMaps
 import RFCUtils  # Absinthe
@@ -701,7 +701,7 @@ class ProvinceManager:
 
     def setup(self):
         # set the initial situation for all players
-        for civ in CIVILIZATIONS.main():
+        for civ in civilizations().main():
             for iProv in self.tCoreProvinces[civ.id]:
                 civ.player.setProvinceType(iProv, ProvinceTypes.CORE.value)
             for iProv in self.tNormProvinces[civ.id]:
@@ -714,7 +714,7 @@ class ProvinceManager:
                 civ.player.setProvinceType(iProv, ProvinceTypes.POTENTIAL.value)
         # update provinces for the 1200 AD Scenario
         if utils.getScenario() == Scenario.i1200AD:
-            for civ in CIVILIZATIONS.main():
+            for civ in civilizations().main():
                 if civ.date.birth < DateTurn.i1200AD:
                     self.onSpawn(civ.id)
 
@@ -741,7 +741,7 @@ class ProvinceManager:
             pPrussia.setProvinceType(xml.iP_GreaterPoland, ProvinceTypes.OUTER.value)
 
     def onCityBuilt(self, iPlayer, x, y):
-        if iPlayer >= CIVILIZATIONS.main().len():
+        if iPlayer >= civilizations().main().len():
             return
         pPlayer = gc.getPlayer(iPlayer)
         iProv = RFCEMaps.tProvinceMap[y][x]
@@ -758,7 +758,7 @@ class ProvinceManager:
                 utils.refreshStabilityOverlay()  # refresh the stability overlay
 
     def onCityAcquired(self, owner, iPlayer, city, bConquest, bTrade):
-        if iPlayer >= CIVILIZATIONS.main().len():
+        if iPlayer >= civilizations().main().len():
             return
         pPlayer = gc.getPlayer(iPlayer)
         iProv = city.getProvince()

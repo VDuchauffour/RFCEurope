@@ -23,7 +23,7 @@ import RFCUtils
 import RFCEBalance
 import random
 from MiscData import WORLD_HEIGHT, MessageData
-from CoreData import CIVILIZATIONS
+from CoreData import civilizations
 from CoreTypes import Wonder, Promotion, Project, Improvement, Feature
 
 utils = RFCUtils.RFCUtils()
@@ -734,7 +734,7 @@ class CvEventManager:
 
             # techs known by the other civs
             lOthersKnownTechs = []
-            for iLoopPlayer in CIVILIZATIONS.majors().ids():
+            for iLoopPlayer in civilizations().majors().ids():
                 pLoopPlayer = gc.getPlayer(iLoopPlayer)
                 iLoopTeam = pLoopPlayer.getTeam()
                 pLoopTeam = gc.getTeam(iLoopTeam)
@@ -839,7 +839,7 @@ class CvEventManager:
 
         # Absinthe: Kalmar Castle start
         if iBuildingType == xml.iKalmarCastle:
-            for neighbour in CIVILIZATIONS[iPlayer].location.neighbours:
+            for neighbour in civilizations()[iPlayer].location.neighbours:
                 iNeighbour = neighbour.value
                 pNeighbour = gc.getPlayer(iNeighbour)
                 if pNeighbour.isAlive() and iPlayer != iNeighbour:
@@ -1123,7 +1123,7 @@ class CvEventManager:
         if pTeam.isTrainVassalUU():
             l_vassalUU = []
             iDefaultUnit = utils.getBaseUnit(iUnitType)
-            for iLoopPlayer in CIVILIZATIONS.majors().ids():
+            for iLoopPlayer in civilizations().majors().ids():
                 pLoopPlayer = gc.getPlayer(iLoopPlayer)
                 if pLoopPlayer.isAlive():
                     if gc.getTeam(pLoopPlayer.getTeam()).isVassal(iTeam):
@@ -2257,7 +2257,7 @@ class CvEventManager:
         if bVassal:
             # Absinthe: Imperial Diet start
             MasterTeam = gc.getTeam(iMaster)
-            for iPlayer in CIVILIZATIONS.majors().ids():
+            for iPlayer in civilizations().majors().ids():
                 pPlayer = gc.getPlayer(iPlayer)
                 if (
                     pPlayer.getTeam() == iMaster

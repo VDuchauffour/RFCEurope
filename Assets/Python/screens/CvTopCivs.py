@@ -3,7 +3,7 @@
 # Author - Jon Shafer
 # Top Civilizations screen
 
-from CoreData import CIVILIZATIONS
+from CoreData import civilizations
 import PyHelpers
 import CvUtil
 import CvScreenEnums
@@ -240,7 +240,7 @@ class CvTopCivs:
         # Will eventually Store [iValue, iPlayerID]
         self.aiTopCivsValues = []
 
-        for iPlayerLoop in CIVILIZATIONS.majors().ids():
+        for iPlayerLoop in civilizations().majors().ids():
 
             if gc.getPlayer(iPlayerLoop).isAlive():
 

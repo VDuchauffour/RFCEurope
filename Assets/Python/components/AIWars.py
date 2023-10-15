@@ -1,7 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - AI Wars
 
 from CvPythonExtensions import *
-from CoreData import CIVILIZATIONS
+from CoreData import civilizations
 from CoreTypes import Civ
 import PyHelpers  # LOQ
 import RFCUtils
@@ -128,7 +128,7 @@ class AIWars:
 
             # skip if already in a world war
             iCiv, iTargetCiv = self.pickCivs()
-            if 0 <= iTargetCiv <= CIVILIZATIONS.drop(Civ.BARBARIAN).len():
+            if 0 <= iTargetCiv <= civilizations().drop(Civ.BARBARIAN).len():
                 if iTargetCiv != Civ.POPE.value and iCiv != Civ.POPE.value and iCiv != iTargetCiv:
                     self.initWar(iCiv, iTargetCiv, iGameTurn, iMaxInterval, iMinInterval)
                     return
@@ -142,7 +142,7 @@ class AIWars:
         iCiv = -1
         iTargetCiv = -1
         iCiv = self.chooseAttackingPlayer()
-        if 0 <= iCiv <= CIVILIZATIONS.majors().len():
+        if 0 <= iCiv <= civilizations().majors().len():
             iTargetCiv = self.checkGrid(iCiv)
             return (iCiv, iTargetCiv)
         else:
@@ -169,7 +169,7 @@ class AIWars:
             )
 
     ##	def initArray(self):
-    ##		for k in CIVILIZATIONS.majors().ids():
+    ##		for k in civilizations().majors().ids():
     ##			grid = []
     ##			for j in range( WORLD_HEIGHT ):
     ##				line = []
@@ -180,9 +180,9 @@ class AIWars:
 
     def chooseAttackingPlayer(self):
         # finding max teams ever alive (countCivTeamsEverAlive() doesn't work as late human starting civ gets killed every turn)
-        iMaxCivs = CIVILIZATIONS.majors().len()
-        for i in CIVILIZATIONS.majors().ids():
-            j = CIVILIZATIONS.main().len() - i
+        iMaxCivs = civilizations().majors().len()
+        for i in civilizations().majors().ids():
+            j = civilizations().main().len() - i
             if gc.getPlayer(j).isAlive():
                 iMaxCivs = j
                 break
@@ -207,7 +207,7 @@ class AIWars:
                         # check if a world war is already in place:
                         iNumAlreadyWar = 0
                         tLoopCiv = gc.getTeam(gc.getPlayer(iLoopCiv).getTeam())
-                        for kLoopCiv in CIVILIZATIONS.majors().ids():
+                        for kLoopCiv in civilizations().majors().ids():
                             if tLoopCiv.isAtWar(kLoopCiv):
                                 iNumAlreadyWar += 1
                         if iNumAlreadyWar >= 4:
@@ -228,10 +228,10 @@ class AIWars:
     def checkGrid(self, iCiv):
         pCiv = gc.getPlayer(iCiv)
         pTeam = gc.getTeam(pCiv.getTeam())
-        lTargetCivs = [0] * CIVILIZATIONS.drop(Civ.BARBARIAN).len()
+        lTargetCivs = [0] * civilizations().drop(Civ.BARBARIAN).len()
 
         # set alive civs to 1 to differentiate them from dead civs
-        for iLoopPlayer in CIVILIZATIONS.drop(Civ.BARBARIAN).ids():
+        for iLoopPlayer in civilizations().drop(Civ.BARBARIAN).ids():
             if iLoopPlayer == iCiv:
                 continue
             if pTeam.isAtWar(iLoopPlayer):  # if already at war with iCiv then it remains 0
@@ -240,7 +240,7 @@ class AIWars:
             iLoopTeam = pLoopPlayer.getTeam()
             pLoopTeam = gc.getTeam(iLoopTeam)
             if (
-                iLoopPlayer < CIVILIZATIONS.majors().len()
+                iLoopPlayer < civilizations().majors().len()
             ):  # if master or vassal of iCiv then it remains 0
                 if pLoopTeam.isVassal(iCiv) or pTeam.isVassal(iLoopPlayer):
                     continue
@@ -249,7 +249,7 @@ class AIWars:
 
         for (i, j) in utils.getWorldPlotsList():
             iOwner = gc.getMap().plot(i, j).getOwner()
-            if 0 <= iOwner < CIVILIZATIONS.drop(Civ.BARBARIAN).len() and iOwner != iCiv:
+            if 0 <= iOwner < civilizations().drop(Civ.BARBARIAN).len() and iOwner != iCiv:
                 if lTargetCivs[iOwner] > 0:
                     iValue = RFCEMaps.tWarsMaps[iCiv][WORLD_HEIGHT - 1 - j][i]
                     if iOwner in [
@@ -262,18 +262,18 @@ class AIWars:
                     lTargetCivs[iOwner] += iValue
 
         # contacts do not disappear in RFCE, so if isHasMet was True they do have a contact
-        # for k in CIVILIZATIONS.majors().ids():
+        # for k in civilizations().majors().ids():
         # 	if not pCiv.canContact(k):
         # 		lTargetCivs[k] /= 8
 
         # normalization
         iMaxTempValue = max(lTargetCivs)
         if iMaxTempValue > 0:
-            for civ in CIVILIZATIONS.drop(Civ.BARBARIAN).ids():
+            for civ in civilizations().drop(Civ.BARBARIAN).ids():
                 if lTargetCivs[civ] > 0:
                     lTargetCivs[civ] = lTargetCivs[civ] * 500 / iMaxTempValue
 
-        for iLoopCiv in CIVILIZATIONS.drop(Civ.BARBARIAN).ids():
+        for iLoopCiv in civilizations().drop(Civ.BARBARIAN).ids():
             if iLoopCiv == iCiv:
                 continue
 
@@ -293,7 +293,7 @@ class AIWars:
             if (
                 utils.getPlagueCountdown(iLoopCiv) > 0
                 or utils.getPlagueCountdown(iLoopCiv) < -10
-                and not gc.getGame().getGameTurn() <= CIVILIZATIONS[iLoopCiv].date.birth + 20
+                and not gc.getGame().getGameTurn() <= civilizations()[iLoopCiv].date.birth + 20
             ):
                 lTargetCivs[iLoopCiv] *= 3
                 lTargetCivs[iLoopCiv] /= 2
@@ -317,7 +317,7 @@ class AIWars:
             if pTeam.isDefensivePact(iLoopCiv):
                 lTargetCivs[iLoopCiv] /= 4
             # if friend of a friend
-        ##			for jLoopCiv in CIVILIZATIONS.drop(Civ.BARBARIAN).ids():
+        ##			for jLoopCiv in civilizations().drop(Civ.BARBARIAN).ids():
         ##				if (pTeam.isDefensivePact(jLoopCiv) and gc.getTeam(gc.getPlayer(iLoopCiv).getTeam()).isDefensivePact(jLoopCiv)):
         ##					lTargetCivs[iLoopCiv] /= 2
 

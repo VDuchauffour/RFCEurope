@@ -2,7 +2,7 @@
 ## Copyright Firaxis Games 2005
 ## Improvements to this screen by Almightix - thanks
 from CvPythonExtensions import *
-from CoreData import CIVILIZATIONS
+from CoreData import civilizations
 from PyHelpers import PyPlayer
 import CvUtil
 import CvScreenEnums
@@ -219,7 +219,7 @@ class CvEspionageAdvisor:
             # if (pPlayer.getTeam() != pActivePlayer.getTeam() and not pPlayer.isBarbarian()): #Rhye
             if (
                 pPlayer.getTeam() != pActivePlayer.getTeam()
-                and iLoop < CIVILIZATIONS.majors().len()
+                and iLoop < civilizations().majors().len()
             ):  # Rhye
                 if pPlayer.isAlive():
                     if pActiveTeam.isHasMet(pPlayer.getTeam()):

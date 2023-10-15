@@ -9,7 +9,7 @@ from TimelineData import DateTurn
 import XMLConsts as xml
 from StoredData import sd
 
-from CoreData import CIVILIZATIONS
+from CoreData import civilizations
 from MiscData import MessageData
 
 # globals
@@ -3438,7 +3438,7 @@ class Barbs:
                     iRevoltIndex = lRevolts.index(iRevoltDate)
                     break
             # loop over all the province tiles to find the cities revolting
-            lPlayersOwning = [0] * CIVILIZATIONS.main().len()
+            lPlayersOwning = [0] * civilizations().main().len()
             iProvince = lNation[0]
             for iI in range(gc.getNumProvinceTiles(iProvince)):
                 iX = gc.getProvinceX(iProvince, iI)
@@ -3452,7 +3452,7 @@ class Barbs:
                         ):
                             lPlayersOwning[iOwner] += 1
 
-            for iPlayer in CIVILIZATIONS.main().ids():
+            for iPlayer in civilizations().main().ids():
                 if lPlayersOwning[iPlayer] > 0:
                     if utils.getHumanID() == iPlayer:
                         self.doRevoltHuman(iPlayer, iGameTurn, lNation, iRevoltIndex)

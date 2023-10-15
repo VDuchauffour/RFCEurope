@@ -12,6 +12,7 @@ from CivilizationsData import (
     CIV_INITIAL_CONDITION,
 )
 from CoreStructures import CivilizationsFactory, CompaniesFactory
+from CoreTypes import Scenario
 from LocationsData import (
     CIV_AREAS,
     CIV_CAPITAL_LOCATIONS,
@@ -32,7 +33,6 @@ from TimelineData import (
     COMPANY_DEATHDATE,
 )
 
-CURRENT_SCENARIO = get_scenario()
 
 COMPANIES = (
     CompaniesFactory()
@@ -43,14 +43,11 @@ COMPANIES = (
     .collect()
 )
 
-CIVILIZATIONS = (
+CIVILIZATIONS_BASE = (
     CivilizationsFactory()
     .add_key("initial", "location", "religion", "ai", "misc", "date")
     .attach("properties", CIV_PROPERTIES)
     .attach("leaders", CIV_LEADERS)
-    .attach("condition", CIV_INITIAL_CONDITION[CURRENT_SCENARIO], key="initial")
-    .attach("contact", CIV_INITIAL_CONTACTS[CURRENT_SCENARIO], key="initial")
-    .attach("wars", CIV_INITIAL_WARS[CURRENT_SCENARIO], key="initial")
     .attach("respawning_threshold", CIV_RESPAWNING_THRESHOLD, key="location")
     .attach("capital", CIV_CAPITAL_LOCATIONS, key="location")
     .attach("new_capital", CIV_NEW_CAPITAL_LOCATIONS, key="location")
@@ -58,7 +55,6 @@ CIVILIZATIONS = (
     .attach("old_neighbours", CIV_OLDER_NEIGHBOURS, key="location")
     .attach("home_colony", CIV_HOME_LOCATIONS, key="location")
     .attach("area", CIV_AREAS, key="location")
-    .attach("visible_area", CIV_VISIBLE_AREA[CURRENT_SCENARIO], key="location")
     .attach("spreading_threshold", CIV_RELIGION_SPREADING_THRESHOLD, key="religion")
     .attach("tolerance", CIV_RELIGIOUS_TOLERANCE, key="religion")
     .attach("stop_birth_threshold", CIV_AI_STOP_BIRTH_THRESHOLD, key="ai")
@@ -68,5 +64,32 @@ CIVILIZATIONS = (
     .attach("birth", CIV_BIRTHDATE, key="date")
     .attach("collapse", CIV_COLLAPSE_DATE, key="date")
     .attach("respawning", CIV_RESPAWNING_DATE, key="date")
+)
+
+CIVILIZATIONS_500AD = (
+    CIVILIZATIONS_BASE.attach("visible_area", CIV_VISIBLE_AREA[Scenario.i500AD], key="location")
+    .attach("condition", CIV_INITIAL_CONDITION[Scenario.i500AD], key="initial")
+    .attach("contact", CIV_INITIAL_CONTACTS[Scenario.i500AD], key="initial")
+    .attach("wars", CIV_INITIAL_WARS[Scenario.i500AD], key="initial")
     .collect()
 )
+
+CIVILIZATIONS_1200AD = (
+    CIVILIZATIONS_BASE.attach("visible_area", CIV_VISIBLE_AREA[Scenario.i1200AD], key="location")
+    .attach("condition", CIV_INITIAL_CONDITION[Scenario.i1200AD], key="initial")
+    .attach("contact", CIV_INITIAL_CONTACTS[Scenario.i1200AD], key="initial")
+    .attach("wars", CIV_INITIAL_WARS[Scenario.i1200AD], key="initial")
+    .collect()
+)
+
+
+def civilizations(scenario=None):
+    """Return civilizations data given a scenario."""
+    if scenario is None:
+        scenario = get_scenario()
+
+    data_mapper = {
+        Scenario.i500AD: CIVILIZATIONS_500AD,
+        Scenario.i1200AD: CIVILIZATIONS_1200AD,
+    }
+    return data_mapper[scenario]

@@ -4,7 +4,7 @@
 # Thanks to "Ulf 'ulfn' Norell" from Apolyton for his additions relating to the graph section of this screen
 
 from CvPythonExtensions import *
-from CoreData import CIVILIZATIONS
+from CoreData import civilizations
 import CvUtil
 
 import string
@@ -1734,7 +1734,7 @@ class CvInfoScreen:
 
         # Absinthe: Loop through all major players to determine Rank and relative Strength
         # Absinthe: Papal States are not included in the statistics (not a rival in the strict sense)
-        for iPlayerLoop in CIVILIZATIONS.main().ids():
+        for iPlayerLoop in civilizations().main().ids():
 
             # Absinthe: probably the isAlive check would be enough, but we have the barbarian and minor civ checks anyway
             if (
@@ -4637,7 +4637,7 @@ class CvInfoScreen:
                 if not pTeam.isBarbarian():
                     # Loop through projects
                     try:
-                        x, y = CIVILIZATIONS[iPlayerLoop].location.home_colony
+                        x, y = civilizations()[iPlayerLoop].location.home_colony
                         screen.addFlagWidgetGFC(
                             self.home_flag,
                             x - 40,

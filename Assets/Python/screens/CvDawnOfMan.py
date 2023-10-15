@@ -2,7 +2,7 @@
 ## Copyright Firaxis Games 2005
 
 import math
-from CoreData import CIVILIZATIONS
+from CoreData import civilizations
 import CvUtil
 from CvPythonExtensions import *
 import RFCUtils
@@ -185,9 +185,9 @@ class CvDawnOfMan:
         pActivePlayer = gc.getPlayer(CyGame().getActivePlayer())
 
         # Absinthe: civ-specific Dawn of Man screen - idea from SoI
-        dom_values = CIVILIZATIONS[CyGame().getActiveTeam()].misc.dawn_of_man
+        dom_values = civilizations()[CyGame().getActiveTeam()].misc.dawn_of_man
         year = dom_values[0] + CyTranslator().getText(dom_values[1], ())
-        if CIVILIZATIONS[CyGame().getActiveTeam()].date.birth < utils.getScenarioStartTurn():
+        if civilizations()[CyGame().getActiveTeam()].date.birth < utils.getScenarioStartTurn():
             if utils.getScenario() == Scenario.i1200AD:
                 textKey = "TXT_KEY_DAWN_OF_MAN_TEXT_%d_1200" % (CyGame().getActiveTeam())
         else:
@@ -267,10 +267,10 @@ class CvDawnOfMan:
     def update(self, fDelta):
 
         ##Rhye - begin
-        # if (CIVILIZATIONS[CyGame().getActiveTeam()].date.birth == 0 or \
+        # if (civilizations()[CyGame().getActiveTeam()].date.birth == 0 or \
         # 	(not gc.getPlayer(0).isPlayable() and CyGame().getActiveTeam() <= Civ.ARABIA.value)):  #late start condition
         # MiroTest = CyGame().getActiveTeam()
-        if CIVILIZATIONS[CyGame().getActiveTeam()].date.birth <= utils.getScenarioStartTurn():
+        if civilizations()[CyGame().getActiveTeam()].date.birth <= utils.getScenarioStartTurn():
             screen = CyGInterfaceScreen("CvLoadingScreen", self.iScreenID)
             screen.setBarPercentage("ProgressBar", InfoBarTypes.INFOBAR_STORED, 1)
             screen.setLabel(
@@ -290,7 +290,7 @@ class CvDawnOfMan:
         else:
             iGameTurn = CyGame().getGameTurn()
 
-            iNumAutoPlayTurns = CIVILIZATIONS[CyGame().getActiveTeam()].date.birth
+            iNumAutoPlayTurns = civilizations()[CyGame().getActiveTeam()].date.birth
             iNumTurnsRemaining = iNumAutoPlayTurns - iGameTurn
 
             # if (iNumTurnsRemaining != self.iTurnsRemaining):

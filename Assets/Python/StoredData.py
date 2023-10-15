@@ -1,7 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Stored Data
 
 from CvPythonExtensions import *
-from CoreData import CIVILIZATIONS
+from CoreData import civilizations
 from CoreTypes import Civ
 import PyHelpers
 import cPickle as pickle  # LOQ 2005-10-12
@@ -36,19 +36,19 @@ class StoredData:
             "tTempBottomRight": -1,
             "iSpawnWar": 0,  # if 1, add units and declare war. If >=2, do nothing
             "bAlreadySwitched": False,
-            "lColonistsAlreadyGiven": [0] * CIVILIZATIONS.majors().len(),
-            "lNumCities": [0] * CIVILIZATIONS.majors().len(),
-            "lSpawnDelay": [0] * CIVILIZATIONS.majors().len(),
-            "lFlipsDelay": [0] * CIVILIZATIONS.majors().len(),
+            "lColonistsAlreadyGiven": [0] * civilizations().majors().len(),
+            "lNumCities": [0] * civilizations().majors().len(),
+            "lSpawnDelay": [0] * civilizations().majors().len(),
+            "lFlipsDelay": [0] * civilizations().majors().len(),
             "iBetrayalTurns": 0,
-            "lLatestRebellionTurn": [0] * CIVILIZATIONS.majors().len(),
+            "lLatestRebellionTurn": [0] * civilizations().majors().len(),
             "iRebelCiv": 0,
             "lRebelCities": [],  # 3Miro: store the rebelling cities
-            "lRebelSuppress": [0] * CIVILIZATIONS.majors().len(),
+            "lRebelSuppress": [0] * civilizations().majors().len(),
             "lExileData": [-1, -1, -1, -1, -1],
             "tTempFlippingCity": -1,
             "lCheatersCheck": [0, -1],
-            "lBirthTurnModifier": [0] * CIVILIZATIONS.majors().len(),
+            "lBirthTurnModifier": [0] * civilizations().majors().len(),
             "lDeleteMode": [
                 -1,
                 -1,
@@ -59,7 +59,7 @@ class StoredData:
             "lReligionFounded": [-1, -1, -1, -1, -1],
             # Absinthe: Reformation
             "bReformationActive": False,
-            "lReformationHitMatrix": [0] * CIVILIZATIONS.majors().len(),
+            "lReformationHitMatrix": [0] * civilizations().majors().len(),
             "bCounterReformationActive": False,
             # Absinthe: Persecution
             "lPersecutionData": [-1, -1, -1],
@@ -100,20 +100,20 @@ class StoredData:
             ],  # major players only
             "iNextTurnAIWar": -1,
             # Absinthe: Plagues
-            "lPlagueCountdown": [0] * CIVILIZATIONS.len(),
+            "lPlagueCountdown": [0] * civilizations().len(),
             "lGenericPlagueDates": [-1, -1, -1, -1, -1],
             "bBadPlague": False,
             "bFirstPlague": False,
             # Crusades
             "lCrusadeInit": [-2] * NUM_CRUSADES,
             "bParticipate": False,
-            "lVotingPower": [0] * CIVILIZATIONS.majors().len(),
+            "lVotingPower": [0] * civilizations().majors().len(),
             "iFavorite": 0,
             "iPowerful": 0,
             "iLeader": 0,
             "lVotesGathered": [0, 0],
             "iRichestCatholic": 0,
-            "lDeviateTargets": [False] * CIVILIZATIONS.majors().len(),
+            "lDeviateTargets": [False] * civilizations().majors().len(),
             "tTarget": (0, 0),
             "iCrusadePower": 0,
             "iCrusadeSucceeded": 0,
@@ -128,13 +128,13 @@ class StoredData:
                 0,
                 0,
             ],  # Templar Knights, Teutonic Knights, Hospitaller Knights, Knights, Heavy Lancers, Lancers, Siege Weapons, Generic
-            "lNumUnitsSent": [0] * CIVILIZATIONS.majors().len(),
+            "lNumUnitsSent": [0] * civilizations().majors().len(),
             "bDCEnabled": False,
             "iDCLast": 0,
             # Absinthe: Respawns
-            "lSpecialRespawnTurn": [0] * CIVILIZATIONS.majors().len(),
-            "lLastTurnAlive": [0] * CIVILIZATIONS.majors().len(),
-            "lLastRespawnTurn": [0] * CIVILIZATIONS.majors().len(),
+            "lSpecialRespawnTurn": [0] * civilizations().majors().len(),
+            "lLastTurnAlive": [0] * civilizations().majors().len(),
+            "lLastRespawnTurn": [0] * civilizations().majors().len(),
             # Absinthe: Event Turn Randomization
             "lEventRandomness": [0] * 10,
             # 3Miro: Minor Nations

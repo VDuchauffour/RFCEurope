@@ -1,7 +1,7 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
-from CoreData import CIVILIZATIONS
+from CoreData import civilizations
 from CoreTypes import Civ, SpecialParameter, Religion
 import CvUtil
 import CvScreenEnums
@@ -3341,7 +3341,7 @@ class CvMainInterface:
                 iCount += 1
                 if (
                     not CyInterface().isCityScreenUp()
-                    and CyGame().getGameTurn() >= CIVILIZATIONS[ePlayer].date.birth
+                    and CyGame().getGameTurn() >= civilizations()[ePlayer].date.birth
                 ):
                     # iStability = utils.getStability(ePlayer)
                     iStability = pPlayer.getStability()
@@ -6557,7 +6557,7 @@ class CvMainInterface:
                                         if (
                                             not gc.getTeam(eTeam).isAlive()
                                             and gc.getGame().getGameTurn()
-                                            >= CIVILIZATIONS[eTeam].date.birth
+                                            >= civilizations()[eTeam].date.birth
                                         ):
                                             szBuffer = szBuffer + " -"
                                         else:
@@ -6570,7 +6570,7 @@ class CvMainInterface:
                                         # szTempBuffer = u"%d" %(utils.countAchievedGoals(ePlayer)) #white
                                         # szBuffer = szBuffer + " (" + szTempBuffer + "/3)" #white
                                         if gc.getPlayer(ePlayer).isAlive():
-                                            if ePlayer < CIVILIZATIONS.majors().len():
+                                            if ePlayer < civilizations().majors().len():
                                                 szTempBuffer = u"<color=%s>%d/3</color>" % (
                                                     utils.getGoalsColor(ePlayer),
                                                     utils.countAchievedGoals(ePlayer),
@@ -6581,7 +6581,7 @@ class CvMainInterface:
                                         # Rhye - start stability
                                         if gc.getPlayer(ePlayer).isAlive():
                                             if (
-                                                ePlayer < CIVILIZATIONS.majors().len()
+                                                ePlayer < civilizations().majors().len()
                                             ):  # in case byzantium is major
                                                 # iStability = utils.getStability(ePlayer)
                                                 iStability = gc.getPlayer(ePlayer).getStability()

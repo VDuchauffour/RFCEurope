@@ -1,7 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Event handler
 
 from CvPythonExtensions import *
-from CoreData import CIVILIZATIONS
+from CoreData import civilizations
 import CvUtil
 import CvEventManager  # Mercenaries
 import PyHelpers
@@ -231,12 +231,12 @@ class CvRFCEventHandler:
                 self.cnm.renameCities(city, Civ.HUNGARY.value)
         # Absinthe: for all civs:
         # if utils.getScenario() == Scenario.i1200AD:
-        # 	for iPlayer in CIVILIZATIONS.main().ids():
+        # 	for iPlayer in civilizations().main().ids():
         # 		for city in utils.getCityList(iPlayer):
         # 			self.cnm.renameCities(city, iPlayer)
 
         # Absinthe: refresh Dynamic Civ Names for all civs on the initial turn of the given scenario
-        for iPlayer in CIVILIZATIONS.majors().ids():
+        for iPlayer in civilizations().majors().ids():
             gc.getPlayer(iPlayer).processCivNames()
 
         return 0
@@ -273,7 +273,7 @@ class CvRFCEventHandler:
 
         # Absinthe: Scottish UP
         # 			against all players (including indies and barbs), but only on conquest
-        if owner == Civ.SCOTLAND.value and bConquest:  # playerType < CIVILIZATIONS.len()
+        if owner == Civ.SCOTLAND.value and bConquest:  # playerType < civilizations().len()
             # only in cities with at least 20% Scottish culture
             iTotalCulture = city.countTotalCultureTimes100()
             if iTotalCulture == 0 or (city.getCulture(owner) * 10000) / iTotalCulture > 20:
@@ -304,7 +304,7 @@ class CvRFCEventHandler:
             self.rel.reformationOther(Civ.INDEPENDENT_4.value)
             self.rel.reformationOther(Civ.BARBARIAN.value)
             self.rel.setReformationHitMatrix(Civ.DUTCH.value, 2)
-            for iCiv in CIVILIZATIONS.majors().ids():
+            for iCiv in civilizations().majors().ids():
                 if (
                     iCiv in Religions.lReformationNeighbours[Civ.DUTCH.value]
                     and self.rel.getReformationHitMatrix(iCiv) == 0
@@ -312,7 +312,7 @@ class CvRFCEventHandler:
                     self.rel.setReformationHitMatrix(iCiv, 1)
 
         # Absinthe: Spread some culture to the newly acquired city - this is for nearby indy cities, so should be applied in all cases (conquest, flip, trade)
-        if playerType < CIVILIZATIONS.majors().len():
+        if playerType < civilizations().majors().len():
             utils.spreadMajorCulture(playerType, city.getX(), city.getY())
 
         self.sta.onCityAcquired(owner, playerType, city, bConquest, bTrade)
@@ -347,7 +347,7 @@ class CvRFCEventHandler:
             # 			maybe only after a specific date? maybe only if there isn't any ongoing Crusades?
             if gc.getGame().getSorenRandNum(100, "Relic found") < 15:
                 # for major players only
-                if playerType < CIVILIZATIONS.majors().len():
+                if playerType < civilizations().majors().len():
                     if pPlayer.getStateReligion() in range(len(Religion)):
                         pPlayer.initUnit(
                             xml.iHolyRelic,
@@ -431,7 +431,7 @@ class CvRFCEventHandler:
         self.rnf.onCityBuilt(iOwner, city)
         tCity = (city.getX(), city.getY())
 
-        if iOwner < CIVILIZATIONS.majors().len():
+        if iOwner < civilizations().majors().len():
             self.cnm.assignName(city)
 
         # Absinthe: merc notifications, after the city is named
@@ -444,10 +444,10 @@ class CvRFCEventHandler:
 
         # Rhye - delete culture of barbs and minor civs to prevent weird unhappiness
         pCurrent = gc.getMap().plot(city.getX(), city.getY())
-        for civ in CIVILIZATIONS.minors().ids():
+        for civ in civilizations().minors().ids():
             pCurrent.setCulture(civ, 0, True)
 
-        if iOwner < CIVILIZATIONS.majors().len():
+        if iOwner < civilizations().majors().len():
             utils.spreadMajorCulture(iOwner, city.getX(), city.getY())
 
             if iOwner == Civ.PORTUGAL.value:
@@ -516,14 +516,14 @@ class CvRFCEventHandler:
             self.rel.reformationOther(Civ.INDEPENDENT_4.value)
             self.rel.reformationOther(Civ.BARBARIAN.value)
             self.rel.setReformationHitMatrix(Civ.DUTCH.value, 2)
-            for iCiv in CIVILIZATIONS.majors().ids():
+            for iCiv in civilizations().majors().ids():
                 if (
                     iCiv in Religions.lReformationNeighbours[Civ.DUTCH.value]
                     and self.rel.getReformationHitMatrix(iCiv) == 0
                 ):
                     self.rel.setReformationHitMatrix(iCiv, 1)
 
-        if iOwner < CIVILIZATIONS.majors().len():
+        if iOwner < civilizations().majors().len():
             self.sta.onCityBuilt(iOwner, city.getX(), city.getY())
 
     def onCombatResult(self, argsList):
@@ -559,7 +559,7 @@ class CvRFCEventHandler:
 
         self.vic.onReligionFounded(iReligion, iFounder)
 
-        if iFounder < CIVILIZATIONS.majors().len():
+        if iFounder < civilizations().majors().len():
             self.sta.onReligionFounded(iFounder)
 
         # 3Miro: end Crusades for the Holy Land after the Reformation
@@ -571,7 +571,7 @@ class CvRFCEventHandler:
         iOwner = city.getOwner()
 
         self.vic.onBuildingBuilt(iOwner, iBuildingType)
-        if city.getOwner() < CIVILIZATIONS.majors().len():
+        if city.getOwner() < civilizations().majors().len():
             self.sta.onBuildingBuilt(iOwner, iBuildingType)
             self.company.onBuildingBuilt(iOwner, iBuildingType)
         # Absinthe: Faith, Kazimierz, Mont Saint-Michel
@@ -585,7 +585,7 @@ class CvRFCEventHandler:
     def onProjectBuilt(self, argsList):
         city, iProjectType = argsList
         self.vic.onProjectBuilt(city.getOwner(), iProjectType)
-        if city.getOwner() < CIVILIZATIONS.majors().len():
+        if city.getOwner() < civilizations().majors().len():
             self.sta.onProjectBuilt(city.getOwner(), iProjectType)
 
     def onUnitPillage(self, argsList):
@@ -600,7 +600,7 @@ class CvRFCEventHandler:
             ):
                 self.barb.onImprovementDestroyed(iPlotX, iPlotY)
         iVictim = pPlot.getOwner()
-        if iVictim > -1 and iVictim < CIVILIZATIONS.majors().len():
+        if iVictim > -1 and iVictim < civilizations().majors().len():
             self.sta.onImprovementDestroyed(iVictim)
 
         self.vic.onPillageImprovement(
@@ -619,7 +619,7 @@ class CvRFCEventHandler:
         # 	for unit in unitList:
         # 		iCargoSpace = unit.cargoSpace()
 
-        # 	for iCiv in CIVILIZATIONS.majors().ids():
+        # 	for iCiv in civilizations().majors().ids():
         # 		pCiv = gc.getPlayer(iCiv)
         # 		leaderName = pCiv.getLeader()
         # 		leaderName2 = gc.getLeaderHeadInfo( pCiv.getLeaderType() )
@@ -712,7 +712,7 @@ class CvRFCEventHandler:
             iGameTurn
             == DateTurn.i1323AD - 40 + sd.scriptDict["lEventRandomness"][iLighthouseEarthQuake]
         ):
-            for iPlayer in CIVILIZATIONS.drop(Civ.BARBARIAN).ids():
+            for iPlayer in civilizations().drop(Civ.BARBARIAN).ids():
                 bFound = 0
                 for city in utils.getCityList(iPlayer):
                     if city.isHasBuilding(xml.iGreatLighthouse):
@@ -761,14 +761,14 @@ class CvRFCEventHandler:
         if self.rnf.getDeleteMode(0) != -1:
             self.rnf.deleteMode(iPlayer)
         # Absinthe: refresh Dynamic Civ Names
-        if iPlayer < CIVILIZATIONS.majors().len():
+        if iPlayer < civilizations().majors().len():
             gc.getPlayer(iPlayer).processCivNames()
 
         ## Absinthe: refresh Dynamic Civ Names for all civs on the human player's initial turn of the given scenario
         ##			it's probably enough to refresh it on onGameStart for the scenario
         # if utils.getHumanID() == iPlayer:
         # 	if iGameTurn == utils.getScenarioStartTurn():
-        # 		for iDCNPlayer in CIVILIZATIONS.majors().ids():
+        # 		for iDCNPlayer in civilizations().majors().ids():
         # 			gc.getPlayer(iDCNPlayer).processCivNames()
 
         # Absinthe: Byzantine conqueror army
@@ -912,7 +912,7 @@ class CvRFCEventHandler:
         self.pla.checkPlayerTurn(iGameTurn, iPlayer)
         self.vic.checkPlayerTurn(iGameTurn, iPlayer)
 
-        if gc.getPlayer(iPlayer).isAlive() and iPlayer < CIVILIZATIONS.majors().len():
+        if gc.getPlayer(iPlayer).isAlive() and iPlayer < civilizations().majors().len():
             if gc.getPlayer(iPlayer).getNumCities() > 0:
                 self.sta.updateBaseStability(iGameTurn, iPlayer)
 
@@ -959,7 +959,7 @@ class CvRFCEventHandler:
             argsList[11],
             argsList[12],
         ]
-        if iPlayer < CIVILIZATIONS.majors().len():
+        if iPlayer < civilizations().majors().len():
             self.rel.onPlayerChangeAllCivics(iPlayer, lNewCivics, lOldCivics)
 
     def onPlayerChangeSingleCivic(self, argsList):
@@ -971,7 +971,7 @@ class CvRFCEventHandler:
         "Player changes his state religion"
         iPlayer, iNewReligion, iOldReligion = argsList
 
-        if iPlayer < CIVILIZATIONS.majors().len():
+        if iPlayer < civilizations().majors().len():
             self.company.onPlayerChangeStateReligion(argsList)
 
     def onTechAcquired(self, argsList):
@@ -984,8 +984,8 @@ class CvRFCEventHandler:
 
         if (
             gc.getPlayer(iPlayer).isAlive()
-            and gc.getGame().getGameTurn() > CIVILIZATIONS[iPlayer].date.birth
-            and iPlayer < CIVILIZATIONS.majors().len()
+            and gc.getGame().getGameTurn() > civilizations()[iPlayer].date.birth
+            and iPlayer < civilizations().majors().len()
         ):
             self.rel.onTechAcquired(argsList[0], argsList[2])
             self.sta.onTechAcquired(argsList[0], argsList[2])
@@ -1000,8 +1000,8 @@ class CvRFCEventHandler:
         DataLoader.setup()  # Absinthe: also needed on loading saved games
         # pass
 
-        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(Consts.iNationalism)) and gc.getGame().getGameTurn() >= CIVILIZATIONS[utils.getHumanID()].date.birth):
-        # if (gc.getGame().getGameTurn() >= CIVILIZATIONS[utils.getHumanID()].date.birth):
+        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(Consts.iNationalism)) and gc.getGame().getGameTurn() >= civilizations()[utils.getHumanID()].date.birth):
+        # if (gc.getGame().getGameTurn() >= civilizations()[utils.getHumanID()].date.birth):
 
         # global objMercenaryUtils
 
@@ -1014,8 +1014,8 @@ class CvRFCEventHandler:
 
         self.mercs.onUnitPromoted(argsList)
 
-        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(Consts.iNationalism)) and gc.getGame().getGameTurn() >= CIVILIZATIONS[utils.getHumanID()].date.birth):
-        # if (gc.getGame().getGameTurn() >= CIVILIZATIONS[utils.getHumanID()].date.birth):
+        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(Consts.iNationalism)) and gc.getGame().getGameTurn() >= civilizations()[utils.getHumanID()].date.birth):
+        # if (gc.getGame().getGameTurn() >= civilizations()[utils.getHumanID()].date.birth):
         # 	pUnit, iPromotion = argsList
         # 	player = PyPlayer(pUnit.getOwner())
         #
@@ -1028,8 +1028,8 @@ class CvRFCEventHandler:
 
         self.mercs.onUnitKilled(argsList)
 
-        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(Consts.iNationalism)) and gc.getGame().getGameTurn() >= CIVILIZATIONS[utils.getHumanID()].date.birth):
-        # if (gc.getGame().getGameTurn() >= CIVILIZATIONS[utils.getHumanID()].date.birth):
+        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(Consts.iNationalism)) and gc.getGame().getGameTurn() >= civilizations()[utils.getHumanID()].date.birth):
+        # if (gc.getGame().getGameTurn() >= civilizations()[utils.getHumanID()].date.birth):
 
         # unit, iAttacker = argsList
 
@@ -1054,7 +1054,7 @@ class CvRFCEventHandler:
         "keypress handler - return 1 if the event was consumed"
 
         iHuman = utils.getHumanID()
-        if gc.getGame().getGameTurn() >= CIVILIZATIONS[iHuman].date.birth:
+        if gc.getGame().getGameTurn() >= civilizations()[iHuman].date.birth:
 
             eventType, key, mx, my, px, py = argsList
 
@@ -1201,7 +1201,7 @@ class CvRFCEventHandler:
         pass
 
     def printStabilityDebug(self):
-        for iCiv in CIVILIZATIONS.majors().ids():
+        for iCiv in civilizations().majors().ids():
             if gc.getPlayer(iCiv).isAlive():
                 print(
                     "Base:",
@@ -1215,7 +1215,7 @@ class CvRFCEventHandler:
                     gc.getPlayer(iCiv).getCivilizationDescription(0),
                 )
 
-        for i in CIVILIZATIONS.majors().ids():
+        for i in civilizations().majors().ids():
             print(
                 gc.getPlayer(i).getCivilizationShortDescription(0),
                 "PLOT OWNERSHIP ABROAD:",

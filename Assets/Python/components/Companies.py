@@ -2,8 +2,7 @@
 # Implemented by AbsintheRed, based on the wonderful idea of embryodead
 
 from CvPythonExtensions import *
-from CoreData import CIVILIZATIONS
-from CoreData import COMPANIES
+from CoreData import civilizations, COMPANIES
 from CoreFunctions import get_enum_by_id
 from LocationsData import CITIES
 import PyHelpers
@@ -115,7 +114,7 @@ class Companies:
 
         # loop through all cities, check the company value for each and add the good ones to a list of tuples (city, value)
         cityValueList = []
-        for iPlayer in CIVILIZATIONS.majors().ids():
+        for iPlayer in civilizations().majors().ids():
             for city in utils.getCityList(iPlayer):
                 iValue = self.getCityValue(city, iCompany)
                 if iValue > 0:
@@ -140,7 +139,7 @@ class Companies:
 
         # count the number of companies
         iCompanyCount = 0
-        for civ in CIVILIZATIONS.majors():
+        for civ in civilizations().majors():
             if civ.player.isAlive():
                 iCompanyCount += civ.player.countCorporations(iCompany)
 
@@ -362,7 +361,7 @@ class Companies:
                     iValue += 2
 
         # bonus for civs whom actively participate (with units) in the actual Crusade:
-        if iOwner < CIVILIZATIONS.majors().len():
+        if iOwner < civilizations().majors().len():
             if crus.getNumUnitsSent(iOwner) > 0:
                 if iCompany in [
                     Company.HOSPITALLERS.value,
@@ -790,7 +789,7 @@ class Companies:
         # adds the company to the best iNumber cities
         cityValueList = []
         iCompaniesAdded = 0
-        for iPlayer in CIVILIZATIONS.majors().ids():
+        for iPlayer in civilizations().majors().ids():
             for city in utils.getCityList(iPlayer):
                 iValue = self.getCityValue(city, iCompany)
                 if iValue > 0:

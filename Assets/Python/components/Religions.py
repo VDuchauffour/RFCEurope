@@ -1,7 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Religions management
 
 from CvPythonExtensions import *
-from CoreData import CIVILIZATIONS
+from CoreData import civilizations
 from CoreFunctions import get_religion_by_id
 from CoreTypes import Civ, City, Civic, StabilityCategory, Religion
 from LocationsData import CITIES
@@ -511,7 +511,7 @@ class Religions:
                     self.spreadReligion(tCity, Religion.CATHOLICISM.value)
 
         # Absinthe: Persecution cooldown
-        for i in CIVILIZATIONS.majors().ids():
+        for i in civilizations().majors().ids():
             pPlayer = gc.getPlayer(i)
             if pPlayer.getProsecutionCount() > 0:
                 pPlayer.changeProsecutionCount(-1)
@@ -793,7 +793,7 @@ class Religions:
     def selectRandomCityAll(self):
         "selects a random city from the whole map"
         cityList = []
-        for iPlayer in CIVILIZATIONS.ids():
+        for iPlayer in civilizations().ids():
             cityList.extend(utils.getCityList(iPlayer))
         if cityList:
             city = utils.getRandomEntry(cityList)
@@ -812,7 +812,7 @@ class Religions:
     def selectRandomCityProvince(self, tProvinces):  # currently unused
         "selects a random city in a given province/region"
         cityList = []
-        for iPlayer in CIVILIZATIONS.ids():
+        for iPlayer in civilizations().ids():
             if not gc.getPlayer(iPlayer).isAlive():
                 continue
             for city in utils.getCityList(iPlayer):
@@ -841,7 +841,7 @@ class Religions:
         for (x, y) in utils.getPlotList(tTopLeft, tBottomRight):
             pCurrent = gc.getMap().plot(x, y)
             if pCurrent.isCity():
-                for iPlayer in CIVILIZATIONS.ids():
+                for iPlayer in civilizations().ids():
                     if not gc.getPlayer(iPlayer).isAlive():
                         continue
                     if pCurrent.getPlotCity().getOwner() == iPlayer:
@@ -869,7 +869,7 @@ class Religions:
         "selects a random city with a given religion"
         if gc.getGame().isReligionFounded(iReligion):
             cityList = []
-            for iPlayer in CIVILIZATIONS.majors().ids():
+            for iPlayer in civilizations().majors().ids():
                 if not gc.getPlayer(iPlayer).isAlive():
                     continue
                 for city in utils.getCityList(iPlayer):
@@ -895,7 +895,7 @@ class Religions:
 
     def selectRandomCityRegion(self, tProvinces, iReligionToSpread, bNoSpreadWithReligion=False):
         cityList = []
-        for iPlayer in CIVILIZATIONS.ids():
+        for iPlayer in civilizations().ids():
             if not gc.getPlayer(iPlayer).isAlive():
                 continue
             for city in utils.getCityList(iPlayer):
@@ -989,7 +989,7 @@ class Religions:
                     # no popup if no available religions
                     if religionList:
                         self.showFreeRevolutionPopup(iPlayer, religionList)
-                elif iPlayer < CIVILIZATIONS.main().len():
+                elif iPlayer < civilizations().main().len():
                     iBestReligionPoint = 0
                     iBestReligion = Religion.CATHOLICISM.value
                     # loop through all religions
@@ -1001,7 +1001,7 @@ class Religions:
                                 iReligionPoint += 10
                             if city.isHolyCityByType(iReligion):
                                 iReligionPoint += 1000
-                        spread_factor = CIVILIZATIONS[iPlayer].religion.spreading_threshold[
+                        spread_factor = civilizations()[iPlayer].religion.spreading_threshold[
                             get_religion_by_id(iReligion)
                         ]
                         if spread_factor < 60:
@@ -1096,7 +1096,7 @@ class Religions:
                     self.reformationOther(Civ.INDEPENDENT_4.value)
                     self.reformationOther(Civ.BARBARIAN.value)
                     self.setReformationHitMatrix(iPlayer, 2)
-                    for iCiv in CIVILIZATIONS.majors().ids():
+                    for iCiv in civilizations().majors().ids():
                         if (
                             iCiv in lReformationNeighbours[iPlayer]
                         ) and self.getReformationHitMatrix(iCiv) == 0:
@@ -1105,7 +1105,7 @@ class Religions:
     def reformationArrayChoice(self):
         lCivs = [
             iCiv
-            for iCiv in CIVILIZATIONS.majors().ids()
+            for iCiv in civilizations().majors().ids()
             if self.getReformationHitMatrix(iCiv) == 1
         ]
         iCiv = utils.getRandomEntry(lCivs)
@@ -1115,13 +1115,13 @@ class Religions:
         else:
             self.reformationOther(iCiv)
         self.setReformationHitMatrix(iCiv, 2)
-        for iNextCiv in CIVILIZATIONS.majors().ids():
+        for iNextCiv in civilizations().majors().ids():
             if (
                 iNextCiv in lReformationNeighbours[iCiv]
                 and self.getReformationHitMatrix(iNextCiv) == 0
             ):
                 self.setReformationHitMatrix(iNextCiv, 1)
-        if sum(self.getReformationHitMatrixAll()) == 2 * CIVILIZATIONS.majors().len():
+        if sum(self.getReformationHitMatrixAll()) == 2 * civilizations().majors().len():
             self.setReformationActive(False)
             self.setCounterReformationActive(
                 True
@@ -1520,8 +1520,8 @@ class Religions:
     ### End Reformation ###
 
     def resettleRefugies(self):
-        intolerance = [-1] * CIVILIZATIONS.len()
-        for iPlayer in CIVILIZATIONS.ids():
+        intolerance = [-1] * civilizations().len()
+        for iPlayer in civilizations().ids():
             pPlayer = gc.getPlayer(iPlayer)
             if pPlayer.isAlive():
                 if iPlayer < Civ.POPE.value:
@@ -1545,13 +1545,13 @@ class Religions:
                     )
         # once we have the list of potential nations
         iCandidate1 = 0
-        for iPlayer in CIVILIZATIONS.ids():
+        for iPlayer in civilizations().ids():
             if intolerance[iPlayer] > -1 and intolerance[iPlayer] < intolerance[iCandidate1]:
                 iCandidate1 = iPlayer
         iCandidate2 = 0
         if iCandidate2 == iCandidate1:
             iCandidate2 = 1
-        for iPlayer in CIVILIZATIONS.ids():
+        for iPlayer in civilizations().ids():
             if (
                 intolerance[iPlayer] > -1
                 and iPlayer != iCandidate1
@@ -1597,7 +1597,7 @@ class Religions:
             self.spreadReligion(tCity, Religion.JUDAISM.value)
 
     def setStartingFaith(self):
-        for civilization in CIVILIZATIONS.dropna("initial"):
+        for civilization in civilizations().dropna("initial"):
             condition = civilization.initial.condition
             if condition:
                 civilization.player.setFaith(condition.faith)
@@ -1605,7 +1605,7 @@ class Religions:
     def getCatholicCivs(self, bOpenBorders=False):
         teamPope = gc.getTeam(gc.getPlayer(Civ.POPE.value).getTeam())
         lCatholicCivs = []
-        for iPlayer in CIVILIZATIONS.main().ids():
+        for iPlayer in civilizations().main().ids():
             pPlayer = gc.getPlayer(iPlayer)
             if pPlayer.getStateReligion() == Religion.CATHOLICISM.value:
                 if bOpenBorders and not teamPope.isOpenBorders(pPlayer.getTeam()):

@@ -3,7 +3,7 @@
 
 from CvPythonExtensions import *
 import RFCEMaps
-from CoreData import CIVILIZATIONS
+from CoreData import civilizations
 from LocationsData import LAKE_LOCATIONS
 
 gc = CyGlobalContext()
@@ -23,9 +23,9 @@ def setup():
                 plot.setProvinceID(RFCEMaps.tProvinceMap[y][x])
 
     # City name maps
-    for (
-        civ
-    ) in CIVILIZATIONS.main().ids():  # currently neither the papal nor the default maps are added
+    for civ in (
+        civilizations().main().ids()
+    ):  # currently neither the papal nor the default maps are added
         if len(RFCEMaps.tCityMap) > civ:
             for y in range(len(RFCEMaps.tCityMap[civ])):
                 for x in range(len(RFCEMaps.tCityMap[civ][y])):

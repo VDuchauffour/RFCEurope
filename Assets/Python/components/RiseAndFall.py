@@ -1,5 +1,5 @@
 from CvPythonExtensions import *
-from CoreData import CIVILIZATIONS
+from CoreData import civilizations
 from CoreStructures import team, civ
 import PyHelpers  # LOQ
 import Popup
@@ -321,7 +321,7 @@ class RiseAndFall:
             # 	utils.setLastRecordedStabilityStuff(3, 0)
             # 	utils.setLastRecordedStabilityStuff(4, 0)
             # 	utils.setLastRecordedStabilityStuff(5, 0)
-            for iMaster in CIVILIZATIONS.majors().ids():
+            for iMaster in civilizations().majors().ids():
                 if gc.getTeam(gc.getPlayer(iNewCiv).getTeam()).isVassal(iMaster):
                     gc.getTeam(gc.getPlayer(iNewCiv).getTeam()).setVassal(iMaster, False, False)
             self.setAlreadySwitched(True)
@@ -580,7 +580,7 @@ class RiseAndFall:
         self.assignGold()
 
     def assignGold(self):
-        for civilization in CIVILIZATIONS.dropna("initial"):
+        for civilization in civilizations().dropna("initial"):
             condition = civilization.initial.condition
             if condition:
                 civilization.player.changeGold(condition.gold)
@@ -684,10 +684,10 @@ class RiseAndFall:
 
     # Sedna17 Respawn
     def setupRespawnTurns(self):
-        for iCiv in CIVILIZATIONS.majors().ids():
+        for iCiv in civilizations().majors().ids():
             self.setSpecialRespawnTurn(
                 iCiv,
-                CIVILIZATIONS[iCiv].date.respawning
+                civilizations()[iCiv].date.respawning
                 + (gc.getGame().getSorenRandNum(21, "BirthTurnModifier") - 10)
                 + (gc.getGame().getSorenRandNum(21, "BirthTurnModifier2") - 10),
             )  # bell-curve-like spawns within +/- 10 turns of desired turn (3Miro: Uniform, not a bell-curve)
@@ -695,25 +695,27 @@ class RiseAndFall:
     def setupBirthTurnModifiers(self):
         # 3Miro: first and last civ (first that does not start)
         # Absinthe: currently unused
-        for iCiv in CIVILIZATIONS.majors().ids():
+        for iCiv in civilizations().majors().ids():
             if iCiv >= Civ.ARABIA.value and not gc.getPlayer(iCiv).isHuman():
                 self.setBirthTurnModifier(
                     iCiv, (gc.getGame().getSorenRandNum(11, "BirthTurnModifier") - 5)
                 )  # -5 to +5
         # now make sure that no civs spawn in the same turn and cause a double "new civ" popup
-        for iCiv in CIVILIZATIONS.majors().ids():
-            if iCiv > utils.getHumanID() and iCiv < CIVILIZATIONS.majors().len():
-                for j in range(CIVILIZATIONS.main().len() - iCiv):
+        for iCiv in civilizations().majors().ids():
+            if iCiv > utils.getHumanID() and iCiv < civilizations().majors().len():
+                for j in range(civilizations().main().len() - iCiv):
                     iNextCiv = iCiv + j + 1
-                    if CIVILIZATIONS[iCiv].date.birth + self.getBirthTurnModifier(
+                    if civilizations()[iCiv].date.birth + self.getBirthTurnModifier(
                         iCiv
-                    ) == CIVILIZATIONS[iNextCiv].date.birth + self.getBirthTurnModifier(iNextCiv):
+                    ) == civilizations()[iNextCiv].date.birth + self.getBirthTurnModifier(
+                        iNextCiv
+                    ):
                         self.setBirthTurnModifier(
                             iNextCiv, (self.getBirthTurnModifier(iNextCiv) + 1)
                         )
 
     def setEarlyLeaders(self):
-        for civilization in CIVILIZATIONS.majors():
+        for civilization in civilizations().majors():
             if (
                 civilization.leaders.early != civilization.leaders.primary
                 and not civilization.player.isHuman()
@@ -722,7 +724,7 @@ class RiseAndFall:
                 civilization.player.setLeader(leader.value)
 
     def setWarOnSpawn(self):
-        for civilization in CIVILIZATIONS.dropna("initial"):
+        for civilization in civilizations().dropna("initial"):
             if civilization.initial.wars:
                 for other, war_threshold in civilization.initial.wars.items():
                     if percentage_chance(war_threshold, strict=True):
@@ -744,18 +746,18 @@ class RiseAndFall:
                 self.setCheatersCheck(0, self.getCheatersCheck(0) - 1)
 
         if iGameTurn % 20 == 0:
-            for civilization in CIVILIZATIONS.independents():
+            for civilization in civilizations().independents():
                 if civilization.player.isAlive():
                     utils.updateMinorTechs(civilization.id, Civ.BARBARIAN.value)
 
         # Absinthe: checking the spawn dates
-        for iLoopCiv in CIVILIZATIONS.majors().ids():
+        for iLoopCiv in civilizations().majors().ids():
             if (
-                CIVILIZATIONS[iLoopCiv].date.birth != 0
-                and iGameTurn >= CIVILIZATIONS[iLoopCiv].date.birth - 2
-                and iGameTurn <= CIVILIZATIONS[iLoopCiv].date.birth + 4
+                civilizations()[iLoopCiv].date.birth != 0
+                and iGameTurn >= civilizations()[iLoopCiv].date.birth - 2
+                and iGameTurn <= civilizations()[iLoopCiv].date.birth + 4
             ):
-                self.initBirth(iGameTurn, CIVILIZATIONS[iLoopCiv].date.birth, iLoopCiv)
+                self.initBirth(iGameTurn, civilizations()[iLoopCiv].date.birth, iLoopCiv)
 
         # Fragment minor civs:
         # 3Miro: Shuffle cities between Indies and Barbs to make sure there is no big Independent nation
@@ -806,19 +808,19 @@ class RiseAndFall:
         # lSpecialRespawnTurn = self.getSpecialRespawnTurns()
         # if iGameTurn in lSpecialRespawnTurn:
         # 	iCiv = lSpecialRespawnTurn.index(iGameTurn)#Lookup index for
-        # 	if iCiv < CIVILIZATIONS.majors().len() and iCiv > 0:
+        # 	if iCiv < civilizations().majors().len() and iCiv > 0:
         # 		self.resurrection(iGameTurn,iCiv)
 
         # Absinthe: Reduce cities to towns, in order to make room for new civs
-        if iGameTurn == CIVILIZATIONS[Civ.SCOTLAND].date.birth - 3:
+        if iGameTurn == civilizations()[Civ.SCOTLAND].date.birth - 3:
             # Reduce Inverness and Scone, so more freedom in where to found cities in Scotland
             self.reduceCity((37, 65))
             self.reduceCity((37, 67))
-        elif iGameTurn == CIVILIZATIONS[Civ.ENGLAND].date.birth - 3:
+        elif iGameTurn == civilizations()[Civ.ENGLAND].date.birth - 3:
             # Reduce Norwich and Nottingham, so more freedom in where to found cities in England
             self.reduceCity((43, 55))
             self.reduceCity((39, 56))
-        elif iGameTurn == CIVILIZATIONS[Civ.SWEDEN].date.birth - 2:
+        elif iGameTurn == civilizations()[Civ.SWEDEN].date.birth - 2:
             # Reduce Uppsala
             self.reduceCity((65, 66))
         # Absinthe: Reduce cities to town, if not owned by the human player
@@ -864,7 +866,7 @@ class RiseAndFall:
 
     def checkPlayerTurn(self, iGameTurn, iPlayer):
         # Absinthe & Merijn: leader switching with any number of leaders
-        late_leaders = CIVILIZATIONS[iPlayer].leaders.late
+        late_leaders = civilizations()[iPlayer].leaders.late
         if late_leaders:
             for tLeader in reversed(late_leaders):
                 if iGameTurn >= tLeader[1]:
@@ -954,10 +956,10 @@ class RiseAndFall:
                 )
 
     def fragmentIndependents(self):
-        for iIndep1 in CIVILIZATIONS.independents().ids():
+        for iIndep1 in civilizations().independents().ids():
             pIndep1 = gc.getPlayer(iIndep1)
             iNumCities1 = pIndep1.getNumCities()
-            for iIndep2 in CIVILIZATIONS.independents().ids():
+            for iIndep2 in civilizations().independents().ids():
                 if iIndep1 == iIndep2:
                     continue
                 pIndep2 = gc.getPlayer(iIndep2)
@@ -988,12 +990,12 @@ class RiseAndFall:
                                 break
 
     def fragmentBarbarians(self, iGameTurn):
-        iRndnum = gc.getGame().getSorenRandNum(CIVILIZATIONS.majors().len(), "starting count")
-        for j in CIVILIZATIONS.majors().ids():
-            iDeadCiv = (j + iRndnum) % CIVILIZATIONS.majors().len()
+        iRndnum = gc.getGame().getSorenRandNum(civilizations().majors().len(), "starting count")
+        for j in civilizations().majors().ids():
+            iDeadCiv = (j + iRndnum) % civilizations().majors().len()
             if (
                 not gc.getPlayer(iDeadCiv).isAlive()
-                and iGameTurn > CIVILIZATIONS[iDeadCiv].date.birth + 50
+                and iGameTurn > civilizations()[iDeadCiv].date.birth + 50
             ):
                 pDeadCiv = gc.getPlayer(iDeadCiv)
                 teamDeadCiv = gc.getTeam(pDeadCiv.getTeam())
@@ -1009,10 +1011,10 @@ class RiseAndFall:
                     iDivideCounter = 0
                     for tCity in lCities:
                         iNewCiv = min(
-                            CIVILIZATIONS.independents().ids()
+                            civilizations().independents().ids()
                         ) + gc.getGame().getSorenRandNum(
-                            max(CIVILIZATIONS.independents().ids())
-                            - min(CIVILIZATIONS.independents().ids())
+                            max(civilizations().independents().ids())
+                            - min(civilizations().independents().ids())
                             + 1,
                             "randomIndep",
                         )
@@ -1031,13 +1033,13 @@ class RiseAndFall:
 
     def collapseByBarbs(self, iGameTurn):
         # Absinthe: collapses if more than 1/3 of the empire is conquered and/or held by barbs
-        for iCiv in CIVILIZATIONS.majors().ids():
+        for iCiv in civilizations().majors().ids():
             pCiv = gc.getPlayer(iCiv)
             if pCiv.isAlive():
                 # Absinthe: no barb collapse for 20 turns after spawn, for 10 turns after respawn, or with the Emperor UP
                 iRespawnTurn = utils.getLastRespawnTurn(iCiv)
                 if (
-                    iGameTurn >= CIVILIZATIONS[iCiv].date.birth + 20
+                    iGameTurn >= civilizations()[iCiv].date.birth + 20
                     and iGameTurn >= iRespawnTurn + 10
                     and not utils.collapseImmune(iCiv)
                 ):
@@ -1091,8 +1093,8 @@ class RiseAndFall:
 
     def collapseGeneric(self, iGameTurn):
         # Absinthe: collapses if number of cities is less than half than some turns ago
-        lNumCitiesLastTime = [0] * CIVILIZATIONS.majors().len()
-        for iCiv in CIVILIZATIONS.majors().ids():
+        lNumCitiesLastTime = [0] * civilizations().majors().len()
+        for iCiv in civilizations().majors().ids():
             pCiv = gc.getPlayer(iCiv)
             teamCiv = gc.getTeam(pCiv.getTeam())
             if pCiv.isAlive():
@@ -1102,7 +1104,7 @@ class RiseAndFall:
                 # Absinthe: no generic collapse for 20 turns after spawn, for 10 turns after respawn, or with the Emperor UP
                 iRespawnTurn = utils.getLastRespawnTurn(iCiv)
                 if (
-                    iGameTurn >= CIVILIZATIONS[iCiv].date.birth + 20
+                    iGameTurn >= civilizations()[iCiv].date.birth + 20
                     and iGameTurn >= iRespawnTurn + 10
                     and not utils.collapseImmune(iCiv)
                 ):
@@ -1154,14 +1156,14 @@ class RiseAndFall:
 
     def collapseMotherland(self, iGameTurn):
         # Absinthe: collapses if completely pushed out of the core area and also doesn't have enough presence in the normal area
-        for iCiv in CIVILIZATIONS.majors().ids():
+        for iCiv in civilizations().majors().ids():
             pCiv = gc.getPlayer(iCiv)
             teamCiv = gc.getTeam(pCiv.getTeam())
             if pCiv.isAlive():
                 # Absinthe: no motherland collapse for 20 turns after spawn, for 10 turns after respawn, or with the Emperor UP
                 iRespawnTurn = utils.getLastRespawnTurn(iCiv)
                 if (
-                    iGameTurn >= CIVILIZATIONS[iCiv].date.birth + 20
+                    iGameTurn >= civilizations()[iCiv].date.birth + 20
                     and iGameTurn >= iRespawnTurn + 10
                     and not utils.collapseImmune(iCiv)
                 ):
@@ -1212,16 +1214,16 @@ class RiseAndFall:
 
     def secession(self, iGameTurn):
         # Absinthe: if stability is negative there is a chance for a random city to declare it's independence, checked every 3 turns
-        iRndnum = gc.getGame().getSorenRandNum(CIVILIZATIONS.majors().len(), "starting count")
+        iRndnum = gc.getGame().getSorenRandNum(civilizations().majors().len(), "starting count")
         iSecessionNumber = 0
-        for j in CIVILIZATIONS.majors().ids():
-            iPlayer = (j + iRndnum) % CIVILIZATIONS.majors().len()
+        for j in civilizations().majors().ids():
+            iPlayer = (j + iRndnum) % civilizations().majors().len()
             pPlayer = gc.getPlayer(iPlayer)
             # Absinthe: no city secession for 15 turns after spawn, for 10 turns after respawn
             iRespawnTurn = utils.getLastRespawnTurn(iPlayer)
             if (
                 pPlayer.isAlive()
-                and iGameTurn >= CIVILIZATIONS[iPlayer].date.birth + 15
+                and iGameTurn >= civilizations()[iPlayer].date.birth + 15
                 and iGameTurn >= iRespawnTurn + 10
             ):
                 iStability = pPlayer.getStability()
@@ -1237,14 +1239,14 @@ class RiseAndFall:
     def secessionCloseCollapse(self, iGameTurn):
         # Absinthe: another instance of secession, now with possibility for multiple cities revolting for the same civ
         # Absinthe: this can only happen with very bad stability, in case of fairly big empires
-        iRndnum = gc.getGame().getSorenRandNum(CIVILIZATIONS.majors().len(), "starting count")
-        for j in CIVILIZATIONS.majors().ids():
-            iPlayer = (j + iRndnum) % CIVILIZATIONS.majors().len()
+        iRndnum = gc.getGame().getSorenRandNum(civilizations().majors().len(), "starting count")
+        for j in civilizations().majors().ids():
+            iPlayer = (j + iRndnum) % civilizations().majors().len()
             pPlayer = gc.getPlayer(iPlayer)
             iRespawnTurn = utils.getLastRespawnTurn(iPlayer)
             if (
                 pPlayer.isAlive()
-                and iGameTurn >= CIVILIZATIONS[iPlayer].date.birth + 20
+                and iGameTurn >= civilizations()[iPlayer].date.birth + 20
                 and iGameTurn >= iRespawnTurn + 10
             ):
                 iStability = pPlayer.getStability()
@@ -1272,7 +1274,7 @@ class RiseAndFall:
             if (
                 not city.isWeLoveTheKingDay()
                 and not city.isCapital()
-                and tCity != CIVILIZATIONS[iPlayer].location.capital.to_tuple()
+                and tCity != civilizations()[iPlayer].location.capital.to_tuple()
             ):
                 if pPlayer.getNumCities() > 0:  # this check is needed, otherwise game crashes
                     capital = gc.getPlayer(iPlayer).getCapitalCity()
@@ -1429,12 +1431,12 @@ class RiseAndFall:
 
             # Absinthe: city goes to random independent
             iRndNum = gc.getGame().getSorenRandNum(
-                max(CIVILIZATIONS.independents().ids())
-                - min(CIVILIZATIONS.independents().ids())
+                max(civilizations().independents().ids())
+                - min(civilizations().independents().ids())
                 + 1,
                 "random independent",
             )
-            iIndy = min(CIVILIZATIONS.independents().ids()) + iRndNum
+            iIndy = min(civilizations().independents().ids()) + iRndNum
 
             tCity = (splittingCity.getX(), splittingCity.getY())
             sCityName = splittingCity.getName()
@@ -1483,16 +1485,16 @@ class RiseAndFall:
         else:
             iMinNumCities = 2
 
-        iRndnum = gc.getGame().getSorenRandNum(CIVILIZATIONS.majors().len(), "starting count")
-        for j in CIVILIZATIONS.majors().ids():
+        iRndnum = gc.getGame().getSorenRandNum(civilizations().majors().len(), "starting count")
+        for j in civilizations().majors().ids():
             if not bSpecialRespawn:
-                iDeadCiv = (j + iRndnum) % CIVILIZATIONS.majors().len()
+                iDeadCiv = (j + iRndnum) % civilizations().majors().len()
             else:
                 iDeadCiv = iDeadCiv  # We want a specific civ for special re-spawn
             cityList = []
             if (
                 not gc.getPlayer(iDeadCiv).isAlive()
-                and iGameTurn > CIVILIZATIONS[iDeadCiv].date.birth + 25
+                and iGameTurn > civilizations()[iDeadCiv].date.birth + 25
                 and iGameTurn > utils.getLastTurnAlive(iDeadCiv) + 10
             ):  # Sedna17: Allow re-spawns only 10 turns after death and 25 turns after birth
                 pDeadCiv = gc.getPlayer(iDeadCiv)
@@ -1510,7 +1512,7 @@ class RiseAndFall:
                         city = plot.getPlotCity()
                         iOwner = city.getOwner()
                         if (
-                            iOwner >= CIVILIZATIONS.majors().len()
+                            iOwner >= civilizations().majors().len()
                         ):  # if iOwner in [Civ.INDEPENDENT.value, Civ.INDEPENDENT_2.value, Civ.BARBARIAN.value]: #remove in vanilla
                             cityList.append(tPlot)
                         else:
@@ -1529,7 +1531,7 @@ class RiseAndFall:
                                         not city.isWeLoveTheKingDay()
                                         and not city.isCapital()
                                         and tPlot
-                                        != CIVILIZATIONS[iOwner].location.capital.to_tuple()
+                                        != civilizations()[iOwner].location.capital.to_tuple()
                                     ):
                                         if (
                                             gc.getPlayer(iOwner).getNumCities() > 0
@@ -1556,7 +1558,7 @@ class RiseAndFall:
                                     and iOwnerStability < 10
                                     and (
                                         tPlot
-                                        == CIVILIZATIONS[iDeadCiv].location.capital.to_tuple()
+                                        == civilizations()[iDeadCiv].location.capital.to_tuple()
                                     )
                                     and tPlot not in cityList
                                 ):
@@ -1564,7 +1566,7 @@ class RiseAndFall:
                 if len(cityList) >= iMinNumCities:
                     if bSpecialRespawn or (
                         gc.getGame().getSorenRandNum(100, "roll")
-                        < CIVILIZATIONS[iDeadCiv].location.respawning_threshold
+                        < civilizations()[iDeadCiv].location.respawning_threshold
                     ):
                         self.setRebelCities(cityList)
                         self.setRebelCiv(iDeadCiv)  # for popup and CollapseCapitals()
@@ -1574,15 +1576,15 @@ class RiseAndFall:
     def suppressResurection(self, iDeadCiv):
         lSuppressList = self.getRebelSuppress()
         lCityList = self.getRebelCities()
-        lCityCount = [0] * CIVILIZATIONS.majors().len()
+        lCityCount = [0] * civilizations().majors().len()
 
         for (x, y) in lCityList:
             iOwner = gc.getMap().plot(x, y).getPlotCity().getOwner()
-            if iOwner < CIVILIZATIONS.majors().len():
+            if iOwner < civilizations().majors().len():
                 lCityCount[iOwner] += 1
 
         iHuman = utils.getHumanID()
-        for iCiv in CIVILIZATIONS.majors().ids():
+        for iCiv in civilizations().majors().ids():
             # Absinthe: have to reset the suppress values
             lSuppressList[iCiv] = 0
             if iCiv != iHuman:
@@ -1609,14 +1611,14 @@ class RiseAndFall:
         lSuppressList = self.getRebelSuppress()
         bSuppressed = True
         iHuman = utils.getHumanID()
-        lCityCount = [0] * CIVILIZATIONS.majors().len()
+        lCityCount = [0] * civilizations().majors().len()
         for (x, y) in lCityList:
             iOwner = gc.getMap().plot(x, y).getPlotCity().getOwner()
-            if iOwner < CIVILIZATIONS.majors().len():
+            if iOwner < civilizations().majors().len():
                 lCityCount[iOwner] += 1
 
         # Absinthe: if any of the AI civs didn't manage to suppress it, there is resurrection
-        for iCiv in CIVILIZATIONS.majors().ids():
+        for iCiv in civilizations().majors().ids():
             if iCiv != iHuman and lCityCount[iCiv] > 0 and lSuppressList[iCiv] == 0:
                 bSuppressed = False
         if lCityCount[iHuman] > 0:
@@ -1663,7 +1665,7 @@ class RiseAndFall:
 
         # Absinthe: we shouldn't get a previous leader on respawn - would be changed to a newer one in a couple turns anyway
         # 			instead we have a random chance to remain with the leader before the collapse, or to switch to the next one
-        leaders = CIVILIZATIONS[iDeadCiv].leaders.late
+        leaders = civilizations()[iDeadCiv].leaders.late
         if leaders:
             # no change if we are already at the last leader
             # for iLeader in range(len(tLeaderCiv) - 1):
@@ -1683,14 +1685,14 @@ class RiseAndFall:
         # 			pDeadCiv.setLeader(tLeaders[iDeadCiv][iLeader])
         # 			break
 
-        for iCiv in CIVILIZATIONS.majors().ids():
+        for iCiv in civilizations().majors().ids():
             if iCiv != iDeadCiv:
                 if teamDeadCiv.isAtWar(iCiv):
                     teamDeadCiv.makePeace(iCiv)
         self.setNumCities(iDeadCiv, 0)  # reset collapse condition
 
         # Absinthe: reset vassalage and update dynamic civ names
-        for iOtherCiv in CIVILIZATIONS.majors().ids():
+        for iOtherCiv in civilizations().majors().ids():
             if iOtherCiv != iDeadCiv:
                 if teamDeadCiv.isVassal(iOtherCiv) or gc.getTeam(
                     gc.getPlayer(iOtherCiv).getTeam()
@@ -1721,7 +1723,7 @@ class RiseAndFall:
             bOwnerVassal = teamOwner.isAVassal()
             bOwnerHumanVassal = teamOwner.isVassal(iHuman)
 
-            if iOwner >= CIVILIZATIONS.majors().len():
+            if iOwner >= civilizations().majors().len():
                 utils.cultureManager(tCity, 100, iDeadCiv, iOwner, False, True, True)
                 utils.flipUnitsInCityBefore(tCity, iDeadCiv, iOwner)
                 self.setTempFlippingCity(tCity)
@@ -1756,7 +1758,7 @@ class RiseAndFall:
                 ):  # declare war or peace only once - the 3rd condition is obvious but "vassal of themselves" was happening
                     rndNum = gc.getGame().getSorenRandNum(100, "odds")
                     if (
-                        rndNum >= CIVILIZATIONS[iOwner].ai.stop_birth_threshold
+                        rndNum >= civilizations()[iOwner].ai.stop_birth_threshold
                         and not bOwnerHumanVassal
                         and not bAlreadyVassal
                     ):  # if bOwnerHumanVassal is True, it will skip to the 3rd condition, as bOwnerVassal is True as well
@@ -1765,7 +1767,7 @@ class RiseAndFall:
                         bAtWar = True
                     # Absinthe: do we really want to auto-vassal them on respawn? why?
                     # 			set it to 0 from 60 temporarily (so it's never True), as a quick fix until the mechanics are revised
-                    elif rndNum <= 0 - (CIVILIZATIONS[iOwner].ai.stop_birth_threshold / 2):
+                    elif rndNum <= 0 - (civilizations()[iOwner].ai.stop_birth_threshold / 2):
                         if teamOwner.isAtWar(iDeadCiv):
                             teamOwner.makePeace(iDeadCiv)
                         if (
@@ -1802,7 +1804,7 @@ class RiseAndFall:
         # add former colonies that are still free
         # 3Miro: no need, we don't have "colonies", this causes trouble with Cordoba's special respawn, getting cities back from Iberia
         # colonyList = []
-        # for iIndCiv in CIVILIZATIONS.minors().ids():
+        # for iIndCiv in civilizations().minors().ids():
         # 	if gc.getPlayer(iIndCiv).isAlive():
         # 		for indepCity in utils.getCityList(iIndCiv):
         # 			if indepCity.getOriginalOwner() == iDeadCiv:
@@ -1881,8 +1883,8 @@ class RiseAndFall:
 
     def moveBackCapital(self, iCiv):
         cityList = utils.getCityList(iCiv)
-        tiles = CIVILIZATIONS[iCiv].location.get(
-            lambda c: c.new_capital, [CIVILIZATIONS[iCiv].location.capital]
+        tiles = civilizations()[iCiv].location.get(
+            lambda c: c.new_capital, [civilizations()[iCiv].location.capital]
         )
 
         # TODO: remove for/else implementation
@@ -1936,7 +1938,7 @@ class RiseAndFall:
                     pCityArea = gc.getMap().plot(ix, iy)
                     iCivCulture = pCityArea.getCulture(iCiv)
                     iLoopCivCulture = 0
-                    for civilization in CIVILIZATIONS.minors().ids():
+                    for civilization in civilizations().minors().ids():
                         iLoopCivCulture += pCityArea.getCulture(civilization)
                         pCityArea.setCulture(civilization, 0, True)
                     pCityArea.setCulture(iCiv, iCivCulture + iLoopCivCulture, True)
@@ -1944,7 +1946,7 @@ class RiseAndFall:
                 city = pCurrent.getPlotCity()
                 iCivCulture = city.getCulture(iCiv)
                 iLoopCivCulture = 0
-                for civilization in CIVILIZATIONS.minors().ids():
+                for civilization in civilizations().minors().ids():
                     iLoopCivCulture += pCityArea.getCulture(civilization)
                     pCityArea.setCulture(civilization, 0, True)
                 city.setCulture(iCiv, iCivCulture + iLoopCivCulture, True)
@@ -1952,7 +1954,7 @@ class RiseAndFall:
     def initBirth(self, iCurrentTurn, iBirthYear, iCiv):
         iHuman = utils.getHumanID()
         if iCurrentTurn == iBirthYear - 1 + self.getSpawnDelay(iCiv) + self.getFlipsDelay(iCiv):
-            tCapital = CIVILIZATIONS[iCiv].location.capital.to_tuple()
+            tCapital = civilizations()[iCiv].location.capital.to_tuple()
             tTopLeft = Consts.tCoreAreasTL[iCiv]
             tBottomRight = Consts.tCoreAreasBR[iCiv]
             tBroaderTopLeft = Consts.tBroaderAreasTL[iCiv]
@@ -1996,7 +1998,7 @@ class RiseAndFall:
                         (tCapital[0] - 1, tCapital[1] - 1), (tCapital[0] + 1, tCapital[1] + 1)
                     )
                     # Absinthe: why do we flip units in these areas if we are under bDeleteEverything?
-                    # for iLoopCiv in CIVILIZATIONS.ids():
+                    # for iLoopCiv in civilizations().ids():
                     # 	if iCiv != iLoopCiv:
                     # 		utils.flipUnitsInArea(tTopLeft, tBottomRight, iCiv, iLoopCiv, True, False)
                     # 		utils.flipUnitsInPlots(Consts.lExtraPlots[iCiv], iCiv, iLoopCiv, True, False)
@@ -2005,7 +2007,7 @@ class RiseAndFall:
                         # self.moveOutUnits(x, y, tCapital[0], tCapital[1])
                         if plot.isCity():
                             plot.eraseAIDevelopment()  # new function, similar to erase but won't delete rivers, resources and features
-                        for civilization in CIVILIZATIONS.ids():
+                        for civilization in civilizations().ids():
                             if iCiv != civilization:
                                 plot.setCulture(civilization, 0, True)
                         # pCurrent.setCulture(iCiv,10,True)
@@ -2029,7 +2031,7 @@ class RiseAndFall:
             if (
                 gc.getPlayer(iCiv).isAlive()
                 and not self.getAlreadySwitched()
-                and iCurrentTurn > CIVILIZATIONS[iHuman].date.birth + 40
+                and iCurrentTurn > civilizations()[iHuman].date.birth + 40
                 and not gc.getPlayer(iHuman).getIsCrusader()
             ):
                 self.newCivPopup(iCiv)
@@ -2055,7 +2057,7 @@ class RiseAndFall:
 
     def deleteMode(self, iCurrentPlayer):
         iCiv = self.getDeleteMode(0)
-        tCapital = CIVILIZATIONS[iCiv].location.capital.to_tuple()
+        tCapital = civilizations()[iCiv].location.capital.to_tuple()
         if iCurrentPlayer == iCiv:
             for (x, y) in utils.surroundingPlots(tCapital, 2):
                 plot = gc.getMap().plot(x, y)
@@ -2077,7 +2079,7 @@ class RiseAndFall:
         for (x, y) in utils.surroundingPlots(tCapital):
             plot = gc.getMap().plot(x, y)
             if plot.isOwned():
-                for iLoopCiv in CIVILIZATIONS.ids():
+                for iLoopCiv in civilizations().ids():
                     if iLoopCiv != iCiv:
                         plot.setCulture(iLoopCiv, 0, True)
                     # else:
@@ -2173,7 +2175,7 @@ class RiseAndFall:
                     utils.killUnitsInPlots(lPlotBarbFlip, Civ.BARBARIAN.value)
                 else:
                     utils.flipUnitsInPlots(lPlotBarbFlip, iCiv, Civ.BARBARIAN.value, True, True)
-                for iIndyCiv in CIVILIZATIONS.independents().ids():
+                for iIndyCiv in civilizations().independents().ids():
                     # remaining independents in the region: killed for the human player, flipped for the AI
                     if iCiv == utils.getHumanID():
                         utils.killUnitsInPlots(lPlotIndyFlip, iIndyCiv)
@@ -2196,7 +2198,7 @@ class RiseAndFall:
                 utils.flipUnitsInPlots(
                     Consts.lExtraPlots[iCiv], iCiv, Civ.BARBARIAN.value, False, True
                 )  # remaining barbs in the region now belong to the new civ
-            for iIndyCiv in CIVILIZATIONS.independents().ids():
+            for iIndyCiv in civilizations().independents().ids():
                 if iCiv != utils.getHumanID():
                     utils.flipUnitsInArea(
                         tTopLeft, tBottomRight, iCiv, iIndyCiv, False, False
@@ -2257,7 +2259,7 @@ class RiseAndFall:
             utils.flipUnitsInPlots(
                 Consts.lExtraPlots[iCiv], iCiv, Civ.BARBARIAN.value, False, True
             )  # remaining barbs in the region now belong to the new civ
-            for iIndyCiv in CIVILIZATIONS.independents().ids():
+            for iIndyCiv in civilizations().independents().ids():
                 utils.flipUnitsInArea(
                     tTopLeft, tBottomRight, iCiv, iIndyCiv, False, False
                 )  # remaining independents in the region now belong to the new civ
@@ -2310,7 +2312,7 @@ class RiseAndFall:
             utils.flipUnitsInPlots(
                 Consts.lExtraPlots[iCiv], iCiv, Civ.BARBARIAN.value, True, True
             )  # remaining barbs in the region now belong to the new civ
-            for iIndyCiv in CIVILIZATIONS.independents().ids():
+            for iIndyCiv in civilizations().independents().ids():
                 utils.flipUnitsInArea(
                     tTopLeft, tBottomRight, iCiv, iIndyCiv, True, False
                 )  # remaining independents in the region now belong to the new civ
@@ -2345,7 +2347,7 @@ class RiseAndFall:
                 iOwner = loopCity.getOwner()
                 iCultureChange = 0  # if 0, no flip; if > 0, flip will occur with the value as variable for utils.CultureManager()
 
-                if iOwner >= CIVILIZATIONS.majors().len():
+                if iOwner >= civilizations().majors().len():
                     # utils.debugTextPopup( 'BARB' )
                     iCultureChange = 100
                 # case 2: human city
@@ -2362,14 +2364,14 @@ class RiseAndFall:
                         # utils.debugTextPopup( 'iConvertedCities OK' )
                         iCultureChange = 50
                         if (
-                            gc.getGame().getGameTurn() <= CIVILIZATIONS[iCiv].date.birth + 5
+                            gc.getGame().getGameTurn() <= civilizations()[iCiv].date.birth + 5
                         ):  # if we're during a birth
                             rndNum = gc.getGame().getSorenRandNum(100, "odds")
                             # 3Miro: I don't know why the iOwner check is needed below, but the module crashes sometimes
                             if (
                                 iOwner > -1
-                                and iOwner < CIVILIZATIONS.majors().len()
-                                and rndNum >= CIVILIZATIONS[iOwner].ai.stop_birth_threshold
+                                and iOwner < civilizations().majors().len()
+                                and rndNum >= civilizations()[iOwner].ai.stop_birth_threshold
                             ):
                                 pOwner = gc.getPlayer(iOwner)
                                 if not gc.getTeam(pOwner.getTeam()).isAtWar(iCiv):
@@ -2391,7 +2393,7 @@ class RiseAndFall:
                                         else:
                                             self.createAdditionalUnits(
                                                 iCiv,
-                                                CIVILIZATIONS[iCiv].location.capital.to_tuple(),
+                                                civilizations()[iCiv].location.capital.to_tuple(),
                                             )
 
                 if iCultureChange > 0:
@@ -2536,7 +2538,7 @@ class RiseAndFall:
             return False
         if pPlayer.getEverRespawned():
             return False
-        if iGameTurn <= CIVILIZATIONS[iPlayer].date.birth + 25:
+        if iGameTurn <= civilizations()[iPlayer].date.birth + 25:
             return False
         if iGameTurn <= (utils.getLastTurnAlive(iPlayer) + iLastAliveInterval):
             return False
@@ -3156,7 +3158,7 @@ class RiseAndFall:
             xml.iWorker,
             iCiv,
             tPlot,
-            CIVILIZATIONS[iCiv].initial.condition.workers,
+            civilizations()[iCiv].initial.condition.workers,
         )
         # Absinthe: second Ottoman spawn stack may stay, although they now spawn in Gallipoli in the first place (one plot SE)
         if iCiv == Civ.OTTOMAN.value:
@@ -3165,9 +3167,9 @@ class RiseAndFall:
     def create1200ADstartingUnits(self):
         iHuman = utils.getHumanID()
         if (
-            CIVILIZATIONS[iHuman].date.birth > DateTurn.i1200AD
+            civilizations()[iHuman].date.birth > DateTurn.i1200AD
         ):  # so iSweden, iPrussia, iLithuania, iAustria, iTurkey, iMoscow, iDutch
-            tStart = CIVILIZATIONS[iHuman].location.capital.to_tuple()
+            tStart = civilizations()[iHuman].location.capital.to_tuple()
 
             # Absinthe: changes in the unit positions, in order to prohibit these contacts in 1200AD
             if iHuman == Civ.SWEDEN:  # contact with Denmark
@@ -3222,7 +3224,7 @@ class RiseAndFall:
 
         iHuman = utils.getHumanID()
         if (
-            CIVILIZATIONS[iHuman].date.birth > DateTurn.i500AD
+            civilizations()[iHuman].date.birth > DateTurn.i500AD
         ):  # so everyone apart from Byzantium and France
             tStart = CIV_CAPITAL_LOCATIONS[get_civ_by_id(iHuman)].to_tuple()
 
@@ -3263,7 +3265,7 @@ class RiseAndFall:
     def assignTechs(self, iCiv):
         # 3Miro: other than the original techs
 
-        if CIVILIZATIONS[iCiv].date.birth == 0:
+        if civilizations()[iCiv].date.birth == 0:
             return
 
         if iCiv == Civ.ARABIA.value:
@@ -3599,7 +3601,7 @@ class RiseAndFall:
 
     def hitNeighboursStability(self, iCiv):
         # 3Miro: Stability on Spawn
-        neighbours = CIVILIZATIONS[iCiv].location.old_neighbours
+        neighbours = civilizations()[iCiv].location.old_neighbours
         if neighbours is not None:
             bHuman = False
             # for iLoop in Consts.lOlderNeighbours[iCiv]:
@@ -3621,7 +3623,7 @@ class RiseAndFall:
 
     def initContact(self, iCiv, bMeet=True):
         _civ = team(iCiv)
-        contacts = CIVILIZATIONS[iCiv].initial.contact
+        contacts = civilizations()[iCiv].initial.contact
         if contacts:
             for contact in contacts:
                 other = civ(contact)

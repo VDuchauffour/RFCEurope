@@ -1,8 +1,7 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
-from CoreData import CIVILIZATIONS
-from CoreData import COMPANIES
+from CoreData import civilizations, COMPANIES
 from CoreTypes import (
     City,
     Civ,
@@ -2344,7 +2343,7 @@ class CvVictoryScreen:
         # UHV2
         sText2 += self.getProvinceString(vic.tByzantiumControlII)
         # UHV3
-        tConstantinople = CIVILIZATIONS[iPlayer].location.capital.to_tuple()
+        tConstantinople = civilizations()[iPlayer].location.capital.to_tuple()
         pConstantinople = gc.getMap().plot(tConstantinople[0], tConstantinople[1]).getPlotCity()
         sConstantinopleName = localText.getText("TXT_KEY_CITY_NAME_CONSTANTINOPLE", ())
         if self.checkCity(tConstantinople, iPlayer, sConstantinopleName) == -1:
@@ -2492,7 +2491,7 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        tCordoba = CIVILIZATIONS[iPlayer].location.capital.to_tuple()
+        tCordoba = civilizations()[iPlayer].location.capital.to_tuple()
         pCordoba = gc.getMap().plot(tCordoba[0], tCordoba[1]).getPlotCity()
         sCordobaName = localText.getText("TXT_KEY_CITY_NAME_CORDOBA", ())
         if self.checkCity(tCordoba, iPlayer, sCordobaName) == -1:
@@ -2533,7 +2532,7 @@ class CvVictoryScreen:
         # UHV1
         sText1 += self.getProvinceString(vic.tVenetianControl)
         # UHV2
-        tConstantinople = CIVILIZATIONS[Civ.BYZANTIUM].location.capital.to_tuple()
+        tConstantinople = civilizations()[Civ.BYZANTIUM].location.capital.to_tuple()
         sText2 += self.checkCity(
             tConstantinople,
             iPlayer,
@@ -2692,7 +2691,7 @@ class CvVictoryScreen:
         iSpainColonies = vic.Victory().getNumRealColonies(iPlayer)
         iOtherColonies = 0
         iColonyPlayer = -1
-        for iCiv in CIVILIZATIONS.majors().ids():
+        for iCiv in civilizations().majors().ids():
             if iCiv == iPlayer:
                 continue
             if gc.getPlayer(iCiv).isAlive():
@@ -2715,7 +2714,7 @@ class CvVictoryScreen:
         )
         lLand = [0, 0, 0, 0, 0, 0]  # Prot, Islam, Cath, Orth, Jew, Pagan
         lPop = [0, 0, 0, 0, 0, 0]
-        for iLoopPlayer in CIVILIZATIONS.majors().ids():
+        for iLoopPlayer in civilizations().majors().ids():
             pLoopPlayer = gc.getPlayer(iLoopPlayer)
             iStateReligion = pLoopPlayer.getStateReligion()
             if iStateReligion > -1:
@@ -2835,7 +2834,7 @@ class CvVictoryScreen:
         iPolandFood = pPlayer.calculateTotalYield(YieldTypes.YIELD_FOOD)
         iOtherFood = 0
         iFoodPlayer = -1
-        for iLoopPlayer in CIVILIZATIONS.majors().ids():
+        for iLoopPlayer in civilizations().majors().ids():
             if iLoopPlayer == iPlayer:
                 continue
             pLoopPlayer = gc.getPlayer(iLoopPlayer)
@@ -2898,7 +2897,7 @@ class CvVictoryScreen:
         ) + pPlayer.calculateTotalExports(YieldTypes.YIELD_COMMERCE)
         iOtherTrade = 0
         iBiggestTrader = -1
-        for iLoopPlayer in CIVILIZATIONS.majors().ids():
+        for iLoopPlayer in civilizations().majors().ids():
             if iLoopPlayer == iPlayer:
                 continue
             pLoopPlayer = gc.getPlayer(iLoopPlayer)
@@ -3130,7 +3129,7 @@ class CvVictoryScreen:
         iCount, iTotal = vic.Victory().getTerritoryPercentEurope(iPlayer, True)
         iOtherCount = 0
         iMostPlayer = -1
-        for iLoopPlayer in CIVILIZATIONS.majors().ids():
+        for iLoopPlayer in civilizations().majors().ids():
             if iLoopPlayer == iPlayer:
                 continue
             pLoopPlayer = gc.getPlayer(iLoopPlayer)
@@ -3162,7 +3161,7 @@ class CvVictoryScreen:
         sText1 += self.getProvinceString(vic.tAustriaControl)
         # UHV2
         iCount = 0
-        for iLoopPlayer in CIVILIZATIONS.majors().ids():
+        for iLoopPlayer in civilizations().majors().ids():
             pLoopPlayer = gc.getPlayer(iLoopPlayer)
             if iLoopPlayer != iPlayer and pLoopPlayer.isAlive():
                 if gc.getTeam(pLoopPlayer.getTeam()).isVassal(iPlayer):
@@ -3220,7 +3219,7 @@ class CvVictoryScreen:
         )
         bColor = False
         iNumAccess = pPlayer.countCultBorderBonuses(xml.iAccess)
-        tConstantinople = CIVILIZATIONS[Civ.BYZANTIUM].location.capital.to_tuple()
+        tConstantinople = civilizations()[Civ.BYZANTIUM].location.capital.to_tuple()
         iConstantinopleOwner = (
             gc.getMap().plot(tConstantinople[0], tConstantinople[1]).getPlotCity().getOwner()
         )
@@ -3265,7 +3264,7 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        tAmsterdam = CIVILIZATIONS[iPlayer].location.capital.to_tuple()
+        tAmsterdam = civilizations()[iPlayer].location.capital.to_tuple()
         pPlot = gc.getMap().plot(tAmsterdam[0], tAmsterdam[1])
         if (
             self.checkCity(
@@ -3510,7 +3509,7 @@ class CvVictoryScreen:
             sProvName = "TXT_KEY_PROVINCE_NAME_%i" % iProv
             sProvName = localText.getText(sProvName, ())
             bProvinceHasCity = 0
-            for civ in CIVILIZATIONS:
+            for civ in civilizations():
                 if civ.player.getProvinceCityCount(iProv) > 0:
                     bProvinceHasCity = 1
                     break
@@ -3611,7 +3610,7 @@ class CvVictoryScreen:
             pTestPlayer = gc.getPlayer(iLoopPlayer)
             sCivShortName = str(pTestPlayer.getCivilizationShortDescriptionKey())
             # unknown: if not yet born, or alive but no contact
-            if iGameTurn <= CIVILIZATIONS[iLoopPlayer].date.birth or (
+            if iGameTurn <= civilizations()[iLoopPlayer].date.birth or (
                 not gc.getPlayer(self.iActivePlayer).canContact(iLoopPlayer)
                 and pTestPlayer.isAlive()
             ):
@@ -3640,7 +3639,7 @@ class CvVictoryScreen:
             sCivShortName = str(pEnemy.getCivilizationShortDescriptionKey())
             if (
                 pEnemy.isAlive() and not teamEnemy.isVassal(teamOwn.getID())
-            ) or iGameTurn <= CIVILIZATIONS[iEnemy].date.birth:
+            ) or iGameTurn <= civilizations()[iEnemy].date.birth:
                 sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (
                     localText.getText(sCivShortName, ())
                 )
@@ -3663,7 +3662,7 @@ class CvVictoryScreen:
             pEnemy = gc.getPlayer(iEnemyCiv)
             teamEnemy = gc.getTeam(iEnemyCiv)
             sCivShortName = str(pEnemy.getCivilizationShortDescriptionKey())
-            if iGameTurn <= CIVILIZATIONS[iEnemyCiv].date.birth:
+            if iGameTurn <= civilizations()[iEnemyCiv].date.birth:
                 sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (
                     localText.getText(sCivShortName, ())
                 )
@@ -3696,7 +3695,7 @@ class CvVictoryScreen:
         iPlayerGold = pPlayer.getGold()
         iGold = 0
         iRichestPlayer = -1
-        for iCiv in CIVILIZATIONS.majors().ids():
+        for iCiv in civilizations().majors().ids():
             if iCiv == self.iActivePlayer:
                 continue
             if gc.getPlayer(iCiv).isAlive():

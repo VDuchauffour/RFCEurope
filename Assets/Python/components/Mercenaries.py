@@ -2,7 +2,7 @@
 # Written mostly by 3Miro
 
 from CvPythonExtensions import *
-from CoreData import CIVILIZATIONS
+from CoreData import civilizations
 from CoreTypes import Civ, SpecialParameter, Religion, Promotion
 import PyHelpers
 
@@ -2373,7 +2373,7 @@ class MercenaryManager:
         # for lMerc in self.lGlobalPool:
 
         # Go through each of the players and deduct their mercenary maintenance amount from their gold (round up)
-        for iPlayer in CIVILIZATIONS.main().ids():
+        for iPlayer in civilizations().main().ids():
             pPlayer = gc.getPlayer(iPlayer)
             if pPlayer.isAlive():
                 if (
@@ -2604,7 +2604,7 @@ class MercenaryManager:
         iWarValue = 0  # compute the total number of wars being fought at the moment
 
         teamPlayer = gc.getTeam(pPlayer.getTeam())
-        for iOponent in CIVILIZATIONS.drop(Civ.BARBARIAN).ids():
+        for iOponent in civilizations().drop(Civ.BARBARIAN).ids():
             if teamPlayer.isAtWar(gc.getPlayer(iOponent).getTeam()):
                 iWarValue += 1
                 if iOponent <= Civ.POPE.value:
@@ -2645,7 +2645,7 @@ class MercenaryManager:
 
         if iWarValue > 0:
             # we have to be at war to hire
-            iOdds = CIVILIZATIONS[iPlayer].misc.hire_mercenary_threshold
+            iOdds = civilizations()[iPlayer].misc.hire_mercenary_threshold
             if iWarValue < 2:
                 iOdds *= 2  # small wars are hardly worth the trouble
             elif iWarValue > 4:  # large war
