@@ -4,6 +4,7 @@ from CoreData import COMPANIES
 from CoreTypes import (
     City,
     Civ,
+    Civic,
     Colony,
     Company,
     Project,
@@ -1431,12 +1432,12 @@ class Victory:
         # UHV 3: Be the first to adopt Free Religion
         if self.isPossibleUHV(Civ.HUNGARY.value, 2, True):
             iReligiousCivic = CIVILIZATIONS[Civ.HUNGARY].player.getCivics(4)
-            if iReligiousCivic == xml.iCivicFreeReligion:
+            if iReligiousCivic == Civic.FREE_RELIGION.value:
                 self.wonUHV(Civ.HUNGARY.value, 2)
             else:
                 for iPlayer in CIVILIZATIONS.majors().ids():
                     pPlayer = gc.getPlayer(iPlayer)
-                    if pPlayer.isAlive() and pPlayer.getCivics(4) == xml.iCivicFreeReligion:
+                    if pPlayer.isAlive() and pPlayer.getCivics(4) == Civic.FREE_RELIGION.value:
                         self.lostUHV(Civ.HUNGARY.value, 2)
 
     def checkSpain(self, iGameTurn):

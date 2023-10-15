@@ -4,6 +4,7 @@ from CoreData import CIVILIZATIONS
 from CoreTypes import (
     City,
     Civ,
+    Civic,
     Colony,
     PlagueType,
     Promotion,
@@ -523,7 +524,7 @@ class RFCEBalance:
         gc.setUP(Civ.BURGUNDY.value, UniquePower.PER_CITY_COMMERCE_BONUS.value, 200)
 
         gc.setUP(Civ.BYZANTIUM.value, UniquePower.NO_COLLAPSE_IN_CORE_AND_NORMAL_AREAS.value, 1)
-        gc.setUP(Civ.BYZANTIUM.value, UniquePower.PRE_ACCESS_CIVICS.value, xml.iCivicImperialism)
+        gc.setUP(Civ.BYZANTIUM.value, UniquePower.PRE_ACCESS_CIVICS.value, Civic.IMPERIALISM.value)
 
         gc.setUP(Civ.FRANCE.value, UniquePower.LESS_INSTABILITY_WITH_FOREIGN_LAND.value, 1)
 
@@ -560,7 +561,7 @@ class RFCEBalance:
         )  # "hidden" part of the UP
 
         gc.setUP(
-            Civ.VENECIA.value, UniquePower.PRE_ACCESS_CIVICS.value, xml.iCivicMerchantRepublic
+            Civ.VENECIA.value, UniquePower.PRE_ACCESS_CIVICS.value, Civic.MERCHANT_REPUBLIC.value
         )
         # gc.setUP( iVenecia, UniquePower.ALLOW_SHIPS_IN_FOREIGN_SEA.value, 1 )
 
@@ -643,9 +644,9 @@ class RFCEBalance:
             Promotion.FORMATION.value,
         )
 
-        gc.setUP(Civ.NOVGOROD.value, UniquePower.PRE_ACCESS_CIVICS.value, xml.iCivicBureaucracy)
+        gc.setUP(Civ.NOVGOROD.value, UniquePower.PRE_ACCESS_CIVICS.value, Civic.BUREAUCRACY.value)
 
-        gc.setUP(Civ.PRUSSIA.value, UniquePower.PRE_ACCESS_CIVICS.value, xml.iCivicTheocracy)
+        gc.setUP(Civ.PRUSSIA.value, UniquePower.PRE_ACCESS_CIVICS.value, Civic.THEOCRACY.value)
         # Absinthe: handled in python currently
         # gc.setUP( iPrussia, UniquePower.NO_INSTABILITY_WITH_CIVIC_AND_STATE_RELIGION_CHANGE.value, 1 )
 

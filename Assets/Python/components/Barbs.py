@@ -1,7 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Barbarian units and cities
 
 from CvPythonExtensions import *
-from CoreTypes import Civ, Religion
+from CoreTypes import Civ, Civic, Religion
 import PyHelpers  # LOQ
 import Popup
 import RFCUtils
@@ -3563,15 +3563,15 @@ class Barbs:
         # 3rd or 4th choice
         if iDecision in [2, 3]:
             iGovernment = pPlayer.getCivics(0)
-            if iGovernment == xml.iCivicDespotism:
+            if iGovernment == Civic.DESPOTISM.value:
                 iBribeOdds = 15
-            elif iGovernment == xml.iCivicFeudalMonarchy:
+            elif iGovernment == Civic.FEUDAL_MONARCHY.value:
                 iBribeOdds = 25
-            elif iGovernment == xml.iCivicDivineMonarchy:
+            elif iGovernment == Civic.DIVINE_MONARCHY.value:
                 iBribeOdds = 30
-            elif iGovernment == xml.iCivicLimitedMonarchy:
+            elif iGovernment == Civic.LIMITE_DMONARCHY.value:
                 iBribeOdds = 25
-            elif iGovernment == xml.iCivicMerchantRepublic:
+            elif iGovernment == Civic.MERCHANT_REPUBLIC.value:
                 iBribeOdds = 20
             iGold = pPlayer.getGold()
             if iGold < iBribeGold:
@@ -3689,15 +3689,15 @@ class Barbs:
         # bribe the lords, cost 10 gold per population
         # suppression depends on the government Divine Monarchy (30%), Feudal or Limited (25%), Merchant (20%), Decentral (15%)
         iGovernment = pPlayer.getCivics(0)
-        if iGovernment == xml.iCivicDespotism:
+        if iGovernment == Civic.DESPOTISM.value:
             iBribeOdds = 15
-        elif iGovernment == xml.iCivicFeudalMonarchy:
+        elif iGovernment == Civic.FEUDAL_MONARCHY.value:
             iBribeOdds = 25
-        elif iGovernment == xml.iCivicDivineMonarchy:
+        elif iGovernment == Civic.DIVINE_MONARCHY.value:
             iBribeOdds = 30
-        elif iGovernment == xml.iCivicLimitedMonarchy:
+        elif iGovernment == Civic.LIMITE_DMONARCHY.value:
             iBribeOdds = 25
-        elif iGovernment == xml.iCivicMerchantRepublic:
+        elif iGovernment == Civic.MERCHANT_REPUBLIC.value:
             iBribeOdds = 20
         iGold = pPlayer.getGold()
         if iGold < iBribeGold:

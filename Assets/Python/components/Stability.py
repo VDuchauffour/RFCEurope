@@ -7,6 +7,7 @@ import PyHelpers
 from MiscData import MessageData
 from CoreTypes import (
     Civ,
+    Civic,
     Project,
     Scenario,
     Religion,
@@ -353,7 +354,7 @@ class Stability:
             pConq.changeStabilityBase(StabilityCategory.EXPANSION.value, 1)
             pConq.setStabilitySwing(pConq.getStabilitySwing() + 3)
 
-        if pConq.getCivics(5) == xml.iCivicOccupation:
+        if pConq.getCivics(5) == Civic.OCCUPATION.value:
             pConq.changeStabilityBase(StabilityCategory.EXPANSION.value, 1)
 
         if (
@@ -480,7 +481,7 @@ class Stability:
             pPlayer.changeStabilityBase(
                 StabilityCategory.EXPANSION.value, -2
             )  # -2 stability for each colony
-            if iCivic5 == xml.iCivicColonialism:
+            if iCivic5 == Civic.COLONIALISM.value:
                 pPlayer.changeStabilityBase(
                     StabilityCategory.EXPANSION.value, 1
                 )  # one less stability penalty if civ is in Colonialism
@@ -724,7 +725,7 @@ class Stability:
 
             bJewInstability = False
             if (
-                iCivic4 != xml.iCivicFreeReligion
+                iCivic4 != Civic.FREE_RELIGION.value
             ):  # Religious Tolerance negates stability penalties from non-state religions
                 if not gc.hasUP(
                     iPlayer, UniquePower.NO_INSTABILITY_WITH_FOREIGN_RELIGION.value
@@ -733,7 +734,7 @@ class Stability:
                         # only calculate if Judaism is not the State Religion
                         if pPlayer.getStateReligion() != Religion.JUDAISM.value:
                             bJewInstability = True
-                        if iCivic4 == xml.iCivicPaganism:  # Pagans are a bit more tolerant
+                        if iCivic4 == Civic.PAGANISM.value:  # Pagans are a bit more tolerant
                             iReligionStability -= 1
                         elif (
                             iPlayer == Civ.OTTOMAN.value
@@ -763,7 +764,7 @@ class Stability:
                 and not gc.hasUP(iPlayer, UniquePower.NO_UNHAPPINESS_WITH_FOREIGN_CULTURE.value)
             ):
                 # Absinthe: 1 less instability with the Vassalage Civic, so only -1 with less than 20%, 0 otherwise
-                if iCivic5 != xml.iCivicSubjugation:
+                if iCivic5 != Civic.SUBJUGATION.value:
                     iCultureStability -= 1
                 if (pCity.getCulture(iPlayer) * 10000) / iTotalCulture < 20:
                     iCultureStability -= 1
@@ -819,7 +820,7 @@ class Stability:
         # Absinthe: Westminster Abbey faith-stability effect
         if pPlayer.countNumBuildings(xml.iWestminster) > 0:
             # would be better, if the stability bonus was also only applied for Divine Monarchy?
-            # if pPlayer.getCivics(0) == xml.iCivicDivineMonarchy:
+            # if pPlayer.getCivics(0) == Civic.DIVINE_MONARCHY.value:
             iFaith = pPlayer.getFaith()
             iCityStability += iFaith / 20
 
@@ -860,21 +861,21 @@ class Stability:
 
         if pPlayer.getPicklefreeParameter(SpecialParameter.HAS_STEPHANSDOM.value) == 1:
             if iCivicGovernment in [
-                xml.iCivicFeudalMonarchy,
-                xml.iCivicDivineMonarchy,
-                xml.iCivicLimitedMonarchy,
+                Civic.FEUDAL_MONARCHY.value,
+                Civic.DIVINE_MONARCHY.value,
+                Civic.LIMITE_DMONARCHY.value,
             ]:
                 iCivicCombo += 2
 
         if pPlayer.getPicklefreeParameter(SpecialParameter.HAS_UPPSALA_SHRINE.value) == 1:
-            if iCivicReligion == xml.iCivicPaganism:
+            if iCivicReligion == Civic.PAGANISM.value:
                 iCivicCombo += 3
 
         if pPlayer.getPicklefreeParameter(SpecialParameter.HAS_KOUTOUBIA_MOSQUE.value) == 1:
-            if iCivicLegal == xml.iCivicReligiousLaw:
+            if iCivicLegal == Civic.RELIGIOUS_LAW.value:
                 iCivicCombo += 4
 
-        if iCivicLegal == xml.iCivicBureaucracy:  # Bureaucracy city cap
+        if iCivicLegal == Civic.BUREAUCRACY.value:  # Bureaucracy city cap
             if (
                 iPlayer == Civ.NOVGOROD.value and pPlayer.getNumCities() > 6
             ):  # the penalties are halved for Novgorod
@@ -885,7 +886,7 @@ class Stability:
                 iBureaucracyCap = max(-5, iBureaucracyCap)
             iCivicCombo += iBureaucracyCap
 
-        if iCivicGovernment == xml.iCivicMerchantRepublic:  # Merchant Republic city cap
+        if iCivicGovernment == Civic.MERCHANT_REPUBLIC.value:  # Merchant Republic city cap
             if (
                 iPlayer == Civ.VENECIA.value and pPlayer.getNumCities() > 5
             ):  # the penalties are halved for Venice
@@ -901,88 +902,88 @@ class Stability:
     def getCivicCombinationStability(self, iCivic0, iCivic1):
         lCivics = set([iCivic0, iCivic1])
 
-        if xml.iCivicFeudalMonarchy in lCivics:
-            if xml.iCivicFeudalLaw in lCivics:
+        if Civic.FEUDAL_MONARCHY.value in lCivics:
+            if Civic.FEUDAL_LAW.value in lCivics:
                 return 3
 
         if (
-            xml.iCivicDivineMonarchy in lCivics
+            Civic.DIVINE_MONARCHY.value in lCivics
         ):  # Divine Monarchy should have an appropriate religious civic
-            if xml.iCivicReligiousLaw in lCivics:
+            if Civic.RELIGIOUS_LAW.value in lCivics:
                 return 2
-            if xml.iCivicPaganism in lCivics:
+            if Civic.PAGANISM.value in lCivics:
                 return -4
-            if xml.iCivicStateReligion in lCivics:
+            if Civic.STATE_RELIGION.value in lCivics:
                 return 2
-            if xml.iCivicTheocracy in lCivics:
+            if Civic.THEOCRACY.value in lCivics:
                 return 3
-            if xml.iCivicOrganizedReligion in lCivics:
+            if Civic.ORGANIZED_RELIGION.value in lCivics:
                 return 4
-            if xml.iCivicFreeReligion in lCivics:
+            if Civic.FREE_RELIGION.value in lCivics:
                 return -3
 
         if (
-            xml.iCivicLimitedMonarchy in lCivics
+            Civic.LIMITE_DMONARCHY.value in lCivics
         ):  # Constitutional Monarchy and Republic both like enlightened civics
-            if xml.iCivicCommonLaw in lCivics:
+            if Civic.COMMON_LAW.value in lCivics:
                 return 3
-            if xml.iCivicFreePeasantry in lCivics:
+            if Civic.FREE_PEASANTRY.value in lCivics:
                 return 2
-            if xml.iCivicFreeLabor in lCivics:
+            if Civic.FREE_LABOR.value in lCivics:
                 return 2
 
         if (
-            xml.iCivicMerchantRepublic in lCivics
+            Civic.MERCHANT_REPUBLIC.value in lCivics
         ):  # Constitutional Monarchy and Republic both like enlightened civics
-            if xml.iCivicFeudalLaw in lCivics:
+            if Civic.FEUDAL_LAW.value in lCivics:
                 return -3
-            if xml.iCivicCommonLaw in lCivics:
+            if Civic.COMMON_LAW.value in lCivics:
                 return 3
-            if xml.iCivicFreePeasantry in lCivics:
+            if Civic.FREE_PEASANTRY.value in lCivics:
                 return 2
-            if xml.iCivicFreeLabor in lCivics:
+            if Civic.FREE_LABOR.value in lCivics:
                 return 2
-            if xml.iCivicTradeEconomy in lCivics:
+            if Civic.TRADE_ECONOMY.value in lCivics:
                 return 4
-            if xml.iCivicMercantilism in lCivics:
+            if Civic.MERCANTILISM.value in lCivics:
                 return -4
-            if xml.iCivicImperialism in lCivics:
+            if Civic.IMPERIALISM.value in lCivics:
                 return -2
 
-        if xml.iCivicFeudalLaw in lCivics:
-            if xml.iCivicSerfdom in lCivics:
+        if Civic.FEUDAL_LAW.value in lCivics:
+            if Civic.SERFDOM.value in lCivics:
                 return 3
-            if xml.iCivicFreePeasantry in lCivics:
+            if Civic.FREE_PEASANTRY.value in lCivics:
                 return -4
-            if xml.iCivicManorialism in lCivics:
+            if Civic.MANORIALISM.value in lCivics:
                 return 2
-            if xml.iCivicVassalage in lCivics:
+            if Civic.VASSALAGE.value in lCivics:
                 return 2
 
-        if xml.iCivicReligiousLaw in lCivics:
-            if xml.iCivicPaganism in lCivics:
+        if Civic.RELIGIOUS_LAW.value in lCivics:
+            if Civic.PAGANISM.value in lCivics:
                 return -5
-            if xml.iCivicTheocracy in lCivics:
+            if Civic.THEOCRACY.value in lCivics:
                 return 5
-            if xml.iCivicFreeReligion in lCivics:
+            if Civic.FREE_RELIGION.value in lCivics:
                 return -3
 
-        if xml.iCivicCommonLaw in lCivics:
-            if xml.iCivicSerfdom in lCivics:
+        if Civic.COMMON_LAW.value in lCivics:
+            if Civic.SERFDOM.value in lCivics:
                 return -3
-            if xml.iCivicFreeLabor in lCivics:
+            if Civic.FREE_LABOR.value in lCivics:
                 return 3
-            if xml.iCivicTheocracy in lCivics:
+            if Civic.THEOCRACY.value in lCivics:
                 return -4
 
-        if xml.iCivicSerfdom in lCivics:
-            if xml.iCivicManorialism in lCivics:
+        if Civic.SERFDOM.value in lCivics:
+            if Civic.MANORIALISM.value in lCivics:
                 return 2
-            if xml.iCivicTradeEconomy in lCivics:
+            if Civic.TRADE_ECONOMY.value in lCivics:
                 return -3
 
-        if xml.iCivicApprenticeship in lCivics:
-            if xml.iCivicGuilds in lCivics:
+        if Civic.APPRENTICESHIP.value in lCivics:
+            if Civic.GUILDS.value in lCivics:
                 return 3
 
         return 0
@@ -1070,13 +1071,13 @@ class Stability:
 
             iExpStability += tStabilityPenalty[iProvType]
             if iProvType <= ProvinceTypes.OUTER.value:
-                if iCivic5 == xml.iCivicImperialism:  # Imperialism
+                if iCivic5 == Civic.IMPERIALISM.value:  # Imperialism
                     iCivicBonus += 1
                 if bIsUPLandStability:  # French UP
                     iUPBonus += 1
         iExpStability += iCivicBonus  # Imperialism
         iExpStability += iUPBonus  # French UP
-        if pPlayer.getCivics(5) != xml.iCivicOccupation:
+        if pPlayer.getCivics(5) != Civic.OCCUPATION.value:
             iExpStability -= 3 * pPlayer.getForeignCitiesInMyProvinceType(
                 ProvinceTypes.CORE.value
             )  # -3 stability for each foreign/enemy city in your core provinces, without the Militarism civic
@@ -1085,7 +1086,7 @@ class Stability:
             )  # -1 stability for each foreign/enemy city in your natural provinces, without the Militarism civic
         if pPlayer.getMaster() > -1:
             iExpStability += 8
-        if iCivic5 == xml.iCivicVassalage:
+        if iCivic5 == Civic.VASSALAGE.value:
             iExpStability += 3 * pPlayer.countVassals()
         else:
             iExpStability += pPlayer.countVassals()

@@ -3,7 +3,7 @@
 from CvPythonExtensions import *
 from CoreData import CIVILIZATIONS
 from CoreFunctions import get_religion_by_id
-from CoreTypes import Civ, City, StabilityCategory, Religion
+from CoreTypes import Civ, City, Civic, StabilityCategory, Religion
 from LocationsData import CITIES
 from TimelineData import DateTurn
 import PyHelpers
@@ -516,7 +516,7 @@ class Religions:
             if pPlayer.getProsecutionCount() > 0:
                 pPlayer.changeProsecutionCount(-1)
             # Religious Law means a bigger decrease in persecution points
-            if pPlayer.getCivics(1) == xml.iCivicReligiousLaw:
+            if pPlayer.getCivics(1) == Civic.RELIGIOUS_LAW.value:
                 if pPlayer.getProsecutionCount() > 0:
                     pPlayer.changeProsecutionCount(-1)
 
@@ -963,11 +963,11 @@ class Religions:
     # Absinthe: free religious revolution
     def onPlayerChangeAllCivics(self, iPlayer, lNewCivics, lOldCivics):
         # free religion change when switching away from Paganism
-        if lOldCivics[4] == xml.iCivicPaganism:
+        if lOldCivics[4] == Civic.PAGANISM.value:
             if lNewCivics[4] in [
-                xml.iCivicStateReligion,
-                xml.iCivicTheocracy,
-                xml.iCivicOrganizedReligion,
+                Civic.STATE_RELIGION.value,
+                Civic.THEOCRACY.value,
+                Civic.ORGANIZED_RELIGION.value,
             ]:
                 if iPlayer == utils.getHumanID():
                     # check the available religions
@@ -1535,9 +1535,9 @@ class Religions:
                             0, intolerance[iPlayer] - 30
                         )  # if this player doesn't prosecute, decrease intolerance
                     iRCivic = pPlayer.getCivics(4)
-                    if iRCivic == xml.iCivicTheocracy:
+                    if iRCivic == Civic.THEOCRACY.value:
                         intolerance[iPlayer] += 50
-                    elif iRCivic == xml.iCivicFreeReligion:
+                    elif iRCivic == Civic.FREE_RELIGION.value:
                         intolerance[iPlayer] = max(0, intolerance[iPlayer] - 30)
                 if iPlayer > Civ.POPE.value:
                     intolerance[iPlayer] += gc.getGame().getSorenRandNum(

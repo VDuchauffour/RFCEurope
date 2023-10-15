@@ -463,41 +463,6 @@ iNumBuildings = 176
     iTriumphalArch,
 ) = range(iNumBuildings)
 
-# Civics
-iNumCivics = 30
-(
-    iCivicDespotism,
-    iCivicFeudalMonarchy,
-    iCivicDivineMonarchy,
-    iCivicLimitedMonarchy,
-    iCivicMerchantRepublic,
-    iCivicTibalLaw,
-    iCivicFeudalLaw,
-    iCivicBureaucracy,
-    iCivicReligiousLaw,
-    iCivicCommonLaw,
-    iCivicTribalism,
-    iCivicSerfdom,
-    iCivicFreePeasantry,
-    iCivicApprenticeship,
-    iCivicFreeLabor,
-    iCivicDecentralization,
-    iCivicManorialism,
-    iCivicTradeEconomy,
-    iCivicGuilds,
-    iCivicMercantilism,
-    iCivicPaganism,
-    iCivicStateReligion,
-    iCivicTheocracy,
-    iCivicOrganizedReligion,
-    iCivicFreeReligion,
-    iCivicSubjugation,
-    iCivicVassalage,
-    iCivicImperialism,
-    iCivicOccupation,
-    iCivicColonialism,
-) = range(iNumCivics)
-
 
 # Feature & terrain
 iNumFeatures = 11

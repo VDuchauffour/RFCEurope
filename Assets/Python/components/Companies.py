@@ -14,7 +14,17 @@ from operator import itemgetter
 
 from TimelineData import DateTurn
 from MiscData import MessageData
-from CoreTypes import Building, City, Civ, Company, Province, Scenario, SpecialParameter, Religion
+from CoreTypes import (
+    Building,
+    City,
+    Civ,
+    Civic,
+    Company,
+    Province,
+    Scenario,
+    SpecialParameter,
+    Religion,
+)
 
 # globals
 utils = RFCUtils.RFCUtils()
@@ -573,7 +583,7 @@ class Companies:
             iValue += city.getTradeRoutes()
 
         # civic bonuses
-        if owner.getCivics(0) == xml.iCivicMerchantRepublic:
+        if owner.getCivics(0) == Civic.MERCHANT_REPUBLIC.value:
             if iCompany in [
                 Company.MEDICI.value,
                 Company.ST_GEORGE.value,
@@ -582,7 +592,7 @@ class Companies:
                 iValue += 1
             elif iCompany == Company.HANSA.value:
                 iValue += 2
-        if owner.getCivics(1) == xml.iCivicFeudalLaw:
+        if owner.getCivics(1) == Civic.FEUDAL_LAW.value:
             if iCompany in [
                 Company.HOSPITALLERS.value,
                 Company.TEMPLARS.value,
@@ -591,7 +601,7 @@ class Companies:
                 Company.CALATRAVA.value,
             ]:
                 iValue += 2
-        elif owner.getCivics(1) == xml.iCivicReligiousLaw:
+        elif owner.getCivics(1) == Civic.RELIGIOUS_LAW.value:
             if iCompany in [
                 Company.HOSPITALLERS.value,
                 Company.TEMPLARS.value,
@@ -599,15 +609,15 @@ class Companies:
                 Company.CALATRAVA.value,
             ]:
                 iValue += 1
-        if owner.getCivics(2) == xml.iCivicApprenticeship:
+        if owner.getCivics(2) == Civic.APPRENTICESHIP.value:
             if iCompany == Company.HANSA.value:
                 iValue += 1
-        if owner.getCivics(3) == xml.iCivicTradeEconomy:
+        if owner.getCivics(3) == Civic.TRADE_ECONOMY.value:
             if iCompany in [Company.MEDICI.value, Company.AUGSBURG.value, Company.ST_GEORGE.value]:
                 iValue += 1
             elif iCompany == Company.HANSA.value:
                 iValue += 2
-        elif owner.getCivics(3) == xml.iCivicGuilds:
+        elif owner.getCivics(3) == Civic.GUILDS.value:
             if iCompany in [
                 Company.HOSPITALLERS.value,
                 Company.TEMPLARS.value,
@@ -621,7 +631,7 @@ class Companies:
                 iValue += 1
             elif iCompany == Company.HANSA.value:
                 iValue += 2
-        elif owner.getCivics(3) == xml.iCivicMercantilism:
+        elif owner.getCivics(3) == Civic.MERCANTILISM.value:
             if iCompany == Company.HANSA.value:
                 return -1
             elif iCompany in [
@@ -630,12 +640,12 @@ class Companies:
                 Company.ST_GEORGE.value,
             ]:
                 iValue -= 2
-        if owner.getCivics(4) == xml.iCivicTheocracy:
+        if owner.getCivics(4) == Civic.THEOCRACY.value:
             if iCompany in [Company.HOSPITALLERS.value, Company.TEMPLARS.value]:
                 iValue += 1
             elif iCompany == Company.TEUTONS.value:
                 iValue += 2
-        elif owner.getCivics(4) == xml.iCivicFreeReligion:
+        elif owner.getCivics(4) == Civic.FREE_RELIGION.value:
             if iCompany in [
                 Company.HOSPITALLERS.value,
                 Company.TEMPLARS.value,
@@ -645,7 +655,7 @@ class Companies:
                 iValue -= 1
             elif iCompany == Company.CALATRAVA.value:
                 iValue -= 2
-        if owner.getCivics(5) == xml.iCivicOccupation:
+        if owner.getCivics(5) == Civic.OCCUPATION.value:
             if iCompany in [
                 Company.HOSPITALLERS.value,
                 Company.TEMPLARS.value,
