@@ -19,17 +19,17 @@ while getopts ':l' OPTION; do
 	esac
 done
 
-SCRIPT_DIR=$(dirname "$0")
+SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
 
 LOCAL_PATHS=(
-	"$(readlink -f "$SCRIPT_DIR"/Assets/Python)"
-	"$(readlink -f "$SCRIPT_DIR"/Assets/Python/data)"
-	"$(readlink -f "$SCRIPT_DIR"/Assets/Python/utils)"
-	"$(readlink -f "$SCRIPT_DIR"/Assets/Python/models)"
-	"$(readlink -f "$SCRIPT_DIR"/Assets/Python/components)"
-	"$(readlink -f "$SCRIPT_DIR"/Assets/Python/EntryPoints)"
-	"$(readlink -f "$SCRIPT_DIR"/Assets/Python/pyWB)"
-	"$(readlink -f "$SCRIPT_DIR"/Assets/Python/screens)"
+	"$SCRIPT_DIR/Assets/Python"
+	"$SCRIPT_DIR/Assets/Python/data"
+	"$SCRIPT_DIR/Assets/Python/utils"
+	"$SCRIPT_DIR/Assets/Python/models"
+	"$SCRIPT_DIR/Assets/Python/components"
+	"$SCRIPT_DIR/Assets/Python/EntryPoints"
+	"$SCRIPT_DIR/Assets/Python/pyWB"
+	"$SCRIPT_DIR/Assets/Python/screens"
 )
 EXTERNAL_PATHS=(
 	"$(readlink -f "$SCRIPT_DIR"/../../Assets/Python)"
@@ -59,4 +59,6 @@ fi
 
 fill_paths "${CURRENT_PYTHONPATHS[@]}"
 
+_PYTHONPATH=${_PYTHONPATH:1}
+_PYTHONPATH=${_PYTHONPATH::-1}
 echo "$_PYTHONPATH"
