@@ -2838,32 +2838,3 @@ tWarAtSpawn = (
         ),  # Dut
     ),
 )
-
-# Positions on the Colony map where to display colonies
-colony_positions_xy = [
-    (0, 0),  # Dummy slots for non-colony projects
-    (0, 0),
-    (0, 0),
-    (275, 150),  # Vinland
-    (480, 335),  # GoldCoast
-    (440, 335),  # IvoryCoast
-    (145, 265),  # Cuba
-    (185, 280),  # Hispaniola
-    (290, 410),  # Brazil
-    (160, 110),  # Hudson
-    (170, 210),  # Virginia
-    (610, 390),  # EastAfrica
-    (875, 225),  # China
-    (760, 260),  # India
-    (930, 360),  # East Indies
-    (870, 320),  # Malaysia
-    (560, 510),  # CapeTown
-    (60, 260),  # Aztecs
-    (170, 420),  # Inca
-    (245, 120),  # Quebec
-    (200, 180),  # New England
-    (155, 285),  # Jamaica
-    (130, 325),  # Panama
-    (110, 220),  # Louisiana
-    (960, 320),  # Philippines
-]

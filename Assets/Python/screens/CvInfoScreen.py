@@ -9,7 +9,7 @@ import CvUtil
 
 import string
 
-import Consts
+from LocationsData import COLONY_LOCATIONS
 import XMLConsts as xml
 import RFCUtils
 
@@ -4600,11 +4600,6 @@ class CvInfoScreen:
                 CvUtil.FONT_LEFT_JUSTIFY,
             )
 
-    # Sedna17 Start
-    #############################################################################################################
-    ################################################### COLONIES #################################################
-    #############################################################################################################
-
     def drawColoniesTab(self):
 
         screen = self.getScreen()
@@ -4661,7 +4656,6 @@ class CvInfoScreen:
                             self.aaColoniesBuilt.append([col.value, iPlayerLoop])
                             self.iNumColonies += 1
 
-        cxy = Consts.colony_positions_xy
         # Loop through to place flags first (so flags are all "under" the colony dots)
         for col in Colony:
             builtcount = 0
@@ -4671,8 +4665,8 @@ class CvInfoScreen:
                     self.flag = self.getNextWidgetName()
                     screen.addFlagWidgetGFC(
                         self.flag,
-                        cxy[col][0] - 35 + 20 * builtcount,
-                        cxy[col][1] - 20,
+                        COLONY_LOCATIONS[col][0] - 35 + 20 * builtcount,
+                        COLONY_LOCATIONS[col][1] - 20,
                         80,
                         80,
                         colony[1],
@@ -4693,8 +4687,8 @@ class CvInfoScreen:
                         screen.addDDSGFC(
                             self.mark1,
                             ArtFileMgr.getInterfaceArtInfo("MASK_" + str(colony[1])).getPath(),
-                            cxy[col][0] - 5 + 20 * builtcount,
-                            cxy[col][1] + 45,
+                            COLONY_LOCATIONS[col][0] - 5 + 20 * builtcount,
+                            COLONY_LOCATIONS[col][1] + 45,
                             20,
                             20,
                             WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT,
@@ -4705,8 +4699,8 @@ class CvInfoScreen:
                         screen.addDDSGFC(
                             self.mark1,
                             ArtFileMgr.getInterfaceArtInfo("MASK_OTHER").getPath(),
-                            cxy[col][0] - 5 + 20 * builtcount,
-                            cxy[col][1] + 45,
+                            COLONY_LOCATIONS[col][0] - 5 + 20 * builtcount,
+                            COLONY_LOCATIONS[col][1] + 45,
                             20,
                             20,
                             WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT,
@@ -4726,20 +4720,14 @@ class CvInfoScreen:
                 screen.addDDSGFC(
                     self.mark1,
                     ArtFileMgr.getInterfaceArtInfo("MASK_BLANK").getPath(),
-                    cxy[col][0] - 5 + 25 * n,
-                    cxy[col][1] + 45,
+                    COLONY_LOCATIONS[col][0] - 5 + 25 * n,
+                    COLONY_LOCATIONS[col][1] + 45,
                     20,
                     20,
                     WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROJECT,
                     col,
                     -1,
                 )
-
-    # Sedna17 End
-
-    #############################################################################################################
-    ##################################################### OTHER #################################################
-    #############################################################################################################
 
     def drawLine(self, screen, canvas, x0, y0, x1, y1, color):
         screen.addLineGFC(canvas, self.getNextLineName(), x0, y0 + 1, x1, y1 + 1, color)
