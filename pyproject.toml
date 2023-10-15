@@ -49,3 +49,9 @@ stubPath = "Assets/Python/.stubs"
 reportMissingModuleSource = false
 reportGeneralTypeIssues = false
 typeCheckingMode = "off"
+exclude = [
+  "Assets/Python/EntryPoints/CvScreensInterface.py",
+  "Assets/Python/screens/CvWorldBuilderScreen.py",
+  "Assets/Python/pyWB/CvWBDesc.py",
+  "Assets/Python/PyHelpers.py",
+]
