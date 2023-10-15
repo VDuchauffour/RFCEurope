@@ -1361,7 +1361,7 @@ class CvTechChooser:
                 if gc.getPlayer(self.iCivSelected).isResearchingTech(i):
                     szTechString = (
                         szTechString
-                        + unicode(gc.getPlayer(self.iCivSelected).getQueuePosition(i))
+                        + unicode(gc.getPlayer(self.iCivSelected).getQueuePosition(i))  # type: ignore
                         + ". "
                     )
 

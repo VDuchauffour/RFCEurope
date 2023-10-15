@@ -364,7 +364,7 @@ class CvDomesticAdvisor:
             "CityListBackground",
             2,
             i,
-            unicode(pLoopCity.getPopulation()),
+            unicode(pLoopCity.getPopulation()),  # type: ignore
             "",
             WidgetTypes.WIDGET_GENERAL,
             -1,
@@ -374,7 +374,7 @@ class CvDomesticAdvisor:
 
         # Happiness...
         iNetHappy = pLoopCity.happyLevel() - pLoopCity.unhappyLevel(0)
-        szText = unicode(iNetHappy)
+        szText = unicode(iNetHappy)  # type: ignore
         if iNetHappy > 0:
             szText = (
                 localText.getText("TXT_KEY_COLOR_POSITIVE", ())
@@ -401,7 +401,7 @@ class CvDomesticAdvisor:
 
         # Health...
         iNetHealth = pLoopCity.goodHealth() - pLoopCity.badHealth(0)
-        szText = unicode(iNetHealth)
+        szText = unicode(iNetHealth)  # type: ignore
         if iNetHealth > 0:
             szText = (
                 localText.getText("TXT_KEY_COLOR_POSITIVE", ())
@@ -428,7 +428,7 @@ class CvDomesticAdvisor:
 
         # Food status...
         iNetFood = pLoopCity.foodDifference(True)
-        szText = unicode(iNetFood)
+        szText = unicode(iNetFood)  # type: ignore
         if iNetFood > 0:
             szText = (
                 localText.getText("TXT_KEY_COLOR_POSITIVE", ())
@@ -458,7 +458,7 @@ class CvDomesticAdvisor:
             "CityListBackground",
             6,
             i,
-            unicode(pLoopCity.getYieldRate(YieldTypes.YIELD_PRODUCTION)),
+            unicode(pLoopCity.getYieldRate(YieldTypes.YIELD_PRODUCTION)),  # type: ignore
             "",
             WidgetTypes.WIDGET_GENERAL,
             -1,
@@ -471,7 +471,7 @@ class CvDomesticAdvisor:
             "CityListBackground",
             7,
             i,
-            unicode(pLoopCity.getCommerceRate(CommerceTypes.COMMERCE_GOLD)),
+            unicode(pLoopCity.getCommerceRate(CommerceTypes.COMMERCE_GOLD)),  # type: ignore
             "",
             WidgetTypes.WIDGET_GENERAL,
             -1,
@@ -484,7 +484,7 @@ class CvDomesticAdvisor:
             "CityListBackground",
             8,
             i,
-            unicode(pLoopCity.getCommerceRate(CommerceTypes.COMMERCE_RESEARCH)),
+            unicode(pLoopCity.getCommerceRate(CommerceTypes.COMMERCE_RESEARCH)),  # type: ignore
             "",
             WidgetTypes.WIDGET_GENERAL,
             -1,
@@ -497,7 +497,7 @@ class CvDomesticAdvisor:
             "CityListBackground",
             9,
             i,
-            unicode(pLoopCity.getCommerceRate(CommerceTypes.COMMERCE_ESPIONAGE)),
+            unicode(pLoopCity.getCommerceRate(CommerceTypes.COMMERCE_ESPIONAGE)),  # type: ignore
             "",
             WidgetTypes.WIDGET_GENERAL,
             -1,
@@ -506,7 +506,7 @@ class CvDomesticAdvisor:
         )
 
         # Culture status...
-        szCulture = unicode(pLoopCity.getCommerceRate(CommerceTypes.COMMERCE_CULTURE))
+        szCulture = unicode(pLoopCity.getCommerceRate(CommerceTypes.COMMERCE_CULTURE))  # type: ignore
         iCultureTimes100 = pLoopCity.getCultureTimes100(CyGame().getActivePlayer())
         iCultureRateTimes100 = pLoopCity.getCommerceRateTimes100(CommerceTypes.COMMERCE_CULTURE)
         if iCultureRateTimes100 > 0:
@@ -514,7 +514,7 @@ class CvDomesticAdvisor:
             if iCultureLeftTimes100 > 0:
                 szCulture += (
                     u" ("
-                    + unicode(
+                    + unicode(  # type: ignore
                         (iCultureLeftTimes100 + iCultureRateTimes100 - 1) / iCultureRateTimes100
                     )
                     + u")"
@@ -537,7 +537,7 @@ class CvDomesticAdvisor:
             "CityListBackground",
             11,
             i,
-            unicode(pLoopCity.getTradeYield(YieldTypes.YIELD_COMMERCE)),
+            unicode(pLoopCity.getTradeYield(YieldTypes.YIELD_COMMERCE)),  # type: ignore
             "",
             WidgetTypes.WIDGET_GENERAL,
             -1,
@@ -550,7 +550,7 @@ class CvDomesticAdvisor:
             "CityListBackground",
             12,
             i,
-            unicode(pLoopCity.getMaintenance()),
+            unicode(pLoopCity.getMaintenance()),  # type: ignore
             "",
             WidgetTypes.WIDGET_GENERAL,
             -1,
@@ -560,7 +560,7 @@ class CvDomesticAdvisor:
 
         # Great Person
         iGreatPersonRate = pLoopCity.getGreatPeopleRate()
-        szGreatPerson = unicode(iGreatPersonRate)
+        szGreatPerson = unicode(iGreatPersonRate)  # type: ignore
         if iGreatPersonRate > 0:
             iGPPLeft = (
                 gc.getPlayer(gc.getGame().getActivePlayer()).greatPeopleThreshold(False)
@@ -570,7 +570,7 @@ class CvDomesticAdvisor:
                 iTurnsLeft = iGPPLeft / pLoopCity.getGreatPeopleRate()
                 if iTurnsLeft * pLoopCity.getGreatPeopleRate() < iGPPLeft:
                     iTurnsLeft += 1
-                szGreatPerson += u" (" + unicode(iTurnsLeft) + u")"
+                szGreatPerson += u" (" + unicode(iTurnsLeft) + u")"  # type: ignore
 
         screen.setTableInt(
             "CityListBackground",
@@ -589,7 +589,7 @@ class CvDomesticAdvisor:
             "CityListBackground",
             14,
             i,
-            unicode(pLoopCity.plot().getNumDefenders(pLoopCity.getOwner())),
+            unicode(pLoopCity.plot().getNumDefenders(pLoopCity.getOwner())),  # type: ignore
             "",
             WidgetTypes.WIDGET_GENERAL,
             -1,

@@ -176,7 +176,7 @@ class CvPediaUnitChart:
                 if gc.getUnitInfo(j).getProductionCost() < 0:
                     szCost = localText.getText("TXT_KEY_NON_APPLICABLE", ())
                 else:
-                    szCost = unicode(
+                    szCost = unicode(  # type: ignore
                         gc.getUnitInfo(j).getProductionCost()
                     )  # + u"%c" % gc.getYieldInfo(YieldTypes.YIELD_PRODUCTION).getChar()
                 unitsList[i] = (
@@ -206,7 +206,7 @@ class CvPediaUnitChart:
                 szTable,
                 1,
                 iRow,
-                u"<font=3>" + unicode(unitsList[i][0]) + u"</font>",
+                u"<font=3>" + unicode(unitsList[i][0]) + u"</font>",  # type: ignore
                 "",
                 WidgetTypes.WIDGET_GENERAL,
                 -1,
@@ -217,7 +217,7 @@ class CvPediaUnitChart:
                 szTable,
                 2,
                 iRow,
-                u"<font=3>" + unicode(unitsList[i][1]) + u"</font>",
+                u"<font=3>" + unicode(unitsList[i][1]) + u"</font>",  # type: ignore
                 "",
                 WidgetTypes.WIDGET_GENERAL,
                 -1,
@@ -228,7 +228,7 @@ class CvPediaUnitChart:
                 szTable,
                 3,
                 iRow,
-                u"<font=3>" + unicode(unitsList[i][2]) + u"</font>",
+                u"<font=3>" + unicode(unitsList[i][2]) + u"</font>",  # type: ignore
                 "",
                 WidgetTypes.WIDGET_GENERAL,
                 -1,

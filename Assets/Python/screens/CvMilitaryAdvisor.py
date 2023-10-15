@@ -561,7 +561,7 @@ class CvMilitaryAdvisor:
                 szDescription = (
                     gc.getUnitInfo(self.unitsList[iUnit][1]).getDescription()
                     + u" ("
-                    + unicode(len(self.unitsList[iUnit][2]))
+                    + unicode(len(self.unitsList[iUnit][2]))  # type: ignore
                     + u")"
                 )
                 if self.isSelectedUnitType(self.unitsList[iUnit][1], False):

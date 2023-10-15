@@ -284,7 +284,7 @@ class CvDanQuayle:
             u"<font=4>"
             + localText.getObjectText("TXT_KEY_VICTORY_SCORE", 0)
             + u" : "
-            + unicode(iScore)
+            + unicode(iScore)  # type: ignore
             + u"</font>",
             CvUtil.FONT_CENTER_JUSTIFY,
             self.W_SCORE / 2 - 10,

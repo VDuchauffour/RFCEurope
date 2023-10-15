@@ -91,7 +91,7 @@ class CvCivicsScreen:
         self.setActivePlayer(gc.getGame().getActivePlayer())
 
         del self.Categories[:]
-        for iCategory in xrange(gc.getNumCivicOptionInfos()):
+        for iCategory in xrange(gc.getNumCivicOptionInfos()):  # type: ignore
             self.Categories.append(iCategory)
 
         screen.setRenderInterfaceOnly(True)
@@ -199,7 +199,7 @@ class CvCivicsScreen:
             screen.addDropDownBoxGFC(
                 "DebugMenu", 22, 12, 300, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT
             )
-            for iPlayer in xrange(gc.getMAX_PLAYERS()):
+            for iPlayer in xrange(gc.getMAX_PLAYERS()):  # type: ignore
                 if gc.getPlayer(iPlayer).isAlive():
                     screen.addPullDownString(
                         "DebugMenu", gc.getPlayer(iPlayer).getName(), iPlayer, iPlayer, False
@@ -214,7 +214,7 @@ class CvCivicsScreen:
         player = gc.getPlayer(self.iActivePlayer)
         screen = self.getScreen()
 
-        for i in xrange(len(self.Categories)):
+        for i in xrange(len(self.Categories)):  # type: ignore
             iCategory = self.Categories[i]
             iX, iY = self.getPosition(iCategory)
             iSpacing = 8
@@ -362,7 +362,7 @@ class CvCivicsScreen:
         iX, iY = self.getPosition(iCategory)
 
         iLine = iY + self.MARGIN
-        for iCivic in xrange(gc.getNumCivicInfos()):
+        for iCivic in xrange(gc.getNumCivicInfos()):  # type: ignore
             if gc.getCivicInfo(iCivic).getCivicOptionType() == iCategory:
                 sName = "CivicButton" + str(iCivic)
                 sButton = gc.getCivicInfo(iCivic).getButton()
@@ -518,7 +518,7 @@ class CvCivicsScreen:
         self.PlayerCivics = []
         self.SelectedCivics = []
         self.DisplayedCivics = []
-        for iCategory in xrange(gc.getNumCivicOptionInfos()):
+        for iCategory in xrange(gc.getNumCivicOptionInfos()):  # type: ignore
             self.PlayerCivics.append(pPlayer.getCivics(iCategory))
             self.SelectedCivics.append(pPlayer.getCivics(iCategory))
             self.DisplayedCivics.append(pPlayer.getCivics(iCategory))
@@ -651,7 +651,7 @@ class CvCivicsScreen:
             return 1
 
         elif inputClass.getFunctionName() == "CancelButton":
-            for i in xrange(gc.getNumCivicOptionInfos()):
+            for i in xrange(gc.getNumCivicOptionInfos()):  # type: ignore
                 self.SelectedCivics[i] = self.PlayerCivics[i]
                 self.DisplayedCivics[i] = self.PlayerCivics[i]
 

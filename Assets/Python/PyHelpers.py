@@ -365,7 +365,7 @@ class PyPlayer:
     def getPlotIDList(self):
         "intList - player plots indexes"
         lPlotIDs = []
-        for i in xrange(CyMap().numPlots()):
+        for i in xrange(CyMap().numPlots()):  # type: ignore
             if CyMap().sPlotByIndex(i).getOwner() == self.getID():
                 lPlotIDs.append(i)
         return lPlotIDs
@@ -1024,11 +1024,11 @@ class PyInfo:
             return CyArtFileMgr().getBonusArtInfo(self.info.getArtDefineTag()).getButton()
 
         def getSymbol(self):
-            "unicode - iChar Symbol"
+            "unicode - iChar Symbol"  # type: ignore
             return u"%c" % (self.info.getChar(),)
 
         def getName(self):
-            "unicode - Bonuses Name"
+            "unicode - Bonuses Name"  # type: ignore
             return self.info.getDescription()
 
         def getPrereqImprovementID(self):

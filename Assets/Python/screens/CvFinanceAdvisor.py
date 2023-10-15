@@ -200,7 +200,7 @@ class CvFinanceAdvisor:
             szTempBuffer = localText.getText("TXT_KEY_STABILITY_VERYSOLID", ())
 
         if gc.getPlayer(ePlayer).isHuman():
-            # szTempBuffer = szTempBuffer + "  " + unichr(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 8 + utils.getArrow(0))
+            # szTempBuffer = szTempBuffer + "  " + unichr(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 8 + utils.getArrow(0))  # type: ignore
             szTempBuffer = "%s  %i" % (szTempBuffer, iStability)
         # Rhye - end
 
@@ -849,7 +849,7 @@ class CvFinanceAdvisor:
                     u"<font=3>"
                     + gc.getCommerceInfo(eCommerce).getDescription()
                     + u" ("
-                    + unicode(player.getCommercePercent(eCommerce))
+                    + unicode(player.getCommercePercent(eCommerce))  # type: ignore
                     + u"%)</font>"
                 )
                 screen.setLabel(
@@ -867,7 +867,7 @@ class CvFinanceAdvisor:
                 )
                 szRate = (
                     u"<font=3>"
-                    + unicode(player.getCommerceRate(CommerceTypes(eCommerce)))
+                    + unicode(player.getCommerceRate(CommerceTypes(eCommerce)))  # type: ignore
                     + u"</font>"
                 )
                 screen.setLabel(
@@ -889,7 +889,7 @@ class CvFinanceAdvisor:
             u"<font=3>"
             + gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getDescription()
             + u" ("
-            + unicode(player.getCommercePercent(CommerceTypes.COMMERCE_GOLD))
+            + unicode(player.getCommercePercent(CommerceTypes.COMMERCE_GOLD))  # type: ignore
             + u"%)</font>"
         )
         screen.setLabel(
@@ -905,7 +905,7 @@ class CvFinanceAdvisor:
             -1,
             -1,
         )
-        szCommerce = u"<font=3>" + unicode(goldCommerce) + u"</font>"
+        szCommerce = u"<font=3>" + unicode(goldCommerce) + u"</font>"  # type: ignore
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
@@ -941,7 +941,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>" + unicode(goldCommerce) + "</font>",
+            u"<font=3>" + unicode(goldCommerce) + "</font>",  # type: ignore
             CvUtil.FONT_RIGHT_JUSTIFY,
             self.X_INCOME + self.PANE_WIDTH - self.TEXT_MARGIN,
             yLocation + self.TEXT_MARGIN,
@@ -956,7 +956,7 @@ class CvFinanceAdvisor:
         if goldFromCivs > 0:
             yLocation += self.Y_SPACING
             szText = (
-                unicode(goldFromCivs)
+                unicode(goldFromCivs)  # type: ignore
                 + " : "
                 + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_PER_TURN", ())
             )
@@ -978,7 +978,7 @@ class CvFinanceAdvisor:
             screen.setLabel(
                 self.getNextWidgetName(),
                 "Background",
-                u"<font=3>" + unicode(goldFromCivs) + "</font>",
+                u"<font=3>" + unicode(goldFromCivs) + "</font>",  # type: ignore
                 CvUtil.FONT_RIGHT_JUSTIFY,
                 self.X_INCOME + self.PANE_WIDTH - self.TEXT_MARGIN,
                 yLocation + self.TEXT_MARGIN,
@@ -1007,7 +1007,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>" + unicode(iIncome) + "</font>",
+            u"<font=3>" + unicode(iIncome) + "</font>",  # type: ignore
             CvUtil.FONT_RIGHT_JUSTIFY,
             self.X_INCOME + self.PANE_WIDTH - self.TEXT_MARGIN,
             yLocation + self.TEXT_MARGIN,
@@ -1040,7 +1040,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>" + unicode(totalUnitCost) + u"</font>",
+            u"<font=3>" + unicode(totalUnitCost) + u"</font>",  # type: ignore
             CvUtil.FONT_RIGHT_JUSTIFY,
             self.X_EXPENSES + self.PANE_WIDTH - self.TEXT_MARGIN,
             yLocation + self.TEXT_MARGIN,
@@ -1071,7 +1071,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>" + unicode(totalUnitSupply) + "</font>",
+            u"<font=3>" + unicode(totalUnitSupply) + "</font>",  # type: ignore
             CvUtil.FONT_RIGHT_JUSTIFY,
             self.X_EXPENSES + self.PANE_WIDTH - self.TEXT_MARGIN,
             yLocation + self.TEXT_MARGIN,
@@ -1103,7 +1103,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>" + unicode(totalMercenaryMaintenanceCost) + "</font>",
+            u"<font=3>" + unicode(totalMercenaryMaintenanceCost) + "</font>",  # type: ignore
             CvUtil.FONT_RIGHT_JUSTIFY,
             self.X_EXPENSES + self.PANE_WIDTH - self.TEXT_MARGIN,
             yLocation + self.TEXT_MARGIN,
@@ -1134,7 +1134,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>" + unicode(totalMaintenance) + "</font>",
+            u"<font=3>" + unicode(totalMaintenance) + "</font>",  # type: ignore
             CvUtil.FONT_RIGHT_JUSTIFY,
             self.X_EXPENSES + self.PANE_WIDTH - self.TEXT_MARGIN,
             yLocation + self.TEXT_MARGIN,
@@ -1166,7 +1166,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>" + unicode(iColonyUpkeep) + "</font>",
+            u"<font=3>" + unicode(iColonyUpkeep) + "</font>",  # type: ignore
             CvUtil.FONT_RIGHT_JUSTIFY,
             self.X_EXPENSES + self.PANE_WIDTH - self.TEXT_MARGIN,
             yLocation + self.TEXT_MARGIN,
@@ -1195,7 +1195,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>" + unicode(totalCivicUpkeep) + "</font>",
+            u"<font=3>" + unicode(totalCivicUpkeep) + "</font>",  # type: ignore
             CvUtil.FONT_RIGHT_JUSTIFY,
             self.X_EXPENSES + self.PANE_WIDTH - self.TEXT_MARGIN,
             yLocation + self.TEXT_MARGIN,
@@ -1227,7 +1227,7 @@ class CvFinanceAdvisor:
             screen.setLabel(
                 self.getNextWidgetName(),
                 "Background",
-                u"<font=3>" + unicode(-goldFromCivs) + "</font>",
+                u"<font=3>" + unicode(-goldFromCivs) + "</font>",  # type: ignore
                 CvUtil.FONT_RIGHT_JUSTIFY,
                 self.X_EXPENSES + self.PANE_WIDTH - self.TEXT_MARGIN,
                 yLocation + self.TEXT_MARGIN,
@@ -1257,7 +1257,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>" + unicode(iInflation) + "</font>",
+            u"<font=3>" + unicode(iInflation) + "</font>",  # type: ignore
             CvUtil.FONT_RIGHT_JUSTIFY,
             self.X_EXPENSES + self.PANE_WIDTH - self.TEXT_MARGIN,
             yLocation + self.TEXT_MARGIN,
@@ -1286,7 +1286,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>" + unicode(iExpenses) + "</font>",
+            u"<font=3>" + unicode(iExpenses) + "</font>",  # type: ignore
             CvUtil.FONT_RIGHT_JUSTIFY,
             self.X_EXPENSES + self.PANE_WIDTH - self.TEXT_MARGIN,
             yLocation + self.TEXT_MARGIN,
@@ -1335,7 +1335,7 @@ class CvFinanceAdvisor:
     def printStars(self, ePlayer, panel, n, x, y, z):
         totStars = ""
         for i in range(n):
-            totStars = totStars + unichr(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
+            totStars = totStars + unichr(CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))  # type: ignore
         if gc.getPlayer(ePlayer).isHuman():
             self.getScreen().setLabel(
                 panel,
@@ -1356,7 +1356,7 @@ class CvFinanceAdvisor:
             self.getScreen().setLabel(
                 panel,
                 "Background",
-                unichr(
+                unichr(  # type: ignore
                     CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 8 + utils.getArrow(iParameter)
                 ),
                 CvUtil.FONT_CENTER_JUSTIFY,

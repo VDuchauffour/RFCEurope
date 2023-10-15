@@ -1167,7 +1167,7 @@ class CvWorldBuilderScreen:
                         )
                         if cityName is not None:
                             city = gc.getMap().plot(iX, iY).getPlotCity()
-                            city.setName(unicode(cityName, "latin-1"), False)
+                            city.setName(unicode(cityName, "latin-1"), False)  # type: ignore
         elif (self.m_bNormalMap) and (
             self.m_normalMapTabCtrl.getActiveTab() == self.m_iImprovementTabID
         ):
@@ -4025,7 +4025,7 @@ class RevealMode(Mode):
             screen.addPullDownString(szDropdownName, "None", -1, -1, (-1 == self.iBrushValue))
             for i in range(RFCEMapUtil.iNumProvinces):
                 try:
-                    ProvinceName = unicode(MapManager.getProvinceName(i), "latin-1")
+                    ProvinceName = unicode(MapManager.getProvinceName(i), "latin-1")  # type: ignore
                 except TypeError:
                     ProvinceName = MapManager.getProvinceName(i)
                 screen.addPullDownString(
@@ -4585,7 +4585,7 @@ class LandmarkMode(Mode):
         if cityName is None:
             cityName = ""
         else:
-            cityName = unicode(cityName, "latin-1")
+            cityName = unicode(cityName, "latin-1")  # type: ignore
 
         MapVisualizer.hideCityName(pPlot)  # landmark-update-problem-fix
 
@@ -4596,14 +4596,14 @@ class LandmarkMode(Mode):
                 name = MapManager.getCityName(i, pPlot)
                 civ = gc.getPlayer(i).getCivilizationShortDescription(0)
                 if name is not None:
-                    cityNames.append((unicode(name, "latin-1"), civ))
+                    cityNames.append((unicode(name, "latin-1"), civ))  # type: ignore
         # uncomment for city names in alphabetic order
         # cityNames.sort()
         # generic city name, always on last place
         if CIVILIZATIONS.majors().len() != iPlayer:
             name = MapManager.getCityName(CIVILIZATIONS.majors().len(), pPlot)
             if name is not None:
-                cityNames.append((unicode(name, "latin-1"), "GENERIC NAME"))
+                cityNames.append((unicode(name, "latin-1"), "GENERIC NAME"))  # type: ignore
 
         cityHeader = cityName
         if cityHeader == "":

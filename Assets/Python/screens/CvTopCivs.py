@@ -324,7 +324,7 @@ class CvTopCivs:
                 # self.screen.setText(szWidgetName, "Background", szWidgetDesc, CvUtil.FONT_LEFT_JUSTIFY, iXLoc, iYLoc, TEXT_Z, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
                 self.screen.addMultilineText(
                     szWidgetName,
-                    unicode(szWidgetDesc),
+                    unicode(szWidgetDesc),  # type: ignore
                     iXLoc,
                     iYLoc,
                     self.W_RANK_TEXT,

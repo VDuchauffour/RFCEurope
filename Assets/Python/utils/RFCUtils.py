@@ -1243,7 +1243,7 @@ class RFCUtils:
         if iReligion > -1:
             lReligionBuilding = []
             iReligionWonder = 0
-            for iBuilding in xrange(gc.getNumBuildingInfos()):  # type: ignore
+            for iBuilding in xrange(gc.getNumBuildingInfos()):  # type: ignore  # type: ignore
                 if city.getNumRealBuilding(iBuilding):
                     BuildingInfo = gc.getBuildingInfo(iBuilding)
                     if BuildingInfo.getPrereqReligion() == iReligion:
@@ -1772,7 +1772,7 @@ class RFCUtils:
                 iTeam = pPlayer.getTeam()
                 pTeam = gc.getTeam(iTeam)
                 iTechNumber = 0
-                for iTech in xrange(gc.getNumTechInfos()):
+                for iTech in xrange(gc.getNumTechInfos()):  # type: ignore
                     if pTeam.isHasTech(iTech):
                         iTechNumber += 1
                 if iTechNumber > iMostTechs:

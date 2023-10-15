@@ -3,7 +3,7 @@ from random import randint
 
 
 def all(iterable):
-    """Return True if all elements of the iterable are true (or if the iterable is empty)."""
+    """Return True if all elements of the iterable are true (or if the iterable is empty)."""  # type: ignore
     for element in iterable:
         if not element:
             return False
@@ -11,7 +11,7 @@ def all(iterable):
 
 
 def any(iterable):
-    """Return True if any element of the iterable is true. If the iterable is empty, return False."""
+    """Return True if any element of the iterable is true. If the iterable is empty, return False."""  # type: ignore
     for element in iterable:
         if element:
             return True

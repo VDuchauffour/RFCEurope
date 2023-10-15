@@ -1438,7 +1438,7 @@ class CvVictoryScreen:
                         szTable,
                         3,
                         iRow,
-                        unicode(nRivals),
+                        unicode(nRivals),  # type: ignore
                         "",
                         WidgetTypes.WIDGET_GENERAL,
                         -1,
@@ -1709,7 +1709,7 @@ class CvVictoryScreen:
                         szTable,
                         3,
                         iRow,
-                        unicode(ourCulture),
+                        unicode(ourCulture),  # type: ignore
                         "",
                         WidgetTypes.WIDGET_GENERAL,
                         -1,
@@ -1736,7 +1736,7 @@ class CvVictoryScreen:
                             szTable,
                             5,
                             iRow,
-                            unicode(bestCulture),
+                            unicode(bestCulture),  # type: ignore
                             "",
                             WidgetTypes.WIDGET_GENERAL,
                             -1,
@@ -1768,7 +1768,7 @@ class CvVictoryScreen:
                 for i in range(gc.getNumBuildingClassInfos()):
                     if gc.getBuildingClassInfo(i).getVictoryThreshold(iLoopVC) > 0:
                         iRow = screen.appendTableRow(szTable)
-                        szNumber = unicode(gc.getBuildingClassInfo(i).getVictoryThreshold(iLoopVC))
+                        szNumber = unicode(gc.getBuildingClassInfo(i).getVictoryThreshold(iLoopVC))  # type: ignore
                         screen.setTableText(
                             szTable,
                             0,
@@ -1863,12 +1863,12 @@ class CvVictoryScreen:
                         if gc.getProjectInfo(i).getVictoryMinThreshold(
                             iLoopVC
                         ) == gc.getProjectInfo(i).getVictoryThreshold(iLoopVC):
-                            szNumber = unicode(gc.getProjectInfo(i).getVictoryThreshold(iLoopVC))
+                            szNumber = unicode(gc.getProjectInfo(i).getVictoryThreshold(iLoopVC))  # type: ignore
                         else:
                             szNumber = (
-                                unicode(gc.getProjectInfo(i).getVictoryMinThreshold(iLoopVC))
+                                unicode(gc.getProjectInfo(i).getVictoryMinThreshold(iLoopVC))  # type: ignore
                                 + u"-"
-                                + unicode(gc.getProjectInfo(i).getVictoryThreshold(iLoopVC))
+                                + unicode(gc.getProjectInfo(i).getVictoryThreshold(iLoopVC))  # type: ignore
                             )
                         screen.setTableText(
                             szTable,
@@ -1935,7 +1935,7 @@ class CvVictoryScreen:
                                 szTable,
                                 5,
                                 iRow,
-                                unicode(gc.getTeam(iBestProjectTeam).getProjectCount(i)),
+                                unicode(gc.getTeam(iBestProjectTeam).getProjectCount(i)),  # type: ignore
                                 "",
                                 WidgetTypes.WIDGET_GENERAL,
                                 -1,
@@ -2171,7 +2171,7 @@ class CvVictoryScreen:
                                 szTable,
                                 5,
                                 iRow,
-                                unicode(theirBestCities[i][0]),
+                                unicode(theirBestCities[i][0]),  # type: ignore
                                 "",
                                 WidgetTypes.WIDGET_GENERAL,
                                 -1,
@@ -3291,7 +3291,7 @@ class CvVictoryScreen:
     def getBaseString(self, iUHV):
         pPlayer = gc.getPlayer(self.iActivePlayer)
         iGoal = pPlayer.getUHV(iUHV)
-        # 3Miro: I don't understand how strings in C++ and Python work. For some reason, I managed to get C++ to return a unicode string
+        # 3Miro: I don't understand how strings in C++ and Python work. For some reason, I managed to get C++ to return a unicode string # type: ignore
         # 	just as it would on another alphabet. I had to "Typecast" the string to ASCII to get it to register in the text manager
         if iGoal == 1:
             sString = (

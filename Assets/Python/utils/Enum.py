@@ -32,10 +32,10 @@ except NameError:
     basestring = str
 
 try:
-    unicode
+    unicode  # type: ignore
 except NameError:
-    # In Python 3 unicode no longer exists (it's just str)
-    unicode = str
+    # In Python 3 unicode no longer exists (it's just str) # type: ignore
+    unicode = str  # type: ignore
 
 
 class _RouteClassAttributeToGetattr(object):
@@ -429,8 +429,8 @@ class EnumMeta(type):
 
         """
         if pyver < 3.0:
-            # if class_name is unicode, attempt a conversion to ASCII
-            if isinstance(class_name, unicode):
+            # if class_name is unicode, attempt a conversion to ASCII # type: ignore
+            if isinstance(class_name, unicode):  # type: ignore
                 try:
                     class_name = class_name.encode("ascii")
                 except UnicodeEncodeError:

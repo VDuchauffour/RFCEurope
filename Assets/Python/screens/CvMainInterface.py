@@ -3544,9 +3544,9 @@ class CvMainInterface:
                     )
                     eCombatXPText = (
                         ": "
-                        + unicode(gc.getPlayer(ePlayer).getCombatExperience())
+                        + unicode(gc.getPlayer(ePlayer).getCombatExperience())  # type: ignore
                         + "/"
-                        + unicode(gc.getPlayer(ePlayer).greatPeopleThreshold(True))
+                        + unicode(gc.getPlayer(ePlayer).greatPeopleThreshold(True))  # type: ignore
                     )
                     screen.setLabel(
                         "CombatXPButton",
@@ -3589,7 +3589,7 @@ class CvMainInterface:
                     )
                     eJanissaryXPText = (
                         ": Janissary ("
-                        + unicode(
+                        + unicode(  # type: ignore
                             gc.getPlayer(ePlayer).getPicklefreeParameter(
                                 SpecialParameter.JANISSARY_POINTS.value
                             )
@@ -4264,11 +4264,13 @@ class CvMainInterface:
                 + u" - "
                 + localText.getText("TXT_KEY_TIME_TURN", (CyGame().getElapsedGameTurns(),))
                 + u" - "
-                + unicode(CyGameTextMgr().getInterfaceTimeStr(ePlayer))
+                + unicode(CyGameTextMgr().getInterfaceTimeStr(ePlayer))  # type: ignore
             )
         else:
-            # g_szTimeText = localText.getText("TXT_KEY_TIME_TURN", (CyGame().getGameTurn(), )) + u" - " + unicode(CyGameTextMgr().getInterfaceTimeStr(ePlayer)) #Rhye
-            g_szTimeText = unicode(CyGameTextMgr().getInterfaceTimeStr(ePlayer))  # Rhye
+            # g_szTimeText = localText.getText("TXT_KEY_TIME_TURN", (CyGame().getGameTurn(), )) + u" - " + unicode(CyGameTextMgr().getInterfaceTimeStr(ePlayer)) #Rhye # type: ignore
+            g_szTimeText = unicode(
+                CyGameTextMgr().getInterfaceTimeStr(ePlayer)
+            )  # Rhye # type: ignore
 
     # Will update the selection Data Strings
     def updateCityScreen(self):
@@ -6530,7 +6532,7 @@ class CvMainInterface:
                                                     szBuffer = szBuffer + szTempBuffer
                                             # Rhye - start plague
                                             if utils.getPlagueCountdown(ePlayer) > 0:
-                                                szTempBuffer = unichr(
+                                                szTempBuffer = unichr(  # type: ignore
                                                     CyGame().getSymbolID(FontSymbols.POWER_CHAR)
                                                     + 6
                                                 )
@@ -6585,7 +6587,7 @@ class CvMainInterface:
                                                 iStability = gc.getPlayer(ePlayer).getStability()
                                                 if iStability < -15:
                                                     # szTempBuffer = localText.getText("TXT_KEY_STABILITY_COLLAPSING", ())
-                                                    szTempBuffer = unichr(
+                                                    szTempBuffer = unichr(  # type: ignore
                                                         CyGame().getSymbolID(
                                                             FontSymbols.POWER_CHAR
                                                         )
@@ -6595,7 +6597,7 @@ class CvMainInterface:
                                                     # 	szTempBuffer = szTempBuffer + " (" + localText.getText("TXT_KEY_STABILITY_COLLAPSING", ()) + ")"
                                                 elif iStability >= -15 and iStability < -8:
                                                     # szTempBuffer = localText.getText("TXT_KEY_STABILITY_UNSTABLE", ())
-                                                    szTempBuffer = unichr(
+                                                    szTempBuffer = unichr(  # type: ignore
                                                         CyGame().getSymbolID(
                                                             FontSymbols.POWER_CHAR
                                                         )
@@ -6605,7 +6607,7 @@ class CvMainInterface:
                                                     # 	szTempBuffer = szTempBuffer + " (" + localText.getText("TXT_KEY_STABILITY_UNSTABLE", ()) + ")"
                                                 elif iStability >= -8 and iStability < 0:
                                                     # szTempBuffer = localText.getText("TXT_KEY_STABILITY_SHAKY", ())
-                                                    szTempBuffer = unichr(
+                                                    szTempBuffer = unichr(  # type: ignore
                                                         CyGame().getSymbolID(
                                                             FontSymbols.POWER_CHAR
                                                         )
@@ -6615,7 +6617,7 @@ class CvMainInterface:
                                                     # 	szTempBuffer = szTempBuffer + " (" + localText.getText("TXT_KEY_STABILITY_SHAKY", ()) + ")"
                                                 elif iStability >= 0 and iStability < 8:
                                                     # szTempBuffer = localText.getText("TXT_KEY_STABILITY_STABLE", ())
-                                                    szTempBuffer = unichr(
+                                                    szTempBuffer = unichr(  # type: ignore
                                                         CyGame().getSymbolID(
                                                             FontSymbols.POWER_CHAR
                                                         )
@@ -6625,7 +6627,7 @@ class CvMainInterface:
                                                     # 	szTempBuffer = szTempBuffer + " (" + localText.getText("TXT_KEY_STABILITY_STABLE", ()) + ")"
                                                 elif iStability >= 8 and iStability < 15:
                                                     # szTempBuffer = localText.getText("TXT_KEY_STABILITY_SOLID", ())
-                                                    szTempBuffer = unichr(
+                                                    szTempBuffer = unichr(  # type: ignore
                                                         CyGame().getSymbolID(
                                                             FontSymbols.POWER_CHAR
                                                         )
@@ -6635,7 +6637,7 @@ class CvMainInterface:
                                                     # 	szTempBuffer = szTempBuffer + " (" + localText.getText("TXT_KEY_STABILITY_SOLID", ()) + ")"
                                                 elif iStability >= 15:
                                                     # szTempBuffer = localText.getText("TXT_KEY_STABILITY_VERYSOLID", ())
-                                                    szTempBuffer = unichr(
+                                                    szTempBuffer = unichr(  # type: ignore
                                                         CyGame().getSymbolID(
                                                             FontSymbols.POWER_CHAR
                                                         )

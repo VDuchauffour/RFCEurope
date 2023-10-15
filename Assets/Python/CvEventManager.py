@@ -728,7 +728,7 @@ class CvEventManager:
             iTeam = pPlayer.getTeam()
             pTeam = gc.getTeam(iTeam)
             lBuilderKnownTechs = []
-            for iTech in xrange(gc.getNumTechInfos()):
+            for iTech in xrange(gc.getNumTechInfos()):  # type: ignore
                 if pTeam.isHasTech(iTech):
                     lBuilderKnownTechs.append(iTech)
 
@@ -740,7 +740,7 @@ class CvEventManager:
                 pLoopTeam = gc.getTeam(iLoopTeam)
                 # only for known civs
                 if iLoopPlayer != iPlayer and pTeam.isHasMet(iLoopTeam):
-                    for iTech in xrange(gc.getNumTechInfos()):
+                    for iTech in xrange(gc.getNumTechInfos()):  # type: ignore
                         if pLoopTeam.isHasTech(iTech):
                             lOthersKnownTechs.append(iTech)
 
@@ -913,7 +913,7 @@ class CvEventManager:
         if iBuildingType == xml.iAlAzhar:
             iTeam = pPlayer.getTeam()
             pTeam = gc.getTeam(iTeam)
-            for iTech in xrange(gc.getNumTechInfos()):
+            for iTech in xrange(gc.getNumTechInfos()):  # type: ignore
                 if not pTeam.isHasTech(iTech):
                     if gc.getTechInfo(iTech).getAdvisorType() == gc.getInfoTypeForString(
                         "ADVISOR_RELIGION"
@@ -1690,7 +1690,7 @@ class CvEventManager:
             pPlayer = gc.getPlayer(iPlayer)
             iTeam = pPlayer.getTeam()
             pTeam = gc.getTeam(iTeam)
-            for iTech in xrange(gc.getNumTechInfos()):
+            for iTech in xrange(gc.getNumTechInfos()):  # type: ignore
                 if not pTeam.isHasTech(iTech):
                     if gc.getTechInfo(iTech).getAdvisorType() == gc.getInfoTypeForString(
                         "ADVISOR_RELIGION"
@@ -1874,7 +1874,7 @@ class CvEventManager:
             pPreviousTeam = gc.getTeam(iPreviousTeam)
             iNewTeam = pNewOwner.getTeam()
             pNewTeam = gc.getTeam(iNewTeam)
-            for iTech in xrange(gc.getNumTechInfos()):
+            for iTech in xrange(gc.getNumTechInfos()):  # type: ignore
                 if gc.getTechInfo(iTech).getAdvisorType() == gc.getInfoTypeForString(
                     "ADVISOR_RELIGION"
                 ):
@@ -2342,7 +2342,7 @@ class CvEventManager:
             if szName == "-1":
                 popup.createEditBox(city.getName())
             else:
-                szName = unicode(szName, "latin-1")
+                szName = unicode(szName, "latin-1")  # type: ignore
                 popup.createEditBox(szName)
         # Absinthe: end
         popup.setEditBoxMaxCharCount(15)

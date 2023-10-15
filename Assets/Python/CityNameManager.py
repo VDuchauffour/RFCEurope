@@ -18,7 +18,7 @@ class CityNameManager:
         if iOwner < CIVILIZATIONS.majors().len():
             cityName = RFCEMaps.tCityMap[iOwner][WORLD_HEIGHT - 1 - city.getY()][city.getX()]
             if cityName != "-1":
-                city.setName(unicode(cityName, "latin-1"), False)
+                city.setName(unicode(cityName, "latin-1"), False)  # type: ignore
 
     def renameCities(self, city, iNewOwner):
         """Renames a city depending on its owner"""
@@ -27,7 +27,7 @@ class CityNameManager:
         if iNewOwner < CIVILIZATIONS.majors().len():
             cityName = RFCEMaps.tCityMap[iNewOwner][WORLD_HEIGHT - 1 - city.getY()][city.getX()]
             if cityName != "-1":
-                city.setName(unicode(cityName, "latin-1"), False)
+                city.setName(unicode(cityName, "latin-1"), False)  # type: ignore
 
     def lookupName(self, city, iPlayer):
         """Looks up a city name in another player's map"""
