@@ -721,7 +721,6 @@ class RiseAndFall:
                 civilization.player.setLeader(leader.value)
 
     def setWarOnSpawn(self):
-        # Absinthe: will use setAtWar here instead of declareWar, so it won't affect diplo relations and other stuff between major civs
         for civilization in CIVILIZATIONS.dropna("initial"):
             if civilization.initial.wars:
                 for other, war_threshold in civilization.initial.wars.items():
