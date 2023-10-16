@@ -259,6 +259,9 @@ def civ(identifier=None):
     if identifier is None:
         return Civilization(get_civ_by_id(gc.getGame().getActiveCivilizationType()))
 
+    if isinstance(identifier, int):
+        return Civilization(get_civ_by_id(identifier))
+
     if isinstance(identifier, CoreTypes.Civ):
         return Civilization(identifier)
 
@@ -274,7 +277,7 @@ def civ(identifier=None):
         return civ(identifier.getOwner())
 
     raise NotTypeExpectedError(
-        "CoreTypes.Civ, Civilization, CyPlayer, CyPlot or CyUnit", type(identifier)
+        "CoreTypes.Civ, Civilization, CyPlayer, CyPlot or CyUnit, or int", type(identifier)
     )
 
 
