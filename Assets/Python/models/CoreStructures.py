@@ -254,7 +254,7 @@ def team(identifier=None):
     )
 
 
-def civ(identifier=None):
+def civilization(identifier=None):
     """Return Civilization object given an identifier."""
     if identifier is None:
         return Civilization(get_civ_by_id(gc.getGame().getActiveCivilizationType()))
@@ -274,7 +274,7 @@ def civ(identifier=None):
     if isinstance(identifier, CyPlot):
         if not identifier.isOwned():
             return None
-        return civ(identifier.getOwner())
+        return civilization(identifier.getOwner())
 
     raise NotTypeExpectedError(
         "CoreTypes.Civ, Civilization, CyPlayer, CyPlot or CyUnit, or int", type(identifier)

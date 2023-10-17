@@ -1597,10 +1597,10 @@ class Religions:
             self.spreadReligion(tCity, Religion.JUDAISM.value)
 
     def setStartingFaith(self):
-        for civilization in civilizations().dropna("initial"):
-            condition = civilization.initial.condition
+        for civ in civilizations().dropna("initial"):
+            condition = civ.initial.condition
             if condition:
-                civilization.player.setFaith(condition.faith)
+                civ.player.setFaith(condition.faith)
 
     def getCatholicCivs(self, bOpenBorders=False):
         teamPope = gc.getTeam(gc.getPlayer(Civ.POPE.value).getTeam())
