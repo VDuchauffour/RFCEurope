@@ -13,6 +13,7 @@ from CoreTypes import (
     Promotion,
     Terrain,
     Technology,
+    Unit,
     Feature,
 )
 import CvUtil
@@ -169,7 +170,7 @@ class RFCUtils:
             if not gc.getPlayer(unit.getOwner()).isHuman():
                 return False
         iUnitType = unit.getUnitType()
-        if xml.iGreatProphet <= iUnitType <= xml.iGreatSpy:
+        if Unit.GREAT_PROPHET.value <= iUnitType <= Unit.GREAT_SPY.value:
             return False
         return True
 
@@ -335,13 +336,13 @@ class RFCUtils:
 
         # Absinthe: one free defender unit
         pPlayer = gc.getPlayer(iOldOwner)
-        iFreeDefender = xml.iArcher
+        iFreeDefender = Unit.ARCHER.value
         lUnits = [
-            xml.iLineInfantry,
-            xml.iMusketman,
-            xml.iLongbowman,
-            xml.iArbalest,
-            xml.iCrossbowman,
+            Unit.LINE_INFANTRY.value,
+            Unit.MUSKETMAN.value,
+            Unit.LONGBOWMAN.value,
+            Unit.ARBALEST.value,
+            Unit.CROSSBOWMAN.value,
         ]
         for iUnit in lUnits:
             if pPlayer.canTrain(self.getUniqueUnit(iNewOwner, iUnit), False, False):
@@ -356,14 +357,14 @@ class RFCUtils:
             if unit.getOwner() == iOldOwner:
                 # Absinthe: # no civilian units will flip on city secession
                 lNoFlip = [
-                    xml.iSettler,
-                    xml.iGreatProphet,
-                    xml.iGreatArtist,
-                    xml.iGreatScientist,
-                    xml.iGreatMerchant,
-                    xml.iGreatEngineer,
-                    xml.iGreatGeneral,
-                    xml.iGreatSpy,
+                    Unit.SETTLER.value,
+                    Unit.GREAT_PROPHET.value,
+                    Unit.GREAT_ARTIST.value,
+                    Unit.GREAT_SCIENTIST.value,
+                    Unit.GREAT_MERCHANT.value,
+                    Unit.GREAT_ENGINEER.value,
+                    Unit.GREAT_GENERAL.value,
+                    Unit.GREAT_SPY.value,
                 ]
                 for i in range(0, len(lNoFlip)):
                     if lNoFlip[i] == unitType:
@@ -398,7 +399,7 @@ class RFCUtils:
             if unit.getOwner() == iOldOwner:
                 unit.kill(False, Civ.BARBARIAN.value)
                 if (
-                    iNewOwner < civilizations().majors().len() or unitType > xml.iSettler
+                    iNewOwner < civilizations().majors().len() or unitType > Unit.SETTLER.value
                 ):  # Absinthe: major players can even flip settlers (spawn/respawn mechanics)
                     self.makeUnit(unitType, iNewOwner, (28, 0), 1)
             # Absinthe: skip unit if from another player
@@ -426,14 +427,14 @@ class RFCUtils:
         cityPlot = gc.getMap().plot(tCityPlot[0], tCityPlot[1])
         if cityPlot.getNumUnits() == 0:
             # The latest available ranged/gun class
-            RangedClass = self.getUniqueUnit(iCiv, xml.iArcher)
+            RangedClass = self.getUniqueUnit(iCiv, Unit.ARCHER.value)
             lRangedList = [
-                xml.iLineInfantry,
-                xml.iMusketman,
-                xml.iLongbowman,
-                xml.iArbalest,
-                xml.iCrossbowman,
-                xml.iArcher,
+                Unit.LINE_INFANTRY.value,
+                Unit.MUSKETMAN.value,
+                Unit.LONGBOWMAN.value,
+                Unit.ARBALEST.value,
+                Unit.CROSSBOWMAN.value,
+                Unit.ARCHER.value,
             ]
             for iUnit in lRangedList:
                 if gc.getPlayer(iCiv).canTrain(self.getUniqueUnit(iCiv, iUnit), False, False):
@@ -508,10 +509,10 @@ class RFCUtils:
                         if unit.getOwner() == iOldOwner:
                             unit.kill(False, Civ.BARBARIAN.value)
                             if bKillSettlers:
-                                if unit.getUnitType() > xml.iSettler:
+                                if unit.getUnitType() > Unit.SETTLER.value:
                                     self.makeUnit(unit.getUnitType(), iNewOwner, (28, 0), 1)
                             else:
-                                if unit.getUnitType() >= xml.iSettler:  # skip animals
+                                if unit.getUnitType() >= Unit.SETTLER.value:  # skip animals
                                     self.makeUnit(unit.getUnitType(), iNewOwner, (28, 0), 1)
                         else:
                             j += 1
@@ -561,10 +562,10 @@ class RFCUtils:
                         if unit.getOwner() == iOldOwner:
                             unit.kill(False, Civ.BARBARIAN.value)
                             if bKillSettlers:
-                                if unit.getUnitType() > xml.iSettler:
+                                if unit.getUnitType() > Unit.SETTLER.value:
                                     self.makeUnit(unit.getUnitType(), iNewOwner, (28, 0), 1)
                             else:
-                                if unit.getUnitType() >= xml.iSettler:  # skip animals
+                                if unit.getUnitType() >= Unit.SETTLER.value:  # skip animals
                                     self.makeUnit(unit.getUnitType(), iNewOwner, (28, 0), 1)
                         else:
                             j += 1
@@ -847,14 +848,14 @@ class RFCUtils:
         pPlayer = gc.getPlayer(iNewOwner)
 
         # Sedna17: makes garrison units based on new tech tree/units
-        iUnitType = xml.iArcher
+        iUnitType = Unit.ARCHER.value
         lUnits = [
-            xml.iLineInfantry,
-            xml.iMusketman,
-            xml.iArquebusier,
-            xml.iArbalest,
-            xml.iArbalest,
-            xml.iCrossbowman,
+            Unit.LINE_INFANTRY.value,
+            Unit.MUSKETMAN.value,
+            Unit.ARQUEBUSIER.value,
+            Unit.ARBALEST.value,
+            Unit.ARBALEST.value,
+            Unit.CROSSBOWMAN.value,
         ]
         for iUnit in lUnits:
             if pPlayer.canTrain(self.getUniqueUnit(iNewOwner, iUnit), False, False):

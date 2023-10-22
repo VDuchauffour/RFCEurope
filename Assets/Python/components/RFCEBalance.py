@@ -16,6 +16,7 @@ from CoreTypes import (
     Project,
     UniquePower,
     Technology,
+    Unit,
     FaithPointBonusCategory,
 )
 import XMLConsts as xml
@@ -1237,9 +1238,9 @@ class RFCEBalance:
                     Consts.tNormalAreasSubtract[civ][iEx][1],
                 )
 
-        gc.setProsecutorReligions(xml.iProsecutor, PROSECUTOR_UNITCLASS)
+        gc.setProsecutorReligions(Unit.PROSECUTOR.value, PROSECUTOR_UNITCLASS)
         gc.setSaintParameters(
-            xml.iGreatProphet, GREAT_PROPHET_FAITH_POINT_BONUS, 20, 40
+            Unit.GREAT_PROPHET.value, GREAT_PROPHET_FAITH_POINT_BONUS, 20, 40
         )  # try to amass at least 20 and don't bother above 40 points
         gc.setIndependnets(
             min(civilizations().independents().ids()),
@@ -1248,7 +1249,7 @@ class RFCEBalance:
         )
         gc.setPapalPlayer(Civ.POPE.value, Religion.CATHOLICISM.value)
 
-        gc.setAutorunHack(xml.iCatapult, 32, 0)  # Autorun hack, sync with RNF module
+        gc.setAutorunHack(Unit.CATAPULT.value, 32, 0)  # Autorun hack, sync with RNF module
 
         # 3MiroMercs: set the merc promotion
         gc.setMercPromotion(Promotion.MERC.value)

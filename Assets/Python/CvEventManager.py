@@ -24,7 +24,7 @@ import RFCEBalance
 import random
 from MiscData import WORLD_HEIGHT, MessageData
 from CoreData import civilizations
-from CoreTypes import Wonder, Promotion, Project, Improvement, Feature
+from CoreTypes import Wonder, Promotion, Project, Improvement, Feature, Unit
 
 utils = RFCUtils.RFCUtils()
 balance = RFCEBalance.RFCEBalance()
@@ -692,7 +692,7 @@ class CvEventManager:
             iX = pCity.getX()
             iY = pCity.getY()
             iGP = gc.getGame().getSorenRandNum(7, "Leaning Tower")
-            iUnit = xml.iGreatProphet + iGP
+            iUnit = Unit.GREAT_PROPHET.value + iGP
             pNewUnit = pPlayer.initUnit(
                 iUnit,
                 iX,
@@ -858,12 +858,12 @@ class CvEventManager:
             iY = pCity.getY()
             for i in range(3):
                 # should we have Galleass for all civs, or use the getUniqueUnit function in RFCUtils?
-                # iNewUnit = utils.getUniqueUnit(pCity.getOwner(), xml.iGunGalley)
+                # iNewUnit = utils.getUniqueUnit(pCity.getOwner(), Unit.GUN_GALLEY.value)
                 pNewUnit = pPlayer.initUnit(
-                    xml.iVeniceGalleas,
+                    Unit.VENICE_GALLEAS.value,
                     iX,
                     iY,
-                    UnitAITypes(gc.getUnitInfo(xml.iVeniceGalleas).getDefaultUnitAIType()),
+                    UnitAITypes(gc.getUnitInfo(Unit.VENICE_GALLEAS.value).getDefaultUnitAIType()),
                     DirectionTypes.DIRECTION_SOUTH,
                 )
                 pNewUnit.setExperience(6, -1)
@@ -888,7 +888,11 @@ class CvEventManager:
             iY = pCity.getY()
             for i in range(2):
                 pPlayer.initUnit(
-                    xml.iHolyRelic, iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH
+                    Unit.HOLY_RELIC.value,
+                    iX,
+                    iY,
+                    UnitAITypes.NO_UNITAI,
+                    DirectionTypes.DIRECTION_SOUTH,
                 )
             if utils.getHumanID() == iPlayer:
                 CyInterface().addMessage(
@@ -1347,27 +1351,27 @@ class CvEventManager:
             # Absinthe: Peterhof Palace start
             if pPlayer.countNumBuildings(xml.iPeterhofPalace) > 0:
                 if gc.getGame().getSorenRandNum(10, "Peterhof Palace") < 7:
-                    if pUnit.getUnitType() == xml.iGreatScientist:
+                    if pUnit.getUnitType() == Unit.GREAT_SCIENTIST.value:
                         pCity.changeFreeSpecialistCount(
                             gc.getInfoTypeForString("SPECIALIST_SCIENTIST"), 1
                         )
-                    elif pUnit.getUnitType() == xml.iGreatProphet:
+                    elif pUnit.getUnitType() == Unit.GREAT_PROPHET.value:
                         pCity.changeFreeSpecialistCount(
                             gc.getInfoTypeForString("SPECIALIST_PRIEST"), 1
                         )
-                    elif pUnit.getUnitType() == xml.iGreatArtist:
+                    elif pUnit.getUnitType() == Unit.GREAT_ARTIST.value:
                         pCity.changeFreeSpecialistCount(
                             gc.getInfoTypeForString("SPECIALIST_ARTIST"), 1
                         )
-                    elif pUnit.getUnitType() == xml.iGreatMerchant:
+                    elif pUnit.getUnitType() == Unit.GREAT_MERCHANT.value:
                         pCity.changeFreeSpecialistCount(
                             gc.getInfoTypeForString("SPECIALIST_MERCHANT"), 1
                         )
-                    elif pUnit.getUnitType() == xml.iGreatEngineer:
+                    elif pUnit.getUnitType() == Unit.GREAT_ENGINEER.value:
                         pCity.changeFreeSpecialistCount(
                             gc.getInfoTypeForString("SPECIALIST_ENGINEER"), 1
                         )
-                    elif pUnit.getUnitType() == xml.iGreatSpy:
+                    elif pUnit.getUnitType() == Unit.GREAT_SPY.value:
                         pCity.changeFreeSpecialistCount(
                             gc.getInfoTypeForString("SPECIALIST_SPY"), 1
                         )

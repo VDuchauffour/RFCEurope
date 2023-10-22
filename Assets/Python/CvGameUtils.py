@@ -5,7 +5,7 @@
 
 from CoreData import civilizations
 from CoreFunctions import get_religion_by_id
-from CoreTypes import Civ, Religion, StabilityCategory
+from CoreTypes import Civ, Religion, StabilityCategory, Unit
 import CvUtil
 from CvPythonExtensions import *
 from MiscData import RELIGION_PERSECUTION_ORDER
@@ -248,7 +248,7 @@ class CvGameUtils:
             and not AIpPlayer.isHuman()
             and AIpPlayer.isAlive()
         ):
-            if pUnit.getUnitType() == xml.iProsecutor:
+            if pUnit.getUnitType() == Unit.PROSECUTOR.value:
                 return self.doInquisitorCore_AI(pUnit)
         return False
 

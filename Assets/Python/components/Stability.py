@@ -1012,7 +1012,7 @@ class Stability:
             # Absinthe: production penalty removed - was a mistake to add a city-based modifier to the financial stability which is based on average per population
             # if pCity.isProductionUnit():
             # 	iUnit = pCity.getProductionUnit()
-            # 	if iUnit < xml.iWorker or iUnit > xml.iIslamicMissionary:
+            # 	if iUnit < Unit.WORKER.value or iUnit > Unit.ISLAMIC_MISSIONARY.value:
             # 		iProductionPenalty -= 1
             # elif pCity.isProductionBuilding():
             # 	iBuilding = pCity.getProductionBuilding()

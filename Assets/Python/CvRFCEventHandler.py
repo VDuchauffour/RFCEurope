@@ -41,6 +41,7 @@ from CoreTypes import (
     UniquePower,
     StabilityCategory,
     Technology,
+    Unit,
 )
 from LocationsData import CITIES
 
@@ -359,7 +360,7 @@ class CvRFCEventHandler:
                 if playerType < civilizations().majors().len():
                     if pPlayer.getStateReligion() in range(len(Religion)):
                         pPlayer.initUnit(
-                            xml.iHolyRelic,
+                            Unit.HOLY_RELIC.value,
                             CITIES[City.JERUSALEM].x,
                             CITIES[City.JERUSALEM].y,
                             UnitAITypes.NO_UNITAI,
@@ -672,7 +673,7 @@ class CvRFCEventHandler:
                     Civ.BARBARIAN.value,
                     (80, 24),
                     (80, 25),
-                    [xml.iVikingBerserker, xml.iDenmarkHuskarl],
+                    [Unit.VIKING_BERSERKER.value, Unit.DENMARK_HUSKARL.value],
                     [4, 3],
                     iGameTurn,
                     1,
@@ -786,42 +787,42 @@ class CvRFCEventHandler:
                 pByzantium = gc.getPlayer(Civ.BYZANTIUM.value)
                 tStartingPlot = (59, 16)
                 pByzantium.initUnit(
-                    xml.iGalley,
+                    Unit.GALLEY.value,
                     tStartingPlot[0],
                     tStartingPlot[1],
                     UnitAITypes.UNITAI_ASSAULT_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
                 pByzantium.initUnit(
-                    xml.iGalley,
+                    Unit.GALLEY.value,
                     tStartingPlot[0],
                     tStartingPlot[1],
                     UnitAITypes.UNITAI_ASSAULT_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
                 pByzantium.initUnit(
-                    xml.iGalley,
+                    Unit.GALLEY.value,
                     tStartingPlot[0],
                     tStartingPlot[1],
                     UnitAITypes.UNITAI_ASSAULT_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
                 pByzantium.initUnit(
-                    xml.iGalley,
+                    Unit.GALLEY.value,
                     tStartingPlot[0],
                     tStartingPlot[1],
                     UnitAITypes.UNITAI_ASSAULT_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
                 pByzantium.initUnit(
-                    xml.iGalley,
+                    Unit.GALLEY.value,
                     tStartingPlot[0],
                     tStartingPlot[1],
                     UnitAITypes.UNITAI_ASSAULT_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
                 pByzantium.initUnit(
-                    xml.iGreatGeneral,
+                    Unit.GREAT_GENERAL.value,
                     tStartingPlot[0],
                     tStartingPlot[1],
                     UnitAITypes.UNITAI_GENERAL,
@@ -834,9 +835,9 @@ class CvRFCEventHandler:
                         gc.getUnitInfo, gc.getNumUnitInfos(), "UNIT_GREAT_GENERAL"
                     ):
                         pUnit.setName(localText.getText("TXT_KEY_GREAT_PERSON_BELISARIUS", ()))
-                utils.makeUnit(xml.iSwordsman, Civ.BYZANTIUM.value, tStartingPlot, 4)
-                utils.makeUnit(xml.iAxeman, Civ.BYZANTIUM.value, tStartingPlot, 3)
-                utils.makeUnit(xml.iArcher, Civ.BYZANTIUM.value, tStartingPlot, 2)
+                utils.makeUnit(Unit.SWORDSMAN.value, Civ.BYZANTIUM.value, tStartingPlot, 4)
+                utils.makeUnit(Unit.AXEMAN.value, Civ.BYZANTIUM.value, tStartingPlot, 3)
+                utils.makeUnit(Unit.ARCHER.value, Civ.BYZANTIUM.value, tStartingPlot, 2)
                 if iPlayer == iHuman:
                     popup = Popup.PyPopup()
                     popup.setBodyString(
@@ -1111,7 +1112,7 @@ class CvRFCEventHandler:
             iDebugDeadCiv = Civ.BURGUNDY.value  # always dead in 500AD
             # 3Miro: not sure
             # gc.getTeam(gc.getPlayer(iDebugDeadCiv).getTeam()).setHasTech(Technology.CALENDAR.value, True, iDebugDeadCiv, False, False)
-            utils.makeUnit(xml.iAxeman, iDebugDeadCiv, (0, 0), 1)
+            utils.makeUnit(Unit.AXEMAN.value, iDebugDeadCiv, (0, 0), 1)
             gc.getGame().setActivePlayer(iDebugDeadCiv, False)
             gc.getPlayer(iDebugDeadCiv).setPlayable(True)
         # Rhye - end debug

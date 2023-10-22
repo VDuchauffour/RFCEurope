@@ -1,7 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Unique Powers (only a couple of them is here, most are handled in the .dll)
 
 from CvPythonExtensions import *
-from CoreTypes import SpecialParameter, Religion
+from CoreTypes import SpecialParameter, Religion, Unit
 import PyHelpers
 
 # import cPickle as pickle
@@ -66,14 +66,14 @@ class UniquePowers:
         iTotalPoints = iOldPoints + iNewPoints
         while iTotalPoints >= iNextJanissary:
             # tCity = religion.selectRandomCityCiv(iPlayer)
-            # utils.makeUnit( xml.iJanissary, iPlayer, tCity, 1 )
+            # utils.makeUnit( Unit.JANISSARY.value, iPlayer, tCity, 1 )
             pCity = utils.getRandomCity(
                 iPlayer
             )  # The Janissary unit appears in a random city - should it be the capital instead?
             if pCity != -1:
                 iX = pCity.getX()
                 iY = pCity.getY()
-                utils.makeUnit(xml.iJanissary, iPlayer, (iX, iY), 1)
+                utils.makeUnit(Unit.JANISSARY.value, iPlayer, (iX, iY), 1)
                 # interface message for the human player
                 if iPlayer == utils.getHumanID():
                     CyInterface().addMessage(
@@ -86,7 +86,7 @@ class UniquePowers:
                         + "!",
                         "AS2D_UNIT_BUILD_UNIQUE_UNIT",
                         0,
-                        gc.getUnitInfo(xml.iJanissary).getButton(),
+                        gc.getUnitInfo(Unit.JANISSARY.value).getButton(),
                         ColorTypes(MessageData.GREEN),
                         iX,
                         iY,
@@ -121,7 +121,7 @@ class UniquePowers:
         if iIsHasForeignReligion:
             iX = city.getX()
             iY = city.getY()
-            utils.makeUnit(xml.iJanissary, iPlayer, (iX, iY), 1)
+            utils.makeUnit(Unit.JANISSARY.value, iPlayer, (iX, iY), 1)
             if iPlayer == utils.getHumanID():
                 CyInterface().addMessage(
                     iPlayer,
@@ -133,7 +133,7 @@ class UniquePowers:
                     + "!",
                     "AS2D_UNIT_BUILD_UNIQUE_UNIT",
                     0,
-                    gc.getUnitInfo(xml.iJanissary).getButton(),
+                    gc.getUnitInfo(Unit.JANISSARY.value).getButton(),
                     ColorTypes(MessageData.GREEN),
                     iX,
                     iY,
@@ -253,14 +253,14 @@ class UniquePowers:
     def defianceUP(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
         # One ranged/gun class
-        RangedClass = utils.getUniqueUnit(iPlayer, xml.iArcher)
+        RangedClass = utils.getUniqueUnit(iPlayer, Unit.ARCHER.value)
         lRangedList = [
-            xml.iLineInfantry,
-            xml.iMusketman,
-            xml.iLongbowman,
-            xml.iArbalest,
-            xml.iCrossbowman,
-            xml.iArcher,
+            Unit.LINE_INFANTRY.value,
+            Unit.MUSKETMAN.value,
+            Unit.LONGBOWMAN.value,
+            Unit.ARBALEST.value,
+            Unit.CROSSBOWMAN.value,
+            Unit.ARCHER.value,
         ]
         for iUnit in lRangedList:
             if pPlayer.canTrain(utils.getUniqueUnit(iPlayer, iUnit), False, False):
@@ -268,8 +268,8 @@ class UniquePowers:
                 break
 
         # One polearm class
-        PolearmClass = utils.getUniqueUnit(iPlayer, xml.iSpearman)
-        lPolearmList = [xml.iLineInfantry, xml.iPikeman, xml.iGuisarme]
+        PolearmClass = utils.getUniqueUnit(iPlayer, Unit.SPEARMAN.value)
+        lPolearmList = [Unit.LINE_INFANTRY.value, Unit.PIKEMAN.value, Unit.GUISARME.value]
         for iUnit in lPolearmList:
             if pPlayer.canTrain(utils.getUniqueUnit(iPlayer, iUnit), False, False):
                 PolearmClass = utils.getUniqueUnit(iPlayer, iUnit)

@@ -24,6 +24,7 @@ from CoreTypes import (
     SpecialParameter,
     Religion,
     Technology,
+    Unit,
 )
 
 # globals
@@ -466,7 +467,10 @@ class Companies:
                 iBuildCounter += 1
             if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iStable)) > 0:
                 iBuildCounter += 1
-            if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iArcheryRange)) > 0:
+            if (
+                city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Unit.ARCHER.valueyRange))
+                > 0
+            ):
                 iBuildCounter += 1
             if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iForge)) > 0:
                 iBuildCounter += 1
@@ -501,7 +505,10 @@ class Companies:
                 iBuildCounter += 1
             if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iStable)) > 0:
                 iBuildCounter += 1
-            if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iArcheryRange)) > 0:
+            if (
+                city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Unit.ARCHER.valueyRange))
+                > 0
+            ):
                 iBuildCounter += 1
             if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iForge)) > 0:
                 iBuildCounter += 1
@@ -525,7 +532,10 @@ class Companies:
                 iBuildCounter += 1
             if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iStable)) > 0:
                 iBuildCounter += 1
-            if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iArcheryRange)) > 0:
+            if (
+                city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, Unit.ARCHER.valueyRange))
+                > 0
+            ):
                 iBuildCounter += 1
             if city.getNumRealBuilding(utils.getUniqueBuilding(iOwner, xml.iForge)) > 0:
                 iBuildCounter += 1

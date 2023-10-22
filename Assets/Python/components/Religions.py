@@ -3,7 +3,7 @@
 from CvPythonExtensions import *
 from CoreData import civilizations
 from CoreFunctions import get_religion_by_id
-from CoreTypes import Civ, City, Civic, StabilityCategory, Religion, Technology
+from CoreTypes import Civ, City, Civic, StabilityCategory, Religion, Technology, Unit
 from LocationsData import CITIES
 from TimelineData import DateTurn
 import PyHelpers
@@ -1153,7 +1153,7 @@ class Religions:
             unitList = PyPlayer(iCiv).getUnitList()
             for pUnit in unitList:
                 iUnitType = pUnit.getUnitType()
-                if iUnitType == xml.iCatholicMissionary:
+                if iUnitType == Unit.CATHOLIC_MISSIONARY.value:
                     pUnit.kill(0, -1)
 
         pPlayer = gc.getPlayer(iCiv)
@@ -1481,7 +1481,7 @@ class Religions:
         iNumProsecutors = max(1, pPlayer.getNumCities() / 3)
         for i in range(iNumProsecutors):
             pPlayer.initUnit(
-                xml.iProsecutor,
+                Unit.PROSECUTOR.value,
                 iX,
                 iY,
                 UnitAITypes.UNITAI_MISSIONARY,
@@ -1504,7 +1504,7 @@ class Religions:
                         return
 
                 pNbr.initUnit(
-                    xml.iProsecutor,
+                    Unit.PROSECUTOR.value,
                     iX,
                     iY,
                     UnitAITypes.UNITAI_MISSIONARY,

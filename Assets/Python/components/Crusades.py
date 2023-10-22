@@ -12,7 +12,7 @@ import CityNameManager
 from StoredData import sd
 import random
 
-from CoreTypes import City, Civ, Religion, Promotion, Technology
+from CoreTypes import City, Civ, Religion, Promotion, Technology, Unit
 from MiscData import MessageData, NUM_CRUSADES
 from TimelineData import DateTurn
 from LocationsData import CITIES
@@ -605,7 +605,11 @@ class Crusades:
             unitList = PyPlayer(iHuman).getUnitList()
             for pUnit in unitList:
                 iUnitType = pUnit.getUnitType()
-                if iUnitType in [xml.iKnightofStJohns, xml.iTemplar, xml.iTeutonic]:
+                if iUnitType in [
+                    Unit.KNIGHT.valueofStJohns,
+                    Unit.TEMPLAR.value,
+                    Unit.TEUTONIC.value,
+                ]:
                     pPlot = gc.getMap().plot(pUnit.getX(), pUnit.getY())
                     iRandNum = gc.getGame().getSorenRandNum(100, "roll to send Unit to Crusade")
                     # Absinthe: less chance for units currently on ships
@@ -975,63 +979,75 @@ class Crusades:
 
     def unitProbability(self, iUnitType):
         if iUnitType in [
-            xml.iArcher,
-            xml.iCrossbowman,
-            xml.iArbalest,
-            xml.iGenoaBalestrieri,
-            xml.iLongbowman,
-            xml.iEnglishLongbowman,
-            xml.iPortugalFootKnight,
+            Unit.ARCHER.value,
+            Unit.CROSSBOWMAN.value,
+            Unit.ARBALEST.value,
+            Unit.GENOA_BALESTRIERI.value,
+            Unit.LONGBOWMAN.value,
+            Unit.ENGLISH_LONGBOWMAN.value,
+            Unit.PORTUGAL_FOOT_KNIGHT.value,
         ]:
             return 10
         if iUnitType in [
-            xml.iLancer,
-            xml.iBulgarianKonnik,
-            xml.iCordobanBerber,
-            xml.iHeavyLancer,
-            xml.iHungarianHuszar,
-            xml.iArabiaGhazi,
-            xml.iByzantineCataphract,
-            xml.iKievDruzhina,
-            xml.iKnight,
-            xml.iMoscowBoyar,
-            xml.iBurgundianPaladin,
+            Unit.LANCER.value,
+            Unit.BULGARIAN_KONNIK.value,
+            Unit.CORDOBAN_BERBER.value,
+            Unit.HEAVY_LANCER.value,
+            Unit.HUNGARIAN_HUSZAR.value,
+            Unit.ARABIA_GHAZI.value,
+            Unit.BYZANTINE_CATAPHRACT.value,
+            Unit.KIEV_DRUZHINA.value,
+            Unit.KNIGHT.value,
+            Unit.MOSCOW_BOYAR.value,
+            Unit.BURGUNDIAN_PALADIN.value,
         ]:
             return 70
         if iUnitType in [
-            xml.iTemplar,
-            xml.iTeutonic,
-            xml.iKnightofStJohns,
-            xml.iCalatravaKnight,
-            xml.iDragonKnight,
+            Unit.TEMPLAR.value,
+            Unit.TEUTONIC.value,
+            Unit.KNIGHT.valueofStJohns,
+            Unit.CALATRAVA_KNIGHT.value,
+            Unit.DRAGON_KNIGHT.value,
         ]:
             return 90
         if (
-            iUnitType <= xml.iIslamicMissionary or iUnitType >= xml.iWorkboat
+            iUnitType <= Unit.ISLAMIC_MISSIONARY.value or iUnitType >= Unit.WORKBOAT.value
         ):  # Workers, Executives, Missionaries, Sea Units and Mercenaries do not go
             return -1
         return 50
 
     def unitCrusadeCategory(self, iUnitType):
-        if iUnitType == xml.iTemplar:
+        if iUnitType == Unit.TEMPLAR.value:
             return 0
-        if iUnitType == xml.iTeutonic:
+        if iUnitType == Unit.TEUTONIC.value:
             return 1
-        if iUnitType in [xml.iKnightofStJohns, xml.iCalatravaKnight, xml.iDragonKnight]:
+        if iUnitType in [
+            Unit.KNIGHT.valueofStJohns,
+            Unit.CALATRAVA_KNIGHT.value,
+            Unit.DRAGON_KNIGHT.value,
+        ]:
             return 2
-        if iUnitType in [xml.iKnight, xml.iMoscowBoyar, xml.iBurgundianPaladin]:
+        if iUnitType in [
+            Unit.KNIGHT.value,
+            Unit.MOSCOW_BOYAR.value,
+            Unit.BURGUNDIAN_PALADIN.value,
+        ]:
             return 3
         if iUnitType in [
-            xml.iHeavyLancer,
-            xml.iHungarianHuszar,
-            xml.iArabiaGhazi,
-            xml.iByzantineCataphract,
-            xml.iKievDruzhina,
+            Unit.HEAVY_LANCER.value,
+            Unit.HUNGARIAN_HUSZAR.value,
+            Unit.ARABIA_GHAZI.value,
+            Unit.BYZANTINE_CATAPHRACT.value,
+            Unit.KIEV_DRUZHINA.value,
         ]:
             return 4
-        if iUnitType in [xml.iLancer, xml.iBulgarianKonnik, xml.iCordobanBerber]:
+        if iUnitType in [
+            Unit.LANCER.value,
+            Unit.BULGARIAN_KONNIK.value,
+            Unit.CORDOBAN_BERBER.value,
+        ]:
             return 5
-        if iUnitType in [xml.iCatapult, xml.iTrebuchet]:
+        if iUnitType in [Unit.CATAPULT.value, Unit.TREBUCHET.value]:
             return 6
         return 7
 
@@ -1422,18 +1438,18 @@ class Crusades:
             pPlot = gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple())
             iVictim = pPlot.getPlotCity().getOwner()
             if teamLeader.isHasTech(Technology.CHIVALRY.value) or iVictim == iHuman:
-                self.makeUnit(xml.iBurgundianPaladin, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(xml.iTemplar, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(xml.iTeutonic, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(xml.iKnightofStJohns, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(xml.iGuisarme, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(xml.iCatapult, iLeader, iActiveCrusade, tPlot, 1)
+                self.makeUnit(Unit.BURGUNDIAN_PALADIN.value, iLeader, iActiveCrusade, tPlot, 1)
+                self.makeUnit(Unit.TEMPLAR.value, iLeader, iActiveCrusade, tPlot, 1)
+                self.makeUnit(Unit.TEUTONIC.value, iLeader, iActiveCrusade, tPlot, 1)
+                self.makeUnit(Unit.KNIGHT.valueofStJohns, iLeader, iActiveCrusade, tPlot, 1)
+                self.makeUnit(Unit.GUISARME.value, iLeader, iActiveCrusade, tPlot, 1)
+                self.makeUnit(Unit.CATAPULT.value, iLeader, iActiveCrusade, tPlot, 1)
             else:
-                self.makeUnit(xml.iHeavyLancer, iLeader, iActiveCrusade, tPlot, 2)
-                self.makeUnit(xml.iLancer, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(xml.iLongSwordsman, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(xml.iSpearman, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(xml.iTrebuchet, iLeader, iActiveCrusade, tPlot, 1)
+                self.makeUnit(Unit.HEAVY_LANCER.value, iLeader, iActiveCrusade, tPlot, 2)
+                self.makeUnit(Unit.LANCER.value, iLeader, iActiveCrusade, tPlot, 1)
+                self.makeUnit(Unit.LONG_SWORDSMAN.value, iLeader, iActiveCrusade, tPlot, 1)
+                self.makeUnit(Unit.SPEARMAN.value, iLeader, iActiveCrusade, tPlot, 1)
+                self.makeUnit(Unit.TREBUCHET.value, iLeader, iActiveCrusade, tPlot, 1)
             # there are way too many generic units in most Crusades:
             if self.getSelectedUnit(7) > 1:
                 iReducedNumber = (
@@ -1444,17 +1460,17 @@ class Crusades:
         else:
             iRougeModifier = 200
             if teamLeader.isHasTech(Technology.CHIVALRY.value):
-                self.makeUnit(xml.iKnight, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(xml.iTeutonic, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(xml.iLongSwordsman, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(xml.iGuisarme, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(xml.iCatapult, iLeader, iActiveCrusade, tPlot, 1)
+                self.makeUnit(Unit.KNIGHT.value, iLeader, iActiveCrusade, tPlot, 1)
+                self.makeUnit(Unit.TEUTONIC.value, iLeader, iActiveCrusade, tPlot, 1)
+                self.makeUnit(Unit.LONG_SWORDSMAN.value, iLeader, iActiveCrusade, tPlot, 1)
+                self.makeUnit(Unit.GUISARME.value, iLeader, iActiveCrusade, tPlot, 1)
+                self.makeUnit(Unit.CATAPULT.value, iLeader, iActiveCrusade, tPlot, 1)
             else:
-                self.makeUnit(xml.iHeavyLancer, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(xml.iLancer, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(xml.iLongSwordsman, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(xml.iSpearman, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(xml.iTrebuchet, iLeader, iActiveCrusade, tPlot, 1)
+                self.makeUnit(Unit.HEAVY_LANCER.value, iLeader, iActiveCrusade, tPlot, 1)
+                self.makeUnit(Unit.LANCER.value, iLeader, iActiveCrusade, tPlot, 1)
+                self.makeUnit(Unit.LONG_SWORDSMAN.value, iLeader, iActiveCrusade, tPlot, 1)
+                self.makeUnit(Unit.SPEARMAN.value, iLeader, iActiveCrusade, tPlot, 1)
+                self.makeUnit(Unit.TREBUCHET.value, iLeader, iActiveCrusade, tPlot, 1)
             # there are way too many generic units in most Crusades:
             if self.getSelectedUnit(7) > 1:
                 iReducedNumber = (
@@ -1497,7 +1513,7 @@ class Crusades:
 
         if self.getSelectedUnit(0) > 0:
             self.makeUnit(
-                xml.iTemplar,
+                Unit.TEMPLAR.value,
                 iLeader,
                 iActiveCrusade,
                 tPlot,
@@ -1505,7 +1521,7 @@ class Crusades:
             )
         if self.getSelectedUnit(1) > 0:
             self.makeUnit(
-                xml.iTeutonic,
+                Unit.TEUTONIC.value,
                 iLeader,
                 iActiveCrusade,
                 tPlot,
@@ -1513,7 +1529,7 @@ class Crusades:
             )
         if self.getSelectedUnit(2) > 0:
             self.makeUnit(
-                xml.iKnightofStJohns,
+                Unit.KNIGHT.valueofStJohns,
                 iLeader,
                 iActiveCrusade,
                 tPlot,
@@ -1526,17 +1542,21 @@ class Crusades:
                     if (
                         gc.getGame().getSorenRandNum(10, "chance for Paladin") >= 5
                     ):  # Absinthe: 50% chance for a Paladin for each unit
-                        self.makeUnit(xml.iBurgundianPaladin, iLeader, iActiveCrusade, tPlot, 1)
+                        self.makeUnit(
+                            Unit.BURGUNDIAN_PALADIN.value, iLeader, iActiveCrusade, tPlot, 1
+                        )
                     else:
-                        self.makeUnit(xml.iKnight, iLeader, iActiveCrusade, tPlot, 1)
+                        self.makeUnit(Unit.KNIGHT.value, iLeader, iActiveCrusade, tPlot, 1)
             else:
                 for i in range(0, iKnightNumber):
                     if (
                         gc.getGame().getSorenRandNum(10, "chance for Paladin") >= 8
                     ):  # Absinthe: 20% chance for a Paladin for each unit
-                        self.makeUnit(xml.iBurgundianPaladin, iLeader, iActiveCrusade, tPlot, 1)
+                        self.makeUnit(
+                            Unit.BURGUNDIAN_PALADIN.value, iLeader, iActiveCrusade, tPlot, 1
+                        )
                     else:
-                        self.makeUnit(xml.iKnight, iLeader, iActiveCrusade, tPlot, 1)
+                        self.makeUnit(Unit.KNIGHT.value, iLeader, iActiveCrusade, tPlot, 1)
         if self.getSelectedUnit(4) > 0:
             iLightCavNumber = self.getSelectedUnit(4) * 100 / iRougeModifier
             if iLeader == Civ.HUNGARY.value:
@@ -1544,14 +1564,18 @@ class Crusades:
                     if (
                         gc.getGame().getSorenRandNum(10, "chance for Huszar") >= 5
                     ):  # Absinthe: 50% chance for a Huszár for each unit
-                        self.makeUnit(xml.iHungarianHuszar, iLeader, iActiveCrusade, tPlot, 1)
+                        self.makeUnit(
+                            Unit.HUNGARIAN_HUSZAR.value, iLeader, iActiveCrusade, tPlot, 1
+                        )
                     else:
-                        self.makeUnit(xml.iHeavyLancer, iLeader, iActiveCrusade, tPlot, 1)
+                        self.makeUnit(Unit.HEAVY_LANCER.value, iLeader, iActiveCrusade, tPlot, 1)
             else:
-                self.makeUnit(xml.iHeavyLancer, iLeader, iActiveCrusade, tPlot, iLightCavNumber)
+                self.makeUnit(
+                    Unit.HEAVY_LANCER.value, iLeader, iActiveCrusade, tPlot, iLightCavNumber
+                )
         if self.getSelectedUnit(5) > 0:
             self.makeUnit(
-                xml.iLancer,
+                Unit.LANCER.value,
                 iLeader,
                 iActiveCrusade,
                 tPlot,
@@ -1560,19 +1584,21 @@ class Crusades:
         if self.getSelectedUnit(6) > 0:
             iSiegeNumber = self.getSelectedUnit(6) * 100 / iRougeModifier
             if iSiegeNumber > 2:
-                self.makeUnit(xml.iCatapult, iLeader, iActiveCrusade, tPlot, 2)
-                self.makeUnit(xml.iTrebuchet, iLeader, iActiveCrusade, tPlot, iSiegeNumber - 2)
+                self.makeUnit(Unit.CATAPULT.value, iLeader, iActiveCrusade, tPlot, 2)
+                self.makeUnit(
+                    Unit.TREBUCHET.value, iLeader, iActiveCrusade, tPlot, iSiegeNumber - 2
+                )
             else:
-                self.makeUnit(xml.iCatapult, iLeader, iActiveCrusade, tPlot, iSiegeNumber)
+                self.makeUnit(Unit.CATAPULT.value, iLeader, iActiveCrusade, tPlot, iSiegeNumber)
         if self.getSelectedUnit(7) > 0:
             iFootNumber = self.getSelectedUnit(7) * 100 / iRougeModifier
             for i in range(0, iFootNumber):
                 if (
                     gc.getGame().getSorenRandNum(2, "coinflip") == 1
                 ):  # Absinthe: 50% chance for both type
-                    self.makeUnit(xml.iLongSwordsman, iLeader, iActiveCrusade, tPlot, 1)
+                    self.makeUnit(Unit.LONG_SWORDSMAN.value, iLeader, iActiveCrusade, tPlot, 1)
                 else:
-                    self.makeUnit(xml.iGuisarme, iLeader, iActiveCrusade, tPlot, 1)
+                    self.makeUnit(Unit.GUISARME.value, iLeader, iActiveCrusade, tPlot, 1)
 
     def freeCrusaders(self, iPlayer):
         # the majority of Crusader units will return from the Crusade, so the Crusading civ will have harder time keeping Jerusalem and the Levant
@@ -1641,7 +1667,7 @@ class Crusades:
                             iCapitalX = capital.getX()
                             iCapitalY = capital.getY()
                             pCiv.initUnit(
-                                xml.iHolyRelic,
+                                Unit.HOLY_RELIC.value,
                                 iCapitalX,
                                 iCapitalY,
                                 UnitAITypes.NO_UNITAI,
@@ -1655,7 +1681,7 @@ class Crusades:
                                     CyTranslator().getText("TXT_KEY_CRUSADE_NEW_RELIC", ()),
                                     "AS2D_UNIT_BUILD_UNIQUE_UNIT",
                                     0,
-                                    gc.getUnitInfo(xml.iHolyRelic).getButton(),
+                                    gc.getUnitInfo(Unit.HOLY_RELIC.value).getButton(),
                                     ColorTypes(MessageData.GREEN),
                                     iCapitalX,
                                     iCapitalY,
@@ -1667,7 +1693,7 @@ class Crusades:
                                     gc.getGame().getSorenRandNum(5, "RelicChance") < 4
                                 ):  # 80% chance
                                     pCiv.initUnit(
-                                        xml.iHolyRelic,
+                                        Unit.HOLY_RELIC.value,
                                         iCapitalX,
                                         iCapitalY,
                                         UnitAITypes.NO_UNITAI,
@@ -1678,7 +1704,7 @@ class Crusades:
                                     gc.getGame().getSorenRandNum(5, "RelicChance") < 4
                                 ):  # 80% chance
                                     pCiv.initUnit(
-                                        xml.iHolyRelic,
+                                        Unit.HOLY_RELIC.value,
                                         iCapitalX,
                                         iCapitalY,
                                         UnitAITypes.NO_UNITAI,
@@ -1719,7 +1745,7 @@ class Crusades:
                                     gc.getGame().getSorenRandNum(5, "RelicChance") < 4
                                 ):  # 80% chance
                                     pCiv.initUnit(
-                                        xml.iHolyRelic,
+                                        Unit.HOLY_RELIC.value,
                                         iCapitalX,
                                         iCapitalY,
                                         UnitAITypes.NO_UNITAI,
@@ -1735,7 +1761,7 @@ class Crusades:
                                             ),
                                             "AS2D_UNIT_BUILD_UNIQUE_UNIT",
                                             0,
-                                            gc.getUnitInfo(xml.iHolyRelic).getButton(),
+                                            gc.getUnitInfo(Unit.HOLY_RELIC.value).getButton(),
                                             ColorTypes(MessageData.GREEN),
                                             iCapitalX,
                                             iCapitalY,
@@ -1747,7 +1773,7 @@ class Crusades:
                                         gc.getGame().getSorenRandNum(5, "RelicChance") < 3
                                     ):  # 60% chance
                                         pCiv.initUnit(
-                                            xml.iHolyRelic,
+                                            Unit.HOLY_RELIC.value,
                                             iCapitalX,
                                             iCapitalY,
                                             UnitAITypes.NO_UNITAI,
@@ -1758,7 +1784,7 @@ class Crusades:
                                         gc.getGame().getSorenRandNum(5, "RelicChance") < 3
                                     ):  # 60% chance
                                         pCiv.initUnit(
-                                            xml.iHolyRelic,
+                                            Unit.HOLY_RELIC.value,
                                             iCapitalX,
                                             iCapitalY,
                                             UnitAITypes.NO_UNITAI,
@@ -1964,12 +1990,12 @@ class Crusades:
 
         # smaller Empires need a bit more help
         if pPlayer.getNumCities() < 6:
-            if iBestCavalry == xml.iKnight:
+            if iBestCavalry == Unit.KNIGHT.value:
                 if (
                     gc.getGame().getSorenRandNum(10, "chance for Paladin") >= 7
                 ):  # 30% chance for a Paladin
                     pPlayer.initUnit(
-                        xml.iBurgundianPaladin,
+                        Unit.BURGUNDIAN_PALADIN.value,
                         iX,
                         iY,
                         UnitAITypes.UNITAI_ATTACK,
@@ -1993,12 +2019,12 @@ class Crusades:
                 iBestInfantry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH
             )
         if iFaith > 11:
-            if iBestCavalry == xml.iKnight:
+            if iBestCavalry == Unit.KNIGHT.value:
                 if (
                     gc.getGame().getSorenRandNum(10, "chance for Paladin") >= 7
                 ):  # 30% chance for a Paladin
                     pPlayer.initUnit(
-                        xml.iBurgundianPaladin,
+                        Unit.BURGUNDIAN_PALADIN.value,
                         iX,
                         iY,
                         UnitAITypes.UNITAI_ATTACK,
@@ -2033,12 +2059,12 @@ class Crusades:
             pPlayer.initUnit(
                 iBestCavalry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH
             )
-            if iBestCavalry == xml.iKnight:
+            if iBestCavalry == Unit.KNIGHT.value:
                 if (
                     gc.getGame().getSorenRandNum(10, "chance for Paladin") >= 7
                 ):  # 30% chance for a Paladin
                     pPlayer.initUnit(
-                        xml.iBurgundianPaladin,
+                        Unit.BURGUNDIAN_PALADIN.value,
                         iX,
                         iY,
                         UnitAITypes.UNITAI_ATTACK,
@@ -2059,19 +2085,29 @@ class Crusades:
 
     def getDCBestInfantry(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
-        lUnits = [xml.iGrenadier, xml.iMaceman, xml.iLongSwordsman, xml.iSwordsman]
+        lUnits = [
+            Unit.GRENADIER.value,
+            Unit.MACEMAN.value,
+            Unit.LONG_SWORDSMAN.value,
+            Unit.SWORDSMAN.value,
+        ]
         for iUnit in lUnits:
             if pPlayer.canTrain(utils.getUniqueUnit(iPlayer, iUnit), False, False):
                 return utils.getUniqueUnit(iPlayer, iUnit)
-        return utils.getUniqueUnit(iPlayer, xml.iAxeman)
+        return utils.getUniqueUnit(iPlayer, Unit.AXEMAN.value)
 
     def getDCBestCavalry(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
-        lUnits = [xml.iCuirassier, xml.iKnight, xml.iHeavyLancer, xml.iLancer]
+        lUnits = [
+            Unit.CUIRASSIER.value,
+            Unit.KNIGHT.value,
+            Unit.HEAVY_LANCER.value,
+            Unit.LANCER.value,
+        ]
         for iUnit in lUnits:
             if pPlayer.canTrain(utils.getUniqueUnit(iPlayer, iUnit), False, False):
                 return utils.getUniqueUnit(iPlayer, iUnit)
-        return utils.getUniqueUnit(iPlayer, xml.iScout)
+        return utils.getUniqueUnit(iPlayer, Unit.SCOUT.value)
 
     def do1200ADCrusades(self):
         self.setCrusadeInit(0, DateTurn.i1096AD)

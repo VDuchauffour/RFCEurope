@@ -14,6 +14,7 @@ from CoreTypes import (
     Religion,
     Improvement,
     Technology,
+    Unit,
 )
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
 import PyHelpers
@@ -785,7 +786,7 @@ class Victory:
         ):
             if cLosingUnit.getDomainType() == DomainTypes.DOMAIN_SEA:
                 # Absinthe: only 1 Viking point for Work Boats
-                if pLosingUnit.getUnitType() != xml.iWorkboat:
+                if pLosingUnit.getUnitType() != Unit.WORKBOAT.value:
                     player(Civ.NORWAY).setUHVCounter(0, player(Civ.NORWAY).getUHVCounter(0) + 2)
                 else:
                     player(Civ.NORWAY).setUHVCounter(0, player(Civ.NORWAY).getUHVCounter(0) + 1)

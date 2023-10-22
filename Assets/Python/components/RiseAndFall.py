@@ -26,6 +26,7 @@ from CoreTypes import (
     UniquePower,
     StabilityCategory,
     Technology,
+    Unit,
 )
 from CoreFunctions import get_civ_by_id
 from LocationsData import CIV_CAPITAL_LOCATIONS
@@ -826,8 +827,8 @@ class RiseAndFall:
                 if pCurrent.isCity():
                     pCity = pCurrent.getPlotCity()
                     if pCity.getOwner() == Civ.ENGLAND.value:
-                        utils.makeUnit(xml.iGuisarme, Civ.ENGLAND.value, (x, y), 1)
-                        utils.makeUnit(xml.iArbalest, Civ.ENGLAND.value, (x, y), 1)
+                        utils.makeUnit(Unit.GUISARME.value, Civ.ENGLAND.value, (x, y), 1)
+                        utils.makeUnit(Unit.ARBALEST.value, Civ.ENGLAND.value, (x, y), 1)
                         pCity.setHasRealBuilding(xml.iWalls, True)
                         pCity.setHasRealBuilding(xml.iCastle, True)
 
@@ -1836,9 +1837,9 @@ class RiseAndFall:
 
     def makeResurectionUnits(self, iPlayer, iX, iY):
         if iPlayer == Civ.CORDOBA.value:
-            utils.makeUnit(xml.iSettler, Civ.CORDOBA.value, (iX, iY), 2)
-            utils.makeUnit(xml.iCrossbowman, Civ.CORDOBA.value, (iX, iY), 2)
-            utils.makeUnit(xml.iIslamicMissionary, Civ.CORDOBA.value, (iX, iY), 1)
+            utils.makeUnit(Unit.SETTLER.value, Civ.CORDOBA.value, (iX, iY), 2)
+            utils.makeUnit(Unit.CROSSBOWMAN.value, Civ.CORDOBA.value, (iX, iY), 2)
+            utils.makeUnit(Unit.ISLAMIC_MISSIONARY.value, Civ.CORDOBA.value, (iX, iY), 1)
 
     def convertBackCulture(self, iCiv):
         # 3Miro: same as Normal Areas in Resurrection
@@ -2069,7 +2070,7 @@ class RiseAndFall:
                 ##				settlerPlot = gc.getMap().plot( tCapital[0], tCapital[1] )
                 ##				for i in range(settlerPlot.getNumUnits()):
                 ##					unit = settlerPlot.getUnit(i)
-                ##					if unit.getUnitType() == xml.iSettler:
+                ##					if unit.getUnitType() == Unit.SETTLER.value:
                 ##						break
                 ##				unit.found()
 
@@ -2559,111 +2560,111 @@ class RiseAndFall:
         # significant number of units for the AI
         if iCiv != iHuman:
             if iCiv == Civ.ARABIA.value:
-                utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 4)
+                utils.makeUnit(Unit.HORSE_ARCHER.value, iCiv, tPlot, 4)
             elif iCiv == Civ.BULGARIA.value:
-                utils.makeUnit(xml.iBulgarianKonnik, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.BULGARIAN_KONNIK.value, iCiv, tPlot, 2)
             elif iCiv == Civ.CORDOBA.value:
-                utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.AXEMAN.value, iCiv, tPlot, 2)
             elif iCiv == Civ.VENECIA.value:
-                utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
+                utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tPlot, 3)
             elif iCiv == Civ.BURGUNDY.value:
-                utils.makeUnit(xml.iLancer, iCiv, tPlot, 3)
+                utils.makeUnit(Unit.LANCER.value, iCiv, tPlot, 3)
             elif iCiv == Civ.GERMANY.value:
-                utils.makeUnit(xml.iLancer, iCiv, tPlot, 3)
+                utils.makeUnit(Unit.LANCER.value, iCiv, tPlot, 3)
             elif iCiv == Civ.NOVGOROD.value:
-                utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
+                utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tPlot, 3)
             elif iCiv == Civ.NORWAY.value:
-                utils.makeUnit(xml.iVikingBerserker, iCiv, tPlot, 3)
+                utils.makeUnit(Unit.VIKING_BERSERKER.value, iCiv, tPlot, 3)
             elif iCiv == Civ.KIEV.value:
-                utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 4)
+                utils.makeUnit(Unit.HORSE_ARCHER.value, iCiv, tPlot, 4)
             elif iCiv == Civ.HUNGARY.value:
-                utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 4)
+                utils.makeUnit(Unit.HORSE_ARCHER.value, iCiv, tPlot, 4)
             elif iCiv == Civ.CASTILLE.value:
-                utils.makeUnit(xml.iLancer, iCiv, tPlot, 4)
+                utils.makeUnit(Unit.LANCER.value, iCiv, tPlot, 4)
             elif iCiv == Civ.DENMARK.value:
-                utils.makeUnit(xml.iDenmarkHuskarl, iCiv, tPlot, 3)
+                utils.makeUnit(Unit.DENMARK_HUSKARL.value, iCiv, tPlot, 3)
             elif iCiv == Civ.SCOTLAND.value:
-                utils.makeUnit(xml.iAxeman, iCiv, tPlot, 4)
+                utils.makeUnit(Unit.AXEMAN.value, iCiv, tPlot, 4)
             elif iCiv == Civ.POLAND.value:
-                utils.makeUnit(xml.iLancer, iCiv, tPlot, 3)
+                utils.makeUnit(Unit.LANCER.value, iCiv, tPlot, 3)
             elif iCiv == Civ.GENOA.value:
-                utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 3)
+                utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 3)
             elif iCiv == Civ.MOROCCO.value:
-                utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 2)
             elif iCiv == Civ.ENGLAND.value:
-                utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 3)
+                utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 3)
             elif iCiv == Civ.PORTUGAL.value:
-                utils.makeUnit(xml.iPortugalFootKnight, iCiv, tPlot, 4)
+                utils.makeUnit(Unit.PORTUGAL_FOOT_KNIGHT.value, iCiv, tPlot, 4)
             elif iCiv == Civ.ARAGON.value:
-                utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 4)
+                utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 4)
             elif iCiv == Civ.SWEDEN.value:
-                utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 4)
+                utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 4)
             elif iCiv == Civ.PRUSSIA.value:
-                utils.makeUnit(xml.iTeutonic, iCiv, tPlot, 3)
+                utils.makeUnit(Unit.TEUTONIC.value, iCiv, tPlot, 3)
             elif iCiv == Civ.LITHUANIA.value:
-                utils.makeUnit(xml.iLithuanianBajoras, iCiv, tPlot, 3)
+                utils.makeUnit(Unit.LITHUANIAN_BAJORAS.value, iCiv, tPlot, 3)
             elif iCiv == Civ.AUSTRIA.value:
-                utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 4)
+                utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 4)
             elif iCiv == Civ.OTTOMAN.value:
-                utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 3)
+                utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 3)
             elif iCiv == Civ.MOSCOW.value:
-                utils.makeUnit(xml.iMoscowBoyar, iCiv, tPlot, 3)
+                utils.makeUnit(Unit.MOSCOW_BOYAR.value, iCiv, tPlot, 3)
             elif iCiv == Civ.DUTCH.value:
-                utils.makeUnit(xml.iNetherlandsGrenadier, iCiv, tPlot, 4)
+                utils.makeUnit(Unit.NETHERLANDS_GRENADIER.value, iCiv, tPlot, 4)
         # less for the human player
         else:
             if iCiv == Civ.ARABIA.value:
-                utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.HORSE_ARCHER.value, iCiv, tPlot, 2)
             elif iCiv == Civ.BULGARIA.value:
-                utils.makeUnit(xml.iBulgarianKonnik, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.BULGARIAN_KONNIK.value, iCiv, tPlot, 1)
             elif iCiv == Civ.CORDOBA.value:
-                utils.makeUnit(xml.iAxeman, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.AXEMAN.value, iCiv, tPlot, 1)
             elif iCiv == Civ.VENECIA.value:
-                utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tPlot, 2)
             elif iCiv == Civ.BURGUNDY.value:
-                utils.makeUnit(xml.iLancer, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.LANCER.value, iCiv, tPlot, 1)
             elif iCiv == Civ.GERMANY.value:
-                utils.makeUnit(xml.iLancer, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.LANCER.value, iCiv, tPlot, 1)
             elif iCiv == Civ.NOVGOROD.value:
-                utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tPlot, 1)
             elif iCiv == Civ.NORWAY.value:
-                utils.makeUnit(xml.iVikingBerserker, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.VIKING_BERSERKER.value, iCiv, tPlot, 1)
             elif iCiv == Civ.KIEV.value:
-                utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.HORSE_ARCHER.value, iCiv, tPlot, 2)
             elif iCiv == Civ.HUNGARY.value:
-                utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.HORSE_ARCHER.value, iCiv, tPlot, 2)
             elif iCiv == Civ.CASTILLE.value:
-                utils.makeUnit(xml.iLancer, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.LANCER.value, iCiv, tPlot, 1)
             elif iCiv == Civ.DENMARK.value:
-                utils.makeUnit(xml.iDenmarkHuskarl, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.DENMARK_HUSKARL.value, iCiv, tPlot, 1)
             elif iCiv == Civ.SCOTLAND.value:
-                utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.AXEMAN.value, iCiv, tPlot, 2)
             elif iCiv == Civ.POLAND.value:
-                utils.makeUnit(xml.iLancer, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.LANCER.value, iCiv, tPlot, 1)
             elif iCiv == Civ.GENOA.value:
-                utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 1)
             elif iCiv == Civ.MOROCCO.value:
-                utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 1)
             elif iCiv == Civ.ENGLAND.value:
-                utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 1)
             elif iCiv == Civ.PORTUGAL.value:
-                utils.makeUnit(xml.iPortugalFootKnight, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.PORTUGAL_FOOT_KNIGHT.value, iCiv, tPlot, 1)
             elif iCiv == Civ.ARAGON.value:
-                utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 2)
             elif iCiv == Civ.SWEDEN.value:
-                utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 1)
             elif iCiv == Civ.PRUSSIA.value:
-                utils.makeUnit(xml.iTeutonic, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.TEUTONIC.value, iCiv, tPlot, 1)
             elif iCiv == Civ.LITHUANIA.value:
-                utils.makeUnit(xml.iLithuanianBajoras, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.LITHUANIAN_BAJORAS.value, iCiv, tPlot, 1)
             elif iCiv == Civ.AUSTRIA.value:
-                utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 2)
             elif iCiv == Civ.OTTOMAN.value:
-                utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 1)
             elif iCiv == Civ.MOSCOW.value:
-                utils.makeUnit(xml.iMoscowBoyar, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.MOSCOW_BOYAR.value, iCiv, tPlot, 1)
             elif iCiv == Civ.DUTCH.value:
-                utils.makeUnit(xml.iNetherlandsGrenadier, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.NETHERLANDS_GRENADIER.value, iCiv, tPlot, 2)
 
     def createStartingUnits(self, iCiv, tPlot):
         # set the provinces
@@ -2671,260 +2672,260 @@ class RiseAndFall:
         iHuman = utils.getHumanID()
         # Change here to make later starting civs work
         if iCiv == Civ.ARABIA.value:
-            utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 7)
-            utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iSpearman, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.ARCHER.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.HORSE_ARCHER.value, iCiv, tPlot, 7)
+            utils.makeUnit(Unit.AXEMAN.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.SPEARMAN.value, iCiv, tPlot, 2)
             # additional units for the AI
             if iCiv != iHuman:
-                utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 2)
-                utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
-                utils.makeUnit(xml.iSpearman, iCiv, tPlot, 2)
-                utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.HORSE_ARCHER.value, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.ARCHER.value, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.SPEARMAN.value, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 2)
         elif iCiv == Civ.BULGARIA.value:
-            utils.makeUnit(xml.iArcher, iCiv, tPlot, 4)
-            utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iBulgarianKonnik, iCiv, tPlot, 5)
+            utils.makeUnit(Unit.ARCHER.value, iCiv, tPlot, 4)
+            utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.BULGARIAN_KONNIK.value, iCiv, tPlot, 5)
             # additional units for the AI
             if iCiv != iHuman:
-                utils.makeUnit(xml.iArcher, iCiv, tPlot, 1)
-                utils.makeUnit(xml.iSpearman, iCiv, tPlot, 2)
-                utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.ARCHER.value, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.SPEARMAN.value, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 1)
         elif iCiv == Civ.CORDOBA.value:
-            utils.makeUnit(xml.iArcher, iCiv, tPlot, 3)
-            utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
-            utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iIslamicMissionary, iCiv, tPlot, 3)
+            utils.makeUnit(Unit.ARCHER.value, iCiv, tPlot, 3)
+            utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 1)
+            utils.makeUnit(Unit.AXEMAN.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.ISLAMIC_MISSIONARY.value, iCiv, tPlot, 3)
             # additional units for the AI
             if iCiv != iHuman:
-                utils.makeUnit(xml.iArcher, iCiv, tPlot, 4)
-                utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
-                utils.makeUnit(xml.iAxeman, iCiv, tPlot, 1)
-                utils.makeUnit(xml.iIslamicMissionary, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.ARCHER.value, iCiv, tPlot, 4)
+                utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.AXEMAN.value, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.ISLAMIC_MISSIONARY.value, iCiv, tPlot, 2)
             # so the human player can raid further north rather than sit and wait for Spain
             if iCiv == iHuman:
-                utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 3)
+                utils.makeUnit(Unit.HORSE_ARCHER.value, iCiv, tPlot, 3)
         elif iCiv == Civ.VENECIA.value:
-            utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
-            utils.makeUnit(xml.iSpearman, iCiv, tPlot, 1)
-            utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 1)
+            utils.makeUnit(Unit.ARCHER.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 1)
+            utils.makeUnit(Unit.SPEARMAN.value, iCiv, tPlot, 1)
+            utils.makeUnit(Unit.CATHOLIC_MISSIONARY.value, iCiv, tPlot, 1)
             tSeaPlot = self.findSeaPlots((57, 35), 2)
             if tSeaPlot:
-                utils.makeUnit(xml.iWorkboat, iCiv, tSeaPlot, 1)
+                utils.makeUnit(Unit.WORKBOAT.value, iCiv, tSeaPlot, 1)
                 player(Civ.VENECIA).initUnit(
-                    xml.iGalley,
+                    Unit.GALLEY.value,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_SETTLER_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
                 player(Civ.VENECIA).initUnit(
-                    xml.iGalley,
+                    Unit.GALLEY.value,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_ESCORT_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
-                utils.makeUnit(xml.iSettler, iCiv, tSeaPlot, 1)
-                utils.makeUnit(xml.iArcher, iCiv, tSeaPlot, 1)
+                utils.makeUnit(Unit.SETTLER.value, iCiv, tSeaPlot, 1)
+                utils.makeUnit(Unit.ARCHER.value, iCiv, tSeaPlot, 1)
                 player(Civ.VENECIA).initUnit(
-                    xml.iGalley,
+                    Unit.GALLEY.value,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_SETTLER_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
-                utils.makeUnit(xml.iSettler, iCiv, tSeaPlot, 1)
-                utils.makeUnit(xml.iSpearman, iCiv, tSeaPlot, 1)
+                utils.makeUnit(Unit.SETTLER.value, iCiv, tSeaPlot, 1)
+                utils.makeUnit(Unit.SPEARMAN.value, iCiv, tSeaPlot, 1)
         elif iCiv == Civ.BURGUNDY.value:
-            utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
-            utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iGuisarme, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 1)
+            utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 1)
+            utils.makeUnit(Unit.ARCHER.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.GUISARME.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.AXEMAN.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.CATHOLIC_MISSIONARY.value, iCiv, tPlot, 1)
         elif iCiv == Civ.GERMANY.value:
-            utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iGuisarme, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.AXEMAN.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.SWORDSMAN.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.GUISARME.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.ARCHER.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.CATHOLIC_MISSIONARY.value, iCiv, tPlot, 2)
             # additional units for the AI
             if iCiv != iHuman:
-                utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
-                utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
-                utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.ARCHER.value, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.CATHOLIC_MISSIONARY.value, iCiv, tPlot, 1)
         elif iCiv == Civ.NOVGOROD.value:
-            utils.makeUnit(xml.iArcher, iCiv, tPlot, 3)
-            utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
-            utils.makeUnit(xml.iAxeman, iCiv, tPlot, 1)
-            utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 1)
+            utils.makeUnit(Unit.ARCHER.value, iCiv, tPlot, 3)
+            utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 3)
+            utils.makeUnit(Unit.AXEMAN.value, iCiv, tPlot, 1)
+            utils.makeUnit(Unit.HORSE_ARCHER.value, iCiv, tPlot, 1)
             # additional units for the AI
             if iCiv != iHuman:
-                utils.makeUnit(xml.iArcher, iCiv, tPlot, 4)
-                utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.ARCHER.value, iCiv, tPlot, 4)
+                utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 1)
         elif iCiv == Civ.NORWAY.value:
-            utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iVikingBerserker, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 1)
+            utils.makeUnit(Unit.ARCHER.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.VIKING_BERSERKER.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.SWORDSMAN.value, iCiv, tPlot, 1)
             tSeaPlot = self.findSeaPlots(tPlot, 2)
             if tSeaPlot:
                 player(Civ.NORWAY).initUnit(
-                    xml.iGalley,
+                    Unit.GALLEY.value,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_SETTLER_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
                 player(Civ.NORWAY).initUnit(
-                    xml.iGalley,
+                    Unit.GALLEY.value,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_ESCORT_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
                 player(Civ.NORWAY).initUnit(
-                    xml.iGalley,
+                    Unit.GALLEY.value,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_ESCORT_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
-                utils.makeUnit(xml.iSettler, iCiv, tSeaPlot, 1)
-                utils.makeUnit(xml.iArcher, iCiv, tSeaPlot, 1)
+                utils.makeUnit(Unit.SETTLER.value, iCiv, tSeaPlot, 1)
+                utils.makeUnit(Unit.ARCHER.value, iCiv, tSeaPlot, 1)
         elif iCiv == Civ.KIEV.value:
-            utils.makeUnit(xml.iArcher, iCiv, tPlot, 4)
-            utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
-            utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 3)
+            utils.makeUnit(Unit.ARCHER.value, iCiv, tPlot, 4)
+            utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 3)
+            utils.makeUnit(Unit.AXEMAN.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.HORSE_ARCHER.value, iCiv, tPlot, 3)
             # additional units for the AI
             if iCiv != iHuman:
-                utils.makeUnit(xml.iArcher, iCiv, tPlot, 3)
-                utils.makeUnit(xml.iSpearman, iCiv, tPlot, 3)
-                utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.ARCHER.value, iCiv, tPlot, 3)
+                utils.makeUnit(Unit.SPEARMAN.value, iCiv, tPlot, 3)
+                utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 2)
         elif iCiv == Civ.HUNGARY.value:
-            utils.makeUnit(xml.iArcher, iCiv, tPlot, 4)
-            utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
-            utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 4)
+            utils.makeUnit(Unit.ARCHER.value, iCiv, tPlot, 4)
+            utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 3)
+            utils.makeUnit(Unit.AXEMAN.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.HORSE_ARCHER.value, iCiv, tPlot, 4)
             # additional units for the AI
             if iCiv != iHuman:
-                utils.makeUnit(xml.iArcher, iCiv, tPlot, 2)
-                utils.makeUnit(xml.iSpearman, iCiv, tPlot, 2)
-                utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.ARCHER.value, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.SPEARMAN.value, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 1)
         elif iCiv == Civ.CASTILLE.value:
-            utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 4)
-            utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
-            utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iLancer, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iCatapult, iCiv, tPlot, 1)
+            utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tPlot, 4)
+            utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 3)
+            utils.makeUnit(Unit.CATHOLIC_MISSIONARY.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.SWORDSMAN.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.LANCER.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.CATAPULT.value, iCiv, tPlot, 1)
             # additional units for the AI
             if iCiv != iHuman:
-                utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 1)
-                utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 2)
-                utils.makeUnit(xml.iLancer, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.SWORDSMAN.value, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.LANCER.value, iCiv, tPlot, 2)
         elif iCiv == Civ.DENMARK.value:
-            utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iDenmarkHuskarl, iCiv, tPlot, 4)
+            utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.DENMARK_HUSKARL.value, iCiv, tPlot, 4)
             tSeaPlot = self.findSeaPlots((60, 57), 2)
             if tSeaPlot:
                 player(Civ.DENMARK).initUnit(
-                    xml.iGalley,
+                    Unit.GALLEY.value,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_SETTLER_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
                 player(Civ.DENMARK).initUnit(
-                    xml.iGalley,
+                    Unit.GALLEY.value,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_SETTLER_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
                 player(Civ.DENMARK).initUnit(
-                    xml.iGalley,
+                    Unit.GALLEY.value,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_ESCORT_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
-                utils.makeUnit(xml.iSettler, iCiv, tSeaPlot, 1)
-                utils.makeUnit(xml.iCrossbowman, iCiv, tSeaPlot, 1)
-                utils.makeUnit(xml.iSettler, iCiv, tSeaPlot, 1)
-                utils.makeUnit(xml.iCrossbowman, iCiv, tSeaPlot, 1)
+                utils.makeUnit(Unit.SETTLER.value, iCiv, tSeaPlot, 1)
+                utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tSeaPlot, 1)
+                utils.makeUnit(Unit.SETTLER.value, iCiv, tSeaPlot, 1)
+                utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tSeaPlot, 1)
         elif iCiv == Civ.SCOTLAND.value:
-            utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
-            utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tPlot, 3)
+            utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.SWORDSMAN.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.CATHOLIC_MISSIONARY.value, iCiv, tPlot, 2)
         elif iCiv == Civ.POLAND.value:
-            utils.makeUnit(xml.iArcher, iCiv, tPlot, 4)
-            utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
-            utils.makeUnit(xml.iAxeman, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.ARCHER.value, iCiv, tPlot, 4)
+            utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 3)
+            utils.makeUnit(Unit.AXEMAN.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.SWORDSMAN.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.CATHOLIC_MISSIONARY.value, iCiv, tPlot, 2)
             # additional units for the AI
             if iCiv != iHuman:
-                utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 4)
-                utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tPlot, 4)
+                utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 1)
         elif iCiv == Civ.GENOA.value:
-            utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 4)
-            utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 1)
+            utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.SWORDSMAN.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tPlot, 4)
+            utils.makeUnit(Unit.CATHOLIC_MISSIONARY.value, iCiv, tPlot, 1)
             tSeaPlot = self.findSeaPlots(tPlot, 2)
             if tSeaPlot:
                 player(Civ.GENOA).initUnit(
-                    xml.iWarGalley,
+                    Unit.WAR_GALLEY.value,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_ESCORT_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
                 player(Civ.GENOA).initUnit(
-                    xml.iGalley,
+                    Unit.GALLEY.value,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_SETTLER_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
-                utils.makeUnit(xml.iSettler, iCiv, tSeaPlot, 1)
-                utils.makeUnit(xml.iCrossbowman, iCiv, tSeaPlot, 1)
-                utils.makeUnit(xml.iWorkboat, iCiv, tSeaPlot, 1)
+                utils.makeUnit(Unit.SETTLER.value, iCiv, tSeaPlot, 1)
+                utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tSeaPlot, 1)
+                utils.makeUnit(Unit.WORKBOAT.value, iCiv, tSeaPlot, 1)
         elif iCiv == Civ.MOROCCO.value:
-            utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iMaceman, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 4)
-            utils.makeUnit(xml.iIslamicMissionary, iCiv, tPlot, 1)
+            utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.MACEMAN.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tPlot, 4)
+            utils.makeUnit(Unit.ISLAMIC_MISSIONARY.value, iCiv, tPlot, 1)
             # additional units for the AI
             if iCiv != iHuman:
-                utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
-                utils.makeUnit(xml.iIslamicMissionary, iCiv, tPlot, 2)
-                utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.ISLAMIC_MISSIONARY.value, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 1)
         elif iCiv == Civ.ENGLAND.value:
-            utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
-            utils.makeUnit(xml.iLongSwordsman, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 4)
-            utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 3)
+            utils.makeUnit(Unit.LONG_SWORDSMAN.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tPlot, 4)
+            utils.makeUnit(Unit.CATHOLIC_MISSIONARY.value, iCiv, tPlot, 2)
             tSeaPlot = self.findSeaPlots((43, 53), 1)
             if tSeaPlot:
                 player(Civ.ENGLAND).initUnit(
-                    xml.iGalley,
+                    Unit.GALLEY.value,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_SETTLER_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
                 player(Civ.ENGLAND).initUnit(
-                    xml.iWarGalley,
+                    Unit.WAR_GALLEY.value,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_ESCORT_SEA,
@@ -2932,148 +2933,148 @@ class RiseAndFall:
                 )
             # additional units for the AI
             if iCiv != iHuman:
-                utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
-                utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 1)
-                utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
-                utils.makeUnit(xml.iLongSwordsman, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.CATHOLIC_MISSIONARY.value, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.LONG_SWORDSMAN.value, iCiv, tPlot, 2)
         elif iCiv == Civ.PORTUGAL.value:
-            utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iPortugalFootKnight, iCiv, tPlot, 4)
-            utils.makeUnit(xml.iTrebuchet, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iGuisarme, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 1)
+            utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.PORTUGAL_FOOT_KNIGHT.value, iCiv, tPlot, 4)
+            utils.makeUnit(Unit.TREBUCHET.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.GUISARME.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.CATHOLIC_MISSIONARY.value, iCiv, tPlot, 1)
         elif iCiv == Civ.ARAGON.value:
-            utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
-            utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iAragonAlmogavar, iCiv, tPlot, 5)
-            utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tPlot, 3)
+            utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.ARAGON_ALMOGAVAR.value, iCiv, tPlot, 5)
+            utils.makeUnit(Unit.CATHOLIC_MISSIONARY.value, iCiv, tPlot, 2)
             # Look for a sea plot close to the coast
             tSeaPlot = self.findSeaPlots((42, 29), 1)
             if tSeaPlot:
                 player(Civ.ARAGON).initUnit(
-                    xml.iWarGalley,
+                    Unit.WAR_GALLEY.value,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_ESCORT_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
                 player(Civ.ARAGON).initUnit(
-                    xml.iWarGalley,
+                    Unit.WAR_GALLEY.value,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_ESCORT_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
                 player(Civ.ARAGON).initUnit(
-                    xml.iCogge,
+                    Unit.COGGE.value,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_SETTLER_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
-                utils.makeUnit(xml.iSettler, iCiv, tSeaPlot, 1)
-                utils.makeUnit(xml.iCrossbowman, iCiv, tSeaPlot, 1)
-                utils.makeUnit(xml.iWorkboat, iCiv, tSeaPlot, 1)
+                utils.makeUnit(Unit.SETTLER.value, iCiv, tSeaPlot, 1)
+                utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tSeaPlot, 1)
+                utils.makeUnit(Unit.WORKBOAT.value, iCiv, tSeaPlot, 1)
         elif iCiv == Civ.SWEDEN.value:
-            utils.makeUnit(xml.iLongSwordsman, iCiv, tPlot, 3)
-            utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 1)
-            utils.makeUnit(xml.iKnight, iCiv, tPlot, 1)
-            utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
-            utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iArbalest, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.LONG_SWORDSMAN.value, iCiv, tPlot, 3)
+            utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 1)
+            utils.makeUnit(Unit.KNIGHT.value, iCiv, tPlot, 1)
+            utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 3)
+            utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.ARBALEST.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.CATHOLIC_MISSIONARY.value, iCiv, tPlot, 2)
             tSeaPlot = self.findSeaPlots((69, 65), 2)
             if tSeaPlot:
-                utils.makeUnit(xml.iWorkboat, iCiv, tSeaPlot, 1)
+                utils.makeUnit(Unit.WORKBOAT.value, iCiv, tSeaPlot, 1)
                 player(Civ.SWEDEN).initUnit(
-                    xml.iWarGalley,
+                    Unit.WAR_GALLEY.value,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_ESCORT_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
                 player(Civ.SWEDEN).initUnit(
-                    xml.iCogge,
+                    Unit.COGGE.value,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_SETTLER_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
                 player(Civ.SWEDEN).initUnit(
-                    xml.iCogge,
+                    Unit.COGGE.value,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_SETTLER_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
-                utils.makeUnit(xml.iSettler, iCiv, tSeaPlot, 1)
-                utils.makeUnit(xml.iArbalest, iCiv, tSeaPlot, 1)
+                utils.makeUnit(Unit.SETTLER.value, iCiv, tSeaPlot, 1)
+                utils.makeUnit(Unit.ARBALEST.value, iCiv, tSeaPlot, 1)
         elif iCiv == Civ.PRUSSIA.value:
-            utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
-            utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tPlot, 3)
+            utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 2)
             utils.makeUnit(
-                xml.iTeutonic, iCiv, tPlot, 3
+                Unit.TEUTONIC.value, iCiv, tPlot, 3
             )  # at least one will probably leave for Crusade
-            utils.makeUnit(xml.iGuisarme, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iTrebuchet, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 3)
+            utils.makeUnit(Unit.GUISARME.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.TREBUCHET.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.CATHOLIC_MISSIONARY.value, iCiv, tPlot, 3)
         elif iCiv == Civ.LITHUANIA.value:
-            utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 4)
-            utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
-            utils.makeUnit(xml.iLithuanianBajoras, iCiv, tPlot, 5)
-            utils.makeUnit(xml.iGuisarme, iCiv, tPlot, 3)
+            utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tPlot, 4)
+            utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 3)
+            utils.makeUnit(Unit.LITHUANIAN_BAJORAS.value, iCiv, tPlot, 5)
+            utils.makeUnit(Unit.GUISARME.value, iCiv, tPlot, 3)
         elif iCiv == Civ.AUSTRIA.value:
-            utils.makeUnit(xml.iArbalest, iCiv, tPlot, 4)
-            utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iMaceman, iCiv, tPlot, 3)
-            utils.makeUnit(xml.iHeavyLancer, iCiv, tPlot, 3)
-            utils.makeUnit(xml.iCrossbowman, iCiv, tPlot, 3)
-            utils.makeUnit(xml.iKnight, iCiv, tPlot, 4)
-            utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.ARBALEST.value, iCiv, tPlot, 4)
+            utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.MACEMAN.value, iCiv, tPlot, 3)
+            utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 3)
+            utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tPlot, 3)
+            utils.makeUnit(Unit.KNIGHT.value, iCiv, tPlot, 4)
+            utils.makeUnit(Unit.CATHOLIC_MISSIONARY.value, iCiv, tPlot, 2)
         elif iCiv == Civ.OTTOMAN.value:
-            utils.makeUnit(xml.iLongbowman, iCiv, tPlot, 5)
-            utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
-            utils.makeUnit(xml.iMaceman, iCiv, tPlot, 4)
-            utils.makeUnit(xml.iKnight, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 4)
-            utils.makeUnit(xml.iTrebuchet, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iTurkeyGreatBombard, iCiv, tPlot, 3)
-            utils.makeUnit(xml.iIslamicMissionary, iCiv, tPlot, 4)
+            utils.makeUnit(Unit.LONGBOWMAN.value, iCiv, tPlot, 5)
+            utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 3)
+            utils.makeUnit(Unit.MACEMAN.value, iCiv, tPlot, 4)
+            utils.makeUnit(Unit.KNIGHT.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.HORSE_ARCHER.value, iCiv, tPlot, 4)
+            utils.makeUnit(Unit.TREBUCHET.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.TURKEY_GREAT_BOMBARD.value, iCiv, tPlot, 3)
+            utils.makeUnit(Unit.ISLAMIC_MISSIONARY.value, iCiv, tPlot, 4)
             # additional units for the AI
             if iCiv != iHuman:
-                utils.makeUnit(xml.iKnight, iCiv, tPlot, 2)
-                utils.makeUnit(xml.iHorseArcher, iCiv, tPlot, 2)
-                utils.makeUnit(xml.iLongbowman, iCiv, tPlot, 3)
+                utils.makeUnit(Unit.KNIGHT.value, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.HORSE_ARCHER.value, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.LONGBOWMAN.value, iCiv, tPlot, 3)
         elif iCiv == Civ.MOSCOW.value:
-            utils.makeUnit(xml.iArbalest, iCiv, tPlot, 5)
-            utils.makeUnit(xml.iSettler, iCiv, tPlot, 3)
-            utils.makeUnit(xml.iMoscowBoyar, iCiv, tPlot, 5)
-            utils.makeUnit(xml.iGuisarme, iCiv, tPlot, 4)
-            utils.makeUnit(xml.iMaceman, iCiv, tPlot, 3)
-            utils.makeUnit(xml.iOrthodoxMissionary, iCiv, tPlot, 3)
+            utils.makeUnit(Unit.ARBALEST.value, iCiv, tPlot, 5)
+            utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 3)
+            utils.makeUnit(Unit.MOSCOW_BOYAR.value, iCiv, tPlot, 5)
+            utils.makeUnit(Unit.GUISARME.value, iCiv, tPlot, 4)
+            utils.makeUnit(Unit.MACEMAN.value, iCiv, tPlot, 3)
+            utils.makeUnit(Unit.ORTHODOX_MISSIONARY.value, iCiv, tPlot, 3)
             # additional units for the AI
             if iCiv != iHuman:
-                utils.makeUnit(xml.iMaceman, iCiv, tPlot, 2)
-                utils.makeUnit(xml.iSettler, iCiv, tPlot, 1)
-                utils.makeUnit(xml.iOrthodoxMissionary, iCiv, tPlot, 1)
-                utils.makeUnit(xml.iArbalest, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.MACEMAN.value, iCiv, tPlot, 2)
+                utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.ORTHODOX_MISSIONARY.value, iCiv, tPlot, 1)
+                utils.makeUnit(Unit.ARBALEST.value, iCiv, tPlot, 2)
         elif iCiv == Civ.DUTCH.value:
-            utils.makeUnit(xml.iSettler, iCiv, tPlot, 2)
-            utils.makeUnit(xml.iMusketman, iCiv, tPlot, 8)
-            utils.makeUnit(xml.iMaceman, iCiv, tPlot, 3)
-            utils.makeUnit(xml.iProtestantMissionary, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 2)
+            utils.makeUnit(Unit.MUSKETMAN.value, iCiv, tPlot, 8)
+            utils.makeUnit(Unit.MACEMAN.value, iCiv, tPlot, 3)
+            utils.makeUnit(Unit.PROTESTANT_MISSIONARY.value, iCiv, tPlot, 2)
             tSeaPlot = self.findSeaPlots(tPlot, 2)
             if tSeaPlot:
-                utils.makeUnit(xml.iWorkboat, iCiv, tSeaPlot, 2)
-                utils.makeUnit(xml.iGalleon, iCiv, tSeaPlot, 2)
+                utils.makeUnit(Unit.WORKBOAT.value, iCiv, tSeaPlot, 2)
+                utils.makeUnit(Unit.GALLEON.value, iCiv, tSeaPlot, 2)
 
         self.showArea(iCiv)
         self.initContact(iCiv)
 
     def createStartingWorkers(self, iCiv, tPlot):
         utils.makeUnit(
-            xml.iWorker,
+            Unit.WORKER.value,
             iCiv,
             tPlot,
             civilizations()[iCiv].initial.condition.workers,
@@ -3113,26 +3114,39 @@ class RiseAndFall:
             elif iHuman == Civ.OTTOMAN:  # contact with Byzantium
                 tStart = (98, 18)
 
-            utils.makeUnit(xml.iSettler, iHuman, tStart, 1)
-            utils.makeUnit(xml.iMaceman, iHuman, tStart, 1)
+            utils.makeUnit(Unit.SETTLER.value, iHuman, tStart, 1)
+            utils.makeUnit(Unit.MACEMAN.value, iHuman, tStart, 1)
 
     def ottomanInvasion(self, iCiv, tPlot):
-        utils.makeUnit(xml.iLongbowman, iCiv, tPlot, 2)
-        utils.makeUnit(xml.iMaceman, iCiv, tPlot, 2)
-        utils.makeUnit(xml.iKnight, iCiv, tPlot, 3)
-        utils.makeUnit(xml.iTurkeyGreatBombard, iCiv, tPlot, 2)
-        utils.makeUnit(xml.iIslamicMissionary, iCiv, tPlot, 2)
+        utils.makeUnit(Unit.LONGBOWMAN.value, iCiv, tPlot, 2)
+        utils.makeUnit(Unit.MACEMAN.value, iCiv, tPlot, 2)
+        utils.makeUnit(Unit.KNIGHT.value, iCiv, tPlot, 3)
+        utils.makeUnit(Unit.TURKEY_GREAT_BOMBARD.value, iCiv, tPlot, 2)
+        utils.makeUnit(Unit.ISLAMIC_MISSIONARY.value, iCiv, tPlot, 2)
 
     def create500ADstartingUnits(self):
         # 3Miro: units on start (note Spearman might become an upgraded defender, tech dependent)
 
-        utils.makeUnit(xml.iSettler, Civ.FRANCE, CIV_CAPITAL_LOCATIONS[Civ.FRANCE].to_tuple(), 3)
-        utils.makeUnit(xml.iArcher, Civ.FRANCE, CIV_CAPITAL_LOCATIONS[Civ.FRANCE].to_tuple(), 4)
-        utils.makeUnit(xml.iAxeman, Civ.FRANCE, CIV_CAPITAL_LOCATIONS[Civ.FRANCE].to_tuple(), 5)
-        utils.makeUnit(xml.iScout, Civ.FRANCE, CIV_CAPITAL_LOCATIONS[Civ.FRANCE].to_tuple(), 1)
-        utils.makeUnit(xml.iWorker, Civ.FRANCE, CIV_CAPITAL_LOCATIONS[Civ.FRANCE].to_tuple(), 2)
         utils.makeUnit(
-            xml.iCatholicMissionary, Civ.FRANCE, CIV_CAPITAL_LOCATIONS[Civ.FRANCE].to_tuple(), 2
+            Unit.SETTLER.value, Civ.FRANCE, CIV_CAPITAL_LOCATIONS[Civ.FRANCE].to_tuple(), 3
+        )
+        utils.makeUnit(
+            Unit.ARCHER.value, Civ.FRANCE, CIV_CAPITAL_LOCATIONS[Civ.FRANCE].to_tuple(), 4
+        )
+        utils.makeUnit(
+            Unit.AXEMAN.value, Civ.FRANCE, CIV_CAPITAL_LOCATIONS[Civ.FRANCE].to_tuple(), 5
+        )
+        utils.makeUnit(
+            Unit.SCOUT.value, Civ.FRANCE, CIV_CAPITAL_LOCATIONS[Civ.FRANCE].to_tuple(), 1
+        )
+        utils.makeUnit(
+            Unit.WORKER.value, Civ.FRANCE, CIV_CAPITAL_LOCATIONS[Civ.FRANCE].to_tuple(), 2
+        )
+        utils.makeUnit(
+            Unit.CATHOLIC_MISSIONARY.value,
+            Civ.FRANCE,
+            CIV_CAPITAL_LOCATIONS[Civ.FRANCE].to_tuple(),
+            2,
         )
 
         self.showArea(Civ.BYZANTIUM.value)
@@ -3160,8 +3174,8 @@ class RiseAndFall:
             elif iHuman == Civ.OTTOMAN.value:  # contact with Byzantium
                 tStart = (97, 23)
 
-            utils.makeUnit(xml.iSettler, iHuman, tStart, 1)
-            utils.makeUnit(xml.iSpearman, iHuman, tStart, 1)
+            utils.makeUnit(Unit.SETTLER.value, iHuman, tStart, 1)
+            utils.makeUnit(Unit.SPEARMAN.value, iHuman, tStart, 1)
 
     def assign1200ADtechs(self, iCiv):
         # As a temporary solution, everyone gets Aragon's starting techs
