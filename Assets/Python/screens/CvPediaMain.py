@@ -12,8 +12,6 @@ import PyHelpers
 import string
 import CvUtil
 
-import XMLConsts as xml
-
 import CvScreenEnums
 import CvPediaScreen  # base class
 import CvPediaTech
@@ -34,7 +32,7 @@ import CvPediaProject
 import CvPediaReligion
 import CvPediaCorporation
 
-# import UnitUpgradesGraph	  #[MOD] UnitUpgrades  #Rhye
+from CoreTypes import Leader
 
 # globals
 gc = CyGlobalContext()
@@ -505,7 +503,7 @@ class CvPediaMain(CvPediaScreen.CvPediaScreen):
     def placeLeaders(self):
 
         tList = self.getSortedList(gc.getNumLeaderHeadInfos(), gc.getLeaderHeadInfo)
-        tList.pop(xml.iLeaderBarbarian)
+        tList.pop(Leader.BARBARIAN.value)
         self.displayTopics(tList, WidgetTypes.WIDGET_PEDIA_JUMP_TO_LEADER, gc.getLeaderHeadInfo)
 
     def placeReligions(self):
