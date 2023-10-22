@@ -1,4 +1,3 @@
-from CoreFunctions import get_civ_by_id
 import CoreTypes
 from BaseStructures import BaseFactory, EnumDataMapper, Item, ItemCollection
 from Errors import NotTypeExpectedError
@@ -251,33 +250,6 @@ def team(identifier=None):
 
     raise NotTypeExpectedError(
         "CoreTypes.Civ, CyPlayer, CyTeam, CyPlot, CyCity, CyUnit, or int", type(identifier)
-    )
-
-
-def civilization(identifier=None):
-    """Return Civilization object given an identifier."""
-    if identifier is None:
-        return Civilization(get_civ_by_id(gc.getGame().getActiveCivilizationType()))
-
-    if isinstance(identifier, int):
-        return Civilization(get_civ_by_id(identifier))
-
-    if isinstance(identifier, CoreTypes.Civ):
-        return Civilization(identifier)
-
-    if isinstance(identifier, Civilization):
-        return identifier
-
-    if isinstance(identifier, (CyPlayer, CyUnit)):
-        return Civilization(get_civ_by_id(identifier.getCivilizationType()))
-
-    if isinstance(identifier, CyPlot):
-        if not identifier.isOwned():
-            return None
-        return civilization(identifier.getOwner())
-
-    raise NotTypeExpectedError(
-        "CoreTypes.Civ, Civilization, CyPlayer, CyPlot or CyUnit, or int", type(identifier)
     )
 
 

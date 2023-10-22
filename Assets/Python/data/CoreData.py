@@ -11,8 +11,10 @@ from CivilizationsData import (
     CIV_STABILITY_AI_BONUS,
     CIV_INITIAL_CONDITION,
 )
-from CoreStructures import CivilizationsFactory, CompaniesFactory
-from CoreTypes import Scenario
+from CoreFunctions import get_civ_by_id
+from CoreStructures import Civilization, CivilizationsFactory, CompaniesFactory
+from CoreTypes import Scenario, Civ
+from Errors import NotTypeExpectedError
 from LocationsData import (
     CIV_AREAS,
     CIV_CAPITAL_LOCATIONS,
@@ -33,6 +35,13 @@ from TimelineData import (
     COMPANY_DEATHDATE,
 )
 
+try:
+    from CvPythonExtensions import CyGlobalContext, CyPlayer, CyPlot, CyUnit
+
+    gc = CyGlobalContext()
+
+except ImportError:
+    gc = None
 
 COMPANIES = (
     CompaniesFactory()
@@ -93,3 +102,30 @@ def civilizations(scenario=None):
         Scenario.i1200AD: CIVILIZATIONS_1200AD,
     }
     return data_mapper[scenario]
+
+
+def civilization(identifier=None):
+    """Return Civilization object given an identifier."""
+    if identifier is None:
+        return civilizations()[get_civ_by_id(gc.getGame().getActiveCivilizationType())]
+
+    if isinstance(identifier, int):
+        return civilizations()[identifier]
+
+    if isinstance(identifier, Civ):
+        return civilizations()[identifier]
+
+    if isinstance(identifier, Civilization):
+        return civilizations()[identifier.id]
+
+    if isinstance(identifier, (CyPlayer, CyUnit)):
+        return civilizations()[get_civ_by_id(identifier.getCivilizationType())]
+
+    if isinstance(identifier, CyPlot):
+        if not identifier.isOwned():
+            return None
+        return civilizations()[identifier.getOwner()]
+
+    raise NotTypeExpectedError(
+        "CoreTypes.Civ, Civilization, CyPlayer, CyPlot or CyUnit, or int", type(identifier)
+    )

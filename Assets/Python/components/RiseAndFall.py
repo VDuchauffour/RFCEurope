@@ -1,6 +1,6 @@
 from CvPythonExtensions import *
-from CoreData import civilizations
-from CoreStructures import team, civilization
+from CoreData import civilization, civilizations
+from CoreStructures import team
 import PyHelpers  # LOQ
 import Popup
 from PyUtils import percentage_chance
@@ -3623,7 +3623,7 @@ class RiseAndFall:
         if contacts:
             for contact in contacts:
                 other = civilization(contact)
-                if other.player.isAlive() and not civ.isHasMet(other.teamtype):
+                if other.is_alive() and not civ.isHasMet(other.teamtype):
                     civ.meet(other.teamtype, bMeet)
 
     def LeaningTowerGP(self):
