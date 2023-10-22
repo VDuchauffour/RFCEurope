@@ -15,6 +15,7 @@ from CoreTypes import (
     Improvement,
     Technology,
     Unit,
+    Bonus,
 )
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
 import PyHelpers
@@ -959,24 +960,24 @@ class Victory:
 
     def getOwnedLuxes(self, pPlayer):
         lBonus = [
-            xml.iSheep,
-            xml.iDye,
-            xml.iFur,
-            xml.iGems,
-            xml.iGold,
-            xml.iIncense,
-            xml.iIvory,
-            xml.iSilk,
-            xml.iSilver,
-            xml.iSpices,
-            xml.iWine,
-            xml.iHoney,
-            xml.iWhale,
-            xml.iAmber,
-            xml.iCotton,
-            xml.iCoffee,
-            xml.iTea,
-            xml.iTobacco,
+            Bonus.SHEEP.value,
+            Bonus.DYE.value,
+            Bonus.FUR.value,
+            Bonus.GEMS.value,
+            Bonus.GOLD.value,
+            Bonus.INCENSE.value,
+            Bonus.IVORY.value,
+            Bonus.SILK.value,
+            Bonus.SILVER.value,
+            Bonus.SPICES.value,
+            Bonus.WINE.value,
+            Bonus.HONEY.value,
+            Bonus.WHALE.value,
+            Bonus.AMBER.value,
+            Bonus.COTTON.value,
+            Bonus.COFFEE.value,
+            Bonus.TEA.value,
+            Bonus.TOBACCO.value,
         ]
         iCount = 0
         for iBonus in lBonus:
@@ -985,8 +986,8 @@ class Victory:
 
     def getOwnedGrain(self, pPlayer):
         iCount = 0
-        iCount += pPlayer.countOwnedBonuses(xml.iWheat)
-        iCount += pPlayer.countOwnedBonuses(xml.iBarley)
+        iCount += pPlayer.countOwnedBonuses(Bonus.WHEAT.value)
+        iCount += pPlayer.countOwnedBonuses(Bonus.BARLEY.value)
         return iCount
 
     def isProjectAColony(self, iProject):
@@ -1332,7 +1333,7 @@ class Victory:
 
         # UHV 2: Control eleven sources of fur by 1397
         if self.isPossibleUHV(Civ.NOVGOROD.value, 1, True):
-            if player(Civ.NOVGOROD).countCultBorderBonuses(xml.iFur) >= 11:
+            if player(Civ.NOVGOROD).countCultBorderBonuses(Bonus.FUR.value) >= 11:
                 self.wonUHV(Civ.NOVGOROD.value, 1)
         if iGameTurn == DateTurn.i1397AD:
             self.expireUHV(Civ.NOVGOROD.value, 1)
@@ -1951,7 +1952,7 @@ class Victory:
 
         # UHV 3: Get into warm waters (Conquer Constantinople or control an Atlantic Access resource)
         if self.isPossibleUHV(Civ.MOSCOW.value, 2, True):
-            if player(Civ.MOSCOW).countCultBorderBonuses(xml.iAccess) > 0:
+            if player(Civ.MOSCOW).countCultBorderBonuses(Bonus.ACCESS.value) > 0:
                 self.wonUHV(Civ.MOSCOW.value, 2)
             elif (
                 gc.getMap()

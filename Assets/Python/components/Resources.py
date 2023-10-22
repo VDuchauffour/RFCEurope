@@ -3,11 +3,10 @@
 
 from CvPythonExtensions import *
 import PyHelpers
-import XMLConsts as xml
 
 from MiscData import MessageData
 from TimelineData import DateTurn
-from CoreTypes import Improvement
+from CoreTypes import Improvement, Bonus
 
 # globals
 gc = CyGlobalContext()
@@ -78,10 +77,10 @@ class Resources:
             # 			for now only adding the ones we actually use
             # 			Pasture, Camp and Colonial Trade Route cannot be built on base terrain (only with resource), so it is always safe to remove those
             # 			the question is whether we should also remove Farms and Lumbermills for example
-            if iBonusType == xml.iHorse and iImprovementType == Improvement.PASTURE.value:
+            if iBonusType == Bonus.HORSE.value and iImprovementType == Improvement.PASTURE.value:
                 gc.getMap().plot(iX, iY).setImprovementType(-1)
             elif (
-                iBonusType == xml.iNorthAccess
+                iBonusType == Bonus.NORTH_ACCESS.value
                 and iImprovementType == Improvement.COLONIAL_TRADE.value
             ):
                 gc.getMap().plot(iX, iY).setImprovementType(-1)
@@ -89,27 +88,27 @@ class Resources:
     def checkTurn(self, iGameTurn):
         # Absinthe: note that all actions are taken place in the end of the turn, so actually the resources will appear/disappear for the next turn
         if iGameTurn == DateTurn.i552AD:
-            self.createResource(80, 24, xml.iSilk)  # Silk near Constantinople
+            self.createResource(80, 24, Bonus.SILK.value)  # Silk near Constantinople
         elif iGameTurn == DateTurn.i1000AD:
-            self.createResource(36, 24, xml.iRice)  # Rice in Iberia
-            self.createResource(86, 2, xml.iRice)  # Rice in the Middle East
+            self.createResource(36, 24, Bonus.RICE.value)  # Rice in Iberia
+            self.createResource(86, 2, Bonus.RICE.value)  # Rice in the Middle East
         elif iGameTurn == (DateTurn.i1066AD + 1):
             self.removeResource(2, 69)  # Remove the NAA from Iceland
         elif iGameTurn == DateTurn.i1452AD:  # Coffee spawns instead of being preplaced
-            self.createResource(93, 0, xml.iCoffee)  # near Sinai
-            self.createResource(99, 13, xml.iCoffee)  # between Damascus and Edessa
+            self.createResource(93, 0, Bonus.COFFEE.value)  # near Sinai
+            self.createResource(99, 13, Bonus.COFFEE.value)  # between Damascus and Edessa
         elif iGameTurn == DateTurn.i1500AD:
             self.createResource(
-                55, 35, xml.iRice
+                55, 35, Bonus.RICE.value
             )  # Rice in Italy - represents trade of the merchant republics
         elif iGameTurn == DateTurn.i1580AD:
-            self.createResource(32, 59, xml.iPotato)  # Potatoes in Ireland
-            self.createResource(29, 57, xml.iPotato)
-            self.createResource(69, 49, xml.iPotato)  # Poland
-            self.createResource(66, 46, xml.iPotato)
-            self.createResource(60, 48, xml.iPotato)  # Northern Germany
-            self.createResource(55, 52, xml.iPotato)
-            self.createResource(59, 61, xml.iAccess)  # Atlantic Access in Scandinavia
+            self.createResource(32, 59, Bonus.POTATO.value)  # Potatoes in Ireland
+            self.createResource(29, 57, Bonus.POTATO.value)
+            self.createResource(69, 49, Bonus.POTATO.value)  # Poland
+            self.createResource(66, 46, Bonus.POTATO.value)
+            self.createResource(60, 48, Bonus.POTATO.value)  # Northern Germany
+            self.createResource(55, 52, Bonus.POTATO.value)
+            self.createResource(59, 61, Bonus.ACCESS.value)  # Atlantic Access in Scandinavia
 
     def onTechAcquired(self, iTech, iPlayer):
         pass

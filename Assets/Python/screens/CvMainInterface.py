@@ -2,13 +2,12 @@
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
 from CoreData import civilizations
-from CoreTypes import Civ, SpecialParameter, Religion, Technology
+from CoreTypes import Civ, SpecialParameter, Religion, Technology, Bonus
 import CvUtil
 import CvScreenEnums
 
 from TimelineData import DateTurn
 
-import XMLConsts as xml
 import RFCUtils  # Rhye
 
 # < Mercenaries Start >
@@ -3933,7 +3932,7 @@ class CvMainInterface:
                         screen.hide("UHVText")
 
                 elif ePlayer == Civ.NOVGOROD.value:
-                    iNovgorodFurs = pPlayer.countCultBorderBonuses(xml.iFur)
+                    iNovgorodFurs = pPlayer.countCultBorderBonuses(Bonus.FUR.value)
                     # Absinthe: only display UHV counter until the UHV date
                     if not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (
                         DateTurn.i1397AD + 2

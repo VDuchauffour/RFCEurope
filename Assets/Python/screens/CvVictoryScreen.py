@@ -12,6 +12,7 @@ from CoreTypes import (
     Religion,
     Specialist,
     Improvement,
+    Bonus,
 )
 import CvUtil
 from LocationsData import CITIES
@@ -2605,7 +2606,7 @@ class CvVictoryScreen:
             + u"</color>"
             + u"<font=1>\n\n</font>"
         )
-        iNumFurs = pPlayer.countCultBorderBonuses(xml.iFur)
+        iNumFurs = pPlayer.countCultBorderBonuses(Bonus.FUR.value)
         sText2 += self.getCounterString(iNumFurs, 11)
         # UHV3
         sText3 += self.ConquerOrVassal([[Civ.MOSCOW.value, xml.iP_Moscow]])
@@ -3218,7 +3219,7 @@ class CvVictoryScreen:
             + u"<font=1>\n\n</font>"
         )
         bColor = False
-        iNumAccess = pPlayer.countCultBorderBonuses(xml.iAccess)
+        iNumAccess = pPlayer.countCultBorderBonuses(Bonus.ACCESS.value)
         tConstantinople = civilizations()[Civ.BYZANTIUM].location.capital.to_tuple()
         iConstantinopleOwner = (
             gc.getMap().plot(tConstantinople[0], tConstantinople[1]).getPlotCity().getOwner()

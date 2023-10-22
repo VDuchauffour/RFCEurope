@@ -24,7 +24,7 @@ import RFCEBalance
 import random
 from MiscData import WORLD_HEIGHT, MessageData
 from CoreData import civilizations
-from CoreTypes import Wonder, Promotion, Project, Improvement, Feature, Unit
+from CoreTypes import Wonder, Promotion, Project, Improvement, Feature, Unit, Bonus
 
 utils = RFCUtils.RFCUtils()
 balance = RFCEBalance.RFCEBalance()
@@ -636,7 +636,7 @@ class CvEventManager:
                 or iFeatureType == Feature.PALMFOREST.value
             ):
                 iBonusType = pPlot.getBonusType(-1)
-                if iBonusType in [xml.iTimber, xml.iDeer, xml.iFur]:
+                if iBonusType in [Bonus.TIMBER.value, Bonus.DEER.value, Bonus.FUR.value]:
                     pPlot.setBonusType(-1)
                     # also remove corresponding improvements
                     iImprovementType = pPlot.getImprovementType()
