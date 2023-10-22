@@ -1,6 +1,6 @@
 from CvPythonExtensions import *
 from CoreData import civilization, civilizations
-from CoreStructures import team
+from CoreStructures import player, team
 import PyHelpers  # LOQ
 import Popup
 from PyUtils import percentage_chance
@@ -42,85 +42,6 @@ iBetrayalPeriod = 8
 iBetrayalThreshold = 66
 iRebellionDelay = 15
 iEscapePeriod = 30
-
-
-pBurgundy = gc.getPlayer(Civ.BURGUNDY.value)
-pByzantium = gc.getPlayer(Civ.BYZANTIUM.value)
-pFrankia = gc.getPlayer(Civ.FRANCE.value)
-pArabia = gc.getPlayer(Civ.ARABIA.value)
-pBulgaria = gc.getPlayer(Civ.BULGARIA.value)
-pCordoba = gc.getPlayer(Civ.CORDOBA.value)
-pSpain = gc.getPlayer(Civ.CASTILLE.value)
-pNorway = gc.getPlayer(Civ.NORWAY.value)
-pDenmark = gc.getPlayer(Civ.DENMARK.value)
-pVenecia = gc.getPlayer(Civ.VENECIA.value)
-pNovgorod = gc.getPlayer(Civ.NOVGOROD.value)
-pKiev = gc.getPlayer(Civ.KIEV.value)
-pHungary = gc.getPlayer(Civ.HUNGARY.value)
-pGermany = gc.getPlayer(Civ.GERMANY.value)
-pScotland = gc.getPlayer(Civ.SCOTLAND.value)
-pPoland = gc.getPlayer(Civ.POLAND.value)
-pMoscow = gc.getPlayer(Civ.MOSCOW.value)
-pGenoa = gc.getPlayer(Civ.GENOA.value)
-pMorocco = gc.getPlayer(Civ.MOROCCO.value)
-pEngland = gc.getPlayer(Civ.ENGLAND.value)
-pPortugal = gc.getPlayer(Civ.PORTUGAL.value)
-pAragon = gc.getPlayer(Civ.ARAGON.value)
-pPrussia = gc.getPlayer(Civ.PRUSSIA.value)
-pLithuania = gc.getPlayer(Civ.LITHUANIA.value)
-pAustria = gc.getPlayer(Civ.AUSTRIA.value)
-pTurkey = gc.getPlayer(Civ.OTTOMAN.value)
-pSweden = gc.getPlayer(Civ.SWEDEN.value)
-pDutch = gc.getPlayer(Civ.DUTCH.value)
-pPope = gc.getPlayer(Civ.POPE.value)
-pIndependent = gc.getPlayer(Civ.INDEPENDENT.value)
-pIndependent2 = gc.getPlayer(Civ.INDEPENDENT_2.value)
-pIndependent3 = gc.getPlayer(Civ.INDEPENDENT_3.value)
-pIndependent4 = gc.getPlayer(Civ.INDEPENDENT_4.value)
-pBarbarian = gc.getPlayer(Civ.BARBARIAN.value)
-
-teamBurgundy = gc.getTeam(pBurgundy.getTeam())
-teamByzantium = gc.getTeam(pByzantium.getTeam())
-teamFrankia = gc.getTeam(pFrankia.getTeam())
-teamArabia = gc.getTeam(pArabia.getTeam())
-teamBulgaria = gc.getTeam(pBulgaria.getTeam())
-teamCordoba = gc.getTeam(pCordoba.getTeam())
-teamSpain = gc.getTeam(pSpain.getTeam())
-teamNorway = gc.getTeam(pNorway.getTeam())
-teamDenmark = gc.getTeam(pDenmark.getTeam())
-teamVenecia = gc.getTeam(pVenecia.getTeam())
-teamNovgorod = gc.getTeam(pNovgorod.getTeam())
-teamKiev = gc.getTeam(pKiev.getTeam())
-teamHungary = gc.getTeam(pHungary.getTeam())
-teamGermany = gc.getTeam(pGermany.getTeam())
-teamScotland = gc.getTeam(pScotland.getTeam())
-teamPoland = gc.getTeam(pPoland.getTeam())
-teamMoscow = gc.getTeam(pMoscow.getTeam())
-teamGenoa = gc.getTeam(pGenoa.getTeam())
-teamMorocco = gc.getTeam(pMorocco.getTeam())
-teamEngland = gc.getTeam(pEngland.getTeam())
-teamPortugal = gc.getTeam(pPortugal.getTeam())
-teamAragon = gc.getTeam(pAragon.getTeam())
-teamPrussia = gc.getTeam(pPrussia.getTeam())
-teamLithuania = gc.getTeam(pLithuania.getTeam())
-teamAustria = gc.getTeam(pAustria.getTeam())
-teamTurkey = gc.getTeam(pTurkey.getTeam())
-teamSweden = gc.getTeam(pSweden.getTeam())
-teamDutch = gc.getTeam(pDutch.getTeam())
-teamPope = gc.getTeam(pPope.getTeam())
-teamIndependent = gc.getTeam(pIndependent.getTeam())
-teamIndependent2 = gc.getTeam(pIndependent2.getTeam())
-teamIndependent3 = gc.getTeam(pIndependent3.getTeam())
-teamIndependent4 = gc.getTeam(pIndependent4.getTeam())
-teamBarbarian = gc.getTeam(pBarbarian.getTeam())
-
-
-# This is now obsolete
-# for not allowing new civ popup if too close
-# Sedna17, moving around the order in which civs rise without changing their WBS requires you to do funny things here to prevent "Change Civ?" popups
-# Spain and Moscow have really long delays for this reason
-# This is now obsolete
-# tDifference = (0, 0, 0, 1, 0, 1, 10, 0, 0, 1, 0, 1, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 
 
 class RiseAndFall:
@@ -609,10 +530,10 @@ class RiseAndFall:
                     if loopCity != city:
                         loopCity.setHasRealBuilding((xml.iPalace), False)
                 city.setHasRealBuilding(xml.iPalace, True)
-                if pTurkey.getStateReligion() == Religion.ISLAM.value:
+                if player(Civ.OTTOMAN).getStateReligion() == Religion.ISLAM.value:
                     city.setHasReligion(Religion.ISLAM.value, True, True, False)
                 # some stability boost and flavour message
-                pTurkey.changeStabilityBase(StabilityCategory.EXPANSION.value, 6)
+                player(Civ.OTTOMAN).changeStabilityBase(StabilityCategory.EXPANSION.value, 6)
                 if utils.getHumanID() == iPlayer:
                     CyInterface().addMessage(
                         iPlayer,
@@ -645,7 +566,7 @@ class RiseAndFall:
                         )
                         city.setHasRealBuilding(xml.iPalace, True)
                     if (
-                        pTurkey.getStateReligion() == Religion.ISLAM.value
+                        player(Civ.OTTOMAN).getStateReligion() == Religion.ISLAM.value
                     ):  # you get Islam anyway, as a bonus
                         city.setHasReligion(Religion.ISLAM.value, True, True, False)
 
@@ -875,7 +796,7 @@ class RiseAndFall:
             iGameTurn == DateTurn.i1300AD
             and utils.getHumanID() != Civ.ENGLAND.value
             and iPlayer == Civ.ENGLAND.value
-            and pEngland.isAlive()
+            and player(Civ.ENGLAND).isAlive()
         ):
             tDublin = (32, 58)
             pPlot = gc.getMap().plot(tDublin[0], tDublin[1])
@@ -897,7 +818,7 @@ class RiseAndFall:
             iGameTurn == DateTurn.i1066AD + 3
             and utils.getHumanID() != Civ.ENGLAND.value
             and iPlayer == Civ.ENGLAND.value
-            and pEngland.isAlive()
+            and player(Civ.ENGLAND).isAlive()
         ):
             for (x, y) in utils.getPlotList((39, 46), (45, 50)):
                 pCurrent = gc.getMap().plot(x, y)
@@ -1787,11 +1708,11 @@ class RiseAndFall:
         # all techs added from minor civs
         for iTech in range(xml.iNumTechs):
             if (
-                teamBarbarian.isHasTech(iTech)
-                or teamIndependent.isHasTech(iTech)
-                or teamIndependent2.isHasTech(iTech)
-                or teamIndependent3.isHasTech(iTech)
-                or teamIndependent4.isHasTech(iTech)
+                team(Civ.BARBARIAN).isHasTech(iTech)
+                or team(Civ.INDEPENDENT).isHasTech(iTech)
+                or team(Civ.INDEPENDENT_2).isHasTech(iTech)
+                or team(Civ.INDEPENDENT_3).isHasTech(iTech)
+                or team(Civ.INDEPENDENT_4).isHasTech(iTech)
             ):
                 teamDeadCiv.setHasTech(iTech, True, iDeadCiv, False, False)
 
@@ -2791,14 +2712,14 @@ class RiseAndFall:
             tSeaPlot = self.findSeaPlots((57, 35), 2)
             if tSeaPlot:
                 utils.makeUnit(xml.iWorkboat, iCiv, tSeaPlot, 1)
-                pVenecia.initUnit(
+                player(Civ.VENECIA).initUnit(
                     xml.iGalley,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_SETTLER_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
-                pVenecia.initUnit(
+                player(Civ.VENECIA).initUnit(
                     xml.iGalley,
                     tSeaPlot[0],
                     tSeaPlot[1],
@@ -2807,7 +2728,7 @@ class RiseAndFall:
                 )
                 utils.makeUnit(xml.iSettler, iCiv, tSeaPlot, 1)
                 utils.makeUnit(xml.iArcher, iCiv, tSeaPlot, 1)
-                pVenecia.initUnit(
+                player(Civ.VENECIA).initUnit(
                     xml.iGalley,
                     tSeaPlot[0],
                     tSeaPlot[1],
@@ -2850,21 +2771,21 @@ class RiseAndFall:
             utils.makeUnit(xml.iSwordsman, iCiv, tPlot, 1)
             tSeaPlot = self.findSeaPlots(tPlot, 2)
             if tSeaPlot:
-                pNorway.initUnit(
+                player(Civ.NORWAY).initUnit(
                     xml.iGalley,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_SETTLER_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
-                pNorway.initUnit(
+                player(Civ.NORWAY).initUnit(
                     xml.iGalley,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_ESCORT_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
-                pNorway.initUnit(
+                player(Civ.NORWAY).initUnit(
                     xml.iGalley,
                     tSeaPlot[0],
                     tSeaPlot[1],
@@ -2911,21 +2832,21 @@ class RiseAndFall:
             utils.makeUnit(xml.iDenmarkHuskarl, iCiv, tPlot, 4)
             tSeaPlot = self.findSeaPlots((60, 57), 2)
             if tSeaPlot:
-                pDenmark.initUnit(
+                player(Civ.DENMARK).initUnit(
                     xml.iGalley,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_SETTLER_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
-                pDenmark.initUnit(
+                player(Civ.DENMARK).initUnit(
                     xml.iGalley,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_SETTLER_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
-                pDenmark.initUnit(
+                player(Civ.DENMARK).initUnit(
                     xml.iGalley,
                     tSeaPlot[0],
                     tSeaPlot[1],
@@ -2958,14 +2879,14 @@ class RiseAndFall:
             utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 1)
             tSeaPlot = self.findSeaPlots(tPlot, 2)
             if tSeaPlot:
-                pGenoa.initUnit(
+                player(Civ.GENOA).initUnit(
                     xml.iWarGalley,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_ESCORT_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
-                pGenoa.initUnit(
+                player(Civ.GENOA).initUnit(
                     xml.iGalley,
                     tSeaPlot[0],
                     tSeaPlot[1],
@@ -2994,14 +2915,14 @@ class RiseAndFall:
             utils.makeUnit(xml.iCatholicMissionary, iCiv, tPlot, 2)
             tSeaPlot = self.findSeaPlots((43, 53), 1)
             if tSeaPlot:
-                pEngland.initUnit(
+                player(Civ.ENGLAND).initUnit(
                     xml.iGalley,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_SETTLER_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
-                pEngland.initUnit(
+                player(Civ.ENGLAND).initUnit(
                     xml.iWarGalley,
                     tSeaPlot[0],
                     tSeaPlot[1],
@@ -3029,21 +2950,21 @@ class RiseAndFall:
             # Look for a sea plot close to the coast
             tSeaPlot = self.findSeaPlots((42, 29), 1)
             if tSeaPlot:
-                pAragon.initUnit(
+                player(Civ.ARAGON).initUnit(
                     xml.iWarGalley,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_ESCORT_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
-                pAragon.initUnit(
+                player(Civ.ARAGON).initUnit(
                     xml.iWarGalley,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_ESCORT_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
-                pAragon.initUnit(
+                player(Civ.ARAGON).initUnit(
                     xml.iCogge,
                     tSeaPlot[0],
                     tSeaPlot[1],
@@ -3064,21 +2985,21 @@ class RiseAndFall:
             tSeaPlot = self.findSeaPlots((69, 65), 2)
             if tSeaPlot:
                 utils.makeUnit(xml.iWorkboat, iCiv, tSeaPlot, 1)
-                pSweden.initUnit(
+                player(Civ.SWEDEN).initUnit(
                     xml.iWarGalley,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_ESCORT_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
-                pSweden.initUnit(
+                player(Civ.SWEDEN).initUnit(
                     xml.iCogge,
                     tSeaPlot[0],
                     tSeaPlot[1],
                     UnitAITypes.UNITAI_SETTLER_SEA,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
-                pSweden.initUnit(
+                player(Civ.SWEDEN).initUnit(
                     xml.iCogge,
                     tSeaPlot[0],
                     tSeaPlot[1],
@@ -3265,333 +3186,333 @@ class RiseAndFall:
             return
 
         if iCiv == Civ.ARABIA.value:
-            teamArabia.setHasTech(xml.iTheology, True, iCiv, False, False)
-            teamArabia.setHasTech(xml.iCalendar, True, iCiv, False, False)
-            teamArabia.setHasTech(xml.iLateenSails, True, iCiv, False, False)
-            teamArabia.setHasTech(xml.iStirrup, True, iCiv, False, False)
-            teamArabia.setHasTech(xml.iBronzeCasting, True, iCiv, False, False)
-            teamArabia.setHasTech(xml.iArchitecture, True, iCiv, False, False)
-            teamArabia.setHasTech(xml.iLiterature, True, iCiv, False, False)
-            teamArabia.setHasTech(xml.iMonasticism, True, iCiv, False, False)
-            teamArabia.setHasTech(xml.iArt, True, iCiv, False, False)
-            teamArabia.setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
-            teamArabia.setHasTech(xml.iHerbalMedicine, True, iCiv, False, False)
-            teamArabia.setHasTech(xml.iAstrolabe, True, iCiv, False, False)
-            teamArabia.setHasTech(xml.iArabicKnowledge, True, iCiv, False, False)
+            team(Civ.ARABIA).setHasTech(xml.iTheology, True, iCiv, False, False)
+            team(Civ.ARABIA).setHasTech(xml.iCalendar, True, iCiv, False, False)
+            team(Civ.ARABIA).setHasTech(xml.iLateenSails, True, iCiv, False, False)
+            team(Civ.ARABIA).setHasTech(xml.iStirrup, True, iCiv, False, False)
+            team(Civ.ARABIA).setHasTech(xml.iBronzeCasting, True, iCiv, False, False)
+            team(Civ.ARABIA).setHasTech(xml.iArchitecture, True, iCiv, False, False)
+            team(Civ.ARABIA).setHasTech(xml.iLiterature, True, iCiv, False, False)
+            team(Civ.ARABIA).setHasTech(xml.iMonasticism, True, iCiv, False, False)
+            team(Civ.ARABIA).setHasTech(xml.iArt, True, iCiv, False, False)
+            team(Civ.ARABIA).setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
+            team(Civ.ARABIA).setHasTech(xml.iHerbalMedicine, True, iCiv, False, False)
+            team(Civ.ARABIA).setHasTech(xml.iAstrolabe, True, iCiv, False, False)
+            team(Civ.ARABIA).setHasTech(xml.iArabicKnowledge, True, iCiv, False, False)
 
         elif iCiv == Civ.BULGARIA.value:
-            teamBulgaria.setHasTech(xml.iTheology, True, iCiv, False, False)
-            teamBulgaria.setHasTech(xml.iCalendar, True, iCiv, False, False)
-            teamBulgaria.setHasTech(xml.iStirrup, True, iCiv, False, False)
-            teamBulgaria.setHasTech(xml.iArchitecture, True, iCiv, False, False)
-            teamBulgaria.setHasTech(xml.iBronzeCasting, True, iCiv, False, False)
+            team(Civ.BULGARIA).setHasTech(xml.iTheology, True, iCiv, False, False)
+            team(Civ.BULGARIA).setHasTech(xml.iCalendar, True, iCiv, False, False)
+            team(Civ.BULGARIA).setHasTech(xml.iStirrup, True, iCiv, False, False)
+            team(Civ.BULGARIA).setHasTech(xml.iArchitecture, True, iCiv, False, False)
+            team(Civ.BULGARIA).setHasTech(xml.iBronzeCasting, True, iCiv, False, False)
 
         elif iCiv == Civ.CORDOBA.value:
-            teamCordoba.setHasTech(xml.iTheology, True, iCiv, False, False)
-            teamCordoba.setHasTech(xml.iCalendar, True, iCiv, False, False)
-            teamCordoba.setHasTech(xml.iLateenSails, True, iCiv, False, False)
-            teamCordoba.setHasTech(xml.iStirrup, True, iCiv, False, False)
-            teamCordoba.setHasTech(xml.iBronzeCasting, True, iCiv, False, False)
-            teamCordoba.setHasTech(xml.iArchitecture, True, iCiv, False, False)
-            teamCordoba.setHasTech(xml.iLiterature, True, iCiv, False, False)
-            teamCordoba.setHasTech(xml.iMonasticism, True, iCiv, False, False)
-            teamCordoba.setHasTech(xml.iArt, True, iCiv, False, False)
-            teamCordoba.setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
-            teamCordoba.setHasTech(xml.iHerbalMedicine, True, iCiv, False, False)
-            teamCordoba.setHasTech(xml.iAstrolabe, True, iCiv, False, False)
-            teamCordoba.setHasTech(xml.iArabicKnowledge, True, iCiv, False, False)
-            teamCordoba.setHasTech(xml.iEngineering, True, iCiv, False, False)
-            teamCordoba.setHasTech(xml.iArabicMedicine, True, iCiv, False, False)
+            team(Civ.CORDOBA).setHasTech(xml.iTheology, True, iCiv, False, False)
+            team(Civ.CORDOBA).setHasTech(xml.iCalendar, True, iCiv, False, False)
+            team(Civ.CORDOBA).setHasTech(xml.iLateenSails, True, iCiv, False, False)
+            team(Civ.CORDOBA).setHasTech(xml.iStirrup, True, iCiv, False, False)
+            team(Civ.CORDOBA).setHasTech(xml.iBronzeCasting, True, iCiv, False, False)
+            team(Civ.CORDOBA).setHasTech(xml.iArchitecture, True, iCiv, False, False)
+            team(Civ.CORDOBA).setHasTech(xml.iLiterature, True, iCiv, False, False)
+            team(Civ.CORDOBA).setHasTech(xml.iMonasticism, True, iCiv, False, False)
+            team(Civ.CORDOBA).setHasTech(xml.iArt, True, iCiv, False, False)
+            team(Civ.CORDOBA).setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
+            team(Civ.CORDOBA).setHasTech(xml.iHerbalMedicine, True, iCiv, False, False)
+            team(Civ.CORDOBA).setHasTech(xml.iAstrolabe, True, iCiv, False, False)
+            team(Civ.CORDOBA).setHasTech(xml.iArabicKnowledge, True, iCiv, False, False)
+            team(Civ.CORDOBA).setHasTech(xml.iEngineering, True, iCiv, False, False)
+            team(Civ.CORDOBA).setHasTech(xml.iArabicMedicine, True, iCiv, False, False)
 
         elif iCiv == Civ.VENECIA.value:
             for iTech in range(xml.iStirrup + 1):
-                teamVenecia.setHasTech(iTech, True, iCiv, False, False)
-            teamVenecia.setHasTech(xml.iLateenSails, True, iCiv, False, False)
-            teamVenecia.setHasTech(xml.iAstrolabe, True, iCiv, False, False)
-            teamVenecia.setHasTech(xml.iMonasticism, True, iCiv, False, False)
-            teamVenecia.setHasTech(xml.iArt, True, iCiv, False, False)
-            teamVenecia.setHasTech(xml.iMusic, True, iCiv, False, False)
-            teamVenecia.setHasTech(xml.iHerbalMedicine, True, iCiv, False, False)
-            teamVenecia.setHasTech(xml.iChainMail, True, iCiv, False, False)
+                team(Civ.VENECIA).setHasTech(iTech, True, iCiv, False, False)
+            team(Civ.VENECIA).setHasTech(xml.iLateenSails, True, iCiv, False, False)
+            team(Civ.VENECIA).setHasTech(xml.iAstrolabe, True, iCiv, False, False)
+            team(Civ.VENECIA).setHasTech(xml.iMonasticism, True, iCiv, False, False)
+            team(Civ.VENECIA).setHasTech(xml.iArt, True, iCiv, False, False)
+            team(Civ.VENECIA).setHasTech(xml.iMusic, True, iCiv, False, False)
+            team(Civ.VENECIA).setHasTech(xml.iHerbalMedicine, True, iCiv, False, False)
+            team(Civ.VENECIA).setHasTech(xml.iChainMail, True, iCiv, False, False)
 
         elif iCiv == Civ.BURGUNDY.value:
             for iTech in range(xml.iStirrup + 1):
-                teamBurgundy.setHasTech(iTech, True, iCiv, False, False)
-            teamBurgundy.setHasTech(xml.iMonasticism, True, iCiv, False, False)
-            teamBurgundy.setHasTech(xml.iVassalage, True, iCiv, False, False)
-            teamBurgundy.setHasTech(xml.iFeudalism, True, iCiv, False, False)
-            teamBurgundy.setHasTech(xml.iFarriers, True, iCiv, False, False)
-            teamBurgundy.setHasTech(xml.iArt, True, iCiv, False, False)
-            teamBurgundy.setHasTech(xml.iEngineering, True, iCiv, False, False)
-            teamBurgundy.setHasTech(xml.iChainMail, True, iCiv, False, False)
-            teamBurgundy.setHasTech(xml.iAristocracy, True, iCiv, False, False)
-            teamBurgundy.setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
-            teamBurgundy.setHasTech(xml.iAstrolabe, True, iCiv, False, False)
+                team(Civ.BURGUNDY).setHasTech(iTech, True, iCiv, False, False)
+            team(Civ.BURGUNDY).setHasTech(xml.iMonasticism, True, iCiv, False, False)
+            team(Civ.BURGUNDY).setHasTech(xml.iVassalage, True, iCiv, False, False)
+            team(Civ.BURGUNDY).setHasTech(xml.iFeudalism, True, iCiv, False, False)
+            team(Civ.BURGUNDY).setHasTech(xml.iFarriers, True, iCiv, False, False)
+            team(Civ.BURGUNDY).setHasTech(xml.iArt, True, iCiv, False, False)
+            team(Civ.BURGUNDY).setHasTech(xml.iEngineering, True, iCiv, False, False)
+            team(Civ.BURGUNDY).setHasTech(xml.iChainMail, True, iCiv, False, False)
+            team(Civ.BURGUNDY).setHasTech(xml.iAristocracy, True, iCiv, False, False)
+            team(Civ.BURGUNDY).setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
+            team(Civ.BURGUNDY).setHasTech(xml.iAstrolabe, True, iCiv, False, False)
 
         elif iCiv == Civ.GERMANY.value:
             for iTech in range(xml.iStirrup + 1):
-                teamGermany.setHasTech(iTech, True, iCiv, False, False)
-            teamGermany.setHasTech(xml.iMonasticism, True, iCiv, False, False)
-            teamGermany.setHasTech(xml.iVassalage, True, iCiv, False, False)
-            teamGermany.setHasTech(xml.iFeudalism, True, iCiv, False, False)
-            teamGermany.setHasTech(xml.iFarriers, True, iCiv, False, False)
-            teamGermany.setHasTech(xml.iArt, True, iCiv, False, False)
-            teamGermany.setHasTech(xml.iEngineering, True, iCiv, False, False)
-            teamGermany.setHasTech(xml.iChainMail, True, iCiv, False, False)
-            teamGermany.setHasTech(xml.iAristocracy, True, iCiv, False, False)
-            teamGermany.setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
-            teamGermany.setHasTech(xml.iAstrolabe, True, iCiv, False, False)
+                team(Civ.GERMANY).setHasTech(iTech, True, iCiv, False, False)
+            team(Civ.GERMANY).setHasTech(xml.iMonasticism, True, iCiv, False, False)
+            team(Civ.GERMANY).setHasTech(xml.iVassalage, True, iCiv, False, False)
+            team(Civ.GERMANY).setHasTech(xml.iFeudalism, True, iCiv, False, False)
+            team(Civ.GERMANY).setHasTech(xml.iFarriers, True, iCiv, False, False)
+            team(Civ.GERMANY).setHasTech(xml.iArt, True, iCiv, False, False)
+            team(Civ.GERMANY).setHasTech(xml.iEngineering, True, iCiv, False, False)
+            team(Civ.GERMANY).setHasTech(xml.iChainMail, True, iCiv, False, False)
+            team(Civ.GERMANY).setHasTech(xml.iAristocracy, True, iCiv, False, False)
+            team(Civ.GERMANY).setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
+            team(Civ.GERMANY).setHasTech(xml.iAstrolabe, True, iCiv, False, False)
 
         elif iCiv == Civ.NOVGOROD.value:
             for iTech in range(xml.iStirrup + 1):
-                teamNovgorod.setHasTech(iTech, True, iCiv, False, False)
-            teamNovgorod.setHasTech(xml.iMonasticism, True, iCiv, False, False)
-            teamNovgorod.setHasTech(xml.iVassalage, True, iCiv, False, False)
-            teamNovgorod.setHasTech(xml.iFarriers, True, iCiv, False, False)
-            teamNovgorod.setHasTech(xml.iChainMail, True, iCiv, False, False)
+                team(Civ.NOVGOROD).setHasTech(iTech, True, iCiv, False, False)
+            team(Civ.NOVGOROD).setHasTech(xml.iMonasticism, True, iCiv, False, False)
+            team(Civ.NOVGOROD).setHasTech(xml.iVassalage, True, iCiv, False, False)
+            team(Civ.NOVGOROD).setHasTech(xml.iFarriers, True, iCiv, False, False)
+            team(Civ.NOVGOROD).setHasTech(xml.iChainMail, True, iCiv, False, False)
 
         elif iCiv == Civ.NORWAY.value:
             for iTech in range(xml.iStirrup + 1):
-                teamNorway.setHasTech(iTech, True, iCiv, False, False)
-            teamNorway.setHasTech(xml.iVassalage, True, iCiv, False, False)
-            teamNorway.setHasTech(xml.iAstrolabe, True, iCiv, False, False)
-            teamNorway.setHasTech(xml.iFarriers, True, iCiv, False, False)
-            teamNorway.setHasTech(xml.iChainMail, True, iCiv, False, False)
-            teamNorway.setHasTech(xml.iHerbalMedicine, True, iCiv, False, False)
+                team(Civ.NORWAY).setHasTech(iTech, True, iCiv, False, False)
+            team(Civ.NORWAY).setHasTech(xml.iVassalage, True, iCiv, False, False)
+            team(Civ.NORWAY).setHasTech(xml.iAstrolabe, True, iCiv, False, False)
+            team(Civ.NORWAY).setHasTech(xml.iFarriers, True, iCiv, False, False)
+            team(Civ.NORWAY).setHasTech(xml.iChainMail, True, iCiv, False, False)
+            team(Civ.NORWAY).setHasTech(xml.iHerbalMedicine, True, iCiv, False, False)
 
         elif iCiv == Civ.KIEV.value:
             for iTech in range(xml.iStirrup + 1):
-                teamKiev.setHasTech(iTech, True, iCiv, False, False)
-            teamKiev.setHasTech(xml.iMonasticism, True, iCiv, False, False)
-            teamKiev.setHasTech(xml.iVassalage, True, iCiv, False, False)
-            teamKiev.setHasTech(xml.iFarriers, True, iCiv, False, False)
-            teamKiev.setHasTech(xml.iChainMail, True, iCiv, False, False)
+                team(Civ.KIEV).setHasTech(iTech, True, iCiv, False, False)
+            team(Civ.KIEV).setHasTech(xml.iMonasticism, True, iCiv, False, False)
+            team(Civ.KIEV).setHasTech(xml.iVassalage, True, iCiv, False, False)
+            team(Civ.KIEV).setHasTech(xml.iFarriers, True, iCiv, False, False)
+            team(Civ.KIEV).setHasTech(xml.iChainMail, True, iCiv, False, False)
 
         elif iCiv == Civ.HUNGARY.value:
             for iTech in range(xml.iStirrup + 1):
-                teamHungary.setHasTech(iTech, True, iCiv, False, False)
-            teamHungary.setHasTech(xml.iChainMail, True, iCiv, False, False)
-            teamHungary.setHasTech(xml.iHerbalMedicine, True, iCiv, False, False)
-            teamHungary.setHasTech(xml.iVassalage, True, iCiv, False, False)
+                team(Civ.HUNGARY).setHasTech(iTech, True, iCiv, False, False)
+            team(Civ.HUNGARY).setHasTech(xml.iChainMail, True, iCiv, False, False)
+            team(Civ.HUNGARY).setHasTech(xml.iHerbalMedicine, True, iCiv, False, False)
+            team(Civ.HUNGARY).setHasTech(xml.iVassalage, True, iCiv, False, False)
 
         elif iCiv == Civ.CASTILLE.value:
             for iTech in range(xml.iStirrup + 1):
-                teamSpain.setHasTech(iTech, True, iCiv, False, False)
-            teamSpain.setHasTech(xml.iLateenSails, True, iCiv, False, False)
-            teamSpain.setHasTech(xml.iAstrolabe, True, iCiv, False, False)
-            teamSpain.setHasTech(xml.iMonasticism, True, iCiv, False, False)
-            teamSpain.setHasTech(xml.iArt, True, iCiv, False, False)
-            teamSpain.setHasTech(xml.iHerbalMedicine, True, iCiv, False, False)
-            teamSpain.setHasTech(xml.iVassalage, True, iCiv, False, False)
-            teamSpain.setHasTech(xml.iEngineering, True, iCiv, False, False)
-            teamSpain.setHasTech(xml.iMachinery, True, iCiv, False, False)
-            teamSpain.setHasTech(xml.iFeudalism, True, iCiv, False, False)
-            teamSpain.setHasTech(xml.iChainMail, True, iCiv, False, False)
+                team(Civ.CASTILLE).setHasTech(iTech, True, iCiv, False, False)
+            team(Civ.CASTILLE).setHasTech(xml.iLateenSails, True, iCiv, False, False)
+            team(Civ.CASTILLE).setHasTech(xml.iAstrolabe, True, iCiv, False, False)
+            team(Civ.CASTILLE).setHasTech(xml.iMonasticism, True, iCiv, False, False)
+            team(Civ.CASTILLE).setHasTech(xml.iArt, True, iCiv, False, False)
+            team(Civ.CASTILLE).setHasTech(xml.iHerbalMedicine, True, iCiv, False, False)
+            team(Civ.CASTILLE).setHasTech(xml.iVassalage, True, iCiv, False, False)
+            team(Civ.CASTILLE).setHasTech(xml.iEngineering, True, iCiv, False, False)
+            team(Civ.CASTILLE).setHasTech(xml.iMachinery, True, iCiv, False, False)
+            team(Civ.CASTILLE).setHasTech(xml.iFeudalism, True, iCiv, False, False)
+            team(Civ.CASTILLE).setHasTech(xml.iChainMail, True, iCiv, False, False)
 
         elif iCiv == Civ.DENMARK.value:
             for iTech in range(xml.iStirrup + 1):
-                teamDenmark.setHasTech(iTech, True, iCiv, False, False)
-            teamDenmark.setHasTech(xml.iMonasticism, True, iCiv, False, False)
-            teamDenmark.setHasTech(xml.iVassalage, True, iCiv, False, False)
-            teamDenmark.setHasTech(xml.iFeudalism, True, iCiv, False, False)
-            teamDenmark.setHasTech(xml.iAristocracy, True, iCiv, False, False)
-            teamDenmark.setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
-            teamDenmark.setHasTech(xml.iAstrolabe, True, iCiv, False, False)
-            teamDenmark.setHasTech(xml.iFarriers, True, iCiv, False, False)
-            teamDenmark.setHasTech(xml.iChainMail, True, iCiv, False, False)
-            teamDenmark.setHasTech(xml.iHerbalMedicine, True, iCiv, False, False)
+                team(Civ.DENMARK).setHasTech(iTech, True, iCiv, False, False)
+            team(Civ.DENMARK).setHasTech(xml.iMonasticism, True, iCiv, False, False)
+            team(Civ.DENMARK).setHasTech(xml.iVassalage, True, iCiv, False, False)
+            team(Civ.DENMARK).setHasTech(xml.iFeudalism, True, iCiv, False, False)
+            team(Civ.DENMARK).setHasTech(xml.iAristocracy, True, iCiv, False, False)
+            team(Civ.DENMARK).setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
+            team(Civ.DENMARK).setHasTech(xml.iAstrolabe, True, iCiv, False, False)
+            team(Civ.DENMARK).setHasTech(xml.iFarriers, True, iCiv, False, False)
+            team(Civ.DENMARK).setHasTech(xml.iChainMail, True, iCiv, False, False)
+            team(Civ.DENMARK).setHasTech(xml.iHerbalMedicine, True, iCiv, False, False)
 
         elif iCiv == Civ.SCOTLAND.value:
             for iTech in range(xml.iStirrup + 1):
-                teamScotland.setHasTech(iTech, True, iCiv, False, False)
-            teamScotland.setHasTech(xml.iLateenSails, True, iCiv, False, False)
-            teamScotland.setHasTech(xml.iAstrolabe, True, iCiv, False, False)
-            teamScotland.setHasTech(xml.iMonasticism, True, iCiv, False, False)
-            teamScotland.setHasTech(xml.iArt, True, iCiv, False, False)
-            teamScotland.setHasTech(xml.iMusic, True, iCiv, False, False)
-            teamScotland.setHasTech(xml.iHerbalMedicine, True, iCiv, False, False)
-            teamScotland.setHasTech(xml.iVassalage, True, iCiv, False, False)
-            teamScotland.setHasTech(xml.iEngineering, True, iCiv, False, False)
-            teamScotland.setHasTech(xml.iMachinery, True, iCiv, False, False)
-            teamScotland.setHasTech(xml.iFeudalism, True, iCiv, False, False)
-            teamScotland.setHasTech(xml.iChainMail, True, iCiv, False, False)
-            teamScotland.setHasTech(xml.iAristocracy, True, iCiv, False, False)
+                team(Civ.SCOTLAND).setHasTech(iTech, True, iCiv, False, False)
+            team(Civ.SCOTLAND).setHasTech(xml.iLateenSails, True, iCiv, False, False)
+            team(Civ.SCOTLAND).setHasTech(xml.iAstrolabe, True, iCiv, False, False)
+            team(Civ.SCOTLAND).setHasTech(xml.iMonasticism, True, iCiv, False, False)
+            team(Civ.SCOTLAND).setHasTech(xml.iArt, True, iCiv, False, False)
+            team(Civ.SCOTLAND).setHasTech(xml.iMusic, True, iCiv, False, False)
+            team(Civ.SCOTLAND).setHasTech(xml.iHerbalMedicine, True, iCiv, False, False)
+            team(Civ.SCOTLAND).setHasTech(xml.iVassalage, True, iCiv, False, False)
+            team(Civ.SCOTLAND).setHasTech(xml.iEngineering, True, iCiv, False, False)
+            team(Civ.SCOTLAND).setHasTech(xml.iMachinery, True, iCiv, False, False)
+            team(Civ.SCOTLAND).setHasTech(xml.iFeudalism, True, iCiv, False, False)
+            team(Civ.SCOTLAND).setHasTech(xml.iChainMail, True, iCiv, False, False)
+            team(Civ.SCOTLAND).setHasTech(xml.iAristocracy, True, iCiv, False, False)
 
         elif iCiv == Civ.POLAND.value:
             for iTech in range(xml.iStirrup + 1):
-                teamPoland.setHasTech(iTech, True, iCiv, False, False)
-            teamPoland.setHasTech(xml.iMonasticism, True, iCiv, False, False)
-            teamPoland.setHasTech(xml.iHerbalMedicine, True, iCiv, False, False)
-            teamPoland.setHasTech(xml.iVassalage, True, iCiv, False, False)
-            teamPoland.setHasTech(xml.iFeudalism, True, iCiv, False, False)
-            teamPoland.setHasTech(xml.iFarriers, True, iCiv, False, False)
-            teamPoland.setHasTech(xml.iArt, True, iCiv, False, False)
-            teamPoland.setHasTech(xml.iEngineering, True, iCiv, False, False)
-            teamPoland.setHasTech(xml.iChainMail, True, iCiv, False, False)
+                team(Civ.POLAND).setHasTech(iTech, True, iCiv, False, False)
+            team(Civ.POLAND).setHasTech(xml.iMonasticism, True, iCiv, False, False)
+            team(Civ.POLAND).setHasTech(xml.iHerbalMedicine, True, iCiv, False, False)
+            team(Civ.POLAND).setHasTech(xml.iVassalage, True, iCiv, False, False)
+            team(Civ.POLAND).setHasTech(xml.iFeudalism, True, iCiv, False, False)
+            team(Civ.POLAND).setHasTech(xml.iFarriers, True, iCiv, False, False)
+            team(Civ.POLAND).setHasTech(xml.iArt, True, iCiv, False, False)
+            team(Civ.POLAND).setHasTech(xml.iEngineering, True, iCiv, False, False)
+            team(Civ.POLAND).setHasTech(xml.iChainMail, True, iCiv, False, False)
 
         elif iCiv == Civ.GENOA.value:
             for iTech in range(xml.iStirrup + 1):
-                teamGenoa.setHasTech(iTech, True, iCiv, False, False)
-            teamGenoa.setHasTech(xml.iLateenSails, True, iCiv, False, False)
-            teamGenoa.setHasTech(xml.iAstrolabe, True, iCiv, False, False)
-            teamGenoa.setHasTech(xml.iMonasticism, True, iCiv, False, False)
-            teamGenoa.setHasTech(xml.iArt, True, iCiv, False, False)
-            teamGenoa.setHasTech(xml.iMusic, True, iCiv, False, False)
-            teamGenoa.setHasTech(xml.iHerbalMedicine, True, iCiv, False, False)
-            teamGenoa.setHasTech(xml.iVassalage, True, iCiv, False, False)
-            teamGenoa.setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
-            teamGenoa.setHasTech(xml.iEngineering, True, iCiv, False, False)
-            teamGenoa.setHasTech(xml.iMachinery, True, iCiv, False, False)
-            teamGenoa.setHasTech(xml.iFeudalism, True, iCiv, False, False)
-            teamGenoa.setHasTech(xml.iVaultedArches, True, iCiv, False, False)
-            teamGenoa.setHasTech(xml.iChainMail, True, iCiv, False, False)
-            teamGenoa.setHasTech(xml.iAristocracy, True, iCiv, False, False)
+                team(Civ.GENOA).setHasTech(iTech, True, iCiv, False, False)
+            team(Civ.GENOA).setHasTech(xml.iLateenSails, True, iCiv, False, False)
+            team(Civ.GENOA).setHasTech(xml.iAstrolabe, True, iCiv, False, False)
+            team(Civ.GENOA).setHasTech(xml.iMonasticism, True, iCiv, False, False)
+            team(Civ.GENOA).setHasTech(xml.iArt, True, iCiv, False, False)
+            team(Civ.GENOA).setHasTech(xml.iMusic, True, iCiv, False, False)
+            team(Civ.GENOA).setHasTech(xml.iHerbalMedicine, True, iCiv, False, False)
+            team(Civ.GENOA).setHasTech(xml.iVassalage, True, iCiv, False, False)
+            team(Civ.GENOA).setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
+            team(Civ.GENOA).setHasTech(xml.iEngineering, True, iCiv, False, False)
+            team(Civ.GENOA).setHasTech(xml.iMachinery, True, iCiv, False, False)
+            team(Civ.GENOA).setHasTech(xml.iFeudalism, True, iCiv, False, False)
+            team(Civ.GENOA).setHasTech(xml.iVaultedArches, True, iCiv, False, False)
+            team(Civ.GENOA).setHasTech(xml.iChainMail, True, iCiv, False, False)
+            team(Civ.GENOA).setHasTech(xml.iAristocracy, True, iCiv, False, False)
 
         elif iCiv == Civ.MOROCCO.value:
             for iTech in range(xml.iFarriers + 1):
-                teamMorocco.setHasTech(iTech, True, iCiv, False, False)
-            teamMorocco.setHasTech(xml.iBlastFurnace, True, iCiv, False, False)
-            teamMorocco.setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
-            teamMorocco.setHasTech(xml.iLateenSails, True, iCiv, False, False)
-            teamMorocco.setHasTech(xml.iMapMaking, True, iCiv, False, False)
-            teamMorocco.setHasTech(xml.iLiterature, True, iCiv, False, False)
-            teamMorocco.setHasTech(xml.iArabicKnowledge, True, iCiv, False, False)
+                team(Civ.MOROCCO).setHasTech(iTech, True, iCiv, False, False)
+            team(Civ.MOROCCO).setHasTech(xml.iBlastFurnace, True, iCiv, False, False)
+            team(Civ.MOROCCO).setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
+            team(Civ.MOROCCO).setHasTech(xml.iLateenSails, True, iCiv, False, False)
+            team(Civ.MOROCCO).setHasTech(xml.iMapMaking, True, iCiv, False, False)
+            team(Civ.MOROCCO).setHasTech(xml.iLiterature, True, iCiv, False, False)
+            team(Civ.MOROCCO).setHasTech(xml.iArabicKnowledge, True, iCiv, False, False)
 
         elif iCiv == Civ.ENGLAND.value:
             for iTech in range(xml.iFarriers + 1):
-                teamEngland.setHasTech(iTech, True, iCiv, False, False)
-            teamEngland.setHasTech(xml.iBlastFurnace, True, iCiv, False, False)
-            teamEngland.setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
-            teamEngland.setHasTech(xml.iAristocracy, True, iCiv, False, False)
+                team(Civ.ENGLAND).setHasTech(iTech, True, iCiv, False, False)
+            team(Civ.ENGLAND).setHasTech(xml.iBlastFurnace, True, iCiv, False, False)
+            team(Civ.ENGLAND).setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
+            team(Civ.ENGLAND).setHasTech(xml.iAristocracy, True, iCiv, False, False)
 
         elif iCiv == Civ.PORTUGAL.value:
             for iTech in range(xml.iFarriers + 1):
-                teamPortugal.setHasTech(iTech, True, iCiv, False, False)
-            teamPortugal.setHasTech(xml.iBlastFurnace, True, iCiv, False, False)
-            teamPortugal.setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
-            teamPortugal.setHasTech(xml.iLiterature, True, iCiv, False, False)
-            teamPortugal.setHasTech(xml.iLateenSails, True, iCiv, False, False)
-            teamPortugal.setHasTech(xml.iMapMaking, True, iCiv, False, False)
-            teamPortugal.setHasTech(xml.iAristocracy, True, iCiv, False, False)
+                team(Civ.PORTUGAL).setHasTech(iTech, True, iCiv, False, False)
+            team(Civ.PORTUGAL).setHasTech(xml.iBlastFurnace, True, iCiv, False, False)
+            team(Civ.PORTUGAL).setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
+            team(Civ.PORTUGAL).setHasTech(xml.iLiterature, True, iCiv, False, False)
+            team(Civ.PORTUGAL).setHasTech(xml.iLateenSails, True, iCiv, False, False)
+            team(Civ.PORTUGAL).setHasTech(xml.iMapMaking, True, iCiv, False, False)
+            team(Civ.PORTUGAL).setHasTech(xml.iAristocracy, True, iCiv, False, False)
 
         elif iCiv == Civ.ARAGON.value:
             for iTech in range(xml.iFarriers + 1):
-                teamAragon.setHasTech(iTech, True, iCiv, False, False)
-            teamAragon.setHasTech(xml.iBlastFurnace, True, iCiv, False, False)
-            teamAragon.setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
-            teamAragon.setHasTech(xml.iLiterature, True, iCiv, False, False)
-            teamAragon.setHasTech(xml.iLateenSails, True, iCiv, False, False)
-            teamAragon.setHasTech(xml.iMapMaking, True, iCiv, False, False)
-            teamAragon.setHasTech(xml.iAristocracy, True, iCiv, False, False)
-            teamAragon.setHasTech(xml.iPlateArmor, True, iCiv, False, False)
-            teamAragon.setHasTech(xml.iGothicArchitecture, True, iCiv, False, False)
-            teamAragon.setHasTech(xml.iSiegeEngines, True, iCiv, False, False)
+                team(Civ.ARAGON).setHasTech(iTech, True, iCiv, False, False)
+            team(Civ.ARAGON).setHasTech(xml.iBlastFurnace, True, iCiv, False, False)
+            team(Civ.ARAGON).setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
+            team(Civ.ARAGON).setHasTech(xml.iLiterature, True, iCiv, False, False)
+            team(Civ.ARAGON).setHasTech(xml.iLateenSails, True, iCiv, False, False)
+            team(Civ.ARAGON).setHasTech(xml.iMapMaking, True, iCiv, False, False)
+            team(Civ.ARAGON).setHasTech(xml.iAristocracy, True, iCiv, False, False)
+            team(Civ.ARAGON).setHasTech(xml.iPlateArmor, True, iCiv, False, False)
+            team(Civ.ARAGON).setHasTech(xml.iGothicArchitecture, True, iCiv, False, False)
+            team(Civ.ARAGON).setHasTech(xml.iSiegeEngines, True, iCiv, False, False)
 
         elif iCiv == Civ.SWEDEN.value:
             for iTech in range(xml.iFarriers + 1):
-                teamSweden.setHasTech(iTech, True, iCiv, False, False)
-            teamSweden.setHasTech(xml.iBlastFurnace, True, iCiv, False, False)
-            teamSweden.setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
-            teamSweden.setHasTech(xml.iGothicArchitecture, True, iCiv, False, False)
-            teamSweden.setHasTech(xml.iChivalry, True, iCiv, False, False)
-            teamSweden.setHasTech(xml.iAristocracy, True, iCiv, False, False)
-            teamSweden.setHasTech(xml.iPlateArmor, True, iCiv, False, False)
-            teamSweden.setHasTech(xml.iSiegeEngines, True, iCiv, False, False)
-            teamSweden.setHasTech(xml.iLateenSails, True, iCiv, False, False)
-            teamSweden.setHasTech(xml.iLiterature, True, iCiv, False, False)
-            teamSweden.setHasTech(xml.iClassicalKnowledge, True, iCiv, False, False)
-            teamSweden.setHasTech(xml.iMonumentBuilding, True, iCiv, False, False)
-            teamSweden.setHasTech(xml.iPhilosophy, True, iCiv, False, False)
-            teamSweden.setHasTech(xml.iMapMaking, True, iCiv, False, False)
+                team(Civ.SWEDEN).setHasTech(iTech, True, iCiv, False, False)
+            team(Civ.SWEDEN).setHasTech(xml.iBlastFurnace, True, iCiv, False, False)
+            team(Civ.SWEDEN).setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
+            team(Civ.SWEDEN).setHasTech(xml.iGothicArchitecture, True, iCiv, False, False)
+            team(Civ.SWEDEN).setHasTech(xml.iChivalry, True, iCiv, False, False)
+            team(Civ.SWEDEN).setHasTech(xml.iAristocracy, True, iCiv, False, False)
+            team(Civ.SWEDEN).setHasTech(xml.iPlateArmor, True, iCiv, False, False)
+            team(Civ.SWEDEN).setHasTech(xml.iSiegeEngines, True, iCiv, False, False)
+            team(Civ.SWEDEN).setHasTech(xml.iLateenSails, True, iCiv, False, False)
+            team(Civ.SWEDEN).setHasTech(xml.iLiterature, True, iCiv, False, False)
+            team(Civ.SWEDEN).setHasTech(xml.iClassicalKnowledge, True, iCiv, False, False)
+            team(Civ.SWEDEN).setHasTech(xml.iMonumentBuilding, True, iCiv, False, False)
+            team(Civ.SWEDEN).setHasTech(xml.iPhilosophy, True, iCiv, False, False)
+            team(Civ.SWEDEN).setHasTech(xml.iMapMaking, True, iCiv, False, False)
 
         elif iCiv == Civ.PRUSSIA.value:
             for iTech in range(xml.iFarriers + 1):
-                teamPrussia.setHasTech(iTech, True, iCiv, False, False)
-            teamPrussia.setHasTech(xml.iBlastFurnace, True, iCiv, False, False)
-            teamPrussia.setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
-            teamPrussia.setHasTech(xml.iGothicArchitecture, True, iCiv, False, False)
-            teamPrussia.setHasTech(xml.iChivalry, True, iCiv, False, False)
-            teamPrussia.setHasTech(xml.iAristocracy, True, iCiv, False, False)
-            teamPrussia.setHasTech(xml.iPlateArmor, True, iCiv, False, False)
-            teamPrussia.setHasTech(xml.iSiegeEngines, True, iCiv, False, False)
-            teamPrussia.setHasTech(xml.iAlchemy, True, iCiv, False, False)
-            teamPrussia.setHasTech(xml.iCivilService, True, iCiv, False, False)
-            teamPrussia.setHasTech(xml.iLateenSails, True, iCiv, False, False)
-            teamPrussia.setHasTech(xml.iGuilds, True, iCiv, False, False)
-            teamPrussia.setHasTech(xml.iLiterature, True, iCiv, False, False)
-            teamPrussia.setHasTech(xml.iClassicalKnowledge, True, iCiv, False, False)
-            teamPrussia.setHasTech(xml.iMonumentBuilding, True, iCiv, False, False)
-            teamPrussia.setHasTech(xml.iPhilosophy, True, iCiv, False, False)
+                team(Civ.PRUSSIA).setHasTech(iTech, True, iCiv, False, False)
+            team(Civ.PRUSSIA).setHasTech(xml.iBlastFurnace, True, iCiv, False, False)
+            team(Civ.PRUSSIA).setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
+            team(Civ.PRUSSIA).setHasTech(xml.iGothicArchitecture, True, iCiv, False, False)
+            team(Civ.PRUSSIA).setHasTech(xml.iChivalry, True, iCiv, False, False)
+            team(Civ.PRUSSIA).setHasTech(xml.iAristocracy, True, iCiv, False, False)
+            team(Civ.PRUSSIA).setHasTech(xml.iPlateArmor, True, iCiv, False, False)
+            team(Civ.PRUSSIA).setHasTech(xml.iSiegeEngines, True, iCiv, False, False)
+            team(Civ.PRUSSIA).setHasTech(xml.iAlchemy, True, iCiv, False, False)
+            team(Civ.PRUSSIA).setHasTech(xml.iCivilService, True, iCiv, False, False)
+            team(Civ.PRUSSIA).setHasTech(xml.iLateenSails, True, iCiv, False, False)
+            team(Civ.PRUSSIA).setHasTech(xml.iGuilds, True, iCiv, False, False)
+            team(Civ.PRUSSIA).setHasTech(xml.iLiterature, True, iCiv, False, False)
+            team(Civ.PRUSSIA).setHasTech(xml.iClassicalKnowledge, True, iCiv, False, False)
+            team(Civ.PRUSSIA).setHasTech(xml.iMonumentBuilding, True, iCiv, False, False)
+            team(Civ.PRUSSIA).setHasTech(xml.iPhilosophy, True, iCiv, False, False)
 
         elif iCiv == Civ.LITHUANIA.value:
             for iTech in range(xml.iFarriers + 1):
-                teamLithuania.setHasTech(iTech, True, iCiv, False, False)
-            teamLithuania.setHasTech(xml.iBlastFurnace, True, iCiv, False, False)
-            teamLithuania.setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
-            teamLithuania.setHasTech(xml.iGothicArchitecture, True, iCiv, False, False)
-            teamLithuania.setHasTech(xml.iAristocracy, True, iCiv, False, False)
-            teamLithuania.setHasTech(xml.iCivilService, True, iCiv, False, False)
-            teamLithuania.setHasTech(xml.iSiegeEngines, True, iCiv, False, False)
-            teamLithuania.setHasTech(xml.iLiterature, True, iCiv, False, False)
-            teamLithuania.setHasTech(xml.iAlchemy, True, iCiv, False, False)
-            teamLithuania.setHasTech(xml.iClassicalKnowledge, True, iCiv, False, False)
-            teamLithuania.setHasTech(xml.iPlateArmor, True, iCiv, False, False)
-            teamLithuania.setHasTech(xml.iLateenSails, True, iCiv, False, False)
-            teamLithuania.setHasTech(xml.iMonumentBuilding, True, iCiv, False, False)
-            teamLithuania.setHasTech(xml.iCivilService, True, iCiv, False, False)
+                team(Civ.LITHUANIA).setHasTech(iTech, True, iCiv, False, False)
+            team(Civ.LITHUANIA).setHasTech(xml.iBlastFurnace, True, iCiv, False, False)
+            team(Civ.LITHUANIA).setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
+            team(Civ.LITHUANIA).setHasTech(xml.iGothicArchitecture, True, iCiv, False, False)
+            team(Civ.LITHUANIA).setHasTech(xml.iAristocracy, True, iCiv, False, False)
+            team(Civ.LITHUANIA).setHasTech(xml.iCivilService, True, iCiv, False, False)
+            team(Civ.LITHUANIA).setHasTech(xml.iSiegeEngines, True, iCiv, False, False)
+            team(Civ.LITHUANIA).setHasTech(xml.iLiterature, True, iCiv, False, False)
+            team(Civ.LITHUANIA).setHasTech(xml.iAlchemy, True, iCiv, False, False)
+            team(Civ.LITHUANIA).setHasTech(xml.iClassicalKnowledge, True, iCiv, False, False)
+            team(Civ.LITHUANIA).setHasTech(xml.iPlateArmor, True, iCiv, False, False)
+            team(Civ.LITHUANIA).setHasTech(xml.iLateenSails, True, iCiv, False, False)
+            team(Civ.LITHUANIA).setHasTech(xml.iMonumentBuilding, True, iCiv, False, False)
+            team(Civ.LITHUANIA).setHasTech(xml.iCivilService, True, iCiv, False, False)
 
         elif iCiv == Civ.AUSTRIA.value:
             for iTech in range(xml.iFarriers + 1):
-                teamAustria.setHasTech(iTech, True, iCiv, False, False)
-            teamAustria.setHasTech(xml.iBlastFurnace, True, iCiv, False, False)
-            teamAustria.setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
-            teamAustria.setHasTech(xml.iGothicArchitecture, True, iCiv, False, False)
-            teamAustria.setHasTech(xml.iChivalry, True, iCiv, False, False)
-            teamAustria.setHasTech(xml.iAristocracy, True, iCiv, False, False)
-            teamAustria.setHasTech(xml.iPlateArmor, True, iCiv, False, False)
-            teamAustria.setHasTech(xml.iSiegeEngines, True, iCiv, False, False)
-            teamAustria.setHasTech(xml.iAlchemy, True, iCiv, False, False)
-            teamAustria.setHasTech(xml.iCivilService, True, iCiv, False, False)
-            teamAustria.setHasTech(xml.iLateenSails, True, iCiv, False, False)
-            teamAustria.setHasTech(xml.iGuilds, True, iCiv, False, False)
-            teamAustria.setHasTech(xml.iLiterature, True, iCiv, False, False)
-            teamAustria.setHasTech(xml.iClassicalKnowledge, True, iCiv, False, False)
-            teamAustria.setHasTech(xml.iMonumentBuilding, True, iCiv, False, False)
-            teamAustria.setHasTech(xml.iPhilosophy, True, iCiv, False, False)
-            teamAustria.setHasTech(xml.iEducation, True, iCiv, False, False)
+                team(Civ.AUSTRIA).setHasTech(iTech, True, iCiv, False, False)
+            team(Civ.AUSTRIA).setHasTech(xml.iBlastFurnace, True, iCiv, False, False)
+            team(Civ.AUSTRIA).setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
+            team(Civ.AUSTRIA).setHasTech(xml.iGothicArchitecture, True, iCiv, False, False)
+            team(Civ.AUSTRIA).setHasTech(xml.iChivalry, True, iCiv, False, False)
+            team(Civ.AUSTRIA).setHasTech(xml.iAristocracy, True, iCiv, False, False)
+            team(Civ.AUSTRIA).setHasTech(xml.iPlateArmor, True, iCiv, False, False)
+            team(Civ.AUSTRIA).setHasTech(xml.iSiegeEngines, True, iCiv, False, False)
+            team(Civ.AUSTRIA).setHasTech(xml.iAlchemy, True, iCiv, False, False)
+            team(Civ.AUSTRIA).setHasTech(xml.iCivilService, True, iCiv, False, False)
+            team(Civ.AUSTRIA).setHasTech(xml.iLateenSails, True, iCiv, False, False)
+            team(Civ.AUSTRIA).setHasTech(xml.iGuilds, True, iCiv, False, False)
+            team(Civ.AUSTRIA).setHasTech(xml.iLiterature, True, iCiv, False, False)
+            team(Civ.AUSTRIA).setHasTech(xml.iClassicalKnowledge, True, iCiv, False, False)
+            team(Civ.AUSTRIA).setHasTech(xml.iMonumentBuilding, True, iCiv, False, False)
+            team(Civ.AUSTRIA).setHasTech(xml.iPhilosophy, True, iCiv, False, False)
+            team(Civ.AUSTRIA).setHasTech(xml.iEducation, True, iCiv, False, False)
 
         elif iCiv == Civ.OTTOMAN.value:
             for iTech in range(xml.iChivalry + 1):
-                teamTurkey.setHasTech(iTech, True, iCiv, False, False)
-            teamTurkey.setHasTech(xml.iGunpowder, True, iCiv, False, False)
-            teamTurkey.setHasTech(xml.iMilitaryTradition, True, iCiv, False, False)
-            teamTurkey.setHasTech(xml.iArabicKnowledge, True, iCiv, False, False)
+                team(Civ.OTTOMAN).setHasTech(iTech, True, iCiv, False, False)
+            team(Civ.OTTOMAN).setHasTech(xml.iGunpowder, True, iCiv, False, False)
+            team(Civ.OTTOMAN).setHasTech(xml.iMilitaryTradition, True, iCiv, False, False)
+            team(Civ.OTTOMAN).setHasTech(xml.iArabicKnowledge, True, iCiv, False, False)
 
         elif iCiv == Civ.MOSCOW.value:
             for iTech in range(xml.iFarriers + 1):
-                teamMoscow.setHasTech(iTech, True, iCiv, False, False)
-            teamMoscow.setHasTech(xml.iBlastFurnace, True, iCiv, False, False)
-            teamMoscow.setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
-            teamMoscow.setHasTech(xml.iGothicArchitecture, True, iCiv, False, False)
-            teamMoscow.setHasTech(xml.iChivalry, True, iCiv, False, False)
-            teamMoscow.setHasTech(xml.iAristocracy, True, iCiv, False, False)
-            teamMoscow.setHasTech(xml.iCivilService, True, iCiv, False, False)
-            teamMoscow.setHasTech(xml.iLiterature, True, iCiv, False, False)
-            teamMoscow.setHasTech(xml.iMonumentBuilding, True, iCiv, False, False)
-            teamMoscow.setHasTech(xml.iPlateArmor, True, iCiv, False, False)
-            teamMoscow.setHasTech(xml.iSiegeEngines, True, iCiv, False, False)
-            teamMoscow.setHasTech(xml.iLateenSails, True, iCiv, False, False)
-            teamMoscow.setHasTech(xml.iMapMaking, True, iCiv, False, False)
-            teamMoscow.setHasTech(xml.iClassicalKnowledge, True, iCiv, False, False)
-            teamMoscow.setHasTech(xml.iClockmaking, True, iCiv, False, False)
-            teamMoscow.setHasTech(xml.iAlchemy, True, iCiv, False, False)
-            teamMoscow.setHasTech(xml.iGuilds, True, iCiv, False, False)
-            teamMoscow.setHasTech(xml.iPhilosophy, True, iCiv, False, False)
-            teamMoscow.setHasTech(xml.iReplaceableParts, True, iCiv, False, False)
+                team(Civ.MOSCOW).setHasTech(iTech, True, iCiv, False, False)
+            team(Civ.MOSCOW).setHasTech(xml.iBlastFurnace, True, iCiv, False, False)
+            team(Civ.MOSCOW).setHasTech(xml.iCodeOfLaws, True, iCiv, False, False)
+            team(Civ.MOSCOW).setHasTech(xml.iGothicArchitecture, True, iCiv, False, False)
+            team(Civ.MOSCOW).setHasTech(xml.iChivalry, True, iCiv, False, False)
+            team(Civ.MOSCOW).setHasTech(xml.iAristocracy, True, iCiv, False, False)
+            team(Civ.MOSCOW).setHasTech(xml.iCivilService, True, iCiv, False, False)
+            team(Civ.MOSCOW).setHasTech(xml.iLiterature, True, iCiv, False, False)
+            team(Civ.MOSCOW).setHasTech(xml.iMonumentBuilding, True, iCiv, False, False)
+            team(Civ.MOSCOW).setHasTech(xml.iPlateArmor, True, iCiv, False, False)
+            team(Civ.MOSCOW).setHasTech(xml.iSiegeEngines, True, iCiv, False, False)
+            team(Civ.MOSCOW).setHasTech(xml.iLateenSails, True, iCiv, False, False)
+            team(Civ.MOSCOW).setHasTech(xml.iMapMaking, True, iCiv, False, False)
+            team(Civ.MOSCOW).setHasTech(xml.iClassicalKnowledge, True, iCiv, False, False)
+            team(Civ.MOSCOW).setHasTech(xml.iClockmaking, True, iCiv, False, False)
+            team(Civ.MOSCOW).setHasTech(xml.iAlchemy, True, iCiv, False, False)
+            team(Civ.MOSCOW).setHasTech(xml.iGuilds, True, iCiv, False, False)
+            team(Civ.MOSCOW).setHasTech(xml.iPhilosophy, True, iCiv, False, False)
+            team(Civ.MOSCOW).setHasTech(xml.iReplaceableParts, True, iCiv, False, False)
 
         elif iCiv == Civ.DUTCH.value:
             for iTech in range(xml.iAstronomy + 1):
-                teamDutch.setHasTech(iTech, True, iCiv, False, False)
+                team(Civ.DUTCH).setHasTech(iTech, True, iCiv, False, False)
 
         self.hitNeighboursStability(iCiv)
 
