@@ -12,7 +12,7 @@ import CityNameManager
 from StoredData import sd
 import random
 
-from CoreTypes import City, Civ, Religion, Promotion
+from CoreTypes import City, Civ, Religion, Promotion, Technology
 from MiscData import MessageData, NUM_CRUSADES
 from TimelineData import DateTurn
 from LocationsData import CITIES
@@ -1421,7 +1421,7 @@ class Crusades:
             iHuman = utils.getHumanID()
             pPlot = gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple())
             iVictim = pPlot.getPlotCity().getOwner()
-            if teamLeader.isHasTech(xml.iChivalry) or iVictim == iHuman:
+            if teamLeader.isHasTech(Technology.CHIVALRY.value) or iVictim == iHuman:
                 self.makeUnit(xml.iBurgundianPaladin, iLeader, iActiveCrusade, tPlot, 1)
                 self.makeUnit(xml.iTemplar, iLeader, iActiveCrusade, tPlot, 1)
                 self.makeUnit(xml.iTeutonic, iLeader, iActiveCrusade, tPlot, 1)
@@ -1443,7 +1443,7 @@ class Crusades:
         # if the Crusade was derailed
         else:
             iRougeModifier = 200
-            if teamLeader.isHasTech(xml.iChivalry):
+            if teamLeader.isHasTech(Technology.CHIVALRY.value):
                 self.makeUnit(xml.iKnight, iLeader, iActiveCrusade, tPlot, 1)
                 self.makeUnit(xml.iTeutonic, iLeader, iActiveCrusade, tPlot, 1)
                 self.makeUnit(xml.iLongSwordsman, iLeader, iActiveCrusade, tPlot, 1)

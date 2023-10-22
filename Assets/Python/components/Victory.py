@@ -13,6 +13,7 @@ from CoreTypes import (
     StabilityCategory,
     Religion,
     Improvement,
+    Technology,
 )
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
 import PyHelpers
@@ -794,7 +795,7 @@ class Victory:
             return
 
         # England UHV 3: Be the first to enter the Industrial age
-        if iTech == xml.iIndustrialTech:
+        if iTech == Technology.INDUSTRIAL_TECH.value:
             if self.isPossibleUHV(Civ.ENGLAND.value, 2, False):
                 if iPlayer == Civ.ENGLAND.value:
                     self.wonUHV(Civ.ENGLAND.value, 2)

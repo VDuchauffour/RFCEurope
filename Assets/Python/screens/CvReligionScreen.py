@@ -4,9 +4,8 @@ from CvPythonExtensions import *
 import PyHelpers
 import CvUtil
 import CvScreenEnums
-import XMLConsts as xml
 import RFCUtils
-from CoreTypes import Scenario, FaithPointBonusCategory
+from CoreTypes import Scenario, FaithPointBonusCategory, Technology
 
 utils = RFCUtils.RFCUtils()
 PyPlayer = PyHelpers.PyPlayer
@@ -368,7 +367,7 @@ class CvReligionScreen:
                 year = CyGame().getTurnYear(gc.getGame().getReligionGameTurnFounded(i))
 
                 # Absinthe: foundation text, based on the knowledge of Calendar, whether the foundation was before or after the Scenario start date, and the corresponding era
-                if tPlayer.isHasTech(xml.iCalendar):
+                if tPlayer.isHasTech(Technology.CALENDAR.value):
                     if year <= utils.getScenarioStartYear():
                         if utils.getScenario() == Scenario.i500AD:
                             szFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_500AD", ())

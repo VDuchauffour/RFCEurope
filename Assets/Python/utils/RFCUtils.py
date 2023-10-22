@@ -12,6 +12,7 @@ from CoreTypes import (
     Wonder,
     Promotion,
     Terrain,
+    Technology,
     Feature,
 )
 import CvUtil
@@ -299,7 +300,7 @@ class RFCUtils:
 
     # RiseAndFall
     def updateMinorTechs(self, iMinorCiv, iMajorCiv):
-        for t in range(xml.iNumTechs):
+        for t in range(len(Technology)):
             if gc.getTeam(gc.getPlayer(iMajorCiv).getTeam()).isHasTech(t):
                 gc.getTeam(gc.getPlayer(iMinorCiv).getTeam()).setHasTech(
                     t, True, iMinorCiv, False, False

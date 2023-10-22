@@ -32,7 +32,16 @@ import RFCEMaps
 
 from MiscData import MessageData
 from TimelineData import DateTurn
-from CoreTypes import Civ, City, Improvement, Religion, Scenario, UniquePower, StabilityCategory
+from CoreTypes import (
+    Civ,
+    City,
+    Improvement,
+    Religion,
+    Scenario,
+    UniquePower,
+    StabilityCategory,
+    Technology,
+)
 from LocationsData import CITIES
 
 gc = CyGlobalContext()
@@ -454,7 +463,7 @@ class CvRFCEventHandler:
                 self.vic.onCityBuilt(city, iOwner)  # needed in Victory.py
 
                 if gc.getTeam(gc.getPlayer(Civ.PORTUGAL.value).getTeam()).isHasTech(
-                    xml.iAstronomy
+                    Technology.ASTRONOMY.value
                 ):
                     city.setHasRealBuilding(xml.iPortugalFeitoria, True)
 
@@ -1000,7 +1009,7 @@ class CvRFCEventHandler:
         DataLoader.setup()  # Absinthe: also needed on loading saved games
         # pass
 
-        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(Consts.iNationalism)) and gc.getGame().getGameTurn() >= civilizations()[utils.getHumanID()].date.birth):
+        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(Technology.NATIONALISM.value)) and gc.getGame().getGameTurn() >= civilizations()[utils.getHumanID()].date.birth):
         # if (gc.getGame().getGameTurn() >= civilizations()[utils.getHumanID()].date.birth):
 
         # global objMercenaryUtils
@@ -1014,7 +1023,7 @@ class CvRFCEventHandler:
 
         self.mercs.onUnitPromoted(argsList)
 
-        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(Consts.iNationalism)) and gc.getGame().getGameTurn() >= civilizations()[utils.getHumanID()].date.birth):
+        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(Technology.NATIONALISM.value)) and gc.getGame().getGameTurn() >= civilizations()[utils.getHumanID()].date.birth):
         # if (gc.getGame().getGameTurn() >= civilizations()[utils.getHumanID()].date.birth):
         # 	pUnit, iPromotion = argsList
         # 	player = PyPlayer(pUnit.getOwner())
@@ -1028,7 +1037,7 @@ class CvRFCEventHandler:
 
         self.mercs.onUnitKilled(argsList)
 
-        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(Consts.iNationalism)) and gc.getGame().getGameTurn() >= civilizations()[utils.getHumanID()].date.birth):
+        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(Technology.NATIONALISM.value)) and gc.getGame().getGameTurn() >= civilizations()[utils.getHumanID()].date.birth):
         # if (gc.getGame().getGameTurn() >= civilizations()[utils.getHumanID()].date.birth):
 
         # unit, iAttacker = argsList
@@ -1101,7 +1110,7 @@ class CvRFCEventHandler:
             # picks a dead civ so that autoplay can be started with game.AIplay xx
             iDebugDeadCiv = Civ.BURGUNDY.value  # always dead in 500AD
             # 3Miro: not sure
-            # gc.getTeam(gc.getPlayer(iDebugDeadCiv).getTeam()).setHasTech(Consts.iCalendar, True, iDebugDeadCiv, False, False)
+            # gc.getTeam(gc.getPlayer(iDebugDeadCiv).getTeam()).setHasTech(Technology.CALENDAR.value, True, iDebugDeadCiv, False, False)
             utils.makeUnit(xml.iAxeman, iDebugDeadCiv, (0, 0), 1)
             gc.getGame().setActivePlayer(iDebugDeadCiv, False)
             gc.getPlayer(iDebugDeadCiv).setPlayable(True)

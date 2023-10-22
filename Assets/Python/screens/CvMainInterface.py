@@ -2,7 +2,7 @@
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
 from CoreData import civilizations
-from CoreTypes import Civ, SpecialParameter, Religion
+from CoreTypes import Civ, SpecialParameter, Religion, Technology
 import CvUtil
 import CvScreenEnums
 
@@ -3872,7 +3872,7 @@ class CvMainInterface:
                     or ePlayer == Civ.DUTCH.value
                     or ePlayer == Civ.DENMARK.value
                 ):
-                    if gc.getTeam(pPlayer.getTeam()).isHasTech(xml.iAstronomy):
+                    if gc.getTeam(pPlayer.getTeam()).isHasTech(Technology.ASTRONOMY.value):
                         if (
                             ePlayer == Civ.FRANCE.value
                             or ePlayer == Civ.PORTUGAL.value

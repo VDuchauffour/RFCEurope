@@ -23,6 +23,7 @@ from CoreTypes import (
     Scenario,
     SpecialParameter,
     Religion,
+    Technology,
 )
 
 # globals
@@ -671,25 +672,39 @@ class Companies:
             Company.DRAGON.value,
             Company.CALATRAVA.value,
         ]:
-            for iTech in [xml.iChivalry, xml.iPlateArmor, xml.iGuilds, xml.iMilitaryTradition]:
+            for iTech in [
+                Technology.CHIVALRY.value,
+                Technology.PLATE_ARMOR.value,
+                Technology.GUILDS.value,
+                Technology.MILITARY_TRADITION.value,
+            ]:
                 if ownerTeam.isHasTech(iTech):
                     iValue += 1
         elif iCompany == Company.HANSA.value:
-            for iTech in [xml.iGuilds, xml.iClockmaking, xml.iOptics, xml.iShipbuilding]:
+            for iTech in [
+                Technology.GUILDS.value,
+                Technology.CLOCKMAKING.value,
+                Technology.OPTICS.value,
+                Technology.SHIP_BUILDING.value,
+            ]:
                 if ownerTeam.isHasTech(iTech):
                     iValue += 1
         elif iCompany in [Company.MEDICI.value, Company.ST_GEORGE.value]:
             for iTech in [
-                xml.iBanking,
-                xml.iPaper,
-                xml.iClockmaking,
-                xml.iOptics,
-                xml.iShipbuilding,
+                Technology.BANKING.value,
+                Technology.PAPER.value,
+                Technology.CLOCKMAKING.value,
+                Technology.OPTICS.value,
+                Technology.SHIP_BUILDING.value,
             ]:
                 if ownerTeam.isHasTech(iTech):
                     iValue += 1
         elif iCompany == Company.AUGSBURG.value:
-            for iTech in [xml.iBanking, xml.iPaper, xml.iChemistry]:
+            for iTech in [
+                Technology.BANKING.value,
+                Technology.PAPER.value,
+                Technology.CHEMISTRY.value,
+            ]:
                 if ownerTeam.isHasTech(iTech):
                     iValue += 1
 

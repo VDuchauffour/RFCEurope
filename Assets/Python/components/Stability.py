@@ -16,6 +16,7 @@ from CoreTypes import (
     SpecialParameter,
     UniquePower,
     StabilityCategory,
+    Technology,
 )
 
 # import cPickle as pickle
@@ -107,15 +108,15 @@ class Stability:
 
             # Known techs which otherwise give instability should also give the penalty here
             for iTech in [
-                xml.iFeudalism,
-                xml.iGuilds,
-                xml.iGunpowder,
-                xml.iProfessionalArmy,
-                xml.iNationalism,
-                xml.iCivilService,
-                xml.iEconomics,
-                xml.iMachinery,
-                xml.iAristocracy,
+                Technology.FEUDALISM.value,
+                Technology.GUILDS.value,
+                Technology.GUNPOWDER.value,
+                Technology.PROFESSIONAL_ARMY.value,
+                Technology.NATIONALISM.value,
+                Technology.CIVIL_SERVICE.value,
+                Technology.ECONOMICS.value,
+                Technology.MACHINERY.value,
+                Technology.ARISTOCRACY.value,
             ]:
                 if teamPlayer.isHasTech(iTech):
                     gc.getPlayer(iPlayer).changeStabilityBase(StabilityCategory.ECONOMY.value, -1)
@@ -426,15 +427,15 @@ class Stability:
 
     def onTechAcquired(self, iTech, iPlayer):
         if iTech in [
-            xml.iFeudalism,
-            xml.iGuilds,
-            xml.iGunpowder,
-            xml.iProfessionalArmy,
-            xml.iNationalism,
-            xml.iCivilService,
-            xml.iEconomics,
-            xml.iMachinery,
-            xml.iAristocracy,
+            Technology.FEUDALISM.value,
+            Technology.GUILDS.value,
+            Technology.GUNPOWDER.value,
+            Technology.PROFESSIONAL_ARMY.value,
+            Technology.NATIONALISM.value,
+            Technology.CIVIL_SERVICE.value,
+            Technology.ECONOMICS.value,
+            Technology.MACHINERY.value,
+            Technology.ARISTOCRACY.value,
         ]:
             gc.getPlayer(iPlayer).changeStabilityBase(StabilityCategory.ECONOMY.value, -1)
         pass

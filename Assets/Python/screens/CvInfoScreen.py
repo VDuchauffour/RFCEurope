@@ -10,12 +10,11 @@ import CvUtil
 import string
 
 from LocationsData import COLONY_LOCATIONS
-import XMLConsts as xml
 import RFCUtils
 
 from PyHelpers import PyPlayer
 
-from CoreTypes import Colony, Scenario
+from CoreTypes import Colony, Scenario, Technology
 
 # globals
 gc = CyGlobalContext()
@@ -3170,7 +3169,7 @@ class CvInfoScreen:
                 tActivePlayer = gc.getTeam(pActivePlayer.getTeam())
 
                 # Absinthe: top5 city foundation text
-                if tActivePlayer.isHasTech(xml.iCalendar):
+                if tActivePlayer.isHasTech(Technology.CALENDAR.value):
                     if iTurnYear <= utils.getScenarioStartYear():
                         if utils.getScenario() == Scenario.i500AD:
                             szTurnFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_500AD", ())
@@ -3491,7 +3490,7 @@ class CvInfoScreen:
                     pActivePlayer = gc.getPlayer(iActivePlayer)
                     tActivePlayer = gc.getTeam(pActivePlayer.getTeam())
 
-                    if tActivePlayer.isHasTech(xml.iCalendar):
+                    if tActivePlayer.isHasTech(Technology.CALENDAR.value):
                         szTurnFounded = localText.getText("TXT_KEY_TIME_AD", (iTurnYear,))
                     elif iTurnYear >= 1500:
                         szTurnFounded = localText.getText("TXT_KEY_ERA_RENAISSANCE", ())
@@ -3665,7 +3664,7 @@ class CvInfoScreen:
                     if iTurnYear <= utils.getScenarioStartYear():
                         szTurnFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_START", ())
                     else:
-                        if tActivePlayer.isHasTech(xml.iCalendar):
+                        if tActivePlayer.isHasTech(Technology.CALENDAR.value):
                             szTurnFounded = localText.getText("TXT_KEY_TIME_AD", (iTurnYear,))
                         elif iTurnYear >= 1500:
                             szTurnFounded = localText.getText("TXT_KEY_ERA_RENAISSANCE", ())
@@ -4743,7 +4742,7 @@ class CvInfoScreen:
         tPlayer = gc.getTeam(pPlayer.getTeam())
 
         # Absinthe: based on the knowledge of Calendar and the corresponding era
-        if tPlayer.isHasTech(xml.iCalendar):
+        if tPlayer.isHasTech(Technology.CALENDAR.value):
             return localText.getText("TXT_KEY_TIME_AD", (year,))
         elif year >= 1500:
             return localText.getText("TXT_KEY_ERA_RENAISSANCE", ())

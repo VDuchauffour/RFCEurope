@@ -3,7 +3,7 @@
 from CvPythonExtensions import *
 from CoreData import civilizations
 from CoreFunctions import get_religion_by_id
-from CoreTypes import Civ, City, Civic, StabilityCategory, Religion
+from CoreTypes import Civ, City, Civic, StabilityCategory, Religion, Technology
 from LocationsData import CITIES
 from TimelineData import DateTurn
 import PyHelpers
@@ -626,7 +626,7 @@ class Religions:
                         # No chance for monastery if the selected player knows the Scientific Method tech (which obsoletes monasteries), otherwise 50-50% for temple and monastery
                         teamPlayer = gc.getTeam(pPlayer.getTeam())
                         if (
-                            not teamPlayer.isHasTech(xml.iScientificMethod)
+                            not teamPlayer.isHasTech(Technology.SCIENTIFIC_METHOD.value)
                             and gc.getGame().getSorenRandNum(2, "random Catholic BuildingType")
                             == 0
                         ):
@@ -657,7 +657,7 @@ class Religions:
                     pPlayer = gc.getPlayer(iChosenPlayer)
                     teamPlayer = gc.getTeam(pPlayer.getTeam())
                     # look for techs which are known by the Pope but unknown to the chosen civ
-                    for iTech in range(xml.iNumTechs):
+                    for iTech in range(len(Technology)):
                         if teamPope.isHasTech(iTech):
                             if not teamPlayer.isHasTech(iTech):
                                 # chance for actually giving this tech, based on faith points
@@ -697,7 +697,7 @@ class Religions:
             )  # all Catholic civs, open borders with the Pope doesn't matter here
             pPope = gc.getPlayer(Civ.POPE.value)
             teamPope = gc.getTeam(pPope.getTeam())
-            for iTech in range(xml.iNumTechs):
+            for iTech in range(len(Technology)):
                 if not teamPope.isHasTech(iTech):
                     iTechCounter = 0
                     for iPlayer in lCatholicCivs:
@@ -1079,7 +1079,7 @@ class Religions:
             self.reformationno(iHuman)
 
     def onTechAcquired(self, iTech, iPlayer):
-        if iTech == xml.iPrintingPress:
+        if iTech == Technology.PRINTING_PRESS.value:
             if gc.getPlayer(iPlayer).getStateReligion() == Religion.CATHOLICISM.value:
                 if not gc.getGame().isReligionFounded(Religion.PROTESTANTISM.value):
                     gc.getPlayer(iPlayer).foundReligion(
