@@ -1,5 +1,5 @@
 from CvPythonExtensions import *
-from CoreData import civilizations, COMPANIES
+from CoreData import civilization, civilizations, COMPANIES
 from CoreStructures import player, team
 from CoreTypes import (
     City,
@@ -753,9 +753,9 @@ class Victory:
         # Sweden UHV 2: Raze 5 Catholic cities while being Protestant by 1660
         if iPlayer == Civ.SWEDEN.value:
             if self.isPossibleUHV(iPlayer, 1, False):
-                if civilizations()[
+                if civilization(
                     Civ.SWEDEN
-                ].player.getStateReligion() == Religion.PROTESTANTISM.value and city.isHasReligion(
+                ).state_religion() == Religion.PROTESTANTISM.value and city.isHasReligion(
                     Religion.CATHOLICISM.value
                 ):
                     iRazed = player(Civ.SWEDEN).getUHVCounter(1) + 1
@@ -1343,9 +1343,9 @@ class Victory:
                     >= ProvinceStatus.CONQUER.value
                 ):
                     self.wonUHV(Civ.NOVGOROD.value, 2)
-                elif civilizations()[Civ.MOSCOW].is_alive() and civilizations()[
-                    Civ.MOSCOW
-                ].team.isVassal(team(Civ.NOVGOROD).getID()):
+                elif civilization(Civ.MOSCOW).is_alive() and civilization(Civ.MOSCOW).is_vassal(
+                    Civ.NOVGOROD
+                ):
                     self.wonUHV(Civ.NOVGOROD.value, 2)
                 else:
                     self.lostUHV(Civ.NOVGOROD.value, 2)
@@ -1375,9 +1375,9 @@ class Victory:
         # UHV 3: Produce 25000 food by 1300
         # The counter should be updated until the deadline for the challenge UHVs, even after UHV completion
         if iGameTurn < DateTurn.i1300AD + 2:
-            iFood = player(Civ.KIEV).getUHVCounter(2) + civilizations()[
-                Civ.KIEV
-            ].player.calculateTotalYield(YieldTypes.YIELD_FOOD)
+            iFood = player(Civ.KIEV).getUHVCounter(2) + player(Civ.KIEV).calculateTotalYield(
+                YieldTypes.YIELD_FOOD
+            )
             player(Civ.KIEV).setUHVCounter(2, iFood)
             if self.isPossibleUHV(Civ.KIEV.value, 2, True):
                 if iFood > 25000:
@@ -1549,9 +1549,7 @@ class Victory:
                     for iEnemy in civilizations().majors().ids():
                         if iEnemy in [Civ.SCOTLAND.value, Civ.FRANCE.value]:
                             continue
-                        if team(Civ.FRANCE).isAtWar(iEnemy) and civilizations()[
-                            Civ.SCOTLAND
-                        ].team.isAtWar(iEnemy):
+                        if team(Civ.FRANCE).isAtWar(iEnemy) and team(Civ.SCOTLAND).isAtWar(iEnemy):
                             iScore += 2
                 # Different religion from France also gives a penalty, same religion gives a bonus (but only if both have a state religion)
                 if (
@@ -1696,17 +1694,20 @@ class Victory:
         if DateTurn.i1164AD <= iGameTurn <= DateTurn.i1578AD:
             if self.isPossibleUHV(Civ.MOROCCO.value, 2, True):
                 bConq = True
-                if civilizations()[Civ.CASTILLE].is_alive() and not civilizations()[
-                    Civ.CASTILLE
-                ].team.isVassal(team(Civ.MOROCCO).getID()):
-                    bConq = False
-                elif civilizations()[Civ.PORTUGAL].is_alive() and not civilizations()[
-                    Civ.PORTUGAL
-                ].team.isVassal(team(Civ.MOROCCO).getID()):
-                    bConq = False
-                elif civilizations()[Civ.ARAGON].is_alive() and not civilizations()[
-                    Civ.ARAGON
-                ].team.isVassal(team(Civ.MOROCCO).getID()):
+                if (
+                    (
+                        civilization(Civ.CASTILLE).is_alive()
+                        and not civilization(Civ.CASTILLE).is_vassal(Civ.MOROCCO)
+                    )
+                    or (
+                        civilization(Civ.PORTUGAL).is_alive()
+                        and not civilization(Civ.PORTUGAL).is_vassal(Civ.MOROCCO)
+                    )
+                    or (
+                        civilization(Civ.ARAGON).is_alive()
+                        and not civilization(Civ.ARAGON).is_vassal(Civ.MOROCCO)
+                    )
+                ):
                     bConq = False
 
                 if bConq:
@@ -1843,17 +1844,20 @@ class Victory:
         if DateTurn.i1380AD <= iGameTurn <= DateTurn.i1795AD:
             if self.isPossibleUHV(Civ.LITHUANIA.value, 2, True):
                 bConq = True
-                if civilizations()[Civ.MOSCOW].is_alive() and not civilizations()[
-                    Civ.MOSCOW
-                ].team.isVassal(team(Civ.LITHUANIA).getID()):
-                    bConq = False
-                elif civilizations()[Civ.NOVGOROD].is_alive() and not civilizations()[
-                    Civ.NOVGOROD
-                ].team.isVassal(team(Civ.LITHUANIA).getID()):
-                    bConq = False
-                elif civilizations()[Civ.PRUSSIA].is_alive() and not civilizations()[
-                    Civ.PRUSSIA
-                ].team.isVassal(team(Civ.LITHUANIA).getID()):
+                if (
+                    (
+                        civilization(Civ.MOSCOW).is_alive()
+                        and not civilization(Civ.MOSCOW).is_vassal(Civ.LITHUANIA)
+                    )
+                    or (
+                        civilization(Civ.NOVGOROD).is_alive()
+                        and not civilization(Civ.NOVGOROD).is_vassal(Civ.LITHUANIA)
+                    )
+                    or (
+                        civilization(Civ.PRUSSIA).is_alive()
+                        and not civilization(Civ.PRUSSIA).is_vassal(Civ.LITHUANIA)
+                    )
+                ):
                     bConq = False
 
                 if bConq:
