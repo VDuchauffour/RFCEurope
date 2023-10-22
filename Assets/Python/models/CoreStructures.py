@@ -1,3 +1,4 @@
+from PyUtils import any
 import CoreTypes
 from BaseStructures import BaseFactory, EnumDataMapper, Item, ItemCollection
 from Errors import NotTypeExpectedError
@@ -131,6 +132,18 @@ class Civilization(Item):
         """Make peace with the civilization with `id`."""
         self.team.makePeace(teamtype(id))
 
+    def is_vassal(self, id):
+        """Return True if the civilization is the vassal of `id`."""
+        return self.team.isVassal(teamtype(id))
+
+    def is_a_vassal(self):
+        """Return True if the civilization is a vassal of another."""
+        return self.team.isAVassal()
+
+    def is_a_master(self):
+        """Return True if the civilization is not a vassal."""
+        return not self.is_a_vassal()
+
 
 class Civilizations(ItemCollection):
     """A simple class to handle a set of civilizations."""
@@ -183,7 +196,13 @@ class Civilizations(ItemCollection):
 
     def at_war(self, id):
         """Return all civilizations that are at war with `id`."""
-        return self.filter(lambda c: c.team.isAtWar(self[id].team))
+        return self.filter(lambda c: c.at_war(id))
+
+    def vassals(self):
+        return self.filter(lambda c: any([c.is_vassal(other) for other in self]))
+
+    def masters(self):
+        return self.filter(lambda c: c not in self.vassals())
 
 
 class CivilizationsFactory(BaseFactory):
