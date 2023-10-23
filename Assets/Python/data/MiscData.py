@@ -1,5 +1,5 @@
 from BaseStructures import EnumDataMapper
-from CoreTypes import Civ, Company, Religion, Unit
+from CoreTypes import Building, Civ, Company, Religion, Unit, Wonder
 from CoreStructures import CivDataMapper, CompanyDataMapper
 
 WORLD_WIDTH = 100
@@ -159,3 +159,54 @@ RELIGION_PERSECUTION_ORDER = EnumDataMapper(
         ],
     }
 )
+
+CATHOLIC_BUILDINGS = [
+    Building.CATHOLIC_TEMPLE,
+    Building.CATHOLIC_MONASTERY,
+    Building.CATHOLIC_CATHEDRAL,
+]
+
+ORTHODOX_BUILDINGS = [
+    Building.ORTHODOX_TEMPLE,
+    Building.ORTHODOX_MONASTERY,
+    Building.ORTHODOX_CATHEDRAL,
+]
+
+PROTESTANT_BUILDINGS = [
+    Building.PROTESTANT_TEMPLE,
+    Building.PROTESTANT_SCHOOL,
+    Building.PROTESTANT_CATHEDRAL,
+]
+
+ISLAMIC_BUILDINGS = [
+    Building.ISLAMIC_TEMPLE,
+    Building.ISLAMIC_CATHEDRAL,
+    Building.ISLAMIC_MADRASSA,
+]
+
+RELIGIOUS_WONDERS = [
+    Wonder.MONASTERY_OF_CLUNY,
+    Wonder.WESTMINSTER,
+    Wonder.KRAK_DES_CHEVALIERS,
+    Wonder.NOTRE_DAME,
+    Wonder.PALAIS_DES_PAPES,
+    Wonder.ST_BASIL,
+    Wonder.SOPHIA_KIEV,
+    Wonder.ST_CATHERINE_MONASTERY,
+    Wonder.SISTINE_CHAPEL,
+    Wonder.JASNA_GORA,
+    Wonder.MONT_SAINT_MICHEL,
+    Wonder.BOYANA_CHURCH,
+    Wonder.FLORENCE_DUOMO,
+    Wonder.BORGUND_STAVE_CHURCH,
+    Wonder.DOME_ROCK,
+    Wonder.THOMASKIRCHE,
+    Wonder.BLUE_MOSQUE,
+    Wonder.SELIMIYE_MOSQUE,
+    Wonder.MOSQUE_OF_KAIROUAN,
+    Wonder.KOUTOUBIA_MOSQUE,
+    Wonder.LA_MEZQUITA,
+    Wonder.SAN_MARCO,
+    Wonder.STEPHANSDOM,
+    Wonder.ROUND_CHURCH,
+]

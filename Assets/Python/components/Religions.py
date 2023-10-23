@@ -23,7 +23,14 @@ import RFCUtils
 import RFCEMaps
 from StoredData import sd
 
-from MiscData import MessageData
+from MiscData import (
+    CATHOLIC_BUILDINGS,
+    ISLAMIC_BUILDINGS,
+    ORTHODOX_BUILDINGS,
+    PROTESTANT_BUILDINGS,
+    RELIGIOUS_WONDERS,
+    MessageData,
+)
 
 # globals
 gc = CyGlobalContext()
@@ -41,55 +48,6 @@ tMainzTL = (49, 41)
 tMainzBR = (55, 52)
 tPolandTL = (64, 43)
 tPolandBR = (75, 54)
-
-### Religious Buildings that give Faith Points ###
-tCatholicBuildings = [
-    Building.CATHOLIC_TEMPLE.value,
-    Building.CATHOLIC_MONASTERY.value,
-    Building.CATHOLIC_CATHEDRAL.value,
-]
-tOrthodoxBuildings = [
-    Building.ORTHODOX_TEMPLE.value,
-    Building.ORTHODOX_MONASTERY.value,
-    Building.ORTHODOX_CATHEDRAL.value,
-]
-tProtestantBuildings = [
-    Building.PROTESTANT_TEMPLE.value,
-    Building.PROTESTANT_SCHOOL.value,
-    Building.PROTESTANT_CATHEDRAL.value,
-]
-tIslamicBuildings = [
-    Building.ISLAMIC_TEMPLE.value,
-    Building.ISLAMIC_CATHEDRAL.value,
-    Building.ISLAMIC_MADRASSA.value,
-]
-tReligiousWonders = [
-    Wonder.MONASTERY_OF_CLUNY.value,
-    Wonder.WESTMINSTER.value,
-    Wonder.KRAK_DES_CHEVALIERS.value,
-    Wonder.NOTRE_DAME.value,
-    Wonder.PALAIS_DES_PAPES.value,
-    Wonder.ST_BASIL.value,
-    Wonder.SOPHIA_KIEV.value,
-    Wonder.ST_CATHERINE_MONASTERY.value,
-    Wonder.SISTINE_CHAPEL.value,
-    Wonder.JASNA_GORA.value,
-    Wonder.MONT_SAINT_MICHEL.value,
-    Wonder.BOYANA_CHURCH.value,
-    Wonder.FLORENCE_DUOMO.value,
-    Wonder.BORGUND_STAVE_CHURCH.value,
-    Wonder.DOME_ROCK.value,
-    Wonder.THOMASKIRCHE.value,
-    Wonder.BLUE_MOSQUE.value,
-    Wonder.SELIMIYE_MOSQUE.value,
-    Wonder.MOSQUE_OF_KAIROUAN.value,
-    Wonder.KOUTOUBIA_MOSQUE.value,
-    Wonder.LA_MEZQUITA.value,
-    Wonder.SAN_MARCO.value,
-    Wonder.STEPHANSDOM.value,
-    Wonder.ROUND_CHURCH.value,
-]
-
 
 ### Reformation Begin ###
 # Matrix determines how likely the AI is to switch to Protestantism
@@ -756,19 +714,19 @@ class Religions:
         pPlayer = gc.getPlayer(iPlayer)
         iStateReligion = pPlayer.getStateReligion()
         if iStateReligion != -1:
-            if iStateReligion == Religion.CATHOLICISM.value and iBuilding in tCatholicBuildings:
+            if iStateReligion == Religion.CATHOLICISM.value and iBuilding in CATHOLIC_BUILDINGS:
                 pPlayer.changeFaith(1)
                 if iBuilding == Building.CATHOLIC_CATHEDRAL.value:
                     pPlayer.changeFaith(3)
                 if pPlayer.countNumBuildings(Wonder.PALAIS_DES_PAPES.value) > 0:
                     pPlayer.changeFaith(1)
-            elif iStateReligion == Religion.ORTHODOXY.value and iBuilding in tOrthodoxBuildings:
+            elif iStateReligion == Religion.ORTHODOXY.value and iBuilding in ORTHODOX_BUILDINGS:
                 pPlayer.changeFaith(1)
                 if iBuilding == Building.ORTHODOX_CATHEDRAL.value:
                     pPlayer.changeFaith(3)
                 if pPlayer.countNumBuildings(Wonder.PALAIS_DES_PAPES.value) > 0:
                     pPlayer.changeFaith(1)
-            elif iStateReligion == Religion.ISLAM.value and iBuilding in tIslamicBuildings:
+            elif iStateReligion == Religion.ISLAM.value and iBuilding in ISLAMIC_BUILDINGS:
                 pPlayer.changeFaith(1)
                 if iBuilding == Building.ISLAMIC_CATHEDRAL.value:
                     pPlayer.changeFaith(3)
@@ -776,7 +734,7 @@ class Religions:
                     pPlayer.changeFaith(1)
             elif (
                 iStateReligion == Religion.PROTESTANTISM.value
-                and iBuilding in tProtestantBuildings
+                and iBuilding in PROTESTANT_BUILDINGS
             ):
                 pPlayer.changeFaith(1)
                 if iBuilding == Building.PROTESTANT_CATHEDRAL.value:
@@ -796,7 +754,7 @@ class Religions:
             if utils.getBaseBuilding(iBuilding) in [Building.WALLS.value, Building.CASTLE.value]:
                 if pPlayer.countNumBuildings(Wonder.MONT_SAINT_MICHEL.value) > 0:
                     pPlayer.changeFaith(1)
-        if iBuilding in tReligiousWonders:
+        if iBuilding in RELIGIOUS_WONDERS:
             pPlayer.changeFaith(4)
             if pPlayer.countNumBuildings(Wonder.PALAIS_DES_PAPES.value) > 0:
                 pPlayer.changeFaith(1)
