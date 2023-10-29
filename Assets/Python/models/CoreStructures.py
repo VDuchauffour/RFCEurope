@@ -1,4 +1,5 @@
 from PyUtils import any
+import CoreFunctions as cf
 import CoreTypes
 from BaseStructures import BaseFactory, EnumDataMapper, Item, ItemCollection
 from Errors import NotTypeExpectedError
@@ -101,6 +102,10 @@ class Civilization(Item):
     def has_a_state_religion(self):
         """Return True if the civilization has a state religion."""
         return self.state_religion() != -1
+
+    def has_state_religion(self, religion):
+        """Return True if the civilization has the given religion as state religion."""
+        return self.state_religion() == cf.religion(religion)
 
     def is_christian(self):
         """Return True if the civilization is christian."""
