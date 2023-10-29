@@ -955,6 +955,46 @@ CIV_AI_STOP_BIRTH_THRESHOLD = CivDataMapper(
     }
 )
 
+# Matrix determines how likely the AI is to switch to Protestantism
+CIV_AI_REFORMATION_THRESHOLD = CivDataMapper(
+    {
+        Civ.BYZANTIUM: 20,
+        Civ.FRANCE: 40,
+        Civ.ARABIA: 40,
+        Civ.BULGARIA: 20,
+        Civ.CORDOBA: 40,
+        Civ.VENECIA: 30,
+        Civ.BURGUNDY: 50,
+        Civ.GERMANY: 90,
+        Civ.NOVGOROD: 30,
+        Civ.NORWAY: 80,
+        Civ.KIEV: 30,
+        Civ.HUNGARY: 50,
+        Civ.CASTILLE: 10,
+        Civ.DENMARK: 80,
+        Civ.SCOTLAND: 80,
+        Civ.POLAND: 30,
+        Civ.GENOA: 20,
+        Civ.MOROCCO: 40,
+        Civ.ENGLAND: 80,
+        Civ.PORTUGAL: 20,
+        Civ.ARAGON: 30,
+        Civ.SWEDEN: 90,
+        Civ.PRUSSIA: 90,
+        Civ.LITHUANIA: 30,
+        Civ.AUSTRIA: 20,
+        Civ.OTTOMAN: 40,
+        Civ.MOSCOW: 30,
+        Civ.DUTCH: 90,
+        Civ.POPE: 0,
+        Civ.INDEPENDENT: 40,
+        Civ.INDEPENDENT_2: 40,
+        Civ.INDEPENDENT_3: 40,
+        Civ.INDEPENDENT_4: 40,
+        Civ.BARBARIAN: 40,
+    }
+)
+
 # Used to tune frequency of resurrections.
 CIV_RESPAWNING_THRESHOLD = CivDataMapper(
     {

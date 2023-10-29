@@ -1,7 +1,14 @@
-# Rhye's and Fall of Civilization: Europe - Religions management
-
-from CvPythonExtensions import *
-from CoreData import civilizations, civilization
+from CvPythonExtensions import (
+    CyGlobalContext,
+    CyTranslator,
+    CyInterface,
+    ColorTypes,
+    EventContextTypes,
+    InterfaceMessageTypes,
+    UnitAITypes,
+    DirectionTypes,
+)
+from CoreData import civilization, civilizations
 from CoreFunctions import get_religion_by_id
 from CoreTypes import (
     Building,
@@ -22,6 +29,7 @@ import XMLConsts as xml
 import RFCUtils
 import RFCEMaps
 from StoredData import sd
+from PyUtils import percentage_chance
 
 from MiscData import (
     CATHOLIC_BUILDINGS,
@@ -49,44 +57,6 @@ tMainzBR = (55, 52)
 tPolandTL = (64, 43)
 tPolandBR = (75, 54)
 
-### Reformation Begin ###
-# Matrix determines how likely the AI is to switch to Protestantism
-lReformationMatrix = [
-    20,  # Byzantium
-    40,  # France
-    40,  # Arabia
-    20,  # Bulgaria
-    40,  # Cordoba
-    30,  # Venice
-    50,  # Burgundy
-    90,  # Germany
-    30,  # Novgorod
-    80,  # Norway
-    30,  # Kiev
-    50,  # Hungary
-    10,  # Spain
-    80,  # Denmark
-    80,  # Scotland
-    30,  # Poland
-    20,  # Genoa
-    40,  # Morocco
-    80,  # England
-    20,  # Portugal
-    30,  # Aragon
-    90,  # Sweden
-    90,  # Prussia
-    30,  # Lithuania
-    20,  # Austria
-    40,  # Turkey
-    30,  # Moscow
-    90,  # Dutch
-    0,  # Rome
-    40,  # Indies and Barbs
-    40,
-    40,
-    40,
-    40,
-]
 
 # Reformation neighbours spread reformation choice to each other
 lReformationNeighbours = [
@@ -1115,16 +1085,14 @@ class Religions:
         if iCiv == Civ.POPE.value:
             return  # Absinthe: totally exclude the Pope from the Reformation
 
-        if gc.getPlayer(iCiv).getStateReligion() == Religion.PROTESTANTISM.value:
+        if civilization(iCiv).has_state_religion(Religion.PROTESTANTISM) or percentage_chance(
+            civilization(iCiv).ai.reformation_threshold
+        ):
             self.reformationyes(iCiv)
-        elif gc.getPlayer(iCiv).isHuman():
+        elif civilization(iCiv).is_human():
             self.reformationPopup()
         else:
-            rndnum = gc.getGame().getSorenRandNum(100, "Reformation")
-            if rndnum <= lReformationMatrix[iCiv]:
-                self.reformationyes(iCiv)
-            else:
-                self.reformationno(iCiv)
+            self.reformationno(iCiv)
 
     def reformationyes(self, iCiv):
         iFaith = 0
@@ -1157,7 +1125,7 @@ class Religions:
             ):
                 rndnum = gc.getGame().getSorenRandNum(100, "ReformationAnyway")
                 if rndnum <= 25 + (
-                    lReformationMatrix[iCiv] / 2
+                    civilization(iCiv).ai.reformation_threshold / 2
                 ):  # only add the religion, chance between 30% and 70%, based on lReformationMatrix
                     city.setHasReligion(
                         Religion.PROTESTANTISM.value, True, False, False
@@ -1203,7 +1171,7 @@ class Religions:
         elif pCity.getPopulation() > 2:
             iPopBonus = 5
         # civ-specific modifier, between 3 and 27
-        iCivRef = (lReformationMatrix[pCity.getOwner()] / 10) * 3
+        iCivRef = (civilization(pCity).ai.reformation_threshold / 10) * 3
         # AI bonus
         if utils.getHumanID() == iCiv:
             iAIBonus = 10
@@ -1247,10 +1215,11 @@ class Religions:
                 iFaith += 2
 
             # remove Catholicism if there are no religious buildings left, and there are no catholic wonders in the city
-            if (
-                gc.getGame().getSorenRandNum(100, "Remove Religion")
-                < 55 + ((lReformationMatrix[iCiv] / 5) * 2) - iPopBonus
-            ):  # range goes from 39-59% to 71-91%, based on lReformationMatrix
+            # range goes from 39-59% to 71-91%, based on lReformationMatrix
+            if percentage_chance(
+                55 + ((civilization(iCiv).ai.reformation_threshold / 5) * 2) - iPopBonus,
+                strict=True,
+            ):
                 lCathlist = [
                     Building.CATHOLIC_TEMPLE.value,
                     Building.CATHOLIC_CHAPEL.value,
@@ -1301,7 +1270,7 @@ class Religions:
         elif pCity.getPopulation() > 3:
             iPopBonus = 10
         # civ-specific, between 3 and 27
-        iCivRef = (lReformationMatrix[pCity.getOwner()] / 10) * 3
+        iCivRef = (civilization(pCity).ai.reformation_threshold / 10) * 3
 
         # spread the religion: range goes from 23-53% (Catholicism-lovers) to 47-77% (Protestantism-lovers), based on lReformationMatrix
         if gc.getGame().getSorenRandNum(100, "Religion spread to City") < 20 + iCivRef + iPopBonus:
@@ -1334,11 +1303,11 @@ class Religions:
                 pCity.setHasRealBuilding(Building.PROTESTANT_CATHEDRAL.value, True)
 
             # remove Catholicism if there are no religious buildings left, and there are no catholic wonders in the city
-            if gc.getGame().getSorenRandNum(100, "Remove Religion") < 50 + (
-                (lReformationMatrix[iCiv] / 5) * 2
-            ) - (
-                iPopBonus / 2
-            ):  # range goes from 39-54% to 71-86%, based on lReformationMatrix
+            # range goes from 39-54% to 71-86%, based on lReformationMatrix
+            if percentage_chance(
+                50 + ((civilization(iCiv).ai.reformation_threshold / 5) * 2) - (iPopBonus / 2),
+                strict=True,
+            ):
                 lCathlist = [
                     Building.CATHOLIC_TEMPLE.value,
                     Building.CATHOLIC_CHAPEL.value,
@@ -1400,8 +1369,8 @@ class Religions:
             if pPlayer.isAlive() and pPlayer.getStateReligion() == Religion.CATHOLICISM.value:
                 if pPlayer.isHuman():
                     self.doCounterReformationHuman(iPlayer)
-                elif lReformationMatrix[iPlayer] < gc.getGame().getSorenRandNum(
-                    100, "Counter Reformation AI"
+                elif percentage_chance(
+                    civilization(iPlayer).ai.reformation_threshold, strict=True, reverse=True
                 ):
                     self.doCounterReformationYes(iPlayer)
                 else:

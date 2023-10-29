@@ -1,4 +1,5 @@
 from CivilizationsData import (
+    CIV_AI_REFORMATION_THRESHOLD,
     CIV_AI_STOP_BIRTH_THRESHOLD,
     CIV_HIRE_MERCENARY_THRESHOLD,
     CIV_INITIAL_CONTACTS,
@@ -36,7 +37,7 @@ from TimelineData import (
 )
 
 try:
-    from CvPythonExtensions import CyGlobalContext, CyPlayer, CyPlot, CyUnit
+    from CvPythonExtensions import CyGlobalContext, CyPlayer, CyPlot, CyUnit, CyCity
 
     gc = CyGlobalContext()
 
@@ -68,6 +69,7 @@ CIVILIZATIONS_BASE = (
     .attach("tolerance", CIV_RELIGIOUS_TOLERANCE, key="religion")
     .attach("stop_birth_threshold", CIV_AI_STOP_BIRTH_THRESHOLD, key="ai")
     .attach("stability_bonus", CIV_STABILITY_AI_BONUS, key="ai")
+    .attach("reformation_threshold", CIV_AI_REFORMATION_THRESHOLD, key="ai")
     .attach("hire_mercenary_threshold", CIV_HIRE_MERCENARY_THRESHOLD, key="misc")
     .attach("dawn_of_man", CIV_DAWN_OF_MAN_VALUES, key="misc")
     .attach("birth", CIV_BIRTHDATE, key="date")
@@ -121,7 +123,7 @@ def civilization(identifier=None):
     if isinstance(identifier, (CyPlayer, CyUnit)):
         return civilizations()[get_civ_by_id(identifier.getCivilizationType())]
 
-    if isinstance(identifier, CyPlot):
+    if isinstance(identifier, (CyPlot, CyCity)):
         if not identifier.isOwned():
             return None
         return civilizations()[identifier.getOwner()]

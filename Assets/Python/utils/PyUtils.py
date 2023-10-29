@@ -82,14 +82,23 @@ def rand(left, right=None):
     return randint(left, right)
 
 
-def chance(threshold, percentage, strict=False):
-    """Return True if a random number between 0 and `threshold` is less than or equal to `percentage`. If `strict` is True the chosen operator is less than."""
+def chance(threshold, percentage, strict=False, reverse=False):
+    """Return True if a random number between 0 and `threshold` is less than or equal to `percentage`.
+    If `strict` is True the chosen operator is less than. If `reverse` is True, the comparison
+    order is reversed.
+    """
     if not 0 <= percentage <= threshold or not isinstance(percentage, int):
         raise ValueError("`percentage` must an int, received %s" % percentage)
-    if strict:
-        op = operator.__lt__
+    if reverse:
+        if strict:
+            op = operator.__gt__
+        else:
+            op = operator.__ge__
     else:
-        op = operator.__le__
+        if strict:
+            op = operator.__lt__
+        else:
+            op = operator.__le__
     return op(rand(threshold), percentage)
 
 
