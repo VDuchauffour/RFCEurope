@@ -98,9 +98,9 @@ class Civilization(Item):
         """Return state religion of the civilization."""
         return self.player.getStateReligion()
 
-    def has_state_religion(self):
-        """Return True if the civilization has no state religion."""
-        return self.state_religion() == -1
+    def has_a_state_religion(self):
+        """Return True if the civilization has a state religion."""
+        return self.state_religion() != -1
 
     def is_christian(self):
         """Return True if the civilization is christian."""

@@ -1570,8 +1570,8 @@ class Victory:
                             iScore += 2
                 # Different religion from France also gives a penalty, same religion gives a bonus (but only if both have a state religion)
                 if (
-                    civilization(Civ.SCOTLAND).has_state_religion()
-                    and civilization(Civ.FRANCE).has_state_religion()
+                    civilization(Civ.SCOTLAND).has_a_state_religion()
+                    and civilization(Civ.FRANCE).has_a_state_religion()
                 ):
                     if (
                         civilization(Civ.SCOTLAND).state_religion()
@@ -1829,7 +1829,7 @@ class Victory:
             )
             player(Civ.LITHUANIA).setUHVCounter(0, iCulture)
             if self.isPossibleUHV(Civ.LITHUANIA.value, 0, True):
-                if not civilization(Civ.LITHUANIA).has_state_religion():
+                if not civilization(Civ.LITHUANIA).has_a_state_religion():
                     self.lostUHV(Civ.LITHUANIA.value, 0)
                 else:
                     if iCulture >= 2500:
