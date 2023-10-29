@@ -1,7 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Stability
 
 from CvPythonExtensions import *
-from CoreData import civilizations
+from CoreData import civilizations, civilization
 import PyHelpers
 
 from MiscData import MessageData
@@ -133,7 +133,7 @@ class Stability:
             if iPlayer != utils.getHumanID():
                 pPlayer.changeStabilityBase(
                     StabilityCategory.EXPANSION.value,
-                    civilizations()[iPlayer].ai.stability_bonus,
+                    civilization(iPlayer).ai.stability_bonus,
                 )
 
         # Absinthe: update Byzantine stability on the start of the game
@@ -261,12 +261,12 @@ class Stability:
 
         # Absinthe: Collapse dates for AI nations
         if (
-            iGameTurn > civilizations()[iPlayer].date.collapse
+            iGameTurn > civilization(iPlayer).date.collapse
             and iPlayer != utils.getHumanID()
             and pPlayer.isAlive()
         ):
             # Absinthe: -1 stability every 4 turns up to a total of -15 stability
-            if iGameTurn % 4 == 0 and iGameTurn <= civilizations()[iPlayer].date.collapse + 60:
+            if iGameTurn % 4 == 0 and iGameTurn <= civilization(iPlayer).date.collapse + 60:
                 pPlayer.changeStabilityBase(StabilityCategory.CITIES.value, -1)
 
     def refreshBaseStability(
@@ -361,7 +361,7 @@ class Stability:
 
         if (
             iOwner < civilizations().majors().len()
-            and (city.getX(), city.getY()) == civilizations()[iOwner].location.capital.to_tuple()
+            and (city.getX(), city.getY()) == civilization(iOwner).location.capital.to_tuple()
         ):
             if iOwner == Civ.SCOTLAND.value:  # Scotland UP part 2
                 pOwner.changeStabilityBase(StabilityCategory.EXPANSION.value, -5)
@@ -516,7 +516,7 @@ class Stability:
                 iRespawnTurn = utils.getLastRespawnTurn(iPlayer)
                 if (
                     pPlayer.isAlive()
-                    and iGameTurn >= civilizations()[iPlayer].date.birth + 15
+                    and iGameTurn >= civilization(iPlayer).date.birth + 15
                     and iGameTurn >= iRespawnTurn + 10
                 ):
                     iStability = pPlayer.getStability()
@@ -553,7 +553,7 @@ class Stability:
                                     rnf.revoltCity(iPlayer, False)
                             elif (
                                 iRand3 < 1
-                                and iGameTurn >= civilizations()[iPlayer].date.birth + 20
+                                and iGameTurn >= civilization(iPlayer).date.birth + 20
                                 and not utils.collapseImmune(iPlayer)
                             ):  # 10 chance for collapse start
                                 if iRand2 < (
@@ -568,7 +568,7 @@ class Stability:
                                     rnf.revoltCity(iPlayer, False)
                             elif (
                                 iRand3 < 4
-                                and iGameTurn >= civilizations()[iPlayer].date.birth + 20
+                                and iGameTurn >= civilization(iPlayer).date.birth + 20
                                 and not utils.collapseImmune(iPlayer)
                             ):  # 40 chance for collapse start
                                 if iRand2 < (
@@ -577,7 +577,7 @@ class Stability:
                                     self.collapseCivilWar(iPlayer, iStability)
                         elif (
                             iRand1 < 7
-                            and iGameTurn >= civilizations()[iPlayer].date.birth + 20
+                            and iGameTurn >= civilization(iPlayer).date.birth + 20
                             and not utils.collapseImmune(iPlayer)
                         ):  # 70 chance for collapse start
                             if iRand2 < (

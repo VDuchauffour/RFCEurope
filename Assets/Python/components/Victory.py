@@ -684,7 +684,7 @@ class Victory:
                         else:
                             bIsAtWar = False
                             for civ in civilizations().take(Civ.BYZANTIUM, Civ.OTTOMAN).alive():
-                                if civilizations()[Civ.BULGARIA].at_war(civ):
+                                if civilization(Civ.BULGARIA).at_war(civ):
                                     bIsAtWar = True
                             if bIsAtWar:
                                 self.lostUHV(Civ.BULGARIA.value, 2)
@@ -701,7 +701,7 @@ class Victory:
                 else:
                     bIsAtWar = False
                     for civ in civilizations().majors().alive():
-                        if civilizations()[Civ.BULGARIA].at_war(civ):
+                        if civilization(Civ.BULGARIA).at_war(civ):
                             bIsAtWar = True
                             break
                     if bIsAtWar:
@@ -1416,7 +1416,7 @@ class Victory:
         elif iGameTurn == DateTurn.i1541AD:
             if self.isPossibleUHV(Civ.HUNGARY.value, 1, True):
                 bClean = True
-                if civilizations()[Civ.OTTOMAN].is_alive():
+                if civilization(Civ.OTTOMAN).is_alive():
                     for iProv in tHungaryControlII:
                         if player(Civ.OTTOMAN).getProvinceCityCount(iProv) > 0:
                             bClean = False
@@ -1545,9 +1545,9 @@ class Victory:
 
         # UHV 2: Have 1500 Attitude Points with France by 1560 (Attitude Points are added every turn depending on your relations)
         if self.isPossibleUHV(Civ.SCOTLAND.value, 1, True):
-            if civilizations()[Civ.FRANCE].is_alive():
+            if civilization(Civ.FRANCE).is_alive():
                 # Being at war with France gives a big penalty (and ignores most bonuses!)
-                if civilizations()[Civ.SCOTLAND].at_war(Civ.FRANCE):
+                if civilization(Civ.SCOTLAND).at_war(Civ.FRANCE):
                     iScore = -10
                 else:
                     # -1 for Furious 0 for Annoyed 1 for Cautious 2 for Pleased 3 for Friendly
@@ -1570,17 +1570,17 @@ class Victory:
                             iScore += 2
                 # Different religion from France also gives a penalty, same religion gives a bonus (but only if both have a state religion)
                 if (
-                    civilizations()[Civ.SCOTLAND].has_state_religion()
-                    and civilizations()[Civ.FRANCE].has_state_religion()
+                    civilization(Civ.SCOTLAND).has_state_religion()
+                    and civilization(Civ.FRANCE).has_state_religion()
                 ):
                     if (
-                        civilizations()[Civ.SCOTLAND].state_religion()
-                        != civilizations()[Civ.FRANCE].state_religion()
+                        civilization(Civ.SCOTLAND).state_religion()
+                        != civilization(Civ.FRANCE).state_religion()
                     ):
                         iScore -= 3
                     elif (
-                        civilizations()[Civ.SCOTLAND].state_religion()
-                        == civilizations()[Civ.FRANCE].state_religion()
+                        civilization(Civ.SCOTLAND).state_religion()
+                        == civilization(Civ.FRANCE).state_religion()
                     ):
                         iScore += 1
                 iOldScore = player(Civ.SCOTLAND).getUHVCounter(1)
@@ -1829,7 +1829,7 @@ class Victory:
             )
             player(Civ.LITHUANIA).setUHVCounter(0, iCulture)
             if self.isPossibleUHV(Civ.LITHUANIA.value, 0, True):
-                if not civilizations()[Civ.LITHUANIA].has_state_religion():
+                if not civilization(Civ.LITHUANIA).has_state_religion():
                     self.lostUHV(Civ.LITHUANIA.value, 0)
                 else:
                     if iCulture >= 2500:

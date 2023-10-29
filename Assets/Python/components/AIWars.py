@@ -1,7 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - AI Wars
 
 from CvPythonExtensions import *
-from CoreData import civilizations
+from CoreData import civilizations, civilization
 from CoreTypes import Civ
 import PyHelpers  # LOQ
 import RFCUtils
@@ -293,7 +293,7 @@ class AIWars:
             if (
                 utils.getPlagueCountdown(iLoopCiv) > 0
                 or utils.getPlagueCountdown(iLoopCiv) < -10
-                and not gc.getGame().getGameTurn() <= civilizations()[iLoopCiv].date.birth + 20
+                and not gc.getGame().getGameTurn() <= civilization(iLoopCiv).date.birth + 20
             ):
                 lTargetCivs[iLoopCiv] *= 3
                 lTargetCivs[iLoopCiv] /= 2

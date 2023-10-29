@@ -3,7 +3,7 @@
 ##
 ## Implementation of miscellaneous game functions
 
-from CoreData import civilizations
+from CoreData import civilization
 from CoreFunctions import get_religion_by_id
 from CoreTypes import Civ, Religion, StabilityCategory, Unit
 import CvUtil
@@ -255,7 +255,7 @@ class CvGameUtils:
     # Absinthe: Inquisitor AI, this is also called from the .dll, CvCityAI::AI_chooseUnit
     def isHasPurgeTarget(self, iCiv, bReportCity):
         iStateReligion = gc.getPlayer(iCiv).getStateReligion()
-        iTolerance = civilizations()[iCiv].religion.tolerance
+        iTolerance = civilization(iCiv).religion.tolerance
         apCityList = PyPlayer(iCiv).getCityList()
         # Checks whether the AI controls a city with a target religion that is not the State Religion, not a Holy City, and doesn't have religious wonders in it
         for iReligion in RELIGION_PERSECUTION_ORDER[get_religion_by_id(iStateReligion)]:

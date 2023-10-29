@@ -1,7 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Religions management
 
 from CvPythonExtensions import *
-from CoreData import civilizations
+from CoreData import civilizations, civilization
 from CoreFunctions import get_religion_by_id
 from CoreTypes import (
     Building,
@@ -985,7 +985,7 @@ class Religions:
                                 iReligionPoint += 10
                             if city.isHolyCityByType(iReligion):
                                 iReligionPoint += 1000
-                        spread_factor = civilizations()[iPlayer].religion.spreading_threshold[
+                        spread_factor = civilization(iPlayer).religion.spreading_threshold[
                             get_religion_by_id(iReligion)
                         ]
                         if spread_factor < 60:

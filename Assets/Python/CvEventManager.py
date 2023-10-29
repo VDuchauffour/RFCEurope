@@ -23,7 +23,7 @@ import RFCUtils
 import RFCEBalance
 import random
 from MiscData import WORLD_HEIGHT, MessageData
-from CoreData import civilizations
+from CoreData import civilizations, civilization
 from CoreTypes import Wonder, Promotion, Project, Improvement, Feature, Unit, Bonus
 
 utils = RFCUtils.RFCUtils()
@@ -838,8 +838,8 @@ class CvEventManager:
         # Absinthe: Bibliotheca Corviniana end
 
         # Absinthe: Kalmar Castle start
-        if iBuildingType == xml.iKalmarCastle:
-            for neighbour in civilizations()[iPlayer].location.neighbours:
+        if iBuildingType == Wonder.KALMAR_CASTLE.value:
+            for neighbour in civilization(iPlayer).location.neighbours:
                 iNeighbour = neighbour.value
                 pNeighbour = gc.getPlayer(iNeighbour)
                 if pNeighbour.isAlive() and iPlayer != iNeighbour:

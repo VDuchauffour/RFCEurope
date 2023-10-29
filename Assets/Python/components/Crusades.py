@@ -2,7 +2,7 @@
 # Created by 3Miro, revised and improved by AbsintheRed
 
 from CvPythonExtensions import *
-from CoreData import civilizations
+from CoreData import civilizations, civilization
 import PyHelpers
 import Popup
 import RFCUtils
@@ -729,7 +729,7 @@ class Crusades:
 
     def doParticipation(self, iGameTurn):
         iHuman = utils.getHumanID()
-        if civilizations()[iHuman].date.birth < iGameTurn:
+        if civilization(iHuman).date.birth < iGameTurn:
             pHuman = gc.getPlayer(iHuman)
             if pHuman.getStateReligion() != Religion.CATHOLICISM.value:
                 self.setParticipate(False)
@@ -791,7 +791,7 @@ class Crusades:
         for iPlayer in civilizations().majors().ids():
             pPlayer = gc.getPlayer(iPlayer)
             if (
-                civilizations()[iPlayer].date.birth > iGameTurn
+                civilization(iPlayer).date.birth > iGameTurn
                 or not pPlayer.isAlive()
                 or pPlayer.getStateReligion() != Religion.CATHOLICISM.value
                 or gc.getTeam(pPlayer.getTeam()).isVassal(iTmJerusalem)
@@ -827,14 +827,14 @@ class Crusades:
         pPlayer = gc.getPlayer(iPlayer)
         iNumUnits = pPlayer.getNumUnits()
         if (
-            civilizations()[iPlayer].date.birth + 10 > gc.getGame().getGameTurn()
+            civilization(iPlayer).date.birth + 10 > gc.getGame().getGameTurn()
         ):  # in the first 10 turns
             if iNumUnits < 10:
                 iMaxToSend = 0
             else:
                 iMaxToSend = 1
         elif (
-            civilizations()[iPlayer].date.birth + 25 > gc.getGame().getGameTurn()
+            civilization(iPlayer).date.birth + 25 > gc.getGame().getGameTurn()
         ):  # between turn 11-25
             iMaxToSend = min(10, max(1, (5 * iNumUnits) / 50))
         else:
@@ -1174,7 +1174,7 @@ class Crusades:
                 if not pTeamRichest.isVassal(iTeamByzantium):
                     # Only if Byzantium holds Constantinople and not a vassal
                     pConstantinoplePlot = gc.getMap().plot(
-                        *civilizations()[Civ.BYZANTIUM].location.capital.to_tuple()
+                        *civilization(Civ.BYZANTIUM).location.capital.to_tuple()
                     )
                     pConstantinopleCity = pConstantinoplePlot.getPlotCity()
                     iConstantinopleOwner = pConstantinopleCity.getOwner()
@@ -1869,7 +1869,7 @@ class Crusades:
         teamPlayer = gc.getTeam(pPlayer.getTeam())
         # only born, flipped and living Catholics can DC
         if (
-            (iGameTurn < civilizations()[iPlayer].date.birth + 5)
+            (iGameTurn < civilization(iPlayer).date.birth + 5)
             or not pPlayer.isAlive()
             or pPlayer.getStateReligion() != Religion.CATHOLICISM.value
         ):
@@ -1884,7 +1884,7 @@ class Crusades:
             pEnemy = gc.getPlayer(iEnemy)
             if (
                 teamPlayer.isAtWar(pEnemy.getTeam())
-                and civilizations()[iEnemy].date.birth + 10 < iGameTurn
+                and civilization(iEnemy).date.birth + 10 < iGameTurn
             ):
                 if self.isOrMasterChristian(iEnemy):
                     continue

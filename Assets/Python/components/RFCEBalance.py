@@ -1,6 +1,6 @@
 from CvPythonExtensions import *
 import Consts
-from CoreData import civilizations
+from CoreData import civilizations, civilization
 from CoreTypes import (
     Building,
     City,
@@ -1008,7 +1008,7 @@ class RFCEBalance:
         # 3Miro: Psycho AI cheat, this will make Ottoman AI think it can win battles vs Constantinople at 90/100 rate
         # 	it will also actually boost the Ottoman's odds (actually lower the defenders chance by 20 percent), but only when attacking Constantinople
         gc.setPsychoAICheat(
-            Civ.OTTOMAN.value, *civilizations()[Civ.BYZANTIUM].location.capital.to_tuple()
+            Civ.OTTOMAN.value, *civilization(Civ.BYZANTIUM).location.capital.to_tuple()
         )
 
         # 3Miro: be very careful here, this can really mess the AI

@@ -4,7 +4,7 @@
 # Thanks to "Ulf 'ulfn' Norell" from Apolyton for his additions relating to the graph section of this screen
 
 from CvPythonExtensions import *
-from CoreData import civilizations
+from CoreData import civilizations, civilization
 import CvUtil
 
 import string
@@ -4636,7 +4636,7 @@ class CvInfoScreen:
                 if not pTeam.isBarbarian():
                     # Loop through projects
                     try:
-                        x, y = civilizations()[iPlayerLoop].location.home_colony
+                        x, y = civilization(iPlayerLoop).location.home_colony
                         screen.addFlagWidgetGFC(
                             self.home_flag,
                             x - 40,

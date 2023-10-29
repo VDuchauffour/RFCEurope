@@ -1,7 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Utilities
 
 from CvPythonExtensions import *
-from CoreData import civilizations
+from CoreData import civilizations, civilization
 from CoreTypes import (
     City,
     Civ,
@@ -240,7 +240,7 @@ class RFCUtils:
                     and not iActiveCiv == Civ.POPE.value
                 ):
                     if not teamMinor.isAtWar(iActiveCiv):
-                        if iGameTurn > civilizations()[iActiveCiv].date.birth + 20:
+                        if iGameTurn > civilization(iActiveCiv).date.birth + 20:
                             # Absinthe: probably better to use war maps instead of settler maps, but let the AI concentrate on it's core area first
                             # 			maybe we should use both settler and war maps? distance calculations would be great, but use too much iterations
                             # if (gc.getPlayer(iActiveCiv).getSettlersMaps( WORLD_HEIGHT-y-1, x ) >= 90 or gc.getPlayer(iActiveCiv).getSettlersMaps( WORLD_HEIGHT-y-1, x ) == -1):
@@ -280,7 +280,7 @@ class RFCUtils:
                     and not iActiveCiv == Civ.POPE.value
                 ):
                     # Absinthe: do not want to force the AI into these wars with WARPLAN_TOTAL too early
-                    if iGameTurn > civilizations()[iActiveCiv].date.birth + 40:
+                    if iGameTurn > civilization(iActiveCiv).date.birth + 40:
                         if not teamMinor.isAtWar(iActiveCiv):
                             if gc.getPlayer(iActiveCiv).getWarsMaps(WORLD_HEIGHT - y - 1, x) == 16:
                                 teamActive = gc.getTeam(gc.getPlayer(iActiveCiv).getTeam())
@@ -1024,7 +1024,7 @@ class RFCUtils:
         if not gc.getPlayer(iPlayer).isAlive():
             return False
         iGameTurn = gc.getGame().getGameTurn()
-        if iGameTurn < civilizations()[iPlayer].date.birth:
+        if iGameTurn < civilization(iPlayer).date.birth:
             return False
         return True
 
@@ -1159,7 +1159,7 @@ class RFCUtils:
     def collapseImmune(self, iCiv):
         # 3MiroUP: Emperor
         if gc.hasUP(iCiv, UniquePower.NO_COLLAPSE_IN_CORE_AND_NORMAL_AREAS.value):
-            plot = gc.getMap().plot(*civilizations()[iCiv].location.capital.to_tuple())
+            plot = gc.getMap().plot(*civilization(iCiv).location.capital.to_tuple())
             if plot.isCity():
                 if plot.getOwner() == iCiv:
                     return True
@@ -1168,7 +1168,7 @@ class RFCUtils:
     def collapseImmuneCity(self, iCiv, x, y):
         # 3MiroUP: Emperor
         if gc.hasUP(iCiv, UniquePower.NO_COLLAPSE_IN_CORE_AND_NORMAL_AREAS.value):
-            plot = gc.getMap().plot(*civilizations()[iCiv].location.capital.to_tuple())
+            plot = gc.getMap().plot(*civilization(iCiv).location.capital.to_tuple())
             if plot.isCity():
                 if plot.getOwner() == iCiv:
                     if (

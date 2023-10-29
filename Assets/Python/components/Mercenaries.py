@@ -2,7 +2,7 @@
 # Written mostly by 3Miro
 
 from CvPythonExtensions import *
-from CoreData import civilizations
+from CoreData import civilizations, civilization
 from CoreTypes import Civ, SpecialParameter, Religion, Promotion, Unit
 import PyHelpers
 
@@ -2645,7 +2645,7 @@ class MercenaryManager:
 
         if iWarValue > 0:
             # we have to be at war to hire
-            iOdds = civilizations()[iPlayer].misc.hire_mercenary_threshold
+            iOdds = civilization(iPlayer).misc.hire_mercenary_threshold
             if iWarValue < 2:
                 iOdds *= 2  # small wars are hardly worth the trouble
             elif iWarValue > 4:  # large war

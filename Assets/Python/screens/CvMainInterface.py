@@ -1,7 +1,7 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
-from CoreData import civilizations
+from CoreData import civilizations, civilization
 from CoreTypes import Civ, SpecialParameter, Religion, Technology, Bonus
 import CvUtil
 import CvScreenEnums
@@ -3340,7 +3340,7 @@ class CvMainInterface:
                 iCount += 1
                 if (
                     not CyInterface().isCityScreenUp()
-                    and CyGame().getGameTurn() >= civilizations()[ePlayer].date.birth
+                    and CyGame().getGameTurn() >= civilization(ePlayer).date.birth
                 ):
                     # iStability = utils.getStability(ePlayer)
                     iStability = pPlayer.getStability()
@@ -6556,7 +6556,7 @@ class CvMainInterface:
                                         if (
                                             not gc.getTeam(eTeam).isAlive()
                                             and gc.getGame().getGameTurn()
-                                            >= civilizations()[eTeam].date.birth
+                                            >= civilization(eTeam).date.birth
                                         ):
                                             szBuffer = szBuffer + " -"
                                         else:
