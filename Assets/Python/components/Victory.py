@@ -767,11 +767,9 @@ class Victory:
         # Sweden UHV 2: Raze 5 Catholic cities while being Protestant by 1660
         if iPlayer == Civ.SWEDEN.value:
             if self.isPossibleUHV(iPlayer, 1, False):
-                if civilization(
-                    Civ.SWEDEN
-                ).state_religion() == Religion.PROTESTANTISM.value and city.isHasReligion(
-                    Religion.CATHOLICISM.value
-                ):
+                if civilization(Civ.SWEDEN).has_state_religion(
+                    Religion.PROTESTANTISM
+                ) and city.isHasReligion(Religion.CATHOLICISM.value):
                     iRazed = player(Civ.SWEDEN).getUHVCounter(1) + 1
                     player(Civ.SWEDEN).setUHVCounter(1, iRazed)
                     if iRazed >= 5:
@@ -1141,9 +1139,11 @@ class Victory:
 
         # UHV 2: Accumulate at least 100 Orthodox Faith Points by 1259
         if self.isPossibleUHV(Civ.BULGARIA.value, 1, True):
-            if player(Civ.BULGARIA).getStateReligion() == Religion.ORTHODOXY.value:
-                if player(Civ.BULGARIA).getFaith() >= 100:
-                    self.wonUHV(Civ.BULGARIA.value, 1)
+            if (
+                civilization(Civ.BULGARIA).has_state_religion(Religion.ORTHODOXY)
+                and player(Civ.BULGARIA).getFaith() >= 100
+            ):
+                self.wonUHV(Civ.BULGARIA.value, 1)
         if iGameTurn == DateTurn.i1259AD:
             self.expireUHV(Civ.BULGARIA.value, 1)
 

@@ -563,10 +563,7 @@ class Crusades:
                         self.setCrusadeInit(i, iGameTurn)
 
     def anyCatholic(self):
-        for civ in civilizations().main():
-            if civ.player.getStateReligion() == Religion.CATHOLICISM.value:
-                return True
-        return False
+        return civilizations().main().any(lambda c: c.has_state_religion(Religion.CATHOLICISM))
 
     def anyParticipate(self):
         for i in civilizations().main().ids():

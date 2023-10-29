@@ -534,7 +534,7 @@ class RiseAndFall:
                     if loopCity != city:
                         loopCity.setHasRealBuilding((Building.PALACE.value), False)
                 city.setHasRealBuilding(Building.PALACE.value, True)
-                if player(Civ.OTTOMAN).getStateReligion() == Religion.ISLAM.value:
+                if civilization(Civ.OTTOMAN).has_state_religion(Religion.ISLAM):
                     city.setHasReligion(Religion.ISLAM.value, True, True, False)
                 # some stability boost and flavour message
                 player(Civ.OTTOMAN).changeStabilityBase(StabilityCategory.EXPANSION.value, 6)
@@ -569,9 +569,7 @@ class RiseAndFall:
                             Building.PALACE.value, False
                         )
                         city.setHasRealBuilding(Building.PALACE.value, True)
-                    if (
-                        player(Civ.OTTOMAN).getStateReligion() == Religion.ISLAM.value
-                    ):  # you get Islam anyway, as a bonus
+                    if civilization(Civ.OTTOMAN).has_state_religion(Religion.ISLAM):
                         city.setHasReligion(Religion.ISLAM.value, True, True, False)
 
         # Absinthe: Message for the human player, if the last city of a known civ is conquered
