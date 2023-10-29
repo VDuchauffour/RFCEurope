@@ -14,3 +14,12 @@ def get_civ_by_id(id):
 def get_religion_by_id(id):
     """Return a Religion member by its index."""
     return get_enum_by_id(CoreTypes.Religion, id)
+
+
+def religion(identifier):
+    """Return the identifier of a religion."""
+    if isinstance(identifier, int):
+        return identifier
+
+    if isinstance(identifier, CoreTypes.Religion):
+        return identifier.value
