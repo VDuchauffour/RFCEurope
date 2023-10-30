@@ -14,11 +14,11 @@ from CoreTypes import (
     Specialist,
     Improvement,
     Bonus,
+    Province,
 )
 import CvUtil
 from LocationsData import CITIES
 import PyHelpers
-import XMLConsts as xml
 import RFCUtils
 import Victory as vic
 import UniquePowers
@@ -2610,7 +2610,7 @@ class CvVictoryScreen:
         iNumFurs = pPlayer.countCultBorderBonuses(Bonus.FUR.value)
         sText2 += self.getCounterString(iNumFurs, 11)
         # UHV3
-        sText3 += self.ConquerOrVassal([[Civ.MOSCOW.value, xml.iP_Moscow]])
+        sText3 += self.ConquerOrVassal([[Civ.MOSCOW.value, Province.MOSCOW.value]])
         lHelpTexts = [sText1, sText2, sText3]
         return lHelpTexts
 

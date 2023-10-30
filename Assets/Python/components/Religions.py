@@ -15,17 +15,18 @@ from CoreTypes import (
     Civ,
     City,
     Civic,
+    Province,
     StabilityCategory,
     Religion,
     Technology,
     Unit,
     Wonder,
+    Province,
 )
 from LocationsData import CITIES
 from TimelineData import DateTurn
 import PyHelpers
 import Popup
-import XMLConsts as xml
 import RFCUtils
 import RFCEMaps
 from StoredData import sd
@@ -198,100 +199,126 @@ lReformationNeighbours = [
 ### Regions to spread religion ###
 tProvinceMap = RFCEMaps.tProvinceMap
 tSpain = [
-    xml.iP_Leon,
-    xml.iP_GaliciaSpain,
-    xml.iP_Aragon,
-    xml.iP_Catalonia,
-    xml.iP_Castile,
-    xml.iP_LaMancha,
-    xml.iP_Andalusia,
-    xml.iP_Valencia,
+    Province.LEON.value,
+    Province.GALICIA.value,
+    Province.ARAGON.value,
+    Province.CATALONIA.value,
+    Province.CASTILE.value,
+    Province.LA_MANCHA.value,
+    Province.ANDALUSIA.value,
+    Province.VALENCIA.value,
 ]
 tPoland = [
-    xml.iP_GreaterPoland,
-    xml.iP_LesserPoland,
-    xml.iP_Masovia,
-    xml.iP_Silesia,
-    xml.iP_Suvalkija,
-    xml.iP_Brest,
-    xml.iP_Pomerania,
-    xml.iP_GaliciaPoland,
+    Province.GREATER_POLAND.value,
+    Province.LESSER_POLAND.value,
+    Province.MASOVIA.value,
+    Province.SILESIA.value,
+    Province.SUVALKIJA.value,
+    Province.BREST.value,
+    Province.POMERANIA.value,
+    Province.GALICJA.value,
 ]
-tGermany = [xml.iP_Lorraine, xml.iP_Franconia, xml.iP_Bavaria, xml.iP_Swabia]
-tWestAfrica = [xml.iP_Tetouan, xml.iP_Morocco, xml.iP_Marrakesh, xml.iP_Fez, xml.iP_Oran]
-tNorthAfrica = [xml.iP_Algiers, xml.iP_Ifriqiya, xml.iP_Tripolitania, xml.iP_Cyrenaica]
+tGermany = [
+    Province.LORRAINE.value,
+    Province.FRANCONIA.value,
+    Province.BAVARIA.value,
+    Province.SWABIA.value,
+]
+tWestAfrica = [
+    Province.TETOUAN.value,
+    Province.MOROCCO.value,
+    Province.MARRAKESH.value,
+    Province.FEZ.value,
+    Province.ORAN.value,
+]
+tNorthAfrica = [
+    Province.ALGIERS.value,
+    Province.IFRIQIYA.value,
+    Province.TRIPOLITANIA.value,
+    Province.CYRENAICA.value,
+]
 tBalkansAndAnatolia = [
-    xml.iP_Constantinople,
-    xml.iP_Thrace,
-    xml.iP_Opsikion,
-    xml.iP_Paphlagonia,
-    xml.iP_Thrakesion,
-    xml.iP_Cilicia,
-    xml.iP_Anatolikon,
-    xml.iP_Armeniakon,
-    xml.iP_Charsianon,
+    Province.CONSTANTINOPLE.value,
+    Province.THRACE.value,
+    Province.OPSIKION.value,
+    Province.PAPHLAGONIA.value,
+    Province.THRAKESION.value,
+    Province.CILICIA.value,
+    Province.ANATOLIKON.value,
+    Province.ARMENIAKON.value,
+    Province.CHARSIANON.value,
 ]
 tCentralEurope = [
-    xml.iP_GreaterPoland,
-    xml.iP_LesserPoland,
-    xml.iP_Masovia,
-    xml.iP_GaliciaPoland,
-    xml.iP_Brest,
-    xml.iP_Suvalkija,
-    xml.iP_Lithuania,
-    xml.iP_Prussia,
-    xml.iP_Pomerania,
-    xml.iP_Saxony,
-    xml.iP_Brandenburg,
-    xml.iP_Holstein,
-    xml.iP_Denmark,
-    xml.iP_Bavaria,
-    xml.iP_Swabia,
-    xml.iP_Bohemia,
-    xml.iP_Moravia,
-    xml.iP_Silesia,
-    xml.iP_Hungary,
-    xml.iP_Transylvania,
-    xml.iP_UpperHungary,
-    xml.iP_Pannonia,
-    xml.iP_Slavonia,
-    xml.iP_Carinthia,
-    xml.iP_Austria,
+    Province.GREATER_POLAND.value,
+    Province.LESSER_POLAND.value,
+    Province.MASOVIA.value,
+    Province.GALICJA.value,
+    Province.BREST.value,
+    Province.SUVALKIJA.value,
+    Province.LITHUANIA.value,
+    Province.PRUSSIA.value,
+    Province.POMERANIA.value,
+    Province.SAXONY.value,
+    Province.BRANDENBURG.value,
+    Province.HOLSTEIN.value,
+    Province.DENMARK.value,
+    Province.BAVARIA.value,
+    Province.SWABIA.value,
+    Province.BOHEMIA.value,
+    Province.MORAVIA.value,
+    Province.SILESIA.value,
+    Province.HUNGARY.value,
+    Province.TRANSYLVANIA.value,
+    Province.UPPER_HUNGARY.value,
+    Province.PANNONIA.value,
+    Province.SLAVONIA.value,
+    Province.CARINTHIA.value,
+    Province.AUSTRIA.value,
 ]
 tMaghrebAndalusia = [
-    xml.iP_Tetouan,
-    xml.iP_Morocco,
-    xml.iP_Marrakesh,
-    xml.iP_Fez,
-    xml.iP_Oran,
-    xml.iP_Algiers,
-    xml.iP_Ifriqiya,
-    xml.iP_Tripolitania,
-    xml.iP_Cyrenaica,
-    xml.iP_LaMancha,
-    xml.iP_Andalusia,
-    xml.iP_Valencia,
+    Province.TETOUAN.value,
+    Province.MOROCCO.value,
+    Province.MARRAKESH.value,
+    Province.FEZ.value,
+    Province.ORAN.value,
+    Province.ALGIERS.value,
+    Province.IFRIQIYA.value,
+    Province.TRIPOLITANIA.value,
+    Province.CYRENAICA.value,
+    Province.LA_MANCHA.value,
+    Province.ANDALUSIA.value,
+    Province.VALENCIA.value,
 ]
-tBulgariaBalkans = [xml.iP_Moesia, xml.iP_Macedonia, xml.iP_Serbia, xml.iP_Wallachia]
+tBulgariaBalkans = [
+    Province.MOESIA.value,
+    Province.MACEDONIA.value,
+    Province.SERBIA.value,
+    Province.WALLACHIA.value,
+]
 tOldRus = [
-    xml.iP_Novgorod,
-    xml.iP_Rostov,
-    xml.iP_Polotsk,
-    xml.iP_Smolensk,
-    xml.iP_Minsk,
-    xml.iP_Chernigov,
-    xml.iP_Kiev,
-    xml.iP_Pereyaslavl,
-    xml.iP_Sloboda,
+    Province.NOVGOROD.value,
+    Province.ROSTOV.value,
+    Province.POLOTSK.value,
+    Province.SMOLENSK.value,
+    Province.MINSK.value,
+    Province.CHERNIGOV.value,
+    Province.KIEV.value,
+    Province.PEREYASLAVL.value,
+    Province.SLOBODA.value,
 ]
 tSouthScandinavia = [
-    xml.iP_Denmark,
-    xml.iP_Gotaland,
-    xml.iP_Skaneland,
-    xml.iP_Vestfold,
-    xml.iP_Norway,
+    Province.DENMARK.value,
+    Province.GOTALAND.value,
+    Province.SKANELAND.value,
+    Province.VESTFOLD.value,
+    Province.NORWAY.value,
 ]
-tHungary = [xml.iP_Hungary, xml.iP_Transylvania, xml.iP_UpperHungary, xml.iP_Pannonia]
+tHungary = [
+    Province.HUNGARY.value,
+    Province.TRANSYLVANIA.value,
+    Province.UPPER_HUNGARY.value,
+    Province.PANNONIA.value,
+]
 
 
 class Religions:
@@ -442,7 +469,7 @@ class Religions:
         if DateTurn.i852AD < iGameTurn < DateTurn.i960AD and iGameTurn % 5 == 2:
             if gc.getGame().getSorenRandNum(100, "Spread chance") < 34:
                 tCity = self.selectRandomCityRegion(
-                    [xml.iP_Novgorod, xml.iP_Polotsk, xml.iP_Smolensk],
+                    [Province.NOVGOROD.value, Province.POLOTSK.value, Province.SMOLENSK.value],
                     Religion.ORTHODOXY.value,
                     True,
                 )

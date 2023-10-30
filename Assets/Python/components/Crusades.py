@@ -6,13 +6,12 @@ from CoreData import civilizations, civilization
 import PyHelpers
 import Popup
 import RFCUtils
-import XMLConsts as xml
 import RFCEMaps
 import CityNameManager
 from StoredData import sd
 import random
 
-from CoreTypes import City, Civ, Religion, Promotion, Technology, Unit
+from CoreTypes import City, Civ, Religion, Promotion, Technology, Unit, Province
 from MiscData import MessageData, NUM_CRUSADES
 from TimelineData import DateTurn
 from LocationsData import CITIES
@@ -28,118 +27,140 @@ cnm = CityNameManager.CityNameManager()
 tDefensiveCrusadeMap = [
     [],  # Byzantium
     [
-        xml.iP_IleDeFrance,
-        xml.iP_Aquitania,
-        xml.iP_Orleans,
-        xml.iP_Champagne,
-        xml.iP_Bretagne,
-        xml.iP_Normandy,
-        xml.iP_Provence,
-        xml.iP_Flanders,
-        xml.iP_Burgundy,
-        xml.iP_Picardy,
+        Province.ILE_DE_FRANCE.value,
+        Province.AQUITAINE.value,
+        Province.ORLEANS.value,
+        Province.CHAMPAGNE.value,
+        Province.BRETAGNE.value,
+        Province.NORMANDY.value,
+        Province.PROVENCE.value,
+        Province.FLANDERS.value,
+        Province.BURGUNDY.value,
+        Province.PICARDY.value,
     ],  # France
     [],  # Arabia
     [],  # Bulgaria
     [
-        xml.iP_Leon,
-        xml.iP_GaliciaSpain,
-        xml.iP_Lusitania,
-        xml.iP_Aragon,
-        xml.iP_Catalonia,
-        xml.iP_Navarre,
-        xml.iP_Castile,
-        xml.iP_Andalusia,
-        xml.iP_LaMancha,
-        xml.iP_Valencia,
+        Province.LEON.value,
+        Province.GALICIA.value,
+        Province.LUSITANIA.value,
+        Province.ARAGON.value,
+        Province.CATALONIA.value,
+        Province.NAVARRE.value,
+        Province.CASTILE.value,
+        Province.ANDALUSIA.value,
+        Province.LA_MANCHA.value,
+        Province.VALENCIA.value,
     ],  # Cordoba (for consistency)
-    [xml.iP_Verona, xml.iP_Tuscany, xml.iP_Arberia, xml.iP_Dalmatia],  # Venecia
     [
-        xml.iP_Flanders,
-        xml.iP_Provence,
-        xml.iP_Burgundy,
-        xml.iP_Champagne,
-        xml.iP_Lorraine,
-        xml.iP_Picardy,
+        Province.VERONA.value,
+        Province.TUSCANY.value,
+        Province.ARBERIA.value,
+        Province.DALMATIA.value,
+    ],  # Venecia
+    [
+        Province.FLANDERS.value,
+        Province.PROVENCE.value,
+        Province.BURGUNDY.value,
+        Province.CHAMPAGNE.value,
+        Province.LORRAINE.value,
+        Province.PICARDY.value,
     ],  # Burgundy
     [
-        xml.iP_Lorraine,
-        xml.iP_Swabia,
-        xml.iP_Bavaria,
-        xml.iP_Saxony,
-        xml.iP_Franconia,
-        xml.iP_Flanders,
-        xml.iP_Brandenburg,
-        xml.iP_Holstein,
-        xml.iP_Bohemia,
+        Province.LORRAINE.value,
+        Province.SWABIA.value,
+        Province.BAVARIA.value,
+        Province.SAXONY.value,
+        Province.FRANCONIA.value,
+        Province.FLANDERS.value,
+        Province.BRANDENBURG.value,
+        Province.HOLSTEIN.value,
+        Province.BOHEMIA.value,
     ],  # Germany
     [],  # Novgorod
     [],  # Norway
     [],  # Kiev
     [
-        xml.iP_Hungary,
-        xml.iP_Transylvania,
-        xml.iP_UpperHungary,
-        xml.iP_Wallachia,
-        xml.iP_Slavonia,
-        xml.iP_Pannonia,
-        xml.iP_Austria,
-        xml.iP_Carinthia,
-        xml.iP_Serbia,
-        xml.iP_Moesia,
-        xml.iP_Banat,
-        xml.iP_Bosnia,
-        xml.iP_Dalmatia,
+        Province.HUNGARY.value,
+        Province.TRANSYLVANIA.value,
+        Province.UPPER_HUNGARY.value,
+        Province.WALLACHIA.value,
+        Province.SLAVONIA.value,
+        Province.PANNONIA.value,
+        Province.AUSTRIA.value,
+        Province.CARINTHIA.value,
+        Province.SERBIA.value,
+        Province.MOESIA.value,
+        Province.BANAT.value,
+        Province.BOSNIA.value,
+        Province.DALMATIA.value,
     ],  # Hungary
     [
-        xml.iP_Leon,
-        xml.iP_GaliciaSpain,
-        xml.iP_Lusitania,
-        xml.iP_Aragon,
-        xml.iP_Catalonia,
-        xml.iP_Navarre,
-        xml.iP_Castile,
-        xml.iP_Andalusia,
-        xml.iP_LaMancha,
-        xml.iP_Valencia,
+        Province.LEON.value,
+        Province.GALICIA.value,
+        Province.LUSITANIA.value,
+        Province.ARAGON.value,
+        Province.CATALONIA.value,
+        Province.NAVARRE.value,
+        Province.CASTILE.value,
+        Province.ANDALUSIA.value,
+        Province.LA_MANCHA.value,
+        Province.VALENCIA.value,
     ],  # Spain
-    [xml.iP_Estonia],  # Denmark
+    [Province.ESTONIA.value],  # Denmark
     [],  # Scotland
     [
-        xml.iP_GreaterPoland,
-        xml.iP_LesserPoland,
-        xml.iP_Silesia,
-        xml.iP_Pomerania,
-        xml.iP_Masovia,
-        xml.iP_GaliciaPoland,
-        xml.iP_Brest,
+        Province.GREATER_POLAND.value,
+        Province.LESSER_POLAND.value,
+        Province.SILESIA.value,
+        Province.POMERANIA.value,
+        Province.MASOVIA.value,
+        Province.GALICJA.value,
+        Province.BREST.value,
     ],  # Poland
-    [xml.iP_Liguria, xml.iP_Lombardy, xml.iP_Corsica, xml.iP_Sardinia, xml.iP_Tuscany],  # Genoa
+    [
+        Province.LIGURIA.value,
+        Province.LOMBARDY.value,
+        Province.CORSICA.value,
+        Province.SARDINIA.value,
+        Province.TUSCANY.value,
+    ],  # Genoa
     [],  # Morocco
     [],  # England
     [
-        xml.iP_Leon,
-        xml.iP_GaliciaSpain,
-        xml.iP_Lusitania,
-        xml.iP_Aragon,
-        xml.iP_Catalonia,
-        xml.iP_Navarre,
-        xml.iP_Castile,
-        xml.iP_Andalusia,
-        xml.iP_LaMancha,
-        xml.iP_Valencia,
+        Province.LEON.value,
+        Province.GALICIA.value,
+        Province.LUSITANIA.value,
+        Province.ARAGON.value,
+        Province.CATALONIA.value,
+        Province.NAVARRE.value,
+        Province.CASTILE.value,
+        Province.ANDALUSIA.value,
+        Province.LA_MANCHA.value,
+        Province.VALENCIA.value,
     ],  # Portugal
-    [xml.iP_Valencia, xml.iP_Balears, xml.iP_Sicily, xml.iP_Apulia, xml.iP_Calabria],  # Aragon
-    [xml.iP_Osterland],  # Sweden
-    [xml.iP_Livonia, xml.iP_Estonia, xml.iP_Lithuania, xml.iP_Prussia],  # Prussia
+    [
+        Province.VALENCIA.value,
+        Province.BALEARS.value,
+        Province.SICILY.value,
+        Province.APULIA.value,
+        Province.CALABRIA.value,
+    ],  # Aragon
+    [Province.OSTERLAND.value],  # Sweden
+    [
+        Province.LIVONIA.value,
+        Province.ESTONIA.value,
+        Province.LITHUANIA.value,
+        Province.PRUSSIA.value,
+    ],  # Prussia
     [],  # Lithuania
     [
-        xml.iP_Austria,
-        xml.iP_Carinthia,
-        xml.iP_Bavaria,
-        xml.iP_Bohemia,
-        xml.iP_Moravia,
-        xml.iP_Silesia,
+        Province.AUSTRIA.value,
+        Province.CARINTHIA.value,
+        Province.BAVARIA.value,
+        Province.BOHEMIA.value,
+        Province.MORAVIA.value,
+        Province.SILESIA.value,
     ],  # Austria
     [],  # Turkey
     [],  # Moscow

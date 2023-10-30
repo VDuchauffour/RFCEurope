@@ -1,12 +1,11 @@
 # Rhye's and Fall of Civilization: Europe - Barbarian units and cities
 
 from CvPythonExtensions import *
-from CoreTypes import Civ, Civic, Religion, Technology, Unit
+from CoreTypes import Civ, Civic, Religion, Technology, Unit, Province
 import PyHelpers  # LOQ
 import Popup
 import RFCUtils
 from TimelineData import DateTurn
-import XMLConsts as xml
 from StoredData import sd
 
 from CoreData import civilizations
@@ -682,7 +681,7 @@ dIndependentCities = {
 # Note: you should increase the size of 'lNextMinorRevolt' in StoredData to be at least the number of minor nations
 lMinorNations = [
     [
-        xml.iP_Serbia,
+        Province.SERBIA.value,
         [],
         [],
         [DateTurn.i508AD, DateTurn.i852AD, DateTurn.i1346AD],
@@ -692,7 +691,7 @@ lMinorNations = [
         ["TXT_KEY_THE_SERBS", "TXT_KEY_SERBIAN"],
     ],
     [
-        xml.iP_Scotland,
+        Province.SCOTLAND.value,
         [Civ.SCOTLAND.value],
         [],
         [DateTurn.i1297AD, DateTurn.i1569AD, DateTurn.i1715AD],
@@ -702,7 +701,7 @@ lMinorNations = [
         ["TXT_KEY_THE_SCOTS", "TXT_KEY_SCOTTISH"],
     ],
     [
-        xml.iP_Catalonia,
+        Province.CATALONIA.value,
         [Civ.ARAGON.value],
         [],
         [DateTurn.i1164AD + 10, DateTurn.i1640AD],
@@ -712,7 +711,7 @@ lMinorNations = [
         ["TXT_KEY_THE_CATALANS", "TXT_KEY_CATALAN"],
     ],
     [
-        xml.iP_Jerusalem,
+        Province.JERUSALEM.value,
         [Civ.ARABIA.value, Civ.OTTOMAN.value, Civ.BYZANTIUM.value],
         [
             Religion.ISLAM.value,
@@ -742,7 +741,7 @@ lMinorNations = [
         ["TXT_KEY_THE_MUSLIMS", "TXT_KEY_MUSLIM"],
     ],
     [
-        xml.iP_Syria,
+        Province.SYRIA.value,
         [Civ.ARABIA.value, Civ.OTTOMAN.value, Civ.BYZANTIUM.value],
         [
             Religion.ISLAM.value,
@@ -772,7 +771,7 @@ lMinorNations = [
         ["TXT_KEY_THE_MUSLIMS", "TXT_KEY_MUSLIM"],
     ],
     [
-        xml.iP_Oran,
+        Province.ORAN.value,
         [],
         [],
         [DateTurn.i1236AD, DateTurn.i1346AD, DateTurn.i1359AD, DateTurn.i1542AD],
@@ -787,7 +786,7 @@ lMinorNations = [
         ["TXT_KEY_THE_ZIYYANIDS", "TXT_KEY_ZIYYANID"],
     ],
     [
-        xml.iP_Fez,
+        Province.FEZ.value,
         [Civ.MOROCCO.value],
         [],
         [DateTurn.i1473AD],

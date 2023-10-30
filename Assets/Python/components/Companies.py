@@ -6,7 +6,6 @@ from CoreData import civilizations, COMPANIES
 from CoreFunctions import get_enum_by_id
 from LocationsData import CITIES
 import PyHelpers
-import XMLConsts as xml
 import RFCUtils
 import Crusades
 from operator import itemgetter
@@ -25,6 +24,7 @@ from CoreTypes import (
     Religion,
     Technology,
     Wonder,
+    Province,
 )
 
 # globals
@@ -325,20 +325,20 @@ class Companies:
         ):
             return -1
         if iCompany == Company.MEDICI.value:
-            if iProvince == xml.iP_Tuscany:
+            if iProvince == Province.TUSCANY.value:
                 iValue += 4
         elif iCompany == Company.AUGSBURG.value:
-            if iProvince == xml.iP_Bavaria:
+            if iProvince == Province.BAVARIA.value:
                 iValue += 3
-            elif iProvince == xml.iP_Swabia:
+            elif iProvince == Province.SWABIA.value:
                 iValue += 2
         elif iCompany == Company.ST_GEORGE.value:
-            if iProvince == xml.iP_Liguria:
+            if iProvince == Province.LIGURIA.value:
                 iValue += 3
         elif iCompany == Company.HANSA.value:
-            if iProvince == xml.iP_Holstein:
+            if iProvince == Province.HOLSTEIN.value:
                 iValue += 5
-            if iProvince in [xml.iP_Brandenburg, xml.iP_Saxony]:
+            if iProvince in [Province.BRANDENBURG.value, Province.SAXONY.value]:
                 iValue += 2
 
         # geographical requirement changes after the Crusades
@@ -350,16 +350,20 @@ class Companies:
                 Company.TEUTONS.value,
             ]:
                 if iStateReligion == Religion.CATHOLICISM.value:
-                    if iProvince in [xml.iP_Antiochia, xml.iP_Lebanon, xml.iP_Jerusalem]:
+                    if iProvince in [
+                        Province.ANTIOCHIA.value,
+                        Province.LEBANON.value,
+                        Province.JERUSALEM.value,
+                    ]:
                         iValue += 5
-                    elif iProvince in [xml.iP_Cyprus, xml.iP_Egypt]:
+                    elif iProvince in [Province.CYPRUS.value, Province.EGYPT.value]:
                         iValue += 3
         else:
             if iCompany == Company.HOSPITALLERS.value:
-                if iProvince in [xml.iP_Rhodes, xml.iP_Malta]:
+                if iProvince in [Province.RHODES.value, Province.MALTA.value]:
                     iValue += 4
             elif iCompany == Company.TEUTONS.value:
-                if iProvince == xml.iP_Transylvania:
+                if iProvince == Province.TRANSYLVANIA.value:
                     iValue += 2
 
         # bonus for civs whom actively participate (with units) in the actual Crusade:
