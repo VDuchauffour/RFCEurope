@@ -2505,3 +2505,194 @@ CIV_GROUPS = EnumDataMapper(
         ],
     }
 )
+REGION_IBERIA = [
+    Province.GALICIA.value,
+    Province.CASTILE.value,
+    Province.LEON.value,
+    Province.LUSITANIA.value,
+    Province.CATALONIA.value,
+    Province.ARAGON.value,
+    Province.VALENCIA.value,
+    Province.ANDALUSIA.value,
+    Province.NAVARRE.value,
+    Province.LA_MANCHA.value,
+]
+REGION_FRANCE = [
+    Province.NORMANDY.value,
+    Province.BRETAGNE.value,
+    Province.ILE_DE_FRANCE.value,
+    Province.ORLEANS.value,
+    Province.PICARDY.value,
+]
+REGION_BURGUNDY = [
+    Province.PROVENCE.value,
+    Province.BURGUNDY.value,
+    Province.CHAMPAGNE.value,
+    Province.FLANDERS.value,
+]
+REGION_BRITAIN = [
+    Province.LONDON.value,
+    Province.WALES.value,
+    Province.WESSEX.value,
+    Province.SCOTLAND.value,
+    Province.EAST_ANGLIA.value,
+    Province.MERCIA.value,
+    Province.NORTHUMBRIA.value,
+    Province.IRELAND.value,
+]
+REGION_SCANDINAVIA = [
+    Province.DENMARK.value,
+    Province.OSTERLAND.value,
+    Province.NORWAY.value,
+    Province.VESTFOLD.value,
+    Province.GOTALAND.value,
+    Province.SVEALAND.value,
+    Province.NORRLAND.value,
+    Province.JAMTLAND.value,
+    Province.SKANELAND.value,
+    Province.GOTLAND.value,
+]
+REGION_GERMANY = [
+    Province.LORRAINE.value,
+    Province.SWABIA.value,
+    Province.SAXONY.value,
+    Province.BAVARIA.value,
+    Province.FRANCONIA.value,
+    Province.BRANDENBURG.value,
+    Province.HOLSTEIN.value,
+]
+REGION_POLAND = [
+    Province.POMERANIA.value,
+    Province.GALICJA.value,
+    Province.GREATER_POLAND.value,
+    Province.LESSER_POLAND.value,
+    Province.SILESIA.value,
+    Province.MASOVIA.value,
+]
+REGION_LITHUANIA = [
+    Province.LITHUANIA.value,
+    Province.LIVONIA.value,
+    Province.ESTONIA.value,
+]
+REGION_AUSTRIA = [
+    Province.CARINTHIA.value,
+    Province.AUSTRIA.value,
+    Province.MORAVIA.value,
+    Province.BOHEMIA.value,
+    Province.SILESIA.value,
+]
+REGION_HUNGARY = [
+    Province.TRANSYLVANIA.value,
+    Province.HUNGARY.value,
+    Province.SLAVONIA.value,
+    Province.PANNONIA.value,
+    Province.UPPER_HUNGARY.value,
+]
+REGION_BALKANS = [
+    Province.SERBIA.value,
+    Province.THRACE.value,
+    Province.MACEDONIA.value,
+    Province.MOESIA.value,
+    Province.ARBERIA.value,
+    Province.DALMATIA.value,
+    Province.BOSNIA.value,
+    Province.BANAT.value,
+]
+REGION_GREECE = [
+    Province.CONSTANTINOPLE.value,
+    Province.THESSALY.value,
+    Province.EPIRUS.value,
+    Province.MOREA.value,
+    Province.THESSALONIKI.value,
+]
+REGION_ASIA_MINOR = [
+    Province.COLONEA.value,
+    Province.CHARSIANON.value,
+    Province.CILICIA.value,
+    Province.ARMENIAKON.value,
+    Province.ANATOLIKON.value,
+    Province.PAPHLAGONIA.value,
+    Province.THRAKESION.value,
+    Province.OPSIKION.value,
+]
+REGION_MIDDLE_EAST = [
+    Province.ANTIOCHIA.value,
+    Province.SYRIA.value,
+    Province.LEBANON.value,
+    Province.ARABIA.value,
+    Province.JERUSALEM.value,
+]
+REGION_AFRICA = [
+    Province.ORAN.value,
+    Province.ALGIERS.value,
+    Province.IFRIQIYA.value,
+    Province.CYRENAICA.value,
+    Province.TRIPOLITANIA.value,
+    Province.TETOUAN.value,
+    Province.MOROCCO.value,
+    Province.MARRAKESH.value,
+    Province.FEZ.value,
+]
+REGION_KIEV = [
+    Province.MOLDOVA.value,
+    Province.KIEV.value,
+    Province.CRIMEA.value,
+    Province.ZAPORIZHIA.value,
+    Province.SLOBODA.value,
+    Province.PEREYASLAVL.value,
+    Province.CHERNIGOV.value,
+    Province.PODOLIA.value,
+    Province.MINSK.value,
+]
+REGION_ITALY = [
+    Province.LOMBARDY.value,
+    Province.LIGURIA.value,
+    Province.VERONA.value,
+    Province.TUSCANY.value,
+    Province.LATIUM.value,
+    Province.CALABRIA.value,
+    Province.APULIA.value,
+    Province.ARBERIA.value,
+    Province.MALTA.value,
+    Province.DALMATIA.value,
+]
+REGION_SWISS = [
+    Province.BAVARIA.value,
+    Province.AUSTRIA.value,
+    Province.SWABIA.value,
+    Province.BURGUNDY.value,
+    Province.LORRAINE.value,
+    Province.CHAMPAGNE.value,
+    Province.PROVENCE.value,
+    Province.LOMBARDY.value,
+    Province.LIGURIA.value,
+    Province.VERONA.value,
+    Province.FRANCONIA.value,
+    Province.BOHEMIA.value,
+]
+REGION_NOT_EUROPE = [
+    Province.ORAN.value,
+    Province.ALGIERS.value,
+    Province.IFRIQIYA.value,
+    Province.CYRENAICA.value,
+    Province.TRIPOLITANIA.value,
+    Province.TETOUAN.value,
+    Province.MOROCCO.value,
+    Province.MARRAKESH.value,
+    Province.FEZ.value,
+    Province.SAHARA.value,
+    Province.EGYPT.value,
+    Province.ANTIOCHIA.value,
+    Province.SYRIA.value,
+    Province.LEBANON.value,
+    Province.ARABIA.value,
+    Province.JERUSALEM.value,
+    Province.COLONEA.value,
+    Province.CHARSIANON.value,
+    Province.CILICIA.value,
+    Province.ARMENIAKON.value,
+    Province.ANATOLIKON.value,
+    Province.PAPHLAGONIA.value,
+    Province.THRAKESION.value,
+    Province.OPSIKION.value,
+]

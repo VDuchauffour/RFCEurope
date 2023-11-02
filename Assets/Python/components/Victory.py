@@ -23,7 +23,7 @@ from CoreTypes import (
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
 import PyHelpers
 import Popup
-import XMLConsts as xml
+import LocationsData as xml
 import RFCUtils
 import UniquePowers
 import RFCEMaps
@@ -1041,7 +1041,7 @@ class Victory:
             if plot.isWater():
                 continue
             iProvinceID = RFCEMaps.tProvinceMap[y][x]
-            if iProvinceID in xml.lNotEurope:
+            if iProvinceID in xml.REGION_NOT_EUROPE:
                 continue
             iTotal += 1
             if plot.getOwner() == iPlayer:
