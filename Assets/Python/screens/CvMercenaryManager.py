@@ -12,7 +12,6 @@ import PyHelpers
 
 # import MercenaryUtils
 import Mercenaries
-import XMLConsts as xml
 
 # from sets import Set
 # import CvConfigParser #Rhye
@@ -1344,9 +1343,7 @@ class CvMercenaryManager:
 
                 lPromotionList = []
                 # almost all promotions are available through experience, so this is not only for the otherwise used iNumTotalMercPromotions (in Mercenaries.py)
-                for iPromotion in range(
-                    xml.iNumPromotions - 1
-                ):  # merc promotion is added separately
+                for iPromotion in range(len(Promotion) - 1):  # merc promotion is added separately
                     if pMerc.isHasPromotion(iPromotion):
                         lPromotionList.append(iPromotion)
 
