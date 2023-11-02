@@ -17,7 +17,6 @@ from CoreTypes import (
     UniquePower,
     Technology,
     Unit,
-    Bonus,
     FaithPointBonusCategory,
 )
 import XMLConsts as xml
@@ -814,7 +813,7 @@ class RFCEBalance:
         gc.setBuildingPref(Civ.ARABIA.value, xml.iSistineChapel, -5)
         gc.setBuildingPref(Civ.ARABIA.value, xml.iKrakDesChevaliers, -5)
         gc.setBuildingPref(Civ.ARABIA.value, xml.iLeaningTower, -3)
-        gc.setBuildingPref(Civ.ARABIA.value, Bonus.GOLD.valueenBull, -3)
+        gc.setBuildingPref(Civ.ARABIA.value, xml.iGoldenBull, -3)
         gc.setBuildingPref(Civ.ARABIA.value, xml.iCopernicus, -3)
 
         gc.setBuildingPref(Civ.BULGARIA.value, xml.iRoundChurch, 20)
@@ -834,7 +833,7 @@ class RFCEBalance:
         gc.setBuildingPref(Civ.CORDOBA.value, xml.iSistineChapel, -5)
         gc.setBuildingPref(Civ.CORDOBA.value, xml.iKrakDesChevaliers, -5)
         gc.setBuildingPref(Civ.CORDOBA.value, xml.iLeaningTower, -3)
-        gc.setBuildingPref(Civ.CORDOBA.value, Bonus.GOLD.valueenBull, -3)
+        gc.setBuildingPref(Civ.CORDOBA.value, xml.iGoldenBull, -3)
 
         gc.setBuildingPref(Civ.VENECIA.value, xml.iMarcoPolo, 15)
         gc.setBuildingPref(Civ.VENECIA.value, xml.iSanMarco, 20)
@@ -857,7 +856,7 @@ class RFCEBalance:
         gc.setBuildingPref(Civ.GERMANY.value, xml.iBrandenburgGate, 10)
         gc.setBuildingPref(Civ.GERMANY.value, xml.iImperialDiet, 20)
         gc.setBuildingPref(Civ.GERMANY.value, xml.iCopernicus, 5)
-        gc.setBuildingPref(Civ.GERMANY.value, Bonus.GOLD.valueenBull, 10)
+        gc.setBuildingPref(Civ.GERMANY.value, xml.iGoldenBull, 10)
         gc.setBuildingPref(Civ.GERMANY.value, xml.iMonasteryOfCluny, 5)
         gc.setBuildingPref(Civ.GERMANY.value, xml.iUraniborg, 5)
         gc.setBuildingPref(Civ.GERMANY.value, xml.iThomaskirche, 20)
@@ -882,7 +881,7 @@ class RFCEBalance:
         gc.setBuildingPref(Civ.KIEV.value, xml.iPeterhofPalace, 10)
 
         gc.setBuildingPref(Civ.HUNGARY.value, xml.iPressburg, 20)
-        gc.setBuildingPref(Civ.HUNGARY.value, Bonus.GOLD.valueenBull, 20)
+        gc.setBuildingPref(Civ.HUNGARY.value, xml.iGoldenBull, 20)
         gc.setBuildingPref(Civ.HUNGARY.value, xml.iBibliothecaCorviniana, 20)
         gc.setBuildingPref(Civ.HUNGARY.value, xml.iKazimierz, 10)
         gc.setBuildingPref(Civ.HUNGARY.value, xml.iCopernicus, 5)
@@ -907,7 +906,7 @@ class RFCEBalance:
 
         gc.setBuildingPref(Civ.POLAND.value, xml.iPressburg, 10)
         gc.setBuildingPref(Civ.POLAND.value, xml.iCopernicus, 10)
-        gc.setBuildingPref(Civ.POLAND.value, Bonus.GOLD.valueenBull, 5)
+        gc.setBuildingPref(Civ.POLAND.value, xml.iGoldenBull, 5)
         gc.setBuildingPref(Civ.POLAND.value, xml.iKazimierz, 15)
         gc.setBuildingPref(Civ.POLAND.value, xml.iJasnaGora, 20)
         gc.setBuildingPref(Civ.POLAND.value, xml.iBrandenburgGate, 5)
@@ -934,7 +933,7 @@ class RFCEBalance:
         gc.setBuildingPref(Civ.MOROCCO.value, xml.iSistineChapel, -5)
         gc.setBuildingPref(Civ.MOROCCO.value, xml.iKrakDesChevaliers, -5)
         gc.setBuildingPref(Civ.MOROCCO.value, xml.iLeaningTower, -3)
-        gc.setBuildingPref(Civ.MOROCCO.value, Bonus.GOLD.valueenBull, -3)
+        gc.setBuildingPref(Civ.MOROCCO.value, xml.iGoldenBull, -3)
 
         gc.setBuildingPref(Civ.ENGLAND.value, xml.iMagnaCarta, 20)
         gc.setBuildingPref(Civ.ENGLAND.value, xml.iWestminster, 20)
@@ -970,7 +969,7 @@ class RFCEBalance:
         gc.setBuildingPref(Civ.AUSTRIA.value, xml.iStephansdom, 20)
         gc.setBuildingPref(Civ.AUSTRIA.value, xml.iThomaskirche, 15)
         gc.setBuildingPref(Civ.AUSTRIA.value, xml.iCopernicus, 5)
-        gc.setBuildingPref(Civ.AUSTRIA.value, Bonus.GOLD.valueenBull, 5)
+        gc.setBuildingPref(Civ.AUSTRIA.value, xml.iGoldenBull, 5)
         gc.setBuildingPref(Civ.AUSTRIA.value, xml.iPressburg, 5)
         gc.setBuildingPref(Civ.AUSTRIA.value, xml.iAustrianOperaHouse, 10)
 
