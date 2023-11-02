@@ -77,7 +77,7 @@ CIV_INITIAL_CONDITION_500AD = CivDataMapper(
             StartingSituation.GOLD: 300,
             StartingSituation.FAITH: 0,
         },
-        Civ.CASTILLE: {
+        Civ.CASTILE: {
             StartingSituation.WORKERS: 3,
             StartingSituation.GOLD: 500,
             StartingSituation.FAITH: 0,
@@ -227,7 +227,7 @@ CIV_INITIAL_CONDITION_1200AD = CivDataMapper(
             StartingSituation.GOLD: 300,
             StartingSituation.FAITH: 25,
         },
-        Civ.CASTILLE: {
+        Civ.CASTILE: {
             StartingSituation.WORKERS: 3,
             StartingSituation.GOLD: 500,
             StartingSituation.FAITH: 35,
@@ -336,7 +336,7 @@ CIV_STABILITY_AI_BONUS = CivDataMapper(
         Civ.NORWAY: 0,
         Civ.KIEV: 6,
         Civ.HUNGARY: 2,
-        Civ.CASTILLE: 0,
+        Civ.CASTILE: 0,
         Civ.DENMARK: 0,
         Civ.SCOTLAND: 0,
         Civ.POLAND: 0,
@@ -394,7 +394,7 @@ CIV_INITIAL_CONTACTS_500AD = CivDataMapper(
             Civ.BULGARIA,
             Civ.KIEV,
         ],
-        Civ.CASTILLE: [
+        Civ.CASTILE: [
             Civ.FRANCE,
             Civ.BURGUNDY,
             Civ.CORDOBA,
@@ -419,7 +419,7 @@ CIV_INITIAL_CONTACTS_500AD = CivDataMapper(
         ],
         Civ.MOROCCO: [
             Civ.ARABIA,
-            Civ.CASTILLE,
+            Civ.CASTILE,
             Civ.CORDOBA,
         ],
         Civ.ENGLAND: [
@@ -429,12 +429,12 @@ CIV_INITIAL_CONTACTS_500AD = CivDataMapper(
             Civ.NORWAY,
         ],
         Civ.PORTUGAL: [
-            Civ.CASTILLE,
+            Civ.CASTILE,
             Civ.CORDOBA,
         ],
         Civ.ARAGON: [
             Civ.BURGUNDY,
-            Civ.CASTILLE,
+            Civ.CASTILE,
             Civ.CORDOBA,
             Civ.FRANCE,
         ],
@@ -471,7 +471,7 @@ CIV_INITIAL_CONTACTS_500AD = CivDataMapper(
         ],
         Civ.DUTCH: [
             Civ.ENGLAND,
-            Civ.CASTILLE,
+            Civ.CASTILE,
             Civ.FRANCE,
             Civ.GERMANY,
             Civ.DENMARK,
@@ -497,7 +497,7 @@ CIV_INITIAL_CONTACTS_1200AD = CivDataMapper(
             Civ.ENGLAND,
             Civ.NORWAY,
             Civ.ARAGON,
-            Civ.CASTILLE,
+            Civ.CASTILE,
             Civ.GERMANY,
         ],
         Civ.ARABIA: [
@@ -555,7 +555,7 @@ CIV_INITIAL_CONTACTS_1200AD = CivDataMapper(
             Civ.POLAND,
             Civ.POPE,
         ],
-        Civ.CASTILLE: [
+        Civ.CASTILE: [
             Civ.MOROCCO,
             Civ.ARAGON,
             Civ.PORTUGAL,
@@ -591,7 +591,7 @@ CIV_INITIAL_CONTACTS_1200AD = CivDataMapper(
         ],
         Civ.MOROCCO: [
             Civ.ARABIA,
-            Civ.CASTILLE,
+            Civ.CASTILE,
             Civ.ARAGON,
             Civ.PORTUGAL,
         ],
@@ -603,13 +603,13 @@ CIV_INITIAL_CONTACTS_1200AD = CivDataMapper(
             Civ.POPE,
         ],
         Civ.PORTUGAL: [
-            Civ.CASTILLE,
+            Civ.CASTILE,
             Civ.MOROCCO,
             Civ.ARAGON,
             Civ.POPE,
         ],
         Civ.ARAGON: [
-            Civ.CASTILLE,
+            Civ.CASTILE,
             Civ.PORTUGAL,
             Civ.MOROCCO,
             Civ.GENOA,
@@ -651,7 +651,7 @@ CIV_INITIAL_CONTACTS_1200AD = CivDataMapper(
         ],
         Civ.DUTCH: [
             Civ.ENGLAND,
-            Civ.CASTILLE,
+            Civ.CASTILE,
             Civ.FRANCE,
             Civ.GERMANY,
             Civ.DENMARK,
@@ -698,7 +698,7 @@ CIV_INITIAL_WARS_500AD = CivDataMapper(
         ),
         Civ.CORDOBA: CivDataMapper(
             {
-                Civ.CASTILLE: 90,
+                Civ.CASTILE: 90,
                 Civ.PORTUGAL: 90,
                 Civ.ARAGON: 80,
             },
@@ -768,7 +768,7 @@ CIV_INITIAL_WARS_1200AD = CivDataMapper(
             {
                 Civ.GERMANY: 20,
                 Civ.HUNGARY: 20,
-                Civ.CASTILLE: 30,
+                Civ.CASTILE: 30,
                 Civ.GENOA: 20,
                 Civ.ENGLAND: 20,
                 Civ.PORTUGAL: 20,
@@ -815,7 +815,7 @@ CIV_INITIAL_WARS_1200AD = CivDataMapper(
         ),
         Civ.MOROCCO: CivDataMapper(
             {
-                Civ.CASTILLE: 90,
+                Civ.CASTILE: 90,
                 Civ.PORTUGAL: 80,
                 Civ.ARAGON: 80,
             },
@@ -861,7 +861,7 @@ CIV_HIRE_MERCENARY_THRESHOLD = CivDataMapper(
         Civ.NORWAY: 60,
         Civ.KIEV: 40,
         Civ.HUNGARY: 10,
-        Civ.CASTILLE: 40,
+        Civ.CASTILE: 40,
         Civ.DENMARK: 30,
         Civ.SCOTLAND: 50,
         Civ.POLAND: 60,
@@ -901,7 +901,7 @@ CIV_AI_AGGRESSION_LEVEL = CivDataMapper(
         Civ.NORWAY: 2,
         Civ.KIEV: 1,
         Civ.HUNGARY: 2,
-        Civ.CASTILLE: 2,
+        Civ.CASTILE: 2,
         Civ.DENMARK: 2,
         Civ.SCOTLAND: 0,
         Civ.POLAND: 0,
@@ -935,7 +935,7 @@ CIV_AI_STOP_BIRTH_THRESHOLD = CivDataMapper(
         Civ.NORWAY: 70,
         Civ.KIEV: 80,
         Civ.HUNGARY: 60,
-        Civ.CASTILLE: 70,
+        Civ.CASTILE: 70,
         Civ.DENMARK: 40,
         Civ.SCOTLAND: 40,
         Civ.POLAND: 80,
@@ -970,7 +970,7 @@ CIV_AI_REFORMATION_THRESHOLD = CivDataMapper(
         Civ.NORWAY: 80,
         Civ.KIEV: 30,
         Civ.HUNGARY: 50,
-        Civ.CASTILLE: 10,
+        Civ.CASTILE: 10,
         Civ.DENMARK: 80,
         Civ.SCOTLAND: 80,
         Civ.POLAND: 30,
@@ -1010,7 +1010,7 @@ CIV_RESPAWNING_THRESHOLD = CivDataMapper(
         Civ.NORWAY: 50,
         Civ.KIEV: 30,
         Civ.HUNGARY: 60,
-        Civ.CASTILLE: 80,
+        Civ.CASTILE: 80,
         Civ.DENMARK: 70,
         Civ.SCOTLAND: 40,
         Civ.POLAND: 60,
@@ -1152,7 +1152,7 @@ CIV_RELIGION_SPREADING_THRESHOLD = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.CASTILLE: ReligionDataMapper(
+        Civ.CASTILE: ReligionDataMapper(
             {
                 Religion.PROTESTANTISM: 100,
                 Religion.ISLAM: 20,
@@ -1390,7 +1390,7 @@ CIV_RELIGIOUS_TOLERANCE = CivDataMapper(
         Civ.NORWAY: 60,
         Civ.KIEV: 40,
         Civ.HUNGARY: 60,
-        Civ.CASTILLE: 20,
+        Civ.CASTILE: 20,
         Civ.DENMARK: 60,
         Civ.SCOTLAND: 40,
         Civ.POLAND: 80,
@@ -1510,7 +1510,7 @@ CIV_LEADERS = CivDataMapper(
                 (Leader.MATTHIAS, DateTurn.i1444AD, 5, 3),
             ],
         },
-        Civ.CASTILLE: {
+        Civ.CASTILE: {
             LeaderType.PRIMARY: Leader.FERDINAND_III,
             LeaderType.EARLY: Leader.FERDINAND_III,
             LeaderType.LATE: [

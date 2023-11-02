@@ -3865,7 +3865,7 @@ class CvMainInterface:
 
                 elif (
                     ePlayer == Civ.FRANCE.value
-                    or ePlayer == Civ.CASTILLE.value
+                    or ePlayer == Civ.CASTILE.value
                     or ePlayer == Civ.PORTUGAL.value
                     or ePlayer == Civ.ENGLAND.value
                     or ePlayer == Civ.DUTCH.value
@@ -3881,7 +3881,7 @@ class CvMainInterface:
                             iUHVState = pPlayer.getUHV(2)
                         elif (
                             ePlayer == Civ.ENGLAND.value
-                            or ePlayer == Civ.CASTILLE.value
+                            or ePlayer == Civ.CASTILE.value
                             or ePlayer == Civ.DUTCH.value
                         ):
                             iColonies = pPlayer.getUHVCounter(1)

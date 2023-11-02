@@ -14,7 +14,7 @@ class Civ(IntEnum):
     NORWAY = 9
     KIEV = 10
     HUNGARY = 11
-    CASTILLE = 12  # TODO Fix typo
+    CASTILE = 12
     DENMARK = 13
     SCOTLAND = 14
     POLAND = 15

@@ -73,8 +73,8 @@ class RFCEBalance:
         gc.setGrowthModifiersHu(Civ.KIEV.value, 150, 100, 100, 100, 100, 2)
         gc.setGrowthModifiersAI(Civ.HUNGARY.value, 125, 100, 100, 100, 100, 2)
         gc.setGrowthModifiersHu(Civ.HUNGARY.value, 125, 100, 100, 100, 100, 2)
-        gc.setGrowthModifiersAI(Civ.CASTILLE.value, 125, 100, 100, 100, 100, 2)
-        gc.setGrowthModifiersHu(Civ.CASTILLE.value, 125, 100, 100, 100, 100, 2)
+        gc.setGrowthModifiersAI(Civ.CASTILE.value, 125, 100, 100, 100, 100, 2)
+        gc.setGrowthModifiersHu(Civ.CASTILE.value, 125, 100, 100, 100, 100, 2)
         gc.setGrowthModifiersAI(Civ.DENMARK.value, 100, 100, 100, 100, 100, 2)
         gc.setGrowthModifiersHu(Civ.DENMARK.value, 100, 100, 100, 100, 100, 2)
         gc.setGrowthModifiersAI(Civ.SCOTLAND.value, 100, 100, 100, 100, 100, 2)
@@ -141,8 +141,8 @@ class RFCEBalance:
         gc.setProductionModifiersHu(Civ.KIEV.value, 125, 150, 125, 150)
         gc.setProductionModifiersAI(Civ.HUNGARY.value, 120, 120, 100, 150)
         gc.setProductionModifiersHu(Civ.HUNGARY.value, 125, 125, 100, 130)
-        gc.setProductionModifiersAI(Civ.CASTILLE.value, 100, 100, 100, 130)
-        gc.setProductionModifiersHu(Civ.CASTILLE.value, 125, 100, 100, 120)
+        gc.setProductionModifiersAI(Civ.CASTILE.value, 100, 100, 100, 130)
+        gc.setProductionModifiersHu(Civ.CASTILE.value, 125, 100, 100, 120)
         gc.setProductionModifiersAI(Civ.DENMARK.value, 100, 100, 100, 110)
         gc.setProductionModifiersHu(Civ.DENMARK.value, 100, 100, 100, 120)
         gc.setProductionModifiersAI(Civ.SCOTLAND.value, 100, 100, 100, 125)
@@ -214,8 +214,8 @@ class RFCEBalance:
         gc.setSupportModifiersHu(Civ.KIEV.value, 30, 120, 60, 40, 100)
         gc.setSupportModifiersAI(Civ.HUNGARY.value, 25, 100, 70, 40, 100)
         gc.setSupportModifiersHu(Civ.HUNGARY.value, 25, 100, 70, 40, 100)
-        gc.setSupportModifiersAI(Civ.CASTILLE.value, 20, 100, 60, 40, 100)
-        gc.setSupportModifiersHu(Civ.CASTILLE.value, 20, 100, 60, 40, 100)
+        gc.setSupportModifiersAI(Civ.CASTILE.value, 20, 100, 60, 40, 100)
+        gc.setSupportModifiersHu(Civ.CASTILE.value, 20, 100, 60, 40, 100)
         gc.setSupportModifiersAI(Civ.DENMARK.value, 20, 100, 80, 50, 100)
         gc.setSupportModifiersHu(Civ.DENMARK.value, 20, 100, 80, 50, 100)
         gc.setSupportModifiersAI(Civ.SCOTLAND.value, 25, 100, 80, 50, 100)
@@ -304,7 +304,7 @@ class RFCEBalance:
         gc.setInitialBuilding(Civ.VENECIA.value, Building.HARBOR.value, True)
         gc.setInitialBuilding(Civ.VENECIA.value, Building.GRANARY.value, True)
 
-        gc.setInitialBuilding(Civ.CASTILLE.value, Building.BARRACKS.value, True)
+        gc.setInitialBuilding(Civ.CASTILE.value, Building.BARRACKS.value, True)
 
         gc.setInitialBuilding(Civ.DENMARK.value, Building.BARRACKS.value, True)
 
@@ -381,7 +381,7 @@ class RFCEBalance:
         gc.setCityClusterAI(Civ.NORWAY.value, 1, 2, 1)  # 10
         gc.setCityClusterAI(Civ.KIEV.value, 1, 3, 2)  # 6
         gc.setCityClusterAI(Civ.HUNGARY.value, 2, 3, 3)  # 12
-        gc.setCityClusterAI(Civ.CASTILLE.value, 1, 2, 1)  # 10
+        gc.setCityClusterAI(Civ.CASTILE.value, 1, 2, 1)  # 10
         gc.setCityClusterAI(Civ.DENMARK.value, 2, 3, 3)  # 12
         gc.setCityClusterAI(Civ.SCOTLAND.value, 2, 3, 2)  # 13
         gc.setCityClusterAI(Civ.POLAND.value, 1, 3, 0)  # 8
@@ -412,7 +412,7 @@ class RFCEBalance:
         gc.setCityWarDistanceAI(Civ.NORWAY.value, 3)
         gc.setCityWarDistanceAI(Civ.KIEV.value, 2)
         gc.setCityWarDistanceAI(Civ.HUNGARY.value, 2)
-        gc.setCityWarDistanceAI(Civ.CASTILLE.value, 3)
+        gc.setCityWarDistanceAI(Civ.CASTILE.value, 3)
         gc.setCityWarDistanceAI(Civ.DENMARK.value, 2)
         gc.setCityWarDistanceAI(Civ.SCOTLAND.value, 1)
         gc.setCityWarDistanceAI(Civ.POLAND.value, 2)
@@ -437,7 +437,7 @@ class RFCEBalance:
         gc.setTechPreferenceAI(
             Civ.POPE.value, Technology.PRINTING_PRESS.value, 10
         )  # Pope shouldn't want this
-        gc.setTechPreferenceAI(Civ.CASTILLE.value, Technology.ASTRONOMY.value, 200)
+        gc.setTechPreferenceAI(Civ.CASTILE.value, Technology.ASTRONOMY.value, 200)
         gc.setTechPreferenceAI(Civ.PORTUGAL.value, Technology.ASTRONOMY.value, 200)
 
         # 3Miro: setDiplomacyModifiers(iCiv1,iCiv2,iVal) hidden modifier for the two civ's AI relations. More likely to have OB and so on.
@@ -449,14 +449,14 @@ class RFCEBalance:
         gc.setDiplomacyModifiers(Civ.BYZANTIUM.value, Civ.ARABIA.value, -8)
         gc.setDiplomacyModifiers(Civ.BULGARIA.value, Civ.BYZANTIUM.value, +3)
         gc.setDiplomacyModifiers(Civ.BYZANTIUM.value, Civ.BULGARIA.value, +3)
-        gc.setDiplomacyModifiers(Civ.CORDOBA.value, Civ.CASTILLE.value, -14)
-        gc.setDiplomacyModifiers(Civ.CASTILLE.value, Civ.CORDOBA.value, -14)
-        gc.setDiplomacyModifiers(Civ.MOROCCO.value, Civ.CASTILLE.value, -10)
-        gc.setDiplomacyModifiers(Civ.CASTILLE.value, Civ.MOROCCO.value, -10)
-        gc.setDiplomacyModifiers(Civ.ARAGON.value, Civ.CASTILLE.value, +4)
-        gc.setDiplomacyModifiers(Civ.CASTILLE.value, Civ.ARAGON.value, +4)
-        gc.setDiplomacyModifiers(Civ.PORTUGAL.value, Civ.CASTILLE.value, +6)
-        gc.setDiplomacyModifiers(Civ.CASTILLE.value, Civ.PORTUGAL.value, +6)
+        gc.setDiplomacyModifiers(Civ.CORDOBA.value, Civ.CASTILE.value, -14)
+        gc.setDiplomacyModifiers(Civ.CASTILE.value, Civ.CORDOBA.value, -14)
+        gc.setDiplomacyModifiers(Civ.MOROCCO.value, Civ.CASTILE.value, -10)
+        gc.setDiplomacyModifiers(Civ.CASTILE.value, Civ.MOROCCO.value, -10)
+        gc.setDiplomacyModifiers(Civ.ARAGON.value, Civ.CASTILE.value, +4)
+        gc.setDiplomacyModifiers(Civ.CASTILE.value, Civ.ARAGON.value, +4)
+        gc.setDiplomacyModifiers(Civ.PORTUGAL.value, Civ.CASTILE.value, +6)
+        gc.setDiplomacyModifiers(Civ.CASTILE.value, Civ.PORTUGAL.value, +6)
         gc.setDiplomacyModifiers(Civ.CORDOBA.value, Civ.PORTUGAL.value, -8)
         gc.setDiplomacyModifiers(Civ.PORTUGAL.value, Civ.CORDOBA.value, -8)
         gc.setDiplomacyModifiers(Civ.KIEV.value, Civ.NOVGOROD.value, +5)
@@ -557,9 +557,9 @@ class RFCEBalance:
         )
 
         gc.setUP(
-            Civ.CASTILLE.value, UniquePower.LESS_INSTABILITY_WITH_RELIGIOUS_PROSECUTION.value, 1
+            Civ.CASTILE.value, UniquePower.LESS_INSTABILITY_WITH_RELIGIOUS_PROSECUTION.value, 1
         )
-        gc.setUP(Civ.CASTILLE.value, UniquePower.PER_CITY_COMMERCE_BONUS.value, 2)
+        gc.setUP(Civ.CASTILE.value, UniquePower.PER_CITY_COMMERCE_BONUS.value, 2)
 
         gc.setUP(Civ.NORWAY.value, UniquePower.CAN_ENTER_TERRAIN.value, Terrain.OCEAN.value)
         gc.setUP(
@@ -888,10 +888,10 @@ class RFCEBalance:
         gc.setBuildingPref(Civ.HUNGARY.value, Wonder.COPERNICUS.value, 5)
         gc.setBuildingPref(Civ.HUNGARY.value, Wonder.STEPHANSDOM.value, 5)
 
-        gc.setBuildingPref(Civ.CASTILLE.value, Wonder.ESCORIAL.value, 20)
-        gc.setBuildingPref(Civ.CASTILLE.value, Wonder.MAGELLANS_VOYAGE.value, 10)
-        gc.setBuildingPref(Civ.CASTILLE.value, Wonder.TORRE_DEL_ORO.value, 20)
-        gc.setBuildingPref(Civ.CASTILLE.value, Wonder.BELEM_TOWER.value, 10)
+        gc.setBuildingPref(Civ.CASTILE.value, Wonder.ESCORIAL.value, 20)
+        gc.setBuildingPref(Civ.CASTILE.value, Wonder.MAGELLANS_VOYAGE.value, 10)
+        gc.setBuildingPref(Civ.CASTILE.value, Wonder.TORRE_DEL_ORO.value, 20)
+        gc.setBuildingPref(Civ.CASTILE.value, Wonder.BELEM_TOWER.value, 10)
 
         gc.setBuildingPref(Civ.DENMARK.value, Wonder.KALMAR_CASTLE.value, 10)
         gc.setBuildingPref(Civ.DENMARK.value, Wonder.SHRINE_OF_UPPSALA.value, 20)
@@ -1020,11 +1020,11 @@ class RFCEBalance:
         gc.setHistoricalEnemyAICheat(Civ.OTTOMAN.value, Civ.BULGARIA.value, 10)
         gc.setHistoricalEnemyAICheat(Civ.BULGARIA.value, Civ.OTTOMAN.value, -10)
 
-        gc.setHistoricalEnemyAICheat(Civ.CASTILLE.value, Civ.CORDOBA.value, 10)
-        gc.setHistoricalEnemyAICheat(Civ.CORDOBA.value, Civ.CASTILLE.value, -10)
+        gc.setHistoricalEnemyAICheat(Civ.CASTILE.value, Civ.CORDOBA.value, 10)
+        gc.setHistoricalEnemyAICheat(Civ.CORDOBA.value, Civ.CASTILE.value, -10)
 
-        gc.setHistoricalEnemyAICheat(Civ.PORTUGAL.value, Civ.CASTILLE.value, 10)
-        gc.setHistoricalEnemyAICheat(Civ.CASTILLE.value, Civ.PORTUGAL.value, -10)
+        gc.setHistoricalEnemyAICheat(Civ.PORTUGAL.value, Civ.CASTILE.value, 10)
+        gc.setHistoricalEnemyAICheat(Civ.CASTILE.value, Civ.PORTUGAL.value, -10)
 
         gc.setHistoricalEnemyAICheat(Civ.AUSTRIA.value, Civ.HUNGARY.value, 10)
         gc.setHistoricalEnemyAICheat(Civ.HUNGARY.value, Civ.AUSTRIA.value, -10)

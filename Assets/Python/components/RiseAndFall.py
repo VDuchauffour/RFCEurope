@@ -2405,10 +2405,10 @@ class RiseAndFall:
             # reconquest of Buda from the Ottomans
             if iGameTurn > DateTurn.i1680AD and iGameTurn % 6 == 2:
                 return Civ.HUNGARY.value
-        if self.canSpecialRespawn(Civ.CASTILLE.value, iGameTurn, 25):
+        if self.canSpecialRespawn(Civ.CASTILE.value, iGameTurn, 25):
             # respawn as the Castile/Aragon Union
             if DateTurn.i1470AD < iGameTurn < DateTurn.i1580AD and iGameTurn % 5 == 0:
-                return Civ.CASTILLE.value
+                return Civ.CASTILE.value
         if self.canSpecialRespawn(Civ.ENGLAND.value, iGameTurn, 12):
             # restoration of monarchy
             if iGameTurn > DateTurn.i1660AD and iGameTurn % 6 == 2:
@@ -2576,7 +2576,7 @@ class RiseAndFall:
                 utils.makeUnit(Unit.HORSE_ARCHER.value, iCiv, tPlot, 4)
             elif iCiv == Civ.HUNGARY.value:
                 utils.makeUnit(Unit.HORSE_ARCHER.value, iCiv, tPlot, 4)
-            elif iCiv == Civ.CASTILLE.value:
+            elif iCiv == Civ.CASTILE.value:
                 utils.makeUnit(Unit.LANCER.value, iCiv, tPlot, 4)
             elif iCiv == Civ.DENMARK.value:
                 utils.makeUnit(Unit.DENMARK_HUSKARL.value, iCiv, tPlot, 3)
@@ -2630,7 +2630,7 @@ class RiseAndFall:
                 utils.makeUnit(Unit.HORSE_ARCHER.value, iCiv, tPlot, 2)
             elif iCiv == Civ.HUNGARY.value:
                 utils.makeUnit(Unit.HORSE_ARCHER.value, iCiv, tPlot, 2)
-            elif iCiv == Civ.CASTILLE.value:
+            elif iCiv == Civ.CASTILE.value:
                 utils.makeUnit(Unit.LANCER.value, iCiv, tPlot, 1)
             elif iCiv == Civ.DENMARK.value:
                 utils.makeUnit(Unit.DENMARK_HUSKARL.value, iCiv, tPlot, 1)
@@ -2813,7 +2813,7 @@ class RiseAndFall:
                 utils.makeUnit(Unit.ARCHER.value, iCiv, tPlot, 2)
                 utils.makeUnit(Unit.SPEARMAN.value, iCiv, tPlot, 2)
                 utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 1)
-        elif iCiv == Civ.CASTILLE.value:
+        elif iCiv == Civ.CASTILE.value:
             utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tPlot, 4)
             utils.makeUnit(Unit.SETTLER.value, iCiv, tPlot, 3)
             utils.makeUnit(Unit.CATHOLIC_MISSIONARY.value, iCiv, tPlot, 2)
@@ -3321,21 +3321,21 @@ class RiseAndFall:
             )
             team(Civ.HUNGARY).setHasTech(Technology.VASSALAGE.value, True, iCiv, False, False)
 
-        elif iCiv == Civ.CASTILLE.value:
+        elif iCiv == Civ.CASTILE.value:
             for iTech in range(Technology.STIRRUP.value + 1):
-                team(Civ.CASTILLE).setHasTech(iTech, True, iCiv, False, False)
-            team(Civ.CASTILLE).setHasTech(Technology.LATEEN_SAILS.value, True, iCiv, False, False)
-            team(Civ.CASTILLE).setHasTech(Technology.ASTROLABE.value, True, iCiv, False, False)
-            team(Civ.CASTILLE).setHasTech(Technology.MONASTICISM.value, True, iCiv, False, False)
-            team(Civ.CASTILLE).setHasTech(Technology.ART.value, True, iCiv, False, False)
-            team(Civ.CASTILLE).setHasTech(
+                team(Civ.CASTILE).setHasTech(iTech, True, iCiv, False, False)
+            team(Civ.CASTILE).setHasTech(Technology.LATEEN_SAILS.value, True, iCiv, False, False)
+            team(Civ.CASTILE).setHasTech(Technology.ASTROLABE.value, True, iCiv, False, False)
+            team(Civ.CASTILE).setHasTech(Technology.MONASTICISM.value, True, iCiv, False, False)
+            team(Civ.CASTILE).setHasTech(Technology.ART.value, True, iCiv, False, False)
+            team(Civ.CASTILE).setHasTech(
                 Technology.HERBAL_MEDICINE.value, True, iCiv, False, False
             )
-            team(Civ.CASTILLE).setHasTech(Technology.VASSALAGE.value, True, iCiv, False, False)
-            team(Civ.CASTILLE).setHasTech(Technology.ENGINEERING.value, True, iCiv, False, False)
-            team(Civ.CASTILLE).setHasTech(Technology.MACHINERY.value, True, iCiv, False, False)
-            team(Civ.CASTILLE).setHasTech(Technology.FEUDALISM.value, True, iCiv, False, False)
-            team(Civ.CASTILLE).setHasTech(Technology.CHAIN_MAIL.value, True, iCiv, False, False)
+            team(Civ.CASTILE).setHasTech(Technology.VASSALAGE.value, True, iCiv, False, False)
+            team(Civ.CASTILE).setHasTech(Technology.ENGINEERING.value, True, iCiv, False, False)
+            team(Civ.CASTILE).setHasTech(Technology.MACHINERY.value, True, iCiv, False, False)
+            team(Civ.CASTILE).setHasTech(Technology.FEUDALISM.value, True, iCiv, False, False)
+            team(Civ.CASTILE).setHasTech(Technology.CHAIN_MAIL.value, True, iCiv, False, False)
 
         elif iCiv == Civ.DENMARK.value:
             for iTech in range(Technology.STIRRUP.value + 1):

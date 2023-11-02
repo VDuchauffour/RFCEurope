@@ -105,7 +105,7 @@ CIV_DAWN_OF_MAN_VALUES = CivDataMapper(
         Civ.NORWAY: ("872", "TXT_KEY_AD"),
         Civ.KIEV: ("880", "TXT_KEY_AD"),
         Civ.HUNGARY: ("895", "TXT_KEY_AD"),
-        Civ.CASTILLE: ("910", "TXT_KEY_AD"),
+        Civ.CASTILE: ("910", "TXT_KEY_AD"),
         Civ.DENMARK: ("936", "TXT_KEY_AD"),
         Civ.SCOTLAND: ("960", "TXT_KEY_AD"),
         Civ.POLAND: ("966", "TXT_KEY_AD"),

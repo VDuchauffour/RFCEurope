@@ -2308,7 +2308,7 @@ class CvVictoryScreen:
             Civ.NORWAY.value: self.getNorwayText(),
             Civ.KIEV.value: self.getKievText(),
             Civ.HUNGARY.value: self.getHungaryText(),
-            Civ.CASTILLE.value: self.getSpainText(),
+            Civ.CASTILE.value: self.getSpainText(),
             Civ.DENMARK.value: self.getDenmarkText(),
             Civ.SCOTLAND.value: self.getScotlandText(),
             Civ.POLAND.value: self.getPolandText(),
@@ -2963,7 +2963,7 @@ class CvVictoryScreen:
                     + self.determineColor(ourBestCities[i][0] >= 5000, ourBestCities[i][0])
                 )
         # UHV3
-        sText3 += self.CollapseOrVassal([Civ.CASTILLE.value, Civ.PORTUGAL.value, Civ.ARAGON.value])
+        sText3 += self.CollapseOrVassal([Civ.CASTILE.value, Civ.PORTUGAL.value, Civ.ARAGON.value])
         lHelpTexts = [sText1, sText2, sText3]
         return lHelpTexts
 

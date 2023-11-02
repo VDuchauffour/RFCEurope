@@ -2,7 +2,6 @@
 
 from CvPythonExtensions import *
 from CoreData import civilizations
-import XMLConsts as xml
 import RFCEMaps
 import RFCUtils  # Absinthe
 import PyHelpers  # Absinthe
@@ -21,7 +20,7 @@ pFrankia = gc.getPlayer(Civ.FRANCE.value)
 pArabia = gc.getPlayer(Civ.ARABIA.value)
 pBulgaria = gc.getPlayer(Civ.BULGARIA.value)
 pCordoba = gc.getPlayer(Civ.CORDOBA.value)
-pSpain = gc.getPlayer(Civ.CASTILLE.value)
+pSpain = gc.getPlayer(Civ.CASTILE.value)
 pNorway = gc.getPlayer(Civ.NORWAY.value)
 pDenmark = gc.getPlayer(Civ.DENMARK.value)
 pVenecia = gc.getPlayer(Civ.VENECIA.value)
@@ -670,7 +669,7 @@ class ProvinceManager:
             Civ.NORWAY.value: tNorwayCore,
             Civ.KIEV.value: tKievCore,
             Civ.HUNGARY.value: tHungaryCore,
-            Civ.CASTILLE.value: tSpainCore,
+            Civ.CASTILE.value: tSpainCore,
             Civ.DENMARK.value: tDenmarkCore,
             Civ.SCOTLAND.value: tScotlandCore,
             Civ.POLAND.value: tPolandCore,
@@ -701,7 +700,7 @@ class ProvinceManager:
             Civ.NORWAY.value: tNorwayNorm,
             Civ.KIEV.value: tKievNorm,
             Civ.HUNGARY.value: tHungaryNorm,
-            Civ.CASTILLE.value: tSpainNorm,
+            Civ.CASTILE.value: tSpainNorm,
             Civ.DENMARK.value: tDenmarkNorm,
             Civ.SCOTLAND.value: tScotlandNorm,
             Civ.POLAND.value: tPolandNorm,
@@ -732,7 +731,7 @@ class ProvinceManager:
             Civ.NORWAY.value: tNorwayOuter,
             Civ.KIEV.value: tKievOuter,
             Civ.HUNGARY.value: tHungaryOuter,
-            Civ.CASTILLE.value: tSpainOuter,
+            Civ.CASTILE.value: tSpainOuter,
             Civ.DENMARK.value: tDenmarkOuter,
             Civ.SCOTLAND.value: tScotlandOuter,
             Civ.POLAND.value: tPolandOuter,
@@ -763,7 +762,7 @@ class ProvinceManager:
             Civ.NORWAY.value: tNorwayPot2Core,
             Civ.KIEV.value: tKievPot2Core,
             Civ.HUNGARY.value: tHungaryPot2Core,
-            Civ.CASTILLE.value: tSpainPot2Core,
+            Civ.CASTILE.value: tSpainPot2Core,
             Civ.DENMARK.value: tDenmarkPot2Core,
             Civ.SCOTLAND.value: tScotlandPot2Core,
             Civ.POLAND.value: tPolandPot2Core,
@@ -794,7 +793,7 @@ class ProvinceManager:
             Civ.NORWAY.value: tNorwayPot2Norm,
             Civ.KIEV.value: tKievPot2Norm,
             Civ.HUNGARY.value: tHungaryPot2Norm,
-            Civ.CASTILLE.value: tSpainPot2Norm,
+            Civ.CASTILE.value: tSpainPot2Norm,
             Civ.DENMARK.value: tDenmarkPot2Norm,
             Civ.SCOTLAND.value: tScotlandPot2Norm,
             Civ.POLAND.value: tPolandPot2Norm,
@@ -987,7 +986,7 @@ class ProvinceManager:
         elif iPlayer == Civ.HUNGARY.value:
             pBulgaria.setProvinceType(Province.BANAT.value, ProvinceTypes.NONE.value)
             pBulgaria.setProvinceType(Province.WALLACHIA.value, ProvinceTypes.OUTER.value)
-        elif iPlayer == Civ.CASTILLE.value:
+        elif iPlayer == Civ.CASTILE.value:
             pCordoba.setProvinceType(Province.LA_MANCHA.value, ProvinceTypes.NATURAL.value)
         elif iPlayer == Civ.MOROCCO.value:
             pCordoba.setProvinceType(Province.MOROCCO.value, ProvinceTypes.NONE.value)

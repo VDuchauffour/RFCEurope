@@ -433,7 +433,7 @@ tPrussiaDefeat = [
     Civ.GERMANY.value,
     Civ.SWEDEN.value,
     Civ.FRANCE.value,
-    Civ.CASTILLE.value,
+    Civ.CASTILE.value,
 ]
 tScotlandControl = [
     Province.SCOTLAND.value,
@@ -486,7 +486,7 @@ class Victory:
             Civ.NORWAY.value: self.checkNorway,
             Civ.KIEV.value: self.checkKiev,
             Civ.HUNGARY.value: self.checkHungary,
-            Civ.CASTILLE.value: self.checkSpain,
+            Civ.CASTILE.value: self.checkSpain,
             Civ.DENMARK.value: self.checkDenmark,
             Civ.SCOTLAND.value: self.checkScotland,
             Civ.POLAND.value: self.checkPoland,
@@ -939,8 +939,8 @@ class Victory:
 
         # Spain UHV 2: Have more Colonies than any other nation in 1588 (while having at least 3)
         # this is only for the Main Screen counter
-        elif iPlayer == Civ.CASTILLE.value:
-            player(Civ.CASTILLE).setUHVCounter(1, player(Civ.CASTILLE).getUHVCounter(1) + 1)
+        elif iPlayer == Civ.CASTILE.value:
+            player(Civ.CASTILE).setUHVCounter(1, player(Civ.CASTILE).getUHVCounter(1) + 1)
 
         # Portugal UHV 3: Build 5 Colonies
         elif iPlayer == Civ.PORTUGAL.value:
@@ -1457,26 +1457,26 @@ class Victory:
 
         # UHV 1: Reconquista (make sure Catholicism is the only religion present in every city in the Iberian peninsula in 1492)
         if iGameTurn == DateTurn.i1492AD:
-            if self.isPossibleUHV(Civ.CASTILLE.value, 0, True):
+            if self.isPossibleUHV(Civ.CASTILE.value, 0, True):
                 bConverted = True
                 for iProv in tSpainConvert:
-                    if not player(Civ.CASTILLE).provinceIsConvertReligion(
+                    if not player(Civ.CASTILE).provinceIsConvertReligion(
                         iProv, Religion.CATHOLICISM.value
                     ):
                         bConverted = False
                         break
                 if bConverted:
-                    self.wonUHV(Civ.CASTILLE.value, 0)
+                    self.wonUHV(Civ.CASTILE.value, 0)
                 else:
-                    self.lostUHV(Civ.CASTILLE.value, 0)
+                    self.lostUHV(Civ.CASTILE.value, 0)
 
         # UHV 2: Have more Colonies than any other nation in 1588, while having at least 3
         elif iGameTurn == DateTurn.i1588AD:
-            if self.isPossibleUHV(Civ.CASTILLE.value, 1, True):
+            if self.isPossibleUHV(Civ.CASTILE.value, 1, True):
                 bMost = True
-                iSpainColonies = self.getNumRealColonies(Civ.CASTILLE.value)
+                iSpainColonies = self.getNumRealColonies(Civ.CASTILE.value)
                 for iPlayer in civilizations().majors().ids():
-                    if iPlayer != Civ.CASTILLE.value:
+                    if iPlayer != Civ.CASTILE.value:
                         pPlayer = gc.getPlayer(iPlayer)
                         if (
                             pPlayer.isAlive()
@@ -1484,15 +1484,15 @@ class Victory:
                         ):
                             bMost = False
                 if bMost and iSpainColonies >= 3:
-                    self.wonUHV(Civ.CASTILLE.value, 1)
+                    self.wonUHV(Civ.CASTILE.value, 1)
                 else:
-                    self.lostUHV(Civ.CASTILLE.value, 1)
+                    self.lostUHV(Civ.CASTILE.value, 1)
 
         # UHV 3: Ensure that Catholic nations have more population and more land than any other religion in 1648
         elif iGameTurn == DateTurn.i1648AD:
-            if self.isPossibleUHV(Civ.CASTILLE.value, 2, True):
-                if player(Civ.CASTILLE).getStateReligion() != Religion.CATHOLICISM.value:
-                    self.lostUHV(Civ.CASTILLE.value, 2)
+            if self.isPossibleUHV(Civ.CASTILE.value, 2, True):
+                if player(Civ.CASTILE).getStateReligion() != Religion.CATHOLICISM.value:
+                    self.lostUHV(Civ.CASTILE.value, 2)
                 else:
                     lLand = [0, 0, 0, 0, 0, 0]  # Prot, Islam, Cath, Orth, Jew, Pagan
                     lPop = [0, 0, 0, 0, 0, 0]
@@ -1544,9 +1544,9 @@ class Victory:
                                 break
 
                     if bWon:
-                        self.wonUHV(Civ.CASTILLE.value, 2)
+                        self.wonUHV(Civ.CASTILE.value, 2)
                     else:
-                        self.lostUHV(Civ.CASTILLE.value, 2)
+                        self.lostUHV(Civ.CASTILE.value, 2)
 
     def checkScotland(self, iGameTurn):
 
@@ -1729,8 +1729,8 @@ class Victory:
                 bConq = True
                 if (
                     (
-                        civilization(Civ.CASTILLE).is_alive()
-                        and not civilization(Civ.CASTILLE).is_vassal(Civ.MOROCCO)
+                        civilization(Civ.CASTILE).is_alive()
+                        and not civilization(Civ.CASTILE).is_vassal(Civ.MOROCCO)
                     )
                     or (
                         civilization(Civ.PORTUGAL).is_alive()

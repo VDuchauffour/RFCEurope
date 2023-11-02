@@ -1201,7 +1201,7 @@ class Crusades:
                     if iConstantinopleOwner == Civ.BYZANTIUM.value and bIsNotAVassal:
                         self.crusadeStolenAI(iRichest, Civ.BYZANTIUM.value)
                         bStolen = True
-        elif iRichest in [Civ.CASTILLE.value, Civ.PORTUGAL.value, Civ.ARAGON.value]:
+        elif iRichest in [Civ.CASTILE.value, Civ.PORTUGAL.value, Civ.ARAGON.value]:
             pCordoba = gc.getPlayer(Civ.CORDOBA.value)
             if pCordoba.isAlive():
                 # Only if the potential attacker is not vassal of the target

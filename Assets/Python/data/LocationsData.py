@@ -512,7 +512,7 @@ CIV_CAPITAL_LOCATIONS = CivDataMapper(
         Civ.NORWAY: (57, 65),  # Tonsberg
         Civ.KIEV: (83, 45),  # Kiev
         Civ.HUNGARY: (66, 37),  # Buda
-        Civ.CASTILLE: (27, 32),  # Leon
+        Civ.CASTILE: (27, 32),  # Leon
         Civ.DENMARK: (59, 57),  # Roskilde / Kobenhavn
         Civ.SCOTLAND: (37, 63),  # Edinburgh
         Civ.POLAND: (65, 49),  # Poznan
@@ -547,7 +547,7 @@ CIV_NEW_CAPITAL_LOCATIONS = CivDataMapper(
         Civ.GERMANY: [(57, 41)],  # Munich
         Civ.NORWAY: [(59, 64)],  # Oslo
         Civ.KIEV: [(88, 40)],  # Stara Sich
-        Civ.CASTILLE: [
+        Civ.CASTILE: [
             (30, 27),
             (31, 27),
             (31, 28),
@@ -587,7 +587,7 @@ CIV_NEIGHBOURS = CivDataMapper(
             Civ.KIEV,
         ],
         Civ.CORDOBA: [
-            Civ.CASTILLE,
+            Civ.CASTILE,
             Civ.PORTUGAL,
             Civ.ARAGON,
             Civ.MOROCCO,
@@ -643,7 +643,7 @@ CIV_NEIGHBOURS = CivDataMapper(
             Civ.GERMANY,
             Civ.AUSTRIA,
         ],
-        Civ.CASTILLE: [
+        Civ.CASTILE: [
             Civ.CORDOBA,
             Civ.PORTUGAL,
             Civ.ARAGON,
@@ -677,7 +677,7 @@ CIV_NEIGHBOURS = CivDataMapper(
             Civ.POPE,
         ],
         Civ.MOROCCO: [
-            Civ.CASTILLE,
+            Civ.CASTILE,
             Civ.PORTUGAL,
             Civ.CORDOBA,
         ],
@@ -687,7 +687,7 @@ CIV_NEIGHBOURS = CivDataMapper(
             Civ.SCOTLAND,
         ],
         Civ.PORTUGAL: [
-            Civ.CASTILLE,
+            Civ.CASTILE,
             Civ.CORDOBA,
             Civ.MOROCCO,
         ],
@@ -699,7 +699,7 @@ CIV_NEIGHBOURS = CivDataMapper(
         ],
         Civ.ARAGON: [
             Civ.CORDOBA,
-            Civ.CASTILLE,
+            Civ.CASTILE,
             Civ.FRANCE,
         ],
         Civ.PRUSSIA: [
@@ -752,7 +752,7 @@ CIV_OLDER_NEIGHBOURS = CivDataMapper(
         Civ.BULGARIA: [Civ.BYZANTIUM],
         Civ.KIEV: [Civ.BULGARIA],
         Civ.HUNGARY: [Civ.BULGARIA],
-        Civ.CASTILLE: [Civ.CORDOBA],
+        Civ.CASTILE: [Civ.CORDOBA],
         Civ.DENMARK: [Civ.GERMANY],
         Civ.POLAND: [
             Civ.GERMANY,
@@ -769,10 +769,10 @@ CIV_OLDER_NEIGHBOURS = CivDataMapper(
             Civ.SCOTLAND,
         ],
         Civ.PORTUGAL: [
-            Civ.CASTILLE,
+            Civ.CASTILE,
             Civ.CORDOBA,
         ],
-        Civ.ARAGON: [Civ.CASTILLE],
+        Civ.ARAGON: [Civ.CASTILE],
         Civ.SWEDEN: [
             Civ.NORWAY,
             Civ.DENMARK,
@@ -822,7 +822,7 @@ CIV_HOME_LOCATIONS = CivDataMapper(
         Civ.NORWAY: (509, 102),
         Civ.KIEV: (590, 140),
         Civ.HUNGARY: (550, 155),
-        Civ.CASTILLE: (460, 180),
+        Civ.CASTILE: (460, 180),
         Civ.DENMARK: (515, 118),
         Civ.SCOTLAND: (466, 115),
         Civ.POLAND: (540, 130),
@@ -925,7 +925,7 @@ CIV_CORE_AREA = (
                 Area.TILE_MIN: (64, 33),
                 Area.TILE_MAX: (73, 39),
             },
-            Civ.CASTILLE: {
+            Civ.CASTILE: {
                 Area.TILE_MIN: (25, 30),
                 Area.TILE_MAX: (32, 36),
             },
@@ -1352,7 +1352,7 @@ CIV_NORMAL_AREA = (
                     (77, 41),
                 ],
             },
-            Civ.CASTILLE: {
+            Civ.CASTILE: {
                 Area.TILE_MIN: (25, 26),
                 Area.TILE_MAX: (34, 36),
                 Area.EXCEPTION_TILES: [
@@ -1669,7 +1669,7 @@ CIV_BROADER_AREA = (
                 Area.TILE_MIN: (64, 27),
                 Area.TILE_MAX: (74, 37),
             },
-            Civ.CASTILLE: {
+            Civ.CASTILE: {
                 Area.TILE_MIN: (23, 31),
                 Area.TILE_MAX: (33, 41),
             },
@@ -1909,7 +1909,7 @@ CIV_VISIBLE_AREA_500AD = (
                     Area.TILE_MAX: (92, 42),
                 },
             ],
-            Civ.CASTILLE: [
+            Civ.CASTILE: [
                 {
                     Area.TILE_MIN: (22, 25),
                     Area.TILE_MAX: (35, 38),
@@ -2270,7 +2270,7 @@ CIV_VISIBLE_AREA_1200AD = (
                     Area.TILE_MAX: (82, 26),
                 },
             ],
-            Civ.CASTILLE: [
+            Civ.CASTILE: [
                 {
                     Area.TILE_MIN: (20, 17),
                     Area.TILE_MAX: (56, 40),
@@ -2480,7 +2480,7 @@ CIV_GROUPS = EnumDataMapper(
         ],
         CivGroup.ATLANTIC: [
             Civ.FRANCE,
-            Civ.CASTILLE,
+            Civ.CASTILE,
             Civ.ENGLAND,
             Civ.PORTUGAL,
             Civ.DUTCH,

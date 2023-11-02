@@ -21,7 +21,6 @@ from CoreTypes import (
     Technology,
     Unit,
     Wonder,
-    Province,
 )
 from LocationsData import CITIES
 from TimelineData import DateTurn
@@ -64,7 +63,7 @@ lReformationNeighbours = [
     [Civ.ARABIA.value, Civ.BULGARIA.value, Civ.OTTOMAN.value],  # Byzantium
     [
         Civ.BURGUNDY.value,
-        Civ.CASTILLE.value,
+        Civ.CASTILE.value,
         Civ.GERMANY.value,
         Civ.GENOA.value,
         Civ.ENGLAND.value,
@@ -75,7 +74,7 @@ lReformationNeighbours = [
     [Civ.BYZANTIUM.value, Civ.KIEV.value, Civ.HUNGARY.value, Civ.OTTOMAN.value],  # Bulgaria
     [
         Civ.ARABIA.value,
-        Civ.CASTILLE.value,
+        Civ.CASTILE.value,
         Civ.PORTUGAL.value,
         Civ.ARAGON.value,
         Civ.MOROCCO.value,
@@ -146,15 +145,15 @@ lReformationNeighbours = [
     ],  # Genoa
     [
         Civ.ARABIA.value,
-        Civ.CASTILLE.value,
+        Civ.CASTILE.value,
         Civ.PORTUGAL.value,
         Civ.ARAGON.value,
         Civ.CORDOBA.value,
     ],  # Morocco
     [Civ.FRANCE.value, Civ.DUTCH.value, Civ.SCOTLAND.value],  # England
-    [Civ.CASTILLE.value, Civ.CORDOBA.value, Civ.ARAGON.value],  # Portugal
+    [Civ.CASTILE.value, Civ.CORDOBA.value, Civ.ARAGON.value],  # Portugal
     [
-        Civ.CASTILLE.value,
+        Civ.CASTILE.value,
         Civ.CORDOBA.value,
         Civ.PORTUGAL.value,
         Civ.FRANCE.value,
