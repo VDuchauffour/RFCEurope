@@ -606,7 +606,7 @@ class Crusades:
             for pUnit in unitList:
                 iUnitType = pUnit.getUnitType()
                 if iUnitType in [
-                    Unit.KNIGHT.valueofStJohns,
+                    Unit.KNIGHT_OF_ST_JOHNS.value,
                     Unit.TEMPLAR.value,
                     Unit.TEUTONIC.value,
                 ]:
@@ -1005,7 +1005,7 @@ class Crusades:
         if iUnitType in [
             Unit.TEMPLAR.value,
             Unit.TEUTONIC.value,
-            Unit.KNIGHT.valueofStJohns,
+            Unit.KNIGHT_OF_ST_JOHNS.value,
             Unit.CALATRAVA_KNIGHT.value,
             Unit.DRAGON_KNIGHT.value,
         ]:
@@ -1022,7 +1022,7 @@ class Crusades:
         if iUnitType == Unit.TEUTONIC.value:
             return 1
         if iUnitType in [
-            Unit.KNIGHT.valueofStJohns,
+            Unit.KNIGHT_OF_ST_JOHNS.value,
             Unit.CALATRAVA_KNIGHT.value,
             Unit.DRAGON_KNIGHT.value,
         ]:
@@ -1441,7 +1441,7 @@ class Crusades:
                 self.makeUnit(Unit.BURGUNDIAN_PALADIN.value, iLeader, iActiveCrusade, tPlot, 1)
                 self.makeUnit(Unit.TEMPLAR.value, iLeader, iActiveCrusade, tPlot, 1)
                 self.makeUnit(Unit.TEUTONIC.value, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(Unit.KNIGHT.valueofStJohns, iLeader, iActiveCrusade, tPlot, 1)
+                self.makeUnit(Unit.KNIGHT_OF_ST_JOHNS.value, iLeader, iActiveCrusade, tPlot, 1)
                 self.makeUnit(Unit.GUISARME.value, iLeader, iActiveCrusade, tPlot, 1)
                 self.makeUnit(Unit.CATAPULT.value, iLeader, iActiveCrusade, tPlot, 1)
             else:
@@ -1529,7 +1529,7 @@ class Crusades:
             )
         if self.getSelectedUnit(2) > 0:
             self.makeUnit(
-                Unit.KNIGHT.valueofStJohns,
+                Unit.KNIGHT_OF_ST_JOHNS.value,
                 iLeader,
                 iActiveCrusade,
                 tPlot,

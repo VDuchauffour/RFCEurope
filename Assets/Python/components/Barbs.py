@@ -581,7 +581,7 @@ tValletta = (
     [((57, 14), "Valletta", 100)],
     Civ.INDEPENDENT_4.value,
     1,
-    Unit.KNIGHT.valueofStJohns,
+    Unit.KNIGHT_OF_ST_JOHNS.value,
     3,
     Religion.CATHOLICISM.value,
     0,
