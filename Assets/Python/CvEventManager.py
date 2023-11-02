@@ -869,7 +869,7 @@ class CvEventManager:
                 pNewUnit.setExperience(6, -1)
                 for iPromo in [
                     Promotion.COMBAT.value,
-                    Promotion.LEADER.valueship,
+                    Promotion.LEADERSHIP.value,
                     Promotion.NAVIGATION.value,
                 ]:
                     pNewUnit.setHasPromotion(iPromo, True)
