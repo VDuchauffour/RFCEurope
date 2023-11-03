@@ -17,7 +17,6 @@ import Resources
 import CityNameManager
 import UniquePowers
 import AIWars
-import XMLConsts as xml
 import RFCUtils
 
 import Victory
@@ -33,6 +32,7 @@ import RFCEMaps
 from MiscData import MessageData
 from TimelineData import DateTurn
 from CoreTypes import (
+    Building,
     Civ,
     City,
     Improvement,
@@ -42,6 +42,7 @@ from CoreTypes import (
     StabilityCategory,
     Technology,
     Unit,
+    Wonder,
 )
 from LocationsData import CITIES
 
@@ -270,7 +271,7 @@ class CvRFCEventHandler:
                 Religion.ISLAM.value, Religion.ISLAM.value, False
             )
             gc.getGame().getHolyCity(Religion.ISLAM.value).setNumRealBuilding(
-                xml.iIslamicShrine, 1
+                Building.ISLAMIC_SHRINE.value, 1
             )
 
         # 3Miro: Arab UP
@@ -304,7 +305,7 @@ class CvRFCEventHandler:
                 Religion.PROTESTANTISM.value, Religion.PROTESTANTISM.value, False
             )
             gc.getGame().getHolyCity(Religion.PROTESTANTISM.value).setNumRealBuilding(
-                xml.iProtestantShrine, 1
+                Building.PROTESTANT_SHRINE.value, 1
             )
             self.rel.setReformationActive(True)
             self.rel.reformationchoice(Civ.DUTCH.value)
@@ -371,24 +372,28 @@ class CvRFCEventHandler:
         if bConquest:
             iNewOwner = city.getOwner()
             pNewOwner = gc.getPlayer(iNewOwner)
-            if pNewOwner.countNumBuildings(xml.iKrakDesChevaliers) > 0:
-                city.setHasRealBuilding(utils.getUniqueBuilding(iNewOwner, xml.iWalls), True)
+            if pNewOwner.countNumBuildings(Wonder.KRAK_DES_CHEVALIERS.value) > 0:
+                city.setHasRealBuilding(
+                    utils.getUniqueBuilding(iNewOwner, Building.WALLS.value), True
+                )
                 # Absinthe: if the Castle building were built with the Krak, then it should add stability
                 # 			the safety checks are probably unnecessary, as Castle buildings are destroyed on conquest (theoretically)
                 if not (
-                    city.isHasBuilding(xml.iSpanishCitadel)
-                    or city.isHasBuilding(xml.iMoscowKremlin)
-                    or city.isHasBuilding(xml.iHungarianStronghold)
-                    or city.isHasBuilding(xml.iCastle)
+                    city.isHasBuilding(Building.SPANISH_CITADEL.value)
+                    or city.isHasBuilding(Building.MOSCOW_KREMLIN.value)
+                    or city.isHasBuilding(Building.HUNGARIAN_STRONGHOLD.value)
+                    or city.isHasBuilding(Building.CASTLE.value)
                 ):
-                    city.setHasRealBuilding(utils.getUniqueBuilding(iNewOwner, xml.iCastle), True)
+                    city.setHasRealBuilding(
+                        utils.getUniqueBuilding(iNewOwner, Building.CASTLE.value), True
+                    )
                     pNewOwner.changeStabilityBase(StabilityCategory.EXPANSION.value, 1)
         # Sedna17, end
 
         # 3Miro: National wonders and city acquire by trade
         # if (bTrade):
-        # 	for i in range (Consts.iScotlandYard +1 - Consts.iHeroicEpic):
-        # 		iNationalWonder = i + Consts.iHeroicEpic
+        # 	for i in range (Consts.iScotlandYard +1 - Building.HEROIC_EPIC.value):
+        # 		iNationalWonder = i + Building.HEROIC_EPIC.value
         # 		if (city.hasBuilding(iNationalWonder)):
         # 			city.setHasRealBuilding((iNationalWonder), False)
 
@@ -466,7 +471,7 @@ class CvRFCEventHandler:
                 if gc.getTeam(gc.getPlayer(Civ.PORTUGAL.value).getTeam()).isHasTech(
                     Technology.ASTRONOMY.value
                 ):
-                    city.setHasRealBuilding(xml.iPortugalFeitoria, True)
+                    city.setHasRealBuilding(Building.PORTUGAL_FEITORIA.value, True)
 
         # Absinthe: Free buildings if city is built on a tile improvement
         # 			The problem is that the improvement is auto-destroyed before the city is founded, and totally separately from this function, thus a workaround is needed
@@ -485,18 +490,20 @@ class CvRFCEventHandler:
             iImpBeforeCityType == Improvement.FORT.value
             and (iImpBeforeCityX, iImpBeforeCityY) == tCity
         ):
-            city.setHasRealBuilding(utils.getUniqueBuilding(iOwner, xml.iWalls), True)
+            city.setHasRealBuilding(utils.getUniqueBuilding(iOwner, Building.WALLS.value), True)
         # Absinthe: free granary if built on hamlet
         if (
             iImpBeforeCityType == Improvement.HAMLET.value
             and (iImpBeforeCityX, iImpBeforeCityY) == tCity
         ):
-            city.setHasRealBuilding(utils.getUniqueBuilding(iOwner, xml.iGranary), True)
+            city.setHasRealBuilding(utils.getUniqueBuilding(iOwner, Building.GRANARY.value), True)
         # Absinthe: free granary and +1 population if built on village or town
         if iImpBeforeCityType in [Improvement.TOWN.value, Improvement.VILLAGE.value]:
             if (iImpBeforeCityX, iImpBeforeCityY) == tCity:
                 city.changePopulation(1)
-                city.setHasRealBuilding(utils.getUniqueBuilding(iOwner, xml.iGranary), True)
+                city.setHasRealBuilding(
+                    utils.getUniqueBuilding(iOwner, Building.GRANARY.value), True
+                )
 
         # Absinthe: Some initial food for all cities on foundation
         # 			So Leon and Roskilde for example don't lose a population in the first couple turns
@@ -516,7 +523,7 @@ class CvRFCEventHandler:
                 Religion.PROTESTANTISM.value, Religion.PROTESTANTISM.value, False
             )
             gc.getGame().getHolyCity(Religion.PROTESTANTISM.value).setNumRealBuilding(
-                xml.iProtestantShrine, 1
+                Building.PROTESTANT_SHRINE.value, 1
             )
             self.rel.setReformationActive(True)
             self.rel.reformationchoice(Civ.DUTCH.value)
@@ -550,17 +557,17 @@ class CvRFCEventHandler:
                     iReligion
                 ):  # Sedna: Protestant Shrine is now starting point for consistency with Religion.xml, Judaism is special
                     if iReligion == Religion.PROTESTANTISM.value:
-                        iTemple = xml.iProtestantTemple
-                        iShrine = xml.iProtestantShrine
+                        iTemple = Building.PROTESTANT_TEMPLE.value
+                        iShrine = Building.PROTESTANT_SHRINE.value
                     elif iReligion == Religion.ISLAM.value:
-                        iTemple = xml.iIslamicTemple
-                        iShrine = xml.iIslamicShrine
+                        iTemple = Building.ISLAMIC_TEMPLE.value
+                        iShrine = Building.ISLAMIC_SHRINE.value
                     elif iReligion == Religion.CATHOLICISM.value:
-                        iTemple = xml.iCatholicTemple
-                        iShrine = xml.iCatholicShrine
+                        iTemple = Building.CATHOLIC_TEMPLE.value
+                        iShrine = Building.CATHOLIC_SHRINE.value
                     elif iReligion == Religion.ORTHODOXY.value:
-                        iTemple = xml.iOrthodoxTemple
-                        iShrine = xml.iOrthodoxShrine
+                        iTemple = Building.ORTHODOX_TEMPLE.value
+                        iShrine = Building.ORTHODOX_SHRINE.value
                     if not city.isHasRealBuilding(iShrine):
                         city.setHasRealBuilding(iShrine, True)
                     if not city.isHasRealBuilding(iTemple):
@@ -589,7 +596,7 @@ class CvRFCEventHandler:
 
         # Absinthe: Aragonese UP
         # UP tile yields should be recalculated right away if a new Palace was built
-        if iOwner == Civ.ARAGON.value and iBuildingType == xml.iPalace:
+        if iOwner == Civ.ARAGON.value and iBuildingType == Building.PALACE.value:
             self.up.confederationUP(iOwner)
 
     def onProjectBuilt(self, argsList):
@@ -725,8 +732,8 @@ class CvRFCEventHandler:
             for iPlayer in civilizations().drop(Civ.BARBARIAN).ids():
                 bFound = 0
                 for city in utils.getCityList(iPlayer):
-                    if city.isHasBuilding(xml.iGreatLighthouse):
-                        city.setHasRealBuilding(xml.iGreatLighthouse, False)
+                    if city.isHasBuilding(Wonder.GREAT_LIGHTHOUSE.value):
+                        city.setHasRealBuilding(Wonder.GREAT_LIGHTHOUSE.value, False)
                         GLcity = city
                         bFound = 1
                 if bFound and utils.getHumanID() == iPlayer:

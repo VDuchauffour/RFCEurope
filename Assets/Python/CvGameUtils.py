@@ -5,12 +5,11 @@
 
 from CoreData import civilization
 from CoreFunctions import get_religion_by_id
-from CoreTypes import Civ, Religion, StabilityCategory, Unit
+from CoreTypes import Building, Civ, Religion, StabilityCategory, Unit, Wonder
 import CvUtil
 from CvPythonExtensions import *
 from MiscData import RELIGION_PERSECUTION_ORDER
 import PyHelpers  # Absinthe
-import XMLConsts as xml  # Absinthe
 import RFCUtils
 import Stability  # Absinthe
 
@@ -622,13 +621,13 @@ class CvGameUtils:
         iDiscount = 0
 
         # Absinthe: Borgund Stave Church start
-        if pPlayer.countNumBuildings(xml.iBorgundStaveChurch) > 0:
-            if xml.iPaganShrine <= iBuilding <= xml.iReliquary:
+        if pPlayer.countNumBuildings(Wonder.BORGUND_STAVE_CHURCH.value) > 0:
+            if Building.PAGAN_SHRINE.value <= iBuilding <= Building.RELIQUARY.value:
                 iDiscount += 40
         # Absinthe: Borgund Stave Church end
 
         # Absinthe: Blue Mosque start
-        if pPlayer.countNumBuildings(xml.iBlueMosque) > 0:
+        if pPlayer.countNumBuildings(Wonder.BLUE_MOSQUE.value) > 0:
             if pPlayer.getCapitalCity().getNumActiveBuilding(iBuilding) and not pCity.isCapital():
                 iDiscount += 20
         # Absinthe: Blue Mosque end
