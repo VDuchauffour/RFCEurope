@@ -7,7 +7,6 @@ from PyUtils import percentage_chance
 import RFCUtils
 import ProvinceManager
 import Consts
-import XMLConsts as xml
 import Religions
 import Victory
 from StoredData import sd
@@ -15,6 +14,7 @@ import Crusades
 
 from MiscData import PLAGUE_IMMUNITY, MessageData
 from CoreTypes import (
+    Building,
     Civ,
     Scenario,
     Religion,
@@ -517,10 +517,12 @@ class RiseAndFall:
         # 			Venice (56, 35), Augsburg (55, 41), Porto (23, 31), Prague (60, 44), Riga (74, 58), Perekop (87, 36)
         # 			London (41, 52), Novgorod (80, 62) currently has preplaced fort on the map instead
         if tCity in [(56, 35), (55, 41), (23, 31), (60, 44), (74, 58), (87, 36)]:
-            pCity.setHasRealBuilding(utils.getUniqueBuilding(iPlayer, xml.iWalls), True)
+            pCity.setHasRealBuilding(utils.getUniqueBuilding(iPlayer, Building.WALLS.value), True)
         elif tCity == (75, 53):  # Vilnius - important for AI Lithuania against Prussia
             if not gc.getPlayer(Civ.LITHUANIA.value).isHuman():
-                pCity.setHasRealBuilding(utils.getUniqueBuilding(iPlayer, xml.iWalls), True)
+                pCity.setHasRealBuilding(
+                    utils.getUniqueBuilding(iPlayer, Building.WALLS.value), True
+                )
 
     def onCityAcquired(self, owner, iPlayer, city, bConquest, bTrade):
         self.pm.onCityAcquired(owner, iPlayer, city, bConquest, bTrade)
@@ -530,8 +532,8 @@ class RiseAndFall:
             if (city.getX(), city.getY()) == CIV_CAPITAL_LOCATIONS[Civ.BYZANTIUM].to_tuple():
                 for loopCity in cityList:
                     if loopCity != city:
-                        loopCity.setHasRealBuilding((xml.iPalace), False)
-                city.setHasRealBuilding(xml.iPalace, True)
+                        loopCity.setHasRealBuilding((Building.PALACE.value), False)
+                city.setHasRealBuilding(Building.PALACE.value, True)
                 if player(Civ.OTTOMAN).getStateReligion() == Religion.ISLAM.value:
                     city.setHasReligion(Religion.ISLAM.value, True, True, False)
                 # some stability boost and flavour message
@@ -564,9 +566,9 @@ class RiseAndFall:
                             bHasIstanbul = True
                     if not bHasIstanbul:
                         gc.getPlayer(iPlayer).getCapitalCity().setHasRealBuilding(
-                            xml.iPalace, False
+                            Building.PALACE.value, False
                         )
-                        city.setHasRealBuilding(xml.iPalace, True)
+                        city.setHasRealBuilding(Building.PALACE.value, True)
                     if (
                         player(Civ.OTTOMAN).getStateReligion() == Religion.ISLAM.value
                     ):  # you get Islam anyway, as a bonus
@@ -829,8 +831,8 @@ class RiseAndFall:
                     if pCity.getOwner() == Civ.ENGLAND.value:
                         utils.makeUnit(Unit.GUISARME.value, Civ.ENGLAND.value, (x, y), 1)
                         utils.makeUnit(Unit.ARBALEST.value, Civ.ENGLAND.value, (x, y), 1)
-                        pCity.setHasRealBuilding(xml.iWalls, True)
-                        pCity.setHasRealBuilding(xml.iCastle, True)
+                        pCity.setHasRealBuilding(Building.WALLS.value, True)
+                        pCity.setHasRealBuilding(Building.CASTLE.value, True)
 
     def switchLateLeaders(self, iPlayer, tLeader):
         iLeader, iDate, iThreshold, iEra = tLeader
@@ -1812,10 +1814,10 @@ class RiseAndFall:
             if plot.isCity():
                 newCapital = plot.getPlotCity()
                 if newCapital.getOwner() == iCiv:
-                    if not newCapital.hasBuilding(xml.iPalace):
+                    if not newCapital.hasBuilding(Building.PALACE.value):
                         for city in cityList:
-                            city.setHasRealBuilding((xml.iPalace), False)
-                        newCapital.setHasRealBuilding((xml.iPalace), True)
+                            city.setHasRealBuilding((Building.PALACE.value), False)
+                        newCapital.setHasRealBuilding((Building.PALACE.value), True)
                         self.makeResurectionUnits(iCiv, newCapital.getX(), newCapital.getY())
         else:
             iMaxValue = 0
@@ -1831,8 +1833,8 @@ class RiseAndFall:
             if bestCity is not None:
                 for loopCity in cityList:
                     if loopCity != bestCity:
-                        loopCity.setHasRealBuilding((xml.iPalace), False)
-                bestCity.setHasRealBuilding((xml.iPalace), True)
+                        loopCity.setHasRealBuilding((Building.PALACE.value), False)
+                bestCity.setHasRealBuilding((Building.PALACE.value), True)
                 self.makeResurectionUnits(iCiv, bestCity.getX(), bestCity.getY())
 
     def makeResurectionUnits(self, iPlayer, iX, iY):

@@ -3,6 +3,7 @@
 from CvPythonExtensions import *
 from CoreData import civilizations, COMPANIES
 from CoreTypes import (
+    Building,
     City,
     Civ,
     Colony,
@@ -2649,8 +2650,8 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        iKievCath = pPlayer.countNumBuildings(xml.iOrthodoxCathedral)
-        iKievMona = pPlayer.countNumBuildings(xml.iOrthodoxMonastery)
+        iKievCath = pPlayer.countNumBuildings(Building.ORTHODOX_CATHEDRAL.value)
+        iKievMona = pPlayer.countNumBuildings(Building.ORTHODOX_MONASTERY.value)
         sKievCath = localText.getText("TXT_KEY_BUILDING_ORTHODOX_CATHEDRAL", ()) + ": "
         sKievMona = localText.getText("TXT_KEY_BUILDING_ORTHODOX_MONASTERY", ()) + ": "
         sText1 += sKievCath + self.determineColor(iKievCath >= 2, str(iKievCath))
@@ -2801,7 +2802,7 @@ class CvVictoryScreen:
         iScotlandFort = gc.getPlayer(Civ.SCOTLAND.value).getImprovementCount(
             Improvement.FORT.value
         )
-        iScotlandCastle = gc.getPlayer(Civ.SCOTLAND.value).countNumBuildings(xml.iCastle)
+        iScotlandCastle = gc.getPlayer(Civ.SCOTLAND.value).countNumBuildings(Building.CASTLE.value)
         sScotlandFort = localText.getText("TXT_KEY_IMPROVEMENT_FORT", ()) + ": "
         sScotlandCastle = localText.getText("TXT_KEY_BUILDING_CASTLE", ()) + ": "
         sText1 += sScotlandFort + self.determineColor(iScotlandFort >= 10, str(iScotlandFort))
@@ -2919,9 +2920,9 @@ class CvVictoryScreen:
         iBankCount = 0
         for city in utils.getCityList(iPlayer):
             if (
-                city.getNumRealBuilding(xml.iBank) > 0
-                or city.getNumRealBuilding(xml.iGenoaBank) > 0
-                or city.getNumRealBuilding(xml.iEnglishRoyalExchange) > 0
+                city.getNumRealBuilding(Building.BANK.value) > 0
+                or city.getNumRealBuilding(Building.GENOA_BANK.value) > 0
+                or city.getNumRealBuilding(Building.ENGLISH_ROYAL_EXCHANGE.value) > 0
             ):
                 iBankCount += 1
         iCompanyCities = pPlayer.countCorporations(Company.ST_GEORGE.value)
@@ -3032,7 +3033,7 @@ class CvVictoryScreen:
             + u"</color>"
             + u"<font=1>\n\n</font>"
         )
-        iSeaports = pPlayer.countNumBuildings(xml.iAragonSeaport)
+        iSeaports = pPlayer.countNumBuildings(Building.ARAGON_SEAPORT.value)
         iCargoShips = utils.getCargoShips(Civ.ARAGON.value)
         sText2 += (
             localText.getText("TXT_KEY_UHV_CURRENTLY", ())

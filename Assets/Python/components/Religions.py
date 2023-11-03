@@ -3,7 +3,17 @@
 from CvPythonExtensions import *
 from CoreData import civilizations
 from CoreFunctions import get_religion_by_id
-from CoreTypes import Civ, City, Civic, StabilityCategory, Religion, Technology, Unit, Wonder
+from CoreTypes import (
+    Building,
+    Civ,
+    City,
+    Civic,
+    StabilityCategory,
+    Religion,
+    Technology,
+    Unit,
+    Wonder,
+)
 from LocationsData import CITIES
 from TimelineData import DateTurn
 import PyHelpers
@@ -33,10 +43,26 @@ tPolandTL = (64, 43)
 tPolandBR = (75, 54)
 
 ### Religious Buildings that give Faith Points ###
-tCatholicBuildings = [xml.iCatholicTemple, xml.iCatholicMonastery, xml.iCatholicCathedral]
-tOrthodoxBuildings = [xml.iOrthodoxTemple, xml.iOrthodoxMonastery, xml.iOrthodoxCathedral]
-tProtestantBuildings = [xml.iProtestantTemple, xml.iProtestantSchool, xml.iProtestantCathedral]
-tIslamicBuildings = [xml.iIslamicTemple, xml.iIslamicCathedral, xml.iIslamicMadrassa]
+tCatholicBuildings = [
+    Building.CATHOLIC_TEMPLE.value,
+    Building.CATHOLIC_MONASTERY.value,
+    Building.CATHOLIC_CATHEDRAL.value,
+]
+tOrthodoxBuildings = [
+    Building.ORTHODOX_TEMPLE.value,
+    Building.ORTHODOX_MONASTERY.value,
+    Building.ORTHODOX_CATHEDRAL.value,
+]
+tProtestantBuildings = [
+    Building.PROTESTANT_TEMPLE.value,
+    Building.PROTESTANT_SCHOOL.value,
+    Building.PROTESTANT_CATHEDRAL.value,
+]
+tIslamicBuildings = [
+    Building.ISLAMIC_TEMPLE.value,
+    Building.ISLAMIC_CATHEDRAL.value,
+    Building.ISLAMIC_MADRASSA.value,
+]
 tReligiousWonders = [
     Wonder.MONASTERY_OF_CLUNY.value,
     Wonder.WESTMINSTER.value,
@@ -622,7 +648,7 @@ class Religions:
                     iChosenPlayer = utils.getRandomByWeight(lWeightValues)
                     if iChosenPlayer != -1:
                         pPlayer = gc.getPlayer(iChosenPlayer)
-                        iCatholicBuilding = xml.iCatholicTemple
+                        iCatholicBuilding = Building.CATHOLIC_TEMPLE.value
                         # No chance for monastery if the selected player knows the Scientific Method tech (which obsoletes monasteries), otherwise 50-50% for temple and monastery
                         teamPlayer = gc.getTeam(pPlayer.getTeam())
                         if (
@@ -630,7 +656,7 @@ class Religions:
                             and gc.getGame().getSorenRandNum(2, "random Catholic BuildingType")
                             == 0
                         ):
-                            iCatholicBuilding = xml.iCatholicMonastery
+                            iCatholicBuilding = Building.CATHOLIC_MONASTERY.value
                         self.buildInRandomCity(
                             iChosenPlayer, iCatholicBuilding, Religion.CATHOLICISM.value
                         )
@@ -732,19 +758,19 @@ class Religions:
         if iStateReligion != -1:
             if iStateReligion == Religion.CATHOLICISM.value and iBuilding in tCatholicBuildings:
                 pPlayer.changeFaith(1)
-                if iBuilding == xml.iCatholicCathedral:
+                if iBuilding == Building.CATHOLIC_CATHEDRAL.value:
                     pPlayer.changeFaith(3)
                 if pPlayer.countNumBuildings(Wonder.PALAIS_DES_PAPES.value) > 0:
                     pPlayer.changeFaith(1)
             elif iStateReligion == Religion.ORTHODOXY.value and iBuilding in tOrthodoxBuildings:
                 pPlayer.changeFaith(1)
-                if iBuilding == xml.iOrthodoxCathedral:
+                if iBuilding == Building.ORTHODOX_CATHEDRAL.value:
                     pPlayer.changeFaith(3)
                 if pPlayer.countNumBuildings(Wonder.PALAIS_DES_PAPES.value) > 0:
                     pPlayer.changeFaith(1)
             elif iStateReligion == Religion.ISLAM.value and iBuilding in tIslamicBuildings:
                 pPlayer.changeFaith(1)
-                if iBuilding == xml.iIslamicCathedral:
+                if iBuilding == Building.ISLAMIC_CATHEDRAL.value:
                     pPlayer.changeFaith(3)
                 if pPlayer.countNumBuildings(Wonder.PALAIS_DES_PAPES.value) > 0:
                     pPlayer.changeFaith(1)
@@ -753,12 +779,12 @@ class Religions:
                 and iBuilding in tProtestantBuildings
             ):
                 pPlayer.changeFaith(1)
-                if iBuilding == xml.iProtestantCathedral:
+                if iBuilding == Building.PROTESTANT_CATHEDRAL.value:
                     pPlayer.changeFaith(3)
                 if pPlayer.countNumBuildings(Wonder.PALAIS_DES_PAPES.value) > 0:
                     pPlayer.changeFaith(1)
             elif iStateReligion == Religion.JUDAISM.value and iBuilding in [
-                xml.iJewishQuarter,
+                Building.JEWISH_QUARTER.value,
                 Wonder.KAZIMIERZ.value,
             ]:
                 pPlayer.changeFaith(1)
@@ -767,7 +793,7 @@ class Religions:
                 if pPlayer.countNumBuildings(Wonder.PALAIS_DES_PAPES.value) > 0:
                     pPlayer.changeFaith(1)
             # Absinthe: Wonders: Mont Saint-Michel wonder effect
-            if utils.getBaseBuilding(iBuilding) in [xml.iWalls, xml.iCastle]:
+            if utils.getBaseBuilding(iBuilding) in [Building.WALLS.value, Building.CASTLE.value]:
                 if pPlayer.countNumBuildings(Wonder.MONT_SAINT_MICHEL.value) > 0:
                     pPlayer.changeFaith(1)
         if iBuilding in tReligiousWonders:
@@ -788,7 +814,7 @@ class Religions:
             # Adds Jewish Quarter to all cities which already has Judaism (including the ones where it just spread)
             for city in cityList:
                 if city.isHasReligion(Religion.JUDAISM.value):
-                    city.setHasRealBuilding(xml.iJewishQuarter, True)
+                    city.setHasRealBuilding(Building.JEWISH_QUARTER.value, True)
 
     def selectRandomCityAll(self):
         "selects a random city from the whole map"
@@ -1086,7 +1112,7 @@ class Religions:
                         Religion.PROTESTANTISM.value, Religion.PROTESTANTISM.value, False
                     )
                     gc.getGame().getHolyCity(Religion.PROTESTANTISM.value).setNumRealBuilding(
-                        xml.iProtestantShrine, 1
+                        Building.PROTESTANT_SHRINE.value, 1
                     )
                     self.setReformationActive(True)
                     self.reformationchoice(iPlayer)
@@ -1235,31 +1261,31 @@ class Religions:
             iChance = 55 + iCivRef
             # if protestantism has spread, chance for replacing the buildings: between 58% and 82%, based on lReformationMatrix
             if (
-                pCity.hasBuilding(xml.iCatholicChapel)
+                pCity.hasBuilding(Building.CATHOLIC_CHAPEL.value)
                 and gc.getGame().getSorenRandNum(100, "Reformation of a City") < iChance
             ):
-                pCity.setHasRealBuilding(xml.iCatholicChapel, False)
-                pCity.setHasRealBuilding(xml.iProtestantChapel, True)
+                pCity.setHasRealBuilding(Building.CATHOLIC_CHAPEL.value, False)
+                pCity.setHasRealBuilding(Building.PROTESTANT_CHAPEL.value, True)
             if (
-                pCity.hasBuilding(xml.iCatholicTemple)
+                pCity.hasBuilding(Building.CATHOLIC_TEMPLE.value)
                 and gc.getGame().getSorenRandNum(100, "Reformation of a City") < iChance
             ):
-                pCity.setHasRealBuilding(xml.iCatholicTemple, False)
-                pCity.setHasRealBuilding(xml.iProtestantTemple, True)
+                pCity.setHasRealBuilding(Building.CATHOLIC_TEMPLE.value, False)
+                pCity.setHasRealBuilding(Building.PROTESTANT_TEMPLE.value, True)
                 iFaith += 1
             if (
-                pCity.hasBuilding(xml.iCatholicMonastery)
+                pCity.hasBuilding(Building.CATHOLIC_MONASTERY.value)
                 and gc.getGame().getSorenRandNum(100, "Reformation of a City") < iChance
             ):
-                pCity.setHasRealBuilding(xml.iCatholicMonastery, False)
-                pCity.setHasRealBuilding(xml.iProtestantSeminary, True)
+                pCity.setHasRealBuilding(Building.CATHOLIC_MONASTERY.value, False)
+                pCity.setHasRealBuilding(Building.PROTESTANT_SEMINARY.value, True)
                 iFaith += 1
             if (
-                pCity.hasBuilding(xml.iCatholicCathedral)
+                pCity.hasBuilding(Building.CATHOLIC_CATHEDRAL.value)
                 and gc.getGame().getSorenRandNum(100, "Reformation of a City") < iChance
             ):
-                pCity.setHasRealBuilding(xml.iCatholicCathedral, False)
-                pCity.setHasRealBuilding(xml.iProtestantCathedral, True)
+                pCity.setHasRealBuilding(Building.CATHOLIC_CATHEDRAL.value, False)
+                pCity.setHasRealBuilding(Building.PROTESTANT_CATHEDRAL.value, True)
                 iFaith += 2
 
             # remove Catholicism if there are no religious buildings left, and there are no catholic wonders in the city
@@ -1268,10 +1294,10 @@ class Religions:
                 < 55 + ((lReformationMatrix[iCiv] / 5) * 2) - iPopBonus
             ):  # range goes from 39-59% to 71-91%, based on lReformationMatrix
                 lCathlist = [
-                    xml.iCatholicTemple,
-                    xml.iCatholicChapel,
-                    xml.iCatholicMonastery,
-                    xml.iCatholicCathedral,
+                    Building.CATHOLIC_TEMPLE.value,
+                    Building.CATHOLIC_CHAPEL.value,
+                    Building.CATHOLIC_MONASTERY.value,
+                    Building.CATHOLIC_CATHEDRAL.value,
                     Wonder.MONASTERY_OF_CLUNY.value,
                     Wonder.KRAK_DES_CHEVALIERS.value,
                     Wonder.PALAIS_DES_PAPES.value,
@@ -1325,29 +1351,29 @@ class Religions:
             # if protestantism has spread, chance for replacing the buildings: between 31% and 79%, based on lReformationMatrix
             iChance = 25 + 2 * iCivRef
             if (
-                pCity.hasBuilding(xml.iCatholicChapel)
+                pCity.hasBuilding(Building.CATHOLIC_CHAPEL.value)
                 and gc.getGame().getSorenRandNum(100, "Reformation of a City") < iChance
             ):
-                pCity.setHasRealBuilding(xml.iCatholicChapel, False)
-                pCity.setHasRealBuilding(xml.iProtestantChapel, True)
+                pCity.setHasRealBuilding(Building.CATHOLIC_CHAPEL.value, False)
+                pCity.setHasRealBuilding(Building.PROTESTANT_CHAPEL.value, True)
             if (
-                pCity.hasBuilding(xml.iCatholicTemple)
+                pCity.hasBuilding(Building.CATHOLIC_TEMPLE.value)
                 and gc.getGame().getSorenRandNum(100, "Reformation of a City") < iChance
             ):
-                pCity.setHasRealBuilding(xml.iCatholicTemple, False)
-                pCity.setHasRealBuilding(xml.iProtestantTemple, True)
+                pCity.setHasRealBuilding(Building.CATHOLIC_TEMPLE.value, False)
+                pCity.setHasRealBuilding(Building.PROTESTANT_TEMPLE.value, True)
             if (
-                pCity.hasBuilding(xml.iCatholicMonastery)
+                pCity.hasBuilding(Building.CATHOLIC_MONASTERY.value)
                 and gc.getGame().getSorenRandNum(100, "Reformation of a City") < iChance
             ):
-                pCity.setHasRealBuilding(xml.iCatholicMonastery, False)
-                pCity.setHasRealBuilding(xml.iProtestantSeminary, True)
+                pCity.setHasRealBuilding(Building.CATHOLIC_MONASTERY.value, False)
+                pCity.setHasRealBuilding(Building.PROTESTANT_SEMINARY.value, True)
             if (
-                pCity.hasBuilding(xml.iCatholicCathedral)
+                pCity.hasBuilding(Building.CATHOLIC_CATHEDRAL.value)
                 and gc.getGame().getSorenRandNum(100, "Reformation of a City") < iChance
             ):
-                pCity.setHasRealBuilding(xml.iCatholicCathedral, False)
-                pCity.setHasRealBuilding(xml.iProtestantCathedral, True)
+                pCity.setHasRealBuilding(Building.CATHOLIC_CATHEDRAL.value, False)
+                pCity.setHasRealBuilding(Building.PROTESTANT_CATHEDRAL.value, True)
 
             # remove Catholicism if there are no religious buildings left, and there are no catholic wonders in the city
             if gc.getGame().getSorenRandNum(100, "Remove Religion") < 50 + (
@@ -1356,10 +1382,10 @@ class Religions:
                 iPopBonus / 2
             ):  # range goes from 39-54% to 71-86%, based on lReformationMatrix
                 lCathlist = [
-                    xml.iCatholicTemple,
-                    xml.iCatholicChapel,
-                    xml.iCatholicMonastery,
-                    xml.iCatholicCathedral,
+                    Building.CATHOLIC_TEMPLE.value,
+                    Building.CATHOLIC_CHAPEL.value,
+                    Building.CATHOLIC_MONASTERY.value,
+                    Building.CATHOLIC_CATHEDRAL.value,
                     Wonder.MONASTERY_OF_CLUNY.value,
                     Wonder.KRAK_DES_CHEVALIERS.value,
                     Wonder.PALAIS_DES_PAPES.value,

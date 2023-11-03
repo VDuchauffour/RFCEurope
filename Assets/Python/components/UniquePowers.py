@@ -1,11 +1,10 @@
 # Rhye's and Fall of Civilization: Europe - Unique Powers (only a couple of them is here, most are handled in the .dll)
 
 from CvPythonExtensions import *
-from CoreTypes import SpecialParameter, Religion, Unit
+from CoreTypes import Building, SpecialParameter, Religion, Unit
 import PyHelpers
 
 # import cPickle as pickle
-import XMLConsts as xml
 import Religions
 import RFCUtils
 
@@ -34,13 +33,13 @@ class UniquePowers:
                 pFaithful.changeFaith(1)
 
             if iStateReligion == 0:
-                iTemple = xml.iProtestantTemple
+                iTemple = Building.PROTESTANT_TEMPLE.value
             elif iStateReligion == 1:
-                iTemple = xml.iIslamicTemple
+                iTemple = Building.ISLAMIC_TEMPLE.value
             elif iStateReligion == 2:
-                iTemple = xml.iCatholicTemple
+                iTemple = Building.CATHOLIC_TEMPLE.value
             elif iStateReligion == 3:
-                iTemple = xml.iOrthodoxTemple
+                iTemple = Building.ORTHODOX_TEMPLE.value
             if not city.hasBuilding(iTemple):
                 city.setHasRealBuilding(iTemple, True)
                 pFaithful.changeFaith(1)

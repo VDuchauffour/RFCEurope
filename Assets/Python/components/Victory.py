@@ -2,6 +2,7 @@ from CvPythonExtensions import *
 from CoreData import civilization, civilizations, COMPANIES
 from CoreStructures import player, team
 from CoreTypes import (
+    Building,
     City,
     Civ,
     Civic,
@@ -537,7 +538,7 @@ class Victory:
                 if pPlayer.getNumCities() > 0:  # this check is needed, otherwise game crashes
                     capital = pPlayer.getCapitalCity()
                     # 3Miro: Golden Age after 2/3 victories
-                    capital.setHasRealBuilding(xml.iTriumphalArch, True)
+                    capital.setHasRealBuilding(Building.TRIUMPHAL_ARCH.value, True)
                     if pPlayer.isHuman():
                         CyInterface().addMessage(
                             iPlayer,
@@ -823,11 +824,14 @@ class Victory:
         # Kiev UHV 1: Build 2 Orthodox cathedrals and 8 Orthodox monasteries by 1250
         if iPlayer == Civ.KIEV.value:
             if self.isPossibleUHV(iPlayer, 0, False):
-                if iBuilding in [xml.iOrthodoxMonastery, xml.iOrthodoxCathedral]:
+                if iBuilding in [
+                    Building.ORTHODOX_MONASTERY.value,
+                    Building.ORTHODOX_CATHEDRAL.value,
+                ]:
                     iBuildSoFar = player(Civ.KIEV).getUHVCounter(0)
                     iCathedralCounter = iBuildSoFar % 100
                     iMonasteryCounter = iBuildSoFar / 100
-                    if iBuilding == xml.iOrthodoxMonastery:
+                    if iBuilding == Building.ORTHODOX_MONASTERY.value:
                         iMonasteryCounter += 1
                     else:
                         iCathedralCounter += 1
@@ -840,10 +844,10 @@ class Victory:
         elif iPlayer == Civ.POLAND.value:
             if self.isPossibleUHV(iPlayer, 2, False):
                 lBuildingList = [
-                    xml.iCatholicCathedral,
-                    xml.iOrthodoxCathedral,
-                    xml.iProtestantCathedral,
-                    xml.iJewishQuarter,
+                    Building.CATHOLIC_CATHEDRAL.value,
+                    Building.ORTHODOX_CATHEDRAL.value,
+                    Building.PROTESTANT_CATHEDRAL.value,
+                    Building.JEWISH_QUARTER.value,
                     Wonder.KAZIMIERZ.value,
                 ]
                 if iBuilding in lBuildingList:
@@ -852,15 +856,15 @@ class Victory:
                     iOrthCath = (iCounter / 1000) % 10
                     iProtCath = (iCounter / 100) % 10
                     iJewishQu = iCounter % 100
-                    if iBuilding == xml.iCatholicCathedral and iCathCath < 9:
+                    if iBuilding == Building.CATHOLIC_CATHEDRAL.value and iCathCath < 9:
                         iCathCath += 1
-                    elif iBuilding == xml.iOrthodoxCathedral and iOrthCath < 9:
+                    elif iBuilding == Building.ORTHODOX_CATHEDRAL.value and iOrthCath < 9:
                         iOrthCath += 1
-                    elif iBuilding == xml.iProtestantCathedral and iProtCath < 9:
+                    elif iBuilding == Building.PROTESTANT_CATHEDRAL.value and iProtCath < 9:
                         iProtCath += 1
                     elif iBuilding == Wonder.KAZIMIERZ.value:
                         iJewishQu = 99
-                    elif iBuilding == xml.iJewishQuarter and iJewishQu < 99:
+                    elif iBuilding == Building.JEWISH_QUARTER.value and iJewishQu < 99:
                         iJewishQu += 1
                     if iCathCath >= 3 and iOrthCath >= 3 and iProtCath >= 2 and iJewishQu >= 2:
                         self.wonUHV(Civ.POLAND.value, 2)
@@ -1533,7 +1537,7 @@ class Victory:
         # UHV 1: Have 10 Forts and 4 Castles by 1296
         if self.isPossibleUHV(Civ.SCOTLAND.value, 0, True):
             iForts = player(Civ.SCOTLAND).getImprovementCount(Improvement.FORT.value)
-            iCastles = player(Civ.SCOTLAND).countNumBuildings(xml.iCastle)
+            iCastles = player(Civ.SCOTLAND).countNumBuildings(Building.CASTLE.value)
             if iForts >= 10 and iCastles >= 4:
                 self.wonUHV(Civ.SCOTLAND.value, 0)
         if iGameTurn == DateTurn.i1296AD:
@@ -1670,9 +1674,9 @@ class Victory:
                 iBanks = 0
                 for city in utils.getCityList(Civ.GENOA.value):
                     if (
-                        city.getNumRealBuilding(xml.iBank) > 0
-                        or city.getNumRealBuilding(xml.iGenoaBank) > 0
-                        or city.getNumRealBuilding(xml.iEnglishRoyalExchange) > 0
+                        city.getNumRealBuilding(Building.BANK.value) > 0
+                        or city.getNumRealBuilding(Building.GENOA_BANK.value) > 0
+                        or city.getNumRealBuilding(Building.ENGLISH_ROYAL_EXCHANGE.value) > 0
                     ):
                         iBanks += 1
                 iCompanyCities = player(Civ.GENOA).countCorporations(Company.ST_GEORGE.value)
@@ -1772,7 +1776,7 @@ class Victory:
         # UHV 2: Ships with at least one cargo space count as Trade Ships
         elif iGameTurn == DateTurn.i1444AD:
             if self.isPossibleUHV(Civ.ARAGON.value, 1, True):
-                iPorts = player(Civ.ARAGON).countNumBuildings(xml.iAragonSeaport)
+                iPorts = player(Civ.ARAGON).countNumBuildings(Building.ARAGON_SEAPORT.value)
                 iCargoShips = utils.getCargoShips(Civ.ARAGON.value)
                 if iPorts >= 12 and iCargoShips >= 30:
                     self.wonUHV(Civ.ARAGON.value, 1)

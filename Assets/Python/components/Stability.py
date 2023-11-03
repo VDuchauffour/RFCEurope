@@ -6,6 +6,7 @@ import PyHelpers
 
 from MiscData import MessageData
 from CoreTypes import (
+    Building,
     Civ,
     Civic,
     Project,
@@ -21,7 +22,6 @@ from CoreTypes import (
 )
 
 # import cPickle as pickle
-import XMLConsts as xml
 import RFCUtils
 import RFCEMaps
 import RiseAndFall
@@ -81,22 +81,22 @@ class Stability:
 
                 # Building stability: only a chance for these, as all the permanent negative stability modifiers are missing up to the start
                 if (
-                    pCity.hasBuilding(utils.getUniqueBuilding(iPlayer, xml.iManorHouse))
+                    pCity.hasBuilding(utils.getUniqueBuilding(iPlayer, Building.MANOR_HOUSE.value))
                     and gc.getGame().getSorenRandNum(10, "build stab chance") < 7
                 ):
                     pPlayer.changeStabilityBase(StabilityCategory.ECONOMY.value, 1)
                 if (
-                    pCity.hasBuilding(utils.getUniqueBuilding(iPlayer, xml.iCastle))
+                    pCity.hasBuilding(utils.getUniqueBuilding(iPlayer, Building.CASTLE.value))
                     and gc.getGame().getSorenRandNum(10, "build stab chance") < 7
                 ):
                     pPlayer.changeStabilityBase(StabilityCategory.EXPANSION.value, 1)
                 if (
-                    pCity.hasBuilding(utils.getUniqueBuilding(iPlayer, xml.iNightWatch))
+                    pCity.hasBuilding(utils.getUniqueBuilding(iPlayer, Building.NIGHT_WATCH.value))
                     and gc.getGame().getSorenRandNum(10, "build stab chance") < 7
                 ):
                     pPlayer.changeStabilityBase(StabilityCategory.CIVICS.value, 1)
                 if (
-                    pCity.hasBuilding(utils.getUniqueBuilding(iPlayer, xml.iCourthouse))
+                    pCity.hasBuilding(utils.getUniqueBuilding(iPlayer, Building.COURTHOUSE.value))
                     and gc.getGame().getSorenRandNum(10, "build stab chance") < 7
                 ):
                     pPlayer.changeStabilityBase(StabilityCategory.CITIES.value, 1)
@@ -443,19 +443,19 @@ class Stability:
 
     def onBuildingBuilt(self, iPlayer, iBuilding):
         pPlayer = gc.getPlayer(iPlayer)
-        if iBuilding == utils.getUniqueBuilding(iPlayer, xml.iManorHouse):
+        if iBuilding == utils.getUniqueBuilding(iPlayer, Building.MANOR_HOUSE.value):
             pPlayer.changeStabilityBase(StabilityCategory.ECONOMY.value, 1)
             ## Naval base adds an additional stability point
-            # if iBuilding == xml.iVeniceNavalBase:
+            # if iBuilding == Building.VENICE_NAVAL_BASE.value:
             # 	pPlayer.changeStabilityBase(StabilityCategory.ECONOMY.value, 1 )
             self.recalcEconomy(iPlayer)
-        elif iBuilding == utils.getUniqueBuilding(iPlayer, xml.iCastle):
+        elif iBuilding == utils.getUniqueBuilding(iPlayer, Building.CASTLE.value):
             pPlayer.changeStabilityBase(StabilityCategory.EXPANSION.value, 1)
             self.recalcEpansion(iPlayer)
-        elif iBuilding == utils.getUniqueBuilding(iPlayer, xml.iNightWatch):
+        elif iBuilding == utils.getUniqueBuilding(iPlayer, Building.NIGHT_WATCH.value):
             pPlayer.changeStabilityBase(StabilityCategory.CIVICS.value, 1)
             self.recalcCivicCombos(iPlayer)
-        elif iBuilding == utils.getUniqueBuilding(iPlayer, xml.iCourthouse):
+        elif iBuilding == utils.getUniqueBuilding(iPlayer, Building.COURTHOUSE.value):
             pPlayer.changeStabilityBase(StabilityCategory.CITIES.value, 1)
             self.recalcCity(iPlayer)
         elif iBuilding == Wonder.ESCORIAL.value:
@@ -468,11 +468,11 @@ class Stability:
             pPlayer.setPicklefreeParameter(SpecialParameter.HAS_KOUTOUBIA_MOSQUE.value, 1)
         elif iBuilding == Wonder.MAGNA_CARTA.value:
             pPlayer.setPicklefreeParameter(SpecialParameter.HAS_MAGNACARTA.value, 1)
-        elif iBuilding == xml.iPalace:
+        elif iBuilding == Building.PALACE.value:
             pPlayer.changeStabilityBase(StabilityCategory.EXPANSION.value, -2)
             pPlayer.setStabilitySwing(pPlayer.getStabilitySwing() - 5)
             self.recalcEpansion(iPlayer)
-        elif iBuilding == xml.iReliquary:
+        elif iBuilding == Building.RELIQUARY.value:
             pPlayer.changeStabilityBase(StabilityCategory.EXPANSION.value, 1)
             self.recalcEpansion(iPlayer)
 
@@ -753,7 +753,7 @@ class Stability:
             # Absinthe: Jewish Quarter reduces religion instability if Judaism is present in the city
             if (
                 bJewInstability
-                and pCity.hasBuilding(xml.iJewishQuarter)
+                and pCity.hasBuilding(Building.JEWISH_QUARTER.value)
                 and pCity.isHasReligion(Religion.JUDAISM.value)
             ):  # only if there are some religious penalties present in the city
                 iReligionStability += 1

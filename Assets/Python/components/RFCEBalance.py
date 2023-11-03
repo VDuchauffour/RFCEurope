@@ -2,6 +2,7 @@ from CvPythonExtensions import *
 import Consts
 from CoreData import civilizations
 from CoreTypes import (
+    Building,
     City,
     Civ,
     Civic,
@@ -20,7 +21,6 @@ from CoreTypes import (
     FaithPointBonusCategory,
     Wonder,
 )
-import XMLConsts as xml
 import RFCEMaps
 import RFCUtils
 from MiscData import (
@@ -301,65 +301,65 @@ class RFCEBalance:
         # gc.setInitialBuilding( iCiv, iBuilding, True\False ), if ( True) give iCiv, building iBuildings else don't Default is False
         # we can change True <-> False with the onTechAquire event
 
-        gc.setInitialBuilding(Civ.VENECIA.value, xml.iHarbor, True)
-        gc.setInitialBuilding(Civ.VENECIA.value, xml.iGranary, True)
+        gc.setInitialBuilding(Civ.VENECIA.value, Building.HARBOR.value, True)
+        gc.setInitialBuilding(Civ.VENECIA.value, Building.GRANARY.value, True)
 
-        gc.setInitialBuilding(Civ.CASTILLE.value, xml.iBarracks, True)
+        gc.setInitialBuilding(Civ.CASTILLE.value, Building.BARRACKS.value, True)
 
-        gc.setInitialBuilding(Civ.DENMARK.value, xml.iBarracks, True)
+        gc.setInitialBuilding(Civ.DENMARK.value, Building.BARRACKS.value, True)
 
-        gc.setInitialBuilding(Civ.SCOTLAND.value, xml.iBarracks, True)
+        gc.setInitialBuilding(Civ.SCOTLAND.value, Building.BARRACKS.value, True)
 
-        gc.setInitialBuilding(Civ.MOSCOW.value, xml.iGranary, True)
-        gc.setInitialBuilding(Civ.MOSCOW.value, xml.iBarracks, True)
-        gc.setInitialBuilding(Civ.MOSCOW.value, xml.iForge, True)
-        gc.setInitialBuilding(Civ.MOSCOW.value, xml.iMarket, True)
+        gc.setInitialBuilding(Civ.MOSCOW.value, Building.GRANARY.value, True)
+        gc.setInitialBuilding(Civ.MOSCOW.value, Building.BARRACKS.value, True)
+        gc.setInitialBuilding(Civ.MOSCOW.value, Building.FORGE.value, True)
+        gc.setInitialBuilding(Civ.MOSCOW.value, Building.MARKET.value, True)
 
-        gc.setInitialBuilding(Civ.GENOA.value, xml.iGranary, True)
-        gc.setInitialBuilding(Civ.GENOA.value, xml.iBarracks, True)
-        gc.setInitialBuilding(Civ.GENOA.value, xml.iHarbor, True)
+        gc.setInitialBuilding(Civ.GENOA.value, Building.GRANARY.value, True)
+        gc.setInitialBuilding(Civ.GENOA.value, Building.BARRACKS.value, True)
+        gc.setInitialBuilding(Civ.GENOA.value, Building.HARBOR.value, True)
 
-        gc.setInitialBuilding(Civ.MOROCCO.value, xml.iGranary, True)
-        gc.setInitialBuilding(Civ.MOROCCO.value, xml.iBarracks, True)
+        gc.setInitialBuilding(Civ.MOROCCO.value, Building.GRANARY.value, True)
+        gc.setInitialBuilding(Civ.MOROCCO.value, Building.BARRACKS.value, True)
 
-        gc.setInitialBuilding(Civ.ENGLAND.value, xml.iGranary, True)
-        gc.setInitialBuilding(Civ.ENGLAND.value, xml.iBarracks, True)
+        gc.setInitialBuilding(Civ.ENGLAND.value, Building.GRANARY.value, True)
+        gc.setInitialBuilding(Civ.ENGLAND.value, Building.BARRACKS.value, True)
 
-        gc.setInitialBuilding(Civ.PORTUGAL.value, xml.iGranary, True)
-        gc.setInitialBuilding(Civ.PORTUGAL.value, xml.iBarracks, True)
+        gc.setInitialBuilding(Civ.PORTUGAL.value, Building.GRANARY.value, True)
+        gc.setInitialBuilding(Civ.PORTUGAL.value, Building.BARRACKS.value, True)
 
-        gc.setInitialBuilding(Civ.ARAGON.value, xml.iGranary, True)
-        gc.setInitialBuilding(Civ.ARAGON.value, xml.iBarracks, True)
-        gc.setInitialBuilding(Civ.ARAGON.value, xml.iHarbor, True)
+        gc.setInitialBuilding(Civ.ARAGON.value, Building.GRANARY.value, True)
+        gc.setInitialBuilding(Civ.ARAGON.value, Building.BARRACKS.value, True)
+        gc.setInitialBuilding(Civ.ARAGON.value, Building.HARBOR.value, True)
 
-        gc.setInitialBuilding(Civ.PRUSSIA.value, xml.iGranary, True)
-        gc.setInitialBuilding(Civ.PRUSSIA.value, xml.iBarracks, True)
+        gc.setInitialBuilding(Civ.PRUSSIA.value, Building.GRANARY.value, True)
+        gc.setInitialBuilding(Civ.PRUSSIA.value, Building.BARRACKS.value, True)
 
-        gc.setInitialBuilding(Civ.LITHUANIA.value, xml.iGranary, True)
-        gc.setInitialBuilding(Civ.LITHUANIA.value, xml.iBarracks, True)
+        gc.setInitialBuilding(Civ.LITHUANIA.value, Building.GRANARY.value, True)
+        gc.setInitialBuilding(Civ.LITHUANIA.value, Building.BARRACKS.value, True)
 
-        gc.setInitialBuilding(Civ.AUSTRIA.value, xml.iGranary, True)
-        gc.setInitialBuilding(Civ.AUSTRIA.value, xml.iBarracks, True)
-        gc.setInitialBuilding(Civ.AUSTRIA.value, xml.iForge, True)
+        gc.setInitialBuilding(Civ.AUSTRIA.value, Building.GRANARY.value, True)
+        gc.setInitialBuilding(Civ.AUSTRIA.value, Building.BARRACKS.value, True)
+        gc.setInitialBuilding(Civ.AUSTRIA.value, Building.FORGE.value, True)
 
-        gc.setInitialBuilding(Civ.OTTOMAN.value, xml.iGranary, True)
-        gc.setInitialBuilding(Civ.OTTOMAN.value, xml.iBarracks, True)
-        gc.setInitialBuilding(Civ.OTTOMAN.value, xml.iForge, True)
-        gc.setInitialBuilding(Civ.OTTOMAN.value, xml.iHarbor, True)
+        gc.setInitialBuilding(Civ.OTTOMAN.value, Building.GRANARY.value, True)
+        gc.setInitialBuilding(Civ.OTTOMAN.value, Building.BARRACKS.value, True)
+        gc.setInitialBuilding(Civ.OTTOMAN.value, Building.FORGE.value, True)
+        gc.setInitialBuilding(Civ.OTTOMAN.value, Building.HARBOR.value, True)
 
-        gc.setInitialBuilding(Civ.SWEDEN.value, xml.iGranary, True)
-        gc.setInitialBuilding(Civ.SWEDEN.value, xml.iBarracks, True)
-        gc.setInitialBuilding(Civ.SWEDEN.value, xml.iHarbor, True)
+        gc.setInitialBuilding(Civ.SWEDEN.value, Building.GRANARY.value, True)
+        gc.setInitialBuilding(Civ.SWEDEN.value, Building.BARRACKS.value, True)
+        gc.setInitialBuilding(Civ.SWEDEN.value, Building.HARBOR.value, True)
 
-        gc.setInitialBuilding(Civ.DUTCH.value, xml.iGranary, True)
-        gc.setInitialBuilding(Civ.DUTCH.value, xml.iBarracks, True)
-        gc.setInitialBuilding(Civ.DUTCH.value, xml.iForge, True)
-        gc.setInitialBuilding(Civ.DUTCH.value, xml.iHarbor, True)
-        gc.setInitialBuilding(Civ.DUTCH.value, xml.iAqueduct, True)
-        gc.setInitialBuilding(Civ.DUTCH.value, xml.iMarket, True)
-        gc.setInitialBuilding(Civ.DUTCH.value, xml.iLighthouse, True)
-        gc.setInitialBuilding(Civ.DUTCH.value, xml.iTheatre, True)
-        gc.setInitialBuilding(Civ.DUTCH.value, xml.iSmokehouse, True)
+        gc.setInitialBuilding(Civ.DUTCH.value, Building.GRANARY.value, True)
+        gc.setInitialBuilding(Civ.DUTCH.value, Building.BARRACKS.value, True)
+        gc.setInitialBuilding(Civ.DUTCH.value, Building.FORGE.value, True)
+        gc.setInitialBuilding(Civ.DUTCH.value, Building.HARBOR.value, True)
+        gc.setInitialBuilding(Civ.DUTCH.value, Building.AQUEDUCT.value, True)
+        gc.setInitialBuilding(Civ.DUTCH.value, Building.MARKET.value, True)
+        gc.setInitialBuilding(Civ.DUTCH.value, Building.LIGHTHOUSE.value, True)
+        gc.setInitialBuilding(Civ.DUTCH.value, Building.THEATRE.value, True)
+        gc.setInitialBuilding(Civ.DUTCH.value, Building.SMOKEHOUSE.value, True)
 
         ####### AI Modifiers
         # 3Miro: setCityClusterAI(iCiv,iTop,iBottom,iMinus) for each AI civilization (set them for all, but only the AI make difference)
@@ -768,25 +768,25 @@ class RFCEBalance:
         # but in the .dll these values are only used for the civ-specific building of the given buildingclass, so we can these add redundantly
         for iPlayer in civilizations().majors().ids():
             # walls, kasbah
-            gc.setBuildingPref(iPlayer, xml.iWalls, 5)
-            gc.setBuildingPref(iPlayer, xml.iMoroccoKasbah, 5)
+            gc.setBuildingPref(iPlayer, Building.WALLS.value, 5)
+            gc.setBuildingPref(iPlayer, Building.MOROCCO_KASBAH.value, 5)
             # castle, stronghold, citadel, kremlin
-            gc.setBuildingPref(iPlayer, xml.iCastle, 7)
-            gc.setBuildingPref(iPlayer, xml.iMoscowKremlin, 7)
-            gc.setBuildingPref(iPlayer, xml.iHungarianStronghold, 7)
-            gc.setBuildingPref(iPlayer, xml.iSpanishCitadel, 7)
+            gc.setBuildingPref(iPlayer, Building.CASTLE.value, 7)
+            gc.setBuildingPref(iPlayer, Building.MOSCOW_KREMLIN.value, 7)
+            gc.setBuildingPref(iPlayer, Building.HUNGARIAN_STRONGHOLD.value, 7)
+            gc.setBuildingPref(iPlayer, Building.SPANISH_CITADEL.value, 7)
             # manor house, chateau, naval base
-            gc.setBuildingPref(iPlayer, xml.iManorHouse, 5)
-            gc.setBuildingPref(iPlayer, xml.iFrenchChateau, 5)
-            gc.setBuildingPref(iPlayer, xml.iVeniceNavalBase, 5)
+            gc.setBuildingPref(iPlayer, Building.MANOR_HOUSE.value, 5)
+            gc.setBuildingPref(iPlayer, Building.FRENCH_CHATEAU.value, 5)
+            gc.setBuildingPref(iPlayer, Building.VENICE_NAVAL_BASE.value, 5)
             # courthouse, rathaus, veche, voivodeship
-            gc.setBuildingPref(iPlayer, xml.iCourthouse, 5)
-            gc.setBuildingPref(iPlayer, xml.iKievVeche, 5)
-            gc.setBuildingPref(iPlayer, xml.iHolyRomanRathaus, 5)
-            gc.setBuildingPref(iPlayer, xml.iLithuanianVoivodeship, 5)
+            gc.setBuildingPref(iPlayer, Building.COURTHOUSE.value, 5)
+            gc.setBuildingPref(iPlayer, Building.KIEV_VECHE.value, 5)
+            gc.setBuildingPref(iPlayer, Building.HOLY_ROMAN_RATHAUS.value, 5)
+            gc.setBuildingPref(iPlayer, Building.LITHUANIAN_VOIVODESHIP.value, 5)
             # nightwatch, soldattorp
-            gc.setBuildingPref(iPlayer, xml.iNightWatch, 3)
-            gc.setBuildingPref(iPlayer, xml.iSwedishTennant, 3)
+            gc.setBuildingPref(iPlayer, Building.NIGHT_WATCH.value, 3)
+            gc.setBuildingPref(iPlayer, Building.SWEDISH_TENNANT.value, 3)
 
         gc.setBuildingPref(Civ.BYZANTIUM.value, Wonder.ST_CATHERINE_MONASTERY.value, 15)
         gc.setBuildingPref(Civ.BYZANTIUM.value, Wonder.BOYANA_CHURCH.value, 2)
@@ -972,7 +972,7 @@ class RFCEBalance:
         gc.setBuildingPref(Civ.AUSTRIA.value, Wonder.COPERNICUS.value, 5)
         gc.setBuildingPref(Civ.AUSTRIA.value, Wonder.GOLDEN_BULL.value, 5)
         gc.setBuildingPref(Civ.AUSTRIA.value, Wonder.PRESSBURG.value, 5)
-        gc.setBuildingPref(Civ.AUSTRIA.value, xml.iAustrianOperaHouse, 10)
+        gc.setBuildingPref(Civ.AUSTRIA.value, Building.AUSTRIAN_OPERA_HOUSE.value, 10)
 
         gc.setBuildingPref(Civ.OTTOMAN.value, Wonder.TOPKAPI_PALACE.value, 20)
         gc.setBuildingPref(Civ.OTTOMAN.value, Wonder.BLUE_MOSQUE.value, 20)
@@ -1001,8 +1001,8 @@ class RFCEBalance:
 
         # Manor House + Manorialism: iBuilding + 1000 * iCivic + 100,000 * iGold + 1,000,000 * iResearch + 10,000,000 * iCulture + 100,000,000 * iEspionage
         # 3Miro: moved to XML, no need to put it here
-        # gc.setBuildingCivicCommerseCombo1( xml.iManorHouse + 1000 * Technology.MANORIALISM.value + 100000 * 2 + 1000000 * 0 + 10000000 * 0 + 100000000 * 0 );
-        # gc.setBuildingCivicCommerseCombo2( xml.iFrenchChateau + 1000 * Technology.MANORIALISM.value + 100000 * 2 + 1000000 * 0 + 10000000 * 0 + 100000000 * 0 );
+        # gc.setBuildingCivicCommerseCombo1( Building.MANOR_HOUSE.value + 1000 * Technology.MANORIALISM.value + 100000 * 2 + 1000000 * 0 + 10000000 * 0 + 100000000 * 0 );
+        # gc.setBuildingCivicCommerseCombo2( Building.FRENCH_CHATEAU.value + 1000 * Technology.MANORIALISM.value + 100000 * 2 + 1000000 * 0 + 10000000 * 0 + 100000000 * 0 );
         # gc.setBuildingCivicCommerseCombo3(-1)
 
         # 3Miro: Psycho AI cheat, this will make Ottoman AI think it can win battles vs Constantinople at 90/100 rate
