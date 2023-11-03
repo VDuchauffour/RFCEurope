@@ -30,7 +30,7 @@ from MiscData import (
     PROSECUTOR_UNITCLASS,
 )
 from LocationsData import CITIES
-from TimelineData import DateTurn
+from TimelineData import TIMELINE_TECH_MODIFIER, DateTurn
 
 gc = CyGlobalContext()  # LOQ
 utils = RFCUtils.RFCUtils()
@@ -1078,104 +1078,8 @@ class RFCEBalance:
         # formula is: iAhistoric = iCurrentTurn - iHistoricTurn, capped at ( iTPCap, iTBCap )
         # iCost *= 100 + topPenalty * iHistoric * iAhistoric / BotPenalty, iCost /= 100
         # iCost *= 100 - topBuff * iHistoric * iAhistoric / BotBuff, iCost /= 100
-        # gc.setTimelineTechDateForTech( iTech, iTurn )
-        gc.setTimelineTechDateForTech(Technology.CALENDAR.value, 0)
-        gc.setTimelineTechDateForTech(Technology.ARCHITECTURE.value, 30)
-        gc.setTimelineTechDateForTech(Technology.BRONZE_CASTING.value, 15)
-        gc.setTimelineTechDateForTech(Technology.THEOLOGY.value, 10)
-        gc.setTimelineTechDateForTech(Technology.MANORIALISM.value, 5)
-        gc.setTimelineTechDateForTech(Technology.STIRRUP.value, DateTurn.i600AD)
-        gc.setTimelineTechDateForTech(Technology.ENGINEERING.value, 55)  # teir 2
-        gc.setTimelineTechDateForTech(Technology.CHAIN_MAIL.value, 43)
-        gc.setTimelineTechDateForTech(Technology.ART.value, 38)
-        gc.setTimelineTechDateForTech(Technology.MONASTICISM.value, 50)
-        gc.setTimelineTechDateForTech(Technology.VASSALAGE.value, 60)
-        gc.setTimelineTechDateForTech(Technology.ASTROLABE.value, 76)  # teir 3
-        gc.setTimelineTechDateForTech(Technology.MACHINERY.value, 76)
-        gc.setTimelineTechDateForTech(Technology.VAULTED_ARCHES.value, 90)  #
-        gc.setTimelineTechDateForTech(Technology.MUSIC.value, 80)
-        gc.setTimelineTechDateForTech(Technology.HERBAL_MEDICINE.value, 95)
-        gc.setTimelineTechDateForTech(Technology.FEUDALISM.value, DateTurn.i778AD)  # Feudalism
-        gc.setTimelineTechDateForTech(Technology.FARRIERS.value, 100)
-        gc.setTimelineTechDateForTech(Technology.MAPMAKING.value, 160)  # this is tier 5
-        gc.setTimelineTechDateForTech(Technology.BLAST_FURNACE.value, 120)  # teir 4
-        gc.setTimelineTechDateForTech(
-            Technology.SIEGE_ENGINES.value, DateTurn.i1097AD
-        )  # trebuchets
-        gc.setTimelineTechDateForTech(Technology.GOTHIC_ARCHITECTURE.value, 130)  # 12th century
-        gc.setTimelineTechDateForTech(Technology.LITERATURE.value, 145)
-        gc.setTimelineTechDateForTech(Technology.CODE_OF_LAWS.value, 120)
-        gc.setTimelineTechDateForTech(Technology.ARISTOCRACY.value, 135)
-        gc.setTimelineTechDateForTech(
-            Technology.LATEEN_SAILS.value, 125
-        )  # actually this is tier 4
-        gc.setTimelineTechDateForTech(
-            Technology.PLATE_ARMOR.value, 185
-        )  # teir 5: historically late 1200s, and by the 14th century, plate armour was commonly used to supplement mail
-        gc.setTimelineTechDateForTech(Technology.MONUMENT_BUILDING.value, 180)
-        gc.setTimelineTechDateForTech(Technology.CLASSICAL_KNOWLEDGE.value, 175)
-        gc.setTimelineTechDateForTech(
-            Technology.ALCHEMY.value, DateTurn.i1144AD
-        )  # Alchemy introduced in Europe
-        gc.setTimelineTechDateForTech(Technology.CIVIL_SERVICE.value, 190)  # teir 6
-        gc.setTimelineTechDateForTech(Technology.CLOCKMAKING.value, 200)
-        gc.setTimelineTechDateForTech(Technology.PHILOSOPHY.value, 215)
-        gc.setTimelineTechDateForTech(Technology.EDUCATION.value, 220)
-        gc.setTimelineTechDateForTech(Technology.GUILDS.value, 200)
-        gc.setTimelineTechDateForTech(Technology.CHIVALRY.value, 195)
-        gc.setTimelineTechDateForTech(Technology.OPTICS.value, 228)  # teir 7
-        gc.setTimelineTechDateForTech(Technology.REPLACEABLE_PARTS.value, 250)
-        gc.setTimelineTechDateForTech(Technology.PATRONAGE.value, 230)
-        gc.setTimelineTechDateForTech(Technology.GUNPOWDER.value, DateTurn.i1300AD)
-        gc.setTimelineTechDateForTech(Technology.BANKING.value, 240)
-        gc.setTimelineTechDateForTech(Technology.MILITARY_TRADITION.value, 260)
-        gc.setTimelineTechDateForTech(Technology.SHIP_BUILDING.value, 275)  # teir 8
-        gc.setTimelineTechDateForTech(Technology.DRAMA.value, 270)
-        gc.setTimelineTechDateForTech(Technology.DIVINE_RIGHT.value, 266)
-        gc.setTimelineTechDateForTech(Technology.CHEMISTRY.value, 280)
-        gc.setTimelineTechDateForTech(Technology.PAPER.value, 290)
-        gc.setTimelineTechDateForTech(Technology.PROFESSIONAL_ARMY.value, 295)
-        gc.setTimelineTechDateForTech(
-            Technology.PRINTING_PRESS.value, DateTurn.i1517AD
-        )  # teir 9 from turn 304
-        gc.setTimelineTechDateForTech(Technology.PUBLIC_WORKS.value, 310)
-        gc.setTimelineTechDateForTech(Technology.MATCH_LOCK.value, DateTurn.i1500AD)
-        gc.setTimelineTechDateForTech(
-            Technology.ARABIC_KNOWLEDGE.value, DateTurn.i1491AD
-        )  # fall of Granada
-        gc.setTimelineTechDateForTech(
-            Technology.ASTRONOMY.value, DateTurn.i1514AD
-        )  # teir 10 Copernicus
-        gc.setTimelineTechDateForTech(
-            Technology.STEAM_ENGINES.value, DateTurn.i1690AD
-        )  # first steam engine
-        gc.setTimelineTechDateForTech(Technology.CONSTITUTION.value, 375)
-        gc.setTimelineTechDateForTech(Technology.POLYGONAL_FORT.value, 370)
-        gc.setTimelineTechDateForTech(Technology.ARABIC_MEDICINE.value, 342)
-        gc.setTimelineTechDateForTech(
-            Technology.RENAISSANCE_ART.value, DateTurn.i1540AD
-        )  # teir 11, 1541
-        gc.setTimelineTechDateForTech(Technology.NATIONALISM.value, 380)
-        gc.setTimelineTechDateForTech(Technology.LIBERALISM.value, 400)
-        gc.setTimelineTechDateForTech(
-            Technology.SCIENTIFIC_METHOD.value, DateTurn.i1623AD
-        )  # Galilei
-        gc.setTimelineTechDateForTech(Technology.MILITARY_TACTICS.value, 410)
-        gc.setTimelineTechDateForTech(Technology.NAVAL_ARCHITECTURE.value, 385)  # teir 12
-        gc.setTimelineTechDateForTech(Technology.CIVIL_ENGINEERING.value, 395)
-        gc.setTimelineTechDateForTech(Technology.RIGHT_OF_MAN.value, 460)
-        gc.setTimelineTechDateForTech(Technology.ECONOMICS.value, 435)
-        gc.setTimelineTechDateForTech(Technology.PHYSICS.value, DateTurn.i1687AD)
-        gc.setTimelineTechDateForTech(Technology.BIOLOGY.value, 440)
-        gc.setTimelineTechDateForTech(Technology.COMBINED_ARMS.value, 430)
-        gc.setTimelineTechDateForTech(
-            Technology.TRADING_COMPANIES.value, DateTurn.i1600AD
-        )  # teir 13 from turn 325
-        gc.setTimelineTechDateForTech(Technology.MACHINE_TOOLS.value, 450)
-        gc.setTimelineTechDateForTech(Technology.FREE_MARKET.value, 450)
-        gc.setTimelineTechDateForTech(Technology.EXPLOSIVES.value, 460)
-        gc.setTimelineTechDateForTech(Technology.MEDICINE.value, 458)
-        gc.setTimelineTechDateForTech(Technology.INDUSTRIAL_TECH.value, DateTurn.i1800AD)
+        for tech, turn in TIMELINE_TECH_MODIFIER:
+            gc.setTimelineTechDateForTech(tech.value, turn)
 
     def preMapsNSizes(self):
         # settlersMaps, DO NOT CHANGE THIS CODE
