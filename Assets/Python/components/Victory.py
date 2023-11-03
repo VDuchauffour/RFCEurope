@@ -10,6 +10,7 @@ from CoreTypes import (
     Company,
     Project,
     ProvinceStatus,
+    Region,
     Specialist,
     StabilityCategory,
     Religion,
@@ -20,7 +21,7 @@ from CoreTypes import (
     Wonder,
     Province,
 )
-from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS, REGION_NOT_EUROPE
+from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS, REGIONS
 import PyHelpers
 import Popup
 import RFCUtils
@@ -1040,7 +1041,7 @@ class Victory:
             if plot.isWater():
                 continue
             iProvinceID = RFCEMaps.tProvinceMap[y][x]
-            if iProvinceID in REGION_NOT_EUROPE:
+            if iProvinceID in REGIONS[Region.NOT_EUROPE]:
                 continue
             iTotal += 1
             if plot.getOwner() == iPlayer:
