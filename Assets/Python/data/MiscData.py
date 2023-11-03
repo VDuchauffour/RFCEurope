@@ -160,29 +160,32 @@ RELIGION_PERSECUTION_ORDER = EnumDataMapper(
     }
 )
 
-CATHOLIC_BUILDINGS = [
-    Building.CATHOLIC_TEMPLE,
-    Building.CATHOLIC_MONASTERY,
-    Building.CATHOLIC_CATHEDRAL,
-]
-
-ORTHODOX_BUILDINGS = [
-    Building.ORTHODOX_TEMPLE,
-    Building.ORTHODOX_MONASTERY,
-    Building.ORTHODOX_CATHEDRAL,
-]
-
-PROTESTANT_BUILDINGS = [
-    Building.PROTESTANT_TEMPLE,
-    Building.PROTESTANT_SCHOOL,
-    Building.PROTESTANT_CATHEDRAL,
-]
-
-ISLAMIC_BUILDINGS = [
-    Building.ISLAMIC_TEMPLE,
-    Building.ISLAMIC_CATHEDRAL,
-    Building.ISLAMIC_MADRASSA,
-]
+RELIGIOUS_BUILDINGS = EnumDataMapper(
+    {
+        Religion.PROTESTANTISM: [
+            Building.PROTESTANT_TEMPLE,
+            Building.PROTESTANT_SCHOOL,
+            Building.PROTESTANT_CATHEDRAL,
+        ],
+        Religion.ISLAM: [
+            Religion.CATHOLICISM,
+            Religion.ORTHODOXY,
+            Religion.PROTESTANTISM,
+            Religion.JUDAISM,
+        ],
+        Religion.CATHOLICISM: [
+            Building.CATHOLIC_TEMPLE,
+            Building.CATHOLIC_MONASTERY,
+            Building.CATHOLIC_CATHEDRAL,
+        ],
+        Religion.ORTHODOXY: [
+            Building.ISLAMIC_TEMPLE,
+            Building.ISLAMIC_CATHEDRAL,
+            Building.ISLAMIC_MADRASSA,
+        ],
+        Religion.JUDAISM: [],
+    }
+)
 
 RELIGIOUS_WONDERS = [
     Wonder.MONASTERY_OF_CLUNY,

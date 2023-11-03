@@ -32,10 +32,7 @@ from StoredData import sd
 from PyUtils import percentage_chance
 
 from MiscData import (
-    CATHOLIC_BUILDINGS,
-    ISLAMIC_BUILDINGS,
-    ORTHODOX_BUILDINGS,
-    PROTESTANT_BUILDINGS,
+    RELIGIOUS_BUILDINGS,
     RELIGIOUS_WONDERS,
     MessageData,
 )
@@ -710,27 +707,36 @@ class Religions:
         pPlayer = gc.getPlayer(iPlayer)
         iStateReligion = pPlayer.getStateReligion()
         if iStateReligion != -1:
-            if iStateReligion == Religion.CATHOLICISM.value and iBuilding in CATHOLIC_BUILDINGS:
+            if (
+                iStateReligion == Religion.CATHOLICISM
+                and iBuilding in RELIGIOUS_BUILDINGS[Religion.CATHOLICISM]
+            ):
                 pPlayer.changeFaith(1)
                 if iBuilding == Building.CATHOLIC_CATHEDRAL.value:
                     pPlayer.changeFaith(3)
                 if pPlayer.countNumBuildings(Wonder.PALAIS_DES_PAPES.value) > 0:
                     pPlayer.changeFaith(1)
-            elif iStateReligion == Religion.ORTHODOXY.value and iBuilding in ORTHODOX_BUILDINGS:
+            elif (
+                iStateReligion == Religion.ORTHODOXY
+                and iBuilding in RELIGIOUS_BUILDINGS[Religion.ORTHODOXY]
+            ):
                 pPlayer.changeFaith(1)
                 if iBuilding == Building.ORTHODOX_CATHEDRAL.value:
                     pPlayer.changeFaith(3)
                 if pPlayer.countNumBuildings(Wonder.PALAIS_DES_PAPES.value) > 0:
                     pPlayer.changeFaith(1)
-            elif iStateReligion == Religion.ISLAM.value and iBuilding in ISLAMIC_BUILDINGS:
+            elif (
+                iStateReligion == Religion.ISLAM
+                and iBuilding in RELIGIOUS_BUILDINGS[Religion.ISLAM]
+            ):
                 pPlayer.changeFaith(1)
                 if iBuilding == Building.ISLAMIC_CATHEDRAL.value:
                     pPlayer.changeFaith(3)
                 if pPlayer.countNumBuildings(Wonder.PALAIS_DES_PAPES.value) > 0:
                     pPlayer.changeFaith(1)
             elif (
-                iStateReligion == Religion.PROTESTANTISM.value
-                and iBuilding in PROTESTANT_BUILDINGS
+                iStateReligion == Religion.PROTESTANTISM
+                and iBuilding in RELIGIOUS_BUILDINGS[Religion.PROTESTANTISM]
             ):
                 pPlayer.changeFaith(1)
                 if iBuilding == Building.PROTESTANT_CATHEDRAL.value:
