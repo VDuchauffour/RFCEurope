@@ -16,6 +16,7 @@ from CoreTypes import (
     Technology,
     Unit,
     Bonus,
+    Wonder,
 )
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS
 import PyHelpers
@@ -121,7 +122,11 @@ tBulgariaControl = [
     xml.iP_Moesia,
     xml.iP_Arberia,
 ]
-tCordobaWonders = [xml.iAlhambra, xml.iLaMezquita, xml.iGardensAlAndalus]
+tCordobaWonders = [
+    Wonder.ALHAMBRA.value,
+    Wonder.LA_MEZQUITA.value,
+    Wonder.GARDENS_AL_ANDALUS.value,
+]
 tCordobaIslamize = [
     xml.iP_GaliciaSpain,
     xml.iP_Castile,
@@ -327,7 +332,12 @@ tOttomanControlI = [
     xml.iP_Jerusalem,
     xml.iP_Egypt,
 ]
-tOttomanWonders = [xml.iTopkapiPalace, xml.iBlueMosque, xml.iSelimiyeMosque, xml.iTombAlWalid]
+tOttomanWonders = [
+    Wonder.TOPKAPI_PALACE.value,
+    Wonder.BLUE_MOSQUE.value,
+    Wonder.SELIMIYE_MOSQUE.value,
+    Wonder.TOMB_AL_WALID.value,
+]
 tOttomanControlII = [xml.iP_Austria, xml.iP_Pannonia, xml.iP_LesserPoland]
 tMoscowControl = [
     xml.iP_Donets,
@@ -715,7 +725,7 @@ class Victory:
         elif iNewOwner == Civ.POLAND.value:
             if self.isPossibleUHV(iNewOwner, 2, False):
                 if city.hasBuilding(
-                    xml.iKazimierz
+                    Wonder.KAZIMIERZ.value
                 ):  # you cannot acquire religious buildings on conquest, only wonders
                     iCounter = player(Civ.POLAND).getUHVCounter(2)
                     iCathCath = (iCounter / 10000) % 10
@@ -834,7 +844,7 @@ class Victory:
                     xml.iOrthodoxCathedral,
                     xml.iProtestantCathedral,
                     xml.iJewishQuarter,
-                    xml.iKazimierz,
+                    Wonder.KAZIMIERZ.value,
                 ]
                 if iBuilding in lBuildingList:
                     iCounter = player(Civ.POLAND).getUHVCounter(2)
@@ -848,7 +858,7 @@ class Victory:
                         iOrthCath += 1
                     elif iBuilding == xml.iProtestantCathedral and iProtCath < 9:
                         iProtCath += 1
-                    elif iBuilding == xml.iKazimierz:
+                    elif iBuilding == Wonder.KAZIMIERZ.value:
                         iJewishQu = 99
                     elif iBuilding == xml.iJewishQuarter and iJewishQu < 99:
                         iJewishQu += 1

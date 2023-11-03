@@ -17,6 +17,7 @@ from CoreTypes import (
     UniquePower,
     StabilityCategory,
     Technology,
+    Wonder,
 )
 
 # import cPickle as pickle
@@ -316,19 +317,19 @@ class Stability:
         pOwner = gc.getPlayer(iOwner)
         pConq = gc.getPlayer(playerType)
 
-        if city.hasBuilding(xml.iEscorial):
+        if city.hasBuilding(Wonder.ESCORIAL.value):
             pConq.setPicklefreeParameter(SpecialParameter.HAS_ESCORIAL.value, 1)
             pOwner.setPicklefreeParameter(SpecialParameter.HAS_ESCORIAL.value, 0)
-        if city.hasBuilding(xml.iStephansdom):
+        if city.hasBuilding(Wonder.STEPHANSDOM.value):
             pConq.setPicklefreeParameter(SpecialParameter.HAS_STEPHANSDOM.value, 1)
             pOwner.setPicklefreeParameter(SpecialParameter.HAS_STEPHANSDOM.value, 0)
-        if city.hasBuilding(xml.iShrineOfUppsala):
+        if city.hasBuilding(Wonder.SHRINE_OF_UPPSALA.value):
             pConq.setPicklefreeParameter(SpecialParameter.HAS_UPPSALA_SHRINE.value, 1)
             pOwner.setPicklefreeParameter(SpecialParameter.HAS_UPPSALA_SHRINE.value, 0)
-        if city.hasBuilding(xml.iKoutoubiaMosque):
+        if city.hasBuilding(Wonder.KOUTOUBIA_MOSQUE.value):
             pConq.setPicklefreeParameter(SpecialParameter.HAS_KOUTOUBIA_MOSQUE.value, 1)
             pOwner.setPicklefreeParameter(SpecialParameter.HAS_KOUTOUBIA_MOSQUE.value, 0)
-        if city.hasBuilding(xml.iMagnaCarta):
+        if city.hasBuilding(Wonder.MAGNA_CARTA.value):
             pConq.setPicklefreeParameter(SpecialParameter.HAS_MAGNACARTA.value, 1)
             pOwner.setPicklefreeParameter(SpecialParameter.HAS_MAGNACARTA.value, 0)
 
@@ -383,19 +384,19 @@ class Stability:
         # AbsintheRed: iPlayer is the one razing city, iOwner is the previous owner of the city (right before iPlayer)
         pPlayer = gc.getPlayer(iPlayer)
         pOwner = gc.getPlayer(iOwner)
-        if city.hasBuilding(xml.iEscorial):
+        if city.hasBuilding(Wonder.ESCORIAL.value):
             pPlayer.setPicklefreeParameter(SpecialParameter.HAS_ESCORIAL.value, 0)
             pOwner.setPicklefreeParameter(SpecialParameter.HAS_ESCORIAL.value, 0)
-        if city.hasBuilding(xml.iStephansdom):
+        if city.hasBuilding(Wonder.STEPHANSDOM.value):
             pPlayer.setPicklefreeParameter(SpecialParameter.HAS_STEPHANSDOM.value, 0)
             pOwner.setPicklefreeParameter(SpecialParameter.HAS_STEPHANSDOM.value, 0)
-        if city.hasBuilding(xml.iShrineOfUppsala):
+        if city.hasBuilding(Wonder.SHRINE_OF_UPPSALA.value):
             pPlayer.setPicklefreeParameter(SpecialParameter.HAS_UPPSALA_SHRINE.value, 0)
             pOwner.setPicklefreeParameter(SpecialParameter.HAS_UPPSALA_SHRINE.value, 0)
-        if city.hasBuilding(xml.iKoutoubiaMosque):
+        if city.hasBuilding(Wonder.KOUTOUBIA_MOSQUE.value):
             pPlayer.setPicklefreeParameter(SpecialParameter.HAS_KOUTOUBIA_MOSQUE.value, 0)
             pOwner.setPicklefreeParameter(SpecialParameter.HAS_KOUTOUBIA_MOSQUE.value, 0)
-        if city.hasBuilding(xml.iMagnaCarta):
+        if city.hasBuilding(Wonder.MAGNA_CARTA.value):
             pPlayer.setPicklefreeParameter(SpecialParameter.HAS_MAGNACARTA.value, 0)
             pOwner.setPicklefreeParameter(SpecialParameter.HAS_MAGNACARTA.value, 0)
         self.recalcCivicCombos(iPlayer)
@@ -457,15 +458,15 @@ class Stability:
         elif iBuilding == utils.getUniqueBuilding(iPlayer, xml.iCourthouse):
             pPlayer.changeStabilityBase(StabilityCategory.CITIES.value, 1)
             self.recalcCity(iPlayer)
-        elif iBuilding == xml.iEscorial:
+        elif iBuilding == Wonder.ESCORIAL.value:
             pPlayer.setPicklefreeParameter(SpecialParameter.HAS_ESCORIAL.value, 1)
-        elif iBuilding == xml.iStephansdom:
+        elif iBuilding == Wonder.STEPHANSDOM.value:
             pPlayer.setPicklefreeParameter(SpecialParameter.HAS_STEPHANSDOM.value, 1)
-        elif iBuilding == xml.iShrineOfUppsala:
+        elif iBuilding == Wonder.SHRINE_OF_UPPSALA.value:
             pPlayer.setPicklefreeParameter(SpecialParameter.HAS_UPPSALA_SHRINE.value, 1)
-        elif iBuilding == xml.iKoutoubiaMosque:
+        elif iBuilding == Wonder.KOUTOUBIA_MOSQUE.value:
             pPlayer.setPicklefreeParameter(SpecialParameter.HAS_KOUTOUBIA_MOSQUE.value, 1)
-        elif iBuilding == xml.iMagnaCarta:
+        elif iBuilding == Wonder.MAGNA_CARTA.value:
             pPlayer.setPicklefreeParameter(SpecialParameter.HAS_MAGNACARTA.value, 1)
         elif iBuilding == xml.iPalace:
             pPlayer.changeStabilityBase(StabilityCategory.EXPANSION.value, -2)
@@ -819,7 +820,7 @@ class Stability:
         if pPlayer.getGoldenAgeTurns() > 0:
             iCityStability += 8
         # Absinthe: Westminster Abbey faith-stability effect
-        if pPlayer.countNumBuildings(xml.iWestminster) > 0:
+        if pPlayer.countNumBuildings(Wonder.WESTMINSTER.value) > 0:
             # would be better, if the stability bonus was also only applied for Divine Monarchy?
             # if pPlayer.getCivics(0) == Civic.DIVINE_MONARCHY.value:
             iFaith = pPlayer.getFaith()

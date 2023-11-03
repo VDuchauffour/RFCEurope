@@ -3,7 +3,7 @@
 from CvPythonExtensions import *
 from CoreData import civilizations
 from CoreFunctions import get_religion_by_id
-from CoreTypes import Civ, City, Civic, StabilityCategory, Religion, Technology, Unit
+from CoreTypes import Civ, City, Civic, StabilityCategory, Religion, Technology, Unit, Wonder
 from LocationsData import CITIES
 from TimelineData import DateTurn
 import PyHelpers
@@ -38,30 +38,30 @@ tOrthodoxBuildings = [xml.iOrthodoxTemple, xml.iOrthodoxMonastery, xml.iOrthodox
 tProtestantBuildings = [xml.iProtestantTemple, xml.iProtestantSchool, xml.iProtestantCathedral]
 tIslamicBuildings = [xml.iIslamicTemple, xml.iIslamicCathedral, xml.iIslamicMadrassa]
 tReligiousWonders = [
-    xml.iMonasteryOfCluny,
-    xml.iWestminster,
-    xml.iKrakDesChevaliers,
-    xml.iNotreDame,
-    xml.iPalaisPapes,
-    xml.iStBasil,
-    xml.iSophiaKiev,
-    xml.iStCatherineMonastery,
-    xml.iSistineChapel,
-    xml.iJasnaGora,
-    xml.iMontSaintMichel,
-    xml.iBoyanaChurch,
-    xml.iFlorenceDuomo,
-    xml.iBorgundStaveChurch,
-    xml.iDomeRock,
-    xml.iThomaskirche,
-    xml.iBlueMosque,
-    xml.iSelimiyeMosque,
-    xml.iMosqueOfKairouan,
-    xml.iKoutoubiaMosque,
-    xml.iLaMezquita,
-    xml.iSanMarco,
-    xml.iStephansdom,
-    xml.iRoundChurch,
+    Wonder.MONASTERY_OF_CLUNY.value,
+    Wonder.WESTMINSTER.value,
+    Wonder.KRAK_DES_CHEVALIERS.value,
+    Wonder.NOTRE_DAME.value,
+    Wonder.PALAIS_DES_PAPES.value,
+    Wonder.ST_BASIL.value,
+    Wonder.SOPHIA_KIEV.value,
+    Wonder.ST_CATHERINE_MONASTERY.value,
+    Wonder.SISTINE_CHAPEL.value,
+    Wonder.JASNA_GORA.value,
+    Wonder.MONT_SAINT_MICHEL.value,
+    Wonder.BOYANA_CHURCH.value,
+    Wonder.FLORENCE_DUOMO.value,
+    Wonder.BORGUND_STAVE_CHURCH.value,
+    Wonder.DOME_ROCK.value,
+    Wonder.THOMASKIRCHE.value,
+    Wonder.BLUE_MOSQUE.value,
+    Wonder.SELIMIYE_MOSQUE.value,
+    Wonder.MOSQUE_OF_KAIROUAN.value,
+    Wonder.KOUTOUBIA_MOSQUE.value,
+    Wonder.LA_MEZQUITA.value,
+    Wonder.SAN_MARCO.value,
+    Wonder.STEPHANSDOM.value,
+    Wonder.ROUND_CHURCH.value,
 ]
 
 
@@ -734,19 +734,19 @@ class Religions:
                 pPlayer.changeFaith(1)
                 if iBuilding == xml.iCatholicCathedral:
                     pPlayer.changeFaith(3)
-                if pPlayer.countNumBuildings(xml.iPalaisPapes) > 0:
+                if pPlayer.countNumBuildings(Wonder.PALAIS_DES_PAPES.value) > 0:
                     pPlayer.changeFaith(1)
             elif iStateReligion == Religion.ORTHODOXY.value and iBuilding in tOrthodoxBuildings:
                 pPlayer.changeFaith(1)
                 if iBuilding == xml.iOrthodoxCathedral:
                     pPlayer.changeFaith(3)
-                if pPlayer.countNumBuildings(xml.iPalaisPapes) > 0:
+                if pPlayer.countNumBuildings(Wonder.PALAIS_DES_PAPES.value) > 0:
                     pPlayer.changeFaith(1)
             elif iStateReligion == Religion.ISLAM.value and iBuilding in tIslamicBuildings:
                 pPlayer.changeFaith(1)
                 if iBuilding == xml.iIslamicCathedral:
                     pPlayer.changeFaith(3)
-                if pPlayer.countNumBuildings(xml.iPalaisPapes) > 0:
+                if pPlayer.countNumBuildings(Wonder.PALAIS_DES_PAPES.value) > 0:
                     pPlayer.changeFaith(1)
             elif (
                 iStateReligion == Religion.PROTESTANTISM.value
@@ -755,26 +755,26 @@ class Religions:
                 pPlayer.changeFaith(1)
                 if iBuilding == xml.iProtestantCathedral:
                     pPlayer.changeFaith(3)
-                if pPlayer.countNumBuildings(xml.iPalaisPapes) > 0:
+                if pPlayer.countNumBuildings(Wonder.PALAIS_DES_PAPES.value) > 0:
                     pPlayer.changeFaith(1)
             elif iStateReligion == Religion.JUDAISM.value and iBuilding in [
                 xml.iJewishQuarter,
-                xml.iKazimierz,
+                Wonder.KAZIMIERZ.value,
             ]:
                 pPlayer.changeFaith(1)
-                if iBuilding == xml.iKazimierz:
+                if iBuilding == Wonder.KAZIMIERZ.value:
                     pPlayer.changeFaith(3)
-                if pPlayer.countNumBuildings(xml.iPalaisPapes) > 0:
+                if pPlayer.countNumBuildings(Wonder.PALAIS_DES_PAPES.value) > 0:
                     pPlayer.changeFaith(1)
             # Absinthe: Wonders: Mont Saint-Michel wonder effect
             if utils.getBaseBuilding(iBuilding) in [xml.iWalls, xml.iCastle]:
-                if pPlayer.countNumBuildings(xml.iMontSaintMichel) > 0:
+                if pPlayer.countNumBuildings(Wonder.MONT_SAINT_MICHEL.value) > 0:
                     pPlayer.changeFaith(1)
         if iBuilding in tReligiousWonders:
             pPlayer.changeFaith(4)
-            if pPlayer.countNumBuildings(xml.iPalaisPapes) > 0:
+            if pPlayer.countNumBuildings(Wonder.PALAIS_DES_PAPES.value) > 0:
                 pPlayer.changeFaith(1)
-        if iStateReligion != Religion.JUDAISM.value and iBuilding == xml.iKazimierz:
+        if iStateReligion != Religion.JUDAISM.value and iBuilding == Wonder.KAZIMIERZ.value:
             pPlayer.changeFaith(-min(1, pPlayer.getFaith()))
             # Kazimierz tries to spread Judaism to a couple new cities
             cityList = utils.getCityList(iPlayer)
@@ -1272,11 +1272,11 @@ class Religions:
                     xml.iCatholicChapel,
                     xml.iCatholicMonastery,
                     xml.iCatholicCathedral,
-                    xml.iMonasteryOfCluny,
-                    xml.iKrakDesChevaliers,
-                    xml.iPalaisPapes,
-                    xml.iNotreDame,
-                    xml.iWestminster,
+                    Wonder.MONASTERY_OF_CLUNY.value,
+                    Wonder.KRAK_DES_CHEVALIERS.value,
+                    Wonder.PALAIS_DES_PAPES.value,
+                    Wonder.NOTRE_DAME.value,
+                    Wonder.WESTMINSTER.value,
                 ]
                 bCathBuildings = False
                 for iBuilding in lCathlist:
@@ -1360,11 +1360,11 @@ class Religions:
                     xml.iCatholicChapel,
                     xml.iCatholicMonastery,
                     xml.iCatholicCathedral,
-                    xml.iMonasteryOfCluny,
-                    xml.iKrakDesChevaliers,
-                    xml.iPalaisPapes,
-                    xml.iNotreDame,
-                    xml.iWestminster,
+                    Wonder.MONASTERY_OF_CLUNY.value,
+                    Wonder.KRAK_DES_CHEVALIERS.value,
+                    Wonder.PALAIS_DES_PAPES.value,
+                    Wonder.NOTRE_DAME.value,
+                    Wonder.WESTMINSTER.value,
                 ]
                 bCathBuildings = False
                 for iBuilding in lCathlist:

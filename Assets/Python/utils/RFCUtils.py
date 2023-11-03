@@ -23,7 +23,6 @@ import RFCEMaps
 import PyHelpers
 import Popup  # Absinthe
 import Consts
-import XMLConsts as xml
 from StoredData import sd
 from MiscData import (
     GREAT_PROPHET_FAITH_POINT_BONUS,
@@ -1435,7 +1434,7 @@ class RFCUtils:
         # 3Miro: kill the Saint :), just make it so he cannot be used for other purposes
         pPlayer = gc.getPlayer(iOwner)
         # Absinthe: Wonders: Boyana Church wonder effect
-        if pPlayer.countNumBuildings(xml.iBoyanaChurch) > 0:
+        if pPlayer.countNumBuildings(Wonder.BOYANA_CHURCH.value) > 0:
             pPlayer.changeFaith(GREAT_PROPHET_FAITH_POINT_BONUS * 3 / 2 + 2)
         else:
             pPlayer.changeFaith(GREAT_PROPHET_FAITH_POINT_BONUS)

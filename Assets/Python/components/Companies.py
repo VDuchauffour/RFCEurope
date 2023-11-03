@@ -24,6 +24,7 @@ from CoreTypes import (
     SpecialParameter,
     Religion,
     Technology,
+    Wonder,
 )
 
 # globals
@@ -200,7 +201,7 @@ class Companies:
 
         # Galata Tower ownership
         pPlayer = gc.getPlayer(iPlayer)
-        if iBuilding == xml.iGalataTower:
+        if iBuilding == Wonder.GALATA_TOWER.value:
             pPlayer.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER.value, 1)
 
     def onCityAcquired(self, iOldOwner, iNewOwner, city):
@@ -217,7 +218,7 @@ class Companies:
         # Galata Tower ownership
         pOldOwner = gc.getPlayer(iOldOwner)
         pNewOwner = gc.getPlayer(iNewOwner)
-        if city.isHasBuilding(xml.iGalataTower):
+        if city.isHasBuilding(Wonder.GALATA_TOWER.value):
             pNewOwner.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER.value, 1)
             pOldOwner.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER.value, 0)
 
@@ -226,7 +227,7 @@ class Companies:
         # Galata Tower ownership
         pOldOwner = gc.getPlayer(iOldOwner)
         pPlayer = gc.getPlayer(iPlayer)
-        if city.isHasBuilding(xml.iGalataTower):
+        if city.isHasBuilding(Wonder.GALATA_TOWER.value):
             pPlayer.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER.value, 0)
             pOldOwner.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER.value, 0)
 
@@ -451,7 +452,7 @@ class Companies:
         # Galata Tower bonus: 2 for all cities, additional 2 for the wonder's city
         if owner.getPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER.value) == 1:
             iValue += 2
-            if city.isHasBuilding(xml.iGalataTower):
+            if city.isHasBuilding(Wonder.GALATA_TOWER.value):
                 iValue += 2
 
         # various building bonuses, trade route bonus
@@ -481,12 +482,12 @@ class Companies:
                 iBuildCounter += 1
             iValue += (4 * iBuildCounter) / iMaxPossible  # maximum is 4, with all buildings built
             # wonders should be handled separately
-            if city.getNumRealBuilding(xml.iKrakDesChevaliers) > 0:
+            if city.getNumRealBuilding(Wonder.KRAK_DES_CHEVALIERS.value) > 0:
                 if iCompany == Company.HOSPITALLERS.value:
                     iValue += 5
                 else:
                     iValue += 2
-            if city.getNumRealBuilding(xml.iDomeRock) > 0:
+            if city.getNumRealBuilding(Wonder.DOME_ROCK.value) > 0:
                 if iCompany == Company.TEMPLARS.value:
                     iValue += 5
                 else:
