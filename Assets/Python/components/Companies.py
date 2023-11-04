@@ -24,7 +24,6 @@ from CoreTypes import (
     Religion,
     Technology,
     Wonder,
-    Province,
 )
 
 # globals
