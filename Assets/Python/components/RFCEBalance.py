@@ -8,6 +8,7 @@ from CoreTypes import (
     Civic,
     Colony,
     Feature,
+    ModifierCategory,
     PlagueType,
     Promotion,
     Terrain,
@@ -41,261 +42,7 @@ class RFCEBalance:
 
         self.preMapsNSizes()
         self.setTechTimeline()  # Timeline for correct tech three
-
-        # 3Miro: consolidate several modifiers into fewer calls, makes it more structured. Each modifier works as described below.
-
-        # void setGrowthModifiers( int iCiv, int iPop, int iCult, int iGP, int iWorker, int iHealth, int iInitPop );
-        # iInitPop is the initial population in a city, also can use gc.setInitialPopulation( iCiv, iInitPop ) to change a single civ
-        # defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100, 100, 1 )
-        # 3Miro: ABOUT CULTURE notice the culture modifier is different from the others, it modifies the culture output as opposed to the culture threshold
-        # 	50 means less culture, 200 means more culture. This is applied to Culture output of 10 or more.
-        gc.setGrowthModifiersAI(Civ.BYZANTIUM.value, 200, 100, 200, 100, 100, 2)
-        gc.setGrowthModifiersHu(Civ.BYZANTIUM.value, 150, 100, 200, 100, 100, 2)
-        gc.setGrowthModifiersAI(Civ.FRANCE.value, 110, 100, 110, 100, 100, 1)
-        gc.setGrowthModifiersHu(Civ.FRANCE.value, 110, 100, 110, 100, 100, 1)
-        gc.setGrowthModifiersAI(Civ.ARABIA.value, 150, 100, 150, 100, 100, 1)
-        gc.setGrowthModifiersHu(Civ.ARABIA.value, 150, 100, 150, 100, 100, 1)
-        gc.setGrowthModifiersAI(Civ.BULGARIA.value, 150, 100, 100, 100, 100, 1)
-        gc.setGrowthModifiersHu(Civ.BULGARIA.value, 125, 100, 100, 100, 100, 1)
-        gc.setGrowthModifiersAI(Civ.CORDOBA.value, 150, 100, 100, 100, 100, 1)
-        gc.setGrowthModifiersHu(Civ.CORDOBA.value, 150, 100, 100, 100, 100, 1)
-        gc.setGrowthModifiersAI(Civ.VENECIA.value, 125, 100, 100, 100, 100, 2)
-        gc.setGrowthModifiersHu(Civ.VENECIA.value, 125, 100, 100, 100, 100, 2)
-        gc.setGrowthModifiersAI(Civ.BURGUNDY.value, 100, 100, 100, 100, 100, 2)
-        gc.setGrowthModifiersHu(Civ.BURGUNDY.value, 100, 100, 100, 100, 100, 2)
-        gc.setGrowthModifiersAI(Civ.GERMANY.value, 125, 100, 100, 100, 100, 2)
-        gc.setGrowthModifiersHu(Civ.GERMANY.value, 125, 100, 100, 100, 100, 2)
-        gc.setGrowthModifiersAI(Civ.NOVGOROD.value, 100, 100, 100, 100, 100, 2)
-        gc.setGrowthModifiersHu(Civ.NOVGOROD.value, 100, 100, 100, 100, 100, 2)
-        gc.setGrowthModifiersAI(Civ.NORWAY.value, 100, 100, 100, 100, 100, 2)
-        gc.setGrowthModifiersHu(Civ.NORWAY.value, 100, 100, 100, 100, 100, 2)
-        gc.setGrowthModifiersAI(Civ.KIEV.value, 150, 100, 100, 100, 100, 2)
-        gc.setGrowthModifiersHu(Civ.KIEV.value, 150, 100, 100, 100, 100, 2)
-        gc.setGrowthModifiersAI(Civ.HUNGARY.value, 125, 100, 100, 100, 100, 2)
-        gc.setGrowthModifiersHu(Civ.HUNGARY.value, 125, 100, 100, 100, 100, 2)
-        gc.setGrowthModifiersAI(Civ.CASTILE.value, 125, 100, 100, 100, 100, 2)
-        gc.setGrowthModifiersHu(Civ.CASTILE.value, 125, 100, 100, 100, 100, 2)
-        gc.setGrowthModifiersAI(Civ.DENMARK.value, 100, 100, 100, 100, 100, 2)
-        gc.setGrowthModifiersHu(Civ.DENMARK.value, 100, 100, 100, 100, 100, 2)
-        gc.setGrowthModifiersAI(Civ.SCOTLAND.value, 100, 100, 100, 100, 100, 2)
-        gc.setGrowthModifiersHu(Civ.SCOTLAND.value, 100, 100, 100, 100, 100, 2)
-        gc.setGrowthModifiersAI(Civ.POLAND.value, 125, 100, 100, 100, 100, 2)
-        gc.setGrowthModifiersHu(Civ.POLAND.value, 125, 100, 100, 100, 100, 2)
-        gc.setGrowthModifiersAI(Civ.GENOA.value, 100, 100, 100, 100, 100, 3)
-        gc.setGrowthModifiersHu(Civ.GENOA.value, 100, 100, 100, 100, 100, 3)
-        gc.setGrowthModifiersAI(Civ.MOROCCO.value, 100, 100, 100, 100, 100, 3)
-        gc.setGrowthModifiersHu(Civ.MOROCCO.value, 100, 100, 100, 100, 100, 3)
-        gc.setGrowthModifiersAI(Civ.ENGLAND.value, 100, 100, 100, 100, 100, 3)
-        gc.setGrowthModifiersHu(Civ.ENGLAND.value, 100, 100, 100, 100, 100, 3)
-        gc.setGrowthModifiersAI(Civ.PORTUGAL.value, 100, 150, 100, 100, 100, 3)
-        gc.setGrowthModifiersHu(Civ.PORTUGAL.value, 100, 150, 100, 100, 100, 3)
-        gc.setGrowthModifiersAI(Civ.ARAGON.value, 100, 150, 100, 100, 100, 3)
-        gc.setGrowthModifiersHu(Civ.ARAGON.value, 100, 150, 100, 100, 100, 3)
-        gc.setGrowthModifiersAI(Civ.SWEDEN.value, 100, 100, 100, 100, 100, 3)
-        gc.setGrowthModifiersHu(Civ.SWEDEN.value, 100, 100, 100, 100, 100, 3)
-        gc.setGrowthModifiersAI(Civ.PRUSSIA.value, 100, 100, 100, 100, 100, 3)
-        gc.setGrowthModifiersHu(Civ.PRUSSIA.value, 100, 100, 100, 100, 100, 3)
-        gc.setGrowthModifiersAI(Civ.LITHUANIA.value, 100, 100, 100, 100, 100, 3)
-        gc.setGrowthModifiersHu(Civ.LITHUANIA.value, 100, 100, 100, 100, 100, 3)
-        gc.setGrowthModifiersAI(
-            Civ.AUSTRIA.value, 100, 200, 100, 100, 100, 3
-        )  # Austria is squashed by other's culture, they need the boost
-        gc.setGrowthModifiersHu(Civ.AUSTRIA.value, 100, 150, 100, 100, 100, 3)
-        gc.setGrowthModifiersAI(Civ.OTTOMAN.value, 100, 150, 100, 100, 100, 3)
-        gc.setGrowthModifiersHu(Civ.OTTOMAN.value, 100, 150, 100, 100, 100, 3)
-        gc.setGrowthModifiersAI(Civ.MOSCOW.value, 100, 100, 100, 100, 100, 3)
-        gc.setGrowthModifiersHu(Civ.MOSCOW.value, 100, 100, 100, 100, 100, 3)
-        gc.setGrowthModifiersAI(Civ.DUTCH.value, 100, 200, 60, 100, 50, 4)
-        gc.setGrowthModifiersHu(Civ.DUTCH.value, 100, 200, 60, 100, 50, 4)
-        gc.setGrowthModifiersAI(Civ.POPE.value, 150, 100, 100, 50, 100, 1)
-        gc.setGrowthModifiersAI(Civ.INDEPENDENT.value, 100, 100, 100, 50, 100, 1)
-        gc.setGrowthModifiersAI(Civ.INDEPENDENT_2.value, 100, 100, 100, 50, 100, 1)
-        gc.setGrowthModifiersAI(Civ.INDEPENDENT_3.value, 100, 100, 100, 50, 100, 1)
-        gc.setGrowthModifiersAI(Civ.INDEPENDENT_4.value, 100, 100, 100, 50, 100, 1)
-        gc.setGrowthModifiersAI(Civ.BARBARIAN.value, 100, 100, 100, 50, 100, 1)
-
-        # void setProductionModifiers( int iCiv, int iUnits, int iBuildings, int iWonders, int iResearch );
-        # defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100 )
-        # 3Miro: at 100 research cost, the cost is exactly as in the XML files, the cost in general is however increased for all civs
-        gc.setProductionModifiersAI(Civ.BYZANTIUM.value, 200, 200, 200, 350)
-        gc.setProductionModifiersHu(Civ.BYZANTIUM.value, 200, 150, 200, 350)
-        gc.setProductionModifiersAI(Civ.FRANCE.value, 140, 120, 125, 150)
-        gc.setProductionModifiersHu(Civ.FRANCE.value, 150, 120, 125, 130)
-        gc.setProductionModifiersAI(Civ.ARABIA.value, 130, 125, 150, 280)
-        gc.setProductionModifiersHu(Civ.ARABIA.value, 150, 125, 150, 230)
-        gc.setProductionModifiersAI(Civ.BULGARIA.value, 130, 125, 125, 250)
-        gc.setProductionModifiersHu(Civ.BULGARIA.value, 150, 150, 125, 200)
-        gc.setProductionModifiersAI(Civ.CORDOBA.value, 180, 170, 130, 250)
-        gc.setProductionModifiersHu(Civ.CORDOBA.value, 200, 180, 140, 230)
-        gc.setProductionModifiersAI(Civ.VENECIA.value, 100, 100, 100, 150)
-        gc.setProductionModifiersHu(Civ.VENECIA.value, 100, 100, 100, 130)
-        gc.setProductionModifiersAI(Civ.BURGUNDY.value, 130, 120, 120, 150)
-        gc.setProductionModifiersHu(Civ.BURGUNDY.value, 150, 120, 120, 150)
-        gc.setProductionModifiersAI(Civ.GERMANY.value, 120, 120, 100, 140)
-        gc.setProductionModifiersHu(Civ.GERMANY.value, 140, 140, 125, 130)
-        gc.setProductionModifiersAI(Civ.NOVGOROD.value, 120, 120, 120, 150)
-        gc.setProductionModifiersHu(Civ.NOVGOROD.value, 125, 125, 125, 150)
-        gc.setProductionModifiersAI(Civ.NORWAY.value, 125, 125, 125, 130)
-        gc.setProductionModifiersHu(Civ.NORWAY.value, 125, 125, 100, 140)
-        gc.setProductionModifiersAI(Civ.KIEV.value, 100, 120, 100, 140)
-        gc.setProductionModifiersHu(Civ.KIEV.value, 125, 150, 125, 150)
-        gc.setProductionModifiersAI(Civ.HUNGARY.value, 120, 120, 100, 150)
-        gc.setProductionModifiersHu(Civ.HUNGARY.value, 125, 125, 100, 130)
-        gc.setProductionModifiersAI(Civ.CASTILE.value, 100, 100, 100, 130)
-        gc.setProductionModifiersHu(Civ.CASTILE.value, 125, 100, 100, 120)
-        gc.setProductionModifiersAI(Civ.DENMARK.value, 100, 100, 100, 110)
-        gc.setProductionModifiersHu(Civ.DENMARK.value, 100, 100, 100, 120)
-        gc.setProductionModifiersAI(Civ.SCOTLAND.value, 100, 100, 100, 125)
-        gc.setProductionModifiersHu(Civ.SCOTLAND.value, 110, 110, 110, 125)
-        gc.setProductionModifiersAI(Civ.POLAND.value, 100, 120, 120, 140)
-        gc.setProductionModifiersHu(Civ.POLAND.value, 120, 120, 120, 130)
-        gc.setProductionModifiersAI(Civ.GENOA.value, 100, 100, 100, 130)
-        gc.setProductionModifiersHu(Civ.GENOA.value, 100, 100, 100, 125)
-        gc.setProductionModifiersAI(Civ.MOROCCO.value, 120, 120, 120, 175)
-        gc.setProductionModifiersHu(Civ.MOROCCO.value, 120, 120, 120, 175)
-        gc.setProductionModifiersAI(Civ.ENGLAND.value, 80, 80, 100, 120)
-        gc.setProductionModifiersHu(Civ.ENGLAND.value, 100, 100, 100, 110)
-        gc.setProductionModifiersAI(Civ.PORTUGAL.value, 70, 90, 100, 110)
-        gc.setProductionModifiersHu(Civ.PORTUGAL.value, 80, 90, 100, 100)
-        gc.setProductionModifiersAI(Civ.ARAGON.value, 75, 90, 100, 125)
-        gc.setProductionModifiersHu(Civ.ARAGON.value, 80, 100, 100, 125)
-        gc.setProductionModifiersAI(Civ.SWEDEN.value, 80, 80, 100, 100)
-        gc.setProductionModifiersHu(Civ.SWEDEN.value, 80, 80, 100, 100)
-        gc.setProductionModifiersAI(Civ.PRUSSIA.value, 60, 80, 120, 90)
-        gc.setProductionModifiersHu(Civ.PRUSSIA.value, 75, 80, 120, 100)
-        gc.setProductionModifiersAI(Civ.LITHUANIA.value, 70, 100, 110, 110)
-        gc.setProductionModifiersHu(Civ.LITHUANIA.value, 80, 100, 110, 100)
-        gc.setProductionModifiersAI(Civ.AUSTRIA.value, 50, 80, 100, 80)
-        gc.setProductionModifiersHu(Civ.AUSTRIA.value, 80, 80, 100, 100)
-        gc.setProductionModifiersAI(Civ.OTTOMAN.value, 60, 75, 100, 120)
-        gc.setProductionModifiersHu(Civ.OTTOMAN.value, 75, 75, 100, 110)
-        gc.setProductionModifiersAI(Civ.MOSCOW.value, 80, 80, 100, 120)
-        gc.setProductionModifiersHu(Civ.MOSCOW.value, 110, 110, 100, 120)
-        gc.setProductionModifiersAI(Civ.DUTCH.value, 80, 50, 50, 50)
-        gc.setProductionModifiersHu(Civ.DUTCH.value, 90, 50, 60, 50)
-        gc.setProductionModifiersAI(Civ.POPE.value, 300, 200, 100, 350)
-        gc.setProductionModifiersAI(Civ.INDEPENDENT.value, 170, 100, 400, 200)  # The peaceful ones
-        gc.setProductionModifiersAI(
-            Civ.INDEPENDENT_2.value, 170, 100, 400, 200
-        )  # The peaceful ones
-        gc.setProductionModifiersAI(
-            Civ.INDEPENDENT_3.value, 125, 100, 600, 300
-        )  # The warlike ones
-        gc.setProductionModifiersAI(
-            Civ.INDEPENDENT_4.value, 125, 100, 600, 300
-        )  # The warlike ones
-        gc.setProductionModifiersAI(Civ.BARBARIAN.value, 125, 100, 900, 350)
-
-        # void setSupportModifiers( int iCiv, int iInflation, int iUnits, int iCityDist, int iCityNum, int iCivic );
-        # defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100, 100 )
-        # note that iCityNum also gets an additional modifier based on population in the city
-        # note that the base for inflation is modified by turn number (among many other things)
-        gc.setSupportModifiersAI(Civ.BYZANTIUM.value, 50, 150, 70, 50, 120)
-        gc.setSupportModifiersHu(Civ.BYZANTIUM.value, 50, 150, 70, 50, 120)
-        gc.setSupportModifiersAI(Civ.FRANCE.value, 30, 120, 70, 50, 100)
-        gc.setSupportModifiersHu(Civ.FRANCE.value, 30, 120, 70, 50, 100)
-        gc.setSupportModifiersAI(Civ.ARABIA.value, 30, 150, 70, 40, 120)
-        gc.setSupportModifiersHu(Civ.ARABIA.value, 30, 150, 70, 40, 120)
-        gc.setSupportModifiersAI(Civ.BULGARIA.value, 40, 150, 80, 50, 120)
-        gc.setSupportModifiersHu(Civ.BULGARIA.value, 40, 150, 80, 50, 120)
-        gc.setSupportModifiersAI(Civ.CORDOBA.value, 40, 150, 70, 40, 120)
-        gc.setSupportModifiersHu(Civ.CORDOBA.value, 40, 150, 70, 40, 120)
-        gc.setSupportModifiersAI(Civ.VENECIA.value, 20, 100, 60, 50, 100)
-        gc.setSupportModifiersHu(Civ.VENECIA.value, 20, 100, 60, 50, 100)
-        gc.setSupportModifiersAI(Civ.BURGUNDY.value, 30, 120, 70, 40, 100)
-        gc.setSupportModifiersHu(Civ.BURGUNDY.value, 30, 120, 70, 40, 100)
-        gc.setSupportModifiersAI(Civ.GERMANY.value, 20, 100, 70, 40, 100)
-        gc.setSupportModifiersHu(Civ.GERMANY.value, 20, 100, 70, 40, 100)
-        gc.setSupportModifiersAI(Civ.NOVGOROD.value, 30, 120, 70, 40, 100)
-        gc.setSupportModifiersHu(Civ.NOVGOROD.value, 30, 120, 70, 40, 100)
-        gc.setSupportModifiersAI(Civ.NORWAY.value, 20, 100, 60, 40, 100)
-        gc.setSupportModifiersHu(Civ.NORWAY.value, 20, 100, 60, 40, 100)
-        gc.setSupportModifiersAI(Civ.KIEV.value, 30, 120, 60, 40, 100)
-        gc.setSupportModifiersHu(Civ.KIEV.value, 30, 120, 60, 40, 100)
-        gc.setSupportModifiersAI(Civ.HUNGARY.value, 25, 100, 70, 40, 100)
-        gc.setSupportModifiersHu(Civ.HUNGARY.value, 25, 100, 70, 40, 100)
-        gc.setSupportModifiersAI(Civ.CASTILE.value, 20, 100, 60, 40, 100)
-        gc.setSupportModifiersHu(Civ.CASTILE.value, 20, 100, 60, 40, 100)
-        gc.setSupportModifiersAI(Civ.DENMARK.value, 20, 100, 80, 50, 100)
-        gc.setSupportModifiersHu(Civ.DENMARK.value, 20, 100, 80, 50, 100)
-        gc.setSupportModifiersAI(Civ.SCOTLAND.value, 25, 100, 80, 50, 100)
-        gc.setSupportModifiersHu(Civ.SCOTLAND.value, 25, 100, 80, 50, 100)
-        gc.setSupportModifiersAI(Civ.POLAND.value, 25, 100, 70, 40, 100)
-        gc.setSupportModifiersHu(Civ.POLAND.value, 25, 100, 70, 40, 100)
-        gc.setSupportModifiersAI(Civ.GENOA.value, 20, 100, 60, 50, 100)
-        gc.setSupportModifiersHu(Civ.GENOA.value, 20, 100, 60, 50, 100)
-        gc.setSupportModifiersAI(Civ.MOROCCO.value, 25, 100, 60, 40, 100)
-        gc.setSupportModifiersHu(Civ.MOROCCO.value, 25, 100, 60, 40, 100)
-        gc.setSupportModifiersAI(Civ.ENGLAND.value, 20, 100, 60, 40, 100)
-        gc.setSupportModifiersHu(Civ.ENGLAND.value, 20, 100, 60, 40, 100)
-        gc.setSupportModifiersAI(Civ.PORTUGAL.value, 20, 100, 70, 50, 100)
-        gc.setSupportModifiersHu(Civ.PORTUGAL.value, 20, 100, 70, 50, 100)
-        gc.setSupportModifiersAI(Civ.ARAGON.value, 25, 100, 70, 40, 100)
-        gc.setSupportModifiersHu(Civ.ARAGON.value, 25, 100, 70, 40, 100)
-        gc.setSupportModifiersAI(Civ.SWEDEN.value, 20, 90, 70, 40, 100)
-        gc.setSupportModifiersHu(Civ.SWEDEN.value, 20, 90, 70, 40, 100)
-        gc.setSupportModifiersAI(Civ.PRUSSIA.value, 20, 90, 70, 40, 100)
-        gc.setSupportModifiersHu(Civ.PRUSSIA.value, 20, 90, 70, 40, 100)
-        gc.setSupportModifiersAI(Civ.LITHUANIA.value, 25, 100, 70, 40, 100)
-        gc.setSupportModifiersHu(Civ.LITHUANIA.value, 25, 100, 70, 40, 100)
-        gc.setSupportModifiersAI(Civ.AUSTRIA.value, 20, 80, 80, 40, 100)
-        gc.setSupportModifiersHu(Civ.AUSTRIA.value, 20, 80, 80, 40, 100)
-        gc.setSupportModifiersAI(Civ.OTTOMAN.value, 30, 100, 60, 40, 100)
-        gc.setSupportModifiersHu(Civ.OTTOMAN.value, 30, 100, 60, 40, 100)
-        gc.setSupportModifiersAI(
-            Civ.MOSCOW.value, 25, 100, 70, 40, 100
-        )  # note that the city maintenance values are further modified by their UP
-        gc.setSupportModifiersHu(
-            Civ.MOSCOW.value, 25, 100, 70, 40, 100
-        )  # note that the city maintenance values are further modified by their UP
-        gc.setSupportModifiersAI(Civ.DUTCH.value, 20, 70, 80, 50, 100)
-        gc.setSupportModifiersHu(Civ.DUTCH.value, 20, 70, 80, 50, 100)
-        gc.setSupportModifiersAI(Civ.POPE.value, 20, 150, 80, 50, 100)
-        gc.setSupportModifiersAI(Civ.INDEPENDENT.value, 10, 100, 10, 20, 100)
-        gc.setSupportModifiersAI(Civ.INDEPENDENT_2.value, 10, 100, 10, 20, 100)
-        gc.setSupportModifiersAI(Civ.INDEPENDENT_3.value, 10, 100, 10, 20, 100)
-        gc.setSupportModifiersAI(Civ.INDEPENDENT_4.value, 10, 100, 10, 20, 100)
-        gc.setSupportModifiersAI(Civ.BARBARIAN.value, 10, 250, 10, 20, 100)
-
-        # 3Miro: setGrowthTreshold(iCiv,iVal), for each civ, a value in percent. How much food is needed for the next growth level.
-        # in c++, iTreshold *= value, iTreshlod /= 100 (value is in percent, with integer truncation, default 100)
-        # low percent means faster growth
-
-        # 3Miro: setProductionModifiersUnits(iCiv,iVal) for each civ. Same as growth.
-        # on all production, low percent means fast production
-
-        # 3Miro: setProductionModifiersBuildings(iCiv,iVal) for each civ. Same as growth.
-
-        # 3Miro: setProductionModifiersWonders(iCiv,iVal) for each civ. Same as growth.
-
-        # 3Miro: setInflationModifier(iCiv,iVal) for each civ. Same as growth.
-        # low percent means low inflation
-
-        # 3Miro: setGPModifier(iCiv,iVal) for each civ. The rate at which GP would appear. Same as growth.
-        # low percent means faster GP rate
-
-        # 3Miro: setUnitSupportModifier(iCiv, iVal), set unit support modifiers for the player. Same as growth.
-        # low percent means lower support cost)
-
-        # 3Miro: setDistanceSupportModifier(iCiv,iVal), set modifiers for the distance to the capital support. Same as growth.
-        # low percent means low cost
-
-        # 3Miro: setNumberOfCitiesSupport(iCiv,iVal), set number of cities modifier. Same as growth
-        # low percent means low cost
-
-        # 3Miro: setCivicSupportModifier(iCiv,iVal), set the civic support modifiers. Same as growth.
-        # low percent means low cost
-
-        # 3Miro: setResearchModifier(iCiv, iVal), set research modifier for all the civs. Same as growth.
-        # low percent means faster research
-
-        # 3Miro: setHealthModifier(iCiv,iVal), multiply the health modifier for the difficulty level by iVal
-
-        # 3Miro: setWorkerModifier(iCiv,iVal), modify the rate at witch workers build improvements. Not the same as growth.
-        # higher number, faster workers
-
-        # 3Miro: setCultureModifier(iCiv, iVal ), modify culture if the city makes more than 4 (especially low for Indeps and Barbs)
-        # Same as growth. higher number more culture
+        self.setModifiers()
 
         ##### Set Initial buildings for the civs
         # gc.setInitialBuilding( iCiv, iBuilding, True\False ), if ( True) give iCiv, building iBuildings else don't Default is False
@@ -1070,6 +817,51 @@ class RFCEBalance:
         ##gc.setCivForWars( iByzantium ) # plot the Wars Map of of Byzantium (only if setWhatToPlot is set to 3)
 
         self.postAreas()
+
+    def setModifiers(self):
+        for civ in civilizations():
+            self.setGrowthModifier(civ)
+            self.setProductionModifier(civ)
+            self.setSupportModifier(civ)
+
+    def setGrowthModifier(self, civ):
+        # void setGrowthModifiers( int iCiv, int iPop, int iCult, int iGP, int iWorker, int iHealth, int iInitPop );
+        # iInitPop is the initial population in a city, also can use gc.setInitialPopulation( iCiv, iInitPop ) to change a single civ
+        # defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100, 100, 1 )
+        # 3Miro: ABOUT CULTURE notice the culture modifier is different from the others, it modifies the culture output as opposed to the culture threshold
+        # 	50 means less culture, 200 means more culture. This is applied to Culture output of 10 or more.
+        fct_mapper = {
+            ModifierCategory.AI: gc.setGrowthModifiersAI,
+            ModifierCategory.HUMAN: gc.setGrowthModifiersHu,
+        }
+        for category, modifiers in civ.modifiers.growth.items():
+            if modifiers is not None:
+                fct_mapper[category](civ.id, *modifiers)
+
+    def setProductionModifier(self, civ):
+        # void setProductionModifiers( int iCiv, int iUnits, int iBuildings, int iWonders, int iResearch );
+        # defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100 )
+        # 3Miro: at 100 research cost, the cost is exactly as in the XML files, the cost in general is however increased for all civs
+        fct_mapper = {
+            ModifierCategory.AI: gc.setProductionModifiersAI,
+            ModifierCategory.HUMAN: gc.setProductionModifiersHu,
+        }
+        for category, modifiers in civ.modifiers.production.items():
+            if modifiers is not None:
+                fct_mapper[category](civ.id, *modifiers)
+
+    def setSupportModifier(self, civ):
+        # void setSupportModifiers( int iCiv, int iInflation, int iUnits, int iCityDist, int iCityNum, int iCivic );
+        # defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100, 100 )
+        # note that iCityNum also gets an additional modifier based on population in the city
+        # note that the base for inflation is modified by turn number (among many other things)
+        fct_mapper = {
+            ModifierCategory.AI: gc.setSupportModifiersAI,
+            ModifierCategory.HUMAN: gc.setSupportModifiersHu,
+        }
+        for category, modifiers in civ.modifiers.support.items():
+            if modifiers is not None:
+                fct_mapper[category](civ.id, *modifiers)
 
     def setTechTimeline(self):
         gc.setTimelineTechModifiers(

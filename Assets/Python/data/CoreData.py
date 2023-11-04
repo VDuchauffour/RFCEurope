@@ -5,6 +5,7 @@ from CivilizationsData import (
     CIV_INITIAL_CONTACTS,
     CIV_INITIAL_WARS,
     CIV_LEADERS,
+    CIV_MODIFIERS,
     CIV_PROPERTIES,
     CIV_RELIGION_SPREADING_THRESHOLD,
     CIV_RELIGIOUS_TOLERANCE,
@@ -56,6 +57,7 @@ COMPANIES = (
 CIVILIZATIONS_BASE = (
     CivilizationsFactory()
     .add_key("initial", "location", "religion", "ai", "misc", "date")
+    .attach("modifiers", CIV_MODIFIERS)
     .attach("properties", CIV_PROPERTIES)
     .attach("leaders", CIV_LEADERS)
     .attach("respawning_threshold", CIV_RESPAWNING_THRESHOLD, key="location")
