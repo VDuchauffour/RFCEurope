@@ -1,6 +1,6 @@
 from CvPythonExtensions import *
 from CoreData import civilization, civilizations
-from CoreStructures import player, team
+from CoreStructures import player, team, teamtype
 import PyHelpers  # LOQ
 import Popup
 from PyUtils import percentage_chance
@@ -485,7 +485,7 @@ class RiseAndFall:
         else:
             self.create1200ADstartingUnits()
             for iCiv in range(Civ.ARAGON.value + 1):
-                self.showArea(iCiv, Scenario.i1200AD)
+                self.showArea(iCiv)
                 self.assign1200ADtechs(
                     iCiv
                 )  # Temporarily all civs get the same starting techs as Aragon
@@ -3608,15 +3608,13 @@ class RiseAndFall:
             # utils.setStabilityParameters(iLoop, Consts.iParDiplomacyE, utils.getStabilityParameters(iLoop, Consts.iParDiplomacyE)-5)
             # utils.setStability(iLoop, utils.getStability(iLoop)-5)
 
-    def showRect(self, iCiv, tArea):
-        iXs, iYs, iXe, iYe = tArea
-        for (iX, iY) in utils.getPlotList((iXs, iYs), (iXe, iYe)):
-            gc.getMap().plot(iX, iY).setRevealed(gc.getPlayer(iCiv).getTeam(), True, False, -1)
+    def showRect(self, iCiv, area):
+        for iX, iY in utils.getPlotList(area.tile_min.to_tuple(), area.tile_max.to_tuple()):
+            gc.getMap().plot(iX, iY).setRevealed(teamtype(iCiv), True, False, -1)
 
-    def showArea(self, iCiv, iScenario=Scenario.i500AD):
-        for iI in range(len(Consts.tVisible[iScenario][iCiv])):
-            self.showRect(iCiv, Consts.tVisible[iScenario][iCiv][iI])
-        # pass
+    def showArea(self, iCiv):
+        for area in civilization(iCiv).location.visible_area:
+            self.showRect(iCiv, area)
 
     def initContact(self, iCiv, bMeet=True):
         civ = team(iCiv)
