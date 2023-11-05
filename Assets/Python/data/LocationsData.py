@@ -1620,6 +1620,7 @@ CIV_NORMAL_AREA = (
     # )
 )
 
+# Used in civ birth only
 CIV_BROADER_AREA = (
     CivDataMapper(
         {

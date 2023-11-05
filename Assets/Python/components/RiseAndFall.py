@@ -1873,8 +1873,8 @@ class RiseAndFall:
             tCapital = civilization(iCiv).location.capital.to_tuple()
             tTopLeft = Consts.tCoreAreasTL[iCiv]
             tBottomRight = Consts.tCoreAreasBR[iCiv]
-            tBroaderTopLeft = Consts.tBroaderAreasTL[iCiv]
-            tBroaderBottomRight = Consts.tBroaderAreasBR[iCiv]
+            tBroaderTopLeft = civilization(iCiv).location.area.broader.tile_min.to_tuple()
+            tBroaderBottomRight = civilization(iCiv).location.area.broader.tile_max.to_tuple()
             if self.getFlipsDelay(iCiv) == 0:  # city hasn't already been founded
 
                 # Absinthe: for the human player, kill all foreign units on the capital plot - this probably fixes a couple instances of the -1 turn autoplay bug
