@@ -2187,7 +2187,7 @@ class CvVictoryScreen:
                 # if (iLoopVC == 7):
                 # for i in range(3):
                 # iRow = screen.appendTableRow(szTable)
-                # screen.setTableText(szTable, 0, iRow, localText.getText(Consts.tGoals[self.iActivePlayer][i], ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+                # screen.setTableText(szTable, 0, iRow, localText.getText(tGoals[self.iActivePlayer][i], ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                 # screen.setTableText(szTable, 2, iRow, localText.getText("TXT_KEY_VICTORY_SCREEN_ACCOMPLISHED", ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                 # if (utils.getGoal(self.iActivePlayer, i) == 1):
                 # screen.setTableText(szTable, 3, iRow, localText.getText("TXT_KEY_VICTORY_SCREEN_YES", ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)

@@ -236,14 +236,6 @@ class RiseAndFall:
             gc.getActivePlayer().setHandicapType(gc.getPlayer(iNewCiv).getHandicapType())
             gc.getGame().setActivePlayer(iNewCiv, False)
             gc.getPlayer(iNewCiv).setHandicapType(iOldHandicap)
-            # for i in range(Consts.iNumStabilityParameters):
-            # 	utils.setStabilityParameters(utils.getHumanID(),i, 0)
-            # 	utils.setLastRecordedStabilityStuff(0, 0)
-            # 	utils.setLastRecordedStabilityStuff(1, 0)
-            # 	utils.setLastRecordedStabilityStuff(2, 0)
-            # 	utils.setLastRecordedStabilityStuff(3, 0)
-            # 	utils.setLastRecordedStabilityStuff(4, 0)
-            # 	utils.setLastRecordedStabilityStuff(5, 0)
             for iMaster in civilizations().majors().ids():
                 if gc.getTeam(gc.getPlayer(iNewCiv).getTeam()).isVassal(iMaster):
                     gc.getTeam(gc.getPlayer(iNewCiv).getTeam()).setVassal(iMaster, False, False)
@@ -3601,12 +3593,6 @@ class RiseAndFall:
         neighbours = civilization(iCiv).location.old_neighbours
         if neighbours is not None:
             bHuman = False
-            # for iLoop in Consts.lOlderNeighbours[iCiv]:
-            # if (gc.getPlayer(iLoop).isAlive()):
-            # if (iLoop == utils.getHumanID()):
-            # bHuman = True
-            # utils.setStabilityParameters(iLoop, Consts.iParDiplomacyE, utils.getStabilityParameters(iLoop, Consts.iParDiplomacyE)-5)
-            # utils.setStability(iLoop, utils.getStability(iLoop)-5)
 
     def showRect(self, iCiv, area):
         for iX, iY in utils.getPlotList(area.tile_min.to_tuple(), area.tile_max.to_tuple()):

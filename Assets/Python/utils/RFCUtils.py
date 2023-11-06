@@ -1468,11 +1468,6 @@ class RFCUtils:
             return True
         return False
 
-    # Absinthe: old stability system, not used anymore
-    def zeroStability(self, iPlayer):  # called by RiseAndFall Resurrection
-        for iCount in range(Consts.iNumStabilityParameters):
-            self.setParameter(iPlayer, iCount, False, 0)
-
     # Absinthe: stability overlay
     def toggleStabilityOverlay(self):
 

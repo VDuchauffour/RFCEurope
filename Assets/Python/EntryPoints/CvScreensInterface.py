@@ -52,7 +52,6 @@ import CvMercenaryManager
 
 
 # Rhye - start
-import Consts
 import RFCUtils
 
 utils = RFCUtils.RFCUtils()
@@ -69,8 +68,6 @@ def countAchievedGoals(argsList):
 
 
 def resetStabilityParameters(argsList):
-    for i in range(Consts.iNumStabilityParameters):
-        utils.setStabilityParameters(i, 0)
     utils.setLastRecordedStabilityStuff(0, 0)
     utils.setLastRecordedStabilityStuff(1, 0)
     utils.setLastRecordedStabilityStuff(2, 0)

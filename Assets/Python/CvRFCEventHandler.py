@@ -392,7 +392,7 @@ class CvRFCEventHandler:
 
         # 3Miro: National wonders and city acquire by trade
         # if (bTrade):
-        # 	for i in range (Consts.iScotlandYard +1 - Building.HEROIC_EPIC.value):
+        # 	for i in range (iScotlandYard +1 - Building.HEROIC_EPIC.value):
         # 		iNationalWonder = i + Building.HEROIC_EPIC.value
         # 		if (city.hasBuilding(iNationalWonder)):
         # 			city.setHasRealBuilding((iNationalWonder), False)
