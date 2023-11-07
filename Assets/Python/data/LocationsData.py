@@ -843,6 +843,7 @@ CIV_HOME_LOCATIONS = CivDataMapper(
     }
 )
 
+# Used for initial spawn location, no longer relevant for stability.
 CIV_CORE_AREA = (
     CivDataMapper(
         {
@@ -1174,6 +1175,7 @@ CIV_CORE_AREA = (
     # )
 )
 
+# Used for resurrection
 CIV_NORMAL_AREA = (
     CivDataMapper(
         {

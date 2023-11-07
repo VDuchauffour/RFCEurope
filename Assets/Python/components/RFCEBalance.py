@@ -1,5 +1,4 @@
 from CvPythonExtensions import *
-import Consts
 from CoreData import civilizations, civilization
 from CoreTypes import (
     Building,
@@ -909,31 +908,31 @@ class RFCEBalance:
 
     def postAreas(self):
         # 3Miro: DO NOT CHANGE THIS CODE
-        # this adds the Core and Normal Areas from Consts.py into C++. There is Dynamical Memory involved, so don't change this
-        for civ in civilizations().majors().ids():
-            iCBLx = Consts.tCoreAreasTL[civ][0]
-            iCBLy = Consts.tCoreAreasTL[civ][1]
-            iCTRx = Consts.tCoreAreasBR[civ][0]
-            iCTRy = Consts.tCoreAreasBR[civ][1]
-            iNBLx = Consts.tNormalAreasTL[civ][0]
-            iNBLy = Consts.tNormalAreasTL[civ][1]
-            iNTRx = Consts.tNormalAreasBR[civ][0]
-            iNTRy = Consts.tNormalAreasBR[civ][1]
-            iCCE = len(Consts.lExtraPlots[civ])
-            iCNE = len(Consts.tNormalAreasSubtract[civ])
+        # this adds the Core and Normal Areas into C++. There is Dynamical Memory involved, so don't change this
+        for civ in civilizations().majors():
+            core_tile_min = civ.location.area.core.tile_min
+            core_tile_max = civ.location.area.core.tile_max
+            core_additional_tiles = civ.location.area.core.additional_tiles
+            normal_tile_min = civ.location.area.normal.tile_min
+            normal_tile_max = civ.location.area.normal.tile_max
+            normal_exception_tiles = civ.location.area.normal.exception_tiles
             gc.setCoreNormal(
-                civ, iCBLx, iCBLy, iCTRx, iCTRy, iNBLx, iNBLy, iNTRx, iNTRy, iCCE, iCNE
+                civ.id,
+                core_tile_min.x,
+                core_tile_min.y,
+                core_tile_max.x,
+                core_tile_max.y,
+                normal_tile_min.x,
+                normal_tile_min.y,
+                normal_tile_max.x,
+                normal_tile_max.y,
+                len(core_additional_tiles),
+                len(normal_exception_tiles),
             )
-            for iEx in range(iCCE):
-                gc.addCoreException(
-                    civ, Consts.lExtraPlots[civ][iEx][0], Consts.lExtraPlots[civ][iEx][1]
-                )
-            for iEx in range(iCNE):
-                gc.addNormalException(
-                    civ,
-                    Consts.tNormalAreasSubtract[civ][iEx][0],
-                    Consts.tNormalAreasSubtract[civ][iEx][1],
-                )
+            for tile in core_additional_tiles:
+                gc.addCoreException(civ.id, *tile.to_tuple())
+            for tile in normal_exception_tiles:
+                gc.addNormalException(civ.id, *tile.to_tuple())
 
         gc.setProsecutorReligions(Unit.PROSECUTOR.value, PROSECUTOR_UNITCLASS)
         gc.setSaintParameters(

@@ -455,12 +455,12 @@ def parse_area_dict(data):
     if data.get(CoreTypes.Area.ADDITIONAL_TILES) is not None:
         add_tiles = [Tile(t) for t in data[CoreTypes.Area.ADDITIONAL_TILES]]
     else:
-        add_tiles = None
+        add_tiles = []
 
     if data.get(CoreTypes.Area.EXCEPTION_TILES) is not None:
         exception_tiles = [Tile(t) for t in data[CoreTypes.Area.EXCEPTION_TILES]]
     else:
-        exception_tiles = None
+        exception_tiles = []
 
     return {
         CoreTypes.Area.TILE_MIN: Tile(data[CoreTypes.Area.TILE_MIN]),

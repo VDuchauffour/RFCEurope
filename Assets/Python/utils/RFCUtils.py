@@ -22,7 +22,6 @@ from LocationsData import CITIES
 import RFCEMaps
 import PyHelpers
 import Popup  # Absinthe
-import Consts
 from StoredData import sd
 from MiscData import (
     GREAT_PROPHET_FAITH_POINT_BONUS,
@@ -1171,12 +1170,9 @@ class RFCUtils:
             plot = gc.getMap().plot(*civilization(iCiv).location.capital.to_tuple())
             if plot.isCity():
                 if plot.getOwner() == iCiv:
-                    if (
-                        (x >= Consts.tCoreAreasTL[iCiv][0])
-                        and (x <= Consts.tCoreAreasBR[iCiv][0])
-                        and (y >= Consts.tCoreAreasTL[iCiv][1])
-                        and (y <= Consts.tCoreAreasBR[iCiv][1])
-                    ):
+                    tile_min = civilization(iCiv).location.area.core.tile_min
+                    tile_max = civilization(iCiv).location.area.core.tile_max
+                    if tile_min.x <= x <= tile_max.x and tile_min.y <= y <= tile_max.y:
                         return True
         return False
 

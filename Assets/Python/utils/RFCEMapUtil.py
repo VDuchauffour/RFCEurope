@@ -4,10 +4,10 @@
 ## Author: Caliom
 
 from CvPythonExtensions import *
+from CoreData import civilizations
 import CvScreenEnums
 import RFCEMaps
 import RFCUtils
-import Consts
 from MiscData import WORLD_WIDTH, WORLD_HEIGHT
 
 
@@ -88,12 +88,24 @@ class RFCEMapManager:
             self.settlerMap = self.convertMap(RFCEMaps.tSettlersMaps)
             self.warMap = self.convertMap(RFCEMaps.tWarsMaps)
             self.cityNameMap = self.convertMap(RFCEMaps.tCityMap)
-            self.coreAreasBL = self.convertArray(Consts.tCoreAreasTL)
-            self.coreAreasTR = self.convertArray(Consts.tCoreAreasBR)
-            self.coreAreasAdditionalPlots = Consts.lExtraPlots
-            self.normalAreasBL = self.convertArray(Consts.tNormalAreasTL)
-            self.normalAreasTR = self.convertArray(Consts.tNormalAreasBR)
-            self.normalAreasSubtractedPlots = self.convertNestedArray(Consts.tNormalAreasSubtract)
+            self.core_tile_min = [
+                c.location.area.core.tile_min.to_tuple() for c in civilizations().majors()
+            ]
+            self.core_tile_max = [
+                c.location.area.core.tile_max.to_tuple() for c in civilizations().majors()
+            ]
+            self.core_additional_tiles = [
+                c.location.area.core.additional_tiles for c in civilizations().majors()
+            ]
+            self.normal_tile_min = [
+                c.location.area.normal.tile_min.to_tuple() for c in civilizations().majors()
+            ]
+            self.normal_tile_max = [
+                c.location.area.normal.tile_max.to_tuple() for c in civilizations().majors()
+            ]
+            self.normal_exception_tiles = [
+                c.location.area.normal.exception_tile for c in civilizations().majors()
+            ]
 
             self.mapsInitiated = True
 
@@ -110,23 +122,6 @@ class RFCEMapManager:
         aList = [None] * WORLD_HEIGHT
         for i in range(WORLD_HEIGHT):
             aList[i] = list(aMap[i])
-        return aList
-
-    def convertArray(self, aTuple):
-        length = len(aTuple)
-        aList = [None] * length
-        for i in range(length):
-            aList[i] = aTuple[i]
-        return aList
-
-    def convertNestedArray(self, aTuple):
-        length = len(aTuple)
-        aList = [None] * length
-        for i in range(length):
-            nestedLength = len(aTuple[i])
-            aList[i] = [None] * nestedLength
-            for j in range(nestedLength):
-                aList[i][j] = aTuple[i][j]
         return aList
 
     def getSettlerMapShades(self):
@@ -200,71 +195,75 @@ class RFCEMapManager:
 
     # core area
     def setCoreAreaBLTR(self, iPlayer, BL, TR):
-        self.coreAreasBL[iPlayer] = BL
-        self.coreAreasTR[iPlayer] = TR
+        self.core_tile_min[iPlayer] = BL
+        self.core_tile_max[iPlayer] = TR
 
         overlappingPlots = []
-        for xy in self.coreAreasAdditionalPlots[iPlayer]:
-            if self.isInRectangle(xy, self.coreAreasBL[iPlayer], self.coreAreasTR[iPlayer]):
-                overlappingPlots.append(xy)
+        tiles = self.core_additional_tiles[iPlayer]
+        for tile in tiles:
+            if self.isInRectangle(tile, self.core_tile_min[iPlayer], self.core_tile_max[iPlayer]):
+                overlappingPlots.append(tile.to_tuple())
 
-        for xy in overlappingPlots:
-            self.removeCoreAreaAdditionalPlot(iPlayer, xy)
+        for tile in overlappingPlots:
+            self.removeCoreAreaAdditionalPlot(iPlayer, tile)
 
     def getCoreAreaBL(self, iPlayer):
-        return self.coreAreasBL[iPlayer]
+        return self.core_tile_min[iPlayer]
 
     def getCoreAreaTR(self, iPlayer):
-        return self.coreAreasTR[iPlayer]
+        return self.core_tile_max[iPlayer]
 
     def addCoreAreaAdditionalPlot(self, iPlayer, xy):
-        if self.isInRectangle(xy, self.coreAreasBL[iPlayer], self.coreAreasTR[iPlayer]):
+        if self.isInRectangle(xy, self.core_tile_min[iPlayer], self.core_tile_max[iPlayer]):
             return
-        self.coreAreasAdditionalPlots[iPlayer].append(xy)
+        self.core_additional_tiles[iPlayer].append(xy)
 
     def removeCoreAreaAdditionalPlot(self, iPlayer, xy):
         try:
-            self.coreAreasAdditionalPlots[iPlayer].remove(xy)
+            self.core_additional_tiles[iPlayer].remove(xy)
         except ValueError:
             pass
 
     def getCoreAreaAdditionalPlots(self, iPlayer):
-        return self.coreAreasAdditionalPlots[iPlayer]
+        return self.core_additional_tiles[iPlayer]
 
     # normal area
     def setNormalAreaBLTR(self, iPlayer, BL, TR):
-        self.normalAreasBL[iPlayer] = BL
-        self.normalAreasTR[iPlayer] = TR
+        self.normal_tile_min[iPlayer] = BL
+        self.normal_tile_max[iPlayer] = TR
 
         outsidePlots = []
-        for xy in self.normalAreasSubtractedPlots[iPlayer]:
+        tiles = self.normal_exception_tiles[iPlayer]
+        for tile in tiles:
             if not self.isInRectangle(
-                xy, self.normalAreasBL[iPlayer], self.normalAreasTR[iPlayer]
+                tile, self.normal_tile_min[iPlayer], self.normal_tile_max[iPlayer]
             ):
-                outsidePlots.append(xy)
+                outsidePlots.append(tile.to_tuple())
 
-        for xy in outsidePlots:
-            self.removeNormalAreaSubtractedPlot(iPlayer, xy)
+        for tile in outsidePlots:
+            self.removeNormalAreaSubtractedPlot(iPlayer, tile)
 
     def getNormalAreaBL(self, iPlayer):
-        return self.normalAreasBL[iPlayer]
+        return self.normal_tile_min[iPlayer]
 
     def getNormalAreaTR(self, iPlayer):
-        return self.normalAreasTR[iPlayer]
+        return self.normal_tile_max[iPlayer]
 
     def addNormalAreaSubtractedPlot(self, iPlayer, xy):
-        if not self.isInRectangle(xy, self.normalAreasBL[iPlayer], self.normalAreasTR[iPlayer]):
+        if not self.isInRectangle(
+            xy, self.normal_tile_min[iPlayer], self.normal_tile_max[iPlayer]
+        ):
             return
-        self.normalAreasSubtractedPlots[iPlayer].append(xy)
+        self.normal_exception_tiles[iPlayer].append(xy)
 
     def removeNormalAreaSubtractedPlot(self, iPlayer, xy):
         try:
-            self.normalAreasSubtractedPlots[iPlayer].remove(xy)
+            self.normal_exception_tiles[iPlayer].remove(xy)
         except ValueError:
             pass
 
     def getNormalAreaSubtractedPlots(self, iPlayer):
-        return self.normalAreasSubtractedPlots[iPlayer]
+        return self.normal_exception_tiles[iPlayer]
 
     def isInRectangle(self, xy, BL, TR):
         if xy[0] < BL[0] or xy[0] > TR[0] or xy[1] < BL[1] or xy[1] > TR[1]:
@@ -752,8 +751,8 @@ class RFCEMapExporter:
 
 # Global MapManager
 MapManager = RFCEMapManager()
-MapVisualizer = RFCEMapVisualizer(MapManager)
-MapExporter = RFCEMapExporter(MapManager)
+MapVisualizer = RFCEMapVisualizer(MapManager)  # used by CvWorldBuilderScreen.py
+MapExporter = RFCEMapExporter(MapManager)  # used by CvWBDesc.py
 
 
 g_nextEventID = 5050
