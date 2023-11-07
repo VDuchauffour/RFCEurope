@@ -318,11 +318,11 @@ COMPANY_BIRTHDATE = CompanyDataMapper(
         Company.HOSPITALLERS: DateTurn.i1096AD,
         Company.TEMPLARS: DateTurn.i1096AD,
         Company.TEUTONS: DateTurn.i1096AD,
-        Company.HANSA: DateTurn.i1160AD,
+        Company.HANSA: 186,  # 1157
         Company.MEDICI: DateTurn.i1397AD,
-        Company.AUGSBURG: DateTurn.i1478AD,
-        Company.ST_GEORGE: DateTurn.i1410AD,
-        Company.DRAGON: DateTurn.i1410AD,
+        Company.AUGSBURG: 295,  # 1487
+        Company.ST_GEORGE: 269,  # 1407
+        Company.DRAGON: 269,  # 1408
         Company.CALATRAVA: DateTurn.i1164AD,
     }
 )
