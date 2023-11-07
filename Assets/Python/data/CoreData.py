@@ -24,6 +24,7 @@ from LocationsData import (
     CIV_NEIGHBOURS,
     CIV_NEW_CAPITAL_LOCATIONS,
     CIV_OLDER_NEIGHBOURS,
+    CIV_PROVINCES,
     CIV_VISIBLE_AREA,
     COMPANY_REGION,
 )
@@ -66,6 +67,7 @@ CIVILIZATIONS_BASE = (
     .attach("neighbours", CIV_NEIGHBOURS, key="location")
     .attach("old_neighbours", CIV_OLDER_NEIGHBOURS, key="location")
     .attach("home_colony", CIV_HOME_LOCATIONS, key="location")
+    .attach("provinces", CIV_PROVINCES, key="location")
     .attach("area", CIV_AREAS, key="location")
     .attach("spreading_threshold", CIV_RELIGION_SPREADING_THRESHOLD, key="religion")
     .attach("tolerance", CIV_RELIGIOUS_TOLERANCE, key="religion")
