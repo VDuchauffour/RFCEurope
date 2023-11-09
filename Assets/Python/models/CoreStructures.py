@@ -308,8 +308,8 @@ class Tile(object):
         return (self.x, self.y)
 
     def set_area(self, area):
-        if not isinstance(area, CoreTypes.AreaTypes):
-            raise NotTypeExpectedError(CoreTypes.AreaTypes, type(area))
+        if not isinstance(area, CoreTypes.AreaType):
+            raise NotTypeExpectedError(CoreTypes.AreaType, type(area))
         self._keys["areas"].append(area)
 
     def __str__(self):
@@ -418,8 +418,8 @@ class TilesFactory:
         return self
 
     def attach_area(self, area):
-        if not isinstance(area, CoreTypes.AreaTypes):
-            raise NotTypeExpectedError(CoreTypes.AreaTypes, type(area))
+        if not isinstance(area, CoreTypes.AreaType):
+            raise NotTypeExpectedError(CoreTypes.AreaType, type(area))
         for tile in self._results:
             tile.set_area(area)
         return self

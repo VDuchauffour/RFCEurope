@@ -1,14 +1,14 @@
 # ruff: noqa
 
 from CoreTypes import (
-    AreaTypes,
+    AreaType,
     City,
     Civ,
     CivGroup,
     Colony,
     Company,
     Province,
-    ProvinceTypes,
+    ProvinceType,
     Region,
     Scenario,
     Lake,
@@ -1169,7 +1169,7 @@ CIV_CORE_AREA = (
     #         )
     #         .extend(area.get(Area.ADDITIONAL_TILES))
     #         .substract(area.get(Area.EXCEPTION_TILES))
-    #         .attach_area(AreaTypes.CORE)
+    #         .attach_area(AreaType.CORE)
     #         .normalize()
     #         .get_results()
     #     )
@@ -1616,7 +1616,7 @@ CIV_NORMAL_AREA = (
     #         )
     #         .extend(area.get(Area.ADDITIONAL_TILES))
     #         .substract(area.get(Area.EXCEPTION_TILES))
-    #         .attach_area(AreaTypes.NORMAL)
+    #         .attach_area(AreaType.NORMAL)
     #         .normalize()
     #         .get_results()
     #     )
@@ -1754,7 +1754,7 @@ CIV_BROADER_AREA = (
     #         )
     #         .extend(area.get(Area.ADDITIONAL_TILES))
     #         .substract(area.get(Area.EXCEPTION_TILES))
-    #         .attach_area(AreaTypes.BROADER)
+    #         .attach_area(AreaType.BROADER)
     #         .normalize()
     #         .get_results()
     #     )
@@ -1766,9 +1766,9 @@ CIV_AREAS = CivDataMapper(
         (
             civ,
             {
-                AreaTypes.CORE: CIV_CORE_AREA[civ],
-                AreaTypes.NORMAL: CIV_NORMAL_AREA[civ],
-                AreaTypes.BROADER: CIV_BROADER_AREA[civ],
+                AreaType.CORE: CIV_CORE_AREA[civ],
+                AreaType.NORMAL: CIV_NORMAL_AREA[civ],
+                AreaType.BROADER: CIV_BROADER_AREA[civ],
             },
         )
         for civ in CIV_CORE_AREA.keys()
@@ -1780,7 +1780,7 @@ CIV_PROVINCES = CivDataMapper(
     {
         Civ.BYZANTIUM: EnumDataMapper(
             {
-                ProvinceTypes.CORE: [
+                ProvinceType.CORE: [
                     Province.CONSTANTINOPLE,
                     Province.THRACE,
                     Province.THESSALY,
@@ -1797,7 +1797,7 @@ CIV_PROVINCES = CivDataMapper(
                     Province.COLONEA,
                     Province.ANTIOCHIA,
                 ],
-                ProvinceTypes.NATURAL: [
+                ProvinceType.NATURAL: [
                     Province.MOESIA,
                     Province.SERBIA,
                     Province.MACEDONIA,
@@ -1811,7 +1811,7 @@ CIV_PROVINCES = CivDataMapper(
                     Province.EGYPT,
                     Province.CYRENAICA,
                 ],
-                ProvinceTypes.POTENTIAL: [
+                ProvinceType.POTENTIAL: [
                     Province.CALABRIA,
                     Province.APULIA,
                     Province.SICILY,
@@ -1819,7 +1819,7 @@ CIV_PROVINCES = CivDataMapper(
                     Province.TRIPOLITANIA,
                     Province.IFRIQIYA,
                 ],
-                ProvinceTypes.OUTER: [
+                ProvinceType.OUTER: [
                     Province.CRIMEA,
                     Province.ARABIA,
                     Province.BOSNIA,
@@ -1838,24 +1838,24 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.FRANCE: EnumDataMapper(
             {
-                ProvinceTypes.CORE: [
+                ProvinceType.CORE: [
                     Province.ILE_DE_FRANCE,
                     Province.ORLEANS,
                     Province.CHAMPAGNE,
                 ],
-                ProvinceTypes.NATURAL: [
+                ProvinceType.NATURAL: [
                     Province.PICARDY,
                     Province.NORMANDY,
                     Province.AQUITAINE,
                     Province.LORRAINE,
                 ],
-                ProvinceTypes.POTENTIAL: [
+                ProvinceType.POTENTIAL: [
                     Province.BRETAGNE,
                     Province.PROVENCE,
                     Province.BURGUNDY,
                     Province.FLANDERS,
                 ],
-                ProvinceTypes.OUTER: [
+                ProvinceType.OUTER: [
                     Province.CATALONIA,
                     Province.ARAGON,
                     Province.NAVARRE,
@@ -1873,23 +1873,23 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.ARABIA: EnumDataMapper(
             {
-                ProvinceTypes.CORE: [
+                ProvinceType.CORE: [
                     Province.SYRIA,
                     Province.LEBANON,
                     Province.JERUSALEM,
                     Province.ARABIA,
                 ],
-                ProvinceTypes.NATURAL: [
+                ProvinceType.NATURAL: [
                     Province.EGYPT,
                     Province.CYRENAICA,
                 ],
-                ProvinceTypes.POTENTIAL: [
+                ProvinceType.POTENTIAL: [
                     Province.ANTIOCHIA,
                     Province.CYPRUS,
                     Province.IFRIQIYA,
                     Province.TRIPOLITANIA,
                 ],
-                ProvinceTypes.OUTER: [
+                ProvinceType.OUTER: [
                     Province.ORAN,
                     Province.ALGIERS,
                     Province.SICILY,
@@ -1903,16 +1903,16 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.BULGARIA: EnumDataMapper(
             {
-                ProvinceTypes.CORE: [Province.MOESIA],
-                ProvinceTypes.NATURAL: [
+                ProvinceType.CORE: [Province.MOESIA],
+                ProvinceType.NATURAL: [
                     Province.MACEDONIA,
                     Province.WALLACHIA,
                 ],
-                ProvinceTypes.POTENTIAL: [
+                ProvinceType.POTENTIAL: [
                     Province.THRACE,
                     Province.THESSALONIKI,
                 ],
-                ProvinceTypes.OUTER: [
+                ProvinceType.OUTER: [
                     Province.SERBIA,
                     Province.BANAT,
                     Province.EPIRUS,
@@ -1924,13 +1924,13 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.CORDOBA: EnumDataMapper(
             {
-                ProvinceTypes.CORE: [
+                ProvinceType.CORE: [
                     Province.ANDALUSIA,
                     Province.VALENCIA,
                     Province.LA_MANCHA,
                 ],
-                ProvinceTypes.NATURAL: [Province.TETOUAN],
-                ProvinceTypes.POTENTIAL: [
+                ProvinceType.NATURAL: [Province.TETOUAN],
+                ProvinceType.POTENTIAL: [
                     Province.MOROCCO,
                     Province.FEZ,
                     Province.MARRAKESH,
@@ -1938,7 +1938,7 @@ CIV_PROVINCES = CivDataMapper(
                     Province.ARAGON,
                     Province.BALEARS,
                 ],
-                ProvinceTypes.OUTER: [
+                ProvinceType.OUTER: [
                     Province.LEON,
                     Province.LUSITANIA,
                     Province.NAVARRE,
@@ -1950,15 +1950,15 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.VENECIA: EnumDataMapper(
             {
-                ProvinceTypes.CORE: [Province.VERONA],
-                ProvinceTypes.NATURAL: [Province.DALMATIA],
-                ProvinceTypes.POTENTIAL: [
+                ProvinceType.CORE: [Province.VERONA],
+                ProvinceType.NATURAL: [Province.DALMATIA],
+                ProvinceType.POTENTIAL: [
                     Province.TUSCANY,
                     Province.ARBERIA,
                     Province.CRETE,
                     Province.CYPRUS,
                 ],
-                ProvinceTypes.OUTER: [
+                ProvinceType.OUTER: [
                     Province.EPIRUS,
                     Province.MOREA,
                     Province.RHODES,
@@ -1969,12 +1969,12 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.BURGUNDY: EnumDataMapper(
             {
-                ProvinceTypes.CORE: [Province.BURGUNDY],
-                ProvinceTypes.NATURAL: [
+                ProvinceType.CORE: [Province.BURGUNDY],
+                ProvinceType.NATURAL: [
                     Province.PROVENCE,
                     Province.FLANDERS,
                 ],
-                ProvinceTypes.POTENTIAL: [
+                ProvinceType.POTENTIAL: [
                     Province.CHAMPAGNE,
                     Province.PICARDY,
                     Province.ILE_DE_FRANCE,
@@ -1982,7 +1982,7 @@ CIV_PROVINCES = CivDataMapper(
                     Province.ORLEANS,
                     Province.NORMANDY,
                 ],
-                ProvinceTypes.OUTER: [
+                ProvinceType.OUTER: [
                     Province.LORRAINE,
                     Province.SWABIA,
                     Province.LOMBARDY,
@@ -1994,15 +1994,15 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.GERMANY: EnumDataMapper(
             {
-                ProvinceTypes.CORE: [
+                ProvinceType.CORE: [
                     Province.FRANCONIA,
                     Province.LORRAINE,
                     Province.BAVARIA,
                     Province.SWABIA,
                     Province.SAXONY,
                 ],
-                ProvinceTypes.NATURAL: [Province.BRANDENBURG],
-                ProvinceTypes.POTENTIAL: [
+                ProvinceType.NATURAL: [Province.BRANDENBURG],
+                ProvinceType.POTENTIAL: [
                     Province.BOHEMIA,
                     Province.HOLSTEIN,
                     Province.POMERANIA,
@@ -2010,7 +2010,7 @@ CIV_PROVINCES = CivDataMapper(
                     Province.FLANDERS,
                     Province.LOMBARDY,
                 ],
-                ProvinceTypes.OUTER: [
+                ProvinceType.OUTER: [
                     Province.CHAMPAGNE,
                     Province.PICARDY,
                     Province.BURGUNDY,
@@ -2028,19 +2028,19 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.NOVGOROD: EnumDataMapper(
             {
-                ProvinceTypes.CORE: [
+                ProvinceType.CORE: [
                     Province.NOVGOROD,
                     Province.KARELIA,
                 ],
-                ProvinceTypes.NATURAL: [
+                ProvinceType.NATURAL: [
                     Province.ROSTOV,
                     Province.VOLOGDA,
                 ],
-                ProvinceTypes.POTENTIAL: [
+                ProvinceType.POTENTIAL: [
                     Province.ESTONIA,
                     Province.OSTERLAND,
                 ],
-                ProvinceTypes.OUTER: [
+                ProvinceType.OUTER: [
                     Province.SMOLENSK,
                     Province.POLOTSK,
                     Province.LIVONIA,
@@ -2050,16 +2050,16 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.NORWAY: EnumDataMapper(
             {
-                ProvinceTypes.CORE: [
+                ProvinceType.CORE: [
                     Province.NORWAY,
                     Province.VESTFOLD,
                 ],
-                ProvinceTypes.NATURAL: [Province.ICELAND],
-                ProvinceTypes.POTENTIAL: [
+                ProvinceType.NATURAL: [Province.ICELAND],
+                ProvinceType.POTENTIAL: [
                     Province.THE_ISLES,
                     Province.JAMTLAND,
                 ],
-                ProvinceTypes.OUTER: [
+                ProvinceType.OUTER: [
                     Province.SCOTLAND,
                     Province.NORTHUMBRIA,
                     Province.IRELAND,
@@ -2076,22 +2076,22 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.KIEV: EnumDataMapper(
             {
-                ProvinceTypes.CORE: [
+                ProvinceType.CORE: [
                     Province.KIEV,
                     Province.SLOBODA,
                     Province.PEREYASLAVL,
                     Province.CHERNIGOV,
                 ],
-                ProvinceTypes.NATURAL: [
+                ProvinceType.NATURAL: [
                     Province.PODOLIA,
                     Province.VOLHYNIA,
                 ],
-                ProvinceTypes.POTENTIAL: [
+                ProvinceType.POTENTIAL: [
                     Province.MINSK,
                     Province.SMOLENSK,
                     Province.ZAPORIZHIA,
                 ],
-                ProvinceTypes.OUTER: [
+                ProvinceType.OUTER: [
                     Province.MOLDOVA,
                     Province.GALICJA,
                     Province.BREST,
@@ -2109,24 +2109,24 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.HUNGARY: EnumDataMapper(
             {
-                ProvinceTypes.CORE: [
+                ProvinceType.CORE: [
                     Province.HUNGARY,
                     Province.UPPER_HUNGARY,
                     Province.PANNONIA,
                     Province.TRANSYLVANIA,
                 ],
-                ProvinceTypes.NATURAL: [
+                ProvinceType.NATURAL: [
                     Province.SLAVONIA,
                     Province.BANAT,
                     Province.BOSNIA,
                     Province.DALMATIA,
                 ],
-                ProvinceTypes.POTENTIAL: [
+                ProvinceType.POTENTIAL: [
                     Province.MORAVIA,
                     Province.AUSTRIA,
                     Province.CARINTHIA,
                 ],
-                ProvinceTypes.OUTER: [
+                ProvinceType.OUTER: [
                     Province.SERBIA,
                     Province.WALLACHIA,
                     Province.MOLDOVA,
@@ -2140,13 +2140,13 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.CASTILE: EnumDataMapper(
             {
-                ProvinceTypes.CORE: [
+                ProvinceType.CORE: [
                     Province.LEON,
                     Province.GALICIA,
                     Province.CASTILE,
                 ],
-                ProvinceTypes.NATURAL: [],
-                ProvinceTypes.POTENTIAL: [
+                ProvinceType.NATURAL: [],
+                ProvinceType.POTENTIAL: [
                     Province.NAVARRE,
                     Province.ANDALUSIA,
                     Province.VALENCIA,
@@ -2154,7 +2154,7 @@ CIV_PROVINCES = CivDataMapper(
                     Province.CANARIES,
                     Province.MADEIRA,
                 ],
-                ProvinceTypes.OUTER: [
+                ProvinceType.OUTER: [
                     Province.LUSITANIA,
                     Province.CATALONIA,
                     Province.ARAGON,
@@ -2177,17 +2177,17 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.DENMARK: EnumDataMapper(
             {
-                ProvinceTypes.CORE: [
+                ProvinceType.CORE: [
                     Province.DENMARK,
                     Province.SKANELAND,
                 ],
-                ProvinceTypes.NATURAL: [],
-                ProvinceTypes.POTENTIAL: [
+                ProvinceType.NATURAL: [],
+                ProvinceType.POTENTIAL: [
                     Province.ESTONIA,
                     Province.GOTLAND,
                     Province.HOLSTEIN,
                 ],
-                ProvinceTypes.OUTER: [
+                ProvinceType.OUTER: [
                     Province.GOTALAND,
                     Province.SVEALAND,
                     Province.NORTHUMBRIA,
@@ -2208,10 +2208,10 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.SCOTLAND: EnumDataMapper(
             {
-                ProvinceTypes.CORE: [Province.SCOTLAND],
-                ProvinceTypes.NATURAL: [Province.THE_ISLES],
-                ProvinceTypes.POTENTIAL: [Province.NORTHUMBRIA],
-                ProvinceTypes.OUTER: [
+                ProvinceType.CORE: [Province.SCOTLAND],
+                ProvinceType.NATURAL: [Province.THE_ISLES],
+                ProvinceType.POTENTIAL: [Province.NORTHUMBRIA],
+                ProvinceType.OUTER: [
                     Province.IRELAND,
                     Province.MERCIA,
                     Province.WALES,
@@ -2221,21 +2221,21 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.POLAND: EnumDataMapper(
             {
-                ProvinceTypes.CORE: [
+                ProvinceType.CORE: [
                     Province.GREATER_POLAND,
                     Province.LESSER_POLAND,
                     Province.MASOVIA,
                 ],
-                ProvinceTypes.NATURAL: [
+                ProvinceType.NATURAL: [
                     Province.BREST,
                     Province.GALICJA,
                 ],
-                ProvinceTypes.POTENTIAL: [
+                ProvinceType.POTENTIAL: [
                     Province.POMERANIA,
                     Province.SILESIA,
                     Province.SUVALKIJA,
                 ],
-                ProvinceTypes.OUTER: [
+                ProvinceType.OUTER: [
                     Province.PRUSSIA,
                     Province.LITHUANIA,
                     Province.POLOTSK,
@@ -2250,12 +2250,12 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.GENOA: EnumDataMapper(
             {
-                ProvinceTypes.CORE: [Province.LIGURIA],
-                ProvinceTypes.NATURAL: [
+                ProvinceType.CORE: [Province.LIGURIA],
+                ProvinceType.NATURAL: [
                     Province.CORSICA,
                     Province.SARDINIA,
                 ],
-                ProvinceTypes.POTENTIAL: [
+                ProvinceType.POTENTIAL: [
                     Province.SICILY,
                     Province.MALTA,
                     Province.LOMBARDY,
@@ -2263,7 +2263,7 @@ CIV_PROVINCES = CivDataMapper(
                     Province.RHODES,
                     Province.CRIMEA,
                 ],
-                ProvinceTypes.OUTER: [
+                ProvinceType.OUTER: [
                     Province.CONSTANTINOPLE,
                     Province.CRETE,
                     Province.CYPRUS,
@@ -2277,17 +2277,17 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.MOROCCO: EnumDataMapper(
             {
-                ProvinceTypes.CORE: [
+                ProvinceType.CORE: [
                     Province.MARRAKESH,
                     Province.MOROCCO,
                     Province.FEZ,
                 ],
-                ProvinceTypes.NATURAL: [Province.TETOUAN],
-                ProvinceTypes.POTENTIAL: [
+                ProvinceType.NATURAL: [Province.TETOUAN],
+                ProvinceType.POTENTIAL: [
                     Province.ORAN,
                     Province.ALGIERS,
                 ],
-                ProvinceTypes.OUTER: [
+                ProvinceType.OUTER: [
                     Province.IFRIQIYA,
                     Province.ANDALUSIA,
                     Province.VALENCIA,
@@ -2299,15 +2299,15 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.ENGLAND: EnumDataMapper(
             {
-                ProvinceTypes.CORE: [
+                ProvinceType.CORE: [
                     Province.LONDON,
                     Province.EAST_ANGLIA,
                     Province.MERCIA,
                     Province.WESSEX,
                 ],
-                ProvinceTypes.NATURAL: [Province.NORTHUMBRIA],
-                ProvinceTypes.POTENTIAL: [Province.WALES],
-                ProvinceTypes.OUTER: [
+                ProvinceType.NATURAL: [Province.NORTHUMBRIA],
+                ProvinceType.POTENTIAL: [Province.WALES],
+                ProvinceType.OUTER: [
                     Province.ILE_DE_FRANCE,
                     Province.BRETAGNE,
                     Province.AQUITAINE,
@@ -2325,14 +2325,14 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.PORTUGAL: EnumDataMapper(
             {
-                ProvinceTypes.CORE: [Province.LUSITANIA],
-                ProvinceTypes.NATURAL: [Province.AZORES],
-                ProvinceTypes.POTENTIAL: [
+                ProvinceType.CORE: [Province.LUSITANIA],
+                ProvinceType.NATURAL: [Province.AZORES],
+                ProvinceType.POTENTIAL: [
                     Province.MADEIRA,
                     Province.CANARIES,
                     Province.ANDALUSIA,
                 ],
-                ProvinceTypes.OUTER: [
+                ProvinceType.OUTER: [
                     Province.MOROCCO,
                     Province.TETOUAN,
                     Province.LEON,
@@ -2343,14 +2343,14 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.ARAGON: EnumDataMapper(
             {
-                ProvinceTypes.CORE: [
+                ProvinceType.CORE: [
                     Province.ARAGON,
                     Province.CATALONIA,
                     Province.BALEARS,
                     Province.VALENCIA,
                 ],
-                ProvinceTypes.NATURAL: [],
-                ProvinceTypes.POTENTIAL: [
+                ProvinceType.NATURAL: [],
+                ProvinceType.POTENTIAL: [
                     Province.NAVARRE,
                     Province.ANDALUSIA,
                     Province.LA_MANCHA,
@@ -2360,7 +2360,7 @@ CIV_PROVINCES = CivDataMapper(
                     Province.CALABRIA,
                     Province.MALTA,
                 ],
-                ProvinceTypes.OUTER: [
+                ProvinceType.OUTER: [
                     Province.CASTILE,
                     Province.PROVENCE,
                     Province.CORSICA,
@@ -2371,21 +2371,21 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.SWEDEN: EnumDataMapper(
             {
-                ProvinceTypes.CORE: [
+                ProvinceType.CORE: [
                     Province.NORRLAND,
                     Province.SVEALAND,
                 ],
-                ProvinceTypes.NATURAL: [
+                ProvinceType.NATURAL: [
                     Province.GOTALAND,
                     Province.GOTLAND,
                 ],
-                ProvinceTypes.POTENTIAL: [
+                ProvinceType.POTENTIAL: [
                     Province.JAMTLAND,
                     Province.OSTERLAND,
                     Province.KARELIA,
                     Province.ESTONIA,
                 ],
-                ProvinceTypes.OUTER: [
+                ProvinceType.OUTER: [
                     Province.SKANELAND,
                     Province.VESTFOLD,
                     Province.POMERANIA,
@@ -2398,13 +2398,13 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.PRUSSIA: EnumDataMapper(
             {
-                ProvinceTypes.CORE: [Province.PRUSSIA],
-                ProvinceTypes.NATURAL: [],
-                ProvinceTypes.POTENTIAL: [
+                ProvinceType.CORE: [Province.PRUSSIA],
+                ProvinceType.NATURAL: [],
+                ProvinceType.POTENTIAL: [
                     Province.POMERANIA,
                     Province.LIVONIA,
                 ],
-                ProvinceTypes.OUTER: [
+                ProvinceType.OUTER: [
                     Province.BRANDENBURG,
                     Province.ESTONIA,
                     Province.GOTLAND,
@@ -2416,19 +2416,19 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.LITHUANIA: EnumDataMapper(
             {
-                ProvinceTypes.CORE: [Province.LITHUANIA],
-                ProvinceTypes.NATURAL: [
+                ProvinceType.CORE: [Province.LITHUANIA],
+                ProvinceType.NATURAL: [
                     Province.SUVALKIJA,
                     Province.MINSK,
                     Province.POLOTSK,
                 ],
-                ProvinceTypes.POTENTIAL: [
+                ProvinceType.POTENTIAL: [
                     Province.BREST,
                     Province.PODOLIA,
                     Province.VOLHYNIA,
                     Province.KIEV,
                 ],
-                ProvinceTypes.OUTER: [
+                ProvinceType.OUTER: [
                     Province.GREATER_POLAND,
                     Province.LESSER_POLAND,
                     Province.MASOVIA,
@@ -2446,21 +2446,21 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.AUSTRIA: EnumDataMapper(
             {
-                ProvinceTypes.CORE: [
+                ProvinceType.CORE: [
                     Province.AUSTRIA,
                     Province.CARINTHIA,
                 ],
-                ProvinceTypes.NATURAL: [
+                ProvinceType.NATURAL: [
                     Province.BOHEMIA,
                     Province.MORAVIA,
                 ],
-                ProvinceTypes.POTENTIAL: [
+                ProvinceType.POTENTIAL: [
                     Province.BAVARIA,
                     Province.SILESIA,
                     Province.PANNONIA,
                     Province.UPPER_HUNGARY,
                 ],
-                ProvinceTypes.OUTER: [
+                ProvinceType.OUTER: [
                     Province.VERONA,
                     Province.HUNGARY,
                     Province.TRANSYLVANIA,
@@ -2476,20 +2476,20 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.OTTOMAN: EnumDataMapper(
             {
-                ProvinceTypes.CORE: [
+                ProvinceType.CORE: [
                     Province.OPSIKION,
                     Province.THRAKESION,
                     Province.PAPHLAGONIA,
                     Province.ANATOLIKON,
                     Province.CONSTANTINOPLE,
                 ],
-                ProvinceTypes.NATURAL: [
+                ProvinceType.NATURAL: [
                     Province.THRACE,
                     Province.ARMENIAKON,
                     Province.CHARSIANON,
                     Province.CILICIA,
                 ],
-                ProvinceTypes.POTENTIAL: [
+                ProvinceType.POTENTIAL: [
                     Province.COLONEA,
                     Province.ANTIOCHIA,
                     Province.SYRIA,
@@ -2503,7 +2503,7 @@ CIV_PROVINCES = CivDataMapper(
                     Province.CYPRUS,
                     Province.RHODES,
                 ],
-                ProvinceTypes.OUTER: [
+                ProvinceType.OUTER: [
                     Province.THESSALY,
                     Province.EPIRUS,
                     Province.MOREA,
@@ -2528,19 +2528,19 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.MOSCOW: EnumDataMapper(
             {
-                ProvinceTypes.CORE: [
+                ProvinceType.CORE: [
                     Province.MOSCOW,
                     Province.MUROM,
                     Province.ROSTOV,
                     Province.SMOLENSK,
                 ],
-                ProvinceTypes.NATURAL: [
+                ProvinceType.NATURAL: [
                     Province.NIZHNYNOVGOROD,
                     Province.SIMBIRSK,
                     Province.PEREYASLAVL,
                     Province.CHERNIGOV,
                 ],
-                ProvinceTypes.POTENTIAL: [
+                ProvinceType.POTENTIAL: [
                     Province.NOVGOROD,
                     Province.VOLOGDA,
                     Province.KIEV,
@@ -2552,7 +2552,7 @@ CIV_PROVINCES = CivDataMapper(
                     Province.SLOBODA,
                     Province.ZAPORIZHIA,
                 ],
-                ProvinceTypes.OUTER: [
+                ProvinceType.OUTER: [
                     Province.CRIMEA,
                     Province.MOLDOVA,
                     Province.GALICJA,
@@ -2571,10 +2571,10 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.DUTCH: EnumDataMapper(
             {
-                ProvinceTypes.CORE: [Province.NETHERLANDS],
-                ProvinceTypes.NATURAL: [Province.FLANDERS],
-                ProvinceTypes.POTENTIAL: [],
-                ProvinceTypes.OUTER: [],
+                ProvinceType.CORE: [Province.NETHERLANDS],
+                ProvinceType.NATURAL: [Province.FLANDERS],
+                ProvinceType.POTENTIAL: [],
+                ProvinceType.OUTER: [],
             },
             do_not_cast=True,
         ),

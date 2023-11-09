@@ -911,13 +911,13 @@ class Area(IntEnum):
     EXCEPTION_TILES = 3
 
 
-class AreaTypes(IntEnum):
+class AreaType(IntEnum):
     CORE = 0
     NORMAL = 1
     BROADER = 2
 
 
-class ProvinceTypes(IntEnum):
+class ProvinceType(IntEnum):
     NONE = 0
     OUTER = 1
     POTENTIAL = 2

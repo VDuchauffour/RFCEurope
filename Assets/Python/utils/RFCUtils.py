@@ -33,7 +33,7 @@ from MiscData import (
 
 from TimelineData import DateTurn
 from CoreFunctions import get_religion_by_id
-from CoreTypes import ProvinceTypes
+from CoreTypes import ProvinceType
 
 # globals
 gc = CyGlobalContext()
@@ -1711,13 +1711,13 @@ class RFCUtils:
 
         pPlayer = gc.getPlayer(iCiv)
         iProvType = pPlayer.getProvinceType(iProvince)
-        if iProvType == ProvinceTypes.CORE.value:
+        if iProvType == ProvinceType.CORE.value:
             return 4  # core
-        elif iProvType == ProvinceTypes.NATURAL.value:
+        elif iProvType == ProvinceType.NATURAL.value:
             return 3  # natural/historical
-        elif iProvType == ProvinceTypes.POTENTIAL.value:
+        elif iProvType == ProvinceType.POTENTIAL.value:
             return 2  # potential
-        elif iProvType == ProvinceTypes.OUTER.value:
+        elif iProvType == ProvinceType.OUTER.value:
             return 1  # border/contested
         else:
             return 0  # unstable
