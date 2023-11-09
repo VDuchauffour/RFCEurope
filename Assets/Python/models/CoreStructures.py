@@ -287,43 +287,34 @@ def period(identifier):
 class Tile(object):
     """class to handle a tile location."""
 
-    def __init__(self, coordinates, areas=None):
-        if areas is None:
-            areas = []
-        self._keys = {"coords": (coordinates[0], coordinates[1]), "areas": areas}
+    def __init__(self, coordinates, **kwargs):
+        if not isinstance(coordinates, tuple):
+            raise NotTypeExpectedError(tuple, type(coordinates))
+        self.coordinates = coordinates
+
+        for name, value in kwargs.items():
+            setattr(self, name, value)
 
     @property
     def x(self):
-        return self._keys["coords"][0]
+        return self.coordinates[0]
 
     @property
     def y(self):
-        return self._keys["coords"][1]
-
-    @property
-    def areas(self):
-        return self._keys["areas"]
+        return self.coordinates[1]
 
     def to_tuple(self):
         return (self.x, self.y)
 
-    def set_area(self, area):
-        if not isinstance(area, CoreTypes.AreaType):
-            raise NotTypeExpectedError(CoreTypes.AreaType, type(area))
-        self._keys["areas"].append(area)
-
-    def __str__(self):
-        return str(self.to_tuple())
-
     def __repr__(self):
-        return self.__str__()
+        return self.__class__.__name__ + "(" + str(self.coordinates) + ")"
 
     def __eq__(self, other):
         if other is None:
             return False
         if not isinstance(other, type(self)):
             return False
-        return self._keys == other._keys
+        return self.coordinates == other.coordinates
 
     def __ne__(self, other):
         return not self.__eq__(other)
@@ -357,24 +348,14 @@ class Tile(object):
         return False
 
 
-class Tiles(list):
+class Tiles(ItemCollection):
     """Class to handle a collection of tile."""
 
-    def __init__(self, *tiles):
-        for tile in tiles:
-            if not isinstance(tile, Tile):
-                raise NotTypeExpectedError(Tile, type(tile))
-            self.append(tile)
-
-    def min(self):
-        return min(self)
-
-    def max(self):
-        return max(self)
+    BASE_CLASS = Tile
 
 
 class TilesFactory:
-    """A factory to generate `Tiles` from Area properties."""
+    """A factory to generate `Tiles`."""
 
     def __init__(self, x_max, y_max):
         self._results = Tiles()
