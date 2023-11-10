@@ -84,10 +84,10 @@ class RFCEMapManager:
     def initMaps(self):
         if not self.mapsInitiated:
             showMessage("initializing RFCEMaps")
-            self.provinceMap = self.convertProvinceMap(RFCEMaps.tProvinceMap)
-            self.settlerMap = self.convertMap(RFCEMaps.tSettlersMaps)
-            self.warMap = self.convertMap(RFCEMaps.tWarsMaps)
-            self.cityNameMap = self.convertMap(RFCEMaps.tCityMap)
+            self.provinceMap = RFCEMaps.tProvinceMap
+            self.settlerMap = RFCEMaps.tSettlersMaps
+            self.cityNameMap = RFCEMaps.tCityMap
+            self.warMap = RFCEMaps.tWarsMaps
             self.core_tile_min = [
                 c.location.area.core.tile_min.to_tuple() for c in civilizations().majors()
             ]
@@ -108,21 +108,6 @@ class RFCEMapManager:
             ]
 
             self.mapsInitiated = True
-
-    def convertMap(self, aMap):
-        length = len(aMap)
-        aList = [None] * length
-        for i in range(length):
-            aList[i] = [None] * WORLD_HEIGHT
-            for j in range(WORLD_HEIGHT):
-                aList[i][j] = list(aMap[i][j])
-        return aList
-
-    def convertProvinceMap(self, aMap):
-        aList = [None] * WORLD_HEIGHT
-        for i in range(WORLD_HEIGHT):
-            aList[i] = list(aMap[i])
-        return aList
 
     def getSettlerMapShades(self):
         return settlerMapShades
