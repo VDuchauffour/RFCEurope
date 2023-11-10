@@ -16,7 +16,7 @@ class CityNameManager:
         """Names a city depending on its plot"""
         iOwner = city.getOwner()
         if iOwner < civilizations().majors().len():
-            cityName = RFCEMaps.tCityMap[iOwner][WORLD_HEIGHT - 1 - city.getY()][city.getX()]
+            cityName = RFCEMaps.CITIES_MAP[iOwner][WORLD_HEIGHT - 1 - city.getY()][city.getX()]
             if cityName != "-1":
                 city.setName(unicode(cityName, "latin-1"), False)  # type: ignore
 
@@ -25,14 +25,14 @@ class CityNameManager:
 
         # sName = city.getName()
         if iNewOwner < civilizations().majors().len():
-            cityName = RFCEMaps.tCityMap[iNewOwner][WORLD_HEIGHT - 1 - city.getY()][city.getX()]
+            cityName = RFCEMaps.CITIES_MAP[iNewOwner][WORLD_HEIGHT - 1 - city.getY()][city.getX()]
             if cityName != "-1":
                 city.setName(unicode(cityName, "latin-1"), False)  # type: ignore
 
     def lookupName(self, city, iPlayer):
         """Looks up a city name in another player's map"""
         if iPlayer < civilizations().majors().len():
-            cityName = RFCEMaps.tCityMap[iPlayer][WORLD_HEIGHT - 1 - city.getY()][city.getX()]
+            cityName = RFCEMaps.CITIES_MAP[iPlayer][WORLD_HEIGHT - 1 - city.getY()][city.getX()]
             if cityName == "-1":
                 return "Unknown"
             else:

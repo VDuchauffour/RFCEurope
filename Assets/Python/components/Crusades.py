@@ -1907,7 +1907,7 @@ class Crusades:
                 if self.isOrMasterChristian(iEnemy):
                     continue
                 for pCity in utils.getCityList(iEnemy):
-                    if RFCEMaps.tProvinceMap[pCity.getY()][pCity.getX()] in tPlayerDCMap:
+                    if RFCEMaps.PROVINCES_MAP[pCity.getY()][pCity.getX()] in tPlayerDCMap:
                         return True
         return False
 

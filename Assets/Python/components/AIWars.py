@@ -251,7 +251,7 @@ class AIWars:
             iOwner = gc.getMap().plot(i, j).getOwner()
             if 0 <= iOwner < civilizations().drop(Civ.BARBARIAN).len() and iOwner != iCiv:
                 if lTargetCivs[iOwner] > 0:
-                    iValue = RFCEMaps.tWarsMaps[iCiv][WORLD_HEIGHT - 1 - j][i]
+                    iValue = RFCEMaps.WARS_MAP[iCiv][WORLD_HEIGHT - 1 - j][i]
                     if iOwner in [
                         Civ.INDEPENDENT.value,
                         Civ.INDEPENDENT_2.value,

@@ -1040,7 +1040,7 @@ class Victory:
             plot = gc.getMap().plot(x, y)
             if plot.isWater():
                 continue
-            iProvinceID = RFCEMaps.tProvinceMap[y][x]
+            iProvinceID = RFCEMaps.PROVINCES_MAP[y][x]
             if iProvinceID in REGIONS[Region.NOT_EUROPE]:
                 continue
             iTotal += 1

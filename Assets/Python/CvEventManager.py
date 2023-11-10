@@ -2339,7 +2339,7 @@ class CvEventManager:
         if bRename:
             popup.createEditBox(city.getName())
         else:
-            szName = RFCEMaps.tCityMap[city.getOwner()][WORLD_HEIGHT - 1 - city.getY()][
+            szName = RFCEMaps.CITIES_MAP[city.getOwner()][WORLD_HEIGHT - 1 - city.getY()][
                 city.getX()
             ]
             if szName == "-1":

@@ -67,7 +67,7 @@ class Stability:
                 iOldStab = pPlayer.getStability()
 
                 # Province stability
-                iProv = RFCEMaps.tProvinceMap[pCity.getY()][pCity.getX()]
+                iProv = RFCEMaps.PROVINCES_MAP[pCity.getY()][pCity.getX()]
                 iProvinceType = pPlayer.getProvinceType(iProv)
                 if iProvinceType == ProvinceType.CORE.value:
                     pPlayer.changeStabilityBase(StabilityCategory.EXPANSION.value, 1)
@@ -295,7 +295,7 @@ class Stability:
         #                 )
 
     def onCityBuilt(self, iPlayer, x, y):
-        iProv = RFCEMaps.tProvinceMap[y][x]
+        iProv = RFCEMaps.PROVINCES_MAP[y][x]
         pPlayer = gc.getPlayer(iPlayer)
         # Absinthe: +1 for core, -1 for contested, -2 for foreign provinces
         iProvinceType = pPlayer.getProvinceType(iProv)

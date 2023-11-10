@@ -12,9 +12,9 @@ from CoreData import civilizations
 
 from LocationsData import CIV_CORE_AREA, CIV_BROADER_AREA, CIV_NORMAL_AREA
 from CoreTypes import Civ, Province, ProvinceType
-from RFCEMaps import tProvinceMap
+from RFCEMaps import PROVINCES_MAP
 
-PROVINCE_MAP = np.asarray(tProvinceMap)
+PROVINCES_MAP = np.asarray(PROVINCES_MAP)
 DEFAULT_COLORS = {
     "base": (175, 175, 175),  # (0, 128, 0),
     "peak": (34, 34, 34),
@@ -251,7 +251,7 @@ class MapRenderer:
 
     def _extract_provinces(self, province):
         plots = []
-        indices = np.where(PROVINCE_MAP == province.value)
+        indices = np.where(PROVINCES_MAP == province.value)
         for y, x in zip(indices[0], indices[1]):
             plots.append(Plot(x, y, "", "", "", "", ""))
         return plots

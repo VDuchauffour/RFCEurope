@@ -62,7 +62,7 @@ class ProvinceManager:
         if iPlayer not in civilizations().main().ids():
             return
         pPlayer = gc.getPlayer(iPlayer)
-        iProv = RFCEMaps.tProvinceMap[y][x]
+        iProv = RFCEMaps.PROVINCES_MAP[y][x]
         if pPlayer.getProvinceType(iProv) == ProvinceType.POTENTIAL.value:
             pPlayer.setProvinceType(iProv, ProvinceType.HISTORICAL.value)
             utils.refreshStabilityOverlay()

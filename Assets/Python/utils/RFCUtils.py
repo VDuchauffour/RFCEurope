@@ -1562,7 +1562,7 @@ class RFCUtils:
             plot = map.plotByIndex(i)
             if gc.getGame().isDebugMode() or plot.isRevealed(iHumanTeam, False):
                 if (
-                    RFCEMaps.tProvinceMap[plot.getY()][plot.getX()] == -1
+                    RFCEMaps.PROVINCES_MAP[plot.getY()][plot.getX()] == -1
                 ):  # ocean and non-province tiles
                     szColor = "COLOR_GREY"
                 else:
@@ -1606,7 +1606,7 @@ class RFCUtils:
                 plot = map.plotByIndex(i)
                 if gc.getGame().isDebugMode() or plot.isRevealed(iHumanTeam, False):
                     if (
-                        RFCEMaps.tProvinceMap[plot.getY()][plot.getX()] == -1
+                        RFCEMaps.PROVINCES_MAP[plot.getY()][plot.getX()] == -1
                     ):  # ocean and non-province tiles
                         szColor = "COLOR_GREY"
                     else:
@@ -1692,7 +1692,7 @@ class RFCUtils:
             plot = map.plotByIndex(i)
             if gc.getGame().isDebugMode() or plot.isRevealed(iHumanTeam, False):
                 if (
-                    RFCEMaps.tProvinceMap[plot.getY()][plot.getX()] == -1
+                    RFCEMaps.PROVINCES_MAP[plot.getY()][plot.getX()] == -1
                 ):  # ocean and non-province tiles
                     szColor = "COLOR_GREY"
                 else:

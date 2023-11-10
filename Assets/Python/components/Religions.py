@@ -27,7 +27,7 @@ from TimelineData import DateTurn
 import PyHelpers
 import Popup
 import RFCUtils
-import RFCEMaps
+from RFCEMaps import PROVINCES_MAP
 from StoredData import sd
 from PyUtils import percentage_chance
 
@@ -193,7 +193,6 @@ lReformationNeighbours = [
 
 
 ### Regions to spread religion ###
-tProvinceMap = RFCEMaps.tProvinceMap
 tSpain = [
     Province.LEON.value,
     Province.GALICIA.value,
@@ -802,7 +801,7 @@ class Religions:
             if not gc.getPlayer(iPlayer).isAlive():
                 continue
             for city in utils.getCityList(iPlayer):
-                if tProvinceMap[city.getY()][city.getX()] in tProvinces:
+                if PROVINCES_MAP[city.getY()][city.getX()] in tProvinces:
                     cityList.append(city)
         if cityList:
             city = utils.getRandomEntry(cityList)
@@ -814,7 +813,7 @@ class Religions:
         if gc.getPlayer(iCiv).isAlive():
             cityList = []
             for city in utils.getCityList(iCiv):
-                if tProvinceMap[city.getY()][city.getX()] in tProvinces:
+                if PROVINCES_MAP[city.getY()][city.getX()] in tProvinces:
                     cityList.append(city)
             if cityList:
                 city = utils.getRandomEntry(cityList)
@@ -885,7 +884,7 @@ class Religions:
             if not gc.getPlayer(iPlayer).isAlive():
                 continue
             for city in utils.getCityList(iPlayer):
-                if tProvinceMap[city.getY()][city.getX()] in tProvinces:
+                if PROVINCES_MAP[city.getY()][city.getX()] in tProvinces:
                     # do not try to spread to cities which already have the desired religion
                     if not city.isHasReligion(iReligionToSpread):
                         if bNoSpreadWithReligion:
