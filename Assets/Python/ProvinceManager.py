@@ -42,18 +42,20 @@ class ProvinceManager:
             player(Civ.PRUSSIA).setProvinceType(Province.ESTONIA.value, ProvinceType.NONE.value)
             player(Civ.PRUSSIA).setProvinceType(Province.LITHUANIA.value, ProvinceType.NONE.value)
             player(Civ.PRUSSIA).setProvinceType(Province.SUVALKIJA.value, ProvinceType.NONE.value)
-            player(Civ.PRUSSIA).setProvinceType(Province.LIVONIA.value, ProvinceType.OUTER.value)
             player(Civ.PRUSSIA).setProvinceType(
-                Province.POMERANIA.value, ProvinceType.NATURAL.value
+                Province.LIVONIA.value, ProvinceType.CONTESTED.value
             )
             player(Civ.PRUSSIA).setProvinceType(
-                Province.BRANDENBURG.value, ProvinceType.NATURAL.value
+                Province.POMERANIA.value, ProvinceType.HISTORICAL.value
+            )
+            player(Civ.PRUSSIA).setProvinceType(
+                Province.BRANDENBURG.value, ProvinceType.HISTORICAL.value
             )
             player(Civ.PRUSSIA).setProvinceType(
                 Province.SILESIA.value, ProvinceType.POTENTIAL.value
             )
             player(Civ.PRUSSIA).setProvinceType(
-                Province.GREATER_POLAND.value, ProvinceType.OUTER.value
+                Province.GREATER_POLAND.value, ProvinceType.CONTESTED.value
             )
 
     def onCityBuilt(self, iPlayer, x, y):
@@ -62,7 +64,7 @@ class ProvinceManager:
         pPlayer = gc.getPlayer(iPlayer)
         iProv = RFCEMaps.tProvinceMap[y][x]
         if pPlayer.getProvinceType(iProv) == ProvinceType.POTENTIAL.value:
-            pPlayer.setProvinceType(iProv, ProvinceType.NATURAL.value)
+            pPlayer.setProvinceType(iProv, ProvinceType.HISTORICAL.value)
             utils.refreshStabilityOverlay()
 
     def onCityAcquired(self, owner, iPlayer, city, bConquest, bTrade):
@@ -71,7 +73,7 @@ class ProvinceManager:
         pPlayer = gc.getPlayer(iPlayer)
         iProv = city.getProvince()
         if pPlayer.getProvinceType(iProv) == ProvinceType.POTENTIAL.value:
-            pPlayer.setProvinceType(iProv, ProvinceType.NATURAL.value)
+            pPlayer.setProvinceType(iProv, ProvinceType.HISTORICAL.value)
             utils.refreshStabilityOverlay()
 
     def onCityRazed(self, iOwner, iPlayer, city):
@@ -82,7 +84,7 @@ class ProvinceManager:
         for city in utils.getCityList(iPlayer):
             province = city.getProvince()
             if pPlayer.getProvinceType(province) == ProvinceType.POTENTIAL:
-                pPlayer.setProvinceType(province, ProvinceType.NATURAL.value)
+                pPlayer.setProvinceType(province, ProvinceType.HISTORICAL.value)
         utils.refreshStabilityOverlay()
 
     def onRespawn(self, iPlayer):
@@ -92,7 +94,7 @@ class ProvinceManager:
             if pPlayer.getProvinceType(iProv) == ProvinceType.CORE.value:
                 pPlayer.setProvinceType(iProv, ProvinceType.POTENTIAL.value)
         for iProv in self.tPot2NormProvinces[iPlayer]:
-            if pPlayer.getProvinceType(iProv) == ProvinceType.NATURAL.value:
+            if pPlayer.getProvinceType(iProv) == ProvinceType.HISTORICAL.value:
                 pPlayer.setProvinceType(iProv, ProvinceType.POTENTIAL.value)
 
         # Absinthe: special respawn conditions
@@ -100,14 +102,20 @@ class ProvinceManager:
             for iProv in range(len(Province)):
                 player(Civ.CORDOBA).setProvinceType(iProv, ProvinceType.NONE.value)
             player(Civ.CORDOBA).setProvinceType(Province.IFRIQIYA.value, ProvinceType.CORE.value)
-            player(Civ.CORDOBA).setProvinceType(Province.ALGIERS.value, ProvinceType.NATURAL.value)
-            player(Civ.CORDOBA).setProvinceType(Province.ORAN.value, ProvinceType.OUTER.value)
             player(Civ.CORDOBA).setProvinceType(
-                Province.TRIPOLITANIA.value, ProvinceType.OUTER.value
+                Province.ALGIERS.value, ProvinceType.HISTORICAL.value
             )
-            player(Civ.CORDOBA).setProvinceType(Province.TETOUAN.value, ProvinceType.OUTER.value)
-            player(Civ.CORDOBA).setProvinceType(Province.MOROCCO.value, ProvinceType.OUTER.value)
-            player(Civ.CORDOBA).setProvinceType(Province.FEZ.value, ProvinceType.OUTER.value)
+            player(Civ.CORDOBA).setProvinceType(Province.ORAN.value, ProvinceType.CONTESTED.value)
+            player(Civ.CORDOBA).setProvinceType(
+                Province.TRIPOLITANIA.value, ProvinceType.CONTESTED.value
+            )
+            player(Civ.CORDOBA).setProvinceType(
+                Province.TETOUAN.value, ProvinceType.CONTESTED.value
+            )
+            player(Civ.CORDOBA).setProvinceType(
+                Province.MOROCCO.value, ProvinceType.CONTESTED.value
+            )
+            player(Civ.CORDOBA).setProvinceType(Province.FEZ.value, ProvinceType.CONTESTED.value)
 
     def resetProvinces(self, iPlayer):
         # Absinthe: keep in mind that this will reset all to the initial status, so won't take later province changes into account
@@ -123,38 +131,48 @@ class ProvinceManager:
         # when a new nations spawns, old nations in the region should lose some of their provinces
         if iPlayer == Civ.ARABIA.value:
             player(Civ.BYZANTIUM).setProvinceType(
-                Province.CYRENAICA.value, ProvinceType.OUTER.value
+                Province.CYRENAICA.value, ProvinceType.CONTESTED.value
             )
             player(Civ.BYZANTIUM).setProvinceType(
-                Province.TRIPOLITANIA.value, ProvinceType.OUTER.value
+                Province.TRIPOLITANIA.value, ProvinceType.CONTESTED.value
             )
             player(Civ.BYZANTIUM).setProvinceType(
-                Province.IFRIQIYA.value, ProvinceType.OUTER.value
+                Province.IFRIQIYA.value, ProvinceType.CONTESTED.value
             )
-            player(Civ.BYZANTIUM).setProvinceType(Province.EGYPT.value, ProvinceType.OUTER.value)
+            player(Civ.BYZANTIUM).setProvinceType(
+                Province.EGYPT.value, ProvinceType.CONTESTED.value
+            )
             player(Civ.BYZANTIUM).setProvinceType(Province.ARABIA.value, ProvinceType.NONE.value)
-            player(Civ.BYZANTIUM).setProvinceType(Province.SYRIA.value, ProvinceType.OUTER.value)
-            player(Civ.BYZANTIUM).setProvinceType(Province.LEBANON.value, ProvinceType.OUTER.value)
             player(Civ.BYZANTIUM).setProvinceType(
-                Province.JERUSALEM.value, ProvinceType.OUTER.value
+                Province.SYRIA.value, ProvinceType.CONTESTED.value
             )
             player(Civ.BYZANTIUM).setProvinceType(
-                Province.ANTIOCHIA.value, ProvinceType.NATURAL.value
+                Province.LEBANON.value, ProvinceType.CONTESTED.value
             )
             player(Civ.BYZANTIUM).setProvinceType(
-                Province.CILICIA.value, ProvinceType.NATURAL.value
+                Province.JERUSALEM.value, ProvinceType.CONTESTED.value
             )
             player(Civ.BYZANTIUM).setProvinceType(
-                Province.CHARSIANON.value, ProvinceType.NATURAL.value
+                Province.ANTIOCHIA.value, ProvinceType.HISTORICAL.value
             )
             player(Civ.BYZANTIUM).setProvinceType(
-                Province.COLONEA.value, ProvinceType.NATURAL.value
+                Province.CILICIA.value, ProvinceType.HISTORICAL.value
+            )
+            player(Civ.BYZANTIUM).setProvinceType(
+                Province.CHARSIANON.value, ProvinceType.HISTORICAL.value
+            )
+            player(Civ.BYZANTIUM).setProvinceType(
+                Province.COLONEA.value, ProvinceType.HISTORICAL.value
             )
         elif iPlayer == Civ.BULGARIA.value:
-            player(Civ.BYZANTIUM).setProvinceType(Province.SERBIA.value, ProvinceType.OUTER.value)
-            player(Civ.BYZANTIUM).setProvinceType(Province.MOESIA.value, ProvinceType.OUTER.value)
             player(Civ.BYZANTIUM).setProvinceType(
-                Province.THRACE.value, ProvinceType.NATURAL.value
+                Province.SERBIA.value, ProvinceType.CONTESTED.value
+            )
+            player(Civ.BYZANTIUM).setProvinceType(
+                Province.MOESIA.value, ProvinceType.CONTESTED.value
+            )
+            player(Civ.BYZANTIUM).setProvinceType(
+                Province.THRACE.value, ProvinceType.HISTORICAL.value
             )
         elif iPlayer == Civ.VENECIA.value:
             player(Civ.BYZANTIUM).setProvinceType(Province.DALMATIA.value, ProvinceType.NONE.value)
@@ -176,7 +194,9 @@ class ProvinceManager:
                 Province.BURGUNDY.value, ProvinceType.POTENTIAL.value
             )
         elif iPlayer == Civ.GERMANY.value:
-            player(Civ.FRANCE).setProvinceType(Province.LORRAINE.value, ProvinceType.OUTER.value)
+            player(Civ.FRANCE).setProvinceType(
+                Province.LORRAINE.value, ProvinceType.CONTESTED.value
+            )
             player(Civ.FRANCE).setProvinceType(Province.BAVARIA.value, ProvinceType.NONE.value)
             player(Civ.FRANCE).setProvinceType(Province.FRANCONIA.value, ProvinceType.NONE.value)
             player(Civ.FRANCE).setProvinceType(Province.SAXONY.value, ProvinceType.NONE.value)
@@ -184,23 +204,25 @@ class ProvinceManager:
         elif iPlayer == Civ.HUNGARY.value:
             player(Civ.BULGARIA).setProvinceType(Province.BANAT.value, ProvinceType.NONE.value)
             player(Civ.BULGARIA).setProvinceType(
-                Province.WALLACHIA.value, ProvinceType.OUTER.value
+                Province.WALLACHIA.value, ProvinceType.CONTESTED.value
             )
         elif iPlayer == Civ.CASTILE.value:
             player(Civ.CORDOBA).setProvinceType(
-                Province.LA_MANCHA.value, ProvinceType.NATURAL.value
+                Province.LA_MANCHA.value, ProvinceType.HISTORICAL.value
             )
         elif iPlayer == Civ.MOROCCO.value:
             player(Civ.CORDOBA).setProvinceType(Province.MOROCCO.value, ProvinceType.NONE.value)
             player(Civ.CORDOBA).setProvinceType(Province.MARRAKESH.value, ProvinceType.NONE.value)
-            player(Civ.CORDOBA).setProvinceType(Province.FEZ.value, ProvinceType.OUTER.value)
-            player(Civ.CORDOBA).setProvinceType(Province.TETOUAN.value, ProvinceType.OUTER.value)
+            player(Civ.CORDOBA).setProvinceType(Province.FEZ.value, ProvinceType.CONTESTED.value)
+            player(Civ.CORDOBA).setProvinceType(
+                Province.TETOUAN.value, ProvinceType.CONTESTED.value
+            )
         elif iPlayer == Civ.ENGLAND.value:
             player(Civ.FRANCE).setProvinceType(
                 Province.NORMANDY.value, ProvinceType.POTENTIAL.value
             )  # it flips to England, so resetting them to Potential won't cause any issues
             player(Civ.SCOTLAND).setProvinceType(
-                Province.NORTHUMBRIA.value, ProvinceType.OUTER.value
+                Province.NORTHUMBRIA.value, ProvinceType.CONTESTED.value
             )
             player(Civ.SCOTLAND).setProvinceType(Province.MERCIA.value, ProvinceType.NONE.value)
             player(Civ.DENMARK).setProvinceType(
@@ -212,66 +234,102 @@ class ProvinceManager:
             )
             player(Civ.DENMARK).setProvinceType(Province.LONDON.value, ProvinceType.NONE.value)
         elif iPlayer == Civ.ARAGON.value:
-            player(Civ.BYZANTIUM).setProvinceType(Province.APULIA.value, ProvinceType.OUTER.value)
             player(Civ.BYZANTIUM).setProvinceType(
-                Province.CALABRIA.value, ProvinceType.OUTER.value
+                Province.APULIA.value, ProvinceType.CONTESTED.value
             )
-            player(Civ.BYZANTIUM).setProvinceType(Province.SICILY.value, ProvinceType.OUTER.value)
-            player(Civ.BYZANTIUM).setProvinceType(Province.MALTA.value, ProvinceType.OUTER.value)
-            player(Civ.CORDOBA).setProvinceType(Province.ARAGON.value, ProvinceType.OUTER.value)
-            player(Civ.CORDOBA).setProvinceType(Province.CATALONIA.value, ProvinceType.OUTER.value)
+            player(Civ.BYZANTIUM).setProvinceType(
+                Province.CALABRIA.value, ProvinceType.CONTESTED.value
+            )
+            player(Civ.BYZANTIUM).setProvinceType(
+                Province.SICILY.value, ProvinceType.CONTESTED.value
+            )
+            player(Civ.BYZANTIUM).setProvinceType(
+                Province.MALTA.value, ProvinceType.CONTESTED.value
+            )
             player(Civ.CORDOBA).setProvinceType(
-                Province.VALENCIA.value, ProvinceType.NATURAL.value
+                Province.ARAGON.value, ProvinceType.CONTESTED.value
             )
-            player(Civ.CORDOBA).setProvinceType(Province.BALEARS.value, ProvinceType.OUTER.value)
+            player(Civ.CORDOBA).setProvinceType(
+                Province.CATALONIA.value, ProvinceType.CONTESTED.value
+            )
+            player(Civ.CORDOBA).setProvinceType(
+                Province.VALENCIA.value, ProvinceType.HISTORICAL.value
+            )
+            player(Civ.CORDOBA).setProvinceType(
+                Province.BALEARS.value, ProvinceType.CONTESTED.value
+            )
         elif iPlayer == Civ.SWEDEN.value:
             player(Civ.NORWAY).setProvinceType(Province.SVEALAND.value, ProvinceType.NONE.value)
             player(Civ.DENMARK).setProvinceType(Province.GOTALAND.value, ProvinceType.NONE.value)
             player(Civ.DENMARK).setProvinceType(Province.SVEALAND.value, ProvinceType.NONE.value)
             player(Civ.NOVGOROD).setProvinceType(
-                Province.OSTERLAND.value, ProvinceType.OUTER.value
+                Province.OSTERLAND.value, ProvinceType.CONTESTED.value
             )
         elif iPlayer == Civ.AUSTRIA.value:
-            player(Civ.HUNGARY).setProvinceType(Province.CARINTHIA.value, ProvinceType.OUTER.value)
-            player(Civ.HUNGARY).setProvinceType(Province.AUSTRIA.value, ProvinceType.OUTER.value)
-            player(Civ.HUNGARY).setProvinceType(Province.MORAVIA.value, ProvinceType.OUTER.value)
-            player(Civ.HUNGARY).setProvinceType(Province.BAVARIA.value, ProvinceType.NONE.value)
-            player(Civ.GERMANY).setProvinceType(Province.BAVARIA.value, ProvinceType.OUTER.value)
-            player(Civ.GERMANY).setProvinceType(Province.BOHEMIA.value, ProvinceType.OUTER.value)
-            player(Civ.CASTILE).setProvinceType(
-                Province.NETHERLANDS.value, ProvinceType.OUTER.value
+            player(Civ.HUNGARY).setProvinceType(
+                Province.CARINTHIA.value, ProvinceType.CONTESTED.value
             )
-            player(Civ.CASTILE).setProvinceType(Province.FLANDERS.value, ProvinceType.OUTER.value)
+            player(Civ.HUNGARY).setProvinceType(
+                Province.AUSTRIA.value, ProvinceType.CONTESTED.value
+            )
+            player(Civ.HUNGARY).setProvinceType(
+                Province.MORAVIA.value, ProvinceType.CONTESTED.value
+            )
+            player(Civ.HUNGARY).setProvinceType(Province.BAVARIA.value, ProvinceType.NONE.value)
+            player(Civ.GERMANY).setProvinceType(
+                Province.BAVARIA.value, ProvinceType.CONTESTED.value
+            )
+            player(Civ.GERMANY).setProvinceType(
+                Province.BOHEMIA.value, ProvinceType.CONTESTED.value
+            )
+            player(Civ.CASTILE).setProvinceType(
+                Province.NETHERLANDS.value, ProvinceType.CONTESTED.value
+            )
+            player(Civ.CASTILE).setProvinceType(
+                Province.FLANDERS.value, ProvinceType.CONTESTED.value
+            )
         elif iPlayer == Civ.OTTOMAN.value:
             player(Civ.BYZANTIUM).setProvinceType(
-                Province.ANTIOCHIA.value, ProvinceType.OUTER.value
-            )
-            player(Civ.BYZANTIUM).setProvinceType(Province.CILICIA.value, ProvinceType.OUTER.value)
-            player(Civ.BYZANTIUM).setProvinceType(
-                Province.CHARSIANON.value, ProvinceType.OUTER.value
-            )
-            player(Civ.BYZANTIUM).setProvinceType(Province.COLONEA.value, ProvinceType.OUTER.value)
-            player(Civ.BYZANTIUM).setProvinceType(
-                Province.ARMENIAKON.value, ProvinceType.OUTER.value
-            )
-            player(Civ.BYZANTIUM).setProvinceType(Province.CYPRUS.value, ProvinceType.OUTER.value)
-            player(Civ.BYZANTIUM).setProvinceType(
-                Province.ANATOLIKON.value, ProvinceType.NATURAL.value
+                Province.ANTIOCHIA.value, ProvinceType.CONTESTED.value
             )
             player(Civ.BYZANTIUM).setProvinceType(
-                Province.OPSIKION.value, ProvinceType.NATURAL.value
+                Province.CILICIA.value, ProvinceType.CONTESTED.value
             )
             player(Civ.BYZANTIUM).setProvinceType(
-                Province.THRAKESION.value, ProvinceType.NATURAL.value
+                Province.CHARSIANON.value, ProvinceType.CONTESTED.value
             )
             player(Civ.BYZANTIUM).setProvinceType(
-                Province.PAPHLAGONIA.value, ProvinceType.NATURAL.value
+                Province.COLONEA.value, ProvinceType.CONTESTED.value
             )
-            player(Civ.HUNGARY).setProvinceType(Province.DALMATIA.value, ProvinceType.OUTER.value)
-            player(Civ.HUNGARY).setProvinceType(Province.BOSNIA.value, ProvinceType.OUTER.value)
-            player(Civ.HUNGARY).setProvinceType(Province.BANAT.value, ProvinceType.OUTER.value)
+            player(Civ.BYZANTIUM).setProvinceType(
+                Province.ARMENIAKON.value, ProvinceType.CONTESTED.value
+            )
+            player(Civ.BYZANTIUM).setProvinceType(
+                Province.CYPRUS.value, ProvinceType.CONTESTED.value
+            )
+            player(Civ.BYZANTIUM).setProvinceType(
+                Province.ANATOLIKON.value, ProvinceType.HISTORICAL.value
+            )
+            player(Civ.BYZANTIUM).setProvinceType(
+                Province.OPSIKION.value, ProvinceType.HISTORICAL.value
+            )
+            player(Civ.BYZANTIUM).setProvinceType(
+                Province.THRAKESION.value, ProvinceType.HISTORICAL.value
+            )
+            player(Civ.BYZANTIUM).setProvinceType(
+                Province.PAPHLAGONIA.value, ProvinceType.HISTORICAL.value
+            )
+            player(Civ.HUNGARY).setProvinceType(
+                Province.DALMATIA.value, ProvinceType.CONTESTED.value
+            )
+            player(Civ.HUNGARY).setProvinceType(
+                Province.BOSNIA.value, ProvinceType.CONTESTED.value
+            )
+            player(Civ.HUNGARY).setProvinceType(Province.BANAT.value, ProvinceType.CONTESTED.value)
         elif iPlayer == Civ.MOSCOW.value:
-            player(Civ.NOVGOROD).setProvinceType(Province.ROSTOV.value, ProvinceType.OUTER.value)
+            player(Civ.NOVGOROD).setProvinceType(
+                Province.ROSTOV.value, ProvinceType.CONTESTED.value
+            )
             player(Civ.NOVGOROD).setProvinceType(Province.SMOLENSK.value, ProvinceType.NONE.value)
         elif iPlayer == Civ.DUTCH.value:
             player(Civ.CASTILE).setProvinceType(

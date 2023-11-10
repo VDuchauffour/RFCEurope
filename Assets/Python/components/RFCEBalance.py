@@ -782,14 +782,18 @@ class RFCEBalance:
         # 	if the third parameter is -1: cannot Vassalize, 0: has to satisfy a condition (default), 1 can Vassalize without conditions
         # 	the condition is that either one of the players needs to have a city in a province that the other players considers >= the last parameter
         # 	the default for the last parameter is 0, we should call this at least once to set the parameter (it is the same for all players)
-        gc.setVassalagaeCondition(Civ.CORDOBA.value, Civ.ARABIA.value, 1, ProvinceType.OUTER.value)
-        gc.setVassalagaeCondition(Civ.ARABIA.value, Civ.CORDOBA.value, 1, ProvinceType.OUTER.value)
+        gc.setVassalagaeCondition(
+            Civ.CORDOBA.value, Civ.ARABIA.value, 1, ProvinceType.CONTESTED.value
+        )
+        gc.setVassalagaeCondition(
+            Civ.ARABIA.value, Civ.CORDOBA.value, 1, ProvinceType.CONTESTED.value
+        )
 
         # How much culture should we get into a province of this type, ignore the war and settler values (0,0)
         gc.setProvinceTypeParams(ProvinceType.NONE.value, 0, 0, 1, 3)  # 1/3 culture
-        gc.setProvinceTypeParams(ProvinceType.OUTER.value, 0, 0, 1, 1)  # no change to culture
+        gc.setProvinceTypeParams(ProvinceType.CONTESTED.value, 0, 0, 1, 1)  # no change to culture
         gc.setProvinceTypeParams(ProvinceType.POTENTIAL.value, 0, 0, 1, 1)  # same as outer culture
-        gc.setProvinceTypeParams(ProvinceType.NATURAL.value, 0, 0, 2, 1)  # double-culture
+        gc.setProvinceTypeParams(ProvinceType.HISTORICAL.value, 0, 0, 2, 1)  # double-culture
         gc.setProvinceTypeParams(ProvinceType.CORE.value, 0, 0, 3, 1)  # triple-culture
 
         # block foundation of Protestantism except by a Catholic player

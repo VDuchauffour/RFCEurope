@@ -919,9 +919,9 @@ class AreaType(IntEnum):
 
 class ProvinceType(IntEnum):
     NONE = 0
-    OUTER = 1
+    CONTESTED = 1
     POTENTIAL = 2
-    NATURAL = 3
+    HISTORICAL = 3
     CORE = 4
 
 

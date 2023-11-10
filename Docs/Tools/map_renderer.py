@@ -287,7 +287,7 @@ class MapRenderer:
             )
             img = self.draw(
                 img,
-                self.extract_provinces(civ.location.provinces[ProvinceType.NATURAL]),
+                self.extract_provinces(civ.location.provinces[ProvinceType.HISTORICAL]),
                 PROVINCES_COLORS["natural"],
             )
             img = self.draw(
@@ -297,7 +297,7 @@ class MapRenderer:
             )
             img = self.draw(
                 img,
-                self.extract_provinces(civ.location.provinces[ProvinceType.OUTER]),
+                self.extract_provinces(civ.location.provinces[ProvinceType.CONTESTED]),
                 PROVINCES_COLORS["outer"],
             )
             img = self.apply_water(img)

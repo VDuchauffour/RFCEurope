@@ -1260,7 +1260,7 @@ class RiseAndFall:
                                     for i in range(2):
                                         cityListInCore.append(city)
                         # Absinthe: cities in outer and unstable provinces have chance by default, the number of times they are added is modified by the civ's own culture in the city
-                        elif iProvType == ProvinceType.OUTER.value:
+                        elif iProvType == ProvinceType.CONTESTED.value:
                             if (
                                 city.countTotalCultureTimes100() > 0
                                 and (

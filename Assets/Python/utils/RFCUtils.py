@@ -1713,11 +1713,11 @@ class RFCUtils:
         iProvType = pPlayer.getProvinceType(iProvince)
         if iProvType == ProvinceType.CORE.value:
             return 4  # core
-        elif iProvType == ProvinceType.NATURAL.value:
+        elif iProvType == ProvinceType.HISTORICAL.value:
             return 3  # natural/historical
         elif iProvType == ProvinceType.POTENTIAL.value:
             return 2  # potential
-        elif iProvType == ProvinceType.OUTER.value:
+        elif iProvType == ProvinceType.CONTESTED.value:
             return 1  # border/contested
         else:
             return 0  # unstable
