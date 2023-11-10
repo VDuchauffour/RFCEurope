@@ -36,9 +36,9 @@ DEFAULT_COLORS = {
 }
 PROVINCES_COLORS = {
     "core": (41, 249, 255),  # (0, 100, 0),
-    "natural": (8, 179, 69),  # (0, 255, 0),
+    "historical": (8, 179, 69),  # (0, 255, 0),
     "potential": (253, 184, 51),  # (255, 255, 0),
-    "outer": (255, 82, 82),
+    "contested": (255, 82, 82),
 }
 
 
@@ -288,7 +288,7 @@ class MapRenderer:
             img = self.draw(
                 img,
                 self.extract_provinces(civ.location.provinces[ProvinceType.HISTORICAL]),
-                PROVINCES_COLORS["natural"],
+                PROVINCES_COLORS["historical"],
             )
             img = self.draw(
                 img,
@@ -298,7 +298,7 @@ class MapRenderer:
             img = self.draw(
                 img,
                 self.extract_provinces(civ.location.provinces[ProvinceType.CONTESTED]),
-                PROVINCES_COLORS["outer"],
+                PROVINCES_COLORS["contested"],
             )
             img = self.apply_water(img)
             img = self.draw_plot_properties(img, "is_peak")
