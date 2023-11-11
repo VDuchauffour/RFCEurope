@@ -1,7 +1,7 @@
 from CvPythonExtensions import *
 from CoreData import civilization, civilizations
 from CoreStructures import player
-import RFCEMaps
+from MapsData import PROVINCES_MAP
 import RFCUtils  # Absinthe
 import PyHelpers  # Absinthe
 
@@ -62,7 +62,7 @@ class ProvinceManager:
         if iPlayer not in civilizations().main().ids():
             return
         pPlayer = gc.getPlayer(iPlayer)
-        iProv = RFCEMaps.PROVINCES_MAP[y][x]
+        iProv = PROVINCES_MAP[y][x]
         if pPlayer.getProvinceType(iProv) == ProvinceType.POTENTIAL.value:
             pPlayer.setProvinceType(iProv, ProvinceType.HISTORICAL.value)
             utils.refreshStabilityOverlay()

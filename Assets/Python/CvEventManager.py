@@ -17,12 +17,12 @@ import Popup as PyPopup
 import CvCameraControls
 import CvTopCivs
 import CvAdvisorUtils
-import RFCEMaps
 import RFCUtils
 import RFCEBalance
 import random
 from MiscData import WORLD_HEIGHT, MessageData
 from CoreData import civilizations, civilization
+from MapsData import CITIES_MAP
 from CoreTypes import Building, Wonder, Promotion, Project, Improvement, Feature, Unit, Bonus
 
 utils = RFCUtils.RFCUtils()
@@ -2339,9 +2339,7 @@ class CvEventManager:
         if bRename:
             popup.createEditBox(city.getName())
         else:
-            szName = RFCEMaps.CITIES_MAP[city.getOwner()][WORLD_HEIGHT - 1 - city.getY()][
-                city.getX()
-            ]
+            szName = CITIES_MAP[city.getOwner()][WORLD_HEIGHT - 1 - city.getY()][city.getX()]
             if szName == "-1":
                 popup.createEditBox(city.getName())
             else:

@@ -2,7 +2,7 @@
 line-length = 99
 target-version = ["py27"]
 force-exclude = """
-Assets/Python/data/RFCEMaps.py
+Assets/Python/data/MapsData.py
 """
 
 [tool.ruff]

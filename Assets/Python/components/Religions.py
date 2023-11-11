@@ -27,7 +27,7 @@ from TimelineData import DateTurn
 import PyHelpers
 import Popup
 import RFCUtils
-from RFCEMaps import PROVINCES_MAP
+from MapsData import PROVINCES_MAP
 from StoredData import sd
 from PyUtils import percentage_chance
 

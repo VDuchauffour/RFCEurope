@@ -1,12 +1,9 @@
-# Rhye's and Fall of Civilization: Europe - Crusades
-# Created by 3Miro, revised and improved by AbsintheRed
-
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
 import PyHelpers
 import Popup
 import RFCUtils
-import RFCEMaps
+from MapsData import PROVINCES_MAP
 import CityNameManager
 from StoredData import sd
 import random
@@ -1907,7 +1904,7 @@ class Crusades:
                 if self.isOrMasterChristian(iEnemy):
                     continue
                 for pCity in utils.getCityList(iEnemy):
-                    if RFCEMaps.PROVINCES_MAP[pCity.getY()][pCity.getX()] in tPlayerDCMap:
+                    if PROVINCES_MAP[pCity.getY()][pCity.getX()] in tPlayerDCMap:
                         return True
         return False
 

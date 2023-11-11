@@ -21,7 +21,7 @@ from CoreTypes import (
     FaithPointBonusCategory,
     Wonder,
 )
-import RFCEMaps
+from MapsData import SETTLERS_MAP, WARS_MAP, PROVINCES_MAP
 import RFCUtils
 from MiscData import (
     WORLD_WIDTH,
@@ -884,16 +884,16 @@ class RFCEBalance:
         for i in civilizations().majors().ids():
             for y in range(WORLD_HEIGHT):
                 for x in range(WORLD_WIDTH):
-                    gc.setSettlersMap(i, y, x, RFCEMaps.SETTLERS_MAP[i][y][x])
-                    gc.setWarsMap(i, y, x, RFCEMaps.WARS_MAP[i][y][x])
+                    gc.setSettlersMap(i, y, x, SETTLERS_MAP[i][y][x])
+                    gc.setWarsMap(i, y, x, WARS_MAP[i][y][x])
 
         for y in range(WORLD_HEIGHT):
             for x in range(WORLD_WIDTH):
-                if RFCEMaps.PROVINCES_MAP[y][x] > -1:
+                if PROVINCES_MAP[y][x] > -1:
                     # "no province" of ocean is settled different than -1, set only non-negative values,
                     # the C++ map is initialized to "no-province" by setSizeNPlayers(...)
                     # "no-province" is returned as -1 via the Cy interface
-                    gc.setProvince(x, y, RFCEMaps.PROVINCES_MAP[y][x])
+                    gc.setProvince(x, y, PROVINCES_MAP[y][x])
         gc.createProvinceCrossreferenceList()  # make sure to call this AFTER setting all the Province entries
 
         gc.setProvinceTypeNumber(

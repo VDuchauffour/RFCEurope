@@ -19,7 +19,6 @@ from CoreTypes import (
 import CvUtil
 import CvScreenEnums
 from LocationsData import CITIES
-import RFCEMaps
 import PyHelpers
 import Popup  # Absinthe
 from StoredData import sd
@@ -34,6 +33,7 @@ from MiscData import (
 from TimelineData import DateTurn
 from CoreFunctions import get_religion_by_id
 from CoreTypes import ProvinceType
+from MapsData import PROVINCES_MAP
 
 # globals
 gc = CyGlobalContext()
@@ -1561,9 +1561,7 @@ class RFCUtils:
         for i in range(map.numPlots()):
             plot = map.plotByIndex(i)
             if gc.getGame().isDebugMode() or plot.isRevealed(iHumanTeam, False):
-                if (
-                    RFCEMaps.PROVINCES_MAP[plot.getY()][plot.getX()] == -1
-                ):  # ocean and non-province tiles
+                if PROVINCES_MAP[plot.getY()][plot.getX()] == -1:  # ocean and non-province tiles
                     szColor = "COLOR_GREY"
                 else:
                     szColor = colors[self.getProvinceStabilityLevel(iHuman, plot.getProvince())]
@@ -1606,7 +1604,7 @@ class RFCUtils:
                 plot = map.plotByIndex(i)
                 if gc.getGame().isDebugMode() or plot.isRevealed(iHumanTeam, False):
                     if (
-                        RFCEMaps.PROVINCES_MAP[plot.getY()][plot.getX()] == -1
+                        PROVINCES_MAP[plot.getY()][plot.getX()] == -1
                     ):  # ocean and non-province tiles
                         szColor = "COLOR_GREY"
                     else:
@@ -1691,9 +1689,7 @@ class RFCUtils:
         for i in range(map.numPlots()):
             plot = map.plotByIndex(i)
             if gc.getGame().isDebugMode() or plot.isRevealed(iHumanTeam, False):
-                if (
-                    RFCEMaps.PROVINCES_MAP[plot.getY()][plot.getX()] == -1
-                ):  # ocean and non-province tiles
+                if PROVINCES_MAP[plot.getY()][plot.getX()] == -1:  # ocean and non-province tiles
                     szColor = "COLOR_GREY"
                 else:
                     szColor = colors[self.getProvinceStabilityLevel(iChoice, plot.getProvince())]

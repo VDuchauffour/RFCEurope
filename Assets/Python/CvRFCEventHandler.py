@@ -27,10 +27,10 @@ import Companies
 import DataLoader
 import ProvinceManager
 import Mercenaries
-import RFCEMaps
 
 from MiscData import MessageData
 from TimelineData import DateTurn
+from MapsData import PROVINCES_MAP
 from CoreTypes import (
     Building,
     Civ,
@@ -1137,7 +1137,7 @@ class CvRFCEventHandler:
             plot = gc.getMap().plot(px, py)
             iActivePlayer = gc.getGame().getActivePlayer()
             iActiveTeam = gc.getPlayer(iActivePlayer).getTeam()
-            iProvinceID = RFCEMaps.PROVINCES_MAP[plot.getY()][plot.getX()]
+            iProvinceID = PROVINCES_MAP[plot.getY()][plot.getX()]
 
             # do not show provinces of unrevealed tiles
             if not plot.isRevealed(iActiveTeam, False) and not gc.getGame().isDebugMode():
@@ -1155,12 +1155,10 @@ class CvRFCEventHandler:
             # engine.clearColoredPlots(PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS)
 
             # cache the plot's coords
-            self.lastProvinceID = RFCEMaps.PROVINCES_MAP[plot.getY()][plot.getX()]
+            self.lastProvinceID = PROVINCES_MAP[plot.getY()][plot.getX()]
 
             # select an appropriate color
-            if (
-                RFCEMaps.PROVINCES_MAP[plot.getY()][plot.getX()] == -1
-            ):  # ocean and non-province tiles
+            if PROVINCES_MAP[plot.getY()][plot.getX()] == -1:  # ocean and non-province tiles
                 return
             else:
                 iLevel = utils.getProvinceStabilityLevel(iHuman, iProvinceID)
@@ -1188,7 +1186,7 @@ class CvRFCEventHandler:
             # apply the highlight
             for i in range(map.numPlots()):
                 plot = map.plotByIndex(i)
-                if RFCEMaps.PROVINCES_MAP[plot.getY()][plot.getX()] == iProvinceID and (
+                if PROVINCES_MAP[plot.getY()][plot.getX()] == iProvinceID and (
                     gc.getGame().isDebugMode() or plot.isRevealed(iActiveTeam, False)
                 ):
                     engine.fillAreaBorderPlot(

@@ -26,7 +26,7 @@ import PyHelpers
 import Popup
 import RFCUtils
 import UniquePowers
-import RFCEMaps
+from MapsData import PROVINCES_MAP
 from StoredData import sd
 import random
 
@@ -1040,7 +1040,7 @@ class Victory:
             plot = gc.getMap().plot(x, y)
             if plot.isWater():
                 continue
-            iProvinceID = RFCEMaps.PROVINCES_MAP[y][x]
+            iProvinceID = PROVINCES_MAP[y][x]
             if iProvinceID in REGIONS[Region.NOT_EUROPE]:
                 continue
             iTotal += 1
