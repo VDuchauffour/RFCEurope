@@ -3,6 +3,7 @@
 ##
 ## Author: Caliom
 
+from copy import deepcopy
 from CvPythonExtensions import *
 from CoreData import civilizations
 import CvScreenEnums
@@ -84,10 +85,10 @@ class RFCEMapManager:
     def initMaps(self):
         if not self.mapsInitiated:
             showMessage("initializing RFCEMaps")
-            self.provinceMap = RFCEMaps.PROVINCES_MAP
-            self.settlerMap = RFCEMaps.SETTLERS_MAP
-            self.cityNameMap = RFCEMaps.CITIES_MAP
-            self.warMap = RFCEMaps.WARS_MAP
+            self.provinceMap = deepcopy(RFCEMaps.PROVINCES_MAP)
+            self.settlerMap = deepcopy(RFCEMaps.SETTLERS_MAP)
+            self.cityNameMap = deepcopy(RFCEMaps.CITIES_MAP)
+            self.warMap = deepcopy(RFCEMaps.WARS_MAP)
             self.core_tile_min = [
                 c.location.area.core.tile_min.to_tuple() for c in civilizations().majors()
             ]
