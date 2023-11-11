@@ -1,7 +1,7 @@
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
 from CoreTypes import (
-    AIModifier,
+    Modifier,
     Building,
     City,
     Civ,
@@ -25,6 +25,7 @@ from CoreTypes import (
 from MapsData import SETTLERS_MAP, WARS_MAP, PROVINCES_MAP
 import RFCUtils
 from MiscData import (
+    DIPLOMACY_MODIFIERS,
     WORLD_WIDTH,
     WORLD_HEIGHT,
     GREAT_PROPHET_FAITH_POINT_BONUS,
@@ -107,66 +108,6 @@ class RFCEBalance:
         gc.setInitialBuilding(Civ.DUTCH.value, Building.LIGHTHOUSE.value, True)
         gc.setInitialBuilding(Civ.DUTCH.value, Building.THEATRE.value, True)
         gc.setInitialBuilding(Civ.DUTCH.value, Building.SMOKEHOUSE.value, True)
-
-        ####### AI Modifiers
-
-        # 3Miro: setDiplomacyModifiers(iCiv1,iCiv2,iVal) hidden modifier for the two civ's AI relations. More likely to have OB and so on.
-        # + means they will like each other - they will hate each other.
-        # from Civ1 towards Civ2 (make them symmetric)
-        gc.setDiplomacyModifiers(Civ.CORDOBA.value, Civ.ARABIA.value, +5)
-        gc.setDiplomacyModifiers(Civ.ARABIA.value, Civ.CORDOBA.value, +5)
-        gc.setDiplomacyModifiers(Civ.ARABIA.value, Civ.BYZANTIUM.value, -8)
-        gc.setDiplomacyModifiers(Civ.BYZANTIUM.value, Civ.ARABIA.value, -8)
-        gc.setDiplomacyModifiers(Civ.BULGARIA.value, Civ.BYZANTIUM.value, +3)
-        gc.setDiplomacyModifiers(Civ.BYZANTIUM.value, Civ.BULGARIA.value, +3)
-        gc.setDiplomacyModifiers(Civ.CORDOBA.value, Civ.CASTILE.value, -14)
-        gc.setDiplomacyModifiers(Civ.CASTILE.value, Civ.CORDOBA.value, -14)
-        gc.setDiplomacyModifiers(Civ.MOROCCO.value, Civ.CASTILE.value, -10)
-        gc.setDiplomacyModifiers(Civ.CASTILE.value, Civ.MOROCCO.value, -10)
-        gc.setDiplomacyModifiers(Civ.ARAGON.value, Civ.CASTILE.value, +4)
-        gc.setDiplomacyModifiers(Civ.CASTILE.value, Civ.ARAGON.value, +4)
-        gc.setDiplomacyModifiers(Civ.PORTUGAL.value, Civ.CASTILE.value, +6)
-        gc.setDiplomacyModifiers(Civ.CASTILE.value, Civ.PORTUGAL.value, +6)
-        gc.setDiplomacyModifiers(Civ.CORDOBA.value, Civ.PORTUGAL.value, -8)
-        gc.setDiplomacyModifiers(Civ.PORTUGAL.value, Civ.CORDOBA.value, -8)
-        gc.setDiplomacyModifiers(Civ.KIEV.value, Civ.NOVGOROD.value, +5)
-        gc.setDiplomacyModifiers(Civ.NOVGOROD.value, Civ.KIEV.value, +5)
-        gc.setDiplomacyModifiers(Civ.MOSCOW.value, Civ.NOVGOROD.value, -8)
-        gc.setDiplomacyModifiers(Civ.NOVGOROD.value, Civ.MOSCOW.value, -8)
-        gc.setDiplomacyModifiers(Civ.FRANCE.value, Civ.BURGUNDY.value, -2)
-        gc.setDiplomacyModifiers(Civ.BURGUNDY.value, Civ.FRANCE.value, -2)
-        gc.setDiplomacyModifiers(Civ.OTTOMAN.value, Civ.BYZANTIUM.value, -14)
-        gc.setDiplomacyModifiers(Civ.BYZANTIUM.value, Civ.OTTOMAN.value, -14)
-        gc.setDiplomacyModifiers(Civ.GERMANY.value, Civ.POLAND.value, -5)
-        gc.setDiplomacyModifiers(Civ.POLAND.value, Civ.GERMANY.value, -5)
-        gc.setDiplomacyModifiers(Civ.MOSCOW.value, Civ.POLAND.value, -4)
-        gc.setDiplomacyModifiers(Civ.POLAND.value, Civ.MOSCOW.value, -4)
-        gc.setDiplomacyModifiers(Civ.MOSCOW.value, Civ.LITHUANIA.value, -2)
-        gc.setDiplomacyModifiers(Civ.LITHUANIA.value, Civ.MOSCOW.value, -2)
-        gc.setDiplomacyModifiers(Civ.AUSTRIA.value, Civ.POLAND.value, -2)
-        gc.setDiplomacyModifiers(Civ.POLAND.value, Civ.AUSTRIA.value, -2)
-        gc.setDiplomacyModifiers(Civ.LITHUANIA.value, Civ.POLAND.value, +4)
-        gc.setDiplomacyModifiers(Civ.POLAND.value, Civ.LITHUANIA.value, +4)
-        gc.setDiplomacyModifiers(Civ.HUNGARY.value, Civ.POLAND.value, +3)
-        gc.setDiplomacyModifiers(Civ.POLAND.value, Civ.HUNGARY.value, +3)
-        gc.setDiplomacyModifiers(Civ.AUSTRIA.value, Civ.HUNGARY.value, -6)
-        gc.setDiplomacyModifiers(Civ.HUNGARY.value, Civ.AUSTRIA.value, -6)
-        gc.setDiplomacyModifiers(Civ.SWEDEN.value, Civ.POLAND.value, -2)
-        gc.setDiplomacyModifiers(Civ.POLAND.value, Civ.SWEDEN.value, -2)
-        gc.setDiplomacyModifiers(Civ.SWEDEN.value, Civ.MOSCOW.value, -8)
-        gc.setDiplomacyModifiers(Civ.MOSCOW.value, Civ.SWEDEN.value, -8)
-        gc.setDiplomacyModifiers(Civ.PRUSSIA.value, Civ.POLAND.value, -6)
-        gc.setDiplomacyModifiers(Civ.POLAND.value, Civ.PRUSSIA.value, -6)
-        gc.setDiplomacyModifiers(Civ.PRUSSIA.value, Civ.LITHUANIA.value, -8)
-        gc.setDiplomacyModifiers(Civ.LITHUANIA.value, Civ.PRUSSIA.value, -8)
-        gc.setDiplomacyModifiers(Civ.ENGLAND.value, Civ.SCOTLAND.value, -8)
-        gc.setDiplomacyModifiers(Civ.SCOTLAND.value, Civ.ENGLAND.value, -8)
-        gc.setDiplomacyModifiers(Civ.FRANCE.value, Civ.SCOTLAND.value, +4)
-        gc.setDiplomacyModifiers(Civ.SCOTLAND.value, Civ.FRANCE.value, +4)
-        gc.setDiplomacyModifiers(Civ.NORWAY.value, Civ.DENMARK.value, +4)
-        gc.setDiplomacyModifiers(Civ.DENMARK.value, Civ.NORWAY.value, +4)
-        gc.setDiplomacyModifiers(Civ.SWEDEN.value, Civ.DENMARK.value, -4)
-        gc.setDiplomacyModifiers(Civ.DENMARK.value, Civ.SWEDEN.value, -4)
 
         ####### 3Miro: UNIQUE POWERS
         # 3Miro: setUP(iCiv,iPower) sets the Unique Powers for C++
@@ -745,6 +686,8 @@ class RFCEBalance:
             self.setCityWarDistanceModifier(civ)
             self.setTechPreferenceModifier(civ)
 
+        self.setDiplomacyModifier()
+
     def setGrowthModifier(self, civ):
         # void setGrowthModifiers( int iCiv, int iPop, int iCult, int iGP, int iWorker, int iHealth, int iInitPop );
         # iInitPop is the initial population in a city, also can use gc.setInitialPopulation( iCiv, iInitPop ) to change a single civ
@@ -792,24 +735,31 @@ class RFCEBalance:
         # if ( iTaken > 21 * iTop / iBottom - iMinus ) do not build city there.
         # RFC default values are 2/3 -1 for Europe, 1/3 - 0 for Russia and 1/2 for Mongolia
         # for example gc.setCityClusterAI( iByzantium, 1, 3, 0 ) wouldn't allow Byzantium to settle cities if more than 7 tiles are taken
-        modifiers = civ.ai.modifiers.get(AIModifier.CITY_CLUSTER)
+        modifiers = civ.ai.modifiers.get(Modifier.CITY_CLUSTER)
         if modifiers is not None:
             gc.setCityClusterAI(civ.id, *modifiers)
 
     def setCityWarDistanceModifier(self, civ):
         # 3Miro: setCityWarDistanceAI(iCiv,iVal), depending on the type of the empire, modify how likely the AI is to attack a city
         # values are 1 - small empires, 2 - large continuous empires, 3 - not necessarily continuous empires
-        modifiers = civ.ai.modifiers.get(AIModifier.CITY_WAR_DISTANCE)
+        modifiers = civ.ai.modifiers.get(Modifier.CITY_WAR_DISTANCE)
         if modifiers is not None:
             gc.setCityWarDistanceAI(civ.id, *modifiers)
 
     def setTechPreferenceModifier(self, civ):
         # 3Miro: setTechPreferenceAI(iCiv,iTech,iVal), for each civ, for each tech, specify how likable it is. iVal is same as in growth.
         # low percent makes the tech less desirable
-        modifiers = civ.ai.modifiers.get(AIModifier.TECH_PREFERENCE)
+        modifiers = civ.ai.modifiers.get(Modifier.TECH_PREFERENCE)
         if modifiers is not None:
             for tech, value in modifiers:
                 gc.setTechPreferenceAI(civ.id, tech.value, value)
+
+    def setDiplomacyModifier(self):
+        # 3Miro: setDiplomacyModifiers(iCiv1,iCiv2,iVal) hidden modifier for the two civ's AI relations. More likely to have OB and so on.
+        # + means they will like each other - they will hate each other.
+        # from Civ1 towards Civ2 (make them symmetric)
+        for civ1, civ2, value in DIPLOMACY_MODIFIERS:
+            gc.setDiplomacyModifiers(civ1.value, civ2.value, value)
 
     def setTechTimeline(self):
         gc.setTimelineTechModifiers(

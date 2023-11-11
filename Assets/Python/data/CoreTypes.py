@@ -74,10 +74,13 @@ class ModifierCategory(IntEnum):
     HUMAN = 1
 
 
-class AIModifier(IntEnum):
+class Modifier(IntEnum):
     CITY_CLUSTER = 0
     CITY_WAR_DISTANCE = 1
     TECH_PREFERENCE = 2
+    GROWTH = 3
+    PRODUCTION = 4
+    SUPPORT = 5
 
 
 class Religion(IntEnum):
