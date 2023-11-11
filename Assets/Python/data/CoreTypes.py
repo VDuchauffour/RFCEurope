@@ -57,7 +57,7 @@ class Scenario(IntEnum):
     i1200AD = 1
 
 
-class StartingSituation(IntEnum):
+class InitialCondition(IntEnum):
     WORKERS = 0
     GOLD = 1
     FAITH = 2
