@@ -74,6 +74,12 @@ class ModifierCategory(IntEnum):
     HUMAN = 1
 
 
+class AIModifier(IntEnum):
+    CITY_CLUSTER = 0
+    CITY_WAR_DISTANCE = 1
+    TECH_PREFERENCE = 2
+
+
 class Religion(IntEnum):
     PROTESTANTISM = 0
     ISLAM = 1

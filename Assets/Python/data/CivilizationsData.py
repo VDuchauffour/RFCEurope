@@ -1,5 +1,6 @@
 from BaseStructures import EnumDataMapper
 from CoreTypes import (
+    AIModifier,
     Civ,
     CivilizationProperty,
     Leader,
@@ -9,6 +10,7 @@ from CoreTypes import (
     StartingSituation,
     InitialModifier,
     ModifierCategory,
+    Technology,
 )
 from CoreStructures import (
     CivDataMapper,
@@ -1115,6 +1117,256 @@ CIV_MODIFIERS = CivDataMapper(
                 do_not_cast=True,
             ),
         },
+    }
+)
+
+# Used by RFCEBalance
+CIV_AI_MODIFIERS = CivDataMapper(
+    {
+        Civ.BYZANTIUM: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: (1, 3, 0),  # 7
+                AIModifier.CITY_WAR_DISTANCE: 2,
+                AIModifier.TECH_PREFERENCE: [],
+            },
+            do_not_cast=True,
+        ),
+        Civ.FRANCE: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: (1, 3, 0),  # 8
+                AIModifier.CITY_WAR_DISTANCE: 2,
+                AIModifier.TECH_PREFERENCE: [],
+            },
+            do_not_cast=True,
+        ),
+        Civ.ARABIA: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: (1, 3, 1),  # 7
+                AIModifier.CITY_WAR_DISTANCE: 2,
+                AIModifier.TECH_PREFERENCE: [],
+            },
+            do_not_cast=True,
+        ),
+        Civ.BULGARIA: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: (2, 3, 4),  # 11
+                AIModifier.CITY_WAR_DISTANCE: 1,
+                AIModifier.TECH_PREFERENCE: [
+                    (Technology.BRONZE_CASTING, 200),
+                ],
+            },
+            do_not_cast=True,
+        ),
+        Civ.CORDOBA: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: (1, 2, 1),  # 10
+                AIModifier.CITY_WAR_DISTANCE: 2,
+                AIModifier.TECH_PREFERENCE: [],
+            },
+            do_not_cast=True,
+        ),
+        Civ.VENECIA: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: (2, 3, 1),  # 14
+                AIModifier.CITY_WAR_DISTANCE: 3,
+                AIModifier.TECH_PREFERENCE: [],
+            },
+            do_not_cast=True,
+        ),
+        Civ.BURGUNDY: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: (2, 3, 3),  # 12
+                AIModifier.CITY_WAR_DISTANCE: 1,
+                AIModifier.TECH_PREFERENCE: [],
+            },
+            do_not_cast=True,
+        ),
+        Civ.GERMANY: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: (2, 3, 4),  # 11
+                AIModifier.CITY_WAR_DISTANCE: 2,
+                AIModifier.TECH_PREFERENCE: [
+                    (Technology.PRINTING_PRESS, 200),
+                ],
+            },
+            do_not_cast=True,
+        ),
+        Civ.NOVGOROD: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: (1, 3, 2),  # 6
+                AIModifier.CITY_WAR_DISTANCE: 2,
+                AIModifier.TECH_PREFERENCE: [],
+            },
+            do_not_cast=True,
+        ),
+        Civ.NORWAY: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: (1, 2, 1),  # 10
+                AIModifier.CITY_WAR_DISTANCE: 3,
+                AIModifier.TECH_PREFERENCE: [],
+            },
+            do_not_cast=True,
+        ),
+        Civ.KIEV: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: (1, 3, 2),  # 6
+                AIModifier.CITY_WAR_DISTANCE: 2,
+                AIModifier.TECH_PREFERENCE: [],
+            },
+            do_not_cast=True,
+        ),
+        Civ.HUNGARY: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: (2, 3, 3),  # 12
+                AIModifier.CITY_WAR_DISTANCE: 2,
+                AIModifier.TECH_PREFERENCE: [],
+            },
+            do_not_cast=True,
+        ),
+        Civ.CASTILE: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: (1, 2, 1),  # 10
+                AIModifier.CITY_WAR_DISTANCE: 3,
+                AIModifier.TECH_PREFERENCE: [
+                    (Technology.ASTRONOMY, 200),
+                ],
+            },
+            do_not_cast=True,
+        ),
+        Civ.DENMARK: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: (2, 3, 3),  # 12
+                AIModifier.CITY_WAR_DISTANCE: 2,
+                AIModifier.TECH_PREFERENCE: [],
+            },
+            do_not_cast=True,
+        ),
+        Civ.SCOTLAND: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: (2, 3, 2),  # 13
+                AIModifier.CITY_WAR_DISTANCE: 1,
+                AIModifier.TECH_PREFERENCE: [],
+            },
+            do_not_cast=True,
+        ),
+        Civ.POLAND: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: (1, 3, 0),  # 8
+                AIModifier.CITY_WAR_DISTANCE: 2,
+                AIModifier.TECH_PREFERENCE: [],
+            },
+            do_not_cast=True,
+        ),
+        Civ.GENOA: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: (2, 3, 1),  # 14
+                AIModifier.CITY_WAR_DISTANCE: 3,
+                AIModifier.TECH_PREFERENCE: [],
+            },
+            do_not_cast=True,
+        ),
+        Civ.MOROCCO: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: (1, 3, 2),  # 6
+                AIModifier.CITY_WAR_DISTANCE: 2,
+                AIModifier.TECH_PREFERENCE: [],
+            },
+            do_not_cast=True,
+        ),
+        Civ.ENGLAND: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: (1, 2, 1),  # 10
+                AIModifier.CITY_WAR_DISTANCE: 3,
+                AIModifier.TECH_PREFERENCE: [
+                    (Technology.PRINTING_PRESS, 150),
+                ],
+            },
+            do_not_cast=True,
+        ),
+        Civ.PORTUGAL: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: (2, 3, 1),  # 14
+                AIModifier.CITY_WAR_DISTANCE: 3,
+                AIModifier.TECH_PREFERENCE: [
+                    (Technology.ASTRONOMY, 200),
+                ],
+            },
+            do_not_cast=True,
+        ),
+        Civ.ARAGON: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: (2, 3, 1),  # 14
+                AIModifier.CITY_WAR_DISTANCE: 3,
+                AIModifier.TECH_PREFERENCE: [],
+            },
+            do_not_cast=True,
+        ),
+        Civ.SWEDEN: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: (1, 2, 2),  # 9
+                AIModifier.CITY_WAR_DISTANCE: 3,
+                AIModifier.TECH_PREFERENCE: [],
+            },
+            do_not_cast=True,
+        ),
+        Civ.PRUSSIA: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: (2, 3, 1),  # 14
+                AIModifier.CITY_WAR_DISTANCE: 2,
+                AIModifier.TECH_PREFERENCE: [],
+            },
+            do_not_cast=True,
+        ),
+        Civ.LITHUANIA: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: (1, 3, 0),  # 8
+                AIModifier.CITY_WAR_DISTANCE: 2,
+                AIModifier.TECH_PREFERENCE: [],
+            },
+            do_not_cast=True,
+        ),
+        Civ.AUSTRIA: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: (2, 3, 3),  # 12
+                AIModifier.CITY_WAR_DISTANCE: 2,
+                AIModifier.TECH_PREFERENCE: [],
+            },
+            do_not_cast=True,
+        ),
+        Civ.OTTOMAN: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: (1, 3, 1),  # 7
+                AIModifier.CITY_WAR_DISTANCE: 2,
+                AIModifier.TECH_PREFERENCE: [],
+            },
+            do_not_cast=True,
+        ),
+        Civ.MOSCOW: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: (1, 4, 1),  # 5
+                AIModifier.CITY_WAR_DISTANCE: 2,
+                AIModifier.TECH_PREFERENCE: [],
+            },
+            do_not_cast=True,
+        ),
+        Civ.DUTCH: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: (2, 3, 1),  # 14
+                AIModifier.CITY_WAR_DISTANCE: 1,
+                AIModifier.TECH_PREFERENCE: [],
+            },
+            do_not_cast=True,
+        ),
+        Civ.POPE: EnumDataMapper(
+            {
+                AIModifier.CITY_CLUSTER: None,
+                AIModifier.CITY_WAR_DISTANCE: None,
+                AIModifier.TECH_PREFERENCE: [
+                    (Technology.PRINTING_PRESS, 10),  # Pope shouldn't want this
+                ],
+            },
+            do_not_cast=True,
+        ),
     }
 )
 

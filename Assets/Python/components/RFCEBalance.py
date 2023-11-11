@@ -1,6 +1,7 @@
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
 from CoreTypes import (
+    AIModifier,
     Building,
     City,
     Civ,
@@ -108,83 +109,6 @@ class RFCEBalance:
         gc.setInitialBuilding(Civ.DUTCH.value, Building.SMOKEHOUSE.value, True)
 
         ####### AI Modifiers
-        # 3Miro: setCityClusterAI(iCiv,iTop,iBottom,iMinus) for each AI civilization (set them for all, but only the AI make difference)
-        # this determines how clustered the cities would be
-        # AI_foundValue in PlayerAI would compute for a candidate city location the number of plots that are taken (i.e. by another city)
-        # in CivIV, if more than a third of the tiles are "taken", do not found city there. In RFC, cities are clustered closer
-        # if ( iTaken > 21 * iTop / iBottom - iMinus ) do not build city there.
-        # RFC default values are 2/3 -1 for Europe, 1/3 - 0 for Russia and 1/2 for Mongolia
-        # for example gc.setCityClusterAI( iByzantium, 1, 3, 0 ) wouldn't allow Byzantium to settle cities if more than 7 tiles are taken
-        gc.setCityClusterAI(Civ.BYZANTIUM.value, 1, 3, 0)  # won't settle if 8+ tiles are taken
-        gc.setCityClusterAI(Civ.FRANCE.value, 1, 3, 0)  # 8
-        gc.setCityClusterAI(Civ.ARABIA.value, 1, 3, 1)  # 7
-        gc.setCityClusterAI(Civ.BULGARIA.value, 2, 3, 4)  # 11
-        gc.setCityClusterAI(Civ.CORDOBA.value, 1, 2, 1)  # 10
-        gc.setCityClusterAI(Civ.VENECIA.value, 2, 3, 1)  # 14
-        gc.setCityClusterAI(Civ.BURGUNDY.value, 2, 3, 3)  # 12
-        gc.setCityClusterAI(Civ.GERMANY.value, 2, 3, 4)  # 11
-        gc.setCityClusterAI(Civ.NOVGOROD.value, 1, 3, 2)  # 6
-        gc.setCityClusterAI(Civ.NORWAY.value, 1, 2, 1)  # 10
-        gc.setCityClusterAI(Civ.KIEV.value, 1, 3, 2)  # 6
-        gc.setCityClusterAI(Civ.HUNGARY.value, 2, 3, 3)  # 12
-        gc.setCityClusterAI(Civ.CASTILE.value, 1, 2, 1)  # 10
-        gc.setCityClusterAI(Civ.DENMARK.value, 2, 3, 3)  # 12
-        gc.setCityClusterAI(Civ.SCOTLAND.value, 2, 3, 2)  # 13
-        gc.setCityClusterAI(Civ.POLAND.value, 1, 3, 0)  # 8
-        gc.setCityClusterAI(Civ.GENOA.value, 2, 3, 1)  # 14
-        gc.setCityClusterAI(Civ.MOROCCO.value, 1, 3, 2)  # 6
-        gc.setCityClusterAI(Civ.ENGLAND.value, 1, 2, 1)  # 10
-        gc.setCityClusterAI(Civ.PORTUGAL.value, 2, 3, 1)  # 14
-        gc.setCityClusterAI(Civ.ARAGON.value, 2, 3, 1)  # 14
-        gc.setCityClusterAI(Civ.SWEDEN.value, 1, 2, 2)  # 9
-        gc.setCityClusterAI(Civ.PRUSSIA.value, 2, 3, 1)  # 14
-        gc.setCityClusterAI(Civ.LITHUANIA.value, 1, 3, 0)  # 8
-        gc.setCityClusterAI(Civ.AUSTRIA.value, 2, 3, 3)  # 12
-        gc.setCityClusterAI(Civ.OTTOMAN.value, 1, 3, 1)  # 7
-        gc.setCityClusterAI(Civ.MOSCOW.value, 1, 4, 1)  # 5
-        gc.setCityClusterAI(Civ.DUTCH.value, 2, 3, 1)  # 14
-
-        # 3Miro: setCityWarDistanceAI(iCiv,iVal), depending on the type of the empire, modify how likely the AI is to attack a city
-        # values are 1 - small empires, 2 - large continuous empires, 3 - not necessarily continuous empires
-        gc.setCityWarDistanceAI(Civ.BYZANTIUM.value, 2)
-        gc.setCityWarDistanceAI(Civ.FRANCE.value, 2)
-        gc.setCityWarDistanceAI(Civ.ARABIA.value, 2)
-        gc.setCityWarDistanceAI(Civ.BULGARIA.value, 1)
-        gc.setCityWarDistanceAI(Civ.CORDOBA.value, 2)
-        gc.setCityWarDistanceAI(Civ.VENECIA.value, 3)
-        gc.setCityWarDistanceAI(Civ.BURGUNDY.value, 1)
-        gc.setCityWarDistanceAI(Civ.GERMANY.value, 2)
-        gc.setCityWarDistanceAI(Civ.NOVGOROD.value, 2)
-        gc.setCityWarDistanceAI(Civ.NORWAY.value, 3)
-        gc.setCityWarDistanceAI(Civ.KIEV.value, 2)
-        gc.setCityWarDistanceAI(Civ.HUNGARY.value, 2)
-        gc.setCityWarDistanceAI(Civ.CASTILE.value, 3)
-        gc.setCityWarDistanceAI(Civ.DENMARK.value, 2)
-        gc.setCityWarDistanceAI(Civ.SCOTLAND.value, 1)
-        gc.setCityWarDistanceAI(Civ.POLAND.value, 2)
-        gc.setCityWarDistanceAI(Civ.GENOA.value, 3)
-        gc.setCityWarDistanceAI(Civ.MOROCCO.value, 2)
-        gc.setCityWarDistanceAI(Civ.ENGLAND.value, 3)
-        gc.setCityWarDistanceAI(Civ.PORTUGAL.value, 3)
-        gc.setCityWarDistanceAI(Civ.ARAGON.value, 3)
-        gc.setCityWarDistanceAI(Civ.SWEDEN.value, 3)
-        gc.setCityWarDistanceAI(Civ.PRUSSIA.value, 2)
-        gc.setCityWarDistanceAI(Civ.LITHUANIA.value, 2)
-        gc.setCityWarDistanceAI(Civ.AUSTRIA.value, 2)
-        gc.setCityWarDistanceAI(Civ.OTTOMAN.value, 2)
-        gc.setCityWarDistanceAI(Civ.MOSCOW.value, 2)
-        gc.setCityWarDistanceAI(Civ.DUTCH.value, 1)
-
-        # 3Miro: setTechPreferenceAI(iCiv,iTech,iVal), for each civ, for each tech, specify how likable it is. iVal is same as in growth.
-        # low percent makes the tech less desirable
-        gc.setTechPreferenceAI(Civ.BULGARIA.value, Technology.BRONZE_CASTING.value, 200)
-        gc.setTechPreferenceAI(Civ.GERMANY.value, Technology.PRINTING_PRESS.value, 200)
-        gc.setTechPreferenceAI(Civ.ENGLAND.value, Technology.PRINTING_PRESS.value, 150)
-        gc.setTechPreferenceAI(
-            Civ.POPE.value, Technology.PRINTING_PRESS.value, 10
-        )  # Pope shouldn't want this
-        gc.setTechPreferenceAI(Civ.CASTILE.value, Technology.ASTRONOMY.value, 200)
-        gc.setTechPreferenceAI(Civ.PORTUGAL.value, Technology.ASTRONOMY.value, 200)
 
         # 3Miro: setDiplomacyModifiers(iCiv1,iCiv2,iVal) hidden modifier for the two civ's AI relations. More likely to have OB and so on.
         # + means they will like each other - they will hate each other.
@@ -315,7 +239,6 @@ class RFCEBalance:
         gc.setUP(
             Civ.VENECIA.value, UniquePower.PRE_ACCESS_CIVICS.value, Civic.MERCHANT_REPUBLIC.value
         )
-        # gc.setUP( iVenecia, UniquePower.ALLOW_SHIPS_IN_FOREIGN_SEA.value, 1 )
 
         gc.setUP(Civ.KIEV.value, UniquePower.CITY_TILE_YIELD_BONUS.value, 1 * 1000 + 100 * 2)
 
@@ -388,8 +311,6 @@ class RFCEBalance:
                 gc.setDiplomacyModifiers(i, Civ.AUSTRIA.value, +4)
         gc.setUP(Civ.AUSTRIA.value, UniquePower.PER_CITY_COMMERCE_BONUS.value, 200)
 
-        # gc.setUP( iTurkey, UniquePower.CONSCRIPTION.value, 330 )
-        # gc.setUP( iTurkey, UniquePower.CONSCRIPTION.value, 1 )
         gc.setUP(Civ.OTTOMAN.value, UniquePower.FREE_UNITS_WITH_FOREIGN_RELIGIONS.value, 1)
 
         gc.setUP(
@@ -820,6 +741,9 @@ class RFCEBalance:
             self.setGrowthModifier(civ)
             self.setProductionModifier(civ)
             self.setSupportModifier(civ)
+            self.setCityClusterModifier(civ)
+            self.setCityWarDistanceModifier(civ)
+            self.setTechPreferenceModifier(civ)
 
     def setGrowthModifier(self, civ):
         # void setGrowthModifiers( int iCiv, int iPop, int iCult, int iGP, int iWorker, int iHealth, int iInitPop );
@@ -859,6 +783,33 @@ class RFCEBalance:
         for category, modifiers in civ.modifiers.support.items():
             if modifiers is not None:
                 fct_mapper[category](civ.id, *modifiers)
+
+    def setCityClusterModifier(self, civ):
+        # 3Miro: setCityClusterAI(iCiv,iTop,iBottom,iMinus) for each AI civilization (set them for all, but only the AI make difference)
+        # this determines how clustered the cities would be
+        # AI_foundValue in PlayerAI would compute for a candidate city location the number of plots that are taken (i.e. by another city)
+        # in CivIV, if more than a third of the tiles are "taken", do not found city there. In RFC, cities are clustered closer
+        # if ( iTaken > 21 * iTop / iBottom - iMinus ) do not build city there.
+        # RFC default values are 2/3 -1 for Europe, 1/3 - 0 for Russia and 1/2 for Mongolia
+        # for example gc.setCityClusterAI( iByzantium, 1, 3, 0 ) wouldn't allow Byzantium to settle cities if more than 7 tiles are taken
+        modifiers = civ.ai.modifiers.get(AIModifier.CITY_CLUSTER)
+        if modifiers is not None:
+            gc.setCityClusterAI(civ.id, *modifiers)
+
+    def setCityWarDistanceModifier(self, civ):
+        # 3Miro: setCityWarDistanceAI(iCiv,iVal), depending on the type of the empire, modify how likely the AI is to attack a city
+        # values are 1 - small empires, 2 - large continuous empires, 3 - not necessarily continuous empires
+        modifiers = civ.ai.modifiers.get(AIModifier.CITY_WAR_DISTANCE)
+        if modifiers is not None:
+            gc.setCityWarDistanceAI(civ.id, *modifiers)
+
+    def setTechPreferenceModifier(self, civ):
+        # 3Miro: setTechPreferenceAI(iCiv,iTech,iVal), for each civ, for each tech, specify how likable it is. iVal is same as in growth.
+        # low percent makes the tech less desirable
+        modifiers = civ.ai.modifiers.get(AIModifier.TECH_PREFERENCE)
+        if modifiers is not None:
+            for tech, value in modifiers:
+                gc.setTechPreferenceAI(civ.id, tech.value, value)
 
     def setTechTimeline(self):
         gc.setTimelineTechModifiers(
