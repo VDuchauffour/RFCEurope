@@ -131,9 +131,12 @@ def civilization(identifier=None):
     if isinstance(identifier, (CyPlayer, CyUnit)):
         return civilizations()[get_civ_by_id(identifier.getCivilizationType())]
 
-    if isinstance(identifier, (CyPlot, CyCity)):
+    if isinstance(identifier, CyPlot):
         if not identifier.isOwned():
             return None
+        return civilizations()[identifier.getOwner()]
+
+    if isinstance(identifier, CyCity):
         return civilizations()[identifier.getOwner()]
 
     raise NotTypeExpectedError(
