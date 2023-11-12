@@ -18,7 +18,7 @@ import CvCameraControls
 import CvTopCivs
 import CvAdvisorUtils
 import RFCUtils
-import RFCEBalance
+import GameBalance
 import random
 from MiscData import WORLD_HEIGHT, MessageData
 from CoreData import civilizations, civilization
@@ -26,7 +26,7 @@ from MapsData import CITIES_MAP
 from CoreTypes import Building, Wonder, Promotion, Project, Improvement, Feature, Unit, Bonus
 
 utils = RFCUtils.RFCUtils()
-balance = RFCEBalance.RFCEBalance()
+balance = GameBalance.GameBalance()
 gc = CyGlobalContext()
 localText = CyTranslator()
 PyPlayer = PyHelpers.PyPlayer

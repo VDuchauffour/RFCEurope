@@ -337,7 +337,7 @@ COMPANY_DEATHDATE = CompanyDataMapper(
     }
 ).fill_missing_members(999)
 
-# used by RFCEBalance for gc.setTimelineTechDateForTech(iTech, iTurn)
+# Used by GameBalance
 TIMELINE_TECH_MODIFIER = [
     (Technology.CALENDAR, 0),
     (Technology.ARCHITECTURE, 30),

@@ -327,7 +327,7 @@ CIV_INITIAL_CONDITION = ScenarioDataMapper(
     }
 )
 
-# Used by RFCEBalance
+# Used by GameBalance
 CIV_INITIAL_BUILDINGS = CivDataMapper(
     {
         Civ.BYZANTIUM: None,
@@ -413,7 +413,7 @@ CIV_INITIAL_BUILDINGS = CivDataMapper(
     }
 )
 
-# Used by RFCEBalance
+# Used by GameBalance
 CIV_HUMAN_MODIFIERS = CivDataMapper(
     {
         Civ.BYZANTIUM: EnumDataMapper(
@@ -644,7 +644,7 @@ CIV_HUMAN_MODIFIERS = CivDataMapper(
     }
 ).fill_missing_members(EnumDataMapper({}))
 
-# Used by RFCEBalance
+# Used by GameBalance
 CIV_AI_MODIFIERS = CivDataMapper(
     {
         Civ.BYZANTIUM: EnumDataMapper(

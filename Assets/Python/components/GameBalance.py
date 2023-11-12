@@ -37,7 +37,7 @@ gc = CyGlobalContext()  # LOQ
 utils = RFCUtils.RFCUtils()
 
 
-class RFCEBalance:
+class GameBalance:
     def setBalanceParameters(self):
         self.setProvinceTypes()
         self.setModifiers()
