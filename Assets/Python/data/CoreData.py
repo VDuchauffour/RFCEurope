@@ -140,5 +140,5 @@ def civilization(identifier=None):
         return civilizations()[identifier.getOwner()]
 
     raise NotTypeExpectedError(
-        "CoreTypes.Civ, Civilization, CyPlayer, CyPlot or CyUnit, or int", type(identifier)
+        "CoreTypes.Civ, Civilization, CyPlayer, CyPlot, CyCity or CyUnit, or int", type(identifier)
     )
