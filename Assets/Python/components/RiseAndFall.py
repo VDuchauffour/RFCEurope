@@ -1415,7 +1415,7 @@ class RiseAndFall:
 
                 for tPlot in utils.getPlotList(tile_min, tile_max):
                     x, y = tPlot
-                    if Tile(tPlot) in civilization(iDeadCiv).location.area.normal.exeception_tiles:
+                    if Tile(tPlot) in civilization(iDeadCiv).location.area.normal.exception_tiles:
                         continue
                     plot = gc.getMap().plot(x, y)
                     if plot.isCity():
