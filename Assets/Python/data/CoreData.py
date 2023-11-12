@@ -3,6 +3,7 @@ from CivilizationsData import (
     CIV_AI_REFORMATION_THRESHOLD,
     CIV_AI_STOP_BIRTH_THRESHOLD,
     CIV_HIRE_MERCENARY_THRESHOLD,
+    CIV_INITIAL_BUILDINGS,
     CIV_INITIAL_CONTACTS,
     CIV_INITIAL_WARS,
     CIV_LEADERS,
@@ -81,6 +82,7 @@ CIVILIZATIONS_BASE = (
     .attach("birth", CIV_BIRTHDATE, key="date")
     .attach("collapse", CIV_COLLAPSE_DATE, key="date")
     .attach("respawning", CIV_RESPAWNING_DATE, key="date")
+    .attach("buildings", CIV_INITIAL_BUILDINGS, key="initial")
 )
 
 CIVILIZATIONS_500AD = (

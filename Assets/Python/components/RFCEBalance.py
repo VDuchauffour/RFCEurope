@@ -39,75 +39,11 @@ utils = RFCUtils.RFCUtils()
 
 class RFCEBalance:
     def setBalanceParameters(self):
-
         self.preMapsNSizes()
+        self.setModifiers()
         self.setTechTimeline()
         self.setDiplomacyModifier()
-        self.setModifiers()
-
-        ##### Set Initial buildings for the civs
-        # gc.setInitialBuilding( iCiv, iBuilding, True\False ), if ( True) give iCiv, building iBuildings else don't Default is False
-        # we can change True <-> False with the onTechAquire event
-
-        gc.setInitialBuilding(Civ.VENECIA.value, Building.HARBOR.value, True)
-        gc.setInitialBuilding(Civ.VENECIA.value, Building.GRANARY.value, True)
-
-        gc.setInitialBuilding(Civ.CASTILE.value, Building.BARRACKS.value, True)
-
-        gc.setInitialBuilding(Civ.DENMARK.value, Building.BARRACKS.value, True)
-
-        gc.setInitialBuilding(Civ.SCOTLAND.value, Building.BARRACKS.value, True)
-
-        gc.setInitialBuilding(Civ.MOSCOW.value, Building.GRANARY.value, True)
-        gc.setInitialBuilding(Civ.MOSCOW.value, Building.BARRACKS.value, True)
-        gc.setInitialBuilding(Civ.MOSCOW.value, Building.FORGE.value, True)
-        gc.setInitialBuilding(Civ.MOSCOW.value, Building.MARKET.value, True)
-
-        gc.setInitialBuilding(Civ.GENOA.value, Building.GRANARY.value, True)
-        gc.setInitialBuilding(Civ.GENOA.value, Building.BARRACKS.value, True)
-        gc.setInitialBuilding(Civ.GENOA.value, Building.HARBOR.value, True)
-
-        gc.setInitialBuilding(Civ.MOROCCO.value, Building.GRANARY.value, True)
-        gc.setInitialBuilding(Civ.MOROCCO.value, Building.BARRACKS.value, True)
-
-        gc.setInitialBuilding(Civ.ENGLAND.value, Building.GRANARY.value, True)
-        gc.setInitialBuilding(Civ.ENGLAND.value, Building.BARRACKS.value, True)
-
-        gc.setInitialBuilding(Civ.PORTUGAL.value, Building.GRANARY.value, True)
-        gc.setInitialBuilding(Civ.PORTUGAL.value, Building.BARRACKS.value, True)
-
-        gc.setInitialBuilding(Civ.ARAGON.value, Building.GRANARY.value, True)
-        gc.setInitialBuilding(Civ.ARAGON.value, Building.BARRACKS.value, True)
-        gc.setInitialBuilding(Civ.ARAGON.value, Building.HARBOR.value, True)
-
-        gc.setInitialBuilding(Civ.PRUSSIA.value, Building.GRANARY.value, True)
-        gc.setInitialBuilding(Civ.PRUSSIA.value, Building.BARRACKS.value, True)
-
-        gc.setInitialBuilding(Civ.LITHUANIA.value, Building.GRANARY.value, True)
-        gc.setInitialBuilding(Civ.LITHUANIA.value, Building.BARRACKS.value, True)
-
-        gc.setInitialBuilding(Civ.AUSTRIA.value, Building.GRANARY.value, True)
-        gc.setInitialBuilding(Civ.AUSTRIA.value, Building.BARRACKS.value, True)
-        gc.setInitialBuilding(Civ.AUSTRIA.value, Building.FORGE.value, True)
-
-        gc.setInitialBuilding(Civ.OTTOMAN.value, Building.GRANARY.value, True)
-        gc.setInitialBuilding(Civ.OTTOMAN.value, Building.BARRACKS.value, True)
-        gc.setInitialBuilding(Civ.OTTOMAN.value, Building.FORGE.value, True)
-        gc.setInitialBuilding(Civ.OTTOMAN.value, Building.HARBOR.value, True)
-
-        gc.setInitialBuilding(Civ.SWEDEN.value, Building.GRANARY.value, True)
-        gc.setInitialBuilding(Civ.SWEDEN.value, Building.BARRACKS.value, True)
-        gc.setInitialBuilding(Civ.SWEDEN.value, Building.HARBOR.value, True)
-
-        gc.setInitialBuilding(Civ.DUTCH.value, Building.GRANARY.value, True)
-        gc.setInitialBuilding(Civ.DUTCH.value, Building.BARRACKS.value, True)
-        gc.setInitialBuilding(Civ.DUTCH.value, Building.FORGE.value, True)
-        gc.setInitialBuilding(Civ.DUTCH.value, Building.HARBOR.value, True)
-        gc.setInitialBuilding(Civ.DUTCH.value, Building.AQUEDUCT.value, True)
-        gc.setInitialBuilding(Civ.DUTCH.value, Building.MARKET.value, True)
-        gc.setInitialBuilding(Civ.DUTCH.value, Building.LIGHTHOUSE.value, True)
-        gc.setInitialBuilding(Civ.DUTCH.value, Building.THEATRE.value, True)
-        gc.setInitialBuilding(Civ.DUTCH.value, Building.SMOKEHOUSE.value, True)
+        self.setInitialBuilding()
 
         ####### 3Miro: UNIQUE POWERS
         # 3Miro: setUP(iCiv,iPower) sets the Unique Powers for C++
@@ -774,6 +710,16 @@ class RFCEBalance:
         # iCost *= 100 - topBuff * iHistoric * iAhistoric / BotBuff, iCost /= 100
         for tech, turn in TIMELINE_TECH_MODIFIER:
             gc.setTimelineTechDateForTech(tech.value, turn)
+
+    def setInitialBuilding(self):
+        ##### Set Initial buildings for the civs
+        # gc.setInitialBuilding( iCiv, iBuilding, True\False ), if ( True) give iCiv, building iBuildings else don't Default is False
+        # we can change True <-> False with the onTechAquire event
+        for civ in civilizations():
+            buildings = civ.initial.buildings
+            if buildings is not None:
+                for building in buildings:
+                    gc.setInitialBuilding(civ.id, building.value, True)
 
     def preMapsNSizes(self):
         # settlersMaps, DO NOT CHANGE THIS CODE

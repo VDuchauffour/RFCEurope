@@ -1,5 +1,6 @@
 from BaseStructures import EnumDataMapper
 from CoreTypes import (
+    Building,
     Civ,
     CivilizationProperty,
     Leader,
@@ -322,6 +323,92 @@ CIV_INITIAL_CONDITION = ScenarioDataMapper(
     {
         Scenario.i500AD: CIV_INITIAL_CONDITION_500AD,
         Scenario.i1200AD: CIV_INITIAL_CONDITION_1200AD,
+    }
+)
+
+# Used by RFCEBalance
+CIV_INITIAL_BUILDINGS = CivDataMapper(
+    {
+        Civ.BYZANTIUM: None,
+        Civ.FRANCE: None,
+        Civ.ARABIA: None,
+        Civ.BULGARIA: None,
+        Civ.CORDOBA: None,
+        Civ.VENECIA: [Building.HARBOR, Building.GRANARY],
+        Civ.BURGUNDY: None,
+        Civ.GERMANY: None,
+        Civ.NOVGOROD: None,
+        Civ.NORWAY: None,
+        Civ.KIEV: None,
+        Civ.HUNGARY: None,
+        Civ.CASTILE: [Building.BARRACKS],
+        Civ.DENMARK: [Building.BARRACKS],
+        Civ.SCOTLAND: [Building.BARRACKS],
+        Civ.POLAND: None,
+        Civ.GENOA: [
+            Building.GRANARY,
+            Building.BARRACKS,
+            Building.HARBOR,
+        ],
+        Civ.MOROCCO: [
+            Building.GRANARY,
+            Building.BARRACKS,
+        ],
+        Civ.ENGLAND: [
+            Building.GRANARY,
+            Building.BARRACKS,
+        ],
+        Civ.PORTUGAL: [
+            Building.GRANARY,
+            Building.BARRACKS,
+        ],
+        Civ.ARAGON: [
+            Building.GRANARY,
+            Building.BARRACKS,
+            Building.HARBOR,
+        ],
+        Civ.SWEDEN: [
+            Building.GRANARY,
+            Building.BARRACKS,
+            Building.FORGE,
+        ],
+        Civ.PRUSSIA: [
+            Building.GRANARY,
+            Building.BARRACKS,
+        ],
+        Civ.LITHUANIA: [
+            Building.GRANARY,
+            Building.BARRACKS,
+        ],
+        Civ.AUSTRIA: [
+            Building.GRANARY,
+            Building.BARRACKS,
+            Building.FORGE,
+        ],
+        Civ.OTTOMAN: [
+            Building.GRANARY,
+            Building.BARRACKS,
+            Building.FORGE,
+            Building.HARBOR,
+        ],
+        Civ.MOSCOW: [
+            Building.GRANARY,
+            Building.BARRACKS,
+            Building.FORGE,
+            Building.MARKET,
+        ],
+        Civ.DUTCH: [
+            Building.GRANARY,
+            Building.BARRACKS,
+            Building.FORGE,
+            Building.HARBOR,
+            Building.AQUEDUCT,
+            Building.MARKET,
+            Building.LIGHTHOUSE,
+            Building.THEATRE,
+            Building.SMOKEHOUSE,
+        ],
+        Civ.POPE: None,
     }
 )
 
