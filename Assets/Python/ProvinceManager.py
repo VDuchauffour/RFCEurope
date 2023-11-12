@@ -89,13 +89,10 @@ class ProvinceManager:
 
     def onRespawn(self, iPlayer):
         # Absinthe: reset the original potential provinces, but only if they wasn't changed to something entirely different later on
-        pPlayer = gc.getPlayer(iPlayer)
-        for iProv in self.tPot2CoreProvinces[iPlayer]:
-            if pPlayer.getProvinceType(iProv) == ProvinceType.CORE.value:
-                pPlayer.setProvinceType(iProv, ProvinceType.POTENTIAL.value)
-        for iProv in self.tPot2NormProvinces[iPlayer]:
-            if pPlayer.getProvinceType(iProv) == ProvinceType.HISTORICAL.value:
-                pPlayer.setProvinceType(iProv, ProvinceType.POTENTIAL.value)
+        civ = civilization(iPlayer)
+        for province in civ.location.provinces[ProvinceType.HISTORICAL]:
+            if civ.player.getProvinceType(iProv) == ProvinceType.HISTORICAL:
+                civ.player.setProvinceType(province.value, ProvinceType.POTENTIAL.value)
 
         # Absinthe: special respawn conditions
         if iPlayer == Civ.CORDOBA.value:
