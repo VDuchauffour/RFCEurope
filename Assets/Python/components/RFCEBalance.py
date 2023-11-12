@@ -8,7 +8,6 @@ from CoreTypes import (
     Civic,
     Colony,
     Feature,
-    ModifierCategory,
     PlagueType,
     Promotion,
     Terrain,
@@ -42,7 +41,8 @@ class RFCEBalance:
     def setBalanceParameters(self):
 
         self.preMapsNSizes()
-        self.setTechTimeline()  # Timeline for correct tech three
+        self.setTechTimeline()
+        self.setDiplomacyModifier()
         self.setModifiers()
 
         ##### Set Initial buildings for the civs
@@ -686,7 +686,11 @@ class RFCEBalance:
             self.setCityWarDistanceModifier(civ)
             self.setTechPreferenceModifier(civ)
 
-        self.setDiplomacyModifier()
+    def _setModifier(self, civ, modifiers, functions):
+        """Modifiers and functions are tuple."""
+        for modifier, fct in zip(modifiers, functions):
+            if modifier is not None:
+                fct(civ.id, *modifier)
 
     def setGrowthModifier(self, civ):
         # void setGrowthModifiers( int iCiv, int iPop, int iCult, int iGP, int iWorker, int iHealth, int iInitPop );
@@ -694,38 +698,38 @@ class RFCEBalance:
         # defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100, 100, 1 )
         # 3Miro: ABOUT CULTURE notice the culture modifier is different from the others, it modifies the culture output as opposed to the culture threshold
         # 	50 means less culture, 200 means more culture. This is applied to Culture output of 10 or more.
-        fct_mapper = {
-            ModifierCategory.AI: gc.setGrowthModifiersAI,
-            ModifierCategory.HUMAN: gc.setGrowthModifiersHu,
-        }
-        for category, modifiers in civ.modifiers.growth.items():
-            if modifiers is not None:
-                fct_mapper[category](civ.id, *modifiers)
+        human_modifier = civ.human.modifiers.get(Modifier.GROWTH)
+        ai_modifier = civ.ai.modifiers.get(Modifier.GROWTH)
+        self._setModifier(
+            civ,
+            (human_modifier, ai_modifier),
+            (gc.setGrowthModifiersHu, gc.setGrowthModifiersAI),
+        )
 
     def setProductionModifier(self, civ):
         # void setProductionModifiers( int iCiv, int iUnits, int iBuildings, int iWonders, int iResearch );
         # defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100 )
         # 3Miro: at 100 research cost, the cost is exactly as in the XML files, the cost in general is however increased for all civs
-        fct_mapper = {
-            ModifierCategory.AI: gc.setProductionModifiersAI,
-            ModifierCategory.HUMAN: gc.setProductionModifiersHu,
-        }
-        for category, modifiers in civ.modifiers.production.items():
-            if modifiers is not None:
-                fct_mapper[category](civ.id, *modifiers)
+        human_modifier = civ.human.modifiers.get(Modifier.PRODUCTION)
+        ai_modifier = civ.ai.modifiers.get(Modifier.PRODUCTION)
+        self._setModifier(
+            civ,
+            (human_modifier, ai_modifier),
+            (gc.setProductionModifiersHu, gc.setProductionModifiersAI),
+        )
 
     def setSupportModifier(self, civ):
         # void setSupportModifiers( int iCiv, int iInflation, int iUnits, int iCityDist, int iCityNum, int iCivic );
         # defaults (i.e. no effect) ( iCiv, 100, 100, 100, 100, 100 )
         # note that iCityNum also gets an additional modifier based on population in the city
         # note that the base for inflation is modified by turn number (among many other things)
-        fct_mapper = {
-            ModifierCategory.AI: gc.setSupportModifiersAI,
-            ModifierCategory.HUMAN: gc.setSupportModifiersHu,
-        }
-        for category, modifiers in civ.modifiers.support.items():
-            if modifiers is not None:
-                fct_mapper[category](civ.id, *modifiers)
+        human_modifier = civ.human.modifiers.get(Modifier.SUPPORT)
+        ai_modifier = civ.ai.modifiers.get(Modifier.SUPPORT)
+        self._setModifier(
+            civ,
+            (human_modifier, ai_modifier),
+            (gc.setSupportModifiersHu, gc.setSupportModifiersAI),
+        )
 
     def setCityClusterModifier(self, civ):
         # 3Miro: setCityClusterAI(iCiv,iTop,iBottom,iMinus) for each AI civilization (set them for all, but only the AI make difference)
@@ -735,23 +739,23 @@ class RFCEBalance:
         # if ( iTaken > 21 * iTop / iBottom - iMinus ) do not build city there.
         # RFC default values are 2/3 -1 for Europe, 1/3 - 0 for Russia and 1/2 for Mongolia
         # for example gc.setCityClusterAI( iByzantium, 1, 3, 0 ) wouldn't allow Byzantium to settle cities if more than 7 tiles are taken
-        modifiers = civ.ai.modifiers.get(Modifier.CITY_CLUSTER)
-        if modifiers is not None:
-            gc.setCityClusterAI(civ.id, *modifiers)
+        ai_modifier = civ.ai.modifiers.get(Modifier.CITY_CLUSTER)
+        if ai_modifier is not None:
+            gc.setCityClusterAI(civ.id, *ai_modifier)
 
     def setCityWarDistanceModifier(self, civ):
         # 3Miro: setCityWarDistanceAI(iCiv,iVal), depending on the type of the empire, modify how likely the AI is to attack a city
         # values are 1 - small empires, 2 - large continuous empires, 3 - not necessarily continuous empires
-        modifiers = civ.ai.modifiers.get(Modifier.CITY_WAR_DISTANCE)
-        if modifiers is not None:
-            gc.setCityWarDistanceAI(civ.id, *modifiers)
+        ai_modifier = civ.ai.modifiers.get(Modifier.CITY_WAR_DISTANCE)
+        if ai_modifier is not None:
+            gc.setCityWarDistanceAI(civ.id, ai_modifier)
 
     def setTechPreferenceModifier(self, civ):
         # 3Miro: setTechPreferenceAI(iCiv,iTech,iVal), for each civ, for each tech, specify how likable it is. iVal is same as in growth.
         # low percent makes the tech less desirable
-        modifiers = civ.ai.modifiers.get(Modifier.TECH_PREFERENCE)
-        if modifiers is not None:
-            for tech, value in modifiers:
+        ai_modifier = civ.ai.modifiers.get(Modifier.TECH_PREFERENCE)
+        if ai_modifier is not None:
+            for tech, value in ai_modifier:
                 gc.setTechPreferenceAI(civ.id, tech.value, value)
 
     def setDiplomacyModifier(self):

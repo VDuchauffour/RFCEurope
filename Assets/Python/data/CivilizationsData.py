@@ -1,6 +1,5 @@
 from BaseStructures import EnumDataMapper
 from CoreTypes import (
-    Modifier,
     Civ,
     CivilizationProperty,
     Leader,
@@ -8,8 +7,7 @@ from CoreTypes import (
     Religion,
     Scenario,
     InitialCondition,
-    InitialModifier,
-    ModifierCategory,
+    Modifier,
     Technology,
 )
 from CoreStructures import (
@@ -328,797 +326,235 @@ CIV_INITIAL_CONDITION = ScenarioDataMapper(
 )
 
 # Used by RFCEBalance
-CIV_MODIFIERS = CivDataMapper(
+CIV_HUMAN_MODIFIERS = CivDataMapper(
     {
-        Civ.BYZANTIUM: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (200, 100, 200, 100, 100, 2),
-                    ModifierCategory.HUMAN: (150, 100, 200, 100, 100, 2),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (200, 200, 200, 350),
-                    ModifierCategory.HUMAN: (200, 150, 200, 350),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (50, 150, 70, 50, 120),
-                    ModifierCategory.HUMAN: (50, 150, 70, 50, 120),
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.FRANCE: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (110, 100, 110, 100, 100, 1),
-                    ModifierCategory.HUMAN: (110, 100, 110, 100, 100, 1),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (140, 120, 125, 150),
-                    ModifierCategory.HUMAN: (150, 120, 125, 130),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (30, 120, 70, 50, 100),
-                    ModifierCategory.HUMAN: (30, 120, 70, 50, 100),
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.ARABIA: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (150, 100, 150, 100, 100, 1),
-                    ModifierCategory.HUMAN: (150, 100, 150, 100, 100, 1),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (130, 125, 150, 280),
-                    ModifierCategory.HUMAN: (150, 125, 150, 230),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (30, 150, 70, 40, 120),
-                    ModifierCategory.HUMAN: (30, 150, 70, 40, 120),
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.BULGARIA: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (150, 100, 100, 100, 100, 1),
-                    ModifierCategory.HUMAN: (125, 100, 100, 100, 100, 1),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (130, 125, 125, 250),
-                    ModifierCategory.HUMAN: (150, 150, 125, 200),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (40, 150, 80, 50, 120),
-                    ModifierCategory.HUMAN: (40, 150, 80, 50, 120),
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.CORDOBA: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (150, 100, 100, 100, 100, 1),
-                    ModifierCategory.HUMAN: (150, 100, 100, 100, 100, 1),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (180, 170, 130, 250),
-                    ModifierCategory.HUMAN: (200, 180, 140, 230),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (40, 150, 70, 40, 120),
-                    ModifierCategory.HUMAN: (40, 150, 70, 40, 120),
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.VENECIA: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (125, 100, 100, 100, 100, 2),
-                    ModifierCategory.HUMAN: (125, 100, 100, 100, 100, 2),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (100, 100, 100, 150),
-                    ModifierCategory.HUMAN: (100, 100, 100, 130),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (20, 100, 60, 50, 100),
-                    ModifierCategory.HUMAN: (20, 100, 60, 50, 100),
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.BURGUNDY: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (100, 100, 100, 100, 100, 2),
-                    ModifierCategory.HUMAN: (100, 100, 100, 100, 100, 2),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (130, 120, 120, 150),
-                    ModifierCategory.HUMAN: (150, 120, 120, 150),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (30, 120, 70, 40, 100),
-                    ModifierCategory.HUMAN: (30, 120, 70, 40, 100),
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.GERMANY: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (125, 100, 100, 100, 100, 2),
-                    ModifierCategory.HUMAN: (125, 100, 100, 100, 100, 2),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (120, 120, 100, 140),
-                    ModifierCategory.HUMAN: (140, 140, 125, 130),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (20, 100, 70, 40, 100),
-                    ModifierCategory.HUMAN: (20, 100, 70, 40, 100),
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.NOVGOROD: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (100, 100, 100, 100, 100, 2),
-                    ModifierCategory.HUMAN: (100, 100, 100, 100, 100, 2),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (120, 120, 120, 150),
-                    ModifierCategory.HUMAN: (125, 125, 125, 150),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (30, 120, 70, 40, 100),
-                    ModifierCategory.HUMAN: (30, 120, 70, 40, 100),
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.NORWAY: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (100, 100, 100, 100, 100, 2),
-                    ModifierCategory.HUMAN: (100, 100, 100, 100, 100, 2),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (125, 125, 125, 130),
-                    ModifierCategory.HUMAN: (125, 125, 100, 140),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (20, 100, 60, 40, 100),
-                    ModifierCategory.HUMAN: (20, 100, 60, 40, 100),
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.KIEV: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (150, 100, 100, 100, 100, 2),
-                    ModifierCategory.HUMAN: (150, 100, 100, 100, 100, 2),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (100, 120, 100, 140),
-                    ModifierCategory.HUMAN: (125, 150, 125, 150),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (30, 120, 60, 40, 100),
-                    ModifierCategory.HUMAN: (30, 120, 60, 40, 100),
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.HUNGARY: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (125, 100, 100, 100, 100, 2),
-                    ModifierCategory.HUMAN: (125, 100, 100, 100, 100, 2),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (120, 120, 100, 150),
-                    ModifierCategory.HUMAN: (125, 125, 100, 130),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (25, 100, 70, 40, 100),
-                    ModifierCategory.HUMAN: (25, 100, 70, 40, 100),
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.CASTILE: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (125, 100, 100, 100, 100, 2),
-                    ModifierCategory.HUMAN: (125, 100, 100, 100, 100, 2),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (100, 100, 100, 130),
-                    ModifierCategory.HUMAN: (125, 100, 100, 120),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (20, 100, 60, 40, 100),
-                    ModifierCategory.HUMAN: (20, 100, 60, 40, 100),
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.DENMARK: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (100, 100, 100, 100, 100, 2),
-                    ModifierCategory.HUMAN: (100, 100, 100, 100, 100, 2),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (100, 100, 100, 110),
-                    ModifierCategory.HUMAN: (100, 100, 100, 120),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (20, 100, 80, 50, 100),
-                    ModifierCategory.HUMAN: (20, 100, 80, 50, 100),
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.SCOTLAND: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (100, 100, 100, 100, 100, 2),
-                    ModifierCategory.HUMAN: (100, 100, 100, 100, 100, 2),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (100, 100, 100, 125),
-                    ModifierCategory.HUMAN: (110, 110, 110, 125),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (25, 100, 80, 50, 100),
-                    ModifierCategory.HUMAN: (25, 100, 80, 50, 100),
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.POLAND: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (125, 100, 100, 100, 100, 2),
-                    ModifierCategory.HUMAN: (125, 100, 100, 100, 100, 2),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (100, 120, 120, 140),
-                    ModifierCategory.HUMAN: (120, 120, 120, 130),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (25, 100, 70, 40, 100),
-                    ModifierCategory.HUMAN: (25, 100, 70, 40, 100),
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.GENOA: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (100, 100, 100, 100, 100, 3),
-                    ModifierCategory.HUMAN: (100, 100, 100, 100, 100, 3),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (100, 100, 100, 130),
-                    ModifierCategory.HUMAN: (100, 100, 100, 125),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (20, 100, 60, 50, 100),
-                    ModifierCategory.HUMAN: (20, 100, 60, 50, 100),
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.MOROCCO: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (100, 100, 100, 100, 100, 3),
-                    ModifierCategory.HUMAN: (100, 100, 100, 100, 100, 3),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (120, 120, 120, 175),
-                    ModifierCategory.HUMAN: (120, 120, 120, 175),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (25, 100, 60, 40, 100),
-                    ModifierCategory.HUMAN: (25, 100, 60, 40, 100),
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.ENGLAND: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (100, 100, 100, 100, 100, 3),
-                    ModifierCategory.HUMAN: (100, 100, 100, 100, 100, 3),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (80, 80, 100, 120),
-                    ModifierCategory.HUMAN: (100, 100, 100, 110),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (20, 100, 60, 40, 100),
-                    ModifierCategory.HUMAN: (20, 100, 60, 40, 100),
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.PORTUGAL: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (100, 150, 100, 100, 100, 3),
-                    ModifierCategory.HUMAN: (100, 150, 100, 100, 100, 3),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (70, 90, 100, 110),
-                    ModifierCategory.HUMAN: (80, 90, 100, 100),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (20, 100, 70, 50, 100),
-                    ModifierCategory.HUMAN: (20, 100, 70, 50, 100),
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.ARAGON: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (100, 150, 100, 100, 100, 3),
-                    ModifierCategory.HUMAN: (100, 150, 100, 100, 100, 3),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (75, 90, 100, 125),
-                    ModifierCategory.HUMAN: (80, 100, 100, 125),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (25, 100, 70, 40, 100),
-                    ModifierCategory.HUMAN: (25, 100, 70, 40, 100),
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.SWEDEN: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (100, 100, 100, 100, 100, 3),
-                    ModifierCategory.HUMAN: (100, 100, 100, 100, 100, 3),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (80, 80, 100, 100),
-                    ModifierCategory.HUMAN: (80, 80, 100, 100),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (20, 90, 70, 40, 100),
-                    ModifierCategory.HUMAN: (20, 90, 70, 40, 100),
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.PRUSSIA: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (100, 100, 100, 100, 100, 3),
-                    ModifierCategory.HUMAN: (100, 100, 100, 100, 100, 3),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (60, 80, 120, 90),
-                    ModifierCategory.HUMAN: (75, 80, 120, 100),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (20, 90, 70, 40, 100),
-                    ModifierCategory.HUMAN: (20, 90, 70, 40, 100),
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.LITHUANIA: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (100, 100, 100, 100, 100, 3),
-                    ModifierCategory.HUMAN: (100, 100, 100, 100, 100, 3),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (70, 100, 110, 110),
-                    ModifierCategory.HUMAN: (80, 100, 110, 100),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (25, 100, 70, 40, 100),
-                    ModifierCategory.HUMAN: (25, 100, 70, 40, 100),
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.AUSTRIA: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    # Austria is squashed by other's culture, they need the boost
-                    ModifierCategory.AI: (100, 200, 100, 100, 100, 3),
-                    ModifierCategory.HUMAN: (100, 150, 100, 100, 100, 3),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (50, 80, 100, 80),
-                    ModifierCategory.HUMAN: (80, 80, 100, 100),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (20, 80, 80, 40, 100),
-                    ModifierCategory.HUMAN: (20, 80, 80, 40, 100),
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.OTTOMAN: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (100, 150, 100, 100, 100, 3),
-                    ModifierCategory.HUMAN: (100, 150, 100, 100, 100, 3),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (60, 75, 100, 120),
-                    ModifierCategory.HUMAN: (75, 75, 100, 110),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (30, 100, 60, 40, 100),
-                    ModifierCategory.HUMAN: (30, 100, 60, 40, 100),
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.MOSCOW: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (100, 100, 100, 100, 100, 3),
-                    ModifierCategory.HUMAN: (100, 100, 100, 100, 100, 3),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (80, 80, 100, 120),
-                    ModifierCategory.HUMAN: (110, 110, 100, 120),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (25, 100, 70, 40, 100),
-                    ModifierCategory.HUMAN: (25, 100, 70, 40, 100),
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.DUTCH: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (100, 200, 60, 100, 50, 4),
-                    ModifierCategory.HUMAN: (100, 200, 60, 100, 50, 4),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (80, 50, 50, 50),
-                    ModifierCategory.HUMAN: (90, 50, 60, 50),
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (20, 70, 80, 50, 100),
-                    ModifierCategory.HUMAN: (20, 70, 80, 50, 100),
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.POPE: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (150, 100, 100, 50, 100, 1),
-                    ModifierCategory.HUMAN: None,
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (300, 200, 100, 350),
-                    ModifierCategory.HUMAN: None,
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (20, 150, 80, 50, 100),
-                    ModifierCategory.HUMAN: None,
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.INDEPENDENT: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (150, 100, 100, 50, 100, 1),
-                    ModifierCategory.HUMAN: None,
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    # The peaceful ones
-                    ModifierCategory.AI: (170, 100, 400, 200),
-                    ModifierCategory.HUMAN: None,
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (10, 100, 10, 20, 100),
-                    ModifierCategory.HUMAN: None,
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.INDEPENDENT_2: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (150, 100, 100, 50, 100, 1),
-                    ModifierCategory.HUMAN: None,
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    # The peaceful ones
-                    ModifierCategory.AI: (170, 100, 400, 200),
-                    ModifierCategory.HUMAN: None,
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (10, 100, 10, 20, 100),
-                    ModifierCategory.HUMAN: None,
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.INDEPENDENT_3: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (150, 100, 100, 50, 100, 1),
-                    ModifierCategory.HUMAN: None,
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    # The warlike ones
-                    ModifierCategory.AI: (125, 100, 600, 300),
-                    ModifierCategory.HUMAN: None,
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (10, 100, 10, 20, 100),
-                    ModifierCategory.HUMAN: None,
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.INDEPENDENT_4: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (150, 100, 100, 50, 100, 1),
-                    ModifierCategory.HUMAN: None,
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    # The warlike ones
-                    ModifierCategory.AI: (125, 100, 600, 300),
-                    ModifierCategory.HUMAN: None,
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (10, 100, 10, 20, 100),
-                    ModifierCategory.HUMAN: None,
-                },
-                do_not_cast=True,
-            ),
-        },
-        Civ.BARBARIAN: {
-            InitialModifier.GROWTH: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (150, 100, 100, 50, 100, 1),
-                    ModifierCategory.HUMAN: None,
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.PRODUCTION: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (125, 100, 900, 350),
-                    ModifierCategory.HUMAN: None,
-                },
-                do_not_cast=True,
-            ),
-            InitialModifier.SUPPORT: EnumDataMapper(
-                {
-                    ModifierCategory.AI: (10, 250, 10, 20, 100),
-                    ModifierCategory.HUMAN: None,
-                },
-                do_not_cast=True,
-            ),
-        },
+        Civ.BYZANTIUM: EnumDataMapper(
+            {
+                Modifier.GROWTH: (150, 100, 200, 100, 100, 2),
+                Modifier.PRODUCTION: (200, 150, 200, 350),
+                Modifier.SUPPORT: (50, 150, 70, 50, 120),
+            },
+            do_not_cast=True,
+        ),
+        Civ.FRANCE: EnumDataMapper(
+            {
+                Modifier.GROWTH: (110, 100, 110, 100, 100, 1),
+                Modifier.PRODUCTION: (150, 120, 125, 130),
+                Modifier.SUPPORT: (30, 120, 70, 50, 100),
+            },
+            do_not_cast=True,
+        ),
+        Civ.ARABIA: EnumDataMapper(
+            {
+                Modifier.GROWTH: (150, 100, 150, 100, 100, 1),
+                Modifier.PRODUCTION: (150, 125, 150, 230),
+                Modifier.SUPPORT: (30, 150, 70, 40, 120),
+            },
+            do_not_cast=True,
+        ),
+        Civ.BULGARIA: EnumDataMapper(
+            {
+                Modifier.GROWTH: (125, 100, 100, 100, 100, 1),
+                Modifier.PRODUCTION: (150, 150, 125, 200),
+                Modifier.SUPPORT: (40, 150, 80, 50, 120),
+            },
+            do_not_cast=True,
+        ),
+        Civ.CORDOBA: EnumDataMapper(
+            {
+                Modifier.GROWTH: (150, 100, 100, 100, 100, 1),
+                Modifier.PRODUCTION: (200, 180, 140, 230),
+                Modifier.SUPPORT: (40, 150, 70, 40, 120),
+            },
+            do_not_cast=True,
+        ),
+        Civ.VENECIA: EnumDataMapper(
+            {
+                Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
+                Modifier.PRODUCTION: (100, 100, 100, 130),
+                Modifier.SUPPORT: (20, 100, 60, 50, 100),
+            },
+            do_not_cast=True,
+        ),
+        Civ.BURGUNDY: EnumDataMapper(
+            {
+                Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
+                Modifier.PRODUCTION: (150, 120, 120, 150),
+                Modifier.SUPPORT: (30, 120, 70, 40, 100),
+            },
+            do_not_cast=True,
+        ),
+        Civ.GERMANY: EnumDataMapper(
+            {
+                Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
+                Modifier.PRODUCTION: (140, 140, 125, 130),
+                Modifier.SUPPORT: (20, 100, 70, 40, 100),
+            },
+            do_not_cast=True,
+        ),
+        Civ.NOVGOROD: EnumDataMapper(
+            {
+                Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
+                Modifier.PRODUCTION: (125, 125, 125, 150),
+                Modifier.SUPPORT: (30, 120, 70, 40, 100),
+            },
+            do_not_cast=True,
+        ),
+        Civ.NORWAY: EnumDataMapper(
+            {
+                Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
+                Modifier.PRODUCTION: (125, 125, 100, 140),
+                Modifier.SUPPORT: (20, 100, 60, 40, 100),
+            },
+            do_not_cast=True,
+        ),
+        Civ.KIEV: EnumDataMapper(
+            {
+                Modifier.GROWTH: (150, 100, 100, 100, 100, 2),
+                Modifier.PRODUCTION: (125, 150, 125, 150),
+                Modifier.SUPPORT: (30, 120, 60, 40, 100),
+            },
+            do_not_cast=True,
+        ),
+        Civ.HUNGARY: EnumDataMapper(
+            {
+                Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
+                Modifier.PRODUCTION: (125, 125, 100, 130),
+                Modifier.SUPPORT: (25, 100, 70, 40, 100),
+            },
+            do_not_cast=True,
+        ),
+        Civ.CASTILE: EnumDataMapper(
+            {
+                Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
+                Modifier.PRODUCTION: (125, 100, 100, 120),
+                Modifier.SUPPORT: (20, 100, 60, 40, 100),
+            },
+            do_not_cast=True,
+        ),
+        Civ.DENMARK: EnumDataMapper(
+            {
+                Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
+                Modifier.PRODUCTION: (100, 100, 100, 120),
+                Modifier.SUPPORT: (20, 100, 80, 50, 100),
+            },
+            do_not_cast=True,
+        ),
+        Civ.SCOTLAND: EnumDataMapper(
+            {
+                Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
+                Modifier.PRODUCTION: (110, 110, 110, 125),
+                Modifier.SUPPORT: (25, 100, 80, 50, 100),
+            },
+            do_not_cast=True,
+        ),
+        Civ.POLAND: EnumDataMapper(
+            {
+                Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
+                Modifier.PRODUCTION: (120, 120, 120, 130),
+                Modifier.SUPPORT: (25, 100, 70, 40, 100),
+            },
+            do_not_cast=True,
+        ),
+        Civ.GENOA: EnumDataMapper(
+            {
+                Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
+                Modifier.PRODUCTION: (100, 100, 100, 125),
+                Modifier.SUPPORT: (20, 100, 60, 50, 100),
+            },
+            do_not_cast=True,
+        ),
+        Civ.MOROCCO: EnumDataMapper(
+            {
+                Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
+                Modifier.PRODUCTION: (120, 120, 120, 175),
+                Modifier.SUPPORT: (25, 100, 60, 40, 100),
+            },
+            do_not_cast=True,
+        ),
+        Civ.ENGLAND: EnumDataMapper(
+            {
+                Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
+                Modifier.PRODUCTION: (100, 100, 100, 110),
+                Modifier.SUPPORT: (20, 100, 60, 40, 100),
+            },
+            do_not_cast=True,
+        ),
+        Civ.PORTUGAL: EnumDataMapper(
+            {
+                Modifier.GROWTH: (100, 150, 100, 100, 100, 3),
+                Modifier.PRODUCTION: (80, 90, 100, 100),
+                Modifier.SUPPORT: (20, 100, 70, 50, 100),
+            },
+            do_not_cast=True,
+        ),
+        Civ.ARAGON: EnumDataMapper(
+            {
+                Modifier.GROWTH: (100, 150, 100, 100, 100, 3),
+                Modifier.PRODUCTION: (80, 100, 100, 125),
+                Modifier.SUPPORT: (25, 100, 70, 40, 100),
+            },
+            do_not_cast=True,
+        ),
+        Civ.SWEDEN: EnumDataMapper(
+            {
+                Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
+                Modifier.PRODUCTION: (80, 80, 100, 100),
+                Modifier.SUPPORT: (20, 90, 70, 40, 100),
+            },
+            do_not_cast=True,
+        ),
+        Civ.PRUSSIA: EnumDataMapper(
+            {
+                Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
+                Modifier.PRODUCTION: (75, 80, 120, 100),
+                Modifier.SUPPORT: (20, 90, 70, 40, 100),
+            },
+            do_not_cast=True,
+        ),
+        Civ.LITHUANIA: EnumDataMapper(
+            {
+                Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
+                Modifier.PRODUCTION: (80, 100, 110, 100),
+                Modifier.SUPPORT: (25, 100, 70, 40, 100),
+            },
+            do_not_cast=True,
+        ),
+        Civ.AUSTRIA: EnumDataMapper(
+            {
+                # Austria is squashed by other's culture, they need the boost
+                Modifier.GROWTH: (100, 150, 100, 100, 100, 3),
+                Modifier.PRODUCTION: (80, 80, 100, 100),
+                Modifier.SUPPORT: (20, 80, 80, 40, 100),
+            },
+            do_not_cast=True,
+        ),
+        Civ.OTTOMAN: EnumDataMapper(
+            {
+                Modifier.GROWTH: (100, 150, 100, 100, 100, 3),
+                Modifier.PRODUCTION: (75, 75, 100, 110),
+                Modifier.SUPPORT: (30, 100, 60, 40, 100),
+            },
+            do_not_cast=True,
+        ),
+        Civ.MOSCOW: EnumDataMapper(
+            {
+                Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
+                Modifier.PRODUCTION: (110, 110, 100, 120),
+                Modifier.SUPPORT: (25, 100, 70, 40, 100),
+            },
+            do_not_cast=True,
+        ),
+        Civ.DUTCH: EnumDataMapper(
+            {
+                Modifier.GROWTH: (100, 200, 60, 100, 50, 4),
+                Modifier.PRODUCTION: (90, 50, 60, 50),
+                Modifier.SUPPORT: (20, 70, 80, 50, 100),
+            },
+            do_not_cast=True,
+        ),
     }
-)
+).fill_missing_members(EnumDataMapper({}))
 
 # Used by RFCEBalance
 CIV_AI_MODIFIERS = CivDataMapper(
@@ -1128,6 +564,9 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (1, 3, 0),  # 7
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.GROWTH: (200, 100, 200, 100, 100, 2),
+                Modifier.PRODUCTION: (200, 200, 200, 350),
+                Modifier.SUPPORT: (50, 150, 70, 50, 120),
             },
             do_not_cast=True,
         ),
@@ -1136,6 +575,9 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (1, 3, 0),  # 8
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.GROWTH: (110, 100, 110, 100, 100, 1),
+                Modifier.PRODUCTION: (140, 120, 125, 150),
+                Modifier.SUPPORT: (30, 120, 70, 50, 100),
             },
             do_not_cast=True,
         ),
@@ -1144,6 +586,9 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (1, 3, 1),  # 7
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.GROWTH: (150, 100, 150, 100, 100, 1),
+                Modifier.PRODUCTION: (130, 125, 150, 280),
+                Modifier.SUPPORT: (30, 150, 70, 40, 120),
             },
             do_not_cast=True,
         ),
@@ -1154,6 +599,9 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.TECH_PREFERENCE: [
                     (Technology.BRONZE_CASTING, 200),
                 ],
+                Modifier.GROWTH: (150, 100, 100, 100, 100, 1),
+                Modifier.PRODUCTION: (130, 125, 125, 250),
+                Modifier.SUPPORT: (40, 150, 80, 50, 120),
             },
             do_not_cast=True,
         ),
@@ -1162,6 +610,9 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (1, 2, 1),  # 10
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.GROWTH: (150, 100, 100, 100, 100, 1),
+                Modifier.PRODUCTION: (180, 170, 130, 250),
+                Modifier.SUPPORT: (40, 150, 70, 40, 120),
             },
             do_not_cast=True,
         ),
@@ -1170,6 +621,9 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (2, 3, 1),  # 14
                 Modifier.CITY_WAR_DISTANCE: 3,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
+                Modifier.PRODUCTION: (100, 100, 100, 150),
+                Modifier.SUPPORT: (20, 100, 60, 50, 100),
             },
             do_not_cast=True,
         ),
@@ -1178,6 +632,9 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (2, 3, 3),  # 12
                 Modifier.CITY_WAR_DISTANCE: 1,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
+                Modifier.PRODUCTION: (130, 120, 120, 150),
+                Modifier.SUPPORT: (30, 120, 70, 40, 100),
             },
             do_not_cast=True,
         ),
@@ -1188,6 +645,9 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.TECH_PREFERENCE: [
                     (Technology.PRINTING_PRESS, 200),
                 ],
+                Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
+                Modifier.PRODUCTION: (120, 120, 100, 140),
+                Modifier.SUPPORT: (20, 100, 70, 40, 100),
             },
             do_not_cast=True,
         ),
@@ -1196,6 +656,9 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (1, 3, 2),  # 6
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
+                Modifier.PRODUCTION: (120, 120, 120, 150),
+                Modifier.SUPPORT: (30, 120, 70, 40, 100),
             },
             do_not_cast=True,
         ),
@@ -1204,6 +667,9 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (1, 2, 1),  # 10
                 Modifier.CITY_WAR_DISTANCE: 3,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
+                Modifier.PRODUCTION: (125, 125, 125, 130),
+                Modifier.SUPPORT: (20, 100, 60, 40, 100),
             },
             do_not_cast=True,
         ),
@@ -1212,6 +678,9 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (1, 3, 2),  # 6
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.GROWTH: (150, 100, 100, 100, 100, 2),
+                Modifier.PRODUCTION: (100, 120, 100, 140),
+                Modifier.SUPPORT: (30, 120, 60, 40, 100),
             },
             do_not_cast=True,
         ),
@@ -1220,6 +689,9 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (2, 3, 3),  # 12
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
+                Modifier.PRODUCTION: (120, 120, 100, 150),
+                Modifier.SUPPORT: (25, 100, 70, 40, 100),
             },
             do_not_cast=True,
         ),
@@ -1230,6 +702,9 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.TECH_PREFERENCE: [
                     (Technology.ASTRONOMY, 200),
                 ],
+                Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
+                Modifier.PRODUCTION: (100, 100, 100, 130),
+                Modifier.SUPPORT: (20, 100, 60, 40, 100),
             },
             do_not_cast=True,
         ),
@@ -1238,6 +713,9 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (2, 3, 3),  # 12
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
+                Modifier.PRODUCTION: (100, 100, 100, 110),
+                Modifier.SUPPORT: (20, 100, 80, 50, 100),
             },
             do_not_cast=True,
         ),
@@ -1246,6 +724,9 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (2, 3, 2),  # 13
                 Modifier.CITY_WAR_DISTANCE: 1,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
+                Modifier.PRODUCTION: (100, 100, 100, 125),
+                Modifier.SUPPORT: (25, 100, 80, 50, 100),
             },
             do_not_cast=True,
         ),
@@ -1254,6 +735,9 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (1, 3, 0),  # 8
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
+                Modifier.PRODUCTION: (100, 120, 120, 140),
+                Modifier.SUPPORT: (25, 100, 70, 40, 100),
             },
             do_not_cast=True,
         ),
@@ -1262,6 +746,9 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (2, 3, 1),  # 14
                 Modifier.CITY_WAR_DISTANCE: 3,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
+                Modifier.PRODUCTION: (100, 100, 100, 130),
+                Modifier.SUPPORT: (20, 100, 60, 50, 100),
             },
             do_not_cast=True,
         ),
@@ -1270,6 +757,9 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (1, 3, 2),  # 6
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
+                Modifier.PRODUCTION: (120, 120, 120, 175),
+                Modifier.SUPPORT: (25, 100, 60, 40, 100),
             },
             do_not_cast=True,
         ),
@@ -1280,6 +770,9 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.TECH_PREFERENCE: [
                     (Technology.PRINTING_PRESS, 150),
                 ],
+                Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
+                Modifier.PRODUCTION: (80, 80, 100, 120),
+                Modifier.SUPPORT: (20, 100, 60, 40, 100),
             },
             do_not_cast=True,
         ),
@@ -1290,6 +783,9 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.TECH_PREFERENCE: [
                     (Technology.ASTRONOMY, 200),
                 ],
+                Modifier.GROWTH: (100, 150, 100, 100, 100, 3),
+                Modifier.PRODUCTION: (70, 90, 100, 110),
+                Modifier.SUPPORT: (20, 100, 70, 50, 100),
             },
             do_not_cast=True,
         ),
@@ -1298,6 +794,9 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (2, 3, 1),  # 14
                 Modifier.CITY_WAR_DISTANCE: 3,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.GROWTH: (100, 150, 100, 100, 100, 3),
+                Modifier.PRODUCTION: (75, 90, 100, 125),
+                Modifier.SUPPORT: (25, 100, 70, 40, 100),
             },
             do_not_cast=True,
         ),
@@ -1306,6 +805,9 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (1, 2, 2),  # 9
                 Modifier.CITY_WAR_DISTANCE: 3,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
+                Modifier.PRODUCTION: (80, 80, 100, 100),
+                Modifier.SUPPORT: (20, 90, 70, 40, 100),
             },
             do_not_cast=True,
         ),
@@ -1314,6 +816,9 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (2, 3, 1),  # 14
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
+                Modifier.PRODUCTION: (60, 80, 120, 90),
+                Modifier.SUPPORT: (20, 90, 70, 40, 100),
             },
             do_not_cast=True,
         ),
@@ -1322,6 +827,9 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (1, 3, 0),  # 8
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
+                Modifier.PRODUCTION: (70, 100, 110, 110),
+                Modifier.SUPPORT: (25, 100, 70, 40, 100),
             },
             do_not_cast=True,
         ),
@@ -1330,6 +838,10 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (2, 3, 3),  # 12
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                # Austria is squashed by other's culture, they need the boost
+                Modifier.GROWTH: (100, 200, 100, 100, 100, 3),
+                Modifier.PRODUCTION: (50, 80, 100, 80),
+                Modifier.SUPPORT: (20, 80, 80, 40, 100),
             },
             do_not_cast=True,
         ),
@@ -1338,6 +850,9 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (1, 3, 1),  # 7
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.GROWTH: (100, 150, 100, 100, 100, 3),
+                Modifier.PRODUCTION: (60, 75, 100, 120),
+                Modifier.SUPPORT: (30, 100, 60, 40, 100),
             },
             do_not_cast=True,
         ),
@@ -1346,6 +861,9 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (1, 4, 1),  # 5
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
+                Modifier.PRODUCTION: (80, 80, 100, 120),
+                Modifier.SUPPORT: (25, 100, 70, 40, 100),
             },
             do_not_cast=True,
         ),
@@ -1354,6 +872,9 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (2, 3, 1),  # 14
                 Modifier.CITY_WAR_DISTANCE: 1,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.GROWTH: (100, 200, 60, 100, 50, 4),
+                Modifier.PRODUCTION: (80, 50, 50, 50),
+                Modifier.SUPPORT: (20, 70, 80, 50, 100),
             },
             do_not_cast=True,
         ),
@@ -1364,6 +885,68 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.TECH_PREFERENCE: [
                     (Technology.PRINTING_PRESS, 10),  # Pope shouldn't want this
                 ],
+                Modifier.GROWTH: (150, 100, 100, 50, 100, 1),
+                Modifier.PRODUCTION: (300, 200, 100, 350),
+                Modifier.SUPPORT: (20, 150, 80, 50, 100),
+            },
+            do_not_cast=True,
+        ),
+        Civ.INDEPENDENT: EnumDataMapper(
+            {
+                Modifier.CITY_CLUSTER: None,
+                Modifier.CITY_WAR_DISTANCE: None,
+                Modifier.TECH_PREFERENCE: [],
+                Modifier.GROWTH: (100, 100, 100, 50, 100, 1),
+                # The peaceful ones
+                Modifier.PRODUCTION: (170, 100, 400, 200),
+                Modifier.SUPPORT: (10, 100, 10, 20, 100),
+            },
+            do_not_cast=True,
+        ),
+        Civ.INDEPENDENT_2: EnumDataMapper(
+            {
+                Modifier.CITY_CLUSTER: None,
+                Modifier.CITY_WAR_DISTANCE: None,
+                Modifier.TECH_PREFERENCE: [],
+                Modifier.GROWTH: (100, 100, 100, 50, 100, 1),
+                # The peaceful ones
+                Modifier.PRODUCTION: (170, 100, 400, 200),
+                Modifier.SUPPORT: (10, 100, 10, 20, 100),
+            },
+            do_not_cast=True,
+        ),
+        Civ.INDEPENDENT_3: EnumDataMapper(
+            {
+                Modifier.CITY_CLUSTER: None,
+                Modifier.CITY_WAR_DISTANCE: None,
+                Modifier.TECH_PREFERENCE: [],
+                Modifier.GROWTH: (100, 100, 100, 50, 100, 1),
+                # The warlike ones
+                Modifier.PRODUCTION: (125, 100, 600, 300),
+                Modifier.SUPPORT: (10, 100, 10, 20, 100),
+            },
+            do_not_cast=True,
+        ),
+        Civ.INDEPENDENT_4: EnumDataMapper(
+            {
+                Modifier.CITY_CLUSTER: None,
+                Modifier.CITY_WAR_DISTANCE: None,
+                Modifier.TECH_PREFERENCE: [],
+                Modifier.GROWTH: (100, 100, 100, 50, 100, 1),
+                # The warlike ones
+                Modifier.PRODUCTION: (125, 100, 600, 300),
+                Modifier.SUPPORT: (10, 100, 10, 20, 100),
+            },
+            do_not_cast=True,
+        ),
+        Civ.BARBARIAN: EnumDataMapper(
+            {
+                Modifier.CITY_CLUSTER: None,
+                Modifier.CITY_WAR_DISTANCE: None,
+                Modifier.TECH_PREFERENCE: [],
+                Modifier.GROWTH: (100, 100, 100, 50, 100, 1),
+                Modifier.PRODUCTION: (125, 100, 900, 350),
+                Modifier.SUPPORT: (10, 250, 10, 20, 100),
             },
             do_not_cast=True,
         ),

@@ -6,7 +6,7 @@ from CivilizationsData import (
     CIV_INITIAL_CONTACTS,
     CIV_INITIAL_WARS,
     CIV_LEADERS,
-    CIV_MODIFIERS,
+    CIV_HUMAN_MODIFIERS,
     CIV_PROPERTIES,
     CIV_RELIGION_SPREADING_THRESHOLD,
     CIV_RELIGIOUS_TOLERANCE,
@@ -58,8 +58,7 @@ COMPANIES = (
 
 CIVILIZATIONS_BASE = (
     CivilizationsFactory()
-    .add_key("initial", "location", "religion", "ai", "misc", "date")
-    .attach("modifiers", CIV_MODIFIERS)
+    .add_key("initial", "location", "religion", "human", "ai", "misc", "date")
     .attach("properties", CIV_PROPERTIES)
     .attach("leaders", CIV_LEADERS)
     .attach("respawning_threshold", CIV_RESPAWNING_THRESHOLD, key="location")
@@ -72,6 +71,7 @@ CIVILIZATIONS_BASE = (
     .attach("area", CIV_AREAS, key="location")
     .attach("spreading_threshold", CIV_RELIGION_SPREADING_THRESHOLD, key="religion")
     .attach("tolerance", CIV_RELIGIOUS_TOLERANCE, key="religion")
+    .attach("modifiers", CIV_HUMAN_MODIFIERS, key="human")
     .attach("modifiers", CIV_AI_MODIFIERS, key="ai")
     .attach("stop_birth_threshold", CIV_AI_STOP_BIRTH_THRESHOLD, key="ai")
     .attach("stability_bonus", CIV_STABILITY_AI_BONUS, key="ai")

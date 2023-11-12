@@ -63,17 +63,6 @@ class InitialCondition(IntEnum):
     FAITH = 2
 
 
-class InitialModifier(IntEnum):
-    GROWTH = 0
-    PRODUCTION = 1
-    SUPPORT = 2
-
-
-class ModifierCategory(IntEnum):
-    AI = 0
-    HUMAN = 1
-
-
 class Modifier(IntEnum):
     CITY_CLUSTER = 0
     CITY_WAR_DISTANCE = 1
