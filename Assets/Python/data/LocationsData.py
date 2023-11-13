@@ -8,13 +8,14 @@ from CoreTypes import (
     Colony,
     Company,
     Province,
+    ProvinceEvent,
     ProvinceType,
     Region,
     Scenario,
     Lake,
     Area,
 )
-from BaseStructures import EnumDataMapper
+from BaseStructures import DataMapper, EnumDataMapper
 from CoreStructures import (
     CompanyDataMapper,
     ScenarioDataMapper,
@@ -25,6 +26,7 @@ from CoreStructures import (
     parse_area_dict,
 )
 from MiscData import WORLD_HEIGHT, WORLD_WIDTH
+from TimelineData import DateTurn
 
 MINOR_CIVS = (
     Civ.INDEPENDENT,
@@ -2578,6 +2580,99 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
+    },
+)
+
+CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
+    {
+        Civ.BYZANTIUM: None,
+        Civ.FRANCE: None,
+        Civ.ARABIA: None,
+        Civ.BULGARIA: None,
+        Civ.CORDOBA: EnumDataMapper(
+            {
+                ProvinceEvent.ON_RESPAWN: [(province, ProvinceType.NONE) for province in Province]
+                + [
+                    (Province.IFRIQIYA, ProvinceType.CORE),
+                    (Province.ALGIERS, ProvinceType.HISTORICAL),
+                    (Province.ORAN, ProvinceType.CONTESTED),
+                    (Province.TRIPOLITANIA, ProvinceType.CONTESTED),
+                    (Province.TETOUAN, ProvinceType.CONTESTED),
+                    (Province.MOROCCO, ProvinceType.CONTESTED),
+                    (Province.FEZ, ProvinceType.CONTESTED),
+                ],
+            },
+            do_not_cast=True,
+        ),
+        Civ.VENECIA: None,
+        Civ.BURGUNDY: None,
+        Civ.GERMANY: None,
+        Civ.NOVGOROD: None,
+        Civ.NORWAY: EnumDataMapper(
+            {
+                ProvinceEvent.ON_DATETURN: {
+                    # Provinces switch back to unstable after the fall of the Norman Kingdom of Sicily
+                    DateTurn.i1194AD
+                    + 1: [
+                        (Province.APULIA, ProvinceType.NONE),
+                        (Province.CALABRIA, ProvinceType.NONE),
+                        (Province.SICILY, ProvinceType.NONE),
+                        (Province.MALTA, ProvinceType.NONE),
+                    ]
+                }
+            },
+            do_not_cast=True,
+        ),
+        Civ.KIEV: None,
+        Civ.HUNGARY: None,
+        Civ.CASTILE: None,
+        Civ.DENMARK: EnumDataMapper(
+            {
+                ProvinceEvent.ON_DATETURN: {
+                    # Provinces switch back to unstable after the fall of the Norman Kingdom of Sicily
+                    DateTurn.i1194AD
+                    + 1: [
+                        (Province.APULIA, ProvinceType.NONE),
+                        (Province.CALABRIA, ProvinceType.NONE),
+                        (Province.SICILY, ProvinceType.NONE),
+                        (Province.MALTA, ProvinceType.NONE),
+                    ]
+                }
+            },
+            do_not_cast=True,
+        ),
+        Civ.SCOTLAND: None,
+        Civ.POLAND: None,
+        Civ.GENOA: None,
+        Civ.MOROCCO: None,
+        Civ.ENGLAND: None,
+        Civ.PORTUGAL: None,
+        Civ.ARAGON: None,
+        Civ.SWEDEN: None,
+        Civ.PRUSSIA: EnumDataMapper(
+            {
+                ProvinceEvent.ON_DATETURN: DataMapper(
+                    {
+                        DateTurn.i1618AD: [
+                            (Province.ESTONIA, ProvinceType.NONE),
+                            (Province.LITHUANIA, ProvinceType.NONE),
+                            (Province.SUVALKIJA, ProvinceType.NONE),
+                            (Province.LIVONIA, ProvinceType.CONTESTED),
+                            (Province.POMERANIA, ProvinceType.HISTORICAL),
+                            (Province.BRANDENBURG, ProvinceType.HISTORICAL),
+                            (Province.SILESIA, ProvinceType.POTENTIAL),
+                            (Province.GREATER_POLAND, ProvinceType.CONTESTED),
+                        ]
+                    }
+                ),
+            },
+            do_not_cast=True,
+        ),
+        Civ.LITHUANIA: None,
+        Civ.AUSTRIA: None,
+        Civ.OTTOMAN: None,
+        Civ.MOSCOW: None,
+        Civ.DUTCH: None,
     },
 )
 

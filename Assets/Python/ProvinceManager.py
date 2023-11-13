@@ -6,7 +6,7 @@ import RFCUtils  # Absinthe
 import PyHelpers  # Absinthe
 
 from TimelineData import DateTurn
-from CoreTypes import Civ, Province, Scenario, ProvinceType
+from CoreTypes import Civ, Province, ProvinceEvent, Scenario, ProvinceType
 
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer  # Absinthe
@@ -27,36 +27,13 @@ class ProvinceManager:
                     self.onSpawn(civ.id)
 
     def checkTurn(self, iGameTurn):
-        # Norse provinces switch back to unstable after the fall of the Norman Kingdom of Sicily
-        if iGameTurn == DateTurn.i1194AD + 1:
-            player(Civ.NORWAY).setProvinceType(Province.APULIA.value, ProvinceType.NONE.value)
-            player(Civ.NORWAY).setProvinceType(Province.CALABRIA.value, ProvinceType.NONE.value)
-            player(Civ.NORWAY).setProvinceType(Province.SICILY.value, ProvinceType.NONE.value)
-            player(Civ.NORWAY).setProvinceType(Province.MALTA.value, ProvinceType.NONE.value)
-            player(Civ.DENMARK).setProvinceType(Province.APULIA.value, ProvinceType.NONE.value)
-            player(Civ.DENMARK).setProvinceType(Province.CALABRIA.value, ProvinceType.NONE.value)
-            player(Civ.DENMARK).setProvinceType(Province.SICILY.value, ProvinceType.NONE.value)
-            player(Civ.DENMARK).setProvinceType(Province.MALTA.value, ProvinceType.NONE.value)
-        # Prussia direction change
-        elif iGameTurn == DateTurn.i1618AD:
-            player(Civ.PRUSSIA).setProvinceType(Province.ESTONIA.value, ProvinceType.NONE.value)
-            player(Civ.PRUSSIA).setProvinceType(Province.LITHUANIA.value, ProvinceType.NONE.value)
-            player(Civ.PRUSSIA).setProvinceType(Province.SUVALKIJA.value, ProvinceType.NONE.value)
-            player(Civ.PRUSSIA).setProvinceType(
-                Province.LIVONIA.value, ProvinceType.CONTESTED.value
-            )
-            player(Civ.PRUSSIA).setProvinceType(
-                Province.POMERANIA.value, ProvinceType.HISTORICAL.value
-            )
-            player(Civ.PRUSSIA).setProvinceType(
-                Province.BRANDENBURG.value, ProvinceType.HISTORICAL.value
-            )
-            player(Civ.PRUSSIA).setProvinceType(
-                Province.SILESIA.value, ProvinceType.POTENTIAL.value
-            )
-            player(Civ.PRUSSIA).setProvinceType(
-                Province.GREATER_POLAND.value, ProvinceType.CONTESTED.value
-            )
+        for civ in civilizations():
+            events = civ.event.provinces.get(ProvinceEvent.ON_DATETURN)
+            if events is not None:
+                for dateturn, provinces in events.items():
+                    if iGameTurn == dateturn:
+                        for province, province_type in provinces:
+                            civ.player.setProvinceType(province.value, province_type.value)
 
     def onCityBuilt(self, iPlayer, x, y):
         if iPlayer not in civilizations().main().ids():
@@ -91,28 +68,15 @@ class ProvinceManager:
         # Absinthe: reset the original potential provinces, but only if they wasn't changed to something entirely different later on
         civ = civilization(iPlayer)
         for province in civ.location.provinces[ProvinceType.HISTORICAL]:
-            if civ.player.getProvinceType(iProv) == ProvinceType.HISTORICAL:
+            if civ.player.getProvinceType(province) == ProvinceType.HISTORICAL:
                 civ.player.setProvinceType(province.value, ProvinceType.POTENTIAL.value)
 
         # Absinthe: special respawn conditions
-        if iPlayer == Civ.CORDOBA.value:
-            for iProv in range(len(Province)):
-                player(Civ.CORDOBA).setProvinceType(iProv, ProvinceType.NONE.value)
-            player(Civ.CORDOBA).setProvinceType(Province.IFRIQIYA.value, ProvinceType.CORE.value)
-            player(Civ.CORDOBA).setProvinceType(
-                Province.ALGIERS.value, ProvinceType.HISTORICAL.value
-            )
-            player(Civ.CORDOBA).setProvinceType(Province.ORAN.value, ProvinceType.CONTESTED.value)
-            player(Civ.CORDOBA).setProvinceType(
-                Province.TRIPOLITANIA.value, ProvinceType.CONTESTED.value
-            )
-            player(Civ.CORDOBA).setProvinceType(
-                Province.TETOUAN.value, ProvinceType.CONTESTED.value
-            )
-            player(Civ.CORDOBA).setProvinceType(
-                Province.MOROCCO.value, ProvinceType.CONTESTED.value
-            )
-            player(Civ.CORDOBA).setProvinceType(Province.FEZ.value, ProvinceType.CONTESTED.value)
+        events = civ.event.provinces.get(ProvinceEvent.ON_RESPAWN)
+        if events is not None:
+            for provinces in events.values():
+                for province, province_type in provinces:
+                    civ.player.setProvinceType(province.value, province_type.value)
 
     def resetProvinces(self, iPlayer):
         # Absinthe: keep in mind that this will reset all to the initial status, so won't take later province changes into account

@@ -22,6 +22,7 @@ from Errors import NotTypeExpectedError
 from LocationsData import (
     CIV_AREAS,
     CIV_CAPITAL_LOCATIONS,
+    CIV_EVENT_DRIVE_PROVINCES,
     CIV_HOME_LOCATIONS,
     CIV_NEIGHBOURS,
     CIV_NEW_CAPITAL_LOCATIONS,
@@ -59,7 +60,7 @@ COMPANIES = (
 
 CIVILIZATIONS_BASE = (
     CivilizationsFactory()
-    .add_key("initial", "location", "religion", "human", "ai", "misc", "date")
+    .add_key("initial", "location", "religion", "human", "ai", "misc", "date", "event")
     .attach("properties", CIV_PROPERTIES)
     .attach("leaders", CIV_LEADERS)
     .attach("respawning_threshold", CIV_RESPAWNING_THRESHOLD, key="location")
@@ -83,6 +84,7 @@ CIVILIZATIONS_BASE = (
     .attach("collapse", CIV_COLLAPSE_DATE, key="date")
     .attach("respawning", CIV_RESPAWNING_DATE, key="date")
     .attach("buildings", CIV_INITIAL_BUILDINGS, key="initial")
+    .attach("provinces", CIV_EVENT_DRIVE_PROVINCES, key="event")
 )
 
 CIVILIZATIONS_500AD = (

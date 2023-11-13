@@ -931,6 +931,12 @@ class ProvinceStatus(IntEnum):
     OWN = 5
 
 
+class ProvinceEvent(IntEnum):
+    ON_DATETURN = 0
+    ON_SPAWN = 1
+    ON_RESPAWN = 2
+
+
 class Province(IntEnum):
     GALICIA = 0
     CASTILE = 1
