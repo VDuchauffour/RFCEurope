@@ -25,7 +25,7 @@ import Plague
 import Crusades
 import Companies
 import DataLoader
-import ProvinceManager
+import Province
 import Mercenaries
 
 from MiscData import MessageData
@@ -177,7 +177,7 @@ class CvRFCEventHandler:
         self.sta = Stability.Stability()
         self.pla = Plague.Plague()
         self.crusade = Crusades.Crusades()
-        self.province = ProvinceManager.ProvinceManager()
+        self.province = Province.ProvinceManager()
         self.mercs = Mercenaries.MercenaryManager()  # 3MiroMercs
         self.company = Companies.Companies()  # Absinthe
 

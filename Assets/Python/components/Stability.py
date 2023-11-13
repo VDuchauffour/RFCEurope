@@ -25,11 +25,11 @@ from CoreTypes import (
 import RFCUtils
 from MapsData import PROVINCES_MAP
 import RiseAndFall
-import ProvinceManager
+import Province
 
 utils = RFCUtils.RFCUtils()
 rnf = RiseAndFall.RiseAndFall()
-pm = ProvinceManager.ProvinceManager()
+pm = Province.ProvinceManager()
 
 # globals
 gc = CyGlobalContext()

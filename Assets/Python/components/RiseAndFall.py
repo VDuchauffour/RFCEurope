@@ -5,7 +5,7 @@ import PyHelpers  # LOQ
 import Popup
 from PyUtils import percentage_chance
 import RFCUtils
-import ProvinceManager
+import Province
 import Religions
 import Victory
 from StoredData import sd
@@ -47,7 +47,7 @@ iEscapePeriod = 30
 
 class RiseAndFall:
     def __init__(self):
-        self.pm = ProvinceManager.ProvinceManager()
+        self.pm = Province.ProvinceManager()
         # Init the Province Manager
 
     ##################################################
