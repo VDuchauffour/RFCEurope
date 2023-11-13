@@ -31,15 +31,7 @@ LOCAL_PATHS=(
 	"$SCRIPT_DIR/Assets/Python/pyWB"
 	"$SCRIPT_DIR/Assets/Python/screens"
 )
-EXTERNAL_PATHS=(
-	"$(readlink -f "$SCRIPT_DIR"/../../Assets/Python)"
-	"$(readlink -f "$SCRIPT_DIR"/../../Assets/Python/EntryPoints)"
-	"$(readlink -f "$SCRIPT_DIR"/../../Assets/Python/pyWB)"
-	"$(readlink -f "$SCRIPT_DIR"/../../Assets/Python/Screens)"
-	"$(readlink -f "$SCRIPT_DIR"/../../Assets/Python/pyUnit)"
-	"$(readlink -f "$SCRIPT_DIR"/../../Assets/Python/pyHelper)"
-	"$(readlink -f "$SCRIPT_DIR"/../../Assets/Python/PitBoss)"
-)
+
 CURRENT_PYTHONPATHS=(
 	"$PYTHONPATH"
 )
@@ -54,6 +46,15 @@ fill_paths() {
 fill_paths "${LOCAL_PATHS[@]}"
 
 if [[ $LOCAL_ONLY == false ]]; then
+	EXTERNAL_PATHS=(
+		"$(readlink -f "$SCRIPT_DIR"/../../Assets/Python)"
+		"$(readlink -f "$SCRIPT_DIR"/../../Assets/Python/EntryPoints)"
+		"$(readlink -f "$SCRIPT_DIR"/../../Assets/Python/pyWB)"
+		"$(readlink -f "$SCRIPT_DIR"/../../Assets/Python/Screens)"
+		"$(readlink -f "$SCRIPT_DIR"/../../Assets/Python/pyUnit)"
+		"$(readlink -f "$SCRIPT_DIR"/../../Assets/Python/pyHelper)"
+		"$(readlink -f "$SCRIPT_DIR"/../../Assets/Python/PitBoss)"
+	)
 	fill_paths "${EXTERNAL_PATHS[@]}"
 fi
 
