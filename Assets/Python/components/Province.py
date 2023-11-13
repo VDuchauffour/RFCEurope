@@ -74,9 +74,8 @@ class ProvinceManager:
         # Absinthe: special respawn conditions
         events = civ.event.provinces.get(ProvinceEvent.ON_RESPAWN)
         if events is not None:
-            for provinces in events.values():
-                for province, province_type in provinces:
-                    civ.player.setProvinceType(province.value, province_type.value)
+            for province, province_type in events:
+                civ.player.setProvinceType(province.value, province_type.value)
 
     def resetProvinces(self, iPlayer):
         # Absinthe: keep in mind that this will reset all to the initial status, so won't take later province changes into account
