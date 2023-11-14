@@ -2585,10 +2585,6 @@ CIV_PROVINCES = CivDataMapper(
 
 CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
     {
-        Civ.BYZANTIUM: None,
-        Civ.FRANCE: None,
-        Civ.ARABIA: None,
-        Civ.BULGARIA: None,
         Civ.CORDOBA: EnumDataMapper(
             {
                 ProvinceEvent.ON_RESPAWN: [(province, ProvinceType.NONE) for province in Province]
@@ -2604,10 +2600,6 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.VENECIA: None,
-        Civ.BURGUNDY: None,
-        Civ.GERMANY: None,
-        Civ.NOVGOROD: None,
         Civ.NORWAY: EnumDataMapper(
             {
                 ProvinceEvent.ON_DATETURN: {
@@ -2623,9 +2615,6 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.KIEV: None,
-        Civ.HUNGARY: None,
-        Civ.CASTILE: None,
         Civ.DENMARK: EnumDataMapper(
             {
                 ProvinceEvent.ON_DATETURN: {
@@ -2641,14 +2630,6 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.SCOTLAND: None,
-        Civ.POLAND: None,
-        Civ.GENOA: None,
-        Civ.MOROCCO: None,
-        Civ.ENGLAND: None,
-        Civ.PORTUGAL: None,
-        Civ.ARAGON: None,
-        Civ.SWEDEN: None,
         Civ.PRUSSIA: EnumDataMapper(
             {
                 ProvinceEvent.ON_DATETURN: DataMapper(
@@ -2668,13 +2649,8 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.LITHUANIA: None,
-        Civ.AUSTRIA: None,
-        Civ.OTTOMAN: None,
-        Civ.MOSCOW: None,
-        Civ.DUTCH: None,
     },
-)
+).fill_missing_members(EnumDataMapper({}))
 
 CIV_VISIBLE_AREA_500AD = (
     CivDataMapper(
