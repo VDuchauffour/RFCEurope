@@ -105,7 +105,7 @@ class RFCEMapManager:
                 c.location.area.normal.tile_max.to_tuple() for c in civilizations().majors()
             ]
             self.normal_exception_tiles = [
-                c.location.area.normal.exception_tile for c in civilizations().majors()
+                c.location.area.normal.exception_tiles for c in civilizations().majors()
             ]
 
             self.mapsInitiated = True
