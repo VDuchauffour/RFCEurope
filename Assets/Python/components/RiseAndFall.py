@@ -7,6 +7,7 @@ from PyUtils import percentage_chance
 import RFCUtils
 import Province
 import Religions
+from Scenario import get_scenario
 import Victory
 from StoredData import sd
 import Crusades
@@ -477,7 +478,7 @@ class RiseAndFall:
         self.setupRespawnTurns()
 
         iHuman = utils.getHumanID()
-        if utils.getScenario() == Scenario.i500AD:
+        if get_scenario() == Scenario.i500AD:
             self.create500ADstartingUnits()
         else:
             self.create1200ADstartingUnits()

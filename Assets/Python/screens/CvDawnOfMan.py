@@ -8,6 +8,7 @@ from CvPythonExtensions import *
 import RFCUtils
 
 from CoreTypes import Scenario
+from Scenario import get_scenario
 
 ArtFileMgr = CyArtFileMgr()
 localText = CyTranslator()
@@ -188,7 +189,7 @@ class CvDawnOfMan:
         dom_values = civilization(CyGame().getActiveTeam()).misc.dawn_of_man
         year = dom_values[0] + CyTranslator().getText(dom_values[1], ())
         if civilization(CyGame().getActiveTeam()).date.birth < utils.getScenarioStartTurn():
-            if utils.getScenario() == Scenario.i1200AD:
+            if get_scenario() == Scenario.i1200AD:
                 textKey = "TXT_KEY_DAWN_OF_MAN_TEXT_%d_1200" % (CyGame().getActiveTeam())
         else:
             textKey = "TXT_KEY_DAWN_OF_MAN_TEXT_%d" % (CyGame().getActiveTeam())

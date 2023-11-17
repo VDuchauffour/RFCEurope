@@ -7,7 +7,6 @@ from CoreTypes import (
     Civ,
     PlagueType,
     Religion,
-    Scenario,
     UniquePower,
     Wonder,
     Promotion,
@@ -20,7 +19,8 @@ import CvUtil
 import CvScreenEnums
 from LocationsData import CITIES
 import PyHelpers
-import Popup  # Absinthe
+import Popup
+from Scenario import get_scenario  # Absinthe
 from StoredData import sd
 from MiscData import (
     GREAT_PROPHET_FAITH_POINT_BONUS,
@@ -1720,18 +1720,13 @@ class RFCUtils:
 
     # Absinthe: end
 
-    def getScenario(self):
-        if gc.getPlayer(Civ.BURGUNDY.value).isPlayable():
-            return Scenario.i500AD
-        return Scenario.i1200AD
-
     def getScenarioStartYear(self):
         lStartYears = [500, 1200]
-        return lStartYears[self.getScenario()]
+        return lStartYears[get_scenario()]
 
     def getScenarioStartTurn(self):
         lStartTurn = [DateTurn.i500AD, DateTurn.i1200AD]
-        return lStartTurn[self.getScenario()]
+        return lStartTurn[get_scenario()]
 
     def getUniqueUnit(self, iPlayer, iUnit):
         pPlayer = gc.getPlayer(iPlayer)

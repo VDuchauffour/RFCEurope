@@ -3,7 +3,8 @@ from CoreData import civilization, civilizations
 from CoreStructures import player
 from MapsData import PROVINCES_MAP
 import RFCUtils  # Absinthe
-import PyHelpers  # Absinthe
+import PyHelpers
+from Scenario import get_scenario  # Absinthe
 
 from TimelineData import DateTurn
 from CoreTypes import Civ, Province, ProvinceEvent, Scenario, ProvinceType
@@ -21,7 +22,7 @@ class ProvinceManager:
                 for province in provinces:
                     civ.player.setProvinceType(province.value, type.value)
         # update provinces for the 1200 AD Scenario
-        if utils.getScenario() == Scenario.i1200AD:
+        if get_scenario() == Scenario.i1200AD:
             for civ in civilizations().main():
                 if civ.date.birth < DateTurn.i1200AD:
                     self.onSpawn(civ.id)

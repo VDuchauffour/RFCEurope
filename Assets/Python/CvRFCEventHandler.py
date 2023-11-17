@@ -9,7 +9,7 @@ import CvMercenaryManager  # Mercenaries
 import CvScreenEnums  # Mercenaries
 import Popup
 
-from StoredData import sd  # edead
+from StoredData import sd
 import RiseAndFall
 import Barbs
 import Religions
@@ -28,6 +28,7 @@ import DataLoader
 import Province
 import Mercenaries
 
+from Scenario import get_scenario
 from MiscData import MessageData
 from TimelineData import DateTurn
 from MapsData import PROVINCES_MAP
@@ -237,14 +238,9 @@ class CvRFCEventHandler:
         # Absinthe: rename cities on the 1200AD scenario - the WB file cannot handle special chars and long names properly
         # 			some of the cities intentionally have different names though (compared to the CNM), for example some Kievan cities
         # 			thus it's only set for Hungary for now, we can add more civs/cities later on if there are naming issues
-        if utils.getScenario() == Scenario.i1200AD:
+        if get_scenario() == Scenario.i1200AD:
             for city in utils.getCityList(Civ.HUNGARY.value):
                 self.cnm.renameCities(city, Civ.HUNGARY.value)
-        # Absinthe: for all civs:
-        # if utils.getScenario() == Scenario.i1200AD:
-        # 	for iPlayer in civilizations().main().ids():
-        # 		for city in utils.getCityList(iPlayer):
-        # 			self.cnm.renameCities(city, iPlayer)
 
         # Absinthe: refresh Dynamic Civ Names for all civs on the initial turn of the given scenario
         for iPlayer in civilizations().majors().ids():
@@ -406,7 +402,7 @@ class CvRFCEventHandler:
             self.res.removeResource(80, 24)
 
         # Remove horse resource near Hadrianople in 1200 AD scenario if someone captures Hadrianople or Constantinople
-        if utils.getScenario() == Scenario.i1200AD:
+        if get_scenario() == Scenario.i1200AD:
             if tCity == (76, 25) or tCity == (81, 24):
                 self.res.removeResource(77, 24)
 

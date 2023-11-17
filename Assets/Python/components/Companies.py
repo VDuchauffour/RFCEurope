@@ -9,6 +9,7 @@ import PyHelpers
 import RFCUtils
 import Crusades
 from operator import itemgetter
+from Scenario import get_scenario
 
 from TimelineData import DateTurn
 from MiscData import MessageData
@@ -50,7 +51,7 @@ class Companies:
     def setup(self):
 
         # update companies at the beginning of the 1200AD scenario:
-        if utils.getScenario() == Scenario.i1200AD:
+        if get_scenario() == Scenario.i1200AD:
             iGameTurn = DateTurn.i1200AD
             for company in COMPANIES:
                 if iGameTurn > company.birthdate and iGameTurn < company.deathdate:

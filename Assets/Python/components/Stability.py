@@ -26,6 +26,7 @@ import RFCUtils
 from MapsData import PROVINCES_MAP
 import RiseAndFall
 import Province
+from Scenario import get_scenario
 
 utils = RFCUtils.RFCUtils()
 rnf = RiseAndFall.RiseAndFall()
@@ -137,7 +138,7 @@ class Stability:
                 )
 
         # Absinthe: update Byzantine stability on the start of the game
-        if utils.getScenario() == Scenario.i500AD:
+        if get_scenario() == Scenario.i500AD:
             # small stability boost for the human player for the first UHV
             if Civ.BYZANTIUM.value == utils.getHumanID():
                 pByzantium = gc.getPlayer(Civ.BYZANTIUM.value)

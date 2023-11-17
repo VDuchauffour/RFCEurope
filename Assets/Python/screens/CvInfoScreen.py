@@ -15,6 +15,7 @@ import RFCUtils
 from PyHelpers import PyPlayer
 
 from CoreTypes import Colony, Scenario, Technology
+from Scenario import get_scenario
 
 # globals
 gc = CyGlobalContext()
@@ -3171,7 +3172,7 @@ class CvInfoScreen:
                 # Absinthe: top5 city foundation text
                 if tActivePlayer.isHasTech(Technology.CALENDAR.value):
                     if iTurnYear <= utils.getScenarioStartYear():
-                        if utils.getScenario() == Scenario.i500AD:
+                        if get_scenario() == Scenario.i500AD:
                             szTurnFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_500AD", ())
                         else:
                             szTurnFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_1200AD", ())
