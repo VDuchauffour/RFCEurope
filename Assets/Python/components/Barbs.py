@@ -11,15 +11,10 @@ from StoredData import sd
 from CoreData import civilizations
 from MiscData import MessageData
 
-# globals
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer  # LOQ
 utils = RFCUtils.RFCUtils()
 localText = CyTranslator()
-
-
-pBarbarian = gc.getPlayer(Civ.BARBARIAN.value)
-teamBarbarian = gc.getTeam(pBarbarian.getTeam())
 
 
 # Independent and barbarians city spawns
@@ -585,36 +580,6 @@ tValletta = (
     Religion.CATHOLICISM.value,
     0,
 )
-
-# Currently unused indy cities:
-# Key: city coordinates, spawn turn, retries
-# lTours = [40,43,0,0] #500 AD
-# lOrleans = [42,44,0,0] #500 AD
-# lCatania = [58,18,0,0] #500 AD
-# lBeograd = [68,30,0,0] #500 AD
-# lRavenna = [55,33,0,0] #500 AD
-# lZaragoza = [36,29,45,0] #680 AD
-# lBulgar = [97,60,45,0] #680 AD
-# lLeon = [27,32,50,0] # 700 AD
-# lBurgos = [30,32,50,0] #700 AD
-# lCorunna = [24,35,75,0] #800 AD
-# lLeipzig = [58,48,75,0] #800 AD
-# lKharkov = [90,46,75,0] #800 AD
-# lLadoga = [81,65,75,0] #800 AD
-# lVelehrad = [64,42,82,0] #833 AD
-# lNovgorod = [80,62,87,0] #848 AD
-# lNottingham = [39,56,92,0] #867 AD, reduced to town on spawn of England
-# lBreslau = [64,46,100,0] #900 AD
-# lMunster = [52,50,150,0] #1050 AD
-# lMarrakesh = [24,7,157,0] #1071 AD
-# lLjubljana = [60,36,173,1] #1120 AD
-# lKolyvan = [74,63,200,0] #1200 AD, Tallin/Reval
-# lPinsk = [77,48,210,0] #1230 AD
-# lSamara = [97,54,240,0] #1320 AD
-# lMemel = [70,55,240,0] #1320 AD, Klaipeda
-# lVologda = [91,64,240,0] #1320 AD
-# lTver = [88,60,240,0] #1320 AD
-# lStaraSich = [88,40,300,0] #1500 AD
 
 dIndependentCities = {
     DateTurn.i500AD: [
