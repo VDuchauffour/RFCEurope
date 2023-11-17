@@ -586,7 +586,7 @@ class RFCEMapExporter:
         )
 
         self.writeArray(
-            self.mapManager.coreAreasBL,
+            self.mapManager.core_tile_min,
             "tCoreAreasTL",
             file,
             self.writeCoords,
@@ -595,7 +595,7 @@ class RFCEMapExporter:
             "#Core Area is initial spawn location, no longer relevant for stability",
         )
         self.writeArray(
-            self.mapManager.coreAreasTR,
+            self.mapManager.core_tile_max,
             "tCoreAreasBR",
             file,
             self.writeCoords,
@@ -603,7 +603,7 @@ class RFCEMapExporter:
             self.getCommentCivName,
         )
         self.writeArray(
-            self.mapManager.coreAreasAdditionalPlots,
+            self.mapManager.core_additional_tiles,
             "lExtraPlots",
             file,
             self.writeTupel,
@@ -612,7 +612,7 @@ class RFCEMapExporter:
             "#for RiseAndFall. These are (badly named) extra squares used in spawn.",
         )
         self.writeArray(
-            self.mapManager.normalAreasBL,
+            self.mapManager.normal_tile_min,
             "tNormalAreasTL",
             file,
             self.writeCoords,
@@ -621,7 +621,7 @@ class RFCEMapExporter:
             "#These areas are typically used for resurrection.",
         )
         self.writeArray(
-            self.mapManager.normalAreasTR,
+            self.mapManager.normal_tile_max,
             "tNormalAreasBR",
             file,
             self.writeCoords,
@@ -629,7 +629,7 @@ class RFCEMapExporter:
             self.getCommentCivName,
         )
         self.writeArray(
-            self.mapManager.normalAreasSubtractedPlots,
+            self.mapManager.normal_exception_tiles,
             "tNormalAreasSubtract",
             file,
             self.writeTupel,
