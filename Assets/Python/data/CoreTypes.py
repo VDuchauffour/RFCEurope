@@ -67,9 +67,10 @@ class Modifier(IntEnum):
     CITY_CLUSTER = 0
     CITY_WAR_DISTANCE = 1
     TECH_PREFERENCE = 2
-    GROWTH = 3
-    PRODUCTION = 4
-    SUPPORT = 5
+    BUILDING_PREFERENCE = 3
+    GROWTH = 4
+    PRODUCTION = 5
+    SUPPORT = 6
 
 
 class Religion(IntEnum):

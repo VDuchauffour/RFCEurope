@@ -270,3 +270,16 @@ DIPLOMACY_MODIFIERS = [
     (Civ.SWEDEN, Civ.DENMARK, -4),
     (Civ.DENMARK, Civ.SWEDEN, -4),
 ]
+
+HISTORICAL_ENEMIES = [
+    (Civ.OTTOMAN, Civ.BULGARIA, 10),
+    (Civ.BULGARIA, Civ.OTTOMAN, -10),
+    (Civ.CASTILE, Civ.CORDOBA, 10),
+    (Civ.CORDOBA, Civ.CASTILE, -10),
+    (Civ.PORTUGAL, Civ.CASTILE, 10),
+    (Civ.CASTILE, Civ.PORTUGAL, -10),
+    (Civ.AUSTRIA, Civ.HUNGARY, 10),
+    (Civ.HUNGARY, Civ.AUSTRIA, -10),
+    (Civ.AUSTRIA, Civ.GERMANY, 10),
+    (Civ.GERMANY, Civ.AUSTRIA, -10),
+]

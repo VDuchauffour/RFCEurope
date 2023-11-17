@@ -10,6 +10,7 @@ from CoreTypes import (
     InitialCondition,
     Modifier,
     Technology,
+    Wonder,
 )
 from CoreStructures import (
     CivDataMapper,
@@ -651,6 +652,12 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (1, 3, 0),  # 7
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.ST_CATHERINE_MONASTERY, 15),
+                    (Wonder.BOYANA_CHURCH, 2),
+                    (Wonder.ROUND_CHURCH, 2),
+                    (Wonder.SOPHIA_KIEV, 5),
+                ],
                 Modifier.GROWTH: (200, 100, 200, 100, 100, 2),
                 Modifier.PRODUCTION: (200, 200, 200, 350),
                 Modifier.SUPPORT: (50, 150, 70, 50, 120),
@@ -662,6 +669,15 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (1, 3, 0),  # 8
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.NOTRE_DAME, 20),
+                    (Wonder.VERSAILLES, 20),
+                    (Wonder.FONTAINEBLEAU, 10),
+                    (Wonder.MONASTERY_OF_CLUNY, 10),
+                    (Wonder.MONT_SAINT_MICHEL, 10),
+                    (Wonder.PALAIS_DES_PAPES, 5),
+                    (Wonder.LOUVRE, 20),
+                ],
                 Modifier.GROWTH: (110, 100, 110, 100, 100, 1),
                 Modifier.PRODUCTION: (140, 120, 125, 150),
                 Modifier.SUPPORT: (30, 120, 70, 50, 100),
@@ -673,6 +689,23 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (1, 3, 1),  # 7
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.DOME_ROCK, 15),
+                    (Wonder.TOMB_AL_WALID, 20),
+                    (Wonder.ALAZHAR, 20),
+                    (Wonder.MOSQUE_OF_KAIROUAN, 10),
+                    (Wonder.KOUTOUBIA_MOSQUE, 5),
+                    (Wonder.GARDENS_AL_ANDALUS, 5),
+                    (Wonder.LA_MEZQUITA, 5),
+                    (Wonder.ALHAMBRA, 5),
+                    (Wonder.NOTRE_DAME, -5),
+                    (Wonder.STEPHANSDOM, -5),
+                    (Wonder.SISTINE_CHAPEL, -5),
+                    (Wonder.KRAK_DES_CHEVALIERS, -5),
+                    (Wonder.LEANING_TOWER, -3),
+                    (Wonder.GOLDEN_BULL, -3),
+                    (Wonder.COPERNICUS, -3),
+                ],
                 Modifier.GROWTH: (150, 100, 150, 100, 100, 1),
                 Modifier.PRODUCTION: (130, 125, 150, 280),
                 Modifier.SUPPORT: (30, 150, 70, 40, 120),
@@ -686,6 +719,12 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.TECH_PREFERENCE: [
                     (Technology.BRONZE_CASTING, 200),
                 ],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.ROUND_CHURCH, 20),
+                    (Wonder.BOYANA_CHURCH, 20),
+                    (Wonder.ST_CATHERINE_MONASTERY, 5),
+                    (Wonder.SOPHIA_KIEV, 5),
+                ],
                 Modifier.GROWTH: (150, 100, 100, 100, 100, 1),
                 Modifier.PRODUCTION: (130, 125, 125, 250),
                 Modifier.SUPPORT: (40, 150, 80, 50, 120),
@@ -697,6 +736,21 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (1, 2, 1),  # 10
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.GARDENS_AL_ANDALUS, 20),
+                    (Wonder.LA_MEZQUITA, 20),
+                    (Wonder.ALHAMBRA, 20),
+                    (Wonder.DOME_ROCK, 10),
+                    (Wonder.ALAZHAR, 5),
+                    (Wonder.MOSQUE_OF_KAIROUAN, 10),
+                    (Wonder.KOUTOUBIA_MOSQUE, 5),
+                    (Wonder.NOTRE_DAME, -5),
+                    (Wonder.STEPHANSDOM, -5),
+                    (Wonder.SISTINE_CHAPEL, -5),
+                    (Wonder.KRAK_DES_CHEVALIERS, -5),
+                    (Wonder.LEANING_TOWER, -3),
+                    (Wonder.GOLDEN_BULL, -3),
+                ],
                 Modifier.GROWTH: (150, 100, 100, 100, 100, 1),
                 Modifier.PRODUCTION: (180, 170, 130, 250),
                 Modifier.SUPPORT: (40, 150, 70, 40, 120),
@@ -708,6 +762,17 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (2, 3, 1),  # 14
                 Modifier.CITY_WAR_DISTANCE: 3,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.MARCO_POLO, 15),
+                    (Wonder.SAN_MARCO, 20),
+                    (Wonder.LANTERNA, 10),
+                    (Wonder.LEONARDOS_WORKSHOP, 5),
+                    (Wonder.LEANING_TOWER, 5),
+                    (Wonder.GRAND_ARSENAL, 20),
+                    (Wonder.GALATA_TOWER, 10),
+                    (Wonder.FLORENCE_DUOMO, 10),
+                    (Wonder.SAN_GIORGIO, 5),
+                ],
                 Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
                 Modifier.PRODUCTION: (100, 100, 100, 150),
                 Modifier.SUPPORT: (20, 100, 60, 50, 100),
@@ -719,6 +784,15 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (2, 3, 3),  # 12
                 Modifier.CITY_WAR_DISTANCE: 1,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.MONASTERY_OF_CLUNY, 20),
+                    (Wonder.NOTRE_DAME, 10),
+                    (Wonder.VERSAILLES, 10),
+                    (Wonder.MONT_SAINT_MICHEL, 10),
+                    (Wonder.FONTAINEBLEAU, 5),
+                    (Wonder.PALAIS_DES_PAPES, 5),
+                    (Wonder.LOUVRE, 10),
+                ],
                 Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
                 Modifier.PRODUCTION: (130, 120, 120, 150),
                 Modifier.SUPPORT: (30, 120, 70, 40, 100),
@@ -732,6 +806,15 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.TECH_PREFERENCE: [
                     (Technology.PRINTING_PRESS, 200),
                 ],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.BRANDENBURG_GATE, 10),
+                    (Wonder.IMPERIAL_DIET, 20),
+                    (Wonder.COPERNICUS, 5),
+                    (Wonder.GOLDEN_BULL, 10),
+                    (Wonder.MONASTERY_OF_CLUNY, 5),
+                    (Wonder.URANIBORG, 5),
+                    (Wonder.THOMASKIRCHE, 20),
+                ],
                 Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
                 Modifier.PRODUCTION: (120, 120, 100, 140),
                 Modifier.SUPPORT: (20, 100, 70, 40, 100),
@@ -743,6 +826,14 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (1, 3, 2),  # 6
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.ST_BASIL, 10),
+                    (Wonder.SOPHIA_KIEV, 10),
+                    (Wonder.ROUND_CHURCH, 5),
+                    (Wonder.BOYANA_CHURCH, 5),
+                    (Wonder.BORGUND_STAVE_CHURCH, 5),
+                    (Wonder.PETERHOF_PALACE, 15),
+                ],
                 Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
                 Modifier.PRODUCTION: (120, 120, 120, 150),
                 Modifier.SUPPORT: (30, 120, 70, 40, 100),
@@ -754,6 +845,13 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (1, 2, 1),  # 10
                 Modifier.CITY_WAR_DISTANCE: 3,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.SHRINE_OF_UPPSALA, 20),
+                    (Wonder.SAMOGITIAN_ALKAS, 5),
+                    (Wonder.BORGUND_STAVE_CHURCH, 15),
+                    (Wonder.URANIBORG, 10),
+                    (Wonder.KALMAR_CASTLE, 5),
+                ],
                 Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
                 Modifier.PRODUCTION: (125, 125, 125, 130),
                 Modifier.SUPPORT: (20, 100, 60, 40, 100),
@@ -765,6 +863,13 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (1, 3, 2),  # 6
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.SOPHIA_KIEV, 20),
+                    (Wonder.ST_BASIL, 5),
+                    (Wonder.ROUND_CHURCH, 5),
+                    (Wonder.BOYANA_CHURCH, 5),
+                    (Wonder.PETERHOF_PALACE, 10),
+                ],
                 Modifier.GROWTH: (150, 100, 100, 100, 100, 2),
                 Modifier.PRODUCTION: (100, 120, 100, 140),
                 Modifier.SUPPORT: (30, 120, 60, 40, 100),
@@ -776,6 +881,14 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (2, 3, 3),  # 12
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.PRESSBURG, 20),
+                    (Wonder.GOLDEN_BULL, 20),
+                    (Wonder.BIBLIOTHECA_CORVINIANA, 20),
+                    (Wonder.KAZIMIERZ, 10),
+                    (Wonder.COPERNICUS, 5),
+                    (Wonder.STEPHANSDOM, 5),
+                ],
                 Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
                 Modifier.PRODUCTION: (120, 120, 100, 150),
                 Modifier.SUPPORT: (25, 100, 70, 40, 100),
@@ -789,6 +902,12 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.TECH_PREFERENCE: [
                     (Technology.ASTRONOMY, 200),
                 ],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.ESCORIAL, 20),
+                    (Wonder.MAGELLANS_VOYAGE, 10),
+                    (Wonder.TORRE_DEL_ORO, 20),
+                    (Wonder.BELEM_TOWER, 10),
+                ],
                 Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
                 Modifier.PRODUCTION: (100, 100, 100, 130),
                 Modifier.SUPPORT: (20, 100, 60, 40, 100),
@@ -800,6 +919,13 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (2, 3, 3),  # 12
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.KALMAR_CASTLE, 10),
+                    (Wonder.SHRINE_OF_UPPSALA, 20),
+                    (Wonder.SAMOGITIAN_ALKAS, 5),
+                    (Wonder.BORGUND_STAVE_CHURCH, 15),
+                    (Wonder.URANIBORG, 20),
+                ],
                 Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
                 Modifier.PRODUCTION: (100, 100, 100, 110),
                 Modifier.SUPPORT: (20, 100, 80, 50, 100),
@@ -811,6 +937,13 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (2, 3, 2),  # 13
                 Modifier.CITY_WAR_DISTANCE: 1,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.MAGNA_CARTA, 10),
+                    (Wonder.WESTMINSTER, 10),
+                    (Wonder.MONASTERY_OF_CLUNY, 5),
+                    (Wonder.BORGUND_STAVE_CHURCH, 5),
+                    (Wonder.MONT_SAINT_MICHEL, 5),
+                ],
                 Modifier.GROWTH: (100, 100, 100, 100, 100, 2),
                 Modifier.PRODUCTION: (100, 100, 100, 125),
                 Modifier.SUPPORT: (25, 100, 80, 50, 100),
@@ -822,6 +955,14 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (1, 3, 0),  # 8
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.PRESSBURG, 10),
+                    (Wonder.COPERNICUS, 10),
+                    (Wonder.GOLDEN_BULL, 5),
+                    (Wonder.KAZIMIERZ, 15),
+                    (Wonder.JASNA_GORA, 20),
+                    (Wonder.BRANDENBURG_GATE, 5),
+                ],
                 Modifier.GROWTH: (125, 100, 100, 100, 100, 2),
                 Modifier.PRODUCTION: (100, 120, 120, 140),
                 Modifier.SUPPORT: (25, 100, 70, 40, 100),
@@ -833,6 +974,17 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (2, 3, 1),  # 14
                 Modifier.CITY_WAR_DISTANCE: 3,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.SAN_GIORGIO, 20),
+                    (Wonder.LANTERNA, 20),
+                    (Wonder.LEONARDOS_WORKSHOP, 5),
+                    (Wonder.LEANING_TOWER, 5),
+                    (Wonder.SAN_MARCO, 5),
+                    (Wonder.MARCO_POLO, 5),
+                    (Wonder.GRAND_ARSENAL, 10),
+                    (Wonder.GALATA_TOWER, 20),
+                    (Wonder.FLORENCE_DUOMO, 10),
+                ],
                 Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
                 Modifier.PRODUCTION: (100, 100, 100, 130),
                 Modifier.SUPPORT: (20, 100, 60, 50, 100),
@@ -844,6 +996,21 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (1, 3, 2),  # 6
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.GARDENS_AL_ANDALUS, 10),
+                    (Wonder.LA_MEZQUITA, 10),
+                    (Wonder.ALHAMBRA, 10),
+                    (Wonder.DOME_ROCK, 10),
+                    (Wonder.ALAZHAR, 5),
+                    (Wonder.MOSQUE_OF_KAIROUAN, 10),
+                    (Wonder.KOUTOUBIA_MOSQUE, 20),
+                    (Wonder.NOTRE_DAME, -5),
+                    (Wonder.STEPHANSDOM, -5),
+                    (Wonder.SISTINE_CHAPEL, -5),
+                    (Wonder.KRAK_DES_CHEVALIERS, -5),
+                    (Wonder.LEANING_TOWER, -3),
+                    (Wonder.GOLDEN_BULL, -3),
+                ],
                 Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
                 Modifier.PRODUCTION: (120, 120, 120, 175),
                 Modifier.SUPPORT: (25, 100, 60, 40, 100),
@@ -856,6 +1023,14 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_WAR_DISTANCE: 3,
                 Modifier.TECH_PREFERENCE: [
                     (Technology.PRINTING_PRESS, 150),
+                ],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.MAGNA_CARTA, 20),
+                    (Wonder.WESTMINSTER, 20),
+                    (Wonder.MONASTERY_OF_CLUNY, 5),
+                    (Wonder.URANIBORG, 5),
+                    (Wonder.TORRE_DEL_ORO, 5),
+                    (Wonder.BELEM_TOWER, 5),
                 ],
                 Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
                 Modifier.PRODUCTION: (80, 80, 100, 120),
@@ -870,6 +1045,12 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.TECH_PREFERENCE: [
                     (Technology.ASTRONOMY, 200),
                 ],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.BELEM_TOWER, 20),
+                    (Wonder.PALACIO_DA_PENA, 20),
+                    (Wonder.MAGELLANS_VOYAGE, 20),
+                    (Wonder.TORRE_DEL_ORO, 10),
+                ],
                 Modifier.GROWTH: (100, 150, 100, 100, 100, 3),
                 Modifier.PRODUCTION: (70, 90, 100, 110),
                 Modifier.SUPPORT: (20, 100, 70, 50, 100),
@@ -881,6 +1062,12 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (2, 3, 1),  # 14
                 Modifier.CITY_WAR_DISTANCE: 3,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.MAGELLANS_VOYAGE, 10),
+                    (Wonder.TORRE_DEL_ORO, 10),
+                    (Wonder.ESCORIAL, 5),
+                    (Wonder.BELEM_TOWER, 10),
+                ],
                 Modifier.GROWTH: (100, 150, 100, 100, 100, 3),
                 Modifier.PRODUCTION: (75, 90, 100, 125),
                 Modifier.SUPPORT: (25, 100, 70, 40, 100),
@@ -892,6 +1079,12 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (1, 2, 2),  # 9
                 Modifier.CITY_WAR_DISTANCE: 3,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.KALMAR_CASTLE, 20),
+                    (Wonder.SHRINE_OF_UPPSALA, 5),
+                    (Wonder.BORGUND_STAVE_CHURCH, 15),
+                    (Wonder.URANIBORG, 10),
+                ],
                 Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
                 Modifier.PRODUCTION: (80, 80, 100, 100),
                 Modifier.SUPPORT: (20, 90, 70, 40, 100),
@@ -903,6 +1096,12 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (2, 3, 1),  # 14
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.BRANDENBURG_GATE, 20),
+                    (Wonder.THOMASKIRCHE, 10),
+                    (Wonder.COPERNICUS, 5),
+                    (Wonder.PRESSBURG, 5),
+                ],
                 Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
                 Modifier.PRODUCTION: (60, 80, 120, 90),
                 Modifier.SUPPORT: (20, 90, 70, 40, 100),
@@ -914,6 +1113,11 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (1, 3, 0),  # 8
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.SAMOGITIAN_ALKAS, 20),
+                    (Wonder.GEDIMINAS_TOWER, 20),
+                    (Wonder.BORGUND_STAVE_CHURCH, 5),
+                ],
                 Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
                 Modifier.PRODUCTION: (70, 100, 110, 110),
                 Modifier.SUPPORT: (25, 100, 70, 40, 100),
@@ -925,6 +1129,14 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (2, 3, 3),  # 12
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.STEPHANSDOM, 20),
+                    (Wonder.THOMASKIRCHE, 15),
+                    (Wonder.COPERNICUS, 5),
+                    (Wonder.GOLDEN_BULL, 5),
+                    (Wonder.PRESSBURG, 5),
+                    (Building.AUSTRIAN_OPERA_HOUSE, 10),
+                ],
                 # Austria is squashed by other's culture, they need the boost
                 Modifier.GROWTH: (100, 200, 100, 100, 100, 3),
                 Modifier.PRODUCTION: (50, 80, 100, 80),
@@ -937,6 +1149,14 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (1, 3, 1),  # 7
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.TOPKAPI_PALACE, 20),
+                    (Wonder.BLUE_MOSQUE, 20),
+                    (Wonder.SELIMIYE_MOSQUE, 20),
+                    (Wonder.TOMB_AL_WALID, 10),
+                    (Wonder.KIZIL_KULE, 10),
+                    (Wonder.ALAZHAR, 5),
+                ],
                 Modifier.GROWTH: (100, 150, 100, 100, 100, 3),
                 Modifier.PRODUCTION: (60, 75, 100, 120),
                 Modifier.SUPPORT: (30, 100, 60, 40, 100),
@@ -948,6 +1168,11 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (1, 4, 1),  # 5
                 Modifier.CITY_WAR_DISTANCE: 2,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.ST_BASIL, 20),
+                    (Wonder.PETERHOF_PALACE, 20),
+                    (Wonder.SOPHIA_KIEV, 5),
+                ],
                 Modifier.GROWTH: (100, 100, 100, 100, 100, 3),
                 Modifier.PRODUCTION: (80, 80, 100, 120),
                 Modifier.SUPPORT: (25, 100, 70, 40, 100),
@@ -959,6 +1184,11 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: (2, 3, 1),  # 14
                 Modifier.CITY_WAR_DISTANCE: 1,
                 Modifier.TECH_PREFERENCE: [],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.BEURS, 20),
+                    (Wonder.URANIBORG, 5),
+                    (Wonder.THOMASKIRCHE, 5),
+                ],
                 Modifier.GROWTH: (100, 200, 60, 100, 50, 4),
                 Modifier.PRODUCTION: (80, 50, 50, 50),
                 Modifier.SUPPORT: (20, 70, 80, 50, 100),
@@ -971,6 +1201,13 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_WAR_DISTANCE: None,
                 Modifier.TECH_PREFERENCE: [
                     (Technology.PRINTING_PRESS, 10),  # Pope shouldn't want this
+                ],
+                Modifier.BUILDING_PREFERENCE: [
+                    (Wonder.SISTINE_CHAPEL, 20),
+                    (Wonder.PALAIS_DES_PAPES, 10),
+                    (Wonder.LEANING_TOWER, 5),
+                    (Wonder.FLORENCE_DUOMO, 5),
+                    (Wonder.LEONARDOS_WORKSHOP, 5),
                 ],
                 Modifier.GROWTH: (150, 100, 100, 50, 100, 1),
                 Modifier.PRODUCTION: (300, 200, 100, 350),
