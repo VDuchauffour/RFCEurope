@@ -4,13 +4,11 @@
 # Top Civilizations screen
 
 from CoreData import civilizations
-import PyHelpers
 import CvUtil
 import CvScreenEnums
 import random
 from CvPythonExtensions import *
 
-PyPlayer = PyHelpers.PyPlayer
 gc = CyGlobalContext()
 localText = CyTranslator()
 

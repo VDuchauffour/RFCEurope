@@ -33,12 +33,10 @@ import random
 from TimelineData import DateTurn
 from MiscData import MessageData
 
-# Globals
 utils = RFCUtils.RFCUtils()
 up = UniquePowers.UniquePowers()
 gc = CyGlobalContext()
 localText = CyTranslator()  # Absinthe
-PyPlayer = PyHelpers.PyPlayer
 
 
 tByzantiumControl = [

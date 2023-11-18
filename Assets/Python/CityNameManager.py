@@ -2,13 +2,10 @@
 
 from CvPythonExtensions import *
 from CoreData import civilizations
-import PyHelpers
 from MapsData import CITIES_MAP
 from MiscData import WORLD_HEIGHT
 
-# globals
 gc = CyGlobalContext()
-PyPlayer = PyHelpers.PyPlayer
 
 
 class CityNameManager:

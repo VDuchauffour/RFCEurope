@@ -3,7 +3,6 @@
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
 from CoreTypes import Civ
-import PyHelpers  # LOQ
 import RFCUtils
 from Scenario import get_scenario_start_turn
 from StoredData import sd
@@ -13,7 +12,6 @@ from TimelineData import DateTurn
 
 # globals
 gc = CyGlobalContext()
-PyPlayer = PyHelpers.PyPlayer  # LOQ
 utils = RFCUtils.RFCUtils()
 
 ### Constants ###

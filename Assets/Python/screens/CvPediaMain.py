@@ -38,7 +38,6 @@ from CoreTypes import Leader
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
 localText = CyTranslator()
-PyPlayer = PyHelpers.PyPlayer
 PyCity = PyHelpers.PyCity
 
 

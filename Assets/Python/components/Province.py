@@ -3,14 +3,12 @@ from CoreData import civilization, civilizations
 from CoreStructures import player
 from MapsData import PROVINCES_MAP
 import RFCUtils  # Absinthe
-import PyHelpers
 from Scenario import get_scenario  # Absinthe
 
 from TimelineData import DateTurn
 from CoreTypes import Civ, Province, ProvinceEvent, Scenario, ProvinceType
 
 gc = CyGlobalContext()
-PyPlayer = PyHelpers.PyPlayer  # Absinthe
 utils = RFCUtils.RFCUtils()  # Absinthe
 
 

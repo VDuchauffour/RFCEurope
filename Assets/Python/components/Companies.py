@@ -6,7 +6,6 @@ from CoreData import civilizations, COMPANIES
 from CoreFunctions import get_enum_by_id
 from CoreStructures import human, player
 from LocationsData import CITIES
-import PyHelpers
 import RFCUtils
 import Crusades
 from operator import itemgetter
@@ -28,12 +27,10 @@ from CoreTypes import (
     Wonder,
 )
 
-# globals
 utils = RFCUtils.RFCUtils()
 crus = Crusades.Crusades()
 gc = CyGlobalContext()
 localText = CyTranslator()
-PyPlayer = PyHelpers.PyPlayer
 
 lCompanyBuilding = [
     Building.CORPORATION.value,

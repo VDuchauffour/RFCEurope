@@ -61,7 +61,6 @@ iByzantiumVikingAttack = 1
 # Absinthe: all of this Mercenary stuff is unused
 # Mercenaries - start
 
-PyPlayer = PyHelpers.PyPlayer
 PyGame = PyHelpers.PyGame()
 PyInfo = PyHelpers.PyInfo
 

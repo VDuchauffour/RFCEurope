@@ -3,13 +3,11 @@
 from CvPythonExtensions import *
 from CoreData import civilizations
 from CoreTypes import Civ
-import PyHelpers
-import cPickle as pickle  # LOQ 2005-10-12
+import cPickle as pickle
 from MiscData import NUM_CRUSADES
 
 # globals
 gc = CyGlobalContext()
-PyPlayer = PyHelpers.PyPlayer
 
 
 class StoredData:

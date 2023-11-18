@@ -3,17 +3,13 @@
 from CvPythonExtensions import *
 from CoreStructures import human
 from CoreTypes import Building, SpecialParameter, Religion, Unit
-import PyHelpers
 
-# import cPickle as pickle
 import Religions
 import RFCUtils
 
 from MiscData import MessageData
 
-# globals
 gc = CyGlobalContext()
-PyPlayer = PyHelpers.PyPlayer
 utils = RFCUtils.RFCUtils()
 religion = Religions.Religions()
 

@@ -2,7 +2,6 @@
 # Based on SoI version, added by Absinthe
 
 from CvPythonExtensions import *
-import PyHelpers
 
 from MiscData import MessageData
 from TimelineData import DateTurn
@@ -10,7 +9,6 @@ from CoreTypes import Improvement, Bonus
 
 # globals
 gc = CyGlobalContext()
-PyPlayer = PyHelpers.PyPlayer
 localText = CyTranslator()
 
 

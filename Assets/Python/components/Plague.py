@@ -4,7 +4,6 @@ from CvPythonExtensions import *
 from CoreData import civilizations, civilization
 from CoreStructures import human
 from CoreTypes import PlagueType, Improvement, Civ
-import PyHelpers
 import RFCUtils
 
 from StoredData import sd
@@ -13,9 +12,7 @@ import random
 from MiscData import PLAGUE_IMMUNITY, MessageData
 from TimelineData import DateTurn
 
-# globals
 gc = CyGlobalContext()
-PyPlayer = PyHelpers.PyPlayer
 utils = RFCUtils.RFCUtils()
 
 

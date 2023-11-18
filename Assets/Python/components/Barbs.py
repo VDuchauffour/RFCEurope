@@ -3,7 +3,6 @@
 from CvPythonExtensions import *
 from CoreStructures import human
 from CoreTypes import Civ, Civic, Religion, Technology, Unit, Province
-import PyHelpers  # LOQ
 import Popup
 import RFCUtils
 from TimelineData import DateTurn
@@ -13,7 +12,6 @@ from CoreData import civilizations
 from MiscData import MessageData
 
 gc = CyGlobalContext()
-PyPlayer = PyHelpers.PyPlayer  # LOQ
 utils = RFCUtils.RFCUtils()
 localText = CyTranslator()
 
