@@ -158,9 +158,8 @@ class Plague:
 
         # choose a random civ if we didn't find it
         if iWorstCiv == -1:
-            iWorstCiv = utils.getRandomCiv()
+            iWorstCiv = civilizations().majors().alive().random().unwrap().id
 
-        pWorstCiv = gc.getPlayer(iWorstCiv)
         city = utils.getRandomCity(iWorstCiv)
         if city != -1:
             self.spreadPlague(iWorstCiv, city)

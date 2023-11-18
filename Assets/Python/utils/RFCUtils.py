@@ -157,10 +157,6 @@ class RFCUtils:
             return self.getRandomEntry(cityList)
         return -1
 
-    def getRandomCiv(self):
-        civs = [civ.id for civ in civilizations().majors() if civ.player.isAlive()]
-        return self.getRandomEntry(civs)
-
     def isMortalUnit(self, unit):
         # Absinthe: leader units, and great people won't be killed by the plague
         if unit.isHasPromotion(Promotion.LEADER.value):
