@@ -1011,17 +1011,6 @@ class RFCUtils:
     def isAVassal(self, iCiv):
         return gc.getTeam(gc.getPlayer(iCiv).getTeam()).isAVassal()
 
-    def isActive(self, iPlayer):
-        """Returns True if the player is spawned and alive."""
-        if gc.getPlayer(iPlayer).getNumCities() < 1:
-            return False
-        if not gc.getPlayer(iPlayer).isAlive():
-            return False
-        iGameTurn = gc.getGame().getGameTurn()
-        if iGameTurn < civilization(iPlayer).date.birth:
-            return False
-        return True
-
     # UP, UHV, idea from DoC
     def getMaster(self, iCiv):
         team = gc.getTeam(gc.getPlayer(iCiv).getTeam())

@@ -4,7 +4,7 @@
 from CvPythonExtensions import *
 from CoreData import civilizations, COMPANIES
 from CoreFunctions import get_enum_by_id
-from CoreStructures import human
+from CoreStructures import human, player
 from LocationsData import CITIES
 import PyHelpers
 import RFCUtils
@@ -235,7 +235,7 @@ class Companies:
     def announceHuman(self, iCompany, city, bRemove=False):
         iHuman = human()
         iHumanTeam = gc.getPlayer(iHuman).getTeam()
-        if not utils.isActive(iHuman) or not city.isRevealed(iHumanTeam, False):
+        if not player().isExisting() or not city.isRevealed(iHumanTeam, False):
             return
 
         sCityName = city.getName()

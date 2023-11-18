@@ -846,9 +846,7 @@ class RiseAndFall:
             iHuman = human()
             HumanTeam = gc.getTeam(gc.getPlayer(iHuman).getTeam())
             PlayerTeam = gc.getPlayer(iPlayer).getTeam()
-            if HumanTeam.isHasMet(PlayerTeam) and utils.isActive(
-                iHuman
-            ):  # only if it's a known civ
+            if HumanTeam.isHasMet(PlayerTeam) and player().isExisting():
                 CyInterface().addMessage(
                     iHuman,
                     False,
@@ -1734,7 +1732,7 @@ class RiseAndFall:
         # 		utils.flipCity(tColony, 0, 0, iDeadCiv, [iOwner])
         # 		utils.flipUnitsInArea((tColony[0]-2, tColony[1]-2), (tColony[0]+2, tColony[1]+2), iDeadCiv, iOwner, True, False)
 
-        if utils.isActive(iHuman):
+        if player().isExisting():
             CyInterface().addMessage(
                 iHuman,
                 True,

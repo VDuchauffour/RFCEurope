@@ -2,7 +2,7 @@
 
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from CoreStructures import human
+from CoreStructures import human, player
 import CvUtil
 import CvEventManager  # Mercenaries
 import PyHelpers
@@ -703,11 +703,10 @@ class CvRFCEventHandler:
 
         # Absinthe: Message for the human player about the Schism
         elif iGameTurn == DateTurn.i1053AD:
-            iHuman = human()
-            if utils.isActive(iHuman):
+            if player().isExisting():
                 sText = CyTranslator().getText("TXT_KEY_GREAT_SCHISM", ())
                 CyInterface().addMessage(
-                    iHuman,
+                    human(),
                     False,
                     MessageData.DURATION,
                     sText,

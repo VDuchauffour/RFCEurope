@@ -8,7 +8,7 @@
 
 
 from CvPythonExtensions import *
-from CoreStructures import human
+from CoreStructures import human, player
 import CvUtil
 import CvScreensInterface
 import CvDebugTools
@@ -700,7 +700,7 @@ class CvEventManager:
                 UnitAITypes(gc.getUnitInfo(iUnit).getDefaultUnitAIType()),
                 DirectionTypes.NO_DIRECTION,
             )
-            if utils.isActive(human()):
+            if player().isExisting():
                 szText = (
                     localText.getText("TXT_KEY_BUILDING_LEANING_TOWER_EFFECT", ())
                     + " "
@@ -1782,7 +1782,7 @@ class CvEventManager:
             HumanPlayer = gc.getPlayer(iHuman)
             HumanTeam = gc.getTeam(HumanPlayer.getTeam())
             if ConquerPlayer.isHuman() or (
-                utils.isActive(iHuman)
+                player().isExisting()
                 and (HumanTeam.isHasMet(ConquerTeam) or HumanTeam.isHasMet(PreviousTeam))
             ):
                 iX = city.getX()
@@ -2101,7 +2101,7 @@ class CvEventManager:
             HumanPlayer = gc.getPlayer(iHuman)
             HumanTeam = gc.getTeam(HumanPlayer.getTeam())
             if ConquerPlayer.isHuman() or (
-                utils.isActive(iHuman)
+                player().isExisting()
                 and (HumanTeam.isHasMet(ConquerTeam) or HumanTeam.isHasMet(PreviousTeam))
             ):
                 iX = pCity.getX()

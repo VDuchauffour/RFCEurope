@@ -1,6 +1,6 @@
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from CoreStructures import human
+from CoreStructures import human, player
 import PyHelpers
 import Popup
 import RFCUtils
@@ -1073,7 +1073,7 @@ class Crusades:
             self.setLeader(self.getFavorite())
             if self.getParticipate():
                 self.informLeaderPopup()
-            elif utils.isActive(iHuman):
+            elif player().isExisting():
                 CyInterface().addMessage(
                     iHuman,
                     True,
@@ -1130,7 +1130,7 @@ class Crusades:
 
         if self.getParticipate():
             self.informLeaderPopup()
-        elif utils.isActive(human()):
+        elif player().isExisting():
             CyInterface().addMessage(
                 human(),
                 True,
@@ -1234,10 +1234,9 @@ class Crusades:
     def crusadeStolenAI(self, iNewLeader, iNewTarget):
         self.setLeader(iNewLeader)
         pLeader = gc.getPlayer(iNewLeader)
-        iHuman = human()
-        if utils.isActive(iHuman):
+        if player().isExisting():
             CyInterface().addMessage(
-                iHuman,
+                human(),
                 False,
                 MessageData.DURATION / 2,
                 pLeader.getName() + CyTranslator().getText("TXT_KEY_CRUSADE_DEVIATED", ()),
@@ -1277,7 +1276,7 @@ class Crusades:
             return
         if iTargetPlayer == iHuman:
             self.underCrusadeAttackPopup(pTargetCity.getName(), iLeader)
-        elif utils.isActive(iHuman):
+        elif player().isExisting():
             sCityName = cnm.lookupName(pTargetCity, Civ.POPE.value)
             if sCityName == "Unknown":
                 sCityName = cnm.lookupName(pTargetCity, iLeader)
@@ -1925,7 +1924,7 @@ class Crusades:
         iHuman = human()
         pHuman = gc.getPlayer(iHuman)
         pPlayer = gc.getPlayer(iPlayer)
-        if utils.isActive(iHuman):
+        if player().isExisting():
             if (
                 gc.getTeam(pHuman.getTeam()).canContact(pPlayer.getTeam())
                 or pHuman.getStateReligion() == Religion.CATHOLICISM.value
