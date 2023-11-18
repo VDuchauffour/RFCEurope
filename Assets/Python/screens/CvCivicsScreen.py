@@ -191,10 +191,6 @@ class CvCivicsScreen:
             -1,
         )
 
-        # if self.nCategories % 2 > 0 and self.nColumns % 2 == 0:
-        # 	screen.addFlagWidgetGFC("LeftFlag", self.X_FLAG, self.Y_FLAG, self.W_FLAG, self.H_FLAG, self.iActivePlayer, WidgetTypes.WIDGET_GENERAL, -1, -1)
-        # 	screen.addFlagWidgetGFC("RightFlag", self.W_SCREEN - self.X_FLAG - self.W_FLAG, self.Y_FLAG, self.W_FLAG, self.H_FLAG, self.iActivePlayer, WidgetTypes.WIDGET_GENERAL, -1, -1)
-
         if CyGame().isDebugMode():
             screen.addDropDownBoxGFC(
                 "DebugMenu", 22, 12, 300, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT
@@ -452,7 +448,6 @@ class CvCivicsScreen:
         if player.canRevolution(0):
             iTurns = player.getCivicAnarchyLength(self.DisplayedCivics)
             if iTurns > 0:
-                # sAnarchy = CyTranslator().getText('TXT_KEY_CIVIC_SCREEN_ANARCHY_TIMER', (iTurns, ))
                 sAnarchy = CyTranslator().getText("TXT_KEY_ANARCHY_TURNS", (iTurns,))
 
             if bSelection:
@@ -462,7 +457,6 @@ class CvCivicsScreen:
             screen.hide("RevolutionButton")
             iTurns = player.getRevolutionTimer()
             if iTurns > 0:
-                # sAnarchy = CyTranslator().getText('TXT_KEY_CIVIC_SCREEN_REVOLUTION_TIMER', (iTurns, ))
                 sAnarchy = CyGameTextMgr().setRevolutionHelp(self.iActivePlayer)
 
         screen.setLabel(
@@ -498,15 +492,9 @@ class CvCivicsScreen:
     def getPosition(self, iCategory):
         "Returns top left coordinates of the specified category panel"
         i = self.Categories.index(iCategory)
-        # if self.nCategories % 2 > 0 and self.nColumns % 2 == 0:
-        # 	i += 1
 
         iX = self.X_CIVIC_CATEGORY + ((i % self.nColumns) * (self.W_CIVIC_CATEGORY + self.MARGIN))
         iY = self.Y_CIVIC_CATEGORY + ((i / self.nColumns) * (self.H_CIVIC_CATEGORY + self.MARGIN))
-
-        # if self.nCategories % 2 > 0 and self.nColumns % 2 == 0:
-        # 	if i == 1:
-        # 		iX -= (self.W_CIVIC_CATEGORY + self.MARGIN) / 2
 
         return iX, iY
 

@@ -177,10 +177,6 @@ class Plague:
             (10 * (iTCH - iTCU)) / iNumCities
         )  # 10x the average health actually
         return iAverageCityHealth
-        # if ( iTCH > 0 ):
-        # 	return int((10.0 * iTCH) / (iTCH + iTCU)) - 5 # theoretically between 5 and -5, but almost always between -2 and +2
-        # else:
-        # 	return -4
 
     def isVulnerable(self, iPlayer):
         # Absinthe: based on recent infections and the average city healthiness (also tech immunity should go here if it's ever added to the mod)

@@ -44,8 +44,6 @@ class CvDawnOfMan:
         self.H_LEADER_ICON = self.H_HEADER_PANEL - (15 * 2)  # 140
         self.W_LEADER_ICON = int(self.H_LEADER_ICON / 1.272727)  # 110
 
-        # 		iWHeaderPanelRemainingAfterLeader = self.W_HEADER_PANEL - self.W_LEADER_ICON + (self.iMarginSpace * 3)
-        # 		iXHeaderPanelRemainingAfterLeader = self.X_LEADER_ICON + self.W_LEADER_ICON + self.iMarginSpace
         self.X_LEADER_TITLE_TEXT = (
             505  # iXHeaderPanelRemainingAfterLeader + (iWHeaderPanelRemainingAfterLeader / 2)
         )
@@ -117,12 +115,6 @@ class CvDawnOfMan:
             self.H_MAIN_PANEL,
             PanelStyles.PANEL_STYLE_MAIN,
         )
-        ##Rhye - begin
-        ##		# Top
-        ##		szHeaderPanel = "DawnOfManHeaderPanel"
-        ##		screen.addPanel( szHeaderPanel, "", "", True, False,
-        ##			self.X_HEADER_PANEL, self.Y_HEADER_PANEL, self.W_HEADER_PANEL, self.H_HEADER_PANEL, PanelStyles.PANEL_STYLE_DAWNTOP )
-        ##Rhye - end
         # Bottom
         szTextPanel = "DawnOfManTextPanel"
         screen.addPanel(
@@ -138,30 +130,6 @@ class CvDawnOfMan:
             PanelStyles.PANEL_STYLE_DAWNBOTTOM,
         )
 
-        # Add contents
-        ##Rhye - begin
-        ##		# Leaderhead graphic
-        ##		szLeaderPanel = "DawnOfManLeaderPanel"
-        ##		screen.addPanel( szLeaderPanel, "", "", True, False,
-        ##			self.X_LEADER_ICON - 3, self.Y_LEADER_ICON - 5, self.W_LEADER_ICON + 6, self.H_LEADER_ICON + 8, PanelStyles.PANEL_STYLE_DAWNTOP )
-        ##		screen.addLeaderheadGFC("LeaderHead", self.player.getLeaderType(), AttitudeTypes.ATTITUDE_PLEASED,
-        ##			self.X_LEADER_ICON + 5, self.Y_LEADER_ICON + 5, self.W_LEADER_ICON - 10, self.H_LEADER_ICON - 10, WidgetTypes.WIDGET_GENERAL, -1, -1)
-
-        ##		# Info/"Stats" text
-        ##
-        ##		szNameText = "<color=255,255,0,255>" + u"<font=3b>" + gc.getLeaderHeadInfo(self.player.getLeaderType()).getDescription().upper() + u"</font>" + "\n- " + self.player.getCivilizationDescription(0) + " -"
-        ##		screen.addMultilineText( "NameText", szNameText, self.X_LEADER_TITLE_TEXT, self.Y_LEADER_TITLE_TEXT, self.W_LEADER_TITLE_TEXT, self.H_LEADER_TITLE_TEXT, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_CENTER_JUSTIFY)
-        ##
-        ##		self.Text_BoxText = CyGameTextMgr().parseLeaderTraits(self.player.getLeaderType(), self.player.getCivilizationType(), True, False)
-        ##		self.Text_BoxText += "\n" + CyGameTextMgr().parseCivInfos(self.player.getCivilizationType(), True)
-        ##
-        ##		screen.addMultilineText( "HeaderText", self.Text_BoxText, self.X_STATS_TEXT, self.Y_STATS_TEXT, self.W_STATS_TEXT, self.H_STATS_TEXT, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-
-        ##		# Fancy icon things
-        ##		screen.addDDSGFC( "IconLeft", gc.getMissionInfo(MissionTypes.MISSION_FORTIFY).getButton(), self.X_FANCY_ICON1 , self.Y_FANCY_ICON , self.WH_FANCY_ICON, self.WH_FANCY_ICON, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-        ##		screen.addDDSGFC( "IconRight", gc.getMissionInfo(MissionTypes.MISSION_FORTIFY).getButton(), self.X_FANCY_ICON2 , self.Y_FANCY_ICON , self.WH_FANCY_ICON, self.WH_FANCY_ICON, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-
-        ##Rhye - end
         # Main Body text
         szDawnTitle = (
             u"<font=3>"
@@ -268,9 +236,6 @@ class CvDawnOfMan:
     def update(self, fDelta):
 
         ##Rhye - begin
-        # if (civilization(CyGame().getActiveTeam()).date.birth == 0 or \
-        # 	(not gc.getPlayer(0).isPlayable() and CyGame().getActiveTeam() <= Civ.ARABIA.value)):  #late start condition
-        # MiroTest = CyGame().getActiveTeam()
         if civilization(CyGame().getActiveTeam()).date.birth <= get_scenario_start_turn():
             screen = CyGInterfaceScreen("CvLoadingScreen", self.iScreenID)
             screen.setBarPercentage("ProgressBar", InfoBarTypes.INFOBAR_STORED, 1)
@@ -294,8 +259,6 @@ class CvDawnOfMan:
             iNumAutoPlayTurns = civilization(CyGame().getActiveTeam()).date.birth
             iNumTurnsRemaining = iNumAutoPlayTurns - iGameTurn
 
-            # if (iNumTurnsRemaining != self.iTurnsRemaining):
-            # 	self.iTurnsRemaining = iNumTurnsRemaining
             screen = CyGInterfaceScreen("CvLoadingScreen", self.iScreenID)
 
             exponent = 1 + iNumAutoPlayTurns / 190
@@ -328,6 +291,5 @@ class CvDawnOfMan:
 
     def onClose(self):
         # Absinthe: do not play the initial RFC song on start - might even lead to sound selection issues
-        # CyInterface().DoSoundtrack("AS2D_RFC") #Rhye
         CyInterface().setSoundSelectionReady(True)
         return 0

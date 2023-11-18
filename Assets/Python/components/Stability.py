@@ -143,28 +143,6 @@ class Stability:
             self.recalcEpansion(Civ.BYZANTIUM.value)
 
     def checkTurn(self, iGameTurn):
-        # 3Miro: hidden modifier based upon the group/continent
-        # if (iGameTurn % 21 == 0):
-        # 	self.continentsNormalization(iGameTurn)
-        # if (iGameTurn % 6 == 0): #3 is too short to detect any change; must be a multiple of 3 anyway
-        # gc.calcLastOwned() # Compute the RFC arrays (getlOwnedPlots,getlOwnedCities) in C instead
-        # for iLoopCiv in civilizations().majors().ids():
-        # if ( gc.hasUP(iLoopCiv, UniquePower.LESS_INSTABILITY_WITH_FOREIGN_LAND.value) ): #French UP
-        # self.setOwnedPlotsLastTurn(iLoopCiv, 0)
-        # else:
-        # self.setOwnedPlotsLastTurn(iLoopCiv, gc.getlOwnedPlots(iLoopCiv))
-        # self.setOwnedCitiesLastTurn(iLoopCiv, gc.getlOwnedCities(iLoopCiv))
-
-        ##Display up/down arrows
-        # if (iGameTurn % 3 == 0 and gc.getActivePlayer().getNumCities() > 0):  #numcities required to test autoplay with minor civs
-        # iHuman = human()
-        # self.setLastRecordedStabilityStuff(0, self.getStability(iHuman))
-        # self.setLastRecordedStabilityStuff(1, utils.getParCities(iHuman))
-        # self.setLastRecordedStabilityStuff(2, utils.getParCivics(iHuman))
-        # self.setLastRecordedStabilityStuff(3, utils.getParEconomy(iHuman))
-        # self.setLastRecordedStabilityStuff(4, utils.getParExpansion(iHuman))
-        # self.setLastRecordedStabilityStuff(5, utils.getParDiplomacy(iHuman))
-
         # Absinthe: logging AI stability levels
         if iGameTurn % 9 == 2:
             for iPlayer in civilizations().main().ids():
@@ -281,16 +259,6 @@ class Stability:
 
     def continentsNormalization(self, iGameTurn):  # Sedna17
         pass
-        # lContinentModifier = [-1, -1, 0, -2, 0, 0]
-        # for civ in civilizations().majors():
-        #     if gc.getPlayer(civ.id).isAlive():
-        #         for group_key, group_civs in CIV_GROUPS.items():
-        #             if civ.key in group_civs:
-        #                 self.setParameter(civ.id, 12, True, lContinentModifier[group_key.value])
-        #                 self.setStability(
-        #                     civ.id,
-        #                     (self.getStability(civ.id) + lContinentModifier[group_key.value]),
-        #                 )
 
     def onCityBuilt(self, iPlayer, x, y):
         iProv = PROVINCES_MAP[y][x]
@@ -443,9 +411,6 @@ class Stability:
         pPlayer = gc.getPlayer(iPlayer)
         if iBuilding == utils.getUniqueBuilding(iPlayer, Building.MANOR_HOUSE.value):
             pPlayer.changeStabilityBase(StabilityCategory.ECONOMY.value, 1)
-            ## Naval base adds an additional stability point
-            # if iBuilding == Building.VENICE_NAVAL_BASE.value:
-            # 	pPlayer.changeStabilityBase(StabilityCategory.ECONOMY.value, 1 )
             self.recalcEconomy(iPlayer)
         elif iBuilding == utils.getUniqueBuilding(iPlayer, Building.CASTLE.value):
             pPlayer.changeStabilityBase(StabilityCategory.EXPANSION.value, 1)
@@ -495,16 +460,6 @@ class Stability:
 
     def onReligionSpread(self, iReligion, iPlayer):
         pass
-        # Sedna17: Religions seemed to be subtracted and re-inserted into cities, which makes this a bad idea.
-        # if (iPlayer < civilizations().majors().len()):
-        # 	pPlayer = gc.getPlayer(iPlayer)
-        # 	if (pPlayer.getStateReligion() != iReligion):
-        # 		for iLoopCiv in civilizations().majors().ids():
-        # 			if (gc.getTeam(pPlayer.getTeam()).isAtWar(iLoopCiv)):
-        # 				if (gc.getPlayer(iLoopCiv).getStateReligion() == iReligion):
-        # 					self.setStability(iPlayer, self.getStability(iPlayer) - 1 )
-        # 					self.setParameter(iPlayer, iParCitiesE, True, -1)
-        # 					break
 
     def checkImplosion(self, iGameTurn):
         if iGameTurn > 14 and iGameTurn % 6 == 3:
@@ -1094,10 +1049,4 @@ class Stability:
         if iPlayer in [Civ.OTTOMAN.value, Civ.MOSCOW.value]:  # five free cities for those two
             iNumCities = max(0, iNumCities - 5)
         iExpStability -= iNumCities * iNumCities / 40
-        # 	if ( pPlayer.getID() == Civ.OTTOMAN.value and pPlayer.getStability() < 1 and gc.getGame().getGameTurn() < DateTurn.i1570AD ): # boost Turkey before the battle of Lepanto
-        # 		if ( not pPlayer.isHuman() ):
-        # 			iExpStability += min( 3 - pPlayer.getStability(), 6 )
-        # 	if ( pPlayer.getID() == Civ.VENECIA.value and pPlayer.getStability() < 1 and gc.getGame().getGameTurn() < DateTurn.i1204AD ): # Venice has trouble early on due to its civics
-        # 		if ( not pPlayer.isHuman() ):
-        # 			iExpStability += 4
         pPlayer.setStabilityVary(StabilityCategory.EXPANSION.value, iExpStability)

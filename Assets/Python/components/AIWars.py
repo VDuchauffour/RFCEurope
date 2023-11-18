@@ -101,9 +101,6 @@ class AIWars:
                         # Absinthe: probably better to use declareWar instead of setAtWar
                         teamVenice = gc.getTeam(pVenice.getTeam())
                         teamVenice.declareWar(iOwner, False, WarPlanTypes.WARPLAN_LIMITED)
-                        # teamVenice.setAtWar( gc.getPlayer( iOwner ).getTeam(), True )
-                        # teamRagusa = gc.getTeam( gc.getPlayer( iOwner ).getTeam() )
-                        # teamRagusa.setAtWar( pVenice.getTeam(), True )
 
         # Absinthe: Kingdom of Hungary should try to dominate Sisak/Zagreb if it's independent
         if iGameTurn > DateTurn.i1000AD and iGameTurn % 7 == 3:
@@ -119,11 +116,6 @@ class AIWars:
                         teamHungary.declareWar(iOwner, False, WarPlanTypes.WARPLAN_LIMITED)
 
         if iGameTurn == self.getNextTurnAIWar():
-            # 3Miro: how long it takes (the else from the statement goes all the way down)
-            # if (iGameTurn > DateTurn.i1600AD): #longer periods due to globalization of contacts
-            # 	iMinInterval = iMinIntervalLate
-            # 	iMaxInterval = iMaxIntervalLate
-            # else:
             iMinInterval = iMinIntervalEarly
             iMaxInterval = iMaxIntervalEarly
 
@@ -168,16 +160,6 @@ class AIWars:
                     + gc.getGame().getSorenRandNum(iMaxInterval - iMinInterval, "random turn") / 2
                 )
             )
-
-    ##	def initArray(self):
-    ##		for k in civilizations().majors().ids():
-    ##			grid = []
-    ##			for j in range( WORLD_HEIGHT ):
-    ##				line = []
-    ##				for i in range( WORLD_WIDTH ):
-    ##					line.append( gc.getPlayer(iCiv).getSettlersMaps( WORLD_HEIGHT-j-1, i ) )
-    ##				grid.append( line )
-    ##			self.lSettlersMap.append( grid )
 
     def chooseAttackingPlayer(self):
         # finding max teams ever alive (countCivTeamsEverAlive() doesn't work as late human starting civ gets killed every turn)
@@ -262,11 +244,6 @@ class AIWars:
                         iValue /= 3
                     lTargetCivs[iOwner] += iValue
 
-        # contacts do not disappear in RFCE, so if isHasMet was True they do have a contact
-        # for k in civilizations().majors().ids():
-        # 	if not pCiv.canContact(k):
-        # 		lTargetCivs[k] /= 8
-
         # normalization
         iMaxTempValue = max(lTargetCivs)
         if iMaxTempValue > 0:
@@ -317,10 +294,6 @@ class AIWars:
             # if under pact
             if pTeam.isDefensivePact(iLoopCiv):
                 lTargetCivs[iLoopCiv] /= 4
-            # if friend of a friend
-        ##			for jLoopCiv in civilizations().drop(Civ.BARBARIAN).ids():
-        ##				if (pTeam.isDefensivePact(jLoopCiv) and gc.getTeam(gc.getPlayer(iLoopCiv).getTeam()).isDefensivePact(jLoopCiv)):
-        ##					lTargetCivs[iLoopCiv] /= 2
 
         # find max
         iMaxValue = max(lTargetCivs)

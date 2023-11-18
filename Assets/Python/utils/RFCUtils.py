@@ -65,13 +65,6 @@ class RFCUtils:
     def setLastRespawnTurn(self, iCiv, iNewValue):
         sd.scriptDict["lLastRespawnTurn"][iCiv] = iNewValue
 
-    # Victory
-    # def getGoal( self, i, j ):
-    # return sd.scriptDict['lGoals'][i][j]
-
-    # def setGoal( self, i, j, iNewValue ):
-    # sd.scriptDict['lGoals'][i][j] = iNewValue
-
     # Stability
     def getTempFlippingCity(self):
         return sd.scriptDict["tempFlippingCity"]
@@ -82,39 +75,10 @@ class RFCUtils:
     def getStability(self, iCiv):
         return gc.getPlayer(iCiv).getStability()
 
-    # def setStability( self, iCiv, iNewValue ):
-    # sd.scriptDict['lStability'][iCiv] = iNewValue
-
-    # def getBaseStabilityLastTurn( self, iCiv ):
-    # return sd.scriptDict['lBaseStabilityLastTurn'][iCiv]
-
-    # def setBaseStabilityLastTurn( self, iCiv, iNewValue ):
-    # sd.scriptDict['lBaseStabilityLastTurn'][iCiv] = iNewValue
-
-    # def getStabilityParameters( self, iCiv, iParameter ):
-    # return sd.scriptDict['lStabilityParameters'][iCiv][iParameter]
-
-    # def setStabilityParameters( self, iCiv,iParameter, iNewValue ):
-    # sd.scriptDict['lStabilityParameters'][iCiv][iParameter] = iNewValue
-
-    # def getGreatDepressionCountdown( self, iCiv ):
-    # return sd.scriptDict['lGreatDepressionCountdown'][iCiv]
-
-    # def setGreatDepressionCountdown( self, iCiv, iNewValue ):
-    # sd.scriptDict['lGreatDepressionCountdown'][iCiv] = iNewValue
-
-    # def getLastRecordedStabilityStuff( self, iParameter ):
-    # return sd.scriptDict['lLastRecordedStabilityStuff'][iParameter]
-
-    # def setLastRecordedStabilityStuff( self, iParameter, iNewValue ):
-    # sd.scriptDict['lLastRecordedStabilityStuff'][iParameter] = iNewValue
-
     def getProsecutionCount(self, iCiv):
-        # return sd.scriptDict['iProsecutionCount'][iCiv]
         return gc.getProsecutionCount(iCiv)
 
     def setProsecutionCount(self, iCiv, iNewValue):
-        # sd.scriptDict['iProsecutionCount'][iCiv] = iNewValue
         gc.setProsecutionCount(iCiv, iNewValue)
 
     # Plague
@@ -127,8 +91,6 @@ class RFCUtils:
     def getSeed(self):
         return sd.scriptDict["iSeed"]
 
-    #######################################
-
     # Victory
     def countAchievedGoals(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
@@ -138,11 +100,9 @@ class RFCUtils:
             if iTemp < 0:
                 iTemp = 0
             iResult += iTemp
-            # if (self.getGoal(iPlayer, j) == 1):
-            # 	iResult += 1
         return iResult
 
-    def getGoalsColor(self, iPlayer):  # by CyberChrist
+    def getGoalsColor(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
         iCol = 0
         for j in range(3):

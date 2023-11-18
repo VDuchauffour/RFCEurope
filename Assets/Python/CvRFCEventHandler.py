@@ -196,22 +196,6 @@ class CvRFCEventHandler:
         global g_iWanderlustMercenariesMaximum
         global g_bDisplayMercenaryMessages
 
-        # Rhye - start comment
-
-    ##		# Load the Mercenaries Mod Config INI file containing all of the configuration information
-    ##		config = CvConfigParser.CvConfigParser("Mercenaries Mod Config.ini")
-    ##
-    ##		# If we actually were able to open the "Mercenaries Mod Config.ini" file then read in the values.
-    ##		# otherwise we'll keep the default values that were set at the top of this file.
-    ##		if(config != None):
-    ##			g_bGameTurnMercenaryCreation = config.getboolean("Mercenaries Mod", "Game Turn Mercenary Creation", True)
-    ##			g_bDisplayMercenaryManagerOnBeginPlayerTurn = config.getboolean("Mercenaries Mod", "Display Mercenary Manager On Begin Player Turn", False)
-    ##			g_iStartingEra = gc.getInfoTypeForString(config.get("Mercenaries Mod","Starting Era","ERA_ANCIENT"))
-    ##			g_bWanderlustMercenaries = config.getboolean("Mercenaries Mod", "Wanderlust Mercenaries", True)
-    ##			g_iWanderlustMercenariesMaximum = config.getint("Mercenaries Mod","Wanderlust Mercenaries Maximum", 5)
-    ##			g_bDisplayMercenaryMessages = config.getboolean("Mercenaries Mod", "Display Mercenary Messages", True)
-    # Rhye - end comment
-
     def onGameStart(self, argsList):
         "Called at the start of the game"
         # self.pm.setup()
@@ -386,13 +370,6 @@ class CvRFCEventHandler:
                     )
                     pNewOwner.changeStabilityBase(StabilityCategory.EXPANSION.value, 1)
         # Sedna17, end
-
-        # 3Miro: National wonders and city acquire by trade
-        # if (bTrade):
-        # 	for i in range (iScotlandYard +1 - Building.HEROIC_EPIC.value):
-        # 		iNationalWonder = i + Building.HEROIC_EPIC.value
-        # 		if (city.hasBuilding(iNationalWonder)):
-        # 			city.setHasRealBuilding((iNationalWonder), False)
 
         self.pla.onCityAcquired(owner, playerType, city)  # Plague
         self.vic.onCityAcquired(owner, playerType, city, bConquest, bTrade)  # Victory
@@ -623,38 +600,6 @@ class CvRFCEventHandler:
 
     def onBeginGameTurn(self, argsList):
         iGameTurn = argsList[0]
-
-        # Absinthe tests
-        # if iGameTurn == DateTurn.i508AD:
-        # 	for city in utils.getCityList(Civ.FRANCE.value):
-        # 		plot = gc.getMap().plot(city.getX(),city.getY())
-
-        # 	unitList = PyPlayer(Civ.FRANCE.value).getUnitList()
-        # 	for unit in unitList:
-        # 		iCargoSpace = unit.cargoSpace()
-
-        # 	for iCiv in civilizations().majors().ids():
-        # 		pCiv = gc.getPlayer(iCiv)
-        # 		leaderName = pCiv.getLeader()
-        # 		leaderName2 = gc.getLeaderHeadInfo( pCiv.getLeaderType() )
-        # 		leaderName3 = leaderName2.getDescription()
-        # 		leaderName4 = leaderName2.getLeaderHead()
-        # 	#	leaderName5 = (pCiv.getLeaderType()).getLeaderID()
-        # 	#	leaderName6 = leaderName2.getLeaderType()
-        # 		leaderName7 = pCiv.getLeaderType()
-        # 		LeaderType = gc.getLeaderHeadInfo(pCiv.getLeaderType()).getType()
-
-        # for city in utils.getCityList(Civ.HUNGARY.value):
-        # 	city.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_GRANARY"), CommerceTypes.COMMERCE_GOLD, 2)
-        # 	city.setBuildingCommerceChange(gc.getInfoTypeForString("BUILDINGCLASS_CASTLE"), CommerceTypes.COMMERCE_GOLD, 12)
-        # 	city.setBuildingYieldChange(gc.getInfoTypeForString("BUILDINGCLASS_GRANARY"), YieldTypes.YIELD_COMMERCE, 4)
-        # 	city.setBuildingYieldChange(gc.getInfoTypeForString("BUILDINGCLASS_GRANARY"), YieldTypes.YIELD_FOOD, 2)
-        # 	city.setBuildingYieldChange(gc.getInfoTypeForString("BUILDINGCLASS_CASTLE"), YieldTypes.YIELD_FOOD, 3)
-
-        # 	for x in range(76):
-        # 		plot = CyMap().plot(x, 46) # France, Paris included
-        # 	for x in range(76):
-        # 		plot = CyMap().plot(x, 36) # Hungary, accents
 
         # Absinthe: 868AD Viking attack on Constantinople
         if (
@@ -993,7 +938,6 @@ class CvRFCEventHandler:
         iHuman = human()
 
         self.vic.onTechAcquired(argsList[0], argsList[2])
-        # self.res.onTechAcquired(argsList[0], argsList[2])
 
         if (
             gc.getPlayer(iPlayer).isAlive()
@@ -1011,14 +955,6 @@ class CvRFCEventHandler:
     def onLoadGame(self, argsList):
         sd.load()  # edead: load & unpickle script data
         DataLoader.setup()  # Absinthe: also needed on loading saved games
-        # pass
-
-        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(Technology.NATIONALISM.value)) and gc.getGame().getGameTurn() >= civilization(human()).date.birth):
-        # if (gc.getGame().getGameTurn() >= civilization(human()).date.birth):
-
-        # global objMercenaryUtils
-
-        # objMercenaryUtils = MercenaryUtils.MercenaryUtils()
 
     # This method will redraw the main interface once a unit is promoted. This way the
     # gold/turn information will be updated.
@@ -1027,33 +963,11 @@ class CvRFCEventHandler:
 
         self.mercs.onUnitPromoted(argsList)
 
-        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(Technology.NATIONALISM.value)) and gc.getGame().getGameTurn() >= civilization(human()).date.birth):
-        # if (gc.getGame().getGameTurn() >= civilization(human()).date.birth):
-        # 	pUnit, iPromotion = argsList
-        # 	player = PyPlayer(pUnit.getOwner())
-        #
-        # 	if (objMercenaryUtils.isMercenary(pUnit)):
-        # 		CyInterface().setDirty(InterfaceDirtyBits.GameData_DIRTY_BIT, True)
-
     # This method will remove a mercenary unit from the game if it is killed
     def onUnitKilled(self, argsList):
         "Unit Killed"
 
         self.mercs.onUnitKilled(argsList)
-
-        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(Technology.NATIONALISM.value)) and gc.getGame().getGameTurn() >= civilization(human()).date.birth):
-        # if (gc.getGame().getGameTurn() >= civilization(human()).date.birth):
-
-        # unit, iAttacker = argsList
-
-        # mercenary = objMercenaryUtils.getMercenary(unit.getNameNoDesc())
-
-        # if(mercenary != None and g_bDisplayMercenaryMessages and mercenary.getBuilder() != -1 and unit.isDead()):
-        # strMessage = mercenary.getName() + " has died under " + gc.getPlayer(mercenary.getOwner()).getName() + "'s service."
-        ## Inform the player that the mercenary has died.
-        # CyInterface().addMessage(mercenary.getBuilder(), True, 20, strMessage, "", 0, "", ColorTypes(0), -1, -1, True, True)
-
-        # objMercenaryUtils.removePlayerMercenary(unit)
 
     # This method will remove a mercenary unit from the game if it is lost
     def onUnitLost(self, argsList):
@@ -1101,9 +1015,7 @@ class CvRFCEventHandler:
             and theKey == int(InputTypes.KB_N)
             and self.eventManager.bAlt
         ):
-            # self.printEmbassyDebug()
             self.printPlotsDebug()
-            # self.printStabilityDebug()
 
         if (
             eventType == self.EventKeyDown
@@ -1113,8 +1025,6 @@ class CvRFCEventHandler:
         ):
             # picks a dead civ so that autoplay can be started with game.AIplay xx
             iDebugDeadCiv = Civ.BURGUNDY.value  # always dead in 500AD
-            # 3Miro: not sure
-            # gc.getTeam(gc.getPlayer(iDebugDeadCiv).getTeam()).setHasTech(Technology.CALENDAR.value, True, iDebugDeadCiv, False, False)
             utils.makeUnit(Unit.AXEMAN.value, iDebugDeadCiv, (0, 0), 1)
             gc.getGame().setActivePlayer(iDebugDeadCiv, False)
             gc.getPlayer(iDebugDeadCiv).setPlayable(True)
@@ -1148,7 +1058,6 @@ class CvRFCEventHandler:
 
             # clear the highlight
             engine.clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_HIGHLIGHT_PLOT)
-            # engine.clearColoredPlots(PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS)
 
             # cache the plot's coords
             self.lastProvinceID = PROVINCES_MAP[plot.getY()][plot.getX()]

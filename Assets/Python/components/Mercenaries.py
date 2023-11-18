@@ -3725,10 +3725,6 @@ class MercenaryManager:
             lHumanProvinces = self.GMU.getOwnedProvinces(iHuman)
             iMercsLeft = 0
             for lMerc in self.lGlobalPool:
-                # iNewProv = lMercList[lMerc[0]][4][gc.getGame().getSorenRandNum( len(lMercList[lMerc[0]][4]), 'pick available province') ]
-                # if ( ( not ( lMerc[4] in lHumanProvinces ) ) and ( iNewProv in lHumanProvinces ) ):
-                # CyInterface().addMessage(iHuman, False, MessageData.DURATION/2, CyTranslator().getText("TXT_KEY_MERC_NEW_MERC_AVAILABLE",()), "", 0, "", ColorTypes(MessageData.LIME), -1, -1, True, True)
-                # lMerc[4] = iNewProv
                 if (
                     gc.getGame().getSorenRandNum(100, "mercs leaving the global pool")
                     < lMercList[lMerc[0]][6] / 2

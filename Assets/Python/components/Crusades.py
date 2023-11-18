@@ -369,7 +369,6 @@ class Crusades:
         )
 
     def deviateHumanPopup(self):
-        # iCost = gc.getPlayer( Civ.POPE.value ).getGold() / 3
         iCost = gc.getPlayer(human()).getGold() / 3
         sString = (
             CyTranslator().getText("TXT_KEY_CRUSADE_RICHEST", ())
@@ -418,23 +417,6 @@ class Crusades:
                     + pPlayer.getCivilizationAdjective(0)
                     + ")"
                 )
-        # Absinthe: might be a good idea to add a couple more target cities (only if the owner is a major civ with Islam as a state religion)
-        # 			like Alexandria, Damascus, Sevilla, Tangier
-        # 	tAlexandriaPlot =
-        # 	tPlotDamascus =
-        # 	tPlotSevilla =
-        # 	tPlotTanja =
-        # 	lCityPlots = []
-        # 	for tPlot in lCityPlots:
-        # 		pPlot = gc.getMap().plot( tPlot )
-        # 		pCity = pPlot.getPlotCity()
-        # 		iOwner = pCity.getOwner()
-        # 		sName = pCity.getName()
-        # 		pPlayer = gc.getPlayer( iOwner )
-        # 		iReligion = pPlayer.getStateReligion()
-        # 		if (iOwner < civilizations().majors().len() and iReligion == Religion.ISLAM.value):
-        # 			self.setIsTarget( iOwner, True )
-        # 			lTargetList.append( sName + " (" + pPlayer.getCivilizationAdjective(0) + ")" )
         self.showPopup(
             7620,
             CyTranslator().getText("TXT_KEY_CRUSADE_CORRUPT", ()),
