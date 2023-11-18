@@ -6,7 +6,7 @@ import CvUtil
 import CvScreenEnums
 import RFCUtils
 from CoreTypes import Scenario, FaithPointBonusCategory, Technology
-from Scenario import get_scenario
+from Scenario import get_scenario, get_scenario_start_years
 
 utils = RFCUtils.RFCUtils()
 PyPlayer = PyHelpers.PyPlayer
@@ -369,7 +369,7 @@ class CvReligionScreen:
 
                 # Absinthe: foundation text, based on the knowledge of Calendar, whether the foundation was before or after the Scenario start date, and the corresponding era
                 if tPlayer.isHasTech(Technology.CALENDAR.value):
-                    if year <= utils.getScenarioStartYear():
+                    if year <= get_scenario_start_years():
                         if get_scenario() == Scenario.i500AD:
                             szFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_500AD", ())
                         else:
@@ -379,7 +379,7 @@ class CvReligionScreen:
                             gc.getGame().getReligionGameTurnFounded(i), False
                         )
                 else:
-                    if year <= utils.getScenarioStartYear():
+                    if year <= get_scenario_start_years():
                         szFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_ERA", ())
                     elif year >= 1500:
                         szFounded = localText.getText("TXT_KEY_ERA_RENAISSANCE", ())

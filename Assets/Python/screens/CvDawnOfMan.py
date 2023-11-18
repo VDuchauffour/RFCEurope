@@ -8,7 +8,7 @@ from CvPythonExtensions import *
 import RFCUtils
 
 from CoreTypes import Scenario
-from Scenario import get_scenario
+from Scenario import get_scenario, get_scenario_start_turn
 
 ArtFileMgr = CyArtFileMgr()
 localText = CyTranslator()
@@ -188,7 +188,7 @@ class CvDawnOfMan:
         # Absinthe: civ-specific Dawn of Man screen - idea from SoI
         dom_values = civilization(CyGame().getActiveTeam()).misc.dawn_of_man
         year = dom_values[0] + CyTranslator().getText(dom_values[1], ())
-        if civilization(CyGame().getActiveTeam()).date.birth < utils.getScenarioStartTurn():
+        if civilization(CyGame().getActiveTeam()).date.birth < get_scenario_start_turn():
             if get_scenario() == Scenario.i1200AD:
                 textKey = "TXT_KEY_DAWN_OF_MAN_TEXT_%d_1200" % (CyGame().getActiveTeam())
         else:
@@ -271,7 +271,7 @@ class CvDawnOfMan:
         # if (civilization(CyGame().getActiveTeam()).date.birth == 0 or \
         # 	(not gc.getPlayer(0).isPlayable() and CyGame().getActiveTeam() <= Civ.ARABIA.value)):  #late start condition
         # MiroTest = CyGame().getActiveTeam()
-        if civilization(CyGame().getActiveTeam()).date.birth <= utils.getScenarioStartTurn():
+        if civilization(CyGame().getActiveTeam()).date.birth <= get_scenario_start_turn():
             screen = CyGInterfaceScreen("CvLoadingScreen", self.iScreenID)
             screen.setBarPercentage("ProgressBar", InfoBarTypes.INFOBAR_STORED, 1)
             screen.setLabel(
@@ -303,8 +303,8 @@ class CvDawnOfMan:
             screen.setBarPercentage(
                 "ProgressBar",
                 InfoBarTypes.INFOBAR_STORED,
-                float(math.pow(iGameTurn - utils.getScenarioStartTurn(), exponent))
-                / float(math.pow(iNumAutoPlayTurns - utils.getScenarioStartTurn(), exponent)),
+                float(math.pow(iGameTurn - get_scenario_start_turn(), exponent))
+                / float(math.pow(iNumAutoPlayTurns - get_scenario_start_turn(), exponent)),
             )
             screen.setLabel(
                 "Text",

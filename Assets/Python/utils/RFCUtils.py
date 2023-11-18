@@ -20,7 +20,6 @@ import CvScreenEnums
 from LocationsData import CITIES
 import PyHelpers
 import Popup
-from Scenario import get_scenario  # Absinthe
 from StoredData import sd
 from MiscData import (
     GREAT_PROPHET_FAITH_POINT_BONUS,
@@ -30,7 +29,6 @@ from MiscData import (
     MessageData,
 )
 
-from TimelineData import DateTurn
 from CoreFunctions import get_religion_by_id
 from CoreTypes import ProvinceType
 from MapsData import PROVINCES_MAP
@@ -1719,14 +1717,6 @@ class RFCUtils:
             return 0  # unstable
 
     # Absinthe: end
-
-    def getScenarioStartYear(self):
-        lStartYears = [500, 1200]
-        return lStartYears[get_scenario()]
-
-    def getScenarioStartTurn(self):
-        lStartTurn = [DateTurn.i500AD, DateTurn.i1200AD]
-        return lStartTurn[get_scenario()]
 
     def getUniqueUnit(self, iPlayer, iUnit):
         pPlayer = gc.getPlayer(iPlayer)

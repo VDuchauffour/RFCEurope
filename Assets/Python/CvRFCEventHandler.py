@@ -780,7 +780,7 @@ class CvRFCEventHandler:
         ## Absinthe: refresh Dynamic Civ Names for all civs on the human player's initial turn of the given scenario
         ##			it's probably enough to refresh it on onGameStart for the scenario
         # if utils.getHumanID() == iPlayer:
-        # 	if iGameTurn == utils.getScenarioStartTurn():
+        # 	if iGameTurn == get_scenario_start_turn():
         # 		for iDCNPlayer in civilizations().majors().ids():
         # 			gc.getPlayer(iDCNPlayer).processCivNames()
 

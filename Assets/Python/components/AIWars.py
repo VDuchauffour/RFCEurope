@@ -5,6 +5,7 @@ from CoreData import civilizations, civilization
 from CoreTypes import Civ
 import PyHelpers  # LOQ
 import RFCUtils
+from Scenario import get_scenario_start_turn
 from StoredData import sd
 from MapsData import WARS_MAP
 from MiscData import WORLD_HEIGHT
@@ -39,7 +40,7 @@ class AIWars:
         sd.scriptDict["iNextTurnAIWar"] = iNewValue
 
     def setup(self):
-        iTurn = utils.getScenarioStartTurn()  # only check from the start turn of the scenario
+        iTurn = get_scenario_start_turn()  # only check from the start turn of the scenario
         self.setNextTurnAIWar(
             iTurn
             + gc.getGame().getSorenRandNum(iMaxIntervalEarly - iMinIntervalEarly, "random turn")

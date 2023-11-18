@@ -15,7 +15,7 @@ import RFCUtils
 from PyHelpers import PyPlayer
 
 from CoreTypes import Colony, Scenario, Technology
-from Scenario import get_scenario
+from Scenario import get_scenario, get_scenario_start_years
 
 # globals
 gc = CyGlobalContext()
@@ -3171,7 +3171,7 @@ class CvInfoScreen:
 
                 # Absinthe: top5 city foundation text
                 if tActivePlayer.isHasTech(Technology.CALENDAR.value):
-                    if iTurnYear <= utils.getScenarioStartYear():
+                    if iTurnYear <= get_scenario_start_years():
                         if get_scenario() == Scenario.i500AD:
                             szTurnFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_500AD", ())
                         else:
@@ -3179,7 +3179,7 @@ class CvInfoScreen:
                     else:
                         szTurnFounded = localText.getText("TXT_KEY_TIME_AD", (iTurnYear,))
                 else:
-                    if iTurnYear <= utils.getScenarioStartYear():
+                    if iTurnYear <= get_scenario_start_years():
                         szTurnFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_ERA", ())
                     elif iTurnYear >= 1500:
                         szTurnFounded = localText.getText("TXT_KEY_ERA_RENAISSANCE", ())
@@ -3662,7 +3662,7 @@ class CvInfoScreen:
                     pActivePlayer = gc.getPlayer(iActivePlayer)
                     tActivePlayer = gc.getTeam(pActivePlayer.getTeam())
 
-                    if iTurnYear <= utils.getScenarioStartYear():
+                    if iTurnYear <= get_scenario_start_years():
                         szTurnFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_START", ())
                     else:
                         if tActivePlayer.isHasTech(Technology.CALENDAR.value):
