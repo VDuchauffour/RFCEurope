@@ -95,6 +95,10 @@ class Civilization(Item):
         """Return True if the civilization is controlled by the player."""
         return self.player.isHuman()
 
+    def is_existing(self):
+        """Return True if the civilization is alive and have at least one city."""
+        return self.player.isExisting()
+
     def state_religion(self):
         """Return state religion of the civilization."""
         return self.player.getStateReligion()
@@ -158,6 +162,10 @@ class Civilizations(ItemCollection):
     def alive(self):
         """Return alive civilizations."""
         return self.filter(lambda c: c.is_alive())
+
+    def exists(self):
+        """Return existing civilizations."""
+        return self.filter(lambda c: c.is_existing())
 
     def dead(self):
         """Return dead civilizations."""
