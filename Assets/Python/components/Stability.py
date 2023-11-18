@@ -2,6 +2,7 @@
 
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
+from CoreStructures import human
 import PyHelpers
 
 from MiscData import MessageData
@@ -50,13 +51,9 @@ class Stability:
         # Absinthe: bonus stability for the human player based on difficulty level
         iHandicap = gc.getGame().getHandicapType()
         if iHandicap == 0:
-            gc.getPlayer(utils.getHumanID()).changeStabilityBase(
-                StabilityCategory.EXPANSION.value, 6
-            )
+            gc.getPlayer(human()).changeStabilityBase(StabilityCategory.EXPANSION.value, 6)
         elif iHandicap == 1:
-            gc.getPlayer(utils.getHumanID()).changeStabilityBase(
-                StabilityCategory.EXPANSION.value, 2
-            )
+            gc.getPlayer(human()).changeStabilityBase(StabilityCategory.EXPANSION.value, 2)
 
         # Absinthe: Stability is accounted properly for stuff preplaced in the scenario file - from RFCE++
         for iPlayer in civilizations().majors().ids():
@@ -131,7 +128,7 @@ class Stability:
         # 			for example France, Arabia, Bulgaria, Cordoba, Ottomans
         for iPlayer in civilizations().main().ids():
             pPlayer = gc.getPlayer(iPlayer)
-            if iPlayer != utils.getHumanID():
+            if iPlayer != human():
                 pPlayer.changeStabilityBase(
                     StabilityCategory.EXPANSION.value,
                     civilization(iPlayer).ai.stability_bonus,
@@ -140,7 +137,7 @@ class Stability:
         # Absinthe: update Byzantine stability on the start of the game
         if get_scenario() == Scenario.i500AD:
             # small stability boost for the human player for the first UHV
-            if Civ.BYZANTIUM.value == utils.getHumanID():
+            if Civ.BYZANTIUM.value == human():
                 pByzantium = gc.getPlayer(Civ.BYZANTIUM.value)
                 pByzantium.changeStabilityBase(StabilityCategory.EXPANSION.value, 4)
             self.recalcEpansion(Civ.BYZANTIUM.value)
@@ -160,7 +157,7 @@ class Stability:
 
         ##Display up/down arrows
         # if (iGameTurn % 3 == 0 and gc.getActivePlayer().getNumCities() > 0):  #numcities required to test autoplay with minor civs
-        # iHuman = utils.getHumanID()
+        # iHuman = human()
         # self.setLastRecordedStabilityStuff(0, self.getStability(iHuman))
         # self.setLastRecordedStabilityStuff(1, utils.getParCities(iHuman))
         # self.setLastRecordedStabilityStuff(2, utils.getParCivics(iHuman))
@@ -263,7 +260,7 @@ class Stability:
         # Absinthe: Collapse dates for AI nations
         if (
             iGameTurn > civilization(iPlayer).date.collapse
-            and iPlayer != utils.getHumanID()
+            and iPlayer != human()
             and pPlayer.isAlive()
         ):
             # Absinthe: -1 stability every 4 turns up to a total of -15 stability
@@ -522,7 +519,7 @@ class Stability:
                 ):
                     iStability = pPlayer.getStability()
                     # Absinthe: human player with very bad stability should have a much bigger chance for collapse
-                    if iStability < -14 and iPlayer == utils.getHumanID():
+                    if iStability < -14 and iPlayer == human():
                         if (
                             gc.getGame().getSorenRandNum(100, "human collapse")
                             < 0 - 2 * iStability
@@ -588,7 +585,7 @@ class Stability:
 
     def collapseCivilWar(self, iPlayer, iStability):
         pPlayer = gc.getPlayer(iPlayer)
-        iHuman = utils.getHumanID()
+        iHuman = human()
         if iPlayer != iHuman:
             if gc.getPlayer(iHuman).canContact(iPlayer):
                 CyInterface().addMessage(

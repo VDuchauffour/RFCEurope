@@ -2,6 +2,7 @@
 
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
+from CoreStructures import human
 import CvUtil
 import CvEventManager  # Mercenaries
 import PyHelpers
@@ -332,7 +333,7 @@ class CvRFCEventHandler:
                 if pPlayer.isHuman():
                     CityName = city.getNameKey()
                     CyInterface().addMessage(
-                        utils.getHumanID(),
+                        human(),
                         True,
                         MessageData.DURATION,
                         CyTranslator().getText("TXT_KEY_CRUSADE_JERUSALEM_SAFE", (CityName,)),
@@ -660,7 +661,7 @@ class CvRFCEventHandler:
             iGameTurn
             == DateTurn.i860AD + sd.scriptDict["lEventRandomness"][iByzantiumVikingAttack] - 2
         ):
-            if utils.getHumanID() == Civ.BYZANTIUM.value:
+            if human() == Civ.BYZANTIUM.value:
                 popup = Popup.PyPopup()
                 popup.setBodyString(
                     localText.getText("TXT_KEY_EVENT_VIKING_CONQUERERS_RUMOURS", ())
@@ -671,7 +672,7 @@ class CvRFCEventHandler:
             iGameTurn
             == DateTurn.i860AD + sd.scriptDict["lEventRandomness"][iByzantiumVikingAttack]
         ):
-            if utils.getHumanID() == Civ.BYZANTIUM.value:
+            if human() == Civ.BYZANTIUM.value:
                 self.barb.spawnMultiTypeUnits(
                     Civ.BARBARIAN.value,
                     (80, 24),
@@ -702,7 +703,7 @@ class CvRFCEventHandler:
 
         # Absinthe: Message for the human player about the Schism
         elif iGameTurn == DateTurn.i1053AD:
-            iHuman = utils.getHumanID()
+            iHuman = human()
             if utils.isActive(iHuman):
                 sText = CyTranslator().getText("TXT_KEY_GREAT_SCHISM", ())
                 CyInterface().addMessage(
@@ -732,7 +733,7 @@ class CvRFCEventHandler:
                         city.setHasRealBuilding(Wonder.GREAT_LIGHTHOUSE.value, False)
                         GLcity = city
                         bFound = 1
-                if bFound and utils.getHumanID() == iPlayer:
+                if bFound and human() == iPlayer:
                     pPlayer = gc.getPlayer(iPlayer)
                     iTeam = pPlayer.getTeam()
                     if GLcity.isRevealed(iTeam, False):
@@ -770,7 +771,7 @@ class CvRFCEventHandler:
 
     def onBeginPlayerTurn(self, argsList):
         iGameTurn, iPlayer = argsList
-        iHuman = utils.getHumanID()
+        iHuman = human()
         if self.rnf.getDeleteMode(0) != -1:
             self.rnf.deleteMode(iPlayer)
         # Absinthe: refresh Dynamic Civ Names
@@ -779,7 +780,7 @@ class CvRFCEventHandler:
 
         ## Absinthe: refresh Dynamic Civ Names for all civs on the human player's initial turn of the given scenario
         ##			it's probably enough to refresh it on onGameStart for the scenario
-        # if utils.getHumanID() == iPlayer:
+        # if human() == iPlayer:
         # 	if iGameTurn == get_scenario_start_turn():
         # 		for iDCNPlayer in civilizations().majors().ids():
         # 			gc.getPlayer(iDCNPlayer).processCivNames()
@@ -990,7 +991,7 @@ class CvRFCEventHandler:
     def onTechAcquired(self, argsList):
         iPlayer = argsList[2]
 
-        iHuman = utils.getHumanID()
+        iHuman = human()
 
         self.vic.onTechAcquired(argsList[0], argsList[2])
         # self.res.onTechAcquired(argsList[0], argsList[2])
@@ -1013,8 +1014,8 @@ class CvRFCEventHandler:
         DataLoader.setup()  # Absinthe: also needed on loading saved games
         # pass
 
-        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(Technology.NATIONALISM.value)) and gc.getGame().getGameTurn() >= civilization(utils.getHumanID()).date.birth):
-        # if (gc.getGame().getGameTurn() >= civilization(utils.getHumanID()).date.birth):
+        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(Technology.NATIONALISM.value)) and gc.getGame().getGameTurn() >= civilization(human()).date.birth):
+        # if (gc.getGame().getGameTurn() >= civilization(human()).date.birth):
 
         # global objMercenaryUtils
 
@@ -1027,8 +1028,8 @@ class CvRFCEventHandler:
 
         self.mercs.onUnitPromoted(argsList)
 
-        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(Technology.NATIONALISM.value)) and gc.getGame().getGameTurn() >= civilization(utils.getHumanID()).date.birth):
-        # if (gc.getGame().getGameTurn() >= civilization(utils.getHumanID()).date.birth):
+        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(Technology.NATIONALISM.value)) and gc.getGame().getGameTurn() >= civilization(human()).date.birth):
+        # if (gc.getGame().getGameTurn() >= civilization(human()).date.birth):
         # 	pUnit, iPromotion = argsList
         # 	player = PyPlayer(pUnit.getOwner())
         #
@@ -1041,8 +1042,8 @@ class CvRFCEventHandler:
 
         self.mercs.onUnitKilled(argsList)
 
-        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(Technology.NATIONALISM.value)) and gc.getGame().getGameTurn() >= civilization(utils.getHumanID()).date.birth):
-        # if (gc.getGame().getGameTurn() >= civilization(utils.getHumanID()).date.birth):
+        # if ((not gc.getTeam(gc.getActivePlayer().getTeam()).isHasTech(Technology.NATIONALISM.value)) and gc.getGame().getGameTurn() >= civilization(human()).date.birth):
+        # if (gc.getGame().getGameTurn() >= civilization(human()).date.birth):
 
         # unit, iAttacker = argsList
 
@@ -1066,7 +1067,7 @@ class CvRFCEventHandler:
     def onKbdEvent(self, argsList):
         "keypress handler - return 1 if the event was consumed"
 
-        iHuman = utils.getHumanID()
+        iHuman = human()
         if gc.getGame().getGameTurn() >= civilization(iHuman).date.birth:
 
             eventType, key, mx, my, px, py = argsList

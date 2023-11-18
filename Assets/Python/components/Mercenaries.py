@@ -3,6 +3,7 @@
 
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
+from CoreStructures import human
 from CoreTypes import Civ, Region, SpecialParameter, Religion, Promotion, Unit, Province
 from LocationsData import REGIONS
 import PyHelpers
@@ -3964,7 +3965,7 @@ class MercenaryManager:
 
     def desertMercs(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
-        if iPlayer == utils.getHumanID():
+        if iPlayer == human():
             CyInterface().addMessage(
                 iPlayer,
                 False,
@@ -4009,7 +4010,7 @@ class MercenaryManager:
         self.getMercLists()  # load the current mercenary pool
         for lMerc in self.lGlobalPool:
             if lMerc[4] == iProvince:
-                if iCiv == utils.getHumanID():
+                if iCiv == human():
                     CyInterface().addMessage(
                         iCiv,
                         False,
@@ -4034,7 +4035,7 @@ class MercenaryManager:
         self.getMercLists()  # load the current mercenary pool
         for lMerc in self.lGlobalPool:
             if lMerc[4] == iProvince:
-                if iCiv == utils.getHumanID():
+                if iCiv == human():
                     CyInterface().addMessage(
                         iCiv,
                         False,
@@ -4417,7 +4418,7 @@ class GlobalMercenaryUtils:
         self.setMercHiredBy(lHiredByList)
 
         # message for the human player if another civ hired a merc which was also available for him/her
-        iHuman = utils.getHumanID()
+        iHuman = human()
         if iPlayer != iHuman:
             lHumanProvList = self.getOwnedProvinces(iHuman)
             if lMerc[4] in lHumanProvList:

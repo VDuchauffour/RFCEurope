@@ -2,6 +2,7 @@
 
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
+from CoreStructures import human
 from CoreTypes import PlagueType, Improvement, Civ
 import PyHelpers
 import RFCUtils
@@ -211,7 +212,7 @@ class Plague:
             return
 
         # Absinthe: message about the spread
-        iHuman = utils.getHumanID()
+        iHuman = human()
         iHumanTeam = gc.getPlayer(iHuman).getTeam()
         if gc.getPlayer(iHuman).canContact(iPlayer) and iHuman != iPlayer:
             if city != -1 and city.isRevealed(iHumanTeam, False):
@@ -344,7 +345,7 @@ class Plague:
         teamCityOwner = gc.getTeam(pCityOwner.getTeam())
 
         iNumUnitsInAPlot = plot.getNumUnits()
-        iHuman = utils.getHumanID()
+        iHuman = human()
         iCityHealthRate = city.healthRate(False, 0)
 
         if iNumUnitsInAPlot > 0:
@@ -442,7 +443,7 @@ class Plague:
         bBadPlague = self.getBadPlague()
         bFirstPlague = self.getFirstPlague()
         pPlayer = gc.getPlayer(iPlayer)
-        iHuman = utils.getHumanID()
+        iHuman = human()
 
         lInfectedCities = [
             city
@@ -693,7 +694,7 @@ class Plague:
             # only if it's not a recently born civ
             if gc.getGame().getGameTurn() > civilization(iNewOwner).date.birth + PLAGUE_IMMUNITY:
                 # reinfect the human player if conquering plagued cities
-                if iNewOwner == utils.getHumanID():
+                if iNewOwner == human():
                     # if > 0 do nothing, if < 0 skip immunity and restart the plague, if == 0 start the plague
                     if self.getPlagueCountdown(iNewOwner) <= 0:
                         self.spreadPlague(iNewOwner, -1)

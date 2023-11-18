@@ -277,6 +277,11 @@ def team(identifier=None):
     )
 
 
+def human():
+    """Return ID of the human player."""
+    return gc.getGame().getActivePlayer()
+
+
 def period(identifier):
     """Return period given an identifier."""
     if identifier >= 0:

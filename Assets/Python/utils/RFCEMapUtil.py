@@ -8,12 +8,10 @@ from CvPythonExtensions import *
 from CoreData import civilizations
 import CvScreenEnums
 from MapsData import PROVINCES_MAP, SETTLERS_MAP, CITIES_MAP, WARS_MAP
-import RFCUtils
 from MiscData import WORLD_WIDTH, WORLD_HEIGHT
 
 
 gc = CyGlobalContext()
-utils = RFCUtils.RFCUtils()
 map = CyMap()
 localText = CyTranslator()
 engine = CyEngine()
@@ -376,7 +374,6 @@ class RFCEMapVisualizer:
             name = self.mapManager.getCityName(self.iPlayer, pPlot)
             if name is not None:
                 CyEngine().addLandmark(pPlot, name)
-                # CyEngine().addSign(pPlot, utils.getHumanID(), name)
 
     def hideCityNames(self):
         self.removeLandMarks()
@@ -384,7 +381,6 @@ class RFCEMapVisualizer:
     def hideCityName(self, pPlot):
         if not pPlot.isNone():
             CyEngine().removeLandmark(pPlot)
-            # CyEngine().removeSign(pPlot, utils.getHumanID())
 
     def showCoreArea(self):
         self.resetMinimap(True)
@@ -515,7 +511,6 @@ class RFCEMapVisualizer:
                 pPlot = map.plot(i, j)
                 if not pPlot.isNone():
                     CyEngine().removeLandmark(pPlot)
-                    # CyEngine().removeSign(pPlot, utils.getHumanID())
 
     def showOnMinimap(self, pPlot, sColor):
         mainScreen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)

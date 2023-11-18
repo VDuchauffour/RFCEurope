@@ -1,6 +1,6 @@
 from CvPythonExtensions import *
 from CoreData import civilization, civilizations, COMPANIES
-from CoreStructures import player, team
+from CoreStructures import human, player, team
 from CoreTypes import (
     Building,
     City,
@@ -514,7 +514,7 @@ class Victory:
         self.setIgnoreAI(bIgnoreAI)
         if bIgnoreAI:
             for iPlayer in civilizations().majors().ids():
-                if utils.getHumanID() != iPlayer:
+                if human() != iPlayer:
                     self.setAllUHVFailed(iPlayer)
 
     def isIgnoreAI(self):
@@ -533,7 +533,7 @@ class Victory:
     def checkPlayerTurn(self, iGameTurn, iPlayer):
         # We use Python version of Switch statement, it is supposed to be better, now all condition checks are in separate functions
         pPlayer = gc.getPlayer(iPlayer)
-        if iPlayer != utils.getHumanID() and self.isIgnoreAI():
+        if iPlayer != human() and self.isIgnoreAI():
             return
         if not gc.getGame().isVictoryValid(7):  # 7 == historical
             return
@@ -2067,7 +2067,7 @@ class Victory:
         pCiv = gc.getPlayer(iCiv)
         pCiv.setUHV(iUHV, 1)
         pCiv.changeStabilityBase(StabilityCategory.EXPANSION.value, 3)
-        if utils.getHumanID() == iCiv:
+        if human() == iCiv:
             if iUHV == 0:
                 sText = "first"
             elif iUHV == 1:
@@ -2081,7 +2081,7 @@ class Victory:
     def lostUHV(self, iCiv, iUHV):
         pCiv = gc.getPlayer(iCiv)
         pCiv.setUHV(iUHV, 0)
-        if utils.getHumanID() == iCiv:
+        if human() == iCiv:
             if iUHV == 0:
                 sText = "first"
             elif iUHV == 1:
@@ -2113,7 +2113,7 @@ class Victory:
 
         if not bAlreadyAIChecked:
             if (
-                iCiv != utils.getHumanID() and self.isIgnoreAI()
+                iCiv != human() and self.isIgnoreAI()
             ):  # Skip calculations if no AI UHV option is enabled
                 return False
 

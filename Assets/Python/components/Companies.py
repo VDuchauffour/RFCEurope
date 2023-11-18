@@ -4,6 +4,7 @@
 from CvPythonExtensions import *
 from CoreData import civilizations, COMPANIES
 from CoreFunctions import get_enum_by_id
+from CoreStructures import human
 from LocationsData import CITIES
 import PyHelpers
 import RFCUtils
@@ -232,7 +233,7 @@ class Companies:
             pOldOwner.setPicklefreeParameter(SpecialParameter.HAS_GALATA_TOWER.value, 0)
 
     def announceHuman(self, iCompany, city, bRemove=False):
-        iHuman = utils.getHumanID()
+        iHuman = human()
         iHumanTeam = gc.getPlayer(iHuman).getTeam()
         if not utils.isActive(iHuman) or not city.isRevealed(iHumanTeam, False):
             return

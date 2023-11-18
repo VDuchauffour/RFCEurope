@@ -1,6 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Barbarian units and cities
 
 from CvPythonExtensions import *
+from CoreStructures import human
 from CoreTypes import Civ, Civic, Religion, Technology, Unit, Province
 import PyHelpers  # LOQ
 import Popup
@@ -821,7 +822,7 @@ class Barbs:
         # iHandicap: Viceroy=-1, Monarch=0, Emperor=1
 
         # The Human player usually gets some additional barbarians
-        iHuman = utils.getHumanID()
+        iHuman = human()
 
         # Mediterranean Pirates (Light before 1500, then heavy for rest of game)
         if DateTurn.i960AD <= iGameTurn < DateTurn.i1401AD:
@@ -3465,7 +3466,7 @@ class Barbs:
 
             for iPlayer in civilizations().main().ids():
                 if lPlayersOwning[iPlayer] > 0:
-                    if utils.getHumanID() == iPlayer:
+                    if human() == iPlayer:
                         self.doRevoltHuman(iPlayer, iGameTurn, lNation, iRevoltIndex)
                     else:
                         self.doRevoltAI(iPlayer, iGameTurn, lNation, iRevoltIndex)
@@ -3551,7 +3552,7 @@ class Barbs:
         iDecision = popupReturn.getButtonClicked()
         iNationIndex, iRevoltIndex = self.getNationRevoltIndex()
         lNation = lMinorNations[iNationIndex]
-        iPlayer = utils.getHumanID()
+        iPlayer = human()
 
         cityList = self.getProvincePlayerCityList(lNation[0], iPlayer)
 

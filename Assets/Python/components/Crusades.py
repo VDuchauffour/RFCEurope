@@ -1,5 +1,6 @@
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
+from CoreStructures import human
 import PyHelpers
 import Popup
 import RFCUtils
@@ -307,7 +308,7 @@ class Crusades:
         popup.launch(False)
 
     def initVotePopup(self):
-        iHuman = utils.getHumanID()
+        iHuman = human()
         pHuman = gc.getPlayer(iHuman)
         iActiveCrusade = self.getActiveCrusade(gc.getGame().getGameTurn())
         iBribe = 200 + 50 * iActiveCrusade
@@ -369,7 +370,7 @@ class Crusades:
 
     def deviateHumanPopup(self):
         # iCost = gc.getPlayer( Civ.POPE.value ).getGold() / 3
-        iCost = gc.getPlayer(utils.getHumanID()).getGold() / 3
+        iCost = gc.getPlayer(human()).getGold() / 3
         sString = (
             CyTranslator().getText("TXT_KEY_CRUSADE_RICHEST", ())
             + CyTranslator().getText("TXT_KEY_CRUSADE_COST", ())
@@ -547,7 +548,7 @@ class Crusades:
                     return
                 self.selectVoteWinner()
                 self.decideTheRichestCatholic(iActiveCrusade)
-                if self.getRichestCatholic() == utils.getHumanID():
+                if self.getRichestCatholic() == human():
                     self.decideDeviateHuman()
                 else:
                     self.decideDeviateAI()
@@ -590,7 +591,7 @@ class Crusades:
         return False
 
     def eventApply7616(self, popupReturn):
-        iHuman = utils.getHumanID()
+        iHuman = human()
         if popupReturn.getButtonClicked() == 0:
             self.setParticipate(True)
             gc.getPlayer(iHuman).setIsCrusader(True)
@@ -705,18 +706,18 @@ class Crusades:
     def eventApply7618(self, popupReturn):
         if popupReturn.getButtonClicked() == 0:
             self.setVotesGatheredFavorite(
-                self.getVotesGatheredFavorite() + self.getVotingPower(utils.getHumanID())
+                self.getVotesGatheredFavorite() + self.getVotingPower(human())
             )
         else:
             self.setVotesGatheredPowerful(
-                self.getVotesGatheredPowerful() + self.getVotingPower(utils.getHumanID())
+                self.getVotesGatheredPowerful() + self.getVotingPower(human())
             )
 
     def eventApply7619(self, popupReturn):
         if popupReturn.getButtonClicked() == 0:
-            iHuman = utils.getHumanID()
+            iHuman = human()
             pHuman = gc.getPlayer(iHuman)
-            # pHuman.setGold( pHuman.getGold() - gc.getPlayer( utils.getHumanID() ).getGold() / 4 )
+            # pHuman.setGold( pHuman.getGold() - gc.getPlayer( human() ).getGold() / 4 )
             pHuman.changeGold(-pHuman.getGold() / 3)
             self.setLeader(iHuman)
             self.setCrusadePower(self.getCrusadePower() / 2)
@@ -743,7 +744,7 @@ class Crusades:
         self.startCrusade()
 
     def doParticipation(self, iGameTurn):
-        iHuman = utils.getHumanID()
+        iHuman = human()
         if civilization(iHuman).date.birth < iGameTurn:
             pHuman = gc.getPlayer(iHuman)
             if pHuman.getStateReligion() != Religion.CATHOLICISM.value:
@@ -818,7 +819,7 @@ class Crusades:
                 self.setVotingPower(iPlayer, pPlayer.getVotingPower(Religion.CATHOLICISM.value))
 
         # No votes from the human player if he/she won't participate (AI civs will always participate)
-        iHuman = utils.getHumanID()
+        iHuman = human()
         if not self.getParticipate():
             self.setVotingPower(iHuman, 0)
 
@@ -833,7 +834,7 @@ class Crusades:
         # Note that voting power is increased after this (but before the actual vote) for each sent unit by 2
 
     def setCrusaders(self):
-        iHuman = utils.getHumanID()
+        iHuman = human()
         for iPlayer in civilizations().majors().ids():
             if not iPlayer == iHuman and self.getVotingPower(iPlayer) > 0:
                 gc.getPlayer(iPlayer).setIsCrusader(True)
@@ -967,7 +968,7 @@ class Crusades:
         return iDefenders
 
     def sendUnit(self, pUnit):
-        iHuman = utils.getHumanID()
+        iHuman = human()
         iOwner = pUnit.getOwner()
         self.addSelectedUnit(self.unitCrusadeCategory(pUnit.getUnitType()))
         self.setVotingPower(iOwner, self.getVotingPower(iOwner) + 2)
@@ -1067,7 +1068,7 @@ class Crusades:
         return 7
 
     def voteForCandidatesAI(self):
-        iHuman = utils.getHumanID()
+        iHuman = human()
         if self.getPowerful() == -1:
             self.setLeader(self.getFavorite())
             if self.getParticipate():
@@ -1129,9 +1130,9 @@ class Crusades:
 
         if self.getParticipate():
             self.informLeaderPopup()
-        elif utils.isActive(utils.getHumanID()):
+        elif utils.isActive(human()):
             CyInterface().addMessage(
-                utils.getHumanID(),
+                human(),
                 True,
                 MessageData.DURATION / 2,
                 gc.getPlayer(self.getLeader()).getName()
@@ -1233,7 +1234,7 @@ class Crusades:
     def crusadeStolenAI(self, iNewLeader, iNewTarget):
         self.setLeader(iNewLeader)
         pLeader = gc.getPlayer(iNewLeader)
-        iHuman = utils.getHumanID()
+        iHuman = human()
         if utils.isActive(iHuman):
             CyInterface().addMessage(
                 iHuman,
@@ -1257,7 +1258,7 @@ class Crusades:
         self.setCrusadePower(self.getCrusadePower() / 2)
 
     def startCrusade(self):
-        iHuman = utils.getHumanID()
+        iHuman = human()
         iLeader = self.getLeader()
         iX, iY = self.getTargetPlot()
         pTargetCity = gc.getMap().plot(iX, iY).getPlotCity()
@@ -1404,13 +1405,13 @@ class Crusades:
         # Absinthe: if a valid plot is found, make the units and send a message about the arrival to the human player
         if (iChosenX, iChosenY) != (-1, -1):
             self.crusadeMakeUnits((iChosenX, iChosenY), iActiveCrusade)
-            if utils.getHumanID() == iLeader:
+            if human() == iLeader:
                 pTargetCity = gc.getMap().plot(iTX, iTY).getPlotCity()
                 sCityName = cnm.lookupName(pTargetCity, Civ.POPE.value)
                 if sCityName == "Unknown":
                     sCityName = cnm.lookupName(pTargetCity, iLeader)
                 CyInterface().addMessage(
-                    utils.getHumanID(),
+                    human(),
                     False,
                     MessageData.DURATION,
                     CyTranslator().getText("TXT_KEY_CRUSADE_ARRIVAL", (sCityName,)) + "!",
@@ -1449,7 +1450,7 @@ class Crusades:
         if (iTX, iTY) == CITIES[City.JERUSALEM].to_tuple():
             iRougeModifier = 100
             # human player should always face powerful units when defending Jerusalem
-            iHuman = utils.getHumanID()
+            iHuman = human()
             pPlot = gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple())
             iVictim = pPlot.getPlotCity().getOwner()
             if teamLeader.isHasTech(Technology.CHIVALRY.value) or iVictim == iHuman:
@@ -1495,7 +1496,7 @@ class Crusades:
 
         # Absinthe: not all units should arrive near Jerusalem
         # 			later Crusades have more units in the pool, so they should have bigger reduction
-        iHuman = utils.getHumanID()
+        iHuman = human()
         pPlot = gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple())
         iVictim = pPlot.getPlotCity().getOwner()
         # Absinthe: this reduction is very significant for an AI-controlled Jerusalem, but Crusades should remain an increasing threat to the human player
@@ -1624,7 +1625,7 @@ class Crusades:
         iActiveCrusade = self.getActiveCrusade(
             iPrevGameTurn
         )  # Absinthe: the Crusader units are called back before the next Crusade is initialized
-        iHuman = utils.getHumanID()
+        iHuman = human()
         for pUnit in unitList:
             if pUnit.getMercID() == (
                 -5 - iActiveCrusade
@@ -1829,7 +1830,7 @@ class Crusades:
                         1 + pCity.getPopulation()
                     ) <= iRandom:  # 1 -> 80%, 2 -> 70%, 3 -> 60% ...  7 -> 20%, 8 -> 10%, 9+ -> 0%
                         pCity.changePopulation(1)
-                        if iPlayer == utils.getHumanID():
+                        if iPlayer == human():
                             CyInterface().addMessage(
                                 iPlayer,
                                 False,
@@ -1873,7 +1874,7 @@ class Crusades:
                     lWeightValues.append((iPlayer, iCatholicFaith))
             iChosenPlayer = utils.getRandomByWeight(lWeightValues)
             if iChosenPlayer != -1:
-                if iChosenPlayer == utils.getHumanID():
+                if iChosenPlayer == human():
                     self.callDCHuman()
                 else:
                     self.callDCAI(iChosenPlayer)
@@ -1909,7 +1910,7 @@ class Crusades:
         return False
 
     def callDCHuman(self):
-        iHuman = utils.getHumanID()
+        iHuman = human()
         self.showPopup(
             7625,
             CyTranslator().getText("TXT_KEY_CRUSADE_DEFENSIVE_PROPOSAL_POPUP", ()),
@@ -1921,7 +1922,7 @@ class Crusades:
         )
 
     def callDCAI(self, iPlayer):
-        iHuman = utils.getHumanID()
+        iHuman = human()
         pHuman = gc.getPlayer(iHuman)
         pPlayer = gc.getPlayer(iPlayer)
         if utils.isActive(iHuman):
@@ -1953,7 +1954,7 @@ class Crusades:
 
     def eventApply7625(self, popupReturn):
         iDecision = popupReturn.getButtonClicked()
-        iHuman = utils.getHumanID()
+        iHuman = human()
         pHuman = gc.getPlayer(iHuman)
         if iDecision == 0:
             self.makeDCUnits(iHuman)
@@ -2067,7 +2068,7 @@ class Crusades:
             )
 
         # extra units for the AI, it is dumb anyway
-        if not iPlayer == utils.getHumanID():
+        if not iPlayer == human():
             pPlayer.initUnit(
                 iBestInfantry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH
             )

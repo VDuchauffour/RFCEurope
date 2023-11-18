@@ -2,6 +2,7 @@
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
+from CoreStructures import human
 from CoreTypes import Civ, SpecialParameter, Religion, Technology, Bonus
 import CvUtil
 import CvScreenEnums
@@ -7189,7 +7190,7 @@ class CvMainInterface:
             ##CyMessageControl().sendModNetMessage(iMessageID, iPlotX, iPlotY, iOwner, iUnitID)
 
             # Absinthe: persecution popup
-            if gc.getGame().getActivePlayer() == utils.getHumanID():
+            if gc.getGame().getActivePlayer() == human():
                 pCity = (
                     gc.getMap().plot(g_pSelectedUnit.getX(), g_pSelectedUnit.getY()).getPlotCity()
                 )

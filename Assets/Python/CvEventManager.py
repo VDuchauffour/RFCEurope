@@ -8,6 +8,7 @@
 
 
 from CvPythonExtensions import *
+from CoreStructures import human
 import CvUtil
 import CvScreensInterface
 import CvDebugTools
@@ -645,7 +646,7 @@ class CvEventManager:
                         pPlot.setImprovementType(-1)
                     # Absinthe: message for the human player if it was inside it's territory
                     iOwner = pPlot.getOwner()
-                    if iOwner == utils.getHumanID():
+                    if iOwner == human():
                         CyInterface().addMessage(
                             iOwner,
                             False,
@@ -699,14 +700,14 @@ class CvEventManager:
                 UnitAITypes(gc.getUnitInfo(iUnit).getDefaultUnitAIType()),
                 DirectionTypes.NO_DIRECTION,
             )
-            if utils.isActive(utils.getHumanID()):
+            if utils.isActive(human()):
                 szText = (
                     localText.getText("TXT_KEY_BUILDING_LEANING_TOWER_EFFECT", ())
                     + " "
                     + gc.getUnitInfo(iUnit).getDescription()
                 )
                 CyInterface().addMessage(
-                    utils.getHumanID(),
+                    human(),
                     False,
                     MessageData.DURATION,
                     szText,
@@ -762,7 +763,7 @@ class CvEventManager:
                     # add the first instance of the single tech, with message for the human player
                     iChosenTech = lPotentialTechs[0]
                     pTeam.setHasTech(iChosenTech, True, iPlayer, False, True)
-                    if iPlayer == utils.getHumanID():
+                    if iPlayer == human():
                         sText = CyTranslator().getText(
                             "TXT_KEY_BUILDING_BIBLIOTHECA_CORVINIANA_EFFECT",
                             (gc.getTechInfo(iChosenTech).getDescription(),),
@@ -795,7 +796,7 @@ class CvEventManager:
                         )
                         iChosenTech2 = lPotentialTechs[iRandTechPos2]
                     pTeam.setHasTech(iChosenTech1, True, iPlayer, False, True)
-                    if iPlayer == utils.getHumanID():
+                    if iPlayer == human():
                         sText = CyTranslator().getText(
                             "TXT_KEY_BUILDING_BIBLIOTHECA_CORVINIANA_EFFECT",
                             (gc.getTechInfo(iChosenTech1).getDescription(),),
@@ -815,7 +816,7 @@ class CvEventManager:
                             True,
                         )
                     pTeam.setHasTech(iChosenTech2, True, iPlayer, False, True)
-                    if iPlayer == utils.getHumanID():
+                    if iPlayer == human():
                         sText = CyTranslator().getText(
                             "TXT_KEY_BUILDING_BIBLIOTHECA_CORVINIANA_EFFECT",
                             (gc.getTechInfo(iChosenTech2).getDescription(),),
@@ -893,7 +894,7 @@ class CvEventManager:
                     UnitAITypes.NO_UNITAI,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
-            if utils.getHumanID() == iPlayer:
+            if human() == iPlayer:
                 CyInterface().addMessage(
                     iPlayer,
                     False,
@@ -1047,7 +1048,7 @@ class CvEventManager:
                 # 70% chance for a 3 turn Golden Age
                 if CyGame().getSorenRandNum(10, "Golden Age") < 7:
                     pPlayer.changeGoldenAgeTurns(3)
-                    if utils.getHumanID() == iPlayer:
+                    if human() == iPlayer:
                         CyInterface().addMessage(
                             iPlayer,
                             False,
@@ -1150,7 +1151,7 @@ class CvEventManager:
                 pNewUnit.convert(unit)
                 # message if it was changed to a vassal UU
                 if iUnit != iPlayerUU and iUnit != iDefaultUnit:
-                    iHuman = utils.getHumanID()
+                    iHuman = human()
                     if iHuman == iPlayer:
                         szText = localText.getText(
                             "TXT_KEY_BUILDING_TOPKAPI_PALACE_EFFECT",
@@ -1777,7 +1778,7 @@ class CvEventManager:
             if city.getPreviousOwner() != -1:
                 PreviousPlayer = gc.getPlayer(city.getPreviousOwner())
                 PreviousTeam = PreviousPlayer.getTeam()
-            iHuman = utils.getHumanID()
+            iHuman = human()
             HumanPlayer = gc.getPlayer(iHuman)
             HumanTeam = gc.getTeam(HumanPlayer.getTeam())
             if ConquerPlayer.isHuman() or (
@@ -2096,7 +2097,7 @@ class CvEventManager:
             if pCity.getPreviousOwner() != -1:
                 PreviousPlayer = gc.getPlayer(pCity.getPreviousOwner())
                 PreviousTeam = PreviousPlayer.getTeam()
-            iHuman = utils.getHumanID()
+            iHuman = human()
             HumanPlayer = gc.getPlayer(iHuman)
             HumanTeam = gc.getTeam(HumanPlayer.getTeam())
             if ConquerPlayer.isHuman() or (
@@ -2267,7 +2268,7 @@ class CvEventManager:
                     and pPlayer.countNumBuildings(Wonder.IMPERIAL_DIET.value) > 0
                 ):
                     pPlayer.changeGoldenAgeTurns(3)
-                    if utils.getHumanID() == iPlayer:
+                    if human() == iPlayer:
                         CyInterface().addMessage(
                             iPlayer,
                             False,

@@ -10,6 +10,7 @@ from CvPythonExtensions import (
 )
 from CoreData import civilization, civilizations
 from CoreFunctions import get_religion_by_id
+from CoreStructures import human
 from CoreTypes import (
     Building,
     Civ,
@@ -546,7 +547,7 @@ class Religions:
                                 )  # between 50-80, based on the Pope's wealth
                             pPope.changeGold(-iGift)
                             pPlayer.changeGold(iGift)
-                            if iChosenPlayer == utils.getHumanID():
+                            if iChosenPlayer == human():
                                 sText = CyTranslator().getText("TXT_KEY_FAITH_GOLD_GIFT", (iGift,))
                                 CyInterface().addMessage(
                                     iPlayer,
@@ -644,7 +645,7 @@ class Religions:
                                     pPlayer.getFaith() + 20 > iRandomTechNum
                                 ):  # +20, to have a real chance with low faith points as well
                                     teamPlayer.setHasTech(iTech, True, iChosenPlayer, False, True)
-                                    if iChosenPlayer == utils.getHumanID():
+                                    if iChosenPlayer == human():
                                         sText = CyTranslator().getText(
                                             "TXT_KEY_FAITH_TECH_GIFT",
                                             (gc.getTechInfo(iTech).getDescription(),),
@@ -836,7 +837,7 @@ class Religions:
             city = utils.getRandomEntry(cityList)
             city.setHasRealBuilding(iBuilding, True)
             gc.getPlayer(iPlayer).changeFaith(1)
-            if utils.getHumanID() == iPlayer:
+            if human() == iPlayer:
                 sText = (
                     CyTranslator().getText("TXT_KEY_FAITH_BUILDING1", ())
                     + " "
@@ -870,7 +871,7 @@ class Religions:
                 Civic.THEOCRACY.value,
                 Civic.ORGANIZED_RELIGION.value,
             ]:
-                if iPlayer == utils.getHumanID():
+                if iPlayer == human():
                     # check the available religions
                     religionList = []
                     for city in utils.getCityList(iPlayer):
@@ -973,7 +974,7 @@ class Religions:
         )
 
     def eventApply7624(self, popupReturn):
-        iHuman = utils.getHumanID()
+        iHuman = human()
         if popupReturn.getButtonClicked() == 0:
             self.reformationyes(iHuman)
         elif popupReturn.getButtonClicked() == 1:
@@ -1048,7 +1049,7 @@ class Religions:
                 iFaith += self.reformationReformCity(city, iCiv)
 
         # disband catholic missionaries of the AI civs on reformation
-        if iCiv != utils.getHumanID():
+        if iCiv != human():
             unitList = PyPlayer(iCiv).getUnitList()
             for pUnit in unitList:
                 iUnitType = pUnit.getUnitType()
@@ -1080,7 +1081,7 @@ class Religions:
                     if pPlayer.isHuman():  # message for the human player
                         CityName = city.getNameKey()
                         CyInterface().addMessage(
-                            utils.getHumanID(),
+                            human(),
                             False,
                             MessageData.DURATION,
                             CyTranslator().getText(
@@ -1120,7 +1121,7 @@ class Religions:
         # civ-specific modifier, between 3 and 27
         iCivRef = (civilization(pCity).ai.reformation_threshold / 10) * 3
         # AI bonus
-        if utils.getHumanID() == iCiv:
+        if human() == iCiv:
             iAIBonus = 10
 
         # spread the religion: range goes from 48-68% (Catholicism-lovers) to 72-92% (Protestantism-lovers), based on lReformationMatrix
@@ -1188,7 +1189,7 @@ class Religions:
                     if pPlayer.isHuman():  # message for the human player
                         CityName = pCity.getNameKey()
                         CyInterface().addMessage(
-                            utils.getHumanID(),
+                            human(),
                             False,
                             MessageData.DURATION,
                             CyTranslator().getText(
@@ -1277,7 +1278,7 @@ class Religions:
                         CityName = pCity.getNameKey()
                         if pPlayer.getStateReligion() == Religion.ISLAM.value:
                             CyInterface().addMessage(
-                                utils.getHumanID(),
+                                human(),
                                 False,
                                 MessageData.DURATION,
                                 CyTranslator().getText(
@@ -1294,7 +1295,7 @@ class Religions:
                             )
                         else:
                             CyInterface().addMessage(
-                                utils.getHumanID(),
+                                human(),
                                 False,
                                 MessageData.DURATION,
                                 CyTranslator().getText(
@@ -1352,7 +1353,7 @@ class Religions:
         popup.launch(False)
 
     def eventApply7626(self, popupReturn):
-        iHuman = utils.getHumanID()
+        iHuman = human()
         if popupReturn.getButtonClicked() == 0:
             self.doCounterReformationYes(iHuman)
         elif popupReturn.getButtonClicked() == 1:

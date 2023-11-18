@@ -1,6 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Unique Powers (only a couple of them is here, most are handled in the .dll)
 
 from CvPythonExtensions import *
+from CoreStructures import human
 from CoreTypes import Building, SpecialParameter, Religion, Unit
 import PyHelpers
 
@@ -74,7 +75,7 @@ class UniquePowers:
                 iY = pCity.getY()
                 utils.makeUnit(Unit.JANISSARY.value, iPlayer, (iX, iY), 1)
                 # interface message for the human player
-                if iPlayer == utils.getHumanID():
+                if iPlayer == human():
                     CyInterface().addMessage(
                         iPlayer,
                         False,
@@ -121,7 +122,7 @@ class UniquePowers:
             iX = city.getX()
             iY = city.getY()
             utils.makeUnit(Unit.JANISSARY.value, iPlayer, (iX, iY), 1)
-            if iPlayer == utils.getHumanID():
+            if iPlayer == human():
                 CyInterface().addMessage(
                     iPlayer,
                     False,
@@ -286,7 +287,7 @@ class UniquePowers:
                 else:
                     utils.makeUnit(PolearmClass, iPlayer, tPlot, 1)
                 # interface message for the human player
-                if iPlayer == utils.getHumanID():
+                if iPlayer == human():
                     CyInterface().addMessage(
                         iPlayer,
                         False,

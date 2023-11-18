@@ -2,6 +2,7 @@
 
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
+from CoreStructures import human
 from CoreTypes import (
     City,
     Civ,
@@ -317,10 +318,6 @@ class RFCUtils:
                 DirectionTypes.DIRECTION_SOUTH,
             )
 
-    # RiseAndFall, Religions
-    def getHumanID(self):
-        return gc.getGame().getActivePlayer()
-
     # RiseAndFall
     # Absinthe: separate city flip rules for secession and minor nation mechanics
     def flipUnitsInCitySecession(self, tCityPlot, iNewOwner, iOldOwner):
@@ -611,7 +608,7 @@ class RFCUtils:
                     iProvince = city.getProvince()
                     for lMerc in lGlobalPool:
                         if lMerc[4] == iProvince:
-                            if iNewOwner == self.getHumanID():
+                            if iNewOwner == human():
                                 szProvName = "TXT_KEY_PROVINCE_NAME_%i" % lMerc[4]
                                 szCurrentProvince = CyTranslator().getText(szProvName, ())
                                 CyInterface().addMessage(
@@ -1264,7 +1261,7 @@ class RFCUtils:
         )  # the wonders have an extra chance reduction (in addition to the building reduction)
         iChance -= iBuildingChanceReduction
         # bonus for the AI:
-        if self.getHumanID() != iOwner:
+        if human() != iOwner:
             iChance += 16
         # population modifier:
         if city.getPopulation() > 11:
@@ -1501,7 +1498,7 @@ class RFCUtils:
         colors.append("COLOR_HIGHLIGHT_CORE")
 
         # reset to human player, whenever the overlay is triggered
-        iHuman = self.getHumanID()
+        iHuman = human()
         iHumanTeam = gc.getPlayer(iHuman).getTeam()
         iSelectedCivID = iHuman
 
@@ -1520,7 +1517,7 @@ class RFCUtils:
         for iCiv in civilizations().main().ids():
             szDropdownName = str("StabilityOverlayCiv") + str(iCiv)
             szCaption = gc.getPlayer(iCiv).getCivilizationShortDescription(0)
-            if iCiv == self.getHumanID():
+            if iCiv == human():
                 szBuffer = "  <color=0,255,0>%s</color>  " % (szCaption)
             else:
                 szBuffer = "  %s  " % (szCaption)
@@ -1583,7 +1580,7 @@ class RFCUtils:
         colors.append("COLOR_HIGHLIGHT_POTENTIAL")
         colors.append("COLOR_HIGHLIGHT_NATURAL")
         colors.append("COLOR_HIGHLIGHT_CORE")
-        iHuman = self.getHumanID()
+        iHuman = human()
         iHumanTeam = gc.getPlayer(iHuman).getTeam()
 
         # if it's on, refresh the overlay, with showing the stability for the last selected civ
@@ -1634,7 +1631,7 @@ class RFCUtils:
         colors.append("COLOR_HIGHLIGHT_NATURAL")
         colors.append("COLOR_HIGHLIGHT_CORE")
 
-        iHuman = self.getHumanID()
+        iHuman = human()
         iHumanTeam = gc.getPlayer(iHuman).getTeam()
 
         # save the last selected civ in a global variable
@@ -1657,7 +1654,7 @@ class RFCUtils:
             szCaption = gc.getPlayer(iCiv).getCivilizationShortDescription(0)
             if iCiv == iSelectedCivID:
                 szBuffer = "  <color=0,255,255>%s</color>  " % (szCaption)
-            elif iCiv == self.getHumanID():
+            elif iCiv == human():
                 szBuffer = "  <color=0,255,0>%s</color>  " % (szCaption)
             else:
                 szBuffer = "  %s  " % (szCaption)
