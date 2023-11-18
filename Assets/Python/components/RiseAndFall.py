@@ -706,11 +706,6 @@ class RiseAndFall:
         ):
             if iGameTurn % 23 == 11:
                 self.resurrection(iGameTurn, -1)
-        # lSpecialRespawnTurn = self.getSpecialRespawnTurns()
-        # if iGameTurn in lSpecialRespawnTurn:
-        # 	iCiv = lSpecialRespawnTurn.index(iGameTurn)#Lookup index for
-        # 	if iCiv < civilizations().majors().len() and iCiv > 0:
-        # 		self.resurrection(iGameTurn,iCiv)
 
         # Absinthe: Reduce cities to towns, in order to make room for new civs
         if iGameTurn == civilization(Civ.SCOTLAND).date.birth - 3:
@@ -2043,11 +2038,9 @@ class RiseAndFall:
             if plotList:
                 plot = utils.getRandomEntry(plotList)
                 self.createStartingUnits(iCiv, plot)
-                # utils.debugTextPopup( 'birthInForeignBorders after a flip' )
                 self.assignTechs(iCiv)
                 utils.setPlagueCountdown(iCiv, -PLAGUE_IMMUNITY)
                 utils.clearPlague(iCiv)
-                # gc.getPlayer(iCiv).changeAnarchyTurns(1)
             utils.flipUnitsInArea(
                 tTopLeft, tBottomRight, iCiv, Civ.BARBARIAN.value, False, True
             )  # remaining barbs in the region now belong to the new civ
