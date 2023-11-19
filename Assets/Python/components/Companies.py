@@ -6,6 +6,7 @@ from CoreData import civilizations, COMPANIES
 from CoreFunctions import get_enum_by_id
 from CoreStructures import human, player
 from LocationsData import CITIES
+from PyUtils import rand
 import RFCUtils
 import Crusades
 from operator import itemgetter
@@ -63,9 +64,7 @@ class Companies:
             return
 
         # check if it's not too late
-        elif iGameTurn > COMPANIES[iCompany].deathdate + gc.getGame().getSorenRandNum(
-            COMPANIES.len(), "small randomness with a couple extra turns"
-        ):
+        elif iGameTurn > COMPANIES[iCompany].deathdate + rand(COMPANIES.len()):
             iMaxCompanies = 0
             # do not dissolve the Templars while Jerusalem is under Catholic control
             if iCompany == Company.TEMPLARS.value:
@@ -122,9 +121,7 @@ class Companies:
                     bPresent = False
                     if city.isHasCorporation(iCompany):
                         bPresent = True
-                    cityValueList.append(
-                        (city, iValue * 10 + gc.getGame().getSorenRandNum(10, "random bonus"))
-                    )
+                    cityValueList.append((city, iValue * 10 + rand(10)))
                 elif city.isHasCorporation(
                     iCompany
                 ):  # remove company from cities with a negative value
@@ -897,9 +894,7 @@ class Companies:
             for city in utils.getCityList(iPlayer):
                 iValue = self.getCityValue(city, iCompany)
                 if iValue > 0:
-                    cityValueList.append(
-                        (city, iValue * 10 + gc.getGame().getSorenRandNum(10, "random bonus"))
-                    )
+                    cityValueList.append((city, iValue * 10 + rand(10)))
         # sort cities from highest to lowest value
         cityValueList.sort(key=itemgetter(1), reverse=True)
         # spread the company

@@ -4,6 +4,7 @@ from CvPythonExtensions import *
 from CoreStructures import human
 from CoreTypes import Civ, Civic, Religion, Technology, Unit, Province
 import Popup
+from PyUtils import percentage, percentage_chance, rand
 import RFCUtils
 from TimelineData import DateTurn
 from StoredData import sd
@@ -3242,7 +3243,7 @@ class Barbs:
             for tCity in dIndependentCities[iGameTurn]:
                 lVariations, iCiv, iPop, iUnit, iNumUnits, iReligion, iWorkers = tCity
                 iChosenCity = -1
-                iRand = gc.getGame().getSorenRandNum(100, "random independent city")
+                iRand = percentage()
                 for iCity in range(len(lVariations)):
                     if iRand < lVariations[iCity][2]:
                         iChosenCity = iCity
@@ -3423,14 +3424,9 @@ class Barbs:
         lNextMinorRevolt = self.getRevolDates()
 
         for lNation in lMinorNations:
-            # iNextRevolt = lNation[3][0] -3 + gc.getGame().getSorenRandNum(6, 'roll to modify the Nations revolt odds')
             iNextRevolt = lNation[3][0]
             while iNextRevolt in lNextMinorRevolt:
-                iNextRevolt = (
-                    lNation[3][0]
-                    - 3
-                    + gc.getGame().getSorenRandNum(6, "roll to modify the Nations revolt odds")
-                )
+                iNextRevolt = lNation[3][0] - 3 + rand(6)
             iNationIndex = lMinorNations.index(lNation)
             lNextMinorRevolt[iNationIndex] = iNextRevolt
 
@@ -3471,17 +3467,9 @@ class Barbs:
             # setup next revolt
             iRevoltIndex += 1
             if iRevoltIndex < len(lNation[3]):
-                iNextRevolt = (
-                    lNation[3][iRevoltIndex]
-                    - 3
-                    + gc.getGame().getSorenRandNum(6, "roll to modify the Natios revolt odds")
-                )
+                iNextRevolt = lNation[3][iRevoltIndex] - 3 + rand(6)
                 while iNextRevolt in lNextMinorRevolt:
-                    iNextRevolt = (
-                        lNation[3][iRevoltIndex]
-                        - 3
-                        + gc.getGame().getSorenRandNum(6, "roll to modify the Natios revolt odds")
-                    )
+                    iNextRevolt = lNation[3][iRevoltIndex] - 3 + rand(6)
                 lNextMinorRevolt[lNextMinorRevolt.index(iGameTurn)] = iNextRevolt
                 self.setRevolDates(lNextMinorRevolt)
 
@@ -3509,7 +3497,7 @@ class Barbs:
         iSuppressOdds += min((5 * iNumGarrison) / len(cityList), 25)
 
         # time to roll the dice
-        if iSuppressOdds > gc.getGame().getSorenRandNum(100, "minor nation revolt"):
+        if percentage_chance(iSuppressOdds, strict=True, reverse=True):
             # revolt suppressed
             for iI in range(len(cityList)):
                 pCity = cityList[iI]
@@ -3589,7 +3577,7 @@ class Barbs:
             pPlayer.setGold(iGold - min(iGold, iBribeGold))
             iSuppressOdds += iBribeOdds
 
-        if iSuppressOdds > gc.getGame().getSorenRandNum(100, "minor nation revolt"):
+        if percentage_chance(iSuppressOdds, strict=True, reverse=True):
             # revolt suppressed
             for iI in range(len(cityList)):
                 pCity = cityList[iI]

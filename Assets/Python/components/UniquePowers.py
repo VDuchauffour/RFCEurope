@@ -1,5 +1,6 @@
 # Rhye's and Fall of Civilization: Europe - Unique Powers (only a couple of them is here, most are handled in the .dll)
 
+from random import choice
 from CvPythonExtensions import *
 from CoreStructures import human
 from CoreTypes import Building, SpecialParameter, Religion, Unit
@@ -278,10 +279,7 @@ class UniquePowers:
                 iX = city.getX()
                 iY = city.getY()
                 tPlot = (iX, iY)
-                if gc.getGame().getSorenRandNum(2, "DefiancyType") == 1:
-                    utils.makeUnit(RangedClass, iPlayer, tPlot, 1)
-                else:
-                    utils.makeUnit(PolearmClass, iPlayer, tPlot, 1)
+                utils.makeUnit(choice([RangedClass, PolearmClass]), iPlayer, tPlot, 1)
                 # interface message for the human player
                 if iPlayer == human():
                     CyInterface().addMessage(

@@ -24,6 +24,7 @@ from CoreTypes import (
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS, REGIONS
 import PyHelpers
 import Popup
+from PyUtils import rand
 import RFCUtils
 import UniquePowers
 from ProvinceMapData import PROVINCES_MAP
@@ -626,7 +627,7 @@ class Victory:
                                         iModifier += 2
                                     elif pCiv.getNumCities() > 4:
                                         iModifier += 1
-                                    iRndnum = gc.getGame().getSorenRandNum(7, "war chance")
+                                    iRndnum = rand(7)
                                     if iRndnum + iModifier > 6:
                                         teamCiv.declareWar(pPlayer.getTeam(), True, -1)
                                         iWarCounter += 1

@@ -3,7 +3,7 @@ from CoreData import civilization, civilizations
 from CoreStructures import Tile, human, player, team, teamtype
 import PyHelpers  # LOQ
 import Popup
-from PyUtils import percentage_chance
+from PyUtils import percentage, percentage_chance, rand
 import RFCUtils
 import Province
 import Religions
@@ -319,7 +319,7 @@ class RiseAndFall:
                     for i in range(iNumUnitsInAPlot):
                         unit = betrayalPlot.getUnit(i)
                         if unit.getOwner() == iHuman:
-                            rndNum = gc.getGame().getSorenRandNum(100, "betrayal")
+                            rndNum = percentage()
                             if rndNum >= iBetrayalThreshold:
                                 if unit.getDomainType() == DomainTypes.DOMAIN_SEA:  # land unit
                                     iUnitType = unit.getUnitType()
@@ -400,7 +400,7 @@ class RiseAndFall:
             lList[iHuman] = 2  # let go + war
             self.setRebelSuppress(lList)
         elif iChoice == 2:
-            if gc.getGame().getSorenRandNum(100, "odds") < 40:
+            if percentage_chance(40, strict=True):
                 lCityList = self.getRebelCities()
                 for (x, y) in lCityList:
                     pCity = gc.getMap().plot(x, y).getPlotCity()
@@ -417,7 +417,7 @@ class RiseAndFall:
         elif iChoice == 3:
             iLoyalPrice = min((10 * gc.getPlayer(iHuman).getGold()) / 100, 50 * iHumanCity)
             gc.getPlayer(iHuman).setGold(gc.getPlayer(iHuman).getGold() - iLoyalPrice)
-            if gc.getGame().getSorenRandNum(100, "odds") < iLoyalPrice / iHumanCity:
+            if percentage_chance(iLoyalPrice / iHumanCity, strict=True):
                 lList = self.getRebelSuppress()
                 lList[iHuman] = 1  # keep + no war
                 self.setRebelSuppress(lList)
@@ -428,7 +428,7 @@ class RiseAndFall:
         elif iChoice == 4:
             iLoyalPrice = min((10 * gc.getPlayer(iHuman).getGold()) / 100, 50 * iHumanCity)
             gc.getPlayer(iHuman).setGold(gc.getPlayer(iHuman).getGold() - iLoyalPrice)
-            if gc.getGame().getSorenRandNum(100, "odds") < iLoyalPrice / iHumanCity + 40:
+            if percentage_chance(iLoyalPrice / iHumanCity + 40, strict=True):
                 lCityList = self.getRebelCities()
                 for (x, y) in lCityList:
                     pCity = gc.getMap().plot(x, y).getPlotCity()
@@ -584,10 +584,7 @@ class RiseAndFall:
     def setupRespawnTurns(self):
         for iCiv in civilizations().majors().ids():
             self.setSpecialRespawnTurn(
-                iCiv,
-                civilization(iCiv).date.respawning
-                + (gc.getGame().getSorenRandNum(21, "BirthTurnModifier") - 10)
-                + (gc.getGame().getSorenRandNum(21, "BirthTurnModifier2") - 10),
+                iCiv, civilization(iCiv).date.respawning + (rand(21) - 10) + (rand(21) - 10)
             )  # bell-curve-like spawns within +/- 10 turns of desired turn (3Miro: Uniform, not a bell-curve)
 
     def setEarlyLeaders(self):
@@ -790,7 +787,7 @@ class RiseAndFall:
             gc.getPlayer(iPlayer).getAnarchyTurns() != 0
             or utils.getPlagueCountdown(iPlayer) > 0
             or utils.getStability(iPlayer) <= -10
-            or gc.getGame().getSorenRandNum(100, "die roll") < iThreshold
+            or percentage_chance(iThreshold, strict=True)
         ):
             gc.getPlayer(iPlayer).setLeader(iLeader.value)
 
@@ -855,7 +852,7 @@ class RiseAndFall:
                                 break
 
     def fragmentBarbarians(self, iGameTurn):
-        iRndnum = gc.getGame().getSorenRandNum(civilizations().majors().len(), "starting count")
+        iRndnum = rand(civilizations().majors().len())
         for j in civilizations().majors().ids():
             iDeadCiv = (j + iRndnum) % civilizations().majors().len()
             if (
@@ -874,13 +871,10 @@ class RiseAndFall:
                 if len(lCities) > 5:
                     iDivideCounter = 0
                     for tCity in lCities:
-                        iNewCiv = min(
-                            civilizations().independents().ids()
-                        ) + gc.getGame().getSorenRandNum(
+                        iNewCiv = min(civilizations().independents().ids()) + rand(
                             max(civilizations().independents().ids())
                             - min(civilizations().independents().ids())
-                            + 1,
-                            "randomIndep",
+                            + 1
                         )
                         if iDivideCounter % 4 in [0, 1]:
                             utils.cultureManager(
@@ -1078,7 +1072,7 @@ class RiseAndFall:
 
     def secession(self, iGameTurn):
         # Absinthe: if stability is negative there is a chance for a random city to declare it's independence, checked every 3 turns
-        iRndnum = gc.getGame().getSorenRandNum(civilizations().majors().len(), "starting count")
+        iRndnum = rand(civilizations().majors().len())
         iSecessionNumber = 0
         for j in civilizations().majors().ids():
             iPlayer = (j + iRndnum) % civilizations().majors().len()
@@ -1091,8 +1085,8 @@ class RiseAndFall:
                 and iGameTurn >= iRespawnTurn + 10
             ):
                 iStability = pPlayer.getStability()
-                if gc.getGame().getSorenRandNum(10, "do the check for city secession") < (
-                    -2 - iStability
+                if percentage_chance(
+                    10 * (-2 - iStability), strict=True  # TODO: have to rework the formula
                 ):  # 10% at -3, increasing by 10% with each point (100% with -12 or less)
                     self.revoltCity(iPlayer, False)
                     iSecessionNumber += 1
@@ -1103,7 +1097,7 @@ class RiseAndFall:
     def secessionCloseCollapse(self, iGameTurn):
         # Absinthe: another instance of secession, now with possibility for multiple cities revolting for the same civ
         # Absinthe: this can only happen with very bad stability, in case of fairly big empires
-        iRndnum = gc.getGame().getSorenRandNum(civilizations().majors().len(), "starting count")
+        iRndnum = rand(civilizations().majors().len())
         for j in civilizations().majors().ids():
             iPlayer = (j + iRndnum) % civilizations().majors().len()
             pPlayer = gc.getPlayer(iPlayer)
@@ -1294,11 +1288,10 @@ class RiseAndFall:
                 splittingCity = utils.getRandomEntry(cityListInCore)
 
             # Absinthe: city goes to random independent
-            iRndNum = gc.getGame().getSorenRandNum(
+            iRndNum = rand(
                 max(civilizations().independents().ids())
                 - min(civilizations().independents().ids())
-                + 1,
-                "random independent",
+                + 1
             )
             iIndy = min(civilizations().independents().ids()) + iRndNum
 
@@ -1349,7 +1342,7 @@ class RiseAndFall:
         else:
             iMinNumCities = 2
 
-        iRndnum = gc.getGame().getSorenRandNum(civilizations().majors().len(), "starting count")
+        iRndnum = rand(civilizations().majors().len())
         for j in civilizations().majors().ids():
             if not bSpecialRespawn:
                 iDeadCiv = (j + iRndnum) % civilizations().majors().len()
@@ -1424,9 +1417,8 @@ class RiseAndFall:
                                 ):
                                     cityList.append(tPlot)
                 if len(cityList) >= iMinNumCities:
-                    if bSpecialRespawn or (
-                        gc.getGame().getSorenRandNum(100, "roll")
-                        < civilization(iDeadCiv).location.respawning_threshold
+                    if bSpecialRespawn or percentage_chance(
+                        civilization(iDeadCiv).location.respawning_threshold, strict=True
                     ):
                         self.setRebelCities(cityList)
                         self.setRebelCiv(iDeadCiv)  # for popup and CollapseCapitals()
@@ -1450,8 +1442,7 @@ class RiseAndFall:
             if iCiv != iHuman:
                 if lCityCount[iCiv] > 0:
                     # Absinthe: for the AI there is 30% chance that the actual respawn does not happen (under these suppress situations), only some revolt in the corresponding cities
-                    iActualSpawnChance = gc.getGame().getSorenRandNum(100, "odds")
-                    if iActualSpawnChance > 70:
+                    if percentage_chance(30, strict=True):
                         lSuppressList[iCiv] = 1
                         for (x, y) in lCityList:
                             pCity = gc.getMap().plot(x, y).getPlotCity()
@@ -1531,8 +1522,7 @@ class RiseAndFall:
             # for iLeader in range(len(tLeaderCiv) - 1):
             for leader in leaders[:-1]:
                 if pDeadCiv.getLeader() == leader[0].value:
-                    iRnd = gc.getGame().getSorenRandNum(5, "odds")
-                    if iRnd > 1:  # 60% chance for the next leader
+                    if percentage_chance(60, strict=True):
                         pDeadCiv.setLeader(leader[0].value)
                     break
 
@@ -1607,7 +1597,7 @@ class RiseAndFall:
                     and iOwner != iDeadCiv
                     and lSuppressList[iOwner] == 0
                 ):  # declare war or peace only once - the 3rd condition is obvious but "vassal of themselves" was happening
-                    rndNum = gc.getGame().getSorenRandNum(100, "odds")
+                    rndNum = percentage()
                     if (
                         rndNum >= civilization(iOwner).ai.stop_birth_threshold
                         and not bOwnerHumanVassal
@@ -2152,7 +2142,7 @@ class RiseAndFall:
                         if (
                             gc.getGame().getGameTurn() <= civilization(iCiv).date.birth + 5
                         ):  # if we're during a birth
-                            rndNum = gc.getGame().getSorenRandNum(100, "odds")
+                            rndNum = percentage()
                             # 3Miro: I don't know why the iOwner check is needed below, but the module crashes sometimes
                             if (
                                 iOwner > -1
@@ -2421,8 +2411,7 @@ class RiseAndFall:
                 for i in range(iNumUnitsInAPlot):
                     unit = killPlot.getUnit(i)
                     if unit.getOwner() == iOldOwner:
-                        rndNum = gc.getGame().getSorenRandNum(100, "betrayal")
-                        if rndNum >= iBetrayalThreshold:
+                        if percentage_chance(iBetrayalThreshold, reverse=True):
                             if unit.getDomainType() == DomainTypes.DOMAIN_LAND:  # land unit
                                 iUnitType = unit.getUnitType()
                                 unit.kill(False, iNewOwner)
@@ -3498,7 +3487,7 @@ class RiseAndFall:
                     civ.meet(other.teamtype, bMeet)
 
     def LeaningTowerGP(self):
-        iGP = gc.getGame().getSorenRandNum(7, "starting count")
+        iGP = rand(7)
         pFlorentia = gc.getMap().plot(54, 32).getPlotCity()
         iSpecialist = Specialist.GREAT_PROPHET.value + iGP
         pFlorentia.setFreeSpecialistCount(iSpecialist, 1)

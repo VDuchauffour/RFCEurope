@@ -1,6 +1,8 @@
 import operator
 from random import randint
 
+from Errors import NotTypeExpectedError
+
 
 def all(iterable):
     """Return True if all elements of the iterable are true (or if the iterable is empty)."""  # type: ignore
@@ -82,13 +84,19 @@ def rand(left, right=None):
     return randint(left, right)
 
 
+def percentage():
+    """Return a random number between 0 and 99."""
+    return rand(100)
+
+
 def chance(threshold, percentage, strict=False, reverse=False):
-    """Return True if a random number between 0 and `threshold` is less than or equal to `percentage`.
+    """Return True if a random number is between 0 and `threshold` is less than or equal to `percentage`.
     If `strict` is True the chosen operator is less than. If `reverse` is True, the comparison
     order is reversed.
     """
-    if not 0 <= percentage <= threshold or not isinstance(percentage, int):
-        raise ValueError("`percentage` must an int, received %s" % percentage)
+    if not isinstance(percentage, int):
+        raise NotTypeExpectedError(int, type(percentage))
+
     if reverse:
         if strict:
             op = operator.__gt__
@@ -102,7 +110,12 @@ def chance(threshold, percentage, strict=False, reverse=False):
     return op(rand(threshold), percentage)
 
 
-percentage_chance = partial(chance, 100)
+def percentage_chance(percentage, strict=False, reverse=False):
+    """Return True if a random number is between 0 and 100 is less than or equal to `percentage`.
+    If `strict` is True the chosen operator is less than. If `reverse` is True, the comparison
+    order is reversed.
+    """
+    return chance(100, percentage, strict, reverse)
 
 
 def resolve_attr(obj, attr):

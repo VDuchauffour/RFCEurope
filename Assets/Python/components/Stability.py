@@ -21,6 +21,7 @@ from CoreTypes import (
     Technology,
     Wonder,
 )
+from PyUtils import percentage_chance, rand
 
 # import cPickle as pickle
 import RFCUtils
@@ -78,25 +79,21 @@ class Stability:
                         pPlayer.changeStabilityBase(StabilityCategory.EXPANSION.value, -2)
 
                 # Building stability: only a chance for these, as all the permanent negative stability modifiers are missing up to the start
-                if (
-                    pCity.hasBuilding(utils.getUniqueBuilding(iPlayer, Building.MANOR_HOUSE.value))
-                    and gc.getGame().getSorenRandNum(10, "build stab chance") < 7
-                ):
+                if pCity.hasBuilding(
+                    utils.getUniqueBuilding(iPlayer, Building.MANOR_HOUSE.value)
+                ) and percentage_chance(70, strict=True):
                     pPlayer.changeStabilityBase(StabilityCategory.ECONOMY.value, 1)
-                if (
-                    pCity.hasBuilding(utils.getUniqueBuilding(iPlayer, Building.CASTLE.value))
-                    and gc.getGame().getSorenRandNum(10, "build stab chance") < 7
-                ):
+                if pCity.hasBuilding(
+                    utils.getUniqueBuilding(iPlayer, Building.CASTLE.value)
+                ) and percentage_chance(70, strict=True):
                     pPlayer.changeStabilityBase(StabilityCategory.EXPANSION.value, 1)
-                if (
-                    pCity.hasBuilding(utils.getUniqueBuilding(iPlayer, Building.NIGHT_WATCH.value))
-                    and gc.getGame().getSorenRandNum(10, "build stab chance") < 7
-                ):
+                if pCity.hasBuilding(
+                    utils.getUniqueBuilding(iPlayer, Building.NIGHT_WATCH.value)
+                ) and percentage_chance(70, strict=True):
                     pPlayer.changeStabilityBase(StabilityCategory.CIVICS.value, 1)
-                if (
-                    pCity.hasBuilding(utils.getUniqueBuilding(iPlayer, Building.COURTHOUSE.value))
-                    and gc.getGame().getSorenRandNum(10, "build stab chance") < 7
-                ):
+                if pCity.hasBuilding(
+                    utils.getUniqueBuilding(iPlayer, Building.COURTHOUSE.value)
+                ) and percentage_chance(70, strict=True):
                     pPlayer.changeStabilityBase(StabilityCategory.CITIES.value, 1)
 
             # Small boost for small civs
@@ -475,10 +472,8 @@ class Stability:
                     iStability = pPlayer.getStability()
                     # Absinthe: human player with very bad stability should have a much bigger chance for collapse
                     if iStability < -14 and iPlayer == human():
-                        if (
-                            gc.getGame().getSorenRandNum(100, "human collapse")
-                            < 0 - 2 * iStability
-                        ):  # 30 chance with -15, 50% with -25, 70% with -35, 100% with -50 or less
+                        if percentage_chance(-2 * iStability, strict=True):
+                            # 30 chance with -15, 50% with -25, 70% with -35, 100% with -50 or less
                             if not utils.collapseImmune(iPlayer):
                                 self.collapseCivilWar(iPlayer, iStability)
                         else:  # when won't collapse, secession should always happen
@@ -489,15 +484,9 @@ class Stability:
                     # 			otherwise big chance for collapse mechanics
                     # 			the actual chance for both secession/revolt and total collapse is increasing with lower stability
                     elif iStability < -3:
-                        iRand1 = gc.getGame().getSorenRandNum(
-                            10, "chance for city secession or civ collapse"
-                        )
-                        iRand2 = gc.getGame().getSorenRandNum(
-                            10, "chance for city secession or civ collapse"
-                        )
-                        iRand3 = gc.getGame().getSorenRandNum(
-                            10, "chance for city secession or civ collapse"
-                        )
+                        iRand1 = rand(10)
+                        iRand2 = rand(10)
+                        iRand3 = rand(10)
                         if pPlayer.getNumCities() > 8:
                             if iRand1 < 8:  # 80 chance for secession start
                                 if iRand2 < (

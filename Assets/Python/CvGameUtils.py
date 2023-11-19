@@ -9,7 +9,8 @@ from CoreTypes import Building, Civ, Religion, StabilityCategory, Unit, Wonder
 import CvUtil
 from CvPythonExtensions import *
 from MiscData import RELIGION_PERSECUTION_ORDER
-import PyHelpers  # Absinthe
+import PyHelpers
+from PyUtils import rand  # Absinthe
 import RFCUtils
 import Stability  # Absinthe
 
@@ -538,17 +539,11 @@ class CvGameUtils:
         pPlot = argsList[0]
         pUnit = argsList[1]
 
-        iPillageGold = 0
-        iPillageGold = CyGame().getSorenRandNum(
-            gc.getImprovementInfo(pPlot.getImprovementType()).getPillageGold(), "Pillage Gold 1"
-        )
-        iPillageGold += CyGame().getSorenRandNum(
-            gc.getImprovementInfo(pPlot.getImprovementType()).getPillageGold(), "Pillage Gold 2"
-        )
+        pillage_gold = gc.getImprovementInfo(pPlot.getImprovementType()).getPillageGold()
 
-        iPillageGold += (pUnit.getPillageChange() * iPillageGold) / 100
-
-        return iPillageGold
+        value = rand(pillage_gold) + rand(pillage_gold)
+        value += (pUnit.getPillageChange() * value) / 100
+        return value
 
     def doCityCaptureGold(self, argsList):
         "controls the gold result of capturing a city"
@@ -559,12 +554,8 @@ class CvGameUtils:
 
         iCaptureGold += gc.getDefineINT("BASE_CAPTURE_GOLD")
         iCaptureGold += pOldCity.getPopulation() * gc.getDefineINT("CAPTURE_GOLD_PER_POPULATION")
-        iCaptureGold += CyGame().getSorenRandNum(
-            gc.getDefineINT("CAPTURE_GOLD_RAND1"), "Capture Gold 1"
-        )
-        iCaptureGold += CyGame().getSorenRandNum(
-            gc.getDefineINT("CAPTURE_GOLD_RAND2"), "Capture Gold 2"
-        )
+        iCaptureGold += rand(gc.getDefineINT("CAPTURE_GOLD_RAND1"))
+        iCaptureGold += rand(gc.getDefineINT("CAPTURE_GOLD_RAND2"))
 
         if gc.getDefineINT("CAPTURE_GOLD_MAX_TURNS") > 0:
             iCaptureGold *= cyIntRange(

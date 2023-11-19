@@ -4,6 +4,7 @@ from CvPythonExtensions import *
 from CoreData import civilizations, civilization
 from CoreStructures import human
 from CoreTypes import PlagueType, Improvement, Civ
+from PyUtils import percentage, percentage_chance, rand
 import RFCUtils
 
 from StoredData import sd
@@ -65,21 +66,11 @@ class Plague:
 
         # Sedna17: Set number of GenericPlagues in StoredData
         # 3Miro: Plague 0 strikes France too hard, make it less random and force it to pick Byzantium as starting land
-        self.setGenericPlagueDates(
-            0, 28 + gc.getGame().getSorenRandNum(5, "Variation") - 10
-        )  # Plagues of Constantinople
-        self.setGenericPlagueDates(
-            1, 247 + gc.getGame().getSorenRandNum(40, "Variation") - 20
-        )  # 1341 Black Death
-        self.setGenericPlagueDates(
-            2, 300 + gc.getGame().getSorenRandNum(40, "Variation") - 20
-        )  # Generic recurrence of plague
-        self.setGenericPlagueDates(
-            3, 375 + gc.getGame().getSorenRandNum(40, "Variation") - 30
-        )  # 1650 Great Plague
-        self.setGenericPlagueDates(
-            4, 440 + gc.getGame().getSorenRandNum(40, "Variation") - 30
-        )  # 1740 Small Pox
+        self.setGenericPlagueDates(0, 28 + rand(5) - 10)  # Plagues of Constantinople
+        self.setGenericPlagueDates(1, 247 + rand(40) - 20)  # 1341 Black Death
+        self.setGenericPlagueDates(2, 300 + rand(40) - 20)  # Generic recurrence of plague
+        self.setGenericPlagueDates(3, 375 + rand(40) - 30)  # 1650 Great Plague
+        self.setGenericPlagueDates(4, 440 + rand(40) - 30)  # 1740 Small Pox
 
     def checkTurn(self, iGameTurn):
 
@@ -146,9 +137,7 @@ class Plague:
                 pPlayer = gc.getPlayer(iPlayer)
                 if pPlayer.isAlive():
                     if self.isVulnerable(iPlayer):
-                        iHealth = self.calcHealth(iPlayer) - gc.getGame().getSorenRandNum(
-                            10, "random modifier"
-                        )
+                        iHealth = self.calcHealth(iPlayer) - rand(10)
                         if iHealth < iWorstHealth:
                             iWorstCiv = iPlayer
                             iWorstHealth = iHealth
@@ -301,20 +290,17 @@ class Plague:
             if iImprovement == Improvement.TOWN.value:  # 100% chance to reduce towns
                 pPlot.setImprovementType(Improvement.VILLAGE.value)
             elif iImprovement == Improvement.VILLAGE.value:
-                iRand = gc.getGame().getSorenRandNum(100, "roll")
-                if iRand < 75:  # 75% for reducing, 25% for resetting
+                if percentage_chance(75, strict=True):
                     pPlot.setImprovementType(Improvement.HAMLET.value)
                 else:
                     pPlot.setUpgradeProgress(0)
             elif iImprovement == Improvement.HAMLET.value:
-                iRand = gc.getGame().getSorenRandNum(100, "roll")
-                if iRand < 50:  # 50% for reducing, 50% for resetting
+                if percentage_chance(50, strict=50):
                     pPlot.setImprovementType(Improvement.COTTAGE.value)
                 else:
                     pPlot.setUpgradeProgress(0)
             elif iImprovement == Improvement.COTTAGE.value:
-                iRand = gc.getGame().getSorenRandNum(100, "roll")
-                if iRand < 25:  # 25% for reducing, 75% for resetting
+                if percentage_chance(25, strict=True):
                     pPlot.setImprovementType(-1)
                 else:
                     pPlot.setUpgradeProgress(0)
@@ -342,17 +328,15 @@ class Plague:
 
         if iNumUnitsInAPlot > 0:
             # Absinthe: if we mix up the order of the units, health will be much less static for the chosen defender units
-            bOrderChange = gc.getGame().getSorenRandNum(4, "roll") == 1
+            bOrderChange = percentage_chance(25)
             for j in range(iNumUnitsInAPlot):
                 if bOrderChange:
                     i = j  # we are counting from the strongest unit
                 else:
                     i = iNumUnitsInAPlot - j - 1  # count back from the weakest unit
                 unit = plot.getUnit(i)
-                if (
-                    utils.isMortalUnit(unit)
-                    and gc.getGame().getSorenRandNum(100, "roll")
-                    > iThreshold + 5 * iCityHealthRate
+                if utils.isMortalUnit(unit) and percentage_chance(
+                    iThreshold + 5 * iCityHealthRate, strict=True, reverse=True
                 ):
                     iUnitDamage = unit.getDamage()
                     # if some defenders are set to be preserved for some reason, they won't get more damage if they are already under 50%
@@ -457,7 +441,7 @@ class Plague:
                 # always between -5 and +5
                 iHealthRate = max(-5, min(5, iHealthRate))
 
-                iRandom = gc.getGame().getSorenRandNum(100, "roll")
+                iRandom = percentage()
                 iPopSize = city.getPopulation()
                 if bBadPlague:  # if it's the Black Death, bigger chance for population loss
                     bKill = iRandom < 10 + 10 * (iPopSize - 4) - 5 * iHealthRate
@@ -580,34 +564,28 @@ class Plague:
                 else:
                     iMaxNumInfections = 1
 
-                iNumSpreads = (
-                    gc.getGame().getSorenRandNum(iMaxNumInfections, "max number of new infections")
-                    + 1
-                )  # plagues are rather short, always spread at least once
-                iNumSpreads = min(
-                    len(lNotInfectedCities), iNumSpreads
-                )  # in case there are not enough uninfected cities
+                # plagues are rather short, always spread at least once
+                iNumSpreads = min(1, len(lNotInfectedCities), rand(iMaxNumInfections))
 
-                if iNumSpreads > 0:
-                    iInfections = 0
-                    random.shuffle(lNotInfectedCities)
-                    for targetCity in lNotInfectedCities:
-                        if [
-                            city
-                            for city in lInfectedCities
-                            if targetCity.isConnectedTo(city)
-                            and utils.calculateDistance(
-                                targetCity.getX(), targetCity.getY(), city.getX(), city.getY()
-                            )
-                            <= 10
-                        ]:
-                            if not targetCity.hasBuilding(
-                                PlagueType.PLAGUE.value
-                            ):  # might have changed since the beginning of the function
-                                self.infectCity(targetCity)
-                                iInfections += 1
-                                if iInfections >= iNumSpreads:
-                                    break
+                iInfections = 0
+                random.shuffle(lNotInfectedCities)
+                for targetCity in lNotInfectedCities:
+                    if [
+                        city
+                        for city in lInfectedCities
+                        if targetCity.isConnectedTo(city)
+                        and utils.calculateDistance(
+                            targetCity.getX(), targetCity.getY(), city.getX(), city.getY()
+                        )
+                        <= 10
+                    ]:
+                        if not targetCity.hasBuilding(
+                            PlagueType.PLAGUE.value
+                        ):  # might have changed since the beginning of the function
+                            self.infectCity(targetCity)
+                            iInfections += 1
+                            if iInfections >= iNumSpreads:
+                                break
 
         # if there are no cities with plague (gifted away, razed on conquest), but the civ itself has plague
         # there is a chance that it will spread to some of your cities
@@ -630,7 +608,7 @@ class Plague:
                 random.shuffle(lAllCities)
                 for city in lAllCities:
                     if not city.hasBuilding(PlagueType.PLAGUE.value):
-                        if gc.getGame().getSorenRandNum(10, "roll") < 2:
+                        if percentage_chance(20, strict=True):
                             self.infectCity(city)
                             iInfections += 1
                             if iInfections >= iMaxNumInfections:
@@ -662,8 +640,9 @@ class Plague:
                 # iPopModifier: -28, -21, -14, -7, 0, 7, 14, 21, 28, 35, etc.
                 iPopModifier = 7 * city.getPopulation() - 35
                 iHealthModifier = 5 * city.healthRate(False, 0)
-                if gc.getGame().getSorenRandNum(100, "roll") < (
-                    100 - iTimeModifier - iPopModifier + iHealthModifier - iRemoveModifier
+                if percentage_chance(
+                    100 - iTimeModifier - iPopModifier + iHealthModifier - iRemoveModifier,
+                    strict=True,
                 ):
                     city.setHasRealBuilding(PlagueType.PLAGUE.value, False)
                     iRemoveModifier += 5  # less chance for each city which already quit
@@ -698,7 +677,7 @@ class Plague:
                                     )
                                     <= 3
                                 ):
-                                    if gc.getGame().getSorenRandNum(10, "roll") < 5:
+                                    if percentage_chance(50, strict=True):
                                         self.infectCity(cityNear)
                 # no reinfect for the AI, only infect
                 else:
@@ -713,7 +692,7 @@ class Plague:
                                     )
                                     <= 3
                                 ):
-                                    if gc.getGame().getSorenRandNum(10, "roll") < 5:
+                                    if percentage_chance(50, strict=True):
                                         self.infectCity(cityNear)
                     elif self.getPlagueCountdown(iNewOwner) < 0:
                         city.setHasRealBuilding(PlagueType.PLAGUE.value, False)

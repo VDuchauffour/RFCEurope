@@ -1,8 +1,9 @@
 # Rhye's and Fall of Civilization: Europe - Utilities
 
+from random import choice
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from CoreStructures import human, teamtype
+from CoreStructures import human, player, team, teamtype
 from CoreTypes import (
     City,
     Civ,
@@ -21,6 +22,7 @@ import CvScreenEnums
 from LocationsData import CITIES
 import PyHelpers
 import Popup
+from PyUtils import percentage, percentage_chance, rand
 from StoredData import sd
 from MiscData import (
     GREAT_PROPHET_FAITH_POINT_BONUS,
@@ -196,29 +198,17 @@ class RFCUtils:
                     if not teamMinor.isAtWar(iActiveCiv):
                         if iGameTurn > civilization(iActiveCiv).date.birth + 20:
                             # Absinthe: probably better to use war maps instead of settler maps, but let the AI concentrate on it's core area first
-                            # 			maybe we should use both settler and war maps? distance calculations would be great, but use too much iterations
-                            # if (gc.getPlayer(iActiveCiv).getSettlersMaps( WORLD_HEIGHT-y-1, x ) >= 90 or gc.getPlayer(iActiveCiv).getSettlersMaps( WORLD_HEIGHT-y-1, x ) == -1):
-                            # if (gc.getPlayer(iActiveCiv).getWarsMaps( WORLD_HEIGHT-y-1, x ) >= 2):
-                            iRndNum = gc.getGame().getSorenRandNum(10, "random warmap chance")
-                            teamActive = gc.getTeam(gc.getPlayer(iActiveCiv).getTeam())
-                            iWarValue = gc.getPlayer(iActiveCiv).getWarsMaps(
-                                WORLD_HEIGHT - y - 1, x
-                            )
-                            if iWarValue >= 10:
-                                # 100% chance for cities with high war map value
-                                teamActive.declareWar(
+                            # maybe we should use both settler and war maps? distance calculations would be great, but use too much iterations
+                            random_value = percentage()
+                            war_map_value = player(iActiveCiv).getWarsMaps(WORLD_HEIGHT - y - 1, x)
+                            if (
+                                (random_value < 30 and war_map_value >= 2)
+                                or (random_value < 70 and war_map_value >= 6)
+                                or war_map_value >= 99
+                            ):
+                                team(iActiveCiv).declareWar(
                                     iMinorCiv, False, WarPlanTypes.WARPLAN_LIMITED
                                 )
-                            elif iWarValue >= 6:
-                                if iRndNum < 7:  # 70% chance for cities with medium war map value
-                                    teamActive.declareWar(
-                                        iMinorCiv, False, WarPlanTypes.WARPLAN_LIMITED
-                                    )
-                            elif iWarValue >= 2:
-                                if iRndNum < 3:  # 30% chance for cities with low war map value
-                                    teamActive.declareWar(
-                                        iMinorCiv, False, WarPlanTypes.WARPLAN_LIMITED
-                                    )
 
     # AIWars
     # Absinthe: declare war sooner / more frequently if an Indy city has huge value on the civ's war map
@@ -322,7 +312,7 @@ class RFCUtils:
                     # Absinthe: instead of switching all units to indy, only 60% chance that the unit will defect
                     # 			the first unit from the old owner should always defect though
                     k += 1
-                    if k < 2 or gc.getGame().getSorenRandNum(10, "Convert Unit") < 6:
+                    if k < 2 or percentage_chance(60, strict=True):
                         unit.kill(False, Civ.BARBARIAN.value)
                         self.makeUnit(unitType, iNewOwner, [28, 0], 1)
                     # Absinthe: skip unit if it won't defect, so it will move out of the city territory
@@ -816,7 +806,7 @@ class RFCUtils:
     def killAndFragmentCiv(self, iCiv, bBarbs, bAssignOneCity):
         self.clearPlague(iCiv)
         iNumLoyalCities = 0
-        iCounter = gc.getGame().getSorenRandNum(6, "random start")
+        iCounter = rand(6)
         for city in self.getCityList(iCiv):
             tCoords = (city.getX(), city.getY())
             iX, iY = tCoords
@@ -831,9 +821,7 @@ class RFCUtils:
                 continue
             # assign to neighbours first
             bNeighbour = False
-            iRndnum = gc.getGame().getSorenRandNum(
-                civilizations().majors().len(), "starting count"
-            )
+            iRndnum = rand(civilizations().majors().len())
             for j in civilizations().majors().ids():
                 iLoopCiv = (j + iRndnum) % civilizations().majors().len()
                 if (
@@ -869,15 +857,10 @@ class RFCUtils:
                 continue
             # fragmentation in 2
             if not bBarbs:
-                # if (iCounter % 2 == 0):
-                # 	iNewCiv = iNewCiv1
-                # elif (iCounter % 2 == 1):
-                # 	iNewCiv = iNewCiv2
-                iNewCiv = min(civilizations().independents().ids()) + gc.getGame().getSorenRandNum(
+                iNewCiv = min(civilizations().independents().ids()) + rand(
                     max(civilizations().independents().ids())
                     - min(civilizations().independents().ids())
                     + 1,
-                    "randomIndep",
                 )
                 self.flipUnitsInCityBefore(tCoords, iNewCiv, iCiv)
                 self.setTempFlippingCity(tCoords)
@@ -891,17 +874,10 @@ class RFCUtils:
                 )
             # fragmentation with barbs
             else:
-                # if (iCounter % 3 == 0):
-                # 	iNewCiv = iNewCiv1
-                # elif (iCounter % 3 == 1):
-                # 	iNewCiv = iNewCiv2
-                # elif (iCounter % 3 == 2):
-                # 	iNewCiv = iNewCiv3
-                iNewCiv = min(civilizations().independents().ids()) + gc.getGame().getSorenRandNum(
+                iNewCiv = min(civilizations().independents().ids()) + rand(
                     max(civilizations().independents().ids())
                     - min(civilizations().independents().ids())
                     + 2,
-                    "randomIndep",
                 )
                 if iNewCiv == max(civilizations().independents().ids()) + 1:
                     iNewCiv = Civ.BARBARIAN.value
@@ -909,7 +885,6 @@ class RFCUtils:
                 self.setTempFlippingCity(tCoords)
                 self.cultureManager(tCoords, 50, iNewCiv, iCiv, False, False, False)
                 self.flipCity(tCoords, 0, 0, iNewCiv, [iCiv])
-                # city.setHasRealBuilding(Plague.PLAGUE.value, False) #buggy
                 self.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
                 iCounter += 1
                 self.flipUnitsInArea(
@@ -1193,7 +1168,7 @@ class RFCUtils:
         elif city.getPopulation() > 3:
             iChance -= 4
 
-        if gc.getGame().getSorenRandNum(100, "purge chance") < iChance:
+        if percentage_chance(iChance, strict=True):
             # on successful persecution
             # remove a single non-state religion and its buildings from the city, count the loot
             iLootModifier = 3 * city.getPopulation() / city.getReligionCount()
@@ -1216,7 +1191,7 @@ class RFCUtils:
                 city.changePopulation(-1)
 
             # distribute the loot
-            iLoot = iLoot + gc.getGame().getSorenRandNum(iLoot, "random loot")
+            iLoot += rand(iLoot)
             pPlayer.changeGold(iLoot)
 
             # add faith for the persecution itself (there is an indirect increase too, the negative modifier from having a non-state religion is gone)
@@ -1255,7 +1230,7 @@ class RFCUtils:
 
             # Jews may spread to another random city
             if iReligion == Religion.JUDAISM:
-                if gc.getGame().getSorenRandNum(100, "Judaism spread chance") < 80:
+                if percentage_chance(80, strict=True):
                     tCity = self.selectRandomCity()
                     self.spreadJews(tCity, Religion.JUDAISM)
                     pSpreadCity = gc.getMap().plot(*tCity).getPlotCity()
@@ -1706,7 +1681,7 @@ class RFCUtils:
     def getRandomEntry(self, list):
         if not list:
             return False
-        return list[gc.getGame().getSorenRandNum(len(list), "Random entry")]
+        return choice(list)
 
     def isWonder(self, iBuilding):
         return iBuilding in [w.value for w in Wonder]
@@ -1718,7 +1693,7 @@ class RFCUtils:
         if not lList:
             return -1
         iTemp = 0
-        iRand = gc.getGame().getSorenRandNum(sum(x[1] for x in lList), "Random entry")
+        iRand = rand(sum(x[1] for x in lList))
         for (iPlayer, iValue) in lList:
             iTemp += iValue
             if iTemp >= iRand:

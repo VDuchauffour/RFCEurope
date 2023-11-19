@@ -19,6 +19,7 @@ import Popup as PyPopup
 import CvCameraControls
 import CvTopCivs
 import CvAdvisorUtils
+from PyUtils import percentage_chance, rand
 import RFCUtils
 import GameBalance
 import random
@@ -692,8 +693,7 @@ class CvEventManager:
         if iBuildingType == Wonder.LEANING_TOWER.value:
             iX = pCity.getX()
             iY = pCity.getY()
-            iGP = gc.getGame().getSorenRandNum(7, "Leaning Tower")
-            iUnit = Unit.GREAT_PROPHET.value + iGP
+            iUnit = Unit.GREAT_PROPHET.value + rand(7)
             pNewUnit = pPlayer.initUnit(
                 iUnit,
                 iX,
@@ -785,57 +785,27 @@ class CvEventManager:
                         )
                 elif len(lUniquePotentialTechs) > 1:
                     # add two different random techs, with message for the human player
-                    iRandTechPos1 = gc.getGame().getSorenRandNum(
-                        len(lPotentialTechs), "tech position"
-                    )
-                    iRandTechPos2 = iRandTechPos1
-                    iChosenTech1 = lPotentialTechs[iRandTechPos1]
-                    iChosenTech2 = lPotentialTechs[iRandTechPos2]
-                    while iChosenTech1 == iChosenTech2:
-                        iRandTechPos2 = gc.getGame().getSorenRandNum(
-                            len(lPotentialTechs), "tech position"
-                        )
-                        iChosenTech2 = lPotentialTechs[iRandTechPos2]
-                    pTeam.setHasTech(iChosenTech1, True, iPlayer, False, True)
-                    if iPlayer == human():
-                        sText = CyTranslator().getText(
-                            "TXT_KEY_BUILDING_BIBLIOTHECA_CORVINIANA_EFFECT",
-                            (gc.getTechInfo(iChosenTech1).getDescription(),),
-                        )
-                        CyInterface().addMessage(
-                            iPlayer,
-                            True,
-                            MessageData.DURATION,
-                            sText,
-                            "",
-                            0,
-                            "",
-                            ColorTypes(MessageData.LIGHT_BLUE),
-                            -1,
-                            -1,
-                            True,
-                            True,
-                        )
-                    pTeam.setHasTech(iChosenTech2, True, iPlayer, False, True)
-                    if iPlayer == human():
-                        sText = CyTranslator().getText(
-                            "TXT_KEY_BUILDING_BIBLIOTHECA_CORVINIANA_EFFECT",
-                            (gc.getTechInfo(iChosenTech2).getDescription(),),
-                        )
-                        CyInterface().addMessage(
-                            iPlayer,
-                            True,
-                            MessageData.DURATION,
-                            sText,
-                            "",
-                            0,
-                            "",
-                            ColorTypes(MessageData.LIGHT_BLUE),
-                            -1,
-                            -1,
-                            True,
-                            True,
-                        )
+                    for tech in random.sample(lPotentialTechs, 2):
+                        pTeam.setHasTech(tech, True, iPlayer, False, True)
+                        if iPlayer == human():
+                            sText = CyTranslator().getText(
+                                "TXT_KEY_BUILDING_BIBLIOTHECA_CORVINIANA_EFFECT",
+                                (gc.getTechInfo(tech).getDescription(),),
+                            )
+                            CyInterface().addMessage(
+                                iPlayer,
+                                True,
+                                MessageData.DURATION,
+                                sText,
+                                "",
+                                0,
+                                "",
+                                ColorTypes(MessageData.LIGHT_BLUE),
+                                -1,
+                                -1,
+                                True,
+                                True,
+                            )
         # Absinthe: Bibliotheca Corviniana end
 
         # Absinthe: Kalmar Castle start
@@ -846,11 +816,6 @@ class CvEventManager:
                 if pNeighbour.isAlive() and iPlayer != iNeighbour:
                     pPlayer.AI_changeAttitudeExtra(iNeighbour, 3)
                     pNeighbour.AI_changeAttitudeExtra(iPlayer, 3)
-                    # optional: improve relations to a given level
-                    # while pPlayer.AI_getAttitude(iNeighbour) < gc.getInfoTypeForString("ATTITUDE_CAUTIOUS"):
-                    # 	pPlayer.AI_changeAttitudeExtra(iNeighbour, 1)
-                    # while pNeighbour.AI_getAttitude(iPlayer) < gc.getInfoTypeForString("ATTITUDE_CAUTIOUS"):
-                    # 	pNeighbour.AI_changeAttitudeExtra(iPlayer, 1)
         # Absinthe: Kalmar Castle end
 
         # Absinthe: Grand Arsenal start
@@ -859,7 +824,6 @@ class CvEventManager:
             iY = pCity.getY()
             for i in range(3):
                 # should we have Galleass for all civs, or use the getUniqueUnit function in RFCUtils?
-                # iNewUnit = utils.getUniqueUnit(pCity.getOwner(), Unit.GUN_GALLEY.value)
                 pNewUnit = pPlayer.initUnit(
                     Unit.VENICE_GALLEAS.value,
                     iX,
@@ -1047,7 +1011,7 @@ class CvEventManager:
             pPlayer = gc.getPlayer(iPlayer)
             if pPlayer.countNumBuildings(Wonder.TORRE_DEL_ORO.value) > 0:
                 # 70% chance for a 3 turn Golden Age
-                if CyGame().getSorenRandNum(10, "Golden Age") < 7:
+                if percentage_chance(70, strict=True):
                     pPlayer.changeGoldenAgeTurns(3)
                     if human() == iPlayer:
                         CyInterface().addMessage(
@@ -1350,28 +1314,28 @@ class CvEventManager:
 
             # Absinthe: Peterhof Palace start
             if pPlayer.countNumBuildings(Wonder.PETERHOF_PALACE.value) > 0:
-                if gc.getGame().getSorenRandNum(10, "Peterhof Palace") < 7:
-                    if pUnit.getUnitType() == Unit.GREAT_SCIENTIST.value:
+                if percentage_chance(70, strict=True):
+                    if pUnit.getUnitType() == Unit.GREAT_SCIENTIST:
                         pCity.changeFreeSpecialistCount(
                             gc.getInfoTypeForString("SPECIALIST_SCIENTIST"), 1
                         )
-                    elif pUnit.getUnitType() == Unit.GREAT_PROPHET.value:
+                    elif pUnit.getUnitType() == Unit.GREAT_PROPHET:
                         pCity.changeFreeSpecialistCount(
                             gc.getInfoTypeForString("SPECIALIST_PRIEST"), 1
                         )
-                    elif pUnit.getUnitType() == Unit.GREAT_ARTIST.value:
+                    elif pUnit.getUnitType() == Unit.GREAT_ARTIST:
                         pCity.changeFreeSpecialistCount(
                             gc.getInfoTypeForString("SPECIALIST_ARTIST"), 1
                         )
-                    elif pUnit.getUnitType() == Unit.GREAT_MERCHANT.value:
+                    elif pUnit.getUnitType() == Unit.GREAT_MERCHANT:
                         pCity.changeFreeSpecialistCount(
                             gc.getInfoTypeForString("SPECIALIST_MERCHANT"), 1
                         )
-                    elif pUnit.getUnitType() == Unit.GREAT_ENGINEER.value:
+                    elif pUnit.getUnitType() == Unit.GREAT_ENGINEER:
                         pCity.changeFreeSpecialistCount(
                             gc.getInfoTypeForString("SPECIALIST_ENGINEER"), 1
                         )
-                    elif pUnit.getUnitType() == Unit.GREAT_SPY.value:
+                    elif pUnit.getUnitType() == Unit.GREAT_SPY:
                         pCity.changeFreeSpecialistCount(
                             gc.getInfoTypeForString("SPECIALIST_SPY"), 1
                         )

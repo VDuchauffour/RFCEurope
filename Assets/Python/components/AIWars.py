@@ -4,6 +4,7 @@ from CvPythonExtensions import *
 from CoreData import civilizations, civilization
 from CoreFunctions import get_civ_by_id
 from CoreTypes import Civ
+from PyUtils import rand
 import RFCUtils
 from Scenario import get_scenario_start_turn
 from StoredData import sd
@@ -40,10 +41,7 @@ class AIWars:
 
     def setup(self):
         iTurn = get_scenario_start_turn()  # only check from the start turn of the scenario
-        self.setNextTurnAIWar(
-            iTurn
-            + gc.getGame().getSorenRandNum(iMaxIntervalEarly - iMinIntervalEarly, "random turn")
-        )
+        self.setNextTurnAIWar(iTurn + rand(iMaxIntervalEarly - iMinIntervalEarly))
 
     def checkTurn(self, iGameTurn):
 
@@ -124,11 +122,7 @@ class AIWars:
                 if iTargetCiv != Civ.POPE.value and iCiv != Civ.POPE.value and iCiv != iTargetCiv:
                     self.initWar(iCiv, iTargetCiv, iGameTurn, iMaxInterval, iMinInterval)
                     return
-            self.setNextTurnAIWar(
-                iGameTurn
-                + iMinInterval
-                + gc.getGame().getSorenRandNum(iMaxInterval - iMinInterval, "random turn")
-            )
+            self.setNextTurnAIWar(iGameTurn + iMinInterval + rand(iMaxInterval - iMinInterval))
 
     def pickCivs(self):
         iCiv = -1
@@ -145,19 +139,11 @@ class AIWars:
         teamAgressor = gc.getTeam(gc.getPlayer(iCiv).getTeam())
         if teamAgressor.canDeclareWar(iTargetCiv):
             gc.getTeam(gc.getPlayer(iCiv).getTeam()).declareWar(iTargetCiv, True, -1)
-            self.setNextTurnAIWar(
-                iGameTurn
-                + iMinInterval
-                + gc.getGame().getSorenRandNum(iMaxInterval - iMinInterval, "random turn")
-            )
+            self.setNextTurnAIWar(iGameTurn + iMinInterval + rand(iMaxInterval - iMinInterval))
         # Absinthe: if not, next try will come the 1/2 of this time later
         else:
             self.setNextTurnAIWar(
-                iGameTurn
-                + (
-                    iMinInterval
-                    + gc.getGame().getSorenRandNum(iMaxInterval - iMinInterval, "random turn") / 2
-                )
+                iGameTurn + (iMinInterval + rand(iMaxInterval - iMinInterval) / 2)
             )
 
     def chooseAttackingPlayer(self):
@@ -172,7 +158,7 @@ class AIWars:
         if gc.getGame().countCivPlayersAlive() <= 2:
             return -1
         else:
-            iRndnum = gc.getGame().getSorenRandNum(iMaxCivs, "attacking civ index")
+            iRndnum = rand(iMaxCivs)
             iAlreadyAttacked = -100
             iMin = 100
             iCiv = -1
@@ -259,9 +245,9 @@ class AIWars:
 
             # add a random value
             if lTargetCivs[iLoopCiv] <= iThreshold:
-                lTargetCivs[iLoopCiv] += gc.getGame().getSorenRandNum(100, "random modifier")
-            if lTargetCivs[iLoopCiv] > iThreshold:
-                lTargetCivs[iLoopCiv] += gc.getGame().getSorenRandNum(300, "random modifier")
+                lTargetCivs[iLoopCiv] += rand(100)
+            else:
+                lTargetCivs[iLoopCiv] += rand(300)
             # balanced with attitude
             attitude = 2 * (pCiv.AI_getAttitude(iLoopCiv) - 2)
             if attitude > 0:

@@ -9,6 +9,7 @@ import PyHelpers
 import CvMercenaryManager  # Mercenaries
 import CvScreenEnums  # Mercenaries
 import Popup
+from PyUtils import rand, percentage_chance
 
 from StoredData import sd
 import RiseAndFall
@@ -212,12 +213,8 @@ class CvRFCEventHandler:
         self.vic.setup()
 
         # Absinthe: generate and store randomized turn modifiers
-        sd.scriptDict["lEventRandomness"][iLighthouseEarthQuake] = gc.getGame().getSorenRandNum(
-            40, "Final Earthquake"
-        )
-        sd.scriptDict["lEventRandomness"][iByzantiumVikingAttack] = gc.getGame().getSorenRandNum(
-            10, "Viking Attack"
-        )
+        sd.scriptDict["lEventRandomness"][iLighthouseEarthQuake] = rand(40)
+        sd.scriptDict["lEventRandomness"][iByzantiumVikingAttack] = rand(10)
 
         # Absinthe: rename cities on the 1200AD scenario - the WB file cannot handle special chars and long names properly
         # 			some of the cities intentionally have different names though (compared to the CNM), for example some Kievan cities
@@ -336,17 +333,18 @@ class CvRFCEventHandler:
 
             # Absinthe: acquiring Jerusalem, with any faith (but not Paganism) -> chance to find a relic
             # 			maybe only after a specific date? maybe only if there isn't any ongoing Crusades?
-            if gc.getGame().getSorenRandNum(100, "Relic found") < 15:
-                # for major players only
-                if playerType < civilizations().majors().len():
-                    if pPlayer.getStateReligion() in range(len(Religion)):
-                        pPlayer.initUnit(
-                            Unit.HOLY_RELIC.value,
-                            CITIES[City.JERUSALEM].x,
-                            CITIES[City.JERUSALEM].y,
-                            UnitAITypes.NO_UNITAI,
-                            DirectionTypes.DIRECTION_SOUTH,
-                        )
+            if (
+                percentage_chance(15, strict=True)
+                and playerType in civilizations().majors().ids()
+                and pPlayer.getStateReligion() != -1
+            ):
+                pPlayer.initUnit(
+                    Unit.HOLY_RELIC.value,
+                    CITIES[City.JERUSALEM].x,
+                    CITIES[City.JERUSALEM].y,
+                    UnitAITypes.NO_UNITAI,
+                    DirectionTypes.DIRECTION_SOUTH,
+                )
 
         # Sedna17: code for Krak des Chevaliers
         if bConquest:

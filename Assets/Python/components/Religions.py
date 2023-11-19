@@ -30,7 +30,7 @@ import Popup
 import RFCUtils
 from ProvinceMapData import PROVINCES_MAP
 from StoredData import sd
-from PyUtils import percentage_chance
+from PyUtils import percentage, percentage_chance, rand
 
 from MiscData import (
     RELIGIOUS_BUILDINGS,
@@ -327,7 +327,7 @@ class Religions:
         return sd.scriptDict["iSeed"]
 
     def setSeed(self):
-        sd.scriptDict["iSeed"] = gc.getGame().getSorenRandNum(100, "Seed for random delay")
+        sd.scriptDict["iSeed"] = percentage()
 
     def getReformationActive(self):
         return sd.scriptDict["bReformationActive"]
@@ -414,14 +414,14 @@ class Religions:
         # Absinthe: Spreading Judaism in random dates
         # General 6% chance to spread Jews to a random city in every third turn
         if DateTurn.i800AD < iGameTurn < DateTurn.i1700AD and iGameTurn % 3 == 0:
-            if gc.getGame().getSorenRandNum(100, "Spread Jews") < 6:
+            if percentage_chance(6, strict=True):
                 tCity = self.selectRandomCityAll()
                 if tCity:
                     self.spreadReligion(tCity, Religion.JUDAISM.value)
 
         # Additional 11% chance to spread Jews to a random Central European city in every third turn
         if DateTurn.i1000AD < iGameTurn < DateTurn.i1500AD and iGameTurn % 3 == 1:
-            if gc.getGame().getSorenRandNum(100, "Spread Jews") < 11:
+            if percentage_chance(11, strict=True):
                 tCity = self.selectRandomCityRegion(tCentralEurope, Religion.JUDAISM.value)
                 if tCity:
                     self.spreadReligion(tCity, Religion.JUDAISM.value)
@@ -429,26 +429,26 @@ class Religions:
         # Absinthe: Encouraging desired religion spread in a couple areas (mostly for Islam and Orthodoxy)
         # Maghreb and Cordoba:
         if DateTurn.i700AD < iGameTurn < DateTurn.i800AD and iGameTurn % 2 == 1:
-            if gc.getGame().getSorenRandNum(100, "Spread chance") < 32:
+            if percentage_chance(32, strict=True):
                 tCity = self.selectRandomCityRegion(tMaghrebAndalusia, Religion.ISLAM.value, True)
                 if tCity:
                     self.spreadReligion(tCity, Religion.ISLAM.value)
         if DateTurn.i800AD < iGameTurn < DateTurn.i1200AD and iGameTurn % 3 == 2:
-            if gc.getGame().getSorenRandNum(100, "Spread chance") < 28:
+            if percentage_chance(28, strict=True):
                 tCity = self.selectRandomCityRegion(tMaghrebAndalusia, Religion.ISLAM.value, True)
                 if tCity:
                     self.spreadReligion(tCity, Religion.ISLAM.value)
 
         # Bulgaria and Balkans:
         if DateTurn.i700AD < iGameTurn < DateTurn.i800AD and iGameTurn % 3 == 1:
-            if gc.getGame().getSorenRandNum(100, "Spread chance") < 25:
+            if percentage_chance(25, strict=True):
                 tCity = self.selectRandomCityRegion(
                     tBulgariaBalkans, Religion.ORTHODOXY.value, True
                 )
                 if tCity:
                     self.spreadReligion(tCity, Religion.ORTHODOXY.value)
         if DateTurn.i800AD < iGameTurn < DateTurn.i1000AD and iGameTurn % 4 == 1:
-            if gc.getGame().getSorenRandNum(100, "Spread chance") < 15:
+            if percentage_chance(15, strict=True):
                 tCity = self.selectRandomCityRegion(
                     tBulgariaBalkans, Religion.ORTHODOXY.value, True
                 )
@@ -456,14 +456,14 @@ class Religions:
                     self.spreadReligion(tCity, Religion.ORTHODOXY.value)
         # Old Rus territories:
         if DateTurn.i852AD < iGameTurn < DateTurn.i1300AD and iGameTurn % 4 == 3:
-            if gc.getGame().getSorenRandNum(100, "Spread chance") < 25:
+            if percentage_chance(25, strict=True):
                 tCity = self.selectRandomCityRegion(tOldRus, Religion.ORTHODOXY.value, True)
                 if tCity:
                     self.spreadReligion(tCity, Religion.ORTHODOXY.value)
 
         # Extra chance for early Orthodoxy spread in Novgorod:
         if DateTurn.i852AD < iGameTurn < DateTurn.i960AD and iGameTurn % 5 == 2:
-            if gc.getGame().getSorenRandNum(100, "Spread chance") < 34:
+            if percentage_chance(34, strict=True):
                 tCity = self.selectRandomCityRegion(
                     [Province.NOVGOROD.value, Province.POLOTSK.value, Province.SMOLENSK.value],
                     Religion.ORTHODOXY.value,
@@ -473,14 +473,14 @@ class Religions:
                     self.spreadReligion(tCity, Religion.ORTHODOXY.value)
         # Hungary:
         if DateTurn.i960AD < iGameTurn < DateTurn.i1200AD and iGameTurn % 4 == 2:
-            if gc.getGame().getSorenRandNum(100, "Spread chance") < 21:
+            if percentage_chance(21, strict=True):
                 tCity = self.selectRandomCityRegion(tHungary, Religion.CATHOLICISM.value, True)
                 if tCity:
                     self.spreadReligion(tCity, Religion.CATHOLICISM.value)
 
         # Scandinavia:
         if DateTurn.i1000AD < iGameTurn < DateTurn.i1300AD and iGameTurn % 4 == 0:
-            if gc.getGame().getSorenRandNum(100, "Spread chance") < 24:
+            if percentage_chance(24, strict=True):
                 tCity = self.selectRandomCityRegion(
                     tSouthScandinavia, Religion.CATHOLICISM.value, True
                 )
@@ -519,50 +519,45 @@ class Religions:
                 iDivBy = 6
             else:
                 iDivBy = 9
-            if iGameTurn % iDivBy == 3:
-                iPopeGold = pPope.getGold()
-                if iPopeGold > 100:
-                    if (
-                        gc.getGame().getSorenRandNum(10, "Random entry") != 0
-                    ):  # 10% chance for not giving anything
-                        lWeightValues = []
-                        for iPlayer in lCatholicCivs:
-                            iCatholicFaith = 0
-                            pPlayer = gc.getPlayer(iPlayer)
-                            # Relations with the Pope are much more important here
-                            iCatholicFaith += pPlayer.getFaith()
-                            iCatholicFaith += 8 * max(0, pPope.AI_getAttitude(iPlayer))
-                            if iCatholicFaith > 0:
-                                lWeightValues.append((iPlayer, iCatholicFaith))
-                        iChosenPlayer = utils.getRandomByWeight(lWeightValues)
-                        if iChosenPlayer != -1:
-                            pPlayer = gc.getPlayer(iChosenPlayer)
-                            if iGameTurn < 100:
-                                iGift = min(
-                                    iPopeGold / 5, 40
-                                )  # between 20-40, based on the Pope's wealth
-                            else:
-                                iGift = min(
-                                    iPopeGold / 2, 80
-                                )  # between 50-80, based on the Pope's wealth
-                            pPope.changeGold(-iGift)
-                            pPlayer.changeGold(iGift)
-                            if iChosenPlayer == human():
-                                sText = CyTranslator().getText("TXT_KEY_FAITH_GOLD_GIFT", (iGift,))
-                                CyInterface().addMessage(
-                                    iPlayer,
-                                    False,
-                                    MessageData.DURATION,
-                                    sText,
-                                    "",
-                                    0,
-                                    "",
-                                    ColorTypes(MessageData.BLUE),
-                                    -1,
-                                    -1,
-                                    True,
-                                    True,
-                                )
+            if iGameTurn % iDivBy == 3 and pPope.getGold() > 100 and percentage_chance(90):
+                lWeightValues = []
+                for iPlayer in lCatholicCivs:
+                    iCatholicFaith = 0
+                    pPlayer = gc.getPlayer(iPlayer)
+                    # Relations with the Pope are much more important here
+                    iCatholicFaith += pPlayer.getFaith()
+                    iCatholicFaith += 8 * max(0, pPope.AI_getAttitude(iPlayer))
+                    if iCatholicFaith > 0:
+                        lWeightValues.append((iPlayer, iCatholicFaith))
+                iChosenPlayer = utils.getRandomByWeight(lWeightValues)
+                if iChosenPlayer != -1:
+                    pPlayer = gc.getPlayer(iChosenPlayer)
+                    if iGameTurn < 100:
+                        iGift = min(
+                            pPope.getGold() / 5, 40
+                        )  # between 20-40, based on the Pope's wealth
+                    else:
+                        iGift = min(
+                            pPope.getGold() / 2, 80
+                        )  # between 50-80, based on the Pope's wealth
+                    pPope.changeGold(-iGift)
+                    pPlayer.changeGold(iGift)
+                    if iChosenPlayer == human():
+                        sText = CyTranslator().getText("TXT_KEY_FAITH_GOLD_GIFT", (iGift,))
+                        CyInterface().addMessage(
+                            iPlayer,
+                            False,
+                            MessageData.DURATION,
+                            sText,
+                            "",
+                            0,
+                            "",
+                            ColorTypes(MessageData.BLUE),
+                            -1,
+                            -1,
+                            True,
+                            True,
+                        )
         # Free religious building
         if iGameTurn > DateTurn.i800AD:  # The crowning of Charlemagne
             if iGameTurn > DateTurn.i1648AD:  # End of religious wars
@@ -573,44 +568,36 @@ class Religions:
                 iDivBy = 8
             else:
                 iDivBy = 11
-            if iGameTurn % iDivBy == 2:
-                if (
-                    gc.getGame().getSorenRandNum(5, "Random entry") != 0
-                ):  # there is 20% chance for not building anything
-                    lWeightValues = []
-                    iJerusalemOwner = (
-                        gc.getMap()
-                        .plot(*CITIES[City.JERUSALEM].to_tuple())
-                        .getPlotCity()
-                        .getOwner()
+            if iGameTurn % iDivBy == 2 and percentage_chance(80, strict=True):
+                lWeightValues = []
+                iJerusalemOwner = (
+                    gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple()).getPlotCity().getOwner()
+                )
+                for iPlayer in lCatholicCivs:
+                    iCatholicFaith = 0
+                    pPlayer = gc.getPlayer(iPlayer)
+                    # Faith points are the deciding factor for buildings
+                    iCatholicFaith += pPlayer.getFaith()
+                    iCatholicFaith += 2 * max(0, pPope.AI_getAttitude(iPlayer))
+                    if (
+                        iPlayer == iJerusalemOwner
+                    ):  # The Catholic owner of Jerusalem has a greatly improved chance
+                        iCatholicFaith += 30
+                    if iCatholicFaith > 0:
+                        lWeightValues.append((iPlayer, iCatholicFaith))
+                iChosenPlayer = utils.getRandomByWeight(lWeightValues)
+                if iChosenPlayer != -1:
+                    pPlayer = gc.getPlayer(iChosenPlayer)
+                    iCatholicBuilding = Building.CATHOLIC_TEMPLE.value
+                    # No chance for monastery if the selected player knows the Scientific Method tech (which obsoletes monasteries), otherwise 50-50% for temple and monastery
+                    teamPlayer = gc.getTeam(pPlayer.getTeam())
+                    if not teamPlayer.isHasTech(
+                        Technology.SCIENTIFIC_METHOD.value
+                    ) and percentage_chance(50):
+                        iCatholicBuilding = Building.CATHOLIC_MONASTERY.value
+                    self.buildInRandomCity(
+                        iChosenPlayer, iCatholicBuilding, Religion.CATHOLICISM.value
                     )
-                    for iPlayer in lCatholicCivs:
-                        iCatholicFaith = 0
-                        pPlayer = gc.getPlayer(iPlayer)
-                        # Faith points are the deciding factor for buildings
-                        iCatholicFaith += pPlayer.getFaith()
-                        iCatholicFaith += 2 * max(0, pPope.AI_getAttitude(iPlayer))
-                        if (
-                            iPlayer == iJerusalemOwner
-                        ):  # The Catholic owner of Jerusalem has a greatly improved chance
-                            iCatholicFaith += 30
-                        if iCatholicFaith > 0:
-                            lWeightValues.append((iPlayer, iCatholicFaith))
-                    iChosenPlayer = utils.getRandomByWeight(lWeightValues)
-                    if iChosenPlayer != -1:
-                        pPlayer = gc.getPlayer(iChosenPlayer)
-                        iCatholicBuilding = Building.CATHOLIC_TEMPLE.value
-                        # No chance for monastery if the selected player knows the Scientific Method tech (which obsoletes monasteries), otherwise 50-50% for temple and monastery
-                        teamPlayer = gc.getTeam(pPlayer.getTeam())
-                        if (
-                            not teamPlayer.isHasTech(Technology.SCIENTIFIC_METHOD.value)
-                            and gc.getGame().getSorenRandNum(2, "random Catholic BuildingType")
-                            == 0
-                        ):
-                            iCatholicBuilding = Building.CATHOLIC_MONASTERY.value
-                        self.buildInRandomCity(
-                            iChosenPlayer, iCatholicBuilding, Religion.CATHOLICISM.value
-                        )
         # Free technology
         if (
             iGameTurn > DateTurn.i843AD
@@ -638,9 +625,7 @@ class Religions:
                         if teamPope.isHasTech(iTech):
                             if not teamPlayer.isHasTech(iTech):
                                 # chance for actually giving this tech, based on faith points
-                                iRandomTechNum = gc.getGame().getSorenRandNum(
-                                    70, "Pope random tech chance"
-                                )
+                                iRandomTechNum = rand(70)
                                 if (
                                     pPlayer.getFaith() + 20 > iRandomTechNum
                                 ):  # +20, to have a real chance with low faith points as well
@@ -1071,10 +1056,7 @@ class Religions:
             if city.isHasReligion(Religion.CATHOLICISM.value) and not city.isHasReligion(
                 Religion.PROTESTANTISM.value
             ):
-                rndnum = gc.getGame().getSorenRandNum(100, "ReformationAnyway")
-                if rndnum <= 25 + (
-                    civilization(iCiv).ai.reformation_threshold / 2
-                ):  # only add the religion, chance between 30% and 70%, based on lReformationMatrix
+                if percentage_chance(25 + civilization(iCiv).ai.reformation_threshold / 2):
                     city.setHasReligion(
                         Religion.PROTESTANTISM.value, True, False, False
                     )  # no announcement in this case
@@ -1126,37 +1108,30 @@ class Religions:
 
         # spread the religion: range goes from 48-68% (Catholicism-lovers) to 72-92% (Protestantism-lovers), based on lReformationMatrix
         # 						+10% extra bonus for the AI
-        if (
-            gc.getGame().getSorenRandNum(100, "Religion spread to City")
-            < 45 + iCivRef + iPopBonus + iAIBonus
-        ):
+        if percentage_chance(45 + iCivRef + iPopBonus + iAIBonus, strict=True):
             pCity.setHasReligion(Religion.PROTESTANTISM.value, True, True, False)
             iFaith += 1
             iChance = 55 + iCivRef
             # if protestantism has spread, chance for replacing the buildings: between 58% and 82%, based on lReformationMatrix
-            if (
-                pCity.hasBuilding(Building.CATHOLIC_CHAPEL.value)
-                and gc.getGame().getSorenRandNum(100, "Reformation of a City") < iChance
+            if pCity.hasBuilding(Building.CATHOLIC_CHAPEL.value) and percentage_chance(
+                iChance, strict=True
             ):
                 pCity.setHasRealBuilding(Building.CATHOLIC_CHAPEL.value, False)
                 pCity.setHasRealBuilding(Building.PROTESTANT_CHAPEL.value, True)
-            if (
-                pCity.hasBuilding(Building.CATHOLIC_TEMPLE.value)
-                and gc.getGame().getSorenRandNum(100, "Reformation of a City") < iChance
+            if pCity.hasBuilding(Building.CATHOLIC_TEMPLE.value) and percentage_chance(
+                iChance, strict=True
             ):
                 pCity.setHasRealBuilding(Building.CATHOLIC_TEMPLE.value, False)
                 pCity.setHasRealBuilding(Building.PROTESTANT_TEMPLE.value, True)
                 iFaith += 1
-            if (
-                pCity.hasBuilding(Building.CATHOLIC_MONASTERY.value)
-                and gc.getGame().getSorenRandNum(100, "Reformation of a City") < iChance
+            if pCity.hasBuilding(Building.CATHOLIC_MONASTERY.value) and percentage_chance(
+                iChance, strict=True
             ):
                 pCity.setHasRealBuilding(Building.CATHOLIC_MONASTERY.value, False)
                 pCity.setHasRealBuilding(Building.PROTESTANT_SEMINARY.value, True)
                 iFaith += 1
-            if (
-                pCity.hasBuilding(Building.CATHOLIC_CATHEDRAL.value)
-                and gc.getGame().getSorenRandNum(100, "Reformation of a City") < iChance
+            if pCity.hasBuilding(Building.CATHOLIC_CATHEDRAL.value) and percentage_chance(
+                iChance, strict=True
             ):
                 pCity.setHasRealBuilding(Building.CATHOLIC_CATHEDRAL.value, False)
                 pCity.setHasRealBuilding(Building.PROTESTANT_CATHEDRAL.value, True)
@@ -1221,31 +1196,27 @@ class Religions:
         iCivRef = (civilization(pCity).ai.reformation_threshold / 10) * 3
 
         # spread the religion: range goes from 23-53% (Catholicism-lovers) to 47-77% (Protestantism-lovers), based on lReformationMatrix
-        if gc.getGame().getSorenRandNum(100, "Religion spread to City") < 20 + iCivRef + iPopBonus:
+        if percentage_chance(20 + iCivRef + iPopBonus, strict=True):
             pCity.setHasReligion(Religion.PROTESTANTISM.value, True, True, False)
             # if protestantism has spread, chance for replacing the buildings: between 31% and 79%, based on lReformationMatrix
             iChance = 25 + 2 * iCivRef
-            if (
-                pCity.hasBuilding(Building.CATHOLIC_CHAPEL.value)
-                and gc.getGame().getSorenRandNum(100, "Reformation of a City") < iChance
+            if pCity.hasBuilding(Building.CATHOLIC_CHAPEL.value) and percentage_chance(
+                iChance, strict=True
             ):
                 pCity.setHasRealBuilding(Building.CATHOLIC_CHAPEL.value, False)
                 pCity.setHasRealBuilding(Building.PROTESTANT_CHAPEL.value, True)
-            if (
-                pCity.hasBuilding(Building.CATHOLIC_TEMPLE.value)
-                and gc.getGame().getSorenRandNum(100, "Reformation of a City") < iChance
+            if pCity.hasBuilding(Building.CATHOLIC_TEMPLE.value) and percentage_chance(
+                iChance, strict=True
             ):
                 pCity.setHasRealBuilding(Building.CATHOLIC_TEMPLE.value, False)
                 pCity.setHasRealBuilding(Building.PROTESTANT_TEMPLE.value, True)
-            if (
-                pCity.hasBuilding(Building.CATHOLIC_MONASTERY.value)
-                and gc.getGame().getSorenRandNum(100, "Reformation of a City") < iChance
+            if pCity.hasBuilding(Building.CATHOLIC_MONASTERY.value) and percentage_chance(
+                iChance, strict=True
             ):
                 pCity.setHasRealBuilding(Building.CATHOLIC_MONASTERY.value, False)
                 pCity.setHasRealBuilding(Building.PROTESTANT_SEMINARY.value, True)
-            if (
-                pCity.hasBuilding(Building.CATHOLIC_CATHEDRAL.value)
-                and gc.getGame().getSorenRandNum(100, "Reformation of a City") < iChance
+            if pCity.hasBuilding(Building.CATHOLIC_CATHEDRAL.value) and percentage_chance(
+                iChance, strict=True
             ):
                 pCity.setHasRealBuilding(Building.CATHOLIC_CATHEDRAL.value, False)
                 pCity.setHasRealBuilding(Building.PROTESTANT_CATHEDRAL.value, True)
@@ -1427,9 +1398,7 @@ class Religions:
             if pPlayer.isAlive():
                 if iPlayer < Civ.POPE.value:
                     # add a random element
-                    intolerance[iPlayer] += gc.getGame().getSorenRandNum(
-                        100, "roll to randomize the migration of refugies"
-                    )
+                    intolerance[iPlayer] += percentage()
                     intolerance[iPlayer] += 10 * pPlayer.getProsecutionCount()
                     if pPlayer.getProsecutionCount() == 0:
                         intolerance[iPlayer] = max(
@@ -1441,9 +1410,7 @@ class Religions:
                     elif iRCivic == Civic.FREE_RELIGION.value:
                         intolerance[iPlayer] = max(0, intolerance[iPlayer] - 30)
                 if iPlayer > Civ.POPE.value:
-                    intolerance[iPlayer] += gc.getGame().getSorenRandNum(
-                        100, "roll to randomize the migration of refugies"
-                    )
+                    intolerance[iPlayer] += percentage()
         # once we have the list of potential nations
         iCandidate1 = 0
         for iPlayer in civilizations().ids():
@@ -1460,12 +1427,7 @@ class Religions:
             ):
                 iCandidate2 = iPlayer
 
-        if (
-            gc.getGame().getSorenRandNum(
-                100, "roll to migrate to one of the two most tolerant players"
-            )
-            > 50
-        ):
+        if percentage_chance(50, strict=True):
             self.migrateJews(iCandidate1)
         else:
             self.migrateJews(iCandidate2)

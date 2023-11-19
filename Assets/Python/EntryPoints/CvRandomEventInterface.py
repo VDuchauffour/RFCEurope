@@ -9,9 +9,12 @@
 #
 # No other modules should import this
 #
+from random import choice
 from CoreTypes import Civ
 import CvUtil
 from CvPythonExtensions import *
+
+from PyUtils import percentage_chance, rand
 
 gc = CyGlobalContext()
 localText = CyTranslator()
@@ -633,7 +636,6 @@ def applyLooters3(argsList):
     otherPlayer = gc.getPlayer(kTriggeredData.eOtherPlayer)
     city = otherPlayer.getCity(kTriggeredData.iOtherPlayerCityId)
 
-    iNumBuildings = gc.getGame().getSorenRandNum(2, "Looters event number of buildings destroyed")
     iNumBuildingsDestroyed = 0
 
     listBuildings = []
@@ -646,13 +648,9 @@ def applyLooters3(argsList):
         ):
             listBuildings.append(iBuilding)
 
-    for i in range(iNumBuildings + 1):
+    for _ in range(rand(2) + 1):
         if len(listBuildings) > 0:
-            iBuilding = listBuildings[
-                gc.getGame().getSorenRandNum(
-                    len(listBuildings), "Looters event building destroyed"
-                )
-            ]
+            iBuilding = choice(listBuildings)
             szBuffer = localText.getText(
                 "TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED",
                 (gc.getBuildingInfo(iBuilding).getTextKey(),),
@@ -840,11 +838,7 @@ def applyHurricane1(argsList):
             listExpensiveBuildings.append(iBuilding)
 
     if len(listCheapBuildings) > 0:
-        iBuilding = listCheapBuildings[
-            gc.getGame().getSorenRandNum(
-                len(listCheapBuildings), "Hurricane event cheap building destroyed"
-            )
-        ]
+        iBuilding = choice(listCheapBuildings)
         szBuffer = localText.getText(
             "TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED",
             (gc.getBuildingInfo(iBuilding).getTextKey(),),
@@ -866,11 +860,7 @@ def applyHurricane1(argsList):
         city.setNumRealBuilding(iBuilding, 0)
 
     if len(listExpensiveBuildings) > 0:
-        iBuilding = listExpensiveBuildings[
-            gc.getGame().getSorenRandNum(
-                len(listExpensiveBuildings), "Hurricane event expensive building destroyed"
-            )
-        ]
+        iBuilding = choice(listExpensiveBuildings)
         szBuffer = localText.getText(
             "TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED",
             (gc.getBuildingInfo(iBuilding).getTextKey(),),
@@ -980,11 +970,7 @@ def applyTsunami2(argsList):
     for i in range(2):
         # for i in range(5):
         if len(listBuildings) > 0:
-            iBuilding = listBuildings[
-                gc.getGame().getSorenRandNum(
-                    len(listBuildings), "Tsunami event building destroyed"
-                )
-            ]
+            iBuilding = choice(listBuildings)
             szBuffer = localText.getText(
                 "TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED",
                 (gc.getBuildingInfo(iBuilding).getTextKey(),),
@@ -1119,9 +1105,7 @@ def applyVolcano1(argsList):
 
     for i in range(3):
         if len(listPlots) > 0:
-            plot = listPlots[
-                gc.getGame().getSorenRandNum(len(listPlots), "Volcano event improvement destroyed")
-            ]
+            plot = choice(listPlots)
             iImprovement = plot.getImprovementType()
             szBuffer = localText.getText(
                 "TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED",
@@ -1147,11 +1131,7 @@ def applyVolcano1(argsList):
                 plot.setImprovementType(-1)
             listPlots.remove(plot)
 
-            if (
-                i == 1
-                and gc.getGame().getSorenRandNum(100, "Volcano event num improvements destroyed")
-                < 50
-            ):
+            if i == 1 and percentage_chance(50, strict=True):
                 break
 
 
@@ -1509,7 +1489,7 @@ def applyInfluenza2(argsList):
     player = gc.getPlayer(kTriggeredData.ePlayer)
     eventCity = player.getCity(kTriggeredData.iCityId)
 
-    iNumCities = 2 + gc.getGame().getSorenRandNum(3, "Influenza event number of cities")
+    iNumCities = 2 + rand(3)
 
     listCities = []
     (loopCity, iter) = player.firstCity(False)
@@ -2487,9 +2467,7 @@ def applyTheHuns1(argsList):
     if 0 == len(listPlots):
         return
 
-    plot = map.plotByIndex(
-        listPlots[gc.getGame().getSorenRandNum(len(listPlots), "Hun event location")]
-    )
+    plot = map.plotByIndex(choice(listPlots))
 
     if map.getWorldSize() == CvUtil.findInfoTypeNum(
         gc.getWorldInfo, gc.getNumWorldInfos(), "WORLDSIZE_DUEL"
@@ -2633,9 +2611,7 @@ def applyTheVandals1(argsList):
     if 0 == len(listPlots):
         return
 
-    plot = map.plotByIndex(
-        listPlots[gc.getGame().getSorenRandNum(len(listPlots), "Vandal event location")]
-    )
+    plot = map.plotByIndex(choice(listPlots))
 
     if map.getWorldSize() == CvUtil.findInfoTypeNum(
         gc.getWorldInfo, gc.getNumWorldInfos(), "WORLDSIZE_DUEL"
@@ -2779,9 +2755,7 @@ def applyTheGoths1(argsList):
     if 0 == len(listPlots):
         return
 
-    plot = map.plotByIndex(
-        listPlots[gc.getGame().getSorenRandNum(len(listPlots), "Goth event location")]
-    )
+    plot = map.plotByIndex(choice(listPlots))
 
     if map.getWorldSize() == CvUtil.findInfoTypeNum(
         gc.getWorldInfo, gc.getNumWorldInfos(), "WORLDSIZE_DUEL"
@@ -2925,9 +2899,7 @@ def applyThePhilistines1(argsList):
     if 0 == len(listPlots):
         return
 
-    plot = map.plotByIndex(
-        listPlots[gc.getGame().getSorenRandNum(len(listPlots), "Philistine event location")]
-    )
+    plot = map.plotByIndex(choice(listPlots))
 
     if map.getWorldSize() == CvUtil.findInfoTypeNum(
         gc.getWorldInfo, gc.getNumWorldInfos(), "WORLDSIZE_DUEL"
@@ -3073,9 +3045,7 @@ def applyTheVedicAryans1(argsList):
     if 0 == len(listPlots):
         return
 
-    plot = map.plotByIndex(
-        listPlots[gc.getGame().getSorenRandNum(len(listPlots), "Vedic Aryan event location")]
-    )
+    plot = map.plotByIndex(choice(listPlots))
 
     if map.getWorldSize() == CvUtil.findInfoTypeNum(
         gc.getWorldInfo, gc.getNumWorldInfos(), "WORLDSIZE_DUEL"
@@ -3417,9 +3387,7 @@ def applyClassicLiteratureDone2(argsList):
             listTechs.append(iTech)
 
     if len(listTechs) > 0:
-        iTech = listTechs[
-            gc.getGame().getSorenRandNum(len(listTechs), "Classic Literature Event Tech selection")
-        ]
+        iTech = choice(listTechs)
         gc.getTeam(player.getTeam()).setHasTech(iTech, True, kTriggeredData.ePlayer, True, True)
 
 
@@ -4194,11 +4162,11 @@ def applyPartisans1(argsList):
 
         if len(listPlots) > 0:
             for i in range(iNumUnits):
-                iPlot = gc.getGame().getSorenRandNum(len(listPlots), "Partisan event placement")
+                iPlot = choice(listPlots)
                 player.initUnit(
                     capital.getConscriptUnit(),
-                    listPlots[iPlot].getX(),
-                    listPlots[iPlot].getY(),
+                    iPlot.getX(),
+                    iPlot.getY(),
                     UnitAITypes.UNITAI_ATTACK,
                     DirectionTypes.DIRECTION_SOUTH,
                 )
@@ -4296,7 +4264,7 @@ def canTriggerGreed(argsList):
     if not bFound:
         return False
 
-    plot = listPlots[gc.getGame().getSorenRandNum(len(listPlots), "Greed event plot selection")]
+    plot = choice(listPlots)
 
     if -1 == getGreedUnit(player, plot):
         return False

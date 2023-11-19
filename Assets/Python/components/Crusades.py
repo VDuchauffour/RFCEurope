@@ -4,6 +4,7 @@ from CoreFunctions import get_civ_by_id
 from CoreStructures import human, player, team, teamtype
 import PyHelpers
 import Popup
+from PyUtils import percentage, percentage_chance, rand
 import RFCUtils
 from ProvinceMapData import PROVINCES_MAP
 import CityNameManager
@@ -610,13 +611,13 @@ class Crusades:
                     Unit.TEUTONIC.value,
                 ]:
                     pPlot = gc.getMap().plot(pUnit.getX(), pUnit.getY())
-                    iRandNum = gc.getGame().getSorenRandNum(100, "roll to send Unit to Crusade")
+                    random_value = percentage()
                     # Absinthe: less chance for units currently on ships
                     if pUnit.isCargo():
-                        iRandNum -= 10
+                        random_value -= 10
                     if pPlot.isCity():
                         if self.getNumDefendersAtPlot(pPlot) > 3:
-                            if iRandNum < 50:
+                            if random_value < 50:
                                 self.addSelectedUnit(self.unitCrusadeCategory(iUnitType))
                                 CyInterface().addMessage(
                                     iHuman,
@@ -636,7 +637,7 @@ class Crusades:
                                 )
                                 pUnit.kill(0, -1)
                         elif self.getNumDefendersAtPlot(pPlot) > 1:
-                            if iRandNum < 10:
+                            if random_value < 10:
                                 self.addSelectedUnit(self.unitCrusadeCategory(iUnitType))
                                 CyInterface().addMessage(
                                     iHuman,
@@ -655,7 +656,7 @@ class Crusades:
                                     True,
                                 )
                                 pUnit.kill(0, -1)
-                    elif iRandNum < 30:
+                    elif random_value < 30:
                         self.addSelectedUnit(self.unitCrusadeCategory(iUnitType))
                         CyInterface().addMessage(
                             iHuman,
@@ -847,9 +848,7 @@ class Crusades:
                     ):
                         iCrusadeCategory = self.unitCrusadeCategory(pUnit.getUnitType())
                         pPlot = gc.getMap().plot(pUnit.getX(), pUnit.getY())
-                        iRandNum = gc.getGame().getSorenRandNum(
-                            100, "roll to send Unit to Crusade"
-                        )
+                        iRandNum = percentage()
                         # Absinthe: much bigger chance for special Crusader units and Knights
                         if iCrusadeCategory < 4:
                             if pPlot.isCity():
@@ -897,9 +896,7 @@ class Crusades:
                 iNumUnits = (
                     pPlayer.getNumUnits()
                 )  # we have to recalculate each time, as some units might have gone on the Crusade already
-                iRandUnit = gc.getGame().getSorenRandNum(
-                    iNumUnits, "roll to pick Unit for Crusade"
-                )
+                iRandUnit = rand(iNumUnits)
                 pUnit = pPlayer.getUnit(iRandUnit)
                 # Absinthe: check only for combat units and ignore naval units
                 if pUnit.baseCombatStr() > 0 and pUnit.getDomainType() != 0:
@@ -910,25 +907,23 @@ class Crusades:
                         pPlot = gc.getMap().plot(pUnit.getX(), pUnit.getY())
                         if pPlot.isCity():
                             if self.getNumDefendersAtPlot(pPlot) > 2:
-                                if gc.getGame().getSorenRandNum(
-                                    100, "roll to send Unit to Crusade"
-                                ) < self.unitProbability(pUnit.getUnitType()):
+                                if percentage_chance(
+                                    self.unitProbability(pUnit.getUnitType()), strict=True
+                                ):
                                     iCrusadersSend += 1
                                     self.sendUnit(pUnit)
                         else:
                             # Absinthe: much less chance for units currently on ships
-                            if pUnit.isCargo():
-                                if gc.getGame().getSorenRandNum(
-                                    100, "roll to send Unit to Crusade"
-                                ) < self.unitProbability(pUnit.getUnitType() / 2):
-                                    iCrusadersSend += 1
-                                    self.sendUnit(pUnit)
-                            else:
-                                if gc.getGame().getSorenRandNum(
-                                    100, "roll to send Unit to Crusade"
-                                ) < self.unitProbability(pUnit.getUnitType()):
-                                    iCrusadersSend += 1
-                                    self.sendUnit(pUnit)
+                            if pUnit.isCargo() and percentage_chance(
+                                self.unitProbability(pUnit.getUnitType() / 2), strict=True
+                            ):
+                                iCrusadersSend += 1
+                                self.sendUnit(pUnit)
+                            elif percentage_chance(
+                                self.unitProbability(pUnit.getUnitType()), strict=True
+                            ):
+                                iCrusadersSend += 1
+                                self.sendUnit(pUnit)
                         if iCrusadersSend == iMaxToSend:
                             return
 
@@ -1530,9 +1525,7 @@ class Crusades:
             iKnightNumber = self.getSelectedUnit(3) * 100 / iRougeModifier
             if iLeader == Civ.BURGUNDY.value:
                 for i in range(0, iKnightNumber):
-                    if (
-                        gc.getGame().getSorenRandNum(10, "chance for Paladin") >= 5
-                    ):  # Absinthe: 50% chance for a Paladin for each unit
+                    if percentage_chance(50, strict=True):
                         self.makeUnit(
                             Unit.BURGUNDIAN_PALADIN.value, iLeader, iActiveCrusade, tPlot, 1
                         )
@@ -1540,9 +1533,7 @@ class Crusades:
                         self.makeUnit(Unit.KNIGHT.value, iLeader, iActiveCrusade, tPlot, 1)
             else:
                 for i in range(0, iKnightNumber):
-                    if (
-                        gc.getGame().getSorenRandNum(10, "chance for Paladin") >= 8
-                    ):  # Absinthe: 20% chance for a Paladin for each unit
+                    if percentage_chance(20, strict=True):
                         self.makeUnit(
                             Unit.BURGUNDIAN_PALADIN.value, iLeader, iActiveCrusade, tPlot, 1
                         )
@@ -1552,9 +1543,7 @@ class Crusades:
             iLightCavNumber = self.getSelectedUnit(4) * 100 / iRougeModifier
             if iLeader == Civ.HUNGARY.value:
                 for i in range(0, iLightCavNumber):
-                    if (
-                        gc.getGame().getSorenRandNum(10, "chance for Huszar") >= 5
-                    ):  # Absinthe: 50% chance for a Huszár for each unit
+                    if percentage_chance(50, strict=True):
                         self.makeUnit(
                             Unit.HUNGARIAN_HUSZAR.value, iLeader, iActiveCrusade, tPlot, 1
                         )
@@ -1584,9 +1573,7 @@ class Crusades:
         if self.getSelectedUnit(7) > 0:
             iFootNumber = self.getSelectedUnit(7) * 100 / iRougeModifier
             for i in range(0, iFootNumber):
-                if (
-                    gc.getGame().getSorenRandNum(2, "coinflip") == 1
-                ):  # Absinthe: 50% chance for both type
+                if percentage_chance(50, strict=True):
                     self.makeUnit(Unit.LONG_SWORDSMAN.value, iLeader, iActiveCrusade, tPlot, 1)
                 else:
                     self.makeUnit(Unit.GUISARME.value, iLeader, iActiveCrusade, tPlot, 1)
@@ -1620,7 +1607,7 @@ class Crusades:
                             if iDefenders == 0:
                                 continue
 
-                if gc.getGame().getSorenRandNum(100, "free Crusaders") < iOdds:
+                if percentage_chance(iOdds, strict=True):
                     pUnit.kill(0, -1)
                     if iHuman == iPlayer:
                         CyInterface().addMessage(
@@ -1679,28 +1666,22 @@ class Crusades:
                                     True,
                                     True,
                                 )
-                            if iUnitNumber > 3:
-                                if (
-                                    gc.getGame().getSorenRandNum(5, "RelicChance") < 4
-                                ):  # 80% chance
-                                    pCiv.initUnit(
-                                        Unit.HOLY_RELIC.value,
-                                        iCapitalX,
-                                        iCapitalY,
-                                        UnitAITypes.NO_UNITAI,
-                                        DirectionTypes.DIRECTION_SOUTH,
-                                    )
-                            if iUnitNumber > 9:
-                                if (
-                                    gc.getGame().getSorenRandNum(5, "RelicChance") < 4
-                                ):  # 80% chance
-                                    pCiv.initUnit(
-                                        Unit.HOLY_RELIC.value,
-                                        iCapitalX,
-                                        iCapitalY,
-                                        UnitAITypes.NO_UNITAI,
-                                        DirectionTypes.DIRECTION_SOUTH,
-                                    )
+                            if iUnitNumber > 3 and percentage_chance(80, strict=True):
+                                pCiv.initUnit(
+                                    Unit.HOLY_RELIC.value,
+                                    iCapitalX,
+                                    iCapitalY,
+                                    UnitAITypes.NO_UNITAI,
+                                    DirectionTypes.DIRECTION_SOUTH,
+                                )
+                            if iUnitNumber > 9 and percentage_chance(80, strict=True):
+                                pCiv.initUnit(
+                                    Unit.HOLY_RELIC.value,
+                                    iCapitalX,
+                                    iCapitalY,
+                                    UnitAITypes.NO_UNITAI,
+                                    DirectionTypes.DIRECTION_SOUTH,
+                                )
                     # all other civs get experience points as well
                     else:
                         if iCiv == iHuman:
@@ -1732,9 +1713,7 @@ class Crusades:
                             iCapitalY = capital.getY()
                             # safety check, game crashes if it wants to create a unit in a non-existing city
                             if capital.getName():
-                                if (
-                                    gc.getGame().getSorenRandNum(5, "RelicChance") < 4
-                                ):  # 80% chance
+                                if percentage_chance(80, strict=True):
                                     pCiv.initUnit(
                                         Unit.HOLY_RELIC.value,
                                         iCapitalX,
@@ -1759,28 +1738,22 @@ class Crusades:
                                             True,
                                             True,
                                         )
-                                if iUnitNumber > 3:
-                                    if (
-                                        gc.getGame().getSorenRandNum(5, "RelicChance") < 3
-                                    ):  # 60% chance
-                                        pCiv.initUnit(
-                                            Unit.HOLY_RELIC.value,
-                                            iCapitalX,
-                                            iCapitalY,
-                                            UnitAITypes.NO_UNITAI,
-                                            DirectionTypes.DIRECTION_SOUTH,
-                                        )
-                                if iUnitNumber > 9:
-                                    if (
-                                        gc.getGame().getSorenRandNum(5, "RelicChance") < 3
-                                    ):  # 60% chance
-                                        pCiv.initUnit(
-                                            Unit.HOLY_RELIC.value,
-                                            iCapitalX,
-                                            iCapitalY,
-                                            UnitAITypes.NO_UNITAI,
-                                            DirectionTypes.DIRECTION_SOUTH,
-                                        )
+                                if iUnitNumber > 3 and percentage_chance(60, strict=True):
+                                    pCiv.initUnit(
+                                        Unit.HOLY_RELIC.value,
+                                        iCapitalX,
+                                        iCapitalY,
+                                        UnitAITypes.NO_UNITAI,
+                                        DirectionTypes.DIRECTION_SOUTH,
+                                    )
+                                if iUnitNumber > 9 and percentage_chance(60, strict=True):
+                                    pCiv.initUnit(
+                                        Unit.HOLY_RELIC.value,
+                                        iCapitalX,
+                                        iCapitalY,
+                                        UnitAITypes.NO_UNITAI,
+                                        DirectionTypes.DIRECTION_SOUTH,
+                                    )
 
     # Absinthe: called from CvRFCEventHandler.onCityAcquired
     def success(self, iPlayer):
@@ -1800,7 +1773,7 @@ class Crusades:
                 pPlayer = gc.getPlayer(iPlayer)
                 if pPlayer.getStateReligion() == Religion.CATHOLICISM.value:
                     # possible population gain, chance based on the current size
-                    iRandom = gc.getGame().getSorenRandNum(10, "random pop threshold")
+                    iRandom = rand(10)
                     if (
                         1 + pCity.getPopulation()
                     ) <= iRandom:  # 1 -> 80%, 2 -> 70%, 3 -> 60% ...  7 -> 20%, 8 -> 10%, 9+ -> 0%
@@ -1827,11 +1800,9 @@ class Crusades:
     def doDC(self, iGameTurn):
         if iGameTurn < self.getDCLast() + 15:  # wait 15 turns between DCs (Defensive Crusades)
             return
-        if iGameTurn % 5 != gc.getGame().getSorenRandNum(
-            5, "roll to see if we should DC"
-        ):  # otherwise every turn gets too much to check
+        if iGameTurn % 5 != rand(5):
             return
-        if gc.getGame().getSorenRandNum(3, "Random entry") == 0:  # 33% chance for no DC
+        if percentage_chance(33, strict=True):
             return
         lPotentials = [
             iPlayer for iPlayer in civilizations().main().ids() if self.canDC(iPlayer, iGameTurn)
@@ -1977,9 +1948,7 @@ class Crusades:
         # smaller Empires need a bit more help
         if pPlayer.getNumCities() < 6:
             if iBestCavalry == Unit.KNIGHT.value:
-                if (
-                    gc.getGame().getSorenRandNum(10, "chance for Paladin") >= 7
-                ):  # 30% chance for a Paladin
+                if percentage_chance(30, strict=True):
                     pPlayer.initUnit(
                         Unit.BURGUNDIAN_PALADIN.value,
                         iX,
@@ -2006,9 +1975,7 @@ class Crusades:
             )
         if iFaith > 11:
             if iBestCavalry == Unit.KNIGHT.value:
-                if (
-                    gc.getGame().getSorenRandNum(10, "chance for Paladin") >= 7
-                ):  # 30% chance for a Paladin
+                if percentage_chance(30, strict=True):
                     pPlayer.initUnit(
                         Unit.BURGUNDIAN_PALADIN.value,
                         iX,
@@ -2046,9 +2013,7 @@ class Crusades:
                 iBestCavalry, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH
             )
             if iBestCavalry == Unit.KNIGHT.value:
-                if (
-                    gc.getGame().getSorenRandNum(10, "chance for Paladin") >= 7
-                ):  # 30% chance for a Paladin
+                if percentage_chance(30, strict=True):
                     pPlayer.initUnit(
                         Unit.BURGUNDIAN_PALADIN.value,
                         iX,

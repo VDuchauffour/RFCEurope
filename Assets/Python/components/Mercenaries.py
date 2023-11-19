@@ -1,12 +1,14 @@
 # Rhye's and Fall of Civilization: Europe - Mercenaries
 # Written mostly by 3Miro
 
+from random import choice
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
 from CoreStructures import human
 from CoreTypes import Civ, Region, SpecialParameter, Religion, Promotion, Unit, Province
 from LocationsData import REGIONS
 import PyHelpers
+from PyUtils import percentage_chance, rand
 
 # import cPickle as pickle
 import RFCUtils
@@ -3720,15 +3722,12 @@ class MercenaryManager:
         sd.scriptDict["lMercsHiredBy"] = self.lHiredBy
 
     def rendomizeMercProvinces(self, iGameTurn):
-        if iGameTurn % 2 == gc.getGame().getSorenRandNum(2, "shall we randomize mercs"):
+        if iGameTurn % 2 == rand(2):
             iHuman = gc.getGame().getActivePlayer()
             lHumanProvinces = self.GMU.getOwnedProvinces(iHuman)
             iMercsLeft = 0
             for lMerc in self.lGlobalPool:
-                if (
-                    gc.getGame().getSorenRandNum(100, "mercs leaving the global pool")
-                    < lMercList[lMerc[0]][6] / 2
-                ):  # tied to the appear odds, which currently only functions as delay, maybe something else would be better here
+                if percentage_chance(lMercList[lMerc[0]][6] / 2, strict=True):
                     self.lGlobalPool.remove(lMerc)
                     if lMerc[4] in lHumanProvinces:
                         CyInterface().addMessage(
@@ -3778,14 +3777,10 @@ class MercenaryManager:
             0  # limit the number of iterations so we can have mercs with only a few promotions
         )
         while iNumPromotions < iNumPromotionsSoftCap and iIterations < iNumPromotionIterations:
-            iPromotion = gc.getGame().getSorenRandNum(
-                iNumTotalMercPromotions, "merc get promotion"
-            )
+            iPromotion = rand(iNumTotalMercPromotions)
             if isPromotionValid(iPromotion, iMercType, False):
-                if (
-                    iPromotion not in lPromotions
-                    and gc.getGame().getSorenRandNum(100, "merc set promotion")
-                    < lPromotionOdds[iPromotion]
+                if iPromotion not in lPromotions and percentage_chance(
+                    lPromotionOdds[iPromotion], strict=True
                 ):
                     lPromotions.append(iPromotion)
                     lPromotions = self.setPrereqConsistentPromotions(lPromotions)
@@ -3798,9 +3793,7 @@ class MercenaryManager:
                     lPromotions.append(iPromotion)
 
         (iPurchaseCost, iUpkeepCost) = self.GMU.getCost(iMerc, lPromotions)
-        iCurrentProvince = lMercInfo[4][
-            gc.getGame().getSorenRandNum(len(lMercInfo[4]), "available province")
-        ]
+        iCurrentProvince = choice(lMercInfo[4])
 
         # Absinthe: different message for the human player for the various cases
         iHuman = gc.getGame().getActivePlayer()
@@ -3901,14 +3894,10 @@ class MercenaryManager:
         if iNumPotentialMercs == 0:
             return
         # if there are mercs to be potentially added
-        iStart = gc.getGame().getSorenRandNum(iNumPotentialMercs, "starting Merc")
+        iStart = rand(iNumPotentialMercs)
         for iOffset in range(iNumPotentialMercs):
             iMerc = potentialMercs[(iOffset + iStart) % iNumPotentialMercs]
-            if (
-                gc.getGame().getSorenRandNum(100, "merc appearing in global pool")
-                < lMercList[iMerc][6]
-            ):
-                # adding a new merc
+            if percentage_chance(lMercList[iMerc][6], strict=True):
                 self.addNewMerc(iMerc)
 
     def doMercsTurn(self, iGameTurn):
@@ -3983,21 +3972,8 @@ class MercenaryManager:
             ]
 
             if lHiredMercs:
-                self.GMU.fireMerc(
-                    lHiredMercs[gc.getGame().getSorenRandNum(len(lHiredMercs), "deserting Merc")]
-                )
-                bLoop = (
-                    pPlayer.getGold()
-                    < (
-                        pPlayer.getPicklefreeParameter(
-                            SpecialParameter.MERCENARY_COST_PER_TURN.value
-                        )
-                        + 99
-                    )
-                    / 100
-                )
+                self.GMU.fireMerc(choice(lHiredMercs))
             else:
-                # if the player has no mercs, then stop the loop
                 break
 
     def onCityAcquiredAndKept(self, iCiv, pCity):
@@ -4200,8 +4176,7 @@ class MercenaryManager:
             elif iWarValue > 4:  # large war
                 iOdds /= 2
 
-            if gc.getGame().getSorenRandNum(100, "shall we hire a merc") > iOdds:
-                # hiring a merc
+            if percentage_chance(iOdds, strict=True, reverse=True):
                 self.HireMercAI(iPlayer)
 
     def FireMercAI(self, iPlayer):
@@ -4237,7 +4212,7 @@ class MercenaryManager:
             for iTempValue in lMercValue:
                 iSum += iTempValue
 
-            iFireRand = gc.getGame().getSorenRandNum(iSum, "random merc city")
+            iFireRand = rand(iSum)
             for iI in range(len(lMercValue)):
                 iFireRand -= lMercValue[iI]
                 if iFireRand < 0:
@@ -4265,8 +4240,6 @@ class MercenaryManager:
                 lCanHireMercs.append(lMerc)
 
         if lCanHireMercs:
-            iRandomMerc = gc.getGame().getSorenRandNum(len(lCanHireMercs), "random merc to hire")
-
             self.GMU.hireMerc(utils.getRandomEntry(lCanHireMercs), iPlayer)
             self.getMercLists()
 
