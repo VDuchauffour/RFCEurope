@@ -2,7 +2,7 @@
 line-length = 99
 target-version = ["py27"]
 force-exclude = """
-Assets/Python/data/MapsData.py
+Assets/Python/data/maps/
 """
 
 [tool.ruff]
@@ -18,7 +18,7 @@ ignore = [
   "F403", # star imports are okay
   "F405", # star imports are okay
 ]
-extend-exclude = ["Docs/Tools/*.py", "Assets/Python/data/MapsData.py"]
+extend-exclude = ["Docs/Tools/*.py", "Assets/Python/data/maps/*.py"]
 target-version = "py37"
 
 [tool.pyright]
@@ -27,6 +27,7 @@ executionEnvironments = [
     # Folders of the project
     "Assets/Python/",
     "Assets/Python/data",
+    "Assets/Python/data/maps",
     "Assets/Python/utils",
     "Assets/Python/models",
     "Assets/Python/components",

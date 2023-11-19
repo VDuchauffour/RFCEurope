@@ -14,6 +14,7 @@
     "~/.pyenv/versions",
     "./Assets/Python",
     "./Assets/Python/data",
+    "./Assets/Python/data/maps",
     "./Assets/Python/utils",
     "./Assets/Python/models",
     "./Assets/Python/components",
