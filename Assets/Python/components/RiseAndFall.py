@@ -175,12 +175,6 @@ class RiseAndFall:
     def setCheatersCheck(self, i, iNewValue):
         sd.scriptDict["lCheatersCheck"][i] = iNewValue
 
-    def getBirthTurnModifier(self, iCiv):
-        return sd.scriptDict["lBirthTurnModifier"][iCiv]
-
-    def setBirthTurnModifier(self, iCiv, iNewValue):
-        sd.scriptDict["lBirthTurnModifier"][iCiv] = iNewValue
-
     def getDeleteMode(self, i):
         return sd.scriptDict["lDeleteMode"][i]
 
@@ -586,9 +580,6 @@ class RiseAndFall:
     def onCityRazed(self, iOwner, iPlayer, city):
         self.pm.onCityRazed(iOwner, iPlayer, city)  # Province Manager
 
-    def clear600ADChina(self):
-        pass
-
     # Sedna17 Respawn
     def setupRespawnTurns(self):
         for iCiv in civilizations().majors().ids():
@@ -598,26 +589,6 @@ class RiseAndFall:
                 + (gc.getGame().getSorenRandNum(21, "BirthTurnModifier") - 10)
                 + (gc.getGame().getSorenRandNum(21, "BirthTurnModifier2") - 10),
             )  # bell-curve-like spawns within +/- 10 turns of desired turn (3Miro: Uniform, not a bell-curve)
-
-    def setupBirthTurnModifiers(self):
-        # 3Miro: first and last civ (first that does not start)
-        # Absinthe: currently unused
-        for iCiv in civilizations().majors().ids():
-            if iCiv >= Civ.ARABIA.value and not gc.getPlayer(iCiv).isHuman():
-                self.setBirthTurnModifier(
-                    iCiv, (gc.getGame().getSorenRandNum(11, "BirthTurnModifier") - 5)
-                )  # -5 to +5
-        # now make sure that no civs spawn in the same turn and cause a double "new civ" popup
-        for iCiv in civilizations().majors().ids():
-            if iCiv > human() and iCiv < civilizations().majors().len():
-                for j in range(civilizations().main().len() - iCiv):
-                    iNextCiv = iCiv + j + 1
-                    if civilization(iCiv).date.birth + self.getBirthTurnModifier(
-                        iCiv
-                    ) == civilization(iNextCiv).date.birth + self.getBirthTurnModifier(iNextCiv):
-                        self.setBirthTurnModifier(
-                            iNextCiv, (self.getBirthTurnModifier(iNextCiv) + 1)
-                        )
 
     def setEarlyLeaders(self):
         for civ in civilizations().majors().ai():

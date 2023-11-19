@@ -813,27 +813,6 @@ class RFCUtils:
 
         self.makeUnit(iUnitType, iNewOwner, tCityPlot, iNumUnits)
 
-    # RiseAndFall, Stability
-    # Absinthe: currently unused
-    def killCiv(self, iCiv, iNewCiv):
-        self.clearPlague(iCiv)
-        for city in self.getCityList(iPlayer):
-            tCoords = (city.getX(), city.getY())
-            self.cultureManager(tCoords, 50, iNewCiv, iCiv, False, False, False)
-            self.flipCity(
-                tCoords, 0, 0, iNewCiv, [iCiv]
-            )  # by trade because by conquest may raze the city
-            # city.setHasRealBuilding(Plague.PLAGUE.value, False) #buggy
-        self.flipUnitsInArea([0, 0], [WORLD_WIDTH, WORLD_HEIGHT], iNewCiv, iCiv, False, True)
-
-        self.resetUHV(iCiv)
-        self.setLastTurnAlive(iCiv, gc.getGame().getGameTurn())
-        # Absinthe: alive status should be updated right on collapse - may result in crashes if it only updates on the beginning of the next turn
-        gc.getPlayer(iCiv).setAlive(False)
-        # Absinthe: respawn status
-        if gc.getPlayer(iCiv).getRespawnedAlive():
-            gc.getPlayer(iCiv).setRespawnedAlive(False)
-
     def killAndFragmentCiv(self, iCiv, bBarbs, bAssignOneCity):
         self.clearPlague(iCiv)
         iNumLoyalCities = 0
@@ -845,8 +824,6 @@ class RFCUtils:
             # 1 loyal city for the human player
             if bAssignOneCity and iNumLoyalCities < 1 and city.isCapital():
                 iNumLoyalCities += 1
-                # gc.getTeam(gc.getPlayer(iCiv).getTeam()).declareWar(iNewCiv1, False, -1) #too dangerous?
-                # gc.getTeam(gc.getPlayer(iCiv).getTeam()).declareWar(iNewCiv2, False, -1)
                 for i in civilizations().independents().ids():
                     teamMinor = gc.getTeam(gc.getPlayer(i).getTeam())
                     if not teamMinor.isAtWar(iCiv):

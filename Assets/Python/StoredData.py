@@ -46,7 +46,6 @@ class StoredData:
             "lExileData": [-1, -1, -1, -1, -1],
             "tTempFlippingCity": -1,
             "lCheatersCheck": [0, -1],
-            "lBirthTurnModifier": [0] * civilizations().majors().len(),
             "lDeleteMode": [
                 -1,
                 -1,
