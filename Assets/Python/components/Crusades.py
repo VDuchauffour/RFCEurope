@@ -1,6 +1,7 @@
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from CoreStructures import human, player
+from CoreFunctions import get_civ_by_id
+from CoreStructures import human, player, team, teamtype
 import PyHelpers
 import Popup
 import RFCUtils
@@ -697,11 +698,8 @@ class Crusades:
 
     def eventApply7619(self, popupReturn):
         if popupReturn.getButtonClicked() == 0:
-            iHuman = human()
-            pHuman = gc.getPlayer(iHuman)
-            # pHuman.setGold( pHuman.getGold() - gc.getPlayer( human() ).getGold() / 4 )
-            pHuman.changeGold(-pHuman.getGold() / 3)
-            self.setLeader(iHuman)
+            player().changeGold(-player().getGold() / 3)
+            self.setLeader(human())
             self.setCrusadePower(self.getCrusadePower() / 2)
             self.deviateNewTargetPopup()
         else:
@@ -801,9 +799,8 @@ class Crusades:
                 self.setVotingPower(iPlayer, pPlayer.getVotingPower(Religion.CATHOLICISM.value))
 
         # No votes from the human player if he/she won't participate (AI civs will always participate)
-        iHuman = human()
         if not self.getParticipate():
-            self.setVotingPower(iHuman, 0)
+            self.setVotingPower(human(), 0)
 
         # The Pope has more votes (Rome is small anyway)
         self.setVotingPower(Civ.POPE.value, self.getVotingPower(Civ.POPE.value) * (5 / 4))
@@ -816,9 +813,8 @@ class Crusades:
         # Note that voting power is increased after this (but before the actual vote) for each sent unit by 2
 
     def setCrusaders(self):
-        iHuman = human()
         for iPlayer in civilizations().majors().ids():
-            if not iPlayer == iHuman and self.getVotingPower(iPlayer) > 0:
+            if not iPlayer == human() and self.getVotingPower(iPlayer) > 0:
                 gc.getPlayer(iPlayer).setIsCrusader(True)
 
     def sendUnits(self, iPlayer):
@@ -950,17 +946,15 @@ class Crusades:
         return iDefenders
 
     def sendUnit(self, pUnit):
-        iHuman = human()
         iOwner = pUnit.getOwner()
         self.addSelectedUnit(self.unitCrusadeCategory(pUnit.getUnitType()))
         self.setVotingPower(iOwner, self.getVotingPower(iOwner) + 2)
         self.changeNumUnitsSent(iOwner, 1)  # Absinthe: counter for sent units per civ
         # Absinthe: faith point boost for each sent unit (might get some more on successful Crusade):
-        pCiv = gc.getPlayer(iOwner)
-        pCiv.changeFaith(1)
-        if iOwner == iHuman:
+        player(iOwner).changeFaith(1)
+        if iOwner == human():
             CyInterface().addMessage(
-                iHuman,
+                human(),
                 False,
                 MessageData.DURATION / 2,
                 CyTranslator().getText("TXT_KEY_CRUSADE_LEAVE", ()) + " " + pUnit.getName(),
@@ -1050,14 +1044,13 @@ class Crusades:
         return 7
 
     def voteForCandidatesAI(self):
-        iHuman = human()
         if self.getPowerful() == -1:
             self.setLeader(self.getFavorite())
             if self.getParticipate():
                 self.informLeaderPopup()
             elif player().isExisting():
                 CyInterface().addMessage(
-                    iHuman,
+                    human(),
                     True,
                     MessageData.DURATION / 2,
                     gc.getPlayer(self.getLeader()).getName()
@@ -1075,24 +1068,25 @@ class Crusades:
 
         iFavorite = self.getFavorite()
         iPowerful = self.getPowerful()
-        if iFavorite == iHuman:
+        if iFavorite == human():
             iFavorVotes = 0
         else:
             iFavorVotes = self.getVotingPower(iFavorite)
-        if iPowerful == iHuman:
+        if iPowerful == human():
             iPowerVotes = 0
         else:
             iPowerVotes = self.getVotingPower(iPowerful)
 
-        for iPlayer in civilizations().majors().ids():
-            if iPlayer == iHuman or iPlayer == iFavorite or iPlayer == iPowerful:
-                continue
-            iVotes = self.getVotingPower(iPlayer)
+        for civ in (
+            civilizations()
+            .majors()
+            .ai()
+            .drop(get_civ_by_id(iFavorite), get_civ_by_id(iPowerful))
+            .ids()
+        ):
+            iVotes = self.getVotingPower(civ)
             if iVotes > 0:
-                # vote AI
-                if gc.getRelationTowards(iPlayer, iFavorite) > gc.getRelationTowards(
-                    iPlayer, iPowerful
-                ):
+                if gc.getRelationTowards(civ, iFavorite) > gc.getRelationTowards(civ, iPowerful):
                     iFavorVotes += iVotes
                 else:
                     iPowerVotes += iVotes
@@ -1903,21 +1897,18 @@ class Crusades:
         )
 
     def callDCAI(self, iPlayer):
-        iHuman = human()
-        pHuman = gc.getPlayer(iHuman)
-        pPlayer = gc.getPlayer(iPlayer)
         if player().isExisting():
             if (
-                gc.getTeam(pHuman.getTeam()).canContact(pPlayer.getTeam())
-                or pHuman.getStateReligion() == Religion.CATHOLICISM.value
+                team().canContact(teamtype(iPlayer))
+                or player().getStateReligion() == Religion.CATHOLICISM.value
             ):  # as you have contact with the Pope by default
                 sText = (
                     CyTranslator().getText("TXT_KEY_CRUSADE_DEFENSIVE_AI_MESSAGE", ())
                     + " "
-                    + pPlayer.getName()
+                    + player(iPlayer).getName()
                 )
                 CyInterface().addMessage(
-                    iHuman,
+                    human(),
                     True,
                     MessageData.DURATION / 2,
                     sText,
@@ -1931,15 +1922,13 @@ class Crusades:
                     True,
                 )
         self.makeDCUnits(iPlayer)
-        pPlayer.changeFaith(-min(2, pPlayer.getFaith()))
+        player(iPlayer).changeFaith(-min(2, player(iPlayer).getFaith()))
 
     def eventApply7625(self, popupReturn):
         iDecision = popupReturn.getButtonClicked()
-        iHuman = human()
-        pHuman = gc.getPlayer(iHuman)
         if iDecision == 0:
-            self.makeDCUnits(iHuman)
-            pHuman.changeFaith(-min(2, pHuman.getFaith()))
+            self.makeDCUnits(human())
+            player().changeFaith(-min(2, player().getFaith()))
         # else:
         # #pHuman.changeFaith( - min( 1, pHuman.getFaith() ) )
         # pass

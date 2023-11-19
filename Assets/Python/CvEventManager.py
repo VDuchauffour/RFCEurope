@@ -9,7 +9,7 @@
 
 from CvPythonExtensions import *
 from CoreFunctions import get_civ_by_id
-from CoreStructures import human, player
+from CoreStructures import human, player, team
 import CvUtil
 import CvScreensInterface
 import CvDebugTools
@@ -1152,8 +1152,7 @@ class CvEventManager:
                 pNewUnit.convert(unit)
                 # message if it was changed to a vassal UU
                 if iUnit != iPlayerUU and iUnit != iDefaultUnit:
-                    iHuman = human()
-                    if iHuman == iPlayer:
+                    if human() == iPlayer:
                         szText = localText.getText(
                             "TXT_KEY_BUILDING_TOPKAPI_PALACE_EFFECT",
                             (
@@ -1162,7 +1161,7 @@ class CvEventManager:
                             ),
                         )
                         CyInterface().addMessage(
-                            iHuman,
+                            human(),
                             False,
                             MessageData.DURATION,
                             szText,
@@ -1779,9 +1778,7 @@ class CvEventManager:
             if city.getPreviousOwner() != -1:
                 PreviousPlayer = gc.getPlayer(city.getPreviousOwner())
                 PreviousTeam = PreviousPlayer.getTeam()
-            iHuman = human()
-            HumanPlayer = gc.getPlayer(iHuman)
-            HumanTeam = gc.getTeam(HumanPlayer.getTeam())
+            HumanTeam = team()
             if ConquerPlayer.isHuman() or (
                 player().isExisting()
                 and (HumanTeam.isHasMet(ConquerTeam) or HumanTeam.isHasMet(PreviousTeam))
@@ -1802,7 +1799,7 @@ class CvEventManager:
                         sWonderName = gc.getBuildingInfo(iWonder).getDescription()
                         if ConquerPlayer.isHuman():
                             CyInterface().addMessage(
-                                iHuman,
+                                human(),
                                 False,
                                 MessageData.DURATION,
                                 CyTranslator().getText(
@@ -1820,7 +1817,7 @@ class CvEventManager:
                         elif HumanTeam.isHasMet(ConquerTeam):
                             ConquerName = ConquerPlayer.getCivilizationDescriptionKey()
                             CyInterface().addMessage(
-                                iHuman,
+                                human(),
                                 False,
                                 MessageData.DURATION,
                                 CyTranslator().getText(
@@ -1838,7 +1835,7 @@ class CvEventManager:
                         elif HumanTeam.isHasMet(PreviousTeam):
                             PreviousName = PreviousPlayer.getCivilizationDescriptionKey()
                             CyInterface().addMessage(
-                                iHuman,
+                                human(),
                                 False,
                                 MessageData.DURATION,
                                 CyTranslator().getText(
@@ -2098,9 +2095,7 @@ class CvEventManager:
             if pCity.getPreviousOwner() != -1:
                 PreviousPlayer = gc.getPlayer(pCity.getPreviousOwner())
                 PreviousTeam = PreviousPlayer.getTeam()
-            iHuman = human()
-            HumanPlayer = gc.getPlayer(iHuman)
-            HumanTeam = gc.getTeam(HumanPlayer.getTeam())
+            HumanTeam = team()
             if ConquerPlayer.isHuman() or (
                 player().isExisting()
                 and (HumanTeam.isHasMet(ConquerTeam) or HumanTeam.isHasMet(PreviousTeam))
@@ -2121,7 +2116,7 @@ class CvEventManager:
                         sWonderName = gc.getBuildingInfo(iWonder).getDescription()
                         if ConquerPlayer.isHuman():
                             CyInterface().addMessage(
-                                iHuman,
+                                human(),
                                 False,
                                 MessageData.DURATION,
                                 CyTranslator().getText(
@@ -2139,7 +2134,7 @@ class CvEventManager:
                         elif HumanTeam.isHasMet(ConquerTeam):
                             ConquerName = ConquerPlayer.getCivilizationDescriptionKey()
                             CyInterface().addMessage(
-                                iHuman,
+                                human(),
                                 False,
                                 MessageData.DURATION,
                                 CyTranslator().getText(
@@ -2157,7 +2152,7 @@ class CvEventManager:
                         elif HumanTeam.isHasMet(PreviousTeam):
                             PreviousName = PreviousPlayer.getCivilizationDescriptionKey()
                             CyInterface().addMessage(
-                                iHuman,
+                                human(),
                                 False,
                                 MessageData.DURATION,
                                 CyTranslator().getText(

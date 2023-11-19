@@ -605,7 +605,7 @@ class CvRFCEventHandler:
             iGameTurn
             == DateTurn.i860AD + sd.scriptDict["lEventRandomness"][iByzantiumVikingAttack] - 2
         ):
-            if human() == Civ.BYZANTIUM.value:
+            if human() == Civ.BYZANTIUM:
                 popup = Popup.PyPopup()
                 popup.setBodyString(
                     localText.getText("TXT_KEY_EVENT_VIKING_CONQUERERS_RUMOURS", ())
@@ -616,7 +616,7 @@ class CvRFCEventHandler:
             iGameTurn
             == DateTurn.i860AD + sd.scriptDict["lEventRandomness"][iByzantiumVikingAttack]
         ):
-            if human() == Civ.BYZANTIUM.value:
+            if human() == Civ.BYZANTIUM:
                 self.barb.spawnMultiTypeUnits(
                     Civ.BARBARIAN.value,
                     (80, 24),
@@ -720,13 +720,6 @@ class CvRFCEventHandler:
         # Absinthe: refresh Dynamic Civ Names
         if iPlayer < civilizations().majors().len():
             gc.getPlayer(iPlayer).processCivNames()
-
-        ## Absinthe: refresh Dynamic Civ Names for all civs on the human player's initial turn of the given scenario
-        ##			it's probably enough to refresh it on onGameStart for the scenario
-        # if human() == iPlayer:
-        # 	if iGameTurn == get_scenario_start_turn():
-        # 		for iDCNPlayer in civilizations().majors().ids():
-        # 			gc.getPlayer(iDCNPlayer).processCivNames()
 
         # Absinthe: Byzantine conqueror army
         if iGameTurn == DateTurn.i520AD:
@@ -933,9 +926,6 @@ class CvRFCEventHandler:
 
     def onTechAcquired(self, argsList):
         iPlayer = argsList[2]
-
-        iHuman = human()
-
         self.vic.onTechAcquired(argsList[0], argsList[2])
 
         if (
@@ -979,11 +969,8 @@ class CvRFCEventHandler:
     def onKbdEvent(self, argsList):
         "keypress handler - return 1 if the event was consumed"
 
-        iHuman = human()
-        if gc.getGame().getGameTurn() >= civilization(iHuman).date.birth:
-
+        if player().isAlive():
             eventType, key, mx, my, px, py = argsList
-
             theKey = int(key)
 
             if (
@@ -1065,7 +1052,7 @@ class CvRFCEventHandler:
             if PROVINCES_MAP[plot.getY()][plot.getX()] == -1:  # ocean and non-province tiles
                 return
             else:
-                iLevel = utils.getProvinceStabilityLevel(iHuman, iProvinceID)
+                iLevel = utils.getProvinceStabilityLevel(human(), iProvinceID)
                 if iLevel == 4:
                     color = gc.getColorInfo(
                         gc.getInfoTypeForString("COLOR_HIGHLIGHT_CORE")

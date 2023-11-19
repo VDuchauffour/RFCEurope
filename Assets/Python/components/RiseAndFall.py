@@ -744,8 +744,8 @@ class RiseAndFall:
         # 			if in 1300AD Dublin is still Barbarian, it will flip to England
         if (
             iGameTurn == DateTurn.i1300AD
-            and human() != Civ.ENGLAND.value
-            and iPlayer == Civ.ENGLAND.value
+            and human() != Civ.ENGLAND
+            and iPlayer == Civ.ENGLAND
             and player(Civ.ENGLAND).isAlive()
         ):
             tDublin = (32, 58)

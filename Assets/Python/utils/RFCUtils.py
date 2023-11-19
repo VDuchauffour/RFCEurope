@@ -2,7 +2,7 @@
 
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from CoreStructures import human
+from CoreStructures import human, teamtype
 from CoreTypes import (
     City,
     Civ,
@@ -1419,11 +1419,6 @@ class RFCUtils:
         colors.append("COLOR_HIGHLIGHT_NATURAL")
         colors.append("COLOR_HIGHLIGHT_CORE")
 
-        # reset to human player, whenever the overlay is triggered
-        iHuman = human()
-        iHumanTeam = gc.getPlayer(iHuman).getTeam()
-        iSelectedCivID = iHuman
-
         # Globe View type civ choice
         # when one of the civs is clicked on, it will run the StabilityOverlayCiv function with the chosen civ (check handleInput in CvMainInterface.py)
         screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
@@ -1477,11 +1472,11 @@ class RFCUtils:
         # apply the highlight for the default civ (the human civ)
         for i in range(map.numPlots()):
             plot = map.plotByIndex(i)
-            if gc.getGame().isDebugMode() or plot.isRevealed(iHumanTeam, False):
+            if gc.getGame().isDebugMode() or plot.isRevealed(teamtype(), False):
                 if PROVINCES_MAP[plot.getY()][plot.getX()] == -1:  # ocean and non-province tiles
                     szColor = "COLOR_GREY"
                 else:
-                    szColor = colors[self.getProvinceStabilityLevel(iHuman, plot.getProvince())]
+                    szColor = colors[self.getProvinceStabilityLevel(human(), plot.getProvince())]
                 engine.addColoredPlotAlt(
                     plot.getX(),
                     plot.getY(),

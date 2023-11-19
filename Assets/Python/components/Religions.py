@@ -1078,7 +1078,7 @@ class Religions:
                     city.setHasReligion(
                         Religion.PROTESTANTISM.value, True, False, False
                     )  # no announcement in this case
-                    if pPlayer.isHuman():  # message for the human player
+                    if pPlayer.isHuman():
                         CityName = city.getNameKey()
                         CyInterface().addMessage(
                             human(),
@@ -1186,7 +1186,7 @@ class Religions:
                         break
                 if not bCathBuildings:
                     pCity.setHasReligion(Religion.CATHOLICISM.value, False, False, False)
-                    if pPlayer.isHuman():  # message for the human player
+                    if pPlayer.isHuman():
                         CityName = pCity.getNameKey()
                         CyInterface().addMessage(
                             human(),
