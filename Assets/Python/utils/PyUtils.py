@@ -1,5 +1,6 @@
+from bisect import bisect
 import operator
-from random import randint
+from random import randint, random
 
 from Errors import NotTypeExpectedError
 
@@ -87,6 +88,20 @@ def rand(left, right=None):
 def percentage():
     """Return a random number between 0 and 99."""
     return rand(100)
+
+
+def weighted_choice(iterable, weights):
+    """Return a single entry given a list of weights."""
+    if len(iterable) != len(weights):
+        raise RuntimeError("`iterable` and `weights` must have the same size.")
+    total = 0
+    cum_weights = []
+    for w in weights:
+        total += w
+        cum_weights.append(total)
+    x = random() * total
+    i = bisect(cum_weights, x)
+    return iterable[i]
 
 
 def chance(threshold, percentage, strict=False, reverse=False):

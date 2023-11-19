@@ -10,6 +10,7 @@ from PyUtils import (
     combinations,
     permutations,
     product,
+    weighted_choice,
 )
 
 
@@ -346,6 +347,10 @@ class ItemCollection(list):
     def random(self):
         """Return a single entry of the object."""
         return self.copy(random.choice(self))
+
+    def weighted_choice(self, weights):
+        """Return a single entry of the object given a list of weights."""
+        return self.copy(weighted_choice(self, weights))
 
     def sample(self, k):
         """Return a sample of the object."""
