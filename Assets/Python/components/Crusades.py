@@ -4,7 +4,7 @@ from CoreFunctions import get_civ_by_id
 from CoreStructures import human, player, team, teamtype
 import PyHelpers
 import Popup
-from PyUtils import choices, percentage, percentage_chance, rand
+from PyUtils import percentage, percentage_chance, rand
 import RFCUtils
 from ProvinceMapData import PROVINCES_MAP
 import CityNameManager
@@ -1913,7 +1913,7 @@ class Crusades:
             iX = pCapital.getX()
             iY = pCapital.getY()
         else:
-            city = choices(utils.getCityList(iPlayer))
+            city = random.choice(utils.getCityList(iPlayer))
             if city:
                 iX = city.getX()
                 iY = city.getY()

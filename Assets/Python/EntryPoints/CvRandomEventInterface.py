@@ -9,11 +9,12 @@
 #
 # No other modules should import this
 #
+from random import choice
 from CoreTypes import Civ
 import CvUtil
 from CvPythonExtensions import *
 
-from PyUtils import choices, percentage_chance, rand
+from PyUtils import percentage_chance, rand
 
 gc = CyGlobalContext()
 localText = CyTranslator()
@@ -649,7 +650,7 @@ def applyLooters3(argsList):
 
     for _ in range(rand(2) + 1):
         if len(listBuildings) > 0:
-            iBuilding = choices(listBuildings)
+            iBuilding = choice(listBuildings)
             szBuffer = localText.getText(
                 "TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED",
                 (gc.getBuildingInfo(iBuilding).getTextKey(),),
@@ -837,7 +838,7 @@ def applyHurricane1(argsList):
             listExpensiveBuildings.append(iBuilding)
 
     if len(listCheapBuildings) > 0:
-        iBuilding = choices(listCheapBuildings)
+        iBuilding = choice(listCheapBuildings)
         szBuffer = localText.getText(
             "TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED",
             (gc.getBuildingInfo(iBuilding).getTextKey(),),
@@ -859,7 +860,7 @@ def applyHurricane1(argsList):
         city.setNumRealBuilding(iBuilding, 0)
 
     if len(listExpensiveBuildings) > 0:
-        iBuilding = choices(listExpensiveBuildings)
+        iBuilding = choice(listExpensiveBuildings)
         szBuffer = localText.getText(
             "TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED",
             (gc.getBuildingInfo(iBuilding).getTextKey(),),
@@ -969,7 +970,7 @@ def applyTsunami2(argsList):
     for i in range(2):
         # for i in range(5):
         if len(listBuildings) > 0:
-            iBuilding = choices(listBuildings)
+            iBuilding = choice(listBuildings)
             szBuffer = localText.getText(
                 "TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED",
                 (gc.getBuildingInfo(iBuilding).getTextKey(),),
@@ -1104,7 +1105,7 @@ def applyVolcano1(argsList):
 
     for i in range(3):
         if len(listPlots) > 0:
-            plot = choices(listPlots)
+            plot = choice(listPlots)
             iImprovement = plot.getImprovementType()
             szBuffer = localText.getText(
                 "TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED",
@@ -2466,7 +2467,7 @@ def applyTheHuns1(argsList):
     if 0 == len(listPlots):
         return
 
-    plot = map.plotByIndex(choices(listPlots))
+    plot = map.plotByIndex(choice(listPlots))
 
     if map.getWorldSize() == CvUtil.findInfoTypeNum(
         gc.getWorldInfo, gc.getNumWorldInfos(), "WORLDSIZE_DUEL"
@@ -2610,7 +2611,7 @@ def applyTheVandals1(argsList):
     if 0 == len(listPlots):
         return
 
-    plot = map.plotByIndex(choices(listPlots))
+    plot = map.plotByIndex(choice(listPlots))
 
     if map.getWorldSize() == CvUtil.findInfoTypeNum(
         gc.getWorldInfo, gc.getNumWorldInfos(), "WORLDSIZE_DUEL"
@@ -2754,7 +2755,7 @@ def applyTheGoths1(argsList):
     if 0 == len(listPlots):
         return
 
-    plot = map.plotByIndex(choices(listPlots))
+    plot = map.plotByIndex(choice(listPlots))
 
     if map.getWorldSize() == CvUtil.findInfoTypeNum(
         gc.getWorldInfo, gc.getNumWorldInfos(), "WORLDSIZE_DUEL"
@@ -2898,7 +2899,7 @@ def applyThePhilistines1(argsList):
     if 0 == len(listPlots):
         return
 
-    plot = map.plotByIndex(choices(listPlots))
+    plot = map.plotByIndex(choice(listPlots))
 
     if map.getWorldSize() == CvUtil.findInfoTypeNum(
         gc.getWorldInfo, gc.getNumWorldInfos(), "WORLDSIZE_DUEL"
@@ -3044,7 +3045,7 @@ def applyTheVedicAryans1(argsList):
     if 0 == len(listPlots):
         return
 
-    plot = map.plotByIndex(choices(listPlots))
+    plot = map.plotByIndex(choice(listPlots))
 
     if map.getWorldSize() == CvUtil.findInfoTypeNum(
         gc.getWorldInfo, gc.getNumWorldInfos(), "WORLDSIZE_DUEL"
@@ -3386,7 +3387,7 @@ def applyClassicLiteratureDone2(argsList):
             listTechs.append(iTech)
 
     if len(listTechs) > 0:
-        iTech = choices(listTechs)
+        iTech = choice(listTechs)
         gc.getTeam(player.getTeam()).setHasTech(iTech, True, kTriggeredData.ePlayer, True, True)
 
 
@@ -4161,7 +4162,7 @@ def applyPartisans1(argsList):
 
         if len(listPlots) > 0:
             for i in range(iNumUnits):
-                iPlot = choices(listPlots)
+                iPlot = choice(listPlots)
                 player.initUnit(
                     capital.getConscriptUnit(),
                     iPlot.getX(),
@@ -4263,7 +4264,7 @@ def canTriggerGreed(argsList):
     if not bFound:
         return False
 
-    plot = choices(listPlots)
+    plot = choice(listPlots)
 
     if -1 == getGreedUnit(player, plot):
         return False

@@ -1,10 +1,11 @@
 # Rhye's and Fall of Civilization: Europe - Barbarian units and cities
 
+from random import choice
 from CvPythonExtensions import *
 from CoreStructures import human
 from CoreTypes import Civ, Civic, Religion, Technology, Unit, Province
 import Popup
-from PyUtils import choices, percentage, percentage_chance, rand
+from PyUtils import percentage, percentage_chance, rand
 import RFCUtils
 from TimelineData import DateTurn
 from StoredData import sd
@@ -3302,7 +3303,7 @@ class Barbs:
         if (iTurn % iPeriod) == iRest:
             plotList = utils.squareSearch(tTopLeft, tBottomRight, function, [])
             if plotList:
-                tPlot = choices(plotList)
+                tPlot = choice(plotList)
                 if tPlot:
                     self.makeUnit(iUnitType, iCiv, tPlot, iNumUnits, iForceAttack, szName)
 
@@ -3323,7 +3324,7 @@ class Barbs:
         if (iTurn % iPeriod) == iRest:
             plotList = utils.squareSearch(tTopLeft, tBottomRight, function, [])
             if plotList:
-                tPlot = choices(plotList)
+                tPlot = choice(plotList)
                 if tPlot:
                     for iUnitType, iNumUnits in zip(lUnitTypes, lNumUnits):
                         self.makeUnit(iUnitType, iCiv, tPlot, iNumUnits, iForceAttack, szName)
@@ -3346,7 +3347,7 @@ class Barbs:
         if (iTurn % iPeriod) == iRest:
             plotList = utils.squareSearch(tTopLeft, tBottomRight, function, [])
             if plotList:
-                tPlot = choices(plotList)
+                tPlot = choice(plotList)
                 if tPlot:
                     pPlayer = gc.getPlayer(iCiv)
                     pUnit = pPlayer.initUnit(
@@ -3379,7 +3380,7 @@ class Barbs:
         if (iTurn % iPeriod) == iRest:
             plotList = utils.squareSearch(tTopLeft, tBottomRight, function, [])
             if plotList:
-                tPlot = choices(plotList)
+                tPlot = choice(plotList)
                 if tPlot:
                     self.makeUnit(iShipType, iCiv, tPlot, iNumShips, 2, szName)
                     self.makeUnit(iFighterType, iCiv, tPlot, iNumFighters, 1, szName)
@@ -3514,7 +3515,7 @@ class Barbs:
                 Civ.INDEPENDENT_3.value,
                 Civ.INDEPENDENT_4.value,
             ]
-            iNewCiv = choices(lIndependents)
+            iNewCiv = choice(lIndependents)
             for iI in range(len(cityList)):
                 pCity = cityList[iI]
                 tCity = (pCity.getX(), pCity.getY())
@@ -3621,7 +3622,7 @@ class Barbs:
                 Civ.INDEPENDENT_3.value,
                 Civ.INDEPENDENT_4.value,
             ]
-            iNewCiv = choices(lIndependents)
+            iNewCiv = choice(lIndependents)
             for iI in range(len(cityList)):
                 pCity = cityList[iI]
                 tCity = (pCity.getX(), pCity.getY())
@@ -3755,10 +3756,10 @@ class Barbs:
                         lAvailableTiles.append((x, y))
 
         if lAvailableFreeTiles:
-            tPlot = choices(lAvailableFreeTiles)
+            tPlot = choice(lAvailableFreeTiles)
         elif lAvailableTiles:
             # if all tiles are taken, select one tile at random and kill all units there
-            tPlot = choices(lAvailableTiles)
+            tPlot = choice(lAvailableTiles)
             pPlot = gc.getMap().plot(tPlot[0], tPlot[1])
             iN = pPlot.getNumUnits()
             for i in range(iN):

@@ -1,12 +1,14 @@
 # Rhye's and Fall of Civilization: Europe - Mercenaries
+# Written mostly by 3Miro
 
+from random import choice
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
 from CoreStructures import human
 from CoreTypes import Civ, Region, SpecialParameter, Religion, Promotion, Unit, Province
 from LocationsData import REGIONS
 import PyHelpers
-from PyUtils import choices, percentage_chance, rand
+from PyUtils import percentage_chance, rand
 
 # import cPickle as pickle
 import RFCUtils
@@ -3791,7 +3793,7 @@ class MercenaryManager:
                     lPromotions.append(iPromotion)
 
         (iPurchaseCost, iUpkeepCost) = self.GMU.getCost(iMerc, lPromotions)
-        iCurrentProvince = choices(lMercInfo[4])
+        iCurrentProvince = choice(lMercInfo[4])
 
         # Absinthe: different message for the human player for the various cases
         iHuman = gc.getGame().getActivePlayer()
@@ -3970,7 +3972,7 @@ class MercenaryManager:
             ]
 
             if lHiredMercs:
-                self.GMU.fireMerc(choices(lHiredMercs))
+                self.GMU.fireMerc(choice(lHiredMercs))
             else:
                 break
 
@@ -4234,7 +4236,7 @@ class MercenaryManager:
                 lCanHireMercs.append(lMerc)
 
         if lCanHireMercs:
-            self.GMU.hireMerc(choices(lCanHireMercs), iPlayer)
+            self.GMU.hireMerc(choice(lCanHireMercs), iPlayer)
             self.getMercLists()
 
     def getNumDefendersAtPlot(self, pPlot):
@@ -4360,7 +4362,7 @@ class GlobalMercenaryUtils:
         if not lCityList:
             return
 
-        pCity = choices(lCityList)
+        pCity = choice(lCityList)
 
         iX = pCity.getX()
         iY = pCity.getY()
