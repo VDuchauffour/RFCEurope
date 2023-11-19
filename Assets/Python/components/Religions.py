@@ -31,7 +31,7 @@ import Popup
 import RFCUtils
 from ProvinceMapData import PROVINCES_MAP
 from StoredData import sd
-from PyUtils import percentage, percentage_chance, rand
+from PyUtils import choices, percentage, percentage_chance, rand
 
 from MiscData import (
     RELIGIOUS_BUILDINGS,
