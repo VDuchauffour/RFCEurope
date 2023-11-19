@@ -4180,9 +4180,7 @@ class MercenaryManager:
                 self.HireMercAI(iPlayer)
 
     def FireMercAI(self, iPlayer):
-        # iNumUnits = pPlayer.getNumUnits()
         iGameTurn = gc.getGame().getGameTurn()
-        pPlayer = gc.getPlayer(iPlayer)
         lMercs = [unit for unit in PyPlayer(iPlayer).getUnitList() if unit.getMercID() > -1]
 
         if lMercs:
@@ -4230,8 +4228,6 @@ class MercenaryManager:
             iMercTotalCost = self.GMU.getModifiedCostPerPlayer(
                 lMerc[2] + (lMerc[3] + 99) / 100, iPlayer
             )
-            # sMercProvinces = Set( lMercList[lMerc[0]][4] )
-            # if ( iGold > iMercTotalCost and (not iStateReligion in lMercList[lMerc[0]][5]) and len( sPlayerProvinces & sMercProvinces ) > 0 ):
             if (
                 iGold > iMercTotalCost
                 and iStateReligion not in lMercList[lMerc[0]][5]
@@ -4240,7 +4236,7 @@ class MercenaryManager:
                 lCanHireMercs.append(lMerc)
 
         if lCanHireMercs:
-            self.GMU.hireMerc(utils.getRandomEntry(lCanHireMercs), iPlayer)
+            self.GMU.hireMerc(choice(lCanHireMercs), iPlayer)
             self.getMercLists()
 
     def getNumDefendersAtPlot(self, pPlot):
@@ -4366,7 +4362,7 @@ class GlobalMercenaryUtils:
         if not lCityList:
             return
 
-        pCity = utils.getRandomEntry(lCityList)
+        pCity = choice(lCityList)
 
         iX = pCity.getX()
         iY = pCity.getY()

@@ -1105,7 +1105,7 @@ class CvEventManager:
                     # double chance for the original UU
                     l_vassalUU.append(iPlayerUU)
                     l_vassalUU.append(iPlayerUU)
-                iUnit = utils.getRandomEntry(l_vassalUU)
+                iUnit = random.choice(l_vassalUU)
                 pNewUnit = pPlayer.initUnit(
                     iUnit,
                     unit.getX(),

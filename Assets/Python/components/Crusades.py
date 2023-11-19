@@ -1914,7 +1914,7 @@ class Crusades:
             iX = pCapital.getX()
             iY = pCapital.getY()
         else:
-            city = utils.getRandomEntry(utils.getCityList(iPlayer))
+            city = random.choice(utils.getCityList(iPlayer))
             if city:
                 iX = city.getX()
                 iY = city.getY()

@@ -116,7 +116,7 @@ class RFCUtils:
     def getRandomCity(self, iPlayer):
         cityList = self.getCityList(iPlayer)
         if cityList:
-            return self.getRandomEntry(cityList)
+            return choice(cityList)
         return -1
 
     def isMortalUnit(self, unit):
@@ -1331,11 +1331,10 @@ class RFCUtils:
 
     def selectRandomCity(self):
         cityList = []
-        for iPlayer in civilizations().majors().ids():
-            if gc.getPlayer(iPlayer).isAlive():
-                cityList.extend(self.getCityList(iPlayer))
+        for iPlayer in civilizations().majors().alive().ids():
+            cityList.extend(self.getCityList(iPlayer))
         if cityList:
-            city = self.getRandomEntry(cityList)
+            city = choice(cityList)
             return (city.getX(), city.getY())
         return False
 
@@ -1677,11 +1676,6 @@ class RFCUtils:
         if iCiv is None:
             return []
         return [pCity.GetCy() for pCity in PyPlayer(iCiv).getCityList()]
-
-    def getRandomEntry(self, list):
-        if not list:
-            return False
-        return choice(list)
 
     def isWonder(self, iBuilding):
         return iBuilding in [w.value for w in Wonder]

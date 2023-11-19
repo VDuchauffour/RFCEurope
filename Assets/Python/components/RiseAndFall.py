@@ -1,3 +1,4 @@
+from random import choice
 from CvPythonExtensions import *
 from CoreData import civilization, civilizations
 from CoreStructures import Tile, human, player, team, teamtype
@@ -1283,9 +1284,9 @@ class RiseAndFall:
             # Absinthe: we only choose among the core cities if there are no non-core ones
             # Absinthe: each city can appear multiple times in both lists
             if cityListInNotCore:
-                splittingCity = utils.getRandomEntry(cityListInNotCore)
+                splittingCity = choice(cityListInNotCore)
             else:
-                splittingCity = utils.getRandomEntry(cityListInCore)
+                splittingCity = choice(cityListInCore)
 
             # Absinthe: city goes to random independent
             iRndNum = rand(
@@ -1997,7 +1998,7 @@ class RiseAndFall:
                         if plot.isCity():
                             plotList.append(plot)
             if plotList:
-                plot = utils.getRandomEntry(plotList)
+                plot = choice(plotList)
                 self.createStartingUnits(iCiv, plot)
                 self.assignTechs(iCiv)
                 utils.setPlagueCountdown(iCiv, -PLAGUE_IMMUNITY)
@@ -2052,7 +2053,7 @@ class RiseAndFall:
                                 if plot.countTotalCulture() == 0:
                                     plotList.append(plot)
             if plotList:
-                plot = utils.getRandomEntry(plotList)
+                plot = choice(plotList)
                 self.createStartingUnits(iCiv, plot)
                 self.assignTechs(iCiv)
                 utils.setPlagueCountdown(iCiv, -PLAGUE_IMMUNITY)
@@ -2062,7 +2063,7 @@ class RiseAndFall:
                     tBroaderTopLeft, tBroaderBottomRight, utils.goodPlots, []
                 )
                 if plotList:
-                    plot = utils.getRandomEntry(plotList)
+                    plot = choice(plotList)
                     self.createStartingUnits(iCiv, plot)
                     self.createStartingWorkers(iCiv, plot)
                     self.assignTechs(iCiv)
@@ -2224,7 +2225,7 @@ class RiseAndFall:
                 seaPlotList.append((x, y))
                 # this is a good plot, so paint it and continue search
         if seaPlotList:
-            return utils.getRandomEntry(seaPlotList)
+            return choice(seaPlotList)
         return None
 
     def giveColonists(self, iCiv, tBroaderAreaTL, tBroaderAreaBR):
@@ -2330,7 +2331,7 @@ class RiseAndFall:
             [],
         )
         if plotList:
-            tPlot = utils.getRandomEntry(plotList)
+            tPlot = choice(plotList)
             self.createAdditionalUnits(iCiv, tPlot)
             self.unitsBetrayal(
                 iCiv,
@@ -2361,7 +2362,7 @@ class RiseAndFall:
                 [self.getOldCivFlip(), self.getNewCivFlip()],
             )
         if plotList:
-            tPlot = utils.getRandomEntry(plotList)
+            tPlot = choice(plotList)
             if turnsLeft == iBetrayalPeriod:
                 self.createAdditionalUnits(self.getNewCivFlip(), tPlot)
             self.unitsBetrayal(

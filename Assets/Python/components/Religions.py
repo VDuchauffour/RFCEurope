@@ -1,3 +1,4 @@
+from random import choice
 from CvPythonExtensions import (
     CyGlobalContext,
     CyTranslator,
@@ -753,7 +754,7 @@ class Religions:
                 (len(cityList) + 2) / 3 + 1, 3
             )  # number of tries are based on number of cities, but at least 3
             for i in range(iJewCityNum):
-                city = utils.getRandomEntry(cityList)
+                city = choice(cityList)
                 if not city.isHasReligion(Religion.JUDAISM.value):
                     city.setHasReligion(Religion.JUDAISM.value, True, True, False)
             # Adds Jewish Quarter to all cities which already has Judaism (including the ones where it just spread)
@@ -767,7 +768,7 @@ class Religions:
         for iPlayer in civilizations().ids():
             cityList.extend(utils.getCityList(iPlayer))
         if cityList:
-            city = utils.getRandomEntry(cityList)
+            city = choice(cityList)
             return (city.getX(), city.getY())
         return False
 
@@ -776,7 +777,7 @@ class Religions:
         if gc.getPlayer(iCiv).isAlive():
             cityList = utils.getCityList(iCiv)
             if cityList:
-                city = utils.getRandomEntry(cityList)
+                city = choice(cityList)
                 return (city.getX(), city.getY())
         return False
 
@@ -801,7 +802,7 @@ class Religions:
                         else:
                             cityList.append(city)
         if cityList:
-            city = utils.getRandomEntry(cityList)
+            city = choice(cityList)
             return (city.getX(), city.getY())
         return False
 
@@ -819,7 +820,7 @@ class Religions:
             if not city.hasBuilding(iBuilding) and city.isHasReligion(iReligion):
                 cityList.append(city)
         if cityList:
-            city = utils.getRandomEntry(cityList)
+            city = choice(cityList)
             city.setHasRealBuilding(iBuilding, True)
             gc.getPlayer(iPlayer).changeFaith(1)
             if human() == iPlayer:
@@ -995,7 +996,7 @@ class Religions:
             for iCiv in civilizations().majors().ids()
             if self.getReformationHitMatrix(iCiv) == 1
         ]
-        iCiv = utils.getRandomEntry(lCivs)
+        iCiv = choice(lCivs)
         pPlayer = gc.getPlayer(iCiv)
         if pPlayer.isAlive() and pPlayer.getStateReligion() == Religion.CATHOLICISM.value:
             self.reformationchoice(iCiv)
@@ -1345,7 +1346,7 @@ class Religions:
         iY = pCapital.getY()
         if not pCapital.isNone():
             if pPlayer.getNumCities() > 0:
-                pCapital = utils.getRandomEntry(utils.getCityList(iPlayer))
+                pCapital = choice(utils.getCityList(iPlayer))
                 iX = pCapital.getX()
                 iY = pCapital.getY()
             else:
@@ -1367,7 +1368,7 @@ class Religions:
                 iY = pNCapital.getY()
                 if not pNCapital.isNone():
                     if pNbr.getNumCities() > 0:
-                        pNCapital = utils.getRandomEntry(
+                        pNCapital = choice(
                             utils.getCityList(lReformationNeighbours[iPlayer][iNbr])
                         )
                         iX = pNCapital.getX()
@@ -1442,7 +1443,7 @@ class Religions:
         ]
 
         if lCityList:
-            city = utils.getRandomEntry(lCityList)
+            city = choice(lCityList)
             city.setHasReligion(Religion.JUDAISM.value, True, True, False)
 
     def spread1200ADJews(self):
