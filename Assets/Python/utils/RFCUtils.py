@@ -1682,14 +1682,3 @@ class RFCUtils:
 
     def getWorldPlotsList(self):
         return [(x, y) for x in range(WORLD_WIDTH) for y in range(WORLD_HEIGHT)]
-
-    def getRandomByWeight(self, lList):
-        if not lList:
-            return -1
-        iTemp = 0
-        iRand = rand(sum(x[1] for x in lList))
-        for (iPlayer, iValue) in lList:
-            iTemp += iValue
-            if iTemp >= iRand:
-                return iPlayer
-        return -1

@@ -520,7 +520,7 @@ class Religions:
             else:
                 iDivBy = 9
             if iGameTurn % iDivBy == 3 and pPope.getGold() > 100 and percentage_chance(90):
-                lWeightValues = []
+                weights = []
                 for iPlayer in lCatholicCivs:
                     iCatholicFaith = 0
                     pPlayer = gc.getPlayer(iPlayer)
@@ -528,36 +528,35 @@ class Religions:
                     iCatholicFaith += pPlayer.getFaith()
                     iCatholicFaith += 8 * max(0, pPope.AI_getAttitude(iPlayer))
                     if iCatholicFaith > 0:
-                        lWeightValues.append((iPlayer, iCatholicFaith))
-                iChosenPlayer = utils.getRandomByWeight(lWeightValues)
-                if iChosenPlayer != -1:
-                    pPlayer = gc.getPlayer(iChosenPlayer)
-                    if iGameTurn < 100:
-                        iGift = min(
-                            pPope.getGold() / 5, 40
-                        )  # between 20-40, based on the Pope's wealth
-                    else:
-                        iGift = min(
-                            pPope.getGold() / 2, 80
-                        )  # between 50-80, based on the Pope's wealth
-                    pPope.changeGold(-iGift)
-                    pPlayer.changeGold(iGift)
-                    if iChosenPlayer == human():
-                        sText = CyTranslator().getText("TXT_KEY_FAITH_GOLD_GIFT", (iGift,))
-                        CyInterface().addMessage(
-                            iPlayer,
-                            False,
-                            MessageData.DURATION,
-                            sText,
-                            "",
-                            0,
-                            "",
-                            ColorTypes(MessageData.BLUE),
-                            -1,
-                            -1,
-                            True,
-                            True,
-                        )
+                        weights.append(iCatholicFaith)
+                iChosenPlayer = choices(lCatholicCivs, weights)[0]
+                pPlayer = gc.getPlayer(iChosenPlayer)
+                if iGameTurn < 100:
+                    iGift = min(
+                        pPope.getGold() / 5, 40
+                    )  # between 20-40, based on the Pope's wealth
+                else:
+                    iGift = min(
+                        pPope.getGold() / 2, 80
+                    )  # between 50-80, based on the Pope's wealth
+                pPope.changeGold(-iGift)
+                pPlayer.changeGold(iGift)
+                if iChosenPlayer == human():
+                    sText = CyTranslator().getText("TXT_KEY_FAITH_GOLD_GIFT", (iGift,))
+                    CyInterface().addMessage(
+                        iPlayer,
+                        False,
+                        MessageData.DURATION,
+                        sText,
+                        "",
+                        0,
+                        "",
+                        ColorTypes(MessageData.BLUE),
+                        -1,
+                        -1,
+                        True,
+                        True,
+                    )
         # Free religious building
         if iGameTurn > DateTurn.i800AD:  # The crowning of Charlemagne
             if iGameTurn > DateTurn.i1648AD:  # End of religious wars
@@ -569,7 +568,7 @@ class Religions:
             else:
                 iDivBy = 11
             if iGameTurn % iDivBy == 2 and percentage_chance(80, strict=True):
-                lWeightValues = []
+                weights = []
                 iJerusalemOwner = (
                     gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple()).getPlotCity().getOwner()
                 )
@@ -584,8 +583,8 @@ class Religions:
                     ):  # The Catholic owner of Jerusalem has a greatly improved chance
                         iCatholicFaith += 30
                     if iCatholicFaith > 0:
-                        lWeightValues.append((iPlayer, iCatholicFaith))
-                iChosenPlayer = utils.getRandomByWeight(lWeightValues)
+                        weights.append(iCatholicFaith)
+                iChosenPlayer = choices(lCatholicCivs, weights)[0]
                 if iChosenPlayer != -1:
                     pPlayer = gc.getPlayer(iChosenPlayer)
                     iCatholicBuilding = Building.CATHOLIC_TEMPLE.value
@@ -605,7 +604,7 @@ class Religions:
             if (
                 iGameTurn % 13 == 4
             ):  # checked every 13th turn - won't change it as the game progresses, as the number of available techs will already change with the number of Catholic civs
-                lWeightValues = []
+                weights = []
                 for iPlayer in lCatholicCivs:
                     iCatholicFaith = 0
                     pPlayer = gc.getPlayer(iPlayer)
@@ -613,10 +612,9 @@ class Religions:
                     iCatholicFaith += pPlayer.getFaith()
                     iCatholicFaith += 2 * max(0, pPope.AI_getAttitude(iPlayer))
                     if iCatholicFaith > 0:
-                        lWeightValues.append((iPlayer, iCatholicFaith))
-                iChosenPlayer = utils.getRandomByWeight(
-                    lWeightValues
-                )  # 100% chance to choose a civ, as this doesn't guarantee that there will be a given tech at all
+                        weights.append(iCatholicFaith)
+                iChosenPlayer = choices(lCatholicCivs, weights)[0]
+                # 100% chance to choose a civ, as this doesn't guarantee that there will be a given tech at all
                 if iChosenPlayer != -1:
                     pPlayer = gc.getPlayer(iChosenPlayer)
                     teamPlayer = gc.getTeam(pPlayer.getTeam())

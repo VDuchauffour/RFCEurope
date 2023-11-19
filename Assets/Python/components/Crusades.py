@@ -1809,7 +1809,7 @@ class Crusades:
         ]
         if lPotentials:
             pPope = gc.getPlayer(Civ.POPE.value)
-            lWeightValues = []
+            weights = []
             for iPlayer in lPotentials:
                 iCatholicFaith = 0
                 pPlayer = gc.getPlayer(iPlayer)
@@ -1817,14 +1817,13 @@ class Crusades:
                 iCatholicFaith += pPlayer.getFaith()
                 iCatholicFaith += 3 * max(0, pPope.AI_getAttitude(iPlayer))
                 if iCatholicFaith > 0:
-                    lWeightValues.append((iPlayer, iCatholicFaith))
-            iChosenPlayer = utils.getRandomByWeight(lWeightValues)
-            if iChosenPlayer != -1:
-                if iChosenPlayer == human():
-                    self.callDCHuman()
-                else:
-                    self.callDCAI(iChosenPlayer)
-                self.setDCLast(iGameTurn)
+                    weights.append(iCatholicFaith)
+            iChosenPlayer = choices(lPotentials, weights)[0]
+            if iChosenPlayer == human():
+                self.callDCHuman()
+            else:
+                self.callDCAI(iChosenPlayer)
+            self.setDCLast(iGameTurn)
 
     def canDC(self, iPlayer, iGameTurn):
         pPlayer = gc.getPlayer(iPlayer)
