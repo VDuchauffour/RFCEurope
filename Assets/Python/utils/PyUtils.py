@@ -1,6 +1,7 @@
 from bisect import bisect
+from itertools import repeat
 import operator
-from random import randint, random
+from random import choice, randint, random
 
 from Errors import NotTypeExpectedError
 
@@ -33,6 +34,20 @@ def partial(func, *args, **keywords):
     newfunc.args = args
     newfunc.keywords = keywords
     return newfunc
+
+
+def accumulate(iterable, func=operator.add):
+    """Return running totals.
+
+    Equivalent to accumulate([1,2,3,4,5]) --> 1 3 6 10 15
+    or accumulate([1,2,3,4,5], initial=100) --> 100 101 103 106 110 115
+    or accumulate([1,2,3,4,5], operator.mul) --> 1 2 6 24 120
+    """
+    it = iter(iterable)
+    total = 0
+    for element in it:
+        total = func(total, element)
+        yield total
 
 
 def product(repeat=1, *args):
@@ -90,18 +105,33 @@ def percentage():
     return rand(100)
 
 
-def weighted_choice(iterable, weights):
-    """Return a single entry given a list of weights."""
-    if len(iterable) != len(weights):
-        raise RuntimeError("`iterable` and `weights` must have the same size.")
-    total = 0
-    cum_weights = []
-    for w in weights:
-        total += w
-        cum_weights.append(total)
-    x = random() * total
-    i = bisect(cum_weights, x)
-    return iterable[i]
+def choices(population, weights=None, cum_weights=None, k=1):
+    """Return a k sized list of population elements chosen with replacement.
+
+    If the relative weights or cumulative weights are not specified,
+    the selections are made with equal probability.
+
+    """
+    n = len(population)
+    if cum_weights is None:
+        if weights is None:
+            return [choice(population) for i in repeat(None, k)]
+        try:
+            cum_weights = list(accumulate(weights))
+        except TypeError:
+            if not isinstance(weights, int):
+                raise
+            k = weights
+            raise TypeError("The number of choices must be a keyword argument: k=%s" % k)
+    elif weights is not None:
+        raise TypeError("Cannot specify both weights and cumulative weights")
+    if len(cum_weights) != n:
+        raise ValueError("The number of weights does not match the population")
+    total = cum_weights[-1] + 0.0  # convert to float
+    if total <= 0.0:
+        raise ValueError("Total of weights must be greater than zero")
+    hi = n - 1
+    return [population[bisect(cum_weights, random() * total, 0, hi)] for i in repeat(None, k)]
 
 
 def chance(threshold, percentage, strict=False, reverse=False):
