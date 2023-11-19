@@ -26,7 +26,7 @@ import PyHelpers
 import Popup
 import RFCUtils
 import UniquePowers
-from MapsData import PROVINCES_MAP
+from ProvinceMapData import PROVINCES_MAP
 from StoredData import sd
 import random
 

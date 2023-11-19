@@ -49,6 +49,7 @@ executionEnvironments = [
 stubPath = "Assets/Python/.stubs"
 reportMissingModuleSource = false
 reportGeneralTypeIssues = false
+reportMissingImports = false
 typeCheckingMode = "off"
 exclude = [
   "Assets/Python/EntryPoints/CvScreensInterface.py",

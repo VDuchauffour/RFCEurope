@@ -6,8 +6,12 @@
 from copy import deepcopy
 from CvPythonExtensions import *
 from CoreData import civilizations
+from CoreFunctions import get_civ_by_id
 import CvScreenEnums
-from MapsData import PROVINCES_MAP, SETTLERS_MAP, CITIES_MAP, WARS_MAP
+from ProvinceMapData import PROVINCES_MAP
+from SettlerMapData import SETTLERS_MAP
+from CityMapData import CITIES_MAP
+from WarMapData import WARS_MAP
 from MiscData import WORLD_WIDTH, WORLD_HEIGHT
 
 
@@ -83,10 +87,10 @@ class RFCEMapManager:
     def initMaps(self):
         if not self.mapsInitiated:
             showMessage("initializing RFCEMaps")
-            self.provinceMap = deepcopy(PROVINCES_MAP)
-            self.settlerMap = deepcopy(SETTLERS_MAP)
-            self.cityNameMap = deepcopy(CITIES_MAP)
-            self.warMap = deepcopy(WARS_MAP)
+            self.province_map = deepcopy(PROVINCES_MAP)
+            self.settler_map = deepcopy(SETTLERS_MAP)
+            self.city_map = deepcopy(CITIES_MAP)
+            self.war_map = deepcopy(WARS_MAP)
             self.core_tile_min = [
                 c.location.area.core.tile_min.to_tuple() for c in civilizations().majors()
             ]
@@ -116,33 +120,33 @@ class RFCEMapManager:
 
     # settler map
     def getSettlerValue(self, iPlayer, pPlot):
-        return self.getValue(iPlayer, pPlot, self.settlerMap)
+        return self.getValue(iPlayer, pPlot, self.settler_map)
 
     def setSettlerValue(self, iPlayer, pPlot, iValue):
-        self.setValue(iPlayer, pPlot, self.settlerMap, iValue)
+        self.setValue(iPlayer, pPlot, self.settler_map, iValue)
 
     def increaseSettlerValue(self, iPlayer, pPlot):
-        self.changeValue(iPlayer, pPlot, self.settlerMap, settlerMapShades, 1)
+        self.changeValue(iPlayer, pPlot, self.settler_map, settlerMapShades, 1)
 
     def decreaseSettlerValue(self, iPlayer, pPlot):
-        self.changeValue(iPlayer, pPlot, self.settlerMap, settlerMapShades, -1)
+        self.changeValue(iPlayer, pPlot, self.settler_map, settlerMapShades, -1)
 
     # war map
     def getWarValue(self, iPlayer, pPlot):
-        return self.getValue(iPlayer, pPlot, self.warMap)
+        return self.getValue(iPlayer, pPlot, self.war_map)
 
     def setWarValue(self, iPlayer, pPlot, iValue):
-        self.setValue(iPlayer, pPlot, self.warMap, iValue)
+        self.setValue(iPlayer, pPlot, self.war_map, iValue)
 
     def increaseWarValue(self, iPlayer, pPlot):
-        self.changeValue(iPlayer, pPlot, self.warMap, warMapShades, 1)
+        self.changeValue(iPlayer, pPlot, self.war_map, warMapShades, 1)
 
     def decreaseWarValue(self, iPlayer, pPlot):
-        self.changeValue(iPlayer, pPlot, self.warMap, warMapShades, -1)
+        self.changeValue(iPlayer, pPlot, self.war_map, warMapShades, -1)
 
     # city names
     def getCityName(self, iPlayer, pPlot):
-        name = self.getValue(iPlayer, pPlot, self.cityNameMap)
+        name = self.getValue(iPlayer, pPlot, self.city_map)
         if name != cityNameMapDefault:
             return name
         return None
@@ -150,7 +154,7 @@ class RFCEMapManager:
     def setCityName(self, iPlayer, pPlot, sName):
         if sName is None or sName == "":
             sName = cityNameMapDefault
-        self.setStringValue(iPlayer, pPlot, self.cityNameMap, sName)
+        self.setStringValue(iPlayer, pPlot, self.city_map, sName)
 
     def removeCityName(self, iPlayer, pPlot):
         self.setCityName(iPlayer, pPlot, cityNameMapDefault)
@@ -166,10 +170,10 @@ class RFCEMapManager:
         return ""
 
     def getProvinceId(self, pPlot):
-        return self.provinceMap[pPlot.getY()][pPlot.getX()]
+        return self.province_map[pPlot.getY()][pPlot.getX()]
 
     def setProvinceId(self, pPlot, iProvince):
-        self.provinceMap[pPlot.getY()][pPlot.getX()] = int(iProvince)
+        self.province_map[pPlot.getY()][pPlot.getX()] = int(iProvince)
 
     def removeProvince(self, pPlot):
         self.setProvinceId(pPlot, provinceMapDefault)
@@ -255,13 +259,13 @@ class RFCEMapManager:
         return True
 
     def getValue(self, iPlayer, pPlot, aMap):
-        return aMap[iPlayer][self.swapY(pPlot.getY())][pPlot.getX()]
+        return aMap[get_civ_by_id(iPlayer)][self.swapY(pPlot.getY())][pPlot.getX()]
 
     def setValue(self, iPlayer, pPlot, aMap, iValue):
-        aMap[iPlayer][self.swapY(pPlot.getY())][pPlot.getX()] = iValue
+        aMap[get_civ_by_id(iPlayer)][self.swapY(pPlot.getY())][pPlot.getX()] = iValue
 
     def setStringValue(self, iPlayer, pPlot, aMap, sValue):
-        aMap[iPlayer][self.swapY(pPlot.getY())][pPlot.getX()] = "%s" % sValue
+        aMap[get_civ_by_id(iPlayer)][self.swapY(pPlot.getY())][pPlot.getX()] = "%s" % sValue
 
     def changeValue(self, iPlayer, pPlot, aMap, aShades, iChange):
         iValue = self.getValue(iPlayer, pPlot, aMap)
@@ -469,29 +473,6 @@ class RFCEMapVisualizer:
                 if self.mapManager.getProvinceId(pPlot) == iProvince:
                     self.showOnMinimap(pPlot, sColor)
 
-    # experimental functions
-    # def updateProvince(self, iProvince):
-    # self.colorProvince(iProvince, self.getProvinceColor(iProvince), 1.0)
-
-    # def highlightProvince(self, iProvince):
-    # showMessage( "%d - %d" %(self.iHighlightedProvince, iProvince))
-    # if(not self.mapManager.isValidProvinceId(iProvince) or self.iHighlightedProvince == iProvince):
-    # return
-    # self.colorProvince(self.iHighlightedProvince, self.getProvinceColor(self.iHighlightedProvince), 1.0)
-    # self.iHighlightedProvince = iProvince
-    # self.colorProvince(iProvince, self.getProvinceColor(iProvince), 2.0)
-
-    # def colorProvince(self, iProvince, sColor, fAlpha):
-    # if(not self.mapManager.isValidProvinceId(iProvince)):
-    # return
-    # self.hideProvince(iProvince)
-    # for i in range(iNumPlots):
-    # pPlot = map.plotByIndex(i)
-    # if (not pPlot.isNone()):
-    # iLoopProvince = self.mapManager.getProvinceId(pPlot)
-    # if (iLoopProvince == iProvince):
-    # CyEngine().fillAreaBorderPlotAlt(pPlot.getX(), pPlot.getY(), iAreaBorderLayerProvinceOffset + iProvince, sColor, fAlpha)
-
     def hideProvince(self, iProvince):
         if not self.mapManager.isValidProvinceId(iProvince):
             return
@@ -539,17 +520,9 @@ class RFCEMapVisualizer:
                             pPlot.getY(),
                             1,
                             0.2,
-                        )  # alpha
-            # mainScreen.setMinimapMode(MinimapModeTypes.MINIMAPMODE_MILITARY)
+                        )
         else:
-            # mainScreen.setMinimapMode(MinimapModeTypes.MINIMAPMODE_TERRITORY)
             map.updateMinimapColor()
-        # mainScreen.setMinimapMode(MinimapModeTypes.MINIMAPMODE_TERRITORY)
-        # -1 = NO_MINIMAPMODE
-        # 0 = MINIMAPMODE_TERRITORY
-        # 1 = MINIMAPMODE_TERRAIN
-        # 2 = MINIMAPMODE_REPLAY
-        # 3 = MINIMAPMODE_MILITARY
 
 
 class RFCEMapExporter:
@@ -564,14 +537,12 @@ class RFCEMapExporter:
             return
         file = open(sFilename, "w")
         self.writePlayerMap(
-            self.mapManager.settlerMap, "tSettlersMaps", file, "%3d", "# Settler Maps"
+            self.mapManager.settler_map, "tSettlersMaps", file, "%3d", "# Settler Maps"
         )
-        self.writePlayerMap(self.mapManager.warMap, "tWarsMaps", file, "%2d", "# War Maps")
-        self.writePlayerMap(
-            self.mapManager.cityNameMap, "tCityMap", file, '"%s"', "# City Name Maps"
-        )
+        self.writePlayerMap(self.mapManager.war_map, "tWarsMaps", file, "%2d", "# War Maps")
+        self.writePlayerMap(self.mapManager.city_map, "tCityMap", file, '"%s"', "# City Name Maps")
         self.writeArray(
-            self.mapManager.provinceMap,
+            self.mapManager.province_map,
             "tProvinceMap",
             file,
             self.writeTupel,

@@ -20,7 +20,7 @@ from CoreTypes import (
     Unit,
     FaithPointBonusCategory,
 )
-from MapsData import SETTLERS_MAP, WARS_MAP, PROVINCES_MAP
+from ProvinceMapData import PROVINCES_MAP
 import RFCUtils
 from MiscData import (
     DIPLOMACY_MODIFIERS,
@@ -30,8 +30,10 @@ from MiscData import (
     GREAT_PROPHET_FAITH_POINT_BONUS,
     PROSECUTOR_UNITCLASS,
 )
-from LocationsData import CITIES
 from TimelineData import TIMELINE_TECH_MODIFIER, DateTurn
+from SettlerMapData import SETTLERS_MAP
+from LocationsData import CITIES
+from WarMapData import WARS_MAP
 
 gc = CyGlobalContext()  # LOQ
 utils = RFCUtils.RFCUtils()
@@ -496,11 +498,11 @@ class GameBalance:
             PlagueType.BUILDING_PLAGUE.value,
             len(Religion),
         )
-        for i in civilizations().majors().ids():
+        for civ in civilizations().majors():
             for y in range(WORLD_HEIGHT):
                 for x in range(WORLD_WIDTH):
-                    gc.setSettlersMap(i, y, x, SETTLERS_MAP[i][y][x])
-                    gc.setWarsMap(i, y, x, WARS_MAP[i][y][x])
+                    gc.setSettlersMap(civ.id, y, x, SETTLERS_MAP[civ.key][y][x])
+                    gc.setWarsMap(civ.id, y, x, WARS_MAP[civ.key][y][x])
 
         for y in range(WORLD_HEIGHT):
             for x in range(WORLD_WIDTH):

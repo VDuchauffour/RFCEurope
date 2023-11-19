@@ -32,7 +32,7 @@ import Mercenaries
 from Scenario import get_scenario
 from MiscData import MessageData
 from TimelineData import DateTurn
-from MapsData import PROVINCES_MAP
+from ProvinceMapData import PROVINCES_MAP
 from CoreTypes import (
     Building,
     Civ,

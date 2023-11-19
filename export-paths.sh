@@ -24,6 +24,7 @@ SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
 LOCAL_PATHS=(
 	"$SCRIPT_DIR/Assets/Python"
 	"$SCRIPT_DIR/Assets/Python/data"
+	"$SCRIPT_DIR/Assets/Python/data/maps"
 	"$SCRIPT_DIR/Assets/Python/utils"
 	"$SCRIPT_DIR/Assets/Python/models"
 	"$SCRIPT_DIR/Assets/Python/components"

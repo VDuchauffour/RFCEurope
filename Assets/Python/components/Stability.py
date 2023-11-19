@@ -24,7 +24,7 @@ from CoreTypes import (
 
 # import cPickle as pickle
 import RFCUtils
-from MapsData import PROVINCES_MAP
+from ProvinceMapData import PROVINCES_MAP
 import RiseAndFall
 import Province
 from Scenario import get_scenario

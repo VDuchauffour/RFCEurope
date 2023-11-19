@@ -32,7 +32,7 @@ from MiscData import (
 
 from CoreFunctions import get_religion_by_id
 from CoreTypes import ProvinceType
-from MapsData import PROVINCES_MAP
+from ProvinceMapData import PROVINCES_MAP
 
 # globals
 gc = CyGlobalContext()

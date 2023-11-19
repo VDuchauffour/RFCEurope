@@ -4,7 +4,7 @@ from CoreStructures import human, player
 import PyHelpers
 import Popup
 import RFCUtils
-from MapsData import PROVINCES_MAP
+from ProvinceMapData import PROVINCES_MAP
 import CityNameManager
 from StoredData import sd
 import random

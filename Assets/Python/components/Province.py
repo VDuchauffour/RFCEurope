@@ -1,7 +1,7 @@
 from CvPythonExtensions import *
 from CoreData import civilization, civilizations
 from CoreStructures import player
-from MapsData import PROVINCES_MAP
+from ProvinceMapData import PROVINCES_MAP
 import RFCUtils  # Absinthe
 from Scenario import get_scenario  # Absinthe
 

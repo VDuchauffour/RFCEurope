@@ -12,7 +12,7 @@ from CoreData import civilizations
 
 from LocationsData import CIV_CORE_AREA, CIV_BROADER_AREA, CIV_NORMAL_AREA
 from CoreTypes import Civ, Province, ProvinceType
-from MapsData import PROVINCES_MAP
+from ProvinceMapData import PROVINCES_MAP
 
 PROVINCES_MAP = np.asarray(PROVINCES_MAP)
 DEFAULT_COLORS = {

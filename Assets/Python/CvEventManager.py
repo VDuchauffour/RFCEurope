@@ -8,6 +8,7 @@
 
 
 from CvPythonExtensions import *
+from CoreFunctions import get_civ_by_id
 from CoreStructures import human, player
 import CvUtil
 import CvScreensInterface
@@ -23,7 +24,7 @@ import GameBalance
 import random
 from MiscData import WORLD_HEIGHT, MessageData
 from CoreData import civilizations, civilization
-from MapsData import CITIES_MAP
+from CityMapData import CITIES_MAP
 from CoreTypes import Building, Wonder, Promotion, Project, Improvement, Feature, Unit, Bonus
 
 utils = RFCUtils.RFCUtils()
@@ -2340,7 +2341,9 @@ class CvEventManager:
         if bRename:
             popup.createEditBox(city.getName())
         else:
-            szName = CITIES_MAP[city.getOwner()][WORLD_HEIGHT - 1 - city.getY()][city.getX()]
+            szName = CITIES_MAP[get_civ_by_id(city.getOwner())][WORLD_HEIGHT - 1 - city.getY()][
+                city.getX()
+            ]
             if szName == "-1":
                 popup.createEditBox(city.getName())
             else:
