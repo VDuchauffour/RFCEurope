@@ -4,7 +4,7 @@ from CoreData import civilization, civilizations
 from CoreStructures import Tile, human, player, team, teamtype
 import PyHelpers  # LOQ
 import Popup
-from PyUtils import percentage, percentage_chance, rand
+from PyUtils import chance, percentage, percentage_chance, rand
 import RFCUtils
 import Province
 import Religions
@@ -1085,10 +1085,8 @@ class RiseAndFall:
                 and iGameTurn >= civilization(iPlayer).date.birth + 15
                 and iGameTurn >= iRespawnTurn + 10
             ):
-                iStability = pPlayer.getStability()
-                if percentage_chance(
-                    10 * (-2 - iStability), strict=True  # TODO: have to rework the formula
-                ):  # 10% at -3, increasing by 10% with each point (100% with -12 or less)
+                if chance(10, -2 - pPlayer.getStability(), strict=True):
+                    # 10% at -3, increasing by 10% with each point (100% with -12 or less)
                     self.revoltCity(iPlayer, False)
                     iSecessionNumber += 1
                     if iSecessionNumber > 2:
