@@ -9,13 +9,13 @@ import CvScreenEnums
 import Popup as PyPopup
 
 # Caliom RFCE imports
-import RFCEMapUtil
+import MapUtils
 
 # Caliom globals
-CITY_NAME_POPUP_EVENT_ID = RFCEMapUtil.getNewEventID()
-RESTORE_LANDMARKS_POPUP_EVENT_ID = RFCEMapUtil.getNewEventID()
-MapManager = RFCEMapUtil.MapManager
-MapVisualizer = RFCEMapUtil.MapVisualizer
+CITY_NAME_POPUP_EVENT_ID = MapUtils.getNewEventID()
+RESTORE_LANDMARKS_POPUP_EVENT_ID = MapUtils.getNewEventID()
+MapManager = MapUtils.MapManager
+MapVisualizer = MapUtils.MapVisualizer
 
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
@@ -4023,7 +4023,7 @@ class RevealMode(Mode):
                 FontTypes.GAME_FONT,
             )
             screen.addPullDownString(szDropdownName, "None", -1, -1, (-1 == self.iBrushValue))
-            for i in range(RFCEMapUtil.iNumProvinces):
+            for i in range(MapUtils.iNumProvinces):
                 try:
                     ProvinceName = unicode(MapManager.getProvinceName(i), "latin-1")  # type: ignore
                 except TypeError:
@@ -4138,9 +4138,9 @@ class RevealMode(Mode):
                 FontTypes.GAME_FONT,
             )
             if self.isWarMap():
-                shades = RFCEMapUtil.warMapShades
+                shades = MapUtils.warMapShades
             else:
-                shades = RFCEMapUtil.settlerMapShades
+                shades = MapUtils.settlerMapShades
             for shade in shades:
                 screen.addPullDownString(
                     szDropdownName, shade[3], shade[0], shade[0], shade[0] == self.iBrushValue
@@ -4307,13 +4307,13 @@ class RevealMode(Mode):
     def handleMapTypeDropdown(self, index, value):
         self.iMapType = value
         if self.isWarMap():
-            self.iBrushValue = RFCEMapUtil.warMapDefault
+            self.iBrushValue = MapUtils.warMapDefault
             self.sBrushColor = MapVisualizer.getWarMapColor(self.iBrushValue)
         elif self.isSettlerMap():
-            self.iBrushValue = RFCEMapUtil.settlerMapDefault
+            self.iBrushValue = MapUtils.settlerMapDefault
             self.sBrushColor = MapVisualizer.getSettlerMapColor(self.iBrushValue)
         elif self.isProvinceMap():
-            self.iBrushValue = RFCEMapUtil.provinceMapDefault
+            self.iBrushValue = MapUtils.provinceMapDefault
             self.sBrushColor = MapVisualizer.getProvinceColor(self.iBrushValue)
         elif self.isVisibleMap():
             self.sBrushColor = "COLOR_GREEN"

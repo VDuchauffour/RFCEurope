@@ -13,7 +13,7 @@ from array import *
 import CvUtil
 
 # Caliom
-import RFCEMapUtil
+import MapUtils
 from CvPythonExtensions import *
 
 # globals
@@ -2031,4 +2031,4 @@ class CvWBDesc:
     # Caliom
     def writeRFCEMaps(self, sFileName):
         sFileName = sFileName + "RFCEMaps.py"
-        RFCEMapUtil.MapExporter.saveTo(sFileName)
+        MapUtils.MapExporter.saveTo(sFileName)
