@@ -6,8 +6,9 @@
 from CoreData import civilizations
 import CvUtil
 import CvScreenEnums
-import random
 from CvPythonExtensions import *
+
+from PyUtils import choices
 
 gc = CyGlobalContext()
 localText = CyTranslator()
@@ -108,8 +109,8 @@ class CvTopCivs:
         ]
 
         # Randomly choose what category and what historian will be used
-        szTypeRand = random.choice(self.TypeList)
-        szHistorianRand = random.choice(self.HistorianList)
+        szTypeRand = choices(self.TypeList)
+        szHistorianRand = choices(self.HistorianList)
 
         # Create screen
 
