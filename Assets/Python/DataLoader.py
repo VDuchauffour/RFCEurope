@@ -25,7 +25,7 @@ def setup():
     # currently neither the papal nor the default maps are added
     for civ in civilizations().main():
         for y, row in enumerate(CITIES_MAP[civ.key]):
-            for x, cell in enumerate(row[y]):
+            for x, cell in enumerate(row):
                 plot = map.plot(x, len(CITIES_MAP[civ.key]) - 1 - y)
                 if plot:
                     plot.setCityNameMap(civ.id, cell)
