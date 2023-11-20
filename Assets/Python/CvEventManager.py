@@ -9,7 +9,7 @@
 
 from CvPythonExtensions import *
 from CoreFunctions import get_civ_by_id
-from CoreStructures import human, player, team
+from CoreStructures import WORLD_HEIGHT, human, player, team
 import CvUtil
 import CvScreensInterface
 import CvDebugTools
@@ -23,7 +23,7 @@ from PyUtils import percentage_chance, rand
 import RFCUtils
 import GameBalance
 import random
-from MiscData import WORLD_HEIGHT, MessageData
+from MiscData import MessageData
 from CoreData import civilizations, civilization
 from CityMapData import CITIES_MAP
 from CoreTypes import Building, Wonder, Promotion, Project, Improvement, Feature, Unit, Bonus

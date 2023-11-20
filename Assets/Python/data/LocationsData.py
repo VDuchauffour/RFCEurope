@@ -17,6 +17,8 @@ from CoreTypes import (
 )
 from BaseStructures import DataMapper, EnumDataMapper
 from CoreStructures import (
+    WORLD_WIDTH,
+    WORLD_HEIGHT,
     CompanyDataMapper,
     ScenarioDataMapper,
     Tile,
@@ -25,7 +27,6 @@ from CoreStructures import (
     concat_tiles,
     parse_area_dict,
 )
-from MiscData import WORLD_HEIGHT, WORLD_WIDTH
 from TimelineData import DateTurn
 
 MINOR_CIVS = (

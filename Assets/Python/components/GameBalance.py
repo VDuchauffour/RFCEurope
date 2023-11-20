@@ -1,5 +1,6 @@
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
+from CoreStructures import WORLD_HEIGHT, WORLD_WIDTH
 from CoreTypes import (
     Modifier,
     Building,
@@ -25,8 +26,6 @@ import RFCUtils
 from MiscData import (
     DIPLOMACY_MODIFIERS,
     HISTORICAL_ENEMIES,
-    WORLD_WIDTH,
-    WORLD_HEIGHT,
     GREAT_PROPHET_FAITH_POINT_BONUS,
     PROSECUTOR_UNITCLASS,
 )

@@ -9,7 +9,7 @@ import RFCUtils
 from Scenario import get_scenario_start_turn
 from StoredData import sd
 from WarMapData import WARS_MAP
-from MiscData import WORLD_HEIGHT
+from CoreStructures import WORLD_HEIGHT
 from TimelineData import DateTurn
 
 # globals

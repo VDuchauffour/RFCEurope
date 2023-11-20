@@ -12,6 +12,9 @@ try:
 except ImportError:
     gc = None
 
+WORLD_WIDTH = 100
+WORLD_HEIGHT = 73
+
 
 class ScenarioDataMapper(EnumDataMapper):
     """Class to map data to Scenario enum."""

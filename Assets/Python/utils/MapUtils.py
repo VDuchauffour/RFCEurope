@@ -4,12 +4,12 @@ from copy import deepcopy
 from CvPythonExtensions import *
 from CoreData import civilizations
 from CoreFunctions import get_civ_by_id
+from CoreStructures import WORLD_WIDTH, WORLD_HEIGHT
 import CvScreenEnums
 from ProvinceMapData import PROVINCES_MAP
 from SettlerMapData import SETTLERS_MAP
 from CityMapData import CITIES_MAP
 from WarMapData import WARS_MAP
-from MiscData import WORLD_WIDTH, WORLD_HEIGHT
 
 
 gc = CyGlobalContext()

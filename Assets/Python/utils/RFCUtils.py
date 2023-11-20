@@ -3,7 +3,7 @@
 from random import choice
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from CoreStructures import human, player, team, teamtype
+from CoreStructures import WORLD_HEIGHT, WORLD_WIDTH, human, player, team, teamtype
 from CoreTypes import (
     City,
     Civ,
@@ -27,8 +27,6 @@ from StoredData import sd
 from MiscData import (
     GREAT_PROPHET_FAITH_POINT_BONUS,
     RELIGION_PERSECUTION_ORDER,
-    WORLD_WIDTH,
-    WORLD_HEIGHT,
     MessageData,
 )
 

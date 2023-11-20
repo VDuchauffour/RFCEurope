@@ -2,9 +2,6 @@ from BaseStructures import EnumDataMapper
 from CoreTypes import Building, Civ, Company, Religion, Unit, Wonder
 from CoreStructures import CivDataMapper, CompanyDataMapper
 
-WORLD_WIDTH = 100
-WORLD_HEIGHT = 73
-
 PLAGUE_IMMUNITY = 20
 GREAT_PROPHET_FAITH_POINT_BONUS = 8
 NUM_CRUSADES = 6
