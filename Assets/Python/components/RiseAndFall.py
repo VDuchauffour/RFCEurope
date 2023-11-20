@@ -8,7 +8,7 @@ from PyUtils import chance, percentage, percentage_chance, rand
 import RFCUtils
 import Province
 import Religions
-from Scenario import get_scenario
+from Scenario import get_scenario, get_scenario_start_turn
 import Victory
 from StoredData import sd
 import Crusades
@@ -458,22 +458,31 @@ class RiseAndFall:
         iHuman = human()
         if get_scenario() == Scenario.i500AD:
             self.create500ADstartingUnits()
+            for civ in (
+                civilizations().majors().filter(lambda c: c.date.birth == DateTurn.i500AD).ids()
+            ):
+                self.showArea(civ)
+                self.initContact(civ)
+
         else:
             self.create1200ADstartingUnits()
-            for iCiv in range(Civ.ARAGON.value + 1):
-                self.showArea(iCiv)
-                self.assign1200ADtechs(
-                    iCiv
-                )  # Temporarily all civs get the same starting techs as Aragon
-                self.initContact(iCiv, False)
+            for civ in (
+                civilizations()
+                .main()
+                .filter(lambda c: c.date.birth < get_scenario_start_turn(Scenario.i1200AD))
+                .ids()
+            ):
+                self.showArea(civ)
+                self.initContact(civ, False)
+                # Temporarily all civs get the same starting techs as Aragon
+                self.assign1200ADtechs(civ)
             rel.setStartingFaith()
             self.setDiplo1200AD()
             self.LeaningTowerGP()
             rel.spread1200ADJews()  # Spread Jews to some random cities
             vic.set1200UHVDone(iHuman)
-            self.assign1200ADtechs(
-                Civ.POPE.value
-            )  # Temporarily all civs get the same starting techs as Aragon
+            # Temporarily all civs get the same starting techs as Aragon
+            self.assign1200ADtechs(Civ.POPE.value)
             cru.do1200ADCrusades()
 
         self.assignGold()
@@ -2985,8 +2994,6 @@ class RiseAndFall:
         utils.makeUnit(Unit.ISLAMIC_MISSIONARY.value, iCiv, tPlot, 2)
 
     def create500ADstartingUnits(self):
-        # 3Miro: units on start (note Spearman might become an upgraded defender, tech dependent)
-
         utils.makeUnit(
             Unit.SETTLER.value, Civ.FRANCE, CIV_CAPITAL_LOCATIONS[Civ.FRANCE].to_tuple(), 3
         )
@@ -3009,11 +3016,6 @@ class RiseAndFall:
             2,
         )
 
-        self.showArea(Civ.BYZANTIUM.value)
-        self.initContact(Civ.BYZANTIUM.value)
-        self.showArea(Civ.FRANCE.value)
-        self.showArea(Civ.POPE.value)
-
         iHuman = human()
         if (
             civilization(iHuman).date.birth > DateTurn.i500AD
@@ -3021,17 +3023,17 @@ class RiseAndFall:
             tStart = CIV_CAPITAL_LOCATIONS[get_civ_by_id(iHuman)].to_tuple()
 
             # Absinthe: changes in the unit positions, in order to prohibit these contacts in 500AD
-            if iHuman == Civ.ARABIA.value:  # contact with Byzantium
+            if iHuman == Civ.ARABIA:  # contact with Byzantium
                 tStart = (
                     CIV_CAPITAL_LOCATIONS[Civ.ARABIA].x,
                     CIV_CAPITAL_LOCATIONS[Civ.ARABIA].y - 10,
                 )
-            elif iHuman == Civ.BULGARIA.value:  # contact with Byzantium
+            elif iHuman == Civ.BULGARIA:  # contact with Byzantium
                 tStart = (
                     CIV_CAPITAL_LOCATIONS[Civ.BULGARIA].x,
                     CIV_CAPITAL_LOCATIONS[Civ.BULGARIA].y + 1,
                 )
-            elif iHuman == Civ.OTTOMAN.value:  # contact with Byzantium
+            elif iHuman == Civ.OTTOMAN:  # contact with Byzantium
                 tStart = (97, 23)
 
             utils.makeUnit(Unit.SETTLER.value, iHuman, tStart, 1)
@@ -3057,7 +3059,7 @@ class RiseAndFall:
     def assignTechs(self, iCiv):
         # 3Miro: other than the original techs
 
-        if civilization(iCiv).date.birth == 0:
+        if civilization(iCiv).date.birth == DateTurn.i500AD:
             return
 
         if iCiv == Civ.ARABIA.value:
