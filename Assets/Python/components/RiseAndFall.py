@@ -450,9 +450,6 @@ class RiseAndFall:
     #####################################
 
     def setup(self):
-
-        self.pm.setup()
-
         self.setEarlyLeaders()
 
         # Sedna17 Respawn setup special respawn turns

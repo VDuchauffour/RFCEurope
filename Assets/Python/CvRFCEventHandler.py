@@ -115,7 +115,6 @@ g_bAIThinkPeriod = 6  # Rhye (5 in Warlords, 4 in vanilla)
 # Mercenaries - end
 
 
-###################################################
 class CvRFCEventHandler:
 
     mercenaryManager = None  # Mercenaries
@@ -168,6 +167,7 @@ class CvRFCEventHandler:
 
         self.eventManager = eventManager
 
+        self.pm = Province.ProvinceManager()
         self.rnf = RiseAndFall.RiseAndFall()
         self.barb = Barbs.Barbs()
         self.rel = Religions.Religions()
@@ -198,9 +198,9 @@ class CvRFCEventHandler:
 
     def onGameStart(self, argsList):
         "Called at the start of the game"
-        # self.pm.setup()
         DataLoader.setup()
-        sd.setup()  # initialise global script data
+        sd.setup()
+        self.pm.setup()
         self.rnf.setup()
         self.rel.setup()
         self.pla.setup()
