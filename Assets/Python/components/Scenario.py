@@ -1,21 +1,17 @@
+from CoreStructures import player
 from CoreTypes import Civ, Scenario
 from TimelineData import DateTurn
 
 
-try:
-    from CvPythonExtensions import CyGlobalContext
-
-    gc = CyGlobalContext()
-
-except ImportError:
-    gc = None
-
-
 def get_scenario():
     """Return scenario given the current situation."""
-    if gc is not None and gc.getPlayer(Civ.BURGUNDY.value).isPlayable():
-        return Scenario.i500AD
-    return Scenario.i1200AD
+    try:
+        if player(Civ.BURGUNDY).isPlayable():
+            return Scenario.i500AD
+    except:  # noqa: E722
+        return Scenario.i1200AD
+    else:
+        return Scenario.i1200AD
 
 
 def get_scenario_start_years(scenario=None):
