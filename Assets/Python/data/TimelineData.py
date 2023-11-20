@@ -4,7 +4,6 @@ from CoreStructures import CivDataMapper, CompanyDataMapper
 from CoreTypes import Civ, Company, Technology
 
 # TODO switch to years with convert from trun
-# TODO fix company birth dates
 # TODO change  behavior in order to replace default values like 999 with None
 
 # Timeline of the mod, all important years to be references by year as opposed to hard-to-follow turn numbers
