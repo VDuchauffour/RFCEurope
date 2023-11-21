@@ -1,15 +1,12 @@
-from CvPythonExtensions import *
-from CoreData import civilization, civilizations
-from CoreStructures import player
-from ProvinceMapData import PROVINCES_MAP
-import RFCUtils  # Absinthe
-from Scenario import get_scenario  # Absinthe
+import RFCUtils
+from Scenario import get_scenario
 
 from TimelineData import DateTurn
+from ProvinceMapData import PROVINCES_MAP
+from CoreData import civilization, civilizations
 from CoreTypes import Province, ProvinceEvent, Scenario, ProvinceType
 
-gc = CyGlobalContext()
-utils = RFCUtils.RFCUtils()  # Absinthe
+utils = RFCUtils.RFCUtils()
 
 
 class ProvinceManager:
@@ -37,30 +34,30 @@ class ProvinceManager:
     def onCityBuilt(self, iPlayer, x, y):
         if iPlayer not in civilizations().main().ids():
             return
-        pPlayer = gc.getPlayer(iPlayer)
-        iProv = PROVINCES_MAP[y][x]
-        if pPlayer.getProvinceType(iProv) == ProvinceType.POTENTIAL.value:
-            pPlayer.setProvinceType(iProv, ProvinceType.HISTORICAL.value)
+        civ = civilization(iPlayer)
+        province = PROVINCES_MAP[y][x]
+        if civ.player.getProvinceType(province) == ProvinceType.POTENTIAL:
+            civ.player.setProvinceType(province, ProvinceType.HISTORICAL.value)
             utils.refreshStabilityOverlay()
 
     def onCityAcquired(self, owner, iPlayer, city, bConquest, bTrade):
         if iPlayer not in civilizations().main().ids():
             return
-        pPlayer = gc.getPlayer(iPlayer)
-        iProv = city.getProvince()
-        if pPlayer.getProvinceType(iProv) == ProvinceType.POTENTIAL.value:
-            pPlayer.setProvinceType(iProv, ProvinceType.HISTORICAL.value)
+        civ = civilization(iPlayer)
+        province = city.getProvince()
+        if civ.player.getProvinceType(province) == ProvinceType.POTENTIAL:
+            civ.player.setProvinceType(province, ProvinceType.HISTORICAL.value)
             utils.refreshStabilityOverlay()
 
     def onCityRazed(self, iOwner, iPlayer, city):
         pass
 
     def updatePotential(self, iPlayer):
-        pPlayer = gc.getPlayer(iPlayer)
+        civ = civilization(iPlayer)
         for city in utils.getCityList(iPlayer):
             province = city.getProvince()
-            if pPlayer.getProvinceType(province) == ProvinceType.POTENTIAL:
-                pPlayer.setProvinceType(province, ProvinceType.HISTORICAL.value)
+            if civ.player.getProvinceType(province) == ProvinceType.POTENTIAL:
+                civ.player.setProvinceType(province, ProvinceType.HISTORICAL.value)
         utils.refreshStabilityOverlay()
 
     def onRespawn(self, iPlayer):
@@ -88,9 +85,10 @@ class ProvinceManager:
 
     def onSpawn(self, iPlayer):
         # when a new nations spawns, old nations in the region should lose some of their provinces
-        events = civilization(iPlayer).event.provinces.get(ProvinceEvent.ON_SPAWN)
+        civ = civilization(iPlayer)
+        events = civ.event.provinces.get(ProvinceEvent.ON_SPAWN)
         if events is not None:
             for civ, province, province_type in events:
-                player(civ).setProvinceType(province.value, province_type.value)
+                civ.player.setProvinceType(province.value, province_type.value)
 
         utils.refreshStabilityOverlay()
