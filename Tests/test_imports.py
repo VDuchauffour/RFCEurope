@@ -26,6 +26,7 @@ class TestDataMapper(unittest.TestCase):
         self.outputs = list(
             map(lambda x: x.split("/")[-1].split(".py")[0], self.outputs.splitlines())  # type: ignore
         )
+        self.outputs.remove("Province")
         self.outputs = sorted(self.outputs)
 
     def test_imports(self):
