@@ -1,3 +1,4 @@
+from CoreStructures import player
 import RFCUtils
 from Scenario import get_scenario
 
@@ -85,10 +86,9 @@ class ProvinceManager:
 
     def onSpawn(self, iPlayer):
         # when a new nations spawns, old nations in the region should lose some of their provinces
-        civ = civilization(iPlayer)
-        events = civ.event.provinces.get(ProvinceEvent.ON_SPAWN)
+        events = civilization(iPlayer).event.provinces.get(ProvinceEvent.ON_SPAWN)
         if events is not None:
             for civ, province, province_type in events:
-                civ.player.setProvinceType(province.value, province_type.value)
+                player(civ).setProvinceType(province.value, province_type.value)
 
         utils.refreshStabilityOverlay()
