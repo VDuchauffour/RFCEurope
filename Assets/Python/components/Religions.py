@@ -30,7 +30,7 @@ import PyHelpers
 import Popup
 import RFCUtils
 from ProvinceMapData import PROVINCES_MAP
-from StoredData import sd
+from StoredData import data
 from PyUtils import choices, percentage, percentage_chance, rand
 
 from MiscData import (
@@ -325,31 +325,31 @@ class Religions:
     ################################################
 
     def getSeed(self):
-        return sd.scriptDict["iSeed"]
+        return data.scriptDict["iSeed"]
 
     def setSeed(self):
-        sd.scriptDict["iSeed"] = percentage()
+        data.scriptDict["iSeed"] = percentage()
 
     def getReformationActive(self):
-        return sd.scriptDict["bReformationActive"]
+        return data.scriptDict["bReformationActive"]
 
     def setReformationActive(self, bNewValue):
-        sd.scriptDict["bReformationActive"] = bNewValue
+        data.scriptDict["bReformationActive"] = bNewValue
 
     def getReformationHitMatrix(self, iCiv):
-        return sd.scriptDict["lReformationHitMatrix"][iCiv]
+        return data.scriptDict["lReformationHitMatrix"][iCiv]
 
     def setReformationHitMatrix(self, iCiv, bNewValue):
-        sd.scriptDict["lReformationHitMatrix"][iCiv] = bNewValue
+        data.scriptDict["lReformationHitMatrix"][iCiv] = bNewValue
 
     def getReformationHitMatrixAll(self):
-        return sd.scriptDict["lReformationHitMatrix"]
+        return data.scriptDict["lReformationHitMatrix"]
 
     def getCounterReformationActive(self):
-        return sd.scriptDict["bCounterReformationActive"]
+        return data.scriptDict["bCounterReformationActive"]
 
     def setCounterReformationActive(self, bNewValue):
-        sd.scriptDict["bCounterReformationActive"] = bNewValue
+        data.scriptDict["bCounterReformationActive"] = bNewValue
 
     #######################################
     ### Main methods (Event-Triggered) ###
@@ -905,10 +905,10 @@ class Religions:
                     pPlayer.convertForFree(iBestReligion)
 
     def getFreeRevolutionReligions(self):
-        return sd.scriptDict["lReligionChoices"]
+        return data.scriptDict["lReligionChoices"]
 
     def setFreeRevolutionReligions(self, val):
-        sd.scriptDict["lReligionChoices"] = val
+        data.scriptDict["lReligionChoices"] = val
 
     # Absinthe: free religion change popup
     def showFreeRevolutionPopup(self, iPlayer, religionList):

@@ -7,7 +7,7 @@ from CoreTypes import Civ
 from PyUtils import rand
 import RFCUtils
 from Scenario import get_scenario_start_turn
-from StoredData import sd
+from StoredData import data
 from WarMapData import WARS_MAP
 from CoreStructures import WORLD_HEIGHT
 from TimelineData import DateTurn
@@ -28,16 +28,16 @@ iMinValue = 30
 
 class AIWars:
     def getAttackingCivsArray(self, iCiv):
-        return sd.scriptDict["lAttackingCivsArray"][iCiv]
+        return data.scriptDict["lAttackingCivsArray"][iCiv]
 
     def setAttackingCivsArray(self, iCiv, iNewValue):
-        sd.scriptDict["lAttackingCivsArray"][iCiv] = iNewValue
+        data.scriptDict["lAttackingCivsArray"][iCiv] = iNewValue
 
     def getNextTurnAIWar(self):
-        return sd.scriptDict["iNextTurnAIWar"]
+        return data.scriptDict["iNextTurnAIWar"]
 
     def setNextTurnAIWar(self, iNewValue):
-        sd.scriptDict["iNextTurnAIWar"] = iNewValue
+        data.scriptDict["iNextTurnAIWar"] = iNewValue
 
     def setup(self):
         iTurn = get_scenario_start_turn()  # only check from the start turn of the scenario

@@ -8,7 +8,7 @@ from PyUtils import choices, percentage, percentage_chance, rand
 import RFCUtils
 from ProvinceMapData import PROVINCES_MAP
 import CityNameManager
-from StoredData import sd
+from StoredData import data
 import random
 
 from CoreTypes import City, Civ, Religion, Promotion, Technology, Unit, Province
@@ -176,130 +176,130 @@ class Crusades:
     #############
 
     def getCrusadeInit(self, iCrusade):
-        return sd.scriptDict["lCrusadeInit"][iCrusade]
+        return data.scriptDict["lCrusadeInit"][iCrusade]
 
     def setCrusadeInit(self, iCrusade, iNewCode):
         # codes are:	-2, no crusade yet
         # 				-1 crusade is active but waiting to start (Holy City is Christian and/or another Crusade in progress)
         # 				0 or more, the turn when it was initialized
-        sd.scriptDict["lCrusadeInit"][iCrusade] = iNewCode
+        data.scriptDict["lCrusadeInit"][iCrusade] = iNewCode
 
     def addSelectedUnit(self, iUnitPlace):
-        sd.scriptDict["lSelectedUnits"][iUnitPlace] += 1
+        data.scriptDict["lSelectedUnits"][iUnitPlace] += 1
 
     def setSelectedUnit(self, iUnitPlace, iNewNumber):
-        sd.scriptDict["lSelectedUnits"][iUnitPlace] = iNewNumber
+        data.scriptDict["lSelectedUnits"][iUnitPlace] = iNewNumber
 
     def getSelectedUnit(self, iUnitPlace):
-        return sd.scriptDict["lSelectedUnits"][iUnitPlace]
+        return data.scriptDict["lSelectedUnits"][iUnitPlace]
 
     def changeNumUnitsSent(self, iPlayer, iChange):
-        sd.scriptDict["lNumUnitsSent"][iPlayer] += iChange
+        data.scriptDict["lNumUnitsSent"][iPlayer] += iChange
 
     def setNumUnitsSent(self, iPlayer, iNewNumber):
-        sd.scriptDict["lNumUnitsSent"][iPlayer] = iNewNumber
+        data.scriptDict["lNumUnitsSent"][iPlayer] = iNewNumber
 
     def getNumUnitsSent(self, iPlayer):
-        return sd.scriptDict["lNumUnitsSent"][iPlayer]
+        return data.scriptDict["lNumUnitsSent"][iPlayer]
 
     def getActiveCrusade(self, iGameTurn):
         for i in range(NUM_CRUSADES):
-            iInit = sd.scriptDict["lCrusadeInit"][i]
+            iInit = data.scriptDict["lCrusadeInit"][i]
             if iInit > -1 and iInit + 9 > iGameTurn:
                 return i
         return -1
 
     def getParticipate(self):
-        return sd.scriptDict["bParticipate"]
+        return data.scriptDict["bParticipate"]
 
     def setParticipate(self, bVal):
-        sd.scriptDict["bParticipate"] = bVal
+        data.scriptDict["bParticipate"] = bVal
 
     def getVotingPower(self, iCiv):
-        return sd.scriptDict["lVotingPower"][iCiv]
+        return data.scriptDict["lVotingPower"][iCiv]
 
     def setVotingPower(self, iCiv, iVotes):
-        sd.scriptDict["lVotingPower"][iCiv] = iVotes
+        data.scriptDict["lVotingPower"][iCiv] = iVotes
 
     def getCrusadePower(self):
-        return sd.scriptDict["iCrusadePower"]
+        return data.scriptDict["iCrusadePower"]
 
     def setCrusadePower(self, iPower):
-        sd.scriptDict["iCrusadePower"] = iPower
+        data.scriptDict["iCrusadePower"] = iPower
 
     def getFavorite(self):
-        return sd.scriptDict["iFavorite"]
+        return data.scriptDict["iFavorite"]
 
     def setFavorite(self, iFavorite):
-        sd.scriptDict["iFavorite"] = iFavorite
+        data.scriptDict["iFavorite"] = iFavorite
 
     def getPowerful(self):
-        return sd.scriptDict["iPowerful"]
+        return data.scriptDict["iPowerful"]
 
     def setPowerful(self, iPowerful):
-        sd.scriptDict["iPowerful"] = iPowerful
+        data.scriptDict["iPowerful"] = iPowerful
 
     def getLeader(self):
-        return sd.scriptDict["iLeader"]
+        return data.scriptDict["iLeader"]
 
     def setLeader(self, iLeader):
-        sd.scriptDict["iLeader"] = iLeader
+        data.scriptDict["iLeader"] = iLeader
 
     def getVotesGatheredFavorite(self):
-        return sd.scriptDict["lVotesGathered"][0]
+        return data.scriptDict["lVotesGathered"][0]
 
     def setVotesGatheredFavorite(self, iVotes):
-        sd.scriptDict["lVotesGathered"][0] = iVotes
+        data.scriptDict["lVotesGathered"][0] = iVotes
 
     def getVotesGatheredPowerful(self):
-        return sd.scriptDict["lVotesGathered"][1]
+        return data.scriptDict["lVotesGathered"][1]
 
     def setVotesGatheredPowerful(self, iVotes):
-        sd.scriptDict["lVotesGathered"][1] = iVotes
+        data.scriptDict["lVotesGathered"][1] = iVotes
 
     def getRichestCatholic(self):
-        return sd.scriptDict["iRichestCatholic"]
+        return data.scriptDict["iRichestCatholic"]
 
     def setRichestCatholic(self, iPlayer):
-        sd.scriptDict["iRichestCatholic"] = iPlayer
+        data.scriptDict["iRichestCatholic"] = iPlayer
 
     def getIsTarget(self, iCiv):
-        return sd.scriptDict["lDeviateTargets"][iCiv]
+        return data.scriptDict["lDeviateTargets"][iCiv]
 
     def setIsTarget(self, iCiv, bTarget):
-        sd.scriptDict["lDeviateTargets"][iCiv] = bTarget
+        data.scriptDict["lDeviateTargets"][iCiv] = bTarget
 
     def getTargetPlot(self):
-        return sd.scriptDict["tTarget"]
+        return data.scriptDict["tTarget"]
 
     def setTarget(self, iX, iY):
-        sd.scriptDict["tTarget"] = (iX, iY)
+        data.scriptDict["tTarget"] = (iX, iY)
 
     def hasSucceeded(self):
-        iSucc = sd.scriptDict["iCrusadeSucceeded"]
+        iSucc = data.scriptDict["iCrusadeSucceeded"]
         iTest = iSucc == 1
         return iTest
 
     def setSucceeded(self):
-        sd.scriptDict["iCrusadeSucceeded"] = 1
+        data.scriptDict["iCrusadeSucceeded"] = 1
 
     def getCrusadeToReturn(self):
-        return sd.scriptDict["iCrusadeToReturn"]
+        return data.scriptDict["iCrusadeToReturn"]
 
     def setCrusadeToReturn(self, iNewValue):
-        sd.scriptDict["iCrusadeToReturn"] = iNewValue
+        data.scriptDict["iCrusadeToReturn"] = iNewValue
 
     def isDCEnabled(self):
-        return sd.scriptDict["bDCEnabled"]
+        return data.scriptDict["bDCEnabled"]
 
     def setDCEnabled(self, bNewValue):
-        sd.scriptDict["bDCEnabled"] = bNewValue
+        data.scriptDict["bDCEnabled"] = bNewValue
 
     def getDCLast(self):
-        return sd.scriptDict["iDCLast"]
+        return data.scriptDict["iDCLast"]
 
     def setDCLast(self, iLast):
-        sd.scriptDict["iDCLast"] = iLast
+        data.scriptDict["iDCLast"] = iLast
 
     def showPopup(self, popupID, title, message, labels):
         popup = Popup.PyPopup(popupID, EventContextTypes.EVENTCONTEXT_ALL)

@@ -6,11 +6,10 @@ from CoreTypes import Civ
 import cPickle as pickle
 from MiscData import NUM_CRUSADES
 
-# globals
 gc = CyGlobalContext()
 
 
-class StoredData:
+class GameData:
     def __init__(self):
         self.setup()
 
@@ -147,6 +146,4 @@ class StoredData:
         self.save()
 
 
-# All modules import the following single instance, not the class
-
-sd = StoredData()
+data = GameData()

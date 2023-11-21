@@ -7,7 +7,7 @@ from CoreTypes import PlagueType, Improvement, Civ
 from PyUtils import percentage, percentage_chance, rand
 import RFCUtils
 
-from StoredData import sd
+from StoredData import data
 import random
 
 from MiscData import PLAGUE_IMMUNITY, MessageData
@@ -32,28 +32,28 @@ class Plague:
     ################################################
 
     def getPlagueCountdown(self, iCiv):
-        return sd.scriptDict["lPlagueCountdown"][iCiv]
+        return data.scriptDict["lPlagueCountdown"][iCiv]
 
     def setPlagueCountdown(self, iCiv, iNewValue):
-        sd.scriptDict["lPlagueCountdown"][iCiv] = iNewValue
+        data.scriptDict["lPlagueCountdown"][iCiv] = iNewValue
 
     def getGenericPlagueDates(self, i):
-        return sd.scriptDict["lGenericPlagueDates"][i]
+        return data.scriptDict["lGenericPlagueDates"][i]
 
     def setGenericPlagueDates(self, i, iNewValue):
-        sd.scriptDict["lGenericPlagueDates"][i] = iNewValue
+        data.scriptDict["lGenericPlagueDates"][i] = iNewValue
 
     def getBadPlague(self):
-        return sd.scriptDict["bBadPlague"]
+        return data.scriptDict["bBadPlague"]
 
     def setBadPlague(self, bBad):
-        sd.scriptDict["bBadPlague"] = bBad
+        data.scriptDict["bBadPlague"] = bBad
 
     def getFirstPlague(self):
-        return sd.scriptDict["bFirstPlague"]
+        return data.scriptDict["bFirstPlague"]
 
     def setFirstPlague(self, bFirst):
-        sd.scriptDict["bFirstPlague"] = bFirst
+        data.scriptDict["bFirstPlague"] = bFirst
 
     #######################################
     ### Main methods (Event-Triggered) ###

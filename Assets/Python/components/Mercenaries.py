@@ -12,7 +12,7 @@ from PyUtils import percentage_chance, rand
 
 # import cPickle as pickle
 import RFCUtils
-from StoredData import sd
+from StoredData import data
 
 from MiscData import MessageData
 
@@ -3714,12 +3714,12 @@ class MercenaryManager:
         pass
 
     def getMercLists(self):
-        self.lGlobalPool = sd.scriptDict["lMercGlobalPool"]
-        self.lHiredBy = sd.scriptDict["lMercsHiredBy"]
+        self.lGlobalPool = data.scriptDict["lMercGlobalPool"]
+        self.lHiredBy = data.scriptDict["lMercsHiredBy"]
 
     def setMercLists(self):
-        sd.scriptDict["lMercGlobalPool"] = self.lGlobalPool
-        sd.scriptDict["lMercsHiredBy"] = self.lHiredBy
+        data.scriptDict["lMercGlobalPool"] = self.lGlobalPool
+        data.scriptDict["lMercsHiredBy"] = self.lHiredBy
 
     def rendomizeMercProvinces(self, iGameTurn):
         if iGameTurn % 2 == rand(2):
@@ -4257,16 +4257,16 @@ class GlobalMercenaryUtils:
     # the Utils class should be used for interface commands (like for the Human UI)
 
     def getMercGlobalPool(self):
-        return sd.scriptDict["lMercGlobalPool"]
+        return data.scriptDict["lMercGlobalPool"]
 
     def setMercGlobalPool(self, lNewPool):
-        sd.scriptDict["lMercGlobalPool"] = lNewPool
+        data.scriptDict["lMercGlobalPool"] = lNewPool
 
     def getMercHiredBy(self):
-        return sd.scriptDict["lMercsHiredBy"]
+        return data.scriptDict["lMercsHiredBy"]
 
     def setMercHiredBy(self, lNewList):
-        sd.scriptDict["lMercsHiredBy"] = lNewList
+        data.scriptDict["lMercsHiredBy"] = lNewList
 
     def getOwnedProvinces(self, iPlayer):
         lProvList = []  # all available cities that the Merc can appear in

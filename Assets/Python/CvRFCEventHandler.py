@@ -11,7 +11,7 @@ import CvScreenEnums  # Mercenaries
 import Popup
 from PyUtils import rand, percentage_chance
 
-from StoredData import sd
+from StoredData import data
 import RiseAndFall
 import Barbs
 import Religions
@@ -199,7 +199,7 @@ class CvRFCEventHandler:
     def onGameStart(self, argsList):
         "Called at the start of the game"
         DataLoader.setup()
-        sd.setup()
+        data.setup()
         self.pm.setup()
         self.rnf.setup()
         self.rel.setup()
@@ -213,8 +213,8 @@ class CvRFCEventHandler:
         self.vic.setup()
 
         # Absinthe: generate and store randomized turn modifiers
-        sd.scriptDict["lEventRandomness"][iLighthouseEarthQuake] = rand(40)
-        sd.scriptDict["lEventRandomness"][iByzantiumVikingAttack] = rand(10)
+        data.scriptDict["lEventRandomness"][iLighthouseEarthQuake] = rand(40)
+        data.scriptDict["lEventRandomness"][iByzantiumVikingAttack] = rand(10)
 
         # Absinthe: rename cities on the 1200AD scenario - the WB file cannot handle special chars and long names properly
         # 			some of the cities intentionally have different names though (compared to the CNM), for example some Kievan cities
@@ -601,7 +601,7 @@ class CvRFCEventHandler:
         # Absinthe: 868AD Viking attack on Constantinople
         if (
             iGameTurn
-            == DateTurn.i860AD + sd.scriptDict["lEventRandomness"][iByzantiumVikingAttack] - 2
+            == DateTurn.i860AD + data.scriptDict["lEventRandomness"][iByzantiumVikingAttack] - 2
         ):
             if human() == Civ.BYZANTIUM:
                 popup = Popup.PyPopup()
@@ -612,7 +612,7 @@ class CvRFCEventHandler:
 
         if (
             iGameTurn
-            == DateTurn.i860AD + sd.scriptDict["lEventRandomness"][iByzantiumVikingAttack]
+            == DateTurn.i860AD + data.scriptDict["lEventRandomness"][iByzantiumVikingAttack]
         ):
             if human() == Civ.BYZANTIUM:
                 self.barb.spawnMultiTypeUnits(
@@ -665,7 +665,7 @@ class CvRFCEventHandler:
         # Absinthe: Remove the Great Lighthouse, message for the human player if the city is visible
         elif (
             iGameTurn
-            == DateTurn.i1323AD - 40 + sd.scriptDict["lEventRandomness"][iLighthouseEarthQuake]
+            == DateTurn.i1323AD - 40 + data.scriptDict["lEventRandomness"][iLighthouseEarthQuake]
         ):
             for iPlayer in civilizations().drop(Civ.BARBARIAN).ids():
                 bFound = 0
@@ -936,11 +936,11 @@ class CvRFCEventHandler:
 
     def onPreSave(self, argsList):
         "called before a game is actually saved"
-        sd.save()  # edead: pickle & save script data
+        data.save()  # edead: pickle & save script data
 
     # This method creates a new instance of the MercenaryUtils class to be used later
     def onLoadGame(self, argsList):
-        sd.load()  # edead: load & unpickle script data
+        data.load()  # edead: load & unpickle script data
         DataLoader.setup()  # Absinthe: also needed on loading saved games
 
     # This method will redraw the main interface once a unit is promoted. This way the

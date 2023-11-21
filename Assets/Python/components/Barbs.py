@@ -8,7 +8,7 @@ import Popup
 from PyUtils import percentage, percentage_chance, rand
 import RFCUtils
 from TimelineData import DateTurn
-from StoredData import sd
+from StoredData import data
 
 from CoreData import civilizations
 from MiscData import MessageData
@@ -767,22 +767,22 @@ lMinorNations = [
 
 class Barbs:
     def getRevolDates(self):
-        return sd.scriptDict["lNextMinorRevolt"]
+        return data.scriptDict["lNextMinorRevolt"]
 
     def setRevolDates(self, lNextMinorRevolt):
-        sd.scriptDict["lNextMinorRevolt"] = lNextMinorRevolt
+        data.scriptDict["lNextMinorRevolt"] = lNextMinorRevolt
 
     def getTempFlippingCity(self):
-        return sd.scriptDict["tempFlippingCity"]
+        return data.scriptDict["tempFlippingCity"]
 
     def setTempFlippingCity(self, tNewValue):
-        sd.scriptDict["tempFlippingCity"] = tNewValue
+        data.scriptDict["tempFlippingCity"] = tNewValue
 
     def getNationRevoltIndex(self):
-        return sd.scriptDict["lRevoltinNationRevoltIndex"]
+        return data.scriptDict["lRevoltinNationRevoltIndex"]
 
     def setNationRevoltIndex(self, iNationIndex, iRevoltIndex):
-        sd.scriptDict["lRevoltinNationRevoltIndex"] = [iNationIndex, iRevoltIndex]
+        data.scriptDict["lRevoltinNationRevoltIndex"] = [iNationIndex, iRevoltIndex]
 
     def makeUnit(self, iUnit, iPlayer, tCoords, iNum, iForceAttack, szName):
         "Makes iNum units for player iPlayer of the type iUnit at tCoords."

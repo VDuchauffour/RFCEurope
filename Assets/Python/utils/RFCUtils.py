@@ -23,7 +23,7 @@ from LocationsData import CITIES
 import PyHelpers
 import Popup
 from PyUtils import percentage, percentage_chance, rand
-from StoredData import sd
+from StoredData import data
 from MiscData import (
     GREAT_PROPHET_FAITH_POINT_BONUS,
     RELIGION_PERSECUTION_ORDER,
@@ -54,23 +54,23 @@ class RFCUtils:
 
     # RiseAndFall, Stability
     def getLastTurnAlive(self, iCiv):
-        return sd.scriptDict["lLastTurnAlive"][iCiv]
+        return data.scriptDict["lLastTurnAlive"][iCiv]
 
     def setLastTurnAlive(self, iCiv, iNewValue):
-        sd.scriptDict["lLastTurnAlive"][iCiv] = iNewValue
+        data.scriptDict["lLastTurnAlive"][iCiv] = iNewValue
 
     def getLastRespawnTurn(self, iCiv):
-        return sd.scriptDict["lLastRespawnTurn"][iCiv]
+        return data.scriptDict["lLastRespawnTurn"][iCiv]
 
     def setLastRespawnTurn(self, iCiv, iNewValue):
-        sd.scriptDict["lLastRespawnTurn"][iCiv] = iNewValue
+        data.scriptDict["lLastRespawnTurn"][iCiv] = iNewValue
 
     # Stability
     def getTempFlippingCity(self):
-        return sd.scriptDict["tempFlippingCity"]
+        return data.scriptDict["tempFlippingCity"]
 
     def setTempFlippingCity(self, tNewValue):
-        sd.scriptDict["tempFlippingCity"] = tNewValue
+        data.scriptDict["tempFlippingCity"] = tNewValue
 
     def getStability(self, iCiv):
         return gc.getPlayer(iCiv).getStability()
@@ -83,13 +83,13 @@ class RFCUtils:
 
     # Plague
     def getPlagueCountdown(self, iCiv):
-        return sd.scriptDict["lPlagueCountdown"][iCiv]
+        return data.scriptDict["lPlagueCountdown"][iCiv]
 
     def setPlagueCountdown(self, iCiv, iNewValue):
-        sd.scriptDict["lPlagueCountdown"][iCiv] = iNewValue
+        data.scriptDict["lPlagueCountdown"][iCiv] = iNewValue
 
     def getSeed(self):
-        return sd.scriptDict["iSeed"]
+        return data.scriptDict["iSeed"]
 
     # Victory
     def countAchievedGoals(self, iPlayer):
@@ -548,7 +548,7 @@ class RFCUtils:
                     else:  # trade
                         pNewOwner.acquireCity(city, False, True)
                     # Absinthe: if there are mercs available in the new city's province, interface message about it to the human player
-                    lGlobalPool = sd.scriptDict["lMercGlobalPool"]
+                    lGlobalPool = data.scriptDict["lMercGlobalPool"]
                     iProvince = city.getProvince()
                     for lMerc in lGlobalPool:
                         if lMerc[4] == iProvince:
@@ -1086,19 +1086,19 @@ class RFCUtils:
 
     def getPersecutionData(self):
         return (
-            sd.scriptDict["lPersecutionData"][0],
-            sd.scriptDict["lPersecutionData"][1],
-            sd.scriptDict["lPersecutionData"][2],
+            data.scriptDict["lPersecutionData"][0],
+            data.scriptDict["lPersecutionData"][1],
+            data.scriptDict["lPersecutionData"][2],
         )
 
     def setPersecutionData(self, iPlotX, iPlotY, iUnitID):
-        sd.scriptDict["lPersecutionData"] = [iPlotX, iPlotY, iUnitID]
+        data.scriptDict["lPersecutionData"] = [iPlotX, iPlotY, iUnitID]
 
     def getPersecutionReligions(self):
-        return sd.scriptDict["lPersecutionReligions"]
+        return data.scriptDict["lPersecutionReligions"]
 
     def setPersecutionReligions(self, val):
-        sd.scriptDict["lPersecutionReligions"] = val
+        data.scriptDict["lPersecutionReligions"] = val
 
     # Absinthe: end
 

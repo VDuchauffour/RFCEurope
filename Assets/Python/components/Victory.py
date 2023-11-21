@@ -28,7 +28,7 @@ from PyUtils import rand
 import RFCUtils
 import UniquePowers
 from ProvinceMapData import PROVINCES_MAP
-from StoredData import sd
+from StoredData import data
 import random
 
 from TimelineData import DateTurn
@@ -517,10 +517,10 @@ class Victory:
                     self.setAllUHVFailed(iPlayer)
 
     def isIgnoreAI(self):
-        return sd.scriptDict["bIgnoreAIUHV"]
+        return data.scriptDict["bIgnoreAIUHV"]
 
     def setIgnoreAI(self, bVal):
-        sd.scriptDict["bIgnoreAIUHV"] = bVal
+        data.scriptDict["bIgnoreAIUHV"] = bVal
 
     #######################################
     ### Main methods (Event-Triggered) ###
