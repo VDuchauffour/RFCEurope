@@ -6,6 +6,7 @@ Assets/Python/data/maps/
 """
 
 [tool.ruff]
+line-length = 99
 select = [
   # pycodestyle
   "E",
