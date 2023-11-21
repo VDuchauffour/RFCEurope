@@ -2,6 +2,7 @@
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
 from CoreTypes import SpecialParameter, StabilityCategory
+from CoreStructures import player as _player
 import CvUtil
 import CvScreenEnums
 
@@ -175,15 +176,16 @@ class CvFinanceAdvisor:
         self.drawContents()
 
     def drawContents(self):
-
         self.deleteAllWidgets()
+        self.drawFinance()
+        return 0
 
+    def drawFinance(self):
         # Create a new screen, called FinanceAdvisor, using the file FinanceAdvisor.py for input
         screen = self.getScreen()
-
         player = gc.getPlayer(self.iActiveLeader)
-
         ePlayer = self.iActiveLeader  # Rhye
+
         # Rhye - start
         iStability = player.getStability()
         if iStability < -15:
@@ -200,11 +202,8 @@ class CvFinanceAdvisor:
             szTempBuffer = localText.getText("TXT_KEY_STABILITY_VERYSOLID", ())
 
         if gc.getPlayer(ePlayer).isHuman():
-            # szTempBuffer = szTempBuffer + "  " + unichr(CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 8 + utils.getArrow(0))  # type: ignore
             szTempBuffer = "%s  %i" % (szTempBuffer, iStability)
         # Rhye - end
-
-        numCities = player.getNumCities()
 
         totalUnitCost = player.calculateUnitCost()
         totalUnitSupply = player.calculateUnitSupply()
@@ -228,7 +227,6 @@ class CvFinanceAdvisor:
             )
 
         # Mercenary Upkeep
-        # totalMercenaryMaintenanceCost = objMercenaryUtils.getPlayerMercenaryMaintenanceCost(self.iActiveLeader)
         totalMercenaryMaintenanceCost = (
             player.getPicklefreeParameter(SpecialParameter.MERCENARY_COST_PER_TURN.value) + 99
         ) / 100
@@ -407,62 +405,20 @@ class CvFinanceAdvisor:
             -1,
             -1,
         )
-        iParameter1 = player.getStabilityVary(
-            StabilityCategory.CITIES.value
-        ) + player.getStabilityBase(StabilityCategory.CITIES.value)
-        if iParameter1 <= -6:
-            self.printStars(
-                ePlayer,
-                self.getNextWidgetName(),
-                1,
-                self.X_PARAMETERS1 + self.PARAMETERS_WIDTH / 2,
-                self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
-                self.Z_CONTROLS + self.DZ,
-            )
-        elif iParameter1 <= -2:
-            self.printStars(
-                ePlayer,
-                self.getNextWidgetName(),
-                2,
-                self.X_PARAMETERS1 + self.PARAMETERS_WIDTH / 2,
-                self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
-                self.Z_CONTROLS + self.DZ,
-            )
-        elif iParameter1 < 3:
-            self.printStars(
-                ePlayer,
-                self.getNextWidgetName(),
-                3,
-                self.X_PARAMETERS1 + self.PARAMETERS_WIDTH / 2,
-                self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
-                self.Z_CONTROLS + self.DZ,
-            )
-        elif iParameter1 < 6:
-            self.printStars(
-                ePlayer,
-                self.getNextWidgetName(),
-                4,
-                self.X_PARAMETERS1 + self.PARAMETERS_WIDTH / 2,
-                self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
-                self.Z_CONTROLS + self.DZ,
-            )
-        else:
-            self.printStars(
-                ePlayer,
-                self.getNextWidgetName(),
-                5,
-                self.X_PARAMETERS1 + self.PARAMETERS_WIDTH / 2,
-                self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
-                self.Z_CONTROLS + self.DZ,
-            )
-        # self.printArrow(ePlayer, self.getNextWidgetName(), 1, self.X_PARAMETERS1 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 90, self.Z_CONTROLS + self.DZ)
-        self.printText(
-            ePlayer,
-            0,
+        screen.setLabel(
             self.getNextWidgetName(),
+            szParametersPanel1,
+            u"<font=4>"
+            + str(self.retrieve_stability_category_value(ePlayer, StabilityCategory.CITIES))
+            + u"</font>",
+            CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS1 + self.PARAMETERS_WIDTH / 2,
-            self.Y_PARAMETERS + self.TEXT_MARGIN + 90,
+            self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
             self.Z_CONTROLS + self.DZ,
+            FontTypes.TITLE_FONT,
+            WidgetTypes.WIDGET_GENERAL,  # pour context menu changer ce widget
+            -1,  # et mettre eplayer ici ?
+            -1,
         )
 
         szParametersPanel2 = self.getNextWidgetName()
@@ -493,62 +449,20 @@ class CvFinanceAdvisor:
             -1,
             -1,
         )
-        iParameter2 = player.getStabilityVary(
-            StabilityCategory.CIVICS.value
-        ) + player.getStabilityBase(StabilityCategory.CIVICS.value)
-        if iParameter2 <= -6:
-            self.printStars(
-                ePlayer,
-                self.getNextWidgetName(),
-                1,
-                self.X_PARAMETERS2 + self.PARAMETERS_WIDTH / 2,
-                self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
-                self.Z_CONTROLS + self.DZ,
-            )
-        elif iParameter2 <= -2:
-            self.printStars(
-                ePlayer,
-                self.getNextWidgetName(),
-                2,
-                self.X_PARAMETERS2 + self.PARAMETERS_WIDTH / 2,
-                self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
-                self.Z_CONTROLS + self.DZ,
-            )
-        elif iParameter2 <= 3:
-            self.printStars(
-                ePlayer,
-                self.getNextWidgetName(),
-                3,
-                self.X_PARAMETERS2 + self.PARAMETERS_WIDTH / 2,
-                self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
-                self.Z_CONTROLS + self.DZ,
-            )
-        elif iParameter2 <= 5:
-            self.printStars(
-                ePlayer,
-                self.getNextWidgetName(),
-                4,
-                self.X_PARAMETERS2 + self.PARAMETERS_WIDTH / 2,
-                self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
-                self.Z_CONTROLS + self.DZ,
-            )
-        else:
-            self.printStars(
-                ePlayer,
-                self.getNextWidgetName(),
-                5,
-                self.X_PARAMETERS2 + self.PARAMETERS_WIDTH / 2,
-                self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
-                self.Z_CONTROLS + self.DZ,
-            )
-        # self.printArrow(ePlayer, self.getNextWidgetName(), 2, self.X_PARAMETERS2 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 90, self.Z_CONTROLS + self.DZ)
-        self.printText(
-            ePlayer,
-            1,
+        screen.setLabel(
             self.getNextWidgetName(),
+            szParametersPanel2,
+            u"<font=4>"
+            + str(self.retrieve_stability_category_value(ePlayer, StabilityCategory.CIVICS))
+            + u"</font>",
+            CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS2 + self.PARAMETERS_WIDTH / 2,
-            self.Y_PARAMETERS + self.TEXT_MARGIN + 90,
+            self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
             self.Z_CONTROLS + self.DZ,
+            FontTypes.TITLE_FONT,
+            WidgetTypes.WIDGET_GENERAL,
+            -1,
+            -1,
         )
 
         szParametersPanel3 = self.getNextWidgetName()
@@ -579,62 +493,20 @@ class CvFinanceAdvisor:
             -1,
             -1,
         )
-        iParameter3 = player.getStabilityVary(
-            StabilityCategory.ECONOMY.value
-        ) + player.getStabilityBase(StabilityCategory.ECONOMY.value)
-        if iParameter3 <= -7:
-            self.printStars(
-                ePlayer,
-                self.getNextWidgetName(),
-                1,
-                self.X_PARAMETERS3 + self.PARAMETERS_WIDTH / 2,
-                self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
-                self.Z_CONTROLS + self.DZ,
-            )
-        elif iParameter3 <= -3:
-            self.printStars(
-                ePlayer,
-                self.getNextWidgetName(),
-                2,
-                self.X_PARAMETERS3 + self.PARAMETERS_WIDTH / 2,
-                self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
-                self.Z_CONTROLS + self.DZ,
-            )
-        elif iParameter3 < 3:
-            self.printStars(
-                ePlayer,
-                self.getNextWidgetName(),
-                3,
-                self.X_PARAMETERS3 + self.PARAMETERS_WIDTH / 2,
-                self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
-                self.Z_CONTROLS + self.DZ,
-            )
-        elif iParameter3 < 6:
-            self.printStars(
-                ePlayer,
-                self.getNextWidgetName(),
-                4,
-                self.X_PARAMETERS3 + self.PARAMETERS_WIDTH / 2,
-                self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
-                self.Z_CONTROLS + self.DZ,
-            )
-        else:
-            self.printStars(
-                ePlayer,
-                self.getNextWidgetName(),
-                5,
-                self.X_PARAMETERS3 + self.PARAMETERS_WIDTH / 2,
-                self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
-                self.Z_CONTROLS + self.DZ,
-            )
-        # self.printArrow(ePlayer, self.getNextWidgetName(), 3, self.X_PARAMETERS3 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 90, self.Z_CONTROLS + self.DZ)
-        self.printText(
-            ePlayer,
-            2,
+        screen.setLabel(
             self.getNextWidgetName(),
+            szParametersPanel3,
+            u"<font=4>"
+            + str(self.retrieve_stability_category_value(ePlayer, StabilityCategory.ECONOMY))
+            + u"</font>",
+            CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS3 + self.PARAMETERS_WIDTH / 2,
-            self.Y_PARAMETERS + self.TEXT_MARGIN + 90,
+            self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
             self.Z_CONTROLS + self.DZ,
+            FontTypes.TITLE_FONT,
+            WidgetTypes.WIDGET_GENERAL,
+            -1,
+            -1,
         )
 
         szParametersPanel4 = self.getNextWidgetName()
@@ -665,62 +537,20 @@ class CvFinanceAdvisor:
             -1,
             -1,
         )
-        iParameter4 = player.getStabilityVary(
-            StabilityCategory.EXPANSION.value
-        ) + player.getStabilityBase(StabilityCategory.EXPANSION.value)
-        if iParameter4 <= -8:
-            self.printStars(
-                ePlayer,
-                self.getNextWidgetName(),
-                1,
-                self.X_PARAMETERS4 + self.PARAMETERS_WIDTH / 2,
-                self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
-                self.Z_CONTROLS + self.DZ,
-            )
-        elif iParameter4 <= -3:
-            self.printStars(
-                ePlayer,
-                self.getNextWidgetName(),
-                2,
-                self.X_PARAMETERS4 + self.PARAMETERS_WIDTH / 2,
-                self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
-                self.Z_CONTROLS + self.DZ,
-            )
-        elif iParameter4 < 3:
-            self.printStars(
-                ePlayer,
-                self.getNextWidgetName(),
-                3,
-                self.X_PARAMETERS4 + self.PARAMETERS_WIDTH / 2,
-                self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
-                self.Z_CONTROLS + self.DZ,
-            )
-        elif iParameter4 < 10:
-            self.printStars(
-                ePlayer,
-                self.getNextWidgetName(),
-                4,
-                self.X_PARAMETERS4 + self.PARAMETERS_WIDTH / 2,
-                self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
-                self.Z_CONTROLS + self.DZ,
-            )
-        else:
-            self.printStars(
-                ePlayer,
-                self.getNextWidgetName(),
-                5,
-                self.X_PARAMETERS4 + self.PARAMETERS_WIDTH / 2,
-                self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
-                self.Z_CONTROLS + self.DZ,
-            )
-        # self.printArrow(ePlayer, self.getNextWidgetName(), 4, self.X_PARAMETERS4 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 90, self.Z_CONTROLS + self.DZ)
-        self.printText(
-            ePlayer,
-            3,
+        screen.setLabel(
             self.getNextWidgetName(),
+            szParametersPanel4,
+            u"<font=4>"
+            + str(self.retrieve_stability_category_value(ePlayer, StabilityCategory.EXPANSION))
+            + u"</font>",
+            CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS4 + self.PARAMETERS_WIDTH / 2,
-            self.Y_PARAMETERS + self.TEXT_MARGIN + 90,
+            self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
             self.Z_CONTROLS + self.DZ,
+            FontTypes.TITLE_FONT,
+            WidgetTypes.WIDGET_GENERAL,
+            -1,
+            -1,
         )
 
         szParametersPanel5 = self.getNextWidgetName()
@@ -751,63 +581,21 @@ class CvFinanceAdvisor:
             -1,
             -1,
         )
-        iParameter5 = 0
-        if iParameter5 <= -8:
-            self.printStars(
-                ePlayer,
-                self.getNextWidgetName(),
-                1,
-                self.X_PARAMETERS5 + self.PARAMETERS_WIDTH / 2,
-                self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
-                self.Z_CONTROLS + self.DZ,
-            )
-        elif iParameter5 <= -3:
-            self.printStars(
-                ePlayer,
-                self.getNextWidgetName(),
-                2,
-                self.X_PARAMETERS5 + self.PARAMETERS_WIDTH / 2,
-                self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
-                self.Z_CONTROLS + self.DZ,
-            )
-        elif iParameter5 < 3:
-            self.printStars(
-                ePlayer,
-                self.getNextWidgetName(),
-                3,
-                self.X_PARAMETERS5 + self.PARAMETERS_WIDTH / 2,
-                self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
-                self.Z_CONTROLS + self.DZ,
-            )
-        elif iParameter5 < 10:
-            self.printStars(
-                ePlayer,
-                self.getNextWidgetName(),
-                4,
-                self.X_PARAMETERS5 + self.PARAMETERS_WIDTH / 2,
-                self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
-                self.Z_CONTROLS + self.DZ,
-            )
-        else:
-            self.printStars(
-                ePlayer,
-                self.getNextWidgetName(),
-                5,
-                self.X_PARAMETERS5 + self.PARAMETERS_WIDTH / 2,
-                self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
-                self.Z_CONTROLS + self.DZ,
-            )
-        # self.printArrow(ePlayer, self.getNextWidgetName(), 5, self.X_PARAMETERS5 + self.PARAMETERS_WIDTH/2, self.Y_PARAMETERS + self.TEXT_MARGIN + 90, self.Z_CONTROLS + self.DZ)
-        self.printText(
-            ePlayer,
-            4,
+        screen.setLabel(
             self.getNextWidgetName(),
+            szParametersPanel5,
+            u"<font=4>" + str(self.retrieve_stability_category_value(ePlayer, None)) + u"</font>",
+            CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS5 + self.PARAMETERS_WIDTH / 2,
-            self.Y_PARAMETERS + self.TEXT_MARGIN + 90,
+            self.Y_PARAMETERS + self.TEXT_MARGIN + 50,
             self.Z_CONTROLS + self.DZ,
+            FontTypes.TITLE_FONT,
+            WidgetTypes.WIDGET_GENERAL,
+            -1,
+            -1,
         )
 
-        # Rhye - end
+        # # Rhye - end
 
         # Slider percentages
         yLocation = self.Y_LOCATION
@@ -1369,45 +1157,10 @@ class CvFinanceAdvisor:
                 -1,
             )
 
-    def printText(self, ePlayer, iCathegory, panel, x, y, z):
-        # 3Miro: print stuff
-        pPlayer = gc.getPlayer(ePlayer)
-        if pPlayer.isHuman():
-            # sString = utils.getParString( ePlayer, iCathegory )
-            if iCathegory == StabilityCategory.CITIES.value:
-                sString = "%i | %i" % (
-                    pPlayer.getStabilityBase(StabilityCategory.CITIES.value),
-                    pPlayer.getStabilityVary(StabilityCategory.CITIES.value),
-                )
-            elif iCathegory == StabilityCategory.CIVICS.value:
-                sString = "%i | %i" % (
-                    pPlayer.getStabilityBase(StabilityCategory.CIVICS.value),
-                    pPlayer.getStabilityVary(StabilityCategory.CIVICS.value),
-                )
-            elif iCathegory == StabilityCategory.ECONOMY.value:
-                sString = "%i | %i" % (
-                    pPlayer.getStabilityBase(StabilityCategory.ECONOMY.value),
-                    pPlayer.getStabilityVary(StabilityCategory.ECONOMY.value),
-                )
-            elif iCathegory == StabilityCategory.EXPANSION.value:
-                sString = "%i | %i" % (
-                    pPlayer.getStabilityBase(StabilityCategory.EXPANSION.value),
-                    pPlayer.getStabilityVary(StabilityCategory.EXPANSION.value),
-                )
-            else:
-                sString = "%i" % (pPlayer.getStabilitySwing())
-            self.getScreen().setLabel(
-                panel,
-                "Background",
-                sString,
-                CvUtil.FONT_CENTER_JUSTIFY,
-                x,
-                y,
-                z,
-                FontTypes.GAME_FONT,
-                WidgetTypes.WIDGET_GENERAL,
-                -1,
-                -1,
-            )
+    def retrieve_stability_category_value(self, player, stability_category):
+        if stability_category is not None:
+            return _player(player).getStabilityBase(stability_category.value)
+        else:
+            return _player(player).getStabilitySwing()
 
     # Rhye - end
