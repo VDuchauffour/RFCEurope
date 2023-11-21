@@ -39,9 +39,120 @@ MINOR_CIVS = (
 
 CITIES = EnumDataMapper(
     {
-        City.JERUSALEM: (93, 5),
+        City.CONSTANTINOPLE: [(81, 24)],
+        City.PARIS: [(44, 46)],
+        City.DAMASCUS: [(97, 10)],
+        City.PRESLAV: [(78, 29)],
+        City.CORDOBA: [(30, 23)],
+        City.VENICE: [(56, 35)],
+        City.DIJON: [(47, 41)],
+        City.FRANKFURT: [(53, 46)],
+        City.NOVGOROD: [(80, 62)],
+        City.TONSBERG: [(57, 65)],
+        City.KIEV: [(83, 45)],
+        City.BUDA: [(66, 37)],
+        City.LEON: [(27, 32)],
+        City.ROSKILDE: [(59, 57)],
+        City.EDINBURGH: [(37, 63)],
+        City.POZNAN: [(65, 49)],
+        City.GENOA: [(50, 34)],
+        City.MARRAKESH: [(24, 7)],
+        City.LONDON: [(41, 52)],
+        City.LISBOA: [(21, 25)],
+        City.ZARAGOZA: [(36, 29)],
+        City.STOCKHOLM: [(66, 64)],
+        City.KONIGSBERG: [(69, 53)],
+        City.VILNUS: [(75, 53)],
+        City.WIEN: [(62, 40)],
+        City.GALLIPOLI: [(78, 22)],
+        City.MOSCOW: [(91, 56)],
+        City.AMSTERDAM: [(49, 52)],
+        City.ROME: [(56, 27)],
+        City.JERUSALEM: [(93, 5)],
+        City.TANGIER: [(27, 16)],
+        City.BORDEAUX: [(37, 38)],
+        City.ALGER: [(40, 16)],
+        City.TLEMCEN: [(34, 13)],
+        City.BARCELONA: [(40, 28)],
+        City.TOULOUSE: [(41, 34), (40, 34)],
+        City.NARBONA: [(42, 32)],
+        City.MARSEILLES: [(46, 32)],
+        City.AIS_DE_PROVENCA: [(46, 33)],
+        City.NANTES: [(36, 43)],
+        City.VANNES: [(35, 43)],
+        City.RENNES: [(37, 44)],
+        City.CAEN: [(40, 47)],
+        City.LYON: [(46, 37)],
+        City.TUNIS: [(49, 17)],
+        City.YORK: [(39, 59)],
+        City.MILAN: [(52, 37)],
+        City.FLORENCE: [(54, 32)],
+        City.PISA: [(53, 32)],
+        City.ANCONA: [(57, 31)],
+        City.TRIPOLI: [(54, 8)],
+        City.AUGSBURG: [(55, 41)],
+        City.NAPOLI: [(59, 24)],
+        City.BENEVENTO: [(60, 25)],
+        City.TARANTO: [(62, 24)],
+        City.RAGUSA: [(64, 28)],
+        City.SEVILLE: [(27, 21)],
+        City.PALERMO: [(55, 19)],
+        City.SYRACUSE: [(58, 17)],
+        City.INVERNESS: [(37, 67), (37, 65)],
+        City.RHODES: [(80, 13)],
+        City.NORWICH: [(43, 55)],
+        City.KAIROUAN: [(48, 14)],
+        City.TOLEDO: [(30, 27)],
+        City.LEICESTER: [(39, 56)],
+        City.VALENCIA: [(36, 25)],
+        City.PAMPLONA: [(35, 32), (34, 33)],
+        City.LUBECK: [(57, 54), (57, 53)],
+        City.PORTO: [(23, 31)],
+        City.DUBLIN: [(32, 58)],
+        City.DOWNPATRICK: [(33, 61)],
+        City.RATHCROGHAN: [(29, 60)],
+        City.CASHEL: [(29, 56)],
+        City.RASKA: [(68, 28)],
+        City.FEZ: [(29, 12)],
+        City.PRAGUE: [(60, 44)],
+        City.KURSK: [(90, 48)],
+        City.CALAIS: [(44, 50)],
+        City.DUNKERQUE: [(45, 50)],
+        City.NIDAROS: [(57, 71)],
+        City.UPPSALA: [(65, 66)],
+        City.BELOOZERO: [(87, 65)],
+        City.ZAGREB: [(62, 34)],
+        City.BRANDEBURG: [(59, 50), (60, 50)],
+        City.BELGRADE: [(73, 35)],
+        City.NAPOCA: [(73, 37)],
+        City.KOENIGSBERG: [(69, 53)],
+        City.KRAKOW: [(68, 44)],
+        City.RIGA: [(74, 58)],
+        City.CARDIFF: [(36, 54)],
+        City.ABERFFRAW: [(35, 57)],
+        City.VISBY: [(67, 60)],
+        City.MINSK: [(79, 52)],
+        City.SMOLENSK: [(84, 55)],
+        City.YAROSLAVL: [(92, 61)],
+        City.GRONINGEN: [(52, 54)],
+        City.KALMAR: [(64, 60)],
+        City.GRAZ: [(61, 37)],
+        City.HALYCH: [(77, 41)],
+        City.ABO: [(71, 66)],
+        City.PEREKOP: [(87, 36)],
+        City.NIZHNY_NOVGOROD: [(97, 58)],
+        City.TANAIS: [(96, 38)],
+        City.REYKJAVIK: [(2, 70)],
+        City.VALLETTA: [(57, 14)],
     }
-).apply(lambda x: Tile(x))
+).applymap(lambda x: Tile(x))
+
+INDY_CITIES_TO_BE_REDUCED = [
+    City.INVERNESS,
+    City.NORWICH,
+    City.LEICESTER,
+    City.UPPSALA,
+]
 
 REGIONS = EnumDataMapper(
     {
@@ -506,37 +617,37 @@ LAKE_LOCATIONS = EnumDataMapper(
 
 CIV_CAPITAL_LOCATIONS = CivDataMapper(
     {
-        Civ.BYZANTIUM: (81, 24),  # Constantinople
-        Civ.FRANCE: (44, 46),  # Paris
-        Civ.ARABIA: (97, 10),  # Damascus
-        Civ.BULGARIA: (78, 29),  # Preslav
-        Civ.CORDOBA: (30, 23),  # Cordoba
-        Civ.VENECIA: (56, 35),  # Venice
-        Civ.BURGUNDY: (47, 41),  # Dijon
-        Civ.GERMANY: (53, 46),  # Frankfurt
-        Civ.NOVGOROD: (80, 62),  # Novgorod
-        Civ.NORWAY: (57, 65),  # Tonsberg
-        Civ.KIEV: (83, 45),  # Kiev
-        Civ.HUNGARY: (66, 37),  # Buda
-        Civ.CASTILE: (27, 32),  # Leon
-        Civ.DENMARK: (59, 57),  # Roskilde / Kobenhavn
-        Civ.SCOTLAND: (37, 63),  # Edinburgh
-        Civ.POLAND: (65, 49),  # Poznan
-        Civ.GENOA: (50, 34),  # Genoa
-        Civ.MOROCCO: (24, 7),  # Marrakesh
-        Civ.ENGLAND: (41, 52),  # London
-        Civ.PORTUGAL: (21, 25),  # Lisboa
-        Civ.ARAGON: (36, 29),  # Zaragoza
-        Civ.SWEDEN: (66, 64),  # Stockholm
-        Civ.PRUSSIA: (69, 53),  # Konigsberg
-        Civ.LITHUANIA: (75, 53),  # Vilnus
-        Civ.AUSTRIA: (62, 40),  # Wien
-        Civ.OTTOMAN: (78, 22),  # Gallipoli
-        Civ.MOSCOW: (91, 56),  # Moscow
-        Civ.DUTCH: (49, 52),  # Amsterdam
-        Civ.POPE: (56, 27),  # Rome
+        Civ.BYZANTIUM: CITIES[City.CONSTANTINOPLE][0],
+        Civ.FRANCE: CITIES[City.PARIS][0],
+        Civ.ARABIA: CITIES[City.DAMASCUS][0],
+        Civ.BULGARIA: CITIES[City.PRESLAV][0],
+        Civ.CORDOBA: CITIES[City.CORDOBA][0],
+        Civ.VENECIA: CITIES[City.VENICE][0],
+        Civ.BURGUNDY: CITIES[City.DIJON][0],
+        Civ.GERMANY: CITIES[City.FRANKFURT][0],
+        Civ.NOVGOROD: CITIES[City.NOVGOROD][0],
+        Civ.NORWAY: CITIES[City.TONSBERG][0],
+        Civ.KIEV: CITIES[City.KIEV][0],
+        Civ.HUNGARY: CITIES[City.BUDA][0],
+        Civ.CASTILE: CITIES[City.LEON][0],
+        Civ.DENMARK: CITIES[City.ROSKILDE][0],
+        Civ.SCOTLAND: CITIES[City.EDINBURGH][0],
+        Civ.POLAND: CITIES[City.POZNAN][0],
+        Civ.GENOA: CITIES[City.GENOA][0],
+        Civ.MOROCCO: CITIES[City.MARRAKESH][0],
+        Civ.ENGLAND: CITIES[City.LONDON][0],
+        Civ.PORTUGAL: CITIES[City.LISBOA][0],
+        Civ.ARAGON: CITIES[City.ZARAGOZA][0],
+        Civ.SWEDEN: CITIES[City.STOCKHOLM][0],
+        Civ.PRUSSIA: CITIES[City.KONIGSBERG][0],
+        Civ.LITHUANIA: CITIES[City.VILNUS][0],
+        Civ.AUSTRIA: CITIES[City.WIEN][0],
+        Civ.OTTOMAN: CITIES[City.GALLIPOLI][0],
+        Civ.MOSCOW: CITIES[City.MOSCOW][0],
+        Civ.DUTCH: CITIES[City.AMSTERDAM][0],
+        Civ.POPE: CITIES[City.ROME][0],
     }
-).apply(lambda x: Tile(x))
+)
 
 # Used for respawning
 CIV_NEW_CAPITAL_LOCATIONS = CivDataMapper(
