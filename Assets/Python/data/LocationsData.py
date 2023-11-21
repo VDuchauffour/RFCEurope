@@ -2697,6 +2697,35 @@ CIV_PROVINCES = CivDataMapper(
 
 CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
     {
+        Civ.ARABIA: EnumDataMapper(
+            {
+                ProvinceEvent.ON_SPAWN: [
+                    (Civ.BYZANTIUM, Province.CYRENAICA, ProvinceType.CONTESTED),
+                    (Civ.BYZANTIUM, Province.TRIPOLITANIA, ProvinceType.CONTESTED),
+                    (Civ.BYZANTIUM, Province.IFRIQIYA, ProvinceType.CONTESTED),
+                    (Civ.BYZANTIUM, Province.EGYPT, ProvinceType.CONTESTED),
+                    (Civ.BYZANTIUM, Province.ARABIA, ProvinceType.NONE),
+                    (Civ.BYZANTIUM, Province.SYRIA, ProvinceType.CONTESTED),
+                    (Civ.BYZANTIUM, Province.LEBANON, ProvinceType.CONTESTED),
+                    (Civ.BYZANTIUM, Province.JERUSALEM, ProvinceType.CONTESTED),
+                    (Civ.BYZANTIUM, Province.ANTIOCHIA, ProvinceType.HISTORICAL),
+                    (Civ.BYZANTIUM, Province.CILICIA, ProvinceType.HISTORICAL),
+                    (Civ.BYZANTIUM, Province.CHARSIANON, ProvinceType.HISTORICAL),
+                    (Civ.BYZANTIUM, Province.COLONEA, ProvinceType.HISTORICAL),
+                ]
+            },
+            do_not_cast=True,
+        ),
+        Civ.BULGARIA: EnumDataMapper(
+            {
+                ProvinceEvent.ON_SPAWN: [
+                    (Civ.BYZANTIUM, Province.SERBIA, ProvinceType.CONTESTED),
+                    (Civ.BYZANTIUM, Province.MOESIA, ProvinceType.CONTESTED),
+                    (Civ.BYZANTIUM, Province.THRACE, ProvinceType.HISTORICAL),
+                ]
+            },
+            do_not_cast=True,
+        ),
         Civ.CORDOBA: EnumDataMapper(
             {
                 ProvinceEvent.ON_RESPAWN: [(province, ProvinceType.NONE) for province in Province]
@@ -2709,6 +2738,44 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
                     (Province.MOROCCO, ProvinceType.CONTESTED),
                     (Province.FEZ, ProvinceType.CONTESTED),
                 ],
+            },
+            do_not_cast=True,
+        ),
+        Civ.VENECIA: EnumDataMapper(
+            {
+                ProvinceEvent.ON_SPAWN: [
+                    (Civ.BYZANTIUM, Province.DALMATIA, ProvinceType.NONE),
+                    (Civ.BYZANTIUM, Province.BOSNIA, ProvinceType.NONE),
+                    (Civ.BYZANTIUM, Province.SLAVONIA, ProvinceType.NONE),
+                    (Civ.BYZANTIUM, Province.VERONA, ProvinceType.NONE),
+                    (Civ.BYZANTIUM, Province.TUSCANY, ProvinceType.NONE),
+                    (Civ.BYZANTIUM, Province.LOMBARDY, ProvinceType.NONE),
+                    (Civ.BYZANTIUM, Province.LIGURIA, ProvinceType.NONE),
+                    (Civ.BYZANTIUM, Province.CORSICA, ProvinceType.NONE),
+                    (Civ.BYZANTIUM, Province.SARDINIA, ProvinceType.NONE),
+                    (Civ.BYZANTIUM, Province.LATIUM, ProvinceType.NONE),
+                ]
+            },
+            do_not_cast=True,
+        ),
+        Civ.BURGUNDY: EnumDataMapper(
+            {
+                ProvinceEvent.ON_SPAWN: [
+                    (Civ.FRANCE, Province.PROVENCE, ProvinceType.POTENTIAL),
+                    (Civ.FRANCE, Province.BURGUNDY, ProvinceType.POTENTIAL),
+                ]
+            },
+            do_not_cast=True,
+        ),
+        Civ.GERMANY: EnumDataMapper(
+            {
+                ProvinceEvent.ON_SPAWN: [
+                    (Civ.FRANCE, Province.LORRAINE, ProvinceType.CONTESTED),
+                    (Civ.FRANCE, Province.BAVARIA, ProvinceType.NONE),
+                    (Civ.FRANCE, Province.FRANCONIA, ProvinceType.NONE),
+                    (Civ.FRANCE, Province.SAXONY, ProvinceType.NONE),
+                    (Civ.FRANCE, Province.NETHERLANDS, ProvinceType.NONE),
+                ]
             },
             do_not_cast=True,
         ),
@@ -2727,6 +2794,23 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
+        Civ.HUNGARY: EnumDataMapper(
+            {
+                ProvinceEvent.ON_SPAWN: [
+                    (Civ.BULGARIA, Province.BANAT, ProvinceType.NONE),
+                    (Civ.BULGARIA, Province.WALLACHIA, ProvinceType.CONTESTED),
+                ]
+            },
+            do_not_cast=True,
+        ),
+        Civ.CASTILE: EnumDataMapper(
+            {
+                ProvinceEvent.ON_SPAWN: [
+                    (Civ.CORDOBA, Province.LA_MANCHA, ProvinceType.HISTORICAL),
+                ]
+            },
+            do_not_cast=True,
+        ),
         Civ.DENMARK: EnumDataMapper(
             {
                 ProvinceEvent.ON_DATETURN: {
@@ -2739,6 +2823,57 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
                         (Province.MALTA, ProvinceType.NONE),
                     ]
                 }
+            },
+            do_not_cast=True,
+        ),
+        Civ.MOROCCO: EnumDataMapper(
+            {
+                ProvinceEvent.ON_SPAWN: [
+                    (Civ.CORDOBA, Province.MOROCCO, ProvinceType.NONE),
+                    (Civ.CORDOBA, Province.MARRAKESH, ProvinceType.NONE),
+                    (Civ.CORDOBA, Province.FEZ, ProvinceType.CONTESTED),
+                    (Civ.CORDOBA, Province.TETOUAN, ProvinceType.CONTESTED),
+                ]
+            },
+            do_not_cast=True,
+        ),
+        Civ.ENGLAND: EnumDataMapper(
+            {
+                ProvinceEvent.ON_SPAWN: [
+                    (Civ.FRANCE, Province.NORMANDY, ProvinceType.POTENTIAL),
+                    (Civ.SCOTLAND, Province.NORTHUMBRIA, ProvinceType.CONTESTED),
+                    (Civ.SCOTLAND, Province.MERCIA, ProvinceType.NONE),
+                    (Civ.DENMARK, Province.NORTHUMBRIA, ProvinceType.NONE),
+                    (Civ.DENMARK, Province.MERCIA, ProvinceType.NONE),
+                    (Civ.DENMARK, Province.EAST_ANGLIA, ProvinceType.NONE),
+                    (Civ.DENMARK, Province.LONDON, ProvinceType.NONE),
+                ]
+            },
+            do_not_cast=True,
+        ),
+        Civ.ARAGON: EnumDataMapper(
+            {
+                ProvinceEvent.ON_SPAWN: [
+                    (Civ.BYZANTIUM, Province.APULIA, ProvinceType.CONTESTED),
+                    (Civ.BYZANTIUM, Province.CALABRIA, ProvinceType.CONTESTED),
+                    (Civ.BYZANTIUM, Province.SICILY, ProvinceType.CONTESTED),
+                    (Civ.BYZANTIUM, Province.MALTA, ProvinceType.CONTESTED),
+                    (Civ.CORDOBA, Province.ARAGON, ProvinceType.CONTESTED),
+                    (Civ.CORDOBA, Province.CATALONIA, ProvinceType.CONTESTED),
+                    (Civ.CORDOBA, Province.VALENCIA, ProvinceType.HISTORICAL),
+                    (Civ.CORDOBA, Province.BALEARS, ProvinceType.CONTESTED),
+                ]
+            },
+            do_not_cast=True,
+        ),
+        Civ.SWEDEN: EnumDataMapper(
+            {
+                ProvinceEvent.ON_SPAWN: [
+                    (Civ.NORWAY, Province.SVEALAND, ProvinceType.NONE),
+                    (Civ.DENMARK, Province.GOTALAND, ProvinceType.NONE),
+                    (Civ.DENMARK, Province.SVEALAND, ProvinceType.NONE),
+                    (Civ.NOVGOROD, Province.OSTERLAND, ProvinceType.CONTESTED),
+                ]
             },
             do_not_cast=True,
         ),
@@ -2758,6 +2893,61 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
                         ]
                     }
                 ),
+            },
+            do_not_cast=True,
+        ),
+        Civ.AUSTRIA: EnumDataMapper(
+            {
+                ProvinceEvent.ON_SPAWN: [
+                    (Civ.HUNGARY, Province.CARINTHIA, ProvinceType.CONTESTED),
+                    (Civ.HUNGARY, Province.AUSTRIA, ProvinceType.CONTESTED),
+                    (Civ.HUNGARY, Province.MORAVIA, ProvinceType.CONTESTED),
+                    (Civ.HUNGARY, Province.BAVARIA, ProvinceType.NONE),
+                    (Civ.GERMANY, Province.BAVARIA, ProvinceType.CONTESTED),
+                    (Civ.GERMANY, Province.BOHEMIA, ProvinceType.CONTESTED),
+                    (Civ.CASTILE, Province.NETHERLANDS, ProvinceType.CONTESTED),
+                    (Civ.CASTILE, Province.FLANDERS, ProvinceType.CONTESTED),
+                ]
+            },
+            do_not_cast=True,
+        ),
+        Civ.OTTOMAN: EnumDataMapper(
+            {
+                ProvinceEvent.ON_SPAWN: [
+                    (Civ.BYZANTIUM, Province.ANTIOCHIA, ProvinceType.CONTESTED),
+                    (Civ.BYZANTIUM, Province.CILICIA, ProvinceType.CONTESTED),
+                    (Civ.BYZANTIUM, Province.CHARSIANON, ProvinceType.CONTESTED),
+                    (Civ.BYZANTIUM, Province.COLONEA, ProvinceType.CONTESTED),
+                    (Civ.BYZANTIUM, Province.ARMENIAKON, ProvinceType.CONTESTED),
+                    (Civ.BYZANTIUM, Province.CYPRUS, ProvinceType.CONTESTED),
+                    (Civ.BYZANTIUM, Province.ANATOLIKON, ProvinceType.HISTORICAL),
+                    (Civ.BYZANTIUM, Province.OPSIKION, ProvinceType.HISTORICAL),
+                    (Civ.BYZANTIUM, Province.THRAKESION, ProvinceType.HISTORICAL),
+                    (Civ.BYZANTIUM, Province.PAPHLAGONIA, ProvinceType.HISTORICAL),
+                    (Civ.HUNGARY, Province.DALMATIA, ProvinceType.CONTESTED),
+                    (Civ.HUNGARY, Province.BOSNIA, ProvinceType.CONTESTED),
+                    (Civ.HUNGARY, Province.BANAT, ProvinceType.CONTESTED),
+                ]
+            },
+            do_not_cast=True,
+        ),
+        Civ.MOSCOW: EnumDataMapper(
+            {
+                ProvinceEvent.ON_SPAWN: [
+                    (Civ.NOVGOROD, Province.ROSTOV, ProvinceType.CONTESTED),
+                    (Civ.NOVGOROD, Province.SMOLENSK, ProvinceType.NONE),
+                ]
+            },
+            do_not_cast=True,
+        ),
+        Civ.DUTCH: EnumDataMapper(
+            {
+                ProvinceEvent.ON_SPAWN: [
+                    (Civ.CASTILE, Province.NETHERLANDS, ProvinceType.NONE),
+                    (Civ.CASTILE, Province.FLANDERS, ProvinceType.NONE),
+                    (Civ.AUSTRIA, Province.NETHERLANDS, ProvinceType.NONE),
+                    (Civ.AUSTRIA, Province.FLANDERS, ProvinceType.NONE),
+                ]
             },
             do_not_cast=True,
         ),
