@@ -57,143 +57,143 @@ class RiseAndFall:
     ################################################
 
     def getNewCiv(self):
-        return data.scriptDict["iNewCiv"]
+        return data.iNewCiv
 
     def setNewCiv(self, iNewValue):
-        data.scriptDict["iNewCiv"] = iNewValue
+        data.iNewCiv = iNewValue
 
     def getNewCivFlip(self):
-        return data.scriptDict["iNewCivFlip"]
+        return data.iNewCivFlip
 
     def setNewCivFlip(self, iNewValue):
-        data.scriptDict["iNewCivFlip"] = iNewValue
+        data.iNewCivFlip = iNewValue
 
     def getOldCivFlip(self):
-        return data.scriptDict["iOldCivFlip"]
+        return data.iOldCivFlip
 
     def setOldCivFlip(self, iNewValue):
-        data.scriptDict["iOldCivFlip"] = iNewValue
+        data.iOldCivFlip = iNewValue
 
     def getTempTopLeft(self):
-        return data.scriptDict["tempTopLeft"]
+        return data.tempTopLeft
 
     def setTempTopLeft(self, tNewValue):
-        data.scriptDict["tempTopLeft"] = tNewValue
+        data.tempTopLeft = tNewValue
 
     def getTempBottomRight(self):
-        return data.scriptDict["tempBottomRight"]
+        return data.tempBottomRight
 
     def setTempBottomRight(self, tNewValue):
-        data.scriptDict["tempBottomRight"] = tNewValue
+        data.tempBottomRight = tNewValue
 
     def getSpawnWar(self):
-        return data.scriptDict["iSpawnWar"]
+        return data.iSpawnWar
 
     def setSpawnWar(self, iNewValue):
-        data.scriptDict["iSpawnWar"] = iNewValue
+        data.iSpawnWar = iNewValue
 
     def getAlreadySwitched(self):
-        return data.scriptDict["bAlreadySwitched"]
+        return data.bAlreadySwitched
 
     def setAlreadySwitched(self, bNewValue):
-        data.scriptDict["bAlreadySwitched"] = bNewValue
+        data.bAlreadySwitched = bNewValue
 
     def getColonistsAlreadyGiven(self, iCiv):
-        return data.scriptDict["lColonistsAlreadyGiven"][iCiv]
+        return data.lColonistsAlreadyGiven[iCiv]
 
     def setColonistsAlreadyGiven(self, iCiv, iNewValue):
-        data.scriptDict["lColonistsAlreadyGiven"][iCiv] = iNewValue
+        data.lColonistsAlreadyGiven[iCiv] = iNewValue
 
     def getNumCities(self, iCiv):
-        return data.scriptDict["lNumCities"][iCiv]
+        return data.lNumCities[iCiv]
 
     def setNumCities(self, iCiv, iNewValue):
-        data.scriptDict["lNumCities"][iCiv] = iNewValue
+        data.lNumCities[iCiv] = iNewValue
 
     def getSpawnDelay(self, iCiv):
-        return data.scriptDict["lSpawnDelay"][iCiv]
+        return data.lSpawnDelay[iCiv]
 
     def setSpawnDelay(self, iCiv, iNewValue):
-        data.scriptDict["lSpawnDelay"][iCiv] = iNewValue
+        data.lSpawnDelay[iCiv] = iNewValue
 
     def getFlipsDelay(self, iCiv):
-        return data.scriptDict["lFlipsDelay"][iCiv]
+        return data.lFlipsDelay[iCiv]
 
     def setFlipsDelay(self, iCiv, iNewValue):
-        data.scriptDict["lFlipsDelay"][iCiv] = iNewValue
+        data.lFlipsDelay[iCiv] = iNewValue
 
     def getBetrayalTurns(self):
-        return data.scriptDict["iBetrayalTurns"]
+        return data.iBetrayalTurns
 
     def setBetrayalTurns(self, iNewValue):
-        data.scriptDict["iBetrayalTurns"] = iNewValue
+        data.iBetrayalTurns = iNewValue
 
     def getLatestFlipTurn(self):
-        return data.scriptDict["iLatestFlipTurn"]
+        return data.iLatestFlipTurn
 
     def setLatestFlipTurn(self, iNewValue):
-        data.scriptDict["iLatestFlipTurn"] = iNewValue
+        data.iLatestFlipTurn = iNewValue
 
     def getLatestRebellionTurn(self, iCiv):
-        return data.scriptDict["lLatestRebellionTurn"][iCiv]
+        return data.lLatestRebellionTurn[iCiv]
 
     def setLatestRebellionTurn(self, iCiv, iNewValue):
-        data.scriptDict["lLatestRebellionTurn"][iCiv] = iNewValue
+        data.lLatestRebellionTurn[iCiv] = iNewValue
 
     def getRebelCiv(self):
-        return data.scriptDict["iRebelCiv"]
+        return data.iRebelCiv
 
     def setRebelCiv(self, iNewValue):
-        data.scriptDict["iRebelCiv"] = iNewValue
+        data.iRebelCiv = iNewValue
 
     def getRebelCities(self):
-        return data.scriptDict["lRebelCities"]
+        return data.lRebelCities
 
     def setRebelCities(self, lCityList):
-        data.scriptDict["lRebelCities"] = lCityList
+        data.lRebelCities = lCityList
 
     def getRebelSuppress(self):
-        return data.scriptDict["lRebelSuppress"]
+        return data.lRebelSuppress
 
     def setRebelSuppress(self, lSuppressList):
-        data.scriptDict["lRebelSuppress"] = lSuppressList
+        data.lRebelSuppress = lSuppressList
 
     def getExileData(self, i):
-        return data.scriptDict["lExileData"][i]
+        return data.lExileData[i]
 
     def setExileData(self, i, iNewValue):
-        data.scriptDict["lExileData"][i] = iNewValue
+        data.lExileData[i] = iNewValue
 
     def getTempFlippingCity(self):
-        return data.scriptDict["tempFlippingCity"]
+        return data.tempFlippingCity
 
     def setTempFlippingCity(self, tNewValue):
-        data.scriptDict["tempFlippingCity"] = tNewValue
+        data.tempFlippingCity = tNewValue
 
     def getCheatersCheck(self, i):
-        return data.scriptDict["lCheatersCheck"][i]
+        return data.lCheatersCheck[i]
 
     def setCheatersCheck(self, i, iNewValue):
-        data.scriptDict["lCheatersCheck"][i] = iNewValue
+        data.lCheatersCheck[i] = iNewValue
 
     def getDeleteMode(self, i):
-        return data.scriptDict["lDeleteMode"][i]
+        return data.lDeleteMode[i]
 
     def setDeleteMode(self, i, iNewValue):
-        data.scriptDict["lDeleteMode"][i] = iNewValue
+        data.lDeleteMode[i] = iNewValue
 
     def getFirstContactConquerors(self, iCiv):
-        return data.scriptDict["lFirstContactConquerors"][iCiv]
+        return data.lFirstContactConquerors[iCiv]
 
     def setFirstContactConquerors(self, iCiv, iNewValue):
-        data.scriptDict["lFirstContactConquerors"][iCiv] = iNewValue
+        data.lFirstContactConquerors[iCiv] = iNewValue
 
     # Sedna17 Respawn
     def setSpecialRespawnTurn(self, iCiv, iNewValue):
-        data.scriptDict["lSpecialRespawnTurn"][iCiv] = iNewValue
+        data.lSpecialRespawnTurn[iCiv] = iNewValue
 
     def getSpecialRespawnTurns(self):
-        return data.scriptDict["lSpecialRespawnTurn"]
+        return data.lSpecialRespawnTurn
 
     ###############
     ### Popups ###

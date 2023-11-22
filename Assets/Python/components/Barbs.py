@@ -767,22 +767,22 @@ lMinorNations = [
 
 class Barbs:
     def getRevolDates(self):
-        return data.scriptDict["lNextMinorRevolt"]
+        return data.lNextMinorRevolt
 
     def setRevolDates(self, lNextMinorRevolt):
-        data.scriptDict["lNextMinorRevolt"] = lNextMinorRevolt
+        data.lNextMinorRevolt = lNextMinorRevolt
 
     def getTempFlippingCity(self):
-        return data.scriptDict["tempFlippingCity"]
+        return data.tempFlippingCity
 
     def setTempFlippingCity(self, tNewValue):
-        data.scriptDict["tempFlippingCity"] = tNewValue
+        data.tempFlippingCity = tNewValue
 
     def getNationRevoltIndex(self):
-        return data.scriptDict["lRevoltinNationRevoltIndex"]
+        return data.lRevoltinNationRevoltIndex
 
     def setNationRevoltIndex(self, iNationIndex, iRevoltIndex):
-        data.scriptDict["lRevoltinNationRevoltIndex"] = [iNationIndex, iRevoltIndex]
+        data.lRevoltinNationRevoltIndex = [iNationIndex, iRevoltIndex]
 
     def makeUnit(self, iUnit, iPlayer, tCoords, iNum, iForceAttack, szName):
         "Makes iNum units for player iPlayer of the type iUnit at tCoords."

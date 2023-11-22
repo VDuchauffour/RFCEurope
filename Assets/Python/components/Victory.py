@@ -517,10 +517,10 @@ class Victory:
                     self.setAllUHVFailed(iPlayer)
 
     def isIgnoreAI(self):
-        return data.scriptDict["bIgnoreAIUHV"]
+        return data.bIgnoreAIUHV
 
     def setIgnoreAI(self, bVal):
-        data.scriptDict["bIgnoreAIUHV"] = bVal
+        data.bIgnoreAIUHV = bVal
 
     #######################################
     ### Main methods (Event-Triggered) ###

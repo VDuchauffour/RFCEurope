@@ -3714,12 +3714,12 @@ class MercenaryManager:
         pass
 
     def getMercLists(self):
-        self.lGlobalPool = data.scriptDict["lMercGlobalPool"]
-        self.lHiredBy = data.scriptDict["lMercsHiredBy"]
+        self.lGlobalPool = data.lMercGlobalPool
+        self.lHiredBy = data.lMercsHiredBy
 
     def setMercLists(self):
-        data.scriptDict["lMercGlobalPool"] = self.lGlobalPool
-        data.scriptDict["lMercsHiredBy"] = self.lHiredBy
+        data.lMercGlobalPool = self.lGlobalPool
+        data.lMercsHiredBy = self.lHiredBy
 
     def rendomizeMercProvinces(self, iGameTurn):
         if iGameTurn % 2 == rand(2):
@@ -4257,16 +4257,16 @@ class GlobalMercenaryUtils:
     # the Utils class should be used for interface commands (like for the Human UI)
 
     def getMercGlobalPool(self):
-        return data.scriptDict["lMercGlobalPool"]
+        return data.lMercGlobalPool
 
     def setMercGlobalPool(self, lNewPool):
-        data.scriptDict["lMercGlobalPool"] = lNewPool
+        data.lMercGlobalPool = lNewPool
 
     def getMercHiredBy(self):
-        return data.scriptDict["lMercsHiredBy"]
+        return data.lMercsHiredBy
 
     def setMercHiredBy(self, lNewList):
-        data.scriptDict["lMercsHiredBy"] = lNewList
+        data.lMercsHiredBy = lNewList
 
     def getOwnedProvinces(self, iPlayer):
         lProvList = []  # all available cities that the Merc can appear in

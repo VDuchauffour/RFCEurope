@@ -1,5 +1,3 @@
-# Rhye's and Fall of Civilization: Europe - Stored Data
-
 from CoreData import civilizations
 from CoreStructures import player
 from CoreTypes import Civ

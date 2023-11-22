@@ -325,31 +325,31 @@ class Religions:
     ################################################
 
     def getSeed(self):
-        return data.scriptDict["iSeed"]
+        return data.iSeed
 
     def setSeed(self):
-        data.scriptDict["iSeed"] = percentage()
+        data.iSeed = percentage()
 
     def getReformationActive(self):
-        return data.scriptDict["bReformationActive"]
+        return data.bReformationActive
 
     def setReformationActive(self, bNewValue):
-        data.scriptDict["bReformationActive"] = bNewValue
+        data.bReformationActive = bNewValue
 
     def getReformationHitMatrix(self, iCiv):
-        return data.scriptDict["lReformationHitMatrix"][iCiv]
+        return data.lReformationHitMatrix[iCiv]
 
     def setReformationHitMatrix(self, iCiv, bNewValue):
-        data.scriptDict["lReformationHitMatrix"][iCiv] = bNewValue
+        data.lReformationHitMatrix[iCiv] = bNewValue
 
     def getReformationHitMatrixAll(self):
-        return data.scriptDict["lReformationHitMatrix"]
+        return data.lReformationHitMatrix
 
     def getCounterReformationActive(self):
-        return data.scriptDict["bCounterReformationActive"]
+        return data.bCounterReformationActive
 
     def setCounterReformationActive(self, bNewValue):
-        data.scriptDict["bCounterReformationActive"] = bNewValue
+        data.bCounterReformationActive = bNewValue
 
     #######################################
     ### Main methods (Event-Triggered) ###
@@ -905,10 +905,10 @@ class Religions:
                     pPlayer.convertForFree(iBestReligion)
 
     def getFreeRevolutionReligions(self):
-        return data.scriptDict["lReligionChoices"]
+        return data.lReligionChoices
 
     def setFreeRevolutionReligions(self, val):
-        data.scriptDict["lReligionChoices"] = val
+        data.lReligionChoices = val
 
     # Absinthe: free religion change popup
     def showFreeRevolutionPopup(self, iPlayer, religionList):

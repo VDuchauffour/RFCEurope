@@ -32,28 +32,28 @@ class Plague:
     ################################################
 
     def getPlagueCountdown(self, iCiv):
-        return data.scriptDict["lPlagueCountdown"][iCiv]
+        return data.lPlagueCountdown[iCiv]
 
     def setPlagueCountdown(self, iCiv, iNewValue):
-        data.scriptDict["lPlagueCountdown"][iCiv] = iNewValue
+        data.lPlagueCountdown[iCiv] = iNewValue
 
     def getGenericPlagueDates(self, i):
-        return data.scriptDict["lGenericPlagueDates"][i]
+        return data.lGenericPlagueDates[i]
 
     def setGenericPlagueDates(self, i, iNewValue):
-        data.scriptDict["lGenericPlagueDates"][i] = iNewValue
+        data.lGenericPlagueDates[i] = iNewValue
 
     def getBadPlague(self):
-        return data.scriptDict["bBadPlague"]
+        return data.bBadPlague
 
     def setBadPlague(self, bBad):
-        data.scriptDict["bBadPlague"] = bBad
+        data.bBadPlague = bBad
 
     def getFirstPlague(self):
-        return data.scriptDict["bFirstPlague"]
+        return data.bFirstPlague
 
     def setFirstPlague(self, bFirst):
-        data.scriptDict["bFirstPlague"] = bFirst
+        data.bFirstPlague = bFirst
 
     #######################################
     ### Main methods (Event-Triggered) ###

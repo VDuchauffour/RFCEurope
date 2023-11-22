@@ -54,23 +54,23 @@ class RFCUtils:
 
     # RiseAndFall, Stability
     def getLastTurnAlive(self, iCiv):
-        return data.scriptDict["lLastTurnAlive"][iCiv]
+        return data.lLastTurnAlive[iCiv]
 
     def setLastTurnAlive(self, iCiv, iNewValue):
-        data.scriptDict["lLastTurnAlive"][iCiv] = iNewValue
+        data.lLastTurnAlive[iCiv] = iNewValue
 
     def getLastRespawnTurn(self, iCiv):
-        return data.scriptDict["lLastRespawnTurn"][iCiv]
+        return data.lLastRespawnTurn[iCiv]
 
     def setLastRespawnTurn(self, iCiv, iNewValue):
-        data.scriptDict["lLastRespawnTurn"][iCiv] = iNewValue
+        data.lLastRespawnTurn[iCiv] = iNewValue
 
     # Stability
     def getTempFlippingCity(self):
-        return data.scriptDict["tempFlippingCity"]
+        return data.tempFlippingCity
 
     def setTempFlippingCity(self, tNewValue):
-        data.scriptDict["tempFlippingCity"] = tNewValue
+        data.tempFlippingCity = tNewValue
 
     def getStability(self, iCiv):
         return gc.getPlayer(iCiv).getStability()
@@ -83,13 +83,13 @@ class RFCUtils:
 
     # Plague
     def getPlagueCountdown(self, iCiv):
-        return data.scriptDict["lPlagueCountdown"][iCiv]
+        return data.lPlagueCountdown[iCiv]
 
     def setPlagueCountdown(self, iCiv, iNewValue):
-        data.scriptDict["lPlagueCountdown"][iCiv] = iNewValue
+        data.lPlagueCountdown[iCiv] = iNewValue
 
     def getSeed(self):
-        return data.scriptDict["iSeed"]
+        return data.iSeed
 
     # Victory
     def countAchievedGoals(self, iPlayer):
@@ -548,7 +548,7 @@ class RFCUtils:
                     else:  # trade
                         pNewOwner.acquireCity(city, False, True)
                     # Absinthe: if there are mercs available in the new city's province, interface message about it to the human player
-                    lGlobalPool = data.scriptDict["lMercGlobalPool"]
+                    lGlobalPool = data.lMercGlobalPool
                     iProvince = city.getProvince()
                     for lMerc in lGlobalPool:
                         if lMerc[4] == iProvince:
@@ -1086,19 +1086,19 @@ class RFCUtils:
 
     def getPersecutionData(self):
         return (
-            data.scriptDict["lPersecutionData"][0],
-            data.scriptDict["lPersecutionData"][1],
-            data.scriptDict["lPersecutionData"][2],
+            data.lPersecutionData[0],
+            data.lPersecutionData[1],
+            data.lPersecutionData[2],
         )
 
     def setPersecutionData(self, iPlotX, iPlotY, iUnitID):
-        data.scriptDict["lPersecutionData"] = [iPlotX, iPlotY, iUnitID]
+        data.lPersecutionData = [iPlotX, iPlotY, iUnitID]
 
     def getPersecutionReligions(self):
-        return data.scriptDict["lPersecutionReligions"]
+        return data.lPersecutionReligions
 
     def setPersecutionReligions(self, val):
-        data.scriptDict["lPersecutionReligions"] = val
+        data.lPersecutionReligions = val
 
     # Absinthe: end
 

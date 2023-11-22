@@ -213,8 +213,8 @@ class CvRFCEventHandler:
         self.vic.setup()
 
         # Absinthe: generate and store randomized turn modifiers
-        data.scriptDict["lEventRandomness"][iLighthouseEarthQuake] = rand(40)
-        data.scriptDict["lEventRandomness"][iByzantiumVikingAttack] = rand(10)
+        data.lEventRandomness[iLighthouseEarthQuake] = rand(40)
+        data.lEventRandomness[iByzantiumVikingAttack] = rand(10)
 
         # Absinthe: rename cities on the 1200AD scenario - the WB file cannot handle special chars and long names properly
         # 			some of the cities intentionally have different names though (compared to the CNM), for example some Kievan cities
@@ -599,10 +599,7 @@ class CvRFCEventHandler:
         iGameTurn = argsList[0]
 
         # Absinthe: 868AD Viking attack on Constantinople
-        if (
-            iGameTurn
-            == DateTurn.i860AD + data.scriptDict["lEventRandomness"][iByzantiumVikingAttack] - 2
-        ):
+        if iGameTurn == DateTurn.i860AD + data.lEventRandomness[iByzantiumVikingAttack] - 2:
             if human() == Civ.BYZANTIUM:
                 popup = Popup.PyPopup()
                 popup.setBodyString(
@@ -610,10 +607,7 @@ class CvRFCEventHandler:
                 )
                 popup.launch()
 
-        if (
-            iGameTurn
-            == DateTurn.i860AD + data.scriptDict["lEventRandomness"][iByzantiumVikingAttack]
-        ):
+        if iGameTurn == DateTurn.i860AD + data.lEventRandomness[iByzantiumVikingAttack]:
             if human() == Civ.BYZANTIUM:
                 self.barb.spawnMultiTypeUnits(
                     Civ.BARBARIAN.value,
@@ -663,10 +657,7 @@ class CvRFCEventHandler:
                 )
 
         # Absinthe: Remove the Great Lighthouse, message for the human player if the city is visible
-        elif (
-            iGameTurn
-            == DateTurn.i1323AD - 40 + data.scriptDict["lEventRandomness"][iLighthouseEarthQuake]
-        ):
+        elif iGameTurn == DateTurn.i1323AD - 40 + data.lEventRandomness[iLighthouseEarthQuake]:
             for iPlayer in civilizations().drop(Civ.BARBARIAN).ids():
                 bFound = 0
                 for city in utils.getCityList(iPlayer):

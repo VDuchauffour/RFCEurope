@@ -28,16 +28,16 @@ iMinValue = 30
 
 class AIWars:
     def getAttackingCivsArray(self, iCiv):
-        return data.scriptDict["lAttackingCivsArray"][iCiv]
+        return data.lAttackingCivsArray[iCiv]
 
     def setAttackingCivsArray(self, iCiv, iNewValue):
-        data.scriptDict["lAttackingCivsArray"][iCiv] = iNewValue
+        data.lAttackingCivsArray[iCiv] = iNewValue
 
     def getNextTurnAIWar(self):
-        return data.scriptDict["iNextTurnAIWar"]
+        return data.iNextTurnAIWar
 
     def setNextTurnAIWar(self, iNewValue):
-        data.scriptDict["iNextTurnAIWar"] = iNewValue
+        data.iNextTurnAIWar = iNewValue
 
     def setup(self):
         iTurn = get_scenario_start_turn()  # only check from the start turn of the scenario
