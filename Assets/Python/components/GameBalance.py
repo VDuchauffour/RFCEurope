@@ -158,19 +158,19 @@ class GameBalance:
         # but in the .dll these values are only used for the civ-specific building of the given buildingclass, so we can these add redundantly
         for civ in civilizations().majors():
             gc.setBuildingPref(civ.id, Building.WALLS.value, 5)
-            gc.setBuildingPref(civ.id, Building.MOROCCO_KASBAH.value, 5)
             gc.setBuildingPref(civ.id, Building.CASTLE.value, 7)
+            gc.setBuildingPref(civ.id, Building.MANOR_HOUSE.value, 5)
+            gc.setBuildingPref(civ.id, Building.COURTHOUSE.value, 5)
+            gc.setBuildingPref(civ.id, Building.NIGHT_WATCH.value, 3)
+            gc.setBuildingPref(civ.id, Building.MOROCCO_KASBAH.value, 5)
             gc.setBuildingPref(civ.id, Building.MOSCOW_KREMLIN.value, 7)
             gc.setBuildingPref(civ.id, Building.HUNGARIAN_STRONGHOLD.value, 7)
             gc.setBuildingPref(civ.id, Building.SPANISH_CITADEL.value, 7)
-            gc.setBuildingPref(civ.id, Building.MANOR_HOUSE.value, 5)
             gc.setBuildingPref(civ.id, Building.FRENCH_CHATEAU.value, 5)
             gc.setBuildingPref(civ.id, Building.VENICE_NAVAL_BASE.value, 5)
-            gc.setBuildingPref(civ.id, Building.COURTHOUSE.value, 5)
             gc.setBuildingPref(civ.id, Building.KIEV_VECHE.value, 5)
             gc.setBuildingPref(civ.id, Building.HOLY_ROMAN_RATHAUS.value, 5)
             gc.setBuildingPref(civ.id, Building.LITHUANIAN_VOIVODESHIP.value, 5)
-            gc.setBuildingPref(civ.id, Building.NIGHT_WATCH.value, 3)
             gc.setBuildingPref(civ.id, Building.SWEDISH_TENNANT.value, 3)
 
         for civ in civilizations():
