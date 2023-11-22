@@ -211,6 +211,18 @@ RELIGIOUS_WONDERS = [
     Wonder.ROUND_CHURCH,
 ]
 
+COMPANY_BUILDINGS = [
+    Building.CORPORATION.value,
+    Building.CORPORATION_2.value,
+    Building.CORPORATION_3.value,
+    Building.CORPORATION_4.value,
+    Building.CORPORATION_5.value,
+    Building.CORPORATION_6.value,
+    Building.CORPORATION_7.value,
+    Building.CORPORATION_8.value,
+    Building.CORPORATION_9.value,
+]
+
 DIPLOMACY_MODIFIERS = [
     (Civ.CORDOBA, Civ.ARABIA, 5),
     (Civ.ARABIA, Civ.CORDOBA, 5),

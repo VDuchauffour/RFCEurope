@@ -13,7 +13,7 @@ from operator import itemgetter
 from Scenario import get_scenario
 
 from TimelineData import DateTurn
-from MiscData import MessageData
+from MiscData import COMPANY_BUILDINGS, MessageData
 from CoreTypes import (
     Building,
     City,
@@ -32,18 +32,6 @@ utils = RFCUtils.RFCUtils()
 crus = Crusades.Crusades()
 gc = CyGlobalContext()
 localText = CyTranslator()
-
-lCompanyBuilding = [
-    Building.CORPORATION.value,
-    Building.CORPORATION_2.value,
-    Building.CORPORATION_3.value,
-    Building.CORPORATION_4.value,
-    Building.CORPORATION_5.value,
-    Building.CORPORATION_6.value,
-    Building.CORPORATION_7.value,
-    Building.CORPORATION_8.value,
-    Building.CORPORATION_9.value,
-]
 
 
 class Companies:
@@ -126,7 +114,7 @@ class Companies:
                     iCompany
                 ):  # remove company from cities with a negative value
                     city.setHasCorporation(iCompany, False, True, True)
-                    city.setHasRealBuilding(lCompanyBuilding[iCompany], False)
+                    city.setHasRealBuilding(COMPANY_BUILDINGS[iCompany], False)
                     sCityName = city.getName()
                     # interface message for the human player
                     self.announceHuman(iCompany, city, True)
@@ -150,7 +138,7 @@ class Companies:
             ):  # the goal is to have the company in the first iMaxCompanies number of cities
                 break
             city.setHasCorporation(iCompany, True, True, True)
-            city.setHasRealBuilding(lCompanyBuilding[iCompany], True)
+            city.setHasRealBuilding(COMPANY_BUILDINGS[iCompany], True)
             iCompanyCount += 1
             sCityName = city.getName()
             # interface message for the human player
@@ -172,7 +160,7 @@ class Companies:
             for (city, iValue) in reversed(cityValueList):  # loop backwards in the ordered list
                 if city.isHasCorporation(iCompany):
                     city.setHasCorporation(iCompany, False, True, True)
-                    city.setHasRealBuilding(lCompanyBuilding[iCompany], False)
+                    city.setHasRealBuilding(COMPANY_BUILDINGS[iCompany], False)
                     sCityName = city.getName()
                     # interface message for the human player
                     self.announceHuman(iCompany, city, True)
@@ -187,7 +175,7 @@ class Companies:
                 if city.isHasCorporation(iCompany):
                     if self.getCityValue(city, iCompany) < 0:
                         city.setHasCorporation(iCompany, False, True, True)
-                        city.setHasRealBuilding(lCompanyBuilding[iCompany], False)
+                        city.setHasRealBuilding(COMPANY_BUILDINGS[iCompany], False)
                         sCityName = city.getName()
                         # interface message for the human player
                         self.announceHuman(iCompany, city, True)
@@ -205,7 +193,7 @@ class Companies:
             if city.isHasCorporation(iCompany):
                 if self.getCityValue(city, iCompany) < 0:
                     city.setHasCorporation(iCompany, False, True, True)
-                    city.setHasRealBuilding(lCompanyBuilding[iCompany], False)
+                    city.setHasRealBuilding(COMPANY_BUILDINGS[iCompany], False)
                     sCityName = city.getName()
                     # interface message for the human player
                     self.announceHuman(iCompany, city, True)
@@ -901,7 +889,7 @@ class Companies:
         for (city, _) in cityValueList:
             if not city.isHasCorporation(iCompany):
                 city.setHasCorporation(iCompany, True, True, True)
-                city.setHasRealBuilding(lCompanyBuilding[iCompany], True)
+                city.setHasRealBuilding(COMPANY_BUILDINGS[iCompany], True)
                 iCompaniesAdded += 1
                 if iCompaniesAdded == iNumber:
                     break
