@@ -20,12 +20,15 @@ class GameData:
     def setup(self):
         """Initialise the global script data for usage."""
 
+        # Temporary variables
+        self.iTempTopLeft = -1
+        self.iTempBottomRight = -1
+        self.iTempFlippingCity = -1
+
         # RiseAndFall
         self.iNewCiv = -1
         self.iNewCivFlip = -1
         self.iOldCivFlip = -1
-        self.tTempTopLeft = -1
-        self.tTempBottomRight = -1
         self.iSpawnWar = 0  # if 1, add units and declare war. If >=2, do nothing
         self.bAlreadySwitched = False
         self.lColonistsAlreadyGiven = [0] * civilizations().majors().len()
@@ -38,7 +41,6 @@ class GameData:
         self.lRebelCities = []  # 3Miro: store the rebelling cities
         self.lRebelSuppress = [0] * civilizations().majors().len()
         self.lExileData = [-1, -1, -1, -1, -1]
-        self.tTempFlippingCity = -1
         self.lCheatersCheck = [0, -1]
         self.lDeleteMode = [
             -1,

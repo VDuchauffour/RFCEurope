@@ -75,16 +75,16 @@ class RiseAndFall:
         data.iOldCivFlip = iNewValue
 
     def getTempTopLeft(self):
-        return data.tempTopLeft
+        return data.iTempTopLeft
 
     def setTempTopLeft(self, tNewValue):
-        data.tempTopLeft = tNewValue
+        data.iTempTopLeft = tNewValue
 
     def getTempBottomRight(self):
-        return data.tempBottomRight
+        return data.iTempBottomRight
 
     def setTempBottomRight(self, tNewValue):
-        data.tempBottomRight = tNewValue
+        data.iTempBottomRight = tNewValue
 
     def getSpawnWar(self):
         return data.iSpawnWar
@@ -165,10 +165,10 @@ class RiseAndFall:
         data.lExileData[i] = iNewValue
 
     def getTempFlippingCity(self):
-        return data.tempFlippingCity
+        return data.iTempFlippingCity
 
     def setTempFlippingCity(self, tNewValue):
-        data.tempFlippingCity = tNewValue
+        data.iTempFlippingCity = tNewValue
 
     def getCheatersCheck(self, i):
         return data.lCheatersCheck[i]

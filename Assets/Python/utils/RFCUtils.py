@@ -67,10 +67,10 @@ class RFCUtils:
 
     # Stability
     def getTempFlippingCity(self):
-        return data.tempFlippingCity
+        return data.iTempFlippingCity
 
     def setTempFlippingCity(self, tNewValue):
-        data.tempFlippingCity = tNewValue
+        data.iTempFlippingCity = tNewValue
 
     def getProsecutionCount(self, iCiv):
         return gc.getProsecutionCount(iCiv)

@@ -773,10 +773,10 @@ class Barbs:
         data.lNextMinorRevolt = lNextMinorRevolt
 
     def getTempFlippingCity(self):
-        return data.tempFlippingCity
+        return data.iTempFlippingCity
 
     def setTempFlippingCity(self, tNewValue):
-        data.tempFlippingCity = tNewValue
+        data.iTempFlippingCity = tNewValue
 
     def getNationRevoltIndex(self):
         return data.lRevoltinNationRevoltIndex
