@@ -182,11 +182,6 @@ class RiseAndFall:
     def setDeleteMode(self, i, iNewValue):
         data.lDeleteMode[i] = iNewValue
 
-    def getFirstContactConquerors(self, iCiv):
-        return data.lFirstContactConquerors[iCiv]
-
-    def setFirstContactConquerors(self, iCiv, iNewValue):
-        data.lFirstContactConquerors[iCiv] = iNewValue
 
     # Sedna17 Respawn
     def setSpecialRespawnTurn(self, iCiv, iNewValue):
