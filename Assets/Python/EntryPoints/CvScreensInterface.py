@@ -1,5 +1,6 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
+from CoreStructures import player
 import CvMainInterface
 import CvDomesticAdvisor
 import CvTechChooser
@@ -59,8 +60,7 @@ g_bIsScreenActive = -1
 
 
 def getStability(argsList):
-    return utils.getStability(argsList[0])
-    # return gc.getPlayer( argsList[0] ).getStability()
+    return player(argsList[0]).getStability()
 
 
 def countAchievedGoals(argsList):

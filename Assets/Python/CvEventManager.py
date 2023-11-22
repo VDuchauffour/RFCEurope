@@ -2285,12 +2285,6 @@ class CvEventManager:
 
     #################### TRIGGERED EVENTS ##################
 
-    # Rhye - start
-    # Switch Civic
-    # 		elif (pEspionageMissionInfo.getPlayerAnarchyCounter() > 0):
-    # 			utils.setStability(iTargetPlayer, utils.getStability(iTargetPlayer) + 3) #anti-Whitefire
-    # Rhye - end
-
     def __eventEditCityNameBegin(self, city, bRename):
         popup = PyPopup.PyPopup(CvUtil.EventEditCityName, EventContextTypes.EVENTCONTEXT_ALL)
         popup.setUserData((city.getID(), bRename))

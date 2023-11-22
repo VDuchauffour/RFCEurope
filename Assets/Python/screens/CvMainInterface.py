@@ -2,7 +2,7 @@
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from CoreStructures import human
+from CoreStructures import human, player
 from CoreTypes import Civ, SpecialParameter, Religion, Technology, Bonus
 import CvUtil
 import CvScreenEnums
@@ -3343,7 +3343,6 @@ class CvMainInterface:
                     not CyInterface().isCityScreenUp()
                     and CyGame().getGameTurn() >= civilization(ePlayer).date.birth
                 ):
-                    # iStability = utils.getStability(ePlayer)
                     iStability = pPlayer.getStability()
                     szStabilityButton = u"<font=2>%c</font>" % (
                         CyGame().getSymbolID(FontSymbols.POWER_CHAR) + 10
@@ -6583,8 +6582,7 @@ class CvMainInterface:
                                             if (
                                                 ePlayer < civilizations().majors().len()
                                             ):  # in case byzantium is major
-                                                # iStability = utils.getStability(ePlayer)
-                                                iStability = gc.getPlayer(ePlayer).getStability()
+                                                iStability = player(ePlayer).getStability()
                                                 if iStability < -15:
                                                     # szTempBuffer = localText.getText("TXT_KEY_STABILITY_COLLAPSING", ())
                                                     szTempBuffer = unichr(  # type: ignore

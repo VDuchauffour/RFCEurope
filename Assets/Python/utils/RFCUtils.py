@@ -72,9 +72,6 @@ class RFCUtils:
     def setTempFlippingCity(self, tNewValue):
         data.tempFlippingCity = tNewValue
 
-    def getStability(self, iCiv):
-        return gc.getPlayer(iCiv).getStability()
-
     def getProsecutionCount(self, iCiv):
         return gc.getProsecutionCount(iCiv)
 

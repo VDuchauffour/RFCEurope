@@ -182,7 +182,6 @@ class RiseAndFall:
     def setDeleteMode(self, i, iNewValue):
         data.lDeleteMode[i] = iNewValue
 
-
     # Sedna17 Respawn
     def setSpecialRespawnTurn(self, iCiv, iNewValue):
         data.lSpecialRespawnTurn[iCiv] = iNewValue
@@ -788,7 +787,7 @@ class RiseAndFall:
         if (
             gc.getPlayer(iPlayer).getAnarchyTurns() != 0
             or utils.getPlagueCountdown(iPlayer) > 0
-            or utils.getStability(iPlayer) <= -10
+            or player(iPlayer).getStability() <= -10
             or percentage_chance(iThreshold, strict=True)
         ):
             gc.getPlayer(iPlayer).setLeader(iLeader.value)
@@ -1371,8 +1370,7 @@ class RiseAndFall:
                             cityList.append(tPlot)
                         else:
                             iMinNumCitiesOwner = 3
-                            # iOwnerStability = utils.getStability(iOwner)
-                            iOwnerStability = gc.getPlayer(iOwner).getStability()
+                            iOwnerStability = player(iOwner).getStability()
                             if not gc.getPlayer(iOwner).isHuman():
                                 iMinNumCitiesOwner = 2
                                 iOwnerStability -= 5
