@@ -44,47 +44,51 @@ class AIWars:
         self.setNextTurnAIWar(iTurn + rand(iMaxIntervalEarly - iMinIntervalEarly))
 
     def checkTurn(self, iGameTurn):
-
         if iGameTurn > 20:
             # Absinthe: automatically turn peace on between independent cities and all the major civs
-            if iGameTurn % 20 == 4:
-                utils.restorePeaceHuman(Civ.INDEPENDENT_2.value)
-            elif iGameTurn % 20 == 9:
-                utils.restorePeaceHuman(Civ.INDEPENDENT.value)
-            elif iGameTurn % 20 == 14:
-                utils.restorePeaceHuman(Civ.INDEPENDENT_3.value)
-            elif iGameTurn % 20 == 19:
-                utils.restorePeaceHuman(Civ.INDEPENDENT_4.value)
+            turn_peace_human_mapper = {
+                Civ.INDEPENDENT: 9,
+                Civ.INDEPENDENT_2: 4,
+                Civ.INDEPENDENT_3: 14,
+                Civ.INDEPENDENT_4: 19,
+            }
+            for civ, value in turn_peace_human_mapper.items():
+                if iGameTurn % 20 == value:
+                    utils.restorePeaceHuman(civ.value)
 
-            if iGameTurn % 36 == 0:
-                utils.restorePeaceAI(Civ.INDEPENDENT.value, False)
-            elif iGameTurn % 36 == 9:
-                utils.restorePeaceAI(Civ.INDEPENDENT_2.value, False)
-            elif iGameTurn % 36 == 18:
-                utils.restorePeaceAI(Civ.INDEPENDENT_3.value, False)
-            elif iGameTurn % 36 == 27:
-                utils.restorePeaceAI(Civ.INDEPENDENT_4.value, False)
+            turn_peace_ai_mapper = {
+                Civ.INDEPENDENT: 0,
+                Civ.INDEPENDENT_2: 9,
+                Civ.INDEPENDENT_3: 18,
+                Civ.INDEPENDENT_4: 27,
+            }
+            for civ, value in turn_peace_ai_mapper.items():
+                if iGameTurn % 36 == value:
+                    utils.restorePeaceAI(civ.value, False)
 
             # Absinthe: automatically turn war on between independent cities and some AI major civs
-            elif iGameTurn % 36 == 2:  # on the 2nd turn after restorePeaceAI()
-                utils.minorWars(Civ.INDEPENDENT.value, iGameTurn)
-            elif iGameTurn % 36 == 11:  # on the 2nd turn after restorePeaceAI()
-                utils.minorWars(Civ.INDEPENDENT_2.value, iGameTurn)
-            elif iGameTurn % 36 == 20:  # on the 2nd turn after restorePeaceAI()
-                utils.minorWars(Civ.INDEPENDENT_3.value, iGameTurn)
-            elif iGameTurn % 36 == 29:  # on the 2nd turn after restorePeaceAI()
-                utils.minorWars(Civ.INDEPENDENT_4.value, iGameTurn)
+            # runned on the 2nd turn after restorePeaceAI()
+            turn_minor_wars_mapper = {
+                Civ.INDEPENDENT: 2,
+                Civ.INDEPENDENT_2: 11,
+                Civ.INDEPENDENT_3: 20,
+                Civ.INDEPENDENT_4: 29,
+            }
+            for civ, value in turn_minor_wars_mapper.items():
+                if iGameTurn % 36 == value:
+                    utils.minorWars(civ.value, iGameTurn)
 
             # Absinthe: declare war sooner / more frequently if there is an Indy city inside the core area
-            # 			so the AI will declare war much sooner after an indy city appeared in it's core
-            if iGameTurn % 12 == 1:
-                utils.minorCoreWars(Civ.INDEPENDENT_4.value, iGameTurn)
-            elif iGameTurn % 12 == 4:
-                utils.minorCoreWars(Civ.INDEPENDENT_3.value, iGameTurn)
-            elif iGameTurn % 12 == 7:
-                utils.minorCoreWars(Civ.INDEPENDENT_2.value, iGameTurn)
-            elif iGameTurn % 12 == 10:
-                utils.minorCoreWars(Civ.INDEPENDENT.value, iGameTurn)
+            # so the AI will declare war much sooner after an indy city appeared in it's core
+            turn_minor_core_wars_mapper = {
+                Civ.INDEPENDENT: 10,
+                Civ.INDEPENDENT_2: 7,
+                Civ.INDEPENDENT_3: 4,
+                Civ.INDEPENDENT_4: 1,
+            }
+            for civ, value in turn_minor_core_wars_mapper.items():
+                if iGameTurn % 12 == value:
+                    utils.minorCoreWars(civ.value, iGameTurn)
 
         # Absinthe: Venice always seeks war with an Independent Ragusa - should help AI Venice significantly
         if iGameTurn % 9 == 2:
