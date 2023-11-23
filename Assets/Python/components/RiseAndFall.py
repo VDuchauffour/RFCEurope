@@ -128,12 +128,6 @@ class RiseAndFall:
     def setBetrayalTurns(self, iNewValue):
         data.iBetrayalTurns = iNewValue
 
-    def getLatestFlipTurn(self):
-        return data.iLatestFlipTurn
-
-    def setLatestFlipTurn(self, iNewValue):
-        data.iLatestFlipTurn = iNewValue
-
     def getLatestRebellionTurn(self, iCiv):
         return data.lLatestRebellionTurn[iCiv]
 
