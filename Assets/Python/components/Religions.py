@@ -11,7 +11,7 @@ from CvPythonExtensions import (
 )
 from CoreData import civilization, civilizations
 from CoreFunctions import get_religion_by_id
-from CoreStructures import human
+from CoreStructures import human, team
 from CoreTypes import (
     Building,
     Civ,
@@ -493,9 +493,14 @@ class Religions:
         gc.setMinorReligionRefugies(0)
 
         # Absinthe: Benefits for Catholics from the Pope
-        lCatholicCivs = self.getCatholicCivs(
-            True
-        )  # all Catholic civs with open borders with the Pope
+        lCatholicCivs = (
+            civilizations()
+            .main()
+            .filter(
+                lambda c: c.state_religion() == Religion.CATHOLICISM
+                and team(Civ.POPE).isOpenBorders(c.teamtype)
+            )
+        )
         pPope = gc.getPlayer(Civ.POPE.value)
         teamPope = gc.getTeam(pPope.getTeam())
         # Gold gift
@@ -510,17 +515,15 @@ class Religions:
                 iDivBy = 9
             if iGameTurn % iDivBy == 3 and pPope.getGold() > 100 and percentage_chance(90):
                 weights = []
-                for iPlayer in lCatholicCivs:
+                for civ in lCatholicCivs:
                     iCatholicFaith = 0
-                    pPlayer = gc.getPlayer(iPlayer)
                     # Relations with the Pope are much more important here
-                    iCatholicFaith += pPlayer.getFaith()
-                    iCatholicFaith += 8 * max(0, pPope.AI_getAttitude(iPlayer))
+                    iCatholicFaith += civ.player.getFaith()
+                    iCatholicFaith += 8 * max(0, pPope.AI_getAttitude(civ.id))
                     if iCatholicFaith > 0:
                         weights.append(iCatholicFaith)
                 try:
                     iChosenPlayer = choices(lCatholicCivs, weights)[0]
-                    pPlayer = gc.getPlayer(iChosenPlayer)
                     if iGameTurn < 100:
                         iGift = min(
                             pPope.getGold() / 5, 40
@@ -530,11 +533,11 @@ class Religions:
                             pPope.getGold() / 2, 80
                         )  # between 50-80, based on the Pope's wealth
                     pPope.changeGold(-iGift)
-                    pPlayer.changeGold(iGift)
-                    if iChosenPlayer == human():
+                    iChosenPlayer.changeGold(iGift)
+                    if iChosenPlayer.isHuman():
                         sText = CyTranslator().getText("TXT_KEY_FAITH_GOLD_GIFT", (iGift,))
                         CyInterface().addMessage(
-                            iPlayer,
+                            civ.id,
                             False,
                             MessageData.DURATION,
                             sText,
@@ -564,32 +567,28 @@ class Religions:
                 iJerusalemOwner = (
                     gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple()).getPlotCity().getOwner()
                 )
-                for iPlayer in lCatholicCivs:
+                for civ in lCatholicCivs:
                     iCatholicFaith = 0
-                    pPlayer = gc.getPlayer(iPlayer)
                     # Faith points are the deciding factor for buildings
-                    iCatholicFaith += pPlayer.getFaith()
-                    iCatholicFaith += 2 * max(0, pPope.AI_getAttitude(iPlayer))
+                    iCatholicFaith += civ.player.getFaith()
+                    iCatholicFaith += 2 * max(0, pPope.AI_getAttitude(civ))
                     if (
-                        iPlayer == iJerusalemOwner
+                        civ == iJerusalemOwner
                     ):  # The Catholic owner of Jerusalem has a greatly improved chance
                         iCatholicFaith += 30
                     if iCatholicFaith > 0:
                         weights.append(iCatholicFaith)
                 try:
                     iChosenPlayer = choices(lCatholicCivs, weights)[0]
-                    if iChosenPlayer != -1:
-                        pPlayer = gc.getPlayer(iChosenPlayer)
-                        iCatholicBuilding = Building.CATHOLIC_TEMPLE.value
-                        # No chance for monastery if the selected player knows the Scientific Method tech (which obsoletes monasteries), otherwise 50-50% for temple and monastery
-                        teamPlayer = gc.getTeam(pPlayer.getTeam())
-                        if not teamPlayer.isHasTech(
-                            Technology.SCIENTIFIC_METHOD.value
-                        ) and percentage_chance(50):
-                            iCatholicBuilding = Building.CATHOLIC_MONASTERY.value
-                        self.buildInRandomCity(
-                            iChosenPlayer, iCatholicBuilding, Religion.CATHOLICISM.value
-                        )
+                    iCatholicBuilding = Building.CATHOLIC_TEMPLE.value
+                    # No chance for monastery if the selected player knows the Scientific Method tech (which obsoletes monasteries), otherwise 50-50% for temple and monastery
+                    if not iChosenPlayer.team.isHasTech(
+                        Technology.SCIENTIFIC_METHOD.value
+                    ) and percentage_chance(50):
+                        iCatholicBuilding = Building.CATHOLIC_MONASTERY.value
+                    self.buildInRandomCity(
+                        iChosenPlayer.id, iCatholicBuilding, Religion.CATHOLICISM.value
+                    )
                 except:  # noqa: E722
                     pass
         # Free technology
@@ -600,35 +599,34 @@ class Religions:
                 iGameTurn % 13 == 4
             ):  # checked every 13th turn - won't change it as the game progresses, as the number of available techs will already change with the number of Catholic civs
                 weights = []
-                for iPlayer in lCatholicCivs:
+                for civ in lCatholicCivs:
                     iCatholicFaith = 0
-                    pPlayer = gc.getPlayer(iPlayer)
                     # Faith points are the deciding factor for techs
-                    iCatholicFaith += pPlayer.getFaith()
-                    iCatholicFaith += 2 * max(0, pPope.AI_getAttitude(iPlayer))
+                    iCatholicFaith += civ.player.getFaith()
+                    iCatholicFaith += 2 * max(0, pPope.AI_getAttitude(civ.id))
                     if iCatholicFaith > 0:
                         weights.append(iCatholicFaith)
                 try:
                     iChosenPlayer = choices(lCatholicCivs, weights)[0]
-                    pPlayer = gc.getPlayer(iChosenPlayer)
-                    teamPlayer = gc.getTeam(pPlayer.getTeam())
                     # look for techs which are known by the Pope but unknown to the chosen civ
                     for iTech in range(len(Technology)):
                         if teamPope.isHasTech(iTech):
-                            if not teamPlayer.isHasTech(iTech):
+                            if not iChosenPlayer.team.isHasTech(iTech):
                                 # chance for actually giving this tech, based on faith points
                                 iRandomTechNum = rand(70)
                                 if (
                                     pPlayer.getFaith() + 20 > iRandomTechNum
                                 ):  # +20, to have a real chance with low faith points as well
-                                    teamPlayer.setHasTech(iTech, True, iChosenPlayer, False, True)
-                                    if iChosenPlayer == human():
+                                    iChosenPlayer.team.setHasTech(
+                                        iTech, True, iChosenPlayer.id, False, True
+                                    )
+                                    if iChosenPlayer.isHuman():
                                         sText = CyTranslator().getText(
                                             "TXT_KEY_FAITH_TECH_GIFT",
                                             (gc.getTechInfo(iTech).getDescription(),),
                                         )
                                         CyInterface().addMessage(
-                                            iChosenPlayer,
+                                            iChosenPlayer.id,
                                             True,
                                             MessageData.DURATION,
                                             sText,
@@ -648,18 +646,16 @@ class Religions:
 
         # Absinthe: Pope gets all techs known by at least 3 Catholic civs
         if iGameTurn % 6 == 3:
-            lCatholicCivs = self.getCatholicCivs(
-                False
-            )  # all Catholic civs, open borders with the Pope doesn't matter here
+            lCatholicCivs = (
+                civilizations().main().filter(lambda c: c.state_religion() == Religion.CATHOLICISM)
+            )
             pPope = gc.getPlayer(Civ.POPE.value)
             teamPope = gc.getTeam(pPope.getTeam())
             for iTech in range(len(Technology)):
                 if not teamPope.isHasTech(iTech):
                     iTechCounter = 0
-                    for iPlayer in lCatholicCivs:
-                        pPlayer = gc.getPlayer(iPlayer)
-                        teamPlayer = gc.getTeam(pPlayer.getTeam())
-                        if teamPlayer.isHasTech(iTech):
+                    for civ in lCatholicCivs:
+                        if civ.team.isHasTech(iTech):
                             iTechCounter += 1
                             if iTechCounter >= 3:
                                 teamPope.setHasTech(iTech, True, Civ.POPE.value, False, True)
@@ -1458,14 +1454,3 @@ class Religions:
             condition = civ.initial.condition
             if condition:
                 civ.player.setFaith(condition.faith)
-
-    def getCatholicCivs(self, bOpenBorders=False):
-        teamPope = gc.getTeam(gc.getPlayer(Civ.POPE.value).getTeam())
-        lCatholicCivs = []
-        for iPlayer in civilizations().main().ids():
-            pPlayer = gc.getPlayer(iPlayer)
-            if pPlayer.getStateReligion() == Religion.CATHOLICISM.value:
-                if bOpenBorders and not teamPope.isOpenBorders(pPlayer.getTeam()):
-                    continue
-                lCatholicCivs.append(iPlayer)
-        return lCatholicCivs
