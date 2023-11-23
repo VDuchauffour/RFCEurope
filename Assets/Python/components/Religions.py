@@ -530,34 +530,37 @@ class Religions:
                     iCatholicFaith += 8 * max(0, pPope.AI_getAttitude(iPlayer))
                     if iCatholicFaith > 0:
                         weights.append(iCatholicFaith)
-                iChosenPlayer = choices(lCatholicCivs, weights)[0]
-                pPlayer = gc.getPlayer(iChosenPlayer)
-                if iGameTurn < 100:
-                    iGift = min(
-                        pPope.getGold() / 5, 40
-                    )  # between 20-40, based on the Pope's wealth
-                else:
-                    iGift = min(
-                        pPope.getGold() / 2, 80
-                    )  # between 50-80, based on the Pope's wealth
-                pPope.changeGold(-iGift)
-                pPlayer.changeGold(iGift)
-                if iChosenPlayer == human():
-                    sText = CyTranslator().getText("TXT_KEY_FAITH_GOLD_GIFT", (iGift,))
-                    CyInterface().addMessage(
-                        iPlayer,
-                        False,
-                        MessageData.DURATION,
-                        sText,
-                        "",
-                        0,
-                        "",
-                        ColorTypes(MessageData.BLUE),
-                        -1,
-                        -1,
-                        True,
-                        True,
-                    )
+                try:
+                    iChosenPlayer = choices(lCatholicCivs, weights)[0]
+                    pPlayer = gc.getPlayer(iChosenPlayer)
+                    if iGameTurn < 100:
+                        iGift = min(
+                            pPope.getGold() / 5, 40
+                        )  # between 20-40, based on the Pope's wealth
+                    else:
+                        iGift = min(
+                            pPope.getGold() / 2, 80
+                        )  # between 50-80, based on the Pope's wealth
+                    pPope.changeGold(-iGift)
+                    pPlayer.changeGold(iGift)
+                    if iChosenPlayer == human():
+                        sText = CyTranslator().getText("TXT_KEY_FAITH_GOLD_GIFT", (iGift,))
+                        CyInterface().addMessage(
+                            iPlayer,
+                            False,
+                            MessageData.DURATION,
+                            sText,
+                            "",
+                            0,
+                            "",
+                            ColorTypes(MessageData.BLUE),
+                            -1,
+                            -1,
+                            True,
+                            True,
+                        )
+                except:  # noqa: E722
+                    pass
         # Free religious building
         if iGameTurn > DateTurn.i800AD:  # The crowning of Charlemagne
             if iGameTurn > DateTurn.i1648AD:  # End of religious wars
@@ -585,19 +588,22 @@ class Religions:
                         iCatholicFaith += 30
                     if iCatholicFaith > 0:
                         weights.append(iCatholicFaith)
-                iChosenPlayer = choices(lCatholicCivs, weights)[0]
-                if iChosenPlayer != -1:
-                    pPlayer = gc.getPlayer(iChosenPlayer)
-                    iCatholicBuilding = Building.CATHOLIC_TEMPLE.value
-                    # No chance for monastery if the selected player knows the Scientific Method tech (which obsoletes monasteries), otherwise 50-50% for temple and monastery
-                    teamPlayer = gc.getTeam(pPlayer.getTeam())
-                    if not teamPlayer.isHasTech(
-                        Technology.SCIENTIFIC_METHOD.value
-                    ) and percentage_chance(50):
-                        iCatholicBuilding = Building.CATHOLIC_MONASTERY.value
-                    self.buildInRandomCity(
-                        iChosenPlayer, iCatholicBuilding, Religion.CATHOLICISM.value
-                    )
+                try:
+                    iChosenPlayer = choices(lCatholicCivs, weights)[0]
+                    if iChosenPlayer != -1:
+                        pPlayer = gc.getPlayer(iChosenPlayer)
+                        iCatholicBuilding = Building.CATHOLIC_TEMPLE.value
+                        # No chance for monastery if the selected player knows the Scientific Method tech (which obsoletes monasteries), otherwise 50-50% for temple and monastery
+                        teamPlayer = gc.getTeam(pPlayer.getTeam())
+                        if not teamPlayer.isHasTech(
+                            Technology.SCIENTIFIC_METHOD.value
+                        ) and percentage_chance(50):
+                            iCatholicBuilding = Building.CATHOLIC_MONASTERY.value
+                        self.buildInRandomCity(
+                            iChosenPlayer, iCatholicBuilding, Religion.CATHOLICISM.value
+                        )
+                except:  # noqa: E722
+                    pass
         # Free technology
         if (
             iGameTurn > DateTurn.i843AD
@@ -614,9 +620,8 @@ class Religions:
                     iCatholicFaith += 2 * max(0, pPope.AI_getAttitude(iPlayer))
                     if iCatholicFaith > 0:
                         weights.append(iCatholicFaith)
-                iChosenPlayer = choices(lCatholicCivs, weights)[0]
-                # 100% chance to choose a civ, as this doesn't guarantee that there will be a given tech at all
-                if iChosenPlayer != -1:
+                try:
+                    iChosenPlayer = choices(lCatholicCivs, weights)[0]
                     pPlayer = gc.getPlayer(iChosenPlayer)
                     teamPlayer = gc.getTeam(pPlayer.getTeam())
                     # look for techs which are known by the Pope but unknown to the chosen civ
@@ -650,6 +655,8 @@ class Religions:
                                         )
                                     # don't continue if a tech was already given - this also means that there is bigger chance for getting a tech if the chosen civ is multiple techs behind
                                     break
+                except:  # noqa: E722
+                    pass
 
         # Absinthe: Pope gets all techs known by at least 3 Catholic civs
         if iGameTurn % 6 == 3:
