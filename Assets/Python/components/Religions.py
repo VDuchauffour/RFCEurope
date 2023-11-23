@@ -39,22 +39,10 @@ from MiscData import (
     MessageData,
 )
 
-# globals
 gc = CyGlobalContext()
 localText = CyTranslator()  # Absinthe
 PyPlayer = PyHelpers.PyPlayer
 utils = RFCUtils.RFCUtils()
-
-
-# initialise coordinates
-tToledo = (30, 27)
-tAugsburg = (55, 41)
-tSpainTL = (25, 20)
-tSpainBR = (38, 34)
-tMainzTL = (49, 41)
-tMainzBR = (55, 52)
-tPolandTL = (64, 43)
-tPolandBR = (75, 54)
 
 
 # Reformation neighbours spread reformation choice to each other
@@ -364,7 +352,7 @@ class Religions:
         # Absinthe: Spreading religion in a couple preset dates
         if iGameTurn == DateTurn.i700AD - 2:
             # Spread Judaism to Toledo
-            self.spreadReligion(tToledo, Religion.JUDAISM.value)
+            self.spreadReligion(CITIES[City.TOLEDO], Religion.JUDAISM.value)
             # Spread Islam to a random city in Africa
             tCity = self.selectRandomCityRegion(tNorthAfrica, Religion.ISLAM.value)
             if tCity:
