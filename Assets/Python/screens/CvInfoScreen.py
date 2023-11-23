@@ -4,7 +4,7 @@
 # Thanks to "Ulf 'ulfn' Norell" from Apolyton for his additions relating to the graph section of this screen
 
 from CvPythonExtensions import *
-from CoreData import civilizations, civilization
+from CoreData import civilizations
 import CvUtil
 
 import string
@@ -4620,41 +4620,27 @@ class CvInfoScreen:
         self.aaColoniesBuilt = []
         self.iNumColonies = 0
         # Loop through players to determine Projects and place flags in Europe
-        for iPlayerLoop in range(gc.getMAX_PLAYERS()):
-
-            pPlayer = gc.getPlayer(iPlayerLoop)
-            iTeamLoop = pPlayer.getTeam()
-
-            # Block duplicates
+        for civ in civilizations().main():
             aiTeamsUsed = []
-            if iTeamLoop not in aiTeamsUsed:
-
-                aiTeamsUsed.append(iTeamLoop)
-                pTeam = gc.getTeam(iTeamLoop)
+            if civ.teamtype not in aiTeamsUsed:
+                aiTeamsUsed.append(civ.teamtype)
                 self.home_flag = self.getNextWidgetName()
-
-                # if (pTeam.isAlive() and not pTeam.isBarbarian()):
-                if not pTeam.isBarbarian():
-                    # Loop through projects
-                    try:
-                        x, y = civilization(iPlayerLoop).location.home_colony
-                        screen.addFlagWidgetGFC(
-                            self.home_flag,
-                            x - 40,
-                            y - 20,
-                            80,
-                            80,
-                            iPlayerLoop,
-                            WidgetTypes.WIDGET_GENERAL,
-                            -1,
-                            -1,
-                        )
-                    except IndexError:
-                        pass
-                    for col in Colony:
-                        for _ in range(pTeam.getProjectCount(col.value)):
-                            self.aaColoniesBuilt.append([col.value, iPlayerLoop])
-                            self.iNumColonies += 1
+                x, y = civ.location.home_colony
+                screen.addFlagWidgetGFC(
+                    self.home_flag,
+                    x - 40,
+                    y - 20,
+                    80,
+                    80,
+                    civ.id,
+                    WidgetTypes.WIDGET_GENERAL,
+                    -1,
+                    -1,
+                )
+                for col in Colony:
+                    for _ in range(civ.team.getProjectCount(col.value)):
+                        self.aaColoniesBuilt.append([col.value, civ.id])
+                        self.iNumColonies += 1
 
         # Loop through to place flags first (so flags are all "under" the colony dots)
         for col in Colony:
@@ -4682,10 +4668,10 @@ class CvInfoScreen:
             possible = 1
             for colony in self.aaColoniesBuilt:
                 if col == colony[0]:
-                    self.mark1 = self.getNextWidgetName()
+                    mark1 = self.getNextWidgetName()
                     try:
                         screen.addDDSGFC(
-                            self.mark1,
+                            mark1,
                             ArtFileMgr.getInterfaceArtInfo("MASK_" + str(colony[1])).getPath(),
                             COLONY_LOCATIONS[col][0] - 5 + 20 * builtcount,
                             COLONY_LOCATIONS[col][1] + 45,
@@ -4697,7 +4683,7 @@ class CvInfoScreen:
                         )
                     except AttributeError:
                         screen.addDDSGFC(
-                            self.mark1,
+                            mark1,
                             ArtFileMgr.getInterfaceArtInfo("MASK_OTHER").getPath(),
                             COLONY_LOCATIONS[col][0] - 5 + 20 * builtcount,
                             COLONY_LOCATIONS[col][1] + 45,
@@ -4708,17 +4694,11 @@ class CvInfoScreen:
                             -1,
                         )
                     builtcount += 1
-                    # screen.moveToFront(self.mark1)
-                # self.aaColoniesUnbuilt.append([iProjectLoop,-1,"TXT_KEY_UNKNOWN"]) #This should be something else probably
-            if col == 12:
-                possible = 3
-            if col == 13:
+            if col in [Colony.CHINA, Colony.INDIA]:
                 possible = 3
             for n in range(builtcount, possible):
-                self.mark1 = self.getNextWidgetName()
-
                 screen.addDDSGFC(
-                    self.mark1,
+                    self.getNextWidgetName(),
                     ArtFileMgr.getInterfaceArtInfo("MASK_BLANK").getPath(),
                     COLONY_LOCATIONS[col][0] - 5 + 25 * n,
                     COLONY_LOCATIONS[col][1] + 45,
