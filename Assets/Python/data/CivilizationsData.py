@@ -1841,40 +1841,6 @@ CIV_HIRE_MERCENARY_THRESHOLD = CivDataMapper(
     }
 )
 
-# Not used
-CIV_AI_AGGRESSION_LEVEL = CivDataMapper(
-    {
-        Civ.BYZANTIUM: 1,
-        Civ.FRANCE: 1,
-        Civ.ARABIA: 2,
-        Civ.BULGARIA: 2,
-        Civ.CORDOBA: 1,
-        Civ.VENECIA: 0,
-        Civ.BURGUNDY: 0,
-        Civ.GERMANY: 1,
-        Civ.NOVGOROD: 0,
-        Civ.NORWAY: 2,
-        Civ.KIEV: 1,
-        Civ.HUNGARY: 2,
-        Civ.CASTILE: 2,
-        Civ.DENMARK: 2,
-        Civ.SCOTLAND: 0,
-        Civ.POLAND: 0,
-        Civ.GENOA: 0,
-        Civ.MOROCCO: 2,
-        Civ.ENGLAND: 1,
-        Civ.PORTUGAL: 2,
-        Civ.ARAGON: 1,
-        Civ.SWEDEN: 2,
-        Civ.PRUSSIA: 2,
-        Civ.LITHUANIA: 1,
-        Civ.AUSTRIA: 1,
-        Civ.OTTOMAN: 2,
-        Civ.MOSCOW: 1,
-        Civ.DUTCH: 0,
-    }
-)
-
 # Used for war during rise and respawn of new civs (Higher number means less chance for war)
 CIV_AI_STOP_BIRTH_THRESHOLD = CivDataMapper(
     {
