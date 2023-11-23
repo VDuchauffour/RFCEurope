@@ -409,28 +409,22 @@ class CvEventManager:
         )  # hold down the alt key, and hover over the map
 
         # Rhye - Dawn of Man must appear in late starts too
-        # if (gc.getGame().getGameTurnYear() == gc.getDefineINT("START_YEAR") and not gc.getGame().isOption(GameOptionTypes.GAMEOPTION_ADVANCED_START)):
-        if gc.getGame().getStartEra() == gc.getDefineINT("STANDARD_ERA") or gc.getGame().isOption(
-            GameOptionTypes.GAMEOPTION_ADVANCED_START
-        ):
-            for iPlayer in range(gc.getMAX_PLAYERS()):
-                player = gc.getPlayer(iPlayer)
-                if player.isAlive() and player.isHuman():
-                    popupInfo = CyPopupInfo()
-                    popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
-                    popupInfo.setText(u"showDawnOfMan")
-                    popupInfo.addPopup(iPlayer)
+        if (
+            gc.getGame().getStartEra() == gc.getDefineINT("STANDARD_ERA")
+            or gc.getGame().isOption(GameOptionTypes.GAMEOPTION_ADVANCED_START)
+        ) and player().isAlive():
+            popupInfo = CyPopupInfo()
+            popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
+            popupInfo.setText(u"showDawnOfMan")
+            popupInfo.addPopup(human())
         else:
             CyInterface().setSoundSelectionReady(True)
 
-        if gc.getGame().isPbem():
-            for iPlayer in range(gc.getMAX_PLAYERS()):
-                player = gc.getPlayer(iPlayer)
-                if player.isAlive() and player.isHuman():
-                    popupInfo = CyPopupInfo()
-                    popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_DETAILS)
-                    popupInfo.setOption1(True)
-                    popupInfo.addPopup(iPlayer)
+        if gc.getGame().isPbem() and player().isAlive():
+            popupInfo = CyPopupInfo()
+            popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_DETAILS)
+            popupInfo.setOption1(True)
+            popupInfo.addPopup(human())
 
         CvAdvisorUtils.resetNoLiberateCities()
 
