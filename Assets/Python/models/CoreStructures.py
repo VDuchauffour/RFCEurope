@@ -122,6 +122,18 @@ class Civilization(Item):
             CoreTypes.Religion.ORTHODOXY,
         )
 
+    def is_catholic(self):
+        """Return True if the civilization is catholic."""
+        return self.state_religion() == CoreTypes.Religion.CATHOLICISM
+
+    def is_protestant(self):
+        """Return True if the civilization is protestant."""
+        return self.state_religion() == CoreTypes.Religion.PROTESTANTISM
+
+    def is_orthodox(self):
+        """Return True if the civilization is orthodox."""
+        return self.state_religion() == CoreTypes.Religion.ORTHODOXY
+
     def is_muslim(self):
         """Return True if the civilization is muslim."""
         return self.state_religion() == CoreTypes.Religion.ISLAM
@@ -155,6 +167,22 @@ class Civilization(Item):
     def is_a_master(self):
         """Return True if the civilization is not a vassal."""
         return not self.is_a_vassal()
+
+    def has_tech(self, id):
+        """Return True if the civilization has the tech `id`."""
+        return self.team.isHasTech(id)
+
+    def has_open_borders(self, id):
+        """Return True if the civilization has open borders with the civilization `id`."""
+        return self.team.isOpenBorders(teamtype(id))
+
+    def has_defensive_pact(self, id):
+        """Return True if the civilization has defebsive pact with the civilization `id`."""
+        return self.team.isDefensivePact(teamtype(id))
+
+    def has_meet(self, id):
+        """Return True if the civilization has meet the civilization `id`."""
+        return self.team.isHasMeet(teamtype(id))
 
 
 class Civilizations(ItemCollection):
@@ -208,15 +236,15 @@ class Civilizations(ItemCollection):
 
     def catholic(self):
         """Retun all catholic civilizations."""
-        return self.filter(lambda c: c.state_religion() == CoreTypes.Religion.CATHOLICISM)
-
-    def orthodox(self):
-        """Retun all catholic civilizations."""
-        return self.filter(lambda c: c.state_religion() == CoreTypes.Religion.ORTHODOXY)
+        return self.filter(lambda c: c.is_catholic())
 
     def protestant(self):
-        """Retun all catholic civilizations."""
-        return self.filter(lambda c: c.state_religion() == CoreTypes.Religion.PROTESTANTISM)
+        """Retun all protestant civilizations."""
+        return self.filter(lambda c: c.is_protestant())
+
+    def orthodox(self):
+        """Retun all orthodox civilizations."""
+        return self.filter(lambda c: c.is_orthodox())
 
     def muslim(self):
         """Retun all islamic civilizations."""
