@@ -496,10 +496,8 @@ class Religions:
         lCatholicCivs = (
             civilizations()
             .main()
-            .filter(
-                lambda c: c.state_religion() == Religion.CATHOLICISM
-                and team(Civ.POPE).isOpenBorders(c.teamtype)
-            )
+            .catholic()
+            .filter(lambda c: team(Civ.POPE).isOpenBorders(c.teamtype))
         )
         pPope = gc.getPlayer(Civ.POPE.value)
         teamPope = gc.getTeam(pPope.getTeam())
@@ -646,9 +644,7 @@ class Religions:
 
         # Absinthe: Pope gets all techs known by at least 3 Catholic civs
         if iGameTurn % 6 == 3:
-            lCatholicCivs = (
-                civilizations().main().filter(lambda c: c.state_religion() == Religion.CATHOLICISM)
-            )
+            lCatholicCivs = civilizations().main().catholic()
             pPope = gc.getPlayer(Civ.POPE.value)
             teamPope = gc.getTeam(pPope.getTeam())
             for iTech in range(len(Technology)):
