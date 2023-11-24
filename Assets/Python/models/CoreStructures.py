@@ -177,7 +177,7 @@ class Civilization(Item):
         return self.team.isOpenBorders(teamtype(id))
 
     def has_defensive_pact(self, id):
-        """Return True if the civilization has defebsive pact with the civilization `id`."""
+        """Return True if the civilization has defensive pact with the civilization `id`."""
         return self.team.isDefensivePact(teamtype(id))
 
     def has_meet(self, id):
@@ -259,6 +259,22 @@ class Civilizations(ItemCollection):
 
     def masters(self):
         return self.filter(lambda c: c not in self.vassals())
+
+    def tech(self, id):
+        """Return all civilization with the tech `id`."""
+        return self.filter(lambda c: c.has_tech(id))
+
+    def open_borders(self, id):
+        """Return all civilization that have open borders with the civilization `id`."""
+        return self.filter(lambda c: c.has_open_borders(id))
+
+    def has_defensive_pact(self, id):
+        """Return all civilization that have defensive pact with the civilization `id`."""
+        return self.filter(lambda c: c.has_defensive_pact(id))
+
+    def has_meet(self, id):
+        """Return all civilization that have meet the civilization `id`."""
+        return self.filter(lambda c: c.has_meet(id))
 
 
 class CivilizationsFactory(BaseFactory):
