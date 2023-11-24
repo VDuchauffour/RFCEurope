@@ -11,7 +11,7 @@ from CvPythonExtensions import (
 )
 from CoreData import civilization, civilizations
 from CoreFunctions import get_religion_by_id
-from CoreStructures import human, team
+from CoreStructures import human
 from CoreTypes import (
     Building,
     Civ,
@@ -493,12 +493,7 @@ class Religions:
         gc.setMinorReligionRefugies(0)
 
         # Absinthe: Benefits for Catholics from the Pope
-        lCatholicCivs = (
-            civilizations()
-            .main()
-            .catholic()
-            .filter(lambda c: team(Civ.POPE).isOpenBorders(c.teamtype))
-        )
+        lCatholicCivs = civilizations().main().catholic().open_borders(Civ.POPE)
         pPope = gc.getPlayer(Civ.POPE.value)
         teamPope = gc.getTeam(pPope.getTeam())
         # Gold gift
