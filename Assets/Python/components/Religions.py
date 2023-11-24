@@ -533,8 +533,8 @@ class Religions:
                             pPope.getGold() / 2, 80
                         )  # between 50-80, based on the Pope's wealth
                     pPope.changeGold(-iGift)
-                    iChosenPlayer.changeGold(iGift)
-                    if iChosenPlayer.isHuman():
+                    iChosenPlayer.player.changeGold(iGift)
+                    if iChosenPlayer.is_human():
                         sText = CyTranslator().getText("TXT_KEY_FAITH_GOLD_GIFT", (iGift,))
                         CyInterface().addMessage(
                             civ.id,
@@ -571,7 +571,7 @@ class Religions:
                     iCatholicFaith = 0
                     # Faith points are the deciding factor for buildings
                     iCatholicFaith += civ.player.getFaith()
-                    iCatholicFaith += 2 * max(0, pPope.AI_getAttitude(civ))
+                    iCatholicFaith += 2 * max(0, pPope.AI_getAttitude(civ.id))
                     if (
                         civ == iJerusalemOwner
                     ):  # The Catholic owner of Jerusalem has a greatly improved chance
@@ -620,7 +620,7 @@ class Religions:
                                     iChosenPlayer.team.setHasTech(
                                         iTech, True, iChosenPlayer.id, False, True
                                     )
-                                    if iChosenPlayer.isHuman():
+                                    if iChosenPlayer.is_human():
                                         sText = CyTranslator().getText(
                                             "TXT_KEY_FAITH_TECH_GIFT",
                                             (gc.getTechInfo(iTech).getDescription(),),
