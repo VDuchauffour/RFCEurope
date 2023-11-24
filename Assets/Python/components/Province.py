@@ -5,7 +5,7 @@ from Scenario import get_scenario
 from TimelineData import DateTurn
 from ProvinceMapData import PROVINCES_MAP
 from CoreData import civilization, civilizations
-from CoreTypes import Province, ProvinceEvent, Scenario, ProvinceType
+from CoreTypes import Province, Event, Scenario, ProvinceType
 
 utils = RFCUtils.RFCUtils()
 
@@ -25,7 +25,7 @@ class ProvinceManager:
 
     def checkTurn(self, iGameTurn):
         for civ in civilizations():
-            events = civ.event.provinces.get(ProvinceEvent.ON_DATETURN)
+            events = civ.event.provinces.get(Event.ON_DATETURN)
             if events is not None:
                 for dateturn, provinces in events.items():
                     if iGameTurn == dateturn:
@@ -69,7 +69,7 @@ class ProvinceManager:
                 civ.player.setProvinceType(province.value, ProvinceType.POTENTIAL.value)
 
         # Absinthe: special respawn conditions
-        events = civ.event.provinces.get(ProvinceEvent.ON_RESPAWN)
+        events = civ.event.provinces.get(Event.ON_RESPAWN)
         if events is not None:
             for province, province_type in events:
                 civ.player.setProvinceType(province.value, province_type.value)
@@ -86,7 +86,7 @@ class ProvinceManager:
 
     def onSpawn(self, iPlayer):
         # when a new nations spawns, old nations in the region should lose some of their provinces
-        events = civilization(iPlayer).event.provinces.get(ProvinceEvent.ON_SPAWN)
+        events = civilization(iPlayer).event.provinces.get(Event.ON_SPAWN)
         if events is not None:
             for civ, province, province_type in events:
                 player(civ).setProvinceType(province.value, province_type.value)

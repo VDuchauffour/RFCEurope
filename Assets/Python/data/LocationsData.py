@@ -8,7 +8,7 @@ from CoreTypes import (
     Colony,
     Company,
     Province,
-    ProvinceEvent,
+    Event,
     ProvinceType,
     Region,
     Scenario,
@@ -2709,7 +2709,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
     {
         Civ.ARABIA: EnumDataMapper(
             {
-                ProvinceEvent.ON_SPAWN: [
+                Event.ON_SPAWN: [
                     (Civ.BYZANTIUM, Province.CYRENAICA, ProvinceType.CONTESTED),
                     (Civ.BYZANTIUM, Province.TRIPOLITANIA, ProvinceType.CONTESTED),
                     (Civ.BYZANTIUM, Province.IFRIQIYA, ProvinceType.CONTESTED),
@@ -2728,7 +2728,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
         ),
         Civ.BULGARIA: EnumDataMapper(
             {
-                ProvinceEvent.ON_SPAWN: [
+                Event.ON_SPAWN: [
                     (Civ.BYZANTIUM, Province.SERBIA, ProvinceType.CONTESTED),
                     (Civ.BYZANTIUM, Province.MOESIA, ProvinceType.CONTESTED),
                     (Civ.BYZANTIUM, Province.THRACE, ProvinceType.HISTORICAL),
@@ -2738,7 +2738,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
         ),
         Civ.CORDOBA: EnumDataMapper(
             {
-                ProvinceEvent.ON_RESPAWN: [(province, ProvinceType.NONE) for province in Province]
+                Event.ON_RESPAWN: [(province, ProvinceType.NONE) for province in Province]
                 + [
                     (Province.IFRIQIYA, ProvinceType.CORE),
                     (Province.ALGIERS, ProvinceType.HISTORICAL),
@@ -2753,7 +2753,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
         ),
         Civ.VENECIA: EnumDataMapper(
             {
-                ProvinceEvent.ON_SPAWN: [
+                Event.ON_SPAWN: [
                     (Civ.BYZANTIUM, Province.DALMATIA, ProvinceType.NONE),
                     (Civ.BYZANTIUM, Province.BOSNIA, ProvinceType.NONE),
                     (Civ.BYZANTIUM, Province.SLAVONIA, ProvinceType.NONE),
@@ -2770,7 +2770,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
         ),
         Civ.BURGUNDY: EnumDataMapper(
             {
-                ProvinceEvent.ON_SPAWN: [
+                Event.ON_SPAWN: [
                     (Civ.FRANCE, Province.PROVENCE, ProvinceType.POTENTIAL),
                     (Civ.FRANCE, Province.BURGUNDY, ProvinceType.POTENTIAL),
                 ]
@@ -2779,7 +2779,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
         ),
         Civ.GERMANY: EnumDataMapper(
             {
-                ProvinceEvent.ON_SPAWN: [
+                Event.ON_SPAWN: [
                     (Civ.FRANCE, Province.LORRAINE, ProvinceType.CONTESTED),
                     (Civ.FRANCE, Province.BAVARIA, ProvinceType.NONE),
                     (Civ.FRANCE, Province.FRANCONIA, ProvinceType.NONE),
@@ -2791,7 +2791,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
         ),
         Civ.NORWAY: EnumDataMapper(
             {
-                ProvinceEvent.ON_DATETURN: {
+                Event.ON_DATETURN: {
                     # Provinces switch back to unstable after the fall of the Norman Kingdom of Sicily
                     DateTurn.i1194AD
                     + 1: [
@@ -2806,7 +2806,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
         ),
         Civ.HUNGARY: EnumDataMapper(
             {
-                ProvinceEvent.ON_SPAWN: [
+                Event.ON_SPAWN: [
                     (Civ.BULGARIA, Province.BANAT, ProvinceType.NONE),
                     (Civ.BULGARIA, Province.WALLACHIA, ProvinceType.CONTESTED),
                 ]
@@ -2815,7 +2815,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
         ),
         Civ.CASTILE: EnumDataMapper(
             {
-                ProvinceEvent.ON_SPAWN: [
+                Event.ON_SPAWN: [
                     (Civ.CORDOBA, Province.LA_MANCHA, ProvinceType.HISTORICAL),
                 ]
             },
@@ -2823,7 +2823,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
         ),
         Civ.DENMARK: EnumDataMapper(
             {
-                ProvinceEvent.ON_DATETURN: {
+                Event.ON_DATETURN: {
                     # Provinces switch back to unstable after the fall of the Norman Kingdom of Sicily
                     DateTurn.i1194AD
                     + 1: [
@@ -2838,7 +2838,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
         ),
         Civ.MOROCCO: EnumDataMapper(
             {
-                ProvinceEvent.ON_SPAWN: [
+                Event.ON_SPAWN: [
                     (Civ.CORDOBA, Province.MOROCCO, ProvinceType.NONE),
                     (Civ.CORDOBA, Province.MARRAKESH, ProvinceType.NONE),
                     (Civ.CORDOBA, Province.FEZ, ProvinceType.CONTESTED),
@@ -2849,7 +2849,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
         ),
         Civ.ENGLAND: EnumDataMapper(
             {
-                ProvinceEvent.ON_SPAWN: [
+                Event.ON_SPAWN: [
                     (Civ.FRANCE, Province.NORMANDY, ProvinceType.POTENTIAL),
                     (Civ.SCOTLAND, Province.NORTHUMBRIA, ProvinceType.CONTESTED),
                     (Civ.SCOTLAND, Province.MERCIA, ProvinceType.NONE),
@@ -2863,7 +2863,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
         ),
         Civ.ARAGON: EnumDataMapper(
             {
-                ProvinceEvent.ON_SPAWN: [
+                Event.ON_SPAWN: [
                     (Civ.BYZANTIUM, Province.APULIA, ProvinceType.CONTESTED),
                     (Civ.BYZANTIUM, Province.CALABRIA, ProvinceType.CONTESTED),
                     (Civ.BYZANTIUM, Province.SICILY, ProvinceType.CONTESTED),
@@ -2878,7 +2878,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
         ),
         Civ.SWEDEN: EnumDataMapper(
             {
-                ProvinceEvent.ON_SPAWN: [
+                Event.ON_SPAWN: [
                     (Civ.NORWAY, Province.SVEALAND, ProvinceType.NONE),
                     (Civ.DENMARK, Province.GOTALAND, ProvinceType.NONE),
                     (Civ.DENMARK, Province.SVEALAND, ProvinceType.NONE),
@@ -2889,7 +2889,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
         ),
         Civ.PRUSSIA: EnumDataMapper(
             {
-                ProvinceEvent.ON_DATETURN: DataMapper(
+                Event.ON_DATETURN: DataMapper(
                     {
                         DateTurn.i1618AD: [
                             (Province.ESTONIA, ProvinceType.NONE),
@@ -2908,7 +2908,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
         ),
         Civ.AUSTRIA: EnumDataMapper(
             {
-                ProvinceEvent.ON_SPAWN: [
+                Event.ON_SPAWN: [
                     (Civ.HUNGARY, Province.CARINTHIA, ProvinceType.CONTESTED),
                     (Civ.HUNGARY, Province.AUSTRIA, ProvinceType.CONTESTED),
                     (Civ.HUNGARY, Province.MORAVIA, ProvinceType.CONTESTED),
@@ -2923,7 +2923,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
         ),
         Civ.OTTOMAN: EnumDataMapper(
             {
-                ProvinceEvent.ON_SPAWN: [
+                Event.ON_SPAWN: [
                     (Civ.BYZANTIUM, Province.ANTIOCHIA, ProvinceType.CONTESTED),
                     (Civ.BYZANTIUM, Province.CILICIA, ProvinceType.CONTESTED),
                     (Civ.BYZANTIUM, Province.CHARSIANON, ProvinceType.CONTESTED),
@@ -2943,7 +2943,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
         ),
         Civ.MOSCOW: EnumDataMapper(
             {
-                ProvinceEvent.ON_SPAWN: [
+                Event.ON_SPAWN: [
                     (Civ.NOVGOROD, Province.ROSTOV, ProvinceType.CONTESTED),
                     (Civ.NOVGOROD, Province.SMOLENSK, ProvinceType.NONE),
                 ]
@@ -2952,7 +2952,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
         ),
         Civ.DUTCH: EnumDataMapper(
             {
-                ProvinceEvent.ON_SPAWN: [
+                Event.ON_SPAWN: [
                     (Civ.CASTILE, Province.NETHERLANDS, ProvinceType.NONE),
                     (Civ.CASTILE, Province.FLANDERS, ProvinceType.NONE),
                     (Civ.AUSTRIA, Province.NETHERLANDS, ProvinceType.NONE),

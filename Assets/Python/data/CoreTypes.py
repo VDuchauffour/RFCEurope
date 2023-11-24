@@ -931,7 +931,7 @@ class ProvinceStatus(IntEnum):
     OWN = 5
 
 
-class ProvinceEvent(IntEnum):
+class Event(IntEnum):
     ON_DATETURN = 0
     ON_SPAWN = 1
     ON_RESPAWN = 2
