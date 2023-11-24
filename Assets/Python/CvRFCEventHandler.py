@@ -4,7 +4,7 @@ from CvPythonExtensions import *
 from CoreData import civilizations, civilization
 from CoreStructures import human, player
 import CvUtil
-import CvEventManager  # Mercenaries
+import CvEventManager
 import PyHelpers
 import CvMercenaryManager  # Mercenaries
 import CvScreenEnums  # Mercenaries
@@ -292,12 +292,10 @@ class CvRFCEventHandler:
             self.rel.reformationOther(Civ.INDEPENDENT_4.value)
             self.rel.reformationOther(Civ.BARBARIAN.value)
             self.rel.setReformationHitMatrix(Civ.DUTCH.value, 2)
-            for iCiv in civilizations().majors().ids():
-                if (
-                    iCiv in Religions.lReformationNeighbours[Civ.DUTCH.value]
-                    and self.rel.getReformationHitMatrix(iCiv) == 0
-                ):
-                    self.rel.setReformationHitMatrix(iCiv, 1)
+
+            for neighbour in civilization(Civ.DUTCH).location.reformation_neighbours:
+                if self.rel.getReformationHitMatrix(neighbour.value) == 0:
+                    self.rel.setReformationHitMatrix(neighbour.value, 1)
 
         # Absinthe: Spread some culture to the newly acquired city - this is for nearby indy cities, so should be applied in all cases (conquest, flip, trade)
         if playerType < civilizations().majors().len():
@@ -504,12 +502,10 @@ class CvRFCEventHandler:
             self.rel.reformationOther(Civ.INDEPENDENT_4.value)
             self.rel.reformationOther(Civ.BARBARIAN.value)
             self.rel.setReformationHitMatrix(Civ.DUTCH.value, 2)
-            for iCiv in civilizations().majors().ids():
-                if (
-                    iCiv in Religions.lReformationNeighbours[Civ.DUTCH.value]
-                    and self.rel.getReformationHitMatrix(iCiv) == 0
-                ):
-                    self.rel.setReformationHitMatrix(iCiv, 1)
+
+            for neighbour in civilization(Civ.DUTCH).location.reformation_neighbours:
+                if self.rel.getReformationHitMatrix(neighbour.value) == 0:
+                    self.rel.setReformationHitMatrix(neighbour.value, 1)
 
         if iOwner < civilizations().majors().len():
             self.sta.onCityBuilt(iOwner, city.getX(), city.getY())

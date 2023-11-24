@@ -45,143 +45,6 @@ PyPlayer = PyHelpers.PyPlayer
 utils = RFCUtils.RFCUtils()
 
 
-# Reformation neighbours spread reformation choice to each other
-lReformationNeighbours = [
-    [Civ.ARABIA.value, Civ.BULGARIA.value, Civ.OTTOMAN.value],  # Byzantium
-    [
-        Civ.BURGUNDY.value,
-        Civ.CASTILE.value,
-        Civ.GERMANY.value,
-        Civ.GENOA.value,
-        Civ.ENGLAND.value,
-        Civ.DUTCH.value,
-        Civ.SCOTLAND.value,
-    ],  # France
-    [Civ.BYZANTIUM.value, Civ.CORDOBA.value, Civ.OTTOMAN.value],  # Arabia
-    [Civ.BYZANTIUM.value, Civ.KIEV.value, Civ.HUNGARY.value, Civ.OTTOMAN.value],  # Bulgaria
-    [
-        Civ.ARABIA.value,
-        Civ.CASTILE.value,
-        Civ.PORTUGAL.value,
-        Civ.ARAGON.value,
-        Civ.MOROCCO.value,
-    ],  # Cordoba
-    [
-        Civ.GENOA.value,
-        Civ.GERMANY.value,
-        Civ.AUSTRIA.value,
-        Civ.HUNGARY.value,
-        Civ.POPE.value,
-    ],  # Venice
-    [Civ.FRANCE.value, Civ.GERMANY.value, Civ.GENOA.value, Civ.DUTCH.value],  # Burgundy
-    [
-        Civ.BURGUNDY.value,
-        Civ.FRANCE.value,
-        Civ.DENMARK.value,
-        Civ.VENECIA.value,
-        Civ.HUNGARY.value,
-        Civ.POLAND.value,
-        Civ.GENOA.value,
-        Civ.AUSTRIA.value,
-        Civ.DUTCH.value,
-    ],  # Germany
-    [
-        Civ.SWEDEN.value,
-        Civ.HUNGARY.value,
-        Civ.POLAND.value,
-        Civ.MOSCOW.value,
-        Civ.LITHUANIA.value,
-        Civ.KIEV.value,
-    ],  # Novgorod
-    [Civ.DENMARK.value, Civ.SWEDEN.value],  # Norway
-    [
-        Civ.BULGARIA.value,
-        Civ.HUNGARY.value,
-        Civ.POLAND.value,
-        Civ.MOSCOW.value,
-        Civ.LITHUANIA.value,
-        Civ.NOVGOROD.value,
-    ],  # Kiev
-    [
-        Civ.BULGARIA.value,
-        Civ.VENECIA.value,
-        Civ.KIEV.value,
-        Civ.GERMANY.value,
-        Civ.POLAND.value,
-        Civ.AUSTRIA.value,
-        Civ.OTTOMAN.value,
-    ],  # Hungary
-    [Civ.FRANCE.value, Civ.CORDOBA.value, Civ.PORTUGAL.value, Civ.ARAGON.value],  # Spain
-    [Civ.NORWAY.value, Civ.SWEDEN.value, Civ.GERMANY.value],  # Denmark
-    [Civ.FRANCE.value, Civ.DUTCH.value, Civ.ENGLAND.value],  # Scotland
-    [
-        Civ.KIEV.value,
-        Civ.HUNGARY.value,
-        Civ.GERMANY.value,
-        Civ.MOSCOW.value,
-        Civ.AUSTRIA.value,
-        Civ.LITHUANIA.value,
-    ],  # Poland
-    [
-        Civ.BURGUNDY.value,
-        Civ.FRANCE.value,
-        Civ.VENECIA.value,
-        Civ.GERMANY.value,
-        Civ.POPE.value,
-        Civ.ARAGON.value,
-    ],  # Genoa
-    [
-        Civ.ARABIA.value,
-        Civ.CASTILE.value,
-        Civ.PORTUGAL.value,
-        Civ.ARAGON.value,
-        Civ.CORDOBA.value,
-    ],  # Morocco
-    [Civ.FRANCE.value, Civ.DUTCH.value, Civ.SCOTLAND.value],  # England
-    [Civ.CASTILE.value, Civ.CORDOBA.value, Civ.ARAGON.value],  # Portugal
-    [
-        Civ.CASTILE.value,
-        Civ.CORDOBA.value,
-        Civ.PORTUGAL.value,
-        Civ.FRANCE.value,
-        Civ.GENOA.value,
-    ],  # Aragon
-    [Civ.NORWAY.value, Civ.DENMARK.value, Civ.MOSCOW.value, Civ.NOVGOROD.value],  # Sweden
-    [
-        Civ.GERMANY.value,
-        Civ.LITHUANIA.value,
-        Civ.MOSCOW.value,
-        Civ.AUSTRIA.value,
-        Civ.POLAND.value,
-    ],  # Prussia
-    [
-        Civ.KIEV.value,
-        Civ.MOSCOW.value,
-        Civ.PRUSSIA.value,
-        Civ.NOVGOROD.value,
-        Civ.POLAND.value,
-    ],  # Lithuania
-    [Civ.VENECIA.value, Civ.HUNGARY.value, Civ.GERMANY.value, Civ.POLAND.value],  # Austria
-    [Civ.BYZANTIUM.value, Civ.ARABIA.value, Civ.BULGARIA.value, Civ.HUNGARY.value],  # Turkey
-    [
-        Civ.KIEV.value,
-        Civ.POLAND.value,
-        Civ.SWEDEN.value,
-        Civ.LITHUANIA.value,
-        Civ.NOVGOROD.value,
-    ],  # Moscow
-    [
-        Civ.BURGUNDY.value,
-        Civ.FRANCE.value,
-        Civ.GERMANY.value,
-        Civ.ENGLAND.value,
-        Civ.SCOTLAND.value,
-    ],  # Dutch
-    [Civ.VENECIA.value, Civ.GENOA.value],  # Pope
-]
-### Reformation End ###
-
-
 ### Regions to spread religion ###
 tSpain = [
     Province.LEON.value,
@@ -964,11 +827,10 @@ class Religions:
                     self.reformationOther(Civ.INDEPENDENT_4.value)
                     self.reformationOther(Civ.BARBARIAN.value)
                     self.setReformationHitMatrix(iPlayer, 2)
-                    for iCiv in civilizations().majors().ids():
-                        if (
-                            iCiv in lReformationNeighbours[iPlayer]
-                        ) and self.getReformationHitMatrix(iCiv) == 0:
-                            self.setReformationHitMatrix(iCiv, 1)
+
+                    for neighbour in civilization(iPlayer).location.reformation_neighbours:
+                        if self.getReformationHitMatrix(neighbour.value) == 0:
+                            self.setReformationHitMatrix(neighbour.value, 1)
 
     def reformationArrayChoice(self):
         lCivs = [
@@ -983,12 +845,7 @@ class Religions:
         else:
             self.reformationOther(iCiv)
         self.setReformationHitMatrix(iCiv, 2)
-        for iNextCiv in civilizations().majors().ids():
-            if (
-                iNextCiv in lReformationNeighbours[iCiv]
-                and self.getReformationHitMatrix(iNextCiv) == 0
-            ):
-                self.setReformationHitMatrix(iNextCiv, 1)
+
         if sum(self.getReformationHitMatrixAll()) == 2 * civilizations().majors().len():
             self.setReformationActive(False)
             self.setCounterReformationActive(
@@ -1340,26 +1197,25 @@ class Religions:
                 UnitAITypes.UNITAI_MISSIONARY,
                 DirectionTypes.DIRECTION_SOUTH,
             )
-        for iNbr in range(len(lReformationNeighbours[iPlayer])):
-            pNbr = gc.getPlayer(lReformationNeighbours[iPlayer][iNbr])
-            if pNbr.isAlive() and pNbr.getStateReligion() == Religion.PROTESTANTISM.value:
-                pNCapital = pNbr.getCapitalCity()
-                iX = pNCapital.getX()
-                iY = pNCapital.getY()
-                if not pNCapital.isNone():
-                    if pNbr.getNumCities() > 0:
-                        pNCapital = choice(
-                            utils.getCityList(lReformationNeighbours[iPlayer][iNbr])
+
+        for neighbour in civilization(iPlayer).location.reformation_neighbours:
+            civ = civilization(neighbour)
+            if civ.is_alive() and civ.is_protestant():
+                capital = civ.player.getCapitalCity()
+                if not capital.isNone():
+                    if civ.player.getNumCities() > 0:
+                        capital = choice(
+                            utils.getCityList(
+                                civilization(neighbour).location.reformation_neighbours
+                            )
                         )
-                        iX = pNCapital.getX()
-                        iY = pNCapital.getY()
                     else:
                         return
 
-                pNbr.initUnit(
+                civ.player.initUnit(
                     Unit.PROSECUTOR.value,
-                    iX,
-                    iY,
+                    capital.getX(),
+                    capital.getY(),
                     UnitAITypes.UNITAI_MISSIONARY,
                     DirectionTypes.DIRECTION_SOUTH,
                 )

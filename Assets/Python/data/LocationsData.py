@@ -872,6 +872,204 @@ CIV_NEIGHBOURS = CivDataMapper(
     }
 )
 
+# Reformation neighbours spread reformation choice to each other
+CIV_REFORMATION_NEIGHBOURS = CivDataMapper(
+    {
+        Civ.BYZANTIUM: [
+            Civ.ARABIA,
+            Civ.BULGARIA,
+            Civ.OTTOMAN,
+        ],
+        Civ.FRANCE: [
+            Civ.BURGUNDY,
+            Civ.CASTILE,
+            Civ.GERMANY,
+            Civ.GENOA,
+            Civ.ENGLAND,
+            Civ.DUTCH,
+            Civ.SCOTLAND,
+        ],
+        Civ.ARABIA: [
+            Civ.BYZANTIUM,
+            Civ.CORDOBA,
+            Civ.OTTOMAN,
+        ],
+        Civ.BULGARIA: [
+            Civ.BYZANTIUM,
+            Civ.KIEV,
+            Civ.HUNGARY,
+            Civ.OTTOMAN,
+        ],
+        Civ.CORDOBA: [
+            Civ.ARABIA,
+            Civ.CASTILE,
+            Civ.PORTUGAL,
+            Civ.ARAGON,
+            Civ.MOROCCO,
+        ],
+        Civ.VENECIA: [
+            Civ.GENOA,
+            Civ.GERMANY,
+            Civ.AUSTRIA,
+            Civ.HUNGARY,
+            Civ.POPE,
+        ],
+        Civ.BURGUNDY: [
+            Civ.FRANCE,
+            Civ.GERMANY,
+            Civ.GENOA,
+            Civ.DUTCH,
+        ],
+        Civ.GERMANY: [
+            Civ.BURGUNDY,
+            Civ.FRANCE,
+            Civ.DENMARK,
+            Civ.VENECIA,
+            Civ.HUNGARY,
+            Civ.POLAND,
+            Civ.GENOA,
+            Civ.AUSTRIA,
+            Civ.DUTCH,
+        ],
+        Civ.NOVGOROD: [
+            Civ.SWEDEN,
+            Civ.HUNGARY,
+            Civ.POLAND,
+            Civ.MOSCOW,
+            Civ.LITHUANIA,
+            Civ.KIEV,
+        ],
+        Civ.NORWAY: [
+            Civ.DENMARK,
+            Civ.SWEDEN,
+        ],
+        Civ.KIEV: [
+            Civ.BULGARIA,
+            Civ.HUNGARY,
+            Civ.POLAND,
+            Civ.MOSCOW,
+            Civ.LITHUANIA,
+            Civ.NOVGOROD,
+        ],
+        Civ.HUNGARY: [
+            Civ.BULGARIA,
+            Civ.VENECIA,
+            Civ.KIEV,
+            Civ.GERMANY,
+            Civ.POLAND,
+            Civ.AUSTRIA,
+            Civ.OTTOMAN,
+        ],
+        Civ.CASTILE: [
+            Civ.FRANCE,
+            Civ.CORDOBA,
+            Civ.PORTUGAL,
+            Civ.ARAGON,
+        ],
+        Civ.DENMARK: [
+            Civ.NORWAY,
+            Civ.SWEDEN,
+            Civ.GERMANY,
+        ],
+        Civ.SCOTLAND: [
+            Civ.FRANCE,
+            Civ.DUTCH,
+            Civ.ENGLAND,
+        ],
+        Civ.POLAND: [
+            Civ.KIEV,
+            Civ.HUNGARY,
+            Civ.GERMANY,
+            Civ.MOSCOW,
+            Civ.AUSTRIA,
+            Civ.LITHUANIA,
+        ],
+        Civ.GENOA: [
+            Civ.BURGUNDY,
+            Civ.FRANCE,
+            Civ.VENECIA,
+            Civ.GERMANY,
+            Civ.POPE,
+            Civ.ARAGON,
+        ],
+        Civ.MOROCCO: [
+            Civ.ARABIA,
+            Civ.CASTILE,
+            Civ.PORTUGAL,
+            Civ.ARAGON,
+            Civ.CORDOBA,
+        ],
+        Civ.ENGLAND: [
+            Civ.FRANCE,
+            Civ.DUTCH,
+            Civ.SCOTLAND,
+        ],
+        Civ.PORTUGAL: [
+            Civ.CASTILE,
+            Civ.CORDOBA,
+            Civ.ARAGON,
+        ],
+        Civ.ARAGON: [
+            Civ.CASTILE,
+            Civ.CORDOBA,
+            Civ.PORTUGAL,
+            Civ.FRANCE,
+            Civ.GENOA,
+        ],
+        Civ.SWEDEN: [
+            Civ.NORWAY,
+            Civ.DENMARK,
+            Civ.MOSCOW,
+            Civ.NOVGOROD,
+        ],
+        Civ.PRUSSIA: [
+            Civ.GERMANY,
+            Civ.LITHUANIA,
+            Civ.MOSCOW,
+            Civ.AUSTRIA,
+            Civ.POLAND,
+        ],
+        Civ.LITHUANIA: [
+            Civ.KIEV,
+            Civ.MOSCOW,
+            Civ.PRUSSIA,
+            Civ.NOVGOROD,
+            Civ.POLAND,
+        ],
+        Civ.AUSTRIA: [
+            Civ.VENECIA,
+            Civ.HUNGARY,
+            Civ.GERMANY,
+            Civ.POLAND,
+        ],
+        Civ.OTTOMAN: [
+            Civ.BYZANTIUM,
+            Civ.ARABIA,
+            Civ.BULGARIA,
+            Civ.HUNGARY,
+        ],
+        Civ.MOSCOW: [
+            Civ.KIEV,
+            Civ.POLAND,
+            Civ.SWEDEN,
+            Civ.LITHUANIA,
+            Civ.NOVGOROD,
+        ],
+        Civ.DUTCH: [
+            Civ.BURGUNDY,
+            Civ.FRANCE,
+            Civ.GERMANY,
+            Civ.ENGLAND,
+            Civ.SCOTLAND,
+        ],
+        Civ.POPE: [
+            Civ.VENECIA,
+            Civ.GENOA,
+        ],
+    }
+)
+
+
 # Used for stability on spawn
 CIV_OLDER_NEIGHBOURS = CivDataMapper(
     {

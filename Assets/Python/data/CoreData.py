@@ -28,6 +28,7 @@ from LocationsData import (
     CIV_NEW_CAPITAL_LOCATIONS,
     CIV_OLDER_NEIGHBOURS,
     CIV_PROVINCES,
+    CIV_REFORMATION_NEIGHBOURS,
     CIV_VISIBLE_AREA,
     COMPANY_REGION,
 )
@@ -67,6 +68,7 @@ CIVILIZATIONS_BASE = (
     .attach("capital", CIV_CAPITAL_LOCATIONS, key="location")
     .attach("new_capital", CIV_NEW_CAPITAL_LOCATIONS, key="location")
     .attach("neighbours", CIV_NEIGHBOURS, key="location")
+    .attach("reformation_neighbours", CIV_REFORMATION_NEIGHBOURS, key="location")
     .attach("old_neighbours", CIV_OLDER_NEIGHBOURS, key="location")
     .attach("home_colony", CIV_HOME_LOCATIONS, key="location")
     .attach("provinces", CIV_PROVINCES, key="location")
