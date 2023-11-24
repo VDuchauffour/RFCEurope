@@ -206,6 +206,18 @@ class Civilizations(ItemCollection):
         """Retun all christian civilizations."""
         return self.filter(lambda c: c.is_christian())
 
+    def catholic(self):
+        """Retun all catholic civilizations."""
+        return self.filter(lambda c: c.state_religion() == CoreTypes.Religion.CATHOLICISM)
+
+    def orthodox(self):
+        """Retun all catholic civilizations."""
+        return self.filter(lambda c: c.state_religion() == CoreTypes.Religion.ORTHODOXY)
+
+    def protestant(self):
+        """Retun all catholic civilizations."""
+        return self.filter(lambda c: c.state_religion() == CoreTypes.Religion.PROTESTANTISM)
+
     def muslim(self):
         """Retun all islamic civilizations."""
         return self.filter(lambda c: c.is_muslim())
