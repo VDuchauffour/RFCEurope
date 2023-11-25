@@ -192,6 +192,11 @@ class Civilization(Item):
         """Return True if the civilization has meet the civilization `id`."""
         return self.team.isHasMeet(teamtype(id))
 
+    def send_gold(self, id, amount):
+        """Send gold to the civilization `id`."""
+        self.player.changeGold(-amount)
+        player(id).changeGold(amount)
+
 
 class Civilizations(ItemCollection):
     """A simple class to handle a set of civilizations."""
