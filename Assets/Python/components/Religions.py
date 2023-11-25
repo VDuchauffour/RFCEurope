@@ -203,7 +203,6 @@ class Religions:
     def setup(self):
         gc.getPlayer(Civ.BYZANTIUM.value).changeFaith(10)
         gc.getPlayer(Civ.OTTOMAN.value).changeFaith(20)
-        self.setSeed()
 
     def checkTurn(self, iGameTurn):
         # Absinthe: Spreading religion in a couple preset dates
