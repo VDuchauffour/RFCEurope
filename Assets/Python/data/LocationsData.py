@@ -1069,69 +1069,6 @@ CIV_REFORMATION_NEIGHBOURS = CivDataMapper(
     }
 )
 
-
-# Used for stability on spawn
-CIV_OLDER_NEIGHBOURS = CivDataMapper(
-    {
-        Civ.ARABIA: [Civ.BYZANTIUM],
-        Civ.BULGARIA: [Civ.BYZANTIUM],
-        Civ.KIEV: [Civ.BULGARIA],
-        Civ.HUNGARY: [Civ.BULGARIA],
-        Civ.CASTILE: [Civ.CORDOBA],
-        Civ.DENMARK: [Civ.GERMANY],
-        Civ.POLAND: [
-            Civ.GERMANY,
-            Civ.KIEV,
-        ],
-        Civ.GENOA: [
-            Civ.VENECIA,
-            Civ.GERMANY,
-            Civ.CORDOBA,
-        ],
-        Civ.MOROCCO: [Civ.CORDOBA],
-        Civ.ENGLAND: [
-            Civ.FRANCE,
-            Civ.SCOTLAND,
-        ],
-        Civ.PORTUGAL: [
-            Civ.CASTILE,
-            Civ.CORDOBA,
-        ],
-        Civ.ARAGON: [Civ.CASTILE],
-        Civ.SWEDEN: [
-            Civ.NORWAY,
-            Civ.DENMARK,
-            Civ.NOVGOROD,
-        ],
-        Civ.PRUSSIA: [Civ.POLAND],
-        Civ.LITHUANIA: [
-            Civ.PRUSSIA,
-            Civ.NOVGOROD,
-        ],
-        Civ.AUSTRIA: [
-            Civ.GERMANY,
-            Civ.HUNGARY,
-            Civ.VENECIA,
-            Civ.GENOA,
-        ],
-        Civ.OTTOMAN: [
-            Civ.BYZANTIUM,
-            Civ.BULGARIA,
-            Civ.ARABIA,
-        ],
-        Civ.MOSCOW: [
-            Civ.KIEV,
-            Civ.POLAND,
-            Civ.LITHUANIA,
-            Civ.NOVGOROD,
-        ],
-        Civ.DUTCH: [
-            Civ.GERMANY,
-            Civ.FRANCE,
-        ],
-    }
-)
-
 # Used for the Colony panel
 CIV_HOME_LOCATIONS = CivDataMapper(
     {

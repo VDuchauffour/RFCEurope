@@ -3047,13 +3047,6 @@ class RiseAndFall:
         civ = civilization(iCiv)
         for tech in civ.initial.tech:
             civ.set_tech(tech)
-        self.hitNeighboursStability(iCiv)
-
-    def hitNeighboursStability(self, iCiv):
-        # 3Miro: Stability on Spawn
-        neighbours = civilization(iCiv).location.old_neighbours
-        if neighbours is not None:
-            bHuman = False
 
     def showRect(self, iCiv, area):
         for iX, iY in utils.getPlotList(area.tile_min.to_tuple(), area.tile_max.to_tuple()):
