@@ -47,7 +47,6 @@ class GameData:
             -1,
             -1,
         ]  # first is a bool, the other values are capital coordinates
-        self.iSeed = -1  # random delay, currently unused
 
         # Religions
         self.lReligionFounded = [-1, -1, -1, -1, -1]

@@ -85,9 +85,6 @@ class RFCUtils:
     def setPlagueCountdown(self, iCiv, iNewValue):
         data.lPlagueCountdown[iCiv] = iNewValue
 
-    def getSeed(self):
-        return data.iSeed
-
     # Victory
     def countAchievedGoals(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)

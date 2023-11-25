@@ -175,12 +175,6 @@ class Religions:
     ### Secure storage & retrieval of script data ###
     ################################################
 
-    def getSeed(self):
-        return data.iSeed
-
-    def setSeed(self):
-        data.iSeed = percentage()
-
     def getReformationActive(self):
         return data.bReformationActive
 
