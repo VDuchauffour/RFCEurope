@@ -172,6 +172,14 @@ class Civilization(Item):
         """Return True if the civilization has the tech `id`."""
         return self.team.isHasTech(id)
 
+    def set_tech(self, id, as_first=False, annoncing=False):
+        """Set tech `id` to the civilization."""
+        self.team.setHasTech(id.value, True, self.id, as_first, annoncing)
+
+    def remove_tech(self, id):
+        """Remove tech `id` to the civilization."""
+        self.team.setHasTech(id.value, False, self.id, False, False)
+
     def has_open_borders(self, id):
         """Return True if the civilization has open borders with the civilization `id`."""
         return self.team.isOpenBorders(teamtype(id))

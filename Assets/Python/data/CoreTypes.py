@@ -61,6 +61,7 @@ class InitialCondition(IntEnum):
     WORKERS = 0
     GOLD = 1
     FAITH = 2
+    TECH = 3
 
 
 class Modifier(IntEnum):

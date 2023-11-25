@@ -5,6 +5,7 @@ from CivilizationsData import (
     CIV_HIRE_MERCENARY_THRESHOLD,
     CIV_INITIAL_BUILDINGS,
     CIV_INITIAL_CONTACTS,
+    CIV_INITIAL_TECH,
     CIV_INITIAL_WARS,
     CIV_LEADERS,
     CIV_HUMAN_MODIFIERS,
@@ -86,6 +87,7 @@ CIVILIZATIONS_BASE = (
     .attach("collapse", CIV_COLLAPSE_DATE, key="date")
     .attach("respawning", CIV_RESPAWNING_DATE, key="date")
     .attach("buildings", CIV_INITIAL_BUILDINGS, key="initial")
+    .attach("tech", CIV_INITIAL_TECH, key="initial")
     .attach("provinces", CIV_EVENT_DRIVE_PROVINCES, key="event")
 )
 
