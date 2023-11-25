@@ -477,7 +477,7 @@ class RiseAndFall:
 
     def assignGold(self):
         for civ in civilizations().dropna("initial"):
-            condition = civ.initial.condition
+            condition = civ.scenario.condition
             if condition:
                 civ.player.changeGold(condition.gold)
 
@@ -590,8 +590,8 @@ class RiseAndFall:
 
     def setWarOnSpawn(self):
         for civ in civilizations().dropna("initial"):
-            if civ.initial.wars:
-                for other, war_threshold in civ.initial.wars.items():
+            if civ.scenario.wars:
+                for other, war_threshold in civ.scenario.wars.items():
                     if percentage_chance(war_threshold, strict=True):
                         if not civ.at_war(other):
                             civ.set_war(team(other))
@@ -2933,7 +2933,7 @@ class RiseAndFall:
             Unit.WORKER.value,
             iCiv,
             tPlot,
-            civilization(iCiv).initial.condition.workers,
+            civilization(iCiv).scenario.condition.workers,
         )
         # Absinthe: second Ottoman spawn stack may stay, although they now spawn in Gallipoli in the first place (one plot SE)
         if iCiv == Civ.OTTOMAN.value:
@@ -3058,7 +3058,7 @@ class RiseAndFall:
 
     def initContact(self, iCiv, bMeet=True):
         civ = team(iCiv)
-        contacts = civilization(iCiv).initial.contact
+        contacts = civilization(iCiv).scenario.contact
         if contacts:
             for contact in contacts:
                 other = civilization(contact)

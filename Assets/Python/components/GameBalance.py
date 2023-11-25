@@ -565,5 +565,5 @@ class GameBalance:
         gc.setMercPromotion(Promotion.MERC.value)
 
         for civ in civilizations().majors():
-            if civ.initial.condition:
-                gc.setStartingWorkers(civ.id, civ.initial.condition.workers)
+            if civ.scenario.condition:
+                gc.setStartingWorkers(civ.id, civ.scenario.condition.workers)

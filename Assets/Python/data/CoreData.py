@@ -61,7 +61,7 @@ COMPANIES = (
 
 CIVILIZATIONS_BASE = (
     CivilizationsFactory()
-    .add_key("initial", "location", "religion", "human", "ai", "misc", "date", "event")
+    .add_key("initial", "location", "religion", "human", "ai", "misc", "date", "event", "scenario")
     .attach("properties", CIV_PROPERTIES)
     .attach("leaders", CIV_LEADERS)
     .attach("respawning_threshold", CIV_RESPAWNING_THRESHOLD, key="location")
@@ -91,17 +91,17 @@ CIVILIZATIONS_BASE = (
 
 CIVILIZATIONS_500AD = (
     CIVILIZATIONS_BASE.attach("visible_area", CIV_VISIBLE_AREA[Scenario.i500AD], key="location")
-    .attach("condition", CIV_INITIAL_CONDITION[Scenario.i500AD], key="initial")
-    .attach("contact", CIV_INITIAL_CONTACTS[Scenario.i500AD], key="initial")
-    .attach("wars", CIV_INITIAL_WARS[Scenario.i500AD], key="initial")
+    .attach("condition", CIV_INITIAL_CONDITION[Scenario.i500AD], key="scenario")
+    .attach("contact", CIV_INITIAL_CONTACTS[Scenario.i500AD], key="scenario")
+    .attach("wars", CIV_INITIAL_WARS[Scenario.i500AD], key="scenario")
     .collect()
 )
 
 CIVILIZATIONS_1200AD = (
     CIVILIZATIONS_BASE.attach("visible_area", CIV_VISIBLE_AREA[Scenario.i1200AD], key="location")
-    .attach("condition", CIV_INITIAL_CONDITION[Scenario.i1200AD], key="initial")
-    .attach("contact", CIV_INITIAL_CONTACTS[Scenario.i1200AD], key="initial")
-    .attach("wars", CIV_INITIAL_WARS[Scenario.i1200AD], key="initial")
+    .attach("condition", CIV_INITIAL_CONDITION[Scenario.i1200AD], key="scenario")
+    .attach("contact", CIV_INITIAL_CONTACTS[Scenario.i1200AD], key="scenario")
+    .attach("wars", CIV_INITIAL_WARS[Scenario.i1200AD], key="scenario")
     .collect()
 )
 

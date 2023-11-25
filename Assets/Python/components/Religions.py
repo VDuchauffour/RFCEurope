@@ -1293,6 +1293,6 @@ class Religions:
 
     def setStartingFaith(self):
         for civ in civilizations().dropna("initial"):
-            condition = civ.initial.condition
+            condition = civ.scenario.condition
             if condition:
                 civ.player.setFaith(condition.faith)
