@@ -373,6 +373,8 @@ class Religions:
                     iCatholicFaith += 8 * max(0, player(Civ.POPE).AI_getAttitude(civ.id))
                     if iCatholicFaith > 0:
                         weights.append(iCatholicFaith)
+                    else:
+                        weights.append(0)
 
                 if catholic_civs:
                     iChosenPlayer = choices(catholic_civs, weights)[0]
@@ -455,6 +457,9 @@ class Religions:
                     iCatholicFaith += 2 * max(0, player(Civ.POPE).AI_getAttitude(civ.id))
                     if iCatholicFaith > 0:
                         weights.append(iCatholicFaith)
+                    else:
+                        weights.append(0)
+
                 if catholic_civs:
                     iChosenPlayer = choices(catholic_civs, weights)[0]
                     # look for techs which are known by the Pope but unknown to the chosen civ

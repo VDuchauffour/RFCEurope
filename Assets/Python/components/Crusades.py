@@ -1818,15 +1818,15 @@ class Crusades:
                 iCatholicFaith += 3 * max(0, pPope.AI_getAttitude(iPlayer))
                 if iCatholicFaith > 0:
                     weights.append(iCatholicFaith)
-            try:
-                iChosenPlayer = choices(lPotentials, weights)[0]
-                if iChosenPlayer == human():
-                    self.callDCHuman()
                 else:
-                    self.callDCAI(iChosenPlayer)
-                self.setDCLast(iGameTurn)
-            except:  # noqa: E722
-                pass
+                    weights.append(0)
+
+            iChosenPlayer = choices(lPotentials, weights)[0]
+            if iChosenPlayer == human():
+                self.callDCHuman()
+            else:
+                self.callDCAI(iChosenPlayer)
+            self.setDCLast(iGameTurn)
 
     def canDC(self, iPlayer, iGameTurn):
         pPlayer = gc.getPlayer(iPlayer)
