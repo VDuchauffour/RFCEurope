@@ -3046,7 +3046,7 @@ class RiseAndFall:
     def assignTechs(self, iCiv):
         civ = civilization(iCiv)
         for tech in civ.initial.tech:
-            civ.set_tech(tech)
+            civ.add_tech(tech)
 
     def showRect(self, iCiv, area):
         for iX, iY in utils.getPlotList(area.tile_min.to_tuple(), area.tile_max.to_tuple()):

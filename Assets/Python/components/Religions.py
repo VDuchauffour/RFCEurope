@@ -467,7 +467,7 @@ class Religions:
                         ):
                             # chance for actually giving this tech, based on faith points
                             # +20, to have a real chance with low faith points as well
-                            iChosenPlayer.set_tech(tech, annoncing=True)
+                            iChosenPlayer.add_tech(tech, annoncing=True)
                             if iChosenPlayer.is_human():
                                 sText = CyTranslator().getText(
                                     "TXT_KEY_FAITH_TECH_GIFT",
@@ -513,7 +513,7 @@ class Religions:
                     if civ.has_tech(tech):
                         counter += 1
                         if counter >= 3:
-                            civilization(Civ.POPE).set_tech(tech)
+                            civilization(Civ.POPE).add_tech(tech)
                             break
 
     def onReligionSpread(self, iReligion, iPlayer):

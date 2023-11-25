@@ -172,8 +172,8 @@ class Civilization(Item):
         """Return True if the civilization has the tech `id`."""
         return self.team.isHasTech(id)
 
-    def set_tech(self, id, as_first=False, annoncing=False):
-        """Set tech `id` to the civilization."""
+    def add_tech(self, id, as_first=False, annoncing=False):
+        """Add tech `id` to the civilization."""
         self.team.setHasTech(id.value, True, self.id, as_first, annoncing)
 
     def remove_tech(self, id):
