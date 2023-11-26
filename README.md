@@ -2,7 +2,7 @@
 
 This repository contains a fork of the mod `RFCEurope` for Civilization IV: Beyond the Sword, based on the popular Rhye's and Fall of Civilization mod.
 
-This fork enhances the original mod with minor changes and the following changes:
+This fork enhances the original mod with some changes:
 
 - add [Advanced Combat Odds](https://forums.civfanatics.com/threads/pieceofminds-advanced-combat-odds.310415/) mod (v2.01)
 - add [Blue Marble](https://www.civfanatics.net/bluemarble/content/index.php) mod (v4.50)
