@@ -53,6 +53,7 @@ class GameBalance:
         self.setProvinceTypeParameters()
         self.setOtherParameters()
         self.postAreas()
+        self.set_starting_workers()
 
     def setModifiers(self):
         for civ in civilizations():
@@ -564,6 +565,6 @@ class GameBalance:
         # 3MiroMercs: set the merc promotion
         gc.setMercPromotion(Promotion.MERC.value)
 
+    def set_starting_workers(self):
         for civ in civilizations().majors():
-            if civ.scenario.condition:
-                gc.setStartingWorkers(civ.id, civ.scenario.condition.workers)
+            gc.setStartingWorkers(civ.id, civ.initial.workers)

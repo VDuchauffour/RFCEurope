@@ -454,150 +454,154 @@ CIV_INITIAL_TECH = CivDataMapper(
     }
 )
 
+CIV_INITIAL_WORKERS = CivDataMapper(
+    {
+        Civ.BYZANTIUM: 0,
+        Civ.FRANCE: 0,
+        Civ.ARABIA: 1,
+        Civ.BULGARIA: 1,
+        Civ.CORDOBA: 2,
+        Civ.VENECIA: 2,
+        Civ.BURGUNDY: 2,
+        Civ.GERMANY: 3,
+        Civ.NOVGOROD: 2,
+        Civ.NORWAY: 2,
+        Civ.KIEV: 3,
+        Civ.HUNGARY: 3,
+        Civ.CASTILE: 3,
+        Civ.DENMARK: 3,
+        Civ.SCOTLAND: 3,
+        Civ.POLAND: 3,
+        Civ.GENOA: 3,
+        Civ.MOROCCO: 3,
+        Civ.ENGLAND: 3,
+        Civ.PORTUGAL: 3,
+        Civ.ARAGON: 3,
+        Civ.SWEDEN: 3,
+        Civ.PRUSSIA: 3,
+        Civ.LITHUANIA: 3,
+        Civ.AUSTRIA: 4,
+        Civ.OTTOMAN: 4,
+        Civ.MOSCOW: 4,
+        Civ.DUTCH: 4,
+        Civ.POPE: 0,
+    }
+)
 CIV_SCENARIO_CONDITION_500AD = CivDataMapper(
     {
         Civ.BYZANTIUM: {
-            InitialCondition.WORKERS: 0,
             InitialCondition.GOLD: 1200,
             InitialCondition.FAITH: 0,
         },
         Civ.FRANCE: {
-            InitialCondition.WORKERS: 0,
             InitialCondition.GOLD: 100,
             InitialCondition.FAITH: 0,
         },
         Civ.ARABIA: {
-            InitialCondition.WORKERS: 1,
             InitialCondition.GOLD: 200,
             InitialCondition.FAITH: 0,
         },
         Civ.BULGARIA: {
-            InitialCondition.WORKERS: 1,
             InitialCondition.GOLD: 100,
             InitialCondition.FAITH: 0,
         },
         Civ.CORDOBA: {
-            InitialCondition.WORKERS: 2,
             InitialCondition.GOLD: 200,
             InitialCondition.FAITH: 0,
         },
         Civ.VENECIA: {
-            InitialCondition.WORKERS: 2,
             InitialCondition.GOLD: 300,
             InitialCondition.FAITH: 0,
         },
         Civ.BURGUNDY: {
-            InitialCondition.WORKERS: 2,
             InitialCondition.GOLD: 250,
             InitialCondition.FAITH: 0,
         },
         Civ.GERMANY: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 300,
             InitialCondition.FAITH: 0,
         },
         Civ.NOVGOROD: {
-            InitialCondition.WORKERS: 2,
             InitialCondition.GOLD: 400,
             InitialCondition.FAITH: 0,
         },
         Civ.NORWAY: {
-            InitialCondition.WORKERS: 2,
             InitialCondition.GOLD: 250,
             InitialCondition.FAITH: 0,
         },
         Civ.KIEV: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 250,
             InitialCondition.FAITH: 0,
         },
         Civ.HUNGARY: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 300,
             InitialCondition.FAITH: 0,
         },
         Civ.CASTILE: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 500,
             InitialCondition.FAITH: 0,
         },
         Civ.DENMARK: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 300,
             InitialCondition.FAITH: 0,
         },
         Civ.SCOTLAND: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 300,
             InitialCondition.FAITH: 0,
         },
         Civ.POLAND: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 300,
             InitialCondition.FAITH: 0,
         },
         Civ.GENOA: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 400,
             InitialCondition.FAITH: 0,
         },
         Civ.MOROCCO: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 400,
             InitialCondition.FAITH: 0,
         },
         Civ.ENGLAND: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 400,
             InitialCondition.FAITH: 0,
         },
         Civ.PORTUGAL: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 450,
             InitialCondition.FAITH: 0,
         },
         Civ.ARAGON: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 450,
             InitialCondition.FAITH: 0,
         },
         Civ.SWEDEN: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 400,
             InitialCondition.FAITH: 0,
         },
         Civ.PRUSSIA: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 300,
             InitialCondition.FAITH: 0,
         },
         Civ.LITHUANIA: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 400,
             InitialCondition.FAITH: 0,
         },
         Civ.AUSTRIA: {
-            InitialCondition.WORKERS: 4,
             InitialCondition.GOLD: 1000,
             InitialCondition.FAITH: 0,
         },
         Civ.OTTOMAN: {
-            InitialCondition.WORKERS: 4,
             InitialCondition.GOLD: 1000,
             InitialCondition.FAITH: 0,
         },
         Civ.MOSCOW: {
-            InitialCondition.WORKERS: 4,
             InitialCondition.GOLD: 500,
             InitialCondition.FAITH: 0,
         },
         Civ.DUTCH: {
-            InitialCondition.WORKERS: 4,
             InitialCondition.GOLD: 1500,
             InitialCondition.FAITH: 0,
         },
         Civ.POPE: {
-            InitialCondition.WORKERS: 0,
             InitialCondition.GOLD: 50,
             InitialCondition.FAITH: 0,
         },
@@ -607,147 +611,118 @@ CIV_SCENARIO_CONDITION_500AD = CivDataMapper(
 CIV_SCENARIO_CONDITION_1200AD = CivDataMapper(
     {
         Civ.BYZANTIUM: {
-            InitialCondition.WORKERS: 0,
             InitialCondition.GOLD: 750,
             InitialCondition.FAITH: 40,
         },
         Civ.FRANCE: {
-            InitialCondition.WORKERS: 0,
             InitialCondition.GOLD: 250,
             InitialCondition.FAITH: 30,
         },
         Civ.ARABIA: {
-            InitialCondition.WORKERS: 1,
             InitialCondition.GOLD: 300,
             InitialCondition.FAITH: 50,
         },
         Civ.BULGARIA: {
-            InitialCondition.WORKERS: 1,
             InitialCondition.GOLD: 150,
             InitialCondition.FAITH: 50,
         },
         Civ.CORDOBA: {
-            InitialCondition.WORKERS: 2,
             InitialCondition.GOLD: 0,
             InitialCondition.FAITH: 0,
         },
         Civ.VENECIA: {
-            InitialCondition.WORKERS: 2,
             InitialCondition.GOLD: 500,
             InitialCondition.FAITH: 25,
         },
         Civ.BURGUNDY: {
-            InitialCondition.WORKERS: 2,
             InitialCondition.GOLD: 0,
             InitialCondition.FAITH: 0,
         },
         Civ.GERMANY: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 300,
             InitialCondition.FAITH: 30,
         },
         Civ.NOVGOROD: {
-            InitialCondition.WORKERS: 2,
             InitialCondition.GOLD: 400,
             InitialCondition.FAITH: 25,
         },
         Civ.NORWAY: {
-            InitialCondition.WORKERS: 2,
             InitialCondition.GOLD: 250,
             InitialCondition.FAITH: 0,
         },
         Civ.KIEV: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 250,
             InitialCondition.FAITH: 20,
         },
         Civ.HUNGARY: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 300,
             InitialCondition.FAITH: 25,
         },
         Civ.CASTILE: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 500,
             InitialCondition.FAITH: 35,
         },
         Civ.DENMARK: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 300,
             InitialCondition.FAITH: 20,
         },
         Civ.SCOTLAND: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 300,
             InitialCondition.FAITH: 20,
         },
         Civ.POLAND: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 300,
             InitialCondition.FAITH: 30,
         },
         Civ.GENOA: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 500,
             InitialCondition.FAITH: 25,
         },
         Civ.MOROCCO: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 400,
             InitialCondition.FAITH: 35,
         },
         Civ.ENGLAND: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 400,
             InitialCondition.FAITH: 20,
         },
         Civ.PORTUGAL: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 450,
             InitialCondition.FAITH: 20,
         },
         Civ.ARAGON: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 450,
             InitialCondition.FAITH: 10,
         },
         Civ.SWEDEN: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 400,
             InitialCondition.FAITH: 0,
         },
         Civ.PRUSSIA: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 300,
             InitialCondition.FAITH: 0,
         },
         Civ.LITHUANIA: {
-            InitialCondition.WORKERS: 3,
             InitialCondition.GOLD: 400,
             InitialCondition.FAITH: 0,
         },
         Civ.AUSTRIA: {
-            InitialCondition.WORKERS: 4,
             InitialCondition.GOLD: 1000,
             InitialCondition.FAITH: 0,
         },
         Civ.OTTOMAN: {
-            InitialCondition.WORKERS: 4,
             InitialCondition.GOLD: 1000,
             InitialCondition.FAITH: 0,
         },
         Civ.MOSCOW: {
-            InitialCondition.WORKERS: 4,
             InitialCondition.GOLD: 500,
             InitialCondition.FAITH: 0,
         },
         Civ.DUTCH: {
-            InitialCondition.WORKERS: 4,
             InitialCondition.GOLD: 1500,
             InitialCondition.FAITH: 0,
         },
         Civ.POPE: {
-            InitialCondition.WORKERS: 0,
             InitialCondition.GOLD: 200,
             InitialCondition.FAITH: 0,
         },

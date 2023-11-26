@@ -1961,7 +1961,9 @@ class RiseAndFall:
 
             if gc.getPlayer(iCiv).getNumCities() > 0:
                 capital = gc.getPlayer(iCiv).getCapitalCity()
-                self.createStartingWorkers(iCiv, (capital.getX(), capital.getY()))
+                self.create_starting_workers(iCiv, (capital.getX(), capital.getY()))
+                if iCiv == Civ.OTTOMAN:
+                    self.ottomanInvasion(iCiv, (77, 23))
 
             if iNumHumanCitiesToConvert > 0:
                 self.flipPopup(iCiv, tTopLeft, tBottomRight)
@@ -2056,7 +2058,9 @@ class RiseAndFall:
                 if plotList:
                     plot = choice(plotList)
                     self.createStartingUnits(iCiv, plot)
-                    self.createStartingWorkers(iCiv, plot)
+                    self.create_starting_workers(iCiv, plot)
+                    if iCiv == Civ.OTTOMAN:
+                        self.ottomanInvasion(iCiv, (77, 23))
                     self.assignTechs(iCiv)
                     utils.setPlagueCountdown(iCiv, -PLAGUE_IMMUNITY)
                     utils.clearPlague(iCiv)
@@ -2928,17 +2932,6 @@ class RiseAndFall:
         self.showArea(iCiv)
         self.initContact(iCiv)
 
-    def createStartingWorkers(self, iCiv, tPlot):
-        utils.makeUnit(
-            Unit.WORKER.value,
-            iCiv,
-            tPlot,
-            civilization(iCiv).scenario.condition.workers,
-        )
-        # Absinthe: second Ottoman spawn stack may stay, although they now spawn in Gallipoli in the first place (one plot SE)
-        if iCiv == Civ.OTTOMAN.value:
-            self.ottomanInvasion(iCiv, (77, 23))
-
     def create1200ADstartingUnits(self):
         iHuman = human()
         if (
@@ -2974,6 +2967,7 @@ class RiseAndFall:
             utils.makeUnit(Unit.MACEMAN.value, iHuman, tStart, 1)
 
     def ottomanInvasion(self, iCiv, tPlot):
+        # Absinthe: second Ottoman spawn stack may stay, although they now spawn in Gallipoli in the first place (one plot SE)
         utils.makeUnit(Unit.LONGBOWMAN.value, iCiv, tPlot, 2)
         utils.makeUnit(Unit.MACEMAN.value, iCiv, tPlot, 2)
         utils.makeUnit(Unit.KNIGHT.value, iCiv, tPlot, 3)
@@ -3078,3 +3072,11 @@ class RiseAndFall:
     def changeAttitudeExtra(self, iPlayer1, iPlayer2, iValue):
         gc.getPlayer(iPlayer1).AI_changeAttitudeExtra(iPlayer2, iValue)
         gc.getPlayer(iPlayer2).AI_changeAttitudeExtra(iPlayer1, iValue)
+
+    def create_starting_workers(self, iCiv, tPlot):
+        utils.makeUnit(
+            Unit.WORKER.value,
+            iCiv,
+            tPlot,
+            civilization(iCiv).initial.workers,
+        )
