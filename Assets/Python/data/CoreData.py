@@ -14,7 +14,7 @@ from CivilizationsData import (
     CIV_RELIGIOUS_TOLERANCE,
     CIV_RESPAWNING_THRESHOLD,
     CIV_STABILITY_AI_BONUS,
-    CIV_INITIAL_CONDITION,
+    CIV_SCENARIO_CONDITION,
 )
 from CoreFunctions import get_civ_by_id
 from CoreStructures import Civilization, CivilizationsFactory, CompaniesFactory
@@ -91,7 +91,7 @@ CIVILIZATIONS_BASE = (
 
 CIVILIZATIONS_500AD = (
     CIVILIZATIONS_BASE.attach("visible_area", CIV_VISIBLE_AREA[Scenario.i500AD], key="location")
-    .attach("condition", CIV_INITIAL_CONDITION[Scenario.i500AD], key="scenario")
+    .attach("condition", CIV_SCENARIO_CONDITION[Scenario.i500AD], key="scenario")
     .attach("contact", CIV_INITIAL_CONTACTS[Scenario.i500AD], key="scenario")
     .attach("wars", CIV_INITIAL_WARS[Scenario.i500AD], key="scenario")
     .collect()
@@ -99,7 +99,7 @@ CIVILIZATIONS_500AD = (
 
 CIVILIZATIONS_1200AD = (
     CIVILIZATIONS_BASE.attach("visible_area", CIV_VISIBLE_AREA[Scenario.i1200AD], key="location")
-    .attach("condition", CIV_INITIAL_CONDITION[Scenario.i1200AD], key="scenario")
+    .attach("condition", CIV_SCENARIO_CONDITION[Scenario.i1200AD], key="scenario")
     .attach("contact", CIV_INITIAL_CONTACTS[Scenario.i1200AD], key="scenario")
     .attach("wars", CIV_INITIAL_WARS[Scenario.i1200AD], key="scenario")
     .collect()

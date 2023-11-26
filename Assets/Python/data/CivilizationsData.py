@@ -454,7 +454,7 @@ CIV_INITIAL_TECH = CivDataMapper(
     }
 )
 
-CIV_INITIAL_CONDITION_500AD = CivDataMapper(
+CIV_SCENARIO_CONDITION_500AD = CivDataMapper(
     {
         Civ.BYZANTIUM: {
             InitialCondition.WORKERS: 0,
@@ -604,7 +604,7 @@ CIV_INITIAL_CONDITION_500AD = CivDataMapper(
     }
 )
 
-CIV_INITIAL_CONDITION_1200AD = CivDataMapper(
+CIV_SCENARIO_CONDITION_1200AD = CivDataMapper(
     {
         Civ.BYZANTIUM: {
             InitialCondition.WORKERS: 0,
@@ -754,10 +754,10 @@ CIV_INITIAL_CONDITION_1200AD = CivDataMapper(
     }
 )
 
-CIV_INITIAL_CONDITION = ScenarioDataMapper(
+CIV_SCENARIO_CONDITION = ScenarioDataMapper(
     {
-        Scenario.i500AD: CIV_INITIAL_CONDITION_500AD,
-        Scenario.i1200AD: CIV_INITIAL_CONDITION_1200AD,
+        Scenario.i500AD: CIV_SCENARIO_CONDITION_500AD,
+        Scenario.i1200AD: CIV_SCENARIO_CONDITION_1200AD,
     }
 )
 
