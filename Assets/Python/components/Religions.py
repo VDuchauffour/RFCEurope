@@ -1290,9 +1290,3 @@ class Religions:
         tCity = self.selectRandomCityRegion(tGermany, Religion.JUDAISM.value)
         if tCity:
             self.spreadReligion(tCity, Religion.JUDAISM.value)
-
-    def setStartingFaith(self):
-        for civ in civilizations().dropna("initial"):
-            condition = civ.scenario.condition
-            if condition:
-                civ.player.setFaith(condition.faith)

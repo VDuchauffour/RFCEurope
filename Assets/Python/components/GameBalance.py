@@ -147,7 +147,7 @@ class GameBalance:
         # gc.setInitialBuilding( iCiv, iBuilding, True\False ), if ( True) give iCiv, building iBuildings else don't Default is False
         # we can change True <-> False with the onTechAquire event
         for civ in civilizations():
-            buildings = civ.initial.buildings
+            buildings = civ.initial.get("buildings")
             if buildings is not None:
                 for building in buildings:
                     gc.setInitialBuilding(civ.id, building.value, True)

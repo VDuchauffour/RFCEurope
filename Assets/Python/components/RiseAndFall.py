@@ -464,7 +464,7 @@ class RiseAndFall:
                 self.initContact(civ, False)
                 # Temporarily all civs get the same starting techs as Aragon
                 self.assign1200ADtechs(civ)
-            rel.setStartingFaith()
+            self.setStartingFaith()
             self.setDiplo1200AD()
             self.LeaningTowerGP()
             rel.spread1200ADJews()  # Spread Jews to some random cities
@@ -476,10 +476,16 @@ class RiseAndFall:
         self.assignGold()
 
     def assignGold(self):
-        for civ in civilizations().dropna("initial"):
-            condition = civ.scenario.condition
-            if condition:
+        for civ in civilizations():
+            condition = civ.scenario.get("condition")
+            if condition is not None:
                 civ.player.changeGold(condition.gold)
+
+    def setStartingFaith(self):
+        for civ in civilizations():
+            condition = civ.scenario.get("condition")
+            if condition is not None:
+                civ.player.setFaith(condition.faith)
 
     def onCityBuilt(self, iPlayer, pCity):
         tCity = (pCity.getX(), pCity.getY())
@@ -589,12 +595,12 @@ class RiseAndFall:
                 civ.player.setLeader(leader.value)
 
     def setWarOnSpawn(self):
-        for civ in civilizations().dropna("initial"):
-            if civ.scenario.wars:
-                for other, war_threshold in civ.scenario.wars.items():
-                    if percentage_chance(war_threshold, strict=True):
-                        if not civ.at_war(other):
-                            civ.set_war(team(other))
+        for civ in civilizations():
+            wars = civ.scenario.get("wars")
+            if wars is not None:
+                for other, war_threshold in wars.items():
+                    if percentage_chance(war_threshold, strict=True) and not civ.at_war(other):
+                        civ.set_war(other)
 
     def checkTurn(self, iGameTurn):
         # Trigger betrayal mode
@@ -3039,8 +3045,10 @@ class RiseAndFall:
 
     def assignTechs(self, iCiv):
         civ = civilization(iCiv)
-        for tech in civ.initial.tech:
-            civ.add_tech(tech)
+        techs = civ.initial.get("tech")
+        if techs is not None:
+            for tech in techs:
+                civ.add_tech(tech)
 
     def showRect(self, iCiv, area):
         for iX, iY in utils.getPlotList(area.tile_min.to_tuple(), area.tile_max.to_tuple()):
@@ -3052,8 +3060,8 @@ class RiseAndFall:
 
     def initContact(self, iCiv, bMeet=True):
         civ = team(iCiv)
-        contacts = civilization(iCiv).scenario.contact
-        if contacts:
+        contacts = civilization(iCiv).scenario.get("contact")
+        if contacts is not None:
             for contact in contacts:
                 other = civilization(contact)
                 if other.is_alive() and not civ.isHasMet(other.teamtype):
