@@ -58,7 +58,7 @@ class Scenario(IntEnum):
 
 
 class InitialCondition(IntEnum):
-    WORKERS = 0
+    UNITS = 0
     GOLD = 1
     FAITH = 2
     TECH = 3
