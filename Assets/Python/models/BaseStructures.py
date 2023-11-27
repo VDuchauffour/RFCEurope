@@ -246,6 +246,10 @@ class ItemCollection(list):
         """Filter item when `condition` is True."""
         return self.copy(*self._filter(condition))
 
+    def transform(self, cls, map=lambda x: x, condition=lambda x: True):
+        """Return new class given a map function and a condition function."""
+        return cls([map(k) for k in self if condition(k)])
+
     @staticmethod
     def __handle_string_args(strings):
         if isinstance(strings, str):
