@@ -6,6 +6,7 @@ from CivilizationsData import (
     CIV_INITIAL_BUILDINGS,
     CIV_INITIAL_CONTACTS,
     CIV_INITIAL_TECH,
+    CIV_INITIAL_UNITS,
     CIV_INITIAL_WARS,
     CIV_INITIAL_WORKERS,
     CIV_LEADERS,
@@ -88,6 +89,7 @@ CIVILIZATIONS_BASE = (
     .attach("buildings", CIV_INITIAL_BUILDINGS, key="initial")
     .attach("tech", CIV_INITIAL_TECH, key="initial")
     .attach("workers", CIV_INITIAL_WORKERS, key="initial")
+    .attach("units", CIV_INITIAL_UNITS, key="initial")
     .attach("provinces", CIV_EVENT_DRIVE_PROVINCES, key="event")
 )
 

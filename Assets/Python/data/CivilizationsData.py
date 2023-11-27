@@ -5,11 +5,13 @@ from CoreTypes import (
     CivilizationProperty,
     Leader,
     LeaderType,
+    PlayerType,
     Religion,
     Scenario,
     InitialCondition,
     Modifier,
     Technology,
+    Unit,
     Wonder,
 )
 from CoreStructures import (
@@ -487,6 +489,393 @@ CIV_INITIAL_WORKERS = CivDataMapper(
         Civ.POPE: 0,
     }
 )
+
+CIV_INITIAL_UNITS = CivDataMapper(
+    {
+        Civ.BYZANTIUM: None,
+        Civ.FRANCE: None,
+        Civ.ARABIA: EnumDataMapper(
+            {
+                PlayerType.ANY: {
+                    Unit.ARCHER: 2,
+                    Unit.SETTLER: 2,
+                    Unit.HORSE_ARCHER: 7,
+                    Unit.AXEMAN: 2,
+                    Unit.SPEARMAN: 2,
+                },
+                PlayerType.AI: {
+                    Unit.HORSE_ARCHER: 2,
+                    Unit.ARCHER: 2,
+                    Unit.SPEARMAN: 2,
+                    Unit.SETTLER: 2,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.BULGARIA: EnumDataMapper(
+            {
+                PlayerType.ANY: {
+                    Unit.ARCHER: 4,
+                    Unit.SETTLER: 2,
+                    Unit.BULGARIAN_KONNIK: 5,
+                },
+                PlayerType.AI: {
+                    Unit.ARCHER: 1,
+                    Unit.SPEARMAN: 2,
+                    Unit.SETTLER: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.CORDOBA: EnumDataMapper(
+            {
+                PlayerType.ANY: {
+                    Unit.ARCHER: 3,
+                    Unit.SETTLER: 1,
+                    Unit.AXEMAN: 2,
+                    Unit.ISLAMIC_MISSIONARY: 3,
+                },
+                PlayerType.AI: {
+                    Unit.ARCHER: 4,
+                    Unit.SETTLER: 2,
+                    Unit.AXEMAN: 1,
+                    Unit.ISLAMIC_MISSIONARY: 2,
+                },
+                PlayerType.HUMAN: {
+                    Unit.HORSE_ARCHER: 3,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.VENECIA: EnumDataMapper(
+            {
+                PlayerType.ANY: {
+                    Unit.ARCHER: 2,
+                    Unit.SETTLER: 1,
+                    Unit.SPEARMAN: 1,
+                    Unit.CATHOLIC_MISSIONARY: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.BURGUNDY: EnumDataMapper(
+            {
+                PlayerType.ANY: {
+                    Unit.SETTLER: 1,
+                    Unit.ARCHER: 2,
+                    Unit.GUISARME: 2,
+                    Unit.AXEMAN: 2,
+                    Unit.CATHOLIC_MISSIONARY: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.GERMANY: EnumDataMapper(
+            {
+                PlayerType.ANY: {
+                    Unit.SETTLER: 2,
+                    Unit.AXEMAN: 2,
+                    Unit.SWORDSMAN: 2,
+                    Unit.GUISARME: 2,
+                    Unit.ARCHER: 2,
+                    Unit.CATHOLIC_MISSIONARY: 2,
+                },
+                PlayerType.AI: {
+                    Unit.ARCHER: 2,
+                    Unit.SETTLER: 1,
+                    Unit.CATHOLIC_MISSIONARY: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.NOVGOROD: EnumDataMapper(
+            {
+                PlayerType.ANY: {
+                    Unit.ARCHER: 3,
+                    Unit.SETTLER: 3,
+                    Unit.AXEMAN: 1,
+                    Unit.HORSE_ARCHER: 1,
+                },
+                PlayerType.AI: {
+                    Unit.ARCHER: 4,
+                    Unit.SETTLER: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.NORWAY: EnumDataMapper(
+            {
+                PlayerType.ANY: {
+                    Unit.ARCHER: 2,
+                    Unit.SETTLER: 2,
+                    Unit.VIKING_BERSERKER: 2,
+                    Unit.SWORDSMAN: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.KIEV: EnumDataMapper(
+            {
+                PlayerType.ANY: {
+                    Unit.ARCHER: 4,
+                    Unit.SETTLER: 3,
+                    Unit.AXEMAN: 2,
+                    Unit.HORSE_ARCHER: 3,
+                },
+                PlayerType.AI: {
+                    Unit.ARCHER: 3,
+                    Unit.SPEARMAN: 3,
+                    Unit.SETTLER: 2,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.HUNGARY: EnumDataMapper(
+            {
+                PlayerType.ANY: {
+                    Unit.ARCHER: 4,
+                    Unit.SETTLER: 3,
+                    Unit.AXEMAN: 2,
+                    Unit.HORSE_ARCHER: 4,
+                },
+                PlayerType.AI: {
+                    Unit.ARCHER: 2,
+                    Unit.SPEARMAN: 2,
+                    Unit.SETTLER: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.CASTILE: EnumDataMapper(
+            {
+                PlayerType.ANY: {
+                    Unit.CROSSBOWMAN: 4,
+                    Unit.SETTLER: 3,
+                    Unit.CATHOLIC_MISSIONARY: 2,
+                    Unit.SWORDSMAN: 2,
+                    Unit.LANCER: 2,
+                    Unit.CATAPULT: 1,
+                },
+                PlayerType.AI: {
+                    Unit.CROSSBOWMAN: 1,
+                    Unit.SWORDSMAN: 2,
+                    Unit.LANCER: 2,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.DENMARK: EnumDataMapper(
+            {
+                PlayerType.ANY: {
+                    Unit.CROSSBOWMAN: 2,
+                    Unit.SETTLER: 2,
+                    Unit.DENMARK_HUSKARL: 4,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.SCOTLAND: EnumDataMapper(
+            {
+                PlayerType.ANY: {
+                    Unit.CROSSBOWMAN: 3,
+                    Unit.SETTLER: 2,
+                    Unit.SWORDSMAN: 2,
+                    Unit.CATHOLIC_MISSIONARY: 2,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.POLAND: EnumDataMapper(
+            {
+                PlayerType.ANY: {
+                    Unit.ARCHER: 4,
+                    Unit.SETTLER: 3,
+                    Unit.AXEMAN: 2,
+                    Unit.SWORDSMAN: 2,
+                    Unit.CATHOLIC_MISSIONARY: 2,
+                },
+                PlayerType.AI: {
+                    Unit.CROSSBOWMAN: 4,
+                    Unit.SETTLER: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.GENOA: EnumDataMapper(
+            {
+                PlayerType.ANY: {
+                    Unit.CROSSBOWMAN: 4,
+                    Unit.SETTLER: 2,
+                    Unit.SWORDSMAN: 2,
+                    Unit.CATHOLIC_MISSIONARY: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.MOROCCO: EnumDataMapper(
+            {
+                PlayerType.ANY: {
+                    Unit.CROSSBOWMAN: 4,
+                    Unit.SETTLER: 2,
+                    Unit.MACEMAN: 2,
+                    Unit.HEAVY_LANCER: 2,
+                    Unit.ISLAMIC_MISSIONARY: 1,
+                },
+                PlayerType.AI: {
+                    Unit.CROSSBOWMAN: 2,
+                    Unit.SETTLER: 1,
+                    Unit.ISLAMIC_MISSIONARY: 2,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.ENGLAND: EnumDataMapper(
+            {
+                PlayerType.ANY: {
+                    Unit.CROSSBOWMAN: 4,
+                    Unit.SETTLER: 3,
+                    Unit.LONG_SWORDSMAN: 2,
+                    Unit.HEAVY_LANCER: 2,
+                    Unit.CATHOLIC_MISSIONARY: 2,
+                },
+                PlayerType.AI: {
+                    Unit.CROSSBOWMAN: 2,
+                    Unit.LONG_SWORDSMAN: 2,
+                    Unit.SETTLER: 1,
+                    Unit.CATHOLIC_MISSIONARY: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.PORTUGAL: EnumDataMapper(
+            {
+                PlayerType.ANY: {
+                    Unit.CROSSBOWMAN: 2,
+                    Unit.SETTLER: 2,
+                    Unit.PORTUGAL_FOOT_KNIGHT: 4,
+                    Unit.TREBUCHET: 2,
+                    Unit.GUISARME: 2,
+                    Unit.CATHOLIC_MISSIONARY: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.ARAGON: EnumDataMapper(
+            {
+                PlayerType.ANY: {
+                    Unit.CROSSBOWMAN: 3,
+                    Unit.SETTLER: 2,
+                    Unit.ARAGON_ALMOGAVAR: 5,
+                    Unit.CATHOLIC_MISSIONARY: 2,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.SWEDEN: EnumDataMapper(
+            {
+                PlayerType.ANY: {
+                    Unit.LONG_SWORDSMAN: 3,
+                    Unit.HEAVY_LANCER: 1,
+                    Unit.KNIGHT: 1,
+                    Unit.SETTLER: 3,
+                    Unit.CROSSBOWMAN: 2,
+                    Unit.ARBALEST: 2,
+                    Unit.CATHOLIC_MISSIONARY: 2,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.PRUSSIA: EnumDataMapper(
+            {
+                PlayerType.ANY: {
+                    Unit.CROSSBOWMAN: 3,
+                    Unit.SETTLER: 2,
+                    Unit.TEUTONIC: 3,
+                    Unit.GUISARME: 2,
+                    Unit.TREBUCHET: 2,
+                    Unit.CATHOLIC_MISSIONARY: 3,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.LITHUANIA: EnumDataMapper(
+            {
+                PlayerType.ANY: {
+                    Unit.CROSSBOWMAN: 4,
+                    Unit.SETTLER: 3,
+                    Unit.LITHUANIAN_BAJORAS: 5,
+                    Unit.GUISARME: 3,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.AUSTRIA: EnumDataMapper(
+            {
+                PlayerType.ANY: {
+                    Unit.ARBALEST: 4,
+                    Unit.SETTLER: 2,
+                    Unit.MACEMAN: 3,
+                    Unit.HEAVY_LANCER: 3,
+                    Unit.CROSSBOWMAN: 3,
+                    Unit.KNIGHT: 4,
+                    Unit.CATHOLIC_MISSIONARY: 2,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.OTTOMAN: EnumDataMapper(
+            {
+                PlayerType.ANY: {
+                    Unit.LONGBOWMAN: 5,
+                    Unit.SETTLER: 3,
+                    Unit.MACEMAN: 4,
+                    Unit.KNIGHT: 2,
+                    Unit.HORSE_ARCHER: 4,
+                    Unit.TREBUCHET: 2,
+                    Unit.TURKEY_GREAT_BOMBARD: 3,
+                    Unit.ISLAMIC_MISSIONARY: 4,
+                },
+                PlayerType.AI: {
+                    Unit.KNIGHT: 2,
+                    Unit.HORSE_ARCHER: 2,
+                    Unit.LONGBOWMAN: 3,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.MOSCOW: EnumDataMapper(
+            {
+                PlayerType.ANY: {
+                    Unit.ARBALEST: 5,
+                    Unit.SETTLER: 3,
+                    Unit.MOSCOW_BOYAR: 5,
+                    Unit.GUISARME: 4,
+                    Unit.MACEMAN: 3,
+                    Unit.ORTHODOX_MISSIONARY: 3,
+                },
+                PlayerType.AI: {
+                    Unit.MACEMAN: 2,
+                    Unit.SETTLER: 1,
+                    Unit.ARBALEST: 2,
+                    Unit.ORTHODOX_MISSIONARY: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.DUTCH: EnumDataMapper(
+            {
+                PlayerType.ANY: {
+                    Unit.MUSKETMAN: 8,
+                    Unit.SETTLER: 2,
+                    Unit.MACEMAN: 3,
+                    Unit.PROTESTANT_MISSIONARY: 2,
+                },
+            },
+            do_not_cast=True,
+        ),
+    }
+)
+
 CIV_SCENARIO_CONDITION_500AD = CivDataMapper(
     {
         Civ.BYZANTIUM: {

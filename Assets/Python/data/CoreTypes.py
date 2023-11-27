@@ -57,6 +57,12 @@ class Scenario(IntEnum):
     i1200AD = 1
 
 
+class PlayerType(IntEnum):
+    AI = 0
+    HUMAN = 1
+    ANY = 2
+
+
 class InitialCondition(IntEnum):
     UNITS = 0
     GOLD = 1
