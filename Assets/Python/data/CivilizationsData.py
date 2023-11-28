@@ -876,6 +876,299 @@ CIV_INITIAL_UNITS = CivDataMapper(
     }
 )
 
+CIV_ADDITIONAL_UNITS = CivDataMapper(
+    {
+        Civ.BYZANTIUM: None,
+        Civ.FRANCE: None,
+        Civ.ARABIA: EnumDataMapper(
+            {
+                PlayerType.AI: {
+                    Unit.HORSE_ARCHER: 4,
+                },
+                PlayerType.HUMAN: {
+                    Unit.HORSE_ARCHER: 2,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.BULGARIA: EnumDataMapper(
+            {
+                PlayerType.AI: {
+                    Unit.BULGARIAN_KONNIK: 2,
+                },
+                PlayerType.HUMAN: {
+                    Unit.BULGARIAN_KONNIK: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.CORDOBA: EnumDataMapper(
+            {
+                PlayerType.AI: {
+                    Unit.AXEMAN: 2,
+                },
+                PlayerType.HUMAN: {
+                    Unit.AXEMAN: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.VENECIA: EnumDataMapper(
+            {
+                PlayerType.AI: {
+                    Unit.CROSSBOWMAN: 3,
+                },
+                PlayerType.HUMAN: {
+                    Unit.CROSSBOWMAN: 2,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.BURGUNDY: EnumDataMapper(
+            {
+                PlayerType.AI: {
+                    Unit.LANCER: 3,
+                },
+                PlayerType.HUMAN: {
+                    Unit.LANCER: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.GERMANY: EnumDataMapper(
+            {
+                PlayerType.AI: {
+                    Unit.LANCER: 3,
+                },
+                PlayerType.HUMAN: {
+                    Unit.LANCER: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.NOVGOROD: EnumDataMapper(
+            {
+                PlayerType.AI: {
+                    Unit.CROSSBOWMAN: 3,
+                },
+                PlayerType.HUMAN: {
+                    Unit.CROSSBOWMAN: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.NORWAY: EnumDataMapper(
+            {
+                PlayerType.AI: {
+                    Unit.VIKING_BERSERKER: 3,
+                },
+                PlayerType.HUMAN: {
+                    Unit.VIKING_BERSERKER: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.KIEV: EnumDataMapper(
+            {
+                PlayerType.AI: {
+                    Unit.HORSE_ARCHER: 4,
+                },
+                PlayerType.HUMAN: {
+                    Unit.HORSE_ARCHER: 2,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.HUNGARY: EnumDataMapper(
+            {
+                PlayerType.AI: {
+                    Unit.HORSE_ARCHER: 4,
+                },
+                PlayerType.HUMAN: {
+                    Unit.HORSE_ARCHER: 2,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.CASTILE: EnumDataMapper(
+            {
+                PlayerType.AI: {
+                    Unit.LANCER: 4,
+                },
+                PlayerType.HUMAN: {
+                    Unit.LANCER: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.DENMARK: EnumDataMapper(
+            {
+                PlayerType.AI: {
+                    Unit.DENMARK_HUSKARL: 3,
+                },
+                PlayerType.HUMAN: {
+                    Unit.DENMARK_HUSKARL: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.SCOTLAND: EnumDataMapper(
+            {
+                PlayerType.AI: {
+                    Unit.AXEMAN: 4,
+                },
+                PlayerType.HUMAN: {
+                    Unit.AXEMAN: 2,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.POLAND: EnumDataMapper(
+            {
+                PlayerType.AI: {
+                    Unit.LANCER: 3,
+                },
+                PlayerType.HUMAN: {
+                    Unit.LANCER: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.GENOA: EnumDataMapper(
+            {
+                PlayerType.AI: {
+                    Unit.HEAVY_LANCER: 3,
+                },
+                PlayerType.HUMAN: {
+                    Unit.HEAVY_LANCER: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.MOROCCO: EnumDataMapper(
+            {
+                PlayerType.AI: {
+                    Unit.HEAVY_LANCER: 2,
+                },
+                PlayerType.HUMAN: {
+                    Unit.HEAVY_LANCER: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.ENGLAND: EnumDataMapper(
+            {
+                PlayerType.AI: {
+                    Unit.HEAVY_LANCER: 3,
+                },
+                PlayerType.HUMAN: {
+                    Unit.HEAVY_LANCER: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.PORTUGAL: EnumDataMapper(
+            {
+                PlayerType.AI: {
+                    Unit.PORTUGAL_FOOT_KNIGHT: 4,
+                },
+                PlayerType.HUMAN: {
+                    Unit.PORTUGAL_FOOT_KNIGHT: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.ARAGON: EnumDataMapper(
+            {
+                PlayerType.AI: {
+                    Unit.HEAVY_LANCER: 4,
+                },
+                PlayerType.HUMAN: {
+                    Unit.HEAVY_LANCER: 2,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.SWEDEN: EnumDataMapper(
+            {
+                PlayerType.AI: {
+                    Unit.HEAVY_LANCER: 4,
+                },
+                PlayerType.HUMAN: {
+                    Unit.HEAVY_LANCER: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.PRUSSIA: EnumDataMapper(
+            {
+                PlayerType.AI: {
+                    Unit.TEUTONIC: 3,
+                },
+                PlayerType.HUMAN: {
+                    Unit.TEUTONIC: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.LITHUANIA: EnumDataMapper(
+            {
+                PlayerType.AI: {
+                    Unit.LITHUANIAN_BAJORAS: 3,
+                },
+                PlayerType.HUMAN: {
+                    Unit.LITHUANIAN_BAJORAS: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.AUSTRIA: EnumDataMapper(
+            {
+                PlayerType.AI: {
+                    Unit.HEAVY_LANCER: 4,
+                },
+                PlayerType.HUMAN: {
+                    Unit.HEAVY_LANCER: 2,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.OTTOMAN: EnumDataMapper(
+            {
+                PlayerType.AI: {
+                    Unit.HEAVY_LANCER: 3,
+                },
+                PlayerType.HUMAN: {
+                    Unit.HEAVY_LANCER: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.MOSCOW: EnumDataMapper(
+            {
+                PlayerType.AI: {
+                    Unit.MOSCOW_BOYAR: 3,
+                },
+                PlayerType.HUMAN: {
+                    Unit.MOSCOW_BOYAR: 1,
+                },
+            },
+            do_not_cast=True,
+        ),
+        Civ.DUTCH: EnumDataMapper(
+            {
+                PlayerType.AI: {
+                    Unit.NETHERLANDS_GRENADIER: 4,
+                },
+                PlayerType.HUMAN: {
+                    Unit.NETHERLANDS_GRENADIER: 2,
+                },
+            },
+            do_not_cast=True,
+        ),
+    }
+)
+
 CIV_SCENARIO_CONDITION_500AD = CivDataMapper(
     {
         Civ.BYZANTIUM: {

@@ -1,4 +1,5 @@
 from CivilizationsData import (
+    CIV_ADDITIONAL_UNITS,
     CIV_AI_MODIFIERS,
     CIV_AI_REFORMATION_THRESHOLD,
     CIV_AI_STOP_BIRTH_THRESHOLD,
@@ -90,6 +91,7 @@ CIVILIZATIONS_BASE = (
     .attach("tech", CIV_INITIAL_TECH, key="initial")
     .attach("workers", CIV_INITIAL_WORKERS, key="initial")
     .attach("units", CIV_INITIAL_UNITS, key="initial")
+    .attach("additional_units", CIV_ADDITIONAL_UNITS, key="initial")
     .attach("provinces", CIV_EVENT_DRIVE_PROVINCES, key="event")
 )
 

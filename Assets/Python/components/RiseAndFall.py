@@ -2423,115 +2423,14 @@ class RiseAndFall:
 
     def createAdditionalUnits(self, iCiv, tPlot):
         # additional starting units if someone declares war on the civ during birth
-        iHuman = human()
-        # significant number of units for the AI
-        if iCiv != iHuman:
-            if iCiv == Civ.ARABIA.value:
-                utils.makeUnit(Unit.HORSE_ARCHER.value, iCiv, tPlot, 4)
-            elif iCiv == Civ.BULGARIA.value:
-                utils.makeUnit(Unit.BULGARIAN_KONNIK.value, iCiv, tPlot, 2)
-            elif iCiv == Civ.CORDOBA.value:
-                utils.makeUnit(Unit.AXEMAN.value, iCiv, tPlot, 2)
-            elif iCiv == Civ.VENECIA.value:
-                utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tPlot, 3)
-            elif iCiv == Civ.BURGUNDY.value:
-                utils.makeUnit(Unit.LANCER.value, iCiv, tPlot, 3)
-            elif iCiv == Civ.GERMANY.value:
-                utils.makeUnit(Unit.LANCER.value, iCiv, tPlot, 3)
-            elif iCiv == Civ.NOVGOROD.value:
-                utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tPlot, 3)
-            elif iCiv == Civ.NORWAY.value:
-                utils.makeUnit(Unit.VIKING_BERSERKER.value, iCiv, tPlot, 3)
-            elif iCiv == Civ.KIEV.value:
-                utils.makeUnit(Unit.HORSE_ARCHER.value, iCiv, tPlot, 4)
-            elif iCiv == Civ.HUNGARY.value:
-                utils.makeUnit(Unit.HORSE_ARCHER.value, iCiv, tPlot, 4)
-            elif iCiv == Civ.CASTILE.value:
-                utils.makeUnit(Unit.LANCER.value, iCiv, tPlot, 4)
-            elif iCiv == Civ.DENMARK.value:
-                utils.makeUnit(Unit.DENMARK_HUSKARL.value, iCiv, tPlot, 3)
-            elif iCiv == Civ.SCOTLAND.value:
-                utils.makeUnit(Unit.AXEMAN.value, iCiv, tPlot, 4)
-            elif iCiv == Civ.POLAND.value:
-                utils.makeUnit(Unit.LANCER.value, iCiv, tPlot, 3)
-            elif iCiv == Civ.GENOA.value:
-                utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 3)
-            elif iCiv == Civ.MOROCCO.value:
-                utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 2)
-            elif iCiv == Civ.ENGLAND.value:
-                utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 3)
-            elif iCiv == Civ.PORTUGAL.value:
-                utils.makeUnit(Unit.PORTUGAL_FOOT_KNIGHT.value, iCiv, tPlot, 4)
-            elif iCiv == Civ.ARAGON.value:
-                utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 4)
-            elif iCiv == Civ.SWEDEN.value:
-                utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 4)
-            elif iCiv == Civ.PRUSSIA.value:
-                utils.makeUnit(Unit.TEUTONIC.value, iCiv, tPlot, 3)
-            elif iCiv == Civ.LITHUANIA.value:
-                utils.makeUnit(Unit.LITHUANIAN_BAJORAS.value, iCiv, tPlot, 3)
-            elif iCiv == Civ.AUSTRIA.value:
-                utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 4)
-            elif iCiv == Civ.OTTOMAN.value:
-                utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 3)
-            elif iCiv == Civ.MOSCOW.value:
-                utils.makeUnit(Unit.MOSCOW_BOYAR.value, iCiv, tPlot, 3)
-            elif iCiv == Civ.DUTCH.value:
-                utils.makeUnit(Unit.NETHERLANDS_GRENADIER.value, iCiv, tPlot, 4)
-        # less for the human player
-        else:
-            if iCiv == Civ.ARABIA.value:
-                utils.makeUnit(Unit.HORSE_ARCHER.value, iCiv, tPlot, 2)
-            elif iCiv == Civ.BULGARIA.value:
-                utils.makeUnit(Unit.BULGARIAN_KONNIK.value, iCiv, tPlot, 1)
-            elif iCiv == Civ.CORDOBA.value:
-                utils.makeUnit(Unit.AXEMAN.value, iCiv, tPlot, 1)
-            elif iCiv == Civ.VENECIA.value:
-                utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tPlot, 2)
-            elif iCiv == Civ.BURGUNDY.value:
-                utils.makeUnit(Unit.LANCER.value, iCiv, tPlot, 1)
-            elif iCiv == Civ.GERMANY.value:
-                utils.makeUnit(Unit.LANCER.value, iCiv, tPlot, 1)
-            elif iCiv == Civ.NOVGOROD.value:
-                utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tPlot, 1)
-            elif iCiv == Civ.NORWAY.value:
-                utils.makeUnit(Unit.VIKING_BERSERKER.value, iCiv, tPlot, 1)
-            elif iCiv == Civ.KIEV.value:
-                utils.makeUnit(Unit.HORSE_ARCHER.value, iCiv, tPlot, 2)
-            elif iCiv == Civ.HUNGARY.value:
-                utils.makeUnit(Unit.HORSE_ARCHER.value, iCiv, tPlot, 2)
-            elif iCiv == Civ.CASTILE.value:
-                utils.makeUnit(Unit.LANCER.value, iCiv, tPlot, 1)
-            elif iCiv == Civ.DENMARK.value:
-                utils.makeUnit(Unit.DENMARK_HUSKARL.value, iCiv, tPlot, 1)
-            elif iCiv == Civ.SCOTLAND.value:
-                utils.makeUnit(Unit.AXEMAN.value, iCiv, tPlot, 2)
-            elif iCiv == Civ.POLAND.value:
-                utils.makeUnit(Unit.LANCER.value, iCiv, tPlot, 1)
-            elif iCiv == Civ.GENOA.value:
-                utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 1)
-            elif iCiv == Civ.MOROCCO.value:
-                utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 1)
-            elif iCiv == Civ.ENGLAND.value:
-                utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 1)
-            elif iCiv == Civ.PORTUGAL.value:
-                utils.makeUnit(Unit.PORTUGAL_FOOT_KNIGHT.value, iCiv, tPlot, 1)
-            elif iCiv == Civ.ARAGON.value:
-                utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 2)
-            elif iCiv == Civ.SWEDEN.value:
-                utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 1)
-            elif iCiv == Civ.PRUSSIA.value:
-                utils.makeUnit(Unit.TEUTONIC.value, iCiv, tPlot, 1)
-            elif iCiv == Civ.LITHUANIA.value:
-                utils.makeUnit(Unit.LITHUANIAN_BAJORAS.value, iCiv, tPlot, 1)
-            elif iCiv == Civ.AUSTRIA.value:
-                utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 2)
-            elif iCiv == Civ.OTTOMAN.value:
-                utils.makeUnit(Unit.HEAVY_LANCER.value, iCiv, tPlot, 1)
-            elif iCiv == Civ.MOSCOW.value:
-                utils.makeUnit(Unit.MOSCOW_BOYAR.value, iCiv, tPlot, 1)
-            elif iCiv == Civ.DUTCH.value:
-                utils.makeUnit(Unit.NETHERLANDS_GRENADIER.value, iCiv, tPlot, 2)
+        units = civilization(iCiv).initial.get("additional_units")
+        if units is not None:
+            if iCiv != human():
+                for unit, number in units.get(PlayerType.AI, {}).items():
+                    utils.makeUnit(unit.value, iCiv, tPlot, number)
+            else:
+                for unit, number in units.get(PlayerType.HUMAN, {}).items():
+                    utils.makeUnit(unit.value, iCiv, tPlot, number)
 
     def createStartingUnits(self, iCiv, tPlot):
         # set the provinces
@@ -2539,8 +2438,9 @@ class RiseAndFall:
 
         units = civilization(iCiv).initial.get("units")
         if units is not None:
-            for unit, number in units[PlayerType.ANY].items():
+            for unit, number in units.get(PlayerType.ANY, {}).items():
                 utils.makeUnit(unit.value, iCiv, tPlot, number)
+
             if iCiv != human():
                 for unit, number in units.get(PlayerType.AI, {}).items():
                     utils.makeUnit(unit.value, iCiv, tPlot, number)
