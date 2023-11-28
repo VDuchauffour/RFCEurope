@@ -303,7 +303,6 @@ tEnglandControl = [
 ]
 tPortugalControlI = [Province.AZORES.value, Province.CANARIES.value, Province.MADEIRA.value]
 tPortugalControlII = [Province.MOROCCO.value, Province.TETOUAN.value, Province.ORAN.value]
-# tLithuaniaControl = [ Province.LITHUANIA.value, Province.GREATER_POLAND.value, Province.LESSER_POLAND.value, Province.POMERANIA.value, Province.MASOVIA.value, Province.BREST.value, Province.SUVALKIJA.value, Province.LIVONIA.value, Province.NOVGOROD.value, Province.SMOLENSK.value, Province.POLOTSK.value, Province.MINSK.value, Province.CHERNIGOV.value, Province.PEREYASLAVL.value, Province.KIEV.value, Province.GALICJA.value, Province.SLOBODA.value ]
 tAustriaControl = [
     Province.HUNGARY.value,
     Province.UPPER_HUNGARY.value,
@@ -593,7 +592,6 @@ class Victory:
                             if teamCiv.isAVassal():
                                 continue
                             if teamCiv.canDeclareWar(pPlayer.getTeam()):
-                                # AI_getAttitude: ATTITUDE_FRIENDLY == 4, ATTITUDE_PLEASED == 3, ATTITUDE_CAUTIOUS == 2, ATTITUDE_ANNOYED == 1, ATTITUDE_FURIOUS == 0
                                 if pCiv.canContact(iPlayer) and not teamCiv.isAtWar(iPlayer):
                                     iModifier = 0
                                     # bigger chance for civs which hate you
