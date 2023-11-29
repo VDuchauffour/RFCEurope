@@ -68,27 +68,30 @@ class Civilization(Item):
 
     @property
     def player(self):
-        return player(self.id)
+        return player(self.key)
 
     @property
     def team(self):
-        return team(self.id)
+        return team(self.key)
 
     @property
     def teamtype(self):
-        return teamtype(self.id)
+        return teamtype(self.key)
 
     @property
     def name(self):
-        return self.player.getCivilizationShortDescription(0)
+        """Return the name of the civilization."""
+        return name(self.key)
 
     @property
     def fullname(self):
-        return self.player.getCivilizationDescription(0)
+        """Return the fullname of the civilization."""
+        return fullname(self.key)
 
     @property
     def adjective(self):
-        return self.player.getCivilizationAdjective(0)
+        """Return the adjective of the civilization."""
+        return adjective(self.key)
 
     def is_alive(self):
         """Return True if the civilization is alive."""
@@ -297,6 +300,21 @@ class CivilizationsFactory(BaseFactory):
     DATA_CLASS = CivDataMapper
     ITEM_CLASS = Civilization
     ITEM_COLLECTION_CLASS = Civilizations
+
+
+def name(identifier):
+    """Return the name of the civilization."""
+    return player(identifier).getCivilizationShortDescription(0)
+
+
+def fullname(identifier):
+    """Return the fullname of the civilization."""
+    return player(identifier).getCivilizationDescription(0)
+
+
+def adjective(identifier):
+    """Return the adjective of the civilization."""
+    return player(identifier).getCivilizationAdjective(0)
 
 
 def player(identifier=None):
