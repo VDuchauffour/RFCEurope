@@ -344,6 +344,10 @@ class ItemCollection(list):
         """Return a k sized list of items."""
         return self.copy(*choices(self, weights, k=k))
 
+    def shuffle(self):
+        """Return the object with the shuffled items."""
+        return self.copy(*random.shuffle(self))
+
     def sample(self, k):
         """Return a sample of the object."""
         return self.copy(*random.sample(self, k))
