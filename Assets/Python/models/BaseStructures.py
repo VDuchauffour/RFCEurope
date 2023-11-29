@@ -164,7 +164,7 @@ class Attributes(dict):
 
 
 class Item(object):
-    """A base class to handle a game item."""
+    """A base class to handle a game item backed with enum."""
 
     BASE_CLASS = None
 
@@ -199,14 +199,10 @@ class Item(object):
 
 
 class ItemCollection(list):
-    """A base class to handle a set of a specific type of `Item`."""
-
-    BASE_CLASS = None
+    """A base class to handle a set of game item."""
 
     def __init__(self, *items):
         for item in items:
-            if not isinstance(item, self.BASE_CLASS):
-                raise NotTypeExpectedError(self.BASE_CLASS, type(item))
             self.append(item)
 
     def len(self):
@@ -293,10 +289,6 @@ class ItemCollection(list):
             obj = obj.filter(lambda c: self._dropna(c, attribute))
         return obj
 
-    def ids(self):
-        """Return a list of identifiers."""
-        return self._apply(lambda c: c.id)
-
     def split(self, condition):
         """Return a tuple of 2 elements, the first corresponds to items where `condition` is True, the second not."""
         status = self._apply(condition)
@@ -318,11 +310,11 @@ class ItemCollection(list):
 
     def drop(self, *items):
         """Return the object without `items` given its keys, i.e. the relevant enum member."""
-        return self.filter(lambda x: x.key not in items)
+        return self.filter(lambda x: x not in items)
 
     def take(self, *items):
         """Return the object with only `items` given its keys, i.e. the relevant enum member."""
-        return self.filter(lambda x: x.key in items)
+        return self.filter(lambda x: x in items)
 
     def limit(self, n):
         """Return the first `n` items of the object."""
@@ -370,6 +362,30 @@ class ItemCollection(list):
     def combinations(self, repeat=2):
         """Return `repeat` length subsequences of the object."""
         return combinations(self, repeat)
+
+
+class EnumCollection(ItemCollection):
+    """A base class to handle a set of a specific type of `Item`."""
+
+    BASE_CLASS = None
+
+    def __init__(self, *items):
+        for item in items:
+            if not isinstance(item, self.BASE_CLASS):
+                raise NotTypeExpectedError(self.BASE_CLASS, type(item))
+            self.append(item)
+
+    def drop(self, *items):
+        """Return the object without `items` given its keys, i.e. the relevant enum member."""
+        return self.filter(lambda x: x.key not in items)
+
+    def take(self, *items):
+        """Return the object with only `items` given its keys, i.e. the relevant enum member."""
+        return self.filter(lambda x: x.key in items)
+
+    def ids(self):
+        """Return a list of identifiers."""
+        return self._apply(lambda c: c.id)
 
 
 class BaseFactory(object):

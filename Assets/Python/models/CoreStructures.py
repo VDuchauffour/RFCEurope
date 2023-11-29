@@ -2,7 +2,7 @@ from Consts import INDEPENDENT_CIVS
 from PyUtils import any
 import CoreFunctions as cf
 import CoreTypes
-from BaseStructures import BaseFactory, EnumDataMapper, Item, ItemCollection
+from BaseStructures import BaseFactory, EnumDataMapper, Item, EnumCollection, ItemCollection
 from Errors import NotTypeExpectedError
 
 try:
@@ -41,7 +41,7 @@ class Company(Item):
     BASE_CLASS = CoreTypes.Company
 
 
-class Companies(ItemCollection):
+class Companies(EnumCollection):
     """A simple class to handle a set of companies."""
 
     BASE_CLASS = Company
@@ -222,7 +222,7 @@ class Civilization(Item):
         player(id).changeGold(amount)
 
 
-class Civilizations(ItemCollection):
+class Civilizations(EnumCollection):
     """A simple class to handle a set of civilizations."""
 
     BASE_CLASS = Civilization
