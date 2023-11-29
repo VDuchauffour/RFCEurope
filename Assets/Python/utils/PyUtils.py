@@ -22,6 +22,11 @@ def any(iterable):
     return False
 
 
+def none(iterable):
+    """Return True if not any element of the iterable is true."""
+    return not any(iterable)
+
+
 def partial(func, *args, **keywords):
     """Return a new partial object which when called will behave like func called with the positional arguments args and keyword arguments keywords."""
 
