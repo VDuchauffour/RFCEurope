@@ -38,11 +38,6 @@ class Civ(IntEnum):
     BARBARIAN = 33
 
 
-class CivilizationProperty(IntEnum):
-    IS_PLAYABLE = 0
-    IS_MINOR = 1
-
-
 class CivGroup(IntEnum):
     EASTERN = 0
     CENTRAL = 1

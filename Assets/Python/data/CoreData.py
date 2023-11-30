@@ -12,7 +12,6 @@ from CivilizationsData import (
     CIV_INITIAL_WORKERS,
     CIV_LEADERS,
     CIV_HUMAN_MODIFIERS,
-    CIV_PROPERTIES,
     CIV_RELIGION_SPREADING_THRESHOLD,
     CIV_RELIGIOUS_TOLERANCE,
     CIV_RESPAWNING_THRESHOLD,
@@ -65,7 +64,6 @@ COMPANIES = (
 CIVILIZATIONS_BASE = (
     CivilizationsFactory()
     .add_key("initial", "location", "religion", "human", "ai", "misc", "date", "event", "scenario")
-    .attach("properties", CIV_PROPERTIES)
     .attach("leaders", CIV_LEADERS)
     .attach("respawning_threshold", CIV_RESPAWNING_THRESHOLD, key="location")
     .attach("capital", CIV_CAPITAL_LOCATIONS, key="location")

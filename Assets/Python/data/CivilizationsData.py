@@ -2,7 +2,6 @@ from BaseStructures import EnumDataMapper
 from CoreTypes import (
     Building,
     Civ,
-    CivilizationProperty,
     Leader,
     LeaderType,
     PlayerType,
@@ -3647,39 +3646,5 @@ CIV_LEADERS = CivDataMapper(
             LeaderType.EARLY: Leader.THE_POPE,
             LeaderType.LATE: None,
         },
-    }
-)
-
-CIV_PROPERTIES = CivDataMapper(
-    {
-        Civ.POPE: {
-            CivilizationProperty.IS_PLAYABLE: False,
-            CivilizationProperty.IS_MINOR: False,
-        },
-        Civ.INDEPENDENT: {
-            CivilizationProperty.IS_PLAYABLE: False,
-            CivilizationProperty.IS_MINOR: True,
-        },
-        Civ.INDEPENDENT_2: {
-            CivilizationProperty.IS_PLAYABLE: False,
-            CivilizationProperty.IS_MINOR: True,
-        },
-        Civ.INDEPENDENT_3: {
-            CivilizationProperty.IS_PLAYABLE: False,
-            CivilizationProperty.IS_MINOR: True,
-        },
-        Civ.INDEPENDENT_4: {
-            CivilizationProperty.IS_PLAYABLE: False,
-            CivilizationProperty.IS_MINOR: True,
-        },
-        Civ.BARBARIAN: {
-            CivilizationProperty.IS_PLAYABLE: False,
-            CivilizationProperty.IS_MINOR: True,
-        },
-    }
-).fill_missing_members(
-    {
-        CivilizationProperty.IS_PLAYABLE: True,
-        CivilizationProperty.IS_MINOR: False,
     }
 )
