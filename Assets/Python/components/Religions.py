@@ -208,7 +208,7 @@ class Religions:
         # Absinthe: Spreading religion in a couple preset dates
         if iGameTurn == DateTurn.i700AD - 2:
             # Spread Judaism to Toledo
-            self.spreadReligion(CITIES[City.TOLEDO].to_tuple(), Religion.JUDAISM.value)
+            self.spreadReligion(CITIES[City.TOLEDO], Religion.JUDAISM.value)
             # Spread Islam to a random city in Africa
             tCity = self.selectRandomCityRegion(tNorthAfrica, Religion.ISLAM.value)
             if tCity:
@@ -417,7 +417,7 @@ class Religions:
             if iGameTurn % iDivBy == 2 and percentage_chance(80, strict=True):
                 weights = []
                 iJerusalemOwner = (
-                    gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple()).getPlotCity().getOwner()
+                    gc.getMap().plot(*CITIES[City.JERUSALEM]).getPlotCity().getOwner()
                 )
                 for civ in catholic_civs:
                     iCatholicFaith = 0

@@ -449,7 +449,7 @@ class GameBalance:
 
         # set the religions and year of the great schism
         gc.setSchism(Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, DateTurn.i1053AD)
-        gc.setHoliestCity(*CITIES[City.JERUSALEM].to_tuple())
+        gc.setHoliestCity(*CITIES[City.JERUSALEM])
 
         # 3Miro: set the Jews as the minor Religion
         gc.setMinorReligion(Religion.JUDAISM.value)
@@ -457,9 +457,7 @@ class GameBalance:
 
         # 3Miro: Psycho AI cheat, this will make Ottoman AI think it can win battles vs Constantinople at 90/100 rate
         # 	it will also actually boost the Ottoman's odds (actually lower the defenders chance by 20 percent), but only when attacking Constantinople
-        gc.setPsychoAICheat(
-            Civ.OTTOMAN.value, *civilization(Civ.BYZANTIUM).location.capital.to_tuple()
-        )
+        gc.setPsychoAICheat(Civ.OTTOMAN.value, *civilization(Civ.BYZANTIUM).location.capital)
 
         # 3Miro: this sets rules on how players can Vassalize, first two parameters are the players (we should probably keep this symmetric)
         # 	if the third parameter is -1: cannot Vassalize, 0: has to satisfy a condition (default), 1 can Vassalize without conditions
@@ -533,21 +531,21 @@ class GameBalance:
             normal_exception_tiles = civ.location.area.normal.exception_tiles
             gc.setCoreNormal(
                 civ.id,
-                core_tile_min.x,
-                core_tile_min.y,
-                core_tile_max.x,
-                core_tile_max.y,
-                normal_tile_min.x,
-                normal_tile_min.y,
-                normal_tile_max.x,
-                normal_tile_max.y,
+                core_tile_min[0],
+                core_tile_min[1],
+                core_tile_max[0],
+                core_tile_max[1],
+                normal_tile_min[0],
+                normal_tile_min[1],
+                normal_tile_max[0],
+                normal_tile_max[1],
                 len(core_additional_tiles),
                 len(normal_exception_tiles),
             )
             for tile in core_additional_tiles:
-                gc.addCoreException(civ.id, *tile.to_tuple())
+                gc.addCoreException(civ.id, *tile)
             for tile in normal_exception_tiles:
-                gc.addNormalException(civ.id, *tile.to_tuple())
+                gc.addNormalException(civ.id, *tile)
 
         gc.setProsecutorReligions(Unit.PROSECUTOR.value, PROSECUTOR_UNITCLASS)
         gc.setSaintParameters(

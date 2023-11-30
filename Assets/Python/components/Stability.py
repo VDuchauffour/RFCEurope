@@ -324,7 +324,7 @@ class Stability:
 
         if (
             iOwner < civilizations().majors().len()
-            and (city.getX(), city.getY()) == civilization(iOwner).location.capital.to_tuple()
+            and (city.getX(), city.getY()) == civilization(iOwner).location.capital
         ):
             if iOwner == Civ.SCOTLAND.value:  # Scotland UP part 2
                 pOwner.changeStabilityBase(StabilityCategory.EXPANSION.value, -5)

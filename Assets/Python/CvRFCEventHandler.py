@@ -304,7 +304,7 @@ class CvRFCEventHandler:
         self.sta.onCityAcquired(owner, playerType, city, bConquest, bTrade)
 
         # 3Miro: Jerusalem's Golden Age Incentive
-        if tCity == CITIES[City.JERUSALEM].to_tuple():
+        if tCity == CITIES[City.JERUSALEM]:
             pPlayer = gc.getPlayer(playerType)
             if pPlayer.getStateReligion() == Religion.CATHOLICISM.value:
                 # Absinthe: interface message for the player
@@ -338,8 +338,8 @@ class CvRFCEventHandler:
             ):
                 pPlayer.initUnit(
                     Unit.HOLY_RELIC.value,
-                    CITIES[City.JERUSALEM].x,
-                    CITIES[City.JERUSALEM].y,
+                    CITIES[City.JERUSALEM][0],
+                    CITIES[City.JERUSALEM][1],
                     UnitAITypes.NO_UNITAI,
                     DirectionTypes.DIRECTION_SOUTH,
                 )

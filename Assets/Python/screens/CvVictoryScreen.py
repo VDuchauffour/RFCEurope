@@ -2345,7 +2345,7 @@ class CvVictoryScreen:
         # UHV2
         sText2 += self.getProvinceString(vic.tByzantiumControlII)
         # UHV3
-        tConstantinople = civilization(iPlayer).location.capital.to_tuple()
+        tConstantinople = civilization(iPlayer).location.capital
         pConstantinople = gc.getMap().plot(tConstantinople[0], tConstantinople[1]).getPlotCity()
         sConstantinopleName = localText.getText("TXT_KEY_CITY_NAME_CONSTANTINOPLE", ())
         if self.checkCity(tConstantinople, iPlayer, sConstantinopleName) == -1:
@@ -2413,7 +2413,7 @@ class CvVictoryScreen:
         # UHV1
         sText1 += self.getProvinceString(vic.tFrankControl)
         # UHV2
-        tPlot = CITIES[City.JERUSALEM].to_tuple()
+        tPlot = CITIES[City.JERUSALEM]
         sText2 += self.checkCity(
             tPlot, iPlayer, localText.getText("TXT_KEY_UHV_JERUSALEM", ()), True
         )
@@ -2493,7 +2493,7 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        tCordoba = civilization(iPlayer).location.capital.to_tuple()
+        tCordoba = civilization(iPlayer).location.capital
         pCordoba = gc.getMap().plot(tCordoba[0], tCordoba[1]).getPlotCity()
         sCordobaName = localText.getText("TXT_KEY_CITY_NAME_CORDOBA", ())
         if self.checkCity(tCordoba, iPlayer, sCordobaName) == -1:
@@ -2534,7 +2534,7 @@ class CvVictoryScreen:
         # UHV1
         sText1 += self.getProvinceString(vic.tVenetianControl)
         # UHV2
-        tConstantinople = civilization(Civ.BYZANTIUM).location.capital.to_tuple()
+        tConstantinople = civilization(Civ.BYZANTIUM).location.capital
         sText2 += self.checkCity(
             tConstantinople,
             iPlayer,
@@ -3221,7 +3221,7 @@ class CvVictoryScreen:
         )
         bColor = False
         iNumAccess = pPlayer.countCultBorderBonuses(Bonus.ACCESS.value)
-        tConstantinople = civilization(Civ.BYZANTIUM).location.capital.to_tuple()
+        tConstantinople = civilization(Civ.BYZANTIUM).location.capital
         iConstantinopleOwner = (
             gc.getMap().plot(tConstantinople[0], tConstantinople[1]).getPlotCity().getOwner()
         )
@@ -3266,7 +3266,7 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        tAmsterdam = civilization(iPlayer).location.capital.to_tuple()
+        tAmsterdam = civilization(iPlayer).location.capital
         pPlot = gc.getMap().plot(tAmsterdam[0], tAmsterdam[1])
         if (
             self.checkCity(

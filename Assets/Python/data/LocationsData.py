@@ -18,7 +18,6 @@ from BaseStructures import DataMapper, EnumDataMapper
 from CoreStructures import (
     CompanyDataMapper,
     ScenarioDataMapper,
-    Tile,
     CivDataMapper,
     parse_area_dict,
 )
@@ -132,7 +131,7 @@ CITIES = EnumDataMapper(
         City.REYKJAVIK: (2, 70),
         City.VALLETTA: (57, 14),
     }
-).apply(lambda x: Tile(x))
+)
 
 ALTERNATE_CITIES_LOCATION = EnumDataMapper(
     {
@@ -142,7 +141,7 @@ ALTERNATE_CITIES_LOCATION = EnumDataMapper(
         City.LUBECK: [(57, 53)],
         City.BRANDEBURG: [(60, 50)],
     }
-).applymap(lambda x: Tile(x))
+)
 
 INDY_CITIES_TO_BE_REDUCED = [
     City.INVERNESS,
@@ -610,7 +609,7 @@ LAKE_LOCATIONS = EnumDataMapper(
         Lake.LIMFJORDEN: [(55, 59)],
         Lake.TRONDHEIMFJORDEN: [(58, 71)],
     }
-).applymap(lambda x: Tile(x))
+)
 
 CIV_CAPITAL_LOCATIONS = CivDataMapper(
     {
@@ -676,7 +675,7 @@ CIV_NEW_CAPITAL_LOCATIONS = CivDataMapper(
             (62, 48),
         ],  # Berlin
     }
-).applymap(lambda x: Tile(x))
+)
 
 CIV_NEIGHBOURS = CivDataMapper(
     {

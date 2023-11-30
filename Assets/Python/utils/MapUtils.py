@@ -88,20 +88,16 @@ class RFCEMapManager:
             self.settler_map = deepcopy(SETTLERS_MAP)
             self.city_map = deepcopy(CITIES_MAP)
             self.war_map = deepcopy(WARS_MAP)
-            self.core_tile_min = [
-                c.location.area.core.tile_min.to_tuple() for c in civilizations().majors()
-            ]
-            self.core_tile_max = [
-                c.location.area.core.tile_max.to_tuple() for c in civilizations().majors()
-            ]
+            self.core_tile_min = [c.location.area.core.tile_min for c in civilizations().majors()]
+            self.core_tile_max = [c.location.area.core.tile_max for c in civilizations().majors()]
             self.core_additional_tiles = [
                 c.location.area.core.additional_tiles for c in civilizations().majors()
             ]
             self.normal_tile_min = [
-                c.location.area.normal.tile_min.to_tuple() for c in civilizations().majors()
+                c.location.area.normal.tile_min for c in civilizations().majors()
             ]
             self.normal_tile_max = [
-                c.location.area.normal.tile_max.to_tuple() for c in civilizations().majors()
+                c.location.area.normal.tile_max for c in civilizations().majors()
             ]
             self.normal_exception_tiles = [
                 c.location.area.normal.exception_tiles for c in civilizations().majors()
@@ -187,7 +183,7 @@ class RFCEMapManager:
         tiles = self.core_additional_tiles[iPlayer]
         for tile in tiles:
             if self.isInRectangle(tile, self.core_tile_min[iPlayer], self.core_tile_max[iPlayer]):
-                overlappingPlots.append(tile.to_tuple())
+                overlappingPlots.append(tile)
 
         for tile in overlappingPlots:
             self.removeCoreAreaAdditionalPlot(iPlayer, tile)
@@ -223,7 +219,7 @@ class RFCEMapManager:
             if not self.isInRectangle(
                 tile, self.normal_tile_min[iPlayer], self.normal_tile_max[iPlayer]
             ):
-                outsidePlots.append(tile.to_tuple())
+                outsidePlots.append(tile)
 
         for tile in outsidePlots:
             self.removeNormalAreaSubtractedPlot(iPlayer, tile)

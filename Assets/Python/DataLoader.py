@@ -40,6 +40,6 @@ def setup():
     # then we add the ID to the actual lake tiles
     for name, locations in LAKE_LOCATIONS.items():
         for location in locations:
-            plot = map.plot(*location.to_tuple())
+            plot = map.plot(*location)
             if plot:
                 plot.setLakeNameID(name.value)

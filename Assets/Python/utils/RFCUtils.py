@@ -1043,7 +1043,7 @@ class RFCUtils:
     def collapseImmune(self, iCiv):
         # 3MiroUP: Emperor
         if gc.hasUP(iCiv, UniquePower.NO_COLLAPSE_IN_CORE_AND_NORMAL_AREAS.value):
-            plot = gc.getMap().plot(*civilization(iCiv).location.capital.to_tuple())
+            plot = gc.getMap().plot(*civilization(iCiv).location.capital)
             if plot.isCity():
                 if plot.getOwner() == iCiv:
                     return True
@@ -1052,12 +1052,12 @@ class RFCUtils:
     def collapseImmuneCity(self, iCiv, x, y):
         # 3MiroUP: Emperor
         if gc.hasUP(iCiv, UniquePower.NO_COLLAPSE_IN_CORE_AND_NORMAL_AREAS.value):
-            plot = gc.getMap().plot(*civilization(iCiv).location.capital.to_tuple())
+            plot = gc.getMap().plot(*civilization(iCiv).location.capital)
             if plot.isCity():
                 if plot.getOwner() == iCiv:
                     tile_min = civilization(iCiv).location.area.core.tile_min
                     tile_max = civilization(iCiv).location.area.core.tile_max
-                    if tile_min.x <= x <= tile_max.x and tile_min.y <= y <= tile_max.y:
+                    if tile_min[0] <= x <= tile_max[0] and tile_min[1] <= y <= tile_max[1]:
                         return True
         return False
 
@@ -1142,7 +1142,7 @@ class RFCUtils:
         # base chance to work: about 50-80%, based on faith:
         iChance = 50 + pPlayer.getFaith() / 3
         # lower chance for purging any religion from Jerusalem:
-        if (iPlotX, iPlotY) == CITIES[City.JERUSALEM].to_tuple():
+        if (iPlotX, iPlotY) == CITIES[City.JERUSALEM]:
             iChance -= 24
         # lower chance if the city has the chosen religion's buildings/wonders:
         iBuildingChanceReduction = min(24, len(lReligionBuilding) * 4)

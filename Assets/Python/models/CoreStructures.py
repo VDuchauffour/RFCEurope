@@ -2,7 +2,7 @@ from Consts import INDEPENDENT_CIVS
 from PyUtils import any
 import CoreFunctions as cf
 import CoreTypes
-from BaseStructures import BaseFactory, EnumDataMapper, Item, EnumCollection, ItemCollection
+from BaseStructures import BaseFactory, EnumDataMapper, Item, EnumCollection
 from Errors import NotTypeExpectedError
 
 try:
@@ -430,168 +430,11 @@ def period(identifier):
     return None
 
 
-class Tile(object):
-    """class to handle a tile location."""
-
-    def __init__(self, coordinates, **kwargs):
-        if not isinstance(coordinates, tuple):
-            raise NotTypeExpectedError(tuple, type(coordinates))
-        self.coordinates = coordinates
-
-        for name, value in kwargs.items():
-            setattr(self, name, value)
-
-    @property
-    def x(self):
-        return self.coordinates[0]
-
-    @property
-    def y(self):
-        return self.coordinates[1]
-
-    def to_tuple(self):
-        return (self.x, self.y)
-
-    def __repr__(self):
-        return self.__class__.__name__ + "(" + str(self.coordinates) + ")"
-
-    def __eq__(self, other):
-        if other is None:
-            return False
-        if not isinstance(other, type(self)):
-            return False
-        return self.coordinates == other.coordinates
-
-    def __ne__(self, other):
-        return not self.__eq__(other)
-
-    def __gt__(self, other):
-        if not isinstance(other, type(self)):
-            raise TypeError("Cannot compare '%s' and '%s'" % (type(self), type(other)))
-        if self.x > other.x or self.y > other.y:
-            return True
-        return False
-
-    def __ge__(self, other):
-        if not isinstance(other, type(self)):
-            raise TypeError("Cannot compare '%s' and '%s'" % (type(self), type(other)))
-        if self.x >= other.x or self.y >= other.y:
-            return True
-        return False
-
-    def __lt__(self, other):
-        if not isinstance(other, type(self)):
-            raise TypeError("Cannot compare '%s' and '%s'" % (type(self), type(other)))
-        if self.x < other.x or self.y < other.y:
-            return True
-        return False
-
-    def __le__(self, other):
-        if not isinstance(other, type(self)):
-            raise TypeError("Cannot compare '%s' and '%s'" % (type(self), type(other)))
-        if self.x <= other.x or self.y <= other.y:
-            return True
-        return False
-
-
-class Tiles(ItemCollection):
-    """Class to handle a collection of tile."""
-
-    BASE_CLASS = Tile
-
-
-class TilesFactory:
-    """A factory to generate `Tiles`."""
-
-    def __init__(self, x_max, y_max):
-        self._results = Tiles()
-        self.x_max = x_max
-        self.y_max = y_max
-
-    def import_tiles(self, tiles):
-        if not isinstance(tiles, Tiles):
-            raise NotTypeExpectedError(Tiles, type(tiles))
-        self._results = tiles
-        return self
-
-    def get_results(self):
-        return self._results
-
-    def rectangle(self, tile_min, tile_max):
-        self._results += [
-            Tile((x, y))
-            for x in range(tile_min.x, tile_max.x + 1)
-            for y in range(tile_min.y, tile_max.y + 1)
-            if 0 <= x < self.x_max and 0 <= y < self.y_max
-        ]
-        return self
-
-    def extend(self, additional_tiles):
-        if additional_tiles is not None:
-            self._results += additional_tiles
-        return self
-
-    def substract(self, exception_tiles):
-        if exception_tiles is not None:
-            self._results = list(filter(lambda t: t not in exception_tiles, self._results))
-        return self
-
-    def normalize(self):
-        _data = Tiles()
-        for data in self._results:
-            if data not in _data:
-                _data.append(data)
-        self._results = _data
-        return self
-
-    def attach_area(self, area):
-        if not isinstance(area, CoreTypes.AreaType):
-            raise NotTypeExpectedError(CoreTypes.AreaType, type(area))
-        for tile in self._results:
-            tile.set_area(area)
-        return self
-
-
-def normalize_tiles(tiles):
-    """Merge multiple `Tiles` objects into a single one."""
-
-    _tiles = Tiles()
-    if not isinstance(tiles, Tiles):
-        raise NotTypeExpectedError(Tiles, type(tiles))
-    for tile in tiles:
-        if not isinstance(tile, Tile):
-            raise NotTypeExpectedError(Tile, type(tile))
-        if tile not in _tiles:
-            _tiles.append(tile)
-    return _tiles
-
-
-def concat_tiles(*tiles):
-    """Concat multiple `Tiles` objects into a single one."""
-
-    _tiles = Tiles()
-    for obj in tiles:
-        if not isinstance(obj, Tiles):
-            raise NotTypeExpectedError(Tiles, type(obj))
-        _tiles += obj
-    return _tiles
-
-
 def parse_area_dict(data):
     """Parse a dict of area properties."""
-    if data.get(CoreTypes.Area.ADDITIONAL_TILES) is not None:
-        add_tiles = [Tile(t) for t in data[CoreTypes.Area.ADDITIONAL_TILES]]
-    else:
-        add_tiles = []
-
-    if data.get(CoreTypes.Area.EXCEPTION_TILES) is not None:
-        exception_tiles = [Tile(t) for t in data[CoreTypes.Area.EXCEPTION_TILES]]
-    else:
-        exception_tiles = []
-
     return {
-        CoreTypes.Area.TILE_MIN: Tile(data[CoreTypes.Area.TILE_MIN]),
-        CoreTypes.Area.TILE_MAX: Tile(data[CoreTypes.Area.TILE_MAX]),
-        CoreTypes.Area.ADDITIONAL_TILES: add_tiles,
-        CoreTypes.Area.EXCEPTION_TILES: exception_tiles,
+        CoreTypes.Area.TILE_MIN: data[CoreTypes.Area.TILE_MIN],
+        CoreTypes.Area.TILE_MAX: data[CoreTypes.Area.TILE_MAX],
+        CoreTypes.Area.ADDITIONAL_TILES: data.get(CoreTypes.Area.ADDITIONAL_TILES, []),
+        CoreTypes.Area.EXCEPTION_TILES: data.get(CoreTypes.Area.EXCEPTION_TILES, []),
     }

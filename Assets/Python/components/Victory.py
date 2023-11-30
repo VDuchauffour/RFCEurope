@@ -1071,7 +1071,7 @@ class Victory:
         # UHV 3: Make Constantinople the largest and most cultured city while being the richest empire in the world in 1453
         elif iGameTurn == DateTurn.i1453AD:
             if self.isPossibleUHV(Civ.BYZANTIUM.value, 2, True):
-                x, y = CIV_CAPITAL_LOCATIONS[Civ.BYZANTIUM].to_tuple()
+                x, y = CIV_CAPITAL_LOCATIONS[Civ.BYZANTIUM]
                 iGold = player(Civ.BYZANTIUM).getGold()
                 bMost = True
                 for iCiv in civilizations().majors().ids():
@@ -1101,7 +1101,7 @@ class Victory:
         # UHV 2: Control Jerusalem in 1291
         elif iGameTurn == DateTurn.i1291AD:
             if self.isPossibleUHV(Civ.FRANCE.value, 1, True):
-                pJPlot = gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple())
+                pJPlot = gc.getMap().plot(*CITIES[City.JERUSALEM])
                 if pJPlot.isCity():
                     if pJPlot.getPlotCity().getOwner() == Civ.FRANCE.value:
                         self.wonUHV(Civ.FRANCE.value, 1)
@@ -1171,7 +1171,7 @@ class Victory:
         # UHV 1: Make Cordoba the largest city in the world in 961
         if iGameTurn == DateTurn.i961AD:
             if self.isPossibleUHV(Civ.CORDOBA.value, 0, True):
-                x, y = CIV_CAPITAL_LOCATIONS[Civ.CORDOBA].to_tuple()
+                x, y = CIV_CAPITAL_LOCATIONS[Civ.CORDOBA]
                 if (
                     gc.isLargestCity(x, y)
                     and gc.getMap().plot(x, y).getPlotCity().getOwner() == Civ.CORDOBA.value
@@ -1982,10 +1982,7 @@ class Victory:
             if player(Civ.MOSCOW).countCultBorderBonuses(Bonus.ACCESS.value) > 0:
                 self.wonUHV(Civ.MOSCOW.value, 2)
             elif (
-                gc.getMap()
-                .plot(*CIV_CAPITAL_LOCATIONS[Civ.BYZANTIUM].to_tuple())
-                .getPlotCity()
-                .getOwner()
+                gc.getMap().plot(*CIV_CAPITAL_LOCATIONS[Civ.BYZANTIUM]).getPlotCity().getOwner()
                 == Civ.MOSCOW.value
             ):
                 self.wonUHV(Civ.MOSCOW.value, 2)
@@ -2024,7 +2021,7 @@ class Victory:
 
         # UHV 1: Settle 5 Great Merchants in Amsterdam by 1750
         if self.isPossibleUHV(Civ.DUTCH.value, 0, True):
-            pPlot = gc.getMap().plot(*CIV_CAPITAL_LOCATIONS[Civ.DUTCH].to_tuple())
+            pPlot = gc.getMap().plot(*CIV_CAPITAL_LOCATIONS[Civ.DUTCH])
             if pPlot.isCity():
                 city = pPlot.getPlotCity()
                 if (

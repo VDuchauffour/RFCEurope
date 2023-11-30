@@ -56,7 +56,7 @@ class Companies:
             iMaxCompanies = 0
             # do not dissolve the Templars while Jerusalem is under Catholic control
             if iCompany == Company.TEMPLARS.value:
-                plot = gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple())
+                plot = gc.getMap().plot(*CITIES[City.JERUSALEM])
                 if plot.isCity():
                     if (
                         gc.getPlayer(plot.getPlotCity().getOwner()).getStateReligion()
@@ -360,7 +360,7 @@ class Companies:
                     iValue += 2
 
         # additional bonus for the city of Jerusalem
-        if (city.getX(), city.getY()) == CITIES[City.JERUSALEM].to_tuple():
+        if (city.getX(), city.getY()) == CITIES[City.JERUSALEM]:
             if iCompany in [
                 Company.HOSPITALLERS.value,
                 Company.TEMPLARS.value,

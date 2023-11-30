@@ -396,10 +396,10 @@ class Crusades:
     def deviateNewTargetPopup(self):
         lTargetList = []
         lTargetList.append(
-            gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple()).getPlotCity().getName()
+            gc.getMap().plot(*CITIES[City.JERUSALEM]).getPlotCity().getName()
             + " ("
             + gc.getPlayer(
-                gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple()).getPlotCity().getOwner()
+                gc.getMap().plot(*CITIES[City.JERUSALEM]).getPlotCity().getOwner()
             ).getCivilizationAdjective(0)
             + ")"
         )
@@ -549,7 +549,7 @@ class Crusades:
 
     def checkToStart(self, iGameTurn):
         # if Jerusalem is Islamic or Pagan, Crusade has been initialized and it has been at least 5 turns since the last crusade and there are any Catholics, begin crusade
-        pJPlot = gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple())
+        pJPlot = gc.getMap().plot(*CITIES[City.JERUSALEM])
         for i in range(NUM_CRUSADES):  # check the Crusades
             if self.getCrusadeInit(i) == -1:  # if this one is to start
                 if (
@@ -704,13 +704,13 @@ class Crusades:
             self.setCrusadePower(self.getCrusadePower() / 2)
             self.deviateNewTargetPopup()
         else:
-            self.setTarget(*CITIES[City.JERUSALEM].to_tuple())
+            self.setTarget(*CITIES[City.JERUSALEM])
             self.startCrusade()
 
     def eventApply7620(self, popupReturn):
         iDecision = popupReturn.getButtonClicked()
         if iDecision == 0:
-            self.setTarget(*CITIES[City.JERUSALEM].to_tuple())
+            self.setTarget(*CITIES[City.JERUSALEM])
             self.startCrusade()
             return
         iTargets = 0
@@ -783,7 +783,7 @@ class Crusades:
 
     def computeVotingPower(self, iGameTurn):
         iTmJerusalem = gc.getPlayer(
-            gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple()).getPlotCity().getOwner()
+            gc.getMap().plot(*CITIES[City.JERUSALEM]).getPlotCity().getOwner()
         ).getTeam()
         for iPlayer in civilizations().majors().ids():
             pPlayer = gc.getPlayer(iPlayer)
@@ -1119,7 +1119,7 @@ class Crusades:
             )
 
         # not yet, check to see for deviations
-        # pJPlot = gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple())
+        # pJPlot = gc.getMap().plot(*CITIES[City.JERUSALEM])
         # gc.getTeam( gc.getPlayer( self.getLeader() ) ).declareWar( pJPlot.getPlotCity().getOwner(), True, -1 )
 
     def decideTheRichestCatholic(self, iActiveCrusade):
@@ -1161,7 +1161,7 @@ class Crusades:
                 if not pTeamRichest.isVassal(iTeamByzantium):
                     # Only if Byzantium holds Constantinople and not a vassal
                     pConstantinoplePlot = gc.getMap().plot(
-                        *civilization(Civ.BYZANTIUM).location.capital.to_tuple()
+                        *civilization(Civ.BYZANTIUM).location.capital
                     )
                     pConstantinopleCity = pConstantinoplePlot.getPlotCity()
                     iConstantinopleOwner = pConstantinopleCity.getOwner()
@@ -1198,7 +1198,7 @@ class Crusades:
                         bStolen = True
 
         if not bStolen:
-            self.setTarget(*CITIES[City.JERUSALEM].to_tuple())
+            self.setTarget(*CITIES[City.JERUSALEM])
 
         self.startCrusade()
 
@@ -1306,8 +1306,8 @@ class Crusades:
             return
 
         # if the target is Jerusalem, and in the mean time it has been captured by an Orthodox or Catholic player (or the owner of Jerusalem converted to a Christian religion), cancel the Crusade
-        if (iTX, iTY) == CITIES[City.JERUSALEM].to_tuple():
-            pPlot = gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple())
+        if (iTX, iTY) == CITIES[City.JERUSALEM]:
+            pPlot = gc.getMap().plot(*CITIES[City.JERUSALEM])
             if pPlot.isCity():
                 iVictim = pPlot.getPlotCity().getOwner()
                 if iVictim < civilizations().majors().len():
@@ -1417,11 +1417,11 @@ class Crusades:
         teamLeader = gc.getTeam(gc.getPlayer(iLeader).getTeam())
         iTX, iTY = self.getTargetPlot()
         # if the target is Jerusalem
-        if (iTX, iTY) == CITIES[City.JERUSALEM].to_tuple():
+        if (iTX, iTY) == CITIES[City.JERUSALEM]:
             iRougeModifier = 100
             # human player should always face powerful units when defending Jerusalem
             iHuman = human()
-            pPlot = gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple())
+            pPlot = gc.getMap().plot(*CITIES[City.JERUSALEM])
             iVictim = pPlot.getPlotCity().getOwner()
             if teamLeader.isHasTech(Technology.CHIVALRY.value) or iVictim == iHuman:
                 self.makeUnit(Unit.BURGUNDIAN_PALADIN.value, iLeader, iActiveCrusade, tPlot, 1)
@@ -1467,7 +1467,7 @@ class Crusades:
         # Absinthe: not all units should arrive near Jerusalem
         # 			later Crusades have more units in the pool, so they should have bigger reduction
         iHuman = human()
-        pPlot = gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple())
+        pPlot = gc.getMap().plot(*CITIES[City.JERUSALEM])
         iVictim = pPlot.getPlotCity().getOwner()
         # Absinthe: this reduction is very significant for an AI-controlled Jerusalem, but Crusades should remain an increasing threat to the human player
         if iVictim != iHuman:
@@ -1636,7 +1636,7 @@ class Crusades:
                     # the leader already got exp points through the Crusade itself
                     if iCiv == iPlayer:
                         # if Jerusalem is held by a Christian civ (maybe some cities in the Levant should be enough) (maybe there should be a unit in the Levant from this Crusade)
-                        pCity = gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple()).getPlotCity()
+                        pCity = gc.getMap().plot(*CITIES[City.JERUSALEM]).getPlotCity()
                         pPlayer = gc.getPlayer(pCity.getOwner())
                         if pPlayer.getStateReligion() == Religion.CATHOLICISM.value:
                             pCiv.changeFaith(1 * iUnitNumber)
@@ -1703,7 +1703,7 @@ class Crusades:
                             )
                         pCiv.changeCombatExperience(12 * iUnitNumber)
                         # if Jerusalem is held by a Christian civ (maybe some cities in the Levant should be enough) (maybe there should be a unit in the Levant from this Crusade)
-                        pCity = gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple()).getPlotCity()
+                        pCity = gc.getMap().plot(*CITIES[City.JERUSALEM]).getPlotCity()
                         pPlayer = gc.getPlayer(pCity.getOwner())
                         if pPlayer.getStateReligion() == Religion.CATHOLICISM.value:
                             pCiv.changeFaith(1 * iUnitNumber)
@@ -1761,14 +1761,14 @@ class Crusades:
         if not self.hasSucceeded():
             pPlayer.changeGoldenAgeTurns(gc.getPlayer(iPlayer).getGoldenAgeLength())
             self.setSucceeded()
-            for (x, y) in utils.surroundingPlots(CITIES[City.JERUSALEM].to_tuple()):
+            for (x, y) in utils.surroundingPlots(CITIES[City.JERUSALEM]):
                 pPlot = gc.getMap().plot(x, y)
                 utils.convertPlotCulture(pPlot, iPlayer, 100, False)
 
     # Absinthe: pilgrims in Jerusalem if it's held by a Catholic civ
     def checkPlayerTurn(self, iGameTurn, iPlayer):
         if iGameTurn % 3 == 1:  # checked every 3rd turn
-            pCity = gc.getMap().plot(*CITIES[City.JERUSALEM].to_tuple()).getPlotCity()
+            pCity = gc.getMap().plot(*CITIES[City.JERUSALEM]).getPlotCity()
             if pCity.getOwner() == iPlayer:
                 pPlayer = gc.getPlayer(iPlayer)
                 if pPlayer.getStateReligion() == Religion.CATHOLICISM.value:
