@@ -3,7 +3,7 @@
 from random import choice
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from CoreStructures import WORLD_HEIGHT, WORLD_WIDTH, human, player, team, teamtype
+from CoreStructures import human, player, team, teamtype
 from CoreTypes import (
     City,
     Civ,
@@ -33,6 +33,7 @@ from MiscData import (
 from CoreFunctions import get_religion_by_id
 from CoreTypes import ProvinceType
 from ProvinceMapData import PROVINCES_MAP
+from Consts import WORLD_HEIGHT, WORLD_WIDTH
 
 # globals
 gc = CyGlobalContext()

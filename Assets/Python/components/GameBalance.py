@@ -1,6 +1,6 @@
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from CoreStructures import WORLD_HEIGHT, WORLD_WIDTH
+from Consts import WORLD_WIDTH, WORLD_HEIGHT
 from CoreTypes import (
     Modifier,
     Building,

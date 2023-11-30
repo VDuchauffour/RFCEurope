@@ -9,7 +9,7 @@
 
 from CvPythonExtensions import *
 from CoreFunctions import get_civ_by_id
-from CoreStructures import WORLD_HEIGHT, human, player, team
+from CoreStructures import human, player, team
 import CvUtil
 import CvScreensInterface
 import CvDebugTools
@@ -27,6 +27,7 @@ from MiscData import MessageData
 from CoreData import civilizations, civilization
 from CityMapData import CITIES_MAP
 from CoreTypes import Building, Wonder, Promotion, Project, Improvement, Feature, Unit, Bonus
+from Consts import WORLD_HEIGHT
 
 utils = RFCUtils.RFCUtils()
 balance = GameBalance.GameBalance()

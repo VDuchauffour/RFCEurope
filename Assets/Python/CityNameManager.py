@@ -4,7 +4,7 @@ from CvPythonExtensions import *
 from CoreData import civilizations
 from CityMapData import CITIES_MAP
 from CoreFunctions import get_civ_by_id
-from CoreStructures import WORLD_HEIGHT
+from Consts import WORLD_HEIGHT
 
 gc = CyGlobalContext()
 

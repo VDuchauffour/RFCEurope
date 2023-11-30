@@ -4,7 +4,7 @@ from copy import deepcopy
 from CvPythonExtensions import *
 from CoreData import civilizations
 from CoreFunctions import get_civ_by_id
-from CoreStructures import WORLD_WIDTH, WORLD_HEIGHT
+from Consts import WORLD_HEIGHT, WORLD_WIDTH
 import CvScreenEnums
 from ProvinceMapData import PROVINCES_MAP
 from SettlerMapData import SETTLERS_MAP
