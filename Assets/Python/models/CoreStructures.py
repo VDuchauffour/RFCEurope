@@ -1,3 +1,4 @@
+from Consts import INDEPENDENT_CIVS
 from PyUtils import any
 import CoreFunctions as cf
 import CoreTypes
@@ -104,6 +105,26 @@ class Civilization(Item):
     def is_existing(self):
         """Return True if the civilization is alive and have at least one city."""
         return self.player.isExisting()
+
+    def is_main(self):
+        """Return True if it's a main civilization, i.e. not minor and playable."""
+        return is_main_civ(self)
+
+    def is_major(self):
+        """Return True if it's a major civilization, i.e. not minor ones (all playable and non-playable civs like The Pope)."""
+        return is_major_civ(self)
+
+    def is_minor(self):
+        """Return True if it's a minor civilization, i.e. minor and not playable civs like independents and barbarian."""
+        return is_minor_civ(self)
+
+    def is_independent(self):
+        """Return True if it's a non-playable independent civilization."""
+        return is_independent_civ(self)
+
+    def is_barbarian(self):
+        """Return True if it's the barbarian."""
+        return is_barbarian_civ(self)
 
     def state_religion(self):
         """Return state religion of the civilization."""
@@ -228,23 +249,23 @@ class Civilizations(ItemCollection):
 
     def main(self):
         """Return main civilizations, i.e. not minor and playable."""
-        return self.filter(lambda c: c.properties.is_playable and not c.properties.is_minor)
+        return self.filter(lambda c: c.is_main())
 
     def majors(self):
         """Return major civilizations, i.e. not minor ones (all playable and non-playable civs like The Pope)."""
-        return self.filter(lambda c: not c.properties.is_minor)
+        return self.filter(lambda c: c.is_major())
 
     def minors(self):
         """Return minor civilizations, i.e. minor and not playable civs like independents and barbarian."""
-        return self.filter(lambda c: c.properties.is_minor and not c.properties.is_playable)
+        return self.filter(lambda c: c.is_minor())
 
     def independents(self):
         """Return independents civilizations."""
-        return self.filter(lambda c: "INDEPENDENT" in c.id_name)
+        return self.filter(lambda c: c.is_independent())
 
     def barbarian(self):
         """Return the barbarian civilization."""
-        return self.take(CoreTypes.Civ.BARBARIAN)
+        return self.filter(lambda c: c.is_barbarian())
 
     def christian(self):
         """Retun all christian civilizations."""
@@ -378,6 +399,31 @@ def team(identifier=None):
 def human():
     """Return ID of the human player."""
     return gc.getGame().getActivePlayer()
+
+
+def is_main_civ(identifier):
+    """Return True if it's a main civilization, i.e. not minor and playable."""
+    return player(identifier).isPlayable()
+
+
+def is_major_civ(identifier):
+    """Return True if it's a major civilization, i.e. not minor ones (all playable and non-playable civs like The Pope)."""
+    return not is_minor_civ(identifier)
+
+
+def is_minor_civ(identifier):
+    """Return True if it's a minor civilization, i.e. minor and not playable civs like independents and barbarian."""
+    return is_barbarian_civ(identifier) or is_independent_civ(identifier)
+
+
+def is_independent_civ(identifier):
+    """Return True if it's a non-playable independent civilization."""
+    return cf.get_civ_by_id(player(identifier).getID()) in INDEPENDENT_CIVS
+
+
+def is_barbarian_civ(identifier):
+    """Return True if it's the barbarian."""
+    return player(identifier).isBarbarian()
 
 
 def period(identifier):

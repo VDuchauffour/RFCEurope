@@ -1,3 +1,4 @@
+from Consts import MINOR_CIVS
 from CoreTypes import (
     AreaType,
     City,
@@ -22,14 +23,6 @@ from CoreStructures import (
     parse_area_dict,
 )
 from TimelineData import DateTurn
-
-MINOR_CIVS = (
-    Civ.INDEPENDENT,
-    Civ.INDEPENDENT_2,
-    Civ.INDEPENDENT_3,
-    Civ.INDEPENDENT_4,
-    Civ.BARBARIAN,
-)
 
 CITIES = EnumDataMapper(
     {
