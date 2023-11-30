@@ -1842,7 +1842,7 @@ class Victory:
             )
             player(Civ.LITHUANIA).setUHVCounter(0, iCulture)
             if self.isPossibleUHV(Civ.LITHUANIA.value, 0, True):
-                if not civilization(Civ.LITHUANIA).has_a_state_religion():
+                if civilization(Civ.LITHUANIA).has_a_state_religion():
                     self.lostUHV(Civ.LITHUANIA.value, 0)
                 else:
                     if iCulture >= 2500:
