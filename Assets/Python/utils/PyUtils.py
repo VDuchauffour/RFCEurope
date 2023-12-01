@@ -1,9 +1,17 @@
 from bisect import bisect
 from itertools import repeat
 import operator
-from random import choice, randint, random
+from random import choice, random
 
 from Errors import NotTypeExpectedError
+
+try:
+    from CvPythonExtensions import CyGlobalContext
+
+    gc = CyGlobalContext()
+
+except ImportError:
+    gc = None
 
 
 def all(iterable):
@@ -102,7 +110,7 @@ def rand(left, right=None):
     if right is None:
         right = left
         left = 0
-    return randint(left, right)
+    return left + gc.getGame().getSorenRandNum(right - left, "random number")
 
 
 def percentage():
