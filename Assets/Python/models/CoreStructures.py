@@ -2,16 +2,50 @@ from Consts import INDEPENDENT_CIVS
 from CoreFunctions import get_civ_by_id, religion
 from PyUtils import any
 import CoreTypes
-from BaseStructures import BaseFactory, EnumDataMapper, Item, EnumCollection
+from BaseStructures import BaseFactory, Collection, EnumDataMapper, Item, EnumCollection
 from Errors import NotTypeExpectedError
 
 try:
-    from CvPythonExtensions import CyGlobalContext, CyPlayer, CyTeam, CyPlot, CyCity, CyUnit
+    from CvPythonExtensions import (
+        CyGlobalContext,
+        CyPlayer,
+        CyTeam,
+        CyPlot,
+        CyCity,
+        CyUnit,
+        AttitudeTypes,
+        CommerceTypes,
+        CvBonusInfo,
+        CvBuildInfo,
+        CvBuildingInfo,
+        CvBuildingClassInfo,
+        CvCivilizationInfo,
+        CvCommerceInfo,
+        CvCorporationInfo,
+        CvCultureLevelInfo,
+        CvEraInfo,
+        CvFeatureInfo,
+        CvGameSpeedInfo,
+        CvHandicapInfo,
+        CvImprovementInfo,
+        CvLeaderHeadInfo,
+        CvPromotionInfo,
+        CvProjectInfo,
+        CvReligionInfo,
+        CvRouteInfo,
+        CvSpecialistInfo,
+        CvTechInfo,
+        CvTerrainInfo,
+        CvUnitInfo,
+        UnitCombatTypes,
+    )
 
     gc = CyGlobalContext()
+    game = gc.getGame()
 
 except ImportError:
     gc = None
+    game = None
 
 
 class ScenarioDataMapper(EnumDataMapper):
@@ -428,3 +462,262 @@ def period(identifier):
     if identifier >= 0:
         return player(identifier).getPeriod()
     return None
+
+
+class InfoCollection(Collection):
+    def __init__(self, infos, info_class):
+        super(InfoCollection, self).__init__(infos)
+        self.info_class = info_class
+
+    @classmethod
+    def type(cls, infoClass, n_infos):
+        return cls(range(n_infos), infoClass)
+
+    def __str__(self):
+        return ",".join([self.info_class(i).getText() for i in self])
+
+
+class Infos:
+    def info(self, type):
+        return info_types[type][0]
+
+    def of(self, type):
+        return info_types[type][1](self)
+
+    def get(self, type, identifier):
+        return self.info(type)(self, identifier)
+
+    def text(self, type, identifier):
+        return self.get(type, identifier).getText()
+
+    def type(self, string):
+        type = gc.getInfoTypeForString(string)
+        if type < 0:
+            raise ValueError("Type for '%s' does not exist" % string)
+        return type
+
+    def constant(self, string):
+        return gc.getDefineINT(string)
+
+    def art(self, string):
+        return gc.getInterfaceArtInfo(self.type(string)).getPath()
+
+    def attitude(self, identifier):
+        return gc.getAttitudeInfo(identifier)
+
+    def attitudes(self):
+        return InfoCollection.type(gc.getAttitudeInfo, AttitudeTypes.NUM_ATTITUDE_TYPES)
+
+    def bonus(self, identifier):
+        if isinstance(identifier, CyPlot):
+            return gc.getBonusInfo(identifier.getBonusType(-1))
+
+        if isinstance(identifier, int):
+            return gc.getBonusInfo(identifier)
+
+        raise TypeError(
+            "Expected identifier to be CyPlot or bonus type ID, got '%s'" % type(identifier)
+        )
+
+    def bonuses(self):
+        return InfoCollection.type(gc.getBonusInfo, gc.getNumBonusInfos())
+
+    def build(self, identifier):
+        return gc.getBuildInfo(identifier)
+
+    def builds(self):
+        return InfoCollection.type(gc.getBuildInfo, gc.getNumBuildInfos())
+
+    def building(self, identifier):
+        return gc.getBuildingInfo(identifier)
+
+    def buildings(self):
+        return InfoCollection.type(gc.getBuildingInfo, gc.getNumBuildingInfos())
+
+    def buildingClass(self, identifier):
+        return gc.getBuildingClassInfo(identifier)
+
+    def buildingClasses(self):
+        return InfoCollection.type(gc.getBuildingClassInfo, gc.getNumBuildingClassInfos())
+
+    def civ(self, identifier):
+        if isinstance(identifier, (CyTeam, CyPlayer, CyPlot, CyCity, CyUnit)):
+            return gc.getCivilizationInfo(player(identifier).getCivilizationType())
+
+        return gc.getCivilizationInfo(identifier)
+
+    def civs(self):
+        return InfoCollection.type(gc.getCivilizationInfo, gc.getNumCivilizationInfos())
+
+    def civic(self, identifier):
+        return gc.getCivicInfo(identifier)
+
+    def civics(self):
+        return InfoCollection.type(gc.getCivicInfo, gc.getNumCivicInfos())
+
+    def commerce(self, identifier):
+        return gc.getCommerceInfo(identifier)
+
+    def commerces(self, identifier):
+        return InfoCollection.type(gc.getCommerceInfo, CommerceTypes.NUM_COMMERCE_TYPES)
+
+    def corporation(self, identifier):
+        return gc.getCorporationInfo(identifier)
+
+    def corporations(self):
+        return InfoCollection.type(gc.getCorporationInfo, gc.getNumCorporationInfos())
+
+    def cultureLevel(self, identifier):
+        return gc.getCultureLevelInfo(identifier)
+
+    def cultureLevels(self):
+        return InfoCollection.type(gc.getCultureLevelInfo, gc.getNumCultureLevelInfos())
+
+    def era(self, identifier):
+        return gc.getEraInfo(identifier)
+
+    def eras(self):
+        return InfoCollection.type(gc.getEraInfo, gc.getNumEraInfos())
+
+    def feature(self, identifier):
+        if isinstance(identifier, CyPlot):
+            return gc.getFeatureInfo(identifier.getFeatureType())
+
+        if isinstance(identifier, int):
+            return gc.getFeatureInfo(identifier)
+
+        raise TypeError(
+            "Expected identifier to be CyPlot or feature type ID, got '%s'" % type(identifier)
+        )
+
+    def features(self):
+        return InfoCollection.type(gc.getFeatureInfo, gc.getNumFeatureInfos())
+
+    def gameSpeed(self, iGameSpeed=None):
+        if iGameSpeed is None:
+            iGameSpeed = game.getGameSpeedType()
+        return gc.getGameSpeedInfo(iGameSpeed)
+
+    def gameSpeeds(self):
+        return InfoCollection.type(gc.getGameSpeedInfo, gc.getNumGameSpeedInfos())
+
+    def handicap(self, identifier=None):
+        if identifier is None:
+            identifier = game.getHandicapType()
+        return gc.getHandicapInfo(identifier)
+
+    def handicaps(self):
+        return InfoCollection.type(gc.getHandicapInfo, gc.getNumHandicapInfos())
+
+    def improvement(self, identifier):
+        return gc.getImprovementInfo(identifier)
+
+    def improvements(self):
+        return InfoCollection.type(gc.getImprovementInfo, gc.getNumImprovementInfos())
+
+    def leader(self, identifier):
+        if isinstance(identifier, CyPlayer):
+            return gc.getLeaderHeadInfo(identifier.getLeader())
+
+        if isinstance(identifier, int):
+            return gc.getLeaderHeadInfo(identifier)
+
+        raise TypeError(
+            "Expected identifier to be CyPlayer or leaderhead ID, got: '%s'" % type(identifier)
+        )
+
+    def leaders(self):
+        return InfoCollection.type(gc.getLeaderHeadInfo, gc.getNumLeaderHeadInfos())
+
+    def promotion(self, identifier):
+        return gc.getPromotionInfo(identifier)
+
+    def promotions(self):
+        return InfoCollection.type(gc.getPromotionInfo, gc.getNumPromotionInfos())
+
+    def project(self, identifier):
+        return gc.getProjectInfo(identifier)
+
+    def projects(self):
+        return InfoCollection.type(gc.getProjectInfo, gc.getNumProjectInfos())
+
+    def religion(self, iReligion):
+        return gc.getReligionInfo(iReligion)
+
+    def religions(self):
+        return InfoCollection.type(gc.getReligionInfo, gc.getNumReligionInfos())
+
+    def route(self, identifier):
+        return gc.getRouteInfo(identifier)
+
+    def routes(self):
+        return InfoCollection.type(gc.getRouteInfo, gc.getNumRouteInfos())
+
+    def specialist(self, identifier):
+        return gc.getSpecialistInfo(identifier)
+
+    def specialists(self):
+        return InfoCollection.type(gc.getSpecialistInfo, gc.getNumSpecialistInfos())
+
+    def tech(self, iTech):
+        return gc.getTechInfo(iTech)
+
+    def techs(self):
+        return InfoCollection.type(gc.getTechInfo, len(CoreTypes.Technology))
+
+    def terrain(self, iTerrain):
+        return gc.getTerrainInfo(iTerrain)
+
+    def terrains(self):
+        return InfoCollection.type(gc.getTerrainInfo, gc.getNumTerrainInfos())
+
+    def unit(self, identifier):
+        if isinstance(identifier, CyUnit):
+            return gc.getUnitInfo(identifier.getUnitType())
+
+        if isinstance(identifier, int):
+            return gc.getUnitInfo(identifier)
+
+        raise TypeError(
+            "Expected identifier to be CyUnit or unit type ID, got '%s'" % type(identifier)
+        )
+
+    def units(self):
+        return InfoCollection.type(gc.getUnitInfo, gc.getNumUnitInfos())
+
+    def unitClasses(self):
+        return InfoCollection.type(gc.getUnitClassInfo, gc.getNumUnitClassInfos())
+
+    def unitCombat(self, iUnitCombat):
+        return gc.getUnitCombatInfo(iUnitCombat)
+
+    def unitCombats(self):
+        return InfoCollection.type(gc.getUnitCombatInfo, gc.getNumUnitCombatInfos())
+
+
+info_types = {
+    AttitudeTypes: (Infos.attitude, Infos.attitudes),
+    CvBonusInfo: (Infos.bonus, Infos.bonuses),
+    CvBuildInfo: (Infos.build, Infos.builds),
+    CvBuildingInfo: (Infos.building, Infos.buildings),
+    CvBuildingClassInfo: (Infos.buildingClass, Infos.buildingClasses),
+    CvCivilizationInfo: (Infos.civ, Infos.civs),
+    CvCommerceInfo: (Infos.commerce, Infos.commerces),
+    CvCorporationInfo: (Infos.corporation, Infos.corporations),
+    CvCultureLevelInfo: (Infos.cultureLevel, Infos.cultureLevels),
+    CvEraInfo: (Infos.era, Infos.eras),
+    CvFeatureInfo: (Infos.feature, Infos.features),
+    CvGameSpeedInfo: (Infos.gameSpeed, Infos.gameSpeeds),
+    CvHandicapInfo: (Infos.handicap, Infos.handicaps),
+    CvImprovementInfo: (Infos.improvement, Infos.improvements),
+    CvLeaderHeadInfo: (Infos.leader, Infos.leaders),
+    CvPromotionInfo: (Infos.promotion, Infos.promotions),
+    CvProjectInfo: (Infos.project, Infos.projects),
+    CvReligionInfo: (Infos.religion, Infos.religions),
+    CvRouteInfo: (Infos.route, Infos.routes),
+    CvSpecialistInfo: (Infos.specialist, Infos.specialists),
+    CvTechInfo: (Infos.tech, Infos.techs),
+    CvTerrainInfo: (Infos.terrain, Infos.terrains),
+    CvUnitInfo: (Infos.unit, Infos.units),
+    UnitCombatTypes: (Infos.unitCombat, Infos.unitCombats),
+}
