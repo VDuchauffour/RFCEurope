@@ -211,6 +211,9 @@ class Collection(list):
     def copy(self, *items):
         return self.__class__(*items)
 
+    def empty(self):
+        return self.copy(*[])
+
     def first(self):
         """Return the first item of the collection."""
         return self[0]
