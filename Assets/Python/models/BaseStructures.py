@@ -198,7 +198,7 @@ class Item(object):
         return self.__class__(self.key, **kwargs)
 
 
-class ItemCollection(list):
+class Collection(list):
     """A base class to handle a set of game item."""
 
     def __init__(self, *items):
@@ -368,7 +368,7 @@ class ItemCollection(list):
         return combinations(self, repeat)
 
 
-class EnumCollection(ItemCollection):
+class EnumCollection(Collection):
     """A base class to handle a set of a specific type of `Item`."""
 
     BASE_CLASS = None
