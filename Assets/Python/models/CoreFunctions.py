@@ -46,7 +46,7 @@ def parse_area_dict(data):
     }
 
 
-def _iterate(first, next, getter=lambda x: x):
+def iterate(first, next, getter=lambda x: x):
     list = []
     entity, iter = first(False)
     while entity:
@@ -55,7 +55,7 @@ def _iterate(first, next, getter=lambda x: x):
     return [x for x in list if x is not None]
 
 
-def _parse_tile(*args):
+def parse_tile(*args):
     if len(args) == 2:
         return args
     elif len(args) == 1:
@@ -73,7 +73,7 @@ def _parse_tile(*args):
 
 
 def wrap(*args):
-    parsed = _parse_tile(*args)
+    parsed = parse_tile(*args)
     if parsed is None:
         return None
     x, y = parsed
@@ -81,7 +81,7 @@ def wrap(*args):
 
 
 def plot(*args):
-    x, y = _parse_tile(*args)
+    x, y = parse_tile(*args)
     return gc.getMap().plot(x, y)
 
 
@@ -102,7 +102,11 @@ def location(entity):
     if isinstance(entity, (CyPlot, CyCity, CyUnit)):
         return entity.getX(), entity.getY()
 
-    return _parse_tile(entity)
+    return parse_tile(entity)
+
+
+def owner(entity, identifier):
+    return entity.getOwner() == identifier
 
 
 def get_area(area):
@@ -119,8 +123,8 @@ def distance(location1, location2):
     if not location1 or not location2:
         return map.maxStepDistance()
 
-    x1, y1 = _parse_tile(location1)
-    x2, y2 = _parse_tile(location2)
+    x1, y1 = parse_tile(location1)
+    x2, y2 = parse_tile(location2)
     return stepDistance(x1, y1, x2, y2)
 
 
