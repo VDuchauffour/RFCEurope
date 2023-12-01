@@ -428,13 +428,3 @@ def period(identifier):
     if identifier >= 0:
         return player(identifier).getPeriod()
     return None
-
-
-def parse_area_dict(data):
-    """Parse a dict of area properties."""
-    return {
-        CoreTypes.Area.TILE_MIN: data[CoreTypes.Area.TILE_MIN],
-        CoreTypes.Area.TILE_MAX: data[CoreTypes.Area.TILE_MAX],
-        CoreTypes.Area.ADDITIONAL_TILES: data.get(CoreTypes.Area.ADDITIONAL_TILES, []),
-        CoreTypes.Area.EXCEPTION_TILES: data.get(CoreTypes.Area.EXCEPTION_TILES, []),
-    }

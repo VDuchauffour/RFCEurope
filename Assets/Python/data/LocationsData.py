@@ -1,4 +1,5 @@
 from Consts import MINOR_CIVS
+from CoreFunctions import parse_area_dict
 from CoreTypes import (
     AreaType,
     City,
@@ -19,7 +20,6 @@ from CoreStructures import (
     CompanyDataMapper,
     ScenarioDataMapper,
     CivDataMapper,
-    parse_area_dict,
 )
 from TimelineData import DateTurn
 

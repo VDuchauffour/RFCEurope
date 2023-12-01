@@ -36,6 +36,16 @@ def religion(identifier):
         return identifier.value
 
 
+def parse_area_dict(data):
+    """Parse a dict of area properties."""
+    return {
+        CoreTypes.Area.TILE_MIN: data[CoreTypes.Area.TILE_MIN],
+        CoreTypes.Area.TILE_MAX: data[CoreTypes.Area.TILE_MAX],
+        CoreTypes.Area.ADDITIONAL_TILES: data.get(CoreTypes.Area.ADDITIONAL_TILES, []),
+        CoreTypes.Area.EXCEPTION_TILES: data.get(CoreTypes.Area.EXCEPTION_TILES, []),
+    }
+
+
 def _iterate(first, next, getter=lambda x: x):
     list = []
     entity, iter = first(False)
