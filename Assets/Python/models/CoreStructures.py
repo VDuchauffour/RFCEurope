@@ -1,6 +1,6 @@
 from Consts import INDEPENDENT_CIVS
+from CoreFunctions import get_civ_by_id, religion
 from PyUtils import any
-import CoreFunctions as cf
 import CoreTypes
 from BaseStructures import BaseFactory, EnumDataMapper, Item, EnumCollection
 from Errors import NotTypeExpectedError
@@ -131,9 +131,9 @@ class Civilization(Item):
         """Return True if the civilization has a state religion."""
         return self.state_religion() != -1
 
-    def has_state_religion(self, religion):
+    def has_state_religion(self, identifier):
         """Return True if the civilization has the given religion as state religion."""
-        return self.state_religion() == cf.religion(religion)
+        return self.state_religion() == religion(identifier)
 
     def is_christian(self):
         """Return True if the civilization is christian."""
@@ -415,7 +415,7 @@ def is_minor_civ(identifier):
 
 def is_independent_civ(identifier):
     """Return True if it's a non-playable independent civilization."""
-    return cf.get_civ_by_id(player(identifier).getID()) in INDEPENDENT_CIVS
+    return get_civ_by_id(player(identifier).getID()) in INDEPENDENT_CIVS
 
 
 def is_barbarian_civ(identifier):
