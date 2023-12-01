@@ -1,6 +1,6 @@
 from Consts import INDEPENDENT_CIVS
 from CoreFunctions import get_civ_by_id, religion
-from PyUtils import any
+from PyUtils import any, rand
 import CoreTypes
 from BaseStructures import BaseFactory, Collection, EnumDataMapper, Item, EnumCollection
 from Errors import NotTypeExpectedError
@@ -38,6 +38,7 @@ try:
         CvTerrainInfo,
         CvUnitInfo,
         UnitCombatTypes,
+        getTurnForYear,
     )
 
     gc = CyGlobalContext()
@@ -721,3 +722,48 @@ info_types = {
     CvUnitInfo: (Infos.unit, Infos.units),
     UnitCombatTypes: (Infos.unitCombat, Infos.unitCombats),
 }
+
+
+class Turn(int):
+    def __new__(cls, value, *args, **kwargs):
+        return super(cls, cls).__new__(cls, value)
+
+    def __add__(self, other):
+        return self.__class__(super(Turn, self).__add__(other))
+
+    def __sub__(self, other):
+        return self.__class__(super(Turn, self).__sub__(other))
+
+    def between(self, start, end):
+        return turn(start) <= self <= turn(end)
+
+    def deviate(self, variation, seed=None):
+        variation = turns(variation)
+        if seed:
+            return self + seed % (2 * variation) - variation
+        return self + rand(2 * variation) - variation
+
+
+def scale(value):
+    return turns(value)
+
+
+def turns(turn):
+    if not game.isFinalInitialized():
+        return turn
+
+    modifier = infos.gameSpeed().getGrowthPercent()
+    return turn * modifier / 100
+
+
+def year(year=None):
+    if year is None:
+        return Turn(gc.getGame().getGameTurn())
+    return Turn(getTurnForYear(year))
+
+
+def turn(turn=None):
+    return year(turn)
+
+
+infos = Infos()
