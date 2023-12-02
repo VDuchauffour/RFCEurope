@@ -1,6 +1,6 @@
 from CvPythonExtensions import *
 from CoreData import civilization, civilizations, COMPANIES
-from CoreStructures import human, player, team
+from CoreStructures import human, player, team, turn
 from CoreTypes import (
     Building,
     City,
@@ -681,7 +681,7 @@ class Victory:
             return
 
         iPlayer = owner
-        iGameTurn = gc.getGame().getGameTurn()
+        iGameTurn = turn()
 
         # Bulgaria UHV 3: Do not lose a city to Barbarians, Mongols, Byzantines, or Ottomans before 1396
         if iPlayer == Civ.BULGARIA.value:
@@ -790,11 +790,7 @@ class Victory:
 
     def onPillageImprovement(self, iPillager, iVictim, iImprovement, iRoute, iX, iY):
         # Norway UHV 1: Going Viking
-        if (
-            iPillager == Civ.NORWAY.value
-            and iRoute == -1
-            and gc.getGame().getGameTurn() < DateTurn.i1066AD + 2
-        ):
+        if iPillager == Civ.NORWAY.value and iRoute == -1 and turn() < DateTurn.i1066AD + 2:
             if gc.getMap().plot(iX, iY).getOwner() != Civ.NORWAY.value:
                 player(Civ.NORWAY).setUHVCounter(0, player(Civ.NORWAY).getUHVCounter(0) + 1)
 
@@ -803,10 +799,7 @@ class Victory:
         cLosingUnit = PyHelpers.PyInfo.UnitInfo(pLosingUnit.getUnitType())
 
         # Norway UHV 1: Going Viking
-        if (
-            pWinningUnit.getOwner() == Civ.NORWAY.value
-            and gc.getGame().getGameTurn() < DateTurn.i1066AD + 2
-        ):
+        if pWinningUnit.getOwner() == Civ.NORWAY.value and turn() < DateTurn.i1066AD + 2:
             if cLosingUnit.getDomainType() == DomainTypes.DOMAIN_SEA:
                 # Absinthe: only 1 Viking point for Work Boats
                 if pLosingUnit.getUnitType() != Unit.WORKBOAT.value:
@@ -830,7 +823,7 @@ class Victory:
         if not gc.getGame().isVictoryValid(7):  # 7 == historical
             return
 
-        iGameTurn = gc.getGame().getGameTurn()
+        iGameTurn = turn()
 
         # Kiev UHV 1: Build 2 Orthodox cathedrals and 8 Orthodox monasteries by 1250
         if iPlayer == Civ.KIEV.value:

@@ -2,7 +2,7 @@
 
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from CoreStructures import human, player
+from CoreStructures import human, player, turn
 import CvUtil
 import CvEventManager
 import PyHelpers
@@ -915,7 +915,7 @@ class CvRFCEventHandler:
 
         if (
             gc.getPlayer(iPlayer).isAlive()
-            and gc.getGame().getGameTurn() > civilization(iPlayer).date.birth
+            and turn() > civilization(iPlayer).date.birth
             and iPlayer < civilizations().majors().len()
         ):
             self.rel.onTechAcquired(argsList[0], argsList[2])
@@ -978,7 +978,7 @@ class CvRFCEventHandler:
             and self.eventManager.bAlt
         ):
 
-            iGameTurn = gc.getGame().getGameTurn()
+            iGameTurn = turn()
             pass
 
         if (

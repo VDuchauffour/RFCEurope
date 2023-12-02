@@ -10,6 +10,7 @@
 # No other modules should import this
 #
 from random import choice
+from CoreStructures import turn
 from CoreTypes import Civ
 import CvUtil
 from CvPythonExtensions import *
@@ -4312,7 +4313,7 @@ def expireGreed1(argsList):
         return False
 
     if (
-        gc.getGame().getGameTurn()
+        turn()
         >= kTriggeredData.iTurn
         + gc.getGameSpeedInfo(gc.getGame().getGameSpeedType()).getGrowthPercent()
     ):

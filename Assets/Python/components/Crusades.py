@@ -1,7 +1,7 @@
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
 from CoreFunctions import get_civ_by_id
-from CoreStructures import human, player, team, teamtype
+from CoreStructures import human, player, team, teamtype, turn
 import PyHelpers
 import Popup
 from PyUtils import choices, percentage, percentage_chance, rand
@@ -312,7 +312,7 @@ class Crusades:
     def initVotePopup(self):
         iHuman = human()
         pHuman = gc.getPlayer(iHuman)
-        iActiveCrusade = self.getActiveCrusade(gc.getGame().getGameTurn())
+        iActiveCrusade = self.getActiveCrusade(turn())
         iBribe = 200 + 50 * iActiveCrusade
         if pHuman.getGold() >= iBribe:
             self.showPopup(
@@ -679,7 +679,7 @@ class Crusades:
             pPlayer = gc.getPlayer(iHuman)
             pPlayer.setIsCrusader(False)
             pPope = gc.getPlayer(Civ.POPE.value)
-            iActiveCrusade = self.getActiveCrusade(gc.getGame().getGameTurn())
+            iActiveCrusade = self.getActiveCrusade(turn())
             iBribe = 200 + 50 * iActiveCrusade
             pPope.changeGold(iBribe)
             pPlayer.changeGold(-iBribe)
@@ -821,16 +821,12 @@ class Crusades:
     def sendUnits(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
         iNumUnits = pPlayer.getNumUnits()
-        if (
-            civilization(iPlayer).date.birth + 10 > gc.getGame().getGameTurn()
-        ):  # in the first 10 turns
+        if civilization(iPlayer).date.birth + 10 > turn():  # in the first 10 turns
             if iNumUnits < 10:
                 iMaxToSend = 0
             else:
                 iMaxToSend = 1
-        elif (
-            civilization(iPlayer).date.birth + 25 > gc.getGame().getGameTurn()
-        ):  # between turn 11-25
+        elif civilization(iPlayer).date.birth + 25 > turn():  # between turn 11-25
             iMaxToSend = min(10, max(1, (5 * iNumUnits) / 50))
         else:
             iMaxToSend = min(10, max(1, (5 * iNumUnits) / 35))  # after turn 25
@@ -1582,7 +1578,7 @@ class Crusades:
         # the majority of Crusader units will return from the Crusade, so the Crusading civ will have harder time keeping Jerusalem and the Levant
         unitList = PyPlayer(iPlayer).getUnitList()
         iPrevGameTurn = (
-            gc.getGame().getGameTurn() - 1
+            turn() - 1
         )  # process for freeCrusaders was actually started in the previous turn, iActiveCrusade might have changed for the current turn
         iActiveCrusade = self.getActiveCrusade(
             iPrevGameTurn

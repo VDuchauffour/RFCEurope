@@ -1,7 +1,7 @@
 from random import choice
 from CvPythonExtensions import *
 from CoreData import civilization, civilizations
-from CoreStructures import human, player, team, teamtype
+from CoreStructures import human, player, team, teamtype, turn
 import PyHelpers  # LOQ
 import Popup
 from PyUtils import chance, percentage, percentage_chance, rand
@@ -1500,7 +1500,7 @@ class RiseAndFall:
         )  # needed for first turn vassalization and peace status fixes
 
         # Absinthe: store the turn of the latest respawn for each civ
-        iGameTurn = gc.getGame().getGameTurn()
+        iGameTurn = turn()
         utils.setLastRespawnTurn(iDeadCiv, iGameTurn)
 
         # Absinthe: update province status before the cities are flipped, so potential provinces will update if there are cities in them
@@ -1542,7 +1542,7 @@ class RiseAndFall:
         iNewUnits = 2
         if self.getLatestRebellionTurn(iDeadCiv) > 0:
             iNewUnits = 4
-        self.setLatestRebellionTurn(iDeadCiv, gc.getGame().getGameTurn())
+        self.setLatestRebellionTurn(iDeadCiv, turn())
         bHuman = False
         for (x, y) in lCityList:
             if gc.getMap().plot(x, y).getPlotCity().getOwner() == iHuman:
@@ -2114,9 +2114,7 @@ class RiseAndFall:
                     if iConvertedCitiesCount < 6:  # there won't be more than 5 flips in the area
                         # utils.debugTextPopup( 'iConvertedCities OK' )
                         iCultureChange = 50
-                        if (
-                            gc.getGame().getGameTurn() <= civilization(iCiv).date.birth + 5
-                        ):  # if we're during a birth
+                        if turn() <= civilization(iCiv).date.birth + 5:  # if we're during a birth
                             rndNum = percentage()
                             # 3Miro: I don't know why the iOwner check is needed below, but the module crashes sometimes
                             if (

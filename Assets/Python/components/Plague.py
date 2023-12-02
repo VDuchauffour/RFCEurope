@@ -2,7 +2,7 @@
 
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from CoreStructures import human
+from CoreStructures import human, turn
 from CoreTypes import PlagueType, Improvement, Civ
 from PyUtils import percentage, percentage_chance, rand
 import RFCUtils
@@ -186,10 +186,7 @@ class Plague:
 
     def spreadPlague(self, iPlayer, city):
         # Absinthe: the Plague of Justinian shouldn't spread to Italy and France, even if it was as deadly as the Black Death
-        if (
-            iPlayer in [Civ.FRANCE.value, Civ.POPE.value]
-            and gc.getGame().getGameTurn() <= DateTurn.i632AD
-        ):
+        if iPlayer in [Civ.FRANCE.value, Civ.POPE.value] and turn() <= DateTurn.i632AD:
             return
 
         # Absinthe: message about the spread
@@ -255,10 +252,7 @@ class Plague:
 
     def infectCity(self, city):
         # Absinthe: the Plague of Justinian shouldn't spread to Italy and France, even if it was as deadly as the Black Death
-        if (
-            city.getOwner() in [Civ.FRANCE.value, Civ.POPE.value]
-            and gc.getGame().getGameTurn() <= DateTurn.i632AD
-        ):
+        if city.getOwner() in [Civ.FRANCE.value, Civ.POPE.value] and turn() <= DateTurn.i632AD:
             return
 
         x = city.getX()
@@ -655,15 +649,12 @@ class Plague:
     def onCityAcquired(self, iOldOwner, iNewOwner, city):
         if city.hasBuilding(PlagueType.PLAGUE.value):
             # Absinthe: the Plague of Justinian shouldn't spread to Italy and France, even if it was as deadly as the Black Death
-            if (
-                city.getOwner() in [Civ.FRANCE.value, Civ.POPE.value]
-                and gc.getGame().getGameTurn() <= DateTurn.i632AD
-            ):
+            if city.getOwner() in [Civ.FRANCE.value, Civ.POPE.value] and turn() <= DateTurn.i632AD:
                 city.setHasRealBuilding(PlagueType.PLAGUE.value, False)
                 return
 
             # only if it's not a recently born civ
-            if gc.getGame().getGameTurn() > civilization(iNewOwner).date.birth + PLAGUE_IMMUNITY:
+            if turn() > civilization(iNewOwner).date.birth + PLAGUE_IMMUNITY:
                 # reinfect the human player if conquering plagued cities
                 if iNewOwner == human():
                     # if > 0 do nothing, if < 0 skip immunity and restart the plague, if == 0 start the plague

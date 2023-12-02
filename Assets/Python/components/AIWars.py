@@ -3,6 +3,7 @@
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
 from CoreFunctions import get_civ_by_id
+from CoreStructures import turn
 from CoreTypes import Civ
 from PyUtils import rand
 import RFCUtils
@@ -260,7 +261,7 @@ class AIWars:
             if (
                 utils.getPlagueCountdown(iLoopCiv) > 0
                 or utils.getPlagueCountdown(iLoopCiv) < -10
-                and not gc.getGame().getGameTurn() <= civilization(iLoopCiv).date.birth + 20
+                and not turn() <= civilization(iLoopCiv).date.birth + 20
             ):
                 lTargetCivs[iLoopCiv] *= 3
                 lTargetCivs[iLoopCiv] /= 2

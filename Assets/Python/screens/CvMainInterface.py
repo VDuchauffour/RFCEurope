@@ -2,7 +2,7 @@
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from CoreStructures import human, player
+from CoreStructures import human, player, turn
 from CoreTypes import Civ, SpecialParameter, Religion, Technology, Bonus
 import CvUtil
 import CvScreenEnums
@@ -6555,8 +6555,7 @@ class CvMainInterface:
                                         # Rhye - start
                                         if (
                                             not gc.getTeam(eTeam).isAlive()
-                                            and gc.getGame().getGameTurn()
-                                            >= civilization(eTeam).date.birth
+                                            and turn() >= civilization(eTeam).date.birth
                                         ):
                                             szBuffer = szBuffer + " -"
                                         else:

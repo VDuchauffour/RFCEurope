@@ -4,7 +4,7 @@
 from CvPythonExtensions import *
 from CoreData import civilizations, COMPANIES
 from CoreFunctions import get_enum_by_id
-from CoreStructures import human, player
+from CoreStructures import human, player, turn
 from LocationsData import CITIES
 from PyUtils import rand
 import RFCUtils
@@ -325,7 +325,7 @@ class Companies:
                 iValue += 2
 
         # geographical requirement changes after the Crusades
-        iGameTurn = gc.getGame().getGameTurn()
+        iGameTurn = turn()
         if iGameTurn < COMPANIES[Company.TEMPLARS].deathdate:
             if iCompany in [
                 Company.HOSPITALLERS.value,

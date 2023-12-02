@@ -4,7 +4,7 @@
 from random import choice
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from CoreStructures import human
+from CoreStructures import human, turn
 from CoreTypes import Civ, Region, SpecialParameter, Religion, Promotion, Unit, Province
 from LocationsData import REGIONS
 import PyHelpers
@@ -4180,7 +4180,7 @@ class MercenaryManager:
                 self.HireMercAI(iPlayer)
 
     def FireMercAI(self, iPlayer):
-        iGameTurn = gc.getGame().getGameTurn()
+        iGameTurn = turn()
         lMercs = [unit for unit in PyPlayer(iPlayer).getUnitList() if unit.getMercID() > -1]
 
         if lMercs:

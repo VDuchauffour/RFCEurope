@@ -169,7 +169,7 @@ class CvFinanceAdvisor:
                     )
 
         # Absinthe: update all stability values for the active player
-        # iGameTurn = gc.getGame().getGameTurn()
+        # iGameTurn = turn()
         stab.refreshBaseStability(self.iActiveLeader)
 
         # draw the contents

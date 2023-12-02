@@ -2,6 +2,7 @@
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization, COMPANIES
+from CoreStructures import turn
 from CoreTypes import (
     Building,
     City,
@@ -1968,9 +1969,7 @@ class CvVictoryScreen:
                     if (victoryDelay > 0) and (
                         gc.getGame().getGameState() != GameStateTypes.GAMESTATE_EXTENDED
                     ):
-                        victoryDate = CyGameTextMgr().getTimeStr(
-                            gc.getGame().getGameTurn() + victoryDelay, False
-                        )
+                        victoryDate = CyGameTextMgr().getTimeStr(turn() + victoryDelay, False)
                         screen.setTableText(
                             szTable,
                             2,
@@ -2831,7 +2830,7 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        if gc.getGame().getGameTurn() < DateTurn.i1500AD:
+        if turn() < DateTurn.i1500AD:
             sText1 += localText.getText("TXT_KEY_UHV_TOO_EARLY", ()) + "\n"
         iPolandFood = pPlayer.calculateTotalYield(YieldTypes.YIELD_FOOD)
         iOtherFood = 0
@@ -3079,7 +3078,7 @@ class CvVictoryScreen:
         # UHV1
         sText1 += self.getProvinceString(vic.tPrussiaControlI)
         # UHV2
-        if gc.getGame().getGameTurn() >= DateTurn.i1650AD:
+        if turn() >= DateTurn.i1650AD:
             iConqRaw = gc.getPlayer(Civ.PRUSSIA.value).getUHVCounter(1)
             for iI in range(len(vic.tPrussiaDefeat)):
                 iNumConq = (iConqRaw / pow(10, iI)) % 10
@@ -3412,7 +3411,7 @@ class CvVictoryScreen:
         )
 
     def getMultiProvinceString(self, lVictories):
-        iGameTurn = gc.getGame().getGameTurn()
+        iGameTurn = turn()
         sString = ""
         for iGoal in range(len(lVictories)):
             if iGoal > 0:
@@ -3607,7 +3606,7 @@ class CvVictoryScreen:
         sStringLower = localText.getText("TXT_KEY_UHV_LOWER_SCORE", ()) + ":"
         sStringHigher = localText.getText("TXT_KEY_UHV_HIGHER_SCORE", ()) + ":"
         sStringUnkown = localText.getText("TXT_KEY_UHV_UNKNOWN_SCORE", ()) + ":"
-        iGameTurn = gc.getGame().getGameTurn()
+        iGameTurn = turn()
         for iLoopPlayer in tCompetitors:
             pTestPlayer = gc.getPlayer(iLoopPlayer)
             sCivShortName = str(pTestPlayer.getCivilizationShortDescriptionKey())
@@ -3633,7 +3632,7 @@ class CvVictoryScreen:
     def CollapseOrVassal(self, lEnemies):
         sStringConq = localText.getText("TXT_KEY_UHV_COLLAPSE_OR_VASSALIZE", ()) + ":"
         sStringMiss = localText.getText("TXT_KEY_UHV_NOT_YET", ()) + ":"
-        iGameTurn = gc.getGame().getGameTurn()
+        iGameTurn = turn()
         for iEnemy in lEnemies:
             teamOwn = gc.getTeam(self.iActivePlayer)
             pEnemy = gc.getPlayer(iEnemy)
@@ -3655,7 +3654,7 @@ class CvVictoryScreen:
     def ConquerOrVassal(self, lEnemies):
         sStringConq = localText.getText("TXT_KEY_UHV_CONQUER_OR_VASSALIZE", ()) + ":"
         sStringMiss = localText.getText("TXT_KEY_UHV_NOT_YET", ()) + ":"
-        iGameTurn = gc.getGame().getGameTurn()
+        iGameTurn = turn()
         for lEnemy in lEnemies:
             iEnemyCiv = lEnemy[0]
             iEnemyProvince = lEnemy[1]

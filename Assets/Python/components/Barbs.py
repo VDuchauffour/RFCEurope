@@ -2,7 +2,7 @@
 
 from random import choice
 from CvPythonExtensions import *
-from CoreStructures import human
+from CoreStructures import human, turn
 from CoreTypes import Civ, Civic, Religion, Technology, Unit, Province
 import Popup
 from PyUtils import percentage, percentage_chance, rand
@@ -3398,7 +3398,7 @@ class Barbs:
     def onImprovementDestroyed(self, iX, iY):
         # getHandicapType: Viceroy=0, Monarch=1, Emperor=2)
         iHandicap = gc.getGame().getHandicapType()
-        iTurn = gc.getGame().getGameTurn()
+        iTurn = turn()
         if iTurn > DateTurn.i1500AD:
             iBarbUnit = Unit.MUSKETMAN.value
         elif iTurn > DateTurn.i1284AD:

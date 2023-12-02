@@ -5,6 +5,7 @@
 
 
 from CvPythonExtensions import *
+from CoreStructures import turn
 import PyHelpers
 
 
@@ -721,7 +722,7 @@ def cityAdvise(pCity, iPlayer):
         and not gc.getGame().isNetworkMultiPlayer()
     ):
 
-        if gc.getGame().getGameTurn() % 40 == pCity.getGameTurnFounded() % 40:
+        if turn() % 40 == pCity.getGameTurnFounded() % 40:
             if pCity.getID() not in g_listNoLiberateCities:
                 eLiberationPlayer = pCity.getLiberationPlayer(False)
                 if eLiberationPlayer != -1:
@@ -783,7 +784,7 @@ def cityAdvise(pCity, iPlayer):
 
             if not pCity.isProductionUnit() and (pCity.getOrderQueueLength() <= 1):
 
-                if (gc.getGame().getGameTurn() + 1) % 40 == pCity.getGameTurnFounded() % 40:
+                if (turn() + 1) % 40 == pCity.getGameTurnFounded() % 40:
 
                     if (
                         (gc.getGame().getElapsedGameTurns() < 200)
@@ -857,7 +858,7 @@ def cityAdvise(pCity, iPlayer):
                             popupInfo.addPopup(iPlayer)
                             g_iAdvisorNags += 1
 
-                if (gc.getGame().getGameTurn() + 5) % 40 == pCity.getGameTurnFounded() % 40:
+                if (turn() + 5) % 40 == pCity.getGameTurnFounded() % 40:
 
                     if (
                         (pCity.getPopulation() > 1)
@@ -924,7 +925,7 @@ def cityAdvise(pCity, iPlayer):
                             popupInfo.addPopup(iPlayer)
                             g_iAdvisorNags += 1
 
-                if (gc.getGame().getGameTurn() + 9) % 40 == pCity.getGameTurnFounded() % 40:
+                if (turn() + 9) % 40 == pCity.getGameTurnFounded() % 40:
 
                     if pCity.plot().getNumDefenders(iPlayer) == 0:
 
@@ -991,7 +992,7 @@ def cityAdvise(pCity, iPlayer):
                             popupInfo.addPopup(iPlayer)
                             g_iAdvisorNags += 1
 
-                if (gc.getGame().getGameTurn() + 12) % 40 == pCity.getGameTurnFounded() % 40:
+                if (turn() + 12) % 40 == pCity.getGameTurnFounded() % 40:
 
                     if (
                         gc.getPlayer(iPlayer).AI_totalAreaUnitAIs(
@@ -1081,7 +1082,7 @@ def cityAdvise(pCity, iPlayer):
 
                 if pCity.healthRate(False, 0) < 0:
 
-                    if (gc.getGame().getGameTurn() + 2) % 40 == pCity.getGameTurnFounded() % 40:
+                    if (turn() + 2) % 40 == pCity.getGameTurnFounded() % 40:
 
                         iBestValue = 0
                         eBestBuilding = BuildingTypes.NO_BUILDING
@@ -1138,7 +1139,7 @@ def cityAdvise(pCity, iPlayer):
 
                 if pCity.angryPopulation(0) > 0:
 
-                    if (gc.getGame().getGameTurn() + 3) % 40 == pCity.getGameTurnFounded() % 40:
+                    if (turn() + 3) % 40 == pCity.getGameTurnFounded() % 40:
 
                         iBestValue = 0
                         eBestBuilding = BuildingTypes.NO_BUILDING
@@ -1201,7 +1202,7 @@ def cityAdvise(pCity, iPlayer):
                     and (pCity.getBuildingDefense() == 0)
                 ):
 
-                    if (gc.getGame().getGameTurn() + 4) % 40 == pCity.getGameTurnFounded() % 40:
+                    if (turn() + 4) % 40 == pCity.getGameTurnFounded() % 40:
 
                         iBestValue = 0
                         eBestBuilding = BuildingTypes.NO_BUILDING
@@ -1263,7 +1264,7 @@ def cityAdvise(pCity, iPlayer):
 
                 if pCity.getMaintenance() >= 8:
 
-                    if (gc.getGame().getGameTurn() + 6) % 40 == pCity.getGameTurnFounded() % 40:
+                    if (turn() + 6) % 40 == pCity.getGameTurnFounded() % 40:
 
                         iBestValue = 0
                         eBestBuilding = BuildingTypes.NO_BUILDING
@@ -1328,7 +1329,7 @@ def cityAdvise(pCity, iPlayer):
                     and not pCity.isOccupation()
                 ):
 
-                    if (gc.getGame().getGameTurn() + 7) % 40 == pCity.getGameTurnFounded() % 40:
+                    if (turn() + 7) % 40 == pCity.getGameTurnFounded() % 40:
 
                         iBestValue = 0
                         eBestBuilding = BuildingTypes.NO_BUILDING
@@ -1396,7 +1397,7 @@ def cityAdvise(pCity, iPlayer):
 
                 if pCity.getBaseCommerceRate(CommerceTypes.COMMERCE_GOLD) > 10:
 
-                    if (gc.getGame().getGameTurn() + 8) % 40 == pCity.getGameTurnFounded() % 40:
+                    if (turn() + 8) % 40 == pCity.getGameTurnFounded() % 40:
 
                         iBestValue = 0
                         eBestBuilding = BuildingTypes.NO_BUILDING
@@ -1460,7 +1461,7 @@ def cityAdvise(pCity, iPlayer):
 
                 if pCity.getBaseCommerceRate(CommerceTypes.COMMERCE_RESEARCH) > 10:
 
-                    if (gc.getGame().getGameTurn() + 10) % 40 == pCity.getGameTurnFounded() % 40:
+                    if (turn() + 10) % 40 == pCity.getGameTurnFounded() % 40:
 
                         iBestValue = 0
                         eBestBuilding = BuildingTypes.NO_BUILDING
@@ -1524,7 +1525,7 @@ def cityAdvise(pCity, iPlayer):
 
                 if pCity.countNumWaterPlots() > 10:
 
-                    if (gc.getGame().getGameTurn() + 11) % 40 == pCity.getGameTurnFounded() % 40:
+                    if (turn() + 11) % 40 == pCity.getGameTurnFounded() % 40:
 
                         iBestValue = 0
                         eBestBuilding = BuildingTypes.NO_BUILDING

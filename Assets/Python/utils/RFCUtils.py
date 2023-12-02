@@ -3,7 +3,7 @@
 from random import choice
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from CoreStructures import human, player, team, teamtype
+from CoreStructures import human, player, team, teamtype, turn
 from CoreTypes import (
     City,
     Civ,
@@ -889,7 +889,7 @@ class RFCUtils:
             self.killUnitsInArea((0, 0), (WORLD_WIDTH, WORLD_HEIGHT), iCiv)
             self.resetUHV(iCiv)
 
-            self.setLastTurnAlive(iCiv, gc.getGame().getGameTurn())
+            self.setLastTurnAlive(iCiv, turn())
             # Absinthe: alive status should be updated right on collapse - may result in crashes if it only updates on the beginning of the next turn
             gc.getPlayer(iCiv).setAlive(False)
             # Absinthe: respawn status

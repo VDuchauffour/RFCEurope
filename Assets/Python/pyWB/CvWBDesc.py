@@ -9,6 +9,7 @@
 
 import os
 from array import *
+from CoreStructures import turn
 
 import CvUtil
 
@@ -142,7 +143,7 @@ class CvGameDesc:
                 if not gc.getVictoryInfo(i).isPermanent():
                     f.write("\tVictory=%s\n" % (gc.getVictoryInfo(i).getType()))
 
-        f.write("\tGameTurn=%d\n" % (gc.getGame().getGameTurn(),))
+        f.write("\tGameTurn=%d\n" % (turn(),))
         f.write("\tMaxTurns=%d\n" % (gc.getGame().getMaxTurns(),))
         f.write("\tMaxCityElimination=%d\n" % (gc.getGame().getMaxCityElimination(),))
         f.write("\tNumAdvancedStartPoints=%d\n" % (gc.getGame().getNumAdvancedStartPoints(),))
