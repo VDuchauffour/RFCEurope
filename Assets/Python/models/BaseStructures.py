@@ -395,7 +395,7 @@ class EnumCollection(Collection):
         return self._apply(lambda c: c.id)
 
 
-class BaseFactory(object):
+class EnumCollectionFactory(object):
     """A base for factories."""
 
     MEMBERS_CLASS = None

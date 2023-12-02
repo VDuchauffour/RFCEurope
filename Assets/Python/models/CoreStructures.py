@@ -2,7 +2,7 @@ from Consts import INDEPENDENT_CIVS
 from CoreFunctions import get_civ_by_id, religion
 from PyUtils import any, rand
 import CoreTypes
-from BaseStructures import BaseFactory, Collection, EnumDataMapper, Item, EnumCollection
+from BaseStructures import EnumCollectionFactory, Collection, EnumDataMapper, Item, EnumCollection
 from Errors import NotTypeExpectedError
 
 try:
@@ -79,7 +79,7 @@ class Companies(EnumCollection):
     BASE_CLASS = Company
 
 
-class CompaniesFactory(BaseFactory):
+class CompaniesFactory(EnumCollectionFactory):
     """A factory to generate `Companies`."""
 
     MEMBERS_CLASS = CoreTypes.Company
@@ -346,7 +346,7 @@ class Civilizations(EnumCollection):
         return self.filter(lambda c: c.has_meet(id))
 
 
-class CivilizationsFactory(BaseFactory):
+class CivilizationsFactory(EnumCollectionFactory):
     """A factory to generate `Civilizations`."""
 
     MEMBERS_CLASS = CoreTypes.Civ
