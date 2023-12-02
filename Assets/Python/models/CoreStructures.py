@@ -466,19 +466,19 @@ def period(identifier):
 
 
 class InfoCollection(Collection):
-    def __init__(self, infos, info_class):
-        super(InfoCollection, self).__init__(infos)
+    def __init__(self, info_class, *infos):
+        super(InfoCollection, self).__init__(*infos)
         self.info_class = info_class
 
     @classmethod
-    def type(cls, infoClass, n_infos):
-        return cls(range(n_infos), infoClass)
+    def from_type(cls, info_class, n_infos):
+        return cls(info_class, *range(n_infos))
 
     def __str__(self):
         return ",".join([self.info_class(i).getText() for i in self])
 
 
-class Infos:
+class Infos(object):
     def info(self, type):
         return info_types[type][0]
 
@@ -507,7 +507,7 @@ class Infos:
         return gc.getAttitudeInfo(identifier)
 
     def attitudes(self):
-        return InfoCollection.type(gc.getAttitudeInfo, AttitudeTypes.NUM_ATTITUDE_TYPES)
+        return InfoCollection.from_type(gc.getAttitudeInfo, AttitudeTypes.NUM_ATTITUDE_TYPES)
 
     def bonus(self, identifier):
         if isinstance(identifier, CyPlot):
@@ -521,25 +521,25 @@ class Infos:
         )
 
     def bonuses(self):
-        return InfoCollection.type(gc.getBonusInfo, gc.getNumBonusInfos())
+        return InfoCollection.from_type(gc.getBonusInfo, gc.getNumBonusInfos())
 
     def build(self, identifier):
         return gc.getBuildInfo(identifier)
 
     def builds(self):
-        return InfoCollection.type(gc.getBuildInfo, gc.getNumBuildInfos())
+        return InfoCollection.from_type(gc.getBuildInfo, gc.getNumBuildInfos())
 
     def building(self, identifier):
         return gc.getBuildingInfo(identifier)
 
     def buildings(self):
-        return InfoCollection.type(gc.getBuildingInfo, gc.getNumBuildingInfos())
+        return InfoCollection.from_type(gc.getBuildingInfo, gc.getNumBuildingInfos())
 
     def buildingClass(self, identifier):
         return gc.getBuildingClassInfo(identifier)
 
     def buildingClasses(self):
-        return InfoCollection.type(gc.getBuildingClassInfo, gc.getNumBuildingClassInfos())
+        return InfoCollection.from_type(gc.getBuildingClassInfo, gc.getNumBuildingClassInfos())
 
     def civ(self, identifier):
         if isinstance(identifier, (CyTeam, CyPlayer, CyPlot, CyCity, CyUnit)):
@@ -548,37 +548,37 @@ class Infos:
         return gc.getCivilizationInfo(identifier)
 
     def civs(self):
-        return InfoCollection.type(gc.getCivilizationInfo, gc.getNumCivilizationInfos())
+        return InfoCollection.from_type(gc.getCivilizationInfo, gc.getNumCivilizationInfos())
 
     def civic(self, identifier):
         return gc.getCivicInfo(identifier)
 
     def civics(self):
-        return InfoCollection.type(gc.getCivicInfo, gc.getNumCivicInfos())
+        return InfoCollection.from_type(gc.getCivicInfo, gc.getNumCivicInfos())
 
     def commerce(self, identifier):
         return gc.getCommerceInfo(identifier)
 
-    def commerces(self, identifier):
-        return InfoCollection.type(gc.getCommerceInfo, CommerceTypes.NUM_COMMERCE_TYPES)
+    def commerces(self):
+        return InfoCollection.from_type(gc.getCommerceInfo, CommerceTypes.NUM_COMMERCE_TYPES)
 
     def corporation(self, identifier):
         return gc.getCorporationInfo(identifier)
 
     def corporations(self):
-        return InfoCollection.type(gc.getCorporationInfo, gc.getNumCorporationInfos())
+        return InfoCollection.from_type(gc.getCorporationInfo, gc.getNumCorporationInfos())
 
     def cultureLevel(self, identifier):
         return gc.getCultureLevelInfo(identifier)
 
     def cultureLevels(self):
-        return InfoCollection.type(gc.getCultureLevelInfo, gc.getNumCultureLevelInfos())
+        return InfoCollection.from_type(gc.getCultureLevelInfo, gc.getNumCultureLevelInfos())
 
     def era(self, identifier):
         return gc.getEraInfo(identifier)
 
     def eras(self):
-        return InfoCollection.type(gc.getEraInfo, gc.getNumEraInfos())
+        return InfoCollection.from_type(gc.getEraInfo, gc.getNumEraInfos())
 
     def feature(self, identifier):
         if isinstance(identifier, CyPlot):
@@ -592,7 +592,7 @@ class Infos:
         )
 
     def features(self):
-        return InfoCollection.type(gc.getFeatureInfo, gc.getNumFeatureInfos())
+        return InfoCollection.from_type(gc.getFeatureInfo, gc.getNumFeatureInfos())
 
     def gameSpeed(self, iGameSpeed=None):
         if iGameSpeed is None:
@@ -600,7 +600,7 @@ class Infos:
         return gc.getGameSpeedInfo(iGameSpeed)
 
     def gameSpeeds(self):
-        return InfoCollection.type(gc.getGameSpeedInfo, gc.getNumGameSpeedInfos())
+        return InfoCollection.from_type(gc.getGameSpeedInfo, gc.getNumGameSpeedInfos())
 
     def handicap(self, identifier=None):
         if identifier is None:
@@ -608,13 +608,13 @@ class Infos:
         return gc.getHandicapInfo(identifier)
 
     def handicaps(self):
-        return InfoCollection.type(gc.getHandicapInfo, gc.getNumHandicapInfos())
+        return InfoCollection.from_type(gc.getHandicapInfo, gc.getNumHandicapInfos())
 
     def improvement(self, identifier):
         return gc.getImprovementInfo(identifier)
 
     def improvements(self):
-        return InfoCollection.type(gc.getImprovementInfo, gc.getNumImprovementInfos())
+        return InfoCollection.from_type(gc.getImprovementInfo, gc.getNumImprovementInfos())
 
     def leader(self, identifier):
         if isinstance(identifier, CyPlayer):
@@ -628,49 +628,49 @@ class Infos:
         )
 
     def leaders(self):
-        return InfoCollection.type(gc.getLeaderHeadInfo, gc.getNumLeaderHeadInfos())
+        return InfoCollection.from_type(gc.getLeaderHeadInfo, gc.getNumLeaderHeadInfos())
 
     def promotion(self, identifier):
         return gc.getPromotionInfo(identifier)
 
     def promotions(self):
-        return InfoCollection.type(gc.getPromotionInfo, gc.getNumPromotionInfos())
+        return InfoCollection.from_type(gc.getPromotionInfo, gc.getNumPromotionInfos())
 
     def project(self, identifier):
         return gc.getProjectInfo(identifier)
 
     def projects(self):
-        return InfoCollection.type(gc.getProjectInfo, gc.getNumProjectInfos())
+        return InfoCollection.from_type(gc.getProjectInfo, gc.getNumProjectInfos())
 
     def religion(self, iReligion):
         return gc.getReligionInfo(iReligion)
 
     def religions(self):
-        return InfoCollection.type(gc.getReligionInfo, gc.getNumReligionInfos())
+        return InfoCollection.from_type(gc.getReligionInfo, gc.getNumReligionInfos())
 
     def route(self, identifier):
         return gc.getRouteInfo(identifier)
 
     def routes(self):
-        return InfoCollection.type(gc.getRouteInfo, gc.getNumRouteInfos())
+        return InfoCollection.from_type(gc.getRouteInfo, gc.getNumRouteInfos())
 
     def specialist(self, identifier):
         return gc.getSpecialistInfo(identifier)
 
     def specialists(self):
-        return InfoCollection.type(gc.getSpecialistInfo, gc.getNumSpecialistInfos())
+        return InfoCollection.from_type(gc.getSpecialistInfo, gc.getNumSpecialistInfos())
 
-    def tech(self, iTech):
-        return gc.getTechInfo(iTech)
+    def tech(self, identifier):
+        return gc.getTechInfo(identifier)
 
     def techs(self):
-        return InfoCollection.type(gc.getTechInfo, len(CoreTypes.Technology))
+        return InfoCollection.from_type(gc.getTechInfo, len(CoreTypes.Technology))
 
-    def terrain(self, iTerrain):
-        return gc.getTerrainInfo(iTerrain)
+    def terrain(self, identifier):
+        return gc.getTerrainInfo(identifier)
 
     def terrains(self):
-        return InfoCollection.type(gc.getTerrainInfo, gc.getNumTerrainInfos())
+        return InfoCollection.from_type(gc.getTerrainInfo, gc.getNumTerrainInfos())
 
     def unit(self, identifier):
         if isinstance(identifier, CyUnit):
@@ -684,16 +684,16 @@ class Infos:
         )
 
     def units(self):
-        return InfoCollection.type(gc.getUnitInfo, gc.getNumUnitInfos())
+        return InfoCollection.from_type(gc.getUnitInfo, gc.getNumUnitInfos())
 
     def unitClasses(self):
-        return InfoCollection.type(gc.getUnitClassInfo, gc.getNumUnitClassInfos())
+        return InfoCollection.from_type(gc.getUnitClassInfo, gc.getNumUnitClassInfos())
 
-    def unitCombat(self, iUnitCombat):
-        return gc.getUnitCombatInfo(iUnitCombat)
+    def unitCombat(self, identifier):
+        return gc.getUnitCombatInfo(identifier)
 
     def unitCombats(self):
-        return InfoCollection.type(gc.getUnitCombatInfo, gc.getNumUnitCombatInfos())
+        return InfoCollection.from_type(gc.getUnitCombatInfo, gc.getNumUnitCombatInfos())
 
 
 try:
@@ -767,6 +767,57 @@ def year(year=None):
 
 def turn(turn=None):
     return year(turn)
+
+
+class TechCollection(object):
+    def __init__(self):
+        self._included = []
+        self._excluded = []
+        self._era = -1
+        self._column = 0
+
+    def era(self, era):
+        self._era = era
+        return self
+
+    def column(self, column):
+        self._column = column
+        return self
+
+    def without(self, *techs):
+        self._excluded += [i for i in techs if i not in self._excluded]
+        return self
+
+    def including(self, *techs):
+        self._included += [i for i in techs if i not in self._included]
+        return self
+
+    def techs(self):
+        techs = [
+            i
+            for i in infos.techs()
+            if infos.tech(i).getEra() <= self._era or infos.tech(i).getGridX() <= self._column
+        ]
+        techs += [i for i in self._included if i not in techs]
+        techs = [i for i in techs if i not in self._excluded]
+        return techs
+
+    def __iter__(self):
+        return iter(self.techs())
+
+
+class TechFactory(object):
+    def none(self):
+        return TechCollection()
+
+    def of(self, *techs):
+        return TechCollection().including(*techs)
+
+    def era(self, era):
+        return TechCollection().era(era)
+
+    def column(self, column):
+        return TechCollection().column(column)
 
 
 infos = Infos()
