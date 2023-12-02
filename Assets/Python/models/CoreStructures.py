@@ -696,32 +696,35 @@ class Infos:
         return InfoCollection.type(gc.getUnitCombatInfo, gc.getNumUnitCombatInfos())
 
 
-info_types = {
-    AttitudeTypes: (Infos.attitude, Infos.attitudes),
-    CvBonusInfo: (Infos.bonus, Infos.bonuses),
-    CvBuildInfo: (Infos.build, Infos.builds),
-    CvBuildingInfo: (Infos.building, Infos.buildings),
-    CvBuildingClassInfo: (Infos.buildingClass, Infos.buildingClasses),
-    CvCivilizationInfo: (Infos.civ, Infos.civs),
-    CvCommerceInfo: (Infos.commerce, Infos.commerces),
-    CvCorporationInfo: (Infos.corporation, Infos.corporations),
-    CvCultureLevelInfo: (Infos.cultureLevel, Infos.cultureLevels),
-    CvEraInfo: (Infos.era, Infos.eras),
-    CvFeatureInfo: (Infos.feature, Infos.features),
-    CvGameSpeedInfo: (Infos.gameSpeed, Infos.gameSpeeds),
-    CvHandicapInfo: (Infos.handicap, Infos.handicaps),
-    CvImprovementInfo: (Infos.improvement, Infos.improvements),
-    CvLeaderHeadInfo: (Infos.leader, Infos.leaders),
-    CvPromotionInfo: (Infos.promotion, Infos.promotions),
-    CvProjectInfo: (Infos.project, Infos.projects),
-    CvReligionInfo: (Infos.religion, Infos.religions),
-    CvRouteInfo: (Infos.route, Infos.routes),
-    CvSpecialistInfo: (Infos.specialist, Infos.specialists),
-    CvTechInfo: (Infos.tech, Infos.techs),
-    CvTerrainInfo: (Infos.terrain, Infos.terrains),
-    CvUnitInfo: (Infos.unit, Infos.units),
-    UnitCombatTypes: (Infos.unitCombat, Infos.unitCombats),
-}
+try:
+    info_types = {
+        AttitudeTypes: (Infos.attitude, Infos.attitudes),
+        CvBonusInfo: (Infos.bonus, Infos.bonuses),
+        CvBuildInfo: (Infos.build, Infos.builds),
+        CvBuildingInfo: (Infos.building, Infos.buildings),
+        CvBuildingClassInfo: (Infos.buildingClass, Infos.buildingClasses),
+        CvCivilizationInfo: (Infos.civ, Infos.civs),
+        CvCommerceInfo: (Infos.commerce, Infos.commerces),
+        CvCorporationInfo: (Infos.corporation, Infos.corporations),
+        CvCultureLevelInfo: (Infos.cultureLevel, Infos.cultureLevels),
+        CvEraInfo: (Infos.era, Infos.eras),
+        CvFeatureInfo: (Infos.feature, Infos.features),
+        CvGameSpeedInfo: (Infos.gameSpeed, Infos.gameSpeeds),
+        CvHandicapInfo: (Infos.handicap, Infos.handicaps),
+        CvImprovementInfo: (Infos.improvement, Infos.improvements),
+        CvLeaderHeadInfo: (Infos.leader, Infos.leaders),
+        CvPromotionInfo: (Infos.promotion, Infos.promotions),
+        CvProjectInfo: (Infos.project, Infos.projects),
+        CvReligionInfo: (Infos.religion, Infos.religions),
+        CvRouteInfo: (Infos.route, Infos.routes),
+        CvSpecialistInfo: (Infos.specialist, Infos.specialists),
+        CvTechInfo: (Infos.tech, Infos.techs),
+        CvTerrainInfo: (Infos.terrain, Infos.terrains),
+        CvUnitInfo: (Infos.unit, Infos.units),
+        UnitCombatTypes: (Infos.unitCombat, Infos.unitCombats),
+    }
+except:  # noqa: E722
+    info_types = {}
 
 
 class Turn(int):
