@@ -2,14 +2,23 @@ import CoreTypes
 from Consts import WORLD_HEIGHT, WORLD_WIDTH
 
 try:
-    from CvPythonExtensions import CyGlobalContext, CyPlot, CyCity, CyUnit, stepDistance
+    from CvPythonExtensions import (
+        CyGlobalContext,
+        CyTranslator,
+        CyPlot,
+        CyCity,
+        CyUnit,
+        stepDistance,
+    )
 
     gc = CyGlobalContext()
     map = gc.getMap()
+    translator = CyTranslator()
 
 except ImportError:
     gc = None
     map = None
+    translator = None
 
 
 def get_enum_by_id(enum, id):
@@ -152,3 +161,7 @@ class FindResult(object):
         self.result = result
         self.index = index
         self.value = value
+
+
+def text(key, *format):
+    return translator.getText(str(key), tuple(format))

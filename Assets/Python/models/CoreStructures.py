@@ -1,5 +1,5 @@
 from Consts import INDEPENDENT_CIVS
-from CoreFunctions import get_civ_by_id, iterate, owner, plot, religion
+from CoreFunctions import get_civ_by_id, iterate, location, owner, plot, religion, text
 from PyUtils import any, rand
 import CoreTypes
 from BaseStructures import (
@@ -47,6 +47,8 @@ try:
         UnitCombatTypes,
         getTurnForYear,
         DomainTypes,
+        UnitAITypes,
+        DirectionTypes,
     )
 
     gc = CyGlobalContext()
@@ -933,6 +935,95 @@ class UnitFactory:
             return Units()
 
         return Units(*[Unit.of(plot(*args).getUnit(i)) for i in range(plot(*args).getNumUnits())])
+
+
+class CreatedUnits(object):
+    @staticmethod
+    def none():
+        return CreatedUnits([])
+
+    def __init__(self, units):
+        self._units = units
+
+    def __len__(self):
+        return len(self._units)
+
+    def __iter__(self):
+        return iter(self._units)
+
+    def __add__(self, other):
+        return CreatedUnits(self._units + other._units)
+
+    def adjective(self, adjective):
+        if not adjective:
+            return self
+
+        for unit in self:
+            unit.setName("%s %s" % (text(adjective), unit.getName()))
+
+        return self
+
+    def experience(self, experience):
+        if experience <= 0:
+            return self
+
+        for unit in self:
+            unit.changeExperience(experience, 100, False, False, False)
+
+        return self
+
+    def promotion(self, *promotions):
+        for iPromotion in promotions:
+            for unit in self:
+                unit.setHasPromotion(iPromotion, True)
+
+        return self
+
+    def one(self):
+        if len(self) == 1:
+            return self._units[0]
+        raise Exception("Can only return one unit if it is a single created unit")
+
+    def count(self):
+        return len(self)
+
+
+def get_player_experience(unit):
+    if not unit.canFight():
+        return 0
+
+    experience = player(unit).getFreeExperience() + player(unit).getDomainFreeExperience(
+        unit.getDomainType()
+    )
+
+    if player(unit).isStateReligion():
+        experience += player(unit).getStateReligionFreeExperience()
+
+    return experience
+
+
+def make_units(player, unit, plot, n_units=1, unit_ai=UnitAITypes.NO_UNITAI):
+    if n_units <= 0:
+        return CreatedUnits([])
+
+    if unit < 0:
+        raise Exception("Invalid unit")
+
+    x, y = location(plot)
+
+    units = []
+    for _ in range(n_units):
+        unit = player(player).initUnit(unit, x, y, unit_ai, DirectionTypes.DIRECTION_SOUTH)
+        unit.changeExperience(get_player_experience(unit), -1, False, False, False)
+        unit.testPromotionReady()
+        units.append(unit)
+        # events.fireEvent("unitCreated", unit)
+
+    return CreatedUnits(units)
+
+
+def make_unit(player, unit, plot, unit_ai=UnitAITypes.NO_UNITAI):
+    return make_units(player, unit, plot, 1, unit_ai).one()
 
 
 infos = Infos()
