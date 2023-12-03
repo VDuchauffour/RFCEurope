@@ -1002,15 +1002,17 @@ def get_player_experience(unit):
     return experience
 
 
-def _generate_unit(player_id, unit, plot, unit_ai):
+def _generate_unit(player_id, unit, plot, unit_ai, unit_name=None):
     x, y = location(plot)
     unit = player(player_id).initUnit(int(unit), x, y, unit_ai, DirectionTypes.DIRECTION_SOUTH)
     unit.changeExperience(get_player_experience(unit), -1, False, False, False)
     unit.testPromotionReady()
+    if unit_name is not None:
+        unit.setName(unit_name)
     return unit
 
 
-def make_units(player_id, unit, plot, n_units=1, unit_ai=UnitAITypes.NO_UNITAI):
+def make_units(player_id, unit, plot, n_units=1, unit_ai=UnitAITypes.NO_UNITAI, unit_name=None):
     if n_units <= 0:
         return CreatedUnits([])
     if unit < 0:
@@ -1018,14 +1020,14 @@ def make_units(player_id, unit, plot, n_units=1, unit_ai=UnitAITypes.NO_UNITAI):
 
     units = []
     for _ in range(n_units):
-        unit = _generate_unit(player_id, unit, plot, unit_ai)
+        unit = _generate_unit(player_id, unit, plot, unit_ai, unit_name)
         units.append(unit)
         # events.fireEvent("unitCreated", unit)
     return CreatedUnits(units)
 
 
-def make_unit(player, unit, plot, unit_ai=UnitAITypes.NO_UNITAI):
-    return make_units(player, unit, plot, 1, unit_ai).one()
+def make_unit(player, unit, plot, unit_ai=UnitAITypes.NO_UNITAI, unit_name=None):
+    return make_units(player, unit, plot, 1, unit_ai, unit_name).one()
 
 
 def _generate_crusade_unit(player_id, unit, plot, unit_ai, crusade_value):
