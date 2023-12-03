@@ -5,6 +5,7 @@
 
 from CvPythonExtensions import *
 from CoreData import civilizations
+from CoreStructures import turn
 import CvUtil
 
 import string
@@ -71,7 +72,7 @@ class CvInfoScreen:
         self.W_BUTTON = 200
         self.H_BUTTON = 30
 
-        self.graphEnd = CyGame().getGameTurn() - 1
+        self.graphEnd = turn() - 1
         self.graphZoom = self.graphEnd - CyGame().getStartTurn()
         self.nWidgetCount = 0
         self.nLineCount = 0
@@ -561,7 +562,7 @@ class CvInfoScreen:
         self.pCityPointers = [0, 0, 0, 0, 0]
 
         # 		self.bShowAllPlayers = False
-        self.graphEnd = CyGame().getGameTurn() - 1
+        self.graphEnd = turn() - 1
         self.graphZoom = self.graphEnd - CyGame().getStartTurn()
         self.iShowingPlayer = -1
 
@@ -776,7 +777,7 @@ class CvInfoScreen:
         self.iNumPermanentWidgets = self.nWidgetCount
 
         # Reset variables
-        self.graphEnd = CyGame().getGameTurn() - 1
+        self.graphEnd = turn() - 1
         self.graphZoom = self.graphEnd - CyGame().getStartTurn()
 
         self.iActiveTab = iTabID
@@ -1297,7 +1298,7 @@ class CvInfoScreen:
             FontTypes.GAME_FONT,
         )
         start = CyGame().getStartTurn()
-        now = CyGame().getGameTurn()
+        now = turn()
         nTurns = now - start - 1
         screen.addPullDownString(self.szTurnsDropdownWidget, self.TEXT_ENTIRE_HISTORY, 0, 0, False)
         self.dropDownTurns.append(nTurns)
@@ -1322,11 +1323,11 @@ class CvInfoScreen:
         screen.enable(
             self.graphLeftButtonID, self.graphEnd - self.graphZoom > CyGame().getStartTurn()
         )
-        screen.enable(self.graphRightButtonID, self.graphEnd < CyGame().getGameTurn() - 1)
+        screen.enable(self.graphRightButtonID, self.graphEnd < turn() - 1)
 
     def checkGraphBounds(self):
         start = CyGame().getStartTurn()
-        end = CyGame().getGameTurn() - 1
+        end = turn() - 1
         if self.graphEnd - self.graphZoom < start:
             self.graphEnd = start + self.graphZoom
         if self.graphEnd > end:
@@ -1362,7 +1363,7 @@ class CvInfoScreen:
             else:
                 self.scoreCache[scoreType].append([])
                 firstTurn = CyGame().getStartTurn()
-                thisTurn = CyGame().getGameTurn()
+                thisTurn = turn()
                 turn = firstTurn
                 while turn <= thisTurn:
                     self.scoreCache[scoreType][p].append(self.computeHistory(scoreType, p, turn))
@@ -1479,7 +1480,7 @@ class CvInfoScreen:
 
         # Compute max score
         max = 0
-        thisTurn = CyGame().getGameTurn()
+        thisTurn = turn()
         startTurn = CyGame().getStartTurn()
 
         if self.graphZoom == 0 or self.graphEnd == 0:
@@ -1509,7 +1510,7 @@ class CvInfoScreen:
         min = 0
         for p in self.aiPlayersMet:
             if not gc.getPlayer(p).isMinorCiv():  # Rhye
-                for turn in range(firstTurn, lastTurn + 1):
+                for turn in range(firstTurn, lastTurn + 1):  # noqa: F402
                     score = self.getHistory(self.iGraphTabID, p, turn - startTurn)
                     if max < score:
                         max = score
@@ -1637,15 +1638,15 @@ class CvInfoScreen:
         iTotalPopulation = (
             int(
                 (
-                    (iPopulation * (300 + ((CyGame().getGameTurn() * 2) / 5))) / 100
-                    + (iLandArea * (250 + ((CyGame().getGameTurn() * 2) / 5))) / 100
+                    (iPopulation * (300 + ((turn() * 2) / 5))) / 100
+                    + (iLandArea * (250 + ((turn() * 2) / 5))) / 100
                     + (pPlayer.getNumUnits() * 4000)
                 )
                 / 5000
             )
             + 6
         ) * 5000
-        # iTotalPopulation = (int(((iPopulation * (7 - (((CyGame().getGameTurn()) * 4) / 500 ))) + (pPlayer.getNumUnits() * 4000))/ 5000) + 6) * 5000
+        # iTotalPopulation = (int(((iPopulation * (7 - (((turn()) * 4) / 500 ))) + (pPlayer.getNumUnits() * 4000))/ 5000) + 6) * 5000
         # Absinthe: end
         if pPlayer.calculateTotalCityHappiness() > 0:
             iHappiness = int(
@@ -1760,14 +1761,11 @@ class CvInfoScreen:
                     (
                         int(
                             (
-                                (
-                                    pCurrPlayer.getRealPopulation()
-                                    * (300 + ((CyGame().getGameTurn() * 2) / 5))
-                                )
+                                (pCurrPlayer.getRealPopulation() * (300 + ((turn() * 2) / 5)))
                                 / 100
                                 + (
                                     (pCurrPlayer.getTotalLand() * 2300)
-                                    * (250 + ((CyGame().getGameTurn() * 2) / 5))
+                                    * (250 + ((turn() * 2) / 5))
                                 )
                                 / 100
                                 + (pCurrPlayer.getNumUnits() * 4000)

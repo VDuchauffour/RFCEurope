@@ -5,6 +5,7 @@
 
 from CoreData import civilization
 from CoreFunctions import get_religion_by_id
+from CoreStructures import turn
 from CoreTypes import Building, Civ, Religion, StabilityCategory, Unit, Wonder
 import CvUtil
 from CvPythonExtensions import *
@@ -559,7 +560,7 @@ class CvGameUtils:
 
         if gc.getDefineINT("CAPTURE_GOLD_MAX_TURNS") > 0:
             iCaptureGold *= cyIntRange(
-                (CyGame().getGameTurn() - pOldCity.getGameTurnAcquired()),
+                (turn() - pOldCity.getGameTurnAcquired()),
                 0,
                 gc.getDefineINT("CAPTURE_GOLD_MAX_TURNS"),
             )

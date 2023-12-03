@@ -3341,7 +3341,7 @@ class CvMainInterface:
                 iCount += 1
                 if (
                     not CyInterface().isCityScreenUp()
-                    and CyGame().getGameTurn() >= civilization(ePlayer).date.birth
+                    and turn() >= civilization(ePlayer).date.birth
                 ):
                     iStability = pPlayer.getStability()
                     szStabilityButton = u"<font=2>%c</font>" % (
@@ -3633,9 +3633,7 @@ class CvMainInterface:
                 if ePlayer == Civ.BURGUNDY.value:
                     iBurgundyCulture = pPlayer.getUHVCounter(0)
                     # Absinthe: only display UHV counter until the UHV date
-                    if not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (
-                        DateTurn.i1336AD + 2
-                    ):
+                    if not CyInterface().isCityScreenUp() and turn() < (DateTurn.i1336AD + 2):
                         szUHVButton = u"<font=2>%c</font>" % (
                             CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR)
                         )
@@ -3680,9 +3678,7 @@ class CvMainInterface:
                 elif ePlayer == Civ.LITHUANIA.value:
                     iLithuaniaCulture = pPlayer.getUHVCounter(0)
                     # Absinthe: only display UHV counter until the UHV date
-                    if not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (
-                        DateTurn.i1386AD + 2
-                    ):
+                    if not CyInterface().isCityScreenUp() and turn() < (DateTurn.i1386AD + 2):
                         szUHVButton = u"<font=2>%c</font>" % (
                             CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR)
                         )
@@ -3772,9 +3768,7 @@ class CvMainInterface:
                 elif ePlayer == Civ.NORWAY.value:
                     iNorwayRazed = pPlayer.getUHVCounter(0)
                     # Absinthe: only display UHV counter until the UHV date
-                    if not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (
-                        DateTurn.i1066AD + 2
-                    ):
+                    if not CyInterface().isCityScreenUp() and turn() < (DateTurn.i1066AD + 2):
                         szUHVButton = u"<font=2>%c</font>" % (
                             CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR)
                         )
@@ -3819,9 +3813,7 @@ class CvMainInterface:
                 elif ePlayer == Civ.KIEV.value:
                     iKievFood = pPlayer.getUHVCounter(2)
                     # Absinthe: only display UHV counter until the UHV date
-                    if not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (
-                        DateTurn.i1300AD + 2
-                    ):
+                    if not CyInterface().isCityScreenUp() and turn() < (DateTurn.i1300AD + 2):
                         szUHVButton = u"<font=2>%c</font>" % (
                             CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR)
                         )
@@ -3934,9 +3926,7 @@ class CvMainInterface:
                 elif ePlayer == Civ.NOVGOROD.value:
                     iNovgorodFurs = pPlayer.countCultBorderBonuses(Bonus.FUR.value)
                     # Absinthe: only display UHV counter until the UHV date
-                    if not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (
-                        DateTurn.i1397AD + 2
-                    ):
+                    if not CyInterface().isCityScreenUp() and turn() < (DateTurn.i1397AD + 2):
                         szUHVButton = u"<font=2>%c</font>" % (
                             CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR)
                         )
@@ -4026,9 +4016,7 @@ class CvMainInterface:
                 elif ePlayer == Civ.ARAGON.value:
                     iAragonCargoShips = utils.getCargoShips(Civ.ARAGON.value)
                     # Absinthe: only display UHV counter until the UHV date
-                    if not CyInterface().isCityScreenUp() and CyGame().getGameTurn() < (
-                        DateTurn.i1444AD + 2
-                    ):
+                    if not CyInterface().isCityScreenUp() and turn() < (DateTurn.i1444AD + 2):
                         szUHVButton = u"<font=2>%c</font>" % (
                             CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR)
                         )
@@ -4266,10 +4254,9 @@ class CvMainInterface:
                 + unicode(CyGameTextMgr().getInterfaceTimeStr(ePlayer))  # type: ignore
             )
         else:
-            # g_szTimeText = localText.getText("TXT_KEY_TIME_TURN", (CyGame().getGameTurn(), )) + u" - " + unicode(CyGameTextMgr().getInterfaceTimeStr(ePlayer)) #Rhye # type: ignore
-            g_szTimeText = unicode(
+            g_szTimeText = unicode(  # type: ignore
                 CyGameTextMgr().getInterfaceTimeStr(ePlayer)
-            )  # Rhye # type: ignore
+            )  # Rhye
 
     # Will update the selection Data Strings
     def updateCityScreen(self):

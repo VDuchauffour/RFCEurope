@@ -3,6 +3,7 @@
 
 import math
 from CoreData import civilization
+from CoreStructures import turn
 import CvUtil
 from CvPythonExtensions import *
 import RFCUtils
@@ -254,7 +255,7 @@ class CvDawnOfMan:
             )
             screen.show("Exit")  # Rhye
         else:
-            iGameTurn = CyGame().getGameTurn()
+            iGameTurn = turn()
 
             iNumAutoPlayTurns = civilization(CyGame().getActiveTeam()).date.birth
             iNumTurnsRemaining = iNumAutoPlayTurns - iGameTurn
