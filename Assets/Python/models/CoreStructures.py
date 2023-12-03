@@ -1002,28 +1002,57 @@ def get_player_experience(unit):
     return experience
 
 
-def make_units(player, unit, plot, n_units=1, unit_ai=UnitAITypes.NO_UNITAI):
+def _generate_unit(player_id, unit, plot, unit_ai):
+    x, y = location(plot)
+    unit = player(player_id).initUnit(int(unit), x, y, unit_ai, DirectionTypes.DIRECTION_SOUTH)
+    unit.changeExperience(get_player_experience(unit), -1, False, False, False)
+    unit.testPromotionReady()
+    return unit
+
+
+def make_units(player_id, unit, plot, n_units=1, unit_ai=UnitAITypes.NO_UNITAI):
     if n_units <= 0:
         return CreatedUnits([])
-
     if unit < 0:
         raise Exception("Invalid unit")
 
-    x, y = location(plot)
-
     units = []
     for _ in range(n_units):
-        unit = player(player).initUnit(unit, x, y, unit_ai, DirectionTypes.DIRECTION_SOUTH)
-        unit.changeExperience(get_player_experience(unit), -1, False, False, False)
-        unit.testPromotionReady()
+        unit = _generate_unit(player_id, unit, plot, unit_ai)
         units.append(unit)
         # events.fireEvent("unitCreated", unit)
-
     return CreatedUnits(units)
 
 
 def make_unit(player, unit, plot, unit_ai=UnitAITypes.NO_UNITAI):
     return make_units(player, unit, plot, 1, unit_ai).one()
+
+
+def _generate_crusade_unit(player_id, unit, plot, unit_ai, crusade_value):
+    # 3Miro: this is a hack to distinguish Crusades without making a separate variable
+    unit = _generate_unit(player_id, unit, plot, unit_ai)
+    unit.setMercID(-5 - crusade_value)
+    return unit
+
+
+def make_crusade_units(
+    player_id, unit, plot, crusade_value, n_units=1, unit_ai=UnitAITypes.NO_UNITAI
+):
+    if n_units <= 0:
+        return CreatedUnits([])
+    if unit < 0:
+        raise Exception("Invalid unit")
+
+    units = []
+    for _ in range(n_units):
+        unit = _generate_crusade_unit(player_id, unit, plot, unit_ai, crusade_value)
+        units.append(unit)
+        # events.fireEvent("unitCreated", unit)
+    return CreatedUnits(units)
+
+
+def make_crusade_unit(player, unit, plot, crusade_value, unit_ai=UnitAITypes.NO_UNITAI):
+    return make_crusade_units(player, unit, plot, crusade_value, 1, unit_ai).one()
 
 
 infos = Infos()

@@ -1,7 +1,15 @@
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
 from CoreFunctions import get_civ_by_id
-from CoreStructures import human, player, team, teamtype, turn
+from CoreStructures import (
+    human,
+    make_crusade_unit,
+    make_crusade_units,
+    player,
+    team,
+    teamtype,
+    turn,
+)
 import PyHelpers
 import Popup
 from PyUtils import choices, percentage, percentage_chance, rand
@@ -1393,21 +1401,6 @@ class Crusades:
         else:
             self.returnCrusaders()
 
-    def makeUnit(self, iUnit, iPlayer, iActiveCrusade, tCoords, iNum):  # by LOQ
-        "Makes iNum units for player iPlayer of the type iUnit at tCoords."
-        pPlayer = gc.getPlayer(iPlayer)
-        for i in range(iNum):
-            pUnit = pPlayer.initUnit(
-                iUnit,
-                tCoords[0],
-                tCoords[1],
-                UnitAITypes.UNITAI_ATTACK,
-                DirectionTypes.DIRECTION_SOUTH,
-            )
-            pUnit.setMercID(
-                -5 - iActiveCrusade
-            )  # 3Miro: this is a hack to distinguish Crusades without making a separate variable
-
     def crusadeMakeUnits(self, tPlot, iActiveCrusade):
         iLeader = self.getLeader()
         teamLeader = gc.getTeam(gc.getPlayer(iLeader).getTeam())
@@ -1420,18 +1413,18 @@ class Crusades:
             pPlot = gc.getMap().plot(*CITIES[City.JERUSALEM])
             iVictim = pPlot.getPlotCity().getOwner()
             if teamLeader.isHasTech(Technology.CHIVALRY.value) or iVictim == iHuman:
-                self.makeUnit(Unit.BURGUNDIAN_PALADIN.value, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(Unit.TEMPLAR.value, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(Unit.TEUTONIC.value, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(Unit.KNIGHT_OF_ST_JOHNS.value, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(Unit.GUISARME.value, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(Unit.CATAPULT.value, iLeader, iActiveCrusade, tPlot, 1)
+                make_crusade_unit(iLeader, Unit.BURGUNDIAN_PALADIN, tPlot, iActiveCrusade)
+                make_crusade_unit(iLeader, Unit.TEMPLAR, tPlot, iActiveCrusade)
+                make_crusade_unit(iLeader, Unit.TEUTONIC, tPlot, iActiveCrusade)
+                make_crusade_unit(iLeader, Unit.KNIGHT_OF_ST_JOHNS, tPlot, iActiveCrusade)
+                make_crusade_unit(iLeader, Unit.GUISARME, tPlot, iActiveCrusade)
+                make_crusade_unit(iLeader, Unit.CATAPULT, tPlot, iActiveCrusade)
             else:
-                self.makeUnit(Unit.HEAVY_LANCER.value, iLeader, iActiveCrusade, tPlot, 2)
-                self.makeUnit(Unit.LANCER.value, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(Unit.LONG_SWORDSMAN.value, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(Unit.SPEARMAN.value, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(Unit.TREBUCHET.value, iLeader, iActiveCrusade, tPlot, 1)
+                make_crusade_units(iLeader, Unit.HEAVY_LANCER, tPlot, iActiveCrusade, 2)
+                make_crusade_unit(iLeader, Unit.LANCER, tPlot, iActiveCrusade)
+                make_crusade_unit(iLeader, Unit.LONG_SWORDSMAN, tPlot, iActiveCrusade)
+                make_crusade_unit(iLeader, Unit.SPEARMAN, tPlot, iActiveCrusade)
+                make_crusade_unit(iLeader, Unit.TREBUCHET, tPlot, iActiveCrusade)
             # there are way too many generic units in most Crusades:
             if self.getSelectedUnit(7) > 1:
                 iReducedNumber = (
@@ -1442,17 +1435,17 @@ class Crusades:
         else:
             iRougeModifier = 200
             if teamLeader.isHasTech(Technology.CHIVALRY.value):
-                self.makeUnit(Unit.KNIGHT.value, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(Unit.TEUTONIC.value, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(Unit.LONG_SWORDSMAN.value, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(Unit.GUISARME.value, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(Unit.CATAPULT.value, iLeader, iActiveCrusade, tPlot, 1)
+                make_crusade_unit(iLeader, Unit.KNIGHT, tPlot, iActiveCrusade)
+                make_crusade_unit(iLeader, Unit.TEUTONIC, tPlot, iActiveCrusade)
+                make_crusade_unit(iLeader, Unit.LONG_SWORDSMAN, tPlot, iActiveCrusade)
+                make_crusade_unit(iLeader, Unit.GUISARME, tPlot, iActiveCrusade)
+                make_crusade_unit(iLeader, Unit.CATAPULT, tPlot, iActiveCrusade)
             else:
-                self.makeUnit(Unit.HEAVY_LANCER.value, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(Unit.LANCER.value, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(Unit.LONG_SWORDSMAN.value, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(Unit.SPEARMAN.value, iLeader, iActiveCrusade, tPlot, 1)
-                self.makeUnit(Unit.TREBUCHET.value, iLeader, iActiveCrusade, tPlot, 1)
+                make_crusade_unit(iLeader, Unit.HEAVY_LANCER, tPlot, iActiveCrusade)
+                make_crusade_unit(iLeader, Unit.LANCER, tPlot, iActiveCrusade)
+                make_crusade_unit(iLeader, Unit.LONG_SWORDSMAN, tPlot, iActiveCrusade)
+                make_crusade_unit(iLeader, Unit.SPEARMAN, tPlot, iActiveCrusade)
+                make_crusade_unit(iLeader, Unit.TREBUCHET, tPlot, iActiveCrusade)
             # there are way too many generic units in most Crusades:
             if self.getSelectedUnit(7) > 1:
                 iReducedNumber = (
@@ -1494,27 +1487,27 @@ class Crusades:
                 iRougeModifier *= 8 / 5
 
         if self.getSelectedUnit(0) > 0:
-            self.makeUnit(
-                Unit.TEMPLAR.value,
+            make_crusade_units(
                 iLeader,
-                iActiveCrusade,
+                Unit.TEMPLAR,
                 tPlot,
+                iActiveCrusade,
                 self.getSelectedUnit(0) * 100 / iRougeModifier,
             )
         if self.getSelectedUnit(1) > 0:
-            self.makeUnit(
-                Unit.TEUTONIC.value,
+            make_crusade_units(
                 iLeader,
-                iActiveCrusade,
+                Unit.TEUTONIC,
                 tPlot,
+                iActiveCrusade,
                 self.getSelectedUnit(1) * 100 / iRougeModifier,
             )
         if self.getSelectedUnit(2) > 0:
-            self.makeUnit(
-                Unit.KNIGHT_OF_ST_JOHNS.value,
+            make_crusade_units(
                 iLeader,
-                iActiveCrusade,
+                Unit.KNIGHT_OF_ST_JOHNS,
                 tPlot,
+                iActiveCrusade,
                 self.getSelectedUnit(2) * 100 / iRougeModifier,
             )
         if self.getSelectedUnit(3) > 0:
@@ -1522,57 +1515,51 @@ class Crusades:
             if iLeader == Civ.BURGUNDY.value:
                 for i in range(0, iKnightNumber):
                     if percentage_chance(50, strict=True):
-                        self.makeUnit(
-                            Unit.BURGUNDIAN_PALADIN.value, iLeader, iActiveCrusade, tPlot, 1
-                        )
+                        make_crusade_unit(iLeader, Unit.BURGUNDIAN_PALADIN, tPlot, iActiveCrusade)
                     else:
-                        self.makeUnit(Unit.KNIGHT.value, iLeader, iActiveCrusade, tPlot, 1)
+                        make_crusade_unit(iLeader, Unit.KNIGHT, tPlot, iActiveCrusade)
             else:
                 for i in range(0, iKnightNumber):
                     if percentage_chance(20, strict=True):
-                        self.makeUnit(
-                            Unit.BURGUNDIAN_PALADIN.value, iLeader, iActiveCrusade, tPlot, 1
-                        )
+                        make_crusade_unit(iLeader, Unit.BURGUNDIAN_PALADIN, tPlot, iActiveCrusade)
                     else:
-                        self.makeUnit(Unit.KNIGHT.value, iLeader, iActiveCrusade, tPlot, 1)
+                        make_crusade_unit(iLeader, Unit.KNIGHT, tPlot, iActiveCrusade)
         if self.getSelectedUnit(4) > 0:
             iLightCavNumber = self.getSelectedUnit(4) * 100 / iRougeModifier
             if iLeader == Civ.HUNGARY.value:
                 for i in range(0, iLightCavNumber):
                     if percentage_chance(50, strict=True):
-                        self.makeUnit(
-                            Unit.HUNGARIAN_HUSZAR.value, iLeader, iActiveCrusade, tPlot, 1
-                        )
+                        make_crusade_unit(iLeader, Unit.HUNGARIAN_HUSZAR, tPlot, iActiveCrusade)
                     else:
-                        self.makeUnit(Unit.HEAVY_LANCER.value, iLeader, iActiveCrusade, tPlot, 1)
+                        make_crusade_unit(iLeader, Unit.HEAVY_LANCER, tPlot, iActiveCrusade)
             else:
-                self.makeUnit(
-                    Unit.HEAVY_LANCER.value, iLeader, iActiveCrusade, tPlot, iLightCavNumber
+                make_crusade_units(
+                    iLeader, Unit.HEAVY_LANCER, tPlot, iActiveCrusade, iLightCavNumber
                 )
         if self.getSelectedUnit(5) > 0:
-            self.makeUnit(
-                Unit.LANCER.value,
+            make_crusade_units(
                 iLeader,
-                iActiveCrusade,
+                Unit.LANCER,
                 tPlot,
+                iActiveCrusade,
                 self.getSelectedUnit(5) * 100 / iRougeModifier,
             )
         if self.getSelectedUnit(6) > 0:
             iSiegeNumber = self.getSelectedUnit(6) * 100 / iRougeModifier
             if iSiegeNumber > 2:
-                self.makeUnit(Unit.CATAPULT.value, iLeader, iActiveCrusade, tPlot, 2)
-                self.makeUnit(
-                    Unit.TREBUCHET.value, iLeader, iActiveCrusade, tPlot, iSiegeNumber - 2
+                make_crusade_units(iLeader, Unit.CATAPULT, tPlot, iActiveCrusade, 2)
+                make_crusade_units(
+                    iLeader, Unit.TREBUCHET, tPlot, iActiveCrusade, iSiegeNumber - 2
                 )
             else:
-                self.makeUnit(Unit.CATAPULT.value, iLeader, iActiveCrusade, tPlot, iSiegeNumber)
+                make_crusade_units(iLeader, Unit.CATAPULT, tPlot, iActiveCrusade, iSiegeNumber)
         if self.getSelectedUnit(7) > 0:
             iFootNumber = self.getSelectedUnit(7) * 100 / iRougeModifier
             for i in range(0, iFootNumber):
                 if percentage_chance(50, strict=True):
-                    self.makeUnit(Unit.LONG_SWORDSMAN.value, iLeader, iActiveCrusade, tPlot, 1)
+                    make_crusade_unit(iLeader, Unit.LONG_SWORDSMAN, tPlot, iActiveCrusade)
                 else:
-                    self.makeUnit(Unit.GUISARME.value, iLeader, iActiveCrusade, tPlot, 1)
+                    make_crusade_unit(iLeader, Unit.GUISARME, tPlot, iActiveCrusade)
 
     def freeCrusaders(self, iPlayer):
         # the majority of Crusader units will return from the Crusade, so the Crusading civ will have harder time keeping Jerusalem and the Levant
