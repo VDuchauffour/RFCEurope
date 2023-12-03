@@ -1,8 +1,15 @@
 from Consts import INDEPENDENT_CIVS
-from CoreFunctions import get_civ_by_id, religion
+from CoreFunctions import get_civ_by_id, iterate, owner, plot, religion
 from PyUtils import any, rand
 import CoreTypes
-from BaseStructures import EnumCollectionFactory, Collection, EnumDataMapper, Item, EnumCollection
+from BaseStructures import (
+    EntitiesCollection,
+    EnumCollectionFactory,
+    Collection,
+    EnumDataMapper,
+    Item,
+    EnumCollection,
+)
 from Errors import NotTypeExpectedError
 
 try:
@@ -39,6 +46,7 @@ try:
         CvUnitInfo,
         UnitCombatTypes,
         getTurnForYear,
+        DomainTypes,
     )
 
     gc = CyGlobalContext()
@@ -818,6 +826,113 @@ class TechFactory(object):
 
     def column(self, column):
         return TechCollection().column(column)
+
+
+def unit(key):
+    if isinstance(key, Unit):
+        return player(key.owner).getUnit(key.id)
+
+    raise TypeError("Expected key to be `Unit`, received '%s'" % type(key))
+
+
+class Unit(object):
+    def __init__(self, unit):
+        self.owner = unit.getOwner()
+        self.id = unit.getID()
+        self.x = unit.getX()
+        self.y = unit.getY()
+
+    def __eq__(self, other):
+        return isinstance(other, Unit) and (self.owner, self.id) == (other.owner, other.id)
+
+    def __str__(self):
+        return str((self.owner, self.id))
+
+    def __nonzero__(self):
+        return self.x >= 0 and self.y >= 0
+
+    @classmethod
+    def of(cls, unit):
+        if isinstance(unit, cls):
+            return unit
+        return cls(unit)
+
+
+class Units(EntitiesCollection):
+    def __init__(self, *units):
+        super(Units, self).__init__(*[Unit.of(u) for u in units])
+
+    def _factory(self, key):
+        return unit(key)
+
+    def __contains__(self, item):
+        if isinstance(item, CyUnit):
+            return Unit.of(item) in self
+
+        raise TypeError(
+            "Tried to check if Units contains '%s', can only contain units" % type(item)
+        )
+
+    def __str__(self):
+        return ", ".join(
+            [
+                "%s (%s) at %s"
+                % (
+                    infos.unit(unit.getUnitType()).getText(),
+                    adjective(unit.getOwner()),
+                    (unit.getX(), unit.getY()),
+                )
+                for unit in self.entities()
+            ]
+        )
+
+    def owner(self, identifier):
+        return self.filter(lambda u: owner(u, identifier))
+
+    def not_owner(self, identifier):
+        return self.filter(lambda u: not owner(u, identifier))
+
+    def minor(self):
+        return self.filter(lambda u: is_minor_civ(u))
+
+    def type(self, unit_type):
+        return self.filter(lambda u: u.getUnitType() == unit_type)
+
+    def by_type(self):
+        return dict([(type, self.type(type)) for type in set(self.types())])
+
+    def at_war(self, identifier):
+        return self.filter(lambda u: team(identifier).isAtWar(u.getTeam()))
+
+    def domain(self, identifier):
+        return self.filter(lambda u: u.getDomainType() == identifier)
+
+    def land(self):
+        return self.domain(DomainTypes.DOMAIN_LAND)
+
+    def water(self):
+        return self.domain(DomainTypes.DOMAIN_SEA)
+
+    def types(self):
+        return [unit.getUnitType() for unit in self]
+
+    def combat(self, combat_type):
+        return self.filter(lambda u: u.getUnitCombatType() == combat_type)
+
+
+class UnitFactory:
+    def of(self, units):
+        return Units(*[Unit.of(unit) for unit in units])
+
+    def owner(self, identifier):
+        units = iterate(player(identifier).firstUnit, player(identifier).nextUnit, Unit.of)
+        return Units(*units)
+
+    def at(self, *args):
+        if args is None:
+            return Units()
+
+        return Units(*[Unit.of(plot(*args).getUnit(i)) for i in range(plot(*args).getNumUnits())])
 
 
 infos = Infos()

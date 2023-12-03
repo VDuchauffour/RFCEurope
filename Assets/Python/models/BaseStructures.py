@@ -371,6 +371,18 @@ class Collection(list):
         return combinations(self, repeat)
 
 
+class EntitiesCollection(Collection):
+    """A base class to handle a set of game item taken from RFC DoC."""
+
+    def _factory(self, key):
+        """Inner function for retrieve the in-game class of the entity."""
+        return key
+
+    def entities(self):
+        """Retrieve in-game item of the collection."""
+        return [self._factory(x) for x in self]
+
+
 class EnumCollection(Collection):
     """A base class to handle a set of a specific type of `Item`."""
 
