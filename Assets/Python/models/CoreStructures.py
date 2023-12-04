@@ -1012,7 +1012,7 @@ def _generate_unit(player_id, unit, plot, unit_ai, unit_name=None):
     return unit
 
 
-def make_units(player_id, unit, plot, n_units=1, unit_ai=UnitAITypes.NO_UNITAI, unit_name=None):
+def make_units(player, unit, plot, n_units=1, unit_ai=UnitAITypes.NO_UNITAI, unit_name=None):
     if n_units <= 0:
         return CreatedUnits([])
     if unit < 0:
@@ -1020,9 +1020,9 @@ def make_units(player_id, unit, plot, n_units=1, unit_ai=UnitAITypes.NO_UNITAI, 
 
     units = []
     for _ in range(n_units):
-        unit = _generate_unit(player_id, unit, plot, unit_ai, unit_name)
+        unit = _generate_unit(player, unit, plot, unit_ai, unit_name)
         units.append(unit)
-        # events.fireEvent("unitCreated", unit)
+        # events.fireEvent("unitCreated", unit) # TODO
     return CreatedUnits(units)
 
 
@@ -1030,15 +1030,15 @@ def make_unit(player, unit, plot, unit_ai=UnitAITypes.NO_UNITAI, unit_name=None)
     return make_units(player, unit, plot, 1, unit_ai, unit_name).one()
 
 
-def _generate_crusade_unit(player_id, unit, plot, unit_ai, crusade_value):
+def _generate_crusade_unit(player, unit, plot, unit_ai, crusade_value):
     # 3Miro: this is a hack to distinguish Crusades without making a separate variable
-    unit = _generate_unit(player_id, unit, plot, unit_ai)
+    unit = _generate_unit(player, unit, plot, unit_ai)
     unit.setMercID(-5 - crusade_value)
     return unit
 
 
 def make_crusade_units(
-    player_id, unit, plot, crusade_value, n_units=1, unit_ai=UnitAITypes.NO_UNITAI
+    player, unit, plot, crusade_value, n_units=1, unit_ai=UnitAITypes.NO_UNITAI
 ):
     if n_units <= 0:
         return CreatedUnits([])
@@ -1047,7 +1047,7 @@ def make_crusade_units(
 
     units = []
     for _ in range(n_units):
-        unit = _generate_crusade_unit(player_id, unit, plot, unit_ai, crusade_value)
+        unit = _generate_crusade_unit(player, unit, plot, unit_ai, crusade_value)
         units.append(unit)
         # events.fireEvent("unitCreated", unit)
     return CreatedUnits(units)
