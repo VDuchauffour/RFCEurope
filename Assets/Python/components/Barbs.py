@@ -2,7 +2,7 @@
 
 from random import choice
 from CvPythonExtensions import *
-from CoreStructures import human, turn
+from CoreStructures import human, make_unit, make_units, turn
 from CoreTypes import Civ, Civic, Religion, Technology, Unit, Province
 import Popup
 from PyUtils import percentage, percentage_chance, rand
@@ -784,37 +784,6 @@ class Barbs:
     def setNationRevoltIndex(self, iNationIndex, iRevoltIndex):
         data.lRevoltinNationRevoltIndex = [iNationIndex, iRevoltIndex]
 
-    def makeUnit(self, iUnit, iPlayer, tCoords, iNum, iForceAttack, szName):
-        "Makes iNum units for player iPlayer of the type iUnit at tCoords."
-        for i in range(iNum):
-            player = gc.getPlayer(iPlayer)
-            if iForceAttack == 0:
-                pUnit = player.initUnit(
-                    iUnit,
-                    tCoords[0],
-                    tCoords[1],
-                    UnitAITypes.NO_UNITAI,
-                    DirectionTypes.DIRECTION_SOUTH,
-                )
-            elif iForceAttack == 1:
-                pUnit = player.initUnit(
-                    iUnit,
-                    tCoords[0],
-                    tCoords[1],
-                    UnitAITypes.UNITAI_ATTACK,
-                    DirectionTypes.DIRECTION_SOUTH,
-                )
-            elif iForceAttack == 2:
-                pUnit = player.initUnit(
-                    iUnit,
-                    tCoords[0],
-                    tCoords[1],
-                    UnitAITypes.UNITAI_ATTACK_SEA,
-                    DirectionTypes.DIRECTION_SOUTH,
-                )
-            if szName != "":
-                pUnit.setName(szName)
-
     def checkTurn(self, iGameTurn):
         # Handicap level modifier
         iHandicap = gc.getGame().getHandicapType() - 1
@@ -838,8 +807,6 @@ class Barbs:
                 10,
                 3,
                 utils.outerSeaSpawn,
-                1,
-                "",
             )
         elif iGameTurn >= DateTurn.i1401AD:
             self.spawnPirate(
@@ -854,7 +821,6 @@ class Barbs:
                 10,
                 3,
                 utils.outerSeaSpawn,
-                1,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_BARBARY_PIRATES", ()),
             )
             # extra Corsairs around Tunisia
@@ -870,7 +836,6 @@ class Barbs:
                 5,
                 0,
                 utils.outerSeaSpawn,
-                1,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_BARBARY_PIRATES", ()),
             )
         if DateTurn.i1200AD <= iGameTurn < DateTurn.i1500AD:
@@ -886,8 +851,6 @@ class Barbs:
                 10,
                 5,
                 utils.outerSeaSpawn,
-                1,
-                "",
             )
         elif iGameTurn >= DateTurn.i1500AD:
             self.spawnPirate(
@@ -902,8 +865,6 @@ class Barbs:
                 10,
                 5,
                 utils.outerSeaSpawn,
-                1,
-                "",
             )
 
         # Germanic Barbarians throughout Western Europe (France, Germany)
@@ -918,7 +879,7 @@ class Barbs:
                 11,
                 1,
                 utils.outerInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()),
             )
             if Civ.FRANCE.value == iHuman:
@@ -932,7 +893,7 @@ class Barbs:
                     9,
                     3,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()),
                 )
                 self.spawnUnits(
@@ -945,7 +906,7 @@ class Barbs:
                     18,
                     7,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()),
                 )
         elif DateTurn.i600AD <= iGameTurn < DateTurn.i800AD:
@@ -959,7 +920,7 @@ class Barbs:
                 9,
                 2,
                 utils.outerInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()),
             )
             self.spawnUnits(
@@ -972,7 +933,7 @@ class Barbs:
                 11,
                 4,
                 utils.outerInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()),
             )
             if Civ.FRANCE.value == iHuman:
@@ -986,7 +947,7 @@ class Barbs:
                     9,
                     3,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()),
                 )
                 self.spawnUnits(
@@ -999,7 +960,7 @@ class Barbs:
                     11,
                     4,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()),
                 )
                 self.spawnUnits(
@@ -1012,7 +973,7 @@ class Barbs:
                     14,
                     9,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_GERMANIC_TRIBES", ()),
                 )
 
@@ -1028,7 +989,7 @@ class Barbs:
                 10,
                 3,
                 utils.outerInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_LONGOBARDS", ()),
             )
             self.spawnUnits(
@@ -1041,7 +1002,7 @@ class Barbs:
                 12,
                 0,
                 utils.outerInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_LONGOBARDS", ()),
             )
 
@@ -1057,7 +1018,7 @@ class Barbs:
                 7,
                 0,
                 utils.outerInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_VISIGOTHS", ()),
             )
             self.spawnUnits(
@@ -1070,7 +1031,7 @@ class Barbs:
                 7,
                 3,
                 utils.outerInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_VISIGOTHS", ()),
             )
             self.spawnUnits(
@@ -1083,7 +1044,7 @@ class Barbs:
                 9,
                 5,
                 utils.outerInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_VISIGOTHS", ()),
             )
             if Civ.CORDOBA.value == iHuman:
@@ -1097,7 +1058,7 @@ class Barbs:
                     7,
                     0,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_VISIGOTHS", ()),
                 )
                 self.spawnUnits(
@@ -1110,7 +1071,7 @@ class Barbs:
                     6,
                     3,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_VISIGOTHS", ()),
                 )
 
@@ -1127,7 +1088,7 @@ class Barbs:
                 8,
                 0,
                 utils.outerInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_BERBERS", ()),
             )
             # Morocco
@@ -1142,7 +1103,7 @@ class Barbs:
                     9,
                     0,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_BERBERS", ()),
                 )
                 self.spawnUnits(
@@ -1155,7 +1116,7 @@ class Barbs:
                     11,
                     5,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_BERBERS", ()),
                 )
                 self.spawnUnits(
@@ -1168,7 +1129,7 @@ class Barbs:
                     7,
                     3,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_BERBERS", ()),
                 )
             else:
@@ -1182,7 +1143,7 @@ class Barbs:
                     14,
                     5,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_BERBERS", ()),
                 )
                 self.spawnUnits(
@@ -1195,7 +1156,7 @@ class Barbs:
                     8,
                     3,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_BERBERS", ()),
                 )
 
@@ -1211,7 +1172,7 @@ class Barbs:
                 5,
                 0,
                 utils.outerInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_AVARS", ()),
             )
             if Civ.BULGARIA.value == iHuman:
@@ -1225,7 +1186,7 @@ class Barbs:
                     6,
                     1,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_AVARS", ()),
                 )
 
@@ -1242,7 +1203,7 @@ class Barbs:
                 8,
                 0,
                 utils.outerInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SOUTHERN_SLAVS", ()),
             )
             if Civ.BYZANTIUM.value == iHuman:
@@ -1256,7 +1217,7 @@ class Barbs:
                     11,
                     3,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SOUTHERN_SLAVS", ()),
                 )
                 self.spawnUnits(
@@ -1269,7 +1230,7 @@ class Barbs:
                     8,
                     0,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SOUTHERN_SLAVS", ()),
                 )
             # Sassanids in Anatolia
@@ -1283,7 +1244,7 @@ class Barbs:
                 6,
                 2,
                 utils.forcedInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SASSANIDS", ()),
             )
             self.spawnUnits(
@@ -1296,7 +1257,7 @@ class Barbs:
                 9,
                 1,
                 utils.forcedInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SASSANIDS", ()),
             )
             if Civ.BYZANTIUM.value == iHuman:
@@ -1310,7 +1271,7 @@ class Barbs:
                     6,
                     2,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SASSANIDS", ()),
                 )
                 self.spawnUnits(
@@ -1323,7 +1284,7 @@ class Barbs:
                     9,
                     1,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SASSANIDS", ()),
                 )
         # Barbs in NW Greece
@@ -1338,8 +1299,7 @@ class Barbs:
                 9,
                 3,
                 utils.outerInvasion,
-                1,
-                "",
+                UnitAITypes.UNITAI_ATTACK,
             )
             if Civ.BYZANTIUM.value == iHuman:
                 self.spawnUnits(
@@ -1352,8 +1312,7 @@ class Barbs:
                     9,
                     3,
                     utils.outerInvasion,
-                    1,
-                    "",
+                    UnitAITypes.UNITAI_ATTACK,
                 )
 
         # Serbs in the Southern Balkans
@@ -1369,7 +1328,7 @@ class Barbs:
                     9,
                     3,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SERBS", ()),
                 )
                 self.spawnUnits(
@@ -1382,7 +1341,7 @@ class Barbs:
                     11,
                     7,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SERBS", ()),
                 )
                 self.spawnUnits(
@@ -1395,7 +1354,7 @@ class Barbs:
                     7,
                     4,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SERBS", ()),
                 )
             else:
@@ -1409,7 +1368,7 @@ class Barbs:
                     9,
                     3,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SERBS", ()),
                 )
 
@@ -1425,7 +1384,7 @@ class Barbs:
                 8,
                 0,
                 utils.outerInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_KHAZARS", ()),
             )
         elif DateTurn.i864AD <= iGameTurn < DateTurn.i920AD:
@@ -1440,7 +1399,7 @@ class Barbs:
                     7,
                     2,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_KHAZARS", ()),
                 )
                 self.spawnUnits(
@@ -1453,7 +1412,7 @@ class Barbs:
                     5,
                     2,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_KHAZARS", ()),
                 )
             else:
@@ -1467,7 +1426,7 @@ class Barbs:
                     11,
                     2,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_KHAZARS", ()),
                 )
 
@@ -1484,7 +1443,7 @@ class Barbs:
                 8,
                 3,
                 utils.outerInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_PECHENEGS", ()),
             )
             if Civ.KIEV.value == iHuman:
@@ -1498,7 +1457,7 @@ class Barbs:
                     5,
                     1,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_PECHENEGS", ()),
                 )
             # in Hungary
@@ -1512,7 +1471,7 @@ class Barbs:
                 9,
                 1,
                 utils.outerInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_PECHENEGS", ()),
             )
             if Civ.HUNGARY.value == iHuman:
@@ -1526,7 +1485,7 @@ class Barbs:
                     9,
                     1,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_PECHENEGS", ()),
                 )
             # in Bulgaria
@@ -1541,7 +1500,7 @@ class Barbs:
                     5,
                     1,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_PECHENEGS", ()),
                 )
 
@@ -1559,7 +1518,7 @@ class Barbs:
                     7,
                     5,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_CUMANS", ()),
                 )
                 self.spawnUnits(
@@ -1572,7 +1531,7 @@ class Barbs:
                     9,
                     1,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_KIPCHAKS", ()),
                 )
             else:
@@ -1586,7 +1545,7 @@ class Barbs:
                     7,
                     5,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_CUMANS", ()),
                 )
                 self.spawnUnits(
@@ -1599,7 +1558,7 @@ class Barbs:
                     9,
                     1,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_KIPCHAKS", ()),
                 )
             # in Hungary
@@ -1613,7 +1572,7 @@ class Barbs:
                 7,
                 1,
                 utils.outerInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_CUMANS", ()),
             )
             if Civ.HUNGARY.value == iHuman:
@@ -1627,7 +1586,7 @@ class Barbs:
                     7,
                     1,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_CUMANS", ()),
                 )
                 self.spawnUnits(
@@ -1640,7 +1599,7 @@ class Barbs:
                     9,
                     4,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_KIPCHAKS", ()),
                 )
             # in Bulgaria
@@ -1655,7 +1614,7 @@ class Barbs:
                     7,
                     3,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_CUMANS", ()),
                 )
                 self.spawnUnits(
@@ -1668,7 +1627,7 @@ class Barbs:
                     7,
                     3,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_KIPCHAKS", ()),
                 )
 
@@ -1687,7 +1646,6 @@ class Barbs:
                     8,
                     0,
                     utils.outerSeaSpawn,
-                    1,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_VIKINGS", ()),
                 )
             else:
@@ -1701,7 +1659,6 @@ class Barbs:
                     8,
                     0,
                     utils.outerSeaSpawn,
-                    1,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_VIKINGS", ()),
                 )
 
@@ -1717,7 +1674,6 @@ class Barbs:
                 6,
                 1,
                 utils.outerSeaSpawn,
-                1,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SWEDES", ()),
             )
 
@@ -1733,7 +1689,7 @@ class Barbs:
                 7,
                 0,
                 utils.outerInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_CHUDES", ()),
             )
             self.spawnUnits(
@@ -1746,7 +1702,7 @@ class Barbs:
                 11,
                 3,
                 utils.outerInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_CHUDES", ()),
             )
 
@@ -1764,7 +1720,7 @@ class Barbs:
                     2,
                     1,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_BALTICS", ()),
                 )
                 self.spawnUnits(
@@ -1777,7 +1733,7 @@ class Barbs:
                     2,
                     1,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_BALTICS", ()),
                 )
                 self.spawnUnits(
@@ -1790,7 +1746,7 @@ class Barbs:
                     2,
                     1,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_BALTICS", ()),
                 )
         elif DateTurn.i1200AD <= iGameTurn < DateTurn.i1224AD:
@@ -1804,7 +1760,7 @@ class Barbs:
                 4,
                 3,
                 utils.outerInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SWORD_BRETHEN", ()),
             )
             self.spawnUnits(
@@ -1817,7 +1773,7 @@ class Barbs:
                 4,
                 1,
                 utils.outerInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SWORD_BRETHEN", ()),
             )
 
@@ -1833,7 +1789,7 @@ class Barbs:
                 7,
                 3,
                 utils.forcedInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_IRISH", ()),
             )
 
@@ -1850,7 +1806,7 @@ class Barbs:
                     8,
                     5,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_ANGLO_SAXONS", ()),
                 )
                 self.spawnUnits(
@@ -1863,7 +1819,7 @@ class Barbs:
                     5,
                     2,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_ANGLO_SAXONS", ()),
                 )
                 self.spawnUnits(
@@ -1876,7 +1832,7 @@ class Barbs:
                     11,
                     6,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_ANGLO_SAXONS", ()),
                 )
             else:
@@ -1890,7 +1846,7 @@ class Barbs:
                     5,
                     2,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_ANGLO_SAXONS", ()),
                 )
 
@@ -1908,7 +1864,7 @@ class Barbs:
                         11,
                         0,
                         utils.forcedInvasion,
-                        1,
+                        UnitAITypes.UNITAI_ATTACK,
                         localText.getText("TXT_KEY_BARBARIAN_NAMES_SCOTS", ()),
                     )
                 else:
@@ -1922,7 +1878,7 @@ class Barbs:
                         11,
                         0,
                         utils.forcedInvasion,
-                        1,
+                        UnitAITypes.UNITAI_ATTACK,
                         localText.getText("TXT_KEY_BARBARIAN_NAMES_SCOTS", ()),
                     )
             elif DateTurn.i1320AD <= iGameTurn < DateTurn.i1500AD:
@@ -1937,7 +1893,7 @@ class Barbs:
                         9,
                         0,
                         utils.forcedInvasion,
-                        1,
+                        UnitAITypes.UNITAI_ATTACK,
                         localText.getText("TXT_KEY_BARBARIAN_NAMES_SCOTS", ()),
                     )
                     self.spawnUnits(
@@ -1950,7 +1906,7 @@ class Barbs:
                         17,
                         4,
                         utils.forcedInvasion,
-                        1,
+                        UnitAITypes.UNITAI_ATTACK,
                         localText.getText("TXT_KEY_BARBARIAN_NAMES_SCOTS", ()),
                     )
                 else:
@@ -1964,7 +1920,7 @@ class Barbs:
                         17,
                         4,
                         utils.forcedInvasion,
-                        1,
+                        UnitAITypes.UNITAI_ATTACK,
                         localText.getText("TXT_KEY_BARBARIAN_NAMES_SCOTS", ()),
                     )
 
@@ -1981,7 +1937,7 @@ class Barbs:
                     7,
                     1,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_WELSH", ()),
                 )
             else:
@@ -1995,7 +1951,7 @@ class Barbs:
                     13,
                     1,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_WELSH", ()),
                 )
         elif DateTurn.i1160AD <= iGameTurn < DateTurn.i1452AD:
@@ -2010,7 +1966,7 @@ class Barbs:
                     12,
                     1,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_WELSH", ()),
                 )
             else:
@@ -2024,7 +1980,7 @@ class Barbs:
                     9,
                     1,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_WELSH", ()),
                 )
 
@@ -2040,7 +1996,7 @@ class Barbs:
                 4,
                 1,
                 utils.outerInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_MAGYARS", ()),
             )
             self.spawnUnits(
@@ -2053,7 +2009,7 @@ class Barbs:
                 4,
                 2,
                 utils.outerInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_MAGYARS", ()),
             )
             if Civ.BULGARIA.value == iHuman:
@@ -2067,7 +2023,7 @@ class Barbs:
                     5,
                     0,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_MAGYARS", ()),
                 )
             elif Civ.GERMANY.value == iHuman:
@@ -2081,7 +2037,7 @@ class Barbs:
                     5,
                     3,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_MAGYARS", ()),
                 )
 
@@ -2098,7 +2054,7 @@ class Barbs:
                     6,
                     1,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_WENDS", ()),
                 )
             else:
@@ -2112,7 +2068,7 @@ class Barbs:
                     8,
                     1,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_WENDS", ()),
                 )
 
@@ -2129,7 +2085,7 @@ class Barbs:
                     2,
                     0,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_WENDS", ()),
                 )
                 self.spawnUnits(
@@ -2142,7 +2098,7 @@ class Barbs:
                     2,
                     0,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_WENDS", ()),
                 )
                 self.spawnUnits(
@@ -2155,7 +2111,7 @@ class Barbs:
                     2,
                     0,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_WENDS", ()),
                 )
             else:
@@ -2169,7 +2125,7 @@ class Barbs:
                     2,
                     0,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_WENDS", ()),
                 )
                 self.spawnUnits(
@@ -2182,7 +2138,7 @@ class Barbs:
                     2,
                     0,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_WENDS", ()),
                 )
 
@@ -2201,7 +2157,7 @@ class Barbs:
                     11,
                     3,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()),
                 )
                 if gc.getPlayer(Civ.ARABIA.value).isHuman():
@@ -2215,7 +2171,7 @@ class Barbs:
                         11,
                         3,
                         utils.outerInvasion,
-                        1,
+                        UnitAITypes.UNITAI_ATTACK,
                         localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()),
                     )
                     self.spawnUnits(
@@ -2228,7 +2184,7 @@ class Barbs:
                         8,
                         1,
                         utils.forcedInvasion,
-                        1,
+                        UnitAITypes.UNITAI_ATTACK,
                         localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()),
                     )
             else:
@@ -2242,7 +2198,7 @@ class Barbs:
                     10,
                     2,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()),
                 )
                 if gc.getPlayer(Civ.ARABIA.value).isHuman():
@@ -2256,7 +2212,7 @@ class Barbs:
                         10,
                         2,
                         utils.outerInvasion,
-                        1,
+                        UnitAITypes.UNITAI_ATTACK,
                         localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()),
                     )
                     self.spawnUnits(
@@ -2269,7 +2225,7 @@ class Barbs:
                         7,
                         3,
                         utils.forcedInvasion,
-                        1,
+                        UnitAITypes.UNITAI_ATTACK,
                         localText.getText("TXT_KEY_BARBARIAN_NAMES_BEDUINS", ()),
                     )
 
@@ -2286,7 +2242,7 @@ class Barbs:
                     11,
                     2,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_BANU_HILAL", ()),
                 )
                 self.spawnUnits(
@@ -2299,7 +2255,7 @@ class Barbs:
                     8,
                     5,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_BANU_HILAL", ()),
                 )
             else:
@@ -2313,7 +2269,7 @@ class Barbs:
                     11,
                     2,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_BANU_HILAL", ()),
                 )
                 self.spawnUnits(
@@ -2326,7 +2282,7 @@ class Barbs:
                     8,
                     5,
                     utils.outerInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_BANU_HILAL", ()),
                 )
         if DateTurn.i1640AD <= iGameTurn < DateTurn.i1680AD:
@@ -2340,7 +2296,7 @@ class Barbs:
                 3,
                 1,
                 utils.outerInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_BANI_HASSAN", ()),
             )
 
@@ -2356,8 +2312,7 @@ class Barbs:
                 13,
                 1,
                 utils.outerInvasion,
-                1,
-                "",
+                UnitAITypes.UNITAI_ATTACK,
             )
         elif DateTurn.i1020AD <= iGameTurn < DateTurn.i1236AD:
             self.spawnUnits(
@@ -2370,8 +2325,7 @@ class Barbs:
                 9,
                 5,
                 utils.outerInvasion,
-                1,
-                "",
+                UnitAITypes.UNITAI_ATTACK,
             )
             if Civ.KIEV.value == iHuman:
                 self.spawnUnits(
@@ -2384,8 +2338,7 @@ class Barbs:
                     10,
                     1,
                     utils.outerInvasion,
-                    1,
-                    "",
+                    UnitAITypes.UNITAI_ATTACK,
                 )
 
         # Barbs in Anatolia pre Seljuks (but after Sassanids)
@@ -2400,8 +2353,7 @@ class Barbs:
                 10,
                 1,
                 utils.outerInvasion,
-                1,
-                "",
+                UnitAITypes.UNITAI_ATTACK,
             )
             self.spawnUnits(
                 Civ.BARBARIAN.value,
@@ -2413,8 +2365,7 @@ class Barbs:
                 14,
                 2,
                 utils.outerInvasion,
-                1,
-                "",
+                UnitAITypes.UNITAI_ATTACK,
             )
             self.spawnUnits(
                 Civ.BARBARIAN.value,
@@ -2426,8 +2377,7 @@ class Barbs:
                 16,
                 6,
                 utils.outerInvasion,
-                1,
-                "",
+                UnitAITypes.UNITAI_ATTACK,
             )
             if Civ.BYZANTIUM.value == iHuman:
                 self.spawnUnits(
@@ -2440,8 +2390,7 @@ class Barbs:
                     10,
                     1,
                     utils.outerInvasion,
-                    1,
-                    "",
+                    UnitAITypes.UNITAI_ATTACK,
                 )
                 self.spawnUnits(
                     Civ.BARBARIAN.value,
@@ -2453,8 +2402,7 @@ class Barbs:
                     14,
                     2,
                     utils.outerInvasion,
-                    1,
-                    "",
+                    UnitAITypes.UNITAI_ATTACK,
                 )
                 self.spawnUnits(
                     Civ.BARBARIAN.value,
@@ -2466,8 +2414,7 @@ class Barbs:
                     14,
                     2,
                     utils.outerInvasion,
-                    1,
-                    "",
+                    UnitAITypes.UNITAI_ATTACK,
                 )
                 self.spawnUnits(
                     Civ.BARBARIAN.value,
@@ -2479,8 +2426,7 @@ class Barbs:
                     16,
                     6,
                     utils.outerInvasion,
-                    1,
-                    "",
+                    UnitAITypes.UNITAI_ATTACK,
                 )
                 self.spawnUnits(
                     Civ.BARBARIAN.value,
@@ -2492,8 +2438,7 @@ class Barbs:
                     16,
                     6,
                     utils.outerInvasion,
-                    1,
-                    "",
+                    UnitAITypes.UNITAI_ATTACK,
                 )
 
         # Seljuks
@@ -2508,7 +2453,7 @@ class Barbs:
                 3,
                 0,
                 utils.forcedInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
             )
             self.spawnUnits(
@@ -2521,7 +2466,7 @@ class Barbs:
                 3,
                 0,
                 utils.forcedInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
             )
             self.spawnUnits(
@@ -2534,7 +2479,7 @@ class Barbs:
                 3,
                 0,
                 utils.forcedInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
             )
             self.spawnUnits(
@@ -2547,7 +2492,7 @@ class Barbs:
                 3,
                 0,
                 utils.forcedInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
             )
             self.spawnUnits(
@@ -2560,7 +2505,7 @@ class Barbs:
                 3,
                 1,
                 utils.forcedInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
             )
             self.spawnUnits(
@@ -2573,7 +2518,7 @@ class Barbs:
                 3,
                 1,
                 utils.forcedInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
             )
             self.spawnUnits(
@@ -2586,7 +2531,7 @@ class Barbs:
                 3,
                 1,
                 utils.forcedInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
             )
             self.spawnUnits(
@@ -2599,7 +2544,7 @@ class Barbs:
                 3,
                 1,
                 utils.forcedInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
             )
             self.spawnUnits(
@@ -2612,7 +2557,7 @@ class Barbs:
                 4,
                 1,
                 utils.forcedInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
             )
             self.spawnUnits(
@@ -2625,7 +2570,7 @@ class Barbs:
                 4,
                 1,
                 utils.forcedInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
             )
             if Civ.BYZANTIUM.value == iHuman:
@@ -2639,7 +2584,7 @@ class Barbs:
                     3,
                     0,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
                 )
                 self.spawnUnits(
@@ -2652,7 +2597,7 @@ class Barbs:
                     3,
                     0,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
                 )
                 self.spawnUnits(
@@ -2665,7 +2610,7 @@ class Barbs:
                     3,
                     0,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
                 )
                 self.spawnUnits(
@@ -2678,7 +2623,7 @@ class Barbs:
                     3,
                     0,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
                 )
                 self.spawnUnits(
@@ -2691,7 +2636,7 @@ class Barbs:
                     3,
                     0,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
                 )
                 self.spawnUnits(
@@ -2704,7 +2649,7 @@ class Barbs:
                     3,
                     1,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
                 )
                 self.spawnUnits(
@@ -2717,7 +2662,7 @@ class Barbs:
                     3,
                     1,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
                 )
                 self.spawnUnits(
@@ -2730,7 +2675,7 @@ class Barbs:
                     3,
                     1,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
                 )
                 self.spawnUnits(
@@ -2743,7 +2688,7 @@ class Barbs:
                     3,
                     1,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
                 )
                 self.spawnUnits(
@@ -2756,7 +2701,7 @@ class Barbs:
                     3,
                     1,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
                 )
             elif Civ.ARABIA.value == iHuman:
@@ -2770,7 +2715,7 @@ class Barbs:
                     4,
                     1,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
                 )
                 self.spawnUnits(
@@ -2783,7 +2728,7 @@ class Barbs:
                     4,
                     1,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
                 )
                 self.spawnUnits(
@@ -2796,7 +2741,7 @@ class Barbs:
                     4,
                     1,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_SELJUKS", ()),
                 )
 
@@ -2813,7 +2758,7 @@ class Barbs:
                     5,
                     1,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_DANISHMENDS", ()),
                 )
             else:
@@ -2827,7 +2772,7 @@ class Barbs:
                     5,
                     1,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_DANISHMENDS", ()),
                 )
 
@@ -2845,7 +2790,7 @@ class Barbs:
                     4,
                     0,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()),
                 )
                 self.spawnUnits(
@@ -2858,7 +2803,7 @@ class Barbs:
                     3,
                     1,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()),
                 )
             else:
@@ -2872,7 +2817,7 @@ class Barbs:
                     4,
                     0,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()),
                 )
                 self.spawnUnits(
@@ -2885,7 +2830,7 @@ class Barbs:
                     3,
                     1,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()),
                 )
             # Hungary
@@ -2900,7 +2845,7 @@ class Barbs:
                     4,
                     2,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()),
                 )
                 self.spawnUnits(
@@ -2913,7 +2858,7 @@ class Barbs:
                     4,
                     2,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()),
                 )
             else:
@@ -2927,7 +2872,7 @@ class Barbs:
                     4,
                     2,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()),
                 )
                 self.spawnUnits(
@@ -2940,7 +2885,7 @@ class Barbs:
                     4,
                     2,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()),
                 )
             # Poland
@@ -2955,7 +2900,7 @@ class Barbs:
                     4,
                     1,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()),
                 )
             else:
@@ -2969,7 +2914,7 @@ class Barbs:
                     4,
                     1,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()),
                 )
             # Bulgaria
@@ -2984,7 +2929,7 @@ class Barbs:
                     4,
                     1,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()),
                 )
             else:
@@ -2998,7 +2943,7 @@ class Barbs:
                     4,
                     1,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()),
                 )
             # Moscow area
@@ -3012,7 +2957,7 @@ class Barbs:
                 4,
                 0,
                 utils.forcedInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()),
             )
             self.spawnUnits(
@@ -3025,7 +2970,7 @@ class Barbs:
                 6,
                 1,
                 utils.forcedInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()),
             )
             # Middle East
@@ -3039,7 +2984,7 @@ class Barbs:
                 3,
                 2,
                 utils.forcedInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()),
             )
             self.spawnUnits(
@@ -3052,7 +2997,7 @@ class Barbs:
                 6,
                 1,
                 utils.forcedInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_MONGOLS", ()),
             )
 
@@ -3071,7 +3016,7 @@ class Barbs:
                 7,
                 0,
                 utils.forcedInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_TIMURIDS", ()),
             )
             # Anatolia
@@ -3086,7 +3031,7 @@ class Barbs:
                     4,
                     0,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_TIMURIDS", ()),
                 )
                 self.spawnUnits(
@@ -3099,7 +3044,7 @@ class Barbs:
                     5,
                     1,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_TIMURIDS", ()),
                 )
                 self.spawnUnits(
@@ -3112,7 +3057,7 @@ class Barbs:
                     4,
                     2,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_TIMURIDS", ()),
                 )
             else:
@@ -3126,7 +3071,7 @@ class Barbs:
                     4,
                     0,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_TIMURIDS", ()),
                 )
                 self.spawnUnits(
@@ -3139,7 +3084,7 @@ class Barbs:
                     5,
                     1,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_TIMURIDS", ()),
                 )
             # Arabia
@@ -3154,7 +3099,7 @@ class Barbs:
                     4,
                     1,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_TIMURIDS", ()),
                 )
             else:
@@ -3168,7 +3113,7 @@ class Barbs:
                     4,
                     1,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_TIMURIDS", ()),
                 )
 
@@ -3184,7 +3129,7 @@ class Barbs:
                 7,
                 1,
                 utils.forcedInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_NOGAIS", ()),
             )
             if Civ.MOSCOW.value == iHuman:
@@ -3198,7 +3143,7 @@ class Barbs:
                     7,
                     1,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_NOGAIS", ()),
                 )
 
@@ -3214,7 +3159,7 @@ class Barbs:
                 7,
                 0,
                 utils.forcedInvasion,
-                1,
+                UnitAITypes.UNITAI_ATTACK,
                 localText.getText("TXT_KEY_BARBARIAN_NAMES_KALMYKS", ()),
             )
             if Civ.MOSCOW.value == iHuman:
@@ -3228,7 +3173,7 @@ class Barbs:
                     7,
                     0,
                     utils.forcedInvasion,
-                    1,
+                    UnitAITypes.UNITAI_ATTACK,
                     localText.getText("TXT_KEY_BARBARIAN_NAMES_KALMYKS", ()),
                 )
 
@@ -3265,11 +3210,11 @@ class Barbs:
             if iPopulation != 1:
                 city.setPopulation(iPopulation)
             if iNumUnits > 0:
-                self.makeUnit(iUnitType, iCiv, tCoords, iNumUnits, 0, "")
+                make_units(iCiv, iUnitType, tCoords, iNumUnits)
             if iReligion > -1:
                 city.setHasReligion(iReligion, True, True, False)
             if iWorkers > 0:
-                self.makeUnit(Unit.WORKER.value, iCiv, tCoords, iWorkers, 0, "")
+                make_units(iCiv, Unit.WORKER, tCoords, iWorkers)
 
     def checkRegion(self, tCoords):
         cityPlot = gc.getMap().plot(tCoords[0], tCoords[1])
@@ -3297,39 +3242,16 @@ class Barbs:
         iPeriod,
         iRest,
         function,
-        iForceAttack,
-        szName,
+        unit_ai,
+        unit_name=None,
     ):
         if (iTurn % iPeriod) == iRest:
             plotList = utils.squareSearch(tTopLeft, tBottomRight, function, [])
             if plotList:
                 tPlot = choice(plotList)
                 if tPlot:
-                    self.makeUnit(iUnitType, iCiv, tPlot, iNumUnits, iForceAttack, szName)
+                    make_units(iCiv, iUnitType, tPlot, iNumUnits, unit_ai, unit_name)
 
-    def spawnMultiTypeUnits(
-        self,
-        iCiv,
-        tTopLeft,
-        tBottomRight,
-        lUnitTypes,
-        lNumUnits,
-        iTurn,
-        iPeriod,
-        iRest,
-        function,
-        iForceAttack,
-        szName,
-    ):
-        if (iTurn % iPeriod) == iRest:
-            plotList = utils.squareSearch(tTopLeft, tBottomRight, function, [])
-            if plotList:
-                tPlot = choice(plotList)
-                if tPlot:
-                    for iUnitType, iNumUnits in zip(lUnitTypes, lNumUnits):
-                        self.makeUnit(iUnitType, iCiv, tPlot, iNumUnits, iForceAttack, szName)
-
-    # This is just a clone of spawnUnits but attempting to put a boat under them
     def spawnVikings(
         self,
         iCiv,
@@ -3341,25 +3263,28 @@ class Barbs:
         iPeriod,
         iRest,
         function,
-        iForceAttack,
-        szName,
+        unit_name=None,
     ):
         if (iTurn % iPeriod) == iRest:
             plotList = utils.squareSearch(tTopLeft, tBottomRight, function, [])
             if plotList:
                 tPlot = choice(plotList)
                 if tPlot:
-                    pPlayer = gc.getPlayer(iCiv)
-                    pUnit = pPlayer.initUnit(
-                        Unit.GALLEY.value,
-                        tPlot[0],
-                        tPlot[1],
+                    make_unit(
+                        iCiv,
+                        Unit.GALLEY,
+                        tPlot,
                         UnitAITypes.UNITAI_ASSAULT_SEA,
-                        DirectionTypes.DIRECTION_SOUTH,
+                        unit_name,
                     )
-                    if szName != "":
-                        pUnit.setName(szName)
-                    self.makeUnit(iUnitType, iCiv, tPlot, iNumUnits, iForceAttack, szName)
+                    make_units(
+                        iCiv,
+                        iUnitType,
+                        tPlot,
+                        iNumUnits,
+                        UnitAITypes.UNITAI_ATTACK,
+                        unit_name,
+                    )
 
     def spawnPirate(
         self,
@@ -3374,16 +3299,29 @@ class Barbs:
         iPeriod,
         iRest,
         function,
-        iForceAttack,
-        szName,
+        unit_name=None,
     ):
         if (iTurn % iPeriod) == iRest:
             plotList = utils.squareSearch(tTopLeft, tBottomRight, function, [])
             if plotList:
                 tPlot = choice(plotList)
                 if tPlot:
-                    self.makeUnit(iShipType, iCiv, tPlot, iNumShips, 2, szName)
-                    self.makeUnit(iFighterType, iCiv, tPlot, iNumFighters, 1, szName)
+                    make_units(
+                        iCiv,
+                        iShipType,
+                        tPlot,
+                        iNumShips,
+                        UnitAITypes.UNITAI_ATTACK_SEA,
+                        unit_name,
+                    )
+                    make_units(
+                        iCiv,
+                        iFighterType,
+                        tPlot,
+                        iNumFighters,
+                        UnitAITypes.UNITAI_ATTACK,
+                        unit_name,
+                    )
 
     def killNeighbours(self, tCoords):
         "Kills all units in the neigbbouring tiles of plot (as well as plot itself) so late starters have some space."
@@ -3417,8 +3355,7 @@ class Barbs:
             1,
             0,
             utils.outerInvasion,
-            1,
-            "",
+            UnitAITypes.UNITAI_ATTACK,
         )
 
     def setupMinorNation(self):
@@ -3767,16 +3704,8 @@ class Barbs:
         else:
             return
 
-        pBarb = gc.getPlayer(Civ.BARBARIAN.value)
-        for iI in range(iCount):
-            pUnit = pBarb.initUnit(
-                iUnit,
-                tPlot[0],
-                tPlot[1],
-                UnitAITypes.UNITAI_ATTACK,
-                DirectionTypes.DIRECTION_SOUTH,
-            )
-            pUnit.setName(localText.getText(szName, ()))
+        unit_name = localText.getText(szName, ())
+        make_units(Civ.BARBARIAN, iUnit, tPlot, iCount, UnitAITypes.UNITAI_ATTACK, unit_name)
 
     def getProvincePlayerCityList(self, iProvince, iPlayer):
         return [city for city in utils.getCityList(iPlayer) if city.getProvince() == iProvince]

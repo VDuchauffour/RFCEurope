@@ -24376,3 +24376,8 @@ int CvPlayer::getInterest() const
 {
   return m_iInterest;
 };
+// Leoreth
+int CvPlayer::getDomainFreeExperience(DomainTypes eDomainType) const
+{
+  return m_aiDomainExperienceModifiers[(int)eDomainType];
+}

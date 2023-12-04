@@ -2,7 +2,7 @@
 
 from random import choice
 from CvPythonExtensions import *
-from CoreStructures import human
+from CoreStructures import human, make_unit
 from CoreTypes import Building, SpecialParameter, Religion, Unit
 
 import Religions
@@ -62,15 +62,13 @@ class UniquePowers:
 
         iTotalPoints = iOldPoints + iNewPoints
         while iTotalPoints >= iNextJanissary:
-            # tCity = religion.selectRandomCityCiv(iPlayer)
-            # utils.makeUnit( Unit.JANISSARY.value, iPlayer, tCity, 1 )
             pCity = utils.getRandomCity(
                 iPlayer
             )  # The Janissary unit appears in a random city - should it be the capital instead?
             if pCity != -1:
                 iX = pCity.getX()
                 iY = pCity.getY()
-                utils.makeUnit(Unit.JANISSARY.value, iPlayer, (iX, iY), 1)
+                make_unit(iPlayer, Unit.JANISSARY, (iX, iY))
                 # interface message for the human player
                 if iPlayer == human():
                     CyInterface().addMessage(
@@ -118,7 +116,7 @@ class UniquePowers:
         if iIsHasForeignReligion:
             iX = city.getX()
             iY = city.getY()
-            utils.makeUnit(Unit.JANISSARY.value, iPlayer, (iX, iY), 1)
+            make_unit(iPlayer, Unit.JANISSARY, (iX, iY))
             if iPlayer == human():
                 CyInterface().addMessage(
                     iPlayer,
@@ -279,7 +277,7 @@ class UniquePowers:
                 iX = city.getX()
                 iY = city.getY()
                 tPlot = (iX, iY)
-                utils.makeUnit(choice([RangedClass, PolearmClass]), iPlayer, tPlot, 1)
+                make_unit(iPlayer, choice([RangedClass, PolearmClass]), tPlot)
                 # interface message for the human player
                 if iPlayer == human():
                     CyInterface().addMessage(

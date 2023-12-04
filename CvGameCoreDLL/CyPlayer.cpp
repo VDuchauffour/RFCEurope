@@ -2592,3 +2592,7 @@ int CyPlayer::getForcedHistoricityCivicSupport() const
 {
   return m_pPlayer->getForcedHistoricityCivicSupport();
 };
+int CyPlayer::getDomainFreeExperience(int iDomainType)
+{
+  return m_pPlayer ? m_pPlayer->getDomainFreeExperience((DomainTypes)iDomainType) : -1;
+}

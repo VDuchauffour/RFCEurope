@@ -620,6 +620,9 @@ public:
   void setForcedHistoricityCivicSupport(int iNewValue);
   int getForcedHistoricityCivicSupport() const;
 
+  //Leoreth
+  int getDomainFreeExperience(int iDomainType);
+
 private:
   CvPlayer *m_pPlayer;
 };

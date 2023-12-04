@@ -1,7 +1,7 @@
 from random import choice
 from CvPythonExtensions import *
 from CoreData import civilization, civilizations
-from CoreStructures import human, player, team, teamtype, turn
+from CoreStructures import human, make_unit, make_units, player, team, teamtype, turn
 import PyHelpers  # LOQ
 import Popup
 from PyUtils import chance, percentage, percentage_chance, rand
@@ -314,7 +314,7 @@ class RiseAndFall:
                                 if unit.getDomainType() == DomainTypes.DOMAIN_SEA:  # land unit
                                     iUnitType = unit.getUnitType()
                                     unit.kill(False, iNewCivFlip)
-                                    utils.makeUnit(iUnitType, iNewCivFlip, (x, y), 1)
+                                    make_unit(iNewCivFlip, iUnitType, (x, y))
                                     i = i - 1
 
             if self.getCheatersCheck(0) == 0:
@@ -772,8 +772,8 @@ class RiseAndFall:
                 if pCurrent.isCity():
                     pCity = pCurrent.getPlotCity()
                     if pCity.getOwner() == Civ.ENGLAND.value:
-                        utils.makeUnit(Unit.GUISARME.value, Civ.ENGLAND.value, (x, y), 1)
-                        utils.makeUnit(Unit.ARBALEST.value, Civ.ENGLAND.value, (x, y), 1)
+                        make_unit(Civ.ENGLAND, Unit.GUISARME, (x, y))
+                        make_unit(Civ.ENGLAND, Unit.ARBALEST, (x, y))
                         pCity.setHasRealBuilding(Building.WALLS.value, True)
                         pCity.setHasRealBuilding(Building.CASTLE.value, True)
 
@@ -1728,9 +1728,9 @@ class RiseAndFall:
 
     def makeResurectionUnits(self, iPlayer, iX, iY):
         if iPlayer == Civ.CORDOBA.value:
-            utils.makeUnit(Unit.SETTLER.value, Civ.CORDOBA.value, (iX, iY), 2)
-            utils.makeUnit(Unit.CROSSBOWMAN.value, Civ.CORDOBA.value, (iX, iY), 2)
-            utils.makeUnit(Unit.ISLAMIC_MISSIONARY.value, Civ.CORDOBA.value, (iX, iY), 1)
+            make_units(Civ.CORDOBA, Unit.SETTLER, (iX, iY), 2)
+            make_units(Civ.CORDOBA, Unit.CROSSBOWMAN, (iX, iY), 2)
+            make_unit(Civ.CORDOBA, Unit.ISLAMIC_MISSIONARY, (iX, iY))
 
     def convertBackCulture(self, iCiv):
         # 3Miro: same as Normal Areas in Resurrection
@@ -2388,7 +2388,7 @@ class RiseAndFall:
                             if unit.getDomainType() == DomainTypes.DOMAIN_LAND:  # land unit
                                 iUnitType = unit.getUnitType()
                                 unit.kill(False, iNewOwner)
-                                utils.makeUnit(iUnitType, iNewOwner, tPlot, 1)
+                                make_unit(iNewOwner, iUnitType, tPlot)
                                 i = i - 1
 
     def createAdditionalUnits(self, iCiv, tPlot):
@@ -2397,10 +2397,10 @@ class RiseAndFall:
         if units is not None:
             if iCiv != human():
                 for unit, number in units.get(PlayerType.AI, {}).items():
-                    utils.makeUnit(unit.value, iCiv, tPlot, number)
+                    make_units(iCiv, unit, tPlot, number)
             else:
                 for unit, number in units.get(PlayerType.HUMAN, {}).items():
-                    utils.makeUnit(unit.value, iCiv, tPlot, number)
+                    make_units(iCiv, unit, tPlot, number)
 
     def createStartingUnits(self, iCiv, tPlot):
         # set the provinces
@@ -2409,194 +2409,78 @@ class RiseAndFall:
         units = civilization(iCiv).initial.get("units")
         if units is not None:
             for unit, number in units.get(PlayerType.ANY, {}).items():
-                utils.makeUnit(unit.value, iCiv, tPlot, number)
+                make_units(iCiv, unit, tPlot, number)
 
             if iCiv != human():
                 for unit, number in units.get(PlayerType.AI, {}).items():
-                    utils.makeUnit(unit.value, iCiv, tPlot, number)
+                    make_units(iCiv, unit, tPlot, number)
             else:
                 for unit, number in units.get(PlayerType.HUMAN, {}).items():
-                    utils.makeUnit(unit.value, iCiv, tPlot, number)
+                    make_units(iCiv, unit, tPlot, number)
 
         if iCiv == Civ.VENECIA.value:
             tSeaPlot = self.findSeaPlots((57, 35), 2)
             if tSeaPlot:
-                utils.makeUnit(Unit.WORKBOAT.value, iCiv, tSeaPlot, 1)
-                player(Civ.VENECIA).initUnit(
-                    Unit.GALLEY.value,
-                    tSeaPlot[0],
-                    tSeaPlot[1],
-                    UnitAITypes.UNITAI_SETTLER_SEA,
-                    DirectionTypes.DIRECTION_SOUTH,
-                )
-                player(Civ.VENECIA).initUnit(
-                    Unit.GALLEY.value,
-                    tSeaPlot[0],
-                    tSeaPlot[1],
-                    UnitAITypes.UNITAI_ESCORT_SEA,
-                    DirectionTypes.DIRECTION_SOUTH,
-                )
-                utils.makeUnit(Unit.SETTLER.value, iCiv, tSeaPlot, 1)
-                utils.makeUnit(Unit.ARCHER.value, iCiv, tSeaPlot, 1)
-                player(Civ.VENECIA).initUnit(
-                    Unit.GALLEY.value,
-                    tSeaPlot[0],
-                    tSeaPlot[1],
-                    UnitAITypes.UNITAI_SETTLER_SEA,
-                    DirectionTypes.DIRECTION_SOUTH,
-                )
-                utils.makeUnit(Unit.SETTLER.value, iCiv, tSeaPlot, 1)
-                utils.makeUnit(Unit.SPEARMAN.value, iCiv, tSeaPlot, 1)
+                make_unit(iCiv, Unit.WORKBOAT, tSeaPlot)
+                make_unit(iCiv, Unit.GALLEY, tSeaPlot, UnitAITypes.UNITAI_SETTLER_SEA)
+                make_unit(iCiv, Unit.GALLEY, tSeaPlot, UnitAITypes.UNITAI_ESCORT_SEA)
+                make_unit(iCiv, Unit.SETTLER, tSeaPlot)
+                make_unit(iCiv, Unit.ARCHER, tSeaPlot)
+                make_unit(iCiv, Unit.GALLEY, tSeaPlot, UnitAITypes.UNITAI_SETTLER_SEA)
+                make_unit(iCiv, Unit.SETTLER, tSeaPlot)
+                make_unit(iCiv, Unit.SPEARMAN, tSeaPlot)
         elif iCiv == Civ.NORWAY.value:
             tSeaPlot = self.findSeaPlots(tPlot, 2)
             if tSeaPlot:
-                player(Civ.NORWAY).initUnit(
-                    Unit.GALLEY.value,
-                    tSeaPlot[0],
-                    tSeaPlot[1],
-                    UnitAITypes.UNITAI_SETTLER_SEA,
-                    DirectionTypes.DIRECTION_SOUTH,
-                )
-                player(Civ.NORWAY).initUnit(
-                    Unit.GALLEY.value,
-                    tSeaPlot[0],
-                    tSeaPlot[1],
-                    UnitAITypes.UNITAI_ESCORT_SEA,
-                    DirectionTypes.DIRECTION_SOUTH,
-                )
-                player(Civ.NORWAY).initUnit(
-                    Unit.GALLEY.value,
-                    tSeaPlot[0],
-                    tSeaPlot[1],
-                    UnitAITypes.UNITAI_ESCORT_SEA,
-                    DirectionTypes.DIRECTION_SOUTH,
-                )
-                utils.makeUnit(Unit.SETTLER.value, iCiv, tSeaPlot, 1)
-                utils.makeUnit(Unit.ARCHER.value, iCiv, tSeaPlot, 1)
+                make_unit(iCiv, Unit.GALLEY, tSeaPlot, UnitAITypes.UNITAI_SETTLER_SEA)
+                make_unit(iCiv, Unit.GALLEY, tSeaPlot, UnitAITypes.UNITAI_ESCORT_SEA)
+                make_unit(iCiv, Unit.GALLEY, tSeaPlot, UnitAITypes.UNITAI_ESCORT_SEA)
+                make_unit(iCiv, Unit.SETTLER, tSeaPlot)
+                make_unit(iCiv, Unit.ARCHER, tSeaPlot)
         elif iCiv == Civ.DENMARK.value:
             tSeaPlot = self.findSeaPlots((60, 57), 2)
             if tSeaPlot:
-                player(Civ.DENMARK).initUnit(
-                    Unit.GALLEY.value,
-                    tSeaPlot[0],
-                    tSeaPlot[1],
-                    UnitAITypes.UNITAI_SETTLER_SEA,
-                    DirectionTypes.DIRECTION_SOUTH,
-                )
-                player(Civ.DENMARK).initUnit(
-                    Unit.GALLEY.value,
-                    tSeaPlot[0],
-                    tSeaPlot[1],
-                    UnitAITypes.UNITAI_SETTLER_SEA,
-                    DirectionTypes.DIRECTION_SOUTH,
-                )
-                player(Civ.DENMARK).initUnit(
-                    Unit.GALLEY.value,
-                    tSeaPlot[0],
-                    tSeaPlot[1],
-                    UnitAITypes.UNITAI_ESCORT_SEA,
-                    DirectionTypes.DIRECTION_SOUTH,
-                )
-                utils.makeUnit(Unit.SETTLER.value, iCiv, tSeaPlot, 1)
-                utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tSeaPlot, 1)
-                utils.makeUnit(Unit.SETTLER.value, iCiv, tSeaPlot, 1)
-                utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tSeaPlot, 1)
+                make_unit(iCiv, Unit.GALLEY, tSeaPlot, UnitAITypes.UNITAI_SETTLER_SEA)
+                make_unit(iCiv, Unit.GALLEY, tSeaPlot, UnitAITypes.UNITAI_SETTLER_SEA)
+                make_unit(iCiv, Unit.GALLEY, tSeaPlot, UnitAITypes.UNITAI_ESCORT_SEA)
+                make_unit(iCiv, Unit.SETTLER, tSeaPlot)
+                make_unit(iCiv, Unit.CROSSBOWMAN, tSeaPlot)
+                make_unit(iCiv, Unit.SETTLER, tSeaPlot)
+                make_unit(iCiv, Unit.CROSSBOWMAN, tSeaPlot)
         elif iCiv == Civ.GENOA.value:
             tSeaPlot = self.findSeaPlots(tPlot, 2)
             if tSeaPlot:
-                player(Civ.GENOA).initUnit(
-                    Unit.WAR_GALLEY.value,
-                    tSeaPlot[0],
-                    tSeaPlot[1],
-                    UnitAITypes.UNITAI_ESCORT_SEA,
-                    DirectionTypes.DIRECTION_SOUTH,
-                )
-                player(Civ.GENOA).initUnit(
-                    Unit.GALLEY.value,
-                    tSeaPlot[0],
-                    tSeaPlot[1],
-                    UnitAITypes.UNITAI_SETTLER_SEA,
-                    DirectionTypes.DIRECTION_SOUTH,
-                )
-                utils.makeUnit(Unit.SETTLER.value, iCiv, tSeaPlot, 1)
-                utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tSeaPlot, 1)
-                utils.makeUnit(Unit.WORKBOAT.value, iCiv, tSeaPlot, 1)
+                make_unit(iCiv, Unit.GALLEY, tSeaPlot, UnitAITypes.UNITAI_SETTLER_SEA)
+                make_unit(iCiv, Unit.WAR_GALLEY, tSeaPlot, UnitAITypes.UNITAI_ESCORT_SEA)
+                make_unit(iCiv, Unit.SETTLER, tSeaPlot)
+                make_unit(iCiv, Unit.CROSSBOWMAN, tSeaPlot)
+                make_unit(iCiv, Unit.WORKBOAT, tSeaPlot)
         elif iCiv == Civ.ENGLAND.value:
             tSeaPlot = self.findSeaPlots((43, 53), 1)
             if tSeaPlot:
-                player(Civ.ENGLAND).initUnit(
-                    Unit.GALLEY.value,
-                    tSeaPlot[0],
-                    tSeaPlot[1],
-                    UnitAITypes.UNITAI_SETTLER_SEA,
-                    DirectionTypes.DIRECTION_SOUTH,
-                )
-                player(Civ.ENGLAND).initUnit(
-                    Unit.WAR_GALLEY.value,
-                    tSeaPlot[0],
-                    tSeaPlot[1],
-                    UnitAITypes.UNITAI_ESCORT_SEA,
-                    DirectionTypes.DIRECTION_SOUTH,
-                )
+                make_unit(iCiv, Unit.GALLEY, tSeaPlot, UnitAITypes.UNITAI_SETTLER_SEA)
+                make_unit(iCiv, Unit.WAR_GALLEY, tSeaPlot, UnitAITypes.UNITAI_ESCORT_SEA)
         elif iCiv == Civ.ARAGON.value:
             tSeaPlot = self.findSeaPlots((42, 29), 1)
             if tSeaPlot:
-                player(Civ.ARAGON).initUnit(
-                    Unit.WAR_GALLEY.value,
-                    tSeaPlot[0],
-                    tSeaPlot[1],
-                    UnitAITypes.UNITAI_ESCORT_SEA,
-                    DirectionTypes.DIRECTION_SOUTH,
-                )
-                player(Civ.ARAGON).initUnit(
-                    Unit.WAR_GALLEY.value,
-                    tSeaPlot[0],
-                    tSeaPlot[1],
-                    UnitAITypes.UNITAI_ESCORT_SEA,
-                    DirectionTypes.DIRECTION_SOUTH,
-                )
-                player(Civ.ARAGON).initUnit(
-                    Unit.COGGE.value,
-                    tSeaPlot[0],
-                    tSeaPlot[1],
-                    UnitAITypes.UNITAI_SETTLER_SEA,
-                    DirectionTypes.DIRECTION_SOUTH,
-                )
-                utils.makeUnit(Unit.SETTLER.value, iCiv, tSeaPlot, 1)
-                utils.makeUnit(Unit.CROSSBOWMAN.value, iCiv, tSeaPlot, 1)
-                utils.makeUnit(Unit.WORKBOAT.value, iCiv, tSeaPlot, 1)
+                make_units(iCiv, Unit.WAR_GALLEY, tSeaPlot, 2, UnitAITypes.UNITAI_ESCORT_SEA)
+                make_unit(iCiv, Unit.COGGE, tSeaPlot, UnitAITypes.UNITAI_SETTLER_SEA)
+                make_unit(iCiv, Unit.SETTLER, tSeaPlot)
+                make_unit(iCiv, Unit.CROSSBOWMAN, tSeaPlot)
+                make_unit(iCiv, Unit.WORKBOAT, tSeaPlot)
         elif iCiv == Civ.SWEDEN.value:
             tSeaPlot = self.findSeaPlots((69, 65), 2)
             if tSeaPlot:
-                utils.makeUnit(Unit.WORKBOAT.value, iCiv, tSeaPlot, 1)
-                player(Civ.SWEDEN).initUnit(
-                    Unit.WAR_GALLEY.value,
-                    tSeaPlot[0],
-                    tSeaPlot[1],
-                    UnitAITypes.UNITAI_ESCORT_SEA,
-                    DirectionTypes.DIRECTION_SOUTH,
-                )
-                player(Civ.SWEDEN).initUnit(
-                    Unit.COGGE.value,
-                    tSeaPlot[0],
-                    tSeaPlot[1],
-                    UnitAITypes.UNITAI_SETTLER_SEA,
-                    DirectionTypes.DIRECTION_SOUTH,
-                )
-                player(Civ.SWEDEN).initUnit(
-                    Unit.COGGE.value,
-                    tSeaPlot[0],
-                    tSeaPlot[1],
-                    UnitAITypes.UNITAI_SETTLER_SEA,
-                    DirectionTypes.DIRECTION_SOUTH,
-                )
-                utils.makeUnit(Unit.SETTLER.value, iCiv, tSeaPlot, 1)
-                utils.makeUnit(Unit.ARBALEST.value, iCiv, tSeaPlot, 1)
+                make_unit(iCiv, Unit.WORKBOAT, tSeaPlot)
+                make_unit(iCiv, Unit.WAR_GALLEY, tSeaPlot, UnitAITypes.UNITAI_ESCORT_SEA)
+                make_units(iCiv, Unit.COGGE, tSeaPlot, 2, UnitAITypes.UNITAI_SETTLER_SEA)
+                make_unit(iCiv, Unit.SETTLER, tSeaPlot)
+                make_unit(iCiv, Unit.ARBALEST, tSeaPlot)
         elif iCiv == Civ.DUTCH.value:
             tSeaPlot = self.findSeaPlots(tPlot, 2)
             if tSeaPlot:
-                utils.makeUnit(Unit.WORKBOAT.value, iCiv, tSeaPlot, 2)
-                utils.makeUnit(Unit.GALLEON.value, iCiv, tSeaPlot, 2)
+                make_units(iCiv, Unit.WORKBOAT, tSeaPlot, 2)
+                make_units(iCiv, Unit.GALLEON, tSeaPlot, 2)
 
         self.showArea(iCiv)
         self.initContact(iCiv)
@@ -2632,29 +2516,24 @@ class RiseAndFall:
             elif iHuman == Civ.OTTOMAN:  # contact with Byzantium
                 tStart = (98, 18)
 
-            utils.makeUnit(Unit.SETTLER.value, iHuman, tStart, 1)
-            utils.makeUnit(Unit.MACEMAN.value, iHuman, tStart, 1)
+            make_unit(iHuman, Unit.SETTLER, tStart)
+            make_unit(iHuman, Unit.MACEMAN, tStart)
 
     def ottomanInvasion(self, iCiv, tPlot):
         # Absinthe: second Ottoman spawn stack may stay, although they now spawn in Gallipoli in the first place (one plot SE)
-        utils.makeUnit(Unit.LONGBOWMAN.value, iCiv, tPlot, 2)
-        utils.makeUnit(Unit.MACEMAN.value, iCiv, tPlot, 2)
-        utils.makeUnit(Unit.KNIGHT.value, iCiv, tPlot, 3)
-        utils.makeUnit(Unit.TURKEY_GREAT_BOMBARD.value, iCiv, tPlot, 2)
-        utils.makeUnit(Unit.ISLAMIC_MISSIONARY.value, iCiv, tPlot, 2)
+        make_units(iCiv, Unit.LONGBOWMAN, tPlot, 2)
+        make_units(iCiv, Unit.MACEMAN, tPlot, 2)
+        make_units(iCiv, Unit.KNIGHT, tPlot, 3)
+        make_units(iCiv, Unit.TURKEY_GREAT_BOMBARD, tPlot, 2)
+        make_units(iCiv, Unit.ISLAMIC_MISSIONARY, tPlot, 2)
 
     def create500ADstartingUnits(self):
-        utils.makeUnit(Unit.SETTLER.value, Civ.FRANCE, CIV_CAPITAL_LOCATIONS[Civ.FRANCE], 3)
-        utils.makeUnit(Unit.ARCHER.value, Civ.FRANCE, CIV_CAPITAL_LOCATIONS[Civ.FRANCE], 4)
-        utils.makeUnit(Unit.AXEMAN.value, Civ.FRANCE, CIV_CAPITAL_LOCATIONS[Civ.FRANCE], 5)
-        utils.makeUnit(Unit.SCOUT.value, Civ.FRANCE, CIV_CAPITAL_LOCATIONS[Civ.FRANCE], 1)
-        utils.makeUnit(Unit.WORKER.value, Civ.FRANCE, CIV_CAPITAL_LOCATIONS[Civ.FRANCE], 2)
-        utils.makeUnit(
-            Unit.CATHOLIC_MISSIONARY.value,
-            Civ.FRANCE,
-            CIV_CAPITAL_LOCATIONS[Civ.FRANCE],
-            2,
-        )
+        make_units(Civ.FRANCE, Unit.SETTLER, CIV_CAPITAL_LOCATIONS[Civ.FRANCE], 3)
+        make_units(Civ.FRANCE, Unit.ARCHER, CIV_CAPITAL_LOCATIONS[Civ.FRANCE], 4)
+        make_units(Civ.FRANCE, Unit.AXEMAN, CIV_CAPITAL_LOCATIONS[Civ.FRANCE], 5)
+        make_unit(Civ.FRANCE, Unit.SCOUT, CIV_CAPITAL_LOCATIONS[Civ.FRANCE])
+        make_units(Civ.FRANCE, Unit.WORKER, CIV_CAPITAL_LOCATIONS[Civ.FRANCE], 2)
+        make_units(Civ.FRANCE, Unit.CATHOLIC_MISSIONARY, CIV_CAPITAL_LOCATIONS[Civ.FRANCE], 2)
 
         iHuman = human()
         if (
@@ -2676,8 +2555,8 @@ class RiseAndFall:
             elif iHuman == Civ.OTTOMAN:  # contact with Byzantium
                 tStart = (97, 23)
 
-            utils.makeUnit(Unit.SETTLER.value, iHuman, tStart, 1)
-            utils.makeUnit(Unit.SPEARMAN.value, iHuman, tStart, 1)
+            make_unit(iHuman, Unit.SETTLER, tStart)
+            make_unit(iHuman, Unit.SPEARMAN, tStart)
 
     def assign1200ADtechs(self, iCiv):
         # As a temporary solution, everyone gets Aragon's starting techs
@@ -2735,9 +2614,4 @@ class RiseAndFall:
         gc.getPlayer(iPlayer2).AI_changeAttitudeExtra(iPlayer1, iValue)
 
     def create_starting_workers(self, iCiv, tPlot):
-        utils.makeUnit(
-            Unit.WORKER.value,
-            iCiv,
-            tPlot,
-            civilization(iCiv).initial.workers,
-        )
+        make_units(iCiv, Unit.WORKER, tPlot, civilization(iCiv).initial.workers)

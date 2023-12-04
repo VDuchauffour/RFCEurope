@@ -468,13 +468,6 @@ def is_barbarian_civ(identifier):
     return player(identifier).isBarbarian()
 
 
-def period(identifier):
-    """Return period given an identifier."""
-    if identifier >= 0:
-        return player(identifier).getPeriod()
-    return None
-
-
 class Turn(int):
     def __new__(cls, value, *args, **kwargs):
         return super(cls, cls).__new__(cls, value)
@@ -831,13 +824,13 @@ class TechFactory(object):
 
 
 def unit(key):
-    if isinstance(key, Unit):
+    if isinstance(key, UnitItem):
         return player(key.owner).getUnit(key.id)
 
     raise TypeError("Expected key to be `Unit`, received '%s'" % type(key))
 
 
-class Unit(object):
+class UnitItem(object):
     def __init__(self, unit):
         self.owner = unit.getOwner()
         self.id = unit.getID()
@@ -845,7 +838,7 @@ class Unit(object):
         self.y = unit.getY()
 
     def __eq__(self, other):
-        return isinstance(other, Unit) and (self.owner, self.id) == (other.owner, other.id)
+        return isinstance(other, UnitItem) and (self.owner, self.id) == (other.owner, other.id)
 
     def __str__(self):
         return str((self.owner, self.id))
@@ -862,14 +855,14 @@ class Unit(object):
 
 class Units(EntitiesCollection):
     def __init__(self, *units):
-        super(Units, self).__init__(*[Unit.of(u) for u in units])
+        super(Units, self).__init__(*[UnitItem.of(u) for u in units])
 
     def _factory(self, key):
         return unit(key)
 
     def __contains__(self, item):
         if isinstance(item, CyUnit):
-            return Unit.of(item) in self
+            return UnitItem.of(item) in self
 
         raise TypeError(
             "Tried to check if Units contains '%s', can only contain units" % type(item)
@@ -924,17 +917,19 @@ class Units(EntitiesCollection):
 
 class UnitFactory:
     def of(self, units):
-        return Units(*[Unit.of(unit) for unit in units])
+        return Units(*[UnitItem.of(unit) for unit in units])
 
     def owner(self, identifier):
-        units = iterate(player(identifier).firstUnit, player(identifier).nextUnit, Unit.of)
+        units = iterate(player(identifier).firstUnit, player(identifier).nextUnit, UnitItem.of)
         return Units(*units)
 
     def at(self, *args):
         if args is None:
             return Units()
 
-        return Units(*[Unit.of(plot(*args).getUnit(i)) for i in range(plot(*args).getNumUnits())])
+        return Units(
+            *[UnitItem.of(plot(*args).getUnit(i)) for i in range(plot(*args).getNumUnits())]
+        )
 
 
 class CreatedUnits(object):
@@ -973,9 +968,9 @@ class CreatedUnits(object):
         return self
 
     def promotion(self, *promotions):
-        for iPromotion in promotions:
+        for promotion in promotions:
             for unit in self:
-                unit.setHasPromotion(iPromotion, True)
+                unit.setHasPromotion(promotion, True)
 
         return self
 
@@ -992,9 +987,8 @@ def get_player_experience(unit):
     if not unit.canFight():
         return 0
 
-    experience = player(unit).getFreeExperience() + player(unit).getDomainFreeExperience(
-        unit.getDomainType()
-    )
+    experience = player(unit).getFreeExperience()
+    # experience += player(unit).getDomainFreeExperience(unit.getDomainType())  # TODO
 
     if player(unit).isStateReligion():
         experience += player(unit).getStateReligionFreeExperience()
@@ -1002,9 +996,10 @@ def get_player_experience(unit):
     return experience
 
 
-def _generate_unit(player_id, unit, plot, unit_ai, unit_name=None):
+def _generate_unit(player_id, unit_id, plot, unit_ai, unit_name=None):
+    unit_id = int(unit_id)
     x, y = location(plot)
-    unit = player(player_id).initUnit(int(unit), x, y, unit_ai, DirectionTypes.DIRECTION_SOUTH)
+    unit = player(player_id).initUnit(unit_id, x, y, unit_ai, DirectionTypes.DIRECTION_SOUTH)
     unit.changeExperience(get_player_experience(unit), -1, False, False, False)
     unit.testPromotionReady()
     if unit_name is not None:
@@ -1012,33 +1007,13 @@ def _generate_unit(player_id, unit, plot, unit_ai, unit_name=None):
     return unit
 
 
-def make_units(player, unit, plot, n_units=1, unit_ai=UnitAITypes.NO_UNITAI, unit_name=None):
-    if n_units <= 0:
-        return CreatedUnits([])
-    if unit < 0:
-        raise Exception("Invalid unit")
-
-    units = []
-    for _ in range(n_units):
-        unit = _generate_unit(player, unit, plot, unit_ai, unit_name)
-        units.append(unit)
-        # events.fireEvent("unitCreated", unit) # TODO
-    return CreatedUnits(units)
-
-
-def make_unit(player, unit, plot, unit_ai=UnitAITypes.NO_UNITAI, unit_name=None):
-    return make_units(player, unit, plot, 1, unit_ai, unit_name).one()
-
-
-def _generate_crusade_unit(player, unit, plot, unit_ai, crusade_value):
-    # 3Miro: this is a hack to distinguish Crusades without making a separate variable
-    unit = _generate_unit(player, unit, plot, unit_ai)
-    unit.setMercID(-5 - crusade_value)
-    return unit
-
-
-def make_crusade_units(
-    player, unit, plot, crusade_value, n_units=1, unit_ai=UnitAITypes.NO_UNITAI
+def make_units(
+    player,
+    unit,
+    plot,
+    n_units=1,
+    unit_ai=UnitAITypes.NO_UNITAI,
+    unit_name=None,
 ):
     if n_units <= 0:
         return CreatedUnits([])
@@ -1047,13 +1022,57 @@ def make_crusade_units(
 
     units = []
     for _ in range(n_units):
-        unit = _generate_crusade_unit(player, unit, plot, unit_ai, crusade_value)
-        units.append(unit)
-        # events.fireEvent("unitCreated", unit)
+        _unit = _generate_unit(player, unit, plot, unit_ai, unit_name)
+        units.append(_unit)
+        # events.fireEvent("unitCreated", unit) # TODO
     return CreatedUnits(units)
 
 
-def make_crusade_unit(player, unit, plot, crusade_value, unit_ai=UnitAITypes.NO_UNITAI):
+def make_unit(
+    player,
+    unit,
+    plot,
+    unit_ai=UnitAITypes.NO_UNITAI,
+    unit_name=None,
+):
+    return make_units(player, unit, plot, 1, unit_ai, unit_name).one()
+
+
+def _generate_crusade_unit(player_id, unit_id, plot, unit_ai, crusade_value):
+    # 3Miro: this is a hack to distinguish Crusades without making a separate variable
+    unit = _generate_unit(player_id, unit_id, plot, unit_ai)
+    unit.setMercID(-5 - crusade_value)
+    return unit
+
+
+def make_crusade_units(
+    player,
+    unit,
+    plot,
+    crusade_value,
+    n_units=1,
+    unit_ai=UnitAITypes.NO_UNITAI,
+):
+    if n_units <= 0:
+        return CreatedUnits([])
+    if unit < 0:
+        raise Exception("Invalid unit")
+
+    units = []
+    for _ in range(n_units):
+        _unit = _generate_crusade_unit(player, unit, plot, unit_ai, crusade_value)
+        units.append(_unit)
+        # events.fireEvent("unitCreated", unit) # TODO
+    return CreatedUnits(units)
+
+
+def make_crusade_unit(
+    player,
+    unit,
+    plot,
+    crusade_value,
+    unit_ai=UnitAITypes.NO_UNITAI,
+):
     return make_crusade_units(player, unit, plot, crusade_value, 1, unit_ai).one()
 
 

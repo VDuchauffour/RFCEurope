@@ -1224,6 +1224,9 @@ public:
   int getPaganCulture() const;
   void setPaganCulture(int iNewValue);
 
+  // Leoreth
+  int getDomainFreeExperience(DomainTypes eDomainType) const;
+
 protected:
   // 3Miro: culture bonus to cities if the player has no StateReligion
   int m_iPaganCulture;
@@ -1424,6 +1427,9 @@ protected:
   int *m_aiCommerceFlexibleCount;
   int *m_aiGoldPerTurnByPlayer;
   int *m_aiEspionageSpendingWeightAgainstTeam;
+
+  //Leoreth
+  int *m_aiDomainExperienceModifiers;
 
   bool *m_abFeatAccomplished;
   bool *m_abOptions;

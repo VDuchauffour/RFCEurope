@@ -2,7 +2,7 @@
 
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from CoreStructures import human, player, turn
+from CoreStructures import human, make_unit, make_units, player, turn
 import CvUtil
 import CvEventManager
 import PyHelpers
@@ -605,19 +605,20 @@ class CvRFCEventHandler:
 
         if iGameTurn == DateTurn.i860AD + data.lEventRandomness[iByzantiumVikingAttack]:
             if human() == Civ.BYZANTIUM:
-                self.barb.spawnMultiTypeUnits(
-                    Civ.BARBARIAN.value,
-                    (80, 24),
-                    (80, 25),
-                    [Unit.VIKING_BERSERKER.value, Unit.DENMARK_HUSKARL.value],
-                    [4, 3],
-                    iGameTurn,
-                    1,
-                    0,
-                    utils.forcedInvasion,
-                    1,
-                    localText.getText("TXT_KEY_BARBARIAN_NAMES_VIKINGS", ()),
-                )
+                for unit, number in zip((Unit.DENMARK_HUSKARL, Unit.VIKING_BERSERKER), (3, 4)):
+                    self.barb.spawnUnits(
+                        Civ.BARBARIAN,
+                        (80, 24),
+                        (80, 25),
+                        unit,
+                        number,
+                        iGameTurn,
+                        1,
+                        0,
+                        utils.forcedInvasion,
+                        UnitAITypes.UNITAI_ATTACK,
+                        localText.getText("TXT_KEY_BARBARIAN_NAMES_VIKINGS", ()),
+                    )
                 CyInterface().addMessage(
                     Civ.BYZANTIUM.value,
                     False,
@@ -760,9 +761,9 @@ class CvRFCEventHandler:
                         gc.getUnitInfo, gc.getNumUnitInfos(), "UNIT_GREAT_GENERAL"
                     ):
                         pUnit.setName(localText.getText("TXT_KEY_GREAT_PERSON_BELISARIUS", ()))
-                utils.makeUnit(Unit.SWORDSMAN.value, Civ.BYZANTIUM.value, tStartingPlot, 4)
-                utils.makeUnit(Unit.AXEMAN.value, Civ.BYZANTIUM.value, tStartingPlot, 3)
-                utils.makeUnit(Unit.ARCHER.value, Civ.BYZANTIUM.value, tStartingPlot, 2)
+                make_units(Civ.BYZANTIUM, Unit.SWORDSMAN, tStartingPlot, 4)
+                make_units(Civ.BYZANTIUM, Unit.AXEMAN, tStartingPlot, 3)
+                make_units(Civ.BYZANTIUM, Unit.ARCHER, tStartingPlot, 2)
                 if iPlayer == iHuman:
                     popup = Popup.PyPopup()
                     popup.setBodyString(
@@ -995,8 +996,8 @@ class CvRFCEventHandler:
             and self.eventManager.bShift
         ):
             # picks a dead civ so that autoplay can be started with game.AIplay xx
-            iDebugDeadCiv = Civ.BURGUNDY.value  # always dead in 500AD
-            utils.makeUnit(Unit.AXEMAN.value, iDebugDeadCiv, (0, 0), 1)
+            iDebugDeadCiv = Civ.BURGUNDY  # always dead in 500AD
+            make_unit(iDebugDeadCiv, Unit.AXEMAN, (0, 0))
             gc.getGame().setActivePlayer(iDebugDeadCiv, False)
             gc.getPlayer(iDebugDeadCiv).setPlayable(True)
         # Rhye - end debug

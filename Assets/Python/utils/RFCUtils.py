@@ -3,7 +3,7 @@
 from random import choice
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from CoreStructures import human, player, team, teamtype, turn
+from CoreStructures import human, make_unit, make_units, player, team, teamtype, turn
 from CoreTypes import (
     City,
     Civ,
@@ -243,20 +243,6 @@ class RFCUtils:
                     t, True, iMinorCiv, False, False
                 )
 
-    # RiseAndFall, Religions, UniquePowers
-    def makeUnit(self, iUnit, iPlayer, tCoords, iNum):  # by LOQ
-        "Makes iNum units for player iPlayer of the type iUnit at tCoords."
-        # if ( tCoords[0] < 0 or tCoords[0] >= WORLD_WIDTH or tCoords[1] < 0 or tCoords[1] >= WORLD_HEIGHT ):
-        pPlayer = gc.getPlayer(iPlayer)
-        for i in range(iNum):
-            pPlayer.initUnit(
-                iUnit,
-                tCoords[0],
-                tCoords[1],
-                UnitAITypes.NO_UNITAI,
-                DirectionTypes.DIRECTION_SOUTH,
-            )
-
     # RiseAndFall
     # Absinthe: separate city flip rules for secession and minor nation mechanics
     def flipUnitsInCitySecession(self, tCityPlot, iNewOwner, iOldOwner):
@@ -280,7 +266,7 @@ class RFCUtils:
             if pPlayer.canTrain(self.getUniqueUnit(iNewOwner, iUnit), False, False):
                 iFreeDefender = self.getUniqueUnit(iNewOwner, iUnit)
                 break
-        self.makeUnit(iFreeDefender, iNewOwner, (28, 0), 1)
+        make_unit(iNewOwner, iFreeDefender, (28, 0))
 
         for i in range(iNumUnitsInAPlot):
             unit = plotCity.getUnit(j)
@@ -307,7 +293,7 @@ class RFCUtils:
                     k += 1
                     if k < 2 or percentage_chance(60, strict=True):
                         unit.kill(False, Civ.BARBARIAN.value)
-                        self.makeUnit(unitType, iNewOwner, [28, 0], 1)
+                        make_unit(iNewOwner, unitType, (28, 0))
                     # Absinthe: skip unit if it won't defect, so it will move out of the city territory
                     else:
                         j += 1
@@ -333,7 +319,7 @@ class RFCUtils:
                 if (
                     iNewOwner < civilizations().majors().len() or unitType > Unit.SETTLER.value
                 ):  # Absinthe: major players can even flip settlers (spawn/respawn mechanics)
-                    self.makeUnit(unitType, iNewOwner, (28, 0), 1)
+                    make_unit(iNewOwner, unitType, (28, 0))
             # Absinthe: skip unit if from another player
             else:
                 j += 1
@@ -372,7 +358,7 @@ class RFCUtils:
                 if gc.getPlayer(iCiv).canTrain(self.getUniqueUnit(iCiv, iUnit), False, False):
                     RangedClass = self.getUniqueUnit(iCiv, iUnit)
                     break
-            self.makeUnit(RangedClass, iCiv, tCityPlot, 1)
+            make_unit(iCiv, RangedClass, tCityPlot)
 
     def killUnitsInArea(self, tTopLeft, tBottomRight, iCiv):
         for (x, y) in self.getPlotList(tTopLeft, tBottomRight):
@@ -442,10 +428,10 @@ class RFCUtils:
                             unit.kill(False, Civ.BARBARIAN.value)
                             if bKillSettlers:
                                 if unit.getUnitType() > Unit.SETTLER.value:
-                                    self.makeUnit(unit.getUnitType(), iNewOwner, (28, 0), 1)
+                                    make_unit(iNewOwner, unit.getUnitType(), (28, 0))
                             else:
                                 if unit.getUnitType() >= Unit.SETTLER.value:  # skip animals
-                                    self.makeUnit(unit.getUnitType(), iNewOwner, (28, 0), 1)
+                                    make_unit(iNewOwner, unit.getUnitType(), (28, 0))
                         else:
                             j += 1
                     tempPlot = gc.getMap().plot(28, 0)
@@ -495,10 +481,10 @@ class RFCUtils:
                             unit.kill(False, Civ.BARBARIAN.value)
                             if bKillSettlers:
                                 if unit.getUnitType() > Unit.SETTLER.value:
-                                    self.makeUnit(unit.getUnitType(), iNewOwner, (28, 0), 1)
+                                    make_unit(iNewOwner, unit.getUnitType(), (28, 0))
                             else:
                                 if unit.getUnitType() >= Unit.SETTLER.value:  # skip animals
-                                    self.makeUnit(unit.getUnitType(), iNewOwner, (28, 0), 1)
+                                    make_unit(iNewOwner, unit.getUnitType(), (28, 0))
                         else:
                             j += 1
                     tempPlot = gc.getMap().plot(28, 0)
@@ -794,7 +780,7 @@ class RFCUtils:
                 iUnitType = self.getUniqueUnit(iNewOwner, iUnit)
                 break
 
-        self.makeUnit(iUnitType, iNewOwner, tCityPlot, iNumUnits)
+        make_units(iNewOwner, iUnitType, tCityPlot, iNumUnits)
 
     def killAndFragmentCiv(self, iCiv, bBarbs, bAssignOneCity):
         self.clearPlague(iCiv)
