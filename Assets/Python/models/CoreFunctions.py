@@ -1,26 +1,30 @@
 import CoreTypes
-from Consts import WORLD_HEIGHT, WORLD_WIDTH
+from Consts import WORLD_HEIGHT, WORLD_WIDTH, MessageData
 
 try:
     from CvPythonExtensions import (
         CyGlobalContext,
         CyTranslator,
+        CyInterface,
         CyPlot,
         CyCity,
         CyUnit,
         stepDistance,
         EventContextTypes,
+        ColorTypes,
     )
     import Popup
 
     gc = CyGlobalContext()
     map = gc.getMap()
     translator = CyTranslator()
+    interface = CyInterface()
 
 except ImportError:
     gc = None
     map = None
     translator = None
+    interface = None
 
 
 def get_enum_by_id(enum, id):
@@ -188,3 +192,32 @@ def event_popup(id, title, message, labels=None):
     for label in labels:
         popup.addButton(label)
     popup.launch(not labels)
+
+
+def message(player, text, **settings):
+    color = settings.get("color", MessageData.WHITE)
+    event = settings.get("event", 0)
+    button = settings.get("button", "")
+
+    sound = settings.get("sound", "")
+    force = settings.get("force", False)
+
+    tile = settings.get("location")
+    x, y = -1, -1
+    if tile:
+        x, y = location(tile)
+
+    interface.addMessage(
+        player,
+        force,
+        MessageData.DURATION,
+        text,
+        sound,
+        event,
+        button,
+        ColorTypes(color),
+        x,
+        y,
+        True,
+        True,
+    )
