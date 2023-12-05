@@ -1,5 +1,6 @@
 from CvPythonExtensions import *
 from CoreData import civilization, civilizations, COMPANIES
+from CoreFunctions import show, text
 from CoreStructures import human, player, team, turn
 from CoreTypes import (
     Building,
@@ -23,7 +24,6 @@ from CoreTypes import (
 )
 from LocationsData import CITIES, CIV_CAPITAL_LOCATIONS, REGIONS
 import PyHelpers
-import Popup
 from PyUtils import rand
 import RFCUtils
 import UniquePowers
@@ -2061,9 +2061,7 @@ class Victory:
                 sText = "second"
             elif iUHV == 2:
                 sText = "third"
-            popup = Popup.PyPopup()
-            popup.setBodyString(localText.getText("TXT_KEY_VICTORY_UHV_GOAL_WON", (sText,)))
-            popup.launch()
+            show(text("TXT_KEY_VICTORY_UHV_GOAL_WON", sText))
 
     def lostUHV(self, iCiv, iUHV):
         pCiv = gc.getPlayer(iCiv)
@@ -2075,9 +2073,7 @@ class Victory:
                 sText = "second"
             elif iUHV == 2:
                 sText = "third"
-            popup = Popup.PyPopup()
-            popup.setBodyString(localText.getText("TXT_KEY_VICTORY_UHV_GOAL_LOST", (sText,)))
-            popup.launch()
+            show(text("TXT_KEY_VICTORY_UHV_GOAL_LOST", sText))
 
     def setAllUHVFailed(self, iCiv):
         pPlayer = gc.getPlayer(iCiv)

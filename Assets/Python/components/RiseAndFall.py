@@ -1973,7 +1973,6 @@ class RiseAndFall:
 
         # now starting units must be placed
         if iNumAICitiesConverted > 0:
-            # utils.debugTextPopup( 'iConverted OK for placing units' )
             # Absinthe: there is an issue that core area is not calculated correctly for flips, as the additional tiles in lExtraPlots are not checked here
             # 			so if all flipped cities are outside of the core area (they are in the "exceptions"), the civ will start without it's starting units and techs
             plotList = utils.squareSearch(tTopLeft, tBottomRight, utils.ownedCityPlots, iCiv)
@@ -2111,7 +2110,6 @@ class RiseAndFall:
                     not loopCity.isCapital()
                 ):  # 3Miro: this keeps crashing in the C++, makes no sense
                     if iConvertedCitiesCount < 6:  # there won't be more than 5 flips in the area
-                        # utils.debugTextPopup( 'iConvertedCities OK' )
                         iCultureChange = 50
                         if turn() <= civilization(iCiv).date.birth + 5:  # if we're during a birth
                             rndNum = percentage()

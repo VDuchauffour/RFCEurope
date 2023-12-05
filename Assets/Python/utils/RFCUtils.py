@@ -229,12 +229,6 @@ class RFCUtils:
         return max(dx, dy)
 
     # RiseAndFall
-    def debugTextPopup(self, strText):
-        popup = Popup.PyPopup()
-        popup.setBodyString(strText)
-        popup.launch()
-
-    # RiseAndFall
     def updateMinorTechs(self, iMinorCiv, iMajorCiv):
         for t in range(len(Technology)):
             if gc.getTeam(gc.getPlayer(iMajorCiv).getTeam()).isHasTech(t):

@@ -2,13 +2,13 @@
 
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
+from CoreFunctions import show, text
 from CoreStructures import human, make_unit, make_units, player, turn
 import CvUtil
 import CvEventManager
 import PyHelpers
 import CvMercenaryManager  # Mercenaries
 import CvScreenEnums  # Mercenaries
-import Popup
 from PyUtils import rand, percentage_chance
 
 from StoredData import data
@@ -597,11 +597,7 @@ class CvRFCEventHandler:
         # Absinthe: 868AD Viking attack on Constantinople
         if iGameTurn == DateTurn.i860AD + data.lEventRandomness[iByzantiumVikingAttack] - 2:
             if human() == Civ.BYZANTIUM:
-                popup = Popup.PyPopup()
-                popup.setBodyString(
-                    localText.getText("TXT_KEY_EVENT_VIKING_CONQUERERS_RUMOURS", ())
-                )
-                popup.launch()
+                show(text("TXT_KEY_EVENT_VIKING_CONQUERERS_RUMOURS"))
 
         if iGameTurn == DateTurn.i860AD + data.lEventRandomness[iByzantiumVikingAttack]:
             if human() == Civ.BYZANTIUM:
@@ -765,30 +761,18 @@ class CvRFCEventHandler:
                 make_units(Civ.BYZANTIUM, Unit.AXEMAN, tStartingPlot, 3)
                 make_units(Civ.BYZANTIUM, Unit.ARCHER, tStartingPlot, 2)
                 if iPlayer == iHuman:
-                    popup = Popup.PyPopup()
-                    popup.setBodyString(
-                        localText.getText("TXT_KEY_EVENT_CONQUEROR_BELISARIUS", ())
-                    )
-                    popup.launch()
+                    show(text("TXT_KEY_EVENT_CONQUEROR_BELISARIUS"))
 
         # Absinthe: popup message a couple turns before the Seljuk/Mongol/Timurid invasions
         if iPlayer == iHuman:
             # Seljuks
             if iGameTurn == DateTurn.i1064AD - 7:
                 if iPlayer == Civ.BYZANTIUM.value:
-                    popup = Popup.PyPopup()
-                    popup.setBodyString(
-                        localText.getText("TXT_KEY_EVENT_BARBARIAN_INVASION_START", ())
-                    )
-                    popup.launch()
+                    show(("TXT_KEY_EVENT_BARBARIAN_INVASION_START"))
             elif iGameTurn == DateTurn.i1094AD + 1:
                 if iPlayer == Civ.BYZANTIUM.value:
-                    popup = Popup.PyPopup()
                     sText = "Seljuk"
-                    popup.setBodyString(
-                        localText.getText("TXT_KEY_EVENT_BARBARIAN_INVASION_END", (sText,))
-                    )
-                    popup.launch()
+                    show(text("TXT_KEY_EVENT_BARBARIAN_INVASION_END", sText))
             # Mongols
             elif iGameTurn == DateTurn.i1236AD - 7:
                 if iPlayer in [
@@ -797,11 +781,7 @@ class CvRFCEventHandler:
                     Civ.POLAND.value,
                     Civ.BULGARIA.value,
                 ]:
-                    popup = Popup.PyPopup()
-                    popup.setBodyString(
-                        localText.getText("TXT_KEY_EVENT_BARBARIAN_INVASION_START", ())
-                    )
-                    popup.launch()
+                    show(text("TXT_KEY_EVENT_BARBARIAN_INVASION_START"))
             elif iGameTurn == DateTurn.i1288AD + 1:
                 if iPlayer in [
                     Civ.KIEV.value,
@@ -809,28 +789,16 @@ class CvRFCEventHandler:
                     Civ.POLAND.value,
                     Civ.BULGARIA.value,
                 ]:
-                    popup = Popup.PyPopup()
                     sText = "Tatar"
-                    popup.setBodyString(
-                        localText.getText("TXT_KEY_EVENT_BARBARIAN_INVASION_END", (sText,))
-                    )
-                    popup.launch()
+                    show(text("TXT_KEY_EVENT_BARBARIAN_INVASION_END", sText))
             # Timurids
             elif iGameTurn == DateTurn.i1380AD - 7:
                 if iPlayer in [Civ.ARABIA.value, Civ.OTTOMAN.value, Civ.BYZANTIUM.value]:
-                    popup = Popup.PyPopup()
-                    popup.setBodyString(
-                        localText.getText("TXT_KEY_EVENT_TIMURID_INVASION_START", ())
-                    )
-                    popup.launch()
+                    show(text("TXT_KEY_EVENT_TIMURID_INVASION_START"))
             elif iGameTurn == DateTurn.i1431AD + 1:
                 if iPlayer in [Civ.ARABIA.value, Civ.OTTOMAN.value, Civ.BYZANTIUM.value]:
-                    popup = Popup.PyPopup()
                     sText = "Timurid"
-                    popup.setBodyString(
-                        localText.getText("TXT_KEY_EVENT_BARBARIAN_INVASION_END", (sText,))
-                    )
-                    popup.launch()
+                    show(text("TXT_KEY_EVENT_BARBARIAN_INVASION_END", sText))
 
         # Absinthe: Denmark UP
         if iPlayer == Civ.DENMARK.value:
