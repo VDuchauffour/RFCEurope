@@ -1,7 +1,8 @@
 from bisect import bisect
 from itertools import repeat
 import operator
-from random import choice, random
+from random import random
+from random import choice as _choice
 
 from Errors import NotTypeExpectedError
 
@@ -123,12 +124,11 @@ def choices(population, weights=None, cum_weights=None, k=1):
 
     If the relative weights or cumulative weights are not specified,
     the selections are made with equal probability.
-
     """
     n = len(population)
     if cum_weights is None:
         if weights is None:
-            return [choice(population) for i in repeat(None, k)]
+            return [_choice(population) for i in repeat(None, k)]
         try:
             cum_weights = list(accumulate(weights))
         except TypeError:
@@ -145,6 +145,26 @@ def choices(population, weights=None, cum_weights=None, k=1):
         raise ValueError("Total of weights must be greater than zero")
     hi = n - 1
     return [population[bisect(cum_weights, random() * total, 0, hi)] for i in repeat(None, k)]
+
+
+def choice(population, weights=None, cum_weights=None):
+    """Return a single item of population elements chosen with replacement.
+
+    If the relative weights or cumulative weights are not specified,
+    the selections are made with equal probability.
+    """
+    return choices(population, weights, cum_weights)[0]
+
+
+def random_entry(iterable):
+    """Return a single item of population elements chosen with replacement.
+
+    Return None if the iterable is empty.
+    """
+    if not iterable:
+        return None
+
+    return choice(iterable)
 
 
 def chance(threshold, percentage, strict=False, reverse=False):
