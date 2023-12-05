@@ -11,7 +11,7 @@ from TimelineData import DateTurn
 from StoredData import data
 
 from CoreData import civilizations
-from MiscData import MessageData
+from Consts import MessageData
 
 gc = CyGlobalContext()
 utils = RFCUtils.RFCUtils()

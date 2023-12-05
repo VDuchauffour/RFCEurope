@@ -1,4 +1,5 @@
 from CvPythonExtensions import *
+from Consts import MessageData
 from CoreData import civilization, civilizations
 from CoreStructures import human, make_unit, make_units, player, team, teamtype, turn
 import PyHelpers  # LOQ
@@ -11,7 +12,7 @@ import Victory
 from StoredData import data
 import Crusades
 
-from MiscData import PLAGUE_IMMUNITY, MessageData
+from MiscData import PLAGUE_IMMUNITY
 from CoreTypes import (
     Building,
     Civ,

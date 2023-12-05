@@ -1,4 +1,5 @@
 from CvPythonExtensions import *
+from Consts import MessageData
 from CoreData import civilizations, civilization
 from CoreFunctions import event_popup, get_civ_by_id, text
 from CoreStructures import (
@@ -19,7 +20,7 @@ from StoredData import data
 import random
 
 from CoreTypes import City, Civ, Religion, Promotion, Technology, Unit, Province
-from MiscData import MessageData, NUM_CRUSADES
+from MiscData import NUM_CRUSADES
 from TimelineData import DateTurn
 from LocationsData import CITIES
 

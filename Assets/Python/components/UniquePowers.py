@@ -9,7 +9,7 @@ from PyUtils import choice
 import Religions
 import RFCUtils
 
-from MiscData import MessageData
+from Consts import MessageData
 
 gc = CyGlobalContext()
 utils = RFCUtils.RFCUtils()

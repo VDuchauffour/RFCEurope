@@ -8,6 +8,7 @@ from CvPythonExtensions import (
     UnitAITypes,
     DirectionTypes,
 )
+from Consts import MessageData
 from CoreData import civilization, civilizations
 from CoreFunctions import event_popup, get_religion_by_id, text
 from CoreStructures import human, player
@@ -32,7 +33,7 @@ from ProvinceMapData import PROVINCES_MAP
 from StoredData import data
 from PyUtils import choice, choices, percentage, percentage_chance, rand
 
-from MiscData import RELIGIOUS_BUILDINGS, RELIGIOUS_WONDERS, MessageData
+from MiscData import RELIGIOUS_BUILDINGS, RELIGIOUS_WONDERS
 
 gc = CyGlobalContext()
 localText = CyTranslator()  # Absinthe

@@ -31,7 +31,7 @@ import Province
 import Mercenaries
 
 from Scenario import get_scenario
-from MiscData import MessageData
+from Consts import MessageData
 from TimelineData import DateTurn
 from ProvinceMapData import PROVINCES_MAP
 from CoreTypes import (

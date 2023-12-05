@@ -32,7 +32,7 @@ from StoredData import data
 import random
 
 from TimelineData import DateTurn
-from MiscData import MessageData
+from Consts import MessageData
 
 utils = RFCUtils.RFCUtils()
 up = UniquePowers.UniquePowers()

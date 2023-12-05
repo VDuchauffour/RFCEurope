@@ -23,12 +23,12 @@ import PyHelpers
 import Popup
 from PyUtils import percentage, percentage_chance, rand, choice
 from StoredData import data
-from MiscData import GREAT_PROPHET_FAITH_POINT_BONUS, RELIGION_PERSECUTION_ORDER, MessageData
+from MiscData import GREAT_PROPHET_FAITH_POINT_BONUS, RELIGION_PERSECUTION_ORDER
 
 from CoreFunctions import get_religion_by_id, text
 from CoreTypes import ProvinceType
 from ProvinceMapData import PROVINCES_MAP
-from Consts import WORLD_HEIGHT, WORLD_WIDTH
+from Consts import WORLD_HEIGHT, WORLD_WIDTH, MessageData
 
 # globals
 gc = CyGlobalContext()

@@ -23,7 +23,7 @@ from PyUtils import percentage_chance, rand, choice
 import RFCUtils
 import GameBalance
 import random
-from MiscData import MessageData
+from Consts import MessageData
 from CoreData import civilizations, civilization
 from CityMapData import CITIES_MAP
 from CoreTypes import Building, Wonder, Promotion, Project, Improvement, Feature, Unit, Bonus

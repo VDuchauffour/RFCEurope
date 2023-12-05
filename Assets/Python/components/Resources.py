@@ -3,7 +3,7 @@
 
 from CvPythonExtensions import *
 
-from MiscData import MessageData
+from Consts import MessageData
 from TimelineData import DateTurn
 from CoreTypes import Improvement, Bonus
 

@@ -14,7 +14,7 @@ from PyUtils import percentage_chance, rand, choice
 import RFCUtils
 from StoredData import data
 
-from MiscData import MessageData
+from Consts import MessageData
 
 # globals
 utils = RFCUtils.RFCUtils()

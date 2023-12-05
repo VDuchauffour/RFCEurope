@@ -6,7 +6,7 @@ from CoreFunctions import text
 from CoreStructures import human
 import PyHelpers
 
-from MiscData import MessageData
+from Consts import MessageData
 from CoreTypes import (
     Building,
     Civ,

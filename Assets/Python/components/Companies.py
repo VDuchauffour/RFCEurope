@@ -2,6 +2,7 @@
 # Implemented by AbsintheRed, based on the wonderful idea of embryodead
 
 from CvPythonExtensions import *
+from Consts import MessageData
 from CoreData import civilizations, COMPANIES
 from CoreFunctions import get_enum_by_id
 from CoreStructures import human, player, turn
@@ -13,7 +14,7 @@ from operator import itemgetter
 from Scenario import get_scenario
 
 from TimelineData import DateTurn
-from MiscData import COMPANY_BUILDINGS, MessageData
+from MiscData import COMPANY_BUILDINGS
 from CoreTypes import (
     Building,
     City,

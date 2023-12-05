@@ -1,6 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Plague
 
 from CvPythonExtensions import *
+from Consts import MessageData
 from CoreData import civilizations, civilization
 from CoreFunctions import text
 from CoreStructures import human, turn
@@ -11,7 +12,7 @@ import RFCUtils
 from StoredData import data
 import random
 
-from MiscData import PLAGUE_IMMUNITY, MessageData
+from MiscData import PLAGUE_IMMUNITY
 from TimelineData import DateTurn
 
 gc = CyGlobalContext()
