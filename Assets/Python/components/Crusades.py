@@ -1,6 +1,6 @@
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from CoreFunctions import get_civ_by_id
+from CoreFunctions import event_popup, get_civ_by_id, text
 from CoreStructures import (
     human,
     make_crusade_unit,
@@ -11,7 +11,6 @@ from CoreStructures import (
     turn,
 )
 import PyHelpers
-import Popup
 from PyUtils import choices, percentage, percentage_chance, rand, choice
 import RFCUtils
 from ProvinceMapData import PROVINCES_MAP
@@ -309,50 +308,41 @@ class Crusades:
     def setDCLast(self, iLast):
         data.iDCLast = iLast
 
-    def showPopup(self, popupID, title, message, labels):
-        popup = Popup.PyPopup(popupID, EventContextTypes.EVENTCONTEXT_ALL)
-        popup.setHeaderString(title)
-        popup.setBodyString(message)
-        for i in labels:
-            popup.addButton(i)
-        popup.launch(False)
-
     def initVotePopup(self):
         iHuman = human()
         pHuman = gc.getPlayer(iHuman)
         iActiveCrusade = self.getActiveCrusade(turn())
         iBribe = 200 + 50 * iActiveCrusade
         if pHuman.getGold() >= iBribe:
-            self.showPopup(
+            event_popup(
                 7616,
-                CyTranslator().getText("TXT_KEY_CRUSADE_INIT_POPUP", ()),
-                CyTranslator().getText("TXT_KEY_CRUSADE_INIT", ()),
-                (
-                    CyTranslator().getText("TXT_KEY_CRUSADE_ACCEPT", ()),
-                    CyTranslator().getText("TXT_KEY_CRUSADE_DENY", ()),
-                    CyTranslator().getText("TXT_KEY_CRUSADE_DENY_RUDE", ()),
-                    CyTranslator().getText("TXT_KEY_CRUSADE_BRIBE_OUT", (iBribe,)),
-                ),
+                text("TXT_KEY_CRUSADE_INIT_POPUP"),
+                text("TXT_KEY_CRUSADE_INIT"),
+                [
+                    text("TXT_KEY_CRUSADE_ACCEPT"),
+                    text("TXT_KEY_CRUSADE_DENY"),
+                    text("TXT_KEY_CRUSADE_DENY_RUDE"),
+                    text("TXT_KEY_CRUSADE_BRIBE_OUT", iBribe),
+                ],
             )
         else:
-            self.showPopup(
+            event_popup(
                 7616,
-                CyTranslator().getText("TXT_KEY_CRUSADE_INIT_POPUP", ()),
-                CyTranslator().getText("TXT_KEY_CRUSADE_INIT", ()),
-                (
-                    CyTranslator().getText("TXT_KEY_CRUSADE_ACCEPT", ()),
-                    CyTranslator().getText("TXT_KEY_CRUSADE_DENY", ()),
-                    CyTranslator().getText("TXT_KEY_CRUSADE_DENY_RUDE", ()),
-                ),
+                text("TXT_KEY_CRUSADE_INIT_POPUP"),
+                text("TXT_KEY_CRUSADE_INIT"),
+                [
+                    text("TXT_KEY_CRUSADE_ACCEPT"),
+                    text("TXT_KEY_CRUSADE_DENY"),
+                    text("TXT_KEY_CRUSADE_DENY_RUDE"),
+                ],
             )
 
     def informLeaderPopup(self):
-        self.showPopup(
+        event_popup(
             7617,
-            CyTranslator().getText("TXT_KEY_CRUSADE_LEADER_POPUP", ()),
-            gc.getPlayer(self.getLeader()).getName()
-            + CyTranslator().getText("TXT_KEY_CRUSADE_LEAD", ()),
-            (CyTranslator().getText("TXT_KEY_CRUSADE_OK", ()),),
+            text("TXT_KEY_CRUSADE_LEADER_POPUP"),
+            player(self.getLeader()).getName() + text("TXT_KEY_CRUSADE_LEAD"),
+            [text("TXT_KEY_CRUSADE_OK")],
         )
 
     def voteHumanPopup(self):
@@ -368,14 +358,11 @@ class Crusades:
             + gc.getPlayer(self.getPowerful()).getCivilizationShortDescription(0)
             + ")"
         )
-        self.showPopup(
+        event_popup(
             7618,
-            CyTranslator().getText("TXT_KEY_CRUSADE_VOTE_POPUP", ()),
-            CyTranslator().getText("TXT_KEY_CRUSADE_VOTE", ()),
-            (
-                favorite_txt,
-                powerful_txt,
-            ),
+            text("TXT_KEY_CRUSADE_VOTE_POPUP"),
+            text("TXT_KEY_CRUSADE_VOTE"),
+            [favorite_txt, powerful_txt],
         )
 
     def deviateHumanPopup(self):
@@ -391,14 +378,14 @@ class Crusades:
             + " "
             + CyTranslator().getText("TXT_KEY_CRUSADE_CURRENT_LEADER", ())
         )
-        self.showPopup(
+        event_popup(
             7619,
-            CyTranslator().getText("TXT_KEY_CRUSADE_DEVIATE", ()),
+            text("TXT_KEY_CRUSADE_DEVIATE"),
             sString,
-            (
-                CyTranslator().getText("TXT_KEY_CRUSADE_DECIDE_WEALTH", ()),
-                CyTranslator().getText("TXT_KEY_CRUSADE_DECIDE_FAITH", ()),
-            ),
+            [
+                text("TXT_KEY_CRUSADE_DECIDE_WEALTH"),
+                text("TXT_KEY_CRUSADE_DECIDE_FAITH"),
+            ],
         )
 
     def deviateNewTargetPopup(self):
@@ -427,10 +414,10 @@ class Crusades:
                     + pPlayer.getCivilizationAdjective(0)
                     + ")"
                 )
-        self.showPopup(
+        event_popup(
             7620,
-            CyTranslator().getText("TXT_KEY_CRUSADE_CORRUPT", ()),
-            CyTranslator().getText("TXT_KEY_CRUSADE_TARGET", ()),
+            text("TXT_KEY_CRUSADE_CORRUPT"),
+            text("TXT_KEY_CRUSADE_TARGET"),
             lTargetList,
         )
 
@@ -443,11 +430,11 @@ class Crusades:
                 sCityName,
             ),
         )
-        self.showPopup(
+        event_popup(
             7621,
-            CyTranslator().getText("TXT_KEY_CRUSADE_UNDER_ATTACK", ()),
+            text("TXT_KEY_CRUSADE_UNDER_ATTACK"),
             sText,
-            (CyTranslator().getText("TXT_KEY_CRUSADE_PREPARE", ()),),
+            [text("TXT_KEY_CRUSADE_PREPARE")],
         )
 
     def endCrusades(self):
@@ -1841,15 +1828,14 @@ class Crusades:
         return False
 
     def callDCHuman(self):
-        iHuman = human()
-        self.showPopup(
+        event_popup(
             7625,
-            CyTranslator().getText("TXT_KEY_CRUSADE_DEFENSIVE_PROPOSAL_POPUP", ()),
-            CyTranslator().getText("TXT_KEY_CRUSADE_DEFENSIVE_PROPOSAL", ()),
-            (
-                CyTranslator().getText("TXT_KEY_CRUSADE_DEFENSIVE_PROPOSAL_YES", ()),
-                CyTranslator().getText("TXT_KEY_CRUSADE_DEFENSIVE_PROPOSAL_NO", ()),
-            ),
+            text("TXT_KEY_CRUSADE_DEFENSIVE_PROPOSAL_POPUP"),
+            text("TXT_KEY_CRUSADE_DEFENSIVE_PROPOSAL"),
+            [
+                text("TXT_KEY_CRUSADE_DEFENSIVE_PROPOSAL_YES"),
+                text("TXT_KEY_CRUSADE_DEFENSIVE_PROPOSAL_NO"),
+            ],
         )
 
     def callDCAI(self, iPlayer):

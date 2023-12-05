@@ -9,6 +9,7 @@ try:
         CyCity,
         CyUnit,
         stepDistance,
+        EventContextTypes,
     )
     import Popup
 
@@ -175,3 +176,15 @@ def show(message, *format):
     popup = Popup.PyPopup()
     popup.setBodyString(message)
     popup.launch()
+
+
+def event_popup(id, title, message, labels=None):
+    if labels is None:
+        labels = []
+
+    popup = Popup.PyPopup(id, EventContextTypes.EVENTCONTEXT_ALL)
+    popup.setHeaderString(title)
+    popup.setBodyString(message)
+    for label in labels:
+        popup.addButton(label)
+    popup.launch(not labels)

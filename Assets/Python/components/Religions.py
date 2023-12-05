@@ -9,7 +9,7 @@ from CvPythonExtensions import (
     DirectionTypes,
 )
 from CoreData import civilization, civilizations
-from CoreFunctions import get_religion_by_id
+from CoreFunctions import event_popup, get_religion_by_id, text
 from CoreStructures import human, player
 from CoreTypes import (
     Building,
@@ -775,26 +775,7 @@ class Religions:
         pPlayer = gc.getPlayer(playerID)
         pPlayer.convertForFree(religionList[popupReturn.getButtonClicked()])
 
-    ##REFORMATION
-
-    def showPopup(self, popupID, title, message, labels):
-        popup = Popup.PyPopup(popupID, EventContextTypes.EVENTCONTEXT_ALL)
-        popup.setHeaderString(title)
-        popup.setBodyString(message)
-        for i in labels:
-            popup.addButton(i)
-        popup.launch(False)
-
-    def reformationPopup(self):
-        self.showPopup(
-            7624,
-            CyTranslator().getText("TXT_KEY_REFORMATION_TITLE", ()),
-            CyTranslator().getText("TXT_KEY_REFORMATION_MESSAGE", ()),
-            (
-                CyTranslator().getText("TXT_KEY_POPUP_YES", ()),
-                CyTranslator().getText("TXT_KEY_POPUP_NO", ()),
-            ),
-        )
+    # REFORMATION
 
     def eventApply7624(self, popupReturn):
         iHuman = human()
@@ -857,7 +838,12 @@ class Religions:
         ):
             self.reformationyes(iCiv)
         elif civilization(iCiv).is_human():
-            self.reformationPopup()
+            event_popup(
+                7624,
+                text("TXT_KEY_REFORMATION_TITLE"),
+                text("TXT_KEY_REFORMATION_MESSAGE"),
+                [text("TXT_KEY_POPUP_YES"), text("TXT_KEY_POPUP_NO")],
+            )
         else:
             self.reformationno(iCiv)
 

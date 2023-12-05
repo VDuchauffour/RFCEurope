@@ -2,9 +2,9 @@
 
 from CvPythonExtensions import *
 from Consts import INDEPENDENT_CIVS
+from CoreFunctions import event_popup, text
 from CoreStructures import human, make_unit, make_units, turn
 from CoreTypes import Civ, Civic, Religion, Technology, Unit, Province
-import Popup
 from PyUtils import percentage, percentage_chance, rand, random_entry, choice
 import RFCUtils
 from TimelineData import DateTurn
@@ -3447,14 +3447,6 @@ class Barbs:
                 )  # by trade because by conquest may raze the city
                 utils.flipUnitsInCityAfter(self.getTempFlippingCity(), iNewCiv)
 
-    def showPopup(self, popupID, title, message, labels):
-        popup = Popup.PyPopup(popupID, EventContextTypes.EVENTCONTEXT_ALL)
-        popup.setHeaderString(title)
-        popup.setBodyString(message)
-        for i in labels:
-            popup.addButton(i)
-        popup.launch(False)
-
     def eventApply7627(self, popupReturn):
         iDecision = popupReturn.getButtonClicked()
         iNationIndex, iRevoltIndex = self.getNationRevoltIndex()
@@ -3623,24 +3615,17 @@ class Barbs:
         iCrackOdds = max(0, iRawOdds + iCrackOdds)
         iRawOdds = max(0, iRawOdds)
 
-        szRebellName = localText.getText(lNation[7][0], ())
-        self.showPopup(
+        rebel_name = text(lNation[7][0])
+        event_popup(
             7627,
-            localText.getText("TXT_KEY_MINOR_REBELLION_TITLE", (szRebellName,)),
-            localText.getText("TXT_KEY_MINOR_REBELLION_DESC", (szRebellName,)),
-            (
-                localText.getText("TXT_KEY_MINOR_REBELLION_DO_NOTHING", (iRawOdds,)),
-                localText.getText("TXT_KEY_MINOR_REBELLION_CRACK", (iCrackOdds,)),
-                localText.getText(
-                    "TXT_KEY_MINOR_REBELLION_BRIBE",
-                    (
-                        iGold,
-                        iBribeGold,
-                        iBribeOdds,
-                    ),
-                ),
-                localText.getText("TXT_KEY_MINOR_REBELLION_ALL", (iAllOdds,)),
-            ),
+            text("TXT_KEY_MINOR_REBELLION_TITLE", rebel_name),
+            text("TXT_KEY_MINOR_REBELLION_DESC", rebel_name),
+            [
+                text("TXT_KEY_MINOR_REBELLION_DO_NOTHING", iRawOdds),
+                text("TXT_KEY_MINOR_REBELLION_CRACK", iCrackOdds),
+                text("TXT_KEY_MINOR_REBELLION_BRIBE", iGold, iBribeGold, iBribeOdds),
+                text("TXT_KEY_MINOR_REBELLION_ALL", iAllOdds),
+            ],
         )
 
     def getGarrasonSize(self, pCity):

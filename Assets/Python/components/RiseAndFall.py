@@ -2,7 +2,6 @@ from CvPythonExtensions import *
 from CoreData import civilization, civilizations
 from CoreStructures import human, make_unit, make_units, player, team, teamtype, turn
 import PyHelpers  # LOQ
-import Popup
 from PyUtils import chance, percentage, percentage_chance, rand, choice
 import RFCUtils
 import Province
@@ -29,7 +28,7 @@ from CoreTypes import (
     Technology,
     Unit,
 )
-from CoreFunctions import get_civ_by_id
+from CoreFunctions import event_popup, get_civ_by_id, text
 from LocationsData import CIV_CAPITAL_LOCATIONS
 from TimelineData import DateTurn
 
@@ -189,25 +188,12 @@ class RiseAndFall:
 
     """ popupID has to be a registered ID in CvRhyesCatapultEventManager.__init__!! """
 
-    def showPopup(self, popupID, title, message, labels):
-        popup = Popup.PyPopup(popupID, EventContextTypes.EVENTCONTEXT_ALL)
-        popup.setHeaderString(title)
-        popup.setBodyString(message)
-        for i in labels:
-            popup.addButton(i)
-        popup.launch(False)
-
     def newCivPopup(self, iCiv):
-        self.showPopup(
+        event_popup(
             7614,
-            CyTranslator().getText("TXT_KEY_NEWCIV_TITLE", ()),
-            CyTranslator().getText(
-                "TXT_KEY_NEWCIV_MESSAGE", (gc.getPlayer(iCiv).getCivilizationAdjectiveKey(),)
-            ),
-            (
-                CyTranslator().getText("TXT_KEY_POPUP_YES", ()),
-                CyTranslator().getText("TXT_KEY_POPUP_NO", ()),
-            ),
+            text("TXT_KEY_NEWCIV_TITLE"),
+            text("TXT_KEY_NEWCIV_MESSAGE", player(iCiv).getCivilizationAdjectiveKey()),
+            [text("TXT_KEY_POPUP_YES"), text("TXT_KEY_POPUP_NO")],
         )
         self.setNewCiv(iCiv)
 
@@ -241,14 +227,11 @@ class RiseAndFall:
                         flipText += plot.getPlotCity().getName() + "\n"
         flipText += CyTranslator().getText("TXT_KEY_FLIPMESSAGE2", ())
 
-        self.showPopup(
+        event_popup(
             7615,
-            CyTranslator().getText("TXT_KEY_NEWCIV_TITLE", ()),
+            text("TXT_KEY_NEWCIV_TITLE"),
             flipText,
-            (
-                CyTranslator().getText("TXT_KEY_POPUP_YES", ()),
-                CyTranslator().getText("TXT_KEY_POPUP_NO", ()),
-            ),
+            [text("TXT_KEY_POPUP_YES"), text("TXT_KEY_POPUP_NO")],
         )
         self.setNewCivFlip(iNewCiv)
         self.setOldCivFlip(iHuman)
@@ -357,19 +340,17 @@ class RiseAndFall:
     # resurrection when some human controlled cities are also included
     def rebellionPopup(self, iRebelCiv, iNumCities):
         iLoyalPrice = min((10 * gc.getPlayer(human()).getGold()) / 100, 50 * iNumCities)
-        self.showPopup(
+        event_popup(
             7622,
-            CyTranslator().getText("TXT_KEY_REBELLION_TITLE", ()),
-            CyTranslator().getText(
-                "TXT_KEY_REBELLION_HUMAN", (gc.getPlayer(iRebelCiv).getCivilizationAdjectiveKey(),)
-            ),
-            (
-                CyTranslator().getText("TXT_KEY_REBELLION_LETGO", ()),
-                CyTranslator().getText("TXT_KEY_REBELLION_DONOTHING", ()),
-                CyTranslator().getText("TXT_KEY_REBELLION_CRACK", ()),
-                CyTranslator().getText("TXT_KEY_REBELLION_BRIBE", ()) + " " + str(iLoyalPrice),
-                CyTranslator().getText("TXT_KEY_REBELLION_BOTH", ()),
-            ),
+            text("TXT_KEY_REBELLION_TITLE"),
+            text("TXT_KEY_REBELLION_HUMAN", player(iRebelCiv).getCivilizationAdjectiveKey()),
+            [
+                text("TXT_KEY_REBELLION_LETGO"),
+                text("TXT_KEY_REBELLION_DONOTHING"),
+                text("TXT_KEY_REBELLION_CRACK"),
+                text("TXT_KEY_REBELLION_BRIBE") + " " + str(iLoyalPrice),
+                text("TXT_KEY_REBELLION_BOTH"),
+            ],
         )
 
     # resurrection when some human controlled cities are also included
