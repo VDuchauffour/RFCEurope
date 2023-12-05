@@ -2,6 +2,7 @@
 
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
+from CoreFunctions import text
 from CoreStructures import human
 import PyHelpers
 
@@ -127,8 +128,7 @@ class Stability:
             pPlayer = gc.getPlayer(iPlayer)
             if iPlayer != human():
                 pPlayer.changeStabilityBase(
-                    StabilityCategory.EXPANSION.value,
-                    civilization(iPlayer).ai.stability_bonus,
+                    StabilityCategory.EXPANSION.value, civilization(iPlayer).ai.stability_bonus
                 )
 
         # Absinthe: update Byzantine stability on the start of the game
@@ -538,7 +538,7 @@ class Stability:
                     MessageData.DURATION,
                     pPlayer.getCivilizationDescription(0)
                     + " "
-                    + CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_STABILITY", ()),
+                    + text("TXT_KEY_STABILITY_CIVILWAR_STABILITY"),
                     "",
                     0,
                     "",
@@ -554,7 +554,7 @@ class Stability:
                 iPlayer,
                 True,
                 MessageData.DURATION,
-                CyTranslator().getText("TXT_KEY_STABILITY_CIVILWAR_STABILITY_HUMAN", ()),
+                text("TXT_KEY_STABILITY_CIVILWAR_STABILITY_HUMAN"),
                 "",
                 0,
                 "",

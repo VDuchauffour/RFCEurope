@@ -4,7 +4,7 @@
 ## Implementation of miscellaneous game functions
 
 from CoreData import civilization
-from CoreFunctions import get_religion_by_id
+from CoreFunctions import get_religion_by_id, text
 from CoreStructures import turn
 from CoreTypes import Building, Civ, Religion, StabilityCategory, Unit, Wonder
 import CvUtil
@@ -270,11 +270,7 @@ class CvGameUtils:
                 or (
                     iStateReligion == Religion.ISLAM
                     and iReligion
-                    in [
-                        Religion.CATHOLICISM,
-                        Religion.ORTHODOXY,
-                        Religion.PROTESTANTISM,
-                    ]
+                    in [Religion.CATHOLICISM, Religion.ORTHODOXY, Religion.PROTESTANTISM]
                 )
             ):
                 bCanPurge = True
@@ -639,13 +635,13 @@ class CvGameUtils:
         # 3Miro and sedna17, saint and prosecutor Info
         eWidgetType, iData1, iData2, bOption = argsList
         if iData1 == 666:
-            return CyTranslator().getText("TXT_KEY_CLEANSE_RELIGION_MOUSE_OVER", ())
+            return text("TXT_KEY_CLEANSE_RELIGION_MOUSE_OVER")
         elif iData1 == 1618:
-            return CyTranslator().getText("TXT_KEY_FAITH_SAINT", ())
+            return text("TXT_KEY_FAITH_SAINT")
         elif iData1 == 1919:
-            return CyTranslator().getText("TXT_KEY_MERCENARY_HELP", ())
+            return text("TXT_KEY_MERCENARY_HELP")
         elif iData1 == 1920:
-            return CyTranslator().getText("TXT_KEY_BARBONLY_HELP", ())
+            return text("TXT_KEY_BARBONLY_HELP")
         return u""
 
     # Absinthe: 1st turn anarchy instability, called form C++ CvPlayer::revolution and CvPlayer::convert

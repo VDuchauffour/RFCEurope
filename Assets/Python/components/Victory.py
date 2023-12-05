@@ -558,7 +558,7 @@ class Victory:
                             iPlayer,
                             False,
                             MessageData.DURATION,
-                            CyTranslator().getText("TXT_KEY_VICTORY_INTERMEDIATE", ()),
+                            text("TXT_KEY_VICTORY_INTERMEDIATE"),
                             "",
                             0,
                             "",
@@ -636,7 +636,7 @@ class Victory:
                                 iPlayer,
                                 False,
                                 MessageData.DURATION,
-                                CyTranslator().getText("TXT_KEY_VICTORY_RIVAL_CIVS", ()),
+                                text("TXT_KEY_VICTORY_RIVAL_CIVS"),
                                 "",
                                 0,
                                 "",
@@ -726,13 +726,11 @@ class Victory:
             if bConquest:
                 if city.getPopulation() > 1:
                     player(Civ.NORWAY).setUHVCounter(
-                        0,
-                        player(Civ.NORWAY).getUHVCounter(0) + city.getPopulation() + 1,
+                        0, player(Civ.NORWAY).getUHVCounter(0) + city.getPopulation() + 1
                     )
                 else:
                     player(Civ.NORWAY).setUHVCounter(
-                        0,
-                        player(Civ.NORWAY).getUHVCounter(0) + city.getPopulation(),
+                        0, player(Civ.NORWAY).getUHVCounter(0) + city.getPopulation()
                     )
 
         # Poland UHV 3: Construct 3 Catholic and Orthodox Cathedrals, 2 Protestant Cathedrals, and have at least 2 Jewish Quarters in your cities

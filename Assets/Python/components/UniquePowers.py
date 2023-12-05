@@ -1,6 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Unique Powers (only a couple of them is here, most are handled in the .dll)
 
 from CvPythonExtensions import *
+from CoreFunctions import text
 from CoreStructures import human, make_unit
 from CoreTypes import Building, SpecialParameter, Religion, Unit
 from PyUtils import choice
@@ -75,10 +76,7 @@ class UniquePowers:
                         iPlayer,
                         False,
                         MessageData.DURATION,
-                        CyTranslator().getText("TXT_KEY_UNIT_NEW_JANISSARY", ())
-                        + " "
-                        + pCity.getName()
-                        + "!",
+                        text("TXT_KEY_UNIT_NEW_JANISSARY") + " " + pCity.getName() + "!",
                         "AS2D_UNIT_BUILD_UNIQUE_UNIT",
                         0,
                         gc.getUnitInfo(Unit.JANISSARY.value).getButton(),
@@ -122,10 +120,7 @@ class UniquePowers:
                     iPlayer,
                     False,
                     MessageData.DURATION,
-                    CyTranslator().getText("TXT_KEY_UNIT_NEW_JANISSARY", ())
-                    + " "
-                    + city.getName()
-                    + "!",
+                    text("TXT_KEY_UNIT_NEW_JANISSARY") + " " + city.getName() + "!",
                     "AS2D_UNIT_BUILD_UNIQUE_UNIT",
                     0,
                     gc.getUnitInfo(Unit.JANISSARY.value).getButton(),
@@ -158,7 +153,7 @@ class UniquePowers:
             iPlayer,
             False,
             MessageData.DURATION / 2,
-            CyTranslator().getText("TXT_KEY_UP_SOUND_TOLL", (iGold,)),
+            text("TXT_KEY_UP_SOUND_TOLL", iGold),
             "",
             0,
             "",
@@ -284,10 +279,7 @@ class UniquePowers:
                         iPlayer,
                         False,
                         MessageData.DURATION,
-                        CyTranslator().getText("TXT_KEY_UNIT_NEW_DEFENDER", ())
-                        + " "
-                        + city.getName()
-                        + "!",
+                        text("TXT_KEY_UNIT_NEW_DEFENDER") + " " + city.getName() + "!",
                         "AS2D_UNIT_BUILD_UNIQUE_UNIT",
                         0,
                         "",

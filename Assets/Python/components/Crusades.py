@@ -368,24 +368,21 @@ class Crusades:
     def deviateHumanPopup(self):
         iCost = gc.getPlayer(human()).getGold() / 3
         sString = (
-            CyTranslator().getText("TXT_KEY_CRUSADE_RICHEST", ())
-            + CyTranslator().getText("TXT_KEY_CRUSADE_COST", ())
+            text("TXT_KEY_CRUSADE_RICHEST")
+            + text("TXT_KEY_CRUSADE_COST")
             + " "
             + str(iCost)
             + " "
-            + CyTranslator().getText("TXT_KEY_CRUSADE_GOLD", ())
+            + text("TXT_KEY_CRUSADE_GOLD")
             + gc.getPlayer(self.getLeader()).getName()
             + " "
-            + CyTranslator().getText("TXT_KEY_CRUSADE_CURRENT_LEADER", ())
+            + text("TXT_KEY_CRUSADE_CURRENT_LEADER")
         )
         event_popup(
             7619,
             text("TXT_KEY_CRUSADE_DEVIATE"),
             sString,
-            [
-                text("TXT_KEY_CRUSADE_DECIDE_WEALTH"),
-                text("TXT_KEY_CRUSADE_DECIDE_FAITH"),
-            ],
+            [text("TXT_KEY_CRUSADE_DECIDE_WEALTH"), text("TXT_KEY_CRUSADE_DECIDE_FAITH")],
         )
 
     def deviateNewTargetPopup(self):
@@ -415,10 +412,7 @@ class Crusades:
                     + ")"
                 )
         event_popup(
-            7620,
-            text("TXT_KEY_CRUSADE_CORRUPT"),
-            text("TXT_KEY_CRUSADE_TARGET"),
-            lTargetList,
+            7620, text("TXT_KEY_CRUSADE_CORRUPT"), text("TXT_KEY_CRUSADE_TARGET"), lTargetList
         )
 
     def underCrusadeAttackPopup(self, sCityName, iLeader):
@@ -431,10 +425,7 @@ class Crusades:
             ),
         )
         event_popup(
-            7621,
-            text("TXT_KEY_CRUSADE_UNDER_ATTACK"),
-            sText,
-            [text("TXT_KEY_CRUSADE_PREPARE")],
+            7621, text("TXT_KEY_CRUSADE_UNDER_ATTACK"), sText, [text("TXT_KEY_CRUSADE_PREPARE")]
         )
 
     def endCrusades(self):
@@ -583,7 +574,7 @@ class Crusades:
                 iHuman,
                 True,
                 MessageData.DURATION,
-                CyTranslator().getText("TXT_KEY_CRUSADE_DENY_FAITH", ()),
+                text("TXT_KEY_CRUSADE_DENY_FAITH"),
                 "",
                 0,
                 "",
@@ -657,7 +648,7 @@ class Crusades:
                             iHuman,
                             False,
                             MessageData.DURATION,
-                            CyTranslator().getText("TXT_KEY_CRUSADE_DENY_LEAVE_ANYWAY", ()),
+                            text("TXT_KEY_CRUSADE_DENY_LEAVE_ANYWAY"),
                             "",
                             0,
                             gc.getUnitInfo(iUnitType).getButton(),
@@ -729,7 +720,7 @@ class Crusades:
                     iHuman,
                     True,
                     MessageData.DURATION / 2,
-                    CyTranslator().getText("TXT_KEY_CRUSADE_CALLED", ()),
+                    text("TXT_KEY_CRUSADE_CALLED"),
                     "",
                     0,
                     "",
@@ -943,7 +934,7 @@ class Crusades:
                 human(),
                 False,
                 MessageData.DURATION / 2,
-                CyTranslator().getText("TXT_KEY_CRUSADE_LEAVE", ()) + " " + pUnit.getName(),
+                text("TXT_KEY_CRUSADE_LEAVE") + " " + pUnit.getName(),
                 "AS2D_BUILD_CHRISTIAN",
                 0,
                 "",
@@ -1039,8 +1030,7 @@ class Crusades:
                     human(),
                     True,
                     MessageData.DURATION / 2,
-                    gc.getPlayer(self.getLeader()).getName()
-                    + CyTranslator().getText("TXT_KEY_CRUSADE_LEAD", ()),
+                    gc.getPlayer(self.getLeader()).getName() + text("TXT_KEY_CRUSADE_LEAD"),
                     "",
                     0,
                     "",
@@ -1097,8 +1087,7 @@ class Crusades:
                 human(),
                 True,
                 MessageData.DURATION / 2,
-                gc.getPlayer(self.getLeader()).getName()
-                + CyTranslator().getText("TXT_KEY_CRUSADE_LEAD", ()),
+                gc.getPlayer(self.getLeader()).getName() + text("TXT_KEY_CRUSADE_LEAD"),
                 "",
                 0,
                 "",
@@ -1201,7 +1190,7 @@ class Crusades:
                 human(),
                 False,
                 MessageData.DURATION / 2,
-                pLeader.getName() + CyTranslator().getText("TXT_KEY_CRUSADE_DEVIATED", ()),
+                pLeader.getName() + text("TXT_KEY_CRUSADE_DEVIATED"),
                 "",
                 0,
                 "",
@@ -1375,7 +1364,7 @@ class Crusades:
                     human(),
                     False,
                     MessageData.DURATION,
-                    CyTranslator().getText("TXT_KEY_CRUSADE_ARRIVAL", (sCityName,)) + "!",
+                    text("TXT_KEY_CRUSADE_ARRIVAL", sCityName) + "!",
                     "",
                     0,
                     "",
@@ -1584,7 +1573,7 @@ class Crusades:
                             iHuman,
                             False,
                             MessageData.DURATION / 2,
-                            CyTranslator().getText("TXT_KEY_CRUSADE_CRUSADERS_RETURNING_HOME", ())
+                            text("TXT_KEY_CRUSADE_CRUSADERS_RETURNING_HOME")
                             + " "
                             + pUnit.getName(),
                             "",
@@ -1626,7 +1615,7 @@ class Crusades:
                                     iHuman,
                                     False,
                                     MessageData.DURATION,
-                                    CyTranslator().getText("TXT_KEY_CRUSADE_NEW_RELIC", ()),
+                                    text("TXT_KEY_CRUSADE_NEW_RELIC"),
                                     "AS2D_UNIT_BUILD_UNIQUE_UNIT",
                                     0,
                                     gc.getUnitInfo(Unit.HOLY_RELIC.value).getButton(),
@@ -1753,7 +1742,7 @@ class Crusades:
                                 iPlayer,
                                 False,
                                 MessageData.DURATION / 2,
-                                CyTranslator().getText("TXT_KEY_CRUSADE_JERUSALEM_PILGRIMS", ()),
+                                text("TXT_KEY_CRUSADE_JERUSALEM_PILGRIMS"),
                                 "",
                                 0,
                                 "",
@@ -1845,9 +1834,7 @@ class Crusades:
                 or player().getStateReligion() == Religion.CATHOLICISM.value
             ):  # as you have contact with the Pope by default
                 sText = (
-                    CyTranslator().getText("TXT_KEY_CRUSADE_DEFENSIVE_AI_MESSAGE", ())
-                    + " "
-                    + player(iPlayer).getName()
+                    text("TXT_KEY_CRUSADE_DEFENSIVE_AI_MESSAGE") + " " + player(iPlayer).getName()
                 )
                 CyInterface().addMessage(
                     human(),
@@ -1898,7 +1885,7 @@ class Crusades:
                 iPlayer,
                 False,
                 MessageData.DURATION,
-                CyTranslator().getText("TXT_KEY_CRUSADE_DEFENSIVE_HUMAN_MESSAGE", ()),
+                text("TXT_KEY_CRUSADE_DEFENSIVE_HUMAN_MESSAGE"),
                 "",
                 0,
                 "",

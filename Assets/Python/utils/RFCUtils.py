@@ -23,13 +23,9 @@ import PyHelpers
 import Popup
 from PyUtils import percentage, percentage_chance, rand, choice
 from StoredData import data
-from MiscData import (
-    GREAT_PROPHET_FAITH_POINT_BONUS,
-    RELIGION_PERSECUTION_ORDER,
-    MessageData,
-)
+from MiscData import GREAT_PROPHET_FAITH_POINT_BONUS, RELIGION_PERSECUTION_ORDER, MessageData
 
-from CoreFunctions import get_religion_by_id
+from CoreFunctions import get_religion_by_id, text
 from CoreTypes import ProvinceType
 from ProvinceMapData import PROVINCES_MAP
 from Consts import WORLD_HEIGHT, WORLD_WIDTH
@@ -528,7 +524,7 @@ class RFCUtils:
                         if lMerc[4] == iProvince:
                             if iNewOwner == human():
                                 szProvName = "TXT_KEY_PROVINCE_NAME_%i" % lMerc[4]
-                                szCurrentProvince = CyTranslator().getText(szProvName, ())
+                                szCurrentProvince = text(szProvName)
                                 CyInterface().addMessage(
                                     iNewOwner,
                                     False,
@@ -548,7 +544,6 @@ class RFCUtils:
                                     True,
                                     True,
                                 )
-                                # CyInterface().addMessage(iNewOwner, False, MessageData.DURATION/2, CyTranslator().getText("TXT_KEY_MERC_AVAILABLE_NEAR_NEW_CITY", (city.getName(),)), "", 0, "", ColorTypes(MessageData.LIME), -1, -1, True, True)
                                 break
                     return True
         return False
@@ -832,7 +827,7 @@ class RFCUtils:
                 iNewCiv = min(civilizations().independents().ids()) + rand(
                     max(civilizations().independents().ids())
                     - min(civilizations().independents().ids())
-                    + 1,
+                    + 1
                 )
                 self.flipUnitsInCityBefore(tCoords, iNewCiv, iCiv)
                 self.setTempFlippingCity(tCoords)
@@ -849,7 +844,7 @@ class RFCUtils:
                 iNewCiv = min(civilizations().independents().ids()) + rand(
                     max(civilizations().independents().ids())
                     - min(civilizations().independents().ids())
-                    + 2,
+                    + 2
                 )
                 if iNewCiv == max(civilizations().independents().ids()) + 1:
                     iNewCiv = Civ.BARBARIAN.value
@@ -1051,19 +1046,12 @@ class RFCUtils:
         for iReligion in religionList:
             strIcon = gc.getReligionInfo(iReligion).getType()
             strIcon = "[%s]" % (strIcon.replace("RELIGION_", "ICON_"))
-            strButtonText = "%s %s" % (
-                localText.getText(strIcon, ()),
-                gc.getReligionInfo(iReligion).getText(),
-            )
+            strButtonText = "%s %s" % (text(strIcon), gc.getReligionInfo(iReligion).getText())
             popup.addButton(strButtonText)
         popup.launch(False)
 
     def getPersecutionData(self):
-        return (
-            data.lPersecutionData[0],
-            data.lPersecutionData[1],
-            data.lPersecutionData[2],
-        )
+        return (data.lPersecutionData[0], data.lPersecutionData[1], data.lPersecutionData[2])
 
     def setPersecutionData(self, iPlotX, iPlotY, iUnitID):
         data.lPersecutionData = [iPlotX, iPlotY, iUnitID]
@@ -1229,7 +1217,7 @@ class RFCUtils:
                             iOwner,
                             False,
                             MessageData.DURATION,
-                            localText.getText("TXT_KEY_MESSAGE_JEWISH_MOVE", (city.getName(),)),
+                            text("TXT_KEY_MESSAGE_JEWISH_MOVE", city.getName()),
                             "AS2D_PLAGUE",
                             InterfaceMessageTypes.MESSAGE_TYPE_INFO,
                             pUnit.getButton(),
@@ -1260,7 +1248,7 @@ class RFCUtils:
                 iOwner,
                 False,
                 MessageData.DURATION,
-                localText.getText("TXT_KEY_MESSAGE_INQUISITION_FAIL", (city.getName(),)),
+                text("TXT_KEY_MESSAGE_INQUISITION_FAIL", city.getName()),
                 "AS2D_SABOTAGE",
                 InterfaceMessageTypes.MESSAGE_TYPE_INFO,
                 pUnit.getButton(),

@@ -213,7 +213,7 @@ class RiseAndFall:
 
     def flipPopup(self, iNewCiv, tTopLeft, tBottomRight):
         iHuman = human()
-        flipText = CyTranslator().getText("TXT_KEY_FLIPMESSAGE1", ())
+        flipText = text("TXT_KEY_FLIPMESSAGE1")
 
         lPlots = (
             utils.getPlotList(tTopLeft, tBottomRight)
@@ -225,7 +225,7 @@ class RiseAndFall:
                 if plot.getPlotCity().getOwner() == iHuman:
                     if not plot.getPlotCity().isCapital():
                         flipText += plot.getPlotCity().getName() + "\n"
-        flipText += CyTranslator().getText("TXT_KEY_FLIPMESSAGE2", ())
+        flipText += text("TXT_KEY_FLIPMESSAGE2")
 
         event_popup(
             7615,
@@ -263,7 +263,7 @@ class RiseAndFall:
                 iHuman,
                 True,
                 MessageData.DURATION,
-                CyTranslator().getText("TXT_KEY_FLIP_AGREED", ()),
+                text("TXT_KEY_FLIP_AGREED"),
                 "",
                 0,
                 "",
@@ -308,7 +308,7 @@ class RiseAndFall:
                 iHuman,
                 True,
                 MessageData.DURATION,
-                CyTranslator().getText("TXT_KEY_FLIP_REFUSED", ()),
+                text("TXT_KEY_FLIP_REFUSED"),
                 "",
                 0,
                 "",
@@ -503,7 +503,7 @@ class RiseAndFall:
                         iPlayer,
                         True,
                         MessageData.DURATION,
-                        CyTranslator().getText("TXT_KEY_GLORY_ON_CONQUEST", ()),
+                        text("TXT_KEY_GLORY_ON_CONQUEST"),
                         "",
                         0,
                         "",
@@ -546,7 +546,7 @@ class RiseAndFall:
                             MessageData.DURATION,
                             pOriginalOwner.getCivilizationDescription(0)
                             + " "
-                            + CyTranslator().getText("TXT_KEY_STABILITY_CONQUEST_LAST_CITY", ()),
+                            + text("TXT_KEY_STABILITY_CONQUEST_LAST_CITY"),
                             "",
                             0,
                             "",
@@ -681,11 +681,11 @@ class RiseAndFall:
         if pPlot.isCity():
             # Absinthe: apologize from the player:
             msgString = (
-                CyTranslator().getText("TXT_KEY_REDUCE_CITY_1", ())
+                text("TXT_KEY_REDUCE_CITY_1")
                 + " "
                 + pPlot.getPlotCity().getName()
                 + " "
-                + CyTranslator().getText("TXT_KEY_REDUCE_CITY_2", ())
+                + text("TXT_KEY_REDUCE_CITY_2")
             )
             CyInterface().addMessage(
                 pPlot.getPlotCity().getOwner(),
@@ -1280,7 +1280,7 @@ class RiseAndFall:
                     iPlayer,
                     True,
                     MessageData.DURATION,
-                    sCityName + " " + CyTranslator().getText("TXT_KEY_STABILITY_SECESSION", ()),
+                    sCityName + " " + text("TXT_KEY_STABILITY_SECESSION"),
                     "",
                     0,
                     "",
@@ -1456,7 +1456,7 @@ class RiseAndFall:
                     iHuman,
                     True,
                     MessageData.DURATION,
-                    CyTranslator().getText("TXT_KEY_SUPPRESSED_RESURRECTION", ()),
+                    text("TXT_KEY_SUPPRESSED_RESURRECTION"),
                     "",
                     0,
                     "",
@@ -2119,8 +2119,7 @@ class RiseAndFall:
                                             )
                                         else:
                                             self.createAdditionalUnits(
-                                                iCiv,
-                                                civilization(iCiv).location.capital,
+                                                iCiv, civilization(iCiv).location.capital
                                             )
 
                 if iCultureChange > 0:
@@ -2143,7 +2142,7 @@ class RiseAndFall:
                     iCiv,
                     True,
                     MessageData.DURATION,
-                    CyTranslator().getText("TXT_KEY_FLIP_TO_US", ()),
+                    text("TXT_KEY_FLIP_TO_US"),
                     "",
                     0,
                     "",
@@ -2330,7 +2329,7 @@ class RiseAndFall:
                 self.getOldCivFlip(),
                 False,
                 MessageData.DURATION,
-                CyTranslator().getText("TXT_KEY_FLIP_BETRAYAL", ()),
+                text("TXT_KEY_FLIP_BETRAYAL"),
                 "",
                 0,
                 "",
@@ -2345,7 +2344,7 @@ class RiseAndFall:
                 self.getNewCivFlip(),
                 False,
                 MessageData.DURATION,
-                CyTranslator().getText("TXT_KEY_FLIP_BETRAYAL_NEW", ()),
+                text("TXT_KEY_FLIP_BETRAYAL_NEW"),
                 "",
                 0,
                 "",

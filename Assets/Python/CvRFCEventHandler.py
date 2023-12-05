@@ -314,7 +314,7 @@ class CvRFCEventHandler:
                         human(),
                         True,
                         MessageData.DURATION,
-                        CyTranslator().getText("TXT_KEY_CRUSADE_JERUSALEM_SAFE", (CityName,)),
+                        text("TXT_KEY_CRUSADE_JERUSALEM_SAFE", CityName),
                         "",
                         0,
                         "",
@@ -613,13 +613,13 @@ class CvRFCEventHandler:
                         0,
                         utils.forcedInvasion,
                         UnitAITypes.UNITAI_ATTACK,
-                        localText.getText("TXT_KEY_BARBARIAN_NAMES_VIKINGS", ()),
+                        text("TXT_KEY_BARBARIAN_NAMES_VIKINGS"),
                     )
                 CyInterface().addMessage(
                     Civ.BYZANTIUM.value,
                     False,
                     MessageData.DURATION,
-                    CyTranslator().getText("TXT_KEY_EVENT_VIKING_CONQUERERS_ARRIVE", ()),
+                    text("TXT_KEY_EVENT_VIKING_CONQUERERS_ARRIVE"),
                     "",
                     0,
                     "",
@@ -633,7 +633,7 @@ class CvRFCEventHandler:
         # Absinthe: Message for the human player about the Schism
         elif iGameTurn == DateTurn.i1053AD:
             if player().isExisting():
-                sText = CyTranslator().getText("TXT_KEY_GREAT_SCHISM", ())
+                sText = text("TXT_KEY_GREAT_SCHISM")
                 CyInterface().addMessage(
                     human(),
                     False,
@@ -756,7 +756,7 @@ class CvRFCEventHandler:
                     if pUnit.getUnitType() == CvUtil.findInfoTypeNum(
                         gc.getUnitInfo, gc.getNumUnitInfos(), "UNIT_GREAT_GENERAL"
                     ):
-                        pUnit.setName(localText.getText("TXT_KEY_GREAT_PERSON_BELISARIUS", ()))
+                        pUnit.setName(text("TXT_KEY_GREAT_PERSON_BELISARIUS"))
                 make_units(Civ.BYZANTIUM, Unit.SWORDSMAN, tStartingPlot, 4)
                 make_units(Civ.BYZANTIUM, Unit.AXEMAN, tStartingPlot, 3)
                 make_units(Civ.BYZANTIUM, Unit.ARCHER, tStartingPlot, 2)

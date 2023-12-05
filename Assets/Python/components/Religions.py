@@ -32,11 +32,7 @@ from ProvinceMapData import PROVINCES_MAP
 from StoredData import data
 from PyUtils import choice, choices, percentage, percentage_chance, rand
 
-from MiscData import (
-    RELIGIOUS_BUILDINGS,
-    RELIGIOUS_WONDERS,
-    MessageData,
-)
+from MiscData import RELIGIOUS_BUILDINGS, RELIGIOUS_WONDERS, MessageData
 
 gc = CyGlobalContext()
 localText = CyTranslator()  # Absinthe
@@ -388,7 +384,7 @@ class Religions:
                     civilization(Civ.POPE).send_gold(iChosenPlayer, iGift)
 
                     if iChosenPlayer.is_human():
-                        sText = CyTranslator().getText("TXT_KEY_FAITH_GOLD_GIFT", (iGift,))
+                        sText = text("TXT_KEY_FAITH_GOLD_GIFT", iGift)
                         CyInterface().addMessage(
                             civ.id,
                             False,
@@ -662,11 +658,11 @@ class Religions:
             gc.getPlayer(iPlayer).changeFaith(1)
             if human() == iPlayer:
                 sText = (
-                    CyTranslator().getText("TXT_KEY_FAITH_BUILDING1", ())
+                    text("TXT_KEY_FAITH_BUILDING1")
                     + " "
                     + gc.getBuildingInfo(iBuilding).getDescription()
                     + " "
-                    + CyTranslator().getText("TXT_KEY_FAITH_BUILDING2", ())
+                    + text("TXT_KEY_FAITH_BUILDING2")
                     + " "
                     + city.getName()
                 )
@@ -758,10 +754,7 @@ class Religions:
         for iReligion in religionList:
             strIcon = gc.getReligionInfo(iReligion).getType()
             strIcon = "[%s]" % (strIcon.replace("RELIGION_", "ICON_"))
-            strButtonText = "%s %s" % (
-                localText.getText(strIcon, ()),
-                gc.getReligionInfo(iReligion).getText(),
-            )
+            strButtonText = "%s %s" % (text(strIcon), gc.getReligionInfo(iReligion).getText())
             popup.addButton(strButtonText)
         popup.addButton("We don't want to adopt a State Religion right now")
         popup.launch(False)
@@ -1119,19 +1112,19 @@ class Religions:
     def doCounterReformationHuman(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
         szMessageYes = (
-            CyTranslator().getText("TXT_KEY_COUNTER_REFORMATION_MESSAGE_YES_1", ())
+            text("TXT_KEY_COUNTER_REFORMATION_MESSAGE_YES_1")
             + " +%d " % (max(1, pPlayer.getNumCities() / 3))
-            + CyTranslator().getText("TXT_KEY_COUNTER_REFORMATION_MESSAGE_YES_2", ())
+            + text("TXT_KEY_COUNTER_REFORMATION_MESSAGE_YES_2")
         )
         szMessageNo = (
-            CyTranslator().getText("TXT_KEY_COUNTER_REFORMATION_MESSAGE_NO_1", ())
+            text("TXT_KEY_COUNTER_REFORMATION_MESSAGE_NO_1")
             + " +%d " % (max(1, pPlayer.getNumCities() / 3))
-            + CyTranslator().getText("TXT_KEY_COUNTER_REFORMATION_MESSAGE_NO_2", ())
+            + text("TXT_KEY_COUNTER_REFORMATION_MESSAGE_NO_2")
         )
         self.showCounterPopup(
             7626,
-            CyTranslator().getText("TXT_KEY_COUNTER_REFORMATION_TITLE", ()),
-            CyTranslator().getText("TXT_KEY_COUNTER_REFORMATION_MESSAGE", ()),
+            text("TXT_KEY_COUNTER_REFORMATION_TITLE"),
+            text("TXT_KEY_COUNTER_REFORMATION_MESSAGE"),
             (szMessageYes, szMessageNo),
         )
 

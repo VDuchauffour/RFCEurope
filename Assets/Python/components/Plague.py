@@ -2,6 +2,7 @@
 
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
+from CoreFunctions import text
 from CoreStructures import human, turn
 from CoreTypes import PlagueType, Improvement, Civ
 from PyUtils import percentage, percentage_chance, rand
@@ -198,7 +199,7 @@ class Plague:
                     iHuman,
                     True,
                     MessageData.DURATION / 2,
-                    CyTranslator().getText("TXT_KEY_PLAGUE_SPREAD_CITY", ())
+                    text("TXT_KEY_PLAGUE_SPREAD_CITY")
                     + " "
                     + city.getName()
                     + " ("
@@ -219,7 +220,7 @@ class Plague:
                     iHuman,
                     True,
                     MessageData.DURATION / 2,
-                    CyTranslator().getText("TXT_KEY_PLAGUE_SPREAD_CIV", ())
+                    text("TXT_KEY_PLAGUE_SPREAD_CIV")
                     + " "
                     + pCiv.getCivilizationDescription(0)
                     + "!",
@@ -264,10 +265,7 @@ class Plague:
                 city.getOwner(),
                 True,
                 MessageData.DURATION / 2,
-                CyTranslator().getText("TXT_KEY_PLAGUE_SPREAD_CITY", ())
-                + " "
-                + city.getName()
-                + "!",
+                text("TXT_KEY_PLAGUE_SPREAD_CITY") + " " + city.getName() + "!",
                 "AS2D_PLAGUE",
                 0,
                 gc.getBuildingInfo(PlagueType.PLAGUE.value).getButton(),

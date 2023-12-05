@@ -8,7 +8,7 @@
 
 
 from CvPythonExtensions import *
-from CoreFunctions import get_civ_by_id
+from CoreFunctions import get_civ_by_id, text
 from CoreStructures import human, player, team
 import CvUtil
 import CvScreensInterface
@@ -522,11 +522,11 @@ class CvEventManager:
         if cdDefender.eOwner == cdDefender.eVisualOwner:
             szDefenderName = gc.getPlayer(cdDefender.eOwner).getNameKey()
         else:
-            szDefenderName = localText.getText("TXT_KEY_TRAIT_PLAYER_UNKNOWN", ())
+            szDefenderName = text("TXT_KEY_TRAIT_PLAYER_UNKNOWN")
         if cdAttacker.eOwner == cdAttacker.eVisualOwner:
             szAttackerName = gc.getPlayer(cdAttacker.eOwner).getNameKey()
         else:
-            szAttackerName = localText.getText("TXT_KEY_TRAIT_PLAYER_UNKNOWN", ())
+            szAttackerName = text("TXT_KEY_TRAIT_PLAYER_UNKNOWN")
 
         if iIsAttacker == 0:
             combatMessage = localText.getText(
@@ -698,7 +698,7 @@ class CvEventManager:
             )
             if player().isExisting():
                 szText = (
-                    localText.getText("TXT_KEY_BUILDING_LEANING_TOWER_EFFECT", ())
+                    text("TXT_KEY_BUILDING_LEANING_TOWER_EFFECT")
                     + " "
                     + gc.getUnitInfo(iUnit).getDescription()
                 )
@@ -1013,7 +1013,7 @@ class CvEventManager:
                             iPlayer,
                             False,
                             MessageData.DURATION,
-                            CyTranslator().getText("TXT_KEY_PROJECT_COLONY_GOLDEN_AGE", ()),
+                            text("TXT_KEY_PROJECT_COLONY_GOLDEN_AGE"),
                             "",
                             0,
                             "",
@@ -1210,11 +1210,7 @@ class CvEventManager:
         if not self.__LOG_UNITPROMOTED:
             return
         CvUtil.pyPrint(
-            "Unit Promotion Event: %s - %s"
-            % (
-                player.getCivilizationName(),
-                pUnit.getName(),
-            )
+            "Unit Promotion Event: %s - %s" % (player.getCivilizationName(), pUnit.getName())
         )
 
     def onUnitSelected(self, argsList):
@@ -1282,7 +1278,7 @@ class CvEventManager:
         if not self.__LOG_GOODYRECEIVED:
             return
         CvUtil.pyPrint(
-            "%s received a goody" % (gc.getPlayer(iPlayer).getCivilizationDescription(0)),
+            "%s received a goody" % (gc.getPlayer(iPlayer).getCivilizationDescription(0))
         )
 
     def onGreatPersonBorn(self, argsList):
@@ -2228,7 +2224,7 @@ class CvEventManager:
                             iPlayer,
                             False,
                             MessageData.DURATION,
-                            CyTranslator().getText("TXT_KEY_BUILDING_IMPERIAL_DIET_EFFECT", ()),
+                            text("TXT_KEY_BUILDING_IMPERIAL_DIET_EFFECT"),
                             "",
                             0,
                             "",
@@ -2283,8 +2279,8 @@ class CvEventManager:
     def __eventEditCityNameBegin(self, city, bRename):
         popup = PyPopup.PyPopup(CvUtil.EventEditCityName, EventContextTypes.EVENTCONTEXT_ALL)
         popup.setUserData((city.getID(), bRename))
-        popup.setHeaderString(localText.getText("TXT_KEY_NAME_CITY", ()))
-        popup.setBodyString(localText.getText("TXT_KEY_SETTLE_NEW_CITY_NAME", ()))
+        popup.setHeaderString(text("TXT_KEY_NAME_CITY"))
+        popup.setBodyString(text("TXT_KEY_SETTLE_NEW_CITY_NAME"))
         # Absinthe: if not a rename, it should offer the CNM name as the default name
         if bRename:
             popup.createEditBox(city.getName())
@@ -2353,7 +2349,7 @@ class CvEventManager:
         pUnit = argsList
         popup = PyPopup.PyPopup(CvUtil.EventEditUnitName, EventContextTypes.EVENTCONTEXT_ALL)
         popup.setUserData((pUnit.getID(),))
-        popup.setBodyString(localText.getText("TXT_KEY_RENAME_UNIT", ()))
+        popup.setBodyString(text("TXT_KEY_RENAME_UNIT"))
         popup.createEditBox(pUnit.getNameNoDesc())
         popup.launch()
 
@@ -2378,7 +2374,7 @@ class CvEventManager:
     def __eventWBLandmarkPopupBegin(self, argsList):
         CvScreensInterface.getWorldBuilderScreen().setLandmarkCB("")
         # popup = PyPopup.PyPopup(CvUtil.EventWBLandmarkPopup, EventContextTypes.EVENTCONTEXT_ALL)
-        # popup.createEditBox(localText.getText("TXT_KEY_WB_LANDMARK_START", ()))
+        # popup.createEditBox(text("TXT_KEY_WB_LANDMARK_START"))
         # popup.launch()
         return
 
@@ -2391,7 +2387,7 @@ class CvEventManager:
 
     def __eventWBScriptPopupBegin(self, argsList):
         popup = PyPopup.PyPopup(CvUtil.EventWBScriptPopup, EventContextTypes.EVENTCONTEXT_ALL)
-        popup.setHeaderString(localText.getText("TXT_KEY_WB_SCRIPT", ()))
+        popup.setHeaderString(text("TXT_KEY_WB_SCRIPT"))
         popup.createEditBox(CvScreensInterface.getWorldBuilderScreen().getCurrentScript())
         popup.launch()
         return

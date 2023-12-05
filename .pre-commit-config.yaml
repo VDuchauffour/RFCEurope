@@ -47,6 +47,6 @@ repos:
     rev: 21.12b0
     hooks:
       - id: black
-        args: [ "--config", "pyproject.toml" ]
+        args: [ "--config", "pyproject.toml", "-C" ]
         additional_dependencies:
           - click==8.0
