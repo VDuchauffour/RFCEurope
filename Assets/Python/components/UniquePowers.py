@@ -1,9 +1,9 @@
 # Rhye's and Fall of Civilization: Europe - Unique Powers (only a couple of them is here, most are handled in the .dll)
 
-from random import choice
 from CvPythonExtensions import *
 from CoreStructures import human, make_unit
 from CoreTypes import Building, SpecialParameter, Religion, Unit
+from PyUtils import choice
 
 import Religions
 import RFCUtils

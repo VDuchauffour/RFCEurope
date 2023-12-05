@@ -1,6 +1,5 @@
 # Rhye's and Fall of Civilization: Europe - Utilities
 
-from random import choice
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
 from CoreStructures import human, make_unit, make_units, player, team, teamtype, turn
@@ -22,7 +21,7 @@ import CvScreenEnums
 from LocationsData import CITIES
 import PyHelpers
 import Popup
-from PyUtils import percentage, percentage_chance, rand
+from PyUtils import percentage, percentage_chance, rand, choice
 from StoredData import data
 from MiscData import (
     GREAT_PROPHET_FAITH_POINT_BONUS,

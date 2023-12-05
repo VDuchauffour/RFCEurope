@@ -11,6 +11,7 @@ from PyUtils import (
     combinations,
     permutations,
     product,
+    random_entry,
 )
 
 
@@ -346,6 +347,10 @@ class Collection(list):
     def random(self, weights=None, k=1):
         """Return a k sized list of items."""
         return self.copy(*choices(self, weights, k=k))
+
+    def random_entry(self):
+        """Return a single random item. Return None if no entries available."""
+        return self.copy(*random_entry(self))
 
     def shuffle(self):
         """Return the object with the shuffled items."""

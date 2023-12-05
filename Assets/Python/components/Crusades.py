@@ -12,7 +12,7 @@ from CoreStructures import (
 )
 import PyHelpers
 import Popup
-from PyUtils import choices, percentage, percentage_chance, rand
+from PyUtils import choices, percentage, percentage_chance, rand, choice
 import RFCUtils
 from ProvinceMapData import PROVINCES_MAP
 import CityNameManager
@@ -1899,7 +1899,7 @@ class Crusades:
             iX = pCapital.getX()
             iY = pCapital.getY()
         else:
-            city = random.choice(utils.getCityList(iPlayer))
+            city = choice(utils.getCityList(iPlayer))
             if city:
                 iX = city.getX()
                 iY = city.getY()

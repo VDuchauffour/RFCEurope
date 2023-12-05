@@ -1,10 +1,9 @@
-from random import choice
 from CvPythonExtensions import *
 from CoreData import civilization, civilizations
 from CoreStructures import human, make_unit, make_units, player, team, teamtype, turn
 import PyHelpers  # LOQ
 import Popup
-from PyUtils import chance, percentage, percentage_chance, rand
+from PyUtils import chance, percentage, percentage_chance, rand, choice
 import RFCUtils
 import Province
 import Religions

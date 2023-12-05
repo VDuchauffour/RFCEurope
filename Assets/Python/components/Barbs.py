@@ -1,11 +1,11 @@
 # Rhye's and Fall of Civilization: Europe - Barbarian units and cities
 
-from random import choice
 from CvPythonExtensions import *
+from Consts import INDEPENDENT_CIVS
 from CoreStructures import human, make_unit, make_units, turn
 from CoreTypes import Civ, Civic, Religion, Technology, Unit, Province
 import Popup
-from PyUtils import percentage, percentage_chance, rand
+from PyUtils import percentage, percentage_chance, rand, random_entry, choice
 import RFCUtils
 from TimelineData import DateTurn
 from StoredData import data
@@ -3248,8 +3248,8 @@ class Barbs:
         if (iTurn % iPeriod) == iRest:
             plotList = utils.squareSearch(tTopLeft, tBottomRight, function, [])
             if plotList:
-                tPlot = choice(plotList)
-                if tPlot:
+                tPlot = random_entry(plotList)
+                if tPlot is not None:
                     make_units(iCiv, iUnitType, tPlot, iNumUnits, unit_ai, unit_name)
 
     def spawnVikings(
@@ -3268,22 +3268,11 @@ class Barbs:
         if (iTurn % iPeriod) == iRest:
             plotList = utils.squareSearch(tTopLeft, tBottomRight, function, [])
             if plotList:
-                tPlot = choice(plotList)
-                if tPlot:
-                    make_unit(
-                        iCiv,
-                        Unit.GALLEY,
-                        tPlot,
-                        UnitAITypes.UNITAI_ASSAULT_SEA,
-                        unit_name,
-                    )
+                tPlot = random_entry(plotList)
+                if tPlot is not None:
+                    make_unit(iCiv, Unit.GALLEY, tPlot, UnitAITypes.UNITAI_ASSAULT_SEA, unit_name)
                     make_units(
-                        iCiv,
-                        iUnitType,
-                        tPlot,
-                        iNumUnits,
-                        UnitAITypes.UNITAI_ATTACK,
-                        unit_name,
+                        iCiv, iUnitType, tPlot, iNumUnits, UnitAITypes.UNITAI_ATTACK, unit_name
                     )
 
     def spawnPirate(
@@ -3304,8 +3293,8 @@ class Barbs:
         if (iTurn % iPeriod) == iRest:
             plotList = utils.squareSearch(tTopLeft, tBottomRight, function, [])
             if plotList:
-                tPlot = choice(plotList)
-                if tPlot:
+                tPlot = random_entry(plotList)
+                if tPlot is not None:
                     make_units(
                         iCiv,
                         iShipType,
@@ -3446,13 +3435,7 @@ class Barbs:
                 )
         else:
             # revolt succeeded
-            lIndependents = [
-                Civ.INDEPENDENT.value,
-                Civ.INDEPENDENT_2.value,
-                Civ.INDEPENDENT_3.value,
-                Civ.INDEPENDENT_4.value,
-            ]
-            iNewCiv = choice(lIndependents)
+            iNewCiv = choice(INDEPENDENT_CIVS).value
             for iI in range(len(cityList)):
                 pCity = cityList[iI]
                 tCity = (pCity.getX(), pCity.getY())
@@ -3553,13 +3536,7 @@ class Barbs:
                     )
         else:
             # revolt succeeded
-            lIndependents = [
-                Civ.INDEPENDENT.value,
-                Civ.INDEPENDENT_2.value,
-                Civ.INDEPENDENT_3.value,
-                Civ.INDEPENDENT_4.value,
-            ]
-            iNewCiv = choice(lIndependents)
+            iNewCiv = choice(INDEPENDENT_CIVS).value
             for iI in range(len(cityList)):
                 pCity = cityList[iI]
                 tCity = (pCity.getX(), pCity.getY())

@@ -1,4 +1,3 @@
-from random import choice
 from CvPythonExtensions import (
     CyGlobalContext,
     CyTranslator,
@@ -31,7 +30,7 @@ import Popup
 import RFCUtils
 from ProvinceMapData import PROVINCES_MAP
 from StoredData import data
-from PyUtils import choices, percentage, percentage_chance, rand
+from PyUtils import choice, choices, percentage, percentage_chance, rand
 
 from MiscData import (
     RELIGIOUS_BUILDINGS,
@@ -828,24 +827,23 @@ class Religions:
                             self.setReformationHitMatrix(neighbour.value, 1)
 
     def reformationArrayChoice(self):
-        lCivs = [
-            iCiv
-            for iCiv in civilizations().majors().ids()
-            if self.getReformationHitMatrix(iCiv) == 1
-        ]
-        iCiv = choice(lCivs)
-        pPlayer = gc.getPlayer(iCiv)
-        if pPlayer.isAlive() and pPlayer.getStateReligion() == Religion.CATHOLICISM.value:
-            self.reformationchoice(iCiv)
-        else:
-            self.reformationOther(iCiv)
-        self.setReformationHitMatrix(iCiv, 2)
+        civ = (
+            civilizations()
+            .majors()
+            .filter(lambda c: self.getReformationHitMatrix(c.id) == 1)
+            .random_entry()
+        )
+        if civ is not None:
+            if civ.is_alive() and civ.is_catholic():
+                self.reformationchoice(civ.id)
+            else:
+                self.reformationOther(civ.id)
+            self.setReformationHitMatrix(civ.id, 2)
 
-        if sum(self.getReformationHitMatrixAll()) == 2 * civilizations().majors().len():
-            self.setReformationActive(False)
-            self.setCounterReformationActive(
-                True
-            )  # after all players have been hit by the Reformation
+            if sum(self.getReformationHitMatrixAll()) == 2 * civilizations().majors().len():
+                self.setReformationActive(False)
+                # after all players have been hit by the Reformation
+                self.setCounterReformationActive(True)
 
     def reformationchoice(self, iCiv):
         if iCiv == Civ.POPE.value:

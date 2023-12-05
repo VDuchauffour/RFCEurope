@@ -1,14 +1,13 @@
 # Rhye's and Fall of Civilization: Europe - Mercenaries
 # Written mostly by 3Miro
 
-from random import choice
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
 from CoreStructures import human, turn
 from CoreTypes import Civ, Region, SpecialParameter, Religion, Promotion, Unit, Province
 from LocationsData import REGIONS
 import PyHelpers
-from PyUtils import percentage_chance, rand
+from PyUtils import percentage_chance, rand, choice
 
 # import cPickle as pickle
 import RFCUtils

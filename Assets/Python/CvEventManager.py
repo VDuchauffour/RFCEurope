@@ -19,7 +19,7 @@ import Popup as PyPopup
 import CvCameraControls
 import CvTopCivs
 import CvAdvisorUtils
-from PyUtils import percentage_chance, rand
+from PyUtils import percentage_chance, rand, choice
 import RFCUtils
 import GameBalance
 import random
@@ -1100,7 +1100,7 @@ class CvEventManager:
                     # double chance for the original UU
                     l_vassalUU.append(iPlayerUU)
                     l_vassalUU.append(iPlayerUU)
-                iUnit = random.choice(l_vassalUU)
+                iUnit = choice(l_vassalUU)
                 pNewUnit = pPlayer.initUnit(
                     iUnit,
                     unit.getX(),

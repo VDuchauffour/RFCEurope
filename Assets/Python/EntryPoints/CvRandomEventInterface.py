@@ -9,13 +9,12 @@
 #
 # No other modules should import this
 #
-from random import choice
 from CoreStructures import turn
 from CoreTypes import Civ
 import CvUtil
 from CvPythonExtensions import *
 
-from PyUtils import percentage_chance, rand
+from PyUtils import percentage_chance, rand, choice, random_entry
 
 gc = CyGlobalContext()
 localText = CyTranslator()
@@ -650,7 +649,7 @@ def applyLooters3(argsList):
             listBuildings.append(iBuilding)
 
     for _ in range(rand(2) + 1):
-        if len(listBuildings) > 0:
+        if listBuildings:
             iBuilding = choice(listBuildings)
             szBuffer = localText.getText(
                 "TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED",
@@ -838,7 +837,7 @@ def applyHurricane1(argsList):
         ):
             listExpensiveBuildings.append(iBuilding)
 
-    if len(listCheapBuildings) > 0:
+    if listCheapBuildings:
         iBuilding = choice(listCheapBuildings)
         szBuffer = localText.getText(
             "TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED",
@@ -860,7 +859,7 @@ def applyHurricane1(argsList):
         )
         city.setNumRealBuilding(iBuilding, 0)
 
-    if len(listExpensiveBuildings) > 0:
+    if listExpensiveBuildings:
         iBuilding = choice(listExpensiveBuildings)
         szBuffer = localText.getText(
             "TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED",
@@ -970,7 +969,7 @@ def applyTsunami2(argsList):
     # Rhye
     for i in range(2):
         # for i in range(5):
-        if len(listBuildings) > 0:
+        if listBuildings:
             iBuilding = choice(listBuildings)
             szBuffer = localText.getText(
                 "TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED",
@@ -1105,7 +1104,7 @@ def applyVolcano1(argsList):
     )
 
     for i in range(3):
-        if len(listPlots) > 0:
+        if listPlots:
             plot = choice(listPlots)
             iImprovement = plot.getImprovementType()
             szBuffer = localText.getText(
@@ -2465,7 +2464,7 @@ def applyTheHuns1(argsList):
         ):
             listPlots.append(i)
 
-    if 0 == len(listPlots):
+    if not listPlots:
         return
 
     plot = map.plotByIndex(choice(listPlots))
@@ -2609,7 +2608,7 @@ def applyTheVandals1(argsList):
         ):
             listPlots.append(i)
 
-    if 0 == len(listPlots):
+    if not listPlots:
         return
 
     plot = map.plotByIndex(choice(listPlots))
@@ -2753,7 +2752,7 @@ def applyTheGoths1(argsList):
         ):
             listPlots.append(i)
 
-    if 0 == len(listPlots):
+    if not listPlots:
         return
 
     plot = map.plotByIndex(choice(listPlots))
@@ -2897,7 +2896,7 @@ def applyThePhilistines1(argsList):
         ):
             listPlots.append(i)
 
-    if 0 == len(listPlots):
+    if not listPlots:
         return
 
     plot = map.plotByIndex(choice(listPlots))
@@ -3043,7 +3042,7 @@ def applyTheVedicAryans1(argsList):
         ):
             listPlots.append(i)
 
-    if 0 == len(listPlots):
+    if not listPlots:
         return
 
     plot = map.plotByIndex(choice(listPlots))
@@ -3387,7 +3386,7 @@ def applyClassicLiteratureDone2(argsList):
         if gc.getTechInfo(iTech).getEra() == iEraAncient and player.canResearch(iTech, False):
             listTechs.append(iTech)
 
-    if len(listTechs) > 0:
+    if listTechs:
         iTech = choice(listTechs)
         gc.getTeam(player.getTeam()).setHasTech(iTech, True, kTriggeredData.ePlayer, True, True)
 
@@ -4161,7 +4160,7 @@ def applyPartisans1(argsList):
                     ):
                         listPlots.append(loopPlot)
 
-        if len(listPlots) > 0:
+        if listPlots:
             for i in range(iNumUnits):
                 iPlot = choice(listPlots)
                 player.initUnit(
@@ -4265,16 +4264,17 @@ def canTriggerGreed(argsList):
     if not bFound:
         return False
 
-    plot = choice(listPlots)
+    plot = random_entry(listPlots)
 
-    if -1 == getGreedUnit(player, plot):
+    if getGreedUnit(player, plot) == -1:
         return False
 
-    kActualTriggeredDataObject = player.getEventTriggered(kTriggeredData.iId)
-    kActualTriggeredDataObject.iPlotX = plot.getX()
-    kActualTriggeredDataObject.iPlotY = plot.getY()
+    if plot is not None:
+        kActualTriggeredDataObject = player.getEventTriggered(kTriggeredData.iId)
+        kActualTriggeredDataObject.iPlotX = plot.getX()
+        kActualTriggeredDataObject.iPlotY = plot.getY()
 
-    return True
+        return True
 
 
 def getHelpGreed1(argsList):
