@@ -10,6 +10,7 @@ try:
         CyUnit,
         stepDistance,
     )
+    import Popup
 
     gc = CyGlobalContext()
     map = gc.getMap()
@@ -165,3 +166,12 @@ class FindResult(object):
 
 def text(key, *format):
     return translator.getText(str(key), tuple(format))
+
+
+def show(message, *format):
+    if format:
+        message = message % tuple(format)
+
+    popup = Popup.PyPopup()
+    popup.setBodyString(message)
+    popup.launch()
