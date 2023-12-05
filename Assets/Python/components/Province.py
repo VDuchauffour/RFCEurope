@@ -1,8 +1,7 @@
-from CoreStructures import player
+from CoreStructures import player, year
 import RFCUtils
 from Scenario import get_scenario
 
-from TimelineData import DateTurn
 from ProvinceMapData import PROVINCES_MAP
 from CoreData import civilization, civilizations
 from CoreTypes import Province, Event, Scenario, ProvinceType
@@ -20,7 +19,7 @@ class ProvinceManager:
         # update provinces for the 1200 AD Scenario
         if get_scenario() == Scenario.i1200AD:
             for civ in civilizations().main():
-                if civ.date.birth < DateTurn.i1200AD:
+                if civ.date.birth < year(1200):
                     self.onSpawn(civ.id)
 
     def checkTurn(self, iGameTurn):

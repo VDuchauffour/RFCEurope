@@ -2,9 +2,9 @@
 # Based on SoI version, added by Absinthe
 
 from CvPythonExtensions import *
+from CoreStructures import year
 
 from MiscData import MessageData
-from TimelineData import DateTurn
 from CoreTypes import Improvement, Bonus
 
 # globals
@@ -85,21 +85,21 @@ class Resources:
 
     def checkTurn(self, iGameTurn):
         # Absinthe: note that all actions are taken place in the end of the turn, so actually the resources will appear/disappear for the next turn
-        if iGameTurn == DateTurn.i552AD:
+        if iGameTurn == year(552):
             self.createResource(80, 24, Bonus.SILK.value)  # Silk near Constantinople
-        elif iGameTurn == DateTurn.i1000AD:
+        elif iGameTurn == year(1000):
             self.createResource(36, 24, Bonus.RICE.value)  # Rice in Iberia
             self.createResource(86, 2, Bonus.RICE.value)  # Rice in the Middle East
-        elif iGameTurn == (DateTurn.i1066AD + 1):
+        elif iGameTurn == (year(1066) + 1):
             self.removeResource(2, 69)  # Remove the NAA from Iceland
-        elif iGameTurn == DateTurn.i1452AD:  # Coffee spawns instead of being preplaced
+        elif iGameTurn == year(1452):  # Coffee spawns instead of being preplaced
             self.createResource(93, 0, Bonus.COFFEE.value)  # near Sinai
             self.createResource(99, 13, Bonus.COFFEE.value)  # between Damascus and Edessa
-        elif iGameTurn == DateTurn.i1500AD:
+        elif iGameTurn == year(1500):
             self.createResource(
                 55, 35, Bonus.RICE.value
             )  # Rice in Italy - represents trade of the merchant republics
-        elif iGameTurn == DateTurn.i1580AD:
+        elif iGameTurn == year(1580):
             self.createResource(32, 59, Bonus.POTATO.value)  # Potatoes in Ireland
             self.createResource(29, 57, Bonus.POTATO.value)
             self.createResource(69, 49, Bonus.POTATO.value)  # Poland
