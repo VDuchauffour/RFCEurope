@@ -1,5 +1,5 @@
-from copy import copy, deepcopy
 import random
+from copy import copy, deepcopy
 
 from Enum import Enum
 from Errors import NotACallableError, NotTypeExpectedError, OutputTypeError
@@ -350,7 +350,7 @@ class Collection(list):
 
     def random_entry(self):
         """Return a single random item. Return None if no entries available."""
-        return self.copy(*random_entry(self))
+        return random_entry(self)
 
     def shuffle(self):
         """Return the object with the shuffled items."""
