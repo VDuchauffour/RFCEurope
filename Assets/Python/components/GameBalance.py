@@ -1,7 +1,6 @@
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
 from Consts import WORLD_WIDTH, WORLD_HEIGHT
-from CoreStructures import year
 from CoreTypes import (
     Modifier,
     Building,
@@ -30,7 +29,7 @@ from MiscData import (
     GREAT_PROPHET_FAITH_POINT_BONUS,
     PROSECUTOR_UNITCLASS,
 )
-from TimelineData import TIMELINE_TECH_MODIFIER
+from TimelineData import TIMELINE_TECH_MODIFIER, DateTurn
 from SettlerMapData import SETTLERS_MAP
 from LocationsData import CITIES
 from WarMapData import WARS_MAP
@@ -449,7 +448,7 @@ class GameBalance:
         gc.setFastTerrain(Terrain.OCEAN.value)
 
         # set the religions and year of the great schism
-        gc.setSchism(Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, year(1053))
+        gc.setSchism(Religion.CATHOLICISM.value, Religion.ORTHODOXY.value, DateTurn.i1053AD)
         gc.setHoliestCity(*CITIES[City.JERUSALEM])
 
         # 3Miro: set the Jews as the minor Religion

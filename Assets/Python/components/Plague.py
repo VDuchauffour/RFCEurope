@@ -2,7 +2,7 @@
 
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from CoreStructures import human, turn, year
+from CoreStructures import human, turn
 from CoreTypes import PlagueType, Improvement, Civ
 from PyUtils import percentage, percentage_chance, rand
 import RFCUtils
@@ -11,6 +11,7 @@ from StoredData import data
 import random
 
 from MiscData import PLAGUE_IMMUNITY, MessageData
+from TimelineData import DateTurn
 
 gc = CyGlobalContext()
 utils = RFCUtils.RFCUtils()
@@ -185,7 +186,7 @@ class Plague:
 
     def spreadPlague(self, iPlayer, city):
         # Absinthe: the Plague of Justinian shouldn't spread to Italy and France, even if it was as deadly as the Black Death
-        if iPlayer in [Civ.FRANCE.value, Civ.POPE.value] and turn() <= year(632):
+        if iPlayer in [Civ.FRANCE.value, Civ.POPE.value] and turn() <= DateTurn.i632AD:
             return
 
         # Absinthe: message about the spread
@@ -251,7 +252,7 @@ class Plague:
 
     def infectCity(self, city):
         # Absinthe: the Plague of Justinian shouldn't spread to Italy and France, even if it was as deadly as the Black Death
-        if city.getOwner() in [Civ.FRANCE.value, Civ.POPE.value] and turn() <= year(632):
+        if city.getOwner() in [Civ.FRANCE.value, Civ.POPE.value] and turn() <= DateTurn.i632AD:
             return
 
         x = city.getX()
@@ -648,7 +649,7 @@ class Plague:
     def onCityAcquired(self, iOldOwner, iNewOwner, city):
         if city.hasBuilding(PlagueType.PLAGUE.value):
             # Absinthe: the Plague of Justinian shouldn't spread to Italy and France, even if it was as deadly as the Black Death
-            if city.getOwner() in [Civ.FRANCE.value, Civ.POPE.value] and turn() <= year(632):
+            if city.getOwner() in [Civ.FRANCE.value, Civ.POPE.value] and turn() <= DateTurn.i632AD:
                 city.setHasRealBuilding(PlagueType.PLAGUE.value, False)
                 return
 
