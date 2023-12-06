@@ -821,10 +821,12 @@ class Religions:
                     self.reformationOther(Civ.INDEPENDENT_4.value)
                     self.reformationOther(Civ.BARBARIAN.value)
                     self.setReformationHitMatrix(iPlayer, 2)
+                    self.spread_reform_to_neighbour(iPlayer)
 
-                    for neighbour in civilization(iPlayer).location.reformation_neighbours:
-                        if self.getReformationHitMatrix(neighbour.value) == 0:
-                            self.setReformationHitMatrix(neighbour.value, 1)
+    def spread_reform_to_neighbour(self, player_id):
+        for neighbour in civilization(player_id).location.reformation_neighbours:
+            if self.getReformationHitMatrix(neighbour.value) == 0:
+                self.setReformationHitMatrix(neighbour.value, 1)
 
     def reformationArrayChoice(self):
         civ = (
@@ -839,6 +841,7 @@ class Religions:
             else:
                 self.reformationOther(civ.id)
             self.setReformationHitMatrix(civ.id, 2)
+            self.spread_reform_to_neighbour(civ.id)
 
             if sum(self.getReformationHitMatrixAll()) == 2 * civilizations().majors().len():
                 self.setReformationActive(False)
@@ -1194,16 +1197,10 @@ class Religions:
         for neighbour in civilization(iPlayer).location.reformation_neighbours:
             civ = civilization(neighbour)
             if civ.is_alive() and civ.is_protestant():
-                capital = civ.player.getCapitalCity()
-                if not capital.isNone():
-                    if civ.player.getNumCities() > 0:
-                        capital = choice(
-                            utils.getCityList(
-                                civilization(neighbour).location.reformation_neighbours
-                            )
-                        )
-                    else:
-                        return
+                if not civ.player.getCapitalCity().isNone() and civ.player.getNumCities() > 0:
+                    capital = choice(utils.getCityList(neighbour))
+                else:
+                    return
 
                 civ.player.initUnit(
                     Unit.PROSECUTOR.value,
