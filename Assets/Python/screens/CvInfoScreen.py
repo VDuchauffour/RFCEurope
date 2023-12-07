@@ -5,6 +5,7 @@
 
 from CvPythonExtensions import *
 from CoreData import civilizations
+from CoreFunctions import text
 from CoreStructures import turn
 import CvUtil
 
@@ -359,54 +360,36 @@ class CvInfoScreen:
     def initText(self):
 
         ###### TEXT ######
-        self.SCREEN_TITLE = (
-            u"<font=4b>" + localText.getText("TXT_KEY_INFO_SCREEN", ()).upper() + u"</font>"
-        )
-        self.SCREEN_GRAPH_TITLE = (
-            u"<font=4b>" + localText.getText("TXT_KEY_INFO_GRAPH", ()).upper() + u"</font>"
-        )
+        self.SCREEN_TITLE = u"<font=4b>" + text("TXT_KEY_INFO_SCREEN").upper() + u"</font>"
+        self.SCREEN_GRAPH_TITLE = u"<font=4b>" + text("TXT_KEY_INFO_GRAPH").upper() + u"</font>"
         self.SCREEN_DEMOGRAPHICS_TITLE = (
-            u"<font=4b>" + localText.getText("TXT_KEY_DEMO_SCREEN_TITLE", ()).upper() + u"</font>"
+            u"<font=4b>" + text("TXT_KEY_DEMO_SCREEN_TITLE").upper() + u"</font>"
         )
         self.SCREEN_TOP_CITIES_TITLE = (
-            u"<font=4b>"
-            + localText.getText("TXT_KEY_WONDERS_SCREEN_TOP_CITIES_TEXT", ()).upper()
-            + u"</font>"
+            u"<font=4b>" + text("TXT_KEY_WONDERS_SCREEN_TOP_CITIES_TEXT").upper() + u"</font>"
         )
         self.SCREEN_STATS_TITLE = (
-            u"<font=4b>"
-            + localText.getText("TXT_KEY_INFO_SCREEN_STATISTICS_TITLE", ()).upper()
-            + u"</font>"
+            u"<font=4b>" + text("TXT_KEY_INFO_SCREEN_STATISTICS_TITLE").upper() + u"</font>"
         )
         # Sedna17 start
-        self.SCREEN_COLONIES_TITLE = (
-            u"<font=4b>" + localText.getText("Colonies", ()).upper() + u"</font>"
-        )
+        self.SCREEN_COLONIES_TITLE = u"<font=4b>" + text("Colonies").upper() + u"</font>"
         # Sedna17 end
 
-        self.EXIT_TEXT = (
-            u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + u"</font>"
-        )
+        self.EXIT_TEXT = u"<font=4>" + text("TXT_KEY_PEDIA_SCREEN_EXIT").upper() + u"</font>"
 
-        self.TEXT_GRAPH = (
-            u"<font=3>" + localText.getText("TXT_KEY_INFO_GRAPH", ()).upper() + u"</font>"
-        )
+        self.TEXT_GRAPH = u"<font=3>" + text("TXT_KEY_INFO_GRAPH").upper() + u"</font>"
         self.TEXT_DEMOGRAPHICS = (
-            u"<font=3>" + localText.getText("TXT_KEY_DEMO_SCREEN_TITLE", ()).upper() + u"</font>"
+            u"<font=3>" + text("TXT_KEY_DEMO_SCREEN_TITLE").upper() + u"</font>"
         )
-        self.TEXT_DEMOGRAPHICS_SMALL = localText.getText("TXT_KEY_DEMO_SCREEN_TITLE", ())
+        self.TEXT_DEMOGRAPHICS_SMALL = text("TXT_KEY_DEMO_SCREEN_TITLE")
         self.TEXT_TOP_CITIES = (
-            u"<font=3>"
-            + localText.getText("TXT_KEY_WONDERS_SCREEN_TOP_CITIES_TEXT", ()).upper()
-            + u"</font>"
+            u"<font=3>" + text("TXT_KEY_WONDERS_SCREEN_TOP_CITIES_TEXT").upper() + u"</font>"
         )
         self.TEXT_STATS = (
-            u"<font=3>"
-            + localText.getText("TXT_KEY_INFO_SCREEN_STATISTICS_TITLE", ()).upper()
-            + u"</font>"
+            u"<font=3>" + text("TXT_KEY_INFO_SCREEN_STATISTICS_TITLE").upper() + u"</font>"
         )
         # Sedna17 start
-        self.TEXT_COLONIES = u"<font=3>" + localText.getText("Colonies", ()).upper() + u"</font>"
+        self.TEXT_COLONIES = u"<font=3>" + text("Colonies").upper() + u"</font>"
         self.TEXT_COLONIES_YELLOW = (
             u"<font=3>"
             + localText.getColorText(
@@ -447,103 +430,99 @@ class CvInfoScreen:
             + u"</font>"
         )
 
-        self.TEXT_SHOW_ALL_PLAYERS = localText.getText("TXT_KEY_SHOW_ALL_PLAYERS", ())
+        self.TEXT_SHOW_ALL_PLAYERS = text("TXT_KEY_SHOW_ALL_PLAYERS")
         self.TEXT_SHOW_ALL_PLAYERS_GRAY = localText.getColorText(
             "TXT_KEY_SHOW_ALL_PLAYERS", (), gc.getInfoTypeForString("COLOR_PLAYER_GRAY")
         ).upper()
 
-        self.TEXT_ENTIRE_HISTORY = localText.getText("TXT_KEY_INFO_ENTIRE_HISTORY", ())
+        self.TEXT_ENTIRE_HISTORY = text("TXT_KEY_INFO_ENTIRE_HISTORY")
 
-        self.TEXT_SCORE = localText.getText("TXT_KEY_GAME_SCORE", ())
-        self.TEXT_POWER = localText.getText("TXT_KEY_POWER", ())
+        self.TEXT_SCORE = text("TXT_KEY_GAME_SCORE")
+        self.TEXT_POWER = text("TXT_KEY_POWER")
         self.TEXT_CULTURE = localText.getObjectText("TXT_KEY_COMMERCE_CULTURE", 0)
         self.TEXT_ESPIONAGE = localText.getObjectText("TXT_KEY_ESPIONAGE_CULTURE", 0)
 
-        self.TEXT_VALUE = localText.getText("TXT_KEY_DEMO_SCREEN_VALUE_TEXT", ())
-        self.TEXT_RANK = localText.getText("TXT_KEY_DEMO_SCREEN_RANK_TEXT", ())
-        self.TEXT_AVERAGE = localText.getText("TXT_KEY_DEMOGRAPHICS_SCREEN_RIVAL_AVERAGE", ())
-        self.TEXT_BEST = localText.getText("TXT_KEY_INFO_RIVAL_BEST", ())
-        self.TEXT_WORST = localText.getText("TXT_KEY_INFO_RIVAL_WORST", ())
+        self.TEXT_VALUE = text("TXT_KEY_DEMO_SCREEN_VALUE_TEXT")
+        self.TEXT_RANK = text("TXT_KEY_DEMO_SCREEN_RANK_TEXT")
+        self.TEXT_AVERAGE = text("TXT_KEY_DEMOGRAPHICS_SCREEN_RIVAL_AVERAGE")
+        self.TEXT_BEST = text("TXT_KEY_INFO_RIVAL_BEST")
+        self.TEXT_WORST = text("TXT_KEY_INFO_RIVAL_WORST")
 
-        self.TEXT_ECONOMY = localText.getText("TXT_KEY_DEMO_SCREEN_ECONOMY_TEXT", ())
-        self.TEXT_INDUSTRY = localText.getText("TXT_KEY_DEMO_SCREEN_INDUSTRY_TEXT", ())
-        self.TEXT_AGRICULTURE = localText.getText("TXT_KEY_DEMO_SCREEN_AGRICULTURE_TEXT", ())
-        self.TEXT_MILITARY = localText.getText("TXT_KEY_DEMO_SCREEN_MILITARY_TEXT", ())
-        self.TEXT_SOLDIERS = localText.getText("TXT_KEY_DEMO_SCREEN_SOLDIERS_TEXT", ())  # Absinthe
-        self.TEXT_LAND_AREA = localText.getText("TXT_KEY_DEMO_SCREEN_LAND_AREA_TEXT", ())
-        self.TEXT_POPULATION = localText.getText("TXT_KEY_DEMO_SCREEN_POPULATION_TEXT", ())
-        self.TEXT_TOTAL_POPULATION = localText.getText(
-            "TXT_KEY_DEMO_SCREEN_TOTAL_POPULATION_TEXT", ()
-        )  # Absinthe
-        self.TEXT_HAPPINESS = localText.getText("TXT_KEY_DEMO_SCREEN_HAPPINESS_TEXT", ())
-        self.TEXT_HEALTH = localText.getText("TXT_KEY_DEMO_SCREEN_HEALTH_TEXT", ())
+        self.TEXT_ECONOMY = text("TXT_KEY_DEMO_SCREEN_ECONOMY_TEXT")
+        self.TEXT_INDUSTRY = text("TXT_KEY_DEMO_SCREEN_INDUSTRY_TEXT")
+        self.TEXT_AGRICULTURE = text("TXT_KEY_DEMO_SCREEN_AGRICULTURE_TEXT")
+        self.TEXT_MILITARY = text("TXT_KEY_DEMO_SCREEN_MILITARY_TEXT")
+        self.TEXT_SOLDIERS = text("TXT_KEY_DEMO_SCREEN_SOLDIERS_TEXT")  # Absinthe
+        self.TEXT_LAND_AREA = text("TXT_KEY_DEMO_SCREEN_LAND_AREA_TEXT")
+        self.TEXT_POPULATION = text("TXT_KEY_DEMO_SCREEN_POPULATION_TEXT")
+        self.TEXT_TOTAL_POPULATION = text("TXT_KEY_DEMO_SCREEN_TOTAL_POPULATION_TEXT")  # Absinthe
+        self.TEXT_HAPPINESS = text("TXT_KEY_DEMO_SCREEN_HAPPINESS_TEXT")
+        self.TEXT_HEALTH = text("TXT_KEY_DEMO_SCREEN_HEALTH_TEXT")
         self.TEXT_IMP_EXP = (
-            localText.getText("TXT_KEY_DEMO_SCREEN_IMPORTS_TEXT", ())
+            text("TXT_KEY_DEMO_SCREEN_IMPORTS_TEXT")
             + "/"
-            + localText.getText("TXT_KEY_DEMO_SCREEN_EXPORTS_TEXT", ())
+            + text("TXT_KEY_DEMO_SCREEN_EXPORTS_TEXT")
         )
 
         self.TEXT_ECONOMY_MEASURE = (
             u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)
-        ) + localText.getText("TXT_KEY_DEMO_SCREEN_ECONOMY_MEASURE", ())
+        ) + text("TXT_KEY_DEMO_SCREEN_ECONOMY_MEASURE")
         self.TEXT_INDUSTRY_MEASURE = (
             u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)
-        ) + localText.getText("TXT_KEY_DEMO_SCREEN_INDUSTRY_MEASURE", ())
+        ) + text("TXT_KEY_DEMO_SCREEN_INDUSTRY_MEASURE")
         self.TEXT_AGRICULTURE_MEASURE = (
             u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)
-        ) + localText.getText("TXT_KEY_DEMO_SCREEN_AGRICULTURE_MEASURE", ())
+        ) + text("TXT_KEY_DEMO_SCREEN_AGRICULTURE_MEASURE")
         self.TEXT_MILITARY_MEASURE = (
             u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)
-        ) + localText.getText(
-            "TXT_KEY_DEMO_SCREEN_MILITARY_MEASURE", ()
+        ) + text(
+            "TXT_KEY_DEMO_SCREEN_MILITARY_MEASURE"
         )  # Absinthe
         self.TEXT_SOLDIERS_MEASURE = (
             u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)
-        ) + localText.getText(
-            "TXT_KEY_DEMO_SCREEN_SOLDIERS_MEASURE", ()
+        ) + text(
+            "TXT_KEY_DEMO_SCREEN_SOLDIERS_MEASURE"
         )  # Absinthe
         self.TEXT_LAND_AREA_MEASURE = (
             u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)
-        ) + localText.getText("TXT_KEY_DEMO_SCREEN_LAND_AREA_MEASURE", ())
+        ) + text("TXT_KEY_DEMO_SCREEN_LAND_AREA_MEASURE")
         self.TEXT_POPULATION_MEASURE = (
             u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)
-        ) + localText.getText(
-            "TXT_KEY_DEMO_SCREEN_POPULATION_MEASURE", ()
+        ) + text(
+            "TXT_KEY_DEMO_SCREEN_POPULATION_MEASURE"
         )  # Absinthe
         self.TEXT_TOTAL_POPULATION_MEASURE = (
             u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)
-        ) + localText.getText(
-            "TXT_KEY_DEMO_SCREEN_TOTAL_POPULATION_MEASURE", ()
+        ) + text(
+            "TXT_KEY_DEMO_SCREEN_TOTAL_POPULATION_MEASURE"
         )  # Absinthe
         self.TEXT_HAPPINESS_MEASURE = "%"
         self.TEXT_HAPPINESS_MEASURE_2 = (
             u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)
-        ) + localText.getText(
-            "TXT_KEY_DEMO_SCREEN_HAPPINESS_MEASURE", ()
+        ) + text(
+            "TXT_KEY_DEMO_SCREEN_HAPPINESS_MEASURE"
         )  # Absinthe
         self.TEXT_HEALTH_MEASURE = (
             u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)
-        ) + localText.getText(
-            "TXT_KEY_DEMO_SCREEN_HEALTH_MEASURE", ()
+        ) + text(
+            "TXT_KEY_DEMO_SCREEN_HEALTH_MEASURE"
         )  # Absinthe
         self.TEXT_IMP_EXP_MEASURE = (
             u"  %c" % CyGame().getSymbolID(FontSymbols.BULLET_CHAR)
-        ) + localText.getText("TXT_KEY_DEMO_SCREEN_ECONOMY_MEASURE", ())
+        ) + text("TXT_KEY_DEMO_SCREEN_ECONOMY_MEASURE")
 
-        self.TEXT_TIME_PLAYED = localText.getText("TXT_KEY_INFO_SCREEN_TIME_PLAYED", ())
-        self.TEXT_CITIES_BUILT = localText.getText("TXT_KEY_INFO_SCREEN_CITIES_BUILT", ())
-        self.TEXT_CITIES_RAZED = localText.getText("TXT_KEY_INFO_SCREEN_CITIES_RAZED", ())
-        self.TEXT_NUM_GOLDEN_AGES = localText.getText("TXT_KEY_INFO_SCREEN_NUM_GOLDEN_AGES", ())
-        self.TEXT_NUM_RELIGIONS_FOUNDED = localText.getText(
-            "TXT_KEY_INFO_SCREEN_RELIGIONS_FOUNDED", ()
-        )
+        self.TEXT_TIME_PLAYED = text("TXT_KEY_INFO_SCREEN_TIME_PLAYED")
+        self.TEXT_CITIES_BUILT = text("TXT_KEY_INFO_SCREEN_CITIES_BUILT")
+        self.TEXT_CITIES_RAZED = text("TXT_KEY_INFO_SCREEN_CITIES_RAZED")
+        self.TEXT_NUM_GOLDEN_AGES = text("TXT_KEY_INFO_SCREEN_NUM_GOLDEN_AGES")
+        self.TEXT_NUM_RELIGIONS_FOUNDED = text("TXT_KEY_INFO_SCREEN_RELIGIONS_FOUNDED")
 
-        self.TEXT_CURRENT = localText.getText("TXT_KEY_CURRENT", ())
-        self.TEXT_UNITS = localText.getText("TXT_KEY_CONCEPT_UNITS", ())
-        self.TEXT_BUILDINGS = localText.getText("TXT_KEY_CONCEPT_BUILDINGS", ())
-        self.TEXT_KILLED = localText.getText("TXT_KEY_INFO_SCREEN_KILLED", ())
-        self.TEXT_LOST = localText.getText("TXT_KEY_INFO_SCREEN_LOST", ())
-        self.TEXT_BUILT = localText.getText("TXT_KEY_INFO_SCREEN_BUILT", ())
+        self.TEXT_CURRENT = text("TXT_KEY_CURRENT")
+        self.TEXT_UNITS = text("TXT_KEY_CONCEPT_UNITS")
+        self.TEXT_BUILDINGS = text("TXT_KEY_CONCEPT_BUILDINGS")
+        self.TEXT_KILLED = text("TXT_KEY_INFO_SCREEN_KILLED")
+        self.TEXT_LOST = text("TXT_KEY_INFO_SCREEN_LOST")
+        self.TEXT_BUILT = text("TXT_KEY_INFO_SCREEN_BUILT")
 
     def reset(self):
 
@@ -1307,7 +1286,7 @@ class CvInfoScreen:
         while last < nTurns:
             screen.addPullDownString(
                 self.szTurnsDropdownWidget,
-                localText.getText("TXT_KEY_INFO_NUM_TURNS", (last,)),
+                text("TXT_KEY_INFO_NUM_TURNS", last),
                 iCounter,
                 iCounter,
                 False,
@@ -3171,22 +3150,22 @@ class CvInfoScreen:
                 if tActivePlayer.isHasTech(Technology.CALENDAR.value):
                     if iTurnYear <= get_scenario_start_years():
                         if get_scenario() == Scenario.i500AD:
-                            szTurnFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_500AD", ())
+                            szTurnFounded = text("TXT_KEY_FOUNDED_BEFORE_500AD")
                         else:
-                            szTurnFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_1200AD", ())
+                            szTurnFounded = text("TXT_KEY_FOUNDED_BEFORE_1200AD")
                     else:
-                        szTurnFounded = localText.getText("TXT_KEY_TIME_AD", (iTurnYear,))
+                        szTurnFounded = text("TXT_KEY_TIME_AD", iTurnYear)
                 else:
                     if iTurnYear <= get_scenario_start_years():
-                        szTurnFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_ERA", ())
+                        szTurnFounded = text("TXT_KEY_FOUNDED_BEFORE_ERA")
                     elif iTurnYear >= 1500:
-                        szTurnFounded = localText.getText("TXT_KEY_ERA_RENAISSANCE", ())
+                        szTurnFounded = text("TXT_KEY_ERA_RENAISSANCE")
                     elif iTurnYear >= 1200:
-                        szTurnFounded = localText.getText("TXT_KEY_ERA_LATE_MEDIEVAL", ())
+                        szTurnFounded = text("TXT_KEY_ERA_LATE_MEDIEVAL")
                     elif iTurnYear >= 900:
-                        szTurnFounded = localText.getText("TXT_KEY_ERA_HIGH_MEDIEVAL", ())
+                        szTurnFounded = text("TXT_KEY_ERA_HIGH_MEDIEVAL")
                     else:
-                        szTurnFounded = localText.getText("TXT_KEY_ERA_EARLY_MEDIEVAL", ())
+                        szTurnFounded = text("TXT_KEY_ERA_EARLY_MEDIEVAL")
 
                 # Absinthe: top5 city name/civ visibility
                 if gc.getTeam(pPlayer.getTeam()).isHasMet(gc.getGame().getActiveTeam()):
@@ -3194,28 +3173,24 @@ class CvInfoScreen:
                         self.szCityNames[iRankLoop] = pCity.getName().upper()
                         self.szCityDescs[iRankLoop] = "%s, %s" % (
                             pPlayer.getCivilizationAdjective(0),
-                            localText.getText("TXT_KEY_MISC_FOUNDED", (szTurnFounded,)),
+                            text("TXT_KEY_MISC_FOUNDED", szTurnFounded),
                         )
                     else:
-                        self.szCityNames[iRankLoop] = localText.getText(
-                            "TXT_KEY_UNKNOWN", ()
-                        ).upper()
+                        self.szCityNames[iRankLoop] = text("TXT_KEY_UNKNOWN").upper()
                         self.szCityDescs[iRankLoop] = "%s, %s" % (
                             pPlayer.getCivilizationAdjective(0),
-                            localText.getText("TXT_KEY_MISC_FOUNDED", (szTurnFounded,)),
+                            text("TXT_KEY_MISC_FOUNDED", szTurnFounded),
                         )
                 else:
                     if pCity.isRevealed(gc.getGame().getActiveTeam()):
                         self.szCityNames[iRankLoop] = pCity.getName().upper()
                         self.szCityDescs[iRankLoop] = "%s" % (
-                            localText.getText("TXT_KEY_MISC_FOUNDED", (szTurnFounded,)),
+                            text("TXT_KEY_MISC_FOUNDED", szTurnFounded),
                         )
                     else:
-                        self.szCityNames[iRankLoop] = localText.getText(
-                            "TXT_KEY_UNKNOWN", ()
-                        ).upper()
+                        self.szCityNames[iRankLoop] = text("TXT_KEY_UNKNOWN").upper()
                         self.szCityDescs[iRankLoop] = "%s" % (
-                            localText.getText("TXT_KEY_MISC_FOUNDED", (szTurnFounded,)),
+                            text("TXT_KEY_MISC_FOUNDED", szTurnFounded),
                         )
                 self.iCitySizes[iRankLoop] = pCity.getPopulation()
                 self.aaCitiesXY[iRankLoop] = [pCity.getX(), pCity.getY()]
@@ -3282,7 +3257,7 @@ class CvInfoScreen:
             bDefault = False
         screen.addPullDownString(
             self.szWondersDropdownWidget,
-            localText.getText("TXT_KEY_TOP_CITIES_SCREEN_WORLD_WONDERS", ()),
+            text("TXT_KEY_TOP_CITIES_SCREEN_WORLD_WONDERS"),
             0,
             0,
             bDefault,
@@ -3294,7 +3269,7 @@ class CvInfoScreen:
             bDefault = False
         screen.addPullDownString(
             self.szWondersDropdownWidget,
-            localText.getText("TXT_KEY_TOP_CITIES_SCREEN_NATIONAL_WONDERS", ()),
+            text("TXT_KEY_TOP_CITIES_SCREEN_NATIONAL_WONDERS"),
             1,
             1,
             bDefault,
@@ -3305,11 +3280,7 @@ class CvInfoScreen:
         else:
             bDefault = False
         screen.addPullDownString(
-            self.szWondersDropdownWidget,
-            localText.getText("TXT_KEY_PEDIA_CATEGORY_PROJECT", ()),
-            2,
-            2,
-            bDefault,
+            self.szWondersDropdownWidget, text("TXT_KEY_PEDIA_CATEGORY_PROJECT"), 2, 2, bDefault
         )
 
         return
@@ -3490,23 +3461,23 @@ class CvInfoScreen:
                     tActivePlayer = gc.getTeam(pActivePlayer.getTeam())
 
                     if tActivePlayer.isHasTech(Technology.CALENDAR.value):
-                        szTurnFounded = localText.getText("TXT_KEY_TIME_AD", (iTurnYear,))
+                        szTurnFounded = text("TXT_KEY_TIME_AD", iTurnYear)
                     elif iTurnYear >= 1500:
-                        szTurnFounded = localText.getText("TXT_KEY_ERA_RENAISSANCE", ())
+                        szTurnFounded = text("TXT_KEY_ERA_RENAISSANCE")
                     elif iTurnYear >= 1200:
-                        szTurnFounded = localText.getText("TXT_KEY_ERA_LATE_MEDIEVAL", ())
+                        szTurnFounded = text("TXT_KEY_ERA_LATE_MEDIEVAL")
                     elif iTurnYear >= 900:
-                        szTurnFounded = localText.getText("TXT_KEY_ERA_HIGH_MEDIEVAL", ())
+                        szTurnFounded = text("TXT_KEY_ERA_HIGH_MEDIEVAL")
                     else:
-                        szTurnFounded = localText.getText("TXT_KEY_ERA_EARLY_MEDIEVAL", ())
+                        szTurnFounded = text("TXT_KEY_ERA_EARLY_MEDIEVAL")
 
                     szDateBuilt = "%s" % (szTurnFounded)
                     szProjectDesc2 = "%s" % (
-                        "%s" % (localText.getText("TXT_KEY_INFO_WONDER_DATE", (szDateBuilt,)),)
+                        "%s" % (text("TXT_KEY_INFO_WONDER_DATE", szDateBuilt),)
                     )
 
                 else:
-                    szProjectDesc2 = "%s" % (localText.getText("TXT_KEY_BEING_BUILT", ()))
+                    szProjectDesc2 = "%s" % (text("TXT_KEY_BEING_BUILT"))
 
                 # Absinthe: project info display
                 szProjectDesc1 = (
@@ -3514,9 +3485,9 @@ class CvInfoScreen:
                     % (
                         "%s"
                         % (
-                            localText.getText(
+                            text(
                                 "TXT_KEY_INFO_WONDER_CIV_NAME",
-                                (self.aiWonderBuiltBy[self.iActiveWonderCounter],),
+                                self.aiWonderBuiltBy[self.iActiveWonderCounter],
                             ),
                         )
                     )
@@ -3526,9 +3497,9 @@ class CvInfoScreen:
                 szStatsText += self.aszWonderCity[self.iActiveWonderCounter] + "\n\n"
 
                 if pProjectInfo.getProductionCost() > 0:
-                    szCost = localText.getText(
+                    szCost = text(
                         "TXT_KEY_PEDIA_COST",
-                        (gc.getActivePlayer().getProjectProductionNeeded(self.iWonderID),),
+                        gc.getActivePlayer().getProjectProductionNeeded(self.iWonderID),
                     )
                     szStatsText += (
                         szCost.upper()
@@ -3538,19 +3509,19 @@ class CvInfoScreen:
 
                 if isWorldProject(self.iWonderID):
                     iMaxInstances = gc.getProjectInfo(self.iWonderID).getMaxGlobalInstances()
-                    szProjectType = localText.getText("TXT_KEY_PEDIA_WORLD_PROJECT", ())
+                    szProjectType = text("TXT_KEY_PEDIA_WORLD_PROJECT")
                     if iMaxInstances > 1:
-                        szProjectType += " " + localText.getText(
-                            "TXT_KEY_PEDIA_WONDER_INSTANCES", (iMaxInstances,)
+                        szProjectType += " " + text(
+                            "TXT_KEY_PEDIA_WONDER_INSTANCES", iMaxInstances
                         )
                     szStatsText += szProjectType.upper() + "\n"
 
                 if isTeamProject(self.iWonderID):
                     iMaxInstances = gc.getProjectInfo(self.iWonderID).getMaxTeamInstances()
-                    szProjectType = localText.getText("TXT_KEY_PEDIA_TEAM_PROJECT", ())
+                    szProjectType = text("TXT_KEY_PEDIA_TEAM_PROJECT")
                     if iMaxInstances > 1:
-                        szProjectType += " " + localText.getText(
-                            "TXT_KEY_PEDIA_WONDER_INSTANCES", (iMaxInstances,)
+                        szProjectType += " " + text(
+                            "TXT_KEY_PEDIA_WONDER_INSTANCES", iMaxInstances
                         )
                     szStatsText += szProjectType.upper()
 
@@ -3586,9 +3557,7 @@ class CvInfoScreen:
                 # Special Abilities ListBox
 
                 szSpecialTitle = (
-                    u"<font=3b>"
-                    + localText.getText("TXT_KEY_PEDIA_SPECIAL_ABILITIES", ())
-                    + u"</font>"
+                    u"<font=3b>" + text("TXT_KEY_PEDIA_SPECIAL_ABILITIES") + u"</font>"
                 )
                 self.szSpecialTitleWidget = self.getNextWidgetName()
                 screen.setText(
@@ -3661,26 +3630,26 @@ class CvInfoScreen:
                     tActivePlayer = gc.getTeam(pActivePlayer.getTeam())
 
                     if iTurnYear <= get_scenario_start_years():
-                        szTurnFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_START", ())
+                        szTurnFounded = text("TXT_KEY_FOUNDED_BEFORE_START")
                     else:
                         if tActivePlayer.isHasTech(Technology.CALENDAR.value):
-                            szTurnFounded = localText.getText("TXT_KEY_TIME_AD", (iTurnYear,))
+                            szTurnFounded = text("TXT_KEY_TIME_AD", iTurnYear)
                         elif iTurnYear >= 1500:
-                            szTurnFounded = localText.getText("TXT_KEY_ERA_RENAISSANCE", ())
+                            szTurnFounded = text("TXT_KEY_ERA_RENAISSANCE")
                         elif iTurnYear >= 1200:
-                            szTurnFounded = localText.getText("TXT_KEY_ERA_LATE_MEDIEVAL", ())
+                            szTurnFounded = text("TXT_KEY_ERA_LATE_MEDIEVAL")
                         elif iTurnYear >= 900:
-                            szTurnFounded = localText.getText("TXT_KEY_ERA_HIGH_MEDIEVAL", ())
+                            szTurnFounded = text("TXT_KEY_ERA_HIGH_MEDIEVAL")
                         else:
-                            szTurnFounded = localText.getText("TXT_KEY_ERA_EARLY_MEDIEVAL", ())
+                            szTurnFounded = text("TXT_KEY_ERA_EARLY_MEDIEVAL")
 
                     szDateBuilt = "%s" % (szTurnFounded)
                     szWonderDesc2 = "%s" % (
-                        "%s" % (localText.getText("TXT_KEY_INFO_WONDER_DATE", (szDateBuilt,)),)
+                        "%s" % (text("TXT_KEY_INFO_WONDER_DATE", szDateBuilt),)
                     )
 
                 else:
-                    szWonderDesc2 = "%s" % (localText.getText("TXT_KEY_BEING_BUILT", ()))
+                    szWonderDesc2 = "%s" % (text("TXT_KEY_BEING_BUILT"))
 
                 # Absinthe: wonder info display
                 szWonderDesc1 = (
@@ -3688,9 +3657,9 @@ class CvInfoScreen:
                     % (
                         "%s"
                         % (
-                            localText.getText(
+                            text(
                                 "TXT_KEY_INFO_WONDER_CIV_NAME",
-                                (self.aiWonderBuiltBy[self.iActiveWonderCounter],),
+                                self.aiWonderBuiltBy[self.iActiveWonderCounter],
                             ),
                         )
                     )
@@ -3702,9 +3671,9 @@ class CvInfoScreen:
                 # Building attributes
 
                 if pWonderInfo.getProductionCost() > 0:
-                    szCost = localText.getText(
+                    szCost = text(
                         "TXT_KEY_PEDIA_COST",
-                        (gc.getActivePlayer().getBuildingProductionNeeded(self.iWonderID),),
+                        gc.getActivePlayer().getBuildingProductionNeeded(self.iWonderID),
                     )
                     szStatsText += (
                         szCost.upper()
@@ -3730,38 +3699,32 @@ class CvInfoScreen:
                         szStatsText += szText2 + "\n"
 
                 if pWonderInfo.getHappiness() > 0:
-                    szText = localText.getText(
-                        "TXT_KEY_PEDIA_HAPPY", (pWonderInfo.getHappiness(),)
-                    )
+                    szText = text("TXT_KEY_PEDIA_HAPPY", pWonderInfo.getHappiness())
                     szStatsText += (
                         szText + (u"%c" % CyGame().getSymbolID(FontSymbols.HAPPY_CHAR)) + "\n"
                     )
 
                 elif pWonderInfo.getHappiness() < 0:
-                    szText = localText.getText(
-                        "TXT_KEY_PEDIA_UNHAPPY", (-pWonderInfo.getHappiness(),)
-                    )
+                    szText = text("TXT_KEY_PEDIA_UNHAPPY", -pWonderInfo.getHappiness())
                     szStatsText += (
                         szText + (u"%c" % CyGame().getSymbolID(FontSymbols.UNHAPPY_CHAR)) + "\n"
                     )
 
                 if pWonderInfo.getHealth() > 0:
-                    szText = localText.getText("TXT_KEY_PEDIA_HEALTHY", (pWonderInfo.getHealth(),))
+                    szText = text("TXT_KEY_PEDIA_HEALTHY", pWonderInfo.getHealth())
                     szStatsText += (
                         szText + (u"%c" % CyGame().getSymbolID(FontSymbols.HEALTHY_CHAR)) + "\n"
                     )
 
                 elif pWonderInfo.getHealth() < 0:
-                    szText = localText.getText(
-                        "TXT_KEY_PEDIA_UNHEALTHY", (-pWonderInfo.getHealth(),)
-                    )
+                    szText = text("TXT_KEY_PEDIA_UNHEALTHY", -pWonderInfo.getHealth())
                     szStatsText += (
                         szText + (u"%c" % CyGame().getSymbolID(FontSymbols.UNHEALTHY_CHAR)) + "\n"
                     )
 
                 if pWonderInfo.getGreatPeopleRateChange() != 0:
-                    szText = localText.getText(
-                        "TXT_KEY_PEDIA_GREAT_PEOPLE", (pWonderInfo.getGreatPeopleRateChange(),)
+                    szText = text(
+                        "TXT_KEY_PEDIA_GREAT_PEOPLE", pWonderInfo.getGreatPeopleRateChange()
                     )
                     szStatsText += (
                         szText
@@ -3802,9 +3765,7 @@ class CvInfoScreen:
                 # Special Abilities ListBox
 
                 szSpecialTitle = (
-                    u"<font=3b>"
-                    + localText.getText("TXT_KEY_PEDIA_SPECIAL_ABILITIES", ())
-                    + u"</font>"
+                    u"<font=3b>" + text("TXT_KEY_PEDIA_SPECIAL_ABILITIES") + u"</font>"
                 )
                 self.szSpecialTitleWidget = self.getNextWidgetName()
                 screen.setText(
@@ -3915,9 +3876,7 @@ class CvInfoScreen:
                                         [
                                             iProjectProd,
                                             pPlayer.getCivilizationShortDescription(0),
-                                            localText.getText(
-                                                "TXT_KEY_INFO_WONDER_CITY_NAME", (pCity.getName(),)
-                                            ),
+                                            text("TXT_KEY_INFO_WONDER_CITY_NAME", pCity.getName()),
                                         ]
                                     )
 
@@ -3945,9 +3904,9 @@ class CvInfoScreen:
                                             [
                                                 iBuildingProd,
                                                 pPlayer.getCivilizationShortDescription(0),
-                                                localText.getText(
+                                                text(
                                                     "TXT_KEY_INFO_WONDER_CITY_NAME",
-                                                    (pCity.getName(),),
+                                                    pCity.getName(),
                                                 ),
                                             ]
                                         )
@@ -3967,9 +3926,9 @@ class CvInfoScreen:
                                                     pCity.getBuildingOriginalTime(iBuildingLoop),
                                                     iBuildingLoop,
                                                     pPlayer.getCivilizationShortDescription(0),
-                                                    localText.getText(
+                                                    text(
                                                         "TXT_KEY_INFO_WONDER_CITY_NAME",
-                                                        (pCity.getName(),),
+                                                        pCity.getName(),
                                                     ),
                                                 ]
                                             )
@@ -3979,9 +3938,7 @@ class CvInfoScreen:
                                                     pCity.getBuildingOriginalTime(iBuildingLoop),
                                                     iBuildingLoop,
                                                     pPlayer.getCivilizationShortDescription(0),
-                                                    localText.getText(
-                                                        "TXT_KEY_INFO_UNKNOWN_CITY", ()
-                                                    ),
+                                                    text("TXT_KEY_INFO_UNKNOWN_CITY"),
                                                 ]
                                             )
                                     else:
@@ -3990,10 +3947,10 @@ class CvInfoScreen:
                                                 [
                                                     pCity.getBuildingOriginalTime(iBuildingLoop),
                                                     iBuildingLoop,
-                                                    localText.getText("TXT_KEY_UNKNOWN", ()),
-                                                    localText.getText(
+                                                    text("TXT_KEY_UNKNOWN"),
+                                                    text(
                                                         "TXT_KEY_INFO_WONDER_CITY_NAME",
-                                                        (pCity.getName(),),
+                                                        pCity.getName(),
                                                     ),
                                                 ]
                                             )
@@ -4002,10 +3959,8 @@ class CvInfoScreen:
                                                 [
                                                     pCity.getBuildingOriginalTime(iBuildingLoop),
                                                     iBuildingLoop,
-                                                    localText.getText("TXT_KEY_UNKNOWN", ()),
-                                                    localText.getText(
-                                                        "TXT_KEY_INFO_UNKNOWN_CITY", ()
-                                                    ),
+                                                    text("TXT_KEY_UNKNOWN"),
+                                                    text("TXT_KEY_INFO_UNKNOWN_CITY"),
                                                 ]
                                             )
                                     self.iNumWonders += 1
@@ -4030,9 +3985,9 @@ class CvInfoScreen:
                                             [
                                                 iBuildingProd,
                                                 pPlayer.getCivilizationShortDescription(0),
-                                                localText.getText(
+                                                text(
                                                     "TXT_KEY_INFO_WONDER_CITY_NAME",
-                                                    (pCity.getName(),),
+                                                    pCity.getName(),
                                                 ),
                                             ]
                                         )
@@ -4052,9 +4007,9 @@ class CvInfoScreen:
                                                     pCity.getBuildingOriginalTime(iBuildingLoop),
                                                     iBuildingLoop,
                                                     pPlayer.getCivilizationShortDescription(0),
-                                                    localText.getText(
+                                                    text(
                                                         "TXT_KEY_INFO_WONDER_CITY_NAME",
-                                                        (pCity.getName(),),
+                                                        pCity.getName(),
                                                     ),
                                                 ]
                                             )
@@ -4064,9 +4019,7 @@ class CvInfoScreen:
                                                     pCity.getBuildingOriginalTime(iBuildingLoop),
                                                     iBuildingLoop,
                                                     pPlayer.getCivilizationShortDescription(0),
-                                                    localText.getText(
-                                                        "TXT_KEY_INFO_UNKNOWN_CITY", ()
-                                                    ),
+                                                    text("TXT_KEY_INFO_UNKNOWN_CITY"),
                                                 ]
                                             )
                                     else:
@@ -4075,10 +4028,10 @@ class CvInfoScreen:
                                                 [
                                                     pCity.getBuildingOriginalTime(iBuildingLoop),
                                                     iBuildingLoop,
-                                                    localText.getText("TXT_KEY_UNKNOWN", ()),
-                                                    localText.getText(
+                                                    text("TXT_KEY_UNKNOWN"),
+                                                    text(
                                                         "TXT_KEY_INFO_WONDER_CITY_NAME",
-                                                        (pCity.getName(),),
+                                                        pCity.getName(),
                                                     ),
                                                 ]
                                             )
@@ -4087,10 +4040,8 @@ class CvInfoScreen:
                                                 [
                                                     pCity.getBuildingOriginalTime(iBuildingLoop),
                                                     iBuildingLoop,
-                                                    localText.getText("TXT_KEY_UNKNOWN", ()),
-                                                    localText.getText(
-                                                        "TXT_KEY_INFO_UNKNOWN_CITY", ()
-                                                    ),
+                                                    text("TXT_KEY_UNKNOWN"),
+                                                    text("TXT_KEY_INFO_UNKNOWN_CITY"),
                                                 ]
                                             )
                                     self.iNumWonders += 1
@@ -4136,9 +4087,9 @@ class CvInfoScreen:
                                                 gc.getPlayer(
                                                     iPlayerLoop
                                                 ).getCivilizationShortDescription(0),
-                                                localText.getText(
+                                                text(
                                                     "TXT_KEY_INFO_WONDER_CITY_NAME",
-                                                    (pCity.getName(),),
+                                                    pCity.getName(),
                                                 ),
                                             ]
                                         )
@@ -4150,7 +4101,7 @@ class CvInfoScreen:
                                                 gc.getPlayer(
                                                     iPlayerLoop
                                                 ).getCivilizationShortDescription(0),
-                                                localText.getText("TXT_KEY_INFO_UNKNOWN_CITY", ()),
+                                                text("TXT_KEY_INFO_UNKNOWN_CITY"),
                                             ]
                                         )
                                 else:
@@ -4159,10 +4110,10 @@ class CvInfoScreen:
                                             [
                                                 pCity.getBuildingOriginalTime(iProjectLoop),
                                                 iProjectLoop,
-                                                localText.getText("TXT_KEY_UNKNOWN", ()),
-                                                localText.getText(
+                                                text("TXT_KEY_UNKNOWN"),
+                                                text(
                                                     "TXT_KEY_INFO_WONDER_CITY_NAME",
-                                                    (pCity.getName(),),
+                                                    pCity.getName(),
                                                 ),
                                             ]
                                         )
@@ -4171,8 +4122,8 @@ class CvInfoScreen:
                                             [
                                                 pCity.getBuildingOriginalTime(iProjectLoop),
                                                 iProjectLoop,
-                                                localText.getText("TXT_KEY_UNKNOWN", ()),
-                                                localText.getText("TXT_KEY_INFO_UNKNOWN_CITY", ()),
+                                                text("TXT_KEY_UNKNOWN"),
+                                                text("TXT_KEY_INFO_UNKNOWN_CITY"),
                                             ]
                                         )
                                 self.iNumWonders += 1
@@ -4722,15 +4673,15 @@ class CvInfoScreen:
 
         # Absinthe: based on the knowledge of Calendar and the corresponding era
         if tPlayer.isHasTech(Technology.CALENDAR.value):
-            return localText.getText("TXT_KEY_TIME_AD", (year,))
+            return text("TXT_KEY_TIME_AD", year)
         elif year >= 1500:
-            return localText.getText("TXT_KEY_ERA_RENAISSANCE", ())
+            return text("TXT_KEY_ERA_RENAISSANCE")
         elif year >= 1200:
-            return localText.getText("TXT_KEY_ERA_LATE_MEDIEVAL", ())
+            return text("TXT_KEY_ERA_LATE_MEDIEVAL")
         elif year >= 900:
-            return localText.getText("TXT_KEY_ERA_HIGH_MEDIEVAL", ())
+            return text("TXT_KEY_ERA_HIGH_MEDIEVAL")
         else:
-            return localText.getText("TXT_KEY_ERA_EARLY_MEDIEVAL", ())
+            return text("TXT_KEY_ERA_EARLY_MEDIEVAL")
 
     def lineName(self, i):
         return self.LINE_ID + str(i)

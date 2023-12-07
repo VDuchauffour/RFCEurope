@@ -1,6 +1,7 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
+from CoreFunctions import text
 from CoreTypes import SpecialParameter, StabilityCategory
 from CoreStructures import player as _player
 import CvUtil
@@ -20,7 +21,6 @@ stab = Stability.Stability()  # Absinthe
 # globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()
 
 
 class CvFinanceAdvisor:
@@ -122,7 +122,7 @@ class CvFinanceAdvisor:
         screen.setText(
             self.EXIT_ID,
             "Background",
-            u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + "</font>",
+            u"<font=4>" + text("TXT_KEY_PEDIA_SCREEN_EXIT").upper() + "</font>",
             CvUtil.FONT_RIGHT_JUSTIFY,
             self.X_EXIT,
             self.Y_EXIT,
@@ -137,9 +137,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.WIDGET_HEADER,
             "Background",
-            u"<font=4b>"
-            + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_TITLE", ()).upper()
-            + u"</font>",
+            u"<font=4b>" + text("TXT_KEY_FINANCIAL_ADVISOR_TITLE").upper() + u"</font>",
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_SCREEN,
             self.Y_TITLE,
@@ -189,17 +187,17 @@ class CvFinanceAdvisor:
         # Rhye - start
         iStability = player.getStability()
         if iStability < -15:
-            szTempBuffer = localText.getText("TXT_KEY_STABILITY_COLLAPSING", ())
+            szTempBuffer = text("TXT_KEY_STABILITY_COLLAPSING")
         elif iStability >= -15 and iStability < -5:
-            szTempBuffer = localText.getText("TXT_KEY_STABILITY_UNSTABLE", ())
+            szTempBuffer = text("TXT_KEY_STABILITY_UNSTABLE")
         elif iStability >= -5 and iStability < 0:
-            szTempBuffer = localText.getText("TXT_KEY_STABILITY_SHAKY", ())
+            szTempBuffer = text("TXT_KEY_STABILITY_SHAKY")
         elif iStability >= 0 and iStability < 8:
-            szTempBuffer = localText.getText("TXT_KEY_STABILITY_STABLE", ())
+            szTempBuffer = text("TXT_KEY_STABILITY_STABLE")
         elif iStability >= 8 and iStability < 15:
-            szTempBuffer = localText.getText("TXT_KEY_STABILITY_SOLID", ())
+            szTempBuffer = text("TXT_KEY_STABILITY_SOLID")
         elif iStability >= 15:
-            szTempBuffer = localText.getText("TXT_KEY_STABILITY_VERYSOLID", ())
+            szTempBuffer = text("TXT_KEY_STABILITY_VERYSOLID")
 
         if gc.getPlayer(ePlayer).isHuman():
             szTempBuffer = "%s  %i" % (szTempBuffer, iStability)
@@ -247,9 +245,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             szTreasuryPanel,
-            u"<font=4>"
-            + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_TREASURY", (gold,)).upper()
-            + u"</font>",
+            u"<font=4>" + text("TXT_KEY_FINANCIAL_ADVISOR_TREASURY", gold).upper() + u"</font>",
             CvUtil.FONT_CENTER_JUSTIFY,
             (self.X_SLIDERS + self.PANE_WIDTH + self.X_EXPENSES) / 2,
             self.Y_TREASURY + self.H_TREASURY / 2 - self.Y_SPACING / 2,
@@ -276,7 +272,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>" + localText.getText("TXT_KEY_CONCEPT_COMMERCE", ()).upper() + u"</font>",
+            u"<font=3>" + text("TXT_KEY_CONCEPT_COMMERCE").upper() + u"</font>",
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_SLIDERS + self.PANE_WIDTH / 2,
             self.Y_LOCATION + self.TEXT_MARGIN,
@@ -303,9 +299,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>"
-            + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_INCOME_HEADER", ()).upper()
-            + u"</font>",
+            u"<font=3>" + text("TXT_KEY_FINANCIAL_ADVISOR_INCOME_HEADER").upper() + u"</font>",
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_INCOME + self.PANE_WIDTH / 2,
             self.Y_LOCATION + self.TEXT_MARGIN,
@@ -332,9 +326,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>"
-            + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_EXPENSES_HEADER", ()).upper()
-            + u"</font>",
+            u"<font=3>" + text("TXT_KEY_FINANCIAL_ADVISOR_EXPENSES_HEADER").upper() + u"</font>",
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_EXPENSES + self.PANE_WIDTH / 2,
             self.Y_LOCATION + self.TEXT_MARGIN,
@@ -363,7 +355,7 @@ class CvFinanceAdvisor:
             self.getNextWidgetName(),
             szStabilityPanel,
             u"<font=4>"
-            + localText.getText("TXT_KEY_STABILITY_ADVISOR_TITLE", ()).upper()
+            + text("TXT_KEY_STABILITY_ADVISOR_TITLE").upper()
             + " "
             + szTempBuffer
             + u"</font>",
@@ -393,9 +385,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>"
-            + localText.getText("TXT_KEY_STABILITY_PARAMETER_CITIES", ()).upper()
-            + u"</font>",
+            u"<font=3>" + text("TXT_KEY_STABILITY_PARAMETER_CITIES").upper() + u"</font>",
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS1 + self.PARAMETERS_WIDTH / 2,
             self.Y_PARAMETERS + self.TEXT_MARGIN,
@@ -437,9 +427,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>"
-            + localText.getText("TXT_KEY_STABILITY_PARAMETER_CIVICS", ()).upper()
-            + u"</font>",
+            u"<font=3>" + text("TXT_KEY_STABILITY_PARAMETER_CIVICS").upper() + u"</font>",
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS2 + self.PARAMETERS_WIDTH / 2,
             self.Y_PARAMETERS + self.TEXT_MARGIN,
@@ -481,9 +469,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>"
-            + localText.getText("TXT_KEY_STABILITY_PARAMETER_ECONOMY", ()).upper()
-            + u"</font>",
+            u"<font=3>" + text("TXT_KEY_STABILITY_PARAMETER_ECONOMY").upper() + u"</font>",
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS3 + self.PARAMETERS_WIDTH / 2,
             self.Y_PARAMETERS + self.TEXT_MARGIN,
@@ -525,9 +511,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>"
-            + localText.getText("TXT_KEY_STABILITY_PARAMETER_EXPANSION", ()).upper()
-            + u"</font>",
+            u"<font=3>" + text("TXT_KEY_STABILITY_PARAMETER_EXPANSION").upper() + u"</font>",
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS4 + self.PARAMETERS_WIDTH / 2,
             self.Y_PARAMETERS + self.TEXT_MARGIN,
@@ -569,9 +553,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>"
-            + localText.getText("TXT_KEY_STABILITY_PARAMETER_SWING", ()).upper()
-            + u"</font>",
+            u"<font=3>" + text("TXT_KEY_STABILITY_PARAMETER_SWING").upper() + u"</font>",
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_PARAMETERS5 + self.PARAMETERS_WIDTH / 2,
             self.Y_PARAMETERS + self.TEXT_MARGIN,
@@ -716,7 +698,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>" + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_TAXES", ()) + "</font>",
+            u"<font=3>" + text("TXT_KEY_FINANCIAL_ADVISOR_TAXES") + "</font>",
             CvUtil.FONT_LEFT_JUSTIFY,
             self.X_INCOME + self.TEXT_MARGIN,
             yLocation + self.TEXT_MARGIN,
@@ -746,14 +728,12 @@ class CvFinanceAdvisor:
             szText = (
                 unicode(goldFromCivs)  # type: ignore
                 + " : "
-                + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_PER_TURN", ())
+                + text("TXT_KEY_FINANCIAL_ADVISOR_PER_TURN")
             )
             screen.setLabel(
                 self.getNextWidgetName(),
                 "Background",
-                u"<font=3>"
-                + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_PER_TURN", ())
-                + "</font>",
+                u"<font=3>" + text("TXT_KEY_FINANCIAL_ADVISOR_PER_TURN") + "</font>",
                 CvUtil.FONT_LEFT_JUSTIFY,
                 self.X_INCOME + self.TEXT_MARGIN,
                 yLocation + self.TEXT_MARGIN,
@@ -782,7 +762,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>" + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_INCOME", ()) + "</font>",
+            u"<font=3>" + text("TXT_KEY_FINANCIAL_ADVISOR_INCOME") + "</font>",
             CvUtil.FONT_LEFT_JUSTIFY,
             self.X_INCOME + self.TEXT_MARGIN,
             yLocation + self.TEXT_MARGIN,
@@ -815,7 +795,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>" + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_UNITCOST", ()) + u"</font>",
+            u"<font=3>" + text("TXT_KEY_FINANCIAL_ADVISOR_UNITCOST") + u"</font>",
             CvUtil.FONT_LEFT_JUSTIFY,
             self.X_EXPENSES + self.TEXT_MARGIN,
             yLocation + self.TEXT_MARGIN,
@@ -844,9 +824,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>"
-            + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_UNITSUPPLY", ())
-            + "</font>",
+            u"<font=3>" + text("TXT_KEY_FINANCIAL_ADVISOR_UNITSUPPLY") + "</font>",
             CvUtil.FONT_LEFT_JUSTIFY,
             self.X_EXPENSES + self.TEXT_MARGIN,
             yLocation + self.TEXT_MARGIN,
@@ -876,9 +854,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>"
-            + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_MERCENARY_MAINTENANCE", ())
-            + "</font>",
+            u"<font=3>" + text("TXT_KEY_FINANCIAL_ADVISOR_MERCENARY_MAINTENANCE") + "</font>",
             CvUtil.FONT_LEFT_JUSTIFY,
             self.X_EXPENSES + self.TEXT_MARGIN,
             yLocation + self.TEXT_MARGIN,
@@ -907,9 +883,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>"
-            + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_MAINTENANCE", ())
-            + "</font>",
+            u"<font=3>" + text("TXT_KEY_FINANCIAL_ADVISOR_MAINTENANCE") + "</font>",
             CvUtil.FONT_LEFT_JUSTIFY,
             self.X_EXPENSES + self.TEXT_MARGIN,
             yLocation + self.TEXT_MARGIN,
@@ -939,9 +913,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>"
-            + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_COLONY_UPKEEP", ())
-            + "</font>",
+            u"<font=3>" + text("TXT_KEY_FINANCIAL_ADVISOR_COLONY_UPKEEP") + "</font>",
             CvUtil.FONT_LEFT_JUSTIFY,
             self.X_EXPENSES + self.TEXT_MARGIN,
             yLocation + self.TEXT_MARGIN,
@@ -970,7 +942,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>" + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_CIVICS", ()) + "</font>",
+            u"<font=3>" + text("TXT_KEY_FINANCIAL_ADVISOR_CIVICS") + "</font>",
             CvUtil.FONT_LEFT_JUSTIFY,
             self.X_EXPENSES + self.TEXT_MARGIN,
             yLocation + self.TEXT_MARGIN,
@@ -1000,9 +972,7 @@ class CvFinanceAdvisor:
             screen.setLabel(
                 self.getNextWidgetName(),
                 "Background",
-                u"<font=3>"
-                + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_COST_PER_TURN", ())
-                + "</font>",
+                u"<font=3>" + text("TXT_KEY_FINANCIAL_ADVISOR_COST_PER_TURN") + "</font>",
                 CvUtil.FONT_LEFT_JUSTIFY,
                 self.X_EXPENSES + self.TEXT_MARGIN,
                 yLocation + self.TEXT_MARGIN,
@@ -1032,7 +1002,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>" + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_INFLATION", ()) + "</font>",
+            u"<font=3>" + text("TXT_KEY_FINANCIAL_ADVISOR_INFLATION") + "</font>",
             CvUtil.FONT_LEFT_JUSTIFY,
             self.X_EXPENSES + self.TEXT_MARGIN,
             yLocation + self.TEXT_MARGIN,
@@ -1061,7 +1031,7 @@ class CvFinanceAdvisor:
         screen.setLabel(
             self.getNextWidgetName(),
             "Background",
-            u"<font=3>" + localText.getText("TXT_KEY_FINANCIAL_ADVISOR_EXPENSES", ()) + "</font>",
+            u"<font=3>" + text("TXT_KEY_FINANCIAL_ADVISOR_EXPENSES") + "</font>",
             CvUtil.FONT_LEFT_JUSTIFY,
             self.X_EXPENSES + self.TEXT_MARGIN,
             yLocation + self.TEXT_MARGIN,

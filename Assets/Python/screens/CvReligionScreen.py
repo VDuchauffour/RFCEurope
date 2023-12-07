@@ -7,6 +7,7 @@ import CvScreenEnums
 import RFCUtils
 from CoreTypes import Scenario, FaithPointBonusCategory, Technology
 from Scenario import get_scenario, get_scenario_start_years
+from CoreFunctions import text
 
 utils = RFCUtils.RFCUtils()
 PyPlayer = PyHelpers.PyPlayer
@@ -14,7 +15,6 @@ PyPlayer = PyHelpers.PyPlayer
 # globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()
 
 
 class CvReligionScreen:
@@ -118,15 +118,9 @@ class CvReligionScreen:
         self.NO_STATE_BUTTON_ART = ArtFileMgr.getInterfaceArtInfo(
             "INTERFACE_BUTTONS_CANCEL"
         ).getPath()
-        self.EXIT_TEXT = (
-            u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + "</font>"
-        )
-        self.CONVERT_TEXT = (
-            u"<font=4>" + localText.getText("TXT_KEY_RELIGION_CONVERT", ()).upper() + "</font>"
-        )
-        self.CANCEL_TEXT = (
-            u"<font=4>" + localText.getText("TXT_KEY_SCREEN_CANCEL", ()).upper() + "</font>"
-        )
+        self.EXIT_TEXT = u"<font=4>" + text("TXT_KEY_PEDIA_SCREEN_EXIT").upper() + "</font>"
+        self.CONVERT_TEXT = u"<font=4>" + text("TXT_KEY_RELIGION_CONVERT").upper() + "</font>"
+        self.CANCEL_TEXT = u"<font=4>" + text("TXT_KEY_SCREEN_CANCEL").upper() + "</font>"
 
         self.iActivePlayer = gc.getGame().getActivePlayer()
 
@@ -196,9 +190,7 @@ class CvReligionScreen:
         screen.setLabel(
             self.HEADER_NAME,
             "Background",
-            u"<font=4b>"
-            + localText.getText("TXT_KEY_RELIGION_SCREEN_TITLE", ()).upper()
-            + u"</font>",
+            u"<font=4b>" + text("TXT_KEY_RELIGION_SCREEN_TITLE").upper() + u"</font>",
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_SCREEN,
             self.Y_TITLE,
@@ -290,8 +282,6 @@ class CvReligionScreen:
                 )
             szName = self.getReligionTextName(i)
             szLabel = gc.getReligionInfo(i).getDescription()
-            # 			if (self.iReligionSelected == i):
-            # 				szLabel = localText.changeTextColor(szLabel, gc.getInfoTypeForString("COLOR_YELLOW"))
             screen.setText(
                 szName,
                 szArea,
@@ -323,9 +313,7 @@ class CvReligionScreen:
         )
 
         szName = self.getReligionTextName(gc.getNumReligionInfos())
-        szLabel = localText.getText("TXT_KEY_RELIGION_SCREEN_NO_STATE", ())
-        # 		if (self.iReligionSelected == gc.getNumReligionInfos()):
-        # 			szLabel = localText.changeTextColor(szLabel, gc.getInfoTypeForString("COLOR_YELLOW"))
+        szLabel = text("TXT_KEY_RELIGION_SCREEN_NO_STATE")
         screen.setText(
             szName,
             szArea,
@@ -344,7 +332,7 @@ class CvReligionScreen:
         screen.setLabelAt(
             "",
             szArea,
-            localText.getText("TXT_KEY_RELIGION_SCREEN_DATE_FOUNDED", ()),
+            text("TXT_KEY_RELIGION_SCREEN_DATE_FOUNDED"),
             CvUtil.FONT_LEFT_JUSTIFY,
             self.LEFT_EDGE_TEXT,
             self.Y_FOUNDED,
@@ -359,7 +347,7 @@ class CvReligionScreen:
         xLoop = self.X_RELIGION_START
         for i in range(gc.getNumReligionInfos()):
             if gc.getGame().getReligionGameTurnFounded(i) < 0:
-                szFounded = localText.getText("TXT_KEY_RELIGION_SCREEN_NOT_FOUNDED", ())
+                szFounded = text("TXT_KEY_RELIGION_SCREEN_NOT_FOUNDED")
             else:
                 iPlayer = CyGame().getActivePlayer()
                 pPlayer = gc.getPlayer(iPlayer)
@@ -371,24 +359,24 @@ class CvReligionScreen:
                 if tPlayer.isHasTech(Technology.CALENDAR.value):
                     if year <= get_scenario_start_years():
                         if get_scenario() == Scenario.i500AD:
-                            szFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_500AD", ())
+                            szFounded = text("TXT_KEY_FOUNDED_BEFORE_500AD")
                         else:
-                            szFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_1200AD", ())
+                            szFounded = text("TXT_KEY_FOUNDED_BEFORE_1200AD")
                     else:
                         szFounded = CyGameTextMgr().getTimeStr(
                             gc.getGame().getReligionGameTurnFounded(i), False
                         )
                 else:
                     if year <= get_scenario_start_years():
-                        szFounded = localText.getText("TXT_KEY_FOUNDED_BEFORE_ERA", ())
+                        szFounded = text("TXT_KEY_FOUNDED_BEFORE_ERA")
                     elif year >= 1500:
-                        szFounded = localText.getText("TXT_KEY_ERA_RENAISSANCE", ())
+                        szFounded = text("TXT_KEY_ERA_RENAISSANCE")
                     elif year >= 1200:
-                        szFounded = localText.getText("TXT_KEY_ERA_LATE_MEDIEVAL", ())
+                        szFounded = text("TXT_KEY_ERA_LATE_MEDIEVAL")
                     elif year >= 900:
-                        szFounded = localText.getText("TXT_KEY_ERA_HIGH_MEDIEVAL", ())
+                        szFounded = text("TXT_KEY_ERA_HIGH_MEDIEVAL")
                     else:
-                        szFounded = localText.getText("TXT_KEY_ERA_EARLY_MEDIEVAL", ())
+                        szFounded = text("TXT_KEY_ERA_EARLY_MEDIEVAL")
 
             screen.setLabelAt(
                 "",
@@ -423,7 +411,7 @@ class CvReligionScreen:
         screen.setLabelAt(
             "",
             szArea,
-            localText.getText("TXT_KEY_RELIGION_SCREEN_HOLY_CITY", ()),
+            text("TXT_KEY_RELIGION_SCREEN_HOLY_CITY"),
             CvUtil.FONT_LEFT_JUSTIFY,
             self.LEFT_EDGE_TEXT,
             self.Y_HOLY_CITY,
@@ -438,7 +426,7 @@ class CvReligionScreen:
         for i in range(gc.getNumReligionInfos()):
             pHolyCity = gc.getGame().getHolyCity(i)
             if pHolyCity.isNone():
-                szFounded = localText.getText("TXT_KEY_NONE", ())
+                szFounded = text("TXT_KEY_NONE")
                 screen.setLabelAt(
                     "",
                     szArea,
@@ -453,7 +441,7 @@ class CvReligionScreen:
                     -1,
                 )
             elif not pHolyCity.isRevealed(gc.getPlayer(self.iActivePlayer).getTeam(), False):
-                szFounded = localText.getText("TXT_KEY_UNKNOWN", ())
+                szFounded = text("TXT_KEY_UNKNOWN")
                 screen.setLabelAt(
                     "",
                     szArea,
@@ -516,7 +504,7 @@ class CvReligionScreen:
         screen.setLabelAt(
             "",
             szArea,
-            localText.getText("TXT_KEY_RELIGION_SCREEN_INFLUENCE", ()),
+            text("TXT_KEY_RELIGION_SCREEN_INFLUENCE"),
             CvUtil.FONT_LEFT_JUSTIFY,
             self.LEFT_EDGE_TEXT,
             self.Y_INFLUENCE,
@@ -736,9 +724,9 @@ class CvReligionScreen:
                 1,
             )
             screen.show(self.CANCEL_NAME)
-            szAnarchyTime = localText.getText(
+            szAnarchyTime = text(
                 "TXT_KEY_ANARCHY_TURNS",
-                (gc.getPlayer(self.iActivePlayer).getReligionAnarchyLength(),),
+                gc.getPlayer(self.iActivePlayer).getReligionAnarchyLength(),
             )
 
         # Turns of Anarchy Text...
@@ -777,7 +765,7 @@ class CvReligionScreen:
             PanelStyles.PANEL_STYLE_MAIN,
         )
 
-        sString = localText.getText("TXT_KEY_FAITH_POINTS", ()) + (": %i " % pPlayer.getFaith())
+        sString = text("TXT_KEY_FAITH_POINTS") + (": %i " % pPlayer.getFaith())
 
         screen.setLabelAt(
             "",
@@ -794,9 +782,7 @@ class CvReligionScreen:
         )
 
         iProsecutionCount = pPlayer.getProsecutionCount()
-        sString = localText.getText("TXT_KEY_FAITH_PROSECUTION_COUNT", ()) + (
-            ": %i " % iProsecutionCount
-        )
+        sString = text("TXT_KEY_FAITH_PROSECUTION_COUNT") + (": %i " % iProsecutionCount)
 
         screen.setLabelAt(
             "",
@@ -828,48 +814,48 @@ class CvReligionScreen:
 
         szFaithBenefits = u""
         if pPlayer.isFaithBenefit(FaithPointBonusCategory.BOOST_STABILITY.value):
-            sString = localText.getText("TXT_KEY_FAITH_STABILITY", ()) + (
+            sString = text("TXT_KEY_FAITH_STABILITY") + (
                 " +%i " % pPlayer.getFaithBenefit(FaithPointBonusCategory.BOOST_STABILITY.value)
             )
             szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
         if pPlayer.isFaithBenefit(FaithPointBonusCategory.REDUCE_CIVIC_UPKEEP.value):
-            sString = localText.getText("TXT_KEY_FAITH_CIVIC", ()) + (
+            sString = text("TXT_KEY_FAITH_CIVIC") + (
                 " -%i percent "
                 % pPlayer.getFaithBenefit(FaithPointBonusCategory.REDUCE_CIVIC_UPKEEP.value)
             )
             szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
         if pPlayer.isFaithBenefit(FaithPointBonusCategory.FASTER_POPULATION_GROWTH.value):
-            sString = localText.getText("TXT_KEY_FAITH_GROWTH", ()) + (
+            sString = text("TXT_KEY_FAITH_GROWTH") + (
                 " +%i percent "
                 % pPlayer.getFaithBenefit(FaithPointBonusCategory.FASTER_POPULATION_GROWTH.value)
             )
             szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
         if pPlayer.isFaithBenefit(FaithPointBonusCategory.REDUCING_COST_UNITS.value):
-            sString = localText.getText("TXT_KEY_FAITH_UNITS", ()) + (
+            sString = text("TXT_KEY_FAITH_UNITS") + (
                 " -%i percent "
                 % pPlayer.getFaithBenefit(FaithPointBonusCategory.REDUCING_COST_UNITS.value)
             )
             szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
         if pPlayer.isFaithBenefit(FaithPointBonusCategory.REDUCING_TECH_COST.value):
-            sString = localText.getText("TXT_KEY_FAITH_SCIENCE", ()) + (
+            sString = text("TXT_KEY_FAITH_SCIENCE") + (
                 " -%i percent "
                 % pPlayer.getFaithBenefit(FaithPointBonusCategory.REDUCING_TECH_COST.value)
             )
             szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
         if pPlayer.isFaithBenefit(FaithPointBonusCategory.REDUCING_WONDER_COST.value):
-            sString = localText.getText("TXT_KEY_FAITH_PRODUCTION", ()) + (
+            sString = text("TXT_KEY_FAITH_PRODUCTION") + (
                 " -%i percent "
                 % pPlayer.getFaithBenefit(FaithPointBonusCategory.REDUCING_WONDER_COST.value)
             )
             szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
         if pPlayer.isFaithBenefit(FaithPointBonusCategory.BOOST_DIPLOMACY.value):
-            sString = localText.getText("TXT_KEY_FAITH_DIPLOMACY", ()) + (
+            sString = text("TXT_KEY_FAITH_DIPLOMACY") + (
                 " +%i " % pPlayer.getFaithBenefit(FaithPointBonusCategory.BOOST_DIPLOMACY.value)
             )
             szFaithBenefits += u"<font=3>" + sString + u"</font>\n"
         if iProsecutionCount > 0:
             iProsecutionInstability = (iProsecutionCount + 2) / 3
-            sString = localText.getText("TXT_KEY_FAITH_PROSECUTION_INSTABILITY", ()) + (
+            sString = text("TXT_KEY_FAITH_PROSECUTION_INSTABILITY") + (
                 " -%i " % iProsecutionInstability
             )
             szFaithBenefits += u"<font=3>" + sString + u"</font>"

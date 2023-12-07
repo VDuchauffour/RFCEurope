@@ -50,9 +50,7 @@ from CoreTypes import (
 from LocationsData import CITIES
 
 gc = CyGlobalContext()
-localText = CyTranslator()  # Absinthe
 utils = RFCUtils.RFCUtils()
-# iBetrayalCheaters = 15
 
 
 # Absinthe: Turn Randomization constants
@@ -666,9 +664,7 @@ class CvRFCEventHandler:
                             iPlayer,
                             False,
                             MessageData.DURATION,
-                            CyTranslator().getText(
-                                "TXT_KEY_BUILDING_GREAT_LIGHTHOUSE_REMOVED", ()
-                            ),
+                            text("TXT_KEY_BUILDING_GREAT_LIGHTHOUSE_REMOVED"),
                             "",
                             0,
                             "",

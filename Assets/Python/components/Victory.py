@@ -37,7 +37,6 @@ from Consts import MessageData
 utils = RFCUtils.RFCUtils()
 up = UniquePowers.UniquePowers()
 gc = CyGlobalContext()
-localText = CyTranslator()  # Absinthe
 
 
 tByzantiumControl = [

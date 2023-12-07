@@ -32,7 +32,6 @@ from Consts import WORLD_HEIGHT
 utils = RFCUtils.RFCUtils()
 balance = GameBalance.GameBalance()
 gc = CyGlobalContext()
-localText = CyTranslator()
 PyPlayer = PyHelpers.PyPlayer
 PyInfo = PyHelpers.PyInfo
 
@@ -529,42 +528,44 @@ class CvEventManager:
             szAttackerName = text("TXT_KEY_TRAIT_PLAYER_UNKNOWN")
 
         if iIsAttacker == 0:
-            combatMessage = localText.getText(
+            combatMessage = text(
                 "TXT_KEY_COMBAT_MESSAGE_HIT",
-                (
-                    szDefenderName,
-                    cdDefender.sUnitName,
-                    iDamage,
-                    cdDefender.iCurrHitPoints,
-                    cdDefender.iMaxHitPoints,
-                ),
+                szDefenderName,
+                cdDefender.sUnitName,
+                iDamage,
+                cdDefender.iCurrHitPoints,
+                cdDefender.iMaxHitPoints,
             )
             CyInterface().addCombatMessage(cdAttacker.eOwner, combatMessage)
             CyInterface().addCombatMessage(cdDefender.eOwner, combatMessage)
             if cdDefender.iCurrHitPoints <= 0:
-                combatMessage = localText.getText(
+                combatMessage = text(
                     "TXT_KEY_COMBAT_MESSAGE_DEFEATED",
-                    (szAttackerName, cdAttacker.sUnitName, szDefenderName, cdDefender.sUnitName),
+                    szAttackerName,
+                    cdAttacker.sUnitName,
+                    szDefenderName,
+                    cdDefender.sUnitName,
                 )
                 CyInterface().addCombatMessage(cdAttacker.eOwner, combatMessage)
                 CyInterface().addCombatMessage(cdDefender.eOwner, combatMessage)
         elif iIsAttacker == 1:
-            combatMessage = localText.getText(
+            combatMessage = text(
                 "TXT_KEY_COMBAT_MESSAGE_HIT",
-                (
-                    szAttackerName,
-                    cdAttacker.sUnitName,
-                    iDamage,
-                    cdAttacker.iCurrHitPoints,
-                    cdAttacker.iMaxHitPoints,
-                ),
+                szAttackerName,
+                cdAttacker.sUnitName,
+                iDamage,
+                cdAttacker.iCurrHitPoints,
+                cdAttacker.iMaxHitPoints,
             )
             CyInterface().addCombatMessage(cdAttacker.eOwner, combatMessage)
             CyInterface().addCombatMessage(cdDefender.eOwner, combatMessage)
             if cdAttacker.iCurrHitPoints <= 0:
-                combatMessage = localText.getText(
+                combatMessage = text(
                     "TXT_KEY_COMBAT_MESSAGE_DEFEATED",
-                    (szDefenderName, cdDefender.sUnitName, szAttackerName, cdAttacker.sUnitName),
+                    szDefenderName,
+                    cdDefender.sUnitName,
+                    szAttackerName,
+                    cdAttacker.sUnitName,
                 )
                 CyInterface().addCombatMessage(cdAttacker.eOwner, combatMessage)
                 CyInterface().addCombatMessage(cdDefender.eOwner, combatMessage)
@@ -648,11 +649,9 @@ class CvEventManager:
                             iOwner,
                             False,
                             MessageData.DURATION,
-                            (
-                                CyTranslator().getText(
-                                    "TXT_KEY_NO_FOREST_NO_RESOURCE",
-                                    (gc.getBonusInfo(iBonusType).getTextKey(),),
-                                )
+                            text(
+                                "TXT_KEY_NO_FOREST_NO_RESOURCE",
+                                gc.getBonusInfo(iBonusType).getTextKey(),
                             ),
                             "AS2D_DISCOVERBONUS",
                             InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
@@ -760,9 +759,9 @@ class CvEventManager:
                     iChosenTech = lPotentialTechs[0]
                     pTeam.setHasTech(iChosenTech, True, iPlayer, False, True)
                     if iPlayer == human():
-                        sText = CyTranslator().getText(
+                        sText = text(
                             "TXT_KEY_BUILDING_BIBLIOTHECA_CORVINIANA_EFFECT",
-                            (gc.getTechInfo(iChosenTech).getDescription(),),
+                            gc.getTechInfo(iChosenTech).getDescription(),
                         )
                         CyInterface().addMessage(
                             iPlayer,
@@ -783,9 +782,9 @@ class CvEventManager:
                     for tech in random.sample(lPotentialTechs, 2):
                         pTeam.setHasTech(tech, True, iPlayer, False, True)
                         if iPlayer == human():
-                            sText = CyTranslator().getText(
+                            sText = text(
                                 "TXT_KEY_BUILDING_BIBLIOTHECA_CORVINIANA_EFFECT",
-                                (gc.getTechInfo(tech).getDescription(),),
+                                gc.getTechInfo(tech).getDescription(),
                             )
                             CyInterface().addMessage(
                                 iPlayer,
@@ -859,9 +858,7 @@ class CvEventManager:
                     iPlayer,
                     False,
                     MessageData.DURATION,
-                    CyTranslator().getText(
-                        "TXT_KEY_BUILDING_SAINT_CATHERINE_MONASTERY_EFFECT", ()
-                    ),
+                    text("TXT_KEY_BUILDING_SAINT_CATHERINE_MONASTERY_EFFECT"),
                     "",
                     0,
                     "",
@@ -1112,12 +1109,10 @@ class CvEventManager:
                 # message if it was changed to a vassal UU
                 if iUnit != iPlayerUU and iUnit != iDefaultUnit:
                     if human() == iPlayer:
-                        szText = localText.getText(
+                        szText = text(
                             "TXT_KEY_BUILDING_TOPKAPI_PALACE_EFFECT",
-                            (
-                                gc.getUnitInfo(iUnit).getDescription(),
-                                gc.getUnitInfo(iPlayerUU).getDescription(),
-                            ),
+                            gc.getUnitInfo(iUnit).getDescription(),
+                            gc.getUnitInfo(iPlayerUU).getDescription(),
                         )
                         CyInterface().addMessage(
                             human(),
@@ -1757,9 +1752,7 @@ class CvEventManager:
                                 human(),
                                 False,
                                 MessageData.DURATION,
-                                CyTranslator().getText(
-                                    "TXT_KEY_MISC_WONDER_DESTROYED_1", (sWonderName,)
-                                ),
+                                text("TXT_KEY_MISC_WONDER_DESTROYED_1", sWonderName),
                                 "",
                                 InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                                 gc.getBuildingInfo(iWonder).getButton(),
@@ -1775,9 +1768,7 @@ class CvEventManager:
                                 human(),
                                 False,
                                 MessageData.DURATION,
-                                CyTranslator().getText(
-                                    "TXT_KEY_MISC_WONDER_DESTROYED_2", (ConquerName, sWonderName)
-                                ),
+                                text("TXT_KEY_MISC_WONDER_DESTROYED_2", ConquerName, sWonderName),
                                 "",
                                 InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                                 gc.getBuildingInfo(iWonder).getButton(),
@@ -1793,9 +1784,7 @@ class CvEventManager:
                                 human(),
                                 False,
                                 MessageData.DURATION,
-                                CyTranslator().getText(
-                                    "TXT_KEY_MISC_WONDER_DESTROYED_3", (PreviousName, sWonderName)
-                                ),
+                                text("TXT_KEY_MISC_WONDER_DESTROYED_3", PreviousName, sWonderName),
                                 "",
                                 InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                                 gc.getBuildingInfo(iWonder).getButton(),
@@ -2074,9 +2063,7 @@ class CvEventManager:
                                 human(),
                                 False,
                                 MessageData.DURATION,
-                                CyTranslator().getText(
-                                    "TXT_KEY_MISC_WONDER_CAPTURED_1", (sWonderName,)
-                                ),
+                                text("TXT_KEY_MISC_WONDER_CAPTURED_1", sWonderName),
                                 "",
                                 InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                                 gc.getBuildingInfo(iWonder).getButton(),
@@ -2092,9 +2079,7 @@ class CvEventManager:
                                 human(),
                                 False,
                                 MessageData.DURATION,
-                                CyTranslator().getText(
-                                    "TXT_KEY_MISC_WONDER_CAPTURED_2", (ConquerName, sWonderName)
-                                ),
+                                text("TXT_KEY_MISC_WONDER_CAPTURED_2", ConquerName, sWonderName),
                                 "",
                                 InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                                 gc.getBuildingInfo(iWonder).getButton(),
@@ -2110,9 +2095,7 @@ class CvEventManager:
                                 human(),
                                 False,
                                 MessageData.DURATION,
-                                CyTranslator().getText(
-                                    "TXT_KEY_MISC_WONDER_CAPTURED_3", (PreviousName, sWonderName)
-                                ),
+                                text("TXT_KEY_MISC_WONDER_CAPTURED_3", PreviousName, sWonderName),
                                 "",
                                 InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                                 gc.getBuildingInfo(iWonder).getButton(),

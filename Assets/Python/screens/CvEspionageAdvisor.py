@@ -3,6 +3,7 @@
 ## Improvements to this screen by Almightix - thanks
 from CvPythonExtensions import *
 from CoreData import civilizations
+from CoreFunctions import text
 from PyHelpers import PyPlayer
 import CvUtil
 import CvScreenEnums
@@ -10,7 +11,6 @@ import CvScreenEnums
 # globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()
 
 
 class CvEspionageAdvisor:
@@ -112,7 +112,7 @@ class CvEspionageAdvisor:
         screen.setText(
             self.EXIT_ID,
             "Background",
-            u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + "</font>",
+            u"<font=4>" + text("TXT_KEY_PEDIA_SCREEN_EXIT").upper() + "</font>",
             CvUtil.FONT_RIGHT_JUSTIFY,
             self.X_EXIT,
             self.Y_EXIT,
@@ -127,7 +127,7 @@ class CvEspionageAdvisor:
         screen.setLabel(
             self.WIDGET_HEADER,
             "Background",
-            u"<font=4b>" + localText.getText("TXT_KEY_ESPIONAGE_SCREEN", ()).upper() + u"</font>",
+            u"<font=4b>" + text("TXT_KEY_ESPIONAGE_SCREEN").upper() + u"</font>",
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_SCREEN,
             self.Y_TITLE,
@@ -262,9 +262,9 @@ class CvEspionageAdvisor:
         self.Y_MAKING_TEXT = 85
         szText = (
             u"<font=4>"
-            + localText.getText(
+            + text(
                 "TXT_KEY_ESPIONAGE_SCREEN_TOTAL_NUM_EPS",
-                (pActivePlayer.getCommerceRate(CommerceTypes.COMMERCE_ESPIONAGE),),
+                pActivePlayer.getCommerceRate(CommerceTypes.COMMERCE_ESPIONAGE),
             )
             + "</font>"
         )
@@ -338,7 +338,7 @@ class CvEspionageAdvisor:
         if self.iTargetPlayer != -1:
 
             self.szCitiesTitleText = "CitiesTitle"
-            szText = u"<font=4>" + localText.getText("TXT_KEY_CONCEPT_CITIES", ()) + "</font>"
+            szText = u"<font=4>" + text("TXT_KEY_CONCEPT_CITIES") + "</font>"
             screen.setLabel(
                 self.szCitiesTitleText,
                 "Background",
@@ -354,11 +354,7 @@ class CvEspionageAdvisor:
             )
 
             self.szEffectsTitleText = "EffectsTitle"
-            szText = (
-                u"<font=4>"
-                + localText.getText("TXT_KEY_ESPIONAGE_SCREEN_PASSIVE_EFFECTS", ())
-                + "</font>"
-            )
+            szText = u"<font=4>" + text("TXT_KEY_ESPIONAGE_SCREEN_PASSIVE_EFFECTS") + "</font>"
             screen.setLabel(
                 self.szEffectsTitleText,
                 "Background",
@@ -374,11 +370,7 @@ class CvEspionageAdvisor:
             )
 
             self.szMissionsTitleText = "MissionsTitle"
-            szText = (
-                u"<font=4>"
-                + localText.getText("TXT_KEY_ESPIONAGE_SCREEN_MISSIONS", ())
-                + "</font>"
-            )
+            szText = u"<font=4>" + text("TXT_KEY_ESPIONAGE_SCREEN_MISSIONS") + "</font>"
             screen.setLabel(
                 self.szMissionsTitleText,
                 "Background",
@@ -394,9 +386,7 @@ class CvEspionageAdvisor:
             )
 
             self.szEffectsCostTitleText = "EffectsCostTitle"
-            szText = (
-                u"<font=4>" + localText.getText("TXT_KEY_ESPIONAGE_SCREEN_COST", ()) + "</font>"
-            )
+            szText = u"<font=4>" + text("TXT_KEY_ESPIONAGE_SCREEN_COST") + "</font>"
             screen.setLabel(
                 self.szEffectsCostTitleText,
                 "Background",
@@ -412,9 +402,7 @@ class CvEspionageAdvisor:
             )
 
             self.szMissionsCostTitleText = "MissionsCostTitle"
-            szText = (
-                u"<font=4>" + localText.getText("TXT_KEY_ESPIONAGE_SCREEN_COST", ()) + "</font>"
-            )
+            szText = u"<font=4>" + text("TXT_KEY_ESPIONAGE_SCREEN_COST") + "</font>"
             screen.setLabel(
                 self.szMissionsCostTitleText,
                 "Background",
@@ -550,9 +538,9 @@ class CvEspionageAdvisor:
                 self.aszPointsTexts.append(szName)
                 szText = (
                     u"<font=2>"
-                    + localText.getText(
+                    + text(
                         "TXT_KEY_ESPIONAGE_NUM_EPS",
-                        (pActiveTeam.getEspionagePointsAgainstTeam(iTargetTeam),),
+                        pActiveTeam.getEspionagePointsAgainstTeam(iTargetTeam),
                     )
                     + "</font>"
                 )
@@ -575,7 +563,7 @@ class CvEspionageAdvisor:
                 szName = "SpendingText%d" % (iPlayerID)
                 self.aszSpendingTexts.append(szName)
                 szText = u"<font=2>%s: %d</font>" % (
-                    localText.getText("TXT_KEY_ESPIONAGE_SCREEN_SPENDING_WEIGHT", ()),
+                    text("TXT_KEY_ESPIONAGE_SCREEN_SPENDING_WEIGHT"),
                     pActivePlayer.getEspionageSpendingWeightAgainstTeam(iTargetTeam),
                 )
                 screen.setLabelAt(
@@ -596,16 +584,16 @@ class CvEspionageAdvisor:
                 self.aszAmountTexts.append(szName)
                 if pActivePlayer.getEspionageSpending(iTargetTeam) > 0:
                     szText = u"<font=2><color=0,255,0,0>%s</color></font>" % (
-                        localText.getText(
+                        text(
                             "TXT_KEY_ESPIONAGE_NUM_EPS_PER_TURN",
-                            (pActivePlayer.getEspionageSpending(iTargetTeam),),
+                            pActivePlayer.getEspionageSpending(iTargetTeam),
                         )
                     )
                 else:
                     szText = u"<font=2><color=192,0,0,0>%s</color></font>" % (
-                        localText.getText(
+                        text(
                             "TXT_KEY_ESPIONAGE_NUM_EPS_PER_TURN",
-                            (pActivePlayer.getEspionageSpending(iTargetTeam),),
+                            pActivePlayer.getEspionageSpending(iTargetTeam),
                         )
                     )
 
@@ -705,9 +693,9 @@ class CvEspionageAdvisor:
         pTargetPlayer = gc.getPlayer(iTargetPlayer)
         pTargetTeam = gc.getTeam(pTargetPlayer.getTeam())
 
-        szMultiplier = localText.getText(
+        szMultiplier = text(
             "TXT_KEY_ESPIONAGE_COST",
-            (getEspionageModifier(pActivePlayer.getTeam(), pTargetPlayer.getTeam()),),
+            getEspionageModifier(pActivePlayer.getTeam(), pTargetPlayer.getTeam()),
         )
 
         if pActiveTeam.getCounterespionageTurnsLeftAgainstTeam(pTargetPlayer.getTeam()) > 0:
@@ -746,7 +734,7 @@ class CvEspionageAdvisor:
                 self.aszSpendingTexts.append(szName)
                 szText = (
                     u"<font=2>"
-                    + localText.getText("TXT_KEY_ESPIONAGE_SCREEN_SPENDING_WEIGHT", ())
+                    + text("TXT_KEY_ESPIONAGE_SCREEN_SPENDING_WEIGHT")
                     + ": %d</font>"
                     % (pActivePlayer.getEspionageSpendingWeightAgainstTeam(iTargetTeam))
                 )
@@ -769,16 +757,16 @@ class CvEspionageAdvisor:
 
                 if pActivePlayer.getEspionageSpending(iTargetTeam) > 0:
                     szText = u"<font=2><color=0,255,0,0>%s</color></font>" % (
-                        localText.getText(
+                        text(
                             "TXT_KEY_ESPIONAGE_NUM_EPS_PER_TURN",
-                            (pActivePlayer.getEspionageSpending(iTargetTeam),),
+                            pActivePlayer.getEspionageSpending(iTargetTeam),
                         )
                     )
                 else:
                     szText = u"<font=2><color=192,0,0,0>%s</color></font>" % (
-                        localText.getText(
+                        text(
                             "TXT_KEY_ESPIONAGE_NUM_EPS_PER_TURN",
-                            (pActivePlayer.getEspionageSpending(iTargetTeam),),
+                            pActivePlayer.getEspionageSpending(iTargetTeam),
                         )
                     )
 
@@ -882,7 +870,7 @@ class CvEspionageAdvisor:
                 self.W_TABLE_3 = 20
 
                 szEffectsTable = self.getNextWidgetName()
-                szHelpText = localText.getText("TXT_KEY_ESPIONAGE_PASSIVE_AUTOMATIC", ())
+                szHelpText = text("TXT_KEY_ESPIONAGE_PASSIVE_AUTOMATIC")
                 screen.addTableControlGFCWithHelp(
                     szEffectsTable,
                     4,
@@ -906,7 +894,7 @@ class CvEspionageAdvisor:
                 screen.setTableColumnHeader(szEffectsTable, 3, "", self.W_TABLE_3)
 
                 szMissionsTable = self.getNextWidgetName()
-                szHelpText = localText.getText("TXT_KEY_ESPIONAGE_MISSIONS_SPY", ())
+                szHelpText = text("TXT_KEY_ESPIONAGE_MISSIONS_SPY")
                 screen.addTableControlGFCWithHelp(
                     szMissionsTable,
                     4,
@@ -1116,16 +1104,16 @@ class CvEspionageAdvisor:
 
                     if pActivePlayer.getEspionageSpending(iTargetTeam) > 0:
                         szText = u"<font=2><color=0,255,0,0>%s</color></font>" % (
-                            localText.getText(
+                            text(
                                 "TXT_KEY_ESPIONAGE_NUM_EPS_PER_TURN",
-                                (pActivePlayer.getEspionageSpending(iTargetTeam),),
+                                pActivePlayer.getEspionageSpending(iTargetTeam),
                             )
                         )
                     else:
                         szText = u"<font=2><color=192,0,0,0>%s</color></font>" % (
-                            localText.getText(
+                            text(
                                 "TXT_KEY_ESPIONAGE_NUM_EPS_PER_TURN",
-                                (pActivePlayer.getEspionageSpending(iTargetTeam),),
+                                pActivePlayer.getEspionageSpending(iTargetTeam),
                             )
                         )
 
@@ -1181,16 +1169,16 @@ class CvEspionageAdvisor:
 
                         if pActivePlayer.getEspionageSpending(iTargetTeam) > 0:
                             szText = u"<font=2><color=0,255,0,0>%s</color></font>" % (
-                                localText.getText(
+                                text(
                                     "TXT_KEY_ESPIONAGE_NUM_EPS_PER_TURN",
-                                    (pActivePlayer.getEspionageSpending(iTargetTeam),),
+                                    pActivePlayer.getEspionageSpending(iTargetTeam),
                                 )
                             )
                         else:
                             szText = u"<font=2><color=192,0,0,0>%s</color></font>" % (
-                                localText.getText(
+                                text(
                                     "TXT_KEY_ESPIONAGE_NUM_EPS_PER_TURN",
-                                    (pActivePlayer.getEspionageSpending(iTargetTeam),),
+                                    pActivePlayer.getEspionageSpending(iTargetTeam),
                                 )
                             )
 

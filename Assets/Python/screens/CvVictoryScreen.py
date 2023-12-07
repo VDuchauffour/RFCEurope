@@ -2,6 +2,7 @@
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization, COMPANIES
+from CoreFunctions import text
 from CoreStructures import turn
 from CoreTypes import (
     Building,
@@ -190,7 +191,7 @@ class CvVictoryScreen:
         screen.setText(
             self.EXIT_ID,
             "Background",
-            u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + "</font>",
+            u"<font=4>" + text("TXT_KEY_PEDIA_SCREEN_EXIT").upper() + "</font>",
             CvUtil.FONT_RIGHT_JUSTIFY,
             self.X_EXIT,
             self.Y_EXIT,
@@ -205,9 +206,7 @@ class CvVictoryScreen:
         screen.setLabel(
             self.HEADER_ID,
             "Background",
-            u"<font=4b>"
-            + localText.getText("TXT_KEY_VICTORY_SCREEN_TITLE", ()).upper()
-            + u"</font>",
+            u"<font=4b>" + text("TXT_KEY_VICTORY_SCREEN_TITLE").upper() + u"</font>",
             CvUtil.FONT_CENTER_JUSTIFY,
             self.X_SCREEN,
             self.Y_TITLE,
@@ -236,9 +235,7 @@ class CvVictoryScreen:
             screen.setText(
                 self.VC_TAB_ID,
                 "",
-                u"<font=4>"
-                + localText.getText("TXT_KEY_MAIN_MENU_VICTORIES", ()).upper()
-                + "</font>",
+                u"<font=4>" + text("TXT_KEY_MAIN_MENU_VICTORIES").upper() + "</font>",
                 CvUtil.FONT_CENTER_JUSTIFY,
                 xLink,
                 self.Y_LINK,
@@ -272,9 +269,7 @@ class CvVictoryScreen:
             screen.setText(
                 self.SETTINGS_TAB_ID,
                 "",
-                u"<font=4>"
-                + localText.getText("TXT_KEY_MAIN_MENU_SETTINGS", ()).upper()
-                + "</font>",
+                u"<font=4>" + text("TXT_KEY_MAIN_MENU_SETTINGS").upper() + "</font>",
                 CvUtil.FONT_CENTER_JUSTIFY,
                 xLink,
                 self.Y_LINK,
@@ -309,9 +304,7 @@ class CvVictoryScreen:
                 screen.setText(
                     self.UN_RESOLUTION_TAB_ID,
                     "",
-                    u"<font=4>"
-                    + localText.getText("TXT_KEY_VOTING_TITLE", ()).upper()
-                    + "</font>",
+                    u"<font=4>" + text("TXT_KEY_VOTING_TITLE").upper() + "</font>",
                     CvUtil.FONT_CENTER_JUSTIFY,
                     xLink,
                     self.Y_LINK,
@@ -345,9 +338,7 @@ class CvVictoryScreen:
                 screen.setText(
                     self.UN_MEMBERS_TAB_ID,
                     "",
-                    u"<font=4>"
-                    + localText.getText("TXT_KEY_MEMBERS_TITLE", ()).upper()
-                    + "</font>",
+                    u"<font=4>" + text("TXT_KEY_MEMBERS_TITLE").upper() + "</font>",
                     CvUtil.FONT_CENTER_JUSTIFY,
                     xLink,
                     self.Y_LINK,
@@ -456,9 +447,9 @@ class CvVictoryScreen:
                 szTable,
                 0,
                 iRow,
-                localText.getText(
+                text(
                     "TXT_KEY_VICTORY_SCREEN_ELECTION",
-                    (gc.getBuildingClassInfo(iVoteBuildingClass).getTextKey(),),
+                    gc.getBuildingClassInfo(iVoteBuildingClass).getTextKey(),
                 ),
                 "",
                 WidgetTypes.WIDGET_GENERAL,
@@ -468,7 +459,7 @@ class CvVictoryScreen:
             )
             if iUNTeam != -1:
                 if bUnknown:
-                    szName = localText.getText("TXT_KEY_TOPCIVS_UNKNOWN", ())
+                    szName = text("TXT_KEY_TOPCIVS_UNKNOWN")
                 else:
                     # Rhye - start
                     # szName = gc.getTeam(iUNTeam).getName()
@@ -478,7 +469,7 @@ class CvVictoryScreen:
                     szTable,
                     1,
                     iRow,
-                    localText.getText("TXT_KEY_VICTORY_SCREEN_BUILT", (szName,)),
+                    text("TXT_KEY_VICTORY_SCREEN_BUILT", szName),
                     "",
                     WidgetTypes.WIDGET_GENERAL,
                     -1,
@@ -490,7 +481,7 @@ class CvVictoryScreen:
                     szTable,
                     1,
                     iRow,
-                    localText.getText("TXT_KEY_VICTORY_SCREEN_NOT_BUILT", ()),
+                    text("TXT_KEY_VICTORY_SCREEN_NOT_BUILT"),
                     "",
                     WidgetTypes.WIDGET_GENERAL,
                     -1,
@@ -547,7 +538,7 @@ class CvVictoryScreen:
                                 szTable,
                                 1,
                                 iRow,
-                                localText.getText("TXT_KEY_POPUP_PASSED", ()),
+                                text("TXT_KEY_POPUP_PASSED"),
                                 "",
                                 WidgetTypes.WIDGET_GENERAL,
                                 -1,
@@ -559,13 +550,11 @@ class CvVictoryScreen:
                                 szTable,
                                 1,
                                 iRow,
-                                localText.getText(
+                                text(
                                     "TXT_KEY_POPUP_ELECTION_OPTION",
-                                    (
-                                        u"",
-                                        gc.getGame().getVoteRequired(iLoop, i),
-                                        gc.getGame().countPossibleVote(iLoop, i),
-                                    ),
+                                    u"",
+                                    gc.getGame().getVoteRequired(iLoop, i),
+                                    gc.getGame().countPossibleVote(iLoop, i),
                                 ),
                                 "",
                                 WidgetTypes.WIDGET_GENERAL,
@@ -660,9 +649,9 @@ class CvVictoryScreen:
                         # szPlayerText = gc.getPlayer(j).getName() #Rhye
                         szPlayerText = gc.getPlayer(j).getCivilizationShortDescription(0)  # Rhye
                         if -1 != iSecretaryGeneralVote:
-                            szPlayerText += localText.getText(
+                            szPlayerText += text(
                                 "TXT_KEY_VICTORY_SCREEN_PLAYER_VOTES",
-                                (gc.getPlayer(j).getVotes(iSecretaryGeneralVote, i),),
+                                gc.getPlayer(j).getVotes(iSecretaryGeneralVote, i),
                             )
                         if (
                             gc.getGame().canHaveSecretaryGeneral(i)
@@ -708,7 +697,7 @@ class CvVictoryScreen:
                                 szTable,
                                 1,
                                 iRow,
-                                localText.getText("TXT_KEY_VOTESOURCE_FULL_MEMBER", ()),
+                                text("TXT_KEY_VOTESOURCE_FULL_MEMBER"),
                                 "",
                                 WidgetTypes.WIDGET_GENERAL,
                                 -1,
@@ -732,7 +721,7 @@ class CvVictoryScreen:
                                 szTable,
                                 1,
                                 iRow,
-                                localText.getText("TXT_KEY_VOTESOURCE_VOTING_MEMBER", ()),
+                                text("TXT_KEY_VOTESOURCE_VOTING_MEMBER"),
                                 "",
                                 WidgetTypes.WIDGET_GENERAL,
                                 -1,
@@ -754,7 +743,7 @@ class CvVictoryScreen:
         szSettingsPanel = self.getNextWidgetName()
         screen.addPanel(
             szSettingsPanel,
-            localText.getText("TXT_KEY_MAIN_MENU_SETTINGS", ()).upper(),
+            text("TXT_KEY_MAIN_MENU_SETTINGS").upper(),
             "",
             True,
             True,
@@ -778,9 +767,10 @@ class CvVictoryScreen:
 
         screen.appendListBoxStringNoUpdate(
             szSettingsTable,
-            localText.getText(
+            text(
                 "TXT_KEY_LEADER_CIV_DESCRIPTION",
-                (activePlayer.getNameKey(), activePlayer.getCivilizationShortDescriptionKey()),
+                activePlayer.getNameKey(),
+                activePlayer.getCivilizationShortDescriptionKey(),
             ),
             WidgetTypes.WIDGET_GENERAL,
             -1,
@@ -794,9 +784,9 @@ class CvVictoryScreen:
         )
         screen.appendListBoxStringNoUpdate(
             szSettingsTable,
-            localText.getText(
+            text(
                 "TXT_KEY_SETTINGS_DIFFICULTY",
-                (gc.getHandicapInfo(activePlayer.getHandicapType()).getTextKey(),),
+                gc.getHandicapInfo(activePlayer.getHandicapType()).getTextKey(),
             ),
             WidgetTypes.WIDGET_GENERAL,
             -1,
@@ -816,9 +806,9 @@ class CvVictoryScreen:
         )
         screen.appendListBoxStringNoUpdate(
             szSettingsTable,
-            localText.getText(
+            text(
                 "TXT_KEY_SETTINGS_MAP_SIZE",
-                (gc.getWorldInfo(gc.getMap().getWorldSize()).getTextKey(),),
+                gc.getWorldInfo(gc.getMap().getWorldSize()).getTextKey(),
             ),
             WidgetTypes.WIDGET_GENERAL,
             -1,
@@ -827,9 +817,9 @@ class CvVictoryScreen:
         )
         screen.appendListBoxStringNoUpdate(
             szSettingsTable,
-            localText.getText(
+            text(
                 "TXT_KEY_SETTINGS_CLIMATE",
-                (gc.getClimateInfo(gc.getMap().getClimate()).getTextKey(),),
+                gc.getClimateInfo(gc.getMap().getClimate()).getTextKey(),
             ),
             WidgetTypes.WIDGET_GENERAL,
             -1,
@@ -838,9 +828,9 @@ class CvVictoryScreen:
         )
         screen.appendListBoxStringNoUpdate(
             szSettingsTable,
-            localText.getText(
+            text(
                 "TXT_KEY_SETTINGS_SEA_LEVEL",
-                (gc.getSeaLevelInfo(gc.getMap().getSeaLevel()).getTextKey(),),
+                gc.getSeaLevelInfo(gc.getMap().getSeaLevel()).getTextKey(),
             ),
             WidgetTypes.WIDGET_GENERAL,
             -1,
@@ -852,9 +842,9 @@ class CvVictoryScreen:
         )
         screen.appendListBoxStringNoUpdate(
             szSettingsTable,
-            localText.getText(
+            text(
                 "TXT_KEY_SETTINGS_STARTING_ERA",
-                (gc.getEraInfo(gc.getGame().getStartEra()).getTextKey(),),
+                gc.getEraInfo(gc.getGame().getStartEra()).getTextKey(),
             ),
             WidgetTypes.WIDGET_GENERAL,
             -1,
@@ -863,9 +853,9 @@ class CvVictoryScreen:
         )
         screen.appendListBoxStringNoUpdate(
             szSettingsTable,
-            localText.getText(
+            text(
                 "TXT_KEY_SETTINGS_GAME_SPEED",
-                (gc.getGameSpeedInfo(gc.getGame().getGameSpeedType()).getTextKey(),),
+                gc.getGameSpeedInfo(gc.getGame().getGameSpeedType()).getTextKey(),
             ),
             WidgetTypes.WIDGET_GENERAL,
             -1,
@@ -878,7 +868,7 @@ class CvVictoryScreen:
         szOptionsPanel = self.getNextWidgetName()
         screen.addPanel(
             szOptionsPanel,
-            localText.getText("TXT_KEY_MAIN_MENU_CUSTOM_SETUP_OPTIONS", ()).upper(),
+            text("TXT_KEY_MAIN_MENU_CUSTOM_SETUP_OPTIONS").upper(),
             "",
             True,
             True,
@@ -913,7 +903,7 @@ class CvVictoryScreen:
 
         if gc.getGame().isOption(GameOptionTypes.GAMEOPTION_ADVANCED_START):
             szNumPoints = u"%s %d" % (
-                localText.getText("TXT_KEY_ADVANCED_START_POINTS", ()),
+                text("TXT_KEY_ADVANCED_START_POINTS"),
                 gc.getGame().getNumAdvancedStartPoints(),
             )
             screen.appendListBoxStringNoUpdate(
@@ -939,7 +929,7 @@ class CvVictoryScreen:
 
             if gc.getGame().getMaxTurns() > 0:
                 szMaxTurns = u"%s %d" % (
-                    localText.getText("TXT_KEY_TURN_LIMIT_TAG", ()),
+                    text("TXT_KEY_TURN_LIMIT_TAG"),
                     gc.getGame().getMaxTurns(),
                 )
                 screen.appendListBoxStringNoUpdate(
@@ -953,7 +943,7 @@ class CvVictoryScreen:
 
             if gc.getGame().getMaxCityElimination() > 0:
                 szMaxCityElimination = u"%s %d" % (
-                    localText.getText("TXT_KEY_CITY_ELIM_TAG", ()),
+                    text("TXT_KEY_CITY_ELIM_TAG"),
                     gc.getGame().getMaxCityElimination(),
                 )
                 screen.appendListBoxStringNoUpdate(
@@ -980,7 +970,7 @@ class CvVictoryScreen:
         szCivsPanel = self.getNextWidgetName()
         screen.addPanel(
             szCivsPanel,
-            localText.getText("TXT_KEY_RIVALS_MET", ()).upper(),
+            text("TXT_KEY_RIVALS_MET").upper(),
             "",
             True,
             True,
@@ -1017,9 +1007,10 @@ class CvVictoryScreen:
             ):
                 screen.appendListBoxStringNoUpdate(
                     szCivsTable,
-                    localText.getText(
+                    text(
                         "TXT_KEY_LEADER_CIV_DESCRIPTION",
-                        (player.getNameKey(), player.getCivilizationShortDescriptionKey()),
+                        player.getNameKey(),
+                        player.getCivilizationShortDescriptionKey(),
                     ),
                     WidgetTypes.WIDGET_GENERAL,
                     -1,
@@ -1240,9 +1231,9 @@ class CvVictoryScreen:
                 ):
                     szVictoryType += (
                         "    ("
-                        + localText.getText(
+                        + text(
                             "TXT_KEY_MISC_TURNS_LEFT",
-                            (gc.getGame().getMaxTurns() - gc.getGame().getElapsedGameTurns(),),
+                            gc.getGame().getMaxTurns() - gc.getGame().getElapsedGameTurns(),
                         )
                         + ")"
                     )
@@ -1270,9 +1261,7 @@ class CvVictoryScreen:
                         szTable,
                         0,
                         iRow,
-                        localText.getText(
-                            "TXT_KEY_VICTORY_SCREEN_TARGET_SCORE", (gc.getGame().getTargetScore(),)
-                        ),
+                        text("TXT_KEY_VICTORY_SCREEN_TARGET_SCORE", gc.getGame().getTargetScore()),
                         "",
                         WidgetTypes.WIDGET_GENERAL,
                         -1,
@@ -1336,12 +1325,10 @@ class CvVictoryScreen:
 
                 if victory.isEndScore():
 
-                    szText1 = localText.getText(
+                    szText1 = text(
                         "TXT_KEY_VICTORY_SCREEN_HIGHEST_SCORE",
-                        (
-                            CyGameTextMgr().getTimeStr(
-                                gc.getGame().getStartTurn() + gc.getGame().getMaxTurns(), False
-                            ),
+                        CyGameTextMgr().getTimeStr(
+                            gc.getGame().getStartTurn() + gc.getGame().getMaxTurns(), False
                         ),
                     )
 
@@ -1418,7 +1405,7 @@ class CvVictoryScreen:
                         szTable,
                         0,
                         iRow,
-                        localText.getText("TXT_KEY_VICTORY_SCREEN_ELIMINATE_ALL", ()),
+                        text("TXT_KEY_VICTORY_SCREEN_ELIMINATE_ALL"),
                         "",
                         WidgetTypes.WIDGET_GENERAL,
                         -1,
@@ -1429,7 +1416,7 @@ class CvVictoryScreen:
                         szTable,
                         2,
                         iRow,
-                        localText.getText("TXT_KEY_VICTORY_SCREEN_RIVALS_LEFT", ()),
+                        text("TXT_KEY_VICTORY_SCREEN_RIVALS_LEFT"),
                         "",
                         WidgetTypes.WIDGET_GENERAL,
                         -1,
@@ -1455,9 +1442,9 @@ class CvVictoryScreen:
                         szTable,
                         0,
                         iRow,
-                        localText.getText(
+                        text(
                             "TXT_KEY_VICTORY_SCREEN_PERCENT_POP",
-                            (gc.getGame().getAdjustedPopulationPercent(iLoopVC),),
+                            gc.getGame().getAdjustedPopulationPercent(iLoopVC),
                         ),
                         "",
                         WidgetTypes.WIDGET_GENERAL,
@@ -1524,9 +1511,9 @@ class CvVictoryScreen:
                         szTable,
                         0,
                         iRow,
-                        localText.getText(
+                        text(
                             "TXT_KEY_VICTORY_SCREEN_PERCENT_LAND",
-                            (gc.getGame().getAdjustedLandPercent(iLoopVC),),
+                            gc.getGame().getAdjustedLandPercent(iLoopVC),
                         ),
                         "",
                         WidgetTypes.WIDGET_GENERAL,
@@ -1593,9 +1580,8 @@ class CvVictoryScreen:
                         szTable,
                         0,
                         iRow,
-                        localText.getText(
-                            "TXT_KEY_VICTORY_SCREEN_PERCENT_RELIGION",
-                            (victory.getReligionPercent(),),
+                        text(
+                            "TXT_KEY_VICTORY_SCREEN_PERCENT_RELIGION", victory.getReligionPercent()
                         ),
                         "",
                         WidgetTypes.WIDGET_GENERAL,
@@ -1683,9 +1669,9 @@ class CvVictoryScreen:
                         szTable,
                         0,
                         iRow,
-                        localText.getText(
+                        text(
                             "TXT_KEY_VICTORY_SCREEN_PERCENT_CULTURE",
-                            (int((100.0 * bestCulture) / victory.getTotalCultureRatio()),),
+                            int((100.0 * bestCulture) / victory.getTotalCultureRatio()),
                         ),
                         "",
                         WidgetTypes.WIDGET_GENERAL,
@@ -1775,9 +1761,10 @@ class CvVictoryScreen:
                             szTable,
                             0,
                             iRow,
-                            localText.getText(
+                            text(
                                 "TXT_KEY_VICTORY_SCREEN_BUILDING",
-                                (szNumber, gc.getBuildingClassInfo(i).getTextKey()),
+                                szNumber,
+                                gc.getBuildingClassInfo(i).getTextKey(),
                             ),
                             "",
                             WidgetTypes.WIDGET_GENERAL,
@@ -1876,9 +1863,10 @@ class CvVictoryScreen:
                             szTable,
                             0,
                             iRow,
-                            localText.getText(
+                            text(
                                 "TXT_KEY_VICTORY_SCREEN_BUILDING",
-                                (szNumber, gc.getProjectInfo(i).getTextKey()),
+                                szNumber,
+                                gc.getProjectInfo(i).getTextKey(),
                             ),
                             "",
                             WidgetTypes.WIDGET_GENERAL,
@@ -1950,7 +1938,7 @@ class CvVictoryScreen:
                 if bSpaceshipFound:
                     screen.setButtonGFC(
                         "SpaceShipButton" + str(iLoopVC),
-                        localText.getText("TXT_KEY_GLOBELAYER_STRATEGY_VIEW", ()),
+                        text("TXT_KEY_GLOBELAYER_STRATEGY_VIEW"),
                         "",
                         0,
                         0,
@@ -1974,7 +1962,7 @@ class CvVictoryScreen:
                             szTable,
                             2,
                             iVictoryTitleRow,
-                            localText.getText("TXT_KEY_SPACE_SHIP_SCREEN_ARRIVAL", ()) + ":",
+                            text("TXT_KEY_SPACE_SHIP_SCREEN_ARRIVAL") + ":",
                             "",
                             WidgetTypes.WIDGET_GENERAL,
                             -1,
@@ -1996,7 +1984,7 @@ class CvVictoryScreen:
                             szTable,
                             4,
                             iVictoryTitleRow,
-                            localText.getText("TXT_KEY_REPLAY_SCREEN_TURNS", ()) + ":",
+                            text("TXT_KEY_REPLAY_SCREEN_TURNS") + ":",
                             "",
                             WidgetTypes.WIDGET_GENERAL,
                             -1,
@@ -2022,9 +2010,9 @@ class CvVictoryScreen:
                             szTable,
                             0,
                             iRow,
-                            localText.getText(
+                            text(
                                 "TXT_KEY_VICTORY_SCREEN_ELECTION",
-                                (gc.getBuildingClassInfo(iVoteBuildingClass).getTextKey(),),
+                                gc.getBuildingClassInfo(iVoteBuildingClass).getTextKey(),
                             ),
                             "",
                             WidgetTypes.WIDGET_GENERAL,
@@ -2034,7 +2022,7 @@ class CvVictoryScreen:
                         )
                         if iUNTeam != -1:
                             if bUnknown:
-                                szName = localText.getText("TXT_KEY_TOPCIVS_UNKNOWN", ())
+                                szName = text("TXT_KEY_TOPCIVS_UNKNOWN")
                             else:
                                 # Rhye - start
                                 # szName = gc.getTeam(iUNTeam).getName()
@@ -2044,7 +2032,7 @@ class CvVictoryScreen:
                                 szTable,
                                 2,
                                 iRow,
-                                localText.getText("TXT_KEY_VICTORY_SCREEN_BUILT", (szName,)),
+                                text("TXT_KEY_VICTORY_SCREEN_BUILT", szName),
                                 "",
                                 WidgetTypes.WIDGET_GENERAL,
                                 -1,
@@ -2056,7 +2044,7 @@ class CvVictoryScreen:
                                 szTable,
                                 2,
                                 iRow,
-                                localText.getText("TXT_KEY_VICTORY_SCREEN_NOT_BUILT", ()),
+                                text("TXT_KEY_VICTORY_SCREEN_NOT_BUILT"),
                                 "",
                                 WidgetTypes.WIDGET_GENERAL,
                                 -1,
@@ -2117,12 +2105,10 @@ class CvVictoryScreen:
                         szTable,
                         0,
                         iRow,
-                        localText.getText(
+                        text(
                             "TXT_KEY_VICTORY_SCREEN_CITY_CULTURE",
-                            (
-                                victory.getNumCultureCities(),
-                                gc.getCultureLevelInfo(victory.getCityCulture()).getTextKey(),
-                            ),
+                            victory.getNumCultureCities(),
+                            gc.getCultureLevelInfo(victory.getCityCulture()).getTextKey(),
                         ),
                         "",
                         WidgetTypes.WIDGET_GENERAL,
@@ -2186,14 +2172,14 @@ class CvVictoryScreen:
                 # if (iLoopVC == 7):
                 # for i in range(3):
                 # iRow = screen.appendTableRow(szTable)
-                # screen.setTableText(szTable, 0, iRow, localText.getText(tGoals[self.iActivePlayer][i], ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-                # screen.setTableText(szTable, 2, iRow, localText.getText("TXT_KEY_VICTORY_SCREEN_ACCOMPLISHED", ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+                # screen.setTableText(szTable, 0, iRow, text(tGoals[self.iActivePlayer][i]), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+                # screen.setTableText(szTable, 2, iRow, text("TXT_KEY_VICTORY_SCREEN_ACCOMPLISHED"), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                 # if (utils.getGoal(self.iActivePlayer, i) == 1):
-                # screen.setTableText(szTable, 3, iRow, localText.getText("TXT_KEY_VICTORY_SCREEN_YES", ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+                # screen.setTableText(szTable, 3, iRow, text("TXT_KEY_VICTORY_SCREEN_YES"), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                 # elif (utils.getGoal(self.iActivePlayer, i) == 0):
-                # screen.setTableText(szTable, 3, iRow, localText.getText("TXT_KEY_VICTORY_SCREEN_NO", ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+                # screen.setTableText(szTable, 3, iRow, text("TXT_KEY_VICTORY_SCREEN_NO"), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                 # else:
-                # screen.setTableText(szTable, 3, iRow, localText.getText("TXT_KEY_VICTORY_SCREEN_NOTYET", ()), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+                # screen.setTableText(szTable, 3, iRow, text("TXT_KEY_VICTORY_SCREEN_NOTYET"), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
                 # bEntriesFound = True
                 # Rhye - end
 
@@ -2337,7 +2323,7 @@ class CvVictoryScreen:
         for iProv in tProvsToCheck:
             iNumCities += pPlayer.getProvinceCityCount(iProv)
         sText1 += (
-            localText.getText("TXT_KEY_UHV_CITIES_CONTROLLED", ())
+            text("TXT_KEY_UHV_CITIES_CONTROLLED")
             + " "
             + self.determineColor(iNumCities >= 6, str(iNumCities))
         )
@@ -2346,13 +2332,11 @@ class CvVictoryScreen:
         # UHV3
         tConstantinople = civilization(iPlayer).location.capital
         pConstantinople = gc.getMap().plot(tConstantinople[0], tConstantinople[1]).getPlotCity()
-        sConstantinopleName = localText.getText("TXT_KEY_CITY_NAME_CONSTANTINOPLE", ())
+        sConstantinopleName = text("TXT_KEY_CITY_NAME_CONSTANTINOPLE")
         if self.checkCity(tConstantinople, iPlayer, sConstantinopleName) == -1:
             # size
-            sLargest = sConstantinopleName + " " + localText.getText("TXT_KEY_UHV_IS_LARGEST", ())
-            sNotLargest = (
-                sConstantinopleName + " " + localText.getText("TXT_KEY_UHV_IS_NOT_LARGEST", ())
-            )
+            sLargest = sConstantinopleName + " " + text("TXT_KEY_UHV_IS_LARGEST")
+            sNotLargest = sConstantinopleName + " " + text("TXT_KEY_UHV_IS_NOT_LARGEST")
             bIsLargest = gc.isLargestCity(tConstantinople[0], tConstantinople[1])
             sText3 += self.determineColor(bIsLargest, sLargest, sNotLargest)
             iTopCompetitorData = gc.getLargestOtherCity(tConstantinople[0], tConstantinople[1])
@@ -2373,12 +2357,8 @@ class CvVictoryScreen:
                     + ")"
                 )
             # culture
-            sCultural = (
-                sConstantinopleName + " " + localText.getText("TXT_KEY_UHV_IS_CULTURAL", ())
-            )
-            sNotCultural = (
-                sConstantinopleName + " " + localText.getText("TXT_KEY_UHV_IS_NOT_CULTURAL", ())
-            )
+            sCultural = sConstantinopleName + " " + text("TXT_KEY_UHV_IS_CULTURAL")
+            sNotCultural = sConstantinopleName + " " + text("TXT_KEY_UHV_IS_NOT_CULTURAL")
             bIsTopCulture = gc.isTopCultureCity(tConstantinople[0], tConstantinople[1])
             sText3 += "\n" + self.determineColor(bIsTopCulture, sCultural, sNotCultural)
             iTopCompetitorData = gc.getTopCultureOtherCity(tConstantinople[0], tConstantinople[1])
@@ -2413,9 +2393,7 @@ class CvVictoryScreen:
         sText1 += self.getProvinceString(vic.tFrankControl)
         # UHV2
         tPlot = CITIES[City.JERUSALEM]
-        sText2 += self.checkCity(
-            tPlot, iPlayer, localText.getText("TXT_KEY_UHV_JERUSALEM", ()), True
-        )
+        sText2 += self.checkCity(tPlot, iPlayer, text("TXT_KEY_UHV_JERUSALEM"), True)
         # UHV3
         sText3 += self.getNumColoniesString(5)
         lHelpTexts = [sText1, sText2, sText3]
@@ -2434,28 +2412,21 @@ class CvVictoryScreen:
             pMostAdvancedCiv = gc.getPlayer(iMostAdvancedCiv)
             sCivShortName = str(pMostAdvancedCiv.getCivilizationShortDescriptionKey())
             sText2 += (
-                localText.getText("TXT_KEY_UHV_MOST_ADVANCED_CIV", ())
+                text("TXT_KEY_UHV_MOST_ADVANCED_CIV")
                 + ": "
-                + self.determineColor(
-                    iMostAdvancedCiv == iPlayer, localText.getText(sCivShortName, ())
-                )
+                + self.determineColor(iMostAdvancedCiv == iPlayer, text(sCivShortName))
             )
         else:
             sText2 += (
-                localText.getText("TXT_KEY_UHV_MOST_ADVANCED_CIV", ())
+                text("TXT_KEY_UHV_MOST_ADVANCED_CIV")
                 + ": "
-                + u"<color=255,54,6>%s</color>"
-                % (localText.getText("TXT_KEY_UHV_NO_MOST_ADVANCED_CIV", ()))
+                + u"<color=255,54,6>%s</color>" % (text("TXT_KEY_UHV_NO_MOST_ADVANCED_CIV"))
             )
         sText2 += "\n" + self.getProvinceString(vic.tArabiaControlII)
         # UHV3
         iPerc = gc.getGame().calculateReligionPercent(Religion.ISLAM.value)
         sPerc = str(iPerc) + "%"
-        sText3 += (
-            localText.getText("TXT_KEY_UHV_ISLAM", ())
-            + ": "
-            + self.determineColor(iPerc > 35, sPerc)
-        )
+        sText3 += text("TXT_KEY_UHV_ISLAM") + ": " + self.determineColor(iPerc > 35, sPerc)
         lHelpTexts = [sText1, sText2, sText3]
         return lHelpTexts
 
@@ -2468,7 +2439,7 @@ class CvVictoryScreen:
         # UHV2
         iFaith = pPlayer.getFaith()
         sText2 += (
-            localText.getText("TXT_KEY_UHV_FAITH_POINTS", ())
+            text("TXT_KEY_UHV_FAITH_POINTS")
             + ": "
             + self.determineColor(iFaith >= 100, str(iFaith))
         )
@@ -2476,14 +2447,12 @@ class CvVictoryScreen:
         sText3 = (
             "\n"
             + u"<color=142,148,124>"
-            + localText.getText("TXT_KEY_UHV_BUL3_HELP", ())
+            + text("TXT_KEY_UHV_BUL3_HELP")
             + u"</color>"
             + u"<font=1>\n\n</font>"
         )
         iGoal = pPlayer.getUHV(2)
-        sText3 += self.determineColor(
-            iGoal != 0, localText.getText("TXT_KEY_UHV_NO_CITIES_LOST", ())
-        )
+        sText3 += self.determineColor(iGoal != 0, text("TXT_KEY_UHV_NO_CITIES_LOST"))
         lHelpTexts = [sText1, sText2, sText3]
         return lHelpTexts
 
@@ -2494,10 +2463,10 @@ class CvVictoryScreen:
         # UHV1
         tCordoba = civilization(iPlayer).location.capital
         pCordoba = gc.getMap().plot(tCordoba[0], tCordoba[1]).getPlotCity()
-        sCordobaName = localText.getText("TXT_KEY_CITY_NAME_CORDOBA", ())
+        sCordobaName = text("TXT_KEY_CITY_NAME_CORDOBA")
         if self.checkCity(tCordoba, iPlayer, sCordobaName) == -1:
-            sLargest = sCordobaName + " " + localText.getText("TXT_KEY_UHV_IS_LARGEST", ())
-            sNotLargest = sCordobaName + " " + localText.getText("TXT_KEY_UHV_IS_NOT_LARGEST", ())
+            sLargest = sCordobaName + " " + text("TXT_KEY_UHV_IS_LARGEST")
+            sNotLargest = sCordobaName + " " + text("TXT_KEY_UHV_IS_NOT_LARGEST")
             bIsLargest = gc.isLargestCity(tCordoba[0], tCordoba[1])
             sText1 += self.determineColor(bIsLargest, sLargest, sNotLargest)
             iTopCompetitorData = gc.getLargestOtherCity(tCordoba[0], tCordoba[1])
@@ -2535,24 +2504,19 @@ class CvVictoryScreen:
         # UHV2
         tConstantinople = civilization(Civ.BYZANTIUM).location.capital
         sText2 += self.checkCity(
-            tConstantinople,
-            iPlayer,
-            localText.getText("TXT_KEY_CITY_NAME_CONSTANTINOPLE", ()),
-            True,
+            tConstantinople, iPlayer, text("TXT_KEY_CITY_NAME_CONSTANTINOPLE"), True
         )
         sText2 += "\n" + self.getProvinceString(vic.tVenetianControlII)
         # UHV3
         sText3 = (
             "\n"
             + u"<color=142,148,124>"
-            + localText.getText("TXT_KEY_UHV_VEN3_HELP", ())
+            + text("TXT_KEY_UHV_VEN3_HELP")
             + u"</color>"
             + u"<font=1>\n\n</font>"
         )
         iGoal = pPlayer.getUHV(2)
-        sText3 += self.determineColor(
-            iGoal == -1, localText.getText("TXT_KEY_UHV_NO_COLONIES_YET", ())
-        )
+        sText3 += self.determineColor(iGoal == -1, text("TXT_KEY_UHV_NO_COLONIES_YET"))
         lHelpTexts = [sText1, sText2, sText3]
         return lHelpTexts
 
@@ -2563,7 +2527,7 @@ class CvVictoryScreen:
         # UHV1
         iCulture = pPlayer.getUHVCounter(0)
         sText1 += (
-            localText.getText("TXT_KEY_UHV_CULTURE", ())
+            text("TXT_KEY_UHV_CULTURE")
             + ": "
             + self.determineColor(iCulture >= 12000, str(iCulture))
         )
@@ -2582,7 +2546,7 @@ class CvVictoryScreen:
         sText1 += self.getProvinceString(vic.tGermanyControl)
         # UHV2
         iGoal = pPlayer.getUHV(1)
-        sTextGood = localText.getText("TXT_KEY_UHV_NOT_FOUND_YET", ())
+        sTextGood = text("TXT_KEY_UHV_NOT_FOUND_YET")
         sText2 += self.determineColor(
             iGoal != 0,
             gc.getReligionInfo(Religion.PROTESTANTISM.value).getDescription() + " " + sTextGood,
@@ -2602,7 +2566,7 @@ class CvVictoryScreen:
         sText2 = (
             "\n"
             + u"<color=142,148,124>"
-            + localText.getText("TXT_KEY_UHV_NOV2_HELP", ())
+            + text("TXT_KEY_UHV_NOV2_HELP")
             + u"</color>"
             + u"<font=1>\n\n</font>"
         )
@@ -2621,7 +2585,7 @@ class CvVictoryScreen:
         sText1 = (
             "\n"
             + u"<color=142,148,124>"
-            + localText.getText("TXT_KEY_UHV_NOR1_HELP", ())
+            + text("TXT_KEY_UHV_NOR1_HELP")
             + u"</color>"
             + u"<font=1>\n\n</font>"
         )
@@ -2629,12 +2593,12 @@ class CvVictoryScreen:
         sText1 += self.getCounterString(iCount, 100)
         sText1 += (
             "\n"
-            + localText.getText("TXT_KEY_PROJECT_VINLAND", ())
+            + text("TXT_KEY_PROJECT_VINLAND")
             + ": "
             + self.determineColor(
                 gc.getTeam(iPlayer).getProjectCount(Colony.VINLAND.value) >= 1,
-                localText.getText("TXT_KEY_UHV_EXPLORED", ()),
-                localText.getText("TXT_KEY_UHV_NOT_EXPLORED", ()),
+                text("TXT_KEY_UHV_EXPLORED"),
+                text("TXT_KEY_UHV_NOT_EXPLORED"),
             )
         )
         # UHV2
@@ -2651,8 +2615,8 @@ class CvVictoryScreen:
         # UHV1
         iKievCath = pPlayer.countNumBuildings(Building.ORTHODOX_CATHEDRAL.value)
         iKievMona = pPlayer.countNumBuildings(Building.ORTHODOX_MONASTERY.value)
-        sKievCath = localText.getText("TXT_KEY_BUILDING_ORTHODOX_CATHEDRAL", ()) + ": "
-        sKievMona = localText.getText("TXT_KEY_BUILDING_ORTHODOX_MONASTERY", ()) + ": "
+        sKievCath = text("TXT_KEY_BUILDING_ORTHODOX_CATHEDRAL") + ": "
+        sKievMona = text("TXT_KEY_BUILDING_ORTHODOX_MONASTERY") + ": "
         sText1 += sKievCath + self.determineColor(iKievCath >= 2, str(iKievCath))
         sText1 += "\n" + sKievMona + self.determineColor(iKievMona >= 8, str(iKievMona))
         # UHV2
@@ -2676,9 +2640,7 @@ class CvVictoryScreen:
         )
         # UHV3
         iGoal = pPlayer.getUHV(2)
-        sText3 += self.determineColor(
-            iGoal != 0, localText.getText("TXT_KEY_UHV_NO_ADOPTION_YET", ())
-        )
+        sText3 += self.determineColor(iGoal != 0, text("TXT_KEY_UHV_NO_ADOPTION_YET"))
         lHelpTexts = [sText1, sText2, sText3]
         return lHelpTexts
 
@@ -2700,7 +2662,7 @@ class CvVictoryScreen:
                 if iTempNumColonies > iOtherColonies:
                     iOtherColonies = iTempNumColonies
                     iColonyPlayer = iCiv
-        sText = localText.getText("TXT_KEY_UHV_COLONIES", ())
+        sText = text("TXT_KEY_UHV_COLONIES")
         sUnit = ""
         sText2 += self.getCompetition(
             iSpainColonies, iOtherColonies, iColonyPlayer, sText, sUnit, 3
@@ -2709,7 +2671,7 @@ class CvVictoryScreen:
         sText3 = (
             "\n"
             + u"<color=142,148,124>"
-            + localText.getText("TXT_KEY_UHV_SPN3_HELP", ())
+            + text("TXT_KEY_UHV_SPN3_HELP")
             + u"</color>"
             + u"<font=1>\n\n</font>"
         )
@@ -2755,25 +2717,21 @@ class CvVictoryScreen:
                 if lPop[iReligion] >= lPop[iBestPop]:
                     iBestPop = iReligion
         if iBestLand == 5:
-            sBestR = localText.getText("TXT_KEY_UHV_PAGAN", ())
+            sBestR = text("TXT_KEY_UHV_PAGAN")
         else:
-            sBestR = localText.getText(
-                gc.getReligionInfo(iBestLand).getText().encode("ascii", "replace"), ()
-            )
+            sBestR = text(gc.getReligionInfo(iBestLand).getText().encode("ascii", "replace"))
         sText3 += (
-            localText.getText("TXT_KEY_UHV_MOST_LAND", ())
+            text("TXT_KEY_UHV_MOST_LAND")
             + " "
             + self.determineColor(iBestLand == Religion.CATHOLICISM.value, sBestR)
         )
         if iBestPop == 5:
-            sBestR = localText.getText("TXT_KEY_UHV_PAGAN", ())
+            sBestR = text("TXT_KEY_UHV_PAGAN")
         else:
-            sBestR = localText.getText(
-                gc.getReligionInfo(iBestPop).getText().encode("ascii", "replace"), ()
-            )
+            sBestR = text(gc.getReligionInfo(iBestPop).getText().encode("ascii", "replace"))
         sText3 += (
             "\n"
-            + localText.getText("TXT_KEY_UHV_MOST_POPULATION", ())
+            + text("TXT_KEY_UHV_MOST_POPULATION")
             + " "
             + self.determineColor(iBestPop == Religion.CATHOLICISM.value, sBestR)
         )
@@ -2802,8 +2760,8 @@ class CvVictoryScreen:
             Improvement.FORT.value
         )
         iScotlandCastle = gc.getPlayer(Civ.SCOTLAND.value).countNumBuildings(Building.CASTLE.value)
-        sScotlandFort = localText.getText("TXT_KEY_IMPROVEMENT_FORT", ()) + ": "
-        sScotlandCastle = localText.getText("TXT_KEY_BUILDING_CASTLE", ()) + ": "
+        sScotlandFort = text("TXT_KEY_IMPROVEMENT_FORT") + ": "
+        sScotlandCastle = text("TXT_KEY_BUILDING_CASTLE") + ": "
         sText1 += sScotlandFort + self.determineColor(iScotlandFort >= 10, str(iScotlandFort))
         sText1 += (
             "\n"
@@ -2814,7 +2772,7 @@ class CvVictoryScreen:
         sText2 = (
             "\n"
             + u"<color=142,148,124>"
-            + localText.getText("TXT_KEY_UHV_SCO2_HELP", ())
+            + text("TXT_KEY_UHV_SCO2_HELP")
             + u"</color>"
             + u"<font=1>\n\n</font>"
         )
@@ -2831,7 +2789,7 @@ class CvVictoryScreen:
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
         if turn() < DateTurn.i1500AD:
-            sText1 += localText.getText("TXT_KEY_UHV_TOO_EARLY", ()) + "\n"
+            sText1 += text("TXT_KEY_UHV_TOO_EARLY") + "\n"
         iPolandFood = pPlayer.calculateTotalYield(YieldTypes.YIELD_FOOD)
         iOtherFood = 0
         iFoodPlayer = -1
@@ -2844,7 +2802,7 @@ class CvVictoryScreen:
                 if iTempFood > iOtherFood:
                     iOtherFood = iTempFood
                     iFoodPlayer = iLoopPlayer
-        sText = localText.getText("TXT_KEY_UHV_FOOD_PRODUCTION", ())
+        sText = text("TXT_KEY_UHV_FOOD_PRODUCTION")
         sUnit = "%s" % (u"<font=5>%c</font>" % (gc.getYieldInfo(YieldTypes.YIELD_FOOD).getChar()))
         sText1 += self.getCompetition(iPolandFood, iOtherFood, iFoodPlayer, sText, sUnit)
         # UHV2
@@ -2853,7 +2811,7 @@ class CvVictoryScreen:
         for iProv in tProvsToCheck:
             iNumCities += pPlayer.getProvinceCityCount(iProv)
         sText2 += (
-            localText.getText("TXT_KEY_UHV_CITIES_CONTROLLED", ())
+            text("TXT_KEY_UHV_CITIES_CONTROLLED")
             + " "
             + self.determineColor(iNumCities >= 12, str(iNumCities))
         )
@@ -2863,15 +2821,15 @@ class CvVictoryScreen:
         iOrthCath = (iCounter / 1000) % 10
         iProtCath = (iCounter / 100) % 10
         iJewishQu = iCounter % 100
-        sCathCath = localText.getText("TXT_KEY_BUILDING_CATHOLIC_CATHEDRAL", ()) + ": "
-        sOrthCath = localText.getText("TXT_KEY_BUILDING_ORTHODOX_CATHEDRAL", ()) + ": "
-        sProtCath = localText.getText("TXT_KEY_BUILDING_PROTESTANT_CATHEDRAL", ()) + ": "
-        sJewishQu = localText.getText("TXT_KEY_BUILDING_JEWISH_QUARTER", ()) + ": "
+        sCathCath = text("TXT_KEY_BUILDING_CATHOLIC_CATHEDRAL") + ": "
+        sOrthCath = text("TXT_KEY_BUILDING_ORTHODOX_CATHEDRAL") + ": "
+        sProtCath = text("TXT_KEY_BUILDING_PROTESTANT_CATHEDRAL") + ": "
+        sJewishQu = text("TXT_KEY_BUILDING_JEWISH_QUARTER") + ": "
         sCathCath += self.determineColor(iCathCath >= 3, str(iCathCath))
         sOrthCath += self.determineColor(iOrthCath >= 3, str(iOrthCath))
         sProtCath += self.determineColor(iProtCath >= 2, str(iProtCath))
         if iJewishQu == 99:
-            sKazimierzWonder = localText.getText("TXT_KEY_BUILDING_KAZIMIERZ", ())
+            sKazimierzWonder = text("TXT_KEY_BUILDING_KAZIMIERZ")
             sJewishQu += u" <color=0,255,0>%s</color>" % (sKazimierzWonder)
         else:
             sJewishQu += self.determineColor(iJewishQu >= 2, str(iJewishQu))
@@ -2889,7 +2847,7 @@ class CvVictoryScreen:
         sText2 = (
             "\n"
             + u"<color=142,148,124>"
-            + localText.getText("TXT_KEY_UHV_GEN2_HELP", ())
+            + text("TXT_KEY_UHV_GEN2_HELP")
             + u"</color>"
             + u"<font=1>\n\n</font>"
         )
@@ -2910,7 +2868,7 @@ class CvVictoryScreen:
             if iTrade > iOtherTrade:
                 iOtherTrade = iTrade
                 iBiggestTrader = iLoopPlayer
-        sTextTmp = localText.getText("TXT_KEY_UHV_IMPORT_EXPORT", ())
+        sTextTmp = text("TXT_KEY_UHV_IMPORT_EXPORT")
         sUnit = "%s" % (
             u"<font=5>%c</font>" % (gc.getYieldInfo(YieldTypes.YIELD_COMMERCE).getChar())
         )
@@ -2926,13 +2884,13 @@ class CvVictoryScreen:
                 iBankCount += 1
         iCompanyCities = pPlayer.countCorporations(Company.ST_GEORGE.value)
         sText3 += (
-            localText.getText("TXT_KEY_UHV_BANKS", ())
+            text("TXT_KEY_UHV_BANKS")
             + ": "
             + self.determineColor(iBankCount >= 8, str(iBankCount))
         )
         sText3 += (
             "\n"
-            + localText.getText("TXT_KEY_UHV_COMPANIES", ())
+            + text("TXT_KEY_UHV_COMPANIES")
             + ": "
             + self.determineColor(
                 iCompanyCities == COMPANIES[Company.ST_GEORGE].limit, str(iCompanyCities)
@@ -2952,7 +2910,7 @@ class CvVictoryScreen:
         ourBestCities = self.getListCultureCities(self.iActivePlayer)[
             0 : victory.getNumCultureCities()
         ]
-        sText2 += localText.getText("TXT_KEY_UHV_CITIES_HIGH_CULTURE", ()) + "\n"
+        sText2 += text("TXT_KEY_UHV_CITIES_HIGH_CULTURE") + "\n"
         for i in range(3):
             if len(ourBestCities) > i:
                 sText2 += (
@@ -2976,9 +2934,7 @@ class CvVictoryScreen:
         sText2 += self.getNumColoniesString(7)
         # UHV3
         iGoal = pPlayer.getUHV(2)
-        sText3 += self.determineColor(
-            iGoal != 0, localText.getText("TXT_KEY_UHV_NO_INDUSTRIAL", ())
-        )
+        sText3 += self.determineColor(iGoal != 0, text("TXT_KEY_UHV_NO_INDUSTRIAL"))
         lHelpTexts = [sText1, sText2, sText3]
         return lHelpTexts
 
@@ -2991,13 +2947,13 @@ class CvVictoryScreen:
         iIslands = iCounter % 100
         iAfrica = iCounter / 100
         sText1 += (
-            localText.getText("TXT_KEY_UHV_CITIES_IN_ISLANDS", ())
+            text("TXT_KEY_UHV_CITIES_IN_ISLANDS")
             + ": "
             + self.determineColor(iIslands >= 3, str(iIslands))
         )
         sText1 += (
             "\n"
-            + localText.getText("TXT_KEY_UHV_CITIES_IN_AFRICA", ())
+            + text("TXT_KEY_UHV_CITIES_IN_AFRICA")
             + ": "
             + self.determineColor(iAfrica >= 2, str(iAfrica))
         )
@@ -3005,14 +2961,12 @@ class CvVictoryScreen:
         sText2 = (
             "\n"
             + u"<color=142,148,124>"
-            + localText.getText("TXT_KEY_UHV_POR2_HELP", ())
+            + text("TXT_KEY_UHV_POR2_HELP")
             + u"</color>"
             + u"<font=1>\n\n</font>"
         )
         iGoal = pPlayer.getUHV(1)
-        sText2 += self.determineColor(
-            iGoal != 0, localText.getText("TXT_KEY_UHV_NO_CITIES_LOST", ())
-        )
+        sText2 += self.determineColor(iGoal != 0, text("TXT_KEY_UHV_NO_CITIES_LOST"))
         # UHV3
         sText3 += self.getNumColoniesString(5)
         lHelpTexts = [sText1, sText2, sText3]
@@ -3028,24 +2982,24 @@ class CvVictoryScreen:
         sText2 = (
             "\n"
             + u"<color=142,148,124>"
-            + localText.getText("TXT_KEY_UHV_ARG2_HELP", ())
+            + text("TXT_KEY_UHV_ARG2_HELP")
             + u"</color>"
             + u"<font=1>\n\n</font>"
         )
         iSeaports = pPlayer.countNumBuildings(Building.ARAGON_SEAPORT.value)
         iCargoShips = utils.getCargoShips(Civ.ARAGON.value)
         sText2 += (
-            localText.getText("TXT_KEY_UHV_CURRENTLY", ())
+            text("TXT_KEY_UHV_CURRENTLY")
             + ": "
             + self.determineColor(iSeaports >= 12, str(iSeaports))
             + " "
-            + localText.getText("TXT_KEY_UHV_SEAPORTS", ())
+            + text("TXT_KEY_UHV_SEAPORTS")
             + ", "
         )
         sText2 += (
             self.determineColor(iCargoShips >= 30, str(iCargoShips))
             + " "
-            + localText.getText("TXT_KEY_UHV_TRADE_SHIPS", ())
+            + text("TXT_KEY_UHV_TRADE_SHIPS")
         )
         # UHV3
         sText3 += self.getProvinceString(vic.tAragonControlII)
@@ -3067,7 +3021,7 @@ class CvVictoryScreen:
         # UHV3
         iCounter = up.getNumForeignCitiesOnBaltic(iPlayer, True)
         sText3 += self.getCounterString(iCounter, 0, True)
-        sText3 += " " + localText.getText("TXT_KEY_UHV_BALTIC_CITIES", ())
+        sText3 += " " + text("TXT_KEY_UHV_BALTIC_CITIES")
         lHelpTexts = [sText1, sText2, sText3]
         return lHelpTexts
 
@@ -3089,17 +3043,15 @@ class CvVictoryScreen:
                     szNumConq = ">8"
                 sText2 += "  " + self.determineColor(
                     not (iNumConq < 2 and pVictim.isAlive()),
-                    localText.getText(str(pVictim.getCivilizationShortDescriptionKey()), ())
-                    + ":"
-                    + szNumConq,
+                    text(str(pVictim.getCivilizationShortDescriptionKey())) + ":" + szNumConq,
                 )
         else:
-            sText2 += localText.getText("TXT_KEY_UHV_TOO_EARLY", ())
+            sText2 += text("TXT_KEY_UHV_TOO_EARLY")
         # UHV3
         sText3 = (
             "\n"
             + u"<color=142,148,124>"
-            + localText.getText("TXT_KEY_UHV_PRU3_HELP", ())
+            + text("TXT_KEY_UHV_PRU3_HELP")
             + u"</color>"
             + u"<font=1>\n\n</font>"
         )
@@ -3147,7 +3099,7 @@ class CvVictoryScreen:
             otherlandPercent = (iOtherCount * 100.0) / iTotal
         else:
             otherlandPercent = 0.0
-        sText = localText.getText("TXT_KEY_UHV_CONTROL_TERRITORY", ())
+        sText = text("TXT_KEY_UHV_CONTROL_TERRITORY")
         sText2 += self.getLandCompetition(landPercent, otherlandPercent, iMostPlayer, sText)
         # UHV3
         sText3 += self.CollapseOrVassal([Civ.MOSCOW.value, Civ.NOVGOROD.value, Civ.PRUSSIA.value])
@@ -3173,9 +3125,9 @@ class CvVictoryScreen:
         pBestCiv = gc.getPlayer(iBestCiv)
         sCivShortName = str(pBestCiv.getCivilizationShortDescriptionKey())
         sText3 += (
-            localText.getText("TXT_KEY_UHV_HIGHEST_SCORE", ())
+            text("TXT_KEY_UHV_HIGHEST_SCORE")
             + ": "
-            + self.determineColor(iBestCiv == iPlayer, localText.getText(sCivShortName, ()))
+            + self.determineColor(iBestCiv == iPlayer, text(sCivShortName))
         )
         lHelpTexts = [sText1, sText2, sText3]
         return lHelpTexts
@@ -3214,7 +3166,7 @@ class CvVictoryScreen:
         sText3 = (
             "\n"
             + u"<color=142,148,124>"
-            + localText.getText("TXT_KEY_UHV_MOS3_HELP", ())
+            + text("TXT_KEY_UHV_MOS3_HELP")
             + u"</color>"
             + u"<font=1>\n\n</font>"
         )
@@ -3227,15 +3179,13 @@ class CvVictoryScreen:
         if iNumAccess > 0 or iConstantinopleOwner == iPlayer:
             bColor = True
         sText3 += (
-            localText.getText("TXT_KEY_BONUS_ACCESS", ())
-            + ": "
-            + self.determineColor(bColor, str(iNumAccess))
+            text("TXT_KEY_BONUS_ACCESS") + ": " + self.determineColor(bColor, str(iNumAccess))
         )
         if (
             self.checkCity(
                 tConstantinople,
                 Civ.MOSCOW.value,
-                localText.getText("TXT_KEY_CITY_NAME_CONSTANTINOPLE", ()),
+                text("TXT_KEY_CITY_NAME_CONSTANTINOPLE"),
                 True,
                 True,
             )
@@ -3243,9 +3193,9 @@ class CvVictoryScreen:
         ):
             sText3 += (
                 "\n"
-                + localText.getText("TXT_KEY_UHV_CONTROLLER_OF", ())
+                + text("TXT_KEY_UHV_CONTROLLER_OF")
                 + " "
-                + localText.getText("TXT_KEY_CITY_NAME_CONSTANTINOPLE", ())
+                + text("TXT_KEY_CITY_NAME_CONSTANTINOPLE")
                 + ": "
                 + self.determineColor(bColor, gc.getPlayer(iConstantinopleOwner).getName())
             )
@@ -3253,7 +3203,7 @@ class CvVictoryScreen:
             sText3 += self.checkCity(
                 tConstantinople,
                 Civ.MOSCOW.value,
-                localText.getText("TXT_KEY_CITY_NAME_CONSTANTINOPLE", ()),
+                text("TXT_KEY_CITY_NAME_CONSTANTINOPLE"),
                 True,
                 True,
             )
@@ -3267,20 +3217,13 @@ class CvVictoryScreen:
         # UHV1
         tAmsterdam = civilization(iPlayer).location.capital
         pPlot = gc.getMap().plot(tAmsterdam[0], tAmsterdam[1])
-        if (
-            self.checkCity(
-                tAmsterdam, iPlayer, localText.getText("TXT_KEY_CITY_NAME_AMSTERDAM", ())
-            )
-            == -1
-        ):
+        if self.checkCity(tAmsterdam, iPlayer, text("TXT_KEY_CITY_NAME_AMSTERDAM")) == -1:
             iNumMerchants = pPlot.getPlotCity().getFreeSpecialistCount(
                 Specialist.GREAT_MERCHANT.value
             )
             sText1 += self.getCounterString(iNumMerchants, 5)
         else:
-            sText1 += self.checkCity(
-                tAmsterdam, iPlayer, localText.getText("TXT_KEY_CITY_NAME_AMSTERDAM", ())
-            )
+            sText1 += self.checkCity(tAmsterdam, iPlayer, text("TXT_KEY_CITY_NAME_AMSTERDAM"))
         # UHV2
         sText2 += self.getNumColoniesString(3, True)
         # UHV3
@@ -3296,29 +3239,27 @@ class CvVictoryScreen:
         if iGoal == 1:
             sString = (
                 u"<font=5>%c</font>" % (CyGame().getSymbolID(FontSymbols.HAPPY_CHAR))
-            ) + localText.getText(pPlayer.getUHVDescription(iUHV).encode("ascii", "replace"), ())
+            ) + text(pPlayer.getUHVDescription(iUHV).encode("ascii", "replace"))
             sString += (
                 u"<font=1>"
                 + "\n\n"
                 + u"</font>"
-                + u"<color=0,255,0>%s</color>"
-                % (localText.getText("TXT_KEY_VICTORY_SCREEN_ACCOMPLISHED", ()))
+                + u"<color=0,255,0>%s</color>" % (text("TXT_KEY_VICTORY_SCREEN_ACCOMPLISHED"))
             )
         elif iGoal == 0:
             sString = (
                 u"<font=5>%c</font>" % (CyGame().getSymbolID(FontSymbols.UNHAPPY_CHAR))
-            ) + localText.getText(pPlayer.getUHVDescription(iUHV).encode("ascii", "replace"), ())
+            ) + text(pPlayer.getUHVDescription(iUHV).encode("ascii", "replace"))
             sString += (
                 u"<font=1>"
                 + "\n\n"
                 + u"</font>"
-                + u"<color=255,54,6>%s</color>"
-                % (localText.getText("TXT_KEY_VICTORY_SCREEN_FAILED", ()))
+                + u"<color=255,54,6>%s</color>" % (text("TXT_KEY_VICTORY_SCREEN_FAILED"))
             )
         else:
             sString = (
                 u"<font=5>%c</font>" % (CyGame().getSymbolID(FontSymbols.SILVER_STAR_CHAR))
-            ) + localText.getText(pPlayer.getUHVDescription(iUHV).encode("ascii", "replace"), ())
+            ) + text(pPlayer.getUHVDescription(iUHV).encode("ascii", "replace"))
             sString += self.getCivHelpsTexts()[iUHV]
         return sString
 
@@ -3416,23 +3357,22 @@ class CvVictoryScreen:
         for iGoal in range(len(lVictories)):
             if iGoal > 0:
                 sString += "\n\n"
-            sString += localText.getText("TXT_KEY_UHV_PART", ()) + " " + str(iGoal + 1) + "\n"
+            sString += text("TXT_KEY_UHV_PART") + " " + str(iGoal + 1) + "\n"
             if iGameTurn > lVictories[iGoal][1]:
-                sString += localText.getText("TXT_KEY_VICTORY_SCREEN_ACCOMPLISHED", ())
+                sString += text("TXT_KEY_VICTORY_SCREEN_ACCOMPLISHED")
             else:
                 sString += self.getProvinceString(lVictories[iGoal][0])
         return sString
 
     def getProvinceString(self, tProvsToCheck, tCount=(False, 0)):
-        sStringConq = localText.getText("TXT_KEY_UHV_CONQUERED", ()) + ":"
-        sStringMiss = localText.getText("TXT_KEY_UHV_NOT_YET", ()) + ":"
+        sStringConq = text("TXT_KEY_UHV_CONQUERED") + ":"
+        sStringMiss = text("TXT_KEY_UHV_NOT_YET") + ":"
         sStringConqTemp = ""
         iCount = 0
         pActivePlayer = gc.getPlayer(self.iActivePlayer)
         for iProv in tProvsToCheck:
             sProvName = "TXT_KEY_PROVINCE_NAME_%i" % iProv
-            sProvName = localText.getText(sProvName, ())
-            # localText.getText(pPlayer.getUHVDescription(0).encode('ascii', 'replace'),())
+            sProvName = text(sProvName)
             iHave = pActivePlayer.getProvinceCurrentState(iProv)
             if iHave < ProvinceStatus.CONQUER.value:
                 sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (sProvName)
@@ -3451,22 +3391,12 @@ class CvVictoryScreen:
         return sString
 
     def getNotCivProvinceString(self, iEnemy, sEnemyString, tProvsToCheck):
-        sStringConq = (
-            localText.getText(sEnemyString, ())
-            + " "
-            + localText.getText("TXT_KEY_UHV_NOT_PRESENT", ())
-            + ":"
-        )
-        sStringMiss = (
-            localText.getText(sEnemyString, ())
-            + " "
-            + localText.getText("TXT_KEY_UHV_PRESENT", ())
-            + ":"
-        )
+        sStringConq = text(sEnemyString) + " " + text("TXT_KEY_UHV_NOT_PRESENT") + ":"
+        sStringMiss = text(sEnemyString) + " " + text("TXT_KEY_UHV_PRESENT") + ":"
         pEnemy = gc.getPlayer(iEnemy)
         for iProv in tProvsToCheck:
             sProvName = "TXT_KEY_PROVINCE_NAME_%i" % iProv
-            sProvName = localText.getText(sProvName, ())
+            sProvName = text(sProvName)
             if pEnemy.isAlive() and pEnemy.getProvinceCityCount(iProv) > 0:
                 sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (sProvName)
             else:
@@ -3475,8 +3405,8 @@ class CvVictoryScreen:
         return sString
 
     def getWonderString(self, tWondersToCheck):
-        sStringBuild = localText.getText("TXT_KEY_UHV_BUILD", ()) + ":"
-        sStringMiss = localText.getText("TXT_KEY_UHV_NOT_YET", ()) + ":"
+        sStringBuild = text("TXT_KEY_UHV_BUILD") + ":"
+        sStringMiss = text("TXT_KEY_UHV_NOT_YET") + ":"
         for iWonder in tWondersToCheck:
             sWonderName = gc.getBuildingInfo(iWonder).getDescription()
             if gc.getPlayer(self.iActivePlayer).countNumBuildings(iWonder) > 0:
@@ -3487,8 +3417,8 @@ class CvVictoryScreen:
         return sString
 
     def getProjectsString(self, tProjectsToCheck):
-        sStringBuild = localText.getText("TXT_KEY_UHV_BUILD", ()) + ":"
-        sStringMiss = localText.getText("TXT_KEY_UHV_NOT_YET", ()) + ":"
+        sStringBuild = text("TXT_KEY_UHV_BUILD") + ":"
+        sStringMiss = text("TXT_KEY_UHV_NOT_YET") + ":"
         for iProject in tProjectsToCheck:
             sProjectName = gc.getProjectInfo(iProject).getDescription()
             if gc.getTeam(self.iActivePlayer).getProjectCount(iProject) > 0:
@@ -3502,13 +3432,13 @@ class CvVictoryScreen:
         # iFuction == 1 = provinceIsSpreadReligion (Cordoba 3rd UHV)
         # iFuction == 2 = provinceIsConvertReligion (Spain 1st UHV)
         sAdjective = str(gc.getReligionInfo(iReligion).getAdjectiveKey())
-        sStringSpread = localText.getText(sAdjective, ()) + ":"
-        sStringMiss = localText.getText("TXT_KEY_UHV_NOT_YET", ()) + ":"
+        sStringSpread = text(sAdjective) + ":"
+        sStringMiss = text("TXT_KEY_UHV_NOT_YET") + ":"
         sStringNoCities = "Without major cities:"
         pActivePlayer = gc.getPlayer(self.iActivePlayer)
         for iProv in tProvsToCheck:
             sProvName = "TXT_KEY_PROVINCE_NAME_%i" % iProv
-            sProvName = localText.getText(sProvName, ())
+            sProvName = text(sProvName)
             bProvinceHasCity = 0
             for civ in civilizations():
                 if civ.player.getProvinceCityCount(iProv) > 0:
@@ -3545,13 +3475,13 @@ class CvVictoryScreen:
             sNewCounter = str(iNewCounter)
         if not bInverse:
             sString = (
-                localText.getText("TXT_KEY_UHV_CURRENTLY", ())
+                text("TXT_KEY_UHV_CURRENTLY")
                 + ": "
                 + self.determineColor(iCounter >= iRequired, sNewCounter)
             )
         else:
             sString = (
-                localText.getText("TXT_KEY_UHV_CURRENTLY", ())
+                text("TXT_KEY_UHV_CURRENTLY")
                 + ": "
                 + self.determineColor(iCounter <= iRequired, sNewCounter)
             )
@@ -3560,9 +3490,7 @@ class CvVictoryScreen:
     def getNumColoniesString(self, iRequired, bTradingCompanies=False):
         iCount = vic.Victory().getNumRealColonies(self.iActivePlayer)
         sString = (
-            localText.getText("TXT_KEY_UHV_COLONIES", ())
-            + ": "
-            + self.determineColor(iCount >= iRequired, iCount)
+            text("TXT_KEY_UHV_COLONIES") + ": " + self.determineColor(iCount >= iRequired, iCount)
         )
         if bTradingCompanies:
             sString += "\n" + self.getProjectsString(
@@ -3583,17 +3511,17 @@ class CvVictoryScreen:
         x, y = tPlot
         if not gc.getMap().plot(x, y).isCity():
             return u"<color=255,54,6>%s</color>" % (
-                cityName + " " + localText.getText("TXT_KEY_UHV_CITY_NOT_EXIST", ())
+                cityName + " " + text("TXT_KEY_UHV_CITY_NOT_EXIST")
             )
         iOwner = gc.getMap().plot(x, y).getPlotCity().getOwner()
         if not bCityUHV:
             if iOwner != iCiv:
                 return u"<color=255,54,6>%s</color>" % (
-                    localText.getText("TXT_KEY_UHV_CITY_NOT_OWNED", ()) + " " + cityName
+                    text("TXT_KEY_UHV_CITY_NOT_OWNED") + " " + cityName
                 )
         elif not bCustomColor:
             return (
-                localText.getText("TXT_KEY_UHV_CONTROLLER_OF", ())
+                text("TXT_KEY_UHV_CONTROLLER_OF")
                 + " "
                 + cityName
                 + ": "
@@ -3603,9 +3531,9 @@ class CvVictoryScreen:
 
     def checkScores(self, tCompetitors):
         iOwnRank = gc.getGame().getTeamRank(self.iActivePlayer)
-        sStringLower = localText.getText("TXT_KEY_UHV_LOWER_SCORE", ()) + ":"
-        sStringHigher = localText.getText("TXT_KEY_UHV_HIGHER_SCORE", ()) + ":"
-        sStringUnkown = localText.getText("TXT_KEY_UHV_UNKNOWN_SCORE", ()) + ":"
+        sStringLower = text("TXT_KEY_UHV_LOWER_SCORE") + ":"
+        sStringHigher = text("TXT_KEY_UHV_HIGHER_SCORE") + ":"
+        sStringUnkown = text("TXT_KEY_UHV_UNKNOWN_SCORE") + ":"
         iGameTurn = turn()
         for iLoopPlayer in tCompetitors:
             pTestPlayer = gc.getPlayer(iLoopPlayer)
@@ -3615,23 +3543,17 @@ class CvVictoryScreen:
                 not gc.getPlayer(self.iActivePlayer).canContact(iLoopPlayer)
                 and pTestPlayer.isAlive()
             ):
-                sStringUnkown += "  " + u"<color=255,54,6>%s</color>" % (
-                    localText.getText(sCivShortName, ())
-                )
+                sStringUnkown += "  " + u"<color=255,54,6>%s</color>" % (text(sCivShortName))
             elif gc.getGame().getTeamRank(iLoopPlayer) < iOwnRank:
-                sStringHigher += "  " + u"<color=255,54,6>%s</color>" % (
-                    localText.getText(sCivShortName, ())
-                )
+                sStringHigher += "  " + u"<color=255,54,6>%s</color>" % (text(sCivShortName))
             else:
-                sStringLower += "  " + u"<color=0,255,0>%s</color>" % (
-                    localText.getText(sCivShortName, ())
-                )
+                sStringLower += "  " + u"<color=0,255,0>%s</color>" % (text(sCivShortName))
         sString = sStringLower + "\n" + sStringHigher + "\n" + sStringUnkown
         return sString
 
     def CollapseOrVassal(self, lEnemies):
-        sStringConq = localText.getText("TXT_KEY_UHV_COLLAPSE_OR_VASSALIZE", ()) + ":"
-        sStringMiss = localText.getText("TXT_KEY_UHV_NOT_YET", ()) + ":"
+        sStringConq = text("TXT_KEY_UHV_COLLAPSE_OR_VASSALIZE") + ":"
+        sStringMiss = text("TXT_KEY_UHV_NOT_YET") + ":"
         iGameTurn = turn()
         for iEnemy in lEnemies:
             teamOwn = gc.getTeam(self.iActivePlayer)
@@ -3641,19 +3563,15 @@ class CvVictoryScreen:
             if (
                 pEnemy.isAlive() and not teamEnemy.isVassal(teamOwn.getID())
             ) or iGameTurn <= civilization(iEnemy).date.birth:
-                sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (
-                    localText.getText(sCivShortName, ())
-                )
+                sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (text(sCivShortName))
             else:
-                sStringConq += "  " + u"<color=0,255,0>%s</color>" % (
-                    localText.getText(sCivShortName, ())
-                )
+                sStringConq += "  " + u"<color=0,255,0>%s</color>" % (text(sCivShortName))
         sString = sStringConq + "\n" + sStringMiss
         return sString
 
     def ConquerOrVassal(self, lEnemies):
-        sStringConq = localText.getText("TXT_KEY_UHV_CONQUER_OR_VASSALIZE", ()) + ":"
-        sStringMiss = localText.getText("TXT_KEY_UHV_NOT_YET", ()) + ":"
+        sStringConq = text("TXT_KEY_UHV_CONQUER_OR_VASSALIZE") + ":"
+        sStringMiss = text("TXT_KEY_UHV_NOT_YET") + ":"
         iGameTurn = turn()
         for lEnemy in lEnemies:
             iEnemyCiv = lEnemy[0]
@@ -3664,30 +3582,22 @@ class CvVictoryScreen:
             teamEnemy = gc.getTeam(iEnemyCiv)
             sCivShortName = str(pEnemy.getCivilizationShortDescriptionKey())
             if iGameTurn <= civilization(iEnemyCiv).date.birth:
-                sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (
-                    localText.getText(sCivShortName, ())
-                )
+                sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (text(sCivShortName))
             elif (
                 not pEnemy.isAlive()
                 and pActivePlayer.getProvinceCurrentState(iEnemyProvince)
                 < ProvinceStatus.CONQUER.value
             ):
-                sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (
-                    localText.getText(sCivShortName, ())
-                )
+                sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (text(sCivShortName))
             elif (
                 pEnemy.isAlive()
                 and not teamEnemy.isVassal(teamOwn.getID())
                 and pActivePlayer.getProvinceCurrentState(iEnemyProvince)
                 < ProvinceStatus.CONQUER.value
             ):
-                sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (
-                    localText.getText(sCivShortName, ())
-                )
+                sStringMiss += "  " + u"<color=255,54,6>%s</color>" % (text(sCivShortName))
             else:
-                sStringConq += "  " + u"<color=0,255,0>%s</color>" % (
-                    localText.getText(sCivShortName, ())
-                )
+                sStringConq += "  " + u"<color=0,255,0>%s</color>" % (text(sCivShortName))
         sString = sStringConq + "\n" + sStringMiss
         return sString
 
@@ -3703,7 +3613,7 @@ class CvVictoryScreen:
                 if gc.getPlayer(iCiv).getGold() > iGold:
                     iGold = gc.getPlayer(iCiv).getGold()
                     iRichestPlayer = iCiv
-        sText = localText.getText("TXT_KEY_UHV_GOLD", ())
+        sText = text("TXT_KEY_UHV_GOLD")
         sUnit = "%s" % (
             u"<font=5>%c</font>" % (gc.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar())
         )
@@ -3719,23 +3629,23 @@ class CvVictoryScreen:
         else:
             sString += sText + ": " + self.determineColor(iNum > iNumEnemy, str(iNum))
         if iNumMin > 0:
-            sBest = localText.getText("TXT_KEY_UHV_SATISFY", ())
+            sBest = text("TXT_KEY_UHV_SATISFY")
         else:
-            sBest = localText.getText("TXT_KEY_UHV_BEST", ())
+            sBest = text("TXT_KEY_UHV_BEST")
         sString += (
             "   "
             + sBest
             + ": "
             + self.determineColor(
                 iNum > iNumEnemy and iNum >= iNumMin,
-                localText.getText("TXT_KEY_POPUP_YES", ()),
-                localText.getText("TXT_KEY_POPUP_NO", ()),
+                text("TXT_KEY_POPUP_YES"),
+                text("TXT_KEY_POPUP_NO"),
             )
         )
         if sUnit != "":
             sString += (
                 "\n"
-                + localText.getText("TXT_KEY_UHV_BEST_COMPETITOR", ())
+                + text("TXT_KEY_UHV_BEST_COMPETITOR")
                 + ": "
                 + self.determineColor(iNum > iNumEnemy, str(iNumEnemy))
                 + " "
@@ -3744,7 +3654,7 @@ class CvVictoryScreen:
         else:
             sString += (
                 "\n"
-                + localText.getText("TXT_KEY_UHV_BEST_COMPETITOR", ())
+                + text("TXT_KEY_UHV_BEST_COMPETITOR")
                 + ": "
                 + self.determineColor(iNum > iNumEnemy, str(iNumEnemy))
             )
@@ -3761,17 +3671,13 @@ class CvVictoryScreen:
         sString += sText + ": " + self.determineColor(bVal, sLand)
         sString += (
             "   "
-            + localText.getText("TXT_KEY_UHV_BEST", ())
+            + text("TXT_KEY_UHV_BEST")
             + ": "
-            + self.determineColor(
-                bVal,
-                localText.getText("TXT_KEY_POPUP_YES", ()),
-                localText.getText("TXT_KEY_POPUP_NO", ()),
-            )
+            + self.determineColor(bVal, text("TXT_KEY_POPUP_YES"), text("TXT_KEY_POPUP_NO"))
         )
         sString += (
             "\n"
-            + localText.getText("TXT_KEY_UHV_BEST_COMPETITOR", ())
+            + text("TXT_KEY_UHV_BEST_COMPETITOR")
             + ": "
             + self.determineColor(bVal, sOtherLand)
         )

@@ -15,7 +15,6 @@ from Consts import MessageData
 
 gc = CyGlobalContext()
 utils = RFCUtils.RFCUtils()
-localText = CyTranslator()
 
 
 # Independent and barbarians city spawns
@@ -3489,9 +3488,7 @@ class Barbs:
                     iPlayer,
                     False,
                     MessageData.DURATION,
-                    CyTranslator().getText(
-                        "TXT_KEY_MINOR_NATION_REVOLT_SUPRESSED", (pCity.getName(),)
-                    ),
+                    text("TXT_KEY_MINOR_NATION_REVOLT_SUPRESSED", pCity.getName()),
                     "",
                     0,
                     "",
@@ -3528,9 +3525,7 @@ class Barbs:
                     iPlayer,
                     False,
                     MessageData.DURATION,
-                    CyTranslator().getText(
-                        "TXT_KEY_MINOR_NATION_REVOLT_SUCCEEDED", (sNationName, pCity.getName())
-                    ),
+                    text("TXT_KEY_MINOR_NATION_REVOLT_SUCCEEDED", sNationName, pCity.getName()),
                     "",
                     0,
                     "",

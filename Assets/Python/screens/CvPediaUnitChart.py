@@ -10,11 +10,11 @@
 from CvPythonExtensions import *
 import CvUtil
 import CvScreenEnums
+from CoreFunctions import text
 
 # globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()
 
 
 class CvPediaUnitChart:
@@ -47,7 +47,7 @@ class CvPediaUnitChart:
 
         # Header...
         if self.iGroup >= gc.getNumUnitCombatInfos():
-            szHeader = localText.getText("TXT_KEY_PEDIA_ALL_UNITS", ())
+            szHeader = text("TXT_KEY_PEDIA_ALL_UNITS")
         else:
             szHeader = gc.getUnitCombatInfo(self.iGroup).getDescription()
         szHeader = u"<font=4b>" + szHeader.upper() + u"</font>"
@@ -174,7 +174,7 @@ class CvPediaUnitChart:
                 or self.iGroup == gc.getNumUnitCombatInfos()
             ):
                 if gc.getUnitInfo(j).getProductionCost() < 0:
-                    szCost = localText.getText("TXT_KEY_NON_APPLICABLE", ())
+                    szCost = text("TXT_KEY_NON_APPLICABLE")
                 else:
                     szCost = unicode(  # type: ignore
                         gc.getUnitInfo(j).getProductionCost()

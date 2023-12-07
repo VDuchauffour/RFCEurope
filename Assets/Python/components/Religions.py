@@ -1,6 +1,5 @@
 from CvPythonExtensions import (
     CyGlobalContext,
-    CyTranslator,
     CyInterface,
     ColorTypes,
     EventContextTypes,
@@ -36,7 +35,6 @@ from PyUtils import choice, choices, percentage, percentage_chance, rand
 from MiscData import RELIGIOUS_BUILDINGS, RELIGIOUS_WONDERS
 
 gc = CyGlobalContext()
-localText = CyTranslator()  # Absinthe
 PyPlayer = PyHelpers.PyPlayer
 utils = RFCUtils.RFCUtils()
 
@@ -469,9 +467,9 @@ class Religions:
                             # +20, to have a real chance with low faith points as well
                             iChosenPlayer.add_tech(tech, annoncing=True)
                             if iChosenPlayer.is_human():
-                                sText = CyTranslator().getText(
+                                sText = text(
                                     "TXT_KEY_FAITH_TECH_GIFT",
-                                    (gc.getTechInfo(tech).getDescription(),),
+                                    gc.getTechInfo(tech).getDescription(),
                                 )
                                 CyInterface().addMessage(
                                     iChosenPlayer.id,
@@ -880,9 +878,7 @@ class Religions:
                             human(),
                             False,
                             MessageData.DURATION,
-                            CyTranslator().getText(
-                                "TXT_KEY_REFORMATION_RELIGION_STILL_SPREAD", (CityName,)
-                            ),
+                            text("TXT_KEY_REFORMATION_RELIGION_STILL_SPREAD", CityName),
                             "",
                             InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                             "",
@@ -981,9 +977,7 @@ class Religions:
                             human(),
                             False,
                             MessageData.DURATION,
-                            CyTranslator().getText(
-                                "TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_1", (CityName,)
-                            ),
+                            text("TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_1", CityName),
                             "",
                             InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                             "",
@@ -1066,9 +1060,7 @@ class Religions:
                                 human(),
                                 False,
                                 MessageData.DURATION,
-                                CyTranslator().getText(
-                                    "TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_2", (CityName,)
-                                ),
+                                text("TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_2", CityName),
                                 "",
                                 InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                                 "",
@@ -1083,9 +1075,7 @@ class Religions:
                                 human(),
                                 False,
                                 MessageData.DURATION,
-                                CyTranslator().getText(
-                                    "TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_3", (CityName,)
-                                ),
+                                text("TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_3", CityName),
                                 "",
                                 InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
                                 "",

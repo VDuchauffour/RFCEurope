@@ -3019,9 +3019,7 @@ class MercenaryManager:
                         iCiv,
                         False,
                         MessageData.DURATION / 2,
-                        CyTranslator().getText(
-                            "TXT_KEY_MERC_AVAILABLE_NEAR_NEW_CITY", (pCity.getName(),)
-                        ),
+                        text("TXT_KEY_MERC_AVAILABLE_NEAR_NEW_CITY", pCity.getName()),
                         "",
                         0,
                         ArtFileMgr.getInterfaceArtInfo("INTERFACE_MERCENARY_ICON").getPath(),
@@ -3044,9 +3042,7 @@ class MercenaryManager:
                         iCiv,
                         False,
                         MessageData.DURATION / 2,
-                        CyTranslator().getText(
-                            "TXT_KEY_MERC_AVAILABLE_NEAR_NEW_CITY", (pCity.getName(),)
-                        ),
+                        text("TXT_KEY_MERC_AVAILABLE_NEAR_NEW_CITY", pCity.getName()),
                         "",
                         0,
                         ArtFileMgr.getInterfaceArtInfo("INTERFACE_MERCENARY_ICON").getPath(),

@@ -417,13 +417,11 @@ class Crusades:
         )
 
     def underCrusadeAttackPopup(self, sCityName, iLeader):
-        sText = CyTranslator().getText(
+        sText = text(
             "TXT_KEY_CRUSADE_UNDER_ATTACK1",
-            (
-                gc.getPlayer(iLeader).getCivilizationAdjective(0),
-                gc.getPlayer(iLeader).getName(),
-                sCityName,
-            ),
+            gc.getPlayer(iLeader).getCivilizationAdjective(0),
+            gc.getPlayer(iLeader).getName(),
+            sCityName,
         )
         event_popup(
             7621, text("TXT_KEY_CRUSADE_UNDER_ATTACK"), sText, [text("TXT_KEY_CRUSADE_PREPARE")]
@@ -610,9 +608,7 @@ class Crusades:
                                     iHuman,
                                     False,
                                     MessageData.DURATION,
-                                    CyTranslator().getText(
-                                        "TXT_KEY_CRUSADE_DENY_LEAVE_ANYWAY", ()
-                                    ),
+                                    text("TXT_KEY_CRUSADE_DENY_LEAVE_ANYWAY"),
                                     "",
                                     0,
                                     gc.getUnitInfo(iUnitType).getButton(),
@@ -630,9 +626,7 @@ class Crusades:
                                     iHuman,
                                     False,
                                     MessageData.DURATION,
-                                    CyTranslator().getText(
-                                        "TXT_KEY_CRUSADE_DENY_LEAVE_ANYWAY", ()
-                                    ),
+                                    text("TXT_KEY_CRUSADE_DENY_LEAVE_ANYWAY"),
                                     "",
                                     0,
                                     gc.getUnitInfo(iUnitType).getButton(),
@@ -1232,14 +1226,12 @@ class Crusades:
             sCityName = cnm.lookupName(pTargetCity, Civ.POPE.value)
             if sCityName == "Unknown":
                 sCityName = cnm.lookupName(pTargetCity, iLeader)
-            sText = CyTranslator().getText(
+            sText = text(
                 "TXT_KEY_CRUSADE_START",
-                (
-                    gc.getPlayer(iLeader).getCivilizationAdjectiveKey(),
-                    gc.getPlayer(iLeader).getName(),
-                    gc.getPlayer(iTargetPlayer).getCivilizationAdjectiveKey(),
-                    sCityName,
-                ),
+                gc.getPlayer(iLeader).getCivilizationAdjectiveKey(),
+                gc.getPlayer(iLeader).getName(),
+                gc.getPlayer(iTargetPlayer).getCivilizationAdjectiveKey(),
+                sCityName,
             )
             CyInterface().addMessage(
                 iHuman,
@@ -1649,9 +1641,7 @@ class Crusades:
                                 iHuman,
                                 False,
                                 MessageData.DURATION,
-                                CyTranslator().getText(
-                                    "TXT_KEY_CRUSADE_CRUSADERS_ARRIVED_HOME", ()
-                                ),
+                                text("TXT_KEY_CRUSADE_CRUSADERS_ARRIVED_HOME"),
                                 "",
                                 0,
                                 "",
@@ -1686,9 +1676,7 @@ class Crusades:
                                             iHuman,
                                             False,
                                             MessageData.DURATION,
-                                            CyTranslator().getText(
-                                                "TXT_KEY_CRUSADE_NEW_RELIC", ()
-                                            ),
+                                            text("TXT_KEY_CRUSADE_NEW_RELIC"),
                                             "AS2D_UNIT_BUILD_UNIQUE_UNIT",
                                             0,
                                             gc.getUnitInfo(Unit.HOLY_RELIC.value).getButton(),

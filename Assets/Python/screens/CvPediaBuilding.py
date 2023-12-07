@@ -8,6 +8,7 @@
 
 
 from CvPythonExtensions import *
+from CoreFunctions import text
 from CoreTypes import PlagueType
 import CvUtil
 import CvScreenEnums
@@ -15,7 +16,6 @@ import CvScreenEnums
 # globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()
 
 
 class CvPediaBuilding:
@@ -224,11 +224,9 @@ class CvPediaBuilding:
             iMaxInstances = gc.getBuildingClassInfo(
                 gc.getBuildingInfo(self.iBuilding).getBuildingClassType()
             ).getMaxGlobalInstances()
-            szBuildingType = localText.getText("TXT_KEY_PEDIA_WORLD_WONDER", ())
+            szBuildingType = text("TXT_KEY_PEDIA_WORLD_WONDER")
             if iMaxInstances > 1:
-                szBuildingType += " " + localText.getText(
-                    "TXT_KEY_PEDIA_WONDER_INSTANCES", (iMaxInstances,)
-                )
+                szBuildingType += " " + text("TXT_KEY_PEDIA_WONDER_INSTANCES", iMaxInstances)
                 screen.appendListBoxStringNoUpdate(
                     panelName,
                     u"<font=4>" + szBuildingType.upper() + u"</font>",
@@ -242,11 +240,9 @@ class CvPediaBuilding:
             iMaxInstances = gc.getBuildingClassInfo(
                 gc.getBuildingInfo(self.iBuilding).getBuildingClassType()
             ).getMaxTeamInstances()
-            szBuildingType = localText.getText("TXT_KEY_PEDIA_TEAM_WONDER", ())
+            szBuildingType = text("TXT_KEY_PEDIA_TEAM_WONDER")
             if iMaxInstances > 1:
-                szBuildingType += " " + localText.getText(
-                    "TXT_KEY_PEDIA_WONDER_INSTANCES", (iMaxInstances,)
-                )
+                szBuildingType += " " + text("TXT_KEY_PEDIA_WONDER_INSTANCES", iMaxInstances)
                 screen.appendListBoxStringNoUpdate(
                     panelName,
                     u"<font=3>" + szBuildingType.upper() + u"</font>",
@@ -260,11 +256,9 @@ class CvPediaBuilding:
             iMaxInstances = gc.getBuildingClassInfo(
                 gc.getBuildingInfo(self.iBuilding).getBuildingClassType()
             ).getMaxPlayerInstances()
-            szBuildingType = localText.getText("TXT_KEY_PEDIA_NATIONAL_WONDER", ())
+            szBuildingType = text("TXT_KEY_PEDIA_NATIONAL_WONDER")
             if iMaxInstances > 1:
-                szBuildingType += " " + localText.getText(
-                    "TXT_KEY_PEDIA_WONDER_INSTANCES", (iMaxInstances,)
-                )
+                szBuildingType += " " + text("TXT_KEY_PEDIA_WONDER_INSTANCES", iMaxInstances)
                 screen.appendListBoxStringNoUpdate(
                     panelName,
                     u"<font=3>" + szBuildingType.upper() + u"</font>",
@@ -276,23 +270,19 @@ class CvPediaBuilding:
 
         if buildingInfo.getProductionCost() > 0:
             if self.top.iActivePlayer == -1:
-                szCost = localText.getText(
+                szCost = text(
                     "TXT_KEY_PEDIA_COST",
                     (
-                        (
-                            buildingInfo.getProductionCost()
-                            * gc.getDefineINT("BUILDING_PRODUCTION_PERCENT")
-                        )
-                        / 100,
-                    ),
+                        buildingInfo.getProductionCost()
+                        * gc.getDefineINT("BUILDING_PRODUCTION_PERCENT")
+                    )
+                    / 100,
                 )
             else:
-                szCost = localText.getText(
+                szCost = text(
                     "TXT_KEY_PEDIA_COST",
-                    (
-                        gc.getPlayer(self.top.iActivePlayer).getBuildingProductionNeeded(
-                            self.iBuilding
-                        ),
+                    gc.getPlayer(self.top.iActivePlayer).getBuildingProductionNeeded(
+                        self.iBuilding
                     ),
                 )
             screen.appendListBoxStringNoUpdate(
@@ -361,7 +351,7 @@ class CvPediaBuilding:
                 )
 
         if iHappiness > 0:
-            szText = localText.getText("TXT_KEY_PEDIA_HAPPY", (iHappiness,)).upper()
+            szText = text("TXT_KEY_PEDIA_HAPPY", iHappiness).upper()
             screen.appendListBoxStringNoUpdate(
                 panelName,
                 u"<font=3>"
@@ -375,7 +365,7 @@ class CvPediaBuilding:
             )
 
         elif iHappiness < 0:
-            szText = localText.getText("TXT_KEY_PEDIA_UNHAPPY", (-iHappiness,)).upper()
+            szText = text("TXT_KEY_PEDIA_UNHAPPY", -iHappiness).upper()
             screen.appendListBoxStringNoUpdate(
                 panelName,
                 u"<font=3>"
@@ -398,7 +388,7 @@ class CvPediaBuilding:
                 )
 
         if iHealth > 0:
-            szText = localText.getText("TXT_KEY_PEDIA_HEALTHY", (iHealth,)).upper()
+            szText = text("TXT_KEY_PEDIA_HEALTHY", iHealth).upper()
             screen.appendListBoxStringNoUpdate(
                 panelName,
                 u"<font=3>"
@@ -412,7 +402,7 @@ class CvPediaBuilding:
             )
 
         elif iHealth < 0:
-            szText = localText.getText("TXT_KEY_PEDIA_UNHEALTHY", (-iHealth,)).upper()
+            szText = text("TXT_KEY_PEDIA_UNHEALTHY", -iHealth).upper()
             screen.appendListBoxStringNoUpdate(
                 panelName,
                 u"<font=3>"
@@ -426,8 +416,8 @@ class CvPediaBuilding:
             )
 
         if buildingInfo.getGreatPeopleRateChange() != 0:
-            szText = localText.getText(
-                "TXT_KEY_PEDIA_GREAT_PEOPLE", (buildingInfo.getGreatPeopleRateChange(),)
+            szText = text(
+                "TXT_KEY_PEDIA_GREAT_PEOPLE", buildingInfo.getGreatPeopleRateChange()
             ).upper()
             screen.appendListBoxStringNoUpdate(
                 panelName,
@@ -451,7 +441,7 @@ class CvPediaBuilding:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_REQUIRES", ()),
+            text("TXT_KEY_PEDIA_REQUIRES"),
             "",
             False,
             True,
@@ -513,7 +503,7 @@ class CvPediaBuilding:
                 iPrereq = gc.getCorporationInfo(iCorporation).getPrereqBonus(k)
                 if iPrereq >= 0:
                     if not bFirst:
-                        screen.attachLabel(panelName, "", localText.getText("TXT_KEY_OR", ()))
+                        screen.attachLabel(panelName, "", text("TXT_KEY_OR"))
                     else:
                         bFirst = False
                     screen.attachImageButton(
@@ -563,7 +553,7 @@ class CvPediaBuilding:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_SPECIAL_ABILITIES", ()),
+            text("TXT_KEY_PEDIA_SPECIAL_ABILITIES"),
             "",
             True,
             False,
@@ -600,7 +590,7 @@ class CvPediaBuilding:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_CIVILOPEDIA_HISTORY", ()),
+            text("TXT_KEY_CIVILOPEDIA_HISTORY"),
             "",
             True,
             True,

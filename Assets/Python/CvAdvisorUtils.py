@@ -11,7 +11,6 @@ import PyHelpers
 
 
 gc = CyGlobalContext()
-localText = CyTranslator()
 PyPlayer = PyHelpers.PyPlayer
 
 
@@ -77,9 +76,7 @@ def unitBuiltFeats(pCity, pUnit):
                 popupInfo.setData1(FeatTypes.FEAT_UNITCOMBAT_ARCHER)
                 popupInfo.setData2(pCity.getID())
                 popupInfo.setText(
-                    localText.getText(
-                        "TXT_KEY_FEAT_UNITCOMBAT_ARCHER", (pUnit.getNameKey(), pCity.getNameKey())
-                    )
+                    text("TXT_KEY_FEAT_UNITCOMBAT_ARCHER", pUnit.getNameKey(), pCity.getNameKey())
                 )
                 popupInfo.setOnClickedPythonCallback("featAccomplishedOnClickedCallback")
                 popupInfo.setOnFocusPythonCallback("featAccomplishedOnFocusCallback")
@@ -105,9 +102,10 @@ def unitBuiltFeats(pCity, pUnit):
                 popupInfo.setData1(FeatTypes.FEAT_UNITCOMBAT_LIGHT_CAVALRY)
                 popupInfo.setData2(pCity.getID())
                 popupInfo.setText(
-                    localText.getText(
+                    text(
                         "TXT_KEY_FEAT_UNITCOMBAT_LIGHT_CAVALRY",
-                        (pUnit.getNameKey(), pCity.getNameKey()),
+                        pUnit.getNameKey(),
+                        pCity.getNameKey(),
                     )
                 )
                 popupInfo.setOnClickedPythonCallback("featAccomplishedOnClickedCallback")
@@ -134,9 +132,10 @@ def unitBuiltFeats(pCity, pUnit):
                 popupInfo.setData1(FeatTypes.FEAT_UNITCOMBAT_HEAVY_CAVALRY)
                 popupInfo.setData2(pCity.getID())
                 popupInfo.setText(
-                    localText.getText(
+                    text(
                         "TXT_KEY_FEAT_UNITCOMBAT_HEAVY_CAVALRY",
-                        (pUnit.getNameKey(), pCity.getNameKey()),
+                        pUnit.getNameKey(),
+                        pCity.getNameKey(),
                     )
                 )
                 popupInfo.setOnClickedPythonCallback("featAccomplishedOnClickedCallback")
@@ -161,9 +160,7 @@ def unitBuiltFeats(pCity, pUnit):
                 popupInfo.setData1(FeatTypes.FEAT_UNITCOMBAT_POLEARM)
                 popupInfo.setData2(pCity.getID())
                 popupInfo.setText(
-                    localText.getText(
-                        "TXT_KEY_FEAT_UNITCOMBAT_POLEARM", (pUnit.getNameKey(), pCity.getNameKey())
-                    )
+                    text("TXT_KEY_FEAT_UNITCOMBAT_POLEARM", pUnit.getNameKey(), pCity.getNameKey())
                 )
                 popupInfo.setOnClickedPythonCallback("featAccomplishedOnClickedCallback")
                 popupInfo.setOnFocusPythonCallback("featAccomplishedOnFocusCallback")
@@ -189,9 +186,10 @@ def unitBuiltFeats(pCity, pUnit):
                 popupInfo.setData1(FeatTypes.FEAT_UNITCOMBAT_HEAVY_INFANTRY)
                 popupInfo.setData2(pCity.getID())
                 popupInfo.setText(
-                    localText.getText(
+                    text(
                         "TXT_KEY_FEAT_UNITCOMBAT_HEAVY_INFANTRY",
-                        (pUnit.getNameKey(), pCity.getNameKey()),
+                        pUnit.getNameKey(),
+                        pCity.getNameKey(),
                     )
                 )
                 popupInfo.setOnClickedPythonCallback("featAccomplishedOnClickedCallback")
@@ -216,9 +214,7 @@ def unitBuiltFeats(pCity, pUnit):
                 popupInfo.setData1(FeatTypes.FEAT_UNITCOMBAT_SIEGE)
                 popupInfo.setData2(pCity.getID())
                 popupInfo.setText(
-                    localText.getText(
-                        "TXT_KEY_FEAT_UNITCOMBAT_SIEGE", (pUnit.getNameKey(), pCity.getNameKey())
-                    )
+                    text("TXT_KEY_FEAT_UNITCOMBAT_SIEGE", pUnit.getNameKey(), pCity.getNameKey())
                 )
                 popupInfo.setOnClickedPythonCallback("featAccomplishedOnClickedCallback")
                 popupInfo.setOnFocusPythonCallback("featAccomplishedOnFocusCallback")
@@ -240,9 +236,7 @@ def unitBuiltFeats(pCity, pUnit):
                 popupInfo.setData1(FeatTypes.FEAT_UNITCOMBAT_GUN)
                 popupInfo.setData2(pCity.getID())
                 popupInfo.setText(
-                    localText.getText(
-                        "TXT_KEY_FEAT_UNITCOMBAT_GUN", (pUnit.getNameKey(), pCity.getNameKey())
-                    )
+                    text("TXT_KEY_FEAT_UNITCOMBAT_GUN", pUnit.getNameKey(), pCity.getNameKey())
                 )
                 popupInfo.setOnClickedPythonCallback("featAccomplishedOnClickedCallback")
                 popupInfo.setOnFocusPythonCallback("featAccomplishedOnFocusCallback")
@@ -266,9 +260,7 @@ def unitBuiltFeats(pCity, pUnit):
                 popupInfo.setData1(FeatTypes.FEAT_UNITCOMBAT_NAVAL)
                 popupInfo.setData2(pCity.getID())
                 popupInfo.setText(
-                    localText.getText(
-                        "TXT_KEY_FEAT_UNITCOMBAT_NAVAL", (pUnit.getNameKey(), pCity.getNameKey())
-                    )
+                    text("TXT_KEY_FEAT_UNITCOMBAT_NAVAL", pUnit.getNameKey(), pCity.getNameKey())
                 )
                 popupInfo.setOnClickedPythonCallback("featAccomplishedOnClickedCallback")
                 popupInfo.setOnFocusPythonCallback("featAccomplishedOnFocusCallback")
@@ -290,9 +282,7 @@ def unitBuiltFeats(pCity, pUnit):
                 popupInfo.setData1(FeatTypes.FEAT_UNIT_PRIVATEER)
                 popupInfo.setData2(pCity.getID())
                 popupInfo.setText(
-                    localText.getText(
-                        "TXT_KEY_FEAT_UNIT_PRIVATEER", (pUnit.getNameKey(), pCity.getNameKey())
-                    )
+                    text("TXT_KEY_FEAT_UNIT_PRIVATEER", pUnit.getNameKey(), pCity.getNameKey())
                 )
                 popupInfo.setOnClickedPythonCallback("featAccomplishedOnClickedCallback")
                 popupInfo.setOnFocusPythonCallback("featAccomplishedOnFocusCallback")
@@ -314,9 +304,7 @@ def unitBuiltFeats(pCity, pUnit):
                 popupInfo.setData1(FeatTypes.FEAT_UNIT_SPY)
                 popupInfo.setData2(pCity.getID())
                 popupInfo.setText(
-                    localText.getText(
-                        "TXT_KEY_FEAT_UNIT_SPY", (pUnit.getNameKey(), pCity.getNameKey())
-                    )
+                    text("TXT_KEY_FEAT_UNIT_SPY", pUnit.getNameKey(), pCity.getNameKey())
                 )
                 popupInfo.setOnClickedPythonCallback("featAccomplishedOnClickedCallback")
                 popupInfo.setOnFocusPythonCallback("featAccomplishedOnFocusCallback")
@@ -343,9 +331,10 @@ def buildingBuiltFeats(pCity, iBuildingType):
                 popupInfo.setData1(FeatTypes.FEAT_NATIONAL_WONDER)
                 popupInfo.setData2(pCity.getID())
                 popupInfo.setText(
-                    localText.getText(
+                    text(
                         "TXT_KEY_FEAT_NATIONAL_WONDER",
-                        (gc.getBuildingInfo(iBuildingType).getTextKey(), pCity.getNameKey()),
+                        gc.getBuildingInfo(iBuildingType).getTextKey(),
+                        pCity.getNameKey(),
                     )
                 )
                 popupInfo.setOnClickedPythonCallback("featAccomplishedOnClickedCallback")
@@ -496,9 +485,9 @@ def endTurnFeats(iPlayer):
                             popupInfo.setData1(FeatTypes.FEAT_LUXURY_CONNECTED)
                             popupInfo.setData2(pCapitalCity.getID())
                             popupInfo.setText(
-                                localText.getText(
+                                text(
                                     "TXT_KEY_FEAT_LUXURY_CONNECTED",
-                                    (gc.getBonusInfo(iI).getTextKey(),),
+                                    gc.getBonusInfo(iI).getTextKey(),
                                 )
                             )
                             popupInfo.setOnClickedPythonCallback(
@@ -528,9 +517,8 @@ def endTurnFeats(iPlayer):
                             popupInfo.setData1(FeatTypes.FEAT_FOOD_CONNECTED)
                             popupInfo.setData2(pCapitalCity.getID())
                             popupInfo.setText(
-                                localText.getText(
-                                    "TXT_KEY_FEAT_FOOD_CONNECTED",
-                                    (gc.getBonusInfo(iI).getTextKey(),),
+                                text(
+                                    "TXT_KEY_FEAT_FOOD_CONNECTED", gc.getBonusInfo(iI).getTextKey()
                                 )
                             )
                             popupInfo.setOnClickedPythonCallback(
@@ -619,13 +607,11 @@ def cityAdvise(pCity, iPlayer):
                     popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON)
                     popupInfo.setData1(pCity.getID())
                     popupInfo.setText(
-                        localText.getText(
+                        text(
                             "TXT_KEY_POPUP_LIBERATION_DEMAND",
-                            (
-                                pCity.getNameKey(),
-                                gc.getPlayer(eLiberationPlayer).getCivilizationDescriptionKey(),
-                                gc.getPlayer(eLiberationPlayer).getNameKey(),
-                            ),
+                            pCity.getNameKey(),
+                            gc.getPlayer(eLiberationPlayer).getCivilizationDescriptionKey(),
+                            gc.getPlayer(eLiberationPlayer).getNameKey(),
                         )
                     )
                     popupInfo.setOnClickedPythonCallback("liberateOnClickedCallback")
@@ -714,9 +700,9 @@ def cityAdvise(pCity, iPlayer):
                             popupInfo.setData2(OrderTypes.ORDER_TRAIN)
                             popupInfo.setData3(eBestUnit)
                             popupInfo.setText(
-                                localText.getText(
+                                text(
                                     "TXT_KEY_POPUP_UNIT_SETTLE_DEMAND",
-                                    (gc.getUnitInfo(eBestUnit).getTextKey(),),
+                                    gc.getUnitInfo(eBestUnit).getTextKey(),
                                 )
                             )
                             popupInfo.setOnClickedPythonCallback("cityWarningOnClickedCallback")
@@ -775,9 +761,10 @@ def cityAdvise(pCity, iPlayer):
                             popupInfo.setData2(OrderTypes.ORDER_TRAIN)
                             popupInfo.setData3(eBestUnit)
                             popupInfo.setText(
-                                localText.getText(
+                                text(
                                     "TXT_KEY_POPUP_UNIT_WORKER_DEMAND",
-                                    (pCity.getNameKey(), gc.getUnitInfo(eBestUnit).getTextKey()),
+                                    pCity.getNameKey(),
+                                    gc.getUnitInfo(eBestUnit).getTextKey(),
                                 )
                             )
                             popupInfo.setOnClickedPythonCallback("cityWarningOnClickedCallback")
@@ -836,9 +823,10 @@ def cityAdvise(pCity, iPlayer):
                             popupInfo.setData2(OrderTypes.ORDER_TRAIN)
                             popupInfo.setData3(eBestUnit)
                             popupInfo.setText(
-                                localText.getText(
+                                text(
                                     "TXT_KEY_POPUP_UNIT_DEFENSE_DEMAND",
-                                    (pCity.getNameKey(), gc.getUnitInfo(eBestUnit).getTextKey()),
+                                    pCity.getNameKey(),
+                                    gc.getUnitInfo(eBestUnit).getTextKey(),
                                 )
                             )
                             popupInfo.setOnClickedPythonCallback("cityWarningOnClickedCallback")
@@ -908,13 +896,11 @@ def cityAdvise(pCity, iPlayer):
                                     popupInfo.setData2(OrderTypes.ORDER_TRAIN)
                                     popupInfo.setData3(eBestUnit)
                                     popupInfo.setText(
-                                        localText.getText(
+                                        text(
                                             "TXT_KEY_POPUP_MISSIONARY_DEMAND",
-                                            (
-                                                gc.getReligionInfo(eStateReligion).getTextKey(),
-                                                gc.getUnitInfo(eBestUnit).getTextKey(),
-                                                pCity.getNameKey(),
-                                            ),
+                                            gc.getReligionInfo(eStateReligion).getTextKey(),
+                                            gc.getUnitInfo(eBestUnit).getTextKey(),
+                                            pCity.getNameKey(),
                                         )
                                     )
                                     popupInfo.setOnClickedPythonCallback(
@@ -972,12 +958,10 @@ def cityAdvise(pCity, iPlayer):
                             popupInfo.setData2(OrderTypes.ORDER_CONSTRUCT)
                             popupInfo.setData3(eBestBuilding)
                             popupInfo.setText(
-                                localText.getText(
+                                text(
                                     "TXT_KEY_POPUP_UNHEALTHY_CITIZENS_DEMAND",
-                                    (
-                                        pCity.getNameKey(),
-                                        gc.getBuildingInfo(eBestBuilding).getTextKey(),
-                                    ),
+                                    pCity.getNameKey(),
+                                    gc.getBuildingInfo(eBestBuilding).getTextKey(),
                                 )
                             )
                             popupInfo.setOnClickedPythonCallback("cityWarningOnClickedCallback")
@@ -1027,12 +1011,10 @@ def cityAdvise(pCity, iPlayer):
                             popupInfo.setData2(OrderTypes.ORDER_CONSTRUCT)
                             popupInfo.setData3(eBestBuilding)
                             popupInfo.setText(
-                                localText.getText(
+                                text(
                                     "TXT_KEY_POPUP_UNHAPPY_CITIZENS_DEMAND",
-                                    (
-                                        pCity.getNameKey(),
-                                        gc.getBuildingInfo(eBestBuilding).getTextKey(),
-                                    ),
+                                    pCity.getNameKey(),
+                                    gc.getBuildingInfo(eBestBuilding).getTextKey(),
                                 )
                             )
                             popupInfo.setOnClickedPythonCallback("cityWarningOnClickedCallback")
@@ -1087,12 +1069,10 @@ def cityAdvise(pCity, iPlayer):
                             popupInfo.setData2(OrderTypes.ORDER_CONSTRUCT)
                             popupInfo.setData3(eBestBuilding)
                             popupInfo.setText(
-                                localText.getText(
+                                text(
                                     "TXT_KEY_POPUP_BUILDING_DEFENSE_DEMAND",
-                                    (
-                                        pCity.getNameKey(),
-                                        gc.getBuildingInfo(eBestBuilding).getTextKey(),
-                                    ),
+                                    pCity.getNameKey(),
+                                    gc.getBuildingInfo(eBestBuilding).getTextKey(),
                                 )
                             )
                             popupInfo.setOnClickedPythonCallback("cityWarningOnClickedCallback")
@@ -1143,12 +1123,10 @@ def cityAdvise(pCity, iPlayer):
                             popupInfo.setData2(OrderTypes.ORDER_CONSTRUCT)
                             popupInfo.setData3(eBestBuilding)
                             popupInfo.setText(
-                                localText.getText(
+                                text(
                                     "TXT_KEY_POPUP_MAINTENANCE_DEMAND",
-                                    (
-                                        pCity.getNameKey(),
-                                        gc.getBuildingInfo(eBestBuilding).getTextKey(),
-                                    ),
+                                    pCity.getNameKey(),
+                                    gc.getBuildingInfo(eBestBuilding).getTextKey(),
                                 )
                             )
                             popupInfo.setOnClickedPythonCallback("cityWarningOnClickedCallback")
@@ -1208,12 +1186,10 @@ def cityAdvise(pCity, iPlayer):
                             popupInfo.setData2(OrderTypes.ORDER_CONSTRUCT)
                             popupInfo.setData3(eBestBuilding)
                             popupInfo.setText(
-                                localText.getText(
+                                text(
                                     "TXT_KEY_POPUP_CULTURE_DEMAND",
-                                    (
-                                        pCity.getNameKey(),
-                                        gc.getBuildingInfo(eBestBuilding).getTextKey(),
-                                    ),
+                                    pCity.getNameKey(),
+                                    gc.getBuildingInfo(eBestBuilding).getTextKey(),
                                 )
                             )
                             popupInfo.setOnClickedPythonCallback("cityWarningOnClickedCallback")
@@ -1266,12 +1242,10 @@ def cityAdvise(pCity, iPlayer):
                             popupInfo.setData2(OrderTypes.ORDER_CONSTRUCT)
                             popupInfo.setData3(eBestBuilding)
                             popupInfo.setText(
-                                localText.getText(
+                                text(
                                     "TXT_KEY_POPUP_GOLD_DEMAND",
-                                    (
-                                        pCity.getNameKey(),
-                                        gc.getBuildingInfo(eBestBuilding).getTextKey(),
-                                    ),
+                                    pCity.getNameKey(),
+                                    gc.getBuildingInfo(eBestBuilding).getTextKey(),
                                 )
                             )
                             popupInfo.setOnClickedPythonCallback("cityWarningOnClickedCallback")
@@ -1324,12 +1298,10 @@ def cityAdvise(pCity, iPlayer):
                             popupInfo.setData2(OrderTypes.ORDER_CONSTRUCT)
                             popupInfo.setData3(eBestBuilding)
                             popupInfo.setText(
-                                localText.getText(
+                                text(
                                     "TXT_KEY_POPUP_RESEARCH_DEMAND",
-                                    (
-                                        pCity.getNameKey(),
-                                        gc.getBuildingInfo(eBestBuilding).getTextKey(),
-                                    ),
+                                    pCity.getNameKey(),
+                                    gc.getBuildingInfo(eBestBuilding).getTextKey(),
                                 )
                             )
                             popupInfo.setOnClickedPythonCallback("cityWarningOnClickedCallback")
@@ -1382,12 +1354,10 @@ def cityAdvise(pCity, iPlayer):
                             popupInfo.setData2(OrderTypes.ORDER_CONSTRUCT)
                             popupInfo.setData3(eBestBuilding)
                             popupInfo.setText(
-                                localText.getText(
+                                text(
                                     "TXT_KEY_POPUP_WATER_FOOD_DEMAND",
-                                    (
-                                        pCity.getNameKey(),
-                                        gc.getBuildingInfo(eBestBuilding).getTextKey(),
-                                    ),
+                                    pCity.getNameKey(),
+                                    gc.getBuildingInfo(eBestBuilding).getTextKey(),
                                 )
                             )
                             popupInfo.setOnClickedPythonCallback("cityWarningOnClickedCallback")

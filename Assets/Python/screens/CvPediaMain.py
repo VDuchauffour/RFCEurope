@@ -33,11 +33,11 @@ import CvPediaReligion
 import CvPediaCorporation
 
 from CoreTypes import Leader
+from CoreFunctions import text
 
 # globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()
 PyCity = PyHelpers.PyCity
 
 
@@ -220,41 +220,33 @@ class CvPediaMain(CvPediaScreen.CvPediaScreen):
         return CyGInterfaceScreen(self.PEDIA_MAIN_SCREEN_NAME, CvScreenEnums.PEDIA_MAIN)
 
     def setPediaCommonWidgets(self):
-        self.EXIT_TEXT = (
-            u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + "</font>"
-        )
-        self.BACK_TEXT = (
-            u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_BACK", ()).upper() + "</font>"
-        )
-        self.FORWARD_TEXT = (
-            u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_FORWARD", ()).upper() + "</font>"
-        )
-        self.MENU_TEXT = (
-            u"<font=4>" + localText.getText("TXT_KEY_PEDIA_SCREEN_TOP", ()).upper() + "</font>"
-        )
+        self.EXIT_TEXT = u"<font=4>" + text("TXT_KEY_PEDIA_SCREEN_EXIT").upper() + "</font>"
+        self.BACK_TEXT = u"<font=4>" + text("TXT_KEY_PEDIA_SCREEN_BACK").upper() + "</font>"
+        self.FORWARD_TEXT = u"<font=4>" + text("TXT_KEY_PEDIA_SCREEN_FORWARD").upper() + "</font>"
+        self.MENU_TEXT = u"<font=4>" + text("TXT_KEY_PEDIA_SCREEN_TOP").upper() + "</font>"
 
-        self.szCategoryTech = localText.getText("TXT_KEY_PEDIA_CATEGORY_TECH", ())
-        self.szCategoryUnit = localText.getText("TXT_KEY_PEDIA_CATEGORY_UNIT", ())
-        self.szCategoryBuilding = localText.getText("TXT_KEY_PEDIA_CATEGORY_BUILDING", ())
-        self.szCategoryWonder = localText.getText("TXT_KEY_CONCEPT_WONDERS", ())
-        self.szCategoryBonus = localText.getText("TXT_KEY_PEDIA_CATEGORY_BONUS", ())
-        self.szCategoryTerrain = localText.getText("TXT_KEY_PEDIA_CATEGORY_TERRAIN", ())
-        self.szCategoryFeature = localText.getText("TXT_KEY_PEDIA_CATEGORY_FEATURE", ())
-        self.szCategoryImprovement = localText.getText("TXT_KEY_PEDIA_CATEGORY_IMPROVEMENT", ())
-        self.szCategorySpecialist = localText.getText("TXT_KEY_PEDIA_CATEGORY_SPECIALIST", ())
-        self.szCategoryPromotion = localText.getText("TXT_KEY_PEDIA_CATEGORY_PROMOTION", ())
-        self.szCategoryUnitCombat = localText.getText("TXT_KEY_PEDIA_CATEGORY_UNIT_COMBAT", ())
-        self.szCategoryCiv = localText.getText("TXT_KEY_PEDIA_CATEGORY_CIV", ())
-        self.szCategoryLeader = localText.getText("TXT_KEY_PEDIA_CATEGORY_LEADER", ())
-        self.szCategoryReligion = localText.getText("TXT_KEY_PEDIA_CATEGORY_RELIGION", ())
-        self.szCategoryCorporation = localText.getText("TXT_KEY_CONCEPT_COMPANIES", ())
-        self.szCategoryCivic = localText.getText("TXT_KEY_PEDIA_CATEGORY_CIVIC", ())
-        self.szCategoryProject = localText.getText("TXT_KEY_PEDIA_CATEGORY_PROJECT", ())
-        self.szCategoryConcept = localText.getText("TXT_KEY_PEDIA_CATEGORY_CONCEPT", ())
-        self.szCategoryHints = localText.getText("TXT_KEY_PEDIA_CATEGORY_HINTS", ())
+        self.szCategoryTech = text("TXT_KEY_PEDIA_CATEGORY_TECH")
+        self.szCategoryUnit = text("TXT_KEY_PEDIA_CATEGORY_UNIT")
+        self.szCategoryBuilding = text("TXT_KEY_PEDIA_CATEGORY_BUILDING")
+        self.szCategoryWonder = text("TXT_KEY_CONCEPT_WONDERS")
+        self.szCategoryBonus = text("TXT_KEY_PEDIA_CATEGORY_BONUS")
+        self.szCategoryTerrain = text("TXT_KEY_PEDIA_CATEGORY_TERRAIN")
+        self.szCategoryFeature = text("TXT_KEY_PEDIA_CATEGORY_FEATURE")
+        self.szCategoryImprovement = text("TXT_KEY_PEDIA_CATEGORY_IMPROVEMENT")
+        self.szCategorySpecialist = text("TXT_KEY_PEDIA_CATEGORY_SPECIALIST")
+        self.szCategoryPromotion = text("TXT_KEY_PEDIA_CATEGORY_PROMOTION")
+        self.szCategoryUnitCombat = text("TXT_KEY_PEDIA_CATEGORY_UNIT_COMBAT")
+        self.szCategoryCiv = text("TXT_KEY_PEDIA_CATEGORY_CIV")
+        self.szCategoryLeader = text("TXT_KEY_PEDIA_CATEGORY_LEADER")
+        self.szCategoryReligion = text("TXT_KEY_PEDIA_CATEGORY_RELIGION")
+        self.szCategoryCorporation = text("TXT_KEY_CONCEPT_COMPANIES")
+        self.szCategoryCivic = text("TXT_KEY_PEDIA_CATEGORY_CIVIC")
+        self.szCategoryProject = text("TXT_KEY_PEDIA_CATEGORY_PROJECT")
+        self.szCategoryConcept = text("TXT_KEY_PEDIA_CATEGORY_CONCEPT")
+        self.szCategoryHints = text("TXT_KEY_PEDIA_CATEGORY_HINTS")
 
         # ------------------------[MOD] UnitUpgrades ---------------------------------------
-        # 		self.szCategoryUpgrades = localText.getText("TXT_KEY_PEDIA_CATEGORY_UPGRADES", ()) #Rhye
+        # 		self.szCategoryUpgrades = text("TXT_KEY_PEDIA_CATEGORY_UPGRADES") #Rhye
         # ----------------------END [MOD] UnitUpgrades -------------------------------------
 
         self.listCategories = [
@@ -398,7 +390,7 @@ class CvPediaMain(CvPediaScreen.CvPediaScreen):
             self.setPediaCommonWidgets()
 
         # Header...
-        # szHeader = u"<font=4b>" +localText.getText("TXT_KEY_WIDGET_HELP", ()).upper() + u"</font>"
+        # szHeader = u"<font=4b>" +text("TXT_KEY_WIDGET_HELP").upper() + u"</font>"
         szHeader = u"<font=4b>CIVILOPEDIA</font>"
         szHeaderId = self.getNextWidgetName()
         screen.setLabel(

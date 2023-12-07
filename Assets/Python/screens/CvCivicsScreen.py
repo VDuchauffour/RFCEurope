@@ -1,4 +1,5 @@
 from CvPythonExtensions import *
+from CoreFunctions import text
 import CvUtil
 import CvScreenEnums
 import CvScreensInterface
@@ -8,6 +9,7 @@ sta = Stability.Stability()
 
 # Globals
 gc = CyGlobalContext()
+localText = CyTranslator()
 
 
 class CvCivicsScreen:
@@ -384,14 +386,14 @@ class CvCivicsScreen:
                 )
                 if self.SelectedCivics[iCategory] == iCivic:
                     screen.show("CivicButton" + str(iCivic))
-                    sText = CyTranslator().changeTextColor(
+                    sText = localText.changeTextColor(
                         sText, gc.getInfoTypeForString("COLOR_YELLOW")
                     )
                 elif player.canDoCivics(iCivic):
                     screen.show("CivicButton" + str(iCivic))
                 else:
                     screen.hide("CivicButton" + str(iCivic))
-                    sText = CyTranslator().changeTextColor(
+                    sText = localText.changeTextColor(
                         sText, gc.getInfoTypeForString("COLOR_LIGHT_GREY")
                     )
 
@@ -416,8 +418,8 @@ class CvCivicsScreen:
         player = gc.getPlayer(self.iActivePlayer)
 
         # Maintenance
-        szText = CyTranslator().getText(
-            "TXT_KEY_CIVIC_SCREEN_UPKEEP", (player.getCivicUpkeep(self.DisplayedCivics, True),)
+        szText = text(
+            "TXT_KEY_CIVIC_SCREEN_UPKEEP", player.getCivicUpkeep(self.DisplayedCivics, True)
         )
         screen.setLabel(
             "UpkeepText",
@@ -448,7 +450,7 @@ class CvCivicsScreen:
         if player.canRevolution(0):
             iTurns = player.getCivicAnarchyLength(self.DisplayedCivics)
             if iTurns > 0:
-                sAnarchy = CyTranslator().getText("TXT_KEY_ANARCHY_TURNS", (iTurns,))
+                sAnarchy = text("TXT_KEY_ANARCHY_TURNS", iTurns)
 
             if bSelection:
                 screen.show("RevolutionButton")
@@ -533,45 +535,45 @@ class CvCivicsScreen:
             if bHoverOn:
                 if bGood:
                     if player.canDoCivics(iCivic):
-                        sText = CyTranslator().changeTextColor(
+                        sText = localText.changeTextColor(
                             sText, gc.getInfoTypeForString("COLOR_GREEN")
                         )
                     else:
-                        sText = CyTranslator().changeTextColor(
+                        sText = localText.changeTextColor(
                             sText, gc.getInfoTypeForString("COLOR_PLAYER_MIDDLE_GREEN")
                         )
                 elif bBad:
                     if player.canDoCivics(iCivic):
-                        sText = CyTranslator().changeTextColor(
+                        sText = localText.changeTextColor(
                             sText, gc.getInfoTypeForString("COLOR_RED")
                         )
                     else:
-                        sText = CyTranslator().changeTextColor(
+                        sText = localText.changeTextColor(
                             sText, gc.getInfoTypeForString("COLOR_PLAYER_DARK_RED")
                         )
                 else:
                     if player.canDoCivics(iCivic):
-                        sText = CyTranslator().changeTextColor(
+                        sText = localText.changeTextColor(
                             sText, gc.getInfoTypeForString("COLOR_WHITE")
                         )
                     else:
-                        sText = CyTranslator().changeTextColor(
+                        sText = localText.changeTextColor(
                             sText, gc.getInfoTypeForString("COLOR_LIGHT_GREY")
                         )
             else:
                 if self.SelectedCivics[iCategory] == iCivic:
                     screen.show("CivicButton" + str(iCivic))
-                    sText = CyTranslator().changeTextColor(
+                    sText = localText.changeTextColor(
                         sText, gc.getInfoTypeForString("COLOR_YELLOW")
                     )
                 elif player.canDoCivics(iCivic):
                     screen.show("CivicButton" + str(iCivic))
-                    sText = CyTranslator().changeTextColor(
+                    sText = localText.changeTextColor(
                         sText, gc.getInfoTypeForString("COLOR_WHITE")
                     )
                 else:
                     screen.hide("CivicButton" + str(iCivic))
-                    sText = CyTranslator().changeTextColor(
+                    sText = localText.changeTextColor(
                         sText, gc.getInfoTypeForString("COLOR_LIGHT_GREY")
                     )
             screen.setText(

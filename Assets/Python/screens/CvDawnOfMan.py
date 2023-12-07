@@ -3,6 +3,7 @@
 
 import math
 from CoreData import civilization
+from CoreFunctions import text
 from CoreStructures import turn
 import CvUtil
 from CvPythonExtensions import *
@@ -12,7 +13,6 @@ from CoreTypes import Scenario
 from Scenario import get_scenario, get_scenario_start_turn
 
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()
 gc = CyGlobalContext()
 utils = RFCUtils.RFCUtils()
 
@@ -85,7 +85,7 @@ class CvDawnOfMan:
             return
 
         self.player = gc.getPlayer(gc.getGame().getActivePlayer())
-        self.EXIT_TEXT = localText.getText("TXT_KEY_SCREEN_CONTINUE", ())
+        self.EXIT_TEXT = text("TXT_KEY_SCREEN_CONTINUE")
 
         # Create screen
 
@@ -132,11 +132,7 @@ class CvDawnOfMan:
         )
 
         # Main Body text
-        szDawnTitle = (
-            u"<font=3>"
-            + localText.getText("TXT_KEY_DAWN_OF_MAN_SCREEN_TITLE", ()).upper()
-            + u"</font>"
-        )
+        szDawnTitle = u"<font=3>" + text("TXT_KEY_DAWN_OF_MAN_SCREEN_TITLE").upper() + u"</font>"
         screen.setLabel(
             "DawnTitle",
             "Background",
@@ -156,14 +152,14 @@ class CvDawnOfMan:
 
         # Absinthe: civ-specific Dawn of Man screen - idea from SoI
         dom_values = civilization(CyGame().getActiveTeam()).misc.dawn_of_man
-        year = dom_values[0] + CyTranslator().getText(dom_values[1], ())
+        year = dom_values[0] + text(dom_values[1])
         if civilization(CyGame().getActiveTeam()).date.birth < get_scenario_start_turn():
             if get_scenario() == Scenario.i1200AD:
                 textKey = "TXT_KEY_DAWN_OF_MAN_TEXT_%d_1200" % (CyGame().getActiveTeam())
         else:
             textKey = "TXT_KEY_DAWN_OF_MAN_TEXT_%d" % (CyGame().getActiveTeam())
-        bodyString = localText.getText(
-            textKey, (year, self.player.getCivilizationAdjectiveKey(), self.player.getNameKey())
+        bodyString = text(
+            textKey, year, self.player.getCivilizationAdjectiveKey(), self.player.getNameKey()
         )
 
         # Progress bar position (top left corner, width, height) #X coordinate: self.X_MAIN_PANEL + self.W_MAIN_PANEL/2 - Progress bar width/2
@@ -243,7 +239,7 @@ class CvDawnOfMan:
             screen.setLabel(
                 "Text",
                 "",
-                CyTranslator().getText("TXT_KEY_AUTOPLAY_TURNS_REMAINING", (0,)),
+                text("TXT_KEY_AUTOPLAY_TURNS_REMAINING", 0),
                 CvUtil.FONT_CENTER_JUSTIFY,
                 516,
                 465,
@@ -273,7 +269,7 @@ class CvDawnOfMan:
             screen.setLabel(
                 "Text",
                 "",
-                CyTranslator().getText("TXT_KEY_AUTOPLAY_TURNS_REMAINING", (iNumTurnsRemaining,)),
+                text("TXT_KEY_AUTOPLAY_TURNS_REMAINING", iNumTurnsRemaining),
                 CvUtil.FONT_CENTER_JUSTIFY,
                 514,
                 465,

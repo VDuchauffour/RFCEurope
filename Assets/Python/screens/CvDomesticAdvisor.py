@@ -1,6 +1,7 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
+from CoreFunctions import text
 import CvUtil
 import CvScreenEnums
 
@@ -21,7 +22,6 @@ import CvScreenEnums
 # globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()
 
 
 class CvDomesticAdvisor:
@@ -80,7 +80,7 @@ class CvDomesticAdvisor:
         screen.setText(
             "DomesticExit",
             "Background",
-            localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper(),
+            text("TXT_KEY_PEDIA_SCREEN_EXIT").upper(),
             CvUtil.FONT_RIGHT_JUSTIFY,
             self.nScreenWidth - 25,
             self.nScreenHeight - 45,
@@ -134,7 +134,7 @@ class CvDomesticAdvisor:
         screen.setTableColumnHeader(
             "CityListBackground",
             1,
-            "<font=2>" + localText.getText("TXT_KEY_DOMESTIC_ADVISOR_NAME", ()) + "</font>",
+            "<font=2>" + text("TXT_KEY_DOMESTIC_ADVISOR_NAME") + "</font>",
             (221 * self.nTableWidth) / self.nNormalizedTableWidth,
         )
 
@@ -142,7 +142,7 @@ class CvDomesticAdvisor:
         screen.setTableColumnHeader(
             "CityListBackground",
             2,
-            "<font=2>" + localText.getText("TXT_KEY_POPULATION", ()) + "</font>",
+            "<font=2>" + text("TXT_KEY_POPULATION") + "</font>",
             (40 * self.nTableWidth) / self.nNormalizedTableWidth,
         )
 
@@ -254,7 +254,7 @@ class CvDomesticAdvisor:
         screen.setTableColumnHeader(
             "CityListBackground",
             15,
-            "<font=2>" + localText.getText("TXT_KEY_DOMESTIC_ADVISOR_PRODUCING", ()) + "</font>",
+            "<font=2>" + text("TXT_KEY_DOMESTIC_ADVISOR_PRODUCING") + "</font>",
             (132 * self.nTableWidth) / self.nNormalizedTableWidth,
         )
 
@@ -376,17 +376,9 @@ class CvDomesticAdvisor:
         iNetHappy = pLoopCity.happyLevel() - pLoopCity.unhappyLevel(0)
         szText = unicode(iNetHappy)  # type: ignore
         if iNetHappy > 0:
-            szText = (
-                localText.getText("TXT_KEY_COLOR_POSITIVE", ())
-                + szText
-                + localText.getText("TXT_KEY_COLOR_REVERT", ())
-            )
+            szText = text("TXT_KEY_COLOR_POSITIVE") + szText + text("TXT_KEY_COLOR_REVERT")
         elif iNetHappy < 0:
-            szText = (
-                localText.getText("TXT_KEY_COLOR_NEGATIVE", ())
-                + szText
-                + localText.getText("TXT_KEY_COLOR_REVERT", ())
-            )
+            szText = text("TXT_KEY_COLOR_NEGATIVE") + szText + text("TXT_KEY_COLOR_REVERT")
         screen.setTableInt(
             "CityListBackground",
             3,
@@ -403,17 +395,9 @@ class CvDomesticAdvisor:
         iNetHealth = pLoopCity.goodHealth() - pLoopCity.badHealth(0)
         szText = unicode(iNetHealth)  # type: ignore
         if iNetHealth > 0:
-            szText = (
-                localText.getText("TXT_KEY_COLOR_POSITIVE", ())
-                + szText
-                + localText.getText("TXT_KEY_COLOR_REVERT", ())
-            )
+            szText = text("TXT_KEY_COLOR_POSITIVE") + szText + text("TXT_KEY_COLOR_REVERT")
         elif iNetHealth < 0:
-            szText = (
-                localText.getText("TXT_KEY_COLOR_NEGATIVE", ())
-                + szText
-                + localText.getText("TXT_KEY_COLOR_REVERT", ())
-            )
+            szText = text("TXT_KEY_COLOR_NEGATIVE") + szText + text("TXT_KEY_COLOR_REVERT")
         screen.setTableInt(
             "CityListBackground",
             4,
@@ -430,17 +414,9 @@ class CvDomesticAdvisor:
         iNetFood = pLoopCity.foodDifference(True)
         szText = unicode(iNetFood)  # type: ignore
         if iNetFood > 0:
-            szText = (
-                localText.getText("TXT_KEY_COLOR_POSITIVE", ())
-                + szText
-                + localText.getText("TXT_KEY_COLOR_REVERT", ())
-            )
+            szText = text("TXT_KEY_COLOR_POSITIVE") + szText + text("TXT_KEY_COLOR_REVERT")
         elif iNetFood < 0:
-            szText = (
-                localText.getText("TXT_KEY_COLOR_NEGATIVE", ())
-                + szText
-                + localText.getText("TXT_KEY_COLOR_REVERT", ())
-            )
+            szText = text("TXT_KEY_COLOR_NEGATIVE") + szText + text("TXT_KEY_COLOR_REVERT")
         screen.setTableInt(
             "CityListBackground",
             5,

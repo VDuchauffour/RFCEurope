@@ -387,9 +387,7 @@ class Plague:
                                     iHuman,
                                     False,
                                     MessageData.DURATION / 2,
-                                    CyTranslator().getText(
-                                        "TXT_KEY_PLAGUE_PROCESS_UNIT", (unit.getName(),)
-                                    )
+                                    text("TXT_KEY_PLAGUE_PROCESS_UNIT", unit.getName())
                                     + " "
                                     + city.getName()
                                     + "!",
@@ -453,9 +451,7 @@ class Plague:
                             iHuman,
                             False,
                             MessageData.DURATION / 2,
-                            CyTranslator().getText(
-                                "TXT_KEY_PLAGUE_PROCESS_CITY", (city.getName(),)
-                            )
+                            text("TXT_KEY_PLAGUE_PROCESS_CITY", city.getName())
                             + " "
                             + city.getName()
                             + "!",

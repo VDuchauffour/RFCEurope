@@ -4,7 +4,7 @@
 from CvPythonExtensions import *
 from Consts import MessageData
 from CoreData import civilizations, COMPANIES
-from CoreFunctions import get_enum_by_id
+from CoreFunctions import get_enum_by_id, text
 from CoreStructures import human, player, turn
 from LocationsData import CITIES
 from PyUtils import rand
@@ -32,7 +32,6 @@ from CoreTypes import (
 utils = RFCUtils.RFCUtils()
 crus = Crusades.Crusades()
 gc = CyGlobalContext()
-localText = CyTranslator()
 
 
 class Companies:
@@ -227,13 +226,9 @@ class Companies:
         iY = city.getY()
 
         if bRemove:
-            sText = CyTranslator().getText(
-                "TXT_KEY_MISC_CORPORATION_REMOVED", (sCompanyName, sCityName)
-            )
+            sText = text("TXT_KEY_MISC_CORPORATION_REMOVED", sCompanyName, sCityName)
         else:
-            sText = CyTranslator().getText(
-                "TXT_KEY_MISC_CORPORATION_SPREAD", (sCompanyName, sCityName)
-            )
+            sText = text("TXT_KEY_MISC_CORPORATION_SPREAD", sCompanyName, sCityName)
         CyInterface().addMessage(
             iHuman,
             False,

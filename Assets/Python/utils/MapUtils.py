@@ -14,7 +14,6 @@ from WarMapData import WARS_MAP
 
 gc = CyGlobalContext()
 map = CyMap()
-localText = CyTranslator()
 engine = CyEngine()
 
 # Somehow sometimes map.getGridHeight() doesn't work. I think it has something to do when python scripts are reloaded. For the time being I hardcode the map size
@@ -159,7 +158,7 @@ class RFCEMapManager:
         else:
             iProvince = iProvinceIdOrPlot
         if iProvince != provinceMapDefault:
-            return unicode(localText.getText(("TXT_KEY_PROVINCE_NAME_%i" % iProvince), ()))  # type: ignore
+            return unicode(text(("TXT_KEY_PROVINCE_NAME_%i" % iProvince)))  # type: ignore
         return ""
 
     def getProvinceId(self, pPlot):

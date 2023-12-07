@@ -8,9 +8,9 @@ import CvUtil
 import CvScreenEnums
 import random
 from CvPythonExtensions import *
+from CoreFunctions import text
 
 gc = CyGlobalContext()
-localText = CyTranslator()
 
 NUM_CIVILIZATIONS = 8
 
@@ -69,42 +69,40 @@ class CvTopCivs:
             return
 
         # Text
-        self.TITLE_TEXT = (
-            u"<font=3>" + localText.getText("TXT_KEY_TOPCIVS_TITLE", ()).upper() + u"</font>"
-        )
-        self.EXIT_TEXT = localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper()
+        self.TITLE_TEXT = u"<font=3>" + text("TXT_KEY_TOPCIVS_TITLE").upper() + u"</font>"
+        self.EXIT_TEXT = text("TXT_KEY_PEDIA_SCREEN_EXIT").upper()
 
         self.HistorianList = [
-            localText.getText("TXT_KEY_TOPCIVS_HISTORIAN1", ()),
-            localText.getText("TXT_KEY_TOPCIVS_HISTORIAN2", ()),
-            localText.getText("TXT_KEY_TOPCIVS_HISTORIAN3", ()),
-            localText.getText("TXT_KEY_TOPCIVS_HISTORIAN4", ()),
-            localText.getText("TXT_KEY_TOPCIVS_HISTORIAN5", ()),
-            localText.getText("TXT_KEY_TOPCIVS_HISTORIAN6", ()),
-            localText.getText("TXT_KEY_TOPCIVS_HISTORIAN7", ()),
-            localText.getText("TXT_KEY_TOPCIVS_HISTORIAN8", ()),
-            localText.getText("TXT_KEY_TOPCIVS_HISTORIAN9", ()),
-            localText.getText("TXT_KEY_TOPCIVS_HISTORIAN10", ()),
-            localText.getText("TXT_KEY_TOPCIVS_HISTORIAN11", ()),
+            text("TXT_KEY_TOPCIVS_HISTORIAN1"),
+            text("TXT_KEY_TOPCIVS_HISTORIAN2"),
+            text("TXT_KEY_TOPCIVS_HISTORIAN3"),
+            text("TXT_KEY_TOPCIVS_HISTORIAN4"),
+            text("TXT_KEY_TOPCIVS_HISTORIAN5"),
+            text("TXT_KEY_TOPCIVS_HISTORIAN6"),
+            text("TXT_KEY_TOPCIVS_HISTORIAN7"),
+            text("TXT_KEY_TOPCIVS_HISTORIAN8"),
+            text("TXT_KEY_TOPCIVS_HISTORIAN9"),
+            text("TXT_KEY_TOPCIVS_HISTORIAN10"),
+            text("TXT_KEY_TOPCIVS_HISTORIAN11"),
         ]
 
         self.RankList = [
-            localText.getText("TXT_KEY_TOPCIVS_RANK1", ()),
-            localText.getText("TXT_KEY_TOPCIVS_RANK2", ()),
-            localText.getText("TXT_KEY_TOPCIVS_RANK3", ()),
-            localText.getText("TXT_KEY_TOPCIVS_RANK4", ()),
-            localText.getText("TXT_KEY_TOPCIVS_RANK5", ()),
-            localText.getText("TXT_KEY_TOPCIVS_RANK6", ()),
-            localText.getText("TXT_KEY_TOPCIVS_RANK7", ()),
-            localText.getText("TXT_KEY_TOPCIVS_RANK8", ()),
+            text("TXT_KEY_TOPCIVS_RANK1"),
+            text("TXT_KEY_TOPCIVS_RANK2"),
+            text("TXT_KEY_TOPCIVS_RANK3"),
+            text("TXT_KEY_TOPCIVS_RANK4"),
+            text("TXT_KEY_TOPCIVS_RANK5"),
+            text("TXT_KEY_TOPCIVS_RANK6"),
+            text("TXT_KEY_TOPCIVS_RANK7"),
+            text("TXT_KEY_TOPCIVS_RANK8"),
         ]
 
         self.TypeList = [
-            localText.getText("TXT_KEY_TOPCIVS_WEALTH", ()),
-            localText.getText("TXT_KEY_TOPCIVS_POWER", ()),
-            localText.getText("TXT_KEY_TOPCIVS_TECH", ()),
-            localText.getText("TXT_KEY_TOPCIVS_CULTURE", ()),
-            localText.getText("TXT_KEY_TOPCIVS_SIZE", ()),
+            text("TXT_KEY_TOPCIVS_WEALTH"),
+            text("TXT_KEY_TOPCIVS_POWER"),
+            text("TXT_KEY_TOPCIVS_TECH"),
+            text("TXT_KEY_TOPCIVS_CULTURE"),
+            text("TXT_KEY_TOPCIVS_SIZE"),
         ]
 
         # Randomly choose what category and what historian will be used
@@ -212,9 +210,9 @@ class CvTopCivs:
         self.W_INFO_TEXT = self.W_HEADER_PANEL
         self.H_INFO_TEXT = 70
         szText = (
-            localText.getText("TXT_KEY_TOPCIVS_TEXT1", (szHistorianRand,))
+            text("TXT_KEY_TOPCIVS_TEXT1", szHistorianRand)
             + u"\n"
-            + localText.getText("TXT_KEY_TOPCIVS_TEXT2", (szTypeRand,))
+            + text("TXT_KEY_TOPCIVS_TEXT2", szTypeRand)
         )
         self.screen.addMultilineText(
             "InfoText1",
@@ -242,17 +240,17 @@ class CvTopCivs:
 
             if gc.getPlayer(iPlayerLoop).isAlive():
 
-                if szType == localText.getText("TXT_KEY_TOPCIVS_WEALTH", ()):
+                if szType == text("TXT_KEY_TOPCIVS_WEALTH"):
 
                     self.aiTopCivsValues.append([gc.getPlayer(iPlayerLoop).getGold(), iPlayerLoop])
 
-                if szType == localText.getText("TXT_KEY_TOPCIVS_POWER", ()):
+                if szType == text("TXT_KEY_TOPCIVS_POWER"):
 
                     self.aiTopCivsValues.append(
                         [gc.getPlayer(iPlayerLoop).getPower(), iPlayerLoop]
                     )
 
-                if szType == localText.getText("TXT_KEY_TOPCIVS_TECH", ()):
+                if szType == text("TXT_KEY_TOPCIVS_TECH"):
 
                     iPlayerNumTechs = 0
                     iNumTotalTechs = gc.getNumTechInfos()
@@ -268,13 +266,13 @@ class CvTopCivs:
 
                     self.aiTopCivsValues.append([iPlayerNumTechs, iPlayerLoop])
 
-                if szType == localText.getText("TXT_KEY_TOPCIVS_CULTURE", ()):
+                if szType == text("TXT_KEY_TOPCIVS_CULTURE"):
 
                     self.aiTopCivsValues.append(
                         [gc.getPlayer(iPlayerLoop).countTotalCulture(), iPlayerLoop]
                     )
 
-                if szType == localText.getText("TXT_KEY_TOPCIVS_SIZE", ()):
+                if szType == text("TXT_KEY_TOPCIVS_SIZE"):
 
                     self.aiTopCivsValues.append(
                         [gc.getPlayer(iPlayerLoop).getTotalLand(), iPlayerLoop]
@@ -310,10 +308,9 @@ class CvTopCivs:
                 if iPlayer == CyGame().getActivePlayer() or pActivePlayerTeam.isHasMet(
                     iPlayerTeam
                 ):
-                    # szCivText = localText.getText("TXT_KEY_TOPCIVS_TEXT3", (szPlayerName, self.RankList[iRankLoop])) #Rhye
                     szCivText = gc.getPlayer(iPlayer).getCivilizationDescription(0)  # Rhye
                 else:
-                    szCivText = localText.getText("TXT_KEY_TOPCIVS_UNKNOWN", ())
+                    szCivText = text("TXT_KEY_TOPCIVS_UNKNOWN")
 
                 szWidgetName = "Text" + str(iRankLoop)
                 szWidgetDesc = "%d) %s" % (iRankLoop + 1, szCivText)

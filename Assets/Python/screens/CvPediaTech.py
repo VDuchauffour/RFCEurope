@@ -11,11 +11,11 @@ from CvPythonExtensions import *
 import CvUtil
 import CvPediaScreen
 import CvScreenEnums
+from CoreFunctions import text
 
 # globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()
 
 
 class CvPediaTech(CvPediaScreen.CvPediaScreen):
@@ -170,17 +170,14 @@ class CvPediaTech(CvPediaScreen.CvPediaScreen):
 
         szCostId = self.top.getNextWidgetName()
         if self.top.iActivePlayer == -1:
-            szCostText = localText.getText(
-                "TXT_KEY_PEDIA_COST", (gc.getTechInfo(iTech).getResearchCost(),)
+            szCostText = text(
+                "TXT_KEY_PEDIA_COST", gc.getTechInfo(iTech).getResearchCost()
             ) + u"%c" % (gc.getCommerceInfo(CommerceTypes.COMMERCE_RESEARCH).getChar())
         else:
-            szCostText = (
-                localText.getText(
-                    "TXT_KEY_PEDIA_COST",
-                    (gc.getTeam(gc.getGame().getActiveTeam()).getResearchCost(iTech),),
-                )
-                + u"%c" % (gc.getCommerceInfo(CommerceTypes.COMMERCE_RESEARCH).getChar())
-            )
+            szCostText = text(
+                "TXT_KEY_PEDIA_COST",
+                gc.getTeam(gc.getGame().getActiveTeam()).getResearchCost(iTech),
+            ) + u"%c" % (gc.getCommerceInfo(CommerceTypes.COMMERCE_RESEARCH).getChar())
         screen.setLabel(
             szCostId,
             "Background",
@@ -219,7 +216,7 @@ class CvPediaTech(CvPediaScreen.CvPediaScreen):
         screen = self.top.getScreen()
 
         # add pane and text
-        szLeadsTo = localText.getText("TXT_KEY_PEDIA_LEADS_TO", ())
+        szLeadsTo = text("TXT_KEY_PEDIA_LEADS_TO")
 
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
@@ -270,7 +267,7 @@ class CvPediaTech(CvPediaScreen.CvPediaScreen):
 
         screen = self.top.getScreen()
 
-        szRequires = localText.getText("TXT_KEY_PEDIA_REQUIRES", ())
+        szRequires = text("TXT_KEY_PEDIA_REQUIRES")
 
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
@@ -293,7 +290,7 @@ class CvPediaTech(CvPediaScreen.CvPediaScreen):
             eTech = gc.getTechInfo(self.iTech).getPrereqAndTechs(j)
             if eTech > -1:
                 if not bFirst:
-                    screen.attachLabel(panelName, "", localText.getText("TXT_KEY_AND", ()))
+                    screen.attachLabel(panelName, "", text("TXT_KEY_AND"))
                 else:
                     bFirst = False
                 screen.attachImageButton(
@@ -318,10 +315,10 @@ class CvPediaTech(CvPediaScreen.CvPediaScreen):
         # Display a bracket if we have more than one OR tech and at least one AND tech
         if not bFirst:
             if nOrTechs > 1:
-                szLeftDelimeter = localText.getText("TXT_KEY_AND", ()) + "( "
+                szLeftDelimeter = text("TXT_KEY_AND") + "( "
                 szRightDelimeter = " ) "
             elif nOrTechs > 0:
-                szLeftDelimeter = localText.getText("TXT_KEY_AND", ())
+                szLeftDelimeter = text("TXT_KEY_AND")
             else:
                 return
 
@@ -333,7 +330,7 @@ class CvPediaTech(CvPediaScreen.CvPediaScreen):
             eTech = gc.getTechInfo(self.iTech).getPrereqOrTechs(j)
             if eTech > -1:
                 if not bFirst:
-                    screen.attachLabel(panelName, "", localText.getText("TXT_KEY_OR", ()))
+                    screen.attachLabel(panelName, "", text("TXT_KEY_OR"))
                 else:
                     bFirst = False
                 screen.attachImageButton(
@@ -357,7 +354,7 @@ class CvPediaTech(CvPediaScreen.CvPediaScreen):
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_UNITS_ENABLED", ()),
+            text("TXT_KEY_PEDIA_UNITS_ENABLED"),
             "",
             False,
             True,
@@ -394,7 +391,7 @@ class CvPediaTech(CvPediaScreen.CvPediaScreen):
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_BUILDINGS_ENABLED", ()),
+            text("TXT_KEY_PEDIA_BUILDINGS_ENABLED"),
             "",
             False,
             True,
@@ -443,7 +440,7 @@ class CvPediaTech(CvPediaScreen.CvPediaScreen):
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_SPECIAL_ABILITIES", ()),
+            text("TXT_KEY_PEDIA_SPECIAL_ABILITIES"),
             "",
             True,
             False,

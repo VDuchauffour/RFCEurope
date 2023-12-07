@@ -4,12 +4,12 @@
 from CvPythonExtensions import *
 
 from Consts import MessageData
+from CoreFunctions import text
 from TimelineData import DateTurn
 from CoreTypes import Improvement, Bonus
 
 # globals
 gc = CyGlobalContext()
-localText = CyTranslator()
 
 
 class Resources:
@@ -39,13 +39,11 @@ class Resources:
                     CyCity(),
                 )
                 if not city.isNone():
-                    szText = localText.getText(
+                    szText = text(
                         textKey,
-                        (
-                            gc.getBonusInfo(iBonus).getTextKey(),
-                            city.getName(),
-                            gc.getPlayer(iOwner).getCivilizationAdjective(0),
-                        ),
+                        gc.getBonusInfo(iBonus).getTextKey(),
+                        city.getName(),
+                        gc.getPlayer(iOwner).getCivilizationAdjective(0),
                     )
                     CyInterface().addMessage(
                         iOwner,

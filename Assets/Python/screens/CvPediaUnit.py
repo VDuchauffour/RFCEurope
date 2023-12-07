@@ -12,11 +12,11 @@ from CoreTypes import Civ, Promotion
 import CvUtil
 import CvScreenEnums
 from MiscData import BARBARIAN_ONLY_UNITS, MERCENARY_ONLY_UNITS
+from CoreFunctions import text
 
 # globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()
 
 
 class CvPediaUnit:
@@ -255,7 +255,7 @@ class CvPediaUnit:
             iStrength = gc.getUnitInfo(self.iUnit).getCombat()
 
         szName = self.top.getNextWidgetName()
-        szStrength = localText.getText("TXT_KEY_PEDIA_STRENGTH", (iStrength,))
+        szStrength = text("TXT_KEY_PEDIA_STRENGTH", iStrength)
         screen.appendListBoxStringNoUpdate(
             panelName,
             u"<font=3>"
@@ -269,9 +269,7 @@ class CvPediaUnit:
         )
 
         szName = self.top.getNextWidgetName()
-        szMovement = localText.getText(
-            "TXT_KEY_PEDIA_MOVEMENT", (gc.getUnitInfo(self.iUnit).getMoves(),)
-        )
+        szMovement = text("TXT_KEY_PEDIA_MOVEMENT", gc.getUnitInfo(self.iUnit).getMoves())
         screen.appendListBoxStringNoUpdate(
             panelName,
             u"<font=3>"
@@ -290,20 +288,17 @@ class CvPediaUnit:
         ):
             szName = self.top.getNextWidgetName()
             if self.top.iActivePlayer == -1:
-                szCost = localText.getText(
+                szCost = text(
                     "TXT_KEY_PEDIA_COST",
                     (
-                        (
-                            gc.getUnitInfo(self.iUnit).getProductionCost()
-                            * gc.getDefineINT("UNIT_PRODUCTION_PERCENT")
-                        )
-                        / 100,
-                    ),
+                        gc.getUnitInfo(self.iUnit).getProductionCost()
+                        * gc.getDefineINT("UNIT_PRODUCTION_PERCENT")
+                    )
+                    / 100,
                 )
             else:
-                szCost = localText.getText(
-                    "TXT_KEY_PEDIA_COST",
-                    (gc.getActivePlayer().getUnitProductionNeeded(self.iUnit),),
+                szCost = text(
+                    "TXT_KEY_PEDIA_COST", gc.getActivePlayer().getUnitProductionNeeded(self.iUnit)
                 )
             screen.appendListBoxStringNoUpdate(
                 panelName,
@@ -319,9 +314,7 @@ class CvPediaUnit:
 
         if gc.getUnitInfo(self.iUnit).getAirRange() > 0:
             szName = self.top.getNextWidgetName()
-            szRange = localText.getText(
-                "TXT_KEY_PEDIA_RANGE", (gc.getUnitInfo(self.iUnit).getAirRange(),)
-            )
+            szRange = text("TXT_KEY_PEDIA_RANGE", gc.getUnitInfo(self.iUnit).getAirRange())
             screen.appendListBoxStringNoUpdate(
                 panelName,
                 u"<font=3>" + szRange.upper() + u"</font>",
@@ -340,7 +333,7 @@ class CvPediaUnit:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_REQUIRES", ()),
+            text("TXT_KEY_PEDIA_REQUIRES"),
             "",
             False,
             True,
@@ -408,10 +401,10 @@ class CvPediaUnit:
         # Display a bracket if we have more than one OR resource and an AND resource
         if not bFirst:
             if nOr > 1:
-                szLeftDelimeter = localText.getText("TXT_KEY_AND", ()) + "( "
+                szLeftDelimeter = text("TXT_KEY_AND") + "( "
                 szRightDelimeter = " ) "
             elif nOr > 0:
-                szLeftDelimeter = localText.getText("TXT_KEY_AND", ())
+                szLeftDelimeter = text("TXT_KEY_AND")
 
         if len(szLeftDelimeter) > 0:
             screen.attachLabel(panelName, "", szLeftDelimeter)
@@ -421,7 +414,7 @@ class CvPediaUnit:
             eBonus = gc.getUnitInfo(self.iUnit).getPrereqOrBonuses(j)
             if eBonus > -1:
                 if not bFirst:
-                    screen.attachLabel(panelName, "", localText.getText("TXT_KEY_OR", ()))
+                    screen.attachLabel(panelName, "", text("TXT_KEY_OR"))
                 else:
                     bFirst = False
                 screen.attachImageButton(
@@ -513,7 +506,7 @@ class CvPediaUnit:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_UPGRADES_TO", ()),
+            text("TXT_KEY_PEDIA_UPGRADES_TO"),
             "",
             False,
             True,
@@ -553,7 +546,7 @@ class CvPediaUnit:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_SPECIAL_ABILITIES", ()),
+            text("TXT_KEY_PEDIA_SPECIAL_ABILITIES"),
             "",
             True,
             False,
@@ -592,7 +585,7 @@ class CvPediaUnit:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_CIVILOPEDIA_HISTORY", ()),
+            text("TXT_KEY_CIVILOPEDIA_HISTORY"),
             "",
             True,
             True,
@@ -624,7 +617,7 @@ class CvPediaUnit:
         panelName = self.top.getNextWidgetName()
         screen.addPanel(
             panelName,
-            localText.getText("TXT_KEY_PEDIA_CATEGORY_PROMOTION", ()),
+            text("TXT_KEY_PEDIA_CATEGORY_PROMOTION"),
             "",
             True,
             True,

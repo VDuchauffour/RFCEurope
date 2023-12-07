@@ -1,6 +1,7 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
+from CoreFunctions import text
 from CoreTypes import PlagueType
 import CvUtil
 import CvScreenEnums
@@ -24,7 +25,6 @@ CIV_TECH_AVAILABLE = 3
 # globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()
 
 
 class CvTechChooser:
@@ -101,7 +101,7 @@ class CvTechChooser:
             self.H_ADD_TECH_BUTTON = 30
             self.X_ADVANCED_START_TEXT = self.X_ADD_TECH_BUTTON + self.W_ADD_TECH_BUTTON + 20
 
-            szText = localText.getText("TXT_KEY_WB_AS_ADD_TECH", ())
+            szText = text("TXT_KEY_WB_AS_ADD_TECH")
             screen.setButtonGFC(
                 "AddTechButton",
                 szText,
@@ -149,9 +149,7 @@ class CvTechChooser:
         screen.setText(
             "TechChooserExit",
             "Background",
-            u"<font=4>"
-            + CyTranslator().getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper()
-            + "</font>",
+            u"<font=4>" + text("TXT_KEY_PEDIA_SCREEN_EXIT").upper() + "</font>",
             CvUtil.FONT_RIGHT_JUSTIFY,
             994,
             726,
@@ -165,7 +163,7 @@ class CvTechChooser:
 
         # Header...
         szText = u"<font=4>"
-        szText = szText + localText.getText("TXT_KEY_TECH_CHOOSER_TITLE", ()).upper()
+        szText = szText + text("TXT_KEY_TECH_CHOOSER_TITLE").upper()
         szText = szText + u"</font>"
         screen.setLabel(
             "TechTitleHeader",
@@ -2104,9 +2102,7 @@ class CvTechChooser:
         if iCost > 0:
             szText = (
                 u"<font=4>"
-                + localText.getText(
-                    "TXT_KEY_WB_AS_SELECTED_TECH_COST", (iCost, pPlayer.getAdvancedStartPoints())
-                )
+                + text("TXT_KEY_WB_AS_SELECTED_TECH_COST", iCost, pPlayer.getAdvancedStartPoints())
                 + u"</font>"
             )
             screen.setLabel(
@@ -2126,7 +2122,7 @@ class CvTechChooser:
             screen.hide("ASPointsLabel")
 
         szText = u"<font=4>"
-        szText += localText.getText("TXT_KEY_WB_AS_SELECTED_TECH", (szName,))
+        szText += text("TXT_KEY_WB_AS_SELECTED_TECH", szName)
         szText += u"</font>"
         screen.setLabel(
             "SelectedTechLabel",

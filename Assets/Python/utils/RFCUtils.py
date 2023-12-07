@@ -33,7 +33,6 @@ from Consts import WORLD_HEIGHT, WORLD_WIDTH, MessageData
 # globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()  # Absinthe
 PyPlayer = PyHelpers.PyPlayer
 
 
@@ -529,9 +528,9 @@ class RFCUtils:
                                     iNewOwner,
                                     False,
                                     MessageData.DURATION / 2,
-                                    CyTranslator().getText(
+                                    text(
                                         "TXT_KEY_MERC_AVAILABLE_IN_PROVINCE_OF_NEW_CITY",
-                                        (szCurrentProvince,),
+                                        szCurrentProvince,
                                     ),
                                     "",
                                     0,
@@ -1174,9 +1173,11 @@ class RFCUtils:
                 iOwner,
                 False,
                 MessageData.DURATION,
-                localText.getText(
+                text(
                     "TXT_KEY_MESSAGE_INQUISITION",
-                    (city.getName(), gc.getReligionInfo(iReligion).getDescription(), iLoot),
+                    city.getName(),
+                    gc.getReligionInfo(iReligion).getDescription(),
+                    iLoot,
                 ),
                 "AS2D_PLAGUE",
                 InterfaceMessageTypes.MESSAGE_TYPE_INFO,
@@ -1199,9 +1200,10 @@ class RFCUtils:
                             iOwner,
                             False,
                             MessageData.DURATION,
-                            localText.getText(
+                            text(
                                 "TXT_KEY_MESSAGE_JEWISH_MOVE_OWN_CITY",
-                                (city.getName(), pSpreadCity.getName()),
+                                city.getName(),
+                                pSpreadCity.getName(),
                             ),
                             "AS2D_PLAGUE",
                             InterfaceMessageTypes.MESSAGE_TYPE_INFO,

@@ -781,12 +781,10 @@ class RiseAndFall:
                     iHuman,
                     False,
                     MessageData.DURATION / 2,
-                    CyTranslator().getText(
+                    text(
                         "TXT_KEY_LEADER_SWITCH",
-                        (
-                            gc.getPlayer(iPlayer).getName(),
-                            gc.getPlayer(iPlayer).getCivilizationDescriptionKey(),
-                        ),
+                        gc.getPlayer(iPlayer).getName(),
+                        gc.getPlayer(iPlayer).getCivilizationDescriptionKey(),
                     ),
                     "",
                     InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
@@ -898,9 +896,7 @@ class RiseAndFall:
                                     MessageData.DURATION,
                                     pCiv.getCivilizationDescription(0)
                                     + " "
-                                    + CyTranslator().getText(
-                                        "TXT_KEY_STABILITY_CIVILWAR_BARBS", ()
-                                    ),
+                                    + text("TXT_KEY_STABILITY_CIVILWAR_BARBS"),
                                     "",
                                     0,
                                     "",
@@ -916,9 +912,7 @@ class RiseAndFall:
                                 iCiv,
                                 True,
                                 MessageData.DURATION,
-                                CyTranslator().getText(
-                                    "TXT_KEY_STABILITY_CIVILWAR_BARBS_HUMAN", ()
-                                ),
+                                text("TXT_KEY_STABILITY_CIVILWAR_BARBS_HUMAN"),
                                 "",
                                 0,
                                 "",
@@ -961,9 +955,7 @@ class RiseAndFall:
                                     MessageData.DURATION,
                                     pCiv.getCivilizationDescription(0)
                                     + " "
-                                    + CyTranslator().getText(
-                                        "TXT_KEY_STABILITY_CIVILWAR_DECLINE", ()
-                                    ),
+                                    + text("TXT_KEY_STABILITY_CIVILWAR_DECLINE"),
                                     "",
                                     0,
                                     "",
@@ -979,9 +971,7 @@ class RiseAndFall:
                                 iCiv,
                                 True,
                                 MessageData.DURATION,
-                                CyTranslator().getText(
-                                    "TXT_KEY_STABILITY_CIVILWAR_DECLINE_HUMAN", ()
-                                ),
+                                text("TXT_KEY_STABILITY_CIVILWAR_DECLINE_HUMAN"),
                                 "",
                                 0,
                                 "",
@@ -1019,9 +1009,7 @@ class RiseAndFall:
                                     MessageData.DURATION,
                                     pCiv.getCivilizationDescription(0)
                                     + " "
-                                    + CyTranslator().getText(
-                                        "TXT_KEY_STABILITY_CIVILWAR_MOTHERLAND", ()
-                                    ),
+                                    + text("TXT_KEY_STABILITY_CIVILWAR_MOTHERLAND"),
                                     "",
                                     0,
                                     "",
@@ -1037,9 +1025,7 @@ class RiseAndFall:
                                 iCiv,
                                 True,
                                 MessageData.DURATION,
-                                CyTranslator().getText(
-                                    "TXT_KEY_STABILITY_CIVILWAR_MOTHERLAND_HUMAN", ()
-                                ),
+                                text("TXT_KEY_STABILITY_CIVILWAR_MOTHERLAND_HUMAN"),
                                 "",
                                 0,
                                 "",
@@ -1622,11 +1608,7 @@ class RiseAndFall:
                 iHuman,
                 True,
                 MessageData.DURATION,
-                (
-                    CyTranslator().getText(
-                        "TXT_KEY_INDEPENDENCE_TEXT", (pDeadCiv.getCivilizationAdjectiveKey(),)
-                    )
-                ),
+                text("TXT_KEY_INDEPENDENCE_TEXT", pDeadCiv.getCivilizationAdjectiveKey()),
                 "",
                 0,
                 "",
