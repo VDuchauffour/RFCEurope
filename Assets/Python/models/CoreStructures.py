@@ -234,6 +234,10 @@ class Civilization(Item):
         """Return True if the civilization is not a vassal."""
         return not self.is_a_vassal()
 
+    def has_civic(self, id):
+        """Return True if the civilization has the civic `id`."""
+        return self.player.getCivics(gc.getCivicInfo(id).getCivicOptionType()) == id
+
     def has_tech(self, id):
         """Return True if the civilization has the tech `id`."""
         return self.team.isHasTech(id)
@@ -1007,14 +1011,7 @@ def _generate_unit(player_id, unit_id, plot, unit_ai, unit_name=None):
     return unit
 
 
-def make_units(
-    player,
-    unit,
-    plot,
-    n_units=1,
-    unit_ai=UnitAITypes.NO_UNITAI,
-    unit_name=None,
-):
+def make_units(player, unit, plot, n_units=1, unit_ai=UnitAITypes.NO_UNITAI, unit_name=None):
     if n_units <= 0:
         return CreatedUnits([])
     if unit < 0:
@@ -1028,13 +1025,7 @@ def make_units(
     return CreatedUnits(units)
 
 
-def make_unit(
-    player,
-    unit,
-    plot,
-    unit_ai=UnitAITypes.NO_UNITAI,
-    unit_name=None,
-):
+def make_unit(player, unit, plot, unit_ai=UnitAITypes.NO_UNITAI, unit_name=None):
     return make_units(player, unit, plot, 1, unit_ai, unit_name).one()
 
 
@@ -1046,12 +1037,7 @@ def _generate_crusade_unit(player_id, unit_id, plot, unit_ai, crusade_value):
 
 
 def make_crusade_units(
-    player,
-    unit,
-    plot,
-    crusade_value,
-    n_units=1,
-    unit_ai=UnitAITypes.NO_UNITAI,
+    player, unit, plot, crusade_value, n_units=1, unit_ai=UnitAITypes.NO_UNITAI
 ):
     if n_units <= 0:
         return CreatedUnits([])
@@ -1066,13 +1052,7 @@ def make_crusade_units(
     return CreatedUnits(units)
 
 
-def make_crusade_unit(
-    player,
-    unit,
-    plot,
-    crusade_value,
-    unit_ai=UnitAITypes.NO_UNITAI,
-):
+def make_crusade_unit(player, unit, plot, crusade_value, unit_ai=UnitAITypes.NO_UNITAI):
     return make_crusade_units(player, unit, plot, crusade_value, 1, unit_ai).one()
 
 
