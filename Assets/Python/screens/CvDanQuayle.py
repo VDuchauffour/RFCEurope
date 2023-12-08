@@ -1,11 +1,10 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
-from CoreFunctions import text
+from CoreFunctions import colortext, text
 import CvScreenEnums
 import CvUtil
 
-# globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
 localText = CyTranslator()
@@ -302,9 +301,7 @@ class CvDanQuayle:
         for i in range(len(self.leaders)):
             szText = self.leaders[i]
             if szLeaderText == szText:
-                szText = localText.getColorText(
-                    szText, (), gc.getInfoTypeForString("COLOR_YELLOW")
-                )
+                szText = colortext(szText, "COLOR_YELLOW")
             else:
                 szText = text(szText)
 

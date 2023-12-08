@@ -2,7 +2,7 @@
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization, COMPANIES
-from CoreFunctions import text
+from CoreFunctions import colortext, text
 from CoreStructures import turn
 from CoreTypes import (
     Building,
@@ -29,13 +29,10 @@ from TimelineData import DateTurn
 
 PyPlayer = PyHelpers.PyPlayer
 
-# globals
-
 up = UniquePowers.UniquePowers()
 utils = RFCUtils.RFCUtils()
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()
 
 VICTORY_CONDITION_SCREEN = 0
 GAME_SETTINGS_SCREEN = 1
@@ -250,9 +247,7 @@ class CvVictoryScreen:
                 self.VC_TAB_ID,
                 "",
                 u"<font=4>"
-                + localText.getColorText(
-                    "TXT_KEY_MAIN_MENU_VICTORIES", (), gc.getInfoTypeForString("COLOR_YELLOW")
-                ).upper()
+                + colortext("TXT_KEY_MAIN_MENU_VICTORIES", "COLOR_YELLOW").upper()
                 + "</font>",
                 CvUtil.FONT_CENTER_JUSTIFY,
                 xLink,
@@ -284,9 +279,7 @@ class CvVictoryScreen:
                 self.SETTINGS_TAB_ID,
                 "",
                 u"<font=4>"
-                + localText.getColorText(
-                    "TXT_KEY_MAIN_MENU_SETTINGS", (), gc.getInfoTypeForString("COLOR_YELLOW")
-                ).upper()
+                + colortext("TXT_KEY_MAIN_MENU_SETTINGS", "COLOR_YELLOW").upper()
                 + "</font>",
                 CvUtil.FONT_CENTER_JUSTIFY,
                 xLink,
@@ -319,9 +312,7 @@ class CvVictoryScreen:
                     self.UN_RESOLUTION_TAB_ID,
                     "",
                     u"<font=4>"
-                    + localText.getColorText(
-                        "TXT_KEY_VOTING_TITLE", (), gc.getInfoTypeForString("COLOR_YELLOW")
-                    ).upper()
+                    + colortext("TXT_KEY_VOTING_TITLE", "COLOR_YELLOW").upper()
                     + "</font>",
                     CvUtil.FONT_CENTER_JUSTIFY,
                     xLink,
@@ -353,9 +344,7 @@ class CvVictoryScreen:
                     self.UN_MEMBERS_TAB_ID,
                     "",
                     u"<font=4>"
-                    + localText.getColorText(
-                        "TXT_KEY_MEMBERS_TITLE", (), gc.getInfoTypeForString("COLOR_YELLOW")
-                    ).upper()
+                    + colortext("TXT_KEY_MEMBERS_TITLE", "COLOR_YELLOW").upper()
                     + "</font>",
                     CvUtil.FONT_CENTER_JUSTIFY,
                     xLink,

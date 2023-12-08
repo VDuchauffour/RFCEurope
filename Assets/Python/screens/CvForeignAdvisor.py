@@ -1,15 +1,13 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
-from CoreFunctions import text
+from CoreFunctions import colortext, text
 import CvUtil
 import CvScreenEnums
 import math
 
-# globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()
 
 # this class is shared by both the resource and technology foreign advisors
 FOREIGN_BONUS_SCREEN = 0
@@ -245,11 +243,7 @@ class CvForeignAdvisor:
                 szRelationsId,
                 "",
                 u"<font=4>"
-                + localText.getColorText(
-                    "TXT_KEY_FOREIGN_ADVISOR_RELATIONS",
-                    (),
-                    gc.getInfoTypeForString("COLOR_YELLOW"),
-                ).upper()
+                + colortext("TXT_KEY_FOREIGN_ADVISOR_RELATIONS", "COLOR_YELLOW").upper()
                 + u"</font>",
                 CvUtil.FONT_LEFT_JUSTIFY,
                 xLink,
@@ -282,11 +276,7 @@ class CvForeignAdvisor:
                 szBonusId,
                 "",
                 u"<font=4>"
-                + localText.getColorText(
-                    "TXT_KEY_FOREIGN_ADVISOR_RESOURCES",
-                    (),
-                    gc.getInfoTypeForString("COLOR_YELLOW"),
-                ).upper()
+                + colortext("TXT_KEY_FOREIGN_ADVISOR_RESOURCES", "COLOR_YELLOW").upper()
                 + u"</font>",
                 CvUtil.FONT_LEFT_JUSTIFY,
                 xLink,
@@ -319,9 +309,7 @@ class CvForeignAdvisor:
                 szTechId,
                 "",
                 u"<font=4>"
-                + localText.getColorText(
-                    "TXT_KEY_FOREIGN_ADVISOR_TECHS", (), gc.getInfoTypeForString("COLOR_YELLOW")
-                ).upper()
+                + colortext("TXT_KEY_FOREIGN_ADVISOR_TECHS", "COLOR_YELLOW").upper()
                 + u"</font>",
                 CvUtil.FONT_LEFT_JUSTIFY,
                 xLink,
@@ -354,9 +342,7 @@ class CvForeignAdvisor:
                 szActiveId,
                 "",
                 u"<font=4>"
-                + localText.getColorText(
-                    "TXT_KEY_FOREIGN_ADVISOR_ACTIVE", (), gc.getInfoTypeForString("COLOR_YELLOW")
-                ).upper()
+                + colortext("TXT_KEY_FOREIGN_ADVISOR_ACTIVE", "COLOR_YELLOW").upper()
                 + u"</font>",
                 CvUtil.FONT_LEFT_JUSTIFY,
                 xLink,

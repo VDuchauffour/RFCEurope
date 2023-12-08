@@ -173,6 +173,10 @@ def text(key, *format):
     return translator.getText(str(key), tuple(format))
 
 
+def colortext(key, color, *format):
+    return translator.getText(str(key), gc.getInfoTypeForString(color), tuple(format))
+
+
 def show(message, *format):
     if format:
         message = message % tuple(format)

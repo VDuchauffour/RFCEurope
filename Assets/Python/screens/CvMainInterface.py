@@ -2,7 +2,7 @@
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from CoreFunctions import text
+from CoreFunctions import colortext, text
 from CoreStructures import human, player, turn
 from CoreTypes import Civ, SpecialParameter, Religion, Technology, Bonus
 import CvUtil
@@ -25,11 +25,9 @@ gameUtils = CvGameInterface.gameUtils()
 
 # < Mercenaries End >
 
-# globals
 utils = RFCUtils.RFCUtils()  # Rhye
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
-localText = CyTranslator()
 
 g_NumEmphasizeInfos = 0
 g_NumCityTabTypes = 0
@@ -6350,10 +6348,8 @@ class CvMainInterface:
                                                 szBuffer = (
                                                     szBuffer
                                                     + "("
-                                                    + localText.getColorText(
-                                                        "TXT_KEY_CONCEPT_WAR",
-                                                        (),
-                                                        gc.getInfoTypeForString("COLOR_RED"),
+                                                    + colortext(
+                                                        "TXT_KEY_CONCEPT_WAR", "COLOR_RED"
                                                     ).upper()
                                                     + ") "
                                                 )

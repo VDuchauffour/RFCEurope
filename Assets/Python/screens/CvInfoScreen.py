@@ -5,7 +5,7 @@
 
 from CvPythonExtensions import *
 from CoreData import civilizations
-from CoreFunctions import text
+from CoreFunctions import colortext, text
 from CoreStructures import turn
 import CvUtil
 
@@ -19,7 +19,6 @@ from PyHelpers import PyPlayer
 from CoreTypes import Colony, Scenario, Technology
 from Scenario import get_scenario, get_scenario_start_years
 
-# globals
 gc = CyGlobalContext()
 ArtFileMgr = CyArtFileMgr()
 localText = CyTranslator()
@@ -391,48 +390,32 @@ class CvInfoScreen:
         # Sedna17 start
         self.TEXT_COLONIES = u"<font=3>" + text("Colonies").upper() + u"</font>"
         self.TEXT_COLONIES_YELLOW = (
-            u"<font=3>"
-            + localText.getColorText(
-                "Colonies", (), gc.getInfoTypeForString("COLOR_YELLOW")
-            ).upper()
-            + u"</font>"
+            u"<font=3>" + colortext("Colonies", "COLOR_YELLOW").upper() + u"</font>"
         )
         # Sedna17 end
 
         self.TEXT_GRAPH_YELLOW = (
-            u"<font=3>"
-            + localText.getColorText(
-                "TXT_KEY_INFO_GRAPH", (), gc.getInfoTypeForString("COLOR_YELLOW")
-            ).upper()
-            + u"</font>"
+            u"<font=3>" + colortext("TXT_KEY_INFO_GRAPH", "COLOR_YELLOW").upper() + u"</font>"
         )
         self.TEXT_DEMOGRAPHICS_YELLOW = (
             u"<font=3>"
-            + localText.getColorText(
-                "TXT_KEY_DEMO_SCREEN_TITLE", (), gc.getInfoTypeForString("COLOR_YELLOW")
-            ).upper()
+            + colortext("TXT_KEY_DEMO_SCREEN_TITLE", "COLOR_YELLOW").upper()
             + u"</font>"
         )
         self.TEXT_TOP_CITIES_YELLOW = (
             u"<font=3>"
-            + localText.getColorText(
-                "TXT_KEY_WONDERS_SCREEN_TOP_CITIES_TEXT",
-                (),
-                gc.getInfoTypeForString("COLOR_YELLOW"),
-            ).upper()
+            + colortext("TXT_KEY_WONDERS_SCREEN_TOP_CITIES_TEXT", "COLOR_YELLOW").upper()
             + u"</font>"
         )
         self.TEXT_STATS_YELLOW = (
             u"<font=3>"
-            + localText.getColorText(
-                "TXT_KEY_INFO_SCREEN_STATISTICS_TITLE", (), gc.getInfoTypeForString("COLOR_YELLOW")
-            ).upper()
+            + colortext("TXT_KEY_INFO_SCREEN_STATISTICS_TITLE", "COLOR_YELLOW").upper()
             + u"</font>"
         )
 
         self.TEXT_SHOW_ALL_PLAYERS = text("TXT_KEY_SHOW_ALL_PLAYERS")
-        self.TEXT_SHOW_ALL_PLAYERS_GRAY = localText.getColorText(
-            "TXT_KEY_SHOW_ALL_PLAYERS", (), gc.getInfoTypeForString("COLOR_PLAYER_GRAY")
+        self.TEXT_SHOW_ALL_PLAYERS_GRAY = colortext(
+            "TXT_KEY_SHOW_ALL_PLAYERS", "COLOR_PLAYER_GRAY"
         ).upper()
 
         self.TEXT_ENTIRE_HISTORY = text("TXT_KEY_INFO_ENTIRE_HISTORY")
