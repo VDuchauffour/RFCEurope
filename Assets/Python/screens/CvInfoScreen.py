@@ -1326,10 +1326,10 @@ class CvInfoScreen:
                 self.scoreCache[scoreType].append([])
                 firstTurn = CyGame().getStartTurn()
                 thisTurn = turn()
-                turn = firstTurn
-                while turn <= thisTurn:
-                    self.scoreCache[scoreType][p].append(self.computeHistory(scoreType, p, turn))
-                    turn += 1
+                _turn = firstTurn
+                while _turn <= thisTurn:
+                    self.scoreCache[scoreType][p].append(self.computeHistory(scoreType, p, _turn))
+                    _turn += 1
 
         return
 
