@@ -174,7 +174,7 @@ def text(key, *format):
 
 
 def colortext(key, color, *format):
-    return translator.getText(str(key), gc.getInfoTypeForString(color), tuple(format))
+    return translator.getColorText(str(key), tuple(format), gc.getInfoTypeForString(color))
 
 
 def show(message, *format):
