@@ -1495,7 +1495,7 @@ class CvMainInterface:
         ):
             if gc.getGame().isPaused():
                 # Pause overrides other messages
-                acOutput = tech(
+                acOutput = text(
                     "SYSTEM_GAME_PAUSED", gc.getPlayer(gc.getGame().getPausePlayer()).getNameKey()
                 )
                 # screen.modifyLabel( "EndTurnText", acOutput, CvUtil.FONT_CENTER_JUSTIFY )
