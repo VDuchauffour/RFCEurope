@@ -3,7 +3,7 @@
 from CvPythonExtensions import *
 from Consts import MessageData
 from CoreData import civilizations, civilization
-from CoreFunctions import text
+from CoreFunctions import message, text
 from CoreStructures import human, turn
 from CoreTypes import PlagueType, Improvement, Civ
 from PyUtils import percentage, percentage_chance, rand
@@ -196,43 +196,31 @@ class Plague:
         iHumanTeam = gc.getPlayer(iHuman).getTeam()
         if gc.getPlayer(iHuman).canContact(iPlayer) and iHuman != iPlayer:
             if city != -1 and city.isRevealed(iHumanTeam, False):
-                CyInterface().addMessage(
+                message(
                     iHuman,
-                    True,
-                    MessageData.DURATION / 2,
                     text("TXT_KEY_PLAGUE_SPREAD_CITY")
                     + " "
                     + city.getName()
                     + " ("
                     + gc.getPlayer(city.getOwner()).getCivilizationAdjective(0)
                     + ")!",
-                    "AS2D_PLAGUE",
-                    0,
-                    gc.getBuildingInfo(PlagueType.PLAGUE.value).getButton(),
-                    ColorTypes(MessageData.LIME),
-                    city.getX(),
-                    city.getY(),
-                    True,
-                    True,
+                    force=True,
+                    sound="AS2D_PLAGUE",
+                    button=gc.getBuildingInfo(PlagueType.PLAGUE.value).getButton(),
+                    color=MessageData.LIME,
+                    location=city,
                 )
             elif city != -1:
                 pCiv = gc.getPlayer(city.getOwner())
-                CyInterface().addMessage(
+                message(
                     iHuman,
-                    True,
-                    MessageData.DURATION / 2,
                     text("TXT_KEY_PLAGUE_SPREAD_CIV")
                     + " "
                     + pCiv.getCivilizationDescription(0)
                     + "!",
-                    "AS2D_PLAGUE",
-                    0,
-                    "",
-                    ColorTypes(MessageData.LIME),
-                    -1,
-                    -1,
-                    True,
-                    True,
+                    force=True,
+                    sound="AS2D_PLAGUE",
+                    color=MessageData.LIME,
                 )
 
         # Absinthe: this is where the duration is handled for each civ
@@ -262,19 +250,14 @@ class Plague:
 
         city.setHasRealBuilding(PlagueType.PLAGUE.value, True)
         if gc.getPlayer(city.getOwner()).isHuman():
-            CyInterface().addMessage(
+            message(
                 city.getOwner(),
-                True,
-                MessageData.DURATION / 2,
                 text("TXT_KEY_PLAGUE_SPREAD_CITY") + " " + city.getName() + "!",
-                "AS2D_PLAGUE",
-                0,
-                gc.getBuildingInfo(PlagueType.PLAGUE.value).getButton(),
-                ColorTypes(MessageData.LIME),
-                x,
-                y,
-                True,
-                True,
+                force=True,
+                sound="AS2D_PLAGUE",
+                button=gc.getBuildingInfo(PlagueType.PLAGUE.value).getButton(),
+                color=MessageData.LIME,
+                location=(x, y),
             )
         for (i, j) in utils.surroundingPlots((x, y), 2):
             pPlot = gc.getMap().plot(i, j)
@@ -383,22 +366,17 @@ class Plague:
                         if iUnitDamage >= 100:
                             unit.kill(False, Civ.BARBARIAN.value)
                             if unit.getOwner() == iHuman:
-                                CyInterface().addMessage(
+                                message(
                                     iHuman,
-                                    False,
-                                    MessageData.DURATION / 2,
                                     text("TXT_KEY_PLAGUE_PROCESS_UNIT", unit.getName())
                                     + " "
                                     + city.getName()
                                     + "!",
-                                    "AS2D_PLAGUE",
-                                    0,
-                                    gc.getBuildingInfo(PlagueType.PLAGUE.value).getButton(),
-                                    ColorTypes(MessageData.LIME),
-                                    plot.getX(),
-                                    plot.getY(),
-                                    True,
-                                    True,
+                                    force=False,
+                                    sound="AS2D_PLAGUE",
+                                    button=gc.getBuildingInfo(PlagueType.PLAGUE.value).getButton(),
+                                    color=MessageData.LIME,
+                                    location=plot,
                                 )
                         else:
                             unit.setDamage(iUnitDamage, Civ.BARBARIAN.value)
@@ -447,22 +425,17 @@ class Plague:
                 if bKill:
                     city.changePopulation(-1)
                     if iPlayer == iHuman:
-                        CyInterface().addMessage(
+                        message(
                             iHuman,
-                            False,
-                            MessageData.DURATION / 2,
                             text("TXT_KEY_PLAGUE_PROCESS_CITY", city.getName())
                             + " "
                             + city.getName()
                             + "!",
-                            "AS2D_PLAGUE",
-                            0,
-                            gc.getBuildingInfo(PlagueType.PLAGUE.value).getButton(),
-                            ColorTypes(MessageData.LIME),
-                            city.getX(),
-                            city.getY(),
-                            True,
-                            True,
+                            force=False,
+                            sound="AS2D_PLAGUE",
+                            button=gc.getBuildingInfo(PlagueType.PLAGUE.value).getButton(),
+                            color=MessageData.LIME,
+                            location=city,
                         )
 
             # infect vassals

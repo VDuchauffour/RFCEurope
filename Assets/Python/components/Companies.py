@@ -4,7 +4,7 @@
 from CvPythonExtensions import *
 from Consts import MessageData
 from CoreData import civilizations, COMPANIES
-from CoreFunctions import get_enum_by_id, text
+from CoreFunctions import get_enum_by_id, text, message
 from CoreStructures import human, player, turn
 from LocationsData import CITIES
 from PyUtils import rand
@@ -222,26 +222,19 @@ class Companies:
 
         sCityName = city.getName()
         sCompanyName = gc.getCorporationInfo(iCompany).getDescription()
-        iX = city.getX()
-        iY = city.getY()
 
         if bRemove:
             sText = text("TXT_KEY_MISC_CORPORATION_REMOVED", sCompanyName, sCityName)
         else:
             sText = text("TXT_KEY_MISC_CORPORATION_SPREAD", sCompanyName, sCityName)
-        CyInterface().addMessage(
+        message(
             iHuman,
-            False,
-            MessageData.DURATION,
             sText,
-            gc.getCorporationInfo(iCompany).getSound(),
-            InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-            gc.getCorporationInfo(iCompany).getButton(),
-            ColorTypes(MessageData.WHITE),
-            iX,
-            iY,
-            True,
-            True,
+            sound=gc.getCorporationInfo(iCompany).getSound(),
+            event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+            button=gc.getCorporationInfo(iCompany).getButton(),
+            color=MessageData.WHITE,
+            location=city,
         )
 
     def getCityValue(self, city, iCompany):

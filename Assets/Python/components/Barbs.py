@@ -2,7 +2,7 @@
 
 from CvPythonExtensions import *
 from Consts import INDEPENDENT_CIVS
-from CoreFunctions import event_popup, text
+from CoreFunctions import event_popup, message, text
 from CoreStructures import human, make_unit, make_units, turn
 from CoreTypes import Civ, Civic, Religion, Technology, Unit, Province
 from PyUtils import percentage, percentage_chance, rand, random_entry, choice
@@ -3484,19 +3484,10 @@ class Barbs:
             # revolt suppressed
             for iI in range(len(cityList)):
                 pCity = cityList[iI]
-                CyInterface().addMessage(
+                message(
                     iPlayer,
-                    False,
-                    MessageData.DURATION,
                     text("TXT_KEY_MINOR_NATION_REVOLT_SUPRESSED", pCity.getName()),
-                    "",
-                    0,
-                    "",
-                    ColorTypes(MessageData.BLUE),
-                    -1,
-                    -1,
-                    True,
-                    True,
+                    color=MessageData.BLUE,
                 )
                 # cracking the rebels results in unhappiness in the general population:
                 if iDecision in [1, 3]:
@@ -3521,19 +3512,10 @@ class Barbs:
                 pCity = cityList[iI]
                 tCity = (pCity.getX(), pCity.getY())
                 sNationName = text(lNation[7][1])
-                CyInterface().addMessage(
+                message(
                     iPlayer,
-                    False,
-                    MessageData.DURATION,
                     text("TXT_KEY_MINOR_NATION_REVOLT_SUCCEEDED", sNationName, pCity.getName()),
-                    "",
-                    0,
-                    "",
-                    ColorTypes(MessageData.ORANGE),
-                    -1,
-                    -1,
-                    True,
-                    True,
+                    color=MessageData.ORANGE,
                 )
                 utils.cultureManager(tCity, 50, iNewCiv, iPlayer, False, True, True)
                 utils.flipUnitsInCitySecession(tCity, iNewCiv, iPlayer)

@@ -1,7 +1,7 @@
 # Rhye's and Fall of Civilization: Europe - Unique Powers (only a couple of them is here, most are handled in the .dll)
 
 from CvPythonExtensions import *
-from CoreFunctions import text
+from CoreFunctions import message, text
 from CoreStructures import human, make_unit
 from CoreTypes import Building, SpecialParameter, Religion, Unit
 from PyUtils import choice
@@ -67,24 +67,17 @@ class UniquePowers:
                 iPlayer
             )  # The Janissary unit appears in a random city - should it be the capital instead?
             if pCity != -1:
-                iX = pCity.getX()
-                iY = pCity.getY()
-                make_unit(iPlayer, Unit.JANISSARY, (iX, iY))
+                make_unit(iPlayer, Unit.JANISSARY, pCity)
                 # interface message for the human player
                 if iPlayer == human():
-                    CyInterface().addMessage(
+                    text_string = text("TXT_KEY_UNIT_NEW_JANISSARY") + " " + pCity.getName() + "!"
+                    message(
                         iPlayer,
-                        False,
-                        MessageData.DURATION,
-                        text("TXT_KEY_UNIT_NEW_JANISSARY") + " " + pCity.getName() + "!",
-                        "AS2D_UNIT_BUILD_UNIQUE_UNIT",
-                        0,
-                        gc.getUnitInfo(Unit.JANISSARY.value).getButton(),
-                        ColorTypes(MessageData.GREEN),
-                        iX,
-                        iY,
-                        True,
-                        True,
+                        text_string,
+                        sound="AS2D_UNIT_BUILD_UNIQUE_UNIT",
+                        button=gc.getUnitInfo(Unit.JANISSARY.value).getButton(),
+                        color=MessageData.GREEN,
+                        location=pCity,
                     )
                 iTotalPoints -= iNextJanissary
 
@@ -112,23 +105,16 @@ class UniquePowers:
         # removed free janissary, probably too powerful to add a new janissary unit right on conquest
         iIsHasForeignReligion = 0
         if iIsHasForeignReligion:
-            iX = city.getX()
-            iY = city.getY()
-            make_unit(iPlayer, Unit.JANISSARY, (iX, iY))
+            make_unit(iPlayer, Unit.JANISSARY, city)
             if iPlayer == human():
-                CyInterface().addMessage(
+                text_string = text("TXT_KEY_UNIT_NEW_JANISSARY") + " " + city.getName() + "!"
+                message(
                     iPlayer,
-                    False,
-                    MessageData.DURATION,
-                    text("TXT_KEY_UNIT_NEW_JANISSARY") + " " + city.getName() + "!",
-                    "AS2D_UNIT_BUILD_UNIQUE_UNIT",
-                    0,
-                    gc.getUnitInfo(Unit.JANISSARY.value).getButton(),
-                    ColorTypes(MessageData.GREEN),
-                    iX,
-                    iY,
-                    True,
-                    True,
+                    text_string,
+                    sound="AS2D_UNIT_BUILD_UNIQUE_UNIT",
+                    button=gc.getUnitInfo(Unit.JANISSARY.value).getButton(),
+                    color=MessageData.GREEN,
+                    location=city,
                 )
 
     # Absinthe: Danish UP
@@ -149,20 +135,7 @@ class UniquePowers:
 
         iGold = iCities * 2
         gc.getPlayer(iPlayer).changeGold(iGold)
-        CyInterface().addMessage(
-            iPlayer,
-            False,
-            MessageData.DURATION / 2,
-            text("TXT_KEY_UP_SOUND_TOLL", iGold),
-            "",
-            0,
-            "",
-            ColorTypes(MessageData.GREEN),
-            -1,
-            -1,
-            True,
-            True,
-        )
+        message(iPlayer, text("TXT_KEY_UP_SOUND_TOLL", iGold), color=MessageData.GREEN)
 
     def getNumForeignCitiesOnBaltic(self, iPlayer, bVassal=False):
         lBalticRects = [
@@ -269,23 +242,14 @@ class UniquePowers:
             # only in cities with at least 20% Scottish culture
             iTotalCulture = city.countTotalCultureTimes100()
             if iTotalCulture == 0 or (city.getCulture(iPlayer) * 10000) / iTotalCulture > 20:
-                iX = city.getX()
-                iY = city.getY()
-                tPlot = (iX, iY)
-                make_unit(iPlayer, choice([RangedClass, PolearmClass]), tPlot)
+                make_unit(iPlayer, choice([RangedClass, PolearmClass]), city)
                 # interface message for the human player
                 if iPlayer == human():
-                    CyInterface().addMessage(
+                    text_string = text("TXT_KEY_UNIT_NEW_DEFENDER") + " " + city.getName() + "!"
+                    message(
                         iPlayer,
-                        False,
-                        MessageData.DURATION,
-                        text("TXT_KEY_UNIT_NEW_DEFENDER") + " " + city.getName() + "!",
-                        "AS2D_UNIT_BUILD_UNIQUE_UNIT",
-                        0,
-                        "",
-                        ColorTypes(MessageData.GREEN),
-                        iX,
-                        iY,
-                        True,
-                        True,
+                        text_string,
+                        sound="AS2D_UNIT_BUILD_UNIQUE_UNIT",
+                        color=MessageData.GREEN,
+                        location=city,
                     )

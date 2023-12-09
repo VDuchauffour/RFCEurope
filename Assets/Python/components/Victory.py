@@ -1,6 +1,6 @@
 from CvPythonExtensions import *
 from CoreData import civilization, civilizations, COMPANIES
-from CoreFunctions import show, text
+from CoreFunctions import message, show, text
 from CoreStructures import human, player, team, turn
 from CoreTypes import (
     Building,
@@ -553,19 +553,8 @@ class Victory:
                     # 3Miro: Golden Age after 2/3 victories
                     capital.setHasRealBuilding(Building.TRIUMPHAL_ARCH.value, True)
                     if pPlayer.isHuman():
-                        CyInterface().addMessage(
-                            iPlayer,
-                            False,
-                            MessageData.DURATION,
-                            text("TXT_KEY_VICTORY_INTERMEDIATE"),
-                            "",
-                            0,
-                            "",
-                            ColorTypes(MessageData.PURPLE),
-                            -1,
-                            -1,
-                            True,
-                            True,
+                        message(
+                            iPlayer, text("TXT_KEY_VICTORY_INTERMEDIATE"), color=MessageData.PURPLE
                         )
                         for iCiv in civilizations().majors().ids():
                             if iCiv != iPlayer:
@@ -631,19 +620,10 @@ class Victory:
                                         if iWarCounter == 3:
                                             break
                         if iWarCounter > 0:
-                            CyInterface().addMessage(
+                            message(
                                 iPlayer,
-                                False,
-                                MessageData.DURATION,
                                 text("TXT_KEY_VICTORY_RIVAL_CIVS"),
-                                "",
-                                0,
-                                "",
-                                ColorTypes(MessageData.LIGHT_RED),
-                                -1,
-                                -1,
-                                True,
-                                True,
+                                color=MessageData.LIGHT_RED,
                             )
 
         if gc.getGame().getWinner() == -1:

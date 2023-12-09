@@ -25,7 +25,7 @@ from PyUtils import percentage, percentage_chance, rand, choice
 from StoredData import data
 from MiscData import GREAT_PROPHET_FAITH_POINT_BONUS, RELIGION_PERSECUTION_ORDER
 
-from CoreFunctions import get_religion_by_id, text
+from CoreFunctions import get_religion_by_id, message, text
 from CoreTypes import ProvinceType
 from ProvinceMapData import PROVINCES_MAP
 from Consts import WORLD_HEIGHT, WORLD_WIDTH, MessageData
@@ -524,24 +524,17 @@ class RFCUtils:
                             if iNewOwner == human():
                                 szProvName = "TXT_KEY_PROVINCE_NAME_%i" % lMerc[4]
                                 szCurrentProvince = text(szProvName)
-                                CyInterface().addMessage(
+                                message(
                                     iNewOwner,
-                                    False,
-                                    MessageData.DURATION / 2,
                                     text(
                                         "TXT_KEY_MERC_AVAILABLE_IN_PROVINCE_OF_NEW_CITY",
                                         szCurrentProvince,
                                     ),
-                                    "",
-                                    0,
-                                    ArtFileMgr.getInterfaceArtInfo(
+                                    button=ArtFileMgr.getInterfaceArtInfo(
                                         "INTERFACE_MERCENARY_ICON"
                                     ).getPath(),
-                                    ColorTypes(MessageData.LIME),
-                                    city.getX(),
-                                    city.getY(),
-                                    True,
-                                    True,
+                                    color=MessageData.LIME,
+                                    location=city,
                                 )
                                 break
                     return True
@@ -1169,24 +1162,19 @@ class RFCUtils:
             # gc.setMinorReligionRefugies( 0 )
 
             # interface message for the player
-            CyInterface().addMessage(
+            message(
                 iOwner,
-                False,
-                MessageData.DURATION,
                 text(
                     "TXT_KEY_MESSAGE_INQUISITION",
                     city.getName(),
                     gc.getReligionInfo(iReligion).getDescription(),
                     iLoot,
                 ),
-                "AS2D_PLAGUE",
-                InterfaceMessageTypes.MESSAGE_TYPE_INFO,
-                pUnit.getButton(),
-                ColorTypes(MessageData.GREEN),
-                iPlotX,
-                iPlotY,
-                True,
-                True,
+                sound="AS2D_PLAGUE",
+                event=InterfaceMessageTypes.MESSAGE_TYPE_INFO,
+                button=pUnit.getButton(),
+                color=MessageData.GREEN,
+                location=(iPlotX, iPlotY),
             )
 
             # Jews may spread to another random city
@@ -1196,38 +1184,28 @@ class RFCUtils:
                     self.spreadJews(tCity, Religion.JUDAISM)
                     pSpreadCity = gc.getMap().plot(*tCity).getPlotCity()
                     if pSpreadCity.getOwner() == iOwner:
-                        CyInterface().addMessage(
+                        message(
                             iOwner,
-                            False,
-                            MessageData.DURATION,
                             text(
                                 "TXT_KEY_MESSAGE_JEWISH_MOVE_OWN_CITY",
                                 city.getName(),
                                 pSpreadCity.getName(),
                             ),
-                            "AS2D_PLAGUE",
-                            InterfaceMessageTypes.MESSAGE_TYPE_INFO,
-                            pUnit.getButton(),
-                            ColorTypes(MessageData.GREEN),
-                            iPlotX,
-                            iPlotY,
-                            True,
-                            True,
+                            sound="AS2D_PLAGUE",
+                            event=InterfaceMessageTypes.MESSAGE_TYPE_INFO,
+                            button=pUnit.getButton(),
+                            color=MessageData.GREEN,
+                            location=(iPlotX, iPlotY),
                         )
                     else:
-                        CyInterface().addMessage(
+                        message(
                             iOwner,
-                            False,
-                            MessageData.DURATION,
                             text("TXT_KEY_MESSAGE_JEWISH_MOVE", city.getName()),
-                            "AS2D_PLAGUE",
-                            InterfaceMessageTypes.MESSAGE_TYPE_INFO,
-                            pUnit.getButton(),
-                            ColorTypes(MessageData.GREEN),
-                            iPlotX,
-                            iPlotY,
-                            True,
-                            True,
+                            sound="AS2D_PLAGUE",
+                            event=InterfaceMessageTypes.MESSAGE_TYPE_INFO,
+                            button=pUnit.getButton(),
+                            color=MessageData.GREEN,
+                            location=(iPlotX, iPlotY),
                         )
 
             # persecution countdown for the civ (causes indirect instability - stability.recalcCity)
@@ -1246,19 +1224,14 @@ class RFCUtils:
 
         else:
             # on failed persecution
-            CyInterface().addMessage(
+            message(
                 iOwner,
-                False,
-                MessageData.DURATION,
                 text("TXT_KEY_MESSAGE_INQUISITION_FAIL", city.getName()),
-                "AS2D_SABOTAGE",
-                InterfaceMessageTypes.MESSAGE_TYPE_INFO,
-                pUnit.getButton(),
-                ColorTypes(MessageData.RED),
-                iPlotX,
-                iPlotY,
-                True,
-                True,
+                sound="AS2D_SABOTAGE",
+                event=InterfaceMessageTypes.MESSAGE_TYPE_INFO,
+                button=pUnit.getButton(),
+                color=MessageData.RED,
+                location=(iPlotX, iPlotY),
             )
 
             # persecution countdown for the civ (causes indirect instability - stability.recalcCity)

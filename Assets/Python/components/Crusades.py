@@ -1,7 +1,7 @@
 from CvPythonExtensions import *
 from Consts import MessageData
 from CoreData import civilizations, civilization
-from CoreFunctions import event_popup, get_civ_by_id, text
+from CoreFunctions import event_popup, get_civ_by_id, message, text
 from CoreStructures import (
     human,
     make_crusade_unit,
@@ -569,19 +569,8 @@ class Crusades:
             pPlayer = gc.getPlayer(iHuman)
             pPlayer.setIsCrusader(False)
             pPlayer.changeFaith(-min(5, pPlayer.getFaith()))
-            CyInterface().addMessage(
-                iHuman,
-                True,
-                MessageData.DURATION,
-                text("TXT_KEY_CRUSADE_DENY_FAITH"),
-                "",
-                0,
-                "",
-                ColorTypes(MessageData.LIGHT_RED),
-                -1,
-                -1,
-                True,
-                True,
+            message(
+                iHuman, text("TXT_KEY_CRUSADE_DENY_FAITH"), force=True, color=MessageData.LIGHT_RED
             )
             gc.getPlayer(Civ.POPE.value).AI_changeMemoryCount(
                 iHuman, MemoryTypes.MEMORY_REJECTED_DEMAND, 2
@@ -604,54 +593,33 @@ class Crusades:
                         if self.getNumDefendersAtPlot(pPlot) > 3:
                             if random_value < 50:
                                 self.addSelectedUnit(self.unitCrusadeCategory(iUnitType))
-                                CyInterface().addMessage(
+                                message(
                                     iHuman,
-                                    False,
-                                    MessageData.DURATION,
                                     text("TXT_KEY_CRUSADE_DENY_LEAVE_ANYWAY"),
-                                    "",
-                                    0,
-                                    gc.getUnitInfo(iUnitType).getButton(),
-                                    ColorTypes(MessageData.LIGHT_RED),
-                                    pUnit.getX(),
-                                    pUnit.getY(),
-                                    True,
-                                    True,
+                                    button=gc.getUnitInfo(iUnitType).getButton(),
+                                    color=MessageData.LIGHT_RED,
+                                    location=pUnit,
                                 )
                                 pUnit.kill(0, -1)
                         elif self.getNumDefendersAtPlot(pPlot) > 1:
                             if random_value < 10:
                                 self.addSelectedUnit(self.unitCrusadeCategory(iUnitType))
-                                CyInterface().addMessage(
+                                message(
                                     iHuman,
-                                    False,
-                                    MessageData.DURATION,
                                     text("TXT_KEY_CRUSADE_DENY_LEAVE_ANYWAY"),
-                                    "",
-                                    0,
-                                    gc.getUnitInfo(iUnitType).getButton(),
-                                    ColorTypes(MessageData.LIGHT_RED),
-                                    pUnit.getX(),
-                                    pUnit.getY(),
-                                    True,
-                                    True,
+                                    button=gc.getUnitInfo(iUnitType).getButton(),
+                                    color=MessageData.LIGHT_RED,
+                                    location=pUnit,
                                 )
                                 pUnit.kill(0, -1)
                     elif random_value < 30:
                         self.addSelectedUnit(self.unitCrusadeCategory(iUnitType))
-                        CyInterface().addMessage(
+                        message(
                             iHuman,
-                            False,
-                            MessageData.DURATION,
                             text("TXT_KEY_CRUSADE_DENY_LEAVE_ANYWAY"),
-                            "",
-                            0,
-                            gc.getUnitInfo(iUnitType).getButton(),
-                            ColorTypes(MessageData.LIGHT_RED),
-                            pUnit.getX(),
-                            pUnit.getY(),
-                            True,
-                            True,
+                            button=gc.getUnitInfo(iUnitType).getButton(),
+                            color=MessageData.LIGHT_RED,
+                            location=pUnit,
                         )
                         pUnit.kill(0, -1)
         # Absinthe: 3rd option, only if you have enough money to make a contribution to the Crusade instead of sending units
@@ -711,19 +679,8 @@ class Crusades:
             pHuman = gc.getPlayer(iHuman)
             if pHuman.getStateReligion() != Religion.CATHOLICISM.value:
                 self.setParticipate(False)
-                CyInterface().addMessage(
-                    iHuman,
-                    True,
-                    MessageData.DURATION / 2,
-                    text("TXT_KEY_CRUSADE_CALLED"),
-                    "",
-                    0,
-                    "",
-                    ColorTypes(MessageData.LIGHT_RED),
-                    -1,
-                    -1,
-                    True,
-                    True,
+                message(
+                    iHuman, text("TXT_KEY_CRUSADE_CALLED"), force=True, color=MessageData.LIGHT_RED
                 )
             else:
                 self.initVotePopup()
@@ -925,19 +882,11 @@ class Crusades:
         # Absinthe: faith point boost for each sent unit (might get some more on successful Crusade):
         player(iOwner).changeFaith(1)
         if iOwner == human():
-            CyInterface().addMessage(
+            message(
                 human(),
-                False,
-                MessageData.DURATION / 2,
                 text("TXT_KEY_CRUSADE_LEAVE") + " " + pUnit.getName(),
-                "AS2D_BUILD_CHRISTIAN",
-                0,
-                "",
-                ColorTypes(MessageData.ORANGE),
-                -1,
-                -1,
-                True,
-                True,
+                sound="AS2D_BUILD_CHRISTIAN",
+                color=MessageData.ORANGE,
             )
         pUnit.kill(0, -1)
 
@@ -1021,19 +970,11 @@ class Crusades:
             if self.getParticipate():
                 self.informLeaderPopup()
             elif player().isExisting():
-                CyInterface().addMessage(
+                message(
                     human(),
-                    True,
-                    MessageData.DURATION / 2,
                     gc.getPlayer(self.getLeader()).getName() + text("TXT_KEY_CRUSADE_LEAD"),
-                    "",
-                    0,
-                    "",
-                    ColorTypes(MessageData.LIGHT_RED),
-                    -1,
-                    -1,
-                    True,
-                    True,
+                    force=True,
+                    color=MessageData.LIGHT_RED,
                 )
             return
 
@@ -1078,19 +1019,11 @@ class Crusades:
         if self.getParticipate():
             self.informLeaderPopup()
         elif player().isExisting():
-            CyInterface().addMessage(
+            message(
                 human(),
-                True,
-                MessageData.DURATION / 2,
                 gc.getPlayer(self.getLeader()).getName() + text("TXT_KEY_CRUSADE_LEAD"),
-                "",
-                0,
-                "",
-                ColorTypes(MessageData.LIGHT_RED),
-                -1,
-                -1,
-                True,
-                True,
+                force=True,
+                color=MessageData.LIGHT_RED,
             )
 
         # not yet, check to see for deviations
@@ -1181,19 +1114,10 @@ class Crusades:
         self.setLeader(iNewLeader)
         pLeader = gc.getPlayer(iNewLeader)
         if player().isExisting():
-            CyInterface().addMessage(
+            message(
                 human(),
-                False,
-                MessageData.DURATION / 2,
                 pLeader.getName() + text("TXT_KEY_CRUSADE_DEVIATED"),
-                "",
-                0,
-                "",
-                ColorTypes(MessageData.LIGHT_RED),
-                -1,
-                -1,
-                True,
-                True,
+                color=MessageData.LIGHT_RED,
             )
         # pLeader.setGold( pLeader.getGold() - gc.getPlayer( Civ.POPE.value ).getGold() / 3 )
         # pLeader.setGold( gc.getPlayer( Civ.POPE.value ).getGold() / 4 )
@@ -1233,20 +1157,7 @@ class Crusades:
                 gc.getPlayer(iTargetPlayer).getCivilizationAdjectiveKey(),
                 sCityName,
             )
-            CyInterface().addMessage(
-                iHuman,
-                False,
-                MessageData.DURATION / 2,
-                sText,
-                "",
-                0,
-                "",
-                ColorTypes(MessageData.LIGHT_RED),
-                -1,
-                -1,
-                True,
-                True,
-            )
+            message(iHuman, sText, color=MessageData.LIGHT_RED)
 
         # Absinthe: proper war declaration checks
         teamLeader = gc.getTeam(gc.getPlayer(iLeader).getTeam())
@@ -1353,19 +1264,11 @@ class Crusades:
                 sCityName = cnm.lookupName(pTargetCity, Civ.POPE.value)
                 if sCityName == "Unknown":
                     sCityName = cnm.lookupName(pTargetCity, iLeader)
-                CyInterface().addMessage(
+                message(
                     human(),
-                    False,
-                    MessageData.DURATION,
                     text("TXT_KEY_CRUSADE_ARRIVAL", sCityName) + "!",
-                    "",
-                    0,
-                    "",
-                    ColorTypes(MessageData.GREEN),
-                    iChosenX,
-                    iChosenY,
-                    True,
-                    True,
+                    color=MessageData.GREEN,
+                    location=(iChosenX, iChosenY),
                 )
         else:
             self.returnCrusaders()
@@ -1562,21 +1465,12 @@ class Crusades:
                 if percentage_chance(iOdds, strict=True):
                     pUnit.kill(0, -1)
                     if iHuman == iPlayer:
-                        CyInterface().addMessage(
+                        message(
                             iHuman,
-                            False,
-                            MessageData.DURATION / 2,
                             text("TXT_KEY_CRUSADE_CRUSADERS_RETURNING_HOME")
                             + " "
                             + pUnit.getName(),
-                            "",
-                            0,
-                            "",
-                            ColorTypes(MessageData.LIME),
-                            -1,
-                            -1,
-                            True,
-                            True,
+                            color=MessageData.LIME,
                         )
 
         # benefits for the other participants on Crusade return - Faith points, GG points, Relics
@@ -1604,19 +1498,13 @@ class Crusades:
                                 DirectionTypes.DIRECTION_SOUTH,
                             )
                             if iCiv == iHuman:
-                                CyInterface().addMessage(
+                                message(
                                     iHuman,
-                                    False,
-                                    MessageData.DURATION,
                                     text("TXT_KEY_CRUSADE_NEW_RELIC"),
-                                    "AS2D_UNIT_BUILD_UNIQUE_UNIT",
-                                    0,
-                                    gc.getUnitInfo(Unit.HOLY_RELIC.value).getButton(),
-                                    ColorTypes(MessageData.GREEN),
-                                    iCapitalX,
-                                    iCapitalY,
-                                    True,
-                                    True,
+                                    sound="AS2D_UNIT_BUILD_UNIQUE_UNIT",
+                                    button=gc.getUnitInfo(Unit.HOLY_RELIC.value).getButton(),
+                                    color=MessageData.GREEN,
+                                    location=(iCapitalX, iCapitalY),
                                 )
                             if iUnitNumber > 3 and percentage_chance(80, strict=True):
                                 pCiv.initUnit(
@@ -1637,19 +1525,10 @@ class Crusades:
                     # all other civs get experience points as well
                     else:
                         if iCiv == iHuman:
-                            CyInterface().addMessage(
+                            message(
                                 iHuman,
-                                False,
-                                MessageData.DURATION,
                                 text("TXT_KEY_CRUSADE_CRUSADERS_ARRIVED_HOME"),
-                                "",
-                                0,
-                                "",
-                                ColorTypes(MessageData.GREEN),
-                                -1,
-                                -1,
-                                True,
-                                True,
+                                color=MessageData.GREEN,
                             )
                         pCiv.changeCombatExperience(12 * iUnitNumber)
                         # if Jerusalem is held by a Christian civ (maybe some cities in the Levant should be enough) (maybe there should be a unit in the Levant from this Crusade)
@@ -1672,19 +1551,15 @@ class Crusades:
                                         DirectionTypes.DIRECTION_SOUTH,
                                     )
                                     if iCiv == iHuman:
-                                        CyInterface().addMessage(
+                                        message(
                                             iHuman,
-                                            False,
-                                            MessageData.DURATION,
                                             text("TXT_KEY_CRUSADE_NEW_RELIC"),
-                                            "AS2D_UNIT_BUILD_UNIQUE_UNIT",
-                                            0,
-                                            gc.getUnitInfo(Unit.HOLY_RELIC.value).getButton(),
-                                            ColorTypes(MessageData.GREEN),
-                                            iCapitalX,
-                                            iCapitalY,
-                                            True,
-                                            True,
+                                            sound="AS2D_UNIT_BUILD_UNIQUE_UNIT",
+                                            button=gc.getUnitInfo(
+                                                Unit.HOLY_RELIC.value
+                                            ).getButton(),
+                                            color=MessageData.GREEN,
+                                            location=(iCapitalX, iCapitalY),
                                         )
                                 if iUnitNumber > 3 and percentage_chance(60, strict=True):
                                     pCiv.initUnit(
@@ -1727,19 +1602,11 @@ class Crusades:
                     ) <= iRandom:  # 1 -> 80%, 2 -> 70%, 3 -> 60% ...  7 -> 20%, 8 -> 10%, 9+ -> 0%
                         pCity.changePopulation(1)
                         if iPlayer == human():
-                            CyInterface().addMessage(
+                            message(
                                 iPlayer,
-                                False,
-                                MessageData.DURATION / 2,
                                 text("TXT_KEY_CRUSADE_JERUSALEM_PILGRIMS"),
-                                "",
-                                0,
-                                "",
-                                ColorTypes(MessageData.GREEN),
-                                pCity.getX(),
-                                pCity.getY(),
-                                True,
-                                True,
+                                color=MessageData.GREEN,
+                                location=pCity,
                             )
                         # spread Catholicism if not present
                         if not pCity.isHasReligion(Religion.CATHOLICISM.value):
@@ -1825,20 +1692,7 @@ class Crusades:
                 sText = (
                     text("TXT_KEY_CRUSADE_DEFENSIVE_AI_MESSAGE") + " " + player(iPlayer).getName()
                 )
-                CyInterface().addMessage(
-                    human(),
-                    True,
-                    MessageData.DURATION / 2,
-                    sText,
-                    "",
-                    0,
-                    "",
-                    ColorTypes(MessageData.LIGHT_RED),
-                    -1,
-                    -1,
-                    True,
-                    True,
-                )
+                message(human(), sText, force=True, color=MessageData.LIGHT_RED)
         self.makeDCUnits(iPlayer)
         player(iPlayer).changeFaith(-min(2, player(iPlayer).getFaith()))
 
@@ -1870,19 +1724,11 @@ class Crusades:
 
         # Absinthe: interface message for the player
         if gc.getPlayer(iPlayer).isHuman():
-            CyInterface().addMessage(
+            message(
                 iPlayer,
-                False,
-                MessageData.DURATION,
                 text("TXT_KEY_CRUSADE_DEFENSIVE_HUMAN_MESSAGE"),
-                "",
-                0,
-                "",
-                ColorTypes(MessageData.GREEN),
-                iX,
-                iY,
-                True,
-                True,
+                color=MessageData.GREEN,
+                location=(iX, iY),
             )
 
         pPlayer.initUnit(

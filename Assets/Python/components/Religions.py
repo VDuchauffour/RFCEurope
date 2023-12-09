@@ -1,7 +1,5 @@
 from CvPythonExtensions import (
     CyGlobalContext,
-    CyInterface,
-    ColorTypes,
     EventContextTypes,
     InterfaceMessageTypes,
     UnitAITypes,
@@ -9,7 +7,7 @@ from CvPythonExtensions import (
 )
 from Consts import MessageData
 from CoreData import civilization, civilizations
-from CoreFunctions import event_popup, get_religion_by_id, text
+from CoreFunctions import event_popup, get_religion_by_id, message, text
 from CoreStructures import human, player
 from CoreTypes import (
     Building,
@@ -384,20 +382,7 @@ class Religions:
 
                     if iChosenPlayer.is_human():
                         sText = text("TXT_KEY_FAITH_GOLD_GIFT", iGift)
-                        CyInterface().addMessage(
-                            civ.id,
-                            False,
-                            MessageData.DURATION,
-                            sText,
-                            "",
-                            0,
-                            "",
-                            ColorTypes(MessageData.BLUE),
-                            -1,
-                            -1,
-                            True,
-                            True,
-                        )
+                        message(civ.id, sText, color=MessageData.BLUE)
         # Free religious building
         if iGameTurn > DateTurn.i800AD:  # The crowning of Charlemagne
             if iGameTurn > DateTurn.i1648AD:  # End of religious wars
@@ -471,19 +456,8 @@ class Religions:
                                     "TXT_KEY_FAITH_TECH_GIFT",
                                     gc.getTechInfo(tech).getDescription(),
                                 )
-                                CyInterface().addMessage(
-                                    iChosenPlayer.id,
-                                    True,
-                                    MessageData.DURATION,
-                                    sText,
-                                    "",
-                                    0,
-                                    "",
-                                    ColorTypes(MessageData.BLUE),
-                                    -1,
-                                    -1,
-                                    True,
-                                    True,
+                                message(
+                                    iChosenPlayer.id, sText, force=True, color=MessageData.BLUE
                                 )
                             # don't continue if a tech was already given - this also means that there is bigger chance for getting a tech if the chosen civ is multiple techs behind
                             break
@@ -665,19 +639,12 @@ class Religions:
                     + " "
                     + city.getName()
                 )
-                CyInterface().addMessage(
+                message(
                     iPlayer,
-                    False,
-                    MessageData.DURATION,
                     sText,
-                    "",
-                    0,
-                    gc.getBuildingInfo(iBuilding).getButton(),
-                    ColorTypes(MessageData.BLUE),
-                    city.getX(),
-                    city.getY(),
-                    True,
-                    True,
+                    button=gc.getBuildingInfo(iBuilding).getButton(),
+                    color=MessageData.BLUE,
+                    location=city,
                 )
 
     # Absinthe: free religious revolution
@@ -874,19 +841,11 @@ class Religions:
                     )  # no announcement in this case
                     if pPlayer.isHuman():
                         CityName = city.getNameKey()
-                        CyInterface().addMessage(
+                        message(
                             human(),
-                            False,
-                            MessageData.DURATION,
                             text("TXT_KEY_REFORMATION_RELIGION_STILL_SPREAD", CityName),
-                            "",
-                            InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-                            "",
-                            ColorTypes(MessageData.WHITE),
-                            -1,
-                            -1,
-                            True,
-                            True,
+                            event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                            color=MessageData.WHITE,
                         )
                     iLostFaith += 1
         gc.getPlayer(iCiv).changeFaith(-min(gc.getPlayer(iCiv).getFaith(), iLostFaith))
@@ -973,19 +932,11 @@ class Religions:
                     pCity.setHasReligion(Religion.CATHOLICISM.value, False, False, False)
                     if pPlayer.isHuman():
                         CityName = pCity.getNameKey()
-                        CyInterface().addMessage(
+                        message(
                             human(),
-                            False,
-                            MessageData.DURATION,
                             text("TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_1", CityName),
-                            "",
-                            InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-                            "",
-                            ColorTypes(MessageData.WHITE),
-                            -1,
-                            -1,
-                            True,
-                            True,
+                            event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                            color=MessageData.WHITE,
                         )
 
         return iFaith
@@ -1056,34 +1007,18 @@ class Religions:
                     if pPlayer.isHuman():  # message for the human player
                         CityName = pCity.getNameKey()
                         if pPlayer.getStateReligion() == Religion.ISLAM.value:
-                            CyInterface().addMessage(
+                            message(
                                 human(),
-                                False,
-                                MessageData.DURATION,
                                 text("TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_2", CityName),
-                                "",
-                                InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-                                "",
-                                ColorTypes(MessageData.WHITE),
-                                -1,
-                                -1,
-                                True,
-                                True,
+                                event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                                color=MessageData.WHITE,
                             )
                         else:
-                            CyInterface().addMessage(
+                            message(
                                 human(),
-                                False,
-                                MessageData.DURATION,
                                 text("TXT_KEY_REFORMATION_PEOPLE_ABANDON_CATHOLICISM_3", CityName),
-                                "",
-                                InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-                                "",
-                                ColorTypes(MessageData.WHITE),
-                                -1,
-                                -1,
-                                True,
-                                True,
+                                event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                                color=MessageData.WHITE,
                             )
 
     def doCounterReformation(self):

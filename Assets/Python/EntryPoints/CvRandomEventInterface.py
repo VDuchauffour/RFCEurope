@@ -9,7 +9,7 @@
 #
 # No other modules should import this
 #
-from CoreFunctions import text
+from CoreFunctions import message, text
 from CoreStructures import turn
 from CoreTypes import Civ
 import CvUtil
@@ -650,19 +650,15 @@ def applyLooters3(argsList):
                 "TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED",
                 gc.getBuildingInfo(iBuilding).getTextKey(),
             )
-            CyInterface().addMessage(
+            message(
                 kTriggeredData.eOtherPlayer,
-                False,
-                gc.getEVENT_MESSAGE_TIME(),
                 szBuffer,
-                "AS2D_BOMBARDED",
-                InterfaceMessageTypes.MESSAGE_TYPE_INFO,
-                gc.getBuildingInfo(iBuilding).getButton(),
-                gc.getInfoTypeForString("COLOR_RED"),
-                city.getX(),
-                city.getY(),
-                True,
-                True,
+                duration=gc.getEVENT_MESSAGE_TIME(),
+                sound="AS2D_BOMBARDED",
+                event=InterfaceMessageTypes.MESSAGE_TYPE_INFO,
+                button=gc.getBuildingInfo(iBuilding).getButton(),
+                color=gc.getInfoTypeForString("COLOR_RED"),
+                location=city,
             )
             city.setNumRealBuilding(iBuilding, 0)
             iNumBuildingsDestroyed += 1
@@ -675,19 +671,13 @@ def applyLooters3(argsList):
             gc.getPlayer(kTriggeredData.eOtherPlayer).getCivilizationAdjectiveKey(),
             city.getNameKey(),
         )
-        CyInterface().addMessage(
+        message(
             kTriggeredData.ePlayer,
-            False,
-            gc.getEVENT_MESSAGE_TIME(),
             szBuffer,
-            "AS2D_BOMBARDED",
-            InterfaceMessageTypes.MESSAGE_TYPE_INFO,
-            None,
-            gc.getInfoTypeForString("COLOR_WHITE"),
-            -1,
-            -1,
-            True,
-            True,
+            duration=gc.getEVENT_MESSAGE_TIME(),
+            sound="AS2D_BOMBARDED",
+            event=InterfaceMessageTypes.MESSAGE_TYPE_INFO,
+            color=gc.getInfoTypeForString("COLOR_WHITE"),
         )
 
 
@@ -835,19 +825,15 @@ def applyHurricane1(argsList):
         szBuffer = text(
             "TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", gc.getBuildingInfo(iBuilding).getTextKey()
         )
-        CyInterface().addMessage(
+        message(
             kTriggeredData.ePlayer,
-            False,
-            gc.getEVENT_MESSAGE_TIME(),
             szBuffer,
-            "AS2D_BOMBARDED",
-            InterfaceMessageTypes.MESSAGE_TYPE_INFO,
-            gc.getBuildingInfo(iBuilding).getButton(),
-            gc.getInfoTypeForString("COLOR_RED"),
-            city.getX(),
-            city.getY(),
-            True,
-            True,
+            duration=gc.getEVENT_MESSAGE_TIME(),
+            sound="AS2D_BOMBARDED",
+            event=InterfaceMessageTypes.MESSAGE_TYPE_INFO,
+            button=gc.getBuildingInfo(iBuilding).getButton(),
+            color=gc.getInfoTypeForString("COLOR_RED"),
+            location=city,
         )
         city.setNumRealBuilding(iBuilding, 0)
 
@@ -856,19 +842,15 @@ def applyHurricane1(argsList):
         szBuffer = text(
             "TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", gc.getBuildingInfo(iBuilding).getTextKey()
         )
-        CyInterface().addMessage(
+        message(
             kTriggeredData.ePlayer,
-            False,
-            gc.getEVENT_MESSAGE_TIME(),
             szBuffer,
-            "AS2D_BOMBARDED",
-            InterfaceMessageTypes.MESSAGE_TYPE_INFO,
-            gc.getBuildingInfo(iBuilding).getButton(),
-            gc.getInfoTypeForString("COLOR_RED"),
-            city.getX(),
-            city.getY(),
-            True,
-            True,
+            duration=gc.getEVENT_MESSAGE_TIME(),
+            sound="AS2D_BOMBARDED",
+            event=InterfaceMessageTypes.MESSAGE_TYPE_INFO,
+            button=gc.getBuildingInfo(iBuilding).getButton(),
+            color=gc.getInfoTypeForString("COLOR_RED"),
+            location=city,
         )
         city.setNumRealBuilding(iBuilding, 0)
 
@@ -966,19 +948,15 @@ def applyTsunami2(argsList):
                 "TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED",
                 gc.getBuildingInfo(iBuilding).getTextKey(),
             )
-            CyInterface().addMessage(
+            message(
                 kTriggeredData.ePlayer,
-                False,
-                gc.getEVENT_MESSAGE_TIME(),
                 szBuffer,
-                "AS2D_BOMBARDED",
-                InterfaceMessageTypes.MESSAGE_TYPE_INFO,
-                gc.getBuildingInfo(iBuilding).getButton(),
-                gc.getInfoTypeForString("COLOR_RED"),
-                city.getX(),
-                city.getY(),
-                True,
-                True,
+                duration=gc.getEVENT_MESSAGE_TIME(),
+                sound="AS2D_BOMBARDED",
+                event=InterfaceMessageTypes.MESSAGE_TYPE_INFO,
+                button=gc.getBuildingInfo(iBuilding).getButton(),
+                color=gc.getInfoTypeForString("COLOR_RED"),
+                location=city,
             )
             city.setNumRealBuilding(iBuilding, 0)
             listBuildings.remove(iBuilding)
@@ -1102,19 +1080,15 @@ def applyVolcano1(argsList):
                 "TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED",
                 gc.getImprovementInfo(iImprovement).getTextKey(),
             )
-            CyInterface().addMessage(
+            message(
                 kTriggeredData.ePlayer,
-                False,
-                gc.getEVENT_MESSAGE_TIME(),
                 szBuffer,
-                "AS2D_BOMBARDED",
-                InterfaceMessageTypes.MESSAGE_TYPE_INFO,
-                gc.getImprovementInfo(iImprovement).getButton(),
-                gc.getInfoTypeForString("COLOR_RED"),
-                plot.getX(),
-                plot.getY(),
-                True,
-                True,
+                duration=gc.getEVENT_MESSAGE_TIME(),
+                sound="AS2D_BOMBARDED",
+                event=InterfaceMessageTypes.MESSAGE_TYPE_INFO,
+                button=gc.getImprovementInfo(iImprovement).getButton(),
+                color=gc.getInfoTypeForString("COLOR_RED"),
+                location=plot,
             )
             if iImprovement in listRuins:
                 plot.setImprovementType(iRuins)
@@ -1281,19 +1255,13 @@ def applySaltpeter(argsList):
         gc.getGame().setPlotExtraYield(
             loopPlot[1].getX(), loopPlot[1].getY(), YieldTypes.YIELD_COMMERCE, 1
         )
-        CyInterface().addMessage(
+        message(
             kTriggeredData.ePlayer,
-            False,
-            gc.getEVENT_MESSAGE_TIME(),
             text("TXT_KEY_EVENT_SALTPETER_DISCOVERED"),
-            "",
-            InterfaceMessageTypes.MESSAGE_TYPE_INFO,
-            None,
-            gc.getInfoTypeForString("COLOR_WHITE"),
-            loopPlot[1].getX(),
-            loopPlot[1].getY(),
-            True,
-            True,
+            duration=gc.getEVENT_MESSAGE_TIME(),
+            event=InterfaceMessageTypes.MESSAGE_TYPE_INFO,
+            color=gc.getInfoTypeForString("COLOR_WHITE"),
+            location=loopPlot[1],
         )
 
 
@@ -1501,19 +1469,14 @@ def applyInfluenza2(argsList):
         (iDist, loopCity) = listCities[i]
         loopCity.changePopulation(-2)
         szBuffer = text("TXT_KEY_EVENT_INFLUENZA_HIT_CITY", loopCity.getNameKey())
-        CyInterface().addMessage(
+        message(
             kTriggeredData.ePlayer,
-            False,
-            gc.getEVENT_MESSAGE_TIME(),
             szBuffer,
-            "AS2D_PILLAGE",
-            InterfaceMessageTypes.MESSAGE_TYPE_INFO,
-            None,
-            gc.getInfoTypeForString("COLOR_RED"),
-            loopCity.getX(),
-            loopCity.getY(),
-            True,
-            True,
+            duration=gc.getEVENT_MESSAGE_TIME(),
+            sound="AS2D_PILLAGE",
+            event=InterfaceMessageTypes.MESSAGE_TYPE_INFO,
+            color=gc.getInfoTypeForString("COLOR_RED"),
+            location=loopCity,
         )
 
 
@@ -3560,19 +3523,15 @@ def applyMasterBlacksmithDone1(argsList):
         gc.getBonusInfo(iBonus).getTextKey(),
         city.getNameKey(),
     )
-    CyInterface().addMessage(
+    message(
         kTriggeredData.ePlayer,
-        False,
-        gc.getEVENT_MESSAGE_TIME(),
         szBuffer,
-        "AS2D_DISCOVERBONUS",
-        InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-        gc.getBonusInfo(iBonus).getButton(),
-        gc.getInfoTypeForString("COLOR_WHITE"),
-        plot.getX(),
-        plot.getY(),
-        True,
-        True,
+        duration=gc.getEVENT_MESSAGE_TIME(),
+        sound="AS2D_DISCOVERBONUS",
+        event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+        button=gc.getBonusInfo(iBonus).getButton(),
+        color=gc.getInfoTypeForString("COLOR_WHITE"),
+        location=plot,
     )
 
 

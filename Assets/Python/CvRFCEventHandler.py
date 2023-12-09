@@ -2,7 +2,7 @@
 
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from CoreFunctions import show, text
+from CoreFunctions import message, show, text
 from CoreStructures import human, make_unit, make_units, player, turn
 import CvUtil
 import CvEventManager
@@ -308,19 +308,11 @@ class CvRFCEventHandler:
                 # Absinthe: interface message for the player
                 if pPlayer.isHuman():
                     CityName = city.getNameKey()
-                    CyInterface().addMessage(
+                    message(
                         human(),
-                        True,
-                        MessageData.DURATION,
                         text("TXT_KEY_CRUSADE_JERUSALEM_SAFE", CityName),
-                        "",
-                        0,
-                        "",
-                        ColorTypes(MessageData.GREEN),
-                        -1,
-                        -1,
-                        True,
-                        True,
+                        force=True,
+                        color=MessageData.GREEN,
                     )
                 # Absinthe: spread Catholicism if not present already
                 if not city.isHasReligion(Religion.CATHOLICISM.value):
@@ -613,39 +605,17 @@ class CvRFCEventHandler:
                         UnitAITypes.UNITAI_ATTACK,
                         text("TXT_KEY_BARBARIAN_NAMES_VIKINGS"),
                     )
-                CyInterface().addMessage(
-                    Civ.BYZANTIUM.value,
-                    False,
-                    MessageData.DURATION,
+                message(
+                    Civ.BYZANTIUM,
                     text("TXT_KEY_EVENT_VIKING_CONQUERERS_ARRIVE"),
-                    "",
-                    0,
-                    "",
-                    ColorTypes(MessageData.RED),
-                    -1,
-                    -1,
-                    True,
-                    True,
+                    color=MessageData.RED,
                 )
 
         # Absinthe: Message for the human player about the Schism
         elif iGameTurn == DateTurn.i1053AD:
             if player().isExisting():
                 sText = text("TXT_KEY_GREAT_SCHISM")
-                CyInterface().addMessage(
-                    human(),
-                    False,
-                    MessageData.DURATION,
-                    sText,
-                    "",
-                    0,
-                    "",
-                    ColorTypes(MessageData.DARK_PINK),
-                    -1,
-                    -1,
-                    True,
-                    True,
-                )
+                message(human(), sText, color=MessageData.DARK_PINK)
 
         # Absinthe: Remove the Great Lighthouse, message for the human player if the city is visible
         elif iGameTurn == DateTurn.i1323AD - 40 + data.lEventRandomness[iLighthouseEarthQuake]:
@@ -660,19 +630,10 @@ class CvRFCEventHandler:
                     pPlayer = gc.getPlayer(iPlayer)
                     iTeam = pPlayer.getTeam()
                     if GLcity.isRevealed(iTeam, False):
-                        CyInterface().addMessage(
+                        message(
                             iPlayer,
-                            False,
-                            MessageData.DURATION,
                             text("TXT_KEY_BUILDING_GREAT_LIGHTHOUSE_REMOVED"),
-                            "",
-                            0,
-                            "",
-                            ColorTypes(MessageData.RED),
-                            -1,
-                            -1,
-                            True,
-                            True,
+                            color=MessageData.RED,
                         )
 
         self.barb.checkTurn(iGameTurn)

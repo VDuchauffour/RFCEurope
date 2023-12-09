@@ -29,7 +29,7 @@ from CoreTypes import (
     Technology,
     Unit,
 )
-from CoreFunctions import event_popup, get_civ_by_id, text
+from CoreFunctions import event_popup, get_civ_by_id, message, text
 from LocationsData import CIV_CAPITAL_LOCATIONS
 from TimelineData import DateTurn
 
@@ -260,20 +260,7 @@ class RiseAndFall:
                         humanCityList.append(city)
 
         if popupReturn.getButtonClicked() == 0:  # 1st button
-            CyInterface().addMessage(
-                iHuman,
-                True,
-                MessageData.DURATION,
-                text("TXT_KEY_FLIP_AGREED"),
-                "",
-                0,
-                "",
-                ColorTypes(MessageData.GREEN),
-                -1,
-                -1,
-                True,
-                True,
-            )
+            message(iHuman, text("TXT_KEY_FLIP_AGREED"), force=True, color=MessageData.GREEN)
 
             if humanCityList:
                 for city in humanCityList:
@@ -305,20 +292,7 @@ class RiseAndFall:
                 self.setCheatersCheck(1, self.getNewCivFlip())
 
         elif popupReturn.getButtonClicked() == 1:  # 2nd button
-            CyInterface().addMessage(
-                iHuman,
-                True,
-                MessageData.DURATION,
-                text("TXT_KEY_FLIP_REFUSED"),
-                "",
-                0,
-                "",
-                ColorTypes(MessageData.RED),
-                -1,
-                -1,
-                True,
-                True,
-            )
+            message(iHuman, text("TXT_KEY_FLIP_REFUSED"), force=True, color=MessageData.RED)
 
             if humanCityList:
                 for city in humanCityList:
@@ -500,19 +474,11 @@ class RiseAndFall:
                 # some stability boost and flavour message
                 player(Civ.OTTOMAN).changeStabilityBase(StabilityCategory.EXPANSION.value, 6)
                 if human() == iPlayer:
-                    CyInterface().addMessage(
+                    message(
                         iPlayer,
-                        True,
-                        MessageData.DURATION,
                         text("TXT_KEY_GLORY_ON_CONQUEST"),
-                        "",
-                        0,
-                        "",
-                        ColorTypes(MessageData.GREEN),
-                        -1,
-                        -1,
-                        True,
-                        True,
+                        force=True,
+                        color=MessageData.GREEN,
                     )
 
             # Absinthe: Edirne becomes capital if conquered before Constantinople
@@ -541,21 +507,12 @@ class RiseAndFall:
                 if bConquest:
                     iHuman = human()
                     if gc.getPlayer(iHuman).canContact(iOriginalOwner):
-                        CyInterface().addMessage(
+                        message(
                             iHuman,
-                            False,
-                            MessageData.DURATION,
                             pOriginalOwner.getCivilizationDescription(0)
                             + " "
                             + text("TXT_KEY_STABILITY_CONQUEST_LAST_CITY"),
-                            "",
-                            0,
-                            "",
-                            ColorTypes(MessageData.RED),
-                            -1,
-                            -1,
-                            True,
-                            True,
+                            color=MessageData.RED,
                         )
 
     def onCityRazed(self, iOwner, iPlayer, city):
@@ -688,19 +645,8 @@ class RiseAndFall:
                 + " "
                 + text("TXT_KEY_REDUCE_CITY_2")
             )
-            CyInterface().addMessage(
-                pPlot.getPlotCity().getOwner(),
-                False,
-                MessageData.DURATION,
-                msgString,
-                "",
-                0,
-                "",
-                ColorTypes(MessageData.ORANGE),
-                tPlot[0],
-                tPlot[1],
-                True,
-                True,
+            message(
+                pPlot.getPlotCity().getOwner(), msgString, color=MessageData.ORANGE, location=pPlot
             )
 
             pPlot.eraseCityDevelopment()
@@ -777,23 +723,15 @@ class RiseAndFall:
             HumanTeam = gc.getTeam(gc.getPlayer(iHuman).getTeam())
             PlayerTeam = gc.getPlayer(iPlayer).getTeam()
             if HumanTeam.isHasMet(PlayerTeam) and player().isExisting():
-                CyInterface().addMessage(
+                message(
                     iHuman,
-                    False,
-                    MessageData.DURATION / 2,
                     text(
                         "TXT_KEY_LEADER_SWITCH",
                         gc.getPlayer(iPlayer).getName(),
                         gc.getPlayer(iPlayer).getCivilizationDescriptionKey(),
                     ),
-                    "",
-                    InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-                    "",
-                    ColorTypes(MessageData.PURPLE),
-                    -1,
-                    -1,
-                    True,
-                    True,
+                    event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                    color=MessageData.PURPLE,
                 )
 
     def fragmentIndependents(self):
@@ -890,37 +828,20 @@ class RiseAndFall:
                         iHuman = human()
                         if not pCiv.isHuman():
                             if gc.getPlayer(iHuman).canContact(iCiv):
-                                CyInterface().addMessage(
+                                message(
                                     iHuman,
-                                    False,
-                                    MessageData.DURATION,
                                     pCiv.getCivilizationDescription(0)
                                     + " "
                                     + text("TXT_KEY_STABILITY_CIVILWAR_BARBS"),
-                                    "",
-                                    0,
-                                    "",
-                                    ColorTypes(MessageData.RED),
-                                    -1,
-                                    -1,
-                                    True,
-                                    True,
+                                    color=MessageData.RED,
                                 )
                             utils.killAndFragmentCiv(iCiv, True, False)
                         elif pCiv.getNumCities() > 1:
-                            CyInterface().addMessage(
+                            message(
                                 iCiv,
-                                True,
-                                MessageData.DURATION,
                                 text("TXT_KEY_STABILITY_CIVILWAR_BARBS_HUMAN"),
-                                "",
-                                0,
-                                "",
-                                ColorTypes(MessageData.RED),
-                                -1,
-                                -1,
-                                True,
-                                True,
+                                force=True,
+                                color=MessageData.RED,
                             )
                             utils.killAndFragmentCiv(iCiv, True, True)
 
@@ -949,37 +870,20 @@ class RiseAndFall:
                         iHuman = human()
                         if not pCiv.isHuman():
                             if gc.getPlayer(iHuman).canContact(iCiv):
-                                CyInterface().addMessage(
+                                message(
                                     iHuman,
-                                    False,
-                                    MessageData.DURATION,
                                     pCiv.getCivilizationDescription(0)
                                     + " "
                                     + text("TXT_KEY_STABILITY_CIVILWAR_DECLINE"),
-                                    "",
-                                    0,
-                                    "",
-                                    ColorTypes(MessageData.RED),
-                                    -1,
-                                    -1,
-                                    True,
-                                    True,
+                                    color=MessageData.RED,
                                 )
                             utils.killAndFragmentCiv(iCiv, False, False)
                         elif pCiv.getNumCities() > 1:
-                            CyInterface().addMessage(
+                            message(
                                 iCiv,
-                                True,
-                                MessageData.DURATION,
                                 text("TXT_KEY_STABILITY_CIVILWAR_DECLINE_HUMAN"),
-                                "",
-                                0,
-                                "",
-                                ColorTypes(MessageData.RED),
-                                -1,
-                                -1,
-                                True,
-                                True,
+                                force=True,
+                                color=MessageData.RED,
                             )
                             utils.killAndFragmentCiv(iCiv, False, True)
 
@@ -1003,37 +907,19 @@ class RiseAndFall:
                         iHuman = human()
                         if not pCiv.isHuman():
                             if gc.getPlayer(iHuman).canContact(iCiv):
-                                CyInterface().addMessage(
+                                message(
                                     iHuman,
-                                    False,
-                                    MessageData.DURATION,
                                     pCiv.getCivilizationDescription(0)
                                     + " "
                                     + text("TXT_KEY_STABILITY_CIVILWAR_MOTHERLAND"),
-                                    "",
-                                    0,
-                                    "",
-                                    ColorTypes(MessageData.RED),
-                                    -1,
-                                    -1,
-                                    True,
-                                    True,
+                                    color=MessageData.RED,
                                 )
                             utils.killAndFragmentCiv(iCiv, False, False)
                         elif pCiv.getNumCities() > 1:
-                            CyInterface().addMessage(
+                            message(
                                 iCiv,
-                                True,
-                                MessageData.DURATION,
                                 text("TXT_KEY_STABILITY_CIVILWAR_MOTHERLAND_HUMAN"),
-                                "",
-                                0,
-                                "",
-                                ColorTypes(MessageData.RED),
-                                -1,
-                                -1,
-                                True,
-                                True,
+                                color=MessageData.RED,
                             )
                             utils.killAndFragmentCiv(iCiv, False, True)
 
@@ -1263,19 +1149,11 @@ class RiseAndFall:
             tCity = (splittingCity.getX(), splittingCity.getY())
             sCityName = splittingCity.getName()
             if iPlayer == human():
-                CyInterface().addMessage(
+                message(
                     iPlayer,
-                    True,
-                    MessageData.DURATION,
                     sCityName + " " + text("TXT_KEY_STABILITY_SECESSION"),
-                    "",
-                    0,
-                    "",
-                    ColorTypes(MessageData.ORANGE),
-                    -1,
-                    -1,
-                    True,
-                    True,
+                    force=True,
+                    color=MessageData.ORANGE,
                 )
             utils.cultureManager(tCity, 50, iIndy, iPlayer, False, True, True)
             utils.flipUnitsInCitySecession(tCity, iIndy, iPlayer)
@@ -1439,19 +1317,11 @@ class RiseAndFall:
                 bSuppressed = False
             # Absinthe: if the human player managed to suppress it, message about it
             else:
-                CyInterface().addMessage(
+                message(
                     iHuman,
-                    True,
-                    MessageData.DURATION,
                     text("TXT_KEY_SUPPRESSED_RESURRECTION"),
-                    "",
-                    0,
-                    "",
-                    ColorTypes(MessageData.GREEN),
-                    -1,
-                    -1,
-                    True,
-                    True,
+                    force=True,
+                    color=MessageData.GREEN,
                 )
         # Absinthe: if neither of the above happened, so everyone managed to suppress it, no resurrection
         if bSuppressed:
@@ -1604,19 +1474,11 @@ class RiseAndFall:
         self.moveBackCapital(iDeadCiv)
 
         if player().isExisting():
-            CyInterface().addMessage(
+            message(
                 iHuman,
-                True,
-                MessageData.DURATION,
                 text("TXT_KEY_INDEPENDENCE_TEXT", pDeadCiv.getCivilizationAdjectiveKey()),
-                "",
-                0,
-                "",
-                ColorTypes(MessageData.DARK_PINK),
-                -1,
-                -1,
-                True,
-                True,
+                force=True,
+                color=MessageData.DARK_PINK,
             )
         if lSuppressList[iHuman] in [2, 3, 4]:
             if not gc.getTeam(gc.getPlayer(iHuman).getTeam()).isAtWar(iDeadCiv):
@@ -2121,20 +1983,7 @@ class RiseAndFall:
 
         if iConvertedCitiesCount > 0:
             if gc.getPlayer(iCiv).isHuman():
-                CyInterface().addMessage(
-                    iCiv,
-                    True,
-                    MessageData.DURATION,
-                    text("TXT_KEY_FLIP_TO_US"),
-                    "",
-                    0,
-                    "",
-                    ColorTypes(MessageData.GREEN),
-                    -1,
-                    -1,
-                    True,
-                    True,
-                )
+                message(iCiv, text("TXT_KEY_FLIP_TO_US"), force=True, color=MessageData.GREEN)
         return (iConvertedCitiesCount, iNumHumanCities)
 
     def convertSurroundingPlotCulture(self, iCiv, tTopLeft, tBottomRight):
@@ -2308,34 +2157,10 @@ class RiseAndFall:
 
     def unitsBetrayal(self, iNewOwner, iOldOwner, tTopLeft, tBottomRight, tPlot):
         if gc.getPlayer(self.getOldCivFlip()).isHuman():
-            CyInterface().addMessage(
-                self.getOldCivFlip(),
-                False,
-                MessageData.DURATION,
-                text("TXT_KEY_FLIP_BETRAYAL"),
-                "",
-                0,
-                "",
-                ColorTypes(MessageData.RED),
-                -1,
-                -1,
-                True,
-                True,
-            )
+            message(self.getOldCivFlip(), text("TXT_KEY_FLIP_BETRAYAL"), color=MessageData.RED)
         elif gc.getPlayer(self.getNewCivFlip()).isHuman():
-            CyInterface().addMessage(
-                self.getNewCivFlip(),
-                False,
-                MessageData.DURATION,
-                text("TXT_KEY_FLIP_BETRAYAL_NEW"),
-                "",
-                0,
-                "",
-                ColorTypes(MessageData.GREEN),
-                -1,
-                -1,
-                True,
-                True,
+            message(
+                self.getNewCivFlip(), text("TXT_KEY_FLIP_BETRAYAL_NEW"), color=MessageData.GREEN
             )
         for (x, y) in utils.getPlotList(tTopLeft, tBottomRight):
             killPlot = gc.getMap().plot(x, y)

@@ -2,7 +2,7 @@
 
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from CoreFunctions import text
+from CoreFunctions import message, text
 from CoreStructures import human
 import PyHelpers
 
@@ -532,37 +532,20 @@ class Stability:
         iHuman = human()
         if iPlayer != iHuman:
             if gc.getPlayer(iHuman).canContact(iPlayer):
-                CyInterface().addMessage(
+                message(
                     iHuman,
-                    False,
-                    MessageData.DURATION,
                     pPlayer.getCivilizationDescription(0)
                     + " "
                     + text("TXT_KEY_STABILITY_CIVILWAR_STABILITY"),
-                    "",
-                    0,
-                    "",
-                    ColorTypes(MessageData.RED),
-                    -1,
-                    -1,
-                    True,
-                    True,
+                    color=MessageData.RED,
                 )
             utils.killAndFragmentCiv(iPlayer, False, False)
         elif pPlayer.getNumCities() > 1:
-            CyInterface().addMessage(
+            message(
                 iPlayer,
-                True,
-                MessageData.DURATION,
                 text("TXT_KEY_STABILITY_CIVILWAR_STABILITY_HUMAN"),
-                "",
-                0,
-                "",
-                ColorTypes(MessageData.RED),
-                -1,
-                -1,
-                True,
-                True,
+                force=True,
+                color=MessageData.RED,
             )
             utils.killAndFragmentCiv(iPlayer, False, True)
             self.zeroStability(iPlayer)

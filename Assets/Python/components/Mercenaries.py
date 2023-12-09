@@ -3,7 +3,7 @@
 
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from CoreFunctions import text
+from CoreFunctions import message, text
 from CoreStructures import human, turn
 from CoreTypes import Civ, Region, SpecialParameter, Religion, Promotion, Unit, Province
 from LocationsData import REGIONS
@@ -2762,19 +2762,8 @@ class MercenaryManager:
                 if percentage_chance(lMercList[lMerc[0]][6] / 2, strict=True):
                     self.lGlobalPool.remove(lMerc)
                     if lMerc[4] in lHumanProvinces:
-                        CyInterface().addMessage(
-                            iHuman,
-                            False,
-                            MessageData.DURATION / 2,
-                            text("TXT_KEY_MERC_NEW_MERC_MOVING"),
-                            "",
-                            0,
-                            "",
-                            ColorTypes(MessageData.LIME),
-                            -1,
-                            -1,
-                            True,
-                            True,
+                        message(
+                            iHuman, text("TXT_KEY_MERC_NEW_MERC_MOVING"), color=MessageData.LIME
                         )
                     iMercsLeft += 1
                     if iMercsLeft > 1:
@@ -2837,22 +2826,13 @@ class MercenaryManager:
             if iStateReligion in lMercList[iMerc][5]:
                 szProvName = "TXT_KEY_PROVINCE_NAME_%i" % iCurrentProvince
                 szCurrentProvince = text(szProvName)
-                CyInterface().addMessage(
+                message(
                     iHuman,
-                    False,
-                    MessageData.DURATION / 2,
                     text("TXT_KEY_MERC_NEW_MERC_AVAILABLE")
                     + " "
                     + szCurrentProvince
                     + text("TXT_KEY_MERC_NEW_MERC_RELIGION"),
-                    "",
-                    0,
-                    "",
-                    ColorTypes(MessageData.LIME),
-                    -1,
-                    -1,
-                    True,
-                    True,
+                    color=MessageData.LIME,
                 )
             else:
                 # Absinthe: normal message
@@ -2861,22 +2841,13 @@ class MercenaryManager:
                         if city.getCultureLevel() >= 2:
                             szProvName = "TXT_KEY_PROVINCE_NAME_%i" % iCurrentProvince
                             szCurrentProvince = text(szProvName)
-                            CyInterface().addMessage(
+                            message(
                                 iHuman,
-                                False,
-                                MessageData.DURATION / 2,
                                 text("TXT_KEY_MERC_NEW_MERC_AVAILABLE")
                                 + " "
                                 + szCurrentProvince
                                 + "!",
-                                "",
-                                0,
-                                "",
-                                ColorTypes(MessageData.LIME),
-                                -1,
-                                -1,
-                                True,
-                                True,
+                                color=MessageData.LIME,
                             )
                             ProvMessage = True
                             break
@@ -2884,22 +2855,13 @@ class MercenaryManager:
                 if not ProvMessage:
                     szProvName = "TXT_KEY_PROVINCE_NAME_%i" % iCurrentProvince
                     szCurrentProvince = text(szProvName)
-                    CyInterface().addMessage(
+                    message(
                         iHuman,
-                        False,
-                        MessageData.DURATION / 2,
                         text("TXT_KEY_MERC_NEW_MERC_AVAILABLE")
                         + " "
                         + szCurrentProvince
                         + text("TXT_KEY_MERC_NEW_MERC_CULTURE"),
-                        "",
-                        0,
-                        "",
-                        ColorTypes(MessageData.LIME),
-                        -1,
-                        -1,
-                        True,
-                        True,
+                        color=MessageData.LIME,
                     )
 
         # add the merc, keep the merc index, costs and promotions
@@ -2983,20 +2945,7 @@ class MercenaryManager:
     def desertMercs(self, iPlayer):
         pPlayer = gc.getPlayer(iPlayer)
         if iPlayer == human():
-            CyInterface().addMessage(
-                iPlayer,
-                False,
-                MessageData.DURATION / 2,
-                text("TXT_KEY_MERC_NEW_MERC_DESERTERS"),
-                "",
-                0,
-                "",
-                ColorTypes(MessageData.LIGHT_RED),
-                -1,
-                -1,
-                True,
-                True,
-            )
+            message(iPlayer, text("TXT_KEY_MERC_NEW_MERC_DESERTERS"), color=MessageData.LIGHT_RED)
 
         while True:
             lHiredMercs = [
@@ -3015,19 +2964,14 @@ class MercenaryManager:
         for lMerc in self.lGlobalPool:
             if lMerc[4] == iProvince:
                 if iCiv == human():
-                    CyInterface().addMessage(
+                    message(
                         iCiv,
-                        False,
-                        MessageData.DURATION / 2,
                         text("TXT_KEY_MERC_AVAILABLE_NEAR_NEW_CITY", pCity.getName()),
-                        "",
-                        0,
-                        ArtFileMgr.getInterfaceArtInfo("INTERFACE_MERCENARY_ICON").getPath(),
-                        ColorTypes(MessageData.LIME),
-                        pCity.getX(),
-                        pCity.getY(),
-                        True,
-                        True,
+                        button=ArtFileMgr.getInterfaceArtInfo(
+                            "INTERFACE_MERCENARY_ICON"
+                        ).getPath(),
+                        color=MessageData.LIME,
+                        location=pCity,
                     )
                     break
 
@@ -3038,19 +2982,14 @@ class MercenaryManager:
         for lMerc in self.lGlobalPool:
             if lMerc[4] == iProvince:
                 if iCiv == human():
-                    CyInterface().addMessage(
+                    message(
                         iCiv,
-                        False,
-                        MessageData.DURATION / 2,
                         text("TXT_KEY_MERC_AVAILABLE_NEAR_NEW_CITY", pCity.getName()),
-                        "",
-                        0,
-                        ArtFileMgr.getInterfaceArtInfo("INTERFACE_MERCENARY_ICON").getPath(),
-                        ColorTypes(MessageData.LIME),
-                        pCity.getX(),
-                        pCity.getY(),
-                        True,
-                        True,
+                        button=ArtFileMgr.getInterfaceArtInfo(
+                            "INTERFACE_MERCENARY_ICON"
+                        ).getPath(),
+                        color=MessageData.LIME,
+                        location=pCity,
                     )
                     break
 
@@ -3417,19 +3356,10 @@ class GlobalMercenaryUtils:
             if lMerc[4] in lHumanProvList:
                 szProvName = "TXT_KEY_PROVINCE_NAME_%i" % lMerc[4]
                 szCurrentProvince = text(szProvName)
-                CyInterface().addMessage(
+                message(
                     iHuman,
-                    False,
-                    MessageData.DURATION / 2,
                     text("TXT_KEY_MERC_HIRED_BY_SOMEONE", szCurrentProvince),
-                    "",
-                    0,
-                    "",
-                    ColorTypes(MessageData.LIME),
-                    -1,
-                    -1,
-                    True,
-                    True,
+                    color=MessageData.LIME,
                 )
 
         # make the unit:

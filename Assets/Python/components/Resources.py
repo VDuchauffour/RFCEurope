@@ -5,6 +5,7 @@ from CvPythonExtensions import *
 
 from Consts import MessageData
 from CoreFunctions import text
+from CoreFunctions import message
 from TimelineData import DateTurn
 from CoreTypes import Improvement, Bonus
 
@@ -45,19 +46,14 @@ class Resources:
                         city.getName(),
                         gc.getPlayer(iOwner).getCivilizationAdjective(0),
                     )
-                    CyInterface().addMessage(
+                    message(
                         iOwner,
-                        False,
-                        MessageData.DURATION,
                         szText,
-                        "AS2D_DISCOVERBONUS",
-                        InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-                        gc.getBonusInfo(iBonus).getButton(),
-                        ColorTypes(MessageData.LIME),
-                        iX,
-                        iY,
-                        True,
-                        True,
+                        sound="AS2D_DISCOVERBONUS",
+                        event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                        button=gc.getBonusInfo(iBonus).getButton(),
+                        color=MessageData.LIME,
+                        location=(iX, iY),
                     )
 
     def removeResource(self, iX, iY, textKey="TXT_KEY_RESOURCE_EXHAUSTED"):

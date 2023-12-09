@@ -8,7 +8,7 @@
 
 
 from CvPythonExtensions import *
-from CoreFunctions import get_civ_by_id, text
+from CoreFunctions import get_civ_by_id, message, text
 from CoreStructures import human, player, team
 import CvUtil
 import CvScreensInterface
@@ -645,22 +645,17 @@ class CvEventManager:
                     # Absinthe: message for the human player if it was inside it's territory
                     iOwner = pPlot.getOwner()
                     if iOwner == human():
-                        CyInterface().addMessage(
+                        message(
                             iOwner,
-                            False,
-                            MessageData.DURATION,
                             text(
                                 "TXT_KEY_NO_FOREST_NO_RESOURCE",
                                 gc.getBonusInfo(iBonusType).getTextKey(),
                             ),
-                            "AS2D_DISCOVERBONUS",
-                            InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-                            gc.getBonusInfo(iBonusType).getButton(),
-                            ColorTypes(MessageData.LIME),
-                            pPlot.getX(),
-                            pPlot.getY(),
-                            True,
-                            True,
+                            sound="AS2D_DISCOVERBONUS",
+                            event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                            button=gc.getBonusInfo(iBonusType).getButton(),
+                            color=MessageData.LIME,
+                            location=pPlot,
                         )
 
     def onPlotPicked(self, argsList):
@@ -701,19 +696,11 @@ class CvEventManager:
                     + " "
                     + gc.getUnitInfo(iUnit).getDescription()
                 )
-                CyInterface().addMessage(
+                message(
                     human(),
-                    False,
-                    MessageData.DURATION,
                     szText,
-                    "",
-                    InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-                    "",
-                    ColorTypes(MessageData.LIGHT_BLUE),
-                    -1,
-                    -1,
-                    True,
-                    True,
+                    event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                    color=MessageData.LIGHT_BLUE,
                 )
         # Absinthe: Leaning Tower end
 
@@ -763,20 +750,7 @@ class CvEventManager:
                             "TXT_KEY_BUILDING_BIBLIOTHECA_CORVINIANA_EFFECT",
                             gc.getTechInfo(iChosenTech).getDescription(),
                         )
-                        CyInterface().addMessage(
-                            iPlayer,
-                            True,
-                            MessageData.DURATION,
-                            sText,
-                            "",
-                            0,
-                            "",
-                            ColorTypes(MessageData.LIGHT_BLUE),
-                            -1,
-                            -1,
-                            True,
-                            True,
-                        )
+                        message(iPlayer, sText, force=True, color=MessageData.LIGHT_BLUE)
                 elif len(lUniquePotentialTechs) > 1:
                     # add two different random techs, with message for the human player
                     for tech in random.sample(lPotentialTechs, 2):
@@ -786,20 +760,7 @@ class CvEventManager:
                                 "TXT_KEY_BUILDING_BIBLIOTHECA_CORVINIANA_EFFECT",
                                 gc.getTechInfo(tech).getDescription(),
                             )
-                            CyInterface().addMessage(
-                                iPlayer,
-                                True,
-                                MessageData.DURATION,
-                                sText,
-                                "",
-                                0,
-                                "",
-                                ColorTypes(MessageData.LIGHT_BLUE),
-                                -1,
-                                -1,
-                                True,
-                                True,
-                            )
+                            message(iPlayer, sText, force=True, color=MessageData.LIGHT_BLUE)
         # Absinthe: Bibliotheca Corviniana end
 
         # Absinthe: Kalmar Castle start
@@ -854,19 +815,10 @@ class CvEventManager:
                     DirectionTypes.DIRECTION_SOUTH,
                 )
             if human() == iPlayer:
-                CyInterface().addMessage(
+                message(
                     iPlayer,
-                    False,
-                    MessageData.DURATION,
                     text("TXT_KEY_BUILDING_SAINT_CATHERINE_MONASTERY_EFFECT"),
-                    "",
-                    0,
-                    "",
-                    ColorTypes(MessageData.LIGHT_BLUE),
-                    -1,
-                    -1,
-                    True,
-                    True,
+                    color=MessageData.LIGHT_BLUE,
                 )
         # Absinthe: St. Catherine's Monastery end
 
@@ -1006,19 +958,10 @@ class CvEventManager:
                 if percentage_chance(70, strict=True):
                     pPlayer.changeGoldenAgeTurns(3)
                     if human() == iPlayer:
-                        CyInterface().addMessage(
+                        message(
                             iPlayer,
-                            False,
-                            MessageData.DURATION,
                             text("TXT_KEY_PROJECT_COLONY_GOLDEN_AGE"),
-                            "",
-                            0,
-                            "",
-                            ColorTypes(MessageData.GREEN),
-                            -1,
-                            -1,
-                            True,
-                            True,
+                            color=MessageData.GREEN,
                         )
         # Absinthe: Torre del Oro end
 
@@ -1114,19 +1057,13 @@ class CvEventManager:
                             gc.getUnitInfo(iUnit).getDescription(),
                             gc.getUnitInfo(iPlayerUU).getDescription(),
                         )
-                        CyInterface().addMessage(
+                        message(
                             human(),
-                            False,
-                            MessageData.DURATION,
                             szText,
-                            "",
-                            InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-                            gc.getUnitInfo(iUnit).getButton(),
-                            ColorTypes(MessageData.LIGHT_BLUE),
-                            city.getX(),
-                            city.getY(),
-                            True,
-                            True,
+                            event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                            button=gc.getUnitInfo(iUnit).getButton(),
+                            color=MessageData.LIGHT_BLUE,
+                            location=city,
                         )
         # Absinthe: Topkapi Palace end
 
@@ -1733,8 +1670,6 @@ class CvEventManager:
                 player().isExisting()
                 and (HumanTeam.isHasMet(ConquerTeam) or HumanTeam.isHasMet(PreviousTeam))
             ):
-                iX = city.getX()
-                iY = city.getY()
                 # Absinthe: collect all wonders, including shrines (even though cities with shrines can't be destroyed in the mod)
                 lAllWonders = [w.value for w in Wonder]
                 for iWonder in [
@@ -1748,51 +1683,33 @@ class CvEventManager:
                     if city.getNumBuilding(iWonder) > 0:
                         sWonderName = gc.getBuildingInfo(iWonder).getDescription()
                         if ConquerPlayer.isHuman():
-                            CyInterface().addMessage(
+                            message(
                                 human(),
-                                False,
-                                MessageData.DURATION,
                                 text("TXT_KEY_MISC_WONDER_DESTROYED_1", sWonderName),
-                                "",
-                                InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-                                gc.getBuildingInfo(iWonder).getButton(),
-                                ColorTypes(MessageData.LIGHT_RED),
-                                iX,
-                                iY,
-                                True,
-                                True,
+                                event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                                button=gc.getBuildingInfo(iWonder).getButton(),
+                                color=MessageData.LIGHT_RED,
+                                location=city,
                             )
                         elif HumanTeam.isHasMet(ConquerTeam):
                             ConquerName = ConquerPlayer.getCivilizationDescriptionKey()
-                            CyInterface().addMessage(
+                            message(
                                 human(),
-                                False,
-                                MessageData.DURATION,
                                 text("TXT_KEY_MISC_WONDER_DESTROYED_2", ConquerName, sWonderName),
-                                "",
-                                InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-                                gc.getBuildingInfo(iWonder).getButton(),
-                                ColorTypes(MessageData.LIGHT_RED),
-                                iX,
-                                iY,
-                                True,
-                                True,
+                                event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                                button=gc.getBuildingInfo(iWonder).getButton(),
+                                color=MessageData.LIGHT_RED,
+                                location=city,
                             )
                         elif HumanTeam.isHasMet(PreviousTeam):
                             PreviousName = PreviousPlayer.getCivilizationDescriptionKey()
-                            CyInterface().addMessage(
+                            message(
                                 human(),
-                                False,
-                                MessageData.DURATION,
                                 text("TXT_KEY_MISC_WONDER_DESTROYED_3", PreviousName, sWonderName),
-                                "",
-                                InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-                                gc.getBuildingInfo(iWonder).getButton(),
-                                ColorTypes(MessageData.LIGHT_RED),
-                                iX,
-                                iY,
-                                True,
-                                True,
+                                event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                                button=gc.getBuildingInfo(iWonder).getButton(),
+                                color=MessageData.LIGHT_RED,
+                                location=city,
                             )
         # Absinthe: wonder destroyed message end
 
@@ -2044,8 +1961,6 @@ class CvEventManager:
                 player().isExisting()
                 and (HumanTeam.isHasMet(ConquerTeam) or HumanTeam.isHasMet(PreviousTeam))
             ):
-                iX = pCity.getX()
-                iY = pCity.getY()
                 # Absinthe: collect all wonders, including shrines
                 lAllWonders = [w.value for w in Wonder]
                 for iWonder in [
@@ -2059,51 +1974,33 @@ class CvEventManager:
                     if pCity.getNumBuilding(iWonder) > 0:
                         sWonderName = gc.getBuildingInfo(iWonder).getDescription()
                         if ConquerPlayer.isHuman():
-                            CyInterface().addMessage(
+                            message(
                                 human(),
-                                False,
-                                MessageData.DURATION,
                                 text("TXT_KEY_MISC_WONDER_CAPTURED_1", sWonderName),
-                                "",
-                                InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-                                gc.getBuildingInfo(iWonder).getButton(),
-                                ColorTypes(MessageData.BLUE),
-                                iX,
-                                iY,
-                                True,
-                                True,
+                                event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                                button=gc.getBuildingInfo(iWonder).getButton(),
+                                color=MessageData.BLUE,
+                                location=pCity,
                             )
                         elif HumanTeam.isHasMet(ConquerTeam):
                             ConquerName = ConquerPlayer.getCivilizationDescriptionKey()
-                            CyInterface().addMessage(
+                            message(
                                 human(),
-                                False,
-                                MessageData.DURATION,
                                 text("TXT_KEY_MISC_WONDER_CAPTURED_2", ConquerName, sWonderName),
-                                "",
-                                InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-                                gc.getBuildingInfo(iWonder).getButton(),
-                                ColorTypes(MessageData.CYAN),
-                                iX,
-                                iY,
-                                True,
-                                True,
+                                event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                                button=gc.getBuildingInfo(iWonder).getButton(),
+                                color=MessageData.CYAN,
+                                location=pCity,
                             )
                         elif HumanTeam.isHasMet(PreviousTeam):
                             PreviousName = PreviousPlayer.getCivilizationDescriptionKey()
-                            CyInterface().addMessage(
+                            message(
                                 human(),
-                                False,
-                                MessageData.DURATION,
                                 text("TXT_KEY_MISC_WONDER_CAPTURED_3", PreviousName, sWonderName),
-                                "",
-                                InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
-                                gc.getBuildingInfo(iWonder).getButton(),
-                                ColorTypes(MessageData.CYAN),
-                                iX,
-                                iY,
-                                True,
-                                True,
+                                event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT,
+                                button=gc.getBuildingInfo(iWonder).getButton(),
+                                color=MessageData.CYAN,
+                                location=pCity,
                             )
         # Absinthe: wonder captured message end
 
@@ -2203,19 +2100,10 @@ class CvEventManager:
                 ):
                     pPlayer.changeGoldenAgeTurns(3)
                     if human() == iPlayer:
-                        CyInterface().addMessage(
+                        message(
                             iPlayer,
-                            False,
-                            MessageData.DURATION,
                             text("TXT_KEY_BUILDING_IMPERIAL_DIET_EFFECT"),
-                            "",
-                            0,
-                            "",
-                            ColorTypes(MessageData.LIGHT_BLUE),
-                            -1,
-                            -1,
-                            True,
-                            True,
+                            color=MessageData.LIGHT_BLUE,
                         )
             # Absinthe: Imperial Diet end
             CvUtil.pyPrint("Team %d becomes a Vassal State of Team %d" % (iVassal, iMaster))

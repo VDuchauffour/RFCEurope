@@ -199,12 +199,12 @@ def event_popup(id, title, message, labels=None):
 
 
 def message(player, text, **settings):
-    color = settings.get("color", MessageData.WHITE)
+    force = settings.get("force", False)
+    duration = settings.get("duration", MessageData.DURATION)
+    sound = settings.get("sound", "")
     event = settings.get("event", 0)
     button = settings.get("button", "")
-
-    sound = settings.get("sound", "")
-    force = settings.get("force", False)
+    color = settings.get("color", MessageData.WHITE)
 
     tile = settings.get("location")
     x, y = -1, -1
@@ -212,9 +212,9 @@ def message(player, text, **settings):
         x, y = location(tile)
 
     interface.addMessage(
-        player,
+        int(player),
         force,
-        MessageData.DURATION,
+        duration,
         text,
         sound,
         event,
