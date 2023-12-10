@@ -12,7 +12,7 @@ from CoreStructures import (
     turn,
 )
 import PyHelpers
-from PyUtils import choices, percentage, percentage_chance, rand, choice
+from PyUtils import percentage, percentage_chance, rand, choice
 import RFCUtils
 from ProvinceMapData import PROVINCES_MAP
 import CityNameManager
@@ -1636,7 +1636,7 @@ class Crusades:
                 else:
                     weights.append(0)
 
-            iChosenPlayer = choices(lPotentials, weights)[0]
+            iChosenPlayer = choice(lPotentials, weights)
             if iChosenPlayer == human():
                 self.callDCHuman()
             else:

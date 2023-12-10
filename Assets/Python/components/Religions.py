@@ -28,7 +28,7 @@ import Popup
 import RFCUtils
 from ProvinceMapData import PROVINCES_MAP
 from StoredData import data
-from PyUtils import choice, choices, percentage, percentage_chance, rand
+from PyUtils import choice, percentage, percentage_chance, rand
 
 from MiscData import RELIGIOUS_BUILDINGS, RELIGIOUS_WONDERS
 
@@ -369,7 +369,7 @@ class Religions:
                         weights.append(0)
 
                 if catholic_civs:
-                    iChosenPlayer = choices(catholic_civs, weights)[0]
+                    iChosenPlayer = choice(catholic_civs, weights)
                     if iGameTurn < 100:
                         iGift = min(
                             player(Civ.POPE).getGold() / 5, 40
@@ -411,7 +411,7 @@ class Religions:
                         weights.append(iCatholicFaith)
 
                 if catholic_civs:
-                    iChosenPlayer = choices(catholic_civs, weights)[0]
+                    iChosenPlayer = choice(catholic_civs, weights)
                     iCatholicBuilding = Building.CATHOLIC_TEMPLE.value
                     # No chance for monastery if the selected player knows the Scientific Method tech (which obsoletes monasteries), otherwise 50-50% for temple and monastery
                     if not iChosenPlayer.has_tech(
@@ -440,7 +440,7 @@ class Religions:
                         weights.append(0)
 
                 if catholic_civs:
-                    iChosenPlayer = choices(catholic_civs, weights)[0]
+                    iChosenPlayer = choice(catholic_civs, weights)
                     # look for techs which are known by the Pope but unknown to the chosen civ
                     for tech in Technology:
                         if (
