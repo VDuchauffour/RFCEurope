@@ -320,6 +320,18 @@ class Collection(list):
         """Return the object with only `items` given its keys, i.e. the relevant enum member."""
         return self.filter(lambda x: x in items)
 
+    def unique(self):
+        """Return only unique items."""
+        return self.copy(*[k for k in set(self)])
+
+    def enrich(self, func):
+        """Return an enriched version of the object given a function."""
+        enrich = self.copy(*[])
+        for key in self:
+            enrich += func(key)
+        enriched = self + enrich
+        return enriched.unique()
+
     def limit(self, n):
         """Return the first `n` items of the object."""
         return self[:n]
