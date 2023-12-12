@@ -1,11 +1,25 @@
-from Consts import INDEPENDENT_CIVS
-from CoreFunctions import get_civ_by_id, iterate, location, owner, plot, religion, text
-from PyUtils import any, rand
+from Consts import INDEPENDENT_CIVS, WORLD_HEIGHT, WORLD_WIDTH
+from CoreFunctions import (
+    city,
+    distance,
+    find_min,
+    get_area,
+    get_civ_by_id,
+    iterate,
+    location,
+    owner,
+    parse_tile,
+    plot,
+    religion,
+    sort,
+    text,
+    wrap,
+)
+from PyUtils import any, none, rand
 import CoreTypes
 from BaseStructures import (
     EntitiesCollection,
     EnumCollectionFactory,
-    Collection,
     EnumDataMapper,
     Item,
     EnumCollection,
@@ -49,6 +63,7 @@ try:
         DomainTypes,
         UnitAITypes,
         DirectionTypes,
+        plotDistance,
     )
 
     gc = CyGlobalContext()
@@ -514,7 +529,7 @@ def turn(turn=None):
     return year(turn)
 
 
-class InfoCollection(Collection):
+class InfoCollection(EntitiesCollection):
     def __init__(self, info_class, *infos):
         super(InfoCollection, self).__init__(*infos)
         self.info_class = info_class
@@ -524,7 +539,10 @@ class InfoCollection(Collection):
         return cls(info_class, *range(n_infos))
 
     def __str__(self):
-        return ",".join([self.info_class(i).getText() for i in self])
+        return ",".join([self._factory(i).getText() for i in self])
+
+    def _factory(self, key):
+        return self.info_class(key)
 
 
 class Infos(object):
@@ -859,7 +877,10 @@ class UnitItem(object):
 
 class Units(EntitiesCollection):
     def __init__(self, *units):
-        super(Units, self).__init__(*[UnitItem.of(u) for u in units])
+        super(Units, self).__init__(*[self._keyify(u) for u in units])
+
+    def _keyify(self, item):
+        return UnitItem.of(item)
 
     def _factory(self, key):
         return unit(key)
@@ -1056,4 +1077,498 @@ def make_crusade_unit(player, unit, plot, crusade_value, unit_ai=UnitAITypes.NO_
     return make_crusade_units(player, unit, plot, crusade_value, 1, unit_ai).one()
 
 
+class Locations(EntitiesCollection):
+    def __init__(self, *locations):
+        super(Locations, self).__init__(*locations)
+
+    def without(self, *exceptions):
+        if not exceptions or not any(exceptions):
+            return self
+
+        if len(exceptions) == 1:
+            if isinstance(exceptions[0], Locations):
+                remaining = set(self) - set(exceptions[0])
+                return self.copy(remaining)
+
+            elif isinstance(exceptions[0], (list, set)):
+                exceptions = exceptions[0]
+
+        remaining = set(self) - set(self._keyify(item) for item in exceptions)
+        return self.copy(*remaining)
+
+    def _closest(self, *args):
+        x, y = parse_tile(*args)
+        return find_min(self.entities(), lambda loc: distance(loc, (x, y)))
+
+    def closest(self, *args):
+        return self._closest(*args).result
+
+    def closest_distance(self, *args):
+        return self._closest(*args).value
+
+    def closest_pair(self, locations):
+        if not isinstance(locations, Locations):
+            raise Exception("Expected instance of Locations, received: %s" % locations)
+
+        permutations = [
+            (x, y) for x in self.shuffle().entities() for y in locations.shuffle().entities()
+        ]
+        return find_min(permutations, lambda x, y: distance(x, y)).result
+
+    def closest_all(self, locations):
+        closest = self.closest_pair(locations)
+        if closest is None:
+            return None
+
+        return closest[0]
+
+    def closest_within(self, *args, **kwargs):
+        closest_distance = self.closest_distance(*args)
+        radius = kwargs.get("radius", 1)
+        if closest_distance is None or closest_distance > radius:
+            return self.empty()
+        return self.filter(lambda loc: distance(location(*args), loc) == closest_distance)
+
+    def units(self):
+        return sum([UnitFactory().at(loc) for loc in self.entities()], Units(*[]))
+
+    def owner(self, identifier):
+        return self.filter(lambda loc: owner(loc, identifier))
+
+    def not_owner(self, identifier):
+        return self.filter(lambda loc: not owner(loc, identifier))
+
+    def provinces(self, *provinces):
+        return self.filter(lambda loc: loc.getProvinceID() in provinces)
+
+    def province(self, identifier):
+        return self.provinces(identifier)
+
+    def filter_surrounding(self, condition, radius=1):
+        return self.filter(
+            lambda loc: PlotFactory().surrounding(loc, radius=radius).all(lambda p: condition(p))
+        )
+
+    # def owners(self):
+    # 	return Players(set(loc.getOwner() for loc in self.entities() if loc.getOwner() >= 0)) # TODO
+
+    def areas(self, *areas):
+        return self.filter(lambda loc: loc.getArea() in [get_area(area) for area in areas])
+
+    def area(self, area):
+        return self.areas(area)
+
+    def intersect(self, locations):
+        return any(loc in locations for loc in self)
+
+
+class Plots(Locations):
+    def __init__(self, *plots):
+        super(Plots, self).__init__(*[self._keyify(p) for p in plots])
+
+    def _keyify(self, item):
+        if isinstance(item, tuple) and len(item) == 2:
+            return item
+
+        if isinstance(item, (CyPlot, CyCity, CyUnit)):
+            return location(item)
+
+        raise Exception("Not a valid plot key: %s" % type(item))
+
+    def _factory(self, key):
+        return plot(key)
+
+    def __contains__(self, item):
+        if isinstance(item, (CyPlot, CyCity, CyUnit)):
+            return (item.getX(), item.getY()) in self
+
+        if isinstance(item, tuple) and len(item) == 2:
+            return item in self
+
+        raise TypeError(
+            "Tried to check if Plots contains '%s', can only contain plots, cities, units or coordinate tuples"
+            % type(item)
+        )
+
+    def cities(self):
+        return self.transform(Cities, map=lambda key: city(key), condition=lambda p: p.isCity())
+
+    def land(self):
+        return self.filter(lambda p: not p.isWater())
+
+    def water(self):
+        return self.filter(lambda p: p.isWater())
+
+    def coastal(self):
+        return self.filter(lambda p: p.isCoastalLand())
+
+    def lake(self):
+        return self.filter(lambda p: p.isLake())
+
+    def sea(self):
+        return self.water().filter(lambda p: not p.isLake())
+
+    # def core(self, identifier):
+    #     if isinstance(identifier, Civ):
+    #         return self.filter(lambda p: p.isCore(identifier))
+    #     return self.filter(lambda p: p.isPlayerCore(identifier))
+
+    def passable(self):
+        return self.filter(lambda p: not p.isImpassable())
+
+    def no_enemies(self, identifier):
+        return self.filter(lambda p: UnitFactory().at(p).atwar(identifier).none())
+
+    def expand(self, num_tiles):
+        return self.enrich(lambda p: PlotFactory().circle(p, radius=num_tiles))
+
+    def edge(self):
+        return self.filter(
+            lambda p: PlotFactory().surrounding(p).any(lambda sp: sp not in self)
+        )  # TODO: check if it's correct
+
+
+class PlotsCorner:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def end(self, *args):
+        x, y = parse_tile(*args)
+        return Plots(
+            *[
+                (i, j)
+                for i in range(min(self.x, x), min(max(self.x, x) + 1, WORLD_WIDTH))
+                for j in range(min(self.y, y), min(max(self.y, y) + 1, WORLD_HEIGHT))
+            ]
+        )
+
+
+class PlotFactory:
+    def of(self, list):
+        return Plots(*list)
+
+    def start(self, *args):
+        x, y = parse_tile(*args)
+        return PlotsCorner(x, y)
+
+    def rectangle(self, start, end=None):
+        if end is None:
+            if isinstance(start, tuple) and len(start) == 2:
+                start, end = start
+            else:
+                raise TypeError(
+                    "If only one argument is provided, it needs to be a tuple of two coordinate pairs, got: '%s'"
+                    % type(start)
+                )
+        return self.start(start).end(end)
+
+    def all(self):
+        return self.start(0, 0).end(WORLD_WIDTH, WORLD_HEIGHT)
+
+    def none(self):
+        return self.of([])
+
+    def provinces(self, *provinces):
+        return self.all().filter(lambda p: p.getProvinceID() in provinces)
+
+    def province(self, identifier):
+        return self.provinces(identifier)
+
+    def surrounding(self, *args, **kwargs):
+        radius = kwargs.get("radius", 1)
+        if radius < 0:
+            raise ValueError("radius cannot be negative, received: '%d'" % radius)
+        x, y = parse_tile(*args)
+        if not isinstance(x, int):
+            raise Exception("x must be int, is %s" % type(x))
+        if not isinstance(y, int):
+            raise Exception("y must be int, is %s" % type(y))
+        return Plots(
+            sort(
+                list(
+                    set(
+                        wrap(x + i, y + j)
+                        for i in range(-radius, radius + 1)
+                        for j in range(-radius, radius + 1)
+                    )
+                )
+            )
+        )
+
+    def ring(self, *args, **kwargs):
+        radius = kwargs.get("radius", 1)
+        circle = self.surrounding(*args, **kwargs)
+        inside = self.surrounding(*args, **{"radius": radius - 1})
+        return circle.without(inside)
+
+    def circle(self, *args, **kwargs):
+        radius = kwargs.get("radius", 1)
+        square = self.surrounding(*args, **kwargs)
+        x, y = parse_tile(*args)
+        return square.filter(lambda p: plotDistance(p.getX(), p.getY(), x, y) <= radius)
+
+    def city_radius(self, city):
+        if not city or city.isNone():
+            raise TypeError("city object is None")
+
+        return Plots(*[location(city.getCityIndexPlot(i)) for i in range(21)])
+
+    def owner(self, identifier):
+        return self.all().owner(identifier)
+
+    # def area(self, dArea, dExceptions, identifier):
+    #     return (
+    #         self.rectangle(*dArea[identifier])
+    #         .without(dExceptions[identifier])
+    #         .clear_named(infos.civ(identifier).getShortDescription(0))
+    #     )
+
+    def sum(self, areas):
+        return sum(areas, self.none())
+
+    # def birth(self, identifier, extended=None):
+    #     if extended is None:
+    #         extended = isExtendedBirth(identifier)
+    #     if identifier in dExtendedBirthArea and extended:
+    #         return self.area(dExtendedBirthArea, dBirthAreaExceptions, identifier)
+    #     return self.area(dBirthArea, dBirthAreaExceptions, identifier)
+
+    # def core(self, identifier):
+    #     iPeriod = player(identifier).getPeriod()
+    #     if iPeriod in dPeriodCoreArea:
+    #         return self.area(dPeriodCoreArea, dPeriodCoreAreaExceptions, iPeriod)
+    #     return self.area(dCoreArea, dCoreAreaExceptions, identifier)
+
+    # def normal(self, identifier):
+    #     iPeriod = player(identifier).getPeriod()
+    #     if iPeriod in dPeriodNormalArea:
+    #         return self.area(dPeriodNormalArea, dPeriodNormalAreaExceptions, iPeriod)
+    #     return self.area(dNormalArea, dNormalAreaExceptions, identifier)
+
+    # def broader(self, identifier):
+    #     iPeriod = player(identifier).getPeriod()
+    #     if iPeriod in dPeriodBroaderArea:
+    #         return self.rectangle(*dPeriodBroaderArea[identifier])
+    #     return self.rectangle(*dBroaderArea[identifier])
+
+    # def expansion(self, identifier):
+    #     if identifier not in dExpansionArea:
+    #         return self.none()
+    #     return self.area(dExpansionArea, dExpansionAreaExceptions, identifier)
+
+    # def respawn(self, identifier):
+    #     if identifier in dRespawnArea:
+    #         return self.rectangle(*dRespawnArea[identifier])
+    #     return self.normal(identifier)
+
+    # def capital(self, identifier):
+    #     iPeriod = player(identifier).getPeriod()
+    #     if iPeriod in dPeriodCapitals:
+    #         return plot(dPeriodCapitals[iPeriod])
+    #     return plot(dCapitals[identifier])
+
+    # def capitals(self, identifier):
+    #     return self.of([self.capital(identifier)])
+
+    # def respawnCapital(self, identifier):
+    #     if identifier in dRespawnCapitals:
+    #         return plot(dRespawnCapitals[identifier])
+    #     return self.capital(identifier)
+
+    # def newCapital(self, identifier):
+    #     if identifier in dNewCapitals:
+    #         return plot(dNewCapitals[identifier])
+    #     return self.respawnCapital(identifier)
+
+
+class CityItem(object):
+    def __init__(self, city):
+        self.owner = city.getOwner()
+        self.id = city.getID()
+
+    def __eq__(self, other):
+        return isinstance(other, CityItem) and (self.owner, self.id) == (other.owner, other.id)
+
+    def __str__(self):
+        return str((self.owner, self.id))
+
+    @classmethod
+    def of(cls, city):
+        if isinstance(city, cls):
+            return city
+        return cls(city)
+
+
+class Cities(Locations):
+    def __init__(self, *cities):
+        super(Cities, self).__init__(*[self._keyify(city) for city in cities])
+
+    def _keyify(self, item):
+        return CityItem.of(item)
+
+    def _factory(self, key):
+        if isinstance(key, CityItem):
+            return player(key.owner).getCity(key.id)
+
+        raise TypeError("Can only use keys of type CityKey in Cities, got: %s" % type(key))
+
+    def __contains__(self, item):
+        if isinstance(item, (CyCity, CityItem)):
+            return CityItem.of(item) in self
+
+        elif isinstance(item, CyPlot):
+            if not item.isCity():
+                return False
+            return self.__contains__(item.getPlotCity())
+
+        elif isinstance(item, CyUnit):
+            return self.__contains__(item.plot())
+
+        elif isinstance(item, tuple) and len(item) == 2:
+            return self.__contains__(plot(item))
+
+        raise TypeError(
+            "Tried to check if Cities contains '%s', can only contain plots, cities, units or coordinate tuples"
+            % type(item)
+        )
+
+    def __str__(self):
+        return str(
+            [
+                "%s (%s) at %s"
+                % (city.getName(), adjective(city.getOwner()), (city.getX(), city.getY()))
+                for city in self.entities()
+            ]
+        )
+
+    def without(self, *exceptions):
+        if not exceptions or none(exceptions):
+            return self
+
+        if len(exceptions) == 1 and isinstance(exceptions[0], (list, set, Locations)):
+            exceptions = exceptions[0]
+
+        return self.filter(
+            lambda city: location(city) not in [location(loc) for loc in exceptions]
+        )
+
+    def existing(self):
+        return self.filter(lambda city: city.getX() >= 0)
+
+    def religion(self, identifier):
+        return self.filter(lambda city: city.isHasReligion(identifier))
+
+    def corporation(self, identifier):
+        return self.filter(lambda city: city.isHasCorporation(identifier))
+
+    def building(self, identifier):
+        return self.filter(lambda city: city.isHasRealBuilding(identifier))
+
+    def building_effect(self, identifier):
+        return self.filter(lambda city: city.isHasBuildingEffect(identifier))
+
+    def coastal(self):
+        return self.filter(lambda city: city.isCoastal(10))
+
+    # def core(self, identifier):
+    #     if isinstance(identifier, Civ):
+    #         return self.filter(lambda city: city.isCore(identifier))
+    #     return self.filter(lambda city: city.isPlayerCore(identifier))
+
+    def plots(self):
+        return self.transform(Plots, map=lambda key: plot(self._factory(key)))
+
+
+class CitiesCorner:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def end(self, *args):
+        x, y = parse_tile(*args)
+        return PlotsCorner(self.x, self.y).end(x, y).cities()
+
+
+class CityFactory:
+    def __init__(self):
+        self.plots = PlotFactory()
+
+    def owner(self, identifier):
+        owner = player(identifier)
+        cities = iterate(owner.firstCity, owner.nextCity)
+        return Cities(*cities)
+
+    def all(self):
+        cities = []
+        for player_id in range(gc.getMAX_PLAYERS()):  # TODO
+            if player(player_id).getCivilizationType() >= 0:
+                cities += self.owner(player_id)
+        return Cities(*cities)
+
+    def start(self, *args):
+        x, y = parse_tile(*args)
+        return CitiesCorner(x, y)
+
+    def rectangle(self, start, end=None):
+        if end is None:
+            if isinstance(start, tuple) and len(start) == 2:
+                start, end = start
+            else:
+                raise TypeError(
+                    "If only one argument is provided, it needs to be a tuple of two coordinate pairs, got: '%s'"
+                    % type(start)
+                )
+        return self.start(start).end(end)
+
+    def regions(self, *regions):
+        return self.plots.regions(*regions).cities()
+
+    def region(self, identifier):
+        return self.regions(identifier)
+
+    def of(self, list):
+        return self.plots.of(*list).cities()
+
+    def none(self):
+        return self.of([])
+
+    def ids(self, identifier, ids):
+        return Cities(*[player(identifier).getCity(id) for id in ids])
+
+    def surrounding(self, *args, **kwargs):
+        return self.plots.surrounding(*args, **kwargs).cities()
+
+    def ring(self, *args, **kwargs):
+        return self.plots.ring(*args, **kwargs).cities()
+
+    # def birth(self, identifier, extended=None):
+    #     return self.plots.birth(identifier, extended).cities()
+
+    # def core(self, identifier):
+    #     return self.plots.core(identifier).cities()
+
+    # def normal(self, identifier):
+    #     return self.plots.normal(identifier).cities()
+
+    # def broader(self, identifier):
+    #     return self.plots.broader(identifier).cities()
+
+    # def respawn(self, identifier):
+    #     return self.plots.respawn(identifier).cities()
+
+    # def capital(self, identifier):
+    #     return city(self.plots.capital(identifier))
+
+    # def respawnCapital(self, identifier):
+    #     return city(self.plots.respawnCapital(identifier))
+
+    # def newCapital(self, identifier):
+    #     return city(self.plots.newCapital(identifier))
+
+
 infos = Infos()
+techs = TechFactory()
+units = UnitFactory()
+plots = PlotFactory()
+cities = CityFactory()

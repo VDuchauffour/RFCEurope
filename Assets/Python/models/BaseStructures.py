@@ -391,13 +391,30 @@ class Collection(list):
 class EntitiesCollection(Collection):
     """A base class to handle a set of game item taken from RFC DoC."""
 
+    def _keyify(self, item):
+        """Inner function for retrieving the in-game items of the entity."""
+        return item
+
     def _factory(self, key):
-        """Inner function for retrieve the in-game class of the entity."""
+        """Inner function for producing the in-game class of the entity."""
         return key
 
     def entities(self):
         """Retrieve in-game item of the collection."""
         return [self._factory(x) for x in self]
+
+    def _apply(self, condition):
+        if not callable(condition):
+            raise NotACallableError(condition)
+        return [condition(self._factory(item)) for item in self]
+
+    def sort(self, metric, reverse=False):
+        """Return the object sorted given a `metric` function."""
+        return self.copy(*sorted(self, key=lambda x: metric(self._factory(x)), reverse=reverse))
+
+    def transform(self, cls, map=lambda x: x, condition=lambda x: True):
+        """Return new class given a map function and a condition function."""
+        return cls([map(k) for k in self if condition(self._factory(k))])
 
 
 class EnumCollection(Collection):
