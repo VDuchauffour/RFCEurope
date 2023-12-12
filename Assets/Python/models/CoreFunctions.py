@@ -12,6 +12,9 @@ try:
         stepDistance,
         EventContextTypes,
         ColorTypes,
+        PlayerTypes,
+        TeamTypes,
+        DirectionTypes,
     )
     import Popup
 
@@ -118,6 +121,35 @@ def location(entity):
         return entity.getX(), entity.getY()
 
     return parse_tile(entity)
+
+
+def closest_city(
+    entity, owner=PlayerTypes.NO_PLAYER, same_continent=False, coastal_only=False, skip_city=None
+):
+    if skip_city is None:
+        if isinstance(entity, CyCity):
+            skip_city = entity
+        else:
+            skip_city = CyCity()
+    elif isinstance(skip_city, CyPlot):
+        skip_city = skip_city.isCity() and city(skip_city) or CyCity()
+
+    x, y = parse_tile(entity)
+    city_ = map.findCity(
+        x,
+        y,
+        owner,
+        TeamTypes.NO_TEAM,
+        same_continent,
+        coastal_only,
+        TeamTypes.NO_TEAM,
+        DirectionTypes.NO_DIRECTION,
+        skip_city,
+    )
+
+    if city_.isNone():
+        return None
+    return city_
 
 
 def owner(entity, identifier):
