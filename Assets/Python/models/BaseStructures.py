@@ -417,6 +417,9 @@ class EntitiesCollection(Collection):
         """Retrieve in-game item of the collection."""
         return [self._factory(x) for x in self]
 
+    def __getitem__(self, index):
+        return self.entities()[index]
+
     def _apply(self, condition):
         if not callable(condition):
             raise NotACallableError(condition)

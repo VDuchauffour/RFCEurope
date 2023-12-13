@@ -1285,7 +1285,7 @@ class PlotFactory:
         if not isinstance(y, int):
             raise Exception("y must be int, is %s" % type(y))
         return Plots(
-            sort(
+            *sort(
                 list(
                     set(
                         wrap(x + i, y + j)
