@@ -1,5 +1,7 @@
+from itertools import groupby
 import random
 from copy import copy, deepcopy
+from CoreFunctions import sort
 
 from Enum import Enum
 from Errors import NotACallableError, NotTypeExpectedError, OutputTypeError
@@ -336,6 +338,13 @@ class Collection(list):
         """Return the first `n` items of the object."""
         return self[:n]
 
+    def groupby(self, func):
+        """Return the grouped collection given a function."""
+        return [
+            (key, self.copy(*group))
+            for key, group in groupby(self.sort(func), lambda key: func(key))
+        ]
+
     def sort(self, metric, reverse=False):
         """Return the object sorted given a `metric` function."""
         return self.copy(*sorted(self, key=metric, reverse=reverse))
@@ -355,6 +364,11 @@ class Collection(list):
     def minimum(self, metric):
         """Return the smallest item of the object given a `metric` function."""
         return self.nsmallest(1, metric)
+
+    def rank(self, key, metric):
+        """Return the ranked collection given a `metric` function."""
+        sorted_keys = sort(self, lambda k: metric(k), True)
+        return sorted_keys.index(key)
 
     def random(self, weights=None, k=1):
         """Return a k sized list of items."""
@@ -415,6 +429,18 @@ class EntitiesCollection(Collection):
     def transform(self, cls, map=lambda x: x, condition=lambda x: True):
         """Return new class given a map function and a condition function."""
         return cls([map(k) for k in self if condition(self._factory(k))])
+
+    def groupby(self, func):
+        """Return the grouped collection given a function."""
+        return [
+            (key, self.copy(*group))
+            for key, group in groupby(self.sort(func), lambda key: func(self._factory(key)))
+        ]
+
+    def rank(self, key, metric):
+        """Return the ranked collection given a `metric` function."""
+        sorted_keys = sort(self._keys, lambda k: metric(self._factory(k)), True)
+        return sorted_keys.index(key)
 
 
 class EnumCollection(Collection):
