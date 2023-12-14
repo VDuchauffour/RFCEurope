@@ -518,6 +518,7 @@ class RFCUtils:
                         pNewOwner.acquireCity(city, False, True)
                     # Absinthe: if there are mercs available in the new city's province, interface message about it to the human player
                     lGlobalPool = data.lMercGlobalPool
+                    city = gc.getMap().plot(tCityPlot[0], tCityPlot[1]).getPlotCity()
                     iProvince = city.getProvince()
                     for lMerc in lGlobalPool:
                         if lMerc[4] == iProvince:
