@@ -2,7 +2,7 @@
 
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
-from CoreStructures import human, make_unit, make_units, player, team, teamtype, turn
+from CoreStructures import human, make_unit, make_units, player, team, teamtype, turn, units
 from CoreTypes import (
     City,
     Civ,
@@ -25,7 +25,7 @@ from PyUtils import percentage, percentage_chance, rand, choice
 from StoredData import data
 from MiscData import GREAT_PROPHET_FAITH_POINT_BONUS, RELIGION_PERSECUTION_ORDER
 
-from CoreFunctions import get_religion_by_id, message, text
+from CoreFunctions import city, get_religion_by_id, location, message, text
 from CoreTypes import ProvinceType
 from ProvinceMapData import PROVINCES_MAP
 from Consts import WORLD_HEIGHT, WORLD_WIDTH, MessageData
@@ -492,54 +492,53 @@ class RFCUtils:
                             gc.getMap().plot(29, 1).setRevealed(iCiv, False, True, -1)
 
     # RiseAndFall
-    def flipCity(self, tCityPlot, bFlipType, bKillUnits, iNewOwner, lOldOwners):
+    def flipCity(self, tCityPlot, bConquest, bKillUnits, iNewOwner, lOldOwners):
         """Changes owner of city specified by tCityPlot.
-        bFlipType specifies if it's conquered or traded.
+        bConquest specifies if it's conquered or traded.
         If bKillUnits != 0 all the units in the city will be killed.
-        iRetainCulture will determine the split of the current culture between old and new owner. -1 will skip
         lOldOwners is a list. Flip happens only if the old owner is in the list.
         An empty list will cause the flip to always happen."""
-        pNewOwner = gc.getPlayer(iNewOwner)
-        if gc.getMap().plot(tCityPlot[0], tCityPlot[1]).isCity():
-            city = gc.getMap().plot(tCityPlot[0], tCityPlot[1]).getPlotCity()
-            if not city.isNone():
-                iOldOwner = city.getOwner()
-                if iOldOwner in lOldOwners or not lOldOwners:
-                    if bKillUnits:
-                        killPlot = gc.getMap().plot(tCityPlot[0], tCityPlot[1])
-                        for i in range(killPlot.getNumUnits()):
-                            unit = killPlot.getUnit(0)
-                            unit.kill(False, iNewOwner)
-                    if bFlipType:  # conquest
-                        if city.getPopulation() <= 2:
-                            city.changePopulation(1)
-                        pNewOwner.acquireCity(city, True, False)
-                    else:  # trade
-                        pNewOwner.acquireCity(city, False, True)
-                    # Absinthe: if there are mercs available in the new city's province, interface message about it to the human player
-                    lGlobalPool = data.lMercGlobalPool
-                    city = gc.getMap().plot(tCityPlot[0], tCityPlot[1]).getPlotCity()
-                    iProvince = city.getProvince()
-                    for lMerc in lGlobalPool:
-                        if lMerc[4] == iProvince:
-                            if iNewOwner == human():
-                                szProvName = "TXT_KEY_PROVINCE_NAME_%i" % lMerc[4]
-                                szCurrentProvince = text(szProvName)
-                                message(
-                                    iNewOwner,
-                                    text(
-                                        "TXT_KEY_MERC_AVAILABLE_IN_PROVINCE_OF_NEW_CITY",
-                                        szCurrentProvince,
-                                    ),
-                                    button=ArtFileMgr.getInterfaceArtInfo(
-                                        "INTERFACE_MERCENARY_ICON"
-                                    ).getPath(),
-                                    color=MessageData.LIME,
-                                    location=city,
-                                )
-                                break
-                    return True
-        return False
+        pNewOwner = player(iNewOwner)
+        x, y = location(tCityPlot)
+        flipCity = city(x, y)
+
+        if flipCity:
+            iOldOwner = flipCity.getOwner()
+            if not lOldOwners or iOldOwner in lOldOwners:
+
+                if bKillUnits:
+                    for unit in units.at(x, y).filter(lambda unit: not unit.isCargo()):
+                        unit.kill(False, iNewOwner)
+
+                pNewOwner.acquireCity(flipCity, bConquest, not bConquest)
+
+                flippedCity = city(x, y)
+                # flippedCity.setInfoDirty(True) # TODO: add these to CyCity
+                # flippedCity.setLayoutDirty(True)
+
+                # Absinthe: if there are mercs available in the new city's province, interface message about it to the human player
+                for lMerc in data.lMercGlobalPool:
+                    if lMerc[4] == flippedCity.getProvince():
+                        if iNewOwner == human():
+                            szProvName = "TXT_KEY_PROVINCE_NAME_%i" % lMerc[4]
+                            szCurrentProvince = text(szProvName)
+                            message(
+                                iNewOwner,
+                                text(
+                                    "TXT_KEY_MERC_AVAILABLE_IN_PROVINCE_OF_NEW_CITY",
+                                    szCurrentProvince,
+                                ),
+                                button=ArtFileMgr.getInterfaceArtInfo(
+                                    "INTERFACE_MERCENARY_ICON"
+                                ).getPath(),
+                                color=MessageData.LIME,
+                                location=city,
+                            )
+                            break
+
+                return flippedCity
+
+        return None
 
     # RiseAndFall
     def cultureManager(

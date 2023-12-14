@@ -17,6 +17,7 @@ select = [
 ignore = [
   "E501",
   "F841", # unused variables are okay
+  "F402", # shadowing an import with loop variables is okay
   "F403", # star imports are okay
   "F405", # star imports are okay
 ]
