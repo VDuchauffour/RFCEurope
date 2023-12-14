@@ -5,7 +5,7 @@ from CvPythonExtensions import *
 from Consts import MessageData
 from CoreData import civilizations, COMPANIES
 from CoreFunctions import get_enum_by_id, text, message
-from CoreStructures import human, player, turn
+from CoreStructures import human, player, turn, year
 from LocationsData import CITIES
 from PyUtils import rand
 import RFCUtils
@@ -13,7 +13,6 @@ import Crusades
 from operator import itemgetter
 from Scenario import get_scenario
 
-from TimelineData import DateTurn
 from MiscData import COMPANY_BUILDINGS
 from CoreTypes import (
     Building,
@@ -39,20 +38,19 @@ class Companies:
 
         # update companies at the beginning of the 1200AD scenario:
         if get_scenario() == Scenario.i1200AD:
-            iGameTurn = DateTurn.i1200AD
             for company in COMPANIES:
-                if iGameTurn > company.birthdate and iGameTurn < company.deathdate:
+                if year(1200).between(company.birthdate, company.deathdate):
                     self.addCompany(company.id, 2)
 
     def checkTurn(self, iGameTurn):
 
         # check if it's not too early
         iCompany = iGameTurn % COMPANIES.len()
-        if iGameTurn < COMPANIES[iCompany].birthdate:
+        if iGameTurn < year(COMPANIES[iCompany].birthdate):
             return
 
         # check if it's not too late
-        elif iGameTurn > COMPANIES[iCompany].deathdate + rand(COMPANIES.len()):
+        elif iGameTurn > year(COMPANIES[iCompany].deathdate) + rand(COMPANIES.len()):
             iMaxCompanies = 0
             # do not dissolve the Templars while Jerusalem is under Catholic control
             if iCompany == Company.TEMPLARS.value:
@@ -69,17 +67,18 @@ class Companies:
             iMaxCompanies = COMPANIES[iCompany].limit
 
         # modified limit for Hospitallers and Teutons after the Crusades
-        if iGameTurn > COMPANIES[Company.TEMPLARS].deathdate:
-            if (
-                iCompany == Company.HOSPITALLERS.value
-                and iGameTurn < COMPANIES[iCompany].deathdate
+        if iGameTurn > year(COMPANIES[Company.TEMPLARS].deathdate):
+            if iCompany == Company.HOSPITALLERS.value and iGameTurn < year(
+                COMPANIES[iCompany].deathdate
             ):
                 iMaxCompanies -= 1
-            elif iCompany == Company.TEUTONS.value and iGameTurn < COMPANIES[iCompany].deathdate:
+            elif iCompany == Company.TEUTONS.value and iGameTurn < year(
+                COMPANIES[iCompany].deathdate
+            ):
                 iMaxCompanies += 2
         # increased limit for Hansa after their first general Diet in 1356
         if iCompany == Company.HANSA.value:
-            if DateTurn.i1356AD < iGameTurn < COMPANIES[iCompany].deathdate:
+            if year(1356) < iGameTurn < year(COMPANIES[iCompany].deathdate):
                 iMaxCompanies += 3
 
         # Templars are Teutons are gone after the Protestant reformation
@@ -315,7 +314,7 @@ class Companies:
 
         # geographical requirement changes after the Crusades
         iGameTurn = turn()
-        if iGameTurn < COMPANIES[Company.TEMPLARS].deathdate:
+        if iGameTurn < year(COMPANIES[Company.TEMPLARS].deathdate):
             if iCompany in [
                 Company.HOSPITALLERS.value,
                 Company.TEMPLARS.value,

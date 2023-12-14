@@ -13,12 +13,7 @@ from CoreTypes import (
     Unit,
     Wonder,
 )
-from CoreStructures import (
-    CivDataMapper,
-    ReligionDataMapper,
-    ScenarioDataMapper,
-)
-from TimelineData import DateTurn
+from CoreStructures import CivDataMapper, ReligionDataMapper, ScenarioDataMapper
 
 TECH_STARTERS = [
     [
@@ -246,11 +241,7 @@ CIV_INITIAL_TECH = CivDataMapper(
             Technology.CHAIN_MAIL,
         ],
         Civ.HUNGARY: TECH_STARTERS[0]
-        + [
-            Technology.CHAIN_MAIL,
-            Technology.HERBAL_MEDICINE,
-            Technology.VASSALAGE,
-        ],
+        + [Technology.CHAIN_MAIL, Technology.HERBAL_MEDICINE, Technology.VASSALAGE],
         Civ.CASTILE: TECH_STARTERS[0]
         + [
             Technology.LATEEN_SAILS,
@@ -329,11 +320,7 @@ CIV_INITIAL_TECH = CivDataMapper(
             Technology.ARABIC_KNOWLEDGE,
         ],
         Civ.ENGLAND: TECH_STARTERS[1]
-        + [
-            Technology.BLAST_FURNACE,
-            Technology.CODE_OF_LAWS,
-            Technology.ARISTOCRACY,
-        ],
+        + [Technology.BLAST_FURNACE, Technology.CODE_OF_LAWS, Technology.ARISTOCRACY],
         Civ.PORTUGAL: TECH_STARTERS[1]
         + [
             Technology.BLAST_FURNACE,
@@ -425,11 +412,7 @@ CIV_INITIAL_TECH = CivDataMapper(
             Technology.EDUCATION,
         ],
         Civ.OTTOMAN: TECH_STARTERS[2]
-        + [
-            Technology.GUNPOWDER,
-            Technology.MILITARY_TRADITION,
-            Technology.ARABIC_KNOWLEDGE,
-        ],
+        + [Technology.GUNPOWDER, Technology.MILITARY_TRADITION, Technology.ARABIC_KNOWLEDGE],
         Civ.MOSCOW: TECH_STARTERS[1]
         + [
             Technology.BLAST_FURNACE,
@@ -513,16 +496,8 @@ CIV_INITIAL_UNITS = CivDataMapper(
         ),
         Civ.BULGARIA: EnumDataMapper(
             {
-                PlayerType.ANY: {
-                    Unit.ARCHER: 4,
-                    Unit.SETTLER: 2,
-                    Unit.BULGARIAN_KONNIK: 5,
-                },
-                PlayerType.AI: {
-                    Unit.ARCHER: 1,
-                    Unit.SPEARMAN: 2,
-                    Unit.SETTLER: 1,
-                },
+                PlayerType.ANY: {Unit.ARCHER: 4, Unit.SETTLER: 2, Unit.BULGARIAN_KONNIK: 5},
+                PlayerType.AI: {Unit.ARCHER: 1, Unit.SPEARMAN: 2, Unit.SETTLER: 1},
             },
             do_not_cast=True,
         ),
@@ -540,9 +515,7 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.AXEMAN: 1,
                     Unit.ISLAMIC_MISSIONARY: 2,
                 },
-                PlayerType.HUMAN: {
-                    Unit.HORSE_ARCHER: 3,
-                },
+                PlayerType.HUMAN: {Unit.HORSE_ARCHER: 3},
             },
             do_not_cast=True,
         ),
@@ -553,7 +526,7 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.SETTLER: 1,
                     Unit.SPEARMAN: 1,
                     Unit.CATHOLIC_MISSIONARY: 1,
-                },
+                }
             },
             do_not_cast=True,
         ),
@@ -565,7 +538,7 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.GUISARME: 2,
                     Unit.AXEMAN: 2,
                     Unit.CATHOLIC_MISSIONARY: 1,
-                },
+                }
             },
             do_not_cast=True,
         ),
@@ -579,11 +552,7 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.ARCHER: 2,
                     Unit.CATHOLIC_MISSIONARY: 2,
                 },
-                PlayerType.AI: {
-                    Unit.ARCHER: 2,
-                    Unit.SETTLER: 1,
-                    Unit.CATHOLIC_MISSIONARY: 1,
-                },
+                PlayerType.AI: {Unit.ARCHER: 2, Unit.SETTLER: 1, Unit.CATHOLIC_MISSIONARY: 1},
             },
             do_not_cast=True,
         ),
@@ -595,10 +564,7 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.AXEMAN: 1,
                     Unit.HORSE_ARCHER: 1,
                 },
-                PlayerType.AI: {
-                    Unit.ARCHER: 4,
-                    Unit.SETTLER: 1,
-                },
+                PlayerType.AI: {Unit.ARCHER: 4, Unit.SETTLER: 1},
             },
             do_not_cast=True,
         ),
@@ -609,7 +575,7 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.SETTLER: 2,
                     Unit.VIKING_BERSERKER: 2,
                     Unit.SWORDSMAN: 1,
-                },
+                }
             },
             do_not_cast=True,
         ),
@@ -621,11 +587,7 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.AXEMAN: 2,
                     Unit.HORSE_ARCHER: 3,
                 },
-                PlayerType.AI: {
-                    Unit.ARCHER: 3,
-                    Unit.SPEARMAN: 3,
-                    Unit.SETTLER: 2,
-                },
+                PlayerType.AI: {Unit.ARCHER: 3, Unit.SPEARMAN: 3, Unit.SETTLER: 2},
             },
             do_not_cast=True,
         ),
@@ -637,11 +599,7 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.AXEMAN: 2,
                     Unit.HORSE_ARCHER: 4,
                 },
-                PlayerType.AI: {
-                    Unit.ARCHER: 2,
-                    Unit.SPEARMAN: 2,
-                    Unit.SETTLER: 1,
-                },
+                PlayerType.AI: {Unit.ARCHER: 2, Unit.SPEARMAN: 2, Unit.SETTLER: 1},
             },
             do_not_cast=True,
         ),
@@ -655,22 +613,12 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.LANCER: 2,
                     Unit.CATAPULT: 1,
                 },
-                PlayerType.AI: {
-                    Unit.CROSSBOWMAN: 1,
-                    Unit.SWORDSMAN: 2,
-                    Unit.LANCER: 2,
-                },
+                PlayerType.AI: {Unit.CROSSBOWMAN: 1, Unit.SWORDSMAN: 2, Unit.LANCER: 2},
             },
             do_not_cast=True,
         ),
         Civ.DENMARK: EnumDataMapper(
-            {
-                PlayerType.ANY: {
-                    Unit.CROSSBOWMAN: 2,
-                    Unit.SETTLER: 2,
-                    Unit.DENMARK_HUSKARL: 4,
-                },
-            },
+            {PlayerType.ANY: {Unit.CROSSBOWMAN: 2, Unit.SETTLER: 2, Unit.DENMARK_HUSKARL: 4}},
             do_not_cast=True,
         ),
         Civ.SCOTLAND: EnumDataMapper(
@@ -680,7 +628,7 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.SETTLER: 2,
                     Unit.SWORDSMAN: 2,
                     Unit.CATHOLIC_MISSIONARY: 2,
-                },
+                }
             },
             do_not_cast=True,
         ),
@@ -693,10 +641,7 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.SWORDSMAN: 2,
                     Unit.CATHOLIC_MISSIONARY: 2,
                 },
-                PlayerType.AI: {
-                    Unit.CROSSBOWMAN: 4,
-                    Unit.SETTLER: 1,
-                },
+                PlayerType.AI: {Unit.CROSSBOWMAN: 4, Unit.SETTLER: 1},
             },
             do_not_cast=True,
         ),
@@ -707,7 +652,7 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.SETTLER: 2,
                     Unit.SWORDSMAN: 2,
                     Unit.CATHOLIC_MISSIONARY: 1,
-                },
+                }
             },
             do_not_cast=True,
         ),
@@ -720,11 +665,7 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.HEAVY_LANCER: 2,
                     Unit.ISLAMIC_MISSIONARY: 1,
                 },
-                PlayerType.AI: {
-                    Unit.CROSSBOWMAN: 2,
-                    Unit.SETTLER: 1,
-                    Unit.ISLAMIC_MISSIONARY: 2,
-                },
+                PlayerType.AI: {Unit.CROSSBOWMAN: 2, Unit.SETTLER: 1, Unit.ISLAMIC_MISSIONARY: 2},
             },
             do_not_cast=True,
         ),
@@ -755,7 +696,7 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.TREBUCHET: 2,
                     Unit.GUISARME: 2,
                     Unit.CATHOLIC_MISSIONARY: 1,
-                },
+                }
             },
             do_not_cast=True,
         ),
@@ -766,7 +707,7 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.SETTLER: 2,
                     Unit.ARAGON_ALMOGAVAR: 5,
                     Unit.CATHOLIC_MISSIONARY: 2,
-                },
+                }
             },
             do_not_cast=True,
         ),
@@ -780,7 +721,7 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.CROSSBOWMAN: 2,
                     Unit.ARBALEST: 2,
                     Unit.CATHOLIC_MISSIONARY: 2,
-                },
+                }
             },
             do_not_cast=True,
         ),
@@ -793,7 +734,7 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.GUISARME: 2,
                     Unit.TREBUCHET: 2,
                     Unit.CATHOLIC_MISSIONARY: 3,
-                },
+                }
             },
             do_not_cast=True,
         ),
@@ -804,7 +745,7 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.SETTLER: 3,
                     Unit.LITHUANIAN_BAJORAS: 5,
                     Unit.GUISARME: 3,
-                },
+                }
             },
             do_not_cast=True,
         ),
@@ -818,7 +759,7 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.CROSSBOWMAN: 3,
                     Unit.KNIGHT: 4,
                     Unit.CATHOLIC_MISSIONARY: 2,
-                },
+                }
             },
             do_not_cast=True,
         ),
@@ -834,11 +775,7 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.TURKEY_GREAT_BOMBARD: 3,
                     Unit.ISLAMIC_MISSIONARY: 4,
                 },
-                PlayerType.AI: {
-                    Unit.KNIGHT: 2,
-                    Unit.HORSE_ARCHER: 2,
-                    Unit.LONGBOWMAN: 3,
-                },
+                PlayerType.AI: {Unit.KNIGHT: 2, Unit.HORSE_ARCHER: 2, Unit.LONGBOWMAN: 3},
             },
             do_not_cast=True,
         ),
@@ -868,7 +805,7 @@ CIV_INITIAL_UNITS = CivDataMapper(
                     Unit.SETTLER: 2,
                     Unit.MACEMAN: 3,
                     Unit.PROTESTANT_MISSIONARY: 2,
-                },
+                }
             },
             do_not_cast=True,
         ),
@@ -880,288 +817,118 @@ CIV_ADDITIONAL_UNITS = CivDataMapper(
         Civ.BYZANTIUM: None,
         Civ.FRANCE: None,
         Civ.ARABIA: EnumDataMapper(
-            {
-                PlayerType.AI: {
-                    Unit.HORSE_ARCHER: 4,
-                },
-                PlayerType.HUMAN: {
-                    Unit.HORSE_ARCHER: 2,
-                },
-            },
+            {PlayerType.AI: {Unit.HORSE_ARCHER: 4}, PlayerType.HUMAN: {Unit.HORSE_ARCHER: 2}},
             do_not_cast=True,
         ),
         Civ.BULGARIA: EnumDataMapper(
             {
-                PlayerType.AI: {
-                    Unit.BULGARIAN_KONNIK: 2,
-                },
-                PlayerType.HUMAN: {
-                    Unit.BULGARIAN_KONNIK: 1,
-                },
+                PlayerType.AI: {Unit.BULGARIAN_KONNIK: 2},
+                PlayerType.HUMAN: {Unit.BULGARIAN_KONNIK: 1},
             },
             do_not_cast=True,
         ),
         Civ.CORDOBA: EnumDataMapper(
-            {
-                PlayerType.AI: {
-                    Unit.AXEMAN: 2,
-                },
-                PlayerType.HUMAN: {
-                    Unit.AXEMAN: 1,
-                },
-            },
-            do_not_cast=True,
+            {PlayerType.AI: {Unit.AXEMAN: 2}, PlayerType.HUMAN: {Unit.AXEMAN: 1}}, do_not_cast=True
         ),
         Civ.VENECIA: EnumDataMapper(
-            {
-                PlayerType.AI: {
-                    Unit.CROSSBOWMAN: 3,
-                },
-                PlayerType.HUMAN: {
-                    Unit.CROSSBOWMAN: 2,
-                },
-            },
+            {PlayerType.AI: {Unit.CROSSBOWMAN: 3}, PlayerType.HUMAN: {Unit.CROSSBOWMAN: 2}},
             do_not_cast=True,
         ),
         Civ.BURGUNDY: EnumDataMapper(
-            {
-                PlayerType.AI: {
-                    Unit.LANCER: 3,
-                },
-                PlayerType.HUMAN: {
-                    Unit.LANCER: 1,
-                },
-            },
-            do_not_cast=True,
+            {PlayerType.AI: {Unit.LANCER: 3}, PlayerType.HUMAN: {Unit.LANCER: 1}}, do_not_cast=True
         ),
         Civ.GERMANY: EnumDataMapper(
-            {
-                PlayerType.AI: {
-                    Unit.LANCER: 3,
-                },
-                PlayerType.HUMAN: {
-                    Unit.LANCER: 1,
-                },
-            },
-            do_not_cast=True,
+            {PlayerType.AI: {Unit.LANCER: 3}, PlayerType.HUMAN: {Unit.LANCER: 1}}, do_not_cast=True
         ),
         Civ.NOVGOROD: EnumDataMapper(
-            {
-                PlayerType.AI: {
-                    Unit.CROSSBOWMAN: 3,
-                },
-                PlayerType.HUMAN: {
-                    Unit.CROSSBOWMAN: 1,
-                },
-            },
+            {PlayerType.AI: {Unit.CROSSBOWMAN: 3}, PlayerType.HUMAN: {Unit.CROSSBOWMAN: 1}},
             do_not_cast=True,
         ),
         Civ.NORWAY: EnumDataMapper(
             {
-                PlayerType.AI: {
-                    Unit.VIKING_BERSERKER: 3,
-                },
-                PlayerType.HUMAN: {
-                    Unit.VIKING_BERSERKER: 1,
-                },
+                PlayerType.AI: {Unit.VIKING_BERSERKER: 3},
+                PlayerType.HUMAN: {Unit.VIKING_BERSERKER: 1},
             },
             do_not_cast=True,
         ),
         Civ.KIEV: EnumDataMapper(
-            {
-                PlayerType.AI: {
-                    Unit.HORSE_ARCHER: 4,
-                },
-                PlayerType.HUMAN: {
-                    Unit.HORSE_ARCHER: 2,
-                },
-            },
+            {PlayerType.AI: {Unit.HORSE_ARCHER: 4}, PlayerType.HUMAN: {Unit.HORSE_ARCHER: 2}},
             do_not_cast=True,
         ),
         Civ.HUNGARY: EnumDataMapper(
-            {
-                PlayerType.AI: {
-                    Unit.HORSE_ARCHER: 4,
-                },
-                PlayerType.HUMAN: {
-                    Unit.HORSE_ARCHER: 2,
-                },
-            },
+            {PlayerType.AI: {Unit.HORSE_ARCHER: 4}, PlayerType.HUMAN: {Unit.HORSE_ARCHER: 2}},
             do_not_cast=True,
         ),
         Civ.CASTILE: EnumDataMapper(
-            {
-                PlayerType.AI: {
-                    Unit.LANCER: 4,
-                },
-                PlayerType.HUMAN: {
-                    Unit.LANCER: 1,
-                },
-            },
-            do_not_cast=True,
+            {PlayerType.AI: {Unit.LANCER: 4}, PlayerType.HUMAN: {Unit.LANCER: 1}}, do_not_cast=True
         ),
         Civ.DENMARK: EnumDataMapper(
             {
-                PlayerType.AI: {
-                    Unit.DENMARK_HUSKARL: 3,
-                },
-                PlayerType.HUMAN: {
-                    Unit.DENMARK_HUSKARL: 1,
-                },
+                PlayerType.AI: {Unit.DENMARK_HUSKARL: 3},
+                PlayerType.HUMAN: {Unit.DENMARK_HUSKARL: 1},
             },
             do_not_cast=True,
         ),
         Civ.SCOTLAND: EnumDataMapper(
-            {
-                PlayerType.AI: {
-                    Unit.AXEMAN: 4,
-                },
-                PlayerType.HUMAN: {
-                    Unit.AXEMAN: 2,
-                },
-            },
-            do_not_cast=True,
+            {PlayerType.AI: {Unit.AXEMAN: 4}, PlayerType.HUMAN: {Unit.AXEMAN: 2}}, do_not_cast=True
         ),
         Civ.POLAND: EnumDataMapper(
-            {
-                PlayerType.AI: {
-                    Unit.LANCER: 3,
-                },
-                PlayerType.HUMAN: {
-                    Unit.LANCER: 1,
-                },
-            },
-            do_not_cast=True,
+            {PlayerType.AI: {Unit.LANCER: 3}, PlayerType.HUMAN: {Unit.LANCER: 1}}, do_not_cast=True
         ),
         Civ.GENOA: EnumDataMapper(
-            {
-                PlayerType.AI: {
-                    Unit.HEAVY_LANCER: 3,
-                },
-                PlayerType.HUMAN: {
-                    Unit.HEAVY_LANCER: 1,
-                },
-            },
+            {PlayerType.AI: {Unit.HEAVY_LANCER: 3}, PlayerType.HUMAN: {Unit.HEAVY_LANCER: 1}},
             do_not_cast=True,
         ),
         Civ.MOROCCO: EnumDataMapper(
-            {
-                PlayerType.AI: {
-                    Unit.HEAVY_LANCER: 2,
-                },
-                PlayerType.HUMAN: {
-                    Unit.HEAVY_LANCER: 1,
-                },
-            },
+            {PlayerType.AI: {Unit.HEAVY_LANCER: 2}, PlayerType.HUMAN: {Unit.HEAVY_LANCER: 1}},
             do_not_cast=True,
         ),
         Civ.ENGLAND: EnumDataMapper(
-            {
-                PlayerType.AI: {
-                    Unit.HEAVY_LANCER: 3,
-                },
-                PlayerType.HUMAN: {
-                    Unit.HEAVY_LANCER: 1,
-                },
-            },
+            {PlayerType.AI: {Unit.HEAVY_LANCER: 3}, PlayerType.HUMAN: {Unit.HEAVY_LANCER: 1}},
             do_not_cast=True,
         ),
         Civ.PORTUGAL: EnumDataMapper(
             {
-                PlayerType.AI: {
-                    Unit.PORTUGAL_FOOT_KNIGHT: 4,
-                },
-                PlayerType.HUMAN: {
-                    Unit.PORTUGAL_FOOT_KNIGHT: 1,
-                },
+                PlayerType.AI: {Unit.PORTUGAL_FOOT_KNIGHT: 4},
+                PlayerType.HUMAN: {Unit.PORTUGAL_FOOT_KNIGHT: 1},
             },
             do_not_cast=True,
         ),
         Civ.ARAGON: EnumDataMapper(
-            {
-                PlayerType.AI: {
-                    Unit.HEAVY_LANCER: 4,
-                },
-                PlayerType.HUMAN: {
-                    Unit.HEAVY_LANCER: 2,
-                },
-            },
+            {PlayerType.AI: {Unit.HEAVY_LANCER: 4}, PlayerType.HUMAN: {Unit.HEAVY_LANCER: 2}},
             do_not_cast=True,
         ),
         Civ.SWEDEN: EnumDataMapper(
-            {
-                PlayerType.AI: {
-                    Unit.HEAVY_LANCER: 4,
-                },
-                PlayerType.HUMAN: {
-                    Unit.HEAVY_LANCER: 1,
-                },
-            },
+            {PlayerType.AI: {Unit.HEAVY_LANCER: 4}, PlayerType.HUMAN: {Unit.HEAVY_LANCER: 1}},
             do_not_cast=True,
         ),
         Civ.PRUSSIA: EnumDataMapper(
-            {
-                PlayerType.AI: {
-                    Unit.TEUTONIC: 3,
-                },
-                PlayerType.HUMAN: {
-                    Unit.TEUTONIC: 1,
-                },
-            },
+            {PlayerType.AI: {Unit.TEUTONIC: 3}, PlayerType.HUMAN: {Unit.TEUTONIC: 1}},
             do_not_cast=True,
         ),
         Civ.LITHUANIA: EnumDataMapper(
             {
-                PlayerType.AI: {
-                    Unit.LITHUANIAN_BAJORAS: 3,
-                },
-                PlayerType.HUMAN: {
-                    Unit.LITHUANIAN_BAJORAS: 1,
-                },
+                PlayerType.AI: {Unit.LITHUANIAN_BAJORAS: 3},
+                PlayerType.HUMAN: {Unit.LITHUANIAN_BAJORAS: 1},
             },
             do_not_cast=True,
         ),
         Civ.AUSTRIA: EnumDataMapper(
-            {
-                PlayerType.AI: {
-                    Unit.HEAVY_LANCER: 4,
-                },
-                PlayerType.HUMAN: {
-                    Unit.HEAVY_LANCER: 2,
-                },
-            },
+            {PlayerType.AI: {Unit.HEAVY_LANCER: 4}, PlayerType.HUMAN: {Unit.HEAVY_LANCER: 2}},
             do_not_cast=True,
         ),
         Civ.OTTOMAN: EnumDataMapper(
-            {
-                PlayerType.AI: {
-                    Unit.HEAVY_LANCER: 3,
-                },
-                PlayerType.HUMAN: {
-                    Unit.HEAVY_LANCER: 1,
-                },
-            },
+            {PlayerType.AI: {Unit.HEAVY_LANCER: 3}, PlayerType.HUMAN: {Unit.HEAVY_LANCER: 1}},
             do_not_cast=True,
         ),
         Civ.MOSCOW: EnumDataMapper(
-            {
-                PlayerType.AI: {
-                    Unit.MOSCOW_BOYAR: 3,
-                },
-                PlayerType.HUMAN: {
-                    Unit.MOSCOW_BOYAR: 1,
-                },
-            },
+            {PlayerType.AI: {Unit.MOSCOW_BOYAR: 3}, PlayerType.HUMAN: {Unit.MOSCOW_BOYAR: 1}},
             do_not_cast=True,
         ),
         Civ.DUTCH: EnumDataMapper(
             {
-                PlayerType.AI: {
-                    Unit.NETHERLANDS_GRENADIER: 4,
-                },
-                PlayerType.HUMAN: {
-                    Unit.NETHERLANDS_GRENADIER: 2,
-                },
+                PlayerType.AI: {Unit.NETHERLANDS_GRENADIER: 4},
+                PlayerType.HUMAN: {Unit.NETHERLANDS_GRENADIER: 2},
             },
             do_not_cast=True,
         ),
@@ -1170,243 +937,69 @@ CIV_ADDITIONAL_UNITS = CivDataMapper(
 
 CIV_SCENARIO_CONDITION_500AD = CivDataMapper(
     {
-        Civ.BYZANTIUM: {
-            InitialCondition.GOLD: 1200,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.FRANCE: {
-            InitialCondition.GOLD: 100,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.ARABIA: {
-            InitialCondition.GOLD: 200,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.BULGARIA: {
-            InitialCondition.GOLD: 100,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.CORDOBA: {
-            InitialCondition.GOLD: 200,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.VENECIA: {
-            InitialCondition.GOLD: 300,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.BURGUNDY: {
-            InitialCondition.GOLD: 250,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.GERMANY: {
-            InitialCondition.GOLD: 300,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.NOVGOROD: {
-            InitialCondition.GOLD: 400,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.NORWAY: {
-            InitialCondition.GOLD: 250,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.KIEV: {
-            InitialCondition.GOLD: 250,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.HUNGARY: {
-            InitialCondition.GOLD: 300,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.CASTILE: {
-            InitialCondition.GOLD: 500,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.DENMARK: {
-            InitialCondition.GOLD: 300,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.SCOTLAND: {
-            InitialCondition.GOLD: 300,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.POLAND: {
-            InitialCondition.GOLD: 300,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.GENOA: {
-            InitialCondition.GOLD: 400,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.MOROCCO: {
-            InitialCondition.GOLD: 400,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.ENGLAND: {
-            InitialCondition.GOLD: 400,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.PORTUGAL: {
-            InitialCondition.GOLD: 450,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.ARAGON: {
-            InitialCondition.GOLD: 450,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.SWEDEN: {
-            InitialCondition.GOLD: 400,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.PRUSSIA: {
-            InitialCondition.GOLD: 300,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.LITHUANIA: {
-            InitialCondition.GOLD: 400,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.AUSTRIA: {
-            InitialCondition.GOLD: 1000,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.OTTOMAN: {
-            InitialCondition.GOLD: 1000,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.MOSCOW: {
-            InitialCondition.GOLD: 500,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.DUTCH: {
-            InitialCondition.GOLD: 1500,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.POPE: {
-            InitialCondition.GOLD: 50,
-            InitialCondition.FAITH: 0,
-        },
+        Civ.BYZANTIUM: {InitialCondition.GOLD: 1200, InitialCondition.FAITH: 0},
+        Civ.FRANCE: {InitialCondition.GOLD: 100, InitialCondition.FAITH: 0},
+        Civ.ARABIA: {InitialCondition.GOLD: 200, InitialCondition.FAITH: 0},
+        Civ.BULGARIA: {InitialCondition.GOLD: 100, InitialCondition.FAITH: 0},
+        Civ.CORDOBA: {InitialCondition.GOLD: 200, InitialCondition.FAITH: 0},
+        Civ.VENECIA: {InitialCondition.GOLD: 300, InitialCondition.FAITH: 0},
+        Civ.BURGUNDY: {InitialCondition.GOLD: 250, InitialCondition.FAITH: 0},
+        Civ.GERMANY: {InitialCondition.GOLD: 300, InitialCondition.FAITH: 0},
+        Civ.NOVGOROD: {InitialCondition.GOLD: 400, InitialCondition.FAITH: 0},
+        Civ.NORWAY: {InitialCondition.GOLD: 250, InitialCondition.FAITH: 0},
+        Civ.KIEV: {InitialCondition.GOLD: 250, InitialCondition.FAITH: 0},
+        Civ.HUNGARY: {InitialCondition.GOLD: 300, InitialCondition.FAITH: 0},
+        Civ.CASTILE: {InitialCondition.GOLD: 500, InitialCondition.FAITH: 0},
+        Civ.DENMARK: {InitialCondition.GOLD: 300, InitialCondition.FAITH: 0},
+        Civ.SCOTLAND: {InitialCondition.GOLD: 300, InitialCondition.FAITH: 0},
+        Civ.POLAND: {InitialCondition.GOLD: 300, InitialCondition.FAITH: 0},
+        Civ.GENOA: {InitialCondition.GOLD: 400, InitialCondition.FAITH: 0},
+        Civ.MOROCCO: {InitialCondition.GOLD: 400, InitialCondition.FAITH: 0},
+        Civ.ENGLAND: {InitialCondition.GOLD: 400, InitialCondition.FAITH: 0},
+        Civ.PORTUGAL: {InitialCondition.GOLD: 450, InitialCondition.FAITH: 0},
+        Civ.ARAGON: {InitialCondition.GOLD: 450, InitialCondition.FAITH: 0},
+        Civ.SWEDEN: {InitialCondition.GOLD: 400, InitialCondition.FAITH: 0},
+        Civ.PRUSSIA: {InitialCondition.GOLD: 300, InitialCondition.FAITH: 0},
+        Civ.LITHUANIA: {InitialCondition.GOLD: 400, InitialCondition.FAITH: 0},
+        Civ.AUSTRIA: {InitialCondition.GOLD: 1000, InitialCondition.FAITH: 0},
+        Civ.OTTOMAN: {InitialCondition.GOLD: 1000, InitialCondition.FAITH: 0},
+        Civ.MOSCOW: {InitialCondition.GOLD: 500, InitialCondition.FAITH: 0},
+        Civ.DUTCH: {InitialCondition.GOLD: 1500, InitialCondition.FAITH: 0},
+        Civ.POPE: {InitialCondition.GOLD: 50, InitialCondition.FAITH: 0},
     }
 )
 
 CIV_SCENARIO_CONDITION_1200AD = CivDataMapper(
     {
-        Civ.BYZANTIUM: {
-            InitialCondition.GOLD: 750,
-            InitialCondition.FAITH: 40,
-        },
-        Civ.FRANCE: {
-            InitialCondition.GOLD: 250,
-            InitialCondition.FAITH: 30,
-        },
-        Civ.ARABIA: {
-            InitialCondition.GOLD: 300,
-            InitialCondition.FAITH: 50,
-        },
-        Civ.BULGARIA: {
-            InitialCondition.GOLD: 150,
-            InitialCondition.FAITH: 50,
-        },
-        Civ.CORDOBA: {
-            InitialCondition.GOLD: 0,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.VENECIA: {
-            InitialCondition.GOLD: 500,
-            InitialCondition.FAITH: 25,
-        },
-        Civ.BURGUNDY: {
-            InitialCondition.GOLD: 0,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.GERMANY: {
-            InitialCondition.GOLD: 300,
-            InitialCondition.FAITH: 30,
-        },
-        Civ.NOVGOROD: {
-            InitialCondition.GOLD: 400,
-            InitialCondition.FAITH: 25,
-        },
-        Civ.NORWAY: {
-            InitialCondition.GOLD: 250,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.KIEV: {
-            InitialCondition.GOLD: 250,
-            InitialCondition.FAITH: 20,
-        },
-        Civ.HUNGARY: {
-            InitialCondition.GOLD: 300,
-            InitialCondition.FAITH: 25,
-        },
-        Civ.CASTILE: {
-            InitialCondition.GOLD: 500,
-            InitialCondition.FAITH: 35,
-        },
-        Civ.DENMARK: {
-            InitialCondition.GOLD: 300,
-            InitialCondition.FAITH: 20,
-        },
-        Civ.SCOTLAND: {
-            InitialCondition.GOLD: 300,
-            InitialCondition.FAITH: 20,
-        },
-        Civ.POLAND: {
-            InitialCondition.GOLD: 300,
-            InitialCondition.FAITH: 30,
-        },
-        Civ.GENOA: {
-            InitialCondition.GOLD: 500,
-            InitialCondition.FAITH: 25,
-        },
-        Civ.MOROCCO: {
-            InitialCondition.GOLD: 400,
-            InitialCondition.FAITH: 35,
-        },
-        Civ.ENGLAND: {
-            InitialCondition.GOLD: 400,
-            InitialCondition.FAITH: 20,
-        },
-        Civ.PORTUGAL: {
-            InitialCondition.GOLD: 450,
-            InitialCondition.FAITH: 20,
-        },
-        Civ.ARAGON: {
-            InitialCondition.GOLD: 450,
-            InitialCondition.FAITH: 10,
-        },
-        Civ.SWEDEN: {
-            InitialCondition.GOLD: 400,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.PRUSSIA: {
-            InitialCondition.GOLD: 300,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.LITHUANIA: {
-            InitialCondition.GOLD: 400,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.AUSTRIA: {
-            InitialCondition.GOLD: 1000,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.OTTOMAN: {
-            InitialCondition.GOLD: 1000,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.MOSCOW: {
-            InitialCondition.GOLD: 500,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.DUTCH: {
-            InitialCondition.GOLD: 1500,
-            InitialCondition.FAITH: 0,
-        },
-        Civ.POPE: {
-            InitialCondition.GOLD: 200,
-            InitialCondition.FAITH: 0,
-        },
+        Civ.BYZANTIUM: {InitialCondition.GOLD: 750, InitialCondition.FAITH: 40},
+        Civ.FRANCE: {InitialCondition.GOLD: 250, InitialCondition.FAITH: 30},
+        Civ.ARABIA: {InitialCondition.GOLD: 300, InitialCondition.FAITH: 50},
+        Civ.BULGARIA: {InitialCondition.GOLD: 150, InitialCondition.FAITH: 50},
+        Civ.CORDOBA: {InitialCondition.GOLD: 0, InitialCondition.FAITH: 0},
+        Civ.VENECIA: {InitialCondition.GOLD: 500, InitialCondition.FAITH: 25},
+        Civ.BURGUNDY: {InitialCondition.GOLD: 0, InitialCondition.FAITH: 0},
+        Civ.GERMANY: {InitialCondition.GOLD: 300, InitialCondition.FAITH: 30},
+        Civ.NOVGOROD: {InitialCondition.GOLD: 400, InitialCondition.FAITH: 25},
+        Civ.NORWAY: {InitialCondition.GOLD: 250, InitialCondition.FAITH: 0},
+        Civ.KIEV: {InitialCondition.GOLD: 250, InitialCondition.FAITH: 20},
+        Civ.HUNGARY: {InitialCondition.GOLD: 300, InitialCondition.FAITH: 25},
+        Civ.CASTILE: {InitialCondition.GOLD: 500, InitialCondition.FAITH: 35},
+        Civ.DENMARK: {InitialCondition.GOLD: 300, InitialCondition.FAITH: 20},
+        Civ.SCOTLAND: {InitialCondition.GOLD: 300, InitialCondition.FAITH: 20},
+        Civ.POLAND: {InitialCondition.GOLD: 300, InitialCondition.FAITH: 30},
+        Civ.GENOA: {InitialCondition.GOLD: 500, InitialCondition.FAITH: 25},
+        Civ.MOROCCO: {InitialCondition.GOLD: 400, InitialCondition.FAITH: 35},
+        Civ.ENGLAND: {InitialCondition.GOLD: 400, InitialCondition.FAITH: 20},
+        Civ.PORTUGAL: {InitialCondition.GOLD: 450, InitialCondition.FAITH: 20},
+        Civ.ARAGON: {InitialCondition.GOLD: 450, InitialCondition.FAITH: 10},
+        Civ.SWEDEN: {InitialCondition.GOLD: 400, InitialCondition.FAITH: 0},
+        Civ.PRUSSIA: {InitialCondition.GOLD: 300, InitialCondition.FAITH: 0},
+        Civ.LITHUANIA: {InitialCondition.GOLD: 400, InitialCondition.FAITH: 0},
+        Civ.AUSTRIA: {InitialCondition.GOLD: 1000, InitialCondition.FAITH: 0},
+        Civ.OTTOMAN: {InitialCondition.GOLD: 1000, InitialCondition.FAITH: 0},
+        Civ.MOSCOW: {InitialCondition.GOLD: 500, InitialCondition.FAITH: 0},
+        Civ.DUTCH: {InitialCondition.GOLD: 1500, InitialCondition.FAITH: 0},
+        Civ.POPE: {InitialCondition.GOLD: 200, InitialCondition.FAITH: 0},
     }
 )
 
@@ -1436,58 +1029,17 @@ CIV_INITIAL_BUILDINGS = CivDataMapper(
         Civ.DENMARK: [Building.BARRACKS],
         Civ.SCOTLAND: [Building.BARRACKS],
         Civ.POLAND: None,
-        Civ.GENOA: [
-            Building.GRANARY,
-            Building.BARRACKS,
-            Building.HARBOR,
-        ],
-        Civ.MOROCCO: [
-            Building.GRANARY,
-            Building.BARRACKS,
-        ],
-        Civ.ENGLAND: [
-            Building.GRANARY,
-            Building.BARRACKS,
-        ],
-        Civ.PORTUGAL: [
-            Building.GRANARY,
-            Building.BARRACKS,
-        ],
-        Civ.ARAGON: [
-            Building.GRANARY,
-            Building.BARRACKS,
-            Building.HARBOR,
-        ],
-        Civ.SWEDEN: [
-            Building.GRANARY,
-            Building.BARRACKS,
-            Building.FORGE,
-        ],
-        Civ.PRUSSIA: [
-            Building.GRANARY,
-            Building.BARRACKS,
-        ],
-        Civ.LITHUANIA: [
-            Building.GRANARY,
-            Building.BARRACKS,
-        ],
-        Civ.AUSTRIA: [
-            Building.GRANARY,
-            Building.BARRACKS,
-            Building.FORGE,
-        ],
-        Civ.OTTOMAN: [
-            Building.GRANARY,
-            Building.BARRACKS,
-            Building.FORGE,
-            Building.HARBOR,
-        ],
-        Civ.MOSCOW: [
-            Building.GRANARY,
-            Building.BARRACKS,
-            Building.FORGE,
-            Building.MARKET,
-        ],
+        Civ.GENOA: [Building.GRANARY, Building.BARRACKS, Building.HARBOR],
+        Civ.MOROCCO: [Building.GRANARY, Building.BARRACKS],
+        Civ.ENGLAND: [Building.GRANARY, Building.BARRACKS],
+        Civ.PORTUGAL: [Building.GRANARY, Building.BARRACKS],
+        Civ.ARAGON: [Building.GRANARY, Building.BARRACKS, Building.HARBOR],
+        Civ.SWEDEN: [Building.GRANARY, Building.BARRACKS, Building.FORGE],
+        Civ.PRUSSIA: [Building.GRANARY, Building.BARRACKS],
+        Civ.LITHUANIA: [Building.GRANARY, Building.BARRACKS],
+        Civ.AUSTRIA: [Building.GRANARY, Building.BARRACKS, Building.FORGE],
+        Civ.OTTOMAN: [Building.GRANARY, Building.BARRACKS, Building.FORGE, Building.HARBOR],
+        Civ.MOSCOW: [Building.GRANARY, Building.BARRACKS, Building.FORGE, Building.MARKET],
         Civ.DUTCH: [
             Building.GRANARY,
             Building.BARRACKS,
@@ -1806,9 +1358,7 @@ CIV_AI_MODIFIERS = CivDataMapper(
             {
                 Modifier.CITY_CLUSTER: (2, 3, 4),  # 11
                 Modifier.CITY_WAR_DISTANCE: 1,
-                Modifier.TECH_PREFERENCE: [
-                    (Technology.BRONZE_CASTING, 200),
-                ],
+                Modifier.TECH_PREFERENCE: [(Technology.BRONZE_CASTING, 200)],
                 Modifier.BUILDING_PREFERENCE: [
                     (Wonder.ROUND_CHURCH, 20),
                     (Wonder.BOYANA_CHURCH, 20),
@@ -1893,9 +1443,7 @@ CIV_AI_MODIFIERS = CivDataMapper(
             {
                 Modifier.CITY_CLUSTER: (2, 3, 4),  # 11
                 Modifier.CITY_WAR_DISTANCE: 2,
-                Modifier.TECH_PREFERENCE: [
-                    (Technology.PRINTING_PRESS, 200),
-                ],
+                Modifier.TECH_PREFERENCE: [(Technology.PRINTING_PRESS, 200)],
                 Modifier.BUILDING_PREFERENCE: [
                     (Wonder.BRANDENBURG_GATE, 10),
                     (Wonder.IMPERIAL_DIET, 20),
@@ -1989,9 +1537,7 @@ CIV_AI_MODIFIERS = CivDataMapper(
             {
                 Modifier.CITY_CLUSTER: (1, 2, 1),  # 10
                 Modifier.CITY_WAR_DISTANCE: 3,
-                Modifier.TECH_PREFERENCE: [
-                    (Technology.ASTRONOMY, 200),
-                ],
+                Modifier.TECH_PREFERENCE: [(Technology.ASTRONOMY, 200)],
                 Modifier.BUILDING_PREFERENCE: [
                     (Wonder.ESCORIAL, 20),
                     (Wonder.MAGELLANS_VOYAGE, 10),
@@ -2111,9 +1657,7 @@ CIV_AI_MODIFIERS = CivDataMapper(
             {
                 Modifier.CITY_CLUSTER: (1, 2, 1),  # 10
                 Modifier.CITY_WAR_DISTANCE: 3,
-                Modifier.TECH_PREFERENCE: [
-                    (Technology.PRINTING_PRESS, 150),
-                ],
+                Modifier.TECH_PREFERENCE: [(Technology.PRINTING_PRESS, 150)],
                 Modifier.BUILDING_PREFERENCE: [
                     (Wonder.MAGNA_CARTA, 20),
                     (Wonder.WESTMINSTER, 20),
@@ -2132,9 +1676,7 @@ CIV_AI_MODIFIERS = CivDataMapper(
             {
                 Modifier.CITY_CLUSTER: (2, 3, 1),  # 14
                 Modifier.CITY_WAR_DISTANCE: 3,
-                Modifier.TECH_PREFERENCE: [
-                    (Technology.ASTRONOMY, 200),
-                ],
+                Modifier.TECH_PREFERENCE: [(Technology.ASTRONOMY, 200)],
                 Modifier.BUILDING_PREFERENCE: [
                     (Wonder.BELEM_TOWER, 20),
                     (Wonder.PALACIO_DA_PENA, 20),
@@ -2290,7 +1832,7 @@ CIV_AI_MODIFIERS = CivDataMapper(
                 Modifier.CITY_CLUSTER: None,
                 Modifier.CITY_WAR_DISTANCE: None,
                 Modifier.TECH_PREFERENCE: [
-                    (Technology.PRINTING_PRESS, 10),  # Pope shouldn't want this
+                    (Technology.PRINTING_PRESS, 10)  # Pope shouldn't want this
                 ],
                 Modifier.BUILDING_PREFERENCE: [
                     (Wonder.SISTINE_CHAPEL, 20),
@@ -2402,126 +1944,32 @@ CIV_STABILITY_AI_BONUS = CivDataMapper(
 
 CIV_INITIAL_CONTACTS_500AD = CivDataMapper(
     {
-        Civ.BYZANTIUM: [
-            Civ.POPE,
-        ],
-        Civ.ARABIA: [
-            Civ.BYZANTIUM,
-        ],
-        Civ.BULGARIA: [
-            Civ.BYZANTIUM,
-        ],
-        Civ.CORDOBA: [
-            Civ.ARABIA,
-        ],
-        Civ.VENECIA: [
-            Civ.BYZANTIUM,
-            Civ.POPE,
-        ],
-        Civ.BURGUNDY: [
-            Civ.FRANCE,
-        ],
-        Civ.GERMANY: [
-            Civ.BURGUNDY,
-            Civ.FRANCE,
-        ],
-        Civ.NOVGOROD: [
-            Civ.BYZANTIUM,
-            Civ.BULGARIA,
-        ],
-        Civ.KIEV: [
-            Civ.BYZANTIUM,
-            Civ.BULGARIA,
-            Civ.NOVGOROD,
-        ],
-        Civ.HUNGARY: [
-            Civ.BYZANTIUM,
-            Civ.BULGARIA,
-            Civ.KIEV,
-        ],
-        Civ.CASTILE: [
-            Civ.FRANCE,
-            Civ.BURGUNDY,
-            Civ.CORDOBA,
-        ],
-        Civ.DENMARK: [
-            Civ.NORWAY,
-            Civ.GERMANY,
-        ],
-        Civ.SCOTLAND: [
-            Civ.FRANCE,
-            Civ.NORWAY,
-        ],
-        Civ.POLAND: [
-            Civ.GERMANY,
-            Civ.HUNGARY,
-        ],
-        Civ.GENOA: [
-            Civ.BURGUNDY,
-            Civ.BYZANTIUM,
-            Civ.VENECIA,
-            Civ.POPE,
-        ],
-        Civ.MOROCCO: [
-            Civ.ARABIA,
-            Civ.CASTILE,
-            Civ.CORDOBA,
-        ],
-        Civ.ENGLAND: [
-            Civ.FRANCE,
-            Civ.DENMARK,
-            Civ.SCOTLAND,
-            Civ.NORWAY,
-        ],
-        Civ.PORTUGAL: [
-            Civ.CASTILE,
-            Civ.CORDOBA,
-        ],
-        Civ.ARAGON: [
-            Civ.BURGUNDY,
-            Civ.CASTILE,
-            Civ.CORDOBA,
-            Civ.FRANCE,
-        ],
-        Civ.SWEDEN: [
-            Civ.DENMARK,
-            Civ.NORWAY,
-            Civ.NOVGOROD,
-        ],
-        Civ.PRUSSIA: [
-            Civ.GERMANY,
-            Civ.POLAND,
-            Civ.NOVGOROD,
-        ],
-        Civ.LITHUANIA: [
-            Civ.POLAND,
-            Civ.KIEV,
-            Civ.NOVGOROD,
-            Civ.PRUSSIA,
-        ],
-        Civ.AUSTRIA: [
-            Civ.GERMANY,
-            Civ.VENECIA,
-            Civ.POLAND,
-            Civ.HUNGARY,
-        ],
-        Civ.OTTOMAN: [
-            Civ.BYZANTIUM,
-            Civ.ARABIA,
-        ],
-        Civ.MOSCOW: [
-            Civ.KIEV,
-            Civ.NOVGOROD,
-            Civ.LITHUANIA,
-        ],
-        Civ.DUTCH: [
-            Civ.ENGLAND,
-            Civ.CASTILE,
-            Civ.FRANCE,
-            Civ.GERMANY,
-            Civ.DENMARK,
-            Civ.NORWAY,
-        ],
+        Civ.BYZANTIUM: [Civ.POPE],
+        Civ.ARABIA: [Civ.BYZANTIUM],
+        Civ.BULGARIA: [Civ.BYZANTIUM],
+        Civ.CORDOBA: [Civ.ARABIA],
+        Civ.VENECIA: [Civ.BYZANTIUM, Civ.POPE],
+        Civ.BURGUNDY: [Civ.FRANCE],
+        Civ.GERMANY: [Civ.BURGUNDY, Civ.FRANCE],
+        Civ.NOVGOROD: [Civ.BYZANTIUM, Civ.BULGARIA],
+        Civ.KIEV: [Civ.BYZANTIUM, Civ.BULGARIA, Civ.NOVGOROD],
+        Civ.HUNGARY: [Civ.BYZANTIUM, Civ.BULGARIA, Civ.KIEV],
+        Civ.CASTILE: [Civ.FRANCE, Civ.BURGUNDY, Civ.CORDOBA],
+        Civ.DENMARK: [Civ.NORWAY, Civ.GERMANY],
+        Civ.SCOTLAND: [Civ.FRANCE, Civ.NORWAY],
+        Civ.POLAND: [Civ.GERMANY, Civ.HUNGARY],
+        Civ.GENOA: [Civ.BURGUNDY, Civ.BYZANTIUM, Civ.VENECIA, Civ.POPE],
+        Civ.MOROCCO: [Civ.ARABIA, Civ.CASTILE, Civ.CORDOBA],
+        Civ.ENGLAND: [Civ.FRANCE, Civ.DENMARK, Civ.SCOTLAND, Civ.NORWAY],
+        Civ.PORTUGAL: [Civ.CASTILE, Civ.CORDOBA],
+        Civ.ARAGON: [Civ.BURGUNDY, Civ.CASTILE, Civ.CORDOBA, Civ.FRANCE],
+        Civ.SWEDEN: [Civ.DENMARK, Civ.NORWAY, Civ.NOVGOROD],
+        Civ.PRUSSIA: [Civ.GERMANY, Civ.POLAND, Civ.NOVGOROD],
+        Civ.LITHUANIA: [Civ.POLAND, Civ.KIEV, Civ.NOVGOROD, Civ.PRUSSIA],
+        Civ.AUSTRIA: [Civ.GERMANY, Civ.VENECIA, Civ.POLAND, Civ.HUNGARY],
+        Civ.OTTOMAN: [Civ.BYZANTIUM, Civ.ARABIA],
+        Civ.MOSCOW: [Civ.KIEV, Civ.NOVGOROD, Civ.LITHUANIA],
+        Civ.DUTCH: [Civ.ENGLAND, Civ.CASTILE, Civ.FRANCE, Civ.GERMANY, Civ.DENMARK, Civ.NORWAY],
     }
 )
 
@@ -2537,31 +1985,10 @@ CIV_INITIAL_CONTACTS_1200AD = CivDataMapper(
             Civ.KIEV,
             Civ.NOVGOROD,
         ],
-        Civ.FRANCE: [
-            Civ.SCOTLAND,
-            Civ.ENGLAND,
-            Civ.NORWAY,
-            Civ.ARAGON,
-            Civ.CASTILE,
-            Civ.GERMANY,
-        ],
-        Civ.ARABIA: [
-            Civ.BYZANTIUM,
-            Civ.MOROCCO,
-        ],
-        Civ.BULGARIA: [
-            Civ.BYZANTIUM,
-            Civ.KIEV,
-            Civ.NOVGOROD,
-            Civ.VENECIA,
-            Civ.HUNGARY,
-        ],
-        Civ.VENECIA: [
-            Civ.BYZANTIUM,
-            Civ.GENOA,
-            Civ.HUNGARY,
-            Civ.POPE,
-        ],
+        Civ.FRANCE: [Civ.SCOTLAND, Civ.ENGLAND, Civ.NORWAY, Civ.ARAGON, Civ.CASTILE, Civ.GERMANY],
+        Civ.ARABIA: [Civ.BYZANTIUM, Civ.MOROCCO],
+        Civ.BULGARIA: [Civ.BYZANTIUM, Civ.KIEV, Civ.NOVGOROD, Civ.VENECIA, Civ.HUNGARY],
+        Civ.VENECIA: [Civ.BYZANTIUM, Civ.GENOA, Civ.HUNGARY, Civ.POPE],
         Civ.GERMANY: [
             Civ.NORWAY,
             Civ.FRANCE,
@@ -2573,24 +2000,9 @@ CIV_INITIAL_CONTACTS_1200AD = CivDataMapper(
             Civ.GENOA,
             Civ.POPE,
         ],
-        Civ.NOVGOROD: [
-            Civ.BYZANTIUM,
-            Civ.BULGARIA,
-            Civ.KIEV,
-            Civ.POLAND,
-        ],
-        Civ.NORWAY: [
-            Civ.DENMARK,
-            Civ.ENGLAND,
-            Civ.SCOTLAND,
-            Civ.FRANCE,
-        ],
-        Civ.KIEV: [
-            Civ.BYZANTIUM,
-            Civ.HUNGARY,
-            Civ.BULGARIA,
-            Civ.NOVGOROD,
-        ],
+        Civ.NOVGOROD: [Civ.BYZANTIUM, Civ.BULGARIA, Civ.KIEV, Civ.POLAND],
+        Civ.NORWAY: [Civ.DENMARK, Civ.ENGLAND, Civ.SCOTLAND, Civ.FRANCE],
+        Civ.KIEV: [Civ.BYZANTIUM, Civ.HUNGARY, Civ.BULGARIA, Civ.NOVGOROD],
         Civ.HUNGARY: [
             Civ.BYZANTIUM,
             Civ.BULGARIA,
@@ -2600,100 +2012,21 @@ CIV_INITIAL_CONTACTS_1200AD = CivDataMapper(
             Civ.POLAND,
             Civ.POPE,
         ],
-        Civ.CASTILE: [
-            Civ.MOROCCO,
-            Civ.ARAGON,
-            Civ.PORTUGAL,
-            Civ.FRANCE,
-            Civ.CORDOBA,
-        ],
-        Civ.DENMARK: [
-            Civ.NORWAY,
-            Civ.GERMANY,
-            Civ.FRANCE,
-            Civ.ENGLAND,
-            Civ.POLAND,
-        ],
-        Civ.SCOTLAND: [
-            Civ.NORWAY,
-            Civ.GERMANY,
-            Civ.FRANCE,
-            Civ.ENGLAND,
-        ],
-        Civ.POLAND: [
-            Civ.GERMANY,
-            Civ.HUNGARY,
-            Civ.DENMARK,
-            Civ.KIEV,
-            Civ.NOVGOROD,
-        ],
-        Civ.GENOA: [
-            Civ.BYZANTIUM,
-            Civ.FRANCE,
-            Civ.VENECIA,
-            Civ.GERMANY,
-            Civ.POPE,
-        ],
-        Civ.MOROCCO: [
-            Civ.ARABIA,
-            Civ.CASTILE,
-            Civ.ARAGON,
-            Civ.PORTUGAL,
-        ],
-        Civ.ENGLAND: [
-            Civ.FRANCE,
-            Civ.DENMARK,
-            Civ.SCOTLAND,
-            Civ.NORWAY,
-            Civ.POPE,
-        ],
-        Civ.PORTUGAL: [
-            Civ.CASTILE,
-            Civ.MOROCCO,
-            Civ.ARAGON,
-            Civ.POPE,
-        ],
-        Civ.ARAGON: [
-            Civ.CASTILE,
-            Civ.PORTUGAL,
-            Civ.MOROCCO,
-            Civ.GENOA,
-            Civ.POPE,
-        ],
-        Civ.SWEDEN: [
-            Civ.POLAND,
-            Civ.GERMANY,
-            Civ.DENMARK,
-            Civ.NORWAY,
-            Civ.NOVGOROD,
-        ],
-        Civ.PRUSSIA: [
-            Civ.GERMANY,
-            Civ.POLAND,
-            Civ.NOVGOROD,
-        ],
-        Civ.LITHUANIA: [
-            Civ.POLAND,
-            Civ.KIEV,
-            Civ.PRUSSIA,
-        ],
-        Civ.AUSTRIA: [
-            Civ.GERMANY,
-            Civ.VENECIA,
-            Civ.POLAND,
-            Civ.HUNGARY,
-        ],
-        Civ.OTTOMAN: [
-            Civ.BYZANTIUM,
-            Civ.HUNGARY,
-            Civ.ARABIA,
-        ],
-        Civ.MOSCOW: [
-            Civ.KIEV,
-            Civ.NOVGOROD,
-            Civ.SWEDEN,
-            Civ.LITHUANIA,
-        ],
+        Civ.CASTILE: [Civ.MOROCCO, Civ.ARAGON, Civ.PORTUGAL, Civ.FRANCE, Civ.CORDOBA],
+        Civ.DENMARK: [Civ.NORWAY, Civ.GERMANY, Civ.FRANCE, Civ.ENGLAND, Civ.POLAND],
+        Civ.SCOTLAND: [Civ.NORWAY, Civ.GERMANY, Civ.FRANCE, Civ.ENGLAND],
+        Civ.POLAND: [Civ.GERMANY, Civ.HUNGARY, Civ.DENMARK, Civ.KIEV, Civ.NOVGOROD],
+        Civ.GENOA: [Civ.BYZANTIUM, Civ.FRANCE, Civ.VENECIA, Civ.GERMANY, Civ.POPE],
+        Civ.MOROCCO: [Civ.ARABIA, Civ.CASTILE, Civ.ARAGON, Civ.PORTUGAL],
+        Civ.ENGLAND: [Civ.FRANCE, Civ.DENMARK, Civ.SCOTLAND, Civ.NORWAY, Civ.POPE],
+        Civ.PORTUGAL: [Civ.CASTILE, Civ.MOROCCO, Civ.ARAGON, Civ.POPE],
+        Civ.ARAGON: [Civ.CASTILE, Civ.PORTUGAL, Civ.MOROCCO, Civ.GENOA, Civ.POPE],
+        Civ.SWEDEN: [Civ.POLAND, Civ.GERMANY, Civ.DENMARK, Civ.NORWAY, Civ.NOVGOROD],
+        Civ.PRUSSIA: [Civ.GERMANY, Civ.POLAND, Civ.NOVGOROD],
+        Civ.LITHUANIA: [Civ.POLAND, Civ.KIEV, Civ.PRUSSIA],
+        Civ.AUSTRIA: [Civ.GERMANY, Civ.VENECIA, Civ.POLAND, Civ.HUNGARY],
+        Civ.OTTOMAN: [Civ.BYZANTIUM, Civ.HUNGARY, Civ.ARABIA],
+        Civ.MOSCOW: [Civ.KIEV, Civ.NOVGOROD, Civ.SWEDEN, Civ.LITHUANIA],
         Civ.DUTCH: [
             Civ.ENGLAND,
             Civ.CASTILE,
@@ -2707,78 +2040,25 @@ CIV_INITIAL_CONTACTS_1200AD = CivDataMapper(
 )
 
 CIV_INITIAL_CONTACTS = ScenarioDataMapper(
-    {
-        Scenario.i500AD: CIV_INITIAL_CONTACTS_500AD,
-        Scenario.i1200AD: CIV_INITIAL_CONTACTS_1200AD,
-    }
+    {Scenario.i500AD: CIV_INITIAL_CONTACTS_500AD, Scenario.i1200AD: CIV_INITIAL_CONTACTS_1200AD}
 )
 
 CIV_INITIAL_WARS_500AD = CivDataMapper(
     {
         Civ.BYZANTIUM: CivDataMapper(
-            {
-                Civ.ARABIA: 90,
-                Civ.BULGARIA: 90,
-                Civ.OTTOMAN: 90,
-            },
-            do_not_cast=True,
+            {Civ.ARABIA: 90, Civ.BULGARIA: 90, Civ.OTTOMAN: 90}, do_not_cast=True
         ),
-        Civ.FRANCE: CivDataMapper(
-            {
-                Civ.ENGLAND: 60,
-            },
-            do_not_cast=True,
-        ),
-        Civ.ARABIA: CivDataMapper(
-            {
-                Civ.OTTOMAN: 60,
-            },
-            do_not_cast=True,
-        ),
-        Civ.BULGARIA: CivDataMapper(
-            {
-                Civ.OTTOMAN: 70,
-            },
-            do_not_cast=True,
-        ),
+        Civ.FRANCE: CivDataMapper({Civ.ENGLAND: 60}, do_not_cast=True),
+        Civ.ARABIA: CivDataMapper({Civ.OTTOMAN: 60}, do_not_cast=True),
+        Civ.BULGARIA: CivDataMapper({Civ.OTTOMAN: 70}, do_not_cast=True),
         Civ.CORDOBA: CivDataMapper(
-            {
-                Civ.CASTILE: 90,
-                Civ.PORTUGAL: 90,
-                Civ.ARAGON: 80,
-            },
-            do_not_cast=True,
+            {Civ.CASTILE: 90, Civ.PORTUGAL: 90, Civ.ARAGON: 80}, do_not_cast=True
         ),
-        Civ.NOVGOROD: CivDataMapper(
-            {
-                Civ.PRUSSIA: 80,
-            },
-            do_not_cast=True,
-        ),
-        Civ.DENMARK: CivDataMapper(
-            {
-                Civ.SWEDEN: 60,
-            },
-            do_not_cast=True,
-        ),
-        Civ.SCOTLAND: CivDataMapper(
-            {
-                Civ.ENGLAND: 60,
-            },
-            do_not_cast=True,
-        ),
-        Civ.POLAND: CivDataMapper(
-            {
-                Civ.PRUSSIA: 20,
-            },
-            do_not_cast=True,
-        ),
-        Civ.PRUSSIA: CivDataMapper(
-            {
-                Civ.LITHUANIA: 80,
-            },
-            do_not_cast=True,
-        ),
+        Civ.NOVGOROD: CivDataMapper({Civ.PRUSSIA: 80}, do_not_cast=True),
+        Civ.DENMARK: CivDataMapper({Civ.SWEDEN: 60}, do_not_cast=True),
+        Civ.SCOTLAND: CivDataMapper({Civ.ENGLAND: 60}, do_not_cast=True),
+        Civ.POLAND: CivDataMapper({Civ.PRUSSIA: 20}, do_not_cast=True),
+        Civ.PRUSSIA: CivDataMapper({Civ.LITHUANIA: 80}, do_not_cast=True),
         Civ.OTTOMAN: CivDataMapper(
             {
                 Civ.INDEPENDENT: 50,
@@ -2794,21 +2074,9 @@ CIV_INITIAL_WARS_500AD = CivDataMapper(
 CIV_INITIAL_WARS_1200AD = CivDataMapper(
     {
         Civ.BYZANTIUM: CivDataMapper(
-            {
-                Civ.ARABIA: 20,
-                Civ.BULGARIA: 70,
-                Civ.VENECIA: 90,
-                Civ.OTTOMAN: 90,
-            },
-            do_not_cast=True,
+            {Civ.ARABIA: 20, Civ.BULGARIA: 70, Civ.VENECIA: 90, Civ.OTTOMAN: 90}, do_not_cast=True
         ),
-        Civ.FRANCE: CivDataMapper(
-            {
-                Civ.ARABIA: 30,
-                Civ.ENGLAND: 90,
-            },
-            do_not_cast=True,
-        ),
+        Civ.FRANCE: CivDataMapper({Civ.ARABIA: 30, Civ.ENGLAND: 90}, do_not_cast=True),
         Civ.ARABIA: CivDataMapper(
             {
                 Civ.GERMANY: 20,
@@ -2822,56 +2090,16 @@ CIV_INITIAL_WARS_1200AD = CivDataMapper(
             },
             do_not_cast=True,
         ),
-        Civ.BULGARIA: CivDataMapper(
-            {
-                Civ.OTTOMAN: 70,
-            },
-            do_not_cast=True,
-        ),
-        Civ.CORDOBA: CivDataMapper(
-            {
-                Civ.PORTUGAL: 90,
-            },
-            do_not_cast=True,
-        ),
-        Civ.NOVGOROD: CivDataMapper(
-            {
-                Civ.PRUSSIA: 80,
-            },
-            do_not_cast=True,
-        ),
-        Civ.DENMARK: CivDataMapper(
-            {
-                Civ.SWEDEN: 60,
-            },
-            do_not_cast=True,
-        ),
-        Civ.SCOTLAND: CivDataMapper(
-            {
-                Civ.ENGLAND: 60,
-            },
-            do_not_cast=True,
-        ),
-        Civ.POLAND: CivDataMapper(
-            {
-                Civ.PRUSSIA: 20,
-            },
-            do_not_cast=True,
-        ),
+        Civ.BULGARIA: CivDataMapper({Civ.OTTOMAN: 70}, do_not_cast=True),
+        Civ.CORDOBA: CivDataMapper({Civ.PORTUGAL: 90}, do_not_cast=True),
+        Civ.NOVGOROD: CivDataMapper({Civ.PRUSSIA: 80}, do_not_cast=True),
+        Civ.DENMARK: CivDataMapper({Civ.SWEDEN: 60}, do_not_cast=True),
+        Civ.SCOTLAND: CivDataMapper({Civ.ENGLAND: 60}, do_not_cast=True),
+        Civ.POLAND: CivDataMapper({Civ.PRUSSIA: 20}, do_not_cast=True),
         Civ.MOROCCO: CivDataMapper(
-            {
-                Civ.CASTILE: 90,
-                Civ.PORTUGAL: 80,
-                Civ.ARAGON: 80,
-            },
-            do_not_cast=True,
+            {Civ.CASTILE: 90, Civ.PORTUGAL: 80, Civ.ARAGON: 80}, do_not_cast=True
         ),
-        Civ.PRUSSIA: CivDataMapper(
-            {
-                Civ.LITHUANIA: 80,
-            },
-            do_not_cast=True,
-        ),
+        Civ.PRUSSIA: CivDataMapper({Civ.LITHUANIA: 80}, do_not_cast=True),
         Civ.OTTOMAN: CivDataMapper(
             {
                 Civ.INDEPENDENT: 50,
@@ -2885,10 +2113,7 @@ CIV_INITIAL_WARS_1200AD = CivDataMapper(
 ).fill_missing_members(CivDataMapper({}))
 
 CIV_INITIAL_WARS = ScenarioDataMapper(
-    {
-        Scenario.i500AD: CIV_INITIAL_WARS_500AD,
-        Scenario.i1200AD: CIV_INITIAL_WARS_1200AD,
-    }
+    {Scenario.i500AD: CIV_INITIAL_WARS_500AD, Scenario.i1200AD: CIV_INITIAL_WARS_1200AD}
 )
 
 # Used for mercenaries (Higher number = less likely to hire)
@@ -3432,214 +2657,156 @@ CIV_LEADERS = CivDataMapper(
         Civ.BYZANTIUM: {
             LeaderType.PRIMARY: Leader.JUSTINIAN,
             LeaderType.EARLY: Leader.JUSTINIAN,
-            LeaderType.LATE: [
-                (Leader.BASIL_II, DateTurn.i910AD, 10, 2),
-                (Leader.PALAIOLOGOS, DateTurn.i1230AD, 5, 2),
-            ],
+            LeaderType.LATE: [(Leader.BASIL_II, 910, 10, 2), (Leader.PALAIOLOGOS, 1230, 5, 2)],
         },
         Civ.FRANCE: {
             LeaderType.PRIMARY: Leader.CHARLEMAGNE,
             LeaderType.EARLY: Leader.CHARLEMAGNE,
             LeaderType.LATE: [
-                (Leader.PHILIP_AUGUSTUS, DateTurn.i1101AD, 10, 2),
-                (Leader.JOAN, DateTurn.i1376AD, 10, 2),
-                (Leader.LOUIS_XIV, DateTurn.i1523AD, 25, 3),
+                (Leader.PHILIP_AUGUSTUS, 1101, 10, 2),
+                (Leader.JOAN, 1376, 10, 2),
+                (Leader.LOUIS_XIV, 1523, 25, 3),
             ],
         },
         Civ.ARABIA: {
             LeaderType.PRIMARY: Leader.ABU_BAKR,
             LeaderType.EARLY: Leader.ABU_BAKR,
-            LeaderType.LATE: [
-                (Leader.HARUN_AL_RASHID, DateTurn.i752AD, 25, 1),
-                (Leader.SALADIN, DateTurn.i1160AD, 25, 2),
-            ],
+            LeaderType.LATE: [(Leader.HARUN_AL_RASHID, 752, 25, 1), (Leader.SALADIN, 1160, 25, 2)],
         },
         Civ.BULGARIA: {
             LeaderType.PRIMARY: Leader.SIMEON,
             LeaderType.EARLY: Leader.SIMEON,
-            LeaderType.LATE: [
-                (Leader.IVAN_ASEN, DateTurn.i1101AD, 10, 2),
-            ],
+            LeaderType.LATE: [(Leader.IVAN_ASEN, 1101, 10, 2)],
         },
         Civ.CORDOBA: {
             LeaderType.PRIMARY: Leader.ABD_AR_RAHMAN,
             LeaderType.EARLY: Leader.ABD_AR_RAHMAN,
-            LeaderType.LATE: [
-                (Leader.MOHAMMED_IBN_NASR, DateTurn.i1202AD, 10, 2),
-            ],
+            LeaderType.LATE: [(Leader.MOHAMMED_IBN_NASR, 1202, 10, 2)],
         },
         Civ.VENECIA: {
             LeaderType.PRIMARY: Leader.ENRICO_DANDOLO,
             LeaderType.EARLY: Leader.ENRICO_DANDOLO,
-            LeaderType.LATE: [
-                (Leader.ANDREA_GRITTI, DateTurn.i1259AD, 10, 2),
-            ],
+            LeaderType.LATE: [(Leader.ANDREA_GRITTI, 1259, 10, 2)],
         },
         Civ.BURGUNDY: {
             LeaderType.PRIMARY: Leader.OTTO_WILLIAM,
             LeaderType.EARLY: Leader.OTTO_WILLIAM,
             LeaderType.LATE: [
-                (Leader.BEATRICE, DateTurn.i1200AD, 10, 2),
-                (Leader.PHILIP_THE_BOLD, DateTurn.i1356AD, 15, 2),
+                (Leader.BEATRICE, 1200, 10, 2),
+                (Leader.PHILIP_THE_BOLD, 1356, 15, 2),
             ],
         },
         Civ.GERMANY: {
             LeaderType.PRIMARY: Leader.OTTO_I,
             LeaderType.EARLY: Leader.OTTO_I,
-            LeaderType.LATE: [
-                (Leader.BARBAROSSA, DateTurn.i1139AD, 20, 2),
-            ],
+            LeaderType.LATE: [(Leader.BARBAROSSA, 1139, 20, 2)],
         },
         Civ.NOVGOROD: {
             LeaderType.PRIMARY: Leader.RURIK,
             LeaderType.EARLY: Leader.RURIK,
-            LeaderType.LATE: [
-                (Leader.ALEXANDER_NEVSKY, DateTurn.i1150AD, 10, 2),
-                (Leader.MARFA, DateTurn.i1380AD, 10, 3),
-            ],
+            LeaderType.LATE: [(Leader.ALEXANDER_NEVSKY, 1150, 10, 2), (Leader.MARFA, 1380, 10, 3)],
         },
         Civ.NORWAY: {
             LeaderType.PRIMARY: Leader.HARALD_HARDRADA,
             LeaderType.EARLY: Leader.HARALD_HARDRADA,
-            LeaderType.LATE: [
-                (Leader.HAAKON_IV, DateTurn.i1160AD, 25, 2),
-            ],
+            LeaderType.LATE: [(Leader.HAAKON_IV, 1160, 25, 2)],
         },
         Civ.KIEV: {
             LeaderType.PRIMARY: Leader.YAROSLAV,
             LeaderType.EARLY: Leader.YAROSLAV,
             LeaderType.LATE: [
-                (Leader.MSTISLAV, DateTurn.i1101AD, 5, 2),
-                (Leader.BOHDAN_KHMELNYTSKY, DateTurn.i1520AD, 10, 3),
+                (Leader.MSTISLAV, 1101, 5, 2),
+                (Leader.BOHDAN_KHMELNYTSKY, 1520, 10, 3),
             ],
         },
         Civ.HUNGARY: {
             LeaderType.PRIMARY: Leader.STEPHEN,
             LeaderType.EARLY: Leader.STEPHEN,
-            LeaderType.LATE: [
-                (Leader.BELA_III, DateTurn.i1167AD, 15, 2),
-                (Leader.MATTHIAS, DateTurn.i1444AD, 5, 3),
-            ],
+            LeaderType.LATE: [(Leader.BELA_III, 1167, 15, 2), (Leader.MATTHIAS, 1444, 5, 3)],
         },
         Civ.CASTILE: {
             LeaderType.PRIMARY: Leader.FERDINAND_III,
             LeaderType.EARLY: Leader.FERDINAND_III,
-            LeaderType.LATE: [
-                (Leader.ISABELLA, DateTurn.i1250AD, 10, 2),
-                (Leader.PHILIP_II, DateTurn.i1520AD, 10, 3),
-            ],
+            LeaderType.LATE: [(Leader.ISABELLA, 1250, 10, 2), (Leader.PHILIP_II, 1520, 10, 3)],
         },
         Civ.DENMARK: {
             LeaderType.PRIMARY: Leader.HARALD_BLUETOOTH,
             LeaderType.EARLY: Leader.HARALD_BLUETOOTH,
-            LeaderType.LATE: [
-                (Leader.MARGARET_I, DateTurn.i1320AD, 10, 2),
-                (Leader.CHRISTIAN_IV, DateTurn.i1520AD, 5, 3),
-            ],
+            LeaderType.LATE: [(Leader.MARGARET_I, 1320, 10, 2), (Leader.CHRISTIAN_IV, 1520, 5, 3)],
         },
         Civ.SCOTLAND: {
             LeaderType.PRIMARY: Leader.ROBERT_THE_BRUCE,
             LeaderType.EARLY: Leader.ROBERT_THE_BRUCE,
-            LeaderType.LATE: [
-                (Leader.JAMES_IV, DateTurn.i1296AD, 10, 2),
-            ],
+            LeaderType.LATE: [(Leader.JAMES_IV, 1296, 10, 2)],
         },
         Civ.POLAND: {
             LeaderType.PRIMARY: Leader.MIESZKO,
             LeaderType.EARLY: Leader.MIESZKO,
-            LeaderType.LATE: [
-                (Leader.CASIMIR, DateTurn.i1320AD, 20, 2),
-                (Leader.SOBIESKI, DateTurn.i1570AD, 10, 3),
-            ],
+            LeaderType.LATE: [(Leader.CASIMIR, 1320, 20, 2), (Leader.SOBIESKI, 1570, 10, 3)],
         },
         Civ.GENOA: {
             LeaderType.PRIMARY: Leader.EMBRIACO,
             LeaderType.EARLY: Leader.EMBRIACO,
-            LeaderType.LATE: [
-                (Leader.BOCCANEGRA, DateTurn.i1101AD, 10, 2),
-            ],
+            LeaderType.LATE: [(Leader.BOCCANEGRA, 1101, 10, 2)],
         },
         Civ.MOROCCO: {
             LeaderType.PRIMARY: Leader.YAQUB_AL_MANSUR,
             LeaderType.EARLY: Leader.YAQUB_AL_MANSUR,
-            LeaderType.LATE: [
-                (Leader.ISMAIL_IBN_SHARIF, DateTurn.i1419AD, 5, 3),
-            ],
+            LeaderType.LATE: [(Leader.ISMAIL_IBN_SHARIF, 1419, 5, 3)],
         },
         Civ.ENGLAND: {
             LeaderType.PRIMARY: Leader.WILLIAM,
             LeaderType.EARLY: Leader.WILLIAM,
-            LeaderType.LATE: [
-                (Leader.ELIZABETH, DateTurn.i1452AD, 10, 3),
-                (Leader.GEORGE_III, DateTurn.i1700AD, 10, 3),
-            ],
+            LeaderType.LATE: [(Leader.ELIZABETH, 1452, 10, 3), (Leader.GEORGE_III, 1700, 10, 3)],
         },
         Civ.PORTUGAL: {
             LeaderType.PRIMARY: Leader.AFONSO,
             LeaderType.EARLY: Leader.AFONSO,
-            LeaderType.LATE: [
-                (Leader.JOAO, DateTurn.i1419AD, 10, 3),
-                (Leader.MARIA_I, DateTurn.i1700AD, 10, 3),
-            ],
+            LeaderType.LATE: [(Leader.JOAO, 1419, 10, 3), (Leader.MARIA_I, 1700, 10, 3)],
         },
         Civ.ARAGON: {
             LeaderType.PRIMARY: Leader.JAMES_I,
             LeaderType.EARLY: Leader.JAMES_I,
-            LeaderType.LATE: [
-                (Leader.JOHN_II, DateTurn.i1397AD, 15, 3),
-            ],
+            LeaderType.LATE: [(Leader.JOHN_II, 1397, 15, 3)],
         },
         Civ.SWEDEN: {
             LeaderType.PRIMARY: Leader.MAGNUS_LADULAS,
             LeaderType.EARLY: Leader.MAGNUS_LADULAS,
             LeaderType.LATE: [
-                (Leader.GUSTAV_VASA, DateTurn.i1470AD, 20, 3),
-                (Leader.GUSTAV_ADOLF, DateTurn.i1540AD, 25, 3),
-                (Leader.KARL_XII, DateTurn.i1680AD, 10, 3),
+                (Leader.GUSTAV_VASA, 1470, 20, 3),
+                (Leader.GUSTAV_ADOLF, 1540, 25, 3),
+                (Leader.KARL_XII, 1680, 10, 3),
             ],
         },
         Civ.PRUSSIA: {
             LeaderType.PRIMARY: Leader.HERMANN_VON_SALZA,
             LeaderType.EARLY: Leader.HERMANN_VON_SALZA,
-            LeaderType.LATE: [
-                (Leader.FREDERICK, DateTurn.i1580AD, 5, 3),
-            ],
+            LeaderType.LATE: [(Leader.FREDERICK, 1580, 5, 3)],
         },
         Civ.LITHUANIA: {
             LeaderType.PRIMARY: Leader.MINDAUGAS,
             LeaderType.EARLY: Leader.MINDAUGAS,
-            LeaderType.LATE: [
-                (Leader.VYTAUTAS, DateTurn.i1377AD, 10, 3),
-            ],
+            LeaderType.LATE: [(Leader.VYTAUTAS, 1377, 10, 3)],
         },
         Civ.AUSTRIA: {
             LeaderType.PRIMARY: Leader.MAXIMILIAN,
             LeaderType.EARLY: Leader.MAXIMILIAN,
-            LeaderType.LATE: [
-                (Leader.MARIA_THERESA, DateTurn.i1700AD, 25, 3),
-            ],
+            LeaderType.LATE: [(Leader.MARIA_THERESA, 1700, 25, 3)],
         },
         Civ.OTTOMAN: {
             LeaderType.PRIMARY: Leader.MEHMED,
             LeaderType.EARLY: Leader.MEHMED,
-            LeaderType.LATE: [
-                (Leader.SULEIMAN, DateTurn.i1520AD, 15, 3),
-            ],
+            LeaderType.LATE: [(Leader.SULEIMAN, 1520, 15, 3)],
         },
         Civ.MOSCOW: {
             LeaderType.PRIMARY: Leader.IVAN_IV,
             LeaderType.EARLY: Leader.IVAN_IV,
-            LeaderType.LATE: [
-                (Leader.PETER, DateTurn.i1570AD, 10, 3),
-                (Leader.CATHERINE, DateTurn.i1700AD, 25, 3),
-            ],
+            LeaderType.LATE: [(Leader.PETER, 1570, 10, 3), (Leader.CATHERINE, 1700, 25, 3)],
         },
         Civ.DUTCH: {
             LeaderType.PRIMARY: Leader.WILLEM_VAN_ORANJE,
             LeaderType.EARLY: Leader.WILLEM_VAN_ORANJE,
-            LeaderType.LATE: [
-                (Leader.JOHAN_DE_WITT, DateTurn.i1650AD, 30, 3),
-            ],
+            LeaderType.LATE: [(Leader.JOHAN_DE_WITT, 1650, 30, 3)],
         },
         Civ.POPE: {
             LeaderType.PRIMARY: Leader.THE_POPE,

@@ -16,12 +16,7 @@ from CoreTypes import (
     Area,
 )
 from BaseStructures import DataMapper, EnumDataMapper
-from CoreStructures import (
-    CompanyDataMapper,
-    ScenarioDataMapper,
-    CivDataMapper,
-)
-from TimelineData import DateTurn
+from CoreStructures import CompanyDataMapper, ScenarioDataMapper, CivDataMapper
 
 CITIES = EnumDataMapper(
     {
@@ -143,12 +138,7 @@ ALTERNATE_CITIES_LOCATION = EnumDataMapper(
     }
 )
 
-INDY_CITIES_TO_BE_REDUCED = [
-    City.INVERNESS,
-    City.NORWICH,
-    City.LEICESTER,
-    City.UPPSALA,
-]
+INDY_CITIES_TO_BE_REDUCED = [City.INVERNESS, City.NORWICH, City.LEICESTER, City.UPPSALA]
 
 REGIONS = EnumDataMapper(
     {
@@ -534,15 +524,9 @@ LAKE_LOCATIONS = EnumDataMapper(
     {
         Lake.LOUGH_NEAGH: [(32, 61)],
         Lake.LAKE_BALATON: [(64, 36)],
-        Lake.DEAD_SEA: [
-            (94, 4),
-            (94, 5),
-        ],
+        Lake.DEAD_SEA: [(94, 4), (94, 5)],
         Lake.SEA_OF_GALILEE: [(95, 8)],
-        Lake.LAKE_TUZ: [
-            (88, 19),
-            (89, 19),
-        ],
+        Lake.LAKE_TUZ: [(88, 19), (89, 19)],
         Lake.LAKE_EGIRDIR: [(85, 18)],
         Lake.LAKE_BEYSEHIR: [(86, 17)],
         Lake.LAKE_GARDA: [(54, 37)],
@@ -551,25 +535,11 @@ LAKE_LOCATIONS = EnumDataMapper(
         Lake.LAKE_SKADAR: [(66, 27)],
         Lake.LAKE_OHRID: [(69, 23)],
         Lake.LAKE_SNIARDWY: [(71, 52)],
-        Lake.LAKE_VATTERN: [
-            (62, 62),
-            (62, 63),
-        ],
-        Lake.LAKE_VANERN: [
-            (60, 64),
-            (61, 64),
-            (61, 65),
-        ],
-        Lake.LAKE_MALAREN: [
-            (64, 64),
-            (65, 64),
-        ],
+        Lake.LAKE_VATTERN: [(62, 62), (62, 63)],
+        Lake.LAKE_VANERN: [(60, 64), (61, 64), (61, 65)],
+        Lake.LAKE_MALAREN: [(64, 64), (65, 64)],
         Lake.LAKE_STORSJON: [(62, 71)],
-        Lake.LAKE_PEIPUS: [
-            (77, 60),
-            (77, 61),
-            (77, 62),
-        ],
+        Lake.LAKE_PEIPUS: [(77, 60), (77, 61), (77, 62)],
         Lake.LAKE_ILMEN: [(80, 61)],
         Lake.LAKE_LADOGA: [
             (79, 67),
@@ -583,23 +553,10 @@ LAKE_LOCATIONS = EnumDataMapper(
             (81, 67),
             (81, 68),
         ],
-        Lake.LAKE_ONEGA: [
-            (84, 69),
-            (84, 70),
-            (85, 68),
-            (85, 69),
-            (85, 70),
-        ],
+        Lake.LAKE_ONEGA: [(84, 69), (84, 70), (85, 68), (85, 69), (85, 70)],
         Lake.LAKE_BELOYE: [(87, 66)],
-        Lake.LAKE_SAIMAA: [
-            (77, 68),
-            (77, 69),
-            (78, 70),
-        ],
-        Lake.LAKE_PAIJANNE: [
-            (74, 68),
-            (74, 69),
-        ],
+        Lake.LAKE_SAIMAA: [(77, 68), (77, 69), (78, 70)],
+        Lake.LAKE_PAIJANNE: [(74, 68), (74, 69)],
         Lake.LAKE_VYGOZERO: [(85, 72)],
         Lake.LAKE_SEGOZERO: [(83, 72)],
         Lake.LAKE_KALLAVESI: [(76, 71)],
@@ -648,76 +605,27 @@ CIV_CAPITAL_LOCATIONS = CivDataMapper(
 # Used for respawning
 CIV_NEW_CAPITAL_LOCATIONS = CivDataMapper(
     {
-        Civ.ARABIA: [
-            (83, 3),
-            (84, 3),
-            (84, 4),
-        ],  # Alexandria
-        Civ.CORDOBA: [
-            (48, 16),
-            (50, 18),
-        ],  # Tunis
+        Civ.ARABIA: [(83, 3), (84, 3), (84, 4)],  # Alexandria
+        Civ.CORDOBA: [(48, 16), (50, 18)],  # Tunis
         Civ.GERMANY: [(57, 41)],  # Munich
         Civ.NORWAY: [(59, 64)],  # Oslo
         Civ.KIEV: [(88, 40)],  # Stara Sich
-        Civ.CASTILE: [
-            (30, 27),
-            (31, 27),
-            (31, 28),
-            (32, 28),
-        ],  # Toledo or Madrid
+        Civ.CASTILE: [(30, 27), (31, 27), (31, 28), (32, 28)],  # Toledo or Madrid
         Civ.MOROCCO: [(25, 13)],  # Rabat
         Civ.ARAGON: [(59, 24)],  # Naples
-        Civ.PRUSSIA: [
-            (60, 48),
-            (61, 48),
-            (61, 49),
-            (62, 48),
-        ],  # Berlin
+        Civ.PRUSSIA: [(60, 48), (61, 48), (61, 49), (62, 48)],  # Berlin
     }
 )
 
 CIV_NEIGHBOURS = CivDataMapper(
     {
-        Civ.BYZANTIUM: [
-            Civ.BULGARIA,
-            Civ.ARABIA,
-            Civ.OTTOMAN,
-        ],
-        Civ.FRANCE: [
-            Civ.BURGUNDY,
-            Civ.ENGLAND,
-            Civ.SCOTLAND,
-            Civ.ARAGON,
-        ],
-        Civ.ARABIA: [
-            Civ.BYZANTIUM,
-            Civ.OTTOMAN,
-        ],
-        Civ.BULGARIA: [
-            Civ.BYZANTIUM,
-            Civ.HUNGARY,
-            Civ.KIEV,
-        ],
-        Civ.CORDOBA: [
-            Civ.CASTILE,
-            Civ.PORTUGAL,
-            Civ.ARAGON,
-            Civ.MOROCCO,
-        ],
-        Civ.VENECIA: [
-            Civ.GENOA,
-            Civ.GERMANY,
-            Civ.AUSTRIA,
-            Civ.HUNGARY,
-            Civ.POPE,
-        ],
-        Civ.BURGUNDY: [
-            Civ.FRANCE,
-            Civ.GENOA,
-            Civ.DUTCH,
-            Civ.GERMANY,
-        ],
+        Civ.BYZANTIUM: [Civ.BULGARIA, Civ.ARABIA, Civ.OTTOMAN],
+        Civ.FRANCE: [Civ.BURGUNDY, Civ.ENGLAND, Civ.SCOTLAND, Civ.ARAGON],
+        Civ.ARABIA: [Civ.BYZANTIUM, Civ.OTTOMAN],
+        Civ.BULGARIA: [Civ.BYZANTIUM, Civ.HUNGARY, Civ.KIEV],
+        Civ.CORDOBA: [Civ.CASTILE, Civ.PORTUGAL, Civ.ARAGON, Civ.MOROCCO],
+        Civ.VENECIA: [Civ.GENOA, Civ.GERMANY, Civ.AUSTRIA, Civ.HUNGARY, Civ.POPE],
+        Civ.BURGUNDY: [Civ.FRANCE, Civ.GENOA, Civ.DUTCH, Civ.GERMANY],
         Civ.GERMANY: [
             Civ.BURGUNDY,
             Civ.DUTCH,
@@ -729,50 +637,13 @@ CIV_NEIGHBOURS = CivDataMapper(
             Civ.HUNGARY,
             Civ.DENMARK,
         ],
-        Civ.NOVGOROD: [
-            Civ.KIEV,
-            Civ.MOSCOW,
-            Civ.POLAND,
-            Civ.LITHUANIA,
-            Civ.PRUSSIA,
-            Civ.SWEDEN,
-        ],
-        Civ.NORWAY: [
-            Civ.DENMARK,
-            Civ.SCOTLAND,
-            Civ.SWEDEN,
-        ],
-        Civ.KIEV: [
-            Civ.BULGARIA,
-            Civ.MOSCOW,
-            Civ.POLAND,
-            Civ.LITHUANIA,
-            Civ.NOVGOROD,
-        ],
-        Civ.HUNGARY: [
-            Civ.BULGARIA,
-            Civ.VENECIA,
-            Civ.POLAND,
-            Civ.GERMANY,
-            Civ.AUSTRIA,
-        ],
-        Civ.CASTILE: [
-            Civ.CORDOBA,
-            Civ.PORTUGAL,
-            Civ.ARAGON,
-            Civ.MOROCCO,
-        ],
-        Civ.DENMARK: [
-            Civ.SWEDEN,
-            Civ.NORWAY,
-            Civ.GERMANY,
-        ],
-        Civ.SCOTLAND: [
-            Civ.ENGLAND,
-            Civ.FRANCE,
-            Civ.DUTCH,
-            Civ.NORWAY,
-        ],
+        Civ.NOVGOROD: [Civ.KIEV, Civ.MOSCOW, Civ.POLAND, Civ.LITHUANIA, Civ.PRUSSIA, Civ.SWEDEN],
+        Civ.NORWAY: [Civ.DENMARK, Civ.SCOTLAND, Civ.SWEDEN],
+        Civ.KIEV: [Civ.BULGARIA, Civ.MOSCOW, Civ.POLAND, Civ.LITHUANIA, Civ.NOVGOROD],
+        Civ.HUNGARY: [Civ.BULGARIA, Civ.VENECIA, Civ.POLAND, Civ.GERMANY, Civ.AUSTRIA],
+        Civ.CASTILE: [Civ.CORDOBA, Civ.PORTUGAL, Civ.ARAGON, Civ.MOROCCO],
+        Civ.DENMARK: [Civ.SWEDEN, Civ.NORWAY, Civ.GERMANY],
+        Civ.SCOTLAND: [Civ.ENGLAND, Civ.FRANCE, Civ.DUTCH, Civ.NORWAY],
         Civ.POLAND: [
             Civ.GERMANY,
             Civ.AUSTRIA,
@@ -783,89 +654,26 @@ CIV_NEIGHBOURS = CivDataMapper(
             Civ.PRUSSIA,
             Civ.NOVGOROD,
         ],
-        Civ.GENOA: [
-            Civ.GERMANY,
-            Civ.VENECIA,
-            Civ.BURGUNDY,
-            Civ.POPE,
-        ],
-        Civ.MOROCCO: [
-            Civ.CASTILE,
-            Civ.PORTUGAL,
-            Civ.CORDOBA,
-        ],
-        Civ.ENGLAND: [
-            Civ.FRANCE,
-            Civ.DUTCH,
-            Civ.SCOTLAND,
-        ],
-        Civ.PORTUGAL: [
-            Civ.CASTILE,
-            Civ.CORDOBA,
-            Civ.MOROCCO,
-        ],
-        Civ.SWEDEN: [
-            Civ.NORWAY,
-            Civ.DENMARK,
-            Civ.PRUSSIA,
-            Civ.NOVGOROD,
-        ],
-        Civ.ARAGON: [
-            Civ.CORDOBA,
-            Civ.CASTILE,
-            Civ.FRANCE,
-        ],
-        Civ.PRUSSIA: [
-            Civ.GERMANY,
-            Civ.POLAND,
-            Civ.LITHUANIA,
-            Civ.NOVGOROD,
-            Civ.SWEDEN,
-        ],
-        Civ.LITHUANIA: [
-            Civ.KIEV,
-            Civ.POLAND,
-            Civ.NOVGOROD,
-            Civ.PRUSSIA,
-            Civ.MOSCOW,
-        ],
-        Civ.AUSTRIA: [
-            Civ.GERMANY,
-            Civ.HUNGARY,
-            Civ.POLAND,
-            Civ.VENECIA,
-        ],
-        Civ.OTTOMAN: [
-            Civ.BYZANTIUM,
-            Civ.ARABIA,
-        ],
-        Civ.MOSCOW: [
-            Civ.KIEV,
-            Civ.NOVGOROD,
-            Civ.POLAND,
-            Civ.LITHUANIA,
-        ],
-        Civ.DUTCH: [
-            Civ.GERMANY,
-            Civ.ENGLAND,
-            Civ.BURGUNDY,
-            Civ.SCOTLAND,
-        ],
-        Civ.POPE: [
-            Civ.VENECIA,
-            Civ.GENOA,
-        ],
+        Civ.GENOA: [Civ.GERMANY, Civ.VENECIA, Civ.BURGUNDY, Civ.POPE],
+        Civ.MOROCCO: [Civ.CASTILE, Civ.PORTUGAL, Civ.CORDOBA],
+        Civ.ENGLAND: [Civ.FRANCE, Civ.DUTCH, Civ.SCOTLAND],
+        Civ.PORTUGAL: [Civ.CASTILE, Civ.CORDOBA, Civ.MOROCCO],
+        Civ.SWEDEN: [Civ.NORWAY, Civ.DENMARK, Civ.PRUSSIA, Civ.NOVGOROD],
+        Civ.ARAGON: [Civ.CORDOBA, Civ.CASTILE, Civ.FRANCE],
+        Civ.PRUSSIA: [Civ.GERMANY, Civ.POLAND, Civ.LITHUANIA, Civ.NOVGOROD, Civ.SWEDEN],
+        Civ.LITHUANIA: [Civ.KIEV, Civ.POLAND, Civ.NOVGOROD, Civ.PRUSSIA, Civ.MOSCOW],
+        Civ.AUSTRIA: [Civ.GERMANY, Civ.HUNGARY, Civ.POLAND, Civ.VENECIA],
+        Civ.OTTOMAN: [Civ.BYZANTIUM, Civ.ARABIA],
+        Civ.MOSCOW: [Civ.KIEV, Civ.NOVGOROD, Civ.POLAND, Civ.LITHUANIA],
+        Civ.DUTCH: [Civ.GERMANY, Civ.ENGLAND, Civ.BURGUNDY, Civ.SCOTLAND],
+        Civ.POPE: [Civ.VENECIA, Civ.GENOA],
     }
 )
 
 # Reformation neighbours spread reformation choice to each other
 CIV_REFORMATION_NEIGHBOURS = CivDataMapper(
     {
-        Civ.BYZANTIUM: [
-            Civ.ARABIA,
-            Civ.BULGARIA,
-            Civ.OTTOMAN,
-        ],
+        Civ.BYZANTIUM: [Civ.ARABIA, Civ.BULGARIA, Civ.OTTOMAN],
         Civ.FRANCE: [
             Civ.BURGUNDY,
             Civ.CASTILE,
@@ -875,37 +683,11 @@ CIV_REFORMATION_NEIGHBOURS = CivDataMapper(
             Civ.DUTCH,
             Civ.SCOTLAND,
         ],
-        Civ.ARABIA: [
-            Civ.BYZANTIUM,
-            Civ.CORDOBA,
-            Civ.OTTOMAN,
-        ],
-        Civ.BULGARIA: [
-            Civ.BYZANTIUM,
-            Civ.KIEV,
-            Civ.HUNGARY,
-            Civ.OTTOMAN,
-        ],
-        Civ.CORDOBA: [
-            Civ.ARABIA,
-            Civ.CASTILE,
-            Civ.PORTUGAL,
-            Civ.ARAGON,
-            Civ.MOROCCO,
-        ],
-        Civ.VENECIA: [
-            Civ.GENOA,
-            Civ.GERMANY,
-            Civ.AUSTRIA,
-            Civ.HUNGARY,
-            Civ.POPE,
-        ],
-        Civ.BURGUNDY: [
-            Civ.FRANCE,
-            Civ.GERMANY,
-            Civ.GENOA,
-            Civ.DUTCH,
-        ],
+        Civ.ARABIA: [Civ.BYZANTIUM, Civ.CORDOBA, Civ.OTTOMAN],
+        Civ.BULGARIA: [Civ.BYZANTIUM, Civ.KIEV, Civ.HUNGARY, Civ.OTTOMAN],
+        Civ.CORDOBA: [Civ.ARABIA, Civ.CASTILE, Civ.PORTUGAL, Civ.ARAGON, Civ.MOROCCO],
+        Civ.VENECIA: [Civ.GENOA, Civ.GERMANY, Civ.AUSTRIA, Civ.HUNGARY, Civ.POPE],
+        Civ.BURGUNDY: [Civ.FRANCE, Civ.GERMANY, Civ.GENOA, Civ.DUTCH],
         Civ.GERMANY: [
             Civ.BURGUNDY,
             Civ.FRANCE,
@@ -917,26 +699,9 @@ CIV_REFORMATION_NEIGHBOURS = CivDataMapper(
             Civ.AUSTRIA,
             Civ.DUTCH,
         ],
-        Civ.NOVGOROD: [
-            Civ.SWEDEN,
-            Civ.HUNGARY,
-            Civ.POLAND,
-            Civ.MOSCOW,
-            Civ.LITHUANIA,
-            Civ.KIEV,
-        ],
-        Civ.NORWAY: [
-            Civ.DENMARK,
-            Civ.SWEDEN,
-        ],
-        Civ.KIEV: [
-            Civ.BULGARIA,
-            Civ.HUNGARY,
-            Civ.POLAND,
-            Civ.MOSCOW,
-            Civ.LITHUANIA,
-            Civ.NOVGOROD,
-        ],
+        Civ.NOVGOROD: [Civ.SWEDEN, Civ.HUNGARY, Civ.POLAND, Civ.MOSCOW, Civ.LITHUANIA, Civ.KIEV],
+        Civ.NORWAY: [Civ.DENMARK, Civ.SWEDEN],
+        Civ.KIEV: [Civ.BULGARIA, Civ.HUNGARY, Civ.POLAND, Civ.MOSCOW, Civ.LITHUANIA, Civ.NOVGOROD],
         Civ.HUNGARY: [
             Civ.BULGARIA,
             Civ.VENECIA,
@@ -946,112 +711,23 @@ CIV_REFORMATION_NEIGHBOURS = CivDataMapper(
             Civ.AUSTRIA,
             Civ.OTTOMAN,
         ],
-        Civ.CASTILE: [
-            Civ.FRANCE,
-            Civ.CORDOBA,
-            Civ.PORTUGAL,
-            Civ.ARAGON,
-        ],
-        Civ.DENMARK: [
-            Civ.NORWAY,
-            Civ.SWEDEN,
-            Civ.GERMANY,
-        ],
-        Civ.SCOTLAND: [
-            Civ.FRANCE,
-            Civ.DUTCH,
-            Civ.ENGLAND,
-        ],
-        Civ.POLAND: [
-            Civ.KIEV,
-            Civ.HUNGARY,
-            Civ.GERMANY,
-            Civ.MOSCOW,
-            Civ.AUSTRIA,
-            Civ.LITHUANIA,
-        ],
-        Civ.GENOA: [
-            Civ.BURGUNDY,
-            Civ.FRANCE,
-            Civ.VENECIA,
-            Civ.GERMANY,
-            Civ.POPE,
-            Civ.ARAGON,
-        ],
-        Civ.MOROCCO: [
-            Civ.ARABIA,
-            Civ.CASTILE,
-            Civ.PORTUGAL,
-            Civ.ARAGON,
-            Civ.CORDOBA,
-        ],
-        Civ.ENGLAND: [
-            Civ.FRANCE,
-            Civ.DUTCH,
-            Civ.SCOTLAND,
-        ],
-        Civ.PORTUGAL: [
-            Civ.CASTILE,
-            Civ.CORDOBA,
-            Civ.ARAGON,
-        ],
-        Civ.ARAGON: [
-            Civ.CASTILE,
-            Civ.CORDOBA,
-            Civ.PORTUGAL,
-            Civ.FRANCE,
-            Civ.GENOA,
-        ],
-        Civ.SWEDEN: [
-            Civ.NORWAY,
-            Civ.DENMARK,
-            Civ.MOSCOW,
-            Civ.NOVGOROD,
-        ],
-        Civ.PRUSSIA: [
-            Civ.GERMANY,
-            Civ.LITHUANIA,
-            Civ.MOSCOW,
-            Civ.AUSTRIA,
-            Civ.POLAND,
-        ],
-        Civ.LITHUANIA: [
-            Civ.KIEV,
-            Civ.MOSCOW,
-            Civ.PRUSSIA,
-            Civ.NOVGOROD,
-            Civ.POLAND,
-        ],
-        Civ.AUSTRIA: [
-            Civ.VENECIA,
-            Civ.HUNGARY,
-            Civ.GERMANY,
-            Civ.POLAND,
-        ],
-        Civ.OTTOMAN: [
-            Civ.BYZANTIUM,
-            Civ.ARABIA,
-            Civ.BULGARIA,
-            Civ.HUNGARY,
-        ],
-        Civ.MOSCOW: [
-            Civ.KIEV,
-            Civ.POLAND,
-            Civ.SWEDEN,
-            Civ.LITHUANIA,
-            Civ.NOVGOROD,
-        ],
-        Civ.DUTCH: [
-            Civ.BURGUNDY,
-            Civ.FRANCE,
-            Civ.GERMANY,
-            Civ.ENGLAND,
-            Civ.SCOTLAND,
-        ],
-        Civ.POPE: [
-            Civ.VENECIA,
-            Civ.GENOA,
-        ],
+        Civ.CASTILE: [Civ.FRANCE, Civ.CORDOBA, Civ.PORTUGAL, Civ.ARAGON],
+        Civ.DENMARK: [Civ.NORWAY, Civ.SWEDEN, Civ.GERMANY],
+        Civ.SCOTLAND: [Civ.FRANCE, Civ.DUTCH, Civ.ENGLAND],
+        Civ.POLAND: [Civ.KIEV, Civ.HUNGARY, Civ.GERMANY, Civ.MOSCOW, Civ.AUSTRIA, Civ.LITHUANIA],
+        Civ.GENOA: [Civ.BURGUNDY, Civ.FRANCE, Civ.VENECIA, Civ.GERMANY, Civ.POPE, Civ.ARAGON],
+        Civ.MOROCCO: [Civ.ARABIA, Civ.CASTILE, Civ.PORTUGAL, Civ.ARAGON, Civ.CORDOBA],
+        Civ.ENGLAND: [Civ.FRANCE, Civ.DUTCH, Civ.SCOTLAND],
+        Civ.PORTUGAL: [Civ.CASTILE, Civ.CORDOBA, Civ.ARAGON],
+        Civ.ARAGON: [Civ.CASTILE, Civ.CORDOBA, Civ.PORTUGAL, Civ.FRANCE, Civ.GENOA],
+        Civ.SWEDEN: [Civ.NORWAY, Civ.DENMARK, Civ.MOSCOW, Civ.NOVGOROD],
+        Civ.PRUSSIA: [Civ.GERMANY, Civ.LITHUANIA, Civ.MOSCOW, Civ.AUSTRIA, Civ.POLAND],
+        Civ.LITHUANIA: [Civ.KIEV, Civ.MOSCOW, Civ.PRUSSIA, Civ.NOVGOROD, Civ.POLAND],
+        Civ.AUSTRIA: [Civ.VENECIA, Civ.HUNGARY, Civ.GERMANY, Civ.POLAND],
+        Civ.OTTOMAN: [Civ.BYZANTIUM, Civ.ARABIA, Civ.BULGARIA, Civ.HUNGARY],
+        Civ.MOSCOW: [Civ.KIEV, Civ.POLAND, Civ.SWEDEN, Civ.LITHUANIA, Civ.NOVGOROD],
+        Civ.DUTCH: [Civ.BURGUNDY, Civ.FRANCE, Civ.GERMANY, Civ.ENGLAND, Civ.SCOTLAND],
+        Civ.POPE: [Civ.VENECIA, Civ.GENOA],
     }
 )
 
@@ -1092,22 +768,10 @@ CIV_HOME_LOCATIONS = CivDataMapper(
 # Used for initial spawn location, no longer relevant for stability.
 CIV_CORE_AREA = CivDataMapper(
     {
-        Civ.BYZANTIUM: {
-            Area.TILE_MIN: (66, 14),
-            Area.TILE_MAX: (84, 26),
-        },
-        Civ.FRANCE: {
-            Area.TILE_MIN: (42, 43),
-            Area.TILE_MAX: (46, 48),
-        },
-        Civ.ARABIA: {
-            Area.TILE_MIN: (92, 0),
-            Area.TILE_MAX: (99, 12),
-        },
-        Civ.BULGARIA: {
-            Area.TILE_MIN: (74, 27),
-            Area.TILE_MAX: (80, 30),
-        },
+        Civ.BYZANTIUM: {Area.TILE_MIN: (66, 14), Area.TILE_MAX: (84, 26)},
+        Civ.FRANCE: {Area.TILE_MIN: (42, 43), Area.TILE_MAX: (46, 48)},
+        Civ.ARABIA: {Area.TILE_MIN: (92, 0), Area.TILE_MAX: (99, 12)},
+        Civ.BULGARIA: {Area.TILE_MIN: (74, 27), Area.TILE_MAX: (80, 30)},
         Civ.CORDOBA: {
             Area.TILE_MIN: (24, 19),
             Area.TILE_MAX: (37, 28),
@@ -1133,81 +797,36 @@ CIV_CORE_AREA = CivDataMapper(
         Civ.VENECIA: {
             Area.TILE_MIN: (55, 33),
             Area.TILE_MAX: (59, 36),
-            Area.ADDITIONAL_TILES: [
-                (60, 33),
-                (60, 34),
-                (60, 35),
-            ],
+            Area.ADDITIONAL_TILES: [(60, 33), (60, 34), (60, 35)],
         },
         Civ.BURGUNDY: {
             Area.TILE_MIN: (44, 32),
             Area.TILE_MAX: (48, 42),
-            Area.ADDITIONAL_TILES: [
-                (49, 39),
-                (49, 40),
-                (49, 41),
-                (49, 42),
-            ],
+            Area.ADDITIONAL_TILES: [(49, 39), (49, 40), (49, 41), (49, 42)],
         },
-        Civ.GERMANY: {
-            Area.TILE_MIN: (51, 40),
-            Area.TILE_MAX: (58, 50),
-        },
+        Civ.GERMANY: {Area.TILE_MIN: (51, 40), Area.TILE_MAX: (58, 50)},
         Civ.NOVGOROD: {
             Area.TILE_MIN: (79, 59),
             Area.TILE_MAX: (82, 69),
-            Area.ADDITIONAL_TILES: [
-                (78, 59),
-                (78, 60),
-            ],
+            Area.ADDITIONAL_TILES: [(78, 59), (78, 60)],
         },
-        Civ.NORWAY: {
-            Area.TILE_MIN: (53, 63),
-            Area.TILE_MAX: (59, 72),
-        },
-        Civ.KIEV: {
-            Area.TILE_MIN: (79, 42),
-            Area.TILE_MAX: (88, 50),
-        },
-        Civ.HUNGARY: {
-            Area.TILE_MIN: (64, 33),
-            Area.TILE_MAX: (73, 39),
-        },
-        Civ.CASTILE: {
-            Area.TILE_MIN: (25, 30),
-            Area.TILE_MAX: (32, 36),
-        },
-        Civ.DENMARK: {
-            Area.TILE_MIN: (54, 55),
-            Area.TILE_MAX: (64, 61),
-        },
+        Civ.NORWAY: {Area.TILE_MIN: (53, 63), Area.TILE_MAX: (59, 72)},
+        Civ.KIEV: {Area.TILE_MIN: (79, 42), Area.TILE_MAX: (88, 50)},
+        Civ.HUNGARY: {Area.TILE_MIN: (64, 33), Area.TILE_MAX: (73, 39)},
+        Civ.CASTILE: {Area.TILE_MIN: (25, 30), Area.TILE_MAX: (32, 36)},
+        Civ.DENMARK: {Area.TILE_MIN: (54, 55), Area.TILE_MAX: (64, 61)},
         Civ.SCOTLAND: {
             Area.TILE_MIN: (35, 62),
             Area.TILE_MAX: (39, 68),
-            Area.ADDITIONAL_TILES: [
-                (37, 69),
-                (38, 69),
-            ],
+            Area.ADDITIONAL_TILES: [(37, 69), (38, 69)],
         },
         Civ.POLAND: {
             Area.TILE_MIN: (64, 43),
             Area.TILE_MAX: (70, 50),
-            Area.ADDITIONAL_TILES: [
-                (63, 46),
-                (63, 47),
-                (63, 48),
-                (63, 49),
-                (63, 50),
-            ],
+            Area.ADDITIONAL_TILES: [(63, 46), (63, 47), (63, 48), (63, 49), (63, 50)],
         },
-        Civ.GENOA: {
-            Area.TILE_MIN: (49, 27),
-            Area.TILE_MAX: (52, 35),
-        },
-        Civ.MOROCCO: {
-            Area.TILE_MIN: (18, 3),
-            Area.TILE_MAX: (31, 16),
-        },
+        Civ.GENOA: {Area.TILE_MIN: (49, 27), Area.TILE_MAX: (52, 35)},
+        Civ.MOROCCO: {Area.TILE_MIN: (18, 3), Area.TILE_MAX: (31, 16)},
         Civ.ENGLAND: {
             Area.TILE_MIN: (37, 48),
             Area.TILE_MAX: (43, 60),
@@ -1228,23 +847,12 @@ CIV_CORE_AREA = CivDataMapper(
         Civ.PORTUGAL: {
             Area.TILE_MIN: (21, 24),
             Area.TILE_MAX: (24, 32),
-            Area.ADDITIONAL_TILES: [
-                (25, 27),
-                (25, 28),
-                (25, 29),
-                (25, 30),
-                (25, 31),
-            ],
+            Area.ADDITIONAL_TILES: [(25, 27), (25, 28), (25, 29), (25, 30), (25, 31)],
         },
         Civ.ARAGON: {
             Area.TILE_MIN: (35, 26),
             Area.TILE_MAX: (42, 31),
-            Area.ADDITIONAL_TILES: [
-                (40, 23),
-                (42, 23),
-                (42, 24),
-                (44, 24),
-            ],
+            Area.ADDITIONAL_TILES: [(40, 23), (42, 23), (42, 24), (44, 24)],
         },
         Civ.SWEDEN: {
             Area.TILE_MIN: (61, 60),
@@ -1309,31 +917,17 @@ CIV_CORE_AREA = CivDataMapper(
         Civ.LITHUANIA: {
             Area.TILE_MIN: (72, 51),
             Area.TILE_MAX: (80, 56),
-            Area.ADDITIONAL_TILES: [
-                (76, 57),
-                (77, 57),
-                (78, 57),
-                (79, 57),
-                (80, 57),
-            ],
+            Area.ADDITIONAL_TILES: [(76, 57), (77, 57), (78, 57), (79, 57), (80, 57)],
         },
         Civ.AUSTRIA: {
             Area.TILE_MIN: (59, 37),
             Area.TILE_MAX: (62, 44),
-            Area.ADDITIONAL_TILES: [
-                (60, 36),
-                (61, 36),
-            ],
+            Area.ADDITIONAL_TILES: [(60, 36), (61, 36)],
         },
         Civ.OTTOMAN: {
             Area.TILE_MIN: (76, 16),
             Area.TILE_MAX: (84, 22),
-            Area.ADDITIONAL_TILES: [
-                (76, 23),
-                (77, 23),
-                (78, 23),
-                (79, 23),
-            ],
+            Area.ADDITIONAL_TILES: [(76, 23), (77, 23), (78, 23), (79, 23)],
         },
         Civ.MOSCOW: {
             Area.TILE_MIN: (84, 53),
@@ -1390,28 +984,16 @@ CIV_CORE_AREA = CivDataMapper(
         Civ.DUTCH: {
             Area.TILE_MIN: (46, 50),
             Area.TILE_MAX: (52, 55),
-            Area.ADDITIONAL_TILES: [
-                (46, 49),
-                (47, 49),
-                (48, 49),
-                (49, 49),
-                (50, 49),
-            ],
+            Area.ADDITIONAL_TILES: [(46, 49), (47, 49), (48, 49), (49, 49), (50, 49)],
         },
-        Civ.POPE: {
-            Area.TILE_MIN: (54, 25),
-            Area.TILE_MAX: (58, 29),
-        },
+        Civ.POPE: {Area.TILE_MIN: (54, 25), Area.TILE_MAX: (58, 29)},
     }
 ).apply(lambda d: parse_area_dict(d))
 
 # Used for resurrection
 CIV_NORMAL_AREA = CivDataMapper(
     {
-        Civ.BYZANTIUM: {
-            Area.TILE_MIN: (66, 13),
-            Area.TILE_MAX: (75, 24),
-        },
+        Civ.BYZANTIUM: {Area.TILE_MIN: (66, 13), Area.TILE_MAX: (75, 24)},
         Civ.FRANCE: {
             Area.TILE_MIN: (33, 32),
             Area.TILE_MAX: (44, 46),
@@ -1449,14 +1031,8 @@ CIV_NORMAL_AREA = CivDataMapper(
                 (89, 11),
             ],
         },
-        Civ.BULGARIA: {
-            Area.TILE_MIN: (72, 27),
-            Area.TILE_MAX: (80, 31),
-        },
-        Civ.CORDOBA: {
-            Area.TILE_MIN: (43, 8),
-            Area.TILE_MAX: (52, 19),
-        },
+        Civ.BULGARIA: {Area.TILE_MIN: (72, 27), Area.TILE_MAX: (80, 31)},
+        Civ.CORDOBA: {Area.TILE_MIN: (43, 8), Area.TILE_MAX: (52, 19)},
         Civ.VENECIA: {
             Area.TILE_MIN: (54, 32),
             Area.TILE_MAX: (60, 37),
@@ -1481,13 +1057,7 @@ CIV_NORMAL_AREA = CivDataMapper(
         Civ.BURGUNDY: {
             Area.TILE_MIN: (45, 32),
             Area.TILE_MAX: (49, 43),
-            Area.EXCEPTION_TILES: [
-                (49, 32),
-                (49, 33),
-                (49, 34),
-                (49, 35),
-                (49, 36),
-            ],
+            Area.EXCEPTION_TILES: [(49, 32), (49, 33), (49, 34), (49, 35), (49, 36)],
         },
         Civ.GERMANY: {
             Area.TILE_MIN: (51, 43),
@@ -1547,20 +1117,11 @@ CIV_NORMAL_AREA = CivDataMapper(
                 (88, 62),
             ],
         },
-        Civ.NORWAY: {
-            Area.TILE_MIN: (53, 63),
-            Area.TILE_MAX: (58, 72),
-        },
+        Civ.NORWAY: {Area.TILE_MIN: (53, 63), Area.TILE_MAX: (58, 72)},
         Civ.KIEV: {
             Area.TILE_MIN: (78, 41),
             Area.TILE_MAX: (91, 50),
-            Area.EXCEPTION_TILES: [
-                (87, 41),
-                (88, 41),
-                (89, 41),
-                (90, 41),
-                (91, 41),
-            ],
+            Area.EXCEPTION_TILES: [(87, 41), (88, 41), (89, 41), (90, 41), (91, 41)],
         },
         Civ.HUNGARY: {
             Area.TILE_MIN: (63, 32),
@@ -1598,37 +1159,19 @@ CIV_NORMAL_AREA = CivDataMapper(
                 (34, 36),
             ],
         },
-        Civ.DENMARK: {
-            Area.TILE_MIN: (54, 55),
-            Area.TILE_MAX: (59, 61),
-        },
+        Civ.DENMARK: {Area.TILE_MIN: (54, 55), Area.TILE_MAX: (59, 61)},
         Civ.SCOTLAND: {
             Area.TILE_MIN: (34, 63),
             Area.TILE_MAX: (39, 69),
-            Area.EXCEPTION_TILES: [
-                (34, 69),
-            ],
+            Area.EXCEPTION_TILES: [(34, 69)],
         },
         Civ.POLAND: {
             Area.TILE_MIN: (63, 43),
             Area.TILE_MAX: (77, 50),
-            Area.EXCEPTION_TILES: [
-                (63, 43),
-                (63, 44),
-                (63, 45),
-                (64, 43),
-                (64, 44),
-                (65, 43),
-            ],
+            Area.EXCEPTION_TILES: [(63, 43), (63, 44), (63, 45), (64, 43), (64, 44), (65, 43)],
         },
-        Civ.GENOA: {
-            Area.TILE_MIN: (49, 22),
-            Area.TILE_MAX: (52, 36),
-        },
-        Civ.MOROCCO: {
-            Area.TILE_MIN: (18, 3),
-            Area.TILE_MAX: (27, 13),
-        },
+        Civ.GENOA: {Area.TILE_MIN: (49, 22), Area.TILE_MAX: (52, 36)},
+        Civ.MOROCCO: {Area.TILE_MIN: (18, 3), Area.TILE_MAX: (27, 13)},
         Civ.ENGLAND: {
             Area.TILE_MIN: (32, 50),
             Area.TILE_MAX: (43, 62),
@@ -1663,10 +1206,7 @@ CIV_NORMAL_AREA = CivDataMapper(
                 (25, 32),
             ],
         },
-        Civ.ARAGON: {
-            Area.TILE_MIN: (54, 16),
-            Area.TILE_MAX: (64, 26),
-        },
+        Civ.ARAGON: {Area.TILE_MIN: (54, 16), Area.TILE_MAX: (64, 26)},
         Civ.SWEDEN: {
             Area.TILE_MIN: (60, 59),
             Area.TILE_MAX: (75, 72),
@@ -1794,13 +1334,7 @@ CIV_NORMAL_AREA = CivDataMapper(
         Civ.OTTOMAN: {
             Area.TILE_MIN: (76, 14),
             Area.TILE_MAX: (98, 27),
-            Area.EXCEPTION_TILES: [
-                (76, 27),
-                (77, 27),
-                (78, 27),
-                (79, 27),
-                (80, 27),
-            ],
+            Area.EXCEPTION_TILES: [(76, 27), (77, 27), (78, 27), (79, 27), (80, 27)],
         },
         Civ.MOSCOW: {
             Area.TILE_MIN: (83, 51),
@@ -1824,137 +1358,44 @@ CIV_NORMAL_AREA = CivDataMapper(
         Civ.DUTCH: {
             Area.TILE_MIN: (47, 50),
             Area.TILE_MAX: (52, 54),
-            Area.EXCEPTION_TILES: [
-                (51, 50),
-                (52, 50),
-            ],
+            Area.EXCEPTION_TILES: [(51, 50), (52, 50)],
         },
-        Civ.POPE: {
-            Area.TILE_MIN: (54, 25),
-            Area.TILE_MAX: (58, 29),
-        },
+        Civ.POPE: {Area.TILE_MIN: (54, 25), Area.TILE_MAX: (58, 29)},
     }
 ).apply(lambda d: parse_area_dict(d))
 
 # Used in civ birth only
 CIV_BROADER_AREA = CivDataMapper(
     {
-        Civ.BYZANTIUM: {
-            Area.TILE_MIN: (68, 14),
-            Area.TILE_MAX: (83, 27),
-        },
-        Civ.FRANCE: {
-            Area.TILE_MIN: (39, 41),
-            Area.TILE_MAX: (49, 51),
-        },
-        Civ.ARABIA: {
-            Area.TILE_MIN: (92, 7),
-            Area.TILE_MAX: (99, 15),
-        },
-        Civ.BULGARIA: {
-            Area.TILE_MIN: (71, 28),
-            Area.TILE_MAX: (80, 31),
-        },
-        Civ.CORDOBA: {
-            Area.TILE_MIN: (24, 23),
-            Area.TILE_MAX: (34, 33),
-        },
-        Civ.VENECIA: {
-            Area.TILE_MIN: (52, 29),
-            Area.TILE_MAX: (62, 39),
-        },
-        Civ.BURGUNDY: {
-            Area.TILE_MIN: (42, 36),
-            Area.TILE_MAX: (52, 46),
-        },
-        Civ.GERMANY: {
-            Area.TILE_MIN: (49, 41),
-            Area.TILE_MAX: (58, 51),
-        },
-        Civ.NOVGOROD: {
-            Area.TILE_MIN: (77, 59),
-            Area.TILE_MAX: (89, 72),
-        },
-        Civ.NORWAY: {
-            Area.TILE_MIN: (53, 63),
-            Area.TILE_MAX: (61, 72),
-        },
-        Civ.KIEV: {
-            Area.TILE_MIN: (81, 37),
-            Area.TILE_MAX: (91, 47),
-        },
-        Civ.HUNGARY: {
-            Area.TILE_MIN: (64, 27),
-            Area.TILE_MAX: (74, 37),
-        },
-        Civ.CASTILE: {
-            Area.TILE_MIN: (23, 31),
-            Area.TILE_MAX: (33, 41),
-        },
-        Civ.DENMARK: {
-            Area.TILE_MIN: (55, 55),
-            Area.TILE_MAX: (59, 60),
-        },
-        Civ.SCOTLAND: {
-            Area.TILE_MIN: (31, 57),
-            Area.TILE_MAX: (45, 69),
-        },
-        Civ.POLAND: {
-            Area.TILE_MIN: (64, 42),
-            Area.TILE_MAX: (74, 52),
-        },
-        Civ.GENOA: {
-            Area.TILE_MIN: (45, 29),
-            Area.TILE_MAX: (55, 39),
-        },
-        Civ.MOROCCO: {
-            Area.TILE_MIN: (11, 2),
-            Area.TILE_MAX: (29, 27),
-        },
-        Civ.ENGLAND: {
-            Area.TILE_MIN: (38, 49),
-            Area.TILE_MAX: (48, 59),
-        },
-        Civ.PORTUGAL: {
-            Area.TILE_MIN: (17, 27),
-            Area.TILE_MAX: (27, 37),
-        },
-        Civ.ARAGON: {
-            Area.TILE_MIN: (33, 25),
-            Area.TILE_MAX: (43, 34),
-        },
-        Civ.SWEDEN: {
-            Area.TILE_MIN: (60, 58),
-            Area.TILE_MAX: (77, 72),
-        },
-        Civ.PRUSSIA: {
-            Area.TILE_MIN: (59, 49),
-            Area.TILE_MAX: (72, 55),
-        },
-        Civ.LITHUANIA: {
-            Area.TILE_MIN: (68, 45),
-            Area.TILE_MAX: (82, 64),
-        },
-        Civ.AUSTRIA: {
-            Area.TILE_MIN: (56, 35),
-            Area.TILE_MAX: (66, 45),
-        },
-        Civ.OTTOMAN: {
-            Area.TILE_MIN: (83, 17),
-            Area.TILE_MAX: (93, 27),
-        },
-        Civ.MOSCOW: {
-            Area.TILE_MIN: (83, 51),
-            Area.TILE_MAX: (93, 61),
-        },
-        Civ.DUTCH: {
-            Area.TILE_MIN: (44, 47),
-            Area.TILE_MAX: (54, 57),
-        },
-        Civ.POPE: {
-            Area.TILE_MIN: (54, 25),
-            Area.TILE_MAX: (58, 29),
-        },
+        Civ.BYZANTIUM: {Area.TILE_MIN: (68, 14), Area.TILE_MAX: (83, 27)},
+        Civ.FRANCE: {Area.TILE_MIN: (39, 41), Area.TILE_MAX: (49, 51)},
+        Civ.ARABIA: {Area.TILE_MIN: (92, 7), Area.TILE_MAX: (99, 15)},
+        Civ.BULGARIA: {Area.TILE_MIN: (71, 28), Area.TILE_MAX: (80, 31)},
+        Civ.CORDOBA: {Area.TILE_MIN: (24, 23), Area.TILE_MAX: (34, 33)},
+        Civ.VENECIA: {Area.TILE_MIN: (52, 29), Area.TILE_MAX: (62, 39)},
+        Civ.BURGUNDY: {Area.TILE_MIN: (42, 36), Area.TILE_MAX: (52, 46)},
+        Civ.GERMANY: {Area.TILE_MIN: (49, 41), Area.TILE_MAX: (58, 51)},
+        Civ.NOVGOROD: {Area.TILE_MIN: (77, 59), Area.TILE_MAX: (89, 72)},
+        Civ.NORWAY: {Area.TILE_MIN: (53, 63), Area.TILE_MAX: (61, 72)},
+        Civ.KIEV: {Area.TILE_MIN: (81, 37), Area.TILE_MAX: (91, 47)},
+        Civ.HUNGARY: {Area.TILE_MIN: (64, 27), Area.TILE_MAX: (74, 37)},
+        Civ.CASTILE: {Area.TILE_MIN: (23, 31), Area.TILE_MAX: (33, 41)},
+        Civ.DENMARK: {Area.TILE_MIN: (55, 55), Area.TILE_MAX: (59, 60)},
+        Civ.SCOTLAND: {Area.TILE_MIN: (31, 57), Area.TILE_MAX: (45, 69)},
+        Civ.POLAND: {Area.TILE_MIN: (64, 42), Area.TILE_MAX: (74, 52)},
+        Civ.GENOA: {Area.TILE_MIN: (45, 29), Area.TILE_MAX: (55, 39)},
+        Civ.MOROCCO: {Area.TILE_MIN: (11, 2), Area.TILE_MAX: (29, 27)},
+        Civ.ENGLAND: {Area.TILE_MIN: (38, 49), Area.TILE_MAX: (48, 59)},
+        Civ.PORTUGAL: {Area.TILE_MIN: (17, 27), Area.TILE_MAX: (27, 37)},
+        Civ.ARAGON: {Area.TILE_MIN: (33, 25), Area.TILE_MAX: (43, 34)},
+        Civ.SWEDEN: {Area.TILE_MIN: (60, 58), Area.TILE_MAX: (77, 72)},
+        Civ.PRUSSIA: {Area.TILE_MIN: (59, 49), Area.TILE_MAX: (72, 55)},
+        Civ.LITHUANIA: {Area.TILE_MIN: (68, 45), Area.TILE_MAX: (82, 64)},
+        Civ.AUSTRIA: {Area.TILE_MIN: (56, 35), Area.TILE_MAX: (66, 45)},
+        Civ.OTTOMAN: {Area.TILE_MIN: (83, 17), Area.TILE_MAX: (93, 27)},
+        Civ.MOSCOW: {Area.TILE_MIN: (83, 51), Area.TILE_MAX: (93, 61)},
+        Civ.DUTCH: {Area.TILE_MIN: (44, 47), Area.TILE_MAX: (54, 57)},
+        Civ.POPE: {Area.TILE_MIN: (54, 25), Area.TILE_MAX: (58, 29)},
     }
 ).apply(lambda d: parse_area_dict(d))
 
@@ -2035,11 +1476,7 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.FRANCE: EnumDataMapper(
             {
-                ProvinceType.CORE: [
-                    Province.ILE_DE_FRANCE,
-                    Province.ORLEANS,
-                    Province.CHAMPAGNE,
-                ],
+                ProvinceType.CORE: [Province.ILE_DE_FRANCE, Province.ORLEANS, Province.CHAMPAGNE],
                 ProvinceType.HISTORICAL: [
                     Province.PICARDY,
                     Province.NORMANDY,
@@ -2076,10 +1513,7 @@ CIV_PROVINCES = CivDataMapper(
                     Province.JERUSALEM,
                     Province.ARABIA,
                 ],
-                ProvinceType.HISTORICAL: [
-                    Province.EGYPT,
-                    Province.CYRENAICA,
-                ],
+                ProvinceType.HISTORICAL: [Province.EGYPT, Province.CYRENAICA],
                 ProvinceType.POTENTIAL: [
                     Province.ANTIOCHIA,
                     Province.CYPRUS,
@@ -2101,14 +1535,8 @@ CIV_PROVINCES = CivDataMapper(
         Civ.BULGARIA: EnumDataMapper(
             {
                 ProvinceType.CORE: [Province.MOESIA],
-                ProvinceType.HISTORICAL: [
-                    Province.MACEDONIA,
-                    Province.WALLACHIA,
-                ],
-                ProvinceType.POTENTIAL: [
-                    Province.THRACE,
-                    Province.THESSALONIKI,
-                ],
+                ProvinceType.HISTORICAL: [Province.MACEDONIA, Province.WALLACHIA],
+                ProvinceType.POTENTIAL: [Province.THRACE, Province.THESSALONIKI],
                 ProvinceType.CONTESTED: [
                     Province.SERBIA,
                     Province.BANAT,
@@ -2121,11 +1549,7 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.CORDOBA: EnumDataMapper(
             {
-                ProvinceType.CORE: [
-                    Province.ANDALUSIA,
-                    Province.VALENCIA,
-                    Province.LA_MANCHA,
-                ],
+                ProvinceType.CORE: [Province.ANDALUSIA, Province.VALENCIA, Province.LA_MANCHA],
                 ProvinceType.HISTORICAL: [Province.TETOUAN],
                 ProvinceType.POTENTIAL: [
                     Province.MOROCCO,
@@ -2167,10 +1591,7 @@ CIV_PROVINCES = CivDataMapper(
         Civ.BURGUNDY: EnumDataMapper(
             {
                 ProvinceType.CORE: [Province.BURGUNDY],
-                ProvinceType.HISTORICAL: [
-                    Province.PROVENCE,
-                    Province.FLANDERS,
-                ],
+                ProvinceType.HISTORICAL: [Province.PROVENCE, Province.FLANDERS],
                 ProvinceType.POTENTIAL: [
                     Province.CHAMPAGNE,
                     Province.PICARDY,
@@ -2225,37 +1646,18 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.NOVGOROD: EnumDataMapper(
             {
-                ProvinceType.CORE: [
-                    Province.NOVGOROD,
-                    Province.KARELIA,
-                ],
-                ProvinceType.HISTORICAL: [
-                    Province.ROSTOV,
-                    Province.VOLOGDA,
-                ],
-                ProvinceType.POTENTIAL: [
-                    Province.ESTONIA,
-                    Province.OSTERLAND,
-                ],
-                ProvinceType.CONTESTED: [
-                    Province.SMOLENSK,
-                    Province.POLOTSK,
-                    Province.LIVONIA,
-                ],
+                ProvinceType.CORE: [Province.NOVGOROD, Province.KARELIA],
+                ProvinceType.HISTORICAL: [Province.ROSTOV, Province.VOLOGDA],
+                ProvinceType.POTENTIAL: [Province.ESTONIA, Province.OSTERLAND],
+                ProvinceType.CONTESTED: [Province.SMOLENSK, Province.POLOTSK, Province.LIVONIA],
             },
             do_not_cast=True,
         ),
         Civ.NORWAY: EnumDataMapper(
             {
-                ProvinceType.CORE: [
-                    Province.NORWAY,
-                    Province.VESTFOLD,
-                ],
+                ProvinceType.CORE: [Province.NORWAY, Province.VESTFOLD],
                 ProvinceType.HISTORICAL: [Province.ICELAND],
-                ProvinceType.POTENTIAL: [
-                    Province.THE_ISLES,
-                    Province.JAMTLAND,
-                ],
+                ProvinceType.POTENTIAL: [Province.THE_ISLES, Province.JAMTLAND],
                 ProvinceType.CONTESTED: [
                     Province.SCOTLAND,
                     Province.NORTHUMBRIA,
@@ -2279,15 +1681,8 @@ CIV_PROVINCES = CivDataMapper(
                     Province.PEREYASLAVL,
                     Province.CHERNIGOV,
                 ],
-                ProvinceType.HISTORICAL: [
-                    Province.PODOLIA,
-                    Province.VOLHYNIA,
-                ],
-                ProvinceType.POTENTIAL: [
-                    Province.MINSK,
-                    Province.SMOLENSK,
-                    Province.ZAPORIZHIA,
-                ],
+                ProvinceType.HISTORICAL: [Province.PODOLIA, Province.VOLHYNIA],
+                ProvinceType.POTENTIAL: [Province.MINSK, Province.SMOLENSK, Province.ZAPORIZHIA],
                 ProvinceType.CONTESTED: [
                     Province.MOLDOVA,
                     Province.GALICJA,
@@ -2318,11 +1713,7 @@ CIV_PROVINCES = CivDataMapper(
                     Province.BOSNIA,
                     Province.DALMATIA,
                 ],
-                ProvinceType.POTENTIAL: [
-                    Province.MORAVIA,
-                    Province.AUSTRIA,
-                    Province.CARINTHIA,
-                ],
+                ProvinceType.POTENTIAL: [Province.MORAVIA, Province.AUSTRIA, Province.CARINTHIA],
                 ProvinceType.CONTESTED: [
                     Province.SERBIA,
                     Province.WALLACHIA,
@@ -2337,11 +1728,7 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.CASTILE: EnumDataMapper(
             {
-                ProvinceType.CORE: [
-                    Province.LEON,
-                    Province.GALICIA,
-                    Province.CASTILE,
-                ],
+                ProvinceType.CORE: [Province.LEON, Province.GALICIA, Province.CASTILE],
                 ProvinceType.HISTORICAL: [],
                 ProvinceType.POTENTIAL: [
                     Province.NAVARRE,
@@ -2374,16 +1761,9 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.DENMARK: EnumDataMapper(
             {
-                ProvinceType.CORE: [
-                    Province.DENMARK,
-                    Province.SKANELAND,
-                ],
+                ProvinceType.CORE: [Province.DENMARK, Province.SKANELAND],
                 ProvinceType.HISTORICAL: [],
-                ProvinceType.POTENTIAL: [
-                    Province.ESTONIA,
-                    Province.GOTLAND,
-                    Province.HOLSTEIN,
-                ],
+                ProvinceType.POTENTIAL: [Province.ESTONIA, Province.GOTLAND, Province.HOLSTEIN],
                 ProvinceType.CONTESTED: [
                     Province.GOTALAND,
                     Province.SVEALAND,
@@ -2408,11 +1788,7 @@ CIV_PROVINCES = CivDataMapper(
                 ProvinceType.CORE: [Province.SCOTLAND],
                 ProvinceType.HISTORICAL: [Province.THE_ISLES],
                 ProvinceType.POTENTIAL: [Province.NORTHUMBRIA],
-                ProvinceType.CONTESTED: [
-                    Province.IRELAND,
-                    Province.MERCIA,
-                    Province.WALES,
-                ],
+                ProvinceType.CONTESTED: [Province.IRELAND, Province.MERCIA, Province.WALES],
             },
             do_not_cast=True,
         ),
@@ -2423,15 +1799,8 @@ CIV_PROVINCES = CivDataMapper(
                     Province.LESSER_POLAND,
                     Province.MASOVIA,
                 ],
-                ProvinceType.HISTORICAL: [
-                    Province.BREST,
-                    Province.GALICJA,
-                ],
-                ProvinceType.POTENTIAL: [
-                    Province.POMERANIA,
-                    Province.SILESIA,
-                    Province.SUVALKIJA,
-                ],
+                ProvinceType.HISTORICAL: [Province.BREST, Province.GALICJA],
+                ProvinceType.POTENTIAL: [Province.POMERANIA, Province.SILESIA, Province.SUVALKIJA],
                 ProvinceType.CONTESTED: [
                     Province.PRUSSIA,
                     Province.LITHUANIA,
@@ -2448,10 +1817,7 @@ CIV_PROVINCES = CivDataMapper(
         Civ.GENOA: EnumDataMapper(
             {
                 ProvinceType.CORE: [Province.LIGURIA],
-                ProvinceType.HISTORICAL: [
-                    Province.CORSICA,
-                    Province.SARDINIA,
-                ],
+                ProvinceType.HISTORICAL: [Province.CORSICA, Province.SARDINIA],
                 ProvinceType.POTENTIAL: [
                     Province.SICILY,
                     Province.MALTA,
@@ -2474,16 +1840,9 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.MOROCCO: EnumDataMapper(
             {
-                ProvinceType.CORE: [
-                    Province.MARRAKESH,
-                    Province.MOROCCO,
-                    Province.FEZ,
-                ],
+                ProvinceType.CORE: [Province.MARRAKESH, Province.MOROCCO, Province.FEZ],
                 ProvinceType.HISTORICAL: [Province.TETOUAN],
-                ProvinceType.POTENTIAL: [
-                    Province.ORAN,
-                    Province.ALGIERS,
-                ],
+                ProvinceType.POTENTIAL: [Province.ORAN, Province.ALGIERS],
                 ProvinceType.CONTESTED: [
                     Province.IFRIQIYA,
                     Province.ANDALUSIA,
@@ -2524,11 +1883,7 @@ CIV_PROVINCES = CivDataMapper(
             {
                 ProvinceType.CORE: [Province.LUSITANIA],
                 ProvinceType.HISTORICAL: [Province.AZORES],
-                ProvinceType.POTENTIAL: [
-                    Province.MADEIRA,
-                    Province.CANARIES,
-                    Province.ANDALUSIA,
-                ],
+                ProvinceType.POTENTIAL: [Province.MADEIRA, Province.CANARIES, Province.ANDALUSIA],
                 ProvinceType.CONTESTED: [
                     Province.MOROCCO,
                     Province.TETOUAN,
@@ -2568,14 +1923,8 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.SWEDEN: EnumDataMapper(
             {
-                ProvinceType.CORE: [
-                    Province.NORRLAND,
-                    Province.SVEALAND,
-                ],
-                ProvinceType.HISTORICAL: [
-                    Province.GOTALAND,
-                    Province.GOTLAND,
-                ],
+                ProvinceType.CORE: [Province.NORRLAND, Province.SVEALAND],
+                ProvinceType.HISTORICAL: [Province.GOTALAND, Province.GOTLAND],
                 ProvinceType.POTENTIAL: [
                     Province.JAMTLAND,
                     Province.OSTERLAND,
@@ -2597,10 +1946,7 @@ CIV_PROVINCES = CivDataMapper(
             {
                 ProvinceType.CORE: [Province.PRUSSIA],
                 ProvinceType.HISTORICAL: [],
-                ProvinceType.POTENTIAL: [
-                    Province.POMERANIA,
-                    Province.LIVONIA,
-                ],
+                ProvinceType.POTENTIAL: [Province.POMERANIA, Province.LIVONIA],
                 ProvinceType.CONTESTED: [
                     Province.BRANDENBURG,
                     Province.ESTONIA,
@@ -2614,11 +1960,7 @@ CIV_PROVINCES = CivDataMapper(
         Civ.LITHUANIA: EnumDataMapper(
             {
                 ProvinceType.CORE: [Province.LITHUANIA],
-                ProvinceType.HISTORICAL: [
-                    Province.SUVALKIJA,
-                    Province.MINSK,
-                    Province.POLOTSK,
-                ],
+                ProvinceType.HISTORICAL: [Province.SUVALKIJA, Province.MINSK, Province.POLOTSK],
                 ProvinceType.POTENTIAL: [
                     Province.BREST,
                     Province.PODOLIA,
@@ -2643,14 +1985,8 @@ CIV_PROVINCES = CivDataMapper(
         ),
         Civ.AUSTRIA: EnumDataMapper(
             {
-                ProvinceType.CORE: [
-                    Province.AUSTRIA,
-                    Province.CARINTHIA,
-                ],
-                ProvinceType.HISTORICAL: [
-                    Province.BOHEMIA,
-                    Province.MORAVIA,
-                ],
+                ProvinceType.CORE: [Province.AUSTRIA, Province.CARINTHIA],
+                ProvinceType.HISTORICAL: [Province.BOHEMIA, Province.MORAVIA],
                 ProvinceType.POTENTIAL: [
                     Province.BAVARIA,
                     Province.SILESIA,
@@ -2775,7 +2111,7 @@ CIV_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-    },
+    }
 )
 
 CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
@@ -2820,7 +2156,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
                     (Province.TETOUAN, ProvinceType.CONTESTED),
                     (Province.MOROCCO, ProvinceType.CONTESTED),
                     (Province.FEZ, ProvinceType.CONTESTED),
-                ],
+                ]
             },
             do_not_cast=True,
         ),
@@ -2866,7 +2202,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
             {
                 Event.ON_DATETURN: {
                     # Provinces switch back to unstable after the fall of the Norman Kingdom of Sicily
-                    DateTurn.i1194AD
+                    1194
                     + 1: [
                         (Province.APULIA, ProvinceType.NONE),
                         (Province.CALABRIA, ProvinceType.NONE),
@@ -2887,18 +2223,14 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
             do_not_cast=True,
         ),
         Civ.CASTILE: EnumDataMapper(
-            {
-                Event.ON_SPAWN: [
-                    (Civ.CORDOBA, Province.LA_MANCHA, ProvinceType.HISTORICAL),
-                ]
-            },
+            {Event.ON_SPAWN: [(Civ.CORDOBA, Province.LA_MANCHA, ProvinceType.HISTORICAL)]},
             do_not_cast=True,
         ),
         Civ.DENMARK: EnumDataMapper(
             {
                 Event.ON_DATETURN: {
                     # Provinces switch back to unstable after the fall of the Norman Kingdom of Sicily
-                    DateTurn.i1194AD
+                    1194
                     + 1: [
                         (Province.APULIA, ProvinceType.NONE),
                         (Province.CALABRIA, ProvinceType.NONE),
@@ -2964,7 +2296,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
             {
                 Event.ON_DATETURN: DataMapper(
                     {
-                        DateTurn.i1618AD: [
+                        1618: [
                             (Province.ESTONIA, ProvinceType.NONE),
                             (Province.LITHUANIA, ProvinceType.NONE),
                             (Province.SUVALKIJA, ProvinceType.NONE),
@@ -2975,7 +2307,7 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
                             (Province.GREATER_POLAND, ProvinceType.CONTESTED),
                         ]
                     }
-                ),
+                )
             },
             do_not_cast=True,
         ),
@@ -3034,668 +2366,251 @@ CIV_EVENT_DRIVE_PROVINCES = CivDataMapper(
             },
             do_not_cast=True,
         ),
-    },
+    }
 ).fill_missing_members(EnumDataMapper({}))
 
 CIV_VISIBLE_AREA_500AD = CivDataMapper(
     {
         Civ.BYZANTIUM: [
-            {
-                Area.TILE_MIN: (64, 0),
-                Area.TILE_MAX: (99, 34),
-            },
-            {
-                Area.TILE_MIN: (49, 1),
-                Area.TILE_MAX: (63, 38),
-            },
-            {
-                Area.TILE_MIN: (24, 13),
-                Area.TILE_MAX: (48, 36),
-            },
+            {Area.TILE_MIN: (64, 0), Area.TILE_MAX: (99, 34)},
+            {Area.TILE_MIN: (49, 1), Area.TILE_MAX: (63, 38)},
+            {Area.TILE_MIN: (24, 13), Area.TILE_MAX: (48, 36)},
         ],
         Civ.FRANCE: [
-            {
-                Area.TILE_MIN: (35, 31),
-                Area.TILE_MAX: (52, 51),
-            },
-            {
-                Area.TILE_MIN: (49, 26),
-                Area.TILE_MAX: (59, 38),
-            },
+            {Area.TILE_MIN: (35, 31), Area.TILE_MAX: (52, 51)},
+            {Area.TILE_MIN: (49, 26), Area.TILE_MAX: (59, 38)},
         ],
         Civ.ARABIA: [
-            {
-                Area.TILE_MIN: (79, 0),
-                Area.TILE_MAX: (89, 6),
-            },
-            {
-                Area.TILE_MIN: (90, 0),
-                Area.TILE_MAX: (99, 22),
-            },
+            {Area.TILE_MIN: (79, 0), Area.TILE_MAX: (89, 6)},
+            {Area.TILE_MIN: (90, 0), Area.TILE_MAX: (99, 22)},
         ],
         Civ.BULGARIA: [
-            {
-                Area.TILE_MIN: (69, 23),
-                Area.TILE_MAX: (81, 32),
-            },
-            {
-                Area.TILE_MIN: (78, 31),
-                Area.TILE_MAX: (99, 41),
-            },
+            {Area.TILE_MIN: (69, 23), Area.TILE_MAX: (81, 32)},
+            {Area.TILE_MIN: (78, 31), Area.TILE_MAX: (99, 41)},
         ],
         Civ.CORDOBA: [
-            {
-                Area.TILE_MIN: (18, 13),
-                Area.TILE_MAX: (39, 33),
-            },
-            {
-                Area.TILE_MIN: (40, 0),
-                Area.TILE_MAX: (59, 20),
-            },
-            {
-                Area.TILE_MIN: (60, 0),
-                Area.TILE_MAX: (95, 7),
-            },
+            {Area.TILE_MIN: (18, 13), Area.TILE_MAX: (39, 33)},
+            {Area.TILE_MIN: (40, 0), Area.TILE_MAX: (59, 20)},
+            {Area.TILE_MIN: (60, 0), Area.TILE_MAX: (95, 7)},
         ],
         Civ.VENECIA: [
-            {
-                Area.TILE_MIN: (47, 14),
-                Area.TILE_MAX: (59, 38),
-            },
-            {
-                Area.TILE_MIN: (60, 18),
-                Area.TILE_MAX: (63, 35),
-            },
-            {
-                Area.TILE_MIN: (64, 18),
-                Area.TILE_MAX: (68, 29),
-            },
+            {Area.TILE_MIN: (47, 14), Area.TILE_MAX: (59, 38)},
+            {Area.TILE_MIN: (60, 18), Area.TILE_MAX: (63, 35)},
+            {Area.TILE_MIN: (64, 18), Area.TILE_MAX: (68, 29)},
         ],
-        Civ.BURGUNDY: [
-            {
-                Area.TILE_MIN: (43, 31),
-                Area.TILE_MAX: (53, 53),
-            },
-        ],
+        Civ.BURGUNDY: [{Area.TILE_MIN: (43, 31), Area.TILE_MAX: (53, 53)}],
         Civ.GERMANY: [
-            {
-                Area.TILE_MIN: (44, 31),
-                Area.TILE_MAX: (46, 52),
-            },
-            {
-                Area.TILE_MIN: (47, 27),
-                Area.TILE_MAX: (61, 55),
-            },
-            {
-                Area.TILE_MIN: (62, 50),
-                Area.TILE_MAX: (70, 55),
-            },
+            {Area.TILE_MIN: (44, 31), Area.TILE_MAX: (46, 52)},
+            {Area.TILE_MIN: (47, 27), Area.TILE_MAX: (61, 55)},
+            {Area.TILE_MIN: (62, 50), Area.TILE_MAX: (70, 55)},
         ],
         Civ.NOVGOROD: [
-            {
-                Area.TILE_MIN: (72, 55),
-                Area.TILE_MAX: (90, 72),
-            },
-            {
-                Area.TILE_MIN: (79, 41),
-                Area.TILE_MAX: (88, 54),
-            },
+            {Area.TILE_MIN: (72, 55), Area.TILE_MAX: (90, 72)},
+            {Area.TILE_MIN: (79, 41), Area.TILE_MAX: (88, 54)},
         ],
         Civ.NORWAY: [
-            {
-                Area.TILE_MIN: (49, 52),
-                Area.TILE_MAX: (71, 72),
-            },
-            {
-                Area.TILE_MIN: (30, 56),
-                Area.TILE_MAX: (48, 72),
-            },
+            {Area.TILE_MIN: (49, 52), Area.TILE_MAX: (71, 72)},
+            {Area.TILE_MIN: (30, 56), Area.TILE_MAX: (48, 72)},
         ],
         Civ.KIEV: [
-            {
-                Area.TILE_MIN: (77, 24),
-                Area.TILE_MAX: (82, 40),
-            },
-            {
-                Area.TILE_MIN: (83, 33),
-                Area.TILE_MAX: (88, 46),
-            },
-            {
-                Area.TILE_MIN: (77, 39),
-                Area.TILE_MAX: (91, 56),
-            },
+            {Area.TILE_MIN: (77, 24), Area.TILE_MAX: (82, 40)},
+            {Area.TILE_MIN: (83, 33), Area.TILE_MAX: (88, 46)},
+            {Area.TILE_MIN: (77, 39), Area.TILE_MAX: (91, 56)},
         ],
         Civ.HUNGARY: [
-            {
-                Area.TILE_MIN: (59, 30),
-                Area.TILE_MAX: (82, 42),
-            },
-            {
-                Area.TILE_MIN: (83, 36),
-                Area.TILE_MAX: (92, 42),
-            },
+            {Area.TILE_MIN: (59, 30), Area.TILE_MAX: (82, 42)},
+            {Area.TILE_MIN: (83, 36), Area.TILE_MAX: (92, 42)},
         ],
         Civ.CASTILE: [
-            {
-                Area.TILE_MIN: (22, 25),
-                Area.TILE_MAX: (35, 38),
-            },
-            {
-                Area.TILE_MIN: (36, 25),
-                Area.TILE_MAX: (43, 40),
-            },
+            {Area.TILE_MIN: (22, 25), Area.TILE_MAX: (35, 38)},
+            {Area.TILE_MIN: (36, 25), Area.TILE_MAX: (43, 40)},
         ],
         Civ.DENMARK: [
-            {
-                Area.TILE_MIN: (34, 46),
-                Area.TILE_MAX: (49, 72),
-            },
-            {
-                Area.TILE_MIN: (50, 50),
-                Area.TILE_MAX: (71, 72),
-            },
-            {
-                Area.TILE_MIN: (72, 57),
-                Area.TILE_MAX: (78, 64),
-            },
+            {Area.TILE_MIN: (34, 46), Area.TILE_MAX: (49, 72)},
+            {Area.TILE_MIN: (50, 50), Area.TILE_MAX: (71, 72)},
+            {Area.TILE_MIN: (72, 57), Area.TILE_MAX: (78, 64)},
         ],
         Civ.SCOTLAND: [
-            {
-                Area.TILE_MIN: (30, 51),
-                Area.TILE_MAX: (46, 72),
-            },
-            {
-                Area.TILE_MIN: (35, 46),
-                Area.TILE_MAX: (46, 50),
-            },
+            {Area.TILE_MIN: (30, 51), Area.TILE_MAX: (46, 72)},
+            {Area.TILE_MIN: (35, 46), Area.TILE_MAX: (46, 50)},
         ],
         Civ.POLAND: [
-            {
-                Area.TILE_MIN: (60, 40),
-                Area.TILE_MAX: (74, 55),
-            },
-            {
-                Area.TILE_MIN: (75, 40),
-                Area.TILE_MAX: (79, 48),
-            },
+            {Area.TILE_MIN: (60, 40), Area.TILE_MAX: (74, 55)},
+            {Area.TILE_MIN: (75, 40), Area.TILE_MAX: (79, 48)},
         ],
         Civ.GENOA: [
-            {
-                Area.TILE_MIN: (39, 20),
-                Area.TILE_MAX: (60, 38),
-            },
-            {
-                Area.TILE_MIN: (47, 14),
-                Area.TILE_MAX: (63, 32),
-            },
-            {
-                Area.TILE_MIN: (64, 16),
-                Area.TILE_MAX: (67, 29),
-            },
+            {Area.TILE_MIN: (39, 20), Area.TILE_MAX: (60, 38)},
+            {Area.TILE_MIN: (47, 14), Area.TILE_MAX: (63, 32)},
+            {Area.TILE_MIN: (64, 16), Area.TILE_MAX: (67, 29)},
         ],
         Civ.MOROCCO: [
-            {
-                Area.TILE_MIN: (12, 2),
-                Area.TILE_MAX: (42, 31),
-            },
-            {
-                Area.TILE_MIN: (43, 10),
-                Area.TILE_MAX: (53, 20),
-            },
+            {Area.TILE_MIN: (12, 2), Area.TILE_MAX: (42, 31)},
+            {Area.TILE_MIN: (43, 10), Area.TILE_MAX: (53, 20)},
         ],
         Civ.ENGLAND: [
-            {
-                Area.TILE_MIN: (31, 49),
-                Area.TILE_MAX: (45, 64),
-            },
-            {
-                Area.TILE_MIN: (37, 46),
-                Area.TILE_MAX: (45, 48),
-            },
+            {Area.TILE_MIN: (31, 49), Area.TILE_MAX: (45, 64)},
+            {Area.TILE_MIN: (37, 46), Area.TILE_MAX: (45, 48)},
         ],
-        Civ.PORTUGAL: [
-            {
-                Area.TILE_MIN: (18, 22),
-                Area.TILE_MAX: (34, 39),
-            },
-        ],
+        Civ.PORTUGAL: [{Area.TILE_MIN: (18, 22), Area.TILE_MAX: (34, 39)}],
         Civ.ARAGON: [
-            {
-                Area.TILE_MIN: (19, 23),
-                Area.TILE_MAX: (56, 40),
-            },
-            {
-                Area.TILE_MIN: (25, 21),
-                Area.TILE_MAX: (45, 22),
-            },
-            {
-                Area.TILE_MIN: (46, 14),
-                Area.TILE_MAX: (63, 28),
-            },
+            {Area.TILE_MIN: (19, 23), Area.TILE_MAX: (56, 40)},
+            {Area.TILE_MIN: (25, 21), Area.TILE_MAX: (45, 22)},
+            {Area.TILE_MIN: (46, 14), Area.TILE_MAX: (63, 28)},
         ],
         Civ.SWEDEN: [
-            {
-                Area.TILE_MIN: (39, 52),
-                Area.TILE_MAX: (82, 66),
-            },
-            {
-                Area.TILE_MIN: (34, 61),
-                Area.TILE_MAX: (71, 72),
-            },
+            {Area.TILE_MIN: (39, 52), Area.TILE_MAX: (82, 66)},
+            {Area.TILE_MIN: (34, 61), Area.TILE_MAX: (71, 72)},
         ],
         Civ.PRUSSIA: [
-            {
-                Area.TILE_MIN: (51, 43),
-                Area.TILE_MAX: (73, 56),
-            },
-            {
-                Area.TILE_MIN: (66, 57),
-                Area.TILE_MAX: (82, 62),
-            },
-            {
-                Area.TILE_MIN: (69, 63),
-                Area.TILE_MAX: (79, 66),
-            },
+            {Area.TILE_MIN: (51, 43), Area.TILE_MAX: (73, 56)},
+            {Area.TILE_MIN: (66, 57), Area.TILE_MAX: (82, 62)},
+            {Area.TILE_MIN: (69, 63), Area.TILE_MAX: (79, 66)},
         ],
         Civ.LITHUANIA: [
-            {
-                Area.TILE_MIN: (67, 46),
-                Area.TILE_MAX: (76, 55),
-            },
-            {
-                Area.TILE_MIN: (73, 44),
-                Area.TILE_MAX: (81, 58),
-            },
+            {Area.TILE_MIN: (67, 46), Area.TILE_MAX: (76, 55)},
+            {Area.TILE_MIN: (73, 44), Area.TILE_MAX: (81, 58)},
         ],
         Civ.AUSTRIA: [
-            {
-                Area.TILE_MIN: (49, 27),
-                Area.TILE_MAX: (61, 55),
-            },
-            {
-                Area.TILE_MIN: (62, 34),
-                Area.TILE_MAX: (67, 46),
-            },
+            {Area.TILE_MIN: (49, 27), Area.TILE_MAX: (61, 55)},
+            {Area.TILE_MIN: (62, 34), Area.TILE_MAX: (67, 46)},
         ],
         Civ.OTTOMAN: [
-            {
-                Area.TILE_MIN: (75, 13),
-                Area.TILE_MAX: (99, 27),
-            },
-            {
-                Area.TILE_MIN: (92, 4),
-                Area.TILE_MAX: (99, 12),
-            },
+            {Area.TILE_MIN: (75, 13), Area.TILE_MAX: (99, 27)},
+            {Area.TILE_MIN: (92, 4), Area.TILE_MAX: (99, 12)},
         ],
         Civ.MOSCOW: [
-            {
-                Area.TILE_MIN: (77, 42),
-                Area.TILE_MAX: (99, 51),
-            },
-            {
-                Area.TILE_MIN: (74, 52),
-                Area.TILE_MAX: (99, 67),
-            },
+            {Area.TILE_MIN: (77, 42), Area.TILE_MAX: (99, 51)},
+            {Area.TILE_MIN: (74, 52), Area.TILE_MAX: (99, 67)},
         ],
         Civ.DUTCH: [
-            {
-                Area.TILE_MIN: (40, 45),
-                Area.TILE_MAX: (65, 57),
-            },
-            {
-                Area.TILE_MIN: (49, 58),
-                Area.TILE_MAX: (67, 66),
-            },
-            {
-                Area.TILE_MIN: (46, 39),
-                Area.TILE_MAX: (63, 44),
-            },
+            {Area.TILE_MIN: (40, 45), Area.TILE_MAX: (65, 57)},
+            {Area.TILE_MIN: (49, 58), Area.TILE_MAX: (67, 66)},
+            {Area.TILE_MIN: (46, 39), Area.TILE_MAX: (63, 44)},
         ],
-        Civ.POPE: [
-            {
-                Area.TILE_MIN: (39, 12),
-                Area.TILE_MAX: (73, 44),
-            },
-        ],
+        Civ.POPE: [{Area.TILE_MIN: (39, 12), Area.TILE_MAX: (73, 44)}],
     }
 ).applymap(lambda d: parse_area_dict(d))
 
 CIV_VISIBLE_AREA_1200AD = CivDataMapper(
     {
         Civ.BYZANTIUM: [
-            {
-                Area.TILE_MIN: (64, 0),
-                Area.TILE_MAX: (99, 34),
-            },
-            {
-                Area.TILE_MIN: (49, 1),
-                Area.TILE_MAX: (63, 38),
-            },
-            {
-                Area.TILE_MIN: (24, 13),
-                Area.TILE_MAX: (48, 36),
-            },
+            {Area.TILE_MIN: (64, 0), Area.TILE_MAX: (99, 34)},
+            {Area.TILE_MIN: (49, 1), Area.TILE_MAX: (63, 38)},
+            {Area.TILE_MIN: (24, 13), Area.TILE_MAX: (48, 36)},
         ],
         Civ.FRANCE: [
-            {
-                Area.TILE_MIN: (30, 26),
-                Area.TILE_MAX: (59, 54),
-            },
-            {
-                Area.TILE_MIN: (35, 55),
-                Area.TILE_MAX: (40, 70),
-            },
+            {Area.TILE_MIN: (30, 26), Area.TILE_MAX: (59, 54)},
+            {Area.TILE_MIN: (35, 55), Area.TILE_MAX: (40, 70)},
         ],
         Civ.ARABIA: [
-            {
-                Area.TILE_MIN: (26, 20),
-                Area.TILE_MAX: (35, 23),
-            },
-            {
-                Area.TILE_MIN: (22, 5),
-                Area.TILE_MAX: (27, 19),
-            },
-            {
-                Area.TILE_MIN: (28, 9),
-                Area.TILE_MAX: (53, 19),
-            },
-            {
-                Area.TILE_MIN: (47, 0),
-                Area.TILE_MAX: (85, 8),
-            },
-            {
-                Area.TILE_MIN: (86, 0),
-                Area.TILE_MAX: (99, 20),
-            },
+            {Area.TILE_MIN: (26, 20), Area.TILE_MAX: (35, 23)},
+            {Area.TILE_MIN: (22, 5), Area.TILE_MAX: (27, 19)},
+            {Area.TILE_MIN: (28, 9), Area.TILE_MAX: (53, 19)},
+            {Area.TILE_MIN: (47, 0), Area.TILE_MAX: (85, 8)},
+            {Area.TILE_MIN: (86, 0), Area.TILE_MAX: (99, 20)},
         ],
         Civ.BULGARIA: [
-            {
-                Area.TILE_MIN: (65, 12),
-                Area.TILE_MAX: (83, 38),
-            },
-            {
-                Area.TILE_MIN: (78, 31),
-                Area.TILE_MAX: (99, 41),
-            },
+            {Area.TILE_MIN: (65, 12), Area.TILE_MAX: (83, 38)},
+            {Area.TILE_MIN: (78, 31), Area.TILE_MAX: (99, 41)},
         ],
         Civ.CORDOBA: [
-            {
-                Area.TILE_MIN: (18, 13),
-                Area.TILE_MAX: (39, 33),
-            },
-            {
-                Area.TILE_MIN: (40, 0),
-                Area.TILE_MAX: (59, 20),
-            },
-            {
-                Area.TILE_MIN: (60, 0),
-                Area.TILE_MAX: (95, 7),
-            },
+            {Area.TILE_MIN: (18, 13), Area.TILE_MAX: (39, 33)},
+            {Area.TILE_MIN: (40, 0), Area.TILE_MAX: (59, 20)},
+            {Area.TILE_MIN: (60, 0), Area.TILE_MAX: (95, 7)},
         ],
         Civ.VENECIA: [
-            {
-                Area.TILE_MIN: (46, 14),
-                Area.TILE_MAX: (70, 41),
-            },
-            {
-                Area.TILE_MIN: (49, 7),
-                Area.TILE_MAX: (82, 25),
-            },
-            {
-                Area.TILE_MIN: (83, 7),
-                Area.TILE_MAX: (91, 13),
-            },
+            {Area.TILE_MIN: (46, 14), Area.TILE_MAX: (70, 41)},
+            {Area.TILE_MIN: (49, 7), Area.TILE_MAX: (82, 25)},
+            {Area.TILE_MIN: (83, 7), Area.TILE_MAX: (91, 13)},
         ],
-        Civ.BURGUNDY: [
-            {
-                Area.TILE_MIN: (43, 31),
-                Area.TILE_MAX: (53, 53),
-            },
-        ],
+        Civ.BURGUNDY: [{Area.TILE_MIN: (43, 31), Area.TILE_MAX: (53, 53)}],
         Civ.GERMANY: [
-            {
-                Area.TILE_MIN: (41, 31),
-                Area.TILE_MAX: (61, 58),
-            },
-            {
-                Area.TILE_MIN: (47, 27),
-                Area.TILE_MAX: (61, 30),
-            },
-            {
-                Area.TILE_MIN: (62, 34),
-                Area.TILE_MAX: (70, 55),
-            },
-            {
-                Area.TILE_MIN: (55, 22),
-                Area.TILE_MAX: (61, 26),
-            },
+            {Area.TILE_MIN: (41, 31), Area.TILE_MAX: (61, 58)},
+            {Area.TILE_MIN: (47, 27), Area.TILE_MAX: (61, 30)},
+            {Area.TILE_MIN: (62, 34), Area.TILE_MAX: (70, 55)},
+            {Area.TILE_MIN: (55, 22), Area.TILE_MAX: (61, 26)},
         ],
         Civ.NOVGOROD: [
-            {
-                Area.TILE_MIN: (72, 55),
-                Area.TILE_MAX: (90, 72),
-            },
-            {
-                Area.TILE_MIN: (79, 41),
-                Area.TILE_MAX: (88, 54),
-            },
-            {
-                Area.TILE_MIN: (91, 60),
-                Area.TILE_MAX: (99, 72),
-            },
+            {Area.TILE_MIN: (72, 55), Area.TILE_MAX: (90, 72)},
+            {Area.TILE_MIN: (79, 41), Area.TILE_MAX: (88, 54)},
+            {Area.TILE_MIN: (91, 60), Area.TILE_MAX: (99, 72)},
         ],
         Civ.NORWAY: [
-            {
-                Area.TILE_MIN: (30, 52),
-                Area.TILE_MAX: (71, 72),
-            },
-            {
-                Area.TILE_MIN: (0, 67),
-                Area.TILE_MAX: (29, 72),
-            },
+            {Area.TILE_MIN: (30, 52), Area.TILE_MAX: (71, 72)},
+            {Area.TILE_MIN: (0, 67), Area.TILE_MAX: (29, 72)},
         ],
         Civ.KIEV: [
-            {
-                Area.TILE_MIN: (75, 42),
-                Area.TILE_MAX: (94, 62),
-            },
-            {
-                Area.TILE_MIN: (77, 31),
-                Area.TILE_MAX: (94, 41),
-            },
-            {
-                Area.TILE_MIN: (77, 24),
-                Area.TILE_MAX: (82, 40),
-            },
+            {Area.TILE_MIN: (75, 42), Area.TILE_MAX: (94, 62)},
+            {Area.TILE_MIN: (77, 31), Area.TILE_MAX: (94, 41)},
+            {Area.TILE_MIN: (77, 24), Area.TILE_MAX: (82, 40)},
         ],
         Civ.HUNGARY: [
-            {
-                Area.TILE_MIN: (56, 27),
-                Area.TILE_MAX: (82, 45),
-            },
-            {
-                Area.TILE_MIN: (83, 31),
-                Area.TILE_MAX: (92, 42),
-            },
-            {
-                Area.TILE_MIN: (65, 12),
-                Area.TILE_MAX: (82, 26),
-            },
+            {Area.TILE_MIN: (56, 27), Area.TILE_MAX: (82, 45)},
+            {Area.TILE_MIN: (83, 31), Area.TILE_MAX: (92, 42)},
+            {Area.TILE_MIN: (65, 12), Area.TILE_MAX: (82, 26)},
         ],
-        Civ.CASTILE: [
-            {
-                Area.TILE_MIN: (20, 17),
-                Area.TILE_MAX: (56, 40),
-            },
-        ],
+        Civ.CASTILE: [{Area.TILE_MIN: (20, 17), Area.TILE_MAX: (56, 40)}],
         Civ.DENMARK: [
-            {
-                Area.TILE_MIN: (34, 46),
-                Area.TILE_MAX: (71, 72),
-            },
-            {
-                Area.TILE_MIN: (72, 57),
-                Area.TILE_MAX: (78, 72),
-            },
+            {Area.TILE_MIN: (34, 46), Area.TILE_MAX: (71, 72)},
+            {Area.TILE_MIN: (72, 57), Area.TILE_MAX: (78, 72)},
         ],
-        Civ.SCOTLAND: [
-            {
-                Area.TILE_MIN: (30, 43),
-                Area.TILE_MAX: (46, 72),
-            },
-        ],
-        Civ.POLAND: [
-            {
-                Area.TILE_MIN: (60, 37),
-                Area.TILE_MAX: (79, 60),
-            },
-        ],
+        Civ.SCOTLAND: [{Area.TILE_MIN: (30, 43), Area.TILE_MAX: (46, 72)}],
+        Civ.POLAND: [{Area.TILE_MIN: (60, 37), Area.TILE_MAX: (79, 60)}],
         Civ.GENOA: [
-            {
-                Area.TILE_MIN: (39, 15),
-                Area.TILE_MAX: (60, 39),
-            },
-            {
-                Area.TILE_MIN: (47, 9),
-                Area.TILE_MAX: (82, 25),
-            },
-            {
-                Area.TILE_MIN: (61, 26),
-                Area.TILE_MAX: (67, 32),
-            },
+            {Area.TILE_MIN: (39, 15), Area.TILE_MAX: (60, 39)},
+            {Area.TILE_MIN: (47, 9), Area.TILE_MAX: (82, 25)},
+            {Area.TILE_MIN: (61, 26), Area.TILE_MAX: (67, 32)},
         ],
         Civ.MOROCCO: [
-            {
-                Area.TILE_MIN: (12, 2),
-                Area.TILE_MAX: (42, 31),
-            },
-            {
-                Area.TILE_MIN: (43, 2),
-                Area.TILE_MAX: (53, 20),
-            },
+            {Area.TILE_MIN: (12, 2), Area.TILE_MAX: (42, 31)},
+            {Area.TILE_MIN: (43, 2), Area.TILE_MAX: (53, 20)},
         ],
         Civ.ENGLAND: [
-            {
-                Area.TILE_MIN: (26, 54),
-                Area.TILE_MAX: (46, 64),
-            },
-            {
-                Area.TILE_MIN: (31, 34),
-                Area.TILE_MAX: (46, 53),
-            },
+            {Area.TILE_MIN: (26, 54), Area.TILE_MAX: (46, 64)},
+            {Area.TILE_MIN: (31, 34), Area.TILE_MAX: (46, 53)},
         ],
-        Civ.PORTUGAL: [
-            {
-                Area.TILE_MIN: (18, 17),
-                Area.TILE_MAX: (34, 39),
-            },
-        ],
+        Civ.PORTUGAL: [{Area.TILE_MIN: (18, 17), Area.TILE_MAX: (34, 39)}],
         Civ.ARAGON: [
-            {
-                Area.TILE_MIN: (19, 29),
-                Area.TILE_MAX: (56, 40),
-            },
-            {
-                Area.TILE_MIN: (19, 21),
-                Area.TILE_MAX: (34, 28),
-            },
-            {
-                Area.TILE_MIN: (35, 14),
-                Area.TILE_MAX: (63, 28),
-            },
+            {Area.TILE_MIN: (19, 29), Area.TILE_MAX: (56, 40)},
+            {Area.TILE_MIN: (19, 21), Area.TILE_MAX: (34, 28)},
+            {Area.TILE_MIN: (35, 14), Area.TILE_MAX: (63, 28)},
         ],
         Civ.SWEDEN: [
-            {
-                Area.TILE_MIN: (39, 52),
-                Area.TILE_MAX: (82, 66),
-            },
-            {
-                Area.TILE_MIN: (34, 61),
-                Area.TILE_MAX: (71, 72),
-            },
+            {Area.TILE_MIN: (39, 52), Area.TILE_MAX: (82, 66)},
+            {Area.TILE_MIN: (34, 61), Area.TILE_MAX: (71, 72)},
         ],
         Civ.PRUSSIA: [
-            {
-                Area.TILE_MIN: (51, 43),
-                Area.TILE_MAX: (73, 56),
-            },
-            {
-                Area.TILE_MIN: (66, 57),
-                Area.TILE_MAX: (82, 62),
-            },
-            {
-                Area.TILE_MIN: (69, 63),
-                Area.TILE_MAX: (79, 66),
-            },
+            {Area.TILE_MIN: (51, 43), Area.TILE_MAX: (73, 56)},
+            {Area.TILE_MIN: (66, 57), Area.TILE_MAX: (82, 62)},
+            {Area.TILE_MIN: (69, 63), Area.TILE_MAX: (79, 66)},
         ],
         Civ.LITHUANIA: [
-            {
-                Area.TILE_MIN: (67, 46),
-                Area.TILE_MAX: (76, 55),
-            },
-            {
-                Area.TILE_MIN: (73, 44),
-                Area.TILE_MAX: (81, 58),
-            },
+            {Area.TILE_MIN: (67, 46), Area.TILE_MAX: (76, 55)},
+            {Area.TILE_MIN: (73, 44), Area.TILE_MAX: (81, 58)},
         ],
         Civ.AUSTRIA: [
-            {
-                Area.TILE_MIN: (49, 27),
-                Area.TILE_MAX: (61, 55),
-            },
-            {
-                Area.TILE_MIN: (62, 34),
-                Area.TILE_MAX: (67, 46),
-            },
+            {Area.TILE_MIN: (49, 27), Area.TILE_MAX: (61, 55)},
+            {Area.TILE_MIN: (62, 34), Area.TILE_MAX: (67, 46)},
         ],
         Civ.OTTOMAN: [
-            {
-                Area.TILE_MIN: (75, 13),
-                Area.TILE_MAX: (99, 27),
-            },
-            {
-                Area.TILE_MIN: (92, 4),
-                Area.TILE_MAX: (99, 12),
-            },
+            {Area.TILE_MIN: (75, 13), Area.TILE_MAX: (99, 27)},
+            {Area.TILE_MIN: (92, 4), Area.TILE_MAX: (99, 12)},
         ],
         Civ.MOSCOW: [
-            {
-                Area.TILE_MIN: (77, 42),
-                Area.TILE_MAX: (99, 51),
-            },
-            {
-                Area.TILE_MIN: (74, 52),
-                Area.TILE_MAX: (99, 67),
-            },
+            {Area.TILE_MIN: (77, 42), Area.TILE_MAX: (99, 51)},
+            {Area.TILE_MIN: (74, 52), Area.TILE_MAX: (99, 67)},
         ],
         Civ.DUTCH: [
-            {
-                Area.TILE_MIN: (40, 45),
-                Area.TILE_MAX: (65, 57),
-            },
-            {
-                Area.TILE_MIN: (49, 58),
-                Area.TILE_MAX: (67, 66),
-            },
-            {
-                Area.TILE_MIN: (46, 39),
-                Area.TILE_MAX: (63, 44),
-            },
+            {Area.TILE_MIN: (40, 45), Area.TILE_MAX: (65, 57)},
+            {Area.TILE_MIN: (49, 58), Area.TILE_MAX: (67, 66)},
+            {Area.TILE_MIN: (46, 39), Area.TILE_MAX: (63, 44)},
         ],
-        Civ.POPE: [
-            {
-                Area.TILE_MIN: (39, 12),
-                Area.TILE_MAX: (73, 44),
-            },
-        ],
+        Civ.POPE: [{Area.TILE_MIN: (39, 12), Area.TILE_MAX: (73, 44)}],
     }
 ).applymap(lambda d: parse_area_dict(d))
 
 CIV_VISIBLE_AREA = ScenarioDataMapper(
-    {
-        Scenario.i500AD: CIV_VISIBLE_AREA_500AD,
-        Scenario.i1200AD: CIV_VISIBLE_AREA_1200AD,
-    }
+    {Scenario.i500AD: CIV_VISIBLE_AREA_500AD, Scenario.i1200AD: CIV_VISIBLE_AREA_1200AD}
 )
 
 # Used for Congresses and Victory
@@ -3726,21 +2641,8 @@ CIV_GROUPS = EnumDataMapper(
             Civ.ARAGON,
             Civ.SCOTLAND,
         ],
-        CivGroup.ISLAMIC: [
-            Civ.ARABIA,
-            Civ.CORDOBA,
-            Civ.MOROCCO,
-            Civ.OTTOMAN,
-        ],
-        CivGroup.ITALIAN: [
-            Civ.GENOA,
-            Civ.VENECIA,
-            Civ.POPE,
-        ],
-        CivGroup.SCANDINAVIAN: [
-            Civ.NORWAY,
-            Civ.DENMARK,
-            Civ.SWEDEN,
-        ],
+        CivGroup.ISLAMIC: [Civ.ARABIA, Civ.CORDOBA, Civ.MOROCCO, Civ.OTTOMAN],
+        CivGroup.ITALIAN: [Civ.GENOA, Civ.VENECIA, Civ.POPE],
+        CivGroup.SCANDINAVIAN: [Civ.NORWAY, Civ.DENMARK, Civ.SWEDEN],
     }
 )

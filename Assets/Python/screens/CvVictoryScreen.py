@@ -3,7 +3,7 @@
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization, COMPANIES
 from CoreFunctions import colortext, text
-from CoreStructures import turn
+from CoreStructures import turn, year
 from CoreTypes import (
     Building,
     City,
@@ -24,8 +24,6 @@ import PyHelpers
 import RFCUtils
 import Victory as vic
 import UniquePowers
-
-from TimelineData import DateTurn
 
 PyPlayer = PyHelpers.PyPlayer
 
@@ -2394,7 +2392,7 @@ class CvVictoryScreen:
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
         sText1 += self.getProvinceString(vic.tArabiaControlI)
-        # sText1 += self.getMultiProvinceString([(vic.tArabiaControlI, DateTurn.i955AD), (vic.tArabiaControlII, DateTurn.i1291AD)])
+        # sText1 += self.getMultiProvinceString([(vic.tArabiaControlI, year(955)), (vic.tArabiaControlII, year(1291))])
         # UHV2
         iMostAdvancedCiv = utils.getMostAdvancedCiv()
         if iMostAdvancedCiv != -1:
@@ -2777,7 +2775,7 @@ class CvVictoryScreen:
         pPlayer = gc.getPlayer(iPlayer)
         sText1, sText2, sText3 = self.getEmptyTexts()
         # UHV1
-        if turn() < DateTurn.i1500AD:
+        if turn() < year(1500):
             sText1 += text("TXT_KEY_UHV_TOO_EARLY") + "\n"
         iPolandFood = pPlayer.calculateTotalYield(YieldTypes.YIELD_FOOD)
         iOtherFood = 0
@@ -3021,7 +3019,7 @@ class CvVictoryScreen:
         # UHV1
         sText1 += self.getProvinceString(vic.tPrussiaControlI)
         # UHV2
-        if turn() >= DateTurn.i1650AD:
+        if turn() >= year(1650):
             iConqRaw = gc.getPlayer(Civ.PRUSSIA.value).getUHVCounter(1)
             for iI in range(len(vic.tPrussiaDefeat)):
                 iNumConq = (iConqRaw / pow(10, iI)) % 10

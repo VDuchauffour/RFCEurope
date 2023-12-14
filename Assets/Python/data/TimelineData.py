@@ -313,27 +313,27 @@ CIV_RESPAWNING_DATE = CivDataMapper(
 
 COMPANY_BIRTHDATE = CompanyDataMapper(
     {
-        Company.HOSPITALLERS: DateTurn.i1096AD,
-        Company.TEMPLARS: DateTurn.i1096AD,
-        Company.TEUTONS: DateTurn.i1096AD,
-        Company.HANSA: 186,  # 1157
-        Company.MEDICI: DateTurn.i1397AD,
-        Company.AUGSBURG: 295,  # 1487
-        Company.ST_GEORGE: 269,  # 1407
-        Company.DRAGON: 269,  # 1408
-        Company.CALATRAVA: DateTurn.i1164AD,
+        Company.HOSPITALLERS: 1096,
+        Company.TEMPLARS: 1096,
+        Company.TEUTONS: 1096,
+        Company.HANSA: 1157,
+        Company.MEDICI: 1397,
+        Company.AUGSBURG: 1487,
+        Company.ST_GEORGE: 1407,
+        Company.DRAGON: 1408,
+        Company.CALATRAVA: 1164,
     }
 )
 
 COMPANY_DEATHDATE = CompanyDataMapper(
     {
-        Company.TEMPLARS: DateTurn.i1309AD,
-        Company.HANSA: DateTurn.i1670AD,
-        Company.MEDICI: DateTurn.i1500AD,
-        Company.ST_GEORGE: DateTurn.i1800AD,
-        Company.CALATRAVA: DateTurn.i1800AD,
+        Company.TEMPLARS: 1309,
+        Company.HANSA: 1670,
+        Company.MEDICI: 1500,
+        Company.ST_GEORGE: 1800,
+        Company.CALATRAVA: 1800,
     }
-).fill_missing_members(999)
+).fill_missing_members(1800)
 
 # Used by GameBalance
 TIMELINE_TECH_MODIFIER = [

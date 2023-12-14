@@ -1,6 +1,5 @@
-from CoreStructures import player
+from CoreStructures import player, year
 from CoreTypes import Civ, Scenario
-from TimelineData import DateTurn
 
 
 def get_scenario():
@@ -28,5 +27,5 @@ def get_scenario_start_turn(scenario=None):
     if scenario is None:
         scenario = get_scenario()
 
-    dateturn = [DateTurn.i500AD, DateTurn.i1200AD]
+    dateturn = [year(500), year(1200)]
     return dateturn[scenario]

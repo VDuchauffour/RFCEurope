@@ -3,7 +3,7 @@
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
 from CoreFunctions import get_civ_by_id
-from CoreStructures import turn
+from CoreStructures import turn, year
 from CoreTypes import Civ
 from PyUtils import rand
 import RFCUtils
@@ -11,13 +11,9 @@ from Scenario import get_scenario_start_turn
 from StoredData import data
 from WarMapData import WARS_MAP
 from Consts import WORLD_HEIGHT
-from TimelineData import DateTurn
 
-# globals
 gc = CyGlobalContext()
 utils = RFCUtils.RFCUtils()
-
-### Constants ###
 
 iMinIntervalEarly = 15
 iMaxIntervalEarly = 30
@@ -105,7 +101,7 @@ class AIWars:
                         teamVenice.declareWar(iOwner, False, WarPlanTypes.WARPLAN_LIMITED)
 
         # Absinthe: Kingdom of Hungary should try to dominate Sisak/Zagreb if it's independent
-        if iGameTurn > DateTurn.i1000AD and iGameTurn % 7 == 3:
+        if iGameTurn > year(1000) and iGameTurn % 7 == 3:
             pHungary = gc.getPlayer(Civ.HUNGARY.value)
             if pHungary.isAlive() and not pHungary.isHuman():
                 pZagrebPlot = gc.getMap().plot(62, 34)
