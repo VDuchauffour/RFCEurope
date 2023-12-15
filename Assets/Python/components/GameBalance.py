@@ -40,7 +40,6 @@ utils = RFCUtils.RFCUtils()
 
 class GameBalance:
     def setBalanceParameters(self):
-        self.setProvinceTypes()
         self.setModifiers()
         self.setDiplomacyModifier()
         self.setTechTimeline()
@@ -52,7 +51,6 @@ class GameBalance:
         self.setHistoricalEnemies()
         self.setProvinceTypeParameters()
         self.setOtherParameters()
-        self.postAreas()
         self.set_starting_workers()
 
     def setModifiers(self):
@@ -356,11 +354,7 @@ class GameBalance:
     def setReligionSpreadFactor(self):
         for civ in civilizations():
             for religion, threshold in civ.religion.spreading_threshold.items():
-                gc.setReligionSpread(
-                    civ.id,
-                    religion.value,
-                    threshold,
-                )
+                gc.setReligionSpread(civ.id, religion.value, threshold)
 
     def setReligionBenefit(self):
         # gc.setReligionBenefit( iReligion, iFP_(whatever it is), iParameter, iCap )
@@ -464,23 +458,14 @@ class GameBalance:
         # 	the condition is that either one of the players needs to have a city in a province that the other players considers >= the last parameter
         # 	the default for the last parameter is 0, we should call this at least once to set the parameter (it is the same for all players)
         gc.setVassalagaeCondition(
-            Civ.CORDOBA.value,
-            Civ.ARABIA.value,
-            1,
-            ProvinceType.CONTESTED.value,
+            Civ.CORDOBA.value, Civ.ARABIA.value, 1, ProvinceType.CONTESTED.value
         )
         gc.setVassalagaeCondition(
-            Civ.ARABIA.value,
-            Civ.CORDOBA.value,
-            1,
-            ProvinceType.CONTESTED.value,
+            Civ.ARABIA.value, Civ.CORDOBA.value, 1, ProvinceType.CONTESTED.value
         )
 
         # block foundation of Protestantism except by a Catholic player
-        gc.setParentSchismReligions(
-            Religion.CATHOLICISM.value,
-            Religion.PROTESTANTISM.value,
-        )
+        gc.setParentSchismReligions(Religion.CATHOLICISM.value, Religion.PROTESTANTISM.value)
 
         # block declaration of war against newly spawning nations for this many turns (pre-set wars are not affected)
         gc.setPaceTurnsAfterSpawn(5)

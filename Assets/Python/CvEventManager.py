@@ -44,7 +44,8 @@ class CvEventManager:
 
     def __init__(self):
         #################### ON EVENT MAP ######################
-        balance.setBalanceParameters()
+        balance.setProvinceTypes()
+        balance.postAreas()
 
         self.bCtrl = False
         self.bShift = False
@@ -399,6 +400,7 @@ class CvEventManager:
     def onGameStart(self, argsList):
         "Called at the start of the game"
 
+        balance.setBalanceParameters()
         # Absinthe: separate visualization function for spawn and respawn areas
         # 			set it to 1 in the GlobalDefines_Alt.xml if you want to enable it
         gc.setCoreToPlot(
