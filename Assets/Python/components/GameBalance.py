@@ -1,6 +1,7 @@
 from CvPythonExtensions import *
 from CoreData import civilizations, civilization
 from Consts import WORLD_WIDTH, WORLD_HEIGHT
+from CoreStructures import year
 from CoreTypes import (
     Modifier,
     Building,
@@ -139,7 +140,7 @@ class GameBalance:
         # iCost *= 100 + topPenalty * iHistoric * iAhistoric / BotPenalty, iCost /= 100
         # iCost *= 100 - topBuff * iHistoric * iAhistoric / BotBuff, iCost /= 100
         for tech, turn in TIMELINE_TECH_MODIFIER:
-            gc.setTimelineTechDateForTech(tech.value, turn)
+            gc.setTimelineTechDateForTech(tech.value, year(turn))
 
     def setInitialBuilding(self):
         # gc.setInitialBuilding( iCiv, iBuilding, True\False ), if ( True) give iCiv, building iBuildings else don't Default is False
