@@ -1521,11 +1521,11 @@ class CityFactory:
                 )
         return self.start(start).end(end)
 
-    def regions(self, *regions):
-        return self.plots.regions(*regions).cities()
+    def provinces(self, *provinces):
+        return self.plots.provinces(*provinces).cities()
 
-    def region(self, identifier):
-        return self.regions(identifier)
+    def province(self, identifier):
+        return self.provinces(identifier)
 
     def of(self, list):
         return self.plots.of(*list).cities()
