@@ -515,7 +515,7 @@ def turns(turn):
     if not game.isFinalInitialized():
         return turn
 
-    modifier = infos.gameSpeed().getGrowthPercent()
+    modifier = infos().gameSpeed().getGrowthPercent()
     return turn * modifier / 100
 
 
@@ -820,8 +820,8 @@ class TechCollection(object):
     def techs(self):
         techs = [
             i
-            for i in infos.techs()
-            if infos.tech(i).getEra() <= self._era or infos.tech(i).getGridX() <= self._column
+            for i in infos().techs()
+            if infos().tech(i).getEra() <= self._era or infos().tech(i).getGridX() <= self._column
         ]
         techs += [i for i in self._included if i not in techs]
         techs = [i for i in techs if i not in self._excluded]
@@ -898,7 +898,7 @@ class Units(EntitiesCollection):
             [
                 "%s (%s) at %s"
                 % (
-                    infos.unit(unit.getUnitType()).getText(),
+                    infos().unit(unit.getUnitType()).getText(),
                     adjective(unit.getOwner()),
                     (unit.getX(), unit.getY()),
                 )
@@ -1567,8 +1567,8 @@ class CityFactory:
     #     return city(self.plots.newCapital(identifier))
 
 
-infos = Infos()
-techs = TechFactory()
-units = UnitFactory()
-plots = PlotFactory()
-cities = CityFactory()
+infos = Infos
+techs = TechFactory
+units = UnitFactory
+plots = PlotFactory
+cities = CityFactory

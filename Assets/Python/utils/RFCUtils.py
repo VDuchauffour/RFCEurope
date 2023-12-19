@@ -507,7 +507,7 @@ class RFCUtils:
             if not lOldOwners or iOldOwner in lOldOwners:
 
                 if bKillUnits:
-                    for unit in units.at(x, y).filter(lambda unit: not unit.isCargo()):
+                    for unit in units().at(x, y).filter(lambda unit: not unit.isCargo()):
                         unit.kill(False, iNewOwner)
 
                 pNewOwner.acquireCity(flipCity, bConquest, not bConquest)
