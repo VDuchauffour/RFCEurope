@@ -19,7 +19,7 @@ from CivilizationsData import (
     CIV_SCENARIO_CONDITION,
 )
 from CoreFunctions import get_civ_by_id
-from CoreStructures import Civilization, CivilizationsFactory, CompaniesFactory, TechFactory
+from CoreStructures import Civilization, CivilizationsFactory, CompaniesFactory
 from CoreTypes import Scenario, Civ
 from Errors import NotTypeExpectedError
 from LocationsData import (
@@ -52,7 +52,6 @@ try:
 except ImportError:
     gc = None
 
-TECHS = TechFactory()
 
 COMPANIES = (
     CompaniesFactory()
@@ -117,10 +116,7 @@ def civilizations(scenario=None):
     if scenario is None:
         scenario = get_scenario()
 
-    data_mapper = {
-        Scenario.i500AD: CIVILIZATIONS_500AD,
-        Scenario.i1200AD: CIVILIZATIONS_1200AD,
-    }
+    data_mapper = {Scenario.i500AD: CIVILIZATIONS_500AD, Scenario.i1200AD: CIVILIZATIONS_1200AD}
     return data_mapper[scenario]
 
 
